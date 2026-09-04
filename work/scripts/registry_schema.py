@@ -38,7 +38,7 @@ PUBLICATION_KINDS = {
 }
 PUBLICATION_STATUSES = {"peer_reviewed", "preprint", "technical_report", "unverified"}
 CODE_STATUSES = {"released", "project_only", "not_released", "not_identified"}
-DATA_STATUSES = {"released", "not_released", "not_identified", "not_recorded"}
+DATA_STATUSES = {"released", "not_released", "not_identified", "not_recorded", "not_applicable"}
 
 # These are intentionally small controlled vocabularies.  They are used for
 # navigation and filtering, not as substitutes for paper-level evidence.

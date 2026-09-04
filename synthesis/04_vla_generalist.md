@@ -1,6 +1,6 @@
 # VLA and Generalist Robot Policies
 
-- Updated: 2026-09-02 KST
+- Updated: 2026-09-04 KST
 
 ## Scope
 
@@ -180,8 +180,3 @@ Gato/CLIP/CLIPort → PaLM-E/RT-1/RT-2 → MT-Opt/AutoRT data engine → Open X-
 - Generalist policy의 실패를 runtime에 탐지하고 안전하게 회복시키는 가장 좋은 interface는 무엇인가?
 - Language-level action hierarchy와 explicit feedback/replanning을 결합할 때 필요한 state와 timing contract는 무엇인가?
 - Proprietary Gemini 계열과 open GR00T/OpenVLA 계열을 data·controller·latency를 고정해 비교할 수 있는가?
-
-## Research Gaps
-
-- 통합 gap은 [G-01: control latency](../research/RESEARCH_GAPS.md#g-01-vla와-접촉-제어의-시간-척도-불일치), [G-02: recovery loop](../research/RESEARCH_GAPS.md#g-02-detection에서-recovery까지-닫히지-않은-loop), [G-10: long-horizon evaluation](../research/RESEARCH_GAPS.md#g-10-long-horizon-평가의-낮은-failure-resolution), [G-12: data coverage](../research/RESEARCH_GAPS.md#g-12-data-scale와-data-coverage의-혼동)을 본다.
-- 이 문서에는 VLA별 input/action/control interface와 실제 failure evidence만 추가한다.

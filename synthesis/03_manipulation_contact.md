@@ -1,6 +1,6 @@
 # Manipulation, Contact, Tactile, and Dexterity
 
-- Updated: 2026-09-02 KST
+- Updated: 2026-09-04 KST
 
 ## Scope
 
@@ -156,8 +156,3 @@ Planning Optimal Grasps → Contact-Invariant Optimization → GraspNet/Contact-
 - Dexterous policy의 object/task generalization을 어떤 benchmark로 신뢰성 있게 평가할 것인가?
 - Analytic grasp/contact quality와 learned proposal score가 실제 compliant execution에서 언제 불일치하는가?
 - Tactile sensor 교체·마모·calibration drift가 policy와 recovery threshold에 미치는 영향을 어떻게 분리할 것인가?
-
-## Research Gaps
-
-- 통합 gap은 [G-01: slow–fast contact control](../research/RESEARCH_GAPS.md#g-01-vla와-접촉-제어의-시간-척도-불일치), [G-05: contact observability](../research/RESEARCH_GAPS.md#g-05-contact-state의-불완전한-observability와-sensor-종속성), [G-03: 3D→control causality](../research/RESEARCH_GAPS.md#g-03-3d-perception-향상이-control-향상으로-이어지는-인과성-부족)을 본다.
-- 이 문서에는 task/contact regime별로 실제 확인한 failure evidence만 추가한다.

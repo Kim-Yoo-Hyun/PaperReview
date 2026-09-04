@@ -1,6 +1,6 @@
 # Registry Work
 
-- Updated: 2026-09-03 KST
+- Updated: 2026-09-04 KST
 
 이 디렉토리는 registry source, 반복 실행 가능한 유지보수 도구, 날짜별 update log를 관리한다. Python 도구는 `scripts/`에 모아두며, 모든 active command는 PDF availability를 중요도나 완료 기준으로 사용하지 않는다.
 
@@ -14,6 +14,7 @@
 - `scripts/build_registry_views.py`: manifest와 기존 cue catalog에서 하나의 resource view, relation-aware 검색용 paper index, 통계 view를 생성
 - `scripts/migrate_registry_schema.py`: 기존 manifest에 stable paper ID, public identifiers, publication/source/artifact 분리, canonical primary track, curation와 provenance field를 추가; 기본은 dry-run
 - `scripts/build_registry_catalogs.py`: `04_evaluation.md`의 benchmark/metric cue를 paper ID에 연결한 탐색용 catalog 생성; 모든 reference는 `cue_only`
+- `scripts/enrich_registry_metadata.py`: 전체 registry의 `evaluation_profile`, `reproducibility`, `lineage_profile`을 기존 note·manifest·cue catalog·curated relation에서 보수적으로 생성; unresolved claim과 cue-only 연결을 verified fact로 승격하지 않음
 - `scripts/registry_schema.py`: manifest schema 상수, ID/source/venue/track helper와 dependency-free record validation
 - `scripts/build_lit_survey.py`: 역사적 전체 build helper. 인자 없이 read-only이며 mutation은 각각 명시적 flag가 필요하다.
 - `scripts/migrate_problem_notes.py`: 전체 `02_problem.md`에서 paper metadata를 제거하고 공통 formulation-first schema로 정규화; 현재 CORE/NEXT papers는 문제·model·objective·constraint·failure boundary profile을 채운다. 기본은 dry-run이며 `--apply`일 때만 기록한다.
@@ -33,6 +34,7 @@
 - `sources/papers.json`: 현재 950편 registry metadata의 canonical manifest
 - `sources/registry.schema.json`: structured manifest의 JSON Schema; legacy flat fields는 호환성을 위해 허용
 - `sources/registry_meta.json`: manifest schema/count/identity/version/evidence policy metadata
+- `papers.json`의 `evaluation_profile` / `reproducibility` / `lineage_profile`: 전체 paper에 대한 구조화된 evaluation protocol cue, artifact/reproduction audit, lineage coverage profile. profile은 note-derived audit view이며 paper claim이나 exhaustive citation graph가 아님
 - `sources/resources.json`: benchmark/dataset·metric·code/project를 함께 보여주는 생성 resource view; benchmark/metric 항목은 `cue_only`, code/project는 manifest link일 뿐 재현성 보장이 아님
 - `papers.json`의 `relations`: directed paper lineage/dependency edges의 canonical store. `from` paper의 relation이 `paper_id` target을 가리키며, 관리 edge는 `type`, `confidence`, `basis`, `source`, `evidence_scope`, `reviewed_on`을 함께 가진다. 이는 exhaustive citation graph가 아니며, `baseline_for`는 baseline paper → 이를 평가한 paper 방향이다.
 - `sources/benchmark_catalog.json`, `sources/metric_catalog.json`: evaluation note cue 기반 paper-ID navigation catalog. 역할·split·정의의 최종 근거가 아님
@@ -67,6 +69,7 @@ python3 work/scripts/normalize_taxonomy.py
 python3 work/scripts/build_reading_tiers.py
 python3 work/scripts/reconcile_registry.py
 python3 work/scripts/reconcile_registry.py --apply
+python3 work/scripts/enrich_registry_metadata.py --apply
 python3 work/scripts/reconcile_registry.py --backfill-priority-rationales
 python3 work/scripts/reconcile_registry.py --apply --backfill-priority-rationales
 python3 work/scripts/reconcile_registry.py --backfill-reference-archive-rationales

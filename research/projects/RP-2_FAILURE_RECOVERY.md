@@ -1,14 +1,16 @@
 # RP-2 Same-Onset Failure Recovery Arbitration
 
+> Retired project overlay. The former gap/idea registers were removed by policy; this file is retained only as historical audit context and is not an active research plan.
+
 - Status: `SCOPED / HIGH-COLLISION / FOCUS`
 - Updated: 2026-08-28 KST (`implementation freeze + full-text survey`)
-- Parent ideas: [I-12 Recovery event protocol](../RESEARCH_IDEAS.md#i-12-recovery-event-protocol-for-existing-long-horizon-benchmarks) → [I-02 Same-onset all-option recovery arbitration](../RESEARCH_IDEAS.md#i-02-risk-budgeted-typed-recovery-for-vla) → [I-06 Conservative policy reuse](../RESEARCH_IDEAS.md#i-06-conservative-policy-reuse-from-counterfactual-recovery-outcomes) (conditional)
+- Parent ideas: retired gap/idea-register references (not maintained)
 - Primary benchmark: `LIBERO-Long` (`libero_10`)
 - Conditional secondary validation: `CALVIN` long-horizon five-subtask sequences, only after the LIBERO Phase 0/C1 gate
 - Hypothesis evidence: `UNTESTED`
-- Priority reading: [RP-2 P0–P4 spine](../RESEARCH_IDEAS.md#rp-2-i-02-priority-reading-spine)
+- Priority reading: retired RP-2 P0–P4 spine (not maintained)
 - Novelty status: `HIGH-COLLISION / CONDITIONALLY_FIT / CURRENT FOCUS` — Agentic RL이 broad high-level recovery selector를 선점했다. novelty는 same-onset option sweep에서 recovery ranking crossing과 best-fixed regret가 관찰되고, matched-budget full-information selector가 이를 줄일 때만 성립한다.
-- Gap verdict: [G-02/G-06/G-10은 모두 `narrowed`](../RESEARCH_GAPS.md#2026-08-28-원점-재검토-gap-survival-audit). recovery, self-correction, execution-mode selection과 counterfactual failure synthesis 자체는 이미 선행 연구 범위다.
+- Gap verdict: retired 2026-08-28 gap-audit reference (not maintained). recovery, self-correction, execution-mode selection과 counterfactual failure synthesis 자체는 이미 선행 연구 범위다.
 - Evidence boundary: 기존 registry full-text, 2026-08-28 official proceedings/code와 최신 arXiv full text를 구분한다. 최신 preprint는 method·experiment contract를 읽었더라도 novelty-collision과 baseline 후보로만 사용하며, 코드·policy-visible input·budget contract를 재현하기 전에는 matched baseline으로 부르지 않는다.
 
 이 문서는 새 foundation model을 만드는 계획이 아니다. 기존 VLA와 failure detector, recovery skill을 고정하고, **동일한 post-failure state에서 서로 다른 abstraction level의 recovery option이 만드는 success·risk·cost를 비교한 뒤 어떤 option을 선택해야 하는지**를 동일한 시간·행동·위험 예산 아래 검증한다. I-12는 cloned-onset multi-option branch table을 만드는 공통 측정 도구이고 I-02가 그 위에서 검증할 arbitration 가설이다. I-06의 policy update는 I-02가 지지된 뒤에만 진행하는 후속 단계이며 현재 C1 claim에 포함하지 않는다.
@@ -174,7 +176,7 @@ RP-2의 motivation은 “detector가 없다”가 아니라 **alert가 있어도
 - [RedFlow](https://arxiv.org/abs/2607.27782) `PREPRINT`: failure-inducing action과 successful alternative를 연결하는 offline corrective learning. runtime selector보다 conditional policy-reuse baseline이다.
 - [SO-101 Failure and Recovery Analysis](https://arxiv.org/abs/2606.08881) `PREPRINT`: recovery-aware evaluation 신호. 독립 metric novelty의 collision check로만 사용한다.
 
-다음 2026 자료는 [2026-08-28 gap audit](../RESEARCH_GAPS.md#2026-preprint-only-novelty-collision-check)에서 `PREPRINT-ONLY`로 확인한 novelty-collision set이다. venue-confirmed baseline과 같은 evidence level로 취급하지 않으며, status를 다시 사용할 때는 공식 source를 재검증하고 코드와 observation/action contract를 확인할 수 있을 때만 matched implementation baseline으로 올린다.
+다음 2026 자료는 retired 2026-08-28 gap-audit 기록에서 `PREPRINT-ONLY`로 확인한 novelty-collision set이다. venue-confirmed baseline과 같은 evidence level로 취급하지 않으며, status를 다시 사용할 때는 공식 source를 재검증하고 코드와 observation/action contract를 확인할 수 있을 때만 matched implementation baseline으로 올린다.
 
 - [See, Plan, Rewind](https://arxiv.org/abs/2603.09292): progress-aware subgoal rewind.
 - [FAR](https://arxiv.org/abs/2607.01111): retry perturbation과 failure-preference adaptation.

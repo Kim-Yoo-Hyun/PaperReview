@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import re
 import unicodedata
@@ -13,11 +14,13 @@ from pathlib import Path
 try:
     import build_lit_survey as survey
     from normalize_taxonomy import registry
+    from registry_profiles import enrich_profiles
     from registry_schema import enrich_record, extract_identifiers, next_paper_id
     from taxonomy import canonicalize
 except ModuleNotFoundError:
     from . import build_lit_survey as survey
     from .normalize_taxonomy import registry
+    from .registry_profiles import enrich_profiles
     from .registry_schema import enrich_record, extract_identifiers, next_paper_id
     from .taxonomy import canonicalize
 
@@ -417,11 +420,19 @@ def main() -> None:
                 raise SystemExit(f"refusing to overwrite {path}")
             path.write_text(content, encoding="utf-8")
     merged = existing + accepted
+    enrich_profiles(merged, ROOT, reviewed_on=str(date.today()))
     MANIFEST.write_text(json.dumps(merged, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     if REGISTRY_META.exists():
         meta = json.loads(REGISTRY_META.read_text(encoding="utf-8"))
         meta["paper_count"] = len(merged)
         meta["generated_on"] = date.today().isoformat()
+        meta["metadata_profile_version"] = "1.0"
+        meta["metadata_profile_reviewed_on"] = date.today().isoformat()
+        meta["evaluation_profile_count"] = len(merged)
+        meta["reproducibility_profile_count"] = len(merged)
+        meta["lineage_profile_count"] = len(merged)
+        meta["manifest_sha256"] = hashlib.sha256(MANIFEST.read_bytes()).hexdigest()
+        meta["relation_count"] = sum(len(paper.get("relations", [])) for paper in merged)
         REGISTRY_META.write_text(json.dumps(meta, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     (ROOT / "PAPER.md").write_text(registry(merged), encoding="utf-8")
 

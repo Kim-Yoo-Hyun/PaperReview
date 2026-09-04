@@ -19,6 +19,7 @@ from datetime import date
 from pathlib import Path
 
 try:
+    from registry_profiles import enrich_profiles
     from registry_schema import (
         CURATION_ROLES,
         FACET_KEYS,
@@ -27,6 +28,7 @@ try:
         venue_id_for,
     )
 except ModuleNotFoundError:
+    from .registry_profiles import enrich_profiles
     from .registry_schema import (
         CURATION_ROLES,
         FACET_KEYS,
@@ -355,6 +357,129 @@ RELATION_SEEDS = [
         "confidence": "verified",
         "evidence_scope": "paper_body",
         "source_url": "https://openreview.net/forum?id=OheAR2xrtb",
+    },
+    # Family/version and simulator dependencies recovered from the existing
+    # paper-level lineage summaries.  These remain inferred curation edges;
+    # they are not intended to stand in for exhaustive citation extraction.
+    {
+        "from": "PDDLStream: Integrating Symbolic Planners and Blackbox Samplers via Optimistic Adaptive Planning",
+        "type": "extends",
+        "to": "FFRob: Leveraging Symbolic Planning for Efficient Task and Motion Planning",
+        "basis": "the registry lineage summary and the PDDLStream planning-family cue place PDDLStream after FFRob; retain as a family-level dependency until the reference section is manually checked",
+        "confidence": "inferred",
+        "evidence_scope": "title_lineage",
+    },
+    {
+        "from": "Perpetual Humanoid Control for Real-time Simulated Avatars",
+        "type": "builds_on",
+        "to": "AMP: Adversarial Motion Priors for Stylized Physics-Based Character Control",
+        "basis": "the method note states that the PHC discriminator uses the AMP observations, loss formulation, and gradient penalty; the edge records method dependency rather than identical implementation",
+        "confidence": "verified",
+        "evidence_scope": "paper_body",
+    },
+    {
+        "from": "MaskedMimic: Unified Physics-Based Character Control Through Masked Motion Inpainting",
+        "type": "extends",
+        "to": "Perpetual Humanoid Control for Real-time Simulated Avatars",
+        "basis": "the existing lineage summary places MaskedMimic after AMP/PHC and its queue/whole-body family position supports a unified extension relation",
+        "confidence": "inferred",
+        "evidence_scope": "title_lineage",
+    },
+    {
+        "from": "HOVER: Versatile Neural Whole-Body Controller for Humanoid Robots",
+        "type": "extends",
+        "to": "MaskedMimic: Unified Physics-Based Character Control Through Masked Motion Inpainting",
+        "basis": "the HOVER lineage summary explicitly places it after AMP/PHC/MaskedMimic; this is a family-level controller dependency pending reference-section verification",
+        "confidence": "inferred",
+        "evidence_scope": "title_lineage",
+    },
+    {
+        "from": "SONIC: Supersizing Motion Tracking for Natural Humanoid Whole-Body Control",
+        "type": "extends",
+        "to": "HOVER: Versatile Neural Whole-Body Controller for Humanoid Robots",
+        "basis": "the SONIC lineage summary explicitly places the scaled motion-tracking controller after HOVER; retain as an inferred family edge",
+        "confidence": "inferred",
+        "evidence_scope": "title_lineage",
+    },
+    {
+        "from": "Habitat 2.0: Training Home Assistants to Rearrange their Habitat",
+        "type": "extends",
+        "to": "Habitat: A Platform for Embodied AI Research",
+        "basis": "the official benchmark family/version naming and registry lineage summary identify Habitat 2.0 as the physics and rearrangement extension of Habitat",
+        "confidence": "inferred",
+        "evidence_scope": "title_lineage",
+    },
+    {
+        "from": "Habitat 3.0: A Co-Habitat for Humans, Avatars, and Robots",
+        "type": "extends",
+        "to": "Habitat 2.0: Training Home Assistants to Rearrange their Habitat",
+        "basis": "the paper-level lineage summary states that Habitat 3.0 extends Habitat 2.0 toward social, humanoid, and human-in-the-loop evaluation",
+        "confidence": "inferred",
+        "evidence_scope": "title_lineage",
+    },
+    {
+        "from": "Orbit: A Unified Simulation Framework for Interactive Robot Learning Environments",
+        "type": "extends",
+        "to": "Isaac Gym: High Performance GPU Based Physics Simulation For Robot Learning",
+        "basis": "the Orbit lineage summary identifies Isaac Gym/Isaac Sim as its GPU simulation predecessor and the framework is presented as an interactive robot-learning extension",
+        "confidence": "inferred",
+        "evidence_scope": "title_lineage",
+    },
+    {
+        "from": "Isaac Lab: A GPU-Accelerated Simulation Framework for Multi-Modal Robot Learning",
+        "type": "extends",
+        "to": "Orbit: A Unified Simulation Framework for Interactive Robot Learning Environments",
+        "basis": "the Isaac Lab lineage summary places it after Orbit, while the official successor relation to Isaac Gym is already recorded separately",
+        "confidence": "inferred",
+        "evidence_scope": "title_lineage",
+    },
+    {
+        "from": "ManiSkill: Generalizable Manipulation Skill Benchmark with Large-Scale Demonstrations",
+        "type": "builds_on",
+        "to": "SAPIEN: A SimulAted Part-Based Interactive ENvironment",
+        "basis": "the ManiSkill record identifies SAPIEN as its simulation substrate in the paper-level lineage summary; this is a simulator dependency, not a benchmark-equivalence claim",
+        "confidence": "inferred",
+        "evidence_scope": "title_lineage",
+    },
+    {
+        "from": "Meta-World: A Benchmark and Evaluation for Multi-Task and Meta Reinforcement Learning",
+        "type": "builds_on",
+        "to": "MuJoCo: A Physics Engine for Model-Based Control",
+        "basis": "the registry lineage summary places the Meta-World manipulation suite on the MuJoCo simulation family; exact implementation dependence remains paper-specific",
+        "confidence": "inferred",
+        "evidence_scope": "title_lineage",
+    },
+    {
+        "from": "robosuite: A Modular Simulation Framework and Benchmark for Robot Learning",
+        "type": "builds_on",
+        "to": "MuJoCo: A Physics Engine for Model-Based Control",
+        "basis": "the robosuite record identifies MuJoCo as its simulation substrate and benchmark lineage predecessor",
+        "confidence": "inferred",
+        "evidence_scope": "title_lineage",
+    },
+    {
+        "from": "DIGIT: A Novel Design for a Low-Cost Compact High-Resolution Tactile Sensor with Application to In-Hand Manipulation",
+        "type": "extends",
+        "to": "GelSight: High-Resolution Robot Tactile Sensors for Estimating Geometry and Force",
+        "basis": "the tactile-sensor lineage summary places DIGIT after GelSight as a compact, low-cost vision-based tactile design; retain as an inferred hardware-family relation",
+        "confidence": "inferred",
+        "evidence_scope": "title_lineage",
+    },
+    {
+        "from": "TACTO: A Fast, Flexible, and Open-source Simulator for High-Resolution Vision-based Tactile Sensors",
+        "type": "builds_on",
+        "to": "DIGIT: A Novel Design for a Low-Cost Compact High-Resolution Tactile Sensor with Application to In-Hand Manipulation",
+        "basis": "the TACTO evaluation includes simulated DIGIT imprints and a real DIGIT measurement comparison; the edge records sensor-model dependency, not simulator validation by itself",
+        "confidence": "verified",
+        "evidence_scope": "paper_body",
+    },
+    {
+        "from": "DreamDojo: A Generalist Robot World Model from Large-Scale Human Videos",
+        "type": "extends",
+        "to": "DreamGen: Unlocking Generalization in Robot Learning through Video World Models",
+        "basis": "the registry lineage summary and generated reading adjacency place DreamDojo after DreamGen in the video-world-model-to-robot-policy line; retain as an inferred family edge pending citation verification",
+        "confidence": "inferred",
+        "evidence_scope": "title_lineage",
     },
 ]
 
@@ -972,6 +1097,8 @@ def reconcile(
             if changed:
                 enriched_relations += 1
 
+    profile_updates = enrich_profiles(papers, ROOT, reviewed_on=str(date.today()))
+
     # Evidence in the intensive tracker reflects source verification, not the
     # user's reading status.  Historical review records remain valid evidence
     # when a later tier reassignment places the paper in CORE/NEXT.  Keep
@@ -1066,6 +1193,7 @@ def reconcile(
         "relation_count_before": relation_count_before,
         "seeded_relations": seeded_relations,
         "enriched_relations": enriched_relations,
+        "metadata_profiles": profile_updates,
         "source_index_records": source_index_count,
         "papers_without_public_identifier": no_identifier,
         "tracker_evidence_updates": tracker_updates,
@@ -1098,6 +1226,11 @@ def reconcile(
     meta["reconciliation_policy"] = "review manifest evidence is paper-level; per-note evidence is retained under provenance.note_evidence; note-scoped review manifests are retained under provenance.note_review without changing paper-level review precedence; tracker status remains user-controlled."
     meta["relation_count"] = sum(len(paper.get("relations", [])) for paper in papers)
     meta["relation_policy"] = "Directed curated edges in papers.json are not a full citation graph; each managed edge records type, target paper_id, confidence, basis, source, evidence_scope, and reviewed_on."
+    meta["metadata_profile_version"] = "1.0"
+    meta["metadata_profile_reviewed_on"] = str(date.today())
+    meta["evaluation_profile_count"] = profile_updates.get("evaluation_profiles", 0)
+    meta["reproducibility_profile_count"] = profile_updates.get("reproducibility_profiles", 0)
+    meta["lineage_profile_count"] = profile_updates.get("lineage_profiles", 0)
     META.write_text(json.dumps(meta, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     result["manifest_sha256"] = meta["manifest_sha256"]
     return result

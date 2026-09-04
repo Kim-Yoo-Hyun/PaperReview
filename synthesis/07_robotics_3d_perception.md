@@ -1,6 +1,6 @@
 # Robotics-Enabling 3D Perception
 
-- Updated: 2026-09-02 KST
+- Updated: 2026-09-04 KST
 
 ## Scope
 
@@ -126,8 +126,3 @@ ICP → PointNet → DROID-SLAM/3DGS/DUSt3R/VGGT → Dense Object Nets/NDF/Dense
 - 3D-aware VLA의 이득이 representation 때문인지 추가 sensor/data 때문인지 어떻게 분리할 것인가?
 - Registration confidence와 pose covariance가 downstream planner/controller의 intervention threshold로 전달되는가?
 - ICP식 geometric consistency와 learned semantic correspondence가 충돌할 때 어느 신호를 우선해야 하는가?
-
-## Research Gaps
-
-- 통합 gap은 [G-03: 3D→control causality](../research/RESEARCH_GAPS.md#g-03-3d-perception-향상이-control-향상으로-이어지는-인과성-부족), [G-04: memory staleness](../research/RESEARCH_GAPS.md#g-04-persistent-spatial-memory의-staleness와-uncertainty), [G-13: active perception value](../research/RESEARCH_GAPS.md#g-13-active-perception의-비용-대비-control-value-평가-부족)을 본다.
-- 이 문서에는 perception metric과 downstream robot metric의 실제 대응만 정독 근거로 추가한다.

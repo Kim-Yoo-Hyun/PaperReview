@@ -1,6 +1,6 @@
 # RL, IL, Offline Learning, and Robot Data
 
-- Updated: 2026-09-02 KST
+- Updated: 2026-09-04 KST
 
 ## Scope
 
@@ -181,8 +181,3 @@ TD → Q-Learning → REINFORCE/Policy-Gradient Theorem → PILCO/TRPO/PPO/SAC/M
 - Pretrained visual representation의 benchmark ranking이 실제 contact와 disturbance robustness를 예측하는가?
 - 실패·교란 outcome을 포함한 데이터에서 offline RL과 cost-sensitive prediction을 어떤 조건으로 구분해야 하는가?
 - LLM-generated reward와 domain randomization을 어떤 holdout dynamics와 safety metric으로 검증해야 하는가?
-
-## Research Gaps
-
-- 통합 gap은 [G-06: failure/suboptimal data](../research/RESEARCH_GAPS.md#g-06-failure와-suboptimal-data의-안전한-재사용-부족), [G-08: imagined improvement](../research/RESEARCH_GAPS.md#g-08-imagined-policy-improvement의-보수성과-calibration), [G-12: data scale 대 coverage](../research/RESEARCH_GAPS.md#g-12-data-scale와-data-coverage의-혼동)을 본다.
-- 이 문서에는 정독으로 확인한 objective·data assumption·negative result만 누적한다.

@@ -175,6 +175,20 @@ def build_index(papers: list[dict], resources: dict) -> list[dict[str, str]]:
         "primary_source",
         "code_status",
         "data_status",
+        "evaluation_type",
+        "evaluation_settings",
+        "evaluation_protocol",
+        "benchmark_cues",
+        "metric_cues",
+        "reproducibility_status",
+        "checkpoint_status",
+        "configuration_status",
+        "environment_status",
+        "run_conditions_status",
+        "lineage_status",
+        "lineage_outgoing_count",
+        "lineage_incoming_count",
+        "lineage_candidate_count",
         "resource_ids",
         "admission_reason",
         "tier_reason",
@@ -198,6 +212,10 @@ def build_index(papers: list[dict], resources: dict) -> list[dict[str, str]]:
         curation = paper.get("curation") or {}
         sources = paper.get("sources") or {}
         primary = sources.get("primary") or {}
+        evaluation = paper.get("evaluation_profile") or {}
+        evaluation_protocol = evaluation.get("protocol") or {}
+        reproducibility = paper.get("reproducibility") or {}
+        lineage = paper.get("lineage_profile") or {}
         rows.append(
             {
                 "paper_id": paper_id,
@@ -220,6 +238,23 @@ def build_index(papers: list[dict], resources: dict) -> list[dict[str, str]]:
                 "primary_source": primary.get("url", ""),
                 "code_status": (paper.get("artifacts") or {}).get("code_status", ""),
                 "data_status": (paper.get("artifacts") or {}).get("data_status", ""),
+                "evaluation_type": evaluation.get("type", ""),
+                "evaluation_settings": ";".join(evaluation.get("settings", [])),
+                "evaluation_protocol": json.dumps(evaluation_protocol, ensure_ascii=False, separators=(",", ":")),
+                "benchmark_cues": json.dumps(evaluation.get("benchmark_cues", []), ensure_ascii=False, separators=(",", ":")),
+                "metric_cues": json.dumps(evaluation.get("metric_cues", []), ensure_ascii=False, separators=(",", ":")),
+                "reproducibility_status": reproducibility.get("status", ""),
+                "checkpoint_status": (reproducibility.get("checkpoint") or {}).get("status", ""),
+                "configuration_status": (reproducibility.get("configuration") or {}).get("status", ""),
+                "environment_status": (reproducibility.get("environment") or {}).get("status", ""),
+                "run_conditions_status": (reproducibility.get("run_conditions") or {}).get("status", ""),
+                "lineage_status": lineage.get("status", ""),
+                "lineage_outgoing_count": str(len(lineage.get("outgoing_paper_ids", []))),
+                "lineage_incoming_count": str(len(lineage.get("incoming_paper_ids", []))),
+                "lineage_candidate_count": str(
+                    len(set(lineage.get("queue_adjacency_paper_ids", []))
+                    | set(lineage.get("legacy_summary_candidate_paper_ids", [])))
+                ),
                 "resource_ids": ";".join(sorted(ids_by_paper.get(paper_id, []))),
                 "admission_reason": curation.get("admission_reason") or "",
                 "tier_reason": curation.get("tier_reason") or "",
@@ -258,6 +293,27 @@ def build_stats(papers: list[dict], resources: dict, rows: list[dict[str, str]])
     publication = Counter(row["publication_kind"] for row in rows)
     code = Counter(row["code_status"] for row in rows)
     data = Counter(row["data_status"] for row in rows)
+    evaluation_types = Counter(row["evaluation_type"] for row in rows)
+    evaluation_settings = Counter(
+        setting
+        for row in rows
+        for setting in row["evaluation_settings"].split(";")
+        if setting
+    )
+    evaluation_protocol = Counter()
+    for row in rows:
+        try:
+            protocol = json.loads(row["evaluation_protocol"] or "{}")
+        except json.JSONDecodeError:
+            protocol = {}
+        for key, value in protocol.items():
+            evaluation_protocol[f"{key}={value}"] += 1
+    reproducibility = Counter(row["reproducibility_status"] for row in rows)
+    checkpoint = Counter(row["checkpoint_status"] for row in rows)
+    configuration = Counter(row["configuration_status"] for row in rows)
+    environment = Counter(row["environment_status"] for row in rows)
+    run_conditions = Counter(row["run_conditions_status"] for row in rows)
+    lineage_status = Counter(row["lineage_status"] for row in rows)
     relation_rows = [
         (paper["paper_id"], relation)
         for paper in papers
@@ -280,6 +336,13 @@ def build_stats(papers: list[dict], resources: dict, rows: list[dict[str, str]])
         for name, value in (paper.get("provenance", {}).get("note_evidence") or {}).items():
             if value == "MISSING":
                 missing_note_evidence[name] += 1
+    trial_cue_count = 0
+    for row in rows:
+        try:
+            protocol = json.loads(row["evaluation_protocol"] or "{}")
+        except json.JSONDecodeError:
+            protocol = {}
+        trial_cue_count += int(protocol.get("trials_or_seeds") == "reported")
     lines = [
         "# Registry Statistics",
         "",
@@ -294,6 +357,10 @@ def build_stats(papers: list[dict], resources: dict, rows: list[dict[str, str]])
         f"- Curated relation edges: **{relations}**",
         f"- Papers with outgoing relations: **{len(outgoing_papers)}**",
         f"- Papers participating in a relation: **{len(outgoing_papers | target_papers)}**",
+        f"- Structured evaluation profiles: **{sum(bool(row['evaluation_type']) for row in rows)}**",
+        f"- Reproducibility profiles: **{sum(bool(row['reproducibility_status']) for row in rows)}**",
+        f"- Lineage coverage profiles: **{sum(bool(row['lineage_status']) for row in rows)}**",
+        f"- Papers with explicit trial/seed cues: **{trial_cue_count}**",
         f"- Papers without DOI/arXiv/OpenReview identifier: **{sum(value == 'source_only' for value in identifiers.elements())}**",
         "",
     ]
@@ -307,6 +374,15 @@ def build_stats(papers: list[dict], resources: dict, rows: list[dict[str, str]])
     lines += table("Primary source scope", sources)
     lines += table("Code status", code)
     lines += table("Data status", data)
+    lines += table("Evaluation type", evaluation_types)
+    lines += table("Evaluation setting", evaluation_settings)
+    lines += table("Evaluation protocol status", evaluation_protocol)
+    lines += table("Reproducibility profile", reproducibility)
+    lines += table("Checkpoint status", checkpoint)
+    lines += table("Configuration status", configuration)
+    lines += table("Environment status", environment)
+    lines += table("Run-condition status", run_conditions)
+    lines += table("Lineage coverage status", lineage_status)
     lines += table("Relation type", relation_types)
     lines += table("Relation confidence", relation_confidence)
     lines += table("Relation evidence scope", relation_scopes)
@@ -334,7 +410,7 @@ def build_stats(papers: list[dict], resources: dict, rows: list[dict[str, str]])
     lines += [""]
     lines += ["## Note evidence gaps", "", "| Note | Missing evidence header |", "|---|---:|"]
     lines.extend(f"| {name} | {count} |" for name, count in sorted(missing_note_evidence.items()))
-    lines += ["", "## Interpretation", "", "- `reading_status` is user-controlled and is intentionally independent from `evidence_level`.", "- Facets are curation cues for filtering; exact task, split, metric, and failure claims remain in the paper notes.", "- `benchmark_catalog.json` and `metric_catalog.json` remain cue-only navigation inputs; the combined resource view does not promote them to verified evaluation evidence.", "- Relation edges are directed curation links, not an exhaustive citation graph: a method points to a predecessor/data dependency, while a baseline points to the evaluated paper. Managed edges retain a basis, source, confidence, evidence scope, and review date.", ""]
+    lines += ["", "## Interpretation", "", "- `reading_status` is user-controlled and is intentionally independent from `evidence_level`.", "- Facets are curation cues for filtering; exact task, split, metric, and failure claims remain in the paper notes.", "- Evaluation profiles expose body-derived section cues and raw trial/seed evidence; they do not replace paper-specific protocol verification.", "- `benchmark_catalog.json` and `metric_catalog.json` remain cue-only navigation inputs; benchmark and metric cue lists in each profile retain that label.", "- Reproducibility profiles distinguish manifest links from explicit note cues; a code/project URL does not prove executable reproduction.", "- Lineage profiles cover every registry paper. Curated relations remain selective; queue adjacency and legacy-summary matches are non-relational candidates, not citation facts.", "- Relation edges are directed curation links, not an exhaustive citation graph: a method points to a predecessor/data dependency, while a baseline points to the evaluated paper. Managed edges retain a basis, source, confidence, evidence scope, and review date.", ""]
     return "\n".join(lines)
 
 

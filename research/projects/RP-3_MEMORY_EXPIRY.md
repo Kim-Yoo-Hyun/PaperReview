@@ -1,14 +1,16 @@
 # RP-3 Risk-Calibrated Memory Expiry under State Change
 
+> Retired project overlay. The former gap/idea registers were removed by policy; this file is retained only as historical audit context and is not an active research plan.
+
 - Status: `SCOPED / NEXT`
 - Updated: 2026-08-28 KST (`frontier re-audit`)
-- Parent idea: [I-03 Phase-aware spatial memory with learned expiry](../RESEARCH_IDEAS.md#i-03-phase-aware-spatial-memory-with-learned-expiry)
-- Primary gap: [G-04 Persistent spatial memory staleness and uncertainty](../RESEARCH_GAPS.md#g-04-persistent-spatial-memory의-staleness와-uncertainty)
+- Parent idea: retired gap/idea-register reference (not maintained)
+- Primary gap: retired gap-register reference (not maintained)
 - Primary environment: `RoboCasa` dynamic manipulation tasks
 - Secondary transfer: `RLBench` state-change task subset
 - Hypothesis evidence: `UNTESTED`
 - Novelty status: `HIGH-COLLISION / CONDITIONALLY_FIT` — persistent/temporal memory, transition-aware verification, learned retention, object-state divergence checking까지 이미 존재한다. novelty는 **exogenous state change에서 item exposure가 만든 unsafe action을 paired branch로 귀속하고, calibrated unsafe-use risk와 bounded verification cost로 retain/refresh/expire/verify를 선택하는 것**이 strongest frontier-style baseline을 이길 때만 성립한다.
-- Gap verdict: [G-04는 `narrowed`](../RESEARCH_GAPS.md#g-04-persistent-spatial-memory의-staleness와-uncertainty). memory, verification, transition awareness와 learned update 자체는 gap이 아니다.
+- Gap verdict: retired gap-audit reference (not maintained). memory, verification, transition awareness와 learned update 자체는 gap이 아니다.
 - Evidence boundary: MomaGraph/SOMA의 기존 full-text audit와 2026-08-28 arXiv/official abstract를 분리한다. 최신 preprint는 collision/baseline 후보이며 section-level claim이나 venue acceptance의 근거로 쓰지 않는다.
 
 이 프로젝트는 새로운 3D map이나 대형 VLA를 만드는 연구가 아니다. frozen visuomotor/VLA policy와 고정 memory representation 위에서, **task 진행 중 world state가 바뀐 뒤 어떤 memory item을 계속 믿고, 갱신하고, 폐기하고, 다시 관측해야 하는지**를 결정하는 lightweight memory supervisor를 검증한다. phase는 후보 context feature이지 그 자체가 contribution은 아니다.

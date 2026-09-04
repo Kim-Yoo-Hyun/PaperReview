@@ -14,9 +14,11 @@ from collections import Counter, defaultdict
 from pathlib import Path
 
 try:
-    from registry_schema import CURATION_ROLES, FACET_KEYS, PRIMARY_TRACKS, SCHEMA_VERSION, validate_record_shape, venue_id_for
+    from registry_profiles import ARTIFACT_STATUSES, EVALUATION_SETTINGS, LINEAGE_STATUSES, PROTOCOL_STATUSES, REPRO_STATUSES
+    from registry_schema import CURATION_ROLES, DATA_STATUSES, FACET_KEYS, PRIMARY_TRACKS, SCHEMA_VERSION, validate_record_shape, venue_id_for
 except ModuleNotFoundError:
-    from .registry_schema import CURATION_ROLES, FACET_KEYS, PRIMARY_TRACKS, SCHEMA_VERSION, validate_record_shape, venue_id_for
+    from .registry_profiles import ARTIFACT_STATUSES, EVALUATION_SETTINGS, LINEAGE_STATUSES, PROTOCOL_STATUSES, REPRO_STATUSES
+    from .registry_schema import CURATION_ROLES, DATA_STATUSES, FACET_KEYS, PRIMARY_TRACKS, SCHEMA_VERSION, validate_record_shape, venue_id_for
 
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -200,6 +202,11 @@ def audit_registry_index(path: Path, papers_by_id: dict[str, dict], errors: list
         "paper_id", "title", "year", "venue", "category", "tier", "roles",
         "facets", "evidence_level", "reading_status", "primary_source",
         "overview_path", "outgoing_relations", "incoming_relation_count",
+        "evaluation_type", "evaluation_settings", "evaluation_protocol",
+        "benchmark_cues", "metric_cues", "reproducibility_status",
+        "checkpoint_status", "configuration_status", "environment_status",
+        "run_conditions_status", "lineage_status", "lineage_outgoing_count",
+        "lineage_incoming_count", "lineage_candidate_count",
     }
     fields = set(rows[0]) if rows else set()
     missing = sorted(required - fields)
@@ -247,6 +254,44 @@ def audit_registry_index(path: Path, papers_by_id: dict[str, dict], errors: list
         )
         if row.get("incoming_relation_count") != str(incoming):
             errors.append(f"generated registry index incoming relation mismatch: {row.get('paper_id')}")
+        evaluation = item.get("evaluation_profile") or {}
+        if row.get("evaluation_type") != evaluation.get("type", ""):
+            errors.append(f"generated registry index evaluation type mismatch: {row.get('paper_id')}")
+        if row.get("evaluation_settings") != ";".join(evaluation.get("settings", [])):
+            errors.append(f"generated registry index evaluation setting mismatch: {row.get('paper_id')}")
+        try:
+            indexed_protocol = json.loads(row.get("evaluation_protocol", "{}"))
+        except json.JSONDecodeError:
+            errors.append(f"generated registry index evaluation protocol is invalid: {row.get('paper_id')}")
+            indexed_protocol = {}
+        if indexed_protocol != (evaluation.get("protocol") or {}):
+            errors.append(f"generated registry index evaluation protocol mismatch: {row.get('paper_id')}")
+        reproducibility = item.get("reproducibility") or {}
+        if row.get("reproducibility_status") != reproducibility.get("status", ""):
+            errors.append(f"generated registry index reproducibility mismatch: {row.get('paper_id')}")
+        expected_repro_statuses = {
+            "checkpoint_status": (reproducibility.get("checkpoint") or {}).get("status", ""),
+            "configuration_status": (reproducibility.get("configuration") or {}).get("status", ""),
+            "environment_status": (reproducibility.get("environment") or {}).get("status", ""),
+            "run_conditions_status": (reproducibility.get("run_conditions") or {}).get("status", ""),
+        }
+        for field, expected in expected_repro_statuses.items():
+            if row.get(field) != expected:
+                errors.append(f"generated registry index {field} mismatch: {row.get('paper_id')}")
+        lineage = item.get("lineage_profile") or {}
+        if row.get("lineage_status") != lineage.get("status", ""):
+            errors.append(f"generated registry index lineage status mismatch: {row.get('paper_id')}")
+        expected_lineage_counts = {
+            "lineage_outgoing_count": len(lineage.get("outgoing_paper_ids", [])),
+            "lineage_incoming_count": len(lineage.get("incoming_paper_ids", [])),
+            "lineage_candidate_count": len(
+                set(lineage.get("queue_adjacency_paper_ids", []))
+                | set(lineage.get("legacy_summary_candidate_paper_ids", []))
+            ),
+        }
+        for field, expected in expected_lineage_counts.items():
+            if row.get(field) != str(expected):
+                errors.append(f"generated registry index {field} mismatch: {row.get('paper_id')}")
     return len(rows)
 
 
@@ -254,6 +299,123 @@ def note_evidence_for(path: Path) -> str:
     match = re.search(r"Evidence maturity:\s*`([^`]+)`", path.read_text(encoding="utf-8", errors="ignore"))
     value = match.group(1) if match else "MISSING"
     return value if value in EVIDENCE else "MISSING"
+
+
+def audit_registry_profiles(
+    item: dict,
+    paper_ids: set[str],
+    errors: list[str],
+    incoming_by_id: dict[str, list[str]],
+) -> None:
+    """Validate the all-paper metadata profiles without judging paper claims."""
+
+    paper_id = item.get("paper_id")
+    folder = item.get("folder", "")
+    expected_note = f"{folder}/04_evaluation.md"
+    evaluation = item.get("evaluation_profile")
+    if not isinstance(evaluation, dict):
+        errors.append(f"missing evaluation_profile: {paper_id}")
+    else:
+        if evaluation.get("status") not in {"structured_note_cues", "not_recorded"}:
+            errors.append(f"invalid evaluation_profile.status: {paper_id}")
+        if not isinstance(evaluation.get("type"), str) or not evaluation.get("type"):
+            errors.append(f"invalid evaluation_profile.type: {paper_id}")
+        settings = evaluation.get("settings")
+        if not isinstance(settings, list) or not settings or any(value not in EVALUATION_SETTINGS for value in settings):
+            errors.append(f"invalid evaluation_profile.settings: {paper_id}")
+        protocol = evaluation.get("protocol")
+        expected_protocol = {
+            "dataset_or_benchmark",
+            "metrics",
+            "baselines",
+            "ablations",
+            "split_or_generalization",
+            "trials_or_seeds",
+            "statistics",
+            "failure_cases",
+        }
+        if not isinstance(protocol, dict) or set(protocol) != expected_protocol:
+            errors.append(f"invalid evaluation_profile.protocol keys: {paper_id}")
+        elif any(value not in PROTOCOL_STATUSES for value in protocol.values()):
+            errors.append(f"invalid evaluation_profile.protocol value: {paper_id}")
+        source_note = evaluation.get("source_note")
+        if source_note not in {expected_note, None}:
+            errors.append(f"evaluation_profile source_note mismatch: {paper_id}")
+        if source_note and not (ROOT / source_note).exists():
+            errors.append(f"evaluation_profile source_note missing: {paper_id}")
+        if evaluation.get("reviewed_on") and not DATE_PATTERN.match(str(evaluation.get("reviewed_on"))):
+            errors.append(f"invalid evaluation_profile.reviewed_on: {paper_id}")
+        for cue_key in ("benchmark_cues", "metric_cues"):
+            cues = evaluation.get(cue_key)
+            if not isinstance(cues, list):
+                errors.append(f"invalid evaluation_profile.{cue_key}: {paper_id}")
+                continue
+            for cue in cues:
+                if not isinstance(cue, dict) or cue.get("evidence") != "cue_only":
+                    errors.append(f"evaluation_profile {cue_key} is not cue_only: {paper_id}")
+        trial_evidence = evaluation.get("trial_evidence")
+        if not isinstance(trial_evidence, list):
+            errors.append(f"invalid evaluation_profile.trial_evidence: {paper_id}")
+        else:
+            for record in trial_evidence:
+                if not isinstance(record, dict) or not isinstance(record.get("count"), int) or record.get("count") < 0:
+                    errors.append(f"invalid evaluation_profile trial evidence: {paper_id}")
+
+    reproducibility = item.get("reproducibility")
+    if not isinstance(reproducibility, dict):
+        errors.append(f"missing reproducibility profile: {paper_id}")
+    else:
+        if reproducibility.get("status") not in {"metadata_audited", "not_recorded"}:
+            errors.append(f"invalid reproducibility.status: {paper_id}")
+        for key in ("code", "data", "checkpoint", "configuration", "environment", "run_conditions"):
+            value = reproducibility.get(key)
+            if not isinstance(value, dict):
+                errors.append(f"invalid reproducibility.{key}: {paper_id}")
+                continue
+            status = value.get("status")
+            allowed = ARTIFACT_STATUSES if key in {"code", "data"} else REPRO_STATUSES
+            if status not in allowed:
+                errors.append(f"invalid reproducibility.{key}.status: {paper_id}")
+        artifact = item.get("artifacts") or {}
+        if (reproducibility.get("code") or {}).get("status") != artifact.get("code_status"):
+            errors.append(f"reproducibility/code artifact mismatch: {paper_id}")
+        if (reproducibility.get("data") or {}).get("status") != artifact.get("data_status"):
+            errors.append(f"reproducibility/data artifact mismatch: {paper_id}")
+        source_note = reproducibility.get("source_note")
+        if source_note not in {expected_note, None}:
+            errors.append(f"reproducibility source_note mismatch: {paper_id}")
+        if source_note and not (ROOT / source_note).exists():
+            errors.append(f"reproducibility source_note missing: {paper_id}")
+        if reproducibility.get("reviewed_on") and not DATE_PATTERN.match(str(reproducibility.get("reviewed_on"))):
+            errors.append(f"invalid reproducibility.reviewed_on: {paper_id}")
+
+    lineage = item.get("lineage_profile")
+    if not isinstance(lineage, dict):
+        errors.append(f"missing lineage_profile: {paper_id}")
+        return
+    if lineage.get("status") not in LINEAGE_STATUSES:
+        errors.append(f"invalid lineage_profile.status: {paper_id}")
+    for key in (
+        "outgoing_paper_ids",
+        "incoming_paper_ids",
+        "queue_adjacency_paper_ids",
+        "legacy_summary_candidate_paper_ids",
+    ):
+        values = lineage.get(key)
+        if not isinstance(values, list) or len(values) != len(set(values)) or any(value not in paper_ids for value in values):
+            errors.append(f"invalid lineage_profile.{key}: {paper_id}")
+    expected_outgoing = [relation.get("paper_id") for relation in item.get("relations", []) if relation.get("paper_id")]
+    if lineage.get("outgoing_paper_ids") != expected_outgoing:
+        errors.append(f"lineage_profile outgoing mismatch: {paper_id}")
+    expected_incoming = sorted(set(incoming_by_id.get(paper_id, [])))
+    if lineage.get("incoming_paper_ids") != expected_incoming:
+        errors.append(f"lineage_profile incoming mismatch: {paper_id}")
+    if not isinstance(lineage.get("legacy_summary_present"), bool):
+        errors.append(f"invalid lineage_profile.legacy_summary_present: {paper_id}")
+    if lineage.get("audit_scope") != "all_registry":
+        errors.append(f"invalid lineage_profile.audit_scope: {paper_id}")
+    if lineage.get("audited_on") and not DATE_PATTERN.match(str(lineage.get("audited_on"))):
+        errors.append(f"invalid lineage_profile.audited_on: {paper_id}")
 
 
 def audit_note_review_manifest(
@@ -343,6 +505,43 @@ def comparison_matrix_paths(path: Path) -> list[str]:
         section = section[: next_heading.start()]
     links = re.findall(r"\]\((\.\./[^)#]+/01_overview\.md)(?:#[^)]+)?\)", section)
     return ["./" + urllib.parse.unquote(value[3:]) for value in links]
+
+
+def audit_active_markdown_links(errors: list[str]) -> int:
+    """Check links in active navigation and research documents.
+
+    Historical update logs and retired project overlays are intentionally
+    excluded: their old references are audit history, not active navigation.
+    """
+
+    paths = [ROOT / "README.md", ROOT / "work" / "README.md"]
+    paths += sorted((ROOT / "synthesis").glob("*.md"))
+    paths += sorted((ROOT / "research").glob("*.md"))
+    link_re = re.compile(r"\[[^\]]*\]\(([^)]+)\)")
+    checked = 0
+    for path in paths:
+        if not path.exists():
+            continue
+        content = path.read_text(encoding="utf-8", errors="ignore")
+        for raw_target in link_re.findall(content):
+            target = raw_target.strip()
+            if target.startswith("<") and ">" in target:
+                target = target[1 : target.index(">")]
+            if target.startswith(("http://", "https://", "mailto:", "#")):
+                continue
+            target = urllib.parse.unquote(target.split("#", 1)[0].strip())
+            if not target:
+                continue
+            resolved = (path.parent / target).resolve()
+            try:
+                resolved.relative_to(ROOT.resolve())
+            except ValueError:
+                errors.append(f"active Markdown link escapes repository: {path.relative_to(ROOT)} -> {raw_target}")
+                continue
+            checked += 1
+            if not resolved.exists():
+                errors.append(f"active Markdown link target missing: {path.relative_to(ROOT)} -> {raw_target}")
+    return checked
 
 
 def main() -> None:
@@ -478,6 +677,14 @@ def main() -> None:
         for namespace, identifier in (item.get("identifiers") or {}).items():
             identifier_values[(namespace, str(identifier).casefold())].append(item.get("paper_id", ""))
     paper_by_id = {item.get("paper_id"): item for item in papers}
+    incoming_by_id: dict[str, list[str]] = defaultdict(list)
+    for source in papers:
+        for relation in source.get("relations", []):
+            target_id = relation.get("paper_id")
+            if target_id:
+                incoming_by_id[target_id].append(source.get("paper_id"))
+    for item in papers:
+        audit_registry_profiles(item, paper_ids, errors, incoming_by_id)
     note_review_index: dict[str, dict] = {}
     for spec in NOTE_REVIEW_MANIFEST_SPECS:
         note_review_index.update(audit_note_review_manifest(spec, paper_by_id, errors))
@@ -677,6 +884,7 @@ def main() -> None:
     }
     resource_count = audit_resources(RESOURCES, paper_ids, errors)
     index_count = audit_registry_index(REGISTRY_INDEX, paper_by_id, errors)
+    markdown_links_checked = audit_active_markdown_links(errors)
     if not REGISTRY_STATS.exists():
         errors.append(f"missing generated registry statistics: {REGISTRY_STATS.relative_to(ROOT)}")
     queue_paths: list[str] = []
@@ -711,6 +919,7 @@ def main() -> None:
         "catalog_entries": catalog_counts,
         "combined_resources": resource_count,
         "registry_index_rows": index_count,
+        "active_markdown_links_checked": markdown_links_checked,
         "comparison_matrix_rows": matrix_count,
         "completed_matrix_rows": completed_matrix_rows,
         "errors": errors, "warnings": warnings,

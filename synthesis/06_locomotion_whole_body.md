@@ -1,6 +1,6 @@
 # Locomotion, Whole-Body, Mobile Manipulation, and Humanoids
 
-- Updated: 2026-09-02 KST
+- Updated: 2026-09-04 KST
 
 ## Scope
 
@@ -134,8 +134,3 @@ Humanoid를 별도 taxonomy로 분리하지 않고, control·adaptation·imitati
 - Human motion prior가 contact feasibility와 task success를 해치지 않도록 어떻게 제약할 것인가?
 - Motion-tracking scale이 증가할수록 rare fall, actuator saturation과 recovery onset을 어떤 event-level metric으로 남길 것인가?
 - HOVER/SONIC류 저수준 controller 위에 VLA를 얹을 때 command rate, termination과 unsafe-command rejection contract는 무엇인가?
-
-## Research Gaps
-
-- 통합 gap은 [G-09: loco-manipulation coupling](../research/RESEARCH_GAPS.md#g-09-locomotion과-manipulation의-bandwidth와-objective-충돌), [G-11: motion prior 대 feasibility](../research/RESEARCH_GAPS.md#g-11-human-motion-prior와-contact-feasibility의-충돌), [G-10: failure-resolved evaluation](../research/RESEARCH_GAPS.md#g-10-long-horizon-평가의-낮은-failure-resolution)을 본다.
-- 이 문서에는 action level, contact handling, adaptation과 real-robot failure evidence를 누적한다.

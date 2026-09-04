@@ -1,6 +1,6 @@
 # Planning and Control
 
-- Updated: 2026-09-02 KST
+- Updated: 2026-09-04 KST
 
 ## Scope
 
@@ -136,8 +136,3 @@ Kalman filtering → A* heuristic search → POMDP belief-state planning → Hyb
 - Foundation policy가 embodiment-specific dynamics와 constraint를 얼마나 내부화해야 하는가?
 - Belief/state estimator의 uncertainty가 planner와 safety constraint에 전달될 때 어떤 calibration이 필요한가?
 - Simulator와 learned model에서 좋은 plan이 실제 robot에서도 같은 실행 utility를 유지하는가?
-
-## Research Gaps
-
-- 통합 gap은 [G-01: VLA–contact 시간 척도](../research/RESEARCH_GAPS.md#g-01-vla와-접촉-제어의-시간-척도-불일치), [G-09: locomotion–manipulation coupling](../research/RESEARCH_GAPS.md#g-09-locomotion과-manipulation의-bandwidth와-objective-충돌)을 본다.
-- 이 문서에는 정독 후 확인된 planner/controller별 가정과 반례만 추가하고, gap 설명과 아이디어는 복제하지 않는다.

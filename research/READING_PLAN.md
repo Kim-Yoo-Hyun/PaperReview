@@ -1,6 +1,6 @@
 # Long-Term Robotics Reading Plan
 
-- Updated: 2026-09-03 KST
+- Updated: 2026-09-04 KST
 - Source registry: [PAPER.md](../PAPER.md)
 - Full tier index: [READING_TIERS.csv](./READING_TIERS.csv)
 - Reading tracker: [READING_STATUS.csv](./READING_STATUS.csv)
@@ -22,7 +22,7 @@
 
 - 주제별 시간 배분은 CORE를 건너뛰는 근거가 아니다. 연구 주제는 CORE 이후 NEXT의 branch 선택에만 사용한다.
 - CORE의 track 제목은 taxonomy와 navigation을 위한 것이며, 논문을 골라 읽기 위한 선택지가 아니다. 기본적으로 1번부터 77번까지 진행한다.
-- 특정 프로젝트에 필요한 논문을 먼저 읽어야 하면 canonical order를 수정하지 않고 별도 project overlay로 기록한다.
+- 특정 프로젝트의 우선순위가 생겨도 canonical order를 수정하지 않고 paper note와 해당 track synthesis의 `Open Questions`에 기록한다. 별도 project overlay는 만들지 않는다.
 
 ## Priority Criteria
 
@@ -62,7 +62,7 @@ CORE와 NEXT만 장기 정독 대상이다. REFERENCE와 ARCHIVE의 개별 분�
 1. **CORE 1–77:** 아래 CORE 목록의 전 논문을 공통 foundation spine으로 읽는다. 각 track heading은 탐색용 분류이며, 주제에 따라 CORE 일부를 생략하지 않는다.
 2. **NEXT 1–234:** CORE 완료 후에만 연구 질문에 맞는 전문화 branch를 고른다. 같은 branch 안에서는 목록 순서와 prerequisite를 우선한다.
 3. **REFERENCE:** CORE/NEXT에서 생긴 구체적인 정의·baseline·benchmark 요구를 해결할 때만 추가한다.
-4. **Project documents:** 특정 project의 detector, benchmark, implementation contract는 `research/projects/`에서 별도로 관리하며 canonical sequence를 바꾸지 않는다.
+4. **Project overlays:** 기존 RP-2/I-02 계열 project overlay는 삭제 정책에 따라 active reading source로 사용하지 않는다. 필요한 구현·검증 질문은 해당 paper note와 track synthesis의 `Open Questions`에 남긴다.
 
 ## Dependency-Based Reading Batches
 

@@ -1,6 +1,6 @@
 # World Models, Safety, and Recovery
 
-- Updated: 2026-09-02 KST
+- Updated: 2026-09-04 KST
 
 ## Scope
 
@@ -130,8 +130,3 @@ World Models/PlaNet/Dreamer → DayDreamer/TD-MPC2 → DreamGen/DreamDojo and ph
 - Learned safety와 model-based constraints를 어떤 계층에서 결합해야 하는가?
 - Human-video world model의 latent action이 robot contact와 actuator constraint를 보존하는지 어떤 matched task protocol로 검증할 것인가?
 - Synthetic experience가 실제 policy improvement로 이어지는지 어떤 calibration과 held-out rollout으로 확인할 것인가?
-
-## Research Gaps
-
-- 통합 gap은 [G-02: detection→recovery](../research/RESEARCH_GAPS.md#g-02-detection에서-recovery까지-닫히지-않은-loop), [G-07: control fidelity](../research/RESEARCH_GAPS.md#g-07-world-model의-visual-fidelity와-control-fidelity-불일치), [G-08: imagined improvement calibration](../research/RESEARCH_GAPS.md#g-08-imagined-policy-improvement의-보수성과-calibration)을 본다.
-- 이 문서에는 prediction target, uncertainty와 실제 closed-loop use를 정독 근거로 추가한다.

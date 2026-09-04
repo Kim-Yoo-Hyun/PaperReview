@@ -109,10 +109,81 @@
           "required": ["code_status", "data_status", "local_pdf_cache"],
           "properties": {
             "code_status": {"enum": ["released", "project_only", "not_released", "not_identified"]},
-            "data_status": {"enum": ["released", "not_released", "not_identified", "not_recorded"]},
+            "data_status": {"enum": ["released", "not_released", "not_identified", "not_recorded", "not_applicable"]},
             "local_pdf_cache": {"type": "boolean"}
           },
           "additionalProperties": true
+        },
+        "evaluation_profile": {
+          "type": "object",
+          "required": ["profile_version", "status", "type", "settings", "protocol", "source_note", "reviewed_on", "basis"],
+          "properties": {
+            "profile_version": {"type": "string", "minLength": 1},
+            "status": {"enum": ["structured_note_cues", "not_recorded"]},
+            "type": {"type": "string", "minLength": 1},
+            "settings": {
+              "type": "array",
+              "items": {"enum": ["real_robot", "simulation", "benchmark_or_dataset", "source_reported", "scope_unresolved", "not_recorded"]},
+              "uniqueItems": true
+            },
+            "protocol": {
+              "type": "object",
+              "required": ["dataset_or_benchmark", "metrics", "baselines", "ablations", "split_or_generalization", "trials_or_seeds", "statistics", "failure_cases"],
+              "properties": {
+                "dataset_or_benchmark": {"enum": ["reported", "not_reported", "not_recorded"]},
+                "metrics": {"enum": ["reported", "not_reported", "not_recorded"]},
+                "baselines": {"enum": ["reported", "not_reported", "not_recorded"]},
+                "ablations": {"enum": ["reported", "not_reported", "not_recorded"]},
+                "split_or_generalization": {"enum": ["reported", "not_reported", "not_recorded"]},
+                "trials_or_seeds": {"enum": ["reported", "not_reported", "not_recorded"]},
+                "statistics": {"enum": ["reported", "not_reported", "not_recorded"]},
+                "failure_cases": {"enum": ["reported", "not_reported", "not_recorded"]}
+              },
+              "additionalProperties": false
+            },
+            "trial_evidence": {"type": "array", "items": {"type": "object"}},
+            "benchmark_cues": {"type": "array", "items": {"type": "object"}},
+            "metric_cues": {"type": "array", "items": {"type": "object"}},
+            "source_note": {"type": ["string", "null"]},
+            "reviewed_on": {"type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"},
+            "basis": {"type": "string", "minLength": 1}
+          },
+          "additionalProperties": false
+        },
+        "reproducibility": {
+          "type": "object",
+          "required": ["profile_version", "status", "code", "data", "checkpoint", "configuration", "environment", "run_conditions", "reviewed_on", "source_note", "basis"],
+          "properties": {
+            "profile_version": {"type": "string", "minLength": 1},
+            "status": {"enum": ["metadata_audited", "not_recorded"]},
+            "code": {"type": "object"},
+            "data": {"type": "object"},
+            "checkpoint": {"type": "object"},
+            "configuration": {"type": "object"},
+            "environment": {"type": "object"},
+            "run_conditions": {"type": "object"},
+            "reviewed_on": {"type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"},
+            "source_note": {"type": ["string", "null"]},
+            "basis": {"type": "string", "minLength": 1}
+          },
+          "additionalProperties": false
+        },
+        "lineage_profile": {
+          "type": "object",
+          "required": ["profile_version", "status", "outgoing_paper_ids", "incoming_paper_ids", "queue_adjacency_paper_ids", "legacy_summary_candidate_paper_ids", "legacy_summary_present", "audited_on", "audit_scope", "basis"],
+          "properties": {
+            "profile_version": {"type": "string", "minLength": 1},
+            "status": {"enum": ["curated_edges", "candidate_only", "no_curated_edge_recorded"]},
+            "outgoing_paper_ids": {"type": "array", "items": {"type": "string", "pattern": "^pr-[0-9]{4,}$"}, "uniqueItems": true},
+            "incoming_paper_ids": {"type": "array", "items": {"type": "string", "pattern": "^pr-[0-9]{4,}$"}, "uniqueItems": true},
+            "queue_adjacency_paper_ids": {"type": "array", "items": {"type": "string", "pattern": "^pr-[0-9]{4,}$"}, "uniqueItems": true},
+            "legacy_summary_candidate_paper_ids": {"type": "array", "items": {"type": "string", "pattern": "^pr-[0-9]{4,}$"}, "uniqueItems": true},
+            "legacy_summary_present": {"type": "boolean"},
+            "audited_on": {"type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"},
+            "audit_scope": {"const": "all_registry"},
+            "basis": {"type": "string", "minLength": 1}
+          },
+          "additionalProperties": false
         },
         "curation": {
           "type": "object",

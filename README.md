@@ -1,6 +1,6 @@
 # PaperReview — Robotics-first Literature System
 
-- Snapshot verified: 2026-09-02 KST
+- Snapshot verified: 2026-09-04 KST
 
 `PaperReview`는 3D vision, robotics, VLA를 함께 다루되 **Robotics를 주 연구축**으로 삼는 장기 문헌 연구 저장소다. 논문을 모으는 데서 끝내지 않고, foundation → 최신 방법 → failure mode → 검증 가능한 연구 질문으로 연결한다.
 
@@ -41,11 +41,8 @@ Registry의 수집·정리 범위는 다음과 같다.
 | 우선순위·읽기 순서·CORE/NEXT | [research/READING_PLAN.md](./research/READING_PLAN.md) |
 | 전체 tier assignment | [research/READING_TIERS.csv](./research/READING_TIERS.csv) |
 | 정독 진행 상태 | [research/READING_STATUS.csv](./research/READING_STATUS.csv), [research/READING_STATUS.md](./research/READING_STATUS.md) |
-| 연구 공백 | [research/RESEARCH_GAPS.md](./research/RESEARCH_GAPS.md) |
-| 연구 아이디어·가설 | [research/RESEARCH_IDEAS.md](./research/RESEARCH_IDEAS.md) |
-| 실행 단계 연구 프로젝트 문서 | [RP-2 Failure Recovery](./research/projects/RP-2_FAILURE_RECOVERY.md), [RP-3 Memory Expiry](./research/projects/RP-3_MEMORY_EXPIRY.md) |
 | 계보·트랙별 synthesis | [synthesis/README.md](./synthesis/README.md) |
-| 최신 변경 기록 | [work/update/UPDATES_2026-09-02.md](./work/update/UPDATES_2026-09-02.md) |
+| 최신 변경 기록 | [work/update/UPDATES_2026-09-04.md](./work/update/UPDATES_2026-09-04.md) |
 
 ## 현재 snapshot
 
@@ -60,6 +57,9 @@ Registry의 수집·정리 범위는 다음과 같다.
 | `05_insights` PDF-body review | **950 / 950편** |
 | PDF-body extraction audit | **949 high / 1 medium** |
 | `05_insights` extraction audit | **634 high / 0 failed** |
+| structured evaluation profile | **950 / 950편** |
+| reproducibility profile | **950 / 950편** |
+| lineage coverage profile | **950 / 950편** |
 | curation rationale | **950 recorded / 0 pending** |
 | legacy note artifact audit | **4,750 scanned / 0 high-confidence findings** |
 | local PDF cache | 0개 |
@@ -92,7 +92,7 @@ Registry의 수집·정리 범위는 다음과 같다.
 
 2026-09-01 3D-heavy `REFERENCE` audit에서는 실제 manipulation/navigation/control에 연결된 16편을 `NEXT`로 승격했다. FastSLAM·ORB-SLAM을 포함한 state-estimation foundation은 `REFERENCE`에 유지했고, 순수 Gaussian Splatting/NeRF reconstruction·scene rendering 계열 15편은 registry에서 삭제하지 않고 `ARCHIVE`로 분리했다. 세부 근거와 대상 목록은 [2026-09-01 update log](./work/update/UPDATES_2026-09-01.md)에 기록했다.
 
-2026-09-02 robotics-first 재분류에서는 direct planning/control 2편을 `ARCHIVE→NEXT`, SLAM·world-model·generic 3D foundation 4편을 `ARCHIVE→REFERENCE`, generic 3D foundation 3편을 `NEXT→REFERENCE`로 조정하고, 최근 manipulation/VLA/navigation/world-model/whole-body 논문 26편을 `REFERENCE→NEXT`로 승격했다. 이어 robotics missing-link 26편을 신규 등록(20편 `NEXT`, 6편 `REFERENCE`)하고, ACT·NoMaD·PointFlowMatch·CALVIN·LIBERO·FurnitureBench·MimicPlay·LIBERO-Safety를 `NEXT`로 보강했다. 현재 snapshot은 **CORE 77 / NEXT 234 / REFERENCE 397 / ARCHIVE 242**이며, intensive reading set은 **311편**이다. 세부 대상과 provenance는 [최신 update log](./work/update/UPDATES_2026-09-02.md)에 기록했다.
+2026-09-02 robotics-first 재분류에서는 direct planning/control 2편을 `ARCHIVE→NEXT`, SLAM·world-model·generic 3D foundation 4편을 `ARCHIVE→REFERENCE`, generic 3D foundation 3편을 `NEXT→REFERENCE`로 조정하고, 최근 manipulation/VLA/navigation/world-model/whole-body 논문 26편을 `REFERENCE→NEXT`로 승격했다. 이어 robotics missing-link 26편을 신규 등록(20편 `NEXT`, 6편 `REFERENCE`)하고, ACT·NoMaD·PointFlowMatch·CALVIN·LIBERO·FurnitureBench·MimicPlay·LIBERO-Safety를 `NEXT`로 보강했다. 현재 snapshot은 **CORE 77 / NEXT 234 / REFERENCE 397 / ARCHIVE 242**이며, intensive reading set은 **311편**이다. 세부 대상과 provenance는 [최신 update log](./work/update/UPDATES_2026-09-04.md)에 기록했다.
 
 ### 논문이 맡는 역할
 
@@ -148,13 +148,13 @@ Registry의 수집·정리 범위는 다음과 같다.
 5. CORE/NEXT를 바꿀 때는 CSV를 직접 수정하지 않고 `build_reading_tiers.py`의 canonical group을 수정한다.
 6. `normalize_taxonomy.py`, `build_reading_tiers.py`, `reconcile_registry.py --apply`, `build_registry_views.py --apply`, `audit_repository.py`, `git diff --check`를 순서대로 실행한다. schema migration은 `migrate_registry_schema.py --apply`를 사용한다. `build_registry_catalogs.py`는 기존 benchmark/metric cue를 갱신할 때만 실행한다.
 
-논문을 정독한 뒤에는 `05_insights.md`, `READING_STATUS.csv`, 해당 synthesis matrix, 필요하면 `RESEARCH_GAPS.md`를 함께 갱신한다. 개인 note의 해석과 paper가 직접 보고한 결과를 분리한다. 구현 단계의 연구 문서는 literature collision, exact environment/checkpoint, method contract, baseline, metric, ablation, reject rule, pre-implementation freeze를 갖춘 실행 명세로 유지한다.
+논문을 정독한 뒤에는 `05_insights.md`, `READING_STATUS.csv`, 해당 synthesis matrix를 함께 갱신한다. 개인 note의 해석과 paper가 직접 보고한 결과를 분리한다. 별도 research-gap/idea/project overlay는 현재 삭제 정책에 따라 활성 문서로 유지하지 않으며, 과거 판단은 `work/update/`의 historical log에서만 보존한다.
 
 ## Curation and maintenance policy
 
 - 2024–2026은 현재 robotics/VLA frontier와 benchmark를 넓게 수집한다.
 - 오래된 foundation은 후속 연구의 prerequisite이거나 연구 문제를 정의하면 포함한다.
-- 최신 논문은 venue 이름보다 method novelty, closed-loop relevance, evaluation quality, research gap 연결을 우선한다.
+- 최신 논문은 venue 이름보다 method novelty, closed-loop relevance, evaluation quality, open-question 연결을 우선한다.
 - Foundation, frontier, benchmark, dataset, safety/recovery, enabling perception을 서로 다른 역할로 구분한다.
 - 논문 수나 venue quota를 채우기 위해 약한 논문을 추가하지 않는다.
 - 공식 proceedings/project/abstract를 우선 사용하고, 불확실한 claim은 `CURATION_ONLY` 또는 `UNVERIFIED`로 표시한다.
@@ -187,5 +187,5 @@ README와 운영 방식은 다음 공개 paper/resource registry의 장점을 �
 
 - paper link 목록과 별도로 **CORE/NEXT/REFERENCE/ARCHIVE**를 운영한다.
 - 각 paper에 문제·방법·평가·insight note를 고정 schema로 둔다.
-- 전체 논문 목록과 별개로 **gap → hypothesis → minimum experiment → reject criterion**을 유지한다.
+- 전체 논문 목록과 별개로 paper-level `Open Questions`, minimum reproduction, and failure boundary를 유지한다. 별도 gap/idea/project overlay는 삭제 정책에 따라 활성 source of truth로 두지 않는다.
 - registry snapshot, 최신 frontier update, reading status, synthesis queue를 서로 다른 artifact로 분리한다.

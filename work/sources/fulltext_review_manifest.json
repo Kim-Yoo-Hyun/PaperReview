@@ -33293,7 +33293,7 @@
   "registry_snapshot": {
     "status": "historical",
     "paper_count_at_reconciliation": 950,
-    "input_manifest_sha256_before_reconciliation": "3509ab359a929a49dc484aa9c079c3466c9fff68d5e8b71d8dfb4b06123003d3",
+    "input_manifest_sha256_before_reconciliation": "2341ab461b759df2174442f2d7361bc30f093715e37c312880c628a3f7051ba4",
     "tier_counts_in_review": {
       "REFERENCE": 418,
       "ARCHIVE": 248
