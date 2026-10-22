@@ -9,7 +9,7 @@
 - Year/Venue: 2003 / ICRA
 - Authors: not duplicated here when not verified in the registry source
 - Primary track: Locomotion, whole-body, mobile manipulation, and humanoids
-- Tier: CORE
+- Tier: REFERENCE
 - Tags: Robotics, humanoid, locomotion, ZMP, Control
 - Official paper: https://doi.org/10.1109/ROBOT.2003.1241826
 - Full-text retrieval: https://doi.org/10.1109/ROBOT.2003.1241826

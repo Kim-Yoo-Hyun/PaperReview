@@ -9,7 +9,7 @@
 - Year/Venue: 2016 / NeurIPS
 - Authors: not duplicated here when not verified in the registry source
 - Primary track: RL, IL, offline learning, and robot data
-- Tier: CORE
+- Tier: REFERENCE
 - Tags: Robotics, Imitation Learning, Reinforcement Learning
 - Official paper: https://arxiv.org/abs/1606.03476
 - Full-text retrieval: https://arxiv.org/pdf/1606.03476

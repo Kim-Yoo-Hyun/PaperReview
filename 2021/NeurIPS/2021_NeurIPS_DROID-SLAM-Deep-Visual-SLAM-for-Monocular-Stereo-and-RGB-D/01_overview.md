@@ -9,7 +9,7 @@
 - Year/Venue: 2021 / NeurIPS
 - Authors: not duplicated here when not verified in the registry source
 - Primary track: Robotics-enabling 3D perception
-- Tier: CORE
+- Tier: NEXT
 - Tags: SLAM, RGB-D, geometry
 - Official paper: https://arxiv.org/abs/2108.10869
 - Full-text retrieval: https://arxiv.org/pdf/2108.10869

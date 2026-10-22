@@ -9,7 +9,7 @@
 - Year/Venue: 2017 / IROS
 - Authors: not duplicated here when not verified in the registry source
 - Primary track: RL, IL, offline learning, and robot data
-- Tier: CORE
+- Tier: NEXT
 - Tags: Robotics, sim-to-real, domain randomization, perception
 - Official paper: https://arxiv.org/abs/1703.06907
 - Full-text retrieval: https://arxiv.org/pdf/1703.06907

@@ -1,0 +1,171 @@
+{
+  "checked_on": "2026-10-20",
+  "kind": "C1 source/interface audit, not runtime result",
+  "sources": [
+    {
+      "url": "https://raw.githubusercontent.com/huggingface/lerobot/7e241bd630a3719a56157a497ce5d08f244784f1/pyproject.toml",
+      "revision": "7e241bd630a3719a56157a497ce5d08f244784f1",
+      "path": "pyproject.toml",
+      "sha256": "3c2ce5b32fe48ef3c8c879c38e27fa52555074003957c9913d6b071a68f9eee2",
+      "bytes": 21952,
+      "scope": "static source/metadata inspection; external code not executed by this audit"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/huggingface/lerobot/7e241bd630a3719a56157a497ce5d08f244784f1/src/lerobot/envs/libero.py",
+      "revision": "7e241bd630a3719a56157a497ce5d08f244784f1",
+      "path": "src/lerobot/envs/libero.py",
+      "sha256": "97c984f12331527626812ec19967ef399e545535b3571becf044db2417ae9d71",
+      "bytes": 21921,
+      "scope": "static source/metadata inspection; external code not executed by this audit"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/huggingface/lerobot/7e241bd630a3719a56157a497ce5d08f244784f1/src/lerobot/envs/configs.py",
+      "revision": "7e241bd630a3719a56157a497ce5d08f244784f1",
+      "path": "src/lerobot/envs/configs.py",
+      "sha256": "e2a6df1d26875f8f5b4c195867b8ed0fe5f3454ec5ccb3341582f2e1ebc98aa1",
+      "bytes": 33764,
+      "scope": "static source/metadata inspection; external code not executed by this audit"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/huggingface/lerobot/7e241bd630a3719a56157a497ce5d08f244784f1/src/lerobot/envs/utils.py",
+      "revision": "7e241bd630a3719a56157a497ce5d08f244784f1",
+      "path": "src/lerobot/envs/utils.py",
+      "sha256": "4a37ce5d9ac70a22f88e63c02b84ef3e30be72725e52fe6a03ec7e3407c143e7",
+      "bytes": 19153,
+      "scope": "static source/metadata inspection; external code not executed by this audit"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/huggingface/lerobot/7e241bd630a3719a56157a497ce5d08f244784f1/src/lerobot/processor/env_processor.py",
+      "revision": "7e241bd630a3719a56157a497ce5d08f244784f1",
+      "path": "src/lerobot/processor/env_processor.py",
+      "sha256": "41cf74048b233652b2b03d38c79b30d6f1d341592d553a5625f971de555f3a3a",
+      "bytes": 8269,
+      "scope": "static source/metadata inspection; external code not executed by this audit"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/huggingface/lerobot/7e241bd630a3719a56157a497ce5d08f244784f1/src/lerobot/policies/smolvla/configuration_smolvla.py",
+      "revision": "7e241bd630a3719a56157a497ce5d08f244784f1",
+      "path": "src/lerobot/policies/smolvla/configuration_smolvla.py",
+      "sha256": "2fb637cb428fa2fdf1d114646dcffaf4728216bfe5b7039d5d0cac4857ffc4e0",
+      "bytes": 5934,
+      "scope": "static source/metadata inspection; external code not executed by this audit"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/huggingface/lerobot/7e241bd630a3719a56157a497ce5d08f244784f1/src/lerobot/policies/smolvla/modeling_smolvla.py",
+      "revision": "7e241bd630a3719a56157a497ce5d08f244784f1",
+      "path": "src/lerobot/policies/smolvla/modeling_smolvla.py",
+      "sha256": "37b1d56f37510732a087cf5c32c05cd15d6234201a3f002f108ec4c53438cc7d",
+      "bytes": 32694,
+      "scope": "static source/metadata inspection; external code not executed by this audit"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/huggingface/lerobot/7e241bd630a3719a56157a497ce5d08f244784f1/src/lerobot/policies/smolvla/smolvlm_with_expert.py",
+      "revision": "7e241bd630a3719a56157a497ce5d08f244784f1",
+      "path": "src/lerobot/policies/smolvla/smolvlm_with_expert.py",
+      "sha256": "996d3b0c713c0ed42b383aa2cf89b2e6f9868e337747c480a64adaecdc1073cf",
+      "bytes": 23775,
+      "scope": "static source/metadata inspection; external code not executed by this audit"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/huggingface/LIBERO/8561c60eea2fb93096146f240194649df73d8b1e/libero/libero/benchmark/libero_suite_task_map.py",
+      "revision": "8561c60eea2fb93096146f240194649df73d8b1e",
+      "path": "libero/libero/benchmark/libero_suite_task_map.py",
+      "sha256": "0c950df0a785aa55de968bb38ccd865d2017f71ddbe6f48cfd05ac0742b6d62d",
+      "bytes": 9775,
+      "scope": "static source/metadata inspection; external code not executed by this audit"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/huggingface/LIBERO/8561c60eea2fb93096146f240194649df73d8b1e/libero/libero/benchmark/__init__.py",
+      "revision": "8561c60eea2fb93096146f240194649df73d8b1e",
+      "path": "libero/libero/benchmark/__init__.py",
+      "sha256": "9c07414d4c75f5de50d9c8b3fefbda81ae72b3eae158c1af1d115e77063efd18",
+      "bytes": 6128,
+      "scope": "static source/metadata inspection; external code not executed by this audit"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/huggingface/LIBERO/8561c60eea2fb93096146f240194649df73d8b1e/libero/libero/envs/env_wrapper.py",
+      "revision": "8561c60eea2fb93096146f240194649df73d8b1e",
+      "path": "libero/libero/envs/env_wrapper.py",
+      "sha256": "a782fb76c9792268d28979474fe72849e1e98ada49c8e997a65359a8d6b6acd0",
+      "bytes": 8781,
+      "scope": "static source/metadata inspection; external code not executed by this audit"
+    },
+    {
+      "url": "https://huggingface.co/HuggingFaceVLA/smolvla_libero/resolve/6721902bc4d61e50a3bfdb11dfb4cb626f05d102/config.json",
+      "revision": "6721902bc4d61e50a3bfdb11dfb4cb626f05d102",
+      "path": "config.json",
+      "sha256": "e346a63094732ea28e05b08302a218306cf6541960b663a3cb4b6948e4efe6e0",
+      "bytes": 2109,
+      "scope": "static source/metadata inspection; external code not executed by this audit"
+    },
+    {
+      "url": "https://huggingface.co/HuggingFaceVLA/smolvla_libero/resolve/6721902bc4d61e50a3bfdb11dfb4cb626f05d102/policy_preprocessor.json",
+      "revision": "6721902bc4d61e50a3bfdb11dfb4cb626f05d102",
+      "path": "policy_preprocessor.json",
+      "sha256": "29267ff4423fcce93bbd76ad0f386905f9de5d267ca13379a5795a514a81b7a9",
+      "bytes": 1709,
+      "scope": "static source/metadata inspection; external code not executed by this audit"
+    },
+    {
+      "url": "https://huggingface.co/HuggingFaceVLA/smolvla_libero/resolve/6721902bc4d61e50a3bfdb11dfb4cb626f05d102/policy_postprocessor.json",
+      "revision": "6721902bc4d61e50a3bfdb11dfb4cb626f05d102",
+      "path": "policy_postprocessor.json",
+      "sha256": "ad2d22405cb63be4932c4a4d9a69bc9953df02a01235c5f420b679dbe6bfe7c5",
+      "bytes": 660,
+      "scope": "static source/metadata inspection; external code not executed by this audit"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/kerrj/eyerobot2/c5f21cc7f3fa166395bda862745de955f16932e4/README.md",
+      "revision": "c5f21cc7f3fa166395bda862745de955f16932e4",
+      "path": "README.md",
+      "sha256": "67b26c6f4146e1459a6cdaaf79082b87e4721808099aa8012b48a02b2f23f0d4",
+      "bytes": 154,
+      "scope": "static source/metadata inspection; external code not executed by this audit"
+    },
+    {
+      "url": "https://huggingface.co/HuggingFaceVLA/smolvla_libero/resolve/6721902bc4d61e50a3bfdb11dfb4cb626f05d102/README.md",
+      "revision": "6721902bc4d61e50a3bfdb11dfb4cb626f05d102",
+      "path": "README.md",
+      "sha256": "8f0505f851e9bec50a1ba37e5776f69bf12f7c8f5307f796deff026fb3761963",
+      "bytes": 1679,
+      "checked_on": "2026-10-21",
+      "scope": "static model-card/evaluation-documentation inspection"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/huggingface/lerobot/7e241bd630a3719a56157a497ce5d08f244784f1/docs/source/libero.mdx",
+      "revision": "7e241bd630a3719a56157a497ce5d08f244784f1",
+      "path": "docs/source/libero.mdx",
+      "sha256": "2d4e37a200684ec790c0218c242d175ed86a7c57bd1523eab2c967fdee683e11",
+      "bytes": 10019,
+      "checked_on": "2026-10-21",
+      "scope": "static model-card/evaluation-documentation inspection"
+    }
+  ],
+  "policy": {
+    "repo": "HuggingFaceVLA/smolvla_libero",
+    "revision": "6721902bc4d61e50a3bfdb11dfb4cb626f05d102",
+    "weight_bytes_from_hub_metadata": 1218047032,
+    "weight_sha256_from_hub_lfs": "71d9563c8295284acba8fc2d5c19de000d6fe9ba58a406832af7ef3d221ed52f",
+    "n_obs_steps": 1,
+    "chunk_size": 50,
+    "n_action_steps": 1,
+    "flow_steps": 10,
+    "state_dim": 8,
+    "action_dim": 7,
+    "normalizer_header_checked": [
+      "action.mean[7]",
+      "action.std[7]",
+      "observation.state.mean[8]",
+      "observation.state.std[8]"
+    ]
+  },
+  "native_probe": "../../experiments/vla_rl_active_handoff/README.md",
+  "boundaries": [
+    "source files fetched into memory and hashed; no host dependency installation",
+    "checkpoint weights not downloaded by this source audit",
+    "mutable package dependency closure must be recorded by actual runtime",
+    "repository commit is not a successful runtime verification"
+  ],
+  "followup_checked_on": "2026-10-21",
+  "publication_protocol_limit": "The SmolVLA checkpoint model card has datasets: unknown and generic template commands; the pinned LIBERO guide reports Pi0.5 results, not this SmolVLA checkpoint. Native config compatibility does not establish published competence."
+}

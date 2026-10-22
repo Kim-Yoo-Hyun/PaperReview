@@ -47,7 +47,7 @@ Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 �
 | Observation/input | Nevertheless, PointCNN built with X-Conv is still significantly better than a direct application of typical convolutions on point clouds, and on par or better than state-of-the-art neural networks designed for point cloud ... | RGB-D, image set, point cloud, depth와 camera pose | p. 2 (1 Introduction), p. 1 (1 Introduction) |
 | State/latent | Nevertheless, PointCNN, built, X-Conv, still, significantly, better, direct, application, typical, convolutions, point | geometry, map, object/relationship state | p. 2 (1 Introduction), p. 1 (1 Introduction), p. 1 (1 Introduction) |
 | Output/action | However, for data represented in point cloud form, which is irregular and unordered, the convoralution operator is ill-suited for leveraging spatially-local correlations in the data. 𝑓" 𝑓# 𝑓$ 𝑓% 1 𝑓" 2 ... | point map, pose, scene graph, affordance 또는 query result | p. 1 (1 Introduction), p. 1 (1 Introduction), p. 2 (1 Introduction) |
-| geometric accuracy, semantic consistency와 planning/manipulation utility | p. 1 (1 Introduction) |
+| Evaluation target | 추출문 누락 — 원문 확인 필요 | Downstream robot utility는 이 행에서 검증되지 않음 | 기존 추출 위치: p. 1 (1 Introduction) |
 
 ## Main Claims and Actual Contribution
 

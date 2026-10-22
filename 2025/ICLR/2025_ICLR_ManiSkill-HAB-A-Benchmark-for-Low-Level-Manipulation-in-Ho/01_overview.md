@@ -46,7 +46,7 @@ Manipulation, contact, tactile, and dexterity의 benchmark 문제를 이해하�
 
 | Role | PDF body evidence | Robotics interpretation | Anchor |
 |---|---|---|---|
-| Observation/input | We provide brief descriptions of the subtasks below: • Pick[a, optional](xpose): pick object x (from articulation a, if provided). • Place[a, optional](xpose , gpos): place object x in goal g (in articulation ... | standardized observation, action, task state와 evaluation split | p. 4 (3 PRELIMINARIES), p. 6 (5 METHODOLOGY) |
+| Observation/input | We provide brief descriptions of the subtasks below: • `Pick[a, optional](xpose)`: pick object x (from articulation a, if provided). • `Place[a, optional](xpose , gpos)`: place object x in goal g (in articulation ... | standardized observation, action, task state와 evaluation split | p. 4 (3 PRELIMINARIES), p. 6 (5 METHODOLOGY) |
 | State/latent | provide, brief, descriptions, subtasks, below, Pick, optional, xpose, object, articulation, provided, Place | benchmark state/goal와 method decision | p. 4 (3 PRELIMINARIES), p. 6 (5 METHODOLOGY), p. 5 (3 PRELIMINARIES) |
 | Output/action | Furthermore, the policy must learn action sequences which can reach these grasp poses and retrieve the target object within the specified horizon while keeping the robot under the cumulative collision force limit. | policy/controller trajectory 또는 measured result | p. 6 (5 METHODOLOGY), p. 5 (3 PRELIMINARIES), p. 7 (5 METHODOLOGY) |
 | Objective/outcome | As a result, learning successful grasping for multiple objects with different geometries - in addition to whole body control with collision constraints - is difficult. | success metric, robustness, generalization과 reproducibility | p. 6 (5 METHODOLOGY), p. 6 (5 METHODOLOGY), p. 8 (5 METHODOLOGY) |

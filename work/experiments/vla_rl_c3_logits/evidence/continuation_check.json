@@ -1,0 +1,7 @@
+{
+  "first_observation_seconds": 29.832663347000107,
+  "linear_upper_estimate_for_16_seconds": 477.3226135520017,
+  "decision": "Continue frozen 16-observation selection within 90-minute preparation+inference budget",
+  "estimated_16_forward_minutes": 7.955376892533362,
+  "changed_sample_selection": false
+}

@@ -58,7 +58,7 @@
 ### Minimal reproduction
 
 1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
-2. Use the paper-reported resource/task cue: We further tested on 7 challenging scenes from the low-res set of the BlendedMVS dataset [48](CC-4 License)..
+2. Use the paper-reported resource/task cue: We further tested on 7 challenging scenes from the low-res set of the BlendedMVS dataset [48] (CC-4 License)..
 3. Compare against the body-reported baseline or a matched simpler baseline: (1) The state-of-the-art surface rendering approach - IDR [49]: IDR can reconstruct surface with high quality but requires foreground masks as supervision; Since IDR has demonstrated superior quality compared to another surface ....
 4. Report the body metric and its denominator/aggregation: We measure the reconstruction quality with the Chamfer distances in the same way as UNISURF [31] and IDR [49] and report the scores in Table 1..
 5. Re-run the body-reported ablation/failure condition: To evaluate the effect of the weight calculation, we test three different kinds of weight constructions described in Sec..

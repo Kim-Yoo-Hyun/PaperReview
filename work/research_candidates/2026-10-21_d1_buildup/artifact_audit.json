@@ -1,0 +1,873 @@
+{
+  "checked_at_utc": "2026-10-21T14:19:45.661282+00:00",
+  "repositories": [
+    {
+      "repository": "GeWu-Lab/GAP",
+      "commit": "2f605436c68eedf328c05520d52877604af730d3",
+      "tree_truncated": false,
+      "blob_count": 27,
+      "paths": [
+        "README.md",
+        "costdirection.py",
+        "environment.yml",
+        "gap/cfgs/config.yaml",
+        "gap/cfgs/dataset/general.yaml",
+        "gap/cfgs/dataset/phase.yaml",
+        "gap/cfgs/eval.yaml",
+        "gap/cfgs/gap.yaml",
+        "gap/cfgs/optimizer/adam.yaml",
+        "gap/cfgs/policy/bc_policy.yaml",
+        "gap/cfgs/policy/encoder/feature.yaml",
+        "gap/cfgs/policy/head/diffunet.yaml",
+        "gap/cfgs/policy/head/dmm.yaml",
+        "gap/cfgs/task/assembly.yaml",
+        "gap/cfgs/task/hammer.yaml",
+        "gap/dataset.py",
+        "gap/envs.py",
+        "gap/gap.py",
+        "gap/inference.py",
+        "gap/policies/bc.py",
+        "gap/policies/head.py",
+        "gap/policies/modules/__pycache__/transformer_modules.cpython-38.pyc",
+        "gap/policies/modules/transformer_modules.py",
+        "gap/policies/policy.py",
+        "gap/policies/visual_encoder.py",
+        "gap/utils.py",
+        "pipeline.png"
+      ],
+      "files": [
+        {
+          "path": "README.md",
+          "url": "https://raw.githubusercontent.com/GeWu-Lab/GAP/2f605436c68eedf328c05520d52877604af730d3/README.md",
+          "bytes": 3382,
+          "sha256": "4cf95c547aa58db4ce8bb7483f83715d7cc5c0f92377db55aadd1c46c3a8a3f1",
+          "cues": [
+            {
+              "line": 1,
+              "text": "# When would Vision-Proprioception Policies Fail in Robotic Manipulation?"
+            },
+            {
+              "line": 14,
+              "text": "This is the PyTorch code of our paper: __When would Vision-Proprioception Policies Fail in Robotic Manipulation?__"
+            },
+            {
+              "line": 16,
+              "text": "In this work, we investigate when vision-proprioception policies would fail in robotic manipulation by conducting temporally controlled experiments. We found that during task sub-phases that robot's motion transitions, w"
+            },
+            {
+              "line": 20,
+              "text": "As shown, we propose the __Gradient Adjustment with Phase-guidance (GAP)__ algorithm that adaptively modulates the optimization of proprioception, enabling dynamic collaboration within the vision-proprioception policy. S"
+            },
+            {
+              "line": 36,
+              "text": "3. Add the following import statement to `__init__.py` of ruptures to enable the custom cost function:"
+            },
+            {
+              "line": 47,
+              "text": "python gap/gap.py task=assembly method=gap image=true proprio=true"
+            },
+            {
+              "line": 50,
+              "text": "You can configure the target task and input modalities through command-line arguments. The example above trains on the `assembly` task with both image and proprioception modalities."
+            },
+            {
+              "line": 57,
+              "text": "python gap/inference.py task=assembly method=gap image=true proprio=true"
+            },
+            {
+              "line": 65,
+              "text": "@misc{lu2026visionproprioceptionpoliciesfailrobotic,"
+            },
+            {
+              "line": 66,
+              "text": "      title={When would Vision-Proprioception Policies Fail in Robotic Manipulation?}, "
+            }
+          ]
+        },
+        {
+          "path": "costdirection.py",
+          "url": "https://raw.githubusercontent.com/GeWu-Lab/GAP/2f605436c68eedf328c05520d52877604af730d3/costdirection.py",
+          "bytes": 2352,
+          "sha256": "03537350fdd58da989e8320190e4bc9b58b39d7795256223e123df728441754c",
+          "cues": []
+        },
+        {
+          "path": "environment.yml",
+          "url": "https://raw.githubusercontent.com/GeWu-Lab/GAP/2f605436c68eedf328c05520d52877604af730d3/environment.yml",
+          "bytes": 6327,
+          "sha256": "85c99ed37ccc0c8e2f7c9579275411f425997dfd6714a4d797df4b16c6a76f32",
+          "cues": []
+        },
+        {
+          "path": "gap/cfgs/config.yaml",
+          "url": "https://raw.githubusercontent.com/GeWu-Lab/GAP/2f605436c68eedf328c05520d52877604af730d3/gap/cfgs/config.yaml",
+          "bytes": 492,
+          "sha256": "f6b07dd07930515e7e6fea632ee51a9dad02e6d229c3e0480fb5136d45e00696",
+          "cues": [
+            {
+              "line": 19,
+              "text": "proprio: false"
+            },
+            {
+              "line": 25,
+              "text": "device: cuda"
+            }
+          ]
+        },
+        {
+          "path": "gap/cfgs/task/assembly.yaml",
+          "url": "https://raw.githubusercontent.com/GeWu-Lab/GAP/2f605436c68eedf328c05520d52877604af730d3/gap/cfgs/task/assembly.yaml",
+          "bytes": 268,
+          "sha256": "e49a5f3f270b8f34efb13c3599a408d96fae3c4d14a46a6b6546424f2399fa40",
+          "cues": []
+        },
+        {
+          "path": "gap/policies/policy.py",
+          "url": "https://raw.githubusercontent.com/GeWu-Lab/GAP/2f605436c68eedf328c05520d52877604af730d3/gap/policies/policy.py",
+          "bytes": 1421,
+          "sha256": "7ae56aae9faa9c4b8cc6a6e010ad58985fc673fecfc31ebf05ec3c1be8ae4836",
+          "cues": []
+        },
+        {
+          "path": "gap/policies/visual_encoder.py",
+          "url": "https://raw.githubusercontent.com/GeWu-Lab/GAP/2f605436c68eedf328c05520d52877604af730d3/gap/policies/visual_encoder.py",
+          "bytes": 8295,
+          "sha256": "12acd451a9444b6e85cd73fb332d8f04dd869da5c02d31df60886193ec05162e",
+          "cues": [
+            {
+              "line": 122,
+              "text": "        self.proprio_dim = pro_dim"
+            },
+            {
+              "line": 123,
+              "text": "        self.hidden_dim = hidden_dim if not raw else self.proprio_dim"
+            },
+            {
+              "line": 125,
+              "text": "        # proprio encoder"
+            },
+            {
+              "line": 126,
+              "text": "        self.proprio_encoder = nn.Sequential("
+            },
+            {
+              "line": 127,
+              "text": "            nn.Linear(self.proprio_dim, 128),"
+            },
+            {
+              "line": 145,
+              "text": "    def forward(self, proprio):"
+            },
+            {
+              "line": 146,
+              "text": "        # Encode proprio inputs"
+            },
+            {
+              "line": 147,
+              "text": "        B,T,pd = proprio.shape"
+            },
+            {
+              "line": 148,
+              "text": "        proprio = proprio.reshape(-1, *proprio.shape[2:]) # (Batch_size, n_obs_steps, ) -> (Batch_size*n_obs_steps, ) for encoder"
+            },
+            {
+              "line": 149,
+              "text": "        x = self.proprio_encoder(proprio) # (B*T, E)"
+            },
+            {
+              "line": 200,
+              "text": "    def __init__(self, hidden_dim, image=True, proprio=True, pro_dim=9, raw=False, depth=False):"
+            },
+            {
+              "line": 205,
+              "text": "        self.proprio = proprio"
+            },
+            {
+              "line": 213,
+              "text": "        if proprio:"
+            },
+            {
+              "line": 220,
+              "text": "    def forward(self, image=None, proprio=None, depth=None, mask_flag=None):"
+            },
+            {
+              "line": 226,
+              "text": "        if self.proprio:"
+            },
+            {
+              "line": 227,
+              "text": "            modal_list.append(self.proencoder(proprio))"
+            }
+          ]
+        },
+        {
+          "path": "gap/dataset.py",
+          "url": "https://raw.githubusercontent.com/GeWu-Lab/GAP/2f605436c68eedf328c05520d52877604af730d3/gap/dataset.py",
+          "bytes": 20646,
+          "sha256": "52ef95cebf7550aba9caa309d93098c8661bc8a07e8c8691257092176f120314",
+          "cues": [
+            {
+              "line": 97,
+              "text": "        return torch.utils.data.DataLoader(self, batch_size=self.batch_size, shuffle=shuffle, num_workers=num_workers, drop_last=False, pin_memory=True)"
+            },
+            {
+              "line": 115,
+              "text": "        self.proprio_list = ['robot0_eef_pos', 'robot0_eef_quat', 'robot0_gripper_qpos']"
+            },
+            {
+              "line": 186,
+              "text": "                \"proprio\": torch.from_numpy(pro).float(),"
+            },
+            {
+              "line": 198,
+              "text": "            robot_state = np.concatenate([self.data[f'demo_{traj_id}']['obs'][target_state] for target_state in self.proprio_list], axis=-1).astype(np.float32)"
+            },
+            {
+              "line": 199,
+              "text": "            pro = conc(robot_state, pro2read)"
+            },
+            {
+              "line": 204,
+              "text": "                \"proprio\": torch.from_numpy(pro).float(),"
+            },
+            {
+              "line": 292,
+              "text": "        self.proprio_list = ['robot0_eef_pos', 'robot0_eef_quat', 'robot0_gripper_qpos']"
+            },
+            {
+              "line": 345,
+              "text": "                traj_pro = np.concatenate([self.data[f'demo_{traj_id}']['obs'][target_state] for target_state in self.proprio_list], axis=-1).astype(np.float32)"
+            },
+            {
+              "line": 367,
+              "text": "        phase_pred_model = LSTMModel(input_size=9, hidden_size=64, output_size=1, num_layers=2).to('cuda')"
+            },
+            {
+              "line": 374,
+              "text": "                batch_x, batch_y, penalty = batch_x.to('cuda').float(), batch_y.to('cuda').float(), penalty.to('cuda').float()"
+            },
+            {
+              "line": 395,
+              "text": "                td_pro = torch.from_numpy(td_pro).to(\"cuda\").unsqueeze(0).float()"
+            },
+            {
+              "line": 405,
+              "text": "                traj_pro = np.concatenate([self.data[f'demo_{traj_id}']['obs'][target_state] for target_state in self.proprio_list], axis=-1).astype(np.float32)"
+            },
+            {
+              "line": 410,
+              "text": "                td_pro = torch.from_numpy(td_pro).to(\"cuda\").unsqueeze(0).float()"
+            },
+            {
+              "line": 485,
+              "text": "                \"proprio\": torch.from_numpy(pro).float(),"
+            },
+            {
+              "line": 496,
+              "text": "            robot_state = np.concatenate([self.data[f'demo_{traj_id}']['obs'][target_state] for target_state in self.proprio_list], axis=-1).astype(np.float32)"
+            },
+            {
+              "line": 497,
+              "text": "            pro = conc(robot_state, pro2read)"
+            },
+            {
+              "line": 502,
+              "text": "                \"proprio\": torch.from_numpy(pro).float(),"
+            }
+          ]
+        },
+        {
+          "path": "gap/envs.py",
+          "url": "https://raw.githubusercontent.com/GeWu-Lab/GAP/2f605436c68eedf328c05520d52877604af730d3/gap/envs.py",
+          "bytes": 12005,
+          "sha256": "bdbe2be51d3eb493b5c05d32e49aa847dd597064cbc924c45f6eb4512e6ea35d",
+          "cues": [
+            {
+              "line": 36,
+              "text": "            proprio_state = np.concatenate([eef_pos, eef_quat, gripper_qpos])[np.newaxis, :]"
+            },
+            {
+              "line": 39,
+              "text": "            proprio_store = [proprio_state] * (n_obs_steps-1)"
+            },
+            {
+              "line": 58,
+              "text": "                proprio_state = np.concatenate([eef_pos, eef_quat, gripper_qpos])[np.newaxis, :]"
+            },
+            {
+              "line": 59,
+              "text": "                proprio_store.append(proprio_state)"
+            },
+            {
+              "line": 62,
+              "text": "                pros = torch.from_numpy(np.concatenate(proprio_store[-1*n_obs_steps:])).float().to(device).unsqueeze(0)"
+            },
+            {
+              "line": 102,
+              "text": "        self.proprio_list = ['robot0_eef_pos', 'robot0_eef_quat', 'robot0_gripper_qpos']"
+            },
+            {
+              "line": 108,
+              "text": "        dummy_proprio = obs_dict['proprio'][0]"
+            },
+            {
+              "line": 116,
+              "text": "        target_proprio = np.concatenate([all_obs[target_state] for target_state in self.proprio_list], axis=-1).astype(np.float32)"
+            },
+            {
+              "line": 117,
+              "text": "        first_proprio = target_proprio[np.newaxis, :]"
+            },
+            {
+              "line": 124,
+              "text": "        self.obs_store['proprio'] = [first_proprio for _ in range(self.n_obs_steps)]"
+            },
+            {
+              "line": 128,
+              "text": "        obs['proprio'] = np.concatenate(self.obs_store['proprio'][-1 * self.n_obs_steps : ])"
+            },
+            {
+              "line": 139,
+              "text": "        cur_proprio = np.concatenate([all_obs[target_state] for target_state in self.proprio_list], axis=-1).astype(np.float32)"
+            },
+            {
+              "line": 140,
+              "text": "        self.obs_store['proprio'].append(cur_proprio[np.newaxis, :])"
+            },
+            {
+              "line": 151,
+              "text": "        obs['proprio'] = np.concatenate(self.obs_store['proprio'][-1 * self.n_obs_steps : ])"
+            },
+            {
+              "line": 174,
+              "text": "        self.proprio_list = ['robot0_eef_pos', 'robot0_eef_quat', 'robot0_gripper_qpos']"
+            },
+            {
+              "line": 204,
+              "text": "            third_obs, proprio_state = self.get_obs(all_obs)"
+            },
+            {
+              "line": 206,
+              "text": "            proprio_store = [proprio_state[np.newaxis, :]] * n_obs_steps"
+            },
+            {
+              "line": 216,
+              "text": "                pros = torch.from_numpy(np.concatenate(proprio_store[-1*n_obs_steps:])).float().to(device).unsqueeze(0)"
+            },
+            {
+              "line": 232,
+              "text": "                third_obs, proprio_state = self.get_obs(all_obs)"
+            },
+            {
+              "line": 234,
+              "text": "                proprio_store.append(proprio_state[np.newaxis, :])"
+            },
+            {
+              "line": 257,
+              "text": "        proprio_state = np.concatenate([all_obs[target_state] for target_state in self.proprio_list], axis=-1).astype(np.float32)"
+            },
+            {
+              "line": 258,
+              "text": "        return third_obs, proprio_state"
+            }
+          ]
+        },
+        {
+          "path": "gap/gap.py",
+          "url": "https://raw.githubusercontent.com/GeWu-Lab/GAP/2f605436c68eedf328c05520d52877604af730d3/gap/gap.py",
+          "bytes": 4364,
+          "sha256": "713d04a56e079bb509cce715878d15c021762344a6d36cf87b39873a0d89e0fb",
+          "cues": [
+            {
+              "line": 55,
+              "text": "        save_data = self.policy.state_dict()"
+            },
+            {
+              "line": 58,
+              "text": "            \"optimizer\": self.optimizer.state_dict(),"
+            },
+            {
+              "line": 73,
+              "text": "                proprio = batch['proprio'].to(self.cfg.device, non_blocking=True)"
+            },
+            {
+              "line": 78,
+              "text": "                loss = self.policy.compute_loss(img, proprio, gt_action)"
+            },
+            {
+              "line": 111,
+              "text": "            proprio = batch['proprio'].to(self.cfg.device, non_blocking=True)"
+            },
+            {
+              "line": 115,
+              "text": "                loss = self.policy.compute_loss(img, proprio, gt_action)"
+            },
+            {
+              "line": 125,
+              "text": "    torch.cuda.manual_seed_all(cfg.seed)"
+            }
+          ]
+        },
+        {
+          "path": "gap/inference.py",
+          "url": "https://raw.githubusercontent.com/GeWu-Lab/GAP/2f605436c68eedf328c05520d52877604af730d3/gap/inference.py",
+          "bytes": 1943,
+          "sha256": "131f2d2ffb94a9fd63bd9c0af0ef6f9f2dbb4ccb09bd0e2f35fcda84433b02d7",
+          "cues": [
+            {
+              "line": 44,
+              "text": "        self.policy.load_state_dict(target_load_dict)"
+            },
+            {
+              "line": 64,
+              "text": "    torch.cuda.manual_seed_all(cfg.seed)"
+            }
+          ]
+        },
+        {
+          "path": "gap/policies/bc.py",
+          "url": "https://raw.githubusercontent.com/GeWu-Lab/GAP/2f605436c68eedf328c05520d52877604af730d3/gap/policies/bc.py",
+          "bytes": 1425,
+          "sha256": "d161d8232fd372e8899e968cbf55fd4163e6a3de8c8d7d59d6f078f587c5718b",
+          "cues": [
+            {
+              "line": 28,
+              "text": "    def get_action(self, img, proprio, depth=None, mask_flag=None):"
+            },
+            {
+              "line": 31,
+              "text": "            if proprio.shape[0] != 1: proprio = proprio.unsqueeze(0)"
+            },
+            {
+              "line": 33,
+              "text": "            hidden = self.encoder(img, proprio, depth, mask_flag) # (Batch=1,T,E)"
+            },
+            {
+              "line": 38,
+              "text": "    def compute_loss(self, img, proprio, gt_action, depth=None, mask_flag=None):"
+            },
+            {
+              "line": 41,
+              "text": "        hidden = self.encoder(img, proprio, depth, mask_flag) # (B,T,E)"
+            }
+          ]
+        },
+        {
+          "path": "gap/policies/head.py",
+          "url": "https://raw.githubusercontent.com/GeWu-Lab/GAP/2f605436c68eedf328c05520d52877604af730d3/gap/policies/head.py",
+          "bytes": 29282,
+          "sha256": "663b437d52ca12bc24fb0976e33db5d52bb1683a3aee4d0b5ac07d56dd2c9111",
+          "cues": [
+            {
+              "line": 573,
+              "text": "                self.register_buffer('memory_mask', mask)"
+            },
+            {
+              "line": 575,
+              "text": "                self.memory_mask = None"
+            },
+            {
+              "line": 578,
+              "text": "            self.memory_mask = None"
+            },
+            {
+              "line": 763,
+              "text": "            memory = x"
+            },
+            {
+              "line": 778,
+              "text": "                memory=memory,"
+            },
+            {
+              "line": 780,
+              "text": "                memory_mask=self.memory_mask"
+            }
+          ]
+        }
+      ],
+      "execution": "read_only_source_audit; dependencies/models not installed or run"
+    },
+    {
+      "repository": "Physical-Intelligence/openpi",
+      "commit": "215abfb217dbac7d5f1273282331b9b1866c0479",
+      "tree_truncated": false,
+      "blob_count": 140,
+      "paths": [],
+      "files": [
+        {
+          "path": "README.md",
+          "url": "https://raw.githubusercontent.com/Physical-Intelligence/openpi/215abfb217dbac7d5f1273282331b9b1866c0479/README.md",
+          "bytes": 23254,
+          "sha256": "567fc57766bd736664f50126cab8145af4071ca16cc5e238f2b11e369169c3b5",
+          "cues": [
+            {
+              "line": 10,
+              "text": "For all models, we provide _base model_ checkpoints, pre-trained on 10k+ hours of robot data, and examples for using them out of the box or fine-tuning them to your own datasets."
+            },
+            {
+              "line": 24,
+              "text": "To run the models in this repository, you will need an NVIDIA GPU with at least the following specifications. These estimations assume a single GPU, but you can also use multiple GPUs with model parallelism to reduce per"
+            },
+            {
+              "line": 26,
+              "text": "| Mode               | Memory Required | Example GPU        |"
+            },
+            {
+              "line": 28,
+              "text": "| Inference          | > 8 GB          | RTX 4090           |"
+            },
+            {
+              "line": 59,
+              "text": "## Model Checkpoints"
+            },
+            {
+              "line": 62,
+              "text": "We provide multiple base VLA model checkpoints. These checkpoints have been pre-trained on 10k+ hours of robot data, and can be used for fine-tuning."
+            },
+            {
+              "line": 64,
+              "text": "| Model        | Use Case    | Description                                                                                                 | Checkpoint Path                                |"
+            },
+            {
+              "line": 66,
+              "text": "| $\\pi_0$      | Fine-Tuning | Base [\u03c0\u2080 model](https://www.physicalintelligence.company/blog/pi0) for fine-tuning                | `gs://openpi-assets/checkpoints/pi0_base`      |"
+            },
+            {
+              "line": 67,
+              "text": "| $\\pi_0$-FAST | Fine-Tuning | Base autoregressive [\u03c0\u2080-FAST model](https://www.physicalintelligence.company/research/fast) for fine-tuning | `gs://openpi-assets/checkpoints/pi0_fast_base` |"
+            },
+            {
+              "line": 68,
+              "text": "| $\\pi_{0.5}$    | Fine-Tuning | Base [\u03c0\u2080.\u2085 model](https://www.physicalintelligence.company/blog/pi05) for fine-tuning    | `gs://openpi-assets/checkpoints/pi05_base`      |"
+            },
+            {
+              "line": 71,
+              "text": "We also provide \"expert\" checkpoints for various robot platforms and tasks. These models are fine-tuned from the base models above and intended to run directly on the target robot. These may or may not work on your parti"
+            },
+            {
+              "line": 73,
+              "text": "| Model                    | Use Case    | Description                                                                                                                                                                      "
+            },
+            {
+              "line": 75,
+              "text": "| $\\pi_0$-FAST-DROID       | Inference   | $\\pi_0$-FAST model fine-tuned on the [DROID dataset](https://droid-dataset.github.io/): can perform a wide range of simple table-top manipulation tasks 0-shot in new scenes on t"
+            },
+            {
+              "line": 76,
+              "text": "| $\\pi_0$-DROID            | Fine-Tuning | $\\pi_0$ model fine-tuned on the [DROID dataset](https://droid-dataset.github.io/): faster inference than $\\pi_0$-FAST-DROID, but may not follow language commands as well        "
+            },
+            {
+              "line": 77,
+              "text": "| $\\pi_0$-ALOHA-towel      | Inference   | $\\pi_0$ model fine-tuned on internal [ALOHA](https://tonyzhaozh.github.io/aloha/) data: can fold diverse towels 0-shot on ALOHA robot platforms                                  "
+            },
+            {
+              "line": 78,
+              "text": "| $\\pi_0$-ALOHA-tupperware | Inference   | $\\pi_0$ model fine-tuned on internal [ALOHA](https://tonyzhaozh.github.io/aloha/) data: can unpack food from a tupperware container                                              "
+            },
+            {
+              "line": 79,
+              "text": "| $\\pi_0$-ALOHA-pen-uncap  | Inference   | $\\pi_0$ model fine-tuned on public [ALOHA](https://dit-policy.github.io/) data: can uncap a pen                                                                                  "
+            },
+            {
+              "line": 80,
+              "text": "| $\\pi_{0.5}$-LIBERO      | Inference   | $\\pi_{0.5}$ model fine-tuned for the [LIBERO](https://libero-project.github.io/datasets) benchmark: gets state-of-the-art performance (see [LIBERO README](examples/libero/README."
+            },
+            {
+              "line": 81,
+              "text": "| $\\pi_{0.5}$-DROID      | Inference / Fine-Tuning | $\\pi_{0.5}$ model fine-tuned on the [DROID dataset](https://droid-dataset.github.io/) with [knowledge insulation](https://www.physicalintelligence.company/research/kno"
+            },
+            {
+              "line": 84,
+              "text": "By default, checkpoints are automatically downloaded from `gs://openpi-assets` and are cached in `~/.cache/openpi` when needed. You can overwrite the download path by setting the `OPENPI_DATA_HOME` environment variable."
+            },
+            {
+              "line": 91,
+              "text": "Our pre-trained model checkpoints can be run with a few lines of code (here our $\\pi_0$-FAST-DROID model):"
+            },
+            {
+              "line": 98,
+              "text": "checkpoint_dir = download.maybe_download(\"gs://openpi-assets/checkpoints/pi05_droid\")"
+            },
+            {
+              "line": 101,
+              "text": "policy = policy_config.create_trained_policy(config, checkpoint_dir)"
+            },
+            {
+              "line": 114,
+              "text": "We provide detailed step-by-step examples for running inference of our pre-trained checkpoints on [DROID](examples/droid/README.md) and [ALOHA](examples/aloha_real/README.md) robots."
+            },
+            {
+              "line": 154,
+              "text": "uv run scripts/compute_norm_stats.py --config-name pi05_libero"
+            },
+            {
+              "line": 157,
+              "text": "Now we can kick off training with the following command (the `--overwrite` flag is used to overwrite existing checkpoints if you rerun fine-tuning with the same config):"
+            },
+            {
+              "line": 160,
+              "text": "XLA_PYTHON_CLIENT_MEM_FRACTION=0.9 uv run scripts/train.py pi05_libero --exp-name=my_experiment --overwrite"
+            },
+            {
+              "line": 163,
+              "text": "The command will log training progress to the console and save checkpoints to the `checkpoints` directory. You can also monitor training progress on the Weights & Biases dashboard. For maximally using the GPU memory, set"
+            },
+            {
+              "line": 165,
+              "text": "**Note:** We provide functionality for *reloading* normalization statistics for state / action normalization from pre-training. This can be beneficial if you are fine-tuning to a new task on a robot that was part of our "
+            },
+            {
+              "line": 169,
+              "text": "Once training is complete, we can run inference by spinning up a policy server and then querying it from a LIBERO evaluation script. Launching a model server is easy (we use the checkpoint for iteration 20,000 for this e"
+            },
+            {
+              "line": 172,
+              "text": "uv run scripts/serve_policy.py policy:checkpoint --policy.config=pi05_libero --policy.dir=checkpoints/pi05_libero/my_experiment/20000"
+            },
+            {
+              "line": 216,
+              "text": "To convert a JAX model checkpoint to PyTorch format:"
+            }
+          ]
+        },
+        {
+          "path": "examples/libero/README.md",
+          "url": "https://raw.githubusercontent.com/Physical-Intelligence/openpi/215abfb217dbac7d5f1273282331b9b1866c0479/examples/libero/README.md",
+          "bytes": 2551,
+          "sha256": "a2caaf5459c4b01837b73aa93a6f69e8cdf10385b39c34eba36afa85f83fafe9",
+          "cues": [
+            {
+              "line": 19,
+              "text": "# To run with the default checkpoint and task suite:"
+            },
+            {
+              "line": 26,
+              "text": "You can customize the loaded checkpoint by providing additional `SERVER_ARGS` (see `scripts/serve_policy.py`), and the LIBERO task suite by providing additional `CLIENT_ARGS` (see `examples/libero/main.py`)."
+            },
+            {
+              "line": 30,
+              "text": "# To load a custom checkpoint (located in the top-level openpi/ directory):"
+            },
+            {
+              "line": 31,
+              "text": "export SERVER_ARGS=\"--env LIBERO policy:checkpoint --policy.config pi05_libero --policy.dir ./my_custom_checkpoint\""
+            },
+            {
+              "line": 66,
+              "text": "If you want to reproduce the following numbers, you can evaluate the checkpoint at `gs://openpi-assets/checkpoints/pi05_libero/`. This"
+            },
+            {
+              "line": 67,
+              "text": "checkpoint was trained in openpi with the `pi05_libero` config."
+            }
+          ]
+        },
+        {
+          "path": "examples/libero/main.py",
+          "url": "https://raw.githubusercontent.com/Physical-Intelligence/openpi/215abfb217dbac7d5f1273282331b9b1866c0479/examples/libero/main.py",
+          "bytes": 9194,
+          "sha256": "d53748c95804ada559e3ca867305b8f755d8651c4c7f4e2723ef80aea55a3943",
+          "cues": [
+            {
+              "line": 81,
+              "text": "        # Get default LIBERO initial states"
+            },
+            {
+              "line": 82,
+              "text": "        initial_states = task_suite.get_task_init_states(task_id)"
+            },
+            {
+              "line": 96,
+              "text": "            # Set initial states"
+            },
+            {
+              "line": 97,
+              "text": "            obs = env.set_init_state(initial_states[episode_idx])"
+            },
+            {
+              "line": 133,
+              "text": "                            \"observation/state\": np.concatenate("
+            },
+            {
+              "line": 195,
+              "text": "    env.seed(seed)  # IMPORTANT: seed seems to affect object positions even when using fixed initial state"
+            }
+          ]
+        },
+        {
+          "path": "pyproject.toml",
+          "url": "https://raw.githubusercontent.com/Physical-Intelligence/openpi/215abfb217dbac7d5f1273282331b9b1866c0479/pyproject.toml",
+          "bytes": 3110,
+          "sha256": "e1f457bd81622a47a4c4de17b92815977ac5fcd40116bec92398eb400bf76483",
+          "cues": [
+            {
+              "line": 18,
+              "text": "    \"jax[cuda12]==0.5.3\","
+            },
+            {
+              "line": 26,
+              "text": "    \"orbax-checkpoint==0.11.13\","
+            },
+            {
+              "line": 119,
+              "text": "    \"T201\",   # We use print statements."
+            }
+          ]
+        },
+        {
+          "path": "src/openpi/policies/libero_policy.py",
+          "url": "https://raw.githubusercontent.com/Physical-Intelligence/openpi/215abfb217dbac7d5f1273282331b9b1866c0479/src/openpi/policies/libero_policy.py",
+          "bytes": 4322,
+          "sha256": "d8679d99facc3fef48da07406081b20709ed872fcefdf7de67ede99422d623fa",
+          "cues": [
+            {
+              "line": 13,
+              "text": "        \"observation/state\": np.random.rand(8),"
+            },
+            {
+              "line": 57,
+              "text": "            \"state\": data[\"observation/state\"],"
+            }
+          ]
+        },
+        {
+          "path": "src/openpi/training/config.py",
+          "url": "https://raw.githubusercontent.com/Physical-Intelligence/openpi/215abfb217dbac7d5f1273282331b9b1866c0479/src/openpi/training/config.py",
+          "bytes": 44594,
+          "sha256": "c34231f888dba5dc981d808765b3d98775ab845b04313bf53fcecd567c520b0d",
+          "cues": [
+            {
+              "line": 41,
+              "text": "    These assets will be replicated inside the checkpoint under the `assets/asset_id` directory."
+            },
+            {
+              "line": 43,
+              "text": "    This can be used to load assets from a different checkpoint (e.g., base model checkpoint) or some other"
+            },
+            {
+              "line": 44,
+              "text": "    centralized location. For example, to load the norm stats for the Trossen robot from the base model checkpoint"
+            },
+            {
+              "line": 49,
+              "text": "        assets_dir=\"gs://openpi-assets/checkpoints/pi0_base/assets\","
+            },
+            {
+              "line": 56,
+              "text": "    # a different checkpoint (e.g., base model checkpoint) or some other centralized location."
+            },
+            {
+              "line": 123,
+              "text": "                        _transforms.PadStatesAndActions(model_config.action_dim),"
+            },
+            {
+              "line": 134,
+              "text": "                            discrete_state_input=model_config.discrete_state_input,"
+            },
+            {
+              "line": 136,
+              "text": "                        _transforms.PadStatesAndActions(model_config.action_dim),"
+            },
+            {
+              "line": 230,
+              "text": "    # If true, will convert joint dimensions to deltas with respect to the current state before passing to the model."
+            },
+            {
+              "line": 247,
+              "text": "                        \"state\": \"observation.state\","
+            },
+            {
+              "line": 307,
+              "text": "                        \"observation/state\": \"state\","
+            },
+            {
+              "line": 327,
+              "text": "        # state in each action chunk). IF your data has ``absolute`` actions (e.g. target joint angles)"
+            },
+            {
+              "line": 336,
+              "text": "        # LIBERO already represents actions as deltas, but we have some old Pi0 checkpoints that are trained with this"
+            },
+            {
+              "line": 471,
+              "text": "    # Experiment name. Will be used to name the metadata and checkpoint directories."
+            },
+            {
+              "line": 482,
+              "text": "    # Optional path to a PyTorch checkpoint to load weights from."
+            },
+            {
+              "line": 500,
+              "text": "    # Base directory for checkpoints."
+            },
+            {
+              "line": 501,
+              "text": "    checkpoint_base_dir: str = \"./checkpoints\""
+            },
+            {
+              "line": 508,
+              "text": "    # will increase memory and CPU usage."
+            },
+            {
+              "line": 515,
+              "text": "    # How often (in steps) to save checkpoints."
+            },
+            {
+              "line": 517,
+              "text": "    # If set, any existing checkpoints matching step % keep_period == 0 will not be deleted."
+            },
+            {
+              "line": 520,
+              "text": "    # If true, will overwrite the checkpoint directory if it already exists."
+            },
+            {
+              "line": 522,
+              "text": "    # If true, will resume training from the last checkpoint."
+            },
+            {
+              "line": 532,
+              "text": "    # device memory will be reduced but training could potentially be slower."
+            },
+            {
+              "line": 543,
+              "text": "    def checkpoint_dir(self) -> pathlib.Path:"
+            },
+            {
+              "line": 544,
+              "text": "        \"\"\"Get the checkpoint directory for this config.\"\"\""
+            },
+            {
+              "line": 547,
+              "text": "        return (pathlib.Path(self.checkpoint_base_dir) / self.name / self.exp_name).resolve()"
+            },
+            {
+              "line": 647,
+              "text": "    # They are used to define key elements like the dataset you are training on, the base checkpoint you"
+            },
+            {
+              "line": 653,
+              "text": "        name=\"pi0_libero\","
+            },
+            {
+              "line": 656,
+              "text": "        # this to perform *low-memory* (LORA) finetuning and use pi0-FAST as an alternative architecture."
+            },
+            {
+              "line": 671,
+              "text": "        # Here you define which pre-trained checkpoint you want to load to initialize the model."
+            },
+            {
+              "line": 673,
+              "text": "        weight_loader=weight_loaders.CheckpointWeightLoader(\"gs://openpi-assets/checkpoints/pi0_base/params\"),"
+            },
+            {
+              "line": 679,
+              "text": "        name=\"pi0_libero_low_mem_finetune\","
+            }
+          ]
+        }
+      ],
+      "execution": "read_only_source_audit; dependencies/models not installed or run"
+    }
+  ]
+}

@@ -1,0 +1,390 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-22",
+  "stage": "D3-R1",
+  "executable": false,
+  "experiment_executed": false,
+  "policy_rollouts": 0,
+  "record_definition": "One record per unique URL; last access retained. Mixed API metadata, author issues, code/document text and paper HTML, not a source-code-file count.",
+  "records_count": 36,
+  "successful_responses": 32,
+  "access_errors": 4,
+  "successful_response_bytes": 3089503,
+  "records": [
+    {
+      "url": "https://api.github.com/repos/inner-king/policy/git/trees/ec298b7ebe46880abe4264032db9c98b1988485c?recursive=1",
+      "accessed": "2026-10-22",
+      "kind": "github_api_metadata_or_author_report",
+      "http_status": 200,
+      "bytes": 28319,
+      "sha256": "feb820ca75be135e43bc32b8b45eb50051a2d03c298608e40cfca47722ea233a",
+      "reading_boundary": "text/metadata only; selected relevant sections inspected, no source code executed"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/inner-king/policy/ec298b7ebe46880abe4264032db9c98b1988485c/pi07/README.md",
+      "accessed": "2026-10-22",
+      "kind": "public_source_text",
+      "http_status": 200,
+      "bytes": 19322,
+      "sha256": "7805e1b20bc0f5fd2afd9443d0a89e20d92f532bf1d39b095783fe8ce84a3a95",
+      "reading_boundary": "text/metadata only; selected relevant sections inspected, no source code executed"
+    },
+    {
+      "url": "https://huggingface.co/datasets/behavior-1k/2026-challenge-rawdata/raw/f9d2901112993d75684223820eec70722806c2c4/README.md",
+      "accessed": "2026-10-22",
+      "kind": "public_source_text",
+      "error": "HTTP Error 404: Not Found",
+      "http_status": 404,
+      "reading_boundary": "text/metadata only; selected relevant sections inspected, no source code executed"
+    },
+    {
+      "url": "https://huggingface.co/hanbin5/pi07-ll-b1k-200k/raw/c4c6946a9e61a9826616977a037a7e28526fcb6b/README.md",
+      "accessed": "2026-10-22",
+      "kind": "public_source_text",
+      "http_status": 200,
+      "bytes": 9115,
+      "sha256": "da28525a834b06ce3a2c9efdabd92a03567bfb90cb80deec9552b9d6566e3357",
+      "reading_boundary": "text/metadata only; selected relevant sections inspected, no source code executed"
+    },
+    {
+      "url": "https://api.github.com/repos/inner-king/policy/issues?state=all&per_page=100",
+      "accessed": "2026-10-22",
+      "kind": "github_api_metadata_or_author_report",
+      "http_status": 200,
+      "bytes": 133425,
+      "sha256": "f9a68bc9a3d8bdcfccf187ce0a6f156426fe3bb24f36f0e0c50819c764a31d01",
+      "reading_boundary": "text/metadata only; selected relevant sections inspected, no source code executed"
+    },
+    {
+      "url": "https://api.github.com/repos/inner-king/policy/branches?per_page=100",
+      "accessed": "2026-10-22",
+      "kind": "github_api_metadata_or_author_report",
+      "http_status": 200,
+      "bytes": 818,
+      "sha256": "fdfb6dc13926f9bfd73035f67fb857b7e4bdd2c43250d12c6f60592fa1efe135",
+      "reading_boundary": "text/metadata only; selected relevant sections inspected, no source code executed"
+    },
+    {
+      "url": "https://api.github.com/repos/StanfordVL/BEHAVIOR-1K/git/trees/7d6718cb8ac5f249bb3c610c23713627d97da1ef?recursive=1",
+      "accessed": "2026-10-22",
+      "kind": "github_api_metadata_or_author_report",
+      "http_status": 200,
+      "bytes": 1440907,
+      "sha256": "d67fa2d098ad13f1806bff313a6cc81cf2d66107809708db30e25056738d397c",
+      "reading_boundary": "text/metadata only; selected relevant sections inspected, no source code executed"
+    },
+    {
+      "url": "https://api.github.com/repos/inner-king/policy/issues/9",
+      "accessed": "2026-10-22",
+      "kind": "github_api_metadata_or_author_report",
+      "http_status": 200,
+      "bytes": 10842,
+      "sha256": "9540b18067cfb30ccc49e5e44a07fc37b6caed3189fccbea0df5737a035786f5",
+      "reading_boundary": "text/metadata only; selected relevant sections inspected, no source code executed"
+    },
+    {
+      "url": "https://api.github.com/repos/inner-king/policy/issues/11",
+      "accessed": "2026-10-22",
+      "kind": "github_api_metadata_or_author_report",
+      "http_status": 200,
+      "bytes": 22220,
+      "sha256": "e11e9ad287770888d784f1b37314a5992b45bdb0d551009e208d82069ea1cca7",
+      "reading_boundary": "text/metadata only; selected relevant sections inspected, no source code executed"
+    },
+    {
+      "url": "https://api.github.com/repos/inner-king/policy/git/trees/56c3ee92042ac08f29adf3a50bf9c970db75f8dc?recursive=1",
+      "accessed": "2026-10-22",
+      "kind": "github_api_metadata_or_author_report",
+      "http_status": 200,
+      "bytes": 29589,
+      "sha256": "164f6ffae1e0cf6cfc8d9c85eaa74d25c78cd10a8da883a4749f256a19e10864",
+      "reading_boundary": "text/metadata only; selected relevant sections inspected, no source code executed"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/StanfordVL/BEHAVIOR-1K/7d6718cb8ac5f249bb3c610c23713627d97da1ef/OmniGibson/omnigibson/envs/hdf5_data_wrapper.py",
+      "accessed": "2026-10-22",
+      "kind": "public_source_text",
+      "http_status": 200,
+      "bytes": 36212,
+      "sha256": "96d81a0d58a3d4c3ea30d2e5bede13767ef40b0a07fca5f91da96791be39d202",
+      "reading_boundary": "text/metadata only; selected relevant sections inspected, no source code executed"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/StanfordVL/BEHAVIOR-1K/7d6718cb8ac5f249bb3c610c23713627d97da1ef/docs/challenge/dataset.md",
+      "accessed": "2026-10-22",
+      "kind": "public_source_text",
+      "http_status": 200,
+      "bytes": 4465,
+      "sha256": "f09734ede33f7578abb8e17c0fad60e168176215df14a34fe155119183b7b0af",
+      "reading_boundary": "text/metadata only; selected relevant sections inspected, no source code executed"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/StanfordVL/BEHAVIOR-1K/7d6718cb8ac5f249bb3c610c23713627d97da1ef/OmniGibson/scripts/learning/replay_obs.py",
+      "accessed": "2026-10-22",
+      "kind": "public_source_text",
+      "http_status": 200,
+      "bytes": 9522,
+      "sha256": "c13d768953037e968de12b5f6337d9c392b20b62987a4407854c37bd4858ea27",
+      "reading_boundary": "text/metadata only; selected relevant sections inspected, no source code executed"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/StanfordVL/BEHAVIOR-1K/7d6718cb8ac5f249bb3c610c23713627d97da1ef/OmniGibson/omnigibson/envs/data_wrapper.py",
+      "accessed": "2026-10-22",
+      "kind": "public_source_text",
+      "http_status": 200,
+      "bytes": 43863,
+      "sha256": "0233614fe19ff19f12052e76337504152a0ce243adeda33be107292e0b2ea5d5",
+      "reading_boundary": "text/metadata only; selected relevant sections inspected, no source code executed"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/StanfordVL/BEHAVIOR-1K/7d6718cb8ac5f249bb3c610c23713627d97da1ef/OmniGibson/omnigibson/envs/lerobot_data_wrapper.py",
+      "accessed": "2026-10-22",
+      "kind": "public_source_text",
+      "http_status": 200,
+      "bytes": 21654,
+      "sha256": "c3604b1c3b3f1914b5c5a7ef2e2be8f0f145d77d8969c3d675651d774a8c3d3c",
+      "reading_boundary": "text/metadata only; selected relevant sections inspected, no source code executed"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/inner-king/policy/56c3ee92042ac08f29adf3a50bf9c970db75f8dc/pi05/src/scripts/rollout_new12.sh",
+      "accessed": "2026-10-22",
+      "kind": "public_source_text",
+      "http_status": 200,
+      "bytes": 14104,
+      "sha256": "6eed75e3e0dd381fde3feda7bdd76eac0f00a47542d27622238d7f59a71666e0",
+      "reading_boundary": "text/metadata only; selected relevant sections inspected, no source code executed"
+    },
+    {
+      "url": "https://api.github.com/repos/inner-king/policy/contents/pi05/README.md?ref=main",
+      "accessed": "2026-10-22",
+      "kind": "github_api_metadata_or_author_report",
+      "error": "HTTP Error 404: Not Found",
+      "http_status": 404,
+      "reading_boundary": "text/metadata only; selected relevant sections inspected, no source code executed"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/inner-king/policy/5529b848cd30a6f39ca9c09ef87769ddba0ef1de/pi05/README.md",
+      "accessed": "2026-10-22",
+      "kind": "public_source_text",
+      "error": "HTTP Error 404: Not Found",
+      "http_status": 404,
+      "reading_boundary": "text/metadata only; selected relevant sections inspected, no source code executed"
+    },
+    {
+      "url": "https://api.github.com/repos/inner-king/policy/issues/5",
+      "accessed": "2026-10-22",
+      "kind": "github_api_metadata_or_author_report",
+      "http_status": 200,
+      "bytes": 29200,
+      "sha256": "3c1a2c9b94db2589e014cd73f48756866f0bdd9f7464a121f15b6958c9c3f792",
+      "reading_boundary": "text/metadata only; selected relevant sections inspected, no source code executed"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/inner-king/policy/5529b848cd30a6f39ca9c09ef87769ddba0ef1de/pi05/SETTINGS.md",
+      "accessed": "2026-10-22",
+      "kind": "public_source_text",
+      "error": "HTTP Error 404: Not Found",
+      "http_status": 404,
+      "reading_boundary": "text/metadata only; selected relevant sections inspected, no source code executed"
+    },
+    {
+      "url": "https://huggingface.co/api/models?author=ers345&limit=100",
+      "accessed": "2026-10-22",
+      "kind": "huggingface_metadata",
+      "http_status": 200,
+      "bytes": 2,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "reading_boundary": "text/metadata only; selected relevant sections inspected, no source code executed"
+    },
+    {
+      "url": "https://huggingface.co/api/datasets/behavior-1k/2026-challenge-rawdata/tree/f9d2901112993d75684223820eec70722806c2c4/task-0045?limit=1000",
+      "accessed": "2026-10-22",
+      "kind": "huggingface_metadata",
+      "http_status": 200,
+      "bytes": 62813,
+      "sha256": "6bcfec3d949d62934934f122090229f2f2dde26f64474a94069f9311a7cce7d9",
+      "reading_boundary": "text/metadata only; selected relevant sections inspected, no source code executed"
+    },
+    {
+      "url": "https://huggingface.co/datasets/behavior-1k/2026-challenge-demos/raw/4f50b44796641a4d526a19d9aeadc8aa51e2f2c2/meta/info.json",
+      "accessed": "2026-10-22",
+      "kind": "public_source_text",
+      "http_status": 200,
+      "bytes": 8978,
+      "sha256": "24c77f7a984bcee775e666203881a946b11a899f524fbc2405922b2109757874",
+      "reading_boundary": "text/metadata only; selected relevant sections inspected, no source code executed"
+    },
+    {
+      "url": "https://api.github.com/repos/inner-king/policy/commits/6a0ec7c",
+      "accessed": "2026-10-22",
+      "kind": "github_api_metadata_or_author_report",
+      "http_status": 200,
+      "bytes": 44576,
+      "sha256": "625c3e04263adb4be5a7b77e3afd7297aa18e87a2e1528f7d868b6e83af5a1ec",
+      "reading_boundary": "text/metadata only; selected relevant sections inspected, no source code executed"
+    },
+    {
+      "url": "https://arxiv.org/html/2609.05260v2",
+      "accessed": "2026-10-22",
+      "kind": "paper_full_text_html",
+      "http_status": 200,
+      "bytes": 178821,
+      "sha256": "54081a12d43684758f738f33db75fb6c9d657d28716dd598eb17c6b3d32db958",
+      "reading_boundary": "text/metadata only; selected relevant sections inspected, no source code executed"
+    },
+    {
+      "url": "https://arxiv.org/html/2609.36518v1",
+      "accessed": "2026-10-22",
+      "kind": "paper_full_text_html",
+      "http_status": 200,
+      "bytes": 751541,
+      "sha256": "fc3330cc2b93f95ba8259dc9c9513da6c1ade8d33b6eef0c750306f04c0302a9",
+      "reading_boundary": "text/metadata only; selected relevant sections inspected, no source code executed"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/inner-king/policy/6a0ec7c744e9a0dc67aad04fe7391269ec62745f/pi05/README.md",
+      "accessed": "2026-10-22",
+      "kind": "public_source_text",
+      "http_status": 200,
+      "bytes": 16747,
+      "sha256": "920295fe9cd81180e28a7e2b00729172dff50c8ac2f203c74f5b9b0e8dd3cfe3",
+      "reading_boundary": "text/metadata only; selected relevant sections inspected, no source code executed"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/inner-king/policy/6a0ec7c744e9a0dc67aad04fe7391269ec62745f/pi05/SETTINGS.md",
+      "accessed": "2026-10-22",
+      "kind": "public_source_text",
+      "http_status": 200,
+      "bytes": 19806,
+      "sha256": "6924463316c2a588a595bab3a1489f6f90fbc6ada185c8acd2d892ee290fbe4b",
+      "reading_boundary": "text/metadata only; selected relevant sections inspected, no source code executed"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/inner-king/policy/56c3ee92042ac08f29adf3a50bf9c970db75f8dc/pi05/src/scripts/serve_policy_b1k.py",
+      "accessed": "2026-10-22",
+      "kind": "public_source_text",
+      "http_status": 200,
+      "bytes": 5376,
+      "sha256": "1bb83cd7de451e93b5c23cd84dc4106c126d2464434bcb537ad3bda61cabc5d5",
+      "reading_boundary": "text/metadata only; selected relevant sections inspected, no source code executed"
+    },
+    {
+      "url": "https://api.github.com/repos/liberomax/LIBERO-MAX/commits/main",
+      "accessed": "2026-10-22",
+      "kind": "github_api_metadata_or_author_report",
+      "http_status": 200,
+      "bytes": 4376,
+      "sha256": "d25a5f6ba2c44519cc6b5f59d0c121b0002104b478c0dd9c7a753ae2848f89ed",
+      "reading_boundary": "text/metadata only; selected relevant sections inspected, no source code executed"
+    },
+    {
+      "url": "https://arxiv.org/abs/2609.05260",
+      "accessed": "2026-10-22",
+      "kind": "publication_metadata",
+      "http_status": 200,
+      "bytes": 42203,
+      "sha256": "22eb117793c8e11a484df33f5af6ae969a9dfab9a2442cb20b1df46f93ff825b",
+      "reading_boundary": "text/metadata only; selected relevant sections inspected, no source code executed"
+    },
+    {
+      "url": "https://arxiv.org/abs/2609.36518",
+      "accessed": "2026-10-22",
+      "kind": "publication_metadata",
+      "http_status": 200,
+      "bytes": 44219,
+      "sha256": "d72e06f1db1c9119e11271748d8a7a4d73e84563f219f7e5bc06430b23f23ac7",
+      "reading_boundary": "text/metadata only; selected relevant sections inspected, no source code executed"
+    },
+    {
+      "url": "https://api.github.com/repos/liberomax/LIBERO-MAX/git/trees/01625e290b1aa07511bdc820781e635e851353cc?recursive=1",
+      "accessed": "2026-10-22",
+      "kind": "github_api_metadata_or_author_report",
+      "http_status": 200,
+      "bytes": 36431,
+      "sha256": "17091eb468a49b5dba6f11493123ba931fa0ceafef4ee6d91b99b058020940d9",
+      "reading_boundary": "text/metadata only; selected relevant sections inspected, no source code executed"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/liberomax/LIBERO-MAX/01625e290b1aa07511bdc820781e635e851353cc/README.md",
+      "accessed": "2026-10-22",
+      "kind": "public_source_text",
+      "http_status": 200,
+      "bytes": 10021,
+      "sha256": "31ff1541a4cf01ce7d45b5d98713fa264068af2eef17ecb34e381e27a6de5ac2",
+      "reading_boundary": "text/metadata only; selected relevant sections inspected, no source code executed"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/liberomax/LIBERO-MAX/01625e290b1aa07511bdc820781e635e851353cc/docs/BENCHMARK_SPEC.md",
+      "accessed": "2026-10-22",
+      "kind": "public_source_text",
+      "http_status": 200,
+      "bytes": 5871,
+      "sha256": "0405c0cb4421f3e4dc526ab8df9b4dfaae84621dc46fe9ae0339ae76ea524706",
+      "reading_boundary": "text/metadata only; selected relevant sections inspected, no source code executed"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/liberomax/LIBERO-MAX/01625e290b1aa07511bdc820781e635e851353cc/scripts/compose_paired_run.py",
+      "accessed": "2026-10-22",
+      "kind": "public_source_text",
+      "http_status": 200,
+      "bytes": 4145,
+      "sha256": "73a3af88db84f48fedce44b71e86a9961805061b9be5ab163d1223b796f07381",
+      "reading_boundary": "text/metadata only; selected relevant sections inspected, no source code executed"
+    }
+  ],
+  "raw_annotation_identity_check": {
+    "raw_file_count": 200,
+    "annotation_file_count": 200,
+    "same_stem_matches": 200,
+    "annotation_only": [],
+    "raw_only": [],
+    "pagination_link": null,
+    "total_remote_bytes": 9821070485,
+    "candidate_first_lexicographic": {
+      "type": "file",
+      "oid": "51d33e9ee58a4def270d1b1526afe55e34249f49",
+      "size": 29282328,
+      "lfs": {
+        "oid": "f246d992ff9089a917469e4fd0e61786a5b1639598f4685e4ded9d8d25b2f549",
+        "size": 29282328,
+        "pointerSize": 133
+      },
+      "xetHash": "0992b33753204d489e3dbfc157ce6a6066ac5386377bcd2ac3506fd9bfd36736",
+      "path": "task-0045/episode_00450010.hdf5"
+    },
+    "selection_reason": "identity-only example; no outcome-based selection or payload inspection"
+  },
+  "deployment_provenance": {
+    "dataset_info_has_omnigibson_git_hash_key": false,
+    "codebase_version": "v3.0",
+    "meaning": "LeRobot format version, not an OmniGibson commit"
+  },
+  "additional_papers": [
+    {
+      "title": "One Word, Different Action: A Real-Robot Benchmark for Language-Conditioned Embodied Reasoning",
+      "arxiv": "2609.05260",
+      "version_used": "v2",
+      "status": "arXiv; top-tier acceptance unverified",
+      "scope": "v2 methods/evaluation sections; text decision evaluation, not native VLA continuation",
+      "registered": false
+    },
+    {
+      "title": "LIBERO-MAX: Do Robot Policies Adapt When the World Changes?",
+      "arxiv": "2609.36518",
+      "version_used": "v1",
+      "status": "arXiv; top-tier acceptance unverified",
+      "code_revision": "01625e290b1aa07511bdc820781e635e851353cc",
+      "scope": "paper protocol and limitations, repository README/spec/composition helper; full runner not reproduced",
+      "registered": false
+    }
+  ],
+  "claims_boundary": [
+    "Metadata existence is not state/observation alignment",
+    "Remote LFS digest is not a locally verified payload digest",
+    "Author issue outcomes are not independent experiments",
+    "Prior annotation payloads were not downloaded again",
+    "No binary trajectories, weights, video or PDF were read or saved"
+  ],
+  "registry_changed": false,
+  "reading_status_changed": false
+}

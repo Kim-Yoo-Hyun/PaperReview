@@ -1,0 +1,4 @@
+# CPython 3.11 Linux amd64/arm64 wheels; official PyPI metadata checked 2026-10-23.
+numpy==2.2.6 \
+    --hash=sha256:b64d8d4d17135e00c8e346e0a738deb17e754230d7e0810ac5012750bbd85a5a \
+    --hash=sha256:ba10f8411898fc418a521833e014a77d3ca01c15b0c6cdcce6a0d2897e6dbbdf

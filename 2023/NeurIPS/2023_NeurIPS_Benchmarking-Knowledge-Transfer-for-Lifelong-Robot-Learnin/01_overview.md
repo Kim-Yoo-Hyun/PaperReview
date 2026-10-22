@@ -9,7 +9,7 @@
 - Year/Venue: 2023 / NeurIPS
 - Authors: not duplicated here when not verified in the registry source
 - Primary track: RL, IL, offline learning, and robot data
-- Tier: NEXT
+- Tier: CORE
 - Tags: Robotics, Imitation Learning, Benchmark
 - Official paper: https://arxiv.org/abs/2306.03310
 - Full-text retrieval: https://arxiv.org/pdf/2306.03310

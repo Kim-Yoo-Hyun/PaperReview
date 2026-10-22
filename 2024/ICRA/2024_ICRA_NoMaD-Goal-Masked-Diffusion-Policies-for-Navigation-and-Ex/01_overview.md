@@ -9,7 +9,7 @@
 - Year/Venue: 2024 / ICRA
 - Authors: not duplicated here when not verified in the registry source
 - Primary track: Planning and control
-- Tier: NEXT
+- Tier: CORE
 - Tags: Robotics, Navigation, diffusion policy, exploration
 - Official paper: https://arxiv.org/abs/2310.07896
 - Full-text retrieval: https://arxiv.org/pdf/2310.07896

@@ -1,6 +1,6 @@
 # Manipulation, Contact, Tactile, and Dexterity
 
-- Updated: 2026-09-04 KST
+- Updated: 2026-10-23 KST
 
 ## Scope
 
@@ -13,37 +13,45 @@ Analytic grasp planning, learned grasp/correspondence, contact-rich optimization
 - **Out of scope:** contact가 없는 generic object recognition, pure locomotion, 또는 robot execution과 연결되지 않는 pose/geometry benchmark. 3D representation은 downstream manipulation interface가 있을 때만 포함한다.
 - **Inclusion test:** contact regime, action/control interface, feedback signal, physical assumption과 execution-level evaluation 중 최소 세 가지를 확인할 수 있어야 한다.
 - **Role vocabulary:** `foundation`, `formulation`, `method`, `sensor`, `representation`, `dataset`, `benchmark`, `simulator`, `system`, `policy`를 사용한다.
-- **Facet tuple:** `embodiment; modality/data; contact regime; setting; control level`를 모든 matrix 행에 기록한다. 예: `parallel-jaw arm; RGB-D+point cloud; grasp; real/sim; action proposal`.
-- **Comparison unit:** Comparison Matrix는 registry의 한 논문당 한 행이다. sensor pair나 benchmark pair도 별도 행으로 나누고, 계보만 Dependency에서 묶는다.
-- **Metadata/evidence:** Paper 링크의 local overview에 official paper, project/code와 source audit를 둔다. Matrix는 `Year / Venue`, `Role`, `Facets`, `Why included / TL;DR`, `Evidence / source`를 반복 기록하며, Evaluation은 `setup; data/split; metric; real/trials` 순서를 따른다.
+
+공통 matrix/evidence 규약은 [synthesis 안내](./README.md#공통-비교-규약과-질문-분류)를 따른다.
 
 ## Reading Path
 
+현재 읽기 우선순위는 [READING_PLAN.md](../research/READING_PLAN.md)를 따른다. 아래 계보는 비교 탐색용이며 전체 선행 완독 의무가 아니다.
+
+2026-10-19 초점: ACT·DP3를 action representation 및 3D 입력의 기준으로 두고, VLA/RL 조작의 contact·force·reactivity 실패를 비교한다. Tactile hardware와 특수 dexterity는 해당 task와 sensor를 선택한 뒤 깊게 읽는다.
+
 Planning Optimal Grasps → Contact-Invariant Optimization → GraspNet/Contact-GraspNet → Dense Object Nets/NDF/DenseMatcher → GelSight/DIGIT → tactile dynamics and slow–fast feedback → DeXtreme/DexTrack → deformable/tool/assembly → force-aware VLA.
+
+### 2026-10-19 추가 논문 비교
+
+아래는 등록된 abstract/project 근거에서 만든 **정독 전 비교 질문**이다. 직접 citation이나 실험 결론으로 취급하지 않으며, 읽기 순서와 tier는 READING_PLAN의 최신 값을 따른다.
+
+| 비교할 논문 | 비교 축 | 본문에서 확인할 조건 |
+|---|---|---|
+| [Tac2Real](../2026/ECCV/2026_ECCV_Tac2Real-Reliable-and-GPU-Visuotactile-Simulation-for-Onli/01_overview.md) ↔ HIL-SERL·tactile/force policy | Visuotactile simulation과 실제 contact feedback | Insertion 성공을 범용 dexterity로 확대하지 않고 sensor·contact regime·transfer 조건을 비교한다. |
 
 <!-- READING_QUEUE:START -->
 
 ## Assigned Reading Queue
 
-### Manipulation, contact, tactile, and dexterity — 10
+### Manipulation, contact, tactile, and dexterity — 2
 
 | Tier | Paper | Year / Venue | Status | Evidence |
 |---|---|---|---|---|
-| CORE | [Planning Optimal Grasps](../1992/ICRA/1992_ICRA_Planning-Optimal-Grasps/01_overview.md) | 1992 / ICRA | `UNREAD` | `FULL_TEXT_CHECKED` |
-| CORE | [GelSight: High-Resolution Robot Tactile Sensors for Estimating Geometry and Force](../2017/Sensors/2017_Sensors_GelSight-High-Resolution-Robot-Tactile-Sensors-for-Estimat/01_overview.md) | 2017 / Sensors | `UNREAD` | `FULL_TEXT_CHECKED` |
-| CORE | [Contact-Invariant Optimization for Hand Manipulation](../2014/SIGGRAPH/2014_SIGGRAPH_Contact-Invariant-Optimization-for-Hand-Manipulation/01_overview.md) | 2014 / SIGGRAPH | `UNREAD` | `FULL_TEXT_CHECKED` |
-| CORE | [GraspNet-1Billion: A Large-Scale Benchmark for General Object Grasping](../2020/CVPR/2020_CVPR_GraspNet-1Billion-A-Large-Scale-Benchmark-for-General-Obje/01_overview.md) | 2020 / CVPR | `UNREAD` | `FULL_TEXT_CHECKED` |
-| CORE | [Contact-GraspNet: Efficient 6-DoF Grasp Generation in Cluttered Scenes](../2021/ICRA/2021_ICRA_Contact-GraspNet-Efficient-6-DoF-Grasp-Generation-in-Clutt/01_overview.md) | 2021 / ICRA | `UNREAD` | `FULL_TEXT_CHECKED` |
-| CORE | [Factory: Fast Contact for Robotic Assembly](../2022/RSS/2022_RSS_Factory-Fast-Contact-for-Robotic-Assembly/01_overview.md) | 2022 / RSS | `UNREAD` | `FULL_TEXT_CHECKED` |
-| CORE | [Global Planning for Contact-Rich Manipulation via Local Smoothing of Quasi-Dynamic Contact Models](../2023/T-RO/2023_T-RO_Global-Planning-for-Contact-Rich-Manipulation-via-Local-Sm/01_overview.md) | 2023 / T-RO | `UNREAD` | `FULL_TEXT_CHECKED` |
-| CORE | [Tactile-Driven Non-Prehensile Object Manipulation via Extrinsic Contact Mode Control](../2024/RSS/2024_RSS_Tactile-Driven-Non-Prehensile-Object-Manipulation-via-Extr/01_overview.md) | 2024 / RSS | `UNREAD` | `FULL_TEXT_CHECKED` |
-| CORE | [RoboPack: Learning Tactile-Informed Dynamics Models for Dense Packing](../2024/RSS/2024_RSS_RoboPack-Learning-Tactile-Informed-Dynamics-Models-for-Den/01_overview.md) | 2024 / RSS | `UNREAD` | `FULL_TEXT_CHECKED` |
-| CORE | [DexTrack: Towards Generalizable Neural Tracking Control for Dexterous Manipulation from Human References](../2025/ICLR/2025_ICLR_DexTrack-Towards-Generalizable-Neural-Tracking-Control-for/01_overview.md) | 2025 / ICLR | `UNREAD` | `FULL_TEXT_CHECKED` |
+| CORE | [Learning Fine-Grained Bimanual Manipulation with Low-Cost Hardware](../2023/RSS/2023_RSS_Learning-Fine-Grained-Bimanual-Manipulation-with-Low-Cost/01_overview.md) | 2023 / RSS | `UNREAD` | `FULL_TEXT_CHECKED` |
+| CORE | [3D Diffusion Policy: Generalizable Visuomotor Policy Learning via Simple 3D Representations](../2024/RSS/2024_RSS_3D-Diffusion-Policy-Generalizable-Visuomotor-Policy-Learni/01_overview.md) | 2024 / RSS | `UNREAD` | `FULL_TEXT_CHECKED` |
 
-### Contact-rich, deformable, force, and dexterous manipulation — 45
+### Contact-rich, deformable, force, and dexterous manipulation — 49
 
 | Tier | Paper | Year / Venue | Status | Evidence |
 |---|---|---|---|---|
+| NEXT | [Tac2Real: Reliable and GPU Visuotactile Simulation for Online Reinforcement Learning and Zero-Shot Real-World Deployment](../2026/ECCV/2026_ECCV_Tac2Real-Reliable-and-GPU-Visuotactile-Simulation-for-Onli/01_overview.md) | 2026 / ECCV | `UNREAD` | `ABSTRACT_CHECKED` |
+| NEXT | [GraspNet-1Billion: A Large-Scale Benchmark for General Object Grasping](../2020/CVPR/2020_CVPR_GraspNet-1Billion-A-Large-Scale-Benchmark-for-General-Obje/01_overview.md) | 2020 / CVPR | `UNREAD` | `FULL_TEXT_CHECKED` |
+| NEXT | [Contact-GraspNet: Efficient 6-DoF Grasp Generation in Cluttered Scenes](../2021/ICRA/2021_ICRA_Contact-GraspNet-Efficient-6-DoF-Grasp-Generation-in-Clutt/01_overview.md) | 2021 / ICRA | `UNREAD` | `FULL_TEXT_CHECKED` |
+| NEXT | [Factory: Fast Contact for Robotic Assembly](../2022/RSS/2022_RSS_Factory-Fast-Contact-for-Robotic-Assembly/01_overview.md) | 2022 / RSS | `UNREAD` | `FULL_TEXT_CHECKED` |
+| NEXT | [RoboPack: Learning Tactile-Informed Dynamics Models for Dense Packing](../2024/RSS/2024_RSS_RoboPack-Learning-Tactile-Informed-Dynamics-Models-for-Den/01_overview.md) | 2024 / RSS | `UNREAD` | `FULL_TEXT_CHECKED` |
 | NEXT | [Dense Object Nets: Learning Dense Visual Object Descriptors By and For Robotic Manipulation](../2018/CoRL/2018_CoRL_Dense-Object-Nets-Learning-Dense-Visual-Object-Descriptors/01_overview.md) | 2018 / CoRL | `UNREAD` | `FULL_TEXT_CHECKED` |
 | NEXT | [UMPNet: Universal Manipulation Policy Network for Articulated Objects](../2022/RA-L/2022_RA-L_UMPNet-Universal-Manipulation-Policy-Network-for-Articulat/01_overview.md) | 2022 / RA-L | `UNREAD` | `FULL_TEXT_CHECKED` |
 | NEXT | [Distilled Feature Fields Enable Few-Shot Language-Guided Manipulation](../2023/CoRL/2023_CoRL_Distilled-Feature-Fields-Enable-Few-Shot-Language-Guided-M/01_overview.md) | 2023 / CoRL | `UNREAD` | `FULL_TEXT_CHECKED` |
@@ -86,13 +94,14 @@ Planning Optimal Grasps → Contact-Invariant Optimization → GraspNet/Contact-
 | NEXT | [Octopi: Object Property Reasoning with Large Tactile-Language Models](../2024/RSS/2024_RSS_Octopi-Object-Property-Reasoning-with-Large-Tactile-Langua/01_overview.md) | 2024 / RSS | `UNREAD` | `FULL_TEXT_CHECKED` |
 | NEXT | [OPEN TEACH: A Versatile Teleoperation System for Robotic Manipulation](../2024/CoRL/2024_CoRL_OPEN-TEACH-A-Versatile-Teleoperation-System-for-Robotic-Ma/01_overview.md) | 2024 / CoRL | `UNREAD` | `FULL_TEXT_CHECKED` |
 | NEXT | [FurnitureBench: Reproducible Real-World Benchmark for Long-Horizon Complex Manipulation](../2023/RSS/2023_RSS_FurnitureBench-Reproducible-Real-World-Benchmark-for-Long/01_overview.md) | 2023 / RSS | `UNREAD` | `FULL_TEXT_CHECKED` |
-| NEXT | [Learning Fine-Grained Bimanual Manipulation with Low-Cost Hardware](../2023/RSS/2023_RSS_Learning-Fine-Grained-Bimanual-Manipulation-with-Low-Cost/01_overview.md) | 2023 / RSS | `UNREAD` | `FULL_TEXT_CHECKED` |
 | NEXT | [Learning Robotic Manipulation Policies from Point Clouds with Conditional Flow Matching](../2024/CoRL/2024_CoRL_Learning-Robotic-Manipulation-Policies-from-Point-Clouds-w/01_overview.md) | 2024 / CoRL | `UNREAD` | `FULL_TEXT_CHECKED` |
-| NEXT | [3D Diffusion Policy: Generalizable Visuomotor Policy Learning via Simple 3D Representations](../2024/RSS/2024_RSS_3D-Diffusion-Policy-Generalizable-Visuomotor-Policy-Learni/01_overview.md) | 2024 / RSS | `UNREAD` | `FULL_TEXT_CHECKED` |
+| NEXT | [Contact-Anchored Policies: Contact Conditioning Creates Strong Robot Utility Models](../2026/RSS/2026_RSS_Contact-Anchored-Policies-Contact-Conditioning-Creates-Str/01_overview.md) | 2026 / RSS | `UNREAD` | `ABSTRACT_CHECKED` |
 
 <!-- READING_QUEUE:END -->
 
-## 2026-09-02 Curation Update
+## Historical curation — 2026-09-02
+
+아래는 해당 날짜의 변경 이력이다. 현재 membership과 수량은 위 generated queue를 따른다.
 
 `Sparsh`, `Octopi`, `OPEN TEACH`를 `NEXT`에 반영했다. 세 논문은 각각 tactile representation, tactile-language reasoning, contact-rich teleoperation/data interface를 다루므로 단순 vision representation이 아니라 manipulation feedback과 data coverage의 문제로 비교한다.
 
@@ -149,10 +158,21 @@ Planning Optimal Grasps → Contact-Invariant Optimization → GraspNet/Contact-
 | GPU-sim dexterous RL → [DeXtreme](../2023/ICRA/2023_ICRA_DeXtreme-Transfer-of-Agile-In-hand-Manipulation-from-Simul/01_overview.md) / [IndustReal](../2023/RSS/2023_RSS_IndustReal-Transferring-Contact-Rich-Assembly-Tasks-from-S/01_overview.md) → [DexTrack](../2025/ICLR/2025_ICLR_DexTrack-Towards-Generalizable-Neural-Tracking-Control-for/01_overview.md) | randomized simulation과 perception을 실제 in-hand/assembly에 transfer한 뒤 human-reference tracking과 broader object/motion generalization으로 확장된다. | simulator/contact randomization, pose estimator와 policy 중 실제 failure의 지배 요인은 무엇인가 |
 | dexterous RL/demonstration → [DexTrack](../2025/ICLR/2025_ICLR_DexTrack-Towards-Generalizable-Neural-Tracking-Control-for/01_overview.md) → [Dexterous World Models](../2026/CVPR/2026_CVPR_Dexterous-World-Models/01_overview.md) / [DexterityGen](../2026/RSS/2026_RSS_DexterityGen-Foundation-Controller-for-Unprecedented-Dexte/01_overview.md) | task-specific reward와 tracking에서 demonstration flywheel, reference generalization, predictive dynamics와 RL primitive foundation controller로 확장된다. | human-reference tracking과 object-level task success, long-horizon contact stability가 언제 충돌하는가 |
 
+## 2026-10-23 근거 통합
+
+아래는 2026-10-22까지의 registry/source 감사와 후보 검토를 연결한 연구자 해석이다. 새 정독·효과 검증·직접 citation 관계의 확인을 뜻하지 않는다. Paper별 본문 확인 범위는 overview 및 연결된 dossier를 따른다.
+
+| 비교 축 | 등록된 선행 | 현재 남길 구분 |
+|---|---|---|
+| D2: grasp와 후속 운반 | [Cooperative Grasping](../2026/RA-L/2026_RA-L_Cooperative-Grasping-for-Collective-Object-Transport-in-Co/01_overview.md) (2026 RA-L); [Grasp-Then-Plan](../2026/NeurIPS/2026_NeurIPS_Grasp-Then-Plan-with-Failure-Attribution-A-Closed-Two-Stag/01_overview.md) (2026 NeurIPS); [Foresight Residual RL](../2026/arXiv/2026_arXiv_Foresight-Residual-RL-for-Long-Horizon-Robot-Manipulation/01_overview.md) (2026 arXiv) | 파지 성공만으로 운반 가능성을 보증하지 않는다. 계획 실패·grasp 실패·후속 execution 실패의 label을 분리한다. |
+| 보조 시스템과 회복 | [CarryOn](../2026/arXiv/2026_arXiv_CarryOn-A-Dual-Loop-Harness-for-Personalized-and-Reliable/01_overview.md) (2026 arXiv); [SafeLoop](../2026/arXiv/2026_arXiv_SafeLoop-Risk-Aware-Rollback-for-Vision-Language-Action-Ma/01_overview.md) (2026 arXiv) | 사용자 조정·rollback·monitoring을 새 VLA policy 능력과 혼동하지 않는다. 별도 정보/시도 예산을 기록한다. |
+
 ## Open Questions
 
-- Tactile/force 신호를 VLA의 낮은 control rate와 어떻게 결합할 것인가?
-- Contact mode 변화와 slip을 명시적 state 없이 안정적으로 추정할 수 있는가?
-- Dexterous policy의 object/task generalization을 어떤 benchmark로 신뢰성 있게 평가할 것인가?
-- Analytic grasp/contact quality와 learned proposal score가 실제 compliant execution에서 언제 불일치하는가?
-- Tactile sensor 교체·마모·calibration drift가 policy와 recovery threshold에 미치는 영향을 어떻게 분리할 것인가?
+현재 후보 판정은 [주제별 요약](../work/research_candidates/summaries/README.md)을 따른다. 아래 질문은 `CURATION-HYPOTHESIS`이며 재개 승인이 아니다.
+
+| 질문 | 구별할 예측 | 최소 대조·중단 조건 | 근거/판정 |
+|---|---|---|---|
+| Grasp–transport–place | 동일 grasp 후보와 scene geometry에서 후속 운반을 고려한 선택이 supervised outcome ranking보다 필요한가? | Attachment/planner baseline과 실패 귀속을 고정한다. 공개 native task·executor가 없는 현재 D2는 HOLD다. | [검토 근거](../work/research_candidates/2026-10-22_d2_buildup/README.md) |
+| Tactile/force feedback | 동일 contact task에서 고주파 feedback이 추가 sensing·adaptation data를 맞춘 뒤에도 slip/접촉 실패를 줄이는가? | 센서 교체·마모·calibration drift를 각각 분리한다. 성공률 외 force limit·intervention과 controller rate를 기록한다. | 기존 track 비교의 연구자 질문; native 효과 미검증 |
+| Grasp metric의 행동 utility | Analytic contact score와 learned proposal의 순위가 compliant execution에서 언제 교차하는가? | 물체·접촉 mode별 held-out 조건과 실제 trial 분모를 확인한다. 단순 object/task 평균으로 dexterity 일반화를 주장하지 않는다. | 기존 track 비교의 연구자 질문; native 효과 미검증 |

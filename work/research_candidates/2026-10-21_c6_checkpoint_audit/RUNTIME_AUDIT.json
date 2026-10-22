@@ -1,0 +1,46 @@
+{
+  "scope": "C6 public code and aggregate data audit, not native policy execution",
+  "container": "c6-artifact-audit",
+  "container_image_id": "sha256:0a236bf8f0b6013383df04d1cd02cb0abe5fbfa1a7012141d7ff9202b7cb30a6",
+  "image_repo_digests": [
+    "python@sha256:0a236bf8f0b6013383df04d1cd02cb0abe5fbfa1a7012141d7ff9202b7cb30a6"
+  ],
+  "architecture": "arm64",
+  "memory_limit_bytes": 1073741824,
+  "cpu_limit": 2.0,
+  "audit_process_exit_codes": {
+    "final_artifact_audit": 0,
+    "integrity_and_syntax": 0
+  },
+  "intermediate_audit_failure": {
+    "exit_code": 1,
+    "cause": "Summary extension assumed step for DP; observed epoch schema and corrected. Final data parsed successfully."
+  },
+  "container_exit_code": 0,
+  "oom_killed": false,
+  "lifetime_process": "Python sleep with SIGTERM handler; audit subprocesses complete before stop",
+  "upstream_code_executed": false,
+  "policy_inference_count": 0,
+  "rl_update_count": 0,
+  "robot_rollout_count": 0,
+  "host_dependency_installs": 0,
+  "container_dependency_installs": 0,
+  "integrity": {
+    "source_file_hashes": 26,
+    "tree_hashes": 7,
+    "data_hashes": 1,
+    "all_match": true
+  },
+  "artifact_sha256": {
+    "SOURCE_AUDIT.json": "7c94fbd8b30bc6a6d59cbc118bb2ad99478c4810d7dd9b2fc4e086527974c747",
+    "CODE_SOURCES.json": "a976fb999bdcd1731bd846f71e9e2ee7815bbbb794f6203509267eeae0200042",
+    "ARTIFACT_AUDIT.json": "3e834cebfb905e4f0c773f760e26709d0ca0509f1fc3540b2c4f17b7c29781c8",
+    "audit_public_artifacts.py": "1c6feea98d5267ea7d9a95513f6f0bf3414857cb19e9b611dcdd5ffecc00bf2e"
+  },
+  "cleanup_verified": true,
+  "remaining_container_count": 0,
+  "remaining_image_count": 0,
+  "preserved_volumes": [
+    "minikube"
+  ]
+}

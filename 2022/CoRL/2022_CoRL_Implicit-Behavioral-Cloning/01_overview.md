@@ -9,7 +9,7 @@
 - Year/Venue: 2022 / CoRL
 - Authors: not duplicated here when not verified in the registry source
 - Primary track: RL, IL, offline learning, and robot data
-- Tier: CORE
+- Tier: NEXT
 - Tags: Robotics, Imitation Learning, energy-based model, multimodal actions
 - Official paper: https://proceedings.mlr.press/v164/florence22a.html
 - Full-text retrieval: https://arxiv.org/pdf/2109.00137

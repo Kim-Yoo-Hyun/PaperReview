@@ -9,7 +9,7 @@
 - Year/Venue: 2021 / CoRL
 - Authors: not duplicated here when not verified in the registry source
 - Primary track: VLA and generalist robot policies
-- Tier: CORE
+- Tier: NEXT
 - Tags: Robotics, Vision-Language-Action, CLIP, manipulation
 - Official paper: https://arxiv.org/abs/2109.12098
 - Full-text retrieval: https://arxiv.org/pdf/2109.12098

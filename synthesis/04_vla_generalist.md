@@ -1,6 +1,6 @@
 # VLA and Generalist Robot Policies
 
-- Updated: 2026-09-04 KST
+- Updated: 2026-10-23 KST
 
 ## Scope
 
@@ -13,40 +13,66 @@ Multimodal generalist agents, robot fleet/data orchestration, language-condition
 - **Out of scope:** language-only model, robot-independent vision-language benchmark, 또는 action/control loop가 없는 general-purpose agent. 해당 논문은 enabling perception·planning track으로 연결한다.
 - **Inclusion test:** language/vision/proprioception input, robot-visible state, action format, embodiment/data setting, closed-loop evaluation 중 최소 네 가지를 비교할 수 있어야 한다.
 - **Role vocabulary:** `foundation`, `policy`, `action representation`, `data engine`, `planner`, `memory`, `benchmark`, `system`, `safety interface`를 사용한다.
-- **Facet tuple:** `embodiment; modality/data; setting; control level; horizon/memory`를 모든 matrix 행에 기록한다. 예: `arm; image+language+proprioception; real; action chunk; short-horizon`.
-- **Comparison unit:** Comparison Matrix는 registry의 한 논문당 한 행이다. model pair나 benchmark pair는 별도 행으로 두고, conceptual lineage만 Dependency에서 묶는다.
-- **Metadata/evidence:** Paper 링크의 local overview에 official paper, project/code와 source audit를 둔다. Matrix는 `Year / Venue`, `Role`, `Facets`, `Why included / TL;DR`, `Evidence / source`를 반복 기록하며, Evaluation은 `setup; data/split; metric; real/trials` 순서를 따른다.
+
+공통 matrix/evidence 규약은 [synthesis 안내](./README.md#공통-비교-규약과-질문-분류)를 따른다.
 
 ## Reading Path
 
+현재 읽기 우선순위는 [READING_PLAN.md](../research/READING_PLAN.md)를 따른다. 아래 계보는 비교 탐색용이며 전체 선행 완독 의무가 아니다.
+
+기존 VLA+RL 비교 계보: OpenVLA/OFT·π0·FAST의 action interface를 기반으로 ConRFT의 직접 RL, RLDG의 RL-data distillation, SayCan·NaVILA의 계층적 value/control 결합을 구분한다. Manipulation과 navigation의 reward·memory·action granularity를 동일한 것으로 취급하지 않는다.
+
+2026-10-23 초점: VLA의 행동 표현·시간/feedback·로봇 간 보존·실행 가능성을 비교하며 RL은 추가 설명력이 필요한 경우에 선택한다. 아래 과거 계보는 prerequisites이지 활성 연구 순위가 아니다.
+
 Gato/CLIP/CLIPort → PaLM-E/RT-1/RT-2 → MT-Opt/AutoRT data engine → Open X-Embodiment → Octo/OpenVLA/π0 → RT-H/FAST/OpenVLA-OFT/π0.5 → Gemini Robotics/GR00T N1 → SAFE/FLARE/FaultEval와 3D-, memory-, progress-aware VLA.
+
+### 2026-10-19 추가 논문 비교
+
+아래는 등록된 abstract/project 근거에서 만든 **정독 전 비교 질문**이다. 직접 citation이나 실험 결론으로 취급하지 않으며, 읽기 순서와 tier는 READING_PLAN의 최신 값을 따른다.
+
+| 비교할 논문 | 비교 축 | 본문에서 확인할 조건 |
+|---|---|---|
+| [RL4VLA](../2025/NeurIPS/2025_NeurIPS_What-Can-RL-Bring-to-VLA-Generalization-An-Empirical-Study/01_overview.md) ↔ [SimpleVLA-RL](../2026/ICLR/2026_ICLR_SimpleVLA-RL-Scaling-VLA-Training-via-Reinforcement-Learni/01_overview.md) ↔ [RLux-VLA](../2026/RSS/2026_RSS_RLux-VLA-A-Unified-and-Efficient-Framework-for-Reinforceme/01_overview.md) ↔ [DyGRO-VLA](../2026/ICML/2026_ICML_DyGRO-VLA-Cross-Task-Scaling-of-VisionLanguageAction-Model/01_overview.md) | VLA generalization·RL update·시스템 효율 | OFT·ConRFT·RLDG를 비교 기준으로 두고 algorithm, data, parallel training과 compute의 효과를 분리한다. |
+| [NaVid](../2024/RSS/2024_RSS_NaVid-Video-based-VLM-Plans-the-Next-Step-for-Vision-and-L/01_overview.md) ↔ [StreamVLN](../2026/ICRA/2026_ICRA_StreamVLN-Streaming-Vision-and-Language-Navigation-via-Slo/01_overview.md) ↔ [SocialNav](../2026/CVPR/2026_CVPR_SocialNav-Training-Human-Inspired-Foundation-Model-for-Soc/01_overview.md) / NaVILA | Navigation memory·streaming·social cost | Manipulation과 다른 action granularity, observation history, collision/social metric, robot deployment 범위를 확인한다. |
 
 <!-- READING_QUEUE:START -->
 
 ## Assigned Reading Queue
 
-### VLA and generalist robot policies — 11
+### VLA and generalist robot policies — 13
 
 | Tier | Paper | Year / Venue | Status | Evidence |
 |---|---|---|---|---|
 | CORE | [Learning Transferable Visual Models From Natural Language Supervision](../2021/ICML/2021_ICML_Learning-Transferable-Visual-Models-From-Natural-Language/01_overview.md) | 2021 / ICML | `UNREAD` | `FULL_TEXT_CHECKED` |
-| CORE | [CLIPort: What and Where Pathways for Robotic Manipulation](../2021/CoRL/2021_CoRL_CLIPort-What-and-Where-Pathways-for-Robotic-Manipulation/01_overview.md) | 2021 / CoRL | `UNREAD` | `FULL_TEXT_CHECKED` |
-| CORE | [PaLM-E: An Embodied Multimodal Language Model](../2023/ICML/2023_ICML_PaLM-E-An-Embodied-Multimodal-Language-Model/01_overview.md) | 2023 / ICML | `UNREAD` | `FULL_TEXT_CHECKED` |
-| CORE | [RT-1: Robotics Transformer for Real-World Control at Scale](../2022/arxiv/2022_arxiv_RT-1-Robotics-Transformer-for-Real-World-Control-at-Scale/01_overview.md) | 2022 / arXiv | `UNREAD` | `FULL_TEXT_CHECKED` |
 | CORE | [RT-2: Vision-Language-Action Models Transfer Web Knowledge to Robotic Control](../2023/CoRL/2023_CoRL_RT-2-Vision-Language-Action-Models-Transfer-Web-Knowledge/01_overview.md) | 2023 / CoRL | `UNREAD` | `FULL_TEXT_CHECKED` |
-| CORE | [VoxPoser: Composable 3D Value Maps for Robotic Manipulation with Language Models](../2023/CoRL/2023_CoRL_VoxPoser-Composable-3D-Value-Maps-for-Robotic-Manipulation/01_overview.md) | 2023 / CoRL | `UNREAD` | `FULL_TEXT_CHECKED` |
 | CORE | [Open X-Embodiment: Robotic Learning Datasets and RT-X Models](../2024/ICRA/2024_ICRA_Open-X-Embodiment-Robotic-Learning-Datasets-and-RT-X-Model/01_overview.md) | 2024 / ICRA | `UNREAD` | `FULL_TEXT_CHECKED` |
 | CORE | [Octo: An Open-Source Generalist Robot Policy](../2024/RSS/2024_RSS_Octo-An-Open-Source-Generalist-Robot-Policy/01_overview.md) | 2024 / RSS | `UNREAD` | `FULL_TEXT_CHECKED` |
 | CORE | [OpenVLA: An Open-Source Vision-Language-Action Model](../2024/CoRL/2024_CoRL_OpenVLA-An-Open-Source-Vision-Language-Action-Model/01_overview.md) | 2024 / CoRL | `UNREAD` | `FULL_TEXT_CHECKED` |
+| CORE | [Fine-Tuning Vision-Language-Action Models: Optimizing Speed and Success](../2025/RSS/2025_RSS_Fine-Tuning-Vision-Language-Action-Models-Optimizing-Speed/01_overview.md) | 2025 / RSS | `UNREAD` | `FULL_TEXT_CHECKED` |
 | CORE | [π0: A Vision-Language-Action Flow Model for General Robot Control](../2025/RSS/2025_RSS_pi0-A-Vision-Language-Action-Flow-Model-for-General-Robot/01_overview.md) | 2025 / RSS | `UNREAD` | `FULL_TEXT_CHECKED` |
+| CORE | [FAST: Efficient Action Tokenization for Vision-Language-Action Models](../2025/RSS/2025_RSS_FAST-Efficient-Action-Tokenization-for-Vision-Language-Act/01_overview.md) | 2025 / RSS | `UNREAD` | `FULL_TEXT_CHECKED` |
 | CORE | [π0.5: a Vision-Language-Action Model with Open-World Generalization](../2025/CoRL/2025_CoRL_pi0.5-a-Vision-Language-Action-Model-with-Open-World-Gener/01_overview.md) | 2025 / CoRL | `UNREAD` | `FULL_TEXT_CHECKED` |
+| CORE | [ConRFT: A Reinforced Fine-tuning Method for VLA Models via Consistency Policy](../2025/RSS/2025_RSS_ConRFT-A-Reinforced-Fine-tuning-Method-for-VLA-Models-via/01_overview.md) | 2025 / RSS | `UNREAD` | `FULL_TEXT_CHECKED` |
+| CORE | [Do As I Can, Not As I Say: Grounding Language in Robotic Affordances](../2022/CoRL/2022_CoRL_Do-As-I-Can-Not-As-I-Say-Grounding-Language-in-Robotic-Aff/01_overview.md) | 2022 / CoRL | `UNREAD` | `FULL_TEXT_CHECKED` |
+| CORE | [NaVILA: Legged Robot Vision-Language-Action Model for Navigation](../2025/RSS/2025_RSS_NaVILA-Legged-Robot-Vision-Language-Action-Model-for-Navig/01_overview.md) | 2025 / RSS | `UNREAD` | `FULL_TEXT_CHECKED` |
+| CORE | [CALVIN: A Benchmark for Language-Conditioned Policy Learning for Long-Horizon Robot Manipulation Tasks](../2022/RA-L/2022_RA-L_CALVIN-A-Benchmark-for-Language-Conditioned-Policy-Learnin/01_overview.md) | 2022 / RA-L | `UNREAD` | `FULL_TEXT_CHECKED` |
 
-### VLA, cross-embodiment, and long-horizon planning — 56
+### VLA, cross-embodiment, and long-horizon planning — 80
 
 | Tier | Paper | Year / Venue | Status | Evidence |
 |---|---|---|---|---|
+| NEXT | [What Can RL Bring to VLA Generalization? An Empirical Study](../2025/NeurIPS/2025_NeurIPS_What-Can-RL-Bring-to-VLA-Generalization-An-Empirical-Study/01_overview.md) | 2025 / NeurIPS | `UNREAD` | `ABSTRACT_CHECKED` |
+| NEXT | [SimpleVLA-RL: Scaling VLA Training via Reinforcement Learning](../2026/ICLR/2026_ICLR_SimpleVLA-RL-Scaling-VLA-Training-via-Reinforcement-Learni/01_overview.md) | 2026 / ICLR | `UNREAD` | `ABSTRACT_CHECKED` |
+| NEXT | [RLux-VLA: A Unified and Efficient Framework for Reinforcement Learning of Vision-Language-Action Models](../2026/RSS/2026_RSS_RLux-VLA-A-Unified-and-Efficient-Framework-for-Reinforceme/01_overview.md) | 2026 / RSS | `UNREAD` | `ABSTRACT_CHECKED` |
+| NEXT | [NaVid: Video-based VLM Plans the Next Step for Vision-and-Language Navigation](../2024/RSS/2024_RSS_NaVid-Video-based-VLM-Plans-the-Next-Step-for-Vision-and-L/01_overview.md) | 2024 / RSS | `UNREAD` | `ABSTRACT_CHECKED` |
+| NEXT | [StreamVLN: Streaming Vision-and-Language Navigation via SlowFast Context Modeling](../2026/ICRA/2026_ICRA_StreamVLN-Streaming-Vision-and-Language-Navigation-via-Slo/01_overview.md) | 2026 / ICRA | `UNREAD` | `ABSTRACT_CHECKED` |
+| NEXT | [SocialNav: Training Human-Inspired Foundation Model for Socially-Aware Embodied Navigation](../2026/CVPR/2026_CVPR_SocialNav-Training-Human-Inspired-Foundation-Model-for-Soc/01_overview.md) | 2026 / CVPR | `UNREAD` | `ABSTRACT_CHECKED` |
+| NEXT | [DyGRO-VLA: Cross-Task Scaling of Vision–Language–Action Models via Dynamic Grouped Residual Optimization](../2026/ICML/2026_ICML_DyGRO-VLA-Cross-Task-Scaling-of-VisionLanguageAction-Model/01_overview.md) | 2026 / ICML | `UNREAD` | `ABSTRACT_CHECKED` |
+| NEXT | [CLIPort: What and Where Pathways for Robotic Manipulation](../2021/CoRL/2021_CoRL_CLIPort-What-and-Where-Pathways-for-Robotic-Manipulation/01_overview.md) | 2021 / CoRL | `UNREAD` | `FULL_TEXT_CHECKED` |
+| NEXT | [PaLM-E: An Embodied Multimodal Language Model](../2023/ICML/2023_ICML_PaLM-E-An-Embodied-Multimodal-Language-Model/01_overview.md) | 2023 / ICML | `UNREAD` | `FULL_TEXT_CHECKED` |
+| NEXT | [RT-1: Robotics Transformer for Real-World Control at Scale](../2022/arxiv/2022_arxiv_RT-1-Robotics-Transformer-for-Real-World-Control-at-Scale/01_overview.md) | 2022 / arXiv | `UNREAD` | `FULL_TEXT_CHECKED` |
+| NEXT | [VoxPoser: Composable 3D Value Maps for Robotic Manipulation with Language Models](../2023/CoRL/2023_CoRL_VoxPoser-Composable-3D-Value-Maps-for-Robotic-Manipulation/01_overview.md) | 2023 / CoRL | `UNREAD` | `FULL_TEXT_CHECKED` |
 | NEXT | [A Generalist Agent](../2022/arXiv/2022_arXiv_A-Generalist-Agent/01_overview.md) | 2022 / arXiv | `UNREAD` | `FULL_TEXT_CHECKED` |
-| NEXT | [CALVIN: A Benchmark for Language-Conditioned Policy Learning for Long-Horizon Robot Manipulation Tasks](../2022/RA-L/2022_RA-L_CALVIN-A-Benchmark-for-Language-Conditioned-Policy-Learnin/01_overview.md) | 2022 / RA-L | `UNREAD` | `FULL_TEXT_CHECKED` |
 | NEXT | [AutoRT: Embodied Foundation Models for Large Scale Orchestration of Robotic Agents](../2024/arXiv/2024_arXiv_AutoRT-Embodied-Foundation-Models-for-Large-Scale-Orchestr/01_overview.md) | 2024 / arXiv | `UNREAD` | `FULL_TEXT_CHECKED` |
 | NEXT | [RT-H: Action Hierarchies Using Language](../2024/Robotics-Science-and-Sys/2024_Robotics-Science-and-Sys_RT-H-Action-Hierarchies-Using-Language/01_overview.md) | 2024 / Robotics: Science and Systems | `UNREAD` | `FULL_TEXT_CHECKED` |
 | NEXT | [Gemini Robotics: Bringing AI into the Physical World](../2025/arXiv/2025_arXiv_Gemini-Robotics-Bringing-AI-into-the-Physical-World/01_overview.md) | 2025 / arXiv | `UNREAD` | `FULL_TEXT_CHECKED` |
@@ -58,8 +84,6 @@ Gato/CLIP/CLIPort → PaLM-E/RT-1/RT-2 → MT-Opt/AutoRT data engine → Open X-
 | NEXT | [SayPlan: Grounding Large Language Models using 3D Scene Graphs for Scalable Robot Task Planning](../2023/CoRL/2023_CoRL_SayPlan-Grounding-Large-Language-Models-using-3D-Scene-Gra/01_overview.md) | 2023 / CoRL | `UNREAD` | `FULL_TEXT_CHECKED` |
 | NEXT | [XSkill: Cross Embodiment Skill Discovery](../2023/CoRL/2023_CoRL_XSkill-Cross-Embodiment-Skill-Discovery/01_overview.md) | 2023 / CoRL | `UNREAD` | `FULL_TEXT_CHECKED` |
 | NEXT | [Scaling Proprioceptive-Visual Learning with Heterogeneous Pre-trained Transformers](../2024/NeurIPS/2024_NeurIPS_Scaling-Proprioceptive-Visual-Learning-with-Heterogeneous/01_overview.md) | 2024 / NeurIPS | `UNREAD` | `FULL_TEXT_CHECKED` |
-| NEXT | [FAST: Efficient Action Tokenization for Vision-Language-Action Models](../2025/RSS/2025_RSS_FAST-Efficient-Action-Tokenization-for-Vision-Language-Act/01_overview.md) | 2025 / RSS | `UNREAD` | `FULL_TEXT_CHECKED` |
-| NEXT | [Fine-Tuning Vision-Language-Action Models: Optimizing Speed and Success](../2025/RSS/2025_RSS_Fine-Tuning-Vision-Language-Action-Models-Optimizing-Speed/01_overview.md) | 2025 / RSS | `UNREAD` | `FULL_TEXT_CHECKED` |
 | NEXT | [AtomicVLA: Unlocking the Potential of Atomic Skill Learning in Robots](../2026/CVPR/2026_CVPR_AtomicVLA-Unlocking-the-Potential-of-Atomic-Skill-Learning/01_overview.md) | 2026 / CVPR | `UNREAD` | `FULL_TEXT_CHECKED` |
 | NEXT | [PALM: Progress-Aware Policy Learning via Affordance Reasoning for Long-Horizon Robotic Manipulation](../2026/CVPR/2026_CVPR_PALM-Progress-Aware-Policy-Learning-via-Affordance-Reasoni/01_overview.md) | 2026 / CVPR | `UNREAD` | `FULL_TEXT_CHECKED` |
 | NEXT | [ActiveVLA: Injecting Active Perception into Vision-Language-Action Models for Precise 3D Robotic Manipulation](../2026/CVPR/2026_CVPR_ActiveVLA-Injecting-Active-Perception-into-Vision-Language/01_overview.md) | 2026 / CVPR | `UNREAD` | `FULL_TEXT_CHECKED` |
@@ -74,8 +98,6 @@ Gato/CLIP/CLIPort → PaLM-E/RT-1/RT-2 → MT-Opt/AutoRT data engine → Open X-
 | NEXT | [Uni-NaVid: A Video-based Vision-Language-Action Model for Unifying Embodied Navigation Tasks](../2025/RSS/2025_RSS_Uni-NaVid-A-Video-based-Vision-Language-Action-Model-for-U/01_overview.md) | 2025 / RSS | `UNREAD` | `FULL_TEXT_CHECKED` |
 | NEXT | [Learning to Act Anywhere with Task-centric Latent Actions](../2025/RSS/2025_RSS_Learning-to-Act-Anywhere-with-Task-centric-Latent-Actions/01_overview.md) | 2025 / RSS | `UNREAD` | `FULL_TEXT_CHECKED` |
 | NEXT | [CLIP-RT: Learning Language-Conditioned Robotic Policies from Natural Language Supervision](../2025/RSS/2025_RSS_CLIP-RT-Learning-Language-Conditioned-Robotic-Policies-fro/01_overview.md) | 2025 / RSS | `UNREAD` | `FULL_TEXT_CHECKED` |
-| NEXT | [NaVILA: Legged Robot Vision-Language-Action Model for Navigation](../2025/RSS/2025_RSS_NaVILA-Legged-Robot-Vision-Language-Action-Model-for-Navig/01_overview.md) | 2025 / RSS | `UNREAD` | `FULL_TEXT_CHECKED` |
-| NEXT | [ConRFT: A Reinforced Fine-tuning Method for VLA Models via Consistency Policy](../2025/RSS/2025_RSS_ConRFT-A-Reinforced-Fine-tuning-Method-for-VLA-Models-via/01_overview.md) | 2025 / RSS | `UNREAD` | `FULL_TEXT_CHECKED` |
 | NEXT | [CodeDiffuser: Attention-Enhanced Diffusion Policy via VLM-Generated Code for Instruction Ambiguity](../2025/RSS/2025_RSS_CodeDiffuser-Attention-Enhanced-Diffusion-Policy-via-VLM-G/01_overview.md) | 2025 / RSS | `UNREAD` | `FULL_TEXT_CHECKED` |
 | NEXT | [PartInstruct: Part-level Instruction Following for Fine-grained Robot Manipulation](../2025/RSS/2025_RSS_PartInstruct-Part-level-Instruction-Following-for-Fine-gra/01_overview.md) | 2025 / RSS | `UNREAD` | `FULL_TEXT_CHECKED` |
 | NEXT | [Manual2Skill: Learning to Read Manuals and Acquire Robotic Skills for Furniture Assembly Using Vision-Language Models](../2025/RSS/2025_RSS_Manual2Skill-Learning-to-Read-Manuals-and-Acquire-Robotic/01_overview.md) | 2025 / RSS | `UNREAD` | `FULL_TEXT_CHECKED` |
@@ -101,10 +123,30 @@ Gato/CLIP/CLIPort → PaLM-E/RT-1/RT-2 → MT-Opt/AutoRT data engine → Open X-
 | NEXT | [MIRAGE: Cross-Embodiment Zero-Shot Policy Transfer with Cross-Painting](../2024/RSS/2024_RSS_MIRAGE-Cross-Embodiment-Zero-Shot-Policy-Transfer-with-Cro/01_overview.md) | 2024 / RSS | `UNREAD` | `FULL_TEXT_CHECKED` |
 | NEXT | [Pushing the Limits of Cross-Embodiment Learning for Manipulation and Navigation](../2024/RSS/2024_RSS_Pushing-the-Limits-of-Cross-Embodiment-Learning-for-Manipu/01_overview.md) | 2024 / RSS | `UNREAD` | `FULL_TEXT_CHECKED` |
 | NEXT | [LIBERO-Safety: A Comprehensive Benchmark for Physical and Semantic Safety in Vision-Language-Action Models](../2026/ECCV/2026_ECCV_LIBERO-Safety-A-Comprehensive-Benchmark-for-Physical-and-S/01_overview.md) | 2026 / ECCV | `UNREAD` | `FULL_TEXT_CHECKED` |
+| NEXT | [DISC: Decoupling Instruction from State-Conditioned Control via Policy Generation](../2026/RSS/2026_RSS_DISC-Decoupling-Instruction-from-State-Conditioned-Control/01_overview.md) | 2026 / RSS | `UNREAD` | `ABSTRACT_CHECKED` |
+| NEXT | [How Should Vision-Language-Action Models Use Proprioceptive State?](../2026/arXiv/2026_arXiv_How-Should-Vision-Language-Action-Models-Use-Proprioceptiv/01_overview.md) | 2026 / arXiv | `UNREAD` | `ABSTRACT_CHECKED` |
+| NEXT | [Self-Adaptive VLA for Robust Robot Deployment](../2026/arXiv/2026_arXiv_Self-Adaptive-VLA-for-Robust-Robot-Deployment/01_overview.md) | 2026 / arXiv | `UNREAD` | `ABSTRACT_CHECKED` |
+| NEXT | [ReViP: Mitigating False Completion in Vision-Language-Action Models with Vision-Proprioception Rebalance](../2026/arXiv/2026_arXiv_ReViP-Mitigating-False-Completion-in-Vision-Language-Actio/01_overview.md) | 2026 / arXiv | `UNREAD` | `ABSTRACT_CHECKED` |
+| NEXT | [CoRE-VLA: Towards Scalable and Robust Vision-Language-Action Modeling via Conditional Routing of Experts](../2026/arXiv/2026_arXiv_CoRE-VLA-Towards-Scalable-and-Robust-Vision-Language-Actio/01_overview.md) | 2026 / arXiv | `UNREAD` | `ABSTRACT_CHECKED` |
+| NEXT | [CoRe-VLA: Preserving Cross-View Coordination in VLAs under Camera Shifts](../2026/arXiv/2026_arXiv_CoRe-VLA-Preserving-Cross-View-Coordination-in-VLAs-under/01_overview.md) | 2026 / arXiv | `UNREAD` | `ABSTRACT_CHECKED` |
+| NEXT | [When would Vision-Proprioception Policies Fail in Robotic Manipulation?](../2026/ICLR/2026_ICLR_When-would-Vision-Proprioception-Policies-Fail-in-Robotic/01_overview.md) | 2026 / ICLR | `UNREAD` | `ABSTRACT_CHECKED` |
+| NEXT | [Pretrained Vision-Language-Action Models are Surprisingly Resistant to Forgetting in Continual Learning](../2026/ICML/2026_ICML_Pretrained-Vision-Language-Action-Models-are-Surprisingly/01_overview.md) | 2026 / ICML | `UNREAD` | `ABSTRACT_CHECKED` |
+| NEXT | [Actions as Language: Fine-Tuning VLMs into VLAs Without Catastrophic Forgetting](../2026/ICLR/2026_ICLR_Actions-as-Language-Fine-Tuning-VLMs-into-VLAs-Without-Cat/01_overview.md) | 2026 / ICLR | `UNREAD` | `ABSTRACT_CHECKED` |
+| NEXT | [LAP: Language-Action Pre-training Enables Zero-Shot Cross-Embodiment Transfer](../2026/RSS/2026_RSS_LAP-Language-Action-Pre-training-Enables-Zero-Shot-Cross-E/01_overview.md) | 2026 / RSS | `UNREAD` | `ABSTRACT_CHECKED` |
+| NEXT | [Adaptive Action Chunking at Inference-time for Vision-Language-Action Models](../2026/CVPR/2026_CVPR_Adaptive-Action-Chunking-at-Inference-time-for-Vision-Lang/01_overview.md) | 2026 / CVPR | `UNREAD` | `ABSTRACT_CHECKED` |
+| NEXT | [Memory Anchors for Continual Robot Learning](../2026/CoRL/2026_CoRL_Memory-Anchors-for-Continual-Robot-Learning/01_overview.md) | 2026 / CoRL | `UNREAD` | `ABSTRACT_CHECKED` |
+| NEXT | [Rethinking Visual-Language-Action Model Scaling: Alignment, Mixture, and Regularization](../2026/arXiv/2026_arXiv_Rethinking-Visual-Language-Action-Model-Scaling-Alignment/01_overview.md) | 2026 / arXiv | `UNREAD` | `ABSTRACT_CHECKED` |
+| NEXT | [Can Vision-Language-Action Models Learn from Real-World Data Continually without Forgetting?](../2026/arXiv/2026_arXiv_Can-Vision-Language-Action-Models-Learn-from-Real-World-Da/01_overview.md) | 2026 / arXiv | `UNREAD` | `ABSTRACT_CHECKED` |
+| NEXT | [SPACE: Enabling Learning from Cross-Robot Data Toward Generalist Policies](../2026/arXiv/2026_arXiv_SPACE-Enabling-Learning-from-Cross-Robot-Data-Toward-Gener/01_overview.md) | 2026 / arXiv | `UNREAD` | `ABSTRACT_CHECKED` |
+| NEXT | [Real-Time Execution of Action Chunking Flow Policies](../2025/NeurIPS/2025_NeurIPS_Real-Time-Execution-of-Action-Chunking-Flow-Policies/01_overview.md) | 2025 / NeurIPS | `UNREAD` | `ABSTRACT_CHECKED` |
+| NEXT | [Learning High-Frequency Continuous Action Chunks in Latent Space](../2026/ICML/2026_ICML_Learning-High-Frequency-Continuous-Action-Chunks-in-Latent/01_overview.md) | 2026 / ICML | `UNREAD` | `ABSTRACT_CHECKED` |
+| NEXT | [CounterAlign: Counterfactual Supervision for Vision-Language-Action Models](../2026/CoRL/2026_CoRL_CounterAlign-Counterfactual-Supervision-for-Vision-Languag/01_overview.md) | 2026 / CoRL | `UNREAD` | `ABSTRACT_CHECKED` |
 
 <!-- READING_QUEUE:END -->
 
-## 2026-09-02 Curation Update
+## Historical curation — 2026-09-02
+
+아래는 해당 날짜의 변경 이력이다. 현재 membership과 수량은 위 generated queue를 따른다.
 
 `ReKep`, `VoxAct-B`, `3DS-VLA`, `GraspVLA`, `Long-VLA`, `RDT-1B`, `AHA`를 `REFERENCE→NEXT`로, `SIMPACT`를 `ARCHIVE→NEXT`로 반영했다. 새 queue는 spatial/action representation, bimanual and long-horizon execution, grasp pretraining, failure reasoning, simulation-in-loop planning을 VLA의 실제 robot interface 관점에서 비교한다.
 
@@ -173,10 +215,25 @@ Gato/CLIP/CLIPort → PaLM-E/RT-1/RT-2 → MT-Opt/AutoRT data engine → Open X-
 | persistent spatial memory → [Spatial Memory](../2026/ICML/2026_ICML_Spatial-Memory-for-Out-of-Vision-Manipulation-in-Vision-La/01_overview.md) / [MomaGraph](../2026/ICLR/2026_ICLR_MomaGraph-State-Aware-Unified-Scene-Graphs-with-Vision-Lan/01_overview.md) → [Memory Retrieval/HALO](../2026/RSS/2026_RSS_Memory-Retrieval-in-Visuomotor-Policies-for-Long-Horizon-R/01_overview.md) | out-of-view state graph와 retrieval을 task-relevant sparse history로 정리해 long-horizon drift를 줄이는 방향이다. | retrieval confidence와 memory expiry가 phase transition·safety intervention을 실제로 개선하는가 |
 | generalist VLA benchmarks → [LIBERO](../2023/NeurIPS/2023_NeurIPS_Benchmarking-Knowledge-Transfer-for-Lifelong-Robot-Learnin/01_overview.md) / [CALVIN](../2022/RA-L/2022_RA-L_CALVIN-A-Benchmark-for-Language-Conditioned-Policy-Learnin/01_overview.md) / [FurnitureBench](../2023/RSS/2023_RSS_FurnitureBench-Reproducible-Real-World-Benchmark-for-Long/01_overview.md) → [VLA-Arena](../2026/ICML/2026_ICML_VLA-Arena-An-Open-Source-Framework-for-Benchmarking-Vision/01_overview.md) | clean success 중심 benchmark에서 safety·distractor·extrapolation·long-horizon stress dimensions를 함께 비교하는 방향이다. | stress score가 event-level failure·recovery cost와 일치하는가 |
 
+## 2026-10-23 근거 통합
+
+아래는 2026-10-22까지의 registry/source 감사와 후보 검토를 연결한 연구자 해석이다. 새 정독·효과 검증·직접 citation 관계의 확인을 뜻하지 않는다. Paper별 본문 확인 범위는 overview 및 연결된 dossier를 따른다.
+
+| 비교 축 | 등록된 선행 | 현재 남길 구분 |
+|---|---|---|
+| E2: 시간 표현과 feedback | [AAC](../2026/CVPR/2026_CVPR_Adaptive-Action-Chunking-at-Inference-time-for-Vision-Lang/01_overview.md) (2026 CVPR); [RTC](../2025/NeurIPS/2025_NeurIPS_Real-Time-Execution-of-Action-Chunking-Flow-Policies/01_overview.md) (2025 NeurIPS); [SAIL](../2025/CoRL/2025_CoRL_SAIL-Faster-than-Demonstration-Execution-of-Imitation-Lear/01_overview.md) (2025 CoRL); [Latent continuous chunks](../2026/ICML/2026_ICML_Learning-High-Frequency-Continuous-Action-Chunks-in-Latent/01_overview.md) (2026 ICML); [Real-time correction](../2025/arXiv/2025_arXiv_Leave-No-Observation-Behind-Real-time-Correction-for-VLA-A/01_overview.md) (2025 arXiv) | 표현/retiming/관측 갱신/controller 변경을 분리한다. 서로 다른 주기의 숫자를 같은 control contract로 비교하지 않는다. |
+| 새 temporal preprint의 경계 | [Vela](../2026/arXiv/2026_arXiv_Vela-Scaling-Vision-Language-Action-Models-with-Adaptive-A/01_overview.md) (2026 arXiv); [PaceVLA](../2026/arXiv/2026_arXiv_PaceVLA-Adaptive-Temporal-Action-Quantization-in-Vision-La/01_overview.md) (2026 arXiv); [Stability assumption](../2026/arXiv/2026_arXiv_Measuring-the-Stability-Assumption-Behind-Action-Chunking/01_overview.md) (2026 arXiv) | 기존 temporal parameterization·진단을 새 기여에서 제외하고 동일 물리 시간·sensor age 이후 남는 차이를 묻는다. |
+| E1: 전이·보존 interface | [Actions as Language](../2026/ICLR/2026_ICLR_Actions-as-Language-Fine-Tuning-VLMs-into-VLAs-Without-Cat/01_overview.md) (2026 ICLR); [LAP](../2026/RSS/2026_RSS_LAP-Language-Action-Pre-training-Enables-Zero-Shot-Cross-E/01_overview.md) (2026 RSS); [Real-world continual VLA](../2026/arXiv/2026_arXiv_Can-Vision-Language-Action-Models-Learn-from-Real-World-Da/01_overview.md) (2026 arXiv); [SPACE](../2026/arXiv/2026_arXiv_SPACE-Enabling-Learning-from-Cross-Robot-Data-Toward-Gener/01_overview.md) (2026 arXiv) | VLM 의미 보존·로봇 skill retention·cross-embodiment transfer는 별도 outcome이다. 공통 표현을 실제 effect 정렬로 자동 해석하지 않는다. |
+| Instruction-following의 범위 | [CounterAlign](../2026/CoRL/2026_CoRL_CounterAlign-Counterfactual-Supervision-for-Vision-Languag/01_overview.md) (2026 CoRL); [RoboFollow](../2026/CoRL/2026_CoRL_RoboFollow-Unveiling-the-Instruction-Following-Mirage-in-E/01_overview.md) (2026 CoRL); [ExecVLA](../2026/arXiv/2026_arXiv_ExecVLA-Following-Fine-Grained-Execution-Constraints-in-Vi/01_overview.md) (2026 arXiv) | What/how·반사실 지시 평가 자체는 새 기여가 아니다. 언어 입력 경로·scene equivalence·실행 제약 label이 먼저 필요하다. |
+
 ## Open Questions
 
-- VLA의 spatial reasoning이 실제 control robustness로 이어지는가?
-- Long-horizon task에서 memory, skill library, world model의 역할을 어떻게 나눌 것인가?
-- Generalist policy의 실패를 runtime에 탐지하고 안전하게 회복시키는 가장 좋은 interface는 무엇인가?
-- Language-level action hierarchy와 explicit feedback/replanning을 결합할 때 필요한 state와 timing contract는 무엇인가?
-- Proprietary Gemini 계열과 open GR00T/OpenVLA 계열을 data·controller·latency를 고정해 비교할 수 있는가?
+현재 후보 판정은 [주제별 요약](../work/research_candidates/summaries/README.md)을 따른다. 아래 질문은 `CURATION-HYPOTHESIS`이며 재개 승인이 아니다.
+
+| 질문 | 구별할 예측 | 최소 대조·중단 조건 | 근거/판정 |
+|---|---|---|---|
+| E2 시간/feedback | 같은 reference 물리 시간·sensor age·controller·compute에서 기존 방법과 구별되는 조건부 예측이 있는가? | RTR controller mode·AAC 실행 길이·A2C2 delay/horizon 분리를 반영한다. 일관된 task/model/normalizer/evaluator packet 없는 현재 E2-R1은 WAITING_EVIDENCE다. | [검토 근거](../work/research_candidates/2026-10-22_e2_buildup/CLAIM_CONTRACT.md) |
+| D1 관측 보정 | 같은 task에서 보정이 필요한 오류와 보정하면 손해인 실제 변화가 가용 cue로 구별되는가? | Task별 reference·causal 재보정·restoration/residual을 대조한다. 지정 pi05_libero는 state-value 경로가 없어 제외했고 OFT Goal utility는 미검증이다. 방법 NO-GO/진단 HOLD. | [검토 근거](../work/research_candidates/2026-10-21_d1_buildup/NONEXPERIMENTAL_REVIEW.md) |
+| D3 목표 변경 | 실제 비가역 사건 전후에 가능한 새 목표와 불가능한 새 목표를 동일 실행 능력에서 구분하는가? | Raw/annotation filename 연결은 RGB/event 정렬·continuation competence가 아니다. R1 gate NOT_MET를 유지하며 predicate baseline 이후의 현상만 남긴다. | [검토 근거](../work/research_candidates/2026-10-22_d3_buildup/R1_REVIEW.md) |
+| E1 로봇 간 보존 | 정상 pose/time 정렬 이후 effect 정보의 추가 가치가 있는가? | 공통 task ID 59개는 matched independent episode가 아니다. 두 로봇의 source episode join·scene/command/time·native 평가가 먼저 필요하다. | [검토 근거](../work/research_candidates/2026-10-22_e1_buildup/R1_REVIEW.md) |
+| Long-horizon/navigation | Memory·skill library·world model이 같은 history·latency·controller 예산에서 서로 다른 failure를 줄이는가? | Streaming context, collision/social cost와 manipulation contact outcome을 구분한다. Proprietary/open model의 data·sensor·compute 차이를 남긴다. | 기존 track 비교의 연구자 질문; native 효과 미검증 |

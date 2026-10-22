@@ -1,0 +1,11 @@
+{
+  "autoregressive_counterexample": {
+    "same_gripper_probability": 1.0,
+    "next_arm_left_probability_given_alias_a": 1.0,
+    "next_arm_left_probability_given_alias_b": 0.0,
+    "old_next_arm_left_probability": 0.5,
+    "new_next_arm_left_probability": 0.9,
+    "conclusion": "same gripper marginal does not imply same subsequent action distribution"
+  },
+  "all_assertions_passed": true
+}

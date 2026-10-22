@@ -9,7 +9,7 @@
 - Year/Venue: 1987 / IEEE JRA
 - Authors: not duplicated here when not verified in the registry source
 - Primary track: Planning and control
-- Tier: CORE
+- Tier: REFERENCE
 - Tags: Robotics, operational space control, force control, manipulation
 - Official paper: https://cs.stanford.edu/group/manips/publications.html
 - Full-text retrieval: https://cs.stanford.edu/group/manips/publications/pdfs/Khatib_1987_RA.pdf

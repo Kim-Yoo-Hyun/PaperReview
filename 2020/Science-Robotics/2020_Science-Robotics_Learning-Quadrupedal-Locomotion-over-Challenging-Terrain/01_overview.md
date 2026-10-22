@@ -9,7 +9,7 @@
 - Year/Venue: 2020 / Science Robotics
 - Authors: not duplicated here when not verified in the registry source
 - Primary track: Locomotion, whole-body, mobile manipulation, and humanoids
-- Tier: NEXT
+- Tier: REFERENCE
 - Tags: Robotics, quadruped locomotion, Reinforcement Learning, rough terrain
 - Official paper: https://arxiv.org/abs/2010.11251
 - Full-text retrieval: https://arxiv.org/pdf/2010.11251

@@ -9,7 +9,7 @@
 - Year/Venue: 2024 / Science Robotics
 - Authors: not duplicated here when not verified in the registry source
 - Primary track: Locomotion, whole-body, mobile manipulation, and humanoids
-- Tier: CORE
+- Tier: REFERENCE
 - Tags: Robotics, quadruped locomotion, parkour, Navigation
 - Official paper: https://arxiv.org/abs/2306.14874
 - Full-text retrieval: https://arxiv.org/pdf/2306.14874

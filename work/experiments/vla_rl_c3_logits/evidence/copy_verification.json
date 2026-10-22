@@ -1,0 +1,20 @@
+{
+  "copied_evidence_hashes_matched": 14,
+  "final_driver_hashes_matched": 5,
+  "sha256": {
+    "packages.txt": "da4f5b026211b250da99ffee521b63feed67215b1546b2ae4b7ca749419075c1",
+    "runtime_environment.json": "e481dac9b8eee784befd6f82c75a154022b9f9ec2118df5914b420904a12c021",
+    "logits_analysis.json": "e019ac32f213de9d1920021eff3ee739b7ebb4dd090733185d77e0faccf8f7ff",
+    "demo_gripper_labels.json": "028b05ea5a5977f2ecb41412069e518b46fa3d78d1b29562379b7b4e8dd6dfa4",
+    "input_source_hashes.json": "ac6dad05b0f27b3eaef7d63d8b5cae7e7aa9265778c17d87874ef561edaec65a",
+    "forward_runtime.json": "36895e6a3ce7e1473e1f2d1e4145837ab573f9ebb292938179e335b3259044e1",
+    "continuation_check.json": "e62d9d4da67fa518e178718e11838e6fdb100027fdf4ff5b71a58d773abde830",
+    "observation_manifest.json": "1c6801622227cda53ce1bf07b86448702e9ed4ff3b799ce7f559924c60c35b8c",
+    "preprocessing_audit.json": "de22f15ce636b0e2053a0ff6a5a65ecbcd8e45f9defa5d48eb6409e2c63e6244",
+    "native_logits.npz": "99c6fef4fab42610c3839a6dd6ac57db0169002a88af588a848bdfff32d612e4",
+    "numerical_validation.json": "cf26f147a41853c96f1bb0587e9333b50f22c9bd64c66e94884ca75d72ff0fe8",
+    "forward_progress.json": "64e5794c4787e3a2ae40aa50695d61447cca7143f27ae17a87eacdd6e0f11e68",
+    "tail_audit.json": "5459a445259213bca572f0290b952df768708d3f5dcce3d2907d320e1ed37893",
+    "driver_hashes.json": "166a73392bb5be82c24adda11fafa996b3dec867a1533044a13bc1c3bcf56c22"
+  }
+}

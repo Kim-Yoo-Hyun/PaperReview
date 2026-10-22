@@ -9,7 +9,7 @@
 - Year/Venue: 2017 / Sensors
 - Authors: not duplicated here when not verified in the registry source
 - Primary track: Manipulation, contact, tactile, and dexterity
-- Tier: CORE
+- Tier: REFERENCE
 - Tags: Robotics, tactile sensing, Force, contact, manipulation
 - Official paper: https://publications.ri.cmu.edu/gelsight-high-resolution-robot-tactile-sensors-for-estimating-geometry-and-force/
 - Full-text retrieval: https://publications.ri.cmu.edu/gelsight-high-resolution-robot-tactile-sensors-for-estimating-geometry-and-force/

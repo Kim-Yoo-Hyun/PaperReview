@@ -8,8 +8,8 @@
 
 - Year/Venue: 2019 / ICCV
 - Authors: not duplicated here when not verified in the registry source
-- Primary track: Benchmarks and Datasets
-- Tier: REFERENCE
+- Primary track: RL, IL, offline learning, and robot data
+- Tier: CORE
 - Tags: Robotics, Navigation, Embodied AI, Benchmark
 - Official paper: https://arxiv.org/abs/1904.01201
 - Full-text retrieval: https://arxiv.org/pdf/1904.01201

@@ -9,7 +9,7 @@
 - Year/Venue: 2023 / RSS
 - Authors: not duplicated here when not verified in the registry source
 - Primary track: Manipulation, contact, tactile, and dexterity
-- Tier: NEXT
+- Tier: CORE
 - Tags: Robotics, bimanual manipulation, Imitation Learning, action chunking
 - Official paper: https://arxiv.org/abs/2304.13705
 - Full-text retrieval: https://arxiv.org/pdf/2304.13705

@@ -9,7 +9,7 @@
 - Year/Venue: 2020 / CVPR
 - Authors: not duplicated here when not verified in the registry source
 - Primary track: Manipulation, contact, tactile, and dexterity
-- Tier: CORE
+- Tier: NEXT
 - Tags: Robotics, grasping, Benchmark, 6-DoF grasp
 - Official paper: https://arxiv.org/abs/1912.13470
 - Full-text retrieval: https://arxiv.org/pdf/1912.13470

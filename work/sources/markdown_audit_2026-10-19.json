@@ -1,0 +1,147 @@
+{
+  "reviewed_on": "2026-10-19",
+  "status": "validated",
+  "scope": {
+    "markdown_files": 4896,
+    "standard_notes": 4870,
+    "other_markdown": 26,
+    "paper_count": 974,
+    "mode": "local structure, canonical metadata, evidence boundaries, reading workflow and comparison questions"
+  },
+  "preserved": {
+    "active_tracker_rows": 293,
+    "history_tracker_rows": 47,
+    "all_tracker_fields_unchanged": true,
+    "paper_count_and_tier_membership_unchanged": true,
+    "paper_source_evidence_unchanged": true,
+    "deleted_files": [],
+    "comparison_matrix_rows": 106,
+    "existing_comparison_matrices": 7
+  },
+  "changed_markdown": [
+    "AGENTS.md",
+    "PAPER.md",
+    "work/README.md",
+    "work/update/UPDATES_2026-08-24.md",
+    "work/update/README.md",
+    "work/update/UPDATES_2026-10-19.md",
+    "2018/arxiv/2018_arxiv_Tensor-Field-Networks-Rotation-and-Translation-Equivariant/01_overview.md",
+    "research/READING_STATUS.md",
+    "research/REGISTRY_STATS.md",
+    "research/projects/RP-3_MEMORY_EXPIRY.md",
+    "research/projects/RP-2_FAILURE_RECOVERY.md",
+    "2018/NeurIPS/2018_NeurIPS_PointCNN-Convolution-On-X-Transformed-Points/01_overview.md",
+    "2025/ICLR/2025_ICLR_ManiSkill-HAB-A-Benchmark-for-Low-Level-Manipulation-in-Ho/03_method.md",
+    "2025/ICLR/2025_ICLR_ManiSkill-HAB-A-Benchmark-for-Low-Level-Manipulation-in-Ho/05_insights.md",
+    "2025/ICLR/2025_ICLR_ManiSkill-HAB-A-Benchmark-for-Low-Level-Manipulation-in-Ho/01_overview.md",
+    "2025/ICLR/2025_ICLR_ManiSkill-HAB-A-Benchmark-for-Low-Level-Manipulation-in-Ho/02_problem.md",
+    "2021/NeurIPS/2021_NeurIPS_NeuS-Learning-Neural-Implicit-Surfaces-by-Volume-Rendering/03_method.md",
+    "2021/NeurIPS/2021_NeurIPS_NeuS-Learning-Neural-Implicit-Surfaces-by-Volume-Rendering/05_insights.md",
+    "2021/NeurIPS/2021_NeurIPS_NeuS-Learning-Neural-Implicit-Surfaces-by-Volume-Rendering/04_evaluation.md",
+    "2021/NeurIPS/2021_NeurIPS_NeuS-Learning-Neural-Implicit-Surfaces-by-Volume-Rendering/01_overview.md",
+    "2026/ICML/2026_ICML_Tabero-Learning-Gentle-Manipulation-with-Closed-Loop-Force/01_overview.md",
+    "README.md",
+    "2026/ICML/2026_ICML_VLA-Arena-An-Open-Source-Framework-for-Benchmarking-Vision/01_overview.md",
+    "2024/ECCV/2024_ECCV_Dense-Multimodal-Alignment-for-Open-Vocabulary-3D-Scene-Un/04_evaluation.md",
+    "synthesis/03_manipulation_contact.md",
+    "synthesis/01_planning_control.md",
+    "synthesis/07_robotics_3d_perception.md",
+    "synthesis/02_rl_il_offline.md",
+    "synthesis/README.md",
+    "synthesis/05_world_models_safety.md",
+    "synthesis/06_locomotion_whole_body.md",
+    "synthesis/04_vla_generalist.md"
+  ],
+  "changed_paper_notes": [
+    "2018/arxiv/2018_arxiv_Tensor-Field-Networks-Rotation-and-Translation-Equivariant/01_overview.md",
+    "2018/NeurIPS/2018_NeurIPS_PointCNN-Convolution-On-X-Transformed-Points/01_overview.md",
+    "2025/ICLR/2025_ICLR_ManiSkill-HAB-A-Benchmark-for-Low-Level-Manipulation-in-Ho/03_method.md",
+    "2025/ICLR/2025_ICLR_ManiSkill-HAB-A-Benchmark-for-Low-Level-Manipulation-in-Ho/05_insights.md",
+    "2025/ICLR/2025_ICLR_ManiSkill-HAB-A-Benchmark-for-Low-Level-Manipulation-in-Ho/01_overview.md",
+    "2025/ICLR/2025_ICLR_ManiSkill-HAB-A-Benchmark-for-Low-Level-Manipulation-in-Ho/02_problem.md",
+    "2021/NeurIPS/2021_NeurIPS_NeuS-Learning-Neural-Implicit-Surfaces-by-Volume-Rendering/03_method.md",
+    "2021/NeurIPS/2021_NeurIPS_NeuS-Learning-Neural-Implicit-Surfaces-by-Volume-Rendering/05_insights.md",
+    "2021/NeurIPS/2021_NeurIPS_NeuS-Learning-Neural-Implicit-Surfaces-by-Volume-Rendering/04_evaluation.md",
+    "2021/NeurIPS/2021_NeurIPS_NeuS-Learning-Neural-Implicit-Surfaces-by-Volume-Rendering/01_overview.md",
+    "2026/ICML/2026_ICML_Tabero-Learning-Gentle-Manipulation-with-Closed-Loop-Force/01_overview.md",
+    "2026/ICML/2026_ICML_VLA-Arena-An-Open-Source-Framework-for-Benchmarking-Vision/01_overview.md",
+    "2024/ECCV/2024_ECCV_Dense-Multimodal-Alignment-for-Open-Vocabulary-3D-Scene-Un/04_evaluation.md"
+  ],
+  "manifest_changes": [
+    {
+      "paper_id": "pr-0814",
+      "fields": [
+        "tags"
+      ]
+    },
+    {
+      "paper_id": "pr-0815",
+      "fields": [
+        "tags"
+      ]
+    }
+  ],
+  "repairs": [
+    "Removed active pointers to retired gap/idea registers and clarified project retirement.",
+    "Separated routine priority maintenance from full source/profile/note migrations.",
+    "Added abstract-based comparison questions for the 24 admissions across seven synthesis tracks.",
+    "Formatted function/citation text so it no longer renders as missing local links.",
+    "Repaired two truncated table rows without inventing source text.",
+    "Aligned two overview tag headers with seven canonical, specific tags.",
+    "Derived identifier presence and primary source scope from canonical nested manifest fields.",
+    "Expanded repository audit to all Markdown, note titles/headers and generated metadata."
+  ],
+  "manual_review": [
+    {
+      "item": "PointCNN and Tensor Field Networks overview evaluation rows",
+      "reason": "Original extractive sentence is missing; row marked for source review instead of reconstructed."
+    },
+    {
+      "item": "24 newly admitted papers",
+      "reason": "ABSTRACT_CHECKED; detailed objectives, metrics, trial conditions and limitations require full-text review."
+    },
+    {
+      "item": "100 CURATION-SEED matrix rows",
+      "reason": "Reading hypotheses; full-text note evidence alone does not verify a matrix cell or the user reading status."
+    },
+    {
+      "item": "Publication checks already recorded in admission audit",
+      "reason": "HIL-SERL same-work publication update; direct publisher checks for ICRA/RL-100 and ECCV bibliographic details remain explicitly scoped."
+    }
+  ],
+  "limits": [
+    "No full-text re-review of all 974 papers was performed.",
+    "External URLs and Markdown fragment anchors were not exhaustively revalidated.",
+    "Historical research claims and user-authored comparison results were retained."
+  ],
+  "changed_markdown_count": 32,
+  "index_statistics_correction": {
+    "papers_without_public_identifier": {
+      "before": 367,
+      "after": 347
+    },
+    "primary_source_scope_empty": {
+      "before": 24,
+      "after": 0
+    },
+    "new_records_with_public_identifier": 20
+  },
+  "validation": {
+    "py_compile": "passed",
+    "document_regression_tests": 4,
+    "reading_history_regression_tests": 3,
+    "generated_artifacts_idempotent": 16,
+    "git_diff_check": "passed",
+    "repository_audit": {
+      "markdown_files_checked": 4896,
+      "relative_links_checked": 7775,
+      "errors": [],
+      "warnings": []
+    },
+    "extraction_artifact_audit": {
+      "mode": "read_only",
+      "note_files_scanned": 4870,
+      "files_with_known_pattern_findings": 0
+    }
+  }
+}

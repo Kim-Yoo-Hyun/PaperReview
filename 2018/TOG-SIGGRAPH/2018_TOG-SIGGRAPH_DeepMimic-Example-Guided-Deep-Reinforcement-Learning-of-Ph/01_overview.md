@@ -9,7 +9,7 @@
 - Year/Venue: 2018 / TOG / SIGGRAPH
 - Authors: not duplicated here when not verified in the registry source
 - Primary track: Locomotion, whole-body, mobile manipulation, and humanoids
-- Tier: NEXT
+- Tier: REFERENCE
 - Tags: Robotics, humanoid, motion imitation, Reinforcement Learning, physics-based control
 - Official paper: https://arxiv.org/abs/1804.02717
 - Full-text retrieval: https://arxiv.org/pdf/1804.02717

@@ -9,7 +9,7 @@
 - Year/Venue: 2023 / CoRL
 - Authors: not duplicated here when not verified in the registry source
 - Primary track: Locomotion, whole-body, mobile manipulation, and humanoids
-- Tier: NEXT
+- Tier: CORE
 - Tags: Robotics, Navigation, visual navigation, foundation model, goal-conditioned policy, cross-platform
 - Official paper: https://arxiv.org/abs/2306.14846
 - Full-text retrieval: https://arxiv.org/pdf/2306.14846

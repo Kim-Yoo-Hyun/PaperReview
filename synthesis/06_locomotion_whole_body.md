@@ -1,6 +1,6 @@
 # Locomotion, Whole-Body, Mobile Manipulation, and Humanoids
 
-- Updated: 2026-09-04 KST
+- Updated: 2026-10-23 KST
 
 ## Scope
 
@@ -14,65 +14,58 @@ ZMP/model-based walking, learned motion priors, perpetual motion tracking, versa
 - **Out of scope:** character animation without physical robot implications, arm-only manipulation, 또는 locomotion과 whole-body interface가 없는 generic motion generation.
 - **Inclusion test:** embodiment, body/contact state, action/control level, adaptation or training setting, stability/task evaluation 중 최소 네 가지를 비교할 수 있어야 한다.
 - **Role vocabulary:** `foundation`, `controller`, `motion prior`, `policy`, `adaptation`, `dataset`, `benchmark`, `simulator`, `system`을 사용한다.
-- **Facet tuple:** `embodiment; modality/data; contact regime; setting; control level`를 모든 matrix 행에 기록한다. 예: `quadruped; proprioception+terrain vision; uneven terrain; sim-to-real; locomotion policy`.
-- **Comparison unit:** Comparison Matrix는 registry의 한 논문당 한 행이다. motion-controller pair도 별도 행으로 두고, 계보는 Dependency에서만 묶는다.
-- **Metadata/evidence:** Paper 링크의 local overview에 official paper, project/code와 source audit를 둔다. Matrix는 `Year / Venue`, `Role`, `Facets`, `Why included / TL;DR`, `Evidence / source`를 반복 기록하며, Evaluation은 `setup; data/split; metric; real/trials` 순서를 따른다.
+
+공통 matrix/evidence 규약은 [synthesis 안내](./README.md#공통-비교-규약과-질문-분류)를 따른다.
 
 ## Reading Path
 
+현재 읽기 우선순위는 [READING_PLAN.md](../research/READING_PLAN.md)를 따른다. 아래 계보는 비교 탐색용이며 전체 선행 완독 의무가 아니다.
+
+2026-10-19 초점: ViNT와 Mobile ALOHA를 중심으로 navigation에서 mobile manipulation으로 이어지는 data·policy interface를 다룬다. NaVILA와 연결되는 low-level adaptation은 선택적으로 읽고 순수 gait·human motion tracking은 필요시 참조한다.
+
 ZMP preview control → Dynamic WBC/HQP/NMPC → DeepMimic/AMP → PHC/MaskedMimic → HOVER/SONIC → RMA/perceptive locomotion/parkour → human-to-humanoid imitation → mobile and humanoid loco-manipulation.
+
+### 2026-10-19 추가 논문 비교
+
+아래는 등록된 abstract/project 근거에서 만든 **정독 전 비교 질문**이다. 직접 citation이나 실험 결론으로 취급하지 않으며, 읽기 순서와 tier는 READING_PLAN의 최신 값을 따른다.
+
+| 비교할 논문 | 비교 축 | 본문에서 확인할 조건 |
+|---|---|---|
+| ViNT·Mobile ALOHA ↔ NaVILA·NavDP·StreamVLN | Navigation에서 mobile manipulation으로 이어지는 interface | 신규 navigation 논문은 각 primary track에 한 번만 배정한다. 이 트랙에서는 base/arm command, low-level controller, 지연과 embodiment transfer 조건을 교차 비교한다. |
 
 <!-- READING_QUEUE:START -->
 
 ## Assigned Reading Queue
 
-### Locomotion, mobile manipulation, and humanoid systems — 8
+### Locomotion, mobile manipulation, and humanoid systems — 2
 
 | Tier | Paper | Year / Venue | Status | Evidence |
 |---|---|---|---|---|
-| CORE | [Biped Walking Pattern Generation by using Preview Control of Zero-Moment Point](../2003/ICRA/2003_ICRA_Biped-Walking-Pattern-Generation-by-using-Preview-Control/01_overview.md) | 2003 / ICRA | `UNREAD` | `FULL_TEXT_CHECKED` |
-| CORE | [AMP: Adversarial Motion Priors for Stylized Physics-Based Character Control](../2021/ACM-Transactions-on-Grap/2021_ACM-Transactions-on-Grap_AMP-Adversarial-Motion-Priors-for-Stylized-Physics-Based-C/01_overview.md) | 2021 / ACM Transactions on Graphics | `UNREAD` | `FULL_TEXT_CHECKED` |
-| CORE | [RMA: Rapid Motor Adaptation for Legged Robots](../2021/RSS/2021_RSS_RMA-Rapid-Motor-Adaptation-for-Legged-Robots/01_overview.md) | 2021 / RSS | `UNREAD` | `FULL_TEXT_CHECKED` |
-| CORE | [Learning Robust Perceptive Locomotion for Quadrupedal Robots in the Wild](../2022/Science-Robotics/2022_Science-Robotics_Learning-Robust-Perceptive-Locomotion-for-Quadrupedal-Robo/01_overview.md) | 2022 / Science Robotics | `UNREAD` | `FULL_TEXT_CHECKED` |
-| CORE | [ANYmal Parkour: Learning Agile Navigation for Quadrupedal Robots](../2024/Science-Robotics/2024_Science-Robotics_ANYmal-Parkour-Learning-Agile-Navigation-for-Quadrupedal-R/01_overview.md) | 2024 / Science Robotics | `UNREAD` | `FULL_TEXT_CHECKED` |
-| CORE | [HumanoidBench: Simulated Humanoid Benchmark for Whole-Body Locomotion and Manipulation](../2024/RSS/2024_RSS_HumanoidBench-Simulated-Humanoid-Benchmark-for-Whole-Body/01_overview.md) | 2024 / RSS | `UNREAD` | `FULL_TEXT_CHECKED` |
-| CORE | [OmniH2O: Universal and Dexterous Human-to-Humanoid Whole-Body Teleoperation and Learning](../2024/CoRL/2024_CoRL_OmniH2O-Universal-and-Dexterous-Human-to-Humanoid-Whole-Bo/01_overview.md) | 2024 / CoRL | `UNREAD` | `FULL_TEXT_CHECKED` |
+| CORE | [ViNT: A Foundation Model for Visual Navigation](../2023/CoRL/2023_CoRL_ViNT-A-Foundation-Model-for-Visual-Navigation/01_overview.md) | 2023 / CoRL | `UNREAD` | `FULL_TEXT_CHECKED` |
 | CORE | [Mobile ALOHA: Learning Bimanual Mobile Manipulation using Low-Cost Whole-Body Teleoperation](../2024/CoRL/2024_CoRL_Mobile-ALOHA-Learning-Bimanual-Mobile-Manipulation-using-L/01_overview.md) | 2024 / CoRL | `UNREAD` | `FULL_TEXT_CHECKED` |
 
-### Locomotion, whole-body control, mobile manipulation, and humanoids — 26
+### Locomotion, whole-body control, mobile manipulation, and humanoids — 12
 
 | Tier | Paper | Year / Venue | Status | Evidence |
 |---|---|---|---|---|
-| NEXT | [Perpetual Humanoid Control for Real-time Simulated Avatars](../2023/ICCV/2023_ICCV_Perpetual-Humanoid-Control-for-Real-time-Simulated-Avatars/01_overview.md) | 2023 / ICCV | `UNREAD` | `FULL_TEXT_CHECKED` |
-| NEXT | [MaskedMimic: Unified Physics-Based Character Control Through Masked Motion Inpainting](../2024/ACM-Transactions-on-Grap/2024_ACM-Transactions-on-Grap_MaskedMimic-Unified-Physics-Based-Character-Control-Throug/01_overview.md) | 2024 / ACM Transactions on Graphics | `UNREAD` | `FULL_TEXT_CHECKED` |
-| NEXT | [HOVER: Versatile Neural Whole-Body Controller for Humanoid Robots](../2025/ICRA/2025_ICRA_HOVER-Versatile-Neural-Whole-Body-Controller-for-Humanoid/01_overview.md) | 2025 / ICRA | `UNREAD` | `FULL_TEXT_CHECKED` |
-| NEXT | [SONIC: Supersizing Motion Tracking for Natural Humanoid Whole-Body Control](../2026/Science-Robotics/2026_Science-Robotics_SONIC-Supersizing-Motion-Tracking-for-Natural-Humanoid-Who/01_overview.md) | 2026 / Science Robotics | `UNREAD` | `FULL_TEXT_CHECKED` |
-| NEXT | [DeepMimic: Example-Guided Deep Reinforcement Learning of Physics-Based Character Skills](../2018/TOG-SIGGRAPH/2018_TOG-SIGGRAPH_DeepMimic-Example-Guided-Deep-Reinforcement-Learning-of-Ph/01_overview.md) | 2018 / TOG / SIGGRAPH | `UNREAD` | `FULL_TEXT_CHECKED` |
-| NEXT | [Sim-to-Real: Learning Agile Locomotion For Quadruped Robots](../2018/RSS/2018_RSS_Sim-to-Real-Learning-Agile-Locomotion-For-Quadruped-Robots/01_overview.md) | 2018 / RSS | `UNREAD` | `FULL_TEXT_CHECKED` |
-| NEXT | [Learning Quadrupedal Locomotion over Challenging Terrain](../2020/Science-Robotics/2020_Science-Robotics_Learning-Quadrupedal-Locomotion-over-Challenging-Terrain/01_overview.md) | 2020 / Science Robotics | `UNREAD` | `FULL_TEXT_CHECKED` |
-| NEXT | [Extreme Parkour with Legged Robots](../2024/ICRA/2024_ICRA_Extreme-Parkour-with-Legged-Robots/01_overview.md) | 2024 / ICRA | `UNREAD` | `FULL_TEXT_CHECKED` |
-| NEXT | [Walk These Ways: Tuning Robot Control for Generalization with Multiplicity of Behavior](../2022/CoRL/2022_CoRL_Walk-These-Ways-Tuning-Robot-Control-for-Generalization-wi/01_overview.md) | 2022 / CoRL | `UNREAD` | `FULL_TEXT_CHECKED` |
-| NEXT | [HumanPlus: Humanoid Shadowing and Imitation from Humans](../2024/CoRL/2024_CoRL_HumanPlus-Humanoid-Shadowing-and-Imitation-from-Humans/01_overview.md) | 2024 / CoRL | `UNREAD` | `FULL_TEXT_CHECKED` |
-| NEXT | [ASAP: Aligning Simulation and Real-World Physics for Learning Agile Humanoid Whole-Body Skills](../2025/RSS/2025_RSS_ASAP-Aligning-Simulation-and-Real-World-Physics-for-Learni/01_overview.md) | 2025 / RSS | `UNREAD` | `FULL_TEXT_CHECKED` |
-| NEXT | [LangWBC: Language-Directed Humanoid Whole-Body Control via End-to-End Learning](../2025/RSS/2025_RSS_LangWBC-Language-Directed-Humanoid-Whole-Body-Control-via/01_overview.md) | 2025 / RSS | `UNREAD` | `FULL_TEXT_CHECKED` |
+| NEXT | [RMA: Rapid Motor Adaptation for Legged Robots](../2021/RSS/2021_RSS_RMA-Rapid-Motor-Adaptation-for-Legged-Robots/01_overview.md) | 2021 / RSS | `UNREAD` | `FULL_TEXT_CHECKED` |
 | NEXT | [RoboPanoptes: The All-Seeing Robot with Whole-body Dexterity](../2025/RSS/2025_RSS_RoboPanoptes-The-All-Seeing-Robot-with-Whole-body-Dexterit/01_overview.md) | 2025 / RSS | `UNREAD` | `FULL_TEXT_CHECKED` |
 | NEXT | [Demonstrating OK-Robot: What Really Matters in Integrating Open-Knowledge Models for Robotics](../2024/RSS/2024_RSS_Demonstrating-OK-Robot-What-Really-Matters-in-Integrating/01_overview.md) | 2024 / RSS | `UNREAD` | `FULL_TEXT_CHECKED` |
-| NEXT | [HWC-Loco: A Hierarchical Whole-Body Control Approach to Robust Humanoid Locomotion](../2026/ICLR/2026_ICLR_HWC-Loco-A-Hierarchical-Whole-Body-Control-Approach-to-Rob/01_overview.md) | 2026 / ICLR | `UNREAD` | `FULL_TEXT_CHECKED` |
-| NEXT | [VIRAL: Visual Sim-to-Real at Scale for Humanoid Loco-Manipulation](../2026/CVPR/2026_CVPR_VIRAL-Visual-Sim-to-Real-at-Scale-for-Humanoid-Loco-Manipu/01_overview.md) | 2026 / CVPR | `UNREAD` | `FULL_TEXT_CHECKED` |
 | NEXT | [Language-Grounded Dynamic Scene Graphs for Interactive Object Search with Mobile Manipulation](../2024/RA-L/2024_RA-L_Language-Grounded-Dynamic-Scene-Graphs-for-Interactive-Obj/01_overview.md) | 2024 / RA-L | `UNREAD` | `FULL_TEXT_CHECKED` |
 | NEXT | [Dynamic Open-Vocabulary 3D Scene Graphs for Long-term Language-Guided Mobile Manipulation](../2025/RA-L/2025_RA-L_Dynamic-Open-Vocabulary-3D-Scene-Graphs-for-Long-term-Lang/01_overview.md) | 2025 / RA-L | `UNREAD` | `FULL_TEXT_CHECKED` |
-| NEXT | [AMO: Adaptive Motion Optimization for Hyper-Dexterous Humanoid Whole-Body Control](../2025/RSS/2025_RSS_AMO-Adaptive-Motion-Optimization-for-Hyper-Dexterous-Human/01_overview.md) | 2025 / RSS | `UNREAD` | `FULL_TEXT_CHECKED` |
 | NEXT | [Demonstrating MOSART: Opening Articulated Structures in the Real World](../2025/RSS/2025_RSS_Demonstrating-MOSART-Opening-Articulated-Structures-in-the/01_overview.md) | 2025 / RSS | `UNREAD` | `FULL_TEXT_CHECKED` |
 | NEXT | [HOMIE: Humanoid Loco-Manipulation with Isomorphic Exoskeleton Cockpit](../2025/RSS/2025_RSS_HOMIE-Humanoid-Loco-Manipulation-with-Isomorphic-Exoskelet/01_overview.md) | 2025 / RSS | `UNREAD` | `FULL_TEXT_CHECKED` |
-| NEXT | [Flying Hand: End-Effector-Centric Framework for Versatile Aerial Manipulation Teleoperation and Policy Learning](../2025/RSS/2025_RSS_Flying-Hand-End-Effector-Centric-Framework-for-Versatile-A/01_overview.md) | 2025 / RSS | `UNREAD` | `FULL_TEXT_CHECKED` |
 | NEXT | [SPIN: Simultaneous Perception, Interaction and Navigation](../2024/CVPR/2024_CVPR_SPIN-Simultaneous-Perception-Interaction-and-Navigation/01_overview.md) | 2024 / CVPR | `UNREAD` | `FULL_TEXT_CHECKED` |
-| NEXT | [WoCoCo: Learning Whole-Body Humanoid Control with Sequential Contacts](../2024/CoRL/2024_CoRL_WoCoCo-Learning-Whole-Body-Humanoid-Control-with-Sequentia/01_overview.md) | 2024 / CoRL | `UNREAD` | `FULL_TEXT_CHECKED` |
-| NEXT | [ViNT: A Foundation Model for Visual Navigation](../2023/CoRL/2023_CoRL_ViNT-A-Foundation-Model-for-Visual-Navigation/01_overview.md) | 2023 / CoRL | `UNREAD` | `FULL_TEXT_CHECKED` |
 | NEXT | [GOAT: GO to Any Thing](../2024/RSS/2024_RSS_GOAT-GO-to-Any-Thing/01_overview.md) | 2024 / RSS | `UNREAD` | `FULL_TEXT_CHECKED` |
+| NEXT | [Habitat 2.0: Training Home Assistants to Rearrange their Habitat](../2021/NeurIPS/2021_NeurIPS_Habitat-2.0-Training-Home-Assistants-to-Rearrange-their-Ha/01_overview.md) | 2021 / NeurIPS | `UNREAD` | `FULL_TEXT_CHECKED` |
+| NEXT | [MoManipVLA: Transferring Vision-language-action Models for General Mobile Manipulation](../2025/CVPR/2025_CVPR_MoManipVLA-Transferring-Vision-language-action-Models-for/01_overview.md) | 2025 / CVPR | `UNREAD` | `ABSTRACT_CHECKED` |
+| NEXT | [WholeBodyVLA: Towards Unified Latent VLA for Whole-body Loco-manipulation Control](../2026/ICLR/2026_ICLR_WholeBodyVLA-Towards-Unified-Latent-VLA-for-Whole-body-Loc/01_overview.md) | 2026 / ICLR | `UNREAD` | `ABSTRACT_CHECKED` |
 
 <!-- READING_QUEUE:END -->
 
-## 2026-09-02 Curation Update
+## Historical curation — 2026-09-02
+
+아래는 해당 날짜의 변경 이력이다. 현재 membership과 수량은 위 generated queue를 따른다.
 
 `AMO`, `MOSART`, `HOMIE`, `Flying Hand`, `SPIN`, `WoCoCo`를 `NEXT`에 반영했다. 이 논문들은 humanoid를 별도 taxonomy로 만들지 않고 whole-body control, contact switching, mobile/loco-manipulation, aerial manipulation의 실제 execution interface로 비교한다.
 
@@ -127,10 +120,19 @@ Humanoid를 별도 taxonomy로 분리하지 않고, control·adaptation·imitati
 | [Mobile ALOHA](../2024/CoRL/2024_CoRL_Mobile-ALOHA-Learning-Bimanual-Mobile-Manipulation-using-L/01_overview.md) → [RoboPanoptes](../2025/RSS/2025_RSS_RoboPanoptes-The-All-Seeing-Robot-with-Whole-body-Dexterit/01_overview.md) → humanoid loco-manipulation | whole-body teleoperation과 mobile bimanual data에서 distributed whole-body perception 및 body-contact manipulation으로 확장된다. | base motion, arm action, distributed vision의 서로 다른 bandwidth를 하나의 policy가 안정적으로 다루는가 |
 | locomotion/manipulation benchmark → [HumanoidBench](../2024/RSS/2024_RSS_HumanoidBench-Simulated-Humanoid-Benchmark-for-Whole-Body/01_overview.md) → real-world whole-body systems | 개별 motor skill을 넘어 locomotion과 manipulation을 한 embodiment에서 비교할 공통 평가로 이동한다. | simulator 순위가 hardware durability, fall severity, recovery와 일치하는가 |
 
+## 2026-10-23 근거 통합
+
+아래는 2026-10-22까지의 registry/source 감사와 후보 검토를 연결한 연구자 해석이다. 새 정독·효과 검증·직접 citation 관계의 확인을 뜻하지 않는다. Paper별 본문 확인 범위는 overview 및 연결된 dossier를 따른다.
+
+| 비교 축 | 등록된 선행 | 현재 남길 구분 |
+|---|---|---|
+| Attachment와 이동 중 제어 | [Geometric Fabrics](../2025/RA-L/2025_RA-L_Globally-Guided-Geometric-Fabrics-for-Reactive-Mobile-Mani/01_overview.md) (2025 RA-L); [WBAG](../2026/arXiv/2026_arXiv_WBAG-A-Whole-Body-and-Attached-Geometry-Safety-Framework-f/01_overview.md) (2026 arXiv) | 이동체·팔·부착 물체의 제약을 VLA의 고수준 명령과 연결한다. Attached geometry 안전성을 명령 생성 능력과 분리한다. |
+
 ## Open Questions
 
-- Locomotion과 manipulation의 서로 다른 bandwidth를 어떻게 하나의 policy/control stack에서 다루는가?
-- Visual policy의 latency와 state-estimation error가 balance에 미치는 영향을 어떻게 평가할 것인가?
-- Human motion prior가 contact feasibility와 task success를 해치지 않도록 어떻게 제약할 것인가?
-- Motion-tracking scale이 증가할수록 rare fall, actuator saturation과 recovery onset을 어떤 event-level metric으로 남길 것인가?
-- HOVER/SONIC류 저수준 controller 위에 VLA를 얹을 때 command rate, termination과 unsafe-command rejection contract는 무엇인가?
+현재 후보 판정은 [주제별 요약](../work/research_candidates/summaries/README.md)을 따른다. 아래 질문은 `CURATION-HYPOTHESIS`이며 재개 승인이 아니다.
+
+| 질문 | 구별할 예측 | 최소 대조·중단 조건 | 근거/판정 |
+|---|---|---|---|
+| VLA→저수준 command | 고정 low-level controller에서 command rate·delay·unsafe-command rejection이 base 안정성과 arm success를 어떻게 바꾸는가? | HOVER/SONIC류 controller의 입력 단위·termination·queue를 기록한다. Controller 교체 효과를 VLA 개선으로 귀속하지 않는다. | 기존 track 비교의 연구자 질문; native 효과 미검증 |
+| Whole-body contact | Human motion prior와 큰 tracking corpus가 task 성공·contact feasibility를 유지하면서 rare failure를 줄이는가? | Fall·actuator saturation·recovery onset의 event 분모를 남긴다. Tracking score와 manipulation 성공을 따로 평가한다. | 기존 track 비교의 연구자 질문; native 효과 미검증 |

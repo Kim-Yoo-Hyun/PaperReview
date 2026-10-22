@@ -1,0 +1,136 @@
+{
+  "checked_on": "2026-10-21",
+  "kind": "C2_FIRST_PASS_GATE_AUDIT",
+  "decision": "NO_GO_CURRENT_DESIGN",
+  "base_image": {
+    "tag": "python:3.10-slim-bookworm",
+    "id": "sha256:5be5aaecb962a41567bc8041f1e9e3432cb085b037fe057f9a562630b2e4b370",
+    "repo_digests": [
+      "python@sha256:5be5aaecb962a41567bc8041f1e9e3432cb085b037fe057f9a562630b2e4b370"
+    ],
+    "architecture": "arm64"
+  },
+  "container": {
+    "name": "/c2-firstpass-20261021",
+    "id": "a0c9f5869a3ed3465ed2fcc1af8b8c1d1111d2d7c57053bff7e589d3e2315014",
+    "created": "2026-10-21T03:54:13.32884671Z",
+    "image_id": "sha256:5be5aaecb962a41567bc8041f1e9e3432cb085b037fe057f9a562630b2e4b370",
+    "cpus": 4.0,
+    "memory_bytes": 4294967296,
+    "mount_readonly": true
+  },
+  "docker_server": {
+    "version": "28.3.3",
+    "architecture": "aarch64",
+    "memory_bytes": 8218034176,
+    "runtimes": [
+      "io.containerd.runc.v2",
+      "runc"
+    ]
+  },
+  "dependencies_installed_in_container_only": {
+    "numpy": "1.26.4",
+    "h5py": "3.15.1",
+    "pillow": "11.3.0"
+  },
+  "provisioning_note": "Initial h5py==3.11.0 attempted a source build and failed without pkg-config/HDF5 build dependencies; binary h5py==3.15.1 succeeded. No simulator version was changed or executed.",
+  "gpu_allocation_probe": {
+    "command": [
+      "docker",
+      "run",
+      "--rm",
+      "--name",
+      "c2-firstpass-gpu-check",
+      "--label",
+      "paperreview.task=c2-firstpass-20261021",
+      "--gpus",
+      "all",
+      "python:3.10-slim-bookworm",
+      "python",
+      "-c",
+      "print(\"GPU allocation accepted\")"
+    ],
+    "returncode": 125,
+    "stderr": "could not select device driver \"\" with capabilities: [[gpu]]"
+  },
+  "execution_order": [
+    "prepare_audit.py (pinned source fetches were initially performed interactively; script subsequently ran to record their hashes)",
+    "audit_payloads.py",
+    "analyze_evidence.py",
+    "probe_runtime.py (independent runtime gate)"
+  ],
+  "scope": {
+    "episode_inventory": 400,
+    "training_instruction_files": 200,
+    "hdf5_and_planner_pairs": 12,
+    "training_route_rechecks": 50,
+    "native_policy_rollouts": 0,
+    "policy_training_runs": 0,
+    "policy_success_rate": null,
+    "rl_vs_sft_effect": null
+  },
+  "authored_script_sha256": {
+    "analyze_evidence.py": "1d038538ed927410c72d17ff70937beecffc30b98f28d5a720ba4133f05e7b02",
+    "prepare_audit.py": "b4c7ebcda5a8e88cbd12b337ae45847617c857e2faba9fb9a6e8a7d33faff9aa",
+    "probe_runtime.py": "bbb4a27b15a447a0eb64e2a0655c191bcc048367bf8ef885d3bcf24479093126",
+    "audit_payloads.py": "713ac735b749eaaa9e0ec3dd86f9d9c960407cf9096664b9999061d0d5a8a620"
+  },
+  "evidence_sha256": {
+    "download_manifest.json": "c3a0f9e74d61ae274da90321abfedfec167eaa5bfdaf1a9462e5f35a88de57ea",
+    "source_manifest.json": "6bb03348341b1be80a3edf5b08d5c0e7b03ea943119972f3c573861f172e3308",
+    "episode_manifest.json": "b051ed7c3a13cab4dcd231ac9f01702e520bd7e1a51a3b5ec1ac5bb94557816b",
+    "first_pass_analysis.json": "b0acb2d1e4ba21c2695382142c224fb7b12a83807adb488b8fe108cf003e0cdc",
+    "task_metadata.json": "e3e31fa4a054e45a86960a0c499f3a2da71962f6545b94a9d0f46a4967f9dcfc",
+    "payload_audit.json": "036c6632d47fbf5b916ae1eb9bbc670cd4303c7a11a558593482370183ab9653",
+    "runtime_probe.json": "ea904da2d90c0125f12725b9bac381eb9230b31de15e27a5171c7423a83ff17a",
+    "validation_report.json": "cb9443fb2caad86b2793891e5f4b5255211cfe1fa1caec323370ef05d6f26d2b",
+    "audit_execution.json": "049f576fccfe10ff23aa2ddfb96af866a222445545bd17877dcd07cfe1470718",
+    "instruction_audit.json": "e5732f2f5160760901f7a388d25f7a2312e8d64ea41c472f6cb2ab1d5e33e7b3"
+  },
+  "cleanup": {
+    "status": "complete",
+    "task_container": "c2-firstpass-20261021",
+    "task_image": "python:3.10-slim-bookworm",
+    "task_volumes_created": 0,
+    "builds_performed": 0,
+    "preserve_existing_volume": "minikube",
+    "task_container_removed": true,
+    "task_image_removed": true,
+    "internal_dataset_source_package_cache_removed": true,
+    "remaining_containers": [],
+    "remaining_images": [],
+    "remaining_volumes": [
+      "minikube"
+    ],
+    "docker_disk_summary": [
+      {
+        "Active": "0",
+        "Reclaimable": "0B",
+        "Size": "0B",
+        "TotalCount": "0",
+        "Type": "Images"
+      },
+      {
+        "Active": "0",
+        "Reclaimable": "0B",
+        "Size": "0B",
+        "TotalCount": "0",
+        "Type": "Containers"
+      },
+      {
+        "Active": "0",
+        "Reclaimable": "2.228GB (100%)",
+        "Size": "2.228GB",
+        "TotalCount": "1",
+        "Type": "Local Volumes"
+      },
+      {
+        "Active": "0",
+        "Reclaimable": "0B",
+        "Size": "0B",
+        "TotalCount": "0",
+        "Type": "Build Cache"
+      }
+    ]
+  }
+}

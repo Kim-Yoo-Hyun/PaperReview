@@ -1,9 +1,10 @@
 # Reading Status Guide
 
-- Updated: 2026-09-04 KST
+- Updated: 2026-10-21 KST
 
 - Canonical tracker: [READING_STATUS.csv](./READING_STATUS.csv)
-- Scope: CORE 77편 + NEXT 234편 = 311편
+- Scope: CORE 47편 + NEXT 275편 = 322편
+- Inactive history: [READING_STATUS_HISTORY.csv](./READING_STATUS_HISTORY.csv), 현재 47편. Active queue의 분모에 포함하지 않는다.
 - PDF 보유 여부는 읽기 우선순위, 상태 전환, 완료 판단에 사용하지 않는다.
 
 ## Status
@@ -25,7 +26,7 @@
 | Evidence level | Meaning | 허용되는 사용 |
 |---|---|---|
 | `CURATION_ONLY` | metadata, 공식 abstract/project cue 또는 읽기 전 구조화만 있음 | 읽기 순서와 검증 질문 수립 |
-| `ABSTRACT_CHECKED` | 공식 abstract/proceedings의 claim 범위를 사람이 확인함 | abstract가 직접 지지하는 문제·기여만 인용 |
+| `ABSTRACT_CHECKED` | 공식 abstract/proceedings 또는 저자 project의 claim 범위를 확인함; source와 검토일 기록 | 해당 source가 직접 지지하는 문제·기여만 인용 |
 | `FULL_TEXT_CHECKED` | method, experiment, limitation과 source location을 확인함 | comparison matrix와 gap evidence 갱신 |
 | `EXPERIMENT_CHECKED` | 코드 실행 또는 핵심 실험 재현 근거가 있음 | 재현 조건 안에서 empirical claim 사용 |
 
@@ -51,9 +52,13 @@
 
 ## Update Workflow
 
-1. 읽기 시작 시 `status=SKIMMED`, `started_on`을 기록한다.
+1. 읽기 시작 시 `started_on`을 기록한다. 문제·기여·주요 그림과 실험 구조를 파악하고 최소 분석 필드를 채운 뒤 `status=SKIMMED`, `evidence_level=ABSTRACT_CHECKED` 이상으로 바꾼다.
 2. 정독 후 분석 필드를 채우고 `status=READ`로 바꾼다.
 3. 해당 [synthesis](../synthesis/README.md) 문서의 comparison matrix와 `Open Questions` evidence를 갱신한다.
 4. 다른 논문과의 차이가 명시되면 `status=SYNTHESIZED`와 `completed_on`을 기록한다.
 5. 사용한 근거 수준에 맞춰 `evidence_level`을 올리고 full-text claim에는 page/section/table 위치를 남긴다.
-6. 분류표 재생성 시 `python3 work/scripts/build_reading_tiers.py`를 실행한다. 경로가 같은 논문의 사용자 입력 필드는 보존된다.
+6. 분류표 재생성 시 `python3 work/scripts/build_reading_tiers.py`를 실행한다. 경로가 같은 논문의 사용자 입력 필드는 보존된다. 집중 읽기에서 빠진 행은 history CSV로 이동하며 재승격 시 복원한다. `status`, `evidence_level`, 날짜·분석·개인 메모는 tier 변경으로 초기화하지 않는다. 전체 registry index는 active/history 양쪽의 읽기 기록을 보여주며, 통계는 두 분모를 분리한다.
+
+2026-10-19 재분류 후 기존 READ 5편은 active 1편과 history 4편으로 보존되어 있다. 이는 읽기 완료의 취소가 아니라 현재 우선순위의 변경이다.
+
+자동 작성 노트의 source 검토 수준과 사용자의 읽기 이력은 다르다. 현재 active 322편 중 321편은 UNREAD, 1편은 READ다. 2026-10-19·21·22 신규 intensive 52편은 UNREAD + ABSTRACT_CHECKED이며 D1 합성 diagnostic은 논문의 REPRODUCED 근거가 아니다. FULL_TEXT_CHECKED 노트가 있어도 사용자의 정독 근거가 없으면 UNREAD를 유지한다.

@@ -854,9 +854,9 @@ def retained_admission_reason(tier: str, item: dict, track: str) -> str:
 
 def tier_reason(tier: str, track: str) -> str:
     if tier == "CORE":
-        return f"Common foundation and prerequisite for the {track or 'robotics'} spine."
+        return f"Reusable foundation, policy interface, or evaluation anchor for VLA-based manipulation/navigation in {track or 'robotics'}; RL is optional."
     if tier == "NEXT":
-        return f"Specialized or frontier extension selected after CORE for the {track or 'robotics'} branch."
+        return f"Directly relevant specialization/frontier after its local prerequisites in {track or 'robotics'}."
     if tier == "REFERENCE":
         return "Important on-demand reference, but not required in the current intensive sequence."
     return "Historical or adjacent material retained for search; outside the current intensive scope."
@@ -1236,9 +1236,90 @@ def reconcile(
     return result
 
 
+def reconcile_priorities(apply: bool) -> dict:
+    """Sync a tier review without re-running body-evidence/profile extraction."""
+    try:
+        from build_reading_tiers import (
+            FOCUS_PRIORITY_RATIONALES, FOCUS_REFERENCE_RATIONALES,
+            FOCUS_REVIEW_DATE, FOCUS_REVIEW_DATES, FOCUS_SOURCE_CHECKS,
+        )
+    except ModuleNotFoundError:
+        from .build_reading_tiers import (
+            FOCUS_PRIORITY_RATIONALES, FOCUS_REFERENCE_RATIONALES,
+            FOCUS_REVIEW_DATE, FOCUS_REVIEW_DATES, FOCUS_SOURCE_CHECKS,
+        )
+    papers = load_json(MANIFEST)
+    with TIERS.open(newline="", encoding="utf-8") as handle:
+        tier_rows = {row["paper_id"]: row for row in csv.DictReader(handle)}
+    changed_papers = []
+    note_updates = {}
+    for paper in papers:
+        before = json.dumps(paper, ensure_ascii=False, sort_keys=True)
+        row = tier_rows[paper["paper_id"]]
+        tier = row["tier"]
+        curation = paper.setdefault("curation", {})
+        reason = (
+            FOCUS_PRIORITY_RATIONALES.get(paper["paper_id"])
+            if tier in {"CORE", "NEXT"}
+            else FOCUS_REFERENCE_RATIONALES.get(paper["paper_id"])
+        )
+        if reason:
+            same_reason = curation.get("tier_reason") == reason
+            previous_date = curation.get("rationale_reviewed_on") if same_reason else None
+            review_date = FOCUS_REVIEW_DATES.get(
+                paper["paper_id"], previous_date or FOCUS_REVIEW_DATE
+            )
+            previous_basis = curation.get("rationale_basis") if same_reason else None
+            curation.update({
+                "admission_reason": reason, "tier_reason": reason,
+                "rationale_status": "recorded",
+                "rationale_basis": previous_basis or "vla_rl_manipulation_navigation_focus_review",
+                "rationale_reviewed_on": review_date,
+            })
+            checked_source = FOCUS_SOURCE_CHECKS.get(paper["paper_id"])
+            if checked_source:
+                curation["priority_source_check"] = {
+                    "url": checked_source, "checked_on": review_date,
+                    "scope": "official_abstract_or_project; priority review only",
+                }
+        elif tier in {"CORE", "NEXT"}:
+            curation["tier_reason"] = tier_reason(tier, row["track"])
+        curation["scope_status"] = {
+            "CORE": "active", "NEXT": "active", "REFERENCE": "adjacent", "ARCHIVE": "archive",
+        }[tier]
+        if tier in {"CORE", "NEXT"}:
+            paper["primary_track"] = row["primary_track"]
+        # Only metadata headers change. Body analysis, source evidence, and
+        # tracker inputs remain untouched by this operation.
+        for name in ("01_overview.md", "02_problem.md", "03_method.md", "04_evaluation.md", "05_insights.md"):
+            path = ROOT / paper["folder"] / name
+            original = path.read_text(encoding="utf-8")
+            updated = re.sub(r"(?m)^- Tier: .*?$", f"- Tier: {tier}", original)
+            if paper.get("primary_track"):
+                updated = re.sub(r"(?m)^- Primary track: .*?$", f"- Primary track: {paper['primary_track']}", updated)
+            if updated != original:
+                note_updates[path] = updated
+        if json.dumps(paper, ensure_ascii=False, sort_keys=True) != before:
+            changed_papers.append(paper["paper_id"])
+    if apply:
+        MANIFEST.write_text(json.dumps(papers, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+        for path, document in note_updates.items():
+            path.write_text(document, encoding="utf-8")
+        meta = load_json(META)
+        meta["manifest_sha256"] = sha256(MANIFEST)
+        meta["priority_reviewed_on"] = max([FOCUS_REVIEW_DATE, *FOCUS_REVIEW_DATES.values()])
+        META.write_text(json.dumps(meta, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    return {
+        "mode": "apply" if apply else "dry-run", "scope": "priorities_only",
+        "papers_changed": len(changed_papers), "note_headers_changed": len(note_updates),
+        "reading_status_changed": False, "source_evidence_changed": False,
+    }
+
+
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--apply", action="store_true", help="write reconciled manifest, tracker evidence, and review metadata")
+    parser.add_argument("--priorities-only", action="store_true", help="sync priority rationale, primary track, and note metadata without changing reading/source evidence")
     parser.add_argument(
         "--backfill-priority-rationales",
         action="store_true",
@@ -1250,6 +1331,11 @@ def main() -> None:
         help="record paper-specific retention rationales for pending REFERENCE/ARCHIVE entries",
     )
     args = parser.parse_args()
+    if args.priorities_only:
+        if args.backfill_priority_rationales or args.backfill_reference_archive_rationales:
+            parser.error("--priorities-only cannot be combined with backfill flags")
+        print(json.dumps(reconcile_priorities(args.apply), ensure_ascii=False, indent=2))
+        return
     print(
         json.dumps(
             reconcile(

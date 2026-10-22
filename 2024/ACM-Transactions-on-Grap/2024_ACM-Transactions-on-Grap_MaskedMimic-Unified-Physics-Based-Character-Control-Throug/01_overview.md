@@ -9,7 +9,7 @@
 - Year/Venue: 2024 / ACM Transactions on Graphics
 - Authors: not duplicated here when not verified in the registry source
 - Primary track: Locomotion, whole-body, mobile manipulation, and humanoids
-- Tier: NEXT
+- Tier: REFERENCE
 - Tags: Robotics, humanoid, whole-body control, motion imitation, NVIDIA
 - Official paper: https://research.nvidia.com/labs/par/maskedmimic/
 - Full-text retrieval: https://research.nvidia.com/labs/par/maskedmimic/

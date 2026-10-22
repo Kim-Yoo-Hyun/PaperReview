@@ -69,7 +69,7 @@ Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 �
 | Dimension | Body-grounded record | Boundary | Anchor |
 |---|---|---|---|
 | Evaluation type | EMPIRICAL / SOURCE-REPORTED EVALUATION | do not infer unreported downstream behavior | p. 8 (4 Experiments), p. 8 (4 Experiments) |
-| Embodiment/environment | We further tested on 7 challenging scenes from the low-res set of the BlendedMVS dataset [48](CC-4 License). | hardware/simulator version and reset protocol | p. 7 (4 Experiments), p. 7 (4 Experiments) |
+| Embodiment/environment | We further tested on 7 challenging scenes from the low-res set of the BlendedMVS dataset [48] (CC-4 License). | hardware/simulator version and reset protocol | p. 7 (4 Experiments), p. 7 (4 Experiments) |
 | Dataset/benchmark | (b) COLMAP𝑡𝑟𝑖𝑚= 10 (c) COLMAP𝑡𝑟𝑖𝑚= 7 (a) Ours Reference Image Figure 8: Comparison on scenes with thin structure objects. | role, split, size and leakage | p. 7 (4 Experiments), p. 7 (4 Experiments), p. 10 (4 Experiments), p. 10 (4 Experiments) |
 | Metric | We measure the reconstruction quality with the Chamfer distances in the same way as UNISURF [31] and IDR [49] and report the scores in Table 1. | definition, denominator, direction and uncertainty | p. 8 (4 Experiments), p. 9 (4 Experiments), p. 8 (4 Experiments) |
 | Baseline/ablation | (1) The state-of-the-art surface rendering approach - IDR [49]: IDR can reconstruct surface with high quality but requires foreground masks as supervision; Since IDR has demonstrated superior quality compared to another surface ... | fair input/data/compute/action matching | p. 7 (4 Experiments), p. 8 (4 Experiments), p. 2 (Figure/Table caption) |

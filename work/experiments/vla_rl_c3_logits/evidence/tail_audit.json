@@ -1,0 +1,694 @@
+{
+  "status": "post-hoc exploratory; prompted by concentration in slot 7",
+  "bundled_source_url": "https://huggingface.co/Haozhan72/Openvla-oft-SFT-libero10-trajall/resolve/97d6e58bc5fbc402e85bab382e4206bb8e5f0db0/modeling_prismatic.py",
+  "bundled_source_sha256": "538c9ab87b470aa0c4266a28c387c3803c3f358fa189e905c3ee41ed6e8726a6",
+  "source_comparison": {
+    "_prepare_input_for_action_prediction": {
+      "same_ast": true,
+      "diff": []
+    },
+    "_prepare_labels_for_action_prediction": {
+      "same_ast": true,
+      "diff": []
+    },
+    "_verl_discrete_prediction": {
+      "same_ast": true,
+      "diff": []
+    },
+    "generate_action_verl": {
+      "same_ast": false,
+      "diff": [
+        "--- \n",
+        "+++ \n",
+        "@@ -1,4 +1,4 @@\n",
+        "-def generate_action_verl(self, input_ids: Optional[torch.LongTensor]=None, unnorm_key: Optional[str]=None, proprio=None, proprio_projector=None, action_head=None, noisy_action_projector=None, use_film: bool=False, **kwargs: str) -> np.ndarray:",
+        "+def generate_action_verl(self, input_ids: Optional[torch.LongTensor]=None, unnorm_key: Optional[str]=None, proprio=None, action_head=None, noisy_action_projector=None, use_film: bool=False, **kwargs: str) -> np.ndarray:",
+        "     \"\"\"Predict actions from input sequence, with options for different prediction methods.",
+        " ",
+        "         Args:",
+        "@@ -36,10 +36,10 @@\n",
+        "     all_actions_mask = self._process_action_masks(labels)",
+        "     language_embeddings = input_embeddings[~all_actions_mask].reshape(input_embeddings.shape[0], -1, input_embeddings.shape[2])",
+        "     projected_patch_embeddings = self._process_vision_features(pixel_values, language_embeddings, use_film)",
+        "-    use_proprio = proprio_projector is not None and proprio is not None",
+        "+    use_proprio = self.proprio_projector is not None and proprio is not None",
+        "     if use_proprio:",
+        "         proprio = torch.Tensor(proprio).to(projected_patch_embeddings.device, dtype=projected_patch_embeddings.dtype)",
+        "-        projected_patch_embeddings = self._process_proprio_features(projected_patch_embeddings, proprio, proprio_projector)",
+        "+        projected_patch_embeddings = self._process_proprio_features(projected_patch_embeddings, proprio, self.proprio_projector)",
+        "     use_diffusion = noisy_action_projector is not None and hasattr(action_head, 'noise_scheduler')",
+        "     NUM_PATCHES = self.vision_backbone.get_num_patches() * self.vision_backbone.get_num_images_in_input()",
+        "     if use_proprio:"
+      ]
+    },
+    "forward": {
+      "same_ast": false,
+      "diff": [
+        "--- \n",
+        "+++ \n",
+        "@@ -1,4 +1,4 @@\n",
+        "-def forward(self, input_ids: Optional[torch.LongTensor]=None, pixel_values=None, attention_mask=None, proprio=None, proprio_projector=None, action_head=None, noisy_action_projector=None, use_film: bool=False, **kwargs: str):",
+        "+def forward(self, input_ids: Optional[torch.LongTensor]=None, pixel_values=None, attention_mask=None, proprio=None, action_head=None, noisy_action_projector=None, use_film: bool=False, **kwargs: str):",
+        "     \"\"\"Predict actions from input sequence, with options for different prediction methods.",
+        " ",
+        "         Args:",
+        "@@ -46,10 +46,10 @@\n",
+        "     else:",
+        "         patch_features = self.vision_backbone(pixel_values)",
+        "     projected_patch_embeddings = self.projector(patch_features)",
+        "-    use_proprio = proprio_projector is not None and proprio is not None",
+        "+    use_proprio = self.proprio_projector is not None and proprio is not None",
+        "     if use_proprio:",
+        "         proprio = torch.Tensor(proprio).to(projected_patch_embeddings.device, dtype=projected_patch_embeddings.dtype)",
+        "-        projected_patch_embeddings = self._process_proprio_features(projected_patch_embeddings, proprio, proprio_projector)",
+        "+        projected_patch_embeddings = self._process_proprio_features(projected_patch_embeddings, proprio, self.proprio_projector)",
+        "     use_diffusion = noisy_action_projector is not None and hasattr(action_head, 'noise_scheduler')",
+        "     NUM_PATCHES = self.vision_backbone.get_num_patches() * self.vision_backbone.get_num_images_in_input()",
+        "     if use_proprio:"
+      ]
+    }
+  },
+  "diff_review": "forward/generate differ only in optional proprio projector plumbing; disabled in this recipe. SFT label/padding provenance remains unverified.",
+  "temperatures": {
+    "1.0": {
+      "alias_threshold_counts": {
+        "1e-06": 11,
+        "0.001": 5,
+        "0.01": 4,
+        "0.1": 2
+      },
+      "top_rows": [
+        {
+          "observation": 1,
+          "episode": 0,
+          "task_id": 0,
+          "slot": 7,
+          "class_mass": [
+            0.00013647802075344753,
+            0.999863521979247
+          ],
+          "top_token_ids": [
+            31744,
+            31885
+          ],
+          "conditional_top1": [
+            0.9995114465880296,
+            0.2363620846681676
+          ],
+          "conditional_effective_aliases": [
+            1.005149497961024,
+            8.03644680174277
+          ],
+          "alias_mass": 0.7635337622173786,
+          "token_entropy": 2.0850543619561037,
+          "class_entropy": 0.0013510339685449747,
+          "within_class_entropy": 2.0837033279875574,
+          "raw_score_trace": 0.8428964444714272,
+          "class_score_trace": 0.0001577702051228911,
+          "score_trace_reduction_percent": 99.98128237387193,
+          "head_raw_score_trace": 7496.042045008144,
+          "head_class_score_trace": 1.4030811243869719,
+          "counterfactual_token_loss": 3.414779028957122e-05,
+          "counterfactual_class_loss": 4.417581751792188e-16,
+          "counterfactual_weighted_native_clip_fraction": 0.23225571991297686,
+          "counterfactual_ratio_outside_bounds_mass": 0.9998635558516011,
+          "counterfactual_class_clip_fraction": 0.0,
+          "counterfactual_token_kl": 0.2067339126099955
+        },
+        {
+          "observation": 7,
+          "episode": 18,
+          "task_id": 0,
+          "slot": 7,
+          "class_mass": [
+            7.983392865424985e-10,
+            0.9999999992016603
+          ],
+          "top_token_ids": [
+            31744,
+            31883
+          ],
+          "conditional_top1": [
+            0.8765213359476862,
+            0.8286300030181932
+          ],
+          "conditional_effective_aliases": [
+            1.9617914094830293,
+            1.8462758807335105
+          ],
+          "alias_mass": 0.17136999694357355,
+          "token_entropy": 0.6131705903365378,
+          "class_entropy": 1.7522340242524133e-08,
+          "within_class_entropy": 0.6131705728141975,
+          "raw_score_trace": 0.2978769631041096,
+          "class_score_trace": 1.1759034089514637e-09,
+          "score_trace_reduction_percent": 99.99999960523856,
+          "head_raw_score_trace": 2417.0059881542315,
+          "head_class_score_trace": 9.541407805790304e-06,
+          "counterfactual_token_loss": 3.4007538399837893e-12,
+          "counterfactual_class_loss": -4.4111647141426214e-16,
+          "counterfactual_weighted_native_clip_fraction": 0.001577222920895606,
+          "counterfactual_ratio_outside_bounds_mass": 0.0015772229705754677,
+          "counterfactual_class_clip_fraction": 0.0,
+          "counterfactual_token_kl": 0.002534014431462028
+        },
+        {
+          "observation": 9,
+          "episode": 1,
+          "task_id": 1,
+          "slot": 7,
+          "class_mass": [
+            5.219869115154962e-07,
+            0.999999478013089
+          ],
+          "top_token_ids": [
+            31744,
+            31883
+          ],
+          "conditional_top1": [
+            0.8795325404724119,
+            0.9291337361198962
+          ],
+          "conditional_effective_aliases": [
+            1.7778850713170815,
+            1.3352886869465872
+          ],
+          "alias_mass": 0.07086628977127822,
+          "token_entropy": 0.2891557356641187,
+          "class_entropy": 8.07285281636644e-06,
+          "within_class_entropy": 0.28914766281130233,
+          "raw_score_trace": 0.13248982192212144,
+          "class_score_trace": 8.586211945965954e-07,
+          "score_trace_reduction_percent": 99.99935193422247,
+          "head_raw_score_trace": 1237.7446656617938,
+          "head_class_score_trace": 0.008021399591440223,
+          "counterfactual_token_loss": 6.4753804782408475e-09,
+          "counterfactual_class_loss": 4.870466975283012e-16,
+          "counterfactual_weighted_native_clip_fraction": 0.004655038581041946,
+          "counterfactual_ratio_outside_bounds_mass": 0.004655044904142664,
+          "counterfactual_class_clip_fraction": 0.0,
+          "counterfactual_token_kl": 0.007415258038429806
+        },
+        {
+          "observation": 15,
+          "episode": 4,
+          "task_id": 1,
+          "slot": 7,
+          "class_mass": [
+            8.241571807571484e-07,
+            0.9999991758428187
+          ],
+          "top_token_ids": [
+            31744,
+            31878
+          ],
+          "conditional_top1": [
+            0.9876339694585736,
+            0.978638536358185
+          ],
+          "conditional_effective_aliases": [
+            1.1001601707309798,
+            1.1333348620774366
+          ],
+          "alias_mass": 0.02136145622816465,
+          "token_entropy": 0.12517683705644206,
+          "class_entropy": 1.236969613911894e-05,
+          "within_class_entropy": 0.1251644673603029,
+          "raw_score_trace": 0.042044324529996534,
+          "class_score_trace": 1.5934236816194904e-06,
+          "score_trace_reduction_percent": 99.99621013371143,
+          "head_raw_score_trace": 303.733151550818,
+          "head_class_score_trace": 0.011511080317837014,
+          "counterfactual_token_loss": -5.212243280575021e-16,
+          "counterfactual_class_loss": -5.212252363018147e-16,
+          "counterfactual_weighted_native_clip_fraction": 0.0,
+          "counterfactual_ratio_outside_bounds_mass": 0.0006669426366900785,
+          "counterfactual_class_clip_fraction": 0.0,
+          "counterfactual_token_kl": 0.0004242518643836176
+        },
+        {
+          "observation": 5,
+          "episode": 18,
+          "task_id": 0,
+          "slot": 7,
+          "class_mass": [
+            2.355876284189356e-08,
+            0.9999999764412371
+          ],
+          "top_token_ids": [
+            31751,
+            31872
+          ],
+          "conditional_top1": [
+            0.6866582665331,
+            0.9985045965156899
+          ],
+          "conditional_effective_aliases": [
+            3.494472168689661,
+            1.0132985747615055
+          ],
+          "alias_mass": 0.0014954108310241611,
+          "token_entropy": 0.013211391444004192,
+          "class_entropy": 4.373394073611216e-07,
+          "within_class_entropy": 0.013210954104596792,
+          "raw_score_trace": 0.002987683598695726,
+          "class_score_trace": 3.5075115830117555e-08,
+          "score_trace_reduction_percent": 99.99882600969376,
+          "head_raw_score_trace": 23.574099306141903,
+          "head_class_score_trace": 0.00027675764063992217,
+          "counterfactual_token_loss": 2.679919409765693e-09,
+          "counterfactual_class_loss": -9.857409782015207e-17,
+          "counterfactual_weighted_native_clip_fraction": 5.3774596910031346e-09,
+          "counterfactual_ratio_outside_bounds_mass": 0.0003342025255208264,
+          "counterfactual_class_clip_fraction": 0.0,
+          "counterfactual_token_kl": 0.00021261937455018968
+        },
+        {
+          "observation": 3,
+          "episode": 0,
+          "task_id": 0,
+          "slot": 7,
+          "class_mass": [
+            3.912623751585711e-05,
+            0.9999608737624843
+          ],
+          "top_token_ids": [
+            31777,
+            31872
+          ],
+          "conditional_top1": [
+            0.5531754238476909,
+            0.9998776209568101
+          ],
+          "conditional_effective_aliases": [
+            2.4857413371875317,
+            1.001515293011137
+          ],
+          "alias_mass": 0.00013985681945299336,
+          "token_entropy": 0.0019859206800009015,
+          "class_entropy": 0.0004362065948454292,
+          "within_class_entropy": 0.0015497140851554396,
+          "raw_score_trace": 0.0003229722088012899,
+          "class_score_trace": 5.769629411999118e-05,
+          "score_trace_reduction_percent": 82.13583319316211,
+          "head_raw_score_trace": 2.427899741327306,
+          "head_class_score_trace": 0.4337240596934954,
+          "counterfactual_token_loss": 4.056696921124478e-07,
+          "counterfactual_class_loss": 1.829455640797728e-16,
+          "counterfactual_weighted_native_clip_fraction": 7.424828079431325e-07,
+          "counterfactual_ratio_outside_bounds_mass": 6.30733108212788e-05,
+          "counterfactual_class_clip_fraction": 0.0,
+          "counterfactual_token_kl": 4.012809848164149e-05
+        },
+        {
+          "observation": 13,
+          "episode": 4,
+          "task_id": 1,
+          "slot": 7,
+          "class_mass": [
+            4.632326841187276e-11,
+            0.9999999999536765
+          ],
+          "top_token_ids": [
+            31744,
+            31872
+          ],
+          "conditional_top1": [
+            0.8296903281276983,
+            0.9999647506026349
+          ],
+          "conditional_effective_aliases": [
+            1.7808939211235826,
+            1.0004041719339942
+          ],
+          "alias_mass": 3.524940525291092e-05,
+          "token_entropy": 0.0004040914538375343,
+          "class_entropy": 1.1486031235181211e-09,
+          "within_class_entropy": 0.00040409030523444315,
+          "raw_score_trace": 7.049650202686853e-05,
+          "class_score_trace": 7.92072268093038e-11,
+          "score_trace_reduction_percent": 99.99988764374893,
+          "head_raw_score_trace": 0.5895253783786548,
+          "head_class_score_trace": 6.623686142226161e-07,
+          "counterfactual_token_loss": -2.3217909951674216e-16,
+          "counterfactual_class_loss": -2.3217909956218054e-16,
+          "counterfactual_weighted_native_clip_fraction": 0.0,
+          "counterfactual_ratio_outside_bounds_mass": 3.4835890291710485e-05,
+          "counterfactual_class_clip_fraction": 0.0,
+          "counterfactual_token_kl": 2.2165540020030763e-05
+        },
+        {
+          "observation": 7,
+          "episode": 18,
+          "task_id": 0,
+          "slot": 0,
+          "class_mass": [
+            7.443707584213216e-10,
+            0.9999999992556292
+          ],
+          "top_token_ids": [
+            31744,
+            31872
+          ],
+          "conditional_top1": [
+            0.9319041347769669,
+            0.9999849164154814
+          ],
+          "conditional_effective_aliases": [
+            1.4996056082984768,
+            1.0001834306806094
+          ],
+          "alias_mass": 1.508363519573266e-05,
+          "token_entropy": 0.0001834305506572384,
+          "class_entropy": 1.6389914080375627e-08,
+          "within_class_entropy": 0.00018341416074314348,
+          "raw_score_trace": 3.0168206448771127e-05,
+          "class_score_trace": 1.3913526737211306e-09,
+          "score_trace_reduction_percent": 99.99538801659926,
+          "head_raw_score_trace": 0.28484373024623416,
+          "head_class_score_trace": 1.3136945557031681e-05,
+          "counterfactual_token_loss": -2.880989754284717e-17,
+          "counterfactual_class_loss": -2.880989793705043e-17,
+          "counterfactual_weighted_native_clip_fraction": 0.0,
+          "counterfactual_ratio_outside_bounds_mass": 2.2493584722234282e-08,
+          "counterfactual_class_clip_fraction": 0.0,
+          "counterfactual_token_kl": 1.4338880812895427e-08
+        }
+      ],
+      "last_slot_share_of_removed_head_score_trace": 0.9999517898724132,
+      "first_seven_slots_mean_alias_mass": 2.5343812029978395e-07,
+      "last_slot_mean_alias_mass": 0.06430035458480242,
+      "whole_chunk_reduction_percent_if_only_first_seven_grippers_marginalized": 2.137977006382029e-05
+    },
+    "1.6": {
+      "alias_threshold_counts": {
+        "1e-06": 40,
+        "0.001": 8,
+        "0.01": 6,
+        "0.1": 4
+      },
+      "top_rows": [
+        {
+          "observation": 1,
+          "episode": 0,
+          "task_id": 0,
+          "slot": 7,
+          "class_mass": [
+            0.0016547961375967648,
+            0.9983452038624034
+          ],
+          "top_token_ids": [
+            31744,
+            31885
+          ],
+          "conditional_top1": [
+            0.9803643671081015,
+            0.17179827966105224
+          ],
+          "conditional_effective_aliases": [
+            1.1599311916912056,
+            11.854684543974146
+          ],
+          "alias_mass": 0.8268637083004488,
+          "token_entropy": 2.4811276325161127,
+          "class_entropy": 0.01225086884804986,
+          "within_class_entropy": 2.468876763668063,
+          "raw_score_trace": 0.8916755788030692,
+          "class_score_trace": 0.001767438440042813,
+          "score_trace_reduction_percent": 99.8017845860021,
+          "head_raw_score_trace": 3097.595459130602,
+          "head_class_score_trace": 6.139911663296354,
+          "counterfactual_token_loss": 0.00041464739318595794,
+          "counterfactual_class_loss": 2.059984127722459e-16,
+          "counterfactual_weighted_native_clip_fraction": 0.2711051626210208,
+          "counterfactual_ratio_outside_bounds_mass": 0.9983634237884087,
+          "counterfactual_class_clip_fraction": 0.0,
+          "counterfactual_token_kl": 0.2191109675515478
+        },
+        {
+          "observation": 7,
+          "episode": 18,
+          "task_id": 0,
+          "slot": 7,
+          "class_mass": [
+            2.503029377273686e-06,
+            0.9999974969706232
+          ],
+          "top_token_ids": [
+            31744,
+            31883
+          ],
+          "conditional_top1": [
+            0.5354119203595004,
+            0.6281114821732664
+          ],
+          "conditional_effective_aliases": [
+            8.946035891837527,
+            3.461450723088687
+          ],
+          "alias_mass": 0.3718887498564599,
+          "token_entropy": 1.241724949128776,
+          "class_entropy": 3.4787121200841814e-05,
+          "within_class_entropy": 1.2416901620075753,
+          "raw_score_trace": 0.5604597758077294,
+          "class_score_trace": 1.8533914711599664e-06,
+          "score_trace_reduction_percent": 99.99966930874415,
+          "head_raw_score_trace": 1776.4185202121098,
+          "head_class_score_trace": 0.005874460713664522,
+          "counterfactual_token_loss": 5.511350186011257e-07,
+          "counterfactual_class_loss": 5.078534266028926e-16,
+          "counterfactual_weighted_native_clip_fraction": 0.027178568676379154,
+          "counterfactual_ratio_outside_bounds_mass": 0.027179120657186973,
+          "counterfactual_class_clip_fraction": 0.0,
+          "counterfactual_token_kl": 0.040702275733901144
+        },
+        {
+          "observation": 9,
+          "episode": 1,
+          "task_id": 1,
+          "slot": 7,
+          "class_mass": [
+            0.00014725260885346009,
+            0.9998527473911466
+          ],
+          "top_token_ids": [
+            31744,
+            31883
+          ],
+          "conditional_top1": [
+            0.600122199305745,
+            0.7721838140001871
+          ],
+          "conditional_effective_aliases": [
+            5.743362797544772,
+            2.460425559907032
+          ],
+          "alias_mass": 0.22784152252146028,
+          "token_entropy": 0.9019056591027893,
+          "class_entropy": 0.0014465046954738182,
+          "within_class_entropy": 0.9004591544073155,
+          "raw_score_trace": 0.38184622888521613,
+          "class_score_trace": 0.0001470598007565591,
+          "score_trace_reduction_percent": 99.96148716691901,
+          "head_raw_score_trace": 1393.4682810942963,
+          "head_class_score_trace": 0.5366641131341708,
+          "counterfactual_token_loss": 2.3536055320690086e-05,
+          "counterfactual_class_loss": 6.1257422745431e-17,
+          "counterfactual_weighted_native_clip_fraction": 0.05903863593494072,
+          "counterfactual_ratio_outside_bounds_mass": 0.059054059792742065,
+          "counterfactual_class_clip_fraction": 0.0,
+          "counterfactual_token_kl": 0.08108609745970059
+        },
+        {
+          "observation": 15,
+          "episode": 4,
+          "task_id": 1,
+          "slot": 7,
+          "class_mass": [
+            0.000161186111557383,
+            0.9998388138884423
+          ],
+          "top_token_ids": [
+            31744,
+            31878
+          ],
+          "conditional_top1": [
+            0.8506479786142069,
+            0.8652815261749568
+          ],
+          "conditional_effective_aliases": [
+            2.3676036738738637,
+            1.9003141192796174
+          ],
+          "alias_mass": 0.1347208325496727,
+          "token_entropy": 0.6436234402000791,
+          "class_entropy": 0.0015688035164681934,
+          "within_class_entropy": 0.6420546366836111,
+          "raw_score_trace": 0.24651982049485496,
+          "class_score_trace": 0.00023836762102013477,
+          "score_trace_reduction_percent": 99.90330691441295,
+          "head_raw_score_trace": 695.6594583854719,
+          "head_class_score_trace": 0.6726545954910802,
+          "counterfactual_token_loss": -3.042677871809009e-16,
+          "counterfactual_class_loss": -3.044829335495035e-16,
+          "counterfactual_weighted_native_clip_fraction": 0.0,
+          "counterfactual_ratio_outside_bounds_mass": 0.017139819728866273,
+          "counterfactual_class_clip_fraction": 0.0,
+          "counterfactual_token_kl": 0.010830935461473594
+        },
+        {
+          "observation": 5,
+          "episode": 18,
+          "task_id": 0,
+          "slot": 7,
+          "class_mass": [
+            3.3147372627054924e-05,
+            0.999966852627373
+          ],
+          "top_token_ids": [
+            31751,
+            31872
+          ],
+          "conditional_top1": [
+            0.39459577805337115,
+            0.9675012144757019
+          ],
+          "conditional_effective_aliases": [
+            10.773105184082358,
+            1.2402933671546617
+          ],
+          "alias_mass": 0.0325177758342792,
+          "token_entropy": 0.2157946398448376,
+          "class_entropy": 0.00037504695950206854,
+          "within_class_entropy": 0.21541959288533552,
+          "raw_score_trace": 0.06379692301427409,
+          "class_score_trace": 3.741826390766508e-05,
+          "score_trace_reduction_percent": 99.94134785481849,
+          "head_raw_score_trace": 196.63475127380806,
+          "head_class_score_trace": 0.11533049979440538,
+          "counterfactual_token_loss": 6.0833108090672e-06,
+          "counterfactual_class_loss": 3.469446951953614e-18,
+          "counterfactual_weighted_native_clip_fraction": 1.4023547610852925e-05,
+          "counterfactual_ratio_outside_bounds_mass": 0.011688599528883046,
+          "counterfactual_class_clip_fraction": 0.0,
+          "counterfactual_token_kl": 0.00738465379957981
+        },
+        {
+          "observation": 3,
+          "episode": 0,
+          "task_id": 0,
+          "slot": 7,
+          "class_mass": [
+            0.0028546722906161288,
+            0.9971453277093845
+          ],
+          "top_token_ids": [
+            31777,
+            31872
+          ],
+          "conditional_top1": [
+            0.4201490830976411,
+            0.9898639958711083
+          ],
+          "conditional_effective_aliases": [
+            6.058744314146187,
+            1.0933144965742025
+          ],
+          "alias_mass": 0.011762353503936602,
+          "token_entropy": 0.11367747062700015,
+          "class_entropy": 0.019575542785391472,
+          "within_class_entropy": 0.09410192784160869,
+          "raw_score_trace": 0.02574583070606668,
+          "class_score_trace": 0.0036466247778040232,
+          "score_trace_reduction_percent": 85.8360570321596,
+          "head_raw_score_trace": 75.60187021334009,
+          "head_class_score_trace": 10.7082057796382,
+          "counterfactual_token_loss": 0.0001845797686338191,
+          "counterfactual_class_loss": 5.932754287840677e-16,
+          "counterfactual_weighted_native_clip_fraction": 0.00035295845959839206,
+          "counterfactual_ratio_outside_bounds_mass": 0.005736973944461091,
+          "counterfactual_class_clip_fraction": 0.0,
+          "counterfactual_token_kl": 0.0036291161912449005
+        },
+        {
+          "observation": 13,
+          "episode": 4,
+          "task_id": 1,
+          "slot": 7,
+          "class_mass": [
+            5.000415687367542e-07,
+            0.9999994999584311
+          ],
+          "top_token_ids": [
+            31744,
+            31872
+          ],
+          "conditional_top1": [
+            0.6174435756831761,
+            0.9980378704480274
+          ],
+          "conditional_effective_aliases": [
+            4.150499427409957,
+            1.0158241422356442
+          ],
+          "alias_mass": 0.0019623198649410434,
+          "token_entropy": 0.015708704578599922,
+          "class_entropy": 7.754931849280182e-06,
+          "within_class_entropy": 0.015700949646750686,
+          "raw_score_trace": 0.003918797852563656,
+          "class_score_trace": 7.118923782364386e-07,
+          "score_trace_reduction_percent": 99.98183390914713,
+          "head_raw_score_trace": 12.801116015067182,
+          "head_class_score_trace": 0.0023254623654764568,
+          "counterfactual_token_loss": 2.4596694847235038e-08,
+          "counterfactual_class_loss": -1.9260057500816935e-16,
+          "counterfactual_weighted_native_clip_fraction": 4.428261029689802e-07,
+          "counterfactual_ratio_outside_bounds_mass": 0.0018102425686991337,
+          "counterfactual_class_clip_fraction": 0.0,
+          "counterfactual_token_kl": 0.001150675235384617
+        },
+        {
+          "observation": 7,
+          "episode": 18,
+          "task_id": 0,
+          "slot": 0,
+          "class_mass": [
+            2.9207669559364743e-06,
+            0.9999970792330438
+          ],
+          "top_token_ids": [
+            31744,
+            31872
+          ],
+          "conditional_top1": [
+            0.6453160563351106,
+            0.9989441604250039
+          ],
+          "conditional_effective_aliases": [
+            5.830582648417667,
+            1.0088473773517557
+          ],
+          "alias_mass": 0.0010568724402771287,
+          "token_entropy": 0.008853734596286526,
+          "class_entropy": 4.0142036334227574e-05,
+          "within_class_entropy": 0.008813592559952343,
+          "raw_score_trace": 0.0021154633931454265,
+          "class_score_trace": 4.1581900855211825e-06,
+          "score_trace_reduction_percent": 99.80343833417328,
+          "head_raw_score_trace": 7.802301389789214,
+          "head_class_score_trace": 0.015336333584591291,
+          "counterfactual_token_loss": 4.6832599631033026e-07,
+          "counterfactual_class_loss": -2.4612384579133984e-16,
+          "counterfactual_weighted_native_clip_fraction": 2.24915943469264e-06,
+          "counterfactual_ratio_outside_bounds_mass": 3.194144969669609e-05,
+          "counterfactual_class_clip_fraction": 0.0,
+          "counterfactual_token_kl": 1.9066724139687192e-05
+        }
+      ],
+      "last_slot_share_of_removed_head_score_trace": 0.9962235336883912,
+      "first_seven_slots_mean_alias_mass": 3.258544155986051e-05,
+      "last_slot_mean_alias_mass": 0.10053475613815616,
+      "whole_chunk_reduction_percent_if_only_first_seven_grippers_marginalized": 0.0018740068240072148
+    }
+  }
+}

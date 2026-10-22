@@ -9,7 +9,7 @@
 - Year/Venue: 2020 / NeurIPS
 - Authors: not duplicated here when not verified in the registry source
 - Primary track: RL, IL, offline learning, and robot data
-- Tier: NEXT
+- Tier: CORE
 - Tags: Robotics, offline reinforcement learning, conservative learning, Q-learning
 - Official paper: https://proceedings.neurips.cc/paper/2020/hash/0d2b2061826a5df3221116a5085a6052-Abstract.html
 - Full-text retrieval: https://arxiv.org/pdf/2006.04779

@@ -9,7 +9,7 @@
 - Year/Venue: 2013 / T-RO
 - Authors: not duplicated here when not verified in the registry source
 - Primary track: Planning and control
-- Tier: CORE
+- Tier: REFERENCE
 - Tags: Robotics, whole-body control, rigid contact, hierarchical control
 - Official paper: https://hal.science/lirmm-00831097
 - Full-text retrieval: https://hal-lirmm.ccsd.cnrs.fr/file/index/docid/831097/filename/2013_itro_saab-Dynamic_Whole_Body_Motion_Generation.pdf

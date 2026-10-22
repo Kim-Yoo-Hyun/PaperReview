@@ -1,8 +1,8 @@
 # PaperReview — Robotics-first Literature System
 
-- Snapshot verified: 2026-09-04 KST
+- Snapshot verified: 2026-10-23 KST
 
-`PaperReview`는 3D vision, robotics, VLA를 함께 다루되 **Robotics를 주 연구축**으로 삼는 장기 문헌 연구 저장소다. 논문을 모으는 데서 끝내지 않고, foundation → 최신 방법 → failure mode → 검증 가능한 연구 질문으로 연결한다.
+`PaperReview`는 **VLA를 기반으로 다양한 로봇의 manipulation·navigation을 다루는 연구**를 중심으로 삼는 장기 문헌 연구 저장소다. RL은 선택 사항이다. 현재 [E2 buildup](./work/research_candidates/2026-10-22_e2_buildup/README.md)은 시간 표현·관측 갱신·controller 효과를 대조해 **일반 신규 방법 NO-GO·진단 REVISE/HOLD**로 판단했다. 주력 연구 채택 근거·native 효과는 미확보이며 E1 보류도 유지한다. 3D vision은 행동을 개선하는 표현과 상태 추정으로 연결한다. 논문을 모으는 데서 끝내지 않고, foundation → 최신 방법 → failure mode → 검증 가능한 연구 질문으로 연결한다.
 
 핵심 폐루프는 다음과 같다.
 
@@ -33,45 +33,48 @@ Registry의 수집·정리 범위는 다음과 같다.
 
 | 목적 | 문서 |
 |---|---|
-| 전체 논문 registry | [PAPER.md](./PAPER.md) |
-| machine-readable identity/provenance | [work/sources/papers.json](./work/sources/papers.json), [registry.schema.json](./work/sources/registry.schema.json), [registry_meta.json](./work/sources/registry_meta.json) |
-| 검색·필터용 registry view | [REGISTRY_INDEX.csv](./research/REGISTRY_INDEX.csv), [REGISTRY_STATS.md](./research/REGISTRY_STATS.md) |
-| evaluation·code/resource view | [resources.json](./work/sources/resources.json) |
-| note artifact audit | [audit report](./work/sources/note_artifact_audit_2026-09-02.json), [audit script](./work/scripts/audit_note_artifacts.py) |
-| 우선순위·읽기 순서·CORE/NEXT | [research/READING_PLAN.md](./research/READING_PLAN.md) |
-| 전체 tier assignment | [research/READING_TIERS.csv](./research/READING_TIERS.csv) |
-| 정독 진행 상태 | [research/READING_STATUS.csv](./research/READING_STATUS.csv), [research/READING_STATUS.md](./research/READING_STATUS.md) |
-| 계보·트랙별 synthesis | [synthesis/README.md](./synthesis/README.md) |
-| 최신 변경 기록 | [work/update/UPDATES_2026-09-04.md](./work/update/UPDATES_2026-09-04.md) |
+| 지금 할 일·직전 완료·보류 사유 | [TODO](./TODO.md) |
+| 전체 논문·검색·통계 | [PAPER](./PAPER.md), [registry index](./research/REGISTRY_INDEX.csv), [stats](./research/REGISTRY_STATS.md) |
+| 읽기·상태·buildup 운영 | [research 안내](./research/README.md), [READING_PLAN](./research/READING_PLAN.md) |
+| 논문 간 비교·검증 가능한 질문 | [7개 synthesis와 교차 분류](./synthesis/README.md) |
+| 후보별 결과·GPU 후속·한계 | [16개 주제별 요약](./work/research_candidates/summaries/README.md) |
+| Clone 후 Docker 실행·연구 재개 조건 | [실행 안내](./work/experiments/portable/README.md), [실험 근거 index](./work/experiments/README.md) |
+| Canonical identity·source·resource | [papers.json](./work/sources/papers.json), [schema](./work/sources/registry.schema.json), [resources](./work/sources/resources.json) |
+| Registry 운영·최근 정리 | [work 안내](./work/README.md), [2026-10-23 정리/검증](./work/update/WORKSPACE_UPGRADE_2026-10-23.md) |
+| 직전 47편 등록·공식 발표 확인 | [등록 report](./work/update/REGISTRY_ROLLUP_2026-10-22.md) |
 
 ## 현재 snapshot
 
 | 항목 | 수치 |
 |---|---:|
-| 전체 registry | **950편** |
-| CORE / NEXT | **77 / 234편** |
-| REFERENCE / ARCHIVE | **397 / 242편** |
-| intensive reading set | **311편** |
-| paper당 표준 Markdown note | **4,750개** |
-| `01_overview`–`04_evaluation` PDF-body review | **950 / 950편** |
-| `05_insights` PDF-body review | **950 / 950편** |
+| 전체 registry | **1,037편** |
+| CORE / NEXT | **47 / 275편** |
+| REFERENCE / ARCHIVE | **473 / 242편** |
+| intensive reading set | **322편** |
+| inactive reading history | **47편** |
+| 기록된 READ | **총 5편: active 1 / history 4** |
+| 표준 Markdown note 총수 | **1,037편 × 5개 = 5,185개** |
+| `01_overview`–`04_evaluation` 기존 PDF-body review | **950 / 1,037편** |
+| `05_insights` 기존 PDF-body review | **950 / 1,037편** |
+| 신규 abstract/project 기반 note | **87편 / 435개** |
 | PDF-body extraction audit | **949 high / 1 medium** |
 | `05_insights` extraction audit | **634 high / 0 failed** |
-| structured evaluation profile | **950 / 950편** |
-| reproducibility profile | **950 / 950편** |
-| lineage coverage profile | **950 / 950편** |
-| curation rationale | **950 recorded / 0 pending** |
-| legacy note artifact audit | **4,750 scanned / 0 high-confidence findings** |
+| structured evaluation profile | **1,037 / 1,037편** |
+| reproducibility profile | **1,037 / 1,037편** |
+| lineage coverage profile | **1,037 / 1,037편** |
+| curation rationale | **1,037 recorded / 0 pending** |
+| legacy note artifact audit (기존 cohort) | **4,750 scanned / 0 high-confidence findings** |
+| Markdown 정비 audit (아이디어 가이드 추가 전 snapshot) | **4,896개 문서 / 2026-10-19** |
 | local PDF cache | 0개 |
 | canonical category | 23개 |
 | 대상 연도 | 1960–2026 |
-| 2024–2026 논문 | 678편 |
-| 2025–2026 논문 | 524편 |
-| 2026 논문 | 181편 |
+| 2024–2026 논문 | 757편 |
+| 2025–2026 논문 | 602편 |
+| 2026 논문 | 240편 |
 
 `CORE/NEXT`는 논문 수를 맞추기 위한 quota가 아니다. 연구의 prerequisite와 현재 연구축에 따라 중요도가 바뀔 수 있다. PDF 보유 여부는 tier, 우선순위, 연구 relevance의 기준이 아니다.
 
-전체 950편의 `01_overview.md`–`04_evaluation.md`는 2026-09-03 기준 검증된 full-text source에서 갱신했고, 이어서 기존 Abstract/Curation-only 634편의 `05_insights.md`도 PDF 본문 기반으로 보강했다. 추가로 CORE/NEXT 311편은 2026-09-03 semantic QA에서 contribution·method·evaluation·failure·research question을 본문 anchor와 대조했으며, 309편은 PDF text/OCR로 교차검토하고 GR00T N1.5/N1.6은 PDF 부재 source-boundary로 유지했다. 01–04 중 64편은 스캔·인코딩 문제로 OCR fallback을 사용했고, GR00T N1.5/N1.6은 저자 제공 publication PDF를 확인하지 못해 공식 NVIDIA technical page를 작업용 PDF snapshot으로 렌더링한 예외다. 해당 provenance boundary와 각 pass의 범위는 [전체 full-text audit manifest](./work/sources/fulltext_all_review_manifest_2026-09-02.json), [insights full-text audit manifest](./work/sources/fulltext_insights_review_manifest_2026-09-03.json), [CORE/NEXT semantic QA report](./work/sources/core_next_semantic_qa_2026-09-03.json)에 기록되어 있다. `05_insights.md`는 모두 `FULL_TEXT_CHECKED`이며, 별도 artifact audit에서 명백한 metadata/extraction 잔여물도 제거했다.
+기존 950편의 `01_overview.md`–`04_evaluation.md`는 2026-09-03 기준 검증된 full-text source에서 갱신했고, 이어서 기존 Abstract/Curation-only 634편의 `05_insights.md`도 PDF 본문 기반으로 보강했다. 추가로 당시 CORE/NEXT 311편은 2026-09-03 semantic QA에서 contribution·method·evaluation·failure·research question을 본문 anchor와 대조했으며, 309편은 PDF text/OCR로 교차검토하고 GR00T N1.5/N1.6은 PDF 부재 source-boundary로 유지했다. 01–04 중 64편은 스캔·인코딩 문제로 OCR fallback을 사용했고, GR00T N1.5/N1.6은 저자 제공 publication PDF를 확인하지 못해 공식 NVIDIA technical page를 작업용 PDF snapshot으로 렌더링한 예외다. 해당 provenance boundary와 각 pass의 범위는 [전체 full-text audit manifest](./work/sources/fulltext_all_review_manifest_2026-09-02.json), [insights full-text audit manifest](./work/sources/fulltext_insights_review_manifest_2026-09-03.json), [CORE/NEXT semantic QA report](./work/sources/core_next_semantic_qa_2026-09-03.json)에 기록되어 있다. 당시 950편의 `05_insights.md`는 `FULL_TEXT_CHECKED`이며, 별도 artifact audit에서 명백한 metadata/extraction 잔여물도 제거했다. 2026-10-19·21·22 신규 등록 총 87편은 이 과거 full-text cohort에 포함되지 않으며, 5개 노트 모두 `ABSTRACT_CHECKED`다. Structured profile의 존재는 상세 실험 검증을 의미하지 않는다.
 
 ## 어떤 종류의 논문이 있는가
 
@@ -79,20 +82,22 @@ Registry의 수집·정리 범위는 다음과 같다.
 
 | 트랙 | CORE | NEXT | 주로 다루는 질문 |
 |---|---:|---:|---|
-| Planning, decision, control foundations | 16 | 13 | belief/state, motion planning, task-and-motion planning, feasibility, whole-body constraint |
-| RL, IL, offline learning, robot data | 20 | 45 | expert distribution, policy/value learning, offline conservatism, data coverage |
-| Manipulation, contact, tactile, dexterity | 10 | 45 | grasp/contact dynamics, force/tactile feedback, deformable and dexterous interaction |
-| VLA, cross-embodiment, long horizon | 11 | 56 | generalist policy, action interface, memory, skill composition, feedback |
-| World models, safety, uncertainty, recovery | 5 | 30 | runtime monitoring, calibration, safety filter, failure diagnosis, recovery |
-| Locomotion, whole-body, mobile manipulation, humanoid | 8 | 26 | balance, contact switching, loco-manipulation, sim-to-real, humanoid execution |
-| Robotics-enabling 3D perception | 7 | 19 | geometry, SLAM, spatial memory, active perception, 3D-to-control utility |
-| **합계** | **77** | **234** | **Robotics-first intensive reading** |
+| Planning and control | 4 | 16 | POMDP, impedance, NoMaD·NavDP navigation interface |
+| RL, IL, offline learning, robot data | 20 | 55 | DPPO·FQL, chunked RL, DSRL, real-robot learning |
+| Manipulation, contact, tactile, dexterity | 2 | 49 | ACT·DP3, Tac2Real과 contact/force policy 확장 |
+| VLA and generalist policies | 13 | 80 | OFT·ConRFT, SimpleVLA-RL·RLux-VLA, streaming/social navigation |
+| World models, safety, recovery | 2 | 41 | VLAW·VLA-MBPO·RISE·PointWorld, damage-aware evaluation |
+| Locomotion, whole-body, mobile manipulation | 2 | 12 | ViNT·Mobile ALOHA와 navigation/manipulation 연결 |
+| Robotics-enabling 3D perception | 4 | 22 | ConceptFusion·RVT·VLFM·VLN-CE·LoGoPlanner, action-relevant state |
+| **합계** | **47** | **275** | **VLA 기반 manipulation/navigation** |
 
 전체 registry의 canonical category는 더 세분화되어 VLA/generalist, 3D vision-language, scene representation, embodied navigation, robot data, world models/safety, locomotion, manipulation/contact, planning/control foundation 등 23개로 관리된다. 자세한 분류는 [PAPER.md](./PAPER.md)와 [READING_TIERS.csv](./research/READING_TIERS.csv)에서 검색한다.
 
 2026-09-01 3D-heavy `REFERENCE` audit에서는 실제 manipulation/navigation/control에 연결된 16편을 `NEXT`로 승격했다. FastSLAM·ORB-SLAM을 포함한 state-estimation foundation은 `REFERENCE`에 유지했고, 순수 Gaussian Splatting/NeRF reconstruction·scene rendering 계열 15편은 registry에서 삭제하지 않고 `ARCHIVE`로 분리했다. 세부 근거와 대상 목록은 [2026-09-01 update log](./work/update/UPDATES_2026-09-01.md)에 기록했다.
 
-2026-09-02 robotics-first 재분류에서는 direct planning/control 2편을 `ARCHIVE→NEXT`, SLAM·world-model·generic 3D foundation 4편을 `ARCHIVE→REFERENCE`, generic 3D foundation 3편을 `NEXT→REFERENCE`로 조정하고, 최근 manipulation/VLA/navigation/world-model/whole-body 논문 26편을 `REFERENCE→NEXT`로 승격했다. 이어 robotics missing-link 26편을 신규 등록(20편 `NEXT`, 6편 `REFERENCE`)하고, ACT·NoMaD·PointFlowMatch·CALVIN·LIBERO·FurnitureBench·MimicPlay·LIBERO-Safety를 `NEXT`로 보강했다. 현재 snapshot은 **CORE 77 / NEXT 234 / REFERENCE 397 / ARCHIVE 242**이며, intensive reading set은 **311편**이다. 세부 대상과 provenance는 [최신 update log](./work/update/UPDATES_2026-09-04.md)에 기록했다.
+2026-09-02 robotics-first 재분류에서는 direct planning/control 2편을 `ARCHIVE→NEXT`, SLAM·world-model·generic 3D foundation 4편을 `ARCHIVE→REFERENCE`, generic 3D foundation 3편을 `NEXT→REFERENCE`로 조정하고, 최근 manipulation/VLA/navigation/world-model/whole-body 논문 26편을 `REFERENCE→NEXT`로 승격했다. 이어 robotics missing-link 26편을 신규 등록(20편 `NEXT`, 6편 `REFERENCE`)하고, ACT·NoMaD·PointFlowMatch·CALVIN·LIBERO·FurnitureBench·MimicPlay·LIBERO-Safety를 `NEXT`로 보강했다. 당시 snapshot은 **CORE 77 / NEXT 234 / REFERENCE 397 / ARCHIVE 242**였다.
+
+2026-10-22에는 후보 검토에 사용한 미등록 baseline·frontier 47편을 추가했다. 현재 **1,037편 / CORE 47 · NEXT 275 · REFERENCE 473 · ARCHIVE 242**, 집중 읽기 **322편**이다. 새 47편은 표준 5개 note를 `ABSTRACT_CHECKED`로 등록했고 NEXT 18편의 사용자 상태는 `UNREAD`다. 기존 990편과 사용자 읽기 이력은 보존했다. [등록 범위·발표 상태·검증](./work/update/REGISTRY_ROLLUP_2026-10-22.md).
 
 ### 논문이 맡는 역할
 
@@ -107,7 +112,7 @@ Registry의 수집·정리 범위는 다음과 같다.
 
 ## 읽는 방법
 
-장기 정독 순서와 프로젝트별 우선순위는 [READING_PLAN.md](./research/READING_PLAN.md)에서 dependency 단위로 관리한다. CORE/NEXT 전체 계보를 먼저 확인하고, foundation → learning/data → physical interaction → generalist policy → safety/recovery → embodiment → action-relevant 3D 순서로 필요한 가지를 확장한다.
+읽기 우선순위는 [READING_PLAN.md](./research/READING_PLAN.md)에서 관리한다. VLA+RL manipulation, action representation, navigation/mobile manipulation, action-relevant 3D, evaluation/recovery의 dependency를 따라 읽는다. 해당 branch의 CORE 선행 개념을 이해하면 NEXT를 병행하며, CORE 전체 완독을 시작 조건으로 두지 않는다. 오래된 논문도 최신 방법의 objective나 interface를 이해하는 데 필요하면 유지한다.
 
 논문을 읽을 때는 다음 네 가지를 모두 기록한다.
 
@@ -144,11 +149,11 @@ Registry의 수집·정리 범위는 다음과 같다.
 1. `PAPER.md`, `READING_TIERS.csv`, `work/sources/papers.json`에서 제목·subtitle·conference version과 DOI/arXiv/OpenReview identifier 중복을 확인한다.
 2. 공식 proceedings, publisher, OpenReview, CVF/PMLR/RSS page 또는 저자 project page에서 title·year·venue/status를 확인한다.
 3. primary category, tags, `foundation / method / system / benchmark_or_dataset` 역할, 필요하면 coarse facet과 registry에 추가하는 이유를 기록한다.
-4. `register_papers.py`로 stable `paper_id`, structured source/publication/provenance field와 5개 표준 note를 만든다. human-readable metadata는 `01_overview.md`에 한 번만 기록하고, 나머지 note는 canonical metadata pointer만 둔다. 원문을 아직 확인하지 않은 내용은 `CURATION_ONLY` 또는 `UNVERIFIED`로 둔다.
+4. `register_papers.py`로 stable `paper_id`, structured source/publication/provenance field와 5개 표준 note를 만든다. human-readable metadata는 `01_overview.md`에 한 번만 기록하고, 나머지 note는 canonical metadata pointer를 둔다. Abstract/project 내용을 확인했으면 `ABSTRACT_CHECKED`, 단순 후보 정리면 `CURATION_ONLY`로 기록한다. `UNVERIFIED`·`확인 필요`는 개별 claim의 설명이며 tracker evidence enum이 아니다.
 5. CORE/NEXT를 바꿀 때는 CSV를 직접 수정하지 않고 `build_reading_tiers.py`의 canonical group을 수정한다.
-6. `normalize_taxonomy.py`, `build_reading_tiers.py`, `reconcile_registry.py --apply`, `build_registry_views.py --apply`, `audit_repository.py`, `git diff --check`를 순서대로 실행한다. schema migration은 `migrate_registry_schema.py --apply`를 사용한다. `build_registry_catalogs.py`는 기존 benchmark/metric cue를 갱신할 때만 실행한다.
+6. `build_reading_tiers.py`, `reconcile_registry.py --priorities-only` dry-run과 `--apply`, `build_registry_views.py --apply`, `audit_repository.py`, `git diff --check`를 순서대로 실행한다. 등록기는 taxonomy를 적용하므로 전체 `normalize_taxonomy.py`는 taxonomy 변경 시에만 사용한다. Schema migration, 전체 evidence/profile reconciliation과 catalog 갱신은 [작업별 유지보수 절차](./work/README.md#safe-workflow)를 따른다.
 
-논문을 정독한 뒤에는 `05_insights.md`, `READING_STATUS.csv`, 해당 synthesis matrix를 함께 갱신한다. 개인 note의 해석과 paper가 직접 보고한 결과를 분리한다. 별도 research-gap/idea/project overlay는 현재 삭제 정책에 따라 활성 문서로 유지하지 않으며, 과거 판단은 `work/update/`의 historical log에서만 보존한다.
+논문을 정독한 뒤에는 `05_insights.md`, `READING_STATUS.csv`, 해당 synthesis matrix를 함께 갱신한다. 개인 note의 해석과 paper가 직접 보고한 결과를 분리한다. 별도 research-gap/idea/project overlay는 현재 삭제 정책에 따라 활성 문서로 유지하지 않는다. 과거 판단은 `work/update/`와 `research/projects/`의 명시적으로 폐기된 보존본에 남긴다.
 
 ## Curation and maintenance policy
 
@@ -157,21 +162,23 @@ Registry의 수집·정리 범위는 다음과 같다.
 - 최신 논문은 venue 이름보다 method novelty, closed-loop relevance, evaluation quality, open-question 연결을 우선한다.
 - Foundation, frontier, benchmark, dataset, safety/recovery, enabling perception을 서로 다른 역할로 구분한다.
 - 논문 수나 venue quota를 채우기 위해 약한 논문을 추가하지 않는다.
-- 공식 proceedings/project/abstract를 우선 사용하고, 불확실한 claim은 `CURATION_ONLY` 또는 `UNVERIFIED`로 표시한다.
+- 공식 proceedings/project/abstract를 우선 사용한다. 문서의 evidence level과 개별 claim의 `확인 필요` 표기를 구분하며, note의 source 검토를 사용자의 정독으로 간주하지 않는다.
 - 생성·검증 workflow는 [work/README.md](./work/README.md)에 있다.
 
 ```bash
 python3 work/scripts/audit_repository.py
 python3 work/scripts/register_papers.py --input /path/to/new_papers.json
 python3 work/scripts/register_papers.py --input /path/to/new_papers.json --apply
-python3 work/scripts/normalize_taxonomy.py
+python3 -m py_compile work/scripts/build_reading_tiers.py
 python3 work/scripts/build_reading_tiers.py
-python3 work/scripts/reconcile_registry.py --apply
+python3 work/scripts/reconcile_registry.py --priorities-only
+python3 work/scripts/reconcile_registry.py --priorities-only --apply
 python3 work/scripts/build_registry_views.py --apply
 python3 work/scripts/audit_repository.py
+git diff --check
 ```
 
-현재 snapshot의 상세 변경은 [work/update/UPDATES_2026-09-02.md](./work/update/UPDATES_2026-09-02.md), 운영 규칙은 [AGENTS.md](./AGENTS.md)에 기록한다.
+현재 snapshot의 상세 변경은 [최신 update log](./work/update/UPDATES_2026-10-19.md), 운영 규칙은 [AGENTS.md](./AGENTS.md)에 기록한다.
 
 ## 공개 registry 참고
 

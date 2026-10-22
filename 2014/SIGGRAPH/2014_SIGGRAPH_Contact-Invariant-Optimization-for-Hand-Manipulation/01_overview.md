@@ -9,7 +9,7 @@
 - Year/Venue: 2014 / SIGGRAPH
 - Authors: not duplicated here when not verified in the registry source
 - Primary track: Manipulation, contact, tactile, and dexterity
-- Tier: CORE
+- Tier: REFERENCE
 - Tags: Robotics, contact-rich manipulation, trajectory optimization, contact invariant
 - Official paper: https://homes.cs.washington.edu/~zoran/behavior-discovery.html
 - Full-text retrieval: https://homes.cs.washington.edu/~zoran/behavior-discovery.pdf

@@ -9,7 +9,7 @@
 - Year/Venue: 2017 / ICRA
 - Authors: not duplicated here when not verified in the registry source
 - Primary track: Planning and control
-- Tier: CORE
+- Tier: NEXT
 - Tags: Robotics, model predictive control, model-based RL, Planning
 - Official paper: https://ieeexplore.ieee.org/document/7989202/
 - Full-text retrieval: https://ieeexplore.ieee.org/document/7989202/

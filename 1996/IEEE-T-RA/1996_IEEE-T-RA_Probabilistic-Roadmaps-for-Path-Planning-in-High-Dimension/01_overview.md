@@ -9,7 +9,7 @@
 - Year/Venue: 1996 / IEEE T-RA
 - Authors: not duplicated here when not verified in the registry source
 - Primary track: Planning and control
-- Tier: CORE
+- Tier: REFERENCE
 - Tags: Robotics, motion planning, PRM, configuration space
 - Official paper: https://kavrakilab.rice.edu/publications/kavraki-svestka1996probabilistic-roadmaps-for.html
 - Full-text retrieval: https://kavrakilab.org/publications/kavraki-svestka1996probabilistic-roadmaps-for.pdf

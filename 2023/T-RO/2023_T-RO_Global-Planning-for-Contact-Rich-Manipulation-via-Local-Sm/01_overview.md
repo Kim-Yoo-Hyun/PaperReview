@@ -9,7 +9,7 @@
 - Year/Venue: 2023 / T-RO
 - Authors: not duplicated here when not verified in the registry source
 - Primary track: Manipulation, contact, tactile, and dexterity
-- Tier: CORE
+- Tier: REFERENCE
 - Tags: Robotics, contact-rich manipulation, Planning, quasi-dynamic model
 - Official paper: https://arxiv.org/abs/2206.10787
 - Full-text retrieval: https://arxiv.org/pdf/2206.10787

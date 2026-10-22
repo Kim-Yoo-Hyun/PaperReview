@@ -1,0 +1,142 @@
+{
+  "date": "2026-10-21",
+  "scope": "C4 closest-work buildup; selected method/evaluation sections, static public code, Docker metadata audit",
+  "registry_admission": false,
+  "user_reading_status_changed": false,
+  "candidate_effect_evidence": "CURATION-HYPOTHESIS",
+  "existing_sources_deepened": [
+    {
+      "source_id": "E01",
+      "title": "Robometer: Scaling General-Purpose Robotic Reward Models via Trajectory Comparisons",
+      "status": "RSS 2026",
+      "authority_url": "https://www.roboticsproceedings.org/rss22/p140.html",
+      "new_scope": "static reward/policy code and actual dataset metadata; no model inference"
+    },
+    {
+      "source_id": "E02",
+      "title": "RoboReward: General-Purpose Vision-Language Reward Models for Robotics",
+      "status": "arXiv; final acceptance unverified",
+      "authority_url": "https://arxiv.org/abs/2601.00675",
+      "new_scope": "all 54135 metadata rows; no human reannotation or video decoding"
+    },
+    {
+      "source_id": "E04",
+      "title": "PROGRESSOR: A Perceptually Guided Reward Estimator with Self-Supervised Online Refinement",
+      "status": "ICCV 2025",
+      "authority_url": "https://openaccess.thecvf.com/content/ICCV2025/html/Ayalew_PROGRESSOR_A_Perceptually_Guided_Reward_Estimator_with_Self-Supervised_Online_Refinement_ICCV_2025_paper.html",
+      "content_url": "https://arxiv.org/html/2411.17764v1",
+      "new_scope": "Sections 4.1-4.2, Algorithm 1, 5.1, 7.2 and pinned online_update code",
+      "caveat": "CVF PDF returned 403; method text read from preprint v1 and compared to public code, not asserted identical to final proceedings text"
+    },
+    {
+      "source_id": "E07",
+      "title": "When to Act, Ask, or Learn: Uncertainty-Aware Policy Steering",
+      "status": "RSS 2026",
+      "authority_url": "https://www.roboticsproceedings.org/rss22/p142.html",
+      "content_url": "https://arxiv.org/html/2602.22474v1",
+      "new_scope": "Sections III-V, Appendix A-F; README and policy wrapper; no full runtime reproduction"
+    },
+    {
+      "source_id": "E15",
+      "title": "Active reward learning and iterative trajectory improvement from comparative language feedback",
+      "status": "IJRR; online 2025, issue 2026",
+      "authority_url": "https://journals.sagepub.com/doi/abs/10.1177/02783649251394742",
+      "content_url": "https://liralab.usc.edu/comparative-language-feedback/static/pdfs/journal.pdf",
+      "new_scope": "Pages 4-8 and 10-12, query function and information gain source"
+    }
+  ],
+  "additional_sources": [
+    {
+      "source_id": "N01",
+      "title": "Active Reward Learning with a Novel Acquisition Function",
+      "year": 2015,
+      "status": "Autonomous Robots 39:389-405",
+      "authority_url": "https://link.springer.com/article/10.1007/s10514-015-9454-z",
+      "content_url": "https://www.ias.informatik.tu-darmstadt.de/uploads/Team/ChristianDaniel/ActiveRewardLearning.pdf",
+      "scope": "Publisher abstract and manuscript Sections 4/6 EPD passages",
+      "role": "foundation collision; not counted as a recent top-tier conference paper",
+      "registry_exact_normalized_title_matches": []
+    },
+    {
+      "source_id": "N02",
+      "title": "Learning Human Objectives by Evaluating Hypothetical Behavior",
+      "year": 2020,
+      "status": "ICML 2020",
+      "authority_url": "https://proceedings.mlr.press/v119/reddy20a.html",
+      "content_url": "https://proceedings.mlr.press/v119/reddy20a/reddy20a.pdf",
+      "scope": "Section 2 acquisition definitions, high-reward false-positive detection",
+      "alias": "ReQueST",
+      "registry_exact_normalized_title_matches": []
+    },
+    {
+      "source_id": "N03",
+      "title": "PEBBLE: Feedback-Efficient Interactive Reinforcement Learning via Relabeling Experience and Unsupervised Pre-training",
+      "year": 2021,
+      "status": "ICML 2021",
+      "authority_url": "https://proceedings.mlr.press/v139/lee21i.html",
+      "content_url": "https://proceedings.mlr.press/v139/lee21i/lee21i.pdf",
+      "scope": "Algorithm 2, replay relabeling, feedback sampling ablation",
+      "registry_exact_normalized_title_matches": []
+    },
+    {
+      "source_id": "N04",
+      "title": "Information Directed Reward Learning for Reinforcement Learning",
+      "year": 2021,
+      "status": "NeurIPS 2021",
+      "authority_url": "https://proceedings.neurips.cc/paper/2021/hash/1fa6269f58898f0e809575c9a48747ef-Abstract.html",
+      "content_url": "https://proceedings.neurips.cc/paper/2021/file/1fa6269f58898f0e809575c9a48747ef-Paper.pdf",
+      "scope": "Sections 3-7, Algorithm 1, candidate policy/query cost and deep RL",
+      "alias": "IDRL",
+      "registry_exact_normalized_title_matches": []
+    },
+    {
+      "source_id": "N05",
+      "title": "A Generalized Acquisition Function for Preference-based Reward Learning",
+      "year": 2024,
+      "status": "ICRA 2024 author-institution confirmed; IEEE page inaccessible in this audit",
+      "authority_url": "https://aima.eecs.berkeley.edu/~russell/publications.html",
+      "publisher_url": "https://doi.org/10.1109/ICRA57147.2024.10611472",
+      "content_url": "https://arxiv.org/html/2403.06003v1",
+      "scope": "Sections I, V-VI; behavior-equivalence acquisition",
+      "caveat": "Do not count as newly verified from readable official proceedings in this audit",
+      "registry_exact_normalized_title_matches": []
+    },
+    {
+      "source_id": "N06",
+      "title": "STAIR: Addressing Stage Misalignment through Temporal-Aligned Preference Reinforcement Learning",
+      "year": 2025,
+      "status": "NeurIPS 2025",
+      "authority_url": "https://proceedings.neurips.cc/paper_files/paper/2025/hash/07fbde96bee50f4e09303fd4f877c2f3-Abstract-Conference.html",
+      "content_url": "https://papers.neurips.cc/paper_files/paper/2025/file/07fbde96bee50f4e09303fd4f877c2f3-Paper-Conference.pdf",
+      "scope": "Official abstract and Sections 3-4; full theorem proof not audited",
+      "registry_exact_normalized_title_matches": []
+    },
+    {
+      "source_id": "N07",
+      "title": "When Self-Belief Misleads: Active Label Acquisition for Reinforcement Learning with Verifiable Rewards",
+      "year": 2026,
+      "status": "arXiv; acceptance unverified",
+      "authority_url": "https://arxiv.org/abs/2605.25864",
+      "content_url": "https://arxiv.org/html/2605.25864v1",
+      "scope": "Sections 4-5, Section 7 baselines; public code README only",
+      "alias": "CARE",
+      "caveat": "LLM RLVR result; no robotics result inferred, no GRPO theorem transferred to SAC",
+      "registry_exact_normalized_title_matches": []
+    }
+  ],
+  "search_families": [
+    "active reward learning policy divergence",
+    "information directed reward learning",
+    "high-reward audit reward hacking query",
+    "VLA active reward annotation 2026",
+    "active label correction advantage gap",
+    "temporal stage preference query"
+  ],
+  "limitations": [
+    "Targeted closest-work audit, not exhaustive absence proof",
+    "No registry or tier changes",
+    "No policy/reward inference or RL training",
+    "Static code read is not runtime verification"
+  ],
+  "dedup_scope": "Exact/distinctive title rg plus normalized title check; no admission; no exhaustive identifier migration audit required."
+}

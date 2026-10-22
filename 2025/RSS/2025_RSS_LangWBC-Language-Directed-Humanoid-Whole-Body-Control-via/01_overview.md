@@ -9,7 +9,7 @@
 - Year/Venue: 2025 / RSS
 - Authors: not duplicated here when not verified in the registry source
 - Primary track: Locomotion, whole-body, mobile manipulation, and humanoids
-- Tier: NEXT
+- Tier: REFERENCE
 - Tags: Robotics, humanoid, whole-body control, language-conditioned control, policy distillation
 - Official paper: https://www.roboticsproceedings.org/rss21/p065.html
 - Full-text retrieval: https://www.roboticsproceedings.org/rss21/p065.pdf

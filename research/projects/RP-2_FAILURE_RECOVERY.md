@@ -2,8 +2,9 @@
 
 > Retired project overlay. The former gap/idea registers were removed by policy; this file is retained only as historical audit context and is not an active research plan.
 
-- Status: `SCOPED / HIGH-COLLISION / FOCUS`
-- Updated: 2026-08-28 KST (`implementation freeze + full-text survey`)
+- Status: `RETIRED` — 2026-10-19 문서 점검에서 역사적 보존 상태 재확인
+- Historical status: `SCOPED / HIGH-COLLISION / FOCUS`
+- Last research review: 2026-08-28 KST (`implementation freeze + full-text survey`); 아래의 현재 목표·novelty·실험 지시는 모두 당시 계획이다.
 - Parent ideas: retired gap/idea-register references (not maintained)
 - Primary benchmark: `LIBERO-Long` (`libero_10`)
 - Conditional secondary validation: `CALVIN` long-horizon five-subtask sequences, only after the LIBERO Phase 0/C1 gate

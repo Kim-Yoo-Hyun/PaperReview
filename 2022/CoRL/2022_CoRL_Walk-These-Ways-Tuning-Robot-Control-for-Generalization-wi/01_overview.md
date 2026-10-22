@@ -9,7 +9,7 @@
 - Year/Venue: 2022 / CoRL
 - Authors: not duplicated here when not verified in the registry source
 - Primary track: Locomotion, whole-body, mobile manipulation, and humanoids
-- Tier: NEXT
+- Tier: REFERENCE
 - Tags: Robotics, quadruped locomotion, Reinforcement Learning, behavior diversity
 - Official paper: https://proceedings.mlr.press/v205/margolis23a.html
 - Full-text retrieval: https://arxiv.org/pdf/2212.03238

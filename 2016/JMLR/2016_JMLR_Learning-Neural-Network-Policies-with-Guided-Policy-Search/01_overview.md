@@ -9,7 +9,7 @@
 - Year/Venue: 2016 / JMLR
 - Authors: not duplicated here when not verified in the registry source
 - Primary track: RL, IL, offline learning, and robot data
-- Tier: CORE
+- Tier: REFERENCE
 - Tags: Robotics, guided policy search, policy learning, manipulation
 - Official paper: https://jmlr.org/papers/v17/15-522.html
 - Full-text retrieval: https://jmlr.org/papers/volume17/15-522/15-522.pdf

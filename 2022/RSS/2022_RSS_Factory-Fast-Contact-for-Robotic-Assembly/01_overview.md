@@ -9,7 +9,7 @@
 - Year/Venue: 2022 / RSS
 - Authors: not duplicated here when not verified in the registry source
 - Primary track: Manipulation, contact, tactile, and dexterity
-- Tier: CORE
+- Tier: NEXT
 - Tags: Robotics, assembly, contact-rich manipulation, simulation, Reinforcement Learning, sim-to-real
 - Official paper: https://arxiv.org/abs/2205.03532
 - Full-text retrieval: https://arxiv.org/pdf/2205.03532

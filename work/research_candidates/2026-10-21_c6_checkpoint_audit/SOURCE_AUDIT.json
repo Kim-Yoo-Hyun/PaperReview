@@ -1,0 +1,173 @@
+{
+  "date": "2026-10-21",
+  "timezone": "Asia/Seoul",
+  "purpose": "C6 novelty and data eligibility audit; no registry admission or user reading status promotion",
+  "search_scope": "2024–2026 plus foundational collision papers; targeted, not exhaustive",
+  "queries": [
+    "VLA RL checkpoint selection evaluator overoptimization policy ranking 2026",
+    "Active Offline Policy Selection",
+    "Efficient Evaluation Anwar github",
+    "dWorldEval github",
+    "robot policy selection offline validation ICLR 2025 2026",
+    "VLA evaluation reward hacking checkpoint",
+    "RACE Calibrated OpenReview",
+    "World-VLA-Loop ICML 2026",
+    "Reliable and Scalable Robot Policy Evaluation with Imperfect Simulators",
+    "Leveraging Correlation Across Test Platforms proceedings",
+    "Is Your Imitation Learning Policy Better than Mine roboticsproceedings",
+    "Beyond Binary Success github"
+  ],
+  "papers": [
+    {
+      "id": "S01",
+      "title": "Active Offline Policy Selection",
+      "year": 2021,
+      "status": "NeurIPS",
+      "status_evidence": "official_proceedings",
+      "official_url": "https://papers.nips.cc/paper_files/paper/2021/hash/cec2346566ba8ecd04bfd992fd193fb3-Abstract.html",
+      "full_text_url": "https://papers.nips.cc/paper_files/paper/2021/file/cec2346566ba8ecd04bfd992fd193fb3-Paper.pdf",
+      "evidence_scope": "selected_full_text",
+      "location_and_limits": "Sections 2–4, limitations; simulated MPG, not real hardware",
+      "project_or_code": "https://github.com/google-deepmind/active_ops"
+    },
+    {
+      "id": "S02",
+      "title": "Efficient Evaluation of Multi-Task Robot Policies With Active Experiment Selection",
+      "year": 2025,
+      "status": "CoRL",
+      "status_evidence": "official_proceedings",
+      "official_url": "https://proceedings.mlr.press/v305/anwar25a.html",
+      "full_text_url": "https://arxiv.org/html/2502.09829v1",
+      "evidence_scope": "selected_full_text",
+      "location_and_limits": "Sections III–VII; final published metadata differs from v1 wording; code URL from indexed official OpenReview PDF text",
+      "project_or_code": "https://github.com/AbrarAnwar/seq-eval"
+    },
+    {
+      "id": "S03",
+      "title": "Is Your Imitation Learning Policy Better than Mine? Policy Comparison with Near-Optimal Stopping",
+      "year": 2025,
+      "status": "RSS",
+      "status_evidence": "official_proceedings",
+      "official_url": "https://roboticsproceedings.org/rss21/p077.html",
+      "full_text_url": "https://arxiv.org/html/2503.10966v4",
+      "evidence_scope": "selected_full_text",
+      "location_and_limits": "Sections II–IV and multi-policy extension; entire proof not audited",
+      "project_or_code": "https://tri-ml.github.io/step/"
+    },
+    {
+      "id": "S04",
+      "title": "Beyond Binary Success: Sample-Efficient and Statistically Rigorous Robot Policy Comparison",
+      "year": 2026,
+      "status": "RSS",
+      "status_evidence": "official_proceedings",
+      "official_url": "https://roboticsproceedings.org/rss22/p076.html",
+      "full_text_url": "https://arxiv.org/html/2603.13616v1",
+      "evidence_scope": "selected_full_text",
+      "location_and_limits": "Sections III–V, VI-C, VII, appendix C; all proofs not verified",
+      "project_or_code": "https://github.com/dasnyder5/nscore"
+    },
+    {
+      "id": "S05",
+      "title": "Leveraging Correlation Across Test Platforms for Variance-Reduced Metric Estimation",
+      "year": 2025,
+      "status": "CoRL",
+      "status_evidence": "official_proceedings",
+      "official_url": "https://proceedings.mlr.press/v305/luo25a.html",
+      "full_text_url": null,
+      "evidence_scope": "abstract_metadata",
+      "location_and_limits": "Official abstract; corresponding preprint Sim2Val arXiv:2506.20553",
+      "project_or_code": null
+    },
+    {
+      "id": "S06",
+      "title": "Reliable and Scalable Robot Policy Evaluation with Imperfect Simulators",
+      "year": 2025,
+      "status": "arXiv; author reports ICRA 2026",
+      "status_evidence": "author_venue_claim_not_officially_verified",
+      "official_url": "https://arxiv.org/abs/2510.04354",
+      "full_text_url": "https://arxiv.org/html/2510.04354v1",
+      "evidence_scope": "selected_full_text",
+      "location_and_limits": "Section 7 and Appendix 13 assumptions; project and code interface. Author ICRA claim https://abadithela.github.io/",
+      "project_or_code": "https://github.com/irom-princeton/rapid-policy-evaluation"
+    },
+    {
+      "id": "S07",
+      "title": "RACE: Calibrated Cumulative Scoring for Rollout-Free Checkpoint Selection",
+      "year": 2026,
+      "status": "Author reports NeurIPS 2026 Robot Learning Workshop; ICRA 2027 under review",
+      "status_evidence": "author_venue_claim_not_officially_verified",
+      "official_url": "https://changyeon.site/race/",
+      "full_text_url": "https://changyeon.site/race/assets/paper.pdf",
+      "evidence_scope": "selected_full_text",
+      "location_and_limits": "Sections 3–5; website and JSON actual payload; not NeurIPS main conference; code coming soon",
+      "project_or_code": null
+    },
+    {
+      "id": "S08",
+      "title": "Scaling Robot Policy Evaluation via Discrete Diffusion World Model",
+      "year": 2026,
+      "status": "ICML",
+      "status_evidence": "official_proceedings",
+      "official_url": "https://proceedings.mlr.press/v306/li26hi.html",
+      "full_text_url": "https://arxiv.org/html/2604.22152v1",
+      "evidence_scope": "selected_full_text",
+      "location_and_limits": "Related dWorldEval preprint sections 4.2–4.3. Proceedings/preprint title and author lists differ; no registry identity mutation performed.",
+      "project_or_code": "https://dworldeval.github.io/"
+    },
+    {
+      "id": "S09",
+      "title": "Offline Policy Evaluation for Manipulation Policies via Discounted Liveness Formulation",
+      "year": 2026,
+      "status": "RSS",
+      "status_evidence": "official_proceedings",
+      "official_url": "https://www.roboticsproceedings.org/rss22/p154.html",
+      "full_text_url": "https://arxiv.org/html/2605.11479v1",
+      "evidence_scope": "selected_full_text",
+      "location_and_limits": "Selected formulation, evaluation and discussion sections IV–VIII plus public data loader",
+      "project_or_code": "https://github.com/haowwang/offline_policy_eval_manipulation"
+    },
+    {
+      "id": "S10",
+      "title": "ALOE: Action-Level Off-Policy Evaluation for Vision-Language-Action Model Post-Training",
+      "year": 2026,
+      "status": "arXiv; acceptance unverified",
+      "status_evidence": "preprint",
+      "official_url": "https://arxiv.org/abs/2602.12691",
+      "full_text_url": "https://arxiv.org/html/2602.12691v3",
+      "evidence_scope": "selected_full_text",
+      "location_and_limits": "Sections 3–5.3; project repository, not training implementation",
+      "project_or_code": "https://github.com/AgibotTech/aloe"
+    },
+    {
+      "id": "S11",
+      "title": "World-VLA-Loop: Closed-Loop Learning of Video World Model and VLA Policy",
+      "year": 2026,
+      "status": "arXiv; acceptance unverified",
+      "status_evidence": "preprint",
+      "official_url": "https://arxiv.org/abs/2602.06508",
+      "full_text_url": "https://arxiv.org/html/2602.06508v2",
+      "evidence_scope": "selected_full_text",
+      "location_and_limits": "Sections 3.3 and 4.5; source preparation status in official repo",
+      "project_or_code": "https://github.com/showlab/World-VLA-Loop"
+    },
+    {
+      "id": "S12",
+      "title": "Scaling Laws for Reward Model Overoptimization",
+      "year": 2023,
+      "status": "ICML",
+      "status_evidence": "official_proceedings",
+      "official_url": "https://proceedings.mlr.press/v202/gao23h.html",
+      "full_text_url": null,
+      "evidence_scope": "abstract_metadata",
+      "location_and_limits": "General foundation; synthetic gold reward model, not robot ground truth",
+      "project_or_code": null
+    }
+  ],
+  "limitations": [
+    "Search snippets and third-party pages used for discovery only; substantive claims rely on primary sources.",
+    "S02 final OpenReview page presented verification challenge; final metadata verified via PMLR; method analysis uses v1.",
+    "S06/S07 conference status requires independent official confirmation; not counted as verified top-tier main papers.",
+    "S08 proceedings and preprint metadata differ; source-specific provenance retained.",
+    "Public source availability does not establish absence of relevant data elsewhere."
+  ]
+}

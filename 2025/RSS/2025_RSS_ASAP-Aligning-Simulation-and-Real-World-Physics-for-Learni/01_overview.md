@@ -9,7 +9,7 @@
 - Year/Venue: 2025 / RSS
 - Authors: not duplicated here when not verified in the registry source
 - Primary track: Locomotion, whole-body, mobile manipulation, and humanoids
-- Tier: NEXT
+- Tier: REFERENCE
 - Tags: Robotics, humanoid, whole-body control, sim-to-real, residual dynamics
 - Official paper: https://www.roboticsproceedings.org/rss21/p066.html
 - Full-text retrieval: https://www.roboticsproceedings.org/rss21/p066.pdf

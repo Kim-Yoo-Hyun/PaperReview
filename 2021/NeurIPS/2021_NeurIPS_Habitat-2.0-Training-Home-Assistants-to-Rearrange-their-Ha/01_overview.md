@@ -9,7 +9,7 @@
 - Year/Venue: 2021 / NeurIPS
 - Authors: not duplicated here when not verified in the registry source
 - Primary track: Locomotion, whole-body, mobile manipulation, and humanoids
-- Tier: REFERENCE
+- Tier: NEXT
 - Tags: Robotics, simulation, mobile manipulation, Benchmark, physics, long-horizon tasks
 - Official paper: https://proceedings.neurips.cc/paper_files/paper/2021/hash/021bbc7ee20b71134d53e20206bd6feb-Abstract.html
 - Full-text retrieval: https://proceedings.neurips.cc/paper_files/paper/2021/hash/021bbc7ee20b71134d53e20206bd6feb-Abstract.html

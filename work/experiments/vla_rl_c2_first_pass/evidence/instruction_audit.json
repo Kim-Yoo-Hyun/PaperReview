@@ -1,0 +1,2405 @@
+{
+  "training_files": 200,
+  "entries": [
+    {
+      "path": "scene3/scene3_r_pick2_via4_to6_short_front/instructions/episode0.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the red slab, pass over the yellow slab, and place it on the blue square label with the short side facing front.",
+          "Pick up the red slab with your right arm, move above the yellow slab, then place it on the blue square label, short side facing front.",
+          "Move the red slab over the yellow slab to the blue square label using your right arm, with the short side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "337e0e32341e0de28c199f5de4ca22fa3cd12d1dcec4d8d90572702096dfd527"
+    },
+    {
+      "path": "scene3/scene3_r_pick2_via4_to6_short_front/instructions/episode1.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the red slab, pass over the yellow slab, and place it on the blue square label with the short side facing front.",
+          "Pick up the red slab with your right arm, move above the yellow slab, then place it on the blue square label, short side facing front.",
+          "Move the red slab over the yellow slab to the blue square label using your right arm, with the short side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "337e0e32341e0de28c199f5de4ca22fa3cd12d1dcec4d8d90572702096dfd527"
+    },
+    {
+      "path": "scene3/scene3_r_pick2_via4_to6_short_front/instructions/episode2.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the red slab, pass over the yellow slab, and place it on the blue square label with the short side facing front.",
+          "Pick up the red slab with your right arm, move above the yellow slab, then place it on the blue square label, short side facing front.",
+          "Move the red slab over the yellow slab to the blue square label using your right arm, with the short side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "337e0e32341e0de28c199f5de4ca22fa3cd12d1dcec4d8d90572702096dfd527"
+    },
+    {
+      "path": "scene3/scene3_r_pick2_via4_to6_short_front/instructions/episode3.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the red slab, pass over the yellow slab, and place it on the blue square label with the short side facing front.",
+          "Pick up the red slab with your right arm, move above the yellow slab, then place it on the blue square label, short side facing front.",
+          "Move the red slab over the yellow slab to the blue square label using your right arm, with the short side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "337e0e32341e0de28c199f5de4ca22fa3cd12d1dcec4d8d90572702096dfd527"
+    },
+    {
+      "path": "scene3/scene3_r_pick2_via4_to6_short_front/instructions/episode4.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the red slab, pass over the yellow slab, and place it on the blue square label with the short side facing front.",
+          "Pick up the red slab with your right arm, move above the yellow slab, then place it on the blue square label, short side facing front.",
+          "Move the red slab over the yellow slab to the blue square label using your right arm, with the short side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "337e0e32341e0de28c199f5de4ca22fa3cd12d1dcec4d8d90572702096dfd527"
+    },
+    {
+      "path": "scene3/scene3_r_pick2_via4_to6_short_front/instructions/episode5.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the red slab, pass over the yellow slab, and place it on the blue square label with the short side facing front.",
+          "Pick up the red slab with your right arm, move above the yellow slab, then place it on the blue square label, short side facing front.",
+          "Move the red slab over the yellow slab to the blue square label using your right arm, with the short side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "337e0e32341e0de28c199f5de4ca22fa3cd12d1dcec4d8d90572702096dfd527"
+    },
+    {
+      "path": "scene3/scene3_r_pick2_via4_to6_short_front/instructions/episode6.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the red slab, pass over the yellow slab, and place it on the blue square label with the short side facing front.",
+          "Pick up the red slab with your right arm, move above the yellow slab, then place it on the blue square label, short side facing front.",
+          "Move the red slab over the yellow slab to the blue square label using your right arm, with the short side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "337e0e32341e0de28c199f5de4ca22fa3cd12d1dcec4d8d90572702096dfd527"
+    },
+    {
+      "path": "scene3/scene3_r_pick2_via4_to6_short_front/instructions/episode7.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the red slab, pass over the yellow slab, and place it on the blue square label with the short side facing front.",
+          "Pick up the red slab with your right arm, move above the yellow slab, then place it on the blue square label, short side facing front.",
+          "Move the red slab over the yellow slab to the blue square label using your right arm, with the short side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "337e0e32341e0de28c199f5de4ca22fa3cd12d1dcec4d8d90572702096dfd527"
+    },
+    {
+      "path": "scene3/scene3_r_pick2_via4_to6_short_front/instructions/episode8.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the red slab, pass over the yellow slab, and place it on the blue square label with the short side facing front.",
+          "Pick up the red slab with your right arm, move above the yellow slab, then place it on the blue square label, short side facing front.",
+          "Move the red slab over the yellow slab to the blue square label using your right arm, with the short side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "337e0e32341e0de28c199f5de4ca22fa3cd12d1dcec4d8d90572702096dfd527"
+    },
+    {
+      "path": "scene3/scene3_r_pick2_via4_to6_short_front/instructions/episode9.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the red slab, pass over the yellow slab, and place it on the blue square label with the short side facing front.",
+          "Pick up the red slab with your right arm, move above the yellow slab, then place it on the blue square label, short side facing front.",
+          "Move the red slab over the yellow slab to the blue square label using your right arm, with the short side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "337e0e32341e0de28c199f5de4ca22fa3cd12d1dcec4d8d90572702096dfd527"
+    },
+    {
+      "path": "scene3/scene3_r_pick2_via4_to6_short_front/instructions/episode10.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the red slab, pass over the yellow slab, and place it on the blue square label with the short side facing front.",
+          "Pick up the red slab with your right arm, move above the yellow slab, then place it on the blue square label, short side facing front.",
+          "Move the red slab over the yellow slab to the blue square label using your right arm, with the short side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "337e0e32341e0de28c199f5de4ca22fa3cd12d1dcec4d8d90572702096dfd527"
+    },
+    {
+      "path": "scene3/scene3_r_pick2_via4_to6_short_front/instructions/episode11.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the red slab, pass over the yellow slab, and place it on the blue square label with the short side facing front.",
+          "Pick up the red slab with your right arm, move above the yellow slab, then place it on the blue square label, short side facing front.",
+          "Move the red slab over the yellow slab to the blue square label using your right arm, with the short side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "337e0e32341e0de28c199f5de4ca22fa3cd12d1dcec4d8d90572702096dfd527"
+    },
+    {
+      "path": "scene3/scene3_r_pick2_via4_to6_short_front/instructions/episode12.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the red slab, pass over the yellow slab, and place it on the blue square label with the short side facing front.",
+          "Pick up the red slab with your right arm, move above the yellow slab, then place it on the blue square label, short side facing front.",
+          "Move the red slab over the yellow slab to the blue square label using your right arm, with the short side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "337e0e32341e0de28c199f5de4ca22fa3cd12d1dcec4d8d90572702096dfd527"
+    },
+    {
+      "path": "scene3/scene3_r_pick2_via4_to6_short_front/instructions/episode13.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the red slab, pass over the yellow slab, and place it on the blue square label with the short side facing front.",
+          "Pick up the red slab with your right arm, move above the yellow slab, then place it on the blue square label, short side facing front.",
+          "Move the red slab over the yellow slab to the blue square label using your right arm, with the short side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "337e0e32341e0de28c199f5de4ca22fa3cd12d1dcec4d8d90572702096dfd527"
+    },
+    {
+      "path": "scene3/scene3_r_pick2_via4_to6_short_front/instructions/episode14.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the red slab, pass over the yellow slab, and place it on the blue square label with the short side facing front.",
+          "Pick up the red slab with your right arm, move above the yellow slab, then place it on the blue square label, short side facing front.",
+          "Move the red slab over the yellow slab to the blue square label using your right arm, with the short side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "337e0e32341e0de28c199f5de4ca22fa3cd12d1dcec4d8d90572702096dfd527"
+    },
+    {
+      "path": "scene3/scene3_r_pick2_via4_to6_short_front/instructions/episode15.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the red slab, pass over the yellow slab, and place it on the blue square label with the short side facing front.",
+          "Pick up the red slab with your right arm, move above the yellow slab, then place it on the blue square label, short side facing front.",
+          "Move the red slab over the yellow slab to the blue square label using your right arm, with the short side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "337e0e32341e0de28c199f5de4ca22fa3cd12d1dcec4d8d90572702096dfd527"
+    },
+    {
+      "path": "scene3/scene3_r_pick2_via4_to6_short_front/instructions/episode16.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the red slab, pass over the yellow slab, and place it on the blue square label with the short side facing front.",
+          "Pick up the red slab with your right arm, move above the yellow slab, then place it on the blue square label, short side facing front.",
+          "Move the red slab over the yellow slab to the blue square label using your right arm, with the short side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "337e0e32341e0de28c199f5de4ca22fa3cd12d1dcec4d8d90572702096dfd527"
+    },
+    {
+      "path": "scene3/scene3_r_pick2_via4_to6_short_front/instructions/episode17.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the red slab, pass over the yellow slab, and place it on the blue square label with the short side facing front.",
+          "Pick up the red slab with your right arm, move above the yellow slab, then place it on the blue square label, short side facing front.",
+          "Move the red slab over the yellow slab to the blue square label using your right arm, with the short side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "337e0e32341e0de28c199f5de4ca22fa3cd12d1dcec4d8d90572702096dfd527"
+    },
+    {
+      "path": "scene3/scene3_r_pick2_via4_to6_short_front/instructions/episode18.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the red slab, pass over the yellow slab, and place it on the blue square label with the short side facing front.",
+          "Pick up the red slab with your right arm, move above the yellow slab, then place it on the blue square label, short side facing front.",
+          "Move the red slab over the yellow slab to the blue square label using your right arm, with the short side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "337e0e32341e0de28c199f5de4ca22fa3cd12d1dcec4d8d90572702096dfd527"
+    },
+    {
+      "path": "scene3/scene3_r_pick2_via4_to6_short_front/instructions/episode19.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the red slab, pass over the yellow slab, and place it on the blue square label with the short side facing front.",
+          "Pick up the red slab with your right arm, move above the yellow slab, then place it on the blue square label, short side facing front.",
+          "Move the red slab over the yellow slab to the blue square label using your right arm, with the short side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "337e0e32341e0de28c199f5de4ca22fa3cd12d1dcec4d8d90572702096dfd527"
+    },
+    {
+      "path": "scene3/scene3_r_pick2_via4_to6_short_front/instructions/episode20.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the red slab, pass over the yellow slab, and place it on the blue square label with the short side facing front.",
+          "Pick up the red slab with your right arm, move above the yellow slab, then place it on the blue square label, short side facing front.",
+          "Move the red slab over the yellow slab to the blue square label using your right arm, with the short side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "337e0e32341e0de28c199f5de4ca22fa3cd12d1dcec4d8d90572702096dfd527"
+    },
+    {
+      "path": "scene3/scene3_r_pick2_via4_to6_short_front/instructions/episode21.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the red slab, pass over the yellow slab, and place it on the blue square label with the short side facing front.",
+          "Pick up the red slab with your right arm, move above the yellow slab, then place it on the blue square label, short side facing front.",
+          "Move the red slab over the yellow slab to the blue square label using your right arm, with the short side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "337e0e32341e0de28c199f5de4ca22fa3cd12d1dcec4d8d90572702096dfd527"
+    },
+    {
+      "path": "scene3/scene3_r_pick2_via4_to6_short_front/instructions/episode22.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the red slab, pass over the yellow slab, and place it on the blue square label with the short side facing front.",
+          "Pick up the red slab with your right arm, move above the yellow slab, then place it on the blue square label, short side facing front.",
+          "Move the red slab over the yellow slab to the blue square label using your right arm, with the short side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "337e0e32341e0de28c199f5de4ca22fa3cd12d1dcec4d8d90572702096dfd527"
+    },
+    {
+      "path": "scene3/scene3_r_pick2_via4_to6_short_front/instructions/episode23.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the red slab, pass over the yellow slab, and place it on the blue square label with the short side facing front.",
+          "Pick up the red slab with your right arm, move above the yellow slab, then place it on the blue square label, short side facing front.",
+          "Move the red slab over the yellow slab to the blue square label using your right arm, with the short side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "337e0e32341e0de28c199f5de4ca22fa3cd12d1dcec4d8d90572702096dfd527"
+    },
+    {
+      "path": "scene3/scene3_r_pick2_via4_to6_short_front/instructions/episode24.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the red slab, pass over the yellow slab, and place it on the blue square label with the short side facing front.",
+          "Pick up the red slab with your right arm, move above the yellow slab, then place it on the blue square label, short side facing front.",
+          "Move the red slab over the yellow slab to the blue square label using your right arm, with the short side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "337e0e32341e0de28c199f5de4ca22fa3cd12d1dcec4d8d90572702096dfd527"
+    },
+    {
+      "path": "scene3/scene3_r_pick2_via4_to6_short_front/instructions/episode25.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the red slab, pass over the yellow slab, and place it on the blue square label with the short side facing front.",
+          "Pick up the red slab with your right arm, move above the yellow slab, then place it on the blue square label, short side facing front.",
+          "Move the red slab over the yellow slab to the blue square label using your right arm, with the short side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "337e0e32341e0de28c199f5de4ca22fa3cd12d1dcec4d8d90572702096dfd527"
+    },
+    {
+      "path": "scene3/scene3_r_pick2_via4_to6_short_front/instructions/episode26.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the red slab, pass over the yellow slab, and place it on the blue square label with the short side facing front.",
+          "Pick up the red slab with your right arm, move above the yellow slab, then place it on the blue square label, short side facing front.",
+          "Move the red slab over the yellow slab to the blue square label using your right arm, with the short side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "337e0e32341e0de28c199f5de4ca22fa3cd12d1dcec4d8d90572702096dfd527"
+    },
+    {
+      "path": "scene3/scene3_r_pick2_via4_to6_short_front/instructions/episode27.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the red slab, pass over the yellow slab, and place it on the blue square label with the short side facing front.",
+          "Pick up the red slab with your right arm, move above the yellow slab, then place it on the blue square label, short side facing front.",
+          "Move the red slab over the yellow slab to the blue square label using your right arm, with the short side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "337e0e32341e0de28c199f5de4ca22fa3cd12d1dcec4d8d90572702096dfd527"
+    },
+    {
+      "path": "scene3/scene3_r_pick2_via4_to6_short_front/instructions/episode28.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the red slab, pass over the yellow slab, and place it on the blue square label with the short side facing front.",
+          "Pick up the red slab with your right arm, move above the yellow slab, then place it on the blue square label, short side facing front.",
+          "Move the red slab over the yellow slab to the blue square label using your right arm, with the short side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "337e0e32341e0de28c199f5de4ca22fa3cd12d1dcec4d8d90572702096dfd527"
+    },
+    {
+      "path": "scene3/scene3_r_pick2_via4_to6_short_front/instructions/episode29.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the red slab, pass over the yellow slab, and place it on the blue square label with the short side facing front.",
+          "Pick up the red slab with your right arm, move above the yellow slab, then place it on the blue square label, short side facing front.",
+          "Move the red slab over the yellow slab to the blue square label using your right arm, with the short side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "337e0e32341e0de28c199f5de4ca22fa3cd12d1dcec4d8d90572702096dfd527"
+    },
+    {
+      "path": "scene3/scene3_r_pick2_via4_to6_short_front/instructions/episode30.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the red slab, pass over the yellow slab, and place it on the blue square label with the short side facing front.",
+          "Pick up the red slab with your right arm, move above the yellow slab, then place it on the blue square label, short side facing front.",
+          "Move the red slab over the yellow slab to the blue square label using your right arm, with the short side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "337e0e32341e0de28c199f5de4ca22fa3cd12d1dcec4d8d90572702096dfd527"
+    },
+    {
+      "path": "scene3/scene3_r_pick2_via4_to6_short_front/instructions/episode31.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the red slab, pass over the yellow slab, and place it on the blue square label with the short side facing front.",
+          "Pick up the red slab with your right arm, move above the yellow slab, then place it on the blue square label, short side facing front.",
+          "Move the red slab over the yellow slab to the blue square label using your right arm, with the short side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "337e0e32341e0de28c199f5de4ca22fa3cd12d1dcec4d8d90572702096dfd527"
+    },
+    {
+      "path": "scene3/scene3_r_pick2_via4_to6_short_front/instructions/episode32.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the red slab, pass over the yellow slab, and place it on the blue square label with the short side facing front.",
+          "Pick up the red slab with your right arm, move above the yellow slab, then place it on the blue square label, short side facing front.",
+          "Move the red slab over the yellow slab to the blue square label using your right arm, with the short side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "337e0e32341e0de28c199f5de4ca22fa3cd12d1dcec4d8d90572702096dfd527"
+    },
+    {
+      "path": "scene3/scene3_r_pick2_via4_to6_short_front/instructions/episode33.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the red slab, pass over the yellow slab, and place it on the blue square label with the short side facing front.",
+          "Pick up the red slab with your right arm, move above the yellow slab, then place it on the blue square label, short side facing front.",
+          "Move the red slab over the yellow slab to the blue square label using your right arm, with the short side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "337e0e32341e0de28c199f5de4ca22fa3cd12d1dcec4d8d90572702096dfd527"
+    },
+    {
+      "path": "scene3/scene3_r_pick2_via4_to6_short_front/instructions/episode34.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the red slab, pass over the yellow slab, and place it on the blue square label with the short side facing front.",
+          "Pick up the red slab with your right arm, move above the yellow slab, then place it on the blue square label, short side facing front.",
+          "Move the red slab over the yellow slab to the blue square label using your right arm, with the short side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "337e0e32341e0de28c199f5de4ca22fa3cd12d1dcec4d8d90572702096dfd527"
+    },
+    {
+      "path": "scene3/scene3_r_pick2_via4_to6_short_front/instructions/episode35.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the red slab, pass over the yellow slab, and place it on the blue square label with the short side facing front.",
+          "Pick up the red slab with your right arm, move above the yellow slab, then place it on the blue square label, short side facing front.",
+          "Move the red slab over the yellow slab to the blue square label using your right arm, with the short side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "337e0e32341e0de28c199f5de4ca22fa3cd12d1dcec4d8d90572702096dfd527"
+    },
+    {
+      "path": "scene3/scene3_r_pick2_via4_to6_short_front/instructions/episode36.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the red slab, pass over the yellow slab, and place it on the blue square label with the short side facing front.",
+          "Pick up the red slab with your right arm, move above the yellow slab, then place it on the blue square label, short side facing front.",
+          "Move the red slab over the yellow slab to the blue square label using your right arm, with the short side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "337e0e32341e0de28c199f5de4ca22fa3cd12d1dcec4d8d90572702096dfd527"
+    },
+    {
+      "path": "scene3/scene3_r_pick2_via4_to6_short_front/instructions/episode37.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the red slab, pass over the yellow slab, and place it on the blue square label with the short side facing front.",
+          "Pick up the red slab with your right arm, move above the yellow slab, then place it on the blue square label, short side facing front.",
+          "Move the red slab over the yellow slab to the blue square label using your right arm, with the short side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "337e0e32341e0de28c199f5de4ca22fa3cd12d1dcec4d8d90572702096dfd527"
+    },
+    {
+      "path": "scene3/scene3_r_pick2_via4_to6_short_front/instructions/episode38.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the red slab, pass over the yellow slab, and place it on the blue square label with the short side facing front.",
+          "Pick up the red slab with your right arm, move above the yellow slab, then place it on the blue square label, short side facing front.",
+          "Move the red slab over the yellow slab to the blue square label using your right arm, with the short side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "337e0e32341e0de28c199f5de4ca22fa3cd12d1dcec4d8d90572702096dfd527"
+    },
+    {
+      "path": "scene3/scene3_r_pick2_via4_to6_short_front/instructions/episode39.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the red slab, pass over the yellow slab, and place it on the blue square label with the short side facing front.",
+          "Pick up the red slab with your right arm, move above the yellow slab, then place it on the blue square label, short side facing front.",
+          "Move the red slab over the yellow slab to the blue square label using your right arm, with the short side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "337e0e32341e0de28c199f5de4ca22fa3cd12d1dcec4d8d90572702096dfd527"
+    },
+    {
+      "path": "scene3/scene3_r_pick2_via4_to6_short_front/instructions/episode40.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the red slab, pass over the yellow slab, and place it on the blue square label with the short side facing front.",
+          "Pick up the red slab with your right arm, move above the yellow slab, then place it on the blue square label, short side facing front.",
+          "Move the red slab over the yellow slab to the blue square label using your right arm, with the short side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "337e0e32341e0de28c199f5de4ca22fa3cd12d1dcec4d8d90572702096dfd527"
+    },
+    {
+      "path": "scene3/scene3_r_pick2_via4_to6_short_front/instructions/episode41.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the red slab, pass over the yellow slab, and place it on the blue square label with the short side facing front.",
+          "Pick up the red slab with your right arm, move above the yellow slab, then place it on the blue square label, short side facing front.",
+          "Move the red slab over the yellow slab to the blue square label using your right arm, with the short side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "337e0e32341e0de28c199f5de4ca22fa3cd12d1dcec4d8d90572702096dfd527"
+    },
+    {
+      "path": "scene3/scene3_r_pick2_via4_to6_short_front/instructions/episode42.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the red slab, pass over the yellow slab, and place it on the blue square label with the short side facing front.",
+          "Pick up the red slab with your right arm, move above the yellow slab, then place it on the blue square label, short side facing front.",
+          "Move the red slab over the yellow slab to the blue square label using your right arm, with the short side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "337e0e32341e0de28c199f5de4ca22fa3cd12d1dcec4d8d90572702096dfd527"
+    },
+    {
+      "path": "scene3/scene3_r_pick2_via4_to6_short_front/instructions/episode43.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the red slab, pass over the yellow slab, and place it on the blue square label with the short side facing front.",
+          "Pick up the red slab with your right arm, move above the yellow slab, then place it on the blue square label, short side facing front.",
+          "Move the red slab over the yellow slab to the blue square label using your right arm, with the short side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "337e0e32341e0de28c199f5de4ca22fa3cd12d1dcec4d8d90572702096dfd527"
+    },
+    {
+      "path": "scene3/scene3_r_pick2_via4_to6_short_front/instructions/episode44.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the red slab, pass over the yellow slab, and place it on the blue square label with the short side facing front.",
+          "Pick up the red slab with your right arm, move above the yellow slab, then place it on the blue square label, short side facing front.",
+          "Move the red slab over the yellow slab to the blue square label using your right arm, with the short side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "337e0e32341e0de28c199f5de4ca22fa3cd12d1dcec4d8d90572702096dfd527"
+    },
+    {
+      "path": "scene3/scene3_r_pick2_via4_to6_short_front/instructions/episode45.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the red slab, pass over the yellow slab, and place it on the blue square label with the short side facing front.",
+          "Pick up the red slab with your right arm, move above the yellow slab, then place it on the blue square label, short side facing front.",
+          "Move the red slab over the yellow slab to the blue square label using your right arm, with the short side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "337e0e32341e0de28c199f5de4ca22fa3cd12d1dcec4d8d90572702096dfd527"
+    },
+    {
+      "path": "scene3/scene3_r_pick2_via4_to6_short_front/instructions/episode46.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the red slab, pass over the yellow slab, and place it on the blue square label with the short side facing front.",
+          "Pick up the red slab with your right arm, move above the yellow slab, then place it on the blue square label, short side facing front.",
+          "Move the red slab over the yellow slab to the blue square label using your right arm, with the short side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "337e0e32341e0de28c199f5de4ca22fa3cd12d1dcec4d8d90572702096dfd527"
+    },
+    {
+      "path": "scene3/scene3_r_pick2_via4_to6_short_front/instructions/episode47.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the red slab, pass over the yellow slab, and place it on the blue square label with the short side facing front.",
+          "Pick up the red slab with your right arm, move above the yellow slab, then place it on the blue square label, short side facing front.",
+          "Move the red slab over the yellow slab to the blue square label using your right arm, with the short side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "337e0e32341e0de28c199f5de4ca22fa3cd12d1dcec4d8d90572702096dfd527"
+    },
+    {
+      "path": "scene3/scene3_r_pick2_via4_to6_short_front/instructions/episode48.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the red slab, pass over the yellow slab, and place it on the blue square label with the short side facing front.",
+          "Pick up the red slab with your right arm, move above the yellow slab, then place it on the blue square label, short side facing front.",
+          "Move the red slab over the yellow slab to the blue square label using your right arm, with the short side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "337e0e32341e0de28c199f5de4ca22fa3cd12d1dcec4d8d90572702096dfd527"
+    },
+    {
+      "path": "scene3/scene3_r_pick2_via4_to6_short_front/instructions/episode49.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the red slab, pass over the yellow slab, and place it on the blue square label with the short side facing front.",
+          "Pick up the red slab with your right arm, move above the yellow slab, then place it on the blue square label, short side facing front.",
+          "Move the red slab over the yellow slab to the blue square label using your right arm, with the short side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "337e0e32341e0de28c199f5de4ca22fa3cd12d1dcec4d8d90572702096dfd527"
+    },
+    {
+      "path": "scene3/scene3_r_pick2_via5_to6_long_front/instructions/episode0.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the red slab, pass over the blue slab, and place it on the blue square label with the long side facing front.",
+          "Pick up the red slab with your right arm, move above the blue slab, then place it on the blue square label, long side facing front.",
+          "Move the red slab over the blue slab to the blue square label using your right arm, with the long side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "5241e90ecc943a43d9120b95ceed0a9bec44b4e726f29c44e19d0ba75e5689c4"
+    },
+    {
+      "path": "scene3/scene3_r_pick2_via5_to6_long_front/instructions/episode1.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the red slab, pass over the blue slab, and place it on the blue square label with the long side facing front.",
+          "Pick up the red slab with your right arm, move above the blue slab, then place it on the blue square label, long side facing front.",
+          "Move the red slab over the blue slab to the blue square label using your right arm, with the long side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "5241e90ecc943a43d9120b95ceed0a9bec44b4e726f29c44e19d0ba75e5689c4"
+    },
+    {
+      "path": "scene3/scene3_r_pick2_via5_to6_long_front/instructions/episode2.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the red slab, pass over the blue slab, and place it on the blue square label with the long side facing front.",
+          "Pick up the red slab with your right arm, move above the blue slab, then place it on the blue square label, long side facing front.",
+          "Move the red slab over the blue slab to the blue square label using your right arm, with the long side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "5241e90ecc943a43d9120b95ceed0a9bec44b4e726f29c44e19d0ba75e5689c4"
+    },
+    {
+      "path": "scene3/scene3_r_pick2_via5_to6_long_front/instructions/episode3.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the red slab, pass over the blue slab, and place it on the blue square label with the long side facing front.",
+          "Pick up the red slab with your right arm, move above the blue slab, then place it on the blue square label, long side facing front.",
+          "Move the red slab over the blue slab to the blue square label using your right arm, with the long side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "5241e90ecc943a43d9120b95ceed0a9bec44b4e726f29c44e19d0ba75e5689c4"
+    },
+    {
+      "path": "scene3/scene3_r_pick2_via5_to6_long_front/instructions/episode4.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the red slab, pass over the blue slab, and place it on the blue square label with the long side facing front.",
+          "Pick up the red slab with your right arm, move above the blue slab, then place it on the blue square label, long side facing front.",
+          "Move the red slab over the blue slab to the blue square label using your right arm, with the long side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "5241e90ecc943a43d9120b95ceed0a9bec44b4e726f29c44e19d0ba75e5689c4"
+    },
+    {
+      "path": "scene3/scene3_r_pick2_via5_to6_long_front/instructions/episode5.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the red slab, pass over the blue slab, and place it on the blue square label with the long side facing front.",
+          "Pick up the red slab with your right arm, move above the blue slab, then place it on the blue square label, long side facing front.",
+          "Move the red slab over the blue slab to the blue square label using your right arm, with the long side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "5241e90ecc943a43d9120b95ceed0a9bec44b4e726f29c44e19d0ba75e5689c4"
+    },
+    {
+      "path": "scene3/scene3_r_pick2_via5_to6_long_front/instructions/episode6.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the red slab, pass over the blue slab, and place it on the blue square label with the long side facing front.",
+          "Pick up the red slab with your right arm, move above the blue slab, then place it on the blue square label, long side facing front.",
+          "Move the red slab over the blue slab to the blue square label using your right arm, with the long side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "5241e90ecc943a43d9120b95ceed0a9bec44b4e726f29c44e19d0ba75e5689c4"
+    },
+    {
+      "path": "scene3/scene3_r_pick2_via5_to6_long_front/instructions/episode7.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the red slab, pass over the blue slab, and place it on the blue square label with the long side facing front.",
+          "Pick up the red slab with your right arm, move above the blue slab, then place it on the blue square label, long side facing front.",
+          "Move the red slab over the blue slab to the blue square label using your right arm, with the long side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "5241e90ecc943a43d9120b95ceed0a9bec44b4e726f29c44e19d0ba75e5689c4"
+    },
+    {
+      "path": "scene3/scene3_r_pick2_via5_to6_long_front/instructions/episode8.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the red slab, pass over the blue slab, and place it on the blue square label with the long side facing front.",
+          "Pick up the red slab with your right arm, move above the blue slab, then place it on the blue square label, long side facing front.",
+          "Move the red slab over the blue slab to the blue square label using your right arm, with the long side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "5241e90ecc943a43d9120b95ceed0a9bec44b4e726f29c44e19d0ba75e5689c4"
+    },
+    {
+      "path": "scene3/scene3_r_pick2_via5_to6_long_front/instructions/episode9.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the red slab, pass over the blue slab, and place it on the blue square label with the long side facing front.",
+          "Pick up the red slab with your right arm, move above the blue slab, then place it on the blue square label, long side facing front.",
+          "Move the red slab over the blue slab to the blue square label using your right arm, with the long side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "5241e90ecc943a43d9120b95ceed0a9bec44b4e726f29c44e19d0ba75e5689c4"
+    },
+    {
+      "path": "scene3/scene3_r_pick2_via5_to6_long_front/instructions/episode10.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the red slab, pass over the blue slab, and place it on the blue square label with the long side facing front.",
+          "Pick up the red slab with your right arm, move above the blue slab, then place it on the blue square label, long side facing front.",
+          "Move the red slab over the blue slab to the blue square label using your right arm, with the long side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "5241e90ecc943a43d9120b95ceed0a9bec44b4e726f29c44e19d0ba75e5689c4"
+    },
+    {
+      "path": "scene3/scene3_r_pick2_via5_to6_long_front/instructions/episode11.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the red slab, pass over the blue slab, and place it on the blue square label with the long side facing front.",
+          "Pick up the red slab with your right arm, move above the blue slab, then place it on the blue square label, long side facing front.",
+          "Move the red slab over the blue slab to the blue square label using your right arm, with the long side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "5241e90ecc943a43d9120b95ceed0a9bec44b4e726f29c44e19d0ba75e5689c4"
+    },
+    {
+      "path": "scene3/scene3_r_pick2_via5_to6_long_front/instructions/episode12.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the red slab, pass over the blue slab, and place it on the blue square label with the long side facing front.",
+          "Pick up the red slab with your right arm, move above the blue slab, then place it on the blue square label, long side facing front.",
+          "Move the red slab over the blue slab to the blue square label using your right arm, with the long side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "5241e90ecc943a43d9120b95ceed0a9bec44b4e726f29c44e19d0ba75e5689c4"
+    },
+    {
+      "path": "scene3/scene3_r_pick2_via5_to6_long_front/instructions/episode13.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the red slab, pass over the blue slab, and place it on the blue square label with the long side facing front.",
+          "Pick up the red slab with your right arm, move above the blue slab, then place it on the blue square label, long side facing front.",
+          "Move the red slab over the blue slab to the blue square label using your right arm, with the long side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "5241e90ecc943a43d9120b95ceed0a9bec44b4e726f29c44e19d0ba75e5689c4"
+    },
+    {
+      "path": "scene3/scene3_r_pick2_via5_to6_long_front/instructions/episode14.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the red slab, pass over the blue slab, and place it on the blue square label with the long side facing front.",
+          "Pick up the red slab with your right arm, move above the blue slab, then place it on the blue square label, long side facing front.",
+          "Move the red slab over the blue slab to the blue square label using your right arm, with the long side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "5241e90ecc943a43d9120b95ceed0a9bec44b4e726f29c44e19d0ba75e5689c4"
+    },
+    {
+      "path": "scene3/scene3_r_pick2_via5_to6_long_front/instructions/episode15.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the red slab, pass over the blue slab, and place it on the blue square label with the long side facing front.",
+          "Pick up the red slab with your right arm, move above the blue slab, then place it on the blue square label, long side facing front.",
+          "Move the red slab over the blue slab to the blue square label using your right arm, with the long side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "5241e90ecc943a43d9120b95ceed0a9bec44b4e726f29c44e19d0ba75e5689c4"
+    },
+    {
+      "path": "scene3/scene3_r_pick2_via5_to6_long_front/instructions/episode16.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the red slab, pass over the blue slab, and place it on the blue square label with the long side facing front.",
+          "Pick up the red slab with your right arm, move above the blue slab, then place it on the blue square label, long side facing front.",
+          "Move the red slab over the blue slab to the blue square label using your right arm, with the long side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "5241e90ecc943a43d9120b95ceed0a9bec44b4e726f29c44e19d0ba75e5689c4"
+    },
+    {
+      "path": "scene3/scene3_r_pick2_via5_to6_long_front/instructions/episode17.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the red slab, pass over the blue slab, and place it on the blue square label with the long side facing front.",
+          "Pick up the red slab with your right arm, move above the blue slab, then place it on the blue square label, long side facing front.",
+          "Move the red slab over the blue slab to the blue square label using your right arm, with the long side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "5241e90ecc943a43d9120b95ceed0a9bec44b4e726f29c44e19d0ba75e5689c4"
+    },
+    {
+      "path": "scene3/scene3_r_pick2_via5_to6_long_front/instructions/episode18.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the red slab, pass over the blue slab, and place it on the blue square label with the long side facing front.",
+          "Pick up the red slab with your right arm, move above the blue slab, then place it on the blue square label, long side facing front.",
+          "Move the red slab over the blue slab to the blue square label using your right arm, with the long side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "5241e90ecc943a43d9120b95ceed0a9bec44b4e726f29c44e19d0ba75e5689c4"
+    },
+    {
+      "path": "scene3/scene3_r_pick2_via5_to6_long_front/instructions/episode19.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the red slab, pass over the blue slab, and place it on the blue square label with the long side facing front.",
+          "Pick up the red slab with your right arm, move above the blue slab, then place it on the blue square label, long side facing front.",
+          "Move the red slab over the blue slab to the blue square label using your right arm, with the long side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "5241e90ecc943a43d9120b95ceed0a9bec44b4e726f29c44e19d0ba75e5689c4"
+    },
+    {
+      "path": "scene3/scene3_r_pick2_via5_to6_long_front/instructions/episode20.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the red slab, pass over the blue slab, and place it on the blue square label with the long side facing front.",
+          "Pick up the red slab with your right arm, move above the blue slab, then place it on the blue square label, long side facing front.",
+          "Move the red slab over the blue slab to the blue square label using your right arm, with the long side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "5241e90ecc943a43d9120b95ceed0a9bec44b4e726f29c44e19d0ba75e5689c4"
+    },
+    {
+      "path": "scene3/scene3_r_pick2_via5_to6_long_front/instructions/episode21.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the red slab, pass over the blue slab, and place it on the blue square label with the long side facing front.",
+          "Pick up the red slab with your right arm, move above the blue slab, then place it on the blue square label, long side facing front.",
+          "Move the red slab over the blue slab to the blue square label using your right arm, with the long side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "5241e90ecc943a43d9120b95ceed0a9bec44b4e726f29c44e19d0ba75e5689c4"
+    },
+    {
+      "path": "scene3/scene3_r_pick2_via5_to6_long_front/instructions/episode22.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the red slab, pass over the blue slab, and place it on the blue square label with the long side facing front.",
+          "Pick up the red slab with your right arm, move above the blue slab, then place it on the blue square label, long side facing front.",
+          "Move the red slab over the blue slab to the blue square label using your right arm, with the long side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "5241e90ecc943a43d9120b95ceed0a9bec44b4e726f29c44e19d0ba75e5689c4"
+    },
+    {
+      "path": "scene3/scene3_r_pick2_via5_to6_long_front/instructions/episode23.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the red slab, pass over the blue slab, and place it on the blue square label with the long side facing front.",
+          "Pick up the red slab with your right arm, move above the blue slab, then place it on the blue square label, long side facing front.",
+          "Move the red slab over the blue slab to the blue square label using your right arm, with the long side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "5241e90ecc943a43d9120b95ceed0a9bec44b4e726f29c44e19d0ba75e5689c4"
+    },
+    {
+      "path": "scene3/scene3_r_pick2_via5_to6_long_front/instructions/episode24.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the red slab, pass over the blue slab, and place it on the blue square label with the long side facing front.",
+          "Pick up the red slab with your right arm, move above the blue slab, then place it on the blue square label, long side facing front.",
+          "Move the red slab over the blue slab to the blue square label using your right arm, with the long side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "5241e90ecc943a43d9120b95ceed0a9bec44b4e726f29c44e19d0ba75e5689c4"
+    },
+    {
+      "path": "scene3/scene3_r_pick2_via5_to6_long_front/instructions/episode25.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the red slab, pass over the blue slab, and place it on the blue square label with the long side facing front.",
+          "Pick up the red slab with your right arm, move above the blue slab, then place it on the blue square label, long side facing front.",
+          "Move the red slab over the blue slab to the blue square label using your right arm, with the long side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "5241e90ecc943a43d9120b95ceed0a9bec44b4e726f29c44e19d0ba75e5689c4"
+    },
+    {
+      "path": "scene3/scene3_r_pick2_via5_to6_long_front/instructions/episode26.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the red slab, pass over the blue slab, and place it on the blue square label with the long side facing front.",
+          "Pick up the red slab with your right arm, move above the blue slab, then place it on the blue square label, long side facing front.",
+          "Move the red slab over the blue slab to the blue square label using your right arm, with the long side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "5241e90ecc943a43d9120b95ceed0a9bec44b4e726f29c44e19d0ba75e5689c4"
+    },
+    {
+      "path": "scene3/scene3_r_pick2_via5_to6_long_front/instructions/episode27.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the red slab, pass over the blue slab, and place it on the blue square label with the long side facing front.",
+          "Pick up the red slab with your right arm, move above the blue slab, then place it on the blue square label, long side facing front.",
+          "Move the red slab over the blue slab to the blue square label using your right arm, with the long side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "5241e90ecc943a43d9120b95ceed0a9bec44b4e726f29c44e19d0ba75e5689c4"
+    },
+    {
+      "path": "scene3/scene3_r_pick2_via5_to6_long_front/instructions/episode28.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the red slab, pass over the blue slab, and place it on the blue square label with the long side facing front.",
+          "Pick up the red slab with your right arm, move above the blue slab, then place it on the blue square label, long side facing front.",
+          "Move the red slab over the blue slab to the blue square label using your right arm, with the long side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "5241e90ecc943a43d9120b95ceed0a9bec44b4e726f29c44e19d0ba75e5689c4"
+    },
+    {
+      "path": "scene3/scene3_r_pick2_via5_to6_long_front/instructions/episode29.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the red slab, pass over the blue slab, and place it on the blue square label with the long side facing front.",
+          "Pick up the red slab with your right arm, move above the blue slab, then place it on the blue square label, long side facing front.",
+          "Move the red slab over the blue slab to the blue square label using your right arm, with the long side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "5241e90ecc943a43d9120b95ceed0a9bec44b4e726f29c44e19d0ba75e5689c4"
+    },
+    {
+      "path": "scene3/scene3_r_pick2_via5_to6_long_front/instructions/episode30.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the red slab, pass over the blue slab, and place it on the blue square label with the long side facing front.",
+          "Pick up the red slab with your right arm, move above the blue slab, then place it on the blue square label, long side facing front.",
+          "Move the red slab over the blue slab to the blue square label using your right arm, with the long side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "5241e90ecc943a43d9120b95ceed0a9bec44b4e726f29c44e19d0ba75e5689c4"
+    },
+    {
+      "path": "scene3/scene3_r_pick2_via5_to6_long_front/instructions/episode31.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the red slab, pass over the blue slab, and place it on the blue square label with the long side facing front.",
+          "Pick up the red slab with your right arm, move above the blue slab, then place it on the blue square label, long side facing front.",
+          "Move the red slab over the blue slab to the blue square label using your right arm, with the long side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "5241e90ecc943a43d9120b95ceed0a9bec44b4e726f29c44e19d0ba75e5689c4"
+    },
+    {
+      "path": "scene3/scene3_r_pick2_via5_to6_long_front/instructions/episode32.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the red slab, pass over the blue slab, and place it on the blue square label with the long side facing front.",
+          "Pick up the red slab with your right arm, move above the blue slab, then place it on the blue square label, long side facing front.",
+          "Move the red slab over the blue slab to the blue square label using your right arm, with the long side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "5241e90ecc943a43d9120b95ceed0a9bec44b4e726f29c44e19d0ba75e5689c4"
+    },
+    {
+      "path": "scene3/scene3_r_pick2_via5_to6_long_front/instructions/episode33.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the red slab, pass over the blue slab, and place it on the blue square label with the long side facing front.",
+          "Pick up the red slab with your right arm, move above the blue slab, then place it on the blue square label, long side facing front.",
+          "Move the red slab over the blue slab to the blue square label using your right arm, with the long side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "5241e90ecc943a43d9120b95ceed0a9bec44b4e726f29c44e19d0ba75e5689c4"
+    },
+    {
+      "path": "scene3/scene3_r_pick2_via5_to6_long_front/instructions/episode34.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the red slab, pass over the blue slab, and place it on the blue square label with the long side facing front.",
+          "Pick up the red slab with your right arm, move above the blue slab, then place it on the blue square label, long side facing front.",
+          "Move the red slab over the blue slab to the blue square label using your right arm, with the long side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "5241e90ecc943a43d9120b95ceed0a9bec44b4e726f29c44e19d0ba75e5689c4"
+    },
+    {
+      "path": "scene3/scene3_r_pick2_via5_to6_long_front/instructions/episode35.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the red slab, pass over the blue slab, and place it on the blue square label with the long side facing front.",
+          "Pick up the red slab with your right arm, move above the blue slab, then place it on the blue square label, long side facing front.",
+          "Move the red slab over the blue slab to the blue square label using your right arm, with the long side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "5241e90ecc943a43d9120b95ceed0a9bec44b4e726f29c44e19d0ba75e5689c4"
+    },
+    {
+      "path": "scene3/scene3_r_pick2_via5_to6_long_front/instructions/episode36.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the red slab, pass over the blue slab, and place it on the blue square label with the long side facing front.",
+          "Pick up the red slab with your right arm, move above the blue slab, then place it on the blue square label, long side facing front.",
+          "Move the red slab over the blue slab to the blue square label using your right arm, with the long side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "5241e90ecc943a43d9120b95ceed0a9bec44b4e726f29c44e19d0ba75e5689c4"
+    },
+    {
+      "path": "scene3/scene3_r_pick2_via5_to6_long_front/instructions/episode37.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the red slab, pass over the blue slab, and place it on the blue square label with the long side facing front.",
+          "Pick up the red slab with your right arm, move above the blue slab, then place it on the blue square label, long side facing front.",
+          "Move the red slab over the blue slab to the blue square label using your right arm, with the long side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "5241e90ecc943a43d9120b95ceed0a9bec44b4e726f29c44e19d0ba75e5689c4"
+    },
+    {
+      "path": "scene3/scene3_r_pick2_via5_to6_long_front/instructions/episode38.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the red slab, pass over the blue slab, and place it on the blue square label with the long side facing front.",
+          "Pick up the red slab with your right arm, move above the blue slab, then place it on the blue square label, long side facing front.",
+          "Move the red slab over the blue slab to the blue square label using your right arm, with the long side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "5241e90ecc943a43d9120b95ceed0a9bec44b4e726f29c44e19d0ba75e5689c4"
+    },
+    {
+      "path": "scene3/scene3_r_pick2_via5_to6_long_front/instructions/episode39.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the red slab, pass over the blue slab, and place it on the blue square label with the long side facing front.",
+          "Pick up the red slab with your right arm, move above the blue slab, then place it on the blue square label, long side facing front.",
+          "Move the red slab over the blue slab to the blue square label using your right arm, with the long side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "5241e90ecc943a43d9120b95ceed0a9bec44b4e726f29c44e19d0ba75e5689c4"
+    },
+    {
+      "path": "scene3/scene3_r_pick2_via5_to6_long_front/instructions/episode40.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the red slab, pass over the blue slab, and place it on the blue square label with the long side facing front.",
+          "Pick up the red slab with your right arm, move above the blue slab, then place it on the blue square label, long side facing front.",
+          "Move the red slab over the blue slab to the blue square label using your right arm, with the long side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "5241e90ecc943a43d9120b95ceed0a9bec44b4e726f29c44e19d0ba75e5689c4"
+    },
+    {
+      "path": "scene3/scene3_r_pick2_via5_to6_long_front/instructions/episode41.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the red slab, pass over the blue slab, and place it on the blue square label with the long side facing front.",
+          "Pick up the red slab with your right arm, move above the blue slab, then place it on the blue square label, long side facing front.",
+          "Move the red slab over the blue slab to the blue square label using your right arm, with the long side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "5241e90ecc943a43d9120b95ceed0a9bec44b4e726f29c44e19d0ba75e5689c4"
+    },
+    {
+      "path": "scene3/scene3_r_pick2_via5_to6_long_front/instructions/episode42.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the red slab, pass over the blue slab, and place it on the blue square label with the long side facing front.",
+          "Pick up the red slab with your right arm, move above the blue slab, then place it on the blue square label, long side facing front.",
+          "Move the red slab over the blue slab to the blue square label using your right arm, with the long side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "5241e90ecc943a43d9120b95ceed0a9bec44b4e726f29c44e19d0ba75e5689c4"
+    },
+    {
+      "path": "scene3/scene3_r_pick2_via5_to6_long_front/instructions/episode43.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the red slab, pass over the blue slab, and place it on the blue square label with the long side facing front.",
+          "Pick up the red slab with your right arm, move above the blue slab, then place it on the blue square label, long side facing front.",
+          "Move the red slab over the blue slab to the blue square label using your right arm, with the long side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "5241e90ecc943a43d9120b95ceed0a9bec44b4e726f29c44e19d0ba75e5689c4"
+    },
+    {
+      "path": "scene3/scene3_r_pick2_via5_to6_long_front/instructions/episode44.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the red slab, pass over the blue slab, and place it on the blue square label with the long side facing front.",
+          "Pick up the red slab with your right arm, move above the blue slab, then place it on the blue square label, long side facing front.",
+          "Move the red slab over the blue slab to the blue square label using your right arm, with the long side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "5241e90ecc943a43d9120b95ceed0a9bec44b4e726f29c44e19d0ba75e5689c4"
+    },
+    {
+      "path": "scene3/scene3_r_pick2_via5_to6_long_front/instructions/episode45.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the red slab, pass over the blue slab, and place it on the blue square label with the long side facing front.",
+          "Pick up the red slab with your right arm, move above the blue slab, then place it on the blue square label, long side facing front.",
+          "Move the red slab over the blue slab to the blue square label using your right arm, with the long side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "5241e90ecc943a43d9120b95ceed0a9bec44b4e726f29c44e19d0ba75e5689c4"
+    },
+    {
+      "path": "scene3/scene3_r_pick2_via5_to6_long_front/instructions/episode46.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the red slab, pass over the blue slab, and place it on the blue square label with the long side facing front.",
+          "Pick up the red slab with your right arm, move above the blue slab, then place it on the blue square label, long side facing front.",
+          "Move the red slab over the blue slab to the blue square label using your right arm, with the long side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "5241e90ecc943a43d9120b95ceed0a9bec44b4e726f29c44e19d0ba75e5689c4"
+    },
+    {
+      "path": "scene3/scene3_r_pick2_via5_to6_long_front/instructions/episode47.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the red slab, pass over the blue slab, and place it on the blue square label with the long side facing front.",
+          "Pick up the red slab with your right arm, move above the blue slab, then place it on the blue square label, long side facing front.",
+          "Move the red slab over the blue slab to the blue square label using your right arm, with the long side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "5241e90ecc943a43d9120b95ceed0a9bec44b4e726f29c44e19d0ba75e5689c4"
+    },
+    {
+      "path": "scene3/scene3_r_pick2_via5_to6_long_front/instructions/episode48.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the red slab, pass over the blue slab, and place it on the blue square label with the long side facing front.",
+          "Pick up the red slab with your right arm, move above the blue slab, then place it on the blue square label, long side facing front.",
+          "Move the red slab over the blue slab to the blue square label using your right arm, with the long side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "5241e90ecc943a43d9120b95ceed0a9bec44b4e726f29c44e19d0ba75e5689c4"
+    },
+    {
+      "path": "scene3/scene3_r_pick2_via5_to6_long_front/instructions/episode49.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the red slab, pass over the blue slab, and place it on the blue square label with the long side facing front.",
+          "Pick up the red slab with your right arm, move above the blue slab, then place it on the blue square label, long side facing front.",
+          "Move the red slab over the blue slab to the blue square label using your right arm, with the long side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "5241e90ecc943a43d9120b95ceed0a9bec44b4e726f29c44e19d0ba75e5689c4"
+    },
+    {
+      "path": "scene3/scene3_r_pick3_via4_to6_long_front/instructions/episode0.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the green slab, pass over the yellow slab, and place it on the blue square label with the long side facing front.",
+          "Pick up the green slab with your right arm, move above the yellow slab, then place it on the blue square label, long side facing front.",
+          "Move the green slab over the yellow slab to the blue square label using your right arm, with the long side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "cf73471d26ef69f9cd5c720c07f9ce67b7287664399bdbf22d7c107caa4bae94"
+    },
+    {
+      "path": "scene3/scene3_r_pick3_via4_to6_long_front/instructions/episode1.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the green slab, pass over the yellow slab, and place it on the blue square label with the long side facing front.",
+          "Pick up the green slab with your right arm, move above the yellow slab, then place it on the blue square label, long side facing front.",
+          "Move the green slab over the yellow slab to the blue square label using your right arm, with the long side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "cf73471d26ef69f9cd5c720c07f9ce67b7287664399bdbf22d7c107caa4bae94"
+    },
+    {
+      "path": "scene3/scene3_r_pick3_via4_to6_long_front/instructions/episode2.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the green slab, pass over the yellow slab, and place it on the blue square label with the long side facing front.",
+          "Pick up the green slab with your right arm, move above the yellow slab, then place it on the blue square label, long side facing front.",
+          "Move the green slab over the yellow slab to the blue square label using your right arm, with the long side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "cf73471d26ef69f9cd5c720c07f9ce67b7287664399bdbf22d7c107caa4bae94"
+    },
+    {
+      "path": "scene3/scene3_r_pick3_via4_to6_long_front/instructions/episode3.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the green slab, pass over the yellow slab, and place it on the blue square label with the long side facing front.",
+          "Pick up the green slab with your right arm, move above the yellow slab, then place it on the blue square label, long side facing front.",
+          "Move the green slab over the yellow slab to the blue square label using your right arm, with the long side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "cf73471d26ef69f9cd5c720c07f9ce67b7287664399bdbf22d7c107caa4bae94"
+    },
+    {
+      "path": "scene3/scene3_r_pick3_via4_to6_long_front/instructions/episode4.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the green slab, pass over the yellow slab, and place it on the blue square label with the long side facing front.",
+          "Pick up the green slab with your right arm, move above the yellow slab, then place it on the blue square label, long side facing front.",
+          "Move the green slab over the yellow slab to the blue square label using your right arm, with the long side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "cf73471d26ef69f9cd5c720c07f9ce67b7287664399bdbf22d7c107caa4bae94"
+    },
+    {
+      "path": "scene3/scene3_r_pick3_via4_to6_long_front/instructions/episode5.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the green slab, pass over the yellow slab, and place it on the blue square label with the long side facing front.",
+          "Pick up the green slab with your right arm, move above the yellow slab, then place it on the blue square label, long side facing front.",
+          "Move the green slab over the yellow slab to the blue square label using your right arm, with the long side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "cf73471d26ef69f9cd5c720c07f9ce67b7287664399bdbf22d7c107caa4bae94"
+    },
+    {
+      "path": "scene3/scene3_r_pick3_via4_to6_long_front/instructions/episode6.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the green slab, pass over the yellow slab, and place it on the blue square label with the long side facing front.",
+          "Pick up the green slab with your right arm, move above the yellow slab, then place it on the blue square label, long side facing front.",
+          "Move the green slab over the yellow slab to the blue square label using your right arm, with the long side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "cf73471d26ef69f9cd5c720c07f9ce67b7287664399bdbf22d7c107caa4bae94"
+    },
+    {
+      "path": "scene3/scene3_r_pick3_via4_to6_long_front/instructions/episode7.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the green slab, pass over the yellow slab, and place it on the blue square label with the long side facing front.",
+          "Pick up the green slab with your right arm, move above the yellow slab, then place it on the blue square label, long side facing front.",
+          "Move the green slab over the yellow slab to the blue square label using your right arm, with the long side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "cf73471d26ef69f9cd5c720c07f9ce67b7287664399bdbf22d7c107caa4bae94"
+    },
+    {
+      "path": "scene3/scene3_r_pick3_via4_to6_long_front/instructions/episode8.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the green slab, pass over the yellow slab, and place it on the blue square label with the long side facing front.",
+          "Pick up the green slab with your right arm, move above the yellow slab, then place it on the blue square label, long side facing front.",
+          "Move the green slab over the yellow slab to the blue square label using your right arm, with the long side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "cf73471d26ef69f9cd5c720c07f9ce67b7287664399bdbf22d7c107caa4bae94"
+    },
+    {
+      "path": "scene3/scene3_r_pick3_via4_to6_long_front/instructions/episode9.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the green slab, pass over the yellow slab, and place it on the blue square label with the long side facing front.",
+          "Pick up the green slab with your right arm, move above the yellow slab, then place it on the blue square label, long side facing front.",
+          "Move the green slab over the yellow slab to the blue square label using your right arm, with the long side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "cf73471d26ef69f9cd5c720c07f9ce67b7287664399bdbf22d7c107caa4bae94"
+    },
+    {
+      "path": "scene3/scene3_r_pick3_via4_to6_long_front/instructions/episode10.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the green slab, pass over the yellow slab, and place it on the blue square label with the long side facing front.",
+          "Pick up the green slab with your right arm, move above the yellow slab, then place it on the blue square label, long side facing front.",
+          "Move the green slab over the yellow slab to the blue square label using your right arm, with the long side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "cf73471d26ef69f9cd5c720c07f9ce67b7287664399bdbf22d7c107caa4bae94"
+    },
+    {
+      "path": "scene3/scene3_r_pick3_via4_to6_long_front/instructions/episode11.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the green slab, pass over the yellow slab, and place it on the blue square label with the long side facing front.",
+          "Pick up the green slab with your right arm, move above the yellow slab, then place it on the blue square label, long side facing front.",
+          "Move the green slab over the yellow slab to the blue square label using your right arm, with the long side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "cf73471d26ef69f9cd5c720c07f9ce67b7287664399bdbf22d7c107caa4bae94"
+    },
+    {
+      "path": "scene3/scene3_r_pick3_via4_to6_long_front/instructions/episode12.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the green slab, pass over the yellow slab, and place it on the blue square label with the long side facing front.",
+          "Pick up the green slab with your right arm, move above the yellow slab, then place it on the blue square label, long side facing front.",
+          "Move the green slab over the yellow slab to the blue square label using your right arm, with the long side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "cf73471d26ef69f9cd5c720c07f9ce67b7287664399bdbf22d7c107caa4bae94"
+    },
+    {
+      "path": "scene3/scene3_r_pick3_via4_to6_long_front/instructions/episode13.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the green slab, pass over the yellow slab, and place it on the blue square label with the long side facing front.",
+          "Pick up the green slab with your right arm, move above the yellow slab, then place it on the blue square label, long side facing front.",
+          "Move the green slab over the yellow slab to the blue square label using your right arm, with the long side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "cf73471d26ef69f9cd5c720c07f9ce67b7287664399bdbf22d7c107caa4bae94"
+    },
+    {
+      "path": "scene3/scene3_r_pick3_via4_to6_long_front/instructions/episode14.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the green slab, pass over the yellow slab, and place it on the blue square label with the long side facing front.",
+          "Pick up the green slab with your right arm, move above the yellow slab, then place it on the blue square label, long side facing front.",
+          "Move the green slab over the yellow slab to the blue square label using your right arm, with the long side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "cf73471d26ef69f9cd5c720c07f9ce67b7287664399bdbf22d7c107caa4bae94"
+    },
+    {
+      "path": "scene3/scene3_r_pick3_via4_to6_long_front/instructions/episode15.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the green slab, pass over the yellow slab, and place it on the blue square label with the long side facing front.",
+          "Pick up the green slab with your right arm, move above the yellow slab, then place it on the blue square label, long side facing front.",
+          "Move the green slab over the yellow slab to the blue square label using your right arm, with the long side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "cf73471d26ef69f9cd5c720c07f9ce67b7287664399bdbf22d7c107caa4bae94"
+    },
+    {
+      "path": "scene3/scene3_r_pick3_via4_to6_long_front/instructions/episode16.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the green slab, pass over the yellow slab, and place it on the blue square label with the long side facing front.",
+          "Pick up the green slab with your right arm, move above the yellow slab, then place it on the blue square label, long side facing front.",
+          "Move the green slab over the yellow slab to the blue square label using your right arm, with the long side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "cf73471d26ef69f9cd5c720c07f9ce67b7287664399bdbf22d7c107caa4bae94"
+    },
+    {
+      "path": "scene3/scene3_r_pick3_via4_to6_long_front/instructions/episode17.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the green slab, pass over the yellow slab, and place it on the blue square label with the long side facing front.",
+          "Pick up the green slab with your right arm, move above the yellow slab, then place it on the blue square label, long side facing front.",
+          "Move the green slab over the yellow slab to the blue square label using your right arm, with the long side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "cf73471d26ef69f9cd5c720c07f9ce67b7287664399bdbf22d7c107caa4bae94"
+    },
+    {
+      "path": "scene3/scene3_r_pick3_via4_to6_long_front/instructions/episode18.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the green slab, pass over the yellow slab, and place it on the blue square label with the long side facing front.",
+          "Pick up the green slab with your right arm, move above the yellow slab, then place it on the blue square label, long side facing front.",
+          "Move the green slab over the yellow slab to the blue square label using your right arm, with the long side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "cf73471d26ef69f9cd5c720c07f9ce67b7287664399bdbf22d7c107caa4bae94"
+    },
+    {
+      "path": "scene3/scene3_r_pick3_via4_to6_long_front/instructions/episode19.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the green slab, pass over the yellow slab, and place it on the blue square label with the long side facing front.",
+          "Pick up the green slab with your right arm, move above the yellow slab, then place it on the blue square label, long side facing front.",
+          "Move the green slab over the yellow slab to the blue square label using your right arm, with the long side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "cf73471d26ef69f9cd5c720c07f9ce67b7287664399bdbf22d7c107caa4bae94"
+    },
+    {
+      "path": "scene3/scene3_r_pick3_via4_to6_long_front/instructions/episode20.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the green slab, pass over the yellow slab, and place it on the blue square label with the long side facing front.",
+          "Pick up the green slab with your right arm, move above the yellow slab, then place it on the blue square label, long side facing front.",
+          "Move the green slab over the yellow slab to the blue square label using your right arm, with the long side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "cf73471d26ef69f9cd5c720c07f9ce67b7287664399bdbf22d7c107caa4bae94"
+    },
+    {
+      "path": "scene3/scene3_r_pick3_via4_to6_long_front/instructions/episode21.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the green slab, pass over the yellow slab, and place it on the blue square label with the long side facing front.",
+          "Pick up the green slab with your right arm, move above the yellow slab, then place it on the blue square label, long side facing front.",
+          "Move the green slab over the yellow slab to the blue square label using your right arm, with the long side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "cf73471d26ef69f9cd5c720c07f9ce67b7287664399bdbf22d7c107caa4bae94"
+    },
+    {
+      "path": "scene3/scene3_r_pick3_via4_to6_long_front/instructions/episode22.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the green slab, pass over the yellow slab, and place it on the blue square label with the long side facing front.",
+          "Pick up the green slab with your right arm, move above the yellow slab, then place it on the blue square label, long side facing front.",
+          "Move the green slab over the yellow slab to the blue square label using your right arm, with the long side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "cf73471d26ef69f9cd5c720c07f9ce67b7287664399bdbf22d7c107caa4bae94"
+    },
+    {
+      "path": "scene3/scene3_r_pick3_via4_to6_long_front/instructions/episode23.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the green slab, pass over the yellow slab, and place it on the blue square label with the long side facing front.",
+          "Pick up the green slab with your right arm, move above the yellow slab, then place it on the blue square label, long side facing front.",
+          "Move the green slab over the yellow slab to the blue square label using your right arm, with the long side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "cf73471d26ef69f9cd5c720c07f9ce67b7287664399bdbf22d7c107caa4bae94"
+    },
+    {
+      "path": "scene3/scene3_r_pick3_via4_to6_long_front/instructions/episode24.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the green slab, pass over the yellow slab, and place it on the blue square label with the long side facing front.",
+          "Pick up the green slab with your right arm, move above the yellow slab, then place it on the blue square label, long side facing front.",
+          "Move the green slab over the yellow slab to the blue square label using your right arm, with the long side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "cf73471d26ef69f9cd5c720c07f9ce67b7287664399bdbf22d7c107caa4bae94"
+    },
+    {
+      "path": "scene3/scene3_r_pick3_via4_to6_long_front/instructions/episode25.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the green slab, pass over the yellow slab, and place it on the blue square label with the long side facing front.",
+          "Pick up the green slab with your right arm, move above the yellow slab, then place it on the blue square label, long side facing front.",
+          "Move the green slab over the yellow slab to the blue square label using your right arm, with the long side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "cf73471d26ef69f9cd5c720c07f9ce67b7287664399bdbf22d7c107caa4bae94"
+    },
+    {
+      "path": "scene3/scene3_r_pick3_via4_to6_long_front/instructions/episode26.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the green slab, pass over the yellow slab, and place it on the blue square label with the long side facing front.",
+          "Pick up the green slab with your right arm, move above the yellow slab, then place it on the blue square label, long side facing front.",
+          "Move the green slab over the yellow slab to the blue square label using your right arm, with the long side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "cf73471d26ef69f9cd5c720c07f9ce67b7287664399bdbf22d7c107caa4bae94"
+    },
+    {
+      "path": "scene3/scene3_r_pick3_via4_to6_long_front/instructions/episode27.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the green slab, pass over the yellow slab, and place it on the blue square label with the long side facing front.",
+          "Pick up the green slab with your right arm, move above the yellow slab, then place it on the blue square label, long side facing front.",
+          "Move the green slab over the yellow slab to the blue square label using your right arm, with the long side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "cf73471d26ef69f9cd5c720c07f9ce67b7287664399bdbf22d7c107caa4bae94"
+    },
+    {
+      "path": "scene3/scene3_r_pick3_via4_to6_long_front/instructions/episode28.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the green slab, pass over the yellow slab, and place it on the blue square label with the long side facing front.",
+          "Pick up the green slab with your right arm, move above the yellow slab, then place it on the blue square label, long side facing front.",
+          "Move the green slab over the yellow slab to the blue square label using your right arm, with the long side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "cf73471d26ef69f9cd5c720c07f9ce67b7287664399bdbf22d7c107caa4bae94"
+    },
+    {
+      "path": "scene3/scene3_r_pick3_via4_to6_long_front/instructions/episode29.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the green slab, pass over the yellow slab, and place it on the blue square label with the long side facing front.",
+          "Pick up the green slab with your right arm, move above the yellow slab, then place it on the blue square label, long side facing front.",
+          "Move the green slab over the yellow slab to the blue square label using your right arm, with the long side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "cf73471d26ef69f9cd5c720c07f9ce67b7287664399bdbf22d7c107caa4bae94"
+    },
+    {
+      "path": "scene3/scene3_r_pick3_via4_to6_long_front/instructions/episode30.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the green slab, pass over the yellow slab, and place it on the blue square label with the long side facing front.",
+          "Pick up the green slab with your right arm, move above the yellow slab, then place it on the blue square label, long side facing front.",
+          "Move the green slab over the yellow slab to the blue square label using your right arm, with the long side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "cf73471d26ef69f9cd5c720c07f9ce67b7287664399bdbf22d7c107caa4bae94"
+    },
+    {
+      "path": "scene3/scene3_r_pick3_via4_to6_long_front/instructions/episode31.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the green slab, pass over the yellow slab, and place it on the blue square label with the long side facing front.",
+          "Pick up the green slab with your right arm, move above the yellow slab, then place it on the blue square label, long side facing front.",
+          "Move the green slab over the yellow slab to the blue square label using your right arm, with the long side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "cf73471d26ef69f9cd5c720c07f9ce67b7287664399bdbf22d7c107caa4bae94"
+    },
+    {
+      "path": "scene3/scene3_r_pick3_via4_to6_long_front/instructions/episode32.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the green slab, pass over the yellow slab, and place it on the blue square label with the long side facing front.",
+          "Pick up the green slab with your right arm, move above the yellow slab, then place it on the blue square label, long side facing front.",
+          "Move the green slab over the yellow slab to the blue square label using your right arm, with the long side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "cf73471d26ef69f9cd5c720c07f9ce67b7287664399bdbf22d7c107caa4bae94"
+    },
+    {
+      "path": "scene3/scene3_r_pick3_via4_to6_long_front/instructions/episode33.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the green slab, pass over the yellow slab, and place it on the blue square label with the long side facing front.",
+          "Pick up the green slab with your right arm, move above the yellow slab, then place it on the blue square label, long side facing front.",
+          "Move the green slab over the yellow slab to the blue square label using your right arm, with the long side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "cf73471d26ef69f9cd5c720c07f9ce67b7287664399bdbf22d7c107caa4bae94"
+    },
+    {
+      "path": "scene3/scene3_r_pick3_via4_to6_long_front/instructions/episode34.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the green slab, pass over the yellow slab, and place it on the blue square label with the long side facing front.",
+          "Pick up the green slab with your right arm, move above the yellow slab, then place it on the blue square label, long side facing front.",
+          "Move the green slab over the yellow slab to the blue square label using your right arm, with the long side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "cf73471d26ef69f9cd5c720c07f9ce67b7287664399bdbf22d7c107caa4bae94"
+    },
+    {
+      "path": "scene3/scene3_r_pick3_via4_to6_long_front/instructions/episode35.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the green slab, pass over the yellow slab, and place it on the blue square label with the long side facing front.",
+          "Pick up the green slab with your right arm, move above the yellow slab, then place it on the blue square label, long side facing front.",
+          "Move the green slab over the yellow slab to the blue square label using your right arm, with the long side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "cf73471d26ef69f9cd5c720c07f9ce67b7287664399bdbf22d7c107caa4bae94"
+    },
+    {
+      "path": "scene3/scene3_r_pick3_via4_to6_long_front/instructions/episode36.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the green slab, pass over the yellow slab, and place it on the blue square label with the long side facing front.",
+          "Pick up the green slab with your right arm, move above the yellow slab, then place it on the blue square label, long side facing front.",
+          "Move the green slab over the yellow slab to the blue square label using your right arm, with the long side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "cf73471d26ef69f9cd5c720c07f9ce67b7287664399bdbf22d7c107caa4bae94"
+    },
+    {
+      "path": "scene3/scene3_r_pick3_via4_to6_long_front/instructions/episode37.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the green slab, pass over the yellow slab, and place it on the blue square label with the long side facing front.",
+          "Pick up the green slab with your right arm, move above the yellow slab, then place it on the blue square label, long side facing front.",
+          "Move the green slab over the yellow slab to the blue square label using your right arm, with the long side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "cf73471d26ef69f9cd5c720c07f9ce67b7287664399bdbf22d7c107caa4bae94"
+    },
+    {
+      "path": "scene3/scene3_r_pick3_via4_to6_long_front/instructions/episode38.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the green slab, pass over the yellow slab, and place it on the blue square label with the long side facing front.",
+          "Pick up the green slab with your right arm, move above the yellow slab, then place it on the blue square label, long side facing front.",
+          "Move the green slab over the yellow slab to the blue square label using your right arm, with the long side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "cf73471d26ef69f9cd5c720c07f9ce67b7287664399bdbf22d7c107caa4bae94"
+    },
+    {
+      "path": "scene3/scene3_r_pick3_via4_to6_long_front/instructions/episode39.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the green slab, pass over the yellow slab, and place it on the blue square label with the long side facing front.",
+          "Pick up the green slab with your right arm, move above the yellow slab, then place it on the blue square label, long side facing front.",
+          "Move the green slab over the yellow slab to the blue square label using your right arm, with the long side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "cf73471d26ef69f9cd5c720c07f9ce67b7287664399bdbf22d7c107caa4bae94"
+    },
+    {
+      "path": "scene3/scene3_r_pick3_via4_to6_long_front/instructions/episode40.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the green slab, pass over the yellow slab, and place it on the blue square label with the long side facing front.",
+          "Pick up the green slab with your right arm, move above the yellow slab, then place it on the blue square label, long side facing front.",
+          "Move the green slab over the yellow slab to the blue square label using your right arm, with the long side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "cf73471d26ef69f9cd5c720c07f9ce67b7287664399bdbf22d7c107caa4bae94"
+    },
+    {
+      "path": "scene3/scene3_r_pick3_via4_to6_long_front/instructions/episode41.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the green slab, pass over the yellow slab, and place it on the blue square label with the long side facing front.",
+          "Pick up the green slab with your right arm, move above the yellow slab, then place it on the blue square label, long side facing front.",
+          "Move the green slab over the yellow slab to the blue square label using your right arm, with the long side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "cf73471d26ef69f9cd5c720c07f9ce67b7287664399bdbf22d7c107caa4bae94"
+    },
+    {
+      "path": "scene3/scene3_r_pick3_via4_to6_long_front/instructions/episode42.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the green slab, pass over the yellow slab, and place it on the blue square label with the long side facing front.",
+          "Pick up the green slab with your right arm, move above the yellow slab, then place it on the blue square label, long side facing front.",
+          "Move the green slab over the yellow slab to the blue square label using your right arm, with the long side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "cf73471d26ef69f9cd5c720c07f9ce67b7287664399bdbf22d7c107caa4bae94"
+    },
+    {
+      "path": "scene3/scene3_r_pick3_via4_to6_long_front/instructions/episode43.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the green slab, pass over the yellow slab, and place it on the blue square label with the long side facing front.",
+          "Pick up the green slab with your right arm, move above the yellow slab, then place it on the blue square label, long side facing front.",
+          "Move the green slab over the yellow slab to the blue square label using your right arm, with the long side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "cf73471d26ef69f9cd5c720c07f9ce67b7287664399bdbf22d7c107caa4bae94"
+    },
+    {
+      "path": "scene3/scene3_r_pick3_via4_to6_long_front/instructions/episode44.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the green slab, pass over the yellow slab, and place it on the blue square label with the long side facing front.",
+          "Pick up the green slab with your right arm, move above the yellow slab, then place it on the blue square label, long side facing front.",
+          "Move the green slab over the yellow slab to the blue square label using your right arm, with the long side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "cf73471d26ef69f9cd5c720c07f9ce67b7287664399bdbf22d7c107caa4bae94"
+    },
+    {
+      "path": "scene3/scene3_r_pick3_via4_to6_long_front/instructions/episode45.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the green slab, pass over the yellow slab, and place it on the blue square label with the long side facing front.",
+          "Pick up the green slab with your right arm, move above the yellow slab, then place it on the blue square label, long side facing front.",
+          "Move the green slab over the yellow slab to the blue square label using your right arm, with the long side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "cf73471d26ef69f9cd5c720c07f9ce67b7287664399bdbf22d7c107caa4bae94"
+    },
+    {
+      "path": "scene3/scene3_r_pick3_via4_to6_long_front/instructions/episode46.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the green slab, pass over the yellow slab, and place it on the blue square label with the long side facing front.",
+          "Pick up the green slab with your right arm, move above the yellow slab, then place it on the blue square label, long side facing front.",
+          "Move the green slab over the yellow slab to the blue square label using your right arm, with the long side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "cf73471d26ef69f9cd5c720c07f9ce67b7287664399bdbf22d7c107caa4bae94"
+    },
+    {
+      "path": "scene3/scene3_r_pick3_via4_to6_long_front/instructions/episode47.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the green slab, pass over the yellow slab, and place it on the blue square label with the long side facing front.",
+          "Pick up the green slab with your right arm, move above the yellow slab, then place it on the blue square label, long side facing front.",
+          "Move the green slab over the yellow slab to the blue square label using your right arm, with the long side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "cf73471d26ef69f9cd5c720c07f9ce67b7287664399bdbf22d7c107caa4bae94"
+    },
+    {
+      "path": "scene3/scene3_r_pick3_via4_to6_long_front/instructions/episode48.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the green slab, pass over the yellow slab, and place it on the blue square label with the long side facing front.",
+          "Pick up the green slab with your right arm, move above the yellow slab, then place it on the blue square label, long side facing front.",
+          "Move the green slab over the yellow slab to the blue square label using your right arm, with the long side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "cf73471d26ef69f9cd5c720c07f9ce67b7287664399bdbf22d7c107caa4bae94"
+    },
+    {
+      "path": "scene3/scene3_r_pick3_via4_to6_long_front/instructions/episode49.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the green slab, pass over the yellow slab, and place it on the blue square label with the long side facing front.",
+          "Pick up the green slab with your right arm, move above the yellow slab, then place it on the blue square label, long side facing front.",
+          "Move the green slab over the yellow slab to the blue square label using your right arm, with the long side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "cf73471d26ef69f9cd5c720c07f9ce67b7287664399bdbf22d7c107caa4bae94"
+    },
+    {
+      "path": "scene3/scene3_r_pick3_via5_to6_short_front/instructions/episode0.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the green slab, pass over the blue slab, and place it on the blue square label with the short side facing front.",
+          "Pick up the green slab with your right arm, move above the blue slab, then place it on the blue square label, short side facing front.",
+          "Move the green slab over the blue slab to the blue square label using your right arm, with the short side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "2aefb64c0035bb666423c8ef87332d231ebb940c68677189b28d2bffffb3ecc8"
+    },
+    {
+      "path": "scene3/scene3_r_pick3_via5_to6_short_front/instructions/episode1.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the green slab, pass over the blue slab, and place it on the blue square label with the short side facing front.",
+          "Pick up the green slab with your right arm, move above the blue slab, then place it on the blue square label, short side facing front.",
+          "Move the green slab over the blue slab to the blue square label using your right arm, with the short side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "2aefb64c0035bb666423c8ef87332d231ebb940c68677189b28d2bffffb3ecc8"
+    },
+    {
+      "path": "scene3/scene3_r_pick3_via5_to6_short_front/instructions/episode2.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the green slab, pass over the blue slab, and place it on the blue square label with the short side facing front.",
+          "Pick up the green slab with your right arm, move above the blue slab, then place it on the blue square label, short side facing front.",
+          "Move the green slab over the blue slab to the blue square label using your right arm, with the short side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "2aefb64c0035bb666423c8ef87332d231ebb940c68677189b28d2bffffb3ecc8"
+    },
+    {
+      "path": "scene3/scene3_r_pick3_via5_to6_short_front/instructions/episode3.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the green slab, pass over the blue slab, and place it on the blue square label with the short side facing front.",
+          "Pick up the green slab with your right arm, move above the blue slab, then place it on the blue square label, short side facing front.",
+          "Move the green slab over the blue slab to the blue square label using your right arm, with the short side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "2aefb64c0035bb666423c8ef87332d231ebb940c68677189b28d2bffffb3ecc8"
+    },
+    {
+      "path": "scene3/scene3_r_pick3_via5_to6_short_front/instructions/episode4.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the green slab, pass over the blue slab, and place it on the blue square label with the short side facing front.",
+          "Pick up the green slab with your right arm, move above the blue slab, then place it on the blue square label, short side facing front.",
+          "Move the green slab over the blue slab to the blue square label using your right arm, with the short side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "2aefb64c0035bb666423c8ef87332d231ebb940c68677189b28d2bffffb3ecc8"
+    },
+    {
+      "path": "scene3/scene3_r_pick3_via5_to6_short_front/instructions/episode5.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the green slab, pass over the blue slab, and place it on the blue square label with the short side facing front.",
+          "Pick up the green slab with your right arm, move above the blue slab, then place it on the blue square label, short side facing front.",
+          "Move the green slab over the blue slab to the blue square label using your right arm, with the short side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "2aefb64c0035bb666423c8ef87332d231ebb940c68677189b28d2bffffb3ecc8"
+    },
+    {
+      "path": "scene3/scene3_r_pick3_via5_to6_short_front/instructions/episode6.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the green slab, pass over the blue slab, and place it on the blue square label with the short side facing front.",
+          "Pick up the green slab with your right arm, move above the blue slab, then place it on the blue square label, short side facing front.",
+          "Move the green slab over the blue slab to the blue square label using your right arm, with the short side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "2aefb64c0035bb666423c8ef87332d231ebb940c68677189b28d2bffffb3ecc8"
+    },
+    {
+      "path": "scene3/scene3_r_pick3_via5_to6_short_front/instructions/episode7.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the green slab, pass over the blue slab, and place it on the blue square label with the short side facing front.",
+          "Pick up the green slab with your right arm, move above the blue slab, then place it on the blue square label, short side facing front.",
+          "Move the green slab over the blue slab to the blue square label using your right arm, with the short side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "2aefb64c0035bb666423c8ef87332d231ebb940c68677189b28d2bffffb3ecc8"
+    },
+    {
+      "path": "scene3/scene3_r_pick3_via5_to6_short_front/instructions/episode8.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the green slab, pass over the blue slab, and place it on the blue square label with the short side facing front.",
+          "Pick up the green slab with your right arm, move above the blue slab, then place it on the blue square label, short side facing front.",
+          "Move the green slab over the blue slab to the blue square label using your right arm, with the short side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "2aefb64c0035bb666423c8ef87332d231ebb940c68677189b28d2bffffb3ecc8"
+    },
+    {
+      "path": "scene3/scene3_r_pick3_via5_to6_short_front/instructions/episode9.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the green slab, pass over the blue slab, and place it on the blue square label with the short side facing front.",
+          "Pick up the green slab with your right arm, move above the blue slab, then place it on the blue square label, short side facing front.",
+          "Move the green slab over the blue slab to the blue square label using your right arm, with the short side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "2aefb64c0035bb666423c8ef87332d231ebb940c68677189b28d2bffffb3ecc8"
+    },
+    {
+      "path": "scene3/scene3_r_pick3_via5_to6_short_front/instructions/episode10.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the green slab, pass over the blue slab, and place it on the blue square label with the short side facing front.",
+          "Pick up the green slab with your right arm, move above the blue slab, then place it on the blue square label, short side facing front.",
+          "Move the green slab over the blue slab to the blue square label using your right arm, with the short side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "2aefb64c0035bb666423c8ef87332d231ebb940c68677189b28d2bffffb3ecc8"
+    },
+    {
+      "path": "scene3/scene3_r_pick3_via5_to6_short_front/instructions/episode11.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the green slab, pass over the blue slab, and place it on the blue square label with the short side facing front.",
+          "Pick up the green slab with your right arm, move above the blue slab, then place it on the blue square label, short side facing front.",
+          "Move the green slab over the blue slab to the blue square label using your right arm, with the short side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "2aefb64c0035bb666423c8ef87332d231ebb940c68677189b28d2bffffb3ecc8"
+    },
+    {
+      "path": "scene3/scene3_r_pick3_via5_to6_short_front/instructions/episode12.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the green slab, pass over the blue slab, and place it on the blue square label with the short side facing front.",
+          "Pick up the green slab with your right arm, move above the blue slab, then place it on the blue square label, short side facing front.",
+          "Move the green slab over the blue slab to the blue square label using your right arm, with the short side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "2aefb64c0035bb666423c8ef87332d231ebb940c68677189b28d2bffffb3ecc8"
+    },
+    {
+      "path": "scene3/scene3_r_pick3_via5_to6_short_front/instructions/episode13.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the green slab, pass over the blue slab, and place it on the blue square label with the short side facing front.",
+          "Pick up the green slab with your right arm, move above the blue slab, then place it on the blue square label, short side facing front.",
+          "Move the green slab over the blue slab to the blue square label using your right arm, with the short side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "2aefb64c0035bb666423c8ef87332d231ebb940c68677189b28d2bffffb3ecc8"
+    },
+    {
+      "path": "scene3/scene3_r_pick3_via5_to6_short_front/instructions/episode14.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the green slab, pass over the blue slab, and place it on the blue square label with the short side facing front.",
+          "Pick up the green slab with your right arm, move above the blue slab, then place it on the blue square label, short side facing front.",
+          "Move the green slab over the blue slab to the blue square label using your right arm, with the short side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "2aefb64c0035bb666423c8ef87332d231ebb940c68677189b28d2bffffb3ecc8"
+    },
+    {
+      "path": "scene3/scene3_r_pick3_via5_to6_short_front/instructions/episode15.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the green slab, pass over the blue slab, and place it on the blue square label with the short side facing front.",
+          "Pick up the green slab with your right arm, move above the blue slab, then place it on the blue square label, short side facing front.",
+          "Move the green slab over the blue slab to the blue square label using your right arm, with the short side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "2aefb64c0035bb666423c8ef87332d231ebb940c68677189b28d2bffffb3ecc8"
+    },
+    {
+      "path": "scene3/scene3_r_pick3_via5_to6_short_front/instructions/episode16.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the green slab, pass over the blue slab, and place it on the blue square label with the short side facing front.",
+          "Pick up the green slab with your right arm, move above the blue slab, then place it on the blue square label, short side facing front.",
+          "Move the green slab over the blue slab to the blue square label using your right arm, with the short side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "2aefb64c0035bb666423c8ef87332d231ebb940c68677189b28d2bffffb3ecc8"
+    },
+    {
+      "path": "scene3/scene3_r_pick3_via5_to6_short_front/instructions/episode17.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the green slab, pass over the blue slab, and place it on the blue square label with the short side facing front.",
+          "Pick up the green slab with your right arm, move above the blue slab, then place it on the blue square label, short side facing front.",
+          "Move the green slab over the blue slab to the blue square label using your right arm, with the short side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "2aefb64c0035bb666423c8ef87332d231ebb940c68677189b28d2bffffb3ecc8"
+    },
+    {
+      "path": "scene3/scene3_r_pick3_via5_to6_short_front/instructions/episode18.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the green slab, pass over the blue slab, and place it on the blue square label with the short side facing front.",
+          "Pick up the green slab with your right arm, move above the blue slab, then place it on the blue square label, short side facing front.",
+          "Move the green slab over the blue slab to the blue square label using your right arm, with the short side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "2aefb64c0035bb666423c8ef87332d231ebb940c68677189b28d2bffffb3ecc8"
+    },
+    {
+      "path": "scene3/scene3_r_pick3_via5_to6_short_front/instructions/episode19.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the green slab, pass over the blue slab, and place it on the blue square label with the short side facing front.",
+          "Pick up the green slab with your right arm, move above the blue slab, then place it on the blue square label, short side facing front.",
+          "Move the green slab over the blue slab to the blue square label using your right arm, with the short side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "2aefb64c0035bb666423c8ef87332d231ebb940c68677189b28d2bffffb3ecc8"
+    },
+    {
+      "path": "scene3/scene3_r_pick3_via5_to6_short_front/instructions/episode20.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the green slab, pass over the blue slab, and place it on the blue square label with the short side facing front.",
+          "Pick up the green slab with your right arm, move above the blue slab, then place it on the blue square label, short side facing front.",
+          "Move the green slab over the blue slab to the blue square label using your right arm, with the short side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "2aefb64c0035bb666423c8ef87332d231ebb940c68677189b28d2bffffb3ecc8"
+    },
+    {
+      "path": "scene3/scene3_r_pick3_via5_to6_short_front/instructions/episode21.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the green slab, pass over the blue slab, and place it on the blue square label with the short side facing front.",
+          "Pick up the green slab with your right arm, move above the blue slab, then place it on the blue square label, short side facing front.",
+          "Move the green slab over the blue slab to the blue square label using your right arm, with the short side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "2aefb64c0035bb666423c8ef87332d231ebb940c68677189b28d2bffffb3ecc8"
+    },
+    {
+      "path": "scene3/scene3_r_pick3_via5_to6_short_front/instructions/episode22.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the green slab, pass over the blue slab, and place it on the blue square label with the short side facing front.",
+          "Pick up the green slab with your right arm, move above the blue slab, then place it on the blue square label, short side facing front.",
+          "Move the green slab over the blue slab to the blue square label using your right arm, with the short side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "2aefb64c0035bb666423c8ef87332d231ebb940c68677189b28d2bffffb3ecc8"
+    },
+    {
+      "path": "scene3/scene3_r_pick3_via5_to6_short_front/instructions/episode23.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the green slab, pass over the blue slab, and place it on the blue square label with the short side facing front.",
+          "Pick up the green slab with your right arm, move above the blue slab, then place it on the blue square label, short side facing front.",
+          "Move the green slab over the blue slab to the blue square label using your right arm, with the short side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "2aefb64c0035bb666423c8ef87332d231ebb940c68677189b28d2bffffb3ecc8"
+    },
+    {
+      "path": "scene3/scene3_r_pick3_via5_to6_short_front/instructions/episode24.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the green slab, pass over the blue slab, and place it on the blue square label with the short side facing front.",
+          "Pick up the green slab with your right arm, move above the blue slab, then place it on the blue square label, short side facing front.",
+          "Move the green slab over the blue slab to the blue square label using your right arm, with the short side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "2aefb64c0035bb666423c8ef87332d231ebb940c68677189b28d2bffffb3ecc8"
+    },
+    {
+      "path": "scene3/scene3_r_pick3_via5_to6_short_front/instructions/episode25.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the green slab, pass over the blue slab, and place it on the blue square label with the short side facing front.",
+          "Pick up the green slab with your right arm, move above the blue slab, then place it on the blue square label, short side facing front.",
+          "Move the green slab over the blue slab to the blue square label using your right arm, with the short side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "2aefb64c0035bb666423c8ef87332d231ebb940c68677189b28d2bffffb3ecc8"
+    },
+    {
+      "path": "scene3/scene3_r_pick3_via5_to6_short_front/instructions/episode26.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the green slab, pass over the blue slab, and place it on the blue square label with the short side facing front.",
+          "Pick up the green slab with your right arm, move above the blue slab, then place it on the blue square label, short side facing front.",
+          "Move the green slab over the blue slab to the blue square label using your right arm, with the short side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "2aefb64c0035bb666423c8ef87332d231ebb940c68677189b28d2bffffb3ecc8"
+    },
+    {
+      "path": "scene3/scene3_r_pick3_via5_to6_short_front/instructions/episode27.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the green slab, pass over the blue slab, and place it on the blue square label with the short side facing front.",
+          "Pick up the green slab with your right arm, move above the blue slab, then place it on the blue square label, short side facing front.",
+          "Move the green slab over the blue slab to the blue square label using your right arm, with the short side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "2aefb64c0035bb666423c8ef87332d231ebb940c68677189b28d2bffffb3ecc8"
+    },
+    {
+      "path": "scene3/scene3_r_pick3_via5_to6_short_front/instructions/episode28.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the green slab, pass over the blue slab, and place it on the blue square label with the short side facing front.",
+          "Pick up the green slab with your right arm, move above the blue slab, then place it on the blue square label, short side facing front.",
+          "Move the green slab over the blue slab to the blue square label using your right arm, with the short side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "2aefb64c0035bb666423c8ef87332d231ebb940c68677189b28d2bffffb3ecc8"
+    },
+    {
+      "path": "scene3/scene3_r_pick3_via5_to6_short_front/instructions/episode29.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the green slab, pass over the blue slab, and place it on the blue square label with the short side facing front.",
+          "Pick up the green slab with your right arm, move above the blue slab, then place it on the blue square label, short side facing front.",
+          "Move the green slab over the blue slab to the blue square label using your right arm, with the short side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "2aefb64c0035bb666423c8ef87332d231ebb940c68677189b28d2bffffb3ecc8"
+    },
+    {
+      "path": "scene3/scene3_r_pick3_via5_to6_short_front/instructions/episode30.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the green slab, pass over the blue slab, and place it on the blue square label with the short side facing front.",
+          "Pick up the green slab with your right arm, move above the blue slab, then place it on the blue square label, short side facing front.",
+          "Move the green slab over the blue slab to the blue square label using your right arm, with the short side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "2aefb64c0035bb666423c8ef87332d231ebb940c68677189b28d2bffffb3ecc8"
+    },
+    {
+      "path": "scene3/scene3_r_pick3_via5_to6_short_front/instructions/episode31.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the green slab, pass over the blue slab, and place it on the blue square label with the short side facing front.",
+          "Pick up the green slab with your right arm, move above the blue slab, then place it on the blue square label, short side facing front.",
+          "Move the green slab over the blue slab to the blue square label using your right arm, with the short side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "2aefb64c0035bb666423c8ef87332d231ebb940c68677189b28d2bffffb3ecc8"
+    },
+    {
+      "path": "scene3/scene3_r_pick3_via5_to6_short_front/instructions/episode32.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the green slab, pass over the blue slab, and place it on the blue square label with the short side facing front.",
+          "Pick up the green slab with your right arm, move above the blue slab, then place it on the blue square label, short side facing front.",
+          "Move the green slab over the blue slab to the blue square label using your right arm, with the short side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "2aefb64c0035bb666423c8ef87332d231ebb940c68677189b28d2bffffb3ecc8"
+    },
+    {
+      "path": "scene3/scene3_r_pick3_via5_to6_short_front/instructions/episode33.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the green slab, pass over the blue slab, and place it on the blue square label with the short side facing front.",
+          "Pick up the green slab with your right arm, move above the blue slab, then place it on the blue square label, short side facing front.",
+          "Move the green slab over the blue slab to the blue square label using your right arm, with the short side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "2aefb64c0035bb666423c8ef87332d231ebb940c68677189b28d2bffffb3ecc8"
+    },
+    {
+      "path": "scene3/scene3_r_pick3_via5_to6_short_front/instructions/episode34.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the green slab, pass over the blue slab, and place it on the blue square label with the short side facing front.",
+          "Pick up the green slab with your right arm, move above the blue slab, then place it on the blue square label, short side facing front.",
+          "Move the green slab over the blue slab to the blue square label using your right arm, with the short side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "2aefb64c0035bb666423c8ef87332d231ebb940c68677189b28d2bffffb3ecc8"
+    },
+    {
+      "path": "scene3/scene3_r_pick3_via5_to6_short_front/instructions/episode35.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the green slab, pass over the blue slab, and place it on the blue square label with the short side facing front.",
+          "Pick up the green slab with your right arm, move above the blue slab, then place it on the blue square label, short side facing front.",
+          "Move the green slab over the blue slab to the blue square label using your right arm, with the short side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "2aefb64c0035bb666423c8ef87332d231ebb940c68677189b28d2bffffb3ecc8"
+    },
+    {
+      "path": "scene3/scene3_r_pick3_via5_to6_short_front/instructions/episode36.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the green slab, pass over the blue slab, and place it on the blue square label with the short side facing front.",
+          "Pick up the green slab with your right arm, move above the blue slab, then place it on the blue square label, short side facing front.",
+          "Move the green slab over the blue slab to the blue square label using your right arm, with the short side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "2aefb64c0035bb666423c8ef87332d231ebb940c68677189b28d2bffffb3ecc8"
+    },
+    {
+      "path": "scene3/scene3_r_pick3_via5_to6_short_front/instructions/episode37.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the green slab, pass over the blue slab, and place it on the blue square label with the short side facing front.",
+          "Pick up the green slab with your right arm, move above the blue slab, then place it on the blue square label, short side facing front.",
+          "Move the green slab over the blue slab to the blue square label using your right arm, with the short side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "2aefb64c0035bb666423c8ef87332d231ebb940c68677189b28d2bffffb3ecc8"
+    },
+    {
+      "path": "scene3/scene3_r_pick3_via5_to6_short_front/instructions/episode38.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the green slab, pass over the blue slab, and place it on the blue square label with the short side facing front.",
+          "Pick up the green slab with your right arm, move above the blue slab, then place it on the blue square label, short side facing front.",
+          "Move the green slab over the blue slab to the blue square label using your right arm, with the short side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "2aefb64c0035bb666423c8ef87332d231ebb940c68677189b28d2bffffb3ecc8"
+    },
+    {
+      "path": "scene3/scene3_r_pick3_via5_to6_short_front/instructions/episode39.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the green slab, pass over the blue slab, and place it on the blue square label with the short side facing front.",
+          "Pick up the green slab with your right arm, move above the blue slab, then place it on the blue square label, short side facing front.",
+          "Move the green slab over the blue slab to the blue square label using your right arm, with the short side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "2aefb64c0035bb666423c8ef87332d231ebb940c68677189b28d2bffffb3ecc8"
+    },
+    {
+      "path": "scene3/scene3_r_pick3_via5_to6_short_front/instructions/episode40.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the green slab, pass over the blue slab, and place it on the blue square label with the short side facing front.",
+          "Pick up the green slab with your right arm, move above the blue slab, then place it on the blue square label, short side facing front.",
+          "Move the green slab over the blue slab to the blue square label using your right arm, with the short side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "2aefb64c0035bb666423c8ef87332d231ebb940c68677189b28d2bffffb3ecc8"
+    },
+    {
+      "path": "scene3/scene3_r_pick3_via5_to6_short_front/instructions/episode41.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the green slab, pass over the blue slab, and place it on the blue square label with the short side facing front.",
+          "Pick up the green slab with your right arm, move above the blue slab, then place it on the blue square label, short side facing front.",
+          "Move the green slab over the blue slab to the blue square label using your right arm, with the short side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "2aefb64c0035bb666423c8ef87332d231ebb940c68677189b28d2bffffb3ecc8"
+    },
+    {
+      "path": "scene3/scene3_r_pick3_via5_to6_short_front/instructions/episode42.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the green slab, pass over the blue slab, and place it on the blue square label with the short side facing front.",
+          "Pick up the green slab with your right arm, move above the blue slab, then place it on the blue square label, short side facing front.",
+          "Move the green slab over the blue slab to the blue square label using your right arm, with the short side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "2aefb64c0035bb666423c8ef87332d231ebb940c68677189b28d2bffffb3ecc8"
+    },
+    {
+      "path": "scene3/scene3_r_pick3_via5_to6_short_front/instructions/episode43.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the green slab, pass over the blue slab, and place it on the blue square label with the short side facing front.",
+          "Pick up the green slab with your right arm, move above the blue slab, then place it on the blue square label, short side facing front.",
+          "Move the green slab over the blue slab to the blue square label using your right arm, with the short side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "2aefb64c0035bb666423c8ef87332d231ebb940c68677189b28d2bffffb3ecc8"
+    },
+    {
+      "path": "scene3/scene3_r_pick3_via5_to6_short_front/instructions/episode44.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the green slab, pass over the blue slab, and place it on the blue square label with the short side facing front.",
+          "Pick up the green slab with your right arm, move above the blue slab, then place it on the blue square label, short side facing front.",
+          "Move the green slab over the blue slab to the blue square label using your right arm, with the short side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "2aefb64c0035bb666423c8ef87332d231ebb940c68677189b28d2bffffb3ecc8"
+    },
+    {
+      "path": "scene3/scene3_r_pick3_via5_to6_short_front/instructions/episode45.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the green slab, pass over the blue slab, and place it on the blue square label with the short side facing front.",
+          "Pick up the green slab with your right arm, move above the blue slab, then place it on the blue square label, short side facing front.",
+          "Move the green slab over the blue slab to the blue square label using your right arm, with the short side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "2aefb64c0035bb666423c8ef87332d231ebb940c68677189b28d2bffffb3ecc8"
+    },
+    {
+      "path": "scene3/scene3_r_pick3_via5_to6_short_front/instructions/episode46.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the green slab, pass over the blue slab, and place it on the blue square label with the short side facing front.",
+          "Pick up the green slab with your right arm, move above the blue slab, then place it on the blue square label, short side facing front.",
+          "Move the green slab over the blue slab to the blue square label using your right arm, with the short side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "2aefb64c0035bb666423c8ef87332d231ebb940c68677189b28d2bffffb3ecc8"
+    },
+    {
+      "path": "scene3/scene3_r_pick3_via5_to6_short_front/instructions/episode47.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the green slab, pass over the blue slab, and place it on the blue square label with the short side facing front.",
+          "Pick up the green slab with your right arm, move above the blue slab, then place it on the blue square label, short side facing front.",
+          "Move the green slab over the blue slab to the blue square label using your right arm, with the short side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "2aefb64c0035bb666423c8ef87332d231ebb940c68677189b28d2bffffb3ecc8"
+    },
+    {
+      "path": "scene3/scene3_r_pick3_via5_to6_short_front/instructions/episode48.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the green slab, pass over the blue slab, and place it on the blue square label with the short side facing front.",
+          "Pick up the green slab with your right arm, move above the blue slab, then place it on the blue square label, short side facing front.",
+          "Move the green slab over the blue slab to the blue square label using your right arm, with the short side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "2aefb64c0035bb666423c8ef87332d231ebb940c68677189b28d2bffffb3ecc8"
+    },
+    {
+      "path": "scene3/scene3_r_pick3_via5_to6_short_front/instructions/episode49.json",
+      "value": {
+        "seen": [
+          "Use your right arm to pick up the green slab, pass over the blue slab, and place it on the blue square label with the short side facing front.",
+          "Pick up the green slab with your right arm, move above the blue slab, then place it on the blue square label, short side facing front.",
+          "Move the green slab over the blue slab to the blue square label using your right arm, with the short side facing front."
+        ],
+        "unseen": []
+      },
+      "sha256": "2aefb64c0035bb666423c8ef87332d231ebb940c68677189b28d2bffffb3ecc8"
+    }
+  ]
+}

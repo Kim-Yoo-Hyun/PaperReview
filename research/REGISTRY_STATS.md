@@ -1,97 +1,106 @@
 # Registry Statistics
 
-- Generated: 2026-09-04 KST
+- Generated: 2026-10-23 KST
 - Source: [papers.json](../work/sources/papers.json)
 - This is a generated diagnostic view; edit the manifest, tracker, or tier generator instead.
 
 ## Snapshot
 
-- Papers: **950**
-- Resources in the combined view: **439**
+- Papers: **1037**
+- Resources in the combined view: **521**
 - Curated relation edges: **49**
 - Papers with outgoing relations: **40**
 - Papers participating in a relation: **60**
-- Structured evaluation profiles: **950**
-- Reproducibility profiles: **950**
-- Lineage coverage profiles: **950**
+- Structured evaluation profiles: **1037**
+- Reproducibility profiles: **1037**
+- Lineage coverage profiles: **1037**
 - Papers with explicit trial/seed cues: **248**
-- Papers without DOI/arXiv/OpenReview identifier: **343**
+- Papers without DOI/arXiv/OpenReview identifier: **357**
 
 ## Tier
 
 | Value | Count |
 |---|---:|
-| REFERENCE | 397 |
+| REFERENCE | 473 |
+| NEXT | 275 |
 | ARCHIVE | 242 |
-| NEXT | 234 |
-| CORE | 77 |
+| CORE | 47 |
 
 ## Evidence level
 
 | Value | Count |
 |---|---:|
 | FULL_TEXT_CHECKED | 950 |
+| ABSTRACT_CHECKED | 87 |
 
 ## Reading status (intensive set)
 
 | Value | Count |
 |---|---:|
-| UNREAD | 306 |
-| READ | 5 |
+| UNREAD | 321 |
+| READ | 1 |
+
+## Reading status (inactive history; excluded from intensive denominator)
+
+| Value | Count |
+|---|---:|
+| UNREAD | 43 |
+| READ | 4 |
 
 ## Curation rationale status
 
 | Value | Count |
 |---|---:|
-| recorded | 950 |
+| recorded | 1037 |
 
 ## Curation roles
 
 | Value | Count |
 |---|---:|
-| method | 750 |
-| foundation | 110 |
-| benchmark_or_dataset | 68 |
-| system | 22 |
+| method | 819 |
+| foundation | 114 |
+| benchmark_or_dataset | 74 |
+| system | 30 |
 
 ## Publication kind
 
 | Value | Count |
 |---|---:|
-| conference | 858 |
-| journal | 63 |
-| preprint | 24 |
+| conference | 914 |
+| journal | 67 |
+| preprint | 49 |
 | technical_report | 4 |
-| workshop | 1 |
+| workshop | 2 |
+| other | 1 |
 
 ## Identifier status
 
 | Value | Count |
 |---|---:|
-| identified | 607 |
-| source_only | 343 |
+| identified | 680 |
+| source_only | 357 |
 
 ## Primary source scope
 
 | Value | Count |
 |---|---:|
-| paper_specific | 907 |
+| paper_specific | 994 |
 | venue_index | 43 |
 
 ## Code status
 
 | Value | Count |
 |---|---:|
-| not_identified | 537 |
-| project_only | 277 |
-| released | 110 |
-| not_released | 26 |
+| not_identified | 566 |
+| project_only | 296 |
+| released | 142 |
+| not_released | 33 |
 
 ## Data status
 
 | Value | Count |
 |---|---:|
-| not_identified | 783 |
+| not_identified | 870 |
 | not_applicable | 102 |
 | released | 63 |
 | not_released | 2 |
@@ -103,6 +112,7 @@
 | EMPIRICAL / REAL-ROBOT OR HARDWARE | 448 |
 | EMPIRICAL / SOURCE-REPORTED EVALUATION | 274 |
 | SYSTEM / EVALUATION SCOPE UNRESOLVED | 95 |
+| not_recorded | 87 |
 | BENCHMARK / DATASET | 69 |
 | EMPIRICAL / SIMULATION | 64 |
 
@@ -113,6 +123,7 @@
 | real_robot | 448 |
 | source_reported | 274 |
 | scope_unresolved | 95 |
+| not_recorded | 87 |
 | benchmark_or_dataset | 69 |
 | simulation | 64 |
 
@@ -127,27 +138,31 @@
 | split_or_generalization=reported | 928 |
 | failure_cases=reported | 928 |
 | ablations=reported | 921 |
-| trials_or_seeds=not_recorded | 702 |
+| trials_or_seeds=not_recorded | 789 |
 | trials_or_seeds=reported | 248 |
+| split_or_generalization=not_recorded | 109 |
+| failure_cases=not_recorded | 109 |
+| dataset_or_benchmark=not_recorded | 88 |
+| metrics=not_recorded | 87 |
+| baselines=not_recorded | 87 |
+| ablations=not_recorded | 87 |
+| statistics=not_recorded | 87 |
 | ablations=not_reported | 29 |
-| split_or_generalization=not_recorded | 22 |
-| failure_cases=not_recorded | 22 |
 | baselines=not_reported | 10 |
 | statistics=not_reported | 9 |
-| dataset_or_benchmark=not_recorded | 1 |
 | metrics=not_reported | 1 |
 
 ## Reproducibility profile
 
 | Value | Count |
 |---|---:|
-| metadata_audited | 950 |
+| metadata_audited | 1037 |
 
 ## Checkpoint status
 
 | Value | Count |
 |---|---:|
-| not_recorded | 943 |
+| not_recorded | 1030 |
 | reported | 7 |
 
 ## Configuration status
@@ -155,25 +170,27 @@
 | Value | Count |
 |---|---:|
 | reported | 950 |
+| not_recorded | 87 |
 
 ## Environment status
 
 | Value | Count |
 |---|---:|
 | reported | 950 |
+| not_recorded | 87 |
 
 ## Run-condition status
 
 | Value | Count |
 |---|---:|
 | reported | 941 |
-| not_recorded | 9 |
+| not_recorded | 96 |
 
 ## Lineage coverage status
 
 | Value | Count |
 |---|---:|
-| no_curated_edge_recorded | 622 |
+| no_curated_edge_recorded | 709 |
 | candidate_only | 268 |
 | curated_edges | 60 |
 
@@ -268,7 +285,7 @@ The manifest is the source of truth; this table is a compact human-readable edge
 
 - `reading_status` is user-controlled and is intentionally independent from `evidence_level`.
 - Facets are curation cues for filtering; exact task, split, metric, and failure claims remain in the paper notes.
-- Evaluation profiles expose body-derived section cues and raw trial/seed evidence; they do not replace paper-specific protocol verification.
+- Evaluation profiles expose note-derived cues within each paper's recorded evidence scope. Abstract/project-only notes are not full-text protocol checks; profile coverage does not imply verified experiments.
 - `benchmark_catalog.json` and `metric_catalog.json` remain cue-only navigation inputs; benchmark and metric cue lists in each profile retain that label.
 - Reproducibility profiles distinguish manifest links from explicit note cues; a code/project URL does not prove executable reproduction.
 - Lineage profiles cover every registry paper. Curated relations remain selective; queue adjacency and legacy-summary matches are non-relational candidates, not citation facts.

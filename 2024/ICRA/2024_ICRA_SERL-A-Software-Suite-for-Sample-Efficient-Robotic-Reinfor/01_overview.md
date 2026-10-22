@@ -9,7 +9,7 @@
 - Year/Venue: 2024 / ICRA
 - Authors: not duplicated here when not verified in the registry source
 - Primary track: RL, IL, offline learning, and robot data
-- Tier: NEXT
+- Tier: CORE
 - Tags: Robotics, Reinforcement Learning, real-world RL, sample efficiency, human demonstrations, reset-free learning
 - Official paper: https://ieeexplore.ieee.org/document/10610040/
 - Full-text retrieval: https://arxiv.org/pdf/2401.16013

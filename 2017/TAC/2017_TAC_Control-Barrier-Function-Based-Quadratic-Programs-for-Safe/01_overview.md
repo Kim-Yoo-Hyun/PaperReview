@@ -9,7 +9,7 @@
 - Year/Venue: 2017 / TAC
 - Authors: not duplicated here when not verified in the registry source
 - Primary track: World models, safety, uncertainty, and recovery
-- Tier: CORE
+- Tier: NEXT
 - Tags: Robotics, control barrier function, safety-critical control, quadratic programming
 - Official paper: https://arxiv.org/abs/1609.06408
 - Full-text retrieval: https://arxiv.org/pdf/1609.06408

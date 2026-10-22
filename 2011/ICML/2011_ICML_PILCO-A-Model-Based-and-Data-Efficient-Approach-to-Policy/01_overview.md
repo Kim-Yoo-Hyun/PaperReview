@@ -9,7 +9,7 @@
 - Year/Venue: 2011 / ICML
 - Authors: not duplicated here when not verified in the registry source
 - Primary track: RL, IL, offline learning, and robot data
-- Tier: CORE
+- Tier: REFERENCE
 - Tags: Robotics, Reinforcement Learning, model-based RL, Gaussian Process
 - Official paper: https://www.deisenroth.cc/publication/deisenroth-2011-c/
 - Full-text retrieval: https://www.deisenroth.cc/publication/deisenroth-2011-c/

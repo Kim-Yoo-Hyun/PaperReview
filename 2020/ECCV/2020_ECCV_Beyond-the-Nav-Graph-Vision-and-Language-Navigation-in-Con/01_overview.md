@@ -9,7 +9,7 @@
 - Year/Venue: 2020 / ECCV
 - Authors: not duplicated here when not verified in the registry source
 - Primary track: Robotics-enabling 3D perception
-- Tier: REFERENCE
+- Tier: CORE
 - Tags: Vision-Language Navigation, Robotics, Navigation, Benchmark
 - Official paper: https://arxiv.org/abs/2004.02857
 - Full-text retrieval: https://arxiv.org/pdf/2004.02857

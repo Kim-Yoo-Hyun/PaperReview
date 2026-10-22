@@ -9,7 +9,7 @@
 - Year/Venue: 1998 / Technical Report
 - Authors: not duplicated here when not verified in the registry source
 - Primary track: Planning and control
-- Tier: CORE
+- Tier: NEXT
 - Tags: Robotics, motion planning, RRT, kinodynamic planning
 - Official paper: https://lavalle.pl/rrtpubs.html
 - Full-text retrieval: https://lavalle.pl/papers/Lav98c.pdf

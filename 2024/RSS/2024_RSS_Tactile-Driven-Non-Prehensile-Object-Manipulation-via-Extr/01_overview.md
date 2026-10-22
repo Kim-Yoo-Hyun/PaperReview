@@ -9,7 +9,7 @@
 - Year/Venue: 2024 / RSS
 - Authors: not duplicated here when not verified in the registry source
 - Primary track: Manipulation, contact, tactile, and dexterity
-- Tier: CORE
+- Tier: REFERENCE
 - Tags: Robotics, contact-rich manipulation, tactile sensing, non-prehensile manipulation
 - Official paper: https://www.roboticsproceedings.org/rss20/p135.html
 - Full-text retrieval: https://www.roboticsproceedings.org/rss20/p135.pdf

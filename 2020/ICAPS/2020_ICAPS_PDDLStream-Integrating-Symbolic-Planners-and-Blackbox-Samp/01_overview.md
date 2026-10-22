@@ -9,7 +9,7 @@
 - Year/Venue: 2020 / ICAPS
 - Authors: not duplicated here when not verified in the registry source
 - Primary track: Planning and control
-- Tier: CORE
+- Tier: NEXT
 - Tags: Robotics, task and motion planning, symbolic planning, sampling, manipulation planning
 - Official paper: https://ojs.aaai.org/index.php/ICAPS/article/view/6739
 - Full-text retrieval: https://ojs.aaai.org/index.php/ICAPS/article/download/6739/6593

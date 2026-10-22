@@ -9,7 +9,7 @@
 - Year/Venue: 2021 / ACM Transactions on Graphics
 - Authors: not duplicated here when not verified in the registry source
 - Primary track: Locomotion, whole-body, mobile manipulation, and humanoids
-- Tier: CORE
+- Tier: REFERENCE
 - Tags: Robotics, humanoid, Reinforcement Learning, motion imitation, whole-body control
 - Official paper: https://doi.org/10.1145/3450626.3459670
 - Full-text retrieval: https://doi.org/10.1145/3450626.3459670

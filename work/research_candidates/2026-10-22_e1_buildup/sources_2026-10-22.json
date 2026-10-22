@@ -1,0 +1,651 @@
+{
+  "reviewed_on": "2026-10-22",
+  "purpose": "public text identity and static review, not execution evidence",
+  "payload_policy": "No models, physical trajectories, images, videos or local PDFs stored; public text bodies read in memory; only metadata/hashes saved",
+  "summary": {
+    "request_records": 56,
+    "unique_requested_urls": 47,
+    "latest_successful_unique_urls": 46,
+    "unique_success_response_bytes": 9160329,
+    "failed_attempts": 2
+  },
+  "requests": [
+    {
+      "url": "https://api.github.com/repos/ZhiyingDu/HiMoE-VLA/commits/HEAD",
+      "resolved_url": "https://api.github.com/repos/ZhiyingDu/HiMoE-VLA/commits/HEAD",
+      "status": 200,
+      "content_type": "application/json; charset=utf-8",
+      "bytes": 4905,
+      "sha256": "aa03e06d3ce764ed396fba7460d7bc0024f4fdc2ecd6009d1cf59e16d30164cb",
+      "scope": "Repository revision for static source audit",
+      "reviewed_on": "2026-10-22"
+    },
+    {
+      "url": "https://api.github.com/repos/ZhiyingDu/HiMoE-VLA/git/trees/2a2c063dc5cf1159c54d7355af774876a58fa843?recursive=1",
+      "resolved_url": "https://api.github.com/repos/ZhiyingDu/HiMoE-VLA/git/trees/2a2c063dc5cf1159c54d7355af774876a58fa843?recursive=1",
+      "status": 200,
+      "content_type": "application/json; charset=utf-8",
+      "bytes": 99275,
+      "sha256": "60bf3c4f86470d4f04ddf27510dd24e357e464dfd91411e4d90f813a9910fb9b",
+      "scope": "Source tree metadata only",
+      "reviewed_on": "2026-10-22"
+    },
+    {
+      "url": "https://api.github.com/repos/BeingBeyond/Rethink_VLA/commits/HEAD",
+      "resolved_url": "https://api.github.com/repos/BeingBeyond/Rethink_VLA/commits/HEAD",
+      "status": 200,
+      "content_type": "application/json; charset=utf-8",
+      "bytes": 903543,
+      "sha256": "b00c32f0e98503cf0e14389e829fc7b6975445b801aad50fdaa345d3172d1bc3",
+      "scope": "Repository revision for static source audit",
+      "reviewed_on": "2026-10-22"
+    },
+    {
+      "url": "https://api.github.com/repos/BeingBeyond/Rethink_VLA/git/trees/d3739abda923ffddaf01d6d8d74bf3d439068106?recursive=1",
+      "resolved_url": "https://api.github.com/repos/BeingBeyond/Rethink_VLA/git/trees/d3739abda923ffddaf01d6d8d74bf3d439068106?recursive=1",
+      "status": 200,
+      "content_type": "application/json; charset=utf-8",
+      "bytes": 21594,
+      "sha256": "8acd48a1da656706d47123702153c40475aca9598b7e2f28b97af6fd343479a8",
+      "scope": "Source tree metadata only",
+      "reviewed_on": "2026-10-22"
+    },
+    {
+      "url": "https://api.github.com/repos/Agentic-Intelligence-Lab/ContinualVLA/commits/HEAD",
+      "resolved_url": "https://api.github.com/repos/Agentic-Intelligence-Lab/ContinualVLA/commits/HEAD",
+      "status": 200,
+      "content_type": "application/json; charset=utf-8",
+      "bytes": 5892,
+      "sha256": "043021330af1f0d6ccda159e0234978c0955834281fc46420eaffd7c468cd2c4",
+      "scope": "Repository revision for static source audit",
+      "reviewed_on": "2026-10-22"
+    },
+    {
+      "url": "https://api.github.com/repos/Agentic-Intelligence-Lab/ContinualVLA/git/trees/d84ed7a811f95218e79ac5f0906465147ad7e1e3?recursive=1",
+      "resolved_url": "https://api.github.com/repos/Agentic-Intelligence-Lab/ContinualVLA/git/trees/d84ed7a811f95218e79ac5f0906465147ad7e1e3?recursive=1",
+      "status": 200,
+      "content_type": "application/json; charset=utf-8",
+      "bytes": 79061,
+      "sha256": "1aac70ab013c6e6d82c18ad2c2a693c34797e69dc4178dbc5b2e2bf9693ea4cb",
+      "scope": "Source tree metadata only",
+      "reviewed_on": "2026-10-22"
+    },
+    {
+      "url": "https://api.github.com/repos/lihzha/lap/commits/HEAD",
+      "resolved_url": "https://api.github.com/repos/lihzha/lap/commits/HEAD",
+      "status": 200,
+      "content_type": "application/json; charset=utf-8",
+      "bytes": 12897,
+      "sha256": "2ec50a7ec806d9b731c4fb6ad839e04db992a83259221e29e1e63a5c4e168de0",
+      "scope": "Repository revision for static source audit",
+      "reviewed_on": "2026-10-22"
+    },
+    {
+      "url": "https://api.github.com/repos/lihzha/lap/git/trees/3958d1466d5b92445b67de7d4202c19608ad4d56?recursive=1",
+      "resolved_url": "https://api.github.com/repos/lihzha/lap/git/trees/3958d1466d5b92445b67de7d4202c19608ad4d56?recursive=1",
+      "status": 200,
+      "content_type": "application/json; charset=utf-8",
+      "bytes": 28412,
+      "sha256": "eab6c44f022a5b8697e7c2ceb62da5ae259ad2092a2e3de1e850e1ab90b37e5f",
+      "scope": "Source tree metadata only",
+      "reviewed_on": "2026-10-22"
+    },
+    {
+      "url": "https://api.github.com/repos/learnsyslab/clare/commits/HEAD",
+      "resolved_url": "https://api.github.com/repos/learnsyslab/clare/commits/HEAD",
+      "status": 200,
+      "content_type": "application/json; charset=utf-8",
+      "bytes": 5372,
+      "sha256": "49558cd13cd572f7505135133a2fe6426b54844d047ca68bf4a4fe8c9054d9b5",
+      "scope": "Repository revision for static source audit",
+      "reviewed_on": "2026-10-22"
+    },
+    {
+      "url": "https://api.github.com/repos/learnsyslab/clare/git/trees/ecb6600dd4052bffd3b78a961da644d191083801?recursive=1",
+      "resolved_url": "https://api.github.com/repos/learnsyslab/clare/git/trees/ecb6600dd4052bffd3b78a961da644d191083801?recursive=1",
+      "status": 200,
+      "content_type": "application/json; charset=utf-8",
+      "bytes": 325927,
+      "sha256": "04b43c005623f5c67457fec53ecee92635c1925a4a65fd3d1094aa24a4ee18af",
+      "scope": "Source tree metadata only",
+      "reviewed_on": "2026-10-22"
+    },
+    {
+      "url": "https://api.github.com/repos/rh20t/rh20t_api/commits/HEAD",
+      "resolved_url": "https://api.github.com/repos/rh20t/rh20t_api/commits/HEAD",
+      "status": 200,
+      "content_type": "application/json; charset=utf-8",
+      "bytes": 9243,
+      "sha256": "0af3a134cba2000212113b632d7ea4d94eb34e6c1ff488df1d30960b78a1c2db",
+      "scope": "pin public code revision",
+      "reviewed_on": "2026-10-22"
+    },
+    {
+      "url": "https://api.github.com/repos/rh20t/rh20t_api/git/trees/aa3124434729ed622109a29b2cbb9f3bbb1c5eeb?recursive=1",
+      "resolved_url": "https://api.github.com/repos/rh20t/rh20t_api/git/trees/aa3124434729ed622109a29b2cbb9f3bbb1c5eeb?recursive=1",
+      "status": 200,
+      "content_type": "application/json; charset=utf-8",
+      "bytes": 34433,
+      "sha256": "7f71bcd894cc7374847d8d1d74ff272ae4d0012e3c970cf9f73a5b18adca04bd",
+      "scope": "public source path discovery",
+      "reviewed_on": "2026-10-22"
+    },
+    {
+      "url": "https://api.github.com/repos/Open-X-Humanoid/RoboMIND-dataset-utils/commits/HEAD",
+      "resolved_url": "https://api.github.com/repos/Open-X-Humanoid/RoboMIND-dataset-utils/commits/HEAD",
+      "status": 200,
+      "content_type": "application/json; charset=utf-8",
+      "bytes": 16902,
+      "sha256": "c21a68c196b01ecc1af417adf632e32f3ae62a9d41b293869d51e0cdbf8aa8b9",
+      "scope": "pin public code revision",
+      "reviewed_on": "2026-10-22"
+    },
+    {
+      "url": "https://api.github.com/repos/Open-X-Humanoid/RoboMIND-dataset-utils/git/trees/77d7b311cbf2f16624c941f46b2a75042858ff06?recursive=1",
+      "resolved_url": "https://api.github.com/repos/Open-X-Humanoid/RoboMIND-dataset-utils/git/trees/77d7b311cbf2f16624c941f46b2a75042858ff06?recursive=1",
+      "status": 200,
+      "content_type": "application/json; charset=utf-8",
+      "bytes": 10681,
+      "sha256": "156556a0b675587780054f460bc5c95ff325466af5ca3dc5cef254ce9c1f101c",
+      "scope": "public source path discovery",
+      "reviewed_on": "2026-10-22"
+    },
+    {
+      "url": "https://api.github.com/repos/x-humanoid-robomind/x-humanoid-robomind.github.io/commits/HEAD",
+      "resolved_url": "https://api.github.com/repos/x-humanoid-robomind/x-humanoid-robomind.github.io/commits/HEAD",
+      "status": 200,
+      "content_type": "application/json; charset=utf-8",
+      "bytes": 6166,
+      "sha256": "03132ba939682e69f166f9cf4a83a597ae3eb4698935d15af7bdd3795e05e51d",
+      "scope": "pin public code revision",
+      "reviewed_on": "2026-10-22"
+    },
+    {
+      "url": "https://api.github.com/repos/x-humanoid-robomind/x-humanoid-robomind.github.io/git/trees/28ede3eb1bc8a051be76e560a831fe3f0c32319f?recursive=1",
+      "resolved_url": "https://api.github.com/repos/x-humanoid-robomind/x-humanoid-robomind.github.io/git/trees/28ede3eb1bc8a051be76e560a831fe3f0c32319f?recursive=1",
+      "status": 200,
+      "content_type": "application/json; charset=utf-8",
+      "bytes": 25909,
+      "sha256": "c024f7f728ee6329f9ea9f45e304646e337915d11f5d9db38b5e947f2ca9a8ae",
+      "scope": "public source path discovery",
+      "reviewed_on": "2026-10-22"
+    },
+    {
+      "url": "https://api.github.com/repos/optimass/MaximallyInterferedRetrieval/commits/HEAD",
+      "status": 404,
+      "scope": "pin public code revision",
+      "reviewed_on": "2026-10-22"
+    },
+    {
+      "url": "https://robot-adaptation.github.io/MemoryAnchors/",
+      "resolved_url": "https://robot-adaptation.github.io/MemoryAnchors/",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 138057,
+      "sha256": "090c76d9ba978aaffd8c30385b0b4a42722e9767d48a50b54a562e93587a029f",
+      "scope": "official release links, no media fetched",
+      "reviewed_on": "2026-10-22"
+    },
+    {
+      "url": "https://haeone.site/space-website/",
+      "resolved_url": "https://haeone.site/space-website/",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 39687,
+      "sha256": "f8447143ffbd27d9e2663f9759b7f313fb190e2728342988f428c3069be169d8",
+      "scope": "official release links, no media fetched",
+      "reviewed_on": "2026-10-22"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/Agentic-Intelligence-Lab/ContinualVLA/d84ed7a811f95218e79ac5f0906465147ad7e1e3/src/openpi/training/replay_buffer.py",
+      "resolved_url": "https://raw.githubusercontent.com/Agentic-Intelligence-Lab/ContinualVLA/d84ed7a811f95218e79ac5f0906465147ad7e1e3/src/openpi/training/replay_buffer.py",
+      "status": 200,
+      "content_type": "text/plain; charset=utf-8",
+      "bytes": 8448,
+      "sha256": "330f0fcac94a0df74f8b1eee8b8e9639987806c81e17aaa98aba7244d410b561",
+      "scope": "read-only action and replay interface audit",
+      "reviewed_on": "2026-10-22"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/Agentic-Intelligence-Lab/ContinualVLA/d84ed7a811f95218e79ac5f0906465147ad7e1e3/scripts/build_replay_buffers.py",
+      "resolved_url": "https://raw.githubusercontent.com/Agentic-Intelligence-Lab/ContinualVLA/d84ed7a811f95218e79ac5f0906465147ad7e1e3/scripts/build_replay_buffers.py",
+      "status": 200,
+      "content_type": "text/plain; charset=utf-8",
+      "bytes": 9060,
+      "sha256": "9e63e9db83ca0f5c40fab4d5d4b6e7a4410a7ab2cef8ab02e3a79eebb879e835",
+      "scope": "read-only action and replay interface audit",
+      "reviewed_on": "2026-10-22"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/BeingBeyond/Rethink_VLA/d3739abda923ffddaf01d6d8d74bf3d439068106/src/dataset/transform/state_action.py",
+      "resolved_url": "https://raw.githubusercontent.com/BeingBeyond/Rethink_VLA/d3739abda923ffddaf01d6d8d74bf3d439068106/src/dataset/transform/state_action.py",
+      "status": 200,
+      "content_type": "text/plain; charset=utf-8",
+      "bytes": 26924,
+      "sha256": "33eed2a11715da1c91600704334250a671bb0a915ec4d93fbd13bf0f17e209a4",
+      "scope": "read-only action and replay interface audit",
+      "reviewed_on": "2026-10-22"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/ZhiyingDu/HiMoE-VLA/2a2c063dc5cf1159c54d7355af774876a58fa843/src/moevla/transforms.py",
+      "resolved_url": "https://raw.githubusercontent.com/ZhiyingDu/HiMoE-VLA/2a2c063dc5cf1159c54d7355af774876a58fa843/src/moevla/transforms.py",
+      "status": 200,
+      "content_type": "text/plain; charset=utf-8",
+      "bytes": 20710,
+      "sha256": "797a08499a4fd4a831be45400aac05e1ead3e1aa8184bed177dc42f47189b829",
+      "scope": "read-only action and replay interface audit",
+      "reviewed_on": "2026-10-22"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/ZhiyingDu/HiMoE-VLA/2a2c063dc5cf1159c54d7355af774876a58fa843/src/moevla/policies/oxe_policy.py",
+      "resolved_url": "https://raw.githubusercontent.com/ZhiyingDu/HiMoE-VLA/2a2c063dc5cf1159c54d7355af774876a58fa843/src/moevla/policies/oxe_policy.py",
+      "status": 200,
+      "content_type": "text/plain; charset=utf-8",
+      "bytes": 2747,
+      "sha256": "8bf084385b744eb61046d0cbb2cd9acaf22c259a714a4f080e090bebe738fc92",
+      "scope": "read-only action and replay interface audit",
+      "reviewed_on": "2026-10-22"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/Open-X-Humanoid/RoboMIND-dataset-utils/77d7b311cbf2f16624c941f46b2a75042858ff06/README.md",
+      "resolved_url": "https://raw.githubusercontent.com/Open-X-Humanoid/RoboMIND-dataset-utils/77d7b311cbf2f16624c941f46b2a75042858ff06/README.md",
+      "status": 200,
+      "content_type": "text/plain; charset=utf-8",
+      "bytes": 1147,
+      "sha256": "4c935dd98c8bd054352ec46865e7ba4627d5536147f85e1527e99081883553e0",
+      "scope": "dataset schema, limitations and embodiment metadata",
+      "reviewed_on": "2026-10-22"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/x-humanoid-robomind/x-humanoid-robomind.github.io/28ede3eb1bc8a051be76e560a831fe3f0c32319f/static/all_robot_h5_info_v1.2.md",
+      "resolved_url": "https://raw.githubusercontent.com/x-humanoid-robomind/x-humanoid-robomind.github.io/28ede3eb1bc8a051be76e560a831fe3f0c32319f/static/all_robot_h5_info_v1.2.md",
+      "status": 200,
+      "content_type": "text/plain; charset=utf-8",
+      "bytes": 13693,
+      "sha256": "069425f41ef461d9ce2251df4e13914766475a8dd22b33e348ab9eae5327e452",
+      "scope": "dataset schema, limitations and embodiment metadata",
+      "reviewed_on": "2026-10-22"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/rh20t/rh20t_api/aa3124434729ed622109a29b2cbb9f3bbb1c5eeb/README.md",
+      "resolved_url": "https://raw.githubusercontent.com/rh20t/rh20t_api/aa3124434729ed622109a29b2cbb9f3bbb1c5eeb/README.md",
+      "status": 200,
+      "content_type": "text/plain; charset=utf-8",
+      "bytes": 7736,
+      "sha256": "87e1a73d9f5df592691ad1bbc3313e9a19b0405586c00381b19eb1356077faba",
+      "scope": "dataset schema, limitations and embodiment metadata",
+      "reviewed_on": "2026-10-22"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/rh20t/rh20t_api/aa3124434729ed622109a29b2cbb9f3bbb1c5eeb/configs/configs.json",
+      "resolved_url": "https://raw.githubusercontent.com/rh20t/rh20t_api/aa3124434729ed622109a29b2cbb9f3bbb1c5eeb/configs/configs.json",
+      "status": 200,
+      "content_type": "text/plain; charset=utf-8",
+      "bytes": 7354,
+      "sha256": "417ef9839bb620806e822b8b1db633634b4b19484cf7078a1e7786bcb1851b32",
+      "scope": "dataset schema, limitations and embodiment metadata",
+      "reviewed_on": "2026-10-22"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/x-humanoid-robomind/x-humanoid-robomind.github.io/28ede3eb1bc8a051be76e560a831fe3f0c32319f/static/language_description_annotation_json/h5_franka_1rgb.json",
+      "resolved_url": "https://raw.githubusercontent.com/x-humanoid-robomind/x-humanoid-robomind.github.io/28ede3eb1bc8a051be76e560a831fe3f0c32319f/static/language_description_annotation_json/h5_franka_1rgb.json",
+      "status": 200,
+      "content_type": "text/plain; charset=utf-8",
+      "bytes": 194569,
+      "sha256": "805552f9eb5c3a60a084a133a55913cd1ac44106cac6bc7d4b56c210644dcdf5",
+      "scope": "public task instruction metadata, no trajectory payload",
+      "reviewed_on": "2026-10-22"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/x-humanoid-robomind/x-humanoid-robomind.github.io/28ede3eb1bc8a051be76e560a831fe3f0c32319f/static/language_description_annotation_json/h5_franka_3rgb.json",
+      "status": "error",
+      "error": "Text response exceeds audit bound",
+      "scope": "public task instruction metadata, no trajectory payload",
+      "reviewed_on": "2026-10-22"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/x-humanoid-robomind/x-humanoid-robomind.github.io/28ede3eb1bc8a051be76e560a831fe3f0c32319f/static/language_description_annotation_json/h5_ur_1rgb.json",
+      "resolved_url": "https://raw.githubusercontent.com/x-humanoid-robomind/x-humanoid-robomind.github.io/28ede3eb1bc8a051be76e560a831fe3f0c32319f/static/language_description_annotation_json/h5_ur_1rgb.json",
+      "status": 200,
+      "content_type": "text/plain; charset=utf-8",
+      "bytes": 2347580,
+      "sha256": "9371c26d5f796fa878f9bf63d96c1d3677647a76837c1f7b400151b658559410",
+      "scope": "public task instruction metadata, no trajectory payload",
+      "reviewed_on": "2026-10-22"
+    },
+    {
+      "url": "https://rh20t.github.io/",
+      "resolved_url": "https://rh20t.github.io/",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 36335,
+      "sha256": "fdf50f33b3ad379232530e4216e4d1343e446cecb30c0ab58ffc5fb73b3e256a",
+      "scope": "official dataset metadata links",
+      "reviewed_on": "2026-10-22"
+    },
+    {
+      "url": "https://huggingface.co/api/datasets/x-humanoid-robomind/RoboMIND",
+      "resolved_url": "https://huggingface.co/api/datasets/x-humanoid-robomind/RoboMIND",
+      "status": 200,
+      "content_type": "application/json; charset=utf-8",
+      "bytes": 330736,
+      "sha256": "715fc3bb1e4a695566e4987475aa96df46c76c805a3a60d6651ebf35ae236e8c",
+      "scope": "access status and dataset revision, no terms accepted",
+      "reviewed_on": "2026-10-22"
+    },
+    {
+      "url": "https://api.github.com/repos/optimass/Maximally_Interfered_Retrieval/commits/HEAD",
+      "resolved_url": "https://api.github.com/repos/optimass/Maximally_Interfered_Retrieval/commits/HEAD",
+      "status": 200,
+      "content_type": "application/json; charset=utf-8",
+      "bytes": 5433,
+      "sha256": "20eecb4965db8283d545ede500b56e7f5db57264d2c396b1ae1f7699e9597144",
+      "scope": "MIR repository linked by paper full text",
+      "reviewed_on": "2026-10-22"
+    },
+    {
+      "url": "https://api.github.com/repos/optimass/Maximally_Interfered_Retrieval/git/trees/35eda78bcdd35025b16b0b1039a926d34aad4851?recursive=1",
+      "resolved_url": "https://api.github.com/repos/optimass/Maximally_Interfered_Retrieval/git/trees/35eda78bcdd35025b16b0b1039a926d34aad4851?recursive=1",
+      "status": 200,
+      "content_type": "application/json; charset=utf-8",
+      "bytes": 6066,
+      "sha256": "534879120e2dc49fa364ea8e25f6fa8bd5ca719b3434b2d336449cc462b90aba",
+      "scope": "MIR source paths",
+      "reviewed_on": "2026-10-22"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/x-humanoid-robomind/x-humanoid-robomind.github.io/28ede3eb1bc8a051be76e560a831fe3f0c32319f/static/language_description_annotation_json/h5_franka_1rgb.json",
+      "resolved_url": "https://raw.githubusercontent.com/x-humanoid-robomind/x-humanoid-robomind.github.io/28ede3eb1bc8a051be76e560a831fe3f0c32319f/static/language_description_annotation_json/h5_franka_1rgb.json",
+      "status": 200,
+      "content_type": "text/plain; charset=utf-8",
+      "bytes": 194569,
+      "sha256": "805552f9eb5c3a60a084a133a55913cd1ac44106cac6bc7d4b56c210644dcdf5",
+      "scope": "exact public annotation task matching",
+      "reviewed_on": "2026-10-22"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/x-humanoid-robomind/x-humanoid-robomind.github.io/28ede3eb1bc8a051be76e560a831fe3f0c32319f/static/language_description_annotation_json/h5_ur_1rgb.json",
+      "resolved_url": "https://raw.githubusercontent.com/x-humanoid-robomind/x-humanoid-robomind.github.io/28ede3eb1bc8a051be76e560a831fe3f0c32319f/static/language_description_annotation_json/h5_ur_1rgb.json",
+      "status": 200,
+      "content_type": "text/plain; charset=utf-8",
+      "bytes": 2347580,
+      "sha256": "9371c26d5f796fa878f9bf63d96c1d3677647a76837c1f7b400151b658559410",
+      "scope": "exact public annotation task matching",
+      "reviewed_on": "2026-10-22"
+    },
+    {
+      "url": "https://rh20t.github.io/static/task_description.json",
+      "resolved_url": "https://rh20t.github.io/static/task_description.json",
+      "status": 200,
+      "content_type": "application/json; charset=utf-8",
+      "bytes": 25754,
+      "sha256": "f68daa2983a91c420f7366b8c47926ca2fc323eced0afb21ba9e20e5a46f819b",
+      "scope": "public task descriptions, coverage not inferred",
+      "reviewed_on": "2026-10-22"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/optimass/Maximally_Interfered_Retrieval/35eda78bcdd35025b16b0b1039a926d34aad4851/buffer.py",
+      "resolved_url": "https://raw.githubusercontent.com/optimass/Maximally_Interfered_Retrieval/35eda78bcdd35025b16b0b1039a926d34aad4851/buffer.py",
+      "status": 200,
+      "content_type": "text/plain; charset=utf-8",
+      "bytes": 7361,
+      "sha256": "c0aa1dc6ca65a1b6e9940d159a8af7d9c8a6e162aeaa0fb251eba15efeb9ead3",
+      "scope": "selected code-path static audit",
+      "reviewed_on": "2026-10-22"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/rh20t/rh20t_api/aa3124434729ed622109a29b2cbb9f3bbb1c5eeb/rh20t_api/scene.py",
+      "resolved_url": "https://raw.githubusercontent.com/rh20t/rh20t_api/aa3124434729ed622109a29b2cbb9f3bbb1c5eeb/rh20t_api/scene.py",
+      "status": 200,
+      "content_type": "text/plain; charset=utf-8",
+      "bytes": 32725,
+      "sha256": "4a0dfd7f8eba6640d029c7316b842c46b04490826c20e25f73cc9cdabd879975",
+      "scope": "selected code-path static audit",
+      "reviewed_on": "2026-10-22"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/Agentic-Intelligence-Lab/ContinualVLA/d84ed7a811f95218e79ac5f0906465147ad7e1e3/src/openpi/training/data_loader.py",
+      "resolved_url": "https://raw.githubusercontent.com/Agentic-Intelligence-Lab/ContinualVLA/d84ed7a811f95218e79ac5f0906465147ad7e1e3/src/openpi/training/data_loader.py",
+      "status": 200,
+      "content_type": "text/plain; charset=utf-8",
+      "bytes": 27484,
+      "sha256": "e1c0eac39e8448cbb5b68cd927025a1d25ae917fb6bb8086fd0b8f4067161295",
+      "scope": "selected code-path static audit",
+      "reviewed_on": "2026-10-22"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/optimass/Maximally_Interfered_Retrieval/35eda78bcdd35025b16b0b1039a926d34aad4851/mir.py",
+      "resolved_url": "https://raw.githubusercontent.com/optimass/Maximally_Interfered_Retrieval/35eda78bcdd35025b16b0b1039a926d34aad4851/mir.py",
+      "status": 200,
+      "content_type": "text/plain; charset=utf-8",
+      "bytes": 18412,
+      "sha256": "5297f0bb8c03e06c4534882e140fa067dc93ff92326a0268a4a92473e645cbb1",
+      "scope": "targeted MIR score and timestamp alignment source",
+      "reviewed_on": "2026-10-22"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/rh20t/rh20t_api/aa3124434729ed622109a29b2cbb9f3bbb1c5eeb/rh20t_api/scene.py",
+      "resolved_url": "https://raw.githubusercontent.com/rh20t/rh20t_api/aa3124434729ed622109a29b2cbb9f3bbb1c5eeb/rh20t_api/scene.py",
+      "status": 200,
+      "content_type": "text/plain; charset=utf-8",
+      "bytes": 32725,
+      "sha256": "4a0dfd7f8eba6640d029c7316b842c46b04490826c20e25f73cc9cdabd879975",
+      "scope": "targeted MIR score and timestamp alignment source",
+      "reviewed_on": "2026-10-22"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/optimass/Maximally_Interfered_Retrieval/35eda78bcdd35025b16b0b1039a926d34aad4851/er_main.py",
+      "resolved_url": "https://raw.githubusercontent.com/optimass/Maximally_Interfered_Retrieval/35eda78bcdd35025b16b0b1039a926d34aad4851/er_main.py",
+      "status": 200,
+      "content_type": "text/plain; charset=utf-8",
+      "bytes": 10395,
+      "sha256": "bae0940ce489d1c17f8a0e5226511290900a6002553a6810af86375e50a51a43",
+      "scope": "replay comparator and frame-transform qualification",
+      "reviewed_on": "2026-10-22"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/Agentic-Intelligence-Lab/ContinualVLA/d84ed7a811f95218e79ac5f0906465147ad7e1e3/scripts/train.py",
+      "resolved_url": "https://raw.githubusercontent.com/Agentic-Intelligence-Lab/ContinualVLA/d84ed7a811f95218e79ac5f0906465147ad7e1e3/scripts/train.py",
+      "status": 200,
+      "content_type": "text/plain; charset=utf-8",
+      "bytes": 10488,
+      "sha256": "22f98a06aaa6e68e0f725d727ab95398238d1cae8a46bb94e829f330758a9baf",
+      "scope": "replay comparator and frame-transform qualification",
+      "reviewed_on": "2026-10-22"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/lihzha/lap/3958d1466d5b92445b67de7d4202c19608ad4d56/src/lap/policies/transforms/frame_transforms.py",
+      "resolved_url": "https://raw.githubusercontent.com/lihzha/lap/3958d1466d5b92445b67de7d4202c19608ad4d56/src/lap/policies/transforms/frame_transforms.py",
+      "status": 200,
+      "content_type": "text/plain; charset=utf-8",
+      "bytes": 4716,
+      "sha256": "6de9795b59d3f1594751b62a864fb7748dcfe1eafcc2610694a8d425b1443baf",
+      "scope": "replay comparator and frame-transform qualification",
+      "reviewed_on": "2026-10-22"
+    },
+    {
+      "url": "https://api.github.com/repos/ZhiyingDu/HiMoE-VLA/git/trees/2a2c063dc5cf1159c54d7355af774876a58fa843?recursive=1",
+      "resolved_url": "https://api.github.com/repos/ZhiyingDu/HiMoE-VLA/git/trees/2a2c063dc5cf1159c54d7355af774876a58fa843?recursive=1",
+      "status": 200,
+      "content_type": "application/json; charset=utf-8",
+      "bytes": 99275,
+      "sha256": "60bf3c4f86470d4f04ddf27510dd24e357e464dfd91411e4d90f813a9910fb9b",
+      "scope": "identify model masking and router code",
+      "reviewed_on": "2026-10-22"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/optimass/Maximally_Interfered_Retrieval/35eda78bcdd35025b16b0b1039a926d34aad4851/model.py",
+      "resolved_url": "https://raw.githubusercontent.com/optimass/Maximally_Interfered_Retrieval/35eda78bcdd35025b16b0b1039a926d34aad4851/model.py",
+      "status": 200,
+      "content_type": "text/plain; charset=utf-8",
+      "bytes": 11258,
+      "sha256": "f8d710cc861052b48f6c7853eeb429eb72bb805b0d1219cddbed957697d26961",
+      "scope": "actual training/retrieval path, not executed",
+      "reviewed_on": "2026-10-22"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/Agentic-Intelligence-Lab/ContinualVLA/d84ed7a811f95218e79ac5f0906465147ad7e1e3/scripts/train_pytorch.py",
+      "resolved_url": "https://raw.githubusercontent.com/Agentic-Intelligence-Lab/ContinualVLA/d84ed7a811f95218e79ac5f0906465147ad7e1e3/scripts/train_pytorch.py",
+      "status": 200,
+      "content_type": "text/plain; charset=utf-8",
+      "bytes": 39917,
+      "sha256": "28a7c379b44e1286104aff8b5b188e35289f63a755ce6fb23cd20b2faaf9d8f2",
+      "scope": "actual training/retrieval path, not executed",
+      "reviewed_on": "2026-10-22"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/optimass/Maximally_Interfered_Retrieval/35eda78bcdd35025b16b0b1039a926d34aad4851/er_main.py",
+      "resolved_url": "https://raw.githubusercontent.com/optimass/Maximally_Interfered_Retrieval/35eda78bcdd35025b16b0b1039a926d34aad4851/er_main.py",
+      "status": 200,
+      "content_type": "text/plain; charset=utf-8",
+      "bytes": 10395,
+      "sha256": "bae0940ce489d1c17f8a0e5226511290900a6002553a6810af86375e50a51a43",
+      "scope": "targeted selector loss and action mask source",
+      "reviewed_on": "2026-10-22"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/optimass/Maximally_Interfered_Retrieval/35eda78bcdd35025b16b0b1039a926d34aad4851/mir.py",
+      "resolved_url": "https://raw.githubusercontent.com/optimass/Maximally_Interfered_Retrieval/35eda78bcdd35025b16b0b1039a926d34aad4851/mir.py",
+      "status": 200,
+      "content_type": "text/plain; charset=utf-8",
+      "bytes": 18412,
+      "sha256": "5297f0bb8c03e06c4534882e140fa067dc93ff92326a0268a4a92473e645cbb1",
+      "scope": "targeted selector loss and action mask source",
+      "reviewed_on": "2026-10-22"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/ZhiyingDu/HiMoE-VLA/2a2c063dc5cf1159c54d7355af774876a58fa843/src/moevla/models/moevla.py",
+      "resolved_url": "https://raw.githubusercontent.com/ZhiyingDu/HiMoE-VLA/2a2c063dc5cf1159c54d7355af774876a58fa843/src/moevla/models/moevla.py",
+      "status": 200,
+      "content_type": "text/plain; charset=utf-8",
+      "bytes": 18340,
+      "sha256": "2603a33766837c77171004fd8c329b7e7c33d12490ac84cbe8769eaf83a88a31",
+      "scope": "targeted selector loss and action mask source",
+      "reviewed_on": "2026-10-22"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/ZhiyingDu/HiMoE-VLA/2a2c063dc5cf1159c54d7355af774876a58fa843/src/moevla/models/himoe.py",
+      "resolved_url": "https://raw.githubusercontent.com/ZhiyingDu/HiMoE-VLA/2a2c063dc5cf1159c54d7355af774876a58fa843/src/moevla/models/himoe.py",
+      "status": 200,
+      "content_type": "text/plain; charset=utf-8",
+      "bytes": 36287,
+      "sha256": "ef7f34a493cd8c608e0706635f7c6445c08ccfd5e9dc2b53b6ca557eadbbfabd",
+      "scope": "targeted selector loss and action mask source",
+      "reviewed_on": "2026-10-22"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/x-humanoid-robomind/x-humanoid-robomind.github.io/28ede3eb1bc8a051be76e560a831fe3f0c32319f/static/language_description_annotation_json/h5_franka_1rgb.json",
+      "resolved_url": "https://raw.githubusercontent.com/x-humanoid-robomind/x-humanoid-robomind.github.io/28ede3eb1bc8a051be76e560a831fe3f0c32319f/static/language_description_annotation_json/h5_franka_1rgb.json",
+      "status": 200,
+      "content_type": "text/plain; charset=utf-8",
+      "bytes": 194569,
+      "sha256": "805552f9eb5c3a60a084a133a55913cd1ac44106cac6bc7d4b56c210644dcdf5",
+      "scope": "bounded public annotation audit; 16 MB text limit; no physical trajectory arrays",
+      "reviewed_on": "2026-10-22"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/x-humanoid-robomind/x-humanoid-robomind.github.io/28ede3eb1bc8a051be76e560a831fe3f0c32319f/static/language_description_annotation_json/h5_franka_3rgb.json",
+      "resolved_url": "https://raw.githubusercontent.com/x-humanoid-robomind/x-humanoid-robomind.github.io/28ede3eb1bc8a051be76e560a831fe3f0c32319f/static/language_description_annotation_json/h5_franka_3rgb.json",
+      "status": 200,
+      "content_type": "text/plain; charset=utf-8",
+      "bytes": 4130698,
+      "sha256": "1b7e23c1352e25db69fb6777c5cf07769b2f0af6837d63c8b4e5b7c4e38e7586",
+      "scope": "bounded public annotation audit; 16 MB text limit; no physical trajectory arrays",
+      "reviewed_on": "2026-10-22"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/x-humanoid-robomind/x-humanoid-robomind.github.io/28ede3eb1bc8a051be76e560a831fe3f0c32319f/static/language_description_annotation_json/h5_ur_1rgb.json",
+      "resolved_url": "https://raw.githubusercontent.com/x-humanoid-robomind/x-humanoid-robomind.github.io/28ede3eb1bc8a051be76e560a831fe3f0c32319f/static/language_description_annotation_json/h5_ur_1rgb.json",
+      "status": 200,
+      "content_type": "text/plain; charset=utf-8",
+      "bytes": 2347580,
+      "sha256": "9371c26d5f796fa878f9bf63d96c1d3677647a76837c1f7b400151b658559410",
+      "scope": "bounded public annotation audit; 16 MB text limit; no physical trajectory arrays",
+      "reviewed_on": "2026-10-22"
+    }
+  ],
+  "web_review_without_local_hash": [
+    {
+      "url": "https://arxiv.org/html/2608.26545v1",
+      "scope": "Memory Anchors §4/5.5 and App B.1/B.6",
+      "reviewed_on": "2026-10-22",
+      "evidence": "web text review; separate from hashed urllib ledger"
+    },
+    {
+      "url": "https://arxiv.org/html/2606.24049v1",
+      "scope": "SPACE §4, App A/B.1",
+      "reviewed_on": "2026-10-22",
+      "evidence": "web text review; separate from hashed urllib ledger"
+    },
+    {
+      "url": "https://arxiv.org/html/2605.26820v3",
+      "scope": "Never v3 normalization, heterogeneous stream and replay",
+      "reviewed_on": "2026-10-22",
+      "evidence": "web text review; separate from hashed urllib ledger"
+    },
+    {
+      "url": "https://arxiv.org/html/2512.05693v2",
+      "scope": "HiMoE method and evaluation scope",
+      "reviewed_on": "2026-10-22",
+      "evidence": "web text review; separate from hashed urllib ledger"
+    },
+    {
+      "url": "https://proceedings.mlr.press/v306/liu26bu.html",
+      "scope": "ICML official publication and counterevidence",
+      "reviewed_on": "2026-10-22",
+      "evidence": "web text review; separate from hashed urllib ledger"
+    },
+    {
+      "url": "https://www.roboticsproceedings.org/rss22/p203.html",
+      "scope": "LAP exact title and RSS publication",
+      "reviewed_on": "2026-10-22",
+      "evidence": "web text review; separate from hashed urllib ledger"
+    },
+    {
+      "url": "https://www.roboticsproceedings.org/rss21/p152.html",
+      "scope": "RoboMIND official publication",
+      "reviewed_on": "2026-10-22",
+      "evidence": "web text review; separate from hashed urllib ledger"
+    },
+    {
+      "url": "https://proceedings.neurips.cc/paper/2019/hash/15825aee15eb335cc13f9b559f166ee8-Abstract.html",
+      "scope": "MIR official metadata; title/link variant",
+      "reviewed_on": "2026-10-22",
+      "evidence": "web text review; separate from hashed urllib ledger"
+    },
+    {
+      "url": "https://proceedings.neurips.cc/paper_files/paper/2019/file/15825aee15eb335cc13f9b559f166ee8-Paper.pdf",
+      "scope": "MIR web-parsed full text; no local PDF download",
+      "reviewed_on": "2026-10-22",
+      "evidence": "web text review; separate from hashed urllib ledger"
+    },
+    {
+      "url": "https://doi.org/10.1109/ICRA57147.2024.10611615",
+      "scope": "Redirect to IEEE verification page; publisher body not inspected",
+      "reviewed_on": "2026-10-22",
+      "evidence": "web text review; separate from hashed urllib ledger"
+    },
+    {
+      "url": "https://huggingface.co/datasets/x-humanoid-robomind/RoboMIND",
+      "scope": "Dataset access gate and official utilities link",
+      "reviewed_on": "2026-10-22",
+      "evidence": "web text review; separate from hashed urllib ledger"
+    }
+  ],
+  "search_scope": {
+    "queries": [
+      "cross-embodiment replay conflict",
+      "robot continual learning effect replay action",
+      "Memory Anchors github robot",
+      "SPACE Haeone github robot",
+      "cross-embodiment continual replay effect",
+      "action disagreement gradient robot continual",
+      "RoboMIND RH20T continual replay"
+    ],
+    "novelty_absence_proven": false
+  },
+  "preserved_failures": [
+    "MIR abstract-linked URL without underscores returned 404; PDF-linked underscored repo succeeded",
+    "Franka 3RGB annotation exceeded initial 4 MB bound; retry with 16 MB text bound succeeded"
+  ]
+}

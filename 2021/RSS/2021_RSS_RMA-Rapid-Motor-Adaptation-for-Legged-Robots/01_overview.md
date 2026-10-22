@@ -9,7 +9,7 @@
 - Year/Venue: 2021 / RSS
 - Authors: not duplicated here when not verified in the registry source
 - Primary track: Locomotion, whole-body, mobile manipulation, and humanoids
-- Tier: CORE
+- Tier: NEXT
 - Tags: Robotics, locomotion, sim-to-real, online adaptation
 - Official paper: https://arxiv.org/abs/2107.04034
 - Full-text retrieval: https://arxiv.org/pdf/2107.04034

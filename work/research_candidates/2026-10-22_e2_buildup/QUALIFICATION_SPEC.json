@@ -1,0 +1,88 @@
+{
+  "schema_version": 1,
+  "candidate": "E2",
+  "reviewed_on": "2026-10-22",
+  "artifact_type": "non_executable_research_qualification_spec",
+  "review_status": "DONE",
+  "broad_method_decision": "NO_GO_CURRENT_DESIGN",
+  "diagnostic_decision": "REVISE_HOLD",
+  "main_project_recommended": false,
+  "resume_gate": "E2-R1",
+  "resume_status": "WAITING_EVIDENCE",
+  "executable": false,
+  "policy_runs": 0,
+  "simulation_runs": 0,
+  "training_runs": 0,
+  "external_feedback": "NOT_STARTED",
+  "scope": {
+    "primary_domain": "VLA manipulation",
+    "rl_required": false,
+    "cross_embodiment_claim_qualified": false,
+    "navigation_claim_qualified": false,
+    "allowed_future_execution": "current computer Docker only, after independent qualification",
+    "performed": ["literature review", "read-only public text/API inspection", "analytic reasoning", "repository maintenance"],
+    "excluded": ["dependency install", "policy inference", "simulation", "training", "FK", "Docker preflight", "binary payload storage", "external messages"]
+  },
+  "source_candidates": [
+    {
+      "name": "A2C2 SmolVLA LIBERO",
+      "repo": "https://github.com/k1000dai/a2c2-libero",
+      "commit": "54dd088302a0ef3f50c4add3ec927ab94d76a406",
+      "entry_point": "eval_libero/evaluation_libero.py",
+      "status": "SOURCE_PATH_CHECKED_NOT_RUNTIME_QUALIFIED",
+      "gap": "Pinned eval uses placeholder base/residual model paths; no single qualified task/checkpoint/normalizer/timing packet."
+    },
+    {
+      "name": "AAC GR00T LIBERO",
+      "repo": "https://github.com/Adaptive-Action-Chunking/libero",
+      "commit": "ff8c8e421f7805b5845a72d07fbd8f1171df74bf",
+      "server_repo": "https://github.com/Adaptive-Action-Chunking/gr00t-multi-sample",
+      "server_commit": "11e926b0f34cf6acfcb92c0fe6127a1bdc7b856a",
+      "upstream_revision_from_readme": "8f1084e3132a39270c3a13ebe37270a43ece2a01",
+      "entry_point": "gr00t_benchmark/inference_client_action_entropy.py",
+      "status": "SOURCE_PATH_CHECKED_NOT_RUNTIME_QUALIFIED",
+      "gap": "Multiple-sample server/client exists; selected task checkpoint, normalization, measured timing and competence are unqualified."
+    },
+    {
+      "name": "RTR pi05 xArm",
+      "repo": "https://github.com/tars-robotics/RTR",
+      "commit": "0589f847bf4f61e1fb959f23cf3a0329de9bb9b3",
+      "entry_point": "src/rtr_async_sys/env/xarm_env.py",
+      "status": "SOURCE_PATH_CHECKED_NOT_RUNTIME_QUALIFIED",
+      "gap": "Representative 15/60Hz recipes also change servo mode; real hardware/time/controller/evaluator packet unavailable locally."
+    }
+  ],
+  "selected_execution": {
+    "candidate": null,
+    "task_id": null,
+    "environment_commit": null,
+    "checkpoint_id": null,
+    "checkpoint_revision": null,
+    "normalizer_hash": null,
+    "controller_mode": null,
+    "controller_gains_and_limits": null,
+    "sensor_timestamps": null,
+    "command_timestamps": null,
+    "docker_image_digest": null,
+    "runtime_report": null,
+    "paired_reset_report": null,
+    "seed_manifest": null,
+    "split_manifest": null,
+    "trial_budget": null,
+    "practical_effect_margin": null
+  },
+  "claims": {
+    "primary_question": "Does separating timed-reference representation, observation freshness, controller and compute change a useful VLA execution decision?",
+    "effect_verified": false,
+    "novelty_verified": false,
+    "comparators": ["native fixed horizons", "timed-reference resampling", "gain-only control", "compatible RTC", "compatible AAC", "A2C2 with separately accounted training and information"],
+    "reject_if": ["normal native competence cannot be established", "simple tuning or known methods fully explain the finding", "no useful conclusion survives controls", "only a one-off implementation error is demonstrated"],
+    "revise_if": ["effect is limited to one controller or task", "gain or freshness rather than representation explains the difference"]
+  },
+  "resume_requirements": [
+    "one coherent task/checkpoint/normalizer/controller/evaluator packet with physical-time semantics",
+    "a concrete prediction distinguishable from existing fixed-horizon, RTC, AAC or A2C2 explanations",
+    "fair interventions and budget accounting; efficacy need not be proven before the pilot",
+    "before execution, lock native runtime, reset, seed, split, sample budget and decision thresholds"
+  ]
+}

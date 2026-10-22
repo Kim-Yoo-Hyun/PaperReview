@@ -1,0 +1,75 @@
+[
+  {
+    "sample_ids": [
+      0
+    ],
+    "seconds": 29.832663347000107,
+    "input_length": 36,
+    "gripper_hidden_positions": [
+      297,
+      304,
+      311,
+      318,
+      325,
+      332,
+      339,
+      346
+    ],
+    "finite": true,
+    "min_logit": -27.3343505859375,
+    "max_logit": 54.28555679321289
+  },
+  {
+    "sample_ids": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "seconds": 150.60206444200003,
+    "input_length": 36,
+    "gripper_hidden_positions": [
+      297,
+      304,
+      311,
+      318,
+      325,
+      332,
+      339,
+      346
+    ],
+    "finite": true,
+    "min_logit": -27.32586669921875,
+    "max_logit": 58.06099319458008
+  },
+  {
+    "sample_ids": [
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "seconds": 179.31937774800008,
+    "input_length": 38,
+    "gripper_hidden_positions": [
+      299,
+      306,
+      313,
+      320,
+      327,
+      334,
+      341,
+      348
+    ],
+    "finite": true,
+    "min_logit": -24.82961082458496,
+    "max_logit": 52.88905715942383
+  }
+]

@@ -9,7 +9,7 @@
 - Year/Venue: 2023 / SIGGRAPH
 - Authors: not duplicated here when not verified in the registry source
 - Primary track: Robotics-enabling 3D perception
-- Tier: CORE
+- Tier: REFERENCE
 - Tags: Gaussian Splatting, 3D reconstruction, representation
 - Official paper: https://arxiv.org/abs/2308.04079
 - Full-text retrieval: https://arxiv.org/pdf/2308.04079

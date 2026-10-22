@@ -27,6 +27,7 @@ INDEX = ROOT / "research" / "REGISTRY_INDEX.csv"
 STATS = ROOT / "research" / "REGISTRY_STATS.md"
 TIERS = ROOT / "research" / "READING_TIERS.csv"
 STATUS = ROOT / "research" / "READING_STATUS.csv"
+STATUS_HISTORY = ROOT / "research" / "READING_STATUS_HISTORY.csv"
 
 
 def load_json(path: Path):
@@ -47,10 +48,12 @@ def read_tiers() -> dict[str, dict[str, str]]:
 
 
 def read_status() -> dict[str, dict[str, str]]:
-    if not STATUS.exists():
-        return {}
-    with STATUS.open(newline="", encoding="utf-8") as handle:
-        return {row["paper_id"]: row for row in csv.DictReader(handle)}
+    records = {}
+    for path in (STATUS_HISTORY, STATUS):
+        if path.exists():
+            with path.open(newline="", encoding="utf-8") as handle:
+                records.update({row["paper_id"]: row for row in csv.DictReader(handle)})
+    return records
 
 
 def build_resources(papers: list[dict]) -> dict:
@@ -233,8 +236,8 @@ def build_index(papers: list[dict], resources: dict) -> list[dict[str, str]]:
                 "evidence_level": tracker.get("evidence_level") or provenance.get("content_evidence", ""),
                 "reading_status": tracker.get("status") or "N/A",
                 "curation_status": curation.get("rationale_status", ""),
-                "identifier_status": provenance.get("identifier_status", "source_only"),
-                "primary_source_scope": provenance.get("primary_source_scope", ""),
+                "identifier_status": "identified" if any(paper.get("identifiers", {}).values()) else "source_only",
+                "primary_source_scope": primary.get("scope") or provenance.get("primary_source_scope", ""),
                 "primary_source": primary.get("url", ""),
                 "code_status": (paper.get("artifacts") or {}).get("code_status", ""),
                 "data_status": (paper.get("artifacts") or {}).get("data_status", ""),
@@ -285,7 +288,8 @@ def build_stats(papers: list[dict], resources: dict, rows: list[dict[str, str]])
 
     tier = Counter(row["tier"] for row in rows)
     evidence = Counter(row["evidence_level"] for row in rows)
-    status = Counter(row["reading_status"] for row in rows if row["reading_status"] != "N/A")
+    status = Counter(row["reading_status"] for row in rows if row["tier"] in {"CORE", "NEXT"})
+    history_status = Counter(row["reading_status"] for row in rows if row["tier"] not in {"CORE", "NEXT"} and row["reading_status"] != "N/A")
     rationale = Counter(row["curation_status"] for row in rows)
     identifiers = Counter(row["identifier_status"] for row in rows)
     sources = Counter(row["primary_source_scope"] for row in rows)
@@ -367,6 +371,7 @@ def build_stats(papers: list[dict], resources: dict, rows: list[dict[str, str]])
     lines += table("Tier", tier)
     lines += table("Evidence level", evidence)
     lines += table("Reading status (intensive set)", status)
+    lines += table("Reading status (inactive history; excluded from intensive denominator)", history_status)
     lines += table("Curation rationale status", rationale)
     lines += table("Curation roles", roles)
     lines += table("Publication kind", publication)
@@ -410,7 +415,7 @@ def build_stats(papers: list[dict], resources: dict, rows: list[dict[str, str]])
     lines += [""]
     lines += ["## Note evidence gaps", "", "| Note | Missing evidence header |", "|---|---:|"]
     lines.extend(f"| {name} | {count} |" for name, count in sorted(missing_note_evidence.items()))
-    lines += ["", "## Interpretation", "", "- `reading_status` is user-controlled and is intentionally independent from `evidence_level`.", "- Facets are curation cues for filtering; exact task, split, metric, and failure claims remain in the paper notes.", "- Evaluation profiles expose body-derived section cues and raw trial/seed evidence; they do not replace paper-specific protocol verification.", "- `benchmark_catalog.json` and `metric_catalog.json` remain cue-only navigation inputs; benchmark and metric cue lists in each profile retain that label.", "- Reproducibility profiles distinguish manifest links from explicit note cues; a code/project URL does not prove executable reproduction.", "- Lineage profiles cover every registry paper. Curated relations remain selective; queue adjacency and legacy-summary matches are non-relational candidates, not citation facts.", "- Relation edges are directed curation links, not an exhaustive citation graph: a method points to a predecessor/data dependency, while a baseline points to the evaluated paper. Managed edges retain a basis, source, confidence, evidence scope, and review date.", ""]
+    lines += ["", "## Interpretation", "", "- `reading_status` is user-controlled and is intentionally independent from `evidence_level`.", "- Facets are curation cues for filtering; exact task, split, metric, and failure claims remain in the paper notes.", "- Evaluation profiles expose note-derived cues within each paper's recorded evidence scope. Abstract/project-only notes are not full-text protocol checks; profile coverage does not imply verified experiments.", "- `benchmark_catalog.json` and `metric_catalog.json` remain cue-only navigation inputs; benchmark and metric cue lists in each profile retain that label.", "- Reproducibility profiles distinguish manifest links from explicit note cues; a code/project URL does not prove executable reproduction.", "- Lineage profiles cover every registry paper. Curated relations remain selective; queue adjacency and legacy-summary matches are non-relational candidates, not citation facts.", "- Relation edges are directed curation links, not an exhaustive citation graph: a method points to a predecessor/data dependency, while a baseline points to the evaluated paper. Managed edges retain a basis, source, confidence, evidence scope, and review date.", ""]
     return "\n".join(lines)
 
 

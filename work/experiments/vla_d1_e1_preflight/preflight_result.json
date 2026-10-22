@@ -1,0 +1,507 @@
+{
+  "schema": "d1-e1-resource-probe-v2",
+  "checked_at_utc": "2026-10-22T01:17:47.799503+00:00",
+  "scope": "Docker infrastructure and static source/small JSON audit only; not native OFT qualification.",
+  "container": {
+    "platform": "Linux-6.10.14-linuxkit-aarch64-with-glibc2.41",
+    "machine": "aarch64",
+    "python": "3.10.22",
+    "docker_marker": true,
+    "proc_meminfo": {
+      "MemTotal_KiB": 8025424,
+      "MemAvailable_KiB": 7420116,
+      "SwapTotal_KiB": 1048572
+    },
+    "probe_cgroup_memory_max": "268435456",
+    "probe_cgroup_swap_max": "268435456",
+    "device_nodes": {
+      "/dev/nvidia*": [],
+      "/dev/dri/*": [],
+      "/dev/kfd": []
+    },
+    "nvidia_smi_path": null,
+    "nvidia_driver_version": null
+  },
+  "policy_source_commit": "e4287e94541f459edc4feabc4e181f537cd569a8",
+  "model": "moojink/openvla-7b-oft-finetuned-libero-goal",
+  "model_revision": "c2d0f9fbbd82674683b397ff923168a12f6a307b",
+  "public_reads": [
+    {
+      "kind": "source",
+      "name": "SETUP.md",
+      "url": "https://raw.githubusercontent.com/moojink/openvla-oft/e4287e94541f459edc4feabc4e181f537cd569a8/SETUP.md",
+      "http_status": 200,
+      "bytes": 787,
+      "sha256": "f8452257a18632cc413f66a8ca9ee673e6b22166ee9439a5f79c08b487b0ca5c",
+      "matching_line_numbers": {
+        "cuda": [],
+        "flash_attn": [
+          20
+        ],
+        "flash_attention": [],
+        "bfloat16": [],
+        "DEVICE": [],
+        "A100": [],
+        "torch==": [],
+        "transformers": []
+      }
+    },
+    {
+      "kind": "source",
+      "name": "LIBERO.md",
+      "url": "https://raw.githubusercontent.com/moojink/openvla-oft/e4287e94541f459edc4feabc4e181f537cd569a8/LIBERO.md",
+      "http_status": 200,
+      "bytes": 8962,
+      "sha256": "7c2b73570497ff100604172f24934764a39e3c0007a2a0166ad4d09cacd08917",
+      "matching_line_numbers": {
+        "cuda": [],
+        "flash_attn": [],
+        "flash_attention": [],
+        "bfloat16": [],
+        "DEVICE": [],
+        "A100": [
+          88,
+          89,
+          128
+        ],
+        "torch==": [],
+        "transformers": [
+          87
+        ]
+      }
+    },
+    {
+      "kind": "source",
+      "name": "pyproject.toml",
+      "url": "https://raw.githubusercontent.com/moojink/openvla-oft/e4287e94541f459edc4feabc4e181f537cd569a8/pyproject.toml",
+      "http_status": 200,
+      "bytes": 2784,
+      "sha256": "f0c820b3ee1dc9e4d379d1d28b3558c6cb0c5106fb6fb5ecb4abb46e377125cc",
+      "matching_line_numbers": {
+        "cuda": [],
+        "flash_attn": [
+          36
+        ],
+        "flash_attention": [],
+        "bfloat16": [],
+        "DEVICE": [],
+        "A100": [],
+        "torch==": [
+          47
+        ],
+        "transformers": [
+          50
+        ]
+      }
+    },
+    {
+      "kind": "source",
+      "name": "experiments/robot/openvla_utils.py",
+      "url": "https://raw.githubusercontent.com/moojink/openvla-oft/e4287e94541f459edc4feabc4e181f537cd569a8/experiments/robot/openvla_utils.py",
+      "http_status": 200,
+      "bytes": 30203,
+      "sha256": "eed754d7c5f9821aae2fe0531dbe01df8c11df0d5c79b4aeeb9bb4452124bdf5",
+      "matching_line_numbers": {
+        "cuda": [
+          39
+        ],
+        "flash_attn": [],
+        "flash_attention": [
+          284
+        ],
+        "bfloat16": [
+          285,
+          345,
+          347,
+          410,
+          453,
+          492,
+          760,
+          765
+        ],
+        "DEVICE": [
+          39,
+          303,
+          409,
+          410,
+          452,
+          453,
+          492,
+          760,
+          765
+        ],
+        "A100": [],
+        "torch==": [],
+        "transformers": [
+          19
+        ]
+      }
+    },
+    {
+      "kind": "source",
+      "name": "prismatic/extern/hf/modeling_prismatic.py",
+      "url": "https://raw.githubusercontent.com/moojink/openvla-oft/e4287e94541f459edc4feabc4e181f537cd569a8/prismatic/extern/hf/modeling_prismatic.py",
+      "http_status": 200,
+      "bytes": 48906,
+      "sha256": "b5431a074c0025a12e46dc954a5e18d1d73477babb5ae42e3a12ab4b907f33a6",
+      "matching_line_numbers": {
+        "cuda": [],
+        "flash_attn": [
+          287
+        ],
+        "flash_attention": [],
+        "bfloat16": [],
+        "DEVICE": [],
+        "A100": [],
+        "torch==": [],
+        "transformers": [
+          5,
+          19,
+          21,
+          22,
+          55,
+          190,
+          218,
+          331,
+          333,
+          334
+        ]
+      }
+    },
+    {
+      "kind": "model_api",
+      "name": "model_metadata",
+      "url": "https://huggingface.co/api/models/moojink/openvla-7b-oft-finetuned-libero-goal/revision/c2d0f9fbbd82674683b397ff923168a12f6a307b?blobs=true",
+      "http_status": 200,
+      "bytes": 5022,
+      "sha256": "7b877c34c5e915458b23b9a66833d1b261621e087b07beedab45d476009f7835",
+      "repository_revision": "c2d0f9fbbd82674683b397ff923168a12f6a307b",
+      "files": [
+        {
+          "rfilename": ".gitattributes",
+          "size": 673,
+          "blobId": "d74b88e181e36e8fd6b45063fe0ad9b5e65e285d"
+        },
+        {
+          "rfilename": "README.md",
+          "size": 2894,
+          "blobId": "a5893b99b03799bb3e400a12b1be9857696ccda4"
+        },
+        {
+          "rfilename": "action_head--50000_checkpoint.pt",
+          "size": 302242654,
+          "blobId": "86d79eeda2d988f0e3db9fb3cd0575fe71040077",
+          "lfs": {
+            "sha256": "b97c2e8939ede32d8a1b29e9565d70f22040ba9e54925665e81989a0cc13ccff",
+            "size": 302242654,
+            "pointerSize": 134
+          }
+        },
+        {
+          "rfilename": "added_tokens.json",
+          "size": 21,
+          "blobId": "8671820d1bb0dfd4dd92d5bd0fa9b5a7773f843e"
+        },
+        {
+          "rfilename": "config.json",
+          "size": 60712,
+          "blobId": "42ea81c7c783049559839e305afdfe97e30581a3"
+        },
+        {
+          "rfilename": "configuration_prismatic.py",
+          "size": 5865,
+          "blobId": "c2625753c4da1a6ef274a02645d4086bc7a7fb2b"
+        },
+        {
+          "rfilename": "dataset_statistics.json",
+          "size": 2923,
+          "blobId": "21e206558ba246acc21503336b5afe1c4692a2bb"
+        },
+        {
+          "rfilename": "generation_config.json",
+          "size": 136,
+          "blobId": "2cefc1e51e6ccfe846d2b509ced403df73a8efe2"
+        },
+        {
+          "rfilename": "lora_adapter/README.md",
+          "size": 5034,
+          "blobId": "3afc19ecf015990c1c2279f244c2a0f53a679366",
+          "lfs": {
+            "sha256": "1acb533904cd9931276014499b51c98c0fc8e3eab8962de7b971547116068383",
+            "size": 5034,
+            "pointerSize": 129
+          }
+        },
+        {
+          "rfilename": "lora_adapter/adapter_config.json",
+          "size": 813,
+          "blobId": "06c643508a5c599079b737aa5d03f94c51d67b9c",
+          "lfs": {
+            "sha256": "7577940217bcf5275d6049ab1230176715655baf90024b37e82b4d918e8d3216",
+            "size": 813,
+            "pointerSize": 128
+          }
+        },
+        {
+          "rfilename": "lora_adapter/adapter_model.safetensors",
+          "size": 484458600,
+          "blobId": "f4e6780aab4da31307025f5743e96ce61148c30b",
+          "lfs": {
+            "sha256": "1e94a9d9641a385852d37a85d24d3f3c2db05a4d3d772379bff37c9d5f1520ae",
+            "size": 484458600,
+            "pointerSize": 134
+          }
+        },
+        {
+          "rfilename": "model-00001-of-00004.safetensors",
+          "size": 4925122448,
+          "blobId": "c6edfd719b9eb15fa5d8217350a452bcf8a646ea",
+          "lfs": {
+            "sha256": "aae1b9bfffacaf15e209bc8296ffa9bd07baa41d673ab005696a82525b880b2f",
+            "size": 4925122448,
+            "pointerSize": 135
+          }
+        },
+        {
+          "rfilename": "model-00002-of-00004.safetensors",
+          "size": 4947392496,
+          "blobId": "337e19f58440e86dea9fed4ca74fc0503097c177",
+          "lfs": {
+            "sha256": "4cd51d327e1891f24f75d033017ed3824cc5fb9009e38498efd2dca6f89ee01d",
+            "size": 4947392496,
+            "pointerSize": 135
+          }
+        },
+        {
+          "rfilename": "model-00003-of-00004.safetensors",
+          "size": 4947417456,
+          "blobId": "83f7a569cf57daf30ed8d743c3126dcf435a7673",
+          "lfs": {
+            "sha256": "f1c361c4cbd78b60ccea81538ca1626e00e54baba70528af8c08577771768329",
+            "size": 4947417456,
+            "pointerSize": 135
+          }
+        },
+        {
+          "rfilename": "model-00004-of-00004.safetensors",
+          "size": 262668432,
+          "blobId": "57ef905a83f317f4d0d5f9e5a5611f97c45b7f5d",
+          "lfs": {
+            "sha256": "a877e3fece1feafb80f59f91585ce04379ee39e2bf9a25cb7b4acf237e896e60",
+            "size": 262668432,
+            "pointerSize": 134
+          }
+        },
+        {
+          "rfilename": "model.safetensors.index.json",
+          "size": 94764,
+          "blobId": "bd7cc8ff8070ead248023feae55303f5a3b900d1"
+        },
+        {
+          "rfilename": "modeling_prismatic.py",
+          "size": 49029,
+          "blobId": "9013a4f57eb18fa770efcbe9d0a1445d6c16bb72"
+        },
+        {
+          "rfilename": "preprocessor_config.json",
+          "size": 1650,
+          "blobId": "92975ace548590d24f65f497d7610af3b92b4dcd"
+        },
+        {
+          "rfilename": "processing_prismatic.py",
+          "size": 12718,
+          "blobId": "3f2daaf82c3b8946fe57596f656f14a031eaef93"
+        },
+        {
+          "rfilename": "processor_config.json",
+          "size": 130,
+          "blobId": "f892f8a8f53e2f3603a7cf86043a1add317c1787"
+        },
+        {
+          "rfilename": "proprio_projector--50000_checkpoint.pt",
+          "size": 67275184,
+          "blobId": "bea57324c39ae72eb0379e1e504ed4b9802bd7b0",
+          "lfs": {
+            "sha256": "780595e9cca5292348697686f9ccc83d39d9d3d303e860d62c6d4609952dfff1",
+            "size": 67275184,
+            "pointerSize": 133
+          }
+        },
+        {
+          "rfilename": "special_tokens_map.json",
+          "size": 552,
+          "blobId": "ab75c8e0a22550f0667501a0c52758f071a9efd8"
+        },
+        {
+          "rfilename": "tokenizer.json",
+          "size": 1842976,
+          "blobId": "591f1fc6ff695d967513100f707e66d5bf731414"
+        },
+        {
+          "rfilename": "tokenizer.model",
+          "size": 499723,
+          "blobId": "22bccbcb41ec929cf0c9dbe8f41036db82e5e773"
+        },
+        {
+          "rfilename": "tokenizer_config.json",
+          "size": 1192,
+          "blobId": "d39defd338dee423ae0a71abfd7ea69a44fb1e52"
+        }
+      ]
+    },
+    {
+      "kind": "weight_index",
+      "name": "model.safetensors.index.json",
+      "url": "https://huggingface.co/moojink/openvla-7b-oft-finetuned-libero-goal/resolve/c2d0f9fbbd82674683b397ff923168a12f6a307b/model.safetensors.index.json",
+      "http_status": 200,
+      "bytes": 94764,
+      "sha256": "ca8b53fed8133ee2afcd2fc483de8febf7f5bb0f6bcb09f91189772e59e8f659",
+      "advertised_tensor_bytes": 15082474368,
+      "shards": [
+        "model-00001-of-00004.safetensors",
+        "model-00002-of-00004.safetensors",
+        "model-00003-of-00004.safetensors",
+        "model-00004-of-00004.safetensors"
+      ],
+      "tensor_names_count": 982
+    },
+    {
+      "kind": "normalizer",
+      "name": "dataset_statistics.json",
+      "url": "https://huggingface.co/moojink/openvla-7b-oft-finetuned-libero-goal/resolve/c2d0f9fbbd82674683b397ff923168a12f6a307b/dataset_statistics.json",
+      "http_status": 200,
+      "bytes": 2923,
+      "sha256": "22e0549a346b2ec8a109904d017a57c50f12769b91653939aefb72b119725d47",
+      "dataset_keys": [
+        "libero_goal_no_noops"
+      ],
+      "fields": {
+        "libero_goal_no_noops": {
+          "action": {
+            "mean": 7,
+            "std": 7,
+            "max": 7,
+            "min": 7,
+            "q01": 7,
+            "q99": 7,
+            "mask": 7
+          },
+          "proprio": {
+            "mean": 8,
+            "std": 8,
+            "max": 8,
+            "min": 8,
+            "q01": 8,
+            "q99": 8
+          }
+        }
+      },
+      "static_checks": {
+        "libero_goal_no_noops": {
+          "action": {
+            "dimensions_match": true,
+            "all_finite": true,
+            "q99_ge_q01": true,
+            "degenerate_quantile_indices": []
+          },
+          "proprio": {
+            "dimensions_match": true,
+            "all_finite": true,
+            "q99_ge_q01": true,
+            "degenerate_quantile_indices": []
+          }
+        }
+      }
+    },
+    {
+      "kind": "config",
+      "name": "config.json",
+      "url": "https://huggingface.co/moojink/openvla-7b-oft-finetuned-libero-goal/resolve/c2d0f9fbbd82674683b397ff923168a12f6a307b/config.json",
+      "http_status": 200,
+      "bytes": 60712,
+      "sha256": "edd5c5cf6d7927e07465cf086ebe41f7b3ec8f3b128a51f71d6db14dad7ad8b1",
+      "selected_config": {
+        "architectures": [
+          "OpenVLAForActionPrediction"
+        ],
+        "model_type": "openvla",
+        "torch_dtype": "bfloat16",
+        "transformers_version": "4.40.1",
+        "auto_map": {
+          "AutoConfig": "configuration_prismatic.OpenVLAConfig",
+          "AutoModelForVision2Seq": "modeling_prismatic.OpenVLAForActionPrediction"
+        },
+        "image_sizes": [
+          224,
+          224
+        ]
+      },
+      "text_config_summary": {
+        "torch_dtype": "bfloat16"
+      }
+    },
+    {
+      "kind": "source",
+      "name": "hf/modeling_prismatic.py",
+      "url": "https://huggingface.co/moojink/openvla-7b-oft-finetuned-libero-goal/resolve/c2d0f9fbbd82674683b397ff923168a12f6a307b/modeling_prismatic.py",
+      "http_status": 200,
+      "bytes": 49029,
+      "sha256": "f40ee7883e16aab1a2d89b6e8f31cc81f6b8055120b1fefe169e05c7031098fa",
+      "matching_line_numbers": {
+        "cuda": [],
+        "flash_attn": [
+          287
+        ],
+        "flash_attention": [],
+        "bfloat16": [],
+        "DEVICE": [],
+        "A100": [],
+        "torch==": [],
+        "transformers": [
+          5,
+          19,
+          21,
+          22,
+          55,
+          190,
+          218,
+          331,
+          333,
+          334
+        ]
+      }
+    }
+  ],
+  "static_comparison": {
+    "repo_and_hf_modeling_ast_equal": false,
+    "config_norm_stats_equals_statistics_file": false,
+    "get_vla_from_pretrained_keyword_names": [
+      [
+        "torch_dtype",
+        "load_in_8bit",
+        "load_in_4bit",
+        "low_cpu_mem_usage",
+        "trust_remote_code"
+      ]
+    ],
+    "explicit_active_attn_implementation_keyword": false
+  },
+  "downloads": {
+    "weight_payload_bytes": 0,
+    "dataset_payload_bytes": 0,
+    "pdf_bytes": 0,
+    "source_and_small_json_bytes": 304092
+  },
+  "upstream_code_imported": false,
+  "dependencies_installed": false,
+  "policy_forwards": 0,
+  "simulator_steps": 0,
+  "policy_episodes": 0,
+  "torch_cuda_is_available_tested": false,
+  "limitations": [
+    "No PyTorch imported; absence of GPU device nodes is an infrastructure observation.",
+    "Remote LFS metadata hashes are advertised identities, not locally verified weight hashes.",
+    "Full-file hashes identify text; matching lines do not imply full code review.",
+    "Probe cgroup memory limit is intentional and differs from Docker VM total memory."
+  ]
+}

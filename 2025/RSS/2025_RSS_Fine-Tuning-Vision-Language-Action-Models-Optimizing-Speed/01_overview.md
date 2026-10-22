@@ -9,7 +9,7 @@
 - Year/Venue: 2025 / RSS
 - Authors: not duplicated here when not verified in the registry source
 - Primary track: VLA and generalist robot policies
-- Tier: NEXT
+- Tier: CORE
 - Tags: Robotics, VLA, OpenVLA, fine-tuning, action chunking, inference efficiency
 - Official paper: https://www.roboticsproceedings.org/rss21/p017.html
 - Full-text retrieval: https://www.roboticsproceedings.org/rss21/p017.pdf

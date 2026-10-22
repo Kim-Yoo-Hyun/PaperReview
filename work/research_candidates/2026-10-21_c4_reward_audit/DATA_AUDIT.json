@@ -1,0 +1,4190 @@
+{
+  "date": "2026-10-21",
+  "scope": "actual metadata payloads, no video decoding/model inference/policy training",
+  "runtime": {
+    "python": "3.11.17",
+    "machine": "aarch64",
+    "system": "Linux"
+  },
+  "datasets": [
+    {
+      "repository": "robometer/rbm-1m-ood",
+      "revision": "3f3ee69ecc0ee0db627684da7d599ec26d08175c",
+      "repository_file_count": 1934,
+      "selected_metadata_paths": [
+        "data/chunk-000/file-000.parquet",
+        "export_summary.json",
+        "meta/episodes/chunk-000/file-000.parquet",
+        "meta/info.json",
+        "meta/tasks.parquet",
+        "mit_franka/metadata.parquet",
+        "robometer_categorical_maps.json",
+        "train/metadata.parquet",
+        "usc_franka/metadata.parquet",
+        "usc_koch/metadata.parquet",
+        "usc_koch_paired/metadata.parquet",
+        "usc_trossen/metadata.parquet",
+        "usc_xarm/metadata.parquet",
+        "utd_so101/metadata.parquet",
+        "utd_so101_clutter/metadata.parquet",
+        "utd_so101_human/metadata.parquet",
+        "utd_so101_wrist/metadata.parquet"
+      ],
+      "payloads": [
+        {
+          "path": "data/chunk-000/file-000.parquet",
+          "url": "https://huggingface.co/datasets/robometer/rbm-1m-ood/resolve/3f3ee69ecc0ee0db627684da7d599ec26d08175c/data/chunk-000/file-000.parquet",
+          "bytes": 140463,
+          "sha256": "174880169c7d156c357fd33ff6c73883b1222c80384ce146a8701d5cb4bb21a6",
+          "schema": "id: string\nquality_label: string\ndata_source: string\nis_robot: string\npartial_success: string\ntimestamp: float\nframe_index: int64\nepisode_index: int64\nindex: int64\ntask_index: int64\n-- schema metadata --\nhuggingface: '{\"info\": {\"features\": {\"id\": {\"dtype\": \"string\", \"_type\": \"' + 489",
+          "rows": 18261,
+          "columns": [
+            "data_source",
+            "episode_index",
+            "frame_index",
+            "id",
+            "index",
+            "is_robot",
+            "partial_success",
+            "quality_label",
+            "task_index",
+            "timestamp"
+          ],
+          "non_null_counts": {
+            "data_source": 18261,
+            "episode_index": 18261,
+            "frame_index": 18261,
+            "id": 18261,
+            "index": 18261,
+            "is_robot": 18261,
+            "partial_success": 18261,
+            "quality_label": 18261,
+            "task_index": 18261,
+            "timestamp": 18261
+          },
+          "values": {
+            "data_source": {
+              "unique": 6,
+              "counts": {
+                "usc_trossen": 864,
+                "rfm_new_mit_franka_rfm": 9728,
+                "utd_so101_clean_policy_ranking_top": 960,
+                "usc_xarm_policy_ranking": 1152,
+                "usc_franka_policy_ranking": 768,
+                "usc_koch_p_ranking_all": 4789
+              },
+              "first_values": [
+                "usc_trossen",
+                "rfm_new_mit_franka_rfm",
+                "utd_so101_clean_policy_ranking_top"
+              ]
+            },
+            "episode_index": {
+              "unique": 571,
+              "counts": null,
+              "first_values": [
+                "0",
+                "1",
+                "2"
+              ]
+            },
+            "frame_index": {
+              "unique": 32,
+              "counts": {
+                "0": 571,
+                "1": 571,
+                "2": 571,
+                "3": 571,
+                "4": 571,
+                "5": 571,
+                "6": 571,
+                "7": 571,
+                "8": 571,
+                "9": 571,
+                "10": 571,
+                "11": 571,
+                "12": 571,
+                "13": 571,
+                "14": 571,
+                "15": 571,
+                "16": 571,
+                "17": 571,
+                "18": 571,
+                "19": 571,
+                "20": 571,
+                "21": 570,
+                "22": 570,
+                "23": 570,
+                "24": 570,
+                "25": 570,
+                "26": 570,
+                "27": 570,
+                "28": 570,
+                "29": 570,
+                "30": 570,
+                "31": 570
+              },
+              "first_values": [
+                "0",
+                "1",
+                "2"
+              ]
+            },
+            "id": {
+              "unique": 571,
+              "counts": null,
+              "first_values": [
+                "ykorkmaz__aloha_open_bottle_ep_000000",
+                "ykorkmaz__aloha_open_bottle_ep_000001",
+                "ykorkmaz__aloha_open_bottle_failure_ep_000001"
+              ]
+            },
+            "index": {
+              "unique": 18261,
+              "counts": null,
+              "first_values": [
+                "0",
+                "1",
+                "2"
+              ]
+            },
+            "is_robot": {
+              "unique": 1,
+              "counts": {
+                "true": 18261
+              },
+              "first_values": [
+                "true"
+              ]
+            },
+            "partial_success": {
+              "unique": 1,
+              "counts": {
+                "": 18261
+              },
+              "first_values": [
+                ""
+              ]
+            },
+            "quality_label": {
+              "unique": 3,
+              "counts": {
+                "successful": 7456,
+                "failure": 5301,
+                "suboptimal": 5504
+              },
+              "first_values": [
+                "successful",
+                "failure",
+                "suboptimal"
+              ]
+            },
+            "task_index": {
+              "unique": 41,
+              "counts": {
+                "0": 160,
+                "1": 224,
+                "2": 128,
+                "3": 224,
+                "4": 96,
+                "5": 32,
+                "6": 2176,
+                "7": 4288,
+                "8": 576,
+                "9": 1024,
+                "10": 704,
+                "11": 512,
+                "12": 832,
+                "13": 96,
+                "14": 96,
+                "15": 96,
+                "16": 96,
+                "17": 96,
+                "18": 96,
+                "19": 96,
+                "20": 96,
+                "21": 96,
+                "22": 96,
+                "23": 192,
+                "24": 192,
+                "25": 192,
+                "26": 192,
+                "27": 192,
+                "28": 192,
+                "29": 192,
+                "30": 192,
+                "31": 480,
+                "32": 469,
+                "33": 480,
+                "34": 480,
+                "35": 480,
+                "36": 480,
+                "37": 480,
+                "38": 480,
+                "39": 480,
+                "40": 480
+              },
+              "first_values": [
+                "0",
+                "1",
+                "2"
+              ]
+            },
+            "timestamp": {
+              "unique": 32,
+              "counts": {
+                "0.0": 571,
+                "0.10000000149011612": 571,
+                "0.20000000298023224": 571,
+                "0.30000001192092896": 571,
+                "0.4000000059604645": 571,
+                "0.5": 571,
+                "0.6000000238418579": 571,
+                "0.699999988079071": 571,
+                "0.800000011920929": 571,
+                "0.8999999761581421": 571,
+                "1.0": 571,
+                "1.100000023841858": 571,
+                "1.2000000476837158": 571,
+                "1.2999999523162842": 571,
+                "1.399999976158142": 571,
+                "1.5": 571,
+                "1.600000023841858": 571,
+                "1.7000000476837158": 571,
+                "1.7999999523162842": 571,
+                "1.899999976158142": 571,
+                "2.0": 571,
+                "2.0999999046325684": 570,
+                "2.200000047683716": 570,
+                "2.299999952316284": 570,
+                "2.4000000953674316": 570,
+                "2.5": 570,
+                "2.5999999046325684": 570,
+                "2.700000047683716": 570,
+                "2.799999952316284": 570,
+                "2.9000000953674316": 570,
+                "3.0": 570,
+                "3.0999999046325684": 570
+              },
+              "first_values": [
+                "0.0",
+                "0.10000000149011612",
+                "0.20000000298023224"
+              ]
+            }
+          },
+          "first_rows": [
+            {
+              "id": "ykorkmaz__aloha_open_bottle_ep_000000",
+              "quality_label": "successful",
+              "data_source": "usc_trossen",
+              "is_robot": "true",
+              "partial_success": "",
+              "timestamp": 0.0,
+              "frame_index": 0,
+              "episode_index": 0,
+              "index": 0,
+              "task_index": 0
+            },
+            {
+              "id": "ykorkmaz__aloha_open_bottle_ep_000000",
+              "quality_label": "successful",
+              "data_source": "usc_trossen",
+              "is_robot": "true",
+              "partial_success": "",
+              "timestamp": 0.10000000149011612,
+              "frame_index": 1,
+              "episode_index": 0,
+              "index": 1,
+              "task_index": 0
+            }
+          ],
+          "episode_summary": {
+            "episodes": 571,
+            "quality_counts": {
+              "successful": 233,
+              "failure": 166,
+              "suboptimal": 172
+            },
+            "source_counts": {
+              "usc_trossen": 27,
+              "rfm_new_mit_franka_rfm": 304,
+              "utd_so101_clean_policy_ranking_top": 30,
+              "usc_xarm_policy_ranking": 36,
+              "usc_franka_policy_ranking": 24,
+              "usc_koch_p_ranking_all": 150
+            },
+            "all_episodes_start_timestamp_zero": true,
+            "id_examples_by_source": {
+              "rfm_new_mit_franka_rfm": [
+                "4ff0df87-136e-4036-bbb4-282dedcab229",
+                "e795d59a-3c17-461c-bfd2-93e04303b866",
+                "9edecc05-daf2-40e6-b9da-9b5df3e478fb"
+              ],
+              "usc_franka_policy_ranking": [
+                "d7ac5396-b6c0-4c6f-8fc9-bfe5c6625ff1",
+                "75967187-8e3e-43f5-b2b1-fc643506f297",
+                "f5ebe253-fab2-4716-afa7-4dc3b969e8bf"
+              ],
+              "usc_koch_p_ranking_all": [
+                "8165986b-3de7-4773-87a3-9440eca2c13a",
+                "0623b422-5019-41e7-85d0-360ad7538db1",
+                "c2aac95c-5b31-46b0-85c7-f1a2d34dda1a"
+              ],
+              "usc_trossen": [
+                "ykorkmaz__aloha_open_bottle_ep_000000",
+                "ykorkmaz__aloha_open_bottle_ep_000001",
+                "ykorkmaz__aloha_open_bottle_failure_ep_000001"
+              ],
+              "usc_xarm_policy_ranking": [
+                "9726c08b-3b48-495a-9aae-f90cebd83330",
+                "9a3c5b08-296d-4650-a388-759dc39c8b92",
+                "83118d44-d77d-4266-abb8-417b60b54f57"
+              ],
+              "utd_so101_clean_policy_ranking_top": [
+                "0548f1f3-7a80-4110-9123-db28180a7b7e",
+                "960cb5d3-f615-4d5c-9ed8-de54e22de636",
+                "ae228abd-e2a9-4617-a45a-cdd846b0a562"
+              ]
+            }
+          }
+        },
+        {
+          "path": "export_summary.json",
+          "url": "https://huggingface.co/datasets/robometer/rbm-1m-ood/resolve/3f3ee69ecc0ee0db627684da7d599ec26d08175c/export_summary.json",
+          "bytes": 928,
+          "sha256": "8a7900faa781f71d63c7573a06320d79af1673cdbf7200f1af5c7a295b4db78e",
+          "content": {
+            "output_dir": "/home/azure/robometer/lerobot_v3_exports/rbm-1m-ood",
+            "repo_id": "robometer/rbm-1m-ood",
+            "dataset_category": "rbm-1m-ood",
+            "split": "eval",
+            "total_episodes": 571,
+            "total_frames": 18261,
+            "total_tasks": 41,
+            "dataset_names": [
+              "ykorkmaz_usc_trossen_rfm_usc_trossen",
+              "jesbu1_rfm_new_mit_franka_rfm_rfm_new_mit_franka_rfm",
+              "jesbu1_utd_so101_clean_policy_ranking_top_utd_so101_clean_policy_ranking_top",
+              "aliangdw_usc_xarm_policy_ranking_usc_xarm_policy_ranking",
+              "aliangdw_usc_franka_policy_ranking_usc_franka_policy_ranking",
+              "jesbu1_usc_koch_p_ranking_rfm_usc_koch_p_ranking_all"
+            ],
+            "data_sources": [
+              "rfm_new_mit_franka_rfm",
+              "usc_franka_policy_ranking",
+              "usc_koch_p_ranking_all",
+              "usc_trossen",
+              "usc_xarm_policy_ranking",
+              "utd_so101_clean_policy_ranking_top"
+            ],
+            "quality_labels": [
+              "failure",
+              "suboptimal",
+              "successful"
+            ]
+          }
+        },
+        {
+          "path": "meta/episodes/chunk-000/file-000.parquet",
+          "url": "https://huggingface.co/datasets/robometer/rbm-1m-ood/resolve/3f3ee69ecc0ee0db627684da7d599ec26d08175c/meta/episodes/chunk-000/file-000.parquet",
+          "bytes": 171077,
+          "sha256": "0765cba1e2eb2356a9bf7ec0792fcec0199eb9a874dc9865ba97d4126a9b0d36",
+          "schema": "episode_index: int64\ntasks: list<element: string>\n  child 0, element: string\nlength: int64\ndata/chunk_index: int64\ndata/file_index: int64\ndataset_from_index: int64\ndataset_to_index: int64\nvideos/video/chunk_index: int64\nvideos/video/file_index: int64\nvideos/video/from_timestamp: double\nvideos/video/to_timestamp: double\nstats/video/min: list<element: list<element: list<element: double>>>\n  child 0, element: list<element: list<element: double>>\n      child 0, element: list<element: double>\n          child 0, element: double\nstats/video/max: list<element: list<element: list<element: double>>>\n  child 0, element: list<element: list<element: double>>\n      child 0, element: list<element: double>\n          child 0, element: double\nstats/video/mean: list<element: list<element: list<element: double>>>\n  child 0, element: list<element: list<element: double>>\n      child 0, element: list<element: double>\n          child 0, element: double\nstats/video/std: list<element: list<element: list<element: double>>>\n  child 0, element: list<element: list<element: double>>\n      child 0, element: list<element: double>\n          child 0, element: double\nstats/video/count: list<element: int64>\n  child 0, element: int64\nstats/video/q01: list<element: list<element: list<element: double>>>\n  child 0, element: list<element: list<element: double>>\n      child 0, element: list<element: double>\n          child 0, element: double\nstats/video/q10: list<element: list<element: list<element: double>>>\n  child 0, element: list<element: list<element: double>>\n      child 0, element: list<element: double>\n          child 0, element: double\nstats/video/q50: list<element: list<element: list<element: double>>>\n  child 0, element: list<element: list<element: double>>\n      child 0, element: list<element: double>\n          child 0, element: double\nstats/video/q90: list<element: list<element: list<element: double>>>\n  child 0, element: list<element: list<element: double>>\n      child 0, element: list<element: double>\n          child 0, element: double\nstats/video/q99: list<element: list<element: list<element: double>>>\n  child 0, element: list<element: list<element: double>>\n      child 0, element: list<element: double>\n          child 0, element: double\nstats/timestamp/min: list<element: double>\n  child 0, element: double\nstats/timestamp/max: list<element: double>\n  child 0, element: double\nstats/timestamp/mean: list<element: double>\n  child 0, element: double\nstats/timestamp/std: list<element: double>\n  child 0, element: double\nstats/timestamp/count: list<element: int64>\n  child 0, element: int64\nstats/timestamp/q01: list<element: double>\n  child 0, element: double\nstats/timestamp/q10: list<element: double>\n  child 0, element: double\nstats/timestamp/q50: list<element: double>\n  child 0, element: double\nstats/timestamp/q90: list<element: double>\n  child 0, element: double\nstats/timestamp/q99: list<element: double>\n  child 0, element: double\nstats/frame_index/min: list<element: int64>\n  child 0, element: int64\nstats/frame_index/max: list<element: int64>\n  child 0, element: int64\nstats/frame_index/mean: list<element: double>\n  child 0, element: double\nstats/frame_index/std: list<element: double>\n  child 0, element: double\nstats/frame_index/count: list<element: int64>\n  child 0, element: int64\nstats/frame_index/q01: list<element: double>\n  child 0, element: double\nstats/frame_index/q10: list<element: double>\n  child 0, element: double\nstats/frame_index/q50: list<element: double>\n  child 0, element: double\nstats/frame_index/q90: list<element: double>\n  child 0, element: double\nstats/frame_index/q99: list<element: double>\n  child 0, element: double\nstats/episode_index/min: list<element: int64>\n  child 0, element: int64\nstats/episode_index/max: list<element: int64>\n  child 0, element: int64\nstats/episode_index/mean: list<element: double>\n  child 0, element: double\nstats/episode_index/std: list<element: double>\n  child 0, element: double\nstats/episode_index/count: list<element: int64>\n  child 0, element: int64\nstats/episode_index/q01: list<element: double>\n  child 0, element: double\nstats/episode_index/q10: list<element: double>\n  child 0, element: double\nstats/episode_index/q50: list<element: double>\n  child 0, element: double\nstats/episode_index/q90: list<element: double>\n  child 0, element: double\nstats/episode_index/q99: list<element: double>\n  child 0, element: double\nstats/index/min: list<element: int64>\n  child 0, element: int64\nstats/index/max: list<element: int64>\n  child 0, element: int64\nstats/index/mean: list<element: double>\n  child 0, element: double\nstats/index/std: list<element: double>\n  child 0, element: double\nstats/index/count: list<element: int64>\n  child 0, element: int64\nstats/index/q01: list<element: double>\n  child 0, element: double\nstats/index/q10: list<element: double>\n  child 0, element: double\nstats/index/q50: list<element: double>\n  child 0, element: double\nstats/index/q90: list<element: double>\n  child 0, element: double\nstats/index/q99: list<element: double>\n  child 0, element: double\nstats/task_index/min: list<element: int64>\n  child 0, element: int64\nstats/task_index/max: list<element: int64>\n  child 0, element: int64\nstats/task_index/mean: list<element: double>\n  child 0, element: double\nstats/task_index/std: list<element: double>\n  child 0, element: double\nstats/task_index/count: list<element: int64>\n  child 0, element: int64\nstats/task_index/q01: list<element: double>\n  child 0, element: double\nstats/task_index/q10: list<element: double>\n  child 0, element: double\nstats/task_index/q50: list<element: double>\n  child 0, element: double\nstats/task_index/q90: list<element: double>\n  child 0, element: double\nstats/task_index/q99: list<element: double>\n  child 0, element: double\nmeta/episodes/chunk_index: int64\nmeta/episodes/file_index: int64\n-- schema metadata --\npandas: '{\"index_columns\": [], \"column_indexes\": [], \"columns\": [{\"name\":' + 10581",
+          "rows": 571,
+          "columns": [
+            "data/chunk_index",
+            "data/file_index",
+            "dataset_from_index",
+            "dataset_to_index",
+            "episode_index",
+            "length",
+            "meta/episodes/chunk_index",
+            "meta/episodes/file_index",
+            "stats/episode_index/count",
+            "stats/episode_index/max",
+            "stats/episode_index/mean",
+            "stats/episode_index/min",
+            "stats/episode_index/q01",
+            "stats/episode_index/q10",
+            "stats/episode_index/q50",
+            "stats/episode_index/q90",
+            "stats/episode_index/q99",
+            "stats/episode_index/std",
+            "stats/frame_index/count",
+            "stats/frame_index/max",
+            "stats/frame_index/mean",
+            "stats/frame_index/min",
+            "stats/frame_index/q01",
+            "stats/frame_index/q10",
+            "stats/frame_index/q50",
+            "stats/frame_index/q90",
+            "stats/frame_index/q99",
+            "stats/frame_index/std",
+            "stats/index/count",
+            "stats/index/max",
+            "stats/index/mean",
+            "stats/index/min",
+            "stats/index/q01",
+            "stats/index/q10",
+            "stats/index/q50",
+            "stats/index/q90",
+            "stats/index/q99",
+            "stats/index/std",
+            "stats/task_index/count",
+            "stats/task_index/max",
+            "stats/task_index/mean",
+            "stats/task_index/min",
+            "stats/task_index/q01",
+            "stats/task_index/q10",
+            "stats/task_index/q50",
+            "stats/task_index/q90",
+            "stats/task_index/q99",
+            "stats/task_index/std",
+            "stats/timestamp/count",
+            "stats/timestamp/max",
+            "stats/timestamp/mean",
+            "stats/timestamp/min",
+            "stats/timestamp/q01",
+            "stats/timestamp/q10",
+            "stats/timestamp/q50",
+            "stats/timestamp/q90",
+            "stats/timestamp/q99",
+            "stats/timestamp/std",
+            "stats/video/count",
+            "stats/video/max",
+            "stats/video/mean",
+            "stats/video/min",
+            "stats/video/q01",
+            "stats/video/q10",
+            "stats/video/q50",
+            "stats/video/q90",
+            "stats/video/q99",
+            "stats/video/std",
+            "tasks",
+            "videos/video/chunk_index",
+            "videos/video/file_index",
+            "videos/video/from_timestamp",
+            "videos/video/to_timestamp"
+          ],
+          "non_null_counts": {
+            "data/chunk_index": 571,
+            "data/file_index": 571,
+            "dataset_from_index": 571,
+            "dataset_to_index": 571,
+            "episode_index": 571,
+            "length": 571,
+            "meta/episodes/chunk_index": 571,
+            "meta/episodes/file_index": 571,
+            "stats/episode_index/count": 571,
+            "stats/episode_index/max": 571,
+            "stats/episode_index/mean": 571,
+            "stats/episode_index/min": 571,
+            "stats/episode_index/q01": 571,
+            "stats/episode_index/q10": 571,
+            "stats/episode_index/q50": 571,
+            "stats/episode_index/q90": 571,
+            "stats/episode_index/q99": 571,
+            "stats/episode_index/std": 571,
+            "stats/frame_index/count": 571,
+            "stats/frame_index/max": 571,
+            "stats/frame_index/mean": 571,
+            "stats/frame_index/min": 571,
+            "stats/frame_index/q01": 571,
+            "stats/frame_index/q10": 571,
+            "stats/frame_index/q50": 571,
+            "stats/frame_index/q90": 571,
+            "stats/frame_index/q99": 571,
+            "stats/frame_index/std": 571,
+            "stats/index/count": 571,
+            "stats/index/max": 571,
+            "stats/index/mean": 571,
+            "stats/index/min": 571,
+            "stats/index/q01": 571,
+            "stats/index/q10": 571,
+            "stats/index/q50": 571,
+            "stats/index/q90": 571,
+            "stats/index/q99": 571,
+            "stats/index/std": 571,
+            "stats/task_index/count": 571,
+            "stats/task_index/max": 571,
+            "stats/task_index/mean": 571,
+            "stats/task_index/min": 571,
+            "stats/task_index/q01": 571,
+            "stats/task_index/q10": 571,
+            "stats/task_index/q50": 571,
+            "stats/task_index/q90": 571,
+            "stats/task_index/q99": 571,
+            "stats/task_index/std": 571,
+            "stats/timestamp/count": 571,
+            "stats/timestamp/max": 571,
+            "stats/timestamp/mean": 571,
+            "stats/timestamp/min": 571,
+            "stats/timestamp/q01": 571,
+            "stats/timestamp/q10": 571,
+            "stats/timestamp/q50": 571,
+            "stats/timestamp/q90": 571,
+            "stats/timestamp/q99": 571,
+            "stats/timestamp/std": 571,
+            "stats/video/count": 571,
+            "stats/video/max": 571,
+            "stats/video/mean": 571,
+            "stats/video/min": 571,
+            "stats/video/q01": 571,
+            "stats/video/q10": 571,
+            "stats/video/q50": 571,
+            "stats/video/q90": 571,
+            "stats/video/q99": 571,
+            "stats/video/std": 571,
+            "tasks": 571,
+            "videos/video/chunk_index": 571,
+            "videos/video/file_index": 571,
+            "videos/video/from_timestamp": 571,
+            "videos/video/to_timestamp": 571
+          },
+          "values": {
+            "data/chunk_index": {
+              "unique": 1,
+              "counts": {
+                "0": 571
+              },
+              "first_values": [
+                "0"
+              ]
+            },
+            "data/file_index": {
+              "unique": 1,
+              "counts": {
+                "0": 571
+              },
+              "first_values": [
+                "0"
+              ]
+            },
+            "dataset_from_index": {
+              "unique": 571,
+              "counts": null,
+              "first_values": [
+                "0",
+                "32",
+                "64"
+              ]
+            },
+            "dataset_to_index": {
+              "unique": 571,
+              "counts": null,
+              "first_values": [
+                "32",
+                "64",
+                "96"
+              ]
+            },
+            "episode_index": {
+              "unique": 571,
+              "counts": null,
+              "first_values": [
+                "0",
+                "1",
+                "2"
+              ]
+            },
+            "length": {
+              "unique": 2,
+              "counts": {
+                "32": 570,
+                "21": 1
+              },
+              "first_values": [
+                "32",
+                "21"
+              ]
+            },
+            "meta/episodes/chunk_index": {
+              "unique": 1,
+              "counts": {
+                "0": 571
+              },
+              "first_values": [
+                "0"
+              ]
+            },
+            "meta/episodes/file_index": {
+              "unique": 1,
+              "counts": {
+                "0": 571
+              },
+              "first_values": [
+                "0"
+              ]
+            },
+            "videos/video/chunk_index": {
+              "unique": 1,
+              "counts": {
+                "0": 571
+              },
+              "first_values": [
+                "0"
+              ]
+            },
+            "videos/video/file_index": {
+              "unique": 1,
+              "counts": {
+                "0": 571
+              },
+              "first_values": [
+                "0"
+              ]
+            },
+            "videos/video/from_timestamp": {
+              "unique": 571,
+              "counts": null,
+              "first_values": [
+                "0.0",
+                "3.2",
+                "6.4"
+              ]
+            },
+            "videos/video/to_timestamp": {
+              "unique": 571,
+              "counts": null,
+              "first_values": [
+                "3.2",
+                "6.4",
+                "9.6"
+              ]
+            }
+          },
+          "first_rows": [
+            {
+              "episode_index": 0,
+              "tasks": [
+                "Open the bottle"
+              ],
+              "length": 32,
+              "data/chunk_index": 0,
+              "data/file_index": 0,
+              "dataset_from_index": 0,
+              "dataset_to_index": 32,
+              "videos/video/chunk_index": 0,
+              "videos/video/file_index": 0,
+              "videos/video/from_timestamp": 0.0,
+              "videos/video/to_timestamp": 3.2,
+              "stats/video/min": [
+                [
+                  [
+                    0.0
+                  ]
+                ],
+                [
+                  [
+                    0.0
+                  ]
+                ],
+                [
+                  [
+                    0.0
+                  ]
+                ]
+              ],
+              "stats/video/max": [
+                [
+                  [
+                    1.0
+                  ]
+                ],
+                [
+                  [
+                    1.0
+                  ]
+                ],
+                [
+                  [
+                    1.0
+                  ]
+                ]
+              ],
+              "stats/video/mean": [
+                [
+                  [
+                    0.16772339186152022
+                  ]
+                ],
+                [
+                  [
+                    0.18926127035913387
+                  ]
+                ],
+                [
+                  [
+                    0.20552730226036398
+                  ]
+                ]
+              ],
+              "stats/video/std": [
+                [
+                  [
+                    0.23806499084596403
+                  ]
+                ],
+                [
+                  [
+                    0.21239902442066283
+                  ]
+                ],
+                [
+                  [
+                    0.20056346129957603
+                  ]
+                ]
+              ],
+              "stats/video/count": [
+                32
+              ],
+              "stats/video/q01": [
+                [
+                  [
+                    0.0
+                  ]
+                ],
+                [
+                  [
+                    0.0117647061124444
+                  ]
+                ],
+                [
+                  [
+                    0.027450980618596077
+                  ]
+                ]
+              ],
+              "stats/video/q10": [
+                [
+                  [
+                    0.0
+                  ]
+                ],
+                [
+                  [
+                    0.03529411926865578
+                  ]
+                ],
+                [
+                  [
+                    0.05882352963089943
+                  ]
+                ]
+              ],
+              "stats/video/q50": [
+                [
+                  [
+                    0.03921568766236305
+                  ]
+                ],
+                [
+                  [
+                    0.08627451211214066
+                  ]
+                ],
+                [
+                  [
+                    0.12156862765550613
+                  ]
+                ]
+              ],
+              "stats/video/q90": [
+                [
+                  [
+                    0.5764706134796143
+                  ]
+                ],
+                [
+                  [
+                    0.5098039507865906
+                  ]
+                ],
+                [
+                  [
+                    0.48627451062202454
+                  ]
+                ]
+              ],
+              "stats/video/q99": [
+                [
+                  [
+                    0.7882353067398071
+                  ]
+                ],
+                [
+                  [
+                    0.8705882430076599
+                  ]
+                ],
+                [
+                  [
+                    0.9607843160629272
+                  ]
+                ]
+              ],
+              "stats/timestamp/min": [
+                0.0
+              ],
+              "stats/timestamp/max": [
+                3.1
+              ],
+              "stats/timestamp/mean": [
+                1.55
+              ],
+              "stats/timestamp/std": [
+                0.9233092656309694
+              ],
+              "stats/timestamp/count": [
+                32
+              ],
+              "stats/timestamp/q01": [
+                0.031
+              ],
+              "stats/timestamp/q10": [
+                0.31
+              ],
+              "stats/timestamp/q50": [
+                1.55
+              ],
+              "stats/timestamp/q90": [
+                2.79
+              ],
+              "stats/timestamp/q99": [
+                3.0690000000000004
+              ],
+              "stats/frame_index/min": [
+                0
+              ],
+              "stats/frame_index/max": [
+                31
+              ],
+              "stats/frame_index/mean": [
+                15.5
+              ],
+              "stats/frame_index/std": [
+                9.233092656309694
+              ],
+              "stats/frame_index/count": [
+                32
+              ],
+              "stats/frame_index/q01": [
+                0.31
+              ],
+              "stats/frame_index/q10": [
+                3.1
+              ],
+              "stats/frame_index/q50": [
+                15.5
+              ],
+              "stats/frame_index/q90": [
+                27.900000000000002
+              ],
+              "stats/frame_index/q99": [
+                30.69
+              ],
+              "stats/episode_index/min": [
+                0
+              ],
+              "stats/episode_index/max": [
+                0
+              ],
+              "stats/episode_index/mean": [
+                0.0
+              ],
+              "stats/episode_index/std": [
+                0.0
+              ],
+              "stats/episode_index/count": [
+                32
+              ],
+              "stats/episode_index/q01": [
+                0.0
+              ],
+              "stats/episode_index/q10": [
+                0.0
+              ],
+              "stats/episode_index/q50": [
+                0.0
+              ],
+              "stats/episode_index/q90": [
+                0.0
+              ],
+              "stats/episode_index/q99": [
+                0.0
+              ],
+              "stats/index/min": [
+                0
+              ],
+              "stats/index/max": [
+                31
+              ],
+              "stats/index/mean": [
+                15.5
+              ],
+              "stats/index/std": [
+                9.233092656309694
+              ],
+              "stats/index/count": [
+                32
+              ],
+              "stats/index/q01": [
+                0.31
+              ],
+              "stats/index/q10": [
+                3.1
+              ],
+              "stats/index/q50": [
+                15.5
+              ],
+              "stats/index/q90": [
+                27.900000000000002
+              ],
+              "stats/index/q99": [
+                30.69
+              ],
+              "stats/task_index/min": [
+                0
+              ],
+              "stats/task_index/max": [
+                0
+              ],
+              "stats/task_index/mean": [
+                0.0
+              ],
+              "stats/task_index/std": [
+                0.0
+              ],
+              "stats/task_index/count": [
+                32
+              ],
+              "stats/task_index/q01": [
+                0.0
+              ],
+              "stats/task_index/q10": [
+                0.0
+              ],
+              "stats/task_index/q50": [
+                0.0
+              ],
+              "stats/task_index/q90": [
+                0.0
+              ],
+              "stats/task_index/q99": [
+                0.0
+              ],
+              "meta/episodes/chunk_index": 0,
+              "meta/episodes/file_index": 0
+            },
+            {
+              "episode_index": 1,
+              "tasks": [
+                "Open the bottle"
+              ],
+              "length": 32,
+              "data/chunk_index": 0,
+              "data/file_index": 0,
+              "dataset_from_index": 32,
+              "dataset_to_index": 64,
+              "videos/video/chunk_index": 0,
+              "videos/video/file_index": 0,
+              "videos/video/from_timestamp": 3.2,
+              "videos/video/to_timestamp": 6.4,
+              "stats/video/min": [
+                [
+                  [
+                    0.0
+                  ]
+                ],
+                [
+                  [
+                    0.0
+                  ]
+                ],
+                [
+                  [
+                    0.0
+                  ]
+                ]
+              ],
+              "stats/video/max": [
+                [
+                  [
+                    1.0
+                  ]
+                ],
+                [
+                  [
+                    1.0
+                  ]
+                ],
+                [
+                  [
+                    1.0
+                  ]
+                ]
+              ],
+              "stats/video/mean": [
+                [
+                  [
+                    0.1667873965972309
+                  ]
+                ],
+                [
+                  [
+                    0.19347938367920334
+                  ]
+                ],
+                [
+                  [
+                    0.2106617599173735
+                  ]
+                ]
+              ],
+              "stats/video/std": [
+                [
+                  [
+                    0.2367032630345959
+                  ]
+                ],
+                [
+                  [
+                    0.21099926252222242
+                  ]
+                ],
+                [
+                  [
+                    0.1997214097091572
+                  ]
+                ]
+              ],
+              "stats/video/count": [
+                32
+              ],
+              "stats/video/q01": [
+                [
+                  [
+                    0.0
+                  ]
+                ],
+                [
+                  [
+                    0.0117647061124444
+                  ]
+                ],
+                [
+                  [
+                    0.027450980618596077
+                  ]
+                ]
+              ],
+              "stats/video/q10": [
+                [
+                  [
+                    0.0
+                  ]
+                ],
+                [
+                  [
+                    0.03529411926865578
+                  ]
+                ],
+                [
+                  [
+                    0.054901961237192154
+                  ]
+                ]
+              ],
+              "stats/video/q50": [
+                [
+                  [
+                    0.04313725605607033
+                  ]
+                ],
+                [
+                  [
+                    0.0941176488995552
+                  ]
+                ],
+                [
+                  [
+                    0.12156862765550613
+                  ]
+                ]
+              ],
+              "stats/video/q90": [
+                [
+                  [
+                    0.6000000238418579
+                  ]
+                ],
+                [
+                  [
+                    0.5333333611488342
+                  ]
+                ],
+                [
+                  [
+                    0.501960813999176
+                  ]
+                ]
+              ],
+              "stats/video/q99": [
+                [
+                  [
+                    0.8042745214700705
+                  ]
+                ],
+                [
+                  [
+                    0.882705889344216
+                  ]
+                ],
+                [
+                  [
+                    0.9647058844566345
+                  ]
+                ]
+              ],
+              "stats/timestamp/min": [
+                0.0
+              ],
+              "stats/timestamp/max": [
+                3.1
+              ],
+              "stats/timestamp/mean": [
+                1.55
+              ],
+              "stats/timestamp/std": [
+                0.9233092656309694
+              ],
+              "stats/timestamp/count": [
+                32
+              ],
+              "stats/timestamp/q01": [
+                0.031
+              ],
+              "stats/timestamp/q10": [
+                0.31
+              ],
+              "stats/timestamp/q50": [
+                1.55
+              ],
+              "stats/timestamp/q90": [
+                2.79
+              ],
+              "stats/timestamp/q99": [
+                3.0690000000000004
+              ],
+              "stats/frame_index/min": [
+                0
+              ],
+              "stats/frame_index/max": [
+                31
+              ],
+              "stats/frame_index/mean": [
+                15.5
+              ],
+              "stats/frame_index/std": [
+                9.233092656309694
+              ],
+              "stats/frame_index/count": [
+                32
+              ],
+              "stats/frame_index/q01": [
+                0.31
+              ],
+              "stats/frame_index/q10": [
+                3.1
+              ],
+              "stats/frame_index/q50": [
+                15.5
+              ],
+              "stats/frame_index/q90": [
+                27.900000000000002
+              ],
+              "stats/frame_index/q99": [
+                30.69
+              ],
+              "stats/episode_index/min": [
+                1
+              ],
+              "stats/episode_index/max": [
+                1
+              ],
+              "stats/episode_index/mean": [
+                1.0
+              ],
+              "stats/episode_index/std": [
+                0.0
+              ],
+              "stats/episode_index/count": [
+                32
+              ],
+              "stats/episode_index/q01": [
+                1.0
+              ],
+              "stats/episode_index/q10": [
+                1.0
+              ],
+              "stats/episode_index/q50": [
+                1.0
+              ],
+              "stats/episode_index/q90": [
+                1.0
+              ],
+              "stats/episode_index/q99": [
+                1.0
+              ],
+              "stats/index/min": [
+                32
+              ],
+              "stats/index/max": [
+                63
+              ],
+              "stats/index/mean": [
+                47.5
+              ],
+              "stats/index/std": [
+                9.233092656309694
+              ],
+              "stats/index/count": [
+                32
+              ],
+              "stats/index/q01": [
+                32.31
+              ],
+              "stats/index/q10": [
+                35.1
+              ],
+              "stats/index/q50": [
+                47.5
+              ],
+              "stats/index/q90": [
+                59.900000000000006
+              ],
+              "stats/index/q99": [
+                62.69
+              ],
+              "stats/task_index/min": [
+                0
+              ],
+              "stats/task_index/max": [
+                0
+              ],
+              "stats/task_index/mean": [
+                0.0
+              ],
+              "stats/task_index/std": [
+                0.0
+              ],
+              "stats/task_index/count": [
+                32
+              ],
+              "stats/task_index/q01": [
+                0.0
+              ],
+              "stats/task_index/q10": [
+                0.0
+              ],
+              "stats/task_index/q50": [
+                0.0
+              ],
+              "stats/task_index/q90": [
+                0.0
+              ],
+              "stats/task_index/q99": [
+                0.0
+              ],
+              "meta/episodes/chunk_index": 0,
+              "meta/episodes/file_index": 0
+            }
+          ]
+        },
+        {
+          "path": "meta/info.json",
+          "url": "https://huggingface.co/datasets/robometer/rbm-1m-ood/resolve/3f3ee69ecc0ee0db627684da7d599ec26d08175c/meta/info.json",
+          "bytes": 2441,
+          "sha256": "2d9651b2f5c2b15e545033abc0312df9e6ab15269f32f32d29076b3b7e2e22ba",
+          "content": {
+            "codebase_version": "v3.0",
+            "robot_type": null,
+            "total_episodes": 571,
+            "total_frames": 18261,
+            "total_tasks": 41,
+            "chunks_size": 1000,
+            "data_files_size_in_mb": 100,
+            "video_files_size_in_mb": 200,
+            "fps": 10,
+            "splits": {
+              "train": "0:571"
+            },
+            "data_path": "data/chunk-{chunk_index:03d}/file-{file_index:03d}.parquet",
+            "video_path": "videos/{video_key}/chunk-{chunk_index:03d}/file-{file_index:03d}.mp4",
+            "features": {
+              "video": {
+                "dtype": "video",
+                "shape": [
+                  3,
+                  240,
+                  320
+                ],
+                "names": [
+                  "height",
+                  "width",
+                  "channels"
+                ],
+                "info": {
+                  "video.height": 240,
+                  "video.width": 320,
+                  "video.codec": "h264",
+                  "video.pix_fmt": "yuv420p",
+                  "video.is_depth_map": false,
+                  "video.fps": 10,
+                  "video.channels": 3,
+                  "has_audio": false
+                }
+              },
+              "id": {
+                "dtype": "string",
+                "shape": [
+                  1
+                ]
+              },
+              "quality_label": {
+                "dtype": "string",
+                "shape": [
+                  1
+                ]
+              },
+              "data_source": {
+                "dtype": "string",
+                "shape": [
+                  1
+                ]
+              },
+              "is_robot": {
+                "dtype": "string",
+                "shape": [
+                  1
+                ]
+              },
+              "partial_success": {
+                "dtype": "string",
+                "shape": [
+                  1
+                ]
+              },
+              "timestamp": {
+                "dtype": "float32",
+                "shape": [
+                  1
+                ],
+                "names": null
+              },
+              "frame_index": {
+                "dtype": "int64",
+                "shape": [
+                  1
+                ],
+                "names": null
+              },
+              "episode_index": {
+                "dtype": "int64",
+                "shape": [
+                  1
+                ],
+                "names": null
+              },
+              "index": {
+                "dtype": "int64",
+                "shape": [
+                  1
+                ],
+                "names": null
+              },
+              "task_index": {
+                "dtype": "int64",
+                "shape": [
+                  1
+                ],
+                "names": null
+              }
+            }
+          }
+        },
+        {
+          "path": "meta/tasks.parquet",
+          "url": "https://huggingface.co/datasets/robometer/rbm-1m-ood/resolve/3f3ee69ecc0ee0db627684da7d599ec26d08175c/meta/tasks.parquet",
+          "bytes": 3308,
+          "sha256": "193f79cfd17b109d1f62356321e5fe2f9e49f5c7e21e1490b99ab0ced829f033",
+          "schema": "task_index: int64\n__index_level_0__: string\n-- schema metadata --\npandas: '{\"index_columns\": [\"__index_level_0__\"], \"column_indexes\": [{\"na' + 467",
+          "rows": 41,
+          "columns": [
+            "__index_level_0__",
+            "task_index"
+          ],
+          "non_null_counts": {
+            "__index_level_0__": 41,
+            "task_index": 41
+          },
+          "values": {
+            "__index_level_0__": {
+              "unique": 41,
+              "counts": {
+                "Open the bottle": 1,
+                "Open the red drawer": 1,
+                "Remove the lid from the pot": 1,
+                "Unzip the pencil case": 1,
+                "Stir the pot": 1,
+                "Uncap the red pen": 1,
+                "Fold the towel in half": 1,
+                "Pick up the banana from the blue plate and place it on the green plate": 1,
+                "Pick up the mouse and place it right next to the laptop, while avoiding spilling coffee": 1,
+                "Pour the pebbles from the cup onto the plate": 1,
+                "Pull a tissue from the tissue box": 1,
+                "Pick up the spoon and place it inside the cup": 1,
+                "Pick up the spatula and stir the beans in the pot": 1,
+                "Press the button.": 1,
+                "Put the marker into the pen cup.": 1,
+                "Put the red bowl on the blue plate.": 1,
+                "Put the bread in the oven.": 1,
+                "Collect the fork to the yellow box.": 1,
+                "Stack the green block on the red block.": 1,
+                "Put the pear in the yellow plate.": 1,
+                "Add pepper to the green bowl.": 1,
+                "Put the eraser to the blue pencil box.": 1,
+                "Put the red cup on the purple coaster.": 1,
+                "Close the drawer": 1,
+                "Put blue cup in sink": 1,
+                "Put the banana on the red plate": 1,
+                "Put the eggplant in the black bowl": 1,
+                "Stack the green shape on the red cylinder": 1,
+                "Put the yellow plate in the sink": 1,
+                "Put banana on plate": 1,
+                "Stack the red cube on the gray cube": 1,
+                "Move the orange cup from left to right": 1,
+                "Move the orange cup from right to left": 1,
+                "Open the blue trash bin": 1,
+                "Open the green trash bin": 1,
+                "Open the red trash bin": 1,
+                "Separate the purple and orange cups": 1,
+                "Separate the purple and red cups": 1,
+                "Separate the red and orange cups": 1,
+                "Throw the black marker away in the blue trash can": 1,
+                "Throw the orange cup away in the red trash can": 1
+              },
+              "first_values": [
+                "Open the bottle",
+                "Open the red drawer",
+                "Remove the lid from the pot"
+              ]
+            },
+            "task_index": {
+              "unique": 41,
+              "counts": {
+                "0": 1,
+                "1": 1,
+                "2": 1,
+                "3": 1,
+                "4": 1,
+                "5": 1,
+                "6": 1,
+                "7": 1,
+                "8": 1,
+                "9": 1,
+                "10": 1,
+                "11": 1,
+                "12": 1,
+                "13": 1,
+                "14": 1,
+                "15": 1,
+                "16": 1,
+                "17": 1,
+                "18": 1,
+                "19": 1,
+                "20": 1,
+                "21": 1,
+                "22": 1,
+                "23": 1,
+                "24": 1,
+                "25": 1,
+                "26": 1,
+                "27": 1,
+                "28": 1,
+                "29": 1,
+                "30": 1,
+                "31": 1,
+                "32": 1,
+                "33": 1,
+                "34": 1,
+                "35": 1,
+                "36": 1,
+                "37": 1,
+                "38": 1,
+                "39": 1,
+                "40": 1
+              },
+              "first_values": [
+                "0",
+                "1",
+                "2"
+              ]
+            }
+          },
+          "first_rows": [
+            {
+              "task_index": 0,
+              "__index_level_0__": "Open the bottle"
+            },
+            {
+              "task_index": 1,
+              "__index_level_0__": "Open the red drawer"
+            }
+          ]
+        },
+        {
+          "path": "mit_franka/metadata.parquet",
+          "url": "https://huggingface.co/datasets/robometer/rbm-1m-ood/resolve/3f3ee69ecc0ee0db627684da7d599ec26d08175c/mit_franka/metadata.parquet",
+          "bytes": 20861,
+          "sha256": "7c34b2a35223e3d8cf17f949d495bd6faa55407ae38cd373e5fdd2ccd6a0d23c",
+          "schema": "id: string\nfile_name: string\nvideo_file_name: string\nlanguage_instruction: string\nquality_label: string\ndata_source: string\ntask: string\nis_robot: string\npartial_success: string\n-- schema metadata --\nhuggingface: '{\"info\": {\"features\": {\"id\": {\"dtype\": \"string\", \"_type\": \"' + 449",
+          "rows": 304,
+          "columns": [
+            "data_source",
+            "file_name",
+            "id",
+            "is_robot",
+            "language_instruction",
+            "partial_success",
+            "quality_label",
+            "task",
+            "video_file_name"
+          ],
+          "non_null_counts": {
+            "data_source": 304,
+            "file_name": 304,
+            "id": 304,
+            "is_robot": 304,
+            "language_instruction": 304,
+            "partial_success": 304,
+            "quality_label": 304,
+            "task": 304,
+            "video_file_name": 304
+          },
+          "values": {
+            "data_source": {
+              "unique": 1,
+              "counts": {
+                "mit_franka": 304
+              },
+              "first_values": [
+                "mit_franka"
+              ]
+            },
+            "file_name": {
+              "unique": 304,
+              "counts": null,
+              "first_values": [
+                "video_000000.mp4",
+                "video_000001.mp4",
+                "video_000002.mp4"
+              ]
+            },
+            "id": {
+              "unique": 304,
+              "counts": null,
+              "first_values": [
+                "ab7117c2-9da2-4764-88d2-594da72cf144",
+                "bf3b8897-238d-4a87-8bad-3dfc94318d1c",
+                "33480409-b84b-4b36-8e2b-f04918cc1819"
+              ]
+            },
+            "is_robot": {
+              "unique": 1,
+              "counts": {
+                "true": 304
+              },
+              "first_values": [
+                "true"
+              ]
+            },
+            "language_instruction": {
+              "unique": 7,
+              "counts": {
+                "Fold the towel in half": 56,
+                "Pick up the banana from the blue plate and place it on the green plate": 134,
+                "Pick up the mouse and place it right next to the laptop, while avoiding spilling coffee": 18,
+                "Pour the pebbles from the cup onto the plate": 32,
+                "Pull a tissue from the tissue box": 22,
+                "Pick up the spoon and place it inside the cup": 16,
+                "Pick up the spatula and stir the beans in the pot": 26
+              },
+              "first_values": [
+                "Fold the towel in half",
+                "Pick up the banana from the blue plate and place it on the green plate",
+                "Pick up the mouse and place it right next to the laptop, while avoiding spilling coffee"
+              ]
+            },
+            "partial_success": {
+              "unique": 1,
+              "counts": {
+                "": 304
+              },
+              "first_values": [
+                ""
+              ]
+            },
+            "quality_label": {
+              "unique": 3,
+              "counts": {
+                "suboptimal": 86,
+                "failure": 80,
+                "success": 138
+              },
+              "first_values": [
+                "suboptimal",
+                "failure",
+                "success"
+              ]
+            },
+            "task": {
+              "unique": 7,
+              "counts": {
+                "Fold the towel in half": 56,
+                "Pick up the banana from the blue plate and place it on the green plate": 134,
+                "Pick up the mouse and place it right next to the laptop, while avoiding spilling coffee": 18,
+                "Pour the pebbles from the cup onto the plate": 32,
+                "Pull a tissue from the tissue box": 22,
+                "Pick up the spoon and place it inside the cup": 16,
+                "Pick up the spatula and stir the beans in the pot": 26
+              },
+              "first_values": [
+                "Fold the towel in half",
+                "Pick up the banana from the blue plate and place it on the green plate",
+                "Pick up the mouse and place it right next to the laptop, while avoiding spilling coffee"
+              ]
+            },
+            "video_file_name": {
+              "unique": 304,
+              "counts": null,
+              "first_values": [
+                "mit_franka/video_000000.mp4",
+                "mit_franka/video_000001.mp4",
+                "mit_franka/video_000002.mp4"
+              ]
+            }
+          },
+          "first_rows": [
+            {
+              "id": "ab7117c2-9da2-4764-88d2-594da72cf144",
+              "file_name": "video_000000.mp4",
+              "video_file_name": "mit_franka/video_000000.mp4",
+              "language_instruction": "Fold the towel in half",
+              "quality_label": "suboptimal",
+              "data_source": "mit_franka",
+              "task": "Fold the towel in half",
+              "is_robot": "true",
+              "partial_success": ""
+            },
+            {
+              "id": "bf3b8897-238d-4a87-8bad-3dfc94318d1c",
+              "file_name": "video_000001.mp4",
+              "video_file_name": "mit_franka/video_000001.mp4",
+              "language_instruction": "Fold the towel in half",
+              "quality_label": "suboptimal",
+              "data_source": "mit_franka",
+              "task": "Fold the towel in half",
+              "is_robot": "true",
+              "partial_success": ""
+            }
+          ],
+          "source_prefix_counts": null
+        },
+        {
+          "path": "robometer_categorical_maps.json",
+          "url": "https://huggingface.co/datasets/robometer/rbm-1m-ood/resolve/3f3ee69ecc0ee0db627684da7d599ec26d08175c/robometer_categorical_maps.json",
+          "bytes": 942,
+          "sha256": "48a1848edf11ed0e13faef5aeea4565f6405ac18867a28b3be734f5b28613972",
+          "content": {
+            "schema": "robometer_processed_lerobot_v3",
+            "dataset_category": "rbm-1m-ood",
+            "split": "eval",
+            "video_column": "video",
+            "string_columns": [
+              "id",
+              "quality_label",
+              "data_source",
+              "is_robot",
+              "partial_success"
+            ],
+            "dataset_names": [
+              "ykorkmaz_usc_trossen_rfm_usc_trossen",
+              "jesbu1_rfm_new_mit_franka_rfm_rfm_new_mit_franka_rfm",
+              "jesbu1_utd_so101_clean_policy_ranking_top_utd_so101_clean_policy_ranking_top",
+              "aliangdw_usc_xarm_policy_ranking_usc_xarm_policy_ranking",
+              "aliangdw_usc_franka_policy_ranking_usc_franka_policy_ranking",
+              "jesbu1_usc_koch_p_ranking_rfm_usc_koch_p_ranking_all"
+            ],
+            "quality_labels_seen": [
+              "failure",
+              "suboptimal",
+              "successful"
+            ],
+            "data_sources": [
+              "rfm_new_mit_franka_rfm",
+              "usc_franka_policy_ranking",
+              "usc_koch_p_ranking_all",
+              "usc_trossen",
+              "usc_xarm_policy_ranking",
+              "utd_so101_clean_policy_ranking_top"
+            ]
+          }
+        },
+        {
+          "path": "train/metadata.parquet",
+          "url": "https://huggingface.co/datasets/robometer/rbm-1m-ood/resolve/3f3ee69ecc0ee0db627684da7d599ec26d08175c/train/metadata.parquet",
+          "bytes": 57703,
+          "sha256": "a0bb6d769bfbd58b9c512aacb98d9675c23ac27022b1ba690e3995f86c9e6b3c",
+          "schema": "id: string\nfile_name: string\nquality_label: string\ndata_source: string\ntask: string\nis_robot: string\npartial_success: string\n-- schema metadata --\nhuggingface: '{\"info\": {\"features\": {\"id\": {\"dtype\": \"string\", \"_type\": \"' + 328",
+          "rows": 1160,
+          "columns": [
+            "data_source",
+            "file_name",
+            "id",
+            "is_robot",
+            "partial_success",
+            "quality_label",
+            "task"
+          ],
+          "non_null_counts": {
+            "data_source": 1160,
+            "file_name": 1160,
+            "id": 1160,
+            "is_robot": 1160,
+            "partial_success": 753,
+            "quality_label": 1160,
+            "task": 1160
+          },
+          "values": {
+            "data_source": {
+              "unique": 11,
+              "counts": {
+                "usc_trossen": 27,
+                "mit_franka": 304,
+                "utd_so101": 30,
+                "usc_xarm": 36,
+                "usc_franka": 24,
+                "usc_koch": 150,
+                "utd_so101_wrist": 30,
+                "usc_koch_paired": 72,
+                "utd_so101_clutter": 60,
+                "utd_so101_human": 20,
+                "usc_koch_rewind_og": 407
+              },
+              "first_values": [
+                "usc_trossen",
+                "mit_franka",
+                "utd_so101"
+              ]
+            },
+            "file_name": {
+              "unique": 1160,
+              "counts": null,
+              "first_values": [
+                "video_000000.mp4",
+                "video_000001.mp4",
+                "video_000002.mp4"
+              ]
+            },
+            "id": {
+              "unique": 1160,
+              "counts": null,
+              "first_values": [
+                "ba8aaab1-1dbb-4f49-bb54-bbbc57b1632a",
+                "595a1d8a-3e40-4b20-8a5d-d4b14a238c96",
+                "ff1882f4-bb4f-4e08-89d7-9d845c613ca9"
+              ]
+            },
+            "is_robot": {
+              "unique": 2,
+              "counts": {
+                "true": 1068,
+                "false": 92
+              },
+              "first_values": [
+                "true",
+                "false"
+              ]
+            },
+            "partial_success": {
+              "unique": 2,
+              "counts": {
+                "": 753,
+                "None": 407
+              },
+              "first_values": [
+                "",
+                "None"
+              ]
+            },
+            "quality_label": {
+              "unique": 3,
+              "counts": {
+                "success": 762,
+                "failure": 196,
+                "suboptimal": 202
+              },
+              "first_values": [
+                "success",
+                "failure",
+                "suboptimal"
+              ]
+            },
+            "task": {
+              "unique": 104,
+              "counts": null,
+              "first_values": [
+                "Open the bottle",
+                "Open the red drawer",
+                "Remove the lid from the pot"
+              ]
+            }
+          },
+          "first_rows": [
+            {
+              "id": "ba8aaab1-1dbb-4f49-bb54-bbbc57b1632a",
+              "file_name": "video_000000.mp4",
+              "quality_label": "success",
+              "data_source": "usc_trossen",
+              "task": "Open the bottle",
+              "is_robot": "true",
+              "partial_success": ""
+            },
+            {
+              "id": "595a1d8a-3e40-4b20-8a5d-d4b14a238c96",
+              "file_name": "video_000001.mp4",
+              "quality_label": "success",
+              "data_source": "usc_trossen",
+              "task": "Open the bottle",
+              "is_robot": "true",
+              "partial_success": ""
+            }
+          ],
+          "source_prefix_counts": null
+        },
+        {
+          "path": "usc_franka/metadata.parquet",
+          "url": "https://huggingface.co/datasets/robometer/rbm-1m-ood/resolve/3f3ee69ecc0ee0db627684da7d599ec26d08175c/usc_franka/metadata.parquet",
+          "bytes": 6119,
+          "sha256": "e4874a024c93ad4b836d14aa75df4eb6e359cdaa84f80c07a0bf61fbe8f5b3ee",
+          "schema": "id: string\nfile_name: string\nvideo_file_name: string\nlanguage_instruction: string\nquality_label: string\ndata_source: string\ntask: string\nis_robot: string\npartial_success: string\n-- schema metadata --\nhuggingface: '{\"info\": {\"features\": {\"id\": {\"dtype\": \"string\", \"_type\": \"' + 449",
+          "rows": 24,
+          "columns": [
+            "data_source",
+            "file_name",
+            "id",
+            "is_robot",
+            "language_instruction",
+            "partial_success",
+            "quality_label",
+            "task",
+            "video_file_name"
+          ],
+          "non_null_counts": {
+            "data_source": 24,
+            "file_name": 24,
+            "id": 24,
+            "is_robot": 24,
+            "language_instruction": 24,
+            "partial_success": 24,
+            "quality_label": 24,
+            "task": 24,
+            "video_file_name": 24
+          },
+          "values": {
+            "data_source": {
+              "unique": 1,
+              "counts": {
+                "usc_franka": 24
+              },
+              "first_values": [
+                "usc_franka"
+              ]
+            },
+            "file_name": {
+              "unique": 24,
+              "counts": {
+                "video_000000.mp4": 1,
+                "video_000001.mp4": 1,
+                "video_000002.mp4": 1,
+                "video_000003.mp4": 1,
+                "video_000004.mp4": 1,
+                "video_000005.mp4": 1,
+                "video_000006.mp4": 1,
+                "video_000007.mp4": 1,
+                "video_000008.mp4": 1,
+                "video_000009.mp4": 1,
+                "video_000010.mp4": 1,
+                "video_000011.mp4": 1,
+                "video_000012.mp4": 1,
+                "video_000013.mp4": 1,
+                "video_000014.mp4": 1,
+                "video_000015.mp4": 1,
+                "video_000016.mp4": 1,
+                "video_000017.mp4": 1,
+                "video_000018.mp4": 1,
+                "video_000019.mp4": 1,
+                "video_000020.mp4": 1,
+                "video_000021.mp4": 1,
+                "video_000022.mp4": 1,
+                "video_000023.mp4": 1
+              },
+              "first_values": [
+                "video_000000.mp4",
+                "video_000001.mp4",
+                "video_000002.mp4"
+              ]
+            },
+            "id": {
+              "unique": 24,
+              "counts": {
+                "d6b86600-6750-4e21-9892-b67442c97841": 1,
+                "fd70a190-7043-4a8e-ac24-c3ea943856e5": 1,
+                "17a39657-d229-4003-8147-0c04fadc9bb1": 1,
+                "ba36cce3-cc6f-44bc-8746-0a777b00dd5b": 1,
+                "da0ecbfe-d086-4a01-857f-d0cdb9e30b72": 1,
+                "d8a0dba2-e4b3-4db3-bce7-60538500224d": 1,
+                "94af8ff4-0f77-48fd-9a83-cc35fd060e66": 1,
+                "c2a93b8e-5c54-4472-8ed9-d7abee1338fd": 1,
+                "6f1c7142-25fe-4fd3-b6ff-7b1488a2aec1": 1,
+                "9433cc45-8f7b-4b7c-9567-4e51a372cc55": 1,
+                "4a7082b7-018e-49cd-8484-ab15695a71e9": 1,
+                "c006a720-9007-4088-bd91-7b570c1bb238": 1,
+                "f86a35b5-ab99-4a53-baed-78f83995ef74": 1,
+                "a2dae243-c742-4d25-a09d-d18b6c0baebe": 1,
+                "3e2c66e0-e1c0-4455-b51b-46af02d2cd03": 1,
+                "5966d747-adeb-4fd5-ae45-778efc7b0e08": 1,
+                "5ff4a784-0bf9-42cc-9e69-66548ca8b1e8": 1,
+                "115e12f1-8e7a-429c-bc7a-6e4086649d5d": 1,
+                "4804b50b-9efa-4844-8e4d-533bd403f71e": 1,
+                "a4ed8e1b-48f5-4125-9972-c07674af249e": 1,
+                "1419e514-1b2f-4c3a-a090-ffce17c5f95e": 1,
+                "0db11280-414a-4e11-81e1-2ee5e84c0262": 1,
+                "b9eb4443-1d51-4376-822a-aa3492642d04": 1,
+                "f8d7a3e1-c44f-42c8-836c-f650283551e9": 1
+              },
+              "first_values": [
+                "d6b86600-6750-4e21-9892-b67442c97841",
+                "fd70a190-7043-4a8e-ac24-c3ea943856e5",
+                "17a39657-d229-4003-8147-0c04fadc9bb1"
+              ]
+            },
+            "is_robot": {
+              "unique": 1,
+              "counts": {
+                "true": 24
+              },
+              "first_values": [
+                "true"
+              ]
+            },
+            "language_instruction": {
+              "unique": 4,
+              "counts": {
+                "Fold the towel in half": 6,
+                "Put the yellow plate in the sink": 6,
+                "Put banana on plate": 6,
+                "Stack the red cube on the gray cube": 6
+              },
+              "first_values": [
+                "Fold the towel in half",
+                "Put the yellow plate in the sink",
+                "Put banana on plate"
+              ]
+            },
+            "partial_success": {
+              "unique": 1,
+              "counts": {
+                "": 24
+              },
+              "first_values": [
+                ""
+              ]
+            },
+            "quality_label": {
+              "unique": 3,
+              "counts": {
+                "failure": 8,
+                "suboptimal": 8,
+                "success": 8
+              },
+              "first_values": [
+                "failure",
+                "suboptimal",
+                "success"
+              ]
+            },
+            "task": {
+              "unique": 4,
+              "counts": {
+                "Fold the towel in half": 6,
+                "Put the yellow plate in the sink": 6,
+                "Put banana on plate": 6,
+                "Stack the red cube on the gray cube": 6
+              },
+              "first_values": [
+                "Fold the towel in half",
+                "Put the yellow plate in the sink",
+                "Put banana on plate"
+              ]
+            },
+            "video_file_name": {
+              "unique": 24,
+              "counts": {
+                "usc_franka/video_000000.mp4": 1,
+                "usc_franka/video_000001.mp4": 1,
+                "usc_franka/video_000002.mp4": 1,
+                "usc_franka/video_000003.mp4": 1,
+                "usc_franka/video_000004.mp4": 1,
+                "usc_franka/video_000005.mp4": 1,
+                "usc_franka/video_000006.mp4": 1,
+                "usc_franka/video_000007.mp4": 1,
+                "usc_franka/video_000008.mp4": 1,
+                "usc_franka/video_000009.mp4": 1,
+                "usc_franka/video_000010.mp4": 1,
+                "usc_franka/video_000011.mp4": 1,
+                "usc_franka/video_000012.mp4": 1,
+                "usc_franka/video_000013.mp4": 1,
+                "usc_franka/video_000014.mp4": 1,
+                "usc_franka/video_000015.mp4": 1,
+                "usc_franka/video_000016.mp4": 1,
+                "usc_franka/video_000017.mp4": 1,
+                "usc_franka/video_000018.mp4": 1,
+                "usc_franka/video_000019.mp4": 1,
+                "usc_franka/video_000020.mp4": 1,
+                "usc_franka/video_000021.mp4": 1,
+                "usc_franka/video_000022.mp4": 1,
+                "usc_franka/video_000023.mp4": 1
+              },
+              "first_values": [
+                "usc_franka/video_000000.mp4",
+                "usc_franka/video_000001.mp4",
+                "usc_franka/video_000002.mp4"
+              ]
+            }
+          },
+          "first_rows": [
+            {
+              "id": "d6b86600-6750-4e21-9892-b67442c97841",
+              "file_name": "video_000000.mp4",
+              "video_file_name": "usc_franka/video_000000.mp4",
+              "language_instruction": "Fold the towel in half",
+              "quality_label": "failure",
+              "data_source": "usc_franka",
+              "task": "Fold the towel in half",
+              "is_robot": "true",
+              "partial_success": ""
+            },
+            {
+              "id": "fd70a190-7043-4a8e-ac24-c3ea943856e5",
+              "file_name": "video_000001.mp4",
+              "video_file_name": "usc_franka/video_000001.mp4",
+              "language_instruction": "Fold the towel in half",
+              "quality_label": "failure",
+              "data_source": "usc_franka",
+              "task": "Fold the towel in half",
+              "is_robot": "true",
+              "partial_success": ""
+            }
+          ],
+          "source_prefix_counts": null
+        },
+        {
+          "path": "usc_koch/metadata.parquet",
+          "url": "https://huggingface.co/datasets/robometer/rbm-1m-ood/resolve/3f3ee69ecc0ee0db627684da7d599ec26d08175c/usc_koch/metadata.parquet",
+          "bytes": 12913,
+          "sha256": "888065eacd10c604d9be5af23e78681ede5be68273b07bc1ca10ddaf58ae69b9",
+          "schema": "id: string\nfile_name: string\nvideo_file_name: string\nlanguage_instruction: string\nquality_label: string\ndata_source: string\ntask: string\nis_robot: string\npartial_success: string\n-- schema metadata --\nhuggingface: '{\"info\": {\"features\": {\"id\": {\"dtype\": \"string\", \"_type\": \"' + 449",
+          "rows": 150,
+          "columns": [
+            "data_source",
+            "file_name",
+            "id",
+            "is_robot",
+            "language_instruction",
+            "partial_success",
+            "quality_label",
+            "task",
+            "video_file_name"
+          ],
+          "non_null_counts": {
+            "data_source": 150,
+            "file_name": 150,
+            "id": 150,
+            "is_robot": 150,
+            "language_instruction": 150,
+            "partial_success": 150,
+            "quality_label": 150,
+            "task": 150,
+            "video_file_name": 150
+          },
+          "values": {
+            "data_source": {
+              "unique": 1,
+              "counts": {
+                "usc_koch": 150
+              },
+              "first_values": [
+                "usc_koch"
+              ]
+            },
+            "file_name": {
+              "unique": 150,
+              "counts": null,
+              "first_values": [
+                "video_000000.mp4",
+                "video_000001.mp4",
+                "video_000002.mp4"
+              ]
+            },
+            "id": {
+              "unique": 150,
+              "counts": null,
+              "first_values": [
+                "825b35e5-08a7-4f2d-9a57-f2d7a5d3457a",
+                "099d39c2-c632-4b33-bdb4-2ab2b870b7b9",
+                "848b7b3f-c3cd-4814-a185-34216025cb90"
+              ]
+            },
+            "is_robot": {
+              "unique": 1,
+              "counts": {
+                "true": 150
+              },
+              "first_values": [
+                "true"
+              ]
+            },
+            "language_instruction": {
+              "unique": 10,
+              "counts": {
+                "Move the orange cup from left to right": 15,
+                "Move the orange cup from right to left": 15,
+                "Open the blue trash bin": 15,
+                "Open the green trash bin": 15,
+                "Open the red trash bin": 15,
+                "Separate the purple and orange cups": 15,
+                "Separate the purple and red cups": 15,
+                "Separate the red and orange cups": 15,
+                "Throw the black marker away in the blue trash can": 15,
+                "Throw the orange cup away in the red trash can": 15
+              },
+              "first_values": [
+                "Move the orange cup from left to right",
+                "Move the orange cup from right to left",
+                "Open the blue trash bin"
+              ]
+            },
+            "partial_success": {
+              "unique": 1,
+              "counts": {
+                "": 150
+              },
+              "first_values": [
+                ""
+              ]
+            },
+            "quality_label": {
+              "unique": 3,
+              "counts": {
+                "failure": 50,
+                "success": 50,
+                "suboptimal": 50
+              },
+              "first_values": [
+                "failure",
+                "success",
+                "suboptimal"
+              ]
+            },
+            "task": {
+              "unique": 10,
+              "counts": {
+                "Move the orange cup from left to right": 15,
+                "Move the orange cup from right to left": 15,
+                "Open the blue trash bin": 15,
+                "Open the green trash bin": 15,
+                "Open the red trash bin": 15,
+                "Separate the purple and orange cups": 15,
+                "Separate the purple and red cups": 15,
+                "Separate the red and orange cups": 15,
+                "Throw the black marker away in the blue trash can": 15,
+                "Throw the orange cup away in the red trash can": 15
+              },
+              "first_values": [
+                "Move the orange cup from left to right",
+                "Move the orange cup from right to left",
+                "Open the blue trash bin"
+              ]
+            },
+            "video_file_name": {
+              "unique": 150,
+              "counts": null,
+              "first_values": [
+                "usc_koch/video_000000.mp4",
+                "usc_koch/video_000001.mp4",
+                "usc_koch/video_000002.mp4"
+              ]
+            }
+          },
+          "first_rows": [
+            {
+              "id": "825b35e5-08a7-4f2d-9a57-f2d7a5d3457a",
+              "file_name": "video_000000.mp4",
+              "video_file_name": "usc_koch/video_000000.mp4",
+              "language_instruction": "Move the orange cup from left to right",
+              "quality_label": "failure",
+              "data_source": "usc_koch",
+              "task": "Move the orange cup from left to right",
+              "is_robot": "true",
+              "partial_success": ""
+            },
+            {
+              "id": "099d39c2-c632-4b33-bdb4-2ab2b870b7b9",
+              "file_name": "video_000001.mp4",
+              "video_file_name": "usc_koch/video_000001.mp4",
+              "language_instruction": "Move the orange cup from left to right",
+              "quality_label": "failure",
+              "data_source": "usc_koch",
+              "task": "Move the orange cup from left to right",
+              "is_robot": "true",
+              "partial_success": ""
+            }
+          ],
+          "source_prefix_counts": null
+        },
+        {
+          "path": "usc_koch_paired/metadata.parquet",
+          "url": "https://huggingface.co/datasets/robometer/rbm-1m-ood/resolve/3f3ee69ecc0ee0db627684da7d599ec26d08175c/usc_koch_paired/metadata.parquet",
+          "bytes": 9603,
+          "sha256": "fe927e2ecec04ed0c6227aac2ce4e9f7dab71f5233244a9499c7396b293808b6",
+          "schema": "id: string\nfile_name: string\nvideo_file_name: string\nlanguage_instruction: string\nquality_label: string\ndata_source: string\ntask: string\nis_robot: string\npartial_success: string\n-- schema metadata --\nhuggingface: '{\"info\": {\"features\": {\"id\": {\"dtype\": \"string\", \"_type\": \"' + 449",
+          "rows": 72,
+          "columns": [
+            "data_source",
+            "file_name",
+            "id",
+            "is_robot",
+            "language_instruction",
+            "partial_success",
+            "quality_label",
+            "task",
+            "video_file_name"
+          ],
+          "non_null_counts": {
+            "data_source": 72,
+            "file_name": 72,
+            "id": 72,
+            "is_robot": 72,
+            "language_instruction": 72,
+            "partial_success": 72,
+            "quality_label": 72,
+            "task": 72,
+            "video_file_name": 72
+          },
+          "values": {
+            "data_source": {
+              "unique": 1,
+              "counts": {
+                "usc_koch_paired": 72
+              },
+              "first_values": [
+                "usc_koch_paired"
+              ]
+            },
+            "file_name": {
+              "unique": 72,
+              "counts": null,
+              "first_values": [
+                "video_000000.mp4",
+                "video_000001.mp4",
+                "video_000002.mp4"
+              ]
+            },
+            "id": {
+              "unique": 72,
+              "counts": null,
+              "first_values": [
+                "2bf4aada-a05d-4a26-a3b0-81b89addce9f",
+                "230d9abb-0910-4bff-be3e-7756ce478dad",
+                "398d32bf-dcee-4e29-967b-5bafa54debe4"
+              ]
+            },
+            "is_robot": {
+              "unique": 1,
+              "counts": {
+                "false": 72
+              },
+              "first_values": [
+                "false"
+              ]
+            },
+            "language_instruction": {
+              "unique": 24,
+              "counts": {
+                "Move the orange cup from the left to the right": 3,
+                "Move the orange cup from the right to the left": 3,
+                "Open the blue trash bin": 3,
+                "Open the green trash bin": 3,
+                "Open the red trash bin": 3,
+                "Pour the screws from the green cup into the red cup": 3,
+                "Pour the screws out of the green cup, and put the black screws into the red trash can": 3,
+                "Pour the screws out of the green cup, and put the silver screws into the red trash can": 3,
+                "Put all the tools in the box all at once": 3,
+                "Put the egg in the green cup, and put that in the red trash can": 3,
+                "Put all the tools in the box one at a time": 3,
+                "Put the red tape in the box": 3,
+                "Put the screwdriver in the box": 3,
+                "Put the screwdriver in the mug": 3,
+                "Put the white tape in the box": 3,
+                "Separate the purple and orange cups": 3,
+                "Separate the purple and red cups": 3,
+                "Separate the red and orange cups": 3,
+                "Sweep the screws from left to right": 3,
+                "Sweep the screws from right to left": 3,
+                "Take out a tissue": 3,
+                "Throw the egg away in the green trash can": 3,
+                "Throw the black marker away in the blue trash can": 3,
+                "Throw the orange cup away in the red trash can": 3
+              },
+              "first_values": [
+                "Move the orange cup from the left to the right",
+                "Move the orange cup from the right to the left",
+                "Open the blue trash bin"
+              ]
+            },
+            "partial_success": {
+              "unique": 1,
+              "counts": {
+                "": 72
+              },
+              "first_values": [
+                ""
+              ]
+            },
+            "quality_label": {
+              "unique": 1,
+              "counts": {
+                "success": 72
+              },
+              "first_values": [
+                "success"
+              ]
+            },
+            "task": {
+              "unique": 24,
+              "counts": {
+                "Move the orange cup from the left to the right": 3,
+                "Move the orange cup from the right to the left": 3,
+                "Open the blue trash bin": 3,
+                "Open the green trash bin": 3,
+                "Open the red trash bin": 3,
+                "Pour the screws from the green cup into the red cup": 3,
+                "Pour the screws out of the green cup, and put the black screws into the red trash can": 3,
+                "Pour the screws out of the green cup, and put the silver screws into the red trash can": 3,
+                "Put all the tools in the box all at once": 3,
+                "Put the egg in the green cup, and put that in the red trash can": 3,
+                "Put all the tools in the box one at a time": 3,
+                "Put the red tape in the box": 3,
+                "Put the screwdriver in the box": 3,
+                "Put the screwdriver in the mug": 3,
+                "Put the white tape in the box": 3,
+                "Separate the purple and orange cups": 3,
+                "Separate the purple and red cups": 3,
+                "Separate the red and orange cups": 3,
+                "Sweep the screws from left to right": 3,
+                "Sweep the screws from right to left": 3,
+                "Take out a tissue": 3,
+                "Throw the egg away in the green trash can": 3,
+                "Throw the black marker away in the blue trash can": 3,
+                "Throw the orange cup away in the red trash can": 3
+              },
+              "first_values": [
+                "Move the orange cup from the left to the right",
+                "Move the orange cup from the right to the left",
+                "Open the blue trash bin"
+              ]
+            },
+            "video_file_name": {
+              "unique": 72,
+              "counts": null,
+              "first_values": [
+                "usc_koch_paired/video_000000.mp4",
+                "usc_koch_paired/video_000001.mp4",
+                "usc_koch_paired/video_000002.mp4"
+              ]
+            }
+          },
+          "first_rows": [
+            {
+              "id": "2bf4aada-a05d-4a26-a3b0-81b89addce9f",
+              "file_name": "video_000000.mp4",
+              "video_file_name": "usc_koch_paired/video_000000.mp4",
+              "language_instruction": "Move the orange cup from the left to the right",
+              "quality_label": "success",
+              "data_source": "usc_koch_paired",
+              "task": "Move the orange cup from the left to the right",
+              "is_robot": "false",
+              "partial_success": ""
+            },
+            {
+              "id": "230d9abb-0910-4bff-be3e-7756ce478dad",
+              "file_name": "video_000001.mp4",
+              "video_file_name": "usc_koch_paired/video_000001.mp4",
+              "language_instruction": "Move the orange cup from the left to the right",
+              "quality_label": "success",
+              "data_source": "usc_koch_paired",
+              "task": "Move the orange cup from the left to the right",
+              "is_robot": "false",
+              "partial_success": ""
+            }
+          ],
+          "source_prefix_counts": null
+        },
+        {
+          "path": "usc_trossen/metadata.parquet",
+          "url": "https://huggingface.co/datasets/robometer/rbm-1m-ood/resolve/3f3ee69ecc0ee0db627684da7d599ec26d08175c/usc_trossen/metadata.parquet",
+          "bytes": 6241,
+          "sha256": "5d077c28f465d99f0040d4bfe209a1a9e082024d4f88cf652c122a79e0d9524e",
+          "schema": "id: string\nfile_name: string\nvideo_file_name: string\nlanguage_instruction: string\nquality_label: string\ndata_source: string\ntask: string\nis_robot: string\npartial_success: string\n-- schema metadata --\nhuggingface: '{\"info\": {\"features\": {\"id\": {\"dtype\": \"string\", \"_type\": \"' + 449",
+          "rows": 27,
+          "columns": [
+            "data_source",
+            "file_name",
+            "id",
+            "is_robot",
+            "language_instruction",
+            "partial_success",
+            "quality_label",
+            "task",
+            "video_file_name"
+          ],
+          "non_null_counts": {
+            "data_source": 27,
+            "file_name": 27,
+            "id": 27,
+            "is_robot": 27,
+            "language_instruction": 27,
+            "partial_success": 27,
+            "quality_label": 27,
+            "task": 27,
+            "video_file_name": 27
+          },
+          "values": {
+            "data_source": {
+              "unique": 1,
+              "counts": {
+                "usc_trossen": 27
+              },
+              "first_values": [
+                "usc_trossen"
+              ]
+            },
+            "file_name": {
+              "unique": 27,
+              "counts": {
+                "video_000000.mp4": 1,
+                "video_000001.mp4": 1,
+                "video_000002.mp4": 1,
+                "video_000003.mp4": 1,
+                "video_000004.mp4": 1,
+                "video_000005.mp4": 1,
+                "video_000006.mp4": 1,
+                "video_000007.mp4": 1,
+                "video_000008.mp4": 1,
+                "video_000009.mp4": 1,
+                "video_000010.mp4": 1,
+                "video_000011.mp4": 1,
+                "video_000012.mp4": 1,
+                "video_000013.mp4": 1,
+                "video_000014.mp4": 1,
+                "video_000015.mp4": 1,
+                "video_000016.mp4": 1,
+                "video_000017.mp4": 1,
+                "video_000018.mp4": 1,
+                "video_000019.mp4": 1,
+                "video_000020.mp4": 1,
+                "video_000021.mp4": 1,
+                "video_000022.mp4": 1,
+                "video_000023.mp4": 1,
+                "video_000024.mp4": 1,
+                "video_000025.mp4": 1,
+                "video_000026.mp4": 1
+              },
+              "first_values": [
+                "video_000000.mp4",
+                "video_000001.mp4",
+                "video_000002.mp4"
+              ]
+            },
+            "id": {
+              "unique": 27,
+              "counts": {
+                "ec723696-61c2-478a-a21f-0c4bf7f9a0d7": 1,
+                "c243382e-cb06-42fb-a1ce-ec787a7da218": 1,
+                "bfad213d-ef98-41ea-9023-174e018287a0": 1,
+                "cc2a5e47-6f33-4763-9f7c-ece094b42225": 1,
+                "da5b17da-f053-47f0-81d4-275cd1bd668b": 1,
+                "fab793f7-2b04-4425-8af9-9e50ea6e0079": 1,
+                "6eeb8f4c-2929-4b6f-a85a-2038b6302784": 1,
+                "c8613f0d-474c-46ec-958d-f3bcfb132372": 1,
+                "4798c411-caa3-405e-9afa-132d0a2617f1": 1,
+                "fcdd7b74-542e-455f-aca8-f6bd110144a8": 1,
+                "880498e6-ad5d-4547-9f3a-b8c41f8e5376": 1,
+                "017e0e20-fd15-4005-bd8e-f31f8e2350c5": 1,
+                "63d1a6c1-c440-4562-afa6-f8dd2d8d0a52": 1,
+                "8d2311da-1e57-4117-b6fe-52332558902b": 1,
+                "08dec425-2969-4989-9c40-8468babfad1d": 1,
+                "982f175d-6da5-4070-a52e-53681f28a5f2": 1,
+                "043753c3-f59f-494f-944f-52fdd604f7b2": 1,
+                "92d0676b-eb5c-4f95-961c-d7320be8c3ca": 1,
+                "2617cb6b-180f-4ffb-b9e7-d87dcf914de0": 1,
+                "bf3d54f4-482e-4f3a-a20f-bbcdc8c699e7": 1,
+                "ababf79a-774d-4e0e-930f-24c7e0cf8a51": 1,
+                "8bc4e6db-3dfb-4d9a-88d5-a7790ea4a9e7": 1,
+                "1372e792-8b26-41a5-aa02-01528fc941a2": 1,
+                "9af656e8-3629-4c28-9858-89a6105488e6": 1,
+                "e8b107bc-985d-4093-85a9-fa3e4a88eeaa": 1,
+                "07948cb2-2c2f-470e-8c28-cb68eb462655": 1,
+                "cd11463a-39eb-45ce-9bb9-0b9f76e4f63d": 1
+              },
+              "first_values": [
+                "ec723696-61c2-478a-a21f-0c4bf7f9a0d7",
+                "c243382e-cb06-42fb-a1ce-ec787a7da218",
+                "bfad213d-ef98-41ea-9023-174e018287a0"
+              ]
+            },
+            "is_robot": {
+              "unique": 1,
+              "counts": {
+                "true": 27
+              },
+              "first_values": [
+                "true"
+              ]
+            },
+            "language_instruction": {
+              "unique": 6,
+              "counts": {
+                "Open the bottle": 5,
+                "Open the red drawer": 7,
+                "Remove the lid from the pot": 4,
+                "Unzip the pencil case": 7,
+                "Stir the pot": 3,
+                "Uncap the red pen": 1
+              },
+              "first_values": [
+                "Open the bottle",
+                "Open the red drawer",
+                "Remove the lid from the pot"
+              ]
+            },
+            "partial_success": {
+              "unique": 1,
+              "counts": {
+                "": 27
+              },
+              "first_values": [
+                ""
+              ]
+            },
+            "quality_label": {
+              "unique": 3,
+              "counts": {
+                "success": 15,
+                "failure": 6,
+                "suboptimal": 6
+              },
+              "first_values": [
+                "success",
+                "failure",
+                "suboptimal"
+              ]
+            },
+            "task": {
+              "unique": 6,
+              "counts": {
+                "Open the bottle": 5,
+                "Open the red drawer": 7,
+                "Remove the lid from the pot": 4,
+                "Unzip the pencil case": 7,
+                "Stir the pot": 3,
+                "Uncap the red pen": 1
+              },
+              "first_values": [
+                "Open the bottle",
+                "Open the red drawer",
+                "Remove the lid from the pot"
+              ]
+            },
+            "video_file_name": {
+              "unique": 27,
+              "counts": {
+                "usc_trossen/video_000000.mp4": 1,
+                "usc_trossen/video_000001.mp4": 1,
+                "usc_trossen/video_000002.mp4": 1,
+                "usc_trossen/video_000003.mp4": 1,
+                "usc_trossen/video_000004.mp4": 1,
+                "usc_trossen/video_000005.mp4": 1,
+                "usc_trossen/video_000006.mp4": 1,
+                "usc_trossen/video_000007.mp4": 1,
+                "usc_trossen/video_000008.mp4": 1,
+                "usc_trossen/video_000009.mp4": 1,
+                "usc_trossen/video_000010.mp4": 1,
+                "usc_trossen/video_000011.mp4": 1,
+                "usc_trossen/video_000012.mp4": 1,
+                "usc_trossen/video_000013.mp4": 1,
+                "usc_trossen/video_000014.mp4": 1,
+                "usc_trossen/video_000015.mp4": 1,
+                "usc_trossen/video_000016.mp4": 1,
+                "usc_trossen/video_000017.mp4": 1,
+                "usc_trossen/video_000018.mp4": 1,
+                "usc_trossen/video_000019.mp4": 1,
+                "usc_trossen/video_000020.mp4": 1,
+                "usc_trossen/video_000021.mp4": 1,
+                "usc_trossen/video_000022.mp4": 1,
+                "usc_trossen/video_000023.mp4": 1,
+                "usc_trossen/video_000024.mp4": 1,
+                "usc_trossen/video_000025.mp4": 1,
+                "usc_trossen/video_000026.mp4": 1
+              },
+              "first_values": [
+                "usc_trossen/video_000000.mp4",
+                "usc_trossen/video_000001.mp4",
+                "usc_trossen/video_000002.mp4"
+              ]
+            }
+          },
+          "first_rows": [
+            {
+              "id": "ec723696-61c2-478a-a21f-0c4bf7f9a0d7",
+              "file_name": "video_000000.mp4",
+              "video_file_name": "usc_trossen/video_000000.mp4",
+              "language_instruction": "Open the bottle",
+              "quality_label": "success",
+              "data_source": "usc_trossen",
+              "task": "Open the bottle",
+              "is_robot": "true",
+              "partial_success": ""
+            },
+            {
+              "id": "c243382e-cb06-42fb-a1ce-ec787a7da218",
+              "file_name": "video_000001.mp4",
+              "video_file_name": "usc_trossen/video_000001.mp4",
+              "language_instruction": "Open the bottle",
+              "quality_label": "success",
+              "data_source": "usc_trossen",
+              "task": "Open the bottle",
+              "is_robot": "true",
+              "partial_success": ""
+            }
+          ],
+          "source_prefix_counts": null
+        },
+        {
+          "path": "usc_xarm/metadata.parquet",
+          "url": "https://huggingface.co/datasets/robometer/rbm-1m-ood/resolve/3f3ee69ecc0ee0db627684da7d599ec26d08175c/usc_xarm/metadata.parquet",
+          "bytes": 6826,
+          "sha256": "7094d16047afa10a952e99a286e0367237effd5107d6615eb20fead5b9f40fff",
+          "schema": "id: string\nfile_name: string\nvideo_file_name: string\nlanguage_instruction: string\nquality_label: string\ndata_source: string\ntask: string\nis_robot: string\npartial_success: string\n-- schema metadata --\nhuggingface: '{\"info\": {\"features\": {\"id\": {\"dtype\": \"string\", \"_type\": \"' + 449",
+          "rows": 36,
+          "columns": [
+            "data_source",
+            "file_name",
+            "id",
+            "is_robot",
+            "language_instruction",
+            "partial_success",
+            "quality_label",
+            "task",
+            "video_file_name"
+          ],
+          "non_null_counts": {
+            "data_source": 36,
+            "file_name": 36,
+            "id": 36,
+            "is_robot": 36,
+            "language_instruction": 36,
+            "partial_success": 36,
+            "quality_label": 36,
+            "task": 36,
+            "video_file_name": 36
+          },
+          "values": {
+            "data_source": {
+              "unique": 1,
+              "counts": {
+                "usc_xarm": 36
+              },
+              "first_values": [
+                "usc_xarm"
+              ]
+            },
+            "file_name": {
+              "unique": 36,
+              "counts": {
+                "video_000000.mp4": 1,
+                "video_000001.mp4": 1,
+                "video_000002.mp4": 1,
+                "video_000003.mp4": 1,
+                "video_000004.mp4": 1,
+                "video_000005.mp4": 1,
+                "video_000006.mp4": 1,
+                "video_000007.mp4": 1,
+                "video_000008.mp4": 1,
+                "video_000009.mp4": 1,
+                "video_000010.mp4": 1,
+                "video_000011.mp4": 1,
+                "video_000012.mp4": 1,
+                "video_000013.mp4": 1,
+                "video_000014.mp4": 1,
+                "video_000015.mp4": 1,
+                "video_000016.mp4": 1,
+                "video_000017.mp4": 1,
+                "video_000018.mp4": 1,
+                "video_000019.mp4": 1,
+                "video_000020.mp4": 1,
+                "video_000021.mp4": 1,
+                "video_000022.mp4": 1,
+                "video_000023.mp4": 1,
+                "video_000024.mp4": 1,
+                "video_000025.mp4": 1,
+                "video_000026.mp4": 1,
+                "video_000027.mp4": 1,
+                "video_000028.mp4": 1,
+                "video_000029.mp4": 1,
+                "video_000030.mp4": 1,
+                "video_000031.mp4": 1,
+                "video_000032.mp4": 1,
+                "video_000033.mp4": 1,
+                "video_000034.mp4": 1,
+                "video_000035.mp4": 1
+              },
+              "first_values": [
+                "video_000000.mp4",
+                "video_000001.mp4",
+                "video_000002.mp4"
+              ]
+            },
+            "id": {
+              "unique": 36,
+              "counts": {
+                "9f99930c-cbf8-46b0-882f-ff7b3fcc4e93": 1,
+                "8d1d7235-b515-47b8-b8e8-c8d913d85ab7": 1,
+                "2a2fb66b-b10d-44df-9869-bb60cfd76420": 1,
+                "4a290bd7-6348-4ceb-af1e-3caada5c63ee": 1,
+                "4f6262d5-427f-4fb1-9e88-0bf7c319e434": 1,
+                "8ddf2911-58ad-46ba-87cd-7710f2920fbf": 1,
+                "887bb1d0-ec5a-4f9d-844f-56f95a787790": 1,
+                "73b0fb7d-dc98-4a97-a39e-fe99acac7b2c": 1,
+                "ea8f302b-f3d2-4a07-8d5d-618028b6fe96": 1,
+                "792655c7-6a7f-42a5-b058-70f88917e3b3": 1,
+                "e5b8e128-8655-4f86-b68c-0e5d8647c68e": 1,
+                "71847ff7-3199-4794-bc44-373cc5315777": 1,
+                "0bd8cd2f-85b2-4143-992a-2e185c502103": 1,
+                "dab34346-c997-4a7b-b4c3-28f8124d0427": 1,
+                "897bdcd4-24ff-4795-806a-c7ca3808e312": 1,
+                "3750bd8b-76b1-4f2e-a862-ac9f6272a2c7": 1,
+                "84b5e7d9-7f36-4148-a635-196c90eb2b26": 1,
+                "bbd59642-b65c-4f8d-9ab6-5ae9f5fe73cd": 1,
+                "f7dea129-57fa-4f5d-8134-679626274759": 1,
+                "5244aaaa-04a0-4ccd-bbad-29b2e6c8023c": 1,
+                "1f39624c-ffef-436e-b0df-0b4b4de6ebff": 1,
+                "8ddd569c-f15f-4d22-abbc-42f877856a7a": 1,
+                "fb7d331c-0c73-4856-836f-42576128d95b": 1,
+                "ffc600a7-d58a-40e9-b4c4-52da5596fbf8": 1,
+                "ed87a481-15e0-4cbb-bf2c-05e8bd070c73": 1,
+                "0947d5d3-1346-472e-9640-4e5c4f9141b7": 1,
+                "717ad51f-4bfb-4657-bf2a-01fbb3f072eb": 1,
+                "0bef6574-3f66-4f87-96f6-24a29e470195": 1,
+                "312f4b8a-6633-43bd-9094-e6ec964d609a": 1,
+                "70cb5268-c3e6-4e87-99a1-95aa4ffe2899": 1,
+                "64e17159-9d91-4147-bfe6-fe19c037f1b6": 1,
+                "f61a687b-c4d2-4bb8-9bc6-22d922c891e7": 1,
+                "1454909a-f782-4dbc-909c-3b4680d4ccd8": 1,
+                "83684337-cf58-4b1b-89cc-b3073d268d92": 1,
+                "96fbffd6-97ce-464c-a63e-75f96c745592": 1,
+                "ae38a588-1a6e-433b-8317-fff8fbcee422": 1
+              },
+              "first_values": [
+                "9f99930c-cbf8-46b0-882f-ff7b3fcc4e93",
+                "8d1d7235-b515-47b8-b8e8-c8d913d85ab7",
+                "2a2fb66b-b10d-44df-9869-bb60cfd76420"
+              ]
+            },
+            "is_robot": {
+              "unique": 1,
+              "counts": {
+                "true": 36
+              },
+              "first_values": [
+                "true"
+              ]
+            },
+            "language_instruction": {
+              "unique": 6,
+              "counts": {
+                "Close the drawer": 6,
+                "Fold the towel in half": 6,
+                "Put blue cup in sink": 6,
+                "Put the banana on the red plate": 6,
+                "Put the eggplant in the black bowl": 6,
+                "Stack the green shape on the red cylinder": 6
+              },
+              "first_values": [
+                "Close the drawer",
+                "Fold the towel in half",
+                "Put blue cup in sink"
+              ]
+            },
+            "partial_success": {
+              "unique": 1,
+              "counts": {
+                "": 36
+              },
+              "first_values": [
+                ""
+              ]
+            },
+            "quality_label": {
+              "unique": 3,
+              "counts": {
+                "failure": 12,
+                "suboptimal": 12,
+                "success": 12
+              },
+              "first_values": [
+                "failure",
+                "suboptimal",
+                "success"
+              ]
+            },
+            "task": {
+              "unique": 6,
+              "counts": {
+                "Close the drawer": 6,
+                "Fold the towel in half": 6,
+                "Put blue cup in sink": 6,
+                "Put the banana on the red plate": 6,
+                "Put the eggplant in the black bowl": 6,
+                "Stack the green shape on the red cylinder": 6
+              },
+              "first_values": [
+                "Close the drawer",
+                "Fold the towel in half",
+                "Put blue cup in sink"
+              ]
+            },
+            "video_file_name": {
+              "unique": 36,
+              "counts": {
+                "usc_xarm/video_000000.mp4": 1,
+                "usc_xarm/video_000001.mp4": 1,
+                "usc_xarm/video_000002.mp4": 1,
+                "usc_xarm/video_000003.mp4": 1,
+                "usc_xarm/video_000004.mp4": 1,
+                "usc_xarm/video_000005.mp4": 1,
+                "usc_xarm/video_000006.mp4": 1,
+                "usc_xarm/video_000007.mp4": 1,
+                "usc_xarm/video_000008.mp4": 1,
+                "usc_xarm/video_000009.mp4": 1,
+                "usc_xarm/video_000010.mp4": 1,
+                "usc_xarm/video_000011.mp4": 1,
+                "usc_xarm/video_000012.mp4": 1,
+                "usc_xarm/video_000013.mp4": 1,
+                "usc_xarm/video_000014.mp4": 1,
+                "usc_xarm/video_000015.mp4": 1,
+                "usc_xarm/video_000016.mp4": 1,
+                "usc_xarm/video_000017.mp4": 1,
+                "usc_xarm/video_000018.mp4": 1,
+                "usc_xarm/video_000019.mp4": 1,
+                "usc_xarm/video_000020.mp4": 1,
+                "usc_xarm/video_000021.mp4": 1,
+                "usc_xarm/video_000022.mp4": 1,
+                "usc_xarm/video_000023.mp4": 1,
+                "usc_xarm/video_000024.mp4": 1,
+                "usc_xarm/video_000025.mp4": 1,
+                "usc_xarm/video_000026.mp4": 1,
+                "usc_xarm/video_000027.mp4": 1,
+                "usc_xarm/video_000028.mp4": 1,
+                "usc_xarm/video_000029.mp4": 1,
+                "usc_xarm/video_000030.mp4": 1,
+                "usc_xarm/video_000031.mp4": 1,
+                "usc_xarm/video_000032.mp4": 1,
+                "usc_xarm/video_000033.mp4": 1,
+                "usc_xarm/video_000034.mp4": 1,
+                "usc_xarm/video_000035.mp4": 1
+              },
+              "first_values": [
+                "usc_xarm/video_000000.mp4",
+                "usc_xarm/video_000001.mp4",
+                "usc_xarm/video_000002.mp4"
+              ]
+            }
+          },
+          "first_rows": [
+            {
+              "id": "9f99930c-cbf8-46b0-882f-ff7b3fcc4e93",
+              "file_name": "video_000000.mp4",
+              "video_file_name": "usc_xarm/video_000000.mp4",
+              "language_instruction": "Close the drawer",
+              "quality_label": "failure",
+              "data_source": "usc_xarm",
+              "task": "Close the drawer",
+              "is_robot": "true",
+              "partial_success": ""
+            },
+            {
+              "id": "8d1d7235-b515-47b8-b8e8-c8d913d85ab7",
+              "file_name": "video_000001.mp4",
+              "video_file_name": "usc_xarm/video_000001.mp4",
+              "language_instruction": "Close the drawer",
+              "quality_label": "failure",
+              "data_source": "usc_xarm",
+              "task": "Close the drawer",
+              "is_robot": "true",
+              "partial_success": ""
+            }
+          ],
+          "source_prefix_counts": null
+        },
+        {
+          "path": "utd_so101/metadata.parquet",
+          "url": "https://huggingface.co/datasets/robometer/rbm-1m-ood/resolve/3f3ee69ecc0ee0db627684da7d599ec26d08175c/utd_so101/metadata.parquet",
+          "bytes": 6742,
+          "sha256": "9ae40ce3a96bfbe91054e1c41cf55104ea1070ae9cb5f67b6cbf5488e9151ca4",
+          "schema": "id: string\nfile_name: string\nvideo_file_name: string\nlanguage_instruction: string\nquality_label: string\ndata_source: string\ntask: string\nis_robot: string\npartial_success: string\n-- schema metadata --\nhuggingface: '{\"info\": {\"features\": {\"id\": {\"dtype\": \"string\", \"_type\": \"' + 449",
+          "rows": 30,
+          "columns": [
+            "data_source",
+            "file_name",
+            "id",
+            "is_robot",
+            "language_instruction",
+            "partial_success",
+            "quality_label",
+            "task",
+            "video_file_name"
+          ],
+          "non_null_counts": {
+            "data_source": 30,
+            "file_name": 30,
+            "id": 30,
+            "is_robot": 30,
+            "language_instruction": 30,
+            "partial_success": 30,
+            "quality_label": 30,
+            "task": 30,
+            "video_file_name": 30
+          },
+          "values": {
+            "data_source": {
+              "unique": 1,
+              "counts": {
+                "utd_so101": 30
+              },
+              "first_values": [
+                "utd_so101"
+              ]
+            },
+            "file_name": {
+              "unique": 30,
+              "counts": {
+                "video_000000.mp4": 1,
+                "video_000001.mp4": 1,
+                "video_000002.mp4": 1,
+                "video_000003.mp4": 1,
+                "video_000004.mp4": 1,
+                "video_000005.mp4": 1,
+                "video_000006.mp4": 1,
+                "video_000007.mp4": 1,
+                "video_000008.mp4": 1,
+                "video_000009.mp4": 1,
+                "video_000010.mp4": 1,
+                "video_000011.mp4": 1,
+                "video_000012.mp4": 1,
+                "video_000013.mp4": 1,
+                "video_000014.mp4": 1,
+                "video_000015.mp4": 1,
+                "video_000016.mp4": 1,
+                "video_000017.mp4": 1,
+                "video_000018.mp4": 1,
+                "video_000019.mp4": 1,
+                "video_000020.mp4": 1,
+                "video_000021.mp4": 1,
+                "video_000022.mp4": 1,
+                "video_000023.mp4": 1,
+                "video_000024.mp4": 1,
+                "video_000025.mp4": 1,
+                "video_000026.mp4": 1,
+                "video_000027.mp4": 1,
+                "video_000028.mp4": 1,
+                "video_000029.mp4": 1
+              },
+              "first_values": [
+                "video_000000.mp4",
+                "video_000001.mp4",
+                "video_000002.mp4"
+              ]
+            },
+            "id": {
+              "unique": 30,
+              "counts": {
+                "c8ec8598-f543-4765-9b0a-f573d0fd0b88": 1,
+                "72c73b9d-bc33-4181-804d-bb3096034da4": 1,
+                "a5bdb049-3422-4fbb-bfe7-2c637057a6fd": 1,
+                "83cbb89e-6649-4456-9d93-9a50670e51b3": 1,
+                "77f40402-ef04-45b1-ae7c-9be90a6d80dc": 1,
+                "805de0a8-f4cf-490d-8e2f-bc6cb70a0130": 1,
+                "65d1db25-46ce-4175-8b52-fffb517b49bf": 1,
+                "af70eeb2-e86d-45b7-a5fb-a2793c736072": 1,
+                "b663bd06-44f9-4fb2-a411-de51b99c2fc6": 1,
+                "a65c9878-0537-4750-954b-b424b50bf24c": 1,
+                "e838f14d-2c55-45e2-9e00-d8883880e9af": 1,
+                "d5c4164a-06b4-4bf0-871e-bbf6c736190a": 1,
+                "cb283639-f8f0-436b-a1ee-94e49bd69d7b": 1,
+                "6764ffec-e78a-41de-8f14-68b4d8ae8fbc": 1,
+                "b75e38bb-49db-4655-bd85-09802cf5c7cb": 1,
+                "d159b432-2747-4618-90cd-bf4bfbf8145e": 1,
+                "d16d47de-7b92-4d6e-8e4c-895bc8357a65": 1,
+                "049852cd-8733-4132-b486-5390b646768a": 1,
+                "b6a91500-67d1-4bb2-8a5b-ca2cd8dd7596": 1,
+                "5296a584-bd36-43a3-9b64-58980b7814da": 1,
+                "dd80bff0-4e0f-4c12-b41d-f203276e28ab": 1,
+                "0641becc-c8bb-4c92-a56e-8dbd946f465e": 1,
+                "e5088127-7e1a-4526-9927-54e2e8f4b5b5": 1,
+                "dfb9e90c-75a0-4eb2-83c3-4e38cb101e0e": 1,
+                "2a671702-e614-4354-8098-29bc7a6b0068": 1,
+                "b48899a2-969c-4fa0-9ecb-827456ff935e": 1,
+                "17115224-7835-4a87-a7e0-f4fd6e7339f5": 1,
+                "3ccee87c-e7db-41c1-9e07-b97110e95b92": 1,
+                "6dcbfb2a-a612-433d-a64c-c3083a32337e": 1,
+                "2cdf5d90-ad7d-495e-865c-bdc33dd74bf5": 1
+              },
+              "first_values": [
+                "c8ec8598-f543-4765-9b0a-f573d0fd0b88",
+                "72c73b9d-bc33-4181-804d-bb3096034da4",
+                "a5bdb049-3422-4fbb-bfe7-2c637057a6fd"
+              ]
+            },
+            "is_robot": {
+              "unique": 1,
+              "counts": {
+                "true": 30
+              },
+              "first_values": [
+                "true"
+              ]
+            },
+            "language_instruction": {
+              "unique": 10,
+              "counts": {
+                "Press the button.": 3,
+                "Put the marker into the pen cup.": 3,
+                "Put the red bowl on the blue plate.": 3,
+                "Put the bread in the oven.": 3,
+                "Collect the fork to the yellow box.": 3,
+                "Stack the green block on the red block.": 3,
+                "Put the pear in the yellow plate.": 3,
+                "Add pepper to the green bowl.": 3,
+                "Put the eraser to the blue pencil box.": 3,
+                "Put the red cup on the purple coaster.": 3
+              },
+              "first_values": [
+                "Press the button.",
+                "Put the marker into the pen cup.",
+                "Put the red bowl on the blue plate."
+              ]
+            },
+            "partial_success": {
+              "unique": 1,
+              "counts": {
+                "": 30
+              },
+              "first_values": [
+                ""
+              ]
+            },
+            "quality_label": {
+              "unique": 3,
+              "counts": {
+                "failure": 10,
+                "suboptimal": 10,
+                "success": 10
+              },
+              "first_values": [
+                "failure",
+                "suboptimal",
+                "success"
+              ]
+            },
+            "task": {
+              "unique": 10,
+              "counts": {
+                "Press the button.": 3,
+                "Put the marker into the pen cup.": 3,
+                "Put the red bowl on the blue plate.": 3,
+                "Put the bread in the oven.": 3,
+                "Collect the fork to the yellow box.": 3,
+                "Stack the green block on the red block.": 3,
+                "Put the pear in the yellow plate.": 3,
+                "Add pepper to the green bowl.": 3,
+                "Put the eraser to the blue pencil box.": 3,
+                "Put the red cup on the purple coaster.": 3
+              },
+              "first_values": [
+                "Press the button.",
+                "Put the marker into the pen cup.",
+                "Put the red bowl on the blue plate."
+              ]
+            },
+            "video_file_name": {
+              "unique": 30,
+              "counts": {
+                "utd_so101/video_000000.mp4": 1,
+                "utd_so101/video_000001.mp4": 1,
+                "utd_so101/video_000002.mp4": 1,
+                "utd_so101/video_000003.mp4": 1,
+                "utd_so101/video_000004.mp4": 1,
+                "utd_so101/video_000005.mp4": 1,
+                "utd_so101/video_000006.mp4": 1,
+                "utd_so101/video_000007.mp4": 1,
+                "utd_so101/video_000008.mp4": 1,
+                "utd_so101/video_000009.mp4": 1,
+                "utd_so101/video_000010.mp4": 1,
+                "utd_so101/video_000011.mp4": 1,
+                "utd_so101/video_000012.mp4": 1,
+                "utd_so101/video_000013.mp4": 1,
+                "utd_so101/video_000014.mp4": 1,
+                "utd_so101/video_000015.mp4": 1,
+                "utd_so101/video_000016.mp4": 1,
+                "utd_so101/video_000017.mp4": 1,
+                "utd_so101/video_000018.mp4": 1,
+                "utd_so101/video_000019.mp4": 1,
+                "utd_so101/video_000020.mp4": 1,
+                "utd_so101/video_000021.mp4": 1,
+                "utd_so101/video_000022.mp4": 1,
+                "utd_so101/video_000023.mp4": 1,
+                "utd_so101/video_000024.mp4": 1,
+                "utd_so101/video_000025.mp4": 1,
+                "utd_so101/video_000026.mp4": 1,
+                "utd_so101/video_000027.mp4": 1,
+                "utd_so101/video_000028.mp4": 1,
+                "utd_so101/video_000029.mp4": 1
+              },
+              "first_values": [
+                "utd_so101/video_000000.mp4",
+                "utd_so101/video_000001.mp4",
+                "utd_so101/video_000002.mp4"
+              ]
+            }
+          },
+          "first_rows": [
+            {
+              "id": "c8ec8598-f543-4765-9b0a-f573d0fd0b88",
+              "file_name": "video_000000.mp4",
+              "video_file_name": "utd_so101/video_000000.mp4",
+              "language_instruction": "Press the button.",
+              "quality_label": "failure",
+              "data_source": "utd_so101",
+              "task": "Press the button.",
+              "is_robot": "true",
+              "partial_success": ""
+            },
+            {
+              "id": "72c73b9d-bc33-4181-804d-bb3096034da4",
+              "file_name": "video_000001.mp4",
+              "video_file_name": "utd_so101/video_000001.mp4",
+              "language_instruction": "Put the marker into the pen cup.",
+              "quality_label": "failure",
+              "data_source": "utd_so101",
+              "task": "Put the marker into the pen cup.",
+              "is_robot": "true",
+              "partial_success": ""
+            }
+          ],
+          "source_prefix_counts": null
+        },
+        {
+          "path": "utd_so101_clutter/metadata.parquet",
+          "url": "https://huggingface.co/datasets/robometer/rbm-1m-ood/resolve/3f3ee69ecc0ee0db627684da7d599ec26d08175c/utd_so101_clutter/metadata.parquet",
+          "bytes": 8361,
+          "sha256": "405832b97936bf0b6fb1d011a012dd3d700a13f9e0ff35a67bfc48d1af2aeefc",
+          "schema": "id: string\nfile_name: string\nvideo_file_name: string\nlanguage_instruction: string\nquality_label: string\ndata_source: string\ntask: string\nis_robot: string\npartial_success: string\n-- schema metadata --\nhuggingface: '{\"info\": {\"features\": {\"id\": {\"dtype\": \"string\", \"_type\": \"' + 449",
+          "rows": 60,
+          "columns": [
+            "data_source",
+            "file_name",
+            "id",
+            "is_robot",
+            "language_instruction",
+            "partial_success",
+            "quality_label",
+            "task",
+            "video_file_name"
+          ],
+          "non_null_counts": {
+            "data_source": 60,
+            "file_name": 60,
+            "id": 60,
+            "is_robot": 60,
+            "language_instruction": 60,
+            "partial_success": 60,
+            "quality_label": 60,
+            "task": 60,
+            "video_file_name": 60
+          },
+          "values": {
+            "data_source": {
+              "unique": 1,
+              "counts": {
+                "utd_so101_clutter": 60
+              },
+              "first_values": [
+                "utd_so101_clutter"
+              ]
+            },
+            "file_name": {
+              "unique": 60,
+              "counts": null,
+              "first_values": [
+                "video_000000.mp4",
+                "video_000001.mp4",
+                "video_000002.mp4"
+              ]
+            },
+            "id": {
+              "unique": 60,
+              "counts": null,
+              "first_values": [
+                "5b9f758e-0a16-42d8-9558-9e0a4bea6f9c",
+                "bb94f08a-afac-42d8-9042-0f9396372547",
+                "9f6a4186-e271-49fc-ae61-b017fb5536d9"
+              ]
+            },
+            "is_robot": {
+              "unique": 1,
+              "counts": {
+                "true": 60
+              },
+              "first_values": [
+                "true"
+              ]
+            },
+            "language_instruction": {
+              "unique": 10,
+              "counts": {
+                "Add pepper to the green bowl": 6,
+                "Collect the fork to the yellow box": 6,
+                "Press the button": 6,
+                "Put the apple in the yellow plate": 6,
+                "Put the bread in the oven": 6,
+                "Put the eraser to the blue pencil box": 6,
+                "Put the marker into the pen cup": 6,
+                "Put the red bowl on the blue plate": 6,
+                "Put the red cup on the purple coaster": 6,
+                "Stack the green block on the red block": 6
+              },
+              "first_values": [
+                "Add pepper to the green bowl",
+                "Collect the fork to the yellow box",
+                "Press the button"
+              ]
+            },
+            "partial_success": {
+              "unique": 1,
+              "counts": {
+                "": 60
+              },
+              "first_values": [
+                ""
+              ]
+            },
+            "quality_label": {
+              "unique": 3,
+              "counts": {
+                "failure": 20,
+                "suboptimal": 20,
+                "success": 20
+              },
+              "first_values": [
+                "failure",
+                "suboptimal",
+                "success"
+              ]
+            },
+            "task": {
+              "unique": 10,
+              "counts": {
+                "Add pepper to the green bowl": 6,
+                "Collect the fork to the yellow box": 6,
+                "Press the button": 6,
+                "Put the apple in the yellow plate": 6,
+                "Put the bread in the oven": 6,
+                "Put the eraser to the blue pencil box": 6,
+                "Put the marker into the pen cup": 6,
+                "Put the red bowl on the blue plate": 6,
+                "Put the red cup on the purple coaster": 6,
+                "Stack the green block on the red block": 6
+              },
+              "first_values": [
+                "Add pepper to the green bowl",
+                "Collect the fork to the yellow box",
+                "Press the button"
+              ]
+            },
+            "video_file_name": {
+              "unique": 60,
+              "counts": null,
+              "first_values": [
+                "utd_so101_clutter/video_000000.mp4",
+                "utd_so101_clutter/video_000001.mp4",
+                "utd_so101_clutter/video_000002.mp4"
+              ]
+            }
+          },
+          "first_rows": [
+            {
+              "id": "5b9f758e-0a16-42d8-9558-9e0a4bea6f9c",
+              "file_name": "video_000000.mp4",
+              "video_file_name": "utd_so101_clutter/video_000000.mp4",
+              "language_instruction": "Add pepper to the green bowl",
+              "quality_label": "failure",
+              "data_source": "utd_so101_clutter",
+              "task": "Add pepper to the green bowl",
+              "is_robot": "true",
+              "partial_success": ""
+            },
+            {
+              "id": "bb94f08a-afac-42d8-9042-0f9396372547",
+              "file_name": "video_000001.mp4",
+              "video_file_name": "utd_so101_clutter/video_000001.mp4",
+              "language_instruction": "Add pepper to the green bowl",
+              "quality_label": "failure",
+              "data_source": "utd_so101_clutter",
+              "task": "Add pepper to the green bowl",
+              "is_robot": "true",
+              "partial_success": ""
+            }
+          ],
+          "source_prefix_counts": null
+        },
+        {
+          "path": "utd_so101_human/metadata.parquet",
+          "url": "https://huggingface.co/datasets/robometer/rbm-1m-ood/resolve/3f3ee69ecc0ee0db627684da7d599ec26d08175c/utd_so101_human/metadata.parquet",
+          "bytes": 6282,
+          "sha256": "2129bb31dead38b10bff3891a7a64e93f8b5673dd7aa6a0e947baba40b6325de",
+          "schema": "id: string\nfile_name: string\nvideo_file_name: string\nlanguage_instruction: string\nquality_label: string\ndata_source: string\ntask: string\nis_robot: string\npartial_success: string\n-- schema metadata --\nhuggingface: '{\"info\": {\"features\": {\"id\": {\"dtype\": \"string\", \"_type\": \"' + 449",
+          "rows": 20,
+          "columns": [
+            "data_source",
+            "file_name",
+            "id",
+            "is_robot",
+            "language_instruction",
+            "partial_success",
+            "quality_label",
+            "task",
+            "video_file_name"
+          ],
+          "non_null_counts": {
+            "data_source": 20,
+            "file_name": 20,
+            "id": 20,
+            "is_robot": 20,
+            "language_instruction": 20,
+            "partial_success": 20,
+            "quality_label": 20,
+            "task": 20,
+            "video_file_name": 20
+          },
+          "values": {
+            "data_source": {
+              "unique": 1,
+              "counts": {
+                "utd_so101_human": 20
+              },
+              "first_values": [
+                "utd_so101_human"
+              ]
+            },
+            "file_name": {
+              "unique": 20,
+              "counts": {
+                "video_000000.mp4": 1,
+                "video_000001.mp4": 1,
+                "video_000002.mp4": 1,
+                "video_000003.mp4": 1,
+                "video_000004.mp4": 1,
+                "video_000005.mp4": 1,
+                "video_000006.mp4": 1,
+                "video_000007.mp4": 1,
+                "video_000008.mp4": 1,
+                "video_000009.mp4": 1,
+                "video_000010.mp4": 1,
+                "video_000011.mp4": 1,
+                "video_000012.mp4": 1,
+                "video_000013.mp4": 1,
+                "video_000014.mp4": 1,
+                "video_000015.mp4": 1,
+                "video_000016.mp4": 1,
+                "video_000017.mp4": 1,
+                "video_000018.mp4": 1,
+                "video_000019.mp4": 1
+              },
+              "first_values": [
+                "video_000000.mp4",
+                "video_000001.mp4",
+                "video_000002.mp4"
+              ]
+            },
+            "id": {
+              "unique": 20,
+              "counts": {
+                "05ac1570-7986-45f5-b851-71fe3d178d6e": 1,
+                "13128820-3697-4cd8-abf9-5575080ed331": 1,
+                "e3bbb332-5b4e-40c9-bfe6-1c4be1c64ea7": 1,
+                "34300401-e839-40b5-bd52-8d3bda389402": 1,
+                "2fa65459-897b-435b-a82d-ca0f66c96f15": 1,
+                "7285d530-ff5b-4093-9c17-b079b2a5c7ee": 1,
+                "5e1c679b-e7ee-4e1a-818a-4e61e2bb746c": 1,
+                "4ab7cbbf-de44-485f-ac51-d5bac4b9f6b1": 1,
+                "9ba70e20-2173-4e15-90c8-39c1b59d3af2": 1,
+                "a081ba64-8ca2-4844-af88-b4a838fbb220": 1,
+                "93c9cfe5-4ddd-467e-9772-397d2f42387c": 1,
+                "1acd0ce1-8059-4d7a-bd7c-5bb4883059d0": 1,
+                "b314703d-fae2-47f8-a01b-83fabea0d6ee": 1,
+                "e649a66c-6779-4b09-ac66-75f97cd024b1": 1,
+                "e2ccbaec-f252-4d03-80a3-c70468ddcb02": 1,
+                "8302bdda-b69e-4c57-9677-c9ca51c41ca6": 1,
+                "23f2df43-032b-48b0-ba13-85587afb9da4": 1,
+                "88440542-23eb-44ee-927c-9d349d37dcba": 1,
+                "139a56ab-3f52-4c96-b326-3d7114c037aa": 1,
+                "f600870c-e5f2-4e1d-80d4-9c4c0802cdb8": 1
+              },
+              "first_values": [
+                "05ac1570-7986-45f5-b851-71fe3d178d6e",
+                "13128820-3697-4cd8-abf9-5575080ed331",
+                "e3bbb332-5b4e-40c9-bfe6-1c4be1c64ea7"
+              ]
+            },
+            "is_robot": {
+              "unique": 1,
+              "counts": {
+                "false": 20
+              },
+              "first_values": [
+                "false"
+              ]
+            },
+            "language_instruction": {
+              "unique": 10,
+              "counts": {
+                "Add pepper to the green bowl": 2,
+                "Collect the fork to the yellow box": 2,
+                "Press the button": 2,
+                "Put the apple in the yellow plate": 2,
+                "Put the bread in the oven": 2,
+                "Put the eraser to the blue pencil box": 2,
+                "Put the marker into the pen cup": 2,
+                "Put the red bowl on the blue plate": 2,
+                "Put the red cup on the purple coaster": 2,
+                "Stack the green block on the red block": 2
+              },
+              "first_values": [
+                "Add pepper to the green bowl",
+                "Collect the fork to the yellow box",
+                "Press the button"
+              ]
+            },
+            "partial_success": {
+              "unique": 1,
+              "counts": {
+                "": 20
+              },
+              "first_values": [
+                ""
+              ]
+            },
+            "quality_label": {
+              "unique": 1,
+              "counts": {
+                "success": 20
+              },
+              "first_values": [
+                "success"
+              ]
+            },
+            "task": {
+              "unique": 10,
+              "counts": {
+                "Add pepper to the green bowl": 2,
+                "Collect the fork to the yellow box": 2,
+                "Press the button": 2,
+                "Put the apple in the yellow plate": 2,
+                "Put the bread in the oven": 2,
+                "Put the eraser to the blue pencil box": 2,
+                "Put the marker into the pen cup": 2,
+                "Put the red bowl on the blue plate": 2,
+                "Put the red cup on the purple coaster": 2,
+                "Stack the green block on the red block": 2
+              },
+              "first_values": [
+                "Add pepper to the green bowl",
+                "Collect the fork to the yellow box",
+                "Press the button"
+              ]
+            },
+            "video_file_name": {
+              "unique": 20,
+              "counts": {
+                "utd_so101_human/video_000000.mp4": 1,
+                "utd_so101_human/video_000001.mp4": 1,
+                "utd_so101_human/video_000002.mp4": 1,
+                "utd_so101_human/video_000003.mp4": 1,
+                "utd_so101_human/video_000004.mp4": 1,
+                "utd_so101_human/video_000005.mp4": 1,
+                "utd_so101_human/video_000006.mp4": 1,
+                "utd_so101_human/video_000007.mp4": 1,
+                "utd_so101_human/video_000008.mp4": 1,
+                "utd_so101_human/video_000009.mp4": 1,
+                "utd_so101_human/video_000010.mp4": 1,
+                "utd_so101_human/video_000011.mp4": 1,
+                "utd_so101_human/video_000012.mp4": 1,
+                "utd_so101_human/video_000013.mp4": 1,
+                "utd_so101_human/video_000014.mp4": 1,
+                "utd_so101_human/video_000015.mp4": 1,
+                "utd_so101_human/video_000016.mp4": 1,
+                "utd_so101_human/video_000017.mp4": 1,
+                "utd_so101_human/video_000018.mp4": 1,
+                "utd_so101_human/video_000019.mp4": 1
+              },
+              "first_values": [
+                "utd_so101_human/video_000000.mp4",
+                "utd_so101_human/video_000001.mp4",
+                "utd_so101_human/video_000002.mp4"
+              ]
+            }
+          },
+          "first_rows": [
+            {
+              "id": "05ac1570-7986-45f5-b851-71fe3d178d6e",
+              "file_name": "video_000000.mp4",
+              "video_file_name": "utd_so101_human/video_000000.mp4",
+              "language_instruction": "Add pepper to the green bowl",
+              "quality_label": "success",
+              "data_source": "utd_so101_human",
+              "task": "Add pepper to the green bowl",
+              "is_robot": "false",
+              "partial_success": ""
+            },
+            {
+              "id": "13128820-3697-4cd8-abf9-5575080ed331",
+              "file_name": "video_000001.mp4",
+              "video_file_name": "utd_so101_human/video_000001.mp4",
+              "language_instruction": "Add pepper to the green bowl",
+              "quality_label": "success",
+              "data_source": "utd_so101_human",
+              "task": "Add pepper to the green bowl",
+              "is_robot": "false",
+              "partial_success": ""
+            }
+          ],
+          "source_prefix_counts": null
+        },
+        {
+          "path": "utd_so101_wrist/metadata.parquet",
+          "url": "https://huggingface.co/datasets/robometer/rbm-1m-ood/resolve/3f3ee69ecc0ee0db627684da7d599ec26d08175c/utd_so101_wrist/metadata.parquet",
+          "bytes": 6804,
+          "sha256": "d04a20c1e975d508269704e25dbc0b60134818b4d8219325cf30a4b28f7ef498",
+          "schema": "id: string\nfile_name: string\nvideo_file_name: string\nlanguage_instruction: string\nquality_label: string\ndata_source: string\ntask: string\nis_robot: string\npartial_success: string\n-- schema metadata --\nhuggingface: '{\"info\": {\"features\": {\"id\": {\"dtype\": \"string\", \"_type\": \"' + 449",
+          "rows": 30,
+          "columns": [
+            "data_source",
+            "file_name",
+            "id",
+            "is_robot",
+            "language_instruction",
+            "partial_success",
+            "quality_label",
+            "task",
+            "video_file_name"
+          ],
+          "non_null_counts": {
+            "data_source": 30,
+            "file_name": 30,
+            "id": 30,
+            "is_robot": 30,
+            "language_instruction": 30,
+            "partial_success": 30,
+            "quality_label": 30,
+            "task": 30,
+            "video_file_name": 30
+          },
+          "values": {
+            "data_source": {
+              "unique": 1,
+              "counts": {
+                "utd_so101_wrist": 30
+              },
+              "first_values": [
+                "utd_so101_wrist"
+              ]
+            },
+            "file_name": {
+              "unique": 30,
+              "counts": {
+                "video_000000.mp4": 1,
+                "video_000001.mp4": 1,
+                "video_000002.mp4": 1,
+                "video_000003.mp4": 1,
+                "video_000004.mp4": 1,
+                "video_000005.mp4": 1,
+                "video_000006.mp4": 1,
+                "video_000007.mp4": 1,
+                "video_000008.mp4": 1,
+                "video_000009.mp4": 1,
+                "video_000010.mp4": 1,
+                "video_000011.mp4": 1,
+                "video_000012.mp4": 1,
+                "video_000013.mp4": 1,
+                "video_000014.mp4": 1,
+                "video_000015.mp4": 1,
+                "video_000016.mp4": 1,
+                "video_000017.mp4": 1,
+                "video_000018.mp4": 1,
+                "video_000019.mp4": 1,
+                "video_000020.mp4": 1,
+                "video_000021.mp4": 1,
+                "video_000022.mp4": 1,
+                "video_000023.mp4": 1,
+                "video_000024.mp4": 1,
+                "video_000025.mp4": 1,
+                "video_000026.mp4": 1,
+                "video_000027.mp4": 1,
+                "video_000028.mp4": 1,
+                "video_000029.mp4": 1
+              },
+              "first_values": [
+                "video_000000.mp4",
+                "video_000001.mp4",
+                "video_000002.mp4"
+              ]
+            },
+            "id": {
+              "unique": 30,
+              "counts": {
+                "c4657daa-d553-426c-b958-47091ad4a56b": 1,
+                "6d82d9e7-e4b8-4e2b-ade6-e48192b4638a": 1,
+                "75b851a5-9526-4603-9b3e-dfc71686e614": 1,
+                "445ee030-6595-43d7-b423-920160badd95": 1,
+                "64b4a773-12a2-4497-814f-27a5da09684c": 1,
+                "a2abb33e-62d7-46a3-b9fc-0e5fae8e9374": 1,
+                "f954d318-fa05-449c-9e5b-aa8667de41ff": 1,
+                "7a0167d6-f3ad-40d8-a7a8-73690f714994": 1,
+                "6d5b8713-0ae3-4ecb-9482-3e666d248dbd": 1,
+                "561efb85-48d3-4525-a0b2-f1560f45401b": 1,
+                "2f215efc-41f5-45d7-b9b8-419a9cb7636d": 1,
+                "df6c7c10-ea07-4689-9a7f-df70144aaf8d": 1,
+                "938290d6-1682-466e-8425-433221fd38eb": 1,
+                "57dddb8d-65ca-42e0-842c-ee24881bd73b": 1,
+                "b9bb5192-c3a7-442a-9e64-f48a85845be2": 1,
+                "29dc5ed8-6846-4fa9-9931-0c73a74b64ac": 1,
+                "613bd1a2-1a1f-4369-a130-a8178af39c3a": 1,
+                "6d0ce1fe-e12d-4111-a095-7b6621b41c37": 1,
+                "11440b3d-8cf7-47be-af9e-ba8f9e55fc1c": 1,
+                "1bf2b88d-7f02-421e-8397-131eda348b22": 1,
+                "83443bb1-6c1a-4c57-86bf-8bfb103b2d87": 1,
+                "a1fc1fc8-c2d5-4c4a-98c5-8649d595bc38": 1,
+                "db2f87b5-131f-4b9f-974c-35a8c4bb72cf": 1,
+                "7d6b7ad0-8503-4b28-9106-d51ca61a4774": 1,
+                "512c763c-53b6-4c2b-86e9-366466033b92": 1,
+                "6d954f3e-b9a3-4271-a9ea-d7636b9be07e": 1,
+                "cafc691b-29da-42c7-a698-9fa089be70e4": 1,
+                "21729a47-ac6e-481b-9a33-fc2de1b007b8": 1,
+                "5549ead7-3ed8-4128-b0b5-c1931323a60e": 1,
+                "c83d87e4-f513-49c0-a445-236f5f8178da": 1
+              },
+              "first_values": [
+                "c4657daa-d553-426c-b958-47091ad4a56b",
+                "6d82d9e7-e4b8-4e2b-ade6-e48192b4638a",
+                "75b851a5-9526-4603-9b3e-dfc71686e614"
+              ]
+            },
+            "is_robot": {
+              "unique": 1,
+              "counts": {
+                "true": 30
+              },
+              "first_values": [
+                "true"
+              ]
+            },
+            "language_instruction": {
+              "unique": 10,
+              "counts": {
+                "Press the button.": 3,
+                "Put the red bowl on the blue plate.": 3,
+                "Put the bread in the oven.": 3,
+                "Put the marker into the pen cup.": 3,
+                "Stack the green block on the red block.": 3,
+                "Put the pear in the yellow plate.": 3,
+                "Collect the fork to the yellow box.": 3,
+                "Add pepper to the green bowl.": 3,
+                "Put the eraser to the blue pencil box.": 3,
+                "Put the red cup on the purple coaster.": 3
+              },
+              "first_values": [
+                "Press the button.",
+                "Put the red bowl on the blue plate.",
+                "Put the bread in the oven."
+              ]
+            },
+            "partial_success": {
+              "unique": 1,
+              "counts": {
+                "": 30
+              },
+              "first_values": [
+                ""
+              ]
+            },
+            "quality_label": {
+              "unique": 3,
+              "counts": {
+                "failure": 10,
+                "suboptimal": 10,
+                "success": 10
+              },
+              "first_values": [
+                "failure",
+                "suboptimal",
+                "success"
+              ]
+            },
+            "task": {
+              "unique": 10,
+              "counts": {
+                "Press the button.": 3,
+                "Put the red bowl on the blue plate.": 3,
+                "Put the bread in the oven.": 3,
+                "Put the marker into the pen cup.": 3,
+                "Stack the green block on the red block.": 3,
+                "Put the pear in the yellow plate.": 3,
+                "Collect the fork to the yellow box.": 3,
+                "Add pepper to the green bowl.": 3,
+                "Put the eraser to the blue pencil box.": 3,
+                "Put the red cup on the purple coaster.": 3
+              },
+              "first_values": [
+                "Press the button.",
+                "Put the red bowl on the blue plate.",
+                "Put the bread in the oven."
+              ]
+            },
+            "video_file_name": {
+              "unique": 30,
+              "counts": {
+                "utd_so101_wrist/video_000000.mp4": 1,
+                "utd_so101_wrist/video_000001.mp4": 1,
+                "utd_so101_wrist/video_000002.mp4": 1,
+                "utd_so101_wrist/video_000003.mp4": 1,
+                "utd_so101_wrist/video_000004.mp4": 1,
+                "utd_so101_wrist/video_000005.mp4": 1,
+                "utd_so101_wrist/video_000006.mp4": 1,
+                "utd_so101_wrist/video_000007.mp4": 1,
+                "utd_so101_wrist/video_000008.mp4": 1,
+                "utd_so101_wrist/video_000009.mp4": 1,
+                "utd_so101_wrist/video_000010.mp4": 1,
+                "utd_so101_wrist/video_000011.mp4": 1,
+                "utd_so101_wrist/video_000012.mp4": 1,
+                "utd_so101_wrist/video_000013.mp4": 1,
+                "utd_so101_wrist/video_000014.mp4": 1,
+                "utd_so101_wrist/video_000015.mp4": 1,
+                "utd_so101_wrist/video_000016.mp4": 1,
+                "utd_so101_wrist/video_000017.mp4": 1,
+                "utd_so101_wrist/video_000018.mp4": 1,
+                "utd_so101_wrist/video_000019.mp4": 1,
+                "utd_so101_wrist/video_000020.mp4": 1,
+                "utd_so101_wrist/video_000021.mp4": 1,
+                "utd_so101_wrist/video_000022.mp4": 1,
+                "utd_so101_wrist/video_000023.mp4": 1,
+                "utd_so101_wrist/video_000024.mp4": 1,
+                "utd_so101_wrist/video_000025.mp4": 1,
+                "utd_so101_wrist/video_000026.mp4": 1,
+                "utd_so101_wrist/video_000027.mp4": 1,
+                "utd_so101_wrist/video_000028.mp4": 1,
+                "utd_so101_wrist/video_000029.mp4": 1
+              },
+              "first_values": [
+                "utd_so101_wrist/video_000000.mp4",
+                "utd_so101_wrist/video_000001.mp4",
+                "utd_so101_wrist/video_000002.mp4"
+              ]
+            }
+          },
+          "first_rows": [
+            {
+              "id": "c4657daa-d553-426c-b958-47091ad4a56b",
+              "file_name": "video_000000.mp4",
+              "video_file_name": "utd_so101_wrist/video_000000.mp4",
+              "language_instruction": "Press the button.",
+              "quality_label": "failure",
+              "data_source": "utd_so101_wrist",
+              "task": "Press the button.",
+              "is_robot": "true",
+              "partial_success": ""
+            },
+            {
+              "id": "6d82d9e7-e4b8-4e2b-ade6-e48192b4638a",
+              "file_name": "video_000001.mp4",
+              "video_file_name": "utd_so101_wrist/video_000001.mp4",
+              "language_instruction": "Put the red bowl on the blue plate.",
+              "quality_label": "failure",
+              "data_source": "utd_so101_wrist",
+              "task": "Put the red bowl on the blue plate.",
+              "is_robot": "true",
+              "partial_success": ""
+            }
+          ],
+          "source_prefix_counts": null
+        }
+      ],
+      "errors": []
+    },
+    {
+      "repository": "teetone/RoboReward",
+      "revision": "469b9af76e8539e8d2ac553b081307738fd92ca5",
+      "repository_file_count": 54140,
+      "selected_metadata_paths": [
+        "test/metadata.jsonl",
+        "train/metadata.jsonl",
+        "val/metadata.jsonl"
+      ],
+      "payloads": [
+        {
+          "path": "test/metadata.jsonl",
+          "url": "https://huggingface.co/datasets/teetone/RoboReward/resolve/469b9af76e8539e8d2ac553b081307738fd92ca5/test/metadata.jsonl",
+          "bytes": 1337128,
+          "sha256": "3901cea9a7981d2e2d9fde4225a4b2ff0ebf2f4af69fc96972a2cfbe557db0cd",
+          "rows": 2831,
+          "columns": [
+            "file_name",
+            "gpt5_mini_check",
+            "reward",
+            "task"
+          ],
+          "non_null_counts": {
+            "file_name": 2831,
+            "gpt5_mini_check": 1831,
+            "reward": 2831,
+            "task": 2831
+          },
+          "values": {
+            "file_name": {
+              "unique": 2831,
+              "counts": null,
+              "first_values": [
+                "austin_sirius_dataset_converted_externally_to_rlds/austin_sirius_dataset_converted_externally_to_rlds_originalsplit_train_index_527.mp4",
+                "austin_sirius_dataset_converted_externally_to_rlds/austin_sirius_dataset_converted_externally_to_rlds_originalsplit_train_index_525_attempt_1_score_1.mp4",
+                "austin_sirius_dataset_converted_externally_to_rlds/austin_sirius_dataset_converted_externally_to_rlds_originalsplit_train_index_89.mp4"
+              ]
+            },
+            "gpt5_mini_check": {
+              "unique": 1832,
+              "counts": null,
+              "first_values": [
+                "The task description is coherent and references visible items (the small beige block and the tray's left peg). In the video the robot never picks up or places the beige block — instead it manipulates a red piece and ends with the beige block untouched. That is a wrong-object handling and shows no goal-relevant change, which corresponds to score 1 (No Success). Therefore the PROVIDED SCORE is correct.\n\nANSWER: TRUE",
+                "The task description is coherent with the video (the blue and red gears and a set of pegs are visible). Across the frames there is no observable change in object positions or any insertion onto the right peg — both gears remain unplaced. That matches rubric level 1 (No Success). Therefore the PROVIDED SCORE (1) is correct.\n\nANSWER: TRUE",
+                "The robot never picks up or places the small beige fixture into the tray; instead it manipulates the blue (and later red) pieces and the beige part remains off to the left throughout. This is a failure to make any goal-relevant change for the commanded object, which corresponds to rubric score 1 (No Success). The task description is coherent with visible objects, so the provided score 1 is correct.\n\nANSWER: TRUE"
+              ]
+            },
+            "reward": {
+              "unique": 5,
+              "counts": {
+                "1": 689,
+                "2": 641,
+                "3": 556,
+                "4": 418,
+                "5": 527
+              },
+              "first_values": [
+                "1",
+                "2",
+                "3"
+              ]
+            },
+            "task": {
+              "unique": 1043,
+              "counts": null,
+              "first_values": [
+                "Place the small beige block onto the left peg of the tray.",
+                "Insert the blue gear onto the right peg, followed by the red gear.",
+                "Place the small beige fixture into the leftmost hole of the tray."
+              ]
+            }
+          },
+          "first_rows": [
+            {
+              "file_name": "austin_sirius_dataset_converted_externally_to_rlds/austin_sirius_dataset_converted_externally_to_rlds_originalsplit_train_index_527.mp4",
+              "task": "Place the small beige block onto the left peg of the tray.",
+              "reward": 1,
+              "gpt5_mini_check": "The task description is coherent and references visible items (the small beige block and the tray's left peg). In the video the robot never picks up or places the beige block — instead it manipulates a red piece and ends with the beige block untouched. That is a wrong-object handling and shows no goal-relevant change, which corresponds to score 1 (No Success). Therefore the PROVIDED SCORE is correct.\n\nANSWER: TRUE"
+            },
+            {
+              "file_name": "austin_sirius_dataset_converted_externally_to_rlds/austin_sirius_dataset_converted_externally_to_rlds_originalsplit_train_index_525_attempt_1_score_1.mp4",
+              "task": "Insert the blue gear onto the right peg, followed by the red gear.",
+              "reward": 1,
+              "gpt5_mini_check": "The task description is coherent with the video (the blue and red gears and a set of pegs are visible). Across the frames there is no observable change in object positions or any insertion onto the right peg — both gears remain unplaced. That matches rubric level 1 (No Success). Therefore the PROVIDED SCORE (1) is correct.\n\nANSWER: TRUE"
+            }
+          ],
+          "source_prefix_counts": {
+            "austin_sirius_dataset_converted_externally_to_rlds": 87,
+            "berkeley_autolab_ur5": 100,
+            "berkeley_fanuc_manipulation": 91,
+            "berkeley_mvp_converted_externally_to_rlds": 71,
+            "berkeley_rpt_converted_externally_to_rlds": 86,
+            "bridge": 100,
+            "cmu_play_fusion": 92,
+            "dlr_edan_shared_control_converted_externally_to_rlds": 19,
+            "droid": 100,
+            "fractal20220817_data": 100,
+            "iamlab_cmu_pickup_insert_converted_externally_to_rlds": 83,
+            "jaco_play": 100,
+            "kaist_nonprehensile_converted_externally_to_rlds": 53,
+            "robo_arena": 1000,
+            "roboturk": 97,
+            "stanford_hydra_dataset_converted_externally_to_rlds": 91,
+            "taco_play": 91,
+            "tokyo_u_lsmo_converted_externally_to_rlds": 71,
+            "ucsd_kitchen_dataset_converted_externally_to_rlds": 95,
+            "ucsd_pick_and_place_dataset_converted_externally_to_rlds": 100,
+            "utokyo_pr2_tabletop_manipulation_converted_externally_to_rlds": 73,
+            "utokyo_xarm_bimanual_converted_externally_to_rlds": 71,
+            "viola": 60
+          }
+        },
+        {
+          "path": "train/metadata.jsonl",
+          "url": "https://huggingface.co/datasets/teetone/RoboReward/resolve/469b9af76e8539e8d2ac553b081307738fd92ca5/train/metadata.jsonl",
+          "bytes": 24934731,
+          "sha256": "f0a21f02dce886446c28a92e5203c49de068bacd81df9011fbd824e567ab2312",
+          "rows": 45072,
+          "columns": [
+            "file_name",
+            "gpt5_mini_check",
+            "reward",
+            "task"
+          ],
+          "non_null_counts": {
+            "file_name": 45072,
+            "gpt5_mini_check": 37735,
+            "reward": 45072,
+            "task": 45072
+          },
+          "values": {
+            "file_name": {
+              "unique": 45072,
+              "counts": null,
+              "first_values": [
+                "austin_buds_dataset_converted_externally_to_rlds/austin_buds_dataset_converted_externally_to_rlds_originalsplit_train_index_0.mp4",
+                "austin_buds_dataset_converted_externally_to_rlds/austin_buds_dataset_converted_externally_to_rlds_originalsplit_train_index_1.mp4",
+                "austin_buds_dataset_converted_externally_to_rlds/austin_buds_dataset_converted_externally_to_rlds_originalsplit_train_index_2.mp4"
+              ]
+            },
+            "gpt5_mini_check": {
+              "unique": 37734,
+              "counts": null,
+              "first_values": [
+                "The robot successfully removed the lid from the pot, placed the (now-unlidded) pot onto the plate, and then used the tool (spatula) to push the pot forward on the table. All three core requirements are visible and satisfied in the final frames, so the provided score of 5 (Perfect Completion) matches the rubric.\n\nANSWER: TRUE",
+                "The task description is coherent with the video (pot, plate, and a spatula-like tool are visible). The robot removes the lid, places the pot onto the plate, and then uses the tool to push the pot toward the front edge of the table; the final frame shows the pot on the plate moved forward. All required steps are completed, so the provided score of 5 (Perfect Completion) matches the rubric.\n\nANSWER: TRUE",
+                "The task description matches the video (visible pot, lid, plate, and a pushing tool). The robot removes the lid, places the pot onto the plate, and then uses the tool to push the pot forward toward the front of the table. All three core requirements are satisfied in the final state, so the provided score of 5 (Perfect Completion) is correct.\n\nANSWER: TRUE"
+              ]
+            },
+            "reward": {
+              "unique": 5,
+              "counts": {
+                "5": 8425,
+                "1": 13648,
+                "2": 8577,
+                "3": 7850,
+                "4": 6572
+              },
+              "first_values": [
+                "5",
+                "1",
+                "2"
+              ]
+            },
+            "task": {
+              "unique": 18249,
+              "counts": null,
+              "first_values": [
+                "Take the lid off the pot, put the pot on the plate, and use the tool to push the pot to the front of the table.",
+                "Move the small pale circular dish from the black cloth onto the brown placemat.",
+                "Use the spatula to push the pot forward until it touches the front edge of the table."
+              ]
+            }
+          },
+          "first_rows": [
+            {
+              "file_name": "austin_buds_dataset_converted_externally_to_rlds/austin_buds_dataset_converted_externally_to_rlds_originalsplit_train_index_0.mp4",
+              "task": "Take the lid off the pot, put the pot on the plate, and use the tool to push the pot to the front of the table.",
+              "reward": 5,
+              "gpt5_mini_check": "The robot successfully removed the lid from the pot, placed the (now-unlidded) pot onto the plate, and then used the tool (spatula) to push the pot forward on the table. All three core requirements are visible and satisfied in the final frames, so the provided score of 5 (Perfect Completion) matches the rubric.\n\nANSWER: TRUE"
+            },
+            {
+              "file_name": "austin_buds_dataset_converted_externally_to_rlds/austin_buds_dataset_converted_externally_to_rlds_originalsplit_train_index_1.mp4",
+              "task": "Take the lid off the pot, put the pot on the plate, and use the tool to push the pot to the front of the table.",
+              "reward": 5,
+              "gpt5_mini_check": "The task description is coherent with the video (pot, plate, and a spatula-like tool are visible). The robot removes the lid, places the pot onto the plate, and then uses the tool to push the pot toward the front edge of the table; the final frame shows the pot on the plate moved forward. All required steps are completed, so the provided score of 5 (Perfect Completion) matches the rubric.\n\nANSWER: TRUE"
+            }
+          ],
+          "source_prefix_counts": {
+            "austin_buds_dataset_converted_externally_to_rlds": 127,
+            "austin_sirius_dataset_converted_externally_to_rlds": 1355,
+            "berkeley_autolab_ur5": 2388,
+            "berkeley_fanuc_manipulation": 860,
+            "berkeley_mvp_converted_externally_to_rlds": 1218,
+            "berkeley_rpt_converted_externally_to_rlds": 1069,
+            "bridge": 3826,
+            "cmu_play_fusion": 1269,
+            "dlr_edan_shared_control_converted_externally_to_rlds": 168,
+            "droid": 3071,
+            "fractal20220817_data": 3988,
+            "iamlab_cmu_pickup_insert_converted_externally_to_rlds": 1193,
+            "jaco_play": 2428,
+            "kaist_nonprehensile_converted_externally_to_rlds": 406,
+            "nyu_door_opening_surprising_effectiveness": 2369,
+            "nyu_rot_dataset_converted_externally_to_rlds": 35,
+            "robo_arena": 7337,
+            "roboturk": 1463,
+            "stanford_hydra_dataset_converted_externally_to_rlds": 507,
+            "taco_play": 2856,
+            "tokyo_u_lsmo_converted_externally_to_rlds": 97,
+            "toto": 2986,
+            "ucsd_kitchen_dataset_converted_externally_to_rlds": 393,
+            "ucsd_pick_and_place_dataset_converted_externally_to_rlds": 2384,
+            "utokyo_pr2_opening_fridge_converted_externally_to_rlds": 357,
+            "utokyo_pr2_tabletop_manipulation_converted_externally_to_rlds": 293,
+            "utokyo_xarm_bimanual_converted_externally_to_rlds": 161,
+            "utokyo_xarm_pick_and_place_converted_externally_to_rlds": 301,
+            "viola": 167
+          }
+        },
+        {
+          "path": "val/metadata.jsonl",
+          "url": "https://huggingface.co/datasets/teetone/RoboReward/resolve/469b9af76e8539e8d2ac553b081307738fd92ca5/val/metadata.jsonl",
+          "bytes": 3459184,
+          "sha256": "73710f1ad522050b46e0b7f6e0ca35d6e7c0c61221b20f3f239b2dee878fdaec",
+          "rows": 6232,
+          "columns": [
+            "file_name",
+            "gpt5_mini_check",
+            "reward",
+            "task"
+          ],
+          "non_null_counts": {
+            "file_name": 6232,
+            "gpt5_mini_check": 5232,
+            "reward": 6232,
+            "task": 6232
+          },
+          "values": {
+            "file_name": {
+              "unique": 6232,
+              "counts": null,
+              "first_values": [
+                "berkeley_autolab_ur5/berkeley_autolab_ur5_originalsplit_train_index_11.mp4",
+                "berkeley_autolab_ur5/berkeley_autolab_ur5_originalsplit_train_index_13.mp4",
+                "berkeley_autolab_ur5/berkeley_autolab_ur5_originalsplit_train_index_28.mp4"
+              ]
+            },
+            "gpt5_mini_check": {
+              "unique": 5233,
+              "counts": null,
+              "first_values": [
+                "The video clearly shows the green cloth (primary object) being engaged by the robot and moved from its initial near-left position to the opposite side of the table; the final frames show the cloth on the other side (bottom-right) relative to the start. The task description is coherent and grounded in visible objects/actions. All core requirements are satisfied, so the provided score of 5 (Perfect Completion) matches the rubric.\n\nANSWER: TRUE",
+                "The task description is coherent (a visible green cloth being swept by the gripper across the table). The final frames show the cloth moved from under the gripper to the opposite side of the table and released, satisfying the primary relation and intent with no major requirements missed. Therefore the provided score of 5 (Perfect Completion) matches the rubric.\n\nANSWER: TRUE",
+                "The task description is coherent (a green cloth is visible and the robot sweeps it). The final frames show the cloth moved from under the gripper area to the far side of the table (robot-base is at top, cloth ends up near the bottom edge), satisfying the primary spatial relation and no major requirements were missed. This matches a Perfect Completion (score 5), so the PROVIDED SCORE is correct.\n\nANSWER: TRUE"
+              ]
+            },
+            "reward": {
+              "unique": 5,
+              "counts": {
+                "5": 974,
+                "1": 2210,
+                "3": 1034,
+                "4": 808,
+                "2": 1206
+              },
+              "first_values": [
+                "5",
+                "1",
+                "3"
+              ]
+            },
+            "task": {
+              "unique": 2832,
+              "counts": null,
+              "first_values": [
+                "Sweep the green cloth to the other side of the table",
+                "Move the robot gripper to the left edge of the table.",
+                "Sweep the green cloth to the other side of the table, rotate it 90 degrees, and spread it open."
+              ]
+            }
+          },
+          "first_rows": [
+            {
+              "file_name": "berkeley_autolab_ur5/berkeley_autolab_ur5_originalsplit_train_index_11.mp4",
+              "task": "Sweep the green cloth to the other side of the table",
+              "reward": 5,
+              "gpt5_mini_check": "The video clearly shows the green cloth (primary object) being engaged by the robot and moved from its initial near-left position to the opposite side of the table; the final frames show the cloth on the other side (bottom-right) relative to the start. The task description is coherent and grounded in visible objects/actions. All core requirements are satisfied, so the provided score of 5 (Perfect Completion) matches the rubric.\n\nANSWER: TRUE"
+            },
+            {
+              "file_name": "berkeley_autolab_ur5/berkeley_autolab_ur5_originalsplit_train_index_13.mp4",
+              "task": "Sweep the green cloth to the other side of the table",
+              "reward": 5,
+              "gpt5_mini_check": "The task description is coherent (a visible green cloth being swept by the gripper across the table). The final frames show the cloth moved from under the gripper to the opposite side of the table and released, satisfying the primary relation and intent with no major requirements missed. Therefore the provided score of 5 (Perfect Completion) matches the rubric.\n\nANSWER: TRUE"
+            }
+          ],
+          "source_prefix_counts": {
+            "berkeley_autolab_ur5": 430,
+            "berkeley_fanuc_manipulation": 287,
+            "berkeley_mvp_converted_externally_to_rlds": 228,
+            "berkeley_rpt_converted_externally_to_rlds": 364,
+            "bridge": 496,
+            "cmu_play_fusion": 358,
+            "dlr_edan_shared_control_converted_externally_to_rlds": 28,
+            "droid": 378,
+            "fractal20220817_data": 461,
+            "iamlab_cmu_pickup_insert_converted_externally_to_rlds": 374,
+            "jaco_play": 417,
+            "kaist_nonprehensile_converted_externally_to_rlds": 162,
+            "nyu_rot_dataset_converted_externally_to_rlds": 8,
+            "robo_arena": 1000,
+            "stanford_hydra_dataset_converted_externally_to_rlds": 203,
+            "taco_play": 352,
+            "ucsd_kitchen_dataset_converted_externally_to_rlds": 122,
+            "utokyo_pr2_tabletop_manipulation_converted_externally_to_rlds": 325,
+            "viola": 239
+          }
+        }
+      ],
+      "errors": []
+    }
+  ]
+}

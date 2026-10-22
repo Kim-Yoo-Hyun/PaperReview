@@ -9,7 +9,7 @@
 - Year/Venue: 2024 / arXiv
 - Authors: not duplicated here when not verified in the registry source
 - Primary track: RL, IL, offline learning, and robot data
-- Tier: NEXT
+- Tier: CORE
 - Tags: Robotics, Reinforcement Learning, human-in-the-loop, real-world RL, dexterous manipulation, recovery
 - Official paper: https://arxiv.org/abs/2410.21845
 - Full-text retrieval: https://arxiv.org/pdf/2410.21845

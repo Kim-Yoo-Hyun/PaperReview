@@ -9,7 +9,7 @@
 - Year/Venue: 2018 / CVPR
 - Authors: not duplicated here when not verified in the registry source
 - Primary track: Robotics-enabling 3D perception
-- Tier: REFERENCE
+- Tier: NEXT
 - Tags: Vision-Language Navigation, Robotics, Navigation, Benchmark
 - Official paper: https://arxiv.org/abs/1711.07280
 - Full-text retrieval: https://arxiv.org/pdf/1711.07280

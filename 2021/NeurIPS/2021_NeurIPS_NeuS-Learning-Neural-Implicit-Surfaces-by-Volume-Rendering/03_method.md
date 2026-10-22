@@ -107,7 +107,7 @@ PDF body method statement (p. 3 (3 Method), p. 7 (3 Method), p. 4 (3 Method), p.
 
 | Method component | Evaluation evidence to inspect | PDF anchor |
 |---|---|---|
-| Geometry / pose extraction | We further tested on 7 challenging scenes from the low-res set of the BlendedMVS dataset [48](CC-4 License). | p. 7 (4 Experiments), p. 7 (4 Experiments) |
+| Geometry / pose extraction | We further tested on 7 challenging scenes from the low-res set of the BlendedMVS dataset [48] (CC-4 License). | p. 7 (4 Experiments), p. 7 (4 Experiments) |
 | Semantic / temporal fusion | (1) The state-of-the-art surface rendering approach - IDR [49]: IDR can reconstruct surface with high quality but requires foreground masks as supervision; ... | p. 7 (4 Experiments), p. 8 (4 Experiments) |
 | Robot query / planning handoff | COLMAP results are achieved by trim=0. | p. 8 (4 Experiments), p. 8 (4 Experiments) |
 

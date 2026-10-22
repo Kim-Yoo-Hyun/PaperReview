@@ -9,7 +9,7 @@
 - Year/Venue: 2018 / RA-L
 - Authors: not duplicated here when not verified in the registry source
 - Primary track: Planning and control
-- Tier: CORE
+- Tier: REFERENCE
 - Tags: Robotics, whole-body control, model predictive control, quadruped
 - Official paper: https://arxiv.org/abs/1712.02889
 - Full-text retrieval: https://arxiv.org/pdf/1712.02889

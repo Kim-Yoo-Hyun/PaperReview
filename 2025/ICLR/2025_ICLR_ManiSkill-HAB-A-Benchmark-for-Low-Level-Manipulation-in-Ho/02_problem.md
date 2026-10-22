@@ -23,7 +23,7 @@ PDF body framing (p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 4 (3 PRELIMIN
 | Dimension | PDF body evidence | Registry/robotics interpretation | Boundary |
 |---|---|---|---|
 | Target problem | Using these events lists, we define mutually exclusive, collectively exhaustive success and failure modes. | defined robot simulator/hardware task suite | body wording is the source claim |
-| Observation / input | We provide brief descriptions of the subtasks below: • Pick[a, optional](xpose): pick object x (from articulation a, if provided). • Place[a, optional](xpose ... | standardized observation, action, task state와 evaluation split | exact sensor/frame/preprocessing from PDF body |
+| Observation / input | We provide brief descriptions of the subtasks below: • `Pick[a, optional](xpose)`: pick object x (from articulation a, if provided). • Place[a, optional](xpose ... | standardized observation, action, task state와 evaluation split | exact sensor/frame/preprocessing from PDF body |
 | State / latent | provide, brief, descriptions, subtasks, below, Pick, optional, xpose, object, articulation | benchmark state/goal와 method decision | notation and tensor shape require body check |
 | Output / action | Observation, Space, include, target, object, pose, goal, position | policy/controller trajectory 또는 measured result | exact unit/frame/decoder require body check |
 | Target outcome | comparable score and protocol validity | success metric, robustness, generalization과 reproducibility | metric/denominator are in 04 evidence |

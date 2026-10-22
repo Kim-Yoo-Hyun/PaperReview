@@ -9,7 +9,7 @@
 - Year/Venue: 2025 / RSS
 - Authors: not duplicated here when not verified in the registry source
 - Primary track: VLA and generalist robot policies
-- Tier: NEXT
+- Tier: CORE
 - Tags: Robotics, VLA, action tokenization, high-frequency control, cross-embodiment, efficiency
 - Official paper: https://www.roboticsproceedings.org/rss21/p012.html
 - Full-text retrieval: https://www.roboticsproceedings.org/rss21/p012.pdf

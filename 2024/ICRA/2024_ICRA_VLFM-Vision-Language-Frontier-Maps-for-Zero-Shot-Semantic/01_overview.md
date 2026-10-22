@@ -9,7 +9,7 @@
 - Year/Venue: 2024 / ICRA
 - Authors: not duplicated here when not verified in the registry source
 - Primary track: Robotics-enabling 3D perception
-- Tier: NEXT
+- Tier: CORE
 - Tags: Vision-Language Navigation, Robotics, Navigation, semantic
 - Official paper: https://arxiv.org/abs/2312.03275
 - Full-text retrieval: https://arxiv.org/pdf/2312.03275

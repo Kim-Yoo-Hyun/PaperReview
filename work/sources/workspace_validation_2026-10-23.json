@@ -1,0 +1,57 @@
+{
+  "date": "2026-10-23",
+  "paper_records_preserved": 1037,
+  "standard_notes_byte_identical": 5185,
+  "tracker_byte_identical": true,
+  "history_byte_identical": true,
+  "manual_synthesis_matrices_byte_identical": 7,
+  "existing_experiment_files_byte_identical_except_index": 60,
+  "removed_or_merged_files": 39,
+  "removed_generated_caches": 43,
+  "removed_cache_bytes": 1696196,
+  "legacy_reports_consolidated": 16,
+  "legacy_report_contents_independently_compared_with_git": 16,
+  "cleanup_sha256_matches_before_snapshot": true,
+  "protected_scope": "Current 1037-record manifest, all5185 notes, active/history records, all7 manual matrix sections, original experiment assets",
+  "repository_audit": {
+    "papers": 1037,
+    "categories": 23,
+    "tier_counts": {
+      "CORE": 47,
+      "NEXT": 275,
+      "REFERENCE": 473,
+      "ARCHIVE": 242
+    },
+    "intensive": 322,
+    "inactive_reading_history": 47,
+    "standard_note_files": 5185,
+    "catalog_entries": {
+      "benchmark": 51,
+      "metric": 29
+    },
+    "combined_resources": 521,
+    "registry_index_rows": 1037,
+    "markdown_files_checked": 5322,
+    "markdown_links_checked": 9445,
+    "comparison_matrix_rows": 106,
+    "completed_matrix_rows": 5,
+    "errors": [],
+    "warnings": []
+  },
+  "required_checks": {
+    "generator_py_compile": "PASS",
+    "tier_generator_rebuild": "PASS",
+    "registry_views_dry_run_and_apply": "PASS",
+    "reading_history_regression_tests": 3,
+    "document_maintenance_regression_tests": 4,
+    "git_diff_check": "PASS",
+    "merged_validation_stage_anchors": "PASS",
+    "runtime_files_match_tested_hashes": true,
+    "remaining_work_pyc_files": 0
+  },
+  "work_size_before_bytes": 32814821,
+  "work_size_after_bytes_before_final_report_update": 26601772,
+  "native_policy_resume_qualified": false,
+  "portable_replay_validation": "work/experiments/portable/validation_result.json",
+  "user_repository_committed_or_pushed": false
+}

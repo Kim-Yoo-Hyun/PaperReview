@@ -9,7 +9,7 @@
 - Year/Venue: 2023 / ICML
 - Authors: not duplicated here when not verified in the registry source
 - Primary track: RL, IL, offline learning, and robot data
-- Tier: NEXT
+- Tier: CORE
 - Tags: Robotics, Reinforcement Learning, offline RL, online RL, robot data, sample efficiency
 - Official paper: https://proceedings.mlr.press/v202/ball23a.html
 - Full-text retrieval: https://proceedings.mlr.press/v202/ball23a/ball23a.pdf

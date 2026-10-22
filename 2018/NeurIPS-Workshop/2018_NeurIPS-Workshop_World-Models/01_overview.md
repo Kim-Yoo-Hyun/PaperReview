@@ -9,7 +9,7 @@
 - Year/Venue: 2018 / NeurIPS Workshop
 - Authors: not duplicated here when not verified in the registry source
 - Primary track: World models, safety, uncertainty, and recovery
-- Tier: CORE
+- Tier: NEXT
 - Tags: Robotics, world model, latent dynamics, model-based reinforcement learning
 - Official paper: https://arxiv.org/abs/1803.10122
 - Full-text retrieval: https://arxiv.org/pdf/1803.10122

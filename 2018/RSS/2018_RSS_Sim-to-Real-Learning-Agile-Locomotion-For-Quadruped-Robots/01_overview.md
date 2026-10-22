@@ -9,7 +9,7 @@
 - Year/Venue: 2018 / RSS
 - Authors: not duplicated here when not verified in the registry source
 - Primary track: Locomotion, whole-body, mobile manipulation, and humanoids
-- Tier: NEXT
+- Tier: REFERENCE
 - Tags: Robotics, quadruped locomotion, Reinforcement Learning, sim-to-real
 - Official paper: https://roboticsproceedings.org/rss14/p10.html
 - Full-text retrieval: https://arxiv.org/pdf/1804.10332

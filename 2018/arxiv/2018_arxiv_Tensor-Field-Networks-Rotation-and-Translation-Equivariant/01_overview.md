@@ -44,7 +44,7 @@ Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 �
 | Observation/input | Our network uses filters built from spherical harmonics; due to the mathematical consequences of this filter choice, each layer accepts as input (and guarantees as output) scalars, vectors, and higher-order tensors, in ... | RGB-D, image set, point cloud, depth와 camera pose | p. 1 (Abstract), p. 2 (Abstract) |
 | State/latent | network, uses, filters, built, spherical, harmonics, mathematical, consequences, filter, choice, layer, accepts | geometry, map, object/relationship state | p. 1 (Abstract), p. 2 (Abstract), p. 1 (Abstract) |
 | Output/action | We call these tensor field networks because every layer of our network inputs and outputs tensor fields: scalars, vectors, and higher-order tensors at every geometric point in the network. | point map, pose, scene graph, affordance 또는 query result | p. 2 (Abstract), p. 1 (Abstract), p. 2 (Abstract) |
-| geometric accuracy, semantic consistency와 planning/manipulation utility | p. 1 (Abstract) |
+| Evaluation target | 추출문 누락 — 원문 확인 필요 | Downstream robot utility는 이 행에서 검증되지 않음 | 기존 추출 위치: p. 1 (Abstract) |
 
 ## Main Claims and Actual Contribution
 

@@ -10,7 +10,7 @@ PDF body evaluation/result cue (p. 8 (4 Experiments), p. 8 (4 Experiments), p. 2
 
 ## Evaluation Body Digest
 
-- **p. 7 / 4 Experiments - extractive body cue:** We further tested on 7 challenging scenes from the low-res set of the BlendedMVS dataset [48](CC-4 License).
+- **p. 7 / 4 Experiments - extractive body cue:** We further tested on 7 challenging scenes from the low-res set of the BlendedMVS dataset [48] (CC-4 License).
 - **p. 7 / 4 Experiments - extractive body cue:** To evaluate our approach and baseline methods, we use 15 scenes from the DTU dataset [11], same as those used in IDR [49], with a ...
 - **p. 10 / 4 Experiments - extractive body cue:** (b) COLMAP𝑡𝑟𝑖𝑚= 10 (c) COLMAP𝑡𝑟𝑖𝑚= 7 (a) Ours Reference Image Figure 8: Comparison on scenes with thin structure objects.
 - **p. 10 / 4 Experiments - extractive body cue:** Furthermore, different from the methods [41, 20, 45, 21] which only target at high-quality thin structure reconstruction, our method can handle the scenes which have ...
@@ -40,7 +40,7 @@ PDF body evaluation/result cue (p. 8 (4 Experiments), p. 8 (4 Experiments), p. 2
 
 ## Dataset / Benchmark Role
 
-- **p. 7 / 4 Experiments - extractive body cue:** We further tested on 7 challenging scenes from the low-res set of the BlendedMVS dataset [48](CC-4 License).
+- **p. 7 / 4 Experiments - extractive body cue:** We further tested on 7 challenging scenes from the low-res set of the BlendedMVS dataset [48] (CC-4 License).
 - **p. 7 / 4 Experiments - extractive body cue:** To evaluate our approach and baseline methods, we use 15 scenes from the DTU dataset [11], same as those used in IDR [49], with a ...
 - **p. 10 / 4 Experiments - extractive body cue:** (b) COLMAP𝑡𝑟𝑖𝑚= 10 (c) COLMAP𝑡𝑟𝑖𝑚= 7 (a) Ours Reference Image Figure 8: Comparison on scenes with thin structure objects.
 - **p. 10 / 4 Experiments - extractive body cue:** Furthermore, different from the methods [41, 20, 45, 21] which only target at high-quality thin structure reconstruction, our method can handle the scenes which have ...
@@ -65,7 +65,7 @@ PDF body evaluation/result cue (p. 8 (4 Experiments), p. 8 (4 Experiments), p. 2
 
 | Dimension | PDF body-grounded cue | Unresolved condition | Anchor |
 |---|---|---|---|
-| Robot/hardware/simulator | We further tested on 7 challenging scenes from the low-res set of the BlendedMVS dataset [48](CC-4 License). | embodiment, simulator version and control stack | p. 7 (4 Experiments), p. 7 (4 Experiments) |
+| Robot/hardware/simulator | We further tested on 7 challenging scenes from the low-res set of the BlendedMVS dataset [48] (CC-4 License). | embodiment, simulator version and control stack | p. 7 (4 Experiments), p. 7 (4 Experiments) |
 | Task/environment | To evaluate our approach and baseline methods, we use 15 scenes from the DTU dataset [11], same as those used in IDR [49], with ... | reset, timeout, object/scene variation | p. 7 (4 Experiments), p. 10 (4 Experiments) |
 | Observation/sensor | RGB-D, image set, point cloud, depth와 camera pose | calibration, preprocessing, privileged input | p. 3 (3 Method), p. 4 (3 Method) |
 | Output/decision | point map, pose, scene graph, affordance 또는 query result | action frame, controller and termination | p. 4 (3 Method), p. 2 (1 Introduction) |

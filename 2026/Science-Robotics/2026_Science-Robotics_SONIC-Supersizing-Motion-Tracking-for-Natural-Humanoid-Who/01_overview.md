@@ -9,7 +9,7 @@
 - Year/Venue: 2026 / Science Robotics
 - Authors: not duplicated here when not verified in the registry source
 - Primary track: Locomotion, whole-body, mobile manipulation, and humanoids
-- Tier: NEXT
+- Tier: REFERENCE
 - Tags: Robotics, humanoid, whole-body control, Motion Tracking, NVIDIA
 - Official paper: https://research.nvidia.com/labs/dair/publication/sonic2026/
 - Full-text retrieval: https://research.nvidia.com/labs/dair/publication/sonic2026/

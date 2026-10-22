@@ -9,7 +9,7 @@
 - Year/Venue: 2024 / RSS
 - Authors: not duplicated here when not verified in the registry source
 - Primary track: RL, IL, offline learning, and robot data
-- Tier: NEXT
+- Tier: CORE
 - Tags: Robotics, Dataset, in-the-wild, robot manipulation, data diversity, generalist policy
 - Official paper: https://arxiv.org/abs/2403.12945
 - Full-text retrieval: https://arxiv.org/pdf/2403.12945

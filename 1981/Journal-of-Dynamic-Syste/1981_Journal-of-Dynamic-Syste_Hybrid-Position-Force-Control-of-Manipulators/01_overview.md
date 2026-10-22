@@ -9,7 +9,7 @@
 - Year/Venue: 1981 / Journal of Dynamic Systems, Measurement, and Control
 - Authors: not duplicated here when not verified in the registry source
 - Primary track: Planning and control
-- Tier: CORE
+- Tier: REFERENCE
 - Tags: Robotics, force control, contact, manipulation
 - Official paper: https://doi.org/10.1115/1.3139652
 - Full-text retrieval: https://fab.cba.mit.edu/classes/865.15/classes/measurement/hybrid-position-force.pdf

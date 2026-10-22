@@ -9,7 +9,7 @@
 - Year/Venue: 1992 / Machine Learning
 - Authors: not duplicated here when not verified in the registry source
 - Primary track: RL, IL, offline learning, and robot data
-- Tier: CORE
+- Tier: REFERENCE
 - Tags: Robotics, Reinforcement Learning, Policy Gradient, REINFORCE
 - Official paper: https://doi.org/10.1007/BF00992696
 - Full-text retrieval: https://doi.org/10.1007/BF00992696

@@ -9,7 +9,7 @@
 - Year/Venue: 2015 / ICML
 - Authors: not duplicated here when not verified in the registry source
 - Primary track: RL, IL, offline learning, and robot data
-- Tier: CORE
+- Tier: NEXT
 - Tags: Robotics, Reinforcement Learning, policy optimization, on-policy RL
 - Official paper: https://proceedings.mlr.press/v37/schulman15.html
 - Full-text retrieval: https://arxiv.org/pdf/1502.05477

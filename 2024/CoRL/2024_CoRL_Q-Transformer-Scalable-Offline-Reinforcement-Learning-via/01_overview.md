@@ -9,7 +9,7 @@
 - Year/Venue: 2024 / CoRL
 - Authors: not duplicated here when not verified in the registry source
 - Primary track: RL, IL, offline learning, and robot data
-- Tier: CORE
+- Tier: NEXT
 - Tags: Robotics, offline reinforcement learning, Transformer, robot manipulation
 - Official paper: https://arxiv.org/abs/2309.10150
 - Full-text retrieval: https://arxiv.org/pdf/2309.10150

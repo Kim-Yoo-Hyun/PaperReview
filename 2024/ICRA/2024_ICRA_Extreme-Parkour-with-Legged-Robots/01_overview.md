@@ -9,7 +9,7 @@
 - Year/Venue: 2024 / ICRA
 - Authors: not duplicated here when not verified in the registry source
 - Primary track: Locomotion, whole-body, mobile manipulation, and humanoids
-- Tier: NEXT
+- Tier: REFERENCE
 - Tags: Robotics, quadruped locomotion, parkour, Reinforcement Learning
 - Official paper: https://arxiv.org/abs/2309.14341
 - Full-text retrieval: https://arxiv.org/pdf/2309.14341

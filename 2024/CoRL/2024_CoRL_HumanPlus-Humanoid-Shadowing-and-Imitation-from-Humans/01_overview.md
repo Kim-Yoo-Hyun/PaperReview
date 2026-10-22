@@ -9,7 +9,7 @@
 - Year/Venue: 2024 / CoRL
 - Authors: not duplicated here when not verified in the registry source
 - Primary track: Locomotion, whole-body, mobile manipulation, and humanoids
-- Tier: NEXT
+- Tier: REFERENCE
 - Tags: Robotics, humanoid, human-to-humanoid, Imitation Learning, teleoperation
 - Official paper: https://openreview.net/forum?id=WnSl42M9Z4
 - Full-text retrieval: https://arxiv.org/pdf/2406.10454

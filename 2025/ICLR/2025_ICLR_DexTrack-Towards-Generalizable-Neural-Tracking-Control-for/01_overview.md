@@ -9,7 +9,7 @@
 - Year/Venue: 2025 / ICLR
 - Authors: not duplicated here when not verified in the registry source
 - Primary track: Manipulation, contact, tactile, and dexterity
-- Tier: CORE
+- Tier: REFERENCE
 - Tags: Robotics, dexterous manipulation, tracking control, human demonstration
 - Official paper: https://openreview.net/forum?id=ajSmXqgS24
 - Full-text retrieval: https://arxiv.org/pdf/2502.09614

@@ -9,7 +9,7 @@
 - Year/Venue: 2009 / ICRA
 - Authors: not duplicated here when not verified in the registry source
 - Primary track: Planning and control
-- Tier: CORE
+- Tier: REFERENCE
 - Tags: Robotics, motion planning, trajectory optimization, manipulation
 - Official paper: https://www.ri.cmu.edu/publications/chomp-gradient-optimization-techniques-for-efficient-motion-planning/
 - Full-text retrieval: https://www.ri.cmu.edu/pub_files/2009/5/icra09-chomp.pdf

@@ -9,7 +9,7 @@
 - Year/Venue: 2025 / RSS
 - Authors: not duplicated here when not verified in the registry source
 - Primary track: VLA and generalist robot policies
-- Tier: NEXT
+- Tier: CORE
 - Tags: VLA, Reinforcement Learning, human interventions, consistency policy, real-world manipulation, fine-tuning
 - Official paper: https://www.roboticsproceedings.org/rss21/p019.html
 - Full-text retrieval: https://arxiv.org/pdf/2502.05450

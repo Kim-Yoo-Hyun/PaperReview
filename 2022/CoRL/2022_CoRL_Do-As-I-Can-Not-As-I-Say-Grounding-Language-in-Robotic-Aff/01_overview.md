@@ -9,7 +9,7 @@
 - Year/Venue: 2022 / CoRL
 - Authors: not duplicated here when not verified in the registry source
 - Primary track: VLA and generalist robot policies
-- Tier: REFERENCE
+- Tier: CORE
 - Tags: LLM, affordance, Planning, Robotics
 - Official paper: https://arxiv.org/abs/2204.01691
 - Full-text retrieval: https://arxiv.org/pdf/2204.01691

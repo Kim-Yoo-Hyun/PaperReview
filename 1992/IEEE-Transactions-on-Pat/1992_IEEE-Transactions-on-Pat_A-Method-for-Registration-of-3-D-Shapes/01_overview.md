@@ -9,7 +9,7 @@
 - Year/Venue: 1992 / IEEE Transactions on Pattern Analysis and Machine Intelligence
 - Authors: not duplicated here when not verified in the registry source
 - Primary track: Robotics-enabling 3D perception
-- Tier: CORE
+- Tier: REFERENCE
 - Tags: Robotics, 3D Registration, ICP, state estimation
 - Official paper: https://doi.org/10.1109/34.121791
 - Full-text retrieval: https://doi.org/10.1109/34.121791

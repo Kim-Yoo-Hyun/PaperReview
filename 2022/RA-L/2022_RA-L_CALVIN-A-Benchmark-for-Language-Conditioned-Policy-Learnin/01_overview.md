@@ -9,7 +9,7 @@
 - Year/Venue: 2022 / RA-L
 - Authors: not duplicated here when not verified in the registry source
 - Primary track: VLA and generalist robot policies
-- Tier: NEXT
+- Tier: CORE
 - Tags: Vision-Language-Action, Benchmark, Robotics
 - Official paper: https://arxiv.org/abs/2112.03227
 - Full-text retrieval: https://arxiv.org/pdf/2112.03227

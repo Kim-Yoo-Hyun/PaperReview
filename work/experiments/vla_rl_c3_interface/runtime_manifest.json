@@ -1,0 +1,61 @@
+{
+  "date": "2026-10-21",
+  "experiment": "C3 execution interface mechanism-only",
+  "container_name": "/paper-c3-interface",
+  "container_id": "172189c8172cd55067a765f349b134b1ae14c1bb2f3ecd31f0615eadeedea281",
+  "image_id": "sha256:e88e9763f943ec1834f992a4b51e0f24500486803e8bc534e5767af9ea65f6ce",
+  "repo_digests": [
+    "python@sha256:e88e9763f943ec1834f992a4b51e0f24500486803e8bc534e5767af9ea65f6ce"
+  ],
+  "architecture": "arm64",
+  "limits": {
+    "memory_bytes": 4294967296,
+    "nano_cpus": 4000000000
+  },
+  "host_mounts": [],
+  "packages": [
+    "filelock==4.2.4",
+    "fsspec==2026.9.0",
+    "Jinja2==3.1.6",
+    "MarkupSafe==3.0.4",
+    "mpmath==1.3.0",
+    "networkx==3.6.1",
+    "numpy==2.2.6",
+    "packaging==26.3",
+    "sympy==1.14.0",
+    "torch==2.8.0",
+    "typing_extensions==4.16.0"
+  ],
+  "script_sha256": "e1948434b94314a038626f4bb1674df232c440f2c51c375719cf4ee367495976",
+  "evidence_sha256": {
+    "gradient_variance.json": "2a4f53eb781acbcfd756f7f75e5490f37a36fcd5eced7b443ff8718f32d48246",
+    "ppo_cases.json": "1e3b20473573e6950cf5bea656cec085582a57553add724cea53c36921385319",
+    "runtime.json": "f0a67a224c499a25722e2bb0e65a11d7139ff54e286a7bbdcda3f600a2c91e7a",
+    "scope_controls.json": "39552d3eb9b404de70c5e5fb1174c9ec36606e06d23f556f1fa15edc01cc7fa8",
+    "source_audit.json": "89efb51d2a3c0a779a11cdbf35baf02d32ac6b7e7d8ef923998b5a5d700107b4"
+  },
+  "cleanup": {
+    "status": "complete",
+    "owned_container": "paper-c3-interface",
+    "owned_image": "python:3.11-slim",
+    "preserve_volumes": [
+      "minikube"
+    ],
+    "containers_after": [],
+    "images_after": [],
+    "volumes_after": [
+      "minikube"
+    ],
+    "source_and_package_cache": "removed with owned container",
+    "image_delete_note": "tag removal deleted image; redundant digest removal returned No such image; inventory verified empty"
+  },
+  "host_installs": false,
+  "checkpoint_weights_loaded": false,
+  "robot_rollouts": 0,
+  "training_updates": 0,
+  "verification": {
+    "source_hashes_verified_inside_docker": 10,
+    "evidence_files_verified_on_host": 5,
+    "protected_files_unchanged": 4876
+  }
+}

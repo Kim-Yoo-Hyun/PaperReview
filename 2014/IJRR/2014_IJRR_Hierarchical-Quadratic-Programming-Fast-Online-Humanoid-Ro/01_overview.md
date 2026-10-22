@@ -9,7 +9,7 @@
 - Year/Venue: 2014 / IJRR
 - Authors: not duplicated here when not verified in the registry source
 - Primary track: Planning and control
-- Tier: CORE
+- Tier: REFERENCE
 - Tags: Robotics, whole-body control, hierarchical QP, task hierarchy
 - Official paper: https://doi.org/10.1177/0278364914521306
 - Full-text retrieval: https://gepettoweb.laas.fr/uploads/Publications/2014_escande_ijrr.pdf

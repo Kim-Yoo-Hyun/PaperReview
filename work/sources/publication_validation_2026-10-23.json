@@ -1,0 +1,819 @@
+{
+  "date": "2026-10-23",
+  "scope": "Finalize existing verified registry and publish accumulated workspace changes; no new paper discovery or full-text review",
+  "base_commit": "bc935035a3ffde96c8fdcc7246b0db36f6ba6967",
+  "base_paper_count": 950,
+  "paper_count": 1037,
+  "new_papers_since_base": 87,
+  "note_files_byte_identical_to_turn_start": 5148,
+  "manifest_byte_identical_to_turn_start": true,
+  "active_tracker_byte_identical": true,
+  "history_tracker_byte_identical": true,
+  "priority_reconciliation": {
+    "papers_changed": 0,
+    "note_headers_changed": 0,
+    "source_evidence_changed": false
+  },
+  "known_content_limitations": {
+    "kind": "Legacy PDF-extraction control characters; not a registry identity/link failure",
+    "notes_with_nul": 112,
+    "files": [
+      {
+        "path": "2022/SIGGRAPH/2022_SIGGRAPH_Instant-Neural-Graphics-Primitives-with-a-Multiresolution/02_problem.md",
+        "nul_bytes": 1,
+        "sha256": "8e92bd11cff948bef089da2bf957182e7d01518e0d7424f809562294271a8d47",
+        "action": "Preserved; manual source comparison queued as DOC-QA1"
+      },
+      {
+        "path": "2022/SIGGRAPH/2022_SIGGRAPH_Instant-Neural-Graphics-Primitives-with-a-Multiresolution/01_overview.md",
+        "nul_bytes": 2,
+        "sha256": "2025ca0e05b06efd962b89a6e4d0f26f9362c6c5f1558d9a2c950199f3003618",
+        "action": "Preserved; manual source comparison queued as DOC-QA1"
+      },
+      {
+        "path": "2022/SIGGRAPH/2022_SIGGRAPH_Instant-Neural-Graphics-Primitives-with-a-Multiresolution/04_evaluation.md",
+        "nul_bytes": 2,
+        "sha256": "f34cab81f0b573b7d293985639c19477621d221262f2a0ba1e82f1f6d9d5e19f",
+        "action": "Preserved; manual source comparison queued as DOC-QA1"
+      },
+      {
+        "path": "2022/SIGGRAPH/2022_SIGGRAPH_Instant-Neural-Graphics-Primitives-with-a-Multiresolution/05_insights.md",
+        "nul_bytes": 1,
+        "sha256": "d19df56d1546f311fe52ca5ac58d173a1e46c262bea6f11c296ff2e90472133a",
+        "action": "Preserved; manual source comparison queued as DOC-QA1"
+      },
+      {
+        "path": "2022/SIGGRAPH/2022_SIGGRAPH_Instant-Neural-Graphics-Primitives-with-a-Multiresolution/03_method.md",
+        "nul_bytes": 1,
+        "sha256": "4c4df039fe421b6a9ea2cce64e1cc93467316899ad7596b5f82045b96bd0412e",
+        "action": "Preserved; manual source comparison queued as DOC-QA1"
+      },
+      {
+        "path": "2022/CVPR/2022_CVPR_Mip-NeRF-360-Unbounded-Anti-Aliased-Neural-Radiance-Fields/01_overview.md",
+        "nul_bytes": 1,
+        "sha256": "94ed817747582b8406b2048eea9e7a3b4b712a083cd8e48f69bbaf1a35c2b4e4",
+        "action": "Preserved; manual source comparison queued as DOC-QA1"
+      },
+      {
+        "path": "2022/CVPR/2022_CVPR_Mip-NeRF-360-Unbounded-Anti-Aliased-Neural-Radiance-Fields/04_evaluation.md",
+        "nul_bytes": 1,
+        "sha256": "d3a80422e0fdcc6ec328e2f13ea8708fd1d68b3250d18f25494a23d072f3d48f",
+        "action": "Preserved; manual source comparison queued as DOC-QA1"
+      },
+      {
+        "path": "2022/CVPR/2022_CVPR_Mip-NeRF-360-Unbounded-Anti-Aliased-Neural-Radiance-Fields/03_method.md",
+        "nul_bytes": 2,
+        "sha256": "3657603dc44447d6117ee84cb4e6947a66e851f0ff79f7cf680ab5437d47c72d",
+        "action": "Preserved; manual source comparison queued as DOC-QA1"
+      },
+      {
+        "path": "2022/T-RO/2022_T-RO_FAST-LIO2-Fast-Direct-LiDAR-inertial-Odometry/01_overview.md",
+        "nul_bytes": 1,
+        "sha256": "6dfc235df5527cf0e0ec8d2e20b30d8202646d14eb6715bea355ee4041cea1f3",
+        "action": "Preserved; manual source comparison queued as DOC-QA1"
+      },
+      {
+        "path": "2022/T-RO/2022_T-RO_FAST-LIO2-Fast-Direct-LiDAR-inertial-Odometry/05_insights.md",
+        "nul_bytes": 1,
+        "sha256": "886cc9974c30ab529f6ef7f450732e7fac8b308d0934e675730682bfbd0dd119",
+        "action": "Preserved; manual source comparison queued as DOC-QA1"
+      },
+      {
+        "path": "2022/T-RO/2022_T-RO_FAST-LIO2-Fast-Direct-LiDAR-inertial-Odometry/03_method.md",
+        "nul_bytes": 3,
+        "sha256": "c51d7c1f6b129c1a3a1e692d230c864981d75bcadc850a122fe78492faa18be7",
+        "action": "Preserved; manual source comparison queued as DOC-QA1"
+      },
+      {
+        "path": "2025/3DV/2025_3DV_GRIN-Zero-Shot-Metric-Depth-with-Pixel-Level-Diffusion/01_overview.md",
+        "nul_bytes": 2,
+        "sha256": "728f27517f976ea5e7b6ebde88f214cfcce3c88042e6d6888d9bbbcde7e45e26",
+        "action": "Preserved; manual source comparison queued as DOC-QA1"
+      },
+      {
+        "path": "2025/3DV/2025_3DV_GRIN-Zero-Shot-Metric-Depth-with-Pixel-Level-Diffusion/05_insights.md",
+        "nul_bytes": 1,
+        "sha256": "9958343b6c2a0f65dd6988483383d66667fa893956ed90f04fa56a25a8ee42bb",
+        "action": "Preserved; manual source comparison queued as DOC-QA1"
+      },
+      {
+        "path": "2025/3DV/2025_3DV_GRIN-Zero-Shot-Metric-Depth-with-Pixel-Level-Diffusion/03_method.md",
+        "nul_bytes": 5,
+        "sha256": "c8f9e9f4c1ea077eff04b12e57ac0fb25b010d362b8bd6421cdb300920c71bda",
+        "action": "Preserved; manual source comparison queued as DOC-QA1"
+      },
+      {
+        "path": "2025/ICRA/2025_ICRA_HOVER-Versatile-Neural-Whole-Body-Controller-for-Humanoid/01_overview.md",
+        "nul_bytes": 2,
+        "sha256": "a07b151dddd2587e5b258ed50af8d754a16f8d4c8016ce59fb98b9c84ea3249e",
+        "action": "Preserved; manual source comparison queued as DOC-QA1"
+      },
+      {
+        "path": "2025/ICRA/2025_ICRA_HOVER-Versatile-Neural-Whole-Body-Controller-for-Humanoid/03_method.md",
+        "nul_bytes": 6,
+        "sha256": "01ec9290c35e30d513e0b3e5ee794b2af2d71c3dfcaf31fb2b06cc673063d116",
+        "action": "Preserved; manual source comparison queued as DOC-QA1"
+      },
+      {
+        "path": "2025/Nature/2025_Nature_Mastering-Diverse-Domains-through-World-Models/03_method.md",
+        "nul_bytes": 2,
+        "sha256": "a86d30e4c47b9886656e0856b850b27b392730b5cc4df1194dc316dfd72efd33",
+        "action": "Preserved; manual source comparison queued as DOC-QA1"
+      },
+      {
+        "path": "2025/NeurIPS/2025_NeurIPS_ViSPLA-Visual-Iterative-Self-Prompting-for-Language-Guided/04_evaluation.md",
+        "nul_bytes": 1,
+        "sha256": "341140e22ebf824db4ec5170bd31403a12f73f453651f9fedcc701b73febcebe",
+        "action": "Preserved; manual source comparison queued as DOC-QA1"
+      },
+      {
+        "path": "2025/NeurIPS/2025_NeurIPS_ViSPLA-Visual-Iterative-Self-Prompting-for-Language-Guided/03_method.md",
+        "nul_bytes": 2,
+        "sha256": "c84f78d7b6226b279a75265009ab0cbc4b394df6f56ee2a9831a7ed5f2f295d9",
+        "action": "Preserved; manual source comparison queued as DOC-QA1"
+      },
+      {
+        "path": "2025/NeurIPS/2025_NeurIPS_DreamVLA-A-Vision-Language-Action-Model-Dreamed-with-Compr/01_overview.md",
+        "nul_bytes": 1,
+        "sha256": "c8a40a9ffcd7b0307cdf8910b82e50040c512467f0a108adfb12ec048c7b0adb",
+        "action": "Preserved; manual source comparison queued as DOC-QA1"
+      },
+      {
+        "path": "2025/NeurIPS/2025_NeurIPS_DreamVLA-A-Vision-Language-Action-Model-Dreamed-with-Compr/03_method.md",
+        "nul_bytes": 4,
+        "sha256": "29d6ca80c21a61fd176fde2b7a9dcc955e7a004fe29b755fa7c3ae1e61c9ee4b",
+        "action": "Preserved; manual source comparison queued as DOC-QA1"
+      },
+      {
+        "path": "2025/NeurIPS/2025_NeurIPS_SIU3R-Simultaneous-Scene-Understanding-and-3D-Reconstructi/03_method.md",
+        "nul_bytes": 1,
+        "sha256": "9489113d6ece63207b1301e3b10ee1a6b10e3bd0cdb3b22ee7a3d03e8f03fe0b",
+        "action": "Preserved; manual source comparison queued as DOC-QA1"
+      },
+      {
+        "path": "2025/ICML/2025_ICML_SAM2Act-Integrating-Visual-Foundation-Model-with-A-Memory/03_method.md",
+        "nul_bytes": 1,
+        "sha256": "b46ecfecb7a049e5d08589c28f9dbcff237ae2c07e787042dd29ac97f824c990",
+        "action": "Preserved; manual source comparison queued as DOC-QA1"
+      },
+      {
+        "path": "2025/ICML/2025_ICML_SE3-Equivariant-Diffusion-Policy-in-Spherical-Fourier-Spac/03_method.md",
+        "nul_bytes": 2,
+        "sha256": "c6b909c642b2c6f2cfb0a9c67a463657e3de25cc79a5c5fe6ae2d2f21e921313",
+        "action": "Preserved; manual source comparison queued as DOC-QA1"
+      },
+      {
+        "path": "2025/IROS/2025_IROS_FOCI-Trajectory-Optimization-on-Gaussian-Splats/04_evaluation.md",
+        "nul_bytes": 1,
+        "sha256": "5a4701d5498bcdd06438c1880bfd62b6c3055c9f28f66927c50ace57bece2cb1",
+        "action": "Preserved; manual source comparison queued as DOC-QA1"
+      },
+      {
+        "path": "2025/CVPR/2025_CVPR_VGGT-Visual-Geometry-Grounded-Transformer/03_method.md",
+        "nul_bytes": 1,
+        "sha256": "d562698db0156a29252c2e64ce4eed6afda25f2a4eebd6cfd8cffa6e4b7d44a7",
+        "action": "Preserved; manual source comparison queued as DOC-QA1"
+      },
+      {
+        "path": "2025/CVPR/2025_CVPR_RoboGround-Robotic-Manipulation-with-Grounded-Vision-Langu/03_method.md",
+        "nul_bytes": 1,
+        "sha256": "4c72c23a7bf3ce8877744d01105e222428b54dc18bd39605c589cb8f4fc45b1f",
+        "action": "Preserved; manual source comparison queued as DOC-QA1"
+      },
+      {
+        "path": "2025/arXiv/2025_arXiv_Robotic-World-Model-A-Neural-Network-Simulator-for-Robust/03_method.md",
+        "nul_bytes": 1,
+        "sha256": "5c87dacfeb316f099be06489285ce054253b8f0334bbf8ce142098552ef64888",
+        "action": "Preserved; manual source comparison queued as DOC-QA1"
+      },
+      {
+        "path": "2025/ICCV/2025_ICCV_Distilling-Diffusion-Models-to-Efficient-3D-LiDAR-Scene-Co/03_method.md",
+        "nul_bytes": 1,
+        "sha256": "044733718fdf6b8fd699bafdb441a288aa6d65f324a456dd08c33d951cf9021b",
+        "action": "Preserved; manual source comparison queued as DOC-QA1"
+      },
+      {
+        "path": "2025/ICCV/2025_ICCV_Tree-Skeletonization-from-3D-Point-Clouds-by-Denoising-Dif/01_overview.md",
+        "nul_bytes": 2,
+        "sha256": "6b9113607f2704eae69b8b36d991ce52cf56cdde7119fcda952315c3d8d5b2c9",
+        "action": "Preserved; manual source comparison queued as DOC-QA1"
+      },
+      {
+        "path": "2025/ICCV/2025_ICCV_Tree-Skeletonization-from-3D-Point-Clouds-by-Denoising-Dif/05_insights.md",
+        "nul_bytes": 1,
+        "sha256": "2874efd5ff256cb7e9f435d5897b1bc27787f2923ffff28337d7b8060da22a9c",
+        "action": "Preserved; manual source comparison queued as DOC-QA1"
+      },
+      {
+        "path": "2025/ICCV/2025_ICCV_Tree-Skeletonization-from-3D-Point-Clouds-by-Denoising-Dif/03_method.md",
+        "nul_bytes": 4,
+        "sha256": "cc037e6bef41407043328aaae128e14246a1e557592575c60dd56451ff7e2370",
+        "action": "Preserved; manual source comparison queued as DOC-QA1"
+      },
+      {
+        "path": "2025/ICCV/2025_ICCV_Towards-Long-Horizon-Vision-Language-Action-System-Reasoni/01_overview.md",
+        "nul_bytes": 2,
+        "sha256": "0fff6822445156eae67dae6bad60d407a4efd912035d8a1af9917c199e959ea9",
+        "action": "Preserved; manual source comparison queued as DOC-QA1"
+      },
+      {
+        "path": "2025/ICCV/2025_ICCV_Towards-Long-Horizon-Vision-Language-Action-System-Reasoni/05_insights.md",
+        "nul_bytes": 1,
+        "sha256": "56f602e33ebe4ab75fe46657ed427917ba6ce85d2512b3bbdca42694457ac9ab",
+        "action": "Preserved; manual source comparison queued as DOC-QA1"
+      },
+      {
+        "path": "2025/ICCV/2025_ICCV_Towards-Long-Horizon-Vision-Language-Action-System-Reasoni/03_method.md",
+        "nul_bytes": 4,
+        "sha256": "73e83c7c66dc06bff10eb5d1d9d2770dc659b814c8d265bb5c6fc94f79851220",
+        "action": "Preserved; manual source comparison queued as DOC-QA1"
+      },
+      {
+        "path": "2025/ICLR/2025_ICLR_DexTrack-Towards-Generalizable-Neural-Tracking-Control-for/04_evaluation.md",
+        "nul_bytes": 1,
+        "sha256": "9babcdd74fa9a06937740b86e68286222983e5c92b5581871b8af09b386f4efd",
+        "action": "Preserved; manual source comparison queued as DOC-QA1"
+      },
+      {
+        "path": "2025/ICLR/2025_ICLR_Geometry-aware-RL-for-Manipulation-of-Varying-Shapes-and-D/04_evaluation.md",
+        "nul_bytes": 1,
+        "sha256": "6a65e4b78397520ffbfb95673cf749ea9f86a567197cc3b61c2f52351e9c2648",
+        "action": "Preserved; manual source comparison queued as DOC-QA1"
+      },
+      {
+        "path": "2025/ICLR/2025_ICLR_GravMAD-Grounded-Spatial-Value-Maps-Guided-Action-Diffusio/01_overview.md",
+        "nul_bytes": 1,
+        "sha256": "0e07daaf40057bbc95a58bb7b5ea2d0e8fc1cf254eaabf90c8bba80f5928337d",
+        "action": "Preserved; manual source comparison queued as DOC-QA1"
+      },
+      {
+        "path": "2025/ICLR/2025_ICLR_GravMAD-Grounded-Spatial-Value-Maps-Guided-Action-Diffusio/05_insights.md",
+        "nul_bytes": 1,
+        "sha256": "2132b88a1b6c71b599a57a644d8ee5907ba0dc7853df6e01e656c819dce6a506",
+        "action": "Preserved; manual source comparison queued as DOC-QA1"
+      },
+      {
+        "path": "2025/ICLR/2025_ICLR_GravMAD-Grounded-Spatial-Value-Maps-Guided-Action-Diffusio/03_method.md",
+        "nul_bytes": 3,
+        "sha256": "d8f017fb6db54627301581c10c38922f6504bdcc7e08f04a0d3d39dfdd1810de",
+        "action": "Preserved; manual source comparison queued as DOC-QA1"
+      },
+      {
+        "path": "2024/CoRL/2024_CoRL_OmniH2O-Universal-and-Dexterous-Human-to-Humanoid-Whole-Bo/01_overview.md",
+        "nul_bytes": 1,
+        "sha256": "c3316f7f08957bd0300221f11043bf9f89e89e41f527b08dac6da279e91aacbb",
+        "action": "Preserved; manual source comparison queued as DOC-QA1"
+      },
+      {
+        "path": "2024/CoRL/2024_CoRL_OmniH2O-Universal-and-Dexterous-Human-to-Humanoid-Whole-Bo/03_method.md",
+        "nul_bytes": 1,
+        "sha256": "4fdcd38f441664aa7c70f182fbb8b3201812b5b9435f366203ba4411ed90344e",
+        "action": "Preserved; manual source comparison queued as DOC-QA1"
+      },
+      {
+        "path": "2024/RSS/2024_RSS_3D-Diffusion-Policy-Generalizable-Visuomotor-Policy-Learni/01_overview.md",
+        "nul_bytes": 1,
+        "sha256": "697e59f8acca83067db50c24de948cee2809bc9a2c9aac24de43d9c7f707ff64",
+        "action": "Preserved; manual source comparison queued as DOC-QA1"
+      },
+      {
+        "path": "2024/RSS/2024_RSS_3D-Diffusion-Policy-Generalizable-Visuomotor-Policy-Learni/03_method.md",
+        "nul_bytes": 2,
+        "sha256": "4f3bcde8529e2d7a4e759e1c1abfa0b265d0eeb7e0240855aad98f12aecdfc1d",
+        "action": "Preserved; manual source comparison queued as DOC-QA1"
+      },
+      {
+        "path": "2024/CVPR/2024_CVPR_Bayesian-Diffusion-Models-for-3D-Shape-Reconstruction/01_overview.md",
+        "nul_bytes": 1,
+        "sha256": "028c3a97bfa99cded8b4ab13b1e6fa168f23172ce950739a194541c3d4669dee",
+        "action": "Preserved; manual source comparison queued as DOC-QA1"
+      },
+      {
+        "path": "2024/CVPR/2024_CVPR_Bayesian-Diffusion-Models-for-3D-Shape-Reconstruction/05_insights.md",
+        "nul_bytes": 1,
+        "sha256": "0a1b3c5a91a9a93565bb6eecb152e955264e47da48db9e94a0c6826ad9639587",
+        "action": "Preserved; manual source comparison queued as DOC-QA1"
+      },
+      {
+        "path": "2024/CVPR/2024_CVPR_Bayesian-Diffusion-Models-for-3D-Shape-Reconstruction/03_method.md",
+        "nul_bytes": 3,
+        "sha256": "440ee2379c692bde75a91fca01038be6e9e317006b1f1705e46f826326b7e032",
+        "action": "Preserved; manual source comparison queued as DOC-QA1"
+      },
+      {
+        "path": "2023/ICML/2023_ICML_PaLM-E-An-Embodied-Multimodal-Language-Model/02_problem.md",
+        "nul_bytes": 1,
+        "sha256": "c3c1ef6e2497ce53e4ea6314466819574b59543be0dcd88fbdf9f548fb3e8f4e",
+        "action": "Preserved; manual source comparison queued as DOC-QA1"
+      },
+      {
+        "path": "2023/ICML/2023_ICML_PaLM-E-An-Embodied-Multimodal-Language-Model/01_overview.md",
+        "nul_bytes": 2,
+        "sha256": "9dbdb024dd7ecefd7a88283105474f30fad6aea682bfc64462a0795af8fe259c",
+        "action": "Preserved; manual source comparison queued as DOC-QA1"
+      },
+      {
+        "path": "2023/ICML/2023_ICML_PaLM-E-An-Embodied-Multimodal-Language-Model/05_insights.md",
+        "nul_bytes": 1,
+        "sha256": "be5318024123bf22de571fbda7c8cf2fe452b9a128a28d47fce7880778b76374",
+        "action": "Preserved; manual source comparison queued as DOC-QA1"
+      },
+      {
+        "path": "2023/ICML/2023_ICML_PaLM-E-An-Embodied-Multimodal-Language-Model/03_method.md",
+        "nul_bytes": 4,
+        "sha256": "10bf560602e8d6e4c54fd6cfb6591f04d9e27218cdc48efbdfae07e84c5e3dba",
+        "action": "Preserved; manual source comparison queued as DOC-QA1"
+      },
+      {
+        "path": "2023/ICCV/2023_ICCV_3D-VisTA-Pre-trained-Transformer-for-3D-Vision-and-Text-Al/02_problem.md",
+        "nul_bytes": 1,
+        "sha256": "df2c1244f44b7f70b7ff5770e4292367212ae365f22aad8153e8fa5b6b0a5041",
+        "action": "Preserved; manual source comparison queued as DOC-QA1"
+      },
+      {
+        "path": "2023/ICCV/2023_ICCV_3D-VisTA-Pre-trained-Transformer-for-3D-Vision-and-Text-Al/01_overview.md",
+        "nul_bytes": 2,
+        "sha256": "b2bc53514f7fec4216aa1c333514dc0f3c7d7c4a8d1b6cb6723d47a3685e619a",
+        "action": "Preserved; manual source comparison queued as DOC-QA1"
+      },
+      {
+        "path": "2023/ICCV/2023_ICCV_3D-VisTA-Pre-trained-Transformer-for-3D-Vision-and-Text-Al/05_insights.md",
+        "nul_bytes": 1,
+        "sha256": "5af42a126b33769e06fe9b726962a5e43135eecc4c38daf4bf42607e1f21a92f",
+        "action": "Preserved; manual source comparison queued as DOC-QA1"
+      },
+      {
+        "path": "1995/ICRA/1995_ICRA_Controllability-of-Pushing/01_overview.md",
+        "nul_bytes": 2,
+        "sha256": "0f7fd7d4b961cd4af45287e51c9f7f6f858ff1df3b00566f2705089ec0c0fc8d",
+        "action": "Preserved; manual source comparison queued as DOC-QA1"
+      },
+      {
+        "path": "1995/ICRA/1995_ICRA_Controllability-of-Pushing/04_evaluation.md",
+        "nul_bytes": 1,
+        "sha256": "86a7f267ab35628823ae7e6eb082026a17b0536c615ae706eeee1e3fcba6ab14",
+        "action": "Preserved; manual source comparison queued as DOC-QA1"
+      },
+      {
+        "path": "1995/ICRA/1995_ICRA_Controllability-of-Pushing/05_insights.md",
+        "nul_bytes": 2,
+        "sha256": "e2b13a626b5dcf13e519374eaed070b12488606e1700e747457cb71c28e5a29b",
+        "action": "Preserved; manual source comparison queued as DOC-QA1"
+      },
+      {
+        "path": "1995/ICRA/1995_ICRA_Controllability-of-Pushing/03_method.md",
+        "nul_bytes": 4,
+        "sha256": "237adbee79a5dedc2940d9d88431ddc00749fd533399650dc43389e0042af40c",
+        "action": "Preserved; manual source comparison queued as DOC-QA1"
+      },
+      {
+        "path": "2026/ICRA/2026_ICRA_EveryDayVLA-A-Vision-Language-Action-Model-for-Affordable/01_overview.md",
+        "nul_bytes": 1,
+        "sha256": "d1ca3835893f55f8d0d316e7ef11abfb5598fd23c57fb553cbfc4f5c33921e11",
+        "action": "Preserved; manual source comparison queued as DOC-QA1"
+      },
+      {
+        "path": "2026/ICRA/2026_ICRA_EveryDayVLA-A-Vision-Language-Action-Model-for-Affordable/05_insights.md",
+        "nul_bytes": 1,
+        "sha256": "00a6b5ba2c1fb871b8f9eb49d1264e2ae82a0cdf81876eea645f3110f1034c99",
+        "action": "Preserved; manual source comparison queued as DOC-QA1"
+      },
+      {
+        "path": "2026/ICRA/2026_ICRA_EveryDayVLA-A-Vision-Language-Action-Model-for-Affordable/03_method.md",
+        "nul_bytes": 4,
+        "sha256": "4ac71ee7032e905031642f695cb46dc27e3d2f6ad2cda5dbcb1ca0f4844b0f07",
+        "action": "Preserved; manual source comparison queued as DOC-QA1"
+      },
+      {
+        "path": "2026/ICRA/2026_ICRA_OmniVLA-Physically-Grounded-Multimodal-VLA-with-Unified-Mu/03_method.md",
+        "nul_bytes": 6,
+        "sha256": "1a450634e2e309c59b0c6303c0d6391431d8e1380a47175f4022bf73b5367e3c",
+        "action": "Preserved; manual source comparison queued as DOC-QA1"
+      },
+      {
+        "path": "2026/ICML/2026_ICML_SpatioLM-Towards-General-Physical-Spatial-Intelligence-in/02_problem.md",
+        "nul_bytes": 1,
+        "sha256": "192c43103f5da6aec8448379b7cc6a31803d739b33bc2732809ebc1b3a89109d",
+        "action": "Preserved; manual source comparison queued as DOC-QA1"
+      },
+      {
+        "path": "2026/ICML/2026_ICML_SpatioLM-Towards-General-Physical-Spatial-Intelligence-in/01_overview.md",
+        "nul_bytes": 1,
+        "sha256": "5bda65e420b45d68629a16e6c7e5cfc9a57adb42b03d16f1a746564a12f9fcfd",
+        "action": "Preserved; manual source comparison queued as DOC-QA1"
+      },
+      {
+        "path": "2026/ICML/2026_ICML_SpatioLM-Towards-General-Physical-Spatial-Intelligence-in/05_insights.md",
+        "nul_bytes": 1,
+        "sha256": "fefd919181b16465df7eaf1845123f3b6ad412cd4be78462a673e1401efe5e95",
+        "action": "Preserved; manual source comparison queued as DOC-QA1"
+      },
+      {
+        "path": "2026/ICML/2026_ICML_SpatioLM-Towards-General-Physical-Spatial-Intelligence-in/03_method.md",
+        "nul_bytes": 1,
+        "sha256": "867842961d6b8987c11d3d2705b7f7550b3d5dc5e8b648b4dbc78328682a8608",
+        "action": "Preserved; manual source comparison queued as DOC-QA1"
+      },
+      {
+        "path": "2026/ICML/2026_ICML_VGGT-Motion-Motion-Aware-Calibration-Free-Monocular-SLAM-f/01_overview.md",
+        "nul_bytes": 1,
+        "sha256": "65bcbcc83cba99149e119ee1bd34da7e9b12c1df78e0f3390fb8bbc212813947",
+        "action": "Preserved; manual source comparison queued as DOC-QA1"
+      },
+      {
+        "path": "2026/ICML/2026_ICML_VGGT-Motion-Motion-Aware-Calibration-Free-Monocular-SLAM-f/05_insights.md",
+        "nul_bytes": 1,
+        "sha256": "5d9ae835dd791a38be03a7581d2b84a534601038d774ca362b33b94b8a8539bc",
+        "action": "Preserved; manual source comparison queued as DOC-QA1"
+      },
+      {
+        "path": "2026/ICML/2026_ICML_VGGT-Motion-Motion-Aware-Calibration-Free-Monocular-SLAM-f/03_method.md",
+        "nul_bytes": 3,
+        "sha256": "abf6bae73d5003f0b5a3f2199d23e6b5ddadbe658e6cc768a441b6c424d38373",
+        "action": "Preserved; manual source comparison queued as DOC-QA1"
+      },
+      {
+        "path": "2026/ICML/2026_ICML_Flow-Equivariant-World-Models-Structured-Memory-for-Dynami/03_method.md",
+        "nul_bytes": 1,
+        "sha256": "814e2b289ea31ec1277fa832c07e198a40aaba72b0213c23652f17145f39b5a2",
+        "action": "Preserved; manual source comparison queued as DOC-QA1"
+      },
+      {
+        "path": "2026/ICML/2026_ICML_Reasoning-VLA-An-Efficient-and-Spatial-Guided-General-Visi/04_evaluation.md",
+        "nul_bytes": 1,
+        "sha256": "8c9f214b6b15f2500a6e9ae27741702c82b975f0c015f5a2b423803ccaaa67fd",
+        "action": "Preserved; manual source comparison queued as DOC-QA1"
+      },
+      {
+        "path": "2026/ICML/2026_ICML_MapDream-Task-Driven-Map-Learning-for-Vision-Language-Navi/01_overview.md",
+        "nul_bytes": 1,
+        "sha256": "4f3dbf474cf1c6d1e0b651ba8c74ac4c706b9d3c89b77cbe09d1d9a84ad74b49",
+        "action": "Preserved; manual source comparison queued as DOC-QA1"
+      },
+      {
+        "path": "2026/CVPR/2026_CVPR_AVA-VLA-Improving-Vision-Language-Action-Models-with-Activ/04_evaluation.md",
+        "nul_bytes": 1,
+        "sha256": "3261855d93f3f41dccfb9e4b740de4cb2b7fcbb46180c222612d99e550e73e23",
+        "action": "Preserved; manual source comparison queued as DOC-QA1"
+      },
+      {
+        "path": "2026/CVPR/2026_CVPR_L3DR-3D-aware-LiDAR-Diffusion-and-Rectification/01_overview.md",
+        "nul_bytes": 1,
+        "sha256": "2c615caa46ede623b088f8cc589b62a2a8bbb797c0e808a89864c7e2bde04086",
+        "action": "Preserved; manual source comparison queued as DOC-QA1"
+      },
+      {
+        "path": "2026/CVPR/2026_CVPR_L3DR-3D-aware-LiDAR-Diffusion-and-Rectification/03_method.md",
+        "nul_bytes": 3,
+        "sha256": "c49089b5a08060f6933bc93dc46c200042ca110ba37c89f0b5dc590cb1ceb5e6",
+        "action": "Preserved; manual source comparison queued as DOC-QA1"
+      },
+      {
+        "path": "2026/CVPR/2026_CVPR_EmbodiedSplat-Online-Feed-Forward-Semantic-3DGS-for-Open-V/01_overview.md",
+        "nul_bytes": 1,
+        "sha256": "1d4efb2e5aca870dd846ca1cb4ac694d3fdeb14b6c146637869c7c359f92d998",
+        "action": "Preserved; manual source comparison queued as DOC-QA1"
+      },
+      {
+        "path": "2026/CVPR/2026_CVPR_EmbodiedSplat-Online-Feed-Forward-Semantic-3DGS-for-Open-V/03_method.md",
+        "nul_bytes": 4,
+        "sha256": "8e0ac44d91d04a0ce8d2b5ed155981bdd93bf34e1068f6ed684aed44db2e1fda",
+        "action": "Preserved; manual source comparison queued as DOC-QA1"
+      },
+      {
+        "path": "2026/CVPR/2026_CVPR_NG-GS-NeRF-guided-3D-Gaussian-Splatting-Segmentation/04_evaluation.md",
+        "nul_bytes": 1,
+        "sha256": "66ff0fd8d4034732ad8fa59769b81e5aa2cf4470c2d00f676111cb647a952f0b",
+        "action": "Preserved; manual source comparison queued as DOC-QA1"
+      },
+      {
+        "path": "2026/CVPR/2026_CVPR_VarSplat-Uncertainty-aware-3D-Gaussian-Splatting-for-Robus/04_evaluation.md",
+        "nul_bytes": 1,
+        "sha256": "23ad3d0b2a20652ab48efc40f366db20fe1c0321d587d92db47853e7a512232f",
+        "action": "Preserved; manual source comparison queued as DOC-QA1"
+      },
+      {
+        "path": "2026/CVPR/2026_CVPR_Gau-Occ-Geometry-Completed-Gaussians-for-Multi-Modal-3D-Oc/04_evaluation.md",
+        "nul_bytes": 1,
+        "sha256": "68e6d3e646381c9271e6007b09725cfed6b0788fc6d64b1e6e65bfb6ca8ed90a",
+        "action": "Preserved; manual source comparison queued as DOC-QA1"
+      },
+      {
+        "path": "2026/CVPR/2026_CVPR_Gau-Occ-Geometry-Completed-Gaussians-for-Multi-Modal-3D-Oc/03_method.md",
+        "nul_bytes": 1,
+        "sha256": "1a4869a1410b33b8df66d4224ec1195c70480611dd1d629c84fc29ae7601586c",
+        "action": "Preserved; manual source comparison queued as DOC-QA1"
+      },
+      {
+        "path": "2026/CVPR/2026_CVPR_Dexterous-World-Models/02_problem.md",
+        "nul_bytes": 1,
+        "sha256": "0ecbb30062b024f02ae71213e5c80543543c58d4382401dd9ebcc38cf4bf7833",
+        "action": "Preserved; manual source comparison queued as DOC-QA1"
+      },
+      {
+        "path": "2026/CVPR/2026_CVPR_Dexterous-World-Models/01_overview.md",
+        "nul_bytes": 1,
+        "sha256": "37701c1f8a6b6c3e4ba7c69d6b00261ea1fd4db70344bbd8ad96c13c1aa0a7dd",
+        "action": "Preserved; manual source comparison queued as DOC-QA1"
+      },
+      {
+        "path": "2026/CVPR/2026_CVPR_Dexterous-World-Models/05_insights.md",
+        "nul_bytes": 3,
+        "sha256": "f57baea06700d122d6977b8c5e3a93e46dc5dd9185077b9c84e3d2e06fccfb5e",
+        "action": "Preserved; manual source comparison queued as DOC-QA1"
+      },
+      {
+        "path": "2026/CVPR/2026_CVPR_Dexterous-World-Models/03_method.md",
+        "nul_bytes": 1,
+        "sha256": "08b46b767ebb8a879d0bf610f641a387a38607f2468d387c648b87eb1fd3fb11",
+        "action": "Preserved; manual source comparison queued as DOC-QA1"
+      },
+      {
+        "path": "2026/CVPR/2026_CVPR_FM-Steer-Enhance-Generalist-Policies-with-Value-Guided-Cas/03_method.md",
+        "nul_bytes": 1,
+        "sha256": "320e1654975437284b0ab86c2a646f530682f4ccccb507056b2d9807f8c70971",
+        "action": "Preserved; manual source comparison queued as DOC-QA1"
+      },
+      {
+        "path": "2026/CVPR/2026_CVPR_GA-VLN-Geometry-Aware-BEV-Representation-for-Efficient-Vis/01_overview.md",
+        "nul_bytes": 1,
+        "sha256": "0961a8b0836805ae8d10776556da157c3c6d551c004972f8fcebf0ed7732f051",
+        "action": "Preserved; manual source comparison queued as DOC-QA1"
+      },
+      {
+        "path": "2026/CVPR/2026_CVPR_GA-VLN-Geometry-Aware-BEV-Representation-for-Efficient-Vis/03_method.md",
+        "nul_bytes": 3,
+        "sha256": "7242d6c3905f7619a72eecc0db35be37476392defc3a391291e8251f62bc3638",
+        "action": "Preserved; manual source comparison queued as DOC-QA1"
+      },
+      {
+        "path": "2026/CVPR/2026_CVPR_Distilling-Unsigned-Distance-Function-for-Surface-Reconstr/03_method.md",
+        "nul_bytes": 2,
+        "sha256": "c0eb98f6c27f7db1c3ba6711e85cd125a858d3ed3a2d783100779d0a8261e7a2",
+        "action": "Preserved; manual source comparison queued as DOC-QA1"
+      },
+      {
+        "path": "2026/ICLR/2026_ICLR_SurfSplat-Conquering-Feedforward-2D-Gaussian-Splatting-wit/04_evaluation.md",
+        "nul_bytes": 2,
+        "sha256": "60e709d1edd1b3fad8db2a65df4db4acd5e2da2e137da1dd3e6686c6f799b4ec",
+        "action": "Preserved; manual source comparison queued as DOC-QA1"
+      },
+      {
+        "path": "2026/ICLR/2026_ICLR_MomaGraph-State-Aware-Unified-Scene-Graphs-with-Vision-Lan/04_evaluation.md",
+        "nul_bytes": 1,
+        "sha256": "ae372f19a81ff9ed9205bc8774783ecf27fe54eff485b4ea427f8640de2b53f3",
+        "action": "Preserved; manual source comparison queued as DOC-QA1"
+      },
+      {
+        "path": "2026/ICLR/2026_ICLR_MomaGraph-State-Aware-Unified-Scene-Graphs-with-Vision-Lan/03_method.md",
+        "nul_bytes": 1,
+        "sha256": "45c4bcf85558dcf05198cb9780cbbb1fe59c8ecbc1b54551cbb7a00e2fa01acb",
+        "action": "Preserved; manual source comparison queued as DOC-QA1"
+      },
+      {
+        "path": "2026/ICLR/2026_ICLR_Learning-to-Be-Uncertain-Pre-training-World-Models-with-Ho/01_overview.md",
+        "nul_bytes": 2,
+        "sha256": "897a036b6cfdc53c260e4e2cd7f34ef02f104e150e2d5eaeb55dbfb7375e26b5",
+        "action": "Preserved; manual source comparison queued as DOC-QA1"
+      },
+      {
+        "path": "2026/ICLR/2026_ICLR_Learning-to-Be-Uncertain-Pre-training-World-Models-with-Ho/05_insights.md",
+        "nul_bytes": 2,
+        "sha256": "6e9b193085b681b16bebb45b1eb360b33764f336eaf48b68ee1a1914c0972af2",
+        "action": "Preserved; manual source comparison queued as DOC-QA1"
+      },
+      {
+        "path": "2026/ICLR/2026_ICLR_Learning-to-Be-Uncertain-Pre-training-World-Models-with-Ho/03_method.md",
+        "nul_bytes": 4,
+        "sha256": "4966bed57e9d6ad8b1a84b631780c2bfd44b23f47b9519056c04ad1e6df09353",
+        "action": "Preserved; manual source comparison queued as DOC-QA1"
+      },
+      {
+        "path": "2026/ICLR/2026_ICLR_Rodrigues-Network-for-Learning-Robot-Actions/03_method.md",
+        "nul_bytes": 1,
+        "sha256": "1d75730a4246abd614ce27eada34ccb1c99bf0507585bfc392893641219e96b3",
+        "action": "Preserved; manual source comparison queued as DOC-QA1"
+      },
+      {
+        "path": "2026/ICLR/2026_ICLR_Spatial-Forcing-Implicit-Spatial-Representation-Alignment/01_overview.md",
+        "nul_bytes": 1,
+        "sha256": "61a8ee9229f92b7474aab58e3d321a896a4728add5f44005ce494277d906f0b1",
+        "action": "Preserved; manual source comparison queued as DOC-QA1"
+      },
+      {
+        "path": "2026/ICLR/2026_ICLR_Spatial-Forcing-Implicit-Spatial-Representation-Alignment/05_insights.md",
+        "nul_bytes": 1,
+        "sha256": "a37c1bdf32a08c5fe6509966e6170afe510cc2a5b43d2104d1067a1c9cce7d6b",
+        "action": "Preserved; manual source comparison queued as DOC-QA1"
+      },
+      {
+        "path": "2026/ICLR/2026_ICLR_Spatial-Forcing-Implicit-Spatial-Representation-Alignment/03_method.md",
+        "nul_bytes": 5,
+        "sha256": "5446635e854bc979cfb453d9e6bcb89bc96a9db30e8ffdd41b92c444f79cdf4c",
+        "action": "Preserved; manual source comparison queued as DOC-QA1"
+      },
+      {
+        "path": "2026/ICLR/2026_ICLR_EquAct-An-SE3-Equivariant-Multi-Task-Transformer-for-3D-Ro/01_overview.md",
+        "nul_bytes": 1,
+        "sha256": "626fcc2763ed43ec1abc87253ea1b541b922f1fa6be53724cf17825824642fb7",
+        "action": "Preserved; manual source comparison queued as DOC-QA1"
+      },
+      {
+        "path": "2026/ICLR/2026_ICLR_EquAct-An-SE3-Equivariant-Multi-Task-Transformer-for-3D-Ro/04_evaluation.md",
+        "nul_bytes": 1,
+        "sha256": "7cd4905c9dea3c2240abd93136a6df5d93efabf88a881c0b3488cad272061b8c",
+        "action": "Preserved; manual source comparison queued as DOC-QA1"
+      },
+      {
+        "path": "2026/ICLR/2026_ICLR_EquAct-An-SE3-Equivariant-Multi-Task-Transformer-for-3D-Ro/03_method.md",
+        "nul_bytes": 2,
+        "sha256": "7932885bce6a469823666aaca1411dbb1749011c04150f65774d9921897a6de4",
+        "action": "Preserved; manual source comparison queued as DOC-QA1"
+      },
+      {
+        "path": "2020/CoRL/2020_CoRL_Learning-Latent-Plans-from-Play/03_method.md",
+        "nul_bytes": 1,
+        "sha256": "457346bf99f80b5c5062e89e5d23c23a1a9ac39a8ecde33568bd420e271b011b",
+        "action": "Preserved; manual source comparison queued as DOC-QA1"
+      },
+      {
+        "path": "2020/ICLR/2020_ICLR_Dream-to-Control-Learning-Behaviors-by-Latent-Imagination/04_evaluation.md",
+        "nul_bytes": 1,
+        "sha256": "511d5c4fa19bbff06dee5a91f1168c476d2a7fe40643317eff5e676182bc15bf",
+        "action": "Preserved; manual source comparison queued as DOC-QA1"
+      },
+      {
+        "path": "2020/ICLR/2020_ICLR_Dream-to-Control-Learning-Behaviors-by-Latent-Imagination/03_method.md",
+        "nul_bytes": 2,
+        "sha256": "31c7bf36d14310df61c6d0e2a7725221717a97bf211618719c60eee8e3f5b20f",
+        "action": "Preserved; manual source comparison queued as DOC-QA1"
+      },
+      {
+        "path": "2011/IJRR/2011_IJRR_Sampling-based-Algorithms-for-Optimal-Motion-Planning/04_evaluation.md",
+        "nul_bytes": 1,
+        "sha256": "47f1e1a21568f1e7494222f3f0b9b19f2b44eed52bc53ab474c5cec7bc88d91e",
+        "action": "Preserved; manual source comparison queued as DOC-QA1"
+      },
+      {
+        "path": "2016/ICLR/2016_ICLR_Continuous-Control-with-Deep-Reinforcement-Learning/01_overview.md",
+        "nul_bytes": 1,
+        "sha256": "a1a3c7282a8ff6db0bb34cb5aa738ba047b5f1f98ab8db1f7b39db6c57750928",
+        "action": "Preserved; manual source comparison queued as DOC-QA1"
+      },
+      {
+        "path": "2016/ICLR/2016_ICLR_Continuous-Control-with-Deep-Reinforcement-Learning/05_insights.md",
+        "nul_bytes": 1,
+        "sha256": "90195ef30dc6d8de163b8b2f1ef838a277081f50f0d68ba192ba37e7e15d201a",
+        "action": "Preserved; manual source comparison queued as DOC-QA1"
+      },
+      {
+        "path": "2016/ICLR/2016_ICLR_Continuous-Control-with-Deep-Reinforcement-Learning/03_method.md",
+        "nul_bytes": 3,
+        "sha256": "df7aa7dc02ad6e550ba5015c5db6d3f746934c0874c4739ee274e7b015d26f87",
+        "action": "Preserved; manual source comparison queued as DOC-QA1"
+      },
+      {
+        "path": "2002/AAAI/2002_AAAI_D-Lite/01_overview.md",
+        "nul_bytes": 2,
+        "sha256": "741275679091e75b7499ded8a6a6d41dad18681da831331004e1f4eb31188c5c",
+        "action": "Preserved; manual source comparison queued as DOC-QA1"
+      },
+      {
+        "path": "2002/AAAI/2002_AAAI_D-Lite/04_evaluation.md",
+        "nul_bytes": 6,
+        "sha256": "76f7a797ed3ac47fab02d31c30286ac055b1b89988305cb59de62c7089f499f7",
+        "action": "Preserved; manual source comparison queued as DOC-QA1"
+      },
+      {
+        "path": "2002/AAAI/2002_AAAI_D-Lite/03_method.md",
+        "nul_bytes": 2,
+        "sha256": "1f9d63bfc8bac0ea575ee5a63d9ae273d64e6b1b4a0fab7a0908e44bd805a255",
+        "action": "Preserved; manual source comparison queued as DOC-QA1"
+      }
+    ]
+  },
+  "credential_literal_scan_matches": 0,
+  "host_experiment_dependency_installs": 0,
+  "new_policy_runs": 0,
+  "checks": {
+    "tier_generator_compile": "PASS",
+    "tier_generator_rebuild": "PASS",
+    "priority_reconcile_dry_run_apply": "PASS",
+    "registry_views_apply": "PASS",
+    "reading_history_regression_tests": 3,
+    "document_maintenance_regression_tests": 4,
+    "git_diff_check": "PASS",
+    "paper_registry_render": "PASS: only date and scope changed",
+    "git_diff_cached_check": "PASS",
+    "registration_renderer_compile": "PASS"
+  },
+  "publication_status": "READY_TO_COMMIT",
+  "repository_audit": {
+    "papers": 1037,
+    "categories": 23,
+    "tier_counts": {
+      "CORE": 47,
+      "NEXT": 275,
+      "REFERENCE": 473,
+      "ARCHIVE": 242
+    },
+    "intensive": 322,
+    "inactive_reading_history": 47,
+    "standard_note_files": 5185,
+    "catalog_entries": {
+      "benchmark": 51,
+      "metric": 29
+    },
+    "combined_resources": 521,
+    "registry_index_rows": 1037,
+    "markdown_files_checked": 5323,
+    "markdown_links_checked": 9454,
+    "comparison_matrix_rows": 106,
+    "completed_matrix_rows": 5,
+    "errors": [],
+    "warnings": []
+  },
+  "research_scope": "VLA-based manipulation/navigation; RL optional",
+  "formatting_only_note_files": [
+    "2025/CoRL/2025_CoRL_AutoEval-Autonomous-Evaluation-of-Generalist-Robot-Manipul/01_overview.md",
+    "2025/CoRL/2025_CoRL_SAIL-Faster-than-Demonstration-Execution-of-Imitation-Lear/01_overview.md",
+    "2025/CVPR/2025_CVPR_MoManipVLA-Transferring-Vision-language-action-Models-for/01_overview.md",
+    "2025/arXiv/2025_arXiv_VITA-E-Natural-Embodied-Interaction-with-Concurrent-Seeing/01_overview.md",
+    "2025/arXiv/2025_arXiv_HiMoE-VLA-Hierarchical-Mixture-of-Experts-for-Generalist-V/01_overview.md",
+    "2025/arXiv/2025_arXiv_SwitchVLA-Execution-Aware-Task-Switching-for-Vision-Langua/01_overview.md",
+    "2025/ICCV/2025_ICCV_PROGRESSOR-A-Perceptually-Guided-Reward-Estimator-with-Sel/01_overview.md",
+    "2026/CVPR-Workshop/2026_CVPR-Workshop_RePlan-Bot-Multi-Level-Replanning-for-Embodied-Instruction/01_overview.md",
+    "2026/CoRL/2026_CoRL_RoboFollow-Unveiling-the-Instruction-Following-Mirage-in-E/01_overview.md",
+    "2026/CoRL/2026_CoRL_VoLo-A-Physical-Orchestrator-for-Open-Vocabulary-Long-Hori/01_overview.md",
+    "2026/CoRL/2026_CoRL_CounterAlign-Counterfactual-Supervision-for-Vision-Languag/01_overview.md",
+    "2026/RSS/2026_RSS_Robometer-Scaling-General-Purpose-Robotic-Reward-Models-vi/01_overview.md",
+    "2026/RSS/2026_RSS_DISC-Decoupling-Instruction-from-State-Conditioned-Control/01_overview.md",
+    "2026/RSS/2026_RSS_Contact-Anchored-Policies-Contact-Conditioning-Creates-Str/01_overview.md",
+    "2026/RSS/2026_RSS_Semantic-Contact-Fields-for-Category-Level-Generalizable-T/01_overview.md",
+    "2026/RSS/2026_RSS_LAP-Language-Action-Pre-training-Enables-Zero-Shot-Cross-E/01_overview.md",
+    "2026/Entropy/2026_Entropy_Restoring-the-Right-Stream-Training-Free-OOD-Robustness-fo/01_overview.md",
+    "2026/Unverified/2026_Unverified_DialogVLA-Bridging-Reasoning-Action-in-Bimanual-Manipulati/01_overview.md",
+    "2026/arXiv/2026_arXiv_RESCUE-Is-This-Alarm-Worth-Acting-On-Counterfactual-Evalua/01_overview.md",
+    "2026/arXiv/2026_arXiv_RoboReward-General-Purpose-Vision-Language-Reward-Models-f/01_overview.md",
+    "2026/arXiv/2026_arXiv_EyeRobot-2.0-Active-Gaze-for-Precise-Manipulation-without/01_overview.md",
+    "2026/arXiv/2026_arXiv_CoRE-VLA-Towards-Scalable-and-Robust-Vision-Language-Actio/01_overview.md",
+    "2026/arXiv/2026_arXiv_Self-Adaptive-VLA-for-Robust-Robot-Deployment/01_overview.md",
+    "2026/arXiv/2026_arXiv_WBAG-A-Whole-Body-and-Attached-Geometry-Safety-Framework-f/01_overview.md",
+    "2026/arXiv/2026_arXiv_CoRe-VLA-Preserving-Cross-View-Coordination-in-VLAs-under/01_overview.md",
+    "2026/arXiv/2026_arXiv_Vela-Scaling-Vision-Language-Action-Models-with-Adaptive-A/01_overview.md",
+    "2026/arXiv/2026_arXiv_SafeLoop-Risk-Aware-Rollback-for-Vision-Language-Action-Ma/01_overview.md",
+    "2026/arXiv/2026_arXiv_PaceVLA-Adaptive-Temporal-Action-Quantization-in-Vision-La/01_overview.md",
+    "2026/arXiv/2026_arXiv_CarryOn-A-Dual-Loop-Harness-for-Personalized-and-Reliable/01_overview.md",
+    "2026/arXiv/2026_arXiv_SPACE-Enabling-Learning-from-Cross-Robot-Data-Toward-Gener/01_overview.md",
+    "2026/arXiv/2026_arXiv_Foresight-Residual-RL-for-Long-Horizon-Robot-Manipulation/01_overview.md",
+    "2026/arXiv/2026_arXiv_How-Should-Vision-Language-Action-Models-Use-Proprioceptiv/01_overview.md",
+    "2026/arXiv/2026_arXiv_Measuring-the-Stability-Assumption-Behind-Action-Chunking/01_overview.md",
+    "2026/arXiv/2026_arXiv_LIBERO-RIG-A-Hardware-Setup-Robustness-Benchmark-for-Visio/01_overview.md",
+    "2026/ICLR/2026_ICLR_WholeBodyVLA-Towards-Unified-Latent-VLA-for-Whole-body-Loc/01_overview.md",
+    "2026/ICLR/2026_ICLR_When-would-Vision-Proprioception-Policies-Fail-in-Robotic/01_overview.md",
+    "2026/RA-L/2026_RA-L_Cooperative-Grasping-for-Collective-Object-Transport-in-Co/01_overview.md"
+  ],
+  "formatting_only_files": [
+    "2025/CVPR/2025_CVPR_MoManipVLA-Transferring-Vision-language-action-Models-for/01_overview.md",
+    "2025/CoRL/2025_CoRL_AutoEval-Autonomous-Evaluation-of-Generalist-Robot-Manipul/01_overview.md",
+    "2025/CoRL/2025_CoRL_SAIL-Faster-than-Demonstration-Execution-of-Imitation-Lear/01_overview.md",
+    "2025/ICCV/2025_ICCV_PROGRESSOR-A-Perceptually-Guided-Reward-Estimator-with-Sel/01_overview.md",
+    "2025/arXiv/2025_arXiv_HiMoE-VLA-Hierarchical-Mixture-of-Experts-for-Generalist-V/01_overview.md",
+    "2025/arXiv/2025_arXiv_SwitchVLA-Execution-Aware-Task-Switching-for-Vision-Langua/01_overview.md",
+    "2025/arXiv/2025_arXiv_VITA-E-Natural-Embodied-Interaction-with-Concurrent-Seeing/01_overview.md",
+    "2026/CVPR-Workshop/2026_CVPR-Workshop_RePlan-Bot-Multi-Level-Replanning-for-Embodied-Instruction/01_overview.md",
+    "2026/CoRL/2026_CoRL_CounterAlign-Counterfactual-Supervision-for-Vision-Languag/01_overview.md",
+    "2026/CoRL/2026_CoRL_RoboFollow-Unveiling-the-Instruction-Following-Mirage-in-E/01_overview.md",
+    "2026/CoRL/2026_CoRL_VoLo-A-Physical-Orchestrator-for-Open-Vocabulary-Long-Hori/01_overview.md",
+    "2026/Entropy/2026_Entropy_Restoring-the-Right-Stream-Training-Free-OOD-Robustness-fo/01_overview.md",
+    "2026/ICLR/2026_ICLR_When-would-Vision-Proprioception-Policies-Fail-in-Robotic/01_overview.md",
+    "2026/ICLR/2026_ICLR_WholeBodyVLA-Towards-Unified-Latent-VLA-for-Whole-body-Loc/01_overview.md",
+    "2026/RA-L/2026_RA-L_Cooperative-Grasping-for-Collective-Object-Transport-in-Co/01_overview.md",
+    "2026/RSS/2026_RSS_Contact-Anchored-Policies-Contact-Conditioning-Creates-Str/01_overview.md",
+    "2026/RSS/2026_RSS_DISC-Decoupling-Instruction-from-State-Conditioned-Control/01_overview.md",
+    "2026/RSS/2026_RSS_LAP-Language-Action-Pre-training-Enables-Zero-Shot-Cross-E/01_overview.md",
+    "2026/RSS/2026_RSS_Robometer-Scaling-General-Purpose-Robotic-Reward-Models-vi/01_overview.md",
+    "2026/RSS/2026_RSS_Semantic-Contact-Fields-for-Category-Level-Generalizable-T/01_overview.md",
+    "2026/Unverified/2026_Unverified_DialogVLA-Bridging-Reasoning-Action-in-Bimanual-Manipulati/01_overview.md",
+    "2026/arXiv/2026_arXiv_CarryOn-A-Dual-Loop-Harness-for-Personalized-and-Reliable/01_overview.md",
+    "2026/arXiv/2026_arXiv_CoRE-VLA-Towards-Scalable-and-Robust-Vision-Language-Actio/01_overview.md",
+    "2026/arXiv/2026_arXiv_CoRe-VLA-Preserving-Cross-View-Coordination-in-VLAs-under/01_overview.md",
+    "2026/arXiv/2026_arXiv_EyeRobot-2.0-Active-Gaze-for-Precise-Manipulation-without/01_overview.md",
+    "2026/arXiv/2026_arXiv_Foresight-Residual-RL-for-Long-Horizon-Robot-Manipulation/01_overview.md",
+    "2026/arXiv/2026_arXiv_How-Should-Vision-Language-Action-Models-Use-Proprioceptiv/01_overview.md",
+    "2026/arXiv/2026_arXiv_LIBERO-RIG-A-Hardware-Setup-Robustness-Benchmark-for-Visio/01_overview.md",
+    "2026/arXiv/2026_arXiv_Measuring-the-Stability-Assumption-Behind-Action-Chunking/01_overview.md",
+    "2026/arXiv/2026_arXiv_PaceVLA-Adaptive-Temporal-Action-Quantization-in-Vision-La/01_overview.md",
+    "2026/arXiv/2026_arXiv_RESCUE-Is-This-Alarm-Worth-Acting-On-Counterfactual-Evalua/01_overview.md",
+    "2026/arXiv/2026_arXiv_RoboReward-General-Purpose-Vision-Language-Reward-Models-f/01_overview.md",
+    "2026/arXiv/2026_arXiv_SPACE-Enabling-Learning-from-Cross-Robot-Data-Toward-Gener/01_overview.md",
+    "2026/arXiv/2026_arXiv_SafeLoop-Risk-Aware-Rollback-for-Vision-Language-Action-Ma/01_overview.md",
+    "2026/arXiv/2026_arXiv_Self-Adaptive-VLA-for-Robust-Robot-Deployment/01_overview.md",
+    "2026/arXiv/2026_arXiv_Vela-Scaling-Vision-Language-Action-Models-with-Adaptive-A/01_overview.md",
+    "2026/arXiv/2026_arXiv_WBAG-A-Whole-Body-and-Attached-Geometry-Safety-Framework-f/01_overview.md",
+    "work/research_candidates/2026-10-21_d1_buildup/NONEXPERIMENTAL_REVIEW.md",
+    "work/research_candidates/2026-10-21_d1_buildup/nonexperimental_sources_2026-10-22.json",
+    "work/update/UPDATES_2026-10-21.md"
+  ],
+  "note_semantic_changes": 0
+}

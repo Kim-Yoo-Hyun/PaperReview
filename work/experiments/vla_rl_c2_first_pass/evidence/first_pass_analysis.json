@@ -1,0 +1,1855 @@
+{
+  "kind": "data/predicate feasibility audit, not policy evaluation",
+  "task_count": 8,
+  "inventory_episode_count": 400,
+  "payload_episode_count": 12,
+  "payload_errors": [],
+  "metadata_by_task": {
+    "r_pick2_via4_to6_short_front": {
+      "task_partition": "train",
+      "episodes": 50,
+      "route_trace_count": 0,
+      "route_check_count": 0,
+      "collection_manifest_present": false,
+      "declared_upstream_commit": null,
+      "declared_code_hash": null,
+      "ordered_seeds_equal_json": null
+    },
+    "r_pick2_via4_to6_long_front": {
+      "task_partition": "holdout",
+      "episodes": 50,
+      "route_trace_count": 0,
+      "route_check_count": 0,
+      "collection_manifest_present": false,
+      "declared_upstream_commit": null,
+      "declared_code_hash": null,
+      "ordered_seeds_equal_json": null
+    },
+    "r_pick2_via5_to6_short_front": {
+      "task_partition": "holdout",
+      "episodes": 50,
+      "route_trace_count": 0,
+      "route_check_count": 0,
+      "collection_manifest_present": false,
+      "declared_upstream_commit": null,
+      "declared_code_hash": null,
+      "ordered_seeds_equal_json": null
+    },
+    "r_pick2_via5_to6_long_front": {
+      "task_partition": "train",
+      "episodes": 50,
+      "route_trace_count": 0,
+      "route_check_count": 0,
+      "collection_manifest_present": false,
+      "declared_upstream_commit": null,
+      "declared_code_hash": null,
+      "ordered_seeds_equal_json": null
+    },
+    "r_pick3_via4_to6_short_front": {
+      "task_partition": "holdout",
+      "episodes": 50,
+      "route_trace_count": 50,
+      "route_check_count": 50,
+      "collection_manifest_present": true,
+      "declared_upstream_commit": null,
+      "declared_code_hash": "af69511828f5414ee356ede293021c6a90fd80ccac550496b4745f670bcebe93",
+      "ordered_seeds_equal_json": true
+    },
+    "r_pick3_via4_to6_long_front": {
+      "task_partition": "train",
+      "episodes": 50,
+      "route_trace_count": 50,
+      "route_check_count": 50,
+      "collection_manifest_present": true,
+      "declared_upstream_commit": null,
+      "declared_code_hash": "af69511828f5414ee356ede293021c6a90fd80ccac550496b4745f670bcebe93",
+      "ordered_seeds_equal_json": true
+    },
+    "r_pick3_via5_to6_short_front": {
+      "task_partition": "train",
+      "episodes": 50,
+      "route_trace_count": 0,
+      "route_check_count": 0,
+      "collection_manifest_present": false,
+      "declared_upstream_commit": null,
+      "declared_code_hash": null,
+      "ordered_seeds_equal_json": null
+    },
+    "r_pick3_via5_to6_long_front": {
+      "task_partition": "holdout",
+      "episodes": 50,
+      "route_trace_count": 0,
+      "route_check_count": 0,
+      "collection_manifest_present": false,
+      "declared_upstream_commit": null,
+      "declared_code_hash": null,
+      "ordered_seeds_equal_json": null
+    }
+  },
+  "training_route_rechecks": [
+    {
+      "task_id": "r_pick3_via4_to6_long_front",
+      "episode_id": 0,
+      "initial_z_basis": "first recorded route sample; native _route_initial_z is not separately saved",
+      "source_report": {
+        "passed": true,
+        "reason": "ok",
+        "samples": 272,
+        "reached_route": true,
+        "crossed_avoided": false
+      },
+      "factual_recomputed": {
+        "passed": true,
+        "reason": "ok",
+        "samples": 272,
+        "reached_route": true,
+        "crossed_avoided": false
+      },
+      "source_report_equal_recomputed": true,
+      "alternate_training_task": "r_pick3_via5_to6_short_front",
+      "alternate_waypoint_recomputed": {
+        "passed": false,
+        "reason": "required route not reached",
+        "samples": 272,
+        "reached_route": false,
+        "crossed_avoided": true
+      },
+      "full_joint_reward_verified": false,
+      "scope": "Waypoint-only recheck; goal and object final orientation not independently available"
+    },
+    {
+      "task_id": "r_pick3_via4_to6_long_front",
+      "episode_id": 1,
+      "initial_z_basis": "first recorded route sample; native _route_initial_z is not separately saved",
+      "source_report": {
+        "passed": true,
+        "reason": "ok",
+        "samples": 271,
+        "reached_route": true,
+        "crossed_avoided": false
+      },
+      "factual_recomputed": {
+        "passed": true,
+        "reason": "ok",
+        "samples": 271,
+        "reached_route": true,
+        "crossed_avoided": false
+      },
+      "source_report_equal_recomputed": true,
+      "alternate_training_task": "r_pick3_via5_to6_short_front",
+      "alternate_waypoint_recomputed": {
+        "passed": false,
+        "reason": "required route not reached",
+        "samples": 271,
+        "reached_route": false,
+        "crossed_avoided": true
+      },
+      "full_joint_reward_verified": false,
+      "scope": "Waypoint-only recheck; goal and object final orientation not independently available"
+    },
+    {
+      "task_id": "r_pick3_via4_to6_long_front",
+      "episode_id": 2,
+      "initial_z_basis": "first recorded route sample; native _route_initial_z is not separately saved",
+      "source_report": {
+        "passed": true,
+        "reason": "ok",
+        "samples": 267,
+        "reached_route": true,
+        "crossed_avoided": false
+      },
+      "factual_recomputed": {
+        "passed": true,
+        "reason": "ok",
+        "samples": 267,
+        "reached_route": true,
+        "crossed_avoided": false
+      },
+      "source_report_equal_recomputed": true,
+      "alternate_training_task": "r_pick3_via5_to6_short_front",
+      "alternate_waypoint_recomputed": {
+        "passed": false,
+        "reason": "required route not reached",
+        "samples": 267,
+        "reached_route": false,
+        "crossed_avoided": true
+      },
+      "full_joint_reward_verified": false,
+      "scope": "Waypoint-only recheck; goal and object final orientation not independently available"
+    },
+    {
+      "task_id": "r_pick3_via4_to6_long_front",
+      "episode_id": 3,
+      "initial_z_basis": "first recorded route sample; native _route_initial_z is not separately saved",
+      "source_report": {
+        "passed": true,
+        "reason": "ok",
+        "samples": 261,
+        "reached_route": true,
+        "crossed_avoided": false
+      },
+      "factual_recomputed": {
+        "passed": true,
+        "reason": "ok",
+        "samples": 261,
+        "reached_route": true,
+        "crossed_avoided": false
+      },
+      "source_report_equal_recomputed": true,
+      "alternate_training_task": "r_pick3_via5_to6_short_front",
+      "alternate_waypoint_recomputed": {
+        "passed": false,
+        "reason": "required route not reached",
+        "samples": 261,
+        "reached_route": false,
+        "crossed_avoided": true
+      },
+      "full_joint_reward_verified": false,
+      "scope": "Waypoint-only recheck; goal and object final orientation not independently available"
+    },
+    {
+      "task_id": "r_pick3_via4_to6_long_front",
+      "episode_id": 4,
+      "initial_z_basis": "first recorded route sample; native _route_initial_z is not separately saved",
+      "source_report": {
+        "passed": true,
+        "reason": "ok",
+        "samples": 265,
+        "reached_route": true,
+        "crossed_avoided": false
+      },
+      "factual_recomputed": {
+        "passed": true,
+        "reason": "ok",
+        "samples": 265,
+        "reached_route": true,
+        "crossed_avoided": false
+      },
+      "source_report_equal_recomputed": true,
+      "alternate_training_task": "r_pick3_via5_to6_short_front",
+      "alternate_waypoint_recomputed": {
+        "passed": false,
+        "reason": "required route not reached",
+        "samples": 265,
+        "reached_route": false,
+        "crossed_avoided": true
+      },
+      "full_joint_reward_verified": false,
+      "scope": "Waypoint-only recheck; goal and object final orientation not independently available"
+    },
+    {
+      "task_id": "r_pick3_via4_to6_long_front",
+      "episode_id": 5,
+      "initial_z_basis": "first recorded route sample; native _route_initial_z is not separately saved",
+      "source_report": {
+        "passed": true,
+        "reason": "ok",
+        "samples": 278,
+        "reached_route": true,
+        "crossed_avoided": false
+      },
+      "factual_recomputed": {
+        "passed": true,
+        "reason": "ok",
+        "samples": 278,
+        "reached_route": true,
+        "crossed_avoided": false
+      },
+      "source_report_equal_recomputed": true,
+      "alternate_training_task": "r_pick3_via5_to6_short_front",
+      "alternate_waypoint_recomputed": {
+        "passed": false,
+        "reason": "required route not reached",
+        "samples": 278,
+        "reached_route": false,
+        "crossed_avoided": true
+      },
+      "full_joint_reward_verified": false,
+      "scope": "Waypoint-only recheck; goal and object final orientation not independently available"
+    },
+    {
+      "task_id": "r_pick3_via4_to6_long_front",
+      "episode_id": 6,
+      "initial_z_basis": "first recorded route sample; native _route_initial_z is not separately saved",
+      "source_report": {
+        "passed": true,
+        "reason": "ok",
+        "samples": 273,
+        "reached_route": true,
+        "crossed_avoided": false
+      },
+      "factual_recomputed": {
+        "passed": true,
+        "reason": "ok",
+        "samples": 273,
+        "reached_route": true,
+        "crossed_avoided": false
+      },
+      "source_report_equal_recomputed": true,
+      "alternate_training_task": "r_pick3_via5_to6_short_front",
+      "alternate_waypoint_recomputed": {
+        "passed": false,
+        "reason": "required route not reached",
+        "samples": 273,
+        "reached_route": false,
+        "crossed_avoided": true
+      },
+      "full_joint_reward_verified": false,
+      "scope": "Waypoint-only recheck; goal and object final orientation not independently available"
+    },
+    {
+      "task_id": "r_pick3_via4_to6_long_front",
+      "episode_id": 7,
+      "initial_z_basis": "first recorded route sample; native _route_initial_z is not separately saved",
+      "source_report": {
+        "passed": true,
+        "reason": "ok",
+        "samples": 258,
+        "reached_route": true,
+        "crossed_avoided": false
+      },
+      "factual_recomputed": {
+        "passed": true,
+        "reason": "ok",
+        "samples": 258,
+        "reached_route": true,
+        "crossed_avoided": false
+      },
+      "source_report_equal_recomputed": true,
+      "alternate_training_task": "r_pick3_via5_to6_short_front",
+      "alternate_waypoint_recomputed": {
+        "passed": false,
+        "reason": "required route not reached",
+        "samples": 258,
+        "reached_route": false,
+        "crossed_avoided": true
+      },
+      "full_joint_reward_verified": false,
+      "scope": "Waypoint-only recheck; goal and object final orientation not independently available"
+    },
+    {
+      "task_id": "r_pick3_via4_to6_long_front",
+      "episode_id": 8,
+      "initial_z_basis": "first recorded route sample; native _route_initial_z is not separately saved",
+      "source_report": {
+        "passed": true,
+        "reason": "ok",
+        "samples": 273,
+        "reached_route": true,
+        "crossed_avoided": false
+      },
+      "factual_recomputed": {
+        "passed": true,
+        "reason": "ok",
+        "samples": 273,
+        "reached_route": true,
+        "crossed_avoided": false
+      },
+      "source_report_equal_recomputed": true,
+      "alternate_training_task": "r_pick3_via5_to6_short_front",
+      "alternate_waypoint_recomputed": {
+        "passed": false,
+        "reason": "required route not reached",
+        "samples": 273,
+        "reached_route": false,
+        "crossed_avoided": true
+      },
+      "full_joint_reward_verified": false,
+      "scope": "Waypoint-only recheck; goal and object final orientation not independently available"
+    },
+    {
+      "task_id": "r_pick3_via4_to6_long_front",
+      "episode_id": 9,
+      "initial_z_basis": "first recorded route sample; native _route_initial_z is not separately saved",
+      "source_report": {
+        "passed": true,
+        "reason": "ok",
+        "samples": 263,
+        "reached_route": true,
+        "crossed_avoided": false
+      },
+      "factual_recomputed": {
+        "passed": true,
+        "reason": "ok",
+        "samples": 263,
+        "reached_route": true,
+        "crossed_avoided": false
+      },
+      "source_report_equal_recomputed": true,
+      "alternate_training_task": "r_pick3_via5_to6_short_front",
+      "alternate_waypoint_recomputed": {
+        "passed": false,
+        "reason": "required route not reached",
+        "samples": 263,
+        "reached_route": false,
+        "crossed_avoided": true
+      },
+      "full_joint_reward_verified": false,
+      "scope": "Waypoint-only recheck; goal and object final orientation not independently available"
+    },
+    {
+      "task_id": "r_pick3_via4_to6_long_front",
+      "episode_id": 10,
+      "initial_z_basis": "first recorded route sample; native _route_initial_z is not separately saved",
+      "source_report": {
+        "passed": true,
+        "reason": "ok",
+        "samples": 270,
+        "reached_route": true,
+        "crossed_avoided": false
+      },
+      "factual_recomputed": {
+        "passed": true,
+        "reason": "ok",
+        "samples": 270,
+        "reached_route": true,
+        "crossed_avoided": false
+      },
+      "source_report_equal_recomputed": true,
+      "alternate_training_task": "r_pick3_via5_to6_short_front",
+      "alternate_waypoint_recomputed": {
+        "passed": false,
+        "reason": "required route not reached",
+        "samples": 270,
+        "reached_route": false,
+        "crossed_avoided": true
+      },
+      "full_joint_reward_verified": false,
+      "scope": "Waypoint-only recheck; goal and object final orientation not independently available"
+    },
+    {
+      "task_id": "r_pick3_via4_to6_long_front",
+      "episode_id": 11,
+      "initial_z_basis": "first recorded route sample; native _route_initial_z is not separately saved",
+      "source_report": {
+        "passed": true,
+        "reason": "ok",
+        "samples": 279,
+        "reached_route": true,
+        "crossed_avoided": false
+      },
+      "factual_recomputed": {
+        "passed": true,
+        "reason": "ok",
+        "samples": 279,
+        "reached_route": true,
+        "crossed_avoided": false
+      },
+      "source_report_equal_recomputed": true,
+      "alternate_training_task": "r_pick3_via5_to6_short_front",
+      "alternate_waypoint_recomputed": {
+        "passed": false,
+        "reason": "required route not reached",
+        "samples": 279,
+        "reached_route": false,
+        "crossed_avoided": true
+      },
+      "full_joint_reward_verified": false,
+      "scope": "Waypoint-only recheck; goal and object final orientation not independently available"
+    },
+    {
+      "task_id": "r_pick3_via4_to6_long_front",
+      "episode_id": 12,
+      "initial_z_basis": "first recorded route sample; native _route_initial_z is not separately saved",
+      "source_report": {
+        "passed": true,
+        "reason": "ok",
+        "samples": 269,
+        "reached_route": true,
+        "crossed_avoided": false
+      },
+      "factual_recomputed": {
+        "passed": true,
+        "reason": "ok",
+        "samples": 269,
+        "reached_route": true,
+        "crossed_avoided": false
+      },
+      "source_report_equal_recomputed": true,
+      "alternate_training_task": "r_pick3_via5_to6_short_front",
+      "alternate_waypoint_recomputed": {
+        "passed": false,
+        "reason": "required route not reached",
+        "samples": 269,
+        "reached_route": false,
+        "crossed_avoided": true
+      },
+      "full_joint_reward_verified": false,
+      "scope": "Waypoint-only recheck; goal and object final orientation not independently available"
+    },
+    {
+      "task_id": "r_pick3_via4_to6_long_front",
+      "episode_id": 13,
+      "initial_z_basis": "first recorded route sample; native _route_initial_z is not separately saved",
+      "source_report": {
+        "passed": true,
+        "reason": "ok",
+        "samples": 274,
+        "reached_route": true,
+        "crossed_avoided": false
+      },
+      "factual_recomputed": {
+        "passed": true,
+        "reason": "ok",
+        "samples": 274,
+        "reached_route": true,
+        "crossed_avoided": false
+      },
+      "source_report_equal_recomputed": true,
+      "alternate_training_task": "r_pick3_via5_to6_short_front",
+      "alternate_waypoint_recomputed": {
+        "passed": false,
+        "reason": "required route not reached",
+        "samples": 274,
+        "reached_route": false,
+        "crossed_avoided": true
+      },
+      "full_joint_reward_verified": false,
+      "scope": "Waypoint-only recheck; goal and object final orientation not independently available"
+    },
+    {
+      "task_id": "r_pick3_via4_to6_long_front",
+      "episode_id": 14,
+      "initial_z_basis": "first recorded route sample; native _route_initial_z is not separately saved",
+      "source_report": {
+        "passed": true,
+        "reason": "ok",
+        "samples": 261,
+        "reached_route": true,
+        "crossed_avoided": false
+      },
+      "factual_recomputed": {
+        "passed": true,
+        "reason": "ok",
+        "samples": 261,
+        "reached_route": true,
+        "crossed_avoided": false
+      },
+      "source_report_equal_recomputed": true,
+      "alternate_training_task": "r_pick3_via5_to6_short_front",
+      "alternate_waypoint_recomputed": {
+        "passed": false,
+        "reason": "required route not reached",
+        "samples": 261,
+        "reached_route": false,
+        "crossed_avoided": true
+      },
+      "full_joint_reward_verified": false,
+      "scope": "Waypoint-only recheck; goal and object final orientation not independently available"
+    },
+    {
+      "task_id": "r_pick3_via4_to6_long_front",
+      "episode_id": 15,
+      "initial_z_basis": "first recorded route sample; native _route_initial_z is not separately saved",
+      "source_report": {
+        "passed": true,
+        "reason": "ok",
+        "samples": 257,
+        "reached_route": true,
+        "crossed_avoided": false
+      },
+      "factual_recomputed": {
+        "passed": true,
+        "reason": "ok",
+        "samples": 257,
+        "reached_route": true,
+        "crossed_avoided": false
+      },
+      "source_report_equal_recomputed": true,
+      "alternate_training_task": "r_pick3_via5_to6_short_front",
+      "alternate_waypoint_recomputed": {
+        "passed": false,
+        "reason": "required route not reached",
+        "samples": 257,
+        "reached_route": false,
+        "crossed_avoided": true
+      },
+      "full_joint_reward_verified": false,
+      "scope": "Waypoint-only recheck; goal and object final orientation not independently available"
+    },
+    {
+      "task_id": "r_pick3_via4_to6_long_front",
+      "episode_id": 16,
+      "initial_z_basis": "first recorded route sample; native _route_initial_z is not separately saved",
+      "source_report": {
+        "passed": true,
+        "reason": "ok",
+        "samples": 280,
+        "reached_route": true,
+        "crossed_avoided": false
+      },
+      "factual_recomputed": {
+        "passed": true,
+        "reason": "ok",
+        "samples": 280,
+        "reached_route": true,
+        "crossed_avoided": false
+      },
+      "source_report_equal_recomputed": true,
+      "alternate_training_task": "r_pick3_via5_to6_short_front",
+      "alternate_waypoint_recomputed": {
+        "passed": false,
+        "reason": "required route not reached",
+        "samples": 280,
+        "reached_route": false,
+        "crossed_avoided": true
+      },
+      "full_joint_reward_verified": false,
+      "scope": "Waypoint-only recheck; goal and object final orientation not independently available"
+    },
+    {
+      "task_id": "r_pick3_via4_to6_long_front",
+      "episode_id": 17,
+      "initial_z_basis": "first recorded route sample; native _route_initial_z is not separately saved",
+      "source_report": {
+        "passed": true,
+        "reason": "ok",
+        "samples": 270,
+        "reached_route": true,
+        "crossed_avoided": false
+      },
+      "factual_recomputed": {
+        "passed": true,
+        "reason": "ok",
+        "samples": 270,
+        "reached_route": true,
+        "crossed_avoided": false
+      },
+      "source_report_equal_recomputed": true,
+      "alternate_training_task": "r_pick3_via5_to6_short_front",
+      "alternate_waypoint_recomputed": {
+        "passed": false,
+        "reason": "required route not reached",
+        "samples": 270,
+        "reached_route": false,
+        "crossed_avoided": true
+      },
+      "full_joint_reward_verified": false,
+      "scope": "Waypoint-only recheck; goal and object final orientation not independently available"
+    },
+    {
+      "task_id": "r_pick3_via4_to6_long_front",
+      "episode_id": 18,
+      "initial_z_basis": "first recorded route sample; native _route_initial_z is not separately saved",
+      "source_report": {
+        "passed": true,
+        "reason": "ok",
+        "samples": 263,
+        "reached_route": true,
+        "crossed_avoided": false
+      },
+      "factual_recomputed": {
+        "passed": true,
+        "reason": "ok",
+        "samples": 263,
+        "reached_route": true,
+        "crossed_avoided": false
+      },
+      "source_report_equal_recomputed": true,
+      "alternate_training_task": "r_pick3_via5_to6_short_front",
+      "alternate_waypoint_recomputed": {
+        "passed": false,
+        "reason": "required route not reached",
+        "samples": 263,
+        "reached_route": false,
+        "crossed_avoided": true
+      },
+      "full_joint_reward_verified": false,
+      "scope": "Waypoint-only recheck; goal and object final orientation not independently available"
+    },
+    {
+      "task_id": "r_pick3_via4_to6_long_front",
+      "episode_id": 19,
+      "initial_z_basis": "first recorded route sample; native _route_initial_z is not separately saved",
+      "source_report": {
+        "passed": true,
+        "reason": "ok",
+        "samples": 264,
+        "reached_route": true,
+        "crossed_avoided": false
+      },
+      "factual_recomputed": {
+        "passed": true,
+        "reason": "ok",
+        "samples": 264,
+        "reached_route": true,
+        "crossed_avoided": false
+      },
+      "source_report_equal_recomputed": true,
+      "alternate_training_task": "r_pick3_via5_to6_short_front",
+      "alternate_waypoint_recomputed": {
+        "passed": false,
+        "reason": "required route not reached",
+        "samples": 264,
+        "reached_route": false,
+        "crossed_avoided": true
+      },
+      "full_joint_reward_verified": false,
+      "scope": "Waypoint-only recheck; goal and object final orientation not independently available"
+    },
+    {
+      "task_id": "r_pick3_via4_to6_long_front",
+      "episode_id": 20,
+      "initial_z_basis": "first recorded route sample; native _route_initial_z is not separately saved",
+      "source_report": {
+        "passed": true,
+        "reason": "ok",
+        "samples": 272,
+        "reached_route": true,
+        "crossed_avoided": false
+      },
+      "factual_recomputed": {
+        "passed": true,
+        "reason": "ok",
+        "samples": 272,
+        "reached_route": true,
+        "crossed_avoided": false
+      },
+      "source_report_equal_recomputed": true,
+      "alternate_training_task": "r_pick3_via5_to6_short_front",
+      "alternate_waypoint_recomputed": {
+        "passed": false,
+        "reason": "required route not reached",
+        "samples": 272,
+        "reached_route": false,
+        "crossed_avoided": true
+      },
+      "full_joint_reward_verified": false,
+      "scope": "Waypoint-only recheck; goal and object final orientation not independently available"
+    },
+    {
+      "task_id": "r_pick3_via4_to6_long_front",
+      "episode_id": 21,
+      "initial_z_basis": "first recorded route sample; native _route_initial_z is not separately saved",
+      "source_report": {
+        "passed": true,
+        "reason": "ok",
+        "samples": 263,
+        "reached_route": true,
+        "crossed_avoided": false
+      },
+      "factual_recomputed": {
+        "passed": true,
+        "reason": "ok",
+        "samples": 263,
+        "reached_route": true,
+        "crossed_avoided": false
+      },
+      "source_report_equal_recomputed": true,
+      "alternate_training_task": "r_pick3_via5_to6_short_front",
+      "alternate_waypoint_recomputed": {
+        "passed": false,
+        "reason": "required route not reached",
+        "samples": 263,
+        "reached_route": false,
+        "crossed_avoided": true
+      },
+      "full_joint_reward_verified": false,
+      "scope": "Waypoint-only recheck; goal and object final orientation not independently available"
+    },
+    {
+      "task_id": "r_pick3_via4_to6_long_front",
+      "episode_id": 22,
+      "initial_z_basis": "first recorded route sample; native _route_initial_z is not separately saved",
+      "source_report": {
+        "passed": true,
+        "reason": "ok",
+        "samples": 262,
+        "reached_route": true,
+        "crossed_avoided": false
+      },
+      "factual_recomputed": {
+        "passed": true,
+        "reason": "ok",
+        "samples": 262,
+        "reached_route": true,
+        "crossed_avoided": false
+      },
+      "source_report_equal_recomputed": true,
+      "alternate_training_task": "r_pick3_via5_to6_short_front",
+      "alternate_waypoint_recomputed": {
+        "passed": false,
+        "reason": "required route not reached",
+        "samples": 262,
+        "reached_route": false,
+        "crossed_avoided": true
+      },
+      "full_joint_reward_verified": false,
+      "scope": "Waypoint-only recheck; goal and object final orientation not independently available"
+    },
+    {
+      "task_id": "r_pick3_via4_to6_long_front",
+      "episode_id": 23,
+      "initial_z_basis": "first recorded route sample; native _route_initial_z is not separately saved",
+      "source_report": {
+        "passed": true,
+        "reason": "ok",
+        "samples": 277,
+        "reached_route": true,
+        "crossed_avoided": false
+      },
+      "factual_recomputed": {
+        "passed": true,
+        "reason": "ok",
+        "samples": 277,
+        "reached_route": true,
+        "crossed_avoided": false
+      },
+      "source_report_equal_recomputed": true,
+      "alternate_training_task": "r_pick3_via5_to6_short_front",
+      "alternate_waypoint_recomputed": {
+        "passed": false,
+        "reason": "required route not reached",
+        "samples": 277,
+        "reached_route": false,
+        "crossed_avoided": true
+      },
+      "full_joint_reward_verified": false,
+      "scope": "Waypoint-only recheck; goal and object final orientation not independently available"
+    },
+    {
+      "task_id": "r_pick3_via4_to6_long_front",
+      "episode_id": 24,
+      "initial_z_basis": "first recorded route sample; native _route_initial_z is not separately saved",
+      "source_report": {
+        "passed": true,
+        "reason": "ok",
+        "samples": 269,
+        "reached_route": true,
+        "crossed_avoided": false
+      },
+      "factual_recomputed": {
+        "passed": true,
+        "reason": "ok",
+        "samples": 269,
+        "reached_route": true,
+        "crossed_avoided": false
+      },
+      "source_report_equal_recomputed": true,
+      "alternate_training_task": "r_pick3_via5_to6_short_front",
+      "alternate_waypoint_recomputed": {
+        "passed": false,
+        "reason": "required route not reached",
+        "samples": 269,
+        "reached_route": false,
+        "crossed_avoided": true
+      },
+      "full_joint_reward_verified": false,
+      "scope": "Waypoint-only recheck; goal and object final orientation not independently available"
+    },
+    {
+      "task_id": "r_pick3_via4_to6_long_front",
+      "episode_id": 25,
+      "initial_z_basis": "first recorded route sample; native _route_initial_z is not separately saved",
+      "source_report": {
+        "passed": true,
+        "reason": "ok",
+        "samples": 275,
+        "reached_route": true,
+        "crossed_avoided": false
+      },
+      "factual_recomputed": {
+        "passed": true,
+        "reason": "ok",
+        "samples": 275,
+        "reached_route": true,
+        "crossed_avoided": false
+      },
+      "source_report_equal_recomputed": true,
+      "alternate_training_task": "r_pick3_via5_to6_short_front",
+      "alternate_waypoint_recomputed": {
+        "passed": false,
+        "reason": "required route not reached",
+        "samples": 275,
+        "reached_route": false,
+        "crossed_avoided": true
+      },
+      "full_joint_reward_verified": false,
+      "scope": "Waypoint-only recheck; goal and object final orientation not independently available"
+    },
+    {
+      "task_id": "r_pick3_via4_to6_long_front",
+      "episode_id": 26,
+      "initial_z_basis": "first recorded route sample; native _route_initial_z is not separately saved",
+      "source_report": {
+        "passed": true,
+        "reason": "ok",
+        "samples": 267,
+        "reached_route": true,
+        "crossed_avoided": false
+      },
+      "factual_recomputed": {
+        "passed": true,
+        "reason": "ok",
+        "samples": 267,
+        "reached_route": true,
+        "crossed_avoided": false
+      },
+      "source_report_equal_recomputed": true,
+      "alternate_training_task": "r_pick3_via5_to6_short_front",
+      "alternate_waypoint_recomputed": {
+        "passed": false,
+        "reason": "required route not reached",
+        "samples": 267,
+        "reached_route": false,
+        "crossed_avoided": true
+      },
+      "full_joint_reward_verified": false,
+      "scope": "Waypoint-only recheck; goal and object final orientation not independently available"
+    },
+    {
+      "task_id": "r_pick3_via4_to6_long_front",
+      "episode_id": 27,
+      "initial_z_basis": "first recorded route sample; native _route_initial_z is not separately saved",
+      "source_report": {
+        "passed": true,
+        "reason": "ok",
+        "samples": 266,
+        "reached_route": true,
+        "crossed_avoided": false
+      },
+      "factual_recomputed": {
+        "passed": true,
+        "reason": "ok",
+        "samples": 266,
+        "reached_route": true,
+        "crossed_avoided": false
+      },
+      "source_report_equal_recomputed": true,
+      "alternate_training_task": "r_pick3_via5_to6_short_front",
+      "alternate_waypoint_recomputed": {
+        "passed": false,
+        "reason": "required route not reached",
+        "samples": 266,
+        "reached_route": false,
+        "crossed_avoided": true
+      },
+      "full_joint_reward_verified": false,
+      "scope": "Waypoint-only recheck; goal and object final orientation not independently available"
+    },
+    {
+      "task_id": "r_pick3_via4_to6_long_front",
+      "episode_id": 28,
+      "initial_z_basis": "first recorded route sample; native _route_initial_z is not separately saved",
+      "source_report": {
+        "passed": true,
+        "reason": "ok",
+        "samples": 267,
+        "reached_route": true,
+        "crossed_avoided": false
+      },
+      "factual_recomputed": {
+        "passed": true,
+        "reason": "ok",
+        "samples": 267,
+        "reached_route": true,
+        "crossed_avoided": false
+      },
+      "source_report_equal_recomputed": true,
+      "alternate_training_task": "r_pick3_via5_to6_short_front",
+      "alternate_waypoint_recomputed": {
+        "passed": false,
+        "reason": "required route not reached",
+        "samples": 267,
+        "reached_route": false,
+        "crossed_avoided": true
+      },
+      "full_joint_reward_verified": false,
+      "scope": "Waypoint-only recheck; goal and object final orientation not independently available"
+    },
+    {
+      "task_id": "r_pick3_via4_to6_long_front",
+      "episode_id": 29,
+      "initial_z_basis": "first recorded route sample; native _route_initial_z is not separately saved",
+      "source_report": {
+        "passed": true,
+        "reason": "ok",
+        "samples": 262,
+        "reached_route": true,
+        "crossed_avoided": false
+      },
+      "factual_recomputed": {
+        "passed": true,
+        "reason": "ok",
+        "samples": 262,
+        "reached_route": true,
+        "crossed_avoided": false
+      },
+      "source_report_equal_recomputed": true,
+      "alternate_training_task": "r_pick3_via5_to6_short_front",
+      "alternate_waypoint_recomputed": {
+        "passed": false,
+        "reason": "required route not reached",
+        "samples": 262,
+        "reached_route": false,
+        "crossed_avoided": true
+      },
+      "full_joint_reward_verified": false,
+      "scope": "Waypoint-only recheck; goal and object final orientation not independently available"
+    },
+    {
+      "task_id": "r_pick3_via4_to6_long_front",
+      "episode_id": 30,
+      "initial_z_basis": "first recorded route sample; native _route_initial_z is not separately saved",
+      "source_report": {
+        "passed": true,
+        "reason": "ok",
+        "samples": 280,
+        "reached_route": true,
+        "crossed_avoided": false
+      },
+      "factual_recomputed": {
+        "passed": true,
+        "reason": "ok",
+        "samples": 280,
+        "reached_route": true,
+        "crossed_avoided": false
+      },
+      "source_report_equal_recomputed": true,
+      "alternate_training_task": "r_pick3_via5_to6_short_front",
+      "alternate_waypoint_recomputed": {
+        "passed": false,
+        "reason": "required route not reached",
+        "samples": 280,
+        "reached_route": false,
+        "crossed_avoided": true
+      },
+      "full_joint_reward_verified": false,
+      "scope": "Waypoint-only recheck; goal and object final orientation not independently available"
+    },
+    {
+      "task_id": "r_pick3_via4_to6_long_front",
+      "episode_id": 31,
+      "initial_z_basis": "first recorded route sample; native _route_initial_z is not separately saved",
+      "source_report": {
+        "passed": true,
+        "reason": "ok",
+        "samples": 273,
+        "reached_route": true,
+        "crossed_avoided": false
+      },
+      "factual_recomputed": {
+        "passed": true,
+        "reason": "ok",
+        "samples": 273,
+        "reached_route": true,
+        "crossed_avoided": false
+      },
+      "source_report_equal_recomputed": true,
+      "alternate_training_task": "r_pick3_via5_to6_short_front",
+      "alternate_waypoint_recomputed": {
+        "passed": false,
+        "reason": "required route not reached",
+        "samples": 273,
+        "reached_route": false,
+        "crossed_avoided": true
+      },
+      "full_joint_reward_verified": false,
+      "scope": "Waypoint-only recheck; goal and object final orientation not independently available"
+    },
+    {
+      "task_id": "r_pick3_via4_to6_long_front",
+      "episode_id": 32,
+      "initial_z_basis": "first recorded route sample; native _route_initial_z is not separately saved",
+      "source_report": {
+        "passed": true,
+        "reason": "ok",
+        "samples": 276,
+        "reached_route": true,
+        "crossed_avoided": false
+      },
+      "factual_recomputed": {
+        "passed": true,
+        "reason": "ok",
+        "samples": 276,
+        "reached_route": true,
+        "crossed_avoided": false
+      },
+      "source_report_equal_recomputed": true,
+      "alternate_training_task": "r_pick3_via5_to6_short_front",
+      "alternate_waypoint_recomputed": {
+        "passed": false,
+        "reason": "required route not reached",
+        "samples": 276,
+        "reached_route": false,
+        "crossed_avoided": true
+      },
+      "full_joint_reward_verified": false,
+      "scope": "Waypoint-only recheck; goal and object final orientation not independently available"
+    },
+    {
+      "task_id": "r_pick3_via4_to6_long_front",
+      "episode_id": 33,
+      "initial_z_basis": "first recorded route sample; native _route_initial_z is not separately saved",
+      "source_report": {
+        "passed": true,
+        "reason": "ok",
+        "samples": 272,
+        "reached_route": true,
+        "crossed_avoided": false
+      },
+      "factual_recomputed": {
+        "passed": true,
+        "reason": "ok",
+        "samples": 272,
+        "reached_route": true,
+        "crossed_avoided": false
+      },
+      "source_report_equal_recomputed": true,
+      "alternate_training_task": "r_pick3_via5_to6_short_front",
+      "alternate_waypoint_recomputed": {
+        "passed": false,
+        "reason": "required route not reached",
+        "samples": 272,
+        "reached_route": false,
+        "crossed_avoided": true
+      },
+      "full_joint_reward_verified": false,
+      "scope": "Waypoint-only recheck; goal and object final orientation not independently available"
+    },
+    {
+      "task_id": "r_pick3_via4_to6_long_front",
+      "episode_id": 34,
+      "initial_z_basis": "first recorded route sample; native _route_initial_z is not separately saved",
+      "source_report": {
+        "passed": true,
+        "reason": "ok",
+        "samples": 264,
+        "reached_route": true,
+        "crossed_avoided": false
+      },
+      "factual_recomputed": {
+        "passed": true,
+        "reason": "ok",
+        "samples": 264,
+        "reached_route": true,
+        "crossed_avoided": false
+      },
+      "source_report_equal_recomputed": true,
+      "alternate_training_task": "r_pick3_via5_to6_short_front",
+      "alternate_waypoint_recomputed": {
+        "passed": false,
+        "reason": "required route not reached",
+        "samples": 264,
+        "reached_route": false,
+        "crossed_avoided": true
+      },
+      "full_joint_reward_verified": false,
+      "scope": "Waypoint-only recheck; goal and object final orientation not independently available"
+    },
+    {
+      "task_id": "r_pick3_via4_to6_long_front",
+      "episode_id": 35,
+      "initial_z_basis": "first recorded route sample; native _route_initial_z is not separately saved",
+      "source_report": {
+        "passed": true,
+        "reason": "ok",
+        "samples": 277,
+        "reached_route": true,
+        "crossed_avoided": false
+      },
+      "factual_recomputed": {
+        "passed": true,
+        "reason": "ok",
+        "samples": 277,
+        "reached_route": true,
+        "crossed_avoided": false
+      },
+      "source_report_equal_recomputed": true,
+      "alternate_training_task": "r_pick3_via5_to6_short_front",
+      "alternate_waypoint_recomputed": {
+        "passed": false,
+        "reason": "required route not reached",
+        "samples": 277,
+        "reached_route": false,
+        "crossed_avoided": true
+      },
+      "full_joint_reward_verified": false,
+      "scope": "Waypoint-only recheck; goal and object final orientation not independently available"
+    },
+    {
+      "task_id": "r_pick3_via4_to6_long_front",
+      "episode_id": 36,
+      "initial_z_basis": "first recorded route sample; native _route_initial_z is not separately saved",
+      "source_report": {
+        "passed": true,
+        "reason": "ok",
+        "samples": 266,
+        "reached_route": true,
+        "crossed_avoided": false
+      },
+      "factual_recomputed": {
+        "passed": true,
+        "reason": "ok",
+        "samples": 266,
+        "reached_route": true,
+        "crossed_avoided": false
+      },
+      "source_report_equal_recomputed": true,
+      "alternate_training_task": "r_pick3_via5_to6_short_front",
+      "alternate_waypoint_recomputed": {
+        "passed": false,
+        "reason": "required route not reached",
+        "samples": 266,
+        "reached_route": false,
+        "crossed_avoided": true
+      },
+      "full_joint_reward_verified": false,
+      "scope": "Waypoint-only recheck; goal and object final orientation not independently available"
+    },
+    {
+      "task_id": "r_pick3_via4_to6_long_front",
+      "episode_id": 37,
+      "initial_z_basis": "first recorded route sample; native _route_initial_z is not separately saved",
+      "source_report": {
+        "passed": true,
+        "reason": "ok",
+        "samples": 258,
+        "reached_route": true,
+        "crossed_avoided": false
+      },
+      "factual_recomputed": {
+        "passed": true,
+        "reason": "ok",
+        "samples": 258,
+        "reached_route": true,
+        "crossed_avoided": false
+      },
+      "source_report_equal_recomputed": true,
+      "alternate_training_task": "r_pick3_via5_to6_short_front",
+      "alternate_waypoint_recomputed": {
+        "passed": false,
+        "reason": "required route not reached",
+        "samples": 258,
+        "reached_route": false,
+        "crossed_avoided": true
+      },
+      "full_joint_reward_verified": false,
+      "scope": "Waypoint-only recheck; goal and object final orientation not independently available"
+    },
+    {
+      "task_id": "r_pick3_via4_to6_long_front",
+      "episode_id": 38,
+      "initial_z_basis": "first recorded route sample; native _route_initial_z is not separately saved",
+      "source_report": {
+        "passed": true,
+        "reason": "ok",
+        "samples": 271,
+        "reached_route": true,
+        "crossed_avoided": false
+      },
+      "factual_recomputed": {
+        "passed": true,
+        "reason": "ok",
+        "samples": 271,
+        "reached_route": true,
+        "crossed_avoided": false
+      },
+      "source_report_equal_recomputed": true,
+      "alternate_training_task": "r_pick3_via5_to6_short_front",
+      "alternate_waypoint_recomputed": {
+        "passed": false,
+        "reason": "required route not reached",
+        "samples": 271,
+        "reached_route": false,
+        "crossed_avoided": true
+      },
+      "full_joint_reward_verified": false,
+      "scope": "Waypoint-only recheck; goal and object final orientation not independently available"
+    },
+    {
+      "task_id": "r_pick3_via4_to6_long_front",
+      "episode_id": 39,
+      "initial_z_basis": "first recorded route sample; native _route_initial_z is not separately saved",
+      "source_report": {
+        "passed": true,
+        "reason": "ok",
+        "samples": 262,
+        "reached_route": true,
+        "crossed_avoided": false
+      },
+      "factual_recomputed": {
+        "passed": true,
+        "reason": "ok",
+        "samples": 262,
+        "reached_route": true,
+        "crossed_avoided": false
+      },
+      "source_report_equal_recomputed": true,
+      "alternate_training_task": "r_pick3_via5_to6_short_front",
+      "alternate_waypoint_recomputed": {
+        "passed": false,
+        "reason": "required route not reached",
+        "samples": 262,
+        "reached_route": false,
+        "crossed_avoided": true
+      },
+      "full_joint_reward_verified": false,
+      "scope": "Waypoint-only recheck; goal and object final orientation not independently available"
+    },
+    {
+      "task_id": "r_pick3_via4_to6_long_front",
+      "episode_id": 40,
+      "initial_z_basis": "first recorded route sample; native _route_initial_z is not separately saved",
+      "source_report": {
+        "passed": true,
+        "reason": "ok",
+        "samples": 263,
+        "reached_route": true,
+        "crossed_avoided": false
+      },
+      "factual_recomputed": {
+        "passed": true,
+        "reason": "ok",
+        "samples": 263,
+        "reached_route": true,
+        "crossed_avoided": false
+      },
+      "source_report_equal_recomputed": true,
+      "alternate_training_task": "r_pick3_via5_to6_short_front",
+      "alternate_waypoint_recomputed": {
+        "passed": false,
+        "reason": "required route not reached",
+        "samples": 263,
+        "reached_route": false,
+        "crossed_avoided": true
+      },
+      "full_joint_reward_verified": false,
+      "scope": "Waypoint-only recheck; goal and object final orientation not independently available"
+    },
+    {
+      "task_id": "r_pick3_via4_to6_long_front",
+      "episode_id": 41,
+      "initial_z_basis": "first recorded route sample; native _route_initial_z is not separately saved",
+      "source_report": {
+        "passed": true,
+        "reason": "ok",
+        "samples": 271,
+        "reached_route": true,
+        "crossed_avoided": false
+      },
+      "factual_recomputed": {
+        "passed": true,
+        "reason": "ok",
+        "samples": 271,
+        "reached_route": true,
+        "crossed_avoided": false
+      },
+      "source_report_equal_recomputed": true,
+      "alternate_training_task": "r_pick3_via5_to6_short_front",
+      "alternate_waypoint_recomputed": {
+        "passed": false,
+        "reason": "required route not reached",
+        "samples": 271,
+        "reached_route": false,
+        "crossed_avoided": true
+      },
+      "full_joint_reward_verified": false,
+      "scope": "Waypoint-only recheck; goal and object final orientation not independently available"
+    },
+    {
+      "task_id": "r_pick3_via4_to6_long_front",
+      "episode_id": 42,
+      "initial_z_basis": "first recorded route sample; native _route_initial_z is not separately saved",
+      "source_report": {
+        "passed": true,
+        "reason": "ok",
+        "samples": 262,
+        "reached_route": true,
+        "crossed_avoided": false
+      },
+      "factual_recomputed": {
+        "passed": true,
+        "reason": "ok",
+        "samples": 262,
+        "reached_route": true,
+        "crossed_avoided": false
+      },
+      "source_report_equal_recomputed": true,
+      "alternate_training_task": "r_pick3_via5_to6_short_front",
+      "alternate_waypoint_recomputed": {
+        "passed": false,
+        "reason": "required route not reached",
+        "samples": 262,
+        "reached_route": false,
+        "crossed_avoided": true
+      },
+      "full_joint_reward_verified": false,
+      "scope": "Waypoint-only recheck; goal and object final orientation not independently available"
+    },
+    {
+      "task_id": "r_pick3_via4_to6_long_front",
+      "episode_id": 43,
+      "initial_z_basis": "first recorded route sample; native _route_initial_z is not separately saved",
+      "source_report": {
+        "passed": true,
+        "reason": "ok",
+        "samples": 269,
+        "reached_route": true,
+        "crossed_avoided": false
+      },
+      "factual_recomputed": {
+        "passed": true,
+        "reason": "ok",
+        "samples": 269,
+        "reached_route": true,
+        "crossed_avoided": false
+      },
+      "source_report_equal_recomputed": true,
+      "alternate_training_task": "r_pick3_via5_to6_short_front",
+      "alternate_waypoint_recomputed": {
+        "passed": false,
+        "reason": "required route not reached",
+        "samples": 269,
+        "reached_route": false,
+        "crossed_avoided": true
+      },
+      "full_joint_reward_verified": false,
+      "scope": "Waypoint-only recheck; goal and object final orientation not independently available"
+    },
+    {
+      "task_id": "r_pick3_via4_to6_long_front",
+      "episode_id": 44,
+      "initial_z_basis": "first recorded route sample; native _route_initial_z is not separately saved",
+      "source_report": {
+        "passed": true,
+        "reason": "ok",
+        "samples": 258,
+        "reached_route": true,
+        "crossed_avoided": false
+      },
+      "factual_recomputed": {
+        "passed": true,
+        "reason": "ok",
+        "samples": 258,
+        "reached_route": true,
+        "crossed_avoided": false
+      },
+      "source_report_equal_recomputed": true,
+      "alternate_training_task": "r_pick3_via5_to6_short_front",
+      "alternate_waypoint_recomputed": {
+        "passed": false,
+        "reason": "required route not reached",
+        "samples": 258,
+        "reached_route": false,
+        "crossed_avoided": true
+      },
+      "full_joint_reward_verified": false,
+      "scope": "Waypoint-only recheck; goal and object final orientation not independently available"
+    },
+    {
+      "task_id": "r_pick3_via4_to6_long_front",
+      "episode_id": 45,
+      "initial_z_basis": "first recorded route sample; native _route_initial_z is not separately saved",
+      "source_report": {
+        "passed": true,
+        "reason": "ok",
+        "samples": 276,
+        "reached_route": true,
+        "crossed_avoided": false
+      },
+      "factual_recomputed": {
+        "passed": true,
+        "reason": "ok",
+        "samples": 276,
+        "reached_route": true,
+        "crossed_avoided": false
+      },
+      "source_report_equal_recomputed": true,
+      "alternate_training_task": "r_pick3_via5_to6_short_front",
+      "alternate_waypoint_recomputed": {
+        "passed": false,
+        "reason": "required route not reached",
+        "samples": 276,
+        "reached_route": false,
+        "crossed_avoided": true
+      },
+      "full_joint_reward_verified": false,
+      "scope": "Waypoint-only recheck; goal and object final orientation not independently available"
+    },
+    {
+      "task_id": "r_pick3_via4_to6_long_front",
+      "episode_id": 46,
+      "initial_z_basis": "first recorded route sample; native _route_initial_z is not separately saved",
+      "source_report": {
+        "passed": true,
+        "reason": "ok",
+        "samples": 263,
+        "reached_route": true,
+        "crossed_avoided": false
+      },
+      "factual_recomputed": {
+        "passed": true,
+        "reason": "ok",
+        "samples": 263,
+        "reached_route": true,
+        "crossed_avoided": false
+      },
+      "source_report_equal_recomputed": true,
+      "alternate_training_task": "r_pick3_via5_to6_short_front",
+      "alternate_waypoint_recomputed": {
+        "passed": false,
+        "reason": "required route not reached",
+        "samples": 263,
+        "reached_route": false,
+        "crossed_avoided": true
+      },
+      "full_joint_reward_verified": false,
+      "scope": "Waypoint-only recheck; goal and object final orientation not independently available"
+    },
+    {
+      "task_id": "r_pick3_via4_to6_long_front",
+      "episode_id": 47,
+      "initial_z_basis": "first recorded route sample; native _route_initial_z is not separately saved",
+      "source_report": {
+        "passed": true,
+        "reason": "ok",
+        "samples": 265,
+        "reached_route": true,
+        "crossed_avoided": false
+      },
+      "factual_recomputed": {
+        "passed": true,
+        "reason": "ok",
+        "samples": 265,
+        "reached_route": true,
+        "crossed_avoided": false
+      },
+      "source_report_equal_recomputed": true,
+      "alternate_training_task": "r_pick3_via5_to6_short_front",
+      "alternate_waypoint_recomputed": {
+        "passed": false,
+        "reason": "required route not reached",
+        "samples": 265,
+        "reached_route": false,
+        "crossed_avoided": true
+      },
+      "full_joint_reward_verified": false,
+      "scope": "Waypoint-only recheck; goal and object final orientation not independently available"
+    },
+    {
+      "task_id": "r_pick3_via4_to6_long_front",
+      "episode_id": 48,
+      "initial_z_basis": "first recorded route sample; native _route_initial_z is not separately saved",
+      "source_report": {
+        "passed": true,
+        "reason": "ok",
+        "samples": 272,
+        "reached_route": true,
+        "crossed_avoided": false
+      },
+      "factual_recomputed": {
+        "passed": true,
+        "reason": "ok",
+        "samples": 272,
+        "reached_route": true,
+        "crossed_avoided": false
+      },
+      "source_report_equal_recomputed": true,
+      "alternate_training_task": "r_pick3_via5_to6_short_front",
+      "alternate_waypoint_recomputed": {
+        "passed": false,
+        "reason": "required route not reached",
+        "samples": 272,
+        "reached_route": false,
+        "crossed_avoided": true
+      },
+      "full_joint_reward_verified": false,
+      "scope": "Waypoint-only recheck; goal and object final orientation not independently available"
+    },
+    {
+      "task_id": "r_pick3_via4_to6_long_front",
+      "episode_id": 49,
+      "initial_z_basis": "first recorded route sample; native _route_initial_z is not separately saved",
+      "source_report": {
+        "passed": true,
+        "reason": "ok",
+        "samples": 265,
+        "reached_route": true,
+        "crossed_avoided": false
+      },
+      "factual_recomputed": {
+        "passed": true,
+        "reason": "ok",
+        "samples": 265,
+        "reached_route": true,
+        "crossed_avoided": false
+      },
+      "source_report_equal_recomputed": true,
+      "alternate_training_task": "r_pick3_via5_to6_short_front",
+      "alternate_waypoint_recomputed": {
+        "passed": false,
+        "reason": "required route not reached",
+        "samples": 265,
+        "reached_route": false,
+        "crossed_avoided": true
+      },
+      "full_joint_reward_verified": false,
+      "scope": "Waypoint-only recheck; goal and object final orientation not independently available"
+    }
+  ],
+  "script_sha256": "1d038538ed927410c72d17ff70937beecffc30b98f28d5a720ba4133f05e7b02",
+  "route_function_source_sha256": "6cade4dfa575ed690381f20180b71e39f146e4a128c4e5fa50827eac9ea981ba",
+  "route_recheck_summary": {
+    "training_traces": 50,
+    "reported_recomputed_agreement": 50,
+    "factual_route_pass": 50,
+    "alternate_route_fail": 50,
+    "independent_complete_reward_labels": 0
+  },
+  "seed_overlap": {
+    "train_unique": 85,
+    "holdout_unique": 78,
+    "shared_seed_ids": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      53,
+      54,
+      55,
+      57,
+      58,
+      59,
+      60,
+      63,
+      64,
+      65,
+      66,
+      82,
+      85,
+      88,
+      89
+    ],
+    "holdout_episodes_with_seed_seen_in_train": 188,
+    "interpretation": "Declared seed reuse warns against naive task-only split; equality of complete physical states is not proved."
+  },
+  "payload_summary": {
+    "total_frames": 2992,
+    "frame_range": [
+      204,
+      304
+    ],
+    "aligned_sequence_lengths": 12,
+    "finite_joint_vectors": 12,
+    "identity_attributes_verified": 3,
+    "image_samples_decoded": 144,
+    "image_decode_errors": [],
+    "image_dimensions": [
+      [
+        320,
+        240
+      ]
+    ],
+    "dataset_key_signatures": [
+      [
+        "endpose/left_endpose",
+        "endpose/left_gripper",
+        "endpose/right_endpose",
+        "endpose/right_gripper",
+        "joint_action/left_arm",
+        "joint_action/left_gripper",
+        "joint_action/right_arm",
+        "joint_action/right_gripper",
+        "joint_action/vector",
+        "observation/front_camera/cam2world_gl",
+        "observation/front_camera/extrinsic_cv",
+        "observation/front_camera/intrinsic_cv",
+        "observation/front_camera/rgb",
+        "observation/head_camera/cam2world_gl",
+        "observation/head_camera/extrinsic_cv",
+        "observation/head_camera/intrinsic_cv",
+        "observation/head_camera/rgb",
+        "observation/left_camera/cam2world_gl",
+        "observation/left_camera/extrinsic_cv",
+        "observation/left_camera/intrinsic_cv",
+        "observation/left_camera/rgb",
+        "observation/right_camera/cam2world_gl",
+        "observation/right_camera/extrinsic_cv",
+        "observation/right_camera/intrinsic_cv",
+        "observation/right_camera/rgb",
+        "pointcloud"
+      ]
+    ],
+    "object_pose_dataset_keys": [],
+    "pointcloud_shapes": [
+      [
+        209,
+        0
+      ],
+      [
+        207,
+        0
+      ],
+      [
+        204,
+        0
+      ],
+      [
+        244,
+        0
+      ],
+      [
+        246,
+        0
+      ],
+      [
+        248,
+        0
+      ],
+      [
+        272,
+        0
+      ],
+      [
+        269,
+        0
+      ],
+      [
+        265,
+        0
+      ],
+      [
+        229,
+        0
+      ],
+      [
+        295,
+        0
+      ],
+      [
+        304,
+        0
+      ]
+    ],
+    "duplicate_initial_image_groups": [
+      {
+        "camera": "observation/front_camera/rgb",
+        "sha256": "24651647255cafbe966dda83a1c5659ed449fd2634c1a88428ba436712e3297c",
+        "episodes": [
+          [
+            "r_pick2_via4_to6_short_front",
+            0
+          ],
+          [
+            "r_pick2_via5_to6_long_front",
+            0
+          ],
+          [
+            "r_pick3_via5_to6_short_front",
+            0
+          ]
+        ]
+      },
+      {
+        "camera": "observation/head_camera/rgb",
+        "sha256": "a4cf1881a2d11597919388172753e928e908b64438aeec9b3ac178c7a527aaf8",
+        "episodes": [
+          [
+            "r_pick2_via4_to6_short_front",
+            0
+          ],
+          [
+            "r_pick2_via5_to6_long_front",
+            0
+          ],
+          [
+            "r_pick3_via5_to6_short_front",
+            0
+          ]
+        ]
+      },
+      {
+        "camera": "observation/left_camera/rgb",
+        "sha256": "d0187288938b96ab57dfb929ae1c252fd271300a8279621b28fc70acbc312fe8",
+        "episodes": [
+          [
+            "r_pick2_via4_to6_short_front",
+            0
+          ],
+          [
+            "r_pick2_via5_to6_long_front",
+            0
+          ],
+          [
+            "r_pick3_via5_to6_short_front",
+            0
+          ]
+        ]
+      },
+      {
+        "camera": "observation/right_camera/rgb",
+        "sha256": "9554014e30f10d5508884bc80e6a827f155a2fa006bd80c10330845ae986bfeb",
+        "episodes": [
+          [
+            "r_pick2_via4_to6_short_front",
+            0
+          ],
+          [
+            "r_pick2_via5_to6_long_front",
+            0
+          ],
+          [
+            "r_pick3_via5_to6_short_front",
+            0
+          ]
+        ]
+      }
+    ]
+  },
+  "instruction_summary": {
+    "files_read": 200,
+    "unique_seen_texts": 12,
+    "unseen_text_entries": 0,
+    "variants_per_file": [
+      3
+    ]
+  }
+}

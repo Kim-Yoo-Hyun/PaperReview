@@ -1,0 +1,5622 @@
+{
+  "sample_ids_fixed_before_inspection": [
+    0,
+    24,
+    49
+  ],
+  "episodes": [
+    {
+      "task_id": "r_pick2_via4_to6_short_front",
+      "episode_id": 0,
+      "partition": "train",
+      "hdf5_file": {
+        "path": "scene3/scene3_r_pick2_via4_to6_short_front/data/episode0.hdf5",
+        "url": "https://huggingface.co/datasets/AutoLab-SJTU/robofollow-data/resolve/bbb1e266ed585f1557773de5a3f1e3b4cd944f97/scene3/scene3_r_pick2_via4_to6_short_front/data/episode0.hdf5",
+        "bytes": 12580581,
+        "sha256": "ffd94b38ac667edf8d8b0cca5fa1a5383ba0475aeb3a9e428b477b98fcb0e846"
+      },
+      "hdf5": {
+        "datasets": {
+          "endpose/left_endpose": {
+            "shape": [
+              209,
+              7
+            ],
+            "dtype": "float64",
+            "finite": true,
+            "sha256": "3813b105f6e7438d1989291901e6048bd11a8ec66809828679675eb893192c73"
+          },
+          "endpose/left_gripper": {
+            "shape": [
+              209
+            ],
+            "dtype": "float64",
+            "finite": true,
+            "sha256": "04c4afd44f0b98ccda2ac5e17331a9830b50c912e233681001a501b544bc5674"
+          },
+          "endpose/right_endpose": {
+            "shape": [
+              209,
+              7
+            ],
+            "dtype": "float64",
+            "finite": true,
+            "sha256": "31b218a6c53751836340bf0035d63d8ad67a27f1657d1c74d5409bf44fc85004"
+          },
+          "endpose/right_gripper": {
+            "shape": [
+              209
+            ],
+            "dtype": "float64",
+            "finite": true,
+            "sha256": "ee8a6ec28ab46204c657dd62e537f1fa1df6f483191472bef61be70ef74fa209"
+          },
+          "joint_action/left_arm": {
+            "shape": [
+              209,
+              6
+            ],
+            "dtype": "float64",
+            "finite": true,
+            "sha256": "40ea690c34fdde8295df4c9bc7f148a68290875bc79e0909c3ee2a4791cd88a8"
+          },
+          "joint_action/left_gripper": {
+            "shape": [
+              209
+            ],
+            "dtype": "float64",
+            "finite": true,
+            "sha256": "04c4afd44f0b98ccda2ac5e17331a9830b50c912e233681001a501b544bc5674"
+          },
+          "joint_action/right_arm": {
+            "shape": [
+              209,
+              6
+            ],
+            "dtype": "float64",
+            "finite": true,
+            "sha256": "9c51c3fb9e8dcf408271771ca562f21edc2ba262303ed61bd504f859cdea8e2d"
+          },
+          "joint_action/right_gripper": {
+            "shape": [
+              209
+            ],
+            "dtype": "float64",
+            "finite": true,
+            "sha256": "ee8a6ec28ab46204c657dd62e537f1fa1df6f483191472bef61be70ef74fa209"
+          },
+          "joint_action/vector": {
+            "shape": [
+              209,
+              14
+            ],
+            "dtype": "float64",
+            "finite": true,
+            "sha256": "bd5d806481f0d449be06101f1050bd9c255ae8c020934da282f368e9afd907ce",
+            "first_frame_sha256": "8881b906105a2087fe5e5cd1981ec8df4aeb348817af30d138e31df5bc075214",
+            "first_frame": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ],
+            "last_frame": [
+              -7.127575827325927e-06,
+              -2.09641621040646e-06,
+              -2.906544068537187e-05,
+              -4.623379481927259e-06,
+              -8.21767662273487e-06,
+              -1.0893679700529901e-06,
+              1.0,
+              6.069295068300562e-06,
+              8.76688716289209e-07,
+              -2.0892612155876122e-05,
+              -1.4692142030980904e-05,
+              5.274210252537159e-06,
+              -4.148775587964337e-06,
+              1.0
+            ]
+          },
+          "observation/front_camera/cam2world_gl": {
+            "shape": [
+              209,
+              4,
+              4
+            ],
+            "dtype": "float32",
+            "finite": true,
+            "sha256": "a5a3bcf401532f61350d2acb5a0dfb9c516c2924f32ebfa0dde4ea1da88092ff"
+          },
+          "observation/front_camera/extrinsic_cv": {
+            "shape": [
+              209,
+              3,
+              4
+            ],
+            "dtype": "float32",
+            "finite": true,
+            "sha256": "9767cae00a5fced7748acfc8d64d39466132eab8e8b1c515f63e49043937e412"
+          },
+          "observation/front_camera/intrinsic_cv": {
+            "shape": [
+              209,
+              3,
+              3
+            ],
+            "dtype": "float32",
+            "finite": true,
+            "sha256": "c6c7739be9870f6288336f53c87dc36b23fd0bf59edd0d78c1d1b25da2dcd4ee"
+          },
+          "observation/front_camera/rgb": {
+            "shape": [
+              209
+            ],
+            "dtype": "|S16170"
+          },
+          "observation/head_camera/cam2world_gl": {
+            "shape": [
+              209,
+              4,
+              4
+            ],
+            "dtype": "float32",
+            "finite": true,
+            "sha256": "42b6e80d4881be66b39115a109d9706216c3d84a28b95f8c2778a9f3fe280858"
+          },
+          "observation/head_camera/extrinsic_cv": {
+            "shape": [
+              209,
+              3,
+              4
+            ],
+            "dtype": "float32",
+            "finite": true,
+            "sha256": "1d694bb604d002269657983363244b27084ee728af89679f94aee61f178bacef"
+          },
+          "observation/head_camera/intrinsic_cv": {
+            "shape": [
+              209,
+              3,
+              3
+            ],
+            "dtype": "float32",
+            "finite": true,
+            "sha256": "c6c7739be9870f6288336f53c87dc36b23fd0bf59edd0d78c1d1b25da2dcd4ee"
+          },
+          "observation/head_camera/rgb": {
+            "shape": [
+              209
+            ],
+            "dtype": "|S20487"
+          },
+          "observation/left_camera/cam2world_gl": {
+            "shape": [
+              209,
+              4,
+              4
+            ],
+            "dtype": "float32",
+            "finite": true,
+            "sha256": "74576549a18d08bcae908b2cae6176485174bfc716df0dabbd42afcca78c7562"
+          },
+          "observation/left_camera/extrinsic_cv": {
+            "shape": [
+              209,
+              3,
+              4
+            ],
+            "dtype": "float32",
+            "finite": true,
+            "sha256": "708c654f70c3d942c6f52329de0cef482d06dca1e337949007f2cd5fe20b1ad7"
+          },
+          "observation/left_camera/intrinsic_cv": {
+            "shape": [
+              209,
+              3,
+              3
+            ],
+            "dtype": "float32",
+            "finite": true,
+            "sha256": "c6c7739be9870f6288336f53c87dc36b23fd0bf59edd0d78c1d1b25da2dcd4ee"
+          },
+          "observation/left_camera/rgb": {
+            "shape": [
+              209
+            ],
+            "dtype": "|S5873"
+          },
+          "observation/right_camera/cam2world_gl": {
+            "shape": [
+              209,
+              4,
+              4
+            ],
+            "dtype": "float32",
+            "finite": true,
+            "sha256": "5ce81f3232e2381351ed3a5dc846407e0306d72d2742cfb204da966ab5e75d46"
+          },
+          "observation/right_camera/extrinsic_cv": {
+            "shape": [
+              209,
+              3,
+              4
+            ],
+            "dtype": "float32",
+            "finite": true,
+            "sha256": "1ab160bc030e7a97ed51901b750ca90d13d863a83233d6fdd5c7604422d08595"
+          },
+          "observation/right_camera/intrinsic_cv": {
+            "shape": [
+              209,
+              3,
+              3
+            ],
+            "dtype": "float32",
+            "finite": true,
+            "sha256": "c6c7739be9870f6288336f53c87dc36b23fd0bf59edd0d78c1d1b25da2dcd4ee"
+          },
+          "observation/right_camera/rgb": {
+            "shape": [
+              209
+            ],
+            "dtype": "|S16635"
+          },
+          "pointcloud": {
+            "shape": [
+              209,
+              0
+            ],
+            "dtype": "float64",
+            "finite": true,
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        },
+        "attributes": {},
+        "image_decode_checks": {
+          "observation/front_camera/rgb": [
+            {
+              "frame": 0,
+              "size": [
+                320,
+                240
+              ],
+              "mode": "RGB",
+              "encoded_sha256": "1fb2c0c2a518ec858986ba46550db885a94aa25f0c91f57e9c9626f01c3b9ca2",
+              "decoded_sha256": "24651647255cafbe966dda83a1c5659ed449fd2634c1a88428ba436712e3297c"
+            },
+            {
+              "frame": 104,
+              "size": [
+                320,
+                240
+              ],
+              "mode": "RGB",
+              "encoded_sha256": "75ff1c6dc94e4d05cf80849bd692cdeb2ce0c622846f0873924898ef695d43e7",
+              "decoded_sha256": "840f29b7cb8a3a75b6e96e1e3f1599888b21b34259c03bf24f7985105864cc60"
+            },
+            {
+              "frame": 208,
+              "size": [
+                320,
+                240
+              ],
+              "mode": "RGB",
+              "encoded_sha256": "51815630c059b417c8a1906649fcb1c47cb7a8c04ee152772e8b2b4321aedbce",
+              "decoded_sha256": "7157c985d5554e04a4b79802d23bf71dba20fb02b7f8923a8584d77b11d4f85e"
+            }
+          ],
+          "observation/head_camera/rgb": [
+            {
+              "frame": 0,
+              "size": [
+                320,
+                240
+              ],
+              "mode": "RGB",
+              "encoded_sha256": "a1b1a662cded42491b1c43cb937d80be88fdc1e331089e3af91bd42586feb3fc",
+              "decoded_sha256": "a4cf1881a2d11597919388172753e928e908b64438aeec9b3ac178c7a527aaf8"
+            },
+            {
+              "frame": 104,
+              "size": [
+                320,
+                240
+              ],
+              "mode": "RGB",
+              "encoded_sha256": "b1896311dd61b1dd3aa45aca0ff98a69a787eb0b13d0b405ceb1c60621316bd7",
+              "decoded_sha256": "d3f84f8cee7a24c48e1e7bdda290a8cb6dd11cffbc58078745c54c806b803032"
+            },
+            {
+              "frame": 208,
+              "size": [
+                320,
+                240
+              ],
+              "mode": "RGB",
+              "encoded_sha256": "813c9104c89209787eb20942e24b024a44d92cf8103d21336c8f7e48b6a6c9ef",
+              "decoded_sha256": "e69850016a406d1e1563b767a94b36175226038fc4dd02fa755978ea1075441e"
+            }
+          ],
+          "observation/left_camera/rgb": [
+            {
+              "frame": 0,
+              "size": [
+                320,
+                240
+              ],
+              "mode": "RGB",
+              "encoded_sha256": "453a37b15c022b3435dcee066954a9787aa3bcca107eaf12c7d641e8bb2edbd4",
+              "decoded_sha256": "d0187288938b96ab57dfb929ae1c252fd271300a8279621b28fc70acbc312fe8"
+            },
+            {
+              "frame": 104,
+              "size": [
+                320,
+                240
+              ],
+              "mode": "RGB",
+              "encoded_sha256": "45c6624f1b68fbc311468064699e8d9a13f48c384410647b7163a9115308f93b",
+              "decoded_sha256": "dba0e6d84ce078da5fee6a8a0eafcd26b1b89745e70e3ebfa03d9755e4fe5647"
+            },
+            {
+              "frame": 208,
+              "size": [
+                320,
+                240
+              ],
+              "mode": "RGB",
+              "encoded_sha256": "41350898d0f9fcb08afaca03f3091a407b4f8570d7df4eaa5a75dda447353a27",
+              "decoded_sha256": "d716e7f710f329e44115ea823a898362efb84cccee128a2a3463a1d1be15738a"
+            }
+          ],
+          "observation/right_camera/rgb": [
+            {
+              "frame": 0,
+              "size": [
+                320,
+                240
+              ],
+              "mode": "RGB",
+              "encoded_sha256": "2210b09dce996b7d6d6685828f35dde29168981be59184367cff88ddd9264403",
+              "decoded_sha256": "9554014e30f10d5508884bc80e6a827f155a2fa006bd80c10330845ae986bfeb"
+            },
+            {
+              "frame": 104,
+              "size": [
+                320,
+                240
+              ],
+              "mode": "RGB",
+              "encoded_sha256": "7c91c4c5b2ec01a764162c051d5bdd1c60a6ee61d044dee8b481c8d345f265ef",
+              "decoded_sha256": "7892b7cf2b709154820adf1bfd5e0d8cfc0625785b8c4b9d3d8b84f4c973dad4"
+            },
+            {
+              "frame": 208,
+              "size": [
+                320,
+                240
+              ],
+              "mode": "RGB",
+              "encoded_sha256": "9c617a880bca8df3b9080ea33b176d54b8991d3177663330b14d79440f1be852",
+              "decoded_sha256": "bb31c4caf850e7e91d7ab316ac7f9cdc5eece5f88194d46fa96e530b000e43d4"
+            }
+          ]
+        },
+        "time_lengths": [
+          209
+        ]
+      },
+      "planner_file": {
+        "path": "scene3/scene3_r_pick2_via4_to6_short_front/_traj_data/episode0.pkl",
+        "url": "https://huggingface.co/datasets/AutoLab-SJTU/robofollow-data/resolve/bbb1e266ed585f1557773de5a3f1e3b4cd944f97/scene3/scene3_r_pick2_via4_to6_short_front/_traj_data/episode0.pkl",
+        "bytes": 66516,
+        "sha256": "5f6b4786c511f820b4eb09a0c65d20c16b72460cf7c3e6c77b77ffc7b8eb265f"
+      },
+      "planner": {
+        "inspection": "pickletools opcodes only; no deserialization",
+        "strings": [
+          "<",
+          "Success",
+          "_reconstruct",
+          "dtype",
+          "f4",
+          "left_joint_path",
+          "ndarray",
+          "numpy",
+          "numpy.core.multiarray",
+          "position",
+          "right_joint_path",
+          "status",
+          "velocity"
+        ],
+        "global_opcodes": [],
+        "opcode_counts": {
+          "PROTO": 1,
+          "FRAME": 1,
+          "EMPTY_DICT": 6,
+          "MEMOIZE": 88,
+          "MARK": 18,
+          "SHORT_BINUNICODE": 13,
+          "EMPTY_LIST": 2,
+          "STACK_GLOBAL": 3,
+          "BININT1": 38,
+          "TUPLE1": 10,
+          "SHORT_BINBYTES": 1,
+          "TUPLE3": 11,
+          "REDUCE": 11,
+          "TUPLE2": 10,
+          "BINGET": 53,
+          "NEWFALSE": 11,
+          "NEWTRUE": 1,
+          "NONE": 3,
+          "BININT": 2,
+          "TUPLE": 11,
+          "BUILD": 11,
+          "BINBYTES": 10,
+          "SETITEMS": 6,
+          "APPEND": 1,
+          "BININT2": 4,
+          "APPENDS": 1,
+          "STOP": 1
+        }
+      }
+    },
+    {
+      "task_id": "r_pick2_via4_to6_short_front",
+      "episode_id": 24,
+      "partition": "train",
+      "hdf5_file": {
+        "path": "scene3/scene3_r_pick2_via4_to6_short_front/data/episode24.hdf5",
+        "url": "https://huggingface.co/datasets/AutoLab-SJTU/robofollow-data/resolve/bbb1e266ed585f1557773de5a3f1e3b4cd944f97/scene3/scene3_r_pick2_via4_to6_short_front/data/episode24.hdf5",
+        "bytes": 12064372,
+        "sha256": "c935d9d5e23e1cd1603fcccf3e4a1e56a34c99add3e9b48a2965ceada6ee4a9b"
+      },
+      "hdf5": {
+        "datasets": {
+          "endpose/left_endpose": {
+            "shape": [
+              207,
+              7
+            ],
+            "dtype": "float64",
+            "finite": true,
+            "sha256": "3180c25c40eaa6a4c072c10fae0df52eca08411e3b7fa9b440faa26e680aa51d"
+          },
+          "endpose/left_gripper": {
+            "shape": [
+              207
+            ],
+            "dtype": "float64",
+            "finite": true,
+            "sha256": "e07b5c9492a0df061b2dcb10ed3d6d28528bbfe284d6fcff9873003d13b65fff"
+          },
+          "endpose/right_endpose": {
+            "shape": [
+              207,
+              7
+            ],
+            "dtype": "float64",
+            "finite": true,
+            "sha256": "3f2b03fdbe5bb11d1cd97cd60eb1bd09fe7b3ea2ef29a3a4cf8664d18b252882"
+          },
+          "endpose/right_gripper": {
+            "shape": [
+              207
+            ],
+            "dtype": "float64",
+            "finite": true,
+            "sha256": "743784c111250c9490b7db841738e65f4a401ea0a08016ae89c9c1e20926ffb3"
+          },
+          "joint_action/left_arm": {
+            "shape": [
+              207,
+              6
+            ],
+            "dtype": "float64",
+            "finite": true,
+            "sha256": "78de2dfb4e1a17cf7bb4ecd777d6ea8917d26c9f42f0735d2b0dc48f417a13e8"
+          },
+          "joint_action/left_gripper": {
+            "shape": [
+              207
+            ],
+            "dtype": "float64",
+            "finite": true,
+            "sha256": "e07b5c9492a0df061b2dcb10ed3d6d28528bbfe284d6fcff9873003d13b65fff"
+          },
+          "joint_action/right_arm": {
+            "shape": [
+              207,
+              6
+            ],
+            "dtype": "float64",
+            "finite": true,
+            "sha256": "b995d157778da844cae67c6a90616bbf84f25af2b124449e66df2003211f4c9c"
+          },
+          "joint_action/right_gripper": {
+            "shape": [
+              207
+            ],
+            "dtype": "float64",
+            "finite": true,
+            "sha256": "743784c111250c9490b7db841738e65f4a401ea0a08016ae89c9c1e20926ffb3"
+          },
+          "joint_action/vector": {
+            "shape": [
+              207,
+              14
+            ],
+            "dtype": "float64",
+            "finite": true,
+            "sha256": "ca8d0496f3f303b28a00f04c8b4519a23843844086c6a0059554f40ddbbbed9c",
+            "first_frame_sha256": "8881b906105a2087fe5e5cd1981ec8df4aeb348817af30d138e31df5bc075214",
+            "first_frame": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ],
+            "last_frame": [
+              -7.53333040393045e-08,
+              4.2892480678347056e-07,
+              -3.205743632861413e-05,
+              -4.1302970998913224e-07,
+              5.578386463866991e-08,
+              3.072950107707584e-07,
+              1.0,
+              -1.4046956664515164e-07,
+              -1.871416679932736e-05,
+              -2.9298747904249467e-05,
+              -1.9088467524852604e-05,
+              -3.1753440907777986e-06,
+              -4.09028052672511e-06,
+              1.0
+            ]
+          },
+          "observation/front_camera/cam2world_gl": {
+            "shape": [
+              207,
+              4,
+              4
+            ],
+            "dtype": "float32",
+            "finite": true,
+            "sha256": "33ba05c525836616c911c96263741769f798a30c550b5485c7928828af92b057"
+          },
+          "observation/front_camera/extrinsic_cv": {
+            "shape": [
+              207,
+              3,
+              4
+            ],
+            "dtype": "float32",
+            "finite": true,
+            "sha256": "6c9fa74e253fb247b66f5d33d0b4a12a4fd6511ca9f5929b4fd031554c15b9bf"
+          },
+          "observation/front_camera/intrinsic_cv": {
+            "shape": [
+              207,
+              3,
+              3
+            ],
+            "dtype": "float32",
+            "finite": true,
+            "sha256": "8b6901e616f832dd58eabc370ee28665dfc46c81c55e9677536d49ccfd23276a"
+          },
+          "observation/front_camera/rgb": {
+            "shape": [
+              207
+            ],
+            "dtype": "|S16149"
+          },
+          "observation/head_camera/cam2world_gl": {
+            "shape": [
+              207,
+              4,
+              4
+            ],
+            "dtype": "float32",
+            "finite": true,
+            "sha256": "6b0b8276fe3891b8c6b1e4f5d2789d633b19ba8de08ab859cf88d767788a4072"
+          },
+          "observation/head_camera/extrinsic_cv": {
+            "shape": [
+              207,
+              3,
+              4
+            ],
+            "dtype": "float32",
+            "finite": true,
+            "sha256": "41d501c85ed9cda7215049ae25aacf378d4aaf0f1b928400f1317f60fd76729e"
+          },
+          "observation/head_camera/intrinsic_cv": {
+            "shape": [
+              207,
+              3,
+              3
+            ],
+            "dtype": "float32",
+            "finite": true,
+            "sha256": "8b6901e616f832dd58eabc370ee28665dfc46c81c55e9677536d49ccfd23276a"
+          },
+          "observation/head_camera/rgb": {
+            "shape": [
+              207
+            ],
+            "dtype": "|S20134"
+          },
+          "observation/left_camera/cam2world_gl": {
+            "shape": [
+              207,
+              4,
+              4
+            ],
+            "dtype": "float32",
+            "finite": true,
+            "sha256": "098e224af197f21ce4d634d25d97ea38a136ba222a9ea2efc5b7c4cac3db819c"
+          },
+          "observation/left_camera/extrinsic_cv": {
+            "shape": [
+              207,
+              3,
+              4
+            ],
+            "dtype": "float32",
+            "finite": true,
+            "sha256": "4056cba6b346e4256458727aa67ec6857180d141f47acf7b748e59c1668e69ac"
+          },
+          "observation/left_camera/intrinsic_cv": {
+            "shape": [
+              207,
+              3,
+              3
+            ],
+            "dtype": "float32",
+            "finite": true,
+            "sha256": "8b6901e616f832dd58eabc370ee28665dfc46c81c55e9677536d49ccfd23276a"
+          },
+          "observation/left_camera/rgb": {
+            "shape": [
+              207
+            ],
+            "dtype": "|S5860"
+          },
+          "observation/right_camera/cam2world_gl": {
+            "shape": [
+              207,
+              4,
+              4
+            ],
+            "dtype": "float32",
+            "finite": true,
+            "sha256": "f13b6af66018264c1d7a70314683855e8a00f73d1792ee57d5c5ee3434459080"
+          },
+          "observation/right_camera/extrinsic_cv": {
+            "shape": [
+              207,
+              3,
+              4
+            ],
+            "dtype": "float32",
+            "finite": true,
+            "sha256": "bd573dfc1ea364dfa23d00516975c13a327d66e495b0000b5eba5d23284d5b01"
+          },
+          "observation/right_camera/intrinsic_cv": {
+            "shape": [
+              207,
+              3,
+              3
+            ],
+            "dtype": "float32",
+            "finite": true,
+            "sha256": "8b6901e616f832dd58eabc370ee28665dfc46c81c55e9677536d49ccfd23276a"
+          },
+          "observation/right_camera/rgb": {
+            "shape": [
+              207
+            ],
+            "dtype": "|S15109"
+          },
+          "pointcloud": {
+            "shape": [
+              207,
+              0
+            ],
+            "dtype": "float64",
+            "finite": true,
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        },
+        "attributes": {},
+        "image_decode_checks": {
+          "observation/front_camera/rgb": [
+            {
+              "frame": 0,
+              "size": [
+                320,
+                240
+              ],
+              "mode": "RGB",
+              "encoded_sha256": "4672615bb70d3de5b93e65fbf1186bf04343e7e67e3af20b686bd2fa3b43563a",
+              "decoded_sha256": "0ed7bc6a760c1b67b295cf0dd98a111632fceef306434b81b32898c659c51ac0"
+            },
+            {
+              "frame": 103,
+              "size": [
+                320,
+                240
+              ],
+              "mode": "RGB",
+              "encoded_sha256": "df32e3ac2adf5fcb9b49239ae1c761c498bf92551cb09989f3daba509ac06504",
+              "decoded_sha256": "f340119da67d33f61f471935177e20e5a288b1f93d4e9eb53bdc37462b0db31c"
+            },
+            {
+              "frame": 206,
+              "size": [
+                320,
+                240
+              ],
+              "mode": "RGB",
+              "encoded_sha256": "de9b9c2f47968177fdce84f285f52705b22da4b0e2f89ac36d1ca41dd697065f",
+              "decoded_sha256": "e07d301671a8a8e0ea3172d51109805139f7c389665230e6cab1efb4cda09d33"
+            }
+          ],
+          "observation/head_camera/rgb": [
+            {
+              "frame": 0,
+              "size": [
+                320,
+                240
+              ],
+              "mode": "RGB",
+              "encoded_sha256": "8eaa32bd04c182e209de6c1f55805d6807c4bf18248ad50100abe2aeb4504f3a",
+              "decoded_sha256": "3cfe815c62bcf1b22d1e8782486b134864a430a02286c04b15d458487c273e62"
+            },
+            {
+              "frame": 103,
+              "size": [
+                320,
+                240
+              ],
+              "mode": "RGB",
+              "encoded_sha256": "3e06a6990ae7e77489f687872739c0bcc32b3d5c8b383d9d6842be7aa148ce34",
+              "decoded_sha256": "f2176626be3e1286f021fec0ff9c67dc05316a6f490796be46d5d242a51afb1c"
+            },
+            {
+              "frame": 206,
+              "size": [
+                320,
+                240
+              ],
+              "mode": "RGB",
+              "encoded_sha256": "a5d9065daf0e0d47f93ed35abc6e3a56b4389d7c2192b37722cc7a4bba9306a3",
+              "decoded_sha256": "799a38ebc5c564007570f677cbd5e961c5cfbf39dd4b8c5f6a0a0b2b979e71c5"
+            }
+          ],
+          "observation/left_camera/rgb": [
+            {
+              "frame": 0,
+              "size": [
+                320,
+                240
+              ],
+              "mode": "RGB",
+              "encoded_sha256": "6840288b157d0c813998444b4b0666e986764512c6e41bdbde2d6dd8f8395735",
+              "decoded_sha256": "f8ca14aa749a6a1f393627f29b589e61a06c80508e622225a6f36dba29ebf30a"
+            },
+            {
+              "frame": 103,
+              "size": [
+                320,
+                240
+              ],
+              "mode": "RGB",
+              "encoded_sha256": "0d8e0852c06c78ba6ffe41573d4b8ac7df4d8dfa6674639dc7536b87f21f57a3",
+              "decoded_sha256": "019403355f2c91bc93073796a766a5274f98cc2335853d5806fd8d6ce8e37903"
+            },
+            {
+              "frame": 206,
+              "size": [
+                320,
+                240
+              ],
+              "mode": "RGB",
+              "encoded_sha256": "a1caa70af4c62110bd73d4c29afe7d30cf7092e9e2b09910160d2a25cc9f42ae",
+              "decoded_sha256": "4873755216c63155134686abbf08410555e78367691da650452f56f3b7fa5650"
+            }
+          ],
+          "observation/right_camera/rgb": [
+            {
+              "frame": 0,
+              "size": [
+                320,
+                240
+              ],
+              "mode": "RGB",
+              "encoded_sha256": "32d1b5341dee254871b628ed53513a5513e48cd2601d8dce5a18bd8b37fe9e51",
+              "decoded_sha256": "eab9de529f8634950199aaaca916d83efc47f7d49622384abe18cfb8e76ac6d9"
+            },
+            {
+              "frame": 103,
+              "size": [
+                320,
+                240
+              ],
+              "mode": "RGB",
+              "encoded_sha256": "e5fd3206d71253234561318c5f1afff57b9ae8850592e15be44b6f06f4f07ced",
+              "decoded_sha256": "741bf283d44541da58fafe1c0dbbf745c4426a4d587043ce3461c21e2c1df0ae"
+            },
+            {
+              "frame": 206,
+              "size": [
+                320,
+                240
+              ],
+              "mode": "RGB",
+              "encoded_sha256": "54add90276b47ab460e9a08926be8622fef6a3e3aa686b28e63cae3f83569185",
+              "decoded_sha256": "634897469f43f257fcebd5d0ae39c7d428e2ac83d3e7965f2adcfe150cff6758"
+            }
+          ]
+        },
+        "time_lengths": [
+          207
+        ]
+      },
+      "planner_file": {
+        "path": "scene3/scene3_r_pick2_via4_to6_short_front/_traj_data/episode24.pkl",
+        "url": "https://huggingface.co/datasets/AutoLab-SJTU/robofollow-data/resolve/bbb1e266ed585f1557773de5a3f1e3b4cd944f97/scene3/scene3_r_pick2_via4_to6_short_front/_traj_data/episode24.pkl",
+        "bytes": 66516,
+        "sha256": "1b8c397bd3ac907a57b8b6dd96f7a206ce73c00fb04d9d3c08d2295cc0bc752f"
+      },
+      "planner": {
+        "inspection": "pickletools opcodes only; no deserialization",
+        "strings": [
+          "<",
+          "Success",
+          "_reconstruct",
+          "dtype",
+          "f4",
+          "left_joint_path",
+          "ndarray",
+          "numpy",
+          "numpy.core.multiarray",
+          "position",
+          "right_joint_path",
+          "status",
+          "velocity"
+        ],
+        "global_opcodes": [],
+        "opcode_counts": {
+          "PROTO": 1,
+          "FRAME": 1,
+          "EMPTY_DICT": 6,
+          "MEMOIZE": 88,
+          "MARK": 18,
+          "SHORT_BINUNICODE": 13,
+          "EMPTY_LIST": 2,
+          "STACK_GLOBAL": 3,
+          "BININT1": 38,
+          "TUPLE1": 10,
+          "SHORT_BINBYTES": 1,
+          "TUPLE3": 11,
+          "REDUCE": 11,
+          "TUPLE2": 10,
+          "BINGET": 53,
+          "NEWFALSE": 11,
+          "NEWTRUE": 1,
+          "NONE": 3,
+          "BININT": 2,
+          "TUPLE": 11,
+          "BUILD": 11,
+          "BINBYTES": 10,
+          "SETITEMS": 6,
+          "APPEND": 1,
+          "BININT2": 4,
+          "APPENDS": 1,
+          "STOP": 1
+        }
+      }
+    },
+    {
+      "task_id": "r_pick2_via4_to6_short_front",
+      "episode_id": 49,
+      "partition": "train",
+      "hdf5_file": {
+        "path": "scene3/scene3_r_pick2_via4_to6_short_front/data/episode49.hdf5",
+        "url": "https://huggingface.co/datasets/AutoLab-SJTU/robofollow-data/resolve/bbb1e266ed585f1557773de5a3f1e3b4cd944f97/scene3/scene3_r_pick2_via4_to6_short_front/data/episode49.hdf5",
+        "bytes": 12115408,
+        "sha256": "0ce834d4042e7d420954af3a73c308d44d7a975d3dfb5ea6311c98be793d97d0"
+      },
+      "hdf5": {
+        "datasets": {
+          "endpose/left_endpose": {
+            "shape": [
+              204,
+              7
+            ],
+            "dtype": "float64",
+            "finite": true,
+            "sha256": "df5e845bc1e9913c0899944a1b408e3b4f8135b441061e2a7aabb3d89ca33f5e"
+          },
+          "endpose/left_gripper": {
+            "shape": [
+              204
+            ],
+            "dtype": "float64",
+            "finite": true,
+            "sha256": "26e113ace8c72ea6c21ca0f61e3962af2a6606d0ddd55115741c40d00bbb7d88"
+          },
+          "endpose/right_endpose": {
+            "shape": [
+              204,
+              7
+            ],
+            "dtype": "float64",
+            "finite": true,
+            "sha256": "86286cf571b2acebcfc8408e04f5be4cfa61bee50698ef1d8d7d7ba76bc6b6d6"
+          },
+          "endpose/right_gripper": {
+            "shape": [
+              204
+            ],
+            "dtype": "float64",
+            "finite": true,
+            "sha256": "9d6f9c883d5d787b641306ed9fb7c8ddd03c25234624387e355a017b34c5ffa6"
+          },
+          "joint_action/left_arm": {
+            "shape": [
+              204,
+              6
+            ],
+            "dtype": "float64",
+            "finite": true,
+            "sha256": "fdb21af40389fad397bac238928f132da48784576ab73bb4420535880a1e50e4"
+          },
+          "joint_action/left_gripper": {
+            "shape": [
+              204
+            ],
+            "dtype": "float64",
+            "finite": true,
+            "sha256": "26e113ace8c72ea6c21ca0f61e3962af2a6606d0ddd55115741c40d00bbb7d88"
+          },
+          "joint_action/right_arm": {
+            "shape": [
+              204,
+              6
+            ],
+            "dtype": "float64",
+            "finite": true,
+            "sha256": "7288b66ae6f38185e0a0f389ff0936eb43c670830da629e84287d2d42672e88a"
+          },
+          "joint_action/right_gripper": {
+            "shape": [
+              204
+            ],
+            "dtype": "float64",
+            "finite": true,
+            "sha256": "9d6f9c883d5d787b641306ed9fb7c8ddd03c25234624387e355a017b34c5ffa6"
+          },
+          "joint_action/vector": {
+            "shape": [
+              204,
+              14
+            ],
+            "dtype": "float64",
+            "finite": true,
+            "sha256": "e6cebc22a5117870b0a4d351596f07b98c815344b05580da0b2f1cd7a30df8fc",
+            "first_frame_sha256": "8881b906105a2087fe5e5cd1981ec8df4aeb348817af30d138e31df5bc075214",
+            "first_frame": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ],
+            "last_frame": [
+              -7.53333040393045e-08,
+              4.2892480678347056e-07,
+              -3.205743632861413e-05,
+              -4.1302970998913224e-07,
+              5.578386463866991e-08,
+              3.072950107707584e-07,
+              1.0,
+              -2.1234274754533544e-05,
+              -1.2716937817458529e-05,
+              -2.538438275223598e-05,
+              -2.118134216289036e-05,
+              -2.6663599783205427e-05,
+              7.677236681047361e-06,
+              1.0
+            ]
+          },
+          "observation/front_camera/cam2world_gl": {
+            "shape": [
+              204,
+              4,
+              4
+            ],
+            "dtype": "float32",
+            "finite": true,
+            "sha256": "5d8e53ec721a2d3a9985f6de6372fd133023e1aa787aceb1f24d2ceb105e9fcc"
+          },
+          "observation/front_camera/extrinsic_cv": {
+            "shape": [
+              204,
+              3,
+              4
+            ],
+            "dtype": "float32",
+            "finite": true,
+            "sha256": "24c99e28dfc82ff4e103b40690359f67e7bf12254e0bb68501cd6675c6d8b9d3"
+          },
+          "observation/front_camera/intrinsic_cv": {
+            "shape": [
+              204,
+              3,
+              3
+            ],
+            "dtype": "float32",
+            "finite": true,
+            "sha256": "a6ad1bdb8da20735e0c4462a9cbb5f90b8ebc3c54f5f70f3acc78b260d27f5db"
+          },
+          "observation/front_camera/rgb": {
+            "shape": [
+              204
+            ],
+            "dtype": "|S16144"
+          },
+          "observation/head_camera/cam2world_gl": {
+            "shape": [
+              204,
+              4,
+              4
+            ],
+            "dtype": "float32",
+            "finite": true,
+            "sha256": "e9128826392c51473ea044483105a0b7c55453714be406e21d106c52f25dbfd7"
+          },
+          "observation/head_camera/extrinsic_cv": {
+            "shape": [
+              204,
+              3,
+              4
+            ],
+            "dtype": "float32",
+            "finite": true,
+            "sha256": "6090458c5255e123c0b1fb4fc0438b17447881bc00cc4528c0f7f849e8bd90a3"
+          },
+          "observation/head_camera/intrinsic_cv": {
+            "shape": [
+              204,
+              3,
+              3
+            ],
+            "dtype": "float32",
+            "finite": true,
+            "sha256": "a6ad1bdb8da20735e0c4462a9cbb5f90b8ebc3c54f5f70f3acc78b260d27f5db"
+          },
+          "observation/head_camera/rgb": {
+            "shape": [
+              204
+            ],
+            "dtype": "|S19880"
+          },
+          "observation/left_camera/cam2world_gl": {
+            "shape": [
+              204,
+              4,
+              4
+            ],
+            "dtype": "float32",
+            "finite": true,
+            "sha256": "e4eeb420e22fce872e32dc949eb468242e9aa94b5a2735cd0e9a151d96270d38"
+          },
+          "observation/left_camera/extrinsic_cv": {
+            "shape": [
+              204,
+              3,
+              4
+            ],
+            "dtype": "float32",
+            "finite": true,
+            "sha256": "4e6d91199022bf35f793ca0b26a0ef094cae438423ffcc0dd94a9cd36faabb42"
+          },
+          "observation/left_camera/intrinsic_cv": {
+            "shape": [
+              204,
+              3,
+              3
+            ],
+            "dtype": "float32",
+            "finite": true,
+            "sha256": "a6ad1bdb8da20735e0c4462a9cbb5f90b8ebc3c54f5f70f3acc78b260d27f5db"
+          },
+          "observation/left_camera/rgb": {
+            "shape": [
+              204
+            ],
+            "dtype": "|S5861"
+          },
+          "observation/right_camera/cam2world_gl": {
+            "shape": [
+              204,
+              4,
+              4
+            ],
+            "dtype": "float32",
+            "finite": true,
+            "sha256": "af2ceca825d6aa42cefe1f6bdcbbc027263c92cce4cb7be7937d8d0cdb824273"
+          },
+          "observation/right_camera/extrinsic_cv": {
+            "shape": [
+              204,
+              3,
+              4
+            ],
+            "dtype": "float32",
+            "finite": true,
+            "sha256": "0e7ddfdd5042ac13d2c710c6871afd5243e07d218a4534dd16d24757d3510056"
+          },
+          "observation/right_camera/intrinsic_cv": {
+            "shape": [
+              204,
+              3,
+              3
+            ],
+            "dtype": "float32",
+            "finite": true,
+            "sha256": "a6ad1bdb8da20735e0c4462a9cbb5f90b8ebc3c54f5f70f3acc78b260d27f5db"
+          },
+          "observation/right_camera/rgb": {
+            "shape": [
+              204
+            ],
+            "dtype": "|S16473"
+          },
+          "pointcloud": {
+            "shape": [
+              204,
+              0
+            ],
+            "dtype": "float64",
+            "finite": true,
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        },
+        "attributes": {},
+        "image_decode_checks": {
+          "observation/front_camera/rgb": [
+            {
+              "frame": 0,
+              "size": [
+                320,
+                240
+              ],
+              "mode": "RGB",
+              "encoded_sha256": "01584861c35e036b3d9a646f3b0d3b20497431e411291a8440febb50d63037b8",
+              "decoded_sha256": "8e2d87f751439e91a1ef39bcf19ebe7ebccea01df2a9679e8bc23a6a1b93d802"
+            },
+            {
+              "frame": 102,
+              "size": [
+                320,
+                240
+              ],
+              "mode": "RGB",
+              "encoded_sha256": "6457ed9ff7c77d550df4e16968e4aba3c6d43d9c203dc4908ab236da2a0b8c08",
+              "decoded_sha256": "14b032b3f9628700d9007b58bb5d3e11c6d81e3a2cc562e9ec759a1e1a200a8c"
+            },
+            {
+              "frame": 203,
+              "size": [
+                320,
+                240
+              ],
+              "mode": "RGB",
+              "encoded_sha256": "4867a008a34b69e27086c10865af8c894c098cce4ae4267a7e51183787b560e4",
+              "decoded_sha256": "21b6e0d663e2bfca2f3d55c5042972d2af0153ae69105c887f905ea2c63641cb"
+            }
+          ],
+          "observation/head_camera/rgb": [
+            {
+              "frame": 0,
+              "size": [
+                320,
+                240
+              ],
+              "mode": "RGB",
+              "encoded_sha256": "26c8949436b065c2a160a94d199e99653ced5f3158cf1bd49f19353b6ba781a9",
+              "decoded_sha256": "be7920df56ca07724c1ae75a5552bcb5985678b69801619820517393100c460d"
+            },
+            {
+              "frame": 102,
+              "size": [
+                320,
+                240
+              ],
+              "mode": "RGB",
+              "encoded_sha256": "8c16ee6927c0f3837519217d7d5cacd36f9222983118e728f82b3d047bfef889",
+              "decoded_sha256": "8e509a44693520d1c79462e1bb4f12bbd147c8c23f6001176e0c28c1a86d0e02"
+            },
+            {
+              "frame": 203,
+              "size": [
+                320,
+                240
+              ],
+              "mode": "RGB",
+              "encoded_sha256": "ab81b5acc5c795a24bfd0185b93dd54fa92755e197d92e525f99da4f8196c594",
+              "decoded_sha256": "53ed78cf3368ee13f0b80d5b95f7fb9a75f45023ef1ee1e7c775750c3bd9f281"
+            }
+          ],
+          "observation/left_camera/rgb": [
+            {
+              "frame": 0,
+              "size": [
+                320,
+                240
+              ],
+              "mode": "RGB",
+              "encoded_sha256": "837314c118a5a46f2b1a7f63c9579bd00f1365227b1ffd1fa97b2944f9c65266",
+              "decoded_sha256": "8defa2faca81bd12227e73b83ba3e35ddcb2f6c833a8eb0b27e546f811e86461"
+            },
+            {
+              "frame": 102,
+              "size": [
+                320,
+                240
+              ],
+              "mode": "RGB",
+              "encoded_sha256": "0813ca8a2743d0b672fbbbd20ab7219fa8bc42875653fab0d5aabb0b148d1dba",
+              "decoded_sha256": "33ae8186de633e95feffaf04c5a23b5650d059ea8d195432b309b17c7be68cc9"
+            },
+            {
+              "frame": 203,
+              "size": [
+                320,
+                240
+              ],
+              "mode": "RGB",
+              "encoded_sha256": "550f32b75f43040985c4d0613c34b3203634eaabc00ba9122fea753dee15c675",
+              "decoded_sha256": "c05f8503156a3e3a34f522752d3663b6dffcfc1fa8cf9f54b0d30b69d8fc0698"
+            }
+          ],
+          "observation/right_camera/rgb": [
+            {
+              "frame": 0,
+              "size": [
+                320,
+                240
+              ],
+              "mode": "RGB",
+              "encoded_sha256": "c6b1712e4c4a4e9b3437a71916fe8c5e84bf27fabb0e7efc6b3fc659ee581cc4",
+              "decoded_sha256": "81a91bf107c363e2f7899f328f0cbc5265d0a1514489a71da6c956929205e755"
+            },
+            {
+              "frame": 102,
+              "size": [
+                320,
+                240
+              ],
+              "mode": "RGB",
+              "encoded_sha256": "90e668f508708b7d418278da105f9465247a52e862f81dea88f204145cff7b5c",
+              "decoded_sha256": "b2e4911e8cee773087a1253c14bec89766b892586fc7ce35b8a55797a5fa3217"
+            },
+            {
+              "frame": 203,
+              "size": [
+                320,
+                240
+              ],
+              "mode": "RGB",
+              "encoded_sha256": "b96f19c7179af827e7ee9b00b78d6904380d13c3ccfed1b9847047d780035ed7",
+              "decoded_sha256": "c6495759269e161bddd123166795dd57ffc738af1e184c81a1e5110e0e13bea7"
+            }
+          ]
+        },
+        "time_lengths": [
+          204
+        ]
+      },
+      "planner_file": {
+        "path": "scene3/scene3_r_pick2_via4_to6_short_front/_traj_data/episode49.pkl",
+        "url": "https://huggingface.co/datasets/AutoLab-SJTU/robofollow-data/resolve/bbb1e266ed585f1557773de5a3f1e3b4cd944f97/scene3/scene3_r_pick2_via4_to6_short_front/_traj_data/episode49.pkl",
+        "bytes": 66324,
+        "sha256": "dd00461457037ca6b12c4fc219c8c6b5b3e67ff5510b2cf824302806560d858d"
+      },
+      "planner": {
+        "inspection": "pickletools opcodes only; no deserialization",
+        "strings": [
+          "<",
+          "Success",
+          "_reconstruct",
+          "dtype",
+          "f4",
+          "left_joint_path",
+          "ndarray",
+          "numpy",
+          "numpy.core.multiarray",
+          "position",
+          "right_joint_path",
+          "status",
+          "velocity"
+        ],
+        "global_opcodes": [],
+        "opcode_counts": {
+          "PROTO": 1,
+          "FRAME": 1,
+          "EMPTY_DICT": 6,
+          "MEMOIZE": 88,
+          "MARK": 18,
+          "SHORT_BINUNICODE": 13,
+          "EMPTY_LIST": 2,
+          "STACK_GLOBAL": 3,
+          "BININT1": 38,
+          "TUPLE1": 10,
+          "SHORT_BINBYTES": 1,
+          "TUPLE3": 11,
+          "REDUCE": 11,
+          "TUPLE2": 10,
+          "BINGET": 53,
+          "NEWFALSE": 11,
+          "NEWTRUE": 1,
+          "NONE": 3,
+          "BININT": 2,
+          "TUPLE": 11,
+          "BUILD": 11,
+          "BINBYTES": 10,
+          "SETITEMS": 6,
+          "APPEND": 1,
+          "BININT2": 4,
+          "APPENDS": 1,
+          "STOP": 1
+        }
+      }
+    },
+    {
+      "task_id": "r_pick2_via5_to6_long_front",
+      "episode_id": 0,
+      "partition": "train",
+      "hdf5_file": {
+        "path": "scene3/scene3_r_pick2_via5_to6_long_front/data/episode0.hdf5",
+        "url": "https://huggingface.co/datasets/AutoLab-SJTU/robofollow-data/resolve/bbb1e266ed585f1557773de5a3f1e3b4cd944f97/scene3/scene3_r_pick2_via5_to6_long_front/data/episode0.hdf5",
+        "bytes": 14113192,
+        "sha256": "21087793bc5fdb35d64422f579516c9f4619caa8a3c92e50191aec31e4d5368f"
+      },
+      "hdf5": {
+        "datasets": {
+          "endpose/left_endpose": {
+            "shape": [
+              244,
+              7
+            ],
+            "dtype": "float64",
+            "finite": true,
+            "sha256": "0e2b053b2709105a341648160a9451645c372db3d91beea107f346d9c3ad1bbb"
+          },
+          "endpose/left_gripper": {
+            "shape": [
+              244
+            ],
+            "dtype": "float64",
+            "finite": true,
+            "sha256": "bb0f02e38bd306cc969a6263d8a8623d4770e513086c2c3e33f42a3037edcbd6"
+          },
+          "endpose/right_endpose": {
+            "shape": [
+              244,
+              7
+            ],
+            "dtype": "float64",
+            "finite": true,
+            "sha256": "640008bc25e04a598be8967f3e5e8e08338074309b7271e9cf6ca3bcea4521bb"
+          },
+          "endpose/right_gripper": {
+            "shape": [
+              244
+            ],
+            "dtype": "float64",
+            "finite": true,
+            "sha256": "313c592ed4e14f05df0710dde5953e14f2c7cecfd6a513af5910cf8240e8a86d"
+          },
+          "joint_action/left_arm": {
+            "shape": [
+              244,
+              6
+            ],
+            "dtype": "float64",
+            "finite": true,
+            "sha256": "653e8794b21fb9321c9100051aef1941842e6bb822342ee73d94e7f5191a8a09"
+          },
+          "joint_action/left_gripper": {
+            "shape": [
+              244
+            ],
+            "dtype": "float64",
+            "finite": true,
+            "sha256": "bb0f02e38bd306cc969a6263d8a8623d4770e513086c2c3e33f42a3037edcbd6"
+          },
+          "joint_action/right_arm": {
+            "shape": [
+              244,
+              6
+            ],
+            "dtype": "float64",
+            "finite": true,
+            "sha256": "9eda99488f00ce2f645a928cd0b96e5a7751453ff3f77a6e5f26875f0e790bfc"
+          },
+          "joint_action/right_gripper": {
+            "shape": [
+              244
+            ],
+            "dtype": "float64",
+            "finite": true,
+            "sha256": "313c592ed4e14f05df0710dde5953e14f2c7cecfd6a513af5910cf8240e8a86d"
+          },
+          "joint_action/vector": {
+            "shape": [
+              244,
+              14
+            ],
+            "dtype": "float64",
+            "finite": true,
+            "sha256": "9f76681ab5a6e6589d77766ad18c4a8f8f6c7da284795873bffd6f8c598bce10",
+            "first_frame_sha256": "8881b906105a2087fe5e5cd1981ec8df4aeb348817af30d138e31df5bc075214",
+            "first_frame": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ],
+            "last_frame": [
+              -7.127575827325927e-06,
+              -2.09641621040646e-06,
+              -2.906544068537187e-05,
+              -4.623379481927259e-06,
+              -8.21767662273487e-06,
+              -1.0893679700529901e-06,
+              1.0,
+              -1.6300680726999417e-05,
+              1.7867832866613753e-05,
+              -2.7452673748484813e-05,
+              1.6975645849015564e-05,
+              -2.33732152992161e-05,
+              6.4904484133876394e-06,
+              1.0
+            ]
+          },
+          "observation/front_camera/cam2world_gl": {
+            "shape": [
+              244,
+              4,
+              4
+            ],
+            "dtype": "float32",
+            "finite": true,
+            "sha256": "10b672d0ab119ccd8fac8dd21186258f62367dd066078df9cd1ae218e5aa5940"
+          },
+          "observation/front_camera/extrinsic_cv": {
+            "shape": [
+              244,
+              3,
+              4
+            ],
+            "dtype": "float32",
+            "finite": true,
+            "sha256": "28eaae8f4022d418a4ce115461a22f6f9f8df874fa9195f328a736a7daeffec9"
+          },
+          "observation/front_camera/intrinsic_cv": {
+            "shape": [
+              244,
+              3,
+              3
+            ],
+            "dtype": "float32",
+            "finite": true,
+            "sha256": "4c34bd1a38de574749f2def4b75e07b4378cdb24a2c8d1d1f634b82e64f70f67"
+          },
+          "observation/front_camera/rgb": {
+            "shape": [
+              244
+            ],
+            "dtype": "|S15667"
+          },
+          "observation/head_camera/cam2world_gl": {
+            "shape": [
+              244,
+              4,
+              4
+            ],
+            "dtype": "float32",
+            "finite": true,
+            "sha256": "aa96c873b786b21c27b6377f7744b0ec919a65ed43a36d96870d7949f435025d"
+          },
+          "observation/head_camera/extrinsic_cv": {
+            "shape": [
+              244,
+              3,
+              4
+            ],
+            "dtype": "float32",
+            "finite": true,
+            "sha256": "9a8048b495d1afedd0ca694e7a98c1cf8c7ebb446f3d7b5720da6822a61e2264"
+          },
+          "observation/head_camera/intrinsic_cv": {
+            "shape": [
+              244,
+              3,
+              3
+            ],
+            "dtype": "float32",
+            "finite": true,
+            "sha256": "4c34bd1a38de574749f2def4b75e07b4378cdb24a2c8d1d1f634b82e64f70f67"
+          },
+          "observation/head_camera/rgb": {
+            "shape": [
+              244
+            ],
+            "dtype": "|S20487"
+          },
+          "observation/left_camera/cam2world_gl": {
+            "shape": [
+              244,
+              4,
+              4
+            ],
+            "dtype": "float32",
+            "finite": true,
+            "sha256": "1af74167d385b7619cc7470be1857596c27aa76d46e9f7ca7adb249c0b8260ff"
+          },
+          "observation/left_camera/extrinsic_cv": {
+            "shape": [
+              244,
+              3,
+              4
+            ],
+            "dtype": "float32",
+            "finite": true,
+            "sha256": "978ee325fbfc10278f8e30284714c8128ee17a127792604371c5c31ea8f57b74"
+          },
+          "observation/left_camera/intrinsic_cv": {
+            "shape": [
+              244,
+              3,
+              3
+            ],
+            "dtype": "float32",
+            "finite": true,
+            "sha256": "4c34bd1a38de574749f2def4b75e07b4378cdb24a2c8d1d1f634b82e64f70f67"
+          },
+          "observation/left_camera/rgb": {
+            "shape": [
+              244
+            ],
+            "dtype": "|S5876"
+          },
+          "observation/right_camera/cam2world_gl": {
+            "shape": [
+              244,
+              4,
+              4
+            ],
+            "dtype": "float32",
+            "finite": true,
+            "sha256": "ed28dec7f8f003b4fbffa8e6cce7b411e69530f36024ae7dbe62c27f0c0c4036"
+          },
+          "observation/right_camera/extrinsic_cv": {
+            "shape": [
+              244,
+              3,
+              4
+            ],
+            "dtype": "float32",
+            "finite": true,
+            "sha256": "e0a0cbbf0c6e4df6765d72dff2221cb1ea4345ac17d18c86a0cfd8098e2b90d8"
+          },
+          "observation/right_camera/intrinsic_cv": {
+            "shape": [
+              244,
+              3,
+              3
+            ],
+            "dtype": "float32",
+            "finite": true,
+            "sha256": "4c34bd1a38de574749f2def4b75e07b4378cdb24a2c8d1d1f634b82e64f70f67"
+          },
+          "observation/right_camera/rgb": {
+            "shape": [
+              244
+            ],
+            "dtype": "|S14794"
+          },
+          "pointcloud": {
+            "shape": [
+              244,
+              0
+            ],
+            "dtype": "float64",
+            "finite": true,
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        },
+        "attributes": {},
+        "image_decode_checks": {
+          "observation/front_camera/rgb": [
+            {
+              "frame": 0,
+              "size": [
+                320,
+                240
+              ],
+              "mode": "RGB",
+              "encoded_sha256": "1fb2c0c2a518ec858986ba46550db885a94aa25f0c91f57e9c9626f01c3b9ca2",
+              "decoded_sha256": "24651647255cafbe966dda83a1c5659ed449fd2634c1a88428ba436712e3297c"
+            },
+            {
+              "frame": 122,
+              "size": [
+                320,
+                240
+              ],
+              "mode": "RGB",
+              "encoded_sha256": "0f442146bb4f8f23aaad3b4c7ac147a9d6005ec59c654f0a34b39e656c632520",
+              "decoded_sha256": "a456c9ab0c1e1deec78e05776f1ac4b1debe662becf8326ee8c8936a6b3c68f5"
+            },
+            {
+              "frame": 243,
+              "size": [
+                320,
+                240
+              ],
+              "mode": "RGB",
+              "encoded_sha256": "e0b9f41888561fbbb3c7912c66d59a67088288327d1dbf3270ef9d2775034e8d",
+              "decoded_sha256": "62be4660327483e4055eecff95d77f0f0434ee4b5e4d188dbbd37747d8a8c81e"
+            }
+          ],
+          "observation/head_camera/rgb": [
+            {
+              "frame": 0,
+              "size": [
+                320,
+                240
+              ],
+              "mode": "RGB",
+              "encoded_sha256": "a1b1a662cded42491b1c43cb937d80be88fdc1e331089e3af91bd42586feb3fc",
+              "decoded_sha256": "a4cf1881a2d11597919388172753e928e908b64438aeec9b3ac178c7a527aaf8"
+            },
+            {
+              "frame": 122,
+              "size": [
+                320,
+                240
+              ],
+              "mode": "RGB",
+              "encoded_sha256": "1a0461be679e085c066a35b8c5f1e4164c5a18dde3583e22e88bf5c3bb1eb087",
+              "decoded_sha256": "9af1a73fe28f70c836c9d4c9670a2996b8ce1942c79467caf79c6be5eaf6580a"
+            },
+            {
+              "frame": 243,
+              "size": [
+                320,
+                240
+              ],
+              "mode": "RGB",
+              "encoded_sha256": "10013efed35d6891d432e062134250f2b5bf4aa1292aa315239703441ac5b4b8",
+              "decoded_sha256": "5cae4b1a96e0e466d49c074162b2717fd423006593ab9bf66afc8becf22bd21d"
+            }
+          ],
+          "observation/left_camera/rgb": [
+            {
+              "frame": 0,
+              "size": [
+                320,
+                240
+              ],
+              "mode": "RGB",
+              "encoded_sha256": "453a37b15c022b3435dcee066954a9787aa3bcca107eaf12c7d641e8bb2edbd4",
+              "decoded_sha256": "d0187288938b96ab57dfb929ae1c252fd271300a8279621b28fc70acbc312fe8"
+            },
+            {
+              "frame": 122,
+              "size": [
+                320,
+                240
+              ],
+              "mode": "RGB",
+              "encoded_sha256": "50624df9d7819e94acde146eeb79220a55f1c64eef1e22e0c06446050bf7d6b6",
+              "decoded_sha256": "5bb8ed77993cc40a17c43d76cd68d2ce64270d30cd13f8aefec4b7bdb3a4ecfe"
+            },
+            {
+              "frame": 243,
+              "size": [
+                320,
+                240
+              ],
+              "mode": "RGB",
+              "encoded_sha256": "4ae3c5645be73c65886cf65ab1991ab04ff4a4dd22a2cb3bdd486fe652db8fb8",
+              "decoded_sha256": "c506ad698a1ec8f4862ceb7c3cf589eb8d85ed1380f9deba447ef4aca2a848c3"
+            }
+          ],
+          "observation/right_camera/rgb": [
+            {
+              "frame": 0,
+              "size": [
+                320,
+                240
+              ],
+              "mode": "RGB",
+              "encoded_sha256": "2210b09dce996b7d6d6685828f35dde29168981be59184367cff88ddd9264403",
+              "decoded_sha256": "9554014e30f10d5508884bc80e6a827f155a2fa006bd80c10330845ae986bfeb"
+            },
+            {
+              "frame": 122,
+              "size": [
+                320,
+                240
+              ],
+              "mode": "RGB",
+              "encoded_sha256": "7af0f24338a490cf1c3b2beafe8ac3d4cd3c17d329f8bc9de7a727f5aca27dc5",
+              "decoded_sha256": "68f40528f1abac57af0e91650f10fbefc34009c88fb841b224c74b6b43c0119c"
+            },
+            {
+              "frame": 243,
+              "size": [
+                320,
+                240
+              ],
+              "mode": "RGB",
+              "encoded_sha256": "4a609c5f83f4584ecd9ce46e8f25660b3d7f487f41b3acf789843aeb773b7162",
+              "decoded_sha256": "40de6f9c4637755cf27941263b365a3a61eb5997e542aca0805e7aec95e0170b"
+            }
+          ]
+        },
+        "time_lengths": [
+          244
+        ]
+      },
+      "planner_file": {
+        "path": "scene3/scene3_r_pick2_via5_to6_long_front/_traj_data/episode0.pkl",
+        "url": "https://huggingface.co/datasets/AutoLab-SJTU/robofollow-data/resolve/bbb1e266ed585f1557773de5a3f1e3b4cd944f97/scene3/scene3_r_pick2_via5_to6_long_front/_traj_data/episode0.pkl",
+        "bytes": 66756,
+        "sha256": "30a791f8118f2f736d2142977e1cd4f62f697d76a8d357f03c606867bcc501e0"
+      },
+      "planner": {
+        "inspection": "pickletools opcodes only; no deserialization",
+        "strings": [
+          "<",
+          "Success",
+          "_reconstruct",
+          "dtype",
+          "f4",
+          "left_joint_path",
+          "ndarray",
+          "numpy",
+          "numpy.core.multiarray",
+          "position",
+          "right_joint_path",
+          "status",
+          "velocity"
+        ],
+        "global_opcodes": [],
+        "opcode_counts": {
+          "PROTO": 1,
+          "FRAME": 1,
+          "EMPTY_DICT": 6,
+          "MEMOIZE": 88,
+          "MARK": 18,
+          "SHORT_BINUNICODE": 13,
+          "EMPTY_LIST": 2,
+          "STACK_GLOBAL": 3,
+          "BININT1": 38,
+          "TUPLE1": 10,
+          "SHORT_BINBYTES": 1,
+          "TUPLE3": 11,
+          "REDUCE": 11,
+          "TUPLE2": 10,
+          "BINGET": 53,
+          "NEWFALSE": 11,
+          "NEWTRUE": 1,
+          "NONE": 3,
+          "BININT": 2,
+          "TUPLE": 11,
+          "BUILD": 11,
+          "BINBYTES": 10,
+          "SETITEMS": 6,
+          "APPEND": 1,
+          "BININT2": 4,
+          "APPENDS": 1,
+          "STOP": 1
+        }
+      }
+    },
+    {
+      "task_id": "r_pick2_via5_to6_long_front",
+      "episode_id": 24,
+      "partition": "train",
+      "hdf5_file": {
+        "path": "scene3/scene3_r_pick2_via5_to6_long_front/data/episode24.hdf5",
+        "url": "https://huggingface.co/datasets/AutoLab-SJTU/robofollow-data/resolve/bbb1e266ed585f1557773de5a3f1e3b4cd944f97/scene3/scene3_r_pick2_via5_to6_long_front/data/episode24.hdf5",
+        "bytes": 14180266,
+        "sha256": "a661be3e4f6af0c19a2fa9c43c9a152af6b25961e3b8193d10305367963de857"
+      },
+      "hdf5": {
+        "datasets": {
+          "endpose/left_endpose": {
+            "shape": [
+              246,
+              7
+            ],
+            "dtype": "float64",
+            "finite": true,
+            "sha256": "58b405ebe0aa91b193869c4aee94c564152075b2c75da7b8fd4669ec9ddc92e0"
+          },
+          "endpose/left_gripper": {
+            "shape": [
+              246
+            ],
+            "dtype": "float64",
+            "finite": true,
+            "sha256": "3db3077cd98605c450a2a77b54848d63b879ee22a6f62e1a3244d787a0f7d0c8"
+          },
+          "endpose/right_endpose": {
+            "shape": [
+              246,
+              7
+            ],
+            "dtype": "float64",
+            "finite": true,
+            "sha256": "75f1dacf38e578ef93e6cd9231814dd4f94c7b276e7b11e2ea3c97e8b9106d0e"
+          },
+          "endpose/right_gripper": {
+            "shape": [
+              246
+            ],
+            "dtype": "float64",
+            "finite": true,
+            "sha256": "a63856caa2adc7f1bf1c1841674dba00a819082e435b2589778e74618bda2ac6"
+          },
+          "joint_action/left_arm": {
+            "shape": [
+              246,
+              6
+            ],
+            "dtype": "float64",
+            "finite": true,
+            "sha256": "e90be2be4bce7c7f024cab0324aabe9e37d91cbc790d2c9b974fd12fb2226ed3"
+          },
+          "joint_action/left_gripper": {
+            "shape": [
+              246
+            ],
+            "dtype": "float64",
+            "finite": true,
+            "sha256": "3db3077cd98605c450a2a77b54848d63b879ee22a6f62e1a3244d787a0f7d0c8"
+          },
+          "joint_action/right_arm": {
+            "shape": [
+              246,
+              6
+            ],
+            "dtype": "float64",
+            "finite": true,
+            "sha256": "423ace1f0e644c8b38a0e4b29f55208c489c95ed90ed7ca72e73f771b26ff9b6"
+          },
+          "joint_action/right_gripper": {
+            "shape": [
+              246
+            ],
+            "dtype": "float64",
+            "finite": true,
+            "sha256": "a63856caa2adc7f1bf1c1841674dba00a819082e435b2589778e74618bda2ac6"
+          },
+          "joint_action/vector": {
+            "shape": [
+              246,
+              14
+            ],
+            "dtype": "float64",
+            "finite": true,
+            "sha256": "47a6980e8e73e2b6c5d65a545e3f82af8ef00f4daa451f5f35766768fe33d804",
+            "first_frame_sha256": "8881b906105a2087fe5e5cd1981ec8df4aeb348817af30d138e31df5bc075214",
+            "first_frame": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ],
+            "last_frame": [
+              -7.0928163040662184e-06,
+              9.30238911678316e-06,
+              -3.0815648642601445e-05,
+              6.749637577740941e-06,
+              -8.175387847586535e-06,
+              4.779172741109505e-06,
+              1.0,
+              3.0010542104719207e-06,
+              1.404217164235888e-05,
+              -2.718099312915001e-05,
+              7.436014584527584e-06,
+              3.5317793845024426e-06,
+              1.1050619832531083e-06,
+              1.0
+            ]
+          },
+          "observation/front_camera/cam2world_gl": {
+            "shape": [
+              246,
+              4,
+              4
+            ],
+            "dtype": "float32",
+            "finite": true,
+            "sha256": "8494ee402b254ac05a28f43b2f4ad8a395c80ad271d828bb8b9f0bf3347f1197"
+          },
+          "observation/front_camera/extrinsic_cv": {
+            "shape": [
+              246,
+              3,
+              4
+            ],
+            "dtype": "float32",
+            "finite": true,
+            "sha256": "984366c6fc861b3119fdd2d8f3b564c110d719b11a7810e450b1e92fb87299aa"
+          },
+          "observation/front_camera/intrinsic_cv": {
+            "shape": [
+              246,
+              3,
+              3
+            ],
+            "dtype": "float32",
+            "finite": true,
+            "sha256": "a76e0f584e9f0affb667879fd024e68fbb46ca7fc6cf5a2ddaeac10a5fdb43bf"
+          },
+          "observation/front_camera/rgb": {
+            "shape": [
+              246
+            ],
+            "dtype": "|S15976"
+          },
+          "observation/head_camera/cam2world_gl": {
+            "shape": [
+              246,
+              4,
+              4
+            ],
+            "dtype": "float32",
+            "finite": true,
+            "sha256": "abd2d650688f905037740af3a683f0a95ef1ebfdc86c0df10340dbef22d3adc3"
+          },
+          "observation/head_camera/extrinsic_cv": {
+            "shape": [
+              246,
+              3,
+              4
+            ],
+            "dtype": "float32",
+            "finite": true,
+            "sha256": "c5bcbc0f44a4a0bf1707dee2b66c6865beb0ce862b779c3d46d70af2cf27eed1"
+          },
+          "observation/head_camera/intrinsic_cv": {
+            "shape": [
+              246,
+              3,
+              3
+            ],
+            "dtype": "float32",
+            "finite": true,
+            "sha256": "a76e0f584e9f0affb667879fd024e68fbb46ca7fc6cf5a2ddaeac10a5fdb43bf"
+          },
+          "observation/head_camera/rgb": {
+            "shape": [
+              246
+            ],
+            "dtype": "|S19915"
+          },
+          "observation/left_camera/cam2world_gl": {
+            "shape": [
+              246,
+              4,
+              4
+            ],
+            "dtype": "float32",
+            "finite": true,
+            "sha256": "f46ee97707f4f6c23f6a13947998f0811a3c281f25292fef26cca21b1db41f08"
+          },
+          "observation/left_camera/extrinsic_cv": {
+            "shape": [
+              246,
+              3,
+              4
+            ],
+            "dtype": "float32",
+            "finite": true,
+            "sha256": "b1ebf541ac245e89a472e66d2495861036ae50ae2a94832489ae644d4e519b22"
+          },
+          "observation/left_camera/intrinsic_cv": {
+            "shape": [
+              246,
+              3,
+              3
+            ],
+            "dtype": "float32",
+            "finite": true,
+            "sha256": "a76e0f584e9f0affb667879fd024e68fbb46ca7fc6cf5a2ddaeac10a5fdb43bf"
+          },
+          "observation/left_camera/rgb": {
+            "shape": [
+              246
+            ],
+            "dtype": "|S5888"
+          },
+          "observation/right_camera/cam2world_gl": {
+            "shape": [
+              246,
+              4,
+              4
+            ],
+            "dtype": "float32",
+            "finite": true,
+            "sha256": "50149069a78256ff108e75bd49f913c1288b2b00e4751226d7fd419754355c00"
+          },
+          "observation/right_camera/extrinsic_cv": {
+            "shape": [
+              246,
+              3,
+              4
+            ],
+            "dtype": "float32",
+            "finite": true,
+            "sha256": "83ffb609eb543d4c5940c99d8de383087c2af508faf8280d4c1cebc9e130f4a2"
+          },
+          "observation/right_camera/intrinsic_cv": {
+            "shape": [
+              246,
+              3,
+              3
+            ],
+            "dtype": "float32",
+            "finite": true,
+            "sha256": "a76e0f584e9f0affb667879fd024e68fbb46ca7fc6cf5a2ddaeac10a5fdb43bf"
+          },
+          "observation/right_camera/rgb": {
+            "shape": [
+              246
+            ],
+            "dtype": "|S14848"
+          },
+          "pointcloud": {
+            "shape": [
+              246,
+              0
+            ],
+            "dtype": "float64",
+            "finite": true,
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        },
+        "attributes": {},
+        "image_decode_checks": {
+          "observation/front_camera/rgb": [
+            {
+              "frame": 0,
+              "size": [
+                320,
+                240
+              ],
+              "mode": "RGB",
+              "encoded_sha256": "c871d4ced979ea96221c018021fb06f94781d85530656430daa2ee0baa3acab7",
+              "decoded_sha256": "f346baae9503fa04f7a6de0e4e48af0c812a463fc6774122a82cc36b1bab37dd"
+            },
+            {
+              "frame": 123,
+              "size": [
+                320,
+                240
+              ],
+              "mode": "RGB",
+              "encoded_sha256": "5418b79ac1af4b2104e35c3e5f4f9fc342228b9696fc1032b7ed7ba469a160c9",
+              "decoded_sha256": "07289eda5557684d93b75474601748606c5afbf01fd350d8dc6cb65b70048c49"
+            },
+            {
+              "frame": 245,
+              "size": [
+                320,
+                240
+              ],
+              "mode": "RGB",
+              "encoded_sha256": "f0834e929e0a117d98e27e021d61d36443b5fc50c8550c078b890fdb6f4b13a6",
+              "decoded_sha256": "396f99aced880221ef63f2b2abd7a76b6d7d0a1c504b29c43c3659d88deb41a7"
+            }
+          ],
+          "observation/head_camera/rgb": [
+            {
+              "frame": 0,
+              "size": [
+                320,
+                240
+              ],
+              "mode": "RGB",
+              "encoded_sha256": "da55b0e33db28da2fdb944838c97dd3b52e65d12134356d659e2c36d5e19ce8d",
+              "decoded_sha256": "aaddb32d2e741e1dbe7b7cf4a456303644375da45547bd4dacc9bd9fea8c0c87"
+            },
+            {
+              "frame": 123,
+              "size": [
+                320,
+                240
+              ],
+              "mode": "RGB",
+              "encoded_sha256": "986a1e94b9e529544cd145fa6c2558018fc23d9e473c3e7e8af1f65a66585c7c",
+              "decoded_sha256": "730871d491642faa053935f39b175b236cacb75ff28e4c6cb942f4e2c102aa1e"
+            },
+            {
+              "frame": 245,
+              "size": [
+                320,
+                240
+              ],
+              "mode": "RGB",
+              "encoded_sha256": "faafa39fceac44a6fa914a5877574d8631b8986c3fee7141df004fde1f9f3578",
+              "decoded_sha256": "f9347e8e2fd3eb9e8661995d39f51af74162bfbfc3c1b0fc1b11a62fd1604ab3"
+            }
+          ],
+          "observation/left_camera/rgb": [
+            {
+              "frame": 0,
+              "size": [
+                320,
+                240
+              ],
+              "mode": "RGB",
+              "encoded_sha256": "54c5208b34a2efa291fb872d9ffadce1cdd582d143e5d13603ccb4c7b5569933",
+              "decoded_sha256": "dffd9471265e4d9b798238d7b238504da1ed32638e1eab8c1b4418aabb994d45"
+            },
+            {
+              "frame": 123,
+              "size": [
+                320,
+                240
+              ],
+              "mode": "RGB",
+              "encoded_sha256": "a00a47936bc3ceab9e6d0d0004552d060e7d59b60ca498ba97b9abffdeb7800c",
+              "decoded_sha256": "a7640f6f08038b3794c8f9b18b0b5bed3c27eef164aee01085d4a2a2968db3f5"
+            },
+            {
+              "frame": 245,
+              "size": [
+                320,
+                240
+              ],
+              "mode": "RGB",
+              "encoded_sha256": "ac4e8cf0b328b20981eed95c632d5dcdfee0bc8f36aa514b382a77121e19f3f1",
+              "decoded_sha256": "9a73f82c016282d58854c2f8a3eafab9db5b63aeb2a1f2b8b9357dc5c680b7d1"
+            }
+          ],
+          "observation/right_camera/rgb": [
+            {
+              "frame": 0,
+              "size": [
+                320,
+                240
+              ],
+              "mode": "RGB",
+              "encoded_sha256": "4bf12e60017eab240d9d6aa63acb19a229d51e383713f0299e7add6ebe2eacd8",
+              "decoded_sha256": "574822d4c481a551568132f8e660056e14de72364514891e5edd93bf28c9e7f1"
+            },
+            {
+              "frame": 123,
+              "size": [
+                320,
+                240
+              ],
+              "mode": "RGB",
+              "encoded_sha256": "92a691a1f3941e31271de20e68d923618a9cd4e1f99b5416f90761c06216dd20",
+              "decoded_sha256": "a9a7abab7c65af7596c1f64f86602d0307716fff1d914b32869ea5c64624eab4"
+            },
+            {
+              "frame": 245,
+              "size": [
+                320,
+                240
+              ],
+              "mode": "RGB",
+              "encoded_sha256": "8dbe6621b0fdf14cb275dd00a565b8c8ec6411b399c283b93c1d73e80345d985",
+              "decoded_sha256": "1b0568038b14b33015dd25a72b270872c9d3da7dd1c949aa21140847af27b020"
+            }
+          ]
+        },
+        "time_lengths": [
+          246
+        ]
+      },
+      "planner_file": {
+        "path": "scene3/scene3_r_pick2_via5_to6_long_front/_traj_data/episode24.pkl",
+        "url": "https://huggingface.co/datasets/AutoLab-SJTU/robofollow-data/resolve/bbb1e266ed585f1557773de5a3f1e3b4cd944f97/scene3/scene3_r_pick2_via5_to6_long_front/_traj_data/episode24.pkl",
+        "bytes": 65988,
+        "sha256": "948538173245a99b7b019205ae7f5a2aebe08c9a68de029e87bc5f75afdd1780"
+      },
+      "planner": {
+        "inspection": "pickletools opcodes only; no deserialization",
+        "strings": [
+          "<",
+          "Success",
+          "_reconstruct",
+          "dtype",
+          "f4",
+          "left_joint_path",
+          "ndarray",
+          "numpy",
+          "numpy.core.multiarray",
+          "position",
+          "right_joint_path",
+          "status",
+          "velocity"
+        ],
+        "global_opcodes": [],
+        "opcode_counts": {
+          "PROTO": 1,
+          "FRAME": 1,
+          "EMPTY_DICT": 6,
+          "MEMOIZE": 88,
+          "MARK": 18,
+          "SHORT_BINUNICODE": 13,
+          "EMPTY_LIST": 2,
+          "STACK_GLOBAL": 3,
+          "BININT1": 38,
+          "TUPLE1": 10,
+          "SHORT_BINBYTES": 1,
+          "TUPLE3": 11,
+          "REDUCE": 11,
+          "TUPLE2": 10,
+          "BINGET": 53,
+          "NEWFALSE": 11,
+          "NEWTRUE": 1,
+          "NONE": 3,
+          "BININT": 2,
+          "TUPLE": 11,
+          "BUILD": 11,
+          "BINBYTES": 10,
+          "SETITEMS": 6,
+          "APPEND": 1,
+          "BININT2": 4,
+          "APPENDS": 1,
+          "STOP": 1
+        }
+      }
+    },
+    {
+      "task_id": "r_pick2_via5_to6_long_front",
+      "episode_id": 49,
+      "partition": "train",
+      "hdf5_file": {
+        "path": "scene3/scene3_r_pick2_via5_to6_long_front/data/episode49.hdf5",
+        "url": "https://huggingface.co/datasets/AutoLab-SJTU/robofollow-data/resolve/bbb1e266ed585f1557773de5a3f1e3b4cd944f97/scene3/scene3_r_pick2_via5_to6_long_front/data/episode49.hdf5",
+        "bytes": 14362864,
+        "sha256": "18ab0e0864d3012d3071e9bfabd1807e482b8a60824bc49a1cef7a86dce48aa9"
+      },
+      "hdf5": {
+        "datasets": {
+          "endpose/left_endpose": {
+            "shape": [
+              248,
+              7
+            ],
+            "dtype": "float64",
+            "finite": true,
+            "sha256": "9bee45c0c81b1cf9f613f2acbed4ad78c631d1a5c2de1b71a80b65e883090c7b"
+          },
+          "endpose/left_gripper": {
+            "shape": [
+              248
+            ],
+            "dtype": "float64",
+            "finite": true,
+            "sha256": "2d8d487e0a81a0e000c197a513a9f4f560391fcac818f04c75cb1fff45d27fb5"
+          },
+          "endpose/right_endpose": {
+            "shape": [
+              248,
+              7
+            ],
+            "dtype": "float64",
+            "finite": true,
+            "sha256": "56970580ad3b806e1f24b76c89802aaf3845fa96046db4c6b5868f29cefeb337"
+          },
+          "endpose/right_gripper": {
+            "shape": [
+              248
+            ],
+            "dtype": "float64",
+            "finite": true,
+            "sha256": "0be4c6bca2e6cd618b911cbda3c61eac4f8bbbf67758369cc64d892f41c2e821"
+          },
+          "joint_action/left_arm": {
+            "shape": [
+              248,
+              6
+            ],
+            "dtype": "float64",
+            "finite": true,
+            "sha256": "9a90d9d5e6580f551a2cbf7dad6783543d34689f9186d853d908b6b01cf50fa2"
+          },
+          "joint_action/left_gripper": {
+            "shape": [
+              248
+            ],
+            "dtype": "float64",
+            "finite": true,
+            "sha256": "2d8d487e0a81a0e000c197a513a9f4f560391fcac818f04c75cb1fff45d27fb5"
+          },
+          "joint_action/right_arm": {
+            "shape": [
+              248,
+              6
+            ],
+            "dtype": "float64",
+            "finite": true,
+            "sha256": "208391c8dfc3a36d104537107ce82806f51736acc78097a5c392231cc0560e44"
+          },
+          "joint_action/right_gripper": {
+            "shape": [
+              248
+            ],
+            "dtype": "float64",
+            "finite": true,
+            "sha256": "0be4c6bca2e6cd618b911cbda3c61eac4f8bbbf67758369cc64d892f41c2e821"
+          },
+          "joint_action/vector": {
+            "shape": [
+              248,
+              14
+            ],
+            "dtype": "float64",
+            "finite": true,
+            "sha256": "03a936e714f96545f704b731798696bdeeb30a616791bec0c8962bd1b29fef81",
+            "first_frame_sha256": "8881b906105a2087fe5e5cd1981ec8df4aeb348817af30d138e31df5bc075214",
+            "first_frame": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ],
+            "last_frame": [
+              3.4253005196660524e-06,
+              4.9410946303396486e-06,
+              -2.9518723749788478e-05,
+              1.3902065347792814e-06,
+              -7.175036387252476e-08,
+              6.893847057654057e-06,
+              1.0,
+              1.8139293388230726e-05,
+              -4.3906679820793215e-06,
+              -3.019542600668501e-05,
+              -5.516717010323191e-06,
+              2.479977410985157e-05,
+              3.048792223125929e-06,
+              1.0
+            ]
+          },
+          "observation/front_camera/cam2world_gl": {
+            "shape": [
+              248,
+              4,
+              4
+            ],
+            "dtype": "float32",
+            "finite": true,
+            "sha256": "f25e07bfa3d8b8f6a1440a7add0a4ea911761ceb3c230ca0ddca2a96ebfdd911"
+          },
+          "observation/front_camera/extrinsic_cv": {
+            "shape": [
+              248,
+              3,
+              4
+            ],
+            "dtype": "float32",
+            "finite": true,
+            "sha256": "a8e6a61b558ec02d0bf27d70566c03cf2e3f882980b8d5a46e382294f13051df"
+          },
+          "observation/front_camera/intrinsic_cv": {
+            "shape": [
+              248,
+              3,
+              3
+            ],
+            "dtype": "float32",
+            "finite": true,
+            "sha256": "32b4fb02ebef30bd29b0f47bf2483bb74c7cd3116caa9b2303ef80485ebb9bdb"
+          },
+          "observation/front_camera/rgb": {
+            "shape": [
+              248
+            ],
+            "dtype": "|S16148"
+          },
+          "observation/head_camera/cam2world_gl": {
+            "shape": [
+              248,
+              4,
+              4
+            ],
+            "dtype": "float32",
+            "finite": true,
+            "sha256": "f71c0869a213fdf2ff511888e52c67e35fa09c17e1186edb28fb259d9855f9a4"
+          },
+          "observation/head_camera/extrinsic_cv": {
+            "shape": [
+              248,
+              3,
+              4
+            ],
+            "dtype": "float32",
+            "finite": true,
+            "sha256": "926257e6dc51ee69708107fa5da68abe9155760b17021a2104069cefadfe1e01"
+          },
+          "observation/head_camera/intrinsic_cv": {
+            "shape": [
+              248,
+              3,
+              3
+            ],
+            "dtype": "float32",
+            "finite": true,
+            "sha256": "32b4fb02ebef30bd29b0f47bf2483bb74c7cd3116caa9b2303ef80485ebb9bdb"
+          },
+          "observation/head_camera/rgb": {
+            "shape": [
+              248
+            ],
+            "dtype": "|S19878"
+          },
+          "observation/left_camera/cam2world_gl": {
+            "shape": [
+              248,
+              4,
+              4
+            ],
+            "dtype": "float32",
+            "finite": true,
+            "sha256": "bad8511ba18270516b107b6e19a31b78d7d65198d5df91636e22bf43c7ce5ed1"
+          },
+          "observation/left_camera/extrinsic_cv": {
+            "shape": [
+              248,
+              3,
+              4
+            ],
+            "dtype": "float32",
+            "finite": true,
+            "sha256": "1011a818ae01db86b957df09ce11a470dc336fe7edfda1a3a5bb61b6de62787c"
+          },
+          "observation/left_camera/intrinsic_cv": {
+            "shape": [
+              248,
+              3,
+              3
+            ],
+            "dtype": "float32",
+            "finite": true,
+            "sha256": "32b4fb02ebef30bd29b0f47bf2483bb74c7cd3116caa9b2303ef80485ebb9bdb"
+          },
+          "observation/left_camera/rgb": {
+            "shape": [
+              248
+            ],
+            "dtype": "|S5852"
+          },
+          "observation/right_camera/cam2world_gl": {
+            "shape": [
+              248,
+              4,
+              4
+            ],
+            "dtype": "float32",
+            "finite": true,
+            "sha256": "df67174bbf1bffa817a547a607051005c8ec399200124a5e4c55640ba91bd592"
+          },
+          "observation/right_camera/extrinsic_cv": {
+            "shape": [
+              248,
+              3,
+              4
+            ],
+            "dtype": "float32",
+            "finite": true,
+            "sha256": "d5bc8a60b8566272a2d5eadd9cdb57774947d862a60aad717c3df83e169a19d0"
+          },
+          "observation/right_camera/intrinsic_cv": {
+            "shape": [
+              248,
+              3,
+              3
+            ],
+            "dtype": "float32",
+            "finite": true,
+            "sha256": "32b4fb02ebef30bd29b0f47bf2483bb74c7cd3116caa9b2303ef80485ebb9bdb"
+          },
+          "observation/right_camera/rgb": {
+            "shape": [
+              248
+            ],
+            "dtype": "|S15021"
+          },
+          "pointcloud": {
+            "shape": [
+              248,
+              0
+            ],
+            "dtype": "float64",
+            "finite": true,
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        },
+        "attributes": {},
+        "image_decode_checks": {
+          "observation/front_camera/rgb": [
+            {
+              "frame": 0,
+              "size": [
+                320,
+                240
+              ],
+              "mode": "RGB",
+              "encoded_sha256": "f4c0576d55147f20e8b6b67fef3e1a191dc4172724bf088ae5e0ec9375de5bce",
+              "decoded_sha256": "cf67bdcf70157e2078a035f786cdf01893dfe804736052dd04458f98e76216d5"
+            },
+            {
+              "frame": 124,
+              "size": [
+                320,
+                240
+              ],
+              "mode": "RGB",
+              "encoded_sha256": "a7cc738938ff8c2ea645afe8e47a22c8a027ad0751bcba75d83dbf8915a17b57",
+              "decoded_sha256": "1504ae149fe2f2057e028a65119fef13d0e8898c33d56f0fce8946e3c46faf53"
+            },
+            {
+              "frame": 247,
+              "size": [
+                320,
+                240
+              ],
+              "mode": "RGB",
+              "encoded_sha256": "6f75e7207b92b25d45656c1409ff0d6df44c31ec7f905fbdb06c3b048f7ea8c9",
+              "decoded_sha256": "8e14c08f63d9fd332fb7d8dd2ca461dfca7cf33a8f11b4cdb5ccc3b0e499099d"
+            }
+          ],
+          "observation/head_camera/rgb": [
+            {
+              "frame": 0,
+              "size": [
+                320,
+                240
+              ],
+              "mode": "RGB",
+              "encoded_sha256": "13a24ea3c8232239a2346e2c33bae48b4d9731750098e78741c7b659adfd2eb6",
+              "decoded_sha256": "70ff955e66a7cd1562e557beb362a801b4be6cab591f7c700601a019173c5f84"
+            },
+            {
+              "frame": 124,
+              "size": [
+                320,
+                240
+              ],
+              "mode": "RGB",
+              "encoded_sha256": "ef4262a0f5587037a862a9551d8524b59e7085ed39dcbc6549a79afb8843e25b",
+              "decoded_sha256": "3ef5c104671d9378555f941f9bfcdc2d173e4b4ef29f0b30283a12f7d4416017"
+            },
+            {
+              "frame": 247,
+              "size": [
+                320,
+                240
+              ],
+              "mode": "RGB",
+              "encoded_sha256": "140be627495d0936bee6ad81b445a4593e1c50ef335bfac7ccc6b620b5b95da7",
+              "decoded_sha256": "9d8714516a6b866f9126d9e8e7c5ed9973356445547f6173c022e41a00541aa6"
+            }
+          ],
+          "observation/left_camera/rgb": [
+            {
+              "frame": 0,
+              "size": [
+                320,
+                240
+              ],
+              "mode": "RGB",
+              "encoded_sha256": "813fecf310097d46735570612b3f6f3a7bd2257d86155e3711fa62066a80b2da",
+              "decoded_sha256": "9b1a47d9d9ac7e46e3dff917d6a62ca94f471331f8c28cc70debba702db23343"
+            },
+            {
+              "frame": 124,
+              "size": [
+                320,
+                240
+              ],
+              "mode": "RGB",
+              "encoded_sha256": "53098fabd600116bb4aa087f781119dcc00d1cd005fe221dd83d350007f100ad",
+              "decoded_sha256": "c93a37bfce334fbb36aae7772067b197d2b619a163898388d89a03b65af6e9b7"
+            },
+            {
+              "frame": 247,
+              "size": [
+                320,
+                240
+              ],
+              "mode": "RGB",
+              "encoded_sha256": "7ec060dff87ce69c09a151d6d65daee084c934b14814e08562e47fdb429d9c5b",
+              "decoded_sha256": "4a8e760fcfd00730125acca6a900170fdf7d4c923153a9b1bcd423b95535b4eb"
+            }
+          ],
+          "observation/right_camera/rgb": [
+            {
+              "frame": 0,
+              "size": [
+                320,
+                240
+              ],
+              "mode": "RGB",
+              "encoded_sha256": "accac6b1be9821fc51c85aa0cffc847f0b9b89a8769209b3cb8ec0c7defee8da",
+              "decoded_sha256": "c3a8468b331c62fdc58cd84c1042c65fb0de38d8b784fa72065216142c596b3f"
+            },
+            {
+              "frame": 124,
+              "size": [
+                320,
+                240
+              ],
+              "mode": "RGB",
+              "encoded_sha256": "e037ad889aa4a9964dd9cb8578c1cafac8878c4b70dd7c195c0618ba38054789",
+              "decoded_sha256": "3fd6236b84ff336d5ac63ae22579a165c10c29466f3416004a0c6c2adb2dbd08"
+            },
+            {
+              "frame": 247,
+              "size": [
+                320,
+                240
+              ],
+              "mode": "RGB",
+              "encoded_sha256": "fa22bba2eecf22578131f31cf879db910837f6200f221c7988fc1556975a095d",
+              "decoded_sha256": "eb935f239ec5c64ae2551f15f7faf1ef206f19aef607449fab43be32a9942435"
+            }
+          ]
+        },
+        "time_lengths": [
+          248
+        ]
+      },
+      "planner_file": {
+        "path": "scene3/scene3_r_pick2_via5_to6_long_front/_traj_data/episode49.pkl",
+        "url": "https://huggingface.co/datasets/AutoLab-SJTU/robofollow-data/resolve/bbb1e266ed585f1557773de5a3f1e3b4cd944f97/scene3/scene3_r_pick2_via5_to6_long_front/_traj_data/episode49.pkl",
+        "bytes": 65652,
+        "sha256": "6dbc8b89d0f1bd4725669fcd2036ae4c5743056c8f176ed1fa3bd883d009a122"
+      },
+      "planner": {
+        "inspection": "pickletools opcodes only; no deserialization",
+        "strings": [
+          "<",
+          "Success",
+          "_reconstruct",
+          "dtype",
+          "f4",
+          "left_joint_path",
+          "ndarray",
+          "numpy",
+          "numpy.core.multiarray",
+          "position",
+          "right_joint_path",
+          "status",
+          "velocity"
+        ],
+        "global_opcodes": [],
+        "opcode_counts": {
+          "PROTO": 1,
+          "FRAME": 1,
+          "EMPTY_DICT": 6,
+          "MEMOIZE": 88,
+          "MARK": 18,
+          "SHORT_BINUNICODE": 13,
+          "EMPTY_LIST": 2,
+          "STACK_GLOBAL": 3,
+          "BININT1": 38,
+          "TUPLE1": 10,
+          "SHORT_BINBYTES": 1,
+          "TUPLE3": 11,
+          "REDUCE": 11,
+          "TUPLE2": 10,
+          "BINGET": 53,
+          "NEWFALSE": 11,
+          "NEWTRUE": 1,
+          "NONE": 3,
+          "BININT": 2,
+          "TUPLE": 11,
+          "BUILD": 11,
+          "BINBYTES": 10,
+          "SETITEMS": 6,
+          "APPEND": 1,
+          "BININT2": 4,
+          "APPENDS": 1,
+          "STOP": 1
+        }
+      }
+    },
+    {
+      "task_id": "r_pick3_via4_to6_long_front",
+      "episode_id": 0,
+      "partition": "train",
+      "hdf5_file": {
+        "path": "scene3/scene3_r_pick3_via4_to6_long_front/data/episode0.hdf5",
+        "url": "https://huggingface.co/datasets/AutoLab-SJTU/robofollow-data/resolve/bbb1e266ed585f1557773de5a3f1e3b4cd944f97/scene3/scene3_r_pick3_via4_to6_long_front/data/episode0.hdf5",
+        "bytes": 15493400,
+        "sha256": "69fc58dfd34eeb87eea9a624d34493d1af0a1a2aad87aca14400031bf95626fb"
+      },
+      "hdf5": {
+        "datasets": {
+          "endpose/left_endpose": {
+            "shape": [
+              272,
+              7
+            ],
+            "dtype": "float64",
+            "finite": true,
+            "sha256": "88ebb78facac149be65e714dea2adaab022caf7962b1470f2a8d99c67eb1666c"
+          },
+          "endpose/left_gripper": {
+            "shape": [
+              272
+            ],
+            "dtype": "float64",
+            "finite": true,
+            "sha256": "92a5f21526643810f8684559fccfc43a3ae614240f102ded93288ecfa0e3b070"
+          },
+          "endpose/right_endpose": {
+            "shape": [
+              272,
+              7
+            ],
+            "dtype": "float64",
+            "finite": true,
+            "sha256": "19069e5de995a0ef2fabeec00bab77fe3ccae863c0d59e0eee3495c0a8b16add"
+          },
+          "endpose/right_gripper": {
+            "shape": [
+              272
+            ],
+            "dtype": "float64",
+            "finite": true,
+            "sha256": "c6efcaba01411c46a46de49965709bf3366ec7d283b4009f86751eb8329b5205"
+          },
+          "joint_action/left_arm": {
+            "shape": [
+              272,
+              6
+            ],
+            "dtype": "float64",
+            "finite": true,
+            "sha256": "21dcf1154c64a32b69223482814d20d9d29f090746d1fc2a6a6fe5762ca62dcd"
+          },
+          "joint_action/left_gripper": {
+            "shape": [
+              272
+            ],
+            "dtype": "float64",
+            "finite": true,
+            "sha256": "92a5f21526643810f8684559fccfc43a3ae614240f102ded93288ecfa0e3b070"
+          },
+          "joint_action/right_arm": {
+            "shape": [
+              272,
+              6
+            ],
+            "dtype": "float64",
+            "finite": true,
+            "sha256": "c8c9f93d51f58da1b90a5a83c571b886a14e8a5333e026fac42ce91a56e5f8e9"
+          },
+          "joint_action/right_gripper": {
+            "shape": [
+              272
+            ],
+            "dtype": "float64",
+            "finite": true,
+            "sha256": "c6efcaba01411c46a46de49965709bf3366ec7d283b4009f86751eb8329b5205"
+          },
+          "joint_action/vector": {
+            "shape": [
+              272,
+              14
+            ],
+            "dtype": "float64",
+            "finite": true,
+            "sha256": "c3e69232026a18887ee4a5d0ed3ab23f2ee1cd2be23b5d726e2efd1537b440d9",
+            "first_frame_sha256": "8881b906105a2087fe5e5cd1981ec8df4aeb348817af30d138e31df5bc075214",
+            "first_frame": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ],
+            "last_frame": [
+              -7.255341643030988e-06,
+              -2.3319830688706134e-06,
+              -2.8972048312425613e-05,
+              -4.860648914473131e-06,
+              -8.344051821040921e-06,
+              -1.016819851429318e-06,
+              1.0,
+              -1.7678195945336483e-05,
+              1.0752773960120976e-05,
+              -2.9123222702764906e-05,
+              1.23661911857198e-05,
+              -2.51992551056901e-05,
+              8.032769983401522e-06,
+              1.0
+            ]
+          },
+          "observation/front_camera/cam2world_gl": {
+            "shape": [
+              272,
+              4,
+              4
+            ],
+            "dtype": "float32",
+            "finite": true,
+            "sha256": "0089f3ba91d37d8d6581160bad2c6425ab1597886ecd01ca095d8851fbf374cd"
+          },
+          "observation/front_camera/extrinsic_cv": {
+            "shape": [
+              272,
+              3,
+              4
+            ],
+            "dtype": "float32",
+            "finite": true,
+            "sha256": "0d75ed8e14a9b68a4599b0b97f2e81cd5f8d81b2a8c1c9b45f648b2bf833555a"
+          },
+          "observation/front_camera/intrinsic_cv": {
+            "shape": [
+              272,
+              3,
+              3
+            ],
+            "dtype": "float32",
+            "finite": true,
+            "sha256": "966b660ab5d23b8d59ef38be6a783925c746c1c4eb3dbadfd037c2239db4344f"
+          },
+          "observation/front_camera/rgb": {
+            "shape": [
+              272
+            ],
+            "dtype": "|S16023"
+          },
+          "observation/head_camera/cam2world_gl": {
+            "shape": [
+              272,
+              4,
+              4
+            ],
+            "dtype": "float32",
+            "finite": true,
+            "sha256": "a63f180a62335428595797881bb335fab7ca7f72500d3d3c6461b052c10b0fc9"
+          },
+          "observation/head_camera/extrinsic_cv": {
+            "shape": [
+              272,
+              3,
+              4
+            ],
+            "dtype": "float32",
+            "finite": true,
+            "sha256": "35a9d273c8808e5f5ad47b224fc0458679b87935ef53b070bec51d6855b915c7"
+          },
+          "observation/head_camera/intrinsic_cv": {
+            "shape": [
+              272,
+              3,
+              3
+            ],
+            "dtype": "float32",
+            "finite": true,
+            "sha256": "966b660ab5d23b8d59ef38be6a783925c746c1c4eb3dbadfd037c2239db4344f"
+          },
+          "observation/head_camera/rgb": {
+            "shape": [
+              272
+            ],
+            "dtype": "|S21135"
+          },
+          "observation/left_camera/cam2world_gl": {
+            "shape": [
+              272,
+              4,
+              4
+            ],
+            "dtype": "float32",
+            "finite": true,
+            "sha256": "009b5806ded53f80856a6d6e73127ce492ad3fd5b9c60dc770edd532888c132c"
+          },
+          "observation/left_camera/extrinsic_cv": {
+            "shape": [
+              272,
+              3,
+              4
+            ],
+            "dtype": "float32",
+            "finite": true,
+            "sha256": "c891d6252dadbfd97b35b5f6b99d55c001adf287ed4edcfa9e8b2c8fb7b1a45d"
+          },
+          "observation/left_camera/intrinsic_cv": {
+            "shape": [
+              272,
+              3,
+              3
+            ],
+            "dtype": "float32",
+            "finite": true,
+            "sha256": "966b660ab5d23b8d59ef38be6a783925c746c1c4eb3dbadfd037c2239db4344f"
+          },
+          "observation/left_camera/rgb": {
+            "shape": [
+              272
+            ],
+            "dtype": "|S5860"
+          },
+          "observation/right_camera/cam2world_gl": {
+            "shape": [
+              272,
+              4,
+              4
+            ],
+            "dtype": "float32",
+            "finite": true,
+            "sha256": "d2695ceac8eb0ee6bc6a273e9651363783a130ae71dfc114ed7d53f07a87bd9b"
+          },
+          "observation/right_camera/extrinsic_cv": {
+            "shape": [
+              272,
+              3,
+              4
+            ],
+            "dtype": "float32",
+            "finite": true,
+            "sha256": "82ff6940532b69731071b267adf5d58e03e99fd0f29e6d613d403c5509fdc6e9"
+          },
+          "observation/right_camera/intrinsic_cv": {
+            "shape": [
+              272,
+              3,
+              3
+            ],
+            "dtype": "float32",
+            "finite": true,
+            "sha256": "966b660ab5d23b8d59ef38be6a783925c746c1c4eb3dbadfd037c2239db4344f"
+          },
+          "observation/right_camera/rgb": {
+            "shape": [
+              272
+            ],
+            "dtype": "|S12911"
+          },
+          "pointcloud": {
+            "shape": [
+              272,
+              0
+            ],
+            "dtype": "float64",
+            "finite": true,
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        },
+        "attributes": {
+          "robofollow_episode": "0",
+          "robofollow_scene": "scene3",
+          "robofollow_seed": "0",
+          "robofollow_task": "r_pick3_via4_to6_long_front"
+        },
+        "image_decode_checks": {
+          "observation/front_camera/rgb": [
+            {
+              "frame": 0,
+              "size": [
+                320,
+                240
+              ],
+              "mode": "RGB",
+              "encoded_sha256": "4e550dc8bddc415a1cacc3aa0ac472ba94e437e3a9cce4ddf5fba640c048e0c9",
+              "decoded_sha256": "b2d141a18c2ccf5dcd6ca40cc985c67689ae39e92cdd6896f604aa3d3f00521e"
+            },
+            {
+              "frame": 136,
+              "size": [
+                320,
+                240
+              ],
+              "mode": "RGB",
+              "encoded_sha256": "0f549a61520c85a73753fb4b227605c1a2105e262fe614518a1db32da2a2ed8e",
+              "decoded_sha256": "c62cffaf96967c4d91eb88304d251327e19ee2f3bba97ab435fd822d97ddfdec"
+            },
+            {
+              "frame": 271,
+              "size": [
+                320,
+                240
+              ],
+              "mode": "RGB",
+              "encoded_sha256": "a477ee3194438011911e52dfdf3d0b1374c6ac19e2dc65280f3d803791f9b16c",
+              "decoded_sha256": "b277f80e6f3ae3ae68df176c636af741d0e705545a516d1b6260f8695ad78b48"
+            }
+          ],
+          "observation/head_camera/rgb": [
+            {
+              "frame": 0,
+              "size": [
+                320,
+                240
+              ],
+              "mode": "RGB",
+              "encoded_sha256": "1aa34ccf93c5920021ff6e97bbbcefc19b00e6dbca16c7da655fe3176043199a",
+              "decoded_sha256": "5eaa9085063f302e5a765845f5bc04adba7e000913a42806e96dc91abf70aa49"
+            },
+            {
+              "frame": 136,
+              "size": [
+                320,
+                240
+              ],
+              "mode": "RGB",
+              "encoded_sha256": "517ecd433638f668941e4738c39627e2f3eff9d98258cdf130a557567c57a3cc",
+              "decoded_sha256": "0e452caf870cfee9c50117cf2611ff07161de9511a0a26544879cf9d09ae9cc9"
+            },
+            {
+              "frame": 271,
+              "size": [
+                320,
+                240
+              ],
+              "mode": "RGB",
+              "encoded_sha256": "b3085454cabccfb10a25d09ad29190e4923600d551d8a18338041e36a41a769e",
+              "decoded_sha256": "f3c534cb096aaabd9451daa3345c3252136e55b12b764918ae217c96ff3ce918"
+            }
+          ],
+          "observation/left_camera/rgb": [
+            {
+              "frame": 0,
+              "size": [
+                320,
+                240
+              ],
+              "mode": "RGB",
+              "encoded_sha256": "73bca12a243b19ab4cb25d91cd872b9358bbda34d4f2c068123a60789257477f",
+              "decoded_sha256": "0df866c5b9463f81c70be4658867bea00713d61420b945e07cbf9112324e3f6f"
+            },
+            {
+              "frame": 136,
+              "size": [
+                320,
+                240
+              ],
+              "mode": "RGB",
+              "encoded_sha256": "a7d2a3e4fecd72bf467b701cbaec98776ed7cb62e6c482216c4c11dd833997aa",
+              "decoded_sha256": "653d7013c4dd8b4f7e44144dccb0fa13bdbfe985a8e098b1ccc12d4511c4c123"
+            },
+            {
+              "frame": 271,
+              "size": [
+                320,
+                240
+              ],
+              "mode": "RGB",
+              "encoded_sha256": "8977fce19b30c011c18dd8a008e53b9be354ad972494043fd24288a21c2aedc9",
+              "decoded_sha256": "3f4ab647349c753588bb07b25a1c38b65268d9a87dfcdfb4e59e3bd0ef796b7e"
+            }
+          ],
+          "observation/right_camera/rgb": [
+            {
+              "frame": 0,
+              "size": [
+                320,
+                240
+              ],
+              "mode": "RGB",
+              "encoded_sha256": "d190e9df28b02b7858444fa2c10ca36dd9ffd40bf917ee52bfb02e7e76062920",
+              "decoded_sha256": "d9487e43283b5c11be5fa13ef30e0ca46aa5273c4b15c8632546d6a0d8465117"
+            },
+            {
+              "frame": 136,
+              "size": [
+                320,
+                240
+              ],
+              "mode": "RGB",
+              "encoded_sha256": "5f00d2e97ce3288b1b30ef671757711a98df18da989e70a59ad68c99d6a11330",
+              "decoded_sha256": "4994df6b0b03a3c654a9bc8202c92ddbae9b7e3780e3e116c202b38dd30f4154"
+            },
+            {
+              "frame": 271,
+              "size": [
+                320,
+                240
+              ],
+              "mode": "RGB",
+              "encoded_sha256": "42cc4b791fedbf05cb3c539c7fb239722724b3a8731b9e523f32c59ce252ea8c",
+              "decoded_sha256": "cfddc7861ab4895d5b3a6e1510c494645d8c2bc71ce1eeafb93716bae363f355"
+            }
+          ]
+        },
+        "time_lengths": [
+          272
+        ]
+      },
+      "planner_file": {
+        "path": "scene3/scene3_r_pick3_via4_to6_long_front/_traj_data/episode0.pkl",
+        "url": "https://huggingface.co/datasets/AutoLab-SJTU/robofollow-data/resolve/bbb1e266ed585f1557773de5a3f1e3b4cd944f97/scene3/scene3_r_pick3_via4_to6_long_front/_traj_data/episode0.pkl",
+        "bytes": 158187,
+        "sha256": "67e5f2802edcf0ef35eda60977987a36c053cc1d8b96110e3a79f996ba05b6e0"
+      },
+      "planner": {
+        "inspection": "pickletools opcodes only; no deserialization",
+        "strings": [
+          "<",
+          "Success",
+          "_reconstruct",
+          "dtype",
+          "f4",
+          "left_joint_path",
+          "ndarray",
+          "numpy",
+          "numpy.core.multiarray",
+          "position",
+          "right_joint_path",
+          "robofollow_segment",
+          "scene3_transfer_v1",
+          "status",
+          "velocity"
+        ],
+        "global_opcodes": [],
+        "opcode_counts": {
+          "PROTO": 1,
+          "FRAME": 2,
+          "EMPTY_DICT": 7,
+          "MEMOIZE": 103,
+          "MARK": 21,
+          "SHORT_BINUNICODE": 15,
+          "EMPTY_LIST": 2,
+          "STACK_GLOBAL": 3,
+          "BININT1": 44,
+          "TUPLE1": 12,
+          "SHORT_BINBYTES": 1,
+          "TUPLE3": 13,
+          "REDUCE": 13,
+          "TUPLE2": 12,
+          "BINGET": 65,
+          "NEWFALSE": 13,
+          "NEWTRUE": 1,
+          "NONE": 3,
+          "BININT": 2,
+          "TUPLE": 13,
+          "BUILD": 13,
+          "BINBYTES": 12,
+          "SETITEMS": 7,
+          "APPEND": 1,
+          "BININT2": 6,
+          "APPENDS": 1,
+          "STOP": 1
+        }
+      }
+    },
+    {
+      "task_id": "r_pick3_via4_to6_long_front",
+      "episode_id": 24,
+      "partition": "train",
+      "hdf5_file": {
+        "path": "scene3/scene3_r_pick3_via4_to6_long_front/data/episode24.hdf5",
+        "url": "https://huggingface.co/datasets/AutoLab-SJTU/robofollow-data/resolve/bbb1e266ed585f1557773de5a3f1e3b4cd944f97/scene3/scene3_r_pick3_via4_to6_long_front/data/episode24.hdf5",
+        "bytes": 15407785,
+        "sha256": "e3ee7084827901efee1b72bdc6b5995d4f9336335275f17f9de3b9da625ec3d0"
+      },
+      "hdf5": {
+        "datasets": {
+          "endpose/left_endpose": {
+            "shape": [
+              269,
+              7
+            ],
+            "dtype": "float64",
+            "finite": true,
+            "sha256": "09b9db422e4ae2a90aa9e4e6bbb88338a03045d545b3d7a9518f681351d480d9"
+          },
+          "endpose/left_gripper": {
+            "shape": [
+              269
+            ],
+            "dtype": "float64",
+            "finite": true,
+            "sha256": "26921fee001e09f848c6cdaac32cc8bb794b8e081c54f0f368e852b5ccd96930"
+          },
+          "endpose/right_endpose": {
+            "shape": [
+              269,
+              7
+            ],
+            "dtype": "float64",
+            "finite": true,
+            "sha256": "51274a2b0871bc5a892eedb9d4af083f2c24632a3c7ecd5f743986951f1021ce"
+          },
+          "endpose/right_gripper": {
+            "shape": [
+              269
+            ],
+            "dtype": "float64",
+            "finite": true,
+            "sha256": "464b79970f4dd17c5e576fd479e8ffeae9540f19f72aa648783800632b40f4e3"
+          },
+          "joint_action/left_arm": {
+            "shape": [
+              269,
+              6
+            ],
+            "dtype": "float64",
+            "finite": true,
+            "sha256": "e8432952fb8356976226c5b4c1c91de5629c0780cd30246c819d85e8fac4e13c"
+          },
+          "joint_action/left_gripper": {
+            "shape": [
+              269
+            ],
+            "dtype": "float64",
+            "finite": true,
+            "sha256": "26921fee001e09f848c6cdaac32cc8bb794b8e081c54f0f368e852b5ccd96930"
+          },
+          "joint_action/right_arm": {
+            "shape": [
+              269,
+              6
+            ],
+            "dtype": "float64",
+            "finite": true,
+            "sha256": "47b81a20b9b73d8e643354a9ff5d717e289ba22273cbb9279f48304efa155852"
+          },
+          "joint_action/right_gripper": {
+            "shape": [
+              269
+            ],
+            "dtype": "float64",
+            "finite": true,
+            "sha256": "464b79970f4dd17c5e576fd479e8ffeae9540f19f72aa648783800632b40f4e3"
+          },
+          "joint_action/vector": {
+            "shape": [
+              269,
+              14
+            ],
+            "dtype": "float64",
+            "finite": true,
+            "sha256": "d388848fc9ae8e2f9eb7bb6b9d36357b93c45db6a4594d62a4e11fc46dc4ce71",
+            "first_frame_sha256": "8881b906105a2087fe5e5cd1981ec8df4aeb348817af30d138e31df5bc075214",
+            "first_frame": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ],
+            "last_frame": [
+              -8.77505044627469e-06,
+              -2.6067726821565884e-07,
+              -3.2005180401029065e-05,
+              9.519481523057038e-07,
+              -9.229705938196275e-06,
+              8.016038009373005e-06,
+              1.0,
+              1.4039665984455496e-05,
+              -4.713020643976051e-06,
+              -2.8390970328473486e-05,
+              -1.804789803827589e-06,
+              1.7926082364283502e-05,
+              1.963390332093695e-06,
+              1.0
+            ]
+          },
+          "observation/front_camera/cam2world_gl": {
+            "shape": [
+              269,
+              4,
+              4
+            ],
+            "dtype": "float32",
+            "finite": true,
+            "sha256": "04ab97b861d1cc40c821095f22e8ffdc2b67b6890e60cd7c5b95c8086f20d2d9"
+          },
+          "observation/front_camera/extrinsic_cv": {
+            "shape": [
+              269,
+              3,
+              4
+            ],
+            "dtype": "float32",
+            "finite": true,
+            "sha256": "d392a09b5c82773434f4fb58bc40db4e7b784ca82a26a0bb2b4c45d1cc272cd8"
+          },
+          "observation/front_camera/intrinsic_cv": {
+            "shape": [
+              269,
+              3,
+              3
+            ],
+            "dtype": "float32",
+            "finite": true,
+            "sha256": "78e6bd7f6384c5973111249e4dfe2377deeeb3b9341a5e42aea959fd518b6da8"
+          },
+          "observation/front_camera/rgb": {
+            "shape": [
+              269
+            ],
+            "dtype": "|S16141"
+          },
+          "observation/head_camera/cam2world_gl": {
+            "shape": [
+              269,
+              4,
+              4
+            ],
+            "dtype": "float32",
+            "finite": true,
+            "sha256": "120f12615711e261f71bd0d7dcffa8df938e5181af5f2c1dd1fcc40920069f99"
+          },
+          "observation/head_camera/extrinsic_cv": {
+            "shape": [
+              269,
+              3,
+              4
+            ],
+            "dtype": "float32",
+            "finite": true,
+            "sha256": "8f1400b03ca71398464cfb3bdecc453feb1dbc062a960ae21cc8c396bbce7412"
+          },
+          "observation/head_camera/intrinsic_cv": {
+            "shape": [
+              269,
+              3,
+              3
+            ],
+            "dtype": "float32",
+            "finite": true,
+            "sha256": "78e6bd7f6384c5973111249e4dfe2377deeeb3b9341a5e42aea959fd518b6da8"
+          },
+          "observation/head_camera/rgb": {
+            "shape": [
+              269
+            ],
+            "dtype": "|S21229"
+          },
+          "observation/left_camera/cam2world_gl": {
+            "shape": [
+              269,
+              4,
+              4
+            ],
+            "dtype": "float32",
+            "finite": true,
+            "sha256": "6be5cae82c7e331064ea5638c691313c81de0698971243510949623f55dee389"
+          },
+          "observation/left_camera/extrinsic_cv": {
+            "shape": [
+              269,
+              3,
+              4
+            ],
+            "dtype": "float32",
+            "finite": true,
+            "sha256": "8ecda82138f54c5cf414f2cc6a9d527406d4088a73c4a15bc9c5809733329b6d"
+          },
+          "observation/left_camera/intrinsic_cv": {
+            "shape": [
+              269,
+              3,
+              3
+            ],
+            "dtype": "float32",
+            "finite": true,
+            "sha256": "78e6bd7f6384c5973111249e4dfe2377deeeb3b9341a5e42aea959fd518b6da8"
+          },
+          "observation/left_camera/rgb": {
+            "shape": [
+              269
+            ],
+            "dtype": "|S5871"
+          },
+          "observation/right_camera/cam2world_gl": {
+            "shape": [
+              269,
+              4,
+              4
+            ],
+            "dtype": "float32",
+            "finite": true,
+            "sha256": "ba639fcfdebc7261f1fedb5709e49029e86afa86f3d47a30f03e924688e86499"
+          },
+          "observation/right_camera/extrinsic_cv": {
+            "shape": [
+              269,
+              3,
+              4
+            ],
+            "dtype": "float32",
+            "finite": true,
+            "sha256": "64cd970a4637ee966b2b961ee601f87efba8336f0a420f7269476fe8f96cdece"
+          },
+          "observation/right_camera/intrinsic_cv": {
+            "shape": [
+              269,
+              3,
+              3
+            ],
+            "dtype": "float32",
+            "finite": true,
+            "sha256": "78e6bd7f6384c5973111249e4dfe2377deeeb3b9341a5e42aea959fd518b6da8"
+          },
+          "observation/right_camera/rgb": {
+            "shape": [
+              269
+            ],
+            "dtype": "|S13004"
+          },
+          "pointcloud": {
+            "shape": [
+              269,
+              0
+            ],
+            "dtype": "float64",
+            "finite": true,
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        },
+        "attributes": {
+          "robofollow_episode": "24",
+          "robofollow_scene": "scene3",
+          "robofollow_seed": "53",
+          "robofollow_task": "r_pick3_via4_to6_long_front"
+        },
+        "image_decode_checks": {
+          "observation/front_camera/rgb": [
+            {
+              "frame": 0,
+              "size": [
+                320,
+                240
+              ],
+              "mode": "RGB",
+              "encoded_sha256": "49c09cb00e248a6a84e149c91bbbb0edb83b3a9918191f7a1c972a482f360368",
+              "decoded_sha256": "a3ab032d955b70c521672d333264c5241f4a546148b3276e87cf9316a5fbbd99"
+            },
+            {
+              "frame": 134,
+              "size": [
+                320,
+                240
+              ],
+              "mode": "RGB",
+              "encoded_sha256": "6f25e46de4734578d98dec0ceca94d372f2a9a5d2bc338853b75095d3dd56036",
+              "decoded_sha256": "b4025cb539ed679b078f7fb2b27c51f681be8334c01eefc65a5fcd5774446942"
+            },
+            {
+              "frame": 268,
+              "size": [
+                320,
+                240
+              ],
+              "mode": "RGB",
+              "encoded_sha256": "178ba70989576cf4d599be44bed0cf2064d8a302fd02cd50f5036eabd07844f2",
+              "decoded_sha256": "15ffa00d715657b2e4ab46a16d4c734f9aeb9c469dec035ccb869a7df22a4ee9"
+            }
+          ],
+          "observation/head_camera/rgb": [
+            {
+              "frame": 0,
+              "size": [
+                320,
+                240
+              ],
+              "mode": "RGB",
+              "encoded_sha256": "7f980d334b125098e9b44f1ba4021dbb013496ca945b96daf996fabee23a4736",
+              "decoded_sha256": "a4f3717c7575499703f0bcbea6472a5dbd266b0583a5921cf1e46435875adad7"
+            },
+            {
+              "frame": 134,
+              "size": [
+                320,
+                240
+              ],
+              "mode": "RGB",
+              "encoded_sha256": "68e4eb660e880a524f799465c95296856d89871ce1965d327a53353faa49c888",
+              "decoded_sha256": "45d5af3598146f1611d512523011c088d36eb3b2ed2cabe01832bacce73858b6"
+            },
+            {
+              "frame": 268,
+              "size": [
+                320,
+                240
+              ],
+              "mode": "RGB",
+              "encoded_sha256": "00780ee17a32f99397c0ff2907d6ae9dd2c7acaebc31fb6c690f390293a75033",
+              "decoded_sha256": "f6fb8601700ccac4df32f96ef6ece215590bb2f50d58b4f2e020d604743139ff"
+            }
+          ],
+          "observation/left_camera/rgb": [
+            {
+              "frame": 0,
+              "size": [
+                320,
+                240
+              ],
+              "mode": "RGB",
+              "encoded_sha256": "83b611f94928e47a3bcef2ceafea1127f76fbdbce06e5521fbfa8fd6354d1eb6",
+              "decoded_sha256": "1cd093be755fe40906b5416dbd20f8ed40615d293ff21c41c660e8fa58dd1448"
+            },
+            {
+              "frame": 134,
+              "size": [
+                320,
+                240
+              ],
+              "mode": "RGB",
+              "encoded_sha256": "370dfccfe16fa6f253f55e52f61ed54fafaafea1fc71ecb1ce720baad9a22865",
+              "decoded_sha256": "b4f4477fd4434f4aa8b4290530a9941ff0ed74aa2bead093f7c5fe2a43571d29"
+            },
+            {
+              "frame": 268,
+              "size": [
+                320,
+                240
+              ],
+              "mode": "RGB",
+              "encoded_sha256": "53c9d222989a45ec87c3bb40dd512f13890c36e39c939303b14b42923c63d1ee",
+              "decoded_sha256": "a5a9f050b833cc1bd431f83c91422f42336150291773c6e99955158d160b838a"
+            }
+          ],
+          "observation/right_camera/rgb": [
+            {
+              "frame": 0,
+              "size": [
+                320,
+                240
+              ],
+              "mode": "RGB",
+              "encoded_sha256": "5915a6ecb62e8c3e4dddd1ba2ce83df21e56bd30d632cd3591f6323071e52cf0",
+              "decoded_sha256": "c4f38ed310de09a79cba71137fb852a1fb21c09c5eec266fe88d45f2ee36fa11"
+            },
+            {
+              "frame": 134,
+              "size": [
+                320,
+                240
+              ],
+              "mode": "RGB",
+              "encoded_sha256": "34e0d2a8c58f3056c86bd80e0b5b7e264bb338bd640d9b7448c2e541e29cc7e4",
+              "decoded_sha256": "25e0c927a642d70f8fb9fb3d9f5c259d0a43271d7e394508146b2d4890553f64"
+            },
+            {
+              "frame": 268,
+              "size": [
+                320,
+                240
+              ],
+              "mode": "RGB",
+              "encoded_sha256": "09d23bb4b2dc4d7af5023e3cef5f32ae2fa7792d23476d95449f6d4448b38220",
+              "decoded_sha256": "689420795e89f8b6d69d7170f511dc9b1355ecbf80a2ae1d3cfb0b5d15d3baaf"
+            }
+          ]
+        },
+        "time_lengths": [
+          269
+        ]
+      },
+      "planner_file": {
+        "path": "scene3/scene3_r_pick3_via4_to6_long_front/_traj_data/episode24.pkl",
+        "url": "https://huggingface.co/datasets/AutoLab-SJTU/robofollow-data/resolve/bbb1e266ed585f1557773de5a3f1e3b4cd944f97/scene3/scene3_r_pick3_via4_to6_long_front/_traj_data/episode24.pkl",
+        "bytes": 155931,
+        "sha256": "606a2922104aed380156cb87edc16ab44fd7761f262777c0168bdcf981ee5ed7"
+      },
+      "planner": {
+        "inspection": "pickletools opcodes only; no deserialization",
+        "strings": [
+          "<",
+          "Success",
+          "_reconstruct",
+          "dtype",
+          "f4",
+          "left_joint_path",
+          "ndarray",
+          "numpy",
+          "numpy.core.multiarray",
+          "position",
+          "right_joint_path",
+          "robofollow_segment",
+          "scene3_transfer_v1",
+          "status",
+          "velocity"
+        ],
+        "global_opcodes": [],
+        "opcode_counts": {
+          "PROTO": 1,
+          "FRAME": 2,
+          "EMPTY_DICT": 7,
+          "MEMOIZE": 103,
+          "MARK": 21,
+          "SHORT_BINUNICODE": 15,
+          "EMPTY_LIST": 2,
+          "STACK_GLOBAL": 3,
+          "BININT1": 44,
+          "TUPLE1": 12,
+          "SHORT_BINBYTES": 1,
+          "TUPLE3": 13,
+          "REDUCE": 13,
+          "TUPLE2": 12,
+          "BINGET": 65,
+          "NEWFALSE": 13,
+          "NEWTRUE": 1,
+          "NONE": 3,
+          "BININT": 2,
+          "TUPLE": 13,
+          "BUILD": 13,
+          "BINBYTES": 12,
+          "SETITEMS": 7,
+          "APPEND": 1,
+          "BININT2": 6,
+          "APPENDS": 1,
+          "STOP": 1
+        }
+      }
+    },
+    {
+      "task_id": "r_pick3_via4_to6_long_front",
+      "episode_id": 49,
+      "partition": "train",
+      "hdf5_file": {
+        "path": "scene3/scene3_r_pick3_via4_to6_long_front/data/episode49.hdf5",
+        "url": "https://huggingface.co/datasets/AutoLab-SJTU/robofollow-data/resolve/bbb1e266ed585f1557773de5a3f1e3b4cd944f97/scene3/scene3_r_pick3_via4_to6_long_front/data/episode49.hdf5",
+        "bytes": 15617339,
+        "sha256": "928d74abbd194f88c6dca792619927ac4baf96086d89d248455153f047fa7557"
+      },
+      "hdf5": {
+        "datasets": {
+          "endpose/left_endpose": {
+            "shape": [
+              265,
+              7
+            ],
+            "dtype": "float64",
+            "finite": true,
+            "sha256": "a27ff0d747659eb17d1b33b642f17692e664eda1d03d862a6243f4db7d67f5d4"
+          },
+          "endpose/left_gripper": {
+            "shape": [
+              265
+            ],
+            "dtype": "float64",
+            "finite": true,
+            "sha256": "ee1c41c980114f148e0d56c022682b41b43941273efd60469215ef8705850f0b"
+          },
+          "endpose/right_endpose": {
+            "shape": [
+              265,
+              7
+            ],
+            "dtype": "float64",
+            "finite": true,
+            "sha256": "9334c73002fb02df0a38831e449544d3bbea1b10248b3c8ab7e28d4d2824dd1a"
+          },
+          "endpose/right_gripper": {
+            "shape": [
+              265
+            ],
+            "dtype": "float64",
+            "finite": true,
+            "sha256": "03bec0e91a05f13bce8fe5bcbf2a7b7a32d21be65b3882b3f51b910701658f47"
+          },
+          "joint_action/left_arm": {
+            "shape": [
+              265,
+              6
+            ],
+            "dtype": "float64",
+            "finite": true,
+            "sha256": "d57e492af41f8cc8c365b3925111ecbf9a34381ec58eb702874746ba2442f8aa"
+          },
+          "joint_action/left_gripper": {
+            "shape": [
+              265
+            ],
+            "dtype": "float64",
+            "finite": true,
+            "sha256": "ee1c41c980114f148e0d56c022682b41b43941273efd60469215ef8705850f0b"
+          },
+          "joint_action/right_arm": {
+            "shape": [
+              265,
+              6
+            ],
+            "dtype": "float64",
+            "finite": true,
+            "sha256": "a3c675d9b9926a291f403899aa2fbd0a4a94f65c7b7f0050bdbbf9b82cc2bdd5"
+          },
+          "joint_action/right_gripper": {
+            "shape": [
+              265
+            ],
+            "dtype": "float64",
+            "finite": true,
+            "sha256": "03bec0e91a05f13bce8fe5bcbf2a7b7a32d21be65b3882b3f51b910701658f47"
+          },
+          "joint_action/vector": {
+            "shape": [
+              265,
+              14
+            ],
+            "dtype": "float64",
+            "finite": true,
+            "sha256": "2766f0bcb57aa083959f457488f96eddbeaf2c5f713db154b4d610a1a987c76d",
+            "first_frame_sha256": "8881b906105a2087fe5e5cd1981ec8df4aeb348817af30d138e31df5bc075214",
+            "first_frame": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ],
+            "last_frame": [
+              -7.53333040393045e-08,
+              4.2892480678347056e-07,
+              -3.205743632861413e-05,
+              -4.1302970998913224e-07,
+              5.578386463866991e-08,
+              3.072950107707584e-07,
+              1.0,
+              1.200642145704478e-05,
+              2.6405306925880723e-05,
+              -2.9663600798812695e-05,
+              2.0125091396039352e-05,
+              1.616649933566805e-05,
+              2.840065235432121e-06,
+              1.0
+            ]
+          },
+          "observation/front_camera/cam2world_gl": {
+            "shape": [
+              265,
+              4,
+              4
+            ],
+            "dtype": "float32",
+            "finite": true,
+            "sha256": "8d36052ebd04d4b8182a746e51c4efda80b317aecfe789146615a3788dce0453"
+          },
+          "observation/front_camera/extrinsic_cv": {
+            "shape": [
+              265,
+              3,
+              4
+            ],
+            "dtype": "float32",
+            "finite": true,
+            "sha256": "d7bea45dfdd0d54489200e0fa832430ffc7536ec0183fef66cb5bf02ca522f40"
+          },
+          "observation/front_camera/intrinsic_cv": {
+            "shape": [
+              265,
+              3,
+              3
+            ],
+            "dtype": "float32",
+            "finite": true,
+            "sha256": "d845e88e56942eb0666efab7410d10199f978a173abcdebdf955ddd119db41d0"
+          },
+          "observation/front_camera/rgb": {
+            "shape": [
+              265
+            ],
+            "dtype": "|S16096"
+          },
+          "observation/head_camera/cam2world_gl": {
+            "shape": [
+              265,
+              4,
+              4
+            ],
+            "dtype": "float32",
+            "finite": true,
+            "sha256": "cecc3050bc76bf5667ce30bfa6f8e893820a7c56b94c522c9d2541fc6c70db9e"
+          },
+          "observation/head_camera/extrinsic_cv": {
+            "shape": [
+              265,
+              3,
+              4
+            ],
+            "dtype": "float32",
+            "finite": true,
+            "sha256": "eeab97f6fce457c6812ad722c9f688d6f71e931e2dd1f99c3b15a5f0f25c9aa2"
+          },
+          "observation/head_camera/intrinsic_cv": {
+            "shape": [
+              265,
+              3,
+              3
+            ],
+            "dtype": "float32",
+            "finite": true,
+            "sha256": "d845e88e56942eb0666efab7410d10199f978a173abcdebdf955ddd119db41d0"
+          },
+          "observation/head_camera/rgb": {
+            "shape": [
+              265
+            ],
+            "dtype": "|S21152"
+          },
+          "observation/left_camera/cam2world_gl": {
+            "shape": [
+              265,
+              4,
+              4
+            ],
+            "dtype": "float32",
+            "finite": true,
+            "sha256": "2b78bf3313a0f17799f2434b0452ab0e46ff560509baa6d1d21b723251d844e5"
+          },
+          "observation/left_camera/extrinsic_cv": {
+            "shape": [
+              265,
+              3,
+              4
+            ],
+            "dtype": "float32",
+            "finite": true,
+            "sha256": "af6d5202dbfbb7ce2faaac0ee521191fbcfa6351a2648bd05a6aac96b14ac147"
+          },
+          "observation/left_camera/intrinsic_cv": {
+            "shape": [
+              265,
+              3,
+              3
+            ],
+            "dtype": "float32",
+            "finite": true,
+            "sha256": "d845e88e56942eb0666efab7410d10199f978a173abcdebdf955ddd119db41d0"
+          },
+          "observation/left_camera/rgb": {
+            "shape": [
+              265
+            ],
+            "dtype": "|S5916"
+          },
+          "observation/right_camera/cam2world_gl": {
+            "shape": [
+              265,
+              4,
+              4
+            ],
+            "dtype": "float32",
+            "finite": true,
+            "sha256": "4b4995e62a59df23d048ffc1d3671ed0b4c2982899ecd317e7978fce99b86cc4"
+          },
+          "observation/right_camera/extrinsic_cv": {
+            "shape": [
+              265,
+              3,
+              4
+            ],
+            "dtype": "float32",
+            "finite": true,
+            "sha256": "9b1ee8bd09ebf5103368bc6ac4a0fdff3e06a33f66b3c2030e0a7f7d4179ae18"
+          },
+          "observation/right_camera/intrinsic_cv": {
+            "shape": [
+              265,
+              3,
+              3
+            ],
+            "dtype": "float32",
+            "finite": true,
+            "sha256": "d845e88e56942eb0666efab7410d10199f978a173abcdebdf955ddd119db41d0"
+          },
+          "observation/right_camera/rgb": {
+            "shape": [
+              265
+            ],
+            "dtype": "|S14735"
+          },
+          "pointcloud": {
+            "shape": [
+              265,
+              0
+            ],
+            "dtype": "float64",
+            "finite": true,
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        },
+        "attributes": {
+          "robofollow_episode": "49",
+          "robofollow_scene": "scene3",
+          "robofollow_seed": "120",
+          "robofollow_task": "r_pick3_via4_to6_long_front"
+        },
+        "image_decode_checks": {
+          "observation/front_camera/rgb": [
+            {
+              "frame": 0,
+              "size": [
+                320,
+                240
+              ],
+              "mode": "RGB",
+              "encoded_sha256": "b2280efc53e0603008e1241a98b43cac1f1265d122693826b2d59e0ba2e26135",
+              "decoded_sha256": "b55d0dfdbd07805af2fe08e14c7a1eaeabaf362ad96400c2ff7e17f4197ae707"
+            },
+            {
+              "frame": 132,
+              "size": [
+                320,
+                240
+              ],
+              "mode": "RGB",
+              "encoded_sha256": "0bb35423e10ed59a5f0683c814ebc0cad497d53c84c7909b893f73d5d5160e74",
+              "decoded_sha256": "21e2febc47f5df75ae5c5169d2fdacf7c3c0f48be7d35097404b016885cc1409"
+            },
+            {
+              "frame": 264,
+              "size": [
+                320,
+                240
+              ],
+              "mode": "RGB",
+              "encoded_sha256": "693ac63048f3248839ad3e023307bc4f99fe1d74a00d85b69818f731cc07dffa",
+              "decoded_sha256": "1a5d8fe40fa9bbe5a845f9e45b5b8b2ee74f9544910458e474edb06d8785ec3f"
+            }
+          ],
+          "observation/head_camera/rgb": [
+            {
+              "frame": 0,
+              "size": [
+                320,
+                240
+              ],
+              "mode": "RGB",
+              "encoded_sha256": "4f78f4f4e9a9b4c1d2dd84384b466e0497b8794b4eb0f78835d6695bf303d910",
+              "decoded_sha256": "6d08f20d3f47f5600a922bead0d8a64aa8e5fff994fb636746bd553a3293d361"
+            },
+            {
+              "frame": 132,
+              "size": [
+                320,
+                240
+              ],
+              "mode": "RGB",
+              "encoded_sha256": "b7d05e327fb4de672658c3ddaa71e15b4659cde0afad2ee7d925e185bd7728b8",
+              "decoded_sha256": "cfd263c3e372d7f2600aa622174c27fce87163eabba75021451e83585da405d2"
+            },
+            {
+              "frame": 264,
+              "size": [
+                320,
+                240
+              ],
+              "mode": "RGB",
+              "encoded_sha256": "940858c3f9f60b53897038732c4eb957ffc22bcdd9bdd35d9b422e0ae4d022ee",
+              "decoded_sha256": "18b1169c22f3065a7838ea6d9c7b010a73f20fa817468fa6e960245a850690ca"
+            }
+          ],
+          "observation/left_camera/rgb": [
+            {
+              "frame": 0,
+              "size": [
+                320,
+                240
+              ],
+              "mode": "RGB",
+              "encoded_sha256": "e20041c029be57377cec65a18c4f788889fe2c27adf6a11aba993712b1c00171",
+              "decoded_sha256": "2d3ed78b5cc960348764cdca91f9c1417e6d953667c218f829d515b826d64a17"
+            },
+            {
+              "frame": 132,
+              "size": [
+                320,
+                240
+              ],
+              "mode": "RGB",
+              "encoded_sha256": "5fe5e2349c647c95370e8d4a18776328e4c75ed2908f013c311850c159a89099",
+              "decoded_sha256": "44c01534d944ce5295baafe4f04ea18fe38238d5db29c45edaf196e503cb1a30"
+            },
+            {
+              "frame": 264,
+              "size": [
+                320,
+                240
+              ],
+              "mode": "RGB",
+              "encoded_sha256": "ee2527dd0ffd751c3c832086edde31f4fca217e1feb99a05ce6614d2773cbadb",
+              "decoded_sha256": "fbd52b8ea81769689b64f1e0dd620b36afd727ec764b762701f8c0d95fde803a"
+            }
+          ],
+          "observation/right_camera/rgb": [
+            {
+              "frame": 0,
+              "size": [
+                320,
+                240
+              ],
+              "mode": "RGB",
+              "encoded_sha256": "7bfd623aadf77c3af82c947a7dfbcc1f9cca8409c6d667ee093cc58066a5d225",
+              "decoded_sha256": "a8f3fc59a2dc7bc3f2ea87ccdf009e1480765cad88c7280b4131e819b5a24290"
+            },
+            {
+              "frame": 132,
+              "size": [
+                320,
+                240
+              ],
+              "mode": "RGB",
+              "encoded_sha256": "9dbfc53ca262f8cbcec3c42af3dc5b0b63d6f664e461b138e20eb42bd682c588",
+              "decoded_sha256": "d91de5012cfe3b24dcda3e09a528ba4c724b8a35bbec1d866ace98300e45018b"
+            },
+            {
+              "frame": 264,
+              "size": [
+                320,
+                240
+              ],
+              "mode": "RGB",
+              "encoded_sha256": "80f5012c6c27ff828538773ef01541a9707b3f58ed57db6b34fd2da60a3f128a",
+              "decoded_sha256": "3402810eee94ad13aafdf19eb8a7a2f824c90155bbdb13b4124abc084c682ab4"
+            }
+          ]
+        },
+        "time_lengths": [
+          265
+        ]
+      },
+      "planner_file": {
+        "path": "scene3/scene3_r_pick3_via4_to6_long_front/_traj_data/episode49.pkl",
+        "url": "https://huggingface.co/datasets/AutoLab-SJTU/robofollow-data/resolve/bbb1e266ed585f1557773de5a3f1e3b4cd944f97/scene3/scene3_r_pick3_via4_to6_long_front/_traj_data/episode49.pkl",
+        "bytes": 152715,
+        "sha256": "a9c8b7e452fc2b38f7996c5c60a922e40c1cca9662b20f2f3e3374c0dc657ff6"
+      },
+      "planner": {
+        "inspection": "pickletools opcodes only; no deserialization",
+        "strings": [
+          "<",
+          "Success",
+          "_reconstruct",
+          "dtype",
+          "f4",
+          "left_joint_path",
+          "ndarray",
+          "numpy",
+          "numpy.core.multiarray",
+          "position",
+          "right_joint_path",
+          "robofollow_segment",
+          "scene3_transfer_v1",
+          "status",
+          "velocity"
+        ],
+        "global_opcodes": [],
+        "opcode_counts": {
+          "PROTO": 1,
+          "FRAME": 2,
+          "EMPTY_DICT": 7,
+          "MEMOIZE": 103,
+          "MARK": 21,
+          "SHORT_BINUNICODE": 15,
+          "EMPTY_LIST": 2,
+          "STACK_GLOBAL": 3,
+          "BININT1": 44,
+          "TUPLE1": 12,
+          "SHORT_BINBYTES": 1,
+          "TUPLE3": 13,
+          "REDUCE": 13,
+          "TUPLE2": 12,
+          "BINGET": 65,
+          "NEWFALSE": 13,
+          "NEWTRUE": 1,
+          "NONE": 3,
+          "BININT": 2,
+          "TUPLE": 13,
+          "BUILD": 13,
+          "BINBYTES": 12,
+          "SETITEMS": 7,
+          "APPEND": 1,
+          "BININT2": 6,
+          "APPENDS": 1,
+          "STOP": 1
+        }
+      }
+    },
+    {
+      "task_id": "r_pick3_via5_to6_short_front",
+      "episode_id": 0,
+      "partition": "train",
+      "hdf5_file": {
+        "path": "scene3/scene3_r_pick3_via5_to6_short_front/data/episode0.hdf5",
+        "url": "https://huggingface.co/datasets/AutoLab-SJTU/robofollow-data/resolve/bbb1e266ed585f1557773de5a3f1e3b4cd944f97/scene3/scene3_r_pick3_via5_to6_short_front/data/episode0.hdf5",
+        "bytes": 13772685,
+        "sha256": "83975a4ae1f1532933d14905aa75e213ca0390768c3e0b2e337b25910b825590"
+      },
+      "hdf5": {
+        "datasets": {
+          "endpose/left_endpose": {
+            "shape": [
+              229,
+              7
+            ],
+            "dtype": "float64",
+            "finite": true,
+            "sha256": "eda5fef9b26b4776914bccadcaf143a5a175ffb7abe9413eee8386759b310b87"
+          },
+          "endpose/left_gripper": {
+            "shape": [
+              229
+            ],
+            "dtype": "float64",
+            "finite": true,
+            "sha256": "146ad5a3c70254ab0b47dda23db1b7e7c1b2ef3a41cf39e0d146a7410fb1b1bf"
+          },
+          "endpose/right_endpose": {
+            "shape": [
+              229,
+              7
+            ],
+            "dtype": "float64",
+            "finite": true,
+            "sha256": "4a578e3be44b5c4d78f7883f16ca6719d483fe898ecaa6f2fd3a35f8952e7692"
+          },
+          "endpose/right_gripper": {
+            "shape": [
+              229
+            ],
+            "dtype": "float64",
+            "finite": true,
+            "sha256": "c13efde95970a83d53b4786644cba6884b00785de27648693908e1c43bf3fd78"
+          },
+          "joint_action/left_arm": {
+            "shape": [
+              229,
+              6
+            ],
+            "dtype": "float64",
+            "finite": true,
+            "sha256": "91efd2a940edbcb93126650f27ed99fe000690b13384ea31e4ebaf4275eb5c17"
+          },
+          "joint_action/left_gripper": {
+            "shape": [
+              229
+            ],
+            "dtype": "float64",
+            "finite": true,
+            "sha256": "146ad5a3c70254ab0b47dda23db1b7e7c1b2ef3a41cf39e0d146a7410fb1b1bf"
+          },
+          "joint_action/right_arm": {
+            "shape": [
+              229,
+              6
+            ],
+            "dtype": "float64",
+            "finite": true,
+            "sha256": "ccd4eacc636e227aa3be9077c99ff35035723fdb27bb3181d5a6d85bf42401ef"
+          },
+          "joint_action/right_gripper": {
+            "shape": [
+              229
+            ],
+            "dtype": "float64",
+            "finite": true,
+            "sha256": "c13efde95970a83d53b4786644cba6884b00785de27648693908e1c43bf3fd78"
+          },
+          "joint_action/vector": {
+            "shape": [
+              229,
+              14
+            ],
+            "dtype": "float64",
+            "finite": true,
+            "sha256": "7ec14aba0f8aea8e0140e6f4955e08ef25e7dcd5347f489f0c8b9ec29c556bd3",
+            "first_frame_sha256": "8881b906105a2087fe5e5cd1981ec8df4aeb348817af30d138e31df5bc075214",
+            "first_frame": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ],
+            "last_frame": [
+              -7.127575827325927e-06,
+              -2.09641621040646e-06,
+              -2.906544068537187e-05,
+              -4.623379481927259e-06,
+              -8.21767662273487e-06,
+              -1.0893679700529901e-06,
+              1.0,
+              6.069295068300562e-06,
+              8.76688716289209e-07,
+              -2.0892612155876122e-05,
+              -1.4692142030980904e-05,
+              5.274210252537159e-06,
+              -4.148775587964337e-06,
+              1.0
+            ]
+          },
+          "observation/front_camera/cam2world_gl": {
+            "shape": [
+              229,
+              4,
+              4
+            ],
+            "dtype": "float32",
+            "finite": true,
+            "sha256": "48a41a21ab0ea9332cddbdd444e393509f54d80a4178409d786d0ea9dcb70c9e"
+          },
+          "observation/front_camera/extrinsic_cv": {
+            "shape": [
+              229,
+              3,
+              4
+            ],
+            "dtype": "float32",
+            "finite": true,
+            "sha256": "2792623a3d367bb984a8d577a3d5c68297616ef172a3247c4b77f317631bddd7"
+          },
+          "observation/front_camera/intrinsic_cv": {
+            "shape": [
+              229,
+              3,
+              3
+            ],
+            "dtype": "float32",
+            "finite": true,
+            "sha256": "0176e735107a5883d4a2491471efde6d32164b04d591b36601f12376dfa6f8ea"
+          },
+          "observation/front_camera/rgb": {
+            "shape": [
+              229
+            ],
+            "dtype": "|S15955"
+          },
+          "observation/head_camera/cam2world_gl": {
+            "shape": [
+              229,
+              4,
+              4
+            ],
+            "dtype": "float32",
+            "finite": true,
+            "sha256": "a25cc39c305449a32c0055f0d9d9d8482c8acf270c1a5b858ae1f88cc81a8613"
+          },
+          "observation/head_camera/extrinsic_cv": {
+            "shape": [
+              229,
+              3,
+              4
+            ],
+            "dtype": "float32",
+            "finite": true,
+            "sha256": "513e03eeab006dc504cf170f46fd4af08b76b6a087096c0459736d476c751a59"
+          },
+          "observation/head_camera/intrinsic_cv": {
+            "shape": [
+              229,
+              3,
+              3
+            ],
+            "dtype": "float32",
+            "finite": true,
+            "sha256": "0176e735107a5883d4a2491471efde6d32164b04d591b36601f12376dfa6f8ea"
+          },
+          "observation/head_camera/rgb": {
+            "shape": [
+              229
+            ],
+            "dtype": "|S21141"
+          },
+          "observation/left_camera/cam2world_gl": {
+            "shape": [
+              229,
+              4,
+              4
+            ],
+            "dtype": "float32",
+            "finite": true,
+            "sha256": "9865dbe04e99a96dcd819bc694841166339f8f615aee79e64cb9d774f5bd7da0"
+          },
+          "observation/left_camera/extrinsic_cv": {
+            "shape": [
+              229,
+              3,
+              4
+            ],
+            "dtype": "float32",
+            "finite": true,
+            "sha256": "db52656664314e9dd4f067a07292f4015440cff0b3691764ed6658a3ae339061"
+          },
+          "observation/left_camera/intrinsic_cv": {
+            "shape": [
+              229,
+              3,
+              3
+            ],
+            "dtype": "float32",
+            "finite": true,
+            "sha256": "0176e735107a5883d4a2491471efde6d32164b04d591b36601f12376dfa6f8ea"
+          },
+          "observation/left_camera/rgb": {
+            "shape": [
+              229
+            ],
+            "dtype": "|S5876"
+          },
+          "observation/right_camera/cam2world_gl": {
+            "shape": [
+              229,
+              4,
+              4
+            ],
+            "dtype": "float32",
+            "finite": true,
+            "sha256": "bc40af0a962eb81688327fdf672181e4a941d19f9451bbadbdec4a167abe5c9e"
+          },
+          "observation/right_camera/extrinsic_cv": {
+            "shape": [
+              229,
+              3,
+              4
+            ],
+            "dtype": "float32",
+            "finite": true,
+            "sha256": "5c498125d82eea57bcc36992c811f9cbb10ee4753f719ee4557437f1b71af79a"
+          },
+          "observation/right_camera/intrinsic_cv": {
+            "shape": [
+              229,
+              3,
+              3
+            ],
+            "dtype": "float32",
+            "finite": true,
+            "sha256": "0176e735107a5883d4a2491471efde6d32164b04d591b36601f12376dfa6f8ea"
+          },
+          "observation/right_camera/rgb": {
+            "shape": [
+              229
+            ],
+            "dtype": "|S16149"
+          },
+          "pointcloud": {
+            "shape": [
+              229,
+              0
+            ],
+            "dtype": "float64",
+            "finite": true,
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        },
+        "attributes": {},
+        "image_decode_checks": {
+          "observation/front_camera/rgb": [
+            {
+              "frame": 0,
+              "size": [
+                320,
+                240
+              ],
+              "mode": "RGB",
+              "encoded_sha256": "1fb2c0c2a518ec858986ba46550db885a94aa25f0c91f57e9c9626f01c3b9ca2",
+              "decoded_sha256": "24651647255cafbe966dda83a1c5659ed449fd2634c1a88428ba436712e3297c"
+            },
+            {
+              "frame": 114,
+              "size": [
+                320,
+                240
+              ],
+              "mode": "RGB",
+              "encoded_sha256": "2eaddccd5b2c957343f52173526f0720f5089bb2fb8470a78ad9fc6f50837c75",
+              "decoded_sha256": "429d7d43d9a48a5466af08b5a070f33fb229ad6688624b6a21181cc684939d28"
+            },
+            {
+              "frame": 228,
+              "size": [
+                320,
+                240
+              ],
+              "mode": "RGB",
+              "encoded_sha256": "ec6525c67a75773bf1f9bdf05b4c925badc30186a729ae32c860ec90bfc8370c",
+              "decoded_sha256": "503c376a7f634af0f55ec24954c72ee5493e49878d6c9d3482df9b80448f3c5c"
+            }
+          ],
+          "observation/head_camera/rgb": [
+            {
+              "frame": 0,
+              "size": [
+                320,
+                240
+              ],
+              "mode": "RGB",
+              "encoded_sha256": "a1b1a662cded42491b1c43cb937d80be88fdc1e331089e3af91bd42586feb3fc",
+              "decoded_sha256": "a4cf1881a2d11597919388172753e928e908b64438aeec9b3ac178c7a527aaf8"
+            },
+            {
+              "frame": 114,
+              "size": [
+                320,
+                240
+              ],
+              "mode": "RGB",
+              "encoded_sha256": "9ae10c9c90eea2296913466ee5b5b2ad1cfcadb5c267880cbe9db4788e24f9ad",
+              "decoded_sha256": "ee378a3cf9b36a6cbd76cbeb510d0bf243944a3bb826c6c6ab43a9493337fdd5"
+            },
+            {
+              "frame": 228,
+              "size": [
+                320,
+                240
+              ],
+              "mode": "RGB",
+              "encoded_sha256": "e995e661f7d7625371ae20969c33c19c949267538b78ffbc43930bda8e4b73ff",
+              "decoded_sha256": "03b597fe60bd251976d21469d154b39b2e17e899e7b4b84c7eda85a2b76042e6"
+            }
+          ],
+          "observation/left_camera/rgb": [
+            {
+              "frame": 0,
+              "size": [
+                320,
+                240
+              ],
+              "mode": "RGB",
+              "encoded_sha256": "453a37b15c022b3435dcee066954a9787aa3bcca107eaf12c7d641e8bb2edbd4",
+              "decoded_sha256": "d0187288938b96ab57dfb929ae1c252fd271300a8279621b28fc70acbc312fe8"
+            },
+            {
+              "frame": 114,
+              "size": [
+                320,
+                240
+              ],
+              "mode": "RGB",
+              "encoded_sha256": "404804606e63adbe5c2bb699f506d221d64147432c04686c4de4e6d2d3a3b1e9",
+              "decoded_sha256": "4f817dc121392c1ad0799f44a41d67ab6774d6fbe3b11a5e8bcfd35c17b9ce8c"
+            },
+            {
+              "frame": 228,
+              "size": [
+                320,
+                240
+              ],
+              "mode": "RGB",
+              "encoded_sha256": "a54f4949dbe49e1847c970581e730806cd4a786d4aeef6c314015b31281f943f",
+              "decoded_sha256": "e2c1a0d8866bba030d623348a07be7603c1779d241bbd75cf023120bf3ec2792"
+            }
+          ],
+          "observation/right_camera/rgb": [
+            {
+              "frame": 0,
+              "size": [
+                320,
+                240
+              ],
+              "mode": "RGB",
+              "encoded_sha256": "2210b09dce996b7d6d6685828f35dde29168981be59184367cff88ddd9264403",
+              "decoded_sha256": "9554014e30f10d5508884bc80e6a827f155a2fa006bd80c10330845ae986bfeb"
+            },
+            {
+              "frame": 114,
+              "size": [
+                320,
+                240
+              ],
+              "mode": "RGB",
+              "encoded_sha256": "3a3d818637990f0b2c3681885fda5e5b7300f69f433e13f53a7d51220f4879dd",
+              "decoded_sha256": "f13e6334668ae2ccaaa094a1d9e84d9118d9405907cb0273a646c5bb8a2a7a70"
+            },
+            {
+              "frame": 228,
+              "size": [
+                320,
+                240
+              ],
+              "mode": "RGB",
+              "encoded_sha256": "ecfa907d1630e936a173853d886c546e7e7689179b7a536ccda18140521274dd",
+              "decoded_sha256": "149f716db824c3d235f8b16886d8b8e419b7dd82e34424373a7542e0c39446ba"
+            }
+          ]
+        },
+        "time_lengths": [
+          229
+        ]
+      },
+      "planner_file": {
+        "path": "scene3/scene3_r_pick3_via5_to6_short_front/_traj_data/episode0.pkl",
+        "url": "https://huggingface.co/datasets/AutoLab-SJTU/robofollow-data/resolve/bbb1e266ed585f1557773de5a3f1e3b4cd944f97/scene3/scene3_r_pick3_via5_to6_short_front/_traj_data/episode0.pkl",
+        "bytes": 74916,
+        "sha256": "d5f51949fe1d9bc87560504c4ea01d91e061d017b23bb55c3bffd39e8b1cfa86"
+      },
+      "planner": {
+        "inspection": "pickletools opcodes only; no deserialization",
+        "strings": [
+          "<",
+          "Success",
+          "_reconstruct",
+          "dtype",
+          "f4",
+          "left_joint_path",
+          "ndarray",
+          "numpy",
+          "numpy.core.multiarray",
+          "position",
+          "right_joint_path",
+          "status",
+          "velocity"
+        ],
+        "global_opcodes": [],
+        "opcode_counts": {
+          "PROTO": 1,
+          "FRAME": 1,
+          "EMPTY_DICT": 6,
+          "MEMOIZE": 88,
+          "MARK": 18,
+          "SHORT_BINUNICODE": 13,
+          "EMPTY_LIST": 2,
+          "STACK_GLOBAL": 3,
+          "BININT1": 38,
+          "TUPLE1": 10,
+          "SHORT_BINBYTES": 1,
+          "TUPLE3": 11,
+          "REDUCE": 11,
+          "TUPLE2": 10,
+          "BINGET": 53,
+          "NEWFALSE": 11,
+          "NEWTRUE": 1,
+          "NONE": 3,
+          "BININT": 2,
+          "TUPLE": 11,
+          "BUILD": 11,
+          "BINBYTES": 10,
+          "SETITEMS": 6,
+          "APPEND": 1,
+          "BININT2": 4,
+          "APPENDS": 1,
+          "STOP": 1
+        }
+      }
+    },
+    {
+      "task_id": "r_pick3_via5_to6_short_front",
+      "episode_id": 24,
+      "partition": "train",
+      "hdf5_file": {
+        "path": "scene3/scene3_r_pick3_via5_to6_short_front/data/episode24.hdf5",
+        "url": "https://huggingface.co/datasets/AutoLab-SJTU/robofollow-data/resolve/bbb1e266ed585f1557773de5a3f1e3b4cd944f97/scene3/scene3_r_pick3_via5_to6_short_front/data/episode24.hdf5",
+        "bytes": 17954095,
+        "sha256": "d4b8bcc2ee54a7af003c96a2658a5fcc43910bd6aa225c234a964466c468d444"
+      },
+      "hdf5": {
+        "datasets": {
+          "endpose/left_endpose": {
+            "shape": [
+              295,
+              7
+            ],
+            "dtype": "float64",
+            "finite": true,
+            "sha256": "a6984496628f4adb798c894aaba9a4de4114abfe7a904294742177a4dababfbc"
+          },
+          "endpose/left_gripper": {
+            "shape": [
+              295
+            ],
+            "dtype": "float64",
+            "finite": true,
+            "sha256": "c11572ec6885b752d83f14d253f335ea0c2444f87ffcdb8891ff06d487173d20"
+          },
+          "endpose/right_endpose": {
+            "shape": [
+              295,
+              7
+            ],
+            "dtype": "float64",
+            "finite": true,
+            "sha256": "9c5d4206297a2c69e2469b5b2ec27f7429a72148c130050a1e074706682799cd"
+          },
+          "endpose/right_gripper": {
+            "shape": [
+              295
+            ],
+            "dtype": "float64",
+            "finite": true,
+            "sha256": "0b6ea17a99a429c5386e5cc03ef85f56a8a302a6e15b6f1511a79d950ed51eb8"
+          },
+          "joint_action/left_arm": {
+            "shape": [
+              295,
+              6
+            ],
+            "dtype": "float64",
+            "finite": true,
+            "sha256": "72bf36b16c2c5e6a30c27d8a151a276b755e1fad3bfa9e2ff9c60aa2e3b3104e"
+          },
+          "joint_action/left_gripper": {
+            "shape": [
+              295
+            ],
+            "dtype": "float64",
+            "finite": true,
+            "sha256": "c11572ec6885b752d83f14d253f335ea0c2444f87ffcdb8891ff06d487173d20"
+          },
+          "joint_action/right_arm": {
+            "shape": [
+              295,
+              6
+            ],
+            "dtype": "float64",
+            "finite": true,
+            "sha256": "afd62e6e6cc5c96a59e9e8a074420ef5f56f8db8d78ec27a0d4d115e29974bfe"
+          },
+          "joint_action/right_gripper": {
+            "shape": [
+              295
+            ],
+            "dtype": "float64",
+            "finite": true,
+            "sha256": "0b6ea17a99a429c5386e5cc03ef85f56a8a302a6e15b6f1511a79d950ed51eb8"
+          },
+          "joint_action/vector": {
+            "shape": [
+              295,
+              14
+            ],
+            "dtype": "float64",
+            "finite": true,
+            "sha256": "8bd1dd5d53ce8edf97dd3708a45275cbf08704269b2e6b9e9848ce89920843a5",
+            "first_frame_sha256": "8881b906105a2087fe5e5cd1981ec8df4aeb348817af30d138e31df5bc075214",
+            "first_frame": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ],
+            "last_frame": [
+              -7.0928163040662184e-06,
+              9.30238911678316e-06,
+              -3.0815648642601445e-05,
+              6.749637577740941e-06,
+              -8.175387847586535e-06,
+              4.779172741109505e-06,
+              1.0,
+              -1.8805071704264265e-06,
+              1.602722841198556e-05,
+              -2.798193418129813e-05,
+              1.3077065887046047e-05,
+              1.1910530872683012e-07,
+              1.165304524874955e-06,
+              1.0
+            ]
+          },
+          "observation/front_camera/cam2world_gl": {
+            "shape": [
+              295,
+              4,
+              4
+            ],
+            "dtype": "float32",
+            "finite": true,
+            "sha256": "bb8788aab2734f54f4ed565b9e074571ce5191f5749068cb7d1f2af535b0b4f6"
+          },
+          "observation/front_camera/extrinsic_cv": {
+            "shape": [
+              295,
+              3,
+              4
+            ],
+            "dtype": "float32",
+            "finite": true,
+            "sha256": "ca13c436a261c850cffd50f882c1ee03e41cebca216c8142526088678d9a9f12"
+          },
+          "observation/front_camera/intrinsic_cv": {
+            "shape": [
+              295,
+              3,
+              3
+            ],
+            "dtype": "float32",
+            "finite": true,
+            "sha256": "e9cb02d96f214d7c78783943370710fe58a9a3574d65ffc1856348e64fb64fdf"
+          },
+          "observation/front_camera/rgb": {
+            "shape": [
+              295
+            ],
+            "dtype": "|S17483"
+          },
+          "observation/head_camera/cam2world_gl": {
+            "shape": [
+              295,
+              4,
+              4
+            ],
+            "dtype": "float32",
+            "finite": true,
+            "sha256": "9ce2cade33ade3d2cd40e9abbda507f1c8003a1763a8157a4670c50e0fc64663"
+          },
+          "observation/head_camera/extrinsic_cv": {
+            "shape": [
+              295,
+              3,
+              4
+            ],
+            "dtype": "float32",
+            "finite": true,
+            "sha256": "8b7a2b78f7b7b92504c2680a25b15576b9a44fbf7756a7c84098a3174da334c5"
+          },
+          "observation/head_camera/intrinsic_cv": {
+            "shape": [
+              295,
+              3,
+              3
+            ],
+            "dtype": "float32",
+            "finite": true,
+            "sha256": "e9cb02d96f214d7c78783943370710fe58a9a3574d65ffc1856348e64fb64fdf"
+          },
+          "observation/head_camera/rgb": {
+            "shape": [
+              295
+            ],
+            "dtype": "|S20475"
+          },
+          "observation/left_camera/cam2world_gl": {
+            "shape": [
+              295,
+              4,
+              4
+            ],
+            "dtype": "float32",
+            "finite": true,
+            "sha256": "5b8f73a6a4dff26b8e49b91b97228ca32ea2ab4204c67ee47132fcbd59212b45"
+          },
+          "observation/left_camera/extrinsic_cv": {
+            "shape": [
+              295,
+              3,
+              4
+            ],
+            "dtype": "float32",
+            "finite": true,
+            "sha256": "1ffc33ee4417c2edb596cf9a5e0bf2b959754c658fd84fe512ddf440559a5ada"
+          },
+          "observation/left_camera/intrinsic_cv": {
+            "shape": [
+              295,
+              3,
+              3
+            ],
+            "dtype": "float32",
+            "finite": true,
+            "sha256": "e9cb02d96f214d7c78783943370710fe58a9a3574d65ffc1856348e64fb64fdf"
+          },
+          "observation/left_camera/rgb": {
+            "shape": [
+              295
+            ],
+            "dtype": "|S5934"
+          },
+          "observation/right_camera/cam2world_gl": {
+            "shape": [
+              295,
+              4,
+              4
+            ],
+            "dtype": "float32",
+            "finite": true,
+            "sha256": "c28ce085e203301994d7efc5840f0db36793301224fa92de94e879d86d9b5b7a"
+          },
+          "observation/right_camera/extrinsic_cv": {
+            "shape": [
+              295,
+              3,
+              4
+            ],
+            "dtype": "float32",
+            "finite": true,
+            "sha256": "8f4a9d3dd6f64524e6694a1774f8b8e2a69e4efce60aa8e1ef854ca45b7fa3f4"
+          },
+          "observation/right_camera/intrinsic_cv": {
+            "shape": [
+              295,
+              3,
+              3
+            ],
+            "dtype": "float32",
+            "finite": true,
+            "sha256": "e9cb02d96f214d7c78783943370710fe58a9a3574d65ffc1856348e64fb64fdf"
+          },
+          "observation/right_camera/rgb": {
+            "shape": [
+              295
+            ],
+            "dtype": "|S15965"
+          },
+          "pointcloud": {
+            "shape": [
+              295,
+              0
+            ],
+            "dtype": "float64",
+            "finite": true,
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        },
+        "attributes": {},
+        "image_decode_checks": {
+          "observation/front_camera/rgb": [
+            {
+              "frame": 0,
+              "size": [
+                320,
+                240
+              ],
+              "mode": "RGB",
+              "encoded_sha256": "32f8573d80a977fd65479afd2767689f58c2805e0cb0a2eb15b5b5fd49699401",
+              "decoded_sha256": "1276cad451425a9c7a21dc18911a13f2d2a2acb728982c3780e68c4406c96778"
+            },
+            {
+              "frame": 147,
+              "size": [
+                320,
+                240
+              ],
+              "mode": "RGB",
+              "encoded_sha256": "971a05a666812e104dd5fa68d029f2c9f9776e204fd24132f2e6619c6fdf9026",
+              "decoded_sha256": "1611e22710548d0b81b379fa7ee3302023f387314528c117d8c1c1a976bcc126"
+            },
+            {
+              "frame": 294,
+              "size": [
+                320,
+                240
+              ],
+              "mode": "RGB",
+              "encoded_sha256": "121f7f6e42d92acd774d84da2f95beddf2198ca5842adaa016a48af258e4f07b",
+              "decoded_sha256": "712166e3c93ba91f0578d2e8d8cc03511b25fad7b0cc7a0e94aed1a946677b7b"
+            }
+          ],
+          "observation/head_camera/rgb": [
+            {
+              "frame": 0,
+              "size": [
+                320,
+                240
+              ],
+              "mode": "RGB",
+              "encoded_sha256": "e17f23668b8157f0ebdafa91ad3ee60b8078a823a37416365155cd7d9aa75b31",
+              "decoded_sha256": "17d029dcd7f5abda5b4fcdbb32efdbc56ba21934a546e71c08c712466729f721"
+            },
+            {
+              "frame": 147,
+              "size": [
+                320,
+                240
+              ],
+              "mode": "RGB",
+              "encoded_sha256": "725ba6cc8aa35b52fd22f807cd4ed649500b66afff62633f9bcf1ef9f869e358",
+              "decoded_sha256": "23ad427b2d3490b00c4288966ab02f790d57fd2f2bc509453f3cf9534e27bf76"
+            },
+            {
+              "frame": 294,
+              "size": [
+                320,
+                240
+              ],
+              "mode": "RGB",
+              "encoded_sha256": "33d96e6a08888448cb277ee9d99afb1cb2dc833d5aca1acb8f03c86c042841eb",
+              "decoded_sha256": "35b3aec53ba4a26f44e4a2e56e746ff7586587b8f354ec3eb9345380596912f1"
+            }
+          ],
+          "observation/left_camera/rgb": [
+            {
+              "frame": 0,
+              "size": [
+                320,
+                240
+              ],
+              "mode": "RGB",
+              "encoded_sha256": "b606a74c0356a489d9373717d11e72e9ec41c6c4ad9ac300e6148a184b0ba89e",
+              "decoded_sha256": "6b436e60f304104419a06872173197e9a50bbcd102ff20002c721101e48cca74"
+            },
+            {
+              "frame": 147,
+              "size": [
+                320,
+                240
+              ],
+              "mode": "RGB",
+              "encoded_sha256": "29a0a76639ec8de01112e10a6cd7ed18918dffac79bd3801883ba173f83c5bc9",
+              "decoded_sha256": "d204ed31c8bd4835bda1ef0936562a357b44f2a5c5df5baad739021b4230708b"
+            },
+            {
+              "frame": 294,
+              "size": [
+                320,
+                240
+              ],
+              "mode": "RGB",
+              "encoded_sha256": "84e943fb651df6dd4a17372cc5a820b2b86d7fd358e7e50467ddcee1e7d7c492",
+              "decoded_sha256": "1b43197750058cf854f7b7f796d2945d92e79dd0f846cfc69560e2834defc051"
+            }
+          ],
+          "observation/right_camera/rgb": [
+            {
+              "frame": 0,
+              "size": [
+                320,
+                240
+              ],
+              "mode": "RGB",
+              "encoded_sha256": "a033792f181334ae43cc2a6a1fbba6f3845611a8e4fddf3b8ba043b3e225ab6a",
+              "decoded_sha256": "a347daa38c7e283e138dae9bba3f632221a37ec57aef3a948f3f5843719b7589"
+            },
+            {
+              "frame": 147,
+              "size": [
+                320,
+                240
+              ],
+              "mode": "RGB",
+              "encoded_sha256": "69cd5dcc7b79671b5df668afd6bc203490ad425fd9da6c334db9d23075da860c",
+              "decoded_sha256": "c28d66b7eb40a9caa565b5d2fc37539cc17a09af5c9e7bfc12035dd894007c7a"
+            },
+            {
+              "frame": 294,
+              "size": [
+                320,
+                240
+              ],
+              "mode": "RGB",
+              "encoded_sha256": "0315a4188ae8e0519bfbd7f9587473d446bca0b60bdd5ee488c1ae6608907d4d",
+              "decoded_sha256": "9f5fd9abbf755744b126e4a5064ff8d530aa7aebccff63d6b3d6ae920b11dda7"
+            }
+          ]
+        },
+        "time_lengths": [
+          295
+        ]
+      },
+      "planner_file": {
+        "path": "scene3/scene3_r_pick3_via5_to6_short_front/_traj_data/episode24.pkl",
+        "url": "https://huggingface.co/datasets/AutoLab-SJTU/robofollow-data/resolve/bbb1e266ed585f1557773de5a3f1e3b4cd944f97/scene3/scene3_r_pick3_via5_to6_short_front/_traj_data/episode24.pkl",
+        "bytes": 78045,
+        "sha256": "496ba5c8242e7cde73f8259bfb0e010a3970bc2d55f15e36c62c25d43812c2e8"
+      },
+      "planner": {
+        "inspection": "pickletools opcodes only; no deserialization",
+        "strings": [
+          "<",
+          "Success",
+          "_reconstruct",
+          "dtype",
+          "f4",
+          "left_joint_path",
+          "ndarray",
+          "numpy",
+          "numpy.core.multiarray",
+          "position",
+          "right_joint_path",
+          "status",
+          "velocity"
+        ],
+        "global_opcodes": [],
+        "opcode_counts": {
+          "PROTO": 1,
+          "FRAME": 2,
+          "EMPTY_DICT": 6,
+          "MEMOIZE": 88,
+          "MARK": 18,
+          "SHORT_BINUNICODE": 13,
+          "EMPTY_LIST": 2,
+          "STACK_GLOBAL": 3,
+          "BININT1": 38,
+          "TUPLE1": 10,
+          "SHORT_BINBYTES": 1,
+          "TUPLE3": 11,
+          "REDUCE": 11,
+          "TUPLE2": 10,
+          "BINGET": 53,
+          "NEWFALSE": 11,
+          "NEWTRUE": 1,
+          "NONE": 3,
+          "BININT": 2,
+          "TUPLE": 11,
+          "BUILD": 11,
+          "BINBYTES": 10,
+          "SETITEMS": 6,
+          "APPEND": 1,
+          "BININT2": 4,
+          "APPENDS": 1,
+          "STOP": 1
+        }
+      }
+    },
+    {
+      "task_id": "r_pick3_via5_to6_short_front",
+      "episode_id": 49,
+      "partition": "train",
+      "hdf5_file": {
+        "path": "scene3/scene3_r_pick3_via5_to6_short_front/data/episode49.hdf5",
+        "url": "https://huggingface.co/datasets/AutoLab-SJTU/robofollow-data/resolve/bbb1e266ed585f1557773de5a3f1e3b4cd944f97/scene3/scene3_r_pick3_via5_to6_short_front/data/episode49.hdf5",
+        "bytes": 18273608,
+        "sha256": "b16801cbee64bc60a746618e4599bed19272d62b1972ce964b8b5b5c67f3d998"
+      },
+      "hdf5": {
+        "datasets": {
+          "endpose/left_endpose": {
+            "shape": [
+              304,
+              7
+            ],
+            "dtype": "float64",
+            "finite": true,
+            "sha256": "df96e03010335fc3eb36eae7da9e654e67de5c3ae11264bdb591ed1b29c4f40a"
+          },
+          "endpose/left_gripper": {
+            "shape": [
+              304
+            ],
+            "dtype": "float64",
+            "finite": true,
+            "sha256": "6ee1c6c72d926d4c349981ca5e993e14efb3d680a42f4c44872553867191dcd0"
+          },
+          "endpose/right_endpose": {
+            "shape": [
+              304,
+              7
+            ],
+            "dtype": "float64",
+            "finite": true,
+            "sha256": "64fd9108b422f657223d5dc7dff2917e9995fea4303b3fc78423320f1297748d"
+          },
+          "endpose/right_gripper": {
+            "shape": [
+              304
+            ],
+            "dtype": "float64",
+            "finite": true,
+            "sha256": "48bdca1c11d3403bff1310b5662cf306d0dc739246f2fc20001d9facf43a182b"
+          },
+          "joint_action/left_arm": {
+            "shape": [
+              304,
+              6
+            ],
+            "dtype": "float64",
+            "finite": true,
+            "sha256": "21420a1a9e8d0298cb28a9b95ef9b574abd9784f705df1dc06bd161a08242297"
+          },
+          "joint_action/left_gripper": {
+            "shape": [
+              304
+            ],
+            "dtype": "float64",
+            "finite": true,
+            "sha256": "6ee1c6c72d926d4c349981ca5e993e14efb3d680a42f4c44872553867191dcd0"
+          },
+          "joint_action/right_arm": {
+            "shape": [
+              304,
+              6
+            ],
+            "dtype": "float64",
+            "finite": true,
+            "sha256": "434cdc4af1cc1b273d7d8e21375f2c27d34f9d9cefc3b42d49e182d1ea706f8c"
+          },
+          "joint_action/right_gripper": {
+            "shape": [
+              304
+            ],
+            "dtype": "float64",
+            "finite": true,
+            "sha256": "48bdca1c11d3403bff1310b5662cf306d0dc739246f2fc20001d9facf43a182b"
+          },
+          "joint_action/vector": {
+            "shape": [
+              304,
+              14
+            ],
+            "dtype": "float64",
+            "finite": true,
+            "sha256": "d6e09bca632e8856a3fa6eae705b39b1a557c7a8e7e1914e8b79fa3460ce53fe",
+            "first_frame_sha256": "8881b906105a2087fe5e5cd1981ec8df4aeb348817af30d138e31df5bc075214",
+            "first_frame": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ],
+            "last_frame": [
+              3.4253005196660524e-06,
+              4.9410946303396486e-06,
+              -2.9518723749788478e-05,
+              1.3902065347792814e-06,
+              -7.175036387252476e-08,
+              6.893847057654057e-06,
+              1.0,
+              -1.2078817235305905e-05,
+              3.41487793775741e-05,
+              -2.9266991987242363e-05,
+              3.314595596748404e-05,
+              -9.90936860034708e-06,
+              -2.7488117666507605e-06,
+              1.0
+            ]
+          },
+          "observation/front_camera/cam2world_gl": {
+            "shape": [
+              304,
+              4,
+              4
+            ],
+            "dtype": "float32",
+            "finite": true,
+            "sha256": "d2f1bb2a8778b3d8d08fe3dfd05d93b8205b4f93216460a3f6e88696c0ee3559"
+          },
+          "observation/front_camera/extrinsic_cv": {
+            "shape": [
+              304,
+              3,
+              4
+            ],
+            "dtype": "float32",
+            "finite": true,
+            "sha256": "4c0b7e4012feefb3046fd27cf185a057541e0ff136de24fbd7c66bdb28e46263"
+          },
+          "observation/front_camera/intrinsic_cv": {
+            "shape": [
+              304,
+              3,
+              3
+            ],
+            "dtype": "float32",
+            "finite": true,
+            "sha256": "e691dd56d3894a62c15cb0080df83992f6c4efe68323b310953137459e91eb9c"
+          },
+          "observation/front_camera/rgb": {
+            "shape": [
+              304
+            ],
+            "dtype": "|S17346"
+          },
+          "observation/head_camera/cam2world_gl": {
+            "shape": [
+              304,
+              4,
+              4
+            ],
+            "dtype": "float32",
+            "finite": true,
+            "sha256": "b431fb6644064a83dfbc0e73ea785d9b6b07d156f83c73342c18bc8d9d0a883a"
+          },
+          "observation/head_camera/extrinsic_cv": {
+            "shape": [
+              304,
+              3,
+              4
+            ],
+            "dtype": "float32",
+            "finite": true,
+            "sha256": "f3f60b315b504e871108b8c1f0b9417522c8690accdb7b02a6a5a164a4ce41f9"
+          },
+          "observation/head_camera/intrinsic_cv": {
+            "shape": [
+              304,
+              3,
+              3
+            ],
+            "dtype": "float32",
+            "finite": true,
+            "sha256": "e691dd56d3894a62c15cb0080df83992f6c4efe68323b310953137459e91eb9c"
+          },
+          "observation/head_camera/rgb": {
+            "shape": [
+              304
+            ],
+            "dtype": "|S21078"
+          },
+          "observation/left_camera/cam2world_gl": {
+            "shape": [
+              304,
+              4,
+              4
+            ],
+            "dtype": "float32",
+            "finite": true,
+            "sha256": "ebc35b2ce47a90407bbf2c41afd9936b7d37301889ad7565350ff1d7b296d7c9"
+          },
+          "observation/left_camera/extrinsic_cv": {
+            "shape": [
+              304,
+              3,
+              4
+            ],
+            "dtype": "float32",
+            "finite": true,
+            "sha256": "b67661fa836db4d88aebb44538c232405c14ecabee81be9a149885faefef45fe"
+          },
+          "observation/left_camera/intrinsic_cv": {
+            "shape": [
+              304,
+              3,
+              3
+            ],
+            "dtype": "float32",
+            "finite": true,
+            "sha256": "e691dd56d3894a62c15cb0080df83992f6c4efe68323b310953137459e91eb9c"
+          },
+          "observation/left_camera/rgb": {
+            "shape": [
+              304
+            ],
+            "dtype": "|S6000"
+          },
+          "observation/right_camera/cam2world_gl": {
+            "shape": [
+              304,
+              4,
+              4
+            ],
+            "dtype": "float32",
+            "finite": true,
+            "sha256": "1844e15c328c0ab8d5d7fe2c4032f8485be2a98a300cef7184a69a695d75eecb"
+          },
+          "observation/right_camera/extrinsic_cv": {
+            "shape": [
+              304,
+              3,
+              4
+            ],
+            "dtype": "float32",
+            "finite": true,
+            "sha256": "53ae59c608ec8a179eb198742888c62c1cd22998b2d015b3808de528d93da489"
+          },
+          "observation/right_camera/intrinsic_cv": {
+            "shape": [
+              304,
+              3,
+              3
+            ],
+            "dtype": "float32",
+            "finite": true,
+            "sha256": "e691dd56d3894a62c15cb0080df83992f6c4efe68323b310953137459e91eb9c"
+          },
+          "observation/right_camera/rgb": {
+            "shape": [
+              304
+            ],
+            "dtype": "|S14684"
+          },
+          "pointcloud": {
+            "shape": [
+              304,
+              0
+            ],
+            "dtype": "float64",
+            "finite": true,
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        },
+        "attributes": {},
+        "image_decode_checks": {
+          "observation/front_camera/rgb": [
+            {
+              "frame": 0,
+              "size": [
+                320,
+                240
+              ],
+              "mode": "RGB",
+              "encoded_sha256": "a8b99eb5fcc6a9990992de0d3b11a8042424544f556ee7edbe6eb303d223fc23",
+              "decoded_sha256": "26650a3e3a8aea2886b59e9ce4bcaab6b1d70c40e95bbbd7e245a4e889e99b3f"
+            },
+            {
+              "frame": 152,
+              "size": [
+                320,
+                240
+              ],
+              "mode": "RGB",
+              "encoded_sha256": "d52a44219c49450b1de02ab42c03abac546b923bcac2f9900b2091ed03a51a7c",
+              "decoded_sha256": "b74a40e66d4493c9d5bde41a1b926019bd33eb2f95c6942f85c5b54439cbdcb5"
+            },
+            {
+              "frame": 303,
+              "size": [
+                320,
+                240
+              ],
+              "mode": "RGB",
+              "encoded_sha256": "b17921c6ebda39886d52319dfeff3a0558bbe2ed7b588aed5e84a30f17816cb4",
+              "decoded_sha256": "a4bf6c5ff5d805bc1ca663bca14a6240cfa6623d14943e78b93a235be2485d41"
+            }
+          ],
+          "observation/head_camera/rgb": [
+            {
+              "frame": 0,
+              "size": [
+                320,
+                240
+              ],
+              "mode": "RGB",
+              "encoded_sha256": "adf3d7d7103ce38a7549e78c5e04cc3655d4b8bde29fdecf8df2cc8868a315f1",
+              "decoded_sha256": "eda8fb587c73dfca82f9d508be8955ce431e8f6c0c6dae9a8668be2ab0ba535f"
+            },
+            {
+              "frame": 152,
+              "size": [
+                320,
+                240
+              ],
+              "mode": "RGB",
+              "encoded_sha256": "075d033893e088c817d6060c445e3f6525004d531ae5a80ba1893647582f4329",
+              "decoded_sha256": "d941c180078fb6f857269a8853bd37aceaa42b258eaec995c4dd8612b8ffcd46"
+            },
+            {
+              "frame": 303,
+              "size": [
+                320,
+                240
+              ],
+              "mode": "RGB",
+              "encoded_sha256": "920ee20d48d5f2f0b5676a400fa379ce1eeadf3fa343351129d8ecf9091833f5",
+              "decoded_sha256": "86cc9533e84ca2857a64b006402bd5aa4ce89037244718b9a3b4f5a0f4415ca6"
+            }
+          ],
+          "observation/left_camera/rgb": [
+            {
+              "frame": 0,
+              "size": [
+                320,
+                240
+              ],
+              "mode": "RGB",
+              "encoded_sha256": "b3e42b0955b3fbfae4882c349ee9253793b358a1674f7566eafce30fb1e4eb60",
+              "decoded_sha256": "860c2ed32d4c3ffd1ee236c45c502ec15b0dff67bbfe0080415fd7f5bfe4a4e9"
+            },
+            {
+              "frame": 152,
+              "size": [
+                320,
+                240
+              ],
+              "mode": "RGB",
+              "encoded_sha256": "a0565d73d53170a82a2f5f1da6e1b39ef4033510954d9e4c5728f1c84135c703",
+              "decoded_sha256": "2df69acb4e74dfe9d96e576ee3aee11e721dcf962f9e467ab6a788464ebd5aad"
+            },
+            {
+              "frame": 303,
+              "size": [
+                320,
+                240
+              ],
+              "mode": "RGB",
+              "encoded_sha256": "84b5d4f8479a1d37adf28c1b23ca90027fa4ffb663e5e2d3f5c4822186576cb3",
+              "decoded_sha256": "1d0be6c447275a2018b9c8fc67b7479ccae134155982994d01b1857746b54b54"
+            }
+          ],
+          "observation/right_camera/rgb": [
+            {
+              "frame": 0,
+              "size": [
+                320,
+                240
+              ],
+              "mode": "RGB",
+              "encoded_sha256": "892553de097179cb746d5c9ec5c6850fdd690a9a030f92d957d7eaeeb1a0d611",
+              "decoded_sha256": "58fc3c38996a1f0b86b721c2dc85e6e184f7c4f6d45a046086699ff07cb1597f"
+            },
+            {
+              "frame": 152,
+              "size": [
+                320,
+                240
+              ],
+              "mode": "RGB",
+              "encoded_sha256": "515f2d02d7c2400f33b1a57cdb362996392532b3f61b5cb1502e31385ac2a229",
+              "decoded_sha256": "cdb2961230a91eba199ec644137f2584346eb33c4a1d1d249f8569bf6c5446a6"
+            },
+            {
+              "frame": 303,
+              "size": [
+                320,
+                240
+              ],
+              "mode": "RGB",
+              "encoded_sha256": "6e081d1898e9b31c467b7cb0e0f14403ff5fccef7abff06137f7dd34927534d0",
+              "decoded_sha256": "cf39d6a8159c0f0d80d4cca8da74301845a40f6c5064a02e970d358c689b54ab"
+            }
+          ]
+        },
+        "time_lengths": [
+          304
+        ]
+      },
+      "planner_file": {
+        "path": "scene3/scene3_r_pick3_via5_to6_short_front/_traj_data/episode49.pkl",
+        "url": "https://huggingface.co/datasets/AutoLab-SJTU/robofollow-data/resolve/bbb1e266ed585f1557773de5a3f1e3b4cd944f97/scene3/scene3_r_pick3_via5_to6_short_front/_traj_data/episode49.pkl",
+        "bytes": 83757,
+        "sha256": "d479dda3223bc6252dcfb74dd06a46d062a1c1546382a9ae3340c23b83d5644b"
+      },
+      "planner": {
+        "inspection": "pickletools opcodes only; no deserialization",
+        "strings": [
+          "<",
+          "Success",
+          "_reconstruct",
+          "dtype",
+          "f4",
+          "left_joint_path",
+          "ndarray",
+          "numpy",
+          "numpy.core.multiarray",
+          "position",
+          "right_joint_path",
+          "status",
+          "velocity"
+        ],
+        "global_opcodes": [],
+        "opcode_counts": {
+          "PROTO": 1,
+          "FRAME": 2,
+          "EMPTY_DICT": 6,
+          "MEMOIZE": 88,
+          "MARK": 18,
+          "SHORT_BINUNICODE": 13,
+          "EMPTY_LIST": 2,
+          "STACK_GLOBAL": 3,
+          "BININT1": 38,
+          "TUPLE1": 10,
+          "SHORT_BINBYTES": 1,
+          "TUPLE3": 11,
+          "REDUCE": 11,
+          "TUPLE2": 10,
+          "BINGET": 53,
+          "NEWFALSE": 11,
+          "NEWTRUE": 1,
+          "NONE": 3,
+          "BININT": 2,
+          "TUPLE": 11,
+          "BUILD": 11,
+          "BINBYTES": 10,
+          "SETITEMS": 6,
+          "APPEND": 1,
+          "BININT2": 4,
+          "APPENDS": 1,
+          "STOP": 1
+        }
+      }
+    }
+  ]
+}

@@ -9,7 +9,7 @@
 - Year/Venue: 2013 / IROS
 - Authors: not duplicated here when not verified in the registry source
 - Primary track: Planning and control
-- Tier: CORE
+- Tier: REFERENCE
 - Tags: Robotics, motion planning, trajectory optimization, collision avoidance
 - Official paper: https://arxiv.org/abs/1310.7730
 - Full-text retrieval: https://arxiv.org/pdf/1310.7730

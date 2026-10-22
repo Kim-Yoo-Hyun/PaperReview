@@ -69,7 +69,7 @@ def registry(papers: list[dict]) -> str:
         f"- Total papers with folders: {len(papers)}",
         "- Long-term reading tiers: [READING_PLAN.md](./research/READING_PLAN.md) and [READING_TIERS.csv](./research/READING_TIERS.csv)",
         "- Reading progress and synthesis: [READING_STATUS.csv](./research/READING_STATUS.csv), [READING_STATUS.md](./research/READING_STATUS.md), [synthesis/README.md](./synthesis/README.md)",
-        "- Scope: Robotics-first literature registry spanning robot learning/control, VLA, and robotics-enabling 3D vision.",
+        "- Scope: VLA-based manipulation and navigation across robots, with RL as an optional method and action-relevant 3D vision as support.",
         "- Machine-readable registry: [papers.json](./work/sources/papers.json), [registry.schema.json](./work/sources/registry.schema.json), and [registry_meta.json](./work/sources/registry_meta.json)",
         "- Evaluation/resource view: [resources.json](./work/sources/resources.json) (the existing benchmark/metric cue catalogs are generation inputs)",
         "- Generated search/index views: [REGISTRY_INDEX.csv](./research/REGISTRY_INDEX.csv) and [REGISTRY_STATS.md](./research/REGISTRY_STATS.md)",

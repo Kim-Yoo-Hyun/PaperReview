@@ -9,7 +9,7 @@
 - Year/Venue: 2022 / Science Robotics
 - Authors: not duplicated here when not verified in the registry source
 - Primary track: Locomotion, whole-body, mobile manipulation, and humanoids
-- Tier: CORE
+- Tier: REFERENCE
 - Tags: Robotics, quadruped locomotion, perception, rough terrain
 - Official paper: https://arxiv.org/abs/2201.08117
 - Full-text retrieval: https://arxiv.org/pdf/2201.08117

@@ -9,7 +9,7 @@
 - Year/Venue: 2022 / CoRL
 - Authors: not duplicated here when not verified in the registry source
 - Primary track: World models, safety, uncertainty, and recovery
-- Tier: CORE
+- Tier: NEXT
 - Tags: Robotics, world model, real robot, model-based reinforcement learning
 - Official paper: https://proceedings.mlr.press/v205/wu23c.html
 - Full-text retrieval: https://arxiv.org/pdf/2206.14176

@@ -9,7 +9,7 @@
 - Year/Venue: 1960 / Journal of Basic Engineering
 - Authors: not duplicated here when not verified in the registry source
 - Primary track: Planning and control
-- Tier: CORE
+- Tier: REFERENCE
 - Tags: Robotics, state estimation, Kalman Filter, Control
 - Official paper: https://doi.org/10.1115/1.3662552
 - Full-text retrieval: https://doi.org/10.1115/1.3662552

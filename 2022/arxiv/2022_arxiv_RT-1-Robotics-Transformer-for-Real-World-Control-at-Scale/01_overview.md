@@ -9,7 +9,7 @@
 - Year/Venue: 2022 / arXiv
 - Authors: not duplicated here when not verified in the registry source
 - Primary track: VLA and generalist robot policies
-- Tier: CORE
+- Tier: NEXT
 - Tags: VLA, Robotics, Imitation Learning
 - Official paper: https://arxiv.org/abs/2212.06817
 - Full-text retrieval: https://arxiv.org/pdf/2212.06817

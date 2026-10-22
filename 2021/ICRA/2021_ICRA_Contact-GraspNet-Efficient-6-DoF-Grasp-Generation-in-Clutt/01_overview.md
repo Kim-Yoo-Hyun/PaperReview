@@ -9,7 +9,7 @@
 - Year/Venue: 2021 / ICRA
 - Authors: not duplicated here when not verified in the registry source
 - Primary track: Manipulation, contact, tactile, and dexterity
-- Tier: CORE
+- Tier: NEXT
 - Tags: Robotics, grasping, contact prediction, 6-DoF grasp
 - Official paper: https://arxiv.org/abs/2103.14127
 - Full-text retrieval: https://arxiv.org/pdf/2103.14127

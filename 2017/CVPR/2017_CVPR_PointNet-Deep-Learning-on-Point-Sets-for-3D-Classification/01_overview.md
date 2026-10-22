@@ -9,7 +9,7 @@
 - Year/Venue: 2017 / CVPR
 - Authors: not duplicated here when not verified in the registry source
 - Primary track: Robotics-enabling 3D perception
-- Tier: CORE
+- Tier: NEXT
 - Tags: 3D geometry, point cloud, representation
 - Official paper: https://arxiv.org/abs/1612.00593
 - Full-text retrieval: https://arxiv.org/pdf/1612.00593

@@ -1,0 +1,94 @@
+{
+  "schema_version": 1,
+  "stage": "D3-R1",
+  "date": "2026-10-22",
+  "artifact_type": "review outcome and evidence requirements, not an executable manifest",
+  "review_status": "DONE",
+  "reopen_gate": "NOT_MET",
+  "executable": false,
+  "implemented": false,
+  "experiment_executed": false,
+  "policy_rollouts": 0,
+  "decision": {
+    "research": "REVISE",
+    "full_task_experiment": "HOLD_RESEARCH",
+    "training": "HOLD_RESEARCH",
+    "next_gate": "D3-R2",
+    "next_status": "WAITING_EVIDENCE",
+    "external_feedback": "NOT_STARTED"
+  },
+  "gates": [
+    {"id": "A", "requirement": "same-instance event and policy-visible observation correspondence", "status": "PARTIAL_NOT_MET", "new_evidence": "200 annotation stems match 200 public raw-file stems; recording and conversion source inspected; no event/RGB pair inspected"},
+    {"id": "B", "requirement": "language LL continuation and mitigation competence", "status": "NOT_ESTABLISHED", "new_evidence": "P2 published skill evaluation excludes cook_hot_dogs; P4 hotdog placement is pre-cooking and checkpoint release unidentified"},
+    {"id": "C", "requirement": "qualified matched comparison against simple predicate replanning", "status": "DESIGN_ONLY", "new_evidence": "temporal alignment, competency, leakage, paired denominator and goal controls specified; no implementation or validation"}
+  ],
+  "identity_example_not_selected_pilot": {
+    "selection_rule": "lexicographically first task-45 raw filename; metadata only, no outcome selection",
+    "task_name": "cook_hot_dogs",
+    "raw_repo": "behavior-1k/2026-challenge-rawdata",
+    "raw_revision": "f9d2901112993d75684223820eec70722806c2c4",
+    "raw_path": "task-0045/episode_00450010.hdf5",
+    "remote_size_bytes": 29282328,
+    "remote_lfs_sha256": "f246d992ff9089a917469e4fd0e61786a5b1639598f4685e4ded9d8d25b2f549",
+    "payload_checksum_verified": false,
+    "annotation_revision": "4f50b44796641a4d526a19d9aeadc8aa51e2f2c2",
+    "annotation_path": "annotations/task-0045/episode_00450010.json",
+    "task_instance_id": null,
+    "hdf5_demo_group": null,
+    "recorded_environment_revision": null,
+    "object_identity_binding": null,
+    "lerobot_episode_index": null,
+    "video_file_offset": null,
+    "frame_state_alignment": null,
+    "event_timestamp": null,
+    "pre_event_observation": null,
+    "post_event_observation": null,
+    "feasible_continuation_witness": null
+  },
+  "P2_published_skill_evaluation_boundary": {
+    "source": "https://github.com/inner-king/policy/issues/5",
+    "provenance": "author report, not independently reproduced",
+    "run_id": "pi07ll-pi05base-200k-at200k-replay-oracle-fixed5min",
+    "tasks": ["cook_a_frozen_pie", "cook_broccolini", "cook_a_brisket", "thawing_frozen_food", "freeze_fruit"],
+    "cook_hot_dogs_evaluated": false,
+    "turn_off_target": "burner",
+    "turn_off_successes": 0,
+    "turn_off_valid_segments": 3,
+    "microwave_turn_off_result": null,
+    "post_cooked_hotdog_continuation_result": null,
+    "evaluation_code_at_public_revision": "not present; author explicitly distinguishes unpublished replay evaluator and evaluation server from ec298b7 source"
+  },
+  "P4_discovery": {
+    "repo": "inner-king/policy",
+    "branch": "ers345/pi05",
+    "code_revision": "56c3ee92042ac08f29adf3a50bf9c970db75f8dc",
+    "documentation_revision": "6a0ec7c744e9a0dc67aad04fe7391269ec62745f",
+    "status": "DISCOVERY_WAITING_SOURCE",
+    "primary_candidate_promoted": false,
+    "checkpoint_release": null,
+    "published_hotdog_case": {"name": "hotdog_put_micro", "task_instance_id": 86, "exported_demo": "cook_hot_dogs_ep9080.npz", "skill_index": 8, "role": "pre-cooking placement, not post-event recovery", "same_as_raw_example": "not established"}
+  },
+  "required_packet_fields": {
+    "identity": ["task and instance", "object IDs", "raw and rendered source revisions", "HDF5 group", "video offset and frame convention"],
+    "event": ["Cooked transition evidence", "MaximumTemperature and object threshold provenance", "policy-visible RGB/proprio/history", "visibility and ambiguity audit", "pre-event feasible witness rather than assumed feasibility"],
+    "competence": ["checkpoint and base identity", "fixed continuation start state", "required skill and independent goal", "published or qualified native success evidence", "invalid-start and failure accounting"],
+    "comparison": ["instruction version acknowledged at inference", "client/server queue invalidation", "unchanged physical episode", "independent new-goal metric", "matched information/action/time budget", "no-change and meaning-preserving controls", "same-prefix pairing validation", "all-case denominator and conditional coverage"]
+  },
+  "simple_baseline_contract": {
+    "predicate_values": ["true", "false", "unknown"],
+    "oracle_state": "evaluation and separate upper-bound diagnostic only",
+    "unknown_action": "shared inspection or uncertainty report, with matched cost",
+    "rule": "confirmed Cooked plus same-object uncooked goal is contradictory under the allowed action invariant",
+    "pre_cooked_implies_feasible": false,
+    "full_task_outcome_inferred_from_skill_accuracy": false,
+    "RL_required": false
+  },
+  "stop_and_reopen": {
+    "repeat_same_metadata_review": false,
+    "automatic_adapter_implementation": false,
+    "automatic_D4_transition": false,
+    "GPU_alone_reopens": false,
+    "trigger": "new public event/observation and skill evidence, or a separately scoped and qualified local Docker evidence acquisition",
+    "future_experiment_location": "current computer, Docker only"
+  }
+}

@@ -9,7 +9,7 @@
 - Year/Venue: 1992 / ICRA
 - Authors: not duplicated here when not verified in the registry source
 - Primary track: Manipulation, contact, tactile, and dexterity
-- Tier: CORE
+- Tier: REFERENCE
 - Tags: Robotics, Grasp Planning, manipulation, contact
 - Official paper: https://doi.org/10.1109/ROBOT.1992.219918
 - Full-text retrieval: https://doi.org/10.1109/ROBOT.1992.219918

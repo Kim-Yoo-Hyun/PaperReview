@@ -9,7 +9,7 @@
 - Year/Venue: 2025 / ICML
 - Authors: not duplicated here when not verified in the registry source
 - Primary track: RL, IL, offline learning, and robot data
-- Tier: REFERENCE
+- Tier: NEXT
 - Tags: Vision-Language Model, Navigation, Reinforcement Learning
 - Official paper: https://openreview.net/forum?id=K4GaB4fdIq
 - Full-text retrieval: https://chatpaper.com/api/v1/articles/download/168050

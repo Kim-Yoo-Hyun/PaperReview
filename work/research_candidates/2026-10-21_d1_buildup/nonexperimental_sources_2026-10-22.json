@@ -1,0 +1,189 @@
+{
+  "schema": "d1-nonexperimental-review-v1",
+  "checked_on": "2026-10-22",
+  "review": "NONEXPERIMENTAL_REVIEW.md",
+  "scope": "D1-N1 through N4: web literature, analytical reasoning, static source re-read; no policy/simulation/training or numerical experiment.",
+  "decision": {
+    "method_adoption": "NO_GO_CURRENT_DESIGN",
+    "diagnostic": "HOLD_PENDING_NEW_EVIDENCE",
+    "next_gate": "D1-R2",
+    "hardware_change_alone_sufficient": false
+  },
+  "completed": [
+    "D1-N1",
+    "D1-N2",
+    "D1-N3",
+    "D1-N4"
+  ],
+  "sources": [
+    {
+      "id": "S1",
+      "paper_id": "pr-0989",
+      "url": "https://proceedings.iclr.cc/paper_files/paper/2026/file/2b3bb2c95195130977a51b3bb251c40a-Paper-Conference.pdf",
+      "version": "ICLR 2026 official proceedings",
+      "read_scope": [
+        "5.1-5.4, Figure 4, Tables 1-3",
+        "Appendix B Tables 6-11",
+        "Appendix C.1 Table 12"
+      ],
+      "access": "remote PDF text read with web tool; no local PDF cache",
+      "boundary": "Selected sections/tables; no implementation reproduction."
+    },
+    {
+      "id": "S2",
+      "paper_id": "pr-0990",
+      "url": "https://www.mdpi.com/1099-4300/28/9/975",
+      "version": "Entropy 28(9), 975, 2026",
+      "read_scope": [
+        "3.5-3.6",
+        "4.1-4.2",
+        "4.4-4.5"
+      ],
+      "access": "Publisher indexed body excerpts via exact-title web search; direct HTML HTTP 429",
+      "boundary": "Full table-image cells, calibration manifest and executable code not obtained. PMC attempted and returned bot check. Not counted as top-tier."
+    },
+    {
+      "id": "S3",
+      "paper_id": "pr-0981",
+      "url": "https://arxiv.org/html/2601.16667v3",
+      "version": "v3, 2026-03-12 per arXiv abstract history",
+      "read_scope": [
+        "5.1",
+        "5.6 Tables 7-8",
+        "5.7",
+        "Appendix B.3"
+      ],
+      "access": "arXiv HTML",
+      "boundary": "Do not transfer this version's training/ablation details to latest author project."
+    },
+    {
+      "id": "S4",
+      "paper_id": "pr-0981",
+      "url": "https://arxiv.org/abs/2601.16667",
+      "read_scope": [
+        "Version history and metadata"
+      ],
+      "access": "arXiv abstract page",
+      "boundary": "No official accepted venue established."
+    },
+    {
+      "id": "S5",
+      "paper_id": "pr-0981",
+      "url": "https://isee-laboratory.github.io/ReViP/",
+      "read_scope": [
+        "Benchmark",
+        "Methods including attention rebalance and Flash",
+        "Cross-backbone table",
+        "Code availability and manuscript links"
+      ],
+      "access": "Author project HTML",
+      "boundary": "Project-reported results. Linked latest manuscript and supplement failed web fetch; full current ablation and training recipe remain unverified. Code coming soon."
+    },
+    {
+      "id": "S6",
+      "url": "https://people.csail.mit.edu/lpk/papers/aij98-pomdp.pdf",
+      "version": "Artificial Intelligence 101 (1998), 99-134",
+      "read_scope": [
+        "Introduction",
+        "3.3-3.4"
+      ],
+      "access": "Author-hosted remote PDF via web tool; no local cache",
+      "boundary": "Foundation for belief/planning. D1 finite-choice, regret and value-of-information derivations are researcher analysis, not quoted new paper theorems."
+    },
+    {
+      "id": "S7",
+      "url": "https://arxiv.org/html/2509.18460v1",
+      "version": "v1",
+      "read_scope": [
+        "V, equations 11-14, MCTS description"
+      ],
+      "access": "arXiv HTML",
+      "boundary": "Adjacent active diagnosis prior; no new venue verification or registry admission."
+    }
+  ],
+  "static_sources_rechecked": [
+    {
+      "repo": "Lifelong-Robot-Learning/LIBERO",
+      "commit": "f78abd68ee283de9f9be3c8f7e2a9ad60246e95c",
+      "path": "libero/libero/envs/predicates/base_predicates.py",
+      "url": "https://raw.githubusercontent.com/Lifelong-Robot-Learning/LIBERO/f78abd68ee283de9f9be3c8f7e2a9ad60246e95c/libero/libero/envs/predicates/base_predicates.py",
+      "sha256": "319137e95330dbb22a266a8dceb8110f18413c2bf17461550222228c4bc310a1",
+      "bytes": 2650,
+      "role": "native_or_candidate_source",
+      "rechecked_sha256_matches_prior": true,
+      "method": "Read public text into host memory; SHA256 comparison; no upstream import or execution."
+    },
+    {
+      "repo": "Lifelong-Robot-Learning/LIBERO",
+      "commit": "f78abd68ee283de9f9be3c8f7e2a9ad60246e95c",
+      "path": "libero/libero/envs/object_states/base_object_states.py",
+      "url": "https://raw.githubusercontent.com/Lifelong-Robot-Learning/LIBERO/f78abd68ee283de9f9be3c8f7e2a9ad60246e95c/libero/libero/envs/object_states/base_object_states.py",
+      "sha256": "ca6f53123336b6487bdb4feb02534ddb3a0627a4b847fe89da4460520ef01366",
+      "bytes": 8215,
+      "role": "native_or_candidate_source",
+      "rechecked_sha256_matches_prior": true,
+      "method": "Read public text into host memory; SHA256 comparison; no upstream import or execution."
+    },
+    {
+      "repo": "ARISE-Initiative/robosuite",
+      "commit": "c848ca848020d0c4ccdd10c5056bd06f2a195ba2",
+      "path": "robosuite/controllers/osc.py",
+      "url": "https://raw.githubusercontent.com/ARISE-Initiative/robosuite/c848ca848020d0c4ccdd10c5056bd06f2a195ba2/robosuite/controllers/osc.py",
+      "sha256": "a5887a950f53c16c67874c1e4f2ea6919dc0d0e5d1b618c15c699bd84e269477",
+      "bytes": 19852,
+      "role": "native_or_candidate_source",
+      "rechecked_sha256_matches_prior": true,
+      "method": "Read public text into host memory; SHA256 comparison; no upstream import or execution."
+    },
+    {
+      "repo": "Lifelong-Robot-Learning/LIBERO",
+      "commit": "f78abd68ee283de9f9be3c8f7e2a9ad60246e95c",
+      "path": "libero/libero/bddl_files/libero_goal/open_the_middle_drawer_of_the_cabinet.bddl",
+      "url": "https://raw.githubusercontent.com/Lifelong-Robot-Learning/LIBERO/f78abd68ee283de9f9be3c8f7e2a9ad60246e95c/libero/libero/bddl_files/libero_goal/open_the_middle_drawer_of_the_cabinet.bddl",
+      "sha256": "832ab48ec476807c767e8985666e295700f92d1f8daeae1c34eee1e75293769b",
+      "bytes": 2943,
+      "role": "native_or_candidate_source",
+      "rechecked_sha256_matches_prior": true,
+      "method": "Read public text into host memory; SHA256 comparison; no upstream import or execution."
+    },
+    {
+      "repo": "Lifelong-Robot-Learning/LIBERO",
+      "commit": "f78abd68ee283de9f9be3c8f7e2a9ad60246e95c",
+      "path": "libero/libero/bddl_files/libero_goal/put_the_bowl_on_the_stove.bddl",
+      "url": "https://raw.githubusercontent.com/Lifelong-Robot-Learning/LIBERO/f78abd68ee283de9f9be3c8f7e2a9ad60246e95c/libero/libero/bddl_files/libero_goal/put_the_bowl_on_the_stove.bddl",
+      "sha256": "c6812d6c988be830412aa6fc4801af04d60f8c4565d2625763b6a0f2b843a87f",
+      "bytes": 2961,
+      "role": "native_or_candidate_source",
+      "rechecked_sha256_matches_prior": true,
+      "method": "Read public text into host memory; SHA256 comparison; no upstream import or execution."
+    },
+    {
+      "repo": "Lifelong-Robot-Learning/LIBERO",
+      "commit": "f78abd68ee283de9f9be3c8f7e2a9ad60246e95c",
+      "path": "libero/libero/bddl_files/libero_goal/put_the_bowl_on_the_plate.bddl",
+      "url": "https://raw.githubusercontent.com/Lifelong-Robot-Learning/LIBERO/f78abd68ee283de9f9be3c8f7e2a9ad60246e95c/libero/libero/bddl_files/libero_goal/put_the_bowl_on_the_plate.bddl",
+      "sha256": "358b7781437e412c67d6a7648c1c28796b6b1bf117a25e61316cb8dfeb940e5b",
+      "bytes": 2927,
+      "role": "native_or_candidate_source",
+      "rechecked_sha256_matches_prior": true,
+      "method": "Read public text into host memory; SHA256 comparison; no upstream import or execution."
+    }
+  ],
+  "prior_evidence_reused": [
+    "TASK_OBSERVABILITY_AUDIT.md",
+    "TASK_CANDIDATES.json",
+    "PRE_EXPERIMENT_CONTRACT.md",
+    "PILOT_SPEC.json",
+    "BASELINE_METHOD_AUDIT.md",
+    "CLAIM_EVIDENCE_CONTRACT.md"
+  ],
+  "not_done": [
+    "Native policy utility / correction effect",
+    "New simulator or numeric experiment",
+    "Latest ReViP linked manuscript full-text review",
+    "G-PSMR code/calibration manifest qualification",
+    "External researcher feedback"
+  ],
+  "registry_admissions": 0,
+  "reading_status_promotions": 0
+}

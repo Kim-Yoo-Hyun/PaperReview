@@ -9,7 +9,7 @@
 - Year/Venue: 2025 / RSS
 - Authors: not duplicated here when not verified in the registry source
 - Primary track: RL, IL, offline learning, and robot data
-- Tier: NEXT
+- Tier: CORE
 - Tags: Robotics, Reinforcement Learning, generalist policy, policy distillation, robot data, real-world manipulation
 - Official paper: https://www.roboticsproceedings.org/rss21/p028.html
 - Full-text retrieval: https://arxiv.org/pdf/2412.09858

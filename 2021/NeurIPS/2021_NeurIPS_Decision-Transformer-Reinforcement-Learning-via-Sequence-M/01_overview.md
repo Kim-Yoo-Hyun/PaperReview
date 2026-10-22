@@ -9,7 +9,7 @@
 - Year/Venue: 2021 / NeurIPS
 - Authors: not duplicated here when not verified in the registry source
 - Primary track: RL, IL, offline learning, and robot data
-- Tier: CORE
+- Tier: NEXT
 - Tags: Reinforcement Learning, Transformer, policy
 - Official paper: https://arxiv.org/abs/2106.01345
 - Full-text retrieval: https://arxiv.org/pdf/2106.01345

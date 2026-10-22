@@ -9,7 +9,7 @@
 - Year/Venue: 1968 / IEEE Transactions on Systems Science and Cybernetics
 - Authors: not duplicated here when not verified in the registry source
 - Primary track: Planning and control
-- Tier: CORE
+- Tier: REFERENCE
 - Tags: Robotics, Planning, graph search, A*
 - Official paper: https://doi.org/10.1109/TSSC.1968.300136
 - Full-text retrieval: https://people.stfx.ca/jdelamer/courses/csci-564/_downloads/b2220c66675ddde471ca1795147b8e86/A_Formal_Basis_for_the_Heuristic_Determination_of_Minimum_Cost_Paths.pdf

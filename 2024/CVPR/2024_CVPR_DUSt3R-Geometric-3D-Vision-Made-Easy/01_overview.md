@@ -9,7 +9,7 @@
 - Year/Venue: 2024 / CVPR
 - Authors: not duplicated here when not verified in the registry source
 - Primary track: Robotics-enabling 3D perception
-- Tier: CORE
+- Tier: REFERENCE
 - Tags: 3D reconstruction, calibration, geometry
 - Official paper: https://arxiv.org/abs/2312.14132
 - Full-text retrieval: https://arxiv.org/pdf/2312.14132

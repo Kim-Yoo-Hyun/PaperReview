@@ -1,6 +1,6 @@
 # Planning and Control
 
-- Updated: 2026-09-04 KST
+- Updated: 2026-10-23 KST
 
 ## Scope
 
@@ -13,43 +13,46 @@ Recursive state estimation, heuristic graph search, configuration-space planning
 - **Out of scope:** downstream robot action interface가 없는 generic optimization, perception-only representation, 또는 단순 benchmark. 해당 논문은 다른 track이나 REFERENCE로 연결한다.
 - **Inclusion test:** 논문을 `observation → state/belief → task/motion decision → policy/control → contact/feedback` 중 하나 이상의 경계에 배치하고, 입력·출력·제약·실행 조건을 비교할 수 있어야 한다.
 - **Role vocabulary:** `foundation`, `formulation`, `method`, `controller`, `planner`, `simulator`, `system`, `benchmark`를 사용한다.
-- **Facet tuple:** `embodiment; modality/data; setting; control level; interface`를 모든 matrix 행에 기록한다. 예: `arm; proprioception+force; real; low-level; task-space control`.
-- **Comparison unit:** Comparison Matrix는 registry의 한 논문당 한 행이다. 여러 논문을 묶은 표현은 Dependency and Evolution에서만 개념적 관계로 허용한다.
-- **Metadata/evidence:** Paper 링크의 local overview에 official paper, project/code와 source audit를 둔다. Matrix는 `Year / Venue`, `Role`, `Facets`, `Why included / TL;DR`, `Evidence / source`를 반복 기록하며, Evaluation은 `setup; data/split; metric; real/trials` 순서를 따른다.
+
+공통 matrix/evidence 규약은 [synthesis 안내](./README.md#공통-비교-규약과-질문-분류)를 따른다.
 
 ## Reading Path
 
+현재 읽기 우선순위는 [READING_PLAN.md](../research/READING_PLAN.md)를 따른다. 아래 계보는 비교 탐색용이며 전체 선행 완독 의무가 아니다.
+
+2026-10-19 초점: VLA/RL가 실행할 action·controller interface와 partial observability를 중심으로 본다. POMDP·impedance·MuJoCo·NoMaD를 현재 기준으로 두고, 전신 QP/NMPC 및 일반 trajectory optimization은 선택한 실험에 필요할 때 참조한다.
+
 Kalman filtering → A* heuristic search → POMDP belief-state planning → Hybrid Position/Force·Impedance·Operational Space Control → PRM/RRT → CHOMP/TrajOpt → MuJoCo·MPPI → LGP/FFRob/PDDLStream → Dynamic Whole-Body Control/HQP → Whole-Body NMPC → contact-aware planning and optimization.
+
+### 2026-10-19 추가 논문 비교
+
+아래는 등록된 abstract/project 근거에서 만든 **정독 전 비교 질문**이다. 직접 citation이나 실험 결론으로 취급하지 않으며, 읽기 순서와 tier는 READING_PLAN의 최신 값을 따른다.
+
+| 비교할 논문 | 비교 축 | 본문에서 확인할 조건 |
+|---|---|---|
+| [NavDP](../2026/ICRA/2026_ICRA_NavDP-Learning-Sim-to-Real-Navigation-Diffusion-Policy-wit/01_overview.md) ↔ NoMaD | Goal/observation-conditioned navigation의 action interface 비교 | Privileged guidance가 training에만 쓰이는지, 실행 chunk·replanning·collision 비용이 어떻게 다른지 본문에서 확인한다. |
 
 <!-- READING_QUEUE:START -->
 
 ## Assigned Reading Queue
 
-### Planning, control, and whole-body foundations — 16
+### Planning, control, and whole-body foundations — 4
 
 | Tier | Paper | Year / Venue | Status | Evidence |
 |---|---|---|---|---|
-| CORE | [A New Approach to Linear Filtering and Prediction Problems](../1960/Journal-of-Basic-Enginee/1960_Journal-of-Basic-Enginee_A-New-Approach-to-Linear-Filtering-and-Prediction-Problems/01_overview.md) | 1960 / Journal of Basic Engineering | `READ` | `FULL_TEXT_CHECKED` |
-| CORE | [A Formal Basis for the Heuristic Determination of Minimum Cost Paths](../1968/IEEE-Transactions-on-Sys/1968_IEEE-Transactions-on-Sys_A-Formal-Basis-for-the-Heuristic-Determination-of-Minimum/01_overview.md) | 1968 / IEEE Transactions on Systems Science and Cybernetics | `READ` | `FULL_TEXT_CHECKED` |
 | CORE | [Planning and Acting in Partially Observable Stochastic Domains](../1998/Artificial-Intelligence/1998_Artificial-Intelligence_Planning-and-Acting-in-Partially-Observable-Stochastic-Dom/01_overview.md) | 1998 / Artificial Intelligence | `READ` | `FULL_TEXT_CHECKED` |
-| CORE | [A Unified Approach for Motion and Force Control of Robot Manipulators: The Operational Space Formulation](../1987/IEEE-JRA/1987_IEEE-JRA_A-Unified-Approach-for-Motion-and-Force-Control-of-Robot-M/01_overview.md) | 1987 / IEEE JRA | `READ` | `FULL_TEXT_CHECKED` |
-| CORE | [Hybrid Position/Force Control of Manipulators](../1981/Journal-of-Dynamic-Syste/1981_Journal-of-Dynamic-Syste_Hybrid-Position-Force-Control-of-Manipulators/01_overview.md) | 1981 / Journal of Dynamic Systems, Measurement, and Control | `READ` | `FULL_TEXT_CHECKED` |
 | CORE | [Impedance Control: An Approach to Manipulation: Part I—Theory](../1985/Journal-of-Dynamic-Syste/1985_Journal-of-Dynamic-Syste_Impedance-Control-An-Approach-to-Manipulation-Part-ITheory/01_overview.md) | 1985 / Journal of Dynamic Systems, Measurement, and Control | `UNREAD` | `FULL_TEXT_CHECKED` |
-| CORE | [Probabilistic Roadmaps for Path Planning in High-Dimensional Configuration Spaces](../1996/IEEE-T-RA/1996_IEEE-T-RA_Probabilistic-Roadmaps-for-Path-Planning-in-High-Dimension/01_overview.md) | 1996 / IEEE T-RA | `UNREAD` | `FULL_TEXT_CHECKED` |
-| CORE | [Rapidly-Exploring Random Trees: A New Tool for Path Planning](../1998/Technical-Report/1998_Technical-Report_Rapidly-Exploring-Random-Trees-A-New-Tool-for-Path-Plannin/01_overview.md) | 1998 / Technical Report | `UNREAD` | `FULL_TEXT_CHECKED` |
-| CORE | [CHOMP: Gradient Optimization Techniques for Efficient Motion Planning](../2009/ICRA/2009_ICRA_CHOMP-Gradient-Optimization-Techniques-for-Efficient-Motio/01_overview.md) | 2009 / ICRA | `UNREAD` | `FULL_TEXT_CHECKED` |
-| CORE | [TrajOpt: A Sequential Convex Optimization Algorithm for Robot Motion Planning](../2013/IROS/2013_IROS_TrajOpt-A-Sequential-Convex-Optimization-Algorithm-for-Rob/01_overview.md) | 2013 / IROS | `UNREAD` | `FULL_TEXT_CHECKED` |
 | CORE | [MuJoCo: A Physics Engine for Model-Based Control](../2012/IROS/2012_IROS_MuJoCo-A-Physics-Engine-for-Model-Based-Control/01_overview.md) | 2012 / IROS | `UNREAD` | `FULL_TEXT_CHECKED` |
-| CORE | [Information Theoretic MPC for Model-Based Reinforcement Learning](../2017/ICRA/2017_ICRA_Information-Theoretic-MPC-for-Model-Based-Reinforcement-Le/01_overview.md) | 2017 / ICRA | `UNREAD` | `FULL_TEXT_CHECKED` |
-| CORE | [PDDLStream: Integrating Symbolic Planners and Blackbox Samplers via Optimistic Adaptive Planning](../2020/ICAPS/2020_ICAPS_PDDLStream-Integrating-Symbolic-Planners-and-Blackbox-Samp/01_overview.md) | 2020 / ICAPS | `UNREAD` | `FULL_TEXT_CHECKED` |
-| CORE | [Dynamic Whole-Body Motion Generation under Rigid Contacts and Other Unilateral Constraints](../2013/T-RO/2013_T-RO_Dynamic-Whole-Body-Motion-Generation-under-Rigid-Contacts/01_overview.md) | 2013 / T-RO | `UNREAD` | `FULL_TEXT_CHECKED` |
-| CORE | [Hierarchical Quadratic Programming: Fast Online Humanoid-Robot Motion Generation](../2014/IJRR/2014_IJRR_Hierarchical-Quadratic-Programming-Fast-Online-Humanoid-Ro/01_overview.md) | 2014 / IJRR | `UNREAD` | `FULL_TEXT_CHECKED` |
-| CORE | [Whole-Body Nonlinear Model Predictive Control Through Contacts for Quadrupeds](../2018/RA-L/2018_RA-L_Whole-Body-Nonlinear-Model-Predictive-Control-Through-Cont/01_overview.md) | 2018 / RA-L | `UNREAD` | `FULL_TEXT_CHECKED` |
+| CORE | [NoMaD: Goal Masked Diffusion Policies for Navigation and Exploration](../2024/ICRA/2024_ICRA_NoMaD-Goal-Masked-Diffusion-Policies-for-Navigation-and-Ex/01_overview.md) | 2024 / ICRA | `UNREAD` | `FULL_TEXT_CHECKED` |
 
-### Planning, control, simulation, and TAMP extensions — 13
+### Planning, control, simulation, and TAMP extensions — 16
 
 | Tier | Paper | Year / Venue | Status | Evidence |
 |---|---|---|---|---|
+| NEXT | [NavDP: Learning Sim-to-Real Navigation Diffusion Policy with Privileged Information Guidance](../2026/ICRA/2026_ICRA_NavDP-Learning-Sim-to-Real-Navigation-Diffusion-Policy-wit/01_overview.md) | 2026 / ICRA | `UNREAD` | `ABSTRACT_CHECKED` |
+| NEXT | [Rapidly-Exploring Random Trees: A New Tool for Path Planning](../1998/Technical-Report/1998_Technical-Report_Rapidly-Exploring-Random-Trees-A-New-Tool-for-Path-Plannin/01_overview.md) | 1998 / Technical Report | `UNREAD` | `FULL_TEXT_CHECKED` |
+| NEXT | [Information Theoretic MPC for Model-Based Reinforcement Learning](../2017/ICRA/2017_ICRA_Information-Theoretic-MPC-for-Model-Based-Reinforcement-Le/01_overview.md) | 2017 / ICRA | `UNREAD` | `FULL_TEXT_CHECKED` |
+| NEXT | [PDDLStream: Integrating Symbolic Planners and Blackbox Samplers via Optimistic Adaptive Planning](../2020/ICAPS/2020_ICAPS_PDDLStream-Integrating-Symbolic-Planners-and-Blackbox-Samp/01_overview.md) | 2020 / ICAPS | `UNREAD` | `FULL_TEXT_CHECKED` |
 | NEXT | [Logic-Geometric Programming: An Optimization-Based Approach to Combined Task and Motion Planning](../2015/IJCAI/2015_IJCAI_Logic-Geometric-Programming-An-Optimization-Based-Approach/01_overview.md) | 2015 / IJCAI | `UNREAD` | `FULL_TEXT_CHECKED` |
 | NEXT | [FFRob: Leveraging Symbolic Planning for Efficient Task and Motion Planning](../2018/The-International-Journa/2018_The-International-Journa_FFRob-Leveraging-Symbolic-Planning-for-Efficient-Task-and/01_overview.md) | 2018 / The International Journal of Robotics Research | `UNREAD` | `FULL_TEXT_CHECKED` |
 | NEXT | [Kinodynamic Trajectory Following with STELA: Simultaneous Trajectory Estimation & Local Adaptation](../2025/RSS/2025_RSS_Kinodynamic-Trajectory-Following-with-STELA-Simultaneous-T/01_overview.md) | 2025 / RSS | `UNREAD` | `FULL_TEXT_CHECKED` |
@@ -62,11 +65,12 @@ Kalman filtering → A* heuristic search → POMDP belief-state planning → Hyb
 | NEXT | [Parallel and Proximal Linear-Quadratic Methods for Real-Time Constrained Model-Predictive Control](../2024/RSS/2024_RSS_Parallel-and-Proximal-Linear-Quadratic-Methods-for-Real-Ti/01_overview.md) | 2024 / RSS | `UNREAD` | `FULL_TEXT_CHECKED` |
 | NEXT | [Differentiable Robust Model Predictive Control](../2024/RSS/2024_RSS_Differentiable-Robust-Model-Predictive-Control/01_overview.md) | 2024 / RSS | `UNREAD` | `FULL_TEXT_CHECKED` |
 | NEXT | [Linear-time Differential Inverse Kinematics: an Augmented Lagrangian Perspective](../2024/RSS/2024_RSS_Linear-time-Differential-Inverse-Kinematics-an-Augmented-L/01_overview.md) | 2024 / RSS | `UNREAD` | `FULL_TEXT_CHECKED` |
-| NEXT | [NoMaD: Goal Masked Diffusion Policies for Navigation and Exploration](../2024/ICRA/2024_ICRA_NoMaD-Goal-Masked-Diffusion-Policies-for-Navigation-and-Ex/01_overview.md) | 2024 / ICRA | `UNREAD` | `FULL_TEXT_CHECKED` |
 
 <!-- READING_QUEUE:END -->
 
-## 2026-09-02 Curation Update
+## Historical curation — 2026-09-02
+
+아래는 해당 날짜의 변경 이력이다. 현재 membership과 수량은 위 generated queue를 따른다.
 
 `Lookahead Exploration`과 `FOCI`를 `NEXT`에 반영했다. 전자는 active exploration을 연속 VLN decision loop에 연결하고, 후자는 Gaussian scene representation을 trajectory optimization과 collision-aware robot planning에 직접 연결한다. 따라서 3D representation 자체가 아니라 planning/control interface를 기준으로 읽는다.
 
@@ -129,10 +133,21 @@ Kalman filtering → A* heuristic search → POMDP belief-state planning → Hyb
 
 정독 시 sampling/optimization/control을 승패로 비교하지 않고, 각 component가 `global search`, `local refinement`, `constraint enforcement`, `feedback stabilization` 중 무엇을 맡는지 기록한다.
 
+## 2026-10-23 근거 통합
+
+아래는 2026-10-22까지의 registry/source 감사와 후보 검토를 연결한 연구자 해석이다. 새 정독·효과 검증·직접 citation 관계의 확인을 뜻하지 않는다. Paper별 본문 확인 범위는 overview 및 연결된 dossier를 따른다.
+
+| 비교 축 | 등록된 선행 | 현재 남길 구분 |
+|---|---|---|
+| D2: attachment를 포함한 실행 가능성 | [Geometric Fabrics](../2025/RA-L/2025_RA-L_Globally-Guided-Geometric-Fabrics-for-Reactive-Mobile-Mani/01_overview.md) (2025 RA-L); [WBAG](../2026/arXiv/2026_arXiv_WBAG-A-Whole-Body-and-Attached-Geometry-Safety-Framework-f/01_overview.md) (2026 arXiv) | Geometry를 유지한 planner·grasp ranking으로 충분한지 먼저 비교한다. VLA의 추가 선택이 필요한지는 미확보다. |
+| D3: 사건 이후 새 목표 | [VoLo](../2026/CoRL/2026_CoRL_VoLo-A-Physical-Orchestrator-for-Open-Vocabulary-Long-Hori/01_overview.md) (2026 CoRL); [RePlan-Bot](../2026/CVPR-Workshop/2026_CVPR-Workshop_RePlan-Bot-Multi-Level-Replanning-for-Embodied-Instruction/01_overview.md) (2026 CVPR-Workshop) | 지시 교체·queue 취소·새 goal evaluator를 분리한다. 단순 predicate planner의 실패를 먼저 확인해야 한다. |
+
 ## Open Questions
 
-- Learned policy와 optimization-based controller 사이의 가장 안정적인 interface는 무엇인가?
-- Contact-rich task에서 빠른 replanning과 physical feasibility를 어떻게 동시에 보장하는가?
-- Foundation policy가 embodiment-specific dynamics와 constraint를 얼마나 내부화해야 하는가?
-- Belief/state estimator의 uncertainty가 planner와 safety constraint에 전달될 때 어떤 calibration이 필요한가?
-- Simulator와 learned model에서 좋은 plan이 실제 robot에서도 같은 실행 utility를 유지하는가?
+현재 후보 판정은 [주제별 요약](../work/research_candidates/summaries/README.md)을 따른다. 아래 질문은 `CURATION-HYPOTHESIS`이며 재개 승인이 아니다.
+
+| 질문 | 구별할 예측 | 최소 대조·중단 조건 | 근거/판정 |
+|---|---|---|---|
+| 운반 feasibility | 동일 object/attachment 추정·grasp 후보·planning 시간에서 learned ranking이 planner 이후에도 실패를 줄이는가? | Planner timeout을 불가능 label로 쓰지 않는다. 동일 정보의 planner/ranker로 설명되면 새 방법 주장은 중단한다. | [검토 근거](../work/research_candidates/2026-10-22_d2_buildup/CLAIM_CONTRACT.md) |
+| 사건 이후 instruction switch | 같은 observation/history와 continuation skill에서 새 목표의 가능성 판단이 native 실행과 분리되는가? | Predicate planner+동일 LL을 대조한다. 같은 물체의 불가능 goal과 pre/post feasible witness가 없으면 비교를 시작하지 않는다. | [검토 근거](../work/research_candidates/2026-10-22_d3_buildup/R1_REVIEW.md) |
+| Navigation의 replanning | 동일 sensor·execution latency·replanning budget에서 NoMaD/NavDP의 순위가 유지되는가? | Privileged training과 controller를 맞추기 전 representation 개선으로 귀속하지 않는다. | 기존 track 비교의 연구자 질문; native 효과 미검증 |

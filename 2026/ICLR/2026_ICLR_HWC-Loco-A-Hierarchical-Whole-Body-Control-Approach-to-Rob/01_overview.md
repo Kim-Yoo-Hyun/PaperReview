@@ -9,7 +9,7 @@
 - Year/Venue: 2026 / ICLR
 - Authors: not duplicated here when not verified in the registry source
 - Primary track: Locomotion, whole-body, mobile manipulation, and humanoids
-- Tier: NEXT
+- Tier: REFERENCE
 - Tags: Robotics, humanoid, whole-body control, robust locomotion, safety recovery
 - Official paper: https://iclr.cc/virtual/2026/poster/10011640
 - Full-text retrieval: https://arxiv.org/pdf/2503.00923

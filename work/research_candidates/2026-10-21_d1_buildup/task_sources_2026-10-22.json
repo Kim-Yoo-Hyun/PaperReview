@@ -1,0 +1,2189 @@
+{
+  "checked_on": "2026-10-22",
+  "scope": "D1-L3 static task definitions, native input-to-output path and controller source review. No upstream code import/execution, policy inference, simulator, package installation or weight/data/PDF payload download.",
+  "source_review": "BDDL goal forms and selected implementation sections inspected. Whole-file hashes identify fetched text; they do not imply every line was manually reviewed.",
+  "source_commits": {
+    "openpi": "215abfb217dbac7d5f1273282331b9b1866c0479",
+    "openpi_libero_gitlink": "f78abd68ee283de9f9be3c8f7e2a9ad60246e95c",
+    "libero_upstream_head_discovery_only": "8f1084e3132a39270c3a13ebe37270a43ece2a01",
+    "robosuite_v1_4_1": "c848ca848020d0c4ccdd10c5056bd06f2a195ba2",
+    "openvla_oft": "e4287e94541f459edc4feabc4e181f537cd569a8"
+  },
+  "gitlink_evidence_url": "https://api.github.com/repos/Physical-Intelligence/openpi/git/trees/215abfb217dbac7d5f1273282331b9b1866c0479?recursive=1",
+  "files": [
+    {
+      "repo": "Lifelong-Robot-Learning/LIBERO",
+      "commit": "8f1084e3132a39270c3a13ebe37270a43ece2a01",
+      "path": "libero/libero/benchmark/__init__.py",
+      "url": "https://raw.githubusercontent.com/Lifelong-Robot-Learning/LIBERO/8f1084e3132a39270c3a13ebe37270a43ece2a01/libero/libero/benchmark/__init__.py",
+      "sha256": "4ce6edbb00b3280692f2e2b2e8a14bf6e2d5878965b0484a386c0355a867ecc5",
+      "bytes": 6108,
+      "role": "upstream_discovery_comparison"
+    },
+    {
+      "repo": "Lifelong-Robot-Learning/LIBERO",
+      "commit": "8f1084e3132a39270c3a13ebe37270a43ece2a01",
+      "path": "libero/libero/benchmark/libero_suite_task_map.py",
+      "url": "https://raw.githubusercontent.com/Lifelong-Robot-Learning/LIBERO/8f1084e3132a39270c3a13ebe37270a43ece2a01/libero/libero/benchmark/libero_suite_task_map.py",
+      "sha256": "0c950df0a785aa55de968bb38ccd865d2017f71ddbe6f48cfd05ac0742b6d62d",
+      "bytes": 9775,
+      "role": "upstream_discovery_comparison"
+    },
+    {
+      "repo": "Lifelong-Robot-Learning/LIBERO",
+      "commit": "8f1084e3132a39270c3a13ebe37270a43ece2a01",
+      "path": "libero/libero/envs/predicates/base_predicates.py",
+      "url": "https://raw.githubusercontent.com/Lifelong-Robot-Learning/LIBERO/8f1084e3132a39270c3a13ebe37270a43ece2a01/libero/libero/envs/predicates/base_predicates.py",
+      "sha256": "319137e95330dbb22a266a8dceb8110f18413c2bf17461550222228c4bc310a1",
+      "bytes": 2650,
+      "role": "upstream_discovery_comparison"
+    },
+    {
+      "repo": "Lifelong-Robot-Learning/LIBERO",
+      "commit": "8f1084e3132a39270c3a13ebe37270a43ece2a01",
+      "path": "libero/libero/envs/object_states/base_object_states.py",
+      "url": "https://raw.githubusercontent.com/Lifelong-Robot-Learning/LIBERO/8f1084e3132a39270c3a13ebe37270a43ece2a01/libero/libero/envs/object_states/base_object_states.py",
+      "sha256": "ca6f53123336b6487bdb4feb02534ddb3a0627a4b847fe89da4460520ef01366",
+      "bytes": 8215,
+      "role": "upstream_discovery_comparison"
+    },
+    {
+      "repo": "Lifelong-Robot-Learning/LIBERO",
+      "commit": "8f1084e3132a39270c3a13ebe37270a43ece2a01",
+      "path": "libero/libero/envs/bddl_base_domain.py",
+      "url": "https://raw.githubusercontent.com/Lifelong-Robot-Learning/LIBERO/8f1084e3132a39270c3a13ebe37270a43ece2a01/libero/libero/envs/bddl_base_domain.py",
+      "sha256": "055836670ac5fcac7e033fc86404718fd53854996e5776b1ff68b646f7bbcc9d",
+      "bytes": 32639,
+      "role": "upstream_discovery_comparison"
+    },
+    {
+      "repo": "Lifelong-Robot-Learning/LIBERO",
+      "commit": "8f1084e3132a39270c3a13ebe37270a43ece2a01",
+      "path": "libero/libero/envs/env_wrapper.py",
+      "url": "https://raw.githubusercontent.com/Lifelong-Robot-Learning/LIBERO/8f1084e3132a39270c3a13ebe37270a43ece2a01/libero/libero/envs/env_wrapper.py",
+      "sha256": "a782fb76c9792268d28979474fe72849e1e98ada49c8e997a65359a8d6b6acd0",
+      "bytes": 8781,
+      "role": "upstream_discovery_comparison"
+    },
+    {
+      "repo": "Lifelong-Robot-Learning/LIBERO",
+      "commit": "8f1084e3132a39270c3a13ebe37270a43ece2a01",
+      "path": "libero/libero/envs/base_object.py",
+      "url": "https://raw.githubusercontent.com/Lifelong-Robot-Learning/LIBERO/8f1084e3132a39270c3a13ebe37270a43ece2a01/libero/libero/envs/base_object.py",
+      "sha256": "88ee0d4b2a39f39437d97fb12ec08831cb5064e23a7456d2f882e3baab246f1a",
+      "bytes": 645,
+      "role": "upstream_discovery_comparison"
+    },
+    {
+      "repo": "Lifelong-Robot-Learning/LIBERO",
+      "commit": "8f1084e3132a39270c3a13ebe37270a43ece2a01",
+      "path": "requirements.txt",
+      "url": "https://raw.githubusercontent.com/Lifelong-Robot-Learning/LIBERO/8f1084e3132a39270c3a13ebe37270a43ece2a01/requirements.txt",
+      "sha256": "b7d3093bb5e2f424c54396a2731bf26ea185bd3fbff79b561571a92400958130",
+      "bytes": 274,
+      "role": "upstream_discovery_comparison"
+    },
+    {
+      "repo": "Lifelong-Robot-Learning/LIBERO",
+      "commit": "8f1084e3132a39270c3a13ebe37270a43ece2a01",
+      "path": "libero/libero/bddl_files/libero_goal/open_the_middle_drawer_of_the_cabinet.bddl",
+      "url": "https://raw.githubusercontent.com/Lifelong-Robot-Learning/LIBERO/8f1084e3132a39270c3a13ebe37270a43ece2a01/libero/libero/bddl_files/libero_goal/open_the_middle_drawer_of_the_cabinet.bddl",
+      "sha256": "832ab48ec476807c767e8985666e295700f92d1f8daeae1c34eee1e75293769b",
+      "bytes": 2943,
+      "role": "upstream_discovery_comparison"
+    },
+    {
+      "repo": "Lifelong-Robot-Learning/LIBERO",
+      "commit": "8f1084e3132a39270c3a13ebe37270a43ece2a01",
+      "path": "libero/libero/bddl_files/libero_goal/put_the_bowl_on_the_plate.bddl",
+      "url": "https://raw.githubusercontent.com/Lifelong-Robot-Learning/LIBERO/8f1084e3132a39270c3a13ebe37270a43ece2a01/libero/libero/bddl_files/libero_goal/put_the_bowl_on_the_plate.bddl",
+      "sha256": "358b7781437e412c67d6a7648c1c28796b6b1bf117a25e61316cb8dfeb940e5b",
+      "bytes": 2927,
+      "role": "upstream_discovery_comparison"
+    },
+    {
+      "repo": "Lifelong-Robot-Learning/LIBERO",
+      "commit": "8f1084e3132a39270c3a13ebe37270a43ece2a01",
+      "path": "libero/libero/bddl_files/libero_goal/turn_on_the_stove.bddl",
+      "url": "https://raw.githubusercontent.com/Lifelong-Robot-Learning/LIBERO/8f1084e3132a39270c3a13ebe37270a43ece2a01/libero/libero/bddl_files/libero_goal/turn_on_the_stove.bddl",
+      "sha256": "cbd2a0514d53226c5d09e17af40b22935d4cb6ff8fdaff0d55f555de1adecc13",
+      "bytes": 2891,
+      "role": "upstream_discovery_comparison"
+    },
+    {
+      "repo": "Physical-Intelligence/openpi",
+      "commit": "215abfb217dbac7d5f1273282331b9b1866c0479",
+      "path": "examples/libero/main.py",
+      "url": "https://raw.githubusercontent.com/Physical-Intelligence/openpi/215abfb217dbac7d5f1273282331b9b1866c0479/examples/libero/main.py",
+      "sha256": "d53748c95804ada559e3ca867305b8f755d8651c4c7f4e2723ef80aea55a3943",
+      "bytes": 9194,
+      "role": "native_or_candidate_source"
+    },
+    {
+      "repo": "Physical-Intelligence/openpi",
+      "commit": "215abfb217dbac7d5f1273282331b9b1866c0479",
+      "path": "src/openpi/policies/libero_policy.py",
+      "url": "https://raw.githubusercontent.com/Physical-Intelligence/openpi/215abfb217dbac7d5f1273282331b9b1866c0479/src/openpi/policies/libero_policy.py",
+      "sha256": "d8679d99facc3fef48da07406081b20709ed872fcefdf7de67ede99422d623fa",
+      "bytes": 4322,
+      "role": "native_or_candidate_source"
+    },
+    {
+      "repo": "Physical-Intelligence/openpi",
+      "commit": "215abfb217dbac7d5f1273282331b9b1866c0479",
+      "path": "examples/libero/README.md",
+      "url": "https://raw.githubusercontent.com/Physical-Intelligence/openpi/215abfb217dbac7d5f1273282331b9b1866c0479/examples/libero/README.md",
+      "sha256": "a2caaf5459c4b01837b73aa93a6f69e8cdf10385b39c34eba36afa85f83fafe9",
+      "bytes": 2551,
+      "role": "native_or_candidate_source"
+    },
+    {
+      "repo": "Lifelong-Robot-Learning/LIBERO",
+      "commit": "f78abd68ee283de9f9be3c8f7e2a9ad60246e95c",
+      "path": "libero/libero/benchmark/__init__.py",
+      "url": "https://raw.githubusercontent.com/Lifelong-Robot-Learning/LIBERO/f78abd68ee283de9f9be3c8f7e2a9ad60246e95c/libero/libero/benchmark/__init__.py",
+      "sha256": "4ce6edbb00b3280692f2e2b2e8a14bf6e2d5878965b0484a386c0355a867ecc5",
+      "bytes": 6108,
+      "role": "native_or_candidate_source"
+    },
+    {
+      "repo": "Lifelong-Robot-Learning/LIBERO",
+      "commit": "f78abd68ee283de9f9be3c8f7e2a9ad60246e95c",
+      "path": "libero/libero/benchmark/libero_suite_task_map.py",
+      "url": "https://raw.githubusercontent.com/Lifelong-Robot-Learning/LIBERO/f78abd68ee283de9f9be3c8f7e2a9ad60246e95c/libero/libero/benchmark/libero_suite_task_map.py",
+      "sha256": "0c950df0a785aa55de968bb38ccd865d2017f71ddbe6f48cfd05ac0742b6d62d",
+      "bytes": 9775,
+      "role": "native_or_candidate_source"
+    },
+    {
+      "repo": "Lifelong-Robot-Learning/LIBERO",
+      "commit": "f78abd68ee283de9f9be3c8f7e2a9ad60246e95c",
+      "path": "libero/libero/envs/predicates/base_predicates.py",
+      "url": "https://raw.githubusercontent.com/Lifelong-Robot-Learning/LIBERO/f78abd68ee283de9f9be3c8f7e2a9ad60246e95c/libero/libero/envs/predicates/base_predicates.py",
+      "sha256": "319137e95330dbb22a266a8dceb8110f18413c2bf17461550222228c4bc310a1",
+      "bytes": 2650,
+      "role": "native_or_candidate_source"
+    },
+    {
+      "repo": "Lifelong-Robot-Learning/LIBERO",
+      "commit": "f78abd68ee283de9f9be3c8f7e2a9ad60246e95c",
+      "path": "libero/libero/envs/object_states/base_object_states.py",
+      "url": "https://raw.githubusercontent.com/Lifelong-Robot-Learning/LIBERO/f78abd68ee283de9f9be3c8f7e2a9ad60246e95c/libero/libero/envs/object_states/base_object_states.py",
+      "sha256": "ca6f53123336b6487bdb4feb02534ddb3a0627a4b847fe89da4460520ef01366",
+      "bytes": 8215,
+      "role": "native_or_candidate_source"
+    },
+    {
+      "repo": "Lifelong-Robot-Learning/LIBERO",
+      "commit": "f78abd68ee283de9f9be3c8f7e2a9ad60246e95c",
+      "path": "libero/libero/envs/bddl_base_domain.py",
+      "url": "https://raw.githubusercontent.com/Lifelong-Robot-Learning/LIBERO/f78abd68ee283de9f9be3c8f7e2a9ad60246e95c/libero/libero/envs/bddl_base_domain.py",
+      "sha256": "055836670ac5fcac7e033fc86404718fd53854996e5776b1ff68b646f7bbcc9d",
+      "bytes": 32639,
+      "role": "native_or_candidate_source"
+    },
+    {
+      "repo": "Lifelong-Robot-Learning/LIBERO",
+      "commit": "f78abd68ee283de9f9be3c8f7e2a9ad60246e95c",
+      "path": "libero/libero/envs/env_wrapper.py",
+      "url": "https://raw.githubusercontent.com/Lifelong-Robot-Learning/LIBERO/f78abd68ee283de9f9be3c8f7e2a9ad60246e95c/libero/libero/envs/env_wrapper.py",
+      "sha256": "a782fb76c9792268d28979474fe72849e1e98ada49c8e997a65359a8d6b6acd0",
+      "bytes": 8781,
+      "role": "native_or_candidate_source"
+    },
+    {
+      "repo": "Lifelong-Robot-Learning/LIBERO",
+      "commit": "f78abd68ee283de9f9be3c8f7e2a9ad60246e95c",
+      "path": "libero/libero/envs/objects/articulated_objects.py",
+      "url": "https://raw.githubusercontent.com/Lifelong-Robot-Learning/LIBERO/f78abd68ee283de9f9be3c8f7e2a9ad60246e95c/libero/libero/envs/objects/articulated_objects.py",
+      "sha256": "f5187b0381d69a2a8736c1dcb646e5fa7c138a42950f92e30c21c2efaed52faa",
+      "bytes": 8126,
+      "role": "native_or_candidate_source"
+    },
+    {
+      "repo": "Lifelong-Robot-Learning/LIBERO",
+      "commit": "f78abd68ee283de9f9be3c8f7e2a9ad60246e95c",
+      "path": "libero/libero/envs/objects/site_object.py",
+      "url": "https://raw.githubusercontent.com/Lifelong-Robot-Learning/LIBERO/f78abd68ee283de9f9be3c8f7e2a9ad60246e95c/libero/libero/envs/objects/site_object.py",
+      "sha256": "4907bf2550945c395b85fd92725763ada4da533ad50966eb179e637dabeeebf6",
+      "bytes": 3028,
+      "role": "native_or_candidate_source"
+    },
+    {
+      "repo": "Lifelong-Robot-Learning/LIBERO",
+      "commit": "f78abd68ee283de9f9be3c8f7e2a9ad60246e95c",
+      "path": "libero/libero/envs/problems/libero_tabletop_manipulation.py",
+      "url": "https://raw.githubusercontent.com/Lifelong-Robot-Learning/LIBERO/f78abd68ee283de9f9be3c8f7e2a9ad60246e95c/libero/libero/envs/problems/libero_tabletop_manipulation.py",
+      "sha256": "0defb17c0bbab8f6bd34c021ac15598ea101fe1e48690cb440d4ef92762880fe",
+      "bytes": 8877,
+      "role": "native_or_candidate_source"
+    },
+    {
+      "repo": "Lifelong-Robot-Learning/LIBERO",
+      "commit": "f78abd68ee283de9f9be3c8f7e2a9ad60246e95c",
+      "path": "libero/libero/assets/articulated_objects/wooden_cabinet.xml",
+      "url": "https://raw.githubusercontent.com/Lifelong-Robot-Learning/LIBERO/f78abd68ee283de9f9be3c8f7e2a9ad60246e95c/libero/libero/assets/articulated_objects/wooden_cabinet.xml",
+      "sha256": "eca251258c7ff6a05fa181a316c767508801812f4ea870921f3ce28fd82ea7af",
+      "bytes": 14435,
+      "role": "native_or_candidate_source"
+    },
+    {
+      "repo": "Lifelong-Robot-Learning/LIBERO",
+      "commit": "f78abd68ee283de9f9be3c8f7e2a9ad60246e95c",
+      "path": "libero/libero/assets/articulated_objects/flat_stove.xml",
+      "url": "https://raw.githubusercontent.com/Lifelong-Robot-Learning/LIBERO/f78abd68ee283de9f9be3c8f7e2a9ad60246e95c/libero/libero/assets/articulated_objects/flat_stove.xml",
+      "sha256": "046748f5543cdfc1500d74f8ca60a992ad6633717396a2d4f505eb79aa102cb1",
+      "bytes": 7180,
+      "role": "native_or_candidate_source"
+    },
+    {
+      "repo": "Lifelong-Robot-Learning/LIBERO",
+      "commit": "f78abd68ee283de9f9be3c8f7e2a9ad60246e95c",
+      "path": "requirements.txt",
+      "url": "https://raw.githubusercontent.com/Lifelong-Robot-Learning/LIBERO/f78abd68ee283de9f9be3c8f7e2a9ad60246e95c/requirements.txt",
+      "sha256": "23ef4abd0a9809a8075d626d2ee09181e474c6cdf046ad340de134e383afea01",
+      "bytes": 267,
+      "role": "native_or_candidate_source"
+    },
+    {
+      "repo": "ARISE-Initiative/robosuite",
+      "commit": "c848ca848020d0c4ccdd10c5056bd06f2a195ba2",
+      "path": "robosuite/controllers/osc.py",
+      "url": "https://raw.githubusercontent.com/ARISE-Initiative/robosuite/c848ca848020d0c4ccdd10c5056bd06f2a195ba2/robosuite/controllers/osc.py",
+      "sha256": "a5887a950f53c16c67874c1e4f2ea6919dc0d0e5d1b618c15c699bd84e269477",
+      "bytes": 19852,
+      "role": "native_or_candidate_source"
+    },
+    {
+      "repo": "ARISE-Initiative/robosuite",
+      "commit": "c848ca848020d0c4ccdd10c5056bd06f2a195ba2",
+      "path": "robosuite/controllers/config/osc_pose.json",
+      "url": "https://raw.githubusercontent.com/ARISE-Initiative/robosuite/c848ca848020d0c4ccdd10c5056bd06f2a195ba2/robosuite/controllers/config/osc_pose.json",
+      "sha256": "f734733e8a3a14acdaf9e6c482a7edaa0e89885eec8e4a66a1c4c031de9f3f7f",
+      "bytes": 449,
+      "role": "native_or_candidate_source"
+    },
+    {
+      "repo": "ARISE-Initiative/robosuite",
+      "commit": "c848ca848020d0c4ccdd10c5056bd06f2a195ba2",
+      "path": "robosuite/controllers/base_controller.py",
+      "url": "https://raw.githubusercontent.com/ARISE-Initiative/robosuite/c848ca848020d0c4ccdd10c5056bd06f2a195ba2/robosuite/controllers/base_controller.py",
+      "sha256": "6dc278b614e78d8c3e7656b430c59cc600c42fcd1db0f4293bea1bf4925541dd",
+      "bytes": 10223,
+      "role": "native_or_candidate_source"
+    },
+    {
+      "repo": "ARISE-Initiative/robosuite",
+      "commit": "c848ca848020d0c4ccdd10c5056bd06f2a195ba2",
+      "path": "robosuite/utils/control_utils.py",
+      "url": "https://raw.githubusercontent.com/ARISE-Initiative/robosuite/c848ca848020d0c4ccdd10c5056bd06f2a195ba2/robosuite/utils/control_utils.py",
+      "sha256": "c599f39eaae07b581155ec42c498cb3888cd3e50f72062bd1d2ff13b69e164b5",
+      "bytes": 10007,
+      "role": "native_or_candidate_source"
+    },
+    {
+      "repo": "ARISE-Initiative/robosuite",
+      "commit": "c848ca848020d0c4ccdd10c5056bd06f2a195ba2",
+      "path": "robosuite/robots/single_arm.py",
+      "url": "https://raw.githubusercontent.com/ARISE-Initiative/robosuite/c848ca848020d0c4ccdd10c5056bd06f2a195ba2/robosuite/robots/single_arm.py",
+      "sha256": "a78dfb9816a0a3a2326a8dcd9bc0c9c62b8b0199480b4d001a6b4659e41a18fb",
+      "bytes": 19270,
+      "role": "native_or_candidate_source"
+    },
+    {
+      "repo": "ARISE-Initiative/robosuite",
+      "commit": "c848ca848020d0c4ccdd10c5056bd06f2a195ba2",
+      "path": "robosuite/models/grippers/panda_gripper.py",
+      "url": "https://raw.githubusercontent.com/ARISE-Initiative/robosuite/c848ca848020d0c4ccdd10c5056bd06f2a195ba2/robosuite/models/grippers/panda_gripper.py",
+      "sha256": "1c395d5ab96d097aa95e4542981901a6d54609d27fb72217788a7e63167052f5",
+      "bytes": 1751,
+      "role": "native_or_candidate_source"
+    },
+    {
+      "repo": "Physical-Intelligence/openpi",
+      "commit": "215abfb217dbac7d5f1273282331b9b1866c0479",
+      "path": ".gitmodules",
+      "url": "https://raw.githubusercontent.com/Physical-Intelligence/openpi/215abfb217dbac7d5f1273282331b9b1866c0479/.gitmodules",
+      "sha256": "a66abbc75450e842eda0aa31050b3e9c911c2ed9a90713e496d2b69bdb42faf1",
+      "bytes": 237,
+      "role": "native_or_candidate_source"
+    },
+    {
+      "repo": "Physical-Intelligence/openpi",
+      "commit": "215abfb217dbac7d5f1273282331b9b1866c0479",
+      "path": "examples/libero/requirements.in",
+      "url": "https://raw.githubusercontent.com/Physical-Intelligence/openpi/215abfb217dbac7d5f1273282331b9b1866c0479/examples/libero/requirements.in",
+      "sha256": "c663401736ee0fd80aa4e9a36415969c25db6e40283c370fb15544138c49452a",
+      "bytes": 177,
+      "role": "native_or_candidate_source"
+    },
+    {
+      "repo": "Physical-Intelligence/openpi",
+      "commit": "215abfb217dbac7d5f1273282331b9b1866c0479",
+      "path": "examples/libero/requirements.txt",
+      "url": "https://raw.githubusercontent.com/Physical-Intelligence/openpi/215abfb217dbac7d5f1273282331b9b1866c0479/examples/libero/requirements.txt",
+      "sha256": "821008c9804ec835bccee66ab93c177f47a62a845c010497b5aea06829331727",
+      "bytes": 2842,
+      "role": "native_or_candidate_source"
+    },
+    {
+      "repo": "Physical-Intelligence/openpi",
+      "commit": "215abfb217dbac7d5f1273282331b9b1866c0479",
+      "path": "src/openpi/training/config.py",
+      "url": "https://raw.githubusercontent.com/Physical-Intelligence/openpi/215abfb217dbac7d5f1273282331b9b1866c0479/src/openpi/training/config.py",
+      "sha256": "c34231f888dba5dc981d808765b3d98775ab845b04313bf53fcecd567c520b0d",
+      "bytes": 44594,
+      "role": "native_or_candidate_source"
+    },
+    {
+      "repo": "Physical-Intelligence/openpi",
+      "commit": "215abfb217dbac7d5f1273282331b9b1866c0479",
+      "path": "src/openpi/transforms.py",
+      "url": "https://raw.githubusercontent.com/Physical-Intelligence/openpi/215abfb217dbac7d5f1273282331b9b1866c0479/src/openpi/transforms.py",
+      "sha256": "a1b94e9e72849a18834778f229c6bb389a495eb7fbe0aa800edea728b9424ff4",
+      "bytes": 15752,
+      "role": "native_or_candidate_source"
+    },
+    {
+      "repo": "Physical-Intelligence/openpi",
+      "commit": "215abfb217dbac7d5f1273282331b9b1866c0479",
+      "path": "src/openpi/models/pi0.py",
+      "url": "https://raw.githubusercontent.com/Physical-Intelligence/openpi/215abfb217dbac7d5f1273282331b9b1866c0479/src/openpi/models/pi0.py",
+      "sha256": "24b32d7c6ed5e409459afa8ca5af96a4dae09c2dcdf48e828907e411f4f12342",
+      "bytes": 12887,
+      "role": "native_or_candidate_source"
+    },
+    {
+      "repo": "Physical-Intelligence/openpi",
+      "commit": "215abfb217dbac7d5f1273282331b9b1866c0479",
+      "path": "src/openpi/models/pi0_config.py",
+      "url": "https://raw.githubusercontent.com/Physical-Intelligence/openpi/215abfb217dbac7d5f1273282331b9b1866c0479/src/openpi/models/pi0_config.py",
+      "sha256": "d321858c30b398126035ea2b6da09e1c422eeeebb5ebf8df631daf9dc77647fa",
+      "bytes": 4435,
+      "role": "native_or_candidate_source"
+    },
+    {
+      "repo": "Physical-Intelligence/openpi",
+      "commit": "215abfb217dbac7d5f1273282331b9b1866c0479",
+      "path": "src/openpi/models/tokenizer.py",
+      "url": "https://raw.githubusercontent.com/Physical-Intelligence/openpi/215abfb217dbac7d5f1273282331b9b1866c0479/src/openpi/models/tokenizer.py",
+      "sha256": "965be8b3c393a6811875bbc32da9e01a5d01cc2f87802de801cf7293e049748c",
+      "bytes": 17517,
+      "role": "native_or_candidate_source"
+    },
+    {
+      "repo": "Physical-Intelligence/openpi",
+      "commit": "215abfb217dbac7d5f1273282331b9b1866c0479",
+      "path": "src/openpi/models_pytorch/pi0_pytorch.py",
+      "url": "https://raw.githubusercontent.com/Physical-Intelligence/openpi/215abfb217dbac7d5f1273282331b9b1866c0479/src/openpi/models_pytorch/pi0_pytorch.py",
+      "sha256": "dcd7b6f508808ce4b7170a1720a4c62c6da04edae3652d16c94a469dca924e16",
+      "bytes": 19128,
+      "role": "native_or_candidate_source"
+    },
+    {
+      "repo": "Physical-Intelligence/openpi",
+      "commit": "215abfb217dbac7d5f1273282331b9b1866c0479",
+      "path": "src/openpi/policies/policy_config.py",
+      "url": "https://raw.githubusercontent.com/Physical-Intelligence/openpi/215abfb217dbac7d5f1273282331b9b1866c0479/src/openpi/policies/policy_config.py",
+      "sha256": "aaf42ab04a33b6c91d2447926211646c33ebd8ebfa427f026d7b6c4f7c45ec52",
+      "bytes": 4107,
+      "role": "native_or_candidate_source"
+    },
+    {
+      "repo": "Physical-Intelligence/openpi",
+      "commit": "215abfb217dbac7d5f1273282331b9b1866c0479",
+      "path": "src/openpi/policies/policy.py",
+      "url": "https://raw.githubusercontent.com/Physical-Intelligence/openpi/215abfb217dbac7d5f1273282331b9b1866c0479/src/openpi/policies/policy.py",
+      "sha256": "a2ac5236e23b11d0f5a840d4a8fef148d89dba921d5452ec5dfcd5a6ffa46f20",
+      "bytes": 5344,
+      "role": "native_or_candidate_source"
+    },
+    {
+      "repo": "Physical-Intelligence/openpi",
+      "commit": "215abfb217dbac7d5f1273282331b9b1866c0479",
+      "path": "src/openpi/models/model.py",
+      "url": "https://raw.githubusercontent.com/Physical-Intelligence/openpi/215abfb217dbac7d5f1273282331b9b1866c0479/src/openpi/models/model.py",
+      "sha256": "0d74bc1d8f4623ac3d8e543710b8bf75f9b95e588a3ebf6127c659e001385cff",
+      "bytes": 12270,
+      "role": "native_or_candidate_source"
+    },
+    {
+      "repo": "moojink/openvla-oft",
+      "commit": "e4287e94541f459edc4feabc4e181f537cd569a8",
+      "path": "experiments/robot/libero/run_libero_eval.py",
+      "url": "https://raw.githubusercontent.com/moojink/openvla-oft/e4287e94541f459edc4feabc4e181f537cd569a8/experiments/robot/libero/run_libero_eval.py",
+      "sha256": "701a20b6ca2942aa36e0e7d567b25647268b936a23af79c5893534f10bec7802",
+      "bytes": 18952,
+      "role": "native_or_candidate_source"
+    },
+    {
+      "repo": "moojink/openvla-oft",
+      "commit": "e4287e94541f459edc4feabc4e181f537cd569a8",
+      "path": "experiments/robot/openvla_utils.py",
+      "url": "https://raw.githubusercontent.com/moojink/openvla-oft/e4287e94541f459edc4feabc4e181f537cd569a8/experiments/robot/openvla_utils.py",
+      "sha256": "eed754d7c5f9821aae2fe0531dbe01df8c11df0d5c79b4aeeb9bb4452124bdf5",
+      "bytes": 30203,
+      "role": "native_or_candidate_source"
+    },
+    {
+      "repo": "moojink/openvla-oft",
+      "commit": "e4287e94541f459edc4feabc4e181f537cd569a8",
+      "path": "prismatic/extern/hf/modeling_prismatic.py",
+      "url": "https://raw.githubusercontent.com/moojink/openvla-oft/e4287e94541f459edc4feabc4e181f537cd569a8/prismatic/extern/hf/modeling_prismatic.py",
+      "sha256": "b5431a074c0025a12e46dc954a5e18d1d73477babb5ae42e3a12ab4b907f33a6",
+      "bytes": 48906,
+      "role": "native_or_candidate_source"
+    },
+    {
+      "repo": "moojink/openvla-oft",
+      "commit": "e4287e94541f459edc4feabc4e181f537cd569a8",
+      "path": "LIBERO.md",
+      "url": "https://raw.githubusercontent.com/moojink/openvla-oft/e4287e94541f459edc4feabc4e181f537cd569a8/LIBERO.md",
+      "sha256": "7c2b73570497ff100604172f24934764a39e3c0007a2a0166ad4d09cacd08917",
+      "bytes": 8962,
+      "role": "native_or_candidate_source"
+    },
+    {
+      "repo": "moojink/openvla-oft",
+      "commit": "e4287e94541f459edc4feabc4e181f537cd569a8",
+      "path": "experiments/robot/libero/libero_utils.py",
+      "url": "https://raw.githubusercontent.com/moojink/openvla-oft/e4287e94541f459edc4feabc4e181f537cd569a8/experiments/robot/libero/libero_utils.py",
+      "sha256": "489c16dc8220845b2936ddb81aafd7469061d2009b0edddb2f85703bc51a204f",
+      "bytes": 3166,
+      "role": "native_or_candidate_source"
+    },
+    {
+      "repo": "moojink/openvla-oft",
+      "commit": "e4287e94541f459edc4feabc4e181f537cd569a8",
+      "path": "experiments/robot/libero/libero_requirements.txt",
+      "url": "https://raw.githubusercontent.com/moojink/openvla-oft/e4287e94541f459edc4feabc4e181f537cd569a8/experiments/robot/libero/libero_requirements.txt",
+      "sha256": "ab74171b8df14e391b7759f01c4c4a2334c9a362e91abeb67337f3a0d9447369",
+      "bytes": 63,
+      "role": "native_or_candidate_source"
+    },
+    {
+      "repo": "Lifelong-Robot-Learning/LIBERO",
+      "commit": "f78abd68ee283de9f9be3c8f7e2a9ad60246e95c",
+      "path": "libero/libero/bddl_files/libero_spatial/pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate.bddl",
+      "url": "https://raw.githubusercontent.com/Lifelong-Robot-Learning/LIBERO/f78abd68ee283de9f9be3c8f7e2a9ad60246e95c/libero/libero/bddl_files/libero_spatial/pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate.bddl",
+      "sha256": "9b59eb1287802868ad9bc78d58e6d36d4ba31134e679cfdbdf4b0feb660c959b",
+      "bytes": 3035,
+      "role": "native_or_candidate_source"
+    },
+    {
+      "repo": "Lifelong-Robot-Learning/LIBERO",
+      "commit": "f78abd68ee283de9f9be3c8f7e2a9ad60246e95c",
+      "path": "libero/libero/bddl_files/libero_spatial/pick_up_the_black_bowl_next_to_the_ramekin_and_place_it_on_the_plate.bddl",
+      "url": "https://raw.githubusercontent.com/Lifelong-Robot-Learning/LIBERO/f78abd68ee283de9f9be3c8f7e2a9ad60246e95c/libero/libero/bddl_files/libero_spatial/pick_up_the_black_bowl_next_to_the_ramekin_and_place_it_on_the_plate.bddl",
+      "sha256": "53a7516571412a2f46a27cbf8482d3b76dbad4221858c8f6b565d506c274e61d",
+      "bytes": 3011,
+      "role": "native_or_candidate_source"
+    },
+    {
+      "repo": "Lifelong-Robot-Learning/LIBERO",
+      "commit": "f78abd68ee283de9f9be3c8f7e2a9ad60246e95c",
+      "path": "libero/libero/bddl_files/libero_spatial/pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate.bddl",
+      "url": "https://raw.githubusercontent.com/Lifelong-Robot-Learning/LIBERO/f78abd68ee283de9f9be3c8f7e2a9ad60246e95c/libero/libero/bddl_files/libero_spatial/pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate.bddl",
+      "sha256": "5e19880ebc844f86b89f63b172aab0b7a89f85b6e6955891f544f0ea7d0795d5",
+      "bytes": 3001,
+      "role": "native_or_candidate_source"
+    },
+    {
+      "repo": "Lifelong-Robot-Learning/LIBERO",
+      "commit": "f78abd68ee283de9f9be3c8f7e2a9ad60246e95c",
+      "path": "libero/libero/bddl_files/libero_spatial/pick_up_the_black_bowl_on_the_cookie_box_and_place_it_on_the_plate.bddl",
+      "url": "https://raw.githubusercontent.com/Lifelong-Robot-Learning/LIBERO/f78abd68ee283de9f9be3c8f7e2a9ad60246e95c/libero/libero/bddl_files/libero_spatial/pick_up_the_black_bowl_on_the_cookie_box_and_place_it_on_the_plate.bddl",
+      "sha256": "3d4ccf070c3d9883ae0676f2d888588f98c696ddad71b7694f47c379fc99ef36",
+      "bytes": 2982,
+      "role": "native_or_candidate_source"
+    },
+    {
+      "repo": "Lifelong-Robot-Learning/LIBERO",
+      "commit": "f78abd68ee283de9f9be3c8f7e2a9ad60246e95c",
+      "path": "libero/libero/bddl_files/libero_spatial/pick_up_the_black_bowl_in_the_top_drawer_of_the_wooden_cabinet_and_place_it_on_the_plate.bddl",
+      "url": "https://raw.githubusercontent.com/Lifelong-Robot-Learning/LIBERO/f78abd68ee283de9f9be3c8f7e2a9ad60246e95c/libero/libero/bddl_files/libero_spatial/pick_up_the_black_bowl_in_the_top_drawer_of_the_wooden_cabinet_and_place_it_on_the_plate.bddl",
+      "sha256": "4371189e11d9fd29bb548ab9a8adcd741bb0ce41bb66c612672d0e8cb29a52a9",
+      "bytes": 3059,
+      "role": "native_or_candidate_source"
+    },
+    {
+      "repo": "Lifelong-Robot-Learning/LIBERO",
+      "commit": "f78abd68ee283de9f9be3c8f7e2a9ad60246e95c",
+      "path": "libero/libero/bddl_files/libero_spatial/pick_up_the_black_bowl_on_the_ramekin_and_place_it_on_the_plate.bddl",
+      "url": "https://raw.githubusercontent.com/Lifelong-Robot-Learning/LIBERO/f78abd68ee283de9f9be3c8f7e2a9ad60246e95c/libero/libero/bddl_files/libero_spatial/pick_up_the_black_bowl_on_the_ramekin_and_place_it_on_the_plate.bddl",
+      "sha256": "10239815a9d18ad53e09365d453a362ee54d29ca276e04eef411cf1db8d72940",
+      "bytes": 2983,
+      "role": "native_or_candidate_source"
+    },
+    {
+      "repo": "Lifelong-Robot-Learning/LIBERO",
+      "commit": "f78abd68ee283de9f9be3c8f7e2a9ad60246e95c",
+      "path": "libero/libero/bddl_files/libero_spatial/pick_up_the_black_bowl_next_to_the_cookie_box_and_place_it_on_the_plate.bddl",
+      "url": "https://raw.githubusercontent.com/Lifelong-Robot-Learning/LIBERO/f78abd68ee283de9f9be3c8f7e2a9ad60246e95c/libero/libero/bddl_files/libero_spatial/pick_up_the_black_bowl_next_to_the_cookie_box_and_place_it_on_the_plate.bddl",
+      "sha256": "566c65596f3472e752e6522817bff51bbf3ce5159d7bec1d3554e5ead46b1e55",
+      "bytes": 3006,
+      "role": "native_or_candidate_source"
+    },
+    {
+      "repo": "Lifelong-Robot-Learning/LIBERO",
+      "commit": "f78abd68ee283de9f9be3c8f7e2a9ad60246e95c",
+      "path": "libero/libero/bddl_files/libero_spatial/pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate.bddl",
+      "url": "https://raw.githubusercontent.com/Lifelong-Robot-Learning/LIBERO/f78abd68ee283de9f9be3c8f7e2a9ad60246e95c/libero/libero/bddl_files/libero_spatial/pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate.bddl",
+      "sha256": "dd11837141a30d874ebbbfaae20e91ecc67ec85ab3872ceb4cff3abfcbef7cb0",
+      "bytes": 2991,
+      "role": "native_or_candidate_source"
+    },
+    {
+      "repo": "Lifelong-Robot-Learning/LIBERO",
+      "commit": "f78abd68ee283de9f9be3c8f7e2a9ad60246e95c",
+      "path": "libero/libero/bddl_files/libero_spatial/pick_up_the_black_bowl_next_to_the_plate_and_place_it_on_the_plate.bddl",
+      "url": "https://raw.githubusercontent.com/Lifelong-Robot-Learning/LIBERO/f78abd68ee283de9f9be3c8f7e2a9ad60246e95c/libero/libero/bddl_files/libero_spatial/pick_up_the_black_bowl_next_to_the_plate_and_place_it_on_the_plate.bddl",
+      "sha256": "c8fbb9effa27b947d04d26862d75273d93cac1806734e53836cd472a08aec1fe",
+      "bytes": 3011,
+      "role": "native_or_candidate_source"
+    },
+    {
+      "repo": "Lifelong-Robot-Learning/LIBERO",
+      "commit": "f78abd68ee283de9f9be3c8f7e2a9ad60246e95c",
+      "path": "libero/libero/bddl_files/libero_spatial/pick_up_the_black_bowl_on_the_wooden_cabinet_and_place_it_on_the_plate.bddl",
+      "url": "https://raw.githubusercontent.com/Lifelong-Robot-Learning/LIBERO/f78abd68ee283de9f9be3c8f7e2a9ad60246e95c/libero/libero/bddl_files/libero_spatial/pick_up_the_black_bowl_on_the_wooden_cabinet_and_place_it_on_the_plate.bddl",
+      "sha256": "5293e759381b477e126beaf83d738542bbd4d93f522a3eead1066e612bad4a8c",
+      "bytes": 3000,
+      "role": "native_or_candidate_source"
+    },
+    {
+      "repo": "Lifelong-Robot-Learning/LIBERO",
+      "commit": "f78abd68ee283de9f9be3c8f7e2a9ad60246e95c",
+      "path": "libero/libero/bddl_files/libero_object/pick_up_the_alphabet_soup_and_place_it_in_the_basket.bddl",
+      "url": "https://raw.githubusercontent.com/Lifelong-Robot-Learning/LIBERO/f78abd68ee283de9f9be3c8f7e2a9ad60246e95c/libero/libero/bddl_files/libero_object/pick_up_the_alphabet_soup_and_place_it_in_the_basket.bddl",
+      "sha256": "df088984da13131f8332ee0f13a7896c6a97afd02ee5007a42e8fc5e0893571e",
+      "bytes": 2123,
+      "role": "native_or_candidate_source"
+    },
+    {
+      "repo": "Lifelong-Robot-Learning/LIBERO",
+      "commit": "f78abd68ee283de9f9be3c8f7e2a9ad60246e95c",
+      "path": "libero/libero/bddl_files/libero_object/pick_up_the_cream_cheese_and_place_it_in_the_basket.bddl",
+      "url": "https://raw.githubusercontent.com/Lifelong-Robot-Learning/LIBERO/f78abd68ee283de9f9be3c8f7e2a9ad60246e95c/libero/libero/bddl_files/libero_object/pick_up_the_cream_cheese_and_place_it_in_the_basket.bddl",
+      "sha256": "7019f37ee158d67a21338a6df0c441dd8f84979b946b5e20bb49463ef0508ea2",
+      "bytes": 2114,
+      "role": "native_or_candidate_source"
+    },
+    {
+      "repo": "Lifelong-Robot-Learning/LIBERO",
+      "commit": "f78abd68ee283de9f9be3c8f7e2a9ad60246e95c",
+      "path": "libero/libero/bddl_files/libero_object/pick_up_the_salad_dressing_and_place_it_in_the_basket.bddl",
+      "url": "https://raw.githubusercontent.com/Lifelong-Robot-Learning/LIBERO/f78abd68ee283de9f9be3c8f7e2a9ad60246e95c/libero/libero/bddl_files/libero_object/pick_up_the_salad_dressing_and_place_it_in_the_basket.bddl",
+      "sha256": "024978e9e8f43a49b49d0965f4f426d364ce056307f0fcf5733dc4682fac437a",
+      "bytes": 2129,
+      "role": "native_or_candidate_source"
+    },
+    {
+      "repo": "Lifelong-Robot-Learning/LIBERO",
+      "commit": "f78abd68ee283de9f9be3c8f7e2a9ad60246e95c",
+      "path": "libero/libero/bddl_files/libero_object/pick_up_the_bbq_sauce_and_place_it_in_the_basket.bddl",
+      "url": "https://raw.githubusercontent.com/Lifelong-Robot-Learning/LIBERO/f78abd68ee283de9f9be3c8f7e2a9ad60246e95c/libero/libero/bddl_files/libero_object/pick_up_the_bbq_sauce_and_place_it_in_the_basket.bddl",
+      "sha256": "8a7e37b76fce5621e649e260dbcfcec7ce2f9a055ca09a4f1ebaf5ca74a739c2",
+      "bytes": 2144,
+      "role": "native_or_candidate_source"
+    },
+    {
+      "repo": "Lifelong-Robot-Learning/LIBERO",
+      "commit": "f78abd68ee283de9f9be3c8f7e2a9ad60246e95c",
+      "path": "libero/libero/bddl_files/libero_object/pick_up_the_ketchup_and_place_it_in_the_basket.bddl",
+      "url": "https://raw.githubusercontent.com/Lifelong-Robot-Learning/LIBERO/f78abd68ee283de9f9be3c8f7e2a9ad60246e95c/libero/libero/bddl_files/libero_object/pick_up_the_ketchup_and_place_it_in_the_basket.bddl",
+      "sha256": "4a4e545483a3fe30cf0ef3dc05bfe5e6ad5e37c94b4376dfa73fe1b60e75b319",
+      "bytes": 2099,
+      "role": "native_or_candidate_source"
+    },
+    {
+      "repo": "Lifelong-Robot-Learning/LIBERO",
+      "commit": "f78abd68ee283de9f9be3c8f7e2a9ad60246e95c",
+      "path": "libero/libero/bddl_files/libero_object/pick_up_the_tomato_sauce_and_place_it_in_the_basket.bddl",
+      "url": "https://raw.githubusercontent.com/Lifelong-Robot-Learning/LIBERO/f78abd68ee283de9f9be3c8f7e2a9ad60246e95c/libero/libero/bddl_files/libero_object/pick_up_the_tomato_sauce_and_place_it_in_the_basket.bddl",
+      "sha256": "b1f4bb69d256a05f693838de46182bb0d3de0de68eec350df1b5b1e76f6c136d",
+      "bytes": 2117,
+      "role": "native_or_candidate_source"
+    },
+    {
+      "repo": "Lifelong-Robot-Learning/LIBERO",
+      "commit": "f78abd68ee283de9f9be3c8f7e2a9ad60246e95c",
+      "path": "libero/libero/bddl_files/libero_object/pick_up_the_butter_and_place_it_in_the_basket.bddl",
+      "url": "https://raw.githubusercontent.com/Lifelong-Robot-Learning/LIBERO/f78abd68ee283de9f9be3c8f7e2a9ad60246e95c/libero/libero/bddl_files/libero_object/pick_up_the_butter_and_place_it_in_the_basket.bddl",
+      "sha256": "5d8053b40ff33246fdbcc38548db84032c6bb647b4b88b6646d9cf6b73a5006c",
+      "bytes": 2108,
+      "role": "native_or_candidate_source"
+    },
+    {
+      "repo": "Lifelong-Robot-Learning/LIBERO",
+      "commit": "f78abd68ee283de9f9be3c8f7e2a9ad60246e95c",
+      "path": "libero/libero/bddl_files/libero_object/pick_up_the_milk_and_place_it_in_the_basket.bddl",
+      "url": "https://raw.githubusercontent.com/Lifelong-Robot-Learning/LIBERO/f78abd68ee283de9f9be3c8f7e2a9ad60246e95c/libero/libero/bddl_files/libero_object/pick_up_the_milk_and_place_it_in_the_basket.bddl",
+      "sha256": "9910aabf6717e8ba3e24a3f8500d9bce9ee075346ea6961e8fd766f1257d2996",
+      "bytes": 2102,
+      "role": "native_or_candidate_source"
+    },
+    {
+      "repo": "Lifelong-Robot-Learning/LIBERO",
+      "commit": "f78abd68ee283de9f9be3c8f7e2a9ad60246e95c",
+      "path": "libero/libero/bddl_files/libero_object/pick_up_the_chocolate_pudding_and_place_it_in_the_basket.bddl",
+      "url": "https://raw.githubusercontent.com/Lifelong-Robot-Learning/LIBERO/f78abd68ee283de9f9be3c8f7e2a9ad60246e95c/libero/libero/bddl_files/libero_object/pick_up_the_chocolate_pudding_and_place_it_in_the_basket.bddl",
+      "sha256": "674ceabc400b7b16d46e8eaf678709d4a633235c7e0a80233775044fe38b19b0",
+      "bytes": 2168,
+      "role": "native_or_candidate_source"
+    },
+    {
+      "repo": "Lifelong-Robot-Learning/LIBERO",
+      "commit": "f78abd68ee283de9f9be3c8f7e2a9ad60246e95c",
+      "path": "libero/libero/bddl_files/libero_object/pick_up_the_orange_juice_and_place_it_in_the_basket.bddl",
+      "url": "https://raw.githubusercontent.com/Lifelong-Robot-Learning/LIBERO/f78abd68ee283de9f9be3c8f7e2a9ad60246e95c/libero/libero/bddl_files/libero_object/pick_up_the_orange_juice_and_place_it_in_the_basket.bddl",
+      "sha256": "6298533e7bcfb83e40779a77fda39216e8cd53f22bf1af6388585dad0abb0b50",
+      "bytes": 2132,
+      "role": "native_or_candidate_source"
+    },
+    {
+      "repo": "Lifelong-Robot-Learning/LIBERO",
+      "commit": "f78abd68ee283de9f9be3c8f7e2a9ad60246e95c",
+      "path": "libero/libero/bddl_files/libero_goal/open_the_middle_drawer_of_the_cabinet.bddl",
+      "url": "https://raw.githubusercontent.com/Lifelong-Robot-Learning/LIBERO/f78abd68ee283de9f9be3c8f7e2a9ad60246e95c/libero/libero/bddl_files/libero_goal/open_the_middle_drawer_of_the_cabinet.bddl",
+      "sha256": "832ab48ec476807c767e8985666e295700f92d1f8daeae1c34eee1e75293769b",
+      "bytes": 2943,
+      "role": "native_or_candidate_source"
+    },
+    {
+      "repo": "Lifelong-Robot-Learning/LIBERO",
+      "commit": "f78abd68ee283de9f9be3c8f7e2a9ad60246e95c",
+      "path": "libero/libero/bddl_files/libero_goal/put_the_bowl_on_the_stove.bddl",
+      "url": "https://raw.githubusercontent.com/Lifelong-Robot-Learning/LIBERO/f78abd68ee283de9f9be3c8f7e2a9ad60246e95c/libero/libero/bddl_files/libero_goal/put_the_bowl_on_the_stove.bddl",
+      "sha256": "c6812d6c988be830412aa6fc4801af04d60f8c4565d2625763b6a0f2b843a87f",
+      "bytes": 2961,
+      "role": "native_or_candidate_source"
+    },
+    {
+      "repo": "Lifelong-Robot-Learning/LIBERO",
+      "commit": "f78abd68ee283de9f9be3c8f7e2a9ad60246e95c",
+      "path": "libero/libero/bddl_files/libero_goal/put_the_wine_bottle_on_top_of_the_cabinet.bddl",
+      "url": "https://raw.githubusercontent.com/Lifelong-Robot-Learning/LIBERO/f78abd68ee283de9f9be3c8f7e2a9ad60246e95c/libero/libero/bddl_files/libero_goal/put_the_wine_bottle_on_top_of_the_cabinet.bddl",
+      "sha256": "2ef6f403a8451e216af44158c1a6c975cf8e5058ad02d78367ac0be443d096fe",
+      "bytes": 2972,
+      "role": "native_or_candidate_source"
+    },
+    {
+      "repo": "Lifelong-Robot-Learning/LIBERO",
+      "commit": "f78abd68ee283de9f9be3c8f7e2a9ad60246e95c",
+      "path": "libero/libero/bddl_files/libero_goal/open_the_top_drawer_and_put_the_bowl_inside.bddl",
+      "url": "https://raw.githubusercontent.com/Lifelong-Robot-Learning/LIBERO/f78abd68ee283de9f9be3c8f7e2a9ad60246e95c/libero/libero/bddl_files/libero_goal/open_the_top_drawer_and_put_the_bowl_inside.bddl",
+      "sha256": "3056e4dc72ee590432cfb18c610fd077a572c8b8f256e45328031005dd0b6757",
+      "bytes": 2998,
+      "role": "native_or_candidate_source"
+    },
+    {
+      "repo": "Lifelong-Robot-Learning/LIBERO",
+      "commit": "f78abd68ee283de9f9be3c8f7e2a9ad60246e95c",
+      "path": "libero/libero/bddl_files/libero_goal/put_the_bowl_on_top_of_the_cabinet.bddl",
+      "url": "https://raw.githubusercontent.com/Lifelong-Robot-Learning/LIBERO/f78abd68ee283de9f9be3c8f7e2a9ad60246e95c/libero/libero/bddl_files/libero_goal/put_the_bowl_on_top_of_the_cabinet.bddl",
+      "sha256": "2ffba859a154f50c3c99ffb3420743fa5aa65c70bf7d4cd26f5bc81d07be5713",
+      "bytes": 2975,
+      "role": "native_or_candidate_source"
+    },
+    {
+      "repo": "Lifelong-Robot-Learning/LIBERO",
+      "commit": "f78abd68ee283de9f9be3c8f7e2a9ad60246e95c",
+      "path": "libero/libero/bddl_files/libero_goal/push_the_plate_to_the_front_of_the_stove.bddl",
+      "url": "https://raw.githubusercontent.com/Lifelong-Robot-Learning/LIBERO/f78abd68ee283de9f9be3c8f7e2a9ad60246e95c/libero/libero/bddl_files/libero_goal/push_the_plate_to_the_front_of_the_stove.bddl",
+      "sha256": "26f22f8ad39a4b2b344b049115c45661a877fa0b4821fb78246725e7e87d8c0b",
+      "bytes": 2964,
+      "role": "native_or_candidate_source"
+    },
+    {
+      "repo": "Lifelong-Robot-Learning/LIBERO",
+      "commit": "f78abd68ee283de9f9be3c8f7e2a9ad60246e95c",
+      "path": "libero/libero/bddl_files/libero_goal/put_the_cream_cheese_in_the_bowl.bddl",
+      "url": "https://raw.githubusercontent.com/Lifelong-Robot-Learning/LIBERO/f78abd68ee283de9f9be3c8f7e2a9ad60246e95c/libero/libero/bddl_files/libero_goal/put_the_cream_cheese_in_the_bowl.bddl",
+      "sha256": "81c54eace32b92466598103b3b6e8435ce90f10996ef18cec4a35fe6c4d31a98",
+      "bytes": 2948,
+      "role": "native_or_candidate_source"
+    },
+    {
+      "repo": "Lifelong-Robot-Learning/LIBERO",
+      "commit": "f78abd68ee283de9f9be3c8f7e2a9ad60246e95c",
+      "path": "libero/libero/bddl_files/libero_goal/turn_on_the_stove.bddl",
+      "url": "https://raw.githubusercontent.com/Lifelong-Robot-Learning/LIBERO/f78abd68ee283de9f9be3c8f7e2a9ad60246e95c/libero/libero/bddl_files/libero_goal/turn_on_the_stove.bddl",
+      "sha256": "cbd2a0514d53226c5d09e17af40b22935d4cb6ff8fdaff0d55f555de1adecc13",
+      "bytes": 2891,
+      "role": "native_or_candidate_source"
+    },
+    {
+      "repo": "Lifelong-Robot-Learning/LIBERO",
+      "commit": "f78abd68ee283de9f9be3c8f7e2a9ad60246e95c",
+      "path": "libero/libero/bddl_files/libero_goal/put_the_bowl_on_the_plate.bddl",
+      "url": "https://raw.githubusercontent.com/Lifelong-Robot-Learning/LIBERO/f78abd68ee283de9f9be3c8f7e2a9ad60246e95c/libero/libero/bddl_files/libero_goal/put_the_bowl_on_the_plate.bddl",
+      "sha256": "358b7781437e412c67d6a7648c1c28796b6b1bf117a25e61316cb8dfeb940e5b",
+      "bytes": 2927,
+      "role": "native_or_candidate_source"
+    },
+    {
+      "repo": "Lifelong-Robot-Learning/LIBERO",
+      "commit": "f78abd68ee283de9f9be3c8f7e2a9ad60246e95c",
+      "path": "libero/libero/bddl_files/libero_goal/put_the_wine_bottle_on_the_rack.bddl",
+      "url": "https://raw.githubusercontent.com/Lifelong-Robot-Learning/LIBERO/f78abd68ee283de9f9be3c8f7e2a9ad60246e95c/libero/libero/bddl_files/libero_goal/put_the_wine_bottle_on_the_rack.bddl",
+      "sha256": "3d3ee18139056aa3780572cde17b1c50dc20ae0d299403f65e514e8471ba0e8e",
+      "bytes": 2953,
+      "role": "native_or_candidate_source"
+    },
+    {
+      "repo": "Lifelong-Robot-Learning/LIBERO",
+      "commit": "f78abd68ee283de9f9be3c8f7e2a9ad60246e95c",
+      "path": "libero/libero/bddl_files/libero_10/LIVING_ROOM_SCENE2_put_both_the_alphabet_soup_and_the_tomato_sauce_in_the_basket.bddl",
+      "url": "https://raw.githubusercontent.com/Lifelong-Robot-Learning/LIBERO/f78abd68ee283de9f9be3c8f7e2a9ad60246e95c/libero/libero/bddl_files/libero_10/LIVING_ROOM_SCENE2_put_both_the_alphabet_soup_and_the_tomato_sauce_in_the_basket.bddl",
+      "sha256": "2e661058917f683a25bce480015197f0a2c1911bcbc2b9dd9d947199069c9618",
+      "bytes": 3284,
+      "role": "native_or_candidate_source"
+    },
+    {
+      "repo": "Lifelong-Robot-Learning/LIBERO",
+      "commit": "f78abd68ee283de9f9be3c8f7e2a9ad60246e95c",
+      "path": "libero/libero/bddl_files/libero_10/LIVING_ROOM_SCENE2_put_both_the_cream_cheese_box_and_the_butter_in_the_basket.bddl",
+      "url": "https://raw.githubusercontent.com/Lifelong-Robot-Learning/LIBERO/f78abd68ee283de9f9be3c8f7e2a9ad60246e95c/libero/libero/bddl_files/libero_10/LIVING_ROOM_SCENE2_put_both_the_cream_cheese_box_and_the_butter_in_the_basket.bddl",
+      "sha256": "3f552805c7ab34c44debcf38a48b8131d6fee3011dd86c039650b84e0f77d058",
+      "bytes": 3267,
+      "role": "native_or_candidate_source"
+    },
+    {
+      "repo": "Lifelong-Robot-Learning/LIBERO",
+      "commit": "f78abd68ee283de9f9be3c8f7e2a9ad60246e95c",
+      "path": "libero/libero/bddl_files/libero_10/KITCHEN_SCENE3_turn_on_the_stove_and_put_the_moka_pot_on_it.bddl",
+      "url": "https://raw.githubusercontent.com/Lifelong-Robot-Learning/LIBERO/f78abd68ee283de9f9be3c8f7e2a9ad60246e95c/libero/libero/bddl_files/libero_10/KITCHEN_SCENE3_turn_on_the_stove_and_put_the_moka_pot_on_it.bddl",
+      "sha256": "491835cc2eb6956f7ce3d1ee4e266377116168fe453e6529fe105e3b0333635d",
+      "bytes": 1485,
+      "role": "native_or_candidate_source"
+    },
+    {
+      "repo": "Lifelong-Robot-Learning/LIBERO",
+      "commit": "f78abd68ee283de9f9be3c8f7e2a9ad60246e95c",
+      "path": "libero/libero/bddl_files/libero_10/KITCHEN_SCENE4_put_the_black_bowl_in_the_bottom_drawer_of_the_cabinet_and_close_it.bddl",
+      "url": "https://raw.githubusercontent.com/Lifelong-Robot-Learning/LIBERO/f78abd68ee283de9f9be3c8f7e2a9ad60246e95c/libero/libero/bddl_files/libero_10/KITCHEN_SCENE4_put_the_black_bowl_in_the_bottom_drawer_of_the_cabinet_and_close_it.bddl",
+      "sha256": "5255fe54d7f25fad4dee8fa30a30033d8cb908f1708d953c91ab609264fb4fb8",
+      "bytes": 2233,
+      "role": "native_or_candidate_source"
+    },
+    {
+      "repo": "Lifelong-Robot-Learning/LIBERO",
+      "commit": "f78abd68ee283de9f9be3c8f7e2a9ad60246e95c",
+      "path": "libero/libero/bddl_files/libero_10/LIVING_ROOM_SCENE5_put_the_white_mug_on_the_left_plate_and_put_the_yellow_and_white_mug_on_the_right_plate.bddl",
+      "url": "https://raw.githubusercontent.com/Lifelong-Robot-Learning/LIBERO/f78abd68ee283de9f9be3c8f7e2a9ad60246e95c/libero/libero/bddl_files/libero_10/LIVING_ROOM_SCENE5_put_the_white_mug_on_the_left_plate_and_put_the_yellow_and_white_mug_on_the_right_plate.bddl",
+      "sha256": "0c6749b920bff1e1efe47ffb0e0b801a3e6959a650e710f376dd2b812c74e865",
+      "bytes": 2241,
+      "role": "native_or_candidate_source"
+    },
+    {
+      "repo": "Lifelong-Robot-Learning/LIBERO",
+      "commit": "f78abd68ee283de9f9be3c8f7e2a9ad60246e95c",
+      "path": "libero/libero/bddl_files/libero_10/STUDY_SCENE1_pick_up_the_book_and_place_it_in_the_back_compartment_of_the_caddy.bddl",
+      "url": "https://raw.githubusercontent.com/Lifelong-Robot-Learning/LIBERO/f78abd68ee283de9f9be3c8f7e2a9ad60246e95c/libero/libero/bddl_files/libero_10/STUDY_SCENE1_pick_up_the_book_and_place_it_in_the_back_compartment_of_the_caddy.bddl",
+      "sha256": "07ca32c940d70c065e870452ef9c63e6dfa1d8506e6a86cf9b3763f652ba2d9f",
+      "bytes": 2055,
+      "role": "native_or_candidate_source"
+    },
+    {
+      "repo": "Lifelong-Robot-Learning/LIBERO",
+      "commit": "f78abd68ee283de9f9be3c8f7e2a9ad60246e95c",
+      "path": "libero/libero/bddl_files/libero_10/LIVING_ROOM_SCENE6_put_the_white_mug_on_the_plate_and_put_the_chocolate_pudding_to_the_right_of_the_plate.bddl",
+      "url": "https://raw.githubusercontent.com/Lifelong-Robot-Learning/LIBERO/f78abd68ee283de9f9be3c8f7e2a9ad60246e95c/libero/libero/bddl_files/libero_10/LIVING_ROOM_SCENE6_put_the_white_mug_on_the_plate_and_put_the_chocolate_pudding_to_the_right_of_the_plate.bddl",
+      "sha256": "dbc9464b424cdc9b771b92d0b8a8c185b1b539f6a4133b323dc858bcf8f6a9c2",
+      "bytes": 2458,
+      "role": "native_or_candidate_source"
+    },
+    {
+      "repo": "Lifelong-Robot-Learning/LIBERO",
+      "commit": "f78abd68ee283de9f9be3c8f7e2a9ad60246e95c",
+      "path": "libero/libero/bddl_files/libero_10/LIVING_ROOM_SCENE1_put_both_the_alphabet_soup_and_the_cream_cheese_box_in_the_basket.bddl",
+      "url": "https://raw.githubusercontent.com/Lifelong-Robot-Learning/LIBERO/f78abd68ee283de9f9be3c8f7e2a9ad60246e95c/libero/libero/bddl_files/libero_10/LIVING_ROOM_SCENE1_put_both_the_alphabet_soup_and_the_cream_cheese_box_in_the_basket.bddl",
+      "sha256": "e27ab37f512fe42e35771d6130f531e6a9656929e7b4c60b348b81360cf5675d",
+      "bytes": 2295,
+      "role": "native_or_candidate_source"
+    },
+    {
+      "repo": "Lifelong-Robot-Learning/LIBERO",
+      "commit": "f78abd68ee283de9f9be3c8f7e2a9ad60246e95c",
+      "path": "libero/libero/bddl_files/libero_10/KITCHEN_SCENE8_put_both_moka_pots_on_the_stove.bddl",
+      "url": "https://raw.githubusercontent.com/Lifelong-Robot-Learning/LIBERO/f78abd68ee283de9f9be3c8f7e2a9ad60246e95c/libero/libero/bddl_files/libero_10/KITCHEN_SCENE8_put_both_moka_pots_on_the_stove.bddl",
+      "sha256": "ae1299a707d3e810096ad648948c517de40474bcdacca93a15e17d191e34454a",
+      "bytes": 1551,
+      "role": "native_or_candidate_source"
+    },
+    {
+      "repo": "Lifelong-Robot-Learning/LIBERO",
+      "commit": "f78abd68ee283de9f9be3c8f7e2a9ad60246e95c",
+      "path": "libero/libero/bddl_files/libero_10/KITCHEN_SCENE6_put_the_yellow_and_white_mug_in_the_microwave_and_close_it.bddl",
+      "url": "https://raw.githubusercontent.com/Lifelong-Robot-Learning/LIBERO/f78abd68ee283de9f9be3c8f7e2a9ad60246e95c/libero/libero/bddl_files/libero_10/KITCHEN_SCENE6_put_the_yellow_and_white_mug_in_the_microwave_and_close_it.bddl",
+      "sha256": "456d145f92be049f445fc77673dc583d9d17ea7afe92f6ffcb2fd1fa5565d420",
+      "bytes": 1836,
+      "role": "native_or_candidate_source"
+    }
+  ],
+  "task_audit": {
+    "suites": [
+      "libero_spatial",
+      "libero_object",
+      "libero_goal",
+      "libero_10"
+    ],
+    "task_order_index": 0,
+    "count": 40,
+    "goal_atom_occurrences": {
+      "On": 24,
+      "In": 20,
+      "Open": 1,
+      "Turnon": 3,
+      "Close": 2
+    },
+    "goal_suite_structural_sections_equal": true,
+    "boundary": "Structural BDDL equality is not equality of .pruned_init binary states; no binary initial states fetched.",
+    "definitions": [
+      {
+        "repo": "Lifelong-Robot-Learning/LIBERO",
+        "commit": "f78abd68ee283de9f9be3c8f7e2a9ad60246e95c",
+        "path": "libero/libero/bddl_files/libero_spatial/pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate.bddl",
+        "url": "https://raw.githubusercontent.com/Lifelong-Robot-Learning/LIBERO/f78abd68ee283de9f9be3c8f7e2a9ad60246e95c/libero/libero/bddl_files/libero_spatial/pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate.bddl",
+        "sha256": "9b59eb1287802868ad9bc78d58e6d36d4ba31134e679cfdbdf4b0feb660c959b",
+        "bytes": 3035,
+        "suite": "libero_spatial",
+        "task_order_index": 0,
+        "task_id": 0,
+        "slug": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate",
+        "native_prompt": "pick up the black bowl between the plate and the ramekin and place it on the plate",
+        "bddl_language": "Pick the akita black bowl between the plate and the ramekin and place it on the plate",
+        "goal": [
+          [
+            "And",
+            [
+              "On",
+              "akita_black_bowl_1",
+              "plate_1"
+            ]
+          ]
+        ],
+        "section_hashes": {
+          ":regions": "4e6cd3917688ed704c40df05997f579fb6b13eaaa884a7bbe81ab038db369538",
+          ":fixtures": "ca32eb54610f655439a1b1fdefbc6d92fa5028406dbc1a7ff82f0b71979655df",
+          ":objects": "df0507d8b2a2910203fbcb87d5e0bb329f2af18bdc61a6391fdb630ba9829ac0",
+          ":init": "b63cb4de9ae517669e1a50e39bf232d380b6d81ca281830287f939586bd59f7f"
+        },
+        "goal_line": 131
+      },
+      {
+        "repo": "Lifelong-Robot-Learning/LIBERO",
+        "commit": "f78abd68ee283de9f9be3c8f7e2a9ad60246e95c",
+        "path": "libero/libero/bddl_files/libero_spatial/pick_up_the_black_bowl_next_to_the_ramekin_and_place_it_on_the_plate.bddl",
+        "url": "https://raw.githubusercontent.com/Lifelong-Robot-Learning/LIBERO/f78abd68ee283de9f9be3c8f7e2a9ad60246e95c/libero/libero/bddl_files/libero_spatial/pick_up_the_black_bowl_next_to_the_ramekin_and_place_it_on_the_plate.bddl",
+        "sha256": "53a7516571412a2f46a27cbf8482d3b76dbad4221858c8f6b565d506c274e61d",
+        "bytes": 3011,
+        "suite": "libero_spatial",
+        "task_order_index": 0,
+        "task_id": 1,
+        "slug": "pick_up_the_black_bowl_next_to_the_ramekin_and_place_it_on_the_plate",
+        "native_prompt": "pick up the black bowl next to the ramekin and place it on the plate",
+        "bddl_language": "Pick the akita black bowl next to the ramekin and place it on the plate",
+        "goal": [
+          [
+            "And",
+            [
+              "On",
+              "akita_black_bowl_1",
+              "plate_1"
+            ]
+          ]
+        ],
+        "section_hashes": {
+          ":regions": "4e6cd3917688ed704c40df05997f579fb6b13eaaa884a7bbe81ab038db369538",
+          ":fixtures": "ca32eb54610f655439a1b1fdefbc6d92fa5028406dbc1a7ff82f0b71979655df",
+          ":objects": "df0507d8b2a2910203fbcb87d5e0bb329f2af18bdc61a6391fdb630ba9829ac0",
+          ":init": "285f49a54c2bef8630e0916cf2f33148dcd84dad32cc76e50621a5967b222876"
+        },
+        "goal_line": 131
+      },
+      {
+        "repo": "Lifelong-Robot-Learning/LIBERO",
+        "commit": "f78abd68ee283de9f9be3c8f7e2a9ad60246e95c",
+        "path": "libero/libero/bddl_files/libero_spatial/pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate.bddl",
+        "url": "https://raw.githubusercontent.com/Lifelong-Robot-Learning/LIBERO/f78abd68ee283de9f9be3c8f7e2a9ad60246e95c/libero/libero/bddl_files/libero_spatial/pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate.bddl",
+        "sha256": "5e19880ebc844f86b89f63b172aab0b7a89f85b6e6955891f544f0ea7d0795d5",
+        "bytes": 3001,
+        "suite": "libero_spatial",
+        "task_order_index": 0,
+        "task_id": 2,
+        "slug": "pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate",
+        "native_prompt": "pick up the black bowl from table center and place it on the plate",
+        "bddl_language": "Pick the akita black bowl from table center and place it on the plate",
+        "goal": [
+          [
+            "And",
+            [
+              "On",
+              "akita_black_bowl_1",
+              "plate_1"
+            ]
+          ]
+        ],
+        "section_hashes": {
+          ":regions": "4e6cd3917688ed704c40df05997f579fb6b13eaaa884a7bbe81ab038db369538",
+          ":fixtures": "ca32eb54610f655439a1b1fdefbc6d92fa5028406dbc1a7ff82f0b71979655df",
+          ":objects": "df0507d8b2a2910203fbcb87d5e0bb329f2af18bdc61a6391fdb630ba9829ac0",
+          ":init": "acd0fdb7e8f6579cab429c4c64a37520d84859395d372a58d0fa3f31dfbe0067"
+        },
+        "goal_line": 131
+      },
+      {
+        "repo": "Lifelong-Robot-Learning/LIBERO",
+        "commit": "f78abd68ee283de9f9be3c8f7e2a9ad60246e95c",
+        "path": "libero/libero/bddl_files/libero_spatial/pick_up_the_black_bowl_on_the_cookie_box_and_place_it_on_the_plate.bddl",
+        "url": "https://raw.githubusercontent.com/Lifelong-Robot-Learning/LIBERO/f78abd68ee283de9f9be3c8f7e2a9ad60246e95c/libero/libero/bddl_files/libero_spatial/pick_up_the_black_bowl_on_the_cookie_box_and_place_it_on_the_plate.bddl",
+        "sha256": "3d4ccf070c3d9883ae0676f2d888588f98c696ddad71b7694f47c379fc99ef36",
+        "bytes": 2982,
+        "suite": "libero_spatial",
+        "task_order_index": 0,
+        "task_id": 3,
+        "slug": "pick_up_the_black_bowl_on_the_cookie_box_and_place_it_on_the_plate",
+        "native_prompt": "pick up the black bowl on the cookie box and place it on the plate",
+        "bddl_language": "Pick the akita black bowl on the cookies box and place it on the plate",
+        "goal": [
+          [
+            "And",
+            [
+              "On",
+              "akita_black_bowl_1",
+              "plate_1"
+            ]
+          ]
+        ],
+        "section_hashes": {
+          ":regions": "4e6cd3917688ed704c40df05997f579fb6b13eaaa884a7bbe81ab038db369538",
+          ":fixtures": "ca32eb54610f655439a1b1fdefbc6d92fa5028406dbc1a7ff82f0b71979655df",
+          ":objects": "df0507d8b2a2910203fbcb87d5e0bb329f2af18bdc61a6391fdb630ba9829ac0",
+          ":init": "ef9cade8e2e9144750b5b9e6415f8b8a450a8ada9d665a828239d0c9cf03fa5e"
+        },
+        "goal_line": 131
+      },
+      {
+        "repo": "Lifelong-Robot-Learning/LIBERO",
+        "commit": "f78abd68ee283de9f9be3c8f7e2a9ad60246e95c",
+        "path": "libero/libero/bddl_files/libero_spatial/pick_up_the_black_bowl_in_the_top_drawer_of_the_wooden_cabinet_and_place_it_on_the_plate.bddl",
+        "url": "https://raw.githubusercontent.com/Lifelong-Robot-Learning/LIBERO/f78abd68ee283de9f9be3c8f7e2a9ad60246e95c/libero/libero/bddl_files/libero_spatial/pick_up_the_black_bowl_in_the_top_drawer_of_the_wooden_cabinet_and_place_it_on_the_plate.bddl",
+        "sha256": "4371189e11d9fd29bb548ab9a8adcd741bb0ce41bb66c612672d0e8cb29a52a9",
+        "bytes": 3059,
+        "suite": "libero_spatial",
+        "task_order_index": 0,
+        "task_id": 4,
+        "slug": "pick_up_the_black_bowl_in_the_top_drawer_of_the_wooden_cabinet_and_place_it_on_the_plate",
+        "native_prompt": "pick up the black bowl in the top drawer of the wooden cabinet and place it on the plate",
+        "bddl_language": "Pick the akita black bowl in the top layer of the wooden cabinet and place it on the plate",
+        "goal": [
+          [
+            "And",
+            [
+              "On",
+              "akita_black_bowl_1",
+              "plate_1"
+            ]
+          ]
+        ],
+        "section_hashes": {
+          ":regions": "4e6cd3917688ed704c40df05997f579fb6b13eaaa884a7bbe81ab038db369538",
+          ":fixtures": "ca32eb54610f655439a1b1fdefbc6d92fa5028406dbc1a7ff82f0b71979655df",
+          ":objects": "df0507d8b2a2910203fbcb87d5e0bb329f2af18bdc61a6391fdb630ba9829ac0",
+          ":init": "6d68795cfe8b69fa3de979ff7d18435ca0428ce82120fc5d5252f7669337cffc"
+        },
+        "goal_line": 132
+      },
+      {
+        "repo": "Lifelong-Robot-Learning/LIBERO",
+        "commit": "f78abd68ee283de9f9be3c8f7e2a9ad60246e95c",
+        "path": "libero/libero/bddl_files/libero_spatial/pick_up_the_black_bowl_on_the_ramekin_and_place_it_on_the_plate.bddl",
+        "url": "https://raw.githubusercontent.com/Lifelong-Robot-Learning/LIBERO/f78abd68ee283de9f9be3c8f7e2a9ad60246e95c/libero/libero/bddl_files/libero_spatial/pick_up_the_black_bowl_on_the_ramekin_and_place_it_on_the_plate.bddl",
+        "sha256": "10239815a9d18ad53e09365d453a362ee54d29ca276e04eef411cf1db8d72940",
+        "bytes": 2983,
+        "suite": "libero_spatial",
+        "task_order_index": 0,
+        "task_id": 5,
+        "slug": "pick_up_the_black_bowl_on_the_ramekin_and_place_it_on_the_plate",
+        "native_prompt": "pick up the black bowl on the ramekin and place it on the plate",
+        "bddl_language": "Pick the akita black bowl on the ramekin and place it on the plate",
+        "goal": [
+          [
+            "And",
+            [
+              "On",
+              "akita_black_bowl_1",
+              "plate_1"
+            ]
+          ]
+        ],
+        "section_hashes": {
+          ":regions": "4e6cd3917688ed704c40df05997f579fb6b13eaaa884a7bbe81ab038db369538",
+          ":fixtures": "ca32eb54610f655439a1b1fdefbc6d92fa5028406dbc1a7ff82f0b71979655df",
+          ":objects": "df0507d8b2a2910203fbcb87d5e0bb329f2af18bdc61a6391fdb630ba9829ac0",
+          ":init": "561f9099b9a0a8ec0b0feda7a1e7176f29d5d824e3147ecaaf601d645ef2ce0d"
+        },
+        "goal_line": 131
+      },
+      {
+        "repo": "Lifelong-Robot-Learning/LIBERO",
+        "commit": "f78abd68ee283de9f9be3c8f7e2a9ad60246e95c",
+        "path": "libero/libero/bddl_files/libero_spatial/pick_up_the_black_bowl_next_to_the_cookie_box_and_place_it_on_the_plate.bddl",
+        "url": "https://raw.githubusercontent.com/Lifelong-Robot-Learning/LIBERO/f78abd68ee283de9f9be3c8f7e2a9ad60246e95c/libero/libero/bddl_files/libero_spatial/pick_up_the_black_bowl_next_to_the_cookie_box_and_place_it_on_the_plate.bddl",
+        "sha256": "566c65596f3472e752e6522817bff51bbf3ce5159d7bec1d3554e5ead46b1e55",
+        "bytes": 3006,
+        "suite": "libero_spatial",
+        "task_order_index": 0,
+        "task_id": 6,
+        "slug": "pick_up_the_black_bowl_next_to_the_cookie_box_and_place_it_on_the_plate",
+        "native_prompt": "pick up the black bowl next to the cookie box and place it on the plate",
+        "bddl_language": "Pick the akita black bowl next to the cookies box and place it on the plate",
+        "goal": [
+          [
+            "And",
+            [
+              "On",
+              "akita_black_bowl_1",
+              "plate_1"
+            ]
+          ]
+        ],
+        "section_hashes": {
+          ":regions": "4e6cd3917688ed704c40df05997f579fb6b13eaaa884a7bbe81ab038db369538",
+          ":fixtures": "ca32eb54610f655439a1b1fdefbc6d92fa5028406dbc1a7ff82f0b71979655df",
+          ":objects": "df0507d8b2a2910203fbcb87d5e0bb329f2af18bdc61a6391fdb630ba9829ac0",
+          ":init": "41e9508ac7c58a247611e4d8b89d8499046704256d64d5996fffcf0dbacae813"
+        },
+        "goal_line": 131
+      },
+      {
+        "repo": "Lifelong-Robot-Learning/LIBERO",
+        "commit": "f78abd68ee283de9f9be3c8f7e2a9ad60246e95c",
+        "path": "libero/libero/bddl_files/libero_spatial/pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate.bddl",
+        "url": "https://raw.githubusercontent.com/Lifelong-Robot-Learning/LIBERO/f78abd68ee283de9f9be3c8f7e2a9ad60246e95c/libero/libero/bddl_files/libero_spatial/pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate.bddl",
+        "sha256": "dd11837141a30d874ebbbfaae20e91ecc67ec85ab3872ceb4cff3abfcbef7cb0",
+        "bytes": 2991,
+        "suite": "libero_spatial",
+        "task_order_index": 0,
+        "task_id": 7,
+        "slug": "pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate",
+        "native_prompt": "pick up the black bowl on the stove and place it on the plate",
+        "bddl_language": "Pick the akita black bowl on the stove and place it on the plate",
+        "goal": [
+          [
+            "And",
+            [
+              "On",
+              "akita_black_bowl_1",
+              "plate_1"
+            ]
+          ]
+        ],
+        "section_hashes": {
+          ":regions": "4e6cd3917688ed704c40df05997f579fb6b13eaaa884a7bbe81ab038db369538",
+          ":fixtures": "ca32eb54610f655439a1b1fdefbc6d92fa5028406dbc1a7ff82f0b71979655df",
+          ":objects": "df0507d8b2a2910203fbcb87d5e0bb329f2af18bdc61a6391fdb630ba9829ac0",
+          ":init": "178ca3753a374e1ed5c8753e468abec5f4a937d22694e5310b2375ebf35323bf"
+        },
+        "goal_line": 131
+      },
+      {
+        "repo": "Lifelong-Robot-Learning/LIBERO",
+        "commit": "f78abd68ee283de9f9be3c8f7e2a9ad60246e95c",
+        "path": "libero/libero/bddl_files/libero_spatial/pick_up_the_black_bowl_next_to_the_plate_and_place_it_on_the_plate.bddl",
+        "url": "https://raw.githubusercontent.com/Lifelong-Robot-Learning/LIBERO/f78abd68ee283de9f9be3c8f7e2a9ad60246e95c/libero/libero/bddl_files/libero_spatial/pick_up_the_black_bowl_next_to_the_plate_and_place_it_on_the_plate.bddl",
+        "sha256": "c8fbb9effa27b947d04d26862d75273d93cac1806734e53836cd472a08aec1fe",
+        "bytes": 3011,
+        "suite": "libero_spatial",
+        "task_order_index": 0,
+        "task_id": 8,
+        "slug": "pick_up_the_black_bowl_next_to_the_plate_and_place_it_on_the_plate",
+        "native_prompt": "pick up the black bowl next to the plate and place it on the plate",
+        "bddl_language": "Pick the akita black bowl next to the plate and place it on the plate",
+        "goal": [
+          [
+            "And",
+            [
+              "On",
+              "akita_black_bowl_1",
+              "plate_1"
+            ]
+          ]
+        ],
+        "section_hashes": {
+          ":regions": "4e6cd3917688ed704c40df05997f579fb6b13eaaa884a7bbe81ab038db369538",
+          ":fixtures": "ca32eb54610f655439a1b1fdefbc6d92fa5028406dbc1a7ff82f0b71979655df",
+          ":objects": "df0507d8b2a2910203fbcb87d5e0bb329f2af18bdc61a6391fdb630ba9829ac0",
+          ":init": "067ffb0bde07367c27e9b58d3c729fdce1195fbe98cc71f2cb8d285ee13f47e6"
+        },
+        "goal_line": 131
+      },
+      {
+        "repo": "Lifelong-Robot-Learning/LIBERO",
+        "commit": "f78abd68ee283de9f9be3c8f7e2a9ad60246e95c",
+        "path": "libero/libero/bddl_files/libero_spatial/pick_up_the_black_bowl_on_the_wooden_cabinet_and_place_it_on_the_plate.bddl",
+        "url": "https://raw.githubusercontent.com/Lifelong-Robot-Learning/LIBERO/f78abd68ee283de9f9be3c8f7e2a9ad60246e95c/libero/libero/bddl_files/libero_spatial/pick_up_the_black_bowl_on_the_wooden_cabinet_and_place_it_on_the_plate.bddl",
+        "sha256": "5293e759381b477e126beaf83d738542bbd4d93f522a3eead1066e612bad4a8c",
+        "bytes": 3000,
+        "suite": "libero_spatial",
+        "task_order_index": 0,
+        "task_id": 9,
+        "slug": "pick_up_the_black_bowl_on_the_wooden_cabinet_and_place_it_on_the_plate",
+        "native_prompt": "pick up the black bowl on the wooden cabinet and place it on the plate",
+        "bddl_language": "Pick the akita black bowl on the wooden cabinet and place it on the plate",
+        "goal": [
+          [
+            "And",
+            [
+              "On",
+              "akita_black_bowl_1",
+              "plate_1"
+            ]
+          ]
+        ],
+        "section_hashes": {
+          ":regions": "4e6cd3917688ed704c40df05997f579fb6b13eaaa884a7bbe81ab038db369538",
+          ":fixtures": "ca32eb54610f655439a1b1fdefbc6d92fa5028406dbc1a7ff82f0b71979655df",
+          ":objects": "df0507d8b2a2910203fbcb87d5e0bb329f2af18bdc61a6391fdb630ba9829ac0",
+          ":init": "fea8d2cef9ab2405eca2027ad14dd7f9324bd83fe0cc0be49f7971c2af2a1b17"
+        },
+        "goal_line": 131
+      },
+      {
+        "repo": "Lifelong-Robot-Learning/LIBERO",
+        "commit": "f78abd68ee283de9f9be3c8f7e2a9ad60246e95c",
+        "path": "libero/libero/bddl_files/libero_object/pick_up_the_alphabet_soup_and_place_it_in_the_basket.bddl",
+        "url": "https://raw.githubusercontent.com/Lifelong-Robot-Learning/LIBERO/f78abd68ee283de9f9be3c8f7e2a9ad60246e95c/libero/libero/bddl_files/libero_object/pick_up_the_alphabet_soup_and_place_it_in_the_basket.bddl",
+        "sha256": "df088984da13131f8332ee0f13a7896c6a97afd02ee5007a42e8fc5e0893571e",
+        "bytes": 2123,
+        "suite": "libero_object",
+        "task_order_index": 0,
+        "task_id": 0,
+        "slug": "pick_up_the_alphabet_soup_and_place_it_in_the_basket",
+        "native_prompt": "pick up the alphabet soup and place it in the basket",
+        "bddl_language": "Pick the alphabet soup and place it in the basket",
+        "goal": [
+          [
+            "And",
+            [
+              "In",
+              "alphabet_soup_1",
+              "basket_1_contain_region"
+            ]
+          ]
+        ],
+        "section_hashes": {
+          ":regions": "0cef847e75f0a9f1c32e08c3e463ee6b8618e2fd2784175ec2d47fc7098fc081",
+          ":fixtures": "33a40189f2f9a280f6f56d7f60bb2185178b14483fd76230db9960ce72695767",
+          ":objects": "19baf2a48a7d54cf956db635e7a9ad8f524188b51468d97a27f9de18ce52a9eb",
+          ":init": "658df92ed670ef8e153987b2d97f8bc38e0315197c04e9824c04644049114af1"
+        },
+        "goal_line": 88
+      },
+      {
+        "repo": "Lifelong-Robot-Learning/LIBERO",
+        "commit": "f78abd68ee283de9f9be3c8f7e2a9ad60246e95c",
+        "path": "libero/libero/bddl_files/libero_object/pick_up_the_cream_cheese_and_place_it_in_the_basket.bddl",
+        "url": "https://raw.githubusercontent.com/Lifelong-Robot-Learning/LIBERO/f78abd68ee283de9f9be3c8f7e2a9ad60246e95c/libero/libero/bddl_files/libero_object/pick_up_the_cream_cheese_and_place_it_in_the_basket.bddl",
+        "sha256": "7019f37ee158d67a21338a6df0c441dd8f84979b946b5e20bb49463ef0508ea2",
+        "bytes": 2114,
+        "suite": "libero_object",
+        "task_order_index": 0,
+        "task_id": 1,
+        "slug": "pick_up_the_cream_cheese_and_place_it_in_the_basket",
+        "native_prompt": "pick up the cream cheese and place it in the basket",
+        "bddl_language": "Pick the cream cheese and place it in the basket",
+        "goal": [
+          [
+            "And",
+            [
+              "In",
+              "cream_cheese_1",
+              "basket_1_contain_region"
+            ]
+          ]
+        ],
+        "section_hashes": {
+          ":regions": "efcd2540c51a56dfe54aa165b40e0d16e48ad9518ce7b46bb1f07dcc74a00898",
+          ":fixtures": "33a40189f2f9a280f6f56d7f60bb2185178b14483fd76230db9960ce72695767",
+          ":objects": "bcabdf194997347ba5b07cb5889a034493080d2bea3225f10411af3de04da5a5",
+          ":init": "e6f00d116a6ca30f3cea17992af44364a1e5b032185aff41e83884e8d78218e0"
+        },
+        "goal_line": 88
+      },
+      {
+        "repo": "Lifelong-Robot-Learning/LIBERO",
+        "commit": "f78abd68ee283de9f9be3c8f7e2a9ad60246e95c",
+        "path": "libero/libero/bddl_files/libero_object/pick_up_the_salad_dressing_and_place_it_in_the_basket.bddl",
+        "url": "https://raw.githubusercontent.com/Lifelong-Robot-Learning/LIBERO/f78abd68ee283de9f9be3c8f7e2a9ad60246e95c/libero/libero/bddl_files/libero_object/pick_up_the_salad_dressing_and_place_it_in_the_basket.bddl",
+        "sha256": "024978e9e8f43a49b49d0965f4f426d364ce056307f0fcf5733dc4682fac437a",
+        "bytes": 2129,
+        "suite": "libero_object",
+        "task_order_index": 0,
+        "task_id": 2,
+        "slug": "pick_up_the_salad_dressing_and_place_it_in_the_basket",
+        "native_prompt": "pick up the salad dressing and place it in the basket",
+        "bddl_language": "Pick the salad dressing and place it in the basket",
+        "goal": [
+          [
+            "And",
+            [
+              "In",
+              "salad_dressing_1",
+              "basket_1_contain_region"
+            ]
+          ]
+        ],
+        "section_hashes": {
+          ":regions": "efcd2540c51a56dfe54aa165b40e0d16e48ad9518ce7b46bb1f07dcc74a00898",
+          ":fixtures": "33a40189f2f9a280f6f56d7f60bb2185178b14483fd76230db9960ce72695767",
+          ":objects": "0d8802ccb0fb4fa9dedb9d7ec9046ecb4661a9c400655832d48b783cedd4f8fc",
+          ":init": "201e9ad8791373b7fbb99084c3ef7a59c4832b43a25d3087b56d84abf68f597c"
+        },
+        "goal_line": 88
+      },
+      {
+        "repo": "Lifelong-Robot-Learning/LIBERO",
+        "commit": "f78abd68ee283de9f9be3c8f7e2a9ad60246e95c",
+        "path": "libero/libero/bddl_files/libero_object/pick_up_the_bbq_sauce_and_place_it_in_the_basket.bddl",
+        "url": "https://raw.githubusercontent.com/Lifelong-Robot-Learning/LIBERO/f78abd68ee283de9f9be3c8f7e2a9ad60246e95c/libero/libero/bddl_files/libero_object/pick_up_the_bbq_sauce_and_place_it_in_the_basket.bddl",
+        "sha256": "8a7e37b76fce5621e649e260dbcfcec7ce2f9a055ca09a4f1ebaf5ca74a739c2",
+        "bytes": 2144,
+        "suite": "libero_object",
+        "task_order_index": 0,
+        "task_id": 3,
+        "slug": "pick_up_the_bbq_sauce_and_place_it_in_the_basket",
+        "native_prompt": "pick up the bbq sauce and place it in the basket",
+        "bddl_language": "Pick the bbq sauce and place it in the basket",
+        "goal": [
+          [
+            "And",
+            [
+              "In",
+              "bbq_sauce_1",
+              "basket_1_contain_region"
+            ]
+          ]
+        ],
+        "section_hashes": {
+          ":regions": "efcd2540c51a56dfe54aa165b40e0d16e48ad9518ce7b46bb1f07dcc74a00898",
+          ":fixtures": "33a40189f2f9a280f6f56d7f60bb2185178b14483fd76230db9960ce72695767",
+          ":objects": "2ce2a4179002fb5c01eba4fba00043cb06e0275d34a29047373d151f28732a38",
+          ":init": "858376892eeeee67dfb7e2d60e7339d0a5f220df7f1002f8a939e74247f82ad6"
+        },
+        "goal_line": 88
+      },
+      {
+        "repo": "Lifelong-Robot-Learning/LIBERO",
+        "commit": "f78abd68ee283de9f9be3c8f7e2a9ad60246e95c",
+        "path": "libero/libero/bddl_files/libero_object/pick_up_the_ketchup_and_place_it_in_the_basket.bddl",
+        "url": "https://raw.githubusercontent.com/Lifelong-Robot-Learning/LIBERO/f78abd68ee283de9f9be3c8f7e2a9ad60246e95c/libero/libero/bddl_files/libero_object/pick_up_the_ketchup_and_place_it_in_the_basket.bddl",
+        "sha256": "4a4e545483a3fe30cf0ef3dc05bfe5e6ad5e37c94b4376dfa73fe1b60e75b319",
+        "bytes": 2099,
+        "suite": "libero_object",
+        "task_order_index": 0,
+        "task_id": 4,
+        "slug": "pick_up_the_ketchup_and_place_it_in_the_basket",
+        "native_prompt": "pick up the ketchup and place it in the basket",
+        "bddl_language": "Pick the ketchup and place it in the basket",
+        "goal": [
+          [
+            "And",
+            [
+              "In",
+              "ketchup_1",
+              "basket_1_contain_region"
+            ]
+          ]
+        ],
+        "section_hashes": {
+          ":regions": "0cef847e75f0a9f1c32e08c3e463ee6b8618e2fd2784175ec2d47fc7098fc081",
+          ":fixtures": "33a40189f2f9a280f6f56d7f60bb2185178b14483fd76230db9960ce72695767",
+          ":objects": "afc3899a397ac101e3241e944e1bffa2343aa08207642cbd2f096afc51490daa",
+          ":init": "8bcc6c127261527c5c54f699087c47d4b9db6d7f390354fe32d3071d53899274"
+        },
+        "goal_line": 88
+      },
+      {
+        "repo": "Lifelong-Robot-Learning/LIBERO",
+        "commit": "f78abd68ee283de9f9be3c8f7e2a9ad60246e95c",
+        "path": "libero/libero/bddl_files/libero_object/pick_up_the_tomato_sauce_and_place_it_in_the_basket.bddl",
+        "url": "https://raw.githubusercontent.com/Lifelong-Robot-Learning/LIBERO/f78abd68ee283de9f9be3c8f7e2a9ad60246e95c/libero/libero/bddl_files/libero_object/pick_up_the_tomato_sauce_and_place_it_in_the_basket.bddl",
+        "sha256": "b1f4bb69d256a05f693838de46182bb0d3de0de68eec350df1b5b1e76f6c136d",
+        "bytes": 2117,
+        "suite": "libero_object",
+        "task_order_index": 0,
+        "task_id": 5,
+        "slug": "pick_up_the_tomato_sauce_and_place_it_in_the_basket",
+        "native_prompt": "pick up the tomato sauce and place it in the basket",
+        "bddl_language": "Pick the tomato sauce and place it in the basket",
+        "goal": [
+          [
+            "And",
+            [
+              "In",
+              "tomato_sauce_1",
+              "basket_1_contain_region"
+            ]
+          ]
+        ],
+        "section_hashes": {
+          ":regions": "efcd2540c51a56dfe54aa165b40e0d16e48ad9518ce7b46bb1f07dcc74a00898",
+          ":fixtures": "33a40189f2f9a280f6f56d7f60bb2185178b14483fd76230db9960ce72695767",
+          ":objects": "0cfda694d88912842c2e1121b04251b5c1065951593914f0a6342fe949fe6378",
+          ":init": "627b22996832cc959e55ef79fca790678f6d845c2e0d2c95b13c2fea88a2d980"
+        },
+        "goal_line": 88
+      },
+      {
+        "repo": "Lifelong-Robot-Learning/LIBERO",
+        "commit": "f78abd68ee283de9f9be3c8f7e2a9ad60246e95c",
+        "path": "libero/libero/bddl_files/libero_object/pick_up_the_butter_and_place_it_in_the_basket.bddl",
+        "url": "https://raw.githubusercontent.com/Lifelong-Robot-Learning/LIBERO/f78abd68ee283de9f9be3c8f7e2a9ad60246e95c/libero/libero/bddl_files/libero_object/pick_up_the_butter_and_place_it_in_the_basket.bddl",
+        "sha256": "5d8053b40ff33246fdbcc38548db84032c6bb647b4b88b6646d9cf6b73a5006c",
+        "bytes": 2108,
+        "suite": "libero_object",
+        "task_order_index": 0,
+        "task_id": 6,
+        "slug": "pick_up_the_butter_and_place_it_in_the_basket",
+        "native_prompt": "pick up the butter and place it in the basket",
+        "bddl_language": "Pick the butter and place it in the basket",
+        "goal": [
+          [
+            "And",
+            [
+              "In",
+              "butter_1",
+              "basket_1_contain_region"
+            ]
+          ]
+        ],
+        "section_hashes": {
+          ":regions": "0cef847e75f0a9f1c32e08c3e463ee6b8618e2fd2784175ec2d47fc7098fc081",
+          ":fixtures": "33a40189f2f9a280f6f56d7f60bb2185178b14483fd76230db9960ce72695767",
+          ":objects": "0f3e3fb00107b4b685cafd1fcad2873abef4e9317c6bd8a4256fd707fe75dc16",
+          ":init": "3cdfc0c334f782fd25003a6f4e098375376fe964ed9954fb8956310bc697e073"
+        },
+        "goal_line": 88
+      },
+      {
+        "repo": "Lifelong-Robot-Learning/LIBERO",
+        "commit": "f78abd68ee283de9f9be3c8f7e2a9ad60246e95c",
+        "path": "libero/libero/bddl_files/libero_object/pick_up_the_milk_and_place_it_in_the_basket.bddl",
+        "url": "https://raw.githubusercontent.com/Lifelong-Robot-Learning/LIBERO/f78abd68ee283de9f9be3c8f7e2a9ad60246e95c/libero/libero/bddl_files/libero_object/pick_up_the_milk_and_place_it_in_the_basket.bddl",
+        "sha256": "9910aabf6717e8ba3e24a3f8500d9bce9ee075346ea6961e8fd766f1257d2996",
+        "bytes": 2102,
+        "suite": "libero_object",
+        "task_order_index": 0,
+        "task_id": 7,
+        "slug": "pick_up_the_milk_and_place_it_in_the_basket",
+        "native_prompt": "pick up the milk and place it in the basket",
+        "bddl_language": "Pick the milk and place it in the basket",
+        "goal": [
+          [
+            "And",
+            [
+              "In",
+              "milk_1",
+              "basket_1_contain_region"
+            ]
+          ]
+        ],
+        "section_hashes": {
+          ":regions": "0cef847e75f0a9f1c32e08c3e463ee6b8618e2fd2784175ec2d47fc7098fc081",
+          ":fixtures": "33a40189f2f9a280f6f56d7f60bb2185178b14483fd76230db9960ce72695767",
+          ":objects": "b5a25a502eab744595eebebf2f3cb08247e3883d5b112d54a729c1762bde1327",
+          ":init": "d05857d6ce8c9cdd53baad381a3ea6b3377cd2ce218f8f24455b289fcbeb9863"
+        },
+        "goal_line": 88
+      },
+      {
+        "repo": "Lifelong-Robot-Learning/LIBERO",
+        "commit": "f78abd68ee283de9f9be3c8f7e2a9ad60246e95c",
+        "path": "libero/libero/bddl_files/libero_object/pick_up_the_chocolate_pudding_and_place_it_in_the_basket.bddl",
+        "url": "https://raw.githubusercontent.com/Lifelong-Robot-Learning/LIBERO/f78abd68ee283de9f9be3c8f7e2a9ad60246e95c/libero/libero/bddl_files/libero_object/pick_up_the_chocolate_pudding_and_place_it_in_the_basket.bddl",
+        "sha256": "674ceabc400b7b16d46e8eaf678709d4a633235c7e0a80233775044fe38b19b0",
+        "bytes": 2168,
+        "suite": "libero_object",
+        "task_order_index": 0,
+        "task_id": 8,
+        "slug": "pick_up_the_chocolate_pudding_and_place_it_in_the_basket",
+        "native_prompt": "pick up the chocolate pudding and place it in the basket",
+        "bddl_language": "Pick the chocolate pudding and place it in the basket",
+        "goal": [
+          [
+            "And",
+            [
+              "In",
+              "chocolate_pudding_1",
+              "basket_1_contain_region"
+            ]
+          ]
+        ],
+        "section_hashes": {
+          ":regions": "0cef847e75f0a9f1c32e08c3e463ee6b8618e2fd2784175ec2d47fc7098fc081",
+          ":fixtures": "33a40189f2f9a280f6f56d7f60bb2185178b14483fd76230db9960ce72695767",
+          ":objects": "c52af7c22fe6148db4900839a59de3639db7ee1d991464f0b0cbaa549cccfc31",
+          ":init": "a6113ca64fea6e08f8ea6b5fb25d7f0bf6d921a055b5d7056d3a8c0a83e161b2"
+        },
+        "goal_line": 88
+      },
+      {
+        "repo": "Lifelong-Robot-Learning/LIBERO",
+        "commit": "f78abd68ee283de9f9be3c8f7e2a9ad60246e95c",
+        "path": "libero/libero/bddl_files/libero_object/pick_up_the_orange_juice_and_place_it_in_the_basket.bddl",
+        "url": "https://raw.githubusercontent.com/Lifelong-Robot-Learning/LIBERO/f78abd68ee283de9f9be3c8f7e2a9ad60246e95c/libero/libero/bddl_files/libero_object/pick_up_the_orange_juice_and_place_it_in_the_basket.bddl",
+        "sha256": "6298533e7bcfb83e40779a77fda39216e8cd53f22bf1af6388585dad0abb0b50",
+        "bytes": 2132,
+        "suite": "libero_object",
+        "task_order_index": 0,
+        "task_id": 9,
+        "slug": "pick_up_the_orange_juice_and_place_it_in_the_basket",
+        "native_prompt": "pick up the orange juice and place it in the basket",
+        "bddl_language": "Pick the orange juice and place it in the basket",
+        "goal": [
+          [
+            "And",
+            [
+              "In",
+              "orange_juice_1",
+              "basket_1_contain_region"
+            ]
+          ]
+        ],
+        "section_hashes": {
+          ":regions": "efcd2540c51a56dfe54aa165b40e0d16e48ad9518ce7b46bb1f07dcc74a00898",
+          ":fixtures": "33a40189f2f9a280f6f56d7f60bb2185178b14483fd76230db9960ce72695767",
+          ":objects": "4e4ea5dbda175d46c9ff0c2bd2cea31de3f10c23bb788017e973544776977c8e",
+          ":init": "9cc131459e1128274010a4aad273e58a56989e7396ba0e73b5975933d5ac4912"
+        },
+        "goal_line": 88
+      },
+      {
+        "repo": "Lifelong-Robot-Learning/LIBERO",
+        "commit": "f78abd68ee283de9f9be3c8f7e2a9ad60246e95c",
+        "path": "libero/libero/bddl_files/libero_goal/open_the_middle_drawer_of_the_cabinet.bddl",
+        "url": "https://raw.githubusercontent.com/Lifelong-Robot-Learning/LIBERO/f78abd68ee283de9f9be3c8f7e2a9ad60246e95c/libero/libero/bddl_files/libero_goal/open_the_middle_drawer_of_the_cabinet.bddl",
+        "sha256": "832ab48ec476807c767e8985666e295700f92d1f8daeae1c34eee1e75293769b",
+        "bytes": 2943,
+        "suite": "libero_goal",
+        "task_order_index": 0,
+        "task_id": 0,
+        "slug": "open_the_middle_drawer_of_the_cabinet",
+        "native_prompt": "open the middle drawer of the cabinet",
+        "bddl_language": "Open the middle layer of the drawer",
+        "goal": [
+          [
+            "And",
+            [
+              "Open",
+              "wooden_cabinet_1_middle_region"
+            ]
+          ]
+        ],
+        "section_hashes": {
+          ":regions": "1d1335a4843ebd45b9882345cb91ee730a0595b98d14b736e705555fd2b90253",
+          ":fixtures": "6dcc42161e13dda63ba7229f2e81a5578f7f9b1463cb4e041e166dd4189833da",
+          ":objects": "5f649209c46ec8c81b147ffff426a51db343086f72142b15ca4f0bf8a12bed3c",
+          ":init": "1d4133056bb330feb2b3d9be1bca2058e0bf0f09d3a303c226c9294ee4c78448"
+        },
+        "goal_line": 123
+      },
+      {
+        "repo": "Lifelong-Robot-Learning/LIBERO",
+        "commit": "f78abd68ee283de9f9be3c8f7e2a9ad60246e95c",
+        "path": "libero/libero/bddl_files/libero_goal/put_the_bowl_on_the_stove.bddl",
+        "url": "https://raw.githubusercontent.com/Lifelong-Robot-Learning/LIBERO/f78abd68ee283de9f9be3c8f7e2a9ad60246e95c/libero/libero/bddl_files/libero_goal/put_the_bowl_on_the_stove.bddl",
+        "sha256": "c6812d6c988be830412aa6fc4801af04d60f8c4565d2625763b6a0f2b843a87f",
+        "bytes": 2961,
+        "suite": "libero_goal",
+        "task_order_index": 0,
+        "task_id": 1,
+        "slug": "put_the_bowl_on_the_stove",
+        "native_prompt": "put the bowl on the stove",
+        "bddl_language": "Put the bowl on the stove",
+        "goal": [
+          [
+            "And",
+            [
+              "On",
+              "akita_black_bowl_1",
+              "flat_stove_1_cook_region"
+            ]
+          ]
+        ],
+        "section_hashes": {
+          ":regions": "1d1335a4843ebd45b9882345cb91ee730a0595b98d14b736e705555fd2b90253",
+          ":fixtures": "6dcc42161e13dda63ba7229f2e81a5578f7f9b1463cb4e041e166dd4189833da",
+          ":objects": "5f649209c46ec8c81b147ffff426a51db343086f72142b15ca4f0bf8a12bed3c",
+          ":init": "1d4133056bb330feb2b3d9be1bca2058e0bf0f09d3a303c226c9294ee4c78448"
+        },
+        "goal_line": 124
+      },
+      {
+        "repo": "Lifelong-Robot-Learning/LIBERO",
+        "commit": "f78abd68ee283de9f9be3c8f7e2a9ad60246e95c",
+        "path": "libero/libero/bddl_files/libero_goal/put_the_wine_bottle_on_top_of_the_cabinet.bddl",
+        "url": "https://raw.githubusercontent.com/Lifelong-Robot-Learning/LIBERO/f78abd68ee283de9f9be3c8f7e2a9ad60246e95c/libero/libero/bddl_files/libero_goal/put_the_wine_bottle_on_top_of_the_cabinet.bddl",
+        "sha256": "2ef6f403a8451e216af44158c1a6c975cf8e5058ad02d78367ac0be443d096fe",
+        "bytes": 2972,
+        "suite": "libero_goal",
+        "task_order_index": 0,
+        "task_id": 2,
+        "slug": "put_the_wine_bottle_on_top_of_the_cabinet",
+        "native_prompt": "put the wine bottle on top of the cabinet",
+        "bddl_language": "Put the wine bottle on the top of the drawer",
+        "goal": [
+          [
+            "And",
+            [
+              "On",
+              "wine_bottle_1",
+              "wooden_cabinet_1_top_side"
+            ]
+          ]
+        ],
+        "section_hashes": {
+          ":regions": "1d1335a4843ebd45b9882345cb91ee730a0595b98d14b736e705555fd2b90253",
+          ":fixtures": "6dcc42161e13dda63ba7229f2e81a5578f7f9b1463cb4e041e166dd4189833da",
+          ":objects": "5f649209c46ec8c81b147ffff426a51db343086f72142b15ca4f0bf8a12bed3c",
+          ":init": "1d4133056bb330feb2b3d9be1bca2058e0bf0f09d3a303c226c9294ee4c78448"
+        },
+        "goal_line": 124
+      },
+      {
+        "repo": "Lifelong-Robot-Learning/LIBERO",
+        "commit": "f78abd68ee283de9f9be3c8f7e2a9ad60246e95c",
+        "path": "libero/libero/bddl_files/libero_goal/open_the_top_drawer_and_put_the_bowl_inside.bddl",
+        "url": "https://raw.githubusercontent.com/Lifelong-Robot-Learning/LIBERO/f78abd68ee283de9f9be3c8f7e2a9ad60246e95c/libero/libero/bddl_files/libero_goal/open_the_top_drawer_and_put_the_bowl_inside.bddl",
+        "sha256": "3056e4dc72ee590432cfb18c610fd077a572c8b8f256e45328031005dd0b6757",
+        "bytes": 2998,
+        "suite": "libero_goal",
+        "task_order_index": 0,
+        "task_id": 3,
+        "slug": "open_the_top_drawer_and_put_the_bowl_inside",
+        "native_prompt": "open the top drawer and put the bowl inside",
+        "bddl_language": "Open the top layer of the drawer and put the bowl inside",
+        "goal": [
+          [
+            "And",
+            [
+              "In",
+              "akita_black_bowl_1",
+              "wooden_cabinet_1_top_region"
+            ]
+          ]
+        ],
+        "section_hashes": {
+          ":regions": "1d1335a4843ebd45b9882345cb91ee730a0595b98d14b736e705555fd2b90253",
+          ":fixtures": "6dcc42161e13dda63ba7229f2e81a5578f7f9b1463cb4e041e166dd4189833da",
+          ":objects": "5f649209c46ec8c81b147ffff426a51db343086f72142b15ca4f0bf8a12bed3c",
+          ":init": "1d4133056bb330feb2b3d9be1bca2058e0bf0f09d3a303c226c9294ee4c78448"
+        },
+        "goal_line": 124
+      },
+      {
+        "repo": "Lifelong-Robot-Learning/LIBERO",
+        "commit": "f78abd68ee283de9f9be3c8f7e2a9ad60246e95c",
+        "path": "libero/libero/bddl_files/libero_goal/put_the_bowl_on_top_of_the_cabinet.bddl",
+        "url": "https://raw.githubusercontent.com/Lifelong-Robot-Learning/LIBERO/f78abd68ee283de9f9be3c8f7e2a9ad60246e95c/libero/libero/bddl_files/libero_goal/put_the_bowl_on_top_of_the_cabinet.bddl",
+        "sha256": "2ffba859a154f50c3c99ffb3420743fa5aa65c70bf7d4cd26f5bc81d07be5713",
+        "bytes": 2975,
+        "suite": "libero_goal",
+        "task_order_index": 0,
+        "task_id": 4,
+        "slug": "put_the_bowl_on_top_of_the_cabinet",
+        "native_prompt": "put the bowl on top of the cabinet",
+        "bddl_language": "Put the bowl on the top of the drawer",
+        "goal": [
+          [
+            "And",
+            [
+              "On",
+              "akita_black_bowl_1",
+              "wooden_cabinet_1_top_side"
+            ]
+          ]
+        ],
+        "section_hashes": {
+          ":regions": "1d1335a4843ebd45b9882345cb91ee730a0595b98d14b736e705555fd2b90253",
+          ":fixtures": "6dcc42161e13dda63ba7229f2e81a5578f7f9b1463cb4e041e166dd4189833da",
+          ":objects": "5f649209c46ec8c81b147ffff426a51db343086f72142b15ca4f0bf8a12bed3c",
+          ":init": "1d4133056bb330feb2b3d9be1bca2058e0bf0f09d3a303c226c9294ee4c78448"
+        },
+        "goal_line": 124
+      },
+      {
+        "repo": "Lifelong-Robot-Learning/LIBERO",
+        "commit": "f78abd68ee283de9f9be3c8f7e2a9ad60246e95c",
+        "path": "libero/libero/bddl_files/libero_goal/push_the_plate_to_the_front_of_the_stove.bddl",
+        "url": "https://raw.githubusercontent.com/Lifelong-Robot-Learning/LIBERO/f78abd68ee283de9f9be3c8f7e2a9ad60246e95c/libero/libero/bddl_files/libero_goal/push_the_plate_to_the_front_of_the_stove.bddl",
+        "sha256": "26f22f8ad39a4b2b344b049115c45661a877fa0b4821fb78246725e7e87d8c0b",
+        "bytes": 2964,
+        "suite": "libero_goal",
+        "task_order_index": 0,
+        "task_id": 5,
+        "slug": "push_the_plate_to_the_front_of_the_stove",
+        "native_prompt": "push the plate to the front of the stove",
+        "bddl_language": "Push the plate to the front of the stove",
+        "goal": [
+          [
+            "And",
+            [
+              "On",
+              "plate_1",
+              "main_table_stove_front_region"
+            ]
+          ]
+        ],
+        "section_hashes": {
+          ":regions": "1d1335a4843ebd45b9882345cb91ee730a0595b98d14b736e705555fd2b90253",
+          ":fixtures": "6dcc42161e13dda63ba7229f2e81a5578f7f9b1463cb4e041e166dd4189833da",
+          ":objects": "5f649209c46ec8c81b147ffff426a51db343086f72142b15ca4f0bf8a12bed3c",
+          ":init": "1d4133056bb330feb2b3d9be1bca2058e0bf0f09d3a303c226c9294ee4c78448"
+        },
+        "goal_line": 124
+      },
+      {
+        "repo": "Lifelong-Robot-Learning/LIBERO",
+        "commit": "f78abd68ee283de9f9be3c8f7e2a9ad60246e95c",
+        "path": "libero/libero/bddl_files/libero_goal/put_the_cream_cheese_in_the_bowl.bddl",
+        "url": "https://raw.githubusercontent.com/Lifelong-Robot-Learning/LIBERO/f78abd68ee283de9f9be3c8f7e2a9ad60246e95c/libero/libero/bddl_files/libero_goal/put_the_cream_cheese_in_the_bowl.bddl",
+        "sha256": "81c54eace32b92466598103b3b6e8435ce90f10996ef18cec4a35fe6c4d31a98",
+        "bytes": 2948,
+        "suite": "libero_goal",
+        "task_order_index": 0,
+        "task_id": 6,
+        "slug": "put_the_cream_cheese_in_the_bowl",
+        "native_prompt": "put the cream cheese in the bowl",
+        "bddl_language": "Put the cream cheese on the bowl",
+        "goal": [
+          [
+            "And",
+            [
+              "On",
+              "cream_cheese_1",
+              "akita_black_bowl_1"
+            ]
+          ]
+        ],
+        "section_hashes": {
+          ":regions": "1d1335a4843ebd45b9882345cb91ee730a0595b98d14b736e705555fd2b90253",
+          ":fixtures": "6dcc42161e13dda63ba7229f2e81a5578f7f9b1463cb4e041e166dd4189833da",
+          ":objects": "5f649209c46ec8c81b147ffff426a51db343086f72142b15ca4f0bf8a12bed3c",
+          ":init": "1d4133056bb330feb2b3d9be1bca2058e0bf0f09d3a303c226c9294ee4c78448"
+        },
+        "goal_line": 124
+      },
+      {
+        "repo": "Lifelong-Robot-Learning/LIBERO",
+        "commit": "f78abd68ee283de9f9be3c8f7e2a9ad60246e95c",
+        "path": "libero/libero/bddl_files/libero_goal/turn_on_the_stove.bddl",
+        "url": "https://raw.githubusercontent.com/Lifelong-Robot-Learning/LIBERO/f78abd68ee283de9f9be3c8f7e2a9ad60246e95c/libero/libero/bddl_files/libero_goal/turn_on_the_stove.bddl",
+        "sha256": "cbd2a0514d53226c5d09e17af40b22935d4cb6ff8fdaff0d55f555de1adecc13",
+        "bytes": 2891,
+        "suite": "libero_goal",
+        "task_order_index": 0,
+        "task_id": 7,
+        "slug": "turn_on_the_stove",
+        "native_prompt": "turn on the stove",
+        "bddl_language": "Turn on the stove",
+        "goal": [
+          [
+            "And",
+            [
+              "Turnon",
+              "flat_stove_1"
+            ]
+          ]
+        ],
+        "section_hashes": {
+          ":regions": "1d1335a4843ebd45b9882345cb91ee730a0595b98d14b736e705555fd2b90253",
+          ":fixtures": "6dcc42161e13dda63ba7229f2e81a5578f7f9b1463cb4e041e166dd4189833da",
+          ":objects": "5f649209c46ec8c81b147ffff426a51db343086f72142b15ca4f0bf8a12bed3c",
+          ":init": "1d4133056bb330feb2b3d9be1bca2058e0bf0f09d3a303c226c9294ee4c78448"
+        },
+        "goal_line": 123
+      },
+      {
+        "repo": "Lifelong-Robot-Learning/LIBERO",
+        "commit": "f78abd68ee283de9f9be3c8f7e2a9ad60246e95c",
+        "path": "libero/libero/bddl_files/libero_goal/put_the_bowl_on_the_plate.bddl",
+        "url": "https://raw.githubusercontent.com/Lifelong-Robot-Learning/LIBERO/f78abd68ee283de9f9be3c8f7e2a9ad60246e95c/libero/libero/bddl_files/libero_goal/put_the_bowl_on_the_plate.bddl",
+        "sha256": "358b7781437e412c67d6a7648c1c28796b6b1bf117a25e61316cb8dfeb940e5b",
+        "bytes": 2927,
+        "suite": "libero_goal",
+        "task_order_index": 0,
+        "task_id": 8,
+        "slug": "put_the_bowl_on_the_plate",
+        "native_prompt": "put the bowl on the plate",
+        "bddl_language": "Put the bowl on the plate",
+        "goal": [
+          [
+            "And",
+            [
+              "On",
+              "akita_black_bowl_1",
+              "plate_1"
+            ]
+          ]
+        ],
+        "section_hashes": {
+          ":regions": "1d1335a4843ebd45b9882345cb91ee730a0595b98d14b736e705555fd2b90253",
+          ":fixtures": "6dcc42161e13dda63ba7229f2e81a5578f7f9b1463cb4e041e166dd4189833da",
+          ":objects": "5f649209c46ec8c81b147ffff426a51db343086f72142b15ca4f0bf8a12bed3c",
+          ":init": "1d4133056bb330feb2b3d9be1bca2058e0bf0f09d3a303c226c9294ee4c78448"
+        },
+        "goal_line": 124
+      },
+      {
+        "repo": "Lifelong-Robot-Learning/LIBERO",
+        "commit": "f78abd68ee283de9f9be3c8f7e2a9ad60246e95c",
+        "path": "libero/libero/bddl_files/libero_goal/put_the_wine_bottle_on_the_rack.bddl",
+        "url": "https://raw.githubusercontent.com/Lifelong-Robot-Learning/LIBERO/f78abd68ee283de9f9be3c8f7e2a9ad60246e95c/libero/libero/bddl_files/libero_goal/put_the_wine_bottle_on_the_rack.bddl",
+        "sha256": "3d3ee18139056aa3780572cde17b1c50dc20ae0d299403f65e514e8471ba0e8e",
+        "bytes": 2953,
+        "suite": "libero_goal",
+        "task_order_index": 0,
+        "task_id": 9,
+        "slug": "put_the_wine_bottle_on_the_rack",
+        "native_prompt": "put the wine bottle on the rack",
+        "bddl_language": "Put the wine bottle on the rack",
+        "goal": [
+          [
+            "And",
+            [
+              "On",
+              "wine_bottle_1",
+              "wine_rack_1_top_region"
+            ]
+          ]
+        ],
+        "section_hashes": {
+          ":regions": "1d1335a4843ebd45b9882345cb91ee730a0595b98d14b736e705555fd2b90253",
+          ":fixtures": "6dcc42161e13dda63ba7229f2e81a5578f7f9b1463cb4e041e166dd4189833da",
+          ":objects": "5f649209c46ec8c81b147ffff426a51db343086f72142b15ca4f0bf8a12bed3c",
+          ":init": "1d4133056bb330feb2b3d9be1bca2058e0bf0f09d3a303c226c9294ee4c78448"
+        },
+        "goal_line": 124
+      },
+      {
+        "repo": "Lifelong-Robot-Learning/LIBERO",
+        "commit": "f78abd68ee283de9f9be3c8f7e2a9ad60246e95c",
+        "path": "libero/libero/bddl_files/libero_10/LIVING_ROOM_SCENE2_put_both_the_alphabet_soup_and_the_tomato_sauce_in_the_basket.bddl",
+        "url": "https://raw.githubusercontent.com/Lifelong-Robot-Learning/LIBERO/f78abd68ee283de9f9be3c8f7e2a9ad60246e95c/libero/libero/bddl_files/libero_10/LIVING_ROOM_SCENE2_put_both_the_alphabet_soup_and_the_tomato_sauce_in_the_basket.bddl",
+        "sha256": "2e661058917f683a25bce480015197f0a2c1911bcbc2b9dd9d947199069c9618",
+        "bytes": 3284,
+        "suite": "libero_10",
+        "task_order_index": 0,
+        "task_id": 0,
+        "slug": "LIVING_ROOM_SCENE2_put_both_the_alphabet_soup_and_the_tomato_sauce_in_the_basket",
+        "native_prompt": "put both the alphabet soup and the tomato sauce in the basket",
+        "bddl_language": "put both the alphabet soup and the tomato sauce in the basket",
+        "goal": [
+          [
+            "And",
+            [
+              "In",
+              "alphabet_soup_1",
+              "basket_1_contain_region"
+            ],
+            [
+              "In",
+              "tomato_sauce_1",
+              "basket_1_contain_region"
+            ]
+          ]
+        ],
+        "section_hashes": {
+          ":regions": "c763d20cc7e45acdc267854c8f696521ed0c2f006974022f8bc4cd745d3349d5",
+          ":fixtures": "f7fce2c046508b4cadbbf1e05d6ce0696c3ba8a6cf6baa27e457869285bf1bf4",
+          ":objects": "eebb874d15b6ef441ea778e7c3dd843aa6f702f5a2d5922fc03ccd75775ab4b8",
+          ":init": "300266d28d57d7633633605a2dcaa3b30a2a7437ceb989ad98c50a9b178eaee8"
+        },
+        "goal_line": 130
+      },
+      {
+        "repo": "Lifelong-Robot-Learning/LIBERO",
+        "commit": "f78abd68ee283de9f9be3c8f7e2a9ad60246e95c",
+        "path": "libero/libero/bddl_files/libero_10/LIVING_ROOM_SCENE2_put_both_the_cream_cheese_box_and_the_butter_in_the_basket.bddl",
+        "url": "https://raw.githubusercontent.com/Lifelong-Robot-Learning/LIBERO/f78abd68ee283de9f9be3c8f7e2a9ad60246e95c/libero/libero/bddl_files/libero_10/LIVING_ROOM_SCENE2_put_both_the_cream_cheese_box_and_the_butter_in_the_basket.bddl",
+        "sha256": "3f552805c7ab34c44debcf38a48b8131d6fee3011dd86c039650b84e0f77d058",
+        "bytes": 3267,
+        "suite": "libero_10",
+        "task_order_index": 0,
+        "task_id": 1,
+        "slug": "LIVING_ROOM_SCENE2_put_both_the_cream_cheese_box_and_the_butter_in_the_basket",
+        "native_prompt": "put both the cream cheese box and the butter in the basket",
+        "bddl_language": "put both the cream cheese box and the butter in the basket",
+        "goal": [
+          [
+            "And",
+            [
+              "In",
+              "cream_cheese_1",
+              "basket_1_contain_region"
+            ],
+            [
+              "In",
+              "butter_1",
+              "basket_1_contain_region"
+            ]
+          ]
+        ],
+        "section_hashes": {
+          ":regions": "c763d20cc7e45acdc267854c8f696521ed0c2f006974022f8bc4cd745d3349d5",
+          ":fixtures": "f7fce2c046508b4cadbbf1e05d6ce0696c3ba8a6cf6baa27e457869285bf1bf4",
+          ":objects": "eebb874d15b6ef441ea778e7c3dd843aa6f702f5a2d5922fc03ccd75775ab4b8",
+          ":init": "300266d28d57d7633633605a2dcaa3b30a2a7437ceb989ad98c50a9b178eaee8"
+        },
+        "goal_line": 130
+      },
+      {
+        "repo": "Lifelong-Robot-Learning/LIBERO",
+        "commit": "f78abd68ee283de9f9be3c8f7e2a9ad60246e95c",
+        "path": "libero/libero/bddl_files/libero_10/KITCHEN_SCENE3_turn_on_the_stove_and_put_the_moka_pot_on_it.bddl",
+        "url": "https://raw.githubusercontent.com/Lifelong-Robot-Learning/LIBERO/f78abd68ee283de9f9be3c8f7e2a9ad60246e95c/libero/libero/bddl_files/libero_10/KITCHEN_SCENE3_turn_on_the_stove_and_put_the_moka_pot_on_it.bddl",
+        "sha256": "491835cc2eb6956f7ce3d1ee4e266377116168fe453e6529fe105e3b0333635d",
+        "bytes": 1485,
+        "suite": "libero_10",
+        "task_order_index": 0,
+        "task_id": 2,
+        "slug": "KITCHEN_SCENE3_turn_on_the_stove_and_put_the_moka_pot_on_it",
+        "native_prompt": "turn on the stove and put the moka pot on it",
+        "bddl_language": "turn on the stove and put the moka pot on it",
+        "goal": [
+          [
+            "And",
+            [
+              "Turnon",
+              "flat_stove_1"
+            ],
+            [
+              "On",
+              "moka_pot_1",
+              "flat_stove_1_cook_region"
+            ]
+          ]
+        ],
+        "section_hashes": {
+          ":regions": "50eee2b482cc32c3ab661078e2d5d82ffc002a642be791813c2f1be2e3dedcca",
+          ":fixtures": "60c0eec6ebfc3317d0e2aabd6b3bd341d67a0db917eedd20a587ffd757cb33f8",
+          ":objects": "83f55e6cf93bc6f57407a9d0e17ba6a3f5052ace095ec5be91aee867d2bbe24a",
+          ":init": "3bffa37ea2c8f7035ad7424d86fb404e7a7657094b3baf84cf2ce5e6acab9636"
+        },
+        "goal_line": 64
+      },
+      {
+        "repo": "Lifelong-Robot-Learning/LIBERO",
+        "commit": "f78abd68ee283de9f9be3c8f7e2a9ad60246e95c",
+        "path": "libero/libero/bddl_files/libero_10/KITCHEN_SCENE4_put_the_black_bowl_in_the_bottom_drawer_of_the_cabinet_and_close_it.bddl",
+        "url": "https://raw.githubusercontent.com/Lifelong-Robot-Learning/LIBERO/f78abd68ee283de9f9be3c8f7e2a9ad60246e95c/libero/libero/bddl_files/libero_10/KITCHEN_SCENE4_put_the_black_bowl_in_the_bottom_drawer_of_the_cabinet_and_close_it.bddl",
+        "sha256": "5255fe54d7f25fad4dee8fa30a30033d8cb908f1708d953c91ab609264fb4fb8",
+        "bytes": 2233,
+        "suite": "libero_10",
+        "task_order_index": 0,
+        "task_id": 3,
+        "slug": "KITCHEN_SCENE4_put_the_black_bowl_in_the_bottom_drawer_of_the_cabinet_and_close_it",
+        "native_prompt": "put the black bowl in the bottom drawer of the cabinet and close it",
+        "bddl_language": "put the black bowl in the bottom drawer of the cabinet and close it",
+        "goal": [
+          [
+            "And",
+            [
+              "Close",
+              "white_cabinet_1_bottom_region"
+            ],
+            [
+              "In",
+              "akita_black_bowl_1",
+              "white_cabinet_1_bottom_region"
+            ]
+          ]
+        ],
+        "section_hashes": {
+          ":regions": "4ba6173f09e9d6199f4a490597b9a8cf6587ba8f5922054e5b9018552a9e06e3",
+          ":fixtures": "90d956eefdf4b6f2c6425e9b8cd3ff424e0b9bb463b9d0a2484a89a9a2701459",
+          ":objects": "eabb96b4681148419403226d7d68028258de691673ed303a835bedc5b77877a9",
+          ":init": "0b799f1344f57fda9e4dc01a357c19334d56630abc7caec1c3ff105bd48e6285"
+        },
+        "goal_line": 90
+      },
+      {
+        "repo": "Lifelong-Robot-Learning/LIBERO",
+        "commit": "f78abd68ee283de9f9be3c8f7e2a9ad60246e95c",
+        "path": "libero/libero/bddl_files/libero_10/LIVING_ROOM_SCENE5_put_the_white_mug_on_the_left_plate_and_put_the_yellow_and_white_mug_on_the_right_plate.bddl",
+        "url": "https://raw.githubusercontent.com/Lifelong-Robot-Learning/LIBERO/f78abd68ee283de9f9be3c8f7e2a9ad60246e95c/libero/libero/bddl_files/libero_10/LIVING_ROOM_SCENE5_put_the_white_mug_on_the_left_plate_and_put_the_yellow_and_white_mug_on_the_right_plate.bddl",
+        "sha256": "0c6749b920bff1e1efe47ffb0e0b801a3e6959a650e710f376dd2b812c74e865",
+        "bytes": 2241,
+        "suite": "libero_10",
+        "task_order_index": 0,
+        "task_id": 4,
+        "slug": "LIVING_ROOM_SCENE5_put_the_white_mug_on_the_left_plate_and_put_the_yellow_and_white_mug_on_the_right_plate",
+        "native_prompt": "put the white mug on the left plate and put the yellow and white mug on the right plate",
+        "bddl_language": "put the white mug on the left plate and put the yellow and white mug on the right plate",
+        "goal": [
+          [
+            "And",
+            [
+              "On",
+              "porcelain_mug_1",
+              "plate_1"
+            ],
+            [
+              "On",
+              "white_yellow_mug_1",
+              "plate_2"
+            ]
+          ]
+        ],
+        "section_hashes": {
+          ":regions": "eb373e789093f1569da5253a385ab5f1ada15e9ac07d2bd61d0be38fa50ea1f8",
+          ":fixtures": "f7fce2c046508b4cadbbf1e05d6ce0696c3ba8a6cf6baa27e457869285bf1bf4",
+          ":objects": "9b45237b95c74191d75b500aec672d8fae07d57d23cac73834091aad705a02dd",
+          ":init": "50bfc97f39cd27335669a601eea43bc2923d095f6f294dded44be57ab3679689"
+        },
+        "goal_line": 88
+      },
+      {
+        "repo": "Lifelong-Robot-Learning/LIBERO",
+        "commit": "f78abd68ee283de9f9be3c8f7e2a9ad60246e95c",
+        "path": "libero/libero/bddl_files/libero_10/STUDY_SCENE1_pick_up_the_book_and_place_it_in_the_back_compartment_of_the_caddy.bddl",
+        "url": "https://raw.githubusercontent.com/Lifelong-Robot-Learning/LIBERO/f78abd68ee283de9f9be3c8f7e2a9ad60246e95c/libero/libero/bddl_files/libero_10/STUDY_SCENE1_pick_up_the_book_and_place_it_in_the_back_compartment_of_the_caddy.bddl",
+        "sha256": "07ca32c940d70c065e870452ef9c63e6dfa1d8506e6a86cf9b3763f652ba2d9f",
+        "bytes": 2055,
+        "suite": "libero_10",
+        "task_order_index": 0,
+        "task_id": 5,
+        "slug": "STUDY_SCENE1_pick_up_the_book_and_place_it_in_the_back_compartment_of_the_caddy",
+        "native_prompt": "pick up the book and place it in the back compartment of the caddy",
+        "bddl_language": "pick up the book and place it in the back compartment of the caddy",
+        "goal": [
+          [
+            "And",
+            [
+              "In",
+              "black_book_1",
+              "desk_caddy_1_back_contain_region"
+            ]
+          ]
+        ],
+        "section_hashes": {
+          ":regions": "25673416759db195cb65eb73bda12c7c7cd34c3157aa1914b197a500050abf8b",
+          ":fixtures": "731c4e6fedec5d7e4d744ca3d6b0af66543ae53de9b45f4acb239172c5012ebf",
+          ":objects": "5dd0051407552911bece82d2ca6d3009dcd921d32f4d5e6f81527f0eed1e8fb1",
+          ":init": "0017b0346932a9470ccf6bfb2f919c7abc0fc60b52590e6bb83113beefcb3a22"
+        },
+        "goal_line": 84
+      },
+      {
+        "repo": "Lifelong-Robot-Learning/LIBERO",
+        "commit": "f78abd68ee283de9f9be3c8f7e2a9ad60246e95c",
+        "path": "libero/libero/bddl_files/libero_10/LIVING_ROOM_SCENE6_put_the_white_mug_on_the_plate_and_put_the_chocolate_pudding_to_the_right_of_the_plate.bddl",
+        "url": "https://raw.githubusercontent.com/Lifelong-Robot-Learning/LIBERO/f78abd68ee283de9f9be3c8f7e2a9ad60246e95c/libero/libero/bddl_files/libero_10/LIVING_ROOM_SCENE6_put_the_white_mug_on_the_plate_and_put_the_chocolate_pudding_to_the_right_of_the_plate.bddl",
+        "sha256": "dbc9464b424cdc9b771b92d0b8a8c185b1b539f6a4133b323dc858bcf8f6a9c2",
+        "bytes": 2458,
+        "suite": "libero_10",
+        "task_order_index": 0,
+        "task_id": 6,
+        "slug": "LIVING_ROOM_SCENE6_put_the_white_mug_on_the_plate_and_put_the_chocolate_pudding_to_the_right_of_the_plate",
+        "native_prompt": "put the white mug on the plate and put the chocolate pudding to the right of the plate",
+        "bddl_language": "put the white mug on the plate and put the chocolate pudding to the right of the plate",
+        "goal": [
+          [
+            "And",
+            [
+              "On",
+              "porcelain_mug_1",
+              "plate_1"
+            ],
+            [
+              "On",
+              "chocolate_pudding_1",
+              "living_room_table_plate_right_region"
+            ]
+          ]
+        ],
+        "section_hashes": {
+          ":regions": "7b84590fd442f9d41b73105299ba12ca290e6c3ac5c078bbd78d7094102d5952",
+          ":fixtures": "f7fce2c046508b4cadbbf1e05d6ce0696c3ba8a6cf6baa27e457869285bf1bf4",
+          ":objects": "b5b15abf404b2cd3c7712c40a56a13e78b38dfd16d010d4f622790209e077602",
+          ":init": "21353aab1520de2023783a78b234cd315543827824d787896278687f07b4ada7"
+        },
+        "goal_line": 97
+      },
+      {
+        "repo": "Lifelong-Robot-Learning/LIBERO",
+        "commit": "f78abd68ee283de9f9be3c8f7e2a9ad60246e95c",
+        "path": "libero/libero/bddl_files/libero_10/LIVING_ROOM_SCENE1_put_both_the_alphabet_soup_and_the_cream_cheese_box_in_the_basket.bddl",
+        "url": "https://raw.githubusercontent.com/Lifelong-Robot-Learning/LIBERO/f78abd68ee283de9f9be3c8f7e2a9ad60246e95c/libero/libero/bddl_files/libero_10/LIVING_ROOM_SCENE1_put_both_the_alphabet_soup_and_the_cream_cheese_box_in_the_basket.bddl",
+        "sha256": "e27ab37f512fe42e35771d6130f531e6a9656929e7b4c60b348b81360cf5675d",
+        "bytes": 2295,
+        "suite": "libero_10",
+        "task_order_index": 0,
+        "task_id": 7,
+        "slug": "LIVING_ROOM_SCENE1_put_both_the_alphabet_soup_and_the_cream_cheese_box_in_the_basket",
+        "native_prompt": "put both the alphabet soup and the cream cheese box in the basket",
+        "bddl_language": "put both the alphabet soup and the cream cheese box in the basket",
+        "goal": [
+          [
+            "And",
+            [
+              "In",
+              "alphabet_soup_1",
+              "basket_1_contain_region"
+            ],
+            [
+              "In",
+              "cream_cheese_1",
+              "basket_1_contain_region"
+            ]
+          ]
+        ],
+        "section_hashes": {
+          ":regions": "b828e58da230fd81e847e453b9b53aff847553ecf18f1b227fbee2174fe84347",
+          ":fixtures": "f7fce2c046508b4cadbbf1e05d6ce0696c3ba8a6cf6baa27e457869285bf1bf4",
+          ":objects": "75ed18b85e2c5c458c2375cc19e5eaded17ae8ca70a3effc51c56e32730f5d75",
+          ":init": "884465162f8d68be149301d9a24586f670fdf60f75e71ad1199ac0e17862b4cf"
+        },
+        "goal_line": 91
+      },
+      {
+        "repo": "Lifelong-Robot-Learning/LIBERO",
+        "commit": "f78abd68ee283de9f9be3c8f7e2a9ad60246e95c",
+        "path": "libero/libero/bddl_files/libero_10/KITCHEN_SCENE8_put_both_moka_pots_on_the_stove.bddl",
+        "url": "https://raw.githubusercontent.com/Lifelong-Robot-Learning/LIBERO/f78abd68ee283de9f9be3c8f7e2a9ad60246e95c/libero/libero/bddl_files/libero_10/KITCHEN_SCENE8_put_both_moka_pots_on_the_stove.bddl",
+        "sha256": "ae1299a707d3e810096ad648948c517de40474bcdacca93a15e17d191e34454a",
+        "bytes": 1551,
+        "suite": "libero_10",
+        "task_order_index": 0,
+        "task_id": 8,
+        "slug": "KITCHEN_SCENE8_put_both_moka_pots_on_the_stove",
+        "native_prompt": "put both moka pots on the stove",
+        "bddl_language": "put both moka pots on the stove",
+        "goal": [
+          [
+            "And",
+            [
+              "On",
+              "moka_pot_1",
+              "flat_stove_1_cook_region"
+            ],
+            [
+              "On",
+              "moka_pot_2",
+              "flat_stove_1_cook_region"
+            ],
+            [
+              "Turnon",
+              "flat_stove_1"
+            ]
+          ]
+        ],
+        "section_hashes": {
+          ":regions": "244d4ae5121e8cd22c8396fbac705ba511859229a0f85a662a46ddd3fa6fbddb",
+          ":fixtures": "60c0eec6ebfc3317d0e2aabd6b3bd341d67a0db917eedd20a587ffd757cb33f8",
+          ":objects": "3e0b5f30a9286e1b202807ea5650d7467b6aa283466765c5164a1197ffda537b",
+          ":init": "f7e409e6bd06871ec4e11d132a37d903357ed90bfbce72f9fa870fbd0a1c0815"
+        },
+        "goal_line": 65
+      },
+      {
+        "repo": "Lifelong-Robot-Learning/LIBERO",
+        "commit": "f78abd68ee283de9f9be3c8f7e2a9ad60246e95c",
+        "path": "libero/libero/bddl_files/libero_10/KITCHEN_SCENE6_put_the_yellow_and_white_mug_in_the_microwave_and_close_it.bddl",
+        "url": "https://raw.githubusercontent.com/Lifelong-Robot-Learning/LIBERO/f78abd68ee283de9f9be3c8f7e2a9ad60246e95c/libero/libero/bddl_files/libero_10/KITCHEN_SCENE6_put_the_yellow_and_white_mug_in_the_microwave_and_close_it.bddl",
+        "sha256": "456d145f92be049f445fc77673dc583d9d17ea7afe92f6ffcb2fd1fa5565d420",
+        "bytes": 1836,
+        "suite": "libero_10",
+        "task_order_index": 0,
+        "task_id": 9,
+        "slug": "KITCHEN_SCENE6_put_the_yellow_and_white_mug_in_the_microwave_and_close_it",
+        "native_prompt": "put the yellow and white mug in the microwave and close it",
+        "bddl_language": "put the yellow and white mug in the microwave and close it",
+        "goal": [
+          [
+            "And",
+            [
+              "In",
+              "white_yellow_mug_1",
+              "microwave_1_heating_region"
+            ],
+            [
+              "Close",
+              "microwave_1"
+            ]
+          ]
+        ],
+        "section_hashes": {
+          ":regions": "4e61b14b43f57bd5ee6289a53d852d7113e280f3f89f8130b43e7664162fb755",
+          ":fixtures": "2956f6009af016040be594f86b5e4778b8dfce73c660d3d00f1bd63b9c0bc104",
+          ":objects": "0255f1617ff56036666b16e7e1a41def5c3c205297e8fc8e40d89e509f223f8b",
+          ":init": "8b132eefb5d8af2fcb8acb5f53b4e22a0dd83653d703c2418fc54f784b39ab88"
+        },
+        "goal_line": 79
+      }
+    ]
+  },
+  "oft_goal_asset": {
+    "id": "moojink/openvla-7b-oft-finetuned-libero-goal",
+    "revision": "c2d0f9fbbd82674683b397ff923168a12f6a307b",
+    "source": "https://huggingface.co/api/models/moojink/openvla-7b-oft-finetuned-libero-goal",
+    "listed_file_count": 25,
+    "selected_entries": [
+      "action_head--50000_checkpoint.pt",
+      "proprio_projector--50000_checkpoint.pt",
+      "dataset_statistics.json"
+    ],
+    "payload_downloaded": false,
+    "weight_or_normalizer_payload_hash": null
+  },
+  "findings": [
+    {
+      "id": "L3-POLICY-1",
+      "result": "SOURCE_PRECONDITION_FAIL for state-value-only D1 comparison",
+      "scope": "Unmodified openpi pi05_libero config at pinned commit: pi05=True, discrete_state_input=False, extra_delta_transform=False. State tokenization and continuous suffix state path disabled; output delta transform absent. State shape remains used. Same finite shape, RGB/prompt/noise assumed.",
+      "anchors": [
+        "src/openpi/training/config.py:744-749",
+        "src/openpi/transforms.py:TokenizePrompt",
+        "src/openpi/models/pi0.py:151-157",
+        "src/openpi/models_pytorch/pi0_pytorch.py:244-263",
+        "src/openpi/policies/policy_config.py:75-89"
+      ]
+    },
+    {
+      "id": "L3-POLICY-2",
+      "result": "OpenVLA-OFT state-value path present, usefulness untested",
+      "anchors": [
+        "experiments/robot/libero/run_libero_eval.py:97-100",
+        "experiments/robot/openvla_utils.py:772-795",
+        "prismatic/extern/hf/modeling_prismatic.py:449-458,1005-1011"
+      ]
+    },
+    {
+      "id": "L3-TASK",
+      "result": "Audited 40 goal forms have no explicit absolute end-effector orientation goal. This does not establish orientation-insensitive dynamics/control, nor cover all 130 LIBERO tasks."
+    },
+    {
+      "id": "L3-PROMPT",
+      "result": "Native prompt is derived from task filename; raw BDDL language may differ. Goal predicate must be inspected independently of task title."
+    },
+    {
+      "id": "L3-INTERFACE",
+      "result": "Report-only perturbation cannot be equated with controller feedback corruption: controller reads simulator pose, independent of the policy packet."
+    }
+  ],
+  "execution": {
+    "policy": false,
+    "simulation": false,
+    "training": false,
+    "upstream_code_import": false,
+    "package_installation": false
+  },
+  "counts": {
+    "unique_source_files": 90,
+    "source_text_bytes": 618642
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "rob_rollout.py": {
+    "crop_and_resize": {
+      "line": 77,
+      "end_line": 109,
+      "ast_sha256": "033c84d1ffd23f1300f00319fd3fb3c9f42ba18385ad8da5288ed9e093b16195"
+    },
+    "center_crop_image": {
+      "line": 111,
+      "end_line": 125,
+      "ast_sha256": "ca1520faecf1a827d78089f0ea4811f998e5ade83016633763503c05294817fd"
+    }
+  },
+  "libero_utils.py": {
+    "resize_image": {
+      "line": 39,
+      "end_line": 54,
+      "ast_sha256": "660adf22759ad73b1ef8b0093cb40bdc3ee2bb88130e7ea0cfa24e8759f95484"
+    }
+  },
+  "source_revisions": {
+    "libero": {
+      "revision": "8f1084e3132a39270c3a13ebe37270a43ece2a01",
+      "url": "https://raw.githubusercontent.com/Lifelong-Robot-Learning/LIBERO/8f1084e3132a39270c3a13ebe37270a43ece2a01/libero/libero/benchmark/libero_suite_task_map.py"
+    },
+    "lerobot": {
+      "revision": "afbf3f14a13bdad3e5990e2bed629c6539605658",
+      "paths": [
+        "docs/source/libero.mdx",
+        "docs/source/env_processor.mdx",
+        "src/lerobot/processor/env_processor.py"
+      ]
+    }
+  },
+  "visual_sanity_check": "Decoded sample 0 reviewed: upright agent-view table, mugs and two plates consistent with task; no second 180-degree flip."
+}

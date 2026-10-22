@@ -1,0 +1,10 @@
+{
+  "google-deepmind/active_ops": {"commit": "5c7b24515adadbaf89feb84232190bad96221c04", "files": ["README.md", "agents.py", "arm_model.py", "bandit.py", "gp_models.py", "kernel.py", "multiarm_model.py", "Active_ops_experiment.ipynb", "requirements.txt"]},
+  "AbrarAnwar/seq-eval": {"files": ["README.md"]},
+  "AgibotTech/aloe": {"commit": "aafb7e81cf344a29557c116b0b196e565c5e69c7", "files": ["README.md", "index.html"]},
+  "dworldeval/dworldeval.github.io": {"commit": "7dee38b65d969d573bfb446a0c13b61c29405a1d", "files": ["README.md", "index.html"]},
+  "showlab/World-VLA-Loop": {"commit": "1d1738260bd72b96e52b5e6b926b4fc2fc0cc161", "files": ["README.md"]},
+  "haowwang/offline_policy_eval_manipulation": {"commit": "45bbad6756aea9ad69176e1c44f7da2dc99c249d", "files": ["README.md", "dataio.py", "loss_fn.py", "methods.py"]},
+  "irom-princeton/rapid-policy-evaluation": {"commit": "e9e6cb567f8792630044e5c1662ed6e1db9c7480", "files": ["README.md", "src/suresim/problem_data/base_problem_data.py", "src/suresim/intervals/cross_ppi.py"]},
+  "dasnyder5/nscore": {"commit": "68c0a3453248d16da0c3f0b96f229fb9daf9fe78", "files": ["README.md", "nscore/nonparametric_nsm.py", "nscore/nsm.py", "multi_policy_comparison_example.ipynb", "scripts/paper_results/evaluate_full_RL_results.py"]}
+}

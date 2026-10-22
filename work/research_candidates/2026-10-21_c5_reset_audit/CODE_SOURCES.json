@@ -1,0 +1,18 @@
+{
+  "zhouzypaul/auto_eval": {
+    "commit": "3ea3ff44c6950433cfbcb4294a3deaa616533745",
+    "files": ["README.md", "run_eval.py", "job_scheduler.py", "auto_eval/utils/info.py", "auto_eval/visualization/local.py", "auto_eval/visualization/web_viewer.py", "scripts/configs/eval_config.py", "static/output.html", "requirements.txt"]
+  },
+  "architsharma97/medal": {
+    "commit": "4cb0ca84b034cc5593489734cf86e02242ff0493",
+    "files": ["README.md", "medal.py", "env_loader.py", "cfgs/medal.yaml"]
+  },
+  "zhouzypaul/robot_eval_logger": {
+    "commit": "a8134f5551634a9991b3be96afb79c0a1bc68d2c",
+    "files": ["README.md", "robot_eval_logger/eval_logger.py", "robot_eval_logger/storage/hugging_face.py", "robot_eval_logger/storage/base_saver.py", "robot_eval_logger/typing/traj_data.py", "robot_eval_logger/typing/eval_metadata.py"]
+  },
+  "yangzhao-666/MoReFree": {
+    "commit": "c390568131c5ee3d4b2e23800d378b4a32909b0d",
+    "files": ["README.md", "resetfree/env.py", "resetfree/goal_picker_wrapper.py"]
+  }
+}

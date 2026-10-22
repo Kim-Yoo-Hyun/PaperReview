@@ -201,6 +201,7 @@ def audit_registry_index(path: Path, papers_by_id: dict[str, dict], errors: list
     required = {
         "paper_id", "title", "year", "venue", "category", "tier", "roles",
         "facets", "evidence_level", "reading_status", "primary_source",
+        "identifier_status", "primary_source_scope",
         "overview_path", "outgoing_relations", "incoming_relation_count",
         "evaluation_type", "evaluation_settings", "evaluation_protocol",
         "benchmark_cues", "metric_cues", "reproducibility_status",
@@ -224,6 +225,13 @@ def audit_registry_index(path: Path, papers_by_id: dict[str, dict], errors: list
             continue
         if row.get("title") != item.get("title") or row.get("year") != str(item.get("year")):
             errors.append(f"generated registry index identity mismatch: {row.get('paper_id')}")
+        expected_identifier = "identified" if any(item.get("identifiers", {}).values()) else "source_only"
+        if row.get("identifier_status") != expected_identifier:
+            errors.append(f"generated registry index identifier status mismatch: {row.get('paper_id')}")
+        primary = (item.get("sources") or {}).get("primary") or {}
+        expected_scope = primary.get("scope") or (item.get("provenance") or {}).get("primary_source_scope", "")
+        if row.get("primary_source_scope") != expected_scope:
+            errors.append(f"generated registry index source scope mismatch: {row.get('paper_id')}")
         try:
             facets = json.loads(row.get("facets", "{}"))
         except json.JSONDecodeError:
@@ -507,41 +515,64 @@ def comparison_matrix_paths(path: Path) -> list[str]:
     return ["./" + urllib.parse.unquote(value[3:]) for value in links]
 
 
-def audit_active_markdown_links(errors: list[str]) -> int:
-    """Check links in active navigation and research documents.
+def audit_markdown_documents(errors: list[str]) -> dict[str, int]:
+    """Audit all Markdown, including notes, instructions and historical context.
 
-    Historical update logs and retired project overlays are intentionally
-    excluded: their old references are audit history, not active navigation.
+    Code examples are not links. Historical missing targets should be retained
+    as explicit text instead of clickable links to removed files.
     """
-
-    paths = [ROOT / "README.md", ROOT / "work" / "README.md"]
-    paths += sorted((ROOT / "synthesis").glob("*.md"))
-    paths += sorted((ROOT / "research").glob("*.md"))
-    link_re = re.compile(r"\[[^\]]*\]\(([^)]+)\)")
+    paths = sorted(path for path in ROOT.rglob("*.md") if ".git" not in path.parts)
+    link_re = re.compile(r"(?<!\\)\[[^\]\n]*\]\(([^)\n]+)\)")
     checked = 0
     for path in paths:
-        if not path.exists():
-            continue
-        content = path.read_text(encoding="utf-8", errors="ignore")
-        for raw_target in link_re.findall(content):
-            target = raw_target.strip()
-            if target.startswith("<") and ">" in target:
-                target = target[1 : target.index(">")]
-            if target.startswith(("http://", "https://", "mailto:", "#")):
+        content = path.read_text(encoding="utf-8")
+        relative = path.relative_to(ROOT)
+        if not re.search(r"(?m)^# .+", content):
+            errors.append(f"Markdown H1 missing: {relative}")
+        fence = None
+        table_columns = None
+        for number, line in enumerate(content.splitlines(), 1):
+            marker = re.match(r"^\s{0,3}(`{3,}|~{3,})(.*)$", line)
+            if marker:
+                run, tail = marker.groups()
+                if fence is None:
+                    fence = run
+                elif run[0] == fence[0] and len(run) >= len(fence) and not tail.strip():
+                    fence = None
+                table_columns = None
                 continue
-            target = urllib.parse.unquote(target.split("#", 1)[0].strip())
-            if not target:
+            if fence:
                 continue
-            resolved = (path.parent / target).resolve()
-            try:
-                resolved.relative_to(ROOT.resolve())
-            except ValueError:
-                errors.append(f"active Markdown link escapes repository: {path.relative_to(ROOT)} -> {raw_target}")
-                continue
-            checked += 1
-            if not resolved.exists():
-                errors.append(f"active Markdown link target missing: {path.relative_to(ROOT)} -> {raw_target}")
-    return checked
+            if line.startswith("|") and line.rstrip().endswith("|"):
+                columns = len(re.findall(r"(?<!\\)\|", line)) - 1
+                if table_columns is None:
+                    table_columns = columns
+                elif columns != table_columns:
+                    errors.append(f"Markdown table column mismatch: {relative}:{number} ({columns} != {table_columns})")
+            else:
+                table_columns = None
+            prose = re.sub(r"(`+).*?\1", "", line)
+            for raw_target in link_re.findall(prose):
+                target = raw_target.strip()
+                if target.startswith("<") and ">" in target:
+                    target = target[1:target.index(">")]
+                else:
+                    target = re.split(r'\s+["\x27]', target, maxsplit=1)[0]
+                parsed = urllib.parse.urlsplit(target)
+                if parsed.scheme or target.startswith("//") or not parsed.path:
+                    continue
+                resolved = (path.parent / urllib.parse.unquote(parsed.path)).resolve()
+                try:
+                    resolved.relative_to(ROOT.resolve())
+                except ValueError:
+                    errors.append(f"Markdown link escapes repository: {relative}:{number} -> {raw_target}")
+                    continue
+                checked += 1
+                if not resolved.exists():
+                    errors.append(f"Markdown link target missing: {relative}:{number} -> {raw_target}")
+        if fence:
+            errors.append(f"Markdown code fence unclosed: {relative}")
+    return {"files": len(paths), "links": checked}
 
 
 def main() -> None:
@@ -723,19 +754,42 @@ def main() -> None:
         tiers = list(csv.DictReader(handle))
     with (ROOT / "research" / "READING_STATUS.csv").open(newline="", encoding="utf-8") as handle:
         status = list(csv.DictReader(handle))
+    history_path = ROOT / "research" / "READING_STATUS_HISTORY.csv"
+    history = []
+    if history_path.exists():
+        with history_path.open(newline="", encoding="utf-8") as handle:
+            history = list(csv.DictReader(handle))
+    all_reading = status + history
+    reading_ids = [row.get("paper_id", "") for row in all_reading]
+    if len(reading_ids) != len(set(reading_ids)):
+        errors.append("duplicate paper across active tracker/history")
     counts = Counter(row["tier"] for row in tiers)
     if len(tiers) != len(papers):
         errors.append(f"tier rows {len(tiers)} != papers {len(papers)}")
-    if any(row["status"] not in STATUSES for row in status):
+    if any(row["status"] not in STATUSES for row in all_reading):
         errors.append("invalid reading status")
-    if any(row.get("evidence_level") not in EVIDENCE for row in status):
+    if any(row.get("evidence_level") not in EVIDENCE for row in all_reading):
         errors.append("invalid evidence level")
     if len(status) != counts["CORE"] + counts["NEXT"]:
         errors.append("intensive tracker size mismatch")
     tier_by_paper_id = {row.get("paper_id", ""): row for row in tiers}
     status_by_paper_id = {row.get("paper_id", ""): row for row in status}
+    expected_active_ids = {row["paper_id"] for row in tiers if row["tier"] in {"CORE", "NEXT"}}
+    if set(status_by_paper_id) != expected_active_ids:
+        errors.append("intensive tracker membership mismatch")
+    for row in all_reading:
+        tier_row = tier_by_paper_id.get(row.get("paper_id"))
+        if not tier_row or row.get("tier") != tier_row["tier"]:
+            errors.append(f"reading tier mismatch: {row.get('paper_id')}")
+    for row in history:
+        if row.get("tier") not in {"REFERENCE", "ARCHIVE"} or row.get("sequence"):
+            errors.append(f"invalid inactive reading history: {row.get('paper_id')}")
+    for tier in ("CORE", "NEXT"):
+        sequence = [row.get("sequence") for row in status if row["tier"] == tier]
+        if sequence != [str(index) for index in range(1, len(sequence) + 1)]:
+            errors.append(f"non-contiguous reading sequence: {tier}")
     evidence_rank = {value: index for index, value in enumerate(["CURATION_ONLY", "ABSTRACT_CHECKED", "FULL_TEXT_CHECKED", "EXPERIMENT_CHECKED"])}
-    for row in status:
+    for row in all_reading:
         paper_id = row.get("paper_id", "")
         current_status = row.get("status", "")
         required_fields = TRACKER_REQUIRED_FIELDS.get(current_status, ())
@@ -777,7 +831,7 @@ def main() -> None:
             matrix_path_owner[overview_path] = filename
 
     completed_matrix_rows = 0
-    for row in status:
+    for row in all_reading:
         if row.get("status") not in {"READ", "SYNTHESIZED", "REPRODUCED"}:
             continue
         paper_id = row.get("paper_id", "")
@@ -800,6 +854,17 @@ def main() -> None:
         actual_values = {}
         for name in NOTE_NAMES:
             note_path = ROOT / item["folder"] / name
+            if note_path.exists():
+                content = note_path.read_text(encoding="utf-8")
+                title = re.search(r"(?m)^# (.+)$", content)
+                displayed = re.sub(r"^(?:Overview|Problem|Method|Evaluation|Insights)\s*[-—:]\s*", "", title.group(1)) if title else ""
+                if " ".join(displayed.split()) != " ".join(item["title"].split()):
+                    errors.append(f"note title mismatch: {item.get('paper_id')} {name}")
+                if name == "01_overview.md":
+                    for label, expected in (("Tags", ", ".join(item["tags"])), ("Category", item["category"])):
+                        header = re.search(rf"(?m)^- {label}: (.+)$", content)
+                        if header and header.group(1) != expected:
+                            errors.append(f"overview {label} mismatch: {item.get('paper_id')}")
             actual_values[name] = note_evidence_for(note_path) if note_path.exists() else "MISSING"
             if note_map.get(name) != actual_values[name]:
                 errors.append(f"note evidence mismatch: {item.get('paper_id')} {name}")
@@ -863,13 +928,17 @@ def main() -> None:
             errors.append(f"tier row points to unknown overview_path: {row.get('overview_path')}")
             continue
         expected_track = item.get("primary_track") or ""
+        overview_text = (ROOT / item["folder"] / "01_overview.md").read_text(encoding="utf-8")
+        note_tier = re.search(r"(?m)^- Tier: (.+)$", overview_text)
+        if note_tier and note_tier.group(1).strip() != row.get("tier"):
+            errors.append(f"overview tier header mismatch: {item.get('paper_id')}")
         if row.get("primary_track", "") != expected_track:
             errors.append(f"primary_track mismatch in tiers: {row.get('overview_path')}")
         if row.get("paper_id", "") != item.get("paper_id", ""):
             errors.append(f"paper_id mismatch in tiers: {row.get('overview_path')}")
         if row.get("tier") in {"CORE", "NEXT"} and expected_track not in PRIMARY_TRACKS:
             errors.append(f"intensive paper missing canonical primary_track: {item.get('paper_id')}")
-    for row in status:
+    for row in all_reading:
         item = paper_for_path(row.get("overview_path", ""))
         if not item:
             errors.append(f"status row points to unknown overview_path: {row.get('overview_path')}")
@@ -884,7 +953,7 @@ def main() -> None:
     }
     resource_count = audit_resources(RESOURCES, paper_ids, errors)
     index_count = audit_registry_index(REGISTRY_INDEX, paper_by_id, errors)
-    markdown_links_checked = audit_active_markdown_links(errors)
+    markdown_audit = audit_markdown_documents(errors)
     if not REGISTRY_STATS.exists():
         errors.append(f"missing generated registry statistics: {REGISTRY_STATS.relative_to(ROOT)}")
     queue_paths: list[str] = []
@@ -915,11 +984,13 @@ def main() -> None:
     print({
         "papers": len(papers), "categories": len({p['category'] for p in papers}),
         "tier_counts": dict(counts), "intensive": len(status),
+        "inactive_reading_history": len(history),
         "standard_note_files": len(papers) * len(NOTE_NAMES),
         "catalog_entries": catalog_counts,
         "combined_resources": resource_count,
         "registry_index_rows": index_count,
-        "active_markdown_links_checked": markdown_links_checked,
+        "markdown_files_checked": markdown_audit["files"],
+        "markdown_links_checked": markdown_audit["links"],
         "comparison_matrix_rows": matrix_count,
         "completed_matrix_rows": completed_matrix_rows,
         "errors": errors, "warnings": warnings,

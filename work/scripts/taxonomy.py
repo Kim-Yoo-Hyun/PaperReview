@@ -74,6 +74,7 @@ CATEGORY_MAP = {
 }
 
 TAG_ALIASES = {
+    "diffusion": "Diffusion",
     "robotics": "Robotics",
     "reinforcement learning": "Reinforcement Learning",
     "imitation learning": "Imitation Learning",

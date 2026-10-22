@@ -9,7 +9,7 @@
 - Year/Venue: 2023 / CoRL
 - Authors: not duplicated here when not verified in the registry source
 - Primary track: VLA and generalist robot policies
-- Tier: CORE
+- Tier: NEXT
 - Tags: LLM, VLM, Planning, Robotics
 - Official paper: https://arxiv.org/abs/2307.05973
 - Full-text retrieval: https://arxiv.org/pdf/2307.05973

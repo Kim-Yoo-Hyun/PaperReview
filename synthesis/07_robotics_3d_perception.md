@@ -1,6 +1,6 @@
 # Robotics-Enabling 3D Perception
 
-- Updated: 2026-09-04 KST
+- Updated: 2026-10-23 KST
 
 ## Scope
 
@@ -13,34 +13,46 @@ Rigid registration, point-cloud representation, feed-forward geometry, SLAM, den
 - **Out of scope:** reconstruction/rendering quality alone, language-vision representation without a robot downstream contract, 또는 generic 3D benchmark whose action consequence is not identified.
 - **Inclusion test:** input geometry, spatial state, temporal update, semantic uncertainty, downstream action/planning interface와 robot-level consequence 중 최소 네 가지를 비교할 수 있어야 한다.
 - **Role vocabulary:** `foundation`, `representation`, `state estimator`, `mapping`, `scene graph`, `active perception`, `policy`, `benchmark`, `dataset`, `system`을 사용한다.
-- **Facet tuple:** `embodiment; sensor/data; spatial state; setting; downstream interface`를 모든 matrix 행에 기록한다. 예: `mobile robot; RGB-D; semantic map; real; navigation`.
-- **Comparison unit:** Comparison Matrix는 registry의 한 논문당 한 행이다. representation pair나 benchmark pair도 별도 행으로 나누고, evolution만 개념적 묶음을 허용한다.
-- **Metadata/evidence:** Paper 링크의 local overview에 official paper, project/code와 source audit를 둔다. Matrix는 `Year / Venue`, `Role`, `Facets`, `Why included / TL;DR`, `Evidence / source`를 반복 기록하며, Evaluation은 `setup; data/split; metric; real/trials` 순서를 따른다.
+
+공통 matrix/evidence 규약은 [synthesis 안내](./README.md#공통-비교-규약과-질문-분류)를 따른다.
 
 ## Reading Path
 
+현재 읽기 우선순위는 [READING_PLAN.md](../research/READING_PLAN.md)를 따른다. 아래 계보는 비교 탐색용이며 전체 선행 완독 의무가 아니다.
+
+2026-10-19 초점: ConceptFusion·RVT·VLFM·VLN-CE를 중심으로 spatial representation이 manipulation/navigation 실행을 바꾸는 조건을 비교한다. DP3·spatial VLA와 연결하되 reconstruction 점수만으로 priority를 올리지 않는다.
+
 ICP → PointNet → DROID-SLAM/3DGS/DUSt3R/VGGT → Dense Object Nets/NDF/DenseMatcher → ConceptFusion/VLMaps/Open3DSG → Where2Act/FlowBot3D/RVT → PointVLA/Any3D-VLA/ActiveVLA.
+
+### 2026-10-19 추가 논문 비교
+
+아래는 등록된 abstract/project 근거에서 만든 **정독 전 비교 질문**이다. 직접 citation이나 실험 결론으로 취급하지 않으며, 읽기 순서와 tier는 READING_PLAN의 최신 값을 따른다.
+
+| 비교할 논문 | 비교 축 | 본문에서 확인할 조건 |
+|---|---|---|
+| [LoGoPlanner](../2026/ICRA/2026_ICRA_LoGoPlanner-Localization-Grounded-Navigation-Policy-with-M/01_overview.md) / VLFM·VLN-CE ↔ [PointWorld](../2026/CVPR/2026_CVPR_PointWorld-Scaling-3D-World-Models-for-In-The-Wild-Robotic/01_overview.md) | Localization/metric geometry와 action-conditioned 3D dynamics | Pose 오차·scale·map 갱신이 navigation collision과 manipulation planning에 주는 효과를 비교한다. PointWorld의 primary queue는 world-model 트랙이다. |
 
 <!-- READING_QUEUE:START -->
 
 ## Assigned Reading Queue
 
-### Robotics-enabling 3D perception — 7
+### Robotics-enabling 3D perception — 4
 
 | Tier | Paper | Year / Venue | Status | Evidence |
 |---|---|---|---|---|
-| CORE | [A Method for Registration of 3-D Shapes](../1992/IEEE-Transactions-on-Pat/1992_IEEE-Transactions-on-Pat_A-Method-for-Registration-of-3-D-Shapes/01_overview.md) | 1992 / IEEE Transactions on Pattern Analysis and Machine Intelligence | `UNREAD` | `FULL_TEXT_CHECKED` |
-| CORE | [PointNet: Deep Learning on Point Sets for 3D Classification and Segmentation](../2017/CVPR/2017_CVPR_PointNet-Deep-Learning-on-Point-Sets-for-3D-Classification/01_overview.md) | 2017 / CVPR | `UNREAD` | `FULL_TEXT_CHECKED` |
-| CORE | [DROID-SLAM: Deep Visual SLAM for Monocular, Stereo, and RGB-D Cameras](../2021/NeurIPS/2021_NeurIPS_DROID-SLAM-Deep-Visual-SLAM-for-Monocular-Stereo-and-RGB-D/01_overview.md) | 2021 / NeurIPS | `UNREAD` | `FULL_TEXT_CHECKED` |
-| CORE | [3D Gaussian Splatting for Real-Time Radiance Field Rendering](../2023/SIGGRAPH/2023_SIGGRAPH_3D-Gaussian-Splatting-for-Real-Time-Radiance-Field-Renderi/01_overview.md) | 2023 / SIGGRAPH | `UNREAD` | `FULL_TEXT_CHECKED` |
 | CORE | [ConceptFusion: Open-set Multimodal 3D Mapping](../2023/RSS/2023_RSS_ConceptFusion-Open-set-Multimodal-3D-Mapping/01_overview.md) | 2023 / RSS | `UNREAD` | `FULL_TEXT_CHECKED` |
 | CORE | [RVT: Robotic View Transformer for 3D Object Manipulation](../2023/CoRL/2023_CoRL_RVT-Robotic-View-Transformer-for-3D-Object-Manipulation/01_overview.md) | 2023 / CoRL | `UNREAD` | `FULL_TEXT_CHECKED` |
-| CORE | [DUSt3R: Geometric 3D Vision Made Easy](../2024/CVPR/2024_CVPR_DUSt3R-Geometric-3D-Vision-Made-Easy/01_overview.md) | 2024 / CVPR | `UNREAD` | `FULL_TEXT_CHECKED` |
+| CORE | [VLFM: Vision-Language Frontier Maps for Zero-Shot Semantic Navigation](../2024/ICRA/2024_ICRA_VLFM-Vision-Language-Frontier-Maps-for-Zero-Shot-Semantic/01_overview.md) | 2024 / ICRA | `UNREAD` | `FULL_TEXT_CHECKED` |
+| CORE | [Beyond the Nav-Graph: Vision-and-Language Navigation in Continuous Environments](../2020/ECCV/2020_ECCV_Beyond-the-Nav-Graph-Vision-and-Language-Navigation-in-Con/01_overview.md) | 2020 / ECCV | `UNREAD` | `FULL_TEXT_CHECKED` |
 
-### Active and embodied 3D Vision — 19
+### Active and embodied 3D Vision — 22
 
 | Tier | Paper | Year / Venue | Status | Evidence |
 |---|---|---|---|---|
+| NEXT | [LoGoPlanner: Localization Grounded Navigation Policy with Metric-aware Visual Geometry](../2026/ICRA/2026_ICRA_LoGoPlanner-Localization-Grounded-Navigation-Policy-with-M/01_overview.md) | 2026 / ICRA | `UNREAD` | `ABSTRACT_CHECKED` |
+| NEXT | [Vision-and-Language Navigation: Interpreting Visually-Grounded Navigation Instructions in Real Environments](../2018/CVPR/2018_CVPR_Vision-and-Language-Navigation-Interpreting-Visually-Groun/01_overview.md) | 2018 / CVPR | `UNREAD` | `FULL_TEXT_CHECKED` |
+| NEXT | [PointNet: Deep Learning on Point Sets for 3D Classification and Segmentation](../2017/CVPR/2017_CVPR_PointNet-Deep-Learning-on-Point-Sets-for-3D-Classification/01_overview.md) | 2017 / CVPR | `UNREAD` | `FULL_TEXT_CHECKED` |
+| NEXT | [DROID-SLAM: Deep Visual SLAM for Monocular, Stereo, and RGB-D Cameras](../2021/NeurIPS/2021_NeurIPS_DROID-SLAM-Deep-Visual-SLAM-for-Monocular-Stereo-and-RGB-D/01_overview.md) | 2021 / NeurIPS | `UNREAD` | `FULL_TEXT_CHECKED` |
 | NEXT | [Where2Act: From Pixels to Actions for Articulated 3D Objects](../2021/ICCV/2021_ICCV_Where2Act-From-Pixels-to-Actions-for-Articulated-3D-Object/01_overview.md) | 2021 / ICCV | `UNREAD` | `FULL_TEXT_CHECKED` |
 | NEXT | [FlowBot3D: Learning 3D Articulation Flow to Manipulate Articulated Objects](../2022/RSS/2022_RSS_FlowBot3D-Learning-3D-Articulation-Flow-to-Manipulate-Arti/01_overview.md) | 2022 / RSS | `UNREAD` | `FULL_TEXT_CHECKED` |
 | NEXT | [Ditto: Building Digital Twins of Articulated Objects from Interaction](../2022/CVPR/2022_CVPR_Ditto-Building-Digital-Twins-of-Articulated-Objects-from-I/01_overview.md) | 2022 / CVPR | `UNREAD` | `FULL_TEXT_CHECKED` |
@@ -56,14 +68,15 @@ ICP → PointNet → DROID-SLAM/3DGS/DUSt3R/VGGT → Dense Object Nets/NDF/Dense
 | NEXT | [HAMMER: Heterogeneous, Multi-Robot Semantic Gaussian Splatting](../2025/RA-L/2025_RA-L_HAMMER-Heterogeneous-Multi-Robot-Semantic-Gaussian-Splatti/01_overview.md) | 2025 / RA-L | `UNREAD` | `FULL_TEXT_CHECKED` |
 | NEXT | [VISTA: Open-Vocabulary, Task-Relevant Robot Exploration with Online Semantic Gaussian Splatting](../2026/ICRA/2026_ICRA_VISTA-Open-Vocabulary-Task-Relevant-Robot-Exploration-with/01_overview.md) | 2026 / ICRA | `UNREAD` | `FULL_TEXT_CHECKED` |
 | NEXT | [RoboRefer: Towards Spatial Referring with Reasoning in Vision-Language Models for Robotics](../2025/NeurIPS/2025_NeurIPS_RoboRefer-Towards-Spatial-Referring-with-Reasoning-in-Visi/01_overview.md) | 2025 / NeurIPS | `UNREAD` | `FULL_TEXT_CHECKED` |
-| NEXT | [VLFM: Vision-Language Frontier Maps for Zero-Shot Semantic Navigation](../2024/ICRA/2024_ICRA_VLFM-Vision-Language-Frontier-Maps-for-Zero-Shot-Semantic/01_overview.md) | 2024 / ICRA | `UNREAD` | `FULL_TEXT_CHECKED` |
 | NEXT | [Volumetric Environment Representation for Vision-Language Navigation](../2024/CVPR/2024_CVPR_Volumetric-Environment-Representation-for-Vision-Language/01_overview.md) | 2024 / CVPR | `UNREAD` | `FULL_TEXT_CHECKED` |
 | NEXT | [IGL-Nav: Incremental 3D Gaussian Localization for Image-goal Navigation](../2025/ICCV/2025_ICCV_IGL-Nav-Incremental-3D-Gaussian-Localization-for-Image-goa/01_overview.md) | 2025 / ICCV | `UNREAD` | `FULL_TEXT_CHECKED` |
 | NEXT | [Move to Understand a 3D Scene: Bridging Visual Grounding and Exploration for Efficient and Versatile Embodied Navigation](../2025/ICCV/2025_ICCV_Move-to-Understand-a-3D-Scene-Bridging-Visual-Grounding-an/01_overview.md) | 2025 / ICCV | `UNREAD` | `FULL_TEXT_CHECKED` |
 
 <!-- READING_QUEUE:END -->
 
-## 2026-09-02 Curation Update
+## Historical curation — 2026-09-02
+
+아래는 해당 날짜의 변경 이력이다. 현재 membership과 수량은 위 generated queue를 따른다.
 
 `VLFM`, `Volumetric Environment Representation`, `IGL-Nav`, `Move to Understand`를 `NEXT`에 반영했다. 이들은 3D map/reconstruction을 navigation, image-goal localization, active exploration의 decision loop에 연결한다. 반대로 `VGGT`, `Open3DSG`, `EmbodiedSplat`은 generic geometry/scene representation의 가치가 크지만 현재 reported robot behavior contribution이 제한되어 `REFERENCE`로 이동했다.
 
@@ -119,10 +132,21 @@ ICP → PointNet → DROID-SLAM/3DGS/DUSt3R/VGGT → Dense Object Nets/NDF/Dense
 | passive 3D input → [ActiveVLA](../2026/CVPR/2026_CVPR_ActiveVLA-Injecting-Active-Perception-into-Vision-Language/01_overview.md) | 관측된 geometry를 소비하는 policy에서 task-relevant view를 직접 선택하는 perception–action loop로 이동한다. | 추가 view의 sensing cost와 action decision value를 동일 budget에서 평가하는가 |
 | [RLBench](../2020/RA-L/2020_RA-L_RLBench-The-Robot-Learning-Benchmark-and-Learning-Environm/01_overview.md) → [Perceiver-Actor](../2023/CoRL/2023_CoRL_Perceiver-Actor-A-Multi-Task-Transformer-for-Robotic-Manip/01_overview.md) / [RVT](../2023/CoRL/2023_CoRL_RVT-Robotic-View-Transformer-for-3D-Object-Manipulation/01_overview.md) | 표준화된 multi-task RGB-D manipulation suite가 voxel 및 multi-view 3D action representation을 비교하는 공통 evaluation substrate가 된다. | simulator success가 real sensing noise, calibration error와 contact robustness를 얼마나 예측하는가 |
 
+## 2026-10-23 근거 통합
+
+아래는 2026-10-22까지의 registry/source 감사와 후보 검토를 연결한 연구자 해석이다. 새 정독·효과 검증·직접 citation 관계의 확인을 뜻하지 않는다. Paper별 본문 확인 범위는 overview 및 연결된 dossier를 따른다.
+
+| 비교 축 | 등록된 선행 | 현재 남길 구분 |
+|---|---|---|
+| C1: active perception의 직접 선행 | [ActiveAlign](../2026/arXiv/2026_arXiv_Look-Before-You-Act-Bridging-Active-Perception-and-Vision/01_overview.md) (2026 arXiv); [EyeRobot 2.0](../2026/arXiv/2026_arXiv_EyeRobot-2.0-Active-Gaze-for-Precise-Manipulation-without/01_overview.md) (2026 arXiv) | 추가 관측과 policy adaptation의 결합이 이미 있다. 이미지 개선을 native continuation 개선으로 자동 연결하지 않는다. |
+| D1/D2: 행동에 필요한 geometry | [WBAG](../2026/arXiv/2026_arXiv_WBAG-A-Whole-Body-and-Attached-Geometry-Safety-Framework-f/01_overview.md) (2026 arXiv); [Cooperative Grasping](../2026/RA-L/2026_RA-L_Cooperative-Grasping-for-Collective-Object-Transport-in-Co/01_overview.md) (2026 RA-L) | 공간 표현의 완성도보다 correction 선택·collision·운반 가능한 grasp에 필요한 정보와 비용을 비교한다. |
+
 ## Open Questions
 
-- Robot policy에 필요한 최소 3D state는 dense reconstruction인가, object-centric map인가, implicit memory인가?
-- Spatial memory의 uncertainty와 stale state를 어떻게 표현하고 갱신할 것인가?
-- 3D-aware VLA의 이득이 representation 때문인지 추가 sensor/data 때문인지 어떻게 분리할 것인가?
-- Registration confidence와 pose covariance가 downstream planner/controller의 intervention threshold로 전달되는가?
-- ICP식 geometric consistency와 learned semantic correspondence가 충돌할 때 어느 신호를 우선해야 하는가?
+현재 후보 판정은 [주제별 요약](../work/research_candidates/summaries/README.md)을 따른다. 아래 질문은 `CURATION-HYPOTHESIS`이며 재개 승인이 아니다.
+
+| 질문 | 구별할 예측 | 최소 대조·중단 조건 | 근거/판정 |
+|---|---|---|---|
+| C1 정보/행동 비용 | 관측 primitive의 정보 이득이 같은 시간·자세의 wait/move 대조 이후에도 남는가? | 추가 sensor/data·aligned adaptation을 통제한다. Native base competence와 물리 관측 primitive 미확보 상태를 유지한다. | [검토 근거](../work/research_candidates/2026-10-20_vla_rl/C1_REVIEW.md) |
+| Stale spatial memory | Fresh/stale/masked memory에서 행동이 실제로 달라지고 uncertainty가 intervention threshold를 보정하는가? | Cache 존재를 visual memory로 해석하지 않는다. RP-3는 RETIRED이며 history·정보 비용·cause attribution을 다시 갖춰야 한다. | [검토 근거](../work/research_candidates/summaries/RP3_MEMORY_EXPIRY.md) |
+| Geometry의 action utility | 동일 policy/planner에서 pose noise·scale error·map staleness를 분리하면 dense/object-centric/implicit state의 순위가 달라지는가? | Registration covariance·semantic correspondence 충돌을 downstream collision/contact·recovery로 평가한다. Reconstruction metric만으로 승격하지 않는다. | 기존 track 비교의 연구자 질문; native 효과 미검증 |

@@ -1,100 +1,53 @@
-# Registry Work
+# Work — 근거·검증·유지보수
 
-- Updated: 2026-09-04 KST
+- Updated: 2026-10-23 KST
 
-이 디렉토리는 registry source, 반복 실행 가능한 유지보수 도구, 날짜별 update log를 관리한다. Python 도구는 `scripts/`에 모아두며, 모든 active command는 PDF availability를 중요도나 완료 기준으로 사용하지 않는다.
+저장소 루트는 paper registry다. `work/`에는 문헌 운영 코드, source provenance, 후보별 상세 검토와 실험 근거를 분리한다. 활성 순서는 [TODO](../TODO.md), 연구 판단은 [주제별 단일 요약](./research_candidates/summaries/README.md)을 따른다.
 
-## Active tools
+| 경로 | 보존할 내용·수정 원칙 |
+|---|---|
+| [scripts](./scripts/) | 현행 registry 생성·audit·review 도구. Note migration/전체 재생성은 별도 검토 없이 실행하지 않는다. |
+| [sources](./sources/) | Canonical manifest/schema, admission·full-text/source 감사, 생성 catalog/view. 당시 cohort를 현재 수로 소급 변경하지 않는다. |
+| [research_candidates](./research_candidates/) | 주제별 summary 1개와 독립 source ledger·claim contract·실제 검토. D1/D3/E1 단계별 검증은 각 `VALIDATION.md`에 통합했다. |
+| [experiments](./experiments/README.md) | 실제 실행의 driver·manifest·raw evidence. 과거 driver를 최신 실행 명령처럼 사용하지 않는다. |
+| [portable](./experiments/portable/README.md) | 다른 위치/컴퓨터에서 재분석할 Docker entrypoint, hash·의존성·연구 gate. |
+| [update](./update/) | 날짜별 작업 이력·검증. [과거 TODO](./update/TASK_HISTORY_2026-10-22.md)는 역사이며 활성 queue가 아니다. |
 
-- `scripts/audit_repository.py`: read-only 전체 무결성 검사
-- `scripts/register_papers.py`: `--input` JSON을 검사하며 기본은 dry-run, `--apply`일 때만 신규 논문과 5종 curation note 등록; paper metadata는 `01_overview.md`에만 쓰고 나머지 note는 pointer를 사용
-- `scripts/build_reading_tiers.py`: tier, reading plan, tracker 자동 필드와 synthesis queue 재생성
-- `scripts/normalize_taxonomy.py`: canonical category/tag를 manifest, registry와 note header에 반영
-- `scripts/reconcile_registry.py`: review manifest·note evidence·tracker evidence를 맞추고 curation role/facet, source scope, provenance가 있는 고신뢰 lineage/dependency relation을 manifest에 반영; sparse relation은 기존 confidence를 보존하면서 basis/source/evidence scope/date를 보강한다. `--backfill-priority-rationales` 또는 `--backfill-reference-archive-rationales`를 명시할 때 해당 tier의 pending rationale을 paper-specific 문장으로 기록
-- `scripts/build_registry_views.py`: manifest와 기존 cue catalog에서 하나의 resource view, relation-aware 검색용 paper index, 통계 view를 생성
-- `scripts/migrate_registry_schema.py`: 기존 manifest에 stable paper ID, public identifiers, publication/source/artifact 분리, canonical primary track, curation와 provenance field를 추가; 기본은 dry-run
-- `scripts/build_registry_catalogs.py`: `04_evaluation.md`의 benchmark/metric cue를 paper ID에 연결한 탐색용 catalog 생성; 모든 reference는 `cue_only`
-- `scripts/enrich_registry_metadata.py`: 전체 registry의 `evaluation_profile`, `reproducibility`, `lineage_profile`을 기존 note·manifest·cue catalog·curated relation에서 보수적으로 생성; unresolved claim과 cue-only 연결을 verified fact로 승격하지 않음
-- `scripts/registry_schema.py`: manifest schema 상수, ID/source/venue/track helper와 dependency-free record validation
-- `scripts/build_lit_survey.py`: 역사적 전체 build helper. 인자 없이 read-only이며 mutation은 각각 명시적 flag가 필요하다.
-- `scripts/migrate_problem_notes.py`: 전체 `02_problem.md`에서 paper metadata를 제거하고 공통 formulation-first schema로 정규화; 현재 CORE/NEXT papers는 문제·model·objective·constraint·failure boundary profile을 채운다. 기본은 dry-run이며 `--apply`일 때만 기록한다.
-- `scripts/migrate_method_notes.py`: 전체 `03_method.md`에서 반복 metadata를 제거하고 pipeline/objective/variables/runtime/training-inference/evaluation-link schema로 정규화; 현재 CORE/NEXT papers는 method profile과 04 baseline/ablation 연결을 채운다. 기본은 dry-run이며 `--apply`일 때만 기록한다.
-- `scripts/migrate_evaluation_notes.py`: 전체 `04_evaluation.md`에서 반복 metadata를 제거하고 evaluation type/scope, experimental matrix, dataset role, embodiment/environment, metric, baseline fairness, ablation, result, failure, statistics/reproducibility schema로 정규화; 현재 CORE/NEXT papers는 기존 source cue와 problem/method profile을 연결해 상세 audit를 채운다. 기본은 dry-run이며 `--apply`일 때만 기록한다.
-- `scripts/enrich_remaining_notes.py`: CORE/NEXT를 제외한 639편의 `02_problem.md`, `03_method.md`, `04_evaluation.md`를 domain-specific formulation bridge, module pipeline, interface, evaluation matrix와 source-bounded verification field로 확장한다. tracked legacy cue와 `01_overview.md`를 사용하며, PDF를 다운로드하거나 reading status/evidence를 올리지 않는다. 기본은 dry-run이며 `--apply`일 때만 기록한다.
-- `scripts/download_fulltext_pdfs.py`: `--tiers CORE,NEXT`처럼 지정한 tier의 paper를 대상으로 task-scoped PDF를 다운로드하고 PDF magic/page validity를 검증한다. `--paper-ids`로 단일 source를 재검증할 수 있으며, 임시 캐시만 사용하고 tier, reading status, evidence level은 변경하지 않는다.
-- `scripts/review_fulltext_notes.py`: 검증된 PDF 본문을 PyMuPDF/pdftotext로 추출하고 필요한 경우 tesseract OCR로 보완한 뒤, page/section anchor와 함께 `02_problem.md`–`04_evaluation.md`를 갱신한다. 기본은 dry-run이며 `--apply`일 때만 note와 compact manifest를 기록한다.
-- `scripts/review_core_next_fulltext.py`: 지정한 tier의 papers를 대상으로 본문 evidence cue를 추출해 `01_overview.md`–`05_insights.md`를 갱신한다. PDF가 공개되지 않은 경우 official source exception을 명시하며, tier·reading status·tracker evidence는 변경하지 않는다. 기본은 dry-run이며 `--apply`일 때만 기록한다.
-- `scripts/semantic_qa_core_next.py`: CORE/NEXT 311편의 검증된 PDF를 section-aware selector와 OCR fallback으로 재검토하고, generic fallback·잘못 선택된 failure cue·paper-specific method/evaluation/research question을 보정한다. tier·reading status·tracker evidence는 변경하지 않으며, `--apply` 시 5개 표준 note와 semantic QA report만 기록한다.
-- `scripts/audit_note_artifacts.py`: 950개 paper folder의 5개 standard note를 읽기 전용으로 검사하고, 명백한 legacy PDF-extraction artifact만 `--apply`로 보수적으로 정리한다. PDF 다운로드·note 재생성·reading status 변경은 하지 않으며 audit 결과는 `sources/note_artifact_audit_2026-09-02.json`에 남긴다.
-- `scripts/migrate_insights_notes.py`: 기존 `05_insights.md`를 evidence-bounded `Paper-supported conclusion` / `Researcher interpretation` schema로 이관; 기본은 dry-run이며 `--apply`일 때만 기록한다.
-- `scripts/taxonomy.py`: active tool들이 공유하는 canonical category/tag 규칙
+## 보존과 정리
 
-## Sources
+완료된 일회성 augmentation·PDF retry·scaffold script, 사용되지 않는 ICRA/OpenReview 후보 dump와 bytecode cache를 제거했다. 과거 JSON report 16개는 [한 파일](./sources/legacy_maintenance_reports.json)로 통합했다. [삭제/병합 ledger](./sources/workspace_cleanup_2026-10-23.json)는 원래 경로·SHA256·이유·대체 위치를 기록한다.
 
-- `sources/papers.json`: 현재 950편 registry metadata의 canonical manifest
-- `sources/registry.schema.json`: structured manifest의 JSON Schema; legacy flat fields는 호환성을 위해 허용
-- `sources/registry_meta.json`: manifest schema/count/identity/version/evidence policy metadata
-- `papers.json`의 `evaluation_profile` / `reproducibility` / `lineage_profile`: 전체 paper에 대한 구조화된 evaluation protocol cue, artifact/reproduction audit, lineage coverage profile. profile은 note-derived audit view이며 paper claim이나 exhaustive citation graph가 아님
-- `sources/resources.json`: benchmark/dataset·metric·code/project를 함께 보여주는 생성 resource view; benchmark/metric 항목은 `cue_only`, code/project는 manifest link일 뿐 재현성 보장이 아님
-- `papers.json`의 `relations`: directed paper lineage/dependency edges의 canonical store. `from` paper의 relation이 `paper_id` target을 가리키며, 관리 edge는 `type`, `confidence`, `basis`, `source`, `evidence_scope`, `reviewed_on`을 함께 가진다. 이는 exhaustive citation graph가 아니며, `baseline_for`는 baseline paper → 이를 평가한 paper 방향이다.
-- `sources/benchmark_catalog.json`, `sources/metric_catalog.json`: evaluation note cue 기반 paper-ID navigation catalog. 역할·split·정의의 최종 근거가 아님
-- `sources/fulltext_review_manifest.json`: PDF 본문 검토의 paper ID, source, hash, page 수, 추출 방식/품질, title match와 evidence count를 보존하는 compact audit manifest. 원본 PDF 캐시는 canonical source가 아니다.
-- `sources/fulltext_core_next_review_manifest.json`: 현재 CORE/NEXT 311편 full-text/source audit, 추출 품질, page/section evidence count와 source exception을 보존하는 compact manifest. 작업용 PDF 캐시는 검증 후 삭제되며 canonical source가 아니다.
-- `sources/fulltext_reference_reinforcement_2026-09-02_review_manifest.json`: 현재 REFERENCE 6편에 대한 별도 targeted full-text audit manifest. intensive reading complement로 해석하지 않는다.
-- `sources/fulltext_all_review_manifest_2026-09-02.json`: 전체 950편의 `01_overview.md`–`04_evaluation.md` 본문 검토 범위, source/hash, page 수, 추출 방식·품질, title match와 note 작성 수를 보존하는 최신 audit manifest. 작업용 PDF 캐시는 검증 후 삭제되며 canonical source가 아니다.
-- `sources/fulltext_insights_review_manifest_2026-09-03.json`: 기존 Abstract/Curation-only 634편의 `05_insights.md` PDF 본문 보강 범위, source/hash, page 수, 추출 방식·품질과 note 작성 수를 보존하는 targeted audit manifest. `reconcile_registry.py`는 이를 paper-level review와 분리해 `provenance.note_review["05_insights.md"]`로 연결한다. 작업용 PDF 캐시는 검증 후 삭제되며 canonical source가 아니다.
-- `sources/core_next_semantic_qa_2026-09-03.json`: CORE/NEXT 311편의 PDF-body semantic cross-check 범위, OCR/text extraction, title overlap, section anchor, generic-marker before/after와 source-boundary 예외를 보존하는 QA report.
-- `sources/note_artifact_audit_2026-09-02.json`: standard note의 legacy extraction artifact 검사 범위, before/after finding과 보수적 cleanup 결과를 보존하는 audit report.
-- `sources/imports/`: 과거 batch별 admission metadata
-- `sources/candidates/`: screening에 사용한 broad candidate census. 등록 논문 목록이 아니다.
-- `../research/REGISTRY_INDEX.csv`, `../research/REGISTRY_STATS.md`: manifest·tier·tracker에서 생성되는 검색/진단 view. 직접 수정하지 않는다.
+`sources/candidates/cvf_candidates.json`과 `sources/imports/`는 현행 `build_lit_survey.py` 입력이다. Full-text/QA manifest, 사용자 읽기 기록, 실험 원시 결과·실행 당시 driver/hash는 재검토 근거이므로 보존한다. 큰 파일이라는 이유만으로 삭제하지 않는다. 모델·dataset·실험 dependency는 Docker 내부에서만 확보한다.
 
-## Archive
+<a id="safe-workflow"></a>
 
-- `scripts/archive/`: 완료된 one-off augmentation, PDF retry, CORE scaffold upgrade, synthesis seed와 migration script. 실행 대상으로 간주하지 않는다.
-- `archive/reports/`: 과거 실행 log와 audit snapshot. 현재 상태의 source of truth가 아니다.
-- `update/`: 날짜별 registry·frontier·gap 변경 기록. 최신 update는 이 경로에 작성한다.
+## 변경 범위별 명령
 
-## Safe workflow
+| 작업 | 실행 범위와 주의점 |
+|---|---|
+| 신규 논문 | `register_papers.py --input <json>` dry-run 후 `--apply`. Canonical group을 수정한 뒤 아래 priority/view 절차를 실행한다. Abstract만 확인한 논문에는 `abstract_analysis_v1`과 논문별 분석 필드를 사용한다. |
+| Taxonomy 변경 | `normalize_taxonomy.py`는 즉시 manifest·PAPER·note header를 기록한다. 변경 범위를 먼저 확인한다. 신규 등록 때마다 전체 실행할 필요는 없다. |
+| Schema 변경 | `migrate_registry_schema.py` dry-run 후 검토한 migration만 `--apply`한다. |
+| Benchmark/metric cue 변경 | `build_registry_catalogs.py` dry-run 후 `--apply`, 이어 view를 재생성한다. 모든 자동 연결은 `cue_only`다. |
+| Source/evidence 변경 | 전체 `reconcile_registry.py` dry-run 결과를 검토한다. `--apply`는 evidence·profile·relation을 갱신하므로 priority-only 작업과 구분한다. |
+| 전체 profile 재생성 | `enrich_registry_metadata.py`는 기존 profile을 다시 만든다. Abstract provenance나 수동 profile의 보존 범위를 검토하기 전에는 일반 유지보수에서 실행하지 않는다. |
+| 본문·note 재작성 | `review_*`, `semantic_qa_*`, `migrate_*_notes.py`, `enrich_remaining_notes.py`는 별도 내용 검토 작업이다. 이번 문서 최신화에 일괄 `--apply`하지 않는다. |
+| Extraction artifact | `audit_note_artifacts.py`는 기본 read-only다. 실제 cleanup이 필요한 경우만 검토 후 `--apply --report work/sources/note_artifact_audit_YYYY-MM-DD.json`을 사용해 과거 report를 보존한다. |
+
+`resources.json`은 benchmark/dataset·metric·code/project를 합친 생성 view다. Cue catalog가 바뀌지 않았다면 매번 다시 만들 필요는 없다. `READING_STATUS.csv`의 사용자 status·날짜·분석과 inactive history는 재생성 전후 비교한다. Paper-level `provenance.review`와 note-level `provenance.note_review`는 서로 다른 근거 층이며, source 검토는 사용자의 정독 이력이 아니다.
+
+## Priority-only update
+
+현재 초점은 VLA 기반 manipulation·navigation이며 RL은 선택 사항이다. 실제 tier 조정이 필요할 때만 `build_reading_tiers.py`의 CORE/NEXT group과 paper-specific rationale을 수정한 뒤 다음을 실행한다. Evidence를 다시 조사하지 않는 tier 조정에는 전체 reconcile보다 이 경로를 사용한다.
 
 ```bash
-python3 work/scripts/audit_repository.py
-python3 work/scripts/migrate_registry_schema.py
-python3 work/scripts/migrate_registry_schema.py --apply
-python3 work/scripts/build_registry_catalogs.py
-python3 work/scripts/build_registry_catalogs.py --apply
-python3 work/scripts/register_papers.py --input /path/to/new_papers.json
-python3 work/scripts/register_papers.py --input /path/to/new_papers.json --apply
-python3 work/scripts/normalize_taxonomy.py
 python3 work/scripts/build_reading_tiers.py
-python3 work/scripts/reconcile_registry.py
-python3 work/scripts/reconcile_registry.py --apply
-python3 work/scripts/enrich_registry_metadata.py --apply
-python3 work/scripts/reconcile_registry.py --backfill-priority-rationales
-python3 work/scripts/reconcile_registry.py --apply --backfill-priority-rationales
-python3 work/scripts/reconcile_registry.py --backfill-reference-archive-rationales
-python3 work/scripts/reconcile_registry.py --apply --backfill-reference-archive-rationales
-python3 work/scripts/build_registry_views.py
+python3 work/scripts/reconcile_registry.py --priorities-only
+python3 work/scripts/reconcile_registry.py --priorities-only --apply
 python3 work/scripts/build_registry_views.py --apply
-python3 work/scripts/audit_note_artifacts.py
-python3 work/scripts/audit_note_artifacts.py --apply
-python3 work/scripts/review_core_next_fulltext.py --tiers CORE,NEXT,REFERENCE,ARCHIVE
-python3 work/scripts/review_core_next_fulltext.py --tiers CORE,NEXT,REFERENCE,ARCHIVE --apply
-python3 work/scripts/semantic_qa_core_next.py --ocr-low-confidence
-python3 work/scripts/semantic_qa_core_next.py --ocr-low-confidence --apply
-python3 work/scripts/migrate_problem_notes.py
-python3 work/scripts/migrate_problem_notes.py --apply
-python3 work/scripts/migrate_method_notes.py
-python3 work/scripts/migrate_method_notes.py --apply
-python3 work/scripts/migrate_evaluation_notes.py
-python3 work/scripts/migrate_evaluation_notes.py --apply
-python3 work/scripts/migrate_insights_notes.py
-python3 work/scripts/migrate_insights_notes.py --apply --sync-evidence
+python3 work/scripts/test_reading_history.py
 python3 work/scripts/audit_repository.py
+git diff --check
 ```
 
-`resources.json`은 resource를 별도 catalog 여러 개로 분산하지 않기 위한 통합 view다. benchmark/metric의 기존 cue catalog를 갱신하지 않는 한 `build_registry_catalogs.py`를 매번 실행할 필요는 없다. `READING_STATUS.csv`의 사용자 `status`와 개인 분석 필드는 `reconcile_registry.py`가 변경하지 않으며, evidence만 review manifest와 정합화한다. paper-level `provenance.review`와 note-level `provenance.note_review`는 서로 다른 provenance 층으로 유지한다. `audit_repository.py`는 상태별 최소 분석 필드, evidence level, 완료 논문의 synthesis matrix 연결과 note-review manifest attachment도 함께 검사한다.
-
-Lineage/dependency relation은 논문을 많이 연결하기 위한 citation dump가 아니다. 본문·공식 초록·공식 project page 또는 명시적 version title로 방향과 근거를 확인할 수 있는 연결만 seed하며, `inferred`는 representation/method family 수준의 해석임을 표시한다. `REGISTRY_INDEX.csv`의 `outgoing_relations`와 `incoming_relation_count`, `REGISTRY_STATS.md`의 relation type/confidence/evidence-scope 표는 이 연결을 검색·감사하기 위한 파생 view다.
-
-기존 note를 다시 만드는 명령은 기본 workflow에 포함하지 않는다. `build_lit_survey.py --overwrite-notes`는 명시적인 전체 재생성 승인이 있을 때만 사용한다.
+`research/READING_STATUS_HISTORY.csv`는 비활성 논문의 읽기 기록이며 새 읽기 목록이 아니다. Tier 재생성 전후 active/history 합집합의 사용자 입력을 비교한다. 과거 full-text/semantic QA manifest의 당시 311편 범위는 역사적 evidence로 보존하고 현재 322편에 맞춰 소급 변경하지 않는다.

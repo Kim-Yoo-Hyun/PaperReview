@@ -9,7 +9,7 @@
 - Year/Venue: 2025 / RSS
 - Authors: not duplicated here when not verified in the registry source
 - Primary track: VLA and generalist robot policies
-- Tier: NEXT
+- Tier: CORE
 - Tags: VLA, locomotion, Navigation, legged robot, hierarchical policy, language grounding
 - Official paper: https://www.roboticsproceedings.org/rss21/p018.html
 - Full-text retrieval: https://arxiv.org/pdf/2412.04453
