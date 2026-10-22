@@ -1,8 +1,8 @@
 # 연구 작업 TODO / 다음 세션 인계
 
 - Updated: 2026-10-23 KST
-- 직전 완료: **ORG-R1 DONE** — research/synthesis 합성·중복 통합·work 정리·Docker 이동성 검증. 그전 DOC-R1 / REG-R1에서 후보 16개 요약·외부 47편 등록.
-- 현재 작업: PUB-R1 / registry 최종 동기화와 Git 게시. 이후 clone 재분석 또는 E2-R1/E1-R2/D3-R2의 새 연구 근거 확보. Native 학습 자동 재개 없음.
+- 직전 완료: **PUB-R1 DONE** — 1,037편 registry·누적 연구 문서·Docker 재분석 자산을 origin/main에 게시하고 실제 원격 clone의 무결성·입력 hash를 검증했다. 앞선 ORG-R1 / DOC-R1 / REG-R1 결과를 포함한다.
+- 다음 작업: 새 컴퓨터의 clone 재분석, DOC-QA1의 원문 대조, 또는 E2-R1/E1-R2/D3-R2의 새 연구 근거 확보. Native 학습 자동 재개 없음.
 - 상세 과거 작업 ID·날짜·완료 근거는 [2026-10-22 인계 보존본](./work/update/TASK_HISTORY_2026-10-22.md)에 있다. 읽기 순서는 [READING_PLAN](./research/READING_PLAN.md), 후보 판단은 [단일 요약](./work/research_candidates/summaries/README.md)을 따른다.
 
 ## 다음 행동
@@ -10,8 +10,8 @@
 | ID | 상태 | 해야 할 일·완료 기준 | 근거 |
 |---|---|---|---|
 | ORG-R1 | DONE | 7개 synthesis 보강·39개 파일 삭제/병합·cache 정리. C3 ARM64/AMD64 Docker와 local clone 검사 통과. 논문·읽기·실험 근거 보존 | [작업 report](./work/update/WORKSPACE_UPGRADE_2026-10-23.md) |
-| PUB-R1 | IN_PROGRESS | 생성 view·무결성·보존 검증 후 현재 registry/workspace를 commit하고 origin/main에 push | [게시 기록](./work/update/UPDATES_2026-10-23.md) |
-| PORT-R1 | QUEUED | 게시된 revision을 새 컴퓨터에서 clone하고 `check → build → test → replay-c3` 실행 | [실행 안내](./work/experiments/portable/README.md). 새 물리 컴퓨터의 GPU qualification과는 별개 |
+| PUB-R1 | DONE | Content commit `d5d60510`을 origin/main에 게시. 실제 원격 clone에서 registry 1,037편·입력 3개·실행 코드 hash 검증 통과 | [게시 기록](./work/update/UPDATES_2026-10-23.md) |
+| PORT-R1 | READY | 게시된 revision을 새 컴퓨터에서 clone하고 `check → build → test → replay-c3` 실행 | [실행 안내](./work/experiments/portable/README.md). 현재 컴퓨터의 원격 clone 검사는 완료; 새 물리 컴퓨터의 실행/GPU qualification은 별도 |
 | DOC-QA1 | QUEUED | 과거 PDF 추출 cue의 제어문자 잔여물을 원문과 대조해 수정 | [파일별 목록](./work/sources/publication_validation_2026-10-23.json). 내용 추정·일괄 문장 재생성 없이 확인 |
 | E2-R1 | WAITING_EVIDENCE | 일관된 task–checkpoint–normalizer–controller–time–evaluator packet 및 기존 대안과 갈리는 예측 확보 | [현재 명세](./work/research_candidates/2026-10-22_e2_buildup/QUALIFICATION_SPEC.json) |
 | E1-R2 | WAITING_EVIDENCE | Source episode join·command/time/scene·정상 정렬 이후 추가 effect 정보와 두 로봇의 native 평가 경로 확보 | [현재 요건](./work/research_candidates/2026-10-22_e1_buildup/R1_EVIDENCE_REQUIREMENTS.json) |

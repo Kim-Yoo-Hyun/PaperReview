@@ -707,7 +707,7 @@
     "git_diff_cached_check": "PASS",
     "registration_renderer_compile": "PASS"
   },
-  "publication_status": "READY_TO_COMMIT",
+  "publication_status": "PUSHED_AND_REMOTE_CLONE_VERIFIED",
   "repository_audit": {
     "papers": 1037,
     "categories": 23,
@@ -815,5 +815,59 @@
     "work/research_candidates/2026-10-21_d1_buildup/nonexperimental_sources_2026-10-22.json",
     "work/update/UPDATES_2026-10-21.md"
   ],
-  "note_semantic_changes": 0
+  "note_semantic_changes": 0,
+  "publication": {
+    "date": "2026-10-23",
+    "verified_utc": "2026-10-22T16:12:12.319250+00:00",
+    "remote": "https://github.com/Kim-Yoo-Hyun/PaperReview.git",
+    "branch": "main",
+    "published_content_commit": "d5d605100dd00c1ddc1b531169f4ded69e63a7aa",
+    "remote_head_matched": true,
+    "remote_shallow_clone": true,
+    "clone_path_contains_spaces": true,
+    "clone_worktree_clean": true,
+    "clone_repository_audit": {
+      "papers": 1037,
+      "categories": 23,
+      "tier_counts": {
+        "CORE": 47,
+        "NEXT": 275,
+        "REFERENCE": 473,
+        "ARCHIVE": 242
+      },
+      "intensive": 322,
+      "inactive_reading_history": 47,
+      "standard_note_files": 5185,
+      "catalog_entries": {
+        "benchmark": 51,
+        "metric": 29
+      },
+      "combined_resources": 521,
+      "registry_index_rows": 1037,
+      "markdown_files_checked": 5323,
+      "markdown_links_checked": 9454,
+      "comparison_matrix_rows": 106,
+      "completed_matrix_rows": 5,
+      "errors": [],
+      "warnings": []
+    },
+    "portable_inputs_sha256_verified": [
+      {
+        "path": "work/experiments/vla_rl_c3_logits/evidence/native_logits.npz",
+        "sha256": "99c6fef4fab42610c3839a6dd6ac57db0169002a88af588a848bdfff32d612e4"
+      },
+      {
+        "path": "work/experiments/vla_rl_c3_logits/evidence/logits_analysis.json",
+        "sha256": "e019ac32f213de9d1920021eff3ee739b7ebb4dd090733185d77e0faccf8f7ff"
+      },
+      {
+        "path": "work/experiments/vla_rl_c3_logits/evidence/tail_audit.json",
+        "sha256": "5459a445259213bca572f0290b952df768708d3f5dcce3d2907d320e1ed37893"
+      }
+    ],
+    "runtime_files_match_docker_tested_hashes": true,
+    "portable_check_from_outside_repository": "PASS",
+    "policy_or_replay_execution_in_this_check": false,
+    "scope": "Full remote clone + registry integrity and replay input/runtime hashes; no new numerical replay or GPU qualification"
+  }
 }
