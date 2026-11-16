@@ -1,8 +1,10 @@
 # 현재 연구 주제 — 내용과 재현 방법
 
-Updated: 2026-11-12 KST. **11개 주제: 기존 8개 + hindsight 목표 선택·과제 배분·접촉 적응 탐색**을 두 폴더 구조로 관리한다. [기존 8개 우선순위·가능성 판정](#candidate-priority)과 [HINDSIGHT 초기 판정](#hindsight-exploration)·[과제 배분 초기 판정](#additional-gaps-2026-11-09)은 이 문서가, 선택한 다음 행동·자원 대기는 [TODO](../../TODO.md)가 관리한다. 논문 읽기 tier는 별도 [READING_PLAN](../../research/READING_PLAN.md)의 영역이다. 기존 6개의 [비실험 상태 감사](#nonexperimental-process-audit)는 당시 범위로 보존한다. 과거 보류·종료 후보는 자동 재개하지 않는다.
+Updated: 2026-11-16 KST. **11개 주제: 기존 8개 + hindsight 목표 선택·과제 배분·접촉 적응 탐색**을 두 폴더 구조로 관리한다. [기존 8개 우선순위·가능성 판정](#candidate-priority)과 [HINDSIGHT 초기 판정](#hindsight-exploration)·[과제 배분 초기 판정](#additional-gaps-2026-11-09)은 이 문서가, 선택한 다음 행동·자원 대기는 [TODO](../../TODO.md)가 관리한다. 논문 읽기 tier는 별도 [READING_PLAN](../../research/READING_PLAN.md)의 영역이다. 기존 6개의 [비실험 상태 감사](#nonexperimental-process-audit)는 당시 범위로 보존한다. 과거 보류·종료 후보는 자동 재개하지 않는다.
 
 **현재 선택 후속:** [지시별 행동 보존 분석](./unified_vla_rl/내용/README.md#langret-n2)을 UNIFIED에 통합했다. N1/N2·P0 실행 준비를 마쳤으며, 실제 검증과 다음 명령은 [재현 문서](./unified_vla_rl/재현%20방법/README.md#langret-p0-preparation)·[TODO](../../TODO.md)가 소유한다. 아래11개는 문서 주제 수이며 실행 가능한 실험 수가 아니다. [REG-R14](../update/REGISTRY_MAINTENANCE_2026-11-12.md)의 선행 등록으로 기존 순위나 연구 gate를 바꾸지 않았다.
+
+**11/16 게시 인계:** 실행 준비 자료를 포함한 registry snapshot을 GitHub에 게시하고 현재 Mac에서 새 원격 clone의 구조·링크·재현 자료236개 bytes를 확인했다(내용 commit `f04a8579`). 이전 날짜별 문서/JSON의 원격 게시 미확인은 당시 기록이다. 호환 NVIDIA 호스트의 clone·image build·native 실험은 새로 확인하지 않았으며 과학적 gate와 자원/구현 대기는 유지한다. 현재 전달 상태는 [REG-R16 게시 기록](../update/REGISTRY_ACCURACY_PSI0_2026-11-16.md#github-반영)을 따른다.
 
 **11/07 기존 8개 내부 비교 보존:** **UNIFIED → VRL → REVISION → FEEDBACK → HANDOFF → SET → RETRIEVAL → CODEC1**. 이는 사용자의 VLA+RL·통합 정책 선호를 반영한 연구 투자 순서이며 논문 채택 확률이나 동시에 실행할 queue가 아니다. UNIFIED의 최소 검증은 자원·구현 대기, VRL·REVISION은 대안이다. **11/07 HINDSIGHT-N2의 내부 비실험 연구 설계·P0 실행 자료 작성을 마쳤으며 native 검증 대기**다. 문서 설계 완료만으로 기존 8개 대비 숫자 순위를 부여하지 않는다. FEEDBACK은 관련 진단에 재사용할 수 있으나 다른 학습 계보·action adapter를 무조건 합치지 않는다.
 
