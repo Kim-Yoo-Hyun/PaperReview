@@ -4,6 +4,8 @@
 > Evidence maturity: `FULL_TEXT_CHECKED`.
 > Analysis basis: full-text PDF body checked on 2026-09-03 (12 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss20/p135.html; PDF retrieval source: https://www.roboticsproceedings.org/rss20/p135.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
+> DOC-QA2 targeted source review: 2026-10-23; PDF pp. 4. 손상 구간·직접 연결된 표 분류만 원문 이미지와 대조했다. 전체 주장 정독·실험 검증·reading status 승격을 뜻하지 않는다. [URL·PDF hash·수정 기록](../../../work/sources/pdf_note_review_followup_2026-10-23.json).
+
 ## Evaluation in One Sentence
 
 PDF body evaluation/result cue (p. 10 (V. EXPERIMENTS AND RESULTS), p. 7 (V. EXPERIMENTS AND RESULTS), p. 8 (V. EXPERIMENTS AND RESULTS), p. 8 (V. EXPERIMENTS AND RESULTS), p. 9 (V. EXPERIMENTS AND RESULTS), p. 9 (V. EXPERIMENTS AND RESULTS)): While the current model yields satisfactory results, exploring higher-dimensional models with improved accuracy could further enhance performance.
@@ -140,7 +142,7 @@ PDF body evaluation/result cue (p. 10 (V. EXPERIMENTS AND RESULTS), p. 7 (V. EXP
 | For each primitive 1-4, we perform 3 trajectories of 20 steps. | p. 8 (V. EXPERIMENTS AND RESULTS) |
 | For each method, we perform 5 offline trajectory optimizations with a horizon of 40 steps. | p. 9 (V. EXPERIMENTS AND RESULTS) |
 | Firstly, our current implementation assumes the provided object configurations are achievable and tracks them as closely as possible. | p. 10 (V. EXPERIMENTS AND RESULTS) |
-| The SEED model relates a measured grasped object displacement xgocf ee = x y θ⊤obtained using the method described in Section IV-A, to a ... | p. 4 (IV. METHODOLOGY) |
+| SEED elasticity model은 object-sensor contact frame의 displacement [x,y,θ]ᵀ와 external wrench [fₓ,fᵧ,τ]ᵀ를 w_ext=Kx로 연결한다. 이 모델만으로 contact/friction feasibility가 보장되지는 않는다. | PDF p. 4 §IV-B Eq. (1); method interface이며 evaluation 결과가 아님 |
 | Here, we follow the SEED approach [22], where they showed that the compliance of the Soft Bubbles sensors can be exploited to turn a ... | p. 4 (IV. METHODOLOGY) |
 | 2) Given the grasped object state xgo and the robot state xee use the tactile compliance model to compute the external wrench applied to ... | p. 5 (IV. METHODOLOGY) |
 | 4) Given the object and robot poses, the external wrench, and the contact forces compute the loss function L and backpropagate the gradients through ... | p. 5 (IV. METHODOLOGY) |

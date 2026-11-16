@@ -4,6 +4,8 @@
 > Evidence maturity: `FULL_TEXT_CHECKED`.
 > Analysis basis: full-text PDF body checked on 2026-09-02 (44 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2306.03310; PDF retrieval source: https://arxiv.org/pdf/2306.03310. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
+> DOC-QA2 targeted source review: 2026-10-23; PDF pp. 3. 손상 구간·직접 연결된 표 분류만 원문 이미지와 대조했다. 전체 주장 정독·실험 검증·reading status 승격을 뜻하지 않는다. [URL·PDF hash·수정 기록](../../../work/sources/pdf_note_review_followup_2026-10-23.json).
+
 ## Paper-supported conclusion
 
 > **Evidence boundary:** The following claims are restricted to selected PDF body sentences, captions and section anchors; exact table/equation values remain to be checked at those anchors.
@@ -58,7 +60,7 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the PDF-described interface and mechanism: (T2) Neural Architecture Design An important research question in LLDM is how to design effective neural architectures to abstract the multi-modal observations (images, language descriptions, and robot states) and transfer ... (p. 4, 2 Background); preserve the objective/update rule: But during training, we perform behavioral cloning [4] with the following surrogate objective function: min π JBC(π) = 1 k k X p=1 E ot,at∼Dp  lp X t=0 L ... (p. 3, 2 Background).
+1. 최소 재현에서는 PDF p. 3 Eq. (2)의 task 평균 behavioral-cloning objective와 observation-history conditioning을 보존한다. 이전 task 데이터 접근 제한을 동일하게 두어 architecture 효과와 replay 정보량을 구분한다. (DOC-QA2 원문 대조)
 2. Use the paper-reported task/data/environment cue: But since PACKNET splits the network into different sub-networks, the essential capacity of the network for learning any individual task is smaller. (p. 8, 5 Experiments).
 3. Compare against the reported or matched baseline: Study on Lifelong Learning Algorithms (Q1, Q3) Table 2 reports the lifelong learning performance of the three lifelong learning algorithms, together with the SEQL and MTL baselines. (p. 8, 5 Experiments).
 4. Report the body metric with its denominator and aggregation: All metrics are computed in terms of success rate, as previous literature has shown that the success rate is a more reliable metric than training loss for manipulation policies [42] ... (p. 6, 5 Experiments).

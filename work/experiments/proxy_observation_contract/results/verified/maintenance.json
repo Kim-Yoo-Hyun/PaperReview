@@ -1,0 +1,117 @@
+{
+  "task_id": "GAP-N3-A",
+  "status": "PASS",
+  "boundary": "Repository and cleanup checks, not native research evidence",
+  "commands": [
+    {
+      "command": "python3 -m py_compile work/scripts/build_reading_tiers.py",
+      "exit_code": 0
+    },
+    {
+      "command": "python3 work/scripts/build_reading_tiers.py",
+      "exit_code": 0
+    },
+    {
+      "command": "python3 work/scripts/audit_repository.py",
+      "exit_code": 0,
+      "papers": 1037,
+      "standard_note_files": 5185,
+      "intensive": 322,
+      "markdown_files_checked": 5352,
+      "markdown_links_checked": 10425,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0
+    },
+    {
+      "command": "sh -n work/experiments/proxy_observation_contract/run_contract.sh",
+      "exit_code": 0
+    }
+  ],
+  "preservation": {
+    "preexisting_dirty_files": 420,
+    "expected_files_changed": [
+      "README.md",
+      "TODO.md",
+      "synthesis/02_rl_il_offline.md",
+      "synthesis/04_vla_generalist.md",
+      "synthesis/README.md",
+      "work/experiments/README.md",
+      "work/update/README.md",
+      "work/update/UPDATES_2026-10-25.md"
+    ],
+    "other_dirty_files_preserved": 412,
+    "preexisting_missing_paths_preserved": 5,
+    "canonical_hashes_preserved": {
+      "PAPER.md": "b492fdb8b6ed5db0200ffa2f9f543a37561e8a454188922faa0b6289736de9e1",
+      "work/sources/papers.json": "9aaf36031bf776d554dd10f8f2f927d60ddd7b44ff02267181325275bcb74f06",
+      "work/sources/registry_meta.json": "1fbb093bf785ca218ead1804f95fdac7fa5d88ac5ed82b019f1766511b1eb56f",
+      "research/READING_TIERS.csv": "8b2ac89fff0d6d56950695d5bfb67daab8fbc51647454fa077beea970bb23f29",
+      "research/READING_STATUS.csv": "276c5531063e93f381de18b45fbf82dfa16703444f39658dfd4bfb10bbc17878",
+      "research/READING_STATUS_HISTORY.csv": "c91b6727a03529ba790447eb5106f5b04cc4364b0c90b3eed1afecf9b700e001"
+    },
+    "contract_code_and_patch_hashes_preserved": true,
+    "new_paths": [
+      "work/experiments/proxy_observation_contract/PROTOCOL.json",
+      "work/experiments/proxy_observation_contract/README.md",
+      "work/experiments/proxy_observation_contract/check_contract.py",
+      "work/experiments/proxy_observation_contract/fixture_api.py",
+      "work/experiments/proxy_observation_contract/results/verified/contract_report.json",
+      "work/experiments/proxy_observation_contract/results/verified/fixture_plan.json",
+      "work/experiments/proxy_observation_contract/results/verified/maintenance.json",
+      "work/experiments/proxy_observation_contract/results/verified/patch_application.json",
+      "work/experiments/proxy_observation_contract/results/verified/runtime_check.json",
+      "work/experiments/proxy_observation_contract/results/verified/source_repair.patch",
+      "work/experiments/proxy_observation_contract/run_contract.sh",
+      "work/experiments/proxy_observation_contract/source_repair.py",
+      "work/experiments/proxy_observation_contract/sources.lock.json",
+      "work/experiments/proxy_observation_contract/test_contract.py",
+      "work/update/PROXY_OBSERVATION_REPAIR_REVIEW_2026-10-25.md"
+    ]
+  },
+  "preserved_parent_evidence_sha256": {
+    "work/update/PROXY_OBSERVATION_CONTRACT_REVIEW_2026-10-25.md": "099901636c8f345f7c9d0ac2e0391da86a50025ed6c66ec8fe8bdf935b8465d8",
+    "work/sources/proxy_observation_contract_review_2026-10-25.json": "7ba5a9a8588c0eaf89b815f28983c640e988fc3c7ba725b5e10b2921c624eba2",
+    "work/update/PROXY_OBSERVATION_QUALIFICATION_REVIEW_2026-10-25.md": "2f4978a758c03503cba5793942a1ee3ffb2a4c29e3935ab0ac822b7eee23f1a4",
+    "work/sources/proxy_observation_qualification_review_2026-10-25.json": "afa1e40e1d75eee8ea45b4bc871e2f629f21f6a910a0cf4d3530a15a48f6939c"
+  },
+  "artifact_sha256": {
+    "check_contract.py": "5cfc0fbdf9a961a8835276998056e510e8528bbd0927c3bbf09cb07fd00883c8",
+    "run_contract.sh": "3d6bdc159f3b17165926ba17007e3576b291de13b62f01ce29dd838712153136",
+    "README.md": "f3dc81780deb3077303036a869f05cd46f1c91ef9a5b9384b30698303143b59a",
+    "test_contract.py": "8a8c5de3317d41270d1b8fb08a2b0f5a0ba4d8569c8b2817f56f95c0e891a94c",
+    "PROTOCOL.json": "44cc33dc0382e4e89d115494509ea848fe530b623f7c59cf7cd5d10615efaf0a",
+    "fixture_api.py": "053979e82680fb016820f68ca90869cb9093cf9874fa1a387290bd967ec90971",
+    "sources.lock.json": "08323c411fb64d20399ab9ddd9af5a3859e753519318f2cca465ea223e413d0a",
+    "source_repair.py": "6bc4356c2d1202dcb45abc6b01de89e649ced14a3efd167513ae8ceb9b779db3",
+    "results/verified/runtime_check.json": "4b81da6d005837d2647ec91ac71d3049be24cd9c994e6d94be6c4666d512a4d2",
+    "results/verified/fixture_plan.json": "6bd8b0c34d961754d1b2071077b77f4e79a53f7ee87acb7bb169979e301877ad",
+    "results/verified/contract_report.json": "e16a159db1d1fe1198df2dcfed8b7f1cd55a07909cf179a3a634e785800242e8",
+    "results/verified/source_repair.patch": "aab11d5abf4fef2daa363299c44d9ce1f7d8b1e9ac8085e220d0db2631e3efeb",
+    "results/verified/patch_application.json": "3ff44b4ed77cadd5e1ec41e4668386c1174b23e86685cb426a1841943684aaa8"
+  },
+  "runtime_cleanup": {
+    "containers_remaining": 0,
+    "new_python_image_reference_removed": true,
+    "existing_images_preserved": [
+      "paper-gap-p3:rvo-c2c46ba ec14bd72a90f"
+    ],
+    "no_docker_prune": true
+  },
+  "temporary_cleanup": {
+    "status": "COMPLETE",
+    "temporary_source_snapshot_files_removed": 7,
+    "duplicate_test_output_files_removed": 3,
+    "pointer_removed": true,
+    "owned_temp_directories_removed": true
+  },
+  "no_host_dependency_installation": true,
+  "pdf_dataset_checkpoint_downloads": 0,
+  "native_episodes": 0,
+  "policy_inference_or_training": false,
+  "registry_or_reading_status_change": false,
+  "git_commit_or_push": false
+}

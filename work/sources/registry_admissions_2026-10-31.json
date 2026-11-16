@@ -1,0 +1,293 @@
+[
+  {
+    "admission_key": "resteer",
+    "title": "ReSteer: Quantifying and Refining the Steerability of Multitask Robot Policies",
+    "venue": "RSS",
+    "page": "https://roboticsproceedings.org/rss22/p143.html",
+    "project": "https://resteer-vla.github.io/",
+    "identifiers": {
+      "arxiv": "2603.17300",
+      "doi": "10.15607/RSS.2026.XXII.143"
+    },
+    "aliases": [
+      "ReSteer"
+    ],
+    "tags": [
+      "Robotics",
+      "VLA",
+      "instruction-switching",
+      "steerability"
+    ],
+    "paper_type": "method",
+    "problem": "표준 초기 상태에서는 각각 가능한 작업도 실행 중 지시를 바꾸면 전환되지 않을 수 있다.",
+    "method": "상태별 task steerability를 측정하고, 전환이 어려운 상태의 추정·전환 구간 데이터 생성·정책 self-refinement를 연결한다.",
+    "interface": "현재 관측과 새 언어 지시 → multitask policy의 행동. 중간 상태에서의 전환 능력과 초기 상태의 작업 능력을 구별한다.",
+    "evaluation": "LIBERO와 실제 로봇의 지시 전환을 평가한다. 공개 repository는 LIBERO 평가·데이터 생성 경로를 제공하지만 로컬 native 실행은 아직 확인하지 않았다.",
+    "role": "현재 부분 지시 수정 후보의 기본 switching 선행이자 최소 실행의 직접 prerequisite다. 단순 task switch나 행동 큐 교체를 신규 기여로 삼지 않도록 NEXT에 추가한다.",
+    "lineage": "OpenVLA·π0 계열의 언어 조건 정책 → ReSteer의 상태별 전환 평가; Hi Robot의 문맥 해석과 비교; Causeway의 접근 가능성 복구와 구별",
+    "question": "기본 task switching이 가능한 상태에서도 부분 수정으로 유지·철회해야 할 제약을 전체 이력 재명시가 충분히 처리하는가?",
+    "minimal_experiment": "기존 R8 단일 지시 전환 IO를 Docker에서 먼저 확인한다. 이후 같은 상태에서 전체 재명시·규칙 갱신·oracle 지시를 비교하는 것은 별도 연구 설계이며 아직 실행하지 않았다.",
+    "verification_questions": "steerability score의 분모·switch timing·초기 능력, estimator와 실제 성공의 관계, 데이터 생성 비용, 제약 유지·철회가 평가에 포함되는 범위",
+    "year": 2026,
+    "category": "VLA and Generalist Robot Policies",
+    "primary_track": "VLA and generalist robot policies",
+    "pdf": "",
+    "publication": {
+      "status": "peer_reviewed",
+      "kind": "conference",
+      "presentation": "unknown",
+      "venue": "RSS",
+      "year": 2026,
+      "venue_year": 2026,
+      "venue_id": "rss"
+    },
+    "sources": {
+      "primary": {
+        "url": "https://roboticsproceedings.org/rss22/p143.html",
+        "kind": "rss",
+        "scope": "paper_specific",
+        "verified_on": "2026-10-31"
+      },
+      "preprint": {
+        "url": "https://arxiv.org/abs/2603.17300",
+        "kind": "arxiv",
+        "scope": "paper_specific",
+        "verified_on": "2026-10-31"
+      },
+      "project": {
+        "url": "https://resteer-vla.github.io/",
+        "kind": "official_project",
+        "scope": "paper_specific",
+        "verified_on": "2026-10-31"
+      },
+      "code": {
+        "url": "https://github.com/ChenZhenY/ReSteer",
+        "kind": "official_code",
+        "scope": "paper_specific",
+        "verified_on": "2026-10-31"
+      },
+      "paper_pdf": null,
+      "venue_verification": {
+        "url": "https://roboticsproceedings.org/rss22/p143.html",
+        "kind": "rss",
+        "scope": "paper_specific",
+        "verified_on": "2026-10-31"
+      }
+    },
+    "artifacts": {
+      "code_status": "released",
+      "data_status": "not_identified",
+      "local_pdf_cache": false
+    },
+    "evidence": "ABSTRACT_CHECKED",
+    "note_format": "abstract_analysis_v1",
+    "source_audit": "2026-10-31 공식 서지/abstract·공개 project/code 소개를 재확인했다. 신규 노트는 abstract 기반이며 기존 연구 검토의 지정 본문/code 확인은 work/sources/instruction_revision_review_2026-10-31.json 및 pre_gpu_buildup_review_2026-10-31.json의 별도 범위다. 사용자 정독·native 실행을 뜻하지 않는다.",
+    "admission_tier": "NEXT",
+    "admission_group": "VLA, cross-embodiment, and long-horizon planning",
+    "relations": [],
+    "curation": {
+      "admission_reason": "현재 부분 지시 수정 후보의 기본 switching 선행이자 최소 실행의 직접 prerequisite다. 단순 task switch나 행동 큐 교체를 신규 기여로 삼지 않도록 NEXT에 추가한다.",
+      "tier_reason": "현재 부분 지시 수정 후보의 기본 switching 선행이자 최소 실행의 직접 prerequisite다. 단순 task switch나 행동 큐 교체를 신규 기여로 삼지 않도록 NEXT에 추가한다.",
+      "rationale_status": "recorded",
+      "rationale_basis": "2026-10-31 instruction revision prerequisite admission; researcher interpretation",
+      "rationale_reviewed_on": "2026-10-31",
+      "scope_status": "active",
+      "roles": [
+        "method"
+      ],
+      "role_basis": "manual admission review",
+      "priority_source_check": {
+        "url": "https://roboticsproceedings.org/rss22/p143.html",
+        "checked_on": "2026-10-31",
+        "scope": "official_abstract_or_project; priority review only"
+      }
+    }
+  },
+  {
+    "admission_key": "causeway",
+    "title": "Causeway: Restoring Task Accessibility for Instruction Switching in VLA Policies",
+    "venue": "arXiv",
+    "page": "https://arxiv.org/abs/2609.30913",
+    "project": "not identified",
+    "identifiers": {
+      "arxiv": "2609.30913"
+    },
+    "aliases": [
+      "Causeway"
+    ],
+    "tags": [
+      "Robotics",
+      "VLA",
+      "instruction-switching",
+      "recovery"
+    ],
+    "paper_type": "method",
+    "problem": "앞선 작업이 바꾼 물리 상태 때문에 새 목표 작업의 기존 능력에 접근하지 못할 수 있다.",
+    "method": "목표 작업의 re-entry pose를 조건으로 frozen decoder를 통한 gradient를 이용해 action-stream 표현을 수정하고, 정책 자체가 복귀 행동을 생성하는 inference-time 개입을 제안한다.",
+    "interface": "현재 상태·새 목표·re-entry pose → 동결 VLA 내부 표현 개입 → 복귀 행동과 목표 작업 실행. 재진술만 사용하는 언어 조건과 정보·개입 위치가 다르다.",
+    "evaluation": "LIBERO-Goal, LIBERO-Object와 실제 xArm에서 instruction switching과 복구를 보고한다. 정확한 비교 수치·시행 수·특권 정보 조건은 신규 노트에서 본문 정독 완료로 표시하지 않는다.",
+    "role": "전환 실패를 의미 기억 오류로 오인하지 않기 위한 직접 경쟁 설명이다. 새 목표의 물리적 실행 가능성과 언어 해석을 분리할 NEXT로 추가하며 preprint status를 유지한다.",
+    "lineage": "ReSteer의 상태별 steerability ↔ Causeway의 동결 정책 복구; Hi Robot의 지시 해석과 물리적 접근 가능성을 구별",
+    "question": "의미적으로 정확한 지시에서도 나타나는 continuation 실패를 분리한 뒤, 부분 수정 상태 관리의 행동 이득이 남는가?",
+    "minimal_experiment": "같은 시작·수정 상태에서 원자 목표와 oracle 복합 지시의 능력을 먼저 구분한다. Causeway 개입을 비교하려면 re-entry 정보와 추가 계산 비용을 별도로 맞추며 현재 P0에 자동 추가하지 않는다.",
+    "verification_questions": "re-entry pose 획득과 관측 접근, decoder별 개입 위치·계산 비용, 복귀/인계 조건, 실제 로봇 평가 범위",
+    "year": 2026,
+    "category": "VLA and Generalist Robot Policies",
+    "primary_track": "VLA and generalist robot policies",
+    "pdf": "",
+    "publication": {
+      "status": "preprint",
+      "kind": "preprint",
+      "presentation": "unknown",
+      "venue": "arXiv",
+      "year": 2026,
+      "venue_year": 2026,
+      "venue_id": "arxiv"
+    },
+    "sources": {
+      "primary": {
+        "url": "https://arxiv.org/abs/2609.30913",
+        "kind": "arxiv",
+        "scope": "paper_specific",
+        "verified_on": "2026-10-31"
+      },
+      "preprint": {
+        "url": "https://arxiv.org/abs/2609.30913",
+        "kind": "arxiv",
+        "scope": "paper_specific",
+        "verified_on": "2026-10-31"
+      },
+      "project": null,
+      "code": null,
+      "paper_pdf": null,
+      "venue_verification": null
+    },
+    "artifacts": {
+      "code_status": "not_identified",
+      "data_status": "not_identified",
+      "local_pdf_cache": false
+    },
+    "evidence": "ABSTRACT_CHECKED",
+    "note_format": "abstract_analysis_v1",
+    "source_audit": "2026-10-31 공식 서지/abstract·공개 project/code 소개를 재확인했다. 신규 노트는 abstract 기반이며 기존 연구 검토의 지정 본문/code 확인은 work/sources/instruction_revision_review_2026-10-31.json 및 pre_gpu_buildup_review_2026-10-31.json의 별도 범위다. 사용자 정독·native 실행을 뜻하지 않는다.",
+    "admission_tier": "NEXT",
+    "admission_group": "VLA, cross-embodiment, and long-horizon planning",
+    "relations": [],
+    "curation": {
+      "admission_reason": "전환 실패를 의미 기억 오류로 오인하지 않기 위한 직접 경쟁 설명이다. 새 목표의 물리적 실행 가능성과 언어 해석을 분리할 NEXT로 추가하며 preprint status를 유지한다.",
+      "tier_reason": "전환 실패를 의미 기억 오류로 오인하지 않기 위한 직접 경쟁 설명이다. 새 목표의 물리적 실행 가능성과 언어 해석을 분리할 NEXT로 추가하며 preprint status를 유지한다.",
+      "rationale_status": "recorded",
+      "rationale_basis": "2026-10-31 instruction revision prerequisite admission; researcher interpretation",
+      "rationale_reviewed_on": "2026-10-31",
+      "scope_status": "active",
+      "roles": [
+        "method"
+      ],
+      "role_basis": "manual admission review",
+      "priority_source_check": {
+        "url": "https://arxiv.org/abs/2609.30913",
+        "checked_on": "2026-10-31",
+        "scope": "official_abstract_or_project; priority review only"
+      }
+    }
+  },
+  {
+    "admission_key": "how_level_instruction",
+    "title": "Do VLAs Really Follow Instructions? Diagnosing How-Level Instruction Following in Vision-Language-Action Models",
+    "venue": "arXiv",
+    "page": "https://arxiv.org/abs/2610.21251",
+    "project": "https://github.com/sangwu99/how-level-vla-Arxiv",
+    "identifiers": {
+      "arxiv": "2610.21251"
+    },
+    "aliases": [
+      "How-level instruction following",
+      "SIMPLER-IN"
+    ],
+    "tags": [
+      "Robotics",
+      "VLA",
+      "Benchmark",
+      "instruction-following"
+    ],
+    "paper_type": "benchmark_or_dataset",
+    "problem": "어떤 작업을 할지뿐 아니라 어떻게 수행할지를 지정하는 언어 조건의 준수는 일반 task success만으로 평가하기 어렵다.",
+    "method": "How-level 지시의 효과를 진단하고 segment-level 지시 보강을 비교하며, 지시에만 주어진 조건을 성공 정의에 포함하는 SIMPLER-IN을 제안한다.",
+    "interface": "영상·행동 맥락과 수행 방식 지시 → VLA 행동 → 목표 달성 및 지시 조건 준수 평가.",
+    "evaluation": "보강된 지시에 대한 행동 반응이 늘어도 작업 성공이 일관되게 높아지지는 않으며, 까다롭거나 분포 밖의 지시에 일반화가 제한된다고 보고한다. SIMPLER-IN의 상세 task·split·trial은 본문 확인 대상이다.",
+    "role": "현재 제약 유지·철회 후보에서 지시 반응, 목표 성공, 제약 준수를 분리할 직접 진단 선행이다. 평가 정의 자체를 새 기여로 과장하지 않기 위한 NEXT이며 preprint로 둔다.",
+    "lineage": "Hi Robot의 상위 지시 해석 ↔ How-level의 하위 행동 준수 진단; ReSteer의 중간 전환 ↔ 지시 내용의 준수",
+    "question": "명시적인 최초 지시와 부분 수정 뒤 재구성한 지시를 같은 표현으로 맞춰도 의미 갱신 오류가 추가 행동 실패를 설명하는가?",
+    "minimal_experiment": "같은 상태의 목표만 지시·제약 포함 지시·의미 동일 재진술을 구분해 기록한다. 자동 의미 갱신과 물리적 수행 실패를 분리하며 아직 정책 실행은 하지 않았다.",
+    "verification_questions": "SIMPLER-IN 조건별 성공 정의와 중립 문장 대조, 지시 보강 학습의 정보·데이터 통제, OOD 범위, 평가 코드와 checkpoint 일치",
+    "year": 2026,
+    "category": "VLA and Generalist Robot Policies",
+    "primary_track": "VLA and generalist robot policies",
+    "pdf": "",
+    "publication": {
+      "status": "preprint",
+      "kind": "preprint",
+      "presentation": "unknown",
+      "venue": "arXiv",
+      "year": 2026,
+      "venue_year": 2026,
+      "venue_id": "arxiv"
+    },
+    "sources": {
+      "primary": {
+        "url": "https://arxiv.org/abs/2610.21251",
+        "kind": "arxiv",
+        "scope": "paper_specific",
+        "verified_on": "2026-10-31"
+      },
+      "preprint": {
+        "url": "https://arxiv.org/abs/2610.21251",
+        "kind": "arxiv",
+        "scope": "paper_specific",
+        "verified_on": "2026-10-31"
+      },
+      "project": {
+        "url": "https://github.com/sangwu99/how-level-vla-Arxiv",
+        "kind": "official_project",
+        "scope": "paper_specific",
+        "verified_on": "2026-10-31"
+      },
+      "code": {
+        "url": "https://github.com/sangwu99/how-level-vla-Arxiv",
+        "kind": "official_code",
+        "scope": "paper_specific",
+        "verified_on": "2026-10-31"
+      },
+      "paper_pdf": null,
+      "venue_verification": null
+    },
+    "artifacts": {
+      "code_status": "released",
+      "data_status": "not_identified",
+      "local_pdf_cache": false
+    },
+    "evidence": "ABSTRACT_CHECKED",
+    "note_format": "abstract_analysis_v1",
+    "source_audit": "2026-10-31 공식 서지/abstract·공개 project/code 소개를 재확인했다. 신규 노트는 abstract 기반이며 기존 연구 검토의 지정 본문/code 확인은 work/sources/instruction_revision_review_2026-10-31.json 및 pre_gpu_buildup_review_2026-10-31.json의 별도 범위다. 사용자 정독·native 실행을 뜻하지 않는다.",
+    "admission_tier": "NEXT",
+    "admission_group": "VLA, cross-embodiment, and long-horizon planning",
+    "relations": [],
+    "curation": {
+      "admission_reason": "현재 제약 유지·철회 후보에서 지시 반응, 목표 성공, 제약 준수를 분리할 직접 진단 선행이다. 평가 정의 자체를 새 기여로 과장하지 않기 위한 NEXT이며 preprint로 둔다.",
+      "tier_reason": "현재 제약 유지·철회 후보에서 지시 반응, 목표 성공, 제약 준수를 분리할 직접 진단 선행이다. 평가 정의 자체를 새 기여로 과장하지 않기 위한 NEXT이며 preprint로 둔다.",
+      "rationale_status": "recorded",
+      "rationale_basis": "2026-10-31 instruction revision prerequisite admission; researcher interpretation",
+      "rationale_reviewed_on": "2026-10-31",
+      "scope_status": "active",
+      "roles": [
+        "benchmark_or_dataset"
+      ],
+      "role_basis": "manual admission review",
+      "priority_source_check": {
+        "url": "https://arxiv.org/abs/2610.21251",
+        "checked_on": "2026-10-31",
+        "scope": "official_abstract_or_project; priority review only"
+      }
+    }
+  }
+]

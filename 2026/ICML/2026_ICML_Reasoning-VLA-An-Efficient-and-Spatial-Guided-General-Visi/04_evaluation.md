@@ -4,6 +4,8 @@
 > Evidence maturity: `FULL_TEXT_CHECKED`.
 > Analysis basis: full-text PDF body checked on 2026-09-03 (17 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=c4iSIrb6Iv; PDF retrieval source: https://openreview.net/pdf/2958fe5249a1a673a414d689de7784b306b2a02a.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
+> DOC-QA1 (2026-10-23): 제어문자·깨진 추출 구간과 직접 연결된 표 항목을 PDF 페이지 이미지와 대조했다. 확인 범위·원문 URL·페이지·수정 이력은 [대조 기록](../../../work/sources/pdf_note_review_2026-10-23.json)에 있다. 노트 전체의 정독이나 모든 기존 주장에 대한 재검증을 뜻하지 않으며 reading status는 유지한다.
+
 ## Evaluation in One Sentence
 
 PDF body evaluation/result cue (p. 7 (5.2.1. Open-loop Evaluation), p. 7 (5.2.1. Open-loop Evaluation), p. 6 (4. Unified Datasets), p. 6 (5. Experiments), p. 8 (5.2.2. Closed-loop Evaluation), p. 8 (5.2.2. Closed-loop Evaluation)): As shown in the last row of Table 1, the additional fine-tuning further improves performance across all time intervals: Reasoning-VLA-7B+ achieves increases of 4.3% and 12.5% over Reasoning-VLA-7B in average ...
@@ -147,7 +149,7 @@ PDF body evaluation/result cue (p. 7 (5.2.1. Open-loop Evaluation), p. 7 (5.2.1.
 | The decay learning rate are start from 5e-4 and e-6 form SFT and RL separately, the accumulated size is 2. | p. 7 (5.1. Experiment Setups) |
 | Here T is the number of future time steps to be predicted, N is the dimensions of action trajectory coordinate, D is the feature ... | p. 4 (3.3.1. Learnable Action Queries) |
 | Given that the total number of action values is T × N, in our method, we predict future T steps for N coordinates (e.g., ... | p. 4 (2. The reasonable initial values that reflect typical action) |
-| Specifically, our physical trajectory reward is defined as: rtraj = 1 -1 N N X i=1 γi  α(xi -xi gt)2 + β(yi -yi gt)2 ... | p. 5 (3.7. Reward Functions) |
+| 원문 대조: Physical trajectory reward는 1에서 horizon 평균 weighted coordinate error를 뺀다. x·y 제곱 오차에는 각각 α·β를, 미래 step i에는 γ^i discount를 적용한다. 이는 trajectory reward 정의이며 안전 보장 자체가 아니다. ([PDF p. 5](https://arxiv.org/pdf/2511.19912#page=5), §3.7 Reward Functions, Eq. (1)) | [PDF p. 5](https://arxiv.org/pdf/2511.19912#page=5), §3.7 Reward Functions, Eq. (1) |
 | The acceleration reward is defined as: accj = p (xj+1 -xj)2 + (yj+1 -yj)2 T 2 - p (xj -xj-1)2 + (yj -yj-1)2 T ... | p. 5 (3.7. Reward Functions) |
 | Reasoning-VLA-7B+ is fine-tuned with an additional RL process using the corresponding nuScenes training clips from the unified dataset. *: Official checkpoints re-validated with corrected ... | p. 6 (3.7. Reward Functions) |
 

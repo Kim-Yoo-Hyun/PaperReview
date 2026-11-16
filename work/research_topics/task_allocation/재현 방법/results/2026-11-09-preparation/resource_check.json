@@ -1,0 +1,77 @@
+{
+  "checked_at_utc": "2026-11-09T04:56:49.825376+00:00",
+  "host": {
+    "os": "Darwin",
+    "arch": "arm64"
+  },
+  "context": {
+    "argv": [
+      "docker",
+      "context",
+      "show"
+    ],
+    "exit_code": 0,
+    "stdout": "desktop-linux",
+    "stderr": ""
+  },
+  "endpoint": {
+    "argv": [
+      "docker",
+      "context",
+      "inspect",
+      "desktop-linux",
+      "--format",
+      "{{.Endpoints.docker.Host}}"
+    ],
+    "exit_code": 0,
+    "stdout": "unix://<user-home>/.docker/run/docker.sock",
+    "stderr": ""
+  },
+  "daemon": {
+    "Architecture": "aarch64",
+    "OSType": "linux",
+    "OperatingSystem": "Docker Desktop",
+    "NCPU": 10,
+    "MemTotal": 8218034176,
+    "ServerVersion": "28.3.3",
+    "Runtimes": [
+      "io.containerd.runc.v2",
+      "runc"
+    ]
+  },
+  "existing_cpu_image": {
+    "Id": "sha256:ec14bd72a90f89cb6f3c4b263bb35a81de7977dffb2e5a2cb7e96946f1545ebb",
+    "RepoDigests": [
+      "paper-gap-p3@sha256:ec14bd72a90f89cb6f3c4b263bb35a81de7977dffb2e5a2cb7e96946f1545ebb"
+    ],
+    "Architecture": "arm64",
+    "Os": "linux"
+  },
+  "gpu_allocation": {
+    "argv": [
+      "docker",
+      "run",
+      "--rm",
+      "--pull=never",
+      "--network",
+      "none",
+      "--name",
+      "paper-alloc-nvidia-check",
+      "--gpus",
+      "all",
+      "sha256:ec14bd72a90f89cb6f3c4b263bb35a81de7977dffb2e5a2cb7e96946f1545ebb",
+      "true"
+    ],
+    "exit_code": 125,
+    "stdout": "",
+    "stderr": "docker: Error response from daemon: could not select device driver \"\" with capabilities: [[gpu]]\n\nRun 'docker run --help' for more information"
+  },
+  "native_model_or_simulation_run": false,
+  "decision": "RESOURCE_UNMET",
+  "reasons": [
+    "Local host and daemon are ARM64 rather than Linux x86-64 NVIDIA target",
+    "Docker GPU device allocation unavailable"
+  ],
+  "tag_inspection_note": "Listed tag inspection returned not found; immutable existing image ID inspection succeeded; used that ID.",
+  "created_images": []
+}

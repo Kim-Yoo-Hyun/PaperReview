@@ -4,6 +4,8 @@
 > Evidence maturity: `FULL_TEXT_CHECKED`.
 > Analysis basis: full-text PDF body checked on 2026-09-03 (24 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=GtImvTta8x; PDF retrieval source: https://arxiv.org/pdf/2507.02705. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
+> DOC-QA1 (2026-10-23): 제어문자·깨진 추출 구간과 직접 연결된 표 항목을 PDF 페이지 이미지와 대조했다. 확인 범위·원문 URL·페이지·수정 이력은 [대조 기록](../../../work/sources/pdf_note_review_2026-10-23.json)에 있다. 노트 전체의 정독이나 모든 기존 주장에 대한 재검증을 뜻하지 않으며 reading status는 유지한다.
+
 ## Method in One Sentence
 
 PDF body method statement (p. 4 (3 Methodology), p. 6 (3 Methodology), p. 6 (3 Methodology), p. 4 (3 Methodology), p. 5 (3 Methodology), p. 5 (3 Methodology)): Our method consists of Image and Text Encoders for extracting multi-view and text features, Gaussian Decoder for decoding pixel-aligned 3D Gaussians, Unified Query Decoder for decoding pixel-aligned 2D cross-view masks, ...
@@ -53,7 +55,7 @@ PDF body method statement (p. 4 (3 Methodology), p. 6 (3 Methodology), p. 6 (3 M
 - **p. 5 / 3 Methodology - extractive body cue:** We also introduce the following loss in training to enable matching supervision: Ltext = 1 Nt Nt X t=1 CrossEntropy(Softmax(Attn(f t text, Q) · qn), ...
 - **p. 6 / 3 Methodology - extractive body cue:** The overall training objective is derived as follows: L = λ1//I(G) -ˆI// + λ2LPIPS(I(G), ˆI) + λ3Lmask + λ4Lcont + λ5Ltext, (5) 6
 - **p. 7 / 3 Methodology - extractive body cue:** In our training, we leverage both photometric loss and segmentation loss to simultaneously supervise 3D reconstruction and understanding.
-- **p. 5 / 3 Methodology - extractive body cue:** The matching process is derived as follows: qt text = arg max qn∈Q  Attn(f t text, Q) · qn  , (2) where Attn(·, ·) ...
+- **원문 대조:** 텍스트 feature를 query, object query 집합 Q를 key/value로 cross-attention한 뒤 각 q_n과의 내적 점수가 가장 높은 query를 선택한다. 그 query의 logit으로 text-referred mask를 얻는다. ([PDF p. 5](https://arxiv.org/pdf/2507.02705#page=5), §3.2 Unified Query Decoder, Eq. (2)).
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 4 (3 Methodology), p. 5 (3 Methodology), p. 6 (3 Methodology), p. 6 (3 Methodology), p. 7 (3 Methodology), p. 5 (3 Methodology).
 - Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.

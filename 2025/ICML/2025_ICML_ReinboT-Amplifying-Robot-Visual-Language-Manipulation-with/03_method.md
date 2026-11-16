@@ -4,6 +4,8 @@
 > Evidence maturity: `FULL_TEXT_CHECKED`.
 > Analysis basis: full-text PDF body checked on 2026-09-03 (18 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=Mzz4BhdIFb; public full-text mirror used for retrieval (canonical paper source retained): https://chatpaper.com/api/v1/articles/download/166257. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
+> DOC-QA2 targeted source review: 2026-10-23; PDF pp. 2, 4. 손상 구간·직접 연결된 표 분류만 원문 이미지와 대조했다. 전체 주장 정독·실험 검증·reading status 승격을 뜻하지 않는다. [URL·PDF hash·수정 기록](../../../work/sources/pdf_note_review_followup_2026-10-23.json).
+
 ## Method in One Sentence
 
 PDF body method statement (p. 4 (4.2. End-to-end Reinforced VLA model), p. 3 (3.2. Max-Return Sequence Modeling), p. 4 (4.2. End-to-end Reinforced VLA model), p. 5 (4.2. End-to-end Reinforced VLA model), p. 3 (3.2. Max-Return Sequence Modeling), p. 5 (4.3. Discussion and Analysis of ReinboT)): Specifically, we first input the language instruction l, image state ot-u+1:t and proprioception st-u+1:t into the backbone network πϕ, and obtain the features hRTG t:t+k-1 and haction t:t+k-1 corresponding to ...
@@ -51,7 +53,7 @@ PDF body method statement (p. 4 (4.2. End-to-end Reinforced VLA model), p. 3 (3.
 - **p. 5 / 4.3. Discussion and Analysis of ReinboT - extractive body cue:** In contrast, our return condition maximization circumvents the need to incorporate the RL-specific loss.
 - **p. 3 / 4.1. Reward Densification - extractive body cue:** Intuitively, in the robot trajectory, the reward that minimizes the state distance is a simple and effective scheme that encourages the robot to move directly ...
 - **p. 5 / 4.3. Discussion and Analysis of ReinboT - extractive body cue:** We will subsequently analyze how this framework achieves RL return maximization, as well as the differences and advantages compared to return maximization in classic RL.
-- **p. 2 / 3.2. Max-Return Sequence Modeling - extractive body cue:** Reinformer achieves this implicitly through the minimizing of expectile regression loss: Lg = Et  /m -1(∆g < 0)/(∆g)2 , with ∆g = gt -πθ(⟨s, ...
+- **PDF p. 2, §3.2 / Eq. (2) (DOC-QA2 원문 대조):** Reinformer 배경 설명의 expectile loss는 E_t[abs(m−1(Δg<0))·Δg²]이다. 이 배경 식과 ReinboT의 RTG decoder loss를 구분한다.
 - **p. 4 / 4.2. End-to-end Reinforced VLA model - extractive body cue:** Larm is a smooth-L1 loss, Lgripper is a cross entropy loss, and Limage is a pixel-level MSE.
 - **p. 3 / 3.2. Max-Return Sequence Modeling - extractive body cue:** Reinformer was trained by minimizing the sum of two loss functions L = La + Lg.
 - **Formal bridge:** multimodal context o,l,p/history -> action, pose, option or chunk a -> policy/action modeling objective -> instruction-conditioned task success.
@@ -73,7 +75,7 @@ PDF body method statement (p. 4 (4.2. End-to-end Reinforced VLA model), p. 3 (3.
 - **p. 2 / 3.1. Imitation Learning of VLA Model - extractive body cue:** GR-1 is a GPT-style model that takes language instructions l, historical image observations ot-h:t, and proprioception st-h:t as input.
 - **p. 1 / 1. Introduction - extractive body cue:** Inspired by previous work (Zhuang et al., 2024), we model the maximum return sequence over the joint distribution of language commands, image states (and proprioception), ...
 - **p. 3 / 3.2. Max-Return Sequence Modeling - extractive body cue:** We leverage CLIP (Radford et al., 2021) to encode robot language instructions, utilize ViT (Dosovitskiy et al., 2020; He et al., 2022) (and perceiver resampler ...
-- **p. 4 / 4.2. End-to-end Reinforced VLA model - extractive body cue:** We predict the maximized return given the language instruction l, image state o, and proprioception s through the ReturnToGo decoder Pφ: LRTG = Et  ...
+- **PDF p. 4, §4.2 / Eq. (9) (DOC-QA2 원문 대조):** ReinboT는 instruction·visual/proprioceptive history에 조건화된 RTG decoder P_φ에 asymmetric squared expectile error를 적용한다. Δg는 실제 return과 decoder 예측의 차이다.
 - **p. 5 / 4.2. End-to-end Reinforced VLA model - extractive body cue:** Algorithm 1 ReinboT: Test-time Execution 1: ReinboT model πϕ, Pφ, Pω, initial image state o0,test, initial proprioception s0,test, language instruction ltest, and environment Env. // ...
 - **p. 5 / 4.2. End-to-end Reinforced VLA model - extractive body cue:** ReinboT: Amplifying Robot Visual-Language Manipulation with Reinforcement Learning The hidden features ˆghidden t:t+k-1 is concatenated with the action features haction t:t+k-1 and are further input ...
 - **Normalized interface:** observation=image/video, language instruction, proprioception과 history; state=language-grounded task state와 action-policy context; output/action=continuous action, pose 또는 action chunk.

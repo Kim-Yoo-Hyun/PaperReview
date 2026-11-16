@@ -4,6 +4,8 @@
 > Evidence maturity: `FULL_TEXT_CHECKED`.
 > Analysis basis: full-text PDF body checked on 2026-09-03 (27 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=bjtuHOb3vN; PDF retrieval source: https://openreview.net/pdf/8310d4c5a6346eaadb420914138e1711121a0ff8.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
+> DOC-QA2 targeted source review: 2026-10-23; PDF pp. 3. 손상 구간·직접 연결된 표 분류만 원문 이미지와 대조했다. 전체 주장 정독·실험 검증·reading status 승격을 뜻하지 않는다. [URL·PDF hash·수정 기록](../../../work/sources/pdf_note_review_followup_2026-10-23.json).
+
 ## Evaluation in One Sentence
 
 PDF body evaluation/result cue (p. 6 (5.2. Quantitative Results), p. 7 (5.2. Quantitative Results), p. 7 (5.2. Quantitative Results), p. 8 (5.4. Ablation Study), p. 6 (5.2. Quantitative Results), p. 8 (5.4. Ablation Study)): Rh-3DGS achieves the best results on both tables.
@@ -145,7 +147,7 @@ PDF body evaluation/result cue (p. 6 (5.2. Quantitative Results), p. 7 (5.2. Qua
 | Full hyperparameters and schedules are deferred to App. | p. 6 (5.1. Experimental Setup) |
 | We implement all methods in PyTorch and train on a single NVIDIA GeForce RTX 4090 GPU. | p. 6 (5.1. Experimental Setup) |
 | Implementation note: we keep the rasterizer unchanged; hyperspherical geometry is used only in the distillation objective. | p. 3 (4.1. Problem Formulation and Notation) |
-| We compute the expected depth ¯Dv,u = D(1) v,u Av,u+ϵ and ray variance Varv,u =  D(2) v,u Av,u+ϵ -¯D2 v,u  +, used ... | p. 3 (4.1. Problem Formulation and Notation) |
+| Expected depth D̄=D⁽¹⁾/(A+ε), ray variance=[D⁽²⁾/(A+ε)−D̄²]₊; positive-part 연산을 보존한다. | PDF p. 3 rasterization statistics; method 정의이며 성능 결과가 아님 |
 | We attach a semantic latent to each Gaussian and use a lightweight decoder to map it to the teacher space (D ≫d) during rendering. | p. 4 (4.2. Overview) |
 | Rh-3DGS addresses it with three modules: (1) VCD computes a stop-gradient pixel reliability weight wv(u) from rasterization statistics (e.g., accumulated opacity and depth moments) ... | p. 4 (4.2. Overview) |
 | Implementation details are provided in App. | p. 5 (4.3. Visibility-Calibrated Distillation (VCD)) |

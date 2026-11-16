@@ -4,6 +4,8 @@
 > Evidence maturity: `FULL_TEXT_CHECKED`.
 > Analysis basis: full-text PDF body checked on 2026-09-03 (13 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://doi.org/10.1038/nature14236; PDF retrieval source: https://doi.org/10.1038/nature14236. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
+> DOC-QA2 targeted source review: 2026-10-23; PDF pp. 7. 손상 구간·직접 연결된 표 분류만 원문 이미지와 대조했다. 전체 주장 정독·실험 검증·reading status 승격을 뜻하지 않는다. [URL·PDF hash·수정 기록](../../../work/sources/pdf_note_review_followup_2026-10-23.json).
+
 ## Evaluation in One Sentence
 
 PDF body evaluation/result cue (p. 6 (84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess), p. 6 (84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess), p. 7 (84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess), p. 7 (84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess), p. 4 (2 6 F E B R U A R Y), p. 11 (84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess)): The human performanceis theaverage rewardachievedfromaround20episodesofeachgamelastingamaximumof5 min each, following around 2 h of practice playing each game.
@@ -74,7 +76,7 @@ PDF body evaluation/result cue (p. 6 (84 3 84.The functionw fromalgorithm1 descr
 | A neural substrate of prediction and reward. | definition/direction/unit from same section | p. 4 (2 6 F E B R U A R Y) |
 | Because the absolute value loss function jxj has a derivative of 21 for all negative values of x and a derivative of 1 for ... | definition/direction/unit from same section | p. 7 (84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess) |
 | Note the figures in the last column indicate the performance of DQN relative to the human games tester, expressed as a percentage, that is, ... | definition/direction/unit from same section | p. 11 (84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess) |
-| We also found it helpful to clip the error term from the update rzc maxa0 Q s0,a0; h{ i  | definition/direction/unit from same section | p. 7 (84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess) |
+| Bellman TD error의 update contribution을 [−1,1]로 clip한다. 큰 residual에 대해서 absolute-value loss와 같은 bounded-gradient 효과를 설명한다. | Training stabilization choice; evaluation metric이나 reward clipping과 구분 | PDF p. 7 Methods |
 | Each of the peaks in the value function curve corresponds to a reward obtained by clearing a brick. | definition/direction/unit from same section | p. 9 (84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess) |
 
 - Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.

@@ -1,0 +1,20 @@
+{
+  "date": "2026-10-25",
+  "docker_context": "desktop-linux",
+  "server_version": "28.3.3",
+  "architecture": "aarch64",
+  "cpus": 10,
+  "memory_bytes": 8218034176,
+  "runtimes": [
+    "io.containerd.runc.v2",
+    "runc"
+  ],
+  "contract_image": "python:3.11.14-slim-bookworm@sha256:65a93d69fa75478d554f4ad27c85c1e69fa184956261b4301ebaf6dbb0a3543d",
+  "gpu_allocation_probe": {
+    "command": "docker run --rm --gpus all <contract-image> python -c <print-only>",
+    "exit_code": 125,
+    "error": "could not select device driver \"\" with capabilities: [[gpu]]",
+    "native_execution_performed": false
+  },
+  "resource_boundary": "Current local Docker GPU allocation failed. CPU/Vulkan or another native image was not qualified; no claim that all possible CPU simulation paths are impossible."
+}

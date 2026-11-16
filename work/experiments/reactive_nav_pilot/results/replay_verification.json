@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "bit_identical_analysis": true,
+  "analysis_sha256": "104be376e655a6bf2c941df4b434ae2a0379fd03e2d18c5d3c08be1f2cdadc3b",
+  "new_rollouts": 0,
+  "source_hashes": {
+    "episodes.json": "72e212b15fb123fd20ca6c307341bcd5f2080f13f27c07e62a0306eff400a465",
+    "prefix_failures.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "compact_traces.jsonl.gz": "134eb6ecd9f28e5c58ab4f0dab33b33c06d3fa81004c7915f89005eca55345ac"
+  },
+  "runtime_image_inspect_sha256": "4de679a303ad8e2e4d2dc784f49969540ac5b5e6d7977e4cee6b9c0a0a3d431e",
+  "runtime_image_id": "sha256:ec14bd72a90f89cb6f3c4b263bb35a81de7977dffb2e5a2cb7e96946f1545ebb",
+  "replay_scripts_sha256": {
+    "replay.sh": "fa309df2a20ada9b567c059d0b418844e196d09f36f01544855b686b0d05b680",
+    "replay_analysis.py": "91df7270390653e9105c6471219c90f12fedcbb9e6ad4372a4ab7a690018233c"
+  }
+}

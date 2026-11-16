@@ -17,6 +17,8 @@
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (19 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
+> DOC-QA2 targeted source review: 2026-10-23; PDF pp. 14. 손상 구간·직접 연결된 표 분류만 원문 이미지와 대조했다. 전체 주장 정독·실험 검증·reading status 승격을 뜻하지 않는다. [URL·PDF hash·수정 기록](../../../work/sources/pdf_note_review_followup_2026-10-23.json).
+
 ## Why This Paper Is Here
 
 Locomotion, whole-body, mobile manipulation, and humanoids의 locomotion 문제를 이해하기 위해 읽는다. 본문은 However, in practice, the black-box neural network models favored in the ∗These ...
@@ -49,7 +51,7 @@ Locomotion, whole-body, mobile manipulation, and humanoids의 locomotion 문제�
 | Observation/input | Algorithm 1 Auto-Regressive State Predictions 1: Inputs hallucination buffer Dmodel, models {ˆpi ψi}, policy πθ, start state s0, start history h0 2: for t = 0 . . . k -1 do ... | proprioception, terrain/perception observation과 velocity command | p. 5 (1 Introduction), p. 14 (A.3 Control Architecture) |
 | State/latent | Algorithm, Auto-Regressive, State, Predictions, Inputs, hallucination, buffer, Dmodel, models, policy, start, history | body/contact state, foothold 또는 behavior mode | p. 5 (1 Introduction), p. 14 (A.3 Control Architecture), p. 3 (1 Introduction) |
 | Output/action | Referring to the action space definition Table 2, the policy takes in the current observation and a history of observations and outputs offsets to foot positions and a nominal height for the ... | joint target, torque, footstep 또는 locomotion action | p. 14 (A.3 Control Architecture), p. 3 (1 Introduction), p. 4 (1 Introduction) |
-| Objective/outcome | Reward Term Expression Weight Maximize forward velocity vx t+1 0.42 Limit base yaw rate exp  -(ωz t+1)2/0.2  0.11 Limit base roll exp  -(φx t+1)2/0.25  0.05 Limit base pitch ... | velocity/progress, stability, energy와 terrain generalization | p. 14 (A.2 Reward Function and Termination Condition), p. 13 (A.2 Reward Function and Termination Condition), p. 13 (A Implementation Details) |
+| Objective/outcome | Table 3은 step reward의 weighted sum을 정의한다. Forward velocity vₓ 가중치 0.42, yaw-rate exp(−ω_z²/0.2) 0.11, roll/pitch exp(−φ²/0.25) 각각 0.05이며 자세·속도·가속도·energy·torque 제한 항을 함께 사용한다. | 학습 reward 구성; 독립적인 terrain generalization 결과가 아님 | PDF p. 14 Appendix A.2 Table 3 |
 
 ## Main Claims and Actual Contribution
 
@@ -78,7 +80,7 @@ Locomotion, whole-body, mobile manipulation, and humanoids의 locomotion 문제�
 
 - **p. 8 / 5 Related Work - extractive body cue:** However there are several key limitations.
 - **p. 8 / 5 Related Work - extractive body cue:** 6 Limitations This paper presents a novel framework for model-based reinforcement learning, which leverages physics-informed, semi-structured dynamics models to enable highly sample-efficient policy learning in ...
-- **p. 14 / A.2 Reward Function and Termination Condition - extractive body cue:** The termination flag dt stops the accumulation of reward after the quadruped falls and is defined by: dt = 1 if /φx t / > ...
+- **PDF p. 14, Appendix A.2 Eq. (7) (DOC-QA2 원문 대조):** Termination flag dₜ=1은 base roll 절댓값 또는 pitch 절댓값이 π/4를 넘는 경우이며, 그 외에는 0이다. 낙상 이후 reward 누적을 중단하는 규칙이다.
 - **p. 16 / Figure/Table caption - extractive body cue:** Figure 8: Our approach is robust to errors in a priori knowledge of the robot's inertial properties. B.4 Modeling Uncertainty Here, we examine the benefit ...
 - **p. 2 / Figure/Table caption - extractive body cue:** Figure 2: The SSRL framework. A deterministic policy is used to collect data from the real world while a stochastic policy is utilized in conjunction ...
 - **p. 16 / Figure/Table caption - extractive body cue:** Figure 7: Prediction error for 20-step synthetic rollouts using our semi-structured dynamics models and the black-box models where the best results from the 1- or ...

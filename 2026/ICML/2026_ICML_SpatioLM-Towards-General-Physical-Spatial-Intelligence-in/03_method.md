@@ -4,6 +4,8 @@
 > Evidence maturity: `FULL_TEXT_CHECKED`.
 > Analysis basis: full-text PDF body checked on 2026-09-03 (27 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=CHavqrN1X9; PDF retrieval source: https://openreview.net/pdf/04fc204cb3233c6ac9f5867e72c861a9e835bc65.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
+> DOC-QA1 (2026-10-23): 제어문자·깨진 추출 구간과 직접 연결된 표 항목을 PDF 페이지 이미지와 대조했다. 확인 범위·원문 URL·페이지·수정 이력은 [대조 기록](../../../work/sources/pdf_note_review_2026-10-23.json)에 있다. 노트 전체의 정독이나 모든 기존 주장에 대한 재검증을 뜻하지 않으며 reading status는 유지한다.
+
 ## Method in One Sentence
 
 PDF body method statement (p. 5 (3.3. Loss Design), p. 5 (3.3. Loss Design), p. 3 (3. Method), p. 3 (3.1. Problem definition and notation), p. 4 (3.2. Spatio-Vision Module), p. 4 (3.2. Spatio-Vision Module)): The overall training objective is a weighted sum of a language modeling loss and mixed geometric losses.
@@ -68,7 +70,7 @@ PDF body method statement (p. 5 (3.3. Loss Design), p. 5 (3.3. Loss Design), p. 
 
 ## Observation–State–Action Interface
 
-- **p. 3 / 3.1. Problem definition and notation - extractive body cue:** The input sequence of the model is defined as the following tuple format: X =  Xv, Xt , (1) where Xv ∈RT ×H×W ×3 denotes ...
+- **원문 대조:** 모델 입력은 visual sequence X^v와 textual instruction X^t의 쌍이다. X^v는 T×H×W×3 RGB 입력이며 T=1은 image, T>1은 video를 뜻한다. Depth와 camera ray map은 뒤의 학습 supervision으로 구분된다. ([PDF p. 3](https://arxiv.org/pdf/2608.01899#page=3), §3.1 Problem definition and notation, Eq. (1)).
 - **p. 4 / 3.2. Spatio-Vision Module - extractive body cue:** Subsequently, we fuse the extracted Hg i with the output of the vision-language tokens by the j-th LM block, which then serves as input to ...
 - **p. 2 / 1. Introduction - extractive body cue:** Our main contributions are summarized as follows: • We propose SpatioLM, a purely 2D vision-language framework that elicits implicit 3D geometric structure from pretrained VLM ...
 - **p. 3 / 3.1. Problem definition and notation - extractive body cue:** During training, SpatioLM additionally predicts dense geometric outputs Y g = ( ¯D, ¯R), (2) where ¯D and ¯R serve as the pseudo-labels for the ...

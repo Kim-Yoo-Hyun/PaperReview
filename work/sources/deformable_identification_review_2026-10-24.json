@@ -1,0 +1,936 @@
+{
+  "schema_version": 1,
+  "task_id": "GAP-DE1",
+  "review_date": "2026-10-24",
+  "timezone": "Asia/Seoul",
+  "role": "Dated evidence ledger; not paper registry, reading priority or executable experiment manifest",
+  "report": "work/update/DEFORMABLE_IDENTIFICATION_REVIEW_2026-10-24.md",
+  "canonical_question": "synthesis/03_manipulation_contact.md#gap-deform-2026",
+  "task_status": "DONE",
+  "research_decision": {
+    "general_method": "NO-GO",
+    "conditional_diagnostic": "REVISE/HOLD",
+    "native_vla": "HOLD",
+    "novelty_or_effect_established": false
+  },
+  "scope": {
+    "recent_window": [
+      2024,
+      2026
+    ],
+    "paper_records": 13,
+    "recent_records": 11,
+    "older_foundations": 2,
+    "recent_official_proceedings_or_publisher": 8,
+    "recent_official_presentation_only": 1,
+    "recent_unverified_acceptance_or_preprint": 2,
+    "selected_body_passages": 13,
+    "code_revisions": 6,
+    "code_source_config_doc_files": 15,
+    "code_readme_context_files": 6,
+    "exhaustive_survey": false,
+    "full_paper_reading_claimed": false,
+    "citation_edges_verified": false,
+    "registry_paper_ids": [
+      "pr-0890"
+    ]
+  },
+  "search": {
+    "query_families_not_exhaustive_query_log": [
+      "JIGGLE deformable material boundary joint estimation follow-up 2024 2025 2026",
+      "PGND deformable dynamics test-time adaptation material identification",
+      "deformable task-oriented active exploration uncertainty probing feedback iterative learning control",
+      "deformable material constitutive identification FORM PhysCoRe DPSI",
+      "JIGGLE official code exact title; PhysCoRe CoRL official OpenReview PMLR status",
+      "language deformable manipulation tools Make a Donut VLA"
+    ],
+    "authority_policy": "Official proceedings/publisher/program for publication; author project/repository for implementation; versioned full text for selected claims. Discovery indices do not establish acceptance.",
+    "limits": [
+      "Bounded targeted search; not all CVPR/ICCV/ICRA/IROS/CoRL/ICLR/NeurIPS proceedings searched exhaustively.",
+      "No verified complete matched material-attachment-task comparison packet identified; absence is not proof no such packet exists.",
+      "No real external researcher feedback obtained."
+    ]
+  },
+  "papers": [
+    {
+      "id": "B01",
+      "title": "Identification and Active Exploration of Deformable Object Boundary Constraints through Robotic Manipulation",
+      "year": 2014,
+      "venue_or_status": "IJRR",
+      "publication_verification": "publisher_verified",
+      "official_publication_url": "https://journals.sagepub.com/doi/10.1177/0278364914536939",
+      "body_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4324691/",
+      "inspection_depth": "SELECTED_BODY_PASSAGES",
+      "sections": [
+        "2",
+        "4",
+        "9"
+      ],
+      "claim_and_boundary": "Boundary active exploration foundation; anchored subset and time-invariant constraints; systematic model error can resemble attachment.",
+      "registry_paper_id": null,
+      "project_url": null
+    },
+    {
+      "id": "B02",
+      "title": "Learning Active Task-Oriented Exploration Policies for Bridging the Sim-to-Real Gap",
+      "year": 2020,
+      "venue_or_status": "RSS",
+      "publication_verification": "proceedings_verified",
+      "official_publication_url": "https://roboticsproceedings.org/rss16/p085.html",
+      "body_url": "https://arxiv.org/html/2006.01952v1",
+      "inspection_depth": "SELECTED_BODY_PASSAGES",
+      "sections": [
+        "abstract",
+        "III-A"
+      ],
+      "claim_and_boundary": "Task-oriented exploration is prior work; assumes recoverable system parameters and a sufficient model class.",
+      "registry_paper_id": null,
+      "project_url": null
+    },
+    {
+      "id": "D01",
+      "title": "JIGGLE: An Active Sensing Framework for Boundary Parameters Estimation in Deformable Surgical Environments",
+      "year": 2024,
+      "venue_or_status": "RSS",
+      "publication_verification": "proceedings_verified",
+      "official_publication_url": "https://roboticsproceedings.org/rss20/p007.html",
+      "body_url": "https://arxiv.org/html/2405.09743v1",
+      "inspection_depth": "SELECTED_BODY_PASSAGES",
+      "sections": [
+        "III",
+        "IV-C/D/E selected passages",
+        "V-C/E/F selected passages",
+        "VI"
+      ],
+      "claim_and_boundary": "Joint state and boundary estimation is not joint material/boundary estimation. Full active loop in simulation; real tissue evaluation is estimation. Heterogeneous tissue remains a stated limitation.",
+      "registry_paper_id": null,
+      "project_url": null
+    },
+    {
+      "id": "D02",
+      "title": "AdaptiGraph: Material-Adaptive Graph-Based Neural Dynamics for Robotic Manipulation",
+      "year": 2024,
+      "venue_or_status": "RSS",
+      "publication_verification": "proceedings_verified",
+      "official_publication_url": "https://roboticsproceedings.org/rss20/p010.html",
+      "body_url": "https://arxiv.org/html/2407.07889v1",
+      "inspection_depth": "SELECTED_BODY_PASSAGES",
+      "sections": [
+        "III-C/D",
+        "IV-D/E",
+        "Appendix C.1/C.2"
+      ],
+      "claim_and_boundary": "Stiffness/friction joint identification and uncertainty-driven probing already evaluated. Five-rope comparison shows no consistent posterior-variance advantage over displacement heuristic; not a universal task-success equivalence.",
+      "registry_paper_id": null,
+      "project_url": "https://robopil.github.io/adaptigraph/"
+    },
+    {
+      "id": "D03",
+      "title": "Particle-Grid Neural Dynamics for Learning Deformable Object Models from RGB-D Videos",
+      "year": 2025,
+      "venue_or_status": "RSS",
+      "publication_verification": "proceedings_verified",
+      "official_publication_url": "https://roboticsproceedings.org/rss21/p036.html",
+      "body_url": "https://arxiv.org/html/2506.15680v1",
+      "inspection_depth": "SELECTED_BODY_PASSAGES",
+      "sections": [
+        "IV-F",
+        "V"
+      ],
+      "claim_and_boundary": "Four manipulation tasks with ten repetitions each; short-history implicit physical properties, fixed particles and perception dependence. Interpretable test-time adaptation is future work.",
+      "registry_paper_id": "pr-0890",
+      "project_url": "https://kywind.github.io/pgnd"
+    },
+    {
+      "id": "D04",
+      "title": "PhysTwin: Physics-Informed Reconstruction and Simulation of Deformable Objects from Videos",
+      "year": 2025,
+      "venue_or_status": "ICCV",
+      "publication_verification": "proceedings_verified",
+      "official_publication_url": "https://openaccess.thecvf.com/content/ICCV2025/html/Jiang_PhysTwin_Physics-Informed_Reconstruction_and_Simulation_of_Deformable_Objects_from_Videos_ICCV_2025_paper.html",
+      "body_url": "https://arxiv.org/html/2503.17973v1",
+      "inspection_depth": "SELECTED_BODY_PASSAGES",
+      "sections": [
+        "4.3 selected passages",
+        "5.3 selected passages",
+        "Appendix D"
+      ],
+      "claim_and_boundary": "Physics-informed digital twin and planning are established; single interaction modality limitation does not establish unique material/hidden-boundary identification.",
+      "registry_paper_id": null,
+      "project_url": "https://jianghanxiao.github.io/phystwin-web/"
+    },
+    {
+      "id": "D05",
+      "title": "Differentiable physics-based system identification for robotic manipulation of elastoplastic materials",
+      "year": 2025,
+      "venue_or_status": "IJRR",
+      "publication_verification": "publisher_verified",
+      "official_publication_url": "https://journals.sagepub.com/doi/full/10.1177/02783649251334661",
+      "body_url": "https://arxiv.org/html/2411.00554v2",
+      "inspection_depth": "SELECTED_BODY_PASSAGES",
+      "sections": [
+        "3.3–3.5",
+        "results discussion on initialization/local minima",
+        "5.1"
+      ],
+      "claim_and_boundary": "Material and environment friction parameters jointly fitted; known constitutive family and initialization/loss dependence. Poking and poking-shifting have different durations.",
+      "registry_paper_id": null,
+      "project_url": "https://ianyangchina.github.io/SI4RP-data/"
+    },
+    {
+      "id": "D06",
+      "title": "Learning Deformable Object Manipulation Using Task-Level Iterative Learning Control",
+      "year": 2026,
+      "venue_or_status": "RSS",
+      "publication_verification": "proceedings_verified",
+      "official_publication_url": "https://roboticsproceedings.org/rss22/p126.html",
+      "body_url": "https://arxiv.org/html/2602.21302v1",
+      "inspection_depth": "SELECTED_BODY_PASSAGES",
+      "sections": [
+        "IV selected passages",
+        "V-D/G/H",
+        "VI"
+      ],
+      "claim_and_boundary": "Task-error ILC with approximate rope model is a strong alternative; 40 repeats follow learning a successful command. Mocap, human demonstration, critical events and resets require cost accounting.",
+      "registry_paper_id": null,
+      "project_url": "https://flying-knots.github.io"
+    },
+    {
+      "id": "D07",
+      "title": "PhysCoRe: Physics-Corrected Residual World Models for Material-Aware Deformable Dynamics",
+      "year": 2026,
+      "venue_or_status": "arXiv",
+      "publication_verification": "author_reports_CoRL_2026_acceptance_not_independently_verified",
+      "official_publication_url": null,
+      "body_url": "https://arxiv.org/html/2607.20653v1",
+      "inspection_depth": "SELECTED_BODY_PASSAGES",
+      "sections": [
+        "4.2",
+        "5.1",
+        "5.4–5.5",
+        "7",
+        "appendix boundary description"
+      ],
+      "claim_and_boundary": "Material/confidence field and probing are shown. Selected passages did not establish equal-budget closed-loop downstream utility comparison. Provided boundary conditions are not hidden attachment inference.",
+      "registry_paper_id": null,
+      "project_url": "https://lunarlab-gatech.github.io/PhysCoRe-website/"
+    },
+    {
+      "id": "D08",
+      "title": "FORM: Robot Manipulation through Direct Material Law Identification",
+      "year": 2026,
+      "venue_or_status": "arXiv",
+      "publication_verification": "preprint_no_verified_venue",
+      "official_publication_url": null,
+      "body_url": "https://arxiv.org/html/2609.38105v1",
+      "inspection_depth": "SELECTED_BODY_PASSAGES",
+      "sections": [
+        "III selected passages",
+        "III-D information tiers",
+        "IV/V selected passages"
+      ],
+      "claim_and_boundary": "Known constitutive families and sensor tiers; positions-only plasticine/sand uses assumed elastic pair and rollout scan. Fixed-parameter open-loop execution; datasets not publicly hosted per pinned README.",
+      "registry_paper_id": null,
+      "project_url": "https://form-robots.github.io/"
+    },
+    {
+      "id": "D09",
+      "title": "Implicit Neural-Representation Learning for Elastic Deformable-Object Manipulations",
+      "year": 2025,
+      "venue_or_status": "RSS",
+      "publication_verification": "proceedings_verified",
+      "official_publication_url": "https://roboticsproceedings.org/rss21/p035.html",
+      "body_url": "https://arxiv.org/html/2505.00500v1",
+      "inspection_depth": "SELECTED_BODY_PASSAGES",
+      "sections": [
+        "III-A",
+        "VII"
+      ],
+      "claim_and_boundary": "Implicit shape state from partial point cloud and proprioception; not direct evidence that material/boundary ambiguity requires extra information.",
+      "registry_paper_id": null,
+      "project_url": "https://inr-dom.github.io/"
+    },
+    {
+      "id": "D10",
+      "title": "Distributionally Robust Control via Stein Variational Inference for Contact-rich Manipulation",
+      "year": 2026,
+      "venue_or_status": "RSS",
+      "publication_verification": "proceedings_verified",
+      "official_publication_url": "https://roboticsproceedings.org/rss22/p061.html",
+      "body_url": "https://arxiv.org/html/2605.19029v1",
+      "inspection_depth": "SELECTED_BODY_PASSAGES",
+      "sections": [
+        "III-A",
+        "IV-A",
+        "VI"
+      ],
+      "claim_and_boundary": "Task-sensitive uncertainty/robust control is an alternative to exact identification; uncertainty class and omitted contact physics limit scope. Other prior inspected sections remain in GAP-W2 ledger.",
+      "registry_paper_id": null,
+      "project_url": null
+    },
+    {
+      "id": "D11",
+      "title": "Make a Donut: Hierarchical EMD-Space Planning for Zero-Shot Deformable Manipulation with Tools",
+      "year": 2025,
+      "venue_or_status": "IROS presentation; RA-L author-reported",
+      "publication_verification": "official_IROS_program_verified_journal_publisher_not_independently_verified",
+      "official_publication_url": "https://ras.papercept.net/conferences/conferences/IROS25/program/IROS25_ContentListWeb_3.html",
+      "body_url": "https://arxiv.org/html/2311.02787v2",
+      "inspection_depth": "SELECTED_BODY_PASSAGES",
+      "sections": [
+        "III-A",
+        "IV-D",
+        "V"
+      ],
+      "claim_and_boundary": "Program ThAT16.5 verifies IROS presentation. First preprint 2023, inspected v2 from 2024. GPT-4 tool/subgoal planner plus physics control is not native VLA; inspected real-robot evidence qualitative.",
+      "registry_paper_id": null,
+      "project_url": "https://qq456cvb.github.io/projects/donut"
+    }
+  ],
+  "identity_notes": [
+    "JIGGLE same-title OpenReview PDF search hit was not counted as a second paper or a verified CoRL publication.",
+    "Task-Level ILC repository/project alternative title Learning Dynamic Rope Manipulation refers to same arXiv identity 2602.21302.",
+    "Make a Donut preprint starts in 2023; 2025 program evidence verifies presentation, not first method appearance."
+  ],
+  "excluded_or_discovery_only": [
+    {
+      "title": "CulinaryCut-VLAP",
+      "url": "https://arxiv.org/abs/2601.06451",
+      "depth": "abstract/discovery only",
+      "reason": "Cutting data/MPM context; not evidence of joint material/hidden-boundary task identification."
+    },
+    {
+      "title": "DDBot",
+      "url": "https://arxiv.org/abs/2510.17335",
+      "depth": "discovery only",
+      "reason": "Adjacent granular digging; not used as selected-body evidence."
+    },
+    {
+      "title": "Do VLAs Understand and Adapt…",
+      "url": "https://arxiv.org/abs/2610.06078",
+      "depth": "index discovery only",
+      "reason": "Not counted as inspected paper or used for a substantive conclusion."
+    }
+  ],
+  "code_audit": {
+    "execution": false,
+    "installed": false,
+    "paper_run_commits_verified": false,
+    "repositories": [
+      {
+        "repo": "Boey-li/AdaptiGraph",
+        "commit": "a7c75357793422e9108c36f58c6928f3f8a123ad",
+        "tree_entry_count": 1371,
+        "tree_truncated": false,
+        "files": [
+          {
+            "sha256": "515197c636eb9b5454a6b7fe9680c0aa4a0abfdf1a9bc25c0028406022d2f549",
+            "lines": 280,
+            "url": "https://github.com/Boey-li/AdaptiGraph/blob/a7c75357793422e9108c36f58c6928f3f8a123ad/README.md",
+            "path": "README.md",
+            "role": "README_CONTEXT",
+            "inspected_line_ranges": []
+          },
+          {
+            "url": "https://github.com/Boey-li/AdaptiGraph/blob/a7c75357793422e9108c36f58c6928f3f8a123ad/src/planning/physics_param_optimizer.py",
+            "sha256": "3daf972f407dbefbf39c86a6fc9223c16cc773d1f3a3ef0590e5b7a063faac12",
+            "lines": 226,
+            "path": "src/planning/physics_param_optimizer.py",
+            "role": "SELECTED_INTERFACE_PASSAGES",
+            "inspected_line_ranges": [
+              [
+                34,
+                64
+              ],
+              [
+                75,
+                119
+              ]
+            ]
+          },
+          {
+            "url": "https://github.com/Boey-li/AdaptiGraph/blob/a7c75357793422e9108c36f58c6928f3f8a123ad/src/planning/random_interact.py",
+            "sha256": "f70a81424d0b0a9432fff7468f5e911d35a155d1f05492e70bd0f166e0a0d59e",
+            "lines": 300,
+            "path": "src/planning/random_interact.py",
+            "role": "SELECTED_INTERFACE_PASSAGES",
+            "inspected_line_ranges": [
+              [
+                161,
+                178
+              ],
+              [
+                267,
+                278
+              ]
+            ]
+          },
+          {
+            "url": "https://github.com/Boey-li/AdaptiGraph/blob/a7c75357793422e9108c36f58c6928f3f8a123ad/src/planning/plan.py",
+            "sha256": "dbba5f9623525eeaabfea6c3ce3fb412957d928c11ec07b3809312bdff52f41e",
+            "lines": 343,
+            "path": "src/planning/plan.py",
+            "role": "SELECTED_INTERFACE_PASSAGES",
+            "inspected_line_ranges": [
+              [
+                135,
+                157
+              ],
+              [
+                184,
+                200
+              ],
+              [
+                307,
+                309
+              ]
+            ]
+          }
+        ],
+        "findings": [
+          "Recorded actions and states feed online fitting; goal cost and update paths inspected.",
+          "Optional final call iteration=-1 mismatches optimize iterations keyword; positive iteration assertion also exists. Static inconsistency, not measured runtime failure."
+        ]
+      },
+      {
+        "repo": "kywind/pgnd",
+        "commit": "06ef5dbbe9612b56aaee317c938dcf953074c05f",
+        "tree_entry_count": 133,
+        "tree_truncated": false,
+        "files": [
+          {
+            "sha256": "afc21d5d7d3a4ab1bad86885fd9daa4316d09ecc6540a5e3adeb75429863c86f",
+            "lines": 218,
+            "url": "https://github.com/kywind/pgnd/blob/06ef5dbbe9612b56aaee317c938dcf953074c05f/README.md",
+            "path": "README.md",
+            "role": "README_CONTEXT",
+            "inspected_line_ranges": []
+          },
+          {
+            "url": "https://github.com/kywind/pgnd/blob/06ef5dbbe9612b56aaee317c938dcf953074c05f/experiments/real_world/plan.py",
+            "sha256": "1046b3fc1f09cf50af959bf1b1b44b4fe28403c9e8b5f7daf84877ec6b9dcb18",
+            "lines": 89,
+            "path": "experiments/real_world/plan.py",
+            "role": "SELECTED_INTERFACE_PASSAGES",
+            "inspected_line_ranges": [
+              [
+                35,
+                71
+              ]
+            ]
+          },
+          {
+            "url": "https://github.com/kywind/pgnd/blob/06ef5dbbe9612b56aaee317c938dcf953074c05f/experiments/real_world/modules_planning/segment_perception.py",
+            "sha256": "4023f090ae5c5548bd1982fb409d1c4f92f3de040f852f1bc1aae4153c518cee",
+            "lines": 310,
+            "path": "experiments/real_world/modules_planning/segment_perception.py",
+            "role": "SELECTED_INTERFACE_PASSAGES",
+            "inspected_line_ranges": [
+              [
+                41,
+                60
+              ],
+              [
+                100,
+                108
+              ],
+              [
+                162,
+                177
+              ],
+              [
+                233,
+                240
+              ]
+            ]
+          },
+          {
+            "url": "https://github.com/kywind/pgnd/blob/06ef5dbbe9612b56aaee317c938dcf953074c05f/experiments/real_world/modules_planning/planning_env.py",
+            "sha256": "e9073d8f1dd6d09df3ddcaafff259b3ee967d9a4ac99cc816bf0d84966b871c7",
+            "lines": 709,
+            "path": "experiments/real_world/modules_planning/planning_env.py",
+            "role": "SELECTED_INTERFACE_PASSAGES",
+            "inspected_line_ranges": [
+              [
+                39,
+                125
+              ],
+              [
+                167,
+                181
+              ]
+            ]
+          }
+        ],
+        "findings": [
+          "Text prompt reaches SegmentPerception/GroundingDINO; target point cloud is separate. No native instruction-conditioned action policy established by this path."
+        ]
+      },
+      {
+        "repo": "lunarlab-gatech/PhysCoRe",
+        "commit": "ba7ddf744c7468369529d3baf996fb829fec30dd",
+        "tree_entry_count": 85,
+        "tree_truncated": false,
+        "files": [
+          {
+            "sha256": "4a1877c59822222fccdd95c7b8a4f17eeb565623b3934f6c98eed97d55311fa3",
+            "lines": 232,
+            "url": "https://github.com/lunarlab-gatech/PhysCoRe/blob/ba7ddf744c7468369529d3baf996fb829fec30dd/README.md",
+            "path": "README.md",
+            "role": "README_CONTEXT",
+            "inspected_line_ranges": []
+          },
+          {
+            "url": "https://github.com/lunarlab-gatech/PhysCoRe/blob/ba7ddf744c7468369529d3baf996fb829fec30dd/physcore/mpm/set_boundary_conditions.py",
+            "sha256": "937d993f81d9c8d4718f26c5d1e6b35146141f6030cd2b19f99c4ffb94938077",
+            "lines": 537,
+            "path": "physcore/mpm/set_boundary_conditions.py",
+            "role": "SELECTED_INTERFACE_PASSAGES",
+            "inspected_line_ranges": [
+              [
+                14,
+                40
+              ],
+              [
+                84,
+                114
+              ]
+            ]
+          },
+          {
+            "url": "https://github.com/lunarlab-gatech/PhysCoRe/blob/ba7ddf744c7468369529d3baf996fb829fec30dd/physcore/model_MfM.py",
+            "sha256": "2fed81ebc79499df20b7444b8ebeaa5f42bbe4e191d1a14926c3caec13cadcbc",
+            "lines": 440,
+            "path": "physcore/model_MfM.py",
+            "role": "SELECTED_INTERFACE_PASSAGES",
+            "inspected_line_ranges": [
+              [
+                355,
+                440
+              ]
+            ]
+          },
+          {
+            "url": "https://github.com/lunarlab-gatech/PhysCoRe/blob/ba7ddf744c7468369529d3baf996fb829fec30dd/physcore/particle_flow/dataset.py",
+            "sha256": "532014588afea645feeea1d4369ec6010d91ba7c0f3891c12bd81de620f5ad65",
+            "lines": 1238,
+            "path": "physcore/particle_flow/dataset.py",
+            "role": "SELECTED_INTERFACE_PASSAGES",
+            "inspected_line_ranges": [
+              [
+                74,
+                84
+              ],
+              [
+                144,
+                211
+              ]
+            ]
+          }
+        ],
+        "findings": [
+          "Boundary setter applies supplied collider/velocity config; MfM produces material/confidence outputs.",
+          "Dataset resolvers expose multiple possible fields; field presence alone does not establish real-policy input or oracle leakage."
+        ]
+      },
+      {
+        "repo": "form-robots/FORM",
+        "commit": "e75611e8b752c372c2c7e842625a3dcb5c164cff",
+        "tree_entry_count": 303,
+        "tree_truncated": false,
+        "files": [
+          {
+            "sha256": "c8b96611df4abaec158fa4acfb349173571d794ceb5adb0c4253f1ce1ce9aa64",
+            "lines": 42,
+            "url": "https://github.com/form-robots/FORM/blob/e75611e8b752c372c2c7e842625a3dcb5c164cff/README.md",
+            "path": "README.md",
+            "role": "README_CONTEXT",
+            "inspected_line_ranges": []
+          },
+          {
+            "url": "https://github.com/form-robots/FORM/blob/e75611e8b752c372c2c7e842625a3dcb5c164cff/docs/reproduction.md",
+            "sha256": "a107208b63361f5384dc1c64d8cb0c3f7b4a62c75bb907da54bf33b087afbb13",
+            "lines": 139,
+            "path": "docs/reproduction.md",
+            "role": "SELECTED_INTERFACE_PASSAGES",
+            "inspected_line_ranges": [
+              [
+                1,
+                38
+              ],
+              [
+                74,
+                95
+              ],
+              [
+                112,
+                123
+              ]
+            ]
+          },
+          {
+            "url": "https://github.com/form-robots/FORM/blob/e75611e8b752c372c2c7e842625a3dcb5c164cff/experiments/nclaw/identify_no_stress.py",
+            "sha256": "74450373fdf3f9842ac03413217f5131678791990d3b44da53a377d1dd7d2aac",
+            "lines": 626,
+            "path": "experiments/nclaw/identify_no_stress.py",
+            "role": "SELECTED_INTERFACE_PASSAGES",
+            "inspected_line_ranges": [
+              [
+                390,
+                446
+              ]
+            ]
+          }
+        ],
+        "findings": [
+          "Positions-only plasticine/sand branch loads truth E/nu as explicitly assumed parameters and uses rollout scan.",
+          "Pinned README says datasets are not publicly hosted yet."
+        ]
+      },
+      {
+        "repo": "krish-suresh/flying_knots_public",
+        "commit": "f336b325caa297d1f515012f1a778f0f975999c2",
+        "tree_entry_count": 167,
+        "tree_truncated": false,
+        "files": [
+          {
+            "sha256": "64d736739bda0698546d91be330e697204cf89f6879f99ff9d64182ed1c94792",
+            "lines": 94,
+            "url": "https://github.com/krish-suresh/flying_knots_public/blob/f336b325caa297d1f515012f1a778f0f975999c2/README.md",
+            "path": "README.md",
+            "role": "README_CONTEXT",
+            "inspected_line_ranges": []
+          },
+          {
+            "url": "https://github.com/krish-suresh/flying_knots_public/blob/f336b325caa297d1f515012f1a778f0f975999c2/main/learning.py",
+            "sha256": "8b722f3c8777f83c0f7c5a90e7ebbb73f4d7840cbd7dc151d0b3b3ae7ba92adc",
+            "lines": 556,
+            "path": "main/learning.py",
+            "role": "SELECTED_INTERFACE_PASSAGES",
+            "inspected_line_ranges": [
+              [
+                57,
+                82
+              ],
+              [
+                140,
+                160
+              ],
+              [
+                198,
+                220
+              ],
+              [
+                301,
+                329
+              ]
+            ]
+          },
+          {
+            "url": "https://github.com/krish-suresh/flying_knots_public/blob/f336b325caa297d1f515012f1a778f0f975999c2/config/learning/real_overhand_learning.yaml",
+            "sha256": "d19e222c3965a3e02bd7a3bf5233ebe88ed8c537b130d738fccdfa19990fd8ac",
+            "lines": 32,
+            "path": "config/learning/real_overhand_learning.yaml",
+            "role": "SELECTED_INTERFACE_PASSAGES",
+            "inspected_line_ranges": [
+              [
+                1,
+                32
+              ]
+            ]
+          }
+        ],
+        "findings": [
+          "Real xArm/Vicon path retries dropped-frame/parse-failed hardware trials; fair new comparisons must count these attempts and resets."
+        ]
+      },
+      {
+        "repo": "IanYangChina/SI4RP-data",
+        "commit": "d4f01a503aa6700c1fe6222f81c10ecf1ca4c013",
+        "tree_entry_count": 6364,
+        "tree_truncated": false,
+        "files": [
+          {
+            "sha256": "59ab503f86826a32fcff7d901870d1b29ce8c6292e1dd688bb7d9d1f2d4ca5fe",
+            "lines": 40,
+            "url": "https://github.com/IanYangChina/SI4RP-data/blob/d4f01a503aa6700c1fe6222f81c10ecf1ca4c013/README.md",
+            "path": "README.md",
+            "role": "README_CONTEXT",
+            "inspected_line_ranges": []
+          },
+          {
+            "url": "https://github.com/IanYangChina/SI4RP-data/blob/d4f01a503aa6700c1fe6222f81c10ecf1ca4c013/scripts/experiments/optimise.py",
+            "sha256": "3444d799a4ea88d27895081215bed92915a499a4a020cdf5520d7a781dc67d2e",
+            "lines": 579,
+            "path": "scripts/experiments/optimise.py",
+            "role": "SELECTED_INTERFACE_PASSAGES",
+            "inspected_line_ranges": [
+              [
+                97,
+                115
+              ],
+              [
+                159,
+                173
+              ],
+              [
+                197,
+                213
+              ]
+            ]
+          },
+          {
+            "url": "https://github.com/IanYangChina/SI4RP-data/blob/d4f01a503aa6700c1fe6222f81c10ecf1ca4c013/simulator/doma/envs/sys_id_env.py",
+            "sha256": "db7ee1c8068e20db46951c2f6dbba4de70b91922828d1fae795444fff3e6f3a1",
+            "lines": 232,
+            "path": "simulator/doma/envs/sys_id_env.py",
+            "role": "SELECTED_INTERFACE_PASSAGES",
+            "inspected_line_ranges": [
+              [
+                11,
+                17
+              ],
+              [
+                45,
+                80
+              ],
+              [
+                170,
+                205
+              ]
+            ]
+          }
+        ],
+        "findings": [
+          "Motion levels and material/friction fitting, supplied mesh/table/cube boundaries inspected; complete hidden-attachment paired task packet not established."
+        ]
+      }
+    ]
+  },
+  "temporary_source_metadata": [
+    {
+      "key": "jiggle",
+      "url": "https://arxiv.org/html/2405.09743v1",
+      "sha256": "643dc62adc6ab168aea70714657ebab30180a17dfa175e9c70dbbd46f51830e8",
+      "bytes": 550103,
+      "lines": 1334,
+      "hash_scope": "raw fetched HTML bytes; line count describes temporary extracted text"
+    },
+    {
+      "key": "adaptigraph",
+      "url": "https://arxiv.org/html/2407.07889v1",
+      "sha256": "f88079b2d1bc3dd280a649a36d6ba137fb1ff731969793ffa94cf0927a01bec4",
+      "bytes": 243948,
+      "lines": 528,
+      "hash_scope": "raw fetched HTML bytes; line count describes temporary extracted text"
+    },
+    {
+      "key": "pgnd",
+      "url": "https://arxiv.org/html/2506.15680v1",
+      "sha256": "fa6ebe42c9ec0602c4a727fa0d93db97a36ba27a274c1030cb2590d212245027",
+      "bytes": 368914,
+      "lines": 912,
+      "hash_scope": "raw fetched HTML bytes; line count describes temporary extracted text"
+    },
+    {
+      "key": "phystwin",
+      "url": "https://arxiv.org/html/2503.17973v1",
+      "sha256": "1a01ffbfb229a65d5d4f26de7db8f7aaa5596a2b851823a42a918f3d3126f24e",
+      "bytes": 234012,
+      "lines": 702,
+      "hash_scope": "raw fetched HTML bytes; line count describes temporary extracted text"
+    },
+    {
+      "key": "physcore",
+      "url": "https://arxiv.org/html/2607.20653v1",
+      "sha256": "0490b870b3f166d7da6c281c814959b0dd8362b68e5d9bf6434da791c69d78e0",
+      "bytes": 309097,
+      "lines": 911,
+      "hash_scope": "raw fetched HTML bytes; line count describes temporary extracted text"
+    },
+    {
+      "key": "ilc",
+      "url": "https://arxiv.org/html/2602.21302v1",
+      "sha256": "4abbbce473dbf7349423d9ee736e17d22b7cbc9533c79db4c516114b7ca3a862",
+      "bytes": 339666,
+      "lines": 846,
+      "hash_scope": "raw fetched HTML bytes; line count describes temporary extracted text"
+    },
+    {
+      "key": "form",
+      "url": "https://arxiv.org/html/2609.38105v1",
+      "sha256": "4303430f594af0aa71313360c518eedd098ce54e87ad4168220763aeb384a292",
+      "bytes": 187295,
+      "lines": 514,
+      "hash_scope": "raw fetched HTML bytes; line count describes temporary extracted text"
+    },
+    {
+      "key": "dpsi",
+      "url": "https://arxiv.org/html/2411.00554v2",
+      "sha256": "9d0e039679e6495a5b21436ffe7dcbd0b4340a13a38589412e50a1b446f989f7",
+      "bytes": 689544,
+      "lines": 1376,
+      "hash_scope": "raw fetched HTML bytes; line count describes temporary extracted text"
+    },
+    {
+      "key": "physcore_project",
+      "url": "https://lunarlab-gatech.github.io/PhysCoRe-website/",
+      "sha256": "2c9a79b11af9deb8f1c6c512da4ff118cfed2179b7b47a0fdb2ea7183de6195e",
+      "bytes": 46876,
+      "lines": 122,
+      "hash_scope": "raw fetched HTML bytes; line count describes temporary extracted text"
+    }
+  ],
+  "researcher_hypothesis": {
+    "text": "Does task-dependent disagreement among feasible actions predict when a material/hidden-attachment ambiguity merits extra probing, beyond uncertainty magnitude, fixed/max-displacement probes, sufficient-history feedback, prior task-oriented exploration and robust control?",
+    "novelty_boundary": "Task relevance itself is established prior work. A new held-out condition prediction, matched physical examples and cost accounting remain unestablished.",
+    "matched_examples_acquired": false,
+    "executable": false,
+    "next_task": "GAP-DE2",
+    "next_task_boundary": "One bounded nonexperimental asset/witness sufficiency audit; close current public-asset design if no comparison packet or differential prediction remains. No automatic rollout/training."
+  },
+  "operations": {
+    "paper_registration": false,
+    "tier_change": false,
+    "reading_status_change": false,
+    "experiments": false,
+    "package_installation": false,
+    "pdf_download": false,
+    "data_or_checkpoint_download": false,
+    "docker_mutation": false,
+    "git_commit": false,
+    "git_push": false,
+    "small_html_and_source_temporary_copies": true
+  },
+  "validation": {
+    "status": "PASS",
+    "date": "2026-10-24",
+    "commands": [
+      {
+        "command": "python3 -m py_compile work/scripts/build_reading_tiers.py",
+        "exit_code": 0
+      },
+      {
+        "command": "python3 work/scripts/build_reading_tiers.py",
+        "exit_code": 0,
+        "counts": {
+          "CORE": 47,
+          "NEXT": 275,
+          "REFERENCE": 473,
+          "ARCHIVE": 242
+        }
+      },
+      {
+        "command": "python3 work/scripts/audit_repository.py",
+        "phase": "before",
+        "exit_code": 0,
+        "errors": 0,
+        "warnings": 0
+      },
+      {
+        "command": "python3 work/scripts/audit_repository.py",
+        "phase": "after",
+        "exit_code": 0,
+        "result": {
+          "papers": 1037,
+          "categories": 23,
+          "tier_counts": {
+            "CORE": 47,
+            "NEXT": 275,
+            "REFERENCE": 473,
+            "ARCHIVE": 242
+          },
+          "intensive": 322,
+          "inactive_reading_history": 47,
+          "standard_note_files": 5185,
+          "combined_resources": 526,
+          "registry_index_rows": 1037,
+          "markdown_files_checked": 5345,
+          "markdown_links_checked": 10298,
+          "comparison_matrix_rows": 106,
+          "completed_matrix_rows": 5,
+          "errors": [],
+          "warnings": []
+        }
+      },
+      {
+        "command": "git diff --check",
+        "exit_code": 0
+      }
+    ],
+    "ledger_identity_count_and_line_ranges": "PASS",
+    "canonical_hashes": [
+      {
+        "path": "PAPER.md",
+        "before_sha256": "b492fdb8b6ed5db0200ffa2f9f543a37561e8a454188922faa0b6289736de9e1",
+        "after_sha256": "b492fdb8b6ed5db0200ffa2f9f543a37561e8a454188922faa0b6289736de9e1",
+        "unchanged": true
+      },
+      {
+        "path": "work/sources/papers.json",
+        "before_sha256": "9aaf36031bf776d554dd10f8f2f927d60ddd7b44ff02267181325275bcb74f06",
+        "after_sha256": "9aaf36031bf776d554dd10f8f2f927d60ddd7b44ff02267181325275bcb74f06",
+        "unchanged": true
+      },
+      {
+        "path": "work/sources/registry_meta.json",
+        "before_sha256": "1fbb093bf785ca218ead1804f95fdac7fa5d88ac5ed82b019f1766511b1eb56f",
+        "after_sha256": "1fbb093bf785ca218ead1804f95fdac7fa5d88ac5ed82b019f1766511b1eb56f",
+        "unchanged": true
+      },
+      {
+        "path": "research/READING_TIERS.csv",
+        "before_sha256": "8b2ac89fff0d6d56950695d5bfb67daab8fbc51647454fa077beea970bb23f29",
+        "after_sha256": "8b2ac89fff0d6d56950695d5bfb67daab8fbc51647454fa077beea970bb23f29",
+        "unchanged": true
+      },
+      {
+        "path": "research/READING_STATUS.csv",
+        "before_sha256": "276c5531063e93f381de18b45fbf82dfa16703444f39658dfd4bfb10bbc17878",
+        "after_sha256": "276c5531063e93f381de18b45fbf82dfa16703444f39658dfd4bfb10bbc17878",
+        "unchanged": true
+      },
+      {
+        "path": "research/READING_STATUS_HISTORY.csv",
+        "before_sha256": "c91b6727a03529ba790447eb5106f5b04cc4364b0c90b3eed1afecf9b700e001",
+        "after_sha256": "c91b6727a03529ba790447eb5106f5b04cc4364b0c90b3eed1afecf9b700e001",
+        "unchanged": true
+      }
+    ],
+    "existing_changes": {
+      "starting_present_dirty_files": 409,
+      "starting_missing_files": 5,
+      "touched_within_task": [
+        "README.md",
+        "TODO.md",
+        "research/IDEA_BUILDUP_GUIDE.md",
+        "synthesis/03_manipulation_contact.md",
+        "synthesis/04_vla_generalist.md",
+        "synthesis/README.md",
+        "work/update/README.md",
+        "work/update/UPDATES_2026-10-24.md"
+      ],
+      "unrelated_present_dirty_files_preserved": 401,
+      "starting_missing_files_remain_missing": true,
+      "related_original_hashes": {
+        "README.md": "509b4251cb26318001cbfec9b5b76dd061995a1d8e699f9be63f7e367b63ddae",
+        "TODO.md": "e88f6478d02d721808c6913a67dfee77702f5d49bdb931c2b00d428a09975e27",
+        "research/IDEA_BUILDUP_GUIDE.md": "d404dd351255e8cec1acd3dc3bc04fb44b389d4f38701b1610f198ffdb675fce",
+        "synthesis/03_manipulation_contact.md": "70e958580cf03c3530141b36e966fae0ca10bea67b9796c0abbeecf27c2afb73",
+        "synthesis/04_vla_generalist.md": "79704b5aaeff3184354f5347d4f59327181525b1776843e6012a6e179fa0bfab",
+        "synthesis/README.md": "83cab9156628b6a9877ac9b119dafbc8b5d5ebd1827d06ec49551314e1b7c325",
+        "work/update/README.md": "3e41f3adc82439e781486fca310894008d2dbc7ca74e160be9ca3977c0e1aeb6",
+        "work/update/UPDATES_2026-10-24.md": "22ef1ae737660dc6c689b6698ca295daa2791030b6e1be9db8fc330bde2a3ccc"
+      }
+    },
+    "cleanup": {
+      "status": "DONE",
+      "scope": "Only this task-owned temporary HTML/source/index/snapshot directory and its pointer; no repository PDFs, assets, Docker resources or preexisting files deleted.",
+      "temporary_files_removed": 33,
+      "temporary_bytes_removed": 1804536,
+      "task_directory_removed": true,
+      "pointer_removed": true,
+      "source_urls_commits_hashes_retained": true
+    }
+  }
+}

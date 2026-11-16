@@ -23,6 +23,21 @@ except ModuleNotFoundError:
 
 ROOT = Path(__file__).resolve().parents[2]
 MANIFEST = ROOT / "work" / "sources" / "papers.json"
+
+
+def path_has_exact_case(relative: str) -> bool:
+    """Detect paths that work on case-insensitive hosts but break on Linux."""
+    path = Path(relative)
+    if path.is_absolute() or ".." in path.parts:
+        return False
+    current = ROOT
+    for part in path.parts:
+        if not current.is_dir() or part not in {entry.name for entry in current.iterdir()}:
+            return False
+        current = current / part
+    return current.exists()
+
+
 NOTE_NAMES = ["01_overview.md", "02_problem.md", "03_method.md", "04_evaluation.md", "05_insights.md"]
 STATUSES = {"UNREAD", "SKIMMED", "READ", "SYNTHESIZED", "REPRODUCED"}
 EVIDENCE = {"CURATION_ONLY", "ABSTRACT_CHECKED", "FULL_TEXT_CHECKED", "EXPERIMENT_CHECKED"}
@@ -745,6 +760,8 @@ def main() -> None:
     missing_notes = []
     for item in papers:
         folder = ROOT / item["folder"]
+        if not path_has_exact_case(item["folder"]):
+            errors.append(f"paper folder spelling/case mismatch: {item['paper_id']} {item['folder']}")
         for name in NOTE_NAMES:
             if not (folder / name).exists():
                 missing_notes.append(str(folder / name))
@@ -975,7 +992,7 @@ def main() -> None:
     for row in status:
         if row["tier"] != "CORE":
             continue
-        folder = (ROOT / row["overview_path"].lstrip("./")).parent
+        folder = (ROOT / urllib.parse.unquote(row["overview_path"].removeprefix("./"))).parent
         text = "\n".join((folder / name).read_text(errors="ignore") for name in NOTE_NAMES)
         generic += any(term in text for term in ("자동 추출 실패", "survey-level 해석", "paper-specific cue"))
     if generic:

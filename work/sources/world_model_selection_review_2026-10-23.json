@@ -1,0 +1,494 @@
+{
+  "task": "GAP-WM1",
+  "reviewed_on": "2026-10-23",
+  "timezone": "Asia/Seoul",
+  "report": "work/update/WORLD_MODEL_SELECTION_REVIEW_2026-10-23.md",
+  "canonical_question": "synthesis/05_world_models_safety.md#gap-wm-2026",
+  "scope": "Literature and static public source review; no policy/model code imported or executed.",
+  "decision": {
+    "broad_method": "NO-GO",
+    "conditional_diagnostic": "REVISE/HOLD",
+    "maturity": "CURATION-HYPOTHESIS",
+    "native_effect": "NOT_TESTED",
+    "external_researcher_feedback": "NOT_OBTAINED"
+  },
+  "counts": {
+    "papers": 13,
+    "official_2024_2026": 7,
+    "preprint_2026": 4,
+    "earlier_lineage": 2,
+    "selected_fulltext": 5,
+    "repositories": 3,
+    "source_doc_files": 10
+  },
+  "search_scope": {
+    "window": "2024–2026 plus prerequisite lineage",
+    "queries": [
+      "VLA world model test time verification action candidate selection",
+      "world model policy evaluation action fidelity dWorldEval DreamTrue",
+      "model exploitation planner overfitting value equivalence",
+      "Cosmos Policy planning ensemble LCB"
+    ],
+    "coverage": "Targeted follow-up of existing GAP-WM, not an exhaustive venue census.",
+    "discovery_only_or_not_reaudited": [
+      "WorldEval",
+      "RoboWorld",
+      "WorldAgen",
+      "Decision-making-centric position",
+      "RISE",
+      "VLAW",
+      "WMPO"
+    ],
+    "unresolved": [
+      "dWorldEval final proceedings body vs preprint",
+      "robust MPC and post-selection calibration lineage before method admission",
+      "same-state all-candidate native outcome packet"
+    ]
+  },
+  "evidence_boundary": "Selected sections are not whole-paper reviews or user reading status. Static release metadata is not runtime qualification. A missing packet in this review is not proof that no such data exists.",
+  "sources": [
+    {
+      "id": "WM01",
+      "title": "RoboDreamer: Learning Compositional World Models for Robot Imagination",
+      "year": 2024,
+      "status": "ICML 2024; official proceedings",
+      "status_url": "https://proceedings.mlr.press/v235/zhou24f.html",
+      "depth": "OFFICIAL_ABSTRACT",
+      "role": "Compositional robot imagination lineage",
+      "aliases": [
+        "RoboDreamer"
+      ],
+      "registry_matches": [
+        {
+          "paper_id": "pr-0699",
+          "title": "RoboDreamer: Learning Compositional World Models for Robot Imagination",
+          "folder": "2024/ICML/2024_ICML_RoboDreamer-Learning-Compositional-World-Models-for-Robot"
+        }
+      ]
+    },
+    {
+      "id": "WM02",
+      "title": "Unified World Models: Coupling Video and Action Diffusion for Pretraining on Large Robotic Datasets",
+      "year": 2025,
+      "status": "RSS 2025; official proceedings",
+      "status_url": "https://www.roboticsproceedings.org/rss21/p015.html",
+      "depth": "OFFICIAL_ABSTRACT",
+      "role": "Joint action/video model interface",
+      "aliases": [
+        "Unified World Models"
+      ],
+      "registry_matches": [
+        {
+          "paper_id": "pr-0701",
+          "title": "Unified World Models: Coupling Video and Action Diffusion for Pretraining on Large Robotic Datasets",
+          "folder": "2025/RSS/2025_RSS_Unified-World-Models-Coupling-Video-and-Action-Diffusion-f"
+        }
+      ]
+    },
+    {
+      "id": "WM03",
+      "title": "General agents need world models",
+      "year": 2025,
+      "status": "ICML 2025; official proceedings",
+      "status_url": "https://proceedings.mlr.press/v267/richens25a.html",
+      "depth": "OFFICIAL_ABSTRACT",
+      "role": "Predictive knowledge vs explicit video generator",
+      "aliases": [],
+      "registry_matches": []
+    },
+    {
+      "id": "WM04",
+      "title": "Cosmos Policy: Fine-Tuning Video Models for Visuomotor Control and Planning",
+      "year": 2026,
+      "status": "ICLR 2026; official conference",
+      "status_url": "https://iclr.cc/virtual/2026/poster/10006732",
+      "fulltext_url": "https://arxiv.org/html/2601.16163v1",
+      "depth": "SELECTED_FULLTEXT_AND_STATIC_CODE",
+      "sections": [
+        "4.3",
+        "5.3",
+        "6",
+        "A.4.2"
+      ],
+      "role": "Direct planning baseline; ensemble and direct Q comparison",
+      "project": "https://research.nvidia.com/labs/cosmos-lab/cosmos-policy/",
+      "repository": "NVlabs/cosmos-policy",
+      "aliases": [
+        "Cosmos Policy"
+      ],
+      "identifiers": [
+        "2601.16163"
+      ],
+      "boundary": "Joint WAM; author hardware/latency not independently measured. HTML succeeded earlier in this review; one later refetch returned UnexpectedStatusCode.",
+      "registry_matches": [
+        {
+          "paper_id": "pr-0689",
+          "title": "Cosmos Policy: Fine-Tuning Video Models for Visuomotor Control and Planning",
+          "folder": "2026/ICLR/2026_ICLR_Cosmos-Policy-Fine-Tuning-Video-Models-for-Visuomotor-Cont"
+        }
+      ]
+    },
+    {
+      "id": "WM05",
+      "title": "Scaling Robot Policy Evaluation via Discrete Diffusion World Model",
+      "year": 2026,
+      "status": "ICML 2026; official proceedings",
+      "status_url": "https://proceedings.mlr.press/v306/li26hi.html",
+      "fulltext_url": "https://arxiv.org/html/2604.22152v1",
+      "depth": "SELECTED_FULLTEXT",
+      "sections": [
+        "4.2.3",
+        "4.3"
+      ],
+      "role": "Policy ranking and automatic outcome evaluation",
+      "project": "https://dworldeval.github.io/",
+      "aliases": [
+        "dWorldEval"
+      ],
+      "identifiers": [
+        "2604.22152"
+      ],
+      "boundary": "Official final title/authors differ from preprint; body comparison used preprint v1. Final PDF body not compared.",
+      "registry_matches": []
+    },
+    {
+      "id": "WM06",
+      "title": "Benchmarking World-Model Learning with Environment-Level Queries",
+      "year": 2026,
+      "status": "ICML 2026; official proceedings",
+      "status_url": "https://proceedings.mlr.press/v306/warrier26a.html",
+      "depth": "OFFICIAL_ABSTRACT",
+      "role": "Environment-query evaluation beyond rollout similarity",
+      "aliases": [
+        "WorldTest",
+        "AutumnBench"
+      ],
+      "boundary": "Not evidence of native VLA contact performance.",
+      "registry_matches": []
+    },
+    {
+      "id": "WM07",
+      "title": "Parallel Stochastic Gradient-Based Planning for World Models",
+      "year": 2026,
+      "status": "ICML 2026; official proceedings",
+      "status_url": "https://proceedings.mlr.press/v306/psenka26a.html",
+      "depth": "OFFICIAL_ABSTRACT",
+      "role": "Adjacent planner family",
+      "aliases": [],
+      "boundary": "No fulltext/code interface qualification or drop-in VLA compatibility claim.",
+      "registry_matches": []
+    },
+    {
+      "id": "WM08",
+      "title": "VeriVLA: Adaptive Test-Time Verification for Flow-Based VLAs with Latent World Models",
+      "year": 2026,
+      "status": "arXiv preprint; formal acceptance unverified",
+      "status_url": "https://arxiv.org/abs/2610.21985",
+      "fulltext_url": "https://arxiv.org/html/2610.21985v1",
+      "depth": "SELECTED_FULLTEXT_AND_STATIC_CODE",
+      "sections": [
+        "3.3",
+        "3.4",
+        "4.4",
+        "5",
+        "B",
+        "C",
+        "D.2"
+      ],
+      "role": "Closest adaptive candidate verification collision",
+      "project": "https://shirley430316.github.io/projects/verivla/",
+      "repository": "shirley430316/VeriVLA",
+      "aliases": [
+        "VeriVLA"
+      ],
+      "identifiers": [
+        "2610.21985"
+      ],
+      "boundary": "Critical-state labels are not an oracle of extra-compute benefit; training-free trigger does not mean untrained verifier.",
+      "registry_matches": []
+    },
+    {
+      "id": "WM09",
+      "title": "DreamTrue: Action-Faithful Robot World Model with Counterfactual Post-Training",
+      "year": 2026,
+      "status": "arXiv preprint; formal acceptance unverified",
+      "status_url": "https://arxiv.org/abs/2610.12468",
+      "fulltext_url": "https://arxiv.org/html/2610.12468v1",
+      "depth": "SELECTED_FULLTEXT_AND_RELEASE_DOCS",
+      "sections": [
+        "3.4",
+        "4.4",
+        "5",
+        "C.1",
+        "C.2"
+      ],
+      "role": "Action fidelity and recorded-action policy outcome evaluation",
+      "project": "https://brave-eai.github.io/DreamTrue/",
+      "repository": "brave-eai/DreamTrue",
+      "aliases": [
+        "DreamTrue"
+      ],
+      "identifiers": [
+        "2610.12468"
+      ],
+      "boundary": "240 recorded complete trajectories (4 policies × 60 conditions) do not provide every candidate's native counterfactual outcome.",
+      "registry_matches": []
+    },
+    {
+      "id": "WM10",
+      "title": "Imperfect World Models are Exploitable",
+      "year": 2026,
+      "status": "arXiv preprint; formal acceptance unverified",
+      "status_url": "https://arxiv.org/abs/2605.15960",
+      "fulltext_url": "https://arxiv.org/html/2605.15960v2",
+      "depth": "SELECTED_FULLTEXT",
+      "sections": [
+        "2.2",
+        "3.3",
+        "3.4",
+        "5"
+      ],
+      "role": "Exploitation as preference inversion; theoretical boundary",
+      "aliases": [],
+      "identifiers": [
+        "2605.15960"
+      ],
+      "boundary": "Finite MDP and policy-class conditions; transition TV not interchangeable with pixel/latent error. OpenReview forum 2PMapwc7Up access challenged; not acceptance evidence.",
+      "registry_matches": []
+    },
+    {
+      "id": "WM11",
+      "title": "τ₀-VLA: a Hierarchical Robot Foundation Model with World-Model-Guided Test-Time Computation",
+      "year": 2026,
+      "status": "arXiv preprint; formal acceptance unverified",
+      "status_url": "https://arxiv.org/abs/2608.16885",
+      "depth": "ABSTRACT_AND_PROJECT",
+      "role": "Higher-level subtask search vs action-chunk ranking",
+      "project": "https://tau0-vla.github.io/",
+      "aliases": [
+        "tau0-vla",
+        "τ₀-VLA"
+      ],
+      "identifiers": [
+        "2608.16885"
+      ],
+      "registry_matches": []
+    },
+    {
+      "id": "WM12",
+      "title": "The Value Equivalence Principle for Model-Based Reinforcement Learning",
+      "year": 2020,
+      "status": "NeurIPS 2020; official proceedings",
+      "status_url": "https://papers.nips.cc/paper/2020/hash/3bb585ea00014b0e3ebe4c6dd165a358-Abstract.html",
+      "depth": "OFFICIAL_ABSTRACT",
+      "role": "Sufficiency relative to policy/value-function class",
+      "aliases": [
+        "The Value Equivalence Principle"
+      ],
+      "registry_matches": []
+    },
+    {
+      "id": "WM13",
+      "title": "Mitigating Planner Overfitting in Model-Based Reinforcement Learning",
+      "year": 2018,
+      "status": "arXiv preprint v1 2018 / v2 2020; conference not verified",
+      "status_url": "https://arxiv.org/abs/1812.01129",
+      "depth": "ABSTRACT_AND_VERSION_HISTORY",
+      "role": "Existing planner-overfitting explanation",
+      "aliases": [],
+      "identifiers": [
+        "1812.01129"
+      ],
+      "registry_matches": []
+    }
+  ],
+  "repositories": [
+    {
+      "repo": "NVlabs/cosmos-policy",
+      "commit": "18a2accadf4e7a3531e56754102af5a24d2316da",
+      "commit_date": "2026-01-23T02:42:58Z",
+      "source_tree_url": "https://github.com/NVlabs/cosmos-policy/tree/18a2accadf4e7a3531e56754102af5a24d2316da",
+      "tree_path_count": 664,
+      "tree_truncated": "not retained in API snapshot",
+      "inspection": "Selected paths only; static read, no execution"
+    },
+    {
+      "repo": "shirley430316/VeriVLA",
+      "commit": "f95ab142d6b5b247b47b36137352eb6289dd86a7",
+      "commit_date": "2026-10-16T02:07:54Z",
+      "source_tree_url": "https://github.com/shirley430316/VeriVLA/tree/f95ab142d6b5b247b47b36137352eb6289dd86a7",
+      "tree_path_count": 9,
+      "tree_truncated": "not retained in API snapshot",
+      "inspection": "Selected paths only; static read, no execution"
+    },
+    {
+      "repo": "brave-eai/DreamTrue",
+      "commit": "991e2963c015be9c5b7f21695bb82bfaaceffed8",
+      "commit_date": "2026-10-09T06:12:18Z",
+      "source_tree_url": "https://github.com/brave-eai/DreamTrue/tree/991e2963c015be9c5b7f21695bb82bfaaceffed8",
+      "tree_path_count": 344,
+      "tree_truncated": "not retained in API snapshot",
+      "inspection": "Selected paths only; static read, no execution"
+    }
+  ],
+  "source_files": [
+    {
+      "repo": "NVlabs/cosmos-policy",
+      "path": "README.md",
+      "commit": "18a2accadf4e7a3531e56754102af5a24d2316da",
+      "url": "https://raw.githubusercontent.com/NVlabs/cosmos-policy/18a2accadf4e7a3531e56754102af5a24d2316da/README.md",
+      "sha256": "d2abd5f64eb132b6eddaaf3e4ccd8c6ee6c905aa6f1810b004cae32c88228ca5",
+      "bytes": 5933,
+      "reviewed_locations": [
+        "author hardware guidance; not measured"
+      ],
+      "permalink": "https://github.com/NVlabs/cosmos-policy/blob/18a2accadf4e7a3531e56754102af5a24d2316da/README.md"
+    },
+    {
+      "repo": "NVlabs/cosmos-policy",
+      "path": "ALOHA.md",
+      "commit": "18a2accadf4e7a3531e56754102af5a24d2316da",
+      "url": "https://raw.githubusercontent.com/NVlabs/cosmos-policy/18a2accadf4e7a3531e56754102af5a24d2316da/ALOHA.md",
+      "sha256": "686d62c3799444514a126ad62b274298067a43351259fdf8c5d391149e55ac1a",
+      "bytes": 7350,
+      "reviewed_locations": [
+        "104: detailed instructions pending"
+      ],
+      "permalink": "https://github.com/NVlabs/cosmos-policy/blob/18a2accadf4e7a3531e56754102af5a24d2316da/ALOHA.md"
+    },
+    {
+      "repo": "NVlabs/cosmos-policy",
+      "path": "cosmos_policy/experiments/robot/aloha/run_aloha_eval.py",
+      "commit": "18a2accadf4e7a3531e56754102af5a24d2316da",
+      "url": "https://raw.githubusercontent.com/NVlabs/cosmos-policy/18a2accadf4e7a3531e56754102af5a24d2316da/cosmos_policy/experiments/robot/aloha/run_aloha_eval.py",
+      "sha256": "07528ab6e404747aaf1ceea16ae63cce36de560d616788b16085dfe851ef75f9",
+      "bytes": 51149,
+      "reviewed_locations": [
+        "40–72: example planning configurations, not evidence of execution",
+        "137, 928: query-results retention"
+      ],
+      "permalink": "https://github.com/NVlabs/cosmos-policy/blob/18a2accadf4e7a3531e56754102af5a24d2316da/cosmos_policy/experiments/robot/aloha/run_aloha_eval.py"
+    },
+    {
+      "repo": "NVlabs/cosmos-policy",
+      "path": "cosmos_policy/experiments/robot/cosmos_utils.py",
+      "commit": "18a2accadf4e7a3531e56754102af5a24d2316da",
+      "url": "https://raw.githubusercontent.com/NVlabs/cosmos-policy/18a2accadf4e7a3531e56754102af5a24d2316da/cosmos_policy/experiments/robot/cosmos_utils.py",
+      "sha256": "a95c74f33f519f4c0ce048c3ba2694989d3a7c431bf0f324a274413cde4c0b47",
+      "bytes": 109448,
+      "reviewed_locations": [
+        "780–818: aggregation mean/LCB/vote/majority_mean",
+        "1537–1541: aggregation call",
+        "1878–1885, 1939–2001: planning model selection and future/value queries",
+        "2180–2250: worker results/HTTP helper; server selection not fully traced"
+      ],
+      "permalink": "https://github.com/NVlabs/cosmos-policy/blob/18a2accadf4e7a3531e56754102af5a24d2316da/cosmos_policy/experiments/robot/cosmos_utils.py"
+    },
+    {
+      "repo": "brave-eai/DreamTrue",
+      "path": "README.md",
+      "commit": "991e2963c015be9c5b7f21695bb82bfaaceffed8",
+      "url": "https://raw.githubusercontent.com/brave-eai/DreamTrue/991e2963c015be9c5b7f21695bb82bfaaceffed8/README.md",
+      "sha256": "f5ec476ed163b97e2dd8e00012375d54d24191d168af032f41277dfd2ea7e291",
+      "bytes": 3174,
+      "reviewed_locations": [
+        "19–27: component links/full data future update"
+      ],
+      "permalink": "https://github.com/brave-eai/DreamTrue/blob/991e2963c015be9c5b7f21695bb82bfaaceffed8/README.md"
+    },
+    {
+      "repo": "brave-eai/DreamTrue",
+      "path": "wmvideo/README.md",
+      "commit": "991e2963c015be9c5b7f21695bb82bfaaceffed8",
+      "url": "https://raw.githubusercontent.com/brave-eai/DreamTrue/991e2963c015be9c5b7f21695bb82bfaaceffed8/wmvideo/README.md",
+      "sha256": "b9eb745aac498039fcdb4c948248d39ccd43d6af3e4f5f30e3c180ce94e90c5c",
+      "bytes": 6271,
+      "reviewed_locations": [
+        "11, 39, 50: released inference description/offline launchers/mini pack"
+      ],
+      "permalink": "https://github.com/brave-eai/DreamTrue/blob/991e2963c015be9c5b7f21695bb82bfaaceffed8/wmvideo/README.md"
+    },
+    {
+      "repo": "brave-eai/DreamTrue",
+      "path": "reward/README.md",
+      "commit": "991e2963c015be9c5b7f21695bb82bfaaceffed8",
+      "url": "https://raw.githubusercontent.com/brave-eai/DreamTrue/991e2963c015be9c5b7f21695bb82bfaaceffed8/reward/README.md",
+      "sha256": "49e3052f4e7e2cccb7b9651b81400dc0a46ac49f79ffc5bb2e0aa21fb47d4652",
+      "bytes": 4689,
+      "reviewed_locations": [
+        "99–101: full annotation release pending"
+      ],
+      "permalink": "https://github.com/brave-eai/DreamTrue/blob/991e2963c015be9c5b7f21695bb82bfaaceffed8/reward/README.md"
+    },
+    {
+      "repo": "shirley430316/VeriVLA",
+      "path": "README.md",
+      "commit": "f95ab142d6b5b247b47b36137352eb6289dd86a7",
+      "url": "https://raw.githubusercontent.com/shirley430316/VeriVLA/f95ab142d6b5b247b47b36137352eb6289dd86a7/README.md",
+      "sha256": "f92adafdcd6a3e4960301f278ca3d266879e122f3008a0d8de829a1cb7389ce6",
+      "bytes": 2112,
+      "reviewed_locations": [
+        "39–44: release checklist"
+      ],
+      "permalink": "https://github.com/shirley430316/VeriVLA/blob/f95ab142d6b5b247b47b36137352eb6289dd86a7/README.md"
+    },
+    {
+      "repo": "shirley430316/VeriVLA",
+      "path": "verifier/verifier.py",
+      "commit": "f95ab142d6b5b247b47b36137352eb6289dd86a7",
+      "url": "https://raw.githubusercontent.com/shirley430316/VeriVLA/f95ab142d6b5b247b47b36137352eb6289dd86a7/verifier/verifier.py",
+      "sha256": "bebe248b2cb2ea501cbf031f009c9cdea077a7162aa3bf93d03db45b3a761846",
+      "bytes": 3666,
+      "reviewed_locations": [
+        "41–58: score_candidate",
+        "62–85: rank_candidates"
+      ],
+      "permalink": "https://github.com/shirley430316/VeriVLA/blob/f95ab142d6b5b247b47b36137352eb6289dd86a7/verifier/verifier.py"
+    },
+    {
+      "repo": "shirley430316/VeriVLA",
+      "path": "verifier/ac_predictor.py",
+      "commit": "f95ab142d6b5b247b47b36137352eb6289dd86a7",
+      "url": "https://raw.githubusercontent.com/shirley430316/VeriVLA/f95ab142d6b5b247b47b36137352eb6289dd86a7/verifier/ac_predictor.py",
+      "sha256": "968bd40c036fee8841fa8e42ce241375c7237d349b380659c96e3e59b06e7787",
+      "bytes": 16211,
+      "reviewed_locations": [
+        "284–345: rollout/state-input path; native caller provenance unqualified"
+      ],
+      "permalink": "https://github.com/shirley430316/VeriVLA/blob/f95ab142d6b5b247b47b36137352eb6289dd86a7/verifier/ac_predictor.py"
+    }
+  ],
+  "validation": {
+    "pre_audit": "PASS: errors 0, warnings 0, papers 1037, standard notes 5185",
+    "post_audit": "PASS",
+    "temporary_files_removed": true,
+    "pre_canonical_sha256": {
+      "work/sources/papers.json": "9aaf36031bf776d554dd10f8f2f927d60ddd7b44ff02267181325275bcb74f06",
+      "work/sources/registry_meta.json": "1fbb093bf785ca218ead1804f95fdac7fa5d88ac5ed82b019f1766511b1eb56f",
+      "research/READING_TIERS.csv": "8b2ac89fff0d6d56950695d5bfb67daab8fbc51647454fa077beea970bb23f29",
+      "research/READING_STATUS.csv": "276c5531063e93f381de18b45fbf82dfa16703444f39658dfd4bfb10bbc17878",
+      "research/READING_STATUS_HISTORY.csv": "c91b6727a03529ba790447eb5106f5b04cc4364b0c90b3eed1afecf9b700e001"
+    },
+    "preexisting_dirty_files": 352,
+    "errors": 0,
+    "warnings": 0,
+    "papers": 1037,
+    "intensive": 322,
+    "history": 47,
+    "standard_notes": 5185,
+    "markdown_files_checked": 5334,
+    "markdown_links_checked": 10130,
+    "commands": [
+      "python3 -m py_compile work/scripts/build_reading_tiers.py",
+      "python3 work/scripts/build_reading_tiers.py",
+      "python3 work/scripts/audit_repository.py",
+      "git diff --check"
+    ],
+    "canonical_sha256_unchanged": true,
+    "preexisting_files_unchanged": 345,
+    "preexisting_files_intentionally_edited": 7,
+    "source_file_hash_checks": "10/10 PASS",
+    "registry_matches": 3,
+    "new_registry_admissions": 0
+  }
+}

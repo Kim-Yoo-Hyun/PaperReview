@@ -4,6 +4,8 @@
 > Evidence maturity: `FULL_TEXT_CHECKED`.
 > Analysis basis: full-text PDF body checked on 2026-09-02 (20 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2401.02117; PDF retrieval source: https://arxiv.org/pdf/2401.02117. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
 
+> DOC-QA2 targeted source review: 2026-10-23; PDF pp. 5. 손상 구간·직접 연결된 표 분류만 원문 이미지와 대조했다. 전체 주장 정독·실험 검증·reading status 승격을 뜻하지 않는다. [URL·PDF hash·수정 기록](../../../work/sources/pdf_note_review_followup_2026-10-23.json).
+
 ## Paper-supported conclusion
 
 > **Evidence boundary:** The following claims are restricted to selected PDF body sentences, captions and section anchors; exact table/equation values remain to be checked at those anchors.
@@ -15,7 +17,7 @@
 - **p. 1 / 1. Introduction - extractive body cue:** Imitation learning from human-provided demonstrations is a promising tool for developing generalist robots, as it allows people to teach arbitrary skills to robots.
 - **p. 4 / 3. Mobile ALOHA Hardware - extractive body cue:** Connecting the operator to the mobile manipulator directly also enables coarse haptic feedback when the robot collides with objects.
 - **p. 1 / Abstract - extractive body cue:** In this work, we develop a system for imitating mobile manipulation tasks that are bimanual and require whole-body control.
-- **p. 5 / 3. Mobile ALOHA Hardware - extractive body cue:** The training objective for a mobile manipulation policy πm for a task m is E(oi,aiarms,ai base)∼Dm mobile  L(ai arms, ai base, πm(oi))  + ...
+- **PDF p. 5, §4 co-training (DOC-QA2 원문 대조):** Mobile demonstrations의 arm/base imitation loss와 static demonstrations의 arm action 및 zero-padded base [0,0] imitation loss를 함께 최적화한다. 두 데이터에서 같은 확률로 sampling하며 관측은 3개 RGB camera와 arm joint positions다.
 - **p. 2 / 1. Introduction - extractive body cue:** While many recent works demonstrate that highly expressive policy classes such as diffusion models and transformers can perform well on fine-grained, multi-modal manipulation tasks, it ...
 - **Contribution anchor:** p. 2 (1. Introduction), p. 2 (1. Introduction), p. 1 (1. Introduction), p. 4 (3. Mobile ALOHA Hardware), p. 1 (Abstract), p. 5 (3. Mobile ALOHA Hardware)
 
@@ -58,7 +60,7 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the PDF-described interface and mechanism: While many recent works demonstrate that highly expressive policy classes such as diffusion models and transformers can perform well on fine-grained, multi-modal manipulation tasks, it is largely unclear whether the ... (p. 2, 1. Introduction); preserve the objective/update rule: The training objective for a mobile manipulation policy πm for a task m is E(oi,aiarms,ai base)∼Dm mobile  L(ai arms, ai base, πm(oi))  + E(oi,aiarms)∼Dstatic  L(ai arms, [0, ... (p. 5, 3. Mobile ALOHA Hardware).
+1. 최소 재현은 PDF p. 5 §4의 static/mobile equal-probability sampling, static base-action [0,0] padding, 3-camera alignment와 mobile-only action normalization을 보존한다. 이 조건을 고정해 co-training 효과를 비교한다. (DOC-QA2)
 2. Use the paper-reported task/data/environment cue: For example in the case of Lift Glass and Wipe sub-task, the #Attempts equals the number of success from the previous subtask Grasp Towel, as the robot could fail and ... (p. 8, 6.1. Co-training Improves Performance).
 3. Compare against the reported or matched baseline: We start with ACT [104], the method introduced with ALOHA, and train it on all 7 tasks with and without co-training. (p. 8, 6.1. Co-training Improves Performance).
 4. Report the body metric with its denominator and aggregation: Co-training improves the whole-task success rate in 5 out of the 7 tasks, with a boost of 45%, 20%, 80%, 95% and 80% respectively. (p. 8, 6.1. Co-training Improves Performance).

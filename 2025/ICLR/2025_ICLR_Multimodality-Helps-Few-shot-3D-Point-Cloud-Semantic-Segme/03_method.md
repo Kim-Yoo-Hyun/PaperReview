@@ -4,6 +4,8 @@
 > Evidence maturity: `FULL_TEXT_CHECKED`.
 > Analysis basis: full-text PDF body checked on 2026-09-03 (22 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=jXvwJ51vcK; public full-text mirror used for retrieval (canonical paper source retained): https://chatpaper.com/api/v1/articles/download/111762. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
+> DOC-QA2 targeted source review: 2026-10-23; PDF pp. 4. 손상 구간·직접 연결된 표 분류만 원문 이미지와 대조했다. 전체 주장 정독·실험 검증·reading status 승격을 뜻하지 않는다. [URL·PDF hash·수정 기록](../../../work/sources/pdf_note_review_followup_2026-10-23.json).
+
 ## Method in One Sentence
 
 PDF body method statement (p. 5 (3 METHODOLOGY), p. 7 (3 METHODOLOGY), p. 5 (3 METHODOLOGY), p. 4 (3 METHODOLOGY), p. 6 (3 METHODOLOGY), p. 6 (3 METHODOLOGY)): To utilize the potentially available 2D modality, we propose to use the visual encoder of LSeg to generate 2D visual features, which exhibit excellent generalizability since the LSeg model is ...
@@ -84,9 +86,9 @@ PDF body method statement (p. 5 (3 METHODOLOGY), p. 7 (3 METHODOLOGY), p. 5 (3 M
 | Contract | Generic domain prior | PDF body cue | Unresolved detail |
 |---|---|---|---|
 | Horizon | single frame, multi-view accumulation 또는 online map horizon; exact window 확인 필요. | Formally, for the episode introduced above, we additionally have N class names for S, e.g., ‘chair', ‘table', ‘wall', etc. | episode/sequence/action-chunk boundary |
-| Rate / latency | per-frame/streaming inference와 downstream policy/control rate가 분리된다. | Each episode corresponds to an N-way K-shot segmentation task, containing a support set S =  {Xn,k s , Yn,k s }K ... | Hz/fps, inference time and control rate |
+| Episode definition | N-way K-shot point-cloud segmentation episode | N classes × K support examples와 query set; PDF p. 4 §3.1 | 분류/segmentation 구성으로, Hz 또는 latency 근거가 아님 |
 | Memory | camera poses, map/scene graph/Gaussian state와 temporal feature. | not recovered | window and reset |
-| Compute | 3D reconstruction/fusion, point/feature memory와 query cost가 latency를 결정한다. | Each episode corresponds to an N-way K-shot segmentation task, containing a support set S =  {Xn,k s , Yn,k s }K ... | hardware, batch and throughput |
+| Support/query information | Support는 class별 point-level labels를 포함한다. | Query를 N target classes와 background로 분할; PDF p. 4 §3.1 | 데이터 접근 조건이며 hardware/throughput 수치가 아님 |
 
 ## Training vs Inference
 

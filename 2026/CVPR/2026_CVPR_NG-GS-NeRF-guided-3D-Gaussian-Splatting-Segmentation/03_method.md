@@ -4,6 +4,8 @@
 > Evidence maturity: `FULL_TEXT_CHECKED`.
 > Analysis basis: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2026/html/He_NG-GS_NeRF-guided_3D_Gaussian_Splatting_Segmentation_CVPR_2026_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2026/papers/He_NG-GS_NeRF-guided_3D_Gaussian_Splatting_Segmentation_CVPR_2026_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
+> DOC-QA1 (2026-10-23): 제어문자·깨진 추출 구간과 직접 연결된 표 항목을 PDF 페이지 이미지와 대조했다. 확인 범위·원문 URL·페이지·수정 이력은 [대조 기록](../../../work/sources/pdf_note_review_2026-10-23.json)에 있다. 노트 전체의 정독이나 모든 기존 주장에 대한 재검증을 뜻하지 않으며 reading status는 유지한다.
+
 ## Method in One Sentence
 
 PDF body method statement (p. 4 (4.1. Edge Gaussian Continuity), p. 3 (4. Method), p. 3 (4. Method), p. 4 (4.1. Edge Gaussian Continuity), p. 5 (4.1. Edge Gaussian Continuity), p. 5 (4.2. NeRF-GS Joint Optimization)): Through RBF interpolation, the discrete Gaussian features are fused into continuous features f inter, which are then fed into the NeRF module to reinforce spatial coherence across the representation.
@@ -70,7 +72,7 @@ PDF body method statement (p. 4 (4.1. Edge Gaussian Continuity), p. 3 (4. Method
 ## Observation–State–Action Interface
 
 - **p. 2 / 1. Introduction - extractive body cue:** With the proposed NG-GS framework, we make the following main contributions: • we develop a continuous feature field construction module that combines RBF interpolation with ...
-- **p. 5 / 4.2. NeRF-GS Joint Optimization - extractive body cue:** These parameters dynamically adjust the hidden layers based on external conditions. ˆh(l) = ReLU  γ(l) ⊙h(l) + β(l) , (14) where ⊙is the element-wise ...
+- **원문 대조:** 외부 interpolation feature에서 만든 γ^(l), β^(l)로 hidden activation을 element-wise scale·shift하고 ReLU를 적용한다. 이는 NeRF 내부 layer modulation이며 로봇 action output이 아니다. ([PDF p. 5](https://openaccess.thecvf.com/content/CVPR2026/papers/He_NG-GS_NeRF-guided_3D_Gaussian_Splatting_Segmentation_CVPR_2026_paper.pdf#page=5), §4.2 NeRF-GS Joint Optimization, Eq. (14)).
 - **p. 3 / 3.1. NeRF - extractive body cue:** It takes a trained 3DGS model as input, and identifies boundary Gaussian points with the help of a 2D segmentation model.
 - **p. 3 / 4. Method - extractive body cue:** A joint optimization strategy is employed, where alignment loss and spatial continuity loss are used to harmonize the outputs of 3DGS and NeRF.
 - **p. 4 / 4.1. Edge Gaussian Continuity - extractive body cue:** This method generates smooth feature transitions between boundary Gaussian points, providing continuous feature field input for NeRF.

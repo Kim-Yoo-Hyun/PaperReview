@@ -11,9 +11,10 @@
 - Aliases:
 - Official paper: https://arxiv.org/abs/2601.00675
 - Venue verification: https://arxiv.org/abs/2601.00675
-- Code/Project: not identified
+- Code/Project: https://crfm.stanford.edu/helm/robo-reward-bench/
 - Code: not_identified
 - Source audit: 2026-10-22 공식 abstract/arXiv abstract와 publication metadata 확인. 새 5개 note는 abstract 수준의 분석이며 상세 본문·코드 감사는 기존 buildup dossier의 명시 범위만 따른다.
+- Metadata refresh: 2026-10-25 arXiv v2와 저자가 연결한 HELM project URL 확인. 목적지 HTML은 client-rendered shell이며 code/data/checkpoint 공개 범위는 검증하지 않았다. OpenReview challenge로 정식 acceptance를 확인하지 못해 arXiv 유지.
 
 ## Problem and Importance
 

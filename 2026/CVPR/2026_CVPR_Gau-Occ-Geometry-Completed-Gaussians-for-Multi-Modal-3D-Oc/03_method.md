@@ -4,6 +4,8 @@
 > Evidence maturity: `FULL_TEXT_CHECKED`.
 > Analysis basis: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2026/html/Lv_Gau-Occ_Geometry-Completed_Gaussians_for_Multi-Modal_3D_Occupancy_Prediction_CVPR_2026_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2026/papers/Lv_Gau-Occ_Geometry-Completed_Gaussians_for_Multi-Modal_3D_Occupancy_Prediction_CVPR_2026_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
+> DOC-QA1 (2026-10-23): 제어문자·깨진 추출 구간과 직접 연결된 표 항목을 PDF 페이지 이미지와 대조했다. 확인 범위·원문 URL·페이지·수정 이력은 [대조 기록](../../../work/sources/pdf_note_review_2026-10-23.json)에 있다. 노트 전체의 정독이나 모든 기존 주장에 대한 재검증을 뜻하지 않으며 reading status는 유지한다.
+
 ## Method in One Sentence
 
 PDF body method statement (p. 4 (3.4. Gaussian Anchor Fusion (GAF)), p. 3 (3.1. 3D Semantic Gaussian Scene Representation), p. 2 (3. Proposed Approach), p. 3 (3.2. LiDAR Completion Diffuser (LCD)), p. 2 (3. Proposed Approach), p. 5 (3.4. Gaussian Anchor Fusion (GAF))): To unify precise LiDAR geometry with rich image semantics, we propose Gaussian Anchor Fusion (GAF), a geometry-conditioned multi-modal fusion module that extracts, samples, and aggregates features for each Gaussian anchor.
@@ -51,7 +53,7 @@ PDF body method statement (p. 4 (3.4. Gaussian Anchor Fusion (GAF)), p. 3 (3.1. 
 - **p. 3 / 3.1. 3D Semantic Gaussian Scene Representation - extractive body cue:** Following [14], we optimize the model with a joint objective LCE + LLov, combining cross-entropy and Lov´aszSoftmax losses to enhance segmentation accuracy and class balance.
 - **p. 3 / 3.2. LiDAR Completion Diffuser (LCD) - extractive body cue:** Given a raw LiDAR scan P = {Pi ∈R3}NP i=1, the completion objective is to generate a densified point cloud P′ = {P ′ i}NP ...
 - **p. 2 / 3. Proposed Approach - extractive body cue:** This produces view-consistent, semantically discriminative anchor features that update Gaussian attributes.
-- **p. 5 / 3.4. Gaussian Anchor Fusion (GAF) - extractive body cue:** Finally, fused features [fpc,i; fimg,i] are decoded through a two-layer FFN to update Gaussian attributes: [bµi,bsi,bri,bci] = FFN  [fpc,i; fimg,i]  , (17) The refined ...
+- **원문 대조:** Point-cloud feature와 image feature를 concatenate한 뒤 2-layer FFN이 Gaussian의 position offset, scale, rotation, semantic attribute를 갱신한다. Position은 기존 μ_i에 예측 offset을 더하고, refined Gaussian을 splat해 occupancy를 예측한다. ([PDF p. 5](https://openaccess.thecvf.com/content/CVPR2026/papers/Lv_Gau-Occ_Geometry-Completed_Gaussians_for_Multi-Modal_3D_Occupancy_Prediction_CVPR_2026_paper.pdf#page=5), §3.4 Gaussian Anchor Fusion, Eq. (17)).
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 3 (3.1. 3D Semantic Gaussian Scene Representation), p. 3 (3.2. LiDAR Completion Diffuser (LCD)), p. 2 (3. Proposed Approach), p. 5 (3.4. Gaussian Anchor Fusion (GAF)).
 - Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.

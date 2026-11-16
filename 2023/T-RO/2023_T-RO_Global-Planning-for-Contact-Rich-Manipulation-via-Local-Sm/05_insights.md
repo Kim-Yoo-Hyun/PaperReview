@@ -4,6 +4,8 @@
 > Evidence maturity: `FULL_TEXT_CHECKED`.
 > Analysis basis: full-text PDF body checked on 2026-09-02 (20 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2206.10787; PDF retrieval source: https://arxiv.org/pdf/2206.10787. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
 
+> DOC-QA2 targeted source review: 2026-10-23; PDF pp. 5. 손상 구간·직접 연결된 표 분류만 원문 이미지와 대조했다. 전체 주장 정독·실험 검증·reading status 승격을 뜻하지 않는다. [URL·PDF hash·수정 기록](../../../work/sources/pdf_note_review_followup_2026-10-23.json).
+
 ## Paper-supported conclusion
 
 > **Evidence boundary:** The following claims are restricted to selected PDF body sentences, captions and section anchors; exact table/equation values remain to be checked at those anchors.
@@ -16,7 +18,7 @@
 - **p. 1 / Abstract - extractive body cue:** Our final contribution resolves (iii), where we show that classical sampling-based motion planning algorithms can be effective in global planning when contact modes are abstracted ...
 - **p. 3 / II. LOCAL THEORY OF SMOOTHING - extractive body cue:** (1) which consists of the sensitivity term J(¯x) ∈Rm×n, and a bias term µ(¯x) ∈Rm, which we refer to as model parameters (J (¯x) , ...
 - **p. 6 / III. CONVEX QUASI-DYNAMIC DIFFERENTIABLE - extractive body cue:** Quasi-dynamic models, which previous works have used extensively for robotic manipulation [10], [11], [30], [31], [45], simplify Newtonian dynamics by removing terms related to velocity ...
-- **p. 5 / II. LOCAL THEORY OF SMOOTHING - extractive body cue:** 2) First-Order Randomized Smoothing: We use the following estimators for first-order randomized smoothing of dynamical systems, Aρ ≈1 N PN i=1  ∂ ∂xf(¯x + ...
+- **PDF p. 5, Eqs. (21a)–(22) (DOC-QA2 원문 대조):** First-order randomized smoothing은 perturbed state/input에서 dynamics Jacobians ∂f/∂x와 ∂f/∂u를 N samples 평균하여 A_ρ, B_ρ를 추정한다. c_ρ는 perturbed dynamics output 평균이다. Zeroth-order least-squares estimator Eq. (22)와 구별한다.
 - **Contribution anchor:** p. 2 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 1 (Abstract), p. 3 (II. LOCAL THEORY OF SMOOTHING), p. 6 (III. CONVEX QUASI-DYNAMIC DIFFERENTIABLE)
 
 ### Strongest assumption and failure boundary

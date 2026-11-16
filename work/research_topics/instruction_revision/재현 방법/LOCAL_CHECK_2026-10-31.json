@@ -1,0 +1,41 @@
+{
+  "checked_on": "2026-10-31",
+  "task_id": "GAP-REVISION-P0",
+  "status": "NOT_MET",
+  "host": {"uname_srm": "Darwin 27.0.0 arm64"},
+  "docker": {
+    "context": "desktop-linux",
+    "endpoint_kind": "local unix socket",
+    "endpoint_note": "Observed user Docker Desktop socket; not a portable execution requirement.",
+    "desktop": "4.45.0 (203075)",
+    "engine": "28.3.3",
+    "server_platform": "linux/arm64",
+    "info_architecture": "aarch64",
+    "cpus": 10,
+    "memory_bytes": 8218034176,
+    "runtimes": ["io.containerd.runc.v2", "runc"]
+  },
+  "gpu_allocation": {
+    "command": "docker run --rm --pull never --gpus all paper-gap-p3:rvo-c2c46ba nvidia-smi",
+    "image_preexisting": true,
+    "image_id": "sha256:ec14bd72a90f89cb6f3c4b263bb35a81de7977dffb2e5a2cb7e96946f1545ebb",
+    "exit_code": 125,
+    "error": "docker: Error response from daemon: could not select device driver \"\" with capabilities: [[gpu]]",
+    "native_process_started": false
+  },
+  "portable_launcher_check": {
+    "command": "sh work/experiments/instruction_revision_p0/resume.sh check",
+    "exit_code": 3,
+    "reason": "linux/arm64 does not meet linux/amd64 recipe; blocked before pull/build"
+  },
+  "unverified": ["CUDA backend", "EGL rendering", "Docker image build", "checkpoint load", "native VLA IO and instruction switch"],
+  "resource_cleanup": {
+    "created_containers_remaining": 0,
+    "created_images": 0,
+    "created_volumes": 0,
+    "preserved_image": "paper-gap-p3:rvo-c2c46ba",
+    "preserved_volume": "minikube",
+    "host_dependency_or_weight_install": false
+  },
+  "research_effect": "UNMEASURED"
+}

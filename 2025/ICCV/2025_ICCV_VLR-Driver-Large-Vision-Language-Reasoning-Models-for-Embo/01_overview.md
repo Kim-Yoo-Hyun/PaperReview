@@ -17,6 +17,8 @@
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; title-token overlap first two pages=0.9)
 
+> DOC-QA2 targeted source review: 2026-10-23; PDF pp. 4, 6. 손상 구간·직접 연결된 표 분류만 원문 이미지와 대조했다. 전체 주장 정독·실험 검증·reading status 승격을 뜻하지 않는다. [URL·PDF hash·수정 기록](../../../work/sources/pdf_note_review_followup_2026-10-23.json).
+
 ## Why This Paper Is Here
 
 Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 However, existing CoT-based methods typically rely on openended language generation for reasoning, which lacks structural constraints.를 문제로 두고, Our method enables VLR model to describe the current driving scenario, construct real-time spatial layout and dynamic changes of the environment, and achieve long-term planning for driving decisions.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
@@ -46,7 +48,7 @@ Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 �
 
 | Role | PDF body evidence | Robotics interpretation | Anchor |
 |---|---|---|---|
-| Observation/input | The forward pass is computed as: y = W ′x =  W0 + α r B · A  x, (2) where y is the output and x is input. | RGB-D, image set, point cloud, depth와 camera pose | p. 6 (3.3. Training Paradigm), p. 4 (3.1. Overview) |
+| Observation/input | 과거 N_f frames × N_v views의 image와 ego 위치·속도·target point | Driving visual history 및 ego-state input | PDF p. 4 §3.1; p. 6 Eq. (2)는 LoRA 연산으로 sensor 정의가 아님 |
 | State/latent | forward, pass, computed, where, output, input, Subsequently, compressed, cropped, image, data, information | geometry, map, object/relationship state | p. 6 (3.3. Training Paradigm), p. 4 (3.1. Overview), p. 4 (3.1. Overview) |
 | Output/action | Subsequently, the compressed and cropped image data and the information from the ego's sensors are input into the model. | point map, pose, scene graph, affordance 또는 query result | p. 4 (3.1. Overview), p. 4 (3.1. Overview), p. 2 (Body text (section not recovered)) |
 | Objective/outcome | The core principle of GRPO [34] is to optimize strategies by assigning relative rewards to multiple outputs generated from the same prompt, thereby eliminating the need for additional value function models. | geometric accuracy, semantic consistency와 planning/manipulation utility | p. 6 (3.3. Training Paradigm), p. 6 (3.3. Training Paradigm), p. 4 (3.2. Spatiotemporal CoT Reasoning) |

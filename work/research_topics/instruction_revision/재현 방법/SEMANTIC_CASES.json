@@ -1,0 +1,487 @@
+{
+  "schema_version": 1,
+  "artifact_kind": "human_authored_semantic_specification",
+  "created_on": "2026-10-31",
+  "status": "DRAFT_NOT_EXECUTED",
+  "description": "Eight manually authored semantic cases; not observed failures, independent samples, parser/model evaluation, or runnable native fixtures.",
+  "casebook": "../내용/README.md#cases",
+  "review": "../../../update/PRE_GPU_BUILDUP_REVIEW_2026-10-31.md#remaining-work-review",
+  "runtime_binding": {
+    "executable": false,
+    "p0_launcher_uses_this_file": false,
+    "tokenizer_verified": false,
+    "physical_feasibility_verified": false
+  },
+  "objects": {
+    "bowl": "akita_black_bowl_1",
+    "bottle": "wine_bottle_1",
+    "cheese": "cream_cheese_1",
+    "plate": "plate_1",
+    "cabinet_top": "wooden_cabinet_1_top_side",
+    "rack": "wine_rack_1_top_region"
+  },
+  "state_scope": "Expected states are immediately before and after the revision event, not a measured simulator state. R6 requires the explicitly described completed prefix.",
+  "render_contract": {
+    "visible_fields": [
+      "active_goals",
+      "active_constraints"
+    ],
+    "audit_only_fields": [
+      "cancelled_goals",
+      "retired_constraints",
+      "completed_goals"
+    ],
+    "same_renderer_for": [
+      "full_history_recomputation",
+      "predicted_state_update",
+      "rule_baseline",
+      "human_oracle"
+    ],
+    "free_text_append": false,
+    "case_id_is_model_input": false
+  },
+  "time_contract": {
+    "t0": "after initial stabilization, before first policy action",
+    "tau": "after the preceding action's post-state has been logged and before the revised instruction's first action",
+    "constraint_interval": "action ownership: [valid_from, valid_until); check both pre/post states of each owned action",
+    "null_valid_until": "through the shared evaluation horizon",
+    "reference_pose_is_evaluator_only": true
+  },
+  "cases": [
+    {
+      "case_id": "R1",
+      "role": "core",
+      "initial_utterance": "Put the bowl on the plate. Keep the wine bottle at its current position and orientation.",
+      "revision_utterance": "Change only the bowl's destination to the top of the cabinet.",
+      "expected_before_revision": {
+        "active_goals": [
+          {
+            "predicate": "on",
+            "object": "bowl",
+            "target": "plate"
+          }
+        ],
+        "active_constraints": [
+          {
+            "kind": "pose_invariant",
+            "object": "bottle",
+            "reference_event": "t0",
+            "valid_from": "t0",
+            "valid_until": null
+          }
+        ],
+        "cancelled_goals": [],
+        "retired_constraints": [],
+        "completed_goals": []
+      },
+      "expected_after_revision": {
+        "active_goals": [
+          {
+            "predicate": "on",
+            "object": "bowl",
+            "target": "cabinet_top"
+          }
+        ],
+        "active_constraints": [
+          {
+            "kind": "pose_invariant",
+            "object": "bottle",
+            "reference_event": "t0",
+            "valid_from": "t0",
+            "valid_until": null
+          }
+        ],
+        "cancelled_goals": [
+          {
+            "predicate": "on",
+            "object": "bowl",
+            "target": "plate"
+          }
+        ],
+        "retired_constraints": [],
+        "completed_goals": []
+      },
+      "oracle_policy_prompt": "Put the bowl on top of the cabinet. Keep the wine bottle at its original position and orientation.",
+      "note": "Initial bottle pose is an evaluator reference, not extra policy input."
+    },
+    {
+      "case_id": "R2",
+      "role": "extension",
+      "initial_utterance": "Put the bowl on top of the cabinet. Keep the cream cheese at its current position and orientation.",
+      "revision_utterance": "Move the wine bottle instead of the bowl. Keep the destination the same.",
+      "expected_before_revision": {
+        "active_goals": [
+          {
+            "predicate": "on",
+            "object": "bowl",
+            "target": "cabinet_top"
+          }
+        ],
+        "active_constraints": [
+          {
+            "kind": "pose_invariant",
+            "object": "cheese",
+            "reference_event": "t0",
+            "valid_from": "t0",
+            "valid_until": null
+          }
+        ],
+        "cancelled_goals": [],
+        "retired_constraints": [],
+        "completed_goals": []
+      },
+      "expected_after_revision": {
+        "active_goals": [
+          {
+            "predicate": "on",
+            "object": "bottle",
+            "target": "cabinet_top"
+          }
+        ],
+        "active_constraints": [
+          {
+            "kind": "pose_invariant",
+            "object": "cheese",
+            "reference_event": "t0",
+            "valid_from": "t0",
+            "valid_until": null
+          }
+        ],
+        "cancelled_goals": [
+          {
+            "predicate": "on",
+            "object": "bowl",
+            "target": "cabinet_top"
+          }
+        ],
+        "retired_constraints": [],
+        "completed_goals": []
+      },
+      "oracle_policy_prompt": "Put the wine bottle on top of the cabinet. Keep the cream cheese at its original position and orientation.",
+      "note": "No obligation to restore the bowl to its initial position."
+    },
+    {
+      "case_id": "R3",
+      "role": "extension",
+      "initial_utterance": "Put the bowl on top of the cabinet.",
+      "revision_utterance": "From now on, keep the wine bottle at its current position and orientation.",
+      "expected_before_revision": {
+        "active_goals": [
+          {
+            "predicate": "on",
+            "object": "bowl",
+            "target": "cabinet_top"
+          }
+        ],
+        "active_constraints": [],
+        "cancelled_goals": [],
+        "retired_constraints": [],
+        "completed_goals": []
+      },
+      "expected_after_revision": {
+        "active_goals": [
+          {
+            "predicate": "on",
+            "object": "bowl",
+            "target": "cabinet_top"
+          }
+        ],
+        "active_constraints": [
+          {
+            "kind": "pose_invariant",
+            "object": "bottle",
+            "reference_event": "tau",
+            "valid_from": "tau",
+            "valid_until": null
+          }
+        ],
+        "cancelled_goals": [],
+        "retired_constraints": [],
+        "completed_goals": []
+      },
+      "oracle_policy_prompt": "Put the bowl on top of the cabinet. From now on, keep the wine bottle at its current position and orientation.",
+      "note": "No retroactive violation for movement before tau."
+    },
+    {
+      "case_id": "R4",
+      "role": "core",
+      "initial_utterance": "Put the bowl on the plate. Keep the wine bottle at its current position and orientation.",
+      "revision_utterance": "Cancel the restriction on moving the wine bottle. Cancel the bowl task and put the wine bottle on the rack instead.",
+      "expected_before_revision": {
+        "active_goals": [
+          {
+            "predicate": "on",
+            "object": "bowl",
+            "target": "plate"
+          }
+        ],
+        "active_constraints": [
+          {
+            "kind": "pose_invariant",
+            "object": "bottle",
+            "reference_event": "t0",
+            "valid_from": "t0",
+            "valid_until": null
+          }
+        ],
+        "cancelled_goals": [],
+        "retired_constraints": [],
+        "completed_goals": []
+      },
+      "expected_after_revision": {
+        "active_goals": [
+          {
+            "predicate": "on",
+            "object": "bottle",
+            "target": "rack"
+          }
+        ],
+        "active_constraints": [],
+        "cancelled_goals": [
+          {
+            "predicate": "on",
+            "object": "bowl",
+            "target": "plate"
+          }
+        ],
+        "retired_constraints": [
+          {
+            "kind": "pose_invariant",
+            "object": "bottle",
+            "reference_event": "t0",
+            "valid_from": "t0",
+            "valid_until": "tau"
+          }
+        ],
+        "completed_goals": []
+      },
+      "oracle_policy_prompt": "Put the wine bottle on the rack.",
+      "note": "The old restriction and goal remain in audit fields only; do not render them into the VLA prompt."
+    },
+    {
+      "case_id": "R5",
+      "role": "semantic_control",
+      "initial_utterance": "Put the bowl on the plate. Keep the wine bottle at its current position and orientation.",
+      "revision_utterance": "You may move the wine bottle.",
+      "expected_before_revision": {
+        "active_goals": [
+          {
+            "predicate": "on",
+            "object": "bowl",
+            "target": "plate"
+          }
+        ],
+        "active_constraints": [
+          {
+            "kind": "pose_invariant",
+            "object": "bottle",
+            "reference_event": "t0",
+            "valid_from": "t0",
+            "valid_until": null
+          }
+        ],
+        "cancelled_goals": [],
+        "retired_constraints": [],
+        "completed_goals": []
+      },
+      "expected_after_revision": {
+        "active_goals": [
+          {
+            "predicate": "on",
+            "object": "bowl",
+            "target": "plate"
+          }
+        ],
+        "active_constraints": [],
+        "cancelled_goals": [],
+        "retired_constraints": [
+          {
+            "kind": "pose_invariant",
+            "object": "bottle",
+            "reference_event": "t0",
+            "valid_from": "t0",
+            "valid_until": "tau"
+          }
+        ],
+        "completed_goals": []
+      },
+      "oracle_policy_prompt": "Put the bowl on the plate.",
+      "note": "Permission removes the prohibition without introducing a bottle-moving goal."
+    },
+    {
+      "case_id": "R6",
+      "role": "extension",
+      "initial_utterance": "First put the wine bottle on the rack. Then put the bowl on the plate while keeping the wine bottle on the rack.",
+      "revision_utterance": "Change only the bowl's destination to the top of the cabinet.",
+      "expected_before_revision": {
+        "active_goals": [
+          {
+            "predicate": "on",
+            "object": "bowl",
+            "target": "plate"
+          }
+        ],
+        "active_constraints": [
+          {
+            "kind": "relation_invariant",
+            "object": "bottle",
+            "predicate": "on",
+            "target": "rack",
+            "valid_from": "bottle_on_rack_achieved",
+            "valid_until": null
+          }
+        ],
+        "cancelled_goals": [],
+        "retired_constraints": [],
+        "completed_goals": [
+          {
+            "predicate": "on",
+            "object": "bottle",
+            "target": "rack"
+          }
+        ]
+      },
+      "expected_after_revision": {
+        "active_goals": [
+          {
+            "predicate": "on",
+            "object": "bowl",
+            "target": "cabinet_top"
+          }
+        ],
+        "active_constraints": [
+          {
+            "kind": "relation_invariant",
+            "object": "bottle",
+            "predicate": "on",
+            "target": "rack",
+            "valid_from": "bottle_on_rack_achieved",
+            "valid_until": null
+          }
+        ],
+        "cancelled_goals": [
+          {
+            "predicate": "on",
+            "object": "bowl",
+            "target": "plate"
+          }
+        ],
+        "retired_constraints": [],
+        "completed_goals": [
+          {
+            "predicate": "on",
+            "object": "bottle",
+            "target": "rack"
+          }
+        ]
+      },
+      "oracle_policy_prompt": "Put the bowl on top of the cabinet while keeping the wine bottle on the rack.",
+      "note": "Before-revision state assumes an observed successful bottle-on-rack prefix. It is not the state immediately after the first utterance."
+    },
+    {
+      "case_id": "R7",
+      "role": "paraphrase_control",
+      "initial_utterance": "Put the bowl on the plate. Keep the wine bottle at its current position and orientation.",
+      "revision_utterance": "The bowl should still go on the plate.",
+      "expected_before_revision": {
+        "active_goals": [
+          {
+            "predicate": "on",
+            "object": "bowl",
+            "target": "plate"
+          }
+        ],
+        "active_constraints": [
+          {
+            "kind": "pose_invariant",
+            "object": "bottle",
+            "reference_event": "t0",
+            "valid_from": "t0",
+            "valid_until": null
+          }
+        ],
+        "cancelled_goals": [],
+        "retired_constraints": [],
+        "completed_goals": []
+      },
+      "expected_after_revision": {
+        "active_goals": [
+          {
+            "predicate": "on",
+            "object": "bowl",
+            "target": "plate"
+          }
+        ],
+        "active_constraints": [
+          {
+            "kind": "pose_invariant",
+            "object": "bottle",
+            "reference_event": "t0",
+            "valid_from": "t0",
+            "valid_until": null
+          }
+        ],
+        "cancelled_goals": [],
+        "retired_constraints": [],
+        "completed_goals": []
+      },
+      "oracle_policy_prompt": "Put the bowl on the plate. Keep the wine bottle at its original position and orientation.",
+      "note": "No semantic edit; any queue or phrasing effect is separate."
+    },
+    {
+      "case_id": "R8",
+      "role": "switching_control",
+      "initial_utterance": "Put the bowl on the plate.",
+      "revision_utterance": "Change only the bowl's destination to the top of the cabinet.",
+      "expected_before_revision": {
+        "active_goals": [
+          {
+            "predicate": "on",
+            "object": "bowl",
+            "target": "plate"
+          }
+        ],
+        "active_constraints": [],
+        "cancelled_goals": [],
+        "retired_constraints": [],
+        "completed_goals": []
+      },
+      "expected_after_revision": {
+        "active_goals": [
+          {
+            "predicate": "on",
+            "object": "bowl",
+            "target": "cabinet_top"
+          }
+        ],
+        "active_constraints": [],
+        "cancelled_goals": [
+          {
+            "predicate": "on",
+            "object": "bowl",
+            "target": "plate"
+          }
+        ],
+        "retired_constraints": [],
+        "completed_goals": []
+      },
+      "oracle_policy_prompt": "Put the bowl on top of the cabinet.",
+      "note": "No bottle restriction exists. This semantic specification does not replace the already fixed P0 two-prompt native IO procedure."
+    }
+  ],
+  "not_yet_implemented": [
+    "semantic updater/parser/renderer",
+    "shared native prefix and full-state branch",
+    "temporal observer and physical tolerances",
+    "Docker tokenizer checks",
+    "native competence and model comparison"
+  ],
+  "validation": {
+    "manual_semantic_review": true,
+    "static_structure_check_pending": false,
+    "static_structure_checked_on": "2026-10-31",
+    "static_check_scope": "JSON fields, eight case IDs, object bindings, unchanged R7, R4/R5 audit-only revocation, R6 completed prefix, non-executable status; not parser/model accuracy",
+    "model_accuracy_measured": false,
+    "native_performance_measured": false
+  }
+}

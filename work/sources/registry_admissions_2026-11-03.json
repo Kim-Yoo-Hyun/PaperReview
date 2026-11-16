@@ -1,0 +1,863 @@
+[
+  {
+    "admission_key": "pld",
+    "title": "Self-Improving Vision-Language-Action Models with Data Generation via Residual RL",
+    "year": 2026,
+    "venue": "ICLR",
+    "category": "VLA and Generalist Robot Policies",
+    "primary_track": "VLA and generalist robot policies",
+    "page": "https://iclr.cc/virtual/2026/poster/10008318",
+    "project": "https://wenlixiao.com/self-improve-VLA-PLD/",
+    "identifiers": {
+      "arxiv": "2511.00091",
+      "openreview": "eUGoqrZ6Ea"
+    },
+    "aliases": [
+      "PLD"
+    ],
+    "tags": [
+      "VLA",
+      "residual-RL",
+      "data-generation",
+      "self-improvement"
+    ],
+    "paper_type": "method",
+    "admission_group": "VLA, cross-embodiment, and long-horizon planning",
+    "problem": "고정 VLA의 조작 실패를 online 경험으로 보완하고 그 경험을 다시 generalist 정책 학습에 쓰는 문제다.",
+    "method": "동결 VLA 위에 residual specialist를 학습하고, 배포 조건을 고려한 hybrid rollout에서 얻은 데이터를 generalist의 supervised fine-tuning에 사용한다.",
+    "interface": "시각 관측·지시 → VLA 행동과 residual 보정 → rollout → VLA 후학습. Specialist 학습과 generalist 갱신은 다른 단계다.",
+    "evaluation": "LIBERO·SimplerEnv와 실제 Franka 조작을 보고한다. 여기서는 단계별 정책 역할을 확인했으며 성공률·trial 수·전체 ablation은 새로 정리하지 않았다.",
+    "assumptions": "Specialist가 개선한 행동과 데이터 수집 분포가 후학습에 유용해야 한다. Base가 바뀐 뒤 이전 residual의 호환성은 별도 질문이다.",
+    "limitations": "ICLR 공식 program의 채택과 읽은 arXiv v1을 구별한다. 최종본 동등성·동일 residual의 반복 base 갱신 전이·공식 전체 학습 code는 확인하지 않았다.",
+    "role": "VLA의 residual 개선→데이터 생성→base 갱신을 잇는 직접 선행이다. 현재 후보에서 이 루프 자체를 새 기여로 주장하지 않도록 NEXT에 추가한다.",
+    "question": "독립적으로 업데이트된 base에 이전 residual을 유지할 때, 새로운 residual 학습보다 이득이 남는 조건은 무엇인가?",
+    "lineage": "개념 비교: DDPG/SAC·imitation → residual policy refinement → VLA 후학습/독립 base 업데이트. 직접 citation edge를 새로 확정한 것은 아니다.",
+    "minimal_experiment": "연구자 제안: 먼저 base 갱신 전후 action/normalizer와 residual 입력을 대조하고 frozen residual·gain 조정·fresh residual을 동일 새 데이터 예산으로 비교한다.",
+    "verification_questions": "ICLR 공식 program의 채택과 읽은 arXiv v1을 구별한다. 최종본 동등성·동일 residual의 반복 base 갱신 전이·공식 전체 학습 code는 확인하지 않았다.",
+    "pdf": "",
+    "publication": {
+      "status": "peer_reviewed",
+      "kind": "conference",
+      "presentation": "unknown",
+      "venue": "ICLR",
+      "year": 2026,
+      "venue_year": 2026,
+      "venue_id": "iclr"
+    },
+    "sources": {
+      "primary": {
+        "url": "https://iclr.cc/virtual/2026/poster/10008318",
+        "kind": "official_proceedings",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-03"
+      },
+      "preprint": {
+        "url": "https://arxiv.org/abs/2511.00091",
+        "kind": "arxiv",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-03"
+      },
+      "project": {
+        "url": "https://wenlixiao.com/self-improve-VLA-PLD/",
+        "kind": "official_project",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-03"
+      },
+      "code": null,
+      "paper_pdf": null,
+      "venue_verification": {
+        "url": "https://iclr.cc/virtual/2026/poster/10008318",
+        "kind": "official_proceedings",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-03"
+      }
+    },
+    "artifacts": {
+      "code_status": "not_identified",
+      "data_status": "not_identified",
+      "local_pdf_cache": false
+    },
+    "evidence": "FULL_TEXT_CHECKED",
+    "source_audit": "2026-11-03 공식 venue/서지 재확인; 기존 GAP-VRL 검토의 지정 본문 §3, Appendix B.2/C.1/C.2를 반영. 선택 절 검토이며 전체 논문 정독·native 실행은 아님. ICLR 공식 program의 채택과 읽은 arXiv v1을 구별한다. 최종본 동등성·동일 residual의 반복 base 갱신 전이·공식 전체 학습 code는 확인하지 않았다. 사용자 읽기 상태는 UNREAD 유지.",
+    "admission_tier": "NEXT",
+    "relations": [],
+    "curation": {
+      "admission_reason": "VLA의 residual 개선→데이터 생성→base 갱신을 잇는 직접 선행이다. 현재 후보에서 이 루프 자체를 새 기여로 주장하지 않도록 NEXT에 추가한다.",
+      "tier_reason": "VLA의 residual 개선→데이터 생성→base 갱신을 잇는 직접 선행이다. 현재 후보에서 이 루프 자체를 새 기여로 주장하지 않도록 NEXT에 추가한다.",
+      "rationale_status": "recorded",
+      "rationale_basis": "2026-11-03 direct residual RL prerequisites; researcher interpretation",
+      "rationale_reviewed_on": "2026-11-03",
+      "scope_status": "active",
+      "roles": [
+        "method"
+      ],
+      "role_basis": "manual admission review",
+      "priority_source_check": {
+        "url": "https://iclr.cc/virtual/2026/poster/10008318",
+        "checked_on": "2026-11-03",
+        "scope": "official publication and selected text; not reproduction"
+      }
+    },
+    "selected_text_source": {
+      "url": "https://arxiv.org/html/2511.00091v1",
+      "locations": "§3, Appendix B.2/C.1/C.2"
+    },
+    "source_ledger_key": "S16"
+  },
+  {
+    "admission_key": "object_centric_residual_rl",
+    "title": "Object-Centric Residual RL for Zero-Shot Sim-to-Real VLA Enhancement",
+    "year": 2026,
+    "venue": "CoRL",
+    "category": "VLA and Generalist Robot Policies",
+    "primary_track": "VLA and generalist robot policies",
+    "page": "https://openreview.net/forum?id=tAXtXe4Oqd",
+    "project": "https://www.microsoft.com/en-us/research/articles/object-centric-residual-rl/",
+    "identifiers": {
+      "arxiv": "2606.18953",
+      "openreview": "tAXtXe4Oqd"
+    },
+    "aliases": [
+      "Object-Centric Residual RL"
+    ],
+    "tags": [
+      "VLA",
+      "residual-RL",
+      "object-centric",
+      "sim-to-real"
+    ],
+    "paper_type": "method",
+    "admission_group": "VLA, cross-embodiment, and long-horizon planning",
+    "problem": "시뮬레이션에서 학습한 residual로 실제 VLA 조작을 개선할 때 시각·행동 도메인 차이를 줄이는 문제다.",
+    "method": "Object pose·proprioception·base action을 residual 입력으로 사용하며, paired teleoperation을 통한 정렬과 simulation 학습을 결합한다.",
+    "interface": "VLA의 base action과 물체 중심 상태 → 보정 행동 → 실제 조작. 학습에 사용하는 상태와 실제 배포에서 추정하는 상태를 구분해야 한다.",
+    "evaluation": "Simulation-to-real residual 전이와 base SFT를 다룬다. 여기서 동일 residual의 sim-to-real 사용은 확인했지만 서로 다른 backbone/갱신된 base 간 동일 weights 재사용은 확정하지 않았다.",
+    "assumptions": "정렬된 object pose와 행동 표현이 residual 배포에 유효해야 한다. 센서 추가와 base 교체 효과를 혼동하지 않는다.",
+    "limitations": "CoRL 공식 accepted list에서 exact title/forum을 확인했다. 읽은 것은 arXiv v1이며 final paper 동등성과 공식 학습 code 공개는 미확인이다.",
+    "role": "Object-centric residual의 전이를 이미 다룬 직접 충돌 선행이다. 다양한 로봇·base 갱신 전이와 sim-to-real 전이를 구분할 NEXT다.",
+    "question": "Object-centric 상태를 유지해도 base 행동 분포가 바뀌면 기존 residual의 이득은 유지되는가?",
+    "lineage": "개념 비교: DDPG/SAC·imitation → residual policy refinement → VLA 후학습/독립 base 업데이트. 직접 citation edge를 새로 확정한 것은 아니다.",
+    "minimal_experiment": "연구자 제안: 같은 로봇·관측·상태 추정기를 고정하고 base만 교체해 base-only·동결 residual·gain 조정부터 비교한다.",
+    "verification_questions": "CoRL 공식 accepted list에서 exact title/forum을 확인했다. 읽은 것은 arXiv v1이며 final paper 동등성과 공식 학습 code 공개는 미확인이다.",
+    "pdf": "",
+    "publication": {
+      "status": "peer_reviewed",
+      "kind": "conference",
+      "presentation": "unknown",
+      "venue": "CoRL",
+      "year": 2026,
+      "venue_year": 2026,
+      "venue_id": "corl"
+    },
+    "sources": {
+      "primary": {
+        "url": "https://openreview.net/forum?id=tAXtXe4Oqd",
+        "kind": "official_openreview",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-03"
+      },
+      "preprint": {
+        "url": "https://arxiv.org/abs/2606.18953",
+        "kind": "arxiv",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-03"
+      },
+      "project": {
+        "url": "https://www.microsoft.com/en-us/research/articles/object-centric-residual-rl/",
+        "kind": "official_project",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-03"
+      },
+      "code": null,
+      "paper_pdf": null,
+      "venue_verification": {
+        "url": "https://www.corl.org/program/accepted-papers",
+        "kind": "official_conference",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-03"
+      }
+    },
+    "artifacts": {
+      "code_status": "not_identified",
+      "data_status": "not_identified",
+      "local_pdf_cache": false
+    },
+    "evidence": "FULL_TEXT_CHECKED",
+    "source_audit": "2026-11-03 공식 venue/서지 재확인; 기존 GAP-VRL 검토의 지정 본문 §3.1–3.4/5.1–5.4/7, Appendix A를 반영. 선택 절 검토이며 전체 논문 정독·native 실행은 아님. CoRL 공식 accepted list에서 exact title/forum을 확인했다. 읽은 것은 arXiv v1이며 final paper 동등성과 공식 학습 code 공개는 미확인이다. 사용자 읽기 상태는 UNREAD 유지.",
+    "admission_tier": "NEXT",
+    "relations": [],
+    "curation": {
+      "admission_reason": "Object-centric residual의 전이를 이미 다룬 직접 충돌 선행이다. 다양한 로봇·base 갱신 전이와 sim-to-real 전이를 구분할 NEXT다.",
+      "tier_reason": "Object-centric residual의 전이를 이미 다룬 직접 충돌 선행이다. 다양한 로봇·base 갱신 전이와 sim-to-real 전이를 구분할 NEXT다.",
+      "rationale_status": "recorded",
+      "rationale_basis": "2026-11-03 direct residual RL prerequisites; researcher interpretation",
+      "rationale_reviewed_on": "2026-11-03",
+      "scope_status": "active",
+      "roles": [
+        "method"
+      ],
+      "role_basis": "manual admission review",
+      "priority_source_check": {
+        "url": "https://www.corl.org/program/accepted-papers",
+        "checked_on": "2026-11-03",
+        "scope": "official publication and selected text; not reproduction"
+      }
+    },
+    "selected_text_source": {
+      "url": "https://arxiv.org/html/2606.18953v1",
+      "locations": "§3.1–3.4/5.1–5.4/7, Appendix A"
+    },
+    "source_ledger_key": "S17"
+  },
+  {
+    "admission_key": "expo",
+    "title": "EXPO: Stable Reinforcement Learning with Expressive Policies",
+    "year": 2026,
+    "venue": "ICLR",
+    "category": "Robot Learning and Data",
+    "primary_track": "RL, IL, offline learning, and robot data",
+    "page": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/d56a652ad743308b24b6c4d0e6411dd7-Abstract-Conference.html",
+    "project": "https://github.com/pd-perry/EXPO",
+    "identifiers": {
+      "arxiv": "2507.07986"
+    },
+    "aliases": [
+      "EXPO"
+    ],
+    "tags": [
+      "reinforcement-learning",
+      "expressive-policy",
+      "residual-policy",
+      "value-selection"
+    ],
+    "paper_type": "method",
+    "admission_group": "RL, IL, offline learning, and robot data",
+    "problem": "표현력이 큰 imitation 정책을 online RL로 개선할 때 안정적인 최적화와 탐색을 확보하는 문제다.",
+    "method": "Expressive base의 imitation 업데이트와 Gaussian edit 정책의 Q 기반 업데이트를 결합하고, base/edit 행동을 value로 선택한다.",
+    "interface": "관측 → base 행동 및 수정 행동 → Q 선택 → 환경. Rollout 선택과 TD target에서의 선택 역할을 함께 확인해야 한다.",
+    "evaluation": "공식 proceedings의 online RL 비교와 공개 구현을 확인했다. 현재 registry 노트는 학습 경로에 초점을 두며 개별 점수·독립 재현 결과를 제시하지 않는다.",
+    "assumptions": "Q 값이 base/edit 후보 선택에 유용해야 하며 base와 editor가 함께 적응하는 학습 분포를 전제한다.",
+    "limitations": "공개 code를 읽었지만 실행하지 않았다. Co-adaptation 결과를 독립 base release 교체 후 동결 editor의 전이 근거로 확대하지 않는다.",
+    "role": "Residual/editor와 value 선택을 결합한 강한 직접 baseline이다. Q 선택·base 모방·editor RL이라는 조합 자체의 신규성 주장을 막는 NEXT다.",
+    "question": "독립적인 base 교체 후 actor 재사용의 이득은 EXPO식 value 선택과 동일 old-data 재학습을 넘어서는가?",
+    "lineage": "개념 비교: DDPG/SAC·imitation → residual policy refinement → VLA 후학습/독립 base 업데이트. 직접 citation edge를 새로 확정한 것은 아니다.",
+    "minimal_experiment": "연구자 제안: co-adaptation과 독립 교체를 분리하고 base-only·warm-start·fresh editor·value 선택의 입력과 새 환경 상호작용 예산을 맞춘다.",
+    "verification_questions": "공개 code를 읽었지만 실행하지 않았다. Co-adaptation 결과를 독립 base release 교체 후 동결 editor의 전이 근거로 확대하지 않는다.",
+    "pdf": "",
+    "publication": {
+      "status": "peer_reviewed",
+      "kind": "conference",
+      "presentation": "unknown",
+      "venue": "ICLR",
+      "year": 2026,
+      "venue_year": 2026,
+      "venue_id": "iclr"
+    },
+    "sources": {
+      "primary": {
+        "url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/d56a652ad743308b24b6c4d0e6411dd7-Abstract-Conference.html",
+        "kind": "official_proceedings",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-03"
+      },
+      "preprint": {
+        "url": "https://arxiv.org/abs/2507.07986",
+        "kind": "arxiv",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-03"
+      },
+      "project": {
+        "url": "https://github.com/pd-perry/EXPO",
+        "kind": "official_code",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-03"
+      },
+      "code": {
+        "url": "https://github.com/pd-perry/EXPO",
+        "kind": "official_code",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-03"
+      },
+      "paper_pdf": null,
+      "venue_verification": {
+        "url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/d56a652ad743308b24b6c4d0e6411dd7-Abstract-Conference.html",
+        "kind": "official_proceedings",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-03"
+      }
+    },
+    "artifacts": {
+      "code_status": "released",
+      "data_status": "not_identified",
+      "local_pdf_cache": false
+    },
+    "evidence": "FULL_TEXT_CHECKED",
+    "source_audit": "2026-11-03 공식 venue/서지 재확인; 기존 GAP-VRL 검토의 지정 본문 §4 / Algorithm 1; expo_learner.py selected update paths를 반영. 선택 절 검토이며 전체 논문 정독·native 실행은 아님. 공개 code를 읽었지만 실행하지 않았다. Co-adaptation 결과를 독립 base release 교체 후 동결 editor의 전이 근거로 확대하지 않는다. 사용자 읽기 상태는 UNREAD 유지.",
+    "admission_tier": "NEXT",
+    "relations": [],
+    "curation": {
+      "admission_reason": "Residual/editor와 value 선택을 결합한 강한 직접 baseline이다. Q 선택·base 모방·editor RL이라는 조합 자체의 신규성 주장을 막는 NEXT다.",
+      "tier_reason": "Residual/editor와 value 선택을 결합한 강한 직접 baseline이다. Q 선택·base 모방·editor RL이라는 조합 자체의 신규성 주장을 막는 NEXT다.",
+      "rationale_status": "recorded",
+      "rationale_basis": "2026-11-03 direct residual RL prerequisites; researcher interpretation",
+      "rationale_reviewed_on": "2026-11-03",
+      "scope_status": "active",
+      "roles": [
+        "method"
+      ],
+      "role_basis": "manual admission review",
+      "priority_source_check": {
+        "url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/d56a652ad743308b24b6c4d0e6411dd7-Abstract-Conference.html",
+        "checked_on": "2026-11-03",
+        "scope": "official publication and selected text; not reproduction"
+      }
+    },
+    "selected_text_source": {
+      "url": "https://arxiv.org/html/2507.07986v3",
+      "locations": "§4 / Algorithm 1; expo_learner.py selected update paths"
+    },
+    "source_ledger_key": "S35",
+    "code_review_commit": "bbd571306b413e05d5d4b01a6efa20352c2b891a"
+  },
+  {
+    "admission_key": "expo_ft",
+    "title": "EXPO-FT: Sample-Efficient Reinforcement Learning Finetuning for Vision-Language-Action Models",
+    "year": 2026,
+    "venue": "CoRL",
+    "category": "VLA and Generalist Robot Policies",
+    "primary_track": "VLA and generalist robot policies",
+    "page": "https://openreview.net/forum?id=U3Nmrhun8B",
+    "project": "https://pd-perry.github.io/expo-ft/",
+    "identifiers": {
+      "arxiv": "2605.25477",
+      "openreview": "U3Nmrhun8B"
+    },
+    "aliases": [
+      "EXPO-FT"
+    ],
+    "tags": [
+      "VLA",
+      "reinforcement-learning",
+      "action-chunking",
+      "residual-policy"
+    ],
+    "paper_type": "method",
+    "admission_group": "VLA, cross-embodiment, and long-horizon planning",
+    "problem": "대규모 VLA를 적은 online 상호작용으로 적응시키면서 chunk 행동의 표현력을 활용하는 문제다.",
+    "method": "EXPO 계열의 editor와 VLA를 함께 갱신하는 chunk 수준 후학습을 사용한다. 공개 update_actor는 actor.train_step을 호출한다.",
+    "interface": "관측·지시 → VLA chunk와 editor → 실행 및 후학습. Image encoder 동결을 전체 VLA 동결로 해석하면 안 된다.",
+    "evaluation": "실제 로봇을 위한 DROID/π0.5 공개 경로와 human intervention을 포함하는 구성을 확인했다. 이 release는 LIBERO/OpenVLA의 즉시 실행 baseline이 아니다.",
+    "assumptions": "VLA와 editor가 공동 적응하는 경로 및 intervention·기존 데이터의 역할을 비교 예산에 포함해야 한다.",
+    "limitations": "CoRL accepted list와 arXiv v1/code를 별도로 확인했다. 최종본 동일성·native 실행·독립 release 교체 효과는 미검증이다.",
+    "role": "현재 VLA+RL 후보의 가장 가까운 공동 적응 baseline이다. 독립 base 갱신과 editor 공동 학습을 구별할 NEXT다.",
+    "question": "Base가 독립적으로 바뀌는 상황의 residual 재사용은 공동 fine-tuning과 다른 비용·실패 양상을 갖는가?",
+    "lineage": "개념 비교: DDPG/SAC·imitation → residual policy refinement → VLA 후학습/독립 base 업데이트. 직접 citation edge를 새로 확정한 것은 아니다.",
+    "minimal_experiment": "연구자 제안: image encoder·base action·residual actor 중 무엇을 이전/동결하는지 명시하고 warm-start와 같은 replay·새 데이터 예산으로 비교한다.",
+    "verification_questions": "CoRL accepted list와 arXiv v1/code를 별도로 확인했다. 최종본 동일성·native 실행·독립 release 교체 효과는 미검증이다.",
+    "pdf": "",
+    "publication": {
+      "status": "peer_reviewed",
+      "kind": "conference",
+      "presentation": "unknown",
+      "venue": "CoRL",
+      "year": 2026,
+      "venue_year": 2026,
+      "venue_id": "corl"
+    },
+    "sources": {
+      "primary": {
+        "url": "https://openreview.net/forum?id=U3Nmrhun8B",
+        "kind": "official_openreview",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-03"
+      },
+      "preprint": {
+        "url": "https://arxiv.org/abs/2605.25477",
+        "kind": "arxiv",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-03"
+      },
+      "project": {
+        "url": "https://pd-perry.github.io/expo-ft/",
+        "kind": "official_project",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-03"
+      },
+      "code": {
+        "url": "https://github.com/pd-perry/expo-ft",
+        "kind": "official_code",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-03"
+      },
+      "paper_pdf": null,
+      "venue_verification": {
+        "url": "https://www.corl.org/program/accepted-papers",
+        "kind": "official_conference",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-03"
+      }
+    },
+    "artifacts": {
+      "code_status": "released",
+      "data_status": "not_identified",
+      "local_pdf_cache": false
+    },
+    "evidence": "FULL_TEXT_CHECKED",
+    "source_audit": "2026-11-03 공식 venue/서지 재확인; 기존 GAP-VRL 검토의 지정 본문 §4.2–4.3 / Appendix C; expo_ft.py update_actor/_update_jit를 반영. 선택 절 검토이며 전체 논문 정독·native 실행은 아님. CoRL accepted list와 arXiv v1/code를 별도로 확인했다. 최종본 동일성·native 실행·독립 release 교체 효과는 미검증이다. 사용자 읽기 상태는 UNREAD 유지.",
+    "admission_tier": "NEXT",
+    "relations": [],
+    "curation": {
+      "admission_reason": "현재 VLA+RL 후보의 가장 가까운 공동 적응 baseline이다. 독립 base 갱신과 editor 공동 학습을 구별할 NEXT다.",
+      "tier_reason": "현재 VLA+RL 후보의 가장 가까운 공동 적응 baseline이다. 독립 base 갱신과 editor 공동 학습을 구별할 NEXT다.",
+      "rationale_status": "recorded",
+      "rationale_basis": "2026-11-03 direct residual RL prerequisites; researcher interpretation",
+      "rationale_reviewed_on": "2026-11-03",
+      "scope_status": "active",
+      "roles": [
+        "method"
+      ],
+      "role_basis": "manual admission review",
+      "priority_source_check": {
+        "url": "https://www.corl.org/program/accepted-papers",
+        "checked_on": "2026-11-03",
+        "scope": "official publication and selected text; not reproduction"
+      }
+    },
+    "selected_text_source": {
+      "url": "https://arxiv.org/html/2605.25477v1",
+      "locations": "§4.2–4.3 / Appendix C; expo_ft.py update_actor/_update_jit"
+    },
+    "source_ledger_key": "S36",
+    "code_review_commit": "21fe3d3b7d913c80836496817965932f49e0aedf"
+  },
+  {
+    "admission_key": "policy_decorator",
+    "title": "Policy Decorator: Model-Agnostic Online Refinement for Large Policy Model",
+    "year": 2025,
+    "venue": "ICLR",
+    "category": "Robot Learning and Data",
+    "primary_track": "RL, IL, offline learning, and robot data",
+    "page": "https://proceedings.iclr.cc/paper_files/paper/2025/hash/45c361d4117d598d4bb6568b407e9ac9-Abstract-Conference.html",
+    "project": "https://policydecorator.github.io/",
+    "identifiers": {
+      "arxiv": "2412.13630"
+    },
+    "aliases": [
+      "Policy Decorator"
+    ],
+    "tags": [
+      "residual-RL",
+      "imitation-learning",
+      "controlled-exploration",
+      "manipulation"
+    ],
+    "paper_type": "method",
+    "admission_group": "RL, IL, offline learning, and robot data",
+    "problem": "Offline imitation 정책의 조작 오차를 online RL로 보완하면서 초반 탐색으로 기존 행동을 훼손하는 문제를 줄인다.",
+    "method": "동결 base 위에 SAC residual을 학습하고 residual 범위와 탐색 진행을 제어한다.",
+    "interface": "Base 행동 + 제한된 residual → 환경. Base 모델 계열별 적용 가능성과 학습된 residual weights의 전이는 서로 다른 주장이다.",
+    "evaluation": "ManiSkill·Adroit의 8개 task, Behavior Transformer·Diffusion Policy에 적용한다. 보고된 성능 향상은 해당 설정이며 같은 residual의 base 교체 전이를 뜻하지 않는다.",
+    "assumptions": "초기 base 능력과 적절한 residual 크기·탐색 schedule이 학습에 중요하다.",
+    "limitations": "Final paper의 지정 절만 검토했고 전체 36쪽 정독은 아니다. 공식 code 링크/README 확인과 실행 검증을 구분한다.",
+    "role": "Frozen large policy+bounded residual의 핵심 비교 선행이다. 현재 후보의 scalar gain·탐색 schedule이라는 단순 대안을 놓치지 않도록 NEXT에 추가한다.",
+    "question": "Base 업데이트 뒤 보정량만 재조정해도 이전 residual을 충분히 재사용할 수 있는가?",
+    "lineage": "개념 비교: DDPG/SAC·imitation → residual policy refinement → VLA 후학습/독립 base 업데이트. 직접 citation edge를 새로 확정한 것은 아니다.",
+    "minimal_experiment": "연구자 제안: 원 residual·0 residual·scalar gain과 fresh residual을 먼저 비교하고 제어 주기/환경 상호작용 수를 맞춘다.",
+    "verification_questions": "Final paper의 지정 절만 검토했고 전체 36쪽 정독은 아니다. 공식 code 링크/README 확인과 실행 검증을 구분한다.",
+    "pdf": "",
+    "publication": {
+      "status": "peer_reviewed",
+      "kind": "conference",
+      "presentation": "unknown",
+      "venue": "ICLR",
+      "year": 2025,
+      "venue_year": 2025,
+      "venue_id": "iclr"
+    },
+    "sources": {
+      "primary": {
+        "url": "https://proceedings.iclr.cc/paper_files/paper/2025/hash/45c361d4117d598d4bb6568b407e9ac9-Abstract-Conference.html",
+        "kind": "official_proceedings",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-03"
+      },
+      "preprint": {
+        "url": "https://arxiv.org/abs/2412.13630",
+        "kind": "arxiv",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-03"
+      },
+      "project": {
+        "url": "https://policydecorator.github.io/",
+        "kind": "official_project",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-03"
+      },
+      "code": {
+        "url": "https://github.com/tongzhoumu/policy_decorator",
+        "kind": "official_code",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-03"
+      },
+      "paper_pdf": null,
+      "venue_verification": {
+        "url": "https://proceedings.iclr.cc/paper_files/paper/2025/hash/45c361d4117d598d4bb6568b407e9ac9-Abstract-Conference.html",
+        "kind": "official_proceedings",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-03"
+      }
+    },
+    "artifacts": {
+      "code_status": "released",
+      "data_status": "not_identified",
+      "local_pdf_cache": false
+    },
+    "evidence": "FULL_TEXT_CHECKED",
+    "source_audit": "2026-11-03 공식 venue/서지 재확인; 기존 GAP-VRL 검토의 지정 본문 final paper §4.1–4.3, selected Appendix B.5; project/code README를 반영. 선택 절 검토이며 전체 논문 정독·native 실행은 아님. Final paper의 지정 절만 검토했고 전체 36쪽 정독은 아니다. 공식 code 링크/README 확인과 실행 검증을 구분한다. 사용자 읽기 상태는 UNREAD 유지.",
+    "admission_tier": "NEXT",
+    "relations": [],
+    "curation": {
+      "admission_reason": "Frozen large policy+bounded residual의 핵심 비교 선행이다. 현재 후보의 scalar gain·탐색 schedule이라는 단순 대안을 놓치지 않도록 NEXT에 추가한다.",
+      "tier_reason": "Frozen large policy+bounded residual의 핵심 비교 선행이다. 현재 후보의 scalar gain·탐색 schedule이라는 단순 대안을 놓치지 않도록 NEXT에 추가한다.",
+      "rationale_status": "recorded",
+      "rationale_basis": "2026-11-03 direct residual RL prerequisites; researcher interpretation",
+      "rationale_reviewed_on": "2026-11-03",
+      "scope_status": "active",
+      "roles": [
+        "method"
+      ],
+      "role_basis": "manual admission review",
+      "priority_source_check": {
+        "url": "https://proceedings.iclr.cc/paper_files/paper/2025/hash/45c361d4117d598d4bb6568b407e9ac9-Abstract-Conference.html",
+        "checked_on": "2026-11-03",
+        "scope": "official publication and selected text; not reproduction"
+      }
+    },
+    "selected_text_source": {
+      "url": "https://proceedings.iclr.cc/paper_files/paper/2025/file/45c361d4117d598d4bb6568b407e9ac9-Paper-Conference.pdf",
+      "locations": "final paper §4.1–4.3, selected Appendix B.5; project/code README"
+    },
+    "source_ledger_key": "S37"
+  },
+  {
+    "admission_key": "uncertainty_aware_residual_rl",
+    "title": "Accelerating Residual Reinforcement Learning With Uncertainty Estimation",
+    "year": 2026,
+    "venue": "RA-L",
+    "category": "Robot Learning and Data",
+    "primary_track": "RL, IL, offline learning, and robot data",
+    "page": "https://doi.org/10.1109/LRA.2025.3636808",
+    "project": "https://lakshitadodeja.github.io/uncertainty-aware-residual-rl/",
+    "identifiers": {
+      "arxiv": "2506.17564",
+      "doi": "10.1109/LRA.2025.3636808"
+    },
+    "aliases": [
+      "Uncertainty-Aware Residual RL"
+    ],
+    "tags": [
+      "residual-RL",
+      "uncertainty",
+      "exploration",
+      "manipulation"
+    ],
+    "paper_type": "method",
+    "admission_group": "RL, IL, offline learning, and robot data",
+    "problem": "Residual RL의 탐색을 base 정책의 불확실성에 맞춰 조절해 상호작용 효율을 개선하는 문제다.",
+    "method": "불확실성 기반 탐색 제어를 사용한다. 확인한 critic 구현은 base와 residual이 합쳐진 최종 행동을 평가한다.",
+    "interface": "Base 예측·불확실성 및 관측 → residual 탐색 → 합성 행동 → Q 평가. Critic 입력에 base action을 반영하는 원리는 이미 선행에 있다.",
+    "evaluation": "Robosuite·D4RL 비교와 sim-to-real 적용을 보고한다. 여기서는 combined-action critic 경로를 확인했으며 수치·seed·현실 성공률을 재현하지 않았다.",
+    "assumptions": "불확실성 추정과 탐색 필요성이 관련되어야 한다. Actor 입력 변화와 critic 오차는 별도로 통제해야 한다.",
+    "limitations": "IEEE 직접 페이지는 접근 제약이 있어 publisher-deposited Crossref와 저자 accepted 표기로 RA-L 11(1), 2026을 확인했다. 2025 DOI/채택일을 issue 연도와 혼동하지 않는다.",
+    "role": "현재 후보의 critic mismatch 대안을 검토할 직접 선행이다. 합성 행동 critic을 새 알고리즘으로 재주장하지 않도록 NEXT에 등록한다.",
+    "question": "독립 base 교체 후 나타난 차이는 residual actor의 부적합인가, critic 재교정만으로 해소되는가?",
+    "lineage": "개념 비교: DDPG/SAC·imitation → residual policy refinement → VLA 후학습/독립 base 업데이트. 직접 citation edge를 새로 확정한 것은 아니다.",
+    "minimal_experiment": "연구자 제안: 새 critic·공통 replay를 모든 재사용 대조군에 적용하고 actor 보존/재초기화와 uncertainty/gain 대안을 구분한다.",
+    "verification_questions": "IEEE 직접 페이지는 접근 제약이 있어 publisher-deposited Crossref와 저자 accepted 표기로 RA-L 11(1), 2026을 확인했다. 2025 DOI/채택일을 issue 연도와 혼동하지 않는다.",
+    "pdf": "",
+    "publication": {
+      "status": "peer_reviewed",
+      "kind": "journal",
+      "presentation": "unknown",
+      "venue": "RA-L",
+      "year": 2026,
+      "venue_year": 2026,
+      "venue_id": "ra-l"
+    },
+    "sources": {
+      "primary": {
+        "url": "https://doi.org/10.1109/LRA.2025.3636808",
+        "kind": "publisher",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-03"
+      },
+      "preprint": {
+        "url": "https://arxiv.org/abs/2506.17564",
+        "kind": "arxiv",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-03"
+      },
+      "project": {
+        "url": "https://lakshitadodeja.github.io/uncertainty-aware-residual-rl/",
+        "kind": "official_project",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-03"
+      },
+      "code": {
+        "url": "https://github.com/lakshitadodeja/uncertainty_aware_residual_rl",
+        "kind": "official_code",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-03"
+      },
+      "paper_pdf": null,
+      "venue_verification": {
+        "url": "https://api.crossref.org/works/10.1109/LRA.2025.3636808",
+        "kind": "publisher_metadata",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-03"
+      }
+    },
+    "artifacts": {
+      "code_status": "released",
+      "data_status": "not_identified",
+      "local_pdf_cache": false
+    },
+    "evidence": "FULL_TEXT_CHECKED",
+    "source_audit": "2026-11-03 공식 venue/서지 재확인; 기존 GAP-VRL 검토의 지정 본문 v2 IV-B / V-D; assymetric_sac.py critic_loss_fn/actor complete-action path를 반영. 선택 절 검토이며 전체 논문 정독·native 실행은 아님. IEEE 직접 페이지는 접근 제약이 있어 publisher-deposited Crossref와 저자 accepted 표기로 RA-L 11(1), 2026을 확인했다. 2025 DOI/채택일을 issue 연도와 혼동하지 않는다. 사용자 읽기 상태는 UNREAD 유지.",
+    "admission_tier": "NEXT",
+    "relations": [],
+    "curation": {
+      "admission_reason": "현재 후보의 critic mismatch 대안을 검토할 직접 선행이다. 합성 행동 critic을 새 알고리즘으로 재주장하지 않도록 NEXT에 등록한다.",
+      "tier_reason": "현재 후보의 critic mismatch 대안을 검토할 직접 선행이다. 합성 행동 critic을 새 알고리즘으로 재주장하지 않도록 NEXT에 등록한다.",
+      "rationale_status": "recorded",
+      "rationale_basis": "2026-11-03 direct residual RL prerequisites; researcher interpretation",
+      "rationale_reviewed_on": "2026-11-03",
+      "scope_status": "active",
+      "roles": [
+        "method"
+      ],
+      "role_basis": "manual admission review",
+      "priority_source_check": {
+        "url": "https://api.crossref.org/works/10.1109/LRA.2025.3636808",
+        "checked_on": "2026-11-03",
+        "scope": "official publication and selected text; not reproduction"
+      }
+    },
+    "selected_text_source": {
+      "url": "https://arxiv.org/html/2506.17564v2",
+      "locations": "v2 IV-B / V-D; assymetric_sac.py critic_loss_fn/actor complete-action path"
+    },
+    "source_ledger_key": "S39",
+    "code_review_commit": "8125f33dcf490d4cf93d57a27d3e1963a47f52ea"
+  },
+  {
+    "admission_key": "q_filter",
+    "title": "Overcoming Exploration in Reinforcement Learning with Demonstrations",
+    "year": 2018,
+    "venue": "ICRA",
+    "category": "Robot Learning and Data",
+    "primary_track": "RL, IL, offline learning, and robot data",
+    "page": "https://doi.org/10.1109/ICRA.2018.8463162",
+    "project": "not identified",
+    "identifiers": {
+      "arxiv": "1709.10089",
+      "doi": "10.1109/ICRA.2018.8463162"
+    },
+    "aliases": [
+      "Q-filter"
+    ],
+    "tags": [
+      "reinforcement-learning",
+      "demonstrations",
+      "Q-filter",
+      "sparse-reward"
+    ],
+    "paper_type": "method",
+    "admission_group": "RL, IL, offline learning, and robot data",
+    "problem": "Sparse reward에서 성공 행동을 찾기 어려운 로봇 RL에 소수 demonstration을 활용하는 문제다.",
+    "method": "DDPG·HER와 demonstration replay 및 behavior cloning을 결합한다. Q-filter는 demonstration 행동이 actor 행동보다 높은 Q를 받을 때 모방 손실을 적용한다.",
+    "interface": "관측·목표 → actor action; demonstration action과 actor action의 Q 비교 → 선택적 imitation 업데이트.",
+    "evaluation": "시뮬레이션 로봇 팔의 sparse-reward 조작을 다룬다. VLA 연구가 아니며 현재 후보의 두 reference 규칙을 원 논문의 재현이라고 부를 수 없다.",
+    "assumptions": "Q 추정이 demonstration과 현재 actor의 행동 비교에 의미 있는 신호여야 한다.",
+    "limitations": "이번 확인은 Q-filter 수식과 서지에 한정한다. 정확한 seed·전체 baseline/ablation·현재 공식 code 상태는 확인하지 않았다.",
+    "role": "선택적 Q 기반 imitation의 직접 기원으로 REFERENCE에 추가한다. 2024–2026 최신 동향 수에는 포함하지 않으며 기존 SAC/DDPG 기반 읽기 흐름을 보완한다.",
+    "question": "새 residual 이전 규칙의 이득은 이미 알려진 Q-filter와 return-weighted imitation으로 설명되는가?",
+    "lineage": "개념 비교: DDPG/SAC·imitation → residual policy refinement → VLA 후학습/독립 base 업데이트. 직접 citation edge를 새로 확정한 것은 아니다.",
+    "minimal_experiment": "연구자 제안: 같은 reference 행동·critic·데이터·loss 계수를 사용한 원리 수준 Q-filter와 무조건 모방을 분리하고, 원 논문 전체 알고리즘 재현 여부를 명시한다.",
+    "verification_questions": "이번 확인은 Q-filter 수식과 서지에 한정한다. 정확한 seed·전체 baseline/ablation·현재 공식 code 상태는 확인하지 않았다.",
+    "pdf": "",
+    "publication": {
+      "status": "peer_reviewed",
+      "kind": "conference",
+      "presentation": "unknown",
+      "venue": "ICRA",
+      "year": 2018,
+      "venue_year": 2018,
+      "venue_id": "icra"
+    },
+    "sources": {
+      "primary": {
+        "url": "https://doi.org/10.1109/ICRA.2018.8463162",
+        "kind": "publisher",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-03"
+      },
+      "preprint": {
+        "url": "https://arxiv.org/abs/1709.10089",
+        "kind": "arxiv",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-03"
+      },
+      "project": null,
+      "code": null,
+      "paper_pdf": null,
+      "venue_verification": {
+        "url": "https://api.crossref.org/works/10.1109/ICRA.2018.8463162",
+        "kind": "publisher_metadata",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-03"
+      }
+    },
+    "artifacts": {
+      "code_status": "not_identified",
+      "data_status": "not_identified",
+      "local_pdf_cache": false
+    },
+    "evidence": "FULL_TEXT_CHECKED",
+    "source_audit": "2026-11-03 공식 venue/서지 재확인; 기존 GAP-VRL 검토의 지정 본문 Q-Filter subsection / Eq. 8; arXiv abstract and publisher-deposited metadata를 반영. 선택 절 검토이며 전체 논문 정독·native 실행은 아님. 이번 확인은 Q-filter 수식과 서지에 한정한다. 정확한 seed·전체 baseline/ablation·현재 공식 code 상태는 확인하지 않았다. 사용자 읽기 상태는 UNREAD 유지.",
+    "admission_tier": "REFERENCE",
+    "relations": [],
+    "curation": {
+      "admission_reason": "선택적 Q 기반 imitation의 직접 기원으로 REFERENCE에 추가한다. 2024–2026 최신 동향 수에는 포함하지 않으며 기존 SAC/DDPG 기반 읽기 흐름을 보완한다.",
+      "tier_reason": "선택적 Q 기반 imitation의 직접 기원으로 REFERENCE에 추가한다. 2024–2026 최신 동향 수에는 포함하지 않으며 기존 SAC/DDPG 기반 읽기 흐름을 보완한다.",
+      "rationale_status": "recorded",
+      "rationale_basis": "2026-11-03 direct residual RL prerequisites; researcher interpretation",
+      "rationale_reviewed_on": "2026-11-03",
+      "scope_status": "active",
+      "roles": [
+        "method"
+      ],
+      "role_basis": "manual admission review",
+      "priority_source_check": {
+        "url": "https://api.crossref.org/works/10.1109/ICRA.2018.8463162",
+        "checked_on": "2026-11-03",
+        "scope": "official publication and selected text; not reproduction"
+      }
+    },
+    "selected_text_source": {
+      "url": "https://arxiv.org/pdf/1709.10089",
+      "locations": "Q-Filter subsection / Eq. 8; arXiv abstract and publisher-deposited metadata"
+    },
+    "source_ledger_key": "S40"
+  },
+  {
+    "admission_key": "dice_rl",
+    "title": "From Prior to Pro: Efficient Skill Mastery via Distribution Contractive RL Finetuning",
+    "year": 2026,
+    "venue": "ICML",
+    "category": "Robot Learning and Data",
+    "primary_track": "RL, IL, offline learning, and robot data",
+    "page": "https://proceedings.mlr.press/v306/sun26al.html",
+    "project": "https://zhanyisun.github.io/dice.rl.2026/",
+    "identifiers": {
+      "arxiv": "2603.10263"
+    },
+    "aliases": [
+      "DICE-RL"
+    ],
+    "tags": [
+      "residual-RL",
+      "action-chunking",
+      "selective-regularization",
+      "value-selection"
+    ],
+    "paper_type": "method",
+    "admission_group": "RL, IL, offline learning, and robot data",
+    "problem": "사전학습 행동 prior를 유지하면서 online RL로 skill을 개선하는 과정의 비효율과 불안정을 줄인다.",
+    "method": "Prior를 동결하고 chunk residual을 학습한다. 선택적 regularization과 value 기반 선택을 사용하며 공개 구현에서 Q/Monte-Carlo filtering을 확인했다.",
+    "interface": "관측 → 동결 prior chunk·residual chunk → value 선택/실행. 학습 regularization과 inference 선택의 역할을 분리한다.",
+    "evaluation": "시각 입력의 simulation·실제 로봇 조작을 보고한다. 공개 Robomimic/flow 구현은 OpenVLA/LIBERO adapter가 아니며 그 호환성을 검증하지 않았다.",
+    "assumptions": "Prior가 유용한 행동 support를 제공하고 critic/return 신호가 선택적 제약을 안내해야 한다.",
+    "limitations": "ICML 공식 metadata와 arXiv v2의 지정 절/code를 확인했다. 현재 deterministic TD3·Q-filter 계획을 DICE-RL 전체 재현으로 부르지 않는다.",
+    "role": "Frozen prior+residual+선택적 모방의 최신 직접 선행이다. 현재 후보의 규칙 조합만으로 독립 방법 기여를 주장하지 않도록 NEXT에 추가한다.",
+    "question": "독립 base 교체 후 residual actor 재사용은 DICE식 regularization·value 선택과 동일 데이터 조건에서도 유효한가?",
+    "lineage": "개념 비교: DDPG/SAC·imitation → residual policy refinement → VLA 후학습/독립 base 업데이트. 직접 citation edge를 새로 확정한 것은 아니다.",
+    "minimal_experiment": "연구자 제안: prior 교체와 학습 대상·critic 재초기화·replay를 명시하고 zero/frozen/gain/warm/fresh 및 선택적 모방을 동일 예산으로 비교한다.",
+    "verification_questions": "ICML 공식 metadata와 arXiv v2의 지정 절/code를 확인했다. 현재 deterministic TD3·Q-filter 계획을 DICE-RL 전체 재현으로 부르지 않는다.",
+    "pdf": "",
+    "publication": {
+      "status": "peer_reviewed",
+      "kind": "conference",
+      "presentation": "unknown",
+      "venue": "ICML",
+      "year": 2026,
+      "venue_year": 2026,
+      "venue_id": "icml"
+    },
+    "sources": {
+      "primary": {
+        "url": "https://proceedings.mlr.press/v306/sun26al.html",
+        "kind": "official_proceedings",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-03"
+      },
+      "preprint": {
+        "url": "https://arxiv.org/abs/2603.10263",
+        "kind": "arxiv",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-03"
+      },
+      "project": {
+        "url": "https://zhanyisun.github.io/dice.rl.2026/",
+        "kind": "official_project",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-03"
+      },
+      "code": {
+        "url": "https://github.com/zhanyisun/dice-rl",
+        "kind": "official_code",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-03"
+      },
+      "paper_pdf": null,
+      "venue_verification": {
+        "url": "https://proceedings.mlr.press/v306/sun26al.html",
+        "kind": "official_proceedings",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-03"
+      }
+    },
+    "artifacts": {
+      "code_status": "released",
+      "data_status": "not_identified",
+      "local_pdf_cache": false
+    },
+    "evidence": "FULL_TEXT_CHECKED",
+    "source_audit": "2026-11-03 공식 venue/서지 재확인; 기존 GAP-VRL 검토의 지정 본문 v2 §4; model/rl/distill_residual_rl_img.py selected filter/loss paths를 반영. 선택 절 검토이며 전체 논문 정독·native 실행은 아님. ICML 공식 metadata와 arXiv v2의 지정 절/code를 확인했다. 현재 deterministic TD3·Q-filter 계획을 DICE-RL 전체 재현으로 부르지 않는다. 사용자 읽기 상태는 UNREAD 유지.",
+    "admission_tier": "NEXT",
+    "relations": [],
+    "curation": {
+      "admission_reason": "Frozen prior+residual+선택적 모방의 최신 직접 선행이다. 현재 후보의 규칙 조합만으로 독립 방법 기여를 주장하지 않도록 NEXT에 추가한다.",
+      "tier_reason": "Frozen prior+residual+선택적 모방의 최신 직접 선행이다. 현재 후보의 규칙 조합만으로 독립 방법 기여를 주장하지 않도록 NEXT에 추가한다.",
+      "rationale_status": "recorded",
+      "rationale_basis": "2026-11-03 direct residual RL prerequisites; researcher interpretation",
+      "rationale_reviewed_on": "2026-11-03",
+      "scope_status": "active",
+      "roles": [
+        "method"
+      ],
+      "role_basis": "manual admission review",
+      "priority_source_check": {
+        "url": "https://proceedings.mlr.press/v306/sun26al.html",
+        "checked_on": "2026-11-03",
+        "scope": "official publication and selected text; not reproduction"
+      }
+    },
+    "selected_text_source": {
+      "url": "https://arxiv.org/html/2603.10263v2",
+      "locations": "v2 §4; model/rl/distill_residual_rl_img.py selected filter/loss paths"
+    },
+    "source_ledger_key": "S42",
+    "code_review_commit": "98d936e52523878f0172e606ea32403176497100"
+  }
+]

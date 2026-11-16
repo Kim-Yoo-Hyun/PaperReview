@@ -4,6 +4,8 @@
 > Evidence maturity: `FULL_TEXT_CHECKED`.
 > Analysis basis: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/ICCV2025/html/Xu_FreeSplatter_Pose-free_Gaussian_Splatting_for_Sparse-view_3D_Reconstruction_ICCV_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/ICCV2025/papers/Xu_FreeSplatter_Pose-free_Gaussian_Splatting_for_Sparse-view_3D_Reconstruction_ICCV_2025_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
+> DOC-QA2 targeted source review: 2026-10-23; PDF pp. 3. 손상 구간·직접 연결된 표 분류만 원문 이미지와 대조했다. 전체 주장 정독·실험 검증·reading status 승격을 뜻하지 않는다. [URL·PDF hash·수정 기록](../../../work/sources/pdf_note_review_followup_2026-10-23.json).
+
 ## Evaluation in One Sentence
 
 PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 5 (4. Experiments), p. 6 (4.1. Experimental Settings), p. 6 (4.1. Experimental Settings), p. 7 (Figure/Table caption), p. 8 (Figure/Table caption)): Table 5. Ablation Study on Model Architecture. The results are evaluated on the GSO dataset with FreeSplatter-O. uate pose estimation performance using both rotation and translation metrics: relative rotation error ...
@@ -121,7 +123,7 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 5 (4. Experiment
 - **p. 3 / 3. Method - extractive body cue:** Given N input images {In / n = 1, . . . , N} without known camera parameters, FreeSplatter performs joint scene reconstruction and camera ...
 - **p. 3 / 3. Method - extractive body cue:** The pipeline is formulated as: \ mG , \ m P ^ 1 , \ldots , \ m P ^ N , f = \operatorname ...
 - **p. 3 / 3.2. Model Architecture - extractive body cue:** For input images {In / n = 1, . . . , N}, the model patchifies them into tokens {en,m / n = 1, . ...
-- **p. 3 / 3.2. Model Architecture - extractive body cue:** The model processes N input images  In ∈RH×W ×3 / n = 1, . . . , N
+- **PDF p. 3, §3.2 / Image Tokenization (DOC-QA2 원문 대조):** N개의 RGB image Iⁿ∈R^(H×W×3)를 8×8 patches로 나누고 선형 projection 후 position/view embeddings를 더한다. Camera parameter가 주어진다는 뜻이 아니며 method input 정의다.
 
 ## Generalization and Failure Cases
 

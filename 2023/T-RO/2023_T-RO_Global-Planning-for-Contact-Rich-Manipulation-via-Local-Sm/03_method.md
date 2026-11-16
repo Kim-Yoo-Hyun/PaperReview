@@ -4,6 +4,8 @@
 > Evidence maturity: `FULL_TEXT_CHECKED`.
 > Analysis basis: full-text PDF body checked on 2026-09-03 (20 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2206.10787; PDF retrieval source: https://arxiv.org/pdf/2206.10787. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
+> DOC-QA2 targeted source review: 2026-10-23; PDF pp. 5. 손상 구간·직접 연결된 표 분류만 원문 이미지와 대조했다. 전체 주장 정독·실험 검증·reading status 승격을 뜻하지 않는다. [URL·PDF hash·수정 기록](../../../work/sources/pdf_note_review_followup_2026-10-23.json).
+
 ## Method in One Sentence
 
 PDF body method statement (p. 6 (III. CONVEX QUASI-DYNAMIC DIFFERENTIABLE), p. 5 (II. LOCAL THEORY OF SMOOTHING), p. 7 (III. CONVEX QUASI-DYNAMIC DIFFERENTIABLE), p. 2 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 1 (I. INTRODUCTION)): Quasi-dynamic models, which previous works have used extensively for robotic manipulation [10], [11], [30], [31], [45], simplify Newtonian dynamics by removing terms related to velocity and acceleration, and focusing on ...
@@ -11,7 +13,7 @@ PDF body method statement (p. 6 (III. CONVEX QUASI-DYNAMIC DIFFERENTIABLE), p. 5
 ## Method Body Digest
 
 - **p. 6 / III. CONVEX QUASI-DYNAMIC DIFFERENTIABLE - extractive body cue:** Quasi-dynamic models, which previous works have used extensively for robotic manipulation [10], [11], [30], [31], [45], simplify Newtonian dynamics by removing terms related to velocity ...
-- **p. 5 / II. LOCAL THEORY OF SMOOTHING - extractive body cue:** 2) First-Order Randomized Smoothing: We use the following estimators for first-order randomized smoothing of dynamical systems, Aρ ≈1 N PN i=1  ∂ ∂xf(¯x + ...
+- **PDF p. 5, Eqs. (21a)–(22) (DOC-QA2 원문 대조):** First-order randomized smoothing은 perturbed state/input에서 dynamics Jacobians ∂f/∂x와 ∂f/∂u를 N samples 평균하여 A_ρ, B_ρ를 추정한다. c_ρ는 perturbed dynamics output 평균이다. Zeroth-order least-squares estimator Eq. (22)와 구별한다.
 - **p. 7 / III. CONVEX QUASI-DYNAMIC DIFFERENTIABLE - extractive body cue:** As the derivatives (30) are discontinuous functions of (q, u) [16], they are not a good local approximation of the CQDC dynamics unless multiple gradients ...
 - **p. 2 / I. INTRODUCTION - extractive body cue:** Specifically, we propose a convex implicit time-stepping contact model (Sec.III-B).
 - **p. 2 / I. INTRODUCTION - extractive body cue:** In addition, we propose an efficient extension step by computing actions that expand the tree using the local models (Sec.VII).
@@ -28,7 +30,7 @@ PDF body method statement (p. 6 (III. CONVEX QUASI-DYNAMIC DIFFERENTIABLE), p. 5
 ## Source Evidence Cues
 
 - **p. 6 / III. CONVEX QUASI-DYNAMIC DIFFERENTIABLE - extractive body cue:** Quasi-dynamic models, which previous works have used extensively for robotic manipulation [10], [11], [30], [31], [45], simplify Newtonian dynamics by removing terms related to velocity ...
-- **p. 5 / II. LOCAL THEORY OF SMOOTHING - extractive body cue:** 2) First-Order Randomized Smoothing: We use the following estimators for first-order randomized smoothing of dynamical systems, Aρ ≈1 N PN i=1  ∂ ∂xf(¯x + ...
+- **PDF p. 5, Eqs. (21a)–(22) (DOC-QA2 원문 대조):** First-order randomized smoothing은 perturbed state/input에서 dynamics Jacobians ∂f/∂x와 ∂f/∂u를 N samples 평균하여 A_ρ, B_ρ를 추정한다. c_ρ는 perturbed dynamics output 평균이다. Zeroth-order least-squares estimator Eq. (22)와 구별한다.
 - **p. 7 / III. CONVEX QUASI-DYNAMIC DIFFERENTIABLE - extractive body cue:** As the derivatives (30) are discontinuous functions of (q, u) [16], they are not a good local approximation of the CQDC dynamics unless multiple gradients ...
 - **p. 2 / I. INTRODUCTION - extractive body cue:** Specifically, we propose a convex implicit time-stepping contact model (Sec.III-B).
 - **p. 2 / I. INTRODUCTION - extractive body cue:** In addition, we propose an efficient extension step by computing actions that expand the tree using the local models (Sec.VII).
@@ -41,7 +43,7 @@ PDF body method statement (p. 6 (III. CONVEX QUASI-DYNAMIC DIFFERENTIABLE), p. 5
 | Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Geometry / affordance state | object와 contact-relevant scene을 표현한다 | RGB-D, point cloud, object/task observation | pose, affordance, grasp/contact graph 또는 SE(3) descriptor를 구성 | object/contact state | Quasi-dynamic models, which previous works have used extensively for robotic manipulation [10], [11], [30], [31], [45], simplify Newtonian dynamics by removing terms ... | p. 6 (III. CONVEX QUASI-DYNAMIC DIFFERENTIABLE), p. 5 (II. LOCAL THEORY OF SMOOTHING) |
-| Grasp / trajectory generation | goal을 feasible manipulation candidate로 바꾼다 | geometry/contact state와 task goal | grasp sampling, pose planning, trajectory optimization 또는 policy decoding을 적용 | grasp, pose, force 또는 trajectory | 2) First-Order Randomized Smoothing: We use the following estimators for first-order randomized smoothing of dynamical systems, Aρ ≈1 N PN i=1  ... | p. 5 (II. LOCAL THEORY OF SMOOTHING), p. 7 (III. CONVEX QUASI-DYNAMIC DIFFERENTIABLE) |
+| Local smoothed dynamics | Contact dynamics 주변의 local linear model 추정 | Nominal state/input와 perturbation distribution ρ | Perturbed dynamics Jacobians와 outputs를 Monte Carlo 평균 | A_ρ, B_ρ, c_ρ | First-order randomized smoothing은 perturbed state/input에서 dynamics Jacobians ∂f/∂x와 ∂f/∂u를 N samples 평균하여 A_ρ, B_ρ를 추정한다. c_ρ는 perturbed dynamics output 평균이다. Zeroth-order least-squares estimator Eq. (22)와 구별한다. | PDF p. 5 Eqs. (21a)–(22); 직접적인 grasp decoder가 아님 |
 | Contact execution / correction | interaction outcome으로 action을 닫힌 loop로 수정한다 | candidate와 visual/force/tactile feedback | tracking, regrasp, correction, termination 또는 recovery를 수행 | next action/task state | As the derivatives (30) are discontinuous functions of (q, u) [16], they are not a good local approximation of the CQDC dynamics ... | p. 7 (III. CONVEX QUASI-DYNAMIC DIFFERENTIABLE), p. 2 (I. INTRODUCTION) |
 
 - Pipeline rows are domain labels; the paper-specific operations are the extractive cues and section anchors in the same row.

@@ -4,6 +4,8 @@
 > Evidence maturity: `FULL_TEXT_CHECKED`.
 > Analysis basis: full-text PDF body checked on 2026-09-03 (26 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=3eTr9dGwJv; PDF retrieval source: https://openreview.net/pdf/3f888689e829f4172ae97d1dfac5f1b62ddb30c3.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
+> DOC-QA1 (2026-10-23): 제어문자·깨진 추출 구간과 직접 연결된 표 항목을 PDF 페이지 이미지와 대조했다. 확인 범위·원문 URL·페이지·수정 이력은 [대조 기록](../../../work/sources/pdf_note_review_2026-10-23.json)에 있다. 노트 전체의 정독이나 모든 기존 주장에 대한 재검증을 뜻하지 않으며 reading status는 유지한다.
+
 ## Evaluation in One Sentence
 
 PDF body evaluation/result cue (p. 11 (6 EXPERIMENTS), p. 22 (Figure/Table caption), p. 11 (6 EXPERIMENTS), p. 9 (6 EXPERIMENTS), p. 9 (6 EXPERIMENTS), p. 10 (6 EXPERIMENTS)): As shown in Figure 6, our system achieves an 80% success rate in graph generation, 87.5% success rate in planning (conditioned on correct graphs), and an overall task success rate ...
@@ -153,7 +155,7 @@ PDF body evaluation/result cue (p. 11 (6 EXPERIMENTS), p. 22 (Figure/Table capti
 | ET s encodes the spatial relationships among these nodes, and ET f captures their functional relationships. | p. 5 (4 METHOD) |
 | We compute intersection-over-union similarity for task-relevant objects in NT , where N pred T and N gt T denote the predicted and ground truth ... | p. 5 (4 METHOD) |
 | MomaGraph-Scenes jointly encodes spatial relationships and functional relationships, covering 9 spatial relationship types and 6 functional relationship 6 | p. 6 (4 METHOD) |
-| Formally, at time step t, the task-oriented scene graph is represented as: G(t) T =  N (t) T , ET ,(t) s , ET ... | p. 6 (4 METHOD) |
+| 원문 대조: 시각 t의 task-oriented graph는 task-relevant candidate object node, spatial edge, hypothesized functional edge로 구성된다. 초기 functional relation은 one-to-many일 수 있다. 현재 공개본의 해당 시간 인덱스 식은 PDF p. 6이다. ([PDF p. 6](https://arxiv.org/pdf/2512.16909#page=6), §4.3 State-Aware Dynamic Scene Graph Update, Eq. (3)) | [PDF p. 6](https://arxiv.org/pdf/2512.16909#page=6), §4.3 State-Aware Dynamic Scene Graph Update, Eq. (3) |
 
 | Audit field | Current status |
 |---|---|

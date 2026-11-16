@@ -4,6 +4,8 @@
 > Evidence maturity: `FULL_TEXT_CHECKED`.
 > Analysis basis: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/ICCV2025/html/Wang_Exploring_the_Adversarial_Vulnerabilities_of_Vision-Language-Action_Models_in_Robotics_ICCV_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/ICCV2025/papers/Wang_Exploring_the_Adversarial_Vulnerabilities_of_Vision-Language-Action_Models_in_Robotics_ICCV_2025_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
+> DOC-QA2 targeted source review: 2026-10-23; PDF pp. 5. 손상 구간·직접 연결된 표 분류만 원문 이미지와 대조했다. 전체 주장 정독·실험 검증·reading status 승격을 뜻하지 않는다. [URL·PDF hash·수정 기록](../../../work/sources/pdf_note_review_followup_2026-10-23.json).
+
 ## Evaluation in One Sentence
 
 PDF body evaluation/result cue (p. 6 (4.3. Main Result), p. 8 (4.3. Main Result), p. 8 (4.4. Diagnostic Experiment), p. 6 (4.2. Experiment Setup), p. 5 (4.1. Implementation Details), p. 5 (4. Experiments)): Specifically, while attacking DoF1 and DoF1∼3 in the Simulation setup, UADA and UPA achieve NAD of 21.0% and 14.5%, significantly outperforming UMA scenarios with increments of 6.9% and 3.1%, respectively.
@@ -16,7 +18,7 @@ PDF body evaluation/result cue (p. 6 (4.3. Main Result), p. 8 (4.3. Main Result)
 - **p. 8 / 4.3. Main Result - extractive body cue:** Crucially, we observed that the induced erratic movements (similar to simulation scenario) of the robot during successful attacks pose significant risks to human safety and ...
 - **p. 5 / 4.1. Implementation Details - extractive body cue:** 1: Input: X: dataset; δ: patch; Lo: attack objective; F: VLA model; T (·): transformations; φ, ψ: transformation parameters; T: attack steps; k: inner-loop steps.
 - **p. 7 / 4.3. Main Result - extractive body cue:** This observation underscores the importance of task-specific considerations when designing adversarial attacks on robotic systems.
-- **p. 5 / 4.1. Implementation Details - extractive body cue:** To improve the robustness of our attack under real-world scenarios, we employ random geometric transformations T  (·), (shx, shy, θ)  in line 6 ...
+- **PDF p. 5, §4.1 / Algorithm 1, Eq. (9) (DOC-QA2 원문 대조):** Patch 최적화에서 shear (sh_x,sh_y)와 rotation θ를 무작위로 적용해 물리 환경 변화에 대한 공격의 강건성을 높인다. 좌표 변환 식과 효과 평가는 구별한다.
 - **p. 8 / 4.6. Systemic Discussion - extractive body cue:** Sematic-rich patches. noteworthy observation is that some of these patches bear a striking resemblance to the structural joints of a robotic arm.
 
 ## Evaluation Type and Scope
@@ -36,7 +38,7 @@ PDF body evaluation/result cue (p. 6 (4.3. Main Result), p. 8 (4.3. Main Result)
 | 4.3. Main Result | EMPIRICAL / REAL-ROBOT OR HARDWARE | Although this success rate is lower than the corresponding digital-world performance (i.e., 100%), it highlights the effectiveness of our patches in physical-world applications as ... | p. 8 (4.3. Main Result) |
 | 4.4. Diagnostic Experiment | EMPIRICAL / REAL-ROBOT OR HARDWARE | The results show that NAD first improves when inner-loop steps continue to increase. | p. 8 (4.4. Diagnostic Experiment) |
 | 4.2. Experiment Setup | EMPIRICAL / REAL-ROBOT OR HARDWARE | Furthermore, building on the concept of Success Rate (SR) introduced in LIBERO [44], we adopt Failure Rate (FR), defined as 1-SR, as the primary ... | p. 6 (4.2. Experiment Setup) |
-| 4.1. Implementation Details | EMPIRICAL / REAL-ROBOT OR HARDWARE | To improve the robustness of our attack under real-world scenarios, we employ random geometric transformations T  (·), (shx, shy, θ)  in line ... | p. 5 (4.1. Implementation Details) |
+| 4.1. Implementation Details | EMPIRICAL / REAL-ROBOT OR HARDWARE | Algorithm 1의 patch training augmentation: random shear와 rotation. 이 절차 자체가 real-world 성공률은 아님 | PDF p. 5 §4.1 / Eq. (9) |
 
 ## Dataset / Benchmark Role
 
@@ -46,7 +48,7 @@ PDF body evaluation/result cue (p. 6 (4.3. Main Result), p. 8 (4.3. Main Result)
 - **p. 8 / 4.3. Main Result - extractive body cue:** Crucially, we observed that the induced erratic movements (similar to simulation scenario) of the robot during successful attacks pose significant risks to human safety and ...
 - **p. 5 / 4.1. Implementation Details - extractive body cue:** 1: Input: X: dataset; δ: patch; Lo: attack objective; F: VLA model; T (·): transformations; φ, ψ: transformation parameters; T: attack steps; k: inner-loop steps.
 - **p. 7 / 4.3. Main Result - extractive body cue:** This observation underscores the importance of task-specific considerations when designing adversarial attacks on robotic systems.
-- **p. 5 / 4.1. Implementation Details - extractive body cue:** To improve the robustness of our attack under real-world scenarios, we employ random geometric transformations T  (·), (shx, shy, θ)  in line 6 ...
+- **PDF p. 5, §4.1 / Algorithm 1, Eq. (9) (DOC-QA2 원문 대조):** Patch 최적화에서 shear (sh_x,sh_y)와 rotation θ를 무작위로 적용해 물리 환경 변화에 대한 공격의 강건성을 높인다. 좌표 변환 식과 효과 평가는 구별한다.
 - **p. 8 / 4.6. Systemic Discussion - extractive body cue:** Sematic-rich patches. noteworthy observation is that some of these patches bear a striking resemblance to the structural joints of a robotic arm.
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.

@@ -4,6 +4,8 @@
 > Evidence maturity: `FULL_TEXT_CHECKED`.
 > Analysis basis: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2026/html/Wang_DualSplat_Robust_3D_Gaussian_Splatting_via_Pseudo-Mask_Bootstrapping_from_Reconstruction_CVPR_2026_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2026/papers/Wang_DualSplat_Robust_3D_Gaussian_Splatting_via_Pseudo-Mask_Bootstrapping_from_Reconstruction_CVPR_2026_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
+> DOC-QA2 targeted source review: 2026-10-23; PDF pp. 5. 손상 구간·직접 연결된 표 분류만 원문 이미지와 대조했다. 전체 주장 정독·실험 검증·reading status 승격을 뜻하지 않는다. [URL·PDF hash·수정 기록](../../../work/sources/pdf_note_review_followup_2026-10-23.json).
+
 ## Evaluation in One Sentence
 
 PDF body evaluation/result cue (p. 6 (4.2. Distractor-free 3D Reconstruction), p. 1 (Figure/Table caption), p. 7 (4.2. Distractor-free 3D Reconstruction), p. 2 (4. We conduct comprehensive experiments on Robust), p. 6 (4.1. Setups), p. 7 (4.2. Distractor-free 3D Reconstruction)): DualSplat achieves the best overall average performance.
@@ -132,7 +134,7 @@ PDF body evaluation/result cue (p. 6 (4.2. Distractor-free 3D Reconstruction), p
 | body limitation/failure cue | Fig. 2. These failure patterns can be explicitly mined as cues for transient discovery. Specifically, we first perform a conservative 3DGS reconstruction to expose ... | p. 2 (Figure/Table caption) |
 | body limitation/failure cue | Table 1. Comparison of paradigms and mechanisms. Item Online suppression methods Ours(DualSplat) Paradigm Online Heuristic (Internal) Failure-to-Prior (External Guidance) Dependency | p. 3 (Figure/Table caption) |
 | body limitation/failure cue | (15) The final MLP objective is LMLP = λrobustLrobust + λpriorLprior + Lreg. | p. 5 (3.4. Reconstruction Failures to Object-Level Priors) |
-| body limitation/failure cue | These loss functions are combined as: Lrobust = exp  -max(0, Tdensify -t) βrobustness  (Lcos + Lres) . | p. 5 (3.4. Reconstruction Failures to Object-Level Priors) |
+| Method loss schedule | Eq. (15)의 exponential weighting은 robustness loss 구성이다. 이 식을 limitation/failure evidence로 분류하지 않는다. | PDF p. 5 §3.5 / Eqs. (15)–(16) |
 
 - Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
 
@@ -161,7 +163,7 @@ PDF body evaluation/result cue (p. 6 (4.2. Distractor-free 3D Reconstruction), p
 - **p. 2 / Figure/Table caption - extractive body cue:** Fig. 2. These failure patterns can be explicitly mined as cues for transient discovery. Specifically, we first perform a conservative 3DGS reconstruction to expose failure ...
 - **p. 3 / Figure/Table caption - extractive body cue:** Table 1. Comparison of paradigms and mechanisms. Item Online suppression methods Ours(DualSplat) Paradigm Online Heuristic (Internal) Failure-to-Prior (External Guidance) Dependency
 - **p. 5 / 3.4. Reconstruction Failures to Object-Level Priors - extractive body cue:** (15) The final MLP objective is LMLP = λrobustLrobust + λpriorLprior + Lreg.
-- **p. 5 / 3.4. Reconstruction Failures to Object-Level Priors - extractive body cue:** These loss functions are combined as: Lrobust = exp  -max(0, Tdensify -t) βrobustness  (Lcos + Lres) .
+- **PDF p. 5, §3.5 / Eq. (15) (DOC-QA2 원문 대조):** L_robust = exp(−max(0,T_densify−t)/β_robustness)·(L_cos+L_res). 이는 mask refinement loss의 시간별 weighting이며 failure observation 자체가 아니다.
 
 - **Evidence anchors reviewed:** datasets p. 5 (4.1. Setups), p. 7 (4.2. Distractor-free 3D Reconstruction), p. 2 (4. We conduct comprehensive experiments on Robust), p. 5 (4.1. Setups), p. 6 (4.1. Setups), p. 6 (4.1. Setups), metrics p. 8 (Figure/Table caption), p. 5 (Figure/Table caption), p. 2 (4. We conduct comprehensive experiments on Robust), p. 5 (4.1. Setups), p. 6 (4.2. Distractor-free 3D Reconstruction), p. 6 (4.1. Setups), baselines p. 5 (4.1. Setups), p. 6 (4.2. Distractor-free 3D Reconstruction), p. 6 (4.2. Distractor-free 3D Reconstruction), p. 7 (4.3. Ablation Study), p. 7 (4.2. Distractor-free 3D Reconstruction), p. 1 (Figure/Table caption), results p. 6 (4.2. Distractor-free 3D Reconstruction), p. 1 (Figure/Table caption), p. 7 (4.2. Distractor-free 3D Reconstruction), p. 2 (4. We conduct comprehensive experiments on Robust), p. 6 (4.1. Setups), p. 7 (4.2. Distractor-free 3D Reconstruction).
 - Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?

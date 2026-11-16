@@ -1,0 +1,177 @@
+{
+  "task_id": "GAP-TERM-E1",
+  "reviewed_on": "2026-10-28",
+  "timezone": "Asia/Seoul",
+  "status": "DONE",
+  "mode": "NONEXPERIMENTAL_EVALUATION_COMPARISON",
+  "report": "work/update/VLA_TERMINATION_COMPARISON_2026-10-28.md",
+  "canonical_question": "synthesis/04_vla_generalist.md#gap-termination-2026",
+  "scope": {
+    "body_sources_rechecked": 3,
+    "body_versions": "specified 2026 arXiv v1 preprints; not acceptance verification",
+    "historical_abstract_only_source": "P12, checked 2026-10-27; no retry or current-status verification",
+    "historical_code_audit": "3 revisions / 21 selected files from GAP-TERM1; reused, not re-fetched or executed",
+    "new_code_audit": false,
+    "exhaustive_novelty_search": false
+  },
+  "result": {
+    "candidate": "retained and narrowed",
+    "question": "Does VLA selection by first-hit success remain useful under shared simple termination rules, and where is that selection stable?",
+    "contribution_type": "empirical/evaluation",
+    "effect": "UNMEASURED_REQUIRES_DATA_OR_EXPERIMENT",
+    "novelty": "NOT_ESTABLISHED",
+    "native_stop_required_for_entry": false,
+    "rank_reversal_required_for_entry": false,
+    "new_method_required": false,
+    "execution_plan": "NOT_FROZEN",
+    "old_TERM_R1_gate": "UNCHANGED",
+    "next_nonexperimental_task": "GAP-SELECT-E1 READY"
+  },
+  "sources": [
+    {
+      "source_id": "P10",
+      "title": "Echo: Coupled Action and Task Status Signal Denoising for Vision Language Action Models",
+      "url": "https://arxiv.org/html/2610.31569v1",
+      "sections": ["A.8–A.10"],
+      "checked_on": "2026-10-28",
+      "use": "Report section 2; signal scoring versus executed stop; paper and historical code protocol kept separate."
+    },
+    {
+      "source_id": "P11",
+      "title": "SEES: A Self-Evolving Embodied System via Failure-Guided VLA Policy Adaptation",
+      "url": "https://arxiv.org/html/2609.32698v1",
+      "sections": ["Appendix B, Table 5"],
+      "checked_on": "2026-10-28",
+      "use": "Report section 2; oracle-controlled audit and predicted-action probabilities versus distinct observation queries."
+    },
+    {
+      "source_id": "P9",
+      "title": "SparkVLA: Stop-Aware Hierarchical VLA with Adaptive Action Chunking for Long-Horizon Manipulation",
+      "url": "https://arxiv.org/html/2608.16172v1",
+      "sections": ["Closed-Loop Inference Details", "Algorithm 3", "Evaluation Controls"],
+      "checked_on": "2026-10-28",
+      "use": "Report section 2; subtask handoff separated from global episode termination."
+    }
+  ],
+  "historical_evidence": {
+    "ledger": "work/sources/vla_termination_contract_review_2026-10-27.json",
+    "report": "work/update/VLA_TERMINATION_CONTRACT_REVIEW_2026-10-27.md",
+    "prior_scout": "work/update/VLA_GAP_RESELECTION_2026-10-27.md",
+    "source_checked_on": "2026-10-27",
+    "code_ids_used": ["C1", "C3", "C9", "C10", "C11", "C12", "C13", "C14", "C15", "C16", "C17", "C18", "C19", "C20", "C21"],
+    "paper_P12": {
+      "title": "Every Failure Is a Timeout: Failure-Mode Homogeneity Makes Robot Policy Evaluators Unverifiable",
+      "url": "https://openreview.net/forum?id=8GyKjbTQUd",
+      "status_at_previous_check": "2026 public / ICLR 2027 under review",
+      "depth": "official API version 2 abstract and metadata only",
+      "full_text_scope": "UNRESOLVED",
+      "retried_this_task": false,
+      "new_status_claim": false
+    }
+  },
+  "comparison_cells": [
+    {
+      "id": "openvla_pinned_runner",
+      "provenance": "historical C20",
+      "first_hit": "SOURCE_PATH",
+      "continued_terminal_goal": "NOT_OBSERVED_AFTER_SUCCESS_BREAK",
+      "native_stop": "NOT_PRESENT_IN_AUDITED_PATH",
+      "post_stop_K_trace": "NOT_ESTABLISHED"
+    },
+    {
+      "id": "echo_paper_A10",
+      "provenance": "P10",
+      "first_hit": "REPORTED_FOR_BOTH_MODELS",
+      "continuation": "ECHO_ONLY_AFTER_SUCCESS_IN_PAPER_PROTOCOL",
+      "signal_scoring": "OFFLINE_GT_WINDOW",
+      "post_stop_K_trace": "SIGNALS_DO_NOT_STOP_ROLLOUT"
+    },
+    {
+      "id": "echo_pinned_runner",
+      "provenance": "historical C1/C9",
+      "first_hit": "SOURCE_PATH",
+      "continued_terminal_goal": "SOURCE_PATH_BOTH_MODELS",
+      "autonomous_stop": "NOT_CONNECTED",
+      "episode_payload": "NOT_ACQUIRED"
+    },
+    {
+      "id": "sees_appendix_B",
+      "provenance": "P11",
+      "termination_comparison": "ORACLE_CONTROLLED_SHARED_TRAJECTORY_AUDIT",
+      "online_stop_effect_from_Table5": "NOT_ESTABLISHED",
+      "scope_warning": "This does not deny learned handoff elsewhere in the paper."
+    },
+    {
+      "id": "sparkvla_algorithm_3",
+      "provenance": "P9",
+      "stop": "SUBTASK_HANDOFF",
+      "episode_end": "SEPARATE_GLOBAL_CRITERION",
+      "same_frozen_actor_stop_cross": "NOT_ESTABLISHED_IN_CHECKED_SECTIONS"
+    },
+    {
+      "id": "P12",
+      "provenance": "historical abstract only",
+      "conceptual_prior": "fixed-horizon and achievement/terminal distinction",
+      "exact_comparison_cells": "UNRESOLVED"
+    }
+  ],
+  "planned_comparison": {
+    "artifact": "prose draft only",
+    "axes": "execution rule versus scoring criterion",
+    "phase_1": "first-hit and terminal goal on the same complete continuation traces",
+    "phase_2": "two frozen policies by deadline/common-detector/distinct-query confirmation with actual K execution",
+    "native_rule": "optional if truly provided; missing is N/A",
+    "budget_convention": "total B includes post-stop Delta; declarations and fixed deadline no later than B-Delta",
+    "definition_boundary": "deployment retention/release contract is separate from native first-hit success",
+    "selection_bias_control": "calibration policy/threshold selection separated from held-out evaluation",
+    "stability_claim": "requires uncertainty relative to meaningful predeclared tolerance; nonsignificance is insufficient",
+    "offline_limit": "truncating continuation cannot establish counterfactual post-stop outcome",
+    "native_artifacts_created": false,
+    "numerical_thresholds_frozen": false
+  },
+  "actions": {
+    "simulation_inference_training": false,
+    "Docker_GPU_probe": false,
+    "package_installation": false,
+    "local_PDF_weights_dataset_download": false,
+    "trajectory_reanalysis": false,
+    "registration_or_reading_promotion": false,
+    "external_messages": false,
+    "git_commit_push": false
+  },
+  "validation": {
+    "status": "PASS",
+    "commands": [
+      "PYTHONPYCACHEPREFIX=/tmp/paper_terme1_pycache python3 -m py_compile work/scripts/build_reading_tiers.py",
+      "python3 work/scripts/build_reading_tiers.py",
+      "git diff --check",
+      "python3 work/scripts/audit_repository.py"
+    ],
+    "errors": [],
+    "warnings": [],
+    "papers": 1072,
+    "tiers": {"CORE": 47, "NEXT": 297, "REFERENCE": 486, "ARCHIVE": 242},
+    "active_reading_rows": 344,
+    "history_reading_rows": 47,
+    "standard_notes": 5360,
+    "markdown_files": 5542,
+    "markdown_links": 10990,
+    "canonical_files_byte_identical": [
+      "AGENTS.md", "PAPER.md", "work/sources/papers.json",
+      "work/sources/registry_meta.json", "research/READING_TIERS.csv",
+      "research/READING_STATUS.csv", "research/READING_STATUS_HISTORY.csv"
+    ],
+    "existing_dirty_files": 657,
+    "changed_existing_dirty": 7,
+    "unrelated_dirty_preserved": 650,
+    "existing_deletions_preserved": 10,
+    "new_files": [
+      "work/update/VLA_TERMINATION_COMPARISON_2026-10-28.md",
+      "work/sources/vla_termination_comparison_2026-10-28.json"
+    ],
+    "generator_additional_changes": false,
+    "source_reuse_identity_check": "PASS",
+    "active_handoff_check": "PASS",
+    "policy_effect_test": false
+  }
+}

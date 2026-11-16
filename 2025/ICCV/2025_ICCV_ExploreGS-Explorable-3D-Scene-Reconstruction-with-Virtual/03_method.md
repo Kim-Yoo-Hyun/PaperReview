@@ -4,6 +4,8 @@
 > Evidence maturity: `FULL_TEXT_CHECKED`.
 > Analysis basis: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/ICCV2025/html/Kim_ExploreGS_Explorable_3D_Scene_Reconstruction_with_Virtual_Camera_Samplings_and_ICCV_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/ICCV2025/papers/Kim_ExploreGS_Explorable_3D_Scene_Reconstruction_with_Virtual_Camera_Samplings_and_ICCV_2025_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
+> DOC-QA2 targeted source review: 2026-10-23; PDF pp. 4. 손상 구간·직접 연결된 표 분류만 원문 이미지와 대조했다. 전체 주장 정독·실험 검증·reading status 승격을 뜻하지 않는다. [URL·PDF hash·수정 기록](../../../work/sources/pdf_note_review_followup_2026-10-23.json).
+
 ## Method in One Sentence
 
 PDF body method statement (p. 3 (3.2. Scene initialization), p. 3 (3.1. Overview), p. 4 (3.3. Virtual view sampling), p. 4 (3.3. Virtual view sampling)): To this end, we introduce a simple rasterization-based algorithm to construct the occupancy grid O ∈RS×S×S.
@@ -13,7 +15,7 @@ PDF body method statement (p. 3 (3.2. Scene initialization), p. 3 (3.1. Overview
 - **p. 3 / 3.2. Scene initialization - extractive body cue:** To this end, we introduce a simple rasterization-based algorithm to construct the occupancy grid O ∈RS×S×S.
 - **p. 3 / 3.1. Overview - extractive body cue:** NT r camera trajectories that maximizes the information gain are sampled, and each trajectory Trn consists of L progressively shifting virtual viewpoints: Trn = {V ...
 - **p. 4 / 3.3. Virtual view sampling - extractive body cue:** (b) Based on the optimized 3DGS and training viewpoints, we generate virtual camera trajectories, and enhance the rendered views using our diffusion-based enhancement model.
-- **p. 4 / 3.3. Virtual view sampling - extractive body cue:** (c) Finally, the scene is further optimized using both the original training viewpoints and the newly generated virtual viewpoints.  - 1 1 1 - ...
+- **PDF p. 4, Fig. 2(c) (DOC-QA2 원문 대조):** 원래 training viewpoints와 diffusion으로 보강한 virtual viewpoints를 함께 사용해 scene을 추가 최적화한다. 뒤에 붙었던 숫자·기호는 인접 Fig. 3의 정보량 도식에서 섞인 것으로 이 문장에서 제거했다.
 - **p. 3 / 3.2. Scene initialization - extractive body cue:** Our pipeline begins by optimizing the initial set of 3D Gaussians with the given training set within the 3DGS optimization framework [11].
 - **p. 4 / 3.3. Virtual view sampling - extractive body cue:** (a) The scene is initially optimized using 3DGS on the given training viewpoints.
 - **p. 3 / 3.1. Overview - extractive body cue:** Then, we determine the boundary of reconstructable scene based on the input observations and identify occupied regions for virtual viewpoints samplings.
@@ -30,7 +32,7 @@ PDF body method statement (p. 3 (3.2. Scene initialization), p. 3 (3.1. Overview
 - **p. 3 / 3.2. Scene initialization - extractive body cue:** To this end, we introduce a simple rasterization-based algorithm to construct the occupancy grid O ∈RS×S×S.
 - **p. 3 / 3.1. Overview - extractive body cue:** NT r camera trajectories that maximizes the information gain are sampled, and each trajectory Trn consists of L progressively shifting virtual viewpoints: Trn = {V ...
 - **p. 4 / 3.3. Virtual view sampling - extractive body cue:** (b) Based on the optimized 3DGS and training viewpoints, we generate virtual camera trajectories, and enhance the rendered views using our diffusion-based enhancement model.
-- **p. 4 / 3.3. Virtual view sampling - extractive body cue:** (c) Finally, the scene is further optimized using both the original training viewpoints and the newly generated virtual viewpoints.  - 1 1 1 - ...
+- **PDF p. 4, Fig. 2(c) (DOC-QA2 원문 대조):** 원래 training viewpoints와 diffusion으로 보강한 virtual viewpoints를 함께 사용해 scene을 추가 최적화한다. 뒤에 붙었던 숫자·기호는 인접 Fig. 3의 정보량 도식에서 섞인 것으로 이 문장에서 제거했다.
 - **Detected method headings:** 3. Method (p. 3)
 
 ## Pipeline
@@ -68,7 +70,7 @@ PDF body method statement (p. 3 (3.2. Scene initialization), p. 3 (3.1. Overview
 - **p. 3 / 3.2. Scene initialization - extractive body cue:** As previously discussed, reconstructing content beyond this bounding box is highly challenging, as it lacks grounding in the input observations and increasingly resembles unconstrained content ...
 - **p. 2 / 1. Introduction - extractive body cue:** Unfortunately, such an experience is yet to be fully realized, as existing methods suffer from severe degradations in rendering quality when viewpoints deviate significantly from ...
 - **p. 2 / 1. Introduction - extractive body cue:** To avoid generating arbitrary contents in regions far beyond the input observations-which would not reflect actual user experiences-we define the target areas as a bounding ...
-- **p. 4 / 3.3. Virtual view sampling - extractive body cue:** (c) Finally, the scene is further optimized using both the original training viewpoints and the newly generated virtual viewpoints.  - 1 1 1 - ...
+- **PDF p. 4, Fig. 2(c) (DOC-QA2 원문 대조):** 원래 training viewpoints와 diffusion으로 보강한 virtual viewpoints를 함께 사용해 scene을 추가 최적화한다. 뒤에 붙었던 숫자·기호는 인접 Fig. 3의 정보량 도식에서 섞인 것으로 이 문장에서 제거했다.
 - **p. 4 / 3.3. Virtual view sampling - extractive body cue:** Overview of the proposed framework for scene exploration.
 - **Normalized interface:** observation=conditioning observation와 noisy/intermediate sample; state=latent/noise variable와 conditional distribution; output/action=generated sample, action chunk 또는 trajectory.
 - Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
@@ -85,7 +87,7 @@ PDF body method statement (p. 3 (3.2. Scene initialization), p. 3 (3.1. Overview
 ## Training vs Inference
 
 - **p. 4 / 3.3. Virtual view sampling - extractive body cue:** (b) Based on the optimized 3DGS and training viewpoints, we generate virtual camera trajectories, and enhance the rendered views using our diffusion-based enhancement model.
-- **p. 4 / 3.3. Virtual view sampling - extractive body cue:** (c) Finally, the scene is further optimized using both the original training viewpoints and the newly generated virtual viewpoints.  - 1 1 1 - ...
+- **PDF p. 4, Fig. 2(c) (DOC-QA2 원문 대조):** 원래 training viewpoints와 diffusion으로 보강한 virtual viewpoints를 함께 사용해 scene을 추가 최적화한다. 뒤에 붙었던 숫자·기호는 인접 Fig. 3의 정보량 도식에서 섞인 것으로 이 문장에서 제거했다.
 
 - Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 

@@ -4,6 +4,8 @@
 > Evidence maturity: `FULL_TEXT_CHECKED`.
 > Analysis basis: full-text PDF body checked on 2026-09-02 (40 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2301.04104; PDF retrieval source: https://arxiv.org/pdf/2301.04104. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
 
+> DOC-QA1 (2026-10-23): 제어문자·깨진 추출 구간과 직접 연결된 표 항목을 PDF 페이지 이미지와 대조했다. 확인 범위·원문 URL·페이지·수정 이력은 [대조 기록](../../../work/sources/pdf_note_review_2026-10-23.json)에 있다. 노트 전체의 정독이나 모든 기존 주장에 대한 재검증을 뜻하지 않으며 reading status는 유지한다.
+
 ## Paper-supported conclusion
 
 > **Evidence boundary:** The following claims are restricted to selected PDF body sentences, captions and section anchors; exact table/equation values remain to be checked at those anchors.
@@ -28,7 +30,7 @@
 - **p. 2 / Abstract - extractive body cue:** Dreamer overcomes this challenge through a range of robustness techniques based on normalization, balancing, and transformations.
 - **p. 7 / Abstract - extractive body cue:** Importantly, the network can output any continuous value in the interval because the weighted average can fall between the buckets: ˆy .= softmax(f(x))TB B .= ...
 - **p. 6 / Abstract - extractive body cue:** In practice, substracting an offset from the returns does not change the actor gradient and thus dividing by the range S is sufficient.
-- **Boundary to test:** Importantly, the network can output any continuous value in the interval because the weighted average can fall between the buckets: ˆy .= softmax(f(x))TB B .= symexp(  -20 ... +20  ) ...
+- **원문 대조:** Symexp twohot readout은 bin 위치의 probability-weighted mean이므로 bin 사이의 연속값도 출력할 수 있다. 이 문장은 failure case가 아니라 representation의 성질이다. 이 성질만으로 연구 gap이나 성능 저하를 주장하지 않는다. ([PDF p. 7](https://arxiv.org/pdf/2301.04104#page=7), Robust predictions, Eq. (10)).
 
 ### Claim–evidence link
 
@@ -36,7 +38,7 @@
 |---|---|---|
 | Mechanism/contribution | We present DreamerV3, a general algorithm that outperforms specialized methods across over 150 diverse tasks, with a single configuration. | p. 1 (Abstract), p. 2 (Abstract) |
 | Reported outcome | Figure 9: Item success rates as a percentage of episodes. Dreamer obtains items at substantially higher rates than the baselines and continues to improve until the 100M step budget. At the budget, ... | p. 24 (Figure/Table caption), p. 2 (Abstract) |
-| Failure/limitation | Importantly, the network can output any continuous value in the interval because the weighted average can fall between the buckets: ˆy .= softmax(f(x))TB B .= symexp(  -20 ... +20  ) ... | p. 7 (Abstract), p. 6 (Abstract) |
+| Representation property (failure 아님) | 원문 대조: Symexp twohot readout은 bin 위치의 probability-weighted mean이므로 bin 사이의 연속값도 출력할 수 있다. 이 문장은 failure case가 아니라 representation의 성질이다. 이 성질만으로 연구 gap이나 성능 저하를 주장하지 않는다. ([PDF p. 7](https://arxiv.org/pdf/2301.04104#page=7), Robust predictions, Eq. (10)) | [PDF p. 7](https://arxiv.org/pdf/2301.04104#page=7), Robust predictions, Eq. (10) |
 
 ## Researcher interpretation
 
@@ -54,7 +56,7 @@
 - **Reading predecessor in the generated track queue:** Dream to Control: Learning Behaviors by Latent Imagination (queue adjacency, not a confirmed citation).
 - **Reading successor in the generated track queue:** PIN-WM: Learning Physics-INformed World Models for Non-Prehensile Manipulation (queue adjacency, not a confirmed citation).
 - Direct citation predecessor/successor is not asserted automatically; verify the paper's reference section before recording lineage as fact.
-- **Body-defined next pressure:** Importantly, the network can output any continuous value in the interval because the weighted average can fall between the buckets: ˆy .= softmax(f(x))TB B .= symexp(  -20 ... +20  ) ...; this is the most direct route from the paper's reported scope to a falsifiable extension.
+- **원문 대조:** Symexp twohot readout은 bin 위치의 probability-weighted mean이므로 bin 사이의 연속값도 출력할 수 있다. 이 문장은 failure case가 아니라 representation의 성질이다. 이 성질만으로 연구 gap이나 성능 저하를 주장하지 않는다. ([PDF p. 7](https://arxiv.org/pdf/2301.04104#page=7), Robust predictions, Eq. (10)).
 
 ### Minimal reproduction
 

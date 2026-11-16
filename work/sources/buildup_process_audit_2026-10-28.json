@@ -1,0 +1,178 @@
+{
+  "task_id": "GAP-PROC1",
+  "schema_version": "1.0",
+  "reviewed_on": "2026-10-28",
+  "task_status": "DONE",
+  "scope": "Nonexperimental review of whether exploration gates are prematurely demanding confirmatory or implementation evidence",
+  "conclusion": {
+    "judgment": "LIKELY_OVERSTRICT_IN_EARLY_STAGE_APPLICATION",
+    "basis": "Purposive document audit against primary methodology and official review guidance; not a causal evaluation of topic-selection outcomes",
+    "core_guide_already_allowed_uncertainty": true,
+    "correction": "Separate candidate exploration, exploratory diagnosis, and confirmatory implementation; align requirements with contribution type",
+    "all_previous_rejections_invalid": false,
+    "candidate_statuses_changed": false,
+    "retired_projects_reopened": false,
+    "false_negative_rate_measured": false,
+    "selection_success_improvement_measured": false,
+    "external_researcher_feedback_obtained": false
+  },
+  "primary_sources": [
+    {
+      "id": "S1",
+      "title": "NeurIPS 2026 Reviewing Guidelines",
+      "url": "https://neurips.cc/Conferences/2026/ReviewerGuidelines",
+      "depth": "official HTML selected General, Use-Inspired, Concept and Feasibility, Negative Results sections",
+      "supports": "Contribution-specific interpretation; originality need not be a new method; concept and negative results still have high significance and evidence requirements"
+    },
+    {
+      "id": "S2",
+      "title": "NeurIPS Evaluations & Datasets 2026 Reviewing Guidelines",
+      "url": "https://neurips.cc/Conferences/2026/EvaluationsDatasetsReviewerGuidelines",
+      "depth": "official HTML Benchmark Design and Analysis, Evaluation Methodology and Metrics, Auditing sections",
+      "supports": "Changed scientific conclusions under evaluation assumptions can be a contribution; beating a baseline is not required for these types; rigor remains required"
+    },
+    {
+      "id": "S3",
+      "title": "ECCV 2026 Guidance to Reviewers on Contribution Types",
+      "url": "https://eccv.ecva.net/Conferences/2026/ReviewerContributionTypes",
+      "depth": "official HTML introduction, Applied/Systems, Concept and Feasibility",
+      "supports": "Do not apply one rigid checklist; meaningful small feasibility validation may support appropriately scoped concept work"
+    },
+    {
+      "id": "S4",
+      "title": "ICLR 2026 Reviewer Guide",
+      "url": "https://iclr.cc/Conferences/2026/ReviewerGuide",
+      "depth": "official HTML reviewing questions and SOTA/contemporaneous-work FAQ",
+      "supports": "New useful knowledge need not achieve SOTA; this venue/year has explicit contemporaneous and arXiv comparison boundaries",
+      "limit": "Not a universal rule for other venues or permission to conceal known related work"
+    },
+    {
+      "id": "S5",
+      "title": "Foundations of Computer Vision: How to Do Research",
+      "authors": "Antonio Torralba, Phillip Isola, William Freeman",
+      "url": "https://visionbook.mit.edu/how_to_do_research.html",
+      "depth": "author textbook HTML section 52.2",
+      "supports": "Toy models build intuition; failure localization and nearby revisions can generate progress; related literature still matters"
+    },
+    {
+      "id": "S6",
+      "title": "The preregistration revolution",
+      "authors": "Brian A. Nosek, Charles R. Ebersole, Alexander C. DeHaven, David T. Mellor",
+      "publication": "PNAS 2018, 115(11):2600-2606",
+      "url": "https://doi.org/10.1073/pnas.1708274114",
+      "secondary_primary_host": "https://pmc.ncbi.nlm.nih.gov/articles/5856500/",
+      "depth": "primary publisher/PMC search-indexed abstract and Program of Research passages",
+      "access_boundary": "Direct publisher open returned 403; PMC direct open returned access-check page; no local PDF",
+      "supports": "Exploratory hypothesis generation and confirmatory testing are distinct and iterative; discoveries should not be reported as prior predictions",
+      "limit": "No blanket preregistration requirement imposed on this repository"
+    },
+    {
+      "id": "S7",
+      "title": "How To Choose a Good Scientific Problem",
+      "authors": "Uri Alon",
+      "publication": "Molecular Cell 2009, 35(6):726-728",
+      "doi": "10.1016/j.molcel.2009.09.013",
+      "url": "https://www.weizmann.ac.il/mcb/alon/sites/mcb.UriAlon/files/uploads/nurturing/howtochoosegoodproblem.pdf",
+      "metadata_url": "https://www.weizmann.ac.il/mcb/alon/publications",
+      "depth": "author-hosted primary search-indexed Two Dimensions of Problem Choice passage and lab publication metadata",
+      "access_boundary": "Web PDF open timed out; no local PDF",
+      "supports": "Interest or expected new knowledge and feasibility are separate axes, weighted by researcher circumstances"
+    },
+    {
+      "id": "S8",
+      "title": "A Survival Guide to a PhD",
+      "authors": "Andrej Karpathy",
+      "publication": "Author retrospective, 2016",
+      "url": "https://karpathy.github.io/2016/09/07/phd/",
+      "depth": "author HTML Research topics section",
+      "supports": "Problem taste develops through practice and apprenticeship; an important problem also needs a plausible attack"
+    }
+  ],
+  "source_limits": [
+    "Official reviewer guidelines describe finished submissions, not mandatory initial-idea gates",
+    "Advice and methodology are not causal evidence that the revised workflow raises acceptance rates",
+    "Only selected primary passages were reviewed; not all historical guide sources were rechecked",
+    "Third-party lists, search mirrors, Reddit and acceptance predictions were not used as final authority"
+  ],
+  "case_audit": [
+    {
+      "id": "TERM1",
+      "path": "work/update/VLA_TERMINATION_CONTRACT_REVIEW_2026-10-27.md",
+      "sections": "1, 5, 6, 7",
+      "preserve": "No new-theory claim from algebra; task and controller confounding; current NO-GO/HOLD",
+      "correct_future_interpretation": "A rank-change identity does not establish that empirical prevalence, magnitude, or scope are trivial; evaluation discovery need not start with a causal mechanism"
+    },
+    {
+      "id": "AUTH4",
+      "path": "work/update/VLA_CONTACT_AUTHORIZATION_BASELINE_REVIEW_2026-10-27.md",
+      "sections": "6, 7",
+      "preserve": "Conditional sufficiency under correct grounding/tracking; current NO-GO/HOLD",
+      "correct_future_interpretation": "Conditional sufficiency is not measured reliability of those assumptions; baseline existence is not empirical sufficiency"
+    },
+    {
+      "id": "N4",
+      "path": "work/update/PROXY_SELECTION_IDENTIFIABILITY_REVIEW_2026-10-26.md",
+      "sections": "opening decision, 1, 2",
+      "preserve": "Specific novelty claims excluded by direct prior; existing HOLD",
+      "correct_future_interpretation": "Same method family does not eliminate all question or condition differences"
+    },
+    {
+      "id": "P4",
+      "path": "work/experiments/reactive_nav_pilot/RESULTS.md",
+      "sections": "opening conclusion, 1, 2",
+      "preserve": "Actual bounded pilot failed prespecified joint gate; no post-hoc rescue or automatic restart",
+      "correct_future_interpretation": "Do not generalize this negative result to all navigation questions"
+    }
+  ],
+  "operational_changes": [
+    "Stage-appropriate entry requirements in existing buildup guide",
+    "Five-field exploratory card; expanded implementation template is optional until relevant",
+    "Allow direction-agnostic empirical questions and hypothesis generation",
+    "Distinguish direct collision, logical contradiction, negative evidence, prioritization, unknowns and resource waiting",
+    "Contribution-type-specific assessment; no universal new-method or mechanism requirement",
+    "GAP-S3 remains next but uses exploratory entry criteria"
+  ],
+  "constraints": {
+    "experiments": false,
+    "runtime_or_gpu_probe": false,
+    "dependencies_installed": false,
+    "local_pdf_downloaded": false,
+    "registration": false,
+    "tier_or_reading_status_change": false,
+    "candidate_reopen": false,
+    "external_messages_sent": false,
+    "commit_or_push": false
+  },
+  "validation": {
+    "status": "PASS",
+    "python_compile_exit_code": 0,
+    "reading_generator_exit_code": 0,
+    "git_diff_check_exit_code": 0,
+    "repository_audit_exit_code": 0,
+    "repository_audit": {
+      "papers": 1072,
+      "tier_counts": {"CORE": 47, "NEXT": 297, "REFERENCE": 486, "ARCHIVE": 242},
+      "active_reading": 344,
+      "inactive_history": 47,
+      "standard_note_files": 5360,
+      "markdown_files_checked": 5538,
+      "markdown_links_checked": 10930,
+      "errors": [],
+      "warnings": []
+    },
+    "canonical_byte_preserved": [
+      "AGENTS.md", "PAPER.md", "work/sources/papers.json", "work/sources/registry_meta.json",
+      "research/READING_TIERS.csv", "research/READING_STATUS.csv", "research/READING_STATUS_HISTORY.csv"
+    ],
+    "preexisting_dirty_files": 647,
+    "manual_modified_preexisting_files": 6,
+    "generated_date_only_change": "research/READING_PLAN.md: 2026-10-27 to 2026-10-28; normalized bytes match pre-task SHA-256",
+    "unrelated_preexisting_files_preserved": 640,
+    "preexisting_deleted_paths_preserved": 10,
+    "new_files": [
+      "work/update/BUILDUP_PROCESS_AUDIT_2026-10-28.md",
+      "work/sources/buildup_process_audit_2026-10-28.json"
+    ],
+    "preservation_check": "PASS after accounting for generator date refresh; no candidate result or historical source ledger changed"
+  }
+}

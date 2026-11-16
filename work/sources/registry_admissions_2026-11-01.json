@@ -1,0 +1,296 @@
+[
+  {
+    "admission_key": "clevrskills",
+    "title": "ClevrSkills: Compositional Language And Visual Reasoning in Robotics",
+    "year": 2024,
+    "venue": "NeurIPS",
+    "category": "Benchmarks and Datasets",
+    "primary_track": "VLA and generalist robot policies",
+    "page": "https://proceedings.neurips.cc/paper_files/paper/2024/hash/439539557e9ba0d04055773ff1f3241c-Abstract-Datasets_and_Benchmarks_Track.html",
+    "project": "https://github.com/Qualcomm-AI-research/ClevrSkills",
+    "identifiers": {
+      "arxiv": "2411.09052",
+      "doi": "10.52202/079017-1209"
+    },
+    "aliases": [
+      "ClevrSkills"
+    ],
+    "tags": [
+      "Robotics",
+      "compositional-reasoning",
+      "benchmark",
+      "multimodal-instructions"
+    ],
+    "paper_type": "benchmark_or_dataset",
+    "admission_group": "VLA, cross-embodiment, and long-horizon planning",
+    "problem": "익힌 기본 조작 기술을 새로운 복합 지시로 조합할 수 있는지 평가한다.",
+    "method": "ManiSkill2 기반 환경과 demonstration dataset, 단계별 조합 과제로 언어·시각 지시 이행을 비교한다.",
+    "interface": "언어·시각 task prompt와 로봇 관측 → 조작 정책 → simulator predicate 평가. Dataset annotation과 정책에 허용되는 입력을 구분해야 한다.",
+    "evaluation": "기초 조작에서 복합 과제로 이어지는 세 수준의 curriculum에서 VLM 기반 baseline을 평가한다. 이 등록에서는 정확한 trial 수·성공률을 새로 확정하지 않는다.",
+    "role": "VIMA·VLABench와 함께 집합/수량 후보의 기존 조합 task와 평가 predicate를 이해할 NEXT benchmark다. 여러 물체 처리·나열 표현 자체를 새 기여로 삼지 않도록 등록한다.",
+    "lineage": "VIMA의 multimodal prompt interface와 VLABench의 장기 지시 평가를 비교하는 개념적 연결이다. 직접 citation 계보를 새로 검증한 것은 아니다.",
+    "question": "기존 task가 제공하는 정답 물체 나열과 RGB로 예측한 목록을 구별하면, 자유 subset 수량 지시에서 추가로 비교할 조건은 무엇인가?",
+    "minimal_experiment": "고정 task/predicate와 정책 입력을 먼저 대조하고, 호환 로컬 Docker에서 기본 조작을 확인한 뒤 단순 지시 대조를 설계한다. 이 등록은 실행 승인·재현 결과가 아니다.",
+    "verification_questions": "task 생성의 정답 정보와 자동 입력, 부분집합 허용 범위, release/contact predicate, 조합 split의 학습 support",
+    "pdf": "",
+    "publication": {
+      "status": "peer_reviewed",
+      "kind": "conference",
+      "presentation": "unknown",
+      "venue": "NeurIPS",
+      "year": 2024,
+      "venue_year": 2024,
+      "venue_id": "neurips"
+    },
+    "sources": {
+      "primary": {
+        "url": "https://proceedings.neurips.cc/paper_files/paper/2024/hash/439539557e9ba0d04055773ff1f3241c-Abstract-Datasets_and_Benchmarks_Track.html",
+        "kind": "official_proceedings",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-01"
+      },
+      "preprint": {
+        "url": "https://arxiv.org/abs/2411.09052",
+        "kind": "arxiv",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-01"
+      },
+      "project": {
+        "url": "https://github.com/Qualcomm-AI-research/ClevrSkills",
+        "kind": "official_project",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-01"
+      },
+      "code": {
+        "url": "https://github.com/Qualcomm-AI-research/ClevrSkills",
+        "kind": "official_code",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-01"
+      },
+      "paper_pdf": null,
+      "venue_verification": {
+        "url": "https://proceedings.neurips.cc/paper_files/paper/2024/hash/439539557e9ba0d04055773ff1f3241c-Abstract-Datasets_and_Benchmarks_Track.html",
+        "kind": "official_proceedings",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-01"
+      }
+    },
+    "artifacts": {
+      "code_status": "released",
+      "data_status": "not_identified",
+      "local_pdf_cache": false
+    },
+    "evidence": "ABSTRACT_CHECKED",
+    "note_format": "abstract_analysis_v1",
+    "source_audit": "2026-11-01 공식 서지/abstract·project/code 소개 확인. NeurIPS 2024 Datasets and Benchmarks 공식 proceedings 확인. 신규 노트는 보수적으로 abstract/project 범위이며, 기존 SET의 지정 본문/code 감사는 별도 source ledger를 따른다. 정독·native 실행을 뜻하지 않는다.",
+    "admission_tier": "NEXT",
+    "relations": [],
+    "curation": {
+      "admission_reason": "VIMA·VLABench와 함께 집합/수량 후보의 기존 조합 task와 평가 predicate를 이해할 NEXT benchmark다. 여러 물체 처리·나열 표현 자체를 새 기여로 삼지 않도록 등록한다.",
+      "tier_reason": "VIMA·VLABench와 함께 집합/수량 후보의 기존 조합 task와 평가 predicate를 이해할 NEXT benchmark다. 여러 물체 처리·나열 표현 자체를 새 기여로 삼지 않도록 등록한다.",
+      "rationale_status": "recorded",
+      "rationale_basis": "2026-11-01 active object-set prerequisite admission; researcher interpretation",
+      "rationale_reviewed_on": "2026-11-01",
+      "scope_status": "active",
+      "roles": [
+        "benchmark_or_dataset"
+      ],
+      "role_basis": "manual admission review",
+      "priority_source_check": {
+        "url": "https://proceedings.neurips.cc/paper_files/paper/2024/hash/439539557e9ba0d04055773ff1f3241c-Abstract-Datasets_and_Benchmarks_Track.html",
+        "checked_on": "2026-11-01",
+        "scope": "official_abstract_or_project; priority review only"
+      }
+    }
+  },
+  {
+    "admission_key": "spa_bench_robotics",
+    "title": "Spa-Bench: A Real-Robot Benchmark for Spatial Grounding in Vision-Language-Action Models",
+    "year": 2026,
+    "venue": "arXiv",
+    "category": "Benchmarks and Datasets",
+    "primary_track": "VLA and generalist robot policies",
+    "page": "https://arxiv.org/abs/2610.12696",
+    "project": "https://justintiensmith.github.io/Spa-Bench/",
+    "identifiers": {
+      "arxiv": "2610.12696"
+    },
+    "aliases": [
+      "Spa-Bench (robotics)"
+    ],
+    "tags": [
+      "Robotics",
+      "VLA",
+      "spatial-grounding",
+      "counting",
+      "real-robot-benchmark"
+    ],
+    "paper_type": "benchmark_or_dataset",
+    "admission_group": "VLA, cross-embodiment, and long-horizon planning",
+    "problem": "조작 성공률만으로는 공간 표현을 이해했는지와 기본 운동 능력이 부족한지를 구별하기 어렵다.",
+    "method": "SO-101의 공간 지시 과제에서 익숙한 객체·개념·행동을 유지한 배치 변화와 직접 지시·표현·무행동 진단을 비교한다.",
+    "interface": "실제 로봇의 관측·공간 언어 지시 → VLA 행동 → 목표별 채점. Counting과 no-action을 별도 진단으로 포함한다.",
+    "evaluation": "저자는 여섯 tabletop task와 여러 VLA의 실제 rollout을 보고한다. 전체 protocol을 수행한 모델과 부분 baseline이 다르므로 분모를 섞지 않는다. 공개 project의 model/data 링크는 확인했으나 독립 실행 code URL은 확인하지 못했다.",
+    "role": "집합·수량 후보의 가장 직접적인 counting/직접 지시 비교 선행이다. 알려진 공간 grounding 실패를 새 공백으로 과장하지 않도록 NEXT에 등록하며 preprint 경계를 유지한다.",
+    "lineage": "OpenVLA·π0 계열의 일반 정책을 VLABench·RoboMME와 다른 공간 grounding 축에서 비교할 자료다. 모델별 세부 설정은 본문 확인 대상이다.",
+    "question": "기존 matched 지시 진단 이후, 익숙한 범주의 EXACTLY-k를 단순 k회 반복으로 바꾸는 비교가 어떤 추가 판단을 제공하는가?",
+    "minimal_experiment": "현재 SET의 D/R 설계와 Counting 평가 정의를 먼저 맞춘다. SO-101 결과를 VLABench simulator의 결과로 대체하지 않으며 실제 실행은 별도 조건을 따른다.",
+    "verification_questions": "ID/OOD support, 모델별 완료 범위와 trial 분모, 직접 지시의 정보량, 최종 수량·무행동 채점, 공개 data/코드의 실제 가용 범위",
+    "pdf": "",
+    "publication": {
+      "status": "preprint",
+      "kind": "preprint",
+      "presentation": "unknown",
+      "venue": "arXiv",
+      "year": 2026,
+      "venue_year": 2026,
+      "venue_id": "arxiv"
+    },
+    "sources": {
+      "primary": {
+        "url": "https://arxiv.org/abs/2610.12696",
+        "kind": "arxiv",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-01"
+      },
+      "preprint": {
+        "url": "https://arxiv.org/abs/2610.12696",
+        "kind": "arxiv",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-01"
+      },
+      "project": {
+        "url": "https://justintiensmith.github.io/Spa-Bench/",
+        "kind": "official_project",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-01"
+      },
+      "code": null,
+      "paper_pdf": null,
+      "venue_verification": null
+    },
+    "artifacts": {
+      "code_status": "not_identified",
+      "data_status": "not_identified",
+      "local_pdf_cache": false
+    },
+    "evidence": "ABSTRACT_CHECKED",
+    "note_format": "abstract_analysis_v1",
+    "source_audit": "2026-11-01 공식 서지/abstract·project/code 소개 확인. arXiv v1 및 저자 project 확인. Robotics 논문이며 동명 ICLR 2025 smartphone-agent benchmark와 다르다. 학회 채택은 확인되지 않아 arXiv로 등록. 신규 노트는 보수적으로 abstract/project 범위이며, 기존 SET의 지정 본문/code 감사는 별도 source ledger를 따른다. 정독·native 실행을 뜻하지 않는다.",
+    "admission_tier": "NEXT",
+    "relations": [],
+    "curation": {
+      "admission_reason": "집합·수량 후보의 가장 직접적인 counting/직접 지시 비교 선행이다. 알려진 공간 grounding 실패를 새 공백으로 과장하지 않도록 NEXT에 등록하며 preprint 경계를 유지한다.",
+      "tier_reason": "집합·수량 후보의 가장 직접적인 counting/직접 지시 비교 선행이다. 알려진 공간 grounding 실패를 새 공백으로 과장하지 않도록 NEXT에 등록하며 preprint 경계를 유지한다.",
+      "rationale_status": "recorded",
+      "rationale_basis": "2026-11-01 active object-set prerequisite admission; researcher interpretation",
+      "rationale_reviewed_on": "2026-11-01",
+      "scope_status": "active",
+      "roles": [
+        "benchmark_or_dataset"
+      ],
+      "role_basis": "manual admission review",
+      "priority_source_check": {
+        "url": "https://arxiv.org/abs/2610.12696",
+        "checked_on": "2026-11-01",
+        "scope": "official_abstract_or_project; priority review only"
+      }
+    }
+  },
+  {
+    "admission_key": "diagnosing_compositional_generalization",
+    "title": "Diagnosing Compositional Generalization in Sequential Robot Tasks",
+    "year": 2026,
+    "venue": "arXiv",
+    "category": "Robot Learning and Data",
+    "primary_track": "RL, IL, offline learning, and robot data",
+    "page": "https://arxiv.org/abs/2607.29687",
+    "project": "https://yixiaowang7.github.io/Diagnosing_Compositional_Generalization_Robot_Page/",
+    "identifiers": {
+      "arxiv": "2607.29687"
+    },
+    "aliases": [],
+    "tags": [
+      "Robotics",
+      "imitation-learning",
+      "instruction-coverage",
+      "compositional-generalization"
+    ],
+    "paper_type": "method",
+    "admission_group": "RL, IL, offline learning, and robot data",
+    "problem": "순차 조작의 모든 지시 조합을 수집하기 어려울 때 어떤 training coverage가 새로운 조합에 필요한지 묻는다.",
+    "method": "지시 marginal·지시 조합·context–action 변화를 분리하고, 데이터 coverage와 단계별 정책을 비교한다.",
+    "interface": "시각 관측·로봇 상태·지시 → transformer flow-matching 조작 정책. 현재 연구의 frozen VLA와 동일 checkpoint 실험이 아니다.",
+    "evaluation": "Pick-and-place, 후속 버튼 조작, 의존적인 두 단계 조작에서 coverage와 분해를 비교한다. 저자 공개 code는 개선된 pipeline이라 release 결과와 논문 결과가 다를 수 있다고 명시한다.",
+    "role": "DataMIL·ReMix의 데이터 선택 흐름과 SET의 단순 분해를 연결할 instruction-coverage 선행이다. 분해 자체를 신규 기여로 주장하지 않고 학습 support를 따질 NEXT로 등록한다.",
+    "lineage": "Imitation learning의 데이터 구성 → 지시 공간 coverage → 조합 평가라는 비교 경로다. Spa-Bench의 실제 공간 진단과 별도로 읽는다.",
+    "question": "복합 지시를 분해한 이득이 다음 단계에 필요한 문맥을 잃거나 학습 coverage가 달라진 효과와 구별되는가?",
+    "minimal_experiment": "논문의 coverage split과 공개 release 차이를 먼저 확인하고 동일 demonstration 예산·정보 조건을 고정한다. 현재 SET의 D/R 비교를 이 논문의 재현이라고 부르지 않는다.",
+    "verification_questions": "v1/v2 차이, 단계별 정책의 입력과 전환 신호, 종속 지시의 정보 병목, demonstration 예산, 공개 release와 논문 설정의 차이",
+    "pdf": "",
+    "publication": {
+      "status": "preprint",
+      "kind": "preprint",
+      "presentation": "unknown",
+      "venue": "arXiv",
+      "year": 2026,
+      "venue_year": 2026,
+      "venue_id": "arxiv"
+    },
+    "sources": {
+      "primary": {
+        "url": "https://arxiv.org/abs/2607.29687",
+        "kind": "arxiv",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-01"
+      },
+      "preprint": {
+        "url": "https://arxiv.org/abs/2607.29687",
+        "kind": "arxiv",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-01"
+      },
+      "project": {
+        "url": "https://yixiaowang7.github.io/Diagnosing_Compositional_Generalization_Robot_Page/",
+        "kind": "official_project",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-01"
+      },
+      "code": {
+        "url": "https://github.com/YixiaoWang7/Diagnosing_Compositional_Generalization_Robot",
+        "kind": "official_code",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-01"
+      },
+      "paper_pdf": null,
+      "venue_verification": null
+    },
+    "artifacts": {
+      "code_status": "released",
+      "data_status": "not_identified",
+      "local_pdf_cache": false
+    },
+    "evidence": "ABSTRACT_CHECKED",
+    "note_format": "abstract_analysis_v1",
+    "source_audit": "2026-11-01 공식 서지/abstract·project/code 소개 확인. arXiv v2(2026-10-15)를 확인했다. 저자 project/code는 CoRL 2026 Spotlight로 표기하나 공식 proceedings/program 근거를 독립 확인하지 못했으므로 registry venue/presentation은 arXiv/unknown 유지. 신규 노트는 보수적으로 abstract/project 범위이며, 기존 SET의 지정 본문/code 감사는 별도 source ledger를 따른다. 정독·native 실행을 뜻하지 않는다.",
+    "admission_tier": "NEXT",
+    "relations": [],
+    "curation": {
+      "admission_reason": "DataMIL·ReMix의 데이터 선택 흐름과 SET의 단순 분해를 연결할 instruction-coverage 선행이다. 분해 자체를 신규 기여로 주장하지 않고 학습 support를 따질 NEXT로 등록한다.",
+      "tier_reason": "DataMIL·ReMix의 데이터 선택 흐름과 SET의 단순 분해를 연결할 instruction-coverage 선행이다. 분해 자체를 신규 기여로 주장하지 않고 학습 support를 따질 NEXT로 등록한다.",
+      "rationale_status": "recorded",
+      "rationale_basis": "2026-11-01 active object-set prerequisite admission; researcher interpretation",
+      "rationale_reviewed_on": "2026-11-01",
+      "scope_status": "active",
+      "roles": [
+        "method"
+      ],
+      "role_basis": "manual admission review",
+      "priority_source_check": {
+        "url": "https://arxiv.org/abs/2607.29687",
+        "checked_on": "2026-11-01",
+        "scope": "official_abstract_or_project; priority review only"
+      }
+    }
+  }
+]

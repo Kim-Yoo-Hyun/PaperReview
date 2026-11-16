@@ -4,6 +4,8 @@
 > Evidence maturity: `FULL_TEXT_CHECKED`.
 > Analysis basis: full-text PDF body checked on 2026-09-03 (15 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=RMaRBE9s2H; public full-text mirror used for retrieval (canonical paper source retained): https://chatpaper.com/api/v1/articles/download/114504. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
+> DOC-QA2 targeted source review: 2026-10-23; PDF pp. 5. 손상 구간·직접 연결된 표 분류만 원문 이미지와 대조했다. 전체 주장 정독·실험 검증·reading status 승격을 뜻하지 않는다. [URL·PDF hash·수정 기록](../../../work/sources/pdf_note_review_followup_2026-10-23.json).
+
 ## Method in One Sentence
 
 PDF body method statement (p. 3 (3 METHOD), p. 4 (3 METHOD), p. 7 (3 METHOD), p. 3 (3 METHOD), p. 4 (3 METHOD), p. 6 (3 METHOD)): For geometrically accurate reconstruction and the modeling of both static and dynamic elements, we employ 2D Gaussian primitives with periodic vibration properties as our scene representation, as outlined in Section ...
@@ -51,7 +53,7 @@ PDF body method statement (p. 3 (3 METHOD), p. 4 (3 METHOD), p. 7 (3 METHOD), p.
 - **p. 7 / 3 METHOD - extractive body cue:** After training the Gaussians, we continue optimizing the U-Net by supervising the refined ray-drop mask using the same loss function as in Equation 17.
 - **p. 7 / 3 METHOD - extractive body cue:** Additionally, we employ the chamfer distance loss (Fan et al., 2017) to minimize the disparity between our simulated LiDAR point clouds and the ground truth ...
 - **p. 8 / 3 METHOD - extractive body cue:** (19) Chamfer distance loss We also incorporate chamfer distance to introduce explicit geometric constraints from the input LiDAR point clouds.
-- **p. 5 / 3 METHOD - extractive body cue:** Given the pixel coordinates of a point on the range image (ξ, η), the corresponding radian angles can be computed using the following equation:  ...
+- **PDF p. 5, §3 / Eq. (8) (DOC-QA2 원문 대조):** Range-image pixel (ξ,η)를 φ=(2ξ−W)π/W, θ=(η/H)(VFOV_max−VFOV_min)+VFOV_min으로 변환한다. 좌표계와 각도 정의는 Fig. 3 및 Eq. (8)을 따른다.
 - **p. 6 / 3 METHOD - extractive body cue:** Based on Equation 7 and the conversion between (x, y, z) and (ϕ, θ), we have: (r sin θ sin ϕ, -r cos θ, r ...
 - **p. 6 / 3 METHOD - extractive body cue:** (b) During pixel rendering, the α and depth are computed by calculating the intersection between the ray and the Gaussian primitive. the ray angles (ϕ, ...
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.

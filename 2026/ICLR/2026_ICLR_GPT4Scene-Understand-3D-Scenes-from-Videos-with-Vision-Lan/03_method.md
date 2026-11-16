@@ -4,6 +4,8 @@
 > Evidence maturity: `FULL_TEXT_CHECKED`.
 > Analysis basis: full-text PDF body checked on 2026-09-03 (26 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=0fib2BYc0L; public full-text mirror used for retrieval (canonical paper source retained): https://chatpaper.com/api/v1/articles/download/247573. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
+> DOC-QA2 targeted source review: 2026-10-23; PDF pp. 3. 손상 구간·직접 연결된 표 분류만 원문 이미지와 대조했다. 전체 주장 정독·실험 검증·reading status 승격을 뜻하지 않는다. [URL·PDF hash·수정 기록](../../../work/sources/pdf_note_review_followup_2026-10-23.json).
+
 ## Method in One Sentence
 
 PDF body method statement (p. 3 (2 METHODOLOGY), p. 4 (2 METHODOLOGY), p. 4 (2 METHODOLOGY)): Here we introduce GPT4Scene's architecture.
@@ -74,7 +76,7 @@ PDF body method statement (p. 3 (2 METHODOLOGY), p. 4 (2 METHODOLOGY), p. 4 (2 M
 
 | Contract | Generic domain prior | PDF body cue | Unresolved detail |
 |---|---|---|---|
-| Horizon | single frame, multi-view accumulation 또는 online map horizon; exact window 확인 필요. | To establish Spatio-Temporal Object markers (STO-markers), we perform uniform frame sampling by selecting n frames at indices: si =  (i -1) ... | episode/sequence/action-chunk boundary |
+| Frame sampling | 전체 N frames에서 n개의 STO-marker keyframes를 균등 선택한다. | s_i = floor((i−1)N/n)+1; PDF p. 3 §3 | Frame subset 규칙이며 policy action horizon과 다름 |
 | Rate / latency | per-frame/streaming inference와 downstream policy/control rate가 분리된다. | To help VLMs focus on specific objects, we introduce Spatial-Temporal Object markers (STO-markers), ensuring consistency between 2D frames and the 3D BEV ... | Hz/fps, inference time and control rate |
 | Memory | camera poses, map/scene graph/Gaussian state와 temporal feature. | not recovered | window and reset |
 | Compute | 3D reconstruction/fusion, point/feature memory와 query cost가 latency를 결정한다. | Training is done for one epoch with a base learning rate of 5e-6 and cosine annealing, completing in about 6 hours on ... | hardware, batch and throughput |

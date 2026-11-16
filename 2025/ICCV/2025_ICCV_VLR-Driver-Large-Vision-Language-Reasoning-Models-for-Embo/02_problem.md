@@ -4,6 +4,8 @@
 > Evidence maturity: `FULL_TEXT_CHECKED`.
 > Analysis basis: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/ICCV2025/html/Kong_VLR-Driver_Large_Vision-Language-Reasoning_Models_for_Embodied_Autonomous_Driving_ICCV_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/ICCV2025/papers/Kong_VLR-Driver_Large_Vision-Language-Reasoning_Models_for_Embodied_Autonomous_Driving_ICCV_2025_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
+> DOC-QA2 targeted source review: 2026-10-23; PDF pp. 4, 6. 손상 구간·직접 연결된 표 분류만 원문 이미지와 대조했다. 전체 주장 정독·실험 검증·reading status 승격을 뜻하지 않는다. [URL·PDF hash·수정 기록](../../../work/sources/pdf_note_review_followup_2026-10-23.json).
+
 ## Problem in One Sentence
 
 PDF body framing (p. 2 (Body text (section not recovered)), p. 2 (Body text (section not recovered)), p. 4 (3.2.1. Perception Level CoT), p. 4 (3.1. Overview)): However, existing CoT-based methods typically rely on openended language generation for reasoning, which lacks structural constraints.
@@ -23,7 +25,7 @@ PDF body framing (p. 2 (Body text (section not recovered)), p. 2 (Body text (sec
 | Dimension | PDF body evidence | Registry/robotics interpretation | Boundary |
 |---|---|---|---|
 | Target problem | However, existing CoT-based methods typically rely on openended language generation for reasoning, which lacks structural constraints. | 3D scene/object와 robot coordinate frame | body wording is the source claim |
-| Observation / input | The forward pass is computed as: y = W ′x =  W0 + α r B · A  x, (2) ... | RGB-D, image set, point cloud, depth와 camera pose | exact sensor/frame/preprocessing from PDF body |
+| Observation / input | Multi-frame/multi-view image와 ego position (x,y), speed v, target (p,q) | Compressed/cropped RGB와 ego-state | PDF p. 4 §3.1; LoRA 선형식과 분리 |
 | State / latent | forward, pass, computed, where, output, input, Subsequently, compressed, cropped, image | geometry, map, object/relationship state | notation and tensor shape require body check |
 | Output / action | processes, visual, inputs, multi-view, images, alongside, textual, information | point map, pose, scene graph, affordance 또는 query result | exact unit/frame/decoder require body check |
 | Target outcome | spatial accuracy and downstream robot utility | geometric accuracy, semantic consistency와 planning/manipulation utility | metric/denominator are in 04 evidence |

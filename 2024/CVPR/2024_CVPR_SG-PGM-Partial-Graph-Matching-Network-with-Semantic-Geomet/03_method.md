@@ -4,6 +4,8 @@
 > Evidence maturity: `FULL_TEXT_CHECKED`.
 > Analysis basis: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2024/html/Xie_SG-PGM_Partial_Graph_Matching_Network_with_Semantic_Geometric_Fusion_for_CVPR_2024_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2024/papers/Xie_SG-PGM_Partial_Graph_Matching_Network_with_Semantic_Geometric_Fusion_for_CVPR_2024_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
+> DOC-QA2 targeted source review: 2026-10-23; PDF pp. 3. 손상 구간·직접 연결된 표 분류만 원문 이미지와 대조했다. 전체 주장 정독·실험 검증·reading status 승격을 뜻하지 않는다. [URL·PDF hash·수정 기록](../../../work/sources/pdf_note_review_followup_2026-10-23.json).
+
 ## Method in One Sentence
 
 PDF body method statement (p. 4 (3.1. Scene Graph Matching Network), p. 3 (3.1. Scene Graph Matching Network), p. 4 (3.3. Super-point Matching Rescoring), p. 3 (3.1. Scene Graph Matching Network), p. 5 (3.5. Revisiting the Downstream Tasks), p. 5 (3.4. Loss Functions)): To explicitly enable partial matching, we employ the pipeline introduced in [44]: the Soft-topK algorithm first flattens ˜S and selects the K most likely matched candidates, where K is learned ...
@@ -70,7 +72,7 @@ PDF body method statement (p. 4 (3.1. Scene Graph Matching Network), p. 3 (3.1. 
 - **p. 1 / 1. Introduction - extractive body cue:** In this work, Sarkar et al. proposed a neural network that learns a joint multi-modal embedding encoded with semantic, geometric, and structural information for each ...
 - **p. 3 / 3.1. Scene Graph Matching Network - extractive body cue:** The 3D scene graph may contain noise due to the imperfect output of graph estimation method [41, 46, 47, 54] and the dynamical scene changes ...
 - **p. 4 / 3.1. Scene Graph Matching Network - extractive body cue:** Thus, the scene graph encoder outputs multi-layers node embedding FS ∈RM×ds with ds = d(n + 1), as shown in Figure 3.
-- **p. 3 / 3.1. Scene Graph Matching Network - extractive body cue:** Additionally, each 3D points of the corresponded point cloud P =  pi ∈R3 / i = 1, ..., N
+- **PDF p. 3, §3.1 (DOC-QA2 원문 대조):** Point cloud P={p_i∈R³ : i=1,…,N}의 각 point를 point-to-object map O로 하나의 scene-graph object node에 배정한다. 집합 기호를 손상된 제어문자에서 복원했다.
 - **p. 4 / 3.3. Super-point Matching Rescoring - extractive body cue:** Feature-based point cloud registration methods like GeoTransformer [31] first compare the similarity of points or super-points, to determine the potential point-wise correspondence.
 - **p. 5 / 3.5. Revisiting the Downstream Tasks - extractive body cue:** Recent point cloud registration methods [31, 51] successfully encode long-range geometric context with Transformer [39].
 - **p. 5 / 3.5. Revisiting the Downstream Tasks - extractive body cue:** In SGAligner, the source and reference point clouds are divided into matched object pairs using the estimated graph alignment.

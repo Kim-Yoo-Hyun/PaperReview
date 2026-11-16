@@ -4,6 +4,8 @@
 > Evidence maturity: `FULL_TEXT_CHECKED`.
 > Analysis basis: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://idm-lab.org/bib/abstracts/Koen02e.html; PDF retrieval source: https://www.cs.cmu.edu/~motionplanning/papers/sbp_papers/integrated3/koenig_dstarlite_aaai02b.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
+> DOC-QA1 (2026-10-23): 제어문자 없이 남은 손상된 의사코드·objective cue를 원문 Figure 2와 대조했다. [대조 기록](../../../work/sources/pdf_note_review_2026-10-23.json). 노트 전체 정독·실험 재현을 뜻하지 않으며 reading status는 유지한다.
+
 ## Problem in One Sentence
 
 PDF body framing (p. 2 (Abstract), p. 4 (Abstract), p. 2 (Abstract), p. 1 (Abstract), p. 1 (Abstract)): The challenge is to identify these cells efficiently.
@@ -34,7 +36,7 @@ PDF body framing (p. 2 (Abstract), p. 4 (Abstract), p. 2 (Abstract), p. 1 (Abstr
 |---|---|---|
 | State / observation variable | sensor/map state and goal; body terms: Lite, substantially, shorter, uses, only, tie-breaking, criterion, when, comparing, priorities | p. 1 (Abstract), p. 3 (Abstract), p. 5 (Abstract) |
 | Decision / output variable | path/waypoint/velocity; body terms: gain, insight, behavior, present, various, theoretical, properties, LPA | p. 1 (Abstract), p. 1 (Abstract), p. 4 (Abstract) |
-| Objective / loss / cost | path cost, risk or goal utility; cue terms: BRT, RT/, tHUpS, Remove, RT/7S, qZgBh3, Insert, CalculateKey | p. 3 (Abstract), p. 2 (Abstract), p. 2 (Abstract), p. 3 (Abstract), p. 4 (Abstract), p. 4 (Abstract) |
+| Shortest-path objective | 원문 대조: 최단 경로는 edge cost의 합을 최소화한다. 깨진 queue 함수명 목록은 objective나 risk 항의 근거가 아니다. ([PDF p. 2](https://www.cs.cmu.edu/~motionplanning/papers/sbp_papers/integrated3/koenig_dstarlite_aaai02b.pdf#page=2), Figure 2 위 priority-queue API와 graph notation) | PDF p. 2 |
 | Constraint / feasibility | paper-specific constraints are recorded only where the body states them; otherwise unresolved | p. 5 (Abstract), p. 1 (Abstract), p. 2 (Abstract) |
 | Success / guarantee | goal reach with collision-free execution | p. 6 (Abstract), p. 5 (Abstract), p. 5 (Abstract) |
 
@@ -43,7 +45,7 @@ PDF body framing (p. 2 (Abstract), p. 4 (Abstract), p. 2 (Abstract), p. 1 (Abstr
 ## Bottleneck in Prior Work
 
 - **p. 4 / Abstract - extractive body cue:** They change to infinity when the robot discovers that they cannot be traversed.
-- **p. 2 / Abstract - extractive body cue:** (It does nothing if the current priority of vertex ] already equals ` .) Finally, U.Remove RT]AS removes vertex ] from priority queue U . ...
+- **원문 대조:** U.Update(s,k)는 queue 안 vertex s의 priority를 k로 바꾸며 같으면 아무 작업도 하지 않는다. U.Remove(s)는 s를 queue에서 제거한다. 이는 queue API 정의이며 failure나 ablation 결과가 아니다. ([PDF p. 2](https://www.cs.cmu.edu/~motionplanning/papers/sbp_papers/integrated3/koenig_dstarlite_aaai02b.pdf#page=2), Figure 2 위 priority-queue API).
 - **p. 1 / Abstract - extractive body cue:** It is currently also being integrated into Mars Rover prototypes and tactical mobile robot prototypes for urban reconnaissance (Matthies et al.
 - **p. 1 / Abstract - extractive body cue:** Introduction Incremental search methods, such as DynamicSWSF-FP (Ramalingam & Reps 1996), are currently not much used in artificial intelligence.
 
@@ -60,7 +62,7 @@ PDF body contribution framing (p. 1 (Abstract), p. 1 (Abstract), p. 4 (Abstract)
 |---|---|---|
 | body cue at p. 4 | They change to infinity when the robot discovers that they cannot be traversed. | reported limitation/failure wording; scope must be verified |
 | body cue at p. 7 | Uniform discretizations can prevent one from finding a path if they are too coarse-grained (for example, because the ... | reported limitation/failure wording; scope must be verified |
-| body cue at p. 2 | (It does nothing if the current priority of vertex ] already equals ` .) Finally, U.Remove RT]AS removes ... | reported limitation/failure wording; scope must be verified |
+| Queue API (실패 근거 아님) | 원문 대조: U.Update(s,k)는 queue 안 vertex s의 priority를 k로 바꾸며 같으면 아무 작업도 하지 않는다. U.Remove(s)는 s를 queue에서 제거한다. 이는 queue API 정의이며 failure나 ablation 결과가 아니다. ([PDF p. 2](https://www.cs.cmu.edu/~motionplanning/papers/sbp_papers/integrated3/koenig_dstarlite_aaai02b.pdf#page=2), Figure 2 위 priority-queue API와 graph notation) | PDF p. 2 |
 | body cue at p. 3 | This is similar to what A* can do if it does not use backpointers. | reported limitation/failure wording; scope must be verified |
 
 - Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.

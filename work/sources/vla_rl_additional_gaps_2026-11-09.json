@@ -1,0 +1,2209 @@
+{
+  "task": "GAP-SCOUT-NOV09",
+  "checked_on": "2026-11-09",
+  "scope": "Additional VLA + RL gaps outside the existing 9 topics and historical candidate/scout questions; literature scouting only.",
+  "report": "work/update/VLA_RL_ADDITIONAL_GAPS_2026-11-09.md",
+  "canonical_questions": [
+    {
+      "id": "GAP-ALLOC",
+      "path": "synthesis/02_rl_il_offline.md#gap-allocation-2026",
+      "state": "CURATION-HYPOTHESIS",
+      "decision": "PRIORITIZE_NONEXPERIMENTAL_EXPLORATION",
+      "next": "GAP-ALLOC-N1"
+    },
+    {
+      "id": "GAP-PHYSICS",
+      "path": "synthesis/05_world_models_safety.md#gap-physics-2026",
+      "state": "CURATION-HYPOTHESIS",
+      "decision": "CONDITIONAL_EXPLORATION_RESERVE"
+    }
+  ],
+  "not_admitted": [
+    {
+      "id": "EXCLUDED-INTERVENTION",
+      "reason": "RLIF directly investigates intervention modes/thresholds and expert quality. PACT/WHIRL/RECAP further constrain broad claims. Multi-operator task/preference separation remains unreviewed, not counted as new gap."
+    }
+  ],
+  "search_scope": {
+    "window": "2024–2026 conference/journal work; RLIF 2023 preprint distinguished from 2024 conference",
+    "method": "Registry titles/IDs and existing topic/history comparison; targeted external search and nearest-work checks. Not an exhaustive systematic review.",
+    "query_families": [
+      "VLA reinforcement learning task sampling curriculum allocation cost",
+      "Adaptive Rollout Allocation online reinforcement learning",
+      "Distributionally Robust Multi-Task Reinforcement Learning adaptive task sampling",
+      "VLA RL sim-to-real physics generalization empirical study",
+      "VLA human intervention threshold preference credit assignment"
+    ],
+    "primary_hosts": [
+      "proceedings.iclr.cc",
+      "proceedings.nips.cc",
+      "neurips.cc",
+      "proceedings.mlr.press",
+      "roboticsproceedings.org",
+      "openreview.net",
+      "api.crossref.org",
+      "arxiv.org"
+    ],
+    "discovery_only": "Third-party paper lists and summaries used to find primary URLs; no factual conclusion relies solely on them.",
+    "limitations": [
+      "Most sources are abstract-level.",
+      "Selected HTML sections do not establish full-text synthesis.",
+      "Closest sampler/loss/physics code not audited.",
+      "No empirical effect, external researcher review or complete novelty proof.",
+      "Potentially relevant neighboring work outside these 15 retained sources remains to be screened in N1."
+    ]
+  },
+  "counts": {
+    "sources": 15,
+    "already_registered": 7,
+    "external_not_registered": 8,
+    "new_gap_candidates": 2,
+    "new_active_experiment_topics": 0
+  },
+  "sources": [
+    {
+      "source_id": "S01",
+      "title": "SimpleVLA-RL: Scaling VLA Training via Reinforcement Learning",
+      "year": 2026,
+      "status": "ICLR 2026 conference — official proceedings search result verified",
+      "registry_paper_id": "pr-0957",
+      "url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/cbfbcb4da14235bd69b134070898ae9d-Abstract-Conference.html",
+      "additional_urls": [
+        "https://arxiv.org/abs/2509.09674",
+        "https://github.com/PRIME-RL/SimpleVLA-RL"
+      ],
+      "scope": "Official indexed abstract; direct page timed out. No complete full-text or code audit.",
+      "supported": "VLA trajectory sampling, scalable RL and exploration already exist.",
+      "gap_ids": [
+        "GAP-ALLOC",
+        "GAP-PHYSICS"
+      ],
+      "checked_on": "2026-11-09",
+      "reading_status_changed": false
+    },
+    {
+      "source_id": "S02",
+      "title": "RLinf-VLA: A Unified and Efficient Framework for Reinforcement Learning of Vision-Language-Action Models",
+      "year": 2026,
+      "status": "RSS 2026 — official proceedings verified",
+      "registry_paper_id": "pr-0958",
+      "url": "https://roboticsproceedings.org/rss22/p089.html",
+      "scope": "Official abstract.",
+      "supported": "Unified simulator/architecture interface and rendering/inference/training resource allocation.",
+      "gap_ids": [
+        "GAP-ALLOC"
+      ],
+      "checked_on": "2026-11-09",
+      "reading_status_changed": false
+    },
+    {
+      "source_id": "S03",
+      "title": "VLA-RL: Towards Masterful and General Robotic Manipulation with Scalable Reinforcement Learning",
+      "year": 2025,
+      "status": "arXiv; conference status not verified",
+      "registry_paper_id": null,
+      "url": "https://arxiv.org/abs/2505.18719",
+      "scope": "Author abstract.",
+      "supported": "Online autoregressive VLA RL includes curriculum selection, process rewards and system optimizations.",
+      "gap_ids": [
+        "GAP-ALLOC"
+      ],
+      "checked_on": "2026-11-09",
+      "reading_status_changed": false
+    },
+    {
+      "source_id": "S04",
+      "title": "Adaptive Rollout Allocation for Online Reinforcement Learning with Verifiable Rewards",
+      "year": 2026,
+      "status": "ICLR 2026 — official proceedings indexed abstract verified",
+      "registry_paper_id": null,
+      "url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/dc62cd4ec77f3bbec8e6245d0bd91d08-Abstract-Conference.html",
+      "additional_urls": [
+        "https://arxiv.org/html/2602.01601v3",
+        "https://github.com/HieuNT91/VIP"
+      ],
+      "scope": "Official abstract; arXiv v3 Section 5.2, allocation equations and runtime table. Project landing search result only; code not audited.",
+      "supported": "VIP allocates a bounded total number of rollouts using predicted gradient variance, with per-prompt lower/upper limits; runtime overhead is reported. Cost-aware allocation broadly is not claimed novel.",
+      "gap_ids": [
+        "GAP-ALLOC"
+      ],
+      "checked_on": "2026-11-09",
+      "reading_status_changed": false
+    },
+    {
+      "source_id": "S05",
+      "title": "Distributionally Robust Multi-Task Reinforcement Learning via Adaptive Task Sampling",
+      "year": 2026,
+      "status": "NeurIPS 2026 accepted-program poster; future presentation, final proceedings not checked",
+      "registry_paper_id": null,
+      "url": "https://neurips.cc/virtual/2026/poster/152819",
+      "additional_urls": [
+        "https://neurips.cc/Downloads/2026",
+        "https://arxiv.org/abs/2605.14350"
+      ],
+      "scope": "Official program exact title/authors/abstract read through urllib after web open failure; author abstract also checked.",
+      "supported": "DRATS addresses data-allocation imbalance with worst target-return gap and evaluates MetaWorld multi-task learning. Generic hard-task allocation already addressed.",
+      "gap_ids": [
+        "GAP-ALLOC"
+      ],
+      "checked_on": "2026-11-09",
+      "reading_status_changed": false
+    },
+    {
+      "source_id": "S06",
+      "title": "DyGRO-VLA: Cross-Task Scaling of Vision–Language–Action Models via Dynamic Grouped Residual Optimization",
+      "year": 2026,
+      "status": "ICML 2026 — PMLR official proceedings verified",
+      "registry_paper_id": "pr-0972",
+      "url": "https://proceedings.mlr.press/v306/lin26af.html",
+      "scope": "Official abstract.",
+      "supported": "Cross-task representations and mixtures of RL residuals address generalization/interference. Broad multi-task VLA RL is not a gap.",
+      "gap_ids": [
+        "GAP-ALLOC"
+      ],
+      "checked_on": "2026-11-09",
+      "reading_status_changed": false
+    },
+    {
+      "source_id": "S07",
+      "title": "What Can RL Bring to VLA Generalization? An Empirical Study",
+      "year": 2025,
+      "status": "NeurIPS 2025 main conference — official proceedings verified",
+      "registry_paper_id": "pr-0956",
+      "url": "https://proceedings.nips.cc/paper_files/paper/2025/hash/8c0fabe372177d2aded596be2d3b4544-Abstract-Conference.html",
+      "additional_urls": [
+        "https://rlvla.github.io/"
+      ],
+      "scope": "Official abstract; detailed execution-shift definitions not re-audited.",
+      "supported": "RL versus SFT generalization across visual, semantic and execution dimensions has direct precedent.",
+      "gap_ids": [
+        "GAP-ALLOC",
+        "GAP-PHYSICS"
+      ],
+      "checked_on": "2026-11-09",
+      "reading_status_changed": false
+    },
+    {
+      "source_id": "S08",
+      "title": "Grounding Sim-to-Real Generalization in Robotic Manipulation: An Empirical Study with Vision-Language-Action Models",
+      "year": 2026,
+      "status": "arXiv v2; conference status not verified",
+      "registry_paper_id": null,
+      "url": "https://arxiv.org/html/2603.22876v2",
+      "additional_urls": [
+        "https://arxiv.org/abs/2603.22876"
+      ],
+      "scope": "Abstract; Sections 4.3–4.4, Appendix B.3 and Table 7; not complete paper/supplement audit.",
+      "supported": "Already compares visual fidelity, extreme physics distortion and RL sim-to-real transfer; RL results are positive in tested settings. RL experiments retrain an SFT initialization after action-head modification.",
+      "gap_ids": [
+        "GAP-PHYSICS"
+      ],
+      "checked_on": "2026-11-09",
+      "reading_status_changed": false
+    },
+    {
+      "source_id": "S09",
+      "title": "PolaRiS: Scalable Real-to-Sim Evaluations for Generalist Robot Policies",
+      "year": 2026,
+      "status": "RSS 2026 — official proceedings verified",
+      "registry_paper_id": "pr-1118",
+      "url": "https://roboticsproceedings.org/rss22/p062.html",
+      "scope": "Official abstract.",
+      "supported": "Real-to-sim reconstruction, co-training and paired policy ranking evaluations already studied.",
+      "gap_ids": [
+        "GAP-PHYSICS"
+      ],
+      "checked_on": "2026-11-09",
+      "reading_status_changed": false
+    },
+    {
+      "source_id": "S10",
+      "title": "Evaluating Real-World Robot Manipulation Policies in Simulation",
+      "year": 2024,
+      "publication_year": 2025,
+      "status": "CoRL 2024 event / PMLR volume 270 published 2025",
+      "registry_paper_id": "pr-0941",
+      "url": "https://proceedings.mlr.press/v270/li25c.html",
+      "additional_urls": [
+        "https://proceedings.mlr.press/v270/",
+        "https://openreview.net/forum?id=LZh48DTg71"
+      ],
+      "scope": "Official PMLR indexed abstract and volume event date; OpenReview direct access returned browser verification.",
+      "supported": "SIMPLER controls visual/control discrepancies for scalable sim-real policy evaluation.",
+      "gap_ids": [
+        "GAP-PHYSICS"
+      ],
+      "checked_on": "2026-11-09",
+      "reading_status_changed": false
+    },
+    {
+      "source_id": "S11",
+      "title": "RLIF: Interactive Imitation Learning as Reinforcement Learning",
+      "year": 2024,
+      "preprint_year": 2023,
+      "status": "ICLR 2024 — official PDF indexed title/publication banner verified; forum direct access failed",
+      "registry_paper_id": null,
+      "url": "https://openreview.net/pdf?id=oLLZhbBSOU",
+      "additional_urls": [
+        "https://arxiv.org/html/2311.12996v2",
+        "https://rlif-page.github.io/"
+      ],
+      "scope": "Official indexed publication metadata; author abstract; HTML Sections 5.1–5.2 and Appendix A.4. No PDF saved.",
+      "supported": "Uses intervention rewards and directly examines intervention strategies, expert suboptimality and value-gap thresholds. Reason to exclude generic operator-threshold sensitivity as new.",
+      "gap_ids": [
+        "EXCLUDED-INTERVENTION"
+      ],
+      "checked_on": "2026-11-09",
+      "reading_status_changed": false
+    },
+    {
+      "source_id": "S12",
+      "title": "Precise and dexterous robotic manipulation via human-in-the-loop reinforcement learning",
+      "year": 2025,
+      "status": "Science Robotics 10(105), 2025-08-20 — publisher-deposited Crossref verified",
+      "registry_paper_id": "pr-0914",
+      "url": "https://doi.org/10.1126/scirobotics.ads5033",
+      "additional_urls": [
+        "https://api.crossref.org/works/10.1126/scirobotics.ads5033",
+        "https://hil-serl.github.io/"
+      ],
+      "scope": "Existing registry notes; author project and Crossref publication identity. No fresh full-text read.",
+      "supported": "Real-robot human-intervention learning baseline; existing reading evidence preserved.",
+      "gap_ids": [
+        "EXCLUDED-INTERVENTION"
+      ],
+      "checked_on": "2026-11-09",
+      "reading_status_changed": false
+    },
+    {
+      "source_id": "S13",
+      "title": "π*₀.₆: a VLA That Learns From Experience",
+      "year": 2026,
+      "status": "RSS 2026 — official proceedings verified",
+      "registry_paper_id": null,
+      "url": "https://roboticsproceedings.org/rss22/p087.html",
+      "scope": "Official abstract.",
+      "supported": "RECAP uses advantage-conditioned learning from heterogeneous real experience, demonstrations and corrections. It is not described as success-filtered imitation only.",
+      "gap_ids": [
+        "EXCLUDED-INTERVENTION"
+      ],
+      "checked_on": "2026-11-09",
+      "reading_status_changed": false
+    },
+    {
+      "source_id": "S14",
+      "title": "Preference-Calibrated Human-in-the-Loop Reinforcement Learning for Robotic Manipulation",
+      "year": 2026,
+      "status": "arXiv v2; conference status not verified",
+      "registry_paper_id": null,
+      "url": "https://arxiv.org/html/2606.03949v2",
+      "additional_urls": [
+        "https://arxiv.org/abs/2606.03949"
+      ],
+      "scope": "Abstract, method outline and Section 6 limitations; complete target derivation/code not audited.",
+      "supported": "PACT already introduces progress-based localization and preference-based critic/actor correction. Authors acknowledge localization errors and directional, rather than exact, counterfactual advantage.",
+      "gap_ids": [
+        "EXCLUDED-INTERVENTION"
+      ],
+      "checked_on": "2026-11-09",
+      "reading_status_changed": false
+    },
+    {
+      "source_id": "S15",
+      "title": "How to Learn from What a Human Would Avoid? Intervention-Aware World Models with Real-World RL for Dexterous Manipulation",
+      "year": 2026,
+      "status": "arXiv; authors claim CoRL 2026 acceptance, official paper-specific status not verified here",
+      "registry_paper_id": null,
+      "url": "https://arxiv.org/abs/2609.06009",
+      "additional_urls": [
+        "https://whirl-dexterous.github.io/"
+      ],
+      "scope": "Author abstract and project.",
+      "supported": "WHIRL predicts intervention probability and uses actor-side risk shaping; generic predictive use of takeover signals is not new.",
+      "gap_ids": [
+        "EXCLUDED-INTERVENTION"
+      ],
+      "checked_on": "2026-11-09",
+      "reading_status_changed": false
+    }
+  ],
+  "preservation": {
+    "registry_count": 1161,
+    "tier_counts": {
+      "CORE": 47,
+      "NEXT": 372,
+      "REFERENCE": 500,
+      "ARCHIVE": 242
+    },
+    "new_paper_admissions": 0,
+    "experiments_run": 0,
+    "pdf_downloads": 0,
+    "host_dependency_installs": 0
+  },
+  "validation": {
+    "pre_audit": {
+      "errors": [],
+      "warnings": [],
+      "papers": 1161,
+      "standard_note_files": 5805,
+      "markdown_files_checked": 6022,
+      "markdown_links_checked": 12710
+    },
+    "post_audit": {
+      "command": "python3 -B work/scripts/audit_repository.py",
+      "exit_code": 0,
+      "papers": 1161,
+      "standard_note_files": 5805,
+      "markdown_files_checked": 6023,
+      "markdown_links_checked": 12733,
+      "comparison_matrix_rows": 106,
+      "completed_matrix_rows": 5,
+      "errors": [],
+      "warnings": []
+    },
+    "required_generator": {
+      "py_compile_exit_code": 0,
+      "build_reading_tiers_exit_code": 0,
+      "git_diff_check_exit_code": 0,
+      "generated_plan_date": "2026-11-09",
+      "tier_membership_changed": false
+    },
+    "preservation_check": {
+      "method": "SHA256 against task-start snapshot; staged binary diff comparison",
+      "canonical_files_unchanged": [
+        "PAPER.md",
+        "work/sources/papers.json",
+        "research/READING_TIERS.csv",
+        "research/READING_STATUS.csv",
+        "research/READING_STATUS_HISTORY.csv"
+      ],
+      "standard_notes_unchanged": 5805,
+      "deleted_files": 0,
+      "staged_patch_preserved": true,
+      "experiment_artifacts_changed": false,
+      "manual_source_identity_checks": 15,
+      "canonical_anchors_checked": 2
+    }
+  },
+  "robotics_review": {
+    "task": "GAP-ROBOTICS-SCOUT",
+    "checked_on": "2026-11-09",
+    "request": "Robotics-grounded VLA and RL research gaps; retain single learned action-policy preference.",
+    "decision": "Prioritize nonexperimental contact-adaptation review; task allocation becomes reserve, preserving all scientific judgments and runtime artifacts.",
+    "report_anchor": "work/update/VLA_RL_ADDITIONAL_GAPS_2026-11-09.md#robotics-reorientation",
+    "counts": {
+      "sources": 21,
+      "already_registered": 9,
+      "external_not_registered": 12,
+      "gap_questions": 3,
+      "new_experiment_topics": 0
+    },
+    "sources": [
+      {
+        "source_id": "R01",
+        "title": "RoboPack: Learning Tactile-Informed Dynamics Models for Dense Packing",
+        "year": 2024,
+        "status": "RSS 2024 — official proceedings",
+        "registry_paper_id": "pr-0649",
+        "url": "https://www.roboticsproceedings.org/rss20/p130.html",
+        "additional_urls": [],
+        "scope": "Official abstract",
+        "supported": "Tactile history informs latent physics and MPC for real manipulation.",
+        "role": "CONTACT",
+        "checked_on": "2026-11-09",
+        "reading_status_changed": false
+      },
+      {
+        "source_id": "R02",
+        "title": "ConRFT: A Reinforced Fine-tuning Method for VLA Models via Consistency Policy",
+        "year": 2025,
+        "status": "RSS 2025 — official proceedings",
+        "registry_paper_id": "pr-0885",
+        "url": "https://www.roboticsproceedings.org/rss21/p019.html",
+        "additional_urls": [],
+        "scope": "Official abstract",
+        "supported": "Offline and online RL fine-tune VLA policies for real manipulation.",
+        "role": "CONTACT",
+        "checked_on": "2026-11-09",
+        "reading_status_changed": false
+      },
+      {
+        "source_id": "R03",
+        "title": "FORGE: Force-Guided Exploration for Robust Contact-Rich Manipulation Under Uncertainty",
+        "year": 2025,
+        "status": "RA-L 2025 — IEEE publisher metadata/abstract",
+        "registry_paper_id": null,
+        "url": "https://ieeexplore.ieee.org/abstract/document/10925874/",
+        "additional_urls": [
+          "https://noseworm.github.io/forge/"
+        ],
+        "scope": "Publisher indexed abstract and author project",
+        "supported": "Force-conditioned RL, force limits and dynamics randomization are established non-VLA alternatives.",
+        "role": "CONTACT",
+        "checked_on": "2026-11-09",
+        "reading_status_changed": false
+      },
+      {
+        "source_id": "R04",
+        "title": "ForceVLA2: Unleashing Hybrid Force-Position Control with Force Awareness for Contact-Rich Manipulation",
+        "year": 2026,
+        "status": "CVPR 2026 — official CVF indexed abstract",
+        "registry_paper_id": "pr-0691",
+        "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Li_ForceVLA2_Unleashing_Hybrid_Force-Position_Control_with_Force_Awareness_for_Contact-Rich_CVPR_2026_paper.html",
+        "additional_urls": [
+          "https://arxiv.org/abs/2603.15169"
+        ],
+        "scope": "Official indexed abstract; direct page returned 403",
+        "supported": "Force-aware hybrid force-position VLA control already exists.",
+        "role": "CONTACT",
+        "checked_on": "2026-11-09",
+        "reading_status_changed": false
+      },
+      {
+        "source_id": "R05",
+        "title": "AT-VLA: Adaptive Tactile Injection for Enhanced Feedback Reaction in Vision-Language-Action Models",
+        "year": 2026,
+        "status": "CVPR 2026 — official CVF indexed record",
+        "registry_paper_id": "pr-0690",
+        "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Li_AT-VLA_Adaptive_Tactile_Injection_for_Enhanced_Feedback_Reaction_in_Vision-Language-Action_CVPR_2026_paper.html",
+        "additional_urls": [],
+        "scope": "Official indexed abstract/metadata; prior repository body review not repeated",
+        "supported": "Adaptive tactile feedback is existing work, not a new gap by itself.",
+        "role": "CONTACT",
+        "checked_on": "2026-11-09",
+        "reading_status_changed": false
+      },
+      {
+        "source_id": "R06",
+        "title": "CompVLA: A Variable Compliance Vision-Language-Action Model for Contact-rich Manipulation",
+        "year": 2026,
+        "status": "arXiv; author project says CoRL 2026, official acceptance not independently confirmed",
+        "registry_paper_id": null,
+        "url": "https://compvla.github.io/",
+        "additional_urls": [
+          "https://arxiv.org/abs/2609.23614"
+        ],
+        "scope": "Author project: method, action representation, training, evaluation inputs; not complete paper/code audit",
+        "supported": "Joint flow-matching of motion/compliance experts; variable stiffness/displacement and geometric impedance; policy evaluation excludes force inputs.",
+        "role": "CONTACT",
+        "checked_on": "2026-11-09",
+        "reading_status_changed": false
+      },
+      {
+        "source_id": "R07",
+        "title": "TDC: Sim-to-Real Transferable Directional Compliance for Contact-Rich Manipulation",
+        "year": 2026,
+        "status": "Author project says CoRL 2026; official acceptance unverified in this review",
+        "registry_paper_id": null,
+        "url": "https://yifei-y.github.io/project-pages/TDC/",
+        "additional_urls": [],
+        "scope": "Author project abstract/method",
+        "supported": "Simulation IL predicts task frame/control modes; deployment uses manually tuned magnitude parameters with admittance.",
+        "role": "CONTACT",
+        "checked_on": "2026-11-09",
+        "reading_status_changed": false
+      },
+      {
+        "source_id": "R08",
+        "title": "TacCoRL: Integrating Tactile Feedback into VLA via Simulation",
+        "year": 2026,
+        "status": "arXiv; author project says CoRL 2026, official acceptance not independently confirmed",
+        "registry_paper_id": null,
+        "url": "https://arxiv.org/abs/2606.11743",
+        "additional_urls": [
+          "https://tac-corl.github.io/"
+        ],
+        "scope": "Author abstract and project method/evaluation sections",
+        "supported": "VLA tactile conditioning, sim-real co-training and simulator RL already jointly implemented by authors.",
+        "role": "CONTACT",
+        "checked_on": "2026-11-09",
+        "reading_status_changed": false
+      },
+      {
+        "source_id": "R09",
+        "title": "TORL-VLA: Tactile Guided Online Reinforcement Learning for Contact-Rich Manipulation",
+        "year": 2026,
+        "status": "arXiv; peer-reviewed status unverified",
+        "registry_paper_id": null,
+        "url": "https://arxiv.org/abs/2606.09337",
+        "additional_urls": [
+          "https://torl-vla.github.io/"
+        ],
+        "scope": "Author abstract/project: frozen reference, stage actor, intervention critics; friction/compliance table",
+        "supported": "Frozen VLA plus stage-specific RL; explicitly tests unseen friction and softer cup with fixed policy weights.",
+        "role": "CONTACT",
+        "checked_on": "2026-11-09",
+        "reading_status_changed": false
+      },
+      {
+        "source_id": "R10",
+        "title": "ForceRFT: Refining VLA Actions through Force-Guided Residual Reinforcement Learning",
+        "year": 2026,
+        "status": "arXiv; peer-reviewed status unverified",
+        "registry_paper_id": null,
+        "url": "https://arxiv.org/abs/2609.22840",
+        "additional_urls": [],
+        "scope": "Author abstract",
+        "supported": "Frozen SmolVLA prior, wrench-conditioned residual RL, autonomous/human segment distinction and residual-imitation comparison.",
+        "role": "CONTACT",
+        "checked_on": "2026-11-09",
+        "reading_status_changed": false
+      },
+      {
+        "source_id": "R11",
+        "title": "ContactBench 1.0: A Benchmark for Everyday Contact-Rich Robotic Manipulation",
+        "year": 2026,
+        "status": "arXiv v2; peer-reviewed status unverified",
+        "registry_paper_id": null,
+        "url": "https://arxiv.org/abs/2610.24512",
+        "additional_urls": [],
+        "scope": "v2 abstract only this turn; previous 10/23 body review is historical",
+        "supported": "Reproducible contact tasks and physical/simulation assets; sensor addition does not universally solve contact behavior.",
+        "role": "CONTACT",
+        "checked_on": "2026-11-09",
+        "reading_status_changed": false
+      },
+      {
+        "source_id": "R12",
+        "title": "Kintsugi-VLA: Turning Failed Robot Rollouts into Recovery Data through Interventional Recoverability",
+        "year": 2026,
+        "status": "arXiv; ICRA 2027 submission comment is not acceptance",
+        "registry_paper_id": null,
+        "url": "https://arxiv.org/abs/2609.31048",
+        "additional_urls": [],
+        "scope": "Author abstract",
+        "supported": "Fixed-expert recoverability from simulator branching and targeted recovery data are existing contributions.",
+        "role": "RECOVERY",
+        "checked_on": "2026-11-09",
+        "reading_status_changed": false
+      },
+      {
+        "source_id": "R13",
+        "title": "OGPO: Offline Goal-conditioned Policy Optimization for Recoverable Vision-Language-Action Models",
+        "year": 2026,
+        "status": "arXiv; peer-reviewed status unverified",
+        "registry_paper_id": null,
+        "url": "https://arxiv.org/abs/2610.12914",
+        "additional_urls": [],
+        "scope": "Author abstract search result",
+        "supported": "Offline key-state goal relabeling and goal-directed recovery under perturbations already studied.",
+        "role": "RECOVERY",
+        "checked_on": "2026-11-09",
+        "reading_status_changed": false
+      },
+      {
+        "source_id": "R14",
+        "title": "RESCUE: Is This Alarm Worth Acting On? Counterfactual Evaluation of VLA Runtime Monitors",
+        "year": 2026,
+        "status": "arXiv; peer-reviewed status unverified",
+        "registry_paper_id": "pr-1032",
+        "url": "https://arxiv.org/abs/2610.13516",
+        "additional_urls": [],
+        "scope": "Author abstract",
+        "supported": "Recoverability depends on state/intervention; alarm accuracy alone does not imply lower completion cost.",
+        "role": "RECOVERY",
+        "checked_on": "2026-11-09",
+        "reading_status_changed": false
+      },
+      {
+        "source_id": "R15",
+        "title": "ReCoVLA: VLM-Guided Reward Compilation for Failure Recovery in Vision-Language-Action Policies",
+        "year": 2026,
+        "status": "arXiv; peer-reviewed status unverified",
+        "registry_paper_id": null,
+        "url": "https://arxiv.org/abs/2606.09630",
+        "additional_urls": [],
+        "scope": "Author abstract",
+        "supported": "Failure-conditioned reward compilation trains a residual recovery policy around a frozen VLA.",
+        "role": "RECOVERY",
+        "checked_on": "2026-11-09",
+        "reading_status_changed": false
+      },
+      {
+        "source_id": "R16",
+        "title": "Does a Learned Corrector Beat a Simple Retreat? Evidence from a Frozen VLA",
+        "year": 2026,
+        "status": "arXiv; peer-reviewed status unverified",
+        "registry_paper_id": null,
+        "url": "https://arxiv.org/abs/2610.06921",
+        "additional_urls": [],
+        "scope": "Author abstract",
+        "supported": "Same-seed rerun and scripted retreat challenge attribution to learned correction; equivalence is not established universally.",
+        "role": "RECOVERY",
+        "checked_on": "2026-11-09",
+        "reading_status_changed": false
+      },
+      {
+        "source_id": "R17",
+        "title": "MoTo: A Zero-shot Plug-in Interaction-aware Navigation for General Mobile Manipulation",
+        "year": 2025,
+        "status": "CoRL 2025 — official PMLR305",
+        "registry_paper_id": "pr-0060",
+        "url": "https://proceedings.mlr.press/v305/wu25c.html",
+        "additional_urls": [],
+        "scope": "Official abstract",
+        "supported": "Interaction-aware docking includes base/arm trajectory feasibility.",
+        "role": "MOBILE",
+        "checked_on": "2026-11-09",
+        "reading_status_changed": false
+      },
+      {
+        "source_id": "R18",
+        "title": "Mobi-π: Mobilizing Your Robot Learning Policy",
+        "year": 2025,
+        "status": "CoRL 2025 — official PMLR305",
+        "registry_paper_id": "pr-1073",
+        "url": "https://proceedings.mlr.press/v305/yang25b.html",
+        "additional_urls": [],
+        "scope": "Official abstract",
+        "supported": "Policy mobilization optimizes base poses for a learned manipulation policy.",
+        "role": "MOBILE",
+        "checked_on": "2026-11-09",
+        "reading_status_changed": false
+      },
+      {
+        "source_id": "R19",
+        "title": "WholeBodyVLA: Towards Unified Latent VLA for Whole-body Loco-manipulation Control",
+        "year": 2026,
+        "status": "ICLR 2026 — official proceedings",
+        "registry_paper_id": "pr-0987",
+        "url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/ff7373914a96956f2a7cacbdf3b0b8d8-Abstract-Conference.html",
+        "additional_urls": [
+          "https://arxiv.org/abs/2512.11047"
+        ],
+        "scope": "Official metadata and author abstract; project URL in registry returned 404, code not checked",
+        "supported": "Latent VLA framework includes loco-manipulation-oriented RL control; do not infer single execution actor from title.",
+        "role": "MOBILE",
+        "checked_on": "2026-11-09",
+        "reading_status_changed": false
+      },
+      {
+        "source_id": "R20",
+        "title": "MobileVLA-R1: Reinforcing Vision-Language-Action for Mobile Robots",
+        "year": 2026,
+        "status": "ECCV 2026 per registry official accepted-list audit 2026-11-07; author project reconfirmed today",
+        "registry_paper_id": "pr-1157",
+        "url": "https://aigeeksgroup.github.io/MobileVLA-R1/",
+        "additional_urls": [
+          "https://arxiv.org/abs/2511.17889"
+        ],
+        "scope": "Author project architecture/RL description; official acceptance evidence inherited rather than newly audited",
+        "supported": "Language-conditioned mobile action and GRPO are existing work; grasp/contact-maintenance claims are not inferred.",
+        "role": "MOBILE",
+        "checked_on": "2026-11-09",
+        "reading_status_changed": false
+      },
+      {
+        "source_id": "R21",
+        "title": "FORGE-plus: Force-Budgeted Recovery for Contact-Rich Assembly with a Frozen LLM Supervisor",
+        "year": 2026,
+        "status": "arXiv; peer-reviewed status unverified",
+        "registry_paper_id": null,
+        "url": "https://arxiv.org/abs/2607.21227",
+        "additional_urls": [],
+        "scope": "Author abstract",
+        "supported": "Force-budget recovery with frozen LLM supervisor is existing hierarchical simulation work; not real-robot evidence.",
+        "role": "CONTACT/RECOVERY",
+        "checked_on": "2026-11-09",
+        "reading_status_changed": false
+      }
+    ],
+    "canonical_questions": [
+      {
+        "id": "GAP-CONTACT-RL",
+        "path": "synthesis/03_manipulation_contact.md#gap-contact-rl-2026",
+        "decision": "PRIORITIZE_NONEXPERIMENTAL_EXPLORATION",
+        "relation": "Narrowed action-learning branch of GAP-PHYSICS; does not reopen GAP-CONTACT diagnostic HOLD",
+        "next": "GAP-CONTACT-RL-N1"
+      },
+      {
+        "id": "GAP-RECOVERABILITY-RL",
+        "path": "synthesis/05_world_models_safety.md#gap-recoverability-rl-2026",
+        "decision": "EXPLORATION_RESERVE",
+        "relation": "Proactive behavior learning, not C5 reset-distribution audit or hindsight relabeling; overlap with safe/recovery RL unresolved"
+      },
+      {
+        "id": "GAP-MOBILE-CONTACT-RL",
+        "path": "synthesis/06_locomotion_whole_body.md#gap-mobile-contact-rl-2026",
+        "decision": "EXPLORATION_RESERVE",
+        "relation": "Contact during coordinated base-arm motion, not existing HANDOFF policy replacement"
+      }
+    ],
+    "evidence_maturity": "CURATION-HYPOTHESIS",
+    "boundaries": [
+      "No full-text or code completeness claim",
+      "No experiment or environment recheck",
+      "No verified novelty or publication probability",
+      "No new paper registration or reading-status change",
+      "Author-claimed CoRL acceptances not treated as independently verified",
+      "Legacy counts and validation above remain original scout history"
+    ],
+    "validation": {
+      "state": "PASS",
+      "pre_audit": {
+        "papers": 1161,
+        "standard_note_files": 5805,
+        "markdown_links_checked": 12775,
+        "errors": [],
+        "warnings": []
+      },
+      "post_audit": {
+        "command": "python3 -B work/scripts/audit_repository.py",
+        "exit_code": 0,
+        "papers": 1161,
+        "standard_note_files": 5805,
+        "markdown_files_checked": 6025,
+        "markdown_links_checked": 12793,
+        "errors": [],
+        "warnings": []
+      },
+      "required_checks": {
+        "py_compile_exit_code": 0,
+        "build_reading_tiers_exit_code": 0,
+        "git_diff_check_exit_code": 0
+      },
+      "preservation": {
+        "method": "SHA256 comparison with turn-start filesystem snapshot and staged binary diff comparison",
+        "modified_existing_files": 9,
+        "new_files": 0,
+        "removed_files": 0,
+        "staged_patch_preserved": true,
+        "standard_notes_unchanged": 5805,
+        "registry_and_reading_trackers_unchanged": true,
+        "runtime_and_experiment_artifacts_unchanged": true
+      },
+      "registration": {
+        "added_papers": 0,
+        "reading_status_changes": 0
+      },
+      "experiments_executed": 0
+    }
+  },
+  "current_review": "contact_p0_prep",
+  "contact_n1": {
+    "task": "GAP-CONTACT-RL-N1",
+    "checked_on": "2026-11-09",
+    "decision": "N1_DONE; CONDITIONAL_EXPLORATION; INDEPENDENT_METHOD_CONTRIBUTION_NOT_ESTABLISHED",
+    "evidence_maturity": "CURATION-HYPOTHESIS",
+    "report": "work/research_topics/contact_adaptation/내용/README.md",
+    "reproducibility": "work/research_topics/contact_adaptation/재현 방법/README.md",
+    "counts": {
+      "papers_compared": 9,
+      "selected_full_text": 8,
+      "abstract_only": 1,
+      "new_papers_registered": 0,
+      "source_texts_fetched": 16,
+      "source_texts_reviewed_at_documented_scope": 14,
+      "native_runs": 0,
+      "experiments": 0,
+      "external_feedback": 0
+    },
+    "sources": [
+      {
+        "source_id": "N1-01",
+        "prior_source_id": "R08",
+        "title": "TacCoRL: Integrating Tactile Feedback into VLA via Simulation",
+        "year": 2026,
+        "status": "arXiv; author project says CoRL 2026, official acceptance not independently confirmed",
+        "url": "https://arxiv.org/html/2606.11743v1",
+        "additional_urls": [
+          "https://arxiv.org/abs/2606.11743",
+          "https://tac-corl.github.io/"
+        ],
+        "scope": "Sections 3.1–3.4, 4.1–4.3; Appendices A–E",
+        "evidence": "SELECTED_FULL_TEXT",
+        "supported": "Tactile-history VLA PPO already exists; calibrated joint gains differ from policy stiffness output.",
+        "reading_status_changed": false
+      },
+      {
+        "source_id": "N1-02",
+        "prior_source_id": "R06",
+        "title": "CompVLA: A Variable Compliance Vision-Language-Action Model for Contact-rich Manipulation",
+        "year": 2026,
+        "status": "arXiv; author project says CoRL 2026, official acceptance not independently confirmed",
+        "url": "https://arxiv.org/html/2609.23614v1",
+        "additional_urls": [
+          "https://compvla.github.io/",
+          "https://arxiv.org/abs/2609.23614"
+        ],
+        "scope": "Sections 3–5.3, 7; Appendices A.1–A.2",
+        "evidence": "SELECTED_FULL_TEXT",
+        "supported": "Joint motion/compliance imitation; actor omits force at evaluation; stiffness/displacement labels are not unique.",
+        "reading_status_changed": false
+      },
+      {
+        "source_id": "N1-03",
+        "prior_source_id": "R09",
+        "title": "TORL-VLA: Tactile Guided Online Reinforcement Learning for Contact-Rich Manipulation",
+        "year": 2026,
+        "status": "arXiv; peer-reviewed status unverified",
+        "url": "https://arxiv.org/html/2606.09337v1",
+        "additional_urls": [
+          "https://arxiv.org/abs/2606.09337",
+          "https://torl-vla.github.io/"
+        ],
+        "scope": "Sections 3, 4.1; Appendices A.2–A.3; project friction/compliance results",
+        "evidence": "SELECTED_FULL_TEXT",
+        "supported": "Frozen VLA and stage-specific RL; friction/compliance evaluation is already present.",
+        "reading_status_changed": false
+      },
+      {
+        "source_id": "N1-04",
+        "prior_source_id": "R10",
+        "title": "ForceRFT: Refining VLA Actions through Force-Guided Residual Reinforcement Learning",
+        "year": 2026,
+        "status": "arXiv; peer-reviewed status unverified",
+        "url": "https://arxiv.org/html/2609.22840v1",
+        "additional_urls": [
+          "https://arxiv.org/abs/2609.22840"
+        ],
+        "scope": "Sections III–IV; implementation appendix; evaluation setup only",
+        "evidence": "SELECTED_FULL_TEXT",
+        "supported": "Wrench-conditioned pose residual RL; nominal residual rate differs from model timebase; imitation baseline present.",
+        "reading_status_changed": false
+      },
+      {
+        "source_id": "N1-05",
+        "prior_source_id": "R03",
+        "title": "FORGE: Force-Guided Exploration for Robust Contact-Rich Manipulation Under Uncertainty",
+        "year": 2025,
+        "status": "RA-L 2025 — IEEE publisher metadata/abstract",
+        "url": "https://arxiv.org/html/2408.04587v2",
+        "additional_urls": [
+          "https://ieeexplore.ieee.org/abstract/document/10925874/",
+          "https://noseworm.github.io/forge/"
+        ],
+        "scope": "Sections II–III including III-A/B; project code availability",
+        "evidence": "SELECTED_FULL_TEXT",
+        "supported": "Non-VLA force-conditioned RL and dynamics randomization; no verified public FORGE training implementation.",
+        "reading_status_changed": false
+      },
+      {
+        "source_id": "N1-06",
+        "prior_source_id": "R11",
+        "title": "ContactBench 1.0: A Benchmark for Everyday Contact-Rich Robotic Manipulation",
+        "year": 2026,
+        "status": "arXiv v2; peer-reviewed status unverified",
+        "url": "https://arxiv.org/html/2610.24512v2",
+        "additional_urls": [
+          "https://arxiv.org/abs/2610.24512"
+        ],
+        "scope": "Sections III-C/D; official project; pinned selected simulation source",
+        "evidence": "SELECTED_FULL_TEXT",
+        "supported": "Natural contact tasks and assets; scripted task release is not a VLA training/evaluation pipeline.",
+        "reading_status_changed": false
+      },
+      {
+        "source_id": "N1-07",
+        "title": "Facet-0: A Robotic Foundation Model for Contact-Rich Precise Manipulation",
+        "year": 2026,
+        "status": "arXiv v1; peer-reviewed acceptance not verified",
+        "url": "https://arxiv.org/html/2609.01596v1",
+        "additional_urls": [
+          "https://pine-lab-ntu.github.io/facet-0/",
+          "https://github.com/PINE-Lab-NTU/FACET"
+        ],
+        "scope": "Sections 4–5 and selected Section 6; selected public policy/hierarchy/trainer files",
+        "evidence": "SELECTED_FULL_TEXT",
+        "supported": "Joint action/wrench proposal and value-guided post-training; predicted wrench is not a force command; local adaptation and hierarchy remain distinct.",
+        "reading_status_changed": false
+      },
+      {
+        "source_id": "N1-08",
+        "title": "Constraint-Grounded Reinforcement Learning for Variable Impedance Control in Contact-Rich Robotic Insertion",
+        "year": 2026,
+        "status": "arXiv v1; peer-reviewed acceptance not verified",
+        "url": "https://arxiv.org/html/2609.13516v1",
+        "additional_urls": [],
+        "scope": "Sections I–IV and V-A/setup, evaluation protocol",
+        "evidence": "SELECTED_FULL_TEXT",
+        "supported": "Joint residual pose/rate/gain PPO and policy/controller enforcement analysis already exist; privileged fixture and CAD primitive differ from VLA setting.",
+        "reading_status_changed": false
+      },
+      {
+        "source_id": "N1-09",
+        "title": "CompliantVLA-adaptor: VLM-Guided Variable Impedance Action for Safe Contact-Rich Manipulation",
+        "year": 2026,
+        "status": "arXiv v2; under review per author record",
+        "url": "https://arxiv.org/abs/2601.15541v2",
+        "additional_urls": [],
+        "scope": "Abstract and author publication status only; no code review",
+        "evidence": "ABSTRACT_ONLY",
+        "supported": "VLM-conditioned stiffness/damping plus force regulation already proposed; detailed interface remains unchecked.",
+        "reading_status_changed": false
+      }
+    ],
+    "source_files": [
+      {
+        "repo": "Michaelwyx/contactbench-sim",
+        "path": "README.md",
+        "commit": "ccd864501275112e369a71c91880adf2da28b536",
+        "url": "https://raw.githubusercontent.com/Michaelwyx/contactbench-sim/ccd864501275112e369a71c91880adf2da28b536/README.md",
+        "sha256": "0ede9a2cf8f9969f8a48c80382845012ca9f0f4bc88a335b7cc2b3a96f274240",
+        "review_scope": "README: purpose, release scope, installation requirements and method identity; not runtime verification",
+        "reviewed": true,
+        "executed": false
+      },
+      {
+        "repo": "Michaelwyx/contactbench-sim",
+        "path": "packages/force-bench/pyproject.toml",
+        "commit": "ccd864501275112e369a71c91880adf2da28b536",
+        "url": "https://raw.githubusercontent.com/Michaelwyx/contactbench-sim/ccd864501275112e369a71c91880adf2da28b536/packages/force-bench/pyproject.toml",
+        "sha256": "4730671f7bcba7d65932297b2cfa4da12dabd21b728e33d5292961ffedded057",
+        "review_scope": "All 64 lines: direct dependencies, Python bound, external FR3 fetch comment",
+        "reviewed": true,
+        "executed": false
+      },
+      {
+        "repo": "Michaelwyx/contactbench-sim",
+        "path": "packages/force-bench/src/force_bench/tasks/plug_insert_arm.py",
+        "commit": "ccd864501275112e369a71c91880adf2da28b536",
+        "url": "https://raw.githubusercontent.com/Michaelwyx/contactbench-sim/ccd864501275112e369a71c91880adf2da28b536/packages/force-bench/src/force_bench/tasks/plug_insert_arm.py",
+        "sha256": "55e94edeebf27631078388d56565b4a7549af229f96765c424a85824ae1818dd",
+        "review_scope": "Selected function/control/constraint and task identity search only; not a complete 1603-line audit",
+        "reviewed": true,
+        "executed": false
+      },
+      {
+        "repo": "Michaelwyx/contactbench-sim",
+        "path": "packages/force-bench/src/force_bench/tasks/plug_insert.py",
+        "commit": "ccd864501275112e369a71c91880adf2da28b536",
+        "url": "https://raw.githubusercontent.com/Michaelwyx/contactbench-sim/ccd864501275112e369a71c91880adf2da28b536/packages/force-bench/src/force_bench/tasks/plug_insert.py",
+        "sha256": "dffcb7f7adbe2f417d624dab8de7459dce84f1e6bb7c95a0722bedacb087bec0",
+        "review_scope": "FETCHED_NOT_REVIEWED; not used as evidence",
+        "reviewed": false,
+        "executed": false
+      },
+      {
+        "repo": "Michaelwyx/contactbench-sim",
+        "path": "docs/tactile.md",
+        "commit": "ccd864501275112e369a71c91880adf2da28b536",
+        "url": "https://raw.githubusercontent.com/Michaelwyx/contactbench-sim/ccd864501275112e369a71c91880adf2da28b536/docs/tactile.md",
+        "sha256": "08f5a8d2370b50a2d94d9dcf0f3da4b775fa80ab200fbcfd49ef5fefd58c2f94",
+        "review_scope": "Lines 1–144: simulated tactile modality, CUDA requirements, no wrist-wrench equivalence",
+        "reviewed": true,
+        "executed": false
+      },
+      {
+        "repo": "PINE-Lab-NTU/FACET",
+        "path": "README.md",
+        "commit": "174c33cc680a7c08130908cfbe78357a04d061c5",
+        "url": "https://raw.githubusercontent.com/PINE-Lab-NTU/FACET/174c33cc680a7c08130908cfbe78357a04d061c5/README.md",
+        "sha256": "9060eafb939853d5e507a0755faf32ce16603f9d4d3667bfafdcd897793a0854",
+        "review_scope": "README: purpose, release scope, installation requirements and method identity; not runtime verification",
+        "reviewed": true,
+        "executed": false
+      },
+      {
+        "repo": "PINE-Lab-NTU/FACET",
+        "path": "facet0/refinement/train.py",
+        "commit": "174c33cc680a7c08130908cfbe78357a04d061c5",
+        "url": "https://raw.githubusercontent.com/PINE-Lab-NTU/FACET/174c33cc680a7c08130908cfbe78357a04d061c5/facet0/refinement/train.py",
+        "sha256": "7b6ce41335cc84c732a51fe83e6e00a3e91e16465159d2d42d05b1cecd3e00bb",
+        "review_scope": "Lines 1–89, 181–326: backbone freeze configuration, trainable filter and optimization path; objective internals not audited",
+        "reviewed": true,
+        "executed": false
+      },
+      {
+        "repo": "PINE-Lab-NTU/FACET",
+        "path": "facet0/policy/hierarchy.py",
+        "commit": "174c33cc680a7c08130908cfbe78357a04d061c5",
+        "url": "https://raw.githubusercontent.com/PINE-Lab-NTU/FACET/174c33cc680a7c08130908cfbe78357a04d061c5/facet0/policy/hierarchy.py",
+        "sha256": "51a19642c16886c63cc2b3a3983b7b940434765112aa165e32feb6e800bf3ae4",
+        "review_scope": "All 74 lines: two-policy hierarchy and timing/metadata contract",
+        "reviewed": true,
+        "executed": false
+      },
+      {
+        "repo": "PINE-Lab-NTU/FACET",
+        "path": "facet-online-adaptation/README.md",
+        "commit": "174c33cc680a7c08130908cfbe78357a04d061c5",
+        "url": "https://raw.githubusercontent.com/PINE-Lab-NTU/FACET/174c33cc680a7c08130908cfbe78357a04d061c5/facet-online-adaptation/README.md",
+        "sha256": "10b06761e5b4d90e57b2a2fd6b8dc4cc802f8ac1876b4b546dce9b6c4107d534",
+        "review_scope": "FETCHED_NOT_REVIEWED; not used as evidence",
+        "reviewed": false,
+        "executed": false
+      },
+      {
+        "repo": "PINE-Lab-NTU/FACET",
+        "path": "facet-online-adaptation/src/facet_adaptation/policy.py",
+        "commit": "174c33cc680a7c08130908cfbe78357a04d061c5",
+        "url": "https://raw.githubusercontent.com/PINE-Lab-NTU/FACET/174c33cc680a7c08130908cfbe78357a04d061c5/facet-online-adaptation/src/facet_adaptation/policy.py",
+        "sha256": "abe000269408a2cd16be24d5c42f0a4ce38693fe2c55de0eb488085c7f40c9be",
+        "review_scope": "All 119 lines: history, remote policy metadata, 7D actions and mock boundary",
+        "reviewed": true,
+        "executed": false
+      },
+      {
+        "repo": "Yyshadow/openpi-RLT",
+        "path": "README.md",
+        "commit": "c1e40ac360185778c98cf20da2820e22d2d415e7",
+        "url": "https://raw.githubusercontent.com/Yyshadow/openpi-RLT/c1e40ac360185778c98cf20da2820e22d2d415e7/README.md",
+        "sha256": "a23e5d3fd40460e6e71e53f0083e1bd42117800c7d3a1995358cbec55b46e692",
+        "review_scope": "README: purpose, release scope, installation requirements and method identity; not runtime verification",
+        "reviewed": true,
+        "executed": false
+      },
+      {
+        "repo": "Michaelwyx/contactbench-sim",
+        "path": "docs/tasks.md",
+        "commit": "ccd864501275112e369a71c91880adf2da28b536",
+        "url": "https://raw.githubusercontent.com/Michaelwyx/contactbench-sim/ccd864501275112e369a71c91880adf2da28b536/docs/tasks.md",
+        "sha256": "b28bff251e01b73bc88e4d427029f0bc8b868226be29f2e39e04f6a847d56f64",
+        "review_scope": "Charger section lines 273–290 and task row/CLI discovery",
+        "reviewed": true,
+        "executed": false
+      },
+      {
+        "repo": "Michaelwyx/contactbench-sim",
+        "path": "packages/force-bench/src/force_bench/appendix_tasks/plug_in_charger.py",
+        "commit": "ccd864501275112e369a71c91880adf2da28b536",
+        "url": "https://raw.githubusercontent.com/Michaelwyx/contactbench-sim/ccd864501275112e369a71c91880adf2da28b536/packages/force-bench/src/force_bench/appendix_tasks/plug_in_charger.py",
+        "sha256": "8778181d1c41c498f792627b3abe8b210f523c75c74c0d0c7ed49e01ab664d6c",
+        "review_scope": "All 192 lines: ending, success criteria, original script distinction",
+        "reviewed": true,
+        "executed": false
+      },
+      {
+        "repo": "Michaelwyx/contactbench-sim",
+        "path": "packages/force-bench/src/force_bench/appendix_tasks/plug_in_charger_blocks.py",
+        "commit": "ccd864501275112e369a71c91880adf2da28b536",
+        "url": "https://raw.githubusercontent.com/Michaelwyx/contactbench-sim/ccd864501275112e369a71c91880adf2da28b536/packages/force-bench/src/force_bench/appendix_tasks/plug_in_charger_blocks.py",
+        "sha256": "d16e306e6e586e0d59088a4a7e13864c46ea6fe59ab96083056e7a868c84870a",
+        "review_scope": "Lines 1–104, 400–438, 487–550, 555–704: configure/trim, solver options, should_cut, top-press ending and criteria",
+        "reviewed": true,
+        "executed": false
+      },
+      {
+        "repo": "Michaelwyx/contactbench-sim",
+        "path": "examples/force_response/probe_charger.py",
+        "commit": "ccd864501275112e369a71c91880adf2da28b536",
+        "url": "https://raw.githubusercontent.com/Michaelwyx/contactbench-sim/ccd864501275112e369a71c91880adf2da28b536/examples/force_response/probe_charger.py",
+        "sha256": "ca438ad66ab9edb5a21ef42a160ad6730aefd351c0c0e2214e7e744a58ecabd1",
+        "review_scope": "Lines 1–26, 169–187: robot-free probe and logged force definition",
+        "reviewed": true,
+        "executed": false
+      },
+      {
+        "repo": "Michaelwyx/contactbench-sim",
+        "path": "packages/force-bench/src/force_bench/rig.py",
+        "commit": "ccd864501275112e369a71c91880adf2da28b536",
+        "url": "https://raw.githubusercontent.com/Michaelwyx/contactbench-sim/ccd864501275112e369a71c91880adf2da28b536/packages/force-bench/src/force_bench/rig.py",
+        "sha256": "2beaa8c006f3fc3eae573566ccbdba4235f18ced69789a8b564550c9efbdd269",
+        "review_scope": "Lines 636–662, 707–733: drive_arm IK position targets and callback loop; remaining model/controller internals not audited",
+        "reviewed": true,
+        "executed": false
+      }
+    ],
+    "availability": [
+      {
+        "project": "CompVLA",
+        "url": "https://github.com/compvla/CompVLA",
+        "api": "https://api.github.com/repos/compvla/CompVLA",
+        "observed_http_status": 404,
+        "interpretation": "Linked repository inaccessible in this check; not proof of nonexistence"
+      },
+      {
+        "project": "CompVLA data",
+        "url": "https://drive.google.com/drive/folders/15SLhbUN81K4f6syi3K83eudc17dwK3hx",
+        "status": "AUTHOR_LINK_ONLY; no payload or permission inspection"
+      },
+      {
+        "project": "TacCoRL",
+        "url": "https://tac-corl.github.io/",
+        "status": "Code/checkpoint link not identified in inspected project outgoing links"
+      },
+      {
+        "project": "TORL-VLA",
+        "url": "https://torl-vla.github.io/",
+        "status": "TORL code marked coming soon; linked openpi-RLT README describes RLT, not TORL"
+      },
+      {
+        "project": "FORGE",
+        "url": "https://noseworm.github.io/forge/",
+        "status": "Code link marked Coming Soon; exact FORGE implementation not acquired"
+      },
+      {
+        "project": "ForceRFT / CG-RL",
+        "status": "Official implementation link not identified in inspected primary sources"
+      },
+      {
+        "project": "FACET payload",
+        "urls": [
+          "https://huggingface.co/Pinelab/Facet-0",
+          "https://huggingface.co/datasets/Pinelab/ManuFacet-1K"
+        ],
+        "status": "AUTHOR_LINK_ONLY; no payload/hash/license/functional verification"
+      }
+    ],
+    "selected_task": {
+      "name": "ContactBench Plug in charger, charging block 1",
+      "rows": [
+        "plug_in_charger_block1",
+        "plug_in_charger_block1_spring_0.85mm"
+      ],
+      "status": "STATIC_SOURCE_SELECTED_NOT_EXECUTABLE_PACKET",
+      "natural_shift": "Printed contact spring resistance; no arbitrary mid-episode material switch",
+      "critical_confound": "Strong spring causes grasp slip; public script opens/repositions/presses from top, so gain learning must be separated from action-strategy authority.",
+      "sensor": "Actor sensor not selected; simulator object force, fingertip tactile and wrist wrench are not interchangeable.",
+      "controller": "Inspected Rig.drive_arm writes IK joint position targets and has no stiffness action argument.",
+      "unimplemented": [
+        "reset/step policy adapter",
+        "actor/evaluator observation separation",
+        "variable-impedance execution",
+        "autonomous termination and evaluator windows",
+        "single VLA checkpoint/normalizer contract",
+        "training data and baseline budget contract"
+      ]
+    },
+    "environment_requirements": {
+      "provenance": "Upstream README and pyproject only; not validated runtime",
+      "os": "Linux",
+      "gpu": "NVIDIA with CUDA 12 compatible driver",
+      "python": "ContactBench >=3.10; example 3.12; FACET README 3.11; joint environment unresolved",
+      "direct_pins": {
+        "newton": "1.5.0",
+        "warp-lang": "1.16.0",
+        "mujoco-warp": "3.11.0",
+        "mujoco": "3.11.0"
+      },
+      "facet_reference_openpi": "650c5b0283a49c42784fb5055a0507da2c6d347d",
+      "image_digest": null,
+      "model_payload_hash": null,
+      "external_fr3_asset_hash": null,
+      "minimum_vram": null,
+      "local_docker_checked_this_task": false
+    },
+    "interpretation": {
+      "excluded_novelty_claims": [
+        "First history-conditioned single VLA RL",
+        "First motion/stiffness joint RL",
+        "First contact/physics generalization evaluation",
+        "First separation of requested policy action and applied controller gain"
+      ],
+      "retained_question": "Under matched observations and executable authority, when does jointly learning VLA motion and stiffness improve on motion-only RL plus tuned control?",
+      "limitations": [
+        "One insertion task does not justify VLA semantic/generalist benefit",
+        "Matched-data objective effect differs from equal-interaction-budget online learning effect",
+        "Grasp/slip and scripted assistance can dominate the proposed impedance mechanism",
+        "Public assets are not a verified training runtime"
+      ],
+      "next_task": "GAP-CONTACT-RL-N2",
+      "next_deliverable": "Static actor/evaluator/controller and minimum baseline contract for one charger row and one single-VLA backend; no automatic experiment start"
+    },
+    "preservation": {
+      "new_paper_registration": false,
+      "reading_status_changes": false,
+      "existing_hold_or_no_go_reopened": false,
+      "host_packages_installed": false,
+      "pdf_or_weight_or_mesh_payload_downloads": false,
+      "new_container_or_image_created": false,
+      "source_text_http_reads_only": true
+    },
+    "validation": {
+      "pre_audit": {
+        "papers": 1161,
+        "standard_note_files": 5805,
+        "markdown_files_checked": 6025,
+        "markdown_links_checked": 12793,
+        "comparison_matrix_rows": 106,
+        "completed_matrix_rows": 5,
+        "errors": [],
+        "warnings": []
+      },
+      "post_audit": {
+        "command": "python3 -B work/scripts/audit_repository.py",
+        "exit_code": 0,
+        "papers": 1161,
+        "standard_note_files": 5805,
+        "markdown_files_checked": 6027,
+        "markdown_links_checked": 12817,
+        "comparison_matrix_rows": 106,
+        "completed_matrix_rows": 5,
+        "errors": [],
+        "warnings": []
+      },
+      "preservation_check": {
+        "method": "SHA256 against task-start snapshot; staged binary diff comparison",
+        "canonical_files_unchanged": [
+          "PAPER.md",
+          "AGENTS.md",
+          "work/sources/papers.json",
+          "work/sources/registry_meta.json",
+          "research/READING_PLAN.md",
+          "research/READING_TIERS.csv",
+          "research/READING_STATUS.csv",
+          "research/READING_STATUS_HISTORY.csv"
+        ],
+        "standard_notes_unchanged": 5805,
+        "deleted_files": 0,
+        "staged_patch_preserved": true,
+        "experiment_artifacts_changed": false,
+        "changed_files": [
+          "README.md",
+          "TODO.md",
+          "research/README.md",
+          "synthesis/03_manipulation_contact.md",
+          "synthesis/README.md",
+          "work/research_topics/README.md",
+          "work/sources/vla_rl_additional_gaps_2026-11-09.json",
+          "work/update/README.md",
+          "work/update/VLA_RL_ADDITIONAL_GAPS_2026-11-09.md"
+        ],
+        "added_files": [
+          "work/research_topics/contact_adaptation/내용/README.md",
+          "work/research_topics/contact_adaptation/재현 방법/README.md"
+        ]
+      },
+      "required_generator": {
+        "py_compile_exit_code": 0,
+        "build_reading_tiers_exit_code": 0,
+        "git_diff_check_exit_code": 0,
+        "tier_counts": {
+          "CORE": 47,
+          "NEXT": 372,
+          "REFERENCE": 500,
+          "ARCHIVE": 242
+        },
+        "tier_membership_changed": false
+      }
+    }
+  },
+  "contact_n2": {
+    "task": "GAP-CONTACT-RL-N2",
+    "checked_on": "2026-11-09",
+    "decision": "INTERNAL_NONEXPERIMENTAL_DESIGN_COMPLETE; NARROW_EXPLORATION; INDEPENDENT_METHOD_CONTRIBUTION_NOT_ESTABLISHED",
+    "evidence_maturity": "CURATION-HYPOTHESIS",
+    "report": "work/research_topics/contact_adaptation/내용/README.md#n2-contract",
+    "reproducibility": "work/research_topics/contact_adaptation/재현 방법/README.md#n2-interface",
+    "scope": "Selected official paper HTML/source text and public checkpoint metadata. Proposed contract, not runtime or policy validation.",
+    "counts": {
+      "source_texts_available": 26,
+      "source_texts_reviewed_at_documented_scope_including_reuse": 25,
+      "fetched_only": 1,
+      "source_texts_reused_from_n1": 4,
+      "additional_selected_paper_body": 1,
+      "additional_abstract": 1,
+      "new_papers_registered": 0,
+      "experiments": 0,
+      "native_runs": 0,
+      "local_docker_checks": 0,
+      "external_feedback": 0
+    },
+    "source_files": [
+      {
+        "repo": "Michaelwyx/contactbench-sim",
+        "commit": "ccd864501275112e369a71c91880adf2da28b536",
+        "path": "packages/force-bench/src/force_bench/robot/franka.py",
+        "url": "https://raw.githubusercontent.com/Michaelwyx/contactbench-sim/ccd864501275112e369a71c91880adf2da28b536/packages/force-bench/src/force_bench/robot/franka.py",
+        "sha256": "b56a24cf26fa4bfa506e1af9ecc7e6dfe88ea5dd428896682fd25961ced04d62",
+        "review_scope": "Full 128-line file: FR3 joint/effort defaults and robot construction.",
+        "evidence": "SELECTED_SOURCE_TEXT",
+        "runtime_verified": false
+      },
+      {
+        "repo": "Michaelwyx/contactbench-sim",
+        "commit": "ccd864501275112e369a71c91880adf2da28b536",
+        "path": "packages/force-bench/src/force_bench/probes.py",
+        "url": "https://raw.githubusercontent.com/Michaelwyx/contactbench-sim/ccd864501275112e369a71c91880adf2da28b536/packages/force-bench/src/force_bench/probes.py",
+        "sha256": "74b628e1552229de9c2ededb7fc68d5839ea8e5006fc7bbff859473f9e5c5924",
+        "review_scope": "Full 57-line file: contact resultant and normal-force definition.",
+        "evidence": "SELECTED_SOURCE_TEXT",
+        "runtime_verified": false
+      },
+      {
+        "repo": "Michaelwyx/contactbench-sim",
+        "commit": "ccd864501275112e369a71c91880adf2da28b536",
+        "path": "packages/force-bench/src/force_bench/data/collection.py",
+        "url": "https://raw.githubusercontent.com/Michaelwyx/contactbench-sim/ccd864501275112e369a71c91880adf2da28b536/packages/force-bench/src/force_bench/data/collection.py",
+        "sha256": "eab2553f60f247f014ae4ee1e46738f455facc4ebec7ed3fe22208e5e710c3d4",
+        "review_scope": "Selected lines89–121 and collection callbacks/schema symbol search; not all collector logic.",
+        "evidence": "SELECTED_SOURCE_TEXT",
+        "runtime_verified": false
+      },
+      {
+        "repo": "Michaelwyx/contactbench-sim",
+        "commit": "ccd864501275112e369a71c91880adf2da28b536",
+        "path": "packages/force-bench/src/force_bench/data/episode.py",
+        "url": "https://raw.githubusercontent.com/Michaelwyx/contactbench-sim/ccd864501275112e369a71c91880adf2da28b536/packages/force-bench/src/force_bench/data/episode.py",
+        "sha256": "0417d9a223d78a8b6154e0606b2b8bea59b4c1d6623000a49baa64724f22d332",
+        "review_scope": "Episode schema/timestamp/action/reward symbol search; not full implementation review.",
+        "evidence": "SELECTED_SOURCE_TEXT",
+        "runtime_verified": false
+      },
+      {
+        "repo": "Michaelwyx/contactbench-sim",
+        "commit": "ccd864501275112e369a71c91880adf2da28b536",
+        "path": "packages/force-bench/src/force_bench/kit/mechanisms/outlet.py",
+        "url": "https://raw.githubusercontent.com/Michaelwyx/contactbench-sim/ccd864501275112e369a71c91880adf2da28b536/packages/force-bench/src/force_bench/kit/mechanisms/outlet.py",
+        "sha256": "ebef4932dbe8cf24f833cf6f9b3df718caec6d8f5574be590f2bcd21058f8bb7",
+        "review_scope": "Selected spring-fit values/constants and constructor search; no dynamics calibration.",
+        "evidence": "SELECTED_SOURCE_TEXT",
+        "runtime_verified": false
+      },
+      {
+        "repo": "Michaelwyx/contactbench-sim",
+        "commit": "ccd864501275112e369a71c91880adf2da28b536",
+        "path": "docs/data.md",
+        "url": "https://raw.githubusercontent.com/Michaelwyx/contactbench-sim/ccd864501275112e369a71c91880adf2da28b536/docs/data.md",
+        "sha256": "a12fa2aee9a09439f33944e9d48ec6407c42653864823ed92c583d3cc485f501",
+        "review_scope": "Full 93-line data documentation: obs/action alignment, privileged state, absent per-step RGB and placeholder rewards.",
+        "evidence": "SELECTED_SOURCE_TEXT",
+        "runtime_verified": false
+      },
+      {
+        "repo": "RLinf/RLinf",
+        "commit": "5c415fa28bb25074fab68f0d09baa73d1b67c608",
+        "path": "examples/embodiment/config/model/pi0.yaml",
+        "url": "https://raw.githubusercontent.com/RLinf/RLinf/5c415fa28bb25074fab68f0d09baa73d1b67c608/examples/embodiment/config/model/pi0.yaml",
+        "sha256": "9d99dadb0dd281565850055c9eb2205094994633fb5d6d31b21508bd914b1c65",
+        "review_scope": "Full 33-line pi0 configuration.",
+        "evidence": "SELECTED_SOURCE_TEXT",
+        "runtime_verified": false
+      },
+      {
+        "repo": "RLinf/RLinf",
+        "commit": "5c415fa28bb25074fab68f0d09baa73d1b67c608",
+        "path": "examples/embodiment/config/libero_spatial_ppo_openpi.yaml",
+        "url": "https://raw.githubusercontent.com/RLinf/RLinf/5c415fa28bb25074fab68f0d09baa73d1b67c608/examples/embodiment/config/libero_spatial_ppo_openpi.yaml",
+        "sha256": "955c6ecffae2bc3bc221f467ad68f34bcfcfead99bac0d78631e5ee07a0b6e7f",
+        "review_scope": "Full 149-line LIBERO PPO example; used as design starting point, not evidence of task compatibility.",
+        "evidence": "SELECTED_SOURCE_TEXT",
+        "runtime_verified": false
+      },
+      {
+        "repo": "RLinf/RLinf",
+        "commit": "5c415fa28bb25074fab68f0d09baa73d1b67c608",
+        "path": "rlinf/models/embodiment/openpi/pi0_config.py",
+        "url": "https://raw.githubusercontent.com/RLinf/RLinf/5c415fa28bb25074fab68f0d09baa73d1b67c608/rlinf/models/embodiment/openpi/pi0_config.py",
+        "sha256": "3f848a22de2bb5a458b25714880fd565d23bb30fc6831ceef1e336480b1321e1",
+        "review_scope": "Full 72-line config: 32D model, horizon50.",
+        "evidence": "SELECTED_SOURCE_TEXT",
+        "runtime_verified": false
+      },
+      {
+        "repo": "RLinf/RLinf",
+        "commit": "5c415fa28bb25074fab68f0d09baa73d1b67c608",
+        "path": "rlinf/models/embodiment/openpi/tasks/rl.py",
+        "url": "https://raw.githubusercontent.com/RLinf/RLinf/5c415fa28bb25074fab68f0d09baa73d1b67c608/rlinf/models/embodiment/openpi/tasks/rl.py",
+        "sha256": "f779834b551e7b0823b62f273594575918b825016253d4c41c4d09e71d047dc2",
+        "review_scope": "Selected lines178–230,276–320,422–452,475–520 and shape/logprob/value symbol search.",
+        "evidence": "SELECTED_SOURCE_TEXT",
+        "runtime_verified": false
+      },
+      {
+        "repo": "RLinf/RLinf",
+        "commit": "5c415fa28bb25074fab68f0d09baa73d1b67c608",
+        "path": "rlinf/models/embodiment/openpi/sampling/rl_sampler.py",
+        "url": "https://raw.githubusercontent.com/RLinf/RLinf/5c415fa28bb25074fab68f0d09baa73d1b67c608/rlinf/models/embodiment/openpi/sampling/rl_sampler.py",
+        "sha256": "e8ec916c5bcebab3bc2ecd6d043c5e859372c71f622c88a74b5e067a99c88086",
+        "review_scope": "Selected lines1–110 of sampler; remaining helper code not fully reviewed.",
+        "evidence": "SELECTED_SOURCE_TEXT",
+        "runtime_verified": false
+      },
+      {
+        "repo": "RLinf/RLinf",
+        "commit": "5c415fa28bb25074fab68f0d09baa73d1b67c608",
+        "path": "rlinf/models/embodiment/openpi/pi0.py",
+        "url": "https://raw.githubusercontent.com/RLinf/RLinf/5c415fa28bb25074fab68f0d09baa73d1b67c608/rlinf/models/embodiment/openpi/pi0.py",
+        "sha256": "b5d84d0669362a96d5bb4c5cbc4012d74ee8ecbbf6251abb9952f42fc017299d",
+        "review_scope": "Projection definitions and selected freeze_vlm lines849–919; not full model.",
+        "evidence": "SELECTED_SOURCE_TEXT",
+        "runtime_verified": false
+      },
+      {
+        "repo": "RLinf/RLinf",
+        "commit": "5c415fa28bb25074fab68f0d09baa73d1b67c608",
+        "path": "rlinf/models/embodiment/openpi/policies/franka_policy.py",
+        "url": "https://raw.githubusercontent.com/RLinf/RLinf/5c415fa28bb25074fab68f0d09baa73d1b67c608/rlinf/models/embodiment/openpi/policies/franka_policy.py",
+        "sha256": "4436b48d9c92c2a8d88a607675b367be22023e50e127761cff059374ce6a463c",
+        "review_scope": "Selected Franka input/output transforms, especially output_action_dim slicing; not full execution.",
+        "evidence": "SELECTED_SOURCE_TEXT",
+        "runtime_verified": false
+      },
+      {
+        "repo": "RLinf/RLinf",
+        "commit": "5c415fa28bb25074fab68f0d09baa73d1b67c608",
+        "path": "rlinf/models/embodiment/openpi/transforms/pipeline.py",
+        "url": "https://raw.githubusercontent.com/RLinf/RLinf/5c415fa28bb25074fab68f0d09baa73d1b67c608/rlinf/models/embodiment/openpi/transforms/pipeline.py",
+        "sha256": "890e9f3e72c49c12c42fbfea18879d02456c66f8b2507bf19d48c81e4f8e57ec",
+        "review_scope": "Full 107-line transform pipeline, normalizer fallback behavior.",
+        "evidence": "SELECTED_SOURCE_TEXT",
+        "runtime_verified": false
+      },
+      {
+        "repo": "RLinf/RLinf",
+        "commit": "5c415fa28bb25074fab68f0d09baa73d1b67c608",
+        "path": "rlinf/models/embodiment/openpi/env_io.py",
+        "url": "https://raw.githubusercontent.com/RLinf/RLinf/5c415fa28bb25074fab68f0d09baa73d1b67c608/rlinf/models/embodiment/openpi/env_io.py",
+        "sha256": "ba36371be49982fc921cb4bd1a1ec1e7a32f2c3f5eef084be59385f0155b86dc",
+        "review_scope": "Full 161-line env IO source.",
+        "evidence": "SELECTED_SOURCE_TEXT",
+        "runtime_verified": false
+      },
+      {
+        "repo": "RLinf/RLinf",
+        "commit": "5c415fa28bb25074fab68f0d09baa73d1b67c608",
+        "path": "rlinf/models/embodiment/openpi/__init__.py",
+        "url": "https://raw.githubusercontent.com/RLinf/RLinf/5c415fa28bb25074fab68f0d09baa73d1b67c608/rlinf/models/embodiment/openpi/__init__.py",
+        "sha256": "3d65069336b7fb3a056cbf8cd8f4f63404691414cbf8d2f959c1576b89054bc4",
+        "review_scope": "Fetched for discovery only; not used as fully reviewed factory/loader evidence.",
+        "evidence": "FETCHED_ONLY",
+        "runtime_verified": false
+      },
+      {
+        "repo": "RLinf/RLinf",
+        "commit": "5c415fa28bb25074fab68f0d09baa73d1b67c608",
+        "path": "docs/source-en/rst_source/examples/embodied/pi0.rst",
+        "url": "https://raw.githubusercontent.com/RLinf/RLinf/5c415fa28bb25074fab68f0d09baa73d1b67c608/docs/source-en/rst_source/examples/embodied/pi0.rst",
+        "sha256": "1072cfb971504b8d63126836e766aacda632f04a48b4ca469277af97ec147b2c",
+        "review_scope": "Selected model/checkpoint links and workflow text; not full 724-line documentation.",
+        "evidence": "SELECTED_SOURCE_TEXT",
+        "runtime_verified": false
+      },
+      {
+        "repo": "RLinf/RLinf",
+        "commit": "5c415fa28bb25074fab68f0d09baa73d1b67c608",
+        "path": "requirements/embodied/models/openpi.txt",
+        "url": "https://raw.githubusercontent.com/RLinf/RLinf/5c415fa28bb25074fab68f0d09baa73d1b67c608/requirements/embodied/models/openpi.txt",
+        "sha256": "cf56e25ee5820304d64d10ad6007a9732b5bdab72a84c4b79a2648e081e5450b",
+        "review_scope": "Full 7-line model requirements; not transitive dependency closure.",
+        "evidence": "SELECTED_SOURCE_TEXT",
+        "runtime_verified": false
+      },
+      {
+        "repo": "Michaelwyx/contactbench-sim",
+        "path": "packages/force-bench/src/force_bench/tasks/plug_insert_arm.py",
+        "commit": "ccd864501275112e369a71c91880adf2da28b536",
+        "url": "https://raw.githubusercontent.com/Michaelwyx/contactbench-sim/ccd864501275112e369a71c91880adf2da28b536/packages/force-bench/src/force_bench/tasks/plug_insert_arm.py",
+        "sha256": "55e94edeebf27631078388d56565b4a7549af229f96765c424a85824ae1818dd",
+        "review_scope": "N1 review reused; N2 selected lines335–365,585–619,811–839,930–1005,1190–1240 and gain/stabilizer symbol search.",
+        "evidence": "SELECTED_SOURCE_TEXT",
+        "runtime_verified": false,
+        "reuses_contact_n1": true
+      },
+      {
+        "repo": "Michaelwyx/contactbench-sim",
+        "commit": "ccd864501275112e369a71c91880adf2da28b536",
+        "path": "packages/force-bench/src/force_bench/appendix_tasks/plug_in_charger.py",
+        "url": "https://raw.githubusercontent.com/Michaelwyx/contactbench-sim/ccd864501275112e369a71c91880adf2da28b536/packages/force-bench/src/force_bench/appendix_tasks/plug_in_charger.py",
+        "sha256": "8778181d1c41c498f792627b3abe8b210f523c75c74c0d0c7ed49e01ab664d6c",
+        "review_scope": "N1 full 192-line review reused; no new runtime evidence.",
+        "evidence": "SELECTED_SOURCE_TEXT",
+        "runtime_verified": false,
+        "reuses_contact_n1": true
+      },
+      {
+        "repo": "Michaelwyx/contactbench-sim",
+        "commit": "ccd864501275112e369a71c91880adf2da28b536",
+        "path": "packages/force-bench/src/force_bench/appendix_tasks/plug_in_charger_blocks.py",
+        "url": "https://raw.githubusercontent.com/Michaelwyx/contactbench-sim/ccd864501275112e369a71c91880adf2da28b536/packages/force-bench/src/force_bench/appendix_tasks/plug_in_charger_blocks.py",
+        "sha256": "d16e306e6e586e0d59088a4a7e13864c46ea6fe59ab96083056e7a868c84870a",
+        "review_scope": "N1 selected configure/should_cut/ending/_press/criteria review reused.",
+        "evidence": "SELECTED_SOURCE_TEXT",
+        "runtime_verified": false,
+        "reuses_contact_n1": true
+      },
+      {
+        "repo": "Michaelwyx/contactbench-sim",
+        "commit": "ccd864501275112e369a71c91880adf2da28b536",
+        "path": "packages/force-bench/src/force_bench/rig.py",
+        "url": "https://raw.githubusercontent.com/Michaelwyx/contactbench-sim/ccd864501275112e369a71c91880adf2da28b536/packages/force-bench/src/force_bench/rig.py",
+        "sha256": "2beaa8c006f3fc3eae573566ccbdba4235f18ced69789a8b564550c9efbdd269",
+        "review_scope": "N1 selected review reused; N2 lines120–155,654–705,735–781 for sensor/IK/control timing.",
+        "evidence": "SELECTED_SOURCE_TEXT",
+        "runtime_verified": false,
+        "reuses_contact_n1": true
+      },
+      {
+        "repo": "RLinf/RLinf",
+        "commit": "5c415fa28bb25074fab68f0d09baa73d1b67c608",
+        "path": "rlinf/algorithms/losses.py",
+        "url": "https://raw.githubusercontent.com/RLinf/RLinf/5c415fa28bb25074fab68f0d09baa73d1b67c608/rlinf/algorithms/losses.py",
+        "sha256": "336f1d58361c8904aa0af8e304b76b97c443ee375259903817403551d8619bc1",
+        "review_scope": "Selected PPO ratio/logprob symbols and local sections around line302; not all losses.",
+        "evidence": "SELECTED_SOURCE_TEXT",
+        "runtime_verified": false
+      },
+      {
+        "repo": "RLinf/RLinf",
+        "commit": "5c415fa28bb25074fab68f0d09baa73d1b67c608",
+        "path": "rlinf/algorithms/utils.py",
+        "url": "https://raw.githubusercontent.com/RLinf/RLinf/5c415fa28bb25074fab68f0d09baa73d1b67c608/rlinf/algorithms/utils.py",
+        "sha256": "4855339686788eff6c6f4bee9d89fa1c5e5ee2f6c071deec091826b2d6f31a1a",
+        "review_scope": "Selected lines404–434 for action/chunk logprob aggregation.",
+        "evidence": "SELECTED_SOURCE_TEXT",
+        "runtime_verified": false
+      },
+      {
+        "repo": "newton-physics/newton",
+        "commit": "cca3bb8a17a3620a1343df3cf12c625e4161b317",
+        "path": "newton/_src/sensors/sensor_contact.py",
+        "url": "https://raw.githubusercontent.com/newton-physics/newton/v1.5.0/newton/_src/sensors/sensor_contact.py",
+        "sha256": "6ec9b973ed43cf96c6d6882b610f849a4627616dd2e60a586ace537d201fb803",
+        "review_scope": "Selected lines50–115,392–405,638–654,684–700: world-frame force, allocation and update(state,contacts).",
+        "evidence": "SELECTED_SOURCE_TEXT",
+        "runtime_verified": false,
+        "requested_ref": "v1.5.0",
+        "immutable_url": "https://raw.githubusercontent.com/newton-physics/newton/cca3bb8a17a3620a1343df3cf12c625e4161b317/newton/_src/sensors/sensor_contact.py"
+      },
+      {
+        "repo": "newton-physics/newton",
+        "commit": "cca3bb8a17a3620a1343df3cf12c625e4161b317",
+        "path": "newton/_src/solvers/mujoco/solver_mujoco.py",
+        "url": "https://raw.githubusercontent.com/newton-physics/newton/v1.5.0/newton/_src/solvers/mujoco/solver_mujoco.py",
+        "sha256": "cd4e7dae4b37d58539621b4d03bb9f5d4f6fd7f4a8822f0fac7e5eeb9cbaabfa",
+        "review_scope": "Selected lines4428–4469,4484–4525,7865–7926: JOINT_DOF_PROPERTIES synchronization, actuator gain/bias, constants/cache; not full solver.",
+        "evidence": "SELECTED_SOURCE_TEXT",
+        "runtime_verified": false,
+        "requested_ref": "v1.5.0",
+        "immutable_url": "https://raw.githubusercontent.com/newton-physics/newton/cca3bb8a17a3620a1343df3cf12c625e4161b317/newton/_src/solvers/mujoco/solver_mujoco.py"
+      }
+    ],
+    "additional_sources": [
+      {
+        "title": "CompliantVLA-adaptor",
+        "url": "https://arxiv.org/html/2601.15541v2",
+        "scope": "Selected sections III/IV: phase/gain scheduling, force rule and frequency hierarchy; N1 abstract review supplemented.",
+        "venue_boundary": "arXiv; no independently verified top-tier acceptance",
+        "implication": "Force-rule alternative required before learned-gain contribution claim."
+      },
+      {
+        "title": "πRL: Online RL Fine-tuning for Flow-based Vision-Language-Action Models",
+        "url": "https://arxiv.org/abs/2510.25889v3",
+        "scope": "Abstract only; implementation claims use pinned RLinf source.",
+        "venue_boundary": "arXiv evidence in this task; no new registry entry"
+      },
+      {
+        "title": "RLinf π0 workflow",
+        "url": "https://rlinf.readthedocs.io/en/latest/rst_source/examples/embodied/pi0.html",
+        "scope": "Official workflow and checkpoint discovery; pinned source supersedes changing latest docs."
+      },
+      {
+        "title": "Newton 1.5.0 ModelFlags",
+        "url": "https://newton-physics.github.io/newton/1.5.0/api/_generated/newton.ModelFlags.html",
+        "scope": "JOINT_DOF_PROPERTIES includes target gains; actual propagation traced in pinned solver source."
+      }
+    ],
+    "source_access_limits": [
+      "Versioned SensorContact web page retrieval failed; pinned 1.5.0 source used instead. Latest API not assumed compatible.",
+      "Full repo, dependency closure, payload licenses and native behavior were not verified."
+    ],
+    "checkpoint": {
+      "repo": "RLinf/RLinf-Pi0-LIBERO-Spatial-Object-Goal-SFT",
+      "url": "https://huggingface.co/RLinf/RLinf-Pi0-LIBERO-Spatial-Object-Goal-SFT/tree/4ec11623fba96e1432e535e2c76a634a5e0bdb96",
+      "revision": "4ec11623fba96e1432e535e2c76a634a5e0bdb96",
+      "file": "model.safetensors",
+      "bytes": 7011543960,
+      "remote_lfs_sha256": "66ac9332abc4a3f1c9ca15e5a80c5a44d4aecb343f0ab3de0c21da4ae2fe77f5",
+      "role": "initialization only; target ContactBench SFT required",
+      "public": true,
+      "gated": false,
+      "model_card_or_license_metadata_found": false,
+      "payload_downloaded": false,
+      "payload_hash_verified": false,
+      "target_checkpoint_or_normalizer_created": false,
+      "usage_terms_review_complete": false
+    },
+    "contract": {
+      "status": "PROPOSED_UNCALIBRATED_NOT_EXECUTABLE",
+      "question": "At equal simulation interaction cost and identical observations/action permissions, does executing a jointly RL-trained arm joint-stiffness multiplier improve resistance-shift insertion relative to motion-only VLA RL?",
+      "claim_boundary": [
+        "Not a new VLA+RL+compliance combination claim.",
+        "Not Cartesian directional impedance, wrist6D sensing, official full ContactBench metric or real-robot safety.",
+        "One insertion subset cannot establish VLA/language/generalist necessity."
+      ],
+      "task": {
+        "source": "Michaelwyx/contactbench-sim",
+        "commit": "ccd864501275112e369a71c91880adf2da28b536",
+        "row": "plug_in_charger_block1",
+        "robot": "FR3",
+        "scope": "insert, release and retreat; no scripted post-release push test",
+        "start": "pregrasped block near socket; exact valid reset pending",
+        "train_dev_spring_mm": 0.4,
+        "eval_spring_mm": [
+          0.4,
+          0.85
+        ],
+        "geometry": "block1 only",
+        "dynamics_boundary": "two measured-fit mechanism conditions, not verified block1 real transfer"
+      },
+      "model": {
+        "source": "RLinf/RLinf",
+        "commit": "5c415fa28bb25074fab68f0d09baa73d1b67c608",
+        "backend": "PyTorch openpi π0",
+        "pi05": false,
+        "model_action_dim": 32,
+        "action_env_dim": 8,
+        "action_horizon": 50,
+        "action_chunk": 1,
+        "num_steps": 4,
+        "noise_method": "flow_sde",
+        "noise_level": 0.5,
+        "joint_logprob": false,
+        "train_expert_only": true,
+        "detach_critic_input": true,
+        "trainable": "action expert + state/action projections + training-only critic",
+        "frozen": "VLM including vision/language backbone",
+        "surrogate": "selected denoising-step Gaussian logprob, chunk/action aggregation; not exact final physical-action marginal",
+        "custom_contact_dataconfig_and_transforms_implemented": false
+      },
+      "observations": {
+        "rgb": {
+          "shape": [
+            224,
+            224,
+            3
+          ],
+          "views": 1,
+          "camera": "base view fixed in world at nominal setup; no GT-follow camera",
+          "extrinsics_verified": false,
+          "other_image_slots_masked": true
+        },
+        "language": "Insert the charging block into the outlet, release it, and move the gripper away.",
+        "state_dim": 32,
+        "state_slices": {
+          "0:9": "actual robot q arm7+finger2",
+          "9:18": "actual qdot9",
+          "18:24": "current left/right fingertip resultant force3+3, base frame",
+          "24:30": "previous policy-boundary force6",
+          "30": "applied gain multiplier",
+          "31": "force history valid flag"
+        },
+        "force_clock": "60Hz raw; causal mean of preceding6 frames at 10Hz policy boundary; initial repeated current with valid0",
+        "force_normalization": "clip each component to ±100N then /100; retain raw for evaluation",
+        "q_qdot_normalization": "fixed asset limits, bound/units/hash artifact pending",
+        "gain_normalization": "[0.25,1] mapped to [-1,1]",
+        "actor_and_critic_exclusions": [
+          "object pose",
+          "insertion depth",
+          "spring label",
+          "expert phase",
+          "success flag"
+        ],
+        "counterpart_filter": "no task-object-specific filter for actor fingertip forces; environment-pair filtering only evaluator",
+        "source_hazard": "source observations after first18 robot entries contain privileged object poses; no direct array pass-through"
+      },
+      "action_and_control": {
+        "action8": [
+          "TCP base-frame translation3",
+          "TCP base-frame rotation-vector3",
+          "symmetric finger target1",
+          "arm gain request1"
+        ],
+        "policy_hz": 10,
+        "servo_hz": 60,
+        "physics_substeps": 24,
+        "nominal_physics_hz": 1440,
+        "target": "current measured TCP plus bounded delta; same IK and 60Hz interpolation across conditions",
+        "translation_norm_m_per_call": 0.002,
+        "rotation_norm_deg_per_call": 1,
+        "finger_target_m": [
+          0,
+          0.04
+        ],
+        "finger_change_m_per_call": 0.002,
+        "gain_range": [
+          0.25,
+          1
+        ],
+        "gain_rate_limit_per_call": 0.1,
+        "arm_kp": "12000*alpha",
+        "arm_kd": "900*sqrt(alpha)",
+        "finger_kp": 3000,
+        "finger_kd": 40,
+        "same_permissions": [
+          "open",
+          "regrasp",
+          "top press",
+          "retreat"
+        ],
+        "stabilizer": 0,
+        "TB_ARM_EFFORT": "unset",
+        "additional_weld": false,
+        "solver": "MuJoCo-Warp",
+        "iterations": 30,
+        "charger_impratio": 10,
+        "gain_sync": "update model.joint_target_ke/kd then solver.notify_model_changed(newton.ModelFlags.JOINT_DOF_PROPERTIES) at same point for both M/J; inspect actual mjw actuator gain/bias, cache/constants effect",
+        "entry_trim": "fixed source correction handled once, equal across conditions",
+        "collision_boundary": "retain source collision filters; not whole-hand contact generality",
+        "workspace_joint_effort_bounds": "pending asset/source linkage and native validation; no invented operational safety limits",
+        "gain_applied_or_timing_verified": false
+      },
+      "baselines": {
+        "S0": "common target SFT, fixed alpha0 selected on development condition before demonstrations",
+        "M": "motion RL, execute fixed alpha0; sample/log 8th gain coordinate but ignore it physically",
+        "J": "same RL and8D scoring, execute bounded gain request",
+        "R": "conditional mandatory if J shows benefit: train motion RL under force-rule gain, same observations/rate limits; no extra learned actor",
+        "R_rule": "clip(alpha0/(1+max(0,F_tip-10)/20),0.25,1), F_tip=max(norm(left_causal_force),norm(right_causal_force)) in N",
+        "R_rule_status": "proposed uncalibrated starting rule; development-only changes frozen before evaluation",
+        "gain_development_grid": [
+          0.25,
+          0.5,
+          1
+        ],
+        "gain_selection": "0.4mm dev only, then freeze before SFT collection; actual dev procedure/measurements pending",
+        "additional_if_J_wins": [
+          "7D-scoring motion-only RL to test unused-coordinate/shared-denoising effect",
+          "force-rule baseline R",
+          "fixed controller/speed tuning with equal tuning budget",
+          "separate slip/top-press strategy frequency",
+          "if data explanation remains, same train-only pooled data success-filtered / return-weighted imitation"
+        ],
+        "estimand": "difference between training procedures at equal total simulation interaction time, not same-data objective effect"
+      },
+      "data_and_budget": {
+        "reset_jitter": {
+          "fixture_xy_each_m": [
+            -0.0005,
+            0.0005
+          ],
+          "fixture_yaw_deg": [
+            -1,
+            1
+          ],
+          "collision_free_validated": false
+        },
+        "train_demo_seed_ids": [
+          0,
+          63
+        ],
+        "dev_seed_ids": [
+          1000,
+          1031
+        ],
+        "eval_seed_ids": [
+          2000,
+          2031
+        ],
+        "seed_ranges_inclusive": true,
+        "split_boundary": "IDs reserved only; generated initial states/assets require hash duplicate/independence checks",
+        "demo_attempt_cap": 64,
+        "demo_policy": "successful scripted train demonstrations with actual fixed alpha0; retain all failed attempts and costs; no inferred variable-gain labels",
+        "target_data_created": false,
+        "sft": "10Hz labels horizon50 with valid-episode-timestep and8D loss masks; implementation pending",
+        "pilot_rl_seeds": [
+          11,
+          22,
+          33
+        ],
+        "pilot_simulated_seconds_per_seed_per_M_or_J": 960,
+        "cost_includes": [
+          "resets",
+          "pre-roll",
+          "failed episodes",
+          "post-release observation",
+          "controller physics"
+        ],
+        "evaluation_initial_conditions": 32,
+        "evaluation_springs_mm": [
+          0.4,
+          0.85
+        ],
+        "same_initial_conditions_across_methods": true,
+        "evaluation_policy": "predeclared final checkpoint, no OOD tuning; terminal/reset failures retained; actual checkpoints not created",
+        "sft_collection_and_dev_costs": "reported separately, shared SFT for M/J; not erased from end-to-end cost",
+        "future_pilot_execution_authorized_by_this_contract": false
+      },
+      "rl_defaults": {
+        "gamma": 0.99,
+        "gae_lambda": 0.95,
+        "ppo_clip": 0.2,
+        "actor_lr": 5e-06,
+        "critic_lr": 0.0001,
+        "status": "example-derived uncalibrated starting design, not measured task performance"
+      },
+      "reward": {
+        "status": "PROPOSED_UNCALIBRATED; implementation and units tests pending Docker stage",
+        "phi": "clip(insertion_depth/seat_depth,0,1); absorbing terminal potential=0",
+        "formula": "r_t = gamma*phi_next - phi_current + I(geometric_success_terminal) - 0.1*dt*mean_substep(max(0,(F_env-40)/40)^2) - 0.005*dt - I(physical_guard_failure_terminal)",
+        "dt_seconds": 0.1,
+        "gamma": 0.99,
+        "force_reference_N": 40,
+        "force_sample_requirement": "substep force acquisition must be validated; otherwise revise and freeze before learning",
+        "success_vs_force": "terminal success bonus uses geometry; force-constrained success is separately evaluated",
+        "physical_guard": "workspace/joint/physics integrity failure under common predeclared adapter bounds; exact bounds/flags pending P0",
+        "invalid_numerics": "log as invalid feasibility failure, do not silently train or count as policy result",
+        "termination": "task deadline is finite-horizon failure terminal; external budget/collector cutoff is incomplete with explicit bootstrap handling",
+        "privileged_reward_only": [
+          "depth",
+          "object/fixture contact pairs",
+          "geometric success"
+        ],
+        "no_claim": "not a novel reward or proven safe controller"
+      },
+      "evaluation": {
+        "policy_deadline_seconds": 15,
+        "post_release_seconds": 0.5,
+        "post_release_control": "hold last command without new policy action; include force/recontact/physics cost",
+        "geometric_success": {
+          "seat_gap_m_max": 0.0005,
+          "hand_contact": "none",
+          "hand_retreat_m_min": 0.04,
+          "post_release_depth_change_m_max": 0.0005
+        },
+        "primary": "J-M success-rate difference with geometric success, deadline and sampled max environment contact force<=40N",
+        "F_env": "norm of vector sum of object/fixture contact pair forces, excluding gripper pinch",
+        "force_budgets_N": [
+          20,
+          40,
+          60
+        ],
+        "secondary": [
+          "unconstrained geometric success",
+          "sampled peak force",
+          "excess-force integral",
+          "individual normal contact forces and penetration for cancellation sensitivity",
+          "completion time",
+          "slip and top-press frequency",
+          "actuator saturation",
+          "invalid/reset/retry counts",
+          "GPU and wallclock cost"
+        ],
+        "sample_rate_caveat": "60Hz logs are not continuous-time peaks; planned substep path remains unverified",
+        "statistical_unit": "RL seed with paired evaluation initial states; seedwise means/distributions, no precision claim from3 seeds",
+        "limitations": [
+          "one common SFT seed",
+          "one block/fixture task",
+          "two spring fits",
+          "ideal fingertip forces",
+          "no real robot validation"
+        ],
+        "interest_effect_ood_percentage_points": 10,
+        "maximum_id_drop_of_interest_percentage_points": 5,
+        "thresholds_power_validated": false
+      },
+      "next_p0": {
+        "task": "GAP-CONTACT-RL-P0-PREP",
+        "phase": "P0-A sensor/controller only",
+        "local_environment_check_required": true,
+        "current_environment_rechecked": false,
+        "if_supported": "prepare Docker recipe/adapter/launcher then execute bounded P0-A",
+        "otherwise": "record current failure and prepare portable Docker artifacts for another chosen local computer",
+        "task_condition": "nominal block1 spring0.4 dev state1",
+        "max_resets": 2,
+        "max_control_frames": 120,
+        "max_physics_steps": 6000,
+        "max_process_minutes": 30,
+        "include_preroll_in_limits": true,
+        "vla_queries": 0,
+        "weight_downloads": 0,
+        "optimizer_updates": 0,
+        "gain_probe_values": [
+          0.5,
+          1
+        ],
+        "checks": [
+          "actual MuJoCo actuator gain/bias follows arm request",
+          "fingers/effort/stabilizer fixed",
+          "force/RGB/q/qd clocks align",
+          "actor/evaluator input split",
+          "substep force support and contact buffer integrity"
+        ],
+        "success_meaning": "sensor/controller plumbing only, not task competence or policy improvement",
+        "launcher_recipe_adapter_implemented": false
+      }
+    },
+    "environment": {
+      "contactbench_python": ">=3.10; upstream example3.12",
+      "python_and_base_digest_selected": false,
+      "newton_version": "1.5.0",
+      "newton_commit": "cca3bb8a17a3620a1343df3cf12c625e4161b317",
+      "warp_lang": "1.16.0",
+      "mujoco_warp": "3.11.0",
+      "mujoco": "3.11.0",
+      "deployment": "selected computer local Linux/NVIDIA Docker; all packages/weights/assets inside container/volumes",
+      "transitive_lock_or_native_build_verified": false,
+      "GPU_memory_requirement_measured": false,
+      "FR3_asset_revision_hash_verified": false
+    },
+    "interpretation": [
+      "A bounded controlled contact comparison is worth exploring; no method GO or guaranteed publication.",
+      "Known variable-impedance/contact RL and VLA force conditioning preclude broad novelty claims.",
+      "If simple gain/speed/force rules explain benefit, narrow or drop learned-gain necessity claim.",
+      "Grasp/top-press strategy effects must not be called stiffness-learning effects without further comparison.",
+      "Resources and implementation missing do not refute hypothesis; existing HOLD/NO-GO gates unchanged."
+    ],
+    "preservation": {
+      "new_paper_registration": false,
+      "reading_status_changes": false,
+      "existing_hold_or_no_go_reopened": false,
+      "host_packages_installed": false,
+      "pdf_or_weight_or_mesh_payload_downloads": false,
+      "new_container_or_image_created": false,
+      "source_text_http_reads_only": true
+    },
+    "validation": {
+      "pre_audit": {
+        "papers": 1161,
+        "standard_note_files": 5805,
+        "markdown_files_checked": 6027,
+        "markdown_links_checked": 12817,
+        "comparison_matrix_rows": 106,
+        "completed_matrix_rows": 5,
+        "errors": [],
+        "warnings": []
+      },
+      "post_audit": {
+        "command": "python3 -B work/scripts/audit_repository.py",
+        "exit_code": 0,
+        "papers": 1161,
+        "categories": 23,
+        "tier_counts": {
+          "CORE": 47,
+          "NEXT": 372,
+          "REFERENCE": 500,
+          "ARCHIVE": 242
+        },
+        "intensive": 419,
+        "inactive_reading_history": 47,
+        "standard_note_files": 5805,
+        "combined_resources": 631,
+        "registry_index_rows": 1161,
+        "markdown_files_checked": 6027,
+        "markdown_links_checked": 12822,
+        "comparison_matrix_rows": 106,
+        "completed_matrix_rows": 5,
+        "errors": [],
+        "warnings": []
+      },
+      "preservation_check": {
+        "method": "SHA256 against task-start snapshot; staged binary diff comparison",
+        "canonical_files_unchanged": [
+          "PAPER.md",
+          "AGENTS.md",
+          "work/sources/papers.json",
+          "work/sources/registry_meta.json",
+          "research/READING_PLAN.md",
+          "research/READING_TIERS.csv",
+          "research/READING_STATUS.csv",
+          "research/READING_STATUS_HISTORY.csv"
+        ],
+        "standard_notes_unchanged": 5805,
+        "staged_patch_preserved": true,
+        "experiment_artifacts_changed": false,
+        "changed_files": [
+          "README.md",
+          "TODO.md",
+          "synthesis/03_manipulation_contact.md",
+          "work/research_topics/README.md",
+          "work/research_topics/contact_adaptation/내용/README.md",
+          "work/research_topics/contact_adaptation/재현 방법/README.md",
+          "work/sources/vla_rl_additional_gaps_2026-11-09.json",
+          "work/update/README.md",
+          "work/update/VLA_RL_ADDITIONAL_GAPS_2026-11-09.md"
+        ],
+        "added_files": [],
+        "deleted_files": []
+      },
+      "required_generator": {
+        "py_compile_exit_code": 0,
+        "build_reading_tiers_exit_code": 0,
+        "git_diff_check_exit_code": 0,
+        "tier_counts": {
+          "CORE": 47,
+          "NEXT": 372,
+          "REFERENCE": 500,
+          "ARCHIVE": 242
+        },
+        "tier_membership_changed": false
+      }
+    }
+  },
+  "contact_p0_prep": {
+    "task": "GAP-CONTACT-RL-P0-PREP",
+    "checked_on": "2026-11-09",
+    "decision": "PREPARED_NATIVE_UNVERIFIED; LOCAL_NVIDIA_ALLOCATION_FAILED",
+    "evidence_maturity": "CURATION-HYPOTHESIS",
+    "report": "work/research_topics/contact_adaptation/재현 방법/README.md#preparation-history",
+    "runtime_plan": "work/research_topics/contact_adaptation/재현 방법/P0_PLAN.json",
+    "actual_record": "work/research_topics/contact_adaptation/재현 방법/preparation_2026-11-09.json",
+    "source_files": [
+      {
+        "repo": "Michaelwyx/contactbench-sim",
+        "commit": "ccd864501275112e369a71c91880adf2da28b536",
+        "path": "README.md",
+        "url": "https://raw.githubusercontent.com/Michaelwyx/contactbench-sim/ccd864501275112e369a71c91880adf2da28b536/README.md",
+        "sha256": "0ede9a2cf8f9969f8a48c80382845012ca9f0f4bc88a335b7cc2b3a96f274240",
+        "review_scope": "Official dependency/workflow discovery; not full README audit."
+      },
+      {
+        "repo": "Michaelwyx/contactbench-sim",
+        "commit": "ccd864501275112e369a71c91880adf2da28b536",
+        "path": "pyproject.toml",
+        "url": "https://raw.githubusercontent.com/Michaelwyx/contactbench-sim/ccd864501275112e369a71c91880adf2da28b536/pyproject.toml",
+        "sha256": "077a67d5c34eb01fda5de107c97d1920f92cb4a3218ad21799c98c7c31425806",
+        "review_scope": "Selected implementation sections: dependencies, variant configure/interception, renderer, paths, asset download pin or actuator synchronization; not full repo review."
+      },
+      {
+        "repo": "Michaelwyx/contactbench-sim",
+        "commit": "ccd864501275112e369a71c91880adf2da28b536",
+        "path": "packages/force-bench/pyproject.toml",
+        "url": "https://raw.githubusercontent.com/Michaelwyx/contactbench-sim/ccd864501275112e369a71c91880adf2da28b536/packages/force-bench/pyproject.toml",
+        "sha256": "4730671f7bcba7d65932297b2cfa4da12dabd21b728e33d5292961ffedded057",
+        "review_scope": "Selected implementation sections: dependencies, variant configure/interception, renderer, paths, asset download pin or actuator synchronization; not full repo review."
+      },
+      {
+        "repo": "Michaelwyx/contactbench-sim",
+        "commit": "ccd864501275112e369a71c91880adf2da28b536",
+        "path": "packages/force-bench/src/force_bench/appendix_tasks/derive.py",
+        "url": "https://raw.githubusercontent.com/Michaelwyx/contactbench-sim/ccd864501275112e369a71c91880adf2da28b536/packages/force-bench/src/force_bench/appendix_tasks/derive.py",
+        "sha256": "88fb0f7d5c156c3afce22d58a030badd9e558b98370fcd5e264394932532f9a5",
+        "review_scope": "Selected implementation sections: dependencies, variant configure/interception, renderer, paths, asset download pin or actuator synchronization; not full repo review."
+      },
+      {
+        "repo": "Michaelwyx/contactbench-sim",
+        "commit": "ccd864501275112e369a71c91880adf2da28b536",
+        "path": "packages/force-bench/src/force_bench/recorder.py",
+        "url": "https://raw.githubusercontent.com/Michaelwyx/contactbench-sim/ccd864501275112e369a71c91880adf2da28b536/packages/force-bench/src/force_bench/recorder.py",
+        "sha256": "8adce51c7741c13c9f1dbb8c74f43322b2b309637e0b3ccc2ad60ac34a9744a9",
+        "review_scope": "Selected implementation sections: dependencies, variant configure/interception, renderer, paths, asset download pin or actuator synchronization; not full repo review."
+      },
+      {
+        "repo": "Michaelwyx/contactbench-sim",
+        "commit": "ccd864501275112e369a71c91880adf2da28b536",
+        "path": "packages/force-bench/src/force_bench/paths.py",
+        "url": "https://raw.githubusercontent.com/Michaelwyx/contactbench-sim/ccd864501275112e369a71c91880adf2da28b536/packages/force-bench/src/force_bench/paths.py",
+        "sha256": "b6a42ddae5fee24c6d1e791d6366e45cbfbf65780768b4674d470be28672e8c8",
+        "review_scope": "Selected implementation sections: dependencies, variant configure/interception, renderer, paths, asset download pin or actuator synchronization; not full repo review."
+      },
+      {
+        "repo": "Michaelwyx/contactbench-sim",
+        "commit": "ccd864501275112e369a71c91880adf2da28b536",
+        "path": "packages/force-bench/src/force_bench/appendix_tasks/common.py",
+        "url": "https://raw.githubusercontent.com/Michaelwyx/contactbench-sim/ccd864501275112e369a71c91880adf2da28b536/packages/force-bench/src/force_bench/appendix_tasks/common.py",
+        "sha256": "fdced50f2d2904328aae174192c44723c04851f65df4e08edb40ebc92f78fe21",
+        "review_scope": "Selected implementation sections: dependencies, variant configure/interception, renderer, paths, asset download pin or actuator synchronization; not full repo review."
+      },
+      {
+        "repo": "newton-physics/newton",
+        "commit": "cca3bb8a17a3620a1343df3cf12c625e4161b317",
+        "path": "newton/_src/utils/download_assets.py",
+        "url": "https://raw.githubusercontent.com/newton-physics/newton/cca3bb8a17a3620a1343df3cf12c625e4161b317/newton/_src/utils/download_assets.py",
+        "sha256": "c3e3686ae7fb7faed51e7298d97435858e24ac8c109abd44463da6813e0c7335",
+        "review_scope": "Selected implementation sections: dependencies, variant configure/interception, renderer, paths, asset download pin or actuator synchronization; not full repo review."
+      },
+      {
+        "repo": "NVIDIA/warp",
+        "commit": "v1.16.0",
+        "path": "README.md",
+        "url": "https://raw.githubusercontent.com/NVIDIA/warp/v1.16.0/README.md",
+        "sha256": "9de5bcc66060665b82293677eec1dca3be3ada5f3b234d53e019058690651efd",
+        "review_scope": "Official dependency/workflow discovery; not full README audit."
+      },
+      {
+        "repo": "newton-physics/newton",
+        "commit": "cca3bb8a17a3620a1343df3cf12c625e4161b317",
+        "path": "newton/_src/solvers/mujoco/kernels.py",
+        "url": "https://raw.githubusercontent.com/newton-physics/newton/cca3bb8a17a3620a1343df3cf12c625e4161b317/newton/_src/solvers/mujoco/kernels.py",
+        "sha256": "87baf9f83ffd1961314c478d6c490e27ba163a83a3ccf8e92a00864a5a67c33f",
+        "review_scope": "Selected implementation sections: dependencies, variant configure/interception, renderer, paths, asset download pin or actuator synchronization; not full repo review."
+      }
+    ],
+    "additional_source_boundary": "N1/N2 pinned ContactBench and Newton source reused; new source text reads only. No third-party source files executed on host.",
+    "official_requirements_sources": [
+      "https://newton-physics.github.io/newton/1.5.0/guide/installation.html",
+      "https://newton-physics.github.io/newton/1.5.0/guide/compatibility.html"
+    ],
+    "fr3_identity": {
+      "repo": "newton-physics/newton-assets",
+      "commit": "261cd1f429619d8ef4f546bd788ab9dea906b5e1",
+      "tree_url": "https://api.github.com/repos/newton-physics/newton-assets/git/trees/261cd1f429619d8ef4f546bd788ab9dea906b5e1?recursive=1",
+      "urdf_git_blob": "f83729bad0c92a8c0c4a9526f6535450fae4c887",
+      "payload_read_or_downloaded": false
+    },
+    "counts": {
+      "native_image_build": 0,
+      "native_physics_steps": 0,
+      "vla_queries": 0,
+      "optimizer_updates": 0,
+      "weight_or_mesh_downloads": 0,
+      "docker_stdlib_tests_passed": 16
+    },
+    "preservation": {
+      "new_papers_registered": 0,
+      "reading_status_changes": false,
+      "old_hold_no_go_reopened": false,
+      "host_packages_installed": false,
+      "temporary_docker_python_image_removed": true,
+      "task_containers_remaining": 0,
+      "preexisting_user_image_preserved": true,
+      "native_image_or_cache_volume_created": false
+    },
+    "validation": {
+      "pre_audit": {
+        "papers": 1161,
+        "standard_note_files": 5805,
+        "markdown_files_checked": 6027,
+        "markdown_links_checked": 12822,
+        "errors": [],
+        "warnings": []
+      },
+      "post_audit": {
+        "command": "python3 -B work/scripts/audit_repository.py",
+        "exit_code": 0,
+        "papers": 1161,
+        "categories": 23,
+        "tier_counts": {
+          "CORE": 47,
+          "NEXT": 372,
+          "REFERENCE": 500,
+          "ARCHIVE": 242
+        },
+        "intensive": 419,
+        "inactive_reading_history": 47,
+        "standard_note_files": 5805,
+        "combined_resources": 631,
+        "registry_index_rows": 1161,
+        "markdown_files_checked": 6027,
+        "markdown_links_checked": 12837,
+        "comparison_matrix_rows": 106,
+        "completed_matrix_rows": 5,
+        "errors": [],
+        "warnings": []
+      },
+      "preservation_check": {
+        "canonical_files_unchanged": [
+          "PAPER.md",
+          "AGENTS.md",
+          "work/sources/papers.json",
+          "work/sources/registry_meta.json",
+          "research/READING_PLAN.md",
+          "research/READING_TIERS.csv",
+          "research/READING_STATUS.csv",
+          "research/READING_STATUS_HISTORY.csv"
+        ],
+        "standard_notes_unchanged": 5805,
+        "staged_patch_preserved": true,
+        "changed_files": [
+          ".gitignore",
+          "README.md",
+          "TODO.md",
+          "synthesis/03_manipulation_contact.md",
+          "work/research_topics/README.md",
+          "work/research_topics/contact_adaptation/내용/README.md",
+          "work/research_topics/contact_adaptation/재현 방법/README.md",
+          "work/sources/vla_rl_additional_gaps_2026-11-09.json",
+          "work/update/README.md",
+          "work/update/VLA_RL_ADDITIONAL_GAPS_2026-11-09.md"
+        ],
+        "added_files": [
+          "work/research_topics/contact_adaptation/재현 방법/.dockerignore",
+          "work/research_topics/contact_adaptation/재현 방법/Dockerfile",
+          "work/research_topics/contact_adaptation/재현 방법/P0_PLAN.json",
+          "work/research_topics/contact_adaptation/재현 방법/preparation_2026-11-09.json",
+          "work/research_topics/contact_adaptation/재현 방법/probe.py",
+          "work/research_topics/contact_adaptation/재현 방법/run.py",
+          "work/research_topics/contact_adaptation/재현 방법/test_p0.py"
+        ],
+        "deleted_files": [],
+        "packet_files_match_tested_and_check_fingerprint": true
+      },
+      "required_generator": {
+        "py_compile_exit_code": 0,
+        "build_reading_tiers_exit_code": 0,
+        "git_diff_check_exit_code": 0
+      }
+    }
+  }
+}

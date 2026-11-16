@@ -1,0 +1,294 @@
+{
+  "schema_version": "1.0",
+  "work_id": "GAP-FEEDBACK-P0-PREP",
+  "updated_on": "2026-11-06",
+  "status": "DRAFT_PREPARED_RESOURCE_UNMET_NATIVE_UNVERIFIED",
+  "executable_on_current_machine": false,
+  "contract": {
+    "purpose": "Single-scene action IO and observation timing qualification, not success-rate or training comparison",
+    "seed": 0,
+    "episode_id": 0,
+    "task_id": "PutOnPlateInScene25PositionChangeTo-v1",
+    "task_class": "PutOnPlateInScene25PositionChange",
+    "split": "test (native event enabled); development only",
+    "selection": "episode ID 0 chosen before any native result; index ordering pinned by task assets",
+    "models": [
+      "rl"
+    ],
+    "action_shape": [
+      1,
+      7
+    ],
+    "control_mode": "arm_pd_ee_target_delta_pose_align2_gripper_pd_joint_pos",
+    "control_hz": 5,
+    "physics_hz": 500,
+    "neutral_command": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1
+    ],
+    "caps": {
+      "resets": 2,
+      "queries": 3,
+      "control_steps": 6,
+      "events": 1,
+      "physics_steps": 2000
+    },
+    "budget_boundary": "Two resets include constructor reset; physics count covers ManiSkillScene.step calls including settling, not solver internal iterations or wall time. Expected upper bound from reviewed code 1950; fail at 2000 without extension.",
+    "schedule": [
+      "Constructor reset and explicit seed-0/episode-0 reset; both budgeted",
+      "Five neutral environment commands; save RGB/state at control step 4 and post-event step 5",
+      "Repeat evaluate at step 5 through cache, assert state and physics counts unchanged",
+      "At unchanged post-event state, query stale step-4 RGB, fresh step-5 RGB and repeat fresh; three greedy queries",
+      "Execute fresh command exactly once to reach step 6; stop regardless of task success"
+    ],
+    "decode": "Greedy do_sample=false; original RL4VLA default temperature 0.6 evaluation is NOT reproduced",
+    "attention": "eager (explicit diagnostic deviation from upstream flash_attention_2); BF16, no quantization/MPS/CPU fallback",
+    "metrics": [
+      "shape/finite command",
+      "actor missing/unexpected keys",
+      "RGB hashes and control timestamps",
+      "repeat fresh token equality",
+      "fresh-minus-stale environment command (sensitivity only)",
+      "attempted resets/queries/control/physics/event counts"
+    ],
+    "reject_rules": [
+      "Dependency/asset/load/renderer failure => technical failure, no research conclusion",
+      "Event not observed or observer re-entry mutates state => fixture not qualified",
+      "Repeated greedy tokens differ => qualify determinism before interpreting image sensitivity",
+      "Zero fresh-stale action difference is recorded, not a reason to increase perturbation or switch task",
+      "No training, success sweep, SFT/warmup auto-download or automatic retry"
+    ],
+    "training": false,
+    "success_rate_measured": false,
+    "full_state_branch_restore_in_scope": false,
+    "state_boundary": "P0 captures physical/controller/task diagnostic state and asserts inference does not mutate it. It does not restore state or estimate four-cell rollout interactions."
+  },
+  "sources": {
+    "rl4vla_repo": "https://github.com/gen-robot/RL4VLA",
+    "rl4vla_revision": "de46e0174e7ac310255a2836718fcefab28b8963",
+    "checkpoint": {
+      "repo": "gen-robot/openvla-7b-rlvla-rl",
+      "revision": "93c54b036cc90ee394731fc73788406d7e65f057",
+      "normalizer_key": "bridge_orig",
+      "normalizer_stats": {
+        "q01": [
+          -0.02872725307941437,
+          -0.04170349963009357,
+          -0.026093858778476715,
+          -0.08092105075716972,
+          -0.09288699507713317,
+          -0.20718276381492615,
+          0.0
+        ],
+        "q99": [
+          0.028309678435325586,
+          0.040855254605412394,
+          0.040161586627364146,
+          0.08192047759890528,
+          0.07792850524187081,
+          0.20382574498653397,
+          1.0
+        ],
+        "mask": [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          false
+        ]
+      },
+      "metadata_sha256": {
+        "README.md": "745c905bd381a449904a9fe7f7f9919927543220ed4094c0dfdabccd77dc4fe5",
+        "config.json": "f7350f634baff49e3ad6f00bfc1fb7b3fcbeefaf0afad25252765b0aea9c2536",
+        "dataset_statistics.json": "e73373edb89bc2a873ca174869d8f4bf66d5f0b05ce6e6c789ae21672e55e12f",
+        "preprocessor_config.json": "52ca6dd7fb31a2757658f94775b659553bc3532ab04babef02779387b3dec214"
+      },
+      "files": [
+        {
+          "path": "config.json",
+          "size": 60792,
+          "hash_algorithm": "sha1",
+          "hash": "1bd9a763e4c9a3fd2ac851d291483e17b4676e8e"
+        },
+        {
+          "path": "dataset_statistics.json",
+          "size": 29791,
+          "hash_algorithm": "sha1",
+          "hash": "6b993bcbd66e3b91dc9205b0e0fd6ec81dcfdd37"
+        },
+        {
+          "path": "generation_config.json",
+          "size": 136,
+          "hash_algorithm": "sha1",
+          "hash": "2cefc1e51e6ccfe846d2b509ced403df73a8efe2"
+        },
+        {
+          "path": "model-00001-of-00004.safetensors",
+          "size": 4925122448,
+          "hash_algorithm": "sha256",
+          "hash": "af8b56a254e9c005e094b4866518cfd2fe8ee459a05ab3573bd7ee39ea91d178"
+        },
+        {
+          "path": "model-00002-of-00004.safetensors",
+          "size": 4947392496,
+          "hash_algorithm": "sha256",
+          "hash": "c4d6993dae3a72b837ddde6d9dd99fe6c5c1a4a12883a0fbb6456e6c46d51f24"
+        },
+        {
+          "path": "model-00003-of-00004.safetensors",
+          "size": 4947417456,
+          "hash_algorithm": "sha256",
+          "hash": "0cee8071eb6a5467b0a879193db2f88223440b0ccade32a02bd4611a594f1479"
+        },
+        {
+          "path": "model-00004-of-00004.safetensors",
+          "size": 262668432,
+          "hash_algorithm": "sha256",
+          "hash": "fa3c7973f18da6987859b8f7d14efaece7ec846d49851e6e5e0640b67ea9f310"
+        },
+        {
+          "path": "model.safetensors.index.json",
+          "size": 94764,
+          "hash_algorithm": "sha1",
+          "hash": "bd7cc8ff8070ead248023feae55303f5a3b900d1"
+        },
+        {
+          "path": "preprocessor_config.json",
+          "size": 1690,
+          "hash_algorithm": "sha1",
+          "hash": "c804c0dfcb9655fe2933d2fe20ec3a210068bb82"
+        },
+        {
+          "path": "special_tokens_map.json",
+          "size": 552,
+          "hash_algorithm": "sha1",
+          "hash": "ab75c8e0a22550f0667501a0c52758f071a9efd8"
+        },
+        {
+          "path": "tokenizer.json",
+          "size": 1842976,
+          "hash_algorithm": "sha1",
+          "hash": "591f1fc6ff695d967513100f707e66d5bf731414"
+        },
+        {
+          "path": "tokenizer.model",
+          "size": 499723,
+          "hash_algorithm": "sha256",
+          "hash": "9e556afd44213b6bd1be2b850ebbbd98f5481437a8021afaf58ee7fb1818d347"
+        },
+        {
+          "path": "tokenizer_config.json",
+          "size": 1212,
+          "hash_algorithm": "sha1",
+          "hash": "7566269cef6fd7301700397bcc988fcab8ca0e52"
+        }
+      ],
+      "published_weight_hashes_are_not_local_verification": true,
+      "loader": "Copied standalone configuration/modeling/processing_prismatic from pinned RL4VLA; explicit classes, no HF remote code",
+      "value_head": "Released index has no value_head keys. Only missing value_head.* allowed; critic output unused; no PEFT wrapper/training."
+    },
+    "bridge_asset": {
+      "repo": "haosulab/ManiSkill_bridge_v2_real2sim",
+      "revision": "b5a8f9ba26355ae73758971189e5cdb68f4dad76",
+      "url": "https://huggingface.co/datasets/haosulab/ManiSkill_bridge_v2_real2sim/resolve/b5a8f9ba26355ae73758971189e5cdb68f4dad76/bridge_v2_real2sim_dataset.zip",
+      "size": 81962479,
+      "hash_algorithm": "sha256",
+      "hash": "618512a205b4528cafecdad14b1788ed1130879f3064deb406516ed5b9c5ba92"
+    },
+    "robot_asset": {
+      "repo": "https://github.com/haosulab/ManiSkill-WidowX250S",
+      "original_tag": "v0.2.0",
+      "revision": "6a12bb745d964aab9fc897f0999cad53aa29000c",
+      "target": "/opt/feedback/widowx; linked inside named cache volume"
+    },
+    "task_assets": "Pinned RL4VLA/ManiSkill/mani_skill/assets/carrot including more_carrot/more_plate/more_table; not host data",
+    "source_review": "work/update/INTEGRATED_GAP_REVIEW_2026-11-05.md#integrated-n2",
+    "interfaces": [
+      "SimplerEnv/simpler_env/env/simpler_wrapper.py",
+      "ManiSkill/mani_skill/envs/tasks/digital_twins/bridge_dataset_eval/put_on_in_scene_multi.py",
+      "ManiSkill/mani_skill/envs/sapien_env.py",
+      "ManiSkill/mani_skill/envs/scene.py",
+      "ManiSkill/mani_skill/utils/assets/data.py",
+      "openvla/prismatic/extern/hf/processing_prismatic.py",
+      "openvla/prismatic/extern/hf/modeling_prismatic.py"
+    ]
+  },
+  "environment": {
+    "host_target": "Local Linux x86-64 with NVIDIA GPU and Docker Engine/NVIDIA Container Toolkit",
+    "driver_target_min": "530.30.02 (CUDA 12.1 GA selected target, not universal minor-compatibility minimum)",
+    "gpu_recommended": "Native BF16 Ampere-or-newer, 24 GiB or more; single actor plus renderer peak remains unmeasured",
+    "host_ram_recommended_gib": 32,
+    "disk_free_recommended_gib": 80,
+    "base_image": "nvidia/cuda@sha256:a7d949f17fcdfcd56763aa66a7b91c17775a0e1e9d268421b53be3ae2d0e55af",
+    "base_original_tag": "12.1.0-runtime-ubuntu22.04",
+    "python": "3.10",
+    "torch": "2.2.0+cu121",
+    "torchvision": "0.17.0",
+    "mani_skill": "3.0.0b20 vendored fork",
+    "sapien": "3.0.0b1",
+    "transformers": "4.40.1",
+    "dependency_lock_status": "Direct pins only; resolved-packages.txt/dpkg list generated only upon native image build",
+    "cache": "Docker named volume paper-feedback-p0-<packet hash>, never a host package/weight/asset directory",
+    "results": "User-selected repository-relative results directory mounted as /results",
+    "network": "prepare only; p0 network none and offline HF",
+    "authorities": [
+      "https://docs.nvidia.com/cuda/archive/12.1.0/cuda-toolkit-release-notes/index.html",
+      "https://docs.docker.com/engine/containers/resource_constraints/#gpu",
+      "https://github.com/gen-robot/RL4VLA/blob/de46e0174e7ac310255a2836718fcefab28b8963/README.md"
+    ]
+  },
+  "validation": {
+    "native_verified": false,
+    "image_built": false,
+    "cuda_vulkan_verified": false,
+    "weights_downloaded": false,
+    "assets_downloaded": false,
+    "full_state_restore_verified": false,
+    "control_tests": {
+      "passed": 9,
+      "scope": "Existing ARM64 Docker CPU image; guard/cache/path checks only, no inference or simulation",
+      "result": "results/2026-11-06-control-tests/tests.json"
+    },
+    "local_check": {
+      "decision": "RESOURCE_UNMET",
+      "exit_code": 3,
+      "host": "Darwin arm64 / 16 GiB RAM",
+      "daemon": "local Unix socket / Linux aarch64 / 8218034176 bytes RAM / no NVIDIA runtime",
+      "result": "results/2026-11-06-local/local_check.json",
+      "gpu_allocation_attempted": false,
+      "reason": "Architecture/host target rejected before native build, pull or payload download"
+    },
+    "remote_clone_verified": false,
+    "repository_validation": {
+      "date": "2026-11-06",
+      "commands_passed": [
+        "python3 -m py_compile work/scripts/build_reading_tiers.py",
+        "python3 work/scripts/build_reading_tiers.py",
+        "python3 work/scripts/audit_repository.py",
+        "git diff --check"
+      ],
+      "registry_papers": 1110,
+      "audit_errors": 0,
+      "audit_warnings": 0,
+      "existing_files_removed": 0,
+      "reading_tracker_and_history_byte_preserved": true,
+      "existing_staged_diff_preserved": true,
+      "frozen_vrl_contract_preserved": true,
+      "native_images_or_payloads_created": false,
+      "test_containers_remaining": 0
+    }
+  },
+  "remaining": [
+    "Linux NVIDIA Docker build/closure and import qualification",
+    "CUDA/BF16/Vulkan then checksum prepare and native IO calibration",
+    "After IO only: full state + controller + RNG + task/evaluator restoration and matched four-cell rollout design",
+    "Independent seeds/tasks and shared-data training needed for broader or objective-causal claims"
+  ]
+}

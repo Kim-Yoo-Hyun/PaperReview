@@ -1,0 +1,1704 @@
+[
+  {
+    "admission_key": "what_matters",
+    "title": "What Matters in Learning from Large-Scale Datasets for Robot Manipulation",
+    "year": 2025,
+    "venue": "ICLR",
+    "category": "Robot Learning and Data",
+    "primary_track": "RL, IL, offline learning, and robot data",
+    "tags": [
+      "robotics",
+      "evaluation",
+      "data-selection"
+    ],
+    "page": "https://proceedings.iclr.cc/paper_files/paper/2025/hash/16466b6c95c5924784486ac5a3feeb65-Abstract-Conference.html",
+    "project": "not identified",
+    "pdf": "",
+    "identifiers": {
+      "arxiv": "2506.13536",
+      "openreview": "oY0PQdLA6c"
+    },
+    "aliases": [],
+    "paper_type": "method",
+    "publication": {
+      "status": "peer_reviewed",
+      "kind": "conference",
+      "presentation": "unknown",
+      "venue": "ICLR",
+      "year": 2025,
+      "venue_year": 2025,
+      "venue_id": "iclr"
+    },
+    "sources": {
+      "primary": {
+        "url": "https://proceedings.iclr.cc/paper_files/paper/2025/hash/16466b6c95c5924784486ac5a3feeb65-Abstract-Conference.html",
+        "kind": "official_publication",
+        "scope": "paper_specific",
+        "verified_on": "2026-10-25"
+      },
+      "preprint": {
+        "url": "https://arxiv.org/abs/2506.13536",
+        "kind": "arxiv",
+        "scope": "paper_specific",
+        "verified_on": "2026-10-25"
+      },
+      "project": null,
+      "code": null,
+      "paper_pdf": null,
+      "venue_verification": {
+        "url": "https://proceedings.iclr.cc/paper_files/paper/2025/hash/16466b6c95c5924784486ac5a3feeb65-Abstract-Conference.html",
+        "kind": "official_publication",
+        "scope": "paper_specific",
+        "verified_on": "2026-10-25"
+      }
+    },
+    "artifacts": {
+      "code_status": "not_identified",
+      "data_status": "not_identified",
+      "local_pdf_cache": false
+    },
+    "evidence": "ABSTRACT_CHECKED",
+    "source_audit": "2026-10-25 공식 abstract와 publication metadata 및 명시된 project/code 공개 링크 확인. 본문 정독·코드 실행·payload 검증은 이번 등록 범위 밖이다.",
+    "note_format": "abstract_analysis_v1",
+    "relations": [],
+    "curation": {
+      "admission_reason": "단순 시각·공간 정렬로 설명되는 이득을 제거하기 위한 DataMIL·GAP-N1의 비교 기준이다.",
+      "tier_reason": "단순 시각·공간 정렬로 설명되는 이득을 제거하기 위한 DataMIL·GAP-N1의 비교 기준이다.",
+      "rationale_status": "recorded",
+      "rationale_basis": "2026-10-25 registry refresh; researcher interpretation",
+      "rationale_reviewed_on": "2026-10-25",
+      "scope_status": "active",
+      "roles": [
+        "method"
+      ],
+      "role_basis": "manual admission review",
+      "priority_source_check": {
+        "url": "https://proceedings.iclr.cc/paper_files/paper/2025/hash/16466b6c95c5924784486ac5a3feeb65-Abstract-Conference.html",
+        "checked_on": "2026-10-25",
+        "scope": "official_abstract_or_project; priority review only"
+      }
+    },
+    "admission_tier": "NEXT",
+    "admission_group": "RL, IL, offline learning, and robot data",
+    "problem": "다양한 robot demonstration을 늘릴 때 어떤 다양성을 수집하고 어떤 데이터를 조회해야 하는지 불명확하다.",
+    "method": "통제 가능한 데이터 생성으로 카메라·물체·배치 다양성과 retrieval 정렬을 비교한다.",
+    "interface": "시연 집합과 target 조건 → 데이터 구성/선택 → manipulation policy.",
+    "evaluation": "시뮬레이션 구성 실험과 DROID를 이용한 실로봇 학습을 보고한다.",
+    "role": "단순 시각·공간 정렬로 설명되는 이득을 제거하기 위한 DataMIL·GAP-N1의 비교 기준이다.",
+    "lineage": "robomimic/DROID → 구성 다양성 → DataMIL의 성능 기반 선택",
+    "question": "같은 target 관측과 시연 수에서 spatial alignment 이후에도 selector 이득이 남는가?",
+    "minimal_experiment": "같은 camera/scene 분포의 random·정렬 retrieval·policy-aware subset으로 target을 비교한다.",
+    "verification_questions": "camera와 task 분할, retrieval의 target 접근, 동일 학습 예산"
+  },
+  {
+    "admission_key": "datamil",
+    "title": "DataMIL: Selecting Data for Robot Imitation Learning with Datamodels",
+    "year": 2026,
+    "venue": "ICLR",
+    "category": "Robot Learning and Data",
+    "primary_track": "RL, IL, offline learning, and robot data",
+    "tags": [
+      "robotics",
+      "evaluation",
+      "data-selection"
+    ],
+    "page": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/033d9e8dbbbc0ad90e59222cf1db0fc2-Abstract-Conference.html",
+    "project": "https://github.com/UT-Austin-RobIn/datamil",
+    "pdf": "",
+    "identifiers": {
+      "arxiv": "2505.09603"
+    },
+    "aliases": [],
+    "paper_type": "method",
+    "publication": {
+      "status": "peer_reviewed",
+      "kind": "conference",
+      "presentation": "unknown",
+      "venue": "ICLR",
+      "year": 2026,
+      "venue_year": 2026,
+      "venue_id": "iclr"
+    },
+    "sources": {
+      "primary": {
+        "url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/033d9e8dbbbc0ad90e59222cf1db0fc2-Abstract-Conference.html",
+        "kind": "official_publication",
+        "scope": "paper_specific",
+        "verified_on": "2026-10-25"
+      },
+      "preprint": {
+        "url": "https://arxiv.org/abs/2505.09603",
+        "kind": "arxiv",
+        "scope": "paper_specific",
+        "verified_on": "2026-10-25"
+      },
+      "project": {
+        "url": "https://github.com/UT-Austin-RobIn/datamil",
+        "kind": "official_project",
+        "scope": "paper_specific",
+        "verified_on": "2026-10-25"
+      },
+      "code": {
+        "url": "https://github.com/UT-Austin-RobIn/datamil",
+        "kind": "official_code",
+        "scope": "paper_specific",
+        "verified_on": "2026-10-25"
+      },
+      "paper_pdf": null,
+      "venue_verification": {
+        "url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/033d9e8dbbbc0ad90e59222cf1db0fc2-Abstract-Conference.html",
+        "kind": "official_publication",
+        "scope": "paper_specific",
+        "verified_on": "2026-10-25"
+      }
+    },
+    "artifacts": {
+      "code_status": "released",
+      "data_status": "not_identified",
+      "local_pdf_cache": false
+    },
+    "evidence": "ABSTRACT_CHECKED",
+    "source_audit": "2026-10-25 공식 abstract와 publication metadata 및 명시된 project/code 공개 링크 확인. 본문 정독·코드 실행·payload 검증은 이번 등록 범위 밖이다.",
+    "note_format": "abstract_analysis_v1",
+    "relations": [],
+    "curation": {
+      "admission_reason": "현재 proxy→target 데이터 전이 질문에서 반드시 대조할 performance-aware 선택 방법이다.",
+      "tier_reason": "현재 proxy→target 데이터 전이 질문에서 반드시 대조할 performance-aware 선택 방법이다.",
+      "rationale_status": "recorded",
+      "rationale_basis": "2026-10-25 registry refresh; researcher interpretation",
+      "rationale_reviewed_on": "2026-10-25",
+      "scope_status": "active",
+      "roles": [
+        "method"
+      ],
+      "role_basis": "manual admission review",
+      "priority_source_check": {
+        "url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/033d9e8dbbbc0ad90e59222cf1db0fc2-Abstract-Conference.html",
+        "checked_on": "2026-10-25",
+        "scope": "official_abstract_or_project; priority review only"
+      }
+    },
+    "admission_tier": "NEXT",
+    "admission_group": "RL, IL, offline learning, and robot data",
+    "problem": "대규모 prior 데이터의 무차별 co-training이 개별 target task를 악화시킬 수 있다.",
+    "method": "Datamodel로 policy 성능에 기여하는 데이터를 선택하며 task-specific surrogate로 선택 중 rollout 비용을 줄인다.",
+    "interface": "Prior 시연·target 데이터·policy surrogate → subset → target imitation policy.",
+    "evaluation": "OXE 선택을 포함한 simulation 및 실로봇 manipulation 평가를 보고한다.",
+    "role": "현재 proxy→target 데이터 전이 질문에서 반드시 대조할 performance-aware 선택 방법이다.",
+    "lineage": "DROID/OXE → DataMIL → proxy와 target의 정보 조건 비교",
+    "question": "Proxy의 숨은 관측 차이가 target surrogate를 맞춘 뒤에도 선택 순위와 성공을 바꾸는가?",
+    "minimal_experiment": "동일 target·budget에서 random, similarity, DataMIL 계열 선택을 먼저 대조한다.",
+    "verification_questions": "surrogate 정의, target 데이터 누설, policy family 및 selector 비용"
+  },
+  {
+    "admission_key": "darp",
+    "title": "Difference-Aware Retrieval Policies for Imitation Learning",
+    "year": 2026,
+    "venue": "ICLR",
+    "category": "Robot Learning and Data",
+    "primary_track": "RL, IL, offline learning, and robot data",
+    "tags": [
+      "robotics",
+      "evaluation",
+      "data-selection"
+    ],
+    "page": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/8c2ecd140ebe227a531edc9a0c3b69d4-Abstract-Conference.html",
+    "project": "https://weirdlabuw.github.io/darp-site/",
+    "pdf": "",
+    "identifiers": {
+      "arxiv": "2606.09758",
+      "openreview": "9AA27en4go"
+    },
+    "aliases": [],
+    "paper_type": "method",
+    "publication": {
+      "status": "peer_reviewed",
+      "kind": "conference",
+      "presentation": "unknown",
+      "venue": "ICLR",
+      "year": 2026,
+      "venue_year": 2026,
+      "venue_id": "iclr"
+    },
+    "sources": {
+      "primary": {
+        "url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/8c2ecd140ebe227a531edc9a0c3b69d4-Abstract-Conference.html",
+        "kind": "official_publication",
+        "scope": "paper_specific",
+        "verified_on": "2026-10-25"
+      },
+      "preprint": {
+        "url": "https://arxiv.org/abs/2606.09758",
+        "kind": "arxiv",
+        "scope": "paper_specific",
+        "verified_on": "2026-10-25"
+      },
+      "project": {
+        "url": "https://weirdlabuw.github.io/darp-site/",
+        "kind": "official_project",
+        "scope": "paper_specific",
+        "verified_on": "2026-10-25"
+      },
+      "code": {
+        "url": "https://github.com/WEIRDLabUW/darp",
+        "kind": "official_code",
+        "scope": "paper_specific",
+        "verified_on": "2026-10-25"
+      },
+      "paper_pdf": null,
+      "venue_verification": {
+        "url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/8c2ecd140ebe227a531edc9a0c3b69d4-Abstract-Conference.html",
+        "kind": "official_publication",
+        "scope": "paper_specific",
+        "verified_on": "2026-10-25"
+      }
+    },
+    "artifacts": {
+      "code_status": "released",
+      "data_status": "not_identified",
+      "local_pdf_cache": false
+    },
+    "evidence": "ABSTRACT_CHECKED",
+    "source_audit": "2026-10-25 공식 abstract와 publication metadata 및 명시된 project/code 공개 링크 확인. 본문 정독·코드 실행·payload 검증은 이번 등록 범위 밖이다.",
+    "note_format": "abstract_analysis_v1",
+    "relations": [],
+    "curation": {
+      "admission_reason": "학습 전 subset 선택과 실행 중 retrieval의 효과를 분리할 직접 대안이다.",
+      "tier_reason": "학습 전 subset 선택과 실행 중 retrieval의 효과를 분리할 직접 대안이다.",
+      "rationale_status": "recorded",
+      "rationale_basis": "2026-10-25 registry refresh; researcher interpretation",
+      "rationale_reviewed_on": "2026-10-25",
+      "scope_status": "adjacent",
+      "roles": [
+        "method"
+      ],
+      "role_basis": "manual admission review",
+      "priority_source_check": {
+        "url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/8c2ecd140ebe227a531edc9a0c3b69d4-Abstract-Conference.html",
+        "checked_on": "2026-10-25",
+        "scope": "official_abstract_or_project; priority review only"
+      }
+    },
+    "admission_tier": "REFERENCE",
+    "admission_group": "RL, IL, offline learning, and robot data",
+    "problem": "Behavior cloning의 전역 state-to-action mapping은 배포 분포 변화에서 누적 오차를 겪는다.",
+    "method": "시연의 가까운 상태·행동 및 query와의 상대 차이를 이용하는 semi-parametric policy를 학습한다.",
+    "interface": "Query state·이웃 시연·상대 벡터 → action prediction.",
+    "evaluation": "Continuous control과 manipulation, 고차원 시각 표현에서 BC와 비교한다.",
+    "role": "학습 전 subset 선택과 실행 중 retrieval의 효과를 분리할 직접 대안이다.",
+    "lineage": "Behavior cloning → retrieval policy → DARP",
+    "question": "Subset 선택 이득이 inference retrieval을 허용하면 줄어드는가?",
+    "minimal_experiment": "같은 시연·encoder에서 BC와 DARP를 비교하고 retrieval 시간까지 센다.",
+    "verification_questions": "이웃 수, history 사용, retrieval 지연과 rollout split"
+  },
+  {
+    "admission_key": "staff",
+    "title": "STAFF: Speculative Coreset Selection for Task-Specific Fine-tuning",
+    "year": 2025,
+    "venue": "ICLR",
+    "category": "Robot Learning and Data",
+    "primary_track": "RL, IL, offline learning, and robot data",
+    "tags": [
+      "robotics",
+      "evaluation",
+      "data-selection"
+    ],
+    "page": "https://proceedings.iclr.cc/paper_files/paper/2025/hash/412360d2dd428c26f34918c8d682cf7e-Abstract-Conference.html",
+    "project": "not identified",
+    "pdf": "",
+    "identifiers": {
+      "arxiv": "2410.01296"
+    },
+    "aliases": [],
+    "paper_type": "method",
+    "publication": {
+      "status": "peer_reviewed",
+      "kind": "conference",
+      "presentation": "unknown",
+      "venue": "ICLR",
+      "year": 2025,
+      "venue_year": 2025,
+      "venue_id": "iclr"
+    },
+    "sources": {
+      "primary": {
+        "url": "https://proceedings.iclr.cc/paper_files/paper/2025/hash/412360d2dd428c26f34918c8d682cf7e-Abstract-Conference.html",
+        "kind": "official_publication",
+        "scope": "paper_specific",
+        "verified_on": "2026-10-25"
+      },
+      "preprint": {
+        "url": "https://arxiv.org/abs/2410.01296",
+        "kind": "arxiv",
+        "scope": "paper_specific",
+        "verified_on": "2026-10-25"
+      },
+      "project": null,
+      "code": null,
+      "paper_pdf": null,
+      "venue_verification": {
+        "url": "https://proceedings.iclr.cc/paper_files/paper/2025/hash/412360d2dd428c26f34918c8d682cf7e-Abstract-Conference.html",
+        "kind": "official_publication",
+        "scope": "paper_specific",
+        "verified_on": "2026-10-25"
+      }
+    },
+    "artifacts": {
+      "code_status": "not_identified",
+      "data_status": "not_identified",
+      "local_pdf_cache": false
+    },
+    "evidence": "ABSTRACT_CHECKED",
+    "source_audit": "2026-10-25 공식 abstract와 publication metadata 및 명시된 project/code 공개 링크 확인. 본문 정독·코드 실행·payload 검증은 이번 등록 범위 밖이다.",
+    "note_format": "abstract_analysis_v1",
+    "relations": [],
+    "curation": {
+      "admission_reason": "Proxy scoring과 target 확인 자체를 새 VLA 기여로 재주장하지 않게 하는 GAP-N1의 직접 선행이다.",
+      "tier_reason": "Proxy scoring과 target 확인 자체를 새 VLA 기여로 재주장하지 않게 하는 GAP-N1의 직접 선행이다.",
+      "rationale_status": "recorded",
+      "rationale_basis": "2026-10-25 registry refresh; researcher interpretation",
+      "rationale_reviewed_on": "2026-10-25",
+      "scope_status": "adjacent",
+      "roles": [
+        "method"
+      ],
+      "role_basis": "manual admission review",
+      "priority_source_check": {
+        "url": "https://proceedings.iclr.cc/paper_files/paper/2025/hash/412360d2dd428c26f34918c8d682cf7e-Abstract-Conference.html",
+        "checked_on": "2026-10-25",
+        "scope": "official_abstract_or_project; priority review only"
+      }
+    },
+    "admission_tier": "REFERENCE",
+    "admission_group": "RL, IL, offline learning, and robot data",
+    "problem": "큰 target model에서 coreset 점수를 직접 계산하는 비용이 크다.",
+    "method": "동일 family의 작은 model로 점수를 추정하고 target에서 확인해 선택 예산과 coverage를 조정한다.",
+    "interface": "LLM 학습 예제 → proxy score·target verification → coreset; robot action interface는 아니다.",
+    "evaluation": "LLM fine-tuning 평가이며 VLA의 closed-loop 성공을 검증한 논문은 아니다.",
+    "role": "Proxy scoring과 target 확인 자체를 새 VLA 기여로 재주장하지 않게 하는 GAP-N1의 직접 선행이다.",
+    "lineage": "Coreset selection → STAFF → robot-specific 관측 계약 검토",
+    "question": "같은 정보 조건의 target verification 뒤에도 로봇 history 누락이 선택을 왜곡하는가?",
+    "minimal_experiment": "Robot target에 옮기기 전에 score 확인과 coverage만으로 회복되는지 비교한다.",
+    "verification_questions": "LLM에서 VLA로의 적용 한계, target verification 비용"
+  },
+  {
+    "admission_key": "small_proxy",
+    "title": "Can Small Training Runs Reliably Guide Data Curation? Rethinking Proxy-Model Practice",
+    "year": 2026,
+    "venue": "ICLR",
+    "category": "Robot Learning and Data",
+    "primary_track": "RL, IL, offline learning, and robot data",
+    "tags": [
+      "robotics",
+      "evaluation",
+      "data-selection"
+    ],
+    "page": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/c7d04ce5e71efdfc7a4a78f7161238a9-Abstract-Conference.html",
+    "project": "not identified",
+    "pdf": "",
+    "identifiers": {
+      "arxiv": "2512.24503"
+    },
+    "aliases": [],
+    "paper_type": "method",
+    "publication": {
+      "status": "peer_reviewed",
+      "kind": "conference",
+      "presentation": "unknown",
+      "venue": "ICLR",
+      "year": 2026,
+      "venue_year": 2026,
+      "venue_id": "iclr"
+    },
+    "sources": {
+      "primary": {
+        "url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/c7d04ce5e71efdfc7a4a78f7161238a9-Abstract-Conference.html",
+        "kind": "official_publication",
+        "scope": "paper_specific",
+        "verified_on": "2026-10-25"
+      },
+      "preprint": {
+        "url": "https://arxiv.org/abs/2512.24503",
+        "kind": "arxiv",
+        "scope": "paper_specific",
+        "verified_on": "2026-10-25"
+      },
+      "project": null,
+      "code": null,
+      "paper_pdf": null,
+      "venue_verification": {
+        "url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/c7d04ce5e71efdfc7a4a78f7161238a9-Abstract-Conference.html",
+        "kind": "official_publication",
+        "scope": "paper_specific",
+        "verified_on": "2026-10-25"
+      }
+    },
+    "artifacts": {
+      "code_status": "not_identified",
+      "data_status": "not_identified",
+      "local_pdf_cache": false
+    },
+    "evidence": "ABSTRACT_CHECKED",
+    "source_audit": "2026-10-25 공식 abstract와 publication metadata 및 명시된 project/code 공개 링크 확인. 본문 정독·코드 실행·payload 검증은 이번 등록 범위 밖이다.",
+    "note_format": "abstract_analysis_v1",
+    "relations": [],
+    "curation": {
+      "admission_reason": "GAP-N1에서 관측 정보 효과와 optimizer 설정 효과를 분리하는 필수 방법론 참조다.",
+      "tier_reason": "GAP-N1에서 관측 정보 효과와 optimizer 설정 효과를 분리하는 필수 방법론 참조다.",
+      "rationale_status": "recorded",
+      "rationale_basis": "2026-10-25 registry refresh; researcher interpretation",
+      "rationale_reviewed_on": "2026-10-25",
+      "scope_status": "adjacent",
+      "roles": [
+        "method"
+      ],
+      "role_basis": "manual admission review",
+      "priority_source_check": {
+        "url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/c7d04ce5e71efdfc7a4a78f7161238a9-Abstract-Conference.html",
+        "checked_on": "2026-10-25",
+        "scope": "official_abstract_or_project; priority review only"
+      }
+    },
+    "admission_tier": "REFERENCE",
+    "admission_group": "RL, IL, offline learning, and robot data",
+    "problem": "작은 proxy 실험의 데이터 순위가 큰 model 학습에서도 유지되는지 불명확하다.",
+    "method": "Data-dependent tuning에 따라 순위가 바뀌는 문제를 분석하고 작은 learning rate를 쓰는 평가 보정을 제안한다.",
+    "interface": "Data recipe·proxy 학습 설정 → 상대 loss 순위; 로봇 행동 평가는 아니다.",
+    "evaluation": "LLM pretraining recipe와 random-feature model 이론을 다룬다.",
+    "role": "GAP-N1에서 관측 정보 효과와 optimizer 설정 효과를 분리하는 필수 방법론 참조다.",
+    "lineage": "Proxy ranking → tuning 조건 통제 → VLA 전이 진단",
+    "question": "Learning-rate 보정 뒤에도 history cue 유무에 따른 subset 순위 차이가 남는가?",
+    "minimal_experiment": "동일 정보의 proxy에서 LR 민감도를 먼저 확인하고 이후 cue 조건을 바꾼다.",
+    "verification_questions": "이론 적용 범위, loss와 task success 차이, tuning 총비용"
+  },
+  {
+    "admission_key": "steering",
+    "title": "Mechanistic Interpretability for Steering Vision-Language-Action Models",
+    "year": 2025,
+    "venue": "CoRL",
+    "category": "VLA and Generalist Robot Policies",
+    "primary_track": "VLA and generalist robot policies",
+    "tags": [
+      "VLA",
+      "evaluation",
+      "generalization"
+    ],
+    "page": "https://proceedings.mlr.press/v305/haon25a.html",
+    "project": "not identified",
+    "pdf": "",
+    "identifiers": {
+      "arxiv": "2509.00328"
+    },
+    "aliases": [],
+    "paper_type": "method",
+    "publication": {
+      "status": "peer_reviewed",
+      "kind": "conference",
+      "presentation": "unknown",
+      "venue": "CoRL",
+      "year": 2025,
+      "venue_year": 2025,
+      "venue_id": "corl"
+    },
+    "sources": {
+      "primary": {
+        "url": "https://proceedings.mlr.press/v305/haon25a.html",
+        "kind": "official_publication",
+        "scope": "paper_specific",
+        "verified_on": "2026-10-25"
+      },
+      "preprint": {
+        "url": "https://arxiv.org/abs/2509.00328",
+        "kind": "arxiv",
+        "scope": "paper_specific",
+        "verified_on": "2026-10-25"
+      },
+      "project": null,
+      "code": null,
+      "paper_pdf": null,
+      "venue_verification": {
+        "url": "https://proceedings.mlr.press/v305/haon25a.html",
+        "kind": "official_publication",
+        "scope": "paper_specific",
+        "verified_on": "2026-10-25"
+      }
+    },
+    "artifacts": {
+      "code_status": "not_identified",
+      "data_status": "not_identified",
+      "local_pdf_cache": false
+    },
+    "evidence": "ABSTRACT_CHECKED",
+    "source_audit": "2026-10-25 공식 abstract와 publication metadata 및 명시된 project/code 공개 링크 확인. 본문 정독·코드 실행·payload 검증은 이번 등록 범위 밖이다.",
+    "note_format": "abstract_analysis_v1",
+    "relations": [],
+    "curation": {
+      "admission_reason": "Instruction 대응이나 VLA 행동 교정을 연구할 때 fine-tuning 없는 직접 baseline이다.",
+      "tier_reason": "Instruction 대응이나 VLA 행동 교정을 연구할 때 fine-tuning 없는 직접 baseline이다.",
+      "rationale_status": "recorded",
+      "rationale_basis": "2026-10-25 registry refresh; researcher interpretation",
+      "rationale_reviewed_on": "2026-10-25",
+      "scope_status": "active",
+      "roles": [
+        "method"
+      ],
+      "role_basis": "manual admission review",
+      "priority_source_check": {
+        "url": "https://proceedings.mlr.press/v305/haon25a.html",
+        "checked_on": "2026-10-25",
+        "scope": "official_abstract_or_project; priority review only"
+      }
+    },
+    "admission_tier": "NEXT",
+    "admission_group": "VLA, cross-embodiment, and long-horizon planning",
+    "problem": "VLA 내부 표현을 이해하고 실행 중 행동을 조절하는 수단이 부족하다.",
+    "method": "Transformer activation의 semantic 방향을 찾고 inference 때 activation steering으로 행동을 조절한다.",
+    "interface": "VLA 내부 activation·semantic 방향 → 개입된 action.",
+    "evaluation": "Pi0·OpenVLA를 LIBERO 및 UR5에서 평가한다고 보고한다.",
+    "role": "Instruction 대응이나 VLA 행동 교정을 연구할 때 fine-tuning 없는 직접 baseline이다.",
+    "lineage": "OpenVLA/π0 → activation steering → instruction 개입의 대조",
+    "question": "Semantic 개입 효과가 같은 크기의 무작위·비의미 방향 개입보다 일관적인가?",
+    "minimal_experiment": "동일 checkpoint에서 semantic·random direction의 task/control 변화를 비교한다.",
+    "verification_questions": "방향 추출 데이터, 개입 강도, 속도와 성공의 trade-off"
+  },
+  {
+    "admission_key": "masked",
+    "title": "Simple Masked Training Strategies Yield Control Policies That Are Robust to Sensor Failure",
+    "year": 2025,
+    "venue": "CoRL",
+    "category": "World Models, Safety, and Recovery",
+    "primary_track": "World models, safety, uncertainty, and recovery",
+    "tags": [
+      "robotics",
+      "evaluation",
+      "robustness"
+    ],
+    "page": "https://proceedings.mlr.press/v270/skand25a.html",
+    "project": "https://pvskand.github.io/projects/RME",
+    "pdf": "",
+    "identifiers": {},
+    "aliases": [],
+    "paper_type": "method",
+    "publication": {
+      "status": "peer_reviewed",
+      "kind": "conference",
+      "presentation": "unknown",
+      "venue": "CoRL",
+      "year": 2025,
+      "venue_year": 2024,
+      "venue_id": "corl"
+    },
+    "sources": {
+      "primary": {
+        "url": "https://proceedings.mlr.press/v270/skand25a.html",
+        "kind": "official_publication",
+        "scope": "paper_specific",
+        "verified_on": "2026-10-25"
+      },
+      "preprint": null,
+      "project": {
+        "url": "https://pvskand.github.io/projects/RME",
+        "kind": "official_project",
+        "scope": "paper_specific",
+        "verified_on": "2026-10-25"
+      },
+      "code": null,
+      "paper_pdf": null,
+      "venue_verification": {
+        "url": "https://proceedings.mlr.press/v270/skand25a.html",
+        "kind": "official_publication",
+        "scope": "paper_specific",
+        "verified_on": "2026-10-25"
+      }
+    },
+    "artifacts": {
+      "code_status": "project_only",
+      "data_status": "not_identified",
+      "local_pdf_cache": false
+    },
+    "evidence": "ABSTRACT_CHECKED",
+    "source_audit": "2026-10-25 공식 abstract와 publication metadata 및 명시된 project/code 공개 링크 확인. 본문 정독·코드 실행·payload 검증은 이번 등록 범위 밖이다. CoRL 개최 2024, PMLR 출판 2025를 분리한다.",
+    "note_format": "abstract_analysis_v1",
+    "relations": [],
+    "curation": {
+      "admission_reason": "새 multimodal VLA adaptation 전에 대조할 단순 sensor-dropout 기준이다.",
+      "tier_reason": "새 multimodal VLA adaptation 전에 대조할 단순 sensor-dropout 기준이다.",
+      "rationale_status": "recorded",
+      "rationale_basis": "2026-10-25 registry refresh; researcher interpretation",
+      "rationale_reviewed_on": "2026-10-25",
+      "scope_status": "active",
+      "roles": [
+        "method"
+      ],
+      "role_basis": "manual admission review",
+      "priority_source_check": {
+        "url": "https://proceedings.mlr.press/v270/skand25a.html",
+        "checked_on": "2026-10-25",
+        "scope": "official_abstract_or_project; priority review only"
+      }
+    },
+    "admission_tier": "NEXT",
+    "admission_group": "World models, uncertainty, failure detection, and recovery",
+    "problem": "센서 결손이 배포된 robot policy의 행동을 불안정하게 만든다.",
+    "method": "여러 sensor를 처리하는 encoder와 학습 중 modality dropout으로 결손에 대비한다.",
+    "interface": "가용 sensor와 결손 처리 표현 → RL control policy.",
+    "evaluation": "Locomotion과 manipulation, simulation과 실로봇의 sensor failure를 평가한다.",
+    "role": "새 multimodal VLA adaptation 전에 대조할 단순 sensor-dropout 기준이다.",
+    "lineage": "Multimodal encoder → masked training → FuSe 및 sensor-aware VLA",
+    "question": "결손 대비 학습으로 제거되지 않는 action-relevant sensing 이득이 있는가?",
+    "minimal_experiment": "동일 센서와 dropout 예산에서 masked training과 추가 adaptive fusion을 비교한다.",
+    "verification_questions": "결손 종류·지속 시간·학습 노출, proprio와 image mask 차이"
+  },
+  {
+    "admission_key": "libero_plus",
+    "title": "LIBERO-Plus: A Progressive Robustness Benchmark for Visual-Language-Action Models",
+    "year": 2026,
+    "venue": "CVPR",
+    "category": "VLA and Generalist Robot Policies",
+    "primary_track": "VLA and generalist robot policies",
+    "tags": [
+      "VLA",
+      "benchmark",
+      "generalization"
+    ],
+    "page": "https://openaccess.thecvf.com/content/CVPR2026/html/Fei_LIBERO-Plus_A_Progressive_Robustness_Benchmark_for_Visual-Language-Action_Models_CVPR_2026_paper.html",
+    "project": "https://github.com/sylvestf/LIBERO-plus",
+    "pdf": "",
+    "identifiers": {
+      "arxiv": "2510.13626"
+    },
+    "aliases": [
+      "LIBERO-Plus: In-depth Robustness Analysis of Vision-Language-Action Models"
+    ],
+    "paper_type": "benchmark_or_dataset",
+    "publication": {
+      "status": "peer_reviewed",
+      "kind": "conference",
+      "presentation": "unknown",
+      "venue": "CVPR",
+      "year": 2026,
+      "venue_year": 2026,
+      "venue_id": "cvpr"
+    },
+    "sources": {
+      "primary": {
+        "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Fei_LIBERO-Plus_A_Progressive_Robustness_Benchmark_for_Visual-Language-Action_Models_CVPR_2026_paper.html",
+        "kind": "official_publication",
+        "scope": "paper_specific",
+        "verified_on": "2026-10-25"
+      },
+      "preprint": {
+        "url": "https://arxiv.org/abs/2510.13626",
+        "kind": "arxiv",
+        "scope": "paper_specific",
+        "verified_on": "2026-10-25"
+      },
+      "project": {
+        "url": "https://github.com/sylvestf/LIBERO-plus",
+        "kind": "official_project",
+        "scope": "paper_specific",
+        "verified_on": "2026-10-25"
+      },
+      "code": {
+        "url": "https://github.com/sylvestf/LIBERO-plus",
+        "kind": "official_code",
+        "scope": "paper_specific",
+        "verified_on": "2026-10-25"
+      },
+      "paper_pdf": null,
+      "venue_verification": {
+        "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Fei_LIBERO-Plus_A_Progressive_Robustness_Benchmark_for_Visual-Language-Action_Models_CVPR_2026_paper.html",
+        "kind": "official_publication",
+        "scope": "paper_specific",
+        "verified_on": "2026-10-25"
+      }
+    },
+    "artifacts": {
+      "code_status": "released",
+      "data_status": "not_identified",
+      "local_pdf_cache": false
+    },
+    "evidence": "ABSTRACT_CHECKED",
+    "source_audit": "2026-10-25 공식 abstract와 publication metadata 및 명시된 project/code 공개 링크 확인. 본문 정독·코드 실행·payload 검증은 이번 등록 범위 밖이다.",
+    "note_format": "abstract_analysis_v1",
+    "relations": [],
+    "curation": {
+      "admission_reason": "기본 성공률과 일반화 성능을 구분하는 현재 VLA 평가의 직접 기준이다.",
+      "tier_reason": "기본 성공률과 일반화 성능을 구분하는 현재 VLA 평가의 직접 기준이다.",
+      "rationale_status": "recorded",
+      "rationale_basis": "2026-10-25 registry refresh; researcher interpretation",
+      "rationale_reviewed_on": "2026-10-25",
+      "scope_status": "active",
+      "roles": [
+        "benchmark_or_dataset"
+      ],
+      "role_basis": "manual admission review",
+      "priority_source_check": {
+        "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Fei_LIBERO-Plus_A_Progressive_Robustness_Benchmark_for_Visual-Language-Action_Models_CVPR_2026_paper.html",
+        "checked_on": "2026-10-25",
+        "scope": "official_abstract_or_project; priority review only"
+      }
+    },
+    "admission_tier": "NEXT",
+    "admission_group": "VLA, cross-embodiment, and long-horizon planning",
+    "problem": "기본 LIBERO 성공률만으로 VLA의 환경 변화 강건성을 판단하기 어렵다.",
+    "method": "배치·camera·robot 초기 상태·언어·조명·배경·sensor noise를 통제한 점진 평가를 구성한다.",
+    "interface": "Perturbed 환경/지시 → 기존 VLA → task success와 조건별 분석.",
+    "evaluation": "다수 VLA의 simulation robustness를 비교한다. 수치·정확한 난도 split은 본문 확인 필요.",
+    "role": "기본 성공률과 일반화 성능을 구분하는 현재 VLA 평가의 직접 기준이다.",
+    "lineage": "LIBERO → LIBERO-Plus → task validity를 확인한 강건성 비교",
+    "question": "Perturbation 후에도 행동 가능한 task라는 조건을 통제하면 실패 패턴이 유지되는가?",
+    "minimal_experiment": "동일 checkpoint로 원본/변형 task를 paired 비교하고 reachability와 성공 판정을 감사한다.",
+    "verification_questions": "난도 선정에 쓰인 model, perturbation validity, test contamination"
+  },
+  {
+    "admission_key": "colosseum",
+    "title": "THE COLOSSEUM: A Benchmark for Evaluating Generalization for Robotic Manipulation",
+    "year": 2024,
+    "venue": "RSS",
+    "category": "VLA and Generalist Robot Policies",
+    "primary_track": "VLA and generalist robot policies",
+    "tags": [
+      "VLA",
+      "benchmark",
+      "generalization"
+    ],
+    "page": "https://roboticsproceedings.org/rss20/p133.html",
+    "project": "https://robot-colosseum.github.io/",
+    "pdf": "",
+    "identifiers": {
+      "arxiv": "2402.08191",
+      "doi": "10.15607/RSS.2024.XX.133"
+    },
+    "aliases": [],
+    "paper_type": "benchmark_or_dataset",
+    "publication": {
+      "status": "peer_reviewed",
+      "kind": "conference",
+      "presentation": "unknown",
+      "venue": "RSS",
+      "year": 2024,
+      "venue_year": 2024,
+      "venue_id": "rss"
+    },
+    "sources": {
+      "primary": {
+        "url": "https://roboticsproceedings.org/rss20/p133.html",
+        "kind": "official_publication",
+        "scope": "paper_specific",
+        "verified_on": "2026-10-25"
+      },
+      "preprint": {
+        "url": "https://arxiv.org/abs/2402.08191",
+        "kind": "arxiv",
+        "scope": "paper_specific",
+        "verified_on": "2026-10-25"
+      },
+      "project": {
+        "url": "https://robot-colosseum.github.io/",
+        "kind": "official_project",
+        "scope": "paper_specific",
+        "verified_on": "2026-10-25"
+      },
+      "code": {
+        "url": "https://github.com/robot-colosseum/robot-colosseum",
+        "kind": "official_code",
+        "scope": "paper_specific",
+        "verified_on": "2026-10-25"
+      },
+      "paper_pdf": null,
+      "venue_verification": {
+        "url": "https://roboticsproceedings.org/rss20/p133.html",
+        "kind": "official_publication",
+        "scope": "paper_specific",
+        "verified_on": "2026-10-25"
+      }
+    },
+    "artifacts": {
+      "code_status": "released",
+      "data_status": "not_identified",
+      "local_pdf_cache": false
+    },
+    "evidence": "ABSTRACT_CHECKED",
+    "source_audit": "2026-10-25 공식 abstract와 publication metadata 및 명시된 project/code 공개 링크 확인. 본문 정독·코드 실행·payload 검증은 이번 등록 범위 밖이다.",
+    "note_format": "abstract_analysis_v1",
+    "relations": [],
+    "curation": {
+      "admission_reason": "LIBERO 계열에 한정하지 않고 manipulation 일반화를 점검할 benchmark 계보다.",
+      "tier_reason": "LIBERO 계열에 한정하지 않고 manipulation 일반화를 점검할 benchmark 계보다.",
+      "rationale_status": "recorded",
+      "rationale_basis": "2026-10-25 registry refresh; researcher interpretation",
+      "rationale_reviewed_on": "2026-10-25",
+      "scope_status": "active",
+      "roles": [
+        "benchmark_or_dataset"
+      ],
+      "role_basis": "manual admission review",
+      "priority_source_check": {
+        "url": "https://roboticsproceedings.org/rss20/p133.html",
+        "checked_on": "2026-10-25",
+        "scope": "official_abstract_or_project; priority review only"
+      }
+    },
+    "admission_tier": "NEXT",
+    "admission_group": "VLA, cross-embodiment, and long-horizon planning",
+    "problem": "학습과 유사한 환경만 평가하면 manipulation policy 일반화가 과대평가된다.",
+    "method": "Manipulation task에 시각·물리 perturbation을 체계적으로 적용하는 simulation benchmark를 제시한다.",
+    "interface": "Task·환경 변화 → manipulation policy → 조건별 성공.",
+    "evaluation": "Simulation 비교와 대응 실세계 perturbation의 관련성을 보고한다.",
+    "role": "LIBERO 계열에 한정하지 않고 manipulation 일반화를 점검할 benchmark 계보다.",
+    "lineage": "RLBench → THE COLOSSEUM → Colosseum V2",
+    "question": "시각 변화와 물리 변화가 task feasibility를 맞춘 뒤 서로 다른 실패를 만드는가?",
+    "minimal_experiment": "단일 perturbation과 결합 perturbation을 같은 초기 상태에서 비교한다.",
+    "verification_questions": "복합 요인 상호작용, simulator와 실세계 조건의 대응"
+  },
+  {
+    "admission_key": "robomme",
+    "title": "RoboMME: Benchmarking and Understanding Memory for Robotic Generalist Policies",
+    "year": 2026,
+    "venue": "ICML",
+    "category": "VLA and Generalist Robot Policies",
+    "primary_track": "VLA and generalist robot policies",
+    "tags": [
+      "VLA",
+      "benchmark",
+      "generalization"
+    ],
+    "page": "https://proceedings.mlr.press/v306/dai26c.html",
+    "project": "https://robomme.github.io/",
+    "pdf": "",
+    "identifiers": {
+      "arxiv": "2603.04639"
+    },
+    "aliases": [],
+    "paper_type": "benchmark_or_dataset",
+    "publication": {
+      "status": "peer_reviewed",
+      "kind": "conference",
+      "presentation": "unknown",
+      "venue": "ICML",
+      "year": 2026,
+      "venue_year": 2026,
+      "venue_id": "icml"
+    },
+    "sources": {
+      "primary": {
+        "url": "https://proceedings.mlr.press/v306/dai26c.html",
+        "kind": "official_publication",
+        "scope": "paper_specific",
+        "verified_on": "2026-10-25"
+      },
+      "preprint": {
+        "url": "https://arxiv.org/abs/2603.04639",
+        "kind": "arxiv",
+        "scope": "paper_specific",
+        "verified_on": "2026-10-25"
+      },
+      "project": {
+        "url": "https://robomme.github.io/",
+        "kind": "official_project",
+        "scope": "paper_specific",
+        "verified_on": "2026-10-25"
+      },
+      "code": {
+        "url": "https://github.com/RoboMME/robomme_benchmark",
+        "kind": "official_code",
+        "scope": "paper_specific",
+        "verified_on": "2026-10-25"
+      },
+      "paper_pdf": null,
+      "venue_verification": {
+        "url": "https://proceedings.mlr.press/v306/dai26c.html",
+        "kind": "official_publication",
+        "scope": "paper_specific",
+        "verified_on": "2026-10-25"
+      }
+    },
+    "artifacts": {
+      "code_status": "released",
+      "data_status": "not_identified",
+      "local_pdf_cache": false
+    },
+    "evidence": "ABSTRACT_CHECKED",
+    "source_audit": "2026-10-25 공식 abstract와 publication metadata 및 명시된 project/code 공개 링크 확인. 본문 정독·코드 실행·payload 검증은 이번 등록 범위 밖이다.",
+    "note_format": "abstract_analysis_v1",
+    "relations": [],
+    "curation": {
+      "admission_reason": "현재 GAP-N1–N3의 직접 benchmark이며 memory 필요성과 단순 정보 누설을 구분하는 기준이다.",
+      "tier_reason": "현재 GAP-N1–N3의 직접 benchmark이며 memory 필요성과 단순 정보 누설을 구분하는 기준이다.",
+      "rationale_status": "recorded",
+      "rationale_basis": "2026-10-25 registry refresh; researcher interpretation",
+      "rationale_reviewed_on": "2026-10-25",
+      "scope_status": "active",
+      "roles": [
+        "benchmark_or_dataset"
+      ],
+      "role_basis": "manual admission review",
+      "priority_source_check": {
+        "url": "https://proceedings.mlr.press/v306/dai26c.html",
+        "checked_on": "2026-10-25",
+        "scope": "official_abstract_or_project; priority review only"
+      }
+    },
+    "admission_tier": "NEXT",
+    "admission_group": "VLA, cross-embodiment, and long-horizon planning",
+    "problem": "History-dependent manipulation의 memory 설계를 공통 조건에서 비교하기 어렵다.",
+    "method": "Temporal·spatial·object·procedural memory task와 여러 memory-augmented VLA를 비교한다.",
+    "interface": "현재 관측·history representation → π0.5 기반 VLA → manipulation action.",
+    "evaluation": "16 manipulation task와 14 memory variant를 보고하며 memory 효용은 task에 의존한다.",
+    "role": "현재 GAP-N1–N3의 직접 benchmark이며 memory 필요성과 단순 정보 누설을 구분하는 기준이다.",
+    "lineage": "π0.5 → RoboMME → 관측/목표를 맞춘 proxy 데이터 전이 진단",
+    "question": "Policy가 보는 history를 동일하게 유지할 때 selector의 cue 누락이 subset 효용을 바꾸는가?",
+    "minimal_experiment": "먼저 3개 planned fixture의 native 관측·goal 일치를 확인한다. 기존 N3-A 계약 PASS는 native 재현이 아니다.",
+    "verification_questions": "task dictionary와 goal/evaluator, history cutoff, raw ID와 split"
+  },
+  {
+    "admission_key": "dworld",
+    "title": "Scaling Robot Policy Evaluation via Discrete Diffusion World Model",
+    "year": 2026,
+    "venue": "ICML",
+    "category": "World Models, Safety, and Recovery",
+    "primary_track": "World models, safety, uncertainty, and recovery",
+    "tags": [
+      "robotics",
+      "evaluation",
+      "robustness"
+    ],
+    "page": "https://proceedings.mlr.press/v306/li26hi.html",
+    "project": "https://dworldeval.github.io/",
+    "pdf": "",
+    "identifiers": {
+      "arxiv": "2604.22152"
+    },
+    "aliases": [
+      "dWorldEval",
+      "dWorldEval: Scalable Robotic Policy Evaluation via Discrete Diffusion World Model"
+    ],
+    "paper_type": "method",
+    "publication": {
+      "status": "peer_reviewed",
+      "kind": "conference",
+      "presentation": "unknown",
+      "venue": "ICML",
+      "year": 2026,
+      "venue_year": 2026,
+      "venue_id": "icml"
+    },
+    "sources": {
+      "primary": {
+        "url": "https://proceedings.mlr.press/v306/li26hi.html",
+        "kind": "official_publication",
+        "scope": "paper_specific",
+        "verified_on": "2026-10-25"
+      },
+      "preprint": {
+        "url": "https://arxiv.org/abs/2604.22152",
+        "kind": "arxiv",
+        "scope": "paper_specific",
+        "verified_on": "2026-10-25"
+      },
+      "project": {
+        "url": "https://dworldeval.github.io/",
+        "kind": "official_project",
+        "scope": "paper_specific",
+        "verified_on": "2026-10-25"
+      },
+      "code": null,
+      "paper_pdf": null,
+      "venue_verification": {
+        "url": "https://proceedings.mlr.press/v306/li26hi.html",
+        "kind": "official_publication",
+        "scope": "paper_specific",
+        "verified_on": "2026-10-25"
+      }
+    },
+    "artifacts": {
+      "code_status": "project_only",
+      "data_status": "not_identified",
+      "local_pdf_cache": false
+    },
+    "evidence": "ABSTRACT_CHECKED",
+    "source_audit": "2026-10-25 공식 abstract와 publication metadata 및 명시된 project/code 공개 링크 확인. 본문 정독·코드 실행·payload 검증은 이번 등록 범위 밖이다. 공식 final title과 preprint/project title을 alias로 통합했으며 본문 동등성은 미검증이다.",
+    "note_format": "abstract_analysis_v1",
+    "relations": [],
+    "curation": {
+      "admission_reason": "World-model 평가를 연구할 때 시각 품질과 행동별 순위 신뢰도를 구분할 직접 비교군이다.",
+      "tier_reason": "World-model 평가를 연구할 때 시각 품질과 행동별 순위 신뢰도를 구분할 직접 비교군이다.",
+      "rationale_status": "recorded",
+      "rationale_basis": "2026-10-25 registry refresh; researcher interpretation",
+      "rationale_reviewed_on": "2026-10-25",
+      "scope_status": "active",
+      "roles": [
+        "method"
+      ],
+      "role_basis": "manual admission review",
+      "priority_source_check": {
+        "url": "https://proceedings.mlr.press/v306/li26hi.html",
+        "checked_on": "2026-10-25",
+        "scope": "official_abstract_or_project; priority review only"
+      }
+    },
+    "admission_tier": "NEXT",
+    "admission_group": "World models, uncertainty, failure detection, and recovery",
+    "problem": "World model이 실패를 정상 장면으로 보정하면 policy 평가와 순위가 왜곡된다.",
+    "method": "Action을 unified token으로 다루는 discrete diffusion과 keyframe memory·progress 출력을 결합한다.",
+    "interface": "관측·언어·action chunk → 미래 관측·성공 지표 → policy ranking.",
+    "evaluation": "LIBERO·RoboTwin 및 real-robot task 기반 평가를 보고한다.",
+    "role": "World-model 평가를 연구할 때 시각 품질과 행동별 순위 신뢰도를 구분할 직접 비교군이다.",
+    "lineage": "WorldEval/Ctrl-World → dWorldEval → native outcome과의 ranking 진단",
+    "question": "같은 상태의 후보 행동 순위가 out-of-distribution action에서도 native 결과와 일치하는가?",
+    "minimal_experiment": "동일 초기 관측에서 후보별 predicted/native 결과를 맞춰 false positive와 순위 오류를 센다.",
+    "verification_questions": "성공 평가기 독립성, 실패 데이터, final/preprint 차이"
+  },
+  {
+    "admission_key": "conformal_nav",
+    "title": "Towards Generalizable Safety in Crowd Navigation via Conformal Uncertainty Handling",
+    "year": 2025,
+    "venue": "CoRL",
+    "category": "World Models, Safety, and Recovery",
+    "primary_track": "World models, safety, uncertainty, and recovery",
+    "tags": [
+      "robotics",
+      "evaluation",
+      "robustness"
+    ],
+    "page": "https://proceedings.mlr.press/v305/yao25a.html",
+    "project": "not identified",
+    "pdf": "",
+    "identifiers": {},
+    "aliases": [],
+    "paper_type": "method",
+    "publication": {
+      "status": "peer_reviewed",
+      "kind": "conference",
+      "presentation": "unknown",
+      "venue": "CoRL",
+      "year": 2025,
+      "venue_year": 2025,
+      "venue_id": "corl"
+    },
+    "sources": {
+      "primary": {
+        "url": "https://proceedings.mlr.press/v305/yao25a.html",
+        "kind": "official_publication",
+        "scope": "paper_specific",
+        "verified_on": "2026-10-25"
+      },
+      "preprint": null,
+      "project": null,
+      "code": null,
+      "paper_pdf": null,
+      "venue_verification": {
+        "url": "https://proceedings.mlr.press/v305/yao25a.html",
+        "kind": "official_publication",
+        "scope": "paper_specific",
+        "verified_on": "2026-10-25"
+      }
+    },
+    "artifacts": {
+      "code_status": "not_identified",
+      "data_status": "not_identified",
+      "local_pdf_cache": false
+    },
+    "evidence": "ABSTRACT_CHECKED",
+    "source_audit": "2026-10-25 공식 abstract와 publication metadata 및 명시된 project/code 공개 링크 확인. 본문 정독·코드 실행·payload 검증은 이번 등록 범위 밖이다.",
+    "note_format": "abstract_analysis_v1",
+    "relations": [],
+    "curation": {
+      "admission_reason": "GAP-P 계열에서 uncertainty 추가 자체를 새로운 navigation 기여로 삼지 않게 하는 직접 선행이다.",
+      "tier_reason": "GAP-P 계열에서 uncertainty 추가 자체를 새로운 navigation 기여로 삼지 않게 하는 직접 선행이다.",
+      "rationale_status": "recorded",
+      "rationale_basis": "2026-10-25 registry refresh; researcher interpretation",
+      "rationale_reviewed_on": "2026-10-25",
+      "scope_status": "active",
+      "roles": [
+        "method"
+      ],
+      "role_basis": "manual admission review",
+      "priority_source_check": {
+        "url": "https://proceedings.mlr.press/v305/yao25a.html",
+        "checked_on": "2026-10-25",
+        "scope": "official_abstract_or_project; priority review only"
+      }
+    },
+    "admission_tier": "NEXT",
+    "admission_group": "World models, uncertainty, failure detection, and recovery",
+    "problem": "군중 행동 분포가 바뀌면 학습된 navigation policy 안전성이 저하될 수 있다.",
+    "method": "Adaptive conformal prediction의 불확실성을 관측에 넣고 constrained RL로 행동을 조절한다.",
+    "interface": "Pedestrian 예측·uncertainty → navigation policy → 이동 행동.",
+    "evaluation": "속도·행동 정책·집단 변화 및 실로봇 군중 navigation을 보고한다.",
+    "role": "GAP-P 계열에서 uncertainty 추가 자체를 새로운 navigation 기여로 삼지 않게 하는 직접 선행이다.",
+    "lineage": "Trajectory prediction/ACI → constrained navigation → 반응형 crowd 진단",
+    "question": "Robot 행동이 pedestrian 분포를 바꾸는 상황에서도 예측 coverage와 안전 이득이 함께 유지되는가?",
+    "minimal_experiment": "같은 scene에서 보정 유무를 비교하고 collision·진행·coverage를 함께 기록한다.",
+    "verification_questions": "보장의 단위, reactive crowd, calibration update와 intervention 비용"
+  },
+  {
+    "admission_key": "jiggle",
+    "title": "JIGGLE: An Active Sensing Framework for Boundary Parameters Estimation in Deformable Surgical Environments",
+    "year": 2024,
+    "venue": "RSS",
+    "category": "Manipulation, Contact, and Dexterity",
+    "primary_track": "Manipulation, contact, tactile, and dexterity",
+    "tags": [
+      "robotics",
+      "evaluation",
+      "manipulation"
+    ],
+    "page": "https://www.roboticsproceedings.org/rss20/p007.html",
+    "project": "not identified",
+    "pdf": "",
+    "identifiers": {
+      "arxiv": "2405.09743",
+      "doi": "10.15607/RSS.2024.XX.007"
+    },
+    "aliases": [],
+    "paper_type": "method",
+    "publication": {
+      "status": "peer_reviewed",
+      "kind": "conference",
+      "presentation": "unknown",
+      "venue": "RSS",
+      "year": 2024,
+      "venue_year": 2024,
+      "venue_id": "rss"
+    },
+    "sources": {
+      "primary": {
+        "url": "https://www.roboticsproceedings.org/rss20/p007.html",
+        "kind": "official_publication",
+        "scope": "paper_specific",
+        "verified_on": "2026-10-25"
+      },
+      "preprint": {
+        "url": "https://arxiv.org/abs/2405.09743",
+        "kind": "arxiv",
+        "scope": "paper_specific",
+        "verified_on": "2026-10-25"
+      },
+      "project": null,
+      "code": null,
+      "paper_pdf": null,
+      "venue_verification": {
+        "url": "https://www.roboticsproceedings.org/rss20/p007.html",
+        "kind": "official_publication",
+        "scope": "paper_specific",
+        "verified_on": "2026-10-25"
+      }
+    },
+    "artifacts": {
+      "code_status": "not_identified",
+      "data_status": "not_identified",
+      "local_pdf_cache": false
+    },
+    "evidence": "ABSTRACT_CHECKED",
+    "source_audit": "2026-10-25 공식 abstract와 publication metadata 및 명시된 project/code 공개 링크 확인. 본문 정독·코드 실행·payload 검증은 이번 등록 범위 밖이다.",
+    "note_format": "abstract_analysis_v1",
+    "relations": [],
+    "curation": {
+      "admission_reason": "물성·boundary 식별과 task-oriented probing을 구별하는 GAP-DE의 직접 선행이다.",
+      "tier_reason": "물성·boundary 식별과 task-oriented probing을 구별하는 GAP-DE의 직접 선행이다.",
+      "rationale_status": "recorded",
+      "rationale_basis": "2026-10-25 registry refresh; researcher interpretation",
+      "rationale_reviewed_on": "2026-10-25",
+      "scope_status": "adjacent",
+      "roles": [
+        "method"
+      ],
+      "role_basis": "manual admission review",
+      "priority_source_check": {
+        "url": "https://www.roboticsproceedings.org/rss20/p007.html",
+        "checked_on": "2026-10-25",
+        "scope": "official_abstract_or_project; priority review only"
+      }
+    },
+    "admission_tier": "REFERENCE",
+    "admission_group": "Contact-rich, deformable, force, and dexterous manipulation",
+    "problem": "가려진 deformable tissue의 부착 조건을 손상 없이 알아내야 한다.",
+    "method": "미분 가능한 soft-body 모델·EKF 추정과 정보 이득/안전 비용을 고려한 능동 조작을 결합한다.",
+    "interface": "Stereo 관측·조작 → attachment 추정 → sensing action.",
+    "evaluation": "실제 동물 조직의 부착점과 cutting/suturing 변화 실험을 보고한다.",
+    "role": "물성·boundary 식별과 task-oriented probing을 구별하는 GAP-DE의 직접 선행이다.",
+    "lineage": "Deformable state estimation → JIGGLE → task-level sensing 비교",
+    "question": "같은 probe 비용에서 attachment 정보 증가가 downstream 작업 성공에 비례하는가?",
+    "minimal_experiment": "정보 이득 probe와 단순 displacement probe를 task outcome으로 비교한다.",
+    "verification_questions": "재료 모델과 attachment 가정, 안전 비용 정의"
+  },
+  {
+    "admission_key": "adaptigraph",
+    "title": "AdaptiGraph: Material-Adaptive Graph-Based Neural Dynamics for Robotic Manipulation",
+    "year": 2024,
+    "venue": "RSS",
+    "category": "Manipulation, Contact, and Dexterity",
+    "primary_track": "Manipulation, contact, tactile, and dexterity",
+    "tags": [
+      "robotics",
+      "evaluation",
+      "manipulation"
+    ],
+    "page": "https://roboticsproceedings.org/rss20/p010.html",
+    "project": "https://robopil.github.io/adaptigraph/",
+    "pdf": "",
+    "identifiers": {
+      "arxiv": "2407.07889",
+      "doi": "10.15607/RSS.2024.XX.010"
+    },
+    "aliases": [],
+    "paper_type": "method",
+    "publication": {
+      "status": "peer_reviewed",
+      "kind": "conference",
+      "presentation": "unknown",
+      "venue": "RSS",
+      "year": 2024,
+      "venue_year": 2024,
+      "venue_id": "rss"
+    },
+    "sources": {
+      "primary": {
+        "url": "https://roboticsproceedings.org/rss20/p010.html",
+        "kind": "official_publication",
+        "scope": "paper_specific",
+        "verified_on": "2026-10-25"
+      },
+      "preprint": {
+        "url": "https://arxiv.org/abs/2407.07889",
+        "kind": "arxiv",
+        "scope": "paper_specific",
+        "verified_on": "2026-10-25"
+      },
+      "project": {
+        "url": "https://robopil.github.io/adaptigraph/",
+        "kind": "official_project",
+        "scope": "paper_specific",
+        "verified_on": "2026-10-25"
+      },
+      "code": {
+        "url": "https://github.com/Boey-li/AdaptiGraph",
+        "kind": "official_code",
+        "scope": "paper_specific",
+        "verified_on": "2026-10-25"
+      },
+      "paper_pdf": null,
+      "venue_verification": {
+        "url": "https://roboticsproceedings.org/rss20/p010.html",
+        "kind": "official_publication",
+        "scope": "paper_specific",
+        "verified_on": "2026-10-25"
+      }
+    },
+    "artifacts": {
+      "code_status": "released",
+      "data_status": "not_identified",
+      "local_pdf_cache": false
+    },
+    "evidence": "ABSTRACT_CHECKED",
+    "source_audit": "2026-10-25 공식 abstract와 publication metadata 및 명시된 project/code 공개 링크 확인. 본문 정독·코드 실행·payload 검증은 이번 등록 범위 밖이다.",
+    "note_format": "abstract_analysis_v1",
+    "relations": [],
+    "curation": {
+      "admission_reason": "물성 adaptation을 신규 방법으로 반복하지 않기 위한 GAP-DE의 모델 기반 대안이다.",
+      "tier_reason": "물성 adaptation을 신규 방법으로 반복하지 않기 위한 GAP-DE의 모델 기반 대안이다.",
+      "rationale_status": "recorded",
+      "rationale_basis": "2026-10-25 registry refresh; researcher interpretation",
+      "rationale_reviewed_on": "2026-10-25",
+      "scope_status": "adjacent",
+      "roles": [
+        "method"
+      ],
+      "role_basis": "manual admission review",
+      "priority_source_check": {
+        "url": "https://roboticsproceedings.org/rss20/p010.html",
+        "checked_on": "2026-10-25",
+        "scope": "official_abstract_or_project; priority review only"
+      }
+    },
+    "admission_tier": "REFERENCE",
+    "admission_group": "Contact-rich, deformable, force, and dexterous manipulation",
+    "problem": "새로운 물성의 deformable 물체를 예측하고 조작하기 어렵다.",
+    "method": "물성 조건부 particle graph dynamics를 학습하고 online 상호작용으로 물성 변수를 조정한다.",
+    "interface": "물체 particle·interaction → 물성 추정/dynamics → manipulation planning.",
+    "evaluation": "로프·입자·상자·천 등 real-world 물체의 예측과 조작을 보고한다.",
+    "role": "물성 adaptation을 신규 방법으로 반복하지 않기 위한 GAP-DE의 모델 기반 대안이다.",
+    "lineage": "Graph dynamics → AdaptiGraph → task-oriented identification",
+    "question": "Prediction error 감소가 동일 probe 예산의 task 성공 개선으로 이어지는가?",
+    "minimal_experiment": "물성 적응 유무와 단순 feedback baseline을 같은 조작 목표에서 비교한다.",
+    "verification_questions": "particle extraction, 물성 식별 가능성, probe 비용"
+  },
+  {
+    "admission_key": "roboabc",
+    "title": "Robo-ABC: Affordance Generalization Beyond Categories via Semantic Correspondence for Robot Manipulation",
+    "year": 2024,
+    "venue": "ECCV",
+    "category": "3D Vision-Language Understanding",
+    "primary_track": "Robotics-enabling 3D perception",
+    "tags": [
+      "robotics",
+      "evaluation",
+      "affordance"
+    ],
+    "page": "https://www.ecva.net/papers/eccv_2024/papers_ECCV/html/5748_ECCV_2024_paper.php",
+    "project": "https://tea-lab.github.io/Robo-ABC/",
+    "pdf": "",
+    "identifiers": {},
+    "aliases": [],
+    "paper_type": "method",
+    "publication": {
+      "status": "peer_reviewed",
+      "kind": "conference",
+      "presentation": "unknown",
+      "venue": "ECCV",
+      "year": 2024,
+      "venue_year": 2024,
+      "venue_id": "eccv"
+    },
+    "sources": {
+      "primary": {
+        "url": "https://www.ecva.net/papers/eccv_2024/papers_ECCV/html/5748_ECCV_2024_paper.php",
+        "kind": "official_publication",
+        "scope": "paper_specific",
+        "verified_on": "2026-10-25"
+      },
+      "preprint": null,
+      "project": {
+        "url": "https://tea-lab.github.io/Robo-ABC/",
+        "kind": "official_project",
+        "scope": "paper_specific",
+        "verified_on": "2026-10-25"
+      },
+      "code": {
+        "url": "https://github.com/TEA-Lab/Robo-ABC",
+        "kind": "official_code",
+        "scope": "paper_specific",
+        "verified_on": "2026-10-25"
+      },
+      "paper_pdf": null,
+      "venue_verification": {
+        "url": "https://www.ecva.net/papers/eccv_2024/papers_ECCV/html/5748_ECCV_2024_paper.php",
+        "kind": "official_publication",
+        "scope": "paper_specific",
+        "verified_on": "2026-10-25"
+      }
+    },
+    "artifacts": {
+      "code_status": "released",
+      "data_status": "not_identified",
+      "local_pdf_cache": false
+    },
+    "evidence": "ABSTRACT_CHECKED",
+    "source_audit": "2026-10-25 공식 abstract와 publication metadata 및 명시된 project/code 공개 링크 확인. 본문 정독·코드 실행·payload 검증은 이번 등록 범위 밖이다.",
+    "note_format": "abstract_analysis_v1",
+    "relations": [],
+    "curation": {
+      "admission_reason": "Semantic representation을 실제 contact/action에 연결하는 비교용 3D/affordance 지원 연구다.",
+      "tier_reason": "Semantic representation을 실제 contact/action에 연결하는 비교용 3D/affordance 지원 연구다.",
+      "rationale_status": "recorded",
+      "rationale_basis": "2026-10-25 registry refresh; researcher interpretation",
+      "rationale_reviewed_on": "2026-10-25",
+      "scope_status": "adjacent",
+      "roles": [
+        "method"
+      ],
+      "role_basis": "manual admission review",
+      "priority_source_check": {
+        "url": "https://www.ecva.net/papers/eccv_2024/papers_ECCV/html/5748_ECCV_2024_paper.php",
+        "checked_on": "2026-10-25",
+        "scope": "official_abstract_or_project; priority review only"
+      }
+    },
+    "admission_tier": "REFERENCE",
+    "admission_group": "Robot-centric 3D perception, semantic memory, and spatial reasoning",
+    "problem": "새 물체 category에서 조작 contact point를 얻기 어렵다.",
+    "method": "Human video의 affordance memory에서 유사 물체를 찾고 semantic correspondence로 contact point를 옮긴다.",
+    "interface": "새 물체 영상·contact memory → affordance/contact point → robot manipulation.",
+    "evaluation": "시각 affordance 추정과 실세계 cross-category grasping을 보고한다.",
+    "role": "Semantic representation을 실제 contact/action에 연결하는 비교용 3D/affordance 지원 연구다.",
+    "lineage": "Semantic correspondence → Robo-ABC → action-valid contact transfer",
+    "question": "의미 대응점이 비슷해도 물리적으로 실행 가능한 contact인가?",
+    "minimal_experiment": "동일 object에서 retrieval 정확도와 실제 reachable grasp 성공을 분리 측정한다.",
+    "verification_questions": "2D/3D lifting, grasp 실행기, source별 수치 차이"
+  },
+  {
+    "admission_key": "fuse",
+    "title": "Beyond Sight: Finetuning Generalist Robot Policies with Heterogeneous Sensors via Language Grounding",
+    "year": 2025,
+    "venue": "ICRA",
+    "category": "VLA and Generalist Robot Policies",
+    "primary_track": "VLA and generalist robot policies",
+    "tags": [
+      "VLA",
+      "evaluation",
+      "generalization"
+    ],
+    "page": "https://arxiv.org/abs/2501.04693",
+    "project": "https://fuse-model.github.io/",
+    "pdf": "",
+    "identifiers": {
+      "arxiv": "2501.04693",
+      "doi": "10.1109/ICRA55743.2025.11127987"
+    },
+    "aliases": [
+      "FuSe"
+    ],
+    "paper_type": "method",
+    "publication": {
+      "status": "peer_reviewed",
+      "kind": "conference",
+      "presentation": "unknown",
+      "venue": "ICRA",
+      "year": 2025,
+      "venue_year": 2025,
+      "venue_id": "icra"
+    },
+    "sources": {
+      "primary": {
+        "url": "https://arxiv.org/abs/2501.04693",
+        "kind": "arxiv",
+        "scope": "paper_specific",
+        "verified_on": "2026-10-25"
+      },
+      "preprint": {
+        "url": "https://arxiv.org/abs/2501.04693",
+        "kind": "arxiv",
+        "scope": "paper_specific",
+        "verified_on": "2026-10-25"
+      },
+      "project": {
+        "url": "https://fuse-model.github.io/",
+        "kind": "official_project",
+        "scope": "paper_specific",
+        "verified_on": "2026-10-25"
+      },
+      "code": {
+        "url": "https://github.com/fuse-model/FuSe",
+        "kind": "official_code",
+        "scope": "paper_specific",
+        "verified_on": "2026-10-25"
+      },
+      "paper_pdf": null,
+      "venue_verification": {
+        "url": "https://api.crossref.org/works/10.1109/ICRA55743.2025.11127987",
+        "kind": "official_publication",
+        "scope": "paper_specific",
+        "verified_on": "2026-10-25"
+      }
+    },
+    "artifacts": {
+      "code_status": "released",
+      "data_status": "not_identified",
+      "local_pdf_cache": false
+    },
+    "evidence": "ABSTRACT_CHECKED",
+    "source_audit": "2026-10-25 공식 abstract와 publication metadata 및 명시된 project/code 공개 링크 확인. 본문 정독·코드 실행·payload 검증은 이번 등록 범위 밖이다. IEEE 페이지 challenge; IEEE가 기탁한 Crossref DOI metadata로 ICRA 2025를 확인했다.",
+    "note_format": "abstract_analysis_v1",
+    "relations": [],
+    "curation": {
+      "admission_reason": "새 sensor 결합을 연구할 때 naive finetuning·masked training과 함께 대조할 직접 기준이다.",
+      "tier_reason": "새 sensor 결합을 연구할 때 naive finetuning·masked training과 함께 대조할 직접 기준이다.",
+      "rationale_status": "recorded",
+      "rationale_basis": "2026-10-25 registry refresh; researcher interpretation",
+      "rationale_reviewed_on": "2026-10-25",
+      "scope_status": "active",
+      "roles": [
+        "method"
+      ],
+      "role_basis": "manual admission review",
+      "priority_source_check": {
+        "url": "https://arxiv.org/abs/2501.04693",
+        "checked_on": "2026-10-25",
+        "scope": "official_abstract_or_project; priority review only"
+      }
+    },
+    "admission_tier": "NEXT",
+    "admission_group": "VLA, cross-embodiment, and long-horizon planning",
+    "problem": "시각·proprio 중심 generalist policy에 적은 촉각·음향 데이터를 통합하기 어렵다.",
+    "method": "Language grounding과 multimodal contrastive·language generation loss로 새 sensor 의미를 연결한다.",
+    "interface": "Vision·touch·audio·언어 → generalist policy → 조작 action.",
+    "evaluation": "Diffusion generalist와 VLA의 실세계 manipulation 및 cross-modal prompting을 보고한다.",
+    "role": "새 sensor 결합을 연구할 때 naive finetuning·masked training과 함께 대조할 직접 기준이다.",
+    "lineage": "Generalist policy → FuSe → task-relevant multisensory VLA",
+    "question": "동일 정보량과 예산에서 language grounding 이득이 단순 modality dropout 이후에도 남는가?",
+    "minimal_experiment": "같은 데이터로 naive finetuning·masked training·FuSe를 가림 조건별 비교한다.",
+    "verification_questions": "센서 동기화, 모달별 annotation 비용, 입력 결손과 추가 정보의 구별"
+  },
+  {
+    "admission_key": "libero_pro",
+    "title": "LIBERO-PRO: Towards Robust and Fair Evaluation of Vision-Language-Action Models Beyond Memorization",
+    "year": 2025,
+    "venue": "arXiv",
+    "category": "VLA and Generalist Robot Policies",
+    "primary_track": "VLA and generalist robot policies",
+    "tags": [
+      "VLA",
+      "benchmark",
+      "generalization"
+    ],
+    "page": "https://arxiv.org/abs/2510.03827",
+    "project": "https://github.com/Zxy-MLlab/LIBERO-PRO",
+    "pdf": "",
+    "identifiers": {
+      "arxiv": "2510.03827"
+    },
+    "aliases": [],
+    "paper_type": "benchmark_or_dataset",
+    "publication": {
+      "status": "preprint",
+      "kind": "preprint",
+      "presentation": "unknown",
+      "venue": "arXiv",
+      "year": 2025,
+      "venue_year": null,
+      "venue_id": "arxiv"
+    },
+    "sources": {
+      "primary": {
+        "url": "https://arxiv.org/abs/2510.03827",
+        "kind": "arxiv",
+        "scope": "paper_specific",
+        "verified_on": "2026-10-25"
+      },
+      "preprint": {
+        "url": "https://arxiv.org/abs/2510.03827",
+        "kind": "arxiv",
+        "scope": "paper_specific",
+        "verified_on": "2026-10-25"
+      },
+      "project": {
+        "url": "https://github.com/Zxy-MLlab/LIBERO-PRO",
+        "kind": "official_project",
+        "scope": "paper_specific",
+        "verified_on": "2026-10-25"
+      },
+      "code": {
+        "url": "https://github.com/Zxy-MLlab/LIBERO-PRO",
+        "kind": "official_code",
+        "scope": "paper_specific",
+        "verified_on": "2026-10-25"
+      },
+      "paper_pdf": null,
+      "venue_verification": null
+    },
+    "artifacts": {
+      "code_status": "released",
+      "data_status": "not_identified",
+      "local_pdf_cache": false
+    },
+    "evidence": "ABSTRACT_CHECKED",
+    "source_audit": "2026-10-25 공식 abstract와 publication metadata 및 명시된 project/code 공개 링크 확인. 본문 정독·코드 실행·payload 검증은 이번 등록 범위 밖이다. 정식 acceptance를 확인하지 못해 preprint로 유지한다.",
+    "note_format": "abstract_analysis_v1",
+    "relations": [],
+    "curation": {
+      "admission_reason": "지시 교란 평가와 구현된 task의 유효성을 함께 점검할 비교 benchmark다.",
+      "tier_reason": "지시 교란 평가와 구현된 task의 유효성을 함께 점검할 비교 benchmark다.",
+      "rationale_status": "recorded",
+      "rationale_basis": "2026-10-25 registry refresh; researcher interpretation",
+      "rationale_reviewed_on": "2026-10-25",
+      "scope_status": "adjacent",
+      "roles": [
+        "benchmark_or_dataset"
+      ],
+      "role_basis": "manual admission review",
+      "priority_source_check": {
+        "url": "https://arxiv.org/abs/2510.03827",
+        "checked_on": "2026-10-25",
+        "scope": "official_abstract_or_project; priority review only"
+      }
+    },
+    "admission_tier": "REFERENCE",
+    "admission_group": "VLA, cross-embodiment, and long-horizon planning",
+    "problem": "기존 LIBERO 평가에서 task 이해와 행동 암기가 혼동될 수 있다.",
+    "method": "물체·초기 상태·지시·환경 perturbation으로 일반화와 지시 의존성을 점검한다.",
+    "interface": "변형 task/지시 → VLA → 실행 결과.",
+    "evaluation": "LIBERO 기반 변형 평가를 보고한다. 극단적 저하 수치의 task validity는 별도 본문 감사가 필요하다.",
+    "role": "지시 교란 평가와 구현된 task의 유효성을 함께 점검할 비교 benchmark다.",
+    "lineage": "LIBERO → LIBERO-PRO/Plus → 유효성 통제 비교",
+    "question": "Reachability·goal consistency를 확인한 perturbation에서도 성능 저하가 남는가?",
+    "minimal_experiment": "Goal/planner/evaluator를 먼저 맞춘 뒤 원본과 변형 task 성공을 비교한다.",
+    "verification_questions": "변경된 목표의 타당성, 언어 교란의 의미, v1/v2 차이"
+  },
+  {
+    "admission_key": "colosseum_v2",
+    "title": "Colosseum V2: Benchmarking Generalization for Vision Language Action Models",
+    "year": 2026,
+    "venue": "arXiv",
+    "category": "VLA and Generalist Robot Policies",
+    "primary_track": "VLA and generalist robot policies",
+    "tags": [
+      "VLA",
+      "benchmark",
+      "generalization"
+    ],
+    "page": "https://arxiv.org/abs/2605.27759",
+    "project": "not identified",
+    "pdf": "",
+    "identifiers": {
+      "arxiv": "2605.27759"
+    },
+    "aliases": [],
+    "paper_type": "benchmark_or_dataset",
+    "publication": {
+      "status": "preprint",
+      "kind": "preprint",
+      "presentation": "unknown",
+      "venue": "arXiv",
+      "year": 2026,
+      "venue_year": null,
+      "venue_id": "arxiv"
+    },
+    "sources": {
+      "primary": {
+        "url": "https://arxiv.org/abs/2605.27759",
+        "kind": "arxiv",
+        "scope": "paper_specific",
+        "verified_on": "2026-10-25"
+      },
+      "preprint": {
+        "url": "https://arxiv.org/abs/2605.27759",
+        "kind": "arxiv",
+        "scope": "paper_specific",
+        "verified_on": "2026-10-25"
+      },
+      "project": null,
+      "code": null,
+      "paper_pdf": null,
+      "venue_verification": null
+    },
+    "artifacts": {
+      "code_status": "not_identified",
+      "data_status": "not_identified",
+      "local_pdf_cache": false
+    },
+    "evidence": "ABSTRACT_CHECKED",
+    "source_audit": "2026-10-25 공식 abstract와 publication metadata 및 명시된 project/code 공개 링크 확인. 본문 정독·코드 실행·payload 검증은 이번 등록 범위 밖이다. 정식 acceptance를 확인하지 못해 preprint로 유지한다.",
+    "note_format": "abstract_analysis_v1",
+    "relations": [],
+    "curation": {
+      "admission_reason": "THE COLOSSEUM의 후속 평가 자산이며 다양한 로봇을 다루는 사용자 연구축과 직접 연결된다.",
+      "tier_reason": "THE COLOSSEUM의 후속 평가 자산이며 다양한 로봇을 다루는 사용자 연구축과 직접 연결된다.",
+      "rationale_status": "recorded",
+      "rationale_basis": "2026-10-25 registry refresh; researcher interpretation",
+      "rationale_reviewed_on": "2026-10-25",
+      "scope_status": "adjacent",
+      "roles": [
+        "benchmark_or_dataset"
+      ],
+      "role_basis": "manual admission review",
+      "priority_source_check": {
+        "url": "https://arxiv.org/abs/2605.27759",
+        "checked_on": "2026-10-25",
+        "scope": "official_abstract_or_project; priority review only"
+      }
+    },
+    "admission_tier": "REFERENCE",
+    "admission_group": "VLA, cross-embodiment, and long-horizon planning",
+    "problem": "VLA의 perception 일반화가 여러 robot morphology에서 행동 일반화로 이어지는지 점검해야 한다.",
+    "method": "ManiSkill 기반 다중 morphology task로 in/out-of-domain policy 평가를 구성한다.",
+    "interface": "Task·robot morphology·분포 변화 → ACT/π0.5 등 policy → task 성능.",
+    "evaluation": "28 task·두 robot morphology와 simulation/real-world 지표 상관을 abstract에서 보고한다.",
+    "role": "THE COLOSSEUM의 후속 평가 자산이며 다양한 로봇을 다루는 사용자 연구축과 직접 연결된다.",
+    "lineage": "THE COLOSSEUM → Colosseum V2 → morphology별 일반화 진단",
+    "question": "동일 task 및 관측 정보에서 morphology 변경의 추가 실패가 남는가?",
+    "minimal_experiment": "같은 task pair에서 morphology와 시각 perturbation을 분리해 비교한다.",
+    "verification_questions": "morphology별 action/control 정렬, task split과 simulator-real 대응"
+  }
+]

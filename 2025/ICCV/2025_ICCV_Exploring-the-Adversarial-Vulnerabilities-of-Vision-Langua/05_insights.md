@@ -4,6 +4,8 @@
 > Evidence maturity: `FULL_TEXT_CHECKED`.
 > Analysis basis: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/ICCV2025/html/Wang_Exploring_the_Adversarial_Vulnerabilities_of_Vision-Language-Action_Models_in_Robotics_ICCV_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/ICCV2025/papers/Wang_Exploring_the_Adversarial_Vulnerabilities_of_Vision-Language-Action_Models_in_Robotics_ICCV_2025_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
+> DOC-QA2 targeted source review: 2026-10-23; PDF pp. 2. 손상 구간·직접 연결된 표 분류만 원문 이미지와 대조했다. 전체 주장 정독·실험 검증·reading status 승격을 뜻하지 않는다. [URL·PDF hash·수정 기록](../../../work/sources/pdf_note_review_followup_2026-10-23.json).
+
 ## Paper-supported conclusion
 
 > **Evidence boundary:** The following claims are restricted to selected PDF body sentences, captions and section anchors; exact table/equation values remain to be checked at those anchors.
@@ -21,7 +23,7 @@
 
 ### Strongest assumption and failure boundary
 
-- **p. 2 / 1. Introduction - extractive body cue:** This offers valuable insights for the research community to explore systemic failures in similar concurrent generative foundation models;  We rigorously evaluate our approach in ...
+- **PDF p. 2, §1 / contribution list (DOC-QA2 원문 대조):** Visual adversarial patch와 VLA-specific attack objective를 제시하고 simulation 및 real-world setting에서 평가한다. 추출된 C1 문자는 contribution 목록의 원형 숫자 3 기호였다.
 - **p. 1 / 1. Introduction - extractive body cue:** Failure Rate Comparison BV2 LIBERO A.
 - **p. 1 / 1. Introduction - extractive body cue:** Comparison of failure rates across different attack schemes (UADA, UPA, and TMA).
 - **p. 2 / 1. Introduction - extractive body cue:** To address these challenges, our work intensifies the adversarial threats posed to VLA-based systems by both developing specialized attack objectives and designing effective attack methods.

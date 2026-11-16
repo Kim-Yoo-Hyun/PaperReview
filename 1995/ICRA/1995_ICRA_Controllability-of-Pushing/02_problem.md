@@ -4,6 +4,8 @@
 > Evidence maturity: `FULL_TEXT_CHECKED`.
 > Analysis basis: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.cs.cmu.edu/afs/cs/Web/People/mlab/stable/papers.html; PDF retrieval source: https://www.ri.cmu.edu/pub_files/pub2/lynch_kevin_1995_1/lynch_kevin_1995_1.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
+> DOC-QA1 (2026-10-23): 제어문자·깨진 추출 구간과 직접 연결된 표 항목을 PDF 페이지 이미지와 대조했다. 확인 범위·원문 URL·페이지·수정 이력은 [대조 기록](../../../work/sources/pdf_note_review_2026-10-23.json)에 있다. 노트 전체의 정독이나 모든 기존 주장에 대한 재검증을 뜻하지 않으며 reading status는 유지한다.
+
 ## Problem in One Sentence
 
 PDF body framing (p. 1 (1 Introduction), p. 1 (1 Introduction)): If the object is too large to be grasped or too heavy to be carried, however, this approach fails.
@@ -23,7 +25,7 @@ PDF body framing (p. 1 (1 Introduction), p. 1 (1 Introduction)): If the object i
 | Dimension | PDF body evidence | Registry/robotics interpretation | Boundary |
 |---|---|---|---|
 | Target problem | If the object is too large to be grasped or too heavy to be carried, however, this approach fails. | rigid/articulated object와 robot manipulator contact scene | body wording is the source claim |
-| Observation / input | Then the slider can be rotated to the desired goal configuration.  Proposition 1 is a straightforward generalization of a result due ... | RGB-D/point cloud, object state와 contact/task observation | exact sensor/frame/preprocessing from PDF body |
+| Controllability assumptions | 원문 대조: Proposition 1의 가정 아래 회전과 병진 또는 두 회전 방향의 조합으로 목표 위치·자세에 도달할 수 있음을 설명한다. Pushing control의 비대칭성 때문에 이 controllability 논증을 small-time local controllability와 동일시하지 않는다. ([PDF p. 3](https://publications.ri.cmu.edu/storage/publications/pub_files/pub2/lynch_kevin_1995_1/lynch_kevin_1995_1.pdf#page=3), §2.3, Proposition 1 proof) | Velocity-direction 조건 | 해당 증명으로 sensor/preprocessing을 추론하지 않음 |
 | State / latent | Then, slider, rotated, desired, goal, configuration, Proposition, straightforward, generalization, result | object geometry, affordance, contact mode 또는 end-effector state | notation and tensor shape require body check |
 | Output / action | follows, Theorem, Sussmann, Let, finite, vector, fields, open | grasp, pose, force 또는 end-effector trajectory | exact unit/frame/decoder require body check |
 | Target outcome | completion, contact success and robustness | task completion, contact success, pose/force error와 generalization | metric/denominator are in 04 evidence |

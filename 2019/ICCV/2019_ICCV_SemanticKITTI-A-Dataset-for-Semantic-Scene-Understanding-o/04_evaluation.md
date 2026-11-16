@@ -4,6 +4,8 @@
 > Evidence maturity: `FULL_TEXT_CHECKED`.
 > Analysis basis: full-text PDF body checked on 2026-09-03 (17 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/1904.01416; PDF retrieval source: https://arxiv.org/pdf/1904.01416. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
+> DOC-QA2 targeted source review: 2026-10-23; PDF pp. 6. 손상 구간·직접 연결된 표 분류만 원문 이미지와 대조했다. 전체 주장 정독·실험 검증·reading status 승격을 뜻하지 않는다. [URL·PDF hash·수정 기록](../../../work/sources/pdf_note_review_followup_2026-10-23.json).
+
 ## Evaluation in One Sentence
 
 PDF body evaluation/result cue (p. 6 (4.2. Multiple Scan Experiments), p. 8 (5. Evaluation of Semantic Scene Completion), p. 8 (5. Evaluation of Semantic Scene Completion), p. 4 (3.1. Labeling Process), p. 4 (4.1. Single Scan Experiments), p. 6 (4.2. Multiple Scan Experiments)): In this task, we allow methods to exploit information from a sequence of multiple past scans to improve the segmentation of the current scan.
@@ -144,7 +146,7 @@ PDF body evaluation/result cue (p. 6 (4.2. Multiple Scan Experiments), p. 8 (5. 
 | Body reproducibility cue | Anchor |
 |---|---|
 | This has minimal impact on the performance, but significantly speeds up the training time due to faster preprocessing [18]. | p. 8 (5. Evaluation of Semantic Scene Completion) |
-| Approach num. parameters train time inference time (million)  GPU hours epoch   seconds point cloud  PointNet 3 4 0.5 PointNet++ 6 ... | p. 6 (Approach) |
+| Table 3의 열은 parameters (million), training time (GPU hours/epoch), inference time (seconds/point cloud)다. 예를 들어 PointNet은 3/4/0.5, DarkNet53Seg는 50/3/0.1이다. 숫자만 분리해 동일 단위로 해석하지 않는다. | PDF p. 6 Table 3 |
 | The evaluation metric for this task is still the same as in the single scan case, i.e., we evaluate the mean IoU of the ... | p. 6 (4.2. Multiple Scan Experiments) |
 | To compute which voxels belong to the occluded space, we check for every pose of the car which voxels are visible to the sensor ... | p. 7 (5. Evaluation of Semantic Scene Completion) |
 | [49] and compute the IoU for the task of scene completion, which only classifies a voxel as being occupied or empty, i.e., ignoring the ... | p. 7 (5. Evaluation of Semantic Scene Completion) |

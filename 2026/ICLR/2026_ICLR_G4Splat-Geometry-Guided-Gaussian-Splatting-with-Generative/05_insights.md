@@ -4,6 +4,8 @@
 > Evidence maturity: `FULL_TEXT_CHECKED`.
 > Analysis basis: full-text PDF body checked on 2026-09-03 (28 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=kdPmsMVhZf; public full-text mirror used for retrieval (canonical paper source retained): https://chatpaper.com/api/v1/articles/download/247273. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
+> DOC-QA2 targeted source review: 2026-10-23; PDF pp. 27. 손상 구간·직접 연결된 표 분류만 원문 이미지와 대조했다. 전체 주장 정독·실험 검증·reading status 승격을 뜻하지 않는다. [URL·PDF hash·수정 기록](../../../work/sources/pdf_note_review_followup_2026-10-23.json).
+
 ## Paper-supported conclusion
 
 > **Evidence boundary:** The following claims are restricted to selected PDF body sentences, captions and section anchors; exact table/equation values remain to be checked at those anchors.
@@ -60,7 +62,7 @@
 1. Reconstruct the body-defined input/state/output interface and record the exact equation or algorithm anchors.
 2. Use the paper-reported resource/task cue: The real-world datasets include 6 scenes from ScanNet++ (Yeshwanth et al., 2023), 3 scenes from DeepBlending (Hedman et al., 2018) and 9 scenes from Mip-NeRF 360 (Barron et al., 2022)..
 3. Compare against the body-reported baseline or a matched simpler baseline: Our method significantly outperforms all baselines across both reconstruction and rendering metrics..
-4. Report the body metric and its denominator/aggregation: Metric Definition Chamfer Distance (CD) Accuracy+Completeness 2 Accuracy mean p∈P  min p∗∈P ∗//p -p∗//1  Completeness mean p∗∈P ∗  min p∈P//p -p∗//1  F-score 2×Precision×Recall Precision+Recall Precision mean p∈P  ....
+4. 최소 재현은 PDF p. 27 Table A4의 L1 nearest-point distance, 양방향 평균 CD, threshold 0.05의 precision/recall 및 F-score 정의를 그대로 보고한다. 구현의 거리 단위·sampling과 표의 정의가 일치하는지도 확인한다. (DOC-QA2)
 5. Re-run the body-reported ablation/failure condition: In addition, we implement a variant of 2DGS augmented with the See3D (Ma et al., 2025)..
 6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
 
@@ -70,6 +72,6 @@
 
 ## Falsifiable research question
 
-고정된 observation/action/data/compute budget에서 main, contributions, summarized mechanism이 Our method significantly outperforms all baselines across both reconstruction and rendering metrics. 대비 Metric Definition Chamfer Distance (CD) Accuracy+Completeness 2 Accuracy mean p∈P  min p∗∈P ∗//p -p∗//1  Completeness mean ...을 개선하고, Additionally, we present more experimental results in Appendix A, failure cases and discuss the method's limitations ... 조건에서도 closed-loop failure를 늘리지 않는가?
+**Researcher interpretation (DOC-QA2):** 같은 view·scene·compute 조건에서 Table A4의 reconstruction metric 개선이 유지되는가를 검증한다. L1/threshold를 고정해야 하며 이 metric 표만으로 robot closed-loop safety나 failure 감소를 주장하지 않는다.
 
 **Reject the hypothesis if** the primary body metric does not improve at matched budget, or if the method's added latency, data requirement, instability or assumption sensitivity outweighs the reported closed-loop gain.

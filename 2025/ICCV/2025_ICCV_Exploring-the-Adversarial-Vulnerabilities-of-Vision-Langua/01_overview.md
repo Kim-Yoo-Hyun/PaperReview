@@ -17,9 +17,11 @@
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
+> DOC-QA2 targeted source review: 2026-10-23; PDF pp. 2. 손상 구간·직접 연결된 표 분류만 원문 이미지와 대조했다. 전체 주장 정독·실험 검증·reading status 승격을 뜻하지 않는다. [URL·PDF hash·수정 기록](../../../work/sources/pdf_note_review_followup_2026-10-23.json).
+
 ## Why This Paper Is Here
 
-VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다. 본문은 This offers valuable insights for the research community to explore systemic failures in similar concurrent generative foundation models;  We rigorously evaluate our approach in both simulated and real-world environments across four ...를 문제로 두고, Additionally, we introduce Geometry-Aware Objective that considers the robot's movement in three-dimensional space, characterized by three degrees of freedom.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+VLA의 visual adversarial patch가 action에 미치는 취약성을 읽기 위한 논문이다. PDF p. 2의 contribution 목록은 attack objective와 simulation/real-world 평가를 설명한다. 손상된 항목 번호를 본문 내용으로 읽거나 평가 범위를 보편적 안전 보장으로 확대하지 않는다. (DOC-QA2 원문 대조)
 
 ## Problem and Motivation
 
@@ -28,7 +30,7 @@ VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다
 - **p. 1 / Abstract - extractive body cue:** This paper systematically evaluates their robustness.
 - **p. 1 / Abstract - extractive body cue:** Recognizing the unique demands of robotic execution, our attack objectives target the inherent spatial and functional characteristics of robotic systems.
 - **p. 1 / Abstract - extractive body cue:** In particular, we introduce two untargeted attack objectives that leverage spatial foundations to destabilize robotic actions, and a targeted attack objective that manipulates the robotic ...
-- **p. 2 / 1. Introduction - extractive body cue:** This offers valuable insights for the research community to explore systemic failures in similar concurrent generative foundation models;  We rigorously evaluate our approach in ...
+- **PDF p. 2, §1 / contribution list (DOC-QA2 원문 대조):** Visual adversarial patch와 VLA-specific attack objective를 제시하고 simulation 및 real-world setting에서 평가한다. 추출된 C1 문자는 contribution 목록의 원형 숫자 3 기호였다.
 - **p. 1 / 1. Introduction - extractive body cue:** Failure Rate Comparison BV2 LIBERO A.
 
 ## Core Idea
@@ -85,4 +87,4 @@ VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다
 
 ## Why Read It
 
-VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다. 본문은 This offers valuable insights for the research community to explore systemic failures in similar concurrent generative foundation models;  We rigorously evaluate our approach in both simulated and real-world environments across four ...를 문제로 두고, Additionally, we introduce Geometry-Aware Objective that considers the robot's movement in three-dimensional space, characterized by three degrees of freedom.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (1. Introduction), p. 1 (1. Introduction), p. 1 (1. Introduction), p. 2 (1. Introduction), p. 3 (3.1. Preliminary), p. 4 (3.2. Untargeted Action Discrepancy Attack) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+VLA의 visual adversarial patch가 action에 미치는 취약성을 읽기 위한 논문이다. PDF p. 2의 contribution 목록은 attack objective와 simulation/real-world 평가를 설명한다. 손상된 항목 번호를 본문 내용으로 읽거나 평가 범위를 보편적 안전 보장으로 확대하지 않는다. (DOC-QA2 원문 대조)

@@ -4,6 +4,8 @@
 > Evidence maturity: `FULL_TEXT_CHECKED`.
 > Analysis basis: full-text PDF body checked on 2026-09-03 (17 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://proceedings.mlr.press/v100/lynch20a.html; PDF retrieval source: https://arxiv.org/pdf/1903.01973. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
+> DOC-QA1 (2026-10-23): 제어문자·깨진 추출 구간과 직접 연결된 표 항목을 PDF 페이지 이미지와 대조했다. 확인 범위·원문 URL·페이지·수정 이력은 [대조 기록](../../../work/sources/pdf_note_review_2026-10-23.json)에 있다. 노트 전체의 정독이나 모든 기존 주장에 대한 재검증을 뜻하지 않으며 reading status는 유지한다.
+
 ## Method in One Sentence
 
 PDF body method statement (p. 12 (A.2 Architecture Details), p. 12 (A.2 Architecture Details), p. 17 (A.4.3 Coverage Analysis of Interaction Space), p. 15 (A.3.4 Training Data), p. 15 (A.3.4 Training Data), p. 16 (A.4.3 Coverage Analysis of Interaction Space)): Action space Our 8-DOF agent's action space state consists of: 3 cartesian coordinates for the position of its end effector, 3 Euler angles representing its end effector orientation, and 2 ...
@@ -69,7 +71,7 @@ PDF body method statement (p. 12 (A.2 Architecture Details), p. 12 (A.2 Architec
 - **p. 12 / A.2 Architecture Details - extractive body cue:** Goals In the image experiments, only the output of the visual embedder is treated as goal state, i.e. not the proprioceptive state.
 - **p. 2 / 1 Introduction - extractive body cue:** (b) Inference: the policy is conditioned on the current state, the goal state (specified by the user) and a latent plan which is sampled once ...
 - **p. 11 / A.1 Theoretical Motivation - extractive body cue:** The learned conditional prior becomes a "plan proposal" network mapping from current and goal state to a distribution over high level latent plans connecting them. ...
-- **p. 11 / A.1 Theoretical Motivation - extractive body cue:** [34]): log pθ(x/c) ≥-KL  qφ(z/x, c) // pθ(z/c)  + Eqφ(z/x,c) [log pθ(x/z, c)] (6) We note that this model implies a formal conditional generative ...
+- **원문 대조:** Conditional VAE의 ELBO는 expected conditional reconstruction log-likelihood에서 posterior q_φ(z∣x,c)와 conditional prior p_θ(z∣c)의 KL을 뺀다. Context c는 현재·목표 state이고 z는 latent plan이다. ([PDF p. 11](https://arxiv.org/pdf/1903.01973#page=11), Appendix A.1.1, Eq. (6)).
 - **p. 17 / A.4.3 Coverage Analysis of Interaction Space - extractive body cue:** Our state models were trained on a smaller dataset, up to 180 minutes of play (see Fig 8). "Random": we collected a random exploration dataset ...
 - **Normalized interface:** observation=observation history와 expert trajectory/action; state=behavior policy와 temporal action context; output/action=predicted action 또는 action chunk.
 - Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.

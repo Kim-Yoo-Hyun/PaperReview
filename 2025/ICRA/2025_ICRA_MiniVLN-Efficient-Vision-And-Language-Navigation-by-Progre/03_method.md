@@ -4,6 +4,8 @@
 > Evidence maturity: `FULL_TEXT_CHECKED`.
 > Analysis basis: full-text PDF body checked on 2026-09-03 (7 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.proceedings.com/content/081/081087webtoc.pdf; PDF retrieval source: https://arxiv.org/pdf/2409.18800v1. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
+> DOC-QA2 targeted source review: 2026-10-23; PDF pp. 4. 손상 구간·직접 연결된 표 분류만 원문 이미지와 대조했다. 전체 주장 정독·실험 검증·reading status 승격을 뜻하지 않는다. [URL·PDF hash·수정 기록](../../../work/sources/pdf_note_review_followup_2026-10-23.json).
+
 ## Method in One Sentence
 
 PDF body method statement (p. 4 (IV. METHOD), p. 4 (IV. METHOD), p. 3 (IV. METHOD), p. 3 (IV. METHOD), p. 5 (IV. METHOD), p. 5 (IV. METHOD)): The MSE loss between the outputs of the teacher and student models for this panoramic observation is computed as: Lpano = MSE(hT t , hS t Wr) (7) where Wr ...
@@ -49,7 +51,7 @@ PDF body method statement (p. 4 (IV. METHOD), p. 4 (IV. METHOD), p. 3 (IV. METHO
 
 - **p. 5 / IV. METHOD - extractive body cue:** Method Val Unseen Test Unseen Param(M)↓ SR↑ SPL↑ SR↑ SPL↑ PREVALENT [10] 57 53 54 51 209.83 RecBERT [12] 63 57 63 57 159.99 HAMT ...
 - **p. 3 / IV. METHOD - extractive body cue:** Embedding Distillation involves calculating the Mean Squared Error (MSE) loss between the embedding layers of the teacher model and the student model: Lemb = MSE(Etea, ...
-- **p. 4 / IV. METHOD - extractive body cue:** The loss function is then designed as: Lfuse = CE Ztea t , Zstu t  (8)
+- **PDF p. 4, §IV-B / Eq. (8) (DOC-QA2 원문 대조):** Fusion distillation은 teacher와 student navigation output을 temperature t로 나눈 뒤 cross-entropy CE(Z_tea/t,Z_stu/t)로 비교한다. 추출된 t를 시간 subscript로 해석하지 않는다.
 - **p. 4 / IV. METHOD - extractive body cue:** Distillation Loss The language encoder and panorama encoder in Scalepre consists of NL = 9 and NP = 2 transformer blocks respectively.
 - **p. 5 / IV. METHOD - extractive body cue:** Finally, the overall knowledge distillation loss Lft kd is the sum of these three types of distillation losses: Lft kd = Ltxt + Lpano + ...
 - **Formal bridge:** sensor/map state and goal -> path/waypoint/velocity -> path cost, risk or goal utility -> goal reach with collision-free execution.

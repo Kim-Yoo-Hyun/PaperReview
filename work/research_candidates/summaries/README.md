@@ -1,6 +1,10 @@
-# 연구 후보 핵심 요약 — 2026-10-22
+# 연구 후보 핵심 요약 — 2026-10-28 갱신
+
+현행 안내(2026-11-07): 새 8개 주제의 우선순위·가능성은 [현재 후보 index](../../research_topics/README.md#candidate-priority)에 있다. 아래 16개는 과거 판정과 재개 조건의 보존본이며 현행 순위표에 자동 재편입하지 않는다.
 
 사용자 요청에 따라 **주제별 한 파일, 총 16개**로 정리했다. 실제 buildup을 진행한 주제, 종료된 초기 방향, 과거 project overlay와 탐색 단계에서 제외한 방향을 구분한다. 이 문서는 연구 판단의 요약이며 새로운 읽기 우선순위나 실행 queue가 아니다. 활성 작업은 [TODO](../../../TODO.md), 논문 우선순위는 [READING_PLAN](../../../research/READING_PLAN.md)을 따른다.
+
+**2026-10-28 재검토:** [GAP-S3](../../update/VLA_EXPLORATION_REOPENING_2026-10-28.md)에서 아래 16항목과 최근 4사례의 보류 이유를 분리했다. **C1의 비실험 탐색을 재개**하고, 최근 TERM의 평가 탐색도 대기로 남겼다. 새 HANDOFF 질문은 [mobile synthesis](../../../synthesis/06_locomotion_whole_body.md#gap-handoff-2026)에서 관리한다. 과거 실험 결과·실행 gate를 바꾼 것은 아니며 16개 역사 요약을 새 후보 register로 확장하지 않는다.
 
 **GPU 확보는 실행 자원 조건 하나의 변화다.** 사용자가 선택한 현재/clone 컴퓨터의 로컬 Docker에서 접근 가능한 호환 GPU·충분한 메모리·runtime을 검증해야 하며, GPU 모델/VRAM 요건을 이번에 벤치마크하지 않았다. 원격 GPU·host MPS 경로로 바꾸는 승인이 아니다. 아래 최소 검증도 해당 주제의 연구·자료 조건이 충족된 경우에만 가능하다. 이번 정리는 실험을 실행하거나 HOLD/RETIRED 판정을 해제하지 않는다.
 
@@ -10,7 +14,7 @@
 | [초기 실행 지연·adaptive chunk](./00_EXECUTION_LATENCY.md) | 넓은 방향 종료 | Native delay/replanning 대조 | REMAC/TIC-VLA 등 직접 선행, E2와의 중복 |
 | [RP-2 실패 복구 선택](./RP2_FAILURE_RECOVERY.md) | RETIRED | 동일 failure onset의 option branch 비교 | 대안별 가치 교차·분기 동치·직접 선행 |
 | [RP-3 memory expiry](./RP3_MEMORY_EXPIRY.md) | RETIRED | Fresh/stale/masked memory branch | 실제 memory 사용·정보 비용·원인 귀속 |
-| [C1 선택적 추가 관측](./C1_SELECTIVE_OBSERVATION.md) | HOLD | Native competence와 immediate/look/wait 대조 | 물리 관측 primitive·시간/자세 통제·RL 필요성 |
+| [C1 선택적 추가 관측](./C1_SELECTIVE_OBSERVATION.md) | C1-E1 완료·대안 후보 유지 / rollout·학습 HOLD | 같은 정책의 immediate/always-look/초기 관측 gate | HANDOFF 우선 선정은 C1 반증이 아님; 전체 비용·정렬·효과·RL 필요성 미정 |
 | [C2 수행 방식 지시](./C2_EXECUTION_CONSTRAINTS.md) | 현재 설계 NO-GO | Qualified data의 reward 검사 후 native 대조 | Label/coverage 불충족·checkpoint·선행 충돌 |
 | [C3 실행 행동 동치](./C3_ACTION_EQUIVALENCE.md) | 본격 학습 비추천 | 더 넓은 checkpoint/slot 진단 | 실제 효과의 작음·국소성, CAPG/MPG 계보 |
 | [C4 선택적 보상 검수](./C4_REWARD_AUDIT.md) | 방법 NO-GO / 진단 HOLD | Versioned rollout의 reward·policy 대조 | 정책 chronology·독립 outcome·검수 비용 |

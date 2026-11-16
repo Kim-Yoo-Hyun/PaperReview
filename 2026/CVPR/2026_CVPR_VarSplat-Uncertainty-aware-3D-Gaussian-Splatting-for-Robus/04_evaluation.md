@@ -4,6 +4,8 @@
 > Evidence maturity: `FULL_TEXT_CHECKED`.
 > Analysis basis: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2026/html/Tran_VarSplat_Uncertainty-aware_3D_Gaussian_Splatting_for_Robust_RGB-D_SLAM_CVPR_2026_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2026/papers/Tran_VarSplat_Uncertainty-aware_3D_Gaussian_Splatting_for_Robust_RGB-D_SLAM_CVPR_2026_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
+> DOC-QA1 (2026-10-23): 제어문자·깨진 추출 구간과 직접 연결된 표 항목을 PDF 페이지 이미지와 대조했다. 확인 범위·원문 URL·페이지·수정 이력은 [대조 기록](../../../work/sources/pdf_note_review_2026-10-23.json)에 있다. 노트 전체의 정독이나 모든 기존 주장에 대한 재검증을 뜻하지 않으며 reading status는 유지한다.
+
 ## Evaluation in One Sentence
 
 PDF body evaluation/result cue (p. 6 (4.2. Quantitative Evaluation), p. 6 (4.2. Quantitative Evaluation), p. 7 (4.2. Quantitative Evaluation), p. 8 (4.3. Ablation studies), p. 7 (4.2. Quantitative Evaluation), p. 8 (4.3. Ablation studies)): VarSplat achieves the highest accuracy with robustness on large motion camera.
@@ -149,7 +151,7 @@ PDF body evaluation/result cue (p. 6 (4.2. Quantitative Evaluation), p. 6 (4.2. 
 | Runtime on Replica/Room0 using A100 80GB. | p. 7 (4.2. Quantitative Evaluation) |
 | As shown in Table 10, VarSplat achieve competitive runtime with recent 3DGS-SLAM systems. | p. 8 (4.3. Ablation studies) |
 | (5) Therefore, we can obtain expected per-splat variance and color by alpha blending, similar to how we compute perpixel color in Eq. | p. 3 (3.1. Per-pixel uncertainty rendering) |
-| The variance of splats Var  E[X/Z]  is then computed using second moment of a distribution and Eq. | p. 4 (3.1. Per-pixel uncertainty rendering) |
+| 원문 대조: 혼합 splat의 conditional-mean 분산은 weighted color second moment에서 weighted color mean의 제곱을 빼 계산한다. 여기에 각 splat의 학습 variance를 반영하여 pixel uncertainty V를 얻는다. 원문의 X와 Z는 확률변수 표기이며 좌표 X/Z로 읽지 않는다. ([PDF p. 4](https://openaccess.thecvf.com/content/CVPR2026/papers/Tran_VarSplat_Uncertainty-aware_3D_Gaussian_Splatting_for_Robust_RGB-D_SLAM_CVPR_2026_paper.pdf#page=4), Eqs. (7)–(9)) | [PDF p. 4](https://openaccess.thecvf.com/content/CVPR2026/papers/Tran_VarSplat_Uncertainty-aware_3D_Gaussian_Splatting_for_Robust_RGB-D_SLAM_CVPR_2026_paper.pdf#page=4), Eqs. (7)–(9) |
 | The first keyframe seeds Gaussians by backprojecting depth points, and subsequent frames expand coverage by adding Gaussians in unobserved regions or merging overlapping ones. | p. 4 (3.2. Mapping) |
 
 | Audit field | Current status |

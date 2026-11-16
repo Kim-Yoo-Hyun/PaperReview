@@ -4,6 +4,8 @@
 > Evidence maturity: `FULL_TEXT_CHECKED`.
 > Analysis basis: full-text PDF body checked on 2026-09-03 (76 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/1105.1186; PDF retrieval source: https://arxiv.org/pdf/1105.1186. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
+> DOC-QA1 (2026-10-23): 제어문자·깨진 추출 구간과 직접 연결된 표 항목을 PDF 페이지 이미지와 대조했다. 확인 범위·원문 URL·페이지·수정 이력은 [대조 기록](../../../work/sources/pdf_note_review_2026-10-23.json)에 있다. 노트 전체의 정독이나 모든 기존 주장에 대한 재검증을 뜻하지 않으며 reading status는 유지한다.
+
 ## Evaluation in One Sentence
 
 PDF body evaluation/result cue (p. 31 (V RRT∗), p. 33 (V RRT∗), p. 33 (V RRT∗), p. 34 (V RRT∗), p. 5 (Figure/Table caption), p. 29 (V RRT∗)): An approximate nearest neighbor can be computed using balanced-box decomposition (BBD) trees, which achieves O(cd,ε log n) query time using O(d n) space (Arya et al., 1999), where cd,ε ≤ ...
@@ -118,7 +120,7 @@ PDF body evaluation/result cue (p. 31 (V RRT∗), p. 33 (V RRT∗), p. 33 (V RRT
 
 - Numeric sentences retained from the body:
 - **p. 25 / V RRT∗ - extractive body cue:** Let In,m denote the indicator random variable for the event that the center cube of this tile contains no samples, whereas every outer cube contains ...
-- **p. 25 / V RRT∗ - extractive body cue:** The probability that an outer cube contains at least k + 1 samples is 1 -P  {Poisson(2-d/µ(Xfree)) ≥k + 1}  = 1 - P({Poisson(2-d/µ(Xfree)) ...
+- **원문 대조:** 해당 문단은 고정 k의 k-nearest sPRM이 asymptotically optimal하지 않다는 Theorem 31의 Poisson sampling 논증이다. 원문 자체에서 'at least k+1' 사건 앞의 complement와 다음 누적확률 식 사이 부등호가 일관되지 않아, 깨진 tail-probability 식을 검증된 등식으로 재사용하지 않는다. 이 노트는 그 오탈자의 정오를 확정하지 않는다. ([PDF p. 25](https://arxiv.org/pdf/1105.1186#page=25), Theorem 31 proof, Figure 5).
 - **p. 30 / V RRT∗ - extractive body cue:** Similarly, for the RRT, MRRT n = 1 for all n ∈N.
 - **p. 34 / V RRT∗ - extractive body cue:** The number of iterations versus the cost of the best path averaged over 100 trials is shown in Figure 20.
 - **p. 8 / 1 Introduction - extractive body cue:** In the case of random r-disc graphs, Theorem 6 (Percolation of random r-disc graphs (Penrose, 2003)) Let Gdisc(n, r) be a random r-disc graph in ...

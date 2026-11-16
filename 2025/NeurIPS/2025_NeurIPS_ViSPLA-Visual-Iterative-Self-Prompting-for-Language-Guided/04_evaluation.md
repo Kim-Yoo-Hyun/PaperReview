@@ -4,6 +4,8 @@
 > Evidence maturity: `FULL_TEXT_CHECKED`.
 > Analysis basis: full-text PDF body checked on 2026-09-03 (19 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=EyNzLH7BZK; PDF retrieval source: https://papers.nips.cc/paper_files/paper/2025/file/5eee634cb9729b8bcc2ec9f2a46a74ae-Paper-Conference.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
+> DOC-QA1 (2026-10-23): 제어문자·깨진 추출 구간과 직접 연결된 표 항목을 PDF 페이지 이미지와 대조했다. 확인 범위·원문 URL·페이지·수정 이력은 [대조 기록](../../../work/sources/pdf_note_review_2026-10-23.json)에 있다. 노트 전체의 정독이나 모든 기존 주장에 대한 재검증을 뜻하지 않으며 reading status는 유지한다.
+
 ## Evaluation in One Sentence
 
 PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 1 (Abstract), p. 9 (Figure/Table caption), p. 3 (1 Introduction), p. 3 (1 Introduction), p. 7 (Figure/Table caption)): Figure 4: Qualitative comparison of our affor- dance segmentation results with GEAL [5]. Our proposed framework achieves consistent and sub- stantial performance improvements across the PIAD benchmark, as shown in ...
@@ -141,7 +143,7 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 1 (Abstract), p.
 | Body reproducibility cue | Anchor |
 |---|---|
 | This feedback is encoded into visual prompts that drive a multi-stage refinement decoder, enabling the model to self-correct and adapt to complex spatial structures. | p. 1 (Abstract) |
-| Mathematically, we formulate this as: Mt = fθ  P, G(Mt-1), L  ; t ∈{1, 2, .., T}, where M0 = fθ(P, L) is ... | p. 2 (1 Introduction) |
+| 원문 대조: 초기 affordance mask는 M_0=f_θ(P,L)이며, 이후 M_t=f_θ(P,G(M_{t−1}),L)로 갱신한다. G는 이전 mask에서 곡률·normal derivative 등의 기하 prompt를 추출한다. 이는 방법 정의이며 평가 수치는 아니다. ([PDF p. 2](https://papers.nips.cc/paper_files/paper/2025/file/5eee634cb9729b8bcc2ec9f2a46a74ae-Paper-Conference.pdf#page=2), §1 Introduction, iterative formulation) | [PDF p. 2](https://papers.nips.cc/paper_files/paper/2025/file/5eee634cb9729b8bcc2ec9f2a46a74ae-Paper-Conference.pdf#page=2), §1 Introduction, iterative formulation |
 | This approach enables more accurate affordance localization by incorporating intrinsic geometric cues rather than relying solely on language. • We develop a Multi-Stage Refinement ... | p. 3 (1 Introduction) |
 
 | Audit field | Current status |

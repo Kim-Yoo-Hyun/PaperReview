@@ -4,6 +4,8 @@
 > Evidence maturity: `FULL_TEXT_CHECKED`.
 > Analysis basis: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=IkXFH6alZN; PDF retrieval source: https://openreview.net/pdf/6e898fbe18f2ef7449852473b4a8ab53fd0fda57.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
+> DOC-QA1 (2026-10-23): 제어문자·깨진 추출 구간과 직접 연결된 표 항목을 PDF 페이지 이미지와 대조했다. 확인 범위·원문 URL·페이지·수정 이력은 [대조 기록](../../../work/sources/pdf_note_review_2026-10-23.json)에 있다. 노트 전체의 정독이나 모든 기존 주장에 대한 재검증을 뜻하지 않으며 reading status는 유지한다.
+
 ## Method in One Sentence
 
 PDF body method statement (p. 4 (3.1. Overview), p. 4 (3.3. Supervised Pre-training), p. 5 (3.4. Reinforcement Fine-tuning), p. 5 (3.4. Reinforcement Fine-tuning)): Specifically, it features (1) a two-module system composed of a task-driven map module and a VLN policy for spatial representation learning and action prediction; (2) a supervised pre-training stage that ...
@@ -13,7 +15,7 @@ PDF body method statement (p. 4 (3.1. Overview), p. 4 (3.3. Supervised Pre-train
 - **p. 4 / 3.1. Overview - extractive body cue:** Specifically, it features (1) a two-module system composed of a task-driven map module and a VLN policy for spatial representation learning and action prediction; (2) ...
 - **p. 4 / 3.3. Supervised Pre-training - extractive body cue:** It consists of three parts: task-driven map supervision, pre-training the map module, and pre-training the VLN policy.
 - **p. 5 / 3.4. Reinforcement Fine-tuning - extractive body cue:** The optimization objective follows a GRPO-style formulation: LVLN = -Ek " min
-- **p. 5 / 3.4. Reinforcement Fine-tuning - extractive body cue:** Ot, ot, I , (7) where πnav θ and pbev ϕ denote the VLN policy and map module, respectively.
+- **원문 대조:** GRPO의 ratio ρ(k)는 navigation-policy likelihood ratio와 BEV-map likelihood ratio의 곱이다. 두 모듈은 current/reference parameter를 각각 사용하며 관측 history·현재 frame·instruction에 조건화된다. 기존 cue는 식의 마지막 조건부 인자만 남아 있었다. ([PDF p. 5](https://raw.githubusercontent.com/mlresearch/v306/main/assets/lian26c/lian26c.pdf#page=5), §3.4 Reinforcement Fine-tuning, Eq. (7)).
 - **p. 4 / 3.3.3. PRE-TRAINING THE VLN POLICY - extractive body cue:** The VLN policy is trained to predict multi-step action sequences conditioned on the predicted maps and visuallanguage context by minimizing a cross-entropy loss, LAction = ...
 - **p. 4 / 3.2. Map-in-the-Loop Architecture - extractive body cue:** Across both supervised pretraining and reinforcement fine-tuning, the two components are optimized either with separate objectives or under a unified navigation reward, while remaining connected ...
 - **p. 5 / 3.4. Reinforcement Fine-tuning - extractive body cue:** MapDream: Task-Driven Map Learning for Vision-Language Navigation reward-and is carried out using Group Relative Policy Optimization (GRPO) (Shao et al., 2024).
@@ -30,7 +32,7 @@ PDF body method statement (p. 4 (3.1. Overview), p. 4 (3.3. Supervised Pre-train
 - **p. 4 / 3.1. Overview - extractive body cue:** Specifically, it features (1) a two-module system composed of a task-driven map module and a VLN policy for spatial representation learning and action prediction; (2) ...
 - **p. 4 / 3.3. Supervised Pre-training - extractive body cue:** It consists of three parts: task-driven map supervision, pre-training the map module, and pre-training the VLN policy.
 - **p. 5 / 3.4. Reinforcement Fine-tuning - extractive body cue:** The optimization objective follows a GRPO-style formulation: LVLN = -Ek " min
-- **p. 5 / 3.4. Reinforcement Fine-tuning - extractive body cue:** Ot, ot, I , (7) where πnav θ and pbev ϕ denote the VLN policy and map module, respectively.
+- **원문 대조:** GRPO의 ratio ρ(k)는 navigation-policy likelihood ratio와 BEV-map likelihood ratio의 곱이다. 두 모듈은 current/reference parameter를 각각 사용하며 관측 history·현재 frame·instruction에 조건화된다. 기존 cue는 식의 마지막 조건부 인자만 남아 있었다. ([PDF p. 5](https://raw.githubusercontent.com/mlresearch/v306/main/assets/lian26c/lian26c.pdf#page=5), §3.4 Reinforcement Fine-tuning, Eq. (7)).
 - **Detected method headings:** 3. Method (p. 4); 3.2. Map-in-the-Loop Architecture (p. 4); 3.3.3. PRE-TRAINING THE VLN POLICY (p. 4); 4.3. Comparison with State-of-the-Art Methods (p. 6)
 
 ## Pipeline

@@ -4,6 +4,8 @@
 > Evidence maturity: `FULL_TEXT_CHECKED`.
 > Analysis basis: full-text PDF body checked on 2026-09-03 (27 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.research.ed.ac.uk/en/publications/optimization-based-locomotion-planning-estimation-and-controldesi/; PDF retrieval source: https://www.cs.cmu.edu/~cga/z/Kuindersma_AURO_2016.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
+> DOC-QA2 targeted source review: 2026-10-23; PDF pp. 11. 손상 구간·직접 연결된 표 분류만 원문 이미지와 대조했다. 전체 주장 정독·실험 검증·reading status 승격을 뜻하지 않는다. [URL·PDF hash·수정 기록](../../../work/sources/pdf_note_review_followup_2026-10-23.json).
+
 ## Method in One Sentence
 
 PDF body method statement (p. 5 (3.1.1 Convex decomposition), p. 8 (3.2 Dynamic motion planning), p. 11 (4.4 Additional costs and constraints), p. 8 (3.2 Dynamic motion planning), p. 10 (4 Controller design), p. 3 (3.1 Footstep planning as a mixed-integer convex)): We use the polytope representation in our planner, since it is always of larger volume than the (inscribed) ellipsoid and can be represented as a set of linear constraints.
@@ -70,7 +72,7 @@ PDF body method statement (p. 5 (3.1.1 Convex decomposition), p. 8 (3.2 Dynamic 
 ## Observation–State–Action Interface
 
 - **p. 10 / 4.1 General formulation - extractive body cue:** Note that inputs computed by solving this QP are, in general, not equal to those computed by thresholding the output of the closed-form LQR policy.
-- **p. 11 / 4.4 Additional costs and constraints - extractive body cue:** Given the current robot state, q, v, we can compute the equations of motion, H(q)˙v + C(q, v) = Bτ + JT λ, (25) H ...
+- **PDF p. 11, §4.4 Eqs. (25)–(26) (DOC-QA2 원문 대조):** Full-body dynamics H(q)v̇+C(q,v)=Bτ+Jᵀλ를 floating-base/actuated rows로 나눈다. Actuated input map의 full-rank 조건으로 torque decision variables를 제거하고 torque limits를 contact forces와 acceleration의 선형 부등식으로 표현한다.
 - **p. 14 / 5.1 Requirements and approach - extractive body cue:** LQR solutions can be recomputed online (typically in a separate thread) using the current state of the robot to reduce the systems sensitivity to deviations ...
 - **p. 2 / 1 Introduction - extractive body cue:** Inputs to the controller are computed by a low-drift state estimator that fuses kinematic, inertial, and LIDAR information (Sect.
 - **p. 2 / 1 Introduction - extractive body cue:** We describe an efficient active-set algorithm capable of finding solutions in less than 1 millisecond for Atlas (68 states and 28 inputs).

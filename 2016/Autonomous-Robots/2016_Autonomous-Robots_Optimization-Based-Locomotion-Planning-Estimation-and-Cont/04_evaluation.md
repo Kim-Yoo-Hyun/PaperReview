@@ -4,6 +4,8 @@
 > Evidence maturity: `FULL_TEXT_CHECKED`.
 > Analysis basis: full-text PDF body checked on 2026-09-03 (27 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.research.ed.ac.uk/en/publications/optimization-based-locomotion-planning-estimation-and-controldesi/; PDF retrieval source: https://www.cs.cmu.edu/~cga/z/Kuindersma_AURO_2016.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
+> DOC-QA2 targeted source review: 2026-10-23; PDF pp. 7, 11. 손상 구간·직접 연결된 표 분류만 원문 이미지와 대조했다. 전체 주장 정독·실험 검증·reading status 승격을 뜻하지 않는다. [URL·PDF hash·수정 기록](../../../work/sources/pdf_note_review_followup_2026-10-23.json).
+
 ## Evaluation in One Sentence
 
 PDF body evaluation/result cue (p. 19 (6.1 State estimation evaluation), p. 19 (6.1 State estimation evaluation)): To characterize the state estimator we evaluate its performance in a variety of experiments.
@@ -91,10 +93,10 @@ PDF body evaluation/result cue (p. 19 (6.1 State estimation evaluation), p. 19 (
 | Primary metric/result | In the manipulation experiment, the LIDAR contribution actually degrades performance slightly due to occlusions caused by arm motions. | numeric claim only at cited anchor | p. 19 (6.1 State estimation evaluation) |
 
 - Numeric sentences retained from the body:
-- **p. 7 / 3.1.3 Determining the number of footsteps - extractive body cue:** Auton Robot (2016) 40:429-455 435 safe terrain regions: Yr, j ⇒Arp j ≤br r = 1, . . . , R piecewise linear sin θ ...
+- **PDF p. 7, §3.1 footstep constraints (DOC-QA2 원문 대조):** Safe terrain region 선택 Y_r,j는 A_r p_j≤b_r를 함의한다. Piecewise-linear sin/cos, approximate reachability 및 extra-step constraints를 결합하는 footstep planning formulation이다. Publisher header와 깨진 implication glyph를 제거했다.
 - **p. 7 / 3.1.3 Determining the number of footsteps - extractive body cue:** For a footstep plan of N = 12 steps, in which each step must be assigned to one of R = 10 safe regions, L ...
 - **p. 10 / 4.2 COM and COP stabilization - extractive body cue:** If we assume that the centroidal angular momentum of the robot, ˙k = 0, k = 0, and the normal moment, τ n = 0, ...
-- **p. 11 / 4.2 COM and COP stabilization - extractive body cue:** ∞ 0 g(xCM(t), uCM(t), t)dt subject to ˙¯xCM(t) = A¯xCM(t) + B¯uCM(t) c(t) =  I2×2 02×4  xCM(t) -rz g IuCM(t) cd(t) = cd(t ...
+- **PDF p. 11, §4.2 Eq. (23) (DOC-QA2 원문 대조):** COM/COP stabilization은 fixed COM height의 linear dynamics와 output relation 하에서 COP tracking error 및 control의 quadratic integral cost를 최소화한다. 이는 controller objective이며 trial success나 empirical error metric 자체가 아니다.
 - **p. 13 / 4.5 Efficient QP solver - extractive body cue:** SolvingtheQPforAtlasduringtypicalwalkingtakesapproximately 0.2ms (1ms including QP setup time) (Kuindersma et al.
 - **p. 13 / 4.5 Efficient QP solver - extractive body cue:** Including all additional controller software components, such as those that evaluate the footstep trajectories, determine whether a body is in contact, handle messages to and ...
 

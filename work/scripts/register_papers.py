@@ -639,6 +639,12 @@ def main() -> None:
             if path.exists():
                 raise SystemExit(f"refusing to overwrite {path}")
             path.write_text(content, encoding="utf-8")
+        # These renderers emit the same declared evidence level in all five
+        # newly created note headers. Record it without changing existing notes
+        # or the user's reading status; the repository audit requires this map.
+        item["provenance"]["note_evidence"] = {
+            name: item["provenance"]["content_evidence"] for name in NOTE_NAMES
+        }
     merged = existing + accepted
     # Registration is incremental: preserve the existing papers' manually
     # reviewed profiles and evidence dates; only initialize new entries.

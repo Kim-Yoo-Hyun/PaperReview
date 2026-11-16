@@ -1,0 +1,49 @@
+{
+  "id": "GAP-CODEC1",
+  "revision": 1,
+  "frozen_before_data_execution": "2026-11-03",
+  "stage": "bounded exploratory offline diagnostic",
+  "question": "Does extending a FAST-encoded future while preserving its executed action prefix change reconstruction of that prefix, and can full-chunk error hide that change?",
+  "claim_boundary": "Expert-action codec round trip only. No policy inference, simulator rollout, contact measurement, task success, VLA improvement, or learned tokenizer comparison.",
+  "fast": {
+    "repo": "physical-intelligence/fast",
+    "revision": "ec4d7aa71691cac0b8bed6942be45684db2110f4",
+    "scale": 10,
+    "implementation": "load reviewed official processor and tokenizer locally inside Docker; check against independent scipy DCT round trip",
+    "files": ["processing_action_tokenizer.py", "processor_config.json", "tokenizer.json", "tokenizer_config.json", "special_tokens_map.json"]
+  },
+  "datasets": [
+    {"repo": "lerobot/aloha_sim_transfer_cube_human", "revision": "6a43d500f101255823a9d2b9dc244eeb01a2cd31", "fps": 50, "action_dim": 14, "short_horizon": 50, "long_horizon": 100, "execution_prefix": 10, "files": ["data/chunk-000/file-000.parquet", "data/chunk-000/file-001.parquet", "data/chunk-000/file-002.parquet"]},
+    {"repo": "lerobot/pusht", "revision": "7628202a2180972f291ba1bc6723834921e72c19", "fps": 10, "action_dim": 2, "short_horizon": 10, "long_horizon": 20, "execution_prefix": 2, "files": ["data/chunk-000/file-000.parquet"]}
+  ],
+  "sampling": {
+    "normalizer_episode_ids": [0, 1, 2, 3, 4],
+    "diagnostic_episode_ids": [5, 6, 7, 8, 9, 10, 11, 12, 13, 14],
+    "anchors": "start at frame 0, stride long_horizon, at most 8 complete non-overlapping long windows per episode; no padding, no episode crossing",
+    "unit": "episode; windows within an episode are dependent. Datasets are separate and are not pooled as independent robot embodiments.",
+    "normalization": "per-dimension q01/q99 fitted only on episodes 0..4; affine map to [-1,1], no clipping; report out-of-range and degenerate dimensions",
+    "limit": "Public simulation demonstration exports; no success-label qualification and no policy-training holdout claim. First episode IDs are a convenience sample."
+  },
+  "comparators": {
+    "FAST_short": "encode complete 1-second chunk; decode all tokens; evaluate full chunk and first 0.2 seconds",
+    "FAST_long": "same start/prefix and scale, encode complete 2-second chunk; decode all tokens; evaluate full chunk and same first 0.2 seconds",
+    "pointwise": "round each normalized action to nearest 0.1, no clipping; causal invariance sanity baseline, NOT matched bitrate or a policy baseline",
+    "identity": "exact copied trajectory control; expected zero error"
+  },
+  "metrics": [
+    "per-window full normalized MSE and prefix normalized MSE; episode means",
+    "prefix RMS difference between FAST_short and FAST_long reconstructions of the identical prefix",
+    "pairwise full-versus-prefix preference disagreement with tie tolerance 1e-12",
+    "per-dimension errors, raw-unit prefix MAE with no mixed-unit sum",
+    "actual BPE token counts and count*log2(vocab_size) as a nominal code-length proxy, NOT measured VLA latency",
+    "input hashes, decoded shape, BPE round-trip parity, clipping and failure counts"
+  ],
+  "decision_rules": {
+    "correctness_stop": "nonfinite data, missing episode/frame continuity, zero quantile width, coefficient floor clipping, decode mismatch, or failed controls => no scientific result for affected dataset; diagnose explicitly",
+    "null": "If identity and pointwise controls pass and observed prefix effect is negligible or has no stable episode pattern, record a weak/negative diagnostic; do not expand compute automatically.",
+    "explore": "Nonzero prefix dependency or preference disagreement establishes only an offline codec property. Prefix RMS >0.01 normalized units is a predeclared descriptive flag, not a robot safety or publication threshold.",
+    "no_method_go": "Regardless of outcome, do not claim a new tokenizer, new theorem, policy failure cause, or task improvement. Strong OAT/REALFAST/discrete-controller/streaming-codec precedents require a differentiated downstream result."
+  },
+  "budget": {"cpu": 2, "container_memory": "3g", "pids": 128, "payload_limit_bytes": 104857600, "run_timeout_seconds": 600, "no_gpu": true, "no_images_or_videos": true, "no_training": true},
+  "external_feedback": "not requested or received; prepare review questions only"
+}

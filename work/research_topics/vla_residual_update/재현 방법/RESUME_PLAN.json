@@ -1,0 +1,328 @@
+{
+  "schema_version": 1,
+  "work_id": "GAP-VRL-P0-PREP",
+  "updated_on": "2026-11-05",
+  "topic": "VLA checkpoint replacement and residual RL reuse/adaptation",
+  "status": "P0_CODE_DRAFT_PRESENT_RESOURCE_UNMET_NATIVE_UNVERIFIED",
+  "executable": false,
+  "implementation_complete": false,
+  "canonical_references": {
+    "content": "../내용/README.md",
+    "source_ledger": "../../../sources/vla_rl_gap_review_2026-11-03.json",
+    "checkpoint_json_pointer": "/r1_review/checkpoint_candidate",
+    "comparison_json_pointer": "/r2_review/comparison_contract",
+    "todo": "../../../../TODO.md"
+  },
+  "local_check": {
+    "host": {
+      "os": "Darwin",
+      "architecture": "arm64",
+      "ram_bytes": 17179869184
+    },
+    "commands": [
+      {
+        "argv": [
+          "docker",
+          "context",
+          "show"
+        ],
+        "exit_code": 0,
+        "stdout": "desktop-linux",
+        "stderr": ""
+      },
+      {
+        "argv": [
+          "docker",
+          "context",
+          "inspect",
+          "--format",
+          "{{.Endpoints.docker.Host}}"
+        ],
+        "exit_code": 0,
+        "stdout": "unix://<user-home>/.docker/run/docker.sock",
+        "stderr": ""
+      },
+      {
+        "argv": [
+          "docker",
+          "info",
+          "--format",
+          "{{json .}}"
+        ],
+        "exit_code": 0,
+        "selected_fields": {
+          "OSType": "linux",
+          "Architecture": "aarch64",
+          "NCPU": 10,
+          "MemTotal": 8218034176,
+          "ServerVersion": "28.3.3",
+          "OperatingSystem": "Docker Desktop",
+          "Runtimes": [
+            "io.containerd.runc.v2",
+            "runc"
+          ]
+        },
+        "stderr": ""
+      }
+    ],
+    "overrides": [],
+    "repository_filesystem_free_bytes": 234844573696,
+    "decision": "RESOURCE_UNMET",
+    "reasons": [
+      "Initial packet targets a local Linux x86-64 host",
+      "Linux amd64 Docker daemon required"
+    ],
+    "gpu_allocation_attempted": false,
+    "cuda_or_egl_verified": false,
+    "checked_on": "2026-11-05",
+    "launcher_exit_code": 3,
+    "scope": "Read-only local Docker/host metadata; incompatible platform stopped before NVIDIA allocation or download"
+  },
+  "target_environment": {
+    "locality": "user-selected local computer only",
+    "os_architecture": "Linux x86-64 initial target",
+    "required_host_infrastructure": [
+      "Docker",
+      "NVIDIA GPU driver",
+      "NVIDIA Container Toolkit"
+    ],
+    "host_dependency_installation_performed": false,
+    "candidate_python": "3.10",
+    "candidate_torch": "2.4.0+cu124",
+    "candidate_cuda": "12.4",
+    "candidate_driver_target_linux_min": "550.54.14",
+    "driver_boundary": "CUDA 12.4 GA planning target, not a universal device compatibility guarantee; distinct from CUDA 12.x minor-version floor 525.60.13",
+    "packages_not_locked": [
+      "full transitive dependency closure",
+      "OS packages and wheel/archive hashes"
+    ],
+    "image_digest": null,
+    "package_lock": null,
+    "dockerfile": "Dockerfile",
+    "planner_headroom_examples": {
+      "gpu_vram_gib": 48,
+      "host_ram_gib": 64,
+      "free_disk_gib": 100,
+      "measured_minimum": false,
+      "purchase_recommendation": false
+    },
+    "gpu_memory_boundary": "One BF16 base tensor storage ~14.05 GiB only; extra encoder/activation/KV/render overhead unknown; 24 GiB not qualified",
+    "env": {
+      "ROBOT_PLATFORM": "LIBERO",
+      "MUJOCO_GL": "egl",
+      "PYOPENGL_PLATFORM": "egl",
+      "NVIDIA_DRIVER_CAPABILITIES": "compute,utility,graphics",
+      "WANDB_MODE": "disabled",
+      "HF_HOME": "/cache/huggingface"
+    },
+    "volumes": [
+      {
+        "name": "vrl_update_cache",
+        "target": "/cache",
+        "role": "pinned HF snapshots and payload SHA256 manifest"
+      }
+    ],
+    "volumes_created": false,
+    "policy_data_on_host": false,
+    "normalization_metadata_check": {
+      "key": "libero_10_no_noops",
+      "action_dimension": 7,
+      "proprio_dimension": 8,
+      "actual_environment_order_verified": false
+    },
+    "load_plan": "Sequential A/B BF16 inference; retain only frozen A vision+projector for B residual stage; native memory/precision unverified",
+    "direct_dependency_candidates": "requirements.txt",
+    "base_image": "nvidia/cuda@sha256:2d205a50fefc321aca51a1d3aa46fb9a633dd2509a10e28c8bd34a6cb2027619",
+    "base_image_metadata_verification": {
+      "checked_on": "2026-11-05",
+      "tag": "12.4.0-runtime-ubuntu22.04",
+      "index_digest": "sha256:af8bd179ed3bf69d4b63b19a763662a6141f0f62ef099283f68d0b14b4bab0e3",
+      "platform": "linux/amd64",
+      "registry_manifest_only": true,
+      "image_pulled": false
+    },
+    "attention_backend": "eager for both models; Flash Attention equivalence not established",
+    "image_paths": {
+      "external_source_and_packages": "/opt/vrl",
+      "libero_source_assets_init_states": "/opt/vrl/LIBERO"
+    }
+  },
+  "setup_source_audit": {
+    "repo": "https://github.com/PRIME-RL/SimpleVLA-RL",
+    "commit": "7c51662df27b586f9e8a1ab35fcf849f2b8852f9",
+    "files": [
+      "README.md",
+      "SETUP.md",
+      "verl/utils/vla_utils/openvla_oft/modeling_prismatic.py"
+    ],
+    "tree_entries": 326,
+    "tree_truncated": false,
+    "issues": [
+      "SETUP recommends veRL 0.2/0.3 and clones mutable v0.2.x branch",
+      "OpenVLA-OFT clone, LIBERO clone and flash-attn install lack exact pins",
+      "Later unpinned torch/torchvision install can change earlier torch2.4.0+cu124",
+      "README driver470.161.03/CUDA12.4 pair is not adopted as validated compatibility",
+      "No root requirements.txt/setup.py at pinned tree; those attempted URLs returned404, SETUP.md is actual instructions",
+      "Distributed PPO training script is not a two-query IO launcher"
+    ],
+    "source_documents": [
+      "https://github.com/PRIME-RL/SimpleVLA-RL/blob/7c51662df27b586f9e8a1ab35fcf849f2b8852f9/SETUP.md",
+      "https://docs.docker.com/desktop/features/gpu/",
+      "https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html",
+      "https://docs.nvidia.com/cuda/archive/12.4.0/cuda-toolkit-release-notes/index.html"
+    ],
+    "adapter_review_2026_11_05": {
+      "scope": "Targeted source functions/import graph; no source package installed on host",
+      "source_file_sha256": {
+        "verl/utils/vla_utils/openvla_oft/modeling_prismatic.py": "f0a30f5af9b9c7c0ab55cbeaec1d38c0fc268b93a893252647d5fb4b0d34c2bb",
+        "verl/utils/vla_utils/openvla_oft/processing_prismatic.py": "2474a5c3fdd4ff15234924636dc0ead6419c89f49699193be47dbb87510a5425",
+        "verl/utils/vla_utils/openvla_oft/configuration_prismatic.py": "68cc5ae34f1b46af3168d8d479cb81bb776965653453fd904aa8eefb6c8f9f68",
+        "verl/utils/vla_utils/openvla_oft/constants.py": "8380f8bbdcd6ef2dc36b4efb9f8c7f27cb45d564207e30a88d42376c5e7e5792",
+        "verl/utils/vla_utils/openvla_oft/train_utils.py": "3213e8df5c727b801a96b61531df331e0b37305aa370443140df31560507e84c",
+        "verl/utils/libero_utils.py": "58017f31960ae8e88d02d4d51555a3d5128dc9fc0bf87f6347f07ca0c282dcca",
+        "verl/workers/rollout/rob_rollout.py": "68066df52b14abf3cf9630c06acf1fea781c6b536ff428d8d22b5c10a2fc97a9"
+      },
+      "dependency_boundary": "Model constructor expects transformers4.40.1/tokenizers0.19.1 and timm0.9.x; remaining exact direct pins are proposed, not runtime-qualified. No veRL/Ray/Flash Attention install for P0."
+    }
+  },
+  "p0": {
+    "dev_init_id": 0,
+    "environment_seed": 0,
+    "resets_max": 2,
+    "vla_queries_max": 2,
+    "encoder_calls_max": 4,
+    "policy_steps_max": 16,
+    "warmup_steps_max": 20,
+    "env_steps_max": 36,
+    "warmup_env_command": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      -1
+    ],
+    "verify": [
+      "same init/controller/queue/history",
+      "base decode8x7",
+      "zero residual equals original command",
+      "normalizer/gripper/clip order",
+      "frozen A encoder finite shape/dtype",
+      "actual proprio8 order",
+      "state/asset/weight/processor hashes",
+      "CUDA/EGL/memory"
+    ],
+    "no_extra_query_for_zero_residual_check": true,
+    "early_terminal_stops": true,
+    "automatic_retry": false,
+    "success_requirement": "IO qualification only, not full task success",
+    "trace": null,
+    "result": null
+  },
+  "remaining_before_native": [
+    "Share/commit this complete packet before claiming it is available to another clone; no push performed",
+    "Use compatible local Linux x86-64 NVIDIA Docker; check -> build -> prepare -> p0",
+    "Resolve actual image/package closure and import failures inside Docker; candidate pins are not a complete lock",
+    "Acquire pinned payloads inside Docker, hash actual files, check init count/duplicates; P0 only needs ID0",
+    "Qualify CUDA/BF16/EGL, same reset/feature/action semantics; fix any native adapter failures without changing P0 caps",
+    "Record real P0 trace and memory before any residual learning"
+  ],
+  "remaining_after_p0": [
+    "A residual training P1",
+    "static/calibration comparison",
+    "conditional B adaptation and held-out evaluation P2"
+  ],
+  "research_scope": "One robot/task/pair; no exact RL-training lineage claim, no cross-embodiment/general transfer result",
+  "execution": {
+    "containers_created": 2,
+    "images_pulled_or_built": 0,
+    "host_dependency_installs": 0,
+    "weights_downloaded": 0,
+    "sim_assets_downloaded": 0,
+    "pdfs_downloaded": 0,
+    "inference": 0,
+    "training": 0,
+    "policy_experiments": 0,
+    "cpu_control_test_runs": 2,
+    "new_containers_remaining": 0,
+    "new_images_remaining": 0,
+    "existing_image_preserved": true
+  },
+  "external_feedback": {
+    "prepared": true,
+    "sent": false,
+    "received": false
+  },
+  "validation": {
+    "state": "CONTROL_PLANE_TESTS_PASSED_NATIVE_UNVERIFIED",
+    "checked_on": "2026-11-05",
+    "test_file": "test_packet.py",
+    "tests": 9,
+    "runs": 2,
+    "result": "PASS",
+    "docker_image_used": "sha256:ec14bd72a90f89cb6f3c4b263bb35a81de7977dffb2e5a2cb7e96946f1545ebb",
+    "command": "docker run --rm --pull never --network none --read-only --cap-drop ALL --pids-limit 64 --mount type=bind,source=<repo>,target=/workspace,readonly -w /workspace/work/research_topics/vla_residual_update/재현 방법 --entrypoint python <existing-image-id> -B test_packet.py",
+    "runtime_validation_performed": false,
+    "boundary": "Control-plane rejection/cap/contract/syntax checks only; not numerical action/encoder checks, dependency build, simulator reset or policy inference",
+    "repository_checks": {
+      "generator_compile": "PASS",
+      "generator_rebuild": "PASS",
+      "audit_errors": 0,
+      "audit_warnings": 0,
+      "git_diff_check": "PASS",
+      "papers": 1098,
+      "standard_notes": 5490,
+      "active_reading_records": 368,
+      "historical_reading_records": 47,
+      "reading_csv_bytes_preserved": true,
+      "staged_index_preserved": true,
+      "staged_diff_sha256": "a102eb0e3169222280f593d6a144c4a2c34895db290dc0cb640c33e8207c4196",
+      "existing_files_unchanged": 6039,
+      "existing_files_changed": 6,
+      "new_files": 6,
+      "deleted_files": 0,
+      "containers_remaining": 0,
+      "new_images": 0
+    }
+  },
+  "p0_implementation": {
+    "checked_on": "2026-11-05",
+    "state": "SOURCE_WRITTEN_NATIVE_UNVERIFIED",
+    "files_sha256": {
+      "resume.py": "efd95c62d59c1090fddf816da70f1ec50d0dc4649126b4a140443f8a75e5b747",
+      "native_p0.py": "b17480e08f9eafe20fe734028a170a62869f769385e9f2ee45f7d51670734c29",
+      "Dockerfile": "5995dd584fcc68526e64381553bd5a8d6d7beb33827f07ba3cbb9498ecb5abf7",
+      "requirements.txt": "b4c0db744e1c0b02c26305cb249b6cfb1ee9de55d0772fd56d973af3f4073121",
+      ".dockerignore": "e1a796d6df6dd3847f98f9a5d6184ae95960ce787b7e2fac39856a18dd8cd64c",
+      "test_packet.py": "6b5ec379b0e7633cd905dcd7ad37726bacc966e24e82ae9d73547249bcf1aeb6"
+    },
+    "launcher_implemented": true,
+    "native_adapter_draft_present": true,
+    "image_built": false,
+    "dependency_closure_resolved": false,
+    "payload_prepared": false,
+    "native_model_loaded": false,
+    "cuda_egl_verified": false,
+    "controls": [
+      "local Unix/Linux amd64 and NVIDIA metadata before payload work",
+      "reject Docker/BuildKit endpoint overrides",
+      "image label binds recipe/code and canonical ledger hash",
+      "container-only pinned acquisition; weights cached in named volume",
+      "network-off native P0; verify source/asset/checkpoint hashes",
+      "no overwrite of phase evidence; no automatic retry/training",
+      "native decoder normalized intermediate captured in same query",
+      "A/B sequential BF16 load with frozen A vision/projector retained",
+      "20 warmup + at most16 policy steps;2queries;4total vision calls",
+      "original JPEG/rotation/crop and gripper helpers extracted from fixed source; no distributed rollout import",
+      "bypass upstream unbounded reset retry; stop on first native failure"
+    ],
+    "numeric_contract": {
+      "action_conversion_atol": 1e-07,
+      "action_conversion_rtol": 0,
+      "action_conversion_dtype": "NumPy float64",
+      "bf16_model_equivalence_claim": false
+    },
+    "historical_contract_boundary": "r2_review.comparison_contract remains the frozen study design. Its unimplemented list describes R2 on 2026-11-03; current execution-artifact status is this object, not a change to learning arms/budgets."
+  }
+}

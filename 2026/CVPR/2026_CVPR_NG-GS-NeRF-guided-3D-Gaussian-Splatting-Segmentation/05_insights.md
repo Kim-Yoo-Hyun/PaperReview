@@ -4,6 +4,8 @@
 > Evidence maturity: `FULL_TEXT_CHECKED`.
 > Analysis basis: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2026/html/He_NG-GS_NeRF-guided_3D_Gaussian_Splatting_Segmentation_CVPR_2026_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2026/supplemental/He_NG-GS_NeRF-guided_3D_CVPR_2026_supplemental.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
+> DOC-QA1 (2026-10-23): 제어문자·깨진 추출 구간과 직접 연결된 표 항목을 PDF 페이지 이미지와 대조했다. 확인 범위·원문 URL·페이지·수정 이력은 [대조 기록](../../../work/sources/pdf_note_review_2026-10-23.json)에 있다. 노트 전체의 정독이나 모든 기존 주장에 대한 재검증을 뜻하지 않으며 reading status는 유지한다.
+
 ## Paper-supported conclusion
 
 > **Evidence boundary:** The following claims are restricted to selected PDF body sentences, captions and section anchors; exact table/equation values remain to be checked at those anchors.
@@ -40,7 +42,7 @@
 ### Reusable lesson in the robotics loop
 
 - **Closed-loop position:** `RGB-D, image set, point cloud, depth와 camera pose → geometry, map, object/relationship state → point map, pose, scene graph, affordance 또는 query result`.
-- 이 논문의 재사용 가능한 지점은 With the proposed NG-GS framework, we make the following main contributions: • we develop a continuous feature field construction module that combines RBF interpolation with MRHE to generate spatially smooth and multi-scale ...를 These parameters dynamically adjust the hidden layers based on external conditions. ˆh(l) = ReLU  γ(l) ⊙h(l) + β(l) , (14) where ⊙is the element-wise product, h(l) is the original activation vector ...로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 geometry, map, object/relationship state가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 Addressing current limitations, our future directions include extending the framework to dynamic scenes and real-time interactive applications, further bridging the gap between representation learning and practical vision systems.에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
+- **원문 대조:** 외부 interpolation feature에서 만든 γ^(l), β^(l)로 hidden activation을 element-wise scale·shift하고 ReLU를 적용한다. 이는 NeRF 내부 layer modulation이며 로봇 action output이 아니다. ([PDF p. 5](https://openaccess.thecvf.com/content/CVPR2026/papers/He_NG-GS_NeRF-guided_3D_Gaussian_Splatting_Segmentation_CVPR_2026_paper.pdf#page=5), §4.2 NeRF-GS Joint Optimization, Eq. (14)).
 - The paper-specific mechanism to preserve in a reproduction is: With the proposed NG-GS framework, we make the following main contributions: • we develop a continuous feature field construction module that combines RBF interpolation with MRHE to generate spatially smooth and multi-scale ...
 - Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
 

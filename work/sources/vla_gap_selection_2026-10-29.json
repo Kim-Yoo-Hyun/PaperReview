@@ -1,0 +1,306 @@
+{
+  "task_id": "GAP-S4",
+  "checked_on": "2026-10-29",
+  "status": "DONE",
+  "mode": "non_experimental_literature_selection",
+  "report": "work/update/VLA_GAP_SELECTION_2026-10-29.md",
+  "canonical_question": "synthesis/04_vla_generalist.md#gap-instruction-revision-2026",
+  "evidence_maturity": "CURATION-HYPOTHESIS",
+  "scope": {
+    "registry_count": 1074,
+    "window": [
+      2024,
+      2025,
+      2026
+    ],
+    "primary_papers_used": 9,
+    "official_publications": 6,
+    "preprints": 3,
+    "selected_full_text_sections": 6,
+    "abstract_level": 3,
+    "exhaustive_survey": false,
+    "code_execution": false,
+    "registry_registration": false,
+    "reading_status_change": false,
+    "pdf_download": false,
+    "environment_probe": false
+  },
+  "search": {
+    "recorded_queries": [
+      "robot VLA partial instruction revision constraint preservation task switching 2025 2026",
+      "\"Bring My Cup\" ICML 2026 site:icml.cc",
+      "\"Do VLAs Really Follow Instructions\" correction"
+    ],
+    "topic_groups": [
+      "language corrections and task switching",
+      "image-text interleaved instructions and visual references",
+      "false-premise rejection versus partial observability"
+    ],
+    "authority": "Official proceedings and conference listings for publication; author arXiv versions for stated sections. Secondary summaries used only for discovery.",
+    "stop_rule": "Three candidate questions compared; closest works, strong simple baseline, and next discriminating non-experimental action specified.",
+    "access_notes": [
+      "OpenReview Interleave forum presented access challenge; official ICLR listing used for venue and arXiv v2 for content. No bypass.",
+      "Interleave HTML v3 and IVA HTML v2 were unavailable; use explicitly identified older versions. No assumption that these equal final proceedings.",
+      "Do What quantitative values were not used because the viewed versions were not reconciled."
+    ]
+  },
+  "sources": [
+    {
+      "source_id": "P1",
+      "title": "Yell At Your Robot: Improving On-the-Fly from Language Corrections",
+      "year": 2024,
+      "venue": "RSS",
+      "publication_verified": true,
+      "official_url": "https://roboticsproceedings.org/rss20/p025.html",
+      "public_identifier": "2403.12910",
+      "registry_paper_id": null,
+      "depth": "OFFICIAL_ABSTRACT",
+      "sections": [
+        "Abstract"
+      ],
+      "use": "Language feedback for hierarchical robot control is prior work.",
+      "boundary": "Full text and code not audited in this scout."
+    },
+    {
+      "source_id": "P2",
+      "title": "Hi Robot: Open-Ended Instruction Following with Hierarchical Vision-Language-Action Models",
+      "year": 2025,
+      "venue": "ICML",
+      "publication_verified": true,
+      "official_url": "https://proceedings.mlr.press/v267/shi25d.html",
+      "content_url": "https://arxiv.org/html/2502.19417v1",
+      "project_url": "https://www.pi.website/research/hirobot",
+      "registry_paper_id": "pr-0142",
+      "depth": "SELECTED_FULL_TEXT",
+      "sections": [
+        "4.1–4.2",
+        "5.1–5.2",
+        "Appendix A.1"
+      ],
+      "use": "Feedback, negative constraints, situated corrections and high-level oracle already exist.",
+      "boundary": "Selected arXiv v1 sections; no claim of complete review or version equality with final proceedings. Public native interface not yet audited."
+    },
+    {
+      "source_id": "P3",
+      "title": "SwitchVLA: Execution-Aware Task Switching for Vision-Language-Action Models",
+      "year": 2025,
+      "venue": "arXiv",
+      "publication_verified": false,
+      "official_url": "https://arxiv.org/abs/2506.03574",
+      "content_url": "https://arxiv.org/html/2506.03574v1",
+      "project_url": "https://switchvla.github.io",
+      "registry_paper_id": "pr-0985",
+      "depth": "SELECTED_FULL_TEXT",
+      "sections": [
+        "3.4.2",
+        "4.1"
+      ],
+      "use": "Execution-conditioned switching and phase-specific pairwise/sequence evaluation are prior work.",
+      "boundary": "No new accepted-venue claim or native reproduction."
+    },
+    {
+      "source_id": "P4",
+      "title": "ReSteer: Quantifying and Refining the Steerability of Multitask Robot Policies",
+      "year": 2026,
+      "venue": "RSS",
+      "publication_verified": true,
+      "official_url": "https://roboticsproceedings.org/rss22/p143.html",
+      "content_url": "https://arxiv.org/html/2603.17300v1",
+      "project_url": "https://resteer-vla.github.io/",
+      "code_url": "https://github.com/ChenZhenY/ReSteer",
+      "doi": "10.15607/RSS.2026.XXII.143",
+      "registry_paper_id": null,
+      "depth": "SELECTED_FULL_TEXT",
+      "sections": [
+        "III-A",
+        "III-B",
+        "III-C"
+      ],
+      "use": "State-conditioned competence, steerability and task-success evaluation are existing formulations.",
+      "boundary": "A conjunction of constraints can already be represented by task success; no new metric/theory claim. Code URL is not evidence of implemented case support."
+    },
+    {
+      "source_id": "P5",
+      "title": "Do VLAs Really Follow Instructions? Diagnosing How-Level Instruction Following in Vision-Language-Action Models",
+      "year": 2026,
+      "venue": "arXiv",
+      "publication_verified": false,
+      "official_url": "https://arxiv.org/abs/2610.21251",
+      "content_url": "https://arxiv.org/html/2610.21251v2",
+      "version_date": "2026-10-22",
+      "code_url": "https://github.com/sangwu99/how-level-vla-Arxiv",
+      "registry_paper_id": null,
+      "depth": "SELECTED_FULL_TEXT",
+      "sections": [
+        "3",
+        "4.1",
+        "4.2",
+        "5.1–5.3",
+        "6.1"
+      ],
+      "use": "Correction/retry/inverted controls, online guidance and instruction-only task conditions already studied.",
+      "boundary": "No full code/evaluator audit; not evidence that selective revision has never been studied elsewhere."
+    },
+    {
+      "source_id": "P6",
+      "title": "Causeway: Restoring Task Accessibility for Instruction Switching in VLA Policies",
+      "year": 2026,
+      "venue": "arXiv",
+      "publication_verified": false,
+      "official_url": "https://arxiv.org/abs/2609.30913",
+      "registry_paper_id": null,
+      "depth": "ABSTRACT",
+      "sections": [
+        "Abstract"
+      ],
+      "use": "Prior-task state and target-task accessibility are competing explanations for switching failure.",
+      "boundary": "Method details and any exact comparison with retained constraints unverified; no quantitative result imported."
+    },
+    {
+      "source_id": "P7",
+      "title": "Interleave-VLA: Enhancing Robot Manipulation with Image-Text Interleaved Instructions",
+      "year": 2026,
+      "venue": "ICLR",
+      "publication_verified": true,
+      "official_url": "https://iclr.cc/Downloads/2026",
+      "forum_url": "https://openreview.net/forum?id=ULTWUuGhC3",
+      "content_url": "https://arxiv.org/html/2505.02152v2",
+      "content_title": "Interleave-VLA: Enhancing Robot Manipulation with Interleaved Image-Text Instructions",
+      "code_url": "https://github.com/Interleave-VLA/Interleave-VLA",
+      "registry_paper_id": "pr-0099",
+      "depth": "SELECTED_FULL_TEXT",
+      "sections": [
+        "Abstract",
+        "4.3.2"
+      ],
+      "use": "Interleaved, goal-image and multiple-image instruction formats already supported.",
+      "boundary": "Final title from official listing differs slightly from preprint title. No claim that conflict is absent from every evaluation. Code README only, no implementation audit."
+    },
+    {
+      "source_id": "P8",
+      "title": "Bring My Cup! Personalizing Vision-Language-Action Models with Visual Attentive Prompting",
+      "year": 2026,
+      "venue": "ICML",
+      "publication_verified": true,
+      "official_url": "https://icml.cc/Downloads/2026",
+      "forum_url": "https://openreview.net/forum?id=fm6Z3wfTae",
+      "content_url": "https://arxiv.org/abs/2512.20014",
+      "content_version": "v3, 2026-06-18",
+      "project_url": "https://vap-project.github.io/",
+      "registry_paper_id": "pr-0159",
+      "depth": "ABSTRACT",
+      "sections": [
+        "Abstract"
+      ],
+      "use": "Reference-image personalization of object selection is prior work.",
+      "boundary": "Not a full-text assessment of conflicting instructions or code reproducibility."
+    },
+    {
+      "source_id": "P9",
+      "title": "Do What? Teaching Vision-Language-Action Models to Reject the Impossible",
+      "year": 2025,
+      "venue": "Findings of EMNLP",
+      "publication_verified": true,
+      "official_url": "https://aclanthology.org/2025.findings-emnlp.635/",
+      "doi": "10.18653/v1/2025.findings-emnlp.635",
+      "content_url": "https://arxiv.org/html/2508.16292v1",
+      "registry_paper_id": null,
+      "depth": "SELECTED_FULL_TEXT",
+      "sections": [
+        "Official abstract",
+        "4",
+        "Limitations"
+      ],
+      "use": "False-premise detection/rejection is prior work; observability versus absence remains a provisional adjacent question.",
+      "boundary": "Not EMNLP main; older arXiv content and final abstract kept distinct. No quantitative synthesis or proof of absent occlusion evaluation."
+    }
+  ],
+  "prior_material": [
+    "work/update/VLA_EXPLORATION_REOPENING_2026-10-28.md",
+    "work/update/VLA_GAP_RESELECTION_2026-10-27.md",
+    "work/update/VLA_GAP_SELECTION_REVIEW_2026-10-24.md",
+    "work/update/HRI_HELP_RELIABILITY_REVIEW_2026-10-23.md",
+    "work/research_candidates/summaries/C2_EXECUTION_CONSTRAINTS.md",
+    "work/research_candidates/summaries/D3_IRREVERSIBLE_SWITCHING.md"
+  ],
+  "registry_lineage_not_counted_as_new_review": [
+    "pr-0859",
+    "pr-1034",
+    "pr-1035"
+  ],
+  "candidates": [
+    {
+      "id": "A",
+      "name": "Constraint Preservation under Partial Instruction Revisions in Vision-Language-Action Policies",
+      "decision": "SELECT_FOR_EXPLORATION",
+      "sources": [
+        "P1",
+        "P2",
+        "P3",
+        "P4",
+        "P5",
+        "P6"
+      ],
+      "next": "GAP-REVISION1: 6–8 manually annotated revision cases and source-level instruction/evaluator interface review"
+    },
+    {
+      "id": "B",
+      "name": "Conflicting image and text references in VLA instructions",
+      "decision": "RESERVE",
+      "sources": [
+        "P7",
+        "P8"
+      ],
+      "unknown": "Intended target and modality authority must be defined; avoid overlap with AUTH grounding."
+    },
+    {
+      "id": "C",
+      "name": "Distinguishing occlusion, absence and lack of policy competence",
+      "decision": "ADJACENT_TO_C1_HRI",
+      "sources": [
+        "P9"
+      ],
+      "unknown": "Same-instance observation/outcome evidence and simple re-observation/help baselines remain necessary for an empirical claim."
+    }
+  ],
+  "claims": {
+    "novelty_proven": false,
+    "policy_effect_measured": false,
+    "new_method_selected": false,
+    "independent_paper_value": "UNCONFIRMED",
+    "research_value": "Worth a bounded exploratory comparison; a simple automatic restatement is the primary alternative.",
+    "past_topic_statuses_changed": false
+  },
+  "validation": {
+    "before_audit": {
+      "errors": 0,
+      "warnings": 0,
+      "papers": 1074
+    },
+    "after": {
+      "compile": "PASS; temporary cfile removed",
+      "generator": "PASS",
+      "git_diff_check": "PASS",
+      "audit_errors": 0,
+      "audit_warnings": 0,
+      "markdown_files_checked": 5561,
+      "markdown_links_checked": 11082,
+      "ledger_count_checks": "PASS",
+      "canonical_8_files_sha256_equal": true,
+      "preserved_files": [
+        "AGENTS.md",
+        "PAPER.md",
+        "work/sources/papers.json",
+        "work/sources/registry_meta.json",
+        "research/READING_PLAN.md",
+        "research/READING_TIERS.csv",
+        "research/READING_STATUS.csv",
+        "research/READING_STATUS_HISTORY.csv"
+      ],
+      "papers": 1074,
+      "tiers": {"CORE": 47, "NEXT": 299, "REFERENCE": 486, "ARCHIVE": 242},
+      "active_tracker_rows": 346,
+      "history_tracker_rows": 47
+    }
+  }
+}

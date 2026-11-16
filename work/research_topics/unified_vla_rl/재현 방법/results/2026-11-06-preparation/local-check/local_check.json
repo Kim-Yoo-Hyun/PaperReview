@@ -1,0 +1,64 @@
+{
+  "checked_at_utc": "2026-11-06T13:26:47.663912+00:00",
+  "host": {
+    "os": "Darwin",
+    "arch": "arm64",
+    "ram_bytes": 17179869184
+  },
+  "commands": [
+    {
+      "argv": [
+        "docker",
+        "context",
+        "show"
+      ],
+      "exit_code": 0,
+      "stdout": "desktop-linux",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "docker",
+        "context",
+        "inspect",
+        "--format",
+        "{{.Endpoints.docker.Host}}"
+      ],
+      "exit_code": 0,
+      "stdout": "unix://<user-home>/.docker/run/docker.sock",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "docker",
+        "--context",
+        "desktop-linux",
+        "info",
+        "--format",
+        "{{json .}}"
+      ],
+      "exit_code": 0,
+      "server": {
+        "OSType": "linux",
+        "Architecture": "aarch64",
+        "MemTotal": 8218034176,
+        "NCPU": 10,
+        "ServerVersion": "28.3.3",
+        "OperatingSystem": "Docker Desktop",
+        "Runtimes": [
+          "io.containerd.runc.v2",
+          "runc"
+        ]
+      },
+      "stderr": ""
+    }
+  ],
+  "gpu_allocation_attempted": false,
+  "native_model_or_simulation_run": false,
+  "decision": "RESOURCE_UNMET",
+  "reasons": [
+    "This native packet targets a local Linux x86-64 NVIDIA computer",
+    "Linux amd64 daemon required"
+  ],
+  "context": "desktop-linux"
+}

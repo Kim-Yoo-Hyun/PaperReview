@@ -4,6 +4,8 @@
 > Evidence maturity: `FULL_TEXT_CHECKED`.
 > Analysis basis: full-text PDF body checked on 2026-09-03 (19 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=evCXwlCMIi; PDF retrieval source: https://arxiv.org/pdf/2410.09163. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
+> DOC-QA2 targeted source review: 2026-10-23; PDF pp. 14. 손상 구간·직접 연결된 표 분류만 원문 이미지와 대조했다. 전체 주장 정독·실험 검증·reading status 승격을 뜻하지 않는다. [URL·PDF hash·수정 기록](../../../work/sources/pdf_note_review_followup_2026-10-23.json).
+
 ## Evaluation in One Sentence
 
 PDF body evaluation/result cue (p. 18 (Figure/Table caption), p. 7 (Figure/Table caption), p. 2 (Figure/Table caption), p. 7 (Figure/Table caption), p. 16 (Figure/Table caption), p. 17 (Figure/Table caption)): Figure 12: Simulated benchmark results. Better performance is achieved when using our semi- structured dynamics models and a multi-step loss. Plots show the mean and standard deviation for episodic rewards. ...
@@ -13,7 +15,7 @@ PDF body evaluation/result cue (p. 18 (Figure/Table caption), p. 7 (Figure/Table
 - **p. 16 / Figure/Table caption - extractive body cue:** Figure 7: Prediction error for 20-step synthetic rollouts using our semi-structured dynamics models and the black-box models where the best results from the 1- or ...
 - **p. 18 / Figure/Table caption - extractive body cue:** Figure 12: Simulated benchmark results. Better performance is achieved when using our semi- structured dynamics models and a multi-step loss. Plots show the mean and ...
 - **p. 7 / Figure/Table caption - extractive body cue:** Figure 5: Left-SSRL achieves better policy performance compared to a baseline using black-box models. Right-Prediction error for 20-step synthetic rollouts in an unseen environment showcases ...
-- **p. 14 / A.2 Reward Function and Termination Condition - extractive body cue:** Reward Term Expression Weight Maximize forward velocity vx t+1 0.42 Limit base yaw rate exp  -(ωz t+1)2/0.2  0.11 Limit base roll exp  ...
+- **PDF p. 14, Appendix A.2 Table 3 (DOC-QA2 원문 대조):** Table 3은 step reward의 weighted sum을 정의한다. Forward velocity vₓ 가중치 0.42, yaw-rate exp(−ω_z²/0.2) 0.11, roll/pitch exp(−φ²/0.25) 각각 0.05이며 자세·속도·가속도·energy·torque 제한 항을 함께 사용한다.
 - **p. 15 / Figure/Table caption - extractive body cue:** Figure 6: Predicted external forces and actual external force estimates over one second of real-world data for the floating base and the joints of the ...
 - **p. 13 / A.2 Reward Function and Termination Condition - extractive body cue:** The reward function is a weighted sum of the terms in Table 3.
 - **p. 13 / A Implementation Details - extractive body cue:** In this appendix, we provide details of our implementation for the Unitree Go1 Quadruped, including the observation and action spaces, the reward function, the termination ...
@@ -71,7 +73,7 @@ PDF body evaluation/result cue (p. 18 (Figure/Table caption), p. 7 (Figure/Table
 | Figure 7: Prediction error for 20-step synthetic rollouts using our semi-structured dynamics models and the black-box models where the best results from the 1- ... | definition/direction/unit from same section | p. 16 (Figure/Table caption) |
 | Figure 12: Simulated benchmark results. Better performance is achieved when using our semi- structured dynamics models and a multi-step loss. Plots show the mean ... | definition/direction/unit from same section | p. 18 (Figure/Table caption) |
 | Figure 5: Left-SSRL achieves better policy performance compared to a baseline using black-box models. Right-Prediction error for 20-step synthetic rollouts in an unseen environment ... | definition/direction/unit from same section | p. 7 (Figure/Table caption) |
-| Reward Term Expression Weight Maximize forward velocity vx t+1 0.42 Limit base yaw rate exp  -(ωz t+1)2/0.2  0.11 Limit base roll exp ... | definition/direction/unit from same section | p. 14 (A.2 Reward Function and Termination Condition) |
+| Table 3은 step reward의 weighted sum을 정의한다. Forward velocity vₓ 가중치 0.42, yaw-rate exp(−ω_z²/0.2) 0.11, roll/pitch exp(−φ²/0.25) 각각 0.05이며 자세·속도·가속도·energy·torque 제한 항을 함께 사용한다. | Reward specification; reported evaluation metric과 구분 | PDF p. 14 Table 3 |
 | Figure 6: Predicted external forces and actual external force estimates over one second of real-world data for the floating base and the joints of ... | definition/direction/unit from same section | p. 15 (Figure/Table caption) |
 | The reward function is a weighted sum of the terms in Table 3. | definition/direction/unit from same section | p. 13 (A.2 Reward Function and Termination Condition) |
 | In this appendix, we provide details of our implementation for the Unitree Go1 Quadruped, including the observation and action spaces, the reward function, the ... | definition/direction/unit from same section | p. 13 (A Implementation Details) |
@@ -118,7 +120,7 @@ PDF body evaluation/result cue (p. 18 (Figure/Table caption), p. 7 (Figure/Table
 |---|---|---|
 | body limitation/failure cue | However there are several key limitations. | p. 8 (5 Related Work) |
 | body limitation/failure cue | 6 Limitations This paper presents a novel framework for model-based reinforcement learning, which leverages physics-informed, semi-structured dynamics models to enable highly sample-efficient policy learning ... | p. 8 (5 Related Work) |
-| body limitation/failure cue | The termination flag dt stops the accumulation of reward after the quadruped falls and is defined by: dt = 1 if /φx t / ... | p. 14 (A.2 Reward Function and Termination Condition) |
+| Termination rule | Roll 또는 pitch 절댓값>π/4이면 dₜ=1, 그 외 0. 정의된 termination 조건이며 관측된 failure 빈도는 아니다. | PDF p. 14 Eq. (7) |
 | body limitation/failure cue | Figure 8: Our approach is robust to errors in a priori knowledge of the robot's inertial properties. B.4 Modeling Uncertainty Here, we examine the ... | p. 16 (Figure/Table caption) |
 | body limitation/failure cue | Figure 2: The SSRL framework. A deterministic policy is used to collect data from the real world while a stochastic policy is utilized in ... | p. 2 (Figure/Table caption) |
 | body limitation/failure cue | Figure 7: Prediction error for 20-step synthetic rollouts using our semi-structured dynamics models and the black-box models where the best results from the 1- ... | p. 16 (Figure/Table caption) |
@@ -144,7 +146,7 @@ PDF body evaluation/result cue (p. 18 (Figure/Table caption), p. 7 (Figure/Table
 
 - **p. 8 / 5 Related Work - extractive body cue:** However there are several key limitations.
 - **p. 8 / 5 Related Work - extractive body cue:** 6 Limitations This paper presents a novel framework for model-based reinforcement learning, which leverages physics-informed, semi-structured dynamics models to enable highly sample-efficient policy learning in ...
-- **p. 14 / A.2 Reward Function and Termination Condition - extractive body cue:** The termination flag dt stops the accumulation of reward after the quadruped falls and is defined by: dt = 1 if /φx t / > ...
+- **PDF p. 14, Appendix A.2 Eq. (7) (DOC-QA2 원문 대조):** Termination flag dₜ=1은 base roll 절댓값 또는 pitch 절댓값이 π/4를 넘는 경우이며, 그 외에는 0이다. 낙상 이후 reward 누적을 중단하는 규칙이다.
 - **p. 16 / Figure/Table caption - extractive body cue:** Figure 8: Our approach is robust to errors in a priori knowledge of the robot's inertial properties. B.4 Modeling Uncertainty Here, we examine the benefit ...
 - **p. 2 / Figure/Table caption - extractive body cue:** Figure 2: The SSRL framework. A deterministic policy is used to collect data from the real world while a stochastic policy is utilized in conjunction ...
 - **p. 16 / Figure/Table caption - extractive body cue:** Figure 7: Prediction error for 20-step synthetic rollouts using our semi-structured dynamics models and the black-box models where the best results from the 1- or ...

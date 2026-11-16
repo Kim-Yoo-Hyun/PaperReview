@@ -1,0 +1,639 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-11-01",
+  "evidence": "PUBLIC_SOURCE_AND_METADATA_ONLY; no checkpoint/asset payload downloaded",
+  "sources": [
+    {
+      "url": "https://raw.githubusercontent.com/Shiduo-zh/openpi/4483d1da6332da44115fe530e4e6fdd89bd57b13/src/openpi/training/config.py",
+      "sha256": "7433efdfbce68a2f13e504eebb9d1d50debb1aebf005feda36aeefc319e1c1f3",
+      "scope": "src/openpi/training/config.py",
+      "error": null
+    },
+    {
+      "url": "https://raw.githubusercontent.com/Shiduo-zh/openpi/4483d1da6332da44115fe530e4e6fdd89bd57b13/src/openpi/policies/vlabench_policy.py",
+      "sha256": "bd05192871d60be2825872eb203769a36eab558e34b0396f2f7503cc51901fec",
+      "scope": "src/openpi/policies/vlabench_policy.py",
+      "error": null
+    },
+    {
+      "url": "https://raw.githubusercontent.com/Shiduo-zh/openpi/4483d1da6332da44115fe530e4e6fdd89bd57b13/examples/vlabench/eval.py",
+      "sha256": "28ccab041891fc29bd5231290a7051aece551db2da923fa299e59ae588ac1fa3",
+      "scope": "examples/vlabench/eval.py",
+      "error": null
+    },
+    {
+      "url": "https://raw.githubusercontent.com/Shiduo-zh/openpi/4483d1da6332da44115fe530e4e6fdd89bd57b13/pyproject.toml",
+      "sha256": "eab267df90755280cffa44e39facbb82d1cc105bafba3b9bcc02db96428e6640",
+      "scope": "pyproject.toml",
+      "error": null
+    },
+    {
+      "url": "https://raw.githubusercontent.com/Shiduo-zh/openpi/4483d1da6332da44115fe530e4e6fdd89bd57b13/packages/openpi-client/pyproject.toml",
+      "sha256": "bfcb6af4f5c71bf60b3e1c00335e3f9f19b9f6e977c82b22184fdbef87c716e5",
+      "scope": "packages/openpi-client/pyproject.toml",
+      "error": null
+    },
+    {
+      "url": "https://huggingface.co/VLABench/pi0-primitive-10task/raw/1ad73753a74d5cd97e67856664350f3f0baa21dc/README.md",
+      "sha256": "a3d9e0f0c24966c505b093fe729eb97584d211ceee43b5fbf6a047384797cb13",
+      "scope": "card",
+      "error": null
+    },
+    {
+      "url": "https://raw.githubusercontent.com/Shiduo-zh/openpi/c0b0bd4bce430e1874fbea68623d98ff13934f3e/examples/vlabench/README.md",
+      "sha256": "06c0ec6037a85f6b5a147ba7f79fabde870fc38c45c30c0a637c49aabf95d8b9",
+      "scope": "openpi_readme",
+      "error": null
+    },
+    {
+      "url": "https://raw.githubusercontent.com/Shiduo-zh/openpi/c0b0bd4bce430e1874fbea68623d98ff13934f3e/examples/vlabench/eval.py",
+      "sha256": "4d1a814dee31748f9611b91652f0d68c5e80b8d727a50ce3523632303f21b0d3",
+      "scope": "openpi_eval",
+      "error": null
+    },
+    {
+      "url": "https://raw.githubusercontent.com/Shiduo-zh/openpi/c0b0bd4bce430e1874fbea68623d98ff13934f3e/src/openpi/training/config.py",
+      "sha256": "5645621453a75a6b7208146a36dc29c1707fdc5978c934c8aa3a1d69f49f92e8",
+      "scope": "openpi_config",
+      "error": null
+    },
+    {
+      "url": "https://raw.githubusercontent.com/OpenMOSS/VLABench/cf588fe60c0c7282174fe979f5913170cfe69017/docker/Dockerfile",
+      "sha256": "8b5358b4920362f5cddf032e1fead930fe612db71e432b09f72445c6c58435d5",
+      "scope": "docker",
+      "error": null
+    },
+    {
+      "url": "https://raw.githubusercontent.com/OpenMOSS/VLABench/cf588fe60c0c7282174fe979f5913170cfe69017/VLABench/envs/__init__.py",
+      "sha256": "2c7d7ae305c33c9c8dd49c230185818e93ae9c685a598848ba46b15ffd691922",
+      "scope": "VLABench/envs/__init__.py",
+      "error": null
+    },
+    {
+      "url": "https://raw.githubusercontent.com/OpenMOSS/VLABench/cf588fe60c0c7282174fe979f5913170cfe69017/VLABench/envs/dm_env.py",
+      "sha256": "953e113da7c7935999ea8f2a192b79641ed90de5d55cf3e124b8d00072c7ddd1",
+      "scope": "VLABench/envs/dm_env.py",
+      "error": null
+    },
+    {
+      "url": "https://raw.githubusercontent.com/OpenMOSS/VLABench/cf588fe60c0c7282174fe979f5913170cfe69017/VLABench/evaluation/evaluator/base.py",
+      "sha256": "190cd8daa9ef70252c3346c81f89731a3dc9c7eee737b0412f229e9e26f4d540",
+      "scope": "VLABench/evaluation/evaluator/base.py",
+      "error": null
+    },
+    {
+      "url": "https://raw.githubusercontent.com/OpenMOSS/VLABench/cf588fe60c0c7282174fe979f5913170cfe69017/VLABench/__init__.py",
+      "sha256": "058b7b68b62e1695c02164cade5c21d41c3c67f2a58e83563deeedda93c2a694",
+      "scope": "VLABench/__init__.py",
+      "error": null
+    },
+    {
+      "url": "https://raw.githubusercontent.com/OpenMOSS/VLABench/cf588fe60c0c7282174fe979f5913170cfe69017/setup.py",
+      "sha256": "971d9b4d7fa5c2bc3621757e6aaef88fd3c0a809b185acb4cac4d7348e1660e1",
+      "scope": "setup.py",
+      "error": null
+    },
+    {
+      "url": "https://raw.githubusercontent.com/Shiduo-zh/openpi/4483d1da6332da44115fe530e4e6fdd89bd57b13/examples/vlabench/requirements.txt",
+      "sha256": "e9db6fe36fdd80f695ccb7da678117ff3e9cfcce8d66f3c19aa1f13f32f632d9",
+      "scope": "examples/vlabench/requirements.txt",
+      "error": null
+    },
+    {
+      "url": "https://raw.githubusercontent.com/Shiduo-zh/openpi/4483d1da6332da44115fe530e4e6fdd89bd57b13/src/openpi/policies/policy_config.py",
+      "sha256": "96bd0a2e4a04dd81ac77dc6f89a5a09d175581cc4f162df4c17b2b1f363aef16",
+      "scope": "src/openpi/policies/policy_config.py",
+      "error": null
+    },
+    {
+      "url": "https://raw.githubusercontent.com/Shiduo-zh/openpi/4483d1da6332da44115fe530e4e6fdd89bd57b13/scripts/serve_policy.py",
+      "sha256": "57eda91350c6211e208d4bf6f1a1e7c3f1f764913d7df40e4e7f510ae363ac7b",
+      "scope": "scripts/serve_policy.py",
+      "error": null
+    },
+    {
+      "url": "https://raw.githubusercontent.com/Shiduo-zh/openpi/4483d1da6332da44115fe530e4e6fdd89bd57b13/src/openpi/models/tokenizer.py",
+      "sha256": "11761c2add4d6ce4b5855a2038ab10050d6c5dab89fcd0961bf50b0d13c41417",
+      "scope": "src/openpi/models/tokenizer.py",
+      "error": null
+    },
+    {
+      "url": "https://raw.githubusercontent.com/OpenMOSS/VLABench/cf588fe60c0c7282174fe979f5913170cfe69017/VLABench/robots/single_arm/franka.py",
+      "sha256": "337702b18c1cd0143d39171cb0e7a75eb2bd95e8605199b54b327e13f063df5f",
+      "scope": "VLABench/robots/single_arm/franka.py",
+      "error": null
+    },
+    {
+      "url": "https://raw.githubusercontent.com/OpenMOSS/VLABench/cf588fe60c0c7282174fe979f5913170cfe69017/VLABench/tasks/dm_task.py",
+      "sha256": "5e0011bf019ac2393a51560eb46750c0319a27c6b36074a3bcf4a6bb04b9e109",
+      "scope": "control",
+      "error": null
+    },
+    {
+      "url": "https://raw.githubusercontent.com/OpenMOSS/VLABench/cf588fe60c0c7282174fe979f5913170cfe69017/VLABench/tasks/__init__.py",
+      "sha256": "aea61ed3fbf0e9dd6b64c539982d37b5130c494021c1108eb937c0a6066d4e14",
+      "scope": "VLABench/tasks/__init__.py",
+      "error": null
+    },
+    {
+      "url": "https://raw.githubusercontent.com/OpenMOSS/VLABench/cf588fe60c0c7282174fe979f5913170cfe69017/VLABench/utils/utils.py",
+      "sha256": "aac96c8174f783c92e3fac32e95d1e1949adc4c960dc274048082c6304741bb4",
+      "scope": "VLABench/utils/utils.py",
+      "error": null
+    },
+    {
+      "url": "https://raw.githubusercontent.com/OpenMOSS/VLABench/cf588fe60c0c7282174fe979f5913170cfe69017/VLABench/utils/depth2cloud.py",
+      "sha256": "6842c893c00e42eb557244eab3d2dee9e50a835a4708b5c1dbfb55b38da279e0",
+      "scope": "VLABench/utils/depth2cloud.py",
+      "error": null
+    },
+    {
+      "url": "https://raw.githubusercontent.com/OpenMOSS/VLABench/cf588fe60c0c7282174fe979f5913170cfe69017/VLABench/configs/task_config.json",
+      "sha256": "c1009c7bd09d55b72892a6f2db0a685b23848613846961ba6028ed595ecf5f10",
+      "scope": "VLABench/configs/task_config.json",
+      "error": null
+    },
+    {
+      "url": "https://raw.githubusercontent.com/OpenMOSS/VLABench/cf588fe60c0c7282174fe979f5913170cfe69017/VLABench/configs/robot_config.json",
+      "sha256": "c8ef37e5a19dbe6e515cd85c7a07ce96ad6b3e4aa865d5ab6c76c9841d26bfa5",
+      "scope": "VLABench/configs/robot_config.json",
+      "error": null
+    },
+    {
+      "url": "https://raw.githubusercontent.com/Shiduo-zh/openpi/4483d1da6332da44115fe530e4e6fdd89bd57b13/uv.lock",
+      "sha256": "97352549af74bc031ba9cbc9d91339841fead9163408a393bf15895daf2cdc51",
+      "scope": "uv.lock",
+      "error": null
+    },
+    {
+      "url": "https://raw.githubusercontent.com/Shiduo-zh/openpi/4483d1da6332da44115fe530e4e6fdd89bd57b13/src/openpi/shared/download.py",
+      "sha256": "da74bef078e4670b74a0bdf90eaa2f160d6c34f5c92404e11eb5e5f77a309b98",
+      "scope": "src/openpi/shared/download.py",
+      "error": null
+    },
+    {
+      "url": "https://raw.githubusercontent.com/Shiduo-zh/openpi/4483d1da6332da44115fe530e4e6fdd89bd57b13/src/openpi/policies/policy.py",
+      "sha256": "f61ee47a2759f76f5319f9790e6ad3eb84e6565239215a3713f90bf63db79f92",
+      "scope": "src/openpi/policies/policy.py",
+      "error": null
+    },
+    {
+      "url": "https://raw.githubusercontent.com/Shiduo-zh/openpi/4483d1da6332da44115fe530e4e6fdd89bd57b13/README.md",
+      "sha256": "68df1bf172fbb121278ec35ee9a39408731017cfbe75ec529b81a4d0d8f3e0ed",
+      "scope": "README.md",
+      "error": null
+    },
+    {
+      "url": "https://api.github.com/repos/motion-planning/rrt-algorithms/commits/master",
+      "sha256": "cb6512b0dff8a0bbd7bca8b2c6c99a3ef447334c501660263203eed1c68ba7be",
+      "scope": "rrt",
+      "error": null
+    },
+    {
+      "url": "https://raw.githubusercontent.com/OpenMOSS/VLABench/cf588fe60c0c7282174fe979f5913170cfe69017/VLABench/robots/single_arm/base.py",
+      "sha256": "4adf281b0930ef3a1a241dd6699a6e1d0cf75a3a1372a85433fd38594a5fd38a",
+      "scope": "ik",
+      "error": null
+    },
+    {
+      "url": "https://raw.githubusercontent.com/OpenMOSS/VLABench/cf588fe60c0c7282174fe979f5913170cfe69017/VLABench/utils/skill_lib.py",
+      "sha256": "f8019e745141bdb5e183853daebb0067623161ccc2b04dbb3adfdfce22c2f235",
+      "scope": "skill",
+      "error": null
+    },
+    {
+      "url": "https://raw.githubusercontent.com/OpenMOSS/VLABench/cf588fe60c0c7282174fe979f5913170cfe69017/VLABench/utils/gpt_utils.py",
+      "sha256": "ad76949f250fc63451456fd9ad1891e4c44be9de66cd0d7caaf6f6b833873dfb",
+      "scope": "gpt",
+      "error": null
+    },
+    {
+      "url": "https://raw.githubusercontent.com/Shiduo-zh/openpi/4483d1da6332da44115fe530e4e6fdd89bd57b13/src/openpi/models/pi0.py",
+      "sha256": "46c068fe89e76bfa9518610921681470510c65c2393301291671333e8b66fe43",
+      "scope": "params",
+      "error": null
+    },
+    {
+      "url": "https://ghcr.io/v2/astral-sh/uv/manifests/0.8.22-python3.11-bookworm-slim",
+      "sha256": null,
+      "scope": "base_image",
+      "error": "HTTP Error 401: Unauthorized"
+    },
+    {
+      "url": "https://storage.googleapis.com/storage/v1/b/big_vision/o/paligemma_tokenizer.model",
+      "sha256": "93186bc166fb3830e989011855717a37d1fed832fa4a598ca7909f8d7e81096e",
+      "scope": "gcs",
+      "error": null
+    }
+  ],
+  "checkpoint": {
+    "repo_id": "VLABench/pi0-primitive-10task",
+    "revision": "1ad73753a74d5cd97e67856664350f3f0baa21dc",
+    "inference_files": [
+      {
+        "rfilename": "_CHECKPOINT_METADATA",
+        "blobId": "75b1e826129f54a86260466821dd22250b833fae",
+        "size": 417
+      },
+      {
+        "rfilename": "assets/vlabench/vlabench_ft_primitive/norm_stats.json",
+        "blobId": "310dc7cd854079794e237e98739039ca19d93ed3",
+        "size": 4424
+      },
+      {
+        "rfilename": "params/_METADATA",
+        "blobId": "6c718061c06e49e04232f6012c4ddc165fd946d9",
+        "size": 21156
+      },
+      {
+        "rfilename": "params/_sharding",
+        "blobId": "d21ee35a065d20990e5b7de465b019d7b03d4846",
+        "size": 17707
+      },
+      {
+        "rfilename": "params/d/38534e72baacb5a541c3de119b8eb12a",
+        "blobId": "787b42e53ccd60f480fe2b9759b589e23a60c44e",
+        "size": 2274
+      },
+      {
+        "rfilename": "params/manifest.ocdbt",
+        "blobId": "f495507210e9a8f0e6b1be7cce67ed4e0add7f86",
+        "size": 117
+      },
+      {
+        "rfilename": "params/ocdbt.process_0/d/05a4320de3bece0da6e7d198c9ca41d1",
+        "blobId": "5c6c29bd147e726f69e1dfd7e6d5454442e748d9",
+        "size": 272883305,
+        "lfs": {
+          "sha256": "a66698a762b8b18ed0cd66b381d406437b8e96abb46016746c808862a9618504",
+          "size": 272883305,
+          "pointerSize": 134
+        }
+      },
+      {
+        "rfilename": "params/ocdbt.process_0/d/05d5ce0878ac01359a2ed375b0653234",
+        "blobId": "46cd46020c3fc37eed8126482d2295a61a10ce74",
+        "size": 213
+      },
+      {
+        "rfilename": "params/ocdbt.process_0/d/0b451567b16f1de49a471eed18d371e6",
+        "blobId": "c53573de08b88d6ffca077696fb6c3c220098a59",
+        "size": 132845888,
+        "lfs": {
+          "sha256": "f97e52f24cb27d7c4a80de5a9f6c898a100e3ec18b38167ae8e46e1e0acaf1f0",
+          "size": 132845888,
+          "pointerSize": 134
+        }
+      },
+      {
+        "rfilename": "params/ocdbt.process_0/d/0c6d515a6c217225596f93ac1ddd380b",
+        "blobId": "d693b3c938242f65cdb376863ef20a434a8ed223",
+        "size": 265901697,
+        "lfs": {
+          "sha256": "2b1078892047117318ea1529266f357cc2ad9ac0ef585a9ffcbe5f334a8e9474",
+          "size": 265901697,
+          "pointerSize": 134
+        }
+      },
+      {
+        "rfilename": "params/ocdbt.process_0/d/1171c3db05e67eb52a4851b9c7ff1afa",
+        "blobId": "adb1f5bb0e866781cbcbee2dd6d1c4c43bca2bde",
+        "size": 496762227,
+        "lfs": {
+          "sha256": "1f80464aadc137caaff27de06c896024bbe5c692ab97067af47d4ba4013c2ed8",
+          "size": 496762227,
+          "pointerSize": 134
+        }
+      },
+      {
+        "rfilename": "params/ocdbt.process_0/d/1529a5ee5727ff906ad423ac4c8eb298",
+        "blobId": "69d136b946f33ab1a1579d234aeb305cb56dda46",
+        "size": 560221971,
+        "lfs": {
+          "sha256": "9c32c7aca7b534f32250964e64efc6a1c135cb7e1b0dded3755afb8459c9f59e",
+          "size": 560221971,
+          "pointerSize": 134
+        }
+      },
+      {
+        "rfilename": "params/ocdbt.process_0/d/18abb24e9b0d8c4e1fa7abcbed1d7dc1",
+        "blobId": "999e6c9351b60d54c531017536c3f2e730bc34bd",
+        "size": 70083297,
+        "lfs": {
+          "sha256": "17596e46c916693138345d3d4772d6599a64c4ad23bc68290d1cecb03f618373",
+          "size": 70083297,
+          "pointerSize": 133
+        }
+      },
+      {
+        "rfilename": "params/ocdbt.process_0/d/40516a50f749e38b32a32e94a3cb4689",
+        "blobId": "6f3761c77e607537ade177d4a413a2cedc9ed3cd",
+        "size": 1957442587,
+        "lfs": {
+          "sha256": "1ad2d3c982c77e0f18dee8d17cf848d8fd5c1267f1561c1b7bc3e1e142396d00",
+          "size": 1957442587,
+          "pointerSize": 135
+        }
+      },
+      {
+        "rfilename": "params/ocdbt.process_0/d/4a2229f516f82dcbe99502ced0b596fd",
+        "blobId": "2d7a123c65b706ff29caad810e33965668a4f09b",
+        "size": 2240254698,
+        "lfs": {
+          "sha256": "2775b8b77c72f94b3b4c82f917badde1847afba9c4782df3e01a5ffaa13d2165",
+          "size": 2240254698,
+          "pointerSize": 135
+        }
+      },
+      {
+        "rfilename": "params/ocdbt.process_0/d/4acbfa9486aaffe9a1a7f2ccf59d1a98",
+        "blobId": "84f606fd3a32a15353c4c3be89930ea9d1b4df20",
+        "size": 497034883,
+        "lfs": {
+          "sha256": "83ad4d10a73ae9b97b1d213d5bab65a8f5c6be984b19fc7fff5d0bcfbc8898dc",
+          "size": 497034883,
+          "pointerSize": 134
+        }
+      },
+      {
+        "rfilename": "params/ocdbt.process_0/d/508798e1b462bbbf63620d9df80274af",
+        "blobId": "9ca2412540a22be8cc48e809f7dbde6b458abbc7",
+        "size": 1095
+      },
+      {
+        "rfilename": "params/ocdbt.process_0/d/50887e600f222d194ec4993790a5db9c",
+        "blobId": "02dd3db069e76363fe54f1e6753a2ef71ba2b4ef",
+        "size": 5367
+      },
+      {
+        "rfilename": "params/ocdbt.process_0/d/5422a6caaa13563f46b557c6a97fb239",
+        "blobId": "77d0b129d4123c67a9e95992c5b307571839587d",
+        "size": 559722738,
+        "lfs": {
+          "sha256": "5498a5b2644e00818b4bf24252ce5700f76dce0ab3a369c0a00b274ac857efc7",
+          "size": 559722738,
+          "pointerSize": 134
+        }
+      },
+      {
+        "rfilename": "params/ocdbt.process_0/d/69c12bcae90c299c195dd23649b2d55c",
+        "blobId": "105af21b9af1e687920c29b2645cb60dd0dcf9c0",
+        "size": 2233
+      },
+      {
+        "rfilename": "params/ocdbt.process_0/d/714ad3b2f294fdef70f85a29f20f57d8",
+        "blobId": "f15f8e306e3bac988ceca961bbd16eb3dadf61fa",
+        "size": 1120113575,
+        "lfs": {
+          "sha256": "f01e34acb92471960e053fe506f657dee02e328174df300ab05fd677dc0d3d94",
+          "size": 1120113575,
+          "pointerSize": 135
+        }
+      },
+      {
+        "rfilename": "params/ocdbt.process_0/d/739f7bc82aa33e88353327ada08f860e",
+        "blobId": "7f0172803a36de928f9ac719282cc39a7c964d19",
+        "size": 139971964,
+        "lfs": {
+          "sha256": "99bbc9a746f81786eb7eefa0b1300ce76de7495e946a8fc0bb480c339db223e9",
+          "size": 139971964,
+          "pointerSize": 134
+        }
+      },
+      {
+        "rfilename": "params/ocdbt.process_0/d/93c653b1165c10127e6f8755d58df8ab",
+        "blobId": "c2271d8b87369b3c3aec3a1cb43b764a33a157e8",
+        "size": 2240248009,
+        "lfs": {
+          "sha256": "d6cc8532fb227875a20e9c762bc243a16e611bc05c7ba9efb6bd87dfa0b32d73",
+          "size": 2240248009,
+          "pointerSize": 135
+        }
+      },
+      {
+        "rfilename": "params/ocdbt.process_0/d/bec440a44d8a94ebe1be898b9a29207a",
+        "blobId": "3cce7a3fe55bf78fb1f35d658c432e01889ea3c4",
+        "size": 8754853,
+        "lfs": {
+          "sha256": "4d8307f1d4d263d29957142caddceb1e2d9d2a354d26d37ebc1dfdc9b5e47a6f",
+          "size": 8754853,
+          "pointerSize": 132
+        }
+      },
+      {
+        "rfilename": "params/ocdbt.process_0/d/c035fd10d0c1511154b59237656bfd9e",
+        "blobId": "c45ed45a5df87e5971f30fe10a2c0c3180bda712",
+        "size": 1120117982,
+        "lfs": {
+          "sha256": "d40c8dadcea010aa1d120baaf0268e7ec11a7844821533d45494f611eca98b74",
+          "size": 1120117982,
+          "pointerSize": 135
+        }
+      },
+      {
+        "rfilename": "params/ocdbt.process_0/d/d461b615a555ec3e3b55d74b01902be0",
+        "blobId": "f674e30a533e0c7c438f3a11c1c7e84eff5adeca",
+        "size": 17545044,
+        "lfs": {
+          "sha256": "c794a7bc97da5a0731e702bf3ec041152a859181e186ce2aa9daf7e58962cab1",
+          "size": 17545044,
+          "pointerSize": 133
+        }
+      },
+      {
+        "rfilename": "params/ocdbt.process_0/d/eb3b29ab49fc3ae56ab56574cbeea115",
+        "blobId": "21fd1a2fa1aafec06289f5575947915b4ba175c7",
+        "size": 279249262,
+        "lfs": {
+          "sha256": "115b556dbd443defdefbd5c5aed1e4f3f6cfa16467b189da34c67a9c1964f2a3",
+          "size": 279249262,
+          "pointerSize": 134
+        }
+      },
+      {
+        "rfilename": "params/ocdbt.process_0/d/f68c84360ba6f69591e1f7321424f353",
+        "blobId": "282944c34fad4522af712ffdd4a924bb345b5bd0",
+        "size": 34974940,
+        "lfs": {
+          "sha256": "62f989c8754fd869b5390c7c03b5244403d2bdfdde7bd1138774a236d92a240f",
+          "size": 34974940,
+          "pointerSize": 133
+        }
+      },
+      {
+        "rfilename": "params/ocdbt.process_0/manifest.ocdbt",
+        "blobId": "187cf952cfdc262bca665a876c22be0709aadd46",
+        "size": 363
+      }
+    ],
+    "total_bytes": 12014184286,
+    "normalizer": {
+      "url": "https://huggingface.co/VLABench/pi0-primitive-10task/resolve/1ad73753a74d5cd97e67856664350f3f0baa21dc/assets/vlabench/vlabench_ft_primitive/norm_stats.json",
+      "sha256": "333f238a862d70c4064d88baacf6ae0afaddc4333f61284f32c88122b03ca33e",
+      "keys": [
+        "norm_stats"
+      ]
+    }
+  },
+  "scene": {
+    "source_url": "https://raw.githubusercontent.com/OpenMOSS/VLABench/cf588fe60c0c7282174fe979f5913170cfe69017/VLABench/configs/evaluation/tracks/track_1_in_distribution.json",
+    "source_sha256": "61b07440c6f4272705bea0c8d721bc196e744232f48408075613cc9b6f7c8c04",
+    "task": "select_fruit",
+    "episode_index": 3,
+    "selection_rule": "First public track_1 episode whose Fruit categories are all in task_config seen_object, before any policy result; category familiarity only, exact training-instance exposure unverified.",
+    "episode": {
+      "task": {
+        "components": [
+          {
+            "name": "table",
+            "xml_path": "obj/meshes/table/table.xml",
+            "position": [
+              3.1205013953162524e-12,
+              2.536890199562162e-10,
+              -7.554388875155548e-7
+            ],
+            "orientation": [
+              1,
+              -1.1871013226530112e-10,
+              1.0524483830812038e-11,
+              -6.889947552938116e-11
+            ],
+            "class": "Table",
+            "materials": [
+              "wood1"
+            ]
+          },
+          {
+            "name": "plate_seen",
+            "xml_path": "obj/meshes/tablewares/plates/plate_11/model.xml",
+            "position": [
+              -0.09603001930029105,
+              -0.05833712764415998,
+              0.7679280034095278
+            ],
+            "orientation": [
+              0.9993177666579155,
+              -0.0015876122829881188,
+              -0.001219177041071095,
+              0.03687810104136853
+            ],
+            "class": "Plate"
+          },
+          {
+            "name": "pear",
+            "xml_path": "obj/meshes/fruit/pear/pear_10/model.xml",
+            "position": [
+              0.25723617173656416,
+              0.28688639356913975,
+              0.7919112285794971
+            ],
+            "orientation": [
+              0.9990142436558778,
+              -0.012409895333715344,
+              -0.0008394896776374874,
+              0.042612565371741566
+            ],
+            "class": "Fruit"
+          },
+          {
+            "name": "orange",
+            "xml_path": "obj/meshes/fruit/orange/orange_12/model.xml",
+            "position": [
+              -0.27255370539711515,
+              0.2831275996032099,
+              0.7930554101473778
+            ],
+            "orientation": [
+              0.9915656475592263,
+              0.1032572742222536,
+              0.015495263550042555,
+              0.07678149977798844
+            ],
+            "class": "Fruit"
+          },
+          {
+            "name": "apple",
+            "xml_path": "obj/meshes/fruit/apple/apple_8/model.xml",
+            "position": [
+              0.2772806248320169,
+              -0.18195899720847913,
+              0.7975629176971883
+            ],
+            "orientation": [
+              0.9990533273402864,
+              0.0001869625862340594,
+              0.0027699090452762533,
+              -0.04341361283255164
+            ],
+            "class": "Fruit"
+          }
+        ],
+        "scene": {
+          "name": "default",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "orientation": [
+            1,
+            0,
+            0,
+            0
+          ],
+          "floor_textures": [
+            "floorplane"
+          ]
+        },
+        "instructions": [
+          "Put the pear into the plate_seen"
+        ],
+        "conditions": {
+          "contain": {
+            "container": "plate_seen",
+            "entities": [
+              "pear"
+            ]
+          }
+        },
+        "target_entity": [
+          "pear"
+        ],
+        "target_container": "plate_seen"
+      }
+    }
+  },
+  "tokenizer": {
+    "kind": "storage#object",
+    "id": "big_vision/paligemma_tokenizer.model/1711547605575873",
+    "selfLink": "https://www.googleapis.com/storage/v1/b/big_vision/o/paligemma_tokenizer.model",
+    "mediaLink": "https://storage.googleapis.com/download/storage/v1/b/big_vision/o/paligemma_tokenizer.model?generation=1711547605575873&alt=media",
+    "name": "paligemma_tokenizer.model",
+    "bucket": "big_vision",
+    "generation": "1711547605575873",
+    "metageneration": "1",
+    "contentType": "application/octet-stream",
+    "storageClass": "STANDARD",
+    "size": "4264023",
+    "md5Hash": "FCCtyYVnIKVZ6KhyhLGV4g==",
+    "crc32c": "cKDEzw==",
+    "etag": "CMHRr9jLlIUDEAE=",
+    "timeCreated": "2024-03-27T13:53:25.598Z",
+    "updated": "2024-03-27T13:53:25.598Z",
+    "timeStorageClassUpdated": "2024-03-27T13:53:25.598Z",
+    "timeFinalized": "2024-03-27T13:53:25.598Z"
+  },
+  "asset_archives": [
+    {
+      "name": "obj.zip",
+      "drive_id": "1ldEMZua2OzXHJTYTCP0IGVU1aFYBCMu-",
+      "sha256": null
+    },
+    {
+      "name": "scene.zip",
+      "drive_id": "1KdReRkibJClBHHD32jz_wTkaBzhEJ9Kw",
+      "sha256": null
+    }
+  ],
+  "asset_policy": "Mutable public Drive URLs; download and SHA256-seal inside Docker at first fetch; persist receipt and archives, never silently overwrite. Publication-fixed archive checksum is unavailable."
+}

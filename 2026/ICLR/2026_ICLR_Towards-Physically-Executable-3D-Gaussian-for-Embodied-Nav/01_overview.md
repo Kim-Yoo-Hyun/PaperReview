@@ -13,9 +13,11 @@
 - Tags: 3D Vision, Navigation, Gaussian Splatting
 - Official paper: https://openreview.net/forum?id=HB6KvsqcAn
 - Full-text retrieval: https://chatpaper.com/api/v1/articles/download/246616
-- Code/Project: not identified
+- Code/Project: [공식 code](https://github.com/Galery23/SAGE-3D_Official) · [저자 project](https://sage-3d.github.io/)
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (21 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+
+> DOC-QA3 (2026-10-23): [SAGE-3D의 지정 수식·공개 구현 대조](./03_method.md). Commit `69e60c2123aca55ff2ad96d66a80a9bac5a7912d`의 정적 검토이며 paper-run 버전·실행 결과는 미확인. [결과와 경계](../../../work/update/PAPER_CODE_FORMULA_REVIEW_2026-10-23.md).
 
 ## Why This Paper Is Here
 

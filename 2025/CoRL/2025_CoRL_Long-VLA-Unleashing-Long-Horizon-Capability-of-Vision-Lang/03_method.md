@@ -4,6 +4,8 @@
 > Evidence maturity: `FULL_TEXT_CHECKED`.
 > Analysis basis: full-text PDF body checked on 2026-09-03 (20 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://proceedings.mlr.press/v305/fan25a.html; PDF retrieval source: https://raw.githubusercontent.com/mlresearch/v305/main/assets/fan25a/fan25a.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
+> DOC-QA2 targeted source review: 2026-10-23; PDF pp. 3. 손상 구간·직접 연결된 표 분류만 원문 이미지와 대조했다. 전체 주장 정독·실험 검증·reading status 승격을 뜻하지 않는다. [URL·PDF hash·수정 기록](../../../work/sources/pdf_note_review_followup_2026-10-23.json).
+
 ## Method in One Sentence
 
 PDF body method statement (p. 4 (3 Method), p. 5 (3 Method), p. 3 (3 Method), p. 5 (3 Method), p. 3 (3 Method), p. 4 (3 Method)): Static Cam 𝒔𝒔𝒃𝒃 𝒕𝒕 Gripper Cam 𝒔𝒔𝒈𝒈𝒕𝒕 … … Multimodal Transformer Encoder … Noise 𝝈𝝈 𝛥𝛥𝑇𝑇 𝛥𝛥𝑅𝑅 𝑠𝑠𝑔𝑔 𝑠𝑠𝑝𝑝 Detection 𝒅𝒅𝒕𝒕 … Action 𝒂𝒂𝒕𝒕 masking move to the top side ...
@@ -81,7 +83,7 @@ PDF body method statement (p. 4 (3 Method), p. 5 (3 Method), p. 3 (3 Method), p.
 | Contract | Generic domain prior | PDF body cue | Unresolved detail |
 |---|---|---|---|
 | Horizon | instruction-conditioned task horizon; action chunk/skill termination 여부는 paper-specific. | We select CALVIN as our simulation platform due to its focus on long-horizon tasks, and introduce LCALVIN, a new benchmark that extends ... | episode/sequence/action-chunk boundary |
-| Rate / latency | policy inference/decoder rate와 low-level control rate가 분리된다; numeric value 확인 필요. | As described in Section 3.1, each language-annotated trajectory is decomposed into τ =  (sM t , aM t )t ∈[0, d], ... | Hz/fps, inference time and control rate |
+| Trajectory phase decomposition | 이동 phase와 interaction phase를 cutting point d로 나눈다. | PDF p. 3, §3.2.1: [0,d]와 [d+1,T] 구간; action에 phase identifier 추가 | Trajectory 구간 정의이며 Hz/latency 근거가 아님 |
 | Memory | image-language-proprioception history, transformer context 또는 persistent memory. | not stated or recoverable in the selected PDF body | window and reset |
 | Compute | multimodal encoder, decoder/sampling steps와 action horizon이 latency를 결정한다. | We select CALVIN as our simulation platform due to its focus on long-horizon tasks, and introduce LCALVIN, a new benchmark that extends ... | hardware, batch and throughput |
 

@@ -1,0 +1,311 @@
+{
+  "task_id": "META-W1",
+  "checked_on": "2026-10-23",
+  "paper_id": "pr-0284",
+  "title": "Splat-Nav: Safe Real-Time Robot Navigation in Gaussian Splatting Maps",
+  "decision": "Correct existing identity from IROS conference publication to T-RO 2025 journal article; keep IROS presentation separate.",
+  "previous_folder": "2025/IROS/2025_IROS_Splat-Nav-Safe-Real-Time-Robot-Navigation-in-Gaussian-Spla",
+  "current_folder": "2025/T-RO/2025_T-RO_Splat-Nav-Safe-Real-Time-Robot-Navigation-in-Gaussian-Spla",
+  "publication": {
+    "venue": "T-RO",
+    "year": 2025,
+    "kind": "journal",
+    "doi": "10.1109/tro.2025.3552348",
+    "volume": "41",
+    "pages": "2765-2784",
+    "metadata_url": "https://api.crossref.org/works/10.1109/TRO.2025.3552348",
+    "publisher_url": "https://ieeexplore.ieee.org/document/10930696/",
+    "access_boundary": "DOI resolves to IEEE browser challenge; publisher-deposited Crossref metadata read directly, supported by author laboratory listing. Journal body not reread.",
+    "crossref_selected_metadata": {
+      "DOI": "10.1109/tro.2025.3552348",
+      "title": [
+        "Splat-Nav: Safe Real-Time Robot Navigation in Gaussian Splatting Maps"
+      ],
+      "container-title": [
+        "IEEE Transactions on Robotics"
+      ],
+      "type": "journal-article",
+      "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+      "volume": "41",
+      "page": "2765-2784",
+      "published": {
+        "date-parts": [
+          [
+            2025
+          ]
+        ]
+      },
+      "published-print": {
+        "date-parts": [
+          [
+            2025
+          ]
+        ]
+      },
+      "URL": "https://doi.org/10.1109/tro.2025.3552348",
+      "author": [
+        {
+          "ORCID": "https://orcid.org/0000-0003-3948-8739",
+          "authenticated-orcid": false,
+          "given": "Timothy",
+          "family": "Chen",
+          "sequence": "first",
+          "affiliation": [
+            {
+              "name": "Stanford University, Stanford, CA, USA"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "ORCID": "https://orcid.org/0000-0002-4344-5945",
+          "authenticated-orcid": false,
+          "given": "Ola",
+          "family": "Shorinwa",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Stanford University, Stanford, CA, USA"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "ORCID": "https://orcid.org/0000-0003-4817-1282",
+          "authenticated-orcid": false,
+          "given": "Joseph",
+          "family": "Bruno",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Temple University, Philadelphia, PA, USA"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "ORCID": "https://orcid.org/0000-0003-4529-1318",
+          "authenticated-orcid": false,
+          "given": "Aiden",
+          "family": "Swann",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Stanford University, Stanford, CA, USA"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "ORCID": "https://orcid.org/0000-0002-5552-8780",
+          "authenticated-orcid": false,
+          "given": "Javier",
+          "family": "Yu",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Stanford University, Stanford, CA, USA"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Weijia",
+          "family": "Zeng",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "University of California San Diego, San Diego, CA, USA"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "ORCID": "https://orcid.org/0009-0000-4121-4927",
+          "authenticated-orcid": false,
+          "given": "Keiko",
+          "family": "Nagami",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Stanford University, Stanford, CA, USA"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "ORCID": "https://orcid.org/0000-0002-7257-0075",
+          "authenticated-orcid": false,
+          "given": "Philip",
+          "family": "Dames",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Temple University, Philadelphia, PA, USA"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "ORCID": "https://orcid.org/0000-0002-7871-3663",
+          "authenticated-orcid": false,
+          "given": "Mac",
+          "family": "Schwager",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Stanford University, Stanford, CA, USA"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "resource": {
+        "primary": {
+          "URL": "https://ieeexplore.ieee.org/document/10930696/"
+        }
+      }
+    }
+  },
+  "presentation": {
+    "conference": "IROS",
+    "year": 2025,
+    "evidence": "author_laboratory_listing",
+    "source_url": "https://sites.temple.edu/trail/publications/",
+    "linked_program_url": "https://ras.papercept.net/conferences/conferences/IROS25/program/IROS25_ContentListWeb_3.html",
+    "program_read": false,
+    "program_access_result": "web fetch restricted URL",
+    "format": "unverified",
+    "separate_registry_entry": false
+  },
+  "preprint": {
+    "arxiv": "2403.02751",
+    "url": "https://arxiv.org/abs/2403.02751",
+    "first_submitted": "2024-03-05",
+    "latest_version_on_check": "v3",
+    "version_date": "2025-01-11"
+  },
+  "assets": {
+    "project_url": "https://chengine.github.io/splatnav/",
+    "code_url": "https://github.com/chengine/splatnav",
+    "evidence": "author/project linked public repository and README checked",
+    "code_executed": false,
+    "data_payload_checked": false,
+    "note": "Existing data/checkpoint/runtime profile fields not upgraded; this pass verified publication and code/project links."
+  },
+  "path_migration": {
+    "policy": "Current pointers in manifest, tracker, registry, synthesis, generated views and four linked source ledgers are migrated. Review timestamps, hashes and body evidence remain unchanged. Historical report text and legacy_maintenance_reports.json retain the original observation.",
+    "review_manifests": [
+      "work/sources/fulltext_all_review_manifest_2026-09-02.json",
+      "work/sources/fulltext_core_next_review_manifest.json"
+    ],
+    "source_ledgers": [
+      "work/sources/broad_gap_scout_2026-10-23.json",
+      "work/sources/gap_w2_review_2026-10-23.json"
+    ]
+  },
+  "validation": {
+    "changed_paper_ids": [
+      "pr-0284"
+    ],
+    "other_manifest_records_unchanged": 1036,
+    "active_tracker_rows_preserved": 322,
+    "inactive_tracker_rows_preserved": 47,
+    "splat_nav_tracker_changed_fields": [
+      "venue",
+      "overview_path"
+    ],
+    "note_analysis_bodies_preserved": 5,
+    "fulltext_review_records_preserved_except_folder": true,
+    "preexisting_dirty_files": 165,
+    "scoped_preexisting_files_updated": [
+      "README.md",
+      "TODO.md",
+      "synthesis/07_robotics_3d_perception.md",
+      "work/sources/broad_gap_scout_2026-10-23.json",
+      "work/sources/gap_w2_review_2026-10-23.json",
+      "work/update/README.md",
+      "work/update/UPDATES_2026-10-23.md"
+    ],
+    "unrelated_dirty_files_preserved": 158,
+    "active_old_paths_remaining": 0,
+    "manifest_sha256": "af79883968087b121d0259268212ed42b494d484c0557ab14c739c7d545fe43f",
+    "status": "passed",
+    "commands": [
+      "python3 -m py_compile work/scripts/build_reading_tiers.py",
+      "python3 work/scripts/build_reading_tiers.py",
+      "python3 work/scripts/reconcile_registry.py --priorities-only",
+      "python3 work/scripts/reconcile_registry.py --priorities-only --apply",
+      "python3 work/scripts/build_registry_catalogs.py",
+      "python3 work/scripts/build_registry_catalogs.py --apply",
+      "python3 work/scripts/build_registry_views.py",
+      "python3 work/scripts/build_registry_views.py --apply",
+      "python3 work/scripts/audit_repository.py",
+      "git diff --check"
+    ],
+    "repository_audit": {
+      "papers": 1037,
+      "categories": 23,
+      "tier_counts": {
+        "CORE": 47,
+        "NEXT": 275,
+        "REFERENCE": 473,
+        "ARCHIVE": 242
+      },
+      "standard_note_files": 5185,
+      "combined_resources": 522,
+      "errors": [],
+      "warnings": []
+    },
+    "priority_only_additional_changes": 0,
+    "pdf_downloaded": false,
+    "experiment_executed": false,
+    "packages_installed": false,
+    "git_published": false
+  }
+}

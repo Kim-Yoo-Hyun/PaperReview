@@ -17,6 +17,8 @@
 - Paper type: benchmark_or_dataset
 - Source audit: full-text PDF body checked on 2026-09-03 (25 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
+> DOC-QA2 targeted source review: 2026-10-23; PDF pp. 14. 손상 구간·직접 연결된 표 분류만 원문 이미지와 대조했다. 전체 주장 정독·실험 검증·reading status 승격을 뜻하지 않는다. [URL·PDF hash·수정 기록](../../../work/sources/pdf_note_review_followup_2026-10-23.json).
+
 ## Why This Paper Is Here
 
 World models, safety, uncertainty, and recovery의 benchmark 문제를 이해하기 위해 읽는다. 본문은 While RL is not yet fully mature or ready to serve as an "off-the-shelf" solution, it appears to offer a viable path to solving hard sequential decision-making problems that cannot currently be ...를 문제로 두고, To address the gap, we present Safety Gym: a set of tools for accelerating safe exploration research.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
@@ -80,7 +82,7 @@ World models, safety, uncertainty, and recovery의 benchmark 문제를 이해하
 - **p. 21 / 5.3 Results - extractive body cue:** There are a number of avenues we consider promising for future work.
 - **p. 12 / Figure/Table caption - extractive body cue:** Figure 6: Diversity of generated layouts for the Safexp-PointPush2-v0 env. 4.2 Safety Gym Benchmark Suite Safety Gym ships with a suite of pre-configured benchmark environments, ...
 - **p. 14 / 5 Experiments - extractive body cue:** First and foremost, it corresponds directly to safety outcomes: a lower cost rate means that fewer unsafe things happened.
-- **p. 14 / 5 Experiments - extractive body cue:** E τ∼πθ XT t=0 ct  ≤d, where ct is the aggregate indicator cost function for the environment (ct = 1 for an unsafe interaction, ...
+- **PDF p. 14, §5 Eq. (3) (DOC-QA2 원문 대조):** 실험은 finite-horizon undiscounted return을 최대화하면서 E[Σₜ₌₀ᵀcₜ]≤d를 제약한다. cₜ는 source 종류와 무관하게 unsafe interaction이면 1인 aggregate indicator다. Episode cost와 전체 training steps당 cost rate는 별도 metric이다.
 - **p. 15 / 5 Experiments - extractive body cue:** 3Characteristic return and cumulative cost were obtained by averaging over the last five epochs of training to reduce noise.
 - **p. 15 / 5 Experiments - extractive body cue:** We compare normalized scores like we would compare individual training runs: the average constraint violation should be zero (or within noise of zero), and among ...
 

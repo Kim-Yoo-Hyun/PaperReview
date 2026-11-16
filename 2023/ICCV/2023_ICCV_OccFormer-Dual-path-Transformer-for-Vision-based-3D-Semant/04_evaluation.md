@@ -4,6 +4,8 @@
 > Evidence maturity: `FULL_TEXT_CHECKED`.
 > Analysis basis: full-text PDF body checked on 2026-09-03 (13 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2304.05316; PDF retrieval source: https://arxiv.org/pdf/2304.05316. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
+> DOC-QA2 targeted source review: 2026-10-23; PDF pp. 6, 10. 손상 구간·직접 연결된 표 분류만 원문 이미지와 대조했다. 전체 주장 정독·실험 검증·reading status 승격을 뜻하지 않는다. [URL·PDF hash·수정 기록](../../../work/sources/pdf_note_review_followup_2026-10-23.json).
+
 ## Evaluation in One Sentence
 
 PDF body evaluation/result cue (p. 6 (4.1. Datasets), p. 7 (4.4. Main Results), p. 8 (4.5. Ablation Studies), p. 8 (4.6. Qualitative Results), p. 7 (4.5. Ablation Studies), p. 5 (Figure/Table caption)): The proposed OccFormer outperforms the only vision-based method TPVFormer [21] and achieves comparable performance with LiDAR-based methods.
@@ -58,7 +60,7 @@ PDF body evaluation/result cue (p. 6 (4.1. Datasets), p. 7 (4.4. Main Results), 
 - **p. 5 / Figure/Table caption - extractive body cue:** Table 1: Semantic scene completion results on SemanticKITTI test set. * represents these methods are adapted for the RGB inputs, which are implemented and reported ...
 - **p. 5 / Figure/Table caption - extractive body cue:** Table 2: Semantic scene completion results on SemanticKITTI [2] validation set. * represents these methods are adapted for the RGB inputs, which are implemented and ...
 - **p. 6 / Figure/Table caption - extractive body cue:** Table 3: LiDAR segmentation results on nuScenes test set. The proposed OccFormer outperforms the only vision-based method TPVFormer [21] and achieves comparable performance with LiDAR-based ...
-- **p. 6 / Figure/Table caption - extractive body cue:** Table 4: Ablation study on the dual-path encoder. Local Global Params GFLOPs IoU↑mIoU↑  74.1M 494.2 36.42
+- **PDF p. 6, Table 4 (DOC-QA2 원문 대조):** Local-only: 74.1M parameters / 494.2 GFLOPs / IoU 36.42 / mIoU 12.95; global-only: 81.4M / 407.4 / 36.37 / 12.93; dual-path: 81.4M / 515.3 / 36.50 / 13.46.
 - **p. 7 / Figure/Table caption - extractive body cue:** Figure 3: Qualitative results on SemanticKITTI validation set. The input monocular image is shown on the left and the 3D semantic occupancy results from MonoScene ...
 - **p. 7 / Figure/Table caption - extractive body cue:** Table 5: Ablation study on the pixel decoder.
 
@@ -78,10 +80,10 @@ PDF body evaluation/result cue (p. 6 (4.1. Datasets), p. 7 (4.4. Main Results), 
 | OccFormer achieves comparable IoU for scene completion and significantly better performance for the SSC mIoU. | definition/direction/unit from same section | p. 7 (4.4. Main Results) |
 | Also, the intersection over union (IoU) for the class-agnostic scene completion (SC) task is reported. | definition/direction/unit from same section | p. 6 (4.3. Metrics) |
 | Method Layer params GFLOPs IoU↑mIoU↑ MsDeAttn3D 3 2.74M 329.3 35.74 13.22 MsDeAttn3D 6 4.07M 379.2 36.50 13.46 FPN-3D [32] - 4.35M 307.0 36.12 12.89 ... | definition/direction/unit from same section | p. 7 (4.4. Main Results) |
-| Local Global Params GFLOPs IoU↑mIoU↑  74.1M 494.2 36.42 12.95  81.4M 407.4 36.37 12.93   81.4M 515.3 36.50 13.46 3D ResNet-16 [18] ... | definition/direction/unit from same section | p. 6 (4.2. Implementation Details) |
+| Local-only: 74.1M parameters / 494.2 GFLOPs / IoU 36.42 / mIoU 12.95; global-only: 81.4M / 407.4 / 36.37 / 12.93; dual-path: 81.4M / 515.3 / 36.50 / 13.46. | Encoder ablation 결과; IoU/mIoU↑, parameters/GFLOPs는 자원량 | PDF p. 6 Table 4 |
 | Table 1: Semantic scene completion results on SemanticKITTI test set. * represents these methods are adapted for the RGB inputs, which are implemented and ... | definition/direction/unit from same section | p. 5 (Figure/Table caption) |
 | Table 8: Detailed Comparison between sampling methods on SemanticKITTI [2] validation set. SC SSC Sampling Method IoU ■road (15.30%) ■sidewalk (11.13%) ■parking (1.12%) | definition/direction/unit from same section | p. 9 (Figure/Table caption) |
-| Table 10: Ablation study on augmentations. Image Aug. 3D Aug. IoU↑mIoU↑  36.37 12.72  35.73 12.94   | definition/direction/unit from same section | p. 10 (Figure/Table caption) |
+| Image augmentation only: IoU/mIoU 36.37/12.72; 3D augmentation only: 35.73/12.94; both: 36.50/13.46. 체크 표시의 열 위치를 원문 표와 대조했다. | Augmentation ablation; IoU와 mIoU는 높을수록 좋음 | PDF p. 10 Table 10 |
 | OccFormer is evaluated by its task of semantic scene completion, but with the monocular left camera as input following MonoScene [4]. | definition/direction/unit from same section | p. 5 (4.1. Datasets) |
 
 - Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
@@ -109,10 +111,10 @@ PDF body evaluation/result cue (p. 6 (4.1. Datasets), p. 7 (4.4. Main Results), 
 | PDF ablation/sensitivity cue | What it isolates | Anchor |
 |---|---|---|
 | The ablation is conducted on SemanticKITTI validation set and from three perspectives: the dual-path encoder, the pixel decoder, and the transformer decoder. | component/input/data sensitivity | p. 7 (4.5. Ablation Studies) |
-| Table 4: Ablation study on the dual-path encoder. Local Global Params GFLOPs IoU↑mIoU↑  74.1M 494.2 36.42 | component/input/data sensitivity | p. 6 (Figure/Table caption) |
+| Local-only: 74.1M parameters / 494.2 GFLOPs / IoU 36.42 / mIoU 12.95; global-only: 81.4M / 407.4 / 36.37 / 12.93; dual-path: 81.4M / 515.3 / 36.50 / 13.46. | Encoder ablation 결과; IoU/mIoU↑, parameters/GFLOPs는 자원량 | PDF p. 6 Table 4 |
 | Table 5: Ablation study on the pixel decoder. | component/input/data sensitivity | p. 7 (Figure/Table caption) |
 | Figure 4: Qualitative results on nuScenes validation set. The leftmost column shows the input surrounding images, the following three columns visualize the LiDAR segmentation ... | component/input/data sensitivity | p. 8 (Figure/Table caption) |
-| Table 10: Ablation study on augmentations. Image Aug. 3D Aug. IoU↑mIoU↑  36.37 12.72  35.73 12.94   | component/input/data sensitivity | p. 10 (Figure/Table caption) |
+| Image augmentation only: IoU/mIoU 36.37/12.72; 3D augmentation only: 35.73/12.94; both: 36.50/13.46. 체크 표시의 열 위치를 원문 표와 대조했다. | Augmentation ablation; IoU와 mIoU는 높을수록 좋음 | PDF p. 10 Table 10 |
 
 ## Main Results / Claim–Evidence Map
 

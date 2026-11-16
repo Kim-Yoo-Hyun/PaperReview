@@ -4,6 +4,8 @@
 > Evidence maturity: `FULL_TEXT_CHECKED`.
 > Analysis basis: full-text PDF body checked on 2026-09-03 (44 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2306.03310; PDF retrieval source: https://arxiv.org/pdf/2306.03310. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
+> DOC-QA2 targeted source review: 2026-10-23; PDF pp. 3. 손상 구간·직접 연결된 표 분류만 원문 이미지와 대조했다. 전체 주장 정독·실험 검증·reading status 승격을 뜻하지 않는다. [URL·PDF hash·수정 기록](../../../work/sources/pdf_note_review_followup_2026-10-23.json).
+
 ## Method in One Sentence
 
 PDF body method statement (p. 1 (Abstract), p. 6 (2 Background), p. 6 (2 Background), p. 3 (2 Background), p. 1 (Abstract), p. 2 (1 Introduction)): Specifically, LIBERO highlights five key research topics in LLDM: 1) how to efficiently transfer declarative knowledge, procedural knowledge, or the mixture of both; 2) how to design effective policy architectures ...
@@ -143,6 +145,6 @@ PDF body method statement (p. 1 (Abstract), p. 6 (2 Background), p. 6 (2 Backgro
 > Cross-checked on 2026-09-03 against the validated PDF body (44 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
 
 - **Paper-specific method/interface:** Specifically, LIBERO highlights five key research topics in LLDM: 1) how to efficiently transfer declarative knowledge, procedural knowledge, or the mixture of both; 2) how to design effective policy architectures ... (p. 1, Abstract).
-- **Objective/update evidence:** But during training, we perform behavioral cloning [4] with the following surrogate objective function: min π JBC(π) = 1 k k X p=1 E ot,at∼Dp  lp X t=0 L ... (p. 3, 2 Background).
+- **PDF p. 3, §2 / Eq. (2) (DOC-QA2 원문 대조):** LIBERO의 lifelong imitation formulation은 task별 demonstration에서 시간에 따른 supervised action loss를 합하고 task들에 평균하는 behavioral-cloning surrogate를 사용한다. 이전 task 데이터는 모두 이용 가능하다고 가정하지 않는다.
 - **Temporal/runtime evidence:** The RESNET-RNN [42] uses a ResNet as the visual backbone that encodes per-step visual observations and an LSTM as the temporal backbone to process a sequence of encoded visual information. (p. 5, 2 Background).
 - **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

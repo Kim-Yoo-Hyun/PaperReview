@@ -4,6 +4,8 @@
 > Evidence maturity: `FULL_TEXT_CHECKED`.
 > Analysis basis: full-text PDF body checked on 2026-09-03 (25 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=oL1WEZQal8; PDF retrieval source: https://arxiv.org/pdf/2406.08858. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
+> DOC-QA1 (2026-10-23): 제어문자·깨진 추출 구간과 직접 연결된 표 항목을 PDF 페이지 이미지와 대조했다. 확인 범위·원문 URL·페이지·수정 이력은 [대조 기록](../../../work/sources/pdf_note_review_2026-10-23.json)에 있다. 노트 전체의 정독이나 모든 기존 주장에 대한 재검증을 뜻하지 않으며 reading status는 유지한다.
+
 ## Method in One Sentence
 
 PDF body method statement (p. 4 (1 Introduction), p. 8 (1 Introduction), p. 8 (1 Introduction), p. 2 (1 Introduction), p. 2 (1 Introduction), p. 5 (1 Introduction)): To tackle this issue, We first train a teacher policy that uses privileged state information and then distill it to a student policy with limited state space.
@@ -70,7 +72,7 @@ PDF body method statement (p. 4 (1 Introduction), p. 8 (1 Introduction), p. 8 (1
 ## Observation–State–Action Interface
 
 - **p. 8 / 1 Introduction - extractive body cue:** We design our learning from demonstration policy to be πLfD(ˆpSparse-lfd t:t+ϕ /It), where πLfD outputs ϕ frames of motion goals given the image input It.
-- **p. 3 / 1 Introduction - extractive body cue:** Based on proprioception sp t, goal state sg t, and action at, we define the reward rt = R  sp t, sg t, at  ...
+- **원문 대조:** 보상은 proprioception, goal state, action의 함수 R(s_t^p,s_t^g,a_t)이다. Action은 목표 관절각을 지정하고 PD controller가 구동하며, PPO로 motion imitation policy를 학습한다. ([PDF p. 3](https://arxiv.org/pdf/2406.08858#page=3), §3 Problem Formulation).
 - **p. 5 / 1 Introduction - extractive body cue:** For proprioception, the student policy sp-real t ≜(dt-25:t, ˙dt-25:t, ωroot t-25:t, gt-25:t, at-25-1:t-1) uses values easily accessible in the real-world, which includes 25-step history of ...
 - **p. 6 / 1 Introduction - extractive body cue:** In Table 1(d), we find that linear velocity information does not boost performance in simulation, but it introduces significant challenges in real-world deployment (details illustrated ...
 - **p. 1 / Abstract - extractive body cue:** We develop an RL-based sim-to-real pipeline, which involves large-scale retargeting and augmentation of human motion datasets, learning a real-world deployable policy with sparse sensor input ...

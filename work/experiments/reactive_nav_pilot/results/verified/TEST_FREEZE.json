@@ -1,0 +1,14 @@
+{
+  "protocol_sha256": "832b94fb20eafefe433974da4bd69bc54193139dcc459822c12e6c4958db38f0",
+  "pilot_sha256": "20d22b283b82f5c990210ecb1cc339fb8302820fbe2d37d6cacc61a452c6905e",
+  "analysis_sha256": "9cae12c59ca0cbe4a8cc80695c28e65b8e49bab6260b96fc8ac867a4cb9dcc66",
+  "parent_adapter_sha256": "953abd5ea587485b0b2223dca529e2b7352761b641f7814e057de9ff392b49f2",
+  "split_sha256": "a44d9f25badc1af2ab0a404af217c3646620d968bc2e91b4fc656bf24e780c03",
+  "frozen_before_outcomes": true,
+  "utc": "2026-10-24T06:11:53.970767+00:00",
+  "image_id": "sha256:ec14bd72a90f89cb6f3c4b263bb35a81de7977dffb2e5a2cb7e96946f1545ebb",
+  "calibration_sha256": "094eda041e03f617632328911b6743c1e94a3dc559cb1e041082f70904fbbeab",
+  "development_sha256": "4c1d36520d2b63855640190769e4e3e25fafafdbd3f3bce01fff3adec047b249",
+  "test_tuning": false,
+  "before_first_test_rollout": true
+}

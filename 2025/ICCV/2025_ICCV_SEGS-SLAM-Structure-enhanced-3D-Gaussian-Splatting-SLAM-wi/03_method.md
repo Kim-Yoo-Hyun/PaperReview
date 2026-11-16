@@ -4,6 +4,8 @@
 > Evidence maturity: `FULL_TEXT_CHECKED`.
 > Analysis basis: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/ICCV2025/html/Wen_SEGS-SLAM_Structure-enhanced_3D_Gaussian_Splatting_SLAM_with_Appearance_Embedding_ICCV_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/ICCV2025/papers/Wen_SEGS-SLAM_Structure-enhanced_3D_Gaussian_Splatting_SLAM_with_Appearance_Embedding_ICCV_2025_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
+> DOC-QA2 targeted source review: 2026-10-23; PDF pp. 5. 손상 구간·직접 연결된 표 분류만 원문 이미지와 대조했다. 전체 주장 정독·실험 검증·reading status 승격을 뜻하지 않는다. [URL·PDF hash·수정 기록](../../../work/sources/pdf_note_review_followup_2026-10-23.json).
+
 ## Method in One Sentence
 
 PDF body method statement (p. 1 (Abstract), p. 2 (1. Introduction), p. 4 (4.2. Appearance-from-Motion Embedding), p. 4 (4.1. Structure-Enhanced Photorealistic Mapping), p. 1 (1. Introduction), p. 2 (2. We)): Second, we propose Appearance-from-Motion embedding (AfME), enabling 3D Gaussians to better model image appearance variations across different camera poses.
@@ -51,7 +53,7 @@ PDF body method statement (p. 1 (Abstract), p. 2 (1. Introduction), p. 4 (4.2. A
 - **p. 5 / 4.4. Losses Design - extractive body cue:** The optimization of the learnable parameters, the MLP Mα, Mc, Mq, Ms, and Mθa, are achieved by minimizing the L1 loss L1, SSIM term [40] ...
 - **p. 3 / 3.2. Localization and Geometry Mapping - extractive body cue:** The camera poses (R, t) and the point cloud {P0, . . . , Pη} ∈Rη×3 of the scene can be solved through local or ...
 - **p. 4 / 4. SEGS-SLAM - extractive body cue:** SEPM enhances the underlying structure of the 3D representation. loss and FPR.
-- **p. 5 / 4.3. Frequency Pyramid Regularization - extractive body cue:** The loss Lhf is computed as Lhf =  s∈S 1 N λs  u,v F s hf,r(u, v) -F s hf,g(u, v)  , ...
+- **PDF p. 5, §4.3 / Eqs. (9)–(10) (DOC-QA2 원문 대조):** Rendered/ground-truth image를 여러 scale로 downsample하고 high-frequency FFT 성분의 absolute difference를 λ_s로 가중해 합산한다. H_hf로 분리한 주파수 loss이며 깨진 합산·절댓값 기호를 복원했다.
 - **p. 2 / 1. Introduction - extractive body cue:** We further introduce a frequency pyramid regularization (FPR) technique to better capture high-frequency details in the scene.
 - **p. 2 / 1. Introduction - extractive body cue:** FreGS [47] combines frequency regularization to model the local details, but its effectiveness is constrained by the use of a single-scale frequency spectrum.
 - **Formal bridge:** sensor/map state and goal -> path/waypoint/velocity -> path cost, risk or goal utility -> goal reach with collision-free execution.

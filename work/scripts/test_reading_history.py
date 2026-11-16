@@ -86,6 +86,44 @@ class ReadingHistoryTest(unittest.TestCase):
         self.generate("REFERENCE")
         self.assertEqual(before, (self.active.read_bytes(), self.history.read_bytes()))
 
+    def test_case_only_path_repair_preserves_active_and_history(self):
+        for tier, source_name in (("CORE", "active"), ("REFERENCE", "history")):
+            with self.subTest(tier=tier):
+                self.generate(tier)
+                source = getattr(self, source_name)
+                rows = self.read(source)
+                row = next(row for row in rows if row["paper_id"] == "paper-a")
+                row.update(overview_path="./a/01_overview.md", status="READ", personal_notes="기존 분석, 유지")
+                expected = {key: value for key, value in row.items() if key not in AUTOMATIC}
+                self.write(source, rows)
+                self.generate(tier)
+                restored = next(row for row in self.read(source) if row["paper_id"] == "paper-a")
+                self.assertEqual(restored["overview_path"], self.paths[0])
+                self.assertEqual({key: restored[key] for key in expected}, expected)
+
+    def test_case_only_path_with_wrong_identity_is_not_migrated(self):
+        self.generate()
+        rows = self.read(self.active)
+        rows[0].update(overview_path="./a/01_overview.md", paper_id="other-paper")
+        self.write(self.active, rows)
+        before = self.active.read_bytes()
+        with self.assertRaisesRegex(RuntimeError, "missing from registry"):
+            self.generate()
+        self.assertEqual(before, self.active.read_bytes())
+
+    def test_reference_tier_survives_path_repair_by_identity(self):
+        index = self.root / "tiers.csv"
+        self.write(index, [{"overview_path": "./a/01_overview.md", "paper_id": "paper-a", "tier": "REFERENCE"}])
+        rows = [dict(row, tags="") for row in self.rows]
+        with patch.multiple(
+            builder, INDEX=index, CORE_GROUPS=OrderedDict(), NEXT_GROUPS=OrderedDict(),
+            FOCUS_PRIORITY_RATIONALES={}, FOCUS_REFERENCE_RATIONALES={}, FOCUS_SOURCE_CHECKS={},
+            ARCHIVE_3D_RECONSTRUCTION_IDS=frozenset(), REFERENCE_RECLASSIFIED_IDS=frozenset(),
+            REFERENCE_3D_STATE_FOUNDATION_IDS=frozenset(),
+        ), patch.object(builder, "manifest_paper_ids", return_value=self.ids), patch.object(builder, "manifest_primary_tracks", return_value={}):
+            tiers, _, _ = builder.classify(rows)
+        self.assertEqual(tiers[self.paths[0]], "REFERENCE")
+
     def test_unknown_history_path_fails_without_overwriting_tracker(self):
         self.generate()
         unknown = self.read(self.active)[0]

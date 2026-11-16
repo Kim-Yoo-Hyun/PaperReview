@@ -4,6 +4,8 @@
 > Evidence maturity: `FULL_TEXT_CHECKED`.
 > Analysis basis: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2025/html/Huang_RoboGround_Robotic_Manipulation_with_Grounded_Vision-Language_Priors_CVPR_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2025/papers/Huang_RoboGround_Robotic_Manipulation_with_Grounded_Vision-Language_Priors_CVPR_2025_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
+> DOC-QA1 (2026-10-23): 제어문자·깨진 추출 구간과 직접 연결된 표 항목을 PDF 페이지 이미지와 대조했다. 확인 범위·원문 URL·페이지·수정 이력은 [대조 기록](../../../work/sources/pdf_note_review_2026-10-23.json)에 있다. 노트 전체의 정독이나 모든 기존 주장에 대한 재검증을 뜻하지 않으며 reading status는 유지한다.
+
 ## Method in One Sentence
 
 PDF body method statement (p. 6 (4.4. Training and Inference), p. 5 (4.3. Grounded Policy Network), p. 4 (4.1. Overview), p. 5 (4.3. Grounded Policy Network), p. 6 (4.4. Training and Inference), p. 4 (4.1. Overview)): Since arm actions are continuous, we use Smooth-L1 loss Larm for optimization.
@@ -81,7 +83,7 @@ PDF body method statement (p. 6 (4.4. Training and Inference), p. 5 (4.3. Ground
 | Contract | Generic domain prior | PDF body cue | Unresolved detail |
 |---|---|---|---|
 | Horizon | instruction-conditioned task horizon; action chunk/skill termination 여부는 paper-specific. | (4) For a history length of N, the complete token sequence for one forward pass is constructed by aggregating token features from ... | episode/sequence/action-chunk boundary |
-| Rate / latency | policy inference/decoder rate와 low-level control rate가 분리된다; numeric value 확인 필요. | Consequently, the token sequence for a single timestep input is structured as follows:  ZCLS v , P(ZP v ), Zt, Zs, Za ... | Hz/fps, inference time and control rate |
+| Rate / latency | Token sequence 정의이며 inference/control rate의 근거가 아님 | 원문 대조: 한 timestep의 token sequence는 global visual CLS feature, grounded perceiver로 처리한 patch feature, language token, robot-state token, learnable ACT token으로 구성된다. ([PDF p. 5](https://openaccess.thecvf.com/content/CVPR2025/papers/Huang_RoboGround_Robotic_Manipulation_with_Grounded_Vision-Language_Priors_CVPR_2025_paper.pdf#page=5), §4.3 Grounded Policy Network, Eq. (4)) | Timing 근거 별도 확인 필요 |
 | Memory | image-language-proprioception history, transformer context 또는 persistent memory. | (4) For a history length of N, the complete token sequence for one forward pass is constructed by aggregating token features from ... | window and reset |
 | Compute | multimodal encoder, decoder/sampling steps와 action horizon이 latency를 결정한다. | not recovered | hardware, batch and throughput |
 

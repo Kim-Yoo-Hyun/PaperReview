@@ -17,6 +17,8 @@
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (13 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
+> DOC-QA2 targeted source review: 2026-10-23; PDF pp. 5. 손상 구간·직접 연결된 표 분류만 원문 이미지와 대조했다. 전체 주장 정독·실험 검증·reading status 승격을 뜻하지 않는다. [URL·PDF hash·수정 기록](../../../work/sources/pdf_note_review_followup_2026-10-23.json).
+
 ## Why This Paper Is Here
 
 Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 However, it is challenging to directly employ BERT on point clouds due to a lack of pre-existing vocabulary.를 문제로 두고, Driven by the above analysis, we present Point-BERT, a new scheme for learning point cloud Transformers.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
@@ -48,7 +50,7 @@ Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 �
 | Observation/input | Block Masking Input Masked Input Output Random Masking Input Masked Input Output Real Scans from ScanObjectNN Input Masked Input Output Input Masked Input Output Figure 2. | RGB-D, image set, point cloud, depth와 camera pose | p. 2 (1. Introduction), p. 2 (1. Introduction) |
 | State/latent | Block, Masking, Input, Masked, Output, Random, Real, Scans, ScanObjectNN, Figure, Point, Modeling | geometry, map, object/relationship state | p. 2 (1. Introduction), p. 2 (1. Introduction), p. 3 (1. Introduction) |
 | Output/action | 2) Masked Point Modeling: A ‘masked point modeling' (MPM) task is performed to pre-train Transformers, which masks a portion of input point cloud and learns to reconstruct the missing point tokens at ... | point map, pose, scene graph, affordance 또는 query result | p. 2 (1. Introduction), p. 3 (1. Introduction), p. 1 (1. Introduction) |
-| Objective/outcome | The pre-training objective can be formalized as maximizing the log-likelihood of the correct point tokens zi given the masked input embeddings XM: max X X∈D EM " X i∈M logP  zi/XM# ... | geometric accuracy, semantic consistency와 planning/manipulation utility | p. 5 (3.3. Masked Point Modeling), p. 5 (3.3. Masked Point Modeling) |
+| Objective/outcome | Masked input embeddings로부터 masked positions의 올바른 discrete point token log-likelihood를 최대화한다. | Masked-point pretraining objective; robot utility는 이 식의 평가 항목이 아님 | PDF p. 5 §3.3 / Eq. (2) |
 
 ## Main Claims and Actual Contribution
 

@@ -4,6 +4,8 @@
 > Evidence maturity: `FULL_TEXT_CHECKED`.
 > Analysis basis: full-text PDF body checked on 2026-09-03 (12 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=reuShgiHdg; public full-text mirror used for retrieval (canonical paper source retained): https://chatpaper.com/api/v1/articles/download/165044. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
+> DOC-QA2 targeted source review: 2026-10-23; PDF pp. 5. 손상 구간·직접 연결된 표 분류만 원문 이미지와 대조했다. 전체 주장 정독·실험 검증·reading status 승격을 뜻하지 않는다. [URL·PDF hash·수정 기록](../../../work/sources/pdf_note_review_followup_2026-10-23.json).
+
 ## Method in One Sentence
 
 PDF body method statement (p. 5 (3.4. Position-aware Cross-Modal Interaction), p. 4 (3.2. Problem Statement and Method Overview), p. 3 (3.2. Problem Statement and Method Overview), p. 5 (3.4. Position-aware Cross-Modal Interaction), p. 4 (3.3. 3D Gaussian Referring Fields), p. 6 (3.5. Gaussian-Text Contrastive Learning)): To address these issues, we propose a Position-aware CrossModal Interaction module that injects position information into the cross-modal attention mechanism to facilitate interactions between textual entities and 3D Gaussians beyond ...
@@ -50,7 +52,7 @@ PDF body method statement (p. 5 (3.4. Position-aware Cross-Modal Interaction), p
 
 - **p. 6 / 3.5. Gaussian-Text Contrastive Learning - extractive body cue:** The total training objective is: Lloss = Lbce + λLcon, (10) where λ is used for balancing the contrastive loss Lcon.
 - **p. 4 / 3.3. 3D Gaussian Referring Fields - extractive body cue:** (3) Finally, we employ a binary cross-entropy (BCE) loss to supervise the output mask, enforcing consistency with the pseudo ground truth mask, which we introduce ...
-- **p. 5 / 3.4. Position-aware Cross-Modal Interaction - extractive body cue:** We integrate structural geometry constraints to guide attention computation: f ′ r,i = fr,i + softmax (fr,i + fp,i)(fw + fp,w,i)T √ D  fw.
+- **PDF p. 5, §3.4 / Eq. (7) (DOC-QA2 원문 대조):** Position-enriched Gaussian query와 position-enriched text key의 scaled dot-product softmax로 text value f_w를 집계하고 원래 referring feature에 residual로 더한다.
 - **p. 6 / 3.5. Gaussian-Text Contrastive Learning - extractive body cue:** This formulation encourages the model to maximize similarity between Gaussians and their corresponding textual descriptions while ensuring sufficient separation from unrelated textual descriptions, ultimately enhancing ...
 - **p. 5 / 3.4. Position-aware Cross-Modal Interaction - extractive body cue:** (7) This formulation ensures that the updated referring feature f ′ r,i is enriched with both position and semantic cues, improving its ability to localize ...
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.

@@ -4,6 +4,8 @@
 > Evidence maturity: `FULL_TEXT_CHECKED`.
 > Analysis basis: full-text PDF body checked on 2026-09-03 (17 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=c3BVcHcSiR; PDF retrieval source: https://openreview.net/pdf/7c6c1101cef920f79b251ef422b6399d7e8f4ae1.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
+> DOC-QA2 targeted source review: 2026-10-23; PDF pp. 5. 손상 구간·직접 연결된 표 분류만 원문 이미지와 대조했다. 전체 주장 정독·실험 검증·reading status 승격을 뜻하지 않는다. [URL·PDF hash·수정 기록](../../../work/sources/pdf_note_review_followup_2026-10-23.json).
+
 ## Method in One Sentence
 
 PDF body method statement (p. 5 (3.5. Adaptive Decoding and Secondary Re-Masking), p. 3 (3.1. Overview), p. 3 (3.1. Overview), p. 4 (3.4. Algorithmic Pipeline), p. 4 (3.3. Architecture of Discrete Diffusion VLA), p. 5 (3.5. Adaptive Decoding and Secondary Re-Masking)): As illustrated above, the inference pipeline starts from a fully masked action chunk a1 = ML with mask ratio γ1=1, and then performs T refinement steps with a monotone schedule ...
@@ -51,7 +53,7 @@ PDF body method statement (p. 5 (3.5. Adaptive Decoding and Secondary Re-Masking
 - **p. 4 / 3.4. Algorithmic Pipeline - extractive body cue:** No additional loss terms, auxiliary objectives, or special training procedures are involved.
 - **p. 3 / 3.1. Overview - extractive body cue:** This formulation eliminates the competing gradients introduced by a separate diffusion loss, preserving VLM priors while unifying perception, instruction grounding, and action denoising within a ...
 - **p. 3 / 3.2. Formulation of Discrete Diffusion over Actions - extractive body cue:** The forward (noising) process of discrete diffusion is a Markov chain {at}T t=0 with per-step transition matrices Qt ∈RV ×V that independently map each token ...
-- **p. 5 / 3.5. Adaptive Decoding and Secondary Re-Masking - extractive body cue:** We keep the top (1-γt+1)L positions Kt and update the tokens via tempered Gumbel sampling to encourage exploration: at+1,i∈Kt ∼Categorical  softmax log pθ(· / ...
+- **PDF p. 5, §3.5 / Eq. (9) (DOC-QA2 원문 대조):** Confidence ranking으로 선택한 K_t 위치에서 Gumbel noise와 temperature를 포함한 categorical token update를 수행하고 나머지는 MASK로 둔다. 이 식의 exploration은 action-decoding 과정이며 environment RL 탐색으로 해석하지 않는다.
 - **Formal bridge:** multimodal context o,l,p/history -> action, pose, option or chunk a -> policy/action modeling objective -> instruction-conditioned task success.
 - **Equation/algorithm anchors:** p. 3 (3.1. Overview), p. 4 (3.4. Algorithmic Pipeline), p. 4 (3.4. Algorithmic Pipeline), p. 5 (3.5. Adaptive Decoding and Secondary Re-Masking), p. 5 (3.5. Adaptive Decoding and Secondary Re-Masking).
 - Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.

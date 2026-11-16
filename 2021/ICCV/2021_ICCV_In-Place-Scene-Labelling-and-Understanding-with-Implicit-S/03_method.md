@@ -4,6 +4,8 @@
 > Evidence maturity: `FULL_TEXT_CHECKED`.
 > Analysis basis: full-text PDF body checked on 2026-09-03 (14 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2103.15875; PDF retrieval source: https://arxiv.org/pdf/2103.15875. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
+> DOC-QA2 targeted source review: 2026-10-23; PDF pp. 3. 손상 구간·직접 연결된 표 분류만 원문 이미지와 대조했다. 전체 주장 정독·실험 검증·reading status 승격을 뜻하지 않는다. [URL·PDF hash·수정 기록](../../../work/sources/pdf_note_review_followup_2026-10-23.json).
+
 ## Method in One Sentence
 
 PDF body method statement (p. 3 (3.4. Implementation), p. 3 (3.4. Implementation), p. 4 (3.4. Implementation)): Specifically, we use hierarchical volume sampling to jointly optimise coarse and fine networks, where the former provides importance sampling bias so that the latter can distribute more samples to positions ...
@@ -14,7 +16,7 @@ PDF body method statement (p. 3 (3.4. Implementation), p. 3 (3.4. Implementation
 - **p. 3 / 3.4. Implementation - extractive body cue:** A scene-specific semantic representation is obtained by training the network from scratch for each scene individually.
 - **p. 4 / 3.4. Implementation - extractive body cue:** We train the neural network using the Adam optimiser [7] with a learning rate of 5e-4 for 200,000 iterations.
 - **p. 3 / 3.3. Network Training - extractive body cue:** Ls is chosen as a multi-class cross-entropy loss to encourage the rendered semantic labels to be consistent with the provided labels, whether these are ground-truth, ...
-- **p. 3 / 3.3. Network Training - extractive body cue:** We train the whole network from scratch under photometric loss Lp and semantic loss Ls: Lp = X r∈R 
+- **PDF p. 3, Eqs. (6)–(8) (DOC-QA2 원문 대조):** Photometric loss는 coarse/fine RGB prediction의 squared L2 error를 ray별로 합한다. Semantic loss는 coarse/fine class probabilities에 대한 multi-class cross entropy이며 total L=L_p+λL_s, 기본 λ=0.04다.
 - **p. 2 / 3.1. Preliminaries - extractive body cue:** Given multiple images of a static scene with known camera intrinsics and extrinsics, NeRF [16] uses MLPs to implicitly represent the continuous 3D scene density ...
 - **p. 2 / 1. Introduction - extractive body cue:** Our system takes as input a set of RGB images with associated known camera poses.
 - **p. 1 / 1. Introduction - extractive body cue:** Enabling intelligent agents, such as indoor mobile robots, to plan context-sensitive actions in their environment requires both a geometric and semantic understanding of the scene.
@@ -45,7 +47,7 @@ PDF body method statement (p. 3 (3.4. Implementation), p. 3 (3.4. Implementation
 ## Objective / Update Rule
 
 - **p. 3 / 3.3. Network Training - extractive body cue:** Ls is chosen as a multi-class cross-entropy loss to encourage the rendered semantic labels to be consistent with the provided labels, whether these are ground-truth, ...
-- **p. 3 / 3.3. Network Training - extractive body cue:** We train the whole network from scratch under photometric loss Lp and semantic loss Ls: Lp = X r∈R 
+- **PDF p. 3, Eqs. (6)–(8) (DOC-QA2 원문 대조):** Photometric loss는 coarse/fine RGB prediction의 squared L2 error를 ray별로 합한다. Semantic loss는 coarse/fine class probabilities에 대한 multi-class cross entropy이며 total L=L_p+λL_s, 기본 λ=0.04다.
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 3 (3.3. Network Training), p. 3 (3.1. Preliminaries).
 - Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.

@@ -1,0 +1,826 @@
+{
+  "task_id": "REG-R12",
+  "reviewed_on": "2026-11-08",
+  "source_window": "2024–2026",
+  "baseline_count": 1117,
+  "added_count": 44,
+  "final_count": 1161,
+  "admissions": "work/sources/top_tier_supplement_admissions_2026-11-08.json",
+  "report": "work/update/TOP_TIER_SUPPLEMENT_2026-11-08.md",
+  "evidence_boundary": "Official metadata/abstract and author project/repository review; all new notes ABSTRACT_CHECKED, user reading UNREAD. No full-text review, experiments, package/asset or PDF download.",
+  "coverage": [
+    {
+      "venue": "RSS",
+      "year": 2026,
+      "index": "https://roboticsproceedings.org/rss22/",
+      "total": 210,
+      "keyword_candidates": 124,
+      "scope": "title index discovery; not full-text or abstract review of every indexed entry"
+    },
+    {
+      "venue": "RSS",
+      "year": 2025,
+      "index": "https://roboticsproceedings.org/rss21/",
+      "total": 163,
+      "keyword_candidates": 42,
+      "scope": "title index discovery; not full-text or abstract review of every indexed entry"
+    },
+    {
+      "venue": "CoRL",
+      "year": 2025,
+      "index": "https://proceedings.mlr.press/v305/",
+      "total": 263,
+      "keyword_candidates": 152,
+      "scope": "title index discovery; not full-text or abstract review of every indexed entry"
+    },
+    {
+      "venue": "CVPR",
+      "year": 2026,
+      "index": "https://openaccess.thecvf.com/CVPR2026?day=all",
+      "total": 4042,
+      "keyword_candidates": 239,
+      "scope": "title index discovery; not full-text or abstract review of every indexed entry"
+    },
+    {
+      "venue": "ICCV",
+      "year": 2025,
+      "index": "https://openaccess.thecvf.com/ICCV2025?day=all",
+      "total": 2701,
+      "keyword_candidates": 82,
+      "scope": "title index discovery; not full-text or abstract review of every indexed entry"
+    },
+    {
+      "venue": "CoRL",
+      "year": 2024,
+      "index": "https://proceedings.mlr.press/v270/",
+      "total": 264,
+      "keyword_candidates": 148,
+      "scope": "title index discovery; not full-text or abstract review of every indexed entry"
+    }
+  ],
+  "additional_primary_discovery": [
+    {
+      "source": "https://proceedings.iclr.cc/paper_files/paper/2026",
+      "scope": "selected paper abstracts"
+    },
+    {
+      "source": "https://proceedings.neurips.cc/paper_files/paper/2025",
+      "scope": "selected paper abstracts"
+    },
+    {
+      "source": "https://eccv.ecva.net/Conferences/2026/AcceptedPapers",
+      "scope": "accepted-title matches plus Springer chapters / author abstracts"
+    },
+    {
+      "source": "https://ieeexplore.ieee.org/",
+      "scope": "paper-specific publisher records; cached abstracts, Crossref metadata and arXiv supplement when direct HTML was blocked"
+    },
+    {
+      "source": "https://neurips.cc/Downloads/2026",
+      "scope": "discovery only for this admission batch; no new main-track status inferred from mixed event list"
+    }
+  ],
+  "decisions": [
+    {
+      "title": "WPT: World-to-Policy Transfer via Online World Model Distillation",
+      "decision": "not_admitted",
+      "source": "https://openaccess.thecvf.com/content/CVPR2026/html/Jiang_WPT_World-to-Policy_Transfer_via_Online_World_Model_Distillation_CVPR_2026_paper.html",
+      "reason": "Driving-centered distillation; weaker immediate robotics value than the selected world-model/control comparisons."
+    },
+    {
+      "title": "MobileVLA-R1 2.0",
+      "decision": "not_merged_into_original",
+      "source": "https://arxiv.org/abs/2609.06251",
+      "reason": "Separate later preprint; do not assign original ECCV acceptance or add its results to the original notes."
+    },
+    {
+      "title": "Force Policy 2 (FP2)",
+      "decision": "not_merged_into_original",
+      "source": "https://force-policy.github.io/fp2/",
+      "reason": "Later extension; this batch admits the original RSS Force Policy only."
+    },
+    {
+      "title": "GRAD-NAV++",
+      "decision": "distinct_extension",
+      "paper_id": "pr-1161",
+      "related_paper_id": "pr-0290",
+      "reason": "Language-conditioned VLM/MoE action extension with journal evaluation beyond original visual-navigation GRaD-Nav."
+    }
+  ],
+  "deduplication": {
+    "exact_normalized_title_and_public_identifiers": "44 accepted, 0 existing-title or public-identifier collisions in registration dry-run",
+    "existing_examples_not_duplicated": [
+      "SimpleVLA-RL",
+      "Robometer",
+      "ForceVLA2",
+      "ACoT-VLA",
+      "ActiveVLA",
+      "Counterfactual VLA",
+      "LILAC"
+    ],
+    "versions": "Conference/preprint aliases stored on one entry; event year and publisher online year distinguished."
+  },
+  "new_papers": [
+    {
+      "paper_id": "pr-1118",
+      "title": "PolaRiS: Scalable Real-to-Sim Evaluations for Generalist Robot Policies",
+      "overview": "2026/RSS/2026_RSS_PolaRiS-Scalable-Real-to-Sim-Evaluations-for-Generalist-Ro/01_overview.md",
+      "tier": "NEXT",
+      "venue_verification": {
+        "url": "https://roboticsproceedings.org/rss22/p062.html",
+        "kind": "official_proceedings",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-07"
+      },
+      "content_evidence": "ABSTRACT_CHECKED"
+    },
+    {
+      "paper_id": "pr-1119",
+      "title": "LongNav-R1: Horizon-Adaptive Multi-Turn RL for Long-Horizon VLA Navigation",
+      "overview": "2026/RSS/2026_RSS_LongNav-R1-Horizon-Adaptive-Multi-Turn-RL-for-Long-Horizon/01_overview.md",
+      "tier": "NEXT",
+      "venue_verification": {
+        "url": "https://roboticsproceedings.org/rss22/p068.html",
+        "kind": "official_proceedings",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-07"
+      },
+      "content_evidence": "ABSTRACT_CHECKED"
+    },
+    {
+      "paper_id": "pr-1120",
+      "title": "Visual Verification Enables Inference-time Steering and Autonomous Policy Improvement",
+      "overview": "2026/RSS/2026_RSS_Visual-Verification-Enables-Inference-time-Steering-and-Au/01_overview.md",
+      "tier": "NEXT",
+      "venue_verification": {
+        "url": "https://roboticsproceedings.org/rss22/p079.html",
+        "kind": "official_proceedings",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-07"
+      },
+      "content_evidence": "ABSTRACT_CHECKED"
+    },
+    {
+      "paper_id": "pr-1121",
+      "title": "Towards Long-Lived Robots: Continual Learning VLA Models via Reinforcement Fine-Tuning",
+      "overview": "2026/RSS/2026_RSS_Towards-Long-Lived-Robots-Continual-Learning-VLA-Models-vi/01_overview.md",
+      "tier": "NEXT",
+      "venue_verification": {
+        "url": "https://roboticsproceedings.org/rss22/p086.html",
+        "kind": "official_proceedings",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-07"
+      },
+      "content_evidence": "ABSTRACT_CHECKED"
+    },
+    {
+      "paper_id": "pr-1122",
+      "title": "MolmoSpaces: Large-Scale Open Ecosystem for Robot Manipulation and Navigation",
+      "overview": "2026/RSS/2026_RSS_MolmoSpaces-Large-Scale-Open-Ecosystem-for-Robot-Manipulat/01_overview.md",
+      "tier": "NEXT",
+      "venue_verification": {
+        "url": "https://roboticsproceedings.org/rss22/p091.html",
+        "kind": "official_proceedings",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-07"
+      },
+      "content_evidence": "ABSTRACT_CHECKED"
+    },
+    {
+      "paper_id": "pr-1123",
+      "title": "FlashSAC: Fast and Stable Off-Policy Reinforcement Learning for High-Dimensional Robot Control",
+      "overview": "2026/RSS/2026_RSS_FlashSAC-Fast-and-Stable-Off-Policy-Reinforcement-Learning/01_overview.md",
+      "tier": "REFERENCE",
+      "venue_verification": {
+        "url": "https://roboticsproceedings.org/rss22/p099.html",
+        "kind": "official_proceedings",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-07"
+      },
+      "content_evidence": "ABSTRACT_CHECKED"
+    },
+    {
+      "paper_id": "pr-1124",
+      "title": "Force Policy: Learning Hybrid Force-Position Control Policy under Interaction Frame for Contact-Rich Manipulation",
+      "overview": "2026/RSS/2026_RSS_Force-Policy-Learning-Hybrid-Force-Position-Control-Policy/01_overview.md",
+      "tier": "NEXT",
+      "venue_verification": {
+        "url": "https://roboticsproceedings.org/rss22/p128.html",
+        "kind": "official_proceedings",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-07"
+      },
+      "content_evidence": "ABSTRACT_CHECKED"
+    },
+    {
+      "paper_id": "pr-1125",
+      "title": "When Life Gives You BC, Make Q-functions: Extracting Q-values from Behavior Cloning for On-Robot Reinforcement Learning",
+      "overview": "2026/RSS/2026_RSS_When-Life-Gives-You-BC-Make-Q-functions-Extracting-Q-value/01_overview.md",
+      "tier": "NEXT",
+      "venue_verification": {
+        "url": "https://roboticsproceedings.org/rss22/p153.html",
+        "kind": "official_proceedings",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-07"
+      },
+      "content_evidence": "ABSTRACT_CHECKED"
+    },
+    {
+      "paper_id": "pr-1126",
+      "title": "KinDER: A Physical Reasoning Benchmark for Robot Learning and Planning",
+      "overview": "2026/RSS/2026_RSS_KinDER-A-Physical-Reasoning-Benchmark-for-Robot-Learning-a/01_overview.md",
+      "tier": "NEXT",
+      "venue_verification": {
+        "url": "https://roboticsproceedings.org/rss22/p184.html",
+        "kind": "official_proceedings",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-07"
+      },
+      "content_evidence": "ABSTRACT_CHECKED"
+    },
+    {
+      "paper_id": "pr-1127",
+      "title": "Long-Context Robot Imitation Learning by Focusing on Key History Frames",
+      "overview": "2026/RSS/2026_RSS_Long-Context-Robot-Imitation-Learning-by-Focusing-on-Key-H/01_overview.md",
+      "tier": "NEXT",
+      "venue_verification": {
+        "url": "https://roboticsproceedings.org/rss22/p201.html",
+        "kind": "official_proceedings",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-07"
+      },
+      "content_evidence": "ABSTRACT_CHECKED"
+    },
+    {
+      "paper_id": "pr-1128",
+      "title": "TMRL: Diffusion Timestep-Modulated Pretraining Enables Exploration for Efficient Policy Finetuning",
+      "overview": "2026/RSS/2026_RSS_TMRL-Diffusion-Timestep-Modulated-Pretraining-Enables-Expl/01_overview.md",
+      "tier": "NEXT",
+      "venue_verification": {
+        "url": "https://roboticsproceedings.org/rss22/p208.html",
+        "kind": "official_proceedings",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-07"
+      },
+      "content_evidence": "ABSTRACT_CHECKED"
+    },
+    {
+      "paper_id": "pr-1129",
+      "title": "LDA-1B: Scaling Latent Dynamics Action Model via Universal Embodied Data Ingestion",
+      "overview": "2026/RSS/2026_RSS_LDA-1B-Scaling-Latent-Dynamics-Action-Model-via-Universal/01_overview.md",
+      "tier": "NEXT",
+      "venue_verification": {
+        "url": "https://roboticsproceedings.org/rss22/p210.html",
+        "kind": "official_proceedings",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-07"
+      },
+      "content_evidence": "ABSTRACT_CHECKED"
+    },
+    {
+      "paper_id": "pr-1130",
+      "title": "ReWiND: Language-Guided Rewards Teach Robot Policies without New Demonstrations",
+      "overview": "2025/CoRL/2025_CoRL_ReWiND-Language-Guided-Rewards-Teach-Robot-Policies-withou/01_overview.md",
+      "tier": "NEXT",
+      "venue_verification": {
+        "url": "https://proceedings.mlr.press/v305/zhang25a.html",
+        "kind": "official_proceedings",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-07"
+      },
+      "content_evidence": "ABSTRACT_CHECKED"
+    },
+    {
+      "paper_id": "pr-1131",
+      "title": "ControlVLA: Few-shot Object-centric Adaptation for Pre-trained Vision-Language-Action Models",
+      "overview": "2025/CoRL/2025_CoRL_ControlVLA-Few-shot-Object-centric-Adaptation-for-Pre-trai/01_overview.md",
+      "tier": "NEXT",
+      "venue_verification": {
+        "url": "https://proceedings.mlr.press/v305/li25c.html",
+        "kind": "official_proceedings",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-07"
+      },
+      "content_evidence": "ABSTRACT_CHECKED"
+    },
+    {
+      "paper_id": "pr-1132",
+      "title": "HALO : Human Preference Aligned Offline Reward Learning for Robot Navigation",
+      "overview": "2025/CoRL/2025_CoRL_HALO-Human-Preference-Aligned-Offline-Reward-Learning-for/01_overview.md",
+      "tier": "REFERENCE",
+      "venue_verification": {
+        "url": "https://proceedings.mlr.press/v305/seneviratne25a.html",
+        "kind": "official_proceedings",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-07"
+      },
+      "content_evidence": "ABSTRACT_CHECKED"
+    },
+    {
+      "paper_id": "pr-1133",
+      "title": "SRPO: Self-Referential Policy Optimization for Vision-Language-Action Models",
+      "overview": "2026/CVPR/2026_CVPR_SRPO-Self-Referential-Policy-Optimization-for-Vision-Langu/01_overview.md",
+      "tier": "NEXT",
+      "venue_verification": {
+        "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Fei_SRPO_Self-Referential_Policy_Optimization_for_Vision-Language-Action_Models_CVPR_2026_paper.html",
+        "kind": "official_proceedings",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-07"
+      },
+      "content_evidence": "ABSTRACT_CHECKED"
+    },
+    {
+      "paper_id": "pr-1134",
+      "title": "Joint-Aligned Latent Action: Towards Scalable VLA Pretraining in the Wild",
+      "overview": "2026/CVPR/2026_CVPR_Joint-Aligned-Latent-Action-Towards-Scalable-VLA-Pretraini/01_overview.md",
+      "tier": "NEXT",
+      "venue_verification": {
+        "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Luo_Joint-Aligned_Latent_Action_Towards_Scalable_VLA_Pretraining_in_the_Wild_CVPR_2026_paper.html",
+        "kind": "official_proceedings",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-07"
+      },
+      "content_evidence": "ABSTRACT_CHECKED"
+    },
+    {
+      "paper_id": "pr-1135",
+      "title": "CoMo: Learning Continuous Latent Motion from Internet Videos for Scalable Robot Learning",
+      "overview": "2026/CVPR/2026_CVPR_CoMo-Learning-Continuous-Latent-Motion-from-Internet-Video/01_overview.md",
+      "tier": "NEXT",
+      "venue_verification": {
+        "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Yang_CoMo_Learning_Continuous_Latent_Motion_from_Internet_Videos_for_Scalable_CVPR_2026_paper.html",
+        "kind": "official_proceedings",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-07"
+      },
+      "content_evidence": "ABSTRACT_CHECKED"
+    },
+    {
+      "paper_id": "pr-1136",
+      "title": "General Process Reward Modeling for Robotic Reinforcement Learning",
+      "overview": "2026/CVPR/2026_CVPR_General-Process-Reward-Modeling-for-Robotic-Reinforcement/01_overview.md",
+      "tier": "NEXT",
+      "venue_verification": {
+        "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Tan_General_Process_Reward_Modeling_for_Robotic_Reinforcement_Learning_CVPR_2026_paper.html",
+        "kind": "official_proceedings",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-07"
+      },
+      "content_evidence": "ABSTRACT_CHECKED"
+    },
+    {
+      "paper_id": "pr-1137",
+      "title": "RehearseVLA: Simulated Post-Training for VLAs with Physically-Consistent World Model",
+      "overview": "2026/CVPR/2026_CVPR_RehearseVLA-Simulated-Post-Training-for-VLAs-with-Physical/01_overview.md",
+      "tier": "NEXT",
+      "venue_verification": {
+        "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Xiao_RehearseVLA_Simulated_Post-Training_for_VLAs_with_Physically-Consistent_World_Model_CVPR_2026_paper.html",
+        "kind": "official_proceedings",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-07"
+      },
+      "content_evidence": "ABSTRACT_CHECKED"
+    },
+    {
+      "paper_id": "pr-1138",
+      "title": "MoMa-Kitchen: A 100K+ Benchmark for Affordance-Grounded Last-Mile Navigation in Mobile Manipulation",
+      "overview": "2025/ICCV/2025_ICCV_MoMa-Kitchen-A-100K+-Benchmark-for-Affordance-Grounded-Las/01_overview.md",
+      "tier": "NEXT",
+      "venue_verification": {
+        "url": "https://openaccess.thecvf.com/content/ICCV2025/html/Zhang_MoMa-Kitchen_A_100K_Benchmark_for_Affordance-Grounded_Last-Mile_Navigation_in_Mobile_ICCV_2025_paper.html",
+        "kind": "official_proceedings",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-07"
+      },
+      "content_evidence": "ABSTRACT_CHECKED"
+    },
+    {
+      "paper_id": "pr-1139",
+      "title": "EC-Flow: Enabling Versatile Robotic Manipulation from Action-Unlabeled Videos via Embodiment-Centric Flow",
+      "overview": "2025/ICCV/2025_ICCV_EC-Flow-Enabling-Versatile-Robotic-Manipulation-from-Actio/01_overview.md",
+      "tier": "REFERENCE",
+      "venue_verification": {
+        "url": "https://openaccess.thecvf.com/content/ICCV2025/html/Chen_EC-Flow_Enabling_Versatile_Robotic_Manipulation_from_Action-Unlabeled_Videos_via_Embodiment-Centric_ICCV_2025_paper.html",
+        "kind": "official_proceedings",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-07"
+      },
+      "content_evidence": "ABSTRACT_CHECKED"
+    },
+    {
+      "paper_id": "pr-1140",
+      "title": "Lifelong Autonomous Improvement of Navigation Foundation Models in the Wild",
+      "overview": "2024/CoRL/2024_CoRL_Lifelong-Autonomous-Improvement-of-Navigation-Foundation-M/01_overview.md",
+      "tier": "NEXT",
+      "venue_verification": {
+        "url": "https://proceedings.mlr.press/v270/stachowicz25a.html",
+        "kind": "official_proceedings",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-07"
+      },
+      "content_evidence": "ABSTRACT_CHECKED"
+    },
+    {
+      "paper_id": "pr-1141",
+      "title": "Contrast Sets for Evaluating Language-Guided Robot Policies",
+      "overview": "2024/CoRL/2024_CoRL_Contrast-Sets-for-Evaluating-Language-Guided-Robot-Policie/01_overview.md",
+      "tier": "NEXT",
+      "venue_verification": {
+        "url": "https://proceedings.mlr.press/v270/anwar25a.html",
+        "kind": "official_proceedings",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-07"
+      },
+      "content_evidence": "ABSTRACT_CHECKED"
+    },
+    {
+      "paper_id": "pr-1142",
+      "title": "SPIRE: Synergistic Planning, Imitation, and Reinforcement Learning for Long-Horizon Manipulation",
+      "overview": "2024/CoRL/2024_CoRL_SPIRE-Synergistic-Planning-Imitation-and-Reinforcement-Lea/01_overview.md",
+      "tier": "REFERENCE",
+      "venue_verification": {
+        "url": "https://proceedings.mlr.press/v270/zhou25a.html",
+        "kind": "official_proceedings",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-07"
+      },
+      "content_evidence": "ABSTRACT_CHECKED"
+    },
+    {
+      "paper_id": "pr-1143",
+      "title": "Steering Your Generalists: Improving Robotic Foundation Models via Value Guidance",
+      "overview": "2024/CoRL/2024_CoRL_Steering-Your-Generalists-Improving-Robotic-Foundation-Mod/01_overview.md",
+      "tier": "NEXT",
+      "venue_verification": {
+        "url": "https://proceedings.mlr.press/v270/nakamoto25a.html",
+        "kind": "official_proceedings",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-07"
+      },
+      "content_evidence": "ABSTRACT_CHECKED"
+    },
+    {
+      "paper_id": "pr-1144",
+      "title": "DEAS: DEtached value learning with Action Sequence for Scalable Offline RL",
+      "overview": "2026/ICLR/2026_ICLR_DEAS-DEtached-value-learning-with-Action-Sequence-for-Scal/01_overview.md",
+      "tier": "NEXT",
+      "venue_verification": {
+        "url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/68b7f71467c83d5d32275c5acbf6b588-Abstract-Conference.html",
+        "kind": "official_proceedings",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-07"
+      },
+      "content_evidence": "ABSTRACT_CHECKED"
+    },
+    {
+      "paper_id": "pr-1145",
+      "title": "Dichotomous Diffusion Policy Optimization",
+      "overview": "2026/ICLR/2026_ICLR_Dichotomous-Diffusion-Policy-Optimization/01_overview.md",
+      "tier": "REFERENCE",
+      "venue_verification": {
+        "url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/64a0192102e1421a2b2c15ae0bdb9f3a-Abstract-Conference.html",
+        "kind": "official_proceedings",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-07"
+      },
+      "content_evidence": "ABSTRACT_CHECKED"
+    },
+    {
+      "paper_id": "pr-1146",
+      "title": "Emergent Dexterity Via Diverse Resets and Large-Scale Reinforcement Learning",
+      "overview": "2026/ICLR/2026_ICLR_Emergent-Dexterity-Via-Diverse-Resets-and-Large-Scale-Rein/01_overview.md",
+      "tier": "NEXT",
+      "venue_verification": {
+        "url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/8e3e3488623d64c493a7f11cf1f2e49f-Abstract-Conference.html",
+        "kind": "official_proceedings",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-07"
+      },
+      "content_evidence": "ABSTRACT_CHECKED"
+    },
+    {
+      "paper_id": "pr-1147",
+      "title": "CE-Nav: Flow-Guided Reinforcement Refinement for Cross-Embodiment Local Navigation",
+      "overview": "2026/ICLR/2026_ICLR_CE-Nav-Flow-Guided-Reinforcement-Refinement-for-Cross-Embo/01_overview.md",
+      "tier": "REFERENCE",
+      "venue_verification": {
+        "url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/514bdfb12b318ad02c6f28dc68f2feea-Abstract-Conference.html",
+        "kind": "official_proceedings",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-07"
+      },
+      "content_evidence": "ABSTRACT_CHECKED"
+    },
+    {
+      "paper_id": "pr-1148",
+      "title": "PRIMT: Preference-based Reinforcement Learning with Multimodal Feedback and Trajectory Synthesis from Foundation Models",
+      "overview": "2025/NeurIPS/2025_NeurIPS_PRIMT-Preference-based-Reinforcement-Learning-with-Multimo/01_overview.md",
+      "tier": "NEXT",
+      "venue_verification": {
+        "url": "https://proceedings.neurips.cc/paper_files/paper/2025/hash/e0d760e4495abf701b97c8acda111372-Abstract-Conference.html",
+        "kind": "official_proceedings",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-07"
+      },
+      "content_evidence": "ABSTRACT_CHECKED"
+    },
+    {
+      "paper_id": "pr-1149",
+      "title": "Enhancing Tactile-based Reinforcement Learning for Robotic Control",
+      "overview": "2025/NeurIPS/2025_NeurIPS_Enhancing-Tactile-based-Reinforcement-Learning-for-Robotic/01_overview.md",
+      "tier": "REFERENCE",
+      "venue_verification": {
+        "url": "https://proceedings.neurips.cc/paper_files/paper/2025/hash/bc09efb501c801ed92e181e26a885c2d-Abstract-Conference.html",
+        "kind": "official_proceedings",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-07"
+      },
+      "content_evidence": "ABSTRACT_CHECKED"
+    },
+    {
+      "paper_id": "pr-1150",
+      "title": "RLVR-World: Training World Models with Reinforcement Learning",
+      "overview": "2025/NeurIPS/2025_NeurIPS_RLVR-World-Training-World-Models-with-Reinforcement-Learni/01_overview.md",
+      "tier": "REFERENCE",
+      "venue_verification": {
+        "url": "https://proceedings.neurips.cc/paper_files/paper/2025/hash/b63a24a1832bd14fa945c71f535c0095-Abstract-Conference.html",
+        "kind": "official_proceedings",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-07"
+      },
+      "content_evidence": "ABSTRACT_CHECKED"
+    },
+    {
+      "paper_id": "pr-1151",
+      "title": "Fast-ThinkAct: Efficient Vision-Language-Action Reasoning via Verbalizable Latent Planning",
+      "overview": "2026/CVPR/2026_CVPR_Fast-ThinkAct-Efficient-Vision-Language-Action-Reasoning-v/01_overview.md",
+      "tier": "NEXT",
+      "venue_verification": {
+        "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Huang_Fast-ThinkAct_Efficient_Vision-Language-Action_Reasoning_via_Verbalizable_Latent_Planning_CVPR_2026_paper.html",
+        "kind": "official_proceedings",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-08"
+      },
+      "content_evidence": "ABSTRACT_CHECKED"
+    },
+    {
+      "paper_id": "pr-1152",
+      "title": "MM-ACT: Learn from Multimodal Parallel Generation to Act",
+      "overview": "2026/CVPR/2026_CVPR_MM-ACT-Learn-from-Multimodal-Parallel-Generation-to-Act/01_overview.md",
+      "tier": "NEXT",
+      "venue_verification": {
+        "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Liang_MM-ACT_Learn_from_Multimodal_Parallel_Generation_to_Act_CVPR_2026_paper.html",
+        "kind": "official_proceedings",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-08"
+      },
+      "content_evidence": "ABSTRACT_CHECKED"
+    },
+    {
+      "paper_id": "pr-1153",
+      "title": "ContextFlow: In-Context Flow Matching for Robot Manipulation",
+      "overview": "2026/ECCV/2026_ECCV_ContextFlow-In-Context-Flow-Matching-for-Robot-Manipulatio/01_overview.md",
+      "tier": "REFERENCE",
+      "venue_verification": {
+        "url": "https://link.springer.com/chapter/10.1007/978-3-032-37531-5_16",
+        "kind": "publisher",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-08"
+      },
+      "content_evidence": "ABSTRACT_CHECKED"
+    },
+    {
+      "paper_id": "pr-1154",
+      "title": "EvoVLA: Self-evolving Vision-Language-Action Model",
+      "overview": "2026/ECCV/2026_ECCV_EvoVLA-Self-evolving-Vision-Language-Action-Model/01_overview.md",
+      "tier": "NEXT",
+      "venue_verification": {
+        "url": "https://link.springer.com/chapter/10.1007/978-3-032-37023-5_14",
+        "kind": "publisher",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-08"
+      },
+      "content_evidence": "ABSTRACT_CHECKED"
+    },
+    {
+      "paper_id": "pr-1155",
+      "title": "Restoring Linguistic Grounding in VLA Models via Train-Free Attention Recalibration",
+      "overview": "2026/ECCV/2026_ECCV_Restoring-Linguistic-Grounding-in-VLA-Models-via-Train-Fre/01_overview.md",
+      "tier": "NEXT",
+      "venue_verification": {
+        "url": "https://link.springer.com/chapter/10.1007/978-3-032-37152-2_3",
+        "kind": "publisher",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-08"
+      },
+      "content_evidence": "ABSTRACT_CHECKED"
+    },
+    {
+      "paper_id": "pr-1156",
+      "title": "VLA-R1: Enhancing Reasoning in Vision-Language-Action Models",
+      "overview": "2026/ECCV/2026_ECCV_VLA-R1-Enhancing-Reasoning-in-Vision-Language-Action-Model/01_overview.md",
+      "tier": "NEXT",
+      "venue_verification": {
+        "url": "https://eccv.ecva.net/Conferences/2026/AcceptedPapers",
+        "kind": "official_conference",
+        "scope": "venue_index",
+        "verified_on": "2026-11-07"
+      },
+      "content_evidence": "ABSTRACT_CHECKED"
+    },
+    {
+      "paper_id": "pr-1157",
+      "title": "MobileVLA-R1: Reinforcing Vision-Language-Action for Mobile Robots",
+      "overview": "2026/ECCV/2026_ECCV_MobileVLA-R1-Reinforcing-Vision-Language-Action-for-Mobile/01_overview.md",
+      "tier": "NEXT",
+      "venue_verification": {
+        "url": "https://eccv.ecva.net/Conferences/2026/AcceptedPapers",
+        "kind": "official_conference",
+        "scope": "venue_index",
+        "verified_on": "2026-11-07"
+      },
+      "content_evidence": "ABSTRACT_CHECKED"
+    },
+    {
+      "paper_id": "pr-1158",
+      "title": "Scaling Verification Can Be More Effective than Scaling Policy Learning for Vision-Language-Action Alignment",
+      "overview": "2026/ECCV/2026_ECCV_Scaling-Verification-Can-Be-More-Effective-than-Scaling-Po/01_overview.md",
+      "tier": "NEXT",
+      "venue_verification": {
+        "url": "https://eccv.ecva.net/Conferences/2026/AcceptedPapers",
+        "kind": "official_conference",
+        "scope": "venue_index",
+        "verified_on": "2026-11-07"
+      },
+      "content_evidence": "ABSTRACT_CHECKED"
+    },
+    {
+      "paper_id": "pr-1159",
+      "title": "PEAfowl: Perception-Enhanced Multi-View Vision-Language-Action for Bimanual Manipulation",
+      "overview": "2026/RA-L/2026_RA-L_PEAfowl-Perception-Enhanced-Multi-View-Vision-Language-Act/01_overview.md",
+      "tier": "REFERENCE",
+      "venue_verification": {
+        "url": "https://ieeexplore.ieee.org/document/11661761/",
+        "kind": "publisher",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-08"
+      },
+      "content_evidence": "ABSTRACT_CHECKED"
+    },
+    {
+      "paper_id": "pr-1160",
+      "title": "PROSPECT: Unified Streaming Vision-Language Navigation via Semantic–Spatial Fusion and Latent Predictive Representation",
+      "overview": "2026/RA-L/2026_RA-L_PROSPECT-Unified-Streaming-Vision-Language-Navigation-via/01_overview.md",
+      "tier": "REFERENCE",
+      "venue_verification": {
+        "url": "https://ieeexplore.ieee.org/document/11673313/",
+        "kind": "publisher",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-08"
+      },
+      "content_evidence": "ABSTRACT_CHECKED"
+    },
+    {
+      "paper_id": "pr-1161",
+      "title": "GRAD-NAV++: Vision-Language Model Enabled Visual Drone Navigation With Gaussian Radiance Fields and Differentiable Dynamics",
+      "overview": "2026/RA-L/2026_RA-L_GRAD-NAV++-Vision-Language-Model-Enabled-Visual-Drone-Navi/01_overview.md",
+      "tier": "NEXT",
+      "venue_verification": {
+        "url": "https://ieeexplore.ieee.org/document/11297793/",
+        "kind": "publisher",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-08"
+      },
+      "content_evidence": "ABSTRACT_CHECKED"
+    }
+  ],
+  "preservation": {
+    "status": "passed",
+    "old_standard_note_files_byte_identical": 5585,
+    "existing_reading_records_preserved": 386,
+    "reading_changes": "Only generated sequence changed in 265 existing active rows; user fields unchanged. 33 new active records UNREAD. 11 new REFERENCE papers stay outside active tracker.",
+    "inactive_history_byte_identical": true,
+    "original_staged_diff_byte_identical": true,
+    "existing_manifest_changes": [
+      {
+        "paper_id": "pr-0290",
+        "fields": [
+          "lineage_profile"
+        ],
+        "reason": "Record incoming extends edge from new GRAD-NAV++ pr-1161; existing notes, identity, evidence and tier unchanged."
+      }
+    ],
+    "existing_deleted_files": [],
+    "existing_changed_files": [
+      "TODO.md",
+      "README.md",
+      "PAPER.md",
+      "AGENTS.md",
+      "research/REGISTRY_INDEX.csv",
+      "research/README.md",
+      "research/REGISTRY_STATS.md",
+      "research/READING_STATUS.csv",
+      "research/READING_TIERS.csv",
+      "research/READING_PLAN.md",
+      "synthesis/04_vla_generalist.md",
+      "synthesis/06_locomotion_whole_body.md",
+      "synthesis/05_world_models_safety.md",
+      "synthesis/README.md",
+      "synthesis/02_rl_il_offline.md",
+      "synthesis/01_planning_control.md",
+      "synthesis/03_manipulation_contact.md",
+      "work/README.md",
+      "work/update/README.md",
+      "work/scripts/build_reading_tiers.py",
+      "work/sources/papers.json",
+      "work/sources/benchmark_catalog.json",
+      "work/sources/metric_catalog.json",
+      "work/sources/registry_meta.json",
+      "work/sources/resources.json"
+    ],
+    "research_topic_and_experiment_files_unchanged": true,
+    "note": "Compared against actual task-start files, including pre-existing dirty/staged work."
+  },
+  "validation": {
+    "status": "passed",
+    "register_dry_run": {
+      "accepted": 44,
+      "skipped_existing": 0,
+      "identifier_collisions": 0
+    },
+    "commands": [
+      "PYTHONPYCACHEPREFIX=/tmp/paper_registry_pycache python3 -m py_compile work/scripts/build_reading_tiers.py",
+      "python3 -B work/scripts/register_papers.py --input work/sources/top_tier_supplement_admissions_2026-11-08.json [dry-run, then --apply]",
+      "python3 -B work/scripts/build_reading_tiers.py",
+      "python3 -B work/scripts/reconcile_registry.py --priorities-only [dry-run, then --apply]",
+      "python3 -B work/scripts/build_registry_catalogs.py [dry-run, then --apply]",
+      "python3 -B work/scripts/build_registry_views.py --apply",
+      "python3 -B work/scripts/test_reading_history.py",
+      "python3 -B work/scripts/audit_repository.py",
+      "git diff --check"
+    ],
+    "reading_history_tests": {
+      "ran": 6,
+      "result": "OK"
+    },
+    "final_priority_dry_run": {
+      "papers_changed": 0,
+      "note_headers_changed": 0,
+      "reading_status_changed": false,
+      "source_evidence_changed": false
+    },
+    "audit": {
+      "papers": 1161,
+      "categories": 23,
+      "tier_counts": {
+        "CORE": 47,
+        "NEXT": 372,
+        "REFERENCE": 500,
+        "ARCHIVE": 242
+      },
+      "intensive": 419,
+      "inactive_reading_history": 47,
+      "standard_note_files": 5805,
+      "benchmark_entries": 56,
+      "metric_entries": 29,
+      "combined_resources": 631,
+      "registry_index_rows": 1161,
+      "markdown_files_checked": 6022,
+      "markdown_links_checked": 12710,
+      "comparison_matrix_rows": 106,
+      "completed_matrix_rows": 5,
+      "errors": [],
+      "warnings": []
+    },
+    "diff_check": "passed",
+    "resolved_during_validation": [
+      "Added managed_by provenance for the new GRAD-NAV++ extends relation.",
+      "Updated only the existing target incoming lineage profile.",
+      "Used the existing Gaussian Splatting tag to avoid a case-only variant."
+    ],
+    "execution_scope": "Registry/document maintenance only; no simulation, policy inference, training, Docker execution, PDF or model/package download."
+  },
+  "journal_metadata_checks": [
+    {
+      "paper_id": "pr-1159",
+      "doi": "10.1109/LRA.2026.3726379",
+      "source": "https://api.crossref.org/works/10.1109/LRA.2026.3726379",
+      "issue": "11(10), 11841–11848, October 2026",
+      "checked_on": "2026-11-08"
+    },
+    {
+      "paper_id": "pr-1160",
+      "doi": "10.1109/LRA.2026.3729462",
+      "source": "https://api.crossref.org/works/10.1109/LRA.2026.3729462",
+      "issue": "11(11), 13071–13078, November 2026",
+      "checked_on": "2026-11-07"
+    },
+    {
+      "paper_id": "pr-1161",
+      "doi": "10.1109/LRA.2025.3643290",
+      "source": "https://api.crossref.org/works/10.1109/LRA.2025.3643290",
+      "issue": "11(2), 1418–1425, February 2026; online December 2025",
+      "checked_on": "2026-11-07"
+    }
+  ]
+}

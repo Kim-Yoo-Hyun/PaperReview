@@ -1,0 +1,667 @@
+{
+  "date": "2026-11-03",
+  "scope": "Five active/policy-waiting topics only; legacy retired candidates unchanged except inbound Markdown links",
+  "layout": "Each topic has two folders named 내용 and 재현 방법; one Markdown entrypoint in each; source JSON and executable evidence retained",
+  "counts": {
+    "old_files": 71,
+    "new_files": 58,
+    "consolidated_files": 13,
+    "topics": 5
+  },
+  "paths": {
+    "work/experiments/instruction_revision_p0/.dockerignore": {
+      "path": "work/research_topics/instruction_revision/재현 방법/.dockerignore",
+      "anchor": "",
+      "before_sha256": "6738ac649acaac05644fc92ca635f0353fb75cde4c320ba7537380485edbbb04",
+      "after_sha256": "6738ac649acaac05644fc92ca635f0353fb75cde4c320ba7537380485edbbb04"
+    },
+    "work/experiments/instruction_revision_p0/ARTIFACTS.json": {
+      "path": "work/research_topics/instruction_revision/재현 방법/ARTIFACTS.json",
+      "anchor": "",
+      "before_sha256": "7ada1d265650dcf4d264144e78142b7ec9e0aeec3636d4bd9974f604ee078ba5",
+      "after_sha256": "7ada1d265650dcf4d264144e78142b7ec9e0aeec3636d4bd9974f604ee078ba5"
+    },
+    "work/experiments/instruction_revision_p0/Dockerfile": {
+      "path": "work/research_topics/instruction_revision/재현 방법/Dockerfile",
+      "anchor": "",
+      "before_sha256": "f5eb51cf3348ef3793719a5715f511810f3bee93138744b2a7d0192eaa609c28",
+      "after_sha256": "f5eb51cf3348ef3793719a5715f511810f3bee93138744b2a7d0192eaa609c28"
+    },
+    "work/experiments/instruction_revision_p0/LOCAL_CHECK_2026-10-31.json": {
+      "path": "work/research_topics/instruction_revision/재현 방법/LOCAL_CHECK_2026-10-31.json",
+      "anchor": "",
+      "before_sha256": "1ae5503bcef3ec73f39c0ae4903627f77741de8d8f31fc46934076f816c550cd",
+      "after_sha256": "1ae5503bcef3ec73f39c0ae4903627f77741de8d8f31fc46934076f816c550cd"
+    },
+    "work/experiments/instruction_revision_p0/README.md": {
+      "path": "work/research_topics/instruction_revision/재현 방법/README.md",
+      "anchor": "execution",
+      "before_sha256": "fb438c6262b52725338c95c3edc45d65a20111f939b95f156368c338c11449ff",
+      "after_sha256": "cc6095badba1856a9638063c5e804eb0f9417b41612623cf2aff57712154497f"
+    },
+    "work/experiments/instruction_revision_p0/RESUME_PLAN.json": {
+      "path": "work/research_topics/instruction_revision/재현 방법/RESUME_PLAN.json",
+      "anchor": "",
+      "before_sha256": "1f89df3ed99278b2a4547e15e0f731dea390ab6e513c635267ab58b6d00cf691",
+      "after_sha256": "d0ff62cec388c229c51d538c25aa8f51447209cec1fffc812da7b58d32db13cd"
+    },
+    "work/experiments/instruction_revision_p0/inside.py": {
+      "path": "work/research_topics/instruction_revision/재현 방법/inside.py",
+      "anchor": "",
+      "before_sha256": "34b11a0ece7f054217ad2b2c03b0e69e4527bd5b44a4ffad0889a2eee63af12d",
+      "after_sha256": "34b11a0ece7f054217ad2b2c03b0e69e4527bd5b44a4ffad0889a2eee63af12d"
+    },
+    "work/experiments/instruction_revision_p0/native_probe.py": {
+      "path": "work/research_topics/instruction_revision/재현 방법/native_probe.py",
+      "anchor": "",
+      "before_sha256": "d0e3407851435a594f453791c89720bafe3e50d83d25e65cdb18fd96621b665c",
+      "after_sha256": "d0e3407851435a594f453791c89720bafe3e50d83d25e65cdb18fd96621b665c"
+    },
+    "work/experiments/instruction_revision_p0/resume.sh": {
+      "path": "work/research_topics/instruction_revision/재현 방법/resume.sh",
+      "anchor": "",
+      "before_sha256": "5f7f9df70d2eacea10f556e4ff63692d79e8e804ccc89dcee50da8fa8d0646b0",
+      "after_sha256": "3729f6b7936ba65024ea4e22f5d3979d62142dc7fcb2973e16b80fc13714df8c"
+    },
+    "work/experiments/vla_handoff_p0/LOCAL_CHECK_2026-10-28.json": {
+      "path": "work/research_topics/mobile_policy_transfer/재현 방법/LOCAL_CHECK_2026-10-28.json",
+      "anchor": "",
+      "before_sha256": "254cd3cc56e604a4b2701355076b6227f4374220e09597755f78e465eb028ed9",
+      "after_sha256": "254cd3cc56e604a4b2701355076b6227f4374220e09597755f78e465eb028ed9"
+    },
+    "work/experiments/vla_handoff_p0/README.md": {
+      "path": "work/research_topics/mobile_policy_transfer/재현 방법/README.md",
+      "anchor": "execution",
+      "before_sha256": "69b3bd835aef8deebaa67fb2e0548df92229cbab885f52fab81e5b108eb7b7b4",
+      "after_sha256": "bfe2d6ff63030b88883801ba6da7fc58708f5b613418bf83f58abd1a098d79a8"
+    },
+    "work/experiments/vla_handoff_p0/RESUME_PLAN.json": {
+      "path": "work/research_topics/mobile_policy_transfer/재현 방법/RESUME_PLAN.json",
+      "anchor": "",
+      "before_sha256": "95aed7b6a0d61a66f71a389c327f808620762c85113e17c930248412821c3926",
+      "after_sha256": "43cb5742da1e4a7969ef5e1a0014a63b0a5d05847c595bff7a9bbe4c9e709beb"
+    },
+    "work/experiments/vla_handoff_p0/resume.sh": {
+      "path": "work/research_topics/mobile_policy_transfer/재현 방법/resume.sh",
+      "anchor": "",
+      "before_sha256": "487c88ebf41a29bac5d31651e7211b0880f1a79efbad36461ebb21a198cf13dc",
+      "after_sha256": "1c1fe9300291dfed6143555ca34fd8f0366563d49c2cc6408488f21e3b118bb9"
+    },
+    "work/experiments/object_set_p0/.dockerignore": {
+      "path": "work/research_topics/object_set/재현 방법/.dockerignore",
+      "anchor": "",
+      "before_sha256": "93f9f879fea3e8f7bfb510a19e2cd461be06f91083e52d3048261a73f8383a64",
+      "after_sha256": "93f9f879fea3e8f7bfb510a19e2cd461be06f91083e52d3048261a73f8383a64"
+    },
+    "work/experiments/object_set_p0/ARTIFACTS.json": {
+      "path": "work/research_topics/object_set/재현 방법/ARTIFACTS.json",
+      "anchor": "",
+      "before_sha256": "fc586257efe0ff2dfc41d151f00216165bc99302ab1c8588f29ad8ab840b1369",
+      "after_sha256": "fc586257efe0ff2dfc41d151f00216165bc99302ab1c8588f29ad8ab840b1369"
+    },
+    "work/experiments/object_set_p0/Dockerfile": {
+      "path": "work/research_topics/object_set/재현 방법/Dockerfile",
+      "anchor": "",
+      "before_sha256": "c67edfa3f4fd06002bee1c653730713cdef2b4657167fa40e9d19f1798e677f6",
+      "after_sha256": "c67edfa3f4fd06002bee1c653730713cdef2b4657167fa40e9d19f1798e677f6"
+    },
+    "work/experiments/object_set_p0/LOCAL_CHECK_2026-11-01.json": {
+      "path": "work/research_topics/object_set/재현 방법/LOCAL_CHECK_2026-11-01.json",
+      "anchor": "",
+      "before_sha256": "a0b18deb9c8fc5bd49d087a91650909aeabec1c4c177e961531123b247485517",
+      "after_sha256": "a0b18deb9c8fc5bd49d087a91650909aeabec1c4c177e961531123b247485517"
+    },
+    "work/experiments/object_set_p0/READINESS_REVIEW_2026-11-01.json": {
+      "path": "work/research_topics/object_set/재현 방법/READINESS_REVIEW_2026-11-01.json",
+      "anchor": "",
+      "before_sha256": "8f2a3527a18adf47e2491b581afa5eb7ec5c49fece55d40ab58c9ba31b99b409",
+      "after_sha256": "8f2a3527a18adf47e2491b581afa5eb7ec5c49fece55d40ab58c9ba31b99b409"
+    },
+    "work/experiments/object_set_p0/README.md": {
+      "path": "work/research_topics/object_set/재현 방법/README.md",
+      "anchor": "execution",
+      "before_sha256": "d3e551f0b8b29ecec0317cdb27378345d7df3736237ff63ca441843f896e8fc5",
+      "after_sha256": "f93948d3cd62c11201a0c59bfca381ba64768636ca16dd5850b3a636015455a0"
+    },
+    "work/experiments/object_set_p0/RESUME_PLAN.json": {
+      "path": "work/research_topics/object_set/재현 방법/RESUME_PLAN.json",
+      "anchor": "",
+      "before_sha256": "51a01538fd9765a8123953cf7244debf3220c344d032b81ccda3e47d7dca4602",
+      "after_sha256": "51a01538fd9765a8123953cf7244debf3220c344d032b81ccda3e47d7dca4602"
+    },
+    "work/experiments/object_set_p0/inside.py": {
+      "path": "work/research_topics/object_set/재현 방법/inside.py",
+      "anchor": "",
+      "before_sha256": "748b6f5533a6d656ba8794a32490d6d30f0e2b80da7532628c2b99ae5a9b5378",
+      "after_sha256": "748b6f5533a6d656ba8794a32490d6d30f0e2b80da7532628c2b99ae5a9b5378"
+    },
+    "work/experiments/object_set_p0/native_probe.py": {
+      "path": "work/research_topics/object_set/재현 방법/native_probe.py",
+      "anchor": "",
+      "before_sha256": "709361527a5671cc0d116ec9bb8616bbfeb6c6adab5a8cfe8dd3d4c00af90faa",
+      "after_sha256": "709361527a5671cc0d116ec9bb8616bbfeb6c6adab5a8cfe8dd3d4c00af90faa"
+    },
+    "work/experiments/object_set_p0/packet_checks.py": {
+      "path": "work/research_topics/object_set/재현 방법/packet_checks.py",
+      "anchor": "",
+      "before_sha256": "056e41913f79ca6a18439136a595f71a100cbff29a2f380a1d5c40ba5cf54642",
+      "after_sha256": "056e41913f79ca6a18439136a595f71a100cbff29a2f380a1d5c40ba5cf54642"
+    },
+    "work/experiments/object_set_p0/resume.sh": {
+      "path": "work/research_topics/object_set/재현 방법/resume.sh",
+      "anchor": "",
+      "before_sha256": "85df9f1efbc1d2c53428a09bec5b660170b39c7e11074ce3b5317eb4954b2f6d",
+      "after_sha256": "10dc1d29e8a5995c8567958ff75aa66493ad37fbb188e4449a2577d2840d8b2a"
+    },
+    "work/experiments/object_set_p0/sim-requirements.in": {
+      "path": "work/research_topics/object_set/재현 방법/sim-requirements.in",
+      "anchor": "",
+      "before_sha256": "a6f119251c7776034c3b5453d2ccd90a6c2e43c6c2fe779e90714068224f1d8f",
+      "after_sha256": "a6f119251c7776034c3b5453d2ccd90a6c2e43c6c2fe779e90714068224f1d8f"
+    },
+    "work/experiments/object_set_p0/test_packet_checks.py": {
+      "path": "work/research_topics/object_set/재현 방법/test_packet_checks.py",
+      "anchor": "",
+      "before_sha256": "2d0341aca039038e6e1ac958686546b824dd566add95ab3961383b95aebba496",
+      "after_sha256": "2d0341aca039038e6e1ac958686546b824dd566add95ab3961383b95aebba496"
+    },
+    "work/research_candidates/2026-11-02_context_retrieval/ASSET_AUDIT.json": {
+      "path": "work/research_topics/context_retrieval/재현 방법/ASSET_AUDIT.json",
+      "anchor": "",
+      "before_sha256": "11f8c07b08252c57e63f5286812d1fa82022dfd348d340d5057981569c7ff44f",
+      "after_sha256": "11f8c07b08252c57e63f5286812d1fa82022dfd348d340d5057981569c7ff44f"
+    },
+    "work/research_candidates/2026-11-02_context_retrieval/COMPARISON_CONTRACT.json": {
+      "path": "work/research_topics/context_retrieval/재현 방법/COMPARISON_CONTRACT.json",
+      "anchor": "",
+      "before_sha256": "1024965b3d46ac039fc22d2976f32c75f3961102406785141c130a6d440caaa7",
+      "after_sha256": "83d367c83d78c521f1034878f9d82567622b48c04523fcbba806d3a3a4b52759"
+    },
+    "work/research_candidates/2026-11-02_context_retrieval/README.md": {
+      "path": "work/research_topics/context_retrieval/재현 방법/README.md",
+      "anchor": "",
+      "before_sha256": "adf6d2bbfce11ec785afe2961460dd0243de5857e6ca9bdf7ebd4e21e29688aa",
+      "after_sha256": "86cdc4026e870063640a06405ecdb80f238b8ce9a12f60fec2e74fcbc8bc9d02"
+    },
+    "work/research_candidates/2026-11-02_context_retrieval/asset_audit.py": {
+      "path": "work/research_topics/context_retrieval/재현 방법/asset_audit.py",
+      "anchor": "",
+      "before_sha256": "13ddbda69dc0ca567a165d69ca06b1e2f7ac006ecaacf73e825629f0849ec5a4",
+      "after_sha256": "13ddbda69dc0ca567a165d69ca06b1e2f7ac006ecaacf73e825629f0849ec5a4"
+    },
+    "work/research_candidates/2026-11-02_context_retrieval/resume_assets.sh": {
+      "path": "work/research_topics/context_retrieval/재현 방법/resume_assets.sh",
+      "anchor": "",
+      "before_sha256": "d4500007827f166a47a40f6c5de70d91ac64f4098949d77a7a31ae6cdb67062f",
+      "after_sha256": "053534ff3dad61e23fd648131bd71b1dbd797bd64a2f4690771b2be82cd8c50c"
+    },
+    "work/research_candidates/2026-11-03_action_codec/.dockerignore": {
+      "path": "work/research_topics/action_tokenization/재현 방법/.dockerignore",
+      "anchor": "",
+      "before_sha256": "a30ad6f894e5d8c7dd8219cbd1fa558bcecd6695be9c109d41df33d2d8fc9e81",
+      "after_sha256": "a30ad6f894e5d8c7dd8219cbd1fa558bcecd6695be9c109d41df33d2d8fc9e81"
+    },
+    "work/research_candidates/2026-11-03_action_codec/CONTRACT.json": {
+      "path": "work/research_topics/action_tokenization/재현 방법/CONTRACT.json",
+      "anchor": "",
+      "before_sha256": "4d6a0aeb9539b123c347e47458889a4b5177df24dc1a27242fae2ad113196d16",
+      "after_sha256": "4d6a0aeb9539b123c347e47458889a4b5177df24dc1a27242fae2ad113196d16"
+    },
+    "work/research_candidates/2026-11-03_action_codec/CONTRACT_SUFFIX.json": {
+      "path": "work/research_topics/action_tokenization/재현 방법/CONTRACT_SUFFIX.json",
+      "anchor": "",
+      "before_sha256": "7fcd72a807f18f2a25f0418bfdd7dc2459248242733980b129b28d31efae3bac",
+      "after_sha256": "7fcd72a807f18f2a25f0418bfdd7dc2459248242733980b129b28d31efae3bac"
+    },
+    "work/research_candidates/2026-11-03_action_codec/Dockerfile": {
+      "path": "work/research_topics/action_tokenization/재현 방법/Dockerfile",
+      "anchor": "",
+      "before_sha256": "00d8b9b542663a296ab7aa2032073bb3c8854136b20337b247946a54f7839726",
+      "after_sha256": "00d8b9b542663a296ab7aa2032073bb3c8854136b20337b247946a54f7839726"
+    },
+    "work/research_candidates/2026-11-03_action_codec/README.md": {
+      "path": "work/research_topics/action_tokenization/재현 방법/README.md",
+      "anchor": "",
+      "before_sha256": "16316fc7e0fe7638a76f4545807ff421077a378250c8d5741061c7866cf962d1",
+      "after_sha256": "d2a06e519172102d428bc6ed2a0f431ea8ecb7a98f9c059a6c8c809089bc3f9d"
+    },
+    "work/research_candidates/2026-11-03_action_codec/probe.py": {
+      "path": "work/research_topics/action_tokenization/재현 방법/probe.py",
+      "anchor": "",
+      "before_sha256": "306dc9bbe25f44b4bcfc9926c026430ff0f1732b2ec0daa041a71912d3d7559f",
+      "after_sha256": "306dc9bbe25f44b4bcfc9926c026430ff0f1732b2ec0daa041a71912d3d7559f"
+    },
+    "work/research_candidates/2026-11-03_action_codec/requirements.lock": {
+      "path": "work/research_topics/action_tokenization/재현 방법/requirements.lock",
+      "anchor": "",
+      "before_sha256": "131fa4e8b71d48816be5d4832e11b1284e52df3fe4a2e61ab744f4d3274da1e4",
+      "after_sha256": "131fa4e8b71d48816be5d4832e11b1284e52df3fe4a2e61ab744f4d3274da1e4"
+    },
+    "work/research_candidates/2026-11-03_action_codec/results/runtime.json": {
+      "path": "work/research_topics/action_tokenization/재현 방법/results/runtime.json",
+      "anchor": "",
+      "before_sha256": "e31360ecb8627024dea41b7ecec13442a06ee44cf7669134c0da2e9d44be5482",
+      "after_sha256": "e31360ecb8627024dea41b7ecec13442a06ee44cf7669134c0da2e9d44be5482"
+    },
+    "work/research_candidates/2026-11-03_action_codec/results/suffix_verified/results.json": {
+      "path": "work/research_topics/action_tokenization/재현 방법/results/suffix_verified/results.json",
+      "anchor": "",
+      "before_sha256": "1962318499150d3de847ae3ee70b75eb70d119b321e98b57be4d05865e149173",
+      "after_sha256": "1962318499150d3de847ae3ee70b75eb70d119b321e98b57be4d05865e149173"
+    },
+    "work/research_candidates/2026-11-03_action_codec/results/verified/results.json": {
+      "path": "work/research_topics/action_tokenization/재현 방법/results/verified/results.json",
+      "anchor": "",
+      "before_sha256": "1d486da76d24e039f125f8a577cca0b21b02dde297771d6c8619d5f42002d620",
+      "after_sha256": "1d486da76d24e039f125f8a577cca0b21b02dde297771d6c8619d5f42002d620"
+    },
+    "work/research_candidates/2026-11-03_action_codec/run.sh": {
+      "path": "work/research_topics/action_tokenization/재현 방법/run.sh",
+      "anchor": "",
+      "before_sha256": "1dd61226ab13f4959330fe00dab164770f616da8afcbf069545cce84f50f8532",
+      "after_sha256": "1dd61226ab13f4959330fe00dab164770f616da8afcbf069545cce84f50f8532"
+    },
+    "work/research_candidates/2026-11-03_action_codec/suffix_probe.py": {
+      "path": "work/research_topics/action_tokenization/재현 방법/suffix_probe.py",
+      "anchor": "",
+      "before_sha256": "89466418532593c86301345076f9044e2443c175112551ad6490dbf2dc7d7ff6",
+      "after_sha256": "89466418532593c86301345076f9044e2443c175112551ad6490dbf2dc7d7ff6"
+    },
+    "work/research_candidates/2026-10-31_instruction_revision/COMPARISON_CONTRACT.json": {
+      "path": "work/research_topics/instruction_revision/재현 방법/COMPARISON_CONTRACT.json",
+      "anchor": "",
+      "before_sha256": "6ea87edb64ef9a424f9f4c88cf4c4423536381de029c46182329c8b07efe7ae5",
+      "after_sha256": "f9a8ccfa38ae48daef1f8f7548dcf5c37025e43ceee49e723dbaf89c96c52b1a"
+    },
+    "work/research_candidates/2026-10-31_instruction_revision/SEMANTIC_CASES.json": {
+      "path": "work/research_topics/instruction_revision/재현 방법/SEMANTIC_CASES.json",
+      "anchor": "",
+      "before_sha256": "b02a67b1c7494c9d4726fd4b1604fa3ebf70b56e962943afc1535b00ee830df6",
+      "after_sha256": "71dd9b6943a95a65732f5e3bc723d19acc3b7dae5ba813295ba91b96ce462698"
+    },
+    "work/research_candidates/2026-11-01_handoff/COMPARISON_CONTRACT.json": {
+      "path": "work/research_topics/mobile_policy_transfer/재현 방법/COMPARISON_CONTRACT.json",
+      "anchor": "",
+      "before_sha256": "5e7a016900976ee1c7e567223fcc16b1e5680da465f6116b385bc28f5d134156",
+      "after_sha256": "ea3092d625a23efd178cdb65a46530aae565dc6645aff1ab74052c899f411e9c"
+    },
+    "work/research_candidates/2026-11-01_object_set/COMPARISON_CONTRACT.json": {
+      "path": "work/research_topics/object_set/재현 방법/COMPARISON_CONTRACT.json",
+      "anchor": "",
+      "before_sha256": "479265cc26d603951ba4a5a7071b1bcf3ff6a742c53fa0d55c3f6978e74c0659",
+      "after_sha256": "6f0324c636883ff4547af7c1122a396bbe903c5cbb8b68ef35dec374ae45e7a2"
+    },
+    "work/research_candidates/2026-11-01_object_set/SEMANTIC_CASES.json": {
+      "path": "work/research_topics/object_set/재현 방법/SEMANTIC_CASES.json",
+      "anchor": "",
+      "before_sha256": "5ce1afec60c2645efdd32bb2fae741b2fb516e3af1a4a341d7b50b4a8ae5102e",
+      "after_sha256": "1eea5f59ac7df7cfe956988b5c5b512b6d0847a4c57f3694ab300645630ec92e"
+    },
+    "research/VLA_INSTRUCTION_REVISION_BRIEF.md": {
+      "path": "work/research_topics/instruction_revision/내용/README.md",
+      "anchor": "overview",
+      "before_sha256": "894ef4e828cd139f56178afc590dda495f710da577cd75a985e1fe5ce83b325d",
+      "after_sha256": "a48d07f6d1ec42e5de78153a09297ec938eebf0a468fbd6535d6f2953e64deba"
+    },
+    "work/update/INSTRUCTION_REVISION_REVIEW_2026-10-31.md": {
+      "path": "work/research_topics/instruction_revision/내용/README.md",
+      "anchor": "source-review",
+      "before_sha256": "bd8373f4a4d93b013e3a065e94dcb31b52d15416369933ad76865c99ecbc16e0",
+      "after_sha256": "a48d07f6d1ec42e5de78153a09297ec938eebf0a468fbd6535d6f2953e64deba"
+    },
+    "work/research_candidates/2026-10-31_instruction_revision/CASEBOOK.md": {
+      "path": "work/research_topics/instruction_revision/내용/README.md",
+      "anchor": "cases",
+      "before_sha256": "c38a57e084ed36fe9de91565fd215a8242e7c362c52881f86912f0c0c4c171e5",
+      "after_sha256": "a48d07f6d1ec42e5de78153a09297ec938eebf0a468fbd6535d6f2953e64deba"
+    },
+    "research/MOBILE_MANIPULATION_POLICY_TRANSFER_BRIEF.md": {
+      "path": "work/research_topics/mobile_policy_transfer/내용/README.md",
+      "anchor": "overview",
+      "before_sha256": "76ed78fd502728963623fae7ae0a1e705be7a80ce6beaa061be9e8267edc72d9",
+      "after_sha256": "f8f68afd82fd6eb344acbefcde8a0c0bb73fa2f56f3b311f686bd58168d70625"
+    },
+    "work/update/VLA_HANDOFF_COMPARISON_2026-10-28.md": {
+      "path": "work/research_topics/mobile_policy_transfer/내용/README.md",
+      "anchor": "closest-work",
+      "before_sha256": "38faf8a1adbce7a1d8cb895b97f4122857d06f854066d358aa5fc6af4c0e5439",
+      "after_sha256": "f8f68afd82fd6eb344acbefcde8a0c0bb73fa2f56f3b311f686bd58168d70625"
+    },
+    "work/update/VLA_HANDOFF_PUBLIC_PATH_2026-10-28.md": {
+      "path": "work/research_topics/mobile_policy_transfer/내용/README.md",
+      "anchor": "public-interface",
+      "before_sha256": "705126d79a54e9c80fd0b72674dd8920c50dc5e0d27d14b688afcb0a27cf1246",
+      "after_sha256": "f8f68afd82fd6eb344acbefcde8a0c0bb73fa2f56f3b311f686bd58168d70625"
+    },
+    "work/update/VLA_HANDOFF_SMALL_COMPARISON_2026-10-28.md": {
+      "path": "work/research_topics/mobile_policy_transfer/내용/README.md",
+      "anchor": "design-history",
+      "before_sha256": "a476f5e8fce862eb45db0ef41a2fd7a1fd294d8c2e9524f03400ecdafc57d615",
+      "after_sha256": "f8f68afd82fd6eb344acbefcde8a0c0bb73fa2f56f3b311f686bd58168d70625"
+    },
+    "research/VLA_OBJECT_SET_CARDINALITY_BRIEF.md": {
+      "path": "work/research_topics/object_set/내용/README.md",
+      "anchor": "overview",
+      "before_sha256": "a44b5de3281710d22dfca365c97c669bafb7852e851ac9353292ebd819e1763b",
+      "after_sha256": "b7b11becb5b5d4dfe8f4aafd6c846b9a2e5f05bfedc7c0a8d3c048821134919c"
+    },
+    "work/update/VLA_OBJECT_SET_SOURCE_REVIEW_2026-11-01.md": {
+      "path": "work/research_topics/object_set/내용/README.md",
+      "anchor": "source-review",
+      "before_sha256": "849d9bf70d2e57618498100bfae16e78d73921b68a4475f640d208010eabdedb",
+      "after_sha256": "b7b11becb5b5d4dfe8f4aafd6c846b9a2e5f05bfedc7c0a8d3c048821134919c"
+    },
+    "work/update/VLA_CONTEXT_RETRIEVAL_BUILDUP_2026-11-02.md": {
+      "path": "work/research_topics/context_retrieval/내용/README.md",
+      "anchor": "",
+      "before_sha256": "86b91c2302f424dd17851cda95775b6cf7656470a3ed49300be70572218cbafc",
+      "after_sha256": "a4ee3784f280b101d0f5bd1ad72eb5ef78ee3a83ca74a0b534d1857642baff0d"
+    },
+    "work/update/ACTION_TOKENIZATION_BUILDUP_2026-11-03.md": {
+      "path": "work/research_topics/action_tokenization/내용/README.md",
+      "anchor": "",
+      "before_sha256": "e5a84265fb8bf274efbd3ee931bfca1234a7867b1b91210990bcd8d65ab8ba18",
+      "after_sha256": "9af25454ecb77e9f1956b8f4a06b1b56723d587152ee68fbf12733a25c3b9b40"
+    },
+    "work/update/INSTRUCTION_REVISION_P0_PREPARATION_2026-10-31.md": {
+      "path": "work/research_topics/instruction_revision/재현 방법/README.md",
+      "anchor": "preparation-history",
+      "before_sha256": "978c284e42ef625123b796e4f6f92f31298e360da3696e5c3609973f67c1e7b6",
+      "after_sha256": "cc6095badba1856a9638063c5e804eb0f9417b41612623cf2aff57712154497f"
+    },
+    "work/update/VLA_HANDOFF_P0_PREPARATION_2026-10-28.md": {
+      "path": "work/research_topics/mobile_policy_transfer/재현 방법/README.md",
+      "anchor": "preparation-history",
+      "before_sha256": "f8211b46ff6c603b72753f133416356dc20c69af71e3148cf9180f30a3c58a9c",
+      "after_sha256": "bfe2d6ff63030b88883801ba6da7fc58708f5b613418bf83f58abd1a098d79a8"
+    },
+    "work/update/OBJECT_SET_P0_READINESS_2026-11-01.md": {
+      "path": "work/research_topics/object_set/재현 방법/README.md",
+      "anchor": "preparation-history",
+      "before_sha256": "21667a1d92b1bf8a6cac20377ca796383b3a72a058ce912b811ff125bc6863d5",
+      "after_sha256": "f93948d3cd62c11201a0c59bfca381ba64768636ca16dd5850b3a636015455a0"
+    },
+    "work/sources/instruction_revision_review_2026-10-31.json": {
+      "path": "work/research_topics/instruction_revision/내용/sources.json",
+      "anchor": "",
+      "before_sha256": "83060d6c664881d96f464920faf550a06503826b8e2d153747a1723cffa7de66",
+      "after_sha256": "0a664c80e92cd46bc6eb411ded12a15461a4f15efa0ee18d6a8bf41160926aa0"
+    },
+    "work/sources/vla_handoff_comparison_2026-10-28.json": {
+      "path": "work/research_topics/mobile_policy_transfer/내용/sources.json",
+      "anchor": "",
+      "before_sha256": "79cd3bfabba65a183ad07350435a0f8cf807c29bf664c47c056b70a469720a05",
+      "after_sha256": "fd574571c640e58316a1950ec4de260d63f27e2870ca7e80be3638f27efdab16"
+    },
+    "work/sources/vla_handoff_public_path_2026-10-28.json": {
+      "path": "work/research_topics/mobile_policy_transfer/내용/sources.json",
+      "anchor": "",
+      "before_sha256": "9aa99c99ec52b9382e8e81af79f34f794bd435b75a5863e26ef9dcfb18d6ec2b",
+      "after_sha256": "fd574571c640e58316a1950ec4de260d63f27e2870ca7e80be3638f27efdab16"
+    },
+    "work/sources/vla_handoff_small_comparison_2026-10-28.json": {
+      "path": "work/research_topics/mobile_policy_transfer/내용/sources.json",
+      "anchor": "",
+      "before_sha256": "a70132cf3ccbe00de18615a4b4460d35f0bd746074cb14a8c7089069c2ba664b",
+      "after_sha256": "fd574571c640e58316a1950ec4de260d63f27e2870ca7e80be3638f27efdab16"
+    },
+    "work/sources/vla_object_set_scout_2026-11-01.json": {
+      "path": "work/research_topics/object_set/내용/sources.json",
+      "anchor": "",
+      "before_sha256": "fd6aa1ec7a3b61cc82ec1087420c31b8cc71116c1ab84979459c73bb72376a8f",
+      "after_sha256": "36369285a6cf203c1fcfe389dc51afcc7b97596bb14cacd27b36a9ad7ef1b995"
+    },
+    "work/sources/vla_object_set_r1_2026-11-01.json": {
+      "path": "work/research_topics/object_set/내용/sources.json",
+      "anchor": "",
+      "before_sha256": "1d6bfc18b8c5181941ddb8f99d19619e3fee4ed54d7000e520a7089dd5d5cafc",
+      "after_sha256": "36369285a6cf203c1fcfe389dc51afcc7b97596bb14cacd27b36a9ad7ef1b995"
+    },
+    "work/sources/vla_object_set_nonexperimental_2026-11-01.json": {
+      "path": "work/research_topics/object_set/내용/sources.json",
+      "anchor": "",
+      "before_sha256": "039ed2704ead04ad269f48f5349ae53d0fd1fe2cd0e2002e742e3dc2d54dd21c",
+      "after_sha256": "36369285a6cf203c1fcfe389dc51afcc7b97596bb14cacd27b36a9ad7ef1b995"
+    },
+    "work/sources/vla_context_retrieval_2026-11-02.json": {
+      "path": "work/research_topics/context_retrieval/내용/sources.json",
+      "anchor": "",
+      "before_sha256": "f7347fd27cef93614afd8a5ffd89d0775c69f664aef929a8c44ce150556c9e84",
+      "after_sha256": "288a1e5b828ae11f2ce0c819c0ec8a9a823d048cd3206b379932c8ef8167d40a"
+    },
+    "work/sources/action_tokenization_buildup_2026-11-03.json": {
+      "path": "work/research_topics/action_tokenization/내용/sources.json",
+      "anchor": "",
+      "before_sha256": "5ceb5eff5724b0451dfb707d28216c89f5cef23a848f015ba3bf88c3977a1538",
+      "after_sha256": "30ba64f10dcbd6f1aae9825f6981cb938bf5214a4543c18d79987f4110222669"
+    }
+  },
+  "source_record_merges": {
+    "work/research_topics/instruction_revision/내용/sources.json": [
+      "work/sources/instruction_revision_review_2026-10-31.json"
+    ],
+    "work/research_topics/mobile_policy_transfer/내용/sources.json": [
+      "work/sources/vla_handoff_comparison_2026-10-28.json",
+      "work/sources/vla_handoff_public_path_2026-10-28.json",
+      "work/sources/vla_handoff_small_comparison_2026-10-28.json"
+    ],
+    "work/research_topics/object_set/내용/sources.json": [
+      "work/sources/vla_object_set_scout_2026-11-01.json",
+      "work/sources/vla_object_set_r1_2026-11-01.json",
+      "work/sources/vla_object_set_nonexperimental_2026-11-01.json"
+    ],
+    "work/research_topics/context_retrieval/내용/sources.json": [
+      "work/sources/vla_context_retrieval_2026-11-02.json"
+    ],
+    "work/research_topics/action_tokenization/내용/sources.json": [
+      "work/sources/action_tokenization_buildup_2026-11-03.json"
+    ]
+  },
+  "document_excerpts": {
+    "research/VLA_INSTRUCTION_REVISION_BRIEF.md": {
+      "start": null,
+      "end": null
+    },
+    "work/update/INSTRUCTION_REVISION_REVIEW_2026-10-31.md": {
+      "start": "## 2. 공개 interface에서 확인한 것",
+      "end": "## 5. 좁힌 진단 범위와 다음 TODO"
+    },
+    "work/research_candidates/2026-10-31_instruction_revision/CASEBOOK.md": {
+      "start": null,
+      "end": null
+    },
+    "research/MOBILE_MANIPULATION_POLICY_TRANSFER_BRIEF.md": {
+      "start": null,
+      "end": null
+    },
+    "work/update/VLA_HANDOFF_COMPARISON_2026-10-28.md": {
+      "start": "## 1. 한 장 비교",
+      "end": "## 4. 판정과 다음 행동"
+    },
+    "work/update/VLA_HANDOFF_PUBLIC_PATH_2026-10-28.md": {
+      "start": "## 1. 확인 범위",
+      "end": "## 4. 환경 기록"
+    },
+    "work/update/VLA_HANDOFF_SMALL_COMPARISON_2026-10-28.md": {
+      "start": "## 1. 범위를 좁힐 근거",
+      "end": "## 5. 중단점"
+    },
+    "research/VLA_OBJECT_SET_CARDINALITY_BRIEF.md": {
+      "start": null,
+      "end": null
+    },
+    "work/update/VLA_OBJECT_SET_SOURCE_REVIEW_2026-11-01.md": {
+      "start": "## 2. 공개 source에서 확인한 동작",
+      "end": null
+    },
+    "work/experiments/instruction_revision_p0/README.md": {
+      "start": null,
+      "end": null
+    },
+    "work/update/INSTRUCTION_REVISION_P0_PREPARATION_2026-10-31.md": {
+      "start": "## 검증·보존",
+      "end": "## 다음 행동"
+    },
+    "work/experiments/vla_handoff_p0/README.md": {
+      "start": null,
+      "end": null
+    },
+    "work/update/VLA_HANDOFF_P0_PREPARATION_2026-10-28.md": {
+      "start": "## 검증",
+      "end": null
+    },
+    "work/experiments/object_set_p0/README.md": {
+      "start": null,
+      "end": null
+    },
+    "work/update/OBJECT_SET_P0_READINESS_2026-11-01.md": {
+      "start": "## 실제로 보완한 재개 코드",
+      "end": "## 재개와 남은 작업"
+    }
+  },
+  "inbound_markdown_updated": [
+    "README.md",
+    "TODO.md",
+    "research/IDEA_BUILDUP_GUIDE.md",
+    "research/README.md",
+    "synthesis/04_vla_generalist.md",
+    "synthesis/06_locomotion_whole_body.md",
+    "synthesis/README.md",
+    "work/README.md",
+    "work/experiments/README.md",
+    "work/update/C1_OBSERVATION_COST_REVIEW_2026-10-28.md",
+    "work/update/PRE_GPU_BUILDUP_REVIEW_2026-10-31.md",
+    "work/update/README.md",
+    "work/update/REGISTRY_MAINTENANCE_2026-10-28.md",
+    "work/update/REGISTRY_MAINTENANCE_2026-11-01.md",
+    "work/update/TASK_HISTORY_2026-10-28.md",
+    "work/update/THREE_CANDIDATES_NONEXPERIMENTAL_2026-11-01.md",
+    "work/update/VLA_EXPLORATION_SELECTION_2026-10-28.md",
+    "work/update/VLA_GAP_SELECTION_2026-10-29.md",
+    "work/update/VLA_TERMINATION_COMPARISON_2026-10-28.md"
+  ],
+  "frozen_runtime_evidence_policy": "Original execution JSON and source record payloads retain historical command/path/hash strings. Use paths map for their current physical locations. No historical result hashes are recomputed to impersonate a rerun.",
+  "validation": {
+    "status": "PASS",
+    "date": "2026-11-03",
+    "scope": "Documentation migration and maintenance only; no new scientific experiment",
+    "generator_compile": "PASS; temporary output removed",
+    "generator_rebuild": {
+      "CORE": 47,
+      "NEXT": 314,
+      "REFERENCE": 487,
+      "ARCHIVE": 242
+    },
+    "repository_audit": {
+      "papers": 1090,
+      "standard_notes": 5450,
+      "errors": 0,
+      "warnings": 0,
+      "markdown_files_checked": 5651,
+      "markdown_links_checked": 11586
+    },
+    "json_ast_shell_syntax": "PASS",
+    "four_launcher_help_routes": "PASS",
+    "docker_packet_maintenance_checks": {
+      "tests_passed": 10,
+      "scientific_experiment": false,
+      "dependency_install": false,
+      "network": "none",
+      "image": "sha256:ec14bd72a90f89cb6f3c4b263bb35a81de7977dffb2e5a2cb7e96946f1545ebb"
+    },
+    "markdown_files_before": 19,
+    "markdown_files_after": 10,
+    "scoped_links_and_fragments_checked": 1075,
+    "standard_notes_sha256_preserved": 5450,
+    "canonical_registry_tracker_sha256_preserved": [
+      "work/sources/papers.json",
+      "work/sources/registry_meta.json",
+      "research/READING_TIERS.csv",
+      "research/READING_STATUS.csv",
+      "research/READING_STATUS_HISTORY.csv",
+      "PAPER.md"
+    ],
+    "frozen_code_config_results_sha256_preserved": [
+      "work/research_topics/instruction_revision/재현 방법/.dockerignore",
+      "work/research_topics/instruction_revision/재현 방법/ARTIFACTS.json",
+      "work/research_topics/instruction_revision/재현 방법/Dockerfile",
+      "work/research_topics/instruction_revision/재현 방법/LOCAL_CHECK_2026-10-31.json",
+      "work/research_topics/instruction_revision/재현 방법/inside.py",
+      "work/research_topics/instruction_revision/재현 방법/native_probe.py",
+      "work/research_topics/mobile_policy_transfer/재현 방법/LOCAL_CHECK_2026-10-28.json",
+      "work/research_topics/object_set/재현 방법/.dockerignore",
+      "work/research_topics/object_set/재현 방법/ARTIFACTS.json",
+      "work/research_topics/object_set/재현 방법/Dockerfile",
+      "work/research_topics/object_set/재현 방법/LOCAL_CHECK_2026-11-01.json",
+      "work/research_topics/object_set/재현 방법/READINESS_REVIEW_2026-11-01.json",
+      "work/research_topics/object_set/재현 방법/inside.py",
+      "work/research_topics/object_set/재현 방법/native_probe.py",
+      "work/research_topics/object_set/재현 방법/packet_checks.py",
+      "work/research_topics/object_set/재현 방법/sim-requirements.in",
+      "work/research_topics/object_set/재현 방법/test_packet_checks.py",
+      "work/research_topics/context_retrieval/재현 방법/ASSET_AUDIT.json",
+      "work/research_topics/context_retrieval/재현 방법/asset_audit.py",
+      "work/research_topics/action_tokenization/재현 방법/.dockerignore",
+      "work/research_topics/action_tokenization/재현 방법/Dockerfile",
+      "work/research_topics/action_tokenization/재현 방법/probe.py",
+      "work/research_topics/action_tokenization/재현 방법/requirements.lock",
+      "work/research_topics/action_tokenization/재현 방법/results/runtime.json",
+      "work/research_topics/action_tokenization/재현 방법/results/suffix_verified/results.json",
+      "work/research_topics/action_tokenization/재현 방법/results/verified/results.json",
+      "work/research_topics/action_tokenization/재현 방법/suffix_probe.py"
+    ],
+    "source_bundle_validation": {
+      "all_original_record_keys_and_original_file_hashes_retained": true,
+      "serialization_roundtrip_hash_matches": [
+        "work/sources/vla_handoff_public_path_2026-10-28.json",
+        "work/sources/vla_handoff_small_comparison_2026-10-28.json"
+      ],
+      "different_original_json_format": [
+        "work/sources/vla_handoff_comparison_2026-10-28.json",
+        "work/sources/vla_object_set_scout_2026-11-01.json",
+        "work/sources/vla_object_set_r1_2026-11-01.json",
+        "work/sources/vla_object_set_nonexperimental_2026-11-01.json"
+      ],
+      "method": "Source JSON was parsed and inserted directly into records by the migration; formatting changed. Only listed exact roundtrip matches are byte-verified; other merged records are not claimed as byte-identical files."
+    },
+    "staged_entries_sha256": "0e8db46a624a0ad7e38ce9a6d484c80658cd6973608cbc0d6a0558cc4848ab51",
+    "staged_entries_hash_command": "git ls-files --stage -z",
+    "staged_entries_unchanged": true,
+    "existing_unmoved_files_modified": [
+      "TODO.md",
+      "work/README.md",
+      "AGENTS.md",
+      "synthesis/README.md",
+      "synthesis/06_locomotion_whole_body.md",
+      "synthesis/04_vla_generalist.md",
+      "work/update/VLA_EXPLORATION_SELECTION_2026-10-28.md",
+      "work/update/PRE_GPU_BUILDUP_REVIEW_2026-10-31.md",
+      "work/update/TASK_HISTORY_2026-10-28.md",
+      "work/update/REGISTRY_MAINTENANCE_2026-10-28.md",
+      "work/update/VLA_GAP_SELECTION_2026-10-29.md",
+      "work/update/README.md",
+      "work/update/THREE_CANDIDATES_NONEXPERIMENTAL_2026-11-01.md",
+      "work/update/REGISTRY_MAINTENANCE_2026-11-01.md",
+      "work/update/VLA_TERMINATION_COMPARISON_2026-10-28.md",
+      "work/update/C1_OBSERVATION_COST_REVIEW_2026-10-28.md",
+      "research/README.md",
+      "research/IDEA_BUILDUP_GUIDE.md",
+      "work/experiments/README.md",
+      "README.md"
+    ],
+    "unexpected_deletions": [],
+    "unexpected_changes": [],
+    "git_diff_whitespace": {
+      "unstaged": "PASS",
+      "staged": "PASS"
+    },
+    "docker_inventory_after": {
+      "containers": 0,
+      "images": [
+        "paper-gap-p3:rvo-c2c46ba"
+      ],
+      "new_images": 0
+    },
+    "execution_on_another_computer": false
+  }
+}

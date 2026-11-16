@@ -4,6 +4,8 @@
 > Evidence maturity: `FULL_TEXT_CHECKED`.
 > Analysis basis: full-text PDF body checked on 2026-09-03 (17 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=WnSl42M9Z4; PDF retrieval source: https://arxiv.org/pdf/2406.10454. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
+> DOC-QA2 targeted source review: 2026-10-23; PDF pp. 3. 손상 구간·직접 연결된 표 분류만 원문 이미지와 대조했다. 전체 주장 정독·실험 검증·reading status 승격을 뜻하지 않는다. [URL·PDF hash·수정 기록](../../../work/sources/pdf_note_review_followup_2026-10-23.json).
+
 ## Evaluation in One Sentence
 
 PDF body evaluation/result cue (p. 10 (9. Experiments on Imitation), p. 9 (Figure/Table caption), p. 9 (8.1. Comparisons with Other Teleoperation), p. 10 (9. Experiments on Imitation)): Our HIT achieves higher success rates than other baselines across all tasks.
@@ -141,7 +143,7 @@ PDF body evaluation/result cue (p. 10 (9. Experiments on Imitation), p. 9 (Figur
 | Firstly, our hardware platform offers fewer degrees of freedom compared to human anatomy. | p. 10 (9. Experiments on Imitation) |
 | This problem is further exacerbated by the lack of off-the-shelf and integrated hardware platforms. | p. 2 (1. Introduction) |
 | Typically, learning-based low-level policies are designed to be task-specific due to time-consuming reward engineering [19, 68], enabling the humanoid hardware to demonstrate only one ... | p. 2 (1. Introduction) |
-| FP FP 'R):ULVW 'R)+DQG 5*%&DPHUDV Figure 2: Hardware Details. | p. 3 (1. Introduction) |
+| HumanPlus hardware: head-mounted egocentric RGB cameras 2개, 각 6-DoF dexterous hands 2개, 전체 33 DoF. 깨진 그림 내 font encoding 대신 확인 가능한 caption을 사용한다. | PDF p. 3 Fig. 2 caption |
 | The body pose estimation and retargeting runs at 25 fps on an NVIDIA RTX4090 GPU. | p. 5 (4. Human Body and Hand Data) |
 | To compute the 1-DoF wrist angle, we use the relative rotation between the forearm and hand global orientations. | p. 5 (4. Human Body and Hand Data) |
 

@@ -4,6 +4,8 @@
 > Evidence maturity: `FULL_TEXT_CHECKED`.
 > Analysis basis: full-text PDF body checked on 2026-09-03 (48 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2210.03094; PDF retrieval source: https://arxiv.org/pdf/2210.03094. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
+> DOC-QA2 targeted source review: 2026-10-23; PDF pp. 4. 손상 구간·직접 연결된 표 분류만 원문 이미지와 대조했다. 전체 주장 정독·실험 검증·reading status 승격을 뜻하지 않는다. [URL·PDF hash·수정 기록](../../../work/sources/pdf_note_review_followup_2026-10-23.json).
+
 ## Problem in One Sentence
 
 PDF body framing (p. 1 (1. Introduction), p. 2 (1. Introduction), p. 2 (1. Introduction)): To enable a single agent with all these capabilities, we make three key contributions in this work: 1) a novel multimodal prompting formulation that converts a wide spectrum of robot ...
@@ -23,7 +25,7 @@ PDF body framing (p. 1 (1. Introduction), p. 2 (1. Introduction), p. 2 (1. Intro
 | Dimension | PDF body evidence | Registry/robotics interpretation | Boundary |
 |---|---|---|---|
 | Target problem | To enable a single agent with all these capabilities, we make three key contributions in this work: 1) a novel multimodal prompting ... | language-conditioned robot task와 embodiment | body wording is the source claim |
-| Observation / input | Concretely, we learn a robot policy π(at/P, H), where H := o1, a1, o2, a2, . . . , ot  denotes ... | image/video, language instruction, proprioception과 history | exact sensor/frame/preprocessing from PDF body |
+| Observation / input | P와 H=[o₁,a₁,o₂,a₂,…,oₜ]를 조건으로 다음 행동을 예측한다. | Prompt·object-centric visual observations·past actions | PDF p. 4, §4; proprioception을 이 식만으로 추정하지 않음 |
 | State / latent | Concretely, learn, robot, policy, at/P, where, denotes, past, interaction, history | language-grounded task state와 action-policy context | notation and tensor shape require body check |
 | Output / action | Input, images, divided, patches, encoded, ViT, model, produce | continuous action, pose 또는 action chunk | exact unit/frame/decoder require body check |
 | Target outcome | instruction-conditioned task success | instruction following, task success, generalization과 latency | metric/denominator are in 04 evidence |

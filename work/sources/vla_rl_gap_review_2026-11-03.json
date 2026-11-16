@@ -1,0 +1,1928 @@
+{
+  "schema_version": 2,
+  "work_id": "GAP-VRL-S1",
+  "checked_on": "2026-11-03",
+  "timezone": "Asia/Seoul",
+  "purpose": "VLA + RL gap scouting for a masters-level top-tier robotics/AI research contribution",
+  "scope": {
+    "registry_entries_screened_as_metadata": 1090,
+    "registry_full_texts_read": 0,
+    "registry_full_texts_read_note": "1090편 전체 정독은 하지 않음; 선택 절 확인은 source별 기록",
+    "source_cards": 42,
+    "already_registered": 16,
+    "external_not_registered": 26,
+    "by_year": {
+      "2018": 1,
+      "2024": 2,
+      "2025": 9,
+      "2026": 30
+    },
+    "by_review_depth": {
+      "REGISTRY_CONTEXT": 2,
+      "OFFICIAL_ABSTRACT": 24,
+      "AUTHOR_PROJECT": 2,
+      "OFFICIAL_ABSTRACT_PLUS_CODE_METADATA": 1,
+      "SELECTED_FULL_TEXT": 11,
+      "PREPRINT_ABSTRACT": 2
+    },
+    "completeness": "targeted broad survey, not exhaustive proceedings coverage",
+    "window_source_cards": 41,
+    "outside_window_foundation_cards": 1
+  },
+  "discovery": {
+    "registry_queries": [
+      "VLA|vision-language-action",
+      "reinforcement|residual|post-training|distillation",
+      "reward|world model|navigation|generalist"
+    ],
+    "external_search_axes": [
+      "direct RL post-training",
+      "residual policy and base-update transfer",
+      "RL-generated data and observation-constrained distillation",
+      "counterfactual language reward",
+      "world-model/reward reliability",
+      "hierarchical navigation and deployment"
+    ],
+    "official_programs": [
+      "https://neurips.cc/Downloads/2026",
+      "https://iclr.cc/Downloads/2026",
+      "https://www.corl.org/program/accepted-papers"
+    ],
+    "note": "제목 검색 hit 수를 정독 논문 수로 세지 않음. Awesome list/검색 snippet은 발견용, 기술적 결론은 primary source에 연결."
+  },
+  "sources": [
+    {
+      "key": "S01",
+      "title": "SERL: A Software Suite for Sample-Efficient Robotic Reinforcement Learning",
+      "year": 2024,
+      "venue": "ICRA",
+      "publication_status": "registry_status_retained_not_freshly_reverified",
+      "registry_paper_id": "pr-0874",
+      "registry_overview": "2024/ICRA/2024_ICRA_SERL-A-Software-Suite-for-Sample-Efficient-Robotic-Reinfor/01_overview.md",
+      "review_depth": "REGISTRY_CONTEXT",
+      "review_locations": "Registry metadata / existing notes",
+      "source_urls": [
+        "https://ieeexplore.ieee.org/document/10610040/"
+      ],
+      "supported_fact": "Sample-efficient robot RL infrastructure의 배경 계보. 이번에 본문 재검토하지 않음.",
+      "boundary": "해당 확인 범위를 넘는 성능·신규성·재현성은 검증하지 않음"
+    },
+    {
+      "key": "S02",
+      "title": "HumanVLA: Towards Vision-Language Directed Object Rearrangement by Physical Humanoid",
+      "year": 2024,
+      "venue": "NeurIPS",
+      "publication_status": "official_proceedings",
+      "registry_paper_id": null,
+      "registry_overview": null,
+      "review_depth": "OFFICIAL_ABSTRACT",
+      "review_locations": "Official abstract",
+      "source_urls": [
+        "https://proceedings.neurips.cc/paper_files/paper/2024/hash/215aeb07b5996c969c0123c3c6ee8f54-Abstract-Conference.html",
+        "https://github.com/AllenXuuu/HumanVLA"
+      ],
+      "supported_fact": "Goal-conditioned RL state teacher를 VLA로 distill.",
+      "boundary": "Physical humanoid simulation을 실제 hardware 결과로 바꾸지 않음. Code URL 확인, code audit 없음."
+    },
+    {
+      "key": "S03",
+      "title": "ConRFT: A Reinforced Fine-tuning Method for VLA Models via Consistency Policy",
+      "year": 2025,
+      "venue": "RSS",
+      "publication_status": "registry_publication_with_current_source_check",
+      "registry_paper_id": "pr-0885",
+      "registry_overview": "2025/RSS/2025_RSS_ConRFT-A-Reinforced-Fine-tuning-Method-for-VLA-Models-via/01_overview.md",
+      "review_depth": "OFFICIAL_ABSTRACT",
+      "review_locations": "Official abstract",
+      "source_urls": [
+        "https://www.roboticsproceedings.org/rss21/p019.html"
+      ],
+      "supported_fact": "Offline BC/Q-learning과 online consistency policy/human intervention을 연결.",
+      "boundary": "해당 확인 범위를 넘는 성능·신규성·재현성은 검증하지 않음"
+    },
+    {
+      "key": "S04",
+      "title": "RLDG: Robotic Generalist Policy Distillation via Reinforcement Learning",
+      "year": 2025,
+      "venue": "RSS",
+      "publication_status": "registry_publication_with_current_source_check",
+      "registry_paper_id": "pr-0886",
+      "registry_overview": "2025/RSS/2025_RSS_RLDG-Robotic-Generalist-Policy-Distillation-via-Reinforcem/01_overview.md",
+      "review_depth": "OFFICIAL_ABSTRACT",
+      "review_locations": "Official abstract",
+      "source_urls": [
+        "https://www.roboticsproceedings.org/rss21/p028.html"
+      ],
+      "supported_fact": "RL-generated data로 generalist 개선; action distribution과 state coverage를 함께 분석.",
+      "boundary": "해당 확인 범위를 넘는 성능·신규성·재현성은 검증하지 않음"
+    },
+    {
+      "key": "S05",
+      "title": "NaVILA: Legged Robot Vision-Language-Action Model for Navigation",
+      "year": 2025,
+      "venue": "RSS",
+      "publication_status": "registry_publication_with_current_source_check",
+      "registry_paper_id": "pr-0884",
+      "registry_overview": "2025/RSS/2025_RSS_NaVILA-Legged-Robot-Vision-Language-Action-Model-for-Navig/01_overview.md",
+      "review_depth": "OFFICIAL_ABSTRACT",
+      "review_locations": "Official abstract",
+      "source_urls": [
+        "https://www.roboticsproceedings.org/rss21/p018.html"
+      ],
+      "supported_fact": "VLA 중간 공간 명령을 visual locomotion RL에 전달.",
+      "boundary": "해당 확인 범위를 넘는 성능·신규성·재현성은 검증하지 않음"
+    },
+    {
+      "key": "S06",
+      "title": "What Can RL Bring to VLA Generalization? An Empirical Study",
+      "year": 2025,
+      "venue": "NeurIPS",
+      "publication_status": "registry_publication_with_current_source_check",
+      "registry_paper_id": "pr-0956",
+      "registry_overview": "2025/NeurIPS/2025_NeurIPS_What-Can-RL-Bring-to-VLA-Generalization-An-Empirical-Study/01_overview.md",
+      "review_depth": "OFFICIAL_ABSTRACT",
+      "review_locations": "Official abstract",
+      "source_urls": [
+        "https://proceedings.nips.cc/paper_files/paper/2025/hash/8c0fabe372177d2aded596be2d3b4544-Abstract-Conference.html"
+      ],
+      "supported_fact": "VLA RL의 generalization을 경험적으로 비교하는 직접 선행.",
+      "boundary": "해당 확인 범위를 넘는 성능·신규성·재현성은 검증하지 않음"
+    },
+    {
+      "key": "S07",
+      "title": "SafeVLA: Towards Safety Alignment of Vision-Language-Action Model via Constrained Learning",
+      "year": 2025,
+      "venue": "NeurIPS",
+      "publication_status": "registry_publication_with_current_source_check",
+      "registry_paper_id": "pr-0123",
+      "registry_overview": "2025/NeurIPS/2025_NeurIPS_SafeVLA-Towards-Safety-Alignment-of-Vision-Language-Action/01_overview.md",
+      "review_depth": "OFFICIAL_ABSTRACT",
+      "review_locations": "Official abstract",
+      "source_urls": [
+        "https://openreview.net/forum?id=dt940loCBT",
+        "https://proceedings.neurips.cc/paper_files/paper/2025/hash/e185c7be603426028c32ae1003a59d78-Abstract-Conference.html"
+      ],
+      "supported_fact": "Constrained RL을 통한 VLA safety alignment.",
+      "boundary": "해당 확인 범위를 넘는 성능·신규성·재현성은 검증하지 않음"
+    },
+    {
+      "key": "S08",
+      "title": "Steering Your Diffusion Policy with Latent Space Reinforcement Learning",
+      "year": 2025,
+      "venue": "CoRL",
+      "publication_status": "registry_publication_with_current_source_check",
+      "registry_paper_id": "pr-0955",
+      "registry_overview": "2025/CoRL/2025_CoRL_Steering-Your-Diffusion-Policy-with-Latent-Space-Reinforce/01_overview.md",
+      "review_depth": "OFFICIAL_ABSTRACT",
+      "review_locations": "Official abstract",
+      "source_urls": [
+        "https://proceedings.mlr.press/v305/wagenmaker25a.html"
+      ],
+      "supported_fact": "Diffusion policy의 latent를 RL로 조절하는 선행.",
+      "boundary": "해당 확인 범위를 넘는 성능·신규성·재현성은 검증하지 않음"
+    },
+    {
+      "key": "S09",
+      "title": "Reinforcement Learning with Action Chunking",
+      "year": 2025,
+      "venue": "NeurIPS",
+      "publication_status": "registry_publication_with_current_source_check",
+      "registry_paper_id": "pr-0953",
+      "registry_overview": "2025/NeurIPS/2025_NeurIPS_Reinforcement-Learning-with-Action-Chunking/01_overview.md",
+      "review_depth": "OFFICIAL_ABSTRACT",
+      "review_locations": "Official abstract",
+      "source_urls": [
+        "https://proceedings.neurips.cc/paper_files/paper/2025/hash/50348e8f9aef984abe0ea1ec2a326f78-Abstract-Conference.html"
+      ],
+      "supported_fact": "Action chunking과 RL 결합을 직접 다룸.",
+      "boundary": "해당 확인 범위를 넘는 성능·신규성·재현성은 검증하지 않음"
+    },
+    {
+      "key": "S10",
+      "title": "Precise and dexterous robotic manipulation via human-in-the-loop reinforcement learning",
+      "year": 2025,
+      "venue": "Science Robotics",
+      "publication_status": "registry_publication_with_current_source_check",
+      "registry_paper_id": "pr-0914",
+      "registry_overview": "2025/Science-Robotics/2025_Science-Robotics_Precise-and-dexterous-robotic-manipulation-via-human-in-th/01_overview.md",
+      "review_depth": "AUTHOR_PROJECT",
+      "review_locations": "Author project Method Overview",
+      "source_urls": [
+        "https://www.science.org/doi/10.1126/scirobotics.ads5033",
+        "https://hil-serl.github.io/"
+      ],
+      "supported_fact": "Classifier reward·demonstration buffer·human intervention으로 robot RL 학습.",
+      "boundary": "Publisher 403; journal metadata와 author project를 분리. Language-conditioned VLA라고 분류하지 않음."
+    },
+    {
+      "key": "S11",
+      "title": "SimpleVLA-RL: Scaling VLA Training via Reinforcement Learning",
+      "year": 2026,
+      "venue": "ICLR",
+      "publication_status": "registry_publication_with_current_source_check",
+      "registry_paper_id": "pr-0957",
+      "registry_overview": "2026/ICLR/2026_ICLR_SimpleVLA-RL-Scaling-VLA-Training-via-Reinforcement-Learni/01_overview.md",
+      "review_depth": "OFFICIAL_ABSTRACT_PLUS_CODE_METADATA",
+      "review_locations": "Official proceedings abstract; R1 official pinned script/rollout/constants/model source and public HF metadata only; no weights",
+      "source_urls": [
+        "https://proceedings.iclr.cc/paper_files/paper/2026/hash/cbfbcb4da14235bd69b134070898ae9d-Abstract-Conference.html"
+      ],
+      "supported_fact": "VLA online RL과 확장 가능한 rollout/training 구조.",
+      "boundary": "해당 확인 범위를 넘는 성능·신규성·재현성은 검증하지 않음"
+    },
+    {
+      "key": "S12",
+      "title": "Towards Practical World Model-based Reinforcement Learning for Vision-Language-Action Models",
+      "year": 2026,
+      "venue": "ICML",
+      "publication_status": "registry_publication_with_current_source_check",
+      "registry_paper_id": "pr-0961",
+      "registry_overview": "2026/ICML/2026_ICML_Towards-Practical-World-Model-based-Reinforcement-Learning/01_overview.md",
+      "review_depth": "OFFICIAL_ABSTRACT",
+      "review_locations": "Official PMLR abstract",
+      "source_urls": [
+        "https://proceedings.mlr.press/v306/zhang26ez.html"
+      ],
+      "supported_fact": "World-model rollout을 이용한 VLA RL.",
+      "boundary": "Official ICML PMLR를 venue 근거로 사용. 검색된 OpenReview PDF의 ICLR 표기 충돌은 미해결, 별도 등록하지 않음."
+    },
+    {
+      "key": "S13",
+      "title": "VLAW: Iterative Co-Improvement of Vision-Language-Action Policy and World Model",
+      "year": 2026,
+      "venue": "ICML",
+      "publication_status": "registry_publication_with_current_source_check",
+      "registry_paper_id": "pr-0960",
+      "registry_overview": "2026/ICML/2026_ICML_VLAW-Iterative-Co-Improvement-of-Vision-Language-Action-Po/01_overview.md",
+      "review_depth": "OFFICIAL_ABSTRACT",
+      "review_locations": "Official PMLR abstract",
+      "source_urls": [
+        "https://proceedings.mlr.press/v306/guo26i.html"
+      ],
+      "supported_fact": "Real rollout으로 world model을 개선하고 synthetic data로 VLA를 개선하는 반복 구조.",
+      "boundary": "해당 확인 범위를 넘는 성능·신규성·재현성은 검증하지 않음"
+    },
+    {
+      "key": "S14",
+      "title": "A Generalist Pair-wise Progress Critic Model for Vision-Language-Action Robots",
+      "year": 2026,
+      "venue": "ICML",
+      "publication_status": "official_proceedings",
+      "registry_paper_id": null,
+      "registry_overview": null,
+      "review_depth": "OFFICIAL_ABSTRACT",
+      "review_locations": "Official abstract",
+      "source_urls": [
+        "https://proceedings.mlr.press/v306/zhang26if.html",
+        "https://github.com/InternRobotics/VLAC"
+      ],
+      "supported_fact": "Pairwise progress critic을 robot RL 보상으로 활용.",
+      "boundary": "범용 reward 자체는 gap으로 주장하지 않음. Code 실행 없음."
+    },
+    {
+      "key": "S15",
+      "title": "RehearseVLA: Simulated Post-Training for VLAs with Physically-Consistent World Model",
+      "year": 2026,
+      "venue": "CVPR",
+      "publication_status": "official_proceedings",
+      "registry_paper_id": null,
+      "registry_overview": null,
+      "review_depth": "OFFICIAL_ABSTRACT",
+      "review_locations": "CVF abstract",
+      "source_urls": [
+        "https://openaccess.thecvf.com/content/CVPR2026/html/Xiao_RehearseVLA_Simulated_Post-Training_for_VLAs_with_Physically-Consistent_World_Model_CVPR_2026_paper.html",
+        "https://github.com/iSEE-Laboratory/RehearseVLA"
+      ],
+      "supported_fact": "World-model simulated post-training과 VLM reward/termination.",
+      "boundary": "선택 본문 또는 코드 정독은 안 함."
+    },
+    {
+      "key": "S16",
+      "title": "Self-Improving Vision-Language-Action Models with Data Generation via Residual RL",
+      "year": 2026,
+      "venue": "ICLR",
+      "publication_status": "official_program",
+      "registry_paper_id": "pr-1091",
+      "registry_overview": "2026/ICLR/2026_ICLR_Self-Improving-Vision-Language-Action-Models-with-Data-Gen/01_overview.md",
+      "review_depth": "SELECTED_FULL_TEXT",
+      "review_locations": "arXiv v1 §3; Appendix B.2 On-the-Fly/Update frequency, C.1/C.2; official program abstract; R1 author-project release-link inspection",
+      "source_urls": [
+        "https://iclr.cc/virtual/2026/poster/10008318",
+        "https://openreview.net/forum?id=eUGoqrZ6Ea",
+        "https://arxiv.org/html/2511.00091v1",
+        "https://wenlixiao.com/self-improve-VLA-PLD/"
+      ],
+      "supported_fact": "Frozen VLA residual specialists → deployment-aligned hybrid rollout → SFT generalist.",
+      "boundary": "ICLR program과 preprint 본문 버전을 구분. 반복 base 업데이트 뒤 동일 residual 전이는 미확정. 전체 training code 미식별은 not released와 다름. Search result stpark7/pld explicitly describes a custom implementation; not official."
+    },
+    {
+      "key": "S17",
+      "title": "Object-Centric Residual RL for Zero-Shot Sim-to-Real VLA Enhancement",
+      "year": 2026,
+      "venue": "CoRL",
+      "publication_status": "official_accepted_list",
+      "registry_paper_id": "pr-1092",
+      "registry_overview": "2026/CoRL/2026_CoRL_Object-Centric-Residual-RL-for-Zero-Shot-Sim-to-Real-VLA-E/01_overview.md",
+      "review_depth": "SELECTED_FULL_TEXT",
+      "review_locations": "arXiv v1 §3.1–3.4, §5.1–5.4, §7; official accepted list exact title/forum; R1 Appendix A.1–A.4 / A.7 and author-page code-link inspection",
+      "source_urls": [
+        "https://www.corl.org/program/accepted-papers",
+        "https://openreview.net/forum?id=tAXtXe4Oqd",
+        "https://arxiv.org/html/2606.18953v1",
+        "https://www.microsoft.com/en-us/research/articles/object-centric-residual-rl/"
+      ],
+      "supported_fact": "Pose/proprio/base-action residual, paired teleoperation alignment, sim-real transfer and base SFT.",
+      "boundary": "Same residual sim-to-real is explicit; same residual across backbone families or after base SFT remains unverified. Official training code not identified on checked author pages; conference final text not verified."
+    },
+    {
+      "key": "S18",
+      "title": "CounterAlign: Counterfactual Supervision for Vision-Language-Action Models",
+      "year": 2026,
+      "venue": "CoRL",
+      "publication_status": "official_accepted_list",
+      "registry_paper_id": "pr-1033",
+      "registry_overview": "2026/CoRL/2026_CoRL_CounterAlign-Counterfactual-Supervision-for-Vision-Languag/01_overview.md",
+      "review_depth": "SELECTED_FULL_TEXT",
+      "review_locations": "arXiv v1 §1, §3.1–3.3; Appendix equations 7–11, Algorithms 1–3; official CoRL accepted list",
+      "source_urls": [
+        "https://openreview.net/forum?id=AY4totylcx",
+        "https://www.corl.org/program/accepted-papers",
+        "https://arxiv.org/html/2608.21740v1"
+      ],
+      "supported_fact": "관측·행동 유사도 기반 negative 필터와 jointly relabeled tuple의 nnPU 학습; max-over-goal-demonstrations similarity.",
+      "boundary": "Shared-prefix ambiguity를 이미 명시. 필터의 coverage 민감성은 연구자 해석이며 오판/성능 저하는 관측하지 않음. 재학습/코드 실행 없음."
+    },
+    {
+      "key": "S19",
+      "title": "VLaRL: Augmenting Vision-Language-Action Models with Simulation-Trained Latent-Conditioned Residual RL",
+      "year": 2026,
+      "venue": "arXiv",
+      "publication_status": "preprint_status_not_verified",
+      "registry_paper_id": null,
+      "registry_overview": null,
+      "review_depth": "SELECTED_FULL_TEXT",
+      "review_locations": "arXiv v1 III-D / IV / VI-C limitations; staged training and demo residual targets",
+      "source_urls": [
+        "https://arxiv.org/abs/2609.30868",
+        "https://arxiv.org/html/2609.30868v1"
+      ],
+      "supported_fact": "Mapper is backbone-specific; residual trained per task category; VLA and mapper frozen before residual training.",
+      "boundary": "Preprint acceptance unverified. Task-specific residual and backbone-specific mapper do not establish a single residual checkpoint transferred across backbones."
+    },
+    {
+      "key": "S20",
+      "title": "Trust-Calibrated VLA Policy Post-Training with Evolving Imagination",
+      "year": 2026,
+      "venue": "arXiv",
+      "publication_status": "preprint_status_not_verified",
+      "registry_paper_id": null,
+      "registry_overview": null,
+      "review_depth": "PREPRINT_ABSTRACT",
+      "review_locations": "Abstract, v1",
+      "source_urls": [
+        "https://arxiv.org/abs/2610.16517"
+      ],
+      "supported_fact": "MERL은 simulator/world/reward proxy를 갱신하며 trust로 horizon, mixture, replay와 update weight 조절.",
+      "boundary": "Confidence 기반 world-model RL의 직접 충돌. 효과 독립 검증 없음."
+    },
+    {
+      "key": "S21",
+      "title": "PAPO-VLA: Planning-Aware Policy Optimization for Vision-Language-Action Models",
+      "year": 2026,
+      "venue": "NeurIPS",
+      "publication_status": "official_program",
+      "registry_paper_id": null,
+      "registry_overview": null,
+      "review_depth": "OFFICIAL_ABSTRACT",
+      "review_locations": "Official program abstract, read-only HTML retrieval",
+      "source_urls": [
+        "https://neurips.cc/virtual/2026/poster/149215"
+      ],
+      "supported_fact": "Planning action의 중요도를 GRPO advantage에 반영.",
+      "boundary": "Causal sufficiency/necessity의 구현·가정은 본문 확인 필요."
+    },
+    {
+      "key": "S22",
+      "title": "FineVLA: Fine-Grained Instruction Alignment for Steerable Vision-Language-Action Policies",
+      "year": 2026,
+      "venue": "NeurIPS",
+      "publication_status": "official_program",
+      "registry_paper_id": null,
+      "registry_overview": null,
+      "review_depth": "OFFICIAL_ABSTRACT",
+      "review_locations": "Official program abstract, read-only HTML retrieval",
+      "source_urls": [
+        "https://neurips.cc/virtual/2026/poster/154540"
+      ],
+      "supported_fact": "Motion/contact/recovery 등 세부 지시 annotation·평가·정책.",
+      "boundary": "RL 방법이라고 추정하지 않음."
+    },
+    {
+      "key": "S23",
+      "title": "LiFT: Likelihood-Free Tree-Structured Policy Optimization for Flow-Based VLAs",
+      "year": 2026,
+      "venue": "NeurIPS",
+      "publication_status": "official_program",
+      "registry_paper_id": null,
+      "registry_overview": null,
+      "review_depth": "OFFICIAL_ABSTRACT",
+      "review_locations": "Official program abstract, read-only HTML retrieval",
+      "source_urls": [
+        "https://neurips.cc/virtual/2026/poster/151131"
+      ],
+      "supported_fact": "Shared prefix의 sibling rollout으로 branch advantage를 계산하고 likelihood-free flow policy update.",
+      "boundary": "Long-horizon branching/credit 자체를 신규 gap으로 주장하지 않음."
+    },
+    {
+      "key": "S24",
+      "title": "VISTA: Support-Anchored Value Targeting for Fast Flow-Based Vision-Language-Action Policies",
+      "year": 2026,
+      "venue": "NeurIPS",
+      "publication_status": "official_program",
+      "registry_paper_id": null,
+      "registry_overview": null,
+      "review_depth": "OFFICIAL_ABSTRACT",
+      "review_locations": "Official program abstract, read-only HTML retrieval",
+      "source_urls": [
+        "https://neurips.cc/virtual/2026/poster/148918"
+      ],
+      "supported_fact": "Dataset action에서 critic gradient를 이용한 conservative target shift와 distillation.",
+      "boundary": "Global improvement guarantee가 아님. 동명 3D-VisTA/ICRA VISTA와 다른 논문."
+    },
+    {
+      "key": "S25",
+      "title": "Reinforcing VLAs in Task-Agnostic World Models",
+      "year": 2026,
+      "venue": "NeurIPS",
+      "publication_status": "official_program",
+      "registry_paper_id": null,
+      "registry_overview": null,
+      "review_depth": "OFFICIAL_ABSTRACT",
+      "review_locations": "Official program abstract, read-only HTML retrieval",
+      "source_urls": [
+        "https://neurips.cc/virtual/2026/poster/153917"
+      ],
+      "supported_fact": "RAW-Dream은 task-agnostic world/reward와 dual-noise rollout 검증.",
+      "boundary": "Abstract의 generalization 주장을 독립 확인하지 않음."
+    },
+    {
+      "key": "S26",
+      "title": "SOLE-R1: Video-Language Reasoning as the Sole Reward for On-Robot Reinforcement Learning",
+      "year": 2026,
+      "venue": "NeurIPS",
+      "publication_status": "official_program",
+      "registry_paper_id": null,
+      "registry_overview": null,
+      "review_depth": "OFFICIAL_ABSTRACT",
+      "review_locations": "Official program abstract, read-only HTML retrieval",
+      "source_urls": [
+        "https://neurips.cc/virtual/2026/poster/153893"
+      ],
+      "supported_fact": "Video-language dense progress reward로 RL, partial observability와 hacking을 대상으로 함.",
+      "boundary": "Reward 모델이므로 actor를 모두 VLA로 가정하지 않음."
+    },
+    {
+      "key": "S27",
+      "title": "RePO-VLA: Recovery-Driven Policy Optimization for Vision-Language-Action Models",
+      "year": 2026,
+      "venue": "NeurIPS",
+      "publication_status": "official_program",
+      "registry_paper_id": null,
+      "registry_overview": null,
+      "review_depth": "OFFICIAL_ABSTRACT",
+      "review_locations": "Official program abstract, read-only HTML retrieval",
+      "source_urls": [
+        "https://neurips.cc/virtual/2026/poster/153104"
+      ],
+      "supported_fact": "Recovery segment와 failure prefix의 value-conditioned refinement.",
+      "boundary": "Policy optimization이라는 제목만으로 actor-critic RL이라고 분류하지 않음."
+    },
+    {
+      "key": "S28",
+      "title": "OGPO: Offline Goal-conditioned Policy Optimization for Recoverable Vision-Language-Action Models",
+      "year": 2026,
+      "venue": "NeurIPS",
+      "publication_status": "official_program",
+      "registry_paper_id": null,
+      "registry_overview": null,
+      "review_depth": "OFFICIAL_ABSTRACT",
+      "review_locations": "Official program abstract, read-only HTML retrieval",
+      "source_urls": [
+        "https://neurips.cc/virtual/2026/poster/152279"
+      ],
+      "supported_fact": "Semantic key-state relabeling과 goal-conditioned process reward.",
+      "boundary": "상세 algorithm/benchmark는 abstract 경계."
+    },
+    {
+      "key": "S29",
+      "title": "Never Stop Learning: Test-Time Reinforcement Learning for Vision-Language-Action Models",
+      "year": 2026,
+      "venue": "NeurIPS",
+      "publication_status": "official_program",
+      "registry_paper_id": null,
+      "registry_overview": null,
+      "review_depth": "OFFICIAL_ABSTRACT",
+      "review_locations": "Official program abstract, read-only HTML retrieval",
+      "source_urls": [
+        "https://neurips.cc/virtual/2026/poster/153607"
+      ],
+      "supported_fact": "EXPLORE는 action-chunk exploration, physics-grounded process reward, online RL.",
+      "boundary": "새 inference-time RL 자체는 gap 아님."
+    },
+    {
+      "key": "S30",
+      "title": "PriorVLA: Prior-Preserving Adaptation for Vision-Language-Action Models",
+      "year": 2026,
+      "venue": "NeurIPS",
+      "publication_status": "official_program",
+      "registry_paper_id": null,
+      "registry_overview": null,
+      "review_depth": "OFFICIAL_ABSTRACT",
+      "review_locations": "Official program abstract, read-only HTML retrieval",
+      "source_urls": [
+        "https://neurips.cc/virtual/2026/poster/148893"
+      ],
+      "supported_fact": "Frozen prior expert와 adaptation expert를 결합.",
+      "boundary": "Abstract만으로 RL 연구라고 분류하지 않음."
+    },
+    {
+      "key": "S31",
+      "title": "Prompt-Driven Exploration",
+      "year": 2026,
+      "venue": "NeurIPS",
+      "publication_status": "official_program",
+      "registry_paper_id": null,
+      "registry_overview": null,
+      "review_depth": "OFFICIAL_ABSTRACT",
+      "review_locations": "Official program abstract, read-only HTML retrieval",
+      "source_urls": [
+        "https://neurips.cc/virtual/2026/poster/150317"
+      ],
+      "supported_fact": "Prompt distribution을 통한 structured exploration과 posterior sampling 관점.",
+      "boundary": "Frozen policy prompt 변화와 actor RL update를 동일한 개념으로 쓰지 않음."
+    },
+    {
+      "key": "S32",
+      "title": "TIC-VLA: A Think-in-Control Vision-Language-Action Model for Robot Navigation in Dynamic Environments",
+      "year": 2026,
+      "venue": "ICML",
+      "publication_status": "registry_publication_with_current_source_check",
+      "registry_paper_id": "pr-0151",
+      "registry_overview": "2026/ICML/2026_ICML_TIC-VLA-A-Think-in-Control-Vision-Language-Action-Model-fo/01_overview.md",
+      "review_depth": "OFFICIAL_ABSTRACT",
+      "review_locations": "Official PMLR abstract",
+      "source_urls": [
+        "https://openreview.net/forum?id=9wYjjPydfe"
+      ],
+      "supported_fact": "Delayed semantic state/latency metadata와 IL+online RL로 dynamic navigation.",
+      "boundary": "해당 확인 범위를 넘는 성능·신규성·재현성은 검증하지 않음"
+    },
+    {
+      "key": "S33",
+      "title": "Performant robotic manipulation with real-world reinforcement learning",
+      "year": 2026,
+      "venue": "Science Robotics",
+      "publication_status": "registry_publication_with_current_source_check",
+      "registry_paper_id": "pr-0959",
+      "registry_overview": "2026/Science-Robotics/2026_Science-Robotics_Performant-robotic-manipulation-with-real-world-reinforcem/01_overview.md",
+      "review_depth": "PREPRINT_ABSTRACT",
+      "review_locations": "Author arXiv v4 abstract; publication metadata",
+      "source_urls": [
+        "https://doi.org/10.1126/scirobotics.aed6267",
+        "https://arxiv.org/abs/2510.14830",
+        "https://pubmed.ncbi.nlm.nih.gov/42485441/"
+      ],
+      "supported_fact": "Diffusion visuomotor offline→online RL과 consistency distillation.",
+      "boundary": "Science Robotics publisher 403. Journal full text 미확인. Diffusion robot RL이며 언어 VLA라고 확장하지 않음."
+    },
+    {
+      "key": "S34",
+      "title": "Foresight Residual RL for Long-Horizon Robot Manipulation with Vision-Language-Action Models",
+      "year": 2026,
+      "venue": "arXiv",
+      "publication_status": "registry_preprint_status_retained",
+      "registry_paper_id": "pr-1012",
+      "registry_overview": "2026/arXiv/2026_arXiv_Foresight-Residual-RL-for-Long-Horizon-Robot-Manipulation/01_overview.md",
+      "review_depth": "REGISTRY_CONTEXT",
+      "review_locations": "Existing registry and prior candidate review",
+      "source_urls": [
+        "https://arxiv.org/abs/2607.16506"
+      ],
+      "supported_fact": "Long-horizon chaining의 terminal-state quality와 residual RL을 다룬 기존 직접 선행.",
+      "boundary": "해당 확인 범위를 넘는 성능·신규성·재현성은 검증하지 않음"
+    },
+    {
+      "key": "S35",
+      "title": "EXPO: Stable Reinforcement Learning with Expressive Policies",
+      "year": 2026,
+      "venue": "ICLR",
+      "publication_status": "official_proceedings",
+      "registry_paper_id": "pr-1093",
+      "registry_overview": "2026/ICLR/2026_ICLR_EXPO-Stable-Reinforcement-Learning-with-Expressive-Policie/01_overview.md",
+      "review_depth": "SELECTED_FULL_TEXT",
+      "review_locations": "arXiv v3 §4 / Algorithm 1; official repo expo/agents/sac/expo_learner.py update/update_actor/update_edit_actor",
+      "source_urls": [
+        "https://proceedings.iclr.cc/paper_files/paper/2026/hash/d56a652ad743308b24b6c4d0e6411dd7-Abstract-Conference.html",
+        "https://arxiv.org/html/2507.07986v3",
+        "https://github.com/pd-perry/EXPO/tree/bbd571306b413e05d5d4b01a6efa20352c2b891a"
+      ],
+      "supported_fact": "Base imitation and edit-policy Q updates occur together; Q selects base/edited actions.",
+      "boundary": "Code read, not executed. Independent base-release swap with frozen old editor not established in checked sections."
+    },
+    {
+      "key": "S36",
+      "title": "EXPO-FT: Sample-Efficient Reinforcement Learning Finetuning for Vision-Language-Action Models",
+      "year": 2026,
+      "venue": "CoRL",
+      "publication_status": "official_accepted_list",
+      "registry_paper_id": "pr-1094",
+      "registry_overview": "2026/CoRL/2026_CoRL_EXPO-FT-Sample-Efficient-Reinforcement-Learning-Finetuning/01_overview.md",
+      "review_depth": "SELECTED_FULL_TEXT",
+      "review_locations": "arXiv v1 §4.2–4.3 / Appendix C; pinned expo_ft.py update_actor and _update_jit; official README",
+      "source_urls": [
+        "https://www.corl.org/program/accepted-papers",
+        "https://openreview.net/forum?id=U3Nmrhun8B",
+        "https://arxiv.org/html/2605.25477v1",
+        "https://pd-perry.github.io/expo-ft/",
+        "https://github.com/pd-perry/expo-ft/tree/21fe3d3b7d913c80836496817965932f49e0aedf"
+      ],
+      "supported_fact": "Chunk-level VLA/editor co-adaptation; code update_actor invokes actor.train_step. Frozen image encoder does not imply whole VLA frozen.",
+      "boundary": "CoRL acceptance separate from read arXiv version; no final-PDF equivalence claim. DROID/pi0.5 release is not a ready LIBERO/OpenVLA baseline."
+    },
+    {
+      "key": "S37",
+      "title": "Policy Decorator: Model-Agnostic Online Refinement for Large Policy Model",
+      "year": 2025,
+      "venue": "ICLR",
+      "publication_status": "official_proceedings",
+      "registry_paper_id": "pr-1095",
+      "registry_overview": "2025/ICLR/2025_ICLR_Policy-Decorator-Model-Agnostic-Online-Refinement-for-Larg/01_overview.md",
+      "review_depth": "SELECTED_FULL_TEXT",
+      "review_locations": "Final proceedings PDF §4.1–4.3; selected Appendix B.5; frozen/transfer keyword screening",
+      "source_urls": [
+        "https://proceedings.iclr.cc/paper_files/paper/2025/hash/45c361d4117d598d4bb6568b407e9ac9-Abstract-Conference.html",
+        "https://proceedings.iclr.cc/paper_files/paper/2025/file/45c361d4117d598d4bb6568b407e9ac9-Paper-Conference.pdf"
+      ],
+      "supported_fact": "Frozen base, bounded residual SAC and controlled exploration; BeT/DP method application.",
+      "boundary": "Model-agnostic method application is not evidence of the same learned weights transferred. All 36 pages not manually reviewed; code not audited."
+    },
+    {
+      "key": "S38",
+      "title": "FIRe: Force-Informed Residual Policy for Contact-Rich Manipulation with Vision-Language-Action Models",
+      "year": 2026,
+      "venue": "status unverified",
+      "publication_status": "author_page_submitted_to_RA_L_not_accepted",
+      "registry_paper_id": null,
+      "registry_overview": null,
+      "review_depth": "AUTHOR_PROJECT",
+      "review_locations": "Author project Abstract / Methodology / RQ5 / Implementation settings",
+      "source_urls": [
+        "https://rcilab.khu.ac.kr/FIRe/"
+      ],
+      "supported_fact": "Author explicitly claims same residual policy across GR00T, pi0.5 and OpenVLA; force/proprio/relative-pose contact controller.",
+      "boundary": "RA-L submission only. Paper/code coming soon; linked PDF returns 404; no checkpoint-level training provenance. Counts as a public collision claim, not independently verified transfer."
+    },
+    {
+      "key": "S39",
+      "title": "Accelerating Residual Reinforcement Learning With Uncertainty Estimation",
+      "year": 2026,
+      "venue": "RA-L",
+      "publication_status": "author_accepted_and_publisher_deposited_issue_metadata",
+      "registry_paper_id": "pr-1096",
+      "registry_overview": "2026/RA-L/2026_RA-L_Accelerating-Residual-Reinforcement-Learning-With-Uncertai/01_overview.md",
+      "review_depth": "SELECTED_FULL_TEXT",
+      "review_locations": "v2 IV-B / V-D; official assymetric_sac.py critic_loss_fn and actor complete-action path",
+      "source_urls": [
+        "https://doi.org/10.1109/LRA.2025.3636808",
+        "https://ieeexplore.ieee.org/document/11267054",
+        "https://arxiv.org/html/2506.17564v2",
+        "https://lakshitadodeja.github.io/uncertainty-aware-residual-rl/",
+        "https://github.com/lakshitadodeja/uncertainty_aware_residual_rl/tree/8125f33dcf490d4cf93d57a27d3e1963a47f52ea"
+      ],
+      "supported_fact": "Combined-action critic is established; official implementation scores residual plus base action.",
+      "boundary": "IEEE page JS challenge. Author acceptance and publisher-deposited Crossref metadata identify RA-L 11(1), January 2026; acceptance reported 2025. Code not executed; TD3 contract is not SAC-paper reproduction."
+    },
+    {
+      "key": "S40",
+      "title": "Overcoming Exploration in Reinforcement Learning with Demonstrations",
+      "year": 2018,
+      "venue": "ICRA",
+      "publication_status": "publisher_deposited_doi_metadata",
+      "registry_paper_id": "pr-1097",
+      "registry_overview": "2018/ICRA/2018_ICRA_Overcoming-Exploration-in-Reinforcement-Learning-with-Demo/01_overview.md",
+      "review_depth": "SELECTED_FULL_TEXT",
+      "review_locations": "Author PDF Q-Filter subsection, Eq.8; publisher-deposited Crossref metadata",
+      "source_urls": [
+        "https://doi.org/10.1109/ICRA.2018.8463162",
+        "https://arxiv.org/abs/1709.10089",
+        "https://arxiv.org/pdf/1709.10089"
+      ],
+      "supported_fact": "Q-filter applies imitation only when teacher action is valued above actor action.",
+      "boundary": "Foundation outside 2024–2026 trend count; publisher page JS limited. Original algorithm/code not reproduced."
+    },
+    {
+      "key": "S41",
+      "title": "What Does It Take For A Generalist Robot Policy To Adapt Using Minimal Data?",
+      "year": 2026,
+      "venue": "arXiv",
+      "publication_status": "preprint_and_corl_r2rl_workshop_listing_not_main_track",
+      "registry_paper_id": null,
+      "registry_overview": null,
+      "review_depth": "SELECTED_FULL_TEXT",
+      "review_locations": "v3 Oct21 §4/6; Appendix E/I.4/J; v1 was discovery only",
+      "source_urls": [
+        "https://arxiv.org/abs/2608.11363",
+        "https://arxiv.org/html/2608.11363v3",
+        "https://minimal-data-adaptation.github.io/",
+        "https://r2rl-workshop.github.io/"
+      ],
+      "supported_fact": "Few-demonstration VLA adaptation uses value-based residual learning; representation/data balance and filtered imitation are investigated; DICE shares core principles.",
+      "boundary": "Latest title differs from v1 Adaptation of Generalist Robot Policies with Minimal Data. Workshop listing is not main acceptance. No training repo identified on checked project page; paper not fully reviewed."
+    },
+    {
+      "key": "S42",
+      "title": "From Prior to Pro: Efficient Skill Mastery via Distribution Contractive RL Finetuning",
+      "year": 2026,
+      "venue": "ICML",
+      "publication_status": "official_proceedings",
+      "registry_paper_id": "pr-1098",
+      "registry_overview": "2026/ICML/2026_ICML_From-Prior-to-Pro-Efficient-Skill-Mastery-via-Distribution/01_overview.md",
+      "review_depth": "SELECTED_FULL_TEXT",
+      "review_locations": "v2 §4; README and model/rl/distill_residual_rl_img.py selected filter/loss paths",
+      "source_urls": [
+        "https://proceedings.mlr.press/v306/sun26al.html",
+        "https://arxiv.org/html/2603.10263v2",
+        "https://zhanyisun.github.io/dice.rl.2026/",
+        "https://github.com/zhanyisun/dice-rl/tree/98d936e52523878f0172e606ea32403176497100"
+      ],
+      "supported_fact": "DICE-RL freezes prior, learns chunk residuals with selective regularization and value selection; code has Q/Monte-Carlo filtering.",
+      "boundary": "Our deterministic TD3/Q-filter controls are not full DICE reproduction. Public Robomimic/flow implementation is not a ready OpenVLA/LIBERO adapter."
+    }
+  ],
+  "candidates": [
+    {
+      "id": "VRL-1",
+      "name": "Residual policy adaptation across independent VLA updates",
+      "selection": "PRIORITY_1_DESIGN_READY_EXPLORATION",
+      "evidence_maturity": "CURATION-HYPOTHESIS",
+      "source_keys": [
+        "S16",
+        "S17",
+        "S19",
+        "S11",
+        "S35",
+        "S36",
+        "S37",
+        "S38",
+        "S39",
+        "S40",
+        "S41",
+        "S42"
+      ],
+      "unknowns": [
+        "exact A-SHA parent of B despite author SFT-to-RL model-card lineage",
+        "native load/controller compatibility and A residual trainability",
+        "whether a frozen residual or scalar gain already suffices",
+        "base-action versus visitation shift and obsolete correction",
+        "sample-efficiency advantage beyond warm-start, imitation and EXPO-like selection",
+        "Q-filter/two-reference composition has weak independent algorithmic novelty; native multi-update evidence needed"
+      ],
+      "not_a_claim": [
+        "negative transfer observed",
+        "novel method established",
+        "cross-embodiment transfer"
+      ]
+    },
+    {
+      "id": "VRL-2",
+      "name": "Coverage-aware counterfactual reward learning",
+      "selection": "PRIORITY_2_EXPLORATION",
+      "evidence_maturity": "CURATION-HYPOTHESIS",
+      "source_keys": [
+        "S18"
+      ],
+      "unknowns": [
+        "valid/invalid/common-prefix witnesses",
+        "coverage-dependent error beyond existing filter and nnPU",
+        "native offline RL effect beyond simple balancing"
+      ],
+      "analytic_observation": "For fixed features/query, enlarging reference support cannot decrease max similarity; membership in a bounded threshold interval need not be invariant. Duplicate repetition alone need not change the max.",
+      "not_a_claim": [
+        "CounterAlign ignores false negatives",
+        "CounterAlign uses only text similarity",
+        "observed performance degradation"
+      ]
+    },
+    {
+      "id": "VRL-3",
+      "name": "Observation-constrained RL-to-VLA distillation",
+      "selection": "RESERVE_OVERLAPS_PRIOR_GAP_CF",
+      "evidence_maturity": "CURATION-HYPOTHESIS",
+      "source_keys": [
+        "S02",
+        "S04",
+        "S16",
+        "S17"
+      ],
+      "unknowns": [
+        "new comparison beyond privileged distillation/DAgger",
+        "distinguish observability from representation/optimization error"
+      ]
+    },
+    {
+      "id": "VRL-4",
+      "name": "Independent validation for model-based VLA RL",
+      "selection": "RESERVE_HIGH_COST_AND_COLLISION",
+      "evidence_maturity": "CURATION-HYPOTHESIS",
+      "source_keys": [
+        "S12",
+        "S13",
+        "S15",
+        "S20",
+        "S25",
+        "S26"
+      ],
+      "unknowns": [
+        "difference beyond MERL/RAW-Dream/SOLE-R1",
+        "independent real task validation",
+        "benefit under matched real interaction budget"
+      ]
+    }
+  ],
+  "admission_review_candidates": [
+    {
+      "source_key": "S02",
+      "title": "HumanVLA: Towards Vision-Language Directed Object Rearrangement by Physical Humanoid",
+      "reason": "RL teacher→VLA distillation의 2024 선행",
+      "action": "not_registered_this_turn; verify identity/version and use register_papers.py if selected"
+    },
+    {
+      "source_key": "S14",
+      "title": "A Generalist Pair-wise Progress Critic Model for Vision-Language-Action Robots",
+      "reason": "최신 직접 충돌/비교 자료; quota 목적 일괄 등록하지 않음",
+      "action": "not_registered_this_turn; verify identity/version and use register_papers.py if selected"
+    },
+    {
+      "source_key": "S15",
+      "title": "RehearseVLA: Simulated Post-Training for VLAs with Physically-Consistent World Model",
+      "reason": "최신 직접 충돌/비교 자료; quota 목적 일괄 등록하지 않음",
+      "action": "not_registered_this_turn; verify identity/version and use register_papers.py if selected"
+    },
+    {
+      "source_key": "S16",
+      "title": "Self-Improving Vision-Language-Action Models with Data Generation via Residual RL",
+      "reason": "우선 후보의 직접 비교 선행",
+      "action": "registered_2026-11-03: pr-1091"
+    },
+    {
+      "source_key": "S17",
+      "title": "Object-Centric Residual RL for Zero-Shot Sim-to-Real VLA Enhancement",
+      "reason": "우선 후보의 직접 비교 선행",
+      "action": "registered_2026-11-03: pr-1092"
+    },
+    {
+      "source_key": "S19",
+      "title": "VLaRL: Augmenting Vision-Language-Action Models with Simulation-Trained Latent-Conditioned Residual RL",
+      "reason": "최신 직접 충돌/비교 자료; quota 목적 일괄 등록하지 않음",
+      "action": "not_registered_this_turn; verify identity/version and use register_papers.py if selected"
+    },
+    {
+      "source_key": "S20",
+      "title": "Trust-Calibrated VLA Policy Post-Training with Evolving Imagination",
+      "reason": "최신 직접 충돌/비교 자료; quota 목적 일괄 등록하지 않음",
+      "action": "not_registered_this_turn; verify identity/version and use register_papers.py if selected"
+    },
+    {
+      "source_key": "S21",
+      "title": "PAPO-VLA: Planning-Aware Policy Optimization for Vision-Language-Action Models",
+      "reason": "최신 직접 충돌/비교 자료; quota 목적 일괄 등록하지 않음",
+      "action": "not_registered_this_turn; verify identity/version and use register_papers.py if selected"
+    },
+    {
+      "source_key": "S22",
+      "title": "FineVLA: Fine-Grained Instruction Alignment for Steerable Vision-Language-Action Policies",
+      "reason": "최신 직접 충돌/비교 자료; quota 목적 일괄 등록하지 않음",
+      "action": "not_registered_this_turn; verify identity/version and use register_papers.py if selected"
+    },
+    {
+      "source_key": "S23",
+      "title": "LiFT: Likelihood-Free Tree-Structured Policy Optimization for Flow-Based VLAs",
+      "reason": "최신 직접 충돌/비교 자료; quota 목적 일괄 등록하지 않음",
+      "action": "not_registered_this_turn; verify identity/version and use register_papers.py if selected"
+    },
+    {
+      "source_key": "S24",
+      "title": "VISTA: Support-Anchored Value Targeting for Fast Flow-Based Vision-Language-Action Policies",
+      "reason": "최신 직접 충돌/비교 자료; quota 목적 일괄 등록하지 않음",
+      "action": "not_registered_this_turn; verify identity/version and use register_papers.py if selected"
+    },
+    {
+      "source_key": "S25",
+      "title": "Reinforcing VLAs in Task-Agnostic World Models",
+      "reason": "최신 직접 충돌/비교 자료; quota 목적 일괄 등록하지 않음",
+      "action": "not_registered_this_turn; verify identity/version and use register_papers.py if selected"
+    },
+    {
+      "source_key": "S26",
+      "title": "SOLE-R1: Video-Language Reasoning as the Sole Reward for On-Robot Reinforcement Learning",
+      "reason": "최신 직접 충돌/비교 자료; quota 목적 일괄 등록하지 않음",
+      "action": "not_registered_this_turn; verify identity/version and use register_papers.py if selected"
+    },
+    {
+      "source_key": "S27",
+      "title": "RePO-VLA: Recovery-Driven Policy Optimization for Vision-Language-Action Models",
+      "reason": "최신 직접 충돌/비교 자료; quota 목적 일괄 등록하지 않음",
+      "action": "not_registered_this_turn; verify identity/version and use register_papers.py if selected"
+    },
+    {
+      "source_key": "S28",
+      "title": "OGPO: Offline Goal-conditioned Policy Optimization for Recoverable Vision-Language-Action Models",
+      "reason": "최신 직접 충돌/비교 자료; quota 목적 일괄 등록하지 않음",
+      "action": "not_registered_this_turn; verify identity/version and use register_papers.py if selected"
+    },
+    {
+      "source_key": "S29",
+      "title": "Never Stop Learning: Test-Time Reinforcement Learning for Vision-Language-Action Models",
+      "reason": "최신 직접 충돌/비교 자료; quota 목적 일괄 등록하지 않음",
+      "action": "not_registered_this_turn; verify identity/version and use register_papers.py if selected"
+    },
+    {
+      "source_key": "S30",
+      "title": "PriorVLA: Prior-Preserving Adaptation for Vision-Language-Action Models",
+      "reason": "최신 직접 충돌/비교 자료; quota 목적 일괄 등록하지 않음",
+      "action": "not_registered_this_turn; verify identity/version and use register_papers.py if selected"
+    },
+    {
+      "source_key": "S31",
+      "title": "Prompt-Driven Exploration",
+      "reason": "최신 직접 충돌/비교 자료; quota 목적 일괄 등록하지 않음",
+      "action": "not_registered_this_turn; verify identity/version and use register_papers.py if selected"
+    },
+    {
+      "source_key": "S35",
+      "title": "EXPO: Stable Reinforcement Learning with Expressive Policies",
+      "reason": "Direct residual/editor baseline and collision for independent VLA-update adaptation",
+      "action": "registered_2026-11-03: pr-1093"
+    },
+    {
+      "source_key": "S36",
+      "title": "EXPO-FT: Sample-Efficient Reinforcement Learning Finetuning for Vision-Language-Action Models",
+      "reason": "Direct residual/editor baseline and collision for independent VLA-update adaptation",
+      "action": "registered_2026-11-03: pr-1094"
+    },
+    {
+      "source_key": "S37",
+      "title": "Policy Decorator: Model-Agnostic Online Refinement for Large Policy Model",
+      "reason": "Direct residual/editor baseline and collision for independent VLA-update adaptation",
+      "action": "registered_2026-11-03: pr-1095"
+    },
+    {
+      "source_key": "S39",
+      "title": "Accelerating Residual Reinforcement Learning With Uncertainty Estimation",
+      "reason": "Direct criterion/regularization baseline for VLA-update residual reuse; S40 is foundation",
+      "action": "registered_2026-11-03: pr-1096"
+    },
+    {
+      "source_key": "S40",
+      "title": "Overcoming Exploration in Reinforcement Learning with Demonstrations",
+      "reason": "Direct criterion/regularization baseline for VLA-update residual reuse; S40 is foundation",
+      "action": "registered_2026-11-03: pr-1097"
+    },
+    {
+      "source_key": "S41",
+      "title": "What Does It Take For A Generalist Robot Policy To Adapt Using Minimal Data?",
+      "reason": "Direct criterion/regularization baseline for VLA-update residual reuse; S40 is foundation",
+      "action": "not_registered_in_R2; admission and five-note review remain separate"
+    },
+    {
+      "source_key": "S42",
+      "title": "From Prior to Pro: Efficient Skill Mastery via Distribution Contractive RL Finetuning",
+      "reason": "Direct criterion/regularization baseline for VLA-update residual reuse; S40 is foundation",
+      "action": "registered_2026-11-03: pr-1098"
+    }
+  ],
+  "source_anomalies": [
+    {
+      "paper": "VLA-MBPO",
+      "issue": "Official ICML PMLR page versus ICLR header in a search-indexed OpenReview PDF",
+      "decision": "Prefer official PMLR for this survey; no registry mutation or duplicate; investigate before source reconciliation"
+    },
+    {
+      "paper": "Science Robotics papers",
+      "issue": "Publisher full text access limited",
+      "decision": "Publication metadata and author project/preprint scopes separated"
+    },
+    {
+      "paper": "OpenReview forums",
+      "issue": "Browser verification challenge on direct page opens",
+      "decision": "Official program/accepted-title list plus author primary text; no bypassed authenticated access"
+    },
+    {
+      "paper": "GRAD-NAV++",
+      "url": "https://ieeexplore.ieee.org/document/11297793/",
+      "issue": "Publisher search metadata RA-L 2026 issue; page JS challenge",
+      "decision": "Discovery only, excluded from core source-card count and gap evidence"
+    },
+    {
+      "paper": "FIRe",
+      "issue": "Author page says RA-L submitted / paper and code coming soon; hidden PDF URL returns HTTP 404",
+      "decision": "Use project claim as collision evidence, no acceptance or full-text claim; do not register as accepted paper"
+    },
+    {
+      "paper": "SimpleVLA-RL checkpoint pair",
+      "issue": "Model card states one-trajectory SFT then RL, while config retains an old traj10 path and no exact A revision parent",
+      "decision": "Public same-task SFT/RL replacement candidate; exact run lineage unknown"
+    },
+    {
+      "paper": "SimpleVLA-RL constants",
+      "issue": "Pinned constants auto-detection maps libero CLI text to ALOHA; official script explicitly exports ROBOT_PLATFORM=LIBERO",
+      "decision": "Future loader must set LIBERO explicitly and assert 8x7 before native execution"
+    },
+    {
+      "paper": "EXPO-FT",
+      "issue": "Some external summaries say entire base frozen, contrary to selected paper text and actor.train_step code",
+      "decision": "Use primary paper/code; frozen image encoder distinguished from base actor training"
+    },
+    {
+      "paper": "MiDAS",
+      "issue": "v1 and latest v3 title/appendix differ",
+      "decision": "Use v3 Oct21; CoRL R2RL workshop listing is not main-track acceptance"
+    },
+    {
+      "paper": "R2 actor feature interface",
+      "issue": "A config JSON omits explicit text hidden_size; inspected source projects visual patches to language embedding space",
+      "decision": "Read d from loaded config/output in P0; use state_dim=2*d+24; no asserted native feature shape"
+    }
+  ],
+  "execution": {
+    "experiments": 0,
+    "model_inference": 0,
+    "training": 0,
+    "docker_checks": 0,
+    "local_pdf_downloads": 0,
+    "host_dependency_installs": 0,
+    "registry_admissions": 0,
+    "reading_status_changes": 0
+  },
+  "validation": {
+    "state": "passed",
+    "generator_compile": "passed; temporary bytecode removed",
+    "generator_run": "passed; CORE 47 / NEXT 314 / REFERENCE 487 / ARCHIVE 242 unchanged",
+    "post_audit": {
+      "papers": 1090,
+      "standard_note_files": 5450,
+      "markdown_files_checked": 5652,
+      "markdown_links_checked": 11606,
+      "errors": 0,
+      "warnings": 0
+    },
+    "git_diff_check": "passed",
+    "git_diff_cached_check": "passed",
+    "new_files_whitespace_and_json": "passed",
+    "source_keys_counts_and_registry_identity_check": "passed",
+    "protected_files_unchanged": 5782,
+    "staged_index_preserved": true,
+    "pre_audit": {
+      "papers": 1090,
+      "notes": 5450,
+      "errors": 0,
+      "warnings": 0
+    },
+    "protected_files": 5782,
+    "staged_index_before": "0e8db46a624a0ad7e38ce9a6d484c80658cd6973608cbc0d6a0558cc4848ab51"
+  },
+  "initial_s1_scope": {
+    "registry_entries_screened_as_metadata": 1090,
+    "registry_full_texts_read": 0,
+    "registry_full_texts_read_note": "1090편 전체 정독은 하지 않음; 선택 절 확인은 source별 기록",
+    "source_cards": 34,
+    "already_registered": 16,
+    "external_not_registered": 18,
+    "by_year": {
+      "2024": 2,
+      "2025": 8,
+      "2026": 24
+    },
+    "by_review_depth": {
+      "REGISTRY_CONTEXT": 2,
+      "OFFICIAL_ABSTRACT": 25,
+      "AUTHOR_PROJECT": 1,
+      "SELECTED_FULL_TEXT": 4,
+      "PREPRINT_ABSTRACT": 2
+    },
+    "completeness": "targeted broad survey, not exhaustive proceedings coverage"
+  },
+  "r1_review": {
+    "work_id": "GAP-VRL-R1",
+    "checked_on": "2026-11-03",
+    "status": "DONE_NONEXPERIMENTAL",
+    "decision": "CONTINUE_EXPLORATION_NARROWED",
+    "evidence_maturity": "CURATION-HYPOTHESIS",
+    "question": "Can a residual trained with A be adapted cheaply to an independently supplied B while retaining B's improvements and useful old corrections?",
+    "not_novel_by_itself": [
+      "same residual transferred across bases",
+      "base action conditioning",
+      "base/editor co-training",
+      "Q selection of base versus corrected action",
+      "scalar gain, warm start or multi-base training"
+    ],
+    "coverage": {
+      "direct_sources": [
+        "S16",
+        "S17",
+        "S19"
+      ],
+      "new_collisions": [
+        "S35",
+        "S36",
+        "S37",
+        "S38"
+      ],
+      "artifact_source": "S11",
+      "review_boundary": "Selected primary text/appendix and public source inspection; PLD/Object-Centric final conference text unavailable; no absence-of-all-prior-work claim"
+    },
+    "code_reviews": [
+      {
+        "source_key": "S35",
+        "repo": "https://github.com/pd-perry/EXPO",
+        "commit": "bbd571306b413e05d5d4b01a6efa20352c2b891a",
+        "files": [
+          "expo/agents/sac/expo_learner.py"
+        ],
+        "finding": "update calls update_actor and update_edit_actor",
+        "executed": false
+      },
+      {
+        "source_key": "S36",
+        "repo": "https://github.com/pd-perry/expo-ft",
+        "commit": "21fe3d3b7d913c80836496817965932f49e0aedf",
+        "files": [
+          "README.md",
+          "train_pi_robo_async.py",
+          "expo_ft/agents/alg/expo_ft.py"
+        ],
+        "finding": "update_actor -> actor.train_step; _update_jit invokes base update; current release also includes Real-Time EXPO-FT; not a ready LIBERO adapter",
+        "executed": false
+      },
+      {
+        "source_key": "S11",
+        "repo": "https://github.com/PRIME-RL/SimpleVLA-RL",
+        "commit": "7c51662df27b586f9e8a1ab35fcf849f2b8852f9",
+        "files": [
+          "README.md",
+          "examples/run_openvla_oft_rl_libero.sh",
+          "verl/workers/rollout/rob_rollout.py",
+          "verl/utils/vla_utils/openvla_oft/constants.py",
+          "verl/utils/vla_utils/openvla_oft/modeling_prismatic.py"
+        ],
+        "executed": false
+      }
+    ],
+    "checkpoint_candidate": {
+      "status": "METADATA_COMPATIBLE_NATIVE_UNVERIFIED",
+      "executable": false,
+      "source_key": "S11",
+      "suite": "libero_10 / LIBERO-Long",
+      "A": {
+        "repo": "Haozhan72/Openvla-oft-SFT-libero10-traj1",
+        "revision": "679a2cc1504b905e6cd954a46c80a9408a8ba3e0",
+        "declared_dtype": "bfloat16",
+        "shards": 4,
+        "index_total_tensor_bytes": 15082474368,
+        "index_sha256": "ca8b53fed8133ee2afcd2fc483de8febf7f5bb0f6bcb09f91189772e59e8f659"
+      },
+      "B": {
+        "repo": "Haozhan72/openvla-oft-libero10-traj1-rl",
+        "revision": "d44ac12c3431fc1d2a4579d2e768bbeba60054d4",
+        "declared_dtype": "float32",
+        "shards": 7,
+        "index_total_tensor_bytes": 30164948736,
+        "index_sha256": "a3c19af597d708e22a78601322aeef9ad991dca480f5a354a95af1b2b93633b8"
+      },
+      "both_ungated": true,
+      "license_metadata": "mit",
+      "architecture": "OpenVLAForActionPrediction",
+      "parameter_key_count": 982,
+      "parameter_key_sets_equal": true,
+      "parameter_shapes_or_weights_checked": false,
+      "same_metadata_blobs": {
+        "modeling_prismatic_py": "a33206efe121628a3427b7513039ac252ee5ecf9",
+        "dataset_statistics_json": "52e73d28590cd26bca7859fb52915417ffaf92b7",
+        "preprocessor_config_json": "92975ace548590d24f65f497d7610af3b92b4dcd",
+        "tokenizer_json": "591f1fc6ff695d967513100f707e66d5bf731414"
+      },
+      "normalizer": {
+        "file": "dataset_statistics.json",
+        "sha256": "dbe516987e8124416af39c32d3f39ce2137ccb4e282adc590bb4bcede09fb5e1",
+        "hash_scope": "fetched metadata bytes, not weights",
+        "key": "libero_10_no_noops",
+        "normalization": "q01/q99; last/gripper mask false",
+        "bytes_equal": true
+      },
+      "config_differences": [
+        "_name_or_path",
+        "B has bos_token_id=1 and eos_token_id=2",
+        "torch_dtype bfloat16 versus float32"
+      ],
+      "lineage": "B model card: one-trajectory-per-task SFT followed by SimpleVLA-RL; exact A revision parent not attested; stale config path says traj10",
+      "input_action_candidate": {
+        "robot_platform_env": "LIBERO",
+        "rgb_size": [
+          224,
+          224
+        ],
+        "num_images_in_input": 1,
+        "vla_proprio": false,
+        "language": true,
+        "action_chunks_len": 8,
+        "action_dim": 7,
+        "decode": "SimpleVLA discrete head; not official OFT continuous MLP checkpoint",
+        "gripper": "retain original normalize/binarize/invert sequence",
+        "initial_decode_proposal": "same deterministic decode for both; original train temperature is not evaluation setting",
+        "control_rate_hz": null
+      },
+      "limitations": [
+        "No weights downloaded or checksummed locally",
+        "No native load, step rate, memory, CUDA/EGL validation",
+        "HF code-file equality does not verify loader implementation compatibility",
+        "No trained residual checkpoint secured",
+        "One pair cannot establish general transfer; A may be weak or B near ceiling"
+      ]
+    },
+    "analysis": {
+      "keep_old_composite": "c_A=a_A+r_A(o,a_A); r_keep=c_A-a_B => a_B+r_keep=c_A in consistent additive coordinates. This preserves old composite, not B gains.",
+      "composition_boundary": "Same clipping/filter/queue required; quaternion composition requires group inverse; charge both A/B queries.",
+      "minimal_arms": [
+        "A",
+        "A+rA frozen",
+        "B",
+        "B+rA frozen",
+        "B+lambda*rA calibration lambda in {0,0.25,0.5,1}",
+        "retain A+rA / recenter equivalence",
+        "warm-start residual on B vs fresh residual on B at matched new interaction/update budget"
+      ],
+      "strong_followups": [
+        "same-data success-only and return-weighted imitation",
+        "EXPO-style base/edited Q selection or co-adaptation at matched cost"
+      ],
+      "scientific_prediction": "Selective adaptation may remove obsolete A corrections while keeping corrections still useful with B; effect/estimator unproven.",
+      "fairness": [
+        "Train/calibration/evaluation seeds separate",
+        "Hold robot/task/action units/controller and decoding fixed",
+        "Freeze residual observation encoder for first study",
+        "Record actor versus critic/replay transfer explicitly",
+        "No privileged state in observable-policy claim",
+        "Matched new interactions, resets, base queries, compute and old-residual sunk cost separately"
+      ],
+      "success_metric": "Episode success over matched initial-state distribution; delta J(B+r)-J(B) and J(A+r)-J(A); adaptation learning curves/cost; no zero-shot success inference from action distances",
+      "next_contract_missing": [
+        "one residual baseline and learner",
+        "single estimator/objective",
+        "residual observation/action representation",
+        "finite training/calibration/evaluation budgets",
+        "native simulator/controller lock and adapter"
+      ]
+    },
+    "next": {
+      "work_id": "GAP-VRL-R2",
+      "scope": "One small comparison contract and adaptation hypothesis; no repeated literature census; before runtime implementation",
+      "fallback": "If simple alternatives exhaust useful gap, prioritize VRL-2; lack of GPU alone is not scientific rejection"
+    },
+    "execution": {
+      "experiments": 0,
+      "inference": 0,
+      "training": 0,
+      "docker_checks": 0,
+      "pdf_downloads": 0,
+      "weight_downloads": 0,
+      "host_dependency_installs": 0,
+      "registry_admissions": 0,
+      "reading_status_changes": 0
+    },
+    "validation": {
+      "state": "passed",
+      "pre_audit": {
+        "papers": 1090,
+        "notes": 5450,
+        "errors": 0,
+        "warnings": 0
+      },
+      "preservation_snapshot": "temporary external file; not a repository artifact",
+      "protected_file_count": 5994,
+      "protected_files_unchanged": 5994,
+      "staged_index_preserved": true,
+      "generator_compile": "passed; temporary bytecode removed",
+      "generator_run": "passed; tier counts and reading files unchanged",
+      "post_audit": {
+        "papers": 1090,
+        "standard_note_files": 5450,
+        "markdown_files_checked": 5652,
+        "markdown_links_checked": 11607,
+        "errors": 0,
+        "warnings": 0
+      },
+      "git_diff_check": "passed",
+      "git_diff_cached_check": "passed",
+      "source_keys_counts_and_whitespace": "passed",
+      "changed_scope": [
+        "TODO.md",
+        "synthesis/02_rl_il_offline.md",
+        "synthesis/04_vla_generalist.md",
+        "work/update/README.md",
+        "work/update/VLA_RL_GAP_REVIEW_2026-11-03.md",
+        "work/sources/vla_rl_gap_review_2026-11-03.json"
+      ]
+    }
+  },
+  "r2_review": {
+    "work_id": "GAP-VRL-R2",
+    "checked_on": "2026-11-03",
+    "status": "DONE_NONEXPERIMENTAL",
+    "decision": "DESIGN_READY_EXPLORATION_NATIVE_UNVERIFIED",
+    "evidence_maturity": "CURATION-HYPOTHESIS",
+    "contribution_hypothesis": "After an independently supplied VLA replacement, does selectively retaining the useful old correction or new-base action improve the success/cost tradeoff beyond gain, warm-start and fresh actor under matched new interactions and identical old data?",
+    "contribution_type": "Exploratory empirical/adaptation protocol first; standalone algorithmic novelty not established",
+    "direct_rule_sources": [
+      "S39",
+      "S40",
+      "S41",
+      "S42"
+    ],
+    "source_review_scope": "Targeted checks for combined-action critics, Q-filtering, selective anchors; not another broad literature census",
+    "code_reviews": [
+      {
+        "source_key": "S39",
+        "repo": "https://github.com/lakshitadodeja/uncertainty_aware_residual_rl",
+        "commit": "8125f33dcf490d4cf93d57a27d3e1963a47f52ea",
+        "files": [
+          "README.md",
+          "serl_launcher/serl_launcher/agents/continuous/assymetric_sac.py"
+        ],
+        "finding": "critic_loss_fn uses batch actual combined actions; actor and target add base and clip",
+        "executed": false
+      },
+      {
+        "source_key": "S42",
+        "repo": "https://github.com/zhanyisun/dice-rl",
+        "commit": "98d936e52523878f0172e606ea32403176497100",
+        "files": [
+          "README.md",
+          "model/rl/distill_residual_rl.py",
+          "model/rl/distill_residual_rl_img.py"
+        ],
+        "finding": "Selected regularization/filter paths use Q comparison and Monte-Carlo overestimation checks; full call graph/config not audited",
+        "executed": false
+      }
+    ],
+    "comparison_contract": {
+      "contract_version": 2,
+      "amendment": "2026-11-03 N1: clarify anchor-free A bootstrap/continuation; B adaptation design and budgets unchanged",
+      "status": "DESIGN_ONLY",
+      "executable": false,
+      "implemented": false,
+      "baseline_checkpoint_ref": "r1_review.checkpoint_candidate",
+      "task": {
+        "suite": "libero_10",
+        "name": "STUDY_SCENE1_pick_up_the_book_and_place_it_in_the_back_compartment_of_the_caddy",
+        "instruction": "pick up the book and place it in the back compartment of the caddy",
+        "success_predicate": "In black_book_1 desk_caddy_1_back_contain_region",
+        "selection_reason": "One-object placement; selected before native results, not performance-based",
+        "libero_repo": "https://github.com/Lifelong-Robot-Learning/LIBERO",
+        "libero_commit": "8f1084e3132a39270c3a13ebe37270a43ece2a01",
+        "primary_sources": [
+          "https://github.com/Lifelong-Robot-Learning/LIBERO/blob/8f1084e3132a39270c3a13ebe37270a43ece2a01/libero/libero/bddl_files/libero_10/STUDY_SCENE1_pick_up_the_book_and_place_it_in_the_back_compartment_of_the_caddy.bddl",
+          "https://github.com/Lifelong-Robot-Learning/LIBERO/blob/8f1084e3132a39270c3a13ebe37270a43ece2a01/libero/libero/envs/env_wrapper.py"
+        ],
+        "robot": "Panda",
+        "controller": "OSC_POSE",
+        "control_frequency_hz": 20,
+        "control_frequency_provenance": "Pinned wrapper default, native unverified",
+        "horizon_policy_control_steps": 520,
+        "warmup_control_steps_per_reset": 10,
+        "warmup_environment_action": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          -1
+        ],
+        "warmup_action_boundary": "already environment command; do not repeat VLA gripper conversion",
+        "reward": "1 at first native success, otherwise 0; terminal at success/deadline; collector budget cuts censored",
+        "package_lock": null,
+        "controller_config_hash": null,
+        "asset_hash": null
+      },
+      "observation": {
+        "vla_input": "Single RGB 224 with original processor/crop and fixed instruction; no proprio; same deterministic discrete decode and dtype on A/B",
+        "residual_encoder": "Frozen A vision_backbone + projector; mean visual patches, use_film=false; never replaced with B encoder",
+        "source": "https://github.com/PRIME-RL/SimpleVLA-RL/blob/7c51662df27b586f9e8a1ab35fcf849f2b8852f9/verl/utils/vla_utils/openvla_oft/modeling_prismatic.py#L467",
+        "history_chunk_boundaries": 2,
+        "feature_dimension": "d = loaded projected-feature width, assert native output against config",
+        "state_dimension": "2*d+24",
+        "proprio": "two 8-D EEF position/axis-angle/gripper observations; normalize by fixed A q01/q99",
+        "other_features": [
+          "last actually executed 7-D environment command",
+          "remaining fraction of 520-step policy horizon"
+        ],
+        "first_history": "duplicate current frame/proprio; last action equals warmup dummy env command",
+        "actor_input": "x plus normalized current base chunk [8,7]",
+        "critic_input": "x plus composite environment command chunk [8,7]",
+        "excluded": [
+          "hidden object pose",
+          "goal predicate as input",
+          "privileged critic",
+          "force",
+          "updated B latent features"
+        ],
+        "limitation": "Fixed instruction and two observation frames: no language generalization or full Markov sufficiency claim"
+      },
+      "action": {
+        "horizon": 8,
+        "executed_prefix": 8,
+        "residual_dimensions_per_step": 6,
+        "residual_shape": [
+          8,
+          6
+        ],
+        "base_shape": [
+          8,
+          7
+        ],
+        "actor_output": "tanh, u in [-1,1]",
+        "residual_scale": 0.1,
+        "scale_units": "normalized base-action quantile coordinates, not metres/radians",
+        "composition": "C_v: add alpha*u to first 6 normalized coordinates; clip to [-1,1]; original unnormalizer; original gripper binarize/invert; final controller input clip",
+        "gripper": "base only; no learned correction",
+        "zero_residual_check": "C_v(x,0) agrees with native base environment commands within dtype-appropriate tolerance fixed in P0",
+        "terminal_prefix": "store full commanded chunk, actual k<=8 and rewards; unused terminal suffix has no environmental effect; no future-dependent action feature mask"
+      },
+      "algorithm": {
+        "learner": "TD3 with value-filtered two-reference actor regularization; original experimental combination of established components, not claimed novel algorithm",
+        "networks": {
+          "actor_hidden": [
+            256,
+            256
+          ],
+          "critic_hidden": [
+            256,
+            256
+          ],
+          "activation": "ReLU",
+          "critics": 2,
+          "output_activation": "tanh"
+        },
+        "optimizer": "Adam",
+        "actor_lr": 0.0003,
+        "critic_lr": 0.0003,
+        "batch_size": 256,
+        "target_tau": 0.005,
+        "critic_updates_per_decision": 1,
+        "actor_update_delay": 2,
+        "gamma_per_control_step": 0.99,
+        "target_noise_std": 0.2,
+        "target_noise_clip": 0.5,
+        "exploration_noise_std": 0.1,
+        "noise_coordinate": "u before residual scaling, clamp u [-1,1]",
+        "eval_noise_std": 0,
+        "A_initialization": "zero final actor layer; 100 decision collection warmup; no actor/critic updates until 100 transitions",
+        "A_bootstrap": {
+          "objective": "anchor-free TD3: E[-Q1_A(x,C_A(x,u_theta))]",
+          "critic_target": "R_k + gamma^k*(1-done)*min_i Q_A_target_i(x_next,C_A(x_next,clamp(u_A_target+noise)))",
+          "teacher_and_anchor": "none; u_A teacher exists only after this training",
+          "replay": "A-stage actual transitions only; no old/new mixture before B stage",
+          "boundary": "The actor_objective/critic_target fields below describe B adaptation, not A bootstrap"
+        },
+        "teacher": "frozen copy u_A queried with B action chunk, not A action; no full A-policy query needed by P",
+        "masks": {
+          "old": "both target critics strictly rank c_old above c_0 and c_theta",
+          "base": "both target critics strictly rank c_0 above c_old and c_theta",
+          "ties_or_disagreement": "both zero",
+          "gradient": "stop_gradient on masks and teacher",
+          "margin": 0
+        },
+        "actor_objective": "E[-Q1(x,C_B(x,u_theta))+0.1*(w_old*mean((u_theta-u_old)^2)+w_0*mean(u_theta^2))]",
+        "critic_target": "R_k + gamma^k*(1-done)*min_i Q_target_i(x_next,C_B(x_next,clamp(u_target+noise)))",
+        "anchor_coefficient": 0.1,
+        "uncertainty_boundary": "Twin-critic agreement is not calibrated confidence or safety/regression guarantee",
+        "B_transfer": {
+          "actor": "warm start from A except F",
+          "encoder": "fixed A copy for all",
+          "old_teacher": "frozen A actor copy",
+          "A_critic_weights": "not transferred",
+          "A_optimizer_state": "not transferred",
+          "old_raw_data": "same D_A offered to all"
+        },
+        "B_critic_initialization": "New twins seed202; common B/B+rA probe and D_A; 500 critic-only updates under B-alone continuation, then identical weights and reset optimizer states copied to all arms",
+        "actor_target_initialization": "copy each arm's initial actor; no stale A target/optimizer",
+        "replay": {
+          "critic_mixture_old_new": [
+            0.5,
+            0.5
+          ],
+          "actor_states": "B-stage replay only",
+          "old_data": "keep actual commanded action/reward/k/next obs/termination; no invented transition under B+old residual",
+          "B_actions_on_old_states": "deterministic B requery/cache with both old current/next images; charge compute",
+          "no_success_rebalancing": true
+        },
+        "learnability_boundary": "Sparse reward, fixed feature/alpha and small budget may fail to bootstrap; failure does not refute residual transfer"
+      },
+      "arms": [
+        {
+          "id": "F",
+          "initial_actor": "fresh zero-output",
+          "anchor": "none",
+          "old_data_access": true
+        },
+        {
+          "id": "W",
+          "initial_actor": "A warm-start",
+          "anchor": "none",
+          "old_data_access": true
+        },
+        {
+          "id": "U",
+          "initial_actor": "A warm-start",
+          "anchor": "always old teacher, coefficient0.1",
+          "old_data_access": true
+        },
+        {
+          "id": "Z",
+          "initial_actor": "A warm-start",
+          "anchor": "zero if both target Q(base)>Q(current), coefficient0.1",
+          "old_data_access": true
+        },
+        {
+          "id": "G",
+          "initial_actor": "A warm-start",
+          "anchor": "old if both target Q(old)>Q(current), coefficient0.1",
+          "old_data_access": true
+        },
+        {
+          "id": "P",
+          "initial_actor": "A warm-start",
+          "anchor": "two-reference masks as defined",
+          "old_data_access": true
+        }
+      ],
+      "static_arms": [
+        "A",
+        "A+rA",
+        "B",
+        "B+rA",
+        "B+calibrated_gain*rA"
+      ],
+      "calibration_arms": [
+        "A",
+        "A+rA",
+        "B",
+        "B+rA",
+        "B+0.25*rA",
+        "B+0.5*rA"
+      ],
+      "gain": {
+        "values": [
+          0,
+          0.25,
+          0.5,
+          1
+        ],
+        "selection": "highest calibration success; tie smaller gain",
+        "base_cases_reused": true
+      },
+      "auxiliary_controls": {
+        "IL-S": {
+          "data": "D_A + common probe + W online trajectories, identical to W available raw data",
+          "initial_actor": "A",
+          "actor_updates": 500,
+          "objective": "success-episode composite 6-D command MSE",
+          "no_success_rule": "NO_SUCCESS_TARGETS, no fabricated zero score"
+        },
+        "IL-R": {
+          "data": "same as IL-S",
+          "initial_actor": "A",
+          "actor_updates": 500,
+          "objective": "composite 6-D command MSE weighted by exp((return_to_go-batch_max)/0.1), mean-normalized",
+          "censored_rule": "exclude incomplete-return labels"
+        },
+        "Q-select": {
+          "critic": "frozen common B-continuation probe critic",
+          "candidates": [
+            "B",
+            "B+rA"
+          ],
+          "selection": "higher min-Q, ties B",
+          "new_rl_updates": 0,
+          "boundary": "EXPO-style control, not EXPO reproduction"
+        },
+        "support_reporting": [
+          "out-of-residual-envelope targets",
+          "gripper incompatibility",
+          "clipping rate"
+        ],
+        "data_cost": "charge W collection to each imitation control; matched data does not imply same closed-loop experience in other RL arms",
+        "keep_old_composite": "analytical recentering identical to static A+rA; no redundant extra rollout arm"
+      },
+      "split": {
+        "train_init_ids": [
+          0,
+          29
+        ],
+        "calibration_init_ids": [
+          30,
+          39
+        ],
+        "evaluation_init_ids": [
+          40,
+          49
+        ],
+        "range_convention": "inclusive",
+        "minimum_init_states_required": 50,
+        "actual_payload_count_verified": false,
+        "state_hashes_verified": false,
+        "interpretation": "residual-stage reset holdout within one task; no base-training unseen/OOD claim",
+        "seeds": {
+          "A_initialization": 101,
+          "common_critic": 202,
+          "probe_sampler": 303,
+          "adaptation_update_rng": 404,
+          "environment": 0
+        },
+        "same_init_sequence_across_arms": true,
+        "training_seeds": 1,
+        "evaluation_units": "10 distinct held-out initial states, not frames/chunks"
+      },
+      "budget": {
+        "P0": {
+          "scope": "IO only; not full rollout or residual learning",
+          "dev_init_id": 0,
+          "resets": 2,
+          "policy_steps": 16,
+          "warmup_steps": 20,
+          "env_steps": 36,
+          "vla_queries": 2,
+          "encoder_calls_max": 4
+        },
+        "A_training": {
+          "decision_cap": 4000,
+          "policy_steps_cap": 32000,
+          "reset_cap": 160,
+          "automatic_extension": false
+        },
+        "calibration": {
+          "arms": 6,
+          "episodes_each": 10,
+          "total_episodes": 60,
+          "policy_steps_cap": 31200
+        },
+        "B_common_probe": {
+          "decision_cap": 250,
+          "policy_steps_cap": 2000,
+          "reset_cap": 40,
+          "policy_mixture": "choose B or B+rA per episode with probability0.5, seed303; record realized counts"
+        },
+        "adaptation": {
+          "arms": 6,
+          "decision_cap_each": 1000,
+          "policy_steps_cap_each": 8000,
+          "reset_cap_each": 60,
+          "critic_updates_each": 1000,
+          "actor_updates_each": 500,
+          "critic_warmup_updates_common": 500
+        },
+        "heldout": {
+          "static_arms": 5,
+          "adaptation_arms": 6,
+          "checkpoint_decisions": [
+            0,
+            500,
+            1000
+          ],
+          "auxiliary_arms": 3,
+          "init_states": 10,
+          "total_episodes": 260,
+          "policy_steps_cap": 135200,
+          "early_checkpoint_selection": false
+        },
+        "total_conditional_policy_steps_cap": 248416,
+        "total_conditional_resets_cap": 882,
+        "total_conditional_env_steps_with_warmup_cap": 257236,
+        "rollout_vla_query_cap": 31052,
+        "old_state_B_cache_query_cap": 8000,
+        "note": "Whole future study upper bounds, not next-turn auto-execution allowance. P0 only is the next scope. Stop at the first decision/step/reset cap; updates may be fewer. Compare common achieved decision checkpoints; never duplicate or impute unachieved 500/1000 checkpoints. Equal caps do not imply equal realized resource use; unfinished budgets and censored episodes remain explicit."
+      },
+      "metrics": {
+        "primary": [
+          "delta_A success",
+          "delta_B success",
+          "success vs matched additional decision count at 0/500/1000",
+          "paired win/loss/tie versus B and W/F/Z/G"
+        ],
+        "secondary": [
+          "completion steps",
+          "correction magnitude",
+          "clip frequency",
+          "anchor mask frequency",
+          "new successes",
+          "query/encoder/gradient counts",
+          "wall-clock and GPU hours",
+          "resets and evaluation cost"
+        ],
+        "scope": "one task, one pair, one training seed, 10 evaluation states; no broad generalization, statistical confirmation or sample-complexity claim",
+        "subgroups": "B-success versus B-failure subsets descriptive only; data-defined subgroups are not independent confirmatory tests"
+      },
+      "decision_rules": [
+        "P0 interface failure => stop native work and fix; no policy-learning conclusion",
+        "No A residual benefit or no successful calibration rollout => bootstrap/pair unresolved at cap; no automatic budget expansion",
+        "B ceiling without correction need => pair uninformative for improvement; not global NO-GO",
+        "Frozen/gain/W/Z/G suffices => accept simple result; no manufactured perturbation/task switch to favor P",
+        "P improves => exploration signal only; original DICE/EXPO matched reproduction and independent tasks/updates/seeds needed for broader method claim"
+      ],
+      "manual_checks": [
+        "zero residual maps to original base command algebraically; native pending",
+        "strict joint rankings make old/base masks mutually exclusive; ties produce no anchor",
+        "old corrected action recentering preserves only old composite",
+        "old physical replay transition remains actual evidence but old Q continuation value is not invariant",
+        "censored return labels and gripper/bounded-action imitation mismatch explicitly handled"
+      ],
+      "unimplemented": [
+        "all local residual trainer/adapter",
+        "native feature and action loader",
+        "container/package lock",
+        "asset/init-state/weight checksums",
+        "P0 launcher and reset equality verification",
+        "full DICE/EXPO matched implementation"
+      ],
+      "external_feedback": "not requested or received"
+    },
+    "next": {
+      "work_id": "GAP-VRL-P0-PREP",
+      "scope": "Check current local Docker and implement/qualify at most P0; if unsuitable prepare clone-resumable package in content/reproduction folders",
+      "no_auto_training": true
+    },
+    "execution": {
+      "experiments": 0,
+      "inference": 0,
+      "training": 0,
+      "docker_checks": 0,
+      "weight_downloads": 0,
+      "local_pdf_downloads": 0,
+      "host_dependency_installs": 0,
+      "registry_admissions": 0,
+      "reading_status_changes": 0
+    },
+    "validation": {
+      "state": "passed_document_and_registry_checks_not_experiment",
+      "pre_audit": {
+        "papers": 1090,
+        "notes": 5450,
+        "errors": 0,
+        "warnings": 0
+      },
+      "protected_files": 5994,
+      "protected_files_unchanged": true,
+      "staged_index_unchanged": true,
+      "staged_index_sha256": "0e8db46a624a0ad7e38ce9a6d484c80658cd6973608cbc0d6a0558cc4848ab51",
+      "checks": [
+        "JSON parse; 42 unique source keys; source count/year/depth breakdown",
+        "Disjoint inclusive init-ID design ranges; actual assets still unverified",
+        "Budget arithmetic including warmup, reset, query and evaluation caps",
+        "py_compile build_reading_tiers.py using temporary output outside repository",
+        "python3 work/scripts/build_reading_tiers.py",
+        "python3 work/scripts/audit_repository.py",
+        "git diff --check",
+        "git diff --cached --check"
+      ],
+      "post_audit": {
+        "papers": 1090,
+        "notes": 5450,
+        "markdown_files": 5652,
+        "markdown_links": 11608,
+        "errors": 0,
+        "warnings": 0
+      },
+      "tier_counts_unchanged": {
+        "CORE": 47,
+        "NEXT": 314,
+        "REFERENCE": 487,
+        "ARCHIVE": 242
+      },
+      "boundary": "Document consistency and preservation checks only; native loading, simulator IO and scientific effects remain unverified."
+    }
+  },
+  "nonexperimental_completion": {
+    "work_ids": [
+      "GAP-VRL-P0-PREP",
+      "GAP-VRL-N1"
+    ],
+    "checked_on": "2026-11-03",
+    "decision": "INTERNAL_NONEXPERIMENTAL_COMPLETE_CONTINUE_EXPLORATION",
+    "evidence_maturity": "CURATION-HYPOTHESIS",
+    "content": "work/research_topics/vla_residual_update/내용/README.md",
+    "reproduction": "work/research_topics/vla_residual_update/재현 방법/README.md",
+    "resume_plan": "work/research_topics/vla_residual_update/재현 방법/RESUME_PLAN.json",
+    "resource_result": "Current local Docker incompatible with scoped NVIDIA CUDA path; read-only checks only",
+    "source_review": {
+      "new_paper_admissions": 0,
+      "paper_cards_unchanged": 42,
+      "revisited_paper_sections": [
+        "S39 combined-action critic IV-B/V-D",
+        "S42 DICE-RL value filter section4 equation6"
+      ],
+      "technical_sources": [
+        "Pinned SimpleVLA-RL README/SETUP/vision source",
+        "Pinned HF normalizer field dimensions",
+        "Docker Desktop GPU passthrough docs",
+        "NVIDIA Container Toolkit installation prerequisites",
+        "CUDA12.4 release notes driver tables"
+      ],
+      "metadata_only_downloads": true,
+      "weights_or_sim_payload_saved": false,
+      "boundary": "Not a fresh broad literature census; no scientific runtime"
+    },
+    "completed_internal": [
+      "closest-work and contribution boundary consolidated",
+      "base-action distribution shift, correlated Q error, gain and imitation alternatives",
+      "claim-evidence-outcome table and one-task/seed statistical boundary",
+      "anchor-free A bootstrap distinguished from B teacher-filter adaptation",
+      "guide0..8 completion map and independent-review questions",
+      "local resource check and documented missing native implementation",
+      "two topic folders; R1/R2 body moved from survey; single comparison JSON retained"
+    ],
+    "stage8_external_feedback": {
+      "questions_prepared": true,
+      "sent": false,
+      "received": false
+    },
+    "still_unverified": [
+      "native image/packages/adapter",
+      "asset and init-state hashes/duplicates",
+      "A residual learnability",
+      "B headroom and transfer effect",
+      "exact A-to-B training lineage",
+      "generalization",
+      "standalone method contribution",
+      "independent researcher feedback"
+    ],
+    "next": {
+      "work_id": "GAP-VRL-P0",
+      "status": "WAITING_RESOURCE_AND_IMPLEMENTATION",
+      "scope": "local NVIDIA qualification; implement then at most2queries36stepsIO",
+      "repeat_same_local_gpu_probe": false,
+      "automatic_full_training": false
+    },
+    "execution": {
+      "read_only_docker_check": 1,
+      "gpu_allocation_containers": 0,
+      "model_inference": 0,
+      "training": 0,
+      "host_installs": 0,
+      "weights_or_sim_asset_downloads": 0,
+      "pdf_downloads": 0,
+      "registry_admissions": 0,
+      "reading_status_changes": 0
+    },
+    "validation": {
+      "state": "passed_document_and_registry_checks_not_experiment",
+      "generator_compile": "passed; temporary bytecode outside repository",
+      "generator_rebuild": "passed; tier and reading records unchanged",
+      "audit": {
+        "papers": 1090,
+        "notes": 5450,
+        "markdown_files": 5654,
+        "markdown_links": 11635,
+        "errors": 0,
+        "warnings": 0
+      },
+      "json_references_and_p0_budget": "passed",
+      "source_keys_count": 42,
+      "protected_existing_files": 5991,
+      "protected_existing_files_unchanged": true,
+      "staged_index_unchanged": true,
+      "staged_index_sha256": "0e8db46a624a0ad7e38ce9a6d484c80658cd6973608cbc0d6a0558cc4848ab51",
+      "git_diff_check": "passed",
+      "git_diff_cached_check": "passed",
+      "runtime_or_effect_verified": false
+    }
+  },
+  "registry_sync": {
+    "checked_on": "2026-11-03",
+    "registry_count": 1098,
+    "source_cards": 42,
+    "already_registered_now": 24,
+    "external_not_registered_now": 18,
+    "added_paper_ids": [
+      "pr-1091",
+      "pr-1092",
+      "pr-1093",
+      "pr-1094",
+      "pr-1095",
+      "pr-1096",
+      "pr-1097",
+      "pr-1098"
+    ],
+    "historical_scope_preserved": "scope/validation and S1/R1/R2 snapshots describe their original review; this field is the current registry identity view",
+    "not_all_external_cards_admitted": true
+  }
+}

@@ -4,6 +4,8 @@
 > Evidence maturity: `FULL_TEXT_CHECKED`.
 > Analysis basis: full-text PDF body checked on 2026-09-03 (20 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/1811.04551; PDF retrieval source: https://arxiv.org/pdf/1811.04551. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
+> DOC-QA2 targeted source review: 2026-10-23; PDF pp. 2. 손상 구간·직접 연결된 표 분류만 원문 이미지와 대조했다. 전체 주장 정독·실험 검증·reading status 승격을 뜻하지 않는다. [URL·PDF hash·수정 기록](../../../work/sources/pdf_note_review_followup_2026-10-23.json).
+
 ## Method in One Sentence
 
 PDF body method statement (p. 2 (2. Latent Space Planning), p. 3 (3. Recurrent State Space Model), p. 4 (3. Recurrent State Space Model), p. 3 (3. Recurrent State Space Model), p. 4 (3. Recurrent State Space Model), p. 2 (2 Initialize model parameters θ randomly)): We define a discrete time step t, hidden states st, image observations ot, continuous action vectors at, and scalar rewards rt, that follow the stochastic dynamics Transition function: st ∼p(st ...
@@ -50,7 +52,7 @@ PDF body method statement (p. 2 (2. Latent Space Planning), p. 3 (3. Recurrent S
 - **p. 3 / 2 Initialize model parameters θ randomly - extractive body cue:** CEM is a populationbased optimization algorithm that infers a distribution over action sequences that maximize the objective.
 - **p. 4 / 3. Recurrent State Space Model - extractive body cue:** Estimating the outer expectations using a single reparameterized sample yields an efficient objective for inference and learning in non-linear latent variable models that can be ...
 - **p. 2 / 2 Initialize model parameters θ randomly - extractive body cue:** 6 Compute loss L(θ) from Equation 3.
-- **p. 2 / 2 Initialize model parameters θ randomly - extractive body cue:** The goal is to implement a policy p(at / o≤t, a<t) that maximizes the expected sum of rewards Ep  PT t=1 rt  , ...
+- **PDF p. 2, §2 / Eq. (1) (DOC-QA2 원문 대조):** Image observations와 past actions에 조건화한 policy p(aₜ given o≤ₜ,a<ₜ)가 환경·정책에 대한 expected finite-horizon reward sum E[Σₜ₌₁ᵀrₜ]을 최대화한다. Partial observability 때문에 latent-state belief를 추론한다.
 - **p. 3 / 3. Recurrent State Space Model - extractive body cue:** It defines the generative process of the images and rewards using a hidden state sequence {st}T t=1, Transition model: st ∼p(st / st-1, at-1) Observation ...
 - **p. 4 / 3. Recurrent State Space Model - extractive body cue:** For simplicity, we write losses for predicting only the observations - the reward losses follow by analogy.
 - **Formal bridge:** state/history and risk h(s) -> filtered/recovery action u_safe -> task utility subject to safety constraint -> low violation/failure probability with useful intervention.
@@ -84,7 +86,7 @@ PDF body method statement (p. 2 (2. Latent Space Planning), p. 3 (3. Recurrent S
 |---|---|---|---|
 | Horizon | 현재 command의 one-step safety 또는 recovery trajectory horizon; exact lookahead 확인 필요. | We define a discrete time step t, hidden states st, image observations ot, continuous action vectors at, and scalar rewards rt, that ... | episode/sequence/action-chunk boundary |
 | Rate / latency | nominal policy와 safety monitor/filter의 runtime rate를 별도로 기록한다. | As detailed in Algorithm 2 in the appendix, we initialize a time-dependent diagonal Gaussian belief over optimal action sequences at:t+H ∼Normal(µt:t+H, σ2 ... | Hz/fps, inference time and control rate |
-| Memory | risk score, recent trajectory/history와 recovery state. | 7 Update model parameters θ ←θ -α∇θL(θ). // Data collection 8 o1 ←env.reset() 9 for time step t = 1..  T ... | window and reset |
+| History / data collection | Observation/action history에서 current latent-state belief를 추론 | Algorithm 1: env.reset 후 belief inference→planner→exploration noise→R action repeats→dataset append | PDF p. 2 Algorithm 1; risk-score/recovery-state memory로 추정하지 않음 |
 | Compute | risk inference, barrier/QP solve 또는 backup policy selection이 latency를 결정한다. | The training time of 10 to 20 hours (depending on the task) on a single Nvidia V100 GPU compares favorably to that ... | hardware, batch and throughput |
 
 ## Training vs Inference

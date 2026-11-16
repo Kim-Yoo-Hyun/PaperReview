@@ -1,0 +1,1101 @@
+{
+  "schema_version": "1.0",
+  "kind": "dated_literature_source_audit_not_registry_or_priority_source",
+  "checked_on": "2026-10-23",
+  "task": "GAP-W1",
+  "scope": "VLA 외 robotics·control·causal/offline RL·data-centric learning·3D vision·HRI/multi-agent를 포함한 9개 교차 질문의 선택적 scoping review",
+  "claim_boundary": "source evidence supports known answers; candidate gaps are researcher interpretations, not proven absence of prior work",
+  "search_scope": {
+    "years": [
+      2024,
+      2025,
+      2026
+    ],
+    "queries": [
+      "interactive conformal safety crowd navigation endogenous distribution shift",
+      "offline RL confounding identifiability coverage biased data",
+      "robot imitation data scaling selection datamodel cross-policy",
+      "system identification active excitation model mismatch sim2real",
+      "deformable material boundary identification active sensing",
+      "world model environment query exploitation planning optimization",
+      "locomotion thermal safety endurance payload whole body",
+      "Gaussian maps collision risk VGGT dynamic geometry uncertainty",
+      "human robot clarification cooperation partner uncertainty communication"
+    ],
+    "primary_venues_retained": [
+      "CVPR",
+      "ICCV",
+      "ECCV",
+      "NeurIPS",
+      "ICLR",
+      "ICML",
+      "CoRL",
+      "RSS",
+      "ICRA",
+      "IROS",
+      "T-RO",
+      "AISTATS"
+    ],
+    "supporting_venues": [
+      "L4DC",
+      "Humanoids"
+    ],
+    "limits": [
+      "Not an exhaustive review of all 2024–2026 proceedings or a claim of citation saturation.",
+      "RA-L ASTRA and IROS AirSplan status are author-reported; not counted as independently verified publications.",
+      "SAFER-Splat is recorded under the inspected arXiv version; subsequent title/venue reconciliation remains open.",
+      "Some IEEE/CVF pages were verified through official-domain search-index text after direct access errors.",
+      "No decisive IJRR/Science Robotics paper retained in this pass; journal coverage is narrower than conference coverage.",
+      "General NLP, medical AI, security, scientific ML and all of computer science are outside this robotics-adjacent expansion.",
+      "No PDF stored locally, experiments, installs, source-code execution or full-paper reproduction performed."
+    ]
+  },
+  "registry_snapshot": {
+    "total": 1037,
+    "recent_2024_2026": 757,
+    "matching": "normalized exact title or observed arXiv ID; unmatched records are not certified absent/new works"
+  },
+  "records": [
+    {
+      "source_id": "W01",
+      "title": "Towards Generalizable Safety in Crowd Navigation via Conformal Uncertainty Handling",
+      "year": 2025,
+      "venue": "CoRL",
+      "publication_evidence": "official_proceedings",
+      "url": "https://proceedings.mlr.press/v305/yao25a.html",
+      "gap_lenses": [
+        "GAP-PLAN"
+      ],
+      "known_answer": "adaptive conformal uncertainty + constrained RL; velocity/policy/group shift 평가",
+      "inspection": "공식 abstract; 상세 보장·trial 정독 전",
+      "checked_on": "2026-10-23",
+      "registry_match": {
+        "status": "not_matched_by_normalized_title_or_observed_arxiv",
+        "paper_id": null,
+        "overview_path": null
+      },
+      "code_execution": false,
+      "content_review": "abstract_or_official_index",
+      "project_or_code": null,
+      "release_audit": "not_performed",
+      "novel_gap_proven": false
+    },
+    {
+      "source_id": "W02",
+      "title": "Who Moved My Distribution? Conformal Prediction for Interactive Multi-Agent Systems",
+      "year": 2025,
+      "venue": "arXiv",
+      "publication_evidence": "preprint_status_unverified",
+      "url": "https://arxiv.org/html/2511.11567v1",
+      "gap_lenses": [
+        "GAP-PLAN"
+      ],
+      "known_answer": "ego planning이 유발하는 endogenous shift와 iterative conformal fixed point",
+      "inspection": "HTML §4.1–4.2: Lipschitz CP/MPC·contraction 및 calibration sampling 가정 확인",
+      "checked_on": "2026-10-23",
+      "registry_match": {
+        "status": "not_matched_by_normalized_title_or_observed_arxiv",
+        "paper_id": null,
+        "overview_path": null
+      },
+      "code_execution": false,
+      "content_review": "selected_full_text_sections",
+      "full_text_url": "https://arxiv.org/html/2511.11567v1",
+      "project_or_code": null,
+      "release_audit": "not_performed",
+      "novel_gap_proven": false
+    },
+    {
+      "source_id": "W03",
+      "title": "Offline Policy Evaluation and Optimization Under Confounding",
+      "year": 2024,
+      "venue": "AISTATS",
+      "publication_evidence": "official_proceedings",
+      "url": "https://proceedings.mlr.press/v238/kausik24a.html",
+      "gap_lenses": [
+        "GAP-CAUSAL"
+      ],
+      "known_answer": "교란 가정에 따른 식별 가능성·불가능성 및 value lower bound",
+      "inspection": "공식 abstract; 정리 전체 증명 미검토",
+      "checked_on": "2026-10-23",
+      "registry_match": {
+        "status": "not_matched_by_normalized_title_or_observed_arxiv",
+        "paper_id": null,
+        "overview_path": null
+      },
+      "code_execution": false,
+      "content_review": "abstract_or_official_index",
+      "project_or_code": null,
+      "release_audit": "not_performed",
+      "novel_gap_proven": false
+    },
+    {
+      "source_id": "W04",
+      "title": "Two-way Deconfounder for Off-policy Evaluation in Causal Reinforcement Learning",
+      "year": 2024,
+      "venue": "NeurIPS",
+      "publication_evidence": "official_proceedings",
+      "url": "https://proceedings.neurips.cc/paper_files/paper/2024/hash/8ecf25e3a462e9bb1e29662dfe7258fe-Abstract-Conference.html",
+      "gap_lenses": [
+        "GAP-CAUSAL"
+      ],
+      "known_answer": "two-way confounding 구조 가정하의 OPE",
+      "inspection": "공식 abstract; 임의 교란 제거로 일반화 금지",
+      "checked_on": "2026-10-23",
+      "registry_match": {
+        "status": "not_matched_by_normalized_title_or_observed_arxiv",
+        "paper_id": null,
+        "overview_path": null
+      },
+      "code_execution": false,
+      "content_review": "abstract_or_official_index",
+      "project_or_code": null,
+      "release_audit": "not_performed",
+      "novel_gap_proven": false
+    },
+    {
+      "source_id": "W05",
+      "title": "Confounding Robust Deep Reinforcement Learning: A Causal Approach",
+      "year": 2025,
+      "venue": "NeurIPS",
+      "publication_evidence": "official_proceedings",
+      "url": "https://proceedings.neurips.cc/paper_files/paper/2025/hash/c9a177f06ecd9892cd1664d89994fb58-Abstract-Conference.html",
+      "gap_lenses": [
+        "GAP-CAUSAL"
+      ],
+      "known_answer": "관측과 양립하는 worst-case 환경의 정책; confounded Atari 평가",
+      "inspection": "공식 abstract; robot 현상으로 전이 미검증",
+      "checked_on": "2026-10-23",
+      "registry_match": {
+        "status": "not_matched_by_normalized_title_or_observed_arxiv",
+        "paper_id": null,
+        "overview_path": null
+      },
+      "code_execution": false,
+      "content_review": "abstract_or_official_index",
+      "project_or_code": null,
+      "release_audit": "not_performed",
+      "novel_gap_proven": false
+    },
+    {
+      "source_id": "W06",
+      "title": "Automatic Reward Shaping from Confounded Offline Data",
+      "year": 2025,
+      "venue": "ICML",
+      "publication_evidence": "official_proceedings",
+      "url": "https://proceedings.mlr.press/v267/li25dr.html",
+      "gap_lenses": [
+        "GAP-CAUSAL"
+      ],
+      "known_answer": "causal state-value bounds를 potential-based reward shaping에 사용",
+      "inspection": "공식 abstract; offline 추정과 후속 online learner 구별",
+      "checked_on": "2026-10-23",
+      "registry_match": {
+        "status": "not_matched_by_normalized_title_or_observed_arxiv",
+        "paper_id": null,
+        "overview_path": null
+      },
+      "code_execution": false,
+      "content_review": "abstract_or_official_index",
+      "project_or_code": null,
+      "release_audit": "not_performed",
+      "novel_gap_proven": false
+    },
+    {
+      "source_id": "W07",
+      "title": "Data Scaling Laws in Imitation Learning for Robotic Manipulation",
+      "year": 2025,
+      "venue": "ICLR",
+      "publication_evidence": "official_proceedings",
+      "url": "https://proceedings.iclr.cc/paper_files/paper/2025/hash/88b7b2c896506daabc8d3fd587055167-Abstract-Conference.html",
+      "gap_lenses": [
+        "GAP-DATA-TRANSFER"
+      ],
+      "known_answer": "환경·물체 다양성과 demonstration 수의 관계",
+      "inspection": "공식 abstract; single-task 결과를 모든 backbone의 law로 확장 금지",
+      "checked_on": "2026-10-23",
+      "registry_match": {
+        "status": "identity_linked",
+        "paper_id": "pr-0580",
+        "overview_path": "2025/ICLR/2025_ICLR_Data-Scaling-Laws-in-Imitation-Learning-for-Robotic-Manipu/01_overview.md"
+      },
+      "code_execution": false,
+      "content_review": "abstract_or_official_index",
+      "project_or_code": null,
+      "release_audit": "not_performed",
+      "novel_gap_proven": false
+    },
+    {
+      "source_id": "W08",
+      "title": "What Matters in Learning from Large-Scale Datasets for Robot Manipulation",
+      "year": 2025,
+      "venue": "ICLR",
+      "publication_evidence": "official_proceedings",
+      "url": "https://proceedings.iclr.cc/paper_files/paper/2025/hash/16466b6c95c5924784486ac5a3feeb65-Abstract-Conference.html",
+      "gap_lenses": [
+        "GAP-DATA-TRANSFER"
+      ],
+      "known_answer": "procedural dataset 구성·다양성 및 real-data retrieval",
+      "inspection": "공식 abstract; 모든 조합의 일반화 검증으로 해석 금지",
+      "checked_on": "2026-10-23",
+      "registry_match": {
+        "status": "not_matched_by_normalized_title_or_observed_arxiv",
+        "paper_id": null,
+        "overview_path": null
+      },
+      "code_execution": false,
+      "content_review": "abstract_or_official_index",
+      "project_or_code": null,
+      "release_audit": "not_performed",
+      "novel_gap_proven": false
+    },
+    {
+      "source_id": "W09",
+      "title": "DataMIL: Selecting Data for Robot Imitation Learning with Datamodels",
+      "year": 2026,
+      "venue": "ICLR",
+      "publication_evidence": "official_proceedings",
+      "url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/033d9e8dbbbc0ad90e59222cf1db0fc2-Abstract-Conference.html",
+      "gap_lenses": [
+        "GAP-DATA-TRANSFER"
+      ],
+      "known_answer": "policy-aware 선택과 task-specific surrogate; 단순 quality filtering의 직접 대안",
+      "inspection": "공식 abstract; cross-backbone rank transfer 범위는 본문 확인 필요",
+      "checked_on": "2026-10-23",
+      "registry_match": {
+        "status": "not_matched_by_normalized_title_or_observed_arxiv",
+        "paper_id": null,
+        "overview_path": null
+      },
+      "code_execution": false,
+      "content_review": "abstract_or_official_index",
+      "project_or_code": null,
+      "release_audit": "not_performed",
+      "novel_gap_proven": false
+    },
+    {
+      "source_id": "W10",
+      "title": "Difference-Aware Retrieval Policies for Imitation Learning",
+      "year": 2026,
+      "venue": "ICLR",
+      "publication_evidence": "official_proceedings",
+      "url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/8c2ecd140ebe227a531edc9a0c3b69d4-Abstract-Conference.html",
+      "gap_lenses": [
+        "GAP-DATA-TRANSFER"
+      ],
+      "known_answer": "relative retrieval distance를 쓰는 semi-parametric policy",
+      "inspection": "공식 abstract; 학습용 subset 선택과 inference retrieval 비용 분리",
+      "checked_on": "2026-10-23",
+      "registry_match": {
+        "status": "not_matched_by_normalized_title_or_observed_arxiv",
+        "paper_id": null,
+        "overview_path": null
+      },
+      "code_execution": false,
+      "content_review": "abstract_or_official_index",
+      "project_or_code": null,
+      "release_audit": "not_performed",
+      "novel_gap_proven": false
+    },
+    {
+      "source_id": "W11",
+      "title": "Sampling-based System Identification with Active Exploration for Legged Sim2Real Learning",
+      "year": 2025,
+      "venue": "CoRL",
+      "publication_evidence": "official_proceedings",
+      "url": "https://proceedings.mlr.press/v305/sobanbabu25a.html",
+      "gap_lenses": [
+        "GAP-SYSID"
+      ],
+      "known_answer": "sampling parameter fit + Fisher-information active commands",
+      "inspection": "공식 abstract + arXiv v1 §7: humanoid는 Stage 1, offline·multi-behavior policy 가정",
+      "checked_on": "2026-10-23",
+      "registry_match": {
+        "status": "not_matched_by_normalized_title_or_observed_arxiv",
+        "paper_id": null,
+        "overview_path": null
+      },
+      "code_execution": false,
+      "content_review": "selected_full_text_sections",
+      "full_text_url": "https://arxiv.org/html/2505.14266v1",
+      "project_or_code": "https://github.com/LeCAR-Lab/SPI-Active",
+      "release_audit": "not_performed",
+      "novel_gap_proven": false
+    },
+    {
+      "source_id": "W12",
+      "title": "Adaptive Model-Based Control of Quadrupeds via Online System Identification using Kalman Filter",
+      "year": 2025,
+      "venue": "IROS",
+      "publication_evidence": "official_publisher",
+      "url": "https://ieeexplore.ieee.org/document/11246753/",
+      "gap_lenses": [
+        "GAP-SYSID"
+      ],
+      "known_answer": "payload mass/COM online KF estimation을 MPC에 반영",
+      "inspection": "공식 publisher indexed abstract; 구조적 모델 오차 해결 증거 아님",
+      "checked_on": "2026-10-23",
+      "registry_match": {
+        "status": "not_matched_by_normalized_title_or_observed_arxiv",
+        "paper_id": null,
+        "overview_path": null
+      },
+      "code_execution": false,
+      "content_review": "abstract_or_official_index",
+      "project_or_code": null,
+      "release_audit": "not_performed",
+      "novel_gap_proven": false
+    },
+    {
+      "source_id": "W13",
+      "title": "Abstract Sim2Real through Approximate Information States",
+      "year": 2026,
+      "venue": "RA-L / IROS (author-reported)",
+      "publication_evidence": "author_reported_not_independently_verified",
+      "url": "https://pages.cs.wisc.edu/~gearless_joe/astra/",
+      "gap_lenses": [
+        "GAP-SYSID"
+      ],
+      "known_answer": "abstract state-space의 비-Markov성을 history abstraction으로 다룸",
+      "inspection": "저자 project Overview·Method·Theoretical motivation·평가; publisher status 미확인",
+      "checked_on": "2026-10-23",
+      "registry_match": {
+        "status": "not_matched_by_normalized_title_or_observed_arxiv",
+        "paper_id": null,
+        "overview_path": null
+      },
+      "code_execution": false,
+      "content_review": "author_project_method_description",
+      "project_or_code": null,
+      "release_audit": "not_performed",
+      "novel_gap_proven": false
+    },
+    {
+      "source_id": "W14",
+      "title": "Distributionally Robust Control via Stein Variational Inference for Contact-rich Manipulation",
+      "year": 2026,
+      "venue": "RSS",
+      "publication_evidence": "official_proceedings",
+      "url": "https://www.roboticsproceedings.org/rss22/p061.html",
+      "gap_lenses": [
+        "GAP-SYSID",
+        "GAP-DEFORM"
+      ],
+      "known_answer": "task-sensitive parameter uncertainty의 robust contact control",
+      "inspection": "공식 abstract; task-aware uncertainty 자체는 새 공백 아님",
+      "checked_on": "2026-10-23",
+      "registry_match": {
+        "status": "not_matched_by_normalized_title_or_observed_arxiv",
+        "paper_id": null,
+        "overview_path": null
+      },
+      "code_execution": false,
+      "content_review": "abstract_or_official_index",
+      "project_or_code": null,
+      "release_audit": "not_performed",
+      "novel_gap_proven": false
+    },
+    {
+      "source_id": "W15",
+      "title": "Particle-Grid Neural Dynamics for Learning Deformable Object Models from RGB-D Videos",
+      "year": 2025,
+      "venue": "RSS",
+      "publication_evidence": "official_proceedings",
+      "url": "https://www.roboticsproceedings.org/rss21/p036.html",
+      "gap_lenses": [
+        "GAP-DEFORM"
+      ],
+      "known_answer": "particle-grid dynamics; 물성과 perception 의존성 명시",
+      "inspection": "arXiv v1 §IV-F·V: short history의 implicit properties, fixed particle count, test-time identification 한계",
+      "checked_on": "2026-10-23",
+      "registry_match": {
+        "status": "identity_linked",
+        "paper_id": "pr-0890",
+        "overview_path": "2025/RSS/2025_RSS_Particle-Grid-Neural-Dynamics-for-Learning-Deformable-Obje/01_overview.md"
+      },
+      "code_execution": false,
+      "content_review": "selected_full_text_sections",
+      "full_text_url": "https://arxiv.org/html/2506.15680v1",
+      "project_or_code": "https://github.com/kywind/pgnd",
+      "release_audit": "not_performed",
+      "novel_gap_proven": false
+    },
+    {
+      "source_id": "W16",
+      "title": "JIGGLE: An Active Sensing Framework for Boundary Parameters Estimation in Deformable Surgical Environments",
+      "year": 2024,
+      "venue": "RSS",
+      "publication_evidence": "official_proceedings",
+      "url": "https://www.roboticsproceedings.org/rss20/p007.html",
+      "gap_lenses": [
+        "GAP-DEFORM"
+      ],
+      "known_answer": "probabilistic attachment estimation + constrained active sensing; topology change도 다룸",
+      "inspection": "arXiv v1 §IV-A/B·VI: grasp stiffness 가정, homogeneous tissue 및 joint tissue/boundary estimation 후속 질문",
+      "checked_on": "2026-10-23",
+      "registry_match": {
+        "status": "not_matched_by_normalized_title_or_observed_arxiv",
+        "paper_id": null,
+        "overview_path": null
+      },
+      "code_execution": false,
+      "content_review": "selected_full_text_sections",
+      "full_text_url": "https://arxiv.org/html/2405.09743v1",
+      "project_or_code": null,
+      "release_audit": "not_performed",
+      "novel_gap_proven": false
+    },
+    {
+      "source_id": "W17",
+      "title": "Implicit Neural-Representation Learning for Elastic Deformable-Object Manipulations",
+      "year": 2025,
+      "venue": "RSS",
+      "publication_evidence": "official_proceedings",
+      "url": "https://roboticsproceedings.org/rss21/p035.html",
+      "gap_lenses": [
+        "GAP-DEFORM"
+      ],
+      "known_answer": "부분 관측 elastic object의 implicit state 및 policy adaptation",
+      "inspection": "공식 abstract; 임의 재질·boundary 공동 식별로 일반화 금지",
+      "checked_on": "2026-10-23",
+      "registry_match": {
+        "status": "not_matched_by_normalized_title_or_observed_arxiv",
+        "paper_id": null,
+        "overview_path": null
+      },
+      "code_execution": false,
+      "content_review": "abstract_or_official_index",
+      "project_or_code": null,
+      "release_audit": "not_performed",
+      "novel_gap_proven": false
+    },
+    {
+      "source_id": "W18",
+      "title": "Learning Deformable Object Manipulation Using Task-Level Iterative Learning Control",
+      "year": 2026,
+      "venue": "RSS",
+      "publication_evidence": "official_proceedings",
+      "url": "https://www.roboticsproceedings.org/rss22/p126.html",
+      "gap_lenses": [
+        "GAP-DEFORM"
+      ],
+      "known_answer": "단순 model·소수 반복의 task-level ILC; rope manipulation",
+      "inspection": "공식 abstract; 복잡한 learned model 필요성을 먼저 비교할 대안",
+      "checked_on": "2026-10-23",
+      "registry_match": {
+        "status": "not_matched_by_normalized_title_or_observed_arxiv",
+        "paper_id": null,
+        "overview_path": null
+      },
+      "code_execution": false,
+      "content_review": "abstract_or_official_index",
+      "project_or_code": null,
+      "release_audit": "not_performed",
+      "novel_gap_proven": false
+    },
+    {
+      "source_id": "W19",
+      "title": "Latent Diffeomorphic Co-Design of End-Effectors for Deformable and Fragile Object Manipulation",
+      "year": 2026,
+      "venue": "RSS",
+      "publication_evidence": "official_proceedings",
+      "url": "https://roboticsproceedings.org/rss22/p195.html",
+      "gap_lenses": [
+        "GAP-DEFORM"
+      ],
+      "known_answer": "stress-aware end-effector morphology/control co-design",
+      "inspection": "공식 abstract; software만이 성능 차이 원인이라고 가정하지 않음",
+      "checked_on": "2026-10-23",
+      "registry_match": {
+        "status": "not_matched_by_normalized_title_or_observed_arxiv",
+        "paper_id": null,
+        "overview_path": null
+      },
+      "code_execution": false,
+      "content_review": "abstract_or_official_index",
+      "project_or_code": null,
+      "release_audit": "not_performed",
+      "novel_gap_proven": false
+    },
+    {
+      "source_id": "W20",
+      "title": "Benchmarking World-Model Learning with Environment-Level Queries",
+      "year": 2026,
+      "venue": "ICML",
+      "publication_evidence": "official_proceedings",
+      "url": "https://proceedings.mlr.press/v306/warrier26a.html",
+      "gap_lenses": [
+        "GAP-WM"
+      ],
+      "known_answer": "WorldTest/AutumnBench; reachability·intervention 등 environment queries",
+      "inspection": "공식 abstract; gridworld 평가와 연속 robot contact를 구별",
+      "checked_on": "2026-10-23",
+      "registry_match": {
+        "status": "not_matched_by_normalized_title_or_observed_arxiv",
+        "paper_id": null,
+        "overview_path": null
+      },
+      "code_execution": false,
+      "content_review": "abstract_or_official_index",
+      "project_or_code": null,
+      "release_audit": "not_performed",
+      "novel_gap_proven": false
+    },
+    {
+      "source_id": "W21",
+      "title": "Imperfect World Models are Exploitable",
+      "year": 2026,
+      "venue": "arXiv",
+      "publication_evidence": "preprint_status_unverified",
+      "url": "https://arxiv.org/html/2605.15960v2",
+      "gap_lenses": [
+        "GAP-WM"
+      ],
+      "known_answer": "model exploitation을 policy preference inversion으로 분석; relaxed criterion 포함",
+      "inspection": "HTML abstract·§5 limitations: finite MDP, binary criterion, finite policy set 조건 미해결; 증명 독립 검증 아님",
+      "checked_on": "2026-10-23",
+      "registry_match": {
+        "status": "not_matched_by_normalized_title_or_observed_arxiv",
+        "paper_id": null,
+        "overview_path": null
+      },
+      "code_execution": false,
+      "content_review": "selected_full_text_sections",
+      "full_text_url": "https://arxiv.org/html/2605.15960v2",
+      "project_or_code": null,
+      "release_audit": "not_performed",
+      "novel_gap_proven": false
+    },
+    {
+      "source_id": "W22",
+      "title": "Parallel Stochastic Gradient-Based Planning for World Models",
+      "year": 2026,
+      "venue": "ICML",
+      "publication_evidence": "official_proceedings",
+      "url": "https://proceedings.mlr.press/v306/psenka26a.html",
+      "gap_lenses": [
+        "GAP-WM"
+      ],
+      "known_answer": "virtual-state stochastic parallel planning",
+      "inspection": "공식 abstract; optimizer 성능과 model fidelity 보장을 구별",
+      "checked_on": "2026-10-23",
+      "registry_match": {
+        "status": "not_matched_by_normalized_title_or_observed_arxiv",
+        "paper_id": null,
+        "overview_path": null
+      },
+      "code_execution": false,
+      "content_review": "abstract_or_official_index",
+      "project_or_code": null,
+      "release_audit": "not_performed",
+      "novel_gap_proven": false
+    },
+    {
+      "source_id": "W23",
+      "title": "General agents need world models",
+      "year": 2025,
+      "venue": "ICML",
+      "publication_evidence": "official_proceedings",
+      "url": "https://proceedings.mlr.press/v267/richens25a.html",
+      "gap_lenses": [
+        "GAP-WM"
+      ],
+      "known_answer": "general goal-directed policy에서 predictive model 추출에 대한 이론",
+      "inspection": "공식 abstract; 모든 robot에 explicit video generator가 필요하다는 뜻 아님",
+      "checked_on": "2026-10-23",
+      "registry_match": {
+        "status": "not_matched_by_normalized_title_or_observed_arxiv",
+        "paper_id": null,
+        "overview_path": null
+      },
+      "code_execution": false,
+      "content_review": "abstract_or_official_index",
+      "project_or_code": null,
+      "release_audit": "not_performed",
+      "novel_gap_proven": false
+    },
+    {
+      "source_id": "W24",
+      "title": "FALCON: Learning Force-Adaptive Humanoid Loco-Manipulation",
+      "year": 2026,
+      "venue": "L4DC",
+      "publication_evidence": "official_proceedings",
+      "url": "https://proceedings.mlr.press/v331/zhang26a.html",
+      "gap_lenses": [
+        "GAP-THERMAL"
+      ],
+      "known_answer": "force-adaptive whole-body loco-manipulation",
+      "inspection": "공식 abstract; thermal endurance 결과로 해석 금지; 분야 보조 venue",
+      "checked_on": "2026-10-23",
+      "registry_match": {
+        "status": "not_matched_by_normalized_title_or_observed_arxiv",
+        "paper_id": null,
+        "overview_path": null
+      },
+      "code_execution": false,
+      "content_review": "abstract_or_official_index",
+      "project_or_code": null,
+      "release_audit": "not_performed",
+      "novel_gap_proven": false
+    },
+    {
+      "source_id": "W25",
+      "title": "Learning Thermal-Aware Locomotion Policies for an Electrically-Actuated Quadruped Robot",
+      "year": 2026,
+      "venue": "arXiv",
+      "publication_evidence": "preprint_status_unverified",
+      "url": "https://arxiv.org/abs/2603.01631",
+      "gap_lenses": [
+        "GAP-THERMAL"
+      ],
+      "known_answer": "motor temperature를 locomotion 학습에 반영",
+      "inspection": "arXiv abstract; 열 인지 reward/input 자체는 신규 아님",
+      "checked_on": "2026-10-23",
+      "registry_match": {
+        "status": "not_matched_by_normalized_title_or_observed_arxiv",
+        "paper_id": null,
+        "overview_path": null
+      },
+      "code_execution": false,
+      "content_review": "abstract_or_official_index",
+      "project_or_code": null,
+      "release_audit": "not_performed",
+      "novel_gap_proven": false
+    },
+    {
+      "source_id": "W26",
+      "title": "Learning to Balance Motor Thermal Safety and Quadrupedal Locomotion Performance with Residual Policy",
+      "year": 2026,
+      "venue": "arXiv",
+      "publication_evidence": "preprint_status_unverified",
+      "url": "https://arxiv.org/html/2605.27046v3",
+      "gap_lenses": [
+        "GAP-THERMAL"
+      ],
+      "known_answer": "thermal residual policy로 성능·온도 trade-off",
+      "inspection": "HTML abstract·§III-A/C: A1 thermal model, fixed identified parameters; 모든 payload/ambient 전이 검증 아님",
+      "checked_on": "2026-10-23",
+      "registry_match": {
+        "status": "not_matched_by_normalized_title_or_observed_arxiv",
+        "paper_id": null,
+        "overview_path": null
+      },
+      "code_execution": false,
+      "content_review": "selected_full_text_sections",
+      "full_text_url": "https://arxiv.org/html/2605.27046v3",
+      "project_or_code": null,
+      "release_audit": "not_performed",
+      "novel_gap_proven": false
+    },
+    {
+      "source_id": "W27",
+      "title": "Development of the Leg Structure with Concentrated Liquid-Cooling Actuators for Long-Term Operation",
+      "year": 2025,
+      "venue": "Humanoids",
+      "publication_evidence": "official_publisher",
+      "url": "https://ieeexplore.ieee.org/abstract/document/11203109",
+      "gap_lenses": [
+        "GAP-THERMAL"
+      ],
+      "known_answer": "long-duration actuation을 위한 leg hardware/cooling 설계",
+      "inspection": "공식 publisher indexed abstract; algorithm 대안으로 hardware 조건도 통제",
+      "checked_on": "2026-10-23",
+      "registry_match": {
+        "status": "not_matched_by_normalized_title_or_observed_arxiv",
+        "paper_id": null,
+        "overview_path": null
+      },
+      "code_execution": false,
+      "content_review": "abstract_or_official_index",
+      "project_or_code": null,
+      "release_audit": "not_performed",
+      "novel_gap_proven": false
+    },
+    {
+      "source_id": "W28",
+      "title": "VGGT: Visual Geometry Grounded Transformer",
+      "year": 2025,
+      "venue": "CVPR",
+      "publication_evidence": "official_proceedings",
+      "url": "https://openaccess.thecvf.com/content/CVPR2025/html/Wang_VGGT_Visual_Geometry_Grounded_Transformer_CVPR_2025_paper.html",
+      "gap_lenses": [
+        "GAP-GEOMETRY"
+      ],
+      "known_answer": "feed-forward camera/depth/point/track geometry",
+      "inspection": "공식 abstract; geometry confidence를 collision probability로 간주 금지",
+      "checked_on": "2026-10-23",
+      "registry_match": {
+        "status": "identity_linked",
+        "paper_id": "pr-0056",
+        "overview_path": "2025/CVPR/2025_CVPR_VGGT-Visual-Geometry-Grounded-Transformer/01_overview.md"
+      },
+      "code_execution": false,
+      "content_review": "abstract_or_official_index",
+      "project_or_code": "https://github.com/facebookresearch/vggt",
+      "release_audit": "not_performed",
+      "novel_gap_proven": false
+    },
+    {
+      "source_id": "W29",
+      "title": "CG-SLAM: Efficient Dense RGB-D SLAM in a Consistent Uncertainty-aware 3D Gaussian Field",
+      "year": 2024,
+      "venue": "ECCV",
+      "publication_evidence": "official_proceedings",
+      "url": "https://www.ecva.net/papers/eccv_2024/papers_ECCV/html/3580_ECCV_2024_paper.php",
+      "gap_lenses": [
+        "GAP-GEOMETRY"
+      ],
+      "known_answer": "uncertainty-aware Gaussian tracking/mapping",
+      "inspection": "공식 abstract 및 indexed §5 limitations 일부; 전체 본문 정독 아님",
+      "checked_on": "2026-10-23",
+      "registry_match": {
+        "status": "identity_linked",
+        "paper_id": "pr-0402",
+        "overview_path": "2024/ECCV/2024_ECCV_CG-SLAM-Efficient-Dense-RGB-D-SLAM-in-a-Consistent-Uncerta/01_overview.md"
+      },
+      "code_execution": false,
+      "content_review": "abstract_or_official_index",
+      "project_or_code": "https://zju3dv.github.io/cg-slam",
+      "release_audit": "not_performed",
+      "novel_gap_proven": false
+    },
+    {
+      "source_id": "W30",
+      "title": "POMATO: Marrying Pointmap Matching with Temporal Motions for Dynamic 3D Reconstruction",
+      "year": 2025,
+      "venue": "ICCV",
+      "publication_evidence": "official_proceedings",
+      "url": "https://openaccess.thecvf.com/content/ICCV2025/html/Zhang_POMATO_Marrying_Pointmap_Matching_with_Temporal_Motions_for_Dynamic_3D_ICCV_2025_paper.html",
+      "gap_lenses": [
+        "GAP-GEOMETRY"
+      ],
+      "known_answer": "pointmap matching과 temporal motion의 dynamic 3D reconstruction",
+      "inspection": "공식 indexed abstract/BibTeX; 직접 open 403, 내용은 공식 검색 색인에서 확인",
+      "checked_on": "2026-10-23",
+      "registry_match": {
+        "status": "not_matched_by_normalized_title_or_observed_arxiv",
+        "paper_id": null,
+        "overview_path": null
+      },
+      "code_execution": false,
+      "content_review": "abstract_or_official_index",
+      "project_or_code": "https://github.com/wyddmw/POMATO",
+      "release_audit": "not_performed",
+      "novel_gap_proven": false
+    },
+    {
+      "source_id": "W31",
+      "title": "Emergent Outlier View Rejection in Visual Geometry Grounded Transformers",
+      "year": 2026,
+      "venue": "CVPR",
+      "publication_evidence": "official_proceedings",
+      "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Han_Emergent_Outlier_View_Rejection_in_Visual_Geometry_Grounded_Transformers_CVPR_2026_paper.html",
+      "gap_lenses": [
+        "GAP-GEOMETRY"
+      ],
+      "known_answer": "VGGT internal representation의 distractor-view rejection",
+      "inspection": "공식 indexed abstract/BibTeX; 직접 open 403; unseen obstacle의 free-space 보장은 아님",
+      "checked_on": "2026-10-23",
+      "registry_match": {
+        "status": "not_matched_by_normalized_title_or_observed_arxiv",
+        "paper_id": null,
+        "overview_path": null
+      },
+      "code_execution": false,
+      "content_review": "abstract_or_official_index",
+      "project_or_code": null,
+      "release_audit": "not_performed",
+      "novel_gap_proven": false
+    },
+    {
+      "source_id": "W32",
+      "title": "Splat-Nav: Safe Real-Time Robot Navigation in Gaussian Splatting Maps",
+      "year": 2025,
+      "venue": "T-RO",
+      "publication_evidence": "official_publisher",
+      "url": "https://doi.org/10.1109/tro.2025.3552348",
+      "gap_lenses": [
+        "GAP-GEOMETRY"
+      ],
+      "known_answer": "GSplat safe corridor planning + visual localization",
+      "inspection": "IEEE indexed metadata/abstract: T-RO 41, 2765–2784; registry IROS 표기는 publication/presentation 재정합 필요",
+      "checked_on": "2026-10-23",
+      "registry_match": {
+        "status": "identity_linked",
+        "paper_id": "pr-0284",
+        "overview_path": "2025/T-RO/2025_T-RO_Splat-Nav-Safe-Real-Time-Robot-Navigation-in-Gaussian-Spla/01_overview.md",
+        "metadata_discrepancy": "registry venue/path=IROS 2025; publisher=T-RO 2025; author lab lists IROS presentation; reconcile publication vs presentation without duplicate registration",
+        "metadata_resolution": {
+          "task_id": "META-W1",
+          "resolved_on": "2026-10-23",
+          "canonical_venue": "T-RO",
+          "source_ledger": "work/sources/splat_nav_metadata_2026-10-23.json",
+          "scope": "Current navigation pointer corrected; earlier inspection and discrepancy text retained as historical observations."
+        }
+      },
+      "code_execution": false,
+      "content_review": "abstract_or_official_index",
+      "project_or_code": null,
+      "release_audit": "not_performed",
+      "novel_gap_proven": false
+    },
+    {
+      "source_id": "W33",
+      "title": "SAFER-Splat: A Control Barrier Function for Safe Navigation with Online Gaussian Splatting Maps",
+      "year": 2024,
+      "venue": "arXiv",
+      "publication_evidence": "preprint_status_unverified",
+      "url": "https://arxiv.org/html/2409.09868v1",
+      "gap_lenses": [
+        "GAP-GEOMETRY"
+      ],
+      "known_answer": "online GSplat CBF safety filter",
+      "inspection": "HTML §IV–V·VIII: 정확한 지도 가정, dynamic object·pose error 한계; 열람 버전과 후속 venue/title 미정합",
+      "checked_on": "2026-10-23",
+      "registry_match": {
+        "status": "not_matched_by_normalized_title_or_observed_arxiv",
+        "paper_id": null,
+        "overview_path": null
+      },
+      "code_execution": false,
+      "content_review": "selected_full_text_sections",
+      "full_text_url": "https://arxiv.org/html/2409.09868v1",
+      "project_or_code": "https://chengine.github.io/safer-splat",
+      "release_audit": "not_performed",
+      "novel_gap_proven": false
+    },
+    {
+      "source_id": "W34",
+      "title": "AirSplan: Risk-Aware Motion Planning for Quadrotors in Cluttered 3D Gaussian Splats",
+      "year": 2026,
+      "venue": "IROS (author-reported)",
+      "publication_evidence": "author_reported_not_independently_verified",
+      "url": "https://arxiv.org/abs/2609.21226",
+      "gap_lenses": [
+        "GAP-GEOMETRY"
+      ],
+      "known_answer": "normalized GSplat + reachability continuous-time collision constraint",
+      "inspection": "arXiv abstract/comments IROS 예정; 공식 proceedings 미확인",
+      "checked_on": "2026-10-23",
+      "registry_match": {
+        "status": "not_matched_by_normalized_title_or_observed_arxiv",
+        "paper_id": null,
+        "overview_path": null
+      },
+      "code_execution": false,
+      "content_review": "abstract_or_official_index",
+      "project_or_code": null,
+      "release_audit": "not_performed",
+      "novel_gap_proven": false
+    },
+    {
+      "source_id": "W35",
+      "title": "PARTNR: A Benchmark for Planning and Reasoning in Embodied Multi-agent Tasks",
+      "year": 2025,
+      "venue": "ICLR",
+      "publication_evidence": "official_proceedings",
+      "url": "https://proceedings.iclr.cc/paper_files/paper/2025/hash/a3cf318fbeec1126da21e9185ae9908c-Abstract-Conference.html",
+      "gap_lenses": [
+        "GAP-HRI"
+      ],
+      "known_answer": "heterogeneous embodied cooperation benchmark",
+      "inspection": "공식/arXiv abstract; partner planning·perception·skill 구분의 기준",
+      "checked_on": "2026-10-23",
+      "registry_match": {
+        "status": "identity_linked",
+        "paper_id": "pr-0082",
+        "overview_path": "2025/ICLR/2025_ICLR_PARTNR-A-Benchmark-for-Planning-and-Reasoning-in-Embodied/01_overview.md"
+      },
+      "code_execution": false,
+      "content_review": "abstract_or_official_index",
+      "project_or_code": "https://aihabitat.org/partnr/",
+      "release_audit": "not_performed",
+      "novel_gap_proven": false
+    },
+    {
+      "source_id": "W36",
+      "title": "Risk-Calibrated Human-Robot Interaction via Set-Valued Intent Prediction",
+      "year": 2024,
+      "venue": "RSS",
+      "publication_evidence": "official_proceedings",
+      "url": "https://www.roboticsproceedings.org/rss20/p027.html",
+      "gap_lenses": [
+        "GAP-HRI"
+      ],
+      "known_answer": "RCIP: sequence risk calibration과 human clarification 비용",
+      "inspection": "공식 abstract·저자 project; 동적 human intent를 이미 다룸",
+      "checked_on": "2026-10-23",
+      "registry_match": {
+        "status": "not_matched_by_normalized_title_or_observed_arxiv",
+        "paper_id": null,
+        "overview_path": null
+      },
+      "code_execution": false,
+      "content_review": "abstract_or_official_index",
+      "project_or_code": "https://github.com/irom-princeton/risk_calibrated_interactive_planning",
+      "release_audit": "not_performed",
+      "novel_gap_proven": false
+    },
+    {
+      "source_id": "W37",
+      "title": "When to Act, Ask, or Learn: Uncertainty-Aware Policy Steering",
+      "year": 2026,
+      "venue": "RSS",
+      "publication_evidence": "official_proceedings",
+      "url": "https://roboticsproceedings.org/rss22/p142.html",
+      "gap_lenses": [
+        "GAP-HRI"
+      ],
+      "known_answer": "UPS: semantic ambiguity/low-level incapability 분리 후 execute/clarify/intervene",
+      "inspection": "공식 abstract; 이 삼분기 자체를 새 기여로 제안하지 않음",
+      "checked_on": "2026-10-23",
+      "registry_match": {
+        "status": "not_matched_by_normalized_title_or_observed_arxiv",
+        "paper_id": null,
+        "overview_path": null
+      },
+      "code_execution": false,
+      "content_review": "abstract_or_official_index",
+      "project_or_code": null,
+      "release_audit": "not_performed",
+      "novel_gap_proven": false
+    },
+    {
+      "source_id": "W38",
+      "title": "CoRI: Communication of Robot Intent for Physical Human-Robot Interaction",
+      "year": 2025,
+      "venue": "CoRL",
+      "publication_evidence": "official_proceedings",
+      "url": "https://proceedings.mlr.press/v305/wang25e.html",
+      "gap_lenses": [
+        "GAP-HRI"
+      ],
+      "known_answer": "physical HRI에서 robot intent communication",
+      "inspection": "공식 abstract; clarity와 task success·human workload 효과 구별",
+      "checked_on": "2026-10-23",
+      "registry_match": {
+        "status": "not_matched_by_normalized_title_or_observed_arxiv",
+        "paper_id": null,
+        "overview_path": null
+      },
+      "code_execution": false,
+      "content_review": "abstract_or_official_index",
+      "project_or_code": null,
+      "release_audit": "not_performed",
+      "novel_gap_proven": false
+    },
+    {
+      "source_id": "W39",
+      "title": "LLawCo: Learning Laws of Cooperation for Modeling Embodied Multi-Agent Behavior",
+      "year": 2026,
+      "venue": "ICML",
+      "publication_evidence": "official_proceedings",
+      "url": "https://proceedings.mlr.press/v306/zhou26i.html",
+      "gap_lenses": [
+        "GAP-HRI"
+      ],
+      "known_answer": "PARTNR-Dialog와 partner/task-aligned behavioral laws",
+      "inspection": "공식 abstract; LLM agent 협력과 실제 사람의 workload 구별",
+      "checked_on": "2026-10-23",
+      "registry_match": {
+        "status": "not_matched_by_normalized_title_or_observed_arxiv",
+        "paper_id": null,
+        "overview_path": null
+      },
+      "code_execution": false,
+      "content_review": "abstract_or_official_index",
+      "project_or_code": "https://www.merl.com/research/highlights/LLawCo",
+      "release_audit": "not_performed",
+      "novel_gap_proven": false
+    },
+    {
+      "source_id": "W40",
+      "title": "Bandwidth-Efficient Multi-Agent Communication through Information Bottleneck and Vector Quantization",
+      "year": 2026,
+      "venue": "ICRA",
+      "publication_evidence": "official_publisher",
+      "url": "https://ieeexplore.ieee.org/abstract/document/11696376",
+      "gap_lenses": [
+        "GAP-HRI"
+      ],
+      "known_answer": "IB/VQ를 통한 multi-agent communication 압축",
+      "inspection": "공식 publisher indexed abstract; 통신량 절감 자체를 새 공백으로 부르지 않음",
+      "checked_on": "2026-10-23",
+      "registry_match": {
+        "status": "not_matched_by_normalized_title_or_observed_arxiv",
+        "paper_id": null,
+        "overview_path": null
+      },
+      "code_execution": false,
+      "content_review": "abstract_or_official_index",
+      "project_or_code": null,
+      "release_audit": "not_performed",
+      "novel_gap_proven": false
+    }
+  ],
+  "validation": {
+    "status": "passed",
+    "checked_on": "2026-10-23",
+    "commands": [
+      "python3 -m py_compile work/scripts/build_reading_tiers.py",
+      "python3 work/scripts/build_reading_tiers.py",
+      "python3 work/scripts/audit_repository.py",
+      "git diff --check"
+    ],
+    "registry_count": 1037,
+    "standard_note_files": 5185,
+    "intensive": 322,
+    "inactive_reading_history": 47,
+    "markdown_files_checked": 5326,
+    "markdown_links_checked": 9738,
+    "errors": [],
+    "warnings": [],
+    "source_id_url_uniqueness": true,
+    "registry_linked_overviews_exist": true,
+    "unique_new_gap_anchors": 9,
+    "preservation": {
+      "work/sources/papers.json": {
+        "before_sha256": "61df569612b1ebcb886ad7c7e9eaf95a6e617ae8b261e27a372c362a7ef15774",
+        "after_sha256": "61df569612b1ebcb886ad7c7e9eaf95a6e617ae8b261e27a372c362a7ef15774",
+        "unchanged": true
+      },
+      "research/READING_STATUS.csv": {
+        "before_sha256": "ee7fb3c7b0b4c5c0ee7b4ece15d8643857c54dc8c172b1645fda5249e4a22d62",
+        "after_sha256": "ee7fb3c7b0b4c5c0ee7b4ece15d8643857c54dc8c172b1645fda5249e4a22d62",
+        "unchanged": true
+      },
+      "research/READING_STATUS_HISTORY.csv": {
+        "before_sha256": "c91b6727a03529ba790447eb5106f5b04cc4364b0c90b3eed1afecf9b700e001",
+        "after_sha256": "c91b6727a03529ba790447eb5106f5b04cc4364b0c90b3eed1afecf9b700e001",
+        "unchanged": true
+      },
+      "research/READING_TIERS.csv": {
+        "before_sha256": "404a469fa41cecff03ad015c4cee67a6da400346524a196d4a975477a8a8123e",
+        "after_sha256": "404a469fa41cecff03ad015c4cee67a6da400346524a196d4a975477a8a8123e",
+        "unchanged": true
+      }
+    },
+    "formal_paper_registration": false,
+    "tier_changes": false,
+    "reading_status_promotion": false,
+    "experiments_run": false,
+    "dependencies_installed": false,
+    "local_pdf_downloaded": false,
+    "git_commit_or_push": false
+  },
+  "counts": {
+    "source_records": 40,
+    "identity_linked": 6,
+    "publication_evidence": {
+      "official_proceedings": 29,
+      "preprint_status_unverified": 5,
+      "official_publisher": 4,
+      "author_reported_not_independently_verified": 2
+    },
+    "content_review": {
+      "abstract_or_official_index": 32,
+      "selected_full_text_sections": 7,
+      "author_project_method_description": 1
+    }
+  }
+}

@@ -4,6 +4,8 @@
 > Evidence maturity: `FULL_TEXT_CHECKED`.
 > Analysis basis: full-text PDF body checked on 2026-09-03 (17 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/1904.01416; PDF retrieval source: https://arxiv.org/pdf/1904.01416. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
+> DOC-QA2 targeted source review: 2026-10-23; PDF pp. 6. 손상 구간·직접 연결된 표 분류만 원문 이미지와 대조했다. 전체 주장 정독·실험 검증·reading status 승격을 뜻하지 않는다. [URL·PDF hash·수정 기록](../../../work/sources/pdf_note_review_followup_2026-10-23.json).
+
 ## Paper-supported conclusion
 
 > **Evidence boundary:** The following claims are restricted to selected PDF body sentences, captions and section anchors; exact table/equation values remain to be checked at those anchors.
@@ -14,7 +16,7 @@
 - **p. 2 / 1. Introduction - extractive body cue:** To close this gap we propose SemanticKITTI, a large dataset showing unprecedented detail in point-wise annotation with 28 classes, which is suited for various tasks.
 - **p. 1 / 1. Introduction - extractive body cue:** They mainly fulfill three purposes: (i) they provide a basis to measure progress, since they allow to provide results that are reproducible and comparable, (ii) ...
 - **p. 7 / Approach - extractive body cue:** We expect that new approaches could explicitly exploit the sequential information by using multiple input streams to the architecture or even recurrent neural networks to ...
-- **p. 6 / Approach - extractive body cue:** Approach num. parameters train time inference time (million)  GPU hours epoch   seconds point cloud  PointNet 3 4 0.5 PointNet++ 6 16 ...
+- **PDF p. 6, Table 3 (DOC-QA2 원문 대조):** Table 3의 열은 parameters (million), training time (GPU hours/epoch), inference time (seconds/point cloud)다. 예를 들어 PointNet은 3/4/0.5, DarkNet53Seg는 50/3/0.1이다. 숫자만 분리해 동일 단위로 해석하지 않는다.
 - **Contribution anchor:** p. 2 (1. Introduction), p. 2 (1. Introduction), p. 1 (1. Introduction), p. 7 (Approach), p. 6 (Approach)
 
 ### Strongest assumption and failure boundary

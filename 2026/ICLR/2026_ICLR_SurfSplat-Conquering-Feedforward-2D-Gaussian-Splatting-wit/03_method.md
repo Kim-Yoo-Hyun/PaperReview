@@ -4,6 +4,8 @@
 > Evidence maturity: `FULL_TEXT_CHECKED`.
 > Analysis basis: full-text PDF body checked on 2026-09-03 (19 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=o1sF4XaFdY; public full-text mirror used for retrieval (canonical paper source retained): https://chatpaper.com/api/v1/articles/download/247825. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
+> DOC-QA1 (2026-10-23): 제어문자·깨진 추출 구간과 직접 연결된 표 항목을 PDF 페이지 이미지와 대조했다. 확인 범위·원문 URL·페이지·수정 이력은 [대조 기록](../../../work/sources/pdf_note_review_2026-10-23.json)에 있다. 노트 전체의 정독이나 모든 기존 주장에 대한 재검증을 뜻하지 않으며 reading status는 유지한다.
+
 ## Method in One Sentence
 
 PDF body method statement (p. 4 (3.1 PRELIMINARIES), p. 4 (3.1 PRELIMINARIES), p. 15 (A.1 ENCODER ARCHITECTURE), p. 5 (3.1 PRELIMINARIES), p. 6 (3.1 PRELIMINARIES), p. 15 (A.1 ENCODER ARCHITECTURE)): In the multi-view branch, input images are first converted into low-resolution feature maps, which are then processed by multiple layers of self- and cross-attention Vaswani et al.
@@ -12,7 +14,7 @@ PDF body method statement (p. 4 (3.1 PRELIMINARIES), p. 4 (3.1 PRELIMINARIES), p
 
 - **p. 4 / 3.1 PRELIMINARIES - extractive body cue:** In the multi-view branch, input images are first converted into low-resolution feature maps, which are then processed by multiple layers of self- and cross-attention Vaswani ...
 - **p. 4 / 3.1 PRELIMINARIES - extractive body cue:** To integrate these complementary sources effectively, we adopt a dual-path for feature extraction within our model architecture.
-- **p. 15 / A.1 ENCODER ARCHITECTURE - extractive body cue:** This module outputs multi-view-aware features  F i N i=1, where F i ∈R H s × W s ×C.
+- **원문 대조:** Multi-view branch는 strided-convolution backbone과 여섯 self/cross-attention layer를 거쳐 view별 H/s×W/s×C feature를 출력한다. 이는 reconstruction encoder의 중간 표현이며 robot-planning handoff의 직접 근거가 아니다. ([PDF p. 15](https://arxiv.org/pdf/2602.02000#page=15), Appendix A.1 Encoder Architecture).
 - **p. 5 / 3.1 PRELIMINARIES - extractive body cue:** To address these issues, we start by an observation: most visible geometry in real-world scenes consists of smooth, continuous surfaces.
 - **p. 6 / 3.1 PRELIMINARIES - extractive body cue:** To address this, we propose a forced alpha blending strategy that explicitly constrains each Gaussian's opacity.
 - **p. 15 / A.1 ENCODER ARCHITECTURE - extractive body cue:** We adopt a dual-branch encoder design to extract both monocular and multi-view features for robust 3D reasoning, following the architecture proposed by DepthSplat Xu et ...
@@ -29,7 +31,7 @@ PDF body method statement (p. 4 (3.1 PRELIMINARIES), p. 4 (3.1 PRELIMINARIES), p
 
 - **p. 4 / 3.1 PRELIMINARIES - extractive body cue:** In the multi-view branch, input images are first converted into low-resolution feature maps, which are then processed by multiple layers of self- and cross-attention Vaswani ...
 - **p. 4 / 3.1 PRELIMINARIES - extractive body cue:** To integrate these complementary sources effectively, we adopt a dual-path for feature extraction within our model architecture.
-- **p. 15 / A.1 ENCODER ARCHITECTURE - extractive body cue:** This module outputs multi-view-aware features  F i N i=1, where F i ∈R H s × W s ×C.
+- **원문 대조:** Multi-view branch는 strided-convolution backbone과 여섯 self/cross-attention layer를 거쳐 view별 H/s×W/s×C feature를 출력한다. 이는 reconstruction encoder의 중간 표현이며 robot-planning handoff의 직접 근거가 아니다. ([PDF p. 15](https://arxiv.org/pdf/2602.02000#page=15), Appendix A.1 Encoder Architecture).
 - **p. 5 / 3.1 PRELIMINARIES - extractive body cue:** To address these issues, we start by an observation: most visible geometry in real-world scenes consists of smooth, continuous surfaces.
 - **p. 6 / 3.1 PRELIMINARIES - extractive body cue:** To address this, we propose a forced alpha blending strategy that explicitly constrains each Gaussian's opacity.
 - **p. 15 / A.1 ENCODER ARCHITECTURE - extractive body cue:** We adopt a dual-branch encoder design to extract both monocular and multi-view features for robust 3D reasoning, following the architecture proposed by DepthSplat Xu et ...
@@ -42,7 +44,7 @@ PDF body method statement (p. 4 (3.1 PRELIMINARIES), p. 4 (3.1 PRELIMINARIES), p
 |---|---|---|---|---|---|---|
 | Geometry / pose extraction | image·depth·point input에서 spatial state를 만든다 | RGB/RGB-D, point cloud, camera pose 또는 multi-view input | depth, pose, correspondence, point, mesh, Gaussian 또는 feature representation을 추정 | geometry/map/pose | In the multi-view branch, input images are first converted into low-resolution feature maps, which are then processed by multiple layers of self- ... | p. 4 (3.1 PRELIMINARIES), p. 4 (3.1 PRELIMINARIES) |
 | Semantic / temporal fusion | geometry에 semantics와 history를 정렬한다 | geometry, visual/language feature와 temporal context | feature lifting, scene graph, map update, tracking 또는 temporal fusion을 수행 | queryable 3D state | To integrate these complementary sources effectively, we adopt a dual-path for feature extraction within our model architecture. | p. 4 (3.1 PRELIMINARIES), p. 15 (A.1 ENCODER ARCHITECTURE) |
-| Robot query / planning handoff | 3D state를 task decision에 전달한다 | map/feature와 task query | target grounding, affordance, collision/free-space 또는 action cue를 생성 | goal, pose, path 또는 policy input | This module outputs multi-view-aware features  F i N i=1, where F i ∈R H s × W s ×C. | p. 15 (A.1 ENCODER ARCHITECTURE), p. 5 (3.1 PRELIMINARIES) |
+| Multi-view encoder | View별 spatial feature를 구성 | Multi-view image features | Stacked self/cross attention | H/s×W/s×C feature; planner interface 근거 없음 | 원문 대조: Multi-view branch는 strided-convolution backbone과 여섯 self/cross-attention layer를 거쳐 view별 H/s×W/s×C feature를 출력한다. 이는 reconstruction encoder의 중간 표현이며 robot-planning handoff의 직접 근거가 아니다. ([PDF p. 15](https://arxiv.org/pdf/2602.02000#page=15), Appendix A.1 Encoder Architecture) | [PDF p. 15](https://arxiv.org/pdf/2602.02000#page=15), Appendix A.1 Encoder Architecture |
 
 - Pipeline rows are domain labels; the paper-specific operations are the extractive cues and section anchors in the same row.
 

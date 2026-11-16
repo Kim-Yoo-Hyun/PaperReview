@@ -17,6 +17,8 @@
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
+> DOC-QA2 targeted source review: 2026-10-23; PDF pp. 5. 손상 구간·직접 연결된 표 분류만 원문 이미지와 대조했다. 전체 주장 정독·실험 검증·reading status 승격을 뜻하지 않는다. [URL·PDF hash·수정 기록](../../../work/sources/pdf_note_review_followup_2026-10-23.json).
+
 ## Why This Paper Is Here
 
 Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 We address this problem by introducing a novel Failureto-Prior paradigm.를 문제로 두고, Our method is built on a Failure-to-Prior principle: reconstruction failures caused by view-inconsistent transients are not merely artifacts to suppress, but signals that can be mined into priors.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
@@ -81,7 +83,7 @@ Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 �
 - **p. 2 / Figure/Table caption - extractive body cue:** Fig. 2. These failure patterns can be explicitly mined as cues for transient discovery. Specifically, we first perform a conservative 3DGS reconstruction to expose failure ...
 - **p. 3 / Figure/Table caption - extractive body cue:** Table 1. Comparison of paradigms and mechanisms. Item Online suppression methods Ours(DualSplat) Paradigm Online Heuristic (Internal) Failure-to-Prior (External Guidance) Dependency
 - **p. 5 / 3.4. Reconstruction Failures to Object-Level Priors - extractive body cue:** (15) The final MLP objective is LMLP = λrobustLrobust + λpriorLprior + Lreg.
-- **p. 5 / 3.4. Reconstruction Failures to Object-Level Priors - extractive body cue:** These loss functions are combined as: Lrobust = exp  -max(0, Tdensify -t) βrobustness  (Lcos + Lres) .
+- **PDF p. 5, §3.5 / Eq. (15) (DOC-QA2 원문 대조):** L_robust = exp(−max(0,T_densify−t)/β_robustness)·(L_cos+L_res). 이는 mask refinement loss의 시간별 weighting이며 failure observation 자체가 아니다.
 - **p. 4 / Figure/Table caption - extractive body cue:** Figure 3. DualSplat performs two-stage 3D Gaussian Splatting to suppress transient distractions. The first stage reconstructs a coarse static scene. After the first training, Mask ...
 
 ## Why Read It

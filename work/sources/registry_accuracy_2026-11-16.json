@@ -1,0 +1,134 @@
+{
+  "task": "REG-R16",
+  "reviewed_on": "2026-11-16",
+  "scope": "New Psi-Zero and direct data prerequisites; targeted AMO/SONIC accuracy correction plus whole-repository structural audit. Not a full factual audit of 1206 papers.",
+  "admission_input": "work/sources/registry_admissions_2026-11-16.json",
+  "new_paper_ids": [
+    "pr-1204",
+    "pr-1205",
+    "pr-1206"
+  ],
+  "corrected_existing": [
+    {
+      "paper_id": "pr-0604",
+      "changes": [
+        "five OCR/template notes replaced with scoped original-text paraphrase",
+        "DOI/arXiv identifiers",
+        "official inference code/checkpoint availability",
+        "affected evaluation/reproducibility cues"
+      ],
+      "sources": [
+        "https://www.roboticsproceedings.org/rss21/p061.html",
+        "https://arxiv.org/html/2505.03738v1",
+        "https://github.com/OpenTeleVision/AMO"
+      ],
+      "preserved": [
+        "stable identity",
+        "folder",
+        "REFERENCE tier",
+        "historical PDF provenance",
+        "user reading status"
+      ]
+    },
+    {
+      "paper_id": "pr-0872",
+      "changes": [
+        "DOI/arXiv identifiers",
+        "official project/code URL",
+        "project_only -> released",
+        "legacy evidence field reconciled to historical FULL_TEXT_CHECKED",
+        "release boundary added to three notes"
+      ],
+      "sources": [
+        "https://arxiv.org/abs/2511.07820",
+        "https://nvlabs.github.io/GEAR-SONIC/",
+        "https://github.com/NVlabs/GR00T-WholeBodyControl"
+      ],
+      "access_limit": "Publisher direct HTML returned 403; no new full-text re-review",
+      "preserved": [
+        "Science Robotics 2026 identity",
+        "folder",
+        "REFERENCE tier",
+        "historical PDF provenance",
+        "old quantitative body analysis"
+      ]
+    }
+  ],
+  "caveats": [
+    "Psi-Zero official symbol is Ψ₀, not phi/pi; RSS DOI confirmed.",
+    "Psi0 v1 AMO architecture/data recipe differs from later SONIC code release.",
+    "Psi0 v1 pretraining mixes EgoDex and Humanoid Everyday; not strictly human-only.",
+    "Psi0 EgoDex900M wording conflicts with approximately90M original dataset; use dataset source.",
+    "Psi0 subtask assistance and full autonomous success remain separate.",
+    "Humanoid Everyday ICRA2026 author claim not verified by official proceedings/program; retained arXiv2025.",
+    "SONIC prior notes already report21kGPUh; no fabricated correction of that value.",
+    "FULL_TEXT_CHECKED scope is section-specific source review, not a user READ or reproducibility result."
+  ],
+  "validation": {
+    "status": "passed",
+    "papers": 1206,
+    "standard_notes": 6030,
+    "tiers": {
+      "CORE": 50,
+      "NEXT": 405,
+      "REFERENCE": 509,
+      "ARCHIVE": 242
+    },
+    "active_reading": 455,
+    "history": 47,
+    "source_evidence": {
+      "FULL_TEXT_CHECKED": 968,
+      "ABSTRACT_CHECKED": 238
+    },
+    "resources": 658,
+    "relations": 50,
+    "markdown_files": 6257,
+    "internal_markdown_links": 13498,
+    "repository_audit_errors": 0,
+    "repository_audit_warnings": 0,
+    "artifact_scan_notes": 6030,
+    "artifact_scan_findings": 0,
+    "reading_history_tests": 6,
+    "document_maintenance_tests": 8,
+    "priority_reconcile_remaining_changes": 0,
+    "working_and_staged_diff_check": "passed",
+    "existing_user_input_rows_preserved": 499,
+    "new_reading_rows": "3 UNREAD",
+    "old_paper_records_changed_only": [
+      "pr-0604",
+      "pr-0872"
+    ],
+    "old_tiers_preserved": 1203,
+    "old_notes_preserved": 6007,
+    "old_notes_corrected": 8,
+    "protected_runtime_files_preserved": 236,
+    "existing_files_removed": 0,
+    "new_repository_files": 19,
+    "initial_staged_patch_preserved_before_commit": true,
+    "correction_during_validation": "Checkpoint metadata enum changed from invalid released to reported, retaining explicit availability evidence; rerun audit passed.",
+    "publication_whitespace_cleanup": {
+      "non_runtime_documents_terminal_blank_lines_removed": 8,
+      "preserved_patch_and_replay_files": 4,
+      "mechanism": "narrow .gitattributes whitespace rules; archived patch and runtime bytes unchanged",
+      "full_staged_diff_check": "passed"
+    }
+  },
+  "publication": {
+    "requested": true,
+    "target": "origin/main",
+    "status": "validated_for_commit",
+    "included_prior_registry_work": true,
+    "previous_remote_paper_count": 1037
+  },
+  "experiments_run": false,
+  "host_dependency_installed": false,
+  "pdf_or_weights_downloaded": false,
+  "snapshot_correction": {
+    "field": "README recent_2024_2026_count",
+    "previous_display": 898,
+    "before_manifest_actual": 910,
+    "new_papers_in_window": 3,
+    "after_actual": 913,
+    "historical_reports_preserved": true
+  }
+}

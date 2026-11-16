@@ -1,0 +1,691 @@
+[
+  {
+    "title": "RL's Razor: Why Online Reinforcement Learning Forgets Less",
+    "year": 2026,
+    "venue": "ICLR",
+    "category": "Robot Learning and Data",
+    "primary_track": "RL, IL, offline learning, and robot data",
+    "tags": [
+      "reinforcement-learning",
+      "fine-tuning",
+      "forgetting",
+      "KL-divergence"
+    ],
+    "aliases": [
+      "RL's Razor",
+      "RL's Razor: Why On-Policy Reinforcement Learning Forgets Less"
+    ],
+    "page": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/618c95f4557c15b253fb0e6f548ea0c0-Abstract-Conference.html",
+    "project": "https://jyopari.github.io/posts/rl_razor",
+    "pdf": "",
+    "note_format": "abstract_analysis_v1",
+    "evidence": "ABSTRACT_CHECKED",
+    "identifiers": {
+      "arxiv": "2509.04259"
+    },
+    "sources": {
+      "primary": {
+        "url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/618c95f4557c15b253fb0e6f548ea0c0-Abstract-Conference.html",
+        "kind": "official_publication",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-12"
+      },
+      "preprint": {
+        "url": "https://arxiv.org/abs/2509.04259",
+        "kind": "arxiv",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-12"
+      },
+      "paper_pdf": null,
+      "project": {
+        "url": "https://jyopari.github.io/posts/rl_razor",
+        "kind": "author_project",
+        "scope": "project_landing",
+        "verified_on": "2026-11-12"
+      },
+      "code": null
+    },
+    "publication": {
+      "status": "peer_reviewed",
+      "kind": "conference",
+      "venue": "ICLR",
+      "year": 2026,
+      "venue_year": 2026,
+      "presentation": "unknown"
+    },
+    "artifacts": {
+      "code_status": "not_identified",
+      "data_status": "not_identified",
+      "local_pdf_cache": false
+    },
+    "problem": "새 과제를 학습할 때 기존 정책의 능력이 보존되는 조건을 묻는다.",
+    "method": "같은 신규 과제 성능에서 RL과 SFT의 망각·정책 KL을 비교하고 on-policy RL의 작은 분포 변화 편향을 분석한다.",
+    "interface": "기존 정책 → RL/SFT 후학습 정책 → 신규·기존 과제 행동 평가.",
+    "evaluation": "언어 모델과 로봇 foundation model에서 적응 성능과 기존 능력 보존을 평가한다.",
+    "role": "RL이 지시 능력을 잃는다는 가정을 먼저 반박할 직접 선행이며 KL 진단의 기준이다.",
+    "lineage": "PPO/on-policy 학습·KL 제약에서 SimpleVLA-RL 후학습 보존 질문으로 연결한다. 직접 인용 관계와는 구별한다.",
+    "question": "신규 목표 관측의 작은 token KL이 미학습 목표의 closed-loop 행동 보존도 예측하는가?",
+    "minimal_experiment": "같은 초기 정책·적응 성능·비용에서 목표별 행동 변화와 관측별 KL의 관계를 비교한다.",
+    "verification_questions": "KL 방향·평가 관측 분포·기존 능력 정의·단순 학습률/모방 대안",
+    "boundary": "ICLR 최종 제목의 Online과 저자 페이지의 On-Policy는 같은 arXiv identity다. 로봇 공식 코드는 확인하지 못했다. 이전 N1 지정 본문 대조와 이번 초록 노트를 구별한다.",
+    "source_audit": "2026-11-12: 공식 abstract/metadata·명시한 project 확인. ICLR 최종 제목의 Online과 저자 페이지의 On-Policy는 같은 arXiv identity다. 로봇 공식 코드는 확인하지 못했다. 이전 N1 지정 본문 대조와 이번 초록 노트를 구별한다. 새 5-note는 초록 수준이며 과거 N1/N2의 지정 본문/source 검토는 work/sources/vla_masters_gap_scout_2026-11-12.json을 따른다. 사용자 정독·코드 재현을 뜻하지 않는다.",
+    "admission_tier": "NEXT",
+    "admission_group": "RL, IL, offline learning, and robot data",
+    "paper_type": "theory_or_foundation",
+    "curation": {
+      "admission_reason": "RL이 지시 능력을 잃는다는 가정을 먼저 반박할 직접 선행이며 KL 진단의 기준이다.",
+      "tier_reason": "RL이 지시 능력을 잃는다는 가정을 먼저 반박할 직접 선행이며 KL 진단의 기준이다.",
+      "rationale_status": "recorded",
+      "rationale_basis": "REG-R14 recent gap-source registration",
+      "rationale_reviewed_on": "2026-11-12",
+      "scope_status": "active",
+      "roles": [
+        "foundation"
+      ],
+      "role_basis": "manual admission review"
+    },
+    "relations": []
+  },
+  {
+    "title": "Breaking Lock-In: Preserving Steerability under Low-Data VLA Post-Training",
+    "year": 2026,
+    "venue": "arXiv",
+    "category": "VLA and Generalist Robot Policies",
+    "primary_track": "VLA and generalist robot policies",
+    "tags": [
+      "VLA",
+      "fine-tuning",
+      "language-grounding",
+      "generalization"
+    ],
+    "aliases": [
+      "DeLock"
+    ],
+    "page": "https://arxiv.org/abs/2604.23121",
+    "project": "https://suninghuang19.github.io/delock_page/",
+    "pdf": "",
+    "note_format": "abstract_analysis_v1",
+    "evidence": "ABSTRACT_CHECKED",
+    "identifiers": {
+      "arxiv": "2604.23121"
+    },
+    "sources": {
+      "primary": {
+        "url": "https://arxiv.org/abs/2604.23121",
+        "kind": "arxiv",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-12"
+      },
+      "preprint": {
+        "url": "https://arxiv.org/abs/2604.23121",
+        "kind": "arxiv",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-12"
+      },
+      "paper_pdf": null,
+      "project": {
+        "url": "https://suninghuang19.github.io/delock_page/",
+        "kind": "author_project",
+        "scope": "project_landing",
+        "verified_on": "2026-11-12"
+      },
+      "code": null
+    },
+    "publication": {
+      "status": "preprint",
+      "kind": "preprint",
+      "venue": "arXiv",
+      "year": 2026,
+      "venue_year": null,
+      "presentation": "unknown"
+    },
+    "artifacts": {
+      "code_status": "not_released",
+      "data_status": "not_identified",
+      "local_pdf_cache": false
+    },
+    "problem": "소량 시연 SFT 뒤 VLA가 학습 물체·공간에 고착되어 새로운 지시를 따르지 못한다.",
+    "method": "후학습 중 시각 grounding을 보존하고 추론 시 contrastive prompt guidance로 denoising을 조절한다.",
+    "interface": "영상·언어 → 시각 grounding을 보존한 VLA → 지시 조건부 동작.",
+    "evaluation": "Simulation과 실제 로봇의 여덟 평가에서 새로운 지시에 대한 일반화를 비교한다.",
+    "role": "단순히 지시 보존·semantic freezing을 도입하는 것을 새 연구 기여로 주장하지 않도록 한다.",
+    "lineage": "일반 VLA SFT·시각 정렬 보존·추론 guidance를 RL 후학습 및 LIBERO-CF와 비교한다.",
+    "question": "RL 적응에서도 학습률과 시각 보존·추론 guidance 이후 잔여 행동 변화가 있는가?",
+    "minimal_experiment": "동일 지시쌍에서 기본 정책·후학습·guidance의 효과와 추가 추론 비용을 분리한다.",
+    "verification_questions": "시각 보존 손실·guidance 입력·새 지시 split·RL과 SFT의 데이터/비용 차이",
+    "boundary": "v1 abstract와 저자 project 확인. Code Coming Soon; 공식 채택 미확인. 이전 지정 본문 검토는 별도 원장에 보존한다.",
+    "source_audit": "2026-11-12: 공식 abstract/metadata·명시한 project 확인. v1 abstract와 저자 project 확인. Code Coming Soon; 공식 채택 미확인. 이전 지정 본문 검토는 별도 원장에 보존한다. 새 5-note는 초록 수준이며 과거 N1/N2의 지정 본문/source 검토는 work/sources/vla_masters_gap_scout_2026-11-12.json을 따른다. 사용자 정독·코드 재현을 뜻하지 않는다.",
+    "admission_tier": "NEXT",
+    "admission_group": "VLA, cross-embodiment, and long-horizon planning",
+    "paper_type": "method",
+    "curation": {
+      "admission_reason": "단순히 지시 보존·semantic freezing을 도입하는 것을 새 연구 기여로 주장하지 않도록 한다.",
+      "tier_reason": "단순히 지시 보존·semantic freezing을 도입하는 것을 새 연구 기여로 주장하지 않도록 한다.",
+      "rationale_status": "recorded",
+      "rationale_basis": "REG-R14 recent gap-source registration",
+      "rationale_reviewed_on": "2026-11-12",
+      "scope_status": "active",
+      "roles": [
+        "method"
+      ],
+      "role_basis": "manual admission review"
+    },
+    "relations": []
+  },
+  {
+    "title": "TEMPO: Semantic-Action Decoupled RL Post-Training for Vision-Language-Action Models",
+    "year": 2026,
+    "venue": "arXiv",
+    "category": "VLA and Generalist Robot Policies",
+    "primary_track": "VLA and generalist robot policies",
+    "tags": [
+      "VLA",
+      "reinforcement-learning",
+      "semantic-preservation",
+      "adaptation"
+    ],
+    "aliases": [
+      "TEMPO-RL"
+    ],
+    "page": "https://arxiv.org/abs/2608.07314",
+    "project": "https://anonymous.4open.science/w/tempo-page/",
+    "pdf": "",
+    "note_format": "abstract_analysis_v1",
+    "evidence": "ABSTRACT_CHECKED",
+    "identifiers": {
+      "arxiv": "2608.07314"
+    },
+    "sources": {
+      "primary": {
+        "url": "https://arxiv.org/abs/2608.07314",
+        "kind": "arxiv",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-12"
+      },
+      "preprint": {
+        "url": "https://arxiv.org/abs/2608.07314",
+        "kind": "arxiv",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-12"
+      },
+      "paper_pdf": null,
+      "project": {
+        "url": "https://anonymous.4open.science/w/tempo-page/",
+        "kind": "author_project",
+        "scope": "project_landing",
+        "verified_on": "2026-11-12"
+      },
+      "code": null
+    },
+    "publication": {
+      "status": "preprint",
+      "kind": "preprint",
+      "venue": "arXiv",
+      "year": 2026,
+      "venue_year": null,
+      "presentation": "unknown"
+    },
+    "artifacts": {
+      "code_status": "not_identified",
+      "data_status": "not_identified",
+      "local_pdf_cache": false
+    },
+    "problem": "VLA의 의미 모듈과 행동 모듈을 같은 속도로 갱신할 때 안정성과 제어 적응의 요구가 충돌한다.",
+    "method": "VLM을 동결하고 semantic projection과 action expert를 서로 다른 빈도의 RL 갱신으로 적응한다.",
+    "interface": "영상·지시 → 동결 VLM·적응 projection → RL action expert → 로봇 동작.",
+    "evaluation": "CALVIN과 실제 조작 과제에서 후학습 정책·갱신 전략을 비교한다.",
+    "role": "단일 VLA 내부의 의미 보존과 모듈별 RL 갱신에 관한 직접 경쟁 선행이다.",
+    "lineage": "VLA RL·projection/action-expert 적응을 기존 U1 routing 및 LANGRET 보존 분석과 대조한다.",
+    "question": "동일 목표 coverage·적응 비용에서 갱신 빈도 조절이 기존 목표 행동을 얼마나 보존하는가?",
+    "minimal_experiment": "동일 정책·학습 목표에서 uniform update와 모듈별 update를 목표별 성공·비용으로 비교한다.",
+    "verification_questions": "학습 task-set·두 학습기의 데이터/gradient 경계·초기 능력·비용 정의",
+    "boundary": "v1 abstract 및 논문 내 project 링크 확인. 익명 code 링크는 기존 N1에서 발견했으나 내용 검증은 안 됨. 동명의 TEMPO: Learning Temporal Context for Dynamic Robot Manipulation과 다른 논문이다. 논문이 제공한 익명 project URL은 이번 도구에서 접근하지 못했으며 링크 식별만 확인했다.",
+    "source_audit": "2026-11-12: 공식 abstract/metadata 확인; project URL은 링크 식별만 확인. v1 abstract 및 논문 내 project 링크 확인. 익명 code 링크는 기존 N1에서 발견했으나 내용 검증은 안 됨. 동명의 TEMPO: Learning Temporal Context for Dynamic Robot Manipulation과 다른 논문이다. 논문이 제공한 익명 project URL은 이번 도구에서 접근하지 못했으며 링크 식별만 확인했다. 새 5-note는 초록 수준이며 과거 N1/N2의 지정 본문/source 검토는 work/sources/vla_masters_gap_scout_2026-11-12.json을 따른다. 사용자 정독·코드 재현을 뜻하지 않는다.",
+    "admission_tier": "NEXT",
+    "admission_group": "VLA, cross-embodiment, and long-horizon planning",
+    "paper_type": "method",
+    "curation": {
+      "admission_reason": "단일 VLA 내부의 의미 보존과 모듈별 RL 갱신에 관한 직접 경쟁 선행이다.",
+      "tier_reason": "단일 VLA 내부의 의미 보존과 모듈별 RL 갱신에 관한 직접 경쟁 선행이다.",
+      "rationale_status": "recorded",
+      "rationale_basis": "REG-R14 recent gap-source registration",
+      "rationale_reviewed_on": "2026-11-12",
+      "scope_status": "active",
+      "roles": [
+        "method"
+      ],
+      "role_basis": "manual admission review"
+    },
+    "relations": []
+  },
+  {
+    "title": "When Vision Overrides Language: Evaluating and Mitigating Counterfactual Failures in VLAs",
+    "year": 2026,
+    "venue": "arXiv",
+    "category": "VLA and Generalist Robot Policies",
+    "primary_track": "VLA and generalist robot policies",
+    "tags": [
+      "VLA",
+      "Benchmark",
+      "language-grounding",
+      "counterfactual"
+    ],
+    "aliases": [
+      "LIBERO-CF",
+      "CAG"
+    ],
+    "page": "https://arxiv.org/abs/2602.17659",
+    "project": "https://vla-cf.github.io/",
+    "pdf": "",
+    "note_format": "abstract_analysis_v1",
+    "evidence": "ABSTRACT_CHECKED",
+    "identifiers": {
+      "arxiv": "2602.17659"
+    },
+    "sources": {
+      "primary": {
+        "url": "https://arxiv.org/abs/2602.17659",
+        "kind": "arxiv",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-12"
+      },
+      "preprint": {
+        "url": "https://arxiv.org/abs/2602.17659",
+        "kind": "arxiv",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-12"
+      },
+      "paper_pdf": null,
+      "project": {
+        "url": "https://vla-cf.github.io/",
+        "kind": "author_project",
+        "scope": "project_landing",
+        "verified_on": "2026-11-12"
+      },
+      "code": {
+        "url": "https://github.com/yuffish/VLA-CF",
+        "kind": "official_code",
+        "scope": "project_landing",
+        "verified_on": "2026-11-12"
+      }
+    },
+    "publication": {
+      "status": "preprint",
+      "kind": "preprint",
+      "venue": "arXiv",
+      "year": 2026,
+      "venue_year": null,
+      "presentation": "unknown"
+    },
+    "artifacts": {
+      "code_status": "released",
+      "data_status": "not_identified",
+      "local_pdf_cache": false
+    },
+    "problem": "장면의 학습 편향 때문에 VLA가 다른 유효한 언어 지시보다 익숙한 행동을 반복한다.",
+    "method": "LIBERO-CF로 반사실적 지시 수행을 평가하고 언어 조건부·비조건부 분기의 차이로 행동을 유도한다.",
+    "interface": "같은 LIBERO 장면의 대체 지시 → VLA/VA 분기 → 조작 행동.",
+    "evaluation": "LIBERO-CF와 실제 로봇에서 언어 grounding과 task success를 구별해 평가한다.",
+    "role": "LANGRET의 공개 장면·지시쌍·평가기 source이며 기존 counterfactual benchmark와의 중복을 드러낸다.",
+    "lineage": "LIBERO·OpenVLA-OFT·π₀.₅의 지시 평가와 CounterAlign을 대조한다.",
+    "question": "같은 초기 장면에서 목표별 후학습 보존을 측정하면 aggregate success와 다른 판단을 얻는가?",
+    "minimal_experiment": "Prompt·목표 predicate를 일치시키고 두 유효 목표의 첫 사건과 지정 목표 성공을 따로 기록한다.",
+    "verification_questions": "focused suite의 장면 변경·OR/target-only 종료·두 목표의 기본 능력·guidance 비용",
+    "boundary": "최신 v3 abstract 확인. 저자/arXiv는 CoRL 2026 Spotlight를 표기하지만 이번 공식 proceedings/forum 검색으로 확인하지 못해 arXiv로 등록한다. GitHub 공개는 native 재현 성공이 아니다.",
+    "source_audit": "2026-11-12: 공식 abstract/metadata·명시한 project 확인. 최신 v3 abstract 확인. 저자/arXiv는 CoRL 2026 Spotlight를 표기하지만 이번 공식 proceedings/forum 검색으로 확인하지 못해 arXiv로 등록한다. GitHub 공개는 native 재현 성공이 아니다. 새 5-note는 초록 수준이며 과거 N1/N2의 지정 본문/source 검토는 work/sources/vla_masters_gap_scout_2026-11-12.json을 따른다. 사용자 정독·코드 재현을 뜻하지 않는다.",
+    "admission_tier": "NEXT",
+    "admission_group": "VLA, cross-embodiment, and long-horizon planning",
+    "paper_type": "benchmark_or_dataset",
+    "curation": {
+      "admission_reason": "LANGRET의 공개 장면·지시쌍·평가기 source이며 기존 counterfactual benchmark와의 중복을 드러낸다.",
+      "tier_reason": "LANGRET의 공개 장면·지시쌍·평가기 source이며 기존 counterfactual benchmark와의 중복을 드러낸다.",
+      "rationale_status": "recorded",
+      "rationale_basis": "REG-R14 recent gap-source registration",
+      "rationale_reviewed_on": "2026-11-12",
+      "scope_status": "active",
+      "roles": [
+        "benchmark_or_dataset",
+        "method"
+      ],
+      "role_basis": "manual admission review"
+    },
+    "relations": []
+  },
+  {
+    "title": "Trajectory-Level Continuous Action Representation for Robotic Manipulation",
+    "year": 2026,
+    "venue": "ECCV",
+    "category": "VLA and Generalist Robot Policies",
+    "primary_track": "VLA and generalist robot policies",
+    "tags": [
+      "action-representation",
+      "continuous-latent",
+      "control-frequency",
+      "manipulation"
+    ],
+    "aliases": [
+      "CAT"
+    ],
+    "page": "https://link.springer.com/chapter/10.1007/978-3-032-37369-4_24",
+    "project": "not identified",
+    "pdf": "",
+    "note_format": "abstract_analysis_v1",
+    "evidence": "ABSTRACT_CHECKED",
+    "identifiers": {
+      "arxiv": "2608.24111",
+      "doi": "10.1007/978-3-032-37369-4_24"
+    },
+    "sources": {
+      "primary": {
+        "url": "https://link.springer.com/chapter/10.1007/978-3-032-37369-4_24",
+        "kind": "publisher",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-12"
+      },
+      "preprint": {
+        "url": "https://arxiv.org/abs/2608.24111",
+        "kind": "arxiv",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-12"
+      },
+      "paper_pdf": null,
+      "project": null,
+      "code": null
+    },
+    "publication": {
+      "status": "peer_reviewed",
+      "kind": "conference",
+      "venue": "ECCV",
+      "year": 2026,
+      "venue_year": 2026,
+      "presentation": "unknown"
+    },
+    "artifacts": {
+      "code_status": "not_identified",
+      "data_status": "not_identified",
+      "local_pdf_cache": false
+    },
+    "problem": "제어 주기에 묶인 행동 표현은 높은 샘플링 빈도에서 길어지고 시간적 일관성을 잃기 쉽다.",
+    "method": "고정된 실제 시간 구간의 궤적을 continuous latent token으로 압축하고 주파수를 고려한 위치 표현을 사용한다.",
+    "interface": "시간 구간의 행동 궤적·control frequency ↔ 연속 latent token ↔ 실행 행동.",
+    "evaluation": "LIBERO·MimicGen·실제 장시간 조작에서 backbone과 control frequency를 바꿔 비교한다.",
+    "role": "제어 간격·물리 시간 조건부 행동 표현 자체를 새 공백으로 오인하지 않게 하는 기준이다.",
+    "lineage": "FAST·continuous action representation·고주파 latent chunk와 물리 시간 정렬을 비교한다.",
+    "question": "주기 간 표현 일관성이 실행 도중 관측 지연·주기 변화의 행동 안정성까지 보장하는가?",
+    "minimal_experiment": "정상 주기와 episode 중간 주기 변경을 구별하고 동일 시간·경로에서 행동 오차와 성공을 비교한다.",
+    "verification_questions": "시간 구간·normalizer·주파수 학습 노출·동일 episode 내 변경 평가 유무",
+    "boundary": "Springer ECCV 2026 chapter와 arXiv v2 abstract 확인. Code/project URL은 확인하지 못했다. 제어 주기 일반화와 통신 지연 강건성은 구별한다.",
+    "source_audit": "2026-11-12: 공식 abstract/metadata·명시한 project 확인. Springer ECCV 2026 chapter와 arXiv v2 abstract 확인. Code/project URL은 확인하지 못했다. 제어 주기 일반화와 통신 지연 강건성은 구별한다. 새 5-note는 초록 수준이며 과거 N1/N2의 지정 본문/source 검토는 work/sources/vla_masters_gap_scout_2026-11-12.json을 따른다. 사용자 정독·코드 재현을 뜻하지 않는다.",
+    "admission_tier": "NEXT",
+    "admission_group": "VLA, cross-embodiment, and long-horizon planning",
+    "paper_type": "method",
+    "curation": {
+      "admission_reason": "제어 간격·물리 시간 조건부 행동 표현 자체를 새 공백으로 오인하지 않게 하는 기준이다.",
+      "tier_reason": "제어 간격·물리 시간 조건부 행동 표현 자체를 새 공백으로 오인하지 않게 하는 기준이다.",
+      "rationale_status": "recorded",
+      "rationale_basis": "REG-R14 recent gap-source registration",
+      "rationale_reviewed_on": "2026-11-12",
+      "scope_status": "active",
+      "roles": [
+        "method"
+      ],
+      "role_basis": "manual admission review"
+    },
+    "relations": []
+  },
+  {
+    "title": "Same Path, Less Time: Training-Free Fast Execution of Vision-Language-Action Models under Inference Latency",
+    "year": 2026,
+    "venue": "arXiv",
+    "category": "VLA and Generalist Robot Policies",
+    "primary_track": "VLA and generalist robot policies",
+    "tags": [
+      "VLA",
+      "latency",
+      "action-chunking",
+      "control-frequency"
+    ],
+    "aliases": [
+      "Path-preserving Time Scaling",
+      "PTS"
+    ],
+    "page": "https://arxiv.org/abs/2611.01390",
+    "project": "not identified",
+    "pdf": "",
+    "note_format": "abstract_analysis_v1",
+    "evidence": "ABSTRACT_CHECKED",
+    "identifiers": {
+      "arxiv": "2611.01390"
+    },
+    "sources": {
+      "primary": {
+        "url": "https://arxiv.org/abs/2611.01390",
+        "kind": "arxiv",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-12"
+      },
+      "preprint": {
+        "url": "https://arxiv.org/abs/2611.01390",
+        "kind": "arxiv",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-12"
+      },
+      "paper_pdf": null,
+      "project": null,
+      "code": null
+    },
+    "publication": {
+      "status": "preprint",
+      "kind": "preprint",
+      "venue": "arXiv",
+      "year": 2026,
+      "venue_year": null,
+      "presentation": "unknown"
+    },
+    "artifacts": {
+      "code_status": "not_identified",
+      "data_status": "not_identified",
+      "local_pdf_cache": false
+    },
+    "problem": "추론 대기와 느린 시연 속도로 인한 배포 시간 손실을 줄인다.",
+    "method": "Frozen chunk policy에 경로 유지 time scaling을 적용해 비동기 추론과 실행 속도를 맞춘다.",
+    "interface": "고정 VLA 행동 chunk·추론 지연 → 경로/진행도 정렬 → 속도 조절된 실행 명령.",
+    "evaluation": "LIBERO와 LIBERO-Dynamic에서 지연을 주입해 성공률과 task throughput을 비교한다.",
+    "role": "제어 주기 학습 전에 넘어야 할 학습 없는 실행 대안이며 예비 timing 질문의 비교 자료다.",
+    "lineage": "RTC 비동기 실행·action chunking·CAT 물리 시간 표현과 학습/실행 단계의 효과를 분리한다.",
+    "question": "표현 학습의 추가 이득이 같은 decoder·latency·gripper 규칙의 단순 time scaling 이후 남는가?",
+    "minimal_experiment": "동일 frozen 정책에서 stop-and-wait·비동기1배속·PTS를 같은 지연과 성공/시간으로 대조한다.",
+    "verification_questions": "실제 지연과 주입 지연·동작 제한·gripper 동기화·실제 로봇 전이",
+    "boundary": "11/01 공개 v1 abstract 확인. 공식 채택·code URL 미확인. Simulation 결과를 실제 로봇 검증으로 확대하지 않는다.",
+    "source_audit": "2026-11-12: 공식 abstract/metadata·명시한 project 확인. 11/01 공개 v1 abstract 확인. 공식 채택·code URL 미확인. Simulation 결과를 실제 로봇 검증으로 확대하지 않는다. 새 5-note는 초록 수준이며 과거 N1/N2의 지정 본문/source 검토는 work/sources/vla_masters_gap_scout_2026-11-12.json을 따른다. 사용자 정독·코드 재현을 뜻하지 않는다.",
+    "admission_tier": "REFERENCE",
+    "admission_group": "VLA, cross-embodiment, and long-horizon planning",
+    "paper_type": "method",
+    "curation": {
+      "admission_reason": "제어 주기 학습 전에 넘어야 할 학습 없는 실행 대안이며 예비 timing 질문의 비교 자료다.",
+      "tier_reason": "제어 주기 학습 전에 넘어야 할 학습 없는 실행 대안이며 예비 timing 질문의 비교 자료다.",
+      "rationale_status": "recorded",
+      "rationale_basis": "REG-R14 recent gap-source registration",
+      "rationale_reviewed_on": "2026-11-12",
+      "scope_status": "adjacent",
+      "roles": [
+        "method"
+      ],
+      "role_basis": "manual admission review"
+    },
+    "relations": []
+  },
+  {
+    "title": "ActMem-VLA: Action-History Memory with Dual-Expert Denoising for Long-Horizon Vision-Language-Action Policies",
+    "year": 2026,
+    "venue": "arXiv",
+    "category": "VLA and Generalist Robot Policies",
+    "primary_track": "VLA and generalist robot policies",
+    "tags": [
+      "VLA",
+      "memory",
+      "action-history",
+      "long-horizon"
+    ],
+    "aliases": [
+      "ActMem-VLA"
+    ],
+    "page": "https://arxiv.org/abs/2609.37307",
+    "project": "not identified",
+    "pdf": "",
+    "note_format": "abstract_analysis_v1",
+    "evidence": "ABSTRACT_CHECKED",
+    "identifiers": {
+      "arxiv": "2609.37307"
+    },
+    "sources": {
+      "primary": {
+        "url": "https://arxiv.org/abs/2609.37307",
+        "kind": "arxiv",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-12"
+      },
+      "preprint": {
+        "url": "https://arxiv.org/abs/2609.37307",
+        "kind": "arxiv",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-12"
+      },
+      "paper_pdf": null,
+      "project": null,
+      "code": null
+    },
+    "publication": {
+      "status": "preprint",
+      "kind": "preprint",
+      "venue": "arXiv",
+      "year": 2026,
+      "venue_year": null,
+      "presentation": "unknown"
+    },
+    "artifacts": {
+      "code_status": "not_identified",
+      "data_status": "not_identified",
+      "local_pdf_cache": false
+    },
+    "problem": "현재 관측이 비슷한 서로 다른 작업 단계에서 행동이 모호해지는 문제를 다룬다.",
+    "method": "Mamba 행동 이력 memory와 PreAction Expert를 학습하고 frozen action expert에 denoising을 넘긴다.",
+    "interface": "실행 행동 이력·현재 맥락 → memory/PAE → frozen AE의 행동 refinement.",
+    "evaluation": "LIBERO-Mem과 네 실제 조작 과제에서 memory 및 기존 VLA와 비교한다.",
+    "role": "행동 이력 memory의 강한 비교 자료이며 결과 기반 기억이라는 질문의 기존 대안을 구체화한다.",
+    "lineage": "MemoryVLA·π₀.₅·RoboMME와 명령 이력/관측 결과/작업 진행도의 차이를 비교한다.",
+    "question": "행동 이력이 유지돼도 실행 결과가 바뀌는 경우 memory가 결과를 올바르게 반영하는가?",
+    "minimal_experiment": "같은 명령 이력에서 실제 접촉/효과가 달라지는 자연 사례로 관측·이력 의존성을 비교한다.",
+    "verification_questions": "memory reset·실제 실행 이력의 정의·효과 피드백 접근권·분할과 예산",
+    "boundary": "v2 abstract 확인. 공식 채택·공식 code/project URL 미확인. 행동 이력은 물리적 과제 완료의 증거가 아니다.",
+    "source_audit": "2026-11-12: 공식 abstract/metadata·명시한 project 확인. v2 abstract 확인. 공식 채택·공식 code/project URL 미확인. 행동 이력은 물리적 과제 완료의 증거가 아니다. 새 5-note는 초록 수준이며 과거 N1/N2의 지정 본문/source 검토는 work/sources/vla_masters_gap_scout_2026-11-12.json을 따른다. 사용자 정독·코드 재현을 뜻하지 않는다.",
+    "admission_tier": "REFERENCE",
+    "admission_group": "VLA, cross-embodiment, and long-horizon planning",
+    "paper_type": "method",
+    "curation": {
+      "admission_reason": "행동 이력 memory의 강한 비교 자료이며 결과 기반 기억이라는 질문의 기존 대안을 구체화한다.",
+      "tier_reason": "행동 이력 memory의 강한 비교 자료이며 결과 기반 기억이라는 질문의 기존 대안을 구체화한다.",
+      "rationale_status": "recorded",
+      "rationale_basis": "REG-R14 recent gap-source registration",
+      "rationale_reviewed_on": "2026-11-12",
+      "scope_status": "adjacent",
+      "roles": [
+        "method"
+      ],
+      "role_basis": "manual admission review"
+    },
+    "relations": []
+  },
+  {
+    "title": "Is Your Robot's Memory Just a Clock? Temporal Shortcuts in Memory-Augmented VLA Policies",
+    "year": 2026,
+    "venue": "arXiv",
+    "category": "VLA and Generalist Robot Policies",
+    "primary_track": "VLA and generalist robot policies",
+    "tags": [
+      "VLA",
+      "memory",
+      "temporal-shortcuts",
+      "evaluation"
+    ],
+    "aliases": [
+      "memory-clock",
+      "phantom progress"
+    ],
+    "page": "https://arxiv.org/abs/2611.14488",
+    "project": "https://github.com/bennidict23/memory-clock",
+    "pdf": "",
+    "note_format": "abstract_analysis_v1",
+    "evidence": "ABSTRACT_CHECKED",
+    "identifiers": {
+      "arxiv": "2611.14488"
+    },
+    "sources": {
+      "primary": {
+        "url": "https://arxiv.org/abs/2611.14488",
+        "kind": "arxiv",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-12"
+      },
+      "preprint": {
+        "url": "https://arxiv.org/abs/2611.14488",
+        "kind": "arxiv",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-12"
+      },
+      "paper_pdf": null,
+      "project": {
+        "url": "https://github.com/bennidict23/memory-clock",
+        "kind": "author_project",
+        "scope": "project_landing",
+        "verified_on": "2026-11-12"
+      },
+      "code": {
+        "url": "https://github.com/bennidict23/memory-clock",
+        "kind": "official_code",
+        "scope": "project_landing",
+        "verified_on": "2026-11-12"
+      }
+    },
+    "publication": {
+      "status": "preprint",
+      "kind": "preprint",
+      "venue": "arXiv",
+      "year": 2026,
+      "venue_year": null,
+      "presentation": "unknown"
+    },
+    "artifacts": {
+      "code_status": "released",
+      "data_status": "not_identified",
+      "local_pdf_cache": false
+    },
+    "problem": "시간에 따라 memory를 채우는 정책이 대기 시간을 실제 과제 진행으로 오인할 수 있다.",
+    "method": "무효 pause/fidget과 memory/timestamp 대조로 temporal shortcut을 진단하고 event-indexed memory를 비교한다.",
+    "interface": "관측 memory·시간/사건 index → VLA 행동 → 반복 조작과 종료 판단.",
+    "evaluation": "RoboMME counting task에서 무효 사건·시간표식·memory 입력을 통제해 성공 변화를 측정한다.",
+    "role": "기억의 시간 편향 진단과 사건 기반 index가 이미 선행임을 반영할 직접 반대 근거다.",
+    "lineage": "RoboMME·FrameSamp 계열의 memory indexing과 기존 SET/FEEDBACK 질문을 연결한다.",
+    "question": "무효 사건 제어 뒤에도 물리적 결과가 다른 사례에서 남는 memory 상태 오류가 있는가?",
+    "minimal_experiment": "무효 사건·같은 관측의 memory withholding·event index를 먼저 대조하고 잔여 오류를 분리한다.",
+    "verification_questions": "event 기준의 관측 접근권·counting task 외 전이·제어 개입과 memory 효과의 분리",
+    "boundary": "11/10 공개 v1 abstract와 저자 repository 확인. 공식 채택 미확인. 공개 코드를 실행하거나 모든 방법의 공통 실패로 일반화하지 않는다.",
+    "source_audit": "2026-11-12: 공식 abstract/metadata·명시한 project 확인. 11/10 공개 v1 abstract와 저자 repository 확인. 공식 채택 미확인. 공개 코드를 실행하거나 모든 방법의 공통 실패로 일반화하지 않는다. 새 5-note는 초록 수준이며 과거 N1/N2의 지정 본문/source 검토는 work/sources/vla_masters_gap_scout_2026-11-12.json을 따른다. 사용자 정독·코드 재현을 뜻하지 않는다.",
+    "admission_tier": "NEXT",
+    "admission_group": "VLA, cross-embodiment, and long-horizon planning",
+    "paper_type": "method",
+    "curation": {
+      "admission_reason": "기억의 시간 편향 진단과 사건 기반 index가 이미 선행임을 반영할 직접 반대 근거다.",
+      "tier_reason": "기억의 시간 편향 진단과 사건 기반 index가 이미 선행임을 반영할 직접 반대 근거다.",
+      "rationale_status": "recorded",
+      "rationale_basis": "REG-R14 recent gap-source registration",
+      "rationale_reviewed_on": "2026-11-12",
+      "scope_status": "active",
+      "roles": [
+        "method"
+      ],
+      "role_basis": "manual admission review"
+    },
+    "relations": []
+  }
+]

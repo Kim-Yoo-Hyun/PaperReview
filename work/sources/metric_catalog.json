@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_on": "2026-10-22",
+  "generated_on": "2026-11-16",
   "catalog_type": "metric",
   "evidence_policy": "Generated references are cue_only. Do not treat a token match as verified evaluation evidence; consult the paper's 04_evaluation.md and source location.",
   "entries": [
@@ -2103,7 +2103,7 @@
         },
         {
           "paper_id": "pr-0284",
-          "source": "2025/IROS/2025_IROS_Splat-Nav-Safe-Real-Time-Robot-Navigation-in-Gaussian-Spla/04_evaluation.md",
+          "source": "2025/T-RO/2025_T-RO_Splat-Nav-Safe-Real-Time-Robot-Navigation-in-Gaussian-Spla/04_evaluation.md",
           "evidence": "cue_only"
         },
         {
@@ -3222,11 +3222,6 @@
           "evidence": "cue_only"
         },
         {
-          "paper_id": "pr-0604",
-          "source": "2025/RSS/2025_RSS_AMO-Adaptive-Motion-Optimization-for-Hyper-Dexterous-Human/04_evaluation.md",
-          "evidence": "cue_only"
-        },
-        {
           "paper_id": "pr-0608",
           "source": "2025/RSS/2025_RSS_BeamDojo-Learning-Agile-Humanoid-Locomotion-on-Sparse-Foot/04_evaluation.md",
           "evidence": "cue_only"
@@ -3263,7 +3258,7 @@
         },
         {
           "paper_id": "pr-0703",
-          "source": "2025/arXiv/2025_arXiv_FlowDreamer-A-RGB-D-World-Model-with-Flow-based-Motion-Rep/04_evaluation.md",
+          "source": "2026/RA-L/2026_RA-L_FlowDreamer-A-RGB-D-World-Model-With-Flow-Based-Motion-Rep/04_evaluation.md",
           "evidence": "cue_only"
         },
         {
@@ -3645,6 +3640,11 @@
           "paper_id": "pr-1016",
           "source": "2026/CVPR-Workshop/2026_CVPR-Workshop_RePlan-Bot-Multi-Level-Replanning-for-Embodied-Instruction/04_evaluation.md",
           "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-1160",
+          "source": "2026/RA-L/2026_RA-L_PROSPECT-Unified-Streaming-Vision-Language-Navigation-via/04_evaluation.md",
+          "evidence": "cue_only"
         }
       ],
       "reference_basis": "04_evaluation.md token cue; dataset/metric role, split, aggregation, and primary-vs-auxiliary status remain paper-specific.",
@@ -3676,7 +3676,7 @@
         },
         {
           "paper_id": "pr-0021",
-          "source": "2022/arxiv/2022_arxiv_RT-1-Robotics-Transformer-for-Real-World-Control-at-Scale/04_evaluation.md",
+          "source": "2022/arXiv/2022_arxiv_RT-1-Robotics-Transformer-for-Real-World-Control-at-Scale/04_evaluation.md",
           "evidence": "cue_only"
         },
         {
@@ -4491,7 +4491,7 @@
         },
         {
           "paper_id": "pr-0284",
-          "source": "2025/IROS/2025_IROS_Splat-Nav-Safe-Real-Time-Robot-Navigation-in-Gaussian-Spla/04_evaluation.md",
+          "source": "2025/T-RO/2025_T-RO_Splat-Nav-Safe-Real-Time-Robot-Navigation-in-Gaussian-Spla/04_evaluation.md",
           "evidence": "cue_only"
         },
         {
@@ -4782,11 +4782,6 @@
         {
           "paper_id": "pr-0603",
           "source": "2024/CoRL/2024_CoRL_WoCoCo-Learning-Whole-Body-Humanoid-Control-with-Sequentia/04_evaluation.md",
-          "evidence": "cue_only"
-        },
-        {
-          "paper_id": "pr-0604",
-          "source": "2025/RSS/2025_RSS_AMO-Adaptive-Motion-Optimization-for-Hyper-Dexterous-Human/04_evaluation.md",
           "evidence": "cue_only"
         },
         {
@@ -5811,7 +5806,7 @@
         },
         {
           "paper_id": "pr-0914",
-          "source": "2024/arXiv/2024_arXiv_Precise-and-Dexterous-Robotic-Manipulation-via-Human-in-th/04_evaluation.md",
+          "source": "2025/Science-Robotics/2025_Science-Robotics_Precise-and-dexterous-robotic-manipulation-via-human-in-th/04_evaluation.md",
           "evidence": "cue_only"
         },
         {
@@ -5957,6 +5952,21 @@
         {
           "paper_id": "pr-1016",
           "source": "2026/CVPR-Workshop/2026_CVPR-Workshop_RePlan-Bot-Multi-Level-Replanning-for-Embodied-Instruction/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-1042",
+          "source": "2026/ICLR/2026_ICLR_Can-Small-Training-Runs-Reliably-Guide-Data-Curation-Rethi/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-1132",
+          "source": "2025/CoRL/2025_CoRL_HALO-Human-Preference-Aligned-Offline-Reward-Learning-for/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-1175",
+          "source": "2026/arXiv/2026_arXiv_When-Vision-Overrides-Language-Evaluating-and-Mitigating-C/04_evaluation.md",
           "evidence": "cue_only"
         }
       ],
@@ -7934,7 +7944,7 @@
         },
         {
           "paper_id": "pr-0703",
-          "source": "2025/arXiv/2025_arXiv_FlowDreamer-A-RGB-D-World-Model-with-Flow-based-Motion-Rep/04_evaluation.md",
+          "source": "2026/RA-L/2026_RA-L_FlowDreamer-A-RGB-D-World-Model-With-Flow-Based-Motion-Rep/04_evaluation.md",
           "evidence": "cue_only"
         },
         {
@@ -8381,7 +8391,7 @@
         },
         {
           "paper_id": "pr-0703",
-          "source": "2025/arXiv/2025_arXiv_FlowDreamer-A-RGB-D-World-Model-with-Flow-based-Motion-Rep/04_evaluation.md",
+          "source": "2026/RA-L/2026_RA-L_FlowDreamer-A-RGB-D-World-Model-With-Flow-Based-Motion-Rep/04_evaluation.md",
           "evidence": "cue_only"
         },
         {
@@ -8788,7 +8798,7 @@
         },
         {
           "paper_id": "pr-0703",
-          "source": "2025/arXiv/2025_arXiv_FlowDreamer-A-RGB-D-World-Model-with-Flow-based-Motion-Rep/04_evaluation.md",
+          "source": "2026/RA-L/2026_RA-L_FlowDreamer-A-RGB-D-World-Model-With-Flow-Based-Motion-Rep/04_evaluation.md",
           "evidence": "cue_only"
         },
         {
@@ -9112,7 +9122,7 @@
         },
         {
           "paper_id": "pr-0284",
-          "source": "2025/IROS/2025_IROS_Splat-Nav-Safe-Real-Time-Robot-Navigation-in-Gaussian-Spla/04_evaluation.md",
+          "source": "2025/T-RO/2025_T-RO_Splat-Nav-Safe-Real-Time-Robot-Navigation-in-Gaussian-Spla/04_evaluation.md",
           "evidence": "cue_only"
         },
         {
@@ -9432,7 +9442,7 @@
       "paper_references": [
         {
           "paper_id": "pr-0284",
-          "source": "2025/IROS/2025_IROS_Splat-Nav-Safe-Real-Time-Robot-Navigation-in-Gaussian-Spla/04_evaluation.md",
+          "source": "2025/T-RO/2025_T-RO_Splat-Nav-Safe-Real-Time-Robot-Navigation-in-Gaussian-Spla/04_evaluation.md",
           "evidence": "cue_only"
         },
         {
@@ -9529,7 +9539,7 @@
         },
         {
           "paper_id": "pr-0284",
-          "source": "2025/IROS/2025_IROS_Splat-Nav-Safe-Real-Time-Robot-Navigation-in-Gaussian-Spla/04_evaluation.md",
+          "source": "2025/T-RO/2025_T-RO_Splat-Nav-Safe-Real-Time-Robot-Navigation-in-Gaussian-Spla/04_evaluation.md",
           "evidence": "cue_only"
         },
         {

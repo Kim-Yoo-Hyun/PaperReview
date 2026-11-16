@@ -4,6 +4,8 @@
 > Evidence maturity: `FULL_TEXT_CHECKED`.
 > Analysis basis: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/ICCV2025/html/Zhang_Distilling_Diffusion_Models_to_Efficient_3D_LiDAR_Scene_Completion_ICCV_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/ICCV2025/papers/Zhang_Distilling_Diffusion_Models_to_Efficient_3D_LiDAR_Scene_Completion_ICCV_2025_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
+> DOC-QA1 (2026-10-23): 제어문자·깨진 추출 구간과 직접 연결된 표 항목을 PDF 페이지 이미지와 대조했다. 확인 범위·원문 URL·페이지·수정 이력은 [대조 기록](../../../work/sources/pdf_note_review_2026-10-23.json)에 있다. 노트 전체의 정독이나 모든 기존 주장에 대한 재검증을 뜻하지 않으며 reading status는 유지한다.
+
 ## Problem in One Sentence
 
 PDF body framing (p. 2 (1. Introduction), p. 3 (3.2. 3D LiDAR scene completion diffusion models), p. 2 (1. Introduction)): ScoreLiDAR aims to tackle the unique 3D distribution alignment challenge in LiDAR scene completion.
@@ -16,7 +18,7 @@ PDF body framing (p. 2 (1. Introduction), p. 3 (3.2. 3D LiDAR scene completion d
 - **p. 1 / Abstract - extractive body cue:** ScoreLiDAR enables the distilled model to sample in significantly fewer steps after distillation.
 - **p. 1 / Abstract - extractive body cue:** To improve completion quality, we also introduce a novel Structural Loss, which encourages the distilled model to capture the geometric structure of the 3D LiDAR ...
 - **p. 2 / 1. Introduction - extractive body cue:** ScoreLiDAR aims to tackle the unique 3D distribution alignment challenge in LiDAR scene completion.
-- **p. 3 / 3.2. 3D LiDAR scene completion diffusion models - extractive body cue:** (1), x0 is set to 0, and xt is added to each point pm, pt m = pm + √ ¯αt0 + √ 1 -¯αtϵt ...
+- **원문 대조:** LiDiff 배경 설명에서는 x^0=0인 noise offset을 각 원래 point p_m에 더한다. 결과는 p_m+sqrt(1−ᾱ^t)·ε^t 형태이며, point cloud 전체를 원점 주변으로 축소하는 식과 구분한다. ([PDF p. 3](https://openaccess.thecvf.com/content/ICCV2025/papers/Zhang_Distilling_Diffusion_Models_to_Efficient_3D_LiDAR_Scene_Completion_ICCV_2025_paper.pdf#page=3), §3.2, Eq. (6)).
 
 ## System and Scope
 
@@ -42,7 +44,7 @@ PDF body framing (p. 2 (1. Introduction), p. 3 (3.2. 3D LiDAR scene completion d
 
 ## Bottleneck in Prior Work
 
-- **p. 3 / 3.2. 3D LiDAR scene completion diffusion models - extractive body cue:** (1), x0 is set to 0, and xt is added to each point pm, pt m = pm + √ ¯αt0 + √ 1 -¯αtϵt ...
+- **원문 대조:** LiDiff 배경 설명에서는 x^0=0인 noise offset을 각 원래 point p_m에 더한다. 결과는 p_m+sqrt(1−ᾱ^t)·ε^t 형태이며, point cloud 전체를 원점 주변으로 축소하는 식과 구분한다. ([PDF p. 3](https://openaccess.thecvf.com/content/ICCV2025/papers/Zhang_Distilling_Diffusion_Models_to_Efficient_3D_LiDAR_Scene_Completion_ICCV_2025_paper.pdf#page=3), §3.2, Eq. (6)).
 - **p. 2 / 1. Introduction - extractive body cue:** Prior studies [15, 19, 34, 35] demonstrated that the bidirectional gradient guidance mechanism can effectively accelerate 3D rendering speed.
 
 ## What the Paper Changes

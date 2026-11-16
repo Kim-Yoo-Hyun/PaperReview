@@ -12,6 +12,7 @@
 - Tier: NEXT
 - Tags: Robotics, VLA, humanoid, Foundation Models, NVIDIA
 - Official paper: https://research.nvidia.com/publication/2025-03_nvidia-isaac-gr00t-n1-open-foundation-model-humanoid-robots
+- Preprint: https://arxiv.org/abs/2503.14734 — 공식 paper title은 “GR00T N1: An Open Foundation Model for Generalist Humanoid Robots”; 기존 NVIDIA publication title과 동일 항목의 alias로 연결. 2026-11-06 metadata 확인, arXiv 유지.
 - Full-text retrieval: https://research.nvidia.com/publication/2025-03_nvidia-isaac-gr00t-n1-open-foundation-model-humanoid-robots
 - Code/Project: https://developer.nvidia.com/isaac/gr00t
 - Paper type: theory_or_foundation

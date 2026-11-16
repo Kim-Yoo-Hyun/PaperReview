@@ -4,6 +4,8 @@
 > Evidence maturity: `FULL_TEXT_CHECKED`.
 > Analysis basis: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.microsoft.com/en-us/research/publication/kinectfusion-real-time-dense-surface-mapping-and-tracking/; PDF retrieval source: https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/ismar2011.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
+> DOC-QA2 targeted source review: 2026-10-23; PDF pp. 7. 손상 구간·직접 연결된 표 분류만 원문 이미지와 대조했다. 전체 주장 정독·실험 검증·reading status 승격을 뜻하지 않는다. [URL·PDF hash·수정 기록](../../../work/sources/pdf_note_review_followup_2026-10-23.json).
+
 ## Evaluation in One Sentence
 
 PDF body evaluation/result cue (p. 8 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS)): Rapid accumulation of errors results in the non-circular trajectory and poor reconstruction is apparent (though see later Figure 11 where frame-skipping is shown to improve this).
@@ -143,7 +145,7 @@ PDF body evaluation/result cue (p. 8 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 9
 | Body reproducibility cue | Anchor |
 |---|---|
 | Although efficient algorithms exist for computing the true discrete SDF for a given set of point measurements (complexity is linear in the the number ... | p. 5 (3.1 Preliminaries) |
-| (21) An iteration is obtained by solving: min x∈R6 ∑ Ωk(u)̸=null ∥E∥2 2 (22) E = ˆNg k-1(ˆu)⊤ G(u)x+ eVg k(u)-ˆVg k-1(ˆu)  (23) ... | p. 7 (3.1 Preliminaries) |
+| Eqs. (22)–(26): valid correspondence의 point-to-plane squared residual을 최소화하는 6D pose increment / 6×6 normal equation. | PDF p. 7; tracking solver 정의이며 evaluation 결과가 아님 |
 | Frames 1...N were fused together within the TSDF using sensor pose estimates obtained with our frame-to-frame only ICP implementation. | p. 7 (4 EXPERIMENTS) |
 | An important aspect of a useful system is its ability to scale with available GPU memory and processing resources. | p. 8 (4 EXPERIMENTS) |
 | Simulation works on the TSDF volumetric representation, and runs on the GPU alongside tracking and mapping, all in real-time. | p. 9 (4 EXPERIMENTS) |

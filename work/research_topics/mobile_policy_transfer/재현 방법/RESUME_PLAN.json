@@ -1,0 +1,147 @@
+{
+  "schema_version": 1,
+  "task_id": "GAP-HANDOFF-P0",
+  "updated": "2026-10-31",
+  "native_executable": false,
+  "status": {
+    "resource_check": "DONE_NOT_MET",
+    "resume_documentation": "DONE",
+    "local_preflight_script": "IMPLEMENTED",
+    "native_images": "NOT_BUILT",
+    "transport_adapter": "NOT_IMPLEMENTED",
+    "handoff_adapter": "NOT_IMPLEMENTED",
+    "policy_or_simulator_execution": "NOT_RUN",
+    "research_effect": "UNMEASURED"
+  },
+  "research_design": "../내용/README.md#design-history",
+  "research_design_amendment": "../../../update/PRE_GPU_BUILDUP_REVIEW_2026-10-31.md",
+  "source_identity_review": "../../../sources/pre_gpu_buildup_review_2026-10-31.json",
+  "target": {
+    "daemon": "local only",
+    "platform": "linux/amd64",
+    "reference_os": "Ubuntu 22.04; verify actual native compatibility",
+    "gpu": "NVIDIA CUDA and RTX graphics; actual model/UUID/driver/VRAM unmeasured",
+    "gpu_uuid": null,
+    "driver_version": null,
+    "total_vram_requirement_gib": null,
+    "host_changes_performed": false
+  },
+  "sources": {
+    "benchmark": {
+      "url": "https://github.com/nubot-nudt/Behavior-Skill",
+      "revision": "d3593788bdc7bd3016d307ea9529fdb500c146ba"
+    },
+    "server": {
+      "url": "https://github.com/mafangniu/pi05-behavior-skill",
+      "revision": "7ca6eace02aaba2d8ce19af600b85dd04a60d720"
+    },
+    "model_release": {
+      "url": "https://huggingface.co/mafangniu/Behavior-Skill-VLA-Checkpoints",
+      "revision": "98941096c94b0f978391d8a0accc699c32ec8b2a"
+    },
+    "dataset_release": {
+      "url": "https://huggingface.co/datasets/mafangniu/Behavior-Skill",
+      "revision": "0be968d3b61406ec366e1bcf7f50a9aa36bbc56f"
+    }
+  },
+  "environments": {
+    "simulator": {
+      "python": "3.10",
+      "torch": "2.6.0",
+      "cuda_wheel_default": "12.4",
+      "omnigibson": "3.7.2",
+      "bddl": "3.7.0",
+      "isaacsim": "4.5.0",
+      "image_digest": null,
+      "installation_verified": false
+    },
+    "policy": {
+      "python": "3.11 (.python-version); requires-python>=3.11",
+      "torch": "2.7.1",
+      "jax_cuda12": "0.5.3",
+      "flax": "0.10.2",
+      "image_digest": null,
+      "installation_verified": false
+    },
+    "unresolved": "Public policy server imports OmniGibson websocket/state helpers. Separate environments alone are insufficient; decouple helper imports or verify an author-supported combination before inference."
+  },
+  "policies": {
+    "A": {
+      "directory": "pi05-pt12-skill",
+      "normalizer_sha256": "2fca7e2050492a9ce911448f50b64da533f273b3798f4e81f0ec08a824e20bef"
+    },
+    "B": {
+      "directory": "pi05-pt50-skill",
+      "normalizer_sha256": "4dde119e69123ed865072c71a714095ae746c6d294fefba910a842757a7083ce"
+    },
+    "normalizer_relative_path": "assets/behavior-1k/2025-challenge-demos/norm_stats.json",
+    "full_weight_hash_manifest": null,
+    "config": "pi05_b1k-base",
+    "control_mode": "receeding_horizon",
+    "max_len": 32,
+    "inference_fine_grained_level": 0,
+    "navigator": "A",
+    "load_mode": "one policy at a time; environment+one model concurrently; native peak memory unmeasured"
+  },
+  "storage": {
+    "created_this_task": false,
+    "registry_mount": "/workspace/paper_registry:ro",
+    "source_volume": "paper-handoff-source",
+    "source_mount": "/sources",
+    "assets_volume": "paper-handoff-assets",
+    "assets_mount": "/assets",
+    "sim_cache_volume": "paper-handoff-sim-cache",
+    "sim_cache_mount": "/sim-cache",
+    "run_volume": "paper-handoff-runs",
+    "run_mount": "/runs/<new run ID>",
+    "host_packages_weights_assets": false
+  },
+  "network": {
+    "scope": "proposed local internal Docker network",
+    "policy_port": 8000,
+    "publish_host_port": false
+  },
+  "gpu_env_proposal": {
+    "NVIDIA_DRIVER_CAPABILITIES": "compute,graphics,utility,video"
+  },
+  "qualification": {
+    "task": "turning_on_radio",
+    "dev_episode": "00000010",
+    "skill_transition": [
+      0,
+      1
+    ],
+    "nav_max_ticks": 600,
+    "settle_ticks": 15,
+    "pickup_max_ticks": 1800,
+    "action_hz": 30,
+    "physics_hz": 120,
+    "required_phases_max": {
+      "navigation": 1,
+      "pickup_A": 1,
+      "pickup_B": 1
+    },
+    "optional_reference_max": {
+      "A": 1,
+      "B": 1
+    },
+    "seed": null,
+    "seed_status": "freeze before native execution",
+    "instance_grouping": "METADATA_CHECKED: ten source HDF5 paths, one scene_model and one scene_instance template; physical state independence not verified",
+    "split": "REVISED_DESIGN_ONLY: retain H3 source IDs as within-template dev/selection/descriptive evaluation, not scene-instance-disjoint holdout; physical duplicate/seed qualification remains before later pilot",
+    "handoff_capture": "actual navigation then physical hold; not next demo snapshot",
+    "no_large_pilot_or_training": true
+  },
+  "resume_commands": [
+    "sh \"work/research_topics/mobile_policy_transfer/재현 방법/resume.sh\" check",
+    "HANDOFF_GPU_IMAGE='<existing local image reference>' sh \"work/research_topics/mobile_policy_transfer/재현 방법/resume.sh\" gpu"
+  ],
+  "remaining_native_work": [
+    "build/pin separate simulator and policy environments",
+    "resolve simulator helper imports in policy server",
+    "collect assets within Docker and verify complete weight hashes",
+    "implement native handoff adapter and state/controller/RNG restoration checks",
+    "use reviewed source/template identity and within-template role assignment; verify physical state duplication and freeze seed/runtime manifest before later pilot",
+    "perform one-dev P0; report failures without changing research verdict"
+  ]
+}

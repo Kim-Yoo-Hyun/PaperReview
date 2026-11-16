@@ -4,6 +4,16 @@
 > Evidence maturity: `FULL_TEXT_CHECKED`.
 > Analysis basis: full-text PDF body checked on 2026-09-03 (14 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=eZNdkwJYbN; PDF retrieval source: https://arxiv.org/pdf/2506.10977. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
+## DOC-QA3 — superquadric exponent
+
+**원문 근거:** PDF p. 4 Eq. (4)의 z 항은 `2/ε₂`로 인쇄되어 있다.
+
+**공식 코드 근거:** nuScenes config → head → autograd wrapper → pybind/CUDA bridge → forward kernel의 u,v 순서를 추적했다. Kernel은 `X=((x/sx)²)^(1/u)`, `Y=((y/sy)²)^(1/u)`, `Z=((z/sz)²)^(1/v)` 및 `f=(X+Y)^(u/v)+Z`를 계산한다. 좌표를 먼저 제곱하므로 비정수 지수의 기저는 음수가 아니다. Backward 파일도 같은 scalar f를 사용한다.
+
+**연구자 기호 대응:** XY 항과 바깥 지수를 맞추면 u↔ε₂, v↔ε₁이고, 코드의 z 항은 `abs(z/sz)^(2/ε₁)`에 대응한다. 원문과 현재 코드가 다르다는 근거다. Gradient 수치 검증·extension 빌드·checkpoint 재현은 수행하지 않았다.
+
+대조 근거: [원문](https://arxiv.org/html/2506.10977v1#S3.SS2) · [공식 구현 f4b5b03d9d2f](https://github.com/zuosc19/QuadricFormer/blob/f4b5b03d9d2f73b18b874b5ed9ce1f465bb8f490/model/head/localagg_prob_sq/src/forward.cu#L80-L97) · [전체 호출 경로·파일 hash](../../../work/sources/paper_code_formula_review_2026-10-23.json). 검토일 2026-10-23. 지정 구간을 정적으로 읽었으며 코드 실행·의존성 설치는 하지 않았다. 논문 실험과 이 commit의 동일성 및 저자 확인 정오표는 미확인이다. 사용자 reading status는 유지한다.
+
 ## Method in One Sentence
 
 PDF body method statement (p. 5 (6 Superquadrics), p. 6 (6 Superquadrics), p. 6 (6 Superquadrics), p. 1 (Abstract), p. 1 (12800 Gaussians), p. 2 (1 Introduction)): Superquadrics Image Input Image Features 3D Occupancy Refined Superquadrics Figure 3: Overall Framework of QuadricFormer.We use several quadric-encoder blocks to update superquadrics, and employ a pruning-and-splitting module to further ...

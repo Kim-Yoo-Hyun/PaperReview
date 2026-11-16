@@ -4,6 +4,8 @@
 > Evidence maturity: `FULL_TEXT_CHECKED`.
 > Analysis basis: full-text PDF body checked on 2026-09-03 (17 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2501.12387; PDF retrieval source: https://arxiv.org/pdf/2501.12387. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
+> DOC-QA2 targeted source review: 2026-10-23; PDF pp. 5. 손상 구간·직접 연결된 표 분류만 원문 이미지와 대조했다. 전체 주장 정독·실험 검증·reading status 승격을 뜻하지 않는다. [URL·PDF hash·수정 기록](../../../work/sources/pdf_note_review_followup_2026-10-23.json).
+
 ## Method in One Sentence
 
 PDF body method statement (p. 5 (3.4. Training Strategy), p. 4 (3.2. Querying the State with Unseen Views), p. 3 (3. Method), p. 3 (3.1. State-Input Interaction Mechanism), p. 4 (3.2. Querying the State with Unseen Views), p. 5 (3.4. Training Strategy)): We use a ViT-Large model [22] for the image encoder Encoderi, initialized with DUSt3R encoder pretrained weights, and ViT-Base for the decoders.
@@ -17,7 +19,7 @@ PDF body method statement (p. 5 (3.4. Training Strategy), p. 4 (3.2. Querying th
 - **p. 4 / 3.2. Querying the State with Unseen Views - extractive body cue:** Specifically, we use a virtual camera as a query to extract information from the state.
 - **p. 5 / 3.4. Training Strategy - extractive body cue:** The state consists of 768 tokens, each with a dimensionality of 768.
 - **p. 5 / 3.4. Training Strategy - extractive body cue:** These two stages are trained on 224×224 images to reduce computational costs, following DUSt3R [107].
-- **p. 5 / 3.3. Training Objective - extractive body cue:** Following MASt3R [51], we apply a confidence-aware regression loss to the pointmaps: Lconf = X (ˆx,c)∈( ˆ X,C)  c ·
+- **PDF p. 5, §3.3 / Eq. (7) (DOC-QA2 원문 대조):** Pointmap의 scale-normalized L2 regression error에 confidence c를 곱하고 −α log c 항을 더한다. 정규화 인자와 metric-ground-truth 예외를 포함한 완전한 식은 Eq. (7)에 둔다.
 
 ## Design Rationale
 
@@ -48,7 +50,7 @@ PDF body method statement (p. 5 (3.4. Training Strategy), p. 4 (3.2. Querying th
 ## Objective / Update Rule
 
 - **p. 5 / 3.4. Training Strategy - extractive body cue:** These two stages are trained on 224×224 images to reduce computational costs, following DUSt3R [107].
-- **p. 5 / 3.3. Training Objective - extractive body cue:** Following MASt3R [51], we apply a confidence-aware regression loss to the pointmaps: Lconf = X (ˆx,c)∈( ˆ X,C)  c ·
+- **PDF p. 5, §3.3 / Eq. (7) (DOC-QA2 원문 대조):** Pointmap의 scale-normalized L2 regression error에 confidence c를 곱하고 −α log c 항을 더한다. 정규화 인자와 metric-ground-truth 예외를 포함한 완전한 식은 Eq. (7)에 둔다.
 - **p. 3 / 3.1. State-Input Interaction Mechanism - extractive body cue:** We refer to these interactions as state-update and state-readout, respectively.
 - **p. 3 / 3. Method - extractive body cue:** Specifically, the image simultaneously updates the state with new information and retrieves information stored in the state.
 - **p. 4 / 3.3. Training Objective - extractive body cue:** In these cases, we randomly replace each image with its corresponding raymap at a certain probability, excluding the first view.

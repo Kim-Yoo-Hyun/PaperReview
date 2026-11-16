@@ -1,0 +1,875 @@
+[
+  {
+    "title": "TacCoRL: Integrating Tactile Feedback into VLA via Simulation",
+    "year": 2026,
+    "venue": "arXiv",
+    "category": "VLA and Generalist Robot Policies",
+    "primary_track": "VLA and generalist robot policies",
+    "tags": [
+      "VLA",
+      "tactile",
+      "sim-to-real",
+      "reinforcement-learning"
+    ],
+    "aliases": [
+      "TacCoRL"
+    ],
+    "page": "https://arxiv.org/abs/2606.11743",
+    "project": "https://tac-corl.github.io/",
+    "pdf": "",
+    "note_format": "abstract_analysis_v1",
+    "evidence": "ABSTRACT_CHECKED",
+    "identifiers": {
+      "arxiv": "2606.11743"
+    },
+    "sources": {
+      "primary": {
+        "url": "https://arxiv.org/abs/2606.11743",
+        "kind": "arxiv",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-09"
+      },
+      "preprint": {
+        "url": "https://arxiv.org/abs/2606.11743",
+        "kind": "arxiv",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-09"
+      },
+      "paper_pdf": null,
+      "project": {
+        "url": "https://tac-corl.github.io/",
+        "kind": "author_project",
+        "scope": "project_landing",
+        "verified_on": "2026-11-09"
+      },
+      "code": null
+    },
+    "publication": {
+      "status": "preprint",
+      "kind": "preprint",
+      "venue": "arXiv",
+      "year": 2026,
+      "venue_year": null,
+      "presentation": "unknown"
+    },
+    "artifacts": {
+      "code_status": "not_identified",
+      "data_status": "not_identified",
+      "local_pdf_cache": false
+    },
+    "problem": "시각 VLA가 놓치는 접촉 상태와 시연에 드문 실패 근방 행동을 학습한다.",
+    "method": "촉각 VLA를 sim-real co-training으로 초기화하고 simulation RL과 실환경 supervised anchor로 개선한다.",
+    "interface": "영상·언어·촉각 → VLA 행동; 배포 시 privileged simulation state를 쓰지 않는다고 보고한다.",
+    "evaluation": "실제 양팔 접촉 과제로 전이를 평가한다. 실제 로봇 online RL을 사용한 결과와 구별한다.",
+    "role": "촉각 추가와 단일 VLA RL 자체가 이미 선행임을 확인할 직접 비교다.",
+    "lineage": "π₀ 계열 flow 정책·RL 후학습·촉각 입력을 연결하며 contact-adaptation의 학습 baseline이다.",
+    "question": "동일 접촉 입력과 상호작용 비용에서 강성 공동 학습이 motion-only VLA RL보다 나은가?",
+    "minimal_experiment": "같은 초기화·접촉 관측의 motion-only RL과 joint motion/gain RL을 비교한다.",
+    "verification_questions": "촉각 합성 정합성, real anchor 비용, 물리 변화별 분할",
+    "boundary": "저자 project는 CoRL 2026을 표기하지만 공식 proceedings/forum은 이번 검색에서 확인하지 못했다. arXiv 유지.",
+    "source_audit": "2026-11-09: official abstract/project 및 metadata 확인. 저자 project는 CoRL 2026을 표기하지만 공식 proceedings/forum은 이번 검색에서 확인하지 못했다. arXiv 유지. 새 5-note는 abstract 기반이며 전체 본문/실행/사용자 정독을 뜻하지 않는다.",
+    "admission_tier": "NEXT",
+    "admission_group": "VLA, cross-embodiment, and long-horizon planning",
+    "paper_type": "method",
+    "curation": {
+      "admission_reason": "촉각 추가와 단일 VLA RL 자체가 이미 선행임을 확인할 직접 비교다.",
+      "tier_reason": "촉각 추가와 단일 VLA RL 자체가 이미 선행임을 확인할 직접 비교다.",
+      "rationale_status": "recorded",
+      "rationale_basis": "REG-R13 contact prerequisites registration",
+      "rationale_reviewed_on": "2026-11-09",
+      "scope_status": "active",
+      "roles": [
+        "method"
+      ],
+      "role_basis": "manual admission review"
+    },
+    "relations": []
+  },
+  {
+    "title": "CompVLA: A Variable Compliance Vision-Language-Action Model for Contact-rich Manipulation",
+    "year": 2026,
+    "venue": "arXiv",
+    "category": "VLA and Generalist Robot Policies",
+    "primary_track": "VLA and generalist robot policies",
+    "tags": [
+      "VLA",
+      "variable-impedance",
+      "contact",
+      "flow-matching"
+    ],
+    "aliases": [
+      "CompVLA"
+    ],
+    "page": "https://arxiv.org/abs/2609.23614",
+    "project": "https://compvla.github.io/",
+    "pdf": "",
+    "note_format": "abstract_analysis_v1",
+    "evidence": "ABSTRACT_CHECKED",
+    "identifiers": {
+      "arxiv": "2609.23614"
+    },
+    "sources": {
+      "primary": {
+        "url": "https://arxiv.org/abs/2609.23614",
+        "kind": "arxiv",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-09"
+      },
+      "preprint": {
+        "url": "https://arxiv.org/abs/2609.23614",
+        "kind": "arxiv",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-09"
+      },
+      "paper_pdf": null,
+      "project": {
+        "url": "https://compvla.github.io/",
+        "kind": "author_project",
+        "scope": "project_landing",
+        "verified_on": "2026-11-09"
+      },
+      "code": null
+    },
+    "publication": {
+      "status": "preprint",
+      "kind": "preprint",
+      "venue": "arXiv",
+      "year": 2026,
+      "venue_year": null,
+      "presentation": "unknown"
+    },
+    "artifacts": {
+      "code_status": "not_identified",
+      "data_status": "not_identified",
+      "local_pdf_cache": false
+    },
+    "problem": "기하 동작만 출력하는 VLA의 접촉 순응성 부족을 다룬다.",
+    "method": "Compliance Expert가 동작·강성·virtual displacement를 생성하고 geometric impedance로 실행한다.",
+    "interface": "RGB·언어 → 동작과 시변 강성 행렬.",
+    "evaluation": "접촉 과제에서 vanilla/compliance-aware VLA 및 구성요소 ablation을 비교한다.",
+    "role": "강성 출력을 VLA에 추가하는 것 자체의 신규성을 배제할 직접 선행이다.",
+    "lineage": "VLA action expert와 impedance control을 결합한 학습 기준선으로 비교한다.",
+    "question": "같은 action interface에서 RL의 이득이 추가 gain 자유도만으로 설명되는가?",
+    "minimal_experiment": "동일 동작·gain 표현에서 imitation과 RL을 같은 초기화로 대조한다.",
+    "verification_questions": "강성–displacement 식별성, force 입력 유무, 데이터·controller 공정성",
+    "boundary": "최신 v2(2026-11-06) abstract 확인. 기존 N1 본문 대조는 v1이며 v2 본문을 확인한 것으로 승격하지 않는다. 저자 CoRL 2026 표기는 공식 승인 근거 미확인. Code 링크 404.",
+    "source_audit": "2026-11-09: official abstract/project 및 metadata 확인. 최신 v2(2026-11-06) abstract 확인. 기존 N1 본문 대조는 v1이며 v2 본문을 확인한 것으로 승격하지 않는다. 저자 CoRL 2026 표기는 공식 승인 근거 미확인. Code 링크 404. 새 5-note는 abstract 기반이며 전체 본문/실행/사용자 정독을 뜻하지 않는다.",
+    "admission_tier": "NEXT",
+    "admission_group": "VLA, cross-embodiment, and long-horizon planning",
+    "paper_type": "method",
+    "curation": {
+      "admission_reason": "강성 출력을 VLA에 추가하는 것 자체의 신규성을 배제할 직접 선행이다.",
+      "tier_reason": "강성 출력을 VLA에 추가하는 것 자체의 신규성을 배제할 직접 선행이다.",
+      "rationale_status": "recorded",
+      "rationale_basis": "REG-R13 contact prerequisites registration",
+      "rationale_reviewed_on": "2026-11-09",
+      "scope_status": "active",
+      "roles": [
+        "method"
+      ],
+      "role_basis": "manual admission review"
+    },
+    "relations": []
+  },
+  {
+    "title": "TORL-VLA: Tactile Guided Online Reinforcement Learning for Contact-Rich Manipulation",
+    "year": 2026,
+    "venue": "arXiv",
+    "category": "VLA and Generalist Robot Policies",
+    "primary_track": "VLA and generalist robot policies",
+    "tags": [
+      "VLA",
+      "tactile",
+      "online-RL",
+      "intervention"
+    ],
+    "aliases": [
+      "TORL-VLA"
+    ],
+    "page": "https://arxiv.org/abs/2606.09337",
+    "project": "https://torl-vla.github.io/",
+    "pdf": "",
+    "note_format": "abstract_analysis_v1",
+    "evidence": "ABSTRACT_CHECKED",
+    "identifiers": {
+      "arxiv": "2606.09337"
+    },
+    "sources": {
+      "primary": {
+        "url": "https://arxiv.org/abs/2606.09337",
+        "kind": "arxiv",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-09"
+      },
+      "preprint": {
+        "url": "https://arxiv.org/abs/2606.09337",
+        "kind": "arxiv",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-09"
+      },
+      "paper_pdf": null,
+      "project": {
+        "url": "https://torl-vla.github.io/",
+        "kind": "author_project",
+        "scope": "project_landing",
+        "verified_on": "2026-11-09"
+      },
+      "code": null
+    },
+    "publication": {
+      "status": "preprint",
+      "kind": "preprint",
+      "venue": "arXiv",
+      "year": 2026,
+      "venue_year": null,
+      "presentation": "unknown"
+    },
+    "artifacts": {
+      "code_status": "not_released",
+      "data_status": "not_identified",
+      "local_pdf_cache": false
+    },
+    "problem": "접촉 조건이 변하면 offline tactile VLA가 적응하지 못하는 문제를 다룬다.",
+    "method": "Wrench-aware VLA의 reference를 online RL 모듈로 보정하고 human intervention 경계를 critic 학습에 반영한다.",
+    "interface": "촉각 유래 wrench·상태 → reference action/future wrench → 실행 행동 보정.",
+    "evaluation": "실제 latch·컵·달걀 조작의 부분/전체 과제와 시간 제한 효율을 평가한다.",
+    "role": "접촉 VLA의 online RL과 사람 개입 credit 처리가 이미 다뤄졌음을 확인할 비교다.",
+    "lineage": "Frozen VLA와 online 보정 구조를 단일 actor 후학습의 대안으로 비교한다.",
+    "question": "Matched budget에서 단일 actor RL이 reference 보정 이상의 이득을 주는가?",
+    "minimal_experiment": "동일 접촉 관측에서 단일 actor와 frozen-prior 보정을 비교하고 개입 비용을 별도 집계한다.",
+    "verification_questions": "개입 전후 critic mask, latency, base/보정 정책 학습 범위",
+    "boundary": "최신 v3 abstract 확인; N1 본문 대조는 v1이다. Project는 TORL code Coming Soon이며 연결된 RLT 재현 코드는 TORL 구현으로 간주하지 않는다.",
+    "source_audit": "2026-11-09: official abstract/project 및 metadata 확인. 최신 v3 abstract 확인; N1 본문 대조는 v1이다. Project는 TORL code Coming Soon이며 연결된 RLT 재현 코드는 TORL 구현으로 간주하지 않는다. 새 5-note는 abstract 기반이며 전체 본문/실행/사용자 정독을 뜻하지 않는다.",
+    "admission_tier": "NEXT",
+    "admission_group": "VLA, cross-embodiment, and long-horizon planning",
+    "paper_type": "method",
+    "curation": {
+      "admission_reason": "접촉 VLA의 online RL과 사람 개입 credit 처리가 이미 다뤄졌음을 확인할 비교다.",
+      "tier_reason": "접촉 VLA의 online RL과 사람 개입 credit 처리가 이미 다뤄졌음을 확인할 비교다.",
+      "rationale_status": "recorded",
+      "rationale_basis": "REG-R13 contact prerequisites registration",
+      "rationale_reviewed_on": "2026-11-09",
+      "scope_status": "active",
+      "roles": [
+        "method"
+      ],
+      "role_basis": "manual admission review"
+    },
+    "relations": []
+  },
+  {
+    "title": "ForceRFT: Refining VLA Actions through Force-Guided Residual Reinforcement Learning",
+    "year": 2026,
+    "venue": "arXiv",
+    "category": "VLA and Generalist Robot Policies",
+    "primary_track": "VLA and generalist robot policies",
+    "tags": [
+      "VLA",
+      "residual-RL",
+      "force-feedback",
+      "contact"
+    ],
+    "aliases": [
+      "ForceRFT"
+    ],
+    "page": "https://arxiv.org/abs/2609.22840",
+    "project": "not identified",
+    "pdf": "",
+    "note_format": "abstract_analysis_v1",
+    "evidence": "ABSTRACT_CHECKED",
+    "identifiers": {
+      "arxiv": "2609.22840"
+    },
+    "sources": {
+      "primary": {
+        "url": "https://arxiv.org/abs/2609.22840",
+        "kind": "arxiv",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-09"
+      },
+      "preprint": {
+        "url": "https://arxiv.org/abs/2609.22840",
+        "kind": "arxiv",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-09"
+      },
+      "paper_pdf": null,
+      "project": null,
+      "code": null
+    },
+    "publication": {
+      "status": "preprint",
+      "kind": "preprint",
+      "venue": "arXiv",
+      "year": 2026,
+      "venue_year": null,
+      "presentation": "unknown"
+    },
+    "artifacts": {
+      "code_status": "not_identified",
+      "data_status": "not_identified",
+      "local_pdf_cache": false
+    },
+    "problem": "시연 기반 force VLA의 복구 coverage와 task return 최적화 부족을 다룬다.",
+    "method": "Frozen SmolVLA prior의 동작을 wrist-feedback residual RL로 보정하며 human correction과 autonomous TD를 분리한다.",
+    "interface": "Wrist wrench·변화량·base motion → pose residual; critic은 autonomous 구간을 사용한다.",
+    "evaluation": "실제 plug·ring-on-peg·wiping에서 residual imitation을 포함한 기준선과 비교한다.",
+    "role": "RL 이득이 성공 데이터 선택·추가 imitation으로 설명되는지 판단할 직접 선행이다.",
+    "lineage": "Residual RL·힘 피드백과 VLA chunk 실행을 연결하는 경쟁 구조다.",
+    "question": "실행 중 피드백의 이득과 value-guided 최적화의 이득을 분리할 수 있는가?",
+    "minimal_experiment": "같은 데이터에서 residual imitation/RL 및 feedback 제거를 교차 비교한다.",
+    "verification_questions": "개입 경계, 데이터 예산, force 관측 주기와 base chunk 비용",
+    "boundary": "v1 abstract 확인. 공식 code/project는 이번 확인에서 식별하지 못했다.",
+    "source_audit": "2026-11-09: official abstract/project 및 metadata 확인. v1 abstract 확인. 공식 code/project는 이번 확인에서 식별하지 못했다. 새 5-note는 abstract 기반이며 전체 본문/실행/사용자 정독을 뜻하지 않는다.",
+    "admission_tier": "NEXT",
+    "admission_group": "VLA, cross-embodiment, and long-horizon planning",
+    "paper_type": "method",
+    "curation": {
+      "admission_reason": "RL 이득이 성공 데이터 선택·추가 imitation으로 설명되는지 판단할 직접 선행이다.",
+      "tier_reason": "RL 이득이 성공 데이터 선택·추가 imitation으로 설명되는지 판단할 직접 선행이다.",
+      "rationale_status": "recorded",
+      "rationale_basis": "REG-R13 contact prerequisites registration",
+      "rationale_reviewed_on": "2026-11-09",
+      "scope_status": "active",
+      "roles": [
+        "method"
+      ],
+      "role_basis": "manual admission review"
+    },
+    "relations": []
+  },
+  {
+    "title": "FORGE: Force-Guided Exploration for Robust Contact-Rich Manipulation Under Uncertainty",
+    "year": 2025,
+    "venue": "RA-L",
+    "category": "Manipulation, Contact, and Dexterity",
+    "primary_track": "Manipulation, contact, tactile, and dexterity",
+    "tags": [
+      "sim-to-real",
+      "force-control",
+      "reinforcement-learning",
+      "assembly"
+    ],
+    "aliases": [
+      "FORGE"
+    ],
+    "page": "https://ieeexplore.ieee.org/document/10925874/",
+    "project": "https://noseworm.github.io/forge/",
+    "pdf": "",
+    "note_format": "abstract_analysis_v1",
+    "evidence": "ABSTRACT_CHECKED",
+    "identifiers": {
+      "arxiv": "2408.04587",
+      "doi": "10.1109/lra.2025.3551637"
+    },
+    "sources": {
+      "primary": {
+        "url": "https://ieeexplore.ieee.org/document/10925874/",
+        "kind": "publisher",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-09"
+      },
+      "preprint": {
+        "url": "https://arxiv.org/abs/2408.04587",
+        "kind": "arxiv",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-09"
+      },
+      "paper_pdf": null,
+      "project": {
+        "url": "https://noseworm.github.io/forge/",
+        "kind": "author_project",
+        "scope": "project_landing",
+        "verified_on": "2026-11-09"
+      },
+      "code": null,
+      "venue_verification": {
+        "url": "https://api.crossref.org/works/10.1109/LRA.2025.3551637",
+        "kind": "publisher_deposited_metadata",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-09"
+      }
+    },
+    "publication": {
+      "status": "peer_reviewed",
+      "kind": "journal",
+      "venue": "RA-L",
+      "year": 2025,
+      "venue_year": 2025,
+      "presentation": "unknown"
+    },
+    "artifacts": {
+      "code_status": "not_released",
+      "data_status": "not_identified",
+      "local_pdf_cache": false
+    },
+    "problem": "물체 pose·동역학 불확실성 아래 힘을 제한하면서 조립해야 한다.",
+    "method": "Force threshold와 dynamics randomization으로 sim-to-real 접촉 정책을 학습하고 성공을 예측한다.",
+    "interface": "관측·허용 force 조건 → 접촉 동작·성공 예측.",
+    "evaluation": "삽입·gear meshing·nut threading과 snap-fit/다단계 조립을 보고한다.",
+    "role": "VLA의 추가 복잡도 전에 넘어야 할 비-VLA 접촉 RL 기준선이다.",
+    "lineage": "Impedance control·domain randomization 기반 RL을 contact VLA의 단순 대안으로 연결한다.",
+    "question": "강한 force-conditioned RL 대비 VLA prior의 이득이 과제/언어 전이에 남는가?",
+    "minimal_experiment": "같은 관측·force ceiling·환경 비용의 비-VLA RL과 VLA RL을 비교한다.",
+    "verification_questions": "pose uncertainty 범위, gain randomization, 독립 실환경 trials",
+    "boundary": "2024 preprint와 2025 RA-L은 같은 논문이다. Publisher-deposited Crossref DOI metadata와 저자 연구실 RA-L 기록 확인; IEEE 본문 endpoint는 HTTP418로 직접 접근 실패. Code Coming Soon.",
+    "source_audit": "2026-11-09: official abstract/project 및 metadata 확인. 2024 preprint와 2025 RA-L은 같은 논문이다. Publisher-deposited Crossref DOI metadata와 저자 연구실 RA-L 기록 확인; IEEE 본문 endpoint는 HTTP418로 직접 접근 실패. Code Coming Soon. 새 5-note는 abstract 기반이며 전체 본문/실행/사용자 정독을 뜻하지 않는다.",
+    "admission_tier": "NEXT",
+    "admission_group": "Contact-rich, deformable, force, and dexterous manipulation",
+    "paper_type": "method",
+    "curation": {
+      "admission_reason": "VLA의 추가 복잡도 전에 넘어야 할 비-VLA 접촉 RL 기준선이다.",
+      "tier_reason": "VLA의 추가 복잡도 전에 넘어야 할 비-VLA 접촉 RL 기준선이다.",
+      "rationale_status": "recorded",
+      "rationale_basis": "REG-R13 contact prerequisites registration",
+      "rationale_reviewed_on": "2026-11-09",
+      "scope_status": "active",
+      "roles": [
+        "method"
+      ],
+      "role_basis": "manual admission review"
+    },
+    "relations": []
+  },
+  {
+    "title": "ContactBench 1.0: A Benchmark for Everyday Contact-Rich Robotic Manipulation",
+    "year": 2026,
+    "venue": "arXiv",
+    "category": "Manipulation, Contact, and Dexterity",
+    "primary_track": "Manipulation, contact, tactile, and dexterity",
+    "tags": [
+      "Benchmark",
+      "tactile",
+      "contact",
+      "robot-data"
+    ],
+    "aliases": [
+      "ContactBench 1.0"
+    ],
+    "page": "https://arxiv.org/abs/2610.24512",
+    "project": "https://jingyi-xiang.github.io/contactbench/",
+    "pdf": "",
+    "note_format": "abstract_analysis_v1",
+    "evidence": "ABSTRACT_CHECKED",
+    "identifiers": {
+      "arxiv": "2610.24512"
+    },
+    "sources": {
+      "primary": {
+        "url": "https://arxiv.org/abs/2610.24512",
+        "kind": "arxiv",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-09"
+      },
+      "preprint": {
+        "url": "https://arxiv.org/abs/2610.24512",
+        "kind": "arxiv",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-09"
+      },
+      "paper_pdf": null,
+      "project": {
+        "url": "https://jingyi-xiang.github.io/contactbench/",
+        "kind": "author_project",
+        "scope": "project_landing",
+        "verified_on": "2026-11-09"
+      },
+      "code": {
+        "url": "https://github.com/Michaelwyx/contactbench-sim",
+        "kind": "official_code",
+        "scope": "project_landing",
+        "verified_on": "2026-11-09"
+      }
+    },
+    "publication": {
+      "status": "preprint",
+      "kind": "preprint",
+      "venue": "arXiv",
+      "year": 2026,
+      "venue_year": null,
+      "presentation": "unknown"
+    },
+    "artifacts": {
+      "code_status": "released",
+      "data_status": "not_identified",
+      "local_pdf_cache": false
+    },
+    "problem": "접촉 기술의 다양성과 실험실 간 재현 가능한 평가가 부족하다.",
+    "method": "접촉 skill taxonomy와 제작 가능한 물체·대응 simulation asset을 제공한다.",
+    "interface": "물체·task variation → 실제/시뮬레이션 접촉 과제.",
+    "evaluation": "36개 reference task 중 6개에서 vision-only와 visual-tactile 정책을 비교한다.",
+    "role": "접촉 일반화 질문을 구체적인 물리 변화와 재현 자산으로 정의할 benchmark다.",
+    "lineage": "π₀.₅·Diffusion Policy 및 촉각 정책의 접촉 평가를 연결한다.",
+    "question": "촉각 추가보다 접촉 행동 학습과 gain 적응이 물리 변화에 효과적인가?",
+    "minimal_experiment": "한 task의 nominal/변형 asset에서 force-rule·motion-only·joint-gain 조건을 비교한다.",
+    "verification_questions": "task별 success 판정, asset version, 정책용 reset/step와 scripted helper 분리",
+    "boundary": "v2 abstract/project·simulation repository 공개 확인. Asset 공개를 완성된 RL environment 또는 학습 성공 증거로 간주하지 않는다.",
+    "source_audit": "2026-11-09: official abstract/project 및 metadata 확인. v2 abstract/project·simulation repository 공개 확인. Asset 공개를 완성된 RL environment 또는 학습 성공 증거로 간주하지 않는다. 새 5-note는 abstract 기반이며 전체 본문/실행/사용자 정독을 뜻하지 않는다.",
+    "admission_tier": "NEXT",
+    "admission_group": "Contact-rich, deformable, force, and dexterous manipulation",
+    "paper_type": "benchmark_or_dataset",
+    "curation": {
+      "admission_reason": "접촉 일반화 질문을 구체적인 물리 변화와 재현 자산으로 정의할 benchmark다.",
+      "tier_reason": "접촉 일반화 질문을 구체적인 물리 변화와 재현 자산으로 정의할 benchmark다.",
+      "rationale_status": "recorded",
+      "rationale_basis": "REG-R13 contact prerequisites registration",
+      "rationale_reviewed_on": "2026-11-09",
+      "scope_status": "active",
+      "roles": [
+        "benchmark_or_dataset"
+      ],
+      "role_basis": "manual admission review"
+    },
+    "relations": []
+  },
+  {
+    "title": "Facet-0: A Robotic Foundation Model for Contact-Rich Precise Manipulation",
+    "year": 2026,
+    "venue": "arXiv",
+    "category": "VLA and Generalist Robot Policies",
+    "primary_track": "VLA and generalist robot policies",
+    "tags": [
+      "VLA",
+      "wrench-prediction",
+      "reinforcement-learning",
+      "precision-assembly"
+    ],
+    "aliases": [
+      "Facet-0"
+    ],
+    "page": "https://arxiv.org/abs/2609.01596",
+    "project": "https://pine-lab-ntu.github.io/facet-0/",
+    "pdf": "",
+    "note_format": "abstract_analysis_v1",
+    "evidence": "ABSTRACT_CHECKED",
+    "identifiers": {
+      "arxiv": "2609.01596"
+    },
+    "sources": {
+      "primary": {
+        "url": "https://arxiv.org/abs/2609.01596",
+        "kind": "arxiv",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-09"
+      },
+      "preprint": {
+        "url": "https://arxiv.org/abs/2609.01596",
+        "kind": "arxiv",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-09"
+      },
+      "paper_pdf": null,
+      "project": {
+        "url": "https://pine-lab-ntu.github.io/facet-0/",
+        "kind": "author_project",
+        "scope": "project_landing",
+        "verified_on": "2026-11-09"
+      },
+      "code": {
+        "url": "https://github.com/PINE-Lab-NTU/FACET",
+        "kind": "official_code",
+        "scope": "project_landing",
+        "verified_on": "2026-11-09"
+      }
+    },
+    "publication": {
+      "status": "preprint",
+      "kind": "preprint",
+      "venue": "arXiv",
+      "year": 2026,
+      "venue_year": null,
+      "presentation": "unknown"
+    },
+    "artifacts": {
+      "code_status": "released",
+      "data_status": "not_identified",
+      "local_pdf_cache": false
+    },
+    "problem": "정밀 조립에서 행동의 접촉 결과를 예측하고 실패에 적응해야 한다.",
+    "method": "Joint action–wrench proposal과 distributional critic으로 접촉 결과를 학습하며 bounded actor가 현장 적응한다.",
+    "interface": "Causal wrench 이력·vision-language·kinematics → 동작과 예측 wrench; wrench는 명령이 아니다.",
+    "evaluation": "세 embodiment의 force-synchronized corpus와 정밀 컴퓨터 조립 과제를 보고한다.",
+    "role": "Action–wrench 예측·가치·RL 결합 자체의 중복을 점검할 직접 경쟁 선행이다.",
+    "lineage": "Flow VLA와 contact-selective credit, frozen representation 기반 적응을 연결한다.",
+    "question": "Gain을 직접 학습하는 효과가 action–wrench 예측·bounded correction 이후에도 남는가?",
+    "minimal_experiment": "동일 데이터·접촉 관측에서 action-only와 action/gain 학습을 비교한다.",
+    "verification_questions": "Frozen backbone/actor 경계, task adaptation 비용, 데이터 누출",
+    "boundary": "v1 abstract/project/code 공개 범위 확인. 전체 시스템을 단일 actor end-to-end RL로 요약하지 않는다.",
+    "source_audit": "2026-11-09: official abstract/project 및 metadata 확인. v1 abstract/project/code 공개 범위 확인. 전체 시스템을 단일 actor end-to-end RL로 요약하지 않는다. 새 5-note는 abstract 기반이며 전체 본문/실행/사용자 정독을 뜻하지 않는다.",
+    "admission_tier": "NEXT",
+    "admission_group": "VLA, cross-embodiment, and long-horizon planning",
+    "paper_type": "method",
+    "curation": {
+      "admission_reason": "Action–wrench 예측·가치·RL 결합 자체의 중복을 점검할 직접 경쟁 선행이다.",
+      "tier_reason": "Action–wrench 예측·가치·RL 결합 자체의 중복을 점검할 직접 경쟁 선행이다.",
+      "rationale_status": "recorded",
+      "rationale_basis": "REG-R13 contact prerequisites registration",
+      "rationale_reviewed_on": "2026-11-09",
+      "scope_status": "active",
+      "roles": [
+        "method"
+      ],
+      "role_basis": "manual admission review"
+    },
+    "relations": []
+  },
+  {
+    "title": "Constraint-Grounded Reinforcement Learning for Variable Impedance Control in Contact-Rich Robotic Insertion",
+    "year": 2026,
+    "venue": "arXiv",
+    "category": "Manipulation, Contact, and Dexterity",
+    "primary_track": "Manipulation, contact, tactile, and dexterity",
+    "tags": [
+      "variable-impedance",
+      "reinforcement-learning",
+      "insertion",
+      "force-limit"
+    ],
+    "aliases": [
+      "CG-RL"
+    ],
+    "page": "https://arxiv.org/abs/2609.13516",
+    "project": "not identified",
+    "pdf": "",
+    "note_format": "abstract_analysis_v1",
+    "evidence": "ABSTRACT_CHECKED",
+    "identifiers": {
+      "arxiv": "2609.13516"
+    },
+    "sources": {
+      "primary": {
+        "url": "https://arxiv.org/abs/2609.13516",
+        "kind": "arxiv",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-09"
+      },
+      "preprint": {
+        "url": "https://arxiv.org/abs/2609.13516",
+        "kind": "arxiv",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-09"
+      },
+      "paper_pdf": null,
+      "project": null,
+      "code": null
+    },
+    "publication": {
+      "status": "preprint",
+      "kind": "preprint",
+      "venue": "arXiv",
+      "year": 2026,
+      "venue_year": null,
+      "presentation": "unknown"
+    },
+    "artifacts": {
+      "code_status": "not_identified",
+      "data_status": "not_identified",
+      "local_pdf_cache": false
+    },
+    "problem": "삽입의 force limit과 controller gain이 달라질 때 수동 재조정이 필요하다.",
+    "method": "Force-limit 조건부 RL이 motion·insertion rate·gain을 요청하고 controller가 gain 범위로 투영한다.",
+    "interface": "접촉 feedback·force limit → residual motion·속도·요청 gain.",
+    "evaluation": "Simulated oblique insertion을 평가한다. Gain 범위 보장과 force-limit 경험적 만족은 구별한다.",
+    "role": "동작·강성 공동 RL 자체가 새롭지 않음을 보이는 controller 비교 자료다.",
+    "lineage": "Variable impedance RL을 VLA 내부 공동 행동 학습의 비-VLA 대안으로 둔다.",
+    "question": "VLA prior가 gain 적응만으로 해결되지 않는 일반화를 제공하는가?",
+    "minimal_experiment": "동일 controller projection에서 비-VLA와 VLA actor의 조건 전이를 비교한다.",
+    "verification_questions": "Projection과 actor 범위, force constraint의 경험적/형식적 보장 차이",
+    "boundary": "v1 abstract 확인. 실물 검증·VLA·언어 일반화 결과로 확대하지 않는다.",
+    "source_audit": "2026-11-09: official abstract/project 및 metadata 확인. v1 abstract 확인. 실물 검증·VLA·언어 일반화 결과로 확대하지 않는다. 새 5-note는 abstract 기반이며 전체 본문/실행/사용자 정독을 뜻하지 않는다.",
+    "admission_tier": "REFERENCE",
+    "admission_group": "Contact-rich, deformable, force, and dexterous manipulation",
+    "paper_type": "method",
+    "curation": {
+      "admission_reason": "동작·강성 공동 RL 자체가 새롭지 않음을 보이는 controller 비교 자료다.",
+      "tier_reason": "동작·강성 공동 RL 자체가 새롭지 않음을 보이는 controller 비교 자료다.",
+      "rationale_status": "recorded",
+      "rationale_basis": "REG-R13 contact prerequisites registration",
+      "rationale_reviewed_on": "2026-11-09",
+      "scope_status": "active",
+      "roles": [
+        "method"
+      ],
+      "role_basis": "manual admission review"
+    },
+    "relations": []
+  },
+  {
+    "title": "CompliantVLA-adaptor: VLM-Guided Variable Impedance Action for Safe Contact-Rich Manipulation",
+    "year": 2026,
+    "venue": "arXiv",
+    "category": "Manipulation, Contact, and Dexterity",
+    "primary_track": "Manipulation, contact, tactile, and dexterity",
+    "tags": [
+      "VLA",
+      "VLM",
+      "variable-impedance",
+      "force-feedback"
+    ],
+    "aliases": [
+      "CompliantVLA-adaptor"
+    ],
+    "page": "https://arxiv.org/abs/2601.15541",
+    "project": "https://sites.google.com/view/compliantvla",
+    "pdf": "",
+    "note_format": "abstract_analysis_v1",
+    "evidence": "ABSTRACT_CHECKED",
+    "identifiers": {
+      "arxiv": "2601.15541"
+    },
+    "sources": {
+      "primary": {
+        "url": "https://arxiv.org/abs/2601.15541",
+        "kind": "arxiv",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-09"
+      },
+      "preprint": {
+        "url": "https://arxiv.org/abs/2601.15541",
+        "kind": "arxiv",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-09"
+      },
+      "paper_pdf": null,
+      "project": {
+        "url": "https://sites.google.com/view/compliantvla",
+        "kind": "author_project",
+        "scope": "project_landing",
+        "verified_on": "2026-11-09"
+      },
+      "code": null
+    },
+    "publication": {
+      "status": "preprint",
+      "kind": "preprint",
+      "venue": "arXiv",
+      "year": 2026,
+      "venue_year": null,
+      "presentation": "unknown"
+    },
+    "artifacts": {
+      "code_status": "not_identified",
+      "data_status": "not_identified",
+      "local_pdf_cache": false
+    },
+    "problem": "위치 명령 중심 VLA가 접촉 force와 순응성을 충분히 조절하지 못한다.",
+    "method": "VLM이 task context에 따른 impedance를 정하고 실시간 force/torque feedback으로 조절한다.",
+    "interface": "이미지·언어 → stiffness/damping; force feedback → controller 보정.",
+    "evaluation": "Simulation과 실제 접촉 과제에서 성공률·force violation을 비교한다.",
+    "role": "단일 VLA RL 이전에 비교할 학습 없는 context/force 기반 controller 대안이다.",
+    "lineage": "VLA prior를 유지하는 외부 variable impedance adapter와 공동 정책 학습을 구분한다.",
+    "question": "Joint RL의 이득이 context-aware force rule만으로 재현되는가?",
+    "minimal_experiment": "같은 VLA checkpoint에서 fixed gain·context/force rule·joint RL을 비교한다.",
+    "verification_questions": "Prompt와 controller 설정 비용, force threshold, release 범위",
+    "boundary": "v2는 under review 표기. Project의 anonymous code 공개 주장은 확인했지만 구체적 repository URL은 이번 확인에서 식별하지 못했다.",
+    "source_audit": "2026-11-09: official abstract/project 및 metadata 확인. v2는 under review 표기. Project의 anonymous code 공개 주장은 확인했지만 구체적 repository URL은 이번 확인에서 식별하지 못했다. 새 5-note는 abstract 기반이며 전체 본문/실행/사용자 정독을 뜻하지 않는다.",
+    "admission_tier": "REFERENCE",
+    "admission_group": "Contact-rich, deformable, force, and dexterous manipulation",
+    "paper_type": "method",
+    "curation": {
+      "admission_reason": "단일 VLA RL 이전에 비교할 학습 없는 context/force 기반 controller 대안이다.",
+      "tier_reason": "단일 VLA RL 이전에 비교할 학습 없는 context/force 기반 controller 대안이다.",
+      "rationale_status": "recorded",
+      "rationale_basis": "REG-R13 contact prerequisites registration",
+      "rationale_reviewed_on": "2026-11-09",
+      "scope_status": "active",
+      "roles": [
+        "method"
+      ],
+      "role_basis": "manual admission review"
+    },
+    "relations": []
+  },
+  {
+    "title": "πRL: Online RL Fine-tuning for Flow-based Vision-Language-Action Models",
+    "year": 2025,
+    "venue": "arXiv",
+    "category": "VLA and Generalist Robot Policies",
+    "primary_track": "VLA and generalist robot policies",
+    "tags": [
+      "VLA",
+      "flow-matching",
+      "online-RL"
+    ],
+    "aliases": [
+      "πRL",
+      "piRL",
+      "pi_RL"
+    ],
+    "page": "https://arxiv.org/abs/2510.25889",
+    "project": "https://github.com/RLinf/RLinf",
+    "pdf": "",
+    "note_format": "abstract_analysis_v1",
+    "evidence": "ABSTRACT_CHECKED",
+    "identifiers": {
+      "arxiv": "2510.25889"
+    },
+    "sources": {
+      "primary": {
+        "url": "https://arxiv.org/abs/2510.25889",
+        "kind": "arxiv",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-09"
+      },
+      "preprint": {
+        "url": "https://arxiv.org/abs/2510.25889",
+        "kind": "arxiv",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-09"
+      },
+      "paper_pdf": null,
+      "project": {
+        "url": "https://github.com/RLinf/RLinf",
+        "kind": "author_project",
+        "scope": "project_landing",
+        "verified_on": "2026-11-09"
+      },
+      "code": {
+        "url": "https://github.com/RLinf/RLinf",
+        "kind": "official_code",
+        "scope": "project_landing",
+        "verified_on": "2026-11-09"
+      }
+    },
+    "publication": {
+      "status": "preprint",
+      "kind": "preprint",
+      "venue": "arXiv",
+      "year": 2025,
+      "venue_year": null,
+      "presentation": "unknown"
+    },
+    "artifacts": {
+      "code_status": "released",
+      "data_status": "not_identified",
+      "local_pdf_cache": false
+    },
+    "problem": "Flow VLA의 action log-likelihood를 직접 계산하기 어려워 RL 후학습이 까다롭다.",
+    "method": "Flow-Noise의 학습 가능한 noise 과정과 Flow-SDE의 ODE–SDE 변환을 대안으로 제시한다.",
+    "interface": "Flow denoising과 environment interaction의 확률적 정책 인터페이스.",
+    "evaluation": "여러 benchmark에서 ID/OOD 개선을 보고한다. 접촉 강성 학습 효과를 직접 입증한 것은 아니다.",
+    "role": "현재 π₀ Flow-SDE/PPO backend의 likelihood·탐색 정의를 이해할 직접 prerequisite다.",
+    "lineage": "π₀/π₀.₅와 PPO·flow RL을 연결한다. RLinf-VLA 시스템 논문과 identity가 다른 방법 논문이다.",
+    "question": "추가 gain 차원의 정책 비율·탐색 비용을 motion-only 기준과 공정하게 맞출 수 있는가?",
+    "minimal_experiment": "같은 source/초기화에서 action dimension별 log-prob·entropy·학습 비용을 확인한다.",
+    "verification_questions": "Flow-Noise/Flow-SDE 구분, likelihood 집계, normalizer와 update budget",
+    "boundary": "v3(2026-01-29) abstract 확인; 최초 공개 연도 2025 유지. πRL은 공식 수식 제목의 plain-text 표기. 기존 N2의 RLinf pin 검토와 새 registry 초록 노트의 근거 범위를 구분한다.",
+    "source_audit": "2026-11-09: official abstract/project 및 metadata 확인. v3(2026-01-29) abstract 확인; 최초 공개 연도 2025 유지. πRL은 공식 수식 제목의 plain-text 표기. 기존 N2의 RLinf pin 검토와 새 registry 초록 노트의 근거 범위를 구분한다. 새 5-note는 abstract 기반이며 전체 본문/실행/사용자 정독을 뜻하지 않는다.",
+    "admission_tier": "NEXT",
+    "admission_group": "VLA, cross-embodiment, and long-horizon planning",
+    "paper_type": "method",
+    "curation": {
+      "admission_reason": "현재 π₀ Flow-SDE/PPO backend의 likelihood·탐색 정의를 이해할 직접 prerequisite다.",
+      "tier_reason": "현재 π₀ Flow-SDE/PPO backend의 likelihood·탐색 정의를 이해할 직접 prerequisite다.",
+      "rationale_status": "recorded",
+      "rationale_basis": "REG-R13 contact prerequisites registration",
+      "rationale_reviewed_on": "2026-11-09",
+      "scope_status": "active",
+      "roles": [
+        "method"
+      ],
+      "role_basis": "manual admission review"
+    },
+    "relations": []
+  }
+]

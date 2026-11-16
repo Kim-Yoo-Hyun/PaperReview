@@ -1,6 +1,6 @@
 # Manipulation, Contact, Tactile, and Dexterity
 
-- Updated: 2026-10-23 KST
+- Updated: 2026-10-24 KST
 
 ## Scope
 
@@ -43,7 +43,7 @@ Planning Optimal Grasps → Contact-Invariant Optimization → GraspNet/Contact-
 | CORE | [Learning Fine-Grained Bimanual Manipulation with Low-Cost Hardware](../2023/RSS/2023_RSS_Learning-Fine-Grained-Bimanual-Manipulation-with-Low-Cost/01_overview.md) | 2023 / RSS | `UNREAD` | `FULL_TEXT_CHECKED` |
 | CORE | [3D Diffusion Policy: Generalizable Visuomotor Policy Learning via Simple 3D Representations](../2024/RSS/2024_RSS_3D-Diffusion-Policy-Generalizable-Visuomotor-Policy-Learni/01_overview.md) | 2024 / RSS | `UNREAD` | `FULL_TEXT_CHECKED` |
 
-### Contact-rich, deformable, force, and dexterous manipulation — 49
+### Contact-rich, deformable, force, and dexterous manipulation — 56
 
 | Tier | Paper | Year / Venue | Status | Evidence |
 |---|---|---|---|---|
@@ -96,6 +96,13 @@ Planning Optimal Grasps → Contact-Invariant Optimization → GraspNet/Contact-
 | NEXT | [FurnitureBench: Reproducible Real-World Benchmark for Long-Horizon Complex Manipulation](../2023/RSS/2023_RSS_FurnitureBench-Reproducible-Real-World-Benchmark-for-Long/01_overview.md) | 2023 / RSS | `UNREAD` | `FULL_TEXT_CHECKED` |
 | NEXT | [Learning Robotic Manipulation Policies from Point Clouds with Conditional Flow Matching](../2024/CoRL/2024_CoRL_Learning-Robotic-Manipulation-Policies-from-Point-Clouds-w/01_overview.md) | 2024 / CoRL | `UNREAD` | `FULL_TEXT_CHECKED` |
 | NEXT | [Contact-Anchored Policies: Contact Conditioning Creates Strong Robot Utility Models](../2026/RSS/2026_RSS_Contact-Anchored-Policies-Contact-Conditioning-Creates-Str/01_overview.md) | 2026 / RSS | `UNREAD` | `ABSTRACT_CHECKED` |
+| NEXT | [FMB: A functional manipulation benchmark for generalizable robotic learning](../2025/IJRR/2025_IJRR_FMB-A-functional-manipulation-benchmark-for-generalizable/01_overview.md) | 2025 / IJRR | `UNREAD` | `ABSTRACT_CHECKED` |
+| NEXT | [Learning Visuotactile Estimation and Control for Non-prehensile Manipulation under Occlusions](../2025/CoRL/2025_CoRL_Learning-Visuotactile-Estimation-and-Control-for-Non-prehe/01_overview.md) | 2025 / CoRL | `UNREAD` | `ABSTRACT_CHECKED` |
+| NEXT | [Force Policy: Learning Hybrid Force-Position Control Policy under Interaction Frame for Contact-Rich Manipulation](../2026/RSS/2026_RSS_Force-Policy-Learning-Hybrid-Force-Position-Control-Policy/01_overview.md) | 2026 / RSS | `UNREAD` | `ABSTRACT_CHECKED` |
+| NEXT | [Emergent Dexterity Via Diverse Resets and Large-Scale Reinforcement Learning](../2026/ICLR/2026_ICLR_Emergent-Dexterity-Via-Diverse-Resets-and-Large-Scale-Rein/01_overview.md) | 2026 / ICLR | `UNREAD` | `ABSTRACT_CHECKED` |
+| NEXT | [FORGE: Force-Guided Exploration for Robust Contact-Rich Manipulation Under Uncertainty](../2025/RA-L/2025_RA-L_FORGE-Force-Guided-Exploration-for-Robust-Contact-Rich-Man/01_overview.md) | 2025 / RA-L | `UNREAD` | `ABSTRACT_CHECKED` |
+| NEXT | [ContactBench 1.0: A Benchmark for Everyday Contact-Rich Robotic Manipulation](../2026/arXiv/2026_arXiv_ContactBench-1.0-A-Benchmark-for-Everyday-Contact-Rich-Rob/01_overview.md) | 2026 / arXiv | `UNREAD` | `ABSTRACT_CHECKED` |
+| NEXT | [Tune to Learn: How Controller Gains Shape Robot Policy Learning](../2026/RSS/2026_RSS_Tune-to-Learn-How-Controller-Gains-Shape-Robot-Policy-Lear/01_overview.md) | 2026 / RSS | `UNREAD` | `ABSTRACT_CHECKED` |
 
 <!-- READING_QUEUE:END -->
 
@@ -167,12 +174,90 @@ Planning Optimal Grasps → Contact-Invariant Optimization → GraspNet/Contact-
 | D2: grasp와 후속 운반 | [Cooperative Grasping](../2026/RA-L/2026_RA-L_Cooperative-Grasping-for-Collective-Object-Transport-in-Co/01_overview.md) (2026 RA-L); [Grasp-Then-Plan](../2026/NeurIPS/2026_NeurIPS_Grasp-Then-Plan-with-Failure-Attribution-A-Closed-Two-Stag/01_overview.md) (2026 NeurIPS); [Foresight Residual RL](../2026/arXiv/2026_arXiv_Foresight-Residual-RL-for-Long-Horizon-Robot-Manipulation/01_overview.md) (2026 arXiv) | 파지 성공만으로 운반 가능성을 보증하지 않는다. 계획 실패·grasp 실패·후속 execution 실패의 label을 분리한다. |
 | 보조 시스템과 회복 | [CarryOn](../2026/arXiv/2026_arXiv_CarryOn-A-Dual-Loop-Harness-for-Personalized-and-Reliable/01_overview.md) (2026 arXiv); [SafeLoop](../2026/arXiv/2026_arXiv_SafeLoop-Risk-Aware-Rollback-for-Vision-Language-Action-Ma/01_overview.md) (2026 arXiv) | 사용자 조정·rollback·monitoring을 새 VLA policy 능력과 혼동하지 않는다. 별도 정보/시도 예산을 기록한다. |
 
+### Registry 연결 갱신 — 2026-10-25
+
+- [JIGGLE: An Active Sensing Framework for Boundary Parameters Estimation in Deformable Surgical Environments](../2024/RSS/2024_RSS_JIGGLE-An-Active-Sensing-Framework-for-Boundary-Parameters/01_overview.md)
+- [AdaptiGraph: Material-Adaptive Graph-Based Neural Dynamics for Robotic Manipulation](../2024/RSS/2024_RSS_AdaptiGraph-Material-Adaptive-Graph-Based-Neural-Dynamics/01_overview.md)
+
+Attachment와 material adaptation의 직접 선행을 연결한다. 정보 이득이나 예측 오차 감소를 task 성공 개선으로 대체하지 않으며 GAP-DE의 기존 HOLD를 유지한다.
+
+이번 등록은 `ABSTRACT_CHECKED` 수준의 비교 연결이다. 기존 정독 matrix·reading status·연구 판단을 승격하지 않는다. [등록 범위와 source 경계](../work/update/REGISTRY_REFRESH_2026-10-25.md).
+
+### 2026-10-25 top-tier 보완 — 읽기 전 비교 연결
+
+> Researcher interpretation / CURATION-HYPOTHESIS. 신규 노트는 abstract/project 기반이며 아래 연결은 정독·실험 결과나 직접 citation 관계의 확인이 아니다.
+
+[FMB](../2025/IJRR/2025_IJRR_FMB-A-functional-manipulation-benchmark-for-generalizable/01_overview.md)는 개별 grasp·reorientation·assembly와 skill 조합을 나누어 비교할 실환경 benchmark다. [Visuotactile estimation/control](../2025/CoRL/2025_CoRL_Learning-Visuotactile-Estimation-and-Control-for-Non-prehe/01_overview.md)은 가림 하 상태 추정과 uncertainty-aware control을 함께 다루므로 tactile VLA를 제안할 때 직접 대안이 된다.
+
+[Process-centric tactile skill taxonomy](../2025/Nature-Machine-Intellige/2025_Nature-Machine-Intellige_A-process-centric-manipulation-taxonomy-for-the-organizati/01_overview.md)는 전문가 공정 명세가 주어진 skill/controller 비교 기준이다. 센서 추가, 명시적 성공/실패 조건, controller 개선을 모두 language model의 기여로 합치지 않는다. 같은 정보를 가진 단순 skill 조건·point-estimate control 이후 남는 효과를 먼저 검토한다. GAP-CONTACT·GAP-DE의 재개 조건은 바뀌지 않는다.
+
 ## Open Questions
 
+### Controller gain과 정책 학습의 기여 분리
+
+**2026-11-12 / 초록 기반 CURATION-HYPOTHESIS.** [Tune to Learn, RSS 2026](https://www.roboticsproceedings.org/rss22/p139.html)은 controller gain이 robot policy learning과 sim-to-real 결과에 미치는 영향을 직접 다룬다. [등록 근거](../work/update/FOUNDATION_FRONTIER_SUPPLEMENT_2026-11-12.md)의 공식 제목은 *How Controller Gains Shape Robot Policy Learning*이다. 저자 페이지의 *Affect* 표기는 별도 논문으로 추가하지 않았다.
+
+CONTACT-RL의 gain 적응을 비교할 때는 nominal gain 한 가지보다 **동일 튜닝 비용의 고정 gain, task별 gain, 단순 feedback rule**을 먼저 대조해야 한다. BC/RL·controller authority·접촉 stiffness·sensor/loop rate 중 무엇을 바꾼 실험인지 본문에서 확인한다. 이는 gain-aware 학습의 일반 동기를 이미 다룬 선행이라는 뜻이며, 현재 후보의 구체적 동적 적응을 해결했거나 부정했다는 판정은 아니다. 기존 physics P0 상한·재개 조건을 유지한다.
+
+<a id="gap-contact-rl-2026"></a>
+### 접촉 조작에서 VLA RL과 가변 임피던스 제어
+
+**2026-11-09 / GAP-CONTACT-RL-N2 내부 비실험 설계 완료 / 좁은 탐색 유지 / CURATION-HYPOTHESIS.** [선행 비교·과제·계약](../work/research_topics/contact_adaptation/내용/README.md)에 상세 내용을 통합했다. N1의 TacCoRL·CompVLA·TORL·ForceRFT·FORGE·ContactBench·Facet-0·CG-RL 지정 본문 대조에 CompliantVLA-adaptor 방법과 RLinf/ContactBench/Newton 선택 source 확인을 더했다. 이력 기반 VLA RL·동작/강성 공동 학습·정책/controller 효과 분리 자체의 신규성은 주장하지 않는다. 원장의 [contact_n1·contact_n2](../work/sources/vla_rl_additional_gaps_2026-11-09.json)에 확인 구간과 계약을 기록했다.
+
+[REG-R13](../work/update/REGISTRY_MAINTENANCE_2026-11-09.md#admissions)에서 직접 선행 10편의 registry identity를 연결했다. 최신 초록과 N1 지정 본문 버전의 차이는 [주제의 source 경계](../work/research_topics/contact_adaptation/내용/README.md#registry-sync)를 따른다.
+
+**남은 질문:** 같은 관측·실행 제약에서 동작과 강성을 함께 후학습한 VLA가, 동작만 RL로 학습하고 잘 조정한 impedance controller를 쓰는 경우보다 언제 유용한가? 단일 학습 actor를 우선하며 고정 servo는 허용한다. 작은 charger 삽입으로 현상을 먼저 살피되 VLA의 언어/작업 공유 이득과 독립 방법 기여는 미확인이다.
+
+**N2 구체화·반론:** π₀ Flow-SDE/PPO에서 동작만 RL과 동작/관절 강성 배율 공동 RL을 동일 상호작용 비용으로 비교하고, 이득이 있으면 force-rule·7D scoring 대안을 확인한다. Task는 charger block1 삽입/손 떼기의 부분 과제이며 공식 benchmark 전체 성공률이 아니다. 강한 스프링에서 실패하는 원인이 grasp slip·접촉 방식일 수도 있다. Scripted 상단 누르기·정답 object pose/depth를 actor에 넣지 않으며 fingertip force는 모든 actor에 같은 방식으로 준다. [32D state/8D action·gain 동기화](../work/research_topics/contact_adaptation/재현%20방법/README.md#n2-interface)를 정적으로 추적했지만 runtime 연결은 미구현이다. 기존 GAP-CONTACT 센서 필요성 진단 HOLD는 유지한다.
+
+**P0-PREP 완료·다음 P0-A:** 현재 Mac ARM64 local Docker의 NVIDIA allocation 실패를 확인하고 physics recipe·bounded sensor/gain probe·launcher를 작성했다. Docker stdlib16검사는 통과했지만 native physics/RGB/gain·정책 효과는 미검증이다. [호환 local NVIDIA 재개 경로](../work/research_topics/contact_adaptation/재현%20방법/README.md#resume)를 사용하며 전체 RL 환경·SFT/normalizer는 별도다. 내부 설계·준비 완료를 독립 기여 확인으로 확대하지 않는다. 현행 행동은 [TODO](../TODO.md)를 따른다.
+
 현재 후보 판정은 [주제별 요약](../work/research_candidates/summaries/README.md)을 따른다. 아래 질문은 `CURATION-HYPOTHESIS`이며 재개 승인이 아니다.
+
+**2026-10-27 GAP-S2 양팔 심사:** 양팔 marginal mode의 결합 실패는 가능한 사고실험이나 실제 VLA의 독립성 가정·실패율을 뜻하지 않는다. [TwinVLA, ICLR 2026](https://proceedings.iclr.cc/paper_files/paper/2026/hash/65475a59e2a2cb707c9462e8a308e980-Abstract-Conference.html)와 RDT·imaginative coordination 이후에는 joint action head·공통 mode baseline 뒤의 실제 잔여 오류가 필요하다. 이번 일반 방법은 **미채택**이며 E1 좌표/effect 정렬, D2 grasp–transport 질문으로 바뀌면 기존 gate를 따른다. [세부 비교](../work/update/VLA_GAP_RESELECTION_2026-10-27.md#3-세-질문의-채택-심사).
+
 
 | 질문 | 구별할 예측 | 최소 대조·중단 조건 | 근거/판정 |
 |---|---|---|---|
 | Grasp–transport–place | 동일 grasp 후보와 scene geometry에서 후속 운반을 고려한 선택이 supervised outcome ranking보다 필요한가? | Attachment/planner baseline과 실패 귀속을 고정한다. 공개 native task·executor가 없는 현재 D2는 HOLD다. | [검토 근거](../work/research_candidates/2026-10-22_d2_buildup/README.md) |
-| Tactile/force feedback | 동일 contact task에서 고주파 feedback이 추가 sensing·adaptation data를 맞춘 뒤에도 slip/접촉 실패를 줄이는가? | 센서 교체·마모·calibration drift를 각각 분리한다. 성공률 외 force limit·intervention과 controller rate를 기록한다. | 기존 track 비교의 연구자 질문; native 효과 미검증 |
+| Tactile/force feedback | 실제 접촉 정보, 학습 supervision, 실행 controller 중 무엇이 개선을 설명하는가? | 단순 센서 추가·고주파화·missing-modality 처리는 이미 선행이 있다. 아래 GAP-CONTACT의 범위와 기각 조건으로 좁힌다. | 2026-10-23 외부 문헌 대조; native 효과 미검증 |
 | Grasp metric의 행동 utility | Analytic contact score와 learned proposal의 순위가 compliant execution에서 언제 교차하는가? | 물체·접촉 mode별 held-out 조건과 실제 trial 분모를 확인한다. 단순 object/task 평균으로 dexterity 일반화를 주장하지 않는다. | 기존 track 비교의 연구자 질문; native 효과 미검증 |
+
+<a id="gap-contact-2026"></a>
+### GAP-CONTACT — 접촉 센서가 필요한 조건과 제어 개선으로 충분한 조건
+
+- 갱신: **2026-10-23 GAP-R2**. 상태: **REVISE / 진단 후보 HOLD / CURATION-HYPOTHESIS**. [직접 비교 완료 기록](../work/update/CONTACT_INTERFACE_REVIEW_2026-10-23.md). 문헌 작업 완료이며 새 방법 채택이나 기존 후보 재개가 아니다.
+- 질문: **관측 이력으로 구별하기 어려운 접촉 조건에서, 실측 접촉 정보가 필요한 경우와 기존 관측의 학습·controller 개선으로 충분한 경우를 실험 전에 구분할 수 있는가?**
+- 가치: 답에 따라 sensor 위치·종류, 데이터 수집, VLA 입력, 저수준 controller 중 어디에 투자할지 달라져야 한다. 단순 tactile-VLA 성능 비교로 끝나면 독립 기여가 약하다.
+
+**논문이 지지하는 범위.** [Visuotactile estimation/control, CoRL 2024](https://proceedings.mlr.press/v270/ferrandis25a.html)는 occlusion 아래 추정과 uncertainty-aware control을 연결한 VLA 밖의 비교 대상이다. [ForceVLA](https://papers.nips.cc/paper_files/paper/2025/hash/8633b46e12cc5f2ee1f05a6ca2c65b38-Abstract-Conference.html)는 force fusion, [ForceVLA2](https://arxiv.org/html/2603.15169v1)는 hybrid force-position 출력, [AT-VLA §3–4](https://arxiv.org/html/2605.07308v1)는 fast tactile feedback과 modality ablation을 이미 다룬다. [FD-VLA §III](https://arxiv.org/html/2602.02142v1)는 학습 때의 force를 vision/state-conditioned representation으로 증류한다. [ForceDelta-VLA abstract](https://arxiv.org/abs/2609.18242)는 force-conditioned action correction 증류이며 실행 중 force를 사용하므로 FD-VLA의 sensor-free inference와 구분한다.
+
+[ContactBench 1.0 §V-A–D](https://arxiv.org/html/2610.24512v1)는 6개 실제 task 중 tactile을 수집한 4개에서 일관된 기본 성능 개선을 얻지 못했지만, 일부 숨은 기계 조건 변화에서는 RDP의 적응 이득을 보고한다. 센서 coverage·incidental cue·feedback 통합 방식까지 이미 분석하므로 **“촉각도 실패한다”와 “hidden mechanics를 시험한다” 자체는 새 공백이 아니다.** 또한 task별 specialist fine-tuning 평가이며 language-conditioned generalist 효과는 남겨 둔다. 이 결과를 ForceVLA2와 같은 조건의 상충 결과로 취급하지 않는다. ContactBench는 2026-10-17 preprint이고 채택 여부는 미확인이다.
+
+**아직 검증되지 않은 공백 해석.** 위 연구들이 제시한 개별 설명을 넘어, 가용 관측의 구별 능력과 실행 가능한 행동의 차이로 **어떤 개입이 유효할지 다른 task에서도 예측하는 규칙**이 남는지 확인한다. 다음 세 구분이 기준이다.
+
+| 구분할 원인 | 필요한 증거 | 설명을 무너뜨릴 대조 |
+|---|---|---|
+| 기존 관측에 필요한 정보가 없음 | 비슷한 RGB·proprio history에서도 요구 행동이 달라지는 물리 조건과 feasible witness | 충분한 history 또는 단순 proprio baseline만으로 같은 결정을 내릴 수 있음 |
+| 센서는 정보를 갖지만 정책이 활용하지 못함 | 센서 위치·접촉 이벤트·timestamp를 확인하고 실제 입력과 조건부 shuffle을 대조 | 센서가 접촉 부위를 관측하지 못하거나 shuffle이 비현실적 분포만 만듦 |
+| 정책 정보보다 실행 controller가 병목 | 같은 observation·시간·action 제한에서 controller만 바꾼 비교 | 고전적인 compliance/force controller로 차이가 모두 설명됨 |
+
+향후 비교는 **학습 force supervision / VLA의 실행 입력 / 저수준 controller의 실행 입력**을 별도 열로 둔다. VLA에 force를 안 넣어도 하위 force controller가 센서를 사용하면 전체 시스템은 sensor-free가 아니다. Fingertip tactile과 wrist F/T는 다른 관측이며 대체 가능한 modality로 묶지 않는다. 같은 task·robot·train split·backbone·학습/추론 예산을 먼저 맞추고, 센서 미사용·force-distilled·실측 입력 및 단순 controller를 비교한다. Privileged mechanics는 원인 진단용으로만 쓰며 policy-visible input에 섞지 않는다.
+
+**중단 조건.** ContactBench/AT-VLA/ForceVLA2 등의 부록·code가 이미 같은 개입과 held-out 예측을 제시하거나, 결과가 기존 관측 가능성·고전 제어의 설명을 반복하면 새 연구로 채택하지 않는다. 유용한 예측 규칙 없이 sensor/backbone별 평균 순위만 남아도 축소한다. 공개 task·센서 log·동일 controller를 묶은 실행 구성은 미확보이며 runtime은 미검증이다.
+
+**GAP-R2 판단:** 8편의 지정 본문/부록과 공개 interface를 대조했다. 기존 연구와 다른 예측을 확보하지 못해 새 방법 착수는 보류한다. 문헌상 task 후보인 doorknob variation도 모든 조건에 통하는 보수적 행동을 배제하지 않으면 센서의 필요성을 증명하지 못한다는 것이 **이번 연구자 해석**이다. [검토의 task 계약·기각 조건](../work/update/CONTACT_INTERFACE_REVIEW_2026-10-23.md#6-task-하나를-골라도-곧바로-센서-필요성을-증명할-수는-없다). 충분한 history/proprio·고전 feedback과 달리 미관측 task/기계 조건에서 개입 선택을 예측할 근거가 생길 때만 재검토한다. Hardware·동기화·calibration·공정한 실행 자산도 필요해 GPU만으로 재개하지 않는다. 후속 심사와 현재 인계는 [TODO](../TODO.md)를 따른다.
+
+**공개 자산 경계:** [GAP-R2 code/source audit](../work/sources/contact_interface_review_2026-10-23.json)에서 ForceVLA의 force 입력 경로·추론 코드 불일치, TaF-VLA의 공개 tactile dataset과 미확보 정책 구현을 구분했다. Code 정적 검토는 실행 검증이 아니다. TaF-VLA의 journal status는 독립 확인하지 못해 preprint로 유지한다. 범용 VLA로 확장하려면 instruction/task별 utility가 필요하며 specialist contact 성능만으로 대체할 수 없다. [GAP-LATENT](./04_vla_generalist.md#gap-latent-2026)는 학습용 영상 표현/추가 supervision, 이 질문은 실행 시 정보와 controller 투자 선택이 중심이다.
+
+<a id="gap-deform-2026"></a>
+### GAP-DEFORM — 물성·고정 조건의 모호성이 언제 추가 탐색을 필요로 하는가?
+
+- 갱신: **2026-10-24, GAP-DE2 DONE**. **현재 공개 자산 기반 설계 종료·문헌 진단 HOLD / 일반 방법 NO-GO / native VLA HOLD**. [DE1 문헌 비교](../work/update/DEFORMABLE_IDENTIFICATION_REVIEW_2026-10-24.md) 뒤 [DE2 자료 충분성 심사](../work/update/DEFORMABLE_ASSET_SUFFICIENCY_REVIEW_2026-10-24.md)를 완료했다. 직접 충돌 판단은 지정 본문에 근거하며 조건 예측은 여전히 `CURATION-HYPOTHESIS`다. 실험으로 가설을 반박하거나 읽기 status를 승격한 것은 아니다.
+- **기존 질문의 수정:** [JIGGLE §IV-C·VI](https://arxiv.org/html/2405.09743v1)의 joint는 state와 boundary다. [AdaptiGraph Appendix C.1](https://arxiv.org/html/2407.07889v1)과 [DPSI](https://journals.sagepub.com/doi/full/10.1177/02783649251334661)는 물성과 마찰의 공동 추정을 이미 다룬다. Material·friction·attachment 위치/강도·현재 state·model class를 구분하며, 일반 joint estimation의 부재를 주장하지 않는다.
+- **가장 강한 충돌:** [IJRR 2014](https://pmc.ncbi.nlm.nih.gov/articles/PMC4324691/)에 boundary active exploration, [RSS 2020](https://roboticsproceedings.org/rss16/p085.html)에 task-oriented exploration이 있다. AdaptiGraph Appendix C.2는 uncertainty probe와 최대 변위 heuristic 사이의 사후 분산 우위가 일관되지 않음을 보고한다. “task에 필요한 정보만 얻자”는 원리 자체도 새 기여가 아니다.
+- **남겨 둔 질문 — 연구자 해석:** 같은 행동 전 관측 이력에 부합하는 material–attachment 조합에서, **목표/제약에 따른 feasible 행동 불일치**가 추가 probe의 순이득을 예측하는가? 새로운 조합에서도 fixed/max-displacement probe·충분한 history feedback·기존 task-oriented exploration·[robust control](https://roboticsproceedings.org/rss22/p061.html)·[ILC](https://roboticsproceedings.org/rss22/p126.html) 이후에 남는 조건 예측이 필요하다. 관측상 유사성과 실제 행동 차이를 연결한 사례는 아직 미확보다.
+- **최소 비교·기각:** benign elastic object에서 material/attachment/task를 분리하고 정책이 보는 history·proprio·force까지 맞춘다. 공통 안전 행동이 있으면 식별 필요성을 주장하지 않는다. Probe의 직접 작업 진행 효과와 정보 효과를 분리하고 force·변위·시간·reset·계산 비용을 기록한다. Task success/제약 위반을 주 지표로 두며 parameter error는 보조다. Oracle에서도 실패하면 정책/제어 전제를 먼저 수정한다. [비교 계약 초안](../work/update/DEFORMABLE_IDENTIFICATION_REVIEW_2026-10-24.md#6-최소-비교-계약-초안--실행-manifest가-아님)은 executable=false다.
+- **VLA·공개 자산 경계:** PGND의 text는 확인한 code에서 segmentation 입력이며 instruction-conditioned policy 근거가 아니다. FORM의 일부 positions-only 비교는 탄성값을 가정한다. PhysCoRe의 CoRL 2026 표기는 독립 확인하지 못했다. Native VLA에는 실제 목표/제약을 바꾸는 task pair와 정책 기본 능력이 추가로 필요하다. GPU만으로 fixture·동기화·공정 비교가 해결되지 않는다.
+- **DE2에서 확인한 자료 경계:** AdaptiGraph의 cloth 생성은 물성과 마찰을 결합하고 `boundary_points`는 grasp 후보인 가장자리다. H5 timestamp는 frame 수이며 실행 후 버리는 시도의 총 비용 보존이 불충분하다. PGND는 버전 고정 데이터/모델을 제공하지만 trajectory window를 독립 시행으로 세지 않아야 하며, 지정 전처리에는 선택한 camera timestamp와 복사 image index가 달라질 수 있는 경로가 있다. 실제 payload의 영향은 미측정이다. DPSI의 workspace/table boundary와 JIGGLE의 환경 attachment도 구분했다. [고정 source·구간·한계](../work/sources/deformable_asset_sufficiency_review_2026-10-24.json).
+- **종료·재개:** 독립 material/anchor 조건과 행동 전 관측·실제 command/시간/시도 비용·goal evaluator가 함께 있는 비교 구성은 미확보다. [재사용/새 수집 범위](../work/update/DEFORMABLE_ASSET_SUFFICIENCY_REVIEW_2026-10-24.md#6-무엇을-재사용하고-무엇을-새로-만들어야-하는가)를 남기고 현재 설계를 종료했다. 새 source 또는 구체 수집 계획과 단순 대안 이후 차별적 예측이 있을 때 재심사한다. 효과를 미리 입증할 필요는 없지만 GPU·같은 metadata 재조회로 DE3/학습을 자동 시작하지 않는다. [GAP-S1 중간 종합](../work/update/VLA_GAP_SELECTION_REVIEW_2026-10-24.md)은 현재 채택 후보 없음으로 완료했다. 현재 인계는 [TODO](../TODO.md)의 GAP-N1 WAITING_EVIDENCE다.

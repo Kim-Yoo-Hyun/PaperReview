@@ -4,6 +4,8 @@
 > Evidence maturity: `FULL_TEXT_CHECKED`.
 > Analysis basis: full-text PDF body checked on 2026-09-03 (13 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2304.05316; PDF retrieval source: https://arxiv.org/pdf/2304.05316. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
+> DOC-QA2 targeted source review: 2026-10-23; PDF pp. 6, 10. 손상 구간·직접 연결된 표 분류만 원문 이미지와 대조했다. 전체 주장 정독·실험 검증·reading status 승격을 뜻하지 않는다. [URL·PDF hash·수정 기록](../../../work/sources/pdf_note_review_followup_2026-10-23.json).
+
 ## Method in One Sentence
 
 PDF body method statement (p. 3 (3.1. Overview), p. 2 (3.1. Overview), p. 2 (3.1. Overview), p. 3 (3.2. Dual-path Transformer Encoder), p. 4 (3.3. Transformer Occupancy Decoder), p. 4 (3.3. Transformer Occupancy Decoder)): The pipeline consists of the image encoder for extracting multi-scale 2D features, the image-to-3D transformation for lifting the 2D features to 3D volumes, and the transformer-based encoder-decoder for obtaining 3D ...
@@ -107,10 +109,10 @@ PDF body method statement (p. 3 (3.1. Overview), p. 2 (3.1. Overview), p. 2 (3.1
 ## Failure and Ablation Link
 
 - **p. 7 / 4.5. Ablation Studies - extractive body cue:** The ablation is conducted on SemanticKITTI validation set and from three perspectives: the dual-path encoder, the pixel decoder, and the transformer decoder.
-- **p. 6 / Figure/Table caption - extractive body cue:** Table 4: Ablation study on the dual-path encoder. Local Global Params GFLOPs IoU↑mIoU↑  74.1M 494.2 36.42
+- **PDF p. 6, Table 4 (DOC-QA2 원문 대조):** Local-only: 74.1M parameters / 494.2 GFLOPs / IoU 36.42 / mIoU 12.95; global-only: 81.4M / 407.4 / 36.37 / 12.93; dual-path: 81.4M / 515.3 / 36.50 / 13.46.
 - **p. 7 / Figure/Table caption - extractive body cue:** Table 5: Ablation study on the pixel decoder.
 - **p. 8 / Figure/Table caption - extractive body cue:** Figure 4: Qualitative results on nuScenes validation set. The leftmost column shows the input surrounding images, the following three columns visualize the LiDAR segmentation from ...
-- **p. 10 / Figure/Table caption - extractive body cue:** Table 10: Ablation study on augmentations. Image Aug. 3D Aug. IoU↑mIoU↑  36.37 12.72  35.73 12.94  
+- **PDF p. 10, Table 10 (DOC-QA2 원문 대조):** Image augmentation only: IoU/mIoU 36.37/12.72; 3D augmentation only: 35.73/12.94; both: 36.50/13.46. 체크 표시의 열 위치를 원문 표와 대조했다.
 - **p. 9 / 5. Conclusion - extractive body cue:** It indicates that the predicted semantic occupancy from TPVFormer, despite reasonable visualizations, fails to contain accurate 3D positions.
 - **p. 7 / 4.4. Main Results - extractive body cue:** Note that our method requires only one model to perform both the LiDAR segmentation and the semantic occupancy prediction, while the TPVFormer [21] model trained ...
 

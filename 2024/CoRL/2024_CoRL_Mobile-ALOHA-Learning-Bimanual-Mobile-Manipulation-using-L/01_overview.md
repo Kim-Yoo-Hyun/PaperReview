@@ -17,6 +17,8 @@
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (20 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
+> DOC-QA2 targeted source review: 2026-10-23; PDF pp. 5. 손상 구간·직접 연결된 표 분류만 원문 이미지와 대조했다. 전체 주장 정독·실험 검증·reading status 승격을 뜻하지 않는다. [URL·PDF hash·수정 기록](../../../work/sources/pdf_note_review_followup_2026-10-23.json).
+
 ## Why This Paper Is Here
 
 Locomotion, whole-body, mobile manipulation, and humanoids의 mobile_manipulation 문제를 이해하기 위해 읽는다. 본문은 (1) We lack accessible, plug-and-play hardware for whole-body teleoperation.를 문제로 두고, On the hardware front, we present Mobile ALOHA, a low-cost and whole-body teleoperation system for collecting bimanual mobile manipulation data.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
@@ -38,7 +40,7 @@ Locomotion, whole-body, mobile manipulation, and humanoids의 mobile_manipulatio
 - **p. 1 / 1. Introduction - extractive body cue:** Imitation learning from human-provided demonstrations is a promising tool for developing generalist robots, as it allows people to teach arbitrary skills to robots.
 - **p. 4 / 3. Mobile ALOHA Hardware - extractive body cue:** Connecting the operator to the mobile manipulator directly also enables coarse haptic feedback when the robot collides with objects.
 - **p. 1 / Abstract - extractive body cue:** In this work, we develop a system for imitating mobile manipulation tasks that are bimanual and require whole-body control.
-- **p. 5 / 3. Mobile ALOHA Hardware - extractive body cue:** The training objective for a mobile manipulation policy πm for a task m is E(oi,aiarms,ai base)∼Dm mobile  L(ai arms, ai base, πm(oi))  + ...
+- **PDF p. 5, §4 co-training (DOC-QA2 원문 대조):** Mobile demonstrations의 arm/base imitation loss와 static demonstrations의 arm action 및 zero-padded base [0,0] imitation loss를 함께 최적화한다. 두 데이터에서 같은 확률로 sampling하며 관측은 3개 RGB camera와 arm joint positions다.
 - **p. 2 / 1. Introduction - extractive body cue:** While many recent works demonstrate that highly expressive policy classes such as diffusion models and transformers can perform well on fine-grained, multi-modal manipulation tasks, it ...
 - **p. 5 / 3. Mobile ALOHA Hardware - extractive body cue:** In this work, we use a co-training pipeline that leverages the existing static ALOHA datasets to improve the performance of imitation learning for mobile manipulation, ...
 
@@ -49,7 +51,7 @@ Locomotion, whole-body, mobile manipulation, and humanoids의 mobile_manipulatio
 | Observation/input | This observation is also consistent across different class of state-of-the-art imitation learning methods, including ACT [104] and Diffusion Policy [18]. | egocentric RGB-D, language/task goal, base-arm proprioception | p. 2 (1. Introduction), p. 4 (3. Mobile ALOHA Hardware) |
 | State/latent | observation, consistent, across, different, class, state-of-the-art, imitation, learning, methods, including, ACT, Diffusion | map/object/contact state와 base-arm coordination decision | p. 2 (1. Introduction), p. 4 (3. Mobile ALOHA Hardware), p. 2 (1. Introduction) |
 | Output/action | We also record the joint positions of all 4 robot arms to be used as policy observations and actions. | base motion plus arm/gripper action | p. 4 (3. Mobile ALOHA Hardware), p. 2 (1. Introduction), p. 4 (3. Mobile ALOHA Hardware) |
-| Objective/outcome | The training objective for a mobile manipulation policy πm for a task m is E(oi,aiarms,ai base)∼Dm mobile  L(ai arms, ai base, πm(oi))  + E(oi,aiarms)∼Dstatic  L(ai arms, [0, 0], πm(oi)) ... | long-horizon task success, reachability, collision과 recovery | p. 5 (3. Mobile ALOHA Hardware), p. 1 (Body text (section boundary not confidently recovered)), p. 1 (Abstract) |
+| Objective/outcome | Mobile demonstrations의 arm/base imitation loss와 static demonstrations의 arm action 및 zero-padded base [0,0] imitation loss를 함께 최적화한다. 두 데이터에서 같은 확률로 sampling하며 관측은 3개 RGB camera와 arm joint positions다. | 학습 objective; 성공률·collision/recovery metric 자체가 아님 | PDF p. 5 §4 |
 
 ## Main Claims and Actual Contribution
 

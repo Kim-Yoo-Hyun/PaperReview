@@ -4,6 +4,8 @@
 > Evidence maturity: `FULL_TEXT_CHECKED`.
 > Analysis basis: full-text PDF body checked on 2026-09-02 (14 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/1509.02971; PDF retrieval source: https://arxiv.org/pdf/1509.02971. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
 
+> DOC-QA1 (2026-10-23): 제어문자·깨진 추출 구간과 직접 연결된 표 항목을 PDF 페이지 이미지와 대조했다. 확인 범위·원문 URL·페이지·수정 이력은 [대조 기록](../../../work/sources/pdf_note_review_2026-10-23.json)에 있다. 노트 전체의 정독이나 모든 기존 주장에 대한 재검증을 뜻하지 않으며 reading status는 유지한다.
+
 ## Paper-supported conclusion
 
 > **Evidence boundary:** The following claims are restricted to selected PDF body sentences, captions and section anchors; exact table/equation values remain to be checked at those anchors.
@@ -58,7 +60,7 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the PDF-described interface and mechanism: Recently, significant progress has been made by combining advances in deep learning for sensory processing (Krizhevsky et al., 2012) with reinforcement learning, resulting in the "Deep Q Network" (DQN) algorithm ... (p. 1, 1 INTRODUCTION); preserve the objective/update rule: We consider function approximators parameterized by θQ, which we optimize by minimizing the loss: L(θQ) = Est∼ρβ,at∼β,rt∼E h Q(st, at/θQ) -yt 2i (4) where yt = r(st, at) + γQ(st+1, µ(st+1)/θQ). (p. 3, 2 BACKGROUND).
+1. **재현 계획의 원문 근거:** Background의 critic loss는 Q(s_t,a_t)와 Bellman target y_t 사이 squared error의 기대값이다. 실제 DDPG에서는 별도 target actor/critic과 soft update를 사용하므로, p. 3의 배경식을 최종 target-network 구현식으로 그대로 옮기지 않는다. ([PDF p. 3](https://arxiv.org/pdf/1509.02971#page=3), §2 Background, Eqs. (4)–(5); §3 p. 4). 실제 재현은 이 문헌 대조에서 수행하지 않았다.
 2. Use the paper-reported task/data/environment cue: In all tasks, we ran experiments using both a low-dimensional state description (such as joint angles and positions) and high-dimensional renderings of the environment. (p. 5, 4 RESULTS).
 3. Compare against the reported or matched baseline: We normalized the scores using two baselines. (p. 5, 4 RESULTS).
 4. Report the body metric with its denominator and aggregation: Cart Pendulum Swing-up Cartpole Swing-up Fixed Reacher Blockworld Gripper Puck Shooting Monoped Balancing Moving Gripper Cheetah Million Steps 0 1 1 0 1 1 0 0 1 1 0 0 ... (p. 6, 4 RESULTS).

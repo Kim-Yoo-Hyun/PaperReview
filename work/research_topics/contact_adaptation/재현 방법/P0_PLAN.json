@@ -1,0 +1,51 @@
+{
+  "task": "GAP-CONTACT-RL-P0-A",
+  "status": "PREPARED_CODE_NATIVE_UNVERIFIED",
+  "contract_source": "../../../sources/vla_rl_additional_gaps_2026-11-09.json#contact_n2",
+  "base_image": "python:3.12.12-slim-bookworm@sha256:2986c55feb36e6cae00fa1fefb454283e4b33f35e75ff8bdd123b134130be301",
+  "platform": "linux/amd64",
+  "contactbench_commit": "ccd864501275112e369a71c91880adf2da28b536",
+  "newton_source_commit": "cca3bb8a17a3620a1343df3cf12c625e4161b317",
+  "fr3_commit": "261cd1f429619d8ef4f546bd788ab9dea906b5e1",
+  "fr3_urdf_git_blob": "f83729bad0c92a8c0c4a9526f6535450fae4c887",
+  "fr3_asset": "franka_emika_panda",
+  "physics_packages": {
+    "newton": "1.5.0",
+    "warp-lang": "1.16.0",
+    "mujoco-warp": "3.11.0",
+    "mujoco": "3.11.0"
+  },
+  "dependency_boundary": "Full transitive/OS dependencies are not prevalidated or prelocked; pip report/freeze and image ID must be captured at native build.",
+  "caps": {
+    "resets": 2,
+    "control_frames": 120,
+    "physics_steps": 6000,
+    "process_seconds": 1800,
+    "vla_queries": 0,
+    "weight_downloads": 0,
+    "optimizer_updates": 0
+  },
+  "fixture": {
+    "task": "plug_in_charger_block1",
+    "spring_mm": 0.4,
+    "seed": 1000,
+    "reset": "one nominal deterministic upstream initialization; no jitter or evaluation split",
+    "control": "post-pre-roll joint target hold, arm gain request ramp 1 -> 0.5 -> 1; no expert callback or ending",
+    "post_preroll_frames": 84,
+    "servo_hz": 60,
+    "physics_substeps": 24,
+    "observation_hz": 10,
+    "gain_rate_limit_per_observation": 0.1,
+    "stabilizer": false,
+    "effort_override": false,
+    "rgb": [224, 224, 3]
+  },
+  "success_boundary": "Gain/bias propagation, finite force and state, causal clock/whitelisted raw32D state, contact-capacity and CUDA RGB plumbing. Manual task visibility and load calibration remain separate; no task SR or VLA/RL effect.",
+  "not_implemented": [
+    "complete ContactBench reset/step RL environment",
+    "N2 Cartesian action decoder and model input normalization",
+    "dataset/target SFT/normalizer",
+    "VLA queries or PPO updates",
+    "environment force metric calibration and real robot validation"
+  ]
+}

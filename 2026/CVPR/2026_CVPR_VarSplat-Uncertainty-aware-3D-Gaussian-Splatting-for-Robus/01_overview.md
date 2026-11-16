@@ -17,6 +17,8 @@
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
+> DOC-QA1 (2026-10-23): 제어문자·깨진 추출 구간과 직접 연결된 표 항목을 PDF 페이지 이미지와 대조했다. 확인 범위·원문 URL·페이지·수정 이력은 [대조 기록](../../../work/sources/pdf_note_review_2026-10-23.json)에 있다. 노트 전체의 정독이나 모든 기존 주장에 대한 재검증을 뜻하지 않으며 reading status는 유지한다.
+
 ## Why This Paper Is Here
 
 World models, safety, uncertainty, and recovery의 navigation 문제를 이해하기 위해 읽는다. 본문은 To address these challenges, we introduce VarSplat, an uncertainty-aware RGB-D SLAM system leveraging 3D Gaussian Splatting.를 문제로 두고, In summary, our contributions can be shown as follows: • We introduce VarSplat, an RGB-D 3DGS-SLAM system that learns per-splat appearance variance σ2 to render differentiable per-pixel uncertainty map V while maintaining ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
@@ -37,7 +39,7 @@ World models, safety, uncertainty, and recovery의 navigation 문제를 이해�
 - **p. 3 / 3. Method - extractive body cue:** To address these issues, we introduce a novel uncertainty quantification pipeline based on per-pixel uncertainty map rendering.
 - **p. 2 / 1. Introduction - extractive body cue:** To address these challenges, we introduce VarSplat, an uncertainty-aware RGB-D SLAM system leveraging 3D Gaussian Splatting.
 - **p. 4 / 3.1. Per-pixel uncertainty rendering - extractive body cue:** By sharing the same single-pass rasterization as color and depth, V enables efficient, online, in-the-loop reliability estimation.
-- **p. 5 / 3.3. Downstream Pose Estimation - extractive body cue:** Ltrack = X λc  f wp⊙∥ˆI -I∥1  +(1-λc)∥ˆD-D∥1 (17) where 0 ≤λc ≤1 balances the contribution between photometric and geometric losses, and f ...
+- **원문 대조:** Tracking loss는 uncertainty weight를 곱한 RGB L1 residual과 depth L1 residual을 λ_c로 조합한다. Tracking 중 variance parameter를 고정하고 weight 경로의 gradient를 차단한다. ([PDF p. 5](https://openaccess.thecvf.com/content/CVPR2026/papers/Tran_VarSplat_Uncertainty-aware_3D_Gaussian_Splatting_for_Robust_RGB-D_SLAM_CVPR_2026_paper.pdf#page=5), §3.3 Downstream Pose Estimation, Eq. (17)).
 - **p. 4 / 3.2. Mapping - extractive body cue:** To stay consistent with the Gaussian view, we use square L2 (MSE) for variance loss Lvar.
 - **p. 4 / 3.2. Mapping - extractive body cue:** For color supervision, we use a weighted combination of L1 and SSIM [16], while depth loss is L1 between rendered and ground-truth depth.
 - **p. 5 / 3.3. Downstream Pose Estimation - extractive body cue:** Thanks to the explicit representation and the parallel optimization of poses and Gaussian parameters, we can simultaneously freeze the variance during tracking and registration, while ...
@@ -57,7 +59,7 @@ World models, safety, uncertainty, and recovery의 navigation 문제를 이해�
 - **p. 3 / 3. Method - extractive body cue:** To address these issues, we introduce a novel uncertainty quantification pipeline based on per-pixel uncertainty map rendering.
 - **p. 2 / 1. Introduction - extractive body cue:** To address these challenges, we introduce VarSplat, an uncertainty-aware RGB-D SLAM system leveraging 3D Gaussian Splatting.
 - **p. 4 / 3.1. Per-pixel uncertainty rendering - extractive body cue:** By sharing the same single-pass rasterization as color and depth, V enables efficient, online, in-the-loop reliability estimation.
-- **p. 5 / 3.3. Downstream Pose Estimation - extractive body cue:** Ltrack = X λc  f wp⊙∥ˆI -I∥1  +(1-λc)∥ˆD-D∥1 (17) where 0 ≤λc ≤1 balances the contribution between photometric and geometric losses, and f ...
+- **원문 대조:** Tracking loss는 uncertainty weight를 곱한 RGB L1 residual과 depth L1 residual을 λ_c로 조합한다. Tracking 중 variance parameter를 고정하고 weight 경로의 gradient를 차단한다. ([PDF p. 5](https://openaccess.thecvf.com/content/CVPR2026/papers/Tran_VarSplat_Uncertainty-aware_3D_Gaussian_Splatting_for_Robust_RGB-D_SLAM_CVPR_2026_paper.pdf#page=5), §3.3 Downstream Pose Estimation, Eq. (17)).
 - **p. 6 / 4.2. Quantitative Evaluation - extractive body cue:** VarSplat achieves the highest accuracy with robustness on large motion camera.
 - **p. 6 / 4.2. Quantitative Evaluation - extractive body cue:** On ScanNet, VarSplat consistently achieves best performance against both neural implicit and 3DGS baselines.
 - **p. 7 / 4.2. Quantitative Evaluation - extractive body cue:** VarSplat achieves competitive results on both synthetic and real-world datasets.

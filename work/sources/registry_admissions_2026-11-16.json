@@ -1,0 +1,292 @@
+[
+  {
+    "title": "Ψ₀: An Open Foundation Model Towards Universal Humanoid Loco-Manipulation",
+    "year": 2026,
+    "venue": "RSS",
+    "category": "VLA and Generalist Robot Policies",
+    "primary_track": "VLA and generalist robot policies",
+    "tags": [
+      "VLA",
+      "humanoid",
+      "loco-manipulation",
+      "human-video",
+      "flow-matching",
+      "whole-body-control"
+    ],
+    "aliases": [
+      "Psi-Zero",
+      "Psi0",
+      "Psi-0",
+      "Ψ_0"
+    ],
+    "identifiers": {
+      "arxiv": "2603.12263",
+      "doi": "10.15607/RSS.2026.XXII.021"
+    },
+    "page": "https://www.roboticsproceedings.org/rss22/p021.html",
+    "project": "https://psi-lab.ai/Psi0/",
+    "pdf": "",
+    "sources": {
+      "primary": {
+        "url": "https://www.roboticsproceedings.org/rss22/p021.html",
+        "kind": "official_publication",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-16"
+      },
+      "preprint": {
+        "url": "https://arxiv.org/abs/2603.12263",
+        "kind": "arxiv",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-16"
+      },
+      "project": {
+        "url": "https://psi-lab.ai/Psi0/",
+        "kind": "author_project",
+        "scope": "project_landing",
+        "verified_on": "2026-11-16"
+      },
+      "code": {
+        "url": "https://github.com/physical-superintelligence-lab/Psi0",
+        "kind": "official_code",
+        "scope": "code_repository",
+        "verified_on": "2026-11-16"
+      },
+      "full_text": {
+        "url": "https://arxiv.org/html/2603.12263v1",
+        "kind": "arxiv_html",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-16"
+      },
+      "venue_verification": {
+        "url": "https://www.roboticsproceedings.org/rss22/p021.html",
+        "kind": "official_publication",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-16"
+      }
+    },
+    "publication": {
+      "status": "peer_reviewed",
+      "kind": "conference",
+      "venue": "RSS",
+      "year": 2026,
+      "venue_year": 2026,
+      "presentation": "unknown"
+    },
+    "artifacts": {
+      "code_status": "released",
+      "data_status": "released",
+      "local_pdf_cache": false
+    },
+    "admission_tier": "NEXT",
+    "relations": [],
+    "evidence": "FULL_TEXT_CHECKED",
+    "problem": "사람 영상의 action 표현과 휴머노이드 관절 제어의 차이를 고려해 적은 로봇 시연으로 장시간 이동 조작을 학습한다.",
+    "method": "FAST next-action VLM 사전학습 후 VLM을 고정하고 flow action expert를 robot joint space에서 학습·task 적응한다. 하위 제어는 별도 AMO RL controller다.",
+    "interface": "Head RGB·지시·상태 → VLM/MM-DiT → 상체 관절 및 하체 명령 → AMO → whole-body joint control.",
+    "evaluation": "arXiv v1 §IV-B의 Unitree G1 실물8과제, 과제당 시연80개와 모델당 평가10회. 보조 subtask 개입과 전체 성공률을 구분한다.",
+    "assumptions": "데이터 stage·action frame·controller authority·실물 시연과 task-specific fine-tuning을 구분한다.",
+    "limitations": "후학습의 고정 VLM과 별도 RL 하위 제어를 단일 VLA actor의 reward-based RL로 해석하지 않는다. v1·RSS abstract·현행 SONIC release를 혼합하지 않는다.",
+    "role": "사용자 지정 필수 논문이며 human-video→humanoid data recipe·action representation·RL controller 경계를 비교할 직접 NEXT다.",
+    "lineage": "FAST·flow VLA·EgoDex·Humanoid Everyday → Ψ₀; AMO 실행 경로와 이후 SONIC release는 구분한다.",
+    "source_audit": "2026-11-16: RSS 공식 metadata/초록, arXiv v1 §III–IV·Appendix IX–X의 지정 방법/평가·공식 project/repository 확인. 전체 정독·RSS 최종본문 전수 대조·runtime 재현·사용자 READ를 뜻하지 않는다.",
+    "curation": {
+      "admission_reason": "사용자 지정 필수 논문이며 human-video→humanoid data recipe·action representation·RL controller 경계를 비교할 직접 NEXT다.",
+      "tier_reason": "사용자 지정 필수 논문이며 human-video→humanoid data recipe·action representation·RL controller 경계를 비교할 직접 NEXT다.",
+      "rationale_status": "recorded",
+      "rationale_basis": "REG-R16 requested Psi-Zero and data prerequisites",
+      "rationale_reviewed_on": "2026-11-16",
+      "scope_status": "active",
+      "roles": [
+        "method",
+        "system"
+      ],
+      "role_basis": "manual admission review"
+    },
+    "admission_group": "VLA, cross-embodiment, and long-horizon planning"
+  },
+  {
+    "title": "EgoDex: Learning Dexterous Manipulation from Large-Scale Egocentric Video",
+    "year": 2026,
+    "venue": "ICLR",
+    "category": "Robot Learning and Data",
+    "primary_track": "RL, IL, offline learning, and robot data",
+    "tags": [
+      "robot-data",
+      "human-video",
+      "dexterous-manipulation",
+      "Benchmark"
+    ],
+    "aliases": [
+      "EgoDex"
+    ],
+    "identifiers": {
+      "arxiv": "2505.11709",
+      "openreview": "FFxkFMU89E"
+    },
+    "page": "https://arxiv.org/abs/2505.11709",
+    "project": "https://github.com/apple-aiml-research/ml-egodex",
+    "pdf": "",
+    "sources": {
+      "primary": {
+        "url": "https://arxiv.org/abs/2505.11709",
+        "kind": "arxiv",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-16"
+      },
+      "preprint": {
+        "url": "https://arxiv.org/abs/2505.11709",
+        "kind": "arxiv",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-16"
+      },
+      "project": {
+        "url": "https://github.com/apple-aiml-research/ml-egodex",
+        "kind": "author_project",
+        "scope": "project_landing",
+        "verified_on": "2026-11-16"
+      },
+      "code": {
+        "url": "https://github.com/apple-aiml-research/ml-egodex",
+        "kind": "official_code",
+        "scope": "code_repository",
+        "verified_on": "2026-11-16"
+      },
+      "venue_verification": {
+        "url": "https://iclr.cc/Downloads/2026",
+        "kind": "official_publication",
+        "scope": "venue_index",
+        "verified_on": "2026-11-16"
+      }
+    },
+    "publication": {
+      "status": "peer_reviewed",
+      "kind": "conference",
+      "venue": "ICLR",
+      "year": 2026,
+      "venue_year": 2026,
+      "presentation": "unknown"
+    },
+    "artifacts": {
+      "code_status": "released",
+      "data_status": "released",
+      "local_pdf_cache": false
+    },
+    "admission_tier": "NEXT",
+    "relations": [],
+    "note_format": "abstract_analysis_v1",
+    "evidence": "ABSTRACT_CHECKED",
+    "problem": "사람 조작 영상에 정밀 손·손가락 pose annotation이 부족해 행동 표현 학습과 비교가 어렵다.",
+    "method": "Apple Vision Pro로 egocentric 영상·3D skeleton·언어를 함께 수집하고 hand trajectory prediction을 비교한다.",
+    "interface": "사람 egocentric 영상·언어·3D pose → 손 trajectory prediction. 로봇 joint command나 실물 성공률과 구분한다.",
+    "evaluation": "공식 초록의829시간·194 tabletop task. 공식 repository의725h train/7h test/97h additional은 고정 split 뒤 추가 자료를 구분한다.",
+    "role": "Ψ₀와 human-video VLA 사전학습의 직접 데이터 전제이며 hand prediction과 robot closed-loop 평가를 구분할 NEXT다.",
+    "lineage": "Ego4D·robot data → paired pose EgoDex → Ψ₀·H-RDT의 사전학습을 비교한다.",
+    "question": "같은 영상·학습 예산에서 3D hand supervision의 이득이 로봇 행동으로 전달되는가?",
+    "minimal_experiment": "Human prediction 지표와 robot downstream 결과를 별도 집계하고 source별 시연량과 label access를 맞춘다.",
+    "verification_questions": "Train/test/additional split·episode 간 좌표계·자동 언어 오표기·robot retargeting 가정",
+    "source_audit": "2026-11-16: 공식 ICLR2026 Downloads exact title와 공식 OpenReview 검색의 publication header로 게재 확인. OpenReview 직접 접근은 challenge. arXiv v3 초록·Apple 공식 repository 확인; 본문 정독 아님.",
+    "curation": {
+      "admission_reason": "Ψ₀와 human-video VLA 사전학습의 직접 데이터 전제이며 hand prediction과 robot closed-loop 평가를 구분할 NEXT다.",
+      "tier_reason": "Ψ₀와 human-video VLA 사전학습의 직접 데이터 전제이며 hand prediction과 robot closed-loop 평가를 구분할 NEXT다.",
+      "rationale_status": "recorded",
+      "rationale_basis": "REG-R16 requested Psi-Zero and data prerequisites",
+      "rationale_reviewed_on": "2026-11-16",
+      "scope_status": "active",
+      "roles": [
+        "benchmark_or_dataset"
+      ],
+      "role_basis": "manual admission review"
+    },
+    "admission_group": "RL, IL, offline learning, and robot data"
+  },
+  {
+    "title": "Humanoid Everyday: A Comprehensive Robotic Dataset for Open-World Humanoid Manipulation",
+    "year": 2025,
+    "venue": "arXiv",
+    "category": "Robot Learning and Data",
+    "primary_track": "RL, IL, offline learning, and robot data",
+    "tags": [
+      "robot-data",
+      "humanoid",
+      "loco-manipulation",
+      "multimodal",
+      "Benchmark"
+    ],
+    "aliases": [
+      "Humanoid Everyday",
+      "HE"
+    ],
+    "identifiers": {
+      "arxiv": "2510.08807"
+    },
+    "page": "https://arxiv.org/abs/2510.08807",
+    "project": "https://humanoideveryday.github.io/",
+    "pdf": "",
+    "sources": {
+      "primary": {
+        "url": "https://arxiv.org/abs/2510.08807",
+        "kind": "arxiv",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-16"
+      },
+      "preprint": {
+        "url": "https://arxiv.org/abs/2510.08807",
+        "kind": "arxiv",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-16"
+      },
+      "project": {
+        "url": "https://humanoideveryday.github.io/",
+        "kind": "author_project",
+        "scope": "project_landing",
+        "verified_on": "2026-11-16"
+      },
+      "code": {
+        "url": "https://github.com/physical-superintelligence-lab/Humanoid-Everyday",
+        "kind": "official_code",
+        "scope": "code_repository",
+        "verified_on": "2026-11-16"
+      }
+    },
+    "publication": {
+      "status": "preprint",
+      "kind": "preprint",
+      "venue": "arXiv",
+      "year": 2025,
+      "venue_year": 2025,
+      "presentation": "unknown"
+    },
+    "artifacts": {
+      "code_status": "released",
+      "data_status": "released",
+      "local_pdf_cache": false
+    },
+    "admission_tier": "NEXT",
+    "relations": [],
+    "note_format": "abstract_analysis_v1",
+    "evidence": "ABSTRACT_CHECKED",
+    "problem": "정지형 arm 위주의 데이터만으로 humanoid 이동·조작·사람 상호작용을 비교하기 어렵다.",
+    "method": "여러 humanoid 일상 과제의 multimodal teleoperation 데이터와 policy 평가 자료를 제공한다.",
+    "interface": "Unitree G1/H1의 RGB·depth·LiDAR·tactile·상태·언어·동작 기록. 논문의 전체 data scope와 downstream model이 쓰는 subset을 구분한다.",
+    "evaluation": "초록의10.3k trajectories·300만 이상 frames·260tasks/7categories. 이는 시연 데이터 규모이며 policy rollout trial 수가 아니다.",
+    "role": "Ψ₀의 robot post-training 데이터이자 embodiment-specific action schema를 확인할 직접 NEXT다.",
+    "lineage": "DROID/robot data → Humanoid Everyday → Ψ₀의 robot-data 적응을 비교한다.",
+    "question": "동일 robot data 예산에서 범용 human-video 표현과 task-specific robot 표현의 이득은 언제 달라지는가?",
+    "minimal_experiment": "G1/H1 schema와 task split을 먼저 고정하고, 같은 robot labels로 pretrained/frozen/unfrozen policy를 대조한다.",
+    "verification_questions": "Task별 센서 가용성·joint/좌표계·lower-body action 제공 범위·cloud evaluation 실가동",
+    "source_audit": "2026-11-16: arXiv v3 초록·공식 project/repository의 data/schema 링크 확인. 저자 ICRA2026 표기는 확인했으나 공식 proceedings/program 확인을 확보하지 못해 arXiv2025 유지. Project의 cloud evaluation Coming Soon과 repository 링크 존재를 실가동 증거로 쓰지 않는다.",
+    "curation": {
+      "admission_reason": "Ψ₀의 robot post-training 데이터이자 embodiment-specific action schema를 확인할 직접 NEXT다.",
+      "tier_reason": "Ψ₀의 robot post-training 데이터이자 embodiment-specific action schema를 확인할 직접 NEXT다.",
+      "rationale_status": "recorded",
+      "rationale_basis": "REG-R16 requested Psi-Zero and data prerequisites",
+      "rationale_reviewed_on": "2026-11-16",
+      "scope_status": "active",
+      "roles": [
+        "benchmark_or_dataset"
+      ],
+      "role_basis": "manual admission review"
+    },
+    "admission_group": "RL, IL, offline learning, and robot data"
+  }
+]

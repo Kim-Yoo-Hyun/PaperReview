@@ -4,6 +4,8 @@
 > Evidence maturity: `FULL_TEXT_CHECKED`.
 > Analysis basis: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2601.09512; PDF retrieval source: https://arxiv.org/pdf/2601.09512. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
+> DOC-QA2 targeted source review: 2026-10-23; PDF pp. 3, 4. 손상 구간·직접 연결된 표 분류만 원문 이미지와 대조했다. 전체 주장 정독·실험 검증·reading status 승격을 뜻하지 않는다. [URL·PDF hash·수정 기록](../../../work/sources/pdf_note_review_followup_2026-10-23.json).
+
 ## Method in One Sentence
 
 PDF body method statement (p. 3 (IV. METHODOLOGY), p. 3 (IV. METHODOLOGY), p. 4 (IV. METHODOLOGY), p. 4 (IV. METHODOLOGY), p. 5 (IV. METHODOLOGY), p. 5 (IV. METHODOLOGY)): To achieve this, we draw inspiration from the mixture-of-experts (MoE) approach in large language models (LLMs) [35], [36], which combines the outputs of specialized sub-networks during inference.
@@ -12,11 +14,11 @@ PDF body method statement (p. 3 (IV. METHODOLOGY), p. 3 (IV. METHODOLOGY), p. 4 
 
 - **p. 3 / IV. METHODOLOGY - extractive body cue:** To achieve this, we draw inspiration from the mixture-of-experts (MoE) approach in large language models (LLMs) [35], [36], which combines the outputs of specialized sub-networks ...
 - **p. 3 / IV. METHODOLOGY - extractive body cue:** Prior work [37], [38] has shown that a large fraction of factual associations and high-level knowledge in transformerbased LLMs is stored inside mid-layer feedforward network ...
-- **p. 4 / IV. METHODOLOGY - extractive body cue:** By training the discriminators added at stage n with the loss Lrecon(Dn ℓ) = Exℓ∼Dn  en ℓ(xℓ)  , (5) we ensure they have ...
+- **PDF p. 4, §IV-C / Eqs. (4)–(6) (DOC-QA2 원문 대조):** 각 discriminator는 자신과 연결된 adapter의 학습 feature를 재구성하도록 훈련된다. 추론 때 reconstruction error가 가장 작은 discriminator에 연결된 adapter를 선택한다. 이를 closed-loop recovery objective로 해석하지 않는다.
 - **p. 4 / IV. METHODOLOGY - extractive body cue:** A straightforward approach would be to Task 1 Adapter Task 3 Adapter Task 1 Discriminator Task 2 Discriminator Task 3 Discriminator Pre-Trained Module z-score threshold ...
 - **p. 5 / IV. METHODOLOGY - extractive body cue:** Then, the routing mechanism activates only adapters from earlier stages in layer ℓ1 during training of Ai ℓ2.
 - **p. 5 / IV. METHODOLOGY - extractive body cue:** As a consequence, the input features xℓ2 to layer ℓ2 when performing task Tn are different from those seen during training of Ai ℓ2.
-- **p. 3 / IV. METHODOLOGY - extractive body cue:** We adopt the standard conditional flow matching loss L(θn)= Es,(A1,o),A0
+- **PDF p. 3, §IV-A / Eq. (1) (DOC-QA2 원문 대조):** Aˢ=(1−s)A⁰+sA¹에서 vector field v_θ(Aˢ,o,s)를 A¹−A⁰에 맞춘다. 인쇄된 식은 L2 norm이며 제곱 표기가 없으므로 squared loss를 임의로 보충하지 않는다.
 - **p. 4 / IV. METHODOLOGY - extractive body cue:** First, we jointly train the new adapters using the flow-matching loss (1).
 
 ## Design Rationale
@@ -28,7 +30,7 @@ PDF body method statement (p. 3 (IV. METHODOLOGY), p. 3 (IV. METHODOLOGY), p. 4 
 
 - **p. 3 / IV. METHODOLOGY - extractive body cue:** To achieve this, we draw inspiration from the mixture-of-experts (MoE) approach in large language models (LLMs) [35], [36], which combines the outputs of specialized sub-networks ...
 - **p. 3 / IV. METHODOLOGY - extractive body cue:** Prior work [37], [38] has shown that a large fraction of factual associations and high-level knowledge in transformerbased LLMs is stored inside mid-layer feedforward network ...
-- **p. 4 / IV. METHODOLOGY - extractive body cue:** By training the discriminators added at stage n with the loss Lrecon(Dn ℓ) = Exℓ∼Dn  en ℓ(xℓ)  , (5) we ensure they have ...
+- **PDF p. 4, §IV-C / Eqs. (4)–(6) (DOC-QA2 원문 대조):** 각 discriminator는 자신과 연결된 adapter의 학습 feature를 재구성하도록 훈련된다. 추론 때 reconstruction error가 가장 작은 discriminator에 연결된 adapter를 선택한다. 이를 closed-loop recovery objective로 해석하지 않는다.
 - **p. 4 / IV. METHODOLOGY - extractive body cue:** A straightforward approach would be to Task 1 Adapter Task 3 Adapter Task 1 Discriminator Task 2 Discriminator Task 3 Discriminator Pre-Trained Module z-score threshold ...
 - **p. 5 / IV. METHODOLOGY - extractive body cue:** Then, the routing mechanism activates only adapters from earlier stages in layer ℓ1 during training of Ai ℓ2.
 - **p. 5 / IV. METHODOLOGY - extractive body cue:** As a consequence, the input features xℓ2 to layer ℓ2 when performing task Tn are different from those seen during training of Ai ℓ2.
@@ -40,13 +42,13 @@ PDF body method statement (p. 3 (IV. METHODOLOGY), p. 3 (IV. METHODOLOGY), p. 4 
 |---|---|---|---|---|---|---|
 | Multimodal task encoding | vision·language·proprioception·3D context를 결합한다 | image/video, instruction, state/history | pretrained encoder, adapter, attention, grounding 또는 fusion을 적용 | task-conditioned context | To achieve this, we draw inspiration from the mixture-of-experts (MoE) approach in large language models (LLMs) [35], [36], which combines the outputs ... | p. 3 (IV. METHODOLOGY), p. 3 (IV. METHODOLOGY) |
 | Action / skill decoding | context에서 continuous action 또는 skill을 생성한다 | context와 history | autoregressive, diffusion, flow, value-guided 또는 skill decoder를 적용 | action, pose, option 또는 action chunk | Prior work [37], [38] has shown that a large fraction of factual associations and high-level knowledge in transformerbased LLMs is stored inside ... | p. 3 (IV. METHODOLOGY), p. 4 (IV. METHODOLOGY) |
-| Receding execution / feedback | 예측을 부분 실행하고 다시 관측한다 | action chunk와 current observation | execute, replan, terminate, recover 또는 memory update를 수행 | next action/feedback state | By training the discriminators added at stage n with the loss Lrecon(Dn ℓ) = Exℓ∼Dn  en ℓ(xℓ)  , (5) we ... | p. 4 (IV. METHODOLOGY), p. 4 (IV. METHODOLOGY) |
+| Discriminator-based adapter routing | 입력 feature에 맞는 adapter 선택 | Layer feature x_ℓ와 trained discriminators | Reconstruction error를 최소화하는 discriminator의 adapter 선택 | Selected adapter | Eqs. (4)–(6); feedback/recovery 실험이 아님 | PDF p. 4 §IV-C |
 
 - Pipeline rows are domain labels; the paper-specific operations are the extractive cues and section anchors in the same row.
 
 ## Objective / Update Rule
 
-- **p. 3 / IV. METHODOLOGY - extractive body cue:** We adopt the standard conditional flow matching loss L(θn)= Es,(A1,o),A0
+- **PDF p. 3, §IV-A / Eq. (1) (DOC-QA2 원문 대조):** Aˢ=(1−s)A⁰+sA¹에서 vector field v_θ(Aˢ,o,s)를 A¹−A⁰에 맞춘다. 인쇄된 식은 L2 norm이며 제곱 표기가 없으므로 squared loss를 임의로 보충하지 않는다.
 - **p. 4 / IV. METHODOLOGY - extractive body cue:** First, we jointly train the new adapters using the flow-matching loss (1).
 - **p. 4 / IV. METHODOLOGY - extractive body cue:** Then, we freeze all parameters except for the new discriminators and train them using the reconstruction loss (5).
 - **p. 5 / IV. METHODOLOGY - extractive body cue:** The auxiliary discriminator is linked to the same adapter as the existing discriminator with the smallest reconstruction error (4), i.e., Bℓ(Dn ℓ) = Ai ℓ= ...
@@ -87,7 +89,7 @@ PDF body method statement (p. 3 (IV. METHODOLOGY), p. 3 (IV. METHODOLOGY), p. 4 
 ## Training vs Inference
 
 - **p. 3 / IV. METHODOLOGY - extractive body cue:** To achieve this, we draw inspiration from the mixture-of-experts (MoE) approach in large language models (LLMs) [35], [36], which combines the outputs of specialized sub-networks ...
-- **p. 4 / IV. METHODOLOGY - extractive body cue:** By training the discriminators added at stage n with the loss Lrecon(Dn ℓ) = Exℓ∼Dn  en ℓ(xℓ)  , (5) we ensure they have ...
+- **PDF p. 4, §IV-C / Eqs. (4)–(6) (DOC-QA2 원문 대조):** 각 discriminator는 자신과 연결된 adapter의 학습 feature를 재구성하도록 훈련된다. 추론 때 reconstruction error가 가장 작은 discriminator에 연결된 adapter를 선택한다. 이를 closed-loop recovery objective로 해석하지 않는다.
 - **p. 4 / IV. METHODOLOGY - extractive body cue:** A straightforward approach would be to Task 1 Adapter Task 3 Adapter Task 1 Discriminator Task 2 Discriminator Task 3 Discriminator Pre-Trained Module z-score threshold ...
 - **p. 5 / IV. METHODOLOGY - extractive body cue:** Then, the routing mechanism activates only adapters from earlier stages in layer ℓ1 during training of Ai ℓ2.
 - **p. 5 / IV. METHODOLOGY - extractive body cue:** As a consequence, the input features xℓ2 to layer ℓ2 when performing task Tn are different from those seen during training of Ai ℓ2.

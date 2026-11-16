@@ -11,11 +11,12 @@
 - Primary track: VLA and generalist robot policies
 - Tier: REFERENCE
 - Tags: VLA, Vision-Language Model, Robotics, Benchmark
-- Official paper: https://openreview.net/forum?id=NuR4lG4gKB
+- Official paper: https://proceedings.mlr.press/v306/sun26an.html
 - Full-text retrieval: https://openreview.net/pdf/fa8a077d4c454280e6633258b55a9ff0b4d204e5.pdf
 - Code/Project: not identified
 - Paper type: benchmark_or_dataset
 - Source audit: full-text PDF body checked on 2026-09-03 (20 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Metadata refresh: 2026-10-25 PMLR ICML 2026 공식 proceedings metadata 재확인. 기존 OpenReview PDF의 본문 검토 근거는 보존하며 final 본문 동등성은 재검토하지 않았다.
 
 ## Why This Paper Is Here
 

@@ -4,6 +4,8 @@
 > Evidence maturity: `FULL_TEXT_CHECKED`.
 > Analysis basis: full-text PDF body checked on 2026-09-03 (6 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://doi.org/10.1109/ICRA.2011.5980280; PDF retrieval source: https://whiteoak.umd.edu/roswiki/attachments/Papers%282f%29ICRA2011_Kalakrishnan/kalakrishnan_icra2011.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
+> DOC-QA2 targeted source review: 2026-10-23; PDF pp. 2. 손상 구간·직접 연결된 표 분류만 원문 이미지와 대조했다. 전체 주장 정독·실험 검증·reading status 승격을 뜻하지 않는다. [URL·PDF hash·수정 기록](../../../work/sources/pdf_note_review_followup_2026-10-23.json).
+
 ## Method in One Sentence
 
 PDF body method statement (p. 2 (III. THE STOMP ALGORITHM), p. 2 (III. THE STOMP ALGORITHM), p. 4 (IV. MOTION PLANNING FOR A ROBOT ARM), p. 4 (IV. MOTION PLANNING FOR A ROBOT ARM), p. 3 (IV. MOTION PLANNING FOR A ROBOT ARM)): Inspired by previous work in the probability matching literature [10] as well as recent work in the areas of path integral reinforcement learning [11], we propose an estimated gradient formulated ...
@@ -79,7 +81,7 @@ PDF body method statement (p. 2 (III. THE STOMP ALGORITHM), p. 2 (III. THE STOMP
 
 | Contract | Generic domain prior | PDF body cue | Unresolved detail |
 |---|---|---|---|
-| Horizon | start/goal 또는 task sequence까지의 long-horizon plan; exact horizon은 paper-specific. | Thus the stochastic gradient is now formulated as follows: δˆθG = Z exp  -1 λS(θ)  δθ d(δθ) (10) Even though ... | episode/sequence/action-chunk boundary |
+| Trajectory update | Perturbed trajectories의 cost에 따라 stochastic update를 구성 | PDF p. 2 Eq. (10): exp(−S/λ)로 weighted perturbation을 적분하는 유도 | 최적화 update이며 horizon/Hz 정의가 아님 |
 | Rate / latency | query/event-driven planning 뒤 controller가 partial plan을 실행; numeric rate 확인 필요. | Each trajectory was 5 seconds long, discretized into 100 time-steps. | Hz/fps, inference time and control rate |
 | Memory | graph/tree/roadmap/plan and current state; history size는 method-specific. | not recovered | window and reset |
 | Compute | collision checking, search branching 또는 optimization iterations가 latency를 결정한다. | not recovered | hardware, batch and throughput |
@@ -87,7 +89,7 @@ PDF body method statement (p. 2 (III. THE STOMP ALGORITHM), p. 2 (III. THE STOMP
 ## Training vs Inference
 
 - **p. 5 / V. EXPERIMENTS - extractive body cue:** In the constrained scenario, 93.3% of trials resulted in plans that were both collision-free and satisfied the task constraints.
-- **p. 2 / III. THE STOMP ALGORITHM - extractive body cue:** Thus the stochastic gradient is now formulated as follows: δˆθG = Z exp  -1 λS(θ)  δθ d(δθ) (10) Even though our optimization procedure ...
+- **PDF p. 2, Eq. (10) (DOC-QA2 원문 대조):** Cost가 낮은 trajectory perturbation에 더 큰 exp(−S/λ) weight를 부여하는 stochastic gradient 유도다. 해당 문단은 trajectory execution rollout 없이 수행하는 optimization과 path-integral control의 관계를 설명한다.
 
 - Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 

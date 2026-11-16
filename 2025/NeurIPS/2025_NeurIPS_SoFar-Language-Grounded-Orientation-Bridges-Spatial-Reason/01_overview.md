@@ -17,6 +17,8 @@
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (46 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
+> DOC-QA2 targeted source review: 2026-10-23; PDF pp. 4. 손상 구간·직접 연결된 표 분류만 원문 이미지와 대조했다. 전체 주장 정독·실험 검증·reading status 승격을 뜻하지 않는다. [URL·PDF hash·수정 기록](../../../work/sources/pdf_note_review_followup_2026-10-23.json).
+
 ## Why This Paper Is Here
 
 VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다. 본문은 However, translating a specific language description into a desired orientation is challenging for existing VLMs.를 문제로 두고, We propose PointSO, a generalizable cross-modal 3D Transformer [114, 26, 89, 91] for semantic orientation prediction.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
@@ -49,7 +51,7 @@ VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다
 | Observation/input | X Y Z Pose Estimation Category / Instance Template Needed Only axis, the relationship with instruction is unclear "Blow Wind" "Top" "Back" "Pick up" "Fan" "Front" Semantic Orientation Without any template Training ... | image/video, language instruction, proprioception과 history | p. 2 (Abstract), p. 4 (1 Introduction) |
 | State/latent | Pose, Estimation, Category, Instance, Template, Needed, Only, axis, relationship, instruction, unclear, Blow | language-grounded task state와 action-policy context | p. 2 (Abstract), p. 4 (1 Introduction), p. 4 (1 Introduction) |
 | Output/action | For the 3D point clouds, we follow [26, 136, 89] to first sample Ns seed points using farthest point sampling (FPS) and then group inputs with KNN for point feature embedding with ... | continuous action, pose 또는 action chunk | p. 4 (1 Introduction), p. 4 (1 Introduction), p. 5 (1 Introduction) |
-| Objective/outcome | The optimization is to minimize the negative cosine similarity Lcos(v, k) = 1 - v·k ∥v∥·∥k∥between predicted and the ground truth semantic orientations: min θSO X Xi∈DOrienText300K X ℓi j∈Li Lcos  ... | instruction following, task success, generalization과 latency | p. 4 (1 Introduction), p. 2 (1 Introduction), p. 6 (1 Introduction) |
+| Objective/outcome | PointSO는 예측 semantic orientation과 정답 방향의 1−cosine similarity를 object/language label에 걸쳐 최소화한다. | Orientation supervision objective; task success나 latency 수치가 아님 | PDF p. 4 Eq. (2); DOC-QA2 |
 
 ## Main Claims and Actual Contribution
 

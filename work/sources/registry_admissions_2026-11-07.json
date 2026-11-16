@@ -1,0 +1,495 @@
+[
+  {
+    "admission_key": "lfh",
+    "title": "Learning from Hindsight for VLA Reinforcement Learning",
+    "year": 2026,
+    "venue": "arXiv",
+    "category": "VLA and Generalist Robot Policies",
+    "primary_track": "VLA and generalist robot policies",
+    "page": "https://arxiv.org/abs/2607.09042",
+    "project": "https://iamxjy.github.io/lfh-website/",
+    "aliases": [
+      "LfH",
+      "Learning More from Less: Reinforcement Learning from Hindsight"
+    ],
+    "tags": [
+      "VLA",
+      "hindsight-relabeling",
+      "online-RL",
+      "sample-efficiency"
+    ],
+    "problem": "원 지시 실패에만 보상 0을 주면 실제 수행한 유용한 행동도 VLA 강화학습에 활용하지 못한다.",
+    "method": "VLM으로 실패에서 달성한 행동을 보조 언어 목표로 붙이고 원 과제와 함께 정책을 학습한다.",
+    "interface": "관측·원 지시 → VLA 행동; 수집 후 rollout을 VLM이 해석하여 보조 목표와 학습 신호를 만든다. 배포 제어기와 학습 relabeler를 구분한다.",
+    "evaluation": "v2 abstract는 LIBERO-PRO의 분포 이동 조작과 실제 Franka 학습을 보고한다. 샘플 효율 개선은 해당 비교 조건의 저자 주장이다.",
+    "role": "실패 재사용 자체가 새 기여가 아님을 보여 주는 HINDSIGHT의 가장 가까운 선행. 참인 보조 목표들 사이의 원 과제 전이를 연구하려면 먼저 비교해야 한다.",
+    "lineage": "HER의 사후 목표 재라벨 → 언어 기반 relabeling → OpenVLA/OFT·GRPO 후학습의 개념 연결. 직접 citation edge로 등록하지 않는다",
+    "question": "같은 실패 pool·원 보상·후보 목표·계산량에서 원 목표 객체를 우선하는 선택이 균등 선택보다 원 지시 성공을 높이며, 동일 라벨 모방으로 설명되지 않는가?",
+    "minimal_experiment": "먼저 자연적으로 참인 관련/비관련 목표가 같은 실패에서 발생하는지 확인한다. 이후 고정 pool에서 균등·객체 일치·원 목표만 학습을 대조한다. 현재 주제의 P0/P1/P2 계약은 별도이며 이 노트는 실험 결과가 아니다.",
+    "verification_questions": "v2의 importance correction·label filtering·모방 대조와 우리 selector의 정확한 차이, VLM 감독 비용과 rollout 분모, 원 지시 평가 독립성",
+    "boundary": "arXiv v2(2026-10-05) 제목·저자·abstract 기준. Project는 과거 제목과 Code placeholder를 유지한다. Main-conference 채택/실행 code는 미확인. Dossier의 지정 본문 검토를 이 5개 노트의 전체 정독으로 승격하지 않는다.",
+    "note_format": "abstract_analysis_v1",
+    "evidence": "ABSTRACT_CHECKED",
+    "pdf": "",
+    "identifiers": {
+      "arxiv": "2607.09042"
+    },
+    "source_audit": "2026-11-07: 공식 metadata/abstract·저자 project/README 확인. arXiv v2(2026-10-05) 제목·저자·abstract 기준. Project는 과거 제목과 Code placeholder를 유지한다. Main-conference 채택/실행 code는 미확인. Dossier의 지정 본문 검토를 이 5개 노트의 전체 정독으로 승격하지 않는다. 사용자 reading status UNREAD 유지.",
+    "sources": {
+      "primary": {
+        "url": "https://arxiv.org/abs/2607.09042",
+        "kind": "arxiv",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-07"
+      },
+      "venue_verification": {
+        "url": "https://arxiv.org/abs/2607.09042",
+        "kind": "arxiv",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-07"
+      },
+      "preprint": {
+        "url": "https://arxiv.org/abs/2607.09042",
+        "kind": "arxiv",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-07"
+      },
+      "project": {
+        "url": "https://iamxjy.github.io/lfh-website/",
+        "kind": "author_project",
+        "scope": "project_landing",
+        "verified_on": "2026-11-07"
+      },
+      "code": null,
+      "paper_pdf": null
+    },
+    "publication": {
+      "status": "preprint",
+      "kind": "preprint",
+      "venue": "arXiv",
+      "year": 2026,
+      "venue_year": 2026,
+      "presentation": "unknown"
+    },
+    "artifacts": {
+      "code_status": "project_only",
+      "data_status": "not_identified",
+      "local_pdf_cache": false
+    },
+    "paper_type": "method",
+    "admission_tier": "NEXT",
+    "admission_group": "VLA, cross-embodiment, and long-horizon planning",
+    "curation": {
+      "admission_reason": "실패 재사용 자체가 새 기여가 아님을 보여 주는 HINDSIGHT의 가장 가까운 선행. 참인 보조 목표들 사이의 원 과제 전이를 연구하려면 먼저 비교해야 한다.",
+      "tier_reason": "실패 재사용 자체가 새 기여가 아님을 보여 주는 HINDSIGHT의 가장 가까운 선행. 참인 보조 목표들 사이의 원 과제 전이를 연구하려면 먼저 비교해야 한다.",
+      "rationale_status": "recorded",
+      "rationale_basis": "REG-R11 direct predecessors from HINDSIGHT source ledger",
+      "rationale_reviewed_on": "2026-11-07",
+      "scope_status": "active",
+      "roles": [
+        "method"
+      ],
+      "role_basis": "manual admission review"
+    },
+    "relations": []
+  },
+  {
+    "admission_key": "sprint",
+    "title": "SPRINT: Scalable Policy Pre-Training via Language Instruction Relabeling",
+    "year": 2024,
+    "venue": "ICRA",
+    "category": "Robot Learning and Data",
+    "primary_track": "RL, IL, offline learning, and robot data",
+    "page": "https://doi.org/10.1109/ICRA57147.2024.10610606",
+    "project": "https://clvrai.github.io/sprint/",
+    "aliases": [
+      "SPRINT",
+      "SPRINT: Scalable Semantic Policy Pre-training via Language Instruction Relabeling"
+    ],
+    "tags": [
+      "offline-RL",
+      "language-relabeling",
+      "skill-chaining",
+      "long-horizon"
+    ],
+    "problem": "다양한 언어 조건 기술을 사전학습하려면 사람이 많은 과제 지시를 작성해야 한다.",
+    "method": "LLM을 이용한 지시 재라벨과 서로 다른 궤적의 기술 연결을 offline RL 사전학습에 사용한다.",
+    "interface": "기존 trajectory·언어 지시 → 재라벨/연결된 기술 자료 → 정책 사전학습 → 새 과제 적응. 단일 VLA online RL이라고 가정하지 않는다.",
+    "evaluation": "저자 abstract는 가정용 시뮬레이터와 실제 로봇 주방 조작의 장기 과제 적응을 보고한다. 공개 저장소는 ALFRED-RL simulation 경로를 안내한다.",
+    "role": "언어 재라벨·기술 조합을 최근 VLA RL만의 신규성으로 오인하지 않게 하는 offline 학습 선행이다.",
+    "lineage": "Offline goal-conditioned RL·장기 skill learning → SPRINT → VLA hindsight 재사용 비교. 온라인 정책 효과와 offline pretraining의 추정 대상은 다르다",
+    "question": "새 언어 라벨의 이득은 의미적 다양성 때문인가, skill chaining으로 늘어난 유효 행동·과제 coverage 때문인가?",
+    "minimal_experiment": "동일 원 trajectory와 학습 예산에서 기존 라벨·재라벨만·chaining만·둘 모두를 대조하고 새 장기 과제 성공과 사용 데이터량을 함께 평가한다.",
+    "verification_questions": "cross-trajectory 연결의 유효성, downstream adaptation 예산, 시뮬레이터와 실로봇의 서로 다른 행동 interface, code의 실제 공개 범위",
+    "boundary": "IEEE-deposited Crossref metadata로 ICRA 2024 title/DOI 확인; arXiv abstract·저자 README 검토. 저장소 heading의 Semantic은 alias로만 보존한다.",
+    "note_format": "abstract_analysis_v1",
+    "evidence": "ABSTRACT_CHECKED",
+    "pdf": "",
+    "identifiers": {
+      "doi": "10.1109/icra57147.2024.10610606",
+      "arxiv": "2306.11886"
+    },
+    "source_audit": "2026-11-07: 공식 metadata/abstract·저자 project/README 확인. IEEE-deposited Crossref metadata로 ICRA 2024 title/DOI 확인; arXiv abstract·저자 README 검토. 저장소 heading의 Semantic은 alias로만 보존한다. 사용자 reading status UNREAD 유지.",
+    "sources": {
+      "primary": {
+        "url": "https://doi.org/10.1109/ICRA57147.2024.10610606",
+        "kind": "official_publication",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-07"
+      },
+      "venue_verification": {
+        "url": "https://api.crossref.org/works/10.1109/ICRA57147.2024.10610606",
+        "kind": "official_publication",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-07"
+      },
+      "preprint": {
+        "url": "https://arxiv.org/abs/2306.11886",
+        "kind": "arxiv",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-07"
+      },
+      "project": {
+        "url": "https://clvrai.github.io/sprint/",
+        "kind": "author_project",
+        "scope": "project_landing",
+        "verified_on": "2026-11-07"
+      },
+      "code": {
+        "url": "https://github.com/clvrai/sprint",
+        "kind": "official_code",
+        "scope": "project_landing",
+        "verified_on": "2026-11-07"
+      },
+      "paper_pdf": null
+    },
+    "publication": {
+      "status": "peer_reviewed",
+      "kind": "conference",
+      "venue": "ICRA",
+      "year": 2024,
+      "venue_year": 2024,
+      "presentation": "unknown"
+    },
+    "artifacts": {
+      "code_status": "released",
+      "data_status": "not_identified",
+      "local_pdf_cache": false
+    },
+    "paper_type": "method",
+    "admission_tier": "NEXT",
+    "admission_group": "RL, IL, offline learning, and robot data",
+    "curation": {
+      "admission_reason": "언어 재라벨·기술 조합을 최근 VLA RL만의 신규성으로 오인하지 않게 하는 offline 학습 선행이다.",
+      "tier_reason": "언어 재라벨·기술 조합을 최근 VLA RL만의 신규성으로 오인하지 않게 하는 offline 학습 선행이다.",
+      "rationale_status": "recorded",
+      "rationale_basis": "REG-R11 direct predecessors from HINDSIGHT source ledger",
+      "rationale_reviewed_on": "2026-11-07",
+      "scope_status": "active",
+      "roles": [
+        "method"
+      ],
+      "role_basis": "manual admission review"
+    },
+    "relations": []
+  },
+  {
+    "admission_key": "soar",
+    "title": "Autonomous Improvement of Instruction Following Skills via Foundation Models",
+    "year": 2024,
+    "venue": "CoRL",
+    "category": "Robot Learning and Data",
+    "primary_track": "RL, IL, offline learning, and robot data",
+    "page": "https://proceedings.mlr.press/v270/zhou25b.html",
+    "project": "https://soar-autonomous-improvement.github.io/",
+    "aliases": [
+      "SOAR"
+    ],
+    "tags": [
+      "autonomous-data",
+      "instruction-following",
+      "goal-conditioned-policy",
+      "hindsight-learning"
+    ],
+    "problem": "로봇이 자율 수집한 비최적 경험을 사람의 추가 언어 주석 없이 instruction-following 개선에 활용해야 한다.",
+    "method": "VLM으로 의미 있는 경험의 수집·평가를 돕고 언어 조건 이미지 목표 생성과 goal-reaching 정책을 분리하여 자율 데이터로 학습한다.",
+    "interface": "언어 → image subgoal → goal-conditioned robot action. 학습 데이터 수집/평가와 배포 정책의 역할을 분리한다.",
+    "evaluation": "공식 abstract는 새로운 실세계 환경의 정책 개선과 5개 tabletop 환경에서 수집한 25K trajectory 데이터 공개를 설명한다. Project는 9개 평가 scene을 설명하므로 두 숫자의 분모를 합치지 않는다.",
+    "role": "자율 수집·hindsight 학습의 시스템 선행. 단일 VLA 내부 RL과 분해된 image-goal 정책을 비교할 대조이며 fleet를 cross-embodiment로 오인하지 않게 한다.",
+    "lineage": "Goal-conditioned 학습·image subgoal 생성 → SOAR 자율 개선 → 단일 언어 조건 VLA 후학습과 비교",
+    "question": "같은 자율 경험에서 직접 언어 재라벨 학습과 image-goal 재라벨 학습은 어떤 의미 구분·기본 운동 능력 조건에서 원 지시 전이가 다른가?",
+    "minimal_experiment": "동일 원 경험·성공 판정·학습 예산을 고정하고 언어와 image-goal 감독의 추가 정보 차이를 먼저 감사한 뒤 지시 성공과 goal-reaching 성공을 분리 평가한다.",
+    "verification_questions": "수집 scene과 평가 scene의 분리, 데이터 release의 실제 접근성, 의미 이해와 운동 능력 개선의 기여, 서로 다른 정책 정보량",
+    "boundary": "CoRL 행사 연도 2024, PMLR270 발행 연도 2025를 구분. 공식 proceedings와 저자 project/code 확인; OpenReview forum은 challenge로 본문 접근 실패. Project의 Data Coming Soon과 abstract의 공개 주장을 구분하여 data_status는 미확인으로 둔다.",
+    "note_format": "abstract_analysis_v1",
+    "evidence": "ABSTRACT_CHECKED",
+    "pdf": "",
+    "identifiers": {
+      "arxiv": "2407.20635",
+      "openreview": "8Ar8b00GJC"
+    },
+    "source_audit": "2026-11-07: 공식 metadata/abstract·저자 project/README 확인. CoRL 행사 연도 2024, PMLR270 발행 연도 2025를 구분. 공식 proceedings와 저자 project/code 확인; OpenReview forum은 challenge로 본문 접근 실패. Project의 Data Coming Soon과 abstract의 공개 주장을 구분하여 data_status는 미확인으로 둔다. 사용자 reading status UNREAD 유지.",
+    "sources": {
+      "primary": {
+        "url": "https://proceedings.mlr.press/v270/zhou25b.html",
+        "kind": "official_publication",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-07"
+      },
+      "venue_verification": {
+        "url": "https://proceedings.mlr.press/v270/",
+        "kind": "official_publication",
+        "scope": "venue_index",
+        "verified_on": "2026-11-07"
+      },
+      "preprint": {
+        "url": "https://arxiv.org/abs/2407.20635",
+        "kind": "arxiv",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-07"
+      },
+      "project": {
+        "url": "https://soar-autonomous-improvement.github.io/",
+        "kind": "author_project",
+        "scope": "project_landing",
+        "verified_on": "2026-11-07"
+      },
+      "code": {
+        "url": "https://github.com/soar-autonomous-improvement/code-release",
+        "kind": "official_code",
+        "scope": "project_landing",
+        "verified_on": "2026-11-07"
+      },
+      "paper_pdf": null
+    },
+    "publication": {
+      "status": "peer_reviewed",
+      "kind": "conference",
+      "venue": "CoRL",
+      "year": 2024,
+      "venue_year": 2024,
+      "presentation": "unknown"
+    },
+    "artifacts": {
+      "code_status": "released",
+      "data_status": "not_identified",
+      "local_pdf_cache": false
+    },
+    "paper_type": "system",
+    "admission_tier": "NEXT",
+    "admission_group": "RL, IL, offline learning, and robot data",
+    "curation": {
+      "admission_reason": "자율 수집·hindsight 학습의 시스템 선행. 단일 VLA 내부 RL과 분해된 image-goal 정책을 비교할 대조이며 fleet를 cross-embodiment로 오인하지 않게 한다.",
+      "tier_reason": "자율 수집·hindsight 학습의 시스템 선행. 단일 VLA 내부 RL과 분해된 image-goal 정책을 비교할 대조이며 fleet를 cross-embodiment로 오인하지 않게 한다.",
+      "rationale_status": "recorded",
+      "rationale_basis": "REG-R11 direct predecessors from HINDSIGHT source ledger",
+      "rationale_reviewed_on": "2026-11-07",
+      "scope_status": "active",
+      "roles": [
+        "system"
+      ],
+      "role_basis": "manual admission review"
+    },
+    "relations": []
+  },
+  {
+    "admission_key": "reinflow",
+    "title": "ReinFlow: Fine-tuning Flow Matching Policy with Online Reinforcement Learning",
+    "year": 2025,
+    "venue": "NeurIPS",
+    "category": "Robot Learning and Data",
+    "primary_track": "RL, IL, offline learning, and robot data",
+    "page": "https://proceedings.neurips.cc/paper_files/paper/2025/hash/98d6f928497d9eaad9f320fb2db3040d-Abstract-Conference.html",
+    "project": "https://reinflow.github.io/",
+    "aliases": [
+      "ReinFlow"
+    ],
+    "tags": [
+      "flow-matching",
+      "online-RL",
+      "policy-likelihood",
+      "manipulation",
+      "locomotion"
+    ],
+    "problem": "결정론적 flow 생성 경로를 online policy-gradient 학습과 탐색에 연결할 때 확률 계산과 적은 생성 step의 안정성이 필요하다.",
+    "method": "Flow 경로에 학습 가능한 잡음을 넣어 이산 시간 확률 과정으로 바꾸고 정책 likelihood를 사용해 online RL 후학습한다.",
+    "interface": "관측 → flow velocity와 학습용 noise → 생성된 연속 행동. 정책 생성 과정의 확률과 물리 행동의 주변 밀도를 구분해 읽어야 한다.",
+    "evaluation": "공식 abstract는 locomotion과 state/visual manipulation에서 Rectified Flow·Shortcut 정책 후학습을 보고한다. 최신 저장소의 VLA 지원을 원 논문 실험으로 소급하지 않는다.",
+    "role": "PPO·Flow Matching·DPPO를 로봇 flow-policy online RL로 연결하는 비교 방법. 단순 noise 학습을 새 VLA RL 기여로 주장하기 전에 읽어야 한다.",
+    "lineage": "Flow Matching·policy gradient·Diffusion Policy/DPPO → ReinFlow → 후속 flow VLA RL. 후속 repository 기능은 별도 version이다",
+    "question": "같은 interaction·초기 정책·전체 계산 예산에서 학습 noise의 이득이 생성 step 수와 보상 희소성에 따라 어떻게 달라지는가?",
+    "minimal_experiment": "하나의 공개 task에서 같은 초기 flow 정책과 생성 step 수로 고정/학습 noise를 비교하고 성공률·return·전체 rollout/학습 wall time을 함께 기록한다.",
+    "verification_questions": "생성 경로 likelihood와 action likelihood의 차이, DPPO 비교의 모델/자료/시간 통제, noise 학습과 step 축소 효과, 실제 로봇 평가 여부",
+    "boundary": "NeurIPS2025 공식 proceedings metadata/abstract와 저자 project/README 확인. 본문 전체·공개 구현 실행은 미확인.",
+    "note_format": "abstract_analysis_v1",
+    "evidence": "ABSTRACT_CHECKED",
+    "pdf": "",
+    "identifiers": {
+      "arxiv": "2505.22094",
+      "doi": "10.52202/085713-3547"
+    },
+    "source_audit": "2026-11-07: 공식 metadata/abstract·저자 project/README 확인. NeurIPS2025 공식 proceedings metadata/abstract와 저자 project/README 확인. 본문 전체·공개 구현 실행은 미확인. 사용자 reading status UNREAD 유지.",
+    "sources": {
+      "primary": {
+        "url": "https://proceedings.neurips.cc/paper_files/paper/2025/hash/98d6f928497d9eaad9f320fb2db3040d-Abstract-Conference.html",
+        "kind": "official_publication",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-07"
+      },
+      "venue_verification": {
+        "url": "https://proceedings.neurips.cc/paper_files/paper/2025/hash/98d6f928497d9eaad9f320fb2db3040d-Abstract-Conference.html",
+        "kind": "official_publication",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-07"
+      },
+      "preprint": {
+        "url": "https://arxiv.org/abs/2505.22094",
+        "kind": "arxiv",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-07"
+      },
+      "project": {
+        "url": "https://reinflow.github.io/",
+        "kind": "author_project",
+        "scope": "project_landing",
+        "verified_on": "2026-11-07"
+      },
+      "code": {
+        "url": "https://github.com/ReinFlow/ReinFlow",
+        "kind": "official_code",
+        "scope": "project_landing",
+        "verified_on": "2026-11-07"
+      },
+      "paper_pdf": null
+    },
+    "publication": {
+      "status": "peer_reviewed",
+      "kind": "conference",
+      "venue": "NeurIPS",
+      "year": 2025,
+      "venue_year": 2025,
+      "presentation": "unknown"
+    },
+    "artifacts": {
+      "code_status": "released",
+      "data_status": "not_identified",
+      "local_pdf_cache": false
+    },
+    "paper_type": "method",
+    "admission_tier": "NEXT",
+    "admission_group": "RL, IL, offline learning, and robot data",
+    "curation": {
+      "admission_reason": "PPO·Flow Matching·DPPO를 로봇 flow-policy online RL로 연결하는 비교 방법. 단순 noise 학습을 새 VLA RL 기여로 주장하기 전에 읽어야 한다.",
+      "tier_reason": "PPO·Flow Matching·DPPO를 로봇 flow-policy online RL로 연결하는 비교 방법. 단순 noise 학습을 새 VLA RL 기여로 주장하기 전에 읽어야 한다.",
+      "rationale_status": "recorded",
+      "rationale_basis": "REG-R11 direct predecessors from HINDSIGHT source ledger",
+      "rationale_reviewed_on": "2026-11-07",
+      "scope_status": "active",
+      "roles": [
+        "method"
+      ],
+      "role_basis": "manual admission review"
+    },
+    "relations": []
+  },
+  {
+    "admission_key": "cast",
+    "title": "CAST: Counterfactual Labels Improve Instruction Following in Vision-Language-Action Models",
+    "year": 2025,
+    "venue": "arXiv",
+    "category": "VLA and Generalist Robot Policies",
+    "primary_track": "VLA and generalist robot policies",
+    "page": "https://arxiv.org/abs/2508.13446",
+    "project": "https://cast-vla.github.io/",
+    "aliases": [
+      "CAST",
+      "Counterfactual Augmentation with Synthetic Trajectories"
+    ],
+    "tags": [
+      "VLA",
+      "counterfactual-data",
+      "instruction-following",
+      "navigation",
+      "manipulation"
+    ],
+    "problem": "비슷한 관측에서 행동과 지시가 다양하지 않으면 VLA가 언어를 무시하고 데이터 편향에 의존할 수 있다.",
+    "method": "VLM 기반 counterfactual 라벨과 대응 행동 자료로 기존 robot dataset의 지시·행동 다양성을 늘려 언어 추종을 학습한다.",
+    "interface": "기존 trajectory와 counterfactual instruction/action 자료 → VLA 학습 → navigation 또는 manipulation 행동. 실제 수행된 실패의 hindsight 라벨과 합성 counterfactual을 구분한다.",
+    "evaluation": "v2 abstract는 실내외 3개 navigation 환경과 distractor가 있는 manipulation의 instruction following을 평가한다고 보고한다. 정확한 trial·split·수치는 본문 확인 필요다.",
+    "role": "목표 의미를 바꾸는 학습 자료의 직접 대조. 사실인 실패 라벨 선택과 실행되지 않은 counterfactual augmentation의 차이를 명확히 하는 데 필요하다.",
+    "lineage": "언어 조건 VLA·데이터 증강 → CAST → hindsight label 선택과 의미 grounding의 비교",
+    "question": "같은 원 자료·VLM 호출·합성 행동 수를 맞췄을 때 개선은 지시의 의미적 다양성인가, 행동 coverage나 추가 학습량 때문인가?",
+    "minimal_experiment": "같은 관측별 원 지시·단순 paraphrase·counterfactual 지시/행동을 구분하고 계산량을 맞춰 새 명령 성공과 distractor 오선택을 비교한다.",
+    "verification_questions": "합성 행동의 물리적 유효성, 원 데이터/평가 중복, language와 action 증강 기여 분리, 공개 모델/자료의 논문 version 대응",
+    "boundary": "최초 preprint2025, 최신 v2는2026-06-08. 공식 project/저자 code 확인; 이번 확인으로 main-conference 채택을 확정하지 않는다.",
+    "note_format": "abstract_analysis_v1",
+    "evidence": "ABSTRACT_CHECKED",
+    "pdf": "",
+    "identifiers": {
+      "arxiv": "2508.13446"
+    },
+    "source_audit": "2026-11-07: 공식 metadata/abstract·저자 project/README 확인. 최초 preprint2025, 최신 v2는2026-06-08. 공식 project/저자 code 확인; 이번 확인으로 main-conference 채택을 확정하지 않는다. 사용자 reading status UNREAD 유지.",
+    "sources": {
+      "primary": {
+        "url": "https://arxiv.org/abs/2508.13446",
+        "kind": "arxiv",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-07"
+      },
+      "venue_verification": {
+        "url": "https://arxiv.org/abs/2508.13446",
+        "kind": "arxiv",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-07"
+      },
+      "preprint": {
+        "url": "https://arxiv.org/abs/2508.13446",
+        "kind": "arxiv",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-07"
+      },
+      "project": {
+        "url": "https://cast-vla.github.io/",
+        "kind": "author_project",
+        "scope": "project_landing",
+        "verified_on": "2026-11-07"
+      },
+      "code": {
+        "url": "https://github.com/catglossop/CAST",
+        "kind": "official_code",
+        "scope": "project_landing",
+        "verified_on": "2026-11-07"
+      },
+      "paper_pdf": null
+    },
+    "publication": {
+      "status": "preprint",
+      "kind": "preprint",
+      "venue": "arXiv",
+      "year": 2025,
+      "venue_year": 2025,
+      "presentation": "unknown"
+    },
+    "artifacts": {
+      "code_status": "released",
+      "data_status": "not_identified",
+      "local_pdf_cache": false
+    },
+    "paper_type": "method",
+    "admission_tier": "NEXT",
+    "admission_group": "VLA, cross-embodiment, and long-horizon planning",
+    "curation": {
+      "admission_reason": "목표 의미를 바꾸는 학습 자료의 직접 대조. 사실인 실패 라벨 선택과 실행되지 않은 counterfactual augmentation의 차이를 명확히 하는 데 필요하다.",
+      "tier_reason": "목표 의미를 바꾸는 학습 자료의 직접 대조. 사실인 실패 라벨 선택과 실행되지 않은 counterfactual augmentation의 차이를 명확히 하는 데 필요하다.",
+      "rationale_status": "recorded",
+      "rationale_basis": "REG-R11 direct predecessors from HINDSIGHT source ledger",
+      "rationale_reviewed_on": "2026-11-07",
+      "scope_status": "active",
+      "roles": [
+        "method"
+      ],
+      "role_basis": "manual admission review"
+    },
+    "relations": []
+  }
+]

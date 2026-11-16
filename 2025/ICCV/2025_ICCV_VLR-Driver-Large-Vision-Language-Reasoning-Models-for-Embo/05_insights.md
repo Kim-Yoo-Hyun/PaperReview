@@ -4,6 +4,8 @@
 > Evidence maturity: `FULL_TEXT_CHECKED`.
 > Analysis basis: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/ICCV2025/html/Kong_VLR-Driver_Large_Vision-Language-Reasoning_Models_for_Embodied_Autonomous_Driving_ICCV_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/ICCV2025/papers/Kong_VLR-Driver_Large_Vision-Language-Reasoning_Models_for_Embodied_Autonomous_Driving_ICCV_2025_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
+> DOC-QA2 targeted source review: 2026-10-23; PDF pp. 4, 6. 손상 구간·직접 연결된 표 분류만 원문 이미지와 대조했다. 전체 주장 정독·실험 검증·reading status 승격을 뜻하지 않는다. [URL·PDF hash·수정 기록](../../../work/sources/pdf_note_review_followup_2026-10-23.json).
+
 ## Paper-supported conclusion
 
 > **Evidence boundary:** The following claims are restricted to selected PDF body sentences, captions and section anchors; exact table/equation values remain to be checked at those anchors.
@@ -42,7 +44,7 @@
 ### Reusable lesson in the robotics loop
 
 - **Closed-loop position:** `RGB-D, image set, point cloud, depth와 camera pose → geometry, map, object/relationship state → point map, pose, scene graph, affordance 또는 query result`.
-- 이 논문의 재사용 가능한 지점은 The forward pass is computed as: y = W ′x =  W0 + α r B · A  x, (2) where y is the output and x is input.를 Subsequently, the compressed and cropped image data and the information from the ego's sensors are input into the model.로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 geometry, map, object/relationship state가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 CP, CV, CL, RL, SS, OR, AB, YEV correspond to the Collision with a Pedestrian, Collision with another Vehicle, Collision with Layout, Red Light infractions, Stop Sign infractions, Off-Road infractions, Agent Blocked, ...에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
+- **Researcher interpretation (DOC-QA2):** Input representation(p. 4)의 image/ego-state 정보와 LoRA parameter update(p. 6 Eq. (2))를 분리해 비교해야 한다. LoRA 연산을 sensor interface로 읽거나 해당 식만으로 driving recovery 효과를 추론하지 않는다.
 - The paper-specific mechanism to preserve in a reproduction is: Our method enables VLR model to describe the current driving scenario, construct real-time spatial layout and dynamic changes of the environment, and achieve long-term planning for driving decisions.
 - Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
 

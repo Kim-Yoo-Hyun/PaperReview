@@ -1,0 +1,1626 @@
+{
+  "task_id": "DOC-QA3",
+  "review_date": "2026-10-23",
+  "timezone": "Asia/Seoul",
+  "status": "DONE",
+  "scope": "Five specified formula/metric questions; official public source static reading only",
+  "papers": [
+    {
+      "paper_id": "pr-0106",
+      "short_name": "SAGE-3D",
+      "project": "https://sage-3d.github.io/",
+      "authority_url": "https://sage-3d.github.io/",
+      "paper_html": "https://arxiv.org/html/2510.21307v2#S3.SS3",
+      "paper_anchor": "DOC-QA2 PDF p. 7, §3.3 PS; arXiv v2 §3.3",
+      "finding": "METRIC_DEFINITION_MISMATCH",
+      "paper_expression": "PS = 1 - mean min(abs(delta heading)/pi, 1); prose calls it variance",
+      "code_expression": "PS = 1/(1 + 10*mean norm(diff(v))); v is the ordered list of nonzero XY position differences (norm > 1e-6); fewer than 2 v returns 1",
+      "call_chain": [
+        {
+          "path": "Code/benchmark/environment_evaluation/measures.py",
+          "first_line": 338,
+          "last_line": 381,
+          "role": "PathSmoothness: position difference, filtering, aggregation, no dt normalization",
+          "url": "https://github.com/Galery23/SAGE-3D_Official/blob/69e60c2123aca55ff2ad96d66a80a9bac5a7912d/Code/benchmark/environment_evaluation/measures.py#L338-L381"
+        },
+        {
+          "path": "Code/benchmark/environment_evaluation/measures.py",
+          "first_line": 473,
+          "last_line": 518,
+          "role": "default_measures and nogoal_measures register PathSmoothness",
+          "url": "https://github.com/Galery23/SAGE-3D_Official/blob/69e60c2123aca55ff2ad96d66a80a9bac5a7912d/Code/benchmark/environment_evaluation/measures.py#L473-L518"
+        },
+        {
+          "path": "Code/benchmark/environment_evaluation/run_benchmark.py",
+          "first_line": 1226,
+          "last_line": 1238,
+          "role": "task branch creates and resets measure manager",
+          "url": "https://github.com/Galery23/SAGE-3D_Official/blob/69e60c2123aca55ff2ad96d66a80a9bac5a7912d/Code/benchmark/environment_evaluation/run_benchmark.py#L1226-L1238"
+        },
+        {
+          "path": "Code/benchmark/environment_evaluation/run_benchmark.py",
+          "first_line": 1468,
+          "last_line": 1475,
+          "role": "pre-command manager update",
+          "url": "https://github.com/Galery23/SAGE-3D_Official/blob/69e60c2123aca55ff2ad96d66a80a9bac5a7912d/Code/benchmark/environment_evaluation/run_benchmark.py#L1468-L1475"
+        },
+        {
+          "path": "Code/benchmark/environment_evaluation/run_benchmark.py",
+          "first_line": 1639,
+          "last_line": 1645,
+          "role": "post-command manager update",
+          "url": "https://github.com/Galery23/SAGE-3D_Official/blob/69e60c2123aca55ff2ad96d66a80a9bac5a7912d/Code/benchmark/environment_evaluation/run_benchmark.py#L1639-L1645"
+        },
+        {
+          "path": "Code/benchmark/environment_evaluation/run_benchmark.py",
+          "first_line": 1705,
+          "last_line": 1725,
+          "role": "manager dump saved in episode log",
+          "url": "https://github.com/Galery23/SAGE-3D_Official/blob/69e60c2123aca55ff2ad96d66a80a9bac5a7912d/Code/benchmark/environment_evaluation/run_benchmark.py#L1705-L1725"
+        }
+      ],
+      "interpretation": "동일한 PS 이름으로 heading-change 식과 위치 차분 지표를 합쳐 비교할 수 없다. dt로 정규화하지 않으므로 코드의 velocity/acceleration 명칭을 물리 속도·가속도로 해석하지 않는다. 정지·제자리 회전만 있고 유효 XY 변위가 2개 미만이면 1을 반환한다는 것은 정적 코드 추론이며 rollout 관측이 아니다.",
+      "repository": {
+        "paper_id": "pr-0106",
+        "repo": "Galery23/SAGE-3D_Official",
+        "default_branch": "main",
+        "commit": "69e60c2123aca55ff2ad96d66a80a9bac5a7912d",
+        "commit_date": "2026-07-27T09:23:42Z",
+        "tree_items": 82,
+        "issues_page_count": 18,
+        "url": "https://github.com/Galery23/SAGE-3D_Official"
+      },
+      "code_files": [
+        {
+          "paper_id": "pr-0106",
+          "path": "README.md",
+          "commit": "69e60c2123aca55ff2ad96d66a80a9bac5a7912d",
+          "url": "https://raw.githubusercontent.com/Galery23/SAGE-3D_Official/69e60c2123aca55ff2ad96d66a80a9bac5a7912d/README.md",
+          "sha256": "cb94162a73d6ca3f77f2821ec9ebcf24174372437a2cfeda25efd0e51ee89a61",
+          "bytes": 31805
+        },
+        {
+          "paper_id": "pr-0106",
+          "path": "Code/benchmark/environment_evaluation/measures.py",
+          "commit": "69e60c2123aca55ff2ad96d66a80a9bac5a7912d",
+          "url": "https://raw.githubusercontent.com/Galery23/SAGE-3D_Official/69e60c2123aca55ff2ad96d66a80a9bac5a7912d/Code/benchmark/environment_evaluation/measures.py",
+          "sha256": "254f28f0dc4fd7b16872531c9b0ccbbc00d741037bc93d4cfe1fe5a40b43166d",
+          "bytes": 18539
+        },
+        {
+          "paper_id": "pr-0106",
+          "path": "Code/benchmark/environment_evaluation/run_benchmark.py",
+          "commit": "69e60c2123aca55ff2ad96d66a80a9bac5a7912d",
+          "url": "https://raw.githubusercontent.com/Galery23/SAGE-3D_Official/69e60c2123aca55ff2ad96d66a80a9bac5a7912d/Code/benchmark/environment_evaluation/run_benchmark.py",
+          "sha256": "c2ebd2d8f87e11a7f71dd9cdb6a934ebb1a4fc20c8fd90a2b84314eae72e9f7d",
+          "bytes": 107474
+        },
+        {
+          "paper_id": "pr-0106",
+          "path": "Code/benchmark/environment_evaluation/simple_env.py",
+          "commit": "69e60c2123aca55ff2ad96d66a80a9bac5a7912d",
+          "url": "https://raw.githubusercontent.com/Galery23/SAGE-3D_Official/69e60c2123aca55ff2ad96d66a80a9bac5a7912d/Code/benchmark/environment_evaluation/simple_env.py",
+          "sha256": "51256b6da9631ab67b14139d3dbf376d54443a3f63440cfc237ac6a7c4684328",
+          "bytes": 137260
+        },
+        {
+          "paper_id": "pr-0106",
+          "path": "Code/benchmark/environment_evaluation/episodes_adapter.py",
+          "commit": "69e60c2123aca55ff2ad96d66a80a9bac5a7912d",
+          "url": "https://raw.githubusercontent.com/Galery23/SAGE-3D_Official/69e60c2123aca55ff2ad96d66a80a9bac5a7912d/Code/benchmark/environment_evaluation/episodes_adapter.py",
+          "sha256": "d151fa62551024474c4687943835b4b416aea8d59267d66a637b8d537a686605",
+          "bytes": 6436
+        }
+      ],
+      "paper_run_revision": "NOT_IDENTIFIED; reviewed public revision is not certified as the paper experiment revision",
+      "errata_review": {
+        "endpoint": "https://api.github.com/repos/Galery23/SAGE-3D_Official/issues?state=all&per_page=100",
+        "issue_or_pr_count": 18,
+        "titles_bodies_index_reviewed": true,
+        "comments_threads_exhaustively_reviewed": false,
+        "all_pages_reviewed": true,
+        "author_confirmed_targeted_erratum_identified": false,
+        "boundary": "README and bounded issue/PR index review; absence of a confirmed erratum here does not establish no erratum exists",
+        "snapshot_sha256": "48e97eef78c29ccff261c3c1f1172107a1c8c9f3a327985d99c521937f7018cf",
+        "numbers": [
+          18,
+          17,
+          16,
+          15,
+          14,
+          13,
+          12,
+          11,
+          10,
+          9,
+          8,
+          7,
+          6,
+          5,
+          4,
+          3,
+          2,
+          1
+        ]
+      },
+      "prior_pdf_evidence": {
+        "paper_id": "pr-0106",
+        "title": "Towards Physically Executable 3D Gaussian for Embodied Navigation",
+        "official_page": "https://openreview.net/forum?id=HB6KvsqcAn",
+        "attempts": [
+          {
+            "url": "https://openreview.net/pdf/5cdfb5b83429401e057b422d807ffd76daa429d7.pdf",
+            "error": "HTTPError: HTTP Error 403: Forbidden"
+          },
+          {
+            "url": "https://openreview.net/pdf?id=HB6KvsqcAn",
+            "error": "HTTPError: HTTP Error 403: Forbidden"
+          }
+        ],
+        "status": "downloaded",
+        "url": "https://chatpaper.com/api/v1/articles/download/246616",
+        "bytes": 7972922,
+        "pages": 21,
+        "sha256": "b042715e1be1c1242176ef68561692a1caf4f85a7dbf02cf23087d3b4d3211a8",
+        "prior_review_hash_matches": true,
+        "title_token_overlap": 1.0,
+        "mirror": true,
+        "overview_path": "2026/ICLR/2026_ICLR_Towards-Physically-Executable-3D-Gaussian-for-Embodied-Nav/01_overview.md",
+        "identity_check": "Prior source review PDF SHA256 exact match",
+        "corrected_note_count": 1,
+        "correction_pages": [
+          7
+        ],
+        "visually_inspected_pages": [
+          7
+        ]
+      }
+    },
+    {
+      "paper_id": "pr-0145",
+      "short_name": "cdViews / 3D QA",
+      "project": null,
+      "authority_url": "https://arxiv.org/html/2505.22143v1",
+      "paper_html": "https://arxiv.org/html/2505.22143v1#S4.SS2",
+      "paper_anchor": "DOC-QA2 PDF p. 6, Eq. (7)–(8); arXiv v1 §4.2",
+      "finding": "LOSS_ARGUMENT_AND_SCORE_TRANSFORM_MISMATCH",
+      "paper_expression": "Eq. (8) places prediction outside log and binary label inside log",
+      "code_expression": "p=(cosine_similarity(output1,output2)+1)/2; nn.BCELoss()(p,label.float())",
+      "call_chain": [
+        {
+          "path": "cdviews/train.py",
+          "first_line": 80,
+          "last_line": 100,
+          "role": "train_epoch constructs BCELoss and invokes it on model embeddings and labels",
+          "url": "https://github.com/fereenwong/cdViews/blob/e1df64c5490c75d117f0ece5c334a6d818cf5d83/cdviews/train.py#L80-L100"
+        },
+        {
+          "path": "cdviews/train.py",
+          "first_line": 106,
+          "last_line": 131,
+          "role": "eval_model training loop calls train_epoch",
+          "url": "https://github.com/fereenwong/cdViews/blob/e1df64c5490c75d117f0ece5c334a6d818cf5d83/cdviews/train.py#L106-L131"
+        },
+        {
+          "path": "cdviews/ViewSelector.py",
+          "first_line": 326,
+          "last_line": 336,
+          "role": "BCELoss wrapper maps cosine to [0,1] and passes prediction before target",
+          "url": "https://github.com/fereenwong/cdViews/blob/e1df64c5490c75d117f0ece5c334a6d818cf5d83/cdviews/ViewSelector.py#L326-L336"
+        },
+        {
+          "path": "cdviews/dataset.py",
+          "first_line": 54,
+          "last_line": 63,
+          "role": "positive/negative images produce one/zero labels",
+          "url": "https://github.com/fereenwong/cdViews/blob/e1df64c5490c75d117f0ece5c334a6d818cf5d83/cdviews/dataset.py#L54-L63"
+        }
+      ],
+      "api_reference": "https://docs.pytorch.org/docs/2.14/generated/torch.nn.BCELoss.html",
+      "interpretation": "공개 구현은 표준 BCE의 prediction/target 순서와 cosine의 확률 범위 변환을 사용한다. 이 대조는 역전된 인쇄 식을 구현하지 않는다는 근거이며, 논문 실험의 정확한 PyTorch 버전·학습 수치나 저자 확인 정오표를 확보했다는 뜻이 아니다.",
+      "repository": {
+        "paper_id": "pr-0145",
+        "repo": "fereenwong/cdViews",
+        "default_branch": "main",
+        "commit": "e1df64c5490c75d117f0ece5c334a6d818cf5d83",
+        "commit_date": "2026-03-04T10:36:16Z",
+        "tree_items": 164,
+        "issues_page_count": 7,
+        "url": "https://github.com/fereenwong/cdViews"
+      },
+      "code_files": [
+        {
+          "paper_id": "pr-0145",
+          "path": "README.md",
+          "commit": "e1df64c5490c75d117f0ece5c334a6d818cf5d83",
+          "url": "https://raw.githubusercontent.com/fereenwong/cdViews/e1df64c5490c75d117f0ece5c334a6d818cf5d83/README.md",
+          "sha256": "c54198db19acd0b86b41ebb55c92443c05ea759c5ef5a69532e82019a0017ff4",
+          "bytes": 12017
+        },
+        {
+          "paper_id": "pr-0145",
+          "path": "cdviews/ViewSelector.py",
+          "commit": "e1df64c5490c75d117f0ece5c334a6d818cf5d83",
+          "url": "https://raw.githubusercontent.com/fereenwong/cdViews/e1df64c5490c75d117f0ece5c334a6d818cf5d83/cdviews/ViewSelector.py",
+          "sha256": "6b1447adf9c0f7c7a6ac31a674c1cc66afa1f6b57c09f570ea45b217cc4a9d5b",
+          "bytes": 9440
+        },
+        {
+          "paper_id": "pr-0145",
+          "path": "cdviews/train.py",
+          "commit": "e1df64c5490c75d117f0ece5c334a6d818cf5d83",
+          "url": "https://raw.githubusercontent.com/fereenwong/cdViews/e1df64c5490c75d117f0ece5c334a6d818cf5d83/cdviews/train.py",
+          "sha256": "dc6fa7a9f52dcef81d09e731f7ac9e0be97846dbd1cebc0da13a449bed3d6bb9",
+          "bytes": 6954
+        },
+        {
+          "paper_id": "pr-0145",
+          "path": "cdviews/dataset.py",
+          "commit": "e1df64c5490c75d117f0ece5c334a6d818cf5d83",
+          "url": "https://raw.githubusercontent.com/fereenwong/cdViews/e1df64c5490c75d117f0ece5c334a6d818cf5d83/cdviews/dataset.py",
+          "sha256": "d74e8f7bb35a43a6e785ac74f72cdab61faf11e99d1488c8fd49fb53c0b9beca",
+          "bytes": 2581
+        }
+      ],
+      "paper_run_revision": "NOT_IDENTIFIED; reviewed public revision is not certified as the paper experiment revision",
+      "errata_review": {
+        "endpoint": "https://api.github.com/repos/fereenwong/cdViews/issues?state=all&per_page=100",
+        "issue_or_pr_count": 7,
+        "titles_bodies_index_reviewed": true,
+        "comments_threads_exhaustively_reviewed": false,
+        "all_pages_reviewed": true,
+        "author_confirmed_targeted_erratum_identified": false,
+        "boundary": "README and bounded issue/PR index review; absence of a confirmed erratum here does not establish no erratum exists",
+        "snapshot_sha256": "67589c1383af3aabc66c0d39c7ea52b81e1a757a80d7f8cd30ab3381690893ef",
+        "numbers": [
+          7,
+          6,
+          5,
+          4,
+          3,
+          2,
+          1
+        ]
+      },
+      "prior_pdf_evidence": {
+        "paper_id": "pr-0145",
+        "title": "3D Question Answering via only 2D Vision-Language Models",
+        "official_page": "https://openreview.net/forum?id=IkhJApkJQ3",
+        "attempts": [
+          {
+            "url": "https://openreview.net/pdf/d07d0f4b200749c99e5e05d81d646e8151df94e7.pdf",
+            "error": "HTTPError: HTTP Error 403: Forbidden"
+          },
+          {
+            "url": "https://openreview.net/pdf?id=IkhJApkJQ3",
+            "error": "HTTPError: HTTP Error 403: Forbidden"
+          }
+        ],
+        "status": "downloaded",
+        "url": "https://chatpaper.com/api/v1/articles/download/168051",
+        "bytes": 5239820,
+        "pages": 16,
+        "sha256": "cd741dfe1c8be6fcbdf99a8ceca9c737bed2e12d81f1b22dbac7df446222e5b8",
+        "prior_review_hash_matches": true,
+        "title_token_overlap": 1.0,
+        "mirror": true,
+        "overview_path": "2025/ICML/2025_ICML_3D-Question-Answering-via-only-2D-Vision-Language-Models/01_overview.md",
+        "identity_check": "Prior source review PDF SHA256 exact match",
+        "corrected_note_count": 1,
+        "correction_pages": [
+          6
+        ],
+        "visually_inspected_pages": [
+          6
+        ]
+      }
+    },
+    {
+      "paper_id": "pr-0164",
+      "short_name": "RoboFlow4D",
+      "project": "https://simonlinsx.github.io/RoboFlow4D_Page/",
+      "authority_url": "https://pirlab.github.io/research/roboflow4d/index.html",
+      "paper_html": "https://arxiv.org/html/2605.17522v1#S3.SS5",
+      "paper_anchor": "DOC-QA2 PDF p. 6, Eq. (6); arXiv v1 §3.5 and Appendix C Eq. (7)",
+      "finding": "SAMPLER_IMPLEMENTATION_VARIANT",
+      "paper_expression": "u=(k/(K-1))^gamma; t=floor(start+u*(end-start)); prose says gamma>1 densifies end",
+      "code_expression": "u=linspace(0,1,K); w=0.5*(2u)^gamma_s if u<=0.5 else 1-0.5*(2*(1-u))^gamma_e; round(start+(end-start)*w); forced endpoints; cumulative maximum; uniform fallback if unique count<int(0.7*K)",
+      "call_chain": [
+        {
+          "path": "3DFlowModel/train_flow_model.py",
+          "first_line": 621,
+          "last_line": 623,
+          "role": "gamma_s=1.2, gamma_e=1.6, min_unique_ratio=0.7",
+          "url": "https://github.com/EDEM-AI/RoboFlow4D/blob/31c950750f0074067cd7c8ff5df86b8d6fa6f223/3DFlowModel/train_flow_model.py#L621-L623"
+        },
+        {
+          "path": "3DFlowModel/train_flow_model.py",
+          "first_line": 815,
+          "last_line": 851,
+          "role": "FutureKDataset.resample_on_traj piecewise warp and fallback",
+          "url": "https://github.com/EDEM-AI/RoboFlow4D/blob/31c950750f0074067cd7c8ff5df86b8d6fa6f223/3DFlowModel/train_flow_model.py#L815-L851"
+        },
+        {
+          "path": "3DFlowModel/train_flow_model.py",
+          "first_line": 938,
+          "last_line": 960,
+          "role": "__getitem__ calls sampler and indexes trajectory by key_idxs",
+          "url": "https://github.com/EDEM-AI/RoboFlow4D/blob/31c950750f0074067cd7c8ff5df86b8d6fa6f223/3DFlowModel/train_flow_model.py#L938-L960"
+        },
+        {
+          "path": "3DFlowModel/train_flow_model.py",
+          "first_line": 1285,
+          "last_line": 1296,
+          "role": "main constructs train and validation FutureKDataset",
+          "url": "https://github.com/EDEM-AI/RoboFlow4D/blob/31c950750f0074067cd7c8ff5df86b8d6fa6f223/3DFlowModel/train_flow_model.py#L1285-L1296"
+        },
+        {
+          "path": "action_policy/train/train_policy_dp_ema.py",
+          "first_line": 133,
+          "last_line": 177,
+          "role": "parallel policy target helper uses piecewise sampler; cached-path coverage not fully audited",
+          "url": "https://github.com/EDEM-AI/RoboFlow4D/blob/31c950750f0074067cd7c8ff5df86b8d6fa6f223/action_policy/train/train_policy_dp_ema.py#L133-L177"
+        }
+      ],
+      "interpretation": "현재 공개 training 경로는 원문의 단일 gamma+floor가 아니라 두 끝을 조밀하게 만드는 piecewise warp+round+uniform fallback이다. 단순히 exponent 부호 하나를 고친 것으로 기록하지 않는다. Fallback 뒤에도 중복 제거가 보장되는 것은 아니다. Paper-run commit과 checkpoint 생성 경로는 미확인이다.",
+      "repository": {
+        "paper_id": "pr-0164",
+        "repo": "EDEM-AI/RoboFlow4D",
+        "default_branch": "main",
+        "commit": "31c950750f0074067cd7c8ff5df86b8d6fa6f223",
+        "commit_date": "2026-06-11T18:44:32Z",
+        "tree_items": 89,
+        "issues_page_count": 3,
+        "url": "https://github.com/EDEM-AI/RoboFlow4D"
+      },
+      "code_files": [
+        {
+          "paper_id": "pr-0164",
+          "path": "README.md",
+          "commit": "31c950750f0074067cd7c8ff5df86b8d6fa6f223",
+          "url": "https://raw.githubusercontent.com/EDEM-AI/RoboFlow4D/31c950750f0074067cd7c8ff5df86b8d6fa6f223/README.md",
+          "sha256": "b6da4d88bad4942973ea1e7ca297c7548ecdd464754ba7ec85edc3ea1809afcd",
+          "bytes": 10101
+        },
+        {
+          "paper_id": "pr-0164",
+          "path": "3DFlowModel/train_flow_model.py",
+          "commit": "31c950750f0074067cd7c8ff5df86b8d6fa6f223",
+          "url": "https://raw.githubusercontent.com/EDEM-AI/RoboFlow4D/31c950750f0074067cd7c8ff5df86b8d6fa6f223/3DFlowModel/train_flow_model.py",
+          "sha256": "9edd917de3225a029a76bff10d020d54d43c9233dcce55338844a39b1f57e18e",
+          "bytes": 75734
+        },
+        {
+          "paper_id": "pr-0164",
+          "path": "3DFlowModel/flow_model.py",
+          "commit": "31c950750f0074067cd7c8ff5df86b8d6fa6f223",
+          "url": "https://raw.githubusercontent.com/EDEM-AI/RoboFlow4D/31c950750f0074067cd7c8ff5df86b8d6fa6f223/3DFlowModel/flow_model.py",
+          "sha256": "cefe515a19788dd6007404ab453237aea44673bb2df4aebec424b50d8c4eff8c",
+          "bytes": 22219
+        },
+        {
+          "paper_id": "pr-0164",
+          "path": "process_data/process_libero_hdf5.py",
+          "commit": "31c950750f0074067cd7c8ff5df86b8d6fa6f223",
+          "url": "https://raw.githubusercontent.com/EDEM-AI/RoboFlow4D/31c950750f0074067cd7c8ff5df86b8d6fa6f223/process_data/process_libero_hdf5.py",
+          "sha256": "f07667bd5bdaf694999124de8d111deb376e1cea3d54734333c9a4919f9aa1e2",
+          "bytes": 45720
+        },
+        {
+          "paper_id": "pr-0164",
+          "path": "process_data/process_maniskill_hdf5.py",
+          "commit": "31c950750f0074067cd7c8ff5df86b8d6fa6f223",
+          "url": "https://raw.githubusercontent.com/EDEM-AI/RoboFlow4D/31c950750f0074067cd7c8ff5df86b8d6fa6f223/process_data/process_maniskill_hdf5.py",
+          "sha256": "db9cfd10386dd44f9332b4546b32b89fdd8ec876a235097b9881b86844f70a43",
+          "bytes": 60751
+        },
+        {
+          "paper_id": "pr-0164",
+          "path": "process_data/process_droid.py",
+          "commit": "31c950750f0074067cd7c8ff5df86b8d6fa6f223",
+          "url": "https://raw.githubusercontent.com/EDEM-AI/RoboFlow4D/31c950750f0074067cd7c8ff5df86b8d6fa6f223/process_data/process_droid.py",
+          "sha256": "fa0c494b949346aa3fb2157eec38590abd5f2a683a515ca80c6fa0a101fa9711",
+          "bytes": 66667
+        },
+        {
+          "paper_id": "pr-0164",
+          "path": "process_data/convert_to_hdf5.py",
+          "commit": "31c950750f0074067cd7c8ff5df86b8d6fa6f223",
+          "url": "https://raw.githubusercontent.com/EDEM-AI/RoboFlow4D/31c950750f0074067cd7c8ff5df86b8d6fa6f223/process_data/convert_to_hdf5.py",
+          "sha256": "d0b57259ca37c88c5cc6674db2bf614e34a654dd73ad8baf05ad80ee20a69d4f",
+          "bytes": 19792
+        },
+        {
+          "paper_id": "pr-0164",
+          "path": "action_policy/train/train_policy_dp_ema.py",
+          "commit": "31c950750f0074067cd7c8ff5df86b8d6fa6f223",
+          "url": "https://raw.githubusercontent.com/EDEM-AI/RoboFlow4D/31c950750f0074067cd7c8ff5df86b8d6fa6f223/action_policy/train/train_policy_dp_ema.py",
+          "sha256": "377e4c4db734251e9abd5be4da90dc1e53399cb8960e55475ae94c4b32c0f156",
+          "bytes": 60327
+        }
+      ],
+      "paper_run_revision": "NOT_IDENTIFIED; reviewed public revision is not certified as the paper experiment revision",
+      "errata_review": {
+        "endpoint": "https://api.github.com/repos/EDEM-AI/RoboFlow4D/issues?state=all&per_page=100",
+        "issue_or_pr_count": 3,
+        "titles_bodies_index_reviewed": true,
+        "comments_threads_exhaustively_reviewed": false,
+        "all_pages_reviewed": true,
+        "author_confirmed_targeted_erratum_identified": false,
+        "boundary": "README and bounded issue/PR index review; absence of a confirmed erratum here does not establish no erratum exists",
+        "snapshot_sha256": "45f41577d70224736998878da0890f51026f8f8b7de3a3554a93a20ec4716e8f",
+        "numbers": [
+          7,
+          3,
+          1
+        ]
+      },
+      "prior_pdf_evidence": {
+        "paper_id": "pr-0164",
+        "title": "RoboFlow4D: A Lightweight Flow World Model Toward Real-Time Flow-Guided Robotic Manipulation",
+        "official_page": "https://openreview.net/forum?id=fh6XBnjFlv",
+        "attempts": [],
+        "status": "downloaded",
+        "url": "https://arxiv.org/pdf/2605.17522.pdf",
+        "bytes": 4258772,
+        "pages": 17,
+        "sha256": "ceca39df68c072590e07c72639496ec48ddf3f44b3920deaa76e5802c802f0fb",
+        "prior_review_hash_matches": true,
+        "title_token_overlap": 1.0,
+        "mirror": false,
+        "overview_path": "2026/ICML/2026_ICML_RoboFlow4D-A-Lightweight-Flow-World-Model-Toward-Real-Time/01_overview.md",
+        "identity_check": "Prior source review PDF SHA256 exact match",
+        "corrected_note_count": 1,
+        "correction_pages": [
+          6
+        ],
+        "visually_inspected_pages": [
+          6
+        ]
+      }
+    },
+    {
+      "paper_id": "pr-0448",
+      "short_name": "QuadricFormer",
+      "project": "https://zuosc19.github.io/QuadricFormer/",
+      "authority_url": "https://zuosc19.github.io/QuadricFormer/",
+      "paper_html": "https://arxiv.org/html/2506.10977v1#S3.SS2",
+      "paper_anchor": "DOC-QA2 PDF p. 4, §3.2 Eq. (4); arXiv v1 §3.2",
+      "finding": "SUPERQUADRIC_Z_EXPONENT_MISMATCH",
+      "paper_expression": "z term printed with exponent 2/epsilon_2; XY inner powers 2/epsilon_2 and outer epsilon_2/epsilon_1",
+      "code_expression": "term_x=((x/sx)^2)^(1/u); term_y=((y/sy)^2)^(1/u); term_z=((z/sz)^2)^(1/v); f=(term_x+term_y)^(u/v)+term_z; kernel=exp(-0.5*f)",
+      "call_chain": [
+        {
+          "path": "config/nusc_surroundocc_sq1600.py",
+          "first_line": 185,
+          "last_line": 218,
+          "role": "configured superquadric head",
+          "url": "https://github.com/zuosc19/QuadricFormer/blob/f4b5b03d9d2f73b18b874b5ed9ce1f465bb8f490/config/nusc_surroundocc_sq1600.py#L185-L218"
+        },
+        {
+          "path": "model/head/superquadric_occ_head_prob.py",
+          "first_line": 28,
+          "last_line": 40,
+          "role": "head imports LocalAggregator",
+          "url": "https://github.com/zuosc19/QuadricFormer/blob/f4b5b03d9d2f73b18b874b5ed9ce1f465bb8f490/model/head/superquadric_occ_head_prob.py#L28-L40"
+        },
+        {
+          "path": "model/head/superquadric_occ_head_prob.py",
+          "first_line": 63,
+          "last_line": 72,
+          "role": "uv split preserves u,v order",
+          "url": "https://github.com/zuosc19/QuadricFormer/blob/f4b5b03d9d2f73b18b874b5ed9ce1f465bb8f490/model/head/superquadric_occ_head_prob.py#L63-L72"
+        },
+        {
+          "path": "model/head/superquadric_occ_head_prob.py",
+          "first_line": 115,
+          "last_line": 138,
+          "role": "head forward passes u,v to aggregator",
+          "url": "https://github.com/zuosc19/QuadricFormer/blob/f4b5b03d9d2f73b18b874b5ed9ce1f465bb8f490/model/head/superquadric_occ_head_prob.py#L115-L138"
+        },
+        {
+          "path": "model/head/localagg_prob_sq/local_aggregate_prob_sq/__init__.py",
+          "first_line": 20,
+          "last_line": 50,
+          "role": "autograd wrapper calls _C.local_aggregate",
+          "url": "https://github.com/zuosc19/QuadricFormer/blob/f4b5b03d9d2f73b18b874b5ed9ce1f465bb8f490/model/head/localagg_prob_sq/local_aggregate_prob_sq/__init__.py#L20-L50"
+        },
+        {
+          "path": "model/head/localagg_prob_sq/setup.py",
+          "first_line": 17,
+          "last_line": 28,
+          "role": "extension build lists bridge, forward and backward source",
+          "url": "https://github.com/zuosc19/QuadricFormer/blob/f4b5b03d9d2f73b18b874b5ed9ce1f465bb8f490/model/head/localagg_prob_sq/setup.py#L17-L28"
+        },
+        {
+          "path": "model/head/localagg_prob_sq/ext.cpp",
+          "first_line": 12,
+          "last_line": 18,
+          "role": "pybind name maps to LocalAggregateCUDA",
+          "url": "https://github.com/zuosc19/QuadricFormer/blob/f4b5b03d9d2f73b18b874b5ed9ce1f465bb8f490/model/head/localagg_prob_sq/ext.cpp#L12-L18"
+        },
+        {
+          "path": "model/head/localagg_prob_sq/local_aggregate.cu",
+          "first_line": 35,
+          "last_line": 94,
+          "role": "bridge passes u,v to Aggregator::forward",
+          "url": "https://github.com/zuosc19/QuadricFormer/blob/f4b5b03d9d2f73b18b874b5ed9ce1f465bb8f490/model/head/localagg_prob_sq/local_aggregate.cu#L35-L94"
+        },
+        {
+          "path": "model/head/localagg_prob_sq/src/aggregator_impl.cu",
+          "first_line": 240,
+          "last_line": 265,
+          "role": "Aggregator invokes FORWARD::render with u,v",
+          "url": "https://github.com/zuosc19/QuadricFormer/blob/f4b5b03d9d2f73b18b874b5ed9ce1f465bb8f490/model/head/localagg_prob_sq/src/aggregator_impl.cu#L240-L265"
+        },
+        {
+          "path": "model/head/localagg_prob_sq/src/forward.cu",
+          "first_line": 80,
+          "last_line": 97,
+          "role": "superquadric f and decaying kernel",
+          "url": "https://github.com/zuosc19/QuadricFormer/blob/f4b5b03d9d2f73b18b874b5ed9ce1f465bb8f490/model/head/localagg_prob_sq/src/forward.cu#L80-L97"
+        },
+        {
+          "path": "model/head/localagg_prob_sq/src/backward.cu",
+          "first_line": 89,
+          "last_line": 96,
+          "role": "backward recomputes same scalar expression; gradients not verified",
+          "url": "https://github.com/zuosc19/QuadricFormer/blob/f4b5b03d9d2f73b18b874b5ed9ce1f465bb8f490/model/head/localagg_prob_sq/src/backward.cu#L89-L96"
+        }
+      ],
+      "interpretation": "XY 항과 outer exponent를 대조하면 u=epsilon_2, v=epsilon_1로 대응한다는 것은 연구자의 기호 대응이다. 코드의 z 항은 abs(z/sz)^(2/epsilon_1)이다. Forward/backward의 scalar 식 일치는 gradient 정확성·compiled binary·공개 checkpoint 재현 검증을 뜻하지 않는다.",
+      "repository": {
+        "paper_id": "pr-0448",
+        "repo": "zuosc19/QuadricFormer",
+        "default_branch": "main",
+        "commit": "f4b5b03d9d2f73b18b874b5ed9ce1f465bb8f490",
+        "commit_date": "2025-07-13T13:56:54Z",
+        "tree_items": 101,
+        "issues_page_count": 14,
+        "url": "https://github.com/zuosc19/QuadricFormer"
+      },
+      "code_files": [
+        {
+          "paper_id": "pr-0448",
+          "path": "README.md",
+          "commit": "f4b5b03d9d2f73b18b874b5ed9ce1f465bb8f490",
+          "url": "https://raw.githubusercontent.com/zuosc19/QuadricFormer/f4b5b03d9d2f73b18b874b5ed9ce1f465bb8f490/README.md",
+          "sha256": "123df594ebcdcac38503d3a6695fd3005c7f0b04db498474f556165cd66e2f78",
+          "bytes": 4755
+        },
+        {
+          "paper_id": "pr-0448",
+          "path": "model/head/localagg_prob_sq/src/forward.cu",
+          "commit": "f4b5b03d9d2f73b18b874b5ed9ce1f465bb8f490",
+          "url": "https://raw.githubusercontent.com/zuosc19/QuadricFormer/f4b5b03d9d2f73b18b874b5ed9ce1f465bb8f490/model/head/localagg_prob_sq/src/forward.cu",
+          "sha256": "0b520e7d65666475b9d594ce3bb68329e3f74edbcd5353b142b5a88d024ac29a",
+          "bytes": 4711
+        },
+        {
+          "paper_id": "pr-0448",
+          "path": "model/head/localagg_prob_sq/src/backward.cu",
+          "commit": "f4b5b03d9d2f73b18b874b5ed9ce1f465bb8f490",
+          "url": "https://raw.githubusercontent.com/zuosc19/QuadricFormer/f4b5b03d9d2f73b18b874b5ed9ce1f465bb8f490/model/head/localagg_prob_sq/src/backward.cu",
+          "sha256": "5881c85c6f2c907f6cf7691f26b84d929129338492aa3723b9a7551a6ef412a1",
+          "bytes": 7025
+        },
+        {
+          "paper_id": "pr-0448",
+          "path": "model/head/localagg_prob_sq/src/aggregator_impl.cu",
+          "commit": "f4b5b03d9d2f73b18b874b5ed9ce1f465bb8f490",
+          "url": "https://raw.githubusercontent.com/zuosc19/QuadricFormer/f4b5b03d9d2f73b18b874b5ed9ce1f465bb8f490/model/head/localagg_prob_sq/src/aggregator_impl.cu",
+          "sha256": "6d123c897f481815e71f590297049e898768292bf0f1c6e3931ee35108378d57",
+          "bytes": 9129
+        },
+        {
+          "paper_id": "pr-0448",
+          "path": "model/head/localagg_prob_sq/local_aggregate_prob_sq/__init__.py",
+          "commit": "f4b5b03d9d2f73b18b874b5ed9ce1f465bb8f490",
+          "url": "https://raw.githubusercontent.com/zuosc19/QuadricFormer/f4b5b03d9d2f73b18b874b5ed9ce1f465bb8f490/model/head/localagg_prob_sq/local_aggregate_prob_sq/__init__.py",
+          "sha256": "09c2b98906cf129445db77d9fcbd8f41452a6165309efa5b5dee2a6e0d307a8f",
+          "bytes": 5243
+        },
+        {
+          "paper_id": "pr-0448",
+          "path": "model/head/superquadric_occ_head_prob.py",
+          "commit": "f4b5b03d9d2f73b18b874b5ed9ce1f465bb8f490",
+          "url": "https://raw.githubusercontent.com/zuosc19/QuadricFormer/f4b5b03d9d2f73b18b874b5ed9ce1f465bb8f490/model/head/superquadric_occ_head_prob.py",
+          "sha256": "dab4bcbbafcd1189f75a1c3da0cb2941015195c7e6269bf300d4aaaee065225d",
+          "bytes": 6486
+        },
+        {
+          "paper_id": "pr-0448",
+          "path": "config/nusc_surroundocc_sq1600.py",
+          "commit": "f4b5b03d9d2f73b18b874b5ed9ce1f465bb8f490",
+          "url": "https://raw.githubusercontent.com/zuosc19/QuadricFormer/f4b5b03d9d2f73b18b874b5ed9ce1f465bb8f490/config/nusc_surroundocc_sq1600.py",
+          "sha256": "cb21ba3432e97c83fda335efd885a80b047ba9f5e03f60599a767128eed9fbe2",
+          "bytes": 6975
+        },
+        {
+          "paper_id": "pr-0448",
+          "path": "model/encoder/superquadric_encoder/refine_layer.py",
+          "commit": "f4b5b03d9d2f73b18b874b5ed9ce1f465bb8f490",
+          "url": "https://raw.githubusercontent.com/zuosc19/QuadricFormer/f4b5b03d9d2f73b18b874b5ed9ce1f465bb8f490/model/encoder/superquadric_encoder/refine_layer.py",
+          "sha256": "c60c904933bde514ad2b0bb2e94ca84b04fa2e640582d0f32f98c29a8982d42f",
+          "bytes": 2344
+        },
+        {
+          "paper_id": "pr-0448",
+          "path": "model/head/localagg_prob_sq/local_aggregate.cu",
+          "commit": "f4b5b03d9d2f73b18b874b5ed9ce1f465bb8f490",
+          "url": "https://raw.githubusercontent.com/zuosc19/QuadricFormer/f4b5b03d9d2f73b18b874b5ed9ce1f465bb8f490/model/head/localagg_prob_sq/local_aggregate.cu",
+          "sha256": "6301f5def9b38a2674c972fa0a7c743a73719e1833b94eb3d51dc97383d282d7",
+          "bytes": 5965
+        },
+        {
+          "paper_id": "pr-0448",
+          "path": "model/head/localagg_prob_sq/ext.cpp",
+          "commit": "f4b5b03d9d2f73b18b874b5ed9ce1f465bb8f490",
+          "url": "https://raw.githubusercontent.com/zuosc19/QuadricFormer/f4b5b03d9d2f73b18b874b5ed9ce1f465bb8f490/model/head/localagg_prob_sq/ext.cpp",
+          "sha256": "e6ac9968fa58758115ad87a00c9e37a666df96e485ceebda477117524aee3fea",
+          "bytes": 515
+        },
+        {
+          "paper_id": "pr-0448",
+          "path": "model/head/localagg_prob_sq/setup.py",
+          "commit": "f4b5b03d9d2f73b18b874b5ed9ce1f465bb8f490",
+          "url": "https://raw.githubusercontent.com/zuosc19/QuadricFormer/f4b5b03d9d2f73b18b874b5ed9ce1f465bb8f490/model/head/localagg_prob_sq/setup.py",
+          "sha256": "cff4bc61672bdcb1862ed4b8bd0b3a3e4071f71cead8e463bdb0018f2cc9f594",
+          "bytes": 1401
+        }
+      ],
+      "paper_run_revision": "NOT_IDENTIFIED; reviewed public revision is not certified as the paper experiment revision",
+      "errata_review": {
+        "endpoint": "https://api.github.com/repos/zuosc19/QuadricFormer/issues?state=all&per_page=100",
+        "issue_or_pr_count": 14,
+        "titles_bodies_index_reviewed": true,
+        "comments_threads_exhaustively_reviewed": false,
+        "all_pages_reviewed": true,
+        "author_confirmed_targeted_erratum_identified": false,
+        "boundary": "README and bounded issue/PR index review; absence of a confirmed erratum here does not establish no erratum exists",
+        "snapshot_sha256": "59ca3b21a7d93b7d2f52c748015359925dd3f6bc9a111d2f465721fdc687e6a6",
+        "numbers": [
+          14,
+          13,
+          12,
+          11,
+          10,
+          9,
+          8,
+          7,
+          6,
+          5,
+          4,
+          3,
+          2,
+          1
+        ]
+      },
+      "prior_pdf_evidence": {
+        "paper_id": "pr-0448",
+        "title": "QuadricFormer: Scene as Superquadrics for 3D Semantic Occupancy Prediction",
+        "official_page": "https://openreview.net/forum?id=eZNdkwJYbN",
+        "attempts": [],
+        "status": "downloaded",
+        "url": "https://arxiv.org/pdf/2506.10977",
+        "bytes": 8516313,
+        "pages": 14,
+        "sha256": "b117241e6c133ff72415b765080e411d1e28725f8073f031e4184ff3c6ec01d5",
+        "prior_review_hash_matches": true,
+        "title_token_overlap": 1.0,
+        "mirror": false,
+        "overview_path": "2025/NeurIPS/2025_NeurIPS_QuadricFormer-Scene-as-Superquadrics-for-3D-Semantic-Occup/01_overview.md",
+        "identity_check": "Prior source review PDF SHA256 exact match",
+        "corrected_note_count": 1,
+        "correction_pages": [
+          4
+        ],
+        "visually_inspected_pages": [
+          4
+        ]
+      }
+    },
+    {
+      "paper_id": "pr-0946",
+      "short_name": "LIO-SAM",
+      "project": "https://github.com/TixiaoShan/LIO-SAM",
+      "authority_url": "https://github.com/TixiaoShan/LIO-SAM",
+      "paper_html": "https://arxiv.org/abs/2007.00258",
+      "paper_anchor": "DOC-QA2 PDF p. 4, §III-C scan-matching displayed objective",
+      "finding": "WEIGHTED_LINEARIZED_LEAST_SQUARES_CONFIRMED",
+      "paper_expression": "Displayed objective adds edge and plane feature distances without explicit squares",
+      "code_expression": "corner and plane residuals and Jacobian coefficients multiplied by s; A^T A delta = A^T b, b=-weighted residual; degeneracy projection; repeated scan matching",
+      "call_chain": [
+        {
+          "path": "CMakeLists.txt",
+          "first_line": 96,
+          "last_line": 99,
+          "role": "mapOptmization.cpp executable target",
+          "url": "https://github.com/TixiaoShan/LIO-SAM/blob/0be1fbe6275fb8366d5b800af4fc8c76a885c869/CMakeLists.txt#L96-L99"
+        },
+        {
+          "path": "src/mapOptmization.cpp",
+          "first_line": 255,
+          "last_line": 265,
+          "role": "callback invokes scan2MapOptimization",
+          "url": "https://github.com/TixiaoShan/LIO-SAM/blob/0be1fbe6275fb8366d5b800af4fc8c76a885c869/src/mapOptmization.cpp#L255-L265"
+        },
+        {
+          "path": "src/mapOptmization.cpp",
+          "first_line": 1037,
+          "last_line": 1063,
+          "role": "corner residual and coefficients weighted by s; threshold s>0.1",
+          "url": "https://github.com/TixiaoShan/LIO-SAM/blob/0be1fbe6275fb8366d5b800af4fc8c76a885c869/src/mapOptmization.cpp#L1037-L1063"
+        },
+        {
+          "path": "src/mapOptmization.cpp",
+          "first_line": 1117,
+          "last_line": 1134,
+          "role": "signed plane residual and coefficients weighted by s; threshold s>0.1",
+          "url": "https://github.com/TixiaoShan/LIO-SAM/blob/0be1fbe6275fb8366d5b800af4fc8c76a885c869/src/mapOptmization.cpp#L1117-L1134"
+        },
+        {
+          "path": "src/mapOptmization.cpp",
+          "first_line": 1182,
+          "last_line": 1255,
+          "role": "weighted Jacobian and residual form normal equations; QR solve and degeneracy projection",
+          "url": "https://github.com/TixiaoShan/LIO-SAM/blob/0be1fbe6275fb8366d5b800af4fc8c76a885c869/src/mapOptmization.cpp#L1182-L1255"
+        },
+        {
+          "path": "src/mapOptmization.cpp",
+          "first_line": 1282,
+          "last_line": 1310,
+          "role": "up to 30 scan2MapOptimization iterations call corner, surf, combine, LMOptimization",
+          "url": "https://github.com/TixiaoShan/LIO-SAM/blob/0be1fbe6275fb8366d5b800af4fc8c76a885c869/src/mapOptmization.cpp#L1282-L1310"
+        }
+      ],
+      "interpretation": "각 선형화 단계의 가중 least-squares 구성이다. 양쪽에 s가 곱해져 unweighted residual 기준 squared weight가 된다. 반복마다 바뀌는 대응·weight를 생략한 전역 고정 objective로 일반화하지 않는다. 함수명 LMOptimization만으로 damping이 있는 LM 구현이라고 판단하지 않는다. 2023 ROS1 master와 2020 paper-run 버전의 동일성은 미확인이다.",
+      "repository": {
+        "paper_id": "pr-0946",
+        "repo": "TixiaoShan/LIO-SAM",
+        "default_branch": "master",
+        "commit": "0be1fbe6275fb8366d5b800af4fc8c76a885c869",
+        "commit_date": "2023-04-17T18:58:27Z",
+        "tree_items": 56,
+        "issues_page_count": 100,
+        "url": "https://github.com/TixiaoShan/LIO-SAM"
+      },
+      "code_files": [
+        {
+          "paper_id": "pr-0946",
+          "path": "README.md",
+          "commit": "0be1fbe6275fb8366d5b800af4fc8c76a885c869",
+          "url": "https://raw.githubusercontent.com/TixiaoShan/LIO-SAM/0be1fbe6275fb8366d5b800af4fc8c76a885c869/README.md",
+          "sha256": "0526d61870f3be2c58cd029a51803159f150356bc08cdcf82dbe6739bfc03793",
+          "bytes": 17366
+        },
+        {
+          "paper_id": "pr-0946",
+          "path": "src/mapOptmization.cpp",
+          "commit": "0be1fbe6275fb8366d5b800af4fc8c76a885c869",
+          "url": "https://raw.githubusercontent.com/TixiaoShan/LIO-SAM/0be1fbe6275fb8366d5b800af4fc8c76a885c869/src/mapOptmization.cpp",
+          "sha256": "6ec52cfcea0cf5d45bfe61915299edc667cf2507473ab064f6a5176b4dcd3641",
+          "bytes": 74655
+        },
+        {
+          "paper_id": "pr-0946",
+          "path": "CMakeLists.txt",
+          "commit": "0be1fbe6275fb8366d5b800af4fc8c76a885c869",
+          "url": "https://raw.githubusercontent.com/TixiaoShan/LIO-SAM/0be1fbe6275fb8366d5b800af4fc8c76a885c869/CMakeLists.txt",
+          "sha256": "343d7eb28382332c707fbfa25292c06e3d0f28dee1510cdf8c4a2753b846a404",
+          "bytes": 2605
+        }
+      ],
+      "paper_run_revision": "NOT_IDENTIFIED; reviewed public revision is not certified as the paper experiment revision",
+      "errata_review": {
+        "endpoint": "https://api.github.com/repos/TixiaoShan/LIO-SAM/issues?state=all&per_page=100",
+        "issue_or_pr_count": 100,
+        "titles_bodies_index_reviewed": true,
+        "comments_threads_exhaustively_reviewed": false,
+        "all_pages_reviewed": false,
+        "author_confirmed_targeted_erratum_identified": false,
+        "boundary": "README and bounded issue/PR index review; absence of a confirmed erratum here does not establish no erratum exists",
+        "snapshot_sha256": "10c055e023ae7ea4cbfe5ffb189991d7651f9c7862eabaeec24214ec884405f4",
+        "numbers": [
+          581,
+          580,
+          579,
+          578,
+          577,
+          576,
+          575,
+          574,
+          573,
+          572,
+          571,
+          570,
+          569,
+          568,
+          567,
+          566,
+          565,
+          564,
+          563,
+          562,
+          561,
+          560,
+          559,
+          558,
+          557,
+          556,
+          555,
+          554,
+          553,
+          552,
+          551,
+          550,
+          549,
+          548,
+          547,
+          546,
+          545,
+          544,
+          543,
+          542,
+          541,
+          540,
+          539,
+          538,
+          537,
+          536,
+          535,
+          534,
+          533,
+          532,
+          531,
+          530,
+          529,
+          528,
+          527,
+          526,
+          525,
+          524,
+          523,
+          522,
+          521,
+          520,
+          519,
+          518,
+          517,
+          516,
+          515,
+          514,
+          513,
+          512,
+          511,
+          510,
+          509,
+          508,
+          507,
+          506,
+          505,
+          504,
+          503,
+          502,
+          501,
+          500,
+          499,
+          498,
+          497,
+          496,
+          495,
+          494,
+          493,
+          492,
+          491,
+          490,
+          489,
+          488,
+          487,
+          486,
+          485,
+          484,
+          483,
+          482
+        ]
+      },
+      "prior_pdf_evidence": {
+        "paper_id": "pr-0946",
+        "title": "LIO-SAM: Tightly-coupled Lidar Inertial Odometry via Smoothing and Mapping",
+        "official_page": "https://arxiv.org/abs/2007.00258",
+        "attempts": [],
+        "status": "downloaded",
+        "url": "https://arxiv.org/pdf/2007.00258",
+        "bytes": 4368703,
+        "pages": 8,
+        "sha256": "8ad11438fc0849de88b1604932f8bfd2732aee640aaf5fb41974b34f555c86f6",
+        "prior_review_hash_matches": true,
+        "title_token_overlap": 1.0,
+        "mirror": false,
+        "overview_path": "2020/IROS/2020_IROS_LIO-SAM-Tightly-coupled-Lidar-Inertial-Odometry-via-Smooth/01_overview.md",
+        "identity_check": "Prior source review PDF SHA256 exact match",
+        "corrected_note_count": 1,
+        "correction_pages": [
+          4
+        ],
+        "visually_inspected_pages": [
+          4
+        ]
+      }
+    }
+  ],
+  "note_edits": [
+    {
+      "path": "2026/ICLR/2026_ICLR_Towards-Physically-Executable-3D-Gaussian-for-Embodied-Nav/03_method.md",
+      "before_sha256": "d31b1295f0f20fa5057a01034dfce93c09ef21aacf261bda9baf16b1827b1388",
+      "after_sha256": "cc9e0fac0db28c5459b5244581222f98224fec81dce6541588bff0b75a8ca358"
+    },
+    {
+      "path": "2026/ICLR/2026_ICLR_Towards-Physically-Executable-3D-Gaussian-for-Embodied-Nav/01_overview.md",
+      "before_sha256": "306eaf171fd74824534064a59fe3ccfc77e6d826d85e281e7ec3c21534126d11",
+      "after_sha256": "fdd67274ba2d4f847d5421960dd006fece121b4b1b61733c763b2a09b00741f7"
+    },
+    {
+      "path": "2026/ICLR/2026_ICLR_Towards-Physically-Executable-3D-Gaussian-for-Embodied-Nav/04_evaluation.md",
+      "before_sha256": "4837378e78bf708749c64c4cd5529ebc58796e56aa5d74e3d5c6b141f3ec973d",
+      "after_sha256": "9def37716a411d47e9914e81a3709a383c066b5aaed02f9b61c8edfd772e390e"
+    },
+    {
+      "path": "2025/ICML/2025_ICML_3D-Question-Answering-via-only-2D-Vision-Language-Models/03_method.md",
+      "before_sha256": "4f0e53b756157398812716f0b990013681737eaa7bb99ce2c693034b8b6deaac",
+      "after_sha256": "7e399f593e16927f9d7240c4ac9a9f3dca133cd1583b189485bcacbbac843c1d"
+    },
+    {
+      "path": "2025/ICML/2025_ICML_3D-Question-Answering-via-only-2D-Vision-Language-Models/01_overview.md",
+      "before_sha256": "91e51b3d97e299482440b7a5de311e8a303b37cdb02412fa5dded92f65ea40fd",
+      "after_sha256": "9c66a3c3261174f3c261fe6353d8d77d9d8e47f693d1f3971a2f45e7b0e2addd"
+    },
+    {
+      "path": "2026/ICML/2026_ICML_RoboFlow4D-A-Lightweight-Flow-World-Model-Toward-Real-Time/03_method.md",
+      "before_sha256": "5b18d710025ef749fb2c32f444444d68f4fff959ce2216e9b1142a8620da33a0",
+      "after_sha256": "bffe6ee382edab7de80e6d81a717bfd8aa76a1eb0b6266382dca796b46f1246c"
+    },
+    {
+      "path": "2026/ICML/2026_ICML_RoboFlow4D-A-Lightweight-Flow-World-Model-Toward-Real-Time/01_overview.md",
+      "before_sha256": "b5297de2082c0885d8b4805bcd3978fad4b13447ee3407dd331c203a0e6de9f2",
+      "after_sha256": "63237a7e1ac560bd8df394ae50cc4e018e27df603df41e43e5ebc931b44f3a17"
+    },
+    {
+      "path": "2025/NeurIPS/2025_NeurIPS_QuadricFormer-Scene-as-Superquadrics-for-3D-Semantic-Occup/03_method.md",
+      "before_sha256": "1b6196f8c0df543dbab39963c7aee5beb2b50b58871ed6638bd5f37b9e27ac6a",
+      "after_sha256": "582a8b64b2d28316186d9a82602d69a9a0caf800ba57804e2d2581cf419ac6f1"
+    },
+    {
+      "path": "2025/NeurIPS/2025_NeurIPS_QuadricFormer-Scene-as-Superquadrics-for-3D-Semantic-Occup/01_overview.md",
+      "before_sha256": "2aed711d87990617482e997bf195f53611f2765c7b76517e832ce54545be2802",
+      "after_sha256": "5f1b63e51aa50455f3e03d6718e9febe3dffe2f89ac64b237d6e7a906d585aed"
+    },
+    {
+      "path": "2025/NeurIPS/2025_NeurIPS_QuadricFormer-Scene-as-Superquadrics-for-3D-Semantic-Occup/04_evaluation.md",
+      "before_sha256": "9f530a077761ec70a3192833c96c0a40ed52f987c199d2183e4a48d1b51f50fe",
+      "after_sha256": "23a1ed0def05c228bf78611921a4a61bf1793e5eaf8085135a7ef797a0662eaf"
+    },
+    {
+      "path": "2020/IROS/2020_IROS_LIO-SAM-Tightly-coupled-Lidar-Inertial-Odometry-via-Smooth/03_method.md",
+      "before_sha256": "2228a5da52279f2edcbdee7077bdb30ad16b71205c8b08cc087a9bcccfbc85dd",
+      "after_sha256": "4b95b4e1fcacc31a9ab6db424e8db5d22eb7ebd73d681190e8cf5df3dd6482f9"
+    },
+    {
+      "path": "2020/IROS/2020_IROS_LIO-SAM-Tightly-coupled-Lidar-Inertial-Odometry-via-Smooth/01_overview.md",
+      "before_sha256": "f5e0e8cbb9df9fa9e08176cb2418adcc62ea1cc8664b652bada3930021b209b7",
+      "after_sha256": "c9652a4ce0e1ced9e6468be2b3a3568ff939b2a2ae690ae1bd8fcd3eca3e2fa2"
+    }
+  ],
+  "metadata_changes": [
+    {
+      "paper_id": "pr-0106",
+      "before": {
+        "project": "not identified from OpenReview",
+        "sources": {
+          "primary": {
+            "url": "https://openreview.net/forum?id=HB6KvsqcAn",
+            "kind": "openreview",
+            "scope": "paper_specific",
+            "verified_on": "2026-07-02"
+          },
+          "preprint": null,
+          "paper_pdf": {
+            "url": "https://openreview.net/pdf/5cdfb5b83429401e057b422d807ffd76daa429d7.pdf",
+            "kind": "openreview"
+          },
+          "project": null,
+          "code": null
+        },
+        "artifacts": {
+          "code_status": "not_identified",
+          "data_status": "not_identified",
+          "local_pdf_cache": false
+        },
+        "reproducibility": {
+          "profile_version": "1.0",
+          "status": "metadata_audited",
+          "code": {
+            "status": "not_identified",
+            "source": null,
+            "evidence": "not_identified"
+          },
+          "data": {
+            "status": "not_identified",
+            "source": null,
+            "evidence": "existing manifest artifact status preserved"
+          },
+          "checkpoint": {
+            "status": "not_recorded",
+            "evidence": "no explicit checkpoint availability cue"
+          },
+          "configuration": {
+            "status": "reported",
+            "evidence": "note_cue_or_not_recorded"
+          },
+          "environment": {
+            "status": "reported",
+            "evidence": "04_evaluation.md section cue"
+          },
+          "run_conditions": {
+            "status": "reported",
+            "evidence": "04_evaluation.md trial/statistics cue"
+          },
+          "reviewed_on": "2026-09-04",
+          "source_note": "2026/ICLR/2026_ICLR_Towards-Physically-Executable-3D-Gaussian-for-Embodied-Nav/04_evaluation.md",
+          "basis": "manifest artifact links plus full-text evaluation/method note cues; availability is not a claim of reproducible execution unless an explicit source or experiment check exists."
+        }
+      },
+      "after": {
+        "project": "https://sage-3d.github.io/",
+        "sources": {
+          "primary": {
+            "url": "https://openreview.net/forum?id=HB6KvsqcAn",
+            "kind": "openreview",
+            "scope": "paper_specific",
+            "verified_on": "2026-07-02"
+          },
+          "preprint": null,
+          "paper_pdf": {
+            "url": "https://openreview.net/pdf/5cdfb5b83429401e057b422d807ffd76daa429d7.pdf",
+            "kind": "openreview"
+          },
+          "project": {
+            "url": "https://sage-3d.github.io/",
+            "kind": "project",
+            "verified_on": "2026-10-23"
+          },
+          "code": {
+            "url": "https://github.com/Galery23/SAGE-3D_Official",
+            "kind": "code",
+            "verified_on": "2026-10-23"
+          }
+        },
+        "artifacts": {
+          "code_status": "released",
+          "data_status": "not_identified",
+          "local_pdf_cache": false
+        },
+        "reproducibility": {
+          "profile_version": "1.0",
+          "status": "metadata_audited",
+          "code": {
+            "status": "released",
+            "source": "https://github.com/Galery23/SAGE-3D_Official",
+            "evidence": "Official author-linked repository; selected source statically reviewed 2026-10-23 at 69e60c2123aca55ff2ad96d66a80a9bac5a7912d; no execution or paper-run equivalence established"
+          },
+          "data": {
+            "status": "not_identified",
+            "source": null,
+            "evidence": "existing manifest artifact status preserved"
+          },
+          "checkpoint": {
+            "status": "not_recorded",
+            "evidence": "no explicit checkpoint availability cue"
+          },
+          "configuration": {
+            "status": "reported",
+            "evidence": "note_cue_or_not_recorded"
+          },
+          "environment": {
+            "status": "reported",
+            "evidence": "04_evaluation.md section cue"
+          },
+          "run_conditions": {
+            "status": "reported",
+            "evidence": "04_evaluation.md trial/statistics cue"
+          },
+          "reviewed_on": "2026-09-04",
+          "source_note": "2026/ICLR/2026_ICLR_Towards-Physically-Executable-3D-Gaussian-for-Embodied-Nav/04_evaluation.md",
+          "basis": "manifest artifact links plus full-text evaluation/method note cues; availability is not a claim of reproducible execution unless an explicit source or experiment check exists."
+        }
+      }
+    },
+    {
+      "paper_id": "pr-0145",
+      "before": {
+        "project": "not identified from OpenReview",
+        "sources": {
+          "primary": {
+            "url": "https://openreview.net/forum?id=IkhJApkJQ3",
+            "kind": "openreview",
+            "scope": "paper_specific",
+            "verified_on": "2026-07-02"
+          },
+          "preprint": null,
+          "paper_pdf": {
+            "url": "https://openreview.net/pdf/d07d0f4b200749c99e5e05d81d646e8151df94e7.pdf",
+            "kind": "openreview"
+          },
+          "project": null,
+          "code": null
+        },
+        "artifacts": {
+          "code_status": "not_identified",
+          "data_status": "not_identified",
+          "local_pdf_cache": false
+        },
+        "reproducibility": {
+          "profile_version": "1.0",
+          "status": "metadata_audited",
+          "code": {
+            "status": "not_identified",
+            "source": null,
+            "evidence": "not_identified"
+          },
+          "data": {
+            "status": "not_identified",
+            "source": null,
+            "evidence": "existing manifest artifact status preserved"
+          },
+          "checkpoint": {
+            "status": "not_recorded",
+            "evidence": "no explicit checkpoint availability cue"
+          },
+          "configuration": {
+            "status": "reported",
+            "evidence": "note_cue_or_not_recorded"
+          },
+          "environment": {
+            "status": "reported",
+            "evidence": "04_evaluation.md section cue"
+          },
+          "run_conditions": {
+            "status": "reported",
+            "evidence": "04_evaluation.md trial/statistics cue"
+          },
+          "reviewed_on": "2026-09-04",
+          "source_note": "2025/ICML/2025_ICML_3D-Question-Answering-via-only-2D-Vision-Language-Models/04_evaluation.md",
+          "basis": "manifest artifact links plus full-text evaluation/method note cues; availability is not a claim of reproducible execution unless an explicit source or experiment check exists."
+        }
+      },
+      "after": {
+        "project": "https://github.com/fereenwong/cdViews",
+        "sources": {
+          "primary": {
+            "url": "https://openreview.net/forum?id=IkhJApkJQ3",
+            "kind": "openreview",
+            "scope": "paper_specific",
+            "verified_on": "2026-07-02"
+          },
+          "preprint": null,
+          "paper_pdf": {
+            "url": "https://openreview.net/pdf/d07d0f4b200749c99e5e05d81d646e8151df94e7.pdf",
+            "kind": "openreview"
+          },
+          "project": null,
+          "code": {
+            "url": "https://github.com/fereenwong/cdViews",
+            "kind": "code",
+            "verified_on": "2026-10-23"
+          }
+        },
+        "artifacts": {
+          "code_status": "released",
+          "data_status": "not_identified",
+          "local_pdf_cache": false
+        },
+        "reproducibility": {
+          "profile_version": "1.0",
+          "status": "metadata_audited",
+          "code": {
+            "status": "released",
+            "source": "https://github.com/fereenwong/cdViews",
+            "evidence": "Official author-linked repository; selected source statically reviewed 2026-10-23 at e1df64c5490c75d117f0ece5c334a6d818cf5d83; no execution or paper-run equivalence established"
+          },
+          "data": {
+            "status": "not_identified",
+            "source": null,
+            "evidence": "existing manifest artifact status preserved"
+          },
+          "checkpoint": {
+            "status": "not_recorded",
+            "evidence": "no explicit checkpoint availability cue"
+          },
+          "configuration": {
+            "status": "reported",
+            "evidence": "note_cue_or_not_recorded"
+          },
+          "environment": {
+            "status": "reported",
+            "evidence": "04_evaluation.md section cue"
+          },
+          "run_conditions": {
+            "status": "reported",
+            "evidence": "04_evaluation.md trial/statistics cue"
+          },
+          "reviewed_on": "2026-09-04",
+          "source_note": "2025/ICML/2025_ICML_3D-Question-Answering-via-only-2D-Vision-Language-Models/04_evaluation.md",
+          "basis": "manifest artifact links plus full-text evaluation/method note cues; availability is not a claim of reproducible execution unless an explicit source or experiment check exists."
+        }
+      }
+    },
+    {
+      "paper_id": "pr-0164",
+      "before": {
+        "project": "not identified from OpenReview",
+        "sources": {
+          "primary": {
+            "url": "https://openreview.net/forum?id=fh6XBnjFlv",
+            "kind": "openreview",
+            "scope": "paper_specific",
+            "verified_on": "2026-07-02"
+          },
+          "preprint": null,
+          "paper_pdf": {
+            "url": "https://openreview.net/pdf/17509091f9a7574439da683639d4af0b20b10d5e.pdf",
+            "kind": "openreview"
+          },
+          "project": null,
+          "code": null
+        },
+        "artifacts": {
+          "code_status": "not_identified",
+          "data_status": "not_identified",
+          "local_pdf_cache": false
+        },
+        "reproducibility": {
+          "profile_version": "1.0",
+          "status": "metadata_audited",
+          "code": {
+            "status": "not_identified",
+            "source": null,
+            "evidence": "not_identified"
+          },
+          "data": {
+            "status": "not_identified",
+            "source": null,
+            "evidence": "existing manifest artifact status preserved"
+          },
+          "checkpoint": {
+            "status": "not_recorded",
+            "evidence": "no explicit checkpoint availability cue"
+          },
+          "configuration": {
+            "status": "reported",
+            "evidence": "note_cue_or_not_recorded"
+          },
+          "environment": {
+            "status": "reported",
+            "evidence": "04_evaluation.md section cue"
+          },
+          "run_conditions": {
+            "status": "reported",
+            "evidence": "04_evaluation.md trial/statistics cue"
+          },
+          "reviewed_on": "2026-09-04",
+          "source_note": "2026/ICML/2026_ICML_RoboFlow4D-A-Lightweight-Flow-World-Model-Toward-Real-Time/04_evaluation.md",
+          "basis": "manifest artifact links plus full-text evaluation/method note cues; availability is not a claim of reproducible execution unless an explicit source or experiment check exists."
+        }
+      },
+      "after": {
+        "project": "https://simonlinsx.github.io/RoboFlow4D_Page/",
+        "sources": {
+          "primary": {
+            "url": "https://openreview.net/forum?id=fh6XBnjFlv",
+            "kind": "openreview",
+            "scope": "paper_specific",
+            "verified_on": "2026-07-02"
+          },
+          "preprint": null,
+          "paper_pdf": {
+            "url": "https://openreview.net/pdf/17509091f9a7574439da683639d4af0b20b10d5e.pdf",
+            "kind": "openreview"
+          },
+          "project": {
+            "url": "https://simonlinsx.github.io/RoboFlow4D_Page/",
+            "kind": "project",
+            "verified_on": "2026-10-23"
+          },
+          "code": {
+            "url": "https://github.com/EDEM-AI/RoboFlow4D",
+            "kind": "code",
+            "verified_on": "2026-10-23"
+          }
+        },
+        "artifacts": {
+          "code_status": "released",
+          "data_status": "not_identified",
+          "local_pdf_cache": false
+        },
+        "reproducibility": {
+          "profile_version": "1.0",
+          "status": "metadata_audited",
+          "code": {
+            "status": "released",
+            "source": "https://github.com/EDEM-AI/RoboFlow4D",
+            "evidence": "Official author-linked repository; selected source statically reviewed 2026-10-23 at 31c950750f0074067cd7c8ff5df86b8d6fa6f223; no execution or paper-run equivalence established"
+          },
+          "data": {
+            "status": "not_identified",
+            "source": null,
+            "evidence": "existing manifest artifact status preserved"
+          },
+          "checkpoint": {
+            "status": "not_recorded",
+            "evidence": "no explicit checkpoint availability cue"
+          },
+          "configuration": {
+            "status": "reported",
+            "evidence": "note_cue_or_not_recorded"
+          },
+          "environment": {
+            "status": "reported",
+            "evidence": "04_evaluation.md section cue"
+          },
+          "run_conditions": {
+            "status": "reported",
+            "evidence": "04_evaluation.md trial/statistics cue"
+          },
+          "reviewed_on": "2026-09-04",
+          "source_note": "2026/ICML/2026_ICML_RoboFlow4D-A-Lightweight-Flow-World-Model-Toward-Real-Time/04_evaluation.md",
+          "basis": "manifest artifact links plus full-text evaluation/method note cues; availability is not a claim of reproducible execution unless an explicit source or experiment check exists."
+        }
+      }
+    },
+    {
+      "paper_id": "pr-0448",
+      "before": {
+        "project": "not identified",
+        "sources": {
+          "primary": {
+            "url": "https://openreview.net/forum?id=eZNdkwJYbN",
+            "kind": "openreview",
+            "scope": "paper_specific",
+            "verified_on": "2026-07-02"
+          },
+          "preprint": null,
+          "paper_pdf": {
+            "url": "https://openreview.net/pdf/cc6e0a2d054469a238a6da05b30dce8f439f11f3.pdf",
+            "kind": "openreview"
+          },
+          "project": null,
+          "code": null
+        },
+        "artifacts": {
+          "code_status": "not_identified",
+          "data_status": "not_identified",
+          "local_pdf_cache": false
+        },
+        "reproducibility": {
+          "profile_version": "1.0",
+          "status": "metadata_audited",
+          "code": {
+            "status": "not_identified",
+            "source": null,
+            "evidence": "not_identified"
+          },
+          "data": {
+            "status": "not_identified",
+            "source": null,
+            "evidence": "existing manifest artifact status preserved"
+          },
+          "checkpoint": {
+            "status": "not_recorded",
+            "evidence": "no explicit checkpoint availability cue"
+          },
+          "configuration": {
+            "status": "reported",
+            "evidence": "note_cue_or_not_recorded"
+          },
+          "environment": {
+            "status": "reported",
+            "evidence": "04_evaluation.md section cue"
+          },
+          "run_conditions": {
+            "status": "reported",
+            "evidence": "04_evaluation.md trial/statistics cue"
+          },
+          "reviewed_on": "2026-09-04",
+          "source_note": "2025/NeurIPS/2025_NeurIPS_QuadricFormer-Scene-as-Superquadrics-for-3D-Semantic-Occup/04_evaluation.md",
+          "basis": "manifest artifact links plus full-text evaluation/method note cues; availability is not a claim of reproducible execution unless an explicit source or experiment check exists."
+        }
+      },
+      "after": {
+        "project": "https://zuosc19.github.io/QuadricFormer/",
+        "sources": {
+          "primary": {
+            "url": "https://openreview.net/forum?id=eZNdkwJYbN",
+            "kind": "openreview",
+            "scope": "paper_specific",
+            "verified_on": "2026-07-02"
+          },
+          "preprint": null,
+          "paper_pdf": {
+            "url": "https://openreview.net/pdf/cc6e0a2d054469a238a6da05b30dce8f439f11f3.pdf",
+            "kind": "openreview"
+          },
+          "project": {
+            "url": "https://zuosc19.github.io/QuadricFormer/",
+            "kind": "project",
+            "verified_on": "2026-10-23"
+          },
+          "code": {
+            "url": "https://github.com/zuosc19/QuadricFormer",
+            "kind": "code",
+            "verified_on": "2026-10-23"
+          }
+        },
+        "artifacts": {
+          "code_status": "released",
+          "data_status": "not_identified",
+          "local_pdf_cache": false
+        },
+        "reproducibility": {
+          "profile_version": "1.0",
+          "status": "metadata_audited",
+          "code": {
+            "status": "released",
+            "source": "https://github.com/zuosc19/QuadricFormer",
+            "evidence": "Official author-linked repository; selected source statically reviewed 2026-10-23 at f4b5b03d9d2f73b18b874b5ed9ce1f465bb8f490; no execution or paper-run equivalence established"
+          },
+          "data": {
+            "status": "not_identified",
+            "source": null,
+            "evidence": "existing manifest artifact status preserved"
+          },
+          "checkpoint": {
+            "status": "not_recorded",
+            "evidence": "no explicit checkpoint availability cue"
+          },
+          "configuration": {
+            "status": "reported",
+            "evidence": "note_cue_or_not_recorded"
+          },
+          "environment": {
+            "status": "reported",
+            "evidence": "04_evaluation.md section cue"
+          },
+          "run_conditions": {
+            "status": "reported",
+            "evidence": "04_evaluation.md trial/statistics cue"
+          },
+          "reviewed_on": "2026-09-04",
+          "source_note": "2025/NeurIPS/2025_NeurIPS_QuadricFormer-Scene-as-Superquadrics-for-3D-Semantic-Occup/04_evaluation.md",
+          "basis": "manifest artifact links plus full-text evaluation/method note cues; availability is not a claim of reproducible execution unless an explicit source or experiment check exists."
+        }
+      }
+    }
+  ],
+  "canonical_hashes_before": {
+    "work/sources/papers.json": "af79883968087b121d0259268212ed42b494d484c0557ab14c739c7d545fe43f",
+    "work/sources/registry_meta.json": "2ee709cc95fa7930b8ca06081cb1aeb8fef4193caa677f32d4a1e64783f58066",
+    "research/READING_TIERS.csv": "8b2ac89fff0d6d56950695d5bfb67daab8fbc51647454fa077beea970bb23f29",
+    "research/READING_STATUS.csv": "276c5531063e93f381de18b45fbf82dfa16703444f39658dfd4bfb10bbc17878",
+    "research/READING_STATUS_HISTORY.csv": "c91b6727a03529ba790447eb5106f5b04cc4364b0c90b3eed1afecf9b700e001"
+  },
+  "activities": {
+    "paper_code_executed": false,
+    "dependencies_installed": false,
+    "experiments_run": false,
+    "pdfs_downloaded_this_task": 0,
+    "model_or_dataset_payloads_downloaded": false,
+    "reading_status_promoted": false,
+    "research_candidate_verdict_changed": false
+  },
+  "validation": {
+    "initial_audit_with_temporary_sources": {
+      "errors": [
+        "Markdown link target missing: work/tmp/doc_qa3_3f7b8s12/pr-0106/files/README.md:54 -> ./src/Introduction.png",
+        "Markdown link target missing: work/tmp/doc_qa3_3f7b8s12/pr-0106/files/README.md:84 -> ./src/SAGE-3D.png",
+        "Markdown link target missing: work/tmp/doc_qa3_3f7b8s12/pr-0106/files/README.md:88 -> ./src/SAGE-Bench.png",
+        "Markdown link target missing: work/tmp/doc_qa3_3f7b8s12/pr-0106/files/README.md:171 -> Data/isaac_sim_requirements.txt",
+        "Markdown link target missing: work/tmp/doc_qa3_3f7b8s12/pr-0106/files/README.md:172 -> Data/Isaac_sim_requirements_README.md",
+        "Markdown link target missing: work/tmp/doc_qa3_3f7b8s12/pr-0145/files/README.md:4 -> TODO",
+        "Markdown link target missing: work/tmp/doc_qa3_3f7b8s12/pr-0145/files/README.md:21 -> ./images/framework.png",
+        "Markdown H1 missing: work/tmp/doc_qa3_3f7b8s12/pr-0164/files/README.md",
+        "Markdown link target missing: work/tmp/doc_qa3_3f7b8s12/pr-0448/files/README.md:12 -> ./assets/teaser.png",
+        "Markdown link target missing: work/tmp/doc_qa3_3f7b8s12/pr-0448/files/README.md:14 -> ./assets/repre.png",
+        "Markdown link target missing: work/tmp/doc_qa3_3f7b8s12/pr-0448/files/README.md:19 -> ./assets/framework.png",
+        "Markdown link target missing: work/tmp/doc_qa3_3f7b8s12/pr-0448/files/README.md:24 -> docs/installation.md",
+        "Markdown link target missing: work/tmp/doc_qa3_3f7b8s12/pr-0448/files/README.md:80 -> docs/installation.md",
+        "Markdown code fence unclosed: work/tmp/doc_qa3_3f7b8s12/pr-0448/files/README.md",
+        "Markdown link target missing: work/tmp/doc_qa3_3f7b8s12/pr-0946/files/README.md:237 -> ./config/doc/paper.pdf"
+      ],
+      "resolution": "Only copied external README link/fence/H1 checks; remove task-only source cache before final repository audit"
+    },
+    "source_files_sha256_checked": 31,
+    "source_anchors_within_file_bounds": true,
+    "compile": "PASS",
+    "tier_generator": "PASS; 47/275/473/242",
+    "priority_reconcile": "dry-run and apply: 0 papers, 0 headers; reading status/source evidence unchanged",
+    "registry_views": "dry-run and apply: 1037 papers/index rows, 526 combined resources, 49 relations",
+    "repository_audit": {
+      "papers": 1037,
+      "categories": 23,
+      "tier_counts": {
+        "CORE": 47,
+        "NEXT": 275,
+        "REFERENCE": 473,
+        "ARCHIVE": 242
+      },
+      "intensive": 322,
+      "inactive_reading_history": 47,
+      "standard_note_files": 5185,
+      "catalog_entries": {
+        "benchmark": 51,
+        "metric": 29
+      },
+      "combined_resources": 526,
+      "registry_index_rows": 1037,
+      "markdown_files_checked": 5333,
+      "markdown_links_checked": 10113,
+      "comparison_matrix_rows": 106,
+      "completed_matrix_rows": 5,
+      "errors": [],
+      "warnings": []
+    },
+    "standard_note_control_character_scan": {
+      "notes": 5185,
+      "C0_C1_findings": 0
+    },
+    "reading_tier_active_history_hashes_preserved": true,
+    "manifest_only_four_records_changed": [
+      "pr-0106",
+      "pr-0145",
+      "pr-0164",
+      "pr-0448"
+    ],
+    "other_manifest_records_preserved": 1033,
+    "dirty_worktree_preservation": {
+      "preexisting_files": 343,
+      "intended_changed_files": [
+        "2020/IROS/2020_IROS_LIO-SAM-Tightly-coupled-Lidar-Inertial-Odometry-via-Smooth/03_method.md",
+        "2025/ICML/2025_ICML_3D-Question-Answering-via-only-2D-Vision-Language-Models/03_method.md",
+        "2025/NeurIPS/2025_NeurIPS_QuadricFormer-Scene-as-Superquadrics-for-3D-Semantic-Occup/04_evaluation.md",
+        "2026/ICLR/2026_ICLR_Towards-Physically-Executable-3D-Gaussian-for-Embodied-Nav/03_method.md",
+        "2026/ICML/2026_ICML_RoboFlow4D-A-Lightweight-Flow-World-Model-Toward-Real-Time/03_method.md",
+        "PAPER.md",
+        "README.md",
+        "TODO.md",
+        "research/REGISTRY_INDEX.csv",
+        "research/REGISTRY_STATS.md",
+        "work/sources/papers.json",
+        "work/sources/registry_meta.json",
+        "work/sources/resources.json",
+        "work/update/README.md",
+        "work/update/UPDATES_2026-10-23.md",
+        "work/update/PDF_NOTE_REVIEW_FOLLOWUP_2026-10-23.md"
+      ],
+      "unexpected_changes": []
+    },
+    "note_after_hashes_verified": 12,
+    "git_diff_check": "PASS"
+  },
+  "cleanup": {
+    "status": "DONE",
+    "source_files_removed": 31,
+    "source_bytes_removed": 842992,
+    "pdfs_downloaded_this_task": 0,
+    "third_party_code_retained_in_registry": false,
+    "remaining_task_files_removed": 11,
+    "task_temporary_directory": "work/tmp/doc_qa3_3f7b8s12",
+    "task_temporary_directory_exists": false
+  },
+  "canonical_hashes_after": {
+    "work/sources/papers.json": "9aaf36031bf776d554dd10f8f2f927d60ddd7b44ff02267181325275bcb74f06",
+    "work/sources/registry_meta.json": "1fbb093bf785ca218ead1804f95fdac7fa5d88ac5ed82b019f1766511b1eb56f",
+    "research/READING_TIERS.csv": "8b2ac89fff0d6d56950695d5bfb67daab8fbc51647454fa077beea970bb23f29",
+    "research/READING_STATUS.csv": "276c5531063e93f381de18b45fbf82dfa16703444f39658dfd4bfb10bbc17878",
+    "research/READING_STATUS_HISTORY.csv": "c91b6727a03529ba790447eb5106f5b04cc4364b0c90b3eed1afecf9b700e001"
+  }
+}

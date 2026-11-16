@@ -4,6 +4,18 @@
 > Evidence maturity: `FULL_TEXT_CHECKED`.
 > Analysis basis: full-text PDF body checked on 2026-09-03 (21 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=HB6KvsqcAn; public full-text mirror used for retrieval (canonical paper source retained): https://chatpaper.com/api/v1/articles/download/246616. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
+> DOC-QA2 targeted source review: 2026-10-23; PDF pp. 7. 손상 구간·직접 연결된 표 분류만 원문 이미지와 대조했다. 전체 주장 정독·실험 검증·reading status 승격을 뜻하지 않는다. [URL·PDF hash·수정 기록](../../../work/sources/pdf_note_review_followup_2026-10-23.json).
+
+## DOC-QA3 — PS의 원문·구현 계약
+
+**원문 근거:** PDF p. 7 §3.3의 식은 `1 − mean min(abs(Δθ)/π, 1)`이다. 본문에서 부르는 variance와 식도 구분한다.
+
+**공식 코드 근거:** `PathSmoothness`는 XY 위치 차분 중 norm > 1e-6인 벡터만 남기고, 그 연속 차이 norm의 평균 a에 대해 `1/(1+10a)`를 반환한다. 유효 변위가 2개 미만이면 1이다. heading이나 π clipping, dt 나눗셈을 사용하지 않는다. 따라서 코드의 velocity/acceleration 변수는 시간 정규화된 물리량으로 읽지 않는다.
+
+`default_measures`/`nogoal_measures` → benchmark의 manager 생성 → command 전후 update → episode log의 dump까지 연결했다. **연구자 해석:** 샘플링·이동 간격·좌표 단위가 다른 실행의 PS를 동일한 metric으로 합칠 수 없다. 정지/제자리 회전 조건의 높은 값은 코드에서 도출되는 경계이지 실제 정책 실패를 측정한 결과가 아니다.
+
+대조 근거: [원문](https://arxiv.org/html/2510.21307v2#S3.SS3) · [공식 구현 69e60c2123ac](https://github.com/Galery23/SAGE-3D_Official/blob/69e60c2123aca55ff2ad96d66a80a9bac5a7912d/Code/benchmark/environment_evaluation/measures.py#L338-L381) · [전체 호출 경로·파일 hash](../../../work/sources/paper_code_formula_review_2026-10-23.json). 검토일 2026-10-23. 지정 구간을 정적으로 읽었으며 코드 실행·의존성 설치는 하지 않았다. 논문 실험과 이 commit의 동일성 및 저자 확인 정오표는 미확인이다. 사용자 reading status는 유지한다.
+
 ## Method in One Sentence
 
 PDF body method statement (p. 15 (A IMPLEMENTATION DETAILS), p. 15 (A IMPLEMENTATION DETAILS)): The training data did not include any VLN-CE R2R or RxR samples.
@@ -70,7 +82,7 @@ PDF body method statement (p. 15 (A IMPLEMENTATION DETAILS), p. 15 (A IMPLEMENTA
 | Contract | Generic domain prior | PDF body cue | Unresolved detail |
 |---|---|---|---|
 | Horizon | map-level start-goal plan과 local controller horizon을 계층적으로 분리한다. | The results show that 3DGS scene data achieves a perframe rendering time of 6.2 ms and an average memory usage of 220 ... | episode/sequence/action-chunk boundary |
-| Rate / latency | mapping/localization, global planner, local planner와 base controller rate를 구분한다. | PS is computed from the variance of consecutive heading changes: PS = 1 - 1 T -1 T X t=2 min /∆θt/ ... | Hz/fps, inference time and control rate |
+| Path smoothness metric | PS = 1 − meanₜ min(abs(Δθₜ)/π,1), t=2,…,T. | PDF p. 7 §3.3의 heading-change metric; 본문의 variance 표현과 달리 식은 clipped absolute-change 평균 | 원문 식이며 공개 구현과 다름; 위 DOC-QA3 참조. Hz/latency 근거가 아님 |
 | Memory | map/scene graph, pose history와 current local goal. | The results show that 3DGS scene data achieves a perframe rendering time of 6.2 ms and an average memory usage of 220 ... | window and reset |
 | Compute | map update, collision checking, path search와 replanning frequency가 결정한다. | The results show that 3DGS scene data achieves a perframe rendering time of 6.2 ms and an average memory usage of 220 ... | hardware, batch and throughput |
 

@@ -415,7 +415,7 @@ def enrich_record(
         {
             "venue": canonical,
             "year": item.get("year"),
-            "venue_year": venue_year(raw_venue) or item.get("year"),
+            "venue_year": venue_year(raw_venue) or publication.get("venue_year") or item.get("year"),
             "kind": publication.get("kind") or kind,
             "status": publication.get("status") or publication_status(kind, canonical),
             "presentation": publication.get("presentation") or presentation_from_venue(raw_venue),

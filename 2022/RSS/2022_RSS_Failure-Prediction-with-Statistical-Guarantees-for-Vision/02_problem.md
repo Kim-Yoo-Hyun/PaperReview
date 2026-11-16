@@ -4,6 +4,8 @@
 > Evidence maturity: `FULL_TEXT_CHECKED`.
 > Analysis basis: full-text PDF body checked on 2026-09-03 (13 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2202.05894; PDF retrieval source: https://arxiv.org/pdf/2202.05894. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
+> DOC-QA2 targeted source review: 2026-10-23; PDF pp. 3. 손상 구간·직접 연결된 표 분류만 원문 이미지와 대조했다. 전체 주장 정독·실험 검증·reading status 승격을 뜻하지 않는다. [URL·PDF hash·수정 기록](../../../work/sources/pdf_note_review_followup_2026-10-23.json).
+
 ## Problem in One Sentence
 
 PDF body framing (p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 2 (III. PROBLEM FORMULATION), p. 2 (I. INTRODUCTION), p. 3 (III. PROBLEM FORMULATION)): Given access to a black-box control policy (e.g., one with neural network components), our goal is to train a failure predictor for this policy.
@@ -53,7 +55,7 @@ PDF body contribution framing (p. 1 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p
 
 - **p. 2 / I. INTRODUCTION - extractive body cue:** box policy for training purposes, we present a reduction of the failure prediction problem (which involves non-i.i.d. data in the form of sensor observations) to ...
 - **p. 2 / I. INTRODUCTION - extractive body cue:** In addition, we develop novel classconditional bounds that allow us to trade-off the relative rates of false negative vs. false positive errors.
-- **p. 3 / III. PROBLEM FORMULATION - extractive body cue:** Below we present the two optimization problems corresponding to misclassification error and classconditional misclassification error: inf DF E E∼DE E f∼DF  C(rf(E, π))  ...
+- **PDF p. 3, §III Eqs. (3)–(4) (DOC-QA2 원문 대조):** 고정 black-box policy에서 failure-predictor distribution D_F를 선택하여 environment distribution D_E와 predictor에 대한 misclassification cost 또는 class-conditional cost expectation을 최소화한다. Training/test environments는 같은 D_E의 i.i.d. sampling 가정이며 arbitrary shift 보장이 아니다.
 - **p. 3 / III. PROBLEM FORMULATION - extractive body cue:** To evaluate the performance of the failure predictor, we introduce the error of applying the predictor f in an environment E where a policy π ...
 
 ## Assumptions and Failure Boundary

@@ -1,0 +1,324 @@
+{
+  "schema_version": 1,
+  "task_id": "GAP-SET-N1",
+  "design_revision": 2,
+  "latest_review_task": "PRE-GPU-3/SET",
+  "latest_review": "../../../update/THREE_CANDIDATES_NONEXPERIMENTAL_2026-11-01.md#set",
+  "updated": "2026-11-01",
+  "evidence_level": "CURATION-HYPOTHESIS",
+  "provenance": "ASSISTANT_AUTHORED_NONEXPERIMENTAL_DESIGN; no policy/model/parser/simulator runs",
+  "executable": false,
+  "automatic_execution_authorized": false,
+  "source_semantic_cases": "SEMANTIC_CASES.json",
+  "unchanged_p0": "RESUME_PLAN.json",
+  "research_question": "For familiar-category object-set instructions with ALL or EXACTLY-k goals, are behavior differences explained by automatically selecting a valid subset, reference resolution, or temporal decomposition rather than quantifier reasoning alone?",
+  "claim_scope": {
+    "initial": "Controlled instruction/goal-family variation with a frozen VLA, known-category assets; no training-disjoint OOD claim.",
+    "future": "Attribute conjunction and compositional generalization require their own competence checks and audited training-support/held-out construction.",
+    "not_claimed": [
+      "Novel counting/set benchmark by construction",
+      "New symbolic planning method",
+      "Verified natural failure or benefit",
+      "Model-wide understanding from one dev",
+      "Oracle as mathematical performance upper bound"
+    ]
+  },
+  "native_bridge": {
+    "p0": "Existing single pear placement dev remains unchanged.",
+    "first_question": "Known category (e.g. pear) × ALL/EXACTLY-two × 2/3 candidate instances; visible plate, initially empty.",
+    "not_instantiated": true,
+    "objects": "Physical meshes, duplicate instances, unique referring expressions, visibility and reachability still need native inspection.",
+    "initial_case_roles": {
+      "Q1": "ALL with n=2, unique target set",
+      "Q2": "EXACTLY 2 with n=2, same valid family as Q1",
+      "Q3": "ALL with n=3, more required changes than Q1",
+      "Q4": "EXACTLY 2 with n=3, three valid subsets"
+    },
+    "extensions": {
+      "Q5": "Conjunction/scope and grasp-geometry confound",
+      "Q6": "Distractor robustness with visibility/contact changes",
+      "Q7": "Final count vs newly placed count; initially one inside",
+      "Q8": "Empty-set/no-action boundary; final-state and no-motion metrics separate"
+    }
+  },
+  "semantics": {
+    "inventory": "U is the complete finite set of movable task objects, excluding robot, tray and fixtures.",
+    "eligible": "E={o in U: predicate(o)}; evaluator-only truth",
+    "ALL": "F={E}",
+    "EXACTLY": "F={S subset E: |S|=k}",
+    "semantic_goal_success": "Abstract final member set in F; native joint success additionally requires the physical membership contract.",
+    "physical_joint_success": "Let G_t be geometric tray occupants and S_t be stable released placements. Require G_t = S_t in F throughout the frozen terminal window; ambiguous occupancy is not silent success. A held non-target inside cannot disappear merely because it is excluded from S_t.",
+    "exactly_errors": {
+      "insufficient": "max(0,k-|S_T intersect E|)",
+      "excess": "max(0,|S_T intersect E|-k)",
+      "contamination": "|S_T minus E|",
+      "warning": "Do not mark an unchosen eligible object missing when exactly-k allows another valid subset."
+    },
+    "all_errors": {
+      "missing": "|E minus S_T|",
+      "contamination": "|S_T minus E|"
+    },
+    "family_edit_distance": "min_{A in F}|S_T symmetric_difference A|; descriptive abstract set distance, not action/time cost.",
+    "infeasible": "k>|E|, contradictory, unresolved quantifier, or incomplete inventory excluded from current task specification; parser failures within valid cases still count.",
+    "path_constraint": "No nonmovement/contact prohibition implied by terminal no-other-objects. Report collateral disturbance separately."
+  },
+  "information_contract": {
+    "all_policy_arms": [
+      "same calibrated RGB streams and current proprioception",
+      "same original task semantics, via specified prompt condition",
+      "same frozen VLA checkpoint/normalizer/controller and initial physical/RNG snapshot"
+    ],
+    "automatic_upper": [
+      "same initial RGB and original English instruction",
+      "public vocabulary",
+      "own predicted object inventory"
+    ],
+    "never_automatic": [
+      "evaluator IDs r1/r2/etc",
+      "ground-truth segmentation, poses, eligible set or valid subsets",
+      "native success/termination predicate",
+      "case ID/answer lookup",
+      "post-hoc successful trajectory or easiest-oracle subset"
+    ],
+    "inventory_fields": [
+      "local_predicted_track_key (internal only)",
+      "category/attributes",
+      "front-camera normalized bbox or centroid predicted from RGB for deterministic ordering",
+      "predicted_in_receptacle (true/false/unknown from RGB; not a native predicate)",
+      "current natural-language referring_expression",
+      "confidence/ambiguity flag"
+    ],
+    "semantic_output": [
+      "filter_predicates",
+      "quantifier",
+      "k or null",
+      "predicted eligible tracks",
+      "selected tracks and initial order",
+      "predicted initial membership and required add/remove operations for nonempty-tray extensions",
+      "status"
+    ],
+    "selection_rule": "From predicted E only: ALL selects all; EXACTLY-k uses first k in fixed front-camera left-to-right (then top-to-bottom) order. Ties/unresolvable descriptions produce explicit ambiguity, not oracle repair. Geometry/IK/success-based optimization is a separate baseline.",
+    "rendering": "List and atomic arms share selected set, descriptors and terminal non-target condition. Never pass internal tracks directly to the VLA. Natural descriptions must identify the objects; no implicit overlay/crop/camera changes.",
+    "identity_limit": "Text such as leftmost can change referent after motion. Stable binding/re-identification and low-level reference competence remain unverified; failures here are not pure counting failures.",
+    "nonempty_tray_extension": "For a selected final set S_hat and predicted initial inside set I_hat, an atomic edit plan needs removals I_hat minus S_hat and additions S_hat minus I_hat. Use only RGB-derived membership, preserve final-goal semantics, and qualify a visible safe removal destination and removal skill. Q7 is not implemented by blindly replaying positive placement commands; initial exploration remains empty-tray Q1-Q4.",
+    "unbound_implementation_fields": [
+      "upper perception model revision/decoding",
+      "parser implementation/version",
+      "object tracking/reference renderer",
+      "native fixture files/hash",
+      "observer tolerances and shared comparison horizon"
+    ]
+  },
+  "arms": [
+    {
+      "id": "D",
+      "role": "primary automatic baseline",
+      "input": "original goal instruction",
+      "additional_information": "none",
+      "output": "native VLA actions",
+      "score": "valid-family terminal goal"
+    },
+    {
+      "id": "P",
+      "role": "meaning-preserving wording control",
+      "input": "prewritten paraphrase with same final-state semantics",
+      "additional_information": "no target set",
+      "output": "native VLA actions",
+      "scope": "selective control if wording sensitivity is in question"
+    },
+    {
+      "id": "L",
+      "role": "automatic list baseline",
+      "input": "one shared predicted inventory + deterministic quantifier parser/selection",
+      "additional_information": "computed from initial RGB only",
+      "output": "one list instruction with same final non-target condition"
+    },
+    {
+      "id": "A",
+      "role": "automatic atomic decomposition baseline",
+      "input": "same selected subset/order/descriptors as L",
+      "additional_information": "none beyond L",
+      "output": "atomic instructions on fixed policy-step slots; no oracle stage switch",
+      "interpretation": "Temporalization and queue reset differ, not a pure quantifier intervention"
+    },
+    {
+      "id": "R",
+      "role": "simpler rule baseline",
+      "input": "EXACTLY-k English instruction, initially empty tray",
+      "additional_information": "k parsed from text only",
+      "output": "Repeat a one-object outside-to-inside instruction k times in fixed slots.",
+      "scope": [
+        "Q2",
+        "Q4",
+        "Q6"
+      ],
+      "not_applicable": [
+        "Q1",
+        "Q3",
+        "Q5 outside initial category scope",
+        "Q7",
+        "Q8"
+      ],
+      "caveat": "No privileged stage completion; may fail execution/reference or repeat the same object. ALL requires a count estimator and is not covered for free."
+    },
+    {
+      "id": "O-L/O-A",
+      "role": "privileged diagnostic only",
+      "input": "true eligible/selected set rendered through the same language interface",
+      "additional_information": "oracle selection explicitly separated",
+      "output": "list/atomic instruction",
+      "interpretation": "Not an automatic baseline, not an upper bound; no easier target selection picked after observing outcomes."
+    }
+  ],
+  "estimands": [
+    {
+      "id": "first_minimal_repetition",
+      "contrast": "R minus D on Q2/Q4 with familiar category, two/three instances and initially empty plate",
+      "meaning": "Does a fixed number of simple one-object commands suffice under the same total control/query budget? No new upper visual model is required for this first comparison.",
+      "limit": "Includes instruction splitting, timing and queue effects. Not a pure counting-reasoning intervention; frame-preserving subgoals may be more restrictive than the original final-state task."
+    },
+    {
+      "id": "pipeline",
+      "contrast": "D vs L",
+      "meaning": "Practical automatic input/selection pipeline difference, including compute and target-choice effects.",
+      "forbidden_interpretation": "Pure quantifier ability gain on free-choice cases."
+    },
+    {
+      "id": "temporalization",
+      "contrast": "L vs A",
+      "meaning": "Same predicted subset and names; temporal decomposition/queue handling under common budget.",
+      "followup": "Use same-boundary D/L prompt refresh if a chunk-reset explanation matters; do not silently add success-driven switching."
+    },
+    {
+      "id": "wording",
+      "contrast": "Q1 vs Q2 at the same scene; D vs P",
+      "meaning": "Same valid goal family, wording changes; does not establish training OOD."
+    },
+    {
+      "id": "selection_control",
+      "contrast": "explicit fixed-subset quantified vs listed prompts for the same preselected S",
+      "meaning": "Conditional diagnostic with a restricted goal; not a replacement for original free-choice D."
+    },
+    {
+      "id": "perception_diagnostic",
+      "contrast": "automatic vs oracle list using common renderer",
+      "meaning": "May localize upstream perception/selection opportunity, conditional on comparable references and selection; not causal proof."
+    }
+  ],
+  "timing": {
+    "current_p0_changed": false,
+    "comparison_horizon_control_steps": null,
+    "post_horizon_settling_steps": null,
+    "why_unset": "Calibrate task duration/physics drift using separate dev before main comparison; no invented validated thresholds.",
+    "common_deadline": "All arms use H policy steps then W hold steps. Hold current joints/finger state; do not force release or use an open-gripper default. Stop-on-first-containment is disabled in the future comparison wrapper.",
+    "atomic_slots": "Fixed boundaries derived from H and chosen subset size before outcomes; aligned to action replanning where possible, budget not multiplied per object.",
+    "upper_call_schedule": "L/A share one initial upper perception result. Dynamic feedback/replanning is a separately costed condition.",
+    "policy_budget": "Same checkpoint, query cap and total action/physics budget for all compared arms. Upper tokens/calls/latency reported in addition.",
+    "terminal_rule": "Score at T=H+W and require observed stable/released membership over a common terminal window. Also retain geometric membership and first-hit traces as diagnostics."
+  },
+  "observer": {
+    "status": "SPECIFIED_NOT_IMPLEMENTED",
+    "membership": "Robot-independent evaluator predicate combining frozen tray interior geometry, object support/contact, release/not-grasped and bounded motion. Exact geometry, velocity/rotation thresholds and window are calibrated on dev and frozen.",
+    "grasped_inside": "Record geometric occupancy separately; a grasped target is not stable success and a grasped non-target cannot be ignored for exclusion.",
+    "ambiguous_boundary": "Mark observation ambiguity; retain denominator and report bounds/sensitivity, not post-hoc removal.",
+    "external_terminal": "Crashes/timeouts/IO errors are technical outcomes; timestep.last alone is not semantic success.",
+    "no_action": "For Q8 report no-motion separately from terminal empty goal; always-noop must not count as general competence."
+  },
+  "evaluation": {
+    "unit": "One initial physical scene family/snapshot and instruction condition; repeated seeds/paraphrases are clustered repeated observations.",
+    "primary": "Successful stable valid-family terminal outcomes / all prespecified attempts, with technical noncompletion explicitly counted as no verified success.",
+    "secondary": [
+      "semantic family violations",
+      "observed placement completion",
+      "reference/attribute/parse failure where identifiable",
+      "first-hit vs terminal difference",
+      "collateral disturbance",
+      "physical/control steps",
+      "policy and upper calls/tokens",
+      "wall latency",
+      "subset and order chosen"
+    ],
+    "missing": "Always show N attempted, N evaluable, N technical, successes; paired complete-case contrasts labelled conditional, unresolved outcomes accompanied by worst/best-case bounds.",
+    "split": "Group all variants sharing layout/asset/scene ancestor before dev/selection/held-out partition. Q1-Q4 etc are semantic cases, not independent scenes. Empty native group manifest now.",
+    "training_support": "Frozen public checkpoint exposure is not fully audited. Development-disjoint evaluation is not training-disjoint OOD.",
+    "statistical_scope": "Small pilot raw paired counts and individual scenes; no equivalence or population confidence claims from two templates/seeds.",
+    "example_planning_budget": {
+      "main_rollouts": 24,
+      "calculation": "2 planned dev layouts × Q1-Q4 × D/L/A",
+      "created_layouts": 0,
+      "executed_rollouts": 0,
+      "scope": "Optional future exploration estimate only; R/control/oracle costs additional, no auto-launch or P0 budget expansion."
+    }
+  },
+  "nonexperimental_completion": {
+    "first_stage": "Keep P0 unchanged. After native competence, start the research comparison with D/R on Q2/Q4. Q1/Q2 wording control and direct ALL conditions can be added under a separately bounded plan. The previous 24-run D/L/A example is a later option, not the next automatic step.",
+    "R_parser": "Read k from an explicit exactly <integer or frozen number-word> instruction, category and destination from a fixed visible vocabulary. Reject ambiguity/unsupported syntax. Never infer ALL count from scene truth or a case ID.",
+    "R_prompt_template": "Move exactly one {category} that is currently outside the {receptacle} onto the {receptacle}. Leave {category} objects already on the {receptacle} there.",
+    "R_strategy_scope": "The preservation clause is a conservative intermediate plan, not a claim that all original valid trajectories obey that extra clause. End evaluation uses the original valid final-set family. No success signal, count feedback, gold object ID or per-slot horizon extension.",
+    "R_switching": "k equal planned slots spanning common H; slot boundaries align to the declared replan grid before outcomes. If H is not divisible, allocate declared remainder to the last slot. Clear queue at boundaries. Do not stop a slot using the native success predicate.",
+    "L_A_conditional_followup": "Only if target references can be grounded and retained. At each actual invocation log the intended predicted track and surface reference; ambiguity/reference drift is a failure category, not a post-hoc exclusion. A count-only plan can be tested without first implementing the full visual inventory pipeline.",
+    "identity_counterexample": "Two identical objects ordered left/right can change relative rank after one is moved. Reusing an initial rank phrase does not prove that L and A refer to the same physical subset. Internal stable IDs do not fix what the VLA can observe.",
+    "metamorphic_specification": [
+      "Permuting evaluator IDs must not change valid-family scoring",
+      "ALL and EXACTLY-two have the same valid family when exactly two eligible objects exist",
+      "With three eligible objects, every pair is valid for EXACTLY-two; subset-specific gold is wrong",
+      "Adding an eligible object changes ALL but does not increase the demanded exactly-k count",
+      "Held non-target occupancy must not be erased by a released-only mask",
+      "Transient success followed by excess placement must fail terminal exactly-k"
+    ],
+    "observer_freeze_rule": "On separate dev, validate tray geometry/frame and calibrate stillness/release from native traces before comparing D/R; freeze object support, boundary ambiguity, quaternion/velocity units and W. If meaningful inside/outside or held/released states cannot be distinguished, label observer unqualified. Do not fill unknown values with zero or claim continuous-time stability from sampled frames.",
+    "current_scope_complete": "Literature, logical/semantic review and first comparison design complete. Model inference, object grounding, observer implementation/calibration and external feedback remain unverified.",
+    "new_upper_model_needed_for_first_stage": false,
+    "external_feedback_received": false
+  },
+  "decision_rules": [
+    {
+      "observation": "D succeeds broadly in comparable conditions",
+      "decision": "Reduce motivation for added machinery; inspect whether original concern actually appears."
+    },
+    {
+      "observation": "L or R is sufficient at acceptable total cost",
+      "decision": "Prefer simple interface; evaluate if boundary/cost knowledge is new enough, not a new planner claim."
+    },
+    {
+      "observation": "A improves only after target/slot changes",
+      "decision": "Investigate selection, reference and sequencing; do not claim quantifier reasoning improvement."
+    },
+    {
+      "observation": "Oracle/reference or single-item branches fail",
+      "decision": "Repair native grounding/control qualification or narrow scope; do not infer semantic failure."
+    },
+    {
+      "observation": "Only appearance/conjunction-shift cases fail",
+      "decision": "Separate new visual/motor distribution shift from quantifier question."
+    },
+    {
+      "observation": "No stable difference with small N",
+      "decision": "Inconclusive, not equivalence; consider expected value of additional independent cases."
+    },
+    {
+      "observation": "Closest work already answers same conditions and decision",
+      "decision": "Merge into reproduction/diagnostic notes or stop independent-topic investment."
+    }
+  ],
+  "completion": {
+    "nonexperimental": "Comparison and interpretation contract written; public literature/interface and logical-case audit complete within scope.",
+    "not_completed": [
+      "native competence",
+      "observed phenomenon/efficacy",
+      "native wrappers/automatic baselines",
+      "independent external feedback",
+      "publication value confirmation"
+    ]
+  },
+  "external_feedback": {
+    "sent": false,
+    "received": false,
+    "questions": [
+      "Is the free-choice vs fixed-subset distinction a meaningful unanswered deployment decision after Spa-Bench and prior compositional work?",
+      "Would a simple repetition/list baseline answer the question completely?",
+      "What evidence would separate reference/selection bias from behavior-level quantified-goal failure?",
+      "Which independent instances and training-support audit would justify a generalization claim?"
+    ]
+  }
+}

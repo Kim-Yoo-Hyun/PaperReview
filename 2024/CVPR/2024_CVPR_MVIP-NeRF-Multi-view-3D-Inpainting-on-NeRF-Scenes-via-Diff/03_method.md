@@ -4,6 +4,8 @@
 > Evidence maturity: `FULL_TEXT_CHECKED`.
 > Analysis basis: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2024/html/Chen_MVIP-NeRF_Multi-view_3D_Inpainting_on_NeRF_Scenes_via_Diffusion_Prior_CVPR_2024_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2024/papers/Chen_MVIP-NeRF_Multi-view_3D_Inpainting_on_NeRF_Scenes_via_Diffusion_Prior_CVPR_2024_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
+> DOC-QA2 targeted source review: 2026-10-23; PDF pp. 3, 5. 손상 구간·직접 연결된 표 분류만 원문 이미지와 대조했다. 전체 주장 정독·실험 검증·reading status 승격을 뜻하지 않는다. [URL·PDF hash·수정 기록](../../../work/sources/pdf_note_review_followup_2026-10-23.json).
+
 ## Method in One Sentence
 
 PDF body method statement (p. 4 (3.2. Problem formulation and overview), p. 4 (3.3. Appearance Diffusion Prior), p. 3 (3.1. Preliminary), p. 3 (3.1. Preliminary), p. 5 (3.4. Geometry Diffusion Prior), p. 5 (3.5. Multi-view Score Distillation)): Then, a latent diffusion model is employed as the appearance and geometry prior.
@@ -13,8 +15,8 @@ PDF body method statement (p. 4 (3.2. Problem formulation and overview), p. 4 (3
 - **p. 4 / 3.2. Problem formulation and overview - extractive body cue:** Then, a latent diffusion model is employed as the appearance and geometry prior.
 - **p. 4 / 3.3. Appearance Diffusion Prior - extractive body cue:** In this work, we use the stablediffusion-inpainting model [21] as our guidance model.
 - **p. 3 / 3.1. Preliminary - extractive body cue:** Formally, let x = g(θ) represent an image rendered by a differentiable generator g with parameter θ, then SDS minimizes density distillation loss [18] which ...
-- **p. 3 / 3.1. Preliminary - extractive body cue:** Therefore, the NeRF reconstruction loss can be formulated as La =  r∈R // ˆC(r) -C(r)//2, (1) where ˆC(r) represents the rendered color blended from ...
-- **p. 5 / 3.4. Geometry Diffusion Prior - extractive body cue:** To update θ, we again employ the SDS loss that computes the gradient w.r.t. θ as: ∇θLg masked = w(t)  ϵω φ(zt; m, y, ...
+- **PDF p. 3, §3.1 / Eq. (1) (DOC-QA2 원문 대조):** NeRF appearance reconstruction은 sampled rays의 rendered RGB와 ground-truth RGB 차이의 squared L2 norm을 합한다. 손상된 문자는 ray 합산 기호였다.
+- **PDF p. 5, §3.4 / Eq. (7) (DOC-QA2 원문 대조):** Geometry prior의 masked SDS gradient는 diffusion noise residual에 weight w(t)를 곱하고 normal-map/NeRF Jacobian을 통해 θ로 전파한다. Eq. (7)의 chain rule을 잘린 scalar loss로 바꾸지 않는다.
 - **p. 5 / 3.5. Multi-view Score Distillation - extractive body cue:** Intuitively, this function implies that when updating θ, we take into account the interactions with other sampled views, thereby promoting view consistency.
 - **p. 6 / 3.5. Multi-view Score Distillation - extractive body cue:** its multi-view version, and jointly train the loss as: L = La unmasked + λ1Lg unmasked + λ2Lma masked + λ3Lg masked.
 - **p. 4 / 3.2. Problem formulation and overview - extractive body cue:** Rather than directly utilizing inconsistent 2D inpainting results as supervisions and resolving these inconsistencies post hoc, we employ two SDS losses to compute a gradient ...
@@ -30,8 +32,8 @@ PDF body method statement (p. 4 (3.2. Problem formulation and overview), p. 4 (3
 - **p. 4 / 3.2. Problem formulation and overview - extractive body cue:** Then, a latent diffusion model is employed as the appearance and geometry prior.
 - **p. 4 / 3.3. Appearance Diffusion Prior - extractive body cue:** In this work, we use the stablediffusion-inpainting model [21] as our guidance model.
 - **p. 3 / 3.1. Preliminary - extractive body cue:** Formally, let x = g(θ) represent an image rendered by a differentiable generator g with parameter θ, then SDS minimizes density distillation loss [18] which ...
-- **p. 3 / 3.1. Preliminary - extractive body cue:** Therefore, the NeRF reconstruction loss can be formulated as La =  r∈R // ˆC(r) -C(r)//2, (1) where ˆC(r) represents the rendered color blended from ...
-- **p. 5 / 3.4. Geometry Diffusion Prior - extractive body cue:** To update θ, we again employ the SDS loss that computes the gradient w.r.t. θ as: ∇θLg masked = w(t)  ϵω φ(zt; m, y, ...
+- **PDF p. 3, §3.1 / Eq. (1) (DOC-QA2 원문 대조):** NeRF appearance reconstruction은 sampled rays의 rendered RGB와 ground-truth RGB 차이의 squared L2 norm을 합한다. 손상된 문자는 ray 합산 기호였다.
+- **PDF p. 5, §3.4 / Eq. (7) (DOC-QA2 원문 대조):** Geometry prior의 masked SDS gradient는 diffusion noise residual에 weight w(t)를 곱하고 normal-map/NeRF Jacobian을 통해 θ로 전파한다. Eq. (7)의 chain rule을 잘린 scalar loss로 바꾸지 않는다.
 - **p. 5 / 3.5. Multi-view Score Distillation - extractive body cue:** Intuitively, this function implies that when updating θ, we take into account the interactions with other sampled views, thereby promoting view consistency.
 - **p. 6 / 3.5. Multi-view Score Distillation - extractive body cue:** its multi-view version, and jointly train the loss as: L = La unmasked + λ1Lg unmasked + λ2Lma masked + λ3Lg masked.
 - **Detected method headings:** 3. Method (p. 3)
@@ -48,7 +50,7 @@ PDF body method statement (p. 4 (3.2. Problem formulation and overview), p. 4 (3
 
 ## Objective / Update Rule
 
-- **p. 5 / 3.4. Geometry Diffusion Prior - extractive body cue:** To update θ, we again employ the SDS loss that computes the gradient w.r.t. θ as: ∇θLg masked = w(t)  ϵω φ(zt; m, y, ...
+- **PDF p. 5, §3.4 / Eq. (7) (DOC-QA2 원문 대조):** Geometry prior의 masked SDS gradient는 diffusion noise residual에 weight w(t)를 곱하고 normal-map/NeRF Jacobian을 통해 θ로 전파한다. Eq. (7)의 chain rule을 잘린 scalar loss로 바꾸지 않는다.
 - **p. 3 / 3.1. Preliminary - extractive body cue:** Formally, let x = g(θ) represent an image rendered by a differentiable generator g with parameter θ, then SDS minimizes density distillation loss [18] which ...
 - **p. 4 / 3.2. Problem formulation and overview - extractive body cue:** Rather than directly utilizing inconsistent 2D inpainting results as supervisions and resolving these inconsistencies post hoc, we employ two SDS losses to compute a gradient ...
 - **p. 3 / 3.1. Preliminary - extractive body cue:** For an efficient implementation, SDS updates the parameter θ by randomly choosing timesteps t ∼U(tmin, tmax) and forward x = g(θ) with noise ϵ ∼N(0, ...
@@ -90,7 +92,7 @@ PDF body method statement (p. 4 (3.2. Problem formulation and overview), p. 4 (3
 
 ## Training vs Inference
 
-- **p. 3 / 3.1. Preliminary - extractive body cue:** Therefore, the NeRF reconstruction loss can be formulated as La =  r∈R // ˆC(r) -C(r)//2, (1) where ˆC(r) represents the rendered color blended from ...
+- **PDF p. 3, §3.1 / Eq. (1) (DOC-QA2 원문 대조):** NeRF appearance reconstruction은 sampled rays의 rendered RGB와 ground-truth RGB 차이의 squared L2 norm을 합한다. 손상된 문자는 ray 합산 기호였다.
 - **p. 6 / 3.5. Multi-view Score Distillation - extractive body cue:** its multi-view version, and jointly train the loss as: L = La unmasked + λ1Lg unmasked + λ2Lma masked + λ3Lg masked.
 - **p. 6 / 4.1. Experimental Setup - extractive body cue:** We implemented our NeRF inpainting model built upon SPIn-NeRF [17] and trained it on 4 NVIDIA V100 GPUs for 10, 000 iterations using the Adam ...
 - **p. 6 / 4.1. Experimental Setup - extractive body cue:** In addition, we implement an annealing timestep scheduling strategy [39], which allocates more training steps to lower values of t.

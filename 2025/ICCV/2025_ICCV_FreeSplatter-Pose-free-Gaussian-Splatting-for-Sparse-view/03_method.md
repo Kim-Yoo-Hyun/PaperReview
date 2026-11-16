@@ -4,6 +4,8 @@
 > Evidence maturity: `FULL_TEXT_CHECKED`.
 > Analysis basis: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/ICCV2025/html/Xu_FreeSplatter_Pose-free_Gaussian_Splatting_for_Sparse-view_3D_Reconstruction_ICCV_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/ICCV2025/papers/Xu_FreeSplatter_Pose-free_Gaussian_Splatting_for_Sparse-view_3D_Reconstruction_ICCV_2025_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
+> DOC-QA2 targeted source review: 2026-10-23; PDF pp. 3. 손상 구간·직접 연결된 표 분류만 원문 이미지와 대조했다. 전체 주장 정독·실험 검증·reading status 승격을 뜻하지 않는다. [URL·PDF hash·수정 기록](../../../work/sources/pdf_note_review_followup_2026-10-23.json).
+
 ## Method in One Sentence
 
 PDF body method statement (p. 5 (3.3. Training Details), p. 8 (4.5. Applications in 3D AIGC), p. 3 (3.2. Model Architecture), p. 3 (3.2. Model Architecture), p. 4 (3.3. Training Details), p. 4 (3.3. Training Details)): The overall training objective is: \mathca l { L } = \m a thcal {L} _ {\mathrm {render}} + \lambda _\mathrm {a} \cdot \mathcal {L}_\mathrm {align} + \1_\mathrm {t\le T_\mathrm ...
@@ -71,7 +73,7 @@ PDF body method statement (p. 5 (3.3. Training Details), p. 8 (4.5. Applications
 
 - **p. 4 / 3.2. Model Architecture - extractive body cue:** Input Images Ours (Render w/ pred. poses) PF-LRM (Render w/ pred. poses) Novel G.T.
 - **p. 8 / 4.5. Applications in 3D AIGC - extractive body cue:** In our supplementary material (Section 2.4), we provide comprehensive image-to3D generation results across a range of multi-view diffusion models, demonstrating that FreeSplatter achieves superior reconstruction ...
-- **p. 3 / 3.2. Model Architecture - extractive body cue:** The model processes N input images  In ∈RH×W ×3 / n = 1, . . . , N
+- **PDF p. 3, §3.2 / Image Tokenization (DOC-QA2 원문 대조):** N개의 RGB image Iⁿ∈R^(H×W×3)를 8×8 patches로 나누고 선형 projection 후 position/view embeddings를 더한다. Camera parameter가 주어진다는 뜻이 아니며 method input 정의다.
 - **p. 3 / 3. Method - extractive body cue:** Given N input images {In / n = 1, . . . , N} without known camera parameters, FreeSplatter performs joint scene reconstruction and camera ...
 - **p. 5 / 3.3. Training Details - extractive body cue:** Sparse-view Reconstruction on GSO dataset. * indicates that ground truth camera poses are used as input. at other pixels remain unconstrained.
 - **p. 5 / 3.3. Training Details - extractive body cue:** (ii) For Method GSO OmniObject3D PSNR ↑ SSIM ↑ LPIPS ↓ PSNR ↑ SSIM ↑ LPIPS ↓ Evaluate renderings at G.T. novel-view poses PF-LRM 25.08 ...

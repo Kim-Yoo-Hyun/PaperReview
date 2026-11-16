@@ -17,6 +17,8 @@
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (24 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
+> DOC-QA2 targeted source review: 2026-10-23; PDF pp. 4, 17. 손상 구간·직접 연결된 표 분류만 원문 이미지와 대조했다. 전체 주장 정독·실험 검증·reading status 승격을 뜻하지 않는다. [URL·PDF hash·수정 기록](../../../work/sources/pdf_note_review_followup_2026-10-23.json).
+
 ## Why This Paper Is Here
 
 VLA and generalist robot policies의 navigation 문제를 이해하기 위해 읽는다. 본문은 Vision-language navigation (VLN) requires intelligent agents to navigate environments by interpreting linguistic instructions alongside visual observations, serving as a cornerstone task in Embodied AI.를 문제로 두고, This standardized backbone approach enables fair comparison of each method's core contributions while maintaining implementation feasibility within our experimental framework.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
@@ -46,7 +48,7 @@ VLA and generalist robot policies의 navigation 문제를 이해하기 위해 �
 |---|---|---|---|
 | Observation/input | 3.1 TASK FORMULATION We formulate autonomous navigation as learning a control policy π that takes the current RGB observation ot ∈O, language instruction L, and coarse positional or directional guidance encoded as ... | camera/depth stream, pose, map와 language goal | p. 4 (3 METHOD), p. 17 (A.2.3 DATA COLLECTION ALGORITHM BASED ON RL) |
 | State/latent | TASK, FORMULATION, formulate, autonomous, navigation, learning, control, policy, takes, current, RGB, observation | robot pose, free-space/semantic map와 local goal | p. 4 (3 METHOD), p. 17 (A.2.3 DATA COLLECTION ALGORITHM BASED ON RL), p. 1 (1 INTRODUCTION) |
-| Output/action | For a stochastic policy, the target value y is calculated as: y = r + γ(1 -d)  min i=1,2 Qθ′ i(s′, a′) -α log πϕ(a′/s′)  , (6) where γ is ... | collision-free trajectory 또는 velocity command | p. 17 (A.2.3 DATA COLLECTION ALGORITHM BASED ON RL), p. 1 (1 INTRODUCTION), p. 4 (3 METHOD) |
+| Output/action | Fig. 2는 high-level [v_xy,v_z,ω_yaw] action sequence를 나타낸다. | High-level velocity/yaw commands; RL Q-target과 분리 | PDF p. 4 Fig. 2; p. 17 Eq. (6)은 data-collection learner의 Q-target |
 | Objective/outcome | When d = 0 (episode continues), the target includes both the immediate reward r and the discounted estimate of future returns. | goal reach, safety, localization error와 replanning latency | p. 17 (A.2.3 DATA COLLECTION ALGORITHM BASED ON RL), p. 17 (A.2.3 DATA COLLECTION ALGORITHM BASED ON RL), p. 4 (3 METHOD) |
 
 ## Main Claims and Actual Contribution

@@ -4,6 +4,8 @@
 > Evidence maturity: `FULL_TEXT_CHECKED`.
 > Analysis basis: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.proceedings.com/content/081/081087webtoc.pdf; PDF retrieval source: https://arxiv.org/pdf/2406.08009v1. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
+> DOC-QA2 targeted source review: 2026-10-23; PDF pp. 5. 손상 구간·직접 연결된 표 분류만 원문 이미지와 대조했다. 전체 주장 정독·실험 검증·reading status 승격을 뜻하지 않는다. [URL·PDF hash·수정 기록](../../../work/sources/pdf_note_review_followup_2026-10-23.json).
+
 ## Method in One Sentence
 
 PDF body method statement (p. 3 (III. OPENOBJ), p. 5 (III. OPENOBJ), p. 2 (I. INTRODUCTION), p. 3 (III. OPENOBJ), p. 4 (III. OPENOBJ), p. 4 (III. OPENOBJ)): In this paper, we use the visual encoder of CLIP [4] to encode images cropped according to the mask mobj t,i as VLM feature f clip t,i .
@@ -11,7 +13,7 @@ PDF body method statement (p. 3 (III. OPENOBJ), p. 5 (III. OPENOBJ), p. 2 (I. IN
 ## Method Body Digest
 
 - **p. 3 / III. OPENOBJ - extractive body cue:** In this paper, we use the visual encoder of CLIP [4] to encode images cropped according to the mask mobj t,i as VLM feature f ...
-- **p. 5 / III. OPENOBJ - extractive body cue:** Next, we superimpose the features of these masks mpart t,j and perform normalization: If t = P j  mpart t,j · f clip t,j ...
+- **PDF p. 5, §III-D / Eq. (3) (DOC-QA2 원문 대조):** Dense feature image는 part-mask로 가중한 CLIP feature의 합을 해당 pixel의 mask 합으로 정규화해 구성한다. 이를 이후 object NeRF 학습의 feature supervision에 사용한다.
 - **p. 2 / I. INTRODUCTION - extractive body cue:** In summary, Our contributions are summarized as follows: • We present OpenObj, the open-vocabulary object-level neural radiance fields with fine-grained understanding, supporting downstream tasks at ...
 - **p. 3 / III. OPENOBJ - extractive body cue:** Specifically, we use the bounding boxes of the masks mobj t,i as prompts and use the TAP (Tokenize Anything via Prompting) model [29] to generate ...
 - **p. 4 / III. OPENOBJ - extractive body cue:** Part-level Fine-Grained Feature Extraction Both of the above modules operate at the instance level and do not perceive the interior details of the object.
@@ -28,7 +30,7 @@ PDF body method statement (p. 3 (III. OPENOBJ), p. 5 (III. OPENOBJ), p. 2 (I. IN
 ## Source Evidence Cues
 
 - **p. 3 / III. OPENOBJ - extractive body cue:** In this paper, we use the visual encoder of CLIP [4] to encode images cropped according to the mask mobj t,i as VLM feature f ...
-- **p. 5 / III. OPENOBJ - extractive body cue:** Next, we superimpose the features of these masks mpart t,j and perform normalization: If t = P j  mpart t,j · f clip t,j ...
+- **PDF p. 5, §III-D / Eq. (3) (DOC-QA2 원문 대조):** Dense feature image는 part-mask로 가중한 CLIP feature의 합을 해당 pixel의 mask 합으로 정규화해 구성한다. 이를 이후 object NeRF 학습의 feature supervision에 사용한다.
 - **p. 2 / I. INTRODUCTION - extractive body cue:** In summary, Our contributions are summarized as follows: • We present OpenObj, the open-vocabulary object-level neural radiance fields with fine-grained understanding, supporting downstream tasks at ...
 - **p. 3 / III. OPENOBJ - extractive body cue:** Specifically, we use the bounding boxes of the masks mobj t,i as prompts and use the TAP (Tokenize Anything via Prompting) model [29] to generate ...
 - **p. 4 / III. OPENOBJ - extractive body cue:** Part-level Fine-Grained Feature Extraction Both of the above modules operate at the instance level and do not perceive the interior details of the object.
@@ -41,7 +43,7 @@ PDF body method statement (p. 3 (III. OPENOBJ), p. 5 (III. OPENOBJ), p. 2 (I. IN
 | Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Geometry / pose extraction | image·depth·point input에서 spatial state를 만든다 | RGB/RGB-D, point cloud, camera pose 또는 multi-view input | depth, pose, correspondence, point, mesh, Gaussian 또는 feature representation을 추정 | geometry/map/pose | In this paper, we use the visual encoder of CLIP [4] to encode images cropped according to the mask mobj t,i as ... | p. 3 (III. OPENOBJ), p. 5 (III. OPENOBJ) |
-| Semantic / temporal fusion | geometry에 semantics와 history를 정렬한다 | geometry, visual/language feature와 temporal context | feature lifting, scene graph, map update, tracking 또는 temporal fusion을 수행 | queryable 3D state | Next, we superimpose the features of these masks mpart t,j and perform normalization: If t = P j  mpart t,j · ... | p. 5 (III. OPENOBJ), p. 2 (I. INTRODUCTION) |
+| Part-feature image construction | Part masks의 CLIP feature를 pixel에 합성한다. | m_part와 f_CLIP | Mask-weighted feature sum / mask sum | Dense feature image I_f | Eq. (3)의 normalized feature aggregation; temporal fusion이라고 추정하지 않음 | PDF p. 5, §III-D |
 | Robot query / planning handoff | 3D state를 task decision에 전달한다 | map/feature와 task query | target grounding, affordance, collision/free-space 또는 action cue를 생성 | goal, pose, path 또는 policy input | In summary, Our contributions are summarized as follows: • We present OpenObj, the open-vocabulary object-level neural radiance fields with fine-grained understanding, supporting ... | p. 2 (I. INTRODUCTION), p. 3 (III. OPENOBJ) |
 
 - Pipeline rows are domain labels; the paper-specific operations are the extractive cues and section anchors in the same row.
@@ -72,7 +74,7 @@ PDF body method statement (p. 3 (III. OPENOBJ), p. 5 (III. OPENOBJ), p. 2 (I. IN
 - **p. 3 / III. OPENOBJ - extractive body cue:** Finally, the NeRF Rendering and Training module vectorizes the training of NeRFs for all objects based on the masks, input RGBD images, and dense VLM ...
 - **p. 4 / III. OPENOBJ - extractive body cue:** Taking the color images Ic t as input, SAM segments all the dense masks {mpart t,j / j = 1, 2, . . . , ...
 - **p. 4 / III. OPENOBJ - extractive body cue:** To address this, the Part-level Fine-Grained Feature Extraction module is designed to generate dense feature images, which represent a refined, part-level understanding of the object.
-- **p. 5 / III. OPENOBJ - extractive body cue:** Next, we superimpose the features of these masks mpart t,j and perform normalization: If t = P j  mpart t,j · f clip t,j ...
+- **PDF p. 5, §III-D / Eq. (3) (DOC-QA2 원문 대조):** Dense feature image는 part-mask로 가중한 CLIP feature의 합을 해당 pixel의 mask 합으로 정규화해 구성한다. 이를 이후 object NeRF 학습의 feature supervision에 사용한다.
 - **p. 1 / I. INTRODUCTION - extractive body cue:** These maps facilitate human interaction and support higher-level cognitive navigation, e.g., ‘Please find a soft piece of furniture.' or ‘Please find me a place to ...
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
 - Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
@@ -88,7 +90,7 @@ PDF body method statement (p. 3 (III. OPENOBJ), p. 5 (III. OPENOBJ), p. 2 (I. IN
 
 ## Training vs Inference
 
-- **p. 5 / III. OPENOBJ - extractive body cue:** Next, we superimpose the features of these masks mpart t,j and perform normalization: If t = P j  mpart t,j · f clip t,j ...
+- **PDF p. 5, §III-D / Eq. (3) (DOC-QA2 원문 대조):** Dense feature image는 part-mask로 가중한 CLIP feature의 합을 해당 pixel의 mask 합으로 정규화해 구성한다. 이를 이후 object NeRF 학습의 feature supervision에 사용한다.
 - **p. 5 / III. OPENOBJ - extractive body cue:** NeRF Rendering and Training In OpenObj, each object is modeled as a NeRF network with a uniform structure, enabling multi-model vectorized training similar to [27].
 
 - Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.

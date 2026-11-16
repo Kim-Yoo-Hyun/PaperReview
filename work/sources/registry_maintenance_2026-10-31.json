@@ -1,0 +1,116 @@
+{
+  "task_id": "REG-R5",
+  "checked_on": "2026-10-31",
+  "scope": "incremental registry admission, document consolidation, case-sensitive path portability; not an all-paper publication refresh",
+  "baseline": {
+    "papers": 1074,
+    "tiers": {
+      "CORE": 47,
+      "NEXT": 299,
+      "REFERENCE": 486,
+      "ARCHIVE": 242
+    },
+    "active": 346,
+    "history": 47,
+    "standard_notes": 5370,
+    "audit_errors": 0,
+    "audit_warnings": 0
+  },
+  "after": {
+    "papers": 1077,
+    "tiers": {
+      "CORE": 47,
+      "NEXT": 302,
+      "REFERENCE": 486,
+      "ARCHIVE": 242
+    },
+    "active": 349,
+    "history": 47,
+    "standard_notes": 5385,
+    "benchmark_resources": 53,
+    "metric_resources": 29,
+    "combined_resources": 555
+  },
+  "admission_input": "work/sources/registry_admissions_2026-10-31.json",
+  "admitted_paper_ids": [
+    "pr-1075",
+    "pr-1076",
+    "pr-1077"
+  ],
+  "new_note_evidence": "ABSTRACT_CHECKED",
+  "new_reading_status": "UNREAD",
+  "merged_documents": [
+    {
+      "original_path": "work/update/INSTRUCTION_REVISION_PRE_GPU_REVIEW_2026-10-31.md",
+      "original_sha256": "74390c854388594329e895ec4c421e9c5c75aeae38723cda7d1701c865b960c0",
+      "replacement": "work/update/PRE_GPU_BUILDUP_REVIEW_2026-10-31.md",
+      "section": "instruction-revision",
+      "original_removed": true,
+      "body_preserved_except_heading_depth": true
+    },
+    {
+      "original_path": "work/update/MOBILE_POLICY_TRANSFER_PRE_GPU_REVIEW_2026-10-31.md",
+      "original_sha256": "1f9053bf753b6c029c2ab4850db7d91b95407036ee7d488217f44e783d3862c4",
+      "replacement": "work/update/PRE_GPU_BUILDUP_REVIEW_2026-10-31.md",
+      "section": "mobile-policy-transfer",
+      "original_removed": true,
+      "body_preserved_except_heading_depth": true
+    }
+  ],
+  "case_path_repairs": [
+    {
+      "from": "2003/ICRA/2003_ICRA_Biped-Walking-Pattern-Generation-by-Using-Preview-Control",
+      "to": "2003/ICRA/2003_ICRA_Biped-Walking-Pattern-Generation-by-using-Preview-Control",
+      "reason": "align actual folder with existing canonical manifest and references"
+    },
+    {
+      "from": "2022/arxiv",
+      "to": "2022/arXiv",
+      "reason": "unify mixed parent case for four existing papers; canonical paths and source references for pr-0021/pr-0516 updated"
+    }
+  ],
+  "git": {
+    "operation": "two directory case-only moves through temporary names using git mv",
+    "staged_renamed_files": 25,
+    "prior_index_blob_and_mode_preserved": true,
+    "previous_unstaged_note_contents_not_added_to_index": true,
+    "commit": false,
+    "push": false
+  },
+  "preservation": {
+    "old_manifest_records_identical_except_two_case_path_rewrites": true,
+    "old_note_contents_verified_by_sha256": 5370,
+    "old_tier_rows_reconstructed_sha256_equal": true,
+    "existing_user_reading_rows_preserved": 393,
+    "history_row_count_preserved": 47,
+    "both_merged_bodies_reconstructed_sha256_equal": true,
+    "experiment_driver_and_assets_preserved": true,
+    "native_experiments_executed": false,
+    "pdf_operations": false,
+    "docker_operations": false,
+    "host_dependency_operations": false
+  },
+  "retained_exact_duplicate_pair": [
+    "work/experiments/reactive_nav_pilot/results/verified/docker_version.json",
+    "work/experiments/reactive_nav_contract/results/verified/docker_version.json"
+  ],
+  "duplicate_retention_reason": "identical runtime versions belong to different run evidence packets",
+  "cache_scan": {
+    "pyc_dsstore_tmp_bak_files": 0,
+    "venv_node_modules_site_packages_pycache_directories": 0
+  },
+  "validation": {
+    "status": "passed",
+    "audit_errors": 0,
+    "audit_warnings": 0,
+    "markdown_files_checked": 5583,
+    "markdown_links_checked": 11199,
+    "generated_views_idempotent": 14,
+    "python_compile_passed": 5,
+    "git_diff_check_passed": true,
+    "git_cached_diff_check_passed": true,
+    "reading_history_tests": 6,
+    "document_maintenance_tests": 6,
+    "standard_notes_control_character_findings": 0
+  }
+}

@@ -17,6 +17,8 @@
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
+> DOC-QA2 targeted source review: 2026-10-23; PDF pp. 3, 4. 손상 구간·직접 연결된 표 분류만 원문 이미지와 대조했다. 전체 주장 정독·실험 검증·reading status 승격을 뜻하지 않는다. [URL·PDF hash·수정 기록](../../../work/sources/pdf_note_review_followup_2026-10-23.json).
+
 ## Why This Paper Is Here
 
 VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다. 본문은 However, state-of-the-art VLAs still cannot adapt reliably to unseen tasks without fine-tuning on task-specific data [6]- [8].를 문제로 두고, As our method is architecture-agnostic, we keep the following sections general.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
@@ -37,7 +39,7 @@ VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다
 - **p. 5 / IV. METHODOLOGY - extractive body cue:** We found that introducing at least some new parameters per task is essential for the policy to acquire and retain novel skills.
 - **p. 3 / IV. METHODOLOGY - extractive body cue:** To achieve this, we draw inspiration from the mixture-of-experts (MoE) approach in large language models (LLMs) [35], [36], which combines the outputs of specialized sub-networks ...
 - **p. 3 / IV. METHODOLOGY - extractive body cue:** Prior work [37], [38] has shown that a large fraction of factual associations and high-level knowledge in transformerbased LLMs is stored inside mid-layer feedforward network ...
-- **p. 4 / IV. METHODOLOGY - extractive body cue:** By training the discriminators added at stage n with the loss Lrecon(Dn ℓ) = Exℓ∼Dn  en ℓ(xℓ)  , (5) we ensure they have ...
+- **PDF p. 4, §IV-C / Eqs. (4)–(6) (DOC-QA2 원문 대조):** 각 discriminator는 자신과 연결된 adapter의 학습 feature를 재구성하도록 훈련된다. 추론 때 reconstruction error가 가장 작은 discriminator에 연결된 adapter를 선택한다. 이를 closed-loop recovery objective로 해석하지 않는다.
 - **p. 4 / IV. METHODOLOGY - extractive body cue:** A straightforward approach would be to Task 1 Adapter Task 3 Adapter Task 1 Discriminator Task 2 Discriminator Task 3 Discriminator Pre-Trained Module z-score threshold ...
 - **p. 5 / IV. METHODOLOGY - extractive body cue:** Then, the routing mechanism activates only adapters from earlier stages in layer ℓ1 during training of Ai ℓ2.
 - **p. 5 / IV. METHODOLOGY - extractive body cue:** As a consequence, the input features xℓ2 to layer ℓ2 when performing task Tn are different from those seen during training of Ai ℓ2.
@@ -49,7 +51,7 @@ VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다
 | Observation/input | 23: Train Dn ℓof all layers ℓ∈E from Dn via (5). consisting of camera images I1 t , . . . , INc t , proprioceptive state qt and language command l, ... | image/video, language instruction, proprioception과 history | p. 3 (III. PROBLEM SETUP), p. 2 (III. PROBLEM SETUP) |
 | State/latent | Train, layers, consisting, camera, images, INc, proprioceptive, state, language, command, generates, action | language-grounded task state와 action-policy context | p. 3 (III. PROBLEM SETUP), p. 2 (III. PROBLEM SETUP), p. 3 (III. PROBLEM SETUP) |
 | Output/action | We assume the availability of a base VLA policy π0 = πθ0 with model parameters θ0 that takes as input an observation ot = (I1 t , . . . , INc ... | continuous action, pose 또는 action chunk | p. 2 (III. PROBLEM SETUP), p. 3 (III. PROBLEM SETUP), p. 2 (III. PROBLEM SETUP) |
-| Objective/outcome | We adopt the standard conditional flow matching loss L(θn)= Es,(A1,o),A0 | instruction following, task success, generalization과 latency | p. 3 (IV. METHODOLOGY), p. 4 (IV. METHODOLOGY), p. 4 (IV. METHODOLOGY) |
+| Objective/outcome | Action-chunk vector field를 A¹−A⁰ target과 맞추는 conditional flow-matching objective | Policy training loss; success/latency 결과와 구별 | PDF p. 3 §IV-A / Eq. (1) |
 
 ## Main Claims and Actual Contribution
 

@@ -1,0 +1,74 @@
+[
+  {
+    "scene": "development-72001",
+    "alive_at_event": true,
+    "fork_possible": true,
+    "terminal": "goal"
+  },
+  {
+    "scene": "development-72002",
+    "alive_at_event": true,
+    "fork_possible": true,
+    "terminal": "goal"
+  },
+  {
+    "scene": "development-72003",
+    "alive_at_event": true,
+    "fork_possible": true,
+    "terminal": "goal"
+  },
+  {
+    "scene": "development-72004",
+    "alive_at_event": true,
+    "fork_possible": true,
+    "terminal": "goal"
+  },
+  {
+    "scene": "development-72005",
+    "alive_at_event": true,
+    "fork_possible": true,
+    "terminal": "goal"
+  },
+  {
+    "scene": "development-72006",
+    "alive_at_event": true,
+    "fork_possible": true,
+    "terminal": "goal"
+  },
+  {
+    "scene": "development-72007",
+    "alive_at_event": true,
+    "fork_possible": true,
+    "terminal": "goal"
+  },
+  {
+    "scene": "development-72008",
+    "alive_at_event": true,
+    "fork_possible": true,
+    "terminal": "goal"
+  },
+  {
+    "scene": "development-72009",
+    "alive_at_event": true,
+    "fork_possible": true,
+    "terminal": "goal"
+  },
+  {
+    "scene": "development-72010",
+    "alive_at_event": true,
+    "fork_possible": true,
+    "terminal": "goal"
+  },
+  {
+    "scene": "development-72011",
+    "alive_at_event": true,
+    "fork_possible": true,
+    "terminal": "goal"
+  },
+  {
+    "scene": "development-72012",
+    "alive_at_event": true,
+    "fork_possible": true,
+    "terminal": "goal"
+  }
+]

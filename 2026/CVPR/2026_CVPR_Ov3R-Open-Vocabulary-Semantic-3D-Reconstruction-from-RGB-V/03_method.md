@@ -4,6 +4,8 @@
 > Evidence maturity: `FULL_TEXT_CHECKED`.
 > Analysis basis: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2026/html/Gong_Ov3R_Open-Vocabulary_Semantic_3D_Reconstruction_from_RGB_Videos_CVPR_2026_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2026/papers/Gong_Ov3R_Open-Vocabulary_Semantic_3D_Reconstruction_from_RGB_Videos_CVPR_2026_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
+> DOC-QA2 targeted source review: 2026-10-23; PDF pp. 6. 손상 구간·직접 연결된 표 분류만 원문 이미지와 대조했다. 전체 주장 정독·실험 검증·reading status 승격을 뜻하지 않는다. [URL·PDF hash·수정 기록](../../../work/sources/pdf_note_review_followup_2026-10-23.json).
+
 ## Method in One Sentence
 
 PDF body method statement (p. 5 (3.2. 2D-3D OVS), p. 3 (3. Method), p. 3 (3.1. CLIP3R), p. 5 (3.2. 2D-3D OVS), p. 4 (3.1. CLIP3R), p. 4 (3.1. CLIP3R)): Therefore, we introduce a 2D-3D fused descriptor that combines these three complementary feature types extracted from i) CLIP3R, ii) DINO, and iii) a 3D-CLIP encoder [21]: i) To capture the ...
@@ -49,7 +51,7 @@ PDF body method statement (p. 5 (3.2. 2D-3D OVS), p. 3 (3. Method), p. 3 (3.1. C
 ## Objective / Update Rule
 
 - **p. 4 / 3.1. CLIP3R - extractive body cue:** The former is similar to the loss used to supervise I2P: LL2W = L X i=1 Mi · ( ˆC · // ˆP ′ i ...
-- **p. 6 / Method - extractive body cue:** We pre-trained our 2D-3D fusion model by minimizing the sigmoid cosine similarity loss: Lsim = -1 /B/ /B/ X i /B/ X j log  ...
+- **PDF p. 6, Method / Eq. (13) (DOC-QA2 원문 대조):** 2D-3D fused descriptor와 text embedding의 pair 여부 z_ij∈{−1,+1}를 사용한 sigmoid similarity loss로 fusion model을 pretrain한다. Batch 내 모든 i,j pair를 다루며 k,b를 학습한다.
 - **p. 4 / 3.1. CLIP3R - extractive body cue:** The revised I2P network is trained endto-end through a confidence-aware loss over ground truth scene points: LI2P = L X i=1 Mi · (C · ...
 - **p. 8 / 4.5. Runtime Analysis - extractive body cue:** However, we argue that replacing SAM2 with faster variants [62] would allow Ov3R to meet real-time constraints.
 - **p. 7 / 4.2. Camera Tracking - extractive body cue:** Only VGGTSLAM achieves better results on 7Scenes, thanks to the SL(4) optimization performed outside of the model.

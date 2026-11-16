@@ -1,0 +1,134 @@
+{
+  "schema_version": 1,
+  "task_id": "GAP-REVISION-P0",
+  "updated": "2026-10-31",
+  "native_execution_verified": false,
+  "state": {
+    "local_gpu": "NOT_MET",
+    "recipe": "IMPLEMENTED_NOT_BUILT",
+    "native_probe": "IMPLEMENTED_NOT_RUN",
+    "research_effect": "UNMEASURED"
+  },
+  "sources": {
+    "resteer": {
+      "url": "https://github.com/ChenZhenY/ReSteer",
+      "revision": "7329c159319a346b7245a69c128e5d4940c0763b",
+      "lock_sha256": "6aabb7b2d4b51de3d8a4af3d08ad9f792e9d8874e00f244430bc3e1bf37b9ec8"
+    },
+    "openpi": {
+      "url": "https://github.com/Physical-Intelligence/openpi",
+      "revision": "215abfb217dbac7d5f1273282331b9b1866c0479",
+      "lock_sha256": "793488b5a55bb87200db90a61fd0af51922b686d94e1da4f4c587ab119b37d74"
+    },
+    "lerobot_revision": "0cf864870cf29f4738d3ade893e6fd13fbd7cdb5"
+  },
+  "environment": {
+    "daemon": "local unix or npipe endpoint only",
+    "platform": "linux/amd64",
+    "base_image": "ghcr.io/astral-sh/uv:0.8.22-python3.11-bookworm-slim@sha256:e59dc06793821e707e3a90234025c996eb4db2af807fdd7d9dd731d2fc678a96",
+    "uv": "0.8.22",
+    "sim_python": "3.10.18",
+    "policy_python": "3.11.13",
+    "numpy_sim": "1.22.4",
+    "mujoco": "3.2.3",
+    "robosuite": "1.4.1",
+    "bddl": "1.0.1",
+    "jax": "0.5.3 cuda12",
+    "flax": "0.10.2",
+    "torch": "2.7.1",
+    "google_crc32c": "1.7.1 via openpi lock",
+    "MUJOCO_GL": "egl",
+    "PYOPENGL_PLATFORM": "egl",
+    "NVIDIA_DRIVER_CAPABILITIES": "compute,graphics,utility",
+    "JAX_PLATFORMS": "cuda",
+    "XLA_PYTHON_CLIENT_MEM_FRACTION": "0.70",
+    "image_id": null
+  },
+  "capacity": {
+    "author_policy_memory_note": "ReSteer README estimates about 10 GB for serving; not measured here.",
+    "provisioning_target_not_tested_minimum": {
+      "gpu_vram_gib": 24,
+      "host_ram_gib": 32,
+      "free_docker_disk_gib": 80
+    },
+    "artifact_bytes": 12443349504,
+    "driver": "NVIDIA CUDA 12 and EGL capable; verify in Docker. No host driver/runtime install performed."
+  },
+  "storage": {
+    "data_volume": "paper-revision-p0-data",
+    "run_volume": "paper-revision-p0-runs",
+    "checkpoint": "/data/checkpoints/pi05_libero",
+    "OPENPI_DATA_HOME": "/data/openpi-cache",
+    "output": "/runs/<UTC-pid>",
+    "host_packages_weights_assets": false
+  },
+  "policy": {
+    "config": "pi05_libero",
+    "checkpoint_artifact_manifest": "ARTIFACTS.json",
+    "normalizer": "assets/physical-intelligence/libero/norm_stats.json",
+    "normalizer_sha256": "b3a44bb2810436fb62917decaea58bd4d9110255df527dea21e8fd40c960bd84",
+    "weight_sha256_manifest": "Computed only after Docker assets stage; currently absent",
+    "max_token_len": 200,
+    "action_horizon": 10,
+    "native_output_shape": [
+      10,
+      7
+    ],
+    "policy_rng_seed": 0,
+    "policy_rng_source": "Pinned openpi Policy defaults to jax.random.key(0); fresh server for each single probe."
+  },
+  "qualification": {
+    "case": "R8",
+    "purpose": "Transport and queued-action replacement qualification; no task-success comparison.",
+    "source_task_id": 3,
+    "target_task_id": 5,
+    "source_prompt": "put the bowl on the plate",
+    "target_prompt": "put the bowl on top of the cabinet",
+    "environment_seed": 7,
+    "warmup_steps": 10,
+    "switch_step": 2,
+    "replan_steps": 5,
+    "max_policy_steps": 7,
+    "max_inference_calls": 2,
+    "max_total_control_steps": 17,
+    "wall_time_seconds": 900,
+    "paired_state_branch": false,
+    "split": "one dev qualification only; no cal/test/holdout",
+    "observation": {
+      "images": [
+        "observation/image",
+        "observation/wrist_image"
+      ],
+      "image_shape": [
+        224,
+        224,
+        3
+      ],
+      "dtype": "uint8",
+      "state_shape": [
+        8
+      ],
+      "prompt": "str"
+    },
+    "pass_rule": "GPU-backed policy process; nonempty finite observations; two valid action replies; target query at switch step 2; executed actions match new queue after switch; no environment exception.",
+    "failure_rule": "Record exact stage and stop; no CPU/MPS fallback or extra sweep.",
+    "goal_success": "Record upstream first-hit flag as context only; neither required nor sufficient for IO qualification.",
+    "baselines": "Not a research comparison; atomic source/target are existing ReSteer tasks.",
+    "ablation": "None in P0; R1/R4 O/A and R7 remain later work.",
+    "control_hz": "Read env.control_freq at runtime; do not infer from dataset fps."
+  },
+  "not_implemented": [
+    "R1/R4 temporal constraint observer and tolerances",
+    "same-state multi-arm branch and controller/RNG restoration verification",
+    "H/S semantic updater",
+    "expanded performance study"
+  ],
+  "resume_commands": [
+    "sh \"work/research_topics/instruction_revision/재현 방법/resume.sh\" check",
+    "sh \"work/research_topics/instruction_revision/재현 방법/resume.sh\" gpu",
+    "sh \"work/research_topics/instruction_revision/재현 방법/resume.sh\" build",
+    "sh \"work/research_topics/instruction_revision/재현 방법/resume.sh\" assets",
+    "sh \"work/research_topics/instruction_revision/재현 방법/resume.sh\" smoke",
+    "sh \"work/research_topics/instruction_revision/재현 방법/resume.sh\" results"
+  ]
+}

@@ -1,0 +1,2243 @@
+{
+  "report_id": "GAP-MASTERS-SCOUT",
+  "date_kst": "2026-11-12",
+  "search_dates_kst": [
+    "2026-11-11",
+    "2026-11-12"
+  ],
+  "purpose": "VLA/Robotics master's research gap scouting; preference for RL within one VLA policy",
+  "scope": {
+    "window": [
+      2024,
+      2026
+    ],
+    "source_count": 22,
+    "already_registered": 14,
+    "discovered_not_registered": 8,
+    "official_venues_used": [
+      "CoRL",
+      "NeurIPS",
+      "ICLR",
+      "ICML",
+      "ECCV",
+      "RSS",
+      "ACL"
+    ],
+    "exhaustive_review": false,
+    "query_topics": [
+      "VLA RL post-training instruction retention and forgetting",
+      "VLA language collapse, counterfactual instruction following and semantic preservation",
+      "VLA variable control frequency, latency and continuous action representation",
+      "VLA action-history memory, temporal shortcuts and outcome progress"
+    ],
+    "discovery_policy": "Non-primary discovery pages did not establish publication status or paper claims."
+  },
+  "registry_action": "REG-R14: eight previously cited external sources registered; original scout/N1/N2 execution and review boundaries preserved.",
+  "candidates": [
+    {
+      "id": "GAP-LANGRET",
+      "rank": 1,
+      "title": "VLA 강화학습 후학습에서 지시별 행동 구분 능력의 보존 조건",
+      "status": "CURATION-HYPOTHESIS",
+      "scout_decision": "Prioritize a bounded nonexperimental N1; no method or effect claim.",
+      "decision": "After N2: scoped analysis design complete with a selected parallel categorical policy; independent method contribution unestablished; next bounded IO preparation.",
+      "sources": [
+        "S01",
+        "S02",
+        "S03",
+        "S04",
+        "S05",
+        "S06",
+        "S07",
+        "S08",
+        "S09",
+        "S10",
+        "S11",
+        "S21",
+        "S22"
+      ],
+      "critical_counterevidence": [
+        "RL's Razor",
+        "RL4VLA",
+        "Strong experience replay"
+      ],
+      "existing_overlap": [
+        "UNIFIED",
+        "GAP-RETENTION",
+        "REVISION",
+        "FEEDBACK",
+        "SET"
+      ],
+      "next": "GAP-LANGRET-P0-PREP: current local Docker check, portable source/runtime/adapter preparation, bounded IO if compatible; no automatic training.",
+      "integration_boundary": "Integrated into the existing dossier after N1, while retention before/after adaptation and the causal effect of value-gradient routing remain distinct estimands. No new independent methods topic."
+    },
+    {
+      "id": "GAP-CONTROL-INTERVAL",
+      "rank": 2,
+      "title": "실행 중 바뀌는 제어 간격에 대한 VLA 적응",
+      "status": "EXPLORATION_RESERVE",
+      "sources": [
+        "S12",
+        "S13",
+        "S14",
+        "S15",
+        "S16",
+        "S17"
+      ],
+      "decision": "Compare CAT/RTR/RTC body and code before any time-conditioning novelty claim; no E2 gate change."
+    },
+    {
+      "id": "GAP-OUTCOME-MEMORY",
+      "rank": 3,
+      "title": "실제 수행 결과에 따른 기억 갱신",
+      "status": "INTEGRATE_WITH_EXISTING_QUESTIONS",
+      "sources": [
+        "S18",
+        "S19",
+        "S20"
+      ],
+      "decision": "No independent topic at this stage; temporal shortcut and event-indexing claims directly overlap Memory Clock.",
+      "existing_overlap": [
+        "SET",
+        "FEEDBACK",
+        "GAP-MEMORY"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "S01",
+      "title": "Contrast Sets for Evaluating Language-Guided Robot Policies",
+      "year": 2024,
+      "publication_status": "CoRL",
+      "registry_id": "pr-1141",
+      "sources": [
+        "https://proceedings.mlr.press/v270/anwar25a.html"
+      ],
+      "checked_date_kst": "2026-11-12",
+      "review_level": "official_metadata_and_abstract",
+      "review_scope": "Official event CoRL 2024; proceedings published in 2025.",
+      "supported_finding": "Targeted contrast-set evaluation already exists.",
+      "interpretation_boundary": "Not evidence of post-RL retention under matched initial states."
+    },
+    {
+      "id": "S02",
+      "title": "What Can RL Bring to VLA Generalization? An Empirical Study",
+      "year": 2025,
+      "publication_status": "NeurIPS",
+      "registry_id": "pr-0956",
+      "sources": [
+        "https://proceedings.nips.cc/paper_files/paper/2025/hash/8c0fabe372177d2aded596be2d3b4544-Abstract-Conference.html",
+        "https://arxiv.org/html/2505.19789v4"
+      ],
+      "checked_date_kst": "2026-11-12",
+      "review_level": "official_abstract_and_selected_preprint_sections",
+      "review_scope": "arXiv v4 sections 4 and 5.1–5.3; not complete final-version diff.",
+      "supported_finding": "Semantic and multi-object/receptacle generalization under RL are already studied.",
+      "interpretation_boundary": "Cannot claim that RL language generalization has not been evaluated."
+    },
+    {
+      "id": "S03",
+      "title": "RL's Razor: Why Online Reinforcement Learning Forgets Less",
+      "year": 2026,
+      "publication_status": "ICLR",
+      "registry_id": "pr-1172",
+      "sources": [
+        "https://proceedings.iclr.cc/paper_files/paper/2026/hash/618c95f4557c15b253fb0e6f548ea0c0-Abstract-Conference.html",
+        "https://arxiv.org/html/2509.04259v1"
+      ],
+      "checked_date_kst": "2026-11-12",
+      "review_level": "official_abstract_and_selected_preprint_sections",
+      "review_scope": "arXiv v1 section B.2 and experiment summary; final-version differences pending.",
+      "supported_finding": "At matched acquisition RL retains prior capabilities better; robot study adapts can manipulation and evaluates drawer tasks.",
+      "interpretation_boundary": "Strong counterevidence to assumed RL forgetting; KL and RL-vs-SFT retention are not new.",
+      "registry_added_on": "2026-11-12"
+    },
+    {
+      "id": "S04",
+      "title": "Pretrained Vision-Language-Action Models are Surprisingly Resistant to Forgetting in Continual Learning",
+      "year": 2026,
+      "publication_status": "ICML",
+      "registry_id": "pr-0991",
+      "sources": [
+        "https://proceedings.mlr.press/v306/liu26bu.html"
+      ],
+      "checked_date_kst": "2026-11-12",
+      "review_level": "official_metadata_and_abstract",
+      "review_scope": "Abstract only this turn.",
+      "supported_finding": "Pretraining and simple experience replay are strong retention baselines.",
+      "interpretation_boundary": "Does not establish the outcome of our unexecuted comparison."
+    },
+    {
+      "id": "S05",
+      "title": "Breaking Lock-In: Preserving Steerability under Low-Data VLA Post-Training",
+      "year": 2026,
+      "publication_status": "arXiv",
+      "registry_id": "pr-1173",
+      "sources": [
+        "https://arxiv.org/abs/2604.23121",
+        "https://arxiv.org/html/2604.23121v1"
+      ],
+      "checked_date_kst": "2026-11-12",
+      "review_level": "abstract_and_selected_preprint_sections",
+      "review_scope": "v1 sections 3.1–3.3; official acceptance not verified.",
+      "supported_finding": "Low-data SFT lock-in, visual grounding preservation and contrastive prompt guidance are direct prior work.",
+      "interpretation_boundary": "Replacing SFT with RL does not establish an independent contribution.",
+      "registry_added_on": "2026-11-12"
+    },
+    {
+      "id": "S06",
+      "title": "TEMPO: Semantic-Action Decoupled RL Post-Training for Vision-Language-Action Models",
+      "year": 2026,
+      "publication_status": "arXiv",
+      "registry_id": "pr-1174",
+      "sources": [
+        "https://arxiv.org/abs/2608.07314",
+        "https://arxiv.org/html/2608.07314v1"
+      ],
+      "checked_date_kst": "2026-11-12",
+      "review_level": "abstract_and_selected_preprint_sections",
+      "review_scope": "v1 sections IV-A/B; official acceptance not verified.",
+      "supported_finding": "Frozen VLM with separate semantic projection/action-expert RL updates.",
+      "interpretation_boundary": "Freezing semantic modules or separate update rates is not new.",
+      "registry_added_on": "2026-11-12"
+    },
+    {
+      "id": "S07",
+      "title": "When Vision Overrides Language: Evaluating and Mitigating Counterfactual Failures in VLAs",
+      "year": 2026,
+      "publication_status": "arXiv; author-reported CoRL 2026 Spotlight unverified",
+      "registry_id": "pr-1175",
+      "sources": [
+        "https://arxiv.org/abs/2602.17659",
+        "https://vla-cf.github.io/"
+      ],
+      "checked_date_kst": "2026-11-12",
+      "review_level": "abstract_project_and_code_readme",
+      "review_scope": "Author project and code README; official venue endpoint not established.",
+      "supported_finding": "LIBERO-CF and CAG already test alternate feasible instructions and counterfactual guidance.",
+      "interpretation_boundary": "Focused suite removes a training target; do not treat it as unchanged-scene intervention.",
+      "registry_added_on": "2026-11-12"
+    },
+    {
+      "id": "S08",
+      "title": "CounterAlign: Counterfactual Supervision for Vision-Language-Action Models",
+      "year": 2026,
+      "publication_status": "CoRL (existing registry status; current official endpoint unavailable)",
+      "registry_id": "pr-1033",
+      "sources": [
+        "https://openreview.net/forum?id=AY4totylcx",
+        "https://arxiv.org/html/2608.21740v1"
+      ],
+      "checked_date_kst": "2026-11-12",
+      "review_level": "selected_preprint_sections_with_prior_registry_status",
+      "review_scope": "Official forum access failed this turn; v1 section 3 and Appendix 6 read.",
+      "supported_finding": "Instruction/action relabeling, ambiguity filtering and offline advantage-weighted policy learning are direct prior work.",
+      "interpretation_boundary": "Unmatched instructions are not automatically valid negative actions."
+    },
+    {
+      "id": "S09",
+      "title": "Restoring Linguistic Grounding in VLA Models via Train-Free Attention Recalibration",
+      "year": 2026,
+      "publication_status": "ECCV",
+      "registry_id": "pr-1155",
+      "sources": [
+        "https://link.springer.com/chapter/10.1007/978-3-032-37152-2_3"
+      ],
+      "checked_date_kst": "2026-11-12",
+      "review_level": "official_metadata_and_abstract",
+      "review_scope": "Publisher abstract read; no complete method audit.",
+      "supported_finding": "Contradictory instructions and train-free attention recalibration are already studied.",
+      "interpretation_boundary": "Not executing an impossible instruction differs from completing a different valid goal."
+    },
+    {
+      "id": "S10",
+      "title": "Embodied Interpretability: Linking Causal Understanding to Generalization in Vision-Language-Action Models",
+      "year": 2026,
+      "publication_status": "ICML",
+      "registry_id": "pr-1101",
+      "sources": [
+        "https://proceedings.mlr.press/v306/zhang26gz.html"
+      ],
+      "checked_date_kst": "2026-11-12",
+      "review_level": "official_metadata_and_abstract",
+      "review_scope": "Abstract only this turn.",
+      "supported_finding": "Visual intervention and irrelevant-region diagnostics connect interpretation to generalization.",
+      "interpretation_boundary": "Internal scores alone are not evidence of retained closed-loop behavior."
+    },
+    {
+      "id": "S11",
+      "title": "RLinf-VLA: A Unified and Efficient Framework for Reinforcement Learning of Vision-Language-Action Models",
+      "year": 2026,
+      "publication_status": "RSS",
+      "registry_id": "pr-0958",
+      "sources": [
+        "https://www.roboticsproceedings.org/rss22/p089.html"
+      ],
+      "checked_date_kst": "2026-11-12",
+      "review_level": "official_metadata_and_abstract",
+      "review_scope": "GitHub HEAD metadata additionally checked; no runtime check.",
+      "supported_finding": "Public VLA RL framework is a potential implementation starting point.",
+      "interpretation_boundary": "Availability does not prove model/backend compatibility or local GPU sufficiency."
+    },
+    {
+      "id": "S12",
+      "title": "Real-Time Execution of Action Chunking Flow Policies",
+      "year": 2025,
+      "publication_status": "NeurIPS",
+      "registry_id": "pr-1002",
+      "sources": [
+        "https://papers.nips.cc/paper_files/paper/2025/hash/300ccb2187dedd4edcc07f7e76d8e553-Abstract-Conference.html"
+      ],
+      "checked_date_kst": "2026-11-12",
+      "review_level": "official_metadata_and_abstract",
+      "review_scope": "Abstract only this turn.",
+      "supported_finding": "Asynchronous action-chunk execution already exists.",
+      "interpretation_boundary": "Not a new contribution to add an asynchronous execution wrapper."
+    },
+    {
+      "id": "S13",
+      "title": "Learning High-Frequency Continuous Action Chunks in Latent Space",
+      "year": 2026,
+      "publication_status": "ICML",
+      "registry_id": "pr-1004",
+      "sources": [
+        "https://proceedings.mlr.press/v306/wang26lj.html"
+      ],
+      "checked_date_kst": "2026-11-12",
+      "review_level": "official_metadata_and_abstract",
+      "review_scope": "RTR GitHub HEAD metadata checked; no execution.",
+      "supported_finding": "High-frequency latent chunks and reuse/refine execution are direct prior work.",
+      "interpretation_boundary": "Within-episode interval-change coverage needs body/code comparison."
+    },
+    {
+      "id": "S14",
+      "title": "Trajectory-Level Continuous Action Representation for Robotic Manipulation",
+      "year": 2026,
+      "publication_status": "ECCV",
+      "registry_id": "pr-1176",
+      "sources": [
+        "https://link.springer.com/chapter/10.1007/978-3-032-37369-4_24",
+        "https://arxiv.org/abs/2608.24111"
+      ],
+      "checked_date_kst": "2026-11-12",
+      "review_level": "official_metadata_and_abstract",
+      "review_scope": "Publisher metadata and abstract; arXiv abstract also checked.",
+      "supported_finding": "CAT represents fixed real-time trajectories with frequency-aware encoding.",
+      "interpretation_boundary": "Generic physical-time conditioning and multi-rate representation are already addressed.",
+      "registry_added_on": "2026-11-12"
+    },
+    {
+      "id": "S15",
+      "title": "PaceVLA: Adaptive Temporal Action Quantization in Vision-Language-Action Models",
+      "year": 2026,
+      "publication_status": "arXiv",
+      "registry_id": "pr-1001",
+      "sources": [
+        "https://arxiv.org/abs/2610.25961"
+      ],
+      "checked_date_kst": "2026-11-12",
+      "review_level": "arxiv_abstract",
+      "review_scope": "v2 abstract; official acceptance not verified.",
+      "supported_finding": "Adaptive coarse/fine temporal quantization is prior work.",
+      "interpretation_boundary": "Does not establish a remaining timing gap by itself."
+    },
+    {
+      "id": "S16",
+      "title": "Same Path, Less Time: Training-Free Fast Execution of Vision-Language-Action Models under Inference Latency",
+      "year": 2026,
+      "publication_status": "arXiv",
+      "registry_id": "pr-1177",
+      "sources": [
+        "https://arxiv.org/abs/2611.01390"
+      ],
+      "checked_date_kst": "2026-11-12",
+      "review_level": "arxiv_abstract",
+      "review_scope": "Submitted November 2026; abstract only; official acceptance not verified.",
+      "supported_finding": "Frozen-policy path-preserving time scaling is a strong simple alternative.",
+      "interpretation_boundary": "No real-robot or causal effect claim beyond the abstract.",
+      "registry_added_on": "2026-11-12"
+    },
+    {
+      "id": "S17",
+      "title": "LIBERO-RIG: A Hardware-Setup Robustness Benchmark for Vision-Language-Action Models",
+      "year": 2026,
+      "publication_status": "arXiv",
+      "registry_id": "pr-0984",
+      "sources": [
+        "https://arxiv.org/abs/2610.18843"
+      ],
+      "checked_date_kst": "2026-11-12",
+      "review_level": "arxiv_abstract",
+      "review_scope": "Abstract only; official acceptance not verified.",
+      "supported_finding": "Control-rate and hardware-setup robustness are already benchmarked.",
+      "interpretation_boundary": "A new set of setup perturbations alone is not an established contribution."
+    },
+    {
+      "id": "S18",
+      "title": "RoboMME: Benchmarking and Understanding Memory for Robotic Generalist Policies",
+      "year": 2026,
+      "publication_status": "ICML",
+      "registry_id": "pr-1047",
+      "sources": [
+        "https://proceedings.mlr.press/v306/dai26c.html"
+      ],
+      "checked_date_kst": "2026-11-12",
+      "review_level": "official_metadata_and_abstract",
+      "review_scope": "Abstract only this turn.",
+      "supported_finding": "Memory evaluation across task categories and policy designs already exists.",
+      "interpretation_boundary": "Generic memory augmentation/evaluation is not an uncovered gap."
+    },
+    {
+      "id": "S19",
+      "title": "ActMem-VLA: Action-History Memory with Dual-Expert Denoising for Long-Horizon Vision-Language-Action Policies",
+      "year": 2026,
+      "publication_status": "arXiv",
+      "registry_id": "pr-1178",
+      "sources": [
+        "https://arxiv.org/abs/2609.37307"
+      ],
+      "checked_date_kst": "2026-11-12",
+      "review_level": "arxiv_abstract",
+      "review_scope": "v2, October 12; official acceptance not verified.",
+      "supported_finding": "Action-history memory and dual-expert denoising are prior work.",
+      "interpretation_boundary": "Command history is not automatically proof of completed physical outcomes.",
+      "registry_added_on": "2026-11-12"
+    },
+    {
+      "id": "S20",
+      "title": "Is Your Robot's Memory Just a Clock? Temporal Shortcuts in Memory-Augmented VLA Policies",
+      "year": 2026,
+      "publication_status": "arXiv",
+      "registry_id": "pr-1179",
+      "sources": [
+        "https://arxiv.org/abs/2611.14488"
+      ],
+      "checked_date_kst": "2026-11-12",
+      "review_level": "arxiv_abstract_and_repository_metadata",
+      "review_scope": "v1 submitted November 10; full body not reviewed.",
+      "supported_finding": "Null pauses/fidgets expose phantom progress; event indexing is already proposed.",
+      "interpretation_boundary": "Do not claim temporal shortcuts or event-indexed memory as a new topic.",
+      "registry_added_on": "2026-11-12"
+    },
+    {
+      "id": "S21",
+      "title": "OpenVLA: An Open-Source Vision-Language-Action Model",
+      "year": 2024,
+      "publication_status": "CoRL",
+      "registry_id": "pr-0051",
+      "sources": [
+        "https://proceedings.mlr.press/v270/kim25c.html"
+      ],
+      "checked_date_kst": "2026-11-12",
+      "review_level": "official_metadata_and_abstract",
+      "review_scope": "Event CoRL 2024; proceedings published 2025.",
+      "supported_finding": "Public VLA foundation and fine-tuning starting point.",
+      "interpretation_boundary": "7B availability is not proof of single-GPU RL feasibility."
+    },
+    {
+      "id": "S22",
+      "title": "Stable Language Guidance for Vision–Language–Action Models",
+      "year": 2026,
+      "publication_status": "ACL",
+      "registry_id": "pr-1089",
+      "sources": [
+        "https://aclanthology.org/2026.acl-long.190/"
+      ],
+      "checked_date_kst": "2026-11-12",
+      "review_level": "official_metadata_and_abstract",
+      "review_scope": "Official Anthology abstract/metadata checked.",
+      "supported_finding": "Semantic expansion and residual steering are strong language-grounding alternatives.",
+      "interpretation_boundary": "Inference improvements do not establish post-training retention or equal inference cost."
+    }
+  ],
+  "repository_discovery_snapshots": [
+    {
+      "repository": "yuffish/VLA-CF",
+      "url": "https://github.com/yuffish/VLA-CF",
+      "default_branch": "main",
+      "head_sha": "8280a500a01f7f7d45efe202cb416ca362aa8c1a",
+      "commit_date": "2026-10-30T17:44:03Z",
+      "checked_date_kst": "2026-11-12",
+      "role": "discovery_only_not_runtime_pin",
+      "executed": false
+    },
+    {
+      "repository": "RLinf/RLinf",
+      "url": "https://github.com/RLinf/RLinf",
+      "default_branch": "main",
+      "head_sha": "8c8bba7fbe89dad5ce5597f0d9c591746462a574",
+      "commit_date": "2026-11-11T14:18:57Z",
+      "checked_date_kst": "2026-11-12",
+      "role": "discovery_only_not_runtime_pin",
+      "executed": false
+    },
+    {
+      "repository": "bennidict23/memory-clock",
+      "url": "https://github.com/bennidict23/memory-clock",
+      "default_branch": "main",
+      "head_sha": "b7842fe156fea0660c3b4e525a7d686cd04f13b2",
+      "commit_date": "2026-11-11T06:03:19Z",
+      "checked_date_kst": "2026-11-12",
+      "role": "discovery_only_not_runtime_pin",
+      "executed": false
+    },
+    {
+      "repository": "tars-robotics/RTR",
+      "url": "https://github.com/tars-robotics/RTR",
+      "default_branch": "main",
+      "head_sha": "0589f847bf4f61e1fb959f23cf3a0329de9bb9b3",
+      "commit_date": "2026-05-28T02:27:14Z",
+      "checked_date_kst": "2026-11-12",
+      "role": "discovery_only_not_runtime_pin",
+      "executed": false
+    }
+  ],
+  "verification_boundaries": {
+    "full_paper_reviews": 0,
+    "selected_preprint_body_reviews": 5,
+    "policy_inference_runs": 0,
+    "training_runs": 0,
+    "simulator_runs": 0,
+    "docker_checks": 0,
+    "host_dependency_installs": 0,
+    "pdf_downloads": 0,
+    "weights_downloads": 0,
+    "external_feedback_received": false,
+    "publication_novelty_proven": false,
+    "master_duration_or_gpu_requirement_verified": false
+  },
+  "n1_review": {
+    "id": "GAP-LANGRET-N1",
+    "date_kst": "2026-11-12",
+    "status": "DONE_NONEXPERIMENTAL_SOURCE_REVIEW",
+    "decision": "Integrate as a scoped follow-up analysis within unified_vla_rl; do not create an independent methods dossier. Preserve U1 estimand and runtime contract.",
+    "maturity": "CURATION-HYPOTHESIS",
+    "independent_method_go": false,
+    "existing_dossier_count": 11,
+    "canonical_content": "work/research_topics/unified_vla_rl/내용/README.md#langret-n1",
+    "canonical_source_review": "work/research_topics/unified_vla_rl/재현 방법/README.md#langret-source-review",
+    "direct_prior_reviews": [
+      {
+        "source_id": "S03",
+        "title": "RL's Razor",
+        "url": "https://proceedings.iclr.cc/paper_files/paper/2026/file/618c95f4557c15b253fb0e6f548ea0c0-Paper-Conference.pdf",
+        "review_scope": "Final proceedings sections 3–5, Appendix A and C.2 (printed pp.22–23); selected passages, not full proof/version audit.",
+        "finding": "Can-to-drawer robot setting persists in final version. Forward-KL empirical predictor and reverse-KL theorem have distinct directions; simplified theory does not guarantee arbitrary deep robot behavior.",
+        "code_status": "official_robot_code_not_identified",
+        "code_source": "https://jyopari.github.io/posts/rl_razor",
+        "boundary": "Third-party MNIST reproduction not substituted for robot implementation."
+      },
+      {
+        "source_id": "S05",
+        "title": "DeLock",
+        "url": "https://arxiv.org/html/2604.23121v1",
+        "review_scope": "Sections 3–4, Appendix A/C and author project page.",
+        "finding": "Direct concept/spatial lock-in, visual drift regularization, prompt guidance and frozen-visual ablation.",
+        "code_status": "author_page_coming_soon",
+        "code_source": "https://suninghuang19.github.io/delock_page/",
+        "boundary": "Algorithm text reviewed; implementation not available through inspected author link."
+      },
+      {
+        "source_id": "S06",
+        "title": "TEMPO",
+        "url": "https://arxiv.org/html/2608.07314v1",
+        "review_scope": "Sections III and IV-B, including Table IV task-set ablation.",
+        "finding": "Already varies selected training task sets 1/2/4/7/34 under five-subtask rollouts; broad goal-coverage comparison is not new.",
+        "code_status": "public_link_found_content_not_verified",
+        "code_source": "https://anonymous.4open.science/r/TEMPO-RL/README.md",
+        "access_result": "HTML application shell; attempted public metadata API returned HTTP 403. No authenticated or alternate access bypass attempted.",
+        "boundary": "Do not infer not released, verified source implementation, or exact same-scene retention coverage."
+      },
+      {
+        "source_id": "S08",
+        "title": "CounterAlign",
+        "url": "https://arxiv.org/html/2608.21740v1",
+        "review_scope": "Sections 3.2–3.3 and Appendix 2/6; author research page.",
+        "finding": "Ambiguity-aware relabeling and likelihood-free advantage-weighted flow objective. Do not treat action-vector changes as policy KL.",
+        "code_status": "author_page_coming_soon",
+        "code_source": "https://research.airoa.io/publications/counteralign/",
+        "additional_source": "https://counteralign.airoa.io/",
+        "publication_boundary": "Existing registry CoRL status preserved. OpenReview forum unavailable; API2 request HTTP403 this turn."
+      }
+    ],
+    "code_review": {
+      "repository": "yuffish/VLA-CF",
+      "commit": "8280a500a01f7f7d45efe202cb416ca362aa8c1a",
+      "tree_entries": 2016,
+      "tree_truncated": false,
+      "scope": "Read-only selected source/metadata inspection; no repository import, simulator, tensor computation or policy execution.",
+      "files": [
+        {
+          "path": "libero/libero/conditions/libero_cf_spatial.json",
+          "url": "https://raw.githubusercontent.com/yuffish/VLA-CF/8280a500a01f7f7d45efe202cb416ca362aa8c1a/libero/libero/conditions/libero_cf_spatial.json",
+          "sha256": "ace2cb36c2c5fcdd62fb0e5860248e9450344a7aa5af34b128223bc60cb53592",
+          "bytes": 3942
+        },
+        {
+          "path": "libero/libero/conditions/libero_cf_long.json",
+          "url": "https://raw.githubusercontent.com/yuffish/VLA-CF/8280a500a01f7f7d45efe202cb416ca362aa8c1a/libero/libero/conditions/libero_cf_long.json",
+          "sha256": "7f9080f1491c9a36f623d741a369de679ad6ab0e32154abe744f7625252e65c6",
+          "bytes": 1969
+        },
+        {
+          "path": "eval/main_cf.py",
+          "url": "https://raw.githubusercontent.com/yuffish/VLA-CF/8280a500a01f7f7d45efe202cb416ca362aa8c1a/eval/main_cf.py",
+          "sha256": "6df30c372b279c19f25166a35997cf8fcdbda386f215e9e540c8353e2bf55dc4",
+          "bytes": 32597
+        },
+        {
+          "path": "libero/libero/benchmark/__init__.py",
+          "url": "https://raw.githubusercontent.com/yuffish/VLA-CF/8280a500a01f7f7d45efe202cb416ca362aa8c1a/libero/libero/benchmark/__init__.py",
+          "sha256": "046447fbf29b71eaa0e0a1db8740cec7cafe3ba6f261a23011ac36b8607e1548",
+          "bytes": 7521
+        },
+        {
+          "path": "libero/libero/benchmark/libero_suite_task_map.py",
+          "url": "https://raw.githubusercontent.com/yuffish/VLA-CF/8280a500a01f7f7d45efe202cb416ca362aa8c1a/libero/libero/benchmark/libero_suite_task_map.py",
+          "sha256": "95c99383fac49d97e22f9e9d2463b8ed8463c72cc76d597891b5cb7136e4b112",
+          "bytes": 14133
+        },
+        {
+          "path": "openvla-oft-cf/serving/openvla_oft_policy.py",
+          "url": "https://raw.githubusercontent.com/yuffish/VLA-CF/8280a500a01f7f7d45efe202cb416ca362aa8c1a/openvla-oft-cf/serving/openvla_oft_policy.py",
+          "sha256": "8d7e87e10821f51a3d6ced569ca8235218d51559dde44db54b5fc62116a92c14",
+          "bytes": 12756
+        },
+        {
+          "path": "openpi-cf/scripts/serve_policy.py",
+          "url": "https://raw.githubusercontent.com/yuffish/VLA-CF/8280a500a01f7f7d45efe202cb416ca362aa8c1a/openpi-cf/scripts/serve_policy.py",
+          "sha256": "b28a45377d1def5fede376b889e544515a6f4a932dff073d411baf90e3364e37",
+          "bytes": 3945
+        },
+        {
+          "path": "libero/libero/bddl_files/libero_cf_spatial/01-pick_up_the_cookie_box_and_place_it_on_the_plate.bddl",
+          "url": "https://raw.githubusercontent.com/yuffish/VLA-CF/8280a500a01f7f7d45efe202cb416ca362aa8c1a/libero/libero/bddl_files/libero_cf_spatial/01-pick_up_the_cookie_box_and_place_it_on_the_plate.bddl",
+          "sha256": "655d071ec50a6ab44f9f2b6ccb13cfc595480219231b4af2442be848cc3955c3",
+          "bytes": 2995
+        },
+        {
+          "path": "libero/libero/bddl_files/libero_cf_long/05-put_the_yellow_and_white_mug_on_the_left_plate.bddl",
+          "url": "https://raw.githubusercontent.com/yuffish/VLA-CF/8280a500a01f7f7d45efe202cb416ca362aa8c1a/libero/libero/bddl_files/libero_cf_long/05-put_the_yellow_and_white_mug_on_the_left_plate.bddl",
+          "sha256": "0340dba844e343c3044866c38bd429c72605f330462efc1e2dc6341baadb4d2e",
+          "bytes": 2168
+        },
+        {
+          "path": "libero/libero/envs/env_wrapper.py",
+          "url": "https://raw.githubusercontent.com/yuffish/VLA-CF/8280a500a01f7f7d45efe202cb416ca362aa8c1a/libero/libero/envs/env_wrapper.py",
+          "sha256": "2f864b2922013ea67f62479aee90dbff8eb9cfa1ab775b36e121ad4b39188ef6",
+          "bytes": 12148
+        },
+        {
+          "path": "libero/libero/envs/bddl_base_domain.py",
+          "url": "https://raw.githubusercontent.com/yuffish/VLA-CF/8280a500a01f7f7d45efe202cb416ca362aa8c1a/libero/libero/envs/bddl_base_domain.py",
+          "sha256": "055836670ac5fcac7e033fc86404718fd53854996e5776b1ff68b646f7bbcc9d",
+          "bytes": 32639
+        },
+        {
+          "path": "libero/libero/envs/predicates/base_predicates.py",
+          "url": "https://raw.githubusercontent.com/yuffish/VLA-CF/8280a500a01f7f7d45efe202cb416ca362aa8c1a/libero/libero/envs/predicates/base_predicates.py",
+          "sha256": "319137e95330dbb22a266a8dceb8110f18413c2bf17461550222228c4bc310a1",
+          "bytes": 2650
+        },
+        {
+          "path": "libero/libero/envs/object_states/base_object_states.py",
+          "url": "https://raw.githubusercontent.com/yuffish/VLA-CF/8280a500a01f7f7d45efe202cb416ca362aa8c1a/libero/libero/envs/object_states/base_object_states.py",
+          "sha256": "ca6f53123336b6487bdb4feb02534ddb3a0627a4b847fe89da4460520ef01366",
+          "bytes": 8215
+        },
+        {
+          "path": "libero/libero/envs/problems/libero_tabletop_manipulation.py",
+          "url": "https://raw.githubusercontent.com/yuffish/VLA-CF/8280a500a01f7f7d45efe202cb416ca362aa8c1a/libero/libero/envs/problems/libero_tabletop_manipulation.py",
+          "sha256": "bc703aa25953b9dd61fe8f8bc43605f9f799b6b0bffb87de3e0afe93da91c7d2",
+          "bytes": 9373
+        },
+        {
+          "path": "libero/libero/envs/problems/libero_living_room_tabletop_manipulation.py",
+          "url": "https://raw.githubusercontent.com/yuffish/VLA-CF/8280a500a01f7f7d45efe202cb416ca362aa8c1a/libero/libero/envs/problems/libero_living_room_tabletop_manipulation.py",
+          "sha256": "0dab21865c1e297798e573e000fff5537fa2f51b9fd6d19dae65c5e1e8c8208c",
+          "bytes": 9816
+        },
+        {
+          "path": "openpi-cf/src/openpi/training/config.py",
+          "url": "https://raw.githubusercontent.com/yuffish/VLA-CF/8280a500a01f7f7d45efe202cb416ca362aa8c1a/openpi-cf/src/openpi/training/config.py",
+          "sha256": "f4a66e45215dacce5862af909d2365f05aed540a12416b0730fe36fc4ef539a9",
+          "bytes": 47258
+        },
+        {
+          "path": "openpi-cf/src/openpi/policies/libero_policy.py",
+          "url": "https://raw.githubusercontent.com/yuffish/VLA-CF/8280a500a01f7f7d45efe202cb416ca362aa8c1a/openpi-cf/src/openpi/policies/libero_policy.py",
+          "sha256": "ad01e5be74516d9ec9aeb1f76294d5c9f7f7179a60f1f7fbbb35e7646534f81a",
+          "bytes": 4320
+        },
+        {
+          "path": "openpi-cf/src/openpi/policies/policy_config.py",
+          "url": "https://raw.githubusercontent.com/yuffish/VLA-CF/8280a500a01f7f7d45efe202cb416ca362aa8c1a/openpi-cf/src/openpi/policies/policy_config.py",
+          "sha256": "0c4a50add1b62958c155321896586bbddf082f722d48dc256c13ff16d54a2001",
+          "bytes": 4051
+        },
+        {
+          "path": "openpi-cf/src/openpi/policies/policy.py",
+          "url": "https://raw.githubusercontent.com/yuffish/VLA-CF/8280a500a01f7f7d45efe202cb416ca362aa8c1a/openpi-cf/src/openpi/policies/policy.py",
+          "sha256": "a2ac5236e23b11d0f5a840d4a8fef148d89dba921d5452ec5dfcd5a6ffa46f20",
+          "bytes": 5344
+        }
+      ],
+      "pairs": [
+        {
+          "pair_id": "OBJ-01",
+          "suite": "libero_cf_spatial",
+          "bddl_path": "libero/libero/bddl_files/libero_cf_spatial/01-pick_up_the_cookie_box_and_place_it_on_the_plate.bddl",
+          "prompts": [
+            "pick up the cookie box and place it on the plate",
+            "pick up the ramekin and place it on the plate"
+          ],
+          "prompt_provenance": "Researcher-defined paired prompts using declared objects/regions; default runner executes one file-derived prompt.",
+          "target_conditions": [
+            "on cookies_1 plate_1",
+            "on glazed_rim_porcelain_ramekin_1 plate_1"
+          ],
+          "declared_goal": [
+            [
+              "And",
+              [
+                "On",
+                "akita_black_bowl_1",
+                "plate_1"
+              ]
+            ]
+          ],
+          "objects": [
+            "akita_black_bowl_1",
+            "akita_black_bowl_2",
+            "-",
+            "akita_black_bowl",
+            "cookies_1",
+            "-",
+            "cookies",
+            "glazed_rim_porcelain_ramekin_1",
+            "-",
+            "glazed_rim_porcelain_ramekin",
+            "plate_1",
+            "-",
+            "plate"
+          ],
+          "init_declarations": [
+            [
+              "On",
+              "akita_black_bowl_1",
+              "main_table_between_plate_ramekin_region"
+            ],
+            [
+              "On",
+              "akita_black_bowl_2",
+              "main_table_next_to_ramekin_region"
+            ],
+            [
+              "On",
+              "plate_1",
+              "main_table_plate_region"
+            ],
+            [
+              "On",
+              "cookies_1",
+              "main_table_box_region"
+            ],
+            [
+              "On",
+              "glazed_rim_porcelain_ramekin_1",
+              "main_table_ramekin_region"
+            ],
+            [
+              "On",
+              "wooden_cabinet_1",
+              "main_table_cabinet_region"
+            ],
+            [
+              "On",
+              "flat_stove_1",
+              "main_table_stove_region"
+            ]
+          ],
+          "conditions_file": "libero/libero/conditions/libero_cf_spatial.json",
+          "init_metadata": {
+            "path": "libero/libero/init_files/libero_cf_spatial/01-pick_up_the_cookie_box_and_place_it_on_the_plate.pruned_init",
+            "git_blob_sha1": "543deb5f5c1d2ca29426a7b77964c9273f71197d",
+            "declared_bytes": 44271,
+            "payload_downloaded": false,
+            "row_count": null,
+            "row_hash": null
+          },
+          "static_checks": {
+            "objects_referenced_exist": [
+              true,
+              true
+            ],
+            "targets_in_condition_list": [
+              true,
+              true
+            ],
+            "same_bddl_for_both_prompts_by_design": true
+          },
+          "physical_feasibility": "UNVERIFIED",
+          "base_policy_competence": "UNVERIFIED",
+          "paired_native_rollouts": 0
+        },
+        {
+          "pair_id": "DEST-05",
+          "suite": "libero_cf_long",
+          "bddl_path": "libero/libero/bddl_files/libero_cf_long/05-put_the_yellow_and_white_mug_on_the_left_plate.bddl",
+          "prompts": [
+            "put the yellow and white mug on the left plate",
+            "put the yellow and white mug on the right plate"
+          ],
+          "prompt_provenance": "Researcher-defined paired prompts using declared objects/regions; default runner executes one file-derived prompt.",
+          "target_conditions": [
+            "on white_yellow_mug_1 plate_1",
+            "on white_yellow_mug_1 plate_2"
+          ],
+          "declared_goal": [
+            [
+              "And",
+              [
+                "On",
+                "porcelain_mug_1",
+                "plate_1"
+              ],
+              [
+                "On",
+                "white_yellow_mug_1",
+                "plate_2"
+              ]
+            ]
+          ],
+          "objects": [
+            "porcelain_mug_1",
+            "-",
+            "porcelain_mug",
+            "red_coffee_mug_1",
+            "-",
+            "red_coffee_mug",
+            "white_yellow_mug_1",
+            "-",
+            "white_yellow_mug",
+            "plate_1",
+            "plate_2",
+            "-",
+            "plate"
+          ],
+          "init_declarations": [
+            [
+              "On",
+              "plate_1",
+              "living_room_table_plate_left_region"
+            ],
+            [
+              "On",
+              "plate_2",
+              "living_room_table_plate_right_region"
+            ],
+            [
+              "On",
+              "red_coffee_mug_1",
+              "living_room_table_red_coffee_mug_init_region"
+            ],
+            [
+              "On",
+              "white_yellow_mug_1",
+              "living_room_table_white_yellow_mug_init_region"
+            ],
+            [
+              "On",
+              "porcelain_mug_1",
+              "living_room_table_porcelain_mug_init_region"
+            ]
+          ],
+          "conditions_file": "libero/libero/conditions/libero_cf_long.json",
+          "init_metadata": {
+            "path": "libero/libero/init_files/libero_cf_long/05-put_the_yellow_and_white_mug_on_the_left_plate.pruned_init",
+            "git_blob_sha1": "0c78a021a8a4be6bd9b7670064fa4437f829a9b7",
+            "declared_bytes": 41775,
+            "payload_downloaded": false,
+            "row_count": null,
+            "row_hash": null
+          },
+          "static_checks": {
+            "objects_referenced_exist": [
+              true,
+              true
+            ],
+            "targets_in_condition_list": [
+              true,
+              true
+            ],
+            "same_bddl_for_both_prompts_by_design": true
+          },
+          "physical_feasibility": "UNVERIFIED",
+          "base_policy_competence": "UNVERIFIED",
+          "paired_native_rollouts": 0
+        }
+      ],
+      "findings": [
+        "File-derived task description supplies one prompt; conditions do not automatically create paired policy rollouts.",
+        "Both selected BDDL default goals differ from the counterfactual prompt.",
+        "Custom OR success overrides default conjunction, and eval increments aggregate success on any done.",
+        "Target-specific singleton condition can be evaluated separately from all-goal diagnostics; runtime calibration pending.",
+        "On predicate uses height/contact/XY proximity, not release/stable placement.",
+        "Init blob metadata does not verify payload rows, equal full state, renderer visibility, feasibility or initial competence."
+      ]
+    },
+    "model_interface_review": {
+      "oft": {
+        "id": "moojink/openvla-7b-oft-finetuned-libero-spatial-object-goal-10",
+        "sha": "638918f3d1c2e43a39a8a20772bdb8b91835e4b7",
+        "lastModified": "2025-06-17T22:34:22.000Z",
+        "gated": false,
+        "private": false,
+        "pipeline_tag": "robotics",
+        "files": [
+          ".gitattributes",
+          "README.md",
+          "action_head--300000_checkpoint.pt",
+          "added_tokens.json",
+          "config.json",
+          "configuration_prismatic.py",
+          "dataset_statistics.json",
+          "generation_config.json",
+          "lora_adapter/README.md",
+          "lora_adapter/adapter_config.json",
+          "lora_adapter/adapter_model.safetensors",
+          "model-00001-of-00004.safetensors",
+          "model-00002-of-00004.safetensors",
+          "model-00003-of-00004.safetensors",
+          "model-00004-of-00004.safetensors",
+          "model.safetensors.index.json",
+          "modeling_prismatic.py",
+          "preprocessor_config.json",
+          "processing_prismatic.py",
+          "processor_config.json",
+          "proprio_projector--300000_checkpoint.pt",
+          "special_tokens_map.json",
+          "tokenizer.json",
+          "tokenizer.model",
+          "tokenizer_config.json"
+        ],
+        "small_metadata_sources": [
+          {
+            "url": "https://huggingface.co/moojink/openvla-7b-oft-finetuned-libero-spatial-object-goal-10/resolve/638918f3d1c2e43a39a8a20772bdb8b91835e4b7/config.json",
+            "sha256": "edd5c5cf6d7927e07465cf086ebe41f7b3ec8f3b128a51f71d6db14dad7ad8b1",
+            "bytes": 60712
+          },
+          {
+            "url": "https://huggingface.co/moojink/openvla-7b-oft-finetuned-libero-spatial-object-goal-10/resolve/638918f3d1c2e43a39a8a20772bdb8b91835e4b7/dataset_statistics.json",
+            "sha256": "6ec6ef68d0d5bae4cb5f9fc9acb715a22b9f4545e9e9b300d0d88695cd7afec3",
+            "bytes": 11871
+          }
+        ],
+        "default_head": "L1 regression; use_diffusion false",
+        "inputs": "two RGB images, 8D proprioception, prompt",
+        "normalizer_keys_confirmed": [
+          "libero_spatial_no_noops",
+          "libero_10_no_noops"
+        ],
+        "weights_downloaded": false,
+        "action_head_downloaded": false,
+        "payload_verified": false,
+        "policy_kl_supported_by_default_head": false,
+        "boundary": "Available intermediate logits are not automatically probabilities of executed continuous actions; fail rather than silent first-key normalizer fallback in a future comparison."
+      },
+      "pi05": {
+        "config": "pi05_libero",
+        "checkpoint_uri": "gs://openpi-assets/checkpoints/pi05_libero",
+        "source_action_horizon": 10,
+        "output_dimensions": 7,
+        "inputs": "two RGB images, 8D state, prompt",
+        "normalizer_source": "checkpoint/assets with data_config.asset_id",
+        "payload_verified": false,
+        "exact_action_likelihood_verified": false,
+        "boundary": "Flow/denoising drift loss is not an exact normalized action-distribution KL."
+      },
+      "existing_unified": {
+        "policy": "RL4VLA autoregressive OpenVLA",
+        "environment": "ManiSkill",
+        "runtime_files_changed": false,
+        "boundary": "No assumption of LIBERO-CF or OFT/flow compatibility."
+      }
+    },
+    "next": {
+      "id": "GAP-LANGRET-N2",
+      "status": "READY_NONEXPERIMENTAL",
+      "scope": [
+        "Select a supported policy/measurement route; preserve the distinction between AR KL, flow drift and OFT regression.",
+        "Specify target reward/termination, wrong-goal/recovery and evaluation time.",
+        "Specify initial-competence screening, acquisition/retention split, cost and simple baselines before a new runtime contract."
+      ],
+      "automatic_experiment": false
+    },
+    "actual_execution": {
+      "docker_checks": 0,
+      "simulator_runs": 0,
+      "policy_queries": 0,
+      "training_updates": 0,
+      "weights_or_init_payload_downloads": 0,
+      "local_pdf_cache_downloads": 0,
+      "dependency_installs": 0,
+      "external_feedback_received": false
+    },
+    "validation": {
+      "status": "passed",
+      "date_kst": "2026-11-12",
+      "scope": "GAP-LANGRET-N1 source review and documentation; not runtime or policy validation.",
+      "commands": [
+        {
+          "command": "PYTHONPYCACHEPREFIX=/tmp/paper_registry_pycache python3 -m py_compile work/scripts/build_reading_tiers.py",
+          "exit_code": 0
+        },
+        {
+          "command": "python3 -B work/scripts/build_reading_tiers.py",
+          "exit_code": 0
+        },
+        {
+          "command": "git diff --check",
+          "exit_code": 0
+        },
+        {
+          "command": "python3 -B work/scripts/audit_repository.py",
+          "exit_code": 0
+        }
+      ],
+      "audit": {
+        "papers": 1171,
+        "tier_counts": {
+          "CORE": 47,
+          "NEXT": 380,
+          "REFERENCE": 502,
+          "ARCHIVE": 242
+        },
+        "standard_note_files": 5855,
+        "intensive": 427,
+        "inactive_reading_history": 47,
+        "markdown_files_checked": 6079,
+        "markdown_links_checked": 12987,
+        "errors": [],
+        "warnings": []
+      },
+      "preservation": {
+        "canonical_registry_and_paper_index_sha256_unchanged": true,
+        "reading_tiers_active_status_and_history_sha256_unchanged": true,
+        "all_existing_per_paper_notes_and_runtime_files_sha256_unchanged": true,
+        "preexisting_staged_binary_diff_unchanged": true
+      },
+      "modified_existing_files": [
+        "README.md",
+        "TODO.md",
+        "synthesis/04_vla_generalist.md",
+        "synthesis/README.md",
+        "work/research_topics/README.md",
+        "work/research_topics/unified_vla_rl/내용/README.md",
+        "work/research_topics/unified_vla_rl/재현 방법/README.md",
+        "work/sources/vla_masters_gap_scout_2026-11-12.json",
+        "work/update/README.md",
+        "work/update/VLA_MASTERS_GAP_SCOUT_2026-11-12.md"
+      ],
+      "added_files": [],
+      "deleted_files": []
+    }
+  },
+  "validation": {
+    "status": "passed",
+    "scope": "Earlier GAP-MASTERS-SCOUT validation; see n1_review.validation for the subsequent N1 review.",
+    "date_kst": "2026-11-12",
+    "commands": [
+      {
+        "command": "PYTHONPYCACHEPREFIX=/tmp/paper_registry_pycache python3 -m py_compile work/scripts/build_reading_tiers.py",
+        "exit_code": 0
+      },
+      {
+        "command": "python3 -B work/scripts/build_reading_tiers.py",
+        "exit_code": 0
+      },
+      {
+        "command": "git diff --check",
+        "exit_code": 0
+      },
+      {
+        "command": "python3 -B work/scripts/audit_repository.py",
+        "exit_code": 0
+      }
+    ],
+    "audit": {
+      "papers": 1171,
+      "standard_note_files": 5855,
+      "intensive": 427,
+      "inactive_reading_history": 47,
+      "markdown_files_checked": 6079,
+      "markdown_links_checked": 12972,
+      "errors": [],
+      "warnings": []
+    },
+    "preservation": {
+      "canonical_registry_and_paper_index_sha256_unchanged": true,
+      "reading_tiers_active_status_and_history_sha256_unchanged": true,
+      "all_existing_per_paper_notes_and_runtime_files_sha256_unchanged": true,
+      "preexisting_staged_binary_diff_unchanged": true,
+      "deleted_files": []
+    },
+    "modified_existing_files": [
+      "TODO.md",
+      "README.md",
+      "research/READING_PLAN.md",
+      "synthesis/04_vla_generalist.md",
+      "synthesis/README.md",
+      "work/research_topics/README.md",
+      "work/update/README.md"
+    ],
+    "added_files": [
+      "work/update/VLA_MASTERS_GAP_SCOUT_2026-11-12.md",
+      "work/sources/vla_masters_gap_scout_2026-11-12.json"
+    ],
+    "generated_view_note": "READING_PLAN regenerated by required maintenance command; tier membership unchanged."
+  },
+  "n2_review": {
+    "id": "GAP-LANGRET-N2",
+    "date_kst": "2026-11-12",
+    "status": "NONEXPERIMENTAL_DESIGN_DONE",
+    "maturity": "CURATION-HYPOTHESIS",
+    "independent_method_go": false,
+    "decision": "Continue scoped retention analysis inside unified_vla_rl; prepare bounded native IO next. Existing U1 value-routing estimator and runtime remain unchanged.",
+    "canonical_design": "work/research_topics/unified_vla_rl/내용/README.md#langret-n2",
+    "canonical_interface": "work/research_topics/unified_vla_rl/재현 방법/README.md#langret-n2-interface",
+    "paper_review": {
+      "title": "SimpleVLA-RL: Scaling VLA Training via Reinforcement Learning",
+      "registry_id": "pr-0957",
+      "venue": "ICLR 2026",
+      "official_url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/cbfbcb4da14235bd69b134070898ae9d-Abstract-Conference.html",
+      "final_text_url": "https://proceedings.iclr.cc/paper_files/paper/2026/file/cbfbcb4da14235bd69b134070898ae9d-Paper-Conference.pdf",
+      "reviewed_sections": [
+        "2.1",
+        "2.3",
+        "2.4",
+        "3.1",
+        "G.2",
+        "G.3"
+      ],
+      "finding": "Uses a parallel discrete action-token implementation and its own SFT checkpoints, unlike official OFT MLP/L1; published full-parameter training used 8 A800 80GB GPUs.",
+      "boundary": "Selected final-text review, not reproduced results; no local PDF cache. A requested arXiv v2 URL returned 404; used official final paper."
+    },
+    "source_review": {
+      "files": [
+        {
+          "repo": "PRIME-RL/SimpleVLA-RL",
+          "revision": "7c51662df27b586f9e8a1ab35fcf849f2b8852f9",
+          "path": "README.md",
+          "url": "https://raw.githubusercontent.com/PRIME-RL/SimpleVLA-RL/7c51662df27b586f9e8a1ab35fcf849f2b8852f9/README.md",
+          "sha256": "683404be7b360c65e24964ba2cbeb3312724600815ff586abf836fa1de24d4d8",
+          "bytes": 10690,
+          "review_scope": "selected sections; not full-file or runtime verification"
+        },
+        {
+          "repo": "PRIME-RL/SimpleVLA-RL",
+          "revision": "7c51662df27b586f9e8a1ab35fcf849f2b8852f9",
+          "path": "examples/run_openvla_oft_rl_libero.sh",
+          "url": "https://raw.githubusercontent.com/PRIME-RL/SimpleVLA-RL/7c51662df27b586f9e8a1ab35fcf849f2b8852f9/examples/run_openvla_oft_rl_libero.sh",
+          "sha256": "f6258665739cdd84b5b892e66957713c7d87fb4a3fb8a8023f218303e41b59bd",
+          "bytes": 4250,
+          "review_scope": "selected sections; not full-file or runtime verification"
+        },
+        {
+          "repo": "PRIME-RL/SimpleVLA-RL",
+          "revision": "7c51662df27b586f9e8a1ab35fcf849f2b8852f9",
+          "path": "verl/utils/vla_utils/openvla/modeling_prismatic.py",
+          "url": "https://raw.githubusercontent.com/PRIME-RL/SimpleVLA-RL/7c51662df27b586f9e8a1ab35fcf849f2b8852f9/verl/utils/vla_utils/openvla/modeling_prismatic.py",
+          "sha256": "70fdd997beff79502380efdbadb9c23915ae7d6d486d6d9332bc3e3362c4cea2",
+          "bytes": 26071,
+          "review_scope": "discovery/context only; no detailed implementation conclusion"
+        },
+        {
+          "repo": "PRIME-RL/SimpleVLA-RL",
+          "revision": "7c51662df27b586f9e8a1ab35fcf849f2b8852f9",
+          "path": "verl/utils/vla_utils/openvla_oft/modeling_prismatic.py",
+          "url": "https://raw.githubusercontent.com/PRIME-RL/SimpleVLA-RL/7c51662df27b586f9e8a1ab35fcf849f2b8852f9/verl/utils/vla_utils/openvla_oft/modeling_prismatic.py",
+          "sha256": "f0a30f5af9b9c7c0ab55cbeaec1d38c0fc268b93a893252647d5fb4b0d34c2bb",
+          "bytes": 89776,
+          "review_scope": "selected sections; not full-file or runtime verification"
+        },
+        {
+          "repo": "PRIME-RL/SimpleVLA-RL",
+          "revision": "7c51662df27b586f9e8a1ab35fcf849f2b8852f9",
+          "path": "verl/workers/actor/dp_actor.py",
+          "url": "https://raw.githubusercontent.com/PRIME-RL/SimpleVLA-RL/7c51662df27b586f9e8a1ab35fcf849f2b8852f9/verl/workers/actor/dp_actor.py",
+          "sha256": "c1dd72ddc2fe17edfa01dd5dd98a84b0cbf3a46ec37248b8f307560cede7c6ac",
+          "bytes": 21167,
+          "review_scope": "selected sections; not full-file or runtime verification"
+        },
+        {
+          "repo": "PRIME-RL/SimpleVLA-RL",
+          "revision": "7c51662df27b586f9e8a1ab35fcf849f2b8852f9",
+          "path": "verl/utils/openvla_utils.py",
+          "url": "https://raw.githubusercontent.com/PRIME-RL/SimpleVLA-RL/7c51662df27b586f9e8a1ab35fcf849f2b8852f9/verl/utils/openvla_utils.py",
+          "sha256": "27ce1f67704f2cbdbbc5cc8a5e39d908ffea1804f64e39219a9a51185c6e62fe",
+          "bytes": 6454,
+          "review_scope": "selected sections; not full-file or runtime verification"
+        },
+        {
+          "repo": "openvla/openvla",
+          "revision": "c8f03f48af692657d3060c19588038c7220e9af9",
+          "path": "experiments/robot/libero/run_libero_eval.py",
+          "url": "https://raw.githubusercontent.com/openvla/openvla/c8f03f48af692657d3060c19588038c7220e9af9/experiments/robot/libero/run_libero_eval.py",
+          "sha256": "369d9fc3d59067998ebfadafbd516872c7ff6f9f06a0a48cda8b6ca48051de77",
+          "bytes": 11936,
+          "review_scope": "discovery/context only; no detailed implementation conclusion"
+        },
+        {
+          "repo": "openvla/openvla",
+          "revision": "c8f03f48af692657d3060c19588038c7220e9af9",
+          "path": "experiments/robot/openvla_utils.py",
+          "url": "https://raw.githubusercontent.com/openvla/openvla/c8f03f48af692657d3060c19588038c7220e9af9/experiments/robot/openvla_utils.py",
+          "sha256": "72a1a382172c67068c96f47d1c2d8f16925d2e0deda9c745829a7f2ee6b1c865",
+          "bytes": 6638,
+          "review_scope": "discovery/context only; no detailed implementation conclusion"
+        },
+        {
+          "repo": "openvla/openvla",
+          "revision": "c8f03f48af692657d3060c19588038c7220e9af9",
+          "path": "README.md",
+          "url": "https://raw.githubusercontent.com/openvla/openvla/c8f03f48af692657d3060c19588038c7220e9af9/README.md",
+          "sha256": "ba8e9a2884e38a8000dafc98af4116512e37b0e143dad2f940100482bfd6b75c",
+          "bytes": 38458,
+          "review_scope": "discovery/context only; no detailed implementation conclusion"
+        },
+        {
+          "repo": "PRIME-RL/SimpleVLA-RL",
+          "revision": "7c51662df27b586f9e8a1ab35fcf849f2b8852f9",
+          "path": "verl/workers/actor/dp_rob.py",
+          "url": "https://raw.githubusercontent.com/PRIME-RL/SimpleVLA-RL/7c51662df27b586f9e8a1ab35fcf849f2b8852f9/verl/workers/actor/dp_rob.py",
+          "sha256": "3976bd3a0fffa68738ed9a7a466fea850055dde0c83e4ab2b61f2d7457f3bb72",
+          "bytes": 30428,
+          "review_scope": "selected sections; not full-file or runtime verification"
+        },
+        {
+          "repo": "PRIME-RL/SimpleVLA-RL",
+          "revision": "7c51662df27b586f9e8a1ab35fcf849f2b8852f9",
+          "path": "verl/workers/rollout/rob_rollout.py",
+          "url": "https://raw.githubusercontent.com/PRIME-RL/SimpleVLA-RL/7c51662df27b586f9e8a1ab35fcf849f2b8852f9/verl/workers/rollout/rob_rollout.py",
+          "sha256": "68066df52b14abf3cf9630c06acf1fea781c6b536ff428d8d22b5c10a2fc97a9",
+          "bytes": 45968,
+          "review_scope": "selected sections; not full-file or runtime verification"
+        },
+        {
+          "repo": "PRIME-RL/SimpleVLA-RL",
+          "revision": "7c51662df27b586f9e8a1ab35fcf849f2b8852f9",
+          "path": "verl/trainer/config/ppo_trainer.yaml",
+          "url": "https://raw.githubusercontent.com/PRIME-RL/SimpleVLA-RL/7c51662df27b586f9e8a1ab35fcf849f2b8852f9/verl/trainer/config/ppo_trainer.yaml",
+          "sha256": "a203d114217f2ba9d3a76071a3bc2e924cc099bc7d172a518acdb6e285796065",
+          "bytes": 9608,
+          "review_scope": "selected sections; not full-file or runtime verification"
+        },
+        {
+          "repo": "PRIME-RL/SimpleVLA-RL",
+          "revision": "7c51662df27b586f9e8a1ab35fcf849f2b8852f9",
+          "path": "verl/utils/vla_utils/openvla_oft/constants.py",
+          "url": "https://raw.githubusercontent.com/PRIME-RL/SimpleVLA-RL/7c51662df27b586f9e8a1ab35fcf849f2b8852f9/verl/utils/vla_utils/openvla_oft/constants.py",
+          "sha256": "8380f8bbdcd6ef2dc36b4efb9f8c7f27cb45d564207e30a88d42376c5e7e5792",
+          "bytes": 4303,
+          "review_scope": "selected sections; not full-file or runtime verification"
+        },
+        {
+          "repo": "PRIME-RL/SimpleVLA-RL",
+          "revision": "7c51662df27b586f9e8a1ab35fcf849f2b8852f9",
+          "path": "examples/overwrite_vla_ckpt_utils.sh",
+          "url": "https://raw.githubusercontent.com/PRIME-RL/SimpleVLA-RL/7c51662df27b586f9e8a1ab35fcf849f2b8852f9/examples/overwrite_vla_ckpt_utils.sh",
+          "sha256": "7e014b1b5ea169286c34812319413100fb61a9fc089f02b5a53c291090ae4ad4",
+          "bytes": 1305,
+          "review_scope": "selected sections; not full-file or runtime verification"
+        },
+        {
+          "repo": "PRIME-RL/SimpleVLA-RL",
+          "revision": "7c51662df27b586f9e8a1ab35fcf849f2b8852f9",
+          "path": "verl/utils/libero_utils.py",
+          "url": "https://raw.githubusercontent.com/PRIME-RL/SimpleVLA-RL/7c51662df27b586f9e8a1ab35fcf849f2b8852f9/verl/utils/libero_utils.py",
+          "sha256": "58017f31960ae8e88d02d4d51555a3d5128dc9fc0bf87f6347f07ca0c282dcca",
+          "bytes": 8690,
+          "review_scope": "discovery/context only; no detailed implementation conclusion"
+        },
+        {
+          "repo": "RLinf/RLinf",
+          "revision": "e6b6b66ad2dc4cc7ae26ca7b0dcd7287f5dcced6",
+          "path": "rlinf/models/embodiment/openvla_oft/rlinf/openvla_oft_action_model.py",
+          "url": "https://raw.githubusercontent.com/RLinf/RLinf/e6b6b66ad2dc4cc7ae26ca7b0dcd7287f5dcced6/rlinf/models/embodiment/openvla_oft/rlinf/openvla_oft_action_model.py",
+          "sha256": "22a5b7864bc125bb8ca757b1ed14e901972eea96ab243e9b5d663f61b3f219e9",
+          "bytes": 22318,
+          "review_scope": "discovery/context only; no detailed implementation conclusion"
+        },
+        {
+          "repo": "RLinf/RLinf",
+          "revision": "e6b6b66ad2dc4cc7ae26ca7b0dcd7287f5dcced6",
+          "path": "examples/embodiment/config/libero_spatial_grpo_openvlaoft.yaml",
+          "url": "https://raw.githubusercontent.com/RLinf/RLinf/e6b6b66ad2dc4cc7ae26ca7b0dcd7287f5dcced6/examples/embodiment/config/libero_spatial_grpo_openvlaoft.yaml",
+          "sha256": "2fe55ee330ad6fa40987a32b31921e9607d2fec0fe8b909675804a0defea6adf",
+          "bytes": 3547,
+          "review_scope": "discovery/context only; no detailed implementation conclusion"
+        },
+        {
+          "repo": "RLinf/RLinf",
+          "revision": "e6b6b66ad2dc4cc7ae26ca7b0dcd7287f5dcced6",
+          "path": "examples/embodiment/config/model/openvla_oft.yaml",
+          "url": "https://raw.githubusercontent.com/RLinf/RLinf/e6b6b66ad2dc4cc7ae26ca7b0dcd7287f5dcced6/examples/embodiment/config/model/openvla_oft.yaml",
+          "sha256": "68c1268625e810f6cf0c4960064a4b8cbe8df0cb1414df6cb8102f362562b68c",
+          "bytes": 1050,
+          "review_scope": "discovery/context only; no detailed implementation conclusion"
+        },
+        {
+          "repo": "PRIME-RL/SimpleVLA-RL",
+          "revision": "7c51662df27b586f9e8a1ab35fcf849f2b8852f9",
+          "path": "verl/workers/fsdp_workers.py",
+          "url": "https://raw.githubusercontent.com/PRIME-RL/SimpleVLA-RL/7c51662df27b586f9e8a1ab35fcf849f2b8852f9/verl/workers/fsdp_workers.py",
+          "sha256": "832183fe5fd57d8339d04dfce3b5d98f003ea2fa5515f0155dabde46233f7b86",
+          "bytes": 86139,
+          "review_scope": "selected sections; not full-file or runtime verification"
+        },
+        {
+          "repo": "PRIME-RL/SimpleVLA-RL",
+          "revision": "7c51662df27b586f9e8a1ab35fcf849f2b8852f9",
+          "path": "verl/trainer/ppo/ray_trainer.py",
+          "url": "https://raw.githubusercontent.com/PRIME-RL/SimpleVLA-RL/7c51662df27b586f9e8a1ab35fcf849f2b8852f9/verl/trainer/ppo/ray_trainer.py",
+          "sha256": "5e0299356ec88f27c2d16fc0d936b1515ff490ed8ab92398efa8242c0edac63f",
+          "bytes": 42835,
+          "review_scope": "selected sections; not full-file or runtime verification"
+        },
+        {
+          "repo": "PRIME-RL/SimpleVLA-RL",
+          "revision": "7c51662df27b586f9e8a1ab35fcf849f2b8852f9",
+          "path": "verl/trainer/ppo/core_algos.py",
+          "url": "https://raw.githubusercontent.com/PRIME-RL/SimpleVLA-RL/7c51662df27b586f9e8a1ab35fcf849f2b8852f9/verl/trainer/ppo/core_algos.py",
+          "sha256": "2657f58699570b281419f3a3c6504f3e6e99ba79c8417f7d090a0376fa8ffac5",
+          "bytes": 16064,
+          "review_scope": "selected sections; not full-file or runtime verification"
+        }
+      ],
+      "code_imported_or_executed": false,
+      "selected_repo": "PRIME-RL/SimpleVLA-RL",
+      "selected_revision": "7c51662df27b586f9e8a1ab35fcf849f2b8852f9",
+      "selected_tree_entries": 326,
+      "selected_tree_truncated": false,
+      "alternative_discovery": [
+        {
+          "repo": "RLinf/RLinf",
+          "revision": "e6b6b66ad2dc4cc7ae26ca7b0dcd7287f5dcced6",
+          "tree_entries": 2740,
+          "scope": "official docs/tree/config discovery; not selected runtime"
+        },
+        {
+          "repo": "openvla/openvla",
+          "revision": "c8f03f48af692657d3060c19588038c7220e9af9",
+          "tree_entries": 138,
+          "scope": "official repository/tree/evaluation source discovery; not selected runtime"
+        }
+      ],
+      "commit_verified_url": "https://api.github.com/repos/PRIME-RL/SimpleVLA-RL/commits/main",
+      "selected_commit_tree_sha": "6ae99e314df0bf34c6fb2f26a7cb59f1f7dcf720"
+    },
+    "checkpoint": {
+      "id": "Haozhan72/Openvla-oft-SFT-libero-spatial-trajall",
+      "revision": "0a051b39aaebd3fc509fe2aba8bc7e60100e09f5",
+      "public": true,
+      "gated": false,
+      "model_card_available": false,
+      "metadata_files": [
+        {
+          "url": "https://huggingface.co/Haozhan72/Openvla-oft-SFT-libero-spatial-trajall/resolve/0a051b39aaebd3fc509fe2aba8bc7e60100e09f5/config.json",
+          "path": "config.json",
+          "sha256": "50b4e1506e1fdcd223c2197ff5feead8b8a02303e4b1e11f05ad894c599322da",
+          "bytes": 60782
+        },
+        {
+          "url": "https://huggingface.co/Haozhan72/Openvla-oft-SFT-libero-spatial-trajall/resolve/0a051b39aaebd3fc509fe2aba8bc7e60100e09f5/dataset_statistics.json",
+          "path": "dataset_statistics.json",
+          "sha256": "fc9802bf35bc8a99c1421cbedeac2f36baf25731da9d0c652fe9ef9aa76d6137",
+          "bytes": 3025
+        }
+      ],
+      "normalizer_key": "libero_spatial_no_noops",
+      "normalizer_fields": [
+        "mean",
+        "std",
+        "max",
+        "min",
+        "q01",
+        "q99",
+        "mask"
+      ],
+      "config_norm_stats_lacks_libero": true,
+      "dataset_statistics_overrides_config_in_loader": true,
+      "weights_downloaded": false,
+      "tokenizer_payload_downloaded": false,
+      "native_load_verified": false,
+      "sft_membership_verified": false
+    },
+    "selected_interface": {
+      "policy_family": "SimpleVLA-RL parallel categorical OpenVLA-OFT variant",
+      "inputs": [
+        "one external RGB",
+        "language instruction"
+      ],
+      "proprio_input": false,
+      "wrist_input": false,
+      "chunk_length": 8,
+      "action_dimensions": 7,
+      "token_slots": 56,
+      "token_categories": 256,
+      "temperature": 1.6,
+      "normalization": "BOUNDS_Q99; explicit checkpoint statistics key",
+      "lora": {
+        "rank": 32,
+        "alpha": 32,
+        "dropout": 0,
+        "target_modules": "all-linear",
+        "status": "planned; public constructor path reviewed; runtime not verified"
+      },
+      "cf_source_revision": "8280a500a01f7f7d45efe202cb416ca362aa8c1a",
+      "primary_pair": "OBJ-01",
+      "adaptation_goal": "A",
+      "retention_goal": "B",
+      "reserve_pair": "DEST-05",
+      "reserve_pair_in_first_pilot": false,
+      "cf_collector_adapter_implemented": false,
+      "existing_u1_runtime_compatible_claim": false
+    },
+    "measurement": {
+      "primary_behavior": "target-specific success within 512 control steps; per-goal before/after change",
+      "success_termination": "singleton target only; other goals recorded without terminating",
+      "settle_steps": 10,
+      "goal_event_boundary": "source On predicate, not stable released placement",
+      "kl": "forward categorical token KL(base || updated), averaged over 56 slots on frozen base-policy observation banks",
+      "executed_action_or_trajectory_kl_claim": false,
+      "greedy_policy_kl_claim": false,
+      "state_bank": "T split only, max128 nonterminal query observations per goal, episode-balanced; initial-state two-prompt diagnostics separate",
+      "reference_reward_shaping_equals_planned_kl_loss": false,
+      "instruction_contrast": "Report 2x2 first-A/B-goal event rates under prompts A/B, ties and neither, plus paired goal-choice contrast. Target success alone cannot distinguish a policy that always completes both goals. No instruction-discrimination loss claim without initial discrimination."
+    },
+    "design": {
+      "all_numbers_are_researcher_planned_not_measured": true,
+      "splits": {
+        "grouping": "full-state hash duplicate groups; A/B and derived observations remain in same split",
+        "if_at_least_50_groups": {
+          "D": 10,
+          "T": 20,
+          "V": 10,
+          "H": 10
+        },
+        "if_30_to_49_groups": {
+          "D": 6,
+          "T": 12,
+          "V": 6,
+          "H": 6
+        },
+        "below_30": "IO/competence only; no split-based training pilot",
+        "actual_init_row_count": null,
+        "pretraining_unseen_claim": false
+      },
+      "competence_screen": {
+        "sampling_seeds_per_goal_row": 2,
+        "minimum_successes_per_goal": 4,
+        "minimum_successful_rows_per_goal": 2,
+        "interpretation": "provisional pilot entry, not confidence guarantee; preserve all evaluated rows",
+        "adaptation_ceiling_flag": 0.9
+      },
+      "baselines": [
+        "frozen base",
+        "A-only GRPO lr5e-6",
+        "A-only GRPO lr1e-6",
+        "GRPO plus explicit forward token KL on current A observations, coefficient0.1",
+        "GRPO plus balanced T-split A/B base-behavior replay CE, coefficient1.0"
+      ],
+      "baseline_limits": [
+        "KL/replay losses not implemented",
+        "behavior replay is not original SFT demonstration replay",
+        "no claim that all experience replay variants are exhausted"
+      ],
+      "dynamic_sampling_refill": false,
+      "group_size": 8,
+      "clip_interval": [
+        0.8,
+        1.28
+      ],
+      "training_seeds": 2,
+      "train_rollouts_per_condition_seed": 64,
+      "max_optimizer_updates_per_condition_seed": 4,
+      "first_stage": "only B1 seed1 before remaining conditions",
+      "checkpoint_rollout_counts": [
+        32,
+        64
+      ],
+      "selection": "Among checkpoints within 10pp of maximum V adaptation success, primary selects lowest T-bank D_A and diagnostic selects lowest D_B; ties by V adaptation then earlier checkpoint. Seal before H; evaluate both distinct selections.",
+      "uncertainty": "paired row results and training-seed variation; two training seeds do not establish stable generalization; no equivalence claim from 10pp window"
+    },
+    "planned_limits": {
+      "p0": {
+        "reset_total_including_constructor": 2,
+        "policy_queries": 2,
+        "actor_rescores": 2,
+        "backwards": 1,
+        "optimizer_updates": 0,
+        "control_steps": 36,
+        "physics_steps": 10000,
+        "gpu_hours": 2,
+        "launcher_exists": false
+      },
+      "p1_p2": {
+        "screen_episodes_max": 40,
+        "bank_episodes_max": 40,
+        "training_episodes_max": 512,
+        "validation_episodes_max": 320,
+        "heldout_episodes_max": 680,
+        "total_episodes_max": 1592,
+        "control_steps_max": 831024,
+        "policy_queries_max": 101888,
+        "gpu_hours_cap": 64,
+        "p0_excluded": true,
+        "retries_and_extra_eval_consume_same_cap": true,
+        "runtime_or_memory_estimate": false
+      }
+    },
+    "implementation_findings": [
+      "Actual model output uses logits[-320:-64] and matching actor response offset; numerical parity still required.",
+      "Explicit ROBOT_PLATFORM=LIBERO avoids source CLI auto-detection branch selecting ALOHA.",
+      "Official helper overwrites checkpoint Python source; preserve immutable original payload and use Docker-only runtime copy with recorded hashes.",
+      "CF singleton goal, prompt, reward, done, reset and RGB binding need an adapter.",
+      "Existing reward shaping KL and PPO old/current diagnostic differ from the planned forward KL loss."
+    ],
+    "next": {
+      "id": "GAP-LANGRET-P0-PREP",
+      "status": "READY_PREPARATION",
+      "scope": "Check current local Docker first; create portable bounded IO preparation; if compatible, perform only P0 limits. No automatic competence pilot or RL learning."
+    },
+    "actual_execution": {
+      "docker_checks": 0,
+      "simulator_runs": 0,
+      "policy_queries": 0,
+      "backwards": 0,
+      "training_updates": 0,
+      "weights_or_init_payload_downloads": 0,
+      "dependency_installs": 0,
+      "local_pdf_cache_downloads": 0,
+      "external_feedback_received": false
+    },
+    "validation": {
+      "status": "passed",
+      "date_kst": "2026-11-12",
+      "scope": "Source/metadata and documentation integrity only; no native or policy execution.",
+      "commands": [
+        {
+          "command": "PYTHONPYCACHEPREFIX=/tmp/paper_registry_pycache python3 -m py_compile work/scripts/build_reading_tiers.py",
+          "exit_code": 0
+        },
+        {
+          "command": "python3 -B work/scripts/build_reading_tiers.py",
+          "exit_code": 0
+        },
+        {
+          "command": "git diff --check",
+          "exit_code": 0
+        },
+        {
+          "command": "python3 -B work/scripts/audit_repository.py",
+          "exit_code": 0
+        }
+      ],
+      "audit": {
+        "papers": 1171,
+        "tier_counts": {
+          "CORE": 47,
+          "NEXT": 380,
+          "REFERENCE": 502,
+          "ARCHIVE": 242
+        },
+        "intensive": 427,
+        "inactive_reading_history": 47,
+        "standard_note_files": 5855,
+        "markdown_files_checked": 6079,
+        "markdown_links_checked": 12996,
+        "errors": [],
+        "warnings": []
+      },
+      "preservation": {
+        "canonical_registry_and_paper_index_sha256_unchanged": true,
+        "reading_tiers_active_status_and_history_sha256_unchanged": true,
+        "existing_per_paper_notes_and_runtime_code_sha256_unchanged": true,
+        "preexisting_staged_binary_diff_unchanged": true
+      },
+      "source_sha256_checks": 21,
+      "checkpoint_metadata_sha256_checks": 2,
+      "planned_budget_arithmetic": "passed; not a runtime measurement",
+      "new_anchor_checks": "passed",
+      "modified_existing_files": [
+        "README.md",
+        "TODO.md",
+        "synthesis/04_vla_generalist.md",
+        "synthesis/README.md",
+        "work/research_topics/README.md",
+        "work/research_topics/unified_vla_rl/내용/README.md",
+        "work/research_topics/unified_vla_rl/재현 방법/README.md",
+        "work/sources/vla_masters_gap_scout_2026-11-12.json",
+        "work/update/README.md",
+        "work/update/VLA_MASTERS_GAP_SCOUT_2026-11-12.md"
+      ],
+      "added_files": [],
+      "deleted_files": []
+    }
+  },
+  "p0_preparation": {
+    "id": "GAP-LANGRET-P0-PREP",
+    "date_kst": "2026-11-12",
+    "status": "PREPARATION_DONE_NATIVE_UNVERIFIED",
+    "runtime_status": "WAITING_RESOURCE_AND_IMPLEMENTATION",
+    "runtime_plan": {
+      "base_image": "nvidia/cuda@sha256:cff3a0d82d2c2b47bab252d67fa9b34a20ef4c50781d98501b5c7367ea9afd10",
+      "sources": [
+        {
+          "directory": "SimpleVLA-RL",
+          "url": "https://github.com/PRIME-RL/SimpleVLA-RL.git",
+          "revision": "7c51662df27b586f9e8a1ab35fcf849f2b8852f9"
+        },
+        {
+          "directory": "VLA-CF",
+          "url": "https://github.com/yuffish/VLA-CF.git",
+          "revision": "8280a500a01f7f7d45efe202cb416ca362aa8c1a"
+        },
+        {
+          "directory": "transformers",
+          "url": "https://github.com/moojink/transformers-openvla-oft.git",
+          "revision": "bc339d9ad707454c0c115970db43c260067c61ab"
+        }
+      ],
+      "source_files": [
+        {
+          "directory": "SimpleVLA-RL",
+          "path": "verl/utils/vla_utils/openvla_oft/modeling_prismatic.py",
+          "sha256": "f0a30f5af9b9c7c0ab55cbeaec1d38c0fc268b93a893252647d5fb4b0d34c2bb"
+        },
+        {
+          "directory": "SimpleVLA-RL",
+          "path": "verl/workers/actor/dp_rob.py",
+          "sha256": "3976bd3a0fffa68738ed9a7a466fea850055dde0c83e4ab2b61f2d7457f3bb72"
+        },
+        {
+          "directory": "SimpleVLA-RL",
+          "path": "verl/workers/rollout/rob_rollout.py",
+          "sha256": "68066df52b14abf3cf9630c06acf1fea781c6b536ff428d8d22b5c10a2fc97a9"
+        },
+        {
+          "directory": "SimpleVLA-RL",
+          "path": "verl/utils/vla_utils/openvla_oft/constants.py",
+          "sha256": "8380f8bbdcd6ef2dc36b4efb9f8c7f27cb45d564207e30a88d42376c5e7e5792"
+        },
+        {
+          "directory": "SimpleVLA-RL",
+          "path": "SETUP.md",
+          "sha256": "4116562d9220ff687f820e1c3d11a39b74bf54fdfd43bc15624b142f5465db5a"
+        },
+        {
+          "directory": "VLA-CF",
+          "path": "libero/libero/envs/env_wrapper.py",
+          "sha256": "2f864b2922013ea67f62479aee90dbff8eb9cfa1ab775b36e121ad4b39188ef6"
+        },
+        {
+          "directory": "VLA-CF",
+          "path": "libero/libero/envs/bddl_base_domain.py",
+          "sha256": "055836670ac5fcac7e033fc86404718fd53854996e5776b1ff68b646f7bbcc9d"
+        },
+        {
+          "directory": "VLA-CF",
+          "path": "libero/libero/envs/object_states/base_object_states.py",
+          "sha256": "ca6f53123336b6487bdb4feb02534ddb3a0627a4b847fe89da4460520ef01366"
+        },
+        {
+          "directory": "VLA-CF",
+          "path": "libero/libero/envs/problems/libero_tabletop_manipulation.py",
+          "sha256": "bc703aa25953b9dd61fe8f8bc43605f9f799b6b0bffb87de3e0afe93da91c7d2"
+        },
+        {
+          "directory": "VLA-CF",
+          "path": "libero/libero/__init__.py",
+          "sha256": "5a25bac9a3566f9d35acf4f6792814b745653b8be323650c9a57e02d4419a12b"
+        },
+        {
+          "directory": "VLA-CF",
+          "path": "README.md",
+          "sha256": "134a6257b9b0e2aa684299e1df01b524aa0668fac50648e8171033038e62c680"
+        },
+        {
+          "directory": "SimpleVLA-RL",
+          "path": "verl/utils/vla_utils/openvla_oft/configuration_prismatic.py",
+          "sha256": "68cc5ae34f1b46af3168d8d479cb81bb776965653453fd904aa8eefb6c8f9f68"
+        },
+        {
+          "directory": "SimpleVLA-RL",
+          "path": "verl/utils/vla_utils/openvla_oft/processing_prismatic.py",
+          "sha256": "2474a5c3fdd4ff15234924636dc0ead6419c89f49699193be47dbb87510a5425"
+        },
+        {
+          "directory": "SimpleVLA-RL",
+          "path": "verl/utils/vla_utils/openvla_oft/train_utils.py",
+          "sha256": "3213e8df5c727b801a96b61531df331e0b37305aa370443140df31560507e84c"
+        },
+        {
+          "directory": "VLA-CF",
+          "path": "requirements_libero.txt",
+          "sha256": "23ef4abd0a9809a8075d626d2ee09181e474c6cdf046ad340de134e383afea01"
+        },
+        {
+          "directory": "VLA-CF",
+          "path": "setup.py",
+          "sha256": "848de286575e813c0c77cba86aad48de85945d7fce1b163cc13eaa45737c476e"
+        },
+        {
+          "directory": "VLA-CF",
+          "path": "requirements.txt",
+          "sha256": "19e9b6e36cfb135bb99fb9acebc03b2abc7c8745b44d14190637ab81d473f830"
+        },
+        {
+          "directory": "transformers",
+          "path": "src/transformers/models/llama/modeling_llama.py",
+          "sha256": "3aac24cec583a6ef5f60b6ec634a8bd3c8377784c5c63c8cc14cb6790554c52e"
+        },
+        {
+          "directory": "SimpleVLA-RL",
+          "path": "verl/utils/libero_utils.py",
+          "sha256": "58017f31960ae8e88d02d4d51555a3d5128dc9fc0bf87f6347f07ca0c282dcca"
+        },
+        {
+          "directory": "VLA-CF",
+          "path": "libero/libero/conditions/libero_cf_spatial.json",
+          "sha256": "ace2cb36c2c5fcdd62fb0e5860248e9450344a7aa5af34b128223bc60cb53592"
+        },
+        {
+          "directory": "VLA-CF",
+          "path": "libero/libero/conditions/libero_cf_long.json",
+          "sha256": "7f9080f1491c9a36f623d741a369de679ad6ab0e32154abe744f7625252e65c6"
+        },
+        {
+          "directory": "VLA-CF",
+          "path": "libero/libero/benchmark/__init__.py",
+          "sha256": "046447fbf29b71eaa0e0a1db8740cec7cafe3ba6f261a23011ac36b8607e1548"
+        },
+        {
+          "directory": "VLA-CF",
+          "path": "libero/libero/benchmark/libero_suite_task_map.py",
+          "sha256": "95c99383fac49d97e22f9e9d2463b8ed8463c72cc76d597891b5cb7136e4b112"
+        },
+        {
+          "directory": "VLA-CF",
+          "path": "libero/libero/bddl_files/libero_cf_spatial/01-pick_up_the_cookie_box_and_place_it_on_the_plate.bddl",
+          "sha256": "655d071ec50a6ab44f9f2b6ccb13cfc595480219231b4af2442be848cc3955c3"
+        },
+        {
+          "directory": "VLA-CF",
+          "path": "libero/libero/envs/predicates/base_predicates.py",
+          "sha256": "319137e95330dbb22a266a8dceb8110f18413c2bf17461550222228c4bc310a1"
+        },
+        {
+          "directory": "VLA-CF",
+          "path": "libero/libero/envs/problems/libero_living_room_tabletop_manipulation.py",
+          "sha256": "0dab21865c1e297798e573e000fff5537fa2f51b9fd6d19dae65c5e1e8c8208c"
+        }
+      ],
+      "checkpoint": {
+        "repo": "Haozhan72/Openvla-oft-SFT-libero-spatial-trajall",
+        "revision": "0a051b39aaebd3fc509fe2aba8bc7e60100e09f5",
+        "files": [
+          {
+            "path": "added_tokens.json",
+            "size": 21,
+            "algorithm": "sha1",
+            "hash": "8671820d1bb0dfd4dd92d5bd0fa9b5a7773f843e",
+            "git_blob": true
+          },
+          {
+            "path": "config.json",
+            "size": 60782,
+            "algorithm": "sha1",
+            "hash": "7f787bccc92713545c4e39e22eb3a8d0ad203870",
+            "git_blob": true
+          },
+          {
+            "path": "dataset_statistics.json",
+            "size": 3025,
+            "algorithm": "sha1",
+            "hash": "380bca5359b3d2faf0823683c6fcbf58cb254d34",
+            "git_blob": true
+          },
+          {
+            "path": "generation_config.json",
+            "size": 136,
+            "algorithm": "sha1",
+            "hash": "2cefc1e51e6ccfe846d2b509ced403df73a8efe2",
+            "git_blob": true
+          },
+          {
+            "path": "model-00001-of-00004.safetensors",
+            "size": 4925122448,
+            "algorithm": "sha256",
+            "hash": "43bc6e6b3779876205f114566bf62a0d02441764dcab4f02bf867d1615bd168b",
+            "git_blob": false
+          },
+          {
+            "path": "model-00002-of-00004.safetensors",
+            "size": 4947392496,
+            "algorithm": "sha256",
+            "hash": "fc961dbb9dc80a1106559af770cd9a67c77582988be7fd2c4caabf34022b2529",
+            "git_blob": false
+          },
+          {
+            "path": "model-00003-of-00004.safetensors",
+            "size": 4947417456,
+            "algorithm": "sha256",
+            "hash": "ebb11a44e147237d44e0c840086d8316c62bf31bdb46c731f3f8d1da0957a993",
+            "git_blob": false
+          },
+          {
+            "path": "model-00004-of-00004.safetensors",
+            "size": 262668432,
+            "algorithm": "sha256",
+            "hash": "9ff7c1d392f4cc188a427eeb64867e3ddff6b9726530eeb1d19a8d18b1ae6fbb",
+            "git_blob": false
+          },
+          {
+            "path": "model.safetensors.index.json",
+            "size": 94764,
+            "algorithm": "sha1",
+            "hash": "bd7cc8ff8070ead248023feae55303f5a3b900d1",
+            "git_blob": true
+          },
+          {
+            "path": "preprocessor_config.json",
+            "size": 1650,
+            "algorithm": "sha1",
+            "hash": "92975ace548590d24f65f497d7610af3b92b4dcd",
+            "git_blob": true
+          },
+          {
+            "path": "processor_config.json",
+            "size": 130,
+            "algorithm": "sha1",
+            "hash": "f892f8a8f53e2f3603a7cf86043a1add317c1787",
+            "git_blob": true
+          },
+          {
+            "path": "special_tokens_map.json",
+            "size": 552,
+            "algorithm": "sha1",
+            "hash": "ab75c8e0a22550f0667501a0c52758f071a9efd8",
+            "git_blob": true
+          },
+          {
+            "path": "tokenizer.json",
+            "size": 1842976,
+            "algorithm": "sha1",
+            "hash": "591f1fc6ff695d967513100f707e66d5bf731414",
+            "git_blob": true
+          },
+          {
+            "path": "tokenizer.model",
+            "size": 499723,
+            "algorithm": "sha256",
+            "hash": "9e556afd44213b6bd1be2b850ebbbd98f5481437a8021afaf58ee7fb1818d347",
+            "git_blob": false
+          },
+          {
+            "path": "tokenizer_config.json",
+            "size": 1192,
+            "algorithm": "sha1",
+            "hash": "d39defd338dee423ae0a71abfd7ea69a44fb1e52",
+            "git_blob": true
+          }
+        ]
+      },
+      "pair": {
+        "bddl": "libero/libero/bddl_files/libero_cf_spatial/01-pick_up_the_cookie_box_and_place_it_on_the_plate.bddl",
+        "prompts": [
+          "pick up the cookie box and place it on the plate",
+          "pick up the ramekin and place it on the plate"
+        ],
+        "targets": [
+          "on cookies_1 plate_1",
+          "on glazed_rim_porcelain_ramekin_1 plate_1"
+        ],
+        "init": {
+          "path": "libero/libero/init_files/libero_cf_spatial/01-pick_up_the_cookie_box_and_place_it_on_the_plate.pruned_init",
+          "size": 44271,
+          "algorithm": "sha1",
+          "hash": "543deb5f5c1d2ca29426a7b77964c9273f71197d",
+          "git_blob": true
+        }
+      },
+      "normalizer_key": "libero_spatial_no_noops",
+      "seed": 20261112,
+      "init_row": 0,
+      "limits": {
+        "resets": 2,
+        "policy_queries": 2,
+        "actor_rescores": 2,
+        "backwards": 1,
+        "control_steps": 36,
+        "physics_steps": 10000
+      }
+    },
+    "source_review": {
+      "files": [
+        {
+          "path": "verl/utils/vla_utils/openvla_oft/modeling_prismatic.py",
+          "url": "https://raw.githubusercontent.com/PRIME-RL/SimpleVLA-RL/7c51662df27b586f9e8a1ab35fcf849f2b8852f9/verl/utils/vla_utils/openvla_oft/modeling_prismatic.py",
+          "sha256": "f0a30f5af9b9c7c0ab55cbeaec1d38c0fc268b93a893252647d5fb4b0d34c2bb",
+          "bytes": 89776
+        },
+        {
+          "path": "verl/workers/actor/dp_rob.py",
+          "url": "https://raw.githubusercontent.com/PRIME-RL/SimpleVLA-RL/7c51662df27b586f9e8a1ab35fcf849f2b8852f9/verl/workers/actor/dp_rob.py",
+          "sha256": "3976bd3a0fffa68738ed9a7a466fea850055dde0c83e4ab2b61f2d7457f3bb72",
+          "bytes": 30428
+        },
+        {
+          "path": "verl/workers/rollout/rob_rollout.py",
+          "url": "https://raw.githubusercontent.com/PRIME-RL/SimpleVLA-RL/7c51662df27b586f9e8a1ab35fcf849f2b8852f9/verl/workers/rollout/rob_rollout.py",
+          "sha256": "68066df52b14abf3cf9630c06acf1fea781c6b536ff428d8d22b5c10a2fc97a9",
+          "bytes": 45968
+        },
+        {
+          "path": "verl/utils/vla_utils/openvla_oft/constants.py",
+          "url": "https://raw.githubusercontent.com/PRIME-RL/SimpleVLA-RL/7c51662df27b586f9e8a1ab35fcf849f2b8852f9/verl/utils/vla_utils/openvla_oft/constants.py",
+          "sha256": "8380f8bbdcd6ef2dc36b4efb9f8c7f27cb45d564207e30a88d42376c5e7e5792",
+          "bytes": 4303
+        },
+        {
+          "path": "SETUP.md",
+          "url": "https://raw.githubusercontent.com/PRIME-RL/SimpleVLA-RL/7c51662df27b586f9e8a1ab35fcf849f2b8852f9/SETUP.md",
+          "sha256": "4116562d9220ff687f820e1c3d11a39b74bf54fdfd43bc15624b142f5465db5a",
+          "bytes": 5005
+        },
+        {
+          "path": "libero/libero/envs/env_wrapper.py",
+          "url": "https://raw.githubusercontent.com/yuffish/VLA-CF/8280a500a01f7f7d45efe202cb416ca362aa8c1a/libero/libero/envs/env_wrapper.py",
+          "sha256": "2f864b2922013ea67f62479aee90dbff8eb9cfa1ab775b36e121ad4b39188ef6",
+          "bytes": 12148
+        },
+        {
+          "path": "libero/libero/envs/bddl_base_domain.py",
+          "url": "https://raw.githubusercontent.com/yuffish/VLA-CF/8280a500a01f7f7d45efe202cb416ca362aa8c1a/libero/libero/envs/bddl_base_domain.py",
+          "sha256": "055836670ac5fcac7e033fc86404718fd53854996e5776b1ff68b646f7bbcc9d",
+          "bytes": 32639
+        },
+        {
+          "path": "libero/libero/envs/object_states/base_object_states.py",
+          "url": "https://raw.githubusercontent.com/yuffish/VLA-CF/8280a500a01f7f7d45efe202cb416ca362aa8c1a/libero/libero/envs/object_states/base_object_states.py",
+          "sha256": "ca6f53123336b6487bdb4feb02534ddb3a0627a4b847fe89da4460520ef01366",
+          "bytes": 8215
+        },
+        {
+          "path": "libero/libero/envs/problems/libero_tabletop_manipulation.py",
+          "url": "https://raw.githubusercontent.com/yuffish/VLA-CF/8280a500a01f7f7d45efe202cb416ca362aa8c1a/libero/libero/envs/problems/libero_tabletop_manipulation.py",
+          "sha256": "bc703aa25953b9dd61fe8f8bc43605f9f799b6b0bffb87de3e0afe93da91c7d2",
+          "bytes": 9373
+        },
+        {
+          "path": "cf/libero/setup.py",
+          "url": "https://raw.githubusercontent.com/yuffish/VLA-CF/8280a500a01f7f7d45efe202cb416ca362aa8c1a/libero/setup.py",
+          "error": "HTTP Error 404: Not Found"
+        },
+        {
+          "path": "cf/libero/libero/__init__.py",
+          "url": "https://raw.githubusercontent.com/yuffish/VLA-CF/8280a500a01f7f7d45efe202cb416ca362aa8c1a/libero/libero/__init__.py",
+          "sha256": "5a25bac9a3566f9d35acf4f6792814b745653b8be323650c9a57e02d4419a12b",
+          "bytes": 3845
+        },
+        {
+          "path": "cf/README.md",
+          "url": "https://raw.githubusercontent.com/yuffish/VLA-CF/8280a500a01f7f7d45efe202cb416ca362aa8c1a/README.md",
+          "sha256": "134a6257b9b0e2aa684299e1df01b524aa0668fac50648e8171033038e62c680",
+          "bytes": 15740
+        },
+        {
+          "path": "simple/configuration_prismatic.py",
+          "url": "https://raw.githubusercontent.com/PRIME-RL/SimpleVLA-RL/7c51662df27b586f9e8a1ab35fcf849f2b8852f9/verl/utils/vla_utils/openvla_oft/configuration_prismatic.py",
+          "sha256": "68cc5ae34f1b46af3168d8d479cb81bb776965653453fd904aa8eefb6c8f9f68",
+          "bytes": 5865
+        },
+        {
+          "path": "simple/processing_prismatic.py",
+          "url": "https://raw.githubusercontent.com/PRIME-RL/SimpleVLA-RL/7c51662df27b586f9e8a1ab35fcf849f2b8852f9/verl/utils/vla_utils/openvla_oft/processing_prismatic.py",
+          "sha256": "2474a5c3fdd4ff15234924636dc0ead6419c89f49699193be47dbb87510a5425",
+          "bytes": 12713
+        },
+        {
+          "path": "simple/train_utils.py",
+          "url": "https://raw.githubusercontent.com/PRIME-RL/SimpleVLA-RL/7c51662df27b586f9e8a1ab35fcf849f2b8852f9/verl/utils/vla_utils/openvla_oft/train_utils.py",
+          "sha256": "3213e8df5c727b801a96b61531df331e0b37305aa370443140df31560507e84c",
+          "bytes": 3547
+        },
+        {
+          "path": "cf/requirements_libero.txt",
+          "url": "https://raw.githubusercontent.com/yuffish/VLA-CF/8280a500a01f7f7d45efe202cb416ca362aa8c1a/requirements_libero.txt",
+          "sha256": "23ef4abd0a9809a8075d626d2ee09181e474c6cdf046ad340de134e383afea01",
+          "bytes": 267
+        },
+        {
+          "path": "cf/setup.py",
+          "url": "https://raw.githubusercontent.com/yuffish/VLA-CF/8280a500a01f7f7d45efe202cb416ca362aa8c1a/setup.py",
+          "sha256": "848de286575e813c0c77cba86aad48de85945d7fce1b163cc13eaa45737c476e",
+          "bytes": 1314
+        },
+        {
+          "path": "cf/openvla-oft-cf/pyproject.toml",
+          "url": "https://raw.githubusercontent.com/yuffish/VLA-CF/8280a500a01f7f7d45efe202cb416ca362aa8c1a/openvla-oft-cf/pyproject.toml",
+          "sha256": "f0c820b3ee1dc9e4d379d1d28b3558c6cb0c5106fb6fb5ecb4abb46e377125cc",
+          "bytes": 2784
+        },
+        {
+          "path": "cf/requirements.txt",
+          "url": "https://raw.githubusercontent.com/yuffish/VLA-CF/8280a500a01f7f7d45efe202cb416ca362aa8c1a/requirements.txt",
+          "sha256": "19e9b6e36cfb135bb99fb9acebc03b2abc7c8745b44d14190637ab81d473f830",
+          "bytes": 2635
+        },
+        {
+          "path": "transformers/modeling_llama.py",
+          "url": "https://raw.githubusercontent.com/moojink/transformers-openvla-oft/bc339d9ad707454c0c115970db43c260067c61ab/src/transformers/models/llama/modeling_llama.py",
+          "sha256": "3aac24cec583a6ef5f60b6ec634a8bd3c8377784c5c63c8cc14cb6790554c52e",
+          "bytes": 75897
+        },
+        {
+          "path": "robosuite/base.py",
+          "url": "https://raw.githubusercontent.com/ARISE-Initiative/robosuite/v1.4.1/robosuite/environments/base.py",
+          "sha256": "5fd8c81b6d39a5e7065a8d7c364436412f46308e6c6927eb7aa7f48ad536c1e4",
+          "bytes": 29620
+        },
+        {
+          "path": "robosuite/binding_utils.py",
+          "url": "https://raw.githubusercontent.com/ARISE-Initiative/robosuite/v1.4.1/robosuite/utils/binding_utils.py",
+          "sha256": "f282a5a48dd215363ce3f981ce4126d91639c6e00fa530f0615cd5ab598372a8",
+          "bytes": 41810
+        },
+        {
+          "path": "verl/utils/libero_utils.py",
+          "url": "https://raw.githubusercontent.com/PRIME-RL/SimpleVLA-RL/7c51662df27b586f9e8a1ab35fcf849f2b8852f9/verl/utils/libero_utils.py",
+          "sha256": "58017f31960ae8e88d02d4d51555a3d5128dc9fc0bf87f6347f07ca0c282dcca",
+          "bytes": 8690
+        }
+      ],
+      "boundary": "Selected source reading and metadata only; no native imports/execution or host payload downloads.",
+      "official_setup": "https://github.com/PRIME-RL/SimpleVLA-RL/blob/7c51662df27b586f9e8a1ab35fcf849f2b8852f9/SETUP.md",
+      "cuda_driver": "https://docs.nvidia.com/cuda/archive/12.4.1/cuda-toolkit-release-notes/index.html",
+      "nvidia_toolkit": "https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html"
+    },
+    "checkpoint_metadata": {
+      "url": "https://huggingface.co/api/models/Haozhan72/Openvla-oft-SFT-libero-spatial-trajall/revision/0a051b39aaebd3fc509fe2aba8bc7e60100e09f5?blobs=true",
+      "selected_payload_bytes": 15085105783,
+      "payload_downloaded": false
+    },
+    "actual_execution": {
+      "native_runs": 0,
+      "policy_queries": 0,
+      "backwards": 0,
+      "optimizer_updates": 0,
+      "host_dependency_installs": 0,
+      "weights_or_init_downloads": 0
+    },
+    "local_check": {
+      "checked_at_utc": "2026-11-12T04:18:21.427841+00:00",
+      "host": {
+        "os": "Darwin",
+        "arch": "arm64"
+      },
+      "commands": [
+        {
+          "argv": [
+            "docker",
+            "context",
+            "show"
+          ],
+          "exit_code": 0,
+          "stdout": "desktop-linux",
+          "stderr": ""
+        },
+        {
+          "argv": [
+            "docker",
+            "context",
+            "inspect",
+            "desktop-linux",
+            "--format",
+            "{{.Endpoints.docker.Host}}"
+          ],
+          "exit_code": 0,
+          "stdout": "unix://<user-home>/.docker/run/docker.sock",
+          "stderr": ""
+        },
+        {
+          "argv": [
+            "docker",
+            "--context",
+            "desktop-linux",
+            "info",
+            "--format",
+            "{{json .}}"
+          ],
+          "exit_code": 0,
+          "server": {
+            "OSType": "linux",
+            "Architecture": "aarch64",
+            "MemTotal": 8218034176,
+            "NCPU": 10,
+            "ServerVersion": "28.3.3",
+            "OperatingSystem": "Docker Desktop"
+          },
+          "stderr": ""
+        }
+      ],
+      "native_runs": 0,
+      "context": "desktop-linux",
+      "decision": "RESOURCE_UNMET",
+      "reasons": [
+        "Native packet requires local Linux x86-64",
+        "Native packet requires Linux amd64 daemon",
+        "Selected daemon RAM floor is 32 GiB; not a measured minimum"
+      ],
+      "launcher_exit_code": 3
+    },
+    "gpu_allocation": {
+      "command": [
+        "docker",
+        "run",
+        "--rm",
+        "--pull=never",
+        "--network=none",
+        "--read-only",
+        "--gpus",
+        "all",
+        "paper-gap-p3:rvo-c2c46ba",
+        "true"
+      ],
+      "exit_code": 125,
+      "stdout": "",
+      "stderr": "docker: Error response from daemon: could not select device driver \"\" with capabilities: [[gpu]]\n\nRun 'docker run --help' for more information\n"
+    },
+    "requirements": {
+      "host": "Local Linux x86-64, Python 3 stdlib control plane; no host experimental packages",
+      "docker": "Local Unix endpoint, Linux amd64 daemon and configured NVIDIA Container Toolkit",
+      "driver_selected_floor": "550.54.15 for CUDA 12.4.1; selected target, not universal CUDA compatibility minimum",
+      "daemon_ram_gib_floor": 32,
+      "free_vram_gib_floor": 24,
+      "free_vram_gib_recommended": 48,
+      "bf16_required": true,
+      "free_cache_gib_floor": 50,
+      "docker_storage_gib_recommended": 100,
+      "minimum_or_sufficiency_measured": false
+    },
+    "control_tests": {
+      "status": "PASS",
+      "count": 22,
+      "execution": "Existing local Docker image only; network disabled; repo read-only; no dependency installation",
+      "image": "paper-gap-p3:rvo-c2c46ba",
+      "image_id_prefix": "ec14bd72a90f",
+      "command": "docker run --rm --pull=never --network=none --read-only --tmpfs /tmp:rw,size=64m -e PYTHONDONTWRITEBYTECODE=1 --mount 'type=bind,src=<repo>,dst=/workspace,readonly' -w '/workspace/work/research_topics/unified_vla_rl/재현 방법' paper-gap-p3:rvo-c2c46ba python3 -B test_langret.py",
+      "exit_code": 0,
+      "boundary": "stdlib controls/fixtures only; no PyTorch, model, simulator, gradient or behavior result"
+    },
+    "prepared_scope": [
+      "Dedicated portable launcher, Docker recipe and direct dependency pins",
+      "Frozen source commits and reviewed SHA256; checkpoint revision with 4 LFS shard hashes and processor/statistics/tokenizer blob hashes",
+      "Bounded paired OBJ-01 IO runner draft; singleton goal, sampler/re-score, one LoRA gradient fixture, zero optimizer updates",
+      "Resource, integrity, counter and evaluator control checks in Docker"
+    ],
+    "remaining": [
+      "Native image build, transitive dependency resolution/import and resolved package capture",
+      "Checkpoint/init/asset payload validation inside Docker; init row count/hash and actual renderer visibility",
+      "CUDA/BF16/EGL, native source adapter and probability/gradient/controller checks; observed true goal event may remain missing even if P0 passes",
+      "P1 competence and actual split materialization; P2 collector and B3/B4 losses remain unimplemented",
+      "Packet transfer and clone on another physical machine not performed; independent feedback not received"
+    ],
+    "scientific_decision": "Scoped exploratory analysis retained; no new method claim, no hypothesis support or rejection from resource failure/control tests.",
+    "next": {
+      "id": "GAP-LANGRET-P0",
+      "status": "WAITING_RESOURCE_AND_IMPLEMENTATION",
+      "action": "On selected compatible local NVIDIA machine, check -> build -> prepare -> p0 within frozen limits. Stop at first failure. No automatic P1/P2."
+    },
+    "artifact_identity": {
+      "packet_sha256": "db1c49f076069b94eb7c66c318d2e522e0720827e9dfe1add8232fa98c75835a",
+      "files_sha256": {
+        "langret_resume.py": "4cdf081f3cc50d3d558480d074ecdd3a80ab6124af63fde2ed29c537adecd872",
+        "langret_probe.py": "965679cc095a608324bf196f8386a7da8ae17579df0cdb8c9d9cf6f77b0634af",
+        "langret.Dockerfile": "df118ea7942f0b749b536db2e57783ef217872124b3cfd1cd5958b35eebcf9ed",
+        "langret_requirements.txt": "cac3e515f0ec4b974bfe980b3c34e29d2f025f579ee79c694803f9a181070033",
+        "test_langret.py": "76d9c7c4be0ede91172ff31eb8e52b4a437bb18d9f1f90b33cbc492b4c53753b"
+      },
+      "git_commit_at_preparation": "35dc50326fa868f9405f84c35b077d755cd90fee",
+      "new_files_committed": false,
+      "other_computer_clone_verified": false
+    },
+    "validation": {
+      "generator_compile": "PASS",
+      "generator": "PASS",
+      "git_diff_check": "PASS",
+      "repository_audit": {
+        "papers": 1171,
+        "tier_counts": {
+          "CORE": 47,
+          "NEXT": 380,
+          "REFERENCE": 502,
+          "ARCHIVE": 242
+        },
+        "intensive": 427,
+        "inactive_history": 47,
+        "standard_notes": 5855,
+        "markdown_files": 6079,
+        "markdown_links": 13010,
+        "errors": [],
+        "warnings": []
+      },
+      "preservation": {
+        "canonical_manifest_and_meta": true,
+        "paper_registry": true,
+        "tier_assignments": true,
+        "reading_active_and_history": true,
+        "existing_u1_code_and_config": true,
+        "preexisting_staged_patch_byte_identical": true
+      }
+    },
+    "cleanup": {
+      "task_containers_remaining": 0,
+      "task_images_created": 0,
+      "task_volumes_created": 0,
+      "all_containers_after": 0,
+      "existing_image_preserved": "ec14bd72a90f paper-gap-p3:rvo-c2c46ba",
+      "host_payloads_or_packages_installed": 0,
+      "temporary_source_text_and_logs": "Removed after evidence and final verification were integrated; no local PDF downloaded"
+    }
+  },
+  "registry_reconciliation": {
+    "id": "REG-R14",
+    "date_kst": "2026-11-12",
+    "paper_ids": [
+      "pr-1172",
+      "pr-1173",
+      "pr-1174",
+      "pr-1175",
+      "pr-1176",
+      "pr-1177",
+      "pr-1178",
+      "pr-1179"
+    ],
+    "admissions": "work/sources/registry_admissions_2026-11-12.json",
+    "maintenance": "work/sources/registry_maintenance_2026-11-12.json",
+    "runtime_plan_changed": false,
+    "reading_status_promoted": false
+  },
+  "registry_action_at_scout": {
+    "paper_count_before": 1171,
+    "paper_count_after": 1171,
+    "new_registrations": 0,
+    "tier_changes": 0,
+    "user_reading_changes": 0,
+    "topic_dossiers_before": 11,
+    "topic_dossiers_after": 11
+  }
+}

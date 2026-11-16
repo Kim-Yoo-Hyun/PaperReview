@@ -17,6 +17,8 @@
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (28 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
+> DOC-QA2 targeted source review: 2026-10-23; PDF pp. 27. 손상 구간·직접 연결된 표 분류만 원문 이미지와 대조했다. 전체 주장 정독·실험 검증·reading status 승격을 뜻하지 않는다. [URL·PDF hash·수정 기록](../../../work/sources/pdf_note_review_followup_2026-10-23.json).
+
 ## Why This Paper Is Here
 
 Robotics-enabling 3D perception의 generative 문제를 이해하기 위해 읽는다. 본문은 First, lacking reliable geometric supervision, these methods produce poor reconstruction quality even in observed regions with sparse input views, which undermines the geometric basis essential for inpainting unobserved areas.를 문제로 두고, Our main contributions are summarized as follows: • We propose a novel method that leverages the plane representation to derive scale-accurate geometric constraints, substantially improving 3D scene reconstruction even in unobserved reg ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
@@ -71,7 +73,7 @@ Robotics-enabling 3D perception의 generative 문제를 이해하기 위해 읽�
 | Evaluation type | EMPIRICAL / REAL-ROBOT OR HARDWARE | do not infer unreported downstream behavior | p. 8 (4 EXPERIMENTS), p. 10 (4.2 RESULTS) |
 | Embodiment/environment | The real-world datasets include 6 scenes from ScanNet++ (Yeshwanth et al., 2023), 3 scenes from DeepBlending (Hedman et al., 2018) and 9 scenes from Mip-NeRF 360 (Barron et al., 2022). | hardware/simulator version and reset protocol | p. 7 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS) |
 | Dataset/benchmark | As the Mip-NeRF 360 dataset lacks ground-truth meshes, we evaluate only the rendering performance for those scenes; for the remaining three datasets, we report the full suite of metrics. | role, split, size and leakage | p. 7 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 9 (4.2 RESULTS) |
-| Metric | Metric Definition Chamfer Distance (CD) Accuracy+Completeness 2 Accuracy mean p∈P  min p∗∈P ∗//p -p∗//1  Completeness mean p∗∈P ∗  min p∈P//p -p∗//1  F-score 2×Precision×Recall Precision+Recall Precision mean p∈P  ... | definition, denominator, direction and uncertainty | p. 27 (C.7 IMPLEMENTATION DETAILS), p. 8 (4 EXPERIMENTS), p. 9 (4.2 RESULTS) |
+| Metric | Table A4는 CD=(Accuracy+Completeness)/2, 두 방향 nearest-point L1 distance 평균, F-score=2PR/(P+R)를 정의한다. Precision/recall은 L1 distance<0.05인 비율이다. | 이 표의 L1 norm·0.05 threshold를 보존; 다른 CD 정의와 혼용하지 않음 | PDF p. 27 Table A4 |
 | Baseline/ablation | Our method significantly outperforms all baselines across both reconstruction and rendering metrics. | fair input/data/compute/action matching | p. 8 (4 EXPERIMENTS), p. 9 (4.2 RESULTS), p. 9 (4.2 RESULTS) |
 
 ## Explicit Limitations and Failure Boundary

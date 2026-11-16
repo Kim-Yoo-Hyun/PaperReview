@@ -1,4 +1,4 @@
-# RLux-VLA: A Unified and Efficient Framework for Reinforcement Learning of Vision-Language-Action Models
+# RLinf-VLA: A Unified and Efficient Framework for Reinforcement Learning of Vision-Language-Action Models
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `ABSTRACT_CHECKED`. abstract 기반 — 본문 수동 확인 필요.

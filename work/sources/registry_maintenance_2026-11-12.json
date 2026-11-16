@@ -1,0 +1,196 @@
+{
+  "work_id": "REG-R14",
+  "date": "2026-11-12",
+  "scope": "Local registry integrity refresh; eight previously cited gap-source admissions; selective external publication verification; duplicated navigation prose consolidated. Not a full web rereview of 1179 papers.",
+  "before": {
+    "papers": 1171,
+    "notes": 5855,
+    "CORE": 47,
+    "NEXT": 380,
+    "REFERENCE": 502,
+    "ARCHIVE": 242,
+    "active_reading": 427,
+    "history_reading": 47
+  },
+  "admissions_input": "work/sources/registry_admissions_2026-11-12.json",
+  "admitted_paper_ids": [
+    "pr-1172",
+    "pr-1173",
+    "pr-1174",
+    "pr-1175",
+    "pr-1176",
+    "pr-1177",
+    "pr-1178",
+    "pr-1179"
+  ],
+  "source_review": "work/sources/vla_masters_gap_scout_2026-11-12.json",
+  "publication_notes": {
+    "official_conference": [
+      "pr-1172: ICLR 2026 proceedings",
+      "pr-1176: ECCV 2026 publisher chapter, DOI 10.1007/978-3-032-37369-4_24"
+    ],
+    "remaining_six": "arXiv; official venue not established in this check.",
+    "pr-1175": "Author/arXiv v3 CoRL 2026 Spotlight claim not promoted without official proceedings/forum verification.",
+    "pr-1174": "Anonymous project URL identified in paper; contents inaccessible in this check; no verified implementation. Different from the temporal-context TEMPO paper.",
+    "pr-1172": "Online official final title and On-Policy author-page alias share arXiv 2509.04259."
+  },
+  "cleanup": {
+    "removed_files": [],
+    "duplicate_title_or_public_identifier_collisions": 0,
+    "near_title_screen": {
+      "method": "SequenceMatcher > 0.91, same first 12 normalized characters, title-length ratio >= 0.9, year difference <= 2",
+      "candidates": 0,
+      "boundary": "Heuristic screen, not proof of no semantic overlap."
+    },
+    "preserved_duplicate_pairs": [
+      {
+        "paths": [
+          "work/research_topics/contact_adaptation/재현 방법/.dockerignore",
+          "work/experiments/reactive_nav_contract/.dockerignore"
+        ],
+        "reason": "Separate Docker build contexts."
+      },
+      {
+        "paths": [
+          "work/experiments/reactive_nav_pilot/results/verified/docker_version.json",
+          "work/experiments/reactive_nav_contract/results/verified/docker_version.json"
+        ],
+        "reason": "Independent historical execution evidence."
+      }
+    ],
+    "disposable_log_cache_files_found": 0,
+    "prose_consolidation": "Repeated progress summaries in TODO, navigation and synthesis now point to canonical topic content/reproduction documents. Current LANGRET vs historical U1/CONTACT status clarified; frozen contracts preserved.",
+    "source_ledger_reconciliation": "Eight existing scout sources linked to registry IDs. Original registry_action preserved; N1/N2/P0 evidence retained.",
+    "exact_duplicate_groups": [
+      {
+        "sha256": "08bb7a70af4ae5a9c15226f499f2e76055ebd521550f87eb102a1316cdb9df38",
+        "paths": [
+          "work/experiments/reactive_nav_contract/.dockerignore",
+          "work/research_topics/contact_adaptation/재현 방법/.dockerignore"
+        ]
+      },
+      {
+        "sha256": "eb423033ff1164be321ee64c5add7644517a0698cae5534f29fea319703c7cb4",
+        "paths": [
+          "work/experiments/reactive_nav_contract/results/verified/docker_version.json",
+          "work/experiments/reactive_nav_pilot/results/verified/docker_version.json"
+        ]
+      }
+    ]
+  },
+  "validation": {
+    "status": "PASS",
+    "registration_dry_run": {
+      "accepted": 8,
+      "skipped": 0,
+      "identifier_collisions": 0
+    },
+    "priority_only_reconcile": {
+      "papers_changed": 8,
+      "note_headers_changed": 8,
+      "reading_status_changed": false,
+      "source_evidence_changed": false
+    },
+    "new_experiment_executions": 0,
+    "docker_executions": 0,
+    "host_dependency_changes": 0,
+    "pdf_or_weight_downloads": 0,
+    "git_commit_or_push": false,
+    "tier_generator_compile": "PASS",
+    "tier_rebuild": "PASS",
+    "final_priority_reconcile": {
+      "papers_changed": 0,
+      "note_headers_changed": 0,
+      "reading_status_changed": false,
+      "source_evidence_changed": false
+    },
+    "catalogs_and_views": "REGENERATED",
+    "reading_history_tests": {
+      "tests": 6,
+      "failures": 0,
+      "errors": 0
+    },
+    "diff_check": "PASS",
+    "cached_diff_check": "PASS",
+    "repository_audit": {
+      "papers": 1179,
+      "categories": 23,
+      "tier_counts": {
+        "CORE": 47,
+        "NEXT": 386,
+        "REFERENCE": 504,
+        "ARCHIVE": 242
+      },
+      "intensive": 433,
+      "inactive_reading_history": 47,
+      "standard_note_files": 5895,
+      "catalog_entries": {
+        "benchmark": 56,
+        "metric": 29
+      },
+      "combined_resources": 643,
+      "registry_index_rows": 1179,
+      "markdown_files_checked": 6120,
+      "markdown_links_checked": 13116,
+      "comparison_matrix_rows": 106,
+      "completed_matrix_rows": 5,
+      "errors": [],
+      "warnings": []
+    }
+  },
+  "after": {
+    "papers": 1179,
+    "notes": 5895,
+    "CORE": 47,
+    "NEXT": 386,
+    "REFERENCE": 504,
+    "ARCHIVE": 242,
+    "active_reading": 433,
+    "history_reading": 47,
+    "source_evidence": {
+      "FULL_TEXT_CHECKED": 967,
+      "ABSTRACT_CHECKED": 212
+    },
+    "resources": 643,
+    "curated_relations": 50
+  },
+  "preservation": {
+    "existing_paper_records_unchanged": 1171,
+    "existing_standard_notes_unchanged": 5855,
+    "existing_tier_assignments_unchanged": 1171,
+    "existing_reading_inputs_unchanged": 474,
+    "new_UNREAD_inputs": 6,
+    "runtime_and_experiment_files_checked": 236,
+    "runtime_and_experiment_files_byte_identical": true,
+    "scout_N1_N2_P0_evidence_unchanged": true,
+    "existing_staged_patch_byte_identical": true,
+    "removed_files": [],
+    "modified_existing_files": [
+      "AGENTS.md",
+      "PAPER.md",
+      "README.md",
+      "TODO.md",
+      "research/READING_PLAN.md",
+      "research/READING_STATUS.csv",
+      "research/READING_TIERS.csv",
+      "research/README.md",
+      "research/REGISTRY_INDEX.csv",
+      "research/REGISTRY_STATS.md",
+      "synthesis/02_rl_il_offline.md",
+      "synthesis/04_vla_generalist.md",
+      "synthesis/README.md",
+      "work/README.md",
+      "work/research_topics/README.md",
+      "work/research_topics/unified_vla_rl/내용/README.md",
+      "work/scripts/build_reading_tiers.py",
+      "work/sources/benchmark_catalog.json",
+      "work/sources/metric_catalog.json",
+      "work/sources/papers.json",
+      "work/sources/registry_meta.json",
+      "work/sources/resources.json",
+      "work/sources/vla_masters_gap_scout_2026-11-12.json",
+      "work/update/README.md",
+      "work/update/VLA_MASTERS_GAP_SCOUT_2026-11-12.md"
+    ]
+  }
+}

@@ -1,0 +1,118 @@
+{
+  "schema_version": 1,
+  "id": "GAP-SET-P0",
+  "updated": "2026-11-01",
+  "evidence_maturity": "CURATION-HYPOTHESIS",
+  "status": {
+    "preparation": "RECIPE_WRITTEN_UNBUILT",
+    "native": "WAITING_RESOURCE",
+    "effect": "UNMEASURED"
+  },
+  "source": {
+    "vlabench": "cf588fe60c0c7282174fe979f5913170cfe69017",
+    "openpi": "4483d1da6332da44115fe530e4e6fdd89bd57b13",
+    "rejected_vlabench_submodule": "c0b0bd4bce430e1874fbea68623d98ff13934f3e",
+    "rrt": "7d3fb972bcc8a83b793d516d5953a42e3068dc09",
+    "openpi_lock_sha256": "97352549af74bc031ba9cbc9d91339841fead9163408a393bf15895daf2cdc51"
+  },
+  "model": {
+    "repo_id": "VLABench/pi0-primitive-10task",
+    "revision": "1ad73753a74d5cd97e67856664350f3f0baa21dc",
+    "config": "pi0_ft_vlabench_primitive",
+    "checkpoint_root": "/data/checkpoint",
+    "normalizer": "assets/vlabench/vlabench_ft_primitive/norm_stats.json",
+    "normalizer_sha256": "333f238a862d70c4064d88baacf6ae0afaddc4333f61284f32c88122b03ca33e",
+    "policy_seed": 0,
+    "action_horizon": 50,
+    "action_output_dim": 7
+  },
+  "environment": {
+    "platform": "linux/amd64",
+    "python": "3.11.13",
+    "simulator": "mujoco==3.2.2",
+    "dm_control": "1.0.22",
+    "sim_numpy": "1.25.0",
+    "policy_jax": "0.5.0",
+    "render": "EGL",
+    "required": "Local NVIDIA Docker with compute,graphics,utility and JAX CUDA12; no host/MPS/cloud fallback",
+    "planning_budget_not_measured": {
+      "gpu_vram_gib": 24,
+      "host_ram_gib": 32,
+      "docker_storage_free_gib": 100
+    },
+    "driver": "CUDA12-compatible NVIDIA driver; actual jax.devices and EGL render required. These planning budgets are not measured minima.",
+    "sim_transitive_lock": "Generated during first image build; unverified/unfrozen before that build"
+  },
+  "probe": {
+    "task": "select_fruit",
+    "episode_index": 3,
+    "seed": 7,
+    "rollouts": 1,
+    "max_rollouts_authorized": 1,
+    "automatic_retry": false,
+    "max_policy_steps": 200,
+    "max_inference_calls": 40,
+    "replan_steps": 5,
+    "max_substeps": 1,
+    "reset_wait_step": 10,
+    "explicit_reset_settling_steps": 20,
+    "physics_substeps_per_control_source": 100,
+    "wall_timeout_seconds": 900,
+    "prompt": "Put the pear into the plate_seen",
+    "instruction_frozen": true,
+    "scope": "public dev instance; no holdout or benchmark estimate",
+    "selection_rule": "First public track_1 episode whose Fruit categories are all in task_config seen_object, before any policy result; category familiarity only, exact training-instance exposure unverified."
+  },
+  "interface": {
+    "rgb_order": "right,left,front,wrist from upstream 4-camera source; validate ncam=4 and save first image grid before inference",
+    "model_images": {
+      "image": 2,
+      "second_image": 0,
+      "wrist_image": 3
+    },
+    "raw_image_shape": [
+      480,
+      480,
+      3
+    ],
+    "state": "xyz relative to [0,-0.4,0.78], Euler xyz radians from wxyz quaternion, upstream raw gripper flag; 7 dimensions",
+    "gripper_state_caveat": "Pinned Franka get_ee_open_state returns True when both finger qpos < 0.035 and carries an upstream BUG comment. Retain the checkpoint-facing raw convention without silently inverting it. Save raw EE state; do not treat this flag as verified open/released state.",
+    "action": "Absolute EE xyz/Euler in robot-offset frame plus gripper; policy output transform already restores absolute actions. Do not add deltas again.",
+    "gripper_threshold": 0.1,
+    "open_fingers": [
+      0.04,
+      0.04
+    ],
+    "closed_fingers": [
+      0,
+      0
+    ],
+    "controller": "dm_control qpos_from_site_pose IK -> 7 joints + 2 finger controls; one env.step per action; abort on IK failure and non-finite outputs",
+    "termination": "Check task.conditions.is_met explicitly; timestep.last alone is not success. First-hit native containment does not prove release/stability, distractor exclusion or final-set semantics."
+  },
+  "paths": {
+    "data_volume": "paper-object-set-p0-data",
+    "runs_volume": "paper-object-set-p0-runs",
+    "assets_mount": "/opt/vlabench/VLABench/assets",
+    "no_host_payload": true
+  },
+  "research_gate": {
+    "resume_after_success": "Inspect saved frame/trace and native containment/release; only then design separate same-checkpoint set/enumeration comparison.",
+    "on_failure": "Distinguish install/assets/CUDA/EGL/IO/IK/budget vs task failure. No sweep or scientific NO-GO from resource failure.",
+    "unimplemented": [
+      "Q1-Q8 native task/evaluator",
+      "arbitrary-k/final stable membership/non-target exclusion",
+      "original/enumerated/set-rule comparison",
+      "paired state restoration and holdout split"
+    ]
+  },
+  "validation": {
+    "image_built": false,
+    "assets_downloaded": false,
+    "cuda_checked": false,
+    "egl_checked": false,
+    "checkpoint_loaded": false,
+    "native_rollouts": 0,
+    "competence_verified": false
+  }
+}

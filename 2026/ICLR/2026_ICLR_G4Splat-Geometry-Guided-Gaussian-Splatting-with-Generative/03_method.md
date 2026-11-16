@@ -4,6 +4,8 @@
 > Evidence maturity: `FULL_TEXT_CHECKED`.
 > Analysis basis: full-text PDF body checked on 2026-09-03 (28 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=kdPmsMVhZf; public full-text mirror used for retrieval (canonical paper source retained): https://chatpaper.com/api/v1/articles/download/247273. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
+> DOC-QA2 targeted source review: 2026-10-23; PDF pp. 27. 손상 구간·직접 연결된 표 분류만 원문 이미지와 대조했다. 전체 주장 정독·실험 검증·reading status 승격을 뜻하지 않는다. [URL·PDF hash·수정 기록](../../../work/sources/pdf_note_review_followup_2026-10-23.json).
+
 ## Method in One Sentence
 
 PDF body method statement (p. 6 (3.1 BACKGROUND), p. 4 (3 METHOD), p. 4 (3.1 BACKGROUND), p. 6 (3.1 BACKGROUND), p. 7 (3.1 BACKGROUND), p. 7 (3.1 BACKGROUND)): 3.4 OVERALL TRAINING STRATEGY Our training pipeline consists of two stages: an initialization stage and a geometry-guided generative training loop.
@@ -53,7 +55,7 @@ PDF body method statement (p. 6 (3.1 BACKGROUND), p. 4 (3 METHOD), p. 4 (3.1 BAC
 - **p. 4 / 3 METHOD - extractive body cue:** We begin by introducing the base model MAtCha (Guédon et al., 2025) and the overall training objective in Section 3.1.
 - **p. 7 / 3.1 BACKGROUND - extractive body cue:** During each round of 2DGS training, our method adopts the same total loss formulation as MAtCha (Eq.
 - **p. 7 / 3.1 BACKGROUND - extractive body cue:** (1)), but enhances chart depth maps with plane-aware depth maps, thereby introducing stronger geometric constraints that lead to more accurate and consistent reconstructions.
-- **p. 27 / C.7 IMPLEMENTATION DETAILS - extractive body cue:** Metric Definition Chamfer Distance (CD) Accuracy+Completeness 2 Accuracy mean p∈P  min p∗∈P ∗//p -p∗//1  Completeness mean p∗∈P ∗  min p∈P//p -p∗//1  ...
+- **PDF p. 27, Table A4 (DOC-QA2 원문 대조):** Table A4는 CD=(Accuracy+Completeness)/2, 두 방향 nearest-point L1 distance 평균, F-score=2PR/(P+R)를 정의한다. Precision/recall은 L1 distance<0.05인 비율이다. 이는 reconstruction metric 정의이며 training loss가 아니다.
 - **Formal bridge:** data x₀, noisy state x_t, condition c -> sample/action x̂ or trajectory -> distribution/denoising/flow objective -> sample quality, diversity and latency.
 - **Equation/algorithm anchors:** p. 4 (3.1 BACKGROUND), p. 4 (3 METHOD), p. 6 (3.1 BACKGROUND), p. 7 (3.1 BACKGROUND), p. 7 (3.1 BACKGROUND), p. 5 (3.1 BACKGROUND).
 - Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.

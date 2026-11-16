@@ -1,0 +1,130 @@
+{
+  "task_id": "C1-E1",
+  "reviewed_on": "2026-10-28",
+  "timezone": "Asia/Seoul",
+  "status": "DONE",
+  "mode": "NONEXPERIMENTAL_LITERATURE_COMPARISON",
+  "report": "work/update/C1_OBSERVATION_COST_REVIEW_2026-10-28.md",
+  "canonical_question": "synthesis/04_vla_generalist.md#gap-selective-observation-2026",
+  "scope": {
+    "specified_papers": 3,
+    "preprints": 3,
+    "body_sections_read": true,
+    "public_code_audit": false,
+    "exhaustive_novelty_search": false,
+    "historical_C1_artifacts_reused_not_reexecuted": true
+  },
+  "result": {
+    "candidate": "retained and narrowed",
+    "question": "Can a rule using only pre-look observations skip physical observation while preserving success within a declared tolerance and reducing time, for the same frozen VLA?",
+    "contribution_type": "empirical/evaluation",
+    "effect": "UNMEASURED_REQUIRES_EXPERIMENT",
+    "novelty": "NOT_ESTABLISHED",
+    "RL_necessity": "NOT_ESTABLISHED",
+    "execution_plan": "NOT_FROZEN",
+    "rollout_training": "HOLD",
+    "next_nonexperimental_task": "GAP-TERM-E1 READY"
+  },
+  "sources": [
+    {
+      "id": "C1E01",
+      "paper_id": "pr-1030",
+      "title": "Look Before You Act: Bridging Active Perception and Vision-Language-Action Models via Observation-Aligned Data Adaptation",
+      "status": "2026 arXiv preprint; conference acceptance unverified",
+      "abstract_url": "https://arxiv.org/abs/2610.23378",
+      "body_url": "https://arxiv.org/html/2610.23378v1",
+      "sections": ["III-B–D", "IV-A–B", "Tables I–VI"],
+      "evidence_use": "Observation/adaptation and budget comparison, report section 1.",
+      "boundary": "No claim that all original-data mixing is absent; no converted wall-time estimate."
+    },
+    {
+      "id": "C1E02",
+      "paper_id": "pr-1031",
+      "title": "EyeRobot 2.0: Active Gaze for Precise Manipulation without Wrist Cameras",
+      "status": "2026 arXiv preprint; conference acceptance unverified",
+      "abstract_url": "https://arxiv.org/abs/2610.03710",
+      "body_url": "https://arxiv.org/html/2610.03710v1",
+      "sections": ["3.1–3.2", "4", "5 baselines and 5.1", "6"],
+      "evidence_use": "Virtual fixation versus physical viewpoint movement, report section 1.",
+      "boundary": "Task-specific co-training is not a frozen generalist VLA look/skip result."
+    },
+    {
+      "id": "C1E03",
+      "paper_id": "pr-1032",
+      "title": "RESCUE: Is This Alarm Worth Acting On? Counterfactual Evaluation of VLA Runtime Monitors",
+      "status": "2026 arXiv preprint; conference acceptance unverified",
+      "abstract_url": "https://arxiv.org/abs/2610.13516",
+      "body_url": "https://arxiv.org/html/2610.13516v1",
+      "sections": ["III-A–C", "IV-A", "IV-E", "V"],
+      "evidence_use": "Existing intervention/cost framework and tested repertoire, report section 1.",
+      "boundary": "No transfer of reset-model break-even thresholds to physical observation."
+    }
+  ],
+  "historical_sources": [
+    "work/research_candidates/2026-10-20_vla_rl/C1_PROTOCOL.md",
+    "work/research_candidates/2026-10-20_vla_rl/C1_REVIEW.md",
+    "work/experiments/vla_rl_active_handoff/RESULTS.md",
+    "work/update/VLA_HANDOFF_COMPARISON_2026-10-28.md"
+  ],
+  "comparison_status": {
+    "known_prior": ["observation-aligned adaptation", "learned gaze selection", "intervention-relative value and cost"],
+    "not_found_in_checked_comparisons": ["same adapted frozen VLA with immediate, always-physical-look and pre-look-only simple gate under all-in physical budget"],
+    "unverified": ["real success-time frontier", "simple gate sufficiency", "native competence", "current runtime resources"],
+    "absence_claim": "limited to specified sections; not field-wide"
+  },
+  "planned_comparison": {
+    "created_as": "prose draft only",
+    "strategies": ["immediate", "always physical look", "pre-look-only simple gate"],
+    "policy_weights": "fixed within comparison; adapted and original checkpoints are separate factors",
+    "cost": "elapsed physical budget including movement, settling and actual inference delays; compute and training also reported separately",
+    "success_preservation": "tolerance and uncertainty required before a confirmatory noninferiority claim",
+    "selection": "calibration scenes distinct from held-out evaluation",
+    "native_artifacts_created": false,
+    "HANDOFF_overlap": "merge if evidence only establishes endpoint-policy compatibility",
+    "entry_does_not_require": ["baseline failure", "signed-effect heterogeneity", "complete causal mechanism", "new RL method"]
+  },
+  "actions": {
+    "simulation": false,
+    "inference": false,
+    "training": false,
+    "Docker_GPU_probe": false,
+    "package_installation": false,
+    "local_PDF_weights_dataset_download": false,
+    "registration_or_reading_promotion": false,
+    "external_messages": false,
+    "git_commit_push": false
+  },
+  "validation": {
+    "status": "PASS",
+    "commands": [
+      "PYTHONPYCACHEPREFIX=/tmp/paper_c1e1_pycache python3 -m py_compile work/scripts/build_reading_tiers.py",
+      "python3 work/scripts/build_reading_tiers.py",
+      "git diff --check",
+      "python3 work/scripts/audit_repository.py"
+    ],
+    "errors": [],
+    "warnings": [],
+    "papers": 1072,
+    "tiers": {"CORE": 47, "NEXT": 297, "REFERENCE": 486, "ARCHIVE": 242},
+    "active_reading_rows": 344,
+    "history_reading_rows": 47,
+    "standard_notes": 5360,
+    "markdown_files": 5541,
+    "markdown_links": 10979,
+    "canonical_files_byte_identical": [
+      "AGENTS.md", "PAPER.md", "work/sources/papers.json",
+      "work/sources/registry_meta.json", "research/READING_TIERS.csv",
+      "research/READING_STATUS.csv", "research/READING_STATUS_HISTORY.csv"
+    ],
+    "existing_dirty_files": 655,
+    "changed_existing_dirty": 8,
+    "unrelated_dirty_preserved": 647,
+    "existing_deletions_preserved": 10,
+    "new_files": [
+      "work/update/C1_OBSERVATION_COST_REVIEW_2026-10-28.md",
+      "work/sources/c1_observation_cost_review_2026-10-28.json"
+    ],
+    "generator_additional_changes": false,
+    "policy_effect_test": false
+  }
+}

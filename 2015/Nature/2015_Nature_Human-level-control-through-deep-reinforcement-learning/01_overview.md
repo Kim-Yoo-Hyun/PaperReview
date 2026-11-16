@@ -17,6 +17,8 @@
 - Paper type: theory_or_foundation
 - Source audit: full-text PDF body checked on 2026-09-03 (13 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
+> DOC-QA2 targeted source review: 2026-10-23; PDF pp. 6. 손상 구간·직접 연결된 표 분류만 원문 이미지와 대조했다. 전체 주장 정독·실험 검증·reading status 승격을 뜻하지 않는다. [URL·PDF hash·수정 기록](../../../work/sources/pdf_note_review_followup_2026-10-23.json).
+
 ## Why This Paper Is Here
 
 Planning and control의 control 문제를 이해하기 위해 읽는다. 본문은 Indeed, in certain games DQN is able to discover a relatively long-term strategy (for example, Breakout: the agent learns the optimal strategy, which is to first dig a tunnel around the side ...를 문제로 두고, Notably, our method was able to train large neural networks using a reinforcementlearningsignalandstochasticgradientdescentinastablemannerillustrated by the temporal evolution of two indices of learning (the agent's average score-per-ep ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
@@ -49,7 +51,7 @@ Planning and control의 control 문제를 이해하기 위해 읽는다. 본문�
 | Observation/input | The outputs correspond to the predicted Q-values of the individual actions for the input state. | joint/task state, reference와 sensor feedback | p. 6 (84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess), p. 6 (84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess) |
 | State/latent | outputs, correspond, predicted, Q-values, individual, actions, input, state, instead, usean, architecture, there | state estimate, task-space error와 control decision | p. 6 (84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess), p. 6 (84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess), p. 2 (2 6 F E B R U A R Y) |
 | Output/action | We instead usean architecture in which there is a separate output unit for each possible action, and only the state representation is an input to the neural network. | torque, force, velocity 또는 position command | p. 6 (84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess), p. 2 (2 6 F E B R U A R Y), p. 2 (2 6 F E B R U A R Y) |
-| Objective/outcome | This is based on the following intuition: if the optimal value Q s0,a0 ð Þ of the sequence s9 at the next time-step was known for all possible actions a9, thentheoptimalstrategy istoselecttheactiona9 ... | tracking, stability, constraint satisfaction과 contact behavior | p. 6 (84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess), p. 6 (84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess), p. 7 (84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess) |
+| Objective/outcome | Optimal action value Q*(s,a)는 다음 state에서 max_a′Q*(s′,a′)를 사용한 Bellman equation을 만족하며 discounted return 최대화를 나타낸다. | Atari action-value learning objective; contact/stability tracking metric이 아님 | PDF p. 6 Methods / model description |
 
 ## Main Claims and Actual Contribution
 

@@ -4,6 +4,8 @@
 > Evidence maturity: `FULL_TEXT_CHECKED`.
 > Analysis basis: full-text PDF body checked on 2026-09-03 (18 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=a3ptUbuzbW; public full-text mirror used for retrieval (canonical paper source retained): https://chatpaper.com/api/v1/articles/download/114864. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
+> DOC-QA2 targeted source review: 2026-10-23; PDF pp. 6. 손상 구간·직접 연결된 표 분류만 원문 이미지와 대조했다. 전체 주장 정독·실험 검증·reading status 승격을 뜻하지 않는다. [URL·PDF hash·수정 기록](../../../work/sources/pdf_note_review_followup_2026-10-23.json).
+
 ## Method in One Sentence
 
 PDF body method statement (p. 4 (3 METHOD), p. 6 (3 METHOD), p. 5 (3 METHOD), p. 6 (3 METHOD), p. 7 (3 METHOD), p. 4 (3 METHOD)): 4, it first pre-trains a coarse model on full training data with the schedule of 3DGS.
@@ -49,7 +51,7 @@ PDF body method statement (p. 4 (3 METHOD), p. 6 (3 METHOD), p. 5 (3 METHOD), p.
 ## Objective / Update Rule
 
 - **p. 6 / 3 METHOD - extractive body cue:** To alleviate this problem, we prioritize the gradient from SSIM loss and introduce a Decomposed-Gradient-based Densification (DGD) strategy.
-- **p. 6 / 3 METHOD - extractive body cue:** Specifically, the gradient for densification is reformulated as: ∇densify = max  ω × /∇L/avg /∇LSSIM/avg , 1  × ∇LSSIM, (2) where ∇LSSIM is ...
+- **PDF p. 6, §3.2 / Eq. (2) (DOC-QA2 원문 대조):** Densification은 SSIM gradient를 쓰되 max(ω·avg_abs_grad(L)/avg_abs_grad(L_SSIM),1)로 scale을 맞춘다. Total-loss gradient를 그대로 쓰는 규칙과 구별한다.
 - **p. 4 / 3 METHOD - extractive body cue:** The loss L that supervises 3DGS's optimization is the weighted sum of two parts, L1 loss L1 and D-SSIM loss LSSIM.
 - **p. 5 / 3 METHOD - extractive body cue:** As the training progresses, we decrease the loss weight α exponentially to suppress the adverse effect of imperfect depth estimation gradually.
 - **p. 4 / 3 METHOD - extractive body cue:** The Gaussians with a gradient larger than a certain threshold would be cloned or split.

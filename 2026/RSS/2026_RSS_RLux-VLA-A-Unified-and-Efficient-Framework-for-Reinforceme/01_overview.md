@@ -1,4 +1,4 @@
-# RLux-VLA: A Unified and Efficient Framework for Reinforcement Learning of Vision-Language-Action Models
+# RLinf-VLA: A Unified and Efficient Framework for Reinforcement Learning of Vision-Language-Action Models
 
 > Evidence maturity: `ABSTRACT_CHECKED`. abstract 기반 — 본문 수동 확인 필요.
 > 자동 작성 노트는 실제 정독을 뜻하지 않는다. 사용자 reading status는 UNREAD로 시작한다.
@@ -14,6 +14,8 @@
 - Code/Project: https://github.com/RLinf/RLinf/blob/main/docs/source-zh/rst_source/resources/release_v0.3.rst
 - Code: https://github.com/RLinf/RLinf
 - Source audit: 2026-10-19: 공식 paper abstract 및 저자 project/code README 확인; abstract 기반 — 본문 수동 확인 필요.
+
+2026-11-06: RSS 2026 공식 title을 RLinf-VLA로 정정. arXiv/DOI·paper_id·기존 folder 유지; 이전 RLux-VLA는 검색 alias이며 공식 title로 사용하지 않는다.
 
 ## Problem and Importance
 
@@ -35,7 +37,7 @@ RSS abstract는 LIBERO, ManiSkill, RoboTwin simulation에서 training efficiency
 
 ## Why This Paper Is Here — Researcher Interpretation
 
-Current trend / system. 여러 VLA·RL 알고리즘·시뮬레이터를 비교할 공통 interface와 resource allocation을 제공한다. SimpleVLA-RL 및 ConRFT 실험을 설계할 때 algorithm 효과와 시스템 throughput을 분리하는 데 유용하다. 공식 software에서는 RLinf-VLA라는 이름도 사용한다.
+Current trend / system. 여러 VLA·RL 알고리즘·시뮬레이터를 비교할 공통 interface와 resource allocation을 제공한다. SimpleVLA-RL 및 ConRFT 실험을 설계할 때 algorithm 효과와 시스템 throughput을 분리하는 데 유용하다. 공식 RSS title은 RLinf-VLA다.
 
 ## Verification Boundary
 

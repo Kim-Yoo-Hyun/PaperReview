@@ -4,6 +4,18 @@
 > Evidence maturity: `FULL_TEXT_CHECKED`.
 > Analysis basis: full-text PDF body checked on 2026-09-03 (16 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=IkhJApkJQ3; public full-text mirror used for retrieval (canonical paper source retained): https://chatpaper.com/api/v1/articles/download/168051. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
+> DOC-QA2 targeted source review: 2026-10-23; PDF pp. 6. 손상 구간·직접 연결된 표 분류만 원문 이미지와 대조했다. 전체 주장 정독·실험 검증·reading status 승격을 뜻하지 않는다. [URL·PDF hash·수정 기록](../../../work/sources/pdf_note_review_followup_2026-10-23.json).
+
+## DOC-QA3 — view-selector BCE
+
+**원문 근거:** PDF p. 6 Eq. (8)은 예측값을 log 밖, binary label을 log 안에 둔다. 원문의 표기를 고쳐 인용하지 않는다.
+
+**공식 코드 근거:** `train_epoch` → `ViewSelector.BCELoss.forward`는 `p=(cosine_similarity+1)/2`를 계산한 뒤 `nn.BCELoss()(p, label.float())`를 호출한다. Dataset은 positive/negative view에 각각 1/0을 준다. 즉 내부 범위 0<p<1에서 표준 `−mean[y log p + (1−y) log(1−p)]`에 해당한다. 경계값의 수치 처리는 PyTorch BCE에 위임한다. [공식 API 정의](https://docs.pytorch.org/docs/2.14/generated/torch.nn.BCELoss.html)는 인수 순서·기본 reduction의 근거이며 논문 실행 환경의 버전 인증은 아니다.
+
+**연구자 해석:** 인쇄 Eq. (8) 그대로의 역전 loss나 raw cosine을 재현 구현으로 쓰지 않는다. 이 차이를 독립 연구 기여나 논문 성능 오류로 주장하지 않는다.
+
+대조 근거: [원문](https://arxiv.org/html/2505.22143v1#S4.SS2) · [공식 구현 e1df64c5490c](https://github.com/fereenwong/cdViews/blob/e1df64c5490c75d117f0ece5c334a6d818cf5d83/cdviews/ViewSelector.py#L326-L336) · [전체 호출 경로·파일 hash](../../../work/sources/paper_code_formula_review_2026-10-23.json). 검토일 2026-10-23. 지정 구간을 정적으로 읽었으며 코드 실행·의존성 설치는 하지 않았다. 논문 실험과 이 commit의 동일성 및 저자 확인 정오표는 미확인이다. 사용자 reading status는 유지한다.
+
 ## Method in One Sentence
 
 PDF body method statement (p. 2 (1. Introduction), p. 6 (3. Preliminaries), p. 2 (1. Introduction), p. 4 (3. Preliminaries), p. 6 (3. Preliminaries), p. 4 (3. Preliminaries)): To train this module, we design a viewAnnotator that automatically generates training data in two steps. viewAnnotator firstly converts question-answer pairs into descriptive captions.
@@ -49,7 +61,7 @@ PDF body method statement (p. 2 (1. Introduction), p. 6 (3. Preliminaries), p. 2
 ## Objective / Update Rule
 
 - **p. 6 / 3. Preliminaries - extractive body cue:** The mismatch loss is used to optimize the parameters of viewSelector.
-- **p. 6 / 3. Preliminaries - extractive body cue:** (7) The score ˆSi is supervised with the corresponding label Si by binary cross-entropy loss: LBCE = -1 N ′ N′ X i=1  ˆSi ...
+- **PDF p. 6, Eq. (8) (DOC-QA2 원문 대조):** 본문은 예측 view score를 label로 BCE supervision한다고 설명한다. 그러나 인쇄된 Eq. (8)은 예측값 Ŝ_i를 log 밖, label S_i를 log 안에 두어 통상 BCE의 위치와 다르다. 손상 식을 임의로 정상식으로 고치지 않고 이 원문 불일치를 남긴다; 공개 구현 대조는 위 DOC-QA3에 완료했으며 paper-run 버전은 미확인이다.
 - **p. 2 / 1. Introduction - extractive body cue:** This constraint makes it crucial to carefully select the most informative views.
 - **p. 2 / 1. Introduction - extractive body cue:** (2) Enhance View Diversity: The aim is to improve spatial diversity and minimize redundancy for the selected views.
 - **p. 4 / 3. Preliminaries - extractive body cue:** As for inference, our cdViews has two modules to run: the viewSelector identifies critical views, and the viewNMS enhances view diversity and minimizes redundancy.

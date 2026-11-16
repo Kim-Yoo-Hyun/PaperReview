@@ -4,6 +4,8 @@
 > Evidence maturity: `FULL_TEXT_CHECKED`.
 > Analysis basis: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.proceedings.com/content/081/081087webtoc.pdf; PDF retrieval source: https://arxiv.org/pdf/2406.08009v1. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
+> DOC-QA2 targeted source review: 2026-10-23; PDF pp. 5. 손상 구간·직접 연결된 표 분류만 원문 이미지와 대조했다. 전체 주장 정독·실험 검증·reading status 승격을 뜻하지 않는다. [URL·PDF hash·수정 기록](../../../work/sources/pdf_note_review_followup_2026-10-23.json).
+
 ## Paper-supported conclusion
 
 > **Evidence boundary:** The following claims are restricted to selected PDF body sentences, captions and section anchors; exact table/equation values remain to be checked at those anchors.
@@ -15,7 +17,7 @@
 - **p. 1 / Abstract - extractive body cue:** To address these challenges, we introduce OpenObj, an innovative approach to build openvocabulary object-level Neural Radiance Fields (NeRF) with fine-grained understanding.
 - **p. 4 / III. OPENOBJ - extractive body cue:** To address this problem, we propose considering all frames together and devising a two-stage approach as shown in Fig.
 - **p. 3 / III. OPENOBJ - extractive body cue:** In this paper, we use the visual encoder of CLIP [4] to encode images cropped according to the mask mobj t,i as VLM feature f ...
-- **p. 5 / III. OPENOBJ - extractive body cue:** Next, we superimpose the features of these masks mpart t,j and perform normalization: If t = P j  mpart t,j · f clip t,j ...
+- **PDF p. 5, §III-D / Eq. (3) (DOC-QA2 원문 대조):** Dense feature image는 part-mask로 가중한 CLIP feature의 합을 해당 pixel의 mask 합으로 정규화해 구성한다. 이를 이후 object NeRF 학습의 feature supervision에 사용한다.
 - **p. 3 / III. OPENOBJ - extractive body cue:** Specifically, we use the bounding boxes of the masks mobj t,i as prompts and use the TAP (Tokenize Anything via Prompting) model [29] to generate ...
 - **Contribution anchor:** p. 2 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 1 (Abstract), p. 4 (III. OPENOBJ), p. 3 (III. OPENOBJ), p. 5 (III. OPENOBJ)
 

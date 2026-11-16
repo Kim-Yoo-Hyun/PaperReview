@@ -17,6 +17,8 @@
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
+> DOC-QA1 (2026-10-23): 제어문자·깨진 추출 구간과 직접 연결된 표 항목을 PDF 페이지 이미지와 대조했다. 확인 범위·원문 URL·페이지·수정 이력은 [대조 기록](../../../work/sources/pdf_note_review_2026-10-23.json)에 있다. 노트 전체의 정독이나 모든 기존 주장에 대한 재검증을 뜻하지 않으며 reading status는 유지한다.
+
 ## Why This Paper Is Here
 
 Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 To overcome these challenges, we propose a novel NeRF-Guided 3DGS (NG-GS) segmentation framework, aiming to achieve model continuity at object boundaries.를 문제로 두고, With the proposed NG-GS framework, we make the following main contributions: • we develop a continuous feature field construction module that combines RBF interpolation with MRHE to generate spatially smooth and multi-scale ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
@@ -48,7 +50,7 @@ Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 �
 |---|---|---|---|
 | Observation/input | With the proposed NG-GS framework, we make the following main contributions: • we develop a continuous feature field construction module that combines RBF interpolation with MRHE to generate spatially smooth and multi-scale ... | RGB-D, image set, point cloud, depth와 camera pose | p. 2 (1. Introduction), p. 5 (4.2. NeRF-GS Joint Optimization) |
 | State/latent | NG-GS, framework, make, following, main, contributions, develop, continuous, feature, field, construction, module | geometry, map, object/relationship state | p. 2 (1. Introduction), p. 5 (4.2. NeRF-GS Joint Optimization), p. 3 (3.1. NeRF) |
-| Output/action | These parameters dynamically adjust the hidden layers based on external conditions. ˆh(l) = ReLU  γ(l) ⊙h(l) + β(l) , (14) where ⊙is the element-wise product, h(l) is the original activation vector ... | point map, pose, scene graph, affordance 또는 query result | p. 5 (4.2. NeRF-GS Joint Optimization), p. 3 (3.1. NeRF), p. 3 (4. Method) |
+| Intermediate feature update | 원문 대조: 외부 interpolation feature에서 만든 γ^(l), β^(l)로 hidden activation을 element-wise scale·shift하고 ReLU를 적용한다. 이는 NeRF 내부 layer modulation이며 로봇 action output이 아니다. ([PDF p. 5](https://openaccess.thecvf.com/content/CVPR2026/papers/He_NG-GS_NeRF-guided_3D_Gaussian_Splatting_Segmentation_CVPR_2026_paper.pdf#page=5), §4.2 NeRF-GS Joint Optimization, Eq. (14)) | NeRF hidden activation; scene/action 최종 출력과 구분 | [PDF p. 5](https://openaccess.thecvf.com/content/CVPR2026/papers/He_NG-GS_NeRF-guided_3D_Gaussian_Splatting_Segmentation_CVPR_2026_paper.pdf#page=5), §4.2 NeRF-GS Joint Optimization, Eq. (14) |
 | Objective/outcome | The gradient smoothness loss function achieves visual smoothness by minimizing the magnitude of color gradients, thereby penalizing abrupt color variations. | geometric accuracy, semantic consistency와 planning/manipulation utility | p. 6 (4.2. NeRF-GS Joint Optimization), p. 5 (4.2. NeRF-GS Joint Optimization), p. 3 (4. Method) |
 
 ## Main Claims and Actual Contribution

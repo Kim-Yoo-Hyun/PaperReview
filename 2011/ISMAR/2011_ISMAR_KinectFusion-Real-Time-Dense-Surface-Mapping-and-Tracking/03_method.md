@@ -4,6 +4,8 @@
 > Evidence maturity: `FULL_TEXT_CHECKED`.
 > Analysis basis: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.microsoft.com/en-us/research/publication/kinectfusion-real-time-dense-surface-mapping-and-tracking/; PDF retrieval source: https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/ismar2011.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
+> DOC-QA2 targeted source review: 2026-10-23; PDF pp. 7. 손상 구간·직접 연결된 표 분류만 원문 이미지와 대조했다. 전체 주장 정독·실험 검증·reading status 승격을 뜻하지 않는다. [URL·PDF hash·수정 기록](../../../work/sources/pdf_note_review_followup_2026-10-23.json).
+
 ## Method in One Sentence
 
 PDF body method statement (p. 6 (3.1 Preliminaries), p. 4 (3 METHOD), p. 6 (3.1 Preliminaries), p. 4 (3.1 Preliminaries), p. 5 (3.1 Preliminaries), p. 5 (3.1 Preliminaries)): The point-plane error metric in combination with correspondences obtained using projective data association was first demonstrated in a real time modelling system by [23] where frame-toframe tracking was used (with ...
@@ -16,7 +18,7 @@ PDF body method statement (p. 6 (3.1 Preliminaries), p. 4 (3 METHOD), p. 6 (3.1 
 - **p. 4 / 3.1 Preliminaries - extractive body cue:** We compute an L = 3 level multi-scale representation of the surface measurement in the form of a vertex and normal map pyramid.
 - **p. 5 / 3.1 Preliminaries - extractive body cue:** Also, the support is increased linearly with distance from the sensor center to support correct representation of noisier measurements.
 - **p. 5 / 3.1 Preliminaries - extractive body cue:** Although efficient algorithms exist for computing the true discrete SDF for a given set of point measurements (complexity is linear in the the number of ...
-- **p. 7 / 3.1 Preliminaries - extractive body cue:** (21) An iteration is obtained by solving: min x∈R6 ∑ Ωk(u)̸=null ∥E∥2 2 (22) E = ˆNg k-1(ˆu)⊤ G(u)x+ eVg k(u)-ˆVg k-1(ˆu)  (23) By ...
+- **PDF p. 7, Eqs. (22)–(26) (DOC-QA2 원문 대조):** 유효한 vertex-normal correspondence에 대해 6D pose increment x의 point-to-plane residual squared sum을 최소화한다. 선형화로 6×6 symmetric normal equation을 만들고 GPU에서 누적한 뒤 CPU Cholesky로 푼다.
 - **p. 5 / 3.1 Preliminaries - extractive body cue:** Storing a weight Wk(p) with each value allows an important aspect of the global minimum of the convex L2 de-noising metric to be exploited for ...
 
 ## Design Rationale
@@ -33,7 +35,7 @@ PDF body method statement (p. 6 (3.1 Preliminaries), p. 4 (3 METHOD), p. 6 (3.1 
 - **p. 4 / 3.1 Preliminaries - extractive body cue:** We compute an L = 3 level multi-scale representation of the surface measurement in the form of a vertex and normal map pyramid.
 - **p. 5 / 3.1 Preliminaries - extractive body cue:** Also, the support is increased linearly with distance from the sensor center to support correct representation of noisier measurements.
 - **p. 5 / 3.1 Preliminaries - extractive body cue:** Although efficient algorithms exist for computing the true discrete SDF for a given set of point measurements (complexity is linear in the the number of ...
-- **p. 7 / 3.1 Preliminaries - extractive body cue:** (21) An iteration is obtained by solving: min x∈R6 ∑ Ωk(u)̸=null ∥E∥2 2 (22) E = ˆNg k-1(ˆu)⊤ G(u)x+ eVg k(u)-ˆVg k-1(ˆu)  (23) By ...
+- **PDF p. 7, Eqs. (22)–(26) (DOC-QA2 원문 대조):** 유효한 vertex-normal correspondence에 대해 6D pose increment x의 point-to-plane residual squared sum을 최소화한다. 선형화로 6×6 symmetric normal equation을 만들고 GPU에서 누적한 뒤 CPU Cholesky로 푼다.
 - **Detected method headings:** 3 METHOD (p. 3)
 
 ## Pipeline
@@ -53,7 +55,7 @@ PDF body method statement (p. 6 (3.1 Preliminaries), p. 4 (3 METHOD), p. 6 (3.1 
 - **p. 4 / 3.1 Preliminaries - extractive body cue:** Subsequently each level in a vertex and normal map pyramid Vl∈[1...L], Nl∈[1...L] is computed with Equations 3 and 4 using the corresponding depth map level.
 - **p. 5 / 3.1 Preliminaries - extractive body cue:** (5) A dense surface measurement (such as the raw depth map Rk) provides two important constraints on the surface being reconstructed.
 - **p. 6 / 3.1 Preliminaries - extractive body cue:** 3.5 Sensor Pose Estimation Live camera localisation involves estimating the current camera pose Tw,k ∈SE3 (Equation 1) for each new depth image.
-- **p. 7 / 3.1 Preliminaries - extractive body cue:** (21) An iteration is obtained by solving: min x∈R6 ∑ Ωk(u)̸=null ∥E∥2 2 (22) E = ˆNg k-1(ˆu)⊤ G(u)x+ eVg k(u)-ˆVg k-1(ˆu)  (23) By ...
+- **PDF p. 7, Eqs. (22)–(26) (DOC-QA2 원문 대조):** 유효한 vertex-normal correspondence에 대해 6D pose increment x의 point-to-plane residual squared sum을 최소화한다. 선형화로 6×6 symmetric normal equation을 만들고 GPU에서 누적한 뒤 CPU Cholesky로 푼다.
 - **Formal bridge:** sensor/map state and goal -> path/waypoint/velocity -> path cost, risk or goal utility -> goal reach with collision-free execution.
 - **Equation/algorithm anchors:** p. 5 (3.1 Preliminaries), p. 7 (3.1 Preliminaries), p. 7 (3.1 Preliminaries), p. 6 (3.1 Preliminaries), p. 4 (3.1 Preliminaries), p. 5 (3.1 Preliminaries).
 - Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.

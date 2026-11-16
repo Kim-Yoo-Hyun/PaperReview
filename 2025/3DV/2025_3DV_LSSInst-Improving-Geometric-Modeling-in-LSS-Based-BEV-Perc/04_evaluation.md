@@ -4,6 +4,8 @@
 > Evidence maturity: `FULL_TEXT_CHECKED`.
 > Analysis basis: full-text PDF body checked on 2026-09-03 (16 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://3dvconf.github.io/2025/accepted-papers/; PDF retrieval source: https://openreview.net/attachment?id=MaN2x3O2Rk&name=pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
+> DOC-QA2 targeted source review: 2026-10-23; PDF pp. 5. 손상 구간·직접 연결된 표 분류만 원문 이미지와 대조했다. 전체 주장 정독·실험 검증·reading status 승격을 뜻하지 않는다. [URL·PDF hash·수정 기록](../../../work/sources/pdf_note_review_followup_2026-10-23.json).
+
 ## Evaluation in One Sentence
 
 PDF body evaluation/result cue (p. 6 (4.3. Generalization Ability and Geometric-Wise), p. 6 (4.2. Benchmark Results), p. 7 (4.5. Multiplicate Queries Ablations), p. 13 (Figure/Table caption), p. 7 (4.3. Generalization Ability and Geometric-Wise), p. 13 (Figure/Table caption)): The table reveals that our LSSInst achieves notable improvements in mAP and NDS compared to standalone BEV detectors at a minor cost.
@@ -122,7 +124,7 @@ PDF body evaluation/result cue (p. 6 (4.3. Generalization Ability and Geometric-
 - **p. 6 / 4.1. Experimental Settings - extractive body cue:** The dataset is divided into 850 scenes for training (train) or validation (val) purposes and 150 scenes for testing (test).
 - **p. 6 / 4.1. Experimental Settings - extractive body cue:** The time interval τ is 0.5s, and long-term suppression λ is 0.6.
 - **p. 7 / 4.4. Noise Resistance for Practical Robustness - extractive body cue:** Here, the baseline is BEVDepth4D [25] with 4 frames.
-- **p. 5 / 3. Methodology - extractive body cue:** The final box embedding Gχ ∈RN×C can be formulated by Gχ = Eg   2 X j=1 Ej l3  P j d3  ...
+- **PDF p. 5, §3.3 / Eq. (4) (DOC-QA2 원문 대조):** 3D box를 position·scale의 두 3D 항과 velocity·orientation의 두 2D 항으로 나눈다. 각 항을 별도 linear projection으로 embedding한 뒤 합하고 global projection E_g를 적용해 G_χ를 만든다.
 
 ## Generalization and Failure Cases
 

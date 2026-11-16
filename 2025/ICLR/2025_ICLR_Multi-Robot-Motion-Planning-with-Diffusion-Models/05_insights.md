@@ -4,6 +4,8 @@
 > Evidence maturity: `FULL_TEXT_CHECKED`.
 > Analysis basis: full-text PDF body checked on 2026-09-03 (21 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=AUCYptvAf3; PDF retrieval source: https://arxiv.org/pdf/2410.03072. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
+> DOC-QA2 targeted source review: 2026-10-23; PDF pp. 4. 손상 구간·직접 연결된 표 분류만 원문 이미지와 대조했다. 전체 주장 정독·실험 검증·reading status 승격을 뜻하지 않는다. [URL·PDF hash·수정 기록](../../../work/sources/pdf_note_review_followup_2026-10-23.json).
+
 ## Paper-supported conclusion
 
 > **Evidence boundary:** The following claims are restricted to selected PDF body sentences, captions and section anchors; exact table/equation values remain to be checked at those anchors.
@@ -43,7 +45,7 @@
 ### Reusable lesson in the robotics loop
 
 - **Closed-loop position:** `start/goal, map, dynamics와 successor/operator description → path, trajectory, symbolic state 또는 task-motion decision → feasible action sequence 또는 minimum-cost plan`.
-- 이 논문의 재사용 가능한 지점은 Colored lines are only in MMD-PP, MMD-ECBS Input: Starts, goal conditions, and single-robot diffusion models  si start, T i, f i θ n i=1 Output: Trajectories τ =  τ i ...를 Each experiment with n robots begins by randomly picking start and goal states on a map for various algorithms to compute valid trajectories τ (or MAPF paths Π) between.로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 path, trajectory, symbolic state 또는 task-motion decision가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 Currently, MMD focuses on coordinating robots, seeking to produce collision-free data-driven trajectories.에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
+**Researcher interpretation (DOC-QA2):** Algorithm 1의 per-robot diffusion model과 multi-robot conflict constraints를 분리하여, 동일 start/goal과 모델에서 coordination 전략별 collision-free trajectory 생성 비용을 비교한다. 이 interface만으로 실행 중 feedback/recovery 성능을 주장하지 않는다. (PDF p. 4)
 - The paper-specific mechanism to preserve in a reproduction is: Our contributions in this paper are threefold: (1) We propose a novel data-efficient framework for multirobot diffusion planning inspired by constraint-based search algorithms.
 - Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
 

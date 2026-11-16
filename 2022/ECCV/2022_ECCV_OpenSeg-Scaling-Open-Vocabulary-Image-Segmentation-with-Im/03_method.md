@@ -4,6 +4,8 @@
 > Evidence maturity: `FULL_TEXT_CHECKED`.
 > Analysis basis: full-text PDF body checked on 2026-09-03 (27 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2112.12143; PDF retrieval source: https://arxiv.org/pdf/2112.12143. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
+> DOC-QA2 targeted source review: 2026-10-23; PDF pp. 13. 손상 구간·직접 연결된 표 분류만 원문 이미지와 대조했다. 전체 주장 정독·실험 검증·reading status 승격을 뜻하지 않는다. [URL·PDF hash·수정 기록](../../../work/sources/pdf_note_review_followup_2026-10-23.json).
+
 ## Method in One Sentence
 
 PDF body method statement (p. 6 (3 Method), p. 6 (3 Method), p. 7 (3 Method), p. 8 (3 Method), p. 7 (3 Method), p. 8 (3 Method)): 3.1 Learning Segmentation Masks We design a model architecture which consists of a feature pyramid network (FPN) [32] for multi-scale feature extraction and a cross-attention module for segmentation region proposal.
@@ -114,7 +116,7 @@ PDF body method statement (p. 6 (3 Method), p. 6 (3 Method), p. 7 (3 Method), p.
 
 - **p. 10 / 4 Experiments - extractive body cue:** ALIGN w/proposal baseline: The ALIGN, LSeg and LSeg+ baselines are methods that perform visual-semantic alignments without explicit visual grouping.
 - **p. 13 / 4 Experiments - extractive body cue:** This method performs inference without mask proposals.
-- **p. 13 / 4 Experiments - extractive body cue:** Narr.  8.8 12.2 28.6 48.2 72.2 4.4 Ablation Experiments Importance of backbone initialization: In order to save the computation, we initialize OpenSeg from the ...
+- **PDF p. 13, Tables 2–3 / §4.4 (DOC-QA2 원문 대조):** Table 2의 마지막 행은 eff-b7 OpenSeg+prompt engineering의 A-847/PC-459/A-150/PC-59/PAS-20 mIoU 8.8/12.2/28.6/48.2/72.2다. 이어지는 §4.4의 backbone initialization ablation은 별도 Table 3이며 이 숫자를 initialization 결과로 읽지 않는다.
 - **p. 14 / 4 Experiments - extractive body cue:** This procedure removes conjunctions, pronouns, adverbs, verbs, etc. which reduces the noises.
 - **p. 24 / Figure/Table caption - extractive body cue:** Figure 8. Predictions of OpenSeg on random examples in the A-150 dataset (Part1). For each example, top left is the input image, top right is ...
 - **p. 10 / 4 Experiments - extractive body cue:** Since we initialize the backbone of OpenSeg from ALIGN's pretrained checkpoint, we use ALIGN as a baseline.

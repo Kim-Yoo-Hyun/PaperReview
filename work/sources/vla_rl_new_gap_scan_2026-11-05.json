@@ -1,0 +1,1064 @@
+{
+  "schema_version": "1.0",
+  "checked_on": "2026-11-05",
+  "purpose": "Fresh external VLA+RL gap discovery, beyond six prepared topics and historical gap list",
+  "evidence_maturity": "CURATION-HYPOTHESIS",
+  "scope": {
+    "trend_window": [
+      2024,
+      2026
+    ],
+    "recent_papers": 29,
+    "older_lineage_anchors": 2,
+    "selected_total": 31,
+    "registered_existing": 10,
+    "external_not_matched": 21,
+    "exhaustive": false,
+    "venue_quota": false,
+    "discovery_only_sources_not_evidence": true
+  },
+  "queries": [
+    "VLA reinforcement learning visual feedback motor program memorization mechanistic 2026",
+    "VLA world model policy improvement action ranking uncertainty 2026",
+    "multi robot VLA cross play unseen partners reinforcement learning 2025 2026",
+    "Trusting Imagined Futures / DRILL / What Matters for World Modeling",
+    "VLA-Trace reinforcement learning",
+    "CHORUS / Latent Theory of Mind / Other-Play / Fictitious Co-Play"
+  ],
+  "decisions": [
+    {
+      "id": "GAP-FEEDBACK",
+      "status": "EXPLORATORY_CANDIDATE",
+      "priority": 1,
+      "question": "How does RL post-training change task-relevant feedback use relative to nuisance sensitivity, after separating motor competence and data exposure?",
+      "evidence_sources": [
+        "S04",
+        "S05",
+        "S07",
+        "S08",
+        "S09",
+        "S10",
+        "S11",
+        "S12",
+        "S27"
+      ],
+      "next": "Audit source/checkpoint lineage and specify a small matched physical-change x visual-feedback comparison. No method/effect claim yet."
+    },
+    {
+      "id": "GAP-CROSSPLAY",
+      "status": "EXPLORATORY_CANDIDATE",
+      "priority": 2,
+      "question": "When does RL co-adaptation impair collaboration with independently trained VLA teammates despite adequate individual motor competence?",
+      "evidence_sources": [
+        "S06",
+        "S13",
+        "S14",
+        "S15",
+        "S28",
+        "S29",
+        "S30",
+        "S31"
+      ],
+      "next": "Fix one two-robot task with multiple valid conventions and compare self-play/cross-play, population training, and explicit role/ready-signal alternatives."
+    },
+    {
+      "id": "WORLD_MODEL_GENERIC",
+      "status": "NOT_SELECTED_DIRECT_COLLISION",
+      "evidence_sources": [
+        "S16",
+        "S17",
+        "S18",
+        "S19",
+        "S20",
+        "S21",
+        "S22",
+        "S23",
+        "S24"
+      ],
+      "reason": "World-model RL, action reliability, policy-utility objectives and audited synthetic supervision already have direct prior work; broad proposals are not fresh gaps."
+    },
+    {
+      "id": "HUMAN_CORRECTION_GENERIC",
+      "status": "NOT_SELECTED_DIRECT_COLLISION",
+      "evidence_sources": [
+        "S25",
+        "S26"
+      ],
+      "reason": "Generic human correction and advantage weighting diagnosis already directly covered; precise continuation-policy attribution remains unassessed and is not promoted."
+    }
+  ],
+  "non_actions": {
+    "experiments": 0,
+    "dependency_installs": 0,
+    "weights_downloaded": 0,
+    "local_pdf_cache_changes": 0,
+    "registry_admissions": 0,
+    "reading_status_promotions": 0
+  },
+  "papers": [
+    {
+      "source_id": "S01",
+      "title": "OpenVLA: An Open-Source Vision-Language-Action Model",
+      "year": 2024,
+      "venue_status": "CoRL 2024; proceedings 2025",
+      "status_basis": "official_proceedings",
+      "primary_url": "https://proceedings.mlr.press/v270/kim25c.html",
+      "review_scope": "ABSTRACT_CHECKED",
+      "role": "foundation",
+      "registry_paper_id": "pr-0051",
+      "registry_match": "existing",
+      "checked_on": "2026-11-05"
+    },
+    {
+      "source_id": "S02",
+      "title": "RoboDreamer: Learning Compositional World Models for Robot Imagination",
+      "year": 2024,
+      "venue_status": "ICML 2024",
+      "status_basis": "official_proceedings",
+      "primary_url": "https://proceedings.mlr.press/v235/zhou24f.html",
+      "review_scope": "ABSTRACT_CHECKED",
+      "role": "world_model_lineage",
+      "registry_paper_id": "pr-0699",
+      "registry_match": "existing",
+      "checked_on": "2026-11-05"
+    },
+    {
+      "source_id": "S03",
+      "title": "3D-VLA: A 3D Vision-Language-Action Generative World Model",
+      "year": 2024,
+      "venue_status": "ICML 2024",
+      "status_basis": "official_proceedings",
+      "primary_url": "https://proceedings.mlr.press/v235/zhen24a.html",
+      "review_scope": "ABSTRACT_CHECKED",
+      "role": "world_model_lineage",
+      "registry_paper_id": "pr-0939",
+      "registry_match": "existing",
+      "checked_on": "2026-11-05"
+    },
+    {
+      "source_id": "S04",
+      "title": "What Can RL Bring to VLA Generalization? An Empirical Study",
+      "year": 2025,
+      "venue_status": "NeurIPS 2025",
+      "status_basis": "official_proceedings",
+      "primary_url": "https://proceedings.neurips.cc/paper_files/paper/2025/hash/8c0fabe372177d2aded596be2d3b4544-Abstract-Conference.html",
+      "review_scope": "SELECTED_FULL_TEXT_AND_CODE_README",
+      "role": "feedback",
+      "registry_paper_id": "pr-0956",
+      "registry_match": "existing",
+      "checked_on": "2026-11-05",
+      "full_text": "https://papers.nips.cc/paper_files/paper/2025/file/8c0fabe372177d2aded596be2d3b4544-Paper-Conference.pdf",
+      "project": "https://rlvla.github.io/",
+      "code": "https://github.com/gen-robot/RL4VLA",
+      "reviewed_locations": [
+        "benchmark scope incl. mid-episode object reposition",
+        "official README Evaluate / Pre-trained checkpoints"
+      ],
+      "artifact_boundary": "README lists warmup/RL/SFT checkpoints with different unnorm_key. No payload, immutable revision, adapter compatibility or execution verified."
+    },
+    {
+      "source_id": "S05",
+      "title": "Mechanistic Interpretability for Steering Vision-Language-Action Models",
+      "year": 2025,
+      "venue_status": "CoRL 2025",
+      "status_basis": "official_proceedings",
+      "primary_url": "https://proceedings.mlr.press/v305/haon25a.html",
+      "review_scope": "ABSTRACT_CHECKED",
+      "role": "feedback",
+      "registry_paper_id": "pr-1043",
+      "registry_match": "existing",
+      "checked_on": "2026-11-05"
+    },
+    {
+      "source_id": "S06",
+      "title": "Latent Theory of Mind: A Decentralized Diffusion Architecture for Cooperative Manipulation",
+      "year": 2025,
+      "venue_status": "CoRL 2025",
+      "status_basis": "official_proceedings",
+      "primary_url": "https://proceedings.mlr.press/v305/he25a.html",
+      "review_scope": "ABSTRACT_CHECKED",
+      "role": "cross_play",
+      "registry_paper_id": null,
+      "registry_match": "not_matched_in_current_manifest",
+      "checked_on": "2026-11-05"
+    },
+    {
+      "source_id": "S07",
+      "title": "RobustVLA: Robustness-Aware Reinforcement Post-Training for Vision-Language-Action Models",
+      "year": 2025,
+      "venue_status": "arXiv; main-conference status unverified",
+      "status_basis": "preprint",
+      "primary_url": "https://arxiv.org/html/2511.01331v2",
+      "review_scope": "SELECTED_FULL_TEXT",
+      "role": "feedback",
+      "registry_paper_id": null,
+      "registry_match": "not_matched_in_current_manifest",
+      "checked_on": "2026-11-05"
+    },
+    {
+      "source_id": "S08",
+      "title": "SimpleVLA-RL: Scaling VLA Training via Reinforcement Learning",
+      "year": 2026,
+      "venue_status": "ICLR 2026",
+      "status_basis": "official_proceedings",
+      "primary_url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/cbfbcb4da14235bd69b134070898ae9d-Abstract-Conference.html",
+      "review_scope": "ABSTRACT_CHECKED",
+      "role": "feedback",
+      "registry_paper_id": "pr-0957",
+      "registry_match": "existing",
+      "checked_on": "2026-11-05"
+    },
+    {
+      "source_id": "S09",
+      "title": "Not All Features Are Created Equal: A Mechanistic Study of Vision-Language-Action Models",
+      "year": 2026,
+      "venue_status": "NeurIPS 2026 program listing",
+      "status_basis": "official_program",
+      "primary_url": "https://neurips.cc/Downloads/2026",
+      "review_scope": "SELECTED_FULL_TEXT",
+      "role": "feedback",
+      "registry_paper_id": null,
+      "registry_match": "not_matched_in_current_manifest",
+      "checked_on": "2026-11-05",
+      "full_text": "https://arxiv.org/pdf/2603.19233v6",
+      "abstract": "https://arxiv.org/abs/2603.19233",
+      "project": "https://cwru-aism.github.io/vla-interp-page/",
+      "reviewed_locations": [
+        "v6 Nov 2 abstract",
+        "4.7-4.8",
+        "Appendix B"
+      ],
+      "boundary": "V6 supersedes earlier v1. Injection results are intervention-specific; natural non-injected policy can track displaced object. Exact coordinate frame unresolved in paper."
+    },
+    {
+      "source_id": "S10",
+      "title": "Embodied Interpretability: Linking Causal Understanding to Generalization in Vision-Language-Action Models",
+      "year": 2026,
+      "venue_status": "ICML 2026",
+      "status_basis": "official_proceedings",
+      "primary_url": "https://proceedings.mlr.press/v306/zhang26gz.html",
+      "review_scope": "ABSTRACT_CHECKED",
+      "role": "feedback",
+      "registry_paper_id": null,
+      "registry_match": "not_matched_in_current_manifest",
+      "checked_on": "2026-11-05"
+    },
+    {
+      "source_id": "S11",
+      "title": "VLA-Trace: Diagnosing Vision-Language-Action Models through Representation and Behavior Tracing",
+      "year": 2026,
+      "venue_status": "arXiv; venue unverified",
+      "status_basis": "preprint",
+      "primary_url": "https://arxiv.org/html/2605.30117v1",
+      "review_scope": "SELECTED_FULL_TEXT",
+      "role": "feedback",
+      "registry_paper_id": null,
+      "registry_match": "not_matched_in_current_manifest",
+      "checked_on": "2026-11-05"
+    },
+    {
+      "source_id": "S12",
+      "title": "Closed-Loop Neural Activation Control in Vision-Language-Action Models",
+      "year": 2026,
+      "venue_status": "arXiv; CVPR 2026 VisCon workshop reported by authors; not main track",
+      "status_basis": "author_reported_workshop",
+      "primary_url": "https://arxiv.org/abs/2606.00269",
+      "review_scope": "ABSTRACT_CHECKED",
+      "role": "feedback",
+      "registry_paper_id": null,
+      "registry_match": "not_matched_in_current_manifest",
+      "checked_on": "2026-11-05"
+    },
+    {
+      "source_id": "S13",
+      "title": "CHORUS: Decentralized Multi-Embodiment Collaboration with One VLA Policy",
+      "year": 2026,
+      "venue_status": "CoRL 2026 reported by author project/lab; conference acceptance page not independently verified",
+      "status_basis": "author_reported_conference",
+      "primary_url": "https://arxiv.org/html/2606.12352v1",
+      "review_scope": "SELECTED_FULL_TEXT_AND_PROJECT",
+      "role": "cross_play",
+      "registry_paper_id": null,
+      "registry_match": "not_matched_in_current_manifest",
+      "checked_on": "2026-11-05",
+      "project": "https://chorus-model.github.io/",
+      "venue_report": "https://iprl.stanford.edu/",
+      "reviewed_locations": [
+        "3.1-3.3",
+        "4.2",
+        "5 Limitations"
+      ],
+      "boundary": "Scripted teammate perturbation already tested; unseen independently trained partner cross-play not established by inspected sections. Project/lab claim CoRL 2026; official acceptance not retrieved."
+    },
+    {
+      "source_id": "S14",
+      "title": "Cooperative Multi-Agent Vision-Language-Action Models via Reinforced Fine Tuning",
+      "year": 2026,
+      "venue_status": "arXiv; venue unverified",
+      "status_basis": "preprint",
+      "primary_url": "https://arxiv.org/html/2609.36588v1",
+      "review_scope": "SELECTED_FULL_TEXT",
+      "role": "cross_play",
+      "registry_paper_id": null,
+      "registry_match": "not_matched_in_current_manifest",
+      "checked_on": "2026-11-05",
+      "reviewed_locations": [
+        "4.2-4.3",
+        "5 experimental setting",
+        "6"
+      ],
+      "boundary": "All agents share a third-person RGB observation plus local input; do not equate to CHORUS local-only information. Code URL reported, not inspected."
+    },
+    {
+      "source_id": "S15",
+      "title": "Multi-Robot Open Adaptive Teaming Across Unseen Environments, Partners, and Scales",
+      "year": 2026,
+      "venue_status": "arXiv; venue unverified",
+      "status_basis": "preprint",
+      "primary_url": "https://arxiv.org/html/2607.04972v1",
+      "review_scope": "ABSTRACT_AND_SECTION_MAP",
+      "role": "cross_play",
+      "registry_paper_id": null,
+      "registry_match": "not_matched_in_current_manifest",
+      "checked_on": "2026-11-05"
+    },
+    {
+      "source_id": "S16",
+      "title": "WMPO: World Model-based Policy Optimization for Vision-Language-Action Models",
+      "year": 2026,
+      "venue_status": "ICLR 2026",
+      "status_basis": "official_paper_header",
+      "primary_url": "https://openreview.net/pdf?id=qE2FyvRvuF",
+      "review_scope": "ABSTRACT_AND_PUBLICATION_HEADER",
+      "role": "world_model",
+      "registry_paper_id": "pr-0688",
+      "registry_match": "existing",
+      "checked_on": "2026-11-05"
+    },
+    {
+      "source_id": "S17",
+      "title": "VLAW: Iterative Co-Improvement of Vision-Language-Action Policy and World Model",
+      "year": 2026,
+      "venue_status": "ICML 2026",
+      "status_basis": "official_proceedings",
+      "primary_url": "https://proceedings.mlr.press/v306/guo26i.html",
+      "review_scope": "ABSTRACT_CHECKED",
+      "role": "world_model",
+      "registry_paper_id": "pr-0960",
+      "registry_match": "existing",
+      "checked_on": "2026-11-05"
+    },
+    {
+      "source_id": "S18",
+      "title": "Towards Practical World Model-based Reinforcement Learning for Vision-Language-Action Models",
+      "year": 2026,
+      "venue_status": "ICML 2026",
+      "status_basis": "official_proceedings",
+      "primary_url": "https://proceedings.mlr.press/v306/zhang26ez.html",
+      "review_scope": "ABSTRACT_CHECKED",
+      "role": "world_model",
+      "registry_paper_id": "pr-0961",
+      "registry_match": "existing",
+      "checked_on": "2026-11-05"
+    },
+    {
+      "source_id": "S19",
+      "title": "Self-Improving Robot Policy with Compositional World Model",
+      "year": 2026,
+      "venue_status": "RSS 2026",
+      "status_basis": "official_proceedings",
+      "primary_url": "https://roboticsproceedings.org/rss22/p012.html",
+      "review_scope": "ABSTRACT_CHECKED",
+      "role": "world_model",
+      "registry_paper_id": "pr-0962",
+      "registry_match": "existing",
+      "checked_on": "2026-11-05"
+    },
+    {
+      "source_id": "S20",
+      "title": "Causal World Modeling for Robot Control",
+      "year": 2026,
+      "venue_status": "RSS 2026",
+      "status_basis": "official_proceedings",
+      "primary_url": "https://roboticsproceedings.org/rss22/p016.html",
+      "review_scope": "ABSTRACT_CHECKED",
+      "role": "world_model",
+      "registry_paper_id": null,
+      "registry_match": "not_matched_in_current_manifest",
+      "checked_on": "2026-11-05"
+    },
+    {
+      "source_id": "S21",
+      "title": "MiraBench: Evaluating Action-Conditioned Reliability in Robotic World Models",
+      "year": 2026,
+      "venue_status": "arXiv; venue unverified",
+      "status_basis": "preprint",
+      "primary_url": "https://arxiv.org/html/2605.29360v1",
+      "review_scope": "SELECTED_FULL_TEXT",
+      "role": "world_model",
+      "registry_paper_id": null,
+      "registry_match": "not_matched_in_current_manifest",
+      "checked_on": "2026-11-05",
+      "reviewed_locations": [
+        "3 problem formulation",
+        "4 motivating study",
+        "6 section map"
+      ],
+      "boundary": "Physical adherence and failure optimism are existing diagnostics; no claim of a new realism-versus-control gap."
+    },
+    {
+      "source_id": "S22",
+      "title": "Prioritized Rollouts for Efficient World Model-based Vision-Language-Action Policy Optimization",
+      "year": 2026,
+      "venue_status": "arXiv; venue unverified",
+      "status_basis": "preprint",
+      "primary_url": "https://arxiv.org/html/2609.22879v1",
+      "review_scope": "ABSTRACT_AND_SECTION_MAP",
+      "role": "world_model",
+      "registry_paper_id": null,
+      "registry_match": "not_matched_in_current_manifest",
+      "checked_on": "2026-11-05"
+    },
+    {
+      "source_id": "S23",
+      "title": "DRILL: Training World Models to Improve Policies, Not Predict Pixels",
+      "year": 2026,
+      "venue_status": "NeurIPS 2026 program listing",
+      "status_basis": "official_program",
+      "primary_url": "https://neurips.cc/Downloads/2026",
+      "review_scope": "SELECTED_FULL_TEXT",
+      "role": "world_model",
+      "registry_paper_id": null,
+      "registry_match": "not_matched_in_current_manifest",
+      "checked_on": "2026-11-05",
+      "full_text": "https://arxiv.org/html/2610.30814v1",
+      "reviewed_locations": [
+        "abstract",
+        "5.5 diagnostics",
+        "6 limitations"
+      ],
+      "boundary": "Already directly optimizes policy utility and reports diagnostic PUR. Simulation-only is author-stated; adding hardware alone is not automatically a contribution."
+    },
+    {
+      "source_id": "S24",
+      "title": "Trusting Imagined Futures: Auditing Imagined Rewards for VLA Post-Training",
+      "year": 2026,
+      "venue_status": "arXiv; venue unverified",
+      "status_basis": "preprint",
+      "primary_url": "https://arxiv.org/abs/2611.04873",
+      "review_scope": "ABSTRACT_CHECKED",
+      "role": "world_model",
+      "registry_paper_id": null,
+      "registry_match": "not_matched_in_current_manifest",
+      "checked_on": "2026-11-05"
+    },
+    {
+      "source_id": "S25",
+      "title": "Dissecting Advantage-Guided Post-Training for Vision-Language-Action Policies",
+      "year": 2026,
+      "venue_status": "arXiv; venue unverified",
+      "status_basis": "preprint",
+      "primary_url": "https://arxiv.org/html/2609.28161v1",
+      "review_scope": "SELECTED_FULL_TEXT",
+      "role": "human_correction",
+      "registry_paper_id": null,
+      "registry_match": "not_matched_in_current_manifest",
+      "checked_on": "2026-11-05",
+      "reviewed_locations": [
+        "IV-A advantage construction and ordering diagnostics",
+        "IV-B calibration",
+        "V experimental setup"
+      ],
+      "boundary": "Already compares estimands and human takeover/progress ordering; do not propose generic advantage diagnosis as new."
+    },
+    {
+      "source_id": "S26",
+      "title": "Set-Supervised Diffusion Policy: Learning Action-Chunking Diffusion through Corrections",
+      "year": 2026,
+      "venue_status": "RSS 2026",
+      "status_basis": "official_proceedings",
+      "primary_url": "https://roboticsproceedings.org/rss22/p080.html",
+      "review_scope": "ABSTRACT_CHECKED",
+      "role": "human_correction",
+      "registry_paper_id": null,
+      "registry_match": "not_matched_in_current_manifest",
+      "checked_on": "2026-11-05"
+    },
+    {
+      "source_id": "S27",
+      "title": "Contrastive Representation Regularization for Vision-Language-Action Models",
+      "year": 2026,
+      "venue_status": "ICML 2026",
+      "status_basis": "official_proceedings",
+      "primary_url": "https://proceedings.mlr.press/v306/kim26ao.html",
+      "review_scope": "ABSTRACT_CHECKED",
+      "role": "feedback",
+      "registry_paper_id": null,
+      "registry_match": "not_matched_in_current_manifest",
+      "checked_on": "2026-11-05"
+    },
+    {
+      "source_id": "S28",
+      "title": "Grounded Joint-Attention Other-Play for Zero-Shot Coordination",
+      "year": 2026,
+      "venue_status": "arXiv; venue unverified",
+      "status_basis": "preprint",
+      "primary_url": "https://arxiv.org/abs/2610.06025",
+      "review_scope": "ABSTRACT_CHECKED",
+      "role": "cross_play",
+      "registry_paper_id": null,
+      "registry_match": "not_matched_in_current_manifest",
+      "checked_on": "2026-11-05",
+      "boundary": "Joint attention/environment grounding for unfamiliar partners already proposed outside robot VLA setting."
+    },
+    {
+      "source_id": "S29",
+      "title": "Is Inter-Seed Cross-Play Enough? Evaluating the Robustness of Zero-Shot Coordination Algorithms to Implementation Details",
+      "year": 2026,
+      "venue_status": "arXiv; venue unverified",
+      "status_basis": "preprint",
+      "primary_url": "https://arxiv.org/abs/2608.03644",
+      "review_scope": "ABSTRACT_CHECKED",
+      "role": "cross_play",
+      "registry_paper_id": null,
+      "registry_match": "not_matched_in_current_manifest",
+      "checked_on": "2026-11-05",
+      "boundary": "Cross-implementation evaluation already proposed; reported result does not show that seed-only cross-play always fails."
+    },
+    {
+      "source_id": "S30",
+      "title": "“Other-Play” for Zero-Shot Coordination",
+      "year": 2020,
+      "venue_status": "ICML 2020",
+      "status_basis": "official_proceedings",
+      "primary_url": "https://proceedings.mlr.press/v119/hu20a.html",
+      "review_scope": "ABSTRACT_CHECKED",
+      "role": "cross_play_foundation",
+      "registry_paper_id": null,
+      "registry_match": "not_matched_in_current_manifest",
+      "checked_on": "2026-11-05"
+    },
+    {
+      "source_id": "S31",
+      "title": "Collaborating with Humans without Human Data",
+      "year": 2021,
+      "venue_status": "NeurIPS 2021",
+      "status_basis": "official_proceedings",
+      "primary_url": "https://papers.neurips.cc/paper_files/paper/2021/hash/797134c3e42371bb4979a462eb2f042a-Abstract.html",
+      "review_scope": "ABSTRACT_CHECKED",
+      "role": "cross_play_foundation",
+      "registry_paper_id": null,
+      "registry_match": "not_matched_in_current_manifest",
+      "checked_on": "2026-11-05"
+    }
+  ],
+  "integrated_n2_review": {
+    "work_id": "GAP-INTEGRATED-N2",
+    "checked_on": "2026-11-06",
+    "status": "COMPARISON_REVIEW_DONE_NATIVE_UNVERIFIED",
+    "executable": false,
+    "report": "work/update/INTEGRATED_GAP_REVIEW_2026-11-05.md#integrated-n2",
+    "evidence_maturity": "CURATION-HYPOTHESIS",
+    "historical_scan_boundary": "Top-level checked_on, counts, priorities and papers remain the 2026-11-05 discovery snapshot; current integrated decisions are in this section and TODO.",
+    "vrl_contract": {
+      "path": "work/sources/vla_rl_gap_review_2026-11-03.json",
+      "sha256": "bf21b80cdd4e8313402f8f15f2ff0a9e4748d1e200e452258f81f652d39df30e",
+      "pointer": "/r2_review/comparison_contract",
+      "modified": false
+    },
+    "source_pins": {
+      "SimpleVLA-RL": "7c51662df27b586f9e8a1ab35fcf849f2b8852f9",
+      "RL4VLA": "de46e0174e7ac310255a2836718fcefab28b8963",
+      "RL4VLA_commit_date": "2025-08-25",
+      "RL4VLA_checkpoint_last_modified_date": "2025-06-14"
+    },
+    "paper_review": [
+      {
+        "url": "https://arxiv.org/html/2509.09674v1",
+        "sections": [
+          "3",
+          "4.1",
+          "5.1"
+        ],
+        "scope": "selected sections; author version, not final proceedings equivalence",
+        "findings": [
+          "Binary-outcome GRPO with KL removed; single-view discrete parallel action head distinct from official continuous OFT",
+          "One-trajectory setting is one demonstration per task; current selected B exact run manifest not attested"
+        ]
+      },
+      {
+        "url": "https://arxiv.org/html/2505.19789v4",
+        "sections": [
+          "3",
+          "4",
+          "5",
+          "A.1",
+          "A.2",
+          "A.4"
+        ],
+        "version_date": "2026-01-14",
+        "scope": "selected sections; no native reproduction; newer than code and public weights",
+        "findings": [
+          "SFT and PPO training differ in data collection; public model comparisons do not isolate the objective",
+          "Object reposition is already an evaluation; our candidate concerns information-availability interaction"
+        ]
+      }
+    ],
+    "rl4vla_checkpoints": [
+      {
+        "role": "warmup",
+        "repo": "gen-robot/openvla-7b-rlvla-warmup",
+        "revision": "735fd5d1f4472c4c9f3f998f0e89aa641af5ad03",
+        "normalizer_key": "bridge_orig",
+        "action_q01": [
+          -0.02872725307941437,
+          -0.04170349963009357,
+          -0.026093858778476715,
+          -0.08092105075716972,
+          -0.09288699507713317,
+          -0.20718276381492615,
+          0.0
+        ],
+        "action_q99": [
+          0.028309678435325586,
+          0.040855254605412394,
+          0.040161586627364146,
+          0.08192047759890528,
+          0.07792850524187081,
+          0.20382574498653397,
+          1.0
+        ],
+        "action_mask": [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          false
+        ],
+        "config_declared_dtype": "bfloat16",
+        "auto_map": {
+          "AutoConfig": "openvla/openvla-7b--configuration_prismatic.OpenVLAConfig",
+          "AutoModelForVision2Seq": "openvla/openvla-7b--modeling_prismatic.OpenVLAForActionPrediction"
+        },
+        "stats_trajectory_count": 146,
+        "stats_transition_count": 4958,
+        "count_boundary": "Metadata statistics only, not verified training sample membership or training provenance",
+        "weights_checked": false,
+        "exact_parent_revision_attested": false,
+        "metadata_sha256": {
+          "README.md": "89995538465ed9dc5755effffdc44b3bd94d95425e653e1407410b8b8f589bf5",
+          "config.json": "25c2ad0527ce1ca6ab4aaa8d9820aac76af64f6f6ee3bc51418f22b3c669df9c",
+          "dataset_statistics.json": "d0af16ed771b26160301dd2acb144d02791c940cda4c228020656318af55d201",
+          "preprocessor_config.json": "bd024783fb785cbdfe35b710b621c5e8678d4c157a9ba625675e67d40d1757da"
+        }
+      },
+      {
+        "role": "rl",
+        "repo": "gen-robot/openvla-7b-rlvla-rl",
+        "revision": "93c54b036cc90ee394731fc73788406d7e65f057",
+        "normalizer_key": "bridge_orig",
+        "action_q01": [
+          -0.02872725307941437,
+          -0.04170349963009357,
+          -0.026093858778476715,
+          -0.08092105075716972,
+          -0.09288699507713317,
+          -0.20718276381492615,
+          0.0
+        ],
+        "action_q99": [
+          0.028309678435325586,
+          0.040855254605412394,
+          0.040161586627364146,
+          0.08192047759890528,
+          0.07792850524187081,
+          0.20382574498653397,
+          1.0
+        ],
+        "action_mask": [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          false
+        ],
+        "config_declared_dtype": "bfloat16",
+        "auto_map": {
+          "AutoConfig": "openvla/openvla-7b--configuration_prismatic.OpenVLAConfig",
+          "AutoModelForVision2Seq": "openvla/openvla-7b--modeling_prismatic.OpenVLAForActionPrediction"
+        },
+        "stats_trajectory_count": 60064,
+        "stats_transition_count": 2135463,
+        "count_boundary": "Metadata statistics only, not verified training sample membership or training provenance",
+        "weights_checked": false,
+        "exact_parent_revision_attested": false,
+        "metadata_sha256": {
+          "README.md": "745c905bd381a449904a9fe7f7f9919927543220ed4094c0dfdabccd77dc4fe5",
+          "config.json": "f7350f634baff49e3ad6f00bfc1fb7b3fcbeefaf0afad25252765b0aea9c2536",
+          "dataset_statistics.json": "e73373edb89bc2a873ca174869d8f4bf66d5f0b05ce6e6c789ae21672e55e12f",
+          "preprocessor_config.json": "52ca6dd7fb31a2757658f94775b659553bc3532ab04babef02779387b3dec214"
+        }
+      },
+      {
+        "role": "sft_16k",
+        "repo": "gen-robot/openvla-7b-rlvla-sft_16k",
+        "revision": "cda67bb9cf33bc87cb8bf715572ae0c44e98f8ae",
+        "normalizer_key": "sft",
+        "action_q01": [
+          -0.026782279908657072,
+          -0.03310537822544575,
+          -0.031125871520489453,
+          -0.005093721207231283,
+          -0.020544786006212234,
+          -0.20602674782276154,
+          -1.0
+        ],
+        "action_q99": [
+          0.03146408855915071,
+          0.03500147704035044,
+          0.03519994765520096,
+          0.00550044747069478,
+          0.01134413480758667,
+          0.21781087949872033,
+          1.0
+        ],
+        "action_mask": [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          false
+        ],
+        "config_declared_dtype": "bfloat16",
+        "auto_map": {
+          "AutoConfig": "configuration_prismatic.OpenVLAConfig",
+          "AutoModelForVision2Seq": "modeling_prismatic.OpenVLAForActionPrediction"
+        },
+        "stats_trajectory_count": 16424,
+        "stats_transition_count": 316280,
+        "count_boundary": "Metadata statistics only, not verified training sample membership or training provenance",
+        "weights_checked": false,
+        "exact_parent_revision_attested": false,
+        "metadata_sha256": {
+          "README.md": "96341fe09bc2059ffc740c5da564bba5a5ce11f3741e4c818e596220f22ac384",
+          "config.json": "2dc14dec1d97145fe0582580b08ba619d9ae271b562cd86809074dc4e3e5369f",
+          "dataset_statistics.json": "f38f3b6444a44ea5d591d5a46bb23210818be8dd3b9c897d998d62f7b693ff01",
+          "preprocessor_config.json": "bd024783fb785cbdfe35b710b621c5e8678d4c157a9ba625675e67d40d1757da"
+        }
+      }
+    ],
+    "source_files": [
+      {
+        "key": "code/README.md",
+        "url": "https://raw.githubusercontent.com/gen-robot/RL4VLA/de46e0174e7ac310255a2836718fcefab28b8963/README.md",
+        "sha256": "e3dc3ef4351a90ceac3e3d697dd7e12d217e521b0cd353135e8fa5ac79b885bd",
+        "bytes": 10891,
+        "review_type": "text_only_not_imported_or_executed"
+      },
+      {
+        "key": "code/SimplerEnv/simpler_env/train_ms3_ppo.py",
+        "url": "https://raw.githubusercontent.com/gen-robot/RL4VLA/de46e0174e7ac310255a2836718fcefab28b8963/SimplerEnv/simpler_env/train_ms3_ppo.py",
+        "sha256": "f844c15b933b360cad538f4c4cbb69ba2306ca55238353c5cbbc2c5a00e3e9a5",
+        "bytes": 14638,
+        "review_type": "text_only_not_imported_or_executed"
+      },
+      {
+        "key": "code/SimplerEnv/simpler_env/eval_ms3_collect.py",
+        "url": "https://raw.githubusercontent.com/gen-robot/RL4VLA/de46e0174e7ac310255a2836718fcefab28b8963/SimplerEnv/simpler_env/eval_ms3_collect.py",
+        "sha256": "1019dc02c263c34a4cb68c9a632959b839f1d7265546c0f1749877b14fffe336",
+        "bytes": 7801,
+        "review_type": "text_only_not_imported_or_executed"
+      },
+      {
+        "key": "code/openvla/prismatic/extern/hf/modeling_prismatic.py",
+        "url": "https://raw.githubusercontent.com/gen-robot/RL4VLA/de46e0174e7ac310255a2836718fcefab28b8963/openvla/prismatic/extern/hf/modeling_prismatic.py",
+        "sha256": "0318dd8a55c855c1d577fdc6f963c41eba4cbd24ee932d708fb41cc295c3bf04",
+        "bytes": 38338,
+        "review_type": "text_only_not_imported_or_executed"
+      },
+      {
+        "key": "code/openvla/vla-scripts/finetune.py",
+        "url": "https://raw.githubusercontent.com/gen-robot/RL4VLA/de46e0174e7ac310255a2836718fcefab28b8963/openvla/vla-scripts/finetune.py",
+        "sha256": "d5d6986efa85ed5be18ae90a568b658a230237889ee2d27bb73dcca55805e168",
+        "bytes": 19590,
+        "review_type": "text_only_not_imported_or_executed"
+      },
+      {
+        "key": "code/openvla/rlds_dataset_builder/sft_dataset/sft_dataset.py",
+        "url": "https://raw.githubusercontent.com/gen-robot/RL4VLA/de46e0174e7ac310255a2836718fcefab28b8963/openvla/rlds_dataset_builder/sft_dataset/sft_dataset.py",
+        "sha256": "30d0e6d9d1da9c16fb784b642b97884aec3f7453029dd8fd213068e5a96e572b",
+        "bytes": 6137,
+        "review_type": "text_only_not_imported_or_executed"
+      },
+      {
+        "key": "code/openvla/rlds_dataset_builder/warmup_dataset/warmup_dataset.py",
+        "url": "https://raw.githubusercontent.com/gen-robot/RL4VLA/de46e0174e7ac310255a2836718fcefab28b8963/openvla/rlds_dataset_builder/warmup_dataset/warmup_dataset.py",
+        "sha256": "b8cd1c67a33450b0901195aaff722c73e130c1adc4d6ca87f6dac6fceb5af38c",
+        "bytes": 5851,
+        "review_type": "text_only_not_imported_or_executed"
+      },
+      {
+        "key": "code/ManiSkill/mani_skill/envs/tasks/digital_twins/bridge_dataset_eval/base_env.py",
+        "url": "https://raw.githubusercontent.com/gen-robot/RL4VLA/de46e0174e7ac310255a2836718fcefab28b8963/ManiSkill/mani_skill/envs/tasks/digital_twins/bridge_dataset_eval/base_env.py",
+        "sha256": "e52d109a238f834a975270bf2054b1cd640b256d986fb99892d597f6558b3c23",
+        "bytes": 21714,
+        "review_type": "text_only_not_imported_or_executed"
+      },
+      {
+        "key": "code/ManiSkill/mani_skill/envs/tasks/digital_twins/bridge_dataset_eval/put_on_in_scene.py",
+        "url": "https://raw.githubusercontent.com/gen-robot/RL4VLA/de46e0174e7ac310255a2836718fcefab28b8963/ManiSkill/mani_skill/envs/tasks/digital_twins/bridge_dataset_eval/put_on_in_scene.py",
+        "sha256": "2411a38475f721b52856952620d9ceab0815aab2b55488f07243e5f7a887bc82",
+        "bytes": 9044,
+        "review_type": "text_only_not_imported_or_executed"
+      },
+      {
+        "key": "code/ManiSkill/mani_skill/envs/tasks/digital_twins/bridge_dataset_eval/put_on_in_scene_multi.py",
+        "url": "https://raw.githubusercontent.com/gen-robot/RL4VLA/de46e0174e7ac310255a2836718fcefab28b8963/ManiSkill/mani_skill/envs/tasks/digital_twins/bridge_dataset_eval/put_on_in_scene_multi.py",
+        "sha256": "8845fc3883668ebe1d57d97e971e0bcff22689ad1265f663138c80ab8d3c8a4f",
+        "bytes": 122397,
+        "review_type": "text_only_not_imported_or_executed"
+      },
+      {
+        "key": "warmup/README.md",
+        "url": "https://huggingface.co/gen-robot/openvla-7b-rlvla-warmup/resolve/735fd5d1f4472c4c9f3f998f0e89aa641af5ad03/README.md",
+        "sha256": "89995538465ed9dc5755effffdc44b3bd94d95425e653e1407410b8b8f589bf5",
+        "bytes": 634,
+        "review_type": "text_only_not_imported_or_executed"
+      },
+      {
+        "key": "warmup/config.json",
+        "url": "https://huggingface.co/gen-robot/openvla-7b-rlvla-warmup/resolve/735fd5d1f4472c4c9f3f998f0e89aa641af5ad03/config.json",
+        "sha256": "25c2ad0527ce1ca6ab4aaa8d9820aac76af64f6f6ee3bc51418f22b3c669df9c",
+        "bytes": 63291,
+        "review_type": "text_only_not_imported_or_executed"
+      },
+      {
+        "key": "warmup/dataset_statistics.json",
+        "url": "https://huggingface.co/gen-robot/openvla-7b-rlvla-warmup/resolve/735fd5d1f4472c4c9f3f998f0e89aa641af5ad03/dataset_statistics.json",
+        "sha256": "d0af16ed771b26160301dd2acb144d02791c940cda4c228020656318af55d201",
+        "bytes": 2251,
+        "review_type": "text_only_not_imported_or_executed"
+      },
+      {
+        "key": "warmup/preprocessor_config.json",
+        "url": "https://huggingface.co/gen-robot/openvla-7b-rlvla-warmup/resolve/735fd5d1f4472c4c9f3f998f0e89aa641af5ad03/preprocessor_config.json",
+        "sha256": "bd024783fb785cbdfe35b710b621c5e8678d4c157a9ba625675e67d40d1757da",
+        "bytes": 1650,
+        "review_type": "text_only_not_imported_or_executed"
+      },
+      {
+        "key": "rl/README.md",
+        "url": "https://huggingface.co/gen-robot/openvla-7b-rlvla-rl/resolve/93c54b036cc90ee394731fc73788406d7e65f057/README.md",
+        "sha256": "745c905bd381a449904a9fe7f7f9919927543220ed4094c0dfdabccd77dc4fe5",
+        "bytes": 654,
+        "review_type": "text_only_not_imported_or_executed"
+      },
+      {
+        "key": "rl/config.json",
+        "url": "https://huggingface.co/gen-robot/openvla-7b-rlvla-rl/resolve/93c54b036cc90ee394731fc73788406d7e65f057/config.json",
+        "sha256": "f7350f634baff49e3ad6f00bfc1fb7b3fcbeefaf0afad25252765b0aea9c2536",
+        "bytes": 60792,
+        "review_type": "text_only_not_imported_or_executed"
+      },
+      {
+        "key": "rl/dataset_statistics.json",
+        "url": "https://huggingface.co/gen-robot/openvla-7b-rlvla-rl/resolve/93c54b036cc90ee394731fc73788406d7e65f057/dataset_statistics.json",
+        "sha256": "e73373edb89bc2a873ca174869d8f4bf66d5f0b05ce6e6c789ae21672e55e12f",
+        "bytes": 29791,
+        "review_type": "text_only_not_imported_or_executed"
+      },
+      {
+        "key": "rl/preprocessor_config.json",
+        "url": "https://huggingface.co/gen-robot/openvla-7b-rlvla-rl/resolve/93c54b036cc90ee394731fc73788406d7e65f057/preprocessor_config.json",
+        "sha256": "52ca6dd7fb31a2757658f94775b659553bc3532ab04babef02779387b3dec214",
+        "bytes": 1690,
+        "review_type": "text_only_not_imported_or_executed"
+      },
+      {
+        "key": "sft_16k/README.md",
+        "url": "https://huggingface.co/gen-robot/openvla-7b-rlvla-sft_16k/resolve/cda67bb9cf33bc87cb8bf715572ae0c44e98f8ae/README.md",
+        "sha256": "96341fe09bc2059ffc740c5da564bba5a5ce11f3741e4c818e596220f22ac384",
+        "bytes": 680,
+        "review_type": "text_only_not_imported_or_executed"
+      },
+      {
+        "key": "sft_16k/config.json",
+        "url": "https://huggingface.co/gen-robot/openvla-7b-rlvla-sft_16k/resolve/cda67bb9cf33bc87cb8bf715572ae0c44e98f8ae/config.json",
+        "sha256": "2dc14dec1d97145fe0582580b08ba619d9ae271b562cd86809074dc4e3e5369f",
+        "bytes": 65801,
+        "review_type": "text_only_not_imported_or_executed"
+      },
+      {
+        "key": "sft_16k/dataset_statistics.json",
+        "url": "https://huggingface.co/gen-robot/openvla-7b-rlvla-sft_16k/resolve/cda67bb9cf33bc87cb8bf715572ae0c44e98f8ae/dataset_statistics.json",
+        "sha256": "f38f3b6444a44ea5d591d5a46bb23210818be8dd3b9c897d998d62f7b693ff01",
+        "bytes": 2264,
+        "review_type": "text_only_not_imported_or_executed"
+      },
+      {
+        "key": "sft_16k/preprocessor_config.json",
+        "url": "https://huggingface.co/gen-robot/openvla-7b-rlvla-sft_16k/resolve/cda67bb9cf33bc87cb8bf715572ae0c44e98f8ae/preprocessor_config.json",
+        "sha256": "bd024783fb785cbdfe35b710b621c5e8678d4c157a9ba625675e67d40d1757da",
+        "bytes": 1650,
+        "review_type": "text_only_not_imported_or_executed"
+      },
+      {
+        "key": "code/SimplerEnv/simpler_env/env/simpler_wrapper.py",
+        "url": "https://raw.githubusercontent.com/gen-robot/RL4VLA/de46e0174e7ac310255a2836718fcefab28b8963/SimplerEnv/simpler_env/env/simpler_wrapper.py",
+        "sha256": "5b46993af40d9a1e735669791aab6494acd3973ac13d3ebc7b23577b59baca92",
+        "bytes": 4844,
+        "review_type": "text_only_not_imported_or_executed"
+      },
+      {
+        "key": "code/SimplerEnv/simpler_env/policies/openvla/openvla_train.py",
+        "url": "https://raw.githubusercontent.com/gen-robot/RL4VLA/de46e0174e7ac310255a2836718fcefab28b8963/SimplerEnv/simpler_env/policies/openvla/openvla_train.py",
+        "sha256": "93a49c1d65e1c1b8ccc6aae740b278d7699c90ac821798437cb5fe1e60d39d92",
+        "bytes": 17552,
+        "review_type": "text_only_not_imported_or_executed"
+      },
+      {
+        "key": "simple_readme",
+        "url": "https://raw.githubusercontent.com/PRIME-RL/SimpleVLA-RL/7c51662df27b586f9e8a1ab35fcf849f2b8852f9/README.md",
+        "sha256": "683404be7b360c65e24964ba2cbeb3312724600815ff586abf836fa1de24d4d8",
+        "bytes": 10690,
+        "review_type": "text_only_not_imported_or_executed"
+      },
+      {
+        "key": "simple_B_card",
+        "url": "https://huggingface.co/Haozhan72/openvla-oft-libero10-traj1-rl/resolve/d44ac12c3431fc1d2a4579d2e768bbeba60054d4/README.md",
+        "sha256": "84d764b21e8e509820def92c6984be43e5c86df33e09fccb414ce3dcce4fe3c4",
+        "bytes": 219,
+        "review_type": "text_only_not_imported_or_executed"
+      },
+      {
+        "key": "env_base",
+        "url": "https://raw.githubusercontent.com/gen-robot/RL4VLA/de46e0174e7ac310255a2836718fcefab28b8963/ManiSkill/mani_skill/envs/sapien_env.py",
+        "sha256": "99c86877d0835a9ddb60e5170b913ea849f2501c762ddb609a9315a16967d889",
+        "bytes": 68890,
+        "review_type": "text_only_not_imported_or_executed"
+      }
+    ],
+    "interface": {
+      "vrl": {
+        "robot": "Panda",
+        "simulator": "LIBERO",
+        "controller": "OSC_POSE",
+        "control_hz": 20,
+        "chunk": [
+          8,
+          7
+        ],
+        "normalizer": "libero_10_no_noops",
+        "scope": "existing frozen contract; native unverified"
+      },
+      "rl4vla": {
+        "robot": "WidowX",
+        "simulator": "vendored ManiSkill through SimplerEnv",
+        "control_mode": "arm_pd_ee_target_delta_pose_align2_gripper_pd_joint_pos",
+        "control_hz": 5,
+        "physics_hz": 500,
+        "episode_steps": 80,
+        "action_shape": [
+          7
+        ],
+        "observation": "3rd_view_camera RGB and instruction; no policy proprio/segmentation",
+        "decode": "7 autoregressive action tokens; default eval temperature 0.6 implies sampling despite deterministic argument",
+        "reward": "Difference of stage score (0.1 grasp + 0.1 consecutive grasp + 1.0 success-and-grasp)",
+        "termination": "Wrapper returns truncation, discards native terminated",
+        "default_package_recipe": "Python 3.10; torch 2.2.0+cu121; flash-attn 2.7.4.post1; full closure/build unverified"
+      }
+    },
+    "processor_comparison": {
+      "warmup_sft_file_sha_equal": true,
+      "warmup_rl_differing_keys": [
+        "auto_map"
+      ],
+      "native_tensor_equivalence_verified": false
+    },
+    "data_provenance_limits": [
+      "Warmup builder requests 70 train and 5 val per source; config count is 146, not a verified explanation of the nominal 140 train trajectories",
+      "SFT builder requests 16384 train and 16 val; config count is 16424, source membership/run linkage unresolved",
+      "Builders filter action/image arrays but use original info[i] in the success truncation loop; index alignment risk, not evidence released checkpoints were trained incorrectly",
+      "RL card reports about 1.5M steps; default code steps_max=2M is not a verified checkpoint training count"
+    ],
+    "estimands": {
+      "vrl_zero_shot": "J(A+rA)-J(A) and J(B+rA)-J(B), separately",
+      "vrl_adaptation": "J(B+r_m(b))-J(B+r_F(b)), b in {0,500,1000}; report B, gain and W separately",
+      "vrl_identification_limit": "All F/W/U/Z/G/P access D_A. This compares initialization/anchor under shared historical data, not causal benefit of access to D_A. No no-D_A arm added.",
+      "cost": "Report post-update additional decisions, actual env/physics steps, queries, gradients, resets and GPU time; report old-data/residual cost separately. No multi-update amortization result.",
+      "feedback": "I_m=(Y_m(physical_change,fresh)-Y_m(physical_change,stale))-(Y_m(clean,fresh)-Y_m(clean,stale))",
+      "feedback_intervention": "One query uses the immediately preceding RGB at the event, then return to fresh; repeated freeze is a separate intervention",
+      "feedback_cross_model": "I_RL-I_SFT is a checkpoint association, not the causal RL-objective effect",
+      "feedback_query_boundary": "Same-state action sensitivity is not closed-loop success; report four raw success cells, timing, clean competence and nuisance control",
+      "feedback_confounders": [
+        "whole-RGB stale includes robot pose",
+        "normalizer and data differ",
+        "state bank producer bias",
+        "sampling and ceiling/floor effects"
+      ]
+    },
+    "controls": {
+      "vrl_imitation": "Existing IL-S/IL-R share W raw data, residual initialization and actor update count; continuous composite-command MSE, not full VLA SFT. Other online arms visit different states.",
+      "feedback_imitation": "Future shared-trajectory VLA token CE / successful filtering / return-weighted CE with common initial revision, normalizer and update budget; not implemented",
+      "causal_update_boundary": "On-policy PPO cannot be treated as arbitrary fixed-dataset replay. Valid common-behavior update comparisons and end-to-end adaptive-data regimes are different estimands.",
+      "normalizer": "Keep native mapping for checkpoint diagnosis; swapping keys does not create matched training."
+    },
+    "runtime_risks": [
+      "PositionChangeTo-v1 mutates pose and settles inside evaluate at elapsed step 5; repeated get_info at that step may repeat the event",
+      "BaseEnv.step calls get_info before get_obs; snapshot and image timestamps must distinguish pre/post event",
+      "get_state_dict only exposes physical scene state; elapsed/RNG/controller/task/event/wrapper state need explicit capture and native validation",
+      "Auto_map may resolve upstream remote code; pin explicit vendored loader and verify native decode",
+      "Fresh/stale branches need equal decision/deadline and separately logged settling physics; no source-only proof of exact restoration"
+    ],
+    "reuse_decision": {
+      "direct_policy_adapter": false,
+      "direct_experience_or_residual": false,
+      "same_docker_image_verified": false,
+      "reusable": "metadata/cost/observation timestamp logging design, not native test results",
+      "existing_vrl_runtime_contract_preserved": true
+    },
+    "next": {
+      "id": "GAP-FEEDBACK-P0-PREP",
+      "scope": "Prepare a bounded single-scene pre/post RGB and action IO adapter and Docker resume packet; local conditions must be checked before requested execution; no training or success sweep",
+      "remaining": [
+        "select exact dev instance and query/step/physics caps",
+        "event-once and timestamp handling",
+        "dependency closure, assets and code/weights native compatibility",
+        "native repeatability and full-state restoration before rollout interactions"
+      ],
+      "vrl": "GAP-VRL-P0 remains resource/implementation waiting; 36 env steps / 2 queries unchanged"
+    },
+    "execution": {
+      "experiment": false,
+      "model_or_package_install": false,
+      "weights_assets_pdf_download": false,
+      "docker_reprobe": false,
+      "external_feedback_received": false,
+      "registry_additions": 0,
+      "reading_status_promotion": false
+    },
+    "validation": {
+      "registry_papers": 1110,
+      "standard_notes": 5550,
+      "active_tracker_rows": 379,
+      "history_rows": 47,
+      "audit_errors": 0,
+      "audit_warnings": 0,
+      "tracker_bytes_unchanged": true,
+      "historical_scan_payload_unchanged": true,
+      "vrl_frozen_contract_hash_unchanged": true,
+      "staged_diff_unchanged": true,
+      "changed_existing_files": 10,
+      "deleted_existing_files": 0,
+      "new_topic_files": 0,
+      "reading_plan_change": "generated date only",
+      "source_file_hash_count": 27
+    }
+  }
+}

@@ -17,6 +17,8 @@
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
+> DOC-QA2 targeted source review: 2026-10-23; PDF pp. 5. 손상 구간·직접 연결된 표 분류만 원문 이미지와 대조했다. 전체 주장 정독·실험 검증·reading status 승격을 뜻하지 않는다. [URL·PDF hash·수정 기록](../../../work/sources/pdf_note_review_followup_2026-10-23.json).
+
 ## Why This Paper Is Here
 
 Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 To address this limitation, some works [11], [12] have proposed instance-oriented open-vocabulary mapping methods.를 문제로 두고, In summary, Our contributions are summarized as follows: • We present OpenObj, the open-vocabulary object-level neural radiance fields with fine-grained understanding, supporting downstream tasks at multiple scales. • We propose a two-s ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
@@ -38,7 +40,7 @@ Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 �
 - **p. 1 / Abstract - extractive body cue:** To address these challenges, we introduce OpenObj, an innovative approach to build openvocabulary object-level Neural Radiance Fields (NeRF) with fine-grained understanding.
 - **p. 4 / III. OPENOBJ - extractive body cue:** To address this problem, we propose considering all frames together and devising a two-stage approach as shown in Fig.
 - **p. 3 / III. OPENOBJ - extractive body cue:** In this paper, we use the visual encoder of CLIP [4] to encode images cropped according to the mask mobj t,i as VLM feature f ...
-- **p. 5 / III. OPENOBJ - extractive body cue:** Next, we superimpose the features of these masks mpart t,j and perform normalization: If t = P j  mpart t,j · f clip t,j ...
+- **PDF p. 5, §III-D / Eq. (3) (DOC-QA2 원문 대조):** Dense feature image는 part-mask로 가중한 CLIP feature의 합을 해당 pixel의 mask 합으로 정규화해 구성한다. 이를 이후 object NeRF 학습의 feature supervision에 사용한다.
 - **p. 3 / III. OPENOBJ - extractive body cue:** Specifically, we use the bounding boxes of the masks mobj t,i as prompts and use the TAP (Tokenize Anything via Prompting) model [29] to generate ...
 - **p. 4 / III. OPENOBJ - extractive body cue:** Part-level Fine-Grained Feature Extraction Both of the above modules operate at the instance level and do not perceive the interior details of the object.
 

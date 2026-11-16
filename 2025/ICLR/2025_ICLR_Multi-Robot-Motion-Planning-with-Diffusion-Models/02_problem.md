@@ -4,6 +4,8 @@
 > Evidence maturity: `FULL_TEXT_CHECKED`.
 > Analysis basis: full-text PDF body checked on 2026-09-03 (21 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=AUCYptvAf3; PDF retrieval source: https://arxiv.org/pdf/2410.03072. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
+> DOC-QA2 targeted source review: 2026-10-23; PDF pp. 4. 손상 구간·직접 연결된 표 분류만 원문 이미지와 대조했다. 전체 주장 정독·실험 검증·reading status 승격을 뜻하지 않는다. [URL·PDF hash·수정 기록](../../../work/sources/pdf_note_review_followup_2026-10-23.json).
+
 ## Problem in One Sentence
 
 PDF body framing (p. 2 (1 INTRODUCTION), p. 1 (1 INTRODUCTION), p. 1 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 3 (1 INTRODUCTION)): Importantly, our approach calls for learning only single-robot diffusion models, which does away with the difficulty of obtaining multi-robot interaction data and breaks the curse of dimensionality.
@@ -23,7 +25,7 @@ PDF body framing (p. 2 (1 INTRODUCTION), p. 1 (1 INTRODUCTION), p. 1 (1 INTRODUC
 | Dimension | PDF body evidence | Registry/robotics interpretation | Boundary |
 |---|---|---|---|
 | Target problem | Importantly, our approach calls for learning only single-robot diffusion models, which does away with the difficulty of obtaining multi-robot interaction data and ... | graph, configuration space 또는 task-and-motion planning domain | body wording is the source claim |
-| Observation / input | Colored lines are only in MMD-PP, MMD-ECBS Input: Starts, goal conditions, and single-robot diffusion models  si start, T i, f i ... | start/goal, map, dynamics와 successor/operator description | exact sensor/frame/preprocessing from PDF body |
+| Observation / input | Algorithm 1 입력은 robot별 start state·goal conditions·single-robot diffusion model이며 출력은 robot별 trajectories다. MMD-CBS와 색으로 구분된 PP/ECBS variant의 제약·return 위치를 혼합하지 않는다. | Starts / goal conditions / per-robot diffusion models | PDF p. 4 Algorithm 1 |
 | State / latent | Colored, lines, only, MMD-PP, MMD-ECBS, Input, Starts, goal, conditions, single-robot | path, trajectory, symbolic state 또는 task-motion decision | notation and tensor shape require body check |
 | Output / action | purpose, experiments, assign, random, sequence, three, tasks, robot | feasible action sequence 또는 minimum-cost plan | exact unit/frame/decoder require body check |
 | Target outcome | success/reachability and constraint satisfaction | path cost, goal reachability, feasibility와 computation | metric/denominator are in 04 evidence |

@@ -4,6 +4,8 @@
 > Evidence maturity: `FULL_TEXT_CHECKED`.
 > Analysis basis: full-text PDF body checked on 2026-09-03 (19 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=o1sF4XaFdY; public full-text mirror used for retrieval (canonical paper source retained): https://chatpaper.com/api/v1/articles/download/247825. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
+> DOC-QA1 (2026-10-23): 제어문자·깨진 추출 구간과 직접 연결된 표 항목을 PDF 페이지 이미지와 대조했다. 확인 범위·원문 URL·페이지·수정 이력은 [대조 기록](../../../work/sources/pdf_note_review_2026-10-23.json)에 있다. 노트 전체의 정독이나 모든 기존 주장에 대한 재검증을 뜻하지 않으며 reading status는 유지한다.
+
 ## Evaluation in One Sentence
 
 PDF body evaluation/result cue (p. 8 (4 EXPERIMENT), p. 9 (4 EXPERIMENT), p. 10 (4 EXPERIMENT), p. 16 (A.3 EXTENDED RESULTS AT HIGHER RESOLUTION), p. 8 (4 EXPERIMENT), p. 9 (4 EXPERIMENT)): Since using more primitives generally improves performance, we focus our core comparisons on the latter group to ensure a fair comparison.
@@ -149,7 +151,7 @@ PDF body evaluation/result cue (p. 8 (4 EXPERIMENT), p. 9 (4 EXPERIMENT), p. 10 
 | (2019) and optimized using AdamW Loshchilov & Hutter (2017) with a cosine learning rate schedule. | p. 8 (4 EXPERIMENT) |
 | Both datasets provide precomputed camera poses and we adhere to the official train-test splits used in prior work. | p. 7 (4 EXPERIMENT) |
 | Notably, DepthSplat, despite using the same encoder backbone as our method, fails to generate coherent geometry or consistent surface details, which highlights the effectiveness ... | p. 9 (4 EXPERIMENT) |
-| We use a combination of mean squared error (MSE) and perceptual similarity (LPIPS): Lgs = M X m=1  MSE  Im render, Im gt  ... | p. 6 (3.1 PRELIMINARIES) |
+| 원문 대조: Rendered image와 ground-truth image 사이 MSE와 λ·LPIPS를 더해 batch의 M개 image에 대해 합산한다. 본문은 λ=0.05를 사용한다고 명시한다. 이는 학습 목적이며 평가 결과 수치와 구분한다. ([PDF p. 6](https://arxiv.org/pdf/2602.02000#page=6), §3.5 Training Loss, Eq. (12)) | [PDF p. 6](https://arxiv.org/pdf/2602.02000#page=6), §3.5 Training Loss, Eq. (12) |
 | Given sparse input images, our dual-path encoder processes them through both single-view and multi-view branches. | p. 4 (3.1 PRELIMINARIES) |
 | The local surface normal n ∈R3 is then computed as their cross product: n = t1 × t2 ∥t1 × t2∥. | p. 5 (3.1 PRELIMINARIES) |
 | To define anisotropic scale S = diag(σu, σv, σw), we compute the variance of projected neighboring points along the rotated tangent axes tu, tv. | p. 5 (3.1 PRELIMINARIES) |

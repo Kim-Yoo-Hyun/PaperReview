@@ -4,6 +4,8 @@
 > Evidence maturity: `FULL_TEXT_CHECKED`.
 > Analysis basis: full-text PDF body checked on 2026-09-03 (24 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=ajxAJ8GUX4; public full-text mirror used for retrieval (canonical paper source retained): https://chatpaper.com/api/v1/articles/download/112460. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
+> DOC-QA2 targeted source review: 2026-10-23; PDF pp. 4. 손상 구간·직접 연결된 표 분류만 원문 이미지와 대조했다. 전체 주장 정독·실험 검증·reading status 승격을 뜻하지 않는다. [URL·PDF hash·수정 기록](../../../work/sources/pdf_note_review_followup_2026-10-23.json).
+
 ## Problem in One Sentence
 
 PDF body framing (p. 1 (1 INTRODUCTION), p. 3 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 1 (1 INTRODUCTION), p. 2 (1 INTRODUCTION)): However, action feasibility prediction presents several challenges.
@@ -23,7 +25,7 @@ PDF body framing (p. 1 (1 INTRODUCTION), p. 3 (1 INTRODUCTION), p. 2 (1 INTRODUC
 | Dimension | PDF body evidence | Registry/robotics interpretation | Boundary |
 |---|---|---|---|
 | Target problem | However, action feasibility prediction presents several challenges. | language-conditioned robot task와 embodiment | body wording is the source claim |
-| Observation / input | In summary, the task at hand is to learn two classification functions fF , fκ, and a regression function fρ s.t.:  ... | image/video, language instruction, proprioception과 history | exact sensor/frame/preprocessing from PDF body |
+| Observation / input | 고정/이동 object와 기하 관계를 담은 scene graph | Object geometry·pose와 graph edges | PDF p. 4, Eq. (2), §4.1; language input으로 해석하지 않음 |
 | State / latent | summary, task, hand, learn, classification, functions, regression, function, where, GEOMETRIC | language-grounded task state와 action-policy context | notation and tensor shape require body check |
 | Output / action | Once, multi-attention, weights, computed, model, computes, weighted, average | continuous action, pose 또는 action chunk | exact unit/frame/decoder require body check |
 | Target outcome | instruction-conditioned task success | instruction following, task success, generalization과 latency | metric/denominator are in 04 evidence |
@@ -54,7 +56,7 @@ PDF body contribution framing (p. 2 (1 INTRODUCTION), p. 1 (1 INTRODUCTION), p. 
 - **p. 1 / 1 INTRODUCTION - extractive body cue:** To address these limitations, we propose a novel approach that leverages a GNN-based model for robot action and grasp feasibility prediction.
 - **p. 1 / 1 INTRODUCTION - extractive body cue:** Our method constructs a graph representation of 3D environments, where fixed and movable objects are represented as nodes, and edges capture spatial relationships and interaction ...
 - **p. 2 / 1 INTRODUCTION - extractive body cue:** (3) We provide comprehensive experiments showcasing our method's state-of-the-art (SOTA) performance, including evaluations of its interpretability and generalization capabilities.
-- **p. 4 / 1 INTRODUCTION - extractive body cue:** In summary, the task at hand is to learn two classification functions fF , fκ, and a regression function fρ s.t.:  Fa FG  ...
+- **PDF p. 4, §3 / Eq. (2) (DOC-QA2 원문 대조):** GRN은 feasibility classifier f_F와 IK classifier f_κ, obstruction regressor f_ρ를 학습한다. f_F는 object/environment와 예측 κ_G, ρ_G를 사용해 action·grasp feasibility 벡터 [F_a,F_G]ᵀ를 출력한다.
 
 ## Assumptions and Failure Boundary
 

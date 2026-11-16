@@ -83,3 +83,7 @@ Under the paper's stated interface (Notably, when the input command is human mot
 - **Paper-supported outcome:** Table 3: Ablation studies. SR denotes success rate. Each entry reports a single evaluation per configuration on the full test split (descriptive; no statistical test applied). (A) FSQ outperforms VQ-VAE ... (p. 19, Figure/Table caption).
 - **Strongest explicit boundary:** Our metric, similar to [29], captured the physically meaningful failure modes such as falling. (p. 5, 2.1. Motion Tracking).
 - **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.
+
+## Release Boundary — 2026-11-16
+
+공통 control token과 단일 motion controller가 VLA backbone의 reward 공동 갱신을 뜻하지 않는다. Ψ₀ v1은 AMO를 사용하고 이후 공개 checkpoint는 SONIC을 사용하므로, 상위 정책 비교에서 controller/release version을 통제해야 한다. [공식 project](https://nvlabs.github.io/GEAR-SONIC/) · [공식 code](https://github.com/NVlabs/GR00T-WholeBodyControl).

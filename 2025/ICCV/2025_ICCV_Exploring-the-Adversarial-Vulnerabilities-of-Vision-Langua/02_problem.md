@@ -4,9 +4,11 @@
 > Evidence maturity: `FULL_TEXT_CHECKED`.
 > Analysis basis: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/ICCV2025/html/Wang_Exploring_the_Adversarial_Vulnerabilities_of_Vision-Language-Action_Models_in_Robotics_ICCV_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/ICCV2025/papers/Wang_Exploring_the_Adversarial_Vulnerabilities_of_Vision-Language-Action_Models_in_Robotics_ICCV_2025_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
+> DOC-QA2 targeted source review: 2026-10-23; PDF pp. 2. 손상 구간·직접 연결된 표 분류만 원문 이미지와 대조했다. 전체 주장 정독·실험 검증·reading status 승격을 뜻하지 않는다. [URL·PDF hash·수정 기록](../../../work/sources/pdf_note_review_followup_2026-10-23.json).
+
 ## Problem in One Sentence
 
-PDF body framing (p. 2 (1. Introduction), p. 1 (1. Introduction), p. 1 (1. Introduction), p. 2 (1. Introduction), p. 3 (3.1. Preliminary)): This offers valuable insights for the research community to explore systemic failures in similar concurrent generative foundation models;  We rigorously evaluate our approach in both simulated and real-world environments ...
+문제 설정: visual adversarial perturbation이 VLA의 행동을 바꿀 수 있는지를 attack objective와 simulation/real-world 평가로 조사한다. PDF p. 2의 introduction을 대조했으며 손상된 contribution 항목 번호를 제거했다. (DOC-QA2)
 
 ## PDF Body Digest
 
@@ -15,14 +17,14 @@ PDF body framing (p. 2 (1. Introduction), p. 1 (1. Introduction), p. 1 (1. Intro
 - **p. 1 / Abstract - extractive body cue:** This paper systematically evaluates their robustness.
 - **p. 1 / Abstract - extractive body cue:** Recognizing the unique demands of robotic execution, our attack objectives target the inherent spatial and functional characteristics of robotic systems.
 - **p. 1 / Abstract - extractive body cue:** In particular, we introduce two untargeted attack objectives that leverage spatial foundations to destabilize robotic actions, and a targeted attack objective that manipulates the robotic ...
-- **p. 2 / 1. Introduction - extractive body cue:** This offers valuable insights for the research community to explore systemic failures in similar concurrent generative foundation models;  We rigorously evaluate our approach in ...
+- **PDF p. 2, §1 / contribution list (DOC-QA2 원문 대조):** Visual adversarial patch와 VLA-specific attack objective를 제시하고 simulation 및 real-world setting에서 평가한다. 추출된 C1 문자는 contribution 목록의 원형 숫자 3 기호였다.
 - **p. 1 / 1. Introduction - extractive body cue:** Failure Rate Comparison BV2 LIBERO A.
 
 ## System and Scope
 
 | Dimension | PDF body evidence | Registry/robotics interpretation | Boundary |
 |---|---|---|---|
-| Target problem | This offers valuable insights for the research community to explore systemic failures in similar concurrent generative foundation models;  We rigorously evaluate ... | language-conditioned robot task와 embodiment | body wording is the source claim |
+| Target problem | Visual adversarial patch가 VLA 행동을 교란하는 취약성 | VLA visual-input attack | PDF p. 2 §1; contribution 번호와 내용 분리 |
 | Observation / input | 2) are built on large language models integrated with visual encoders, enabling robots to interpret human instructions and process visual input from ... | image/video, language instruction, proprioception과 history | exact sensor/frame/preprocessing from PDF body |
 | State / latent | built, large, language, models, integrated, visual, encoders, enabling, robots, interpret | language-grounded task state와 action-policy context | notation and tensor shape require body check |
 | Output / action | next, calculate, applied, action, discrepancy, measure, deviation, between | continuous action, pose 또는 action chunk | exact unit/frame/decoder require body check |

@@ -1,0 +1,781 @@
+{
+  "task": "GAP-CF2",
+  "reviewed_on": "2026-10-23",
+  "timezone": "Asia/Seoul",
+  "report": "work/update/CAUSAL_DATA_SUFFICIENCY_REVIEW_2026-10-23.md",
+  "canonical_question": "synthesis/02_rl_il_offline.md#gap-causal-2026",
+  "scope": "DROID, Bridge family, OXE common contract and selected DROID/Bridge consumers, CIVIL public protocol/schema. No all-OXE-payload census.",
+  "decision": {
+    "task": "DONE",
+    "current_public_data_design": "CLOSED_TO_LITERATURE_DIAGNOSTIC",
+    "broad_method": "NO-GO",
+    "scientific_field": "NOT_REJECTED",
+    "native_effect": "NOT_TESTED",
+    "external_feedback": "NOT_OBTAINED",
+    "next": "GAP-P1: direct literature review of reactive navigation safety and progress"
+  },
+  "evidence_boundary": {
+    "payload_downloaded": false,
+    "payload_opened": false,
+    "model_downloaded": false,
+    "local_pdf_downloaded": false,
+    "dependency_installation": false,
+    "external_code_import_or_execution": false,
+    "experiment": false,
+    "static_source_only": true,
+    "registry_admissions": 0,
+    "reading_status_changes": 0,
+    "complete_human_information_identified": false,
+    "actual_episode_join_validated": false,
+    "absence_claim_scope": "Selected documentation, schemas, code and linked public inventories only; not all releases or private assets."
+  },
+  "counts": {
+    "dataset_families": 4,
+    "registry_papers_matched": 3,
+    "repository_revisions": 7,
+    "source_files": 27,
+    "selected_passage_files": 20,
+    "context_inventory_files": 7
+  },
+  "registry_matches": [
+    {
+      "paper_id": "pr-0732",
+      "title": "DROID: A Large-Scale In-The-Wild Robot Manipulation Dataset"
+    },
+    {
+      "paper_id": "pr-0733",
+      "title": "BridgeData V2: A Dataset for Robot Learning at Scale"
+    },
+    {
+      "paper_id": "pr-0024",
+      "title": "Open X-Embodiment: Robotic Learning Datasets and RT-X Models"
+    }
+  ],
+  "sources": [
+    {
+      "id": "S01",
+      "title": "DROID official publication",
+      "url": "https://roboticsproceedings.org/rss20/p120.html",
+      "status": "RSS 2024",
+      "depth": "OFFICIAL_METADATA"
+    },
+    {
+      "id": "S02",
+      "title": "DROID selected paper body",
+      "url": "https://arxiv.org/html/2403.12945v2",
+      "depth": "SELECTED_BODY",
+      "locations": "III-A/B, Appendix B/E",
+      "supports": [
+        "collection task and post-hoc language differ",
+        "collector success/failure labels",
+        "real-robot evaluation procedure"
+      ],
+      "boundary": "2025 revised body; not original proceedings equivalence audit"
+    },
+    {
+      "id": "S03",
+      "title": "DROID dataset schema",
+      "url": "https://droid-dataset.github.io/droid/the-droid-dataset.html",
+      "depth": "SCHEMA_DOC",
+      "locations": "RLDS fields and raw episode layout",
+      "boundary": "Flat action 6x joint velocity description not adopted as an executable action contract; actual payload completeness untested."
+    },
+    {
+      "id": "S04",
+      "title": "DROID collection procedure",
+      "url": "https://droid-dataset.github.io/droid/example-workflows/data-collection.html",
+      "depth": "PROTOCOL_DOC",
+      "locations": "GUI task selection, camera feed, practice and scene change"
+    },
+    {
+      "id": "S05",
+      "title": "DROID teleoperation procedure",
+      "url": "https://droid-dataset.github.io/droid/example-workflows/teleoperation.html",
+      "depth": "PROTOCOL_DOC",
+      "locations": "Controller pose, clutch, forward-direction reset"
+    },
+    {
+      "id": "S06",
+      "title": "BridgeData V2 official publication",
+      "url": "https://proceedings.mlr.press/v229/walke23a.html",
+      "status": "CoRL 2023",
+      "depth": "OFFICIAL_METADATA",
+      "boundary": "Official abstract 53896 vs project/arXiv v2 60096; release counts not reconciled from payload."
+    },
+    {
+      "id": "S07",
+      "title": "BridgeData V2 selected body",
+      "url": "https://arxiv.org/html/2308.12952v2",
+      "depth": "SELECTED_BODY",
+      "locations": "3.1–3.2",
+      "supports": [
+        "post-hoc task annotation",
+        "no required reset between trajectories",
+        "teleoperated and scripted mixture"
+      ]
+    },
+    {
+      "id": "S08",
+      "title": "Bridge project and release index",
+      "url": "https://rail-berkeley.github.io/bridgedata/",
+      "additional_urls": [
+        "https://rail.eecs.berkeley.edu/datasets/bridge_release/"
+      ],
+      "depth": "PROJECT_AND_TOP_LEVEL_INVENTORY",
+      "boundary": "Archive/checkpoint files not fetched; recursive dataset inventory not performed."
+    },
+    {
+      "id": "S09",
+      "title": "Open X-Embodiment official conference listing",
+      "url": "https://2024.ieee-icra.org/awards-and-finalists/",
+      "status": "ICRA 2024",
+      "depth": "OFFICIAL_METADATA"
+    },
+    {
+      "id": "S10",
+      "title": "Open X-Embodiment selected revised body",
+      "url": "https://arxiv.org/html/2310.08864v9",
+      "depth": "SELECTED_BODY",
+      "locations": "III-A, IV-A",
+      "supports": [
+        "RLDS consolidation",
+        "coarse action alignment does not align coordinate frames or absolute/delta/velocity semantics"
+      ],
+      "boundary": "2025 version; not all source dataset evaluation protocols audited."
+    },
+    {
+      "id": "S11",
+      "title": "RLDS dataset-format contract",
+      "url": "https://github.com/google-research/rlds#dataset-format",
+      "depth": "PROTOCOL_DOC",
+      "locations": "mandatory is_first/is_last, invalid terminal-step post-observation fields",
+      "boundary": "Contract not evidence that every consumer handles terminal steps correctly."
+    },
+    {
+      "id": "S12",
+      "title": "CIVIL journal and availability",
+      "url": "https://link.springer.com/article/10.1007/s10514-026-10266-3",
+      "status": "Autonomous Robots 2026",
+      "depth": "SELECTED_BODY",
+      "locations": "6–7; Data Availability",
+      "supports": [
+        "within-subject equal-time comparison already exists",
+        "project-linked availability"
+      ],
+      "boundary": "Public 2025 code is not verified journal experiment revision."
+    },
+    {
+      "id": "S13",
+      "title": "CIVIL official project",
+      "url": "https://civil2025.github.io/",
+      "depth": "PROJECT_ROUTING",
+      "supports": [
+        "paper to code/data route"
+      ],
+      "boundary": "Only linked public paths inspected; no author contact or private data access."
+    }
+  ],
+  "findings": [
+    {
+      "id": "F01",
+      "claim": "Recorded language is not automatically the expert's pre-action information.",
+      "basis": [
+        "S02",
+        "S07"
+      ],
+      "kind": "SOURCE_SUPPORTED_WITH_RESEARCH_INTERPRETATION"
+    },
+    {
+      "id": "F02",
+      "claim": "Commands, reached-state labels and action normalization target different objects.",
+      "basis": [
+        "S03",
+        "S10",
+        "openvla/openvla",
+        "kvablack/dlimp"
+      ],
+      "kind": "STATIC_INTERFACE_RESULT"
+    },
+    {
+      "id": "F03",
+      "claim": "A successful-trajectory training filter and terminal reward convention cannot substitute for independently evaluated outcomes.",
+      "basis": [
+        "droid-dataset/droid_policy_learning",
+        "rail-berkeley/bridge_data_v2",
+        "S11"
+      ],
+      "kind": "STATIC_INTERFACE_RESULT"
+    },
+    {
+      "id": "F04",
+      "claim": "CIVIL collector records time/cost, but inspected training writer does not preserve those raw join fields.",
+      "basis": [
+        "CIVIL2025/Implementation"
+      ],
+      "kind": "STATIC_INTERFACE_RESULT"
+    },
+    {
+      "id": "F05",
+      "claim": "CIVIL CALVIN route can support synthetic privileged-cue design, not by itself natural human information/cost or native VLA effect.",
+      "basis": [
+        "CIVIL2025/Implementation"
+      ],
+      "kind": "RESEARCH_INTERPRETATION"
+    },
+    {
+      "id": "F06",
+      "claim": "Selected public assets do not yet meet CF1's full comparison contract; current branch is closed rather than repeating metadata audits.",
+      "basis": [
+        "F01",
+        "F02",
+        "F03",
+        "F04",
+        "F05"
+      ],
+      "kind": "LOCAL_RESEARCH_DECISION"
+    }
+  ],
+  "minimum_reopening_evidence": [
+    "Pre-action cue provenance/timing and operator/policy visible information, or an explicit justified identification design",
+    "Source episode/user mapping, actual command/state semantics and processing lineage",
+    "Collection/reset/annotation/discard cost accounting plus common evaluation budget",
+    "Conditional prediction beyond CIVIL, BC/history, alignment and targeted collection",
+    "Matched evaluation path or justified structural/synthetic estimand with clear transfer boundary"
+  ],
+  "repositories": [
+    {
+      "repo": "CIVIL2025/Implementation",
+      "commit": "785be3450b39232364fb16caf84ceeccae05dfb3",
+      "commit_date": "2025-05-05T20:44:22Z",
+      "truncated": false
+    },
+    {
+      "repo": "droid-dataset/droid",
+      "commit": "33ae6a67274f36d2e29525b86f23a56616ef43a7",
+      "commit_date": "2025-09-15T23:51:11Z",
+      "truncated": false
+    },
+    {
+      "repo": "droid-dataset/droid_policy_learning",
+      "commit": "9a29c832b4c81bf38401111f5e4cdddaca217581",
+      "commit_date": "2025-04-22T18:26:12Z",
+      "truncated": false
+    },
+    {
+      "repo": "google-deepmind/open_x_embodiment",
+      "commit": "9eeb68b989efbcf474e8fb9019e01d02b962a604",
+      "commit_date": "2025-11-05T23:45:27Z",
+      "truncated": false
+    },
+    {
+      "repo": "kvablack/dlimp",
+      "commit": "92e3eca97af3b14d0b6aa15182c0dc240407698d",
+      "commit_date": "2026-09-28T22:56:59Z",
+      "truncated": false
+    },
+    {
+      "repo": "openvla/openvla",
+      "commit": "c8f03f48af692657d3060c19588038c7220e9af9",
+      "commit_date": "2025-03-23T23:40:34Z",
+      "truncated": false
+    },
+    {
+      "repo": "rail-berkeley/bridge_data_v2",
+      "commit": "bc60a35b701a12021c8c95e9d8601274d3acd928",
+      "commit_date": "2024-03-17T01:26:43Z",
+      "truncated": false
+    }
+  ],
+  "source_files": [
+    {
+      "repo": "droid-dataset/droid",
+      "commit": "33ae6a67274f36d2e29525b86f23a56616ef43a7",
+      "path": "README.md",
+      "url": "https://raw.githubusercontent.com/droid-dataset/droid/33ae6a67274f36d2e29525b86f23a56616ef43a7/README.md",
+      "sha256": "9a36b4fafef078dbb2405755c8fae758257a123e1edb499b8cd9ba700b380a47",
+      "bytes": 1676,
+      "selected_line_ranges": [],
+      "review_depth": "CONTEXT_PATH_OR_SYMBOL_ONLY",
+      "permalink": "https://github.com/droid-dataset/droid/blob/33ae6a67274f36d2e29525b86f23a56616ef43a7/README.md"
+    },
+    {
+      "repo": "droid-dataset/droid",
+      "commit": "33ae6a67274f36d2e29525b86f23a56616ef43a7",
+      "path": "droid/postprocessing/schema.py",
+      "url": "https://raw.githubusercontent.com/droid-dataset/droid/33ae6a67274f36d2e29525b86f23a56616ef43a7/droid/postprocessing/schema.py",
+      "sha256": "b81be1b4c2e03d7bb14a59df411749cd5f53b281854cb8ee77df65974811cf86",
+      "bytes": 4161,
+      "selected_line_ranges": [
+        [
+          12,
+          61
+        ],
+        [
+          97,
+          143
+        ]
+      ],
+      "review_depth": "SELECTED_PASSAGES_OR_DOC_CONTRACT",
+      "permalink": "https://github.com/droid-dataset/droid/blob/33ae6a67274f36d2e29525b86f23a56616ef43a7/droid/postprocessing/schema.py"
+    },
+    {
+      "repo": "droid-dataset/droid",
+      "commit": "33ae6a67274f36d2e29525b86f23a56616ef43a7",
+      "path": "droid/user_interface/data_collector.py",
+      "url": "https://raw.githubusercontent.com/droid-dataset/droid/33ae6a67274f36d2e29525b86f23a56616ef43a7/droid/user_interface/data_collector.py",
+      "sha256": "1de84052c69efb9e598e3712afbc492478fa6beeab708419ed5bb6441956246d",
+      "bytes": 6491,
+      "selected_line_ranges": [],
+      "review_depth": "CONTEXT_PATH_OR_SYMBOL_ONLY",
+      "permalink": "https://github.com/droid-dataset/droid/blob/33ae6a67274f36d2e29525b86f23a56616ef43a7/droid/user_interface/data_collector.py"
+    },
+    {
+      "repo": "droid-dataset/droid",
+      "commit": "33ae6a67274f36d2e29525b86f23a56616ef43a7",
+      "path": "droid/trajectory_utils/misc.py",
+      "url": "https://raw.githubusercontent.com/droid-dataset/droid/33ae6a67274f36d2e29525b86f23a56616ef43a7/droid/trajectory_utils/misc.py",
+      "sha256": "1b59ac8a2e143cce4560d5f24d21fe24d3a9062ecc0f6b0a3715bdf43db64650",
+      "bytes": 17426,
+      "selected_line_ranges": [
+        [
+          65,
+          130
+        ]
+      ],
+      "review_depth": "SELECTED_PASSAGES_OR_DOC_CONTRACT",
+      "permalink": "https://github.com/droid-dataset/droid/blob/33ae6a67274f36d2e29525b86f23a56616ef43a7/droid/trajectory_utils/misc.py"
+    },
+    {
+      "repo": "droid-dataset/droid",
+      "commit": "33ae6a67274f36d2e29525b86f23a56616ef43a7",
+      "path": "droid/trajectory_utils/trajectory_writer.py",
+      "url": "https://raw.githubusercontent.com/droid-dataset/droid/33ae6a67274f36d2e29525b86f23a56616ef43a7/droid/trajectory_utils/trajectory_writer.py",
+      "sha256": "66937d3d5afeea3586a75392de8cb533080fbe2baa55a94ea91aa265843eda91",
+      "bytes": 4636,
+      "selected_line_ranges": [
+        [
+          14,
+          70
+        ]
+      ],
+      "review_depth": "SELECTED_PASSAGES_OR_DOC_CONTRACT",
+      "permalink": "https://github.com/droid-dataset/droid/blob/33ae6a67274f36d2e29525b86f23a56616ef43a7/droid/trajectory_utils/trajectory_writer.py"
+    },
+    {
+      "repo": "droid-dataset/droid",
+      "commit": "33ae6a67274f36d2e29525b86f23a56616ef43a7",
+      "path": "droid/robot_env.py",
+      "url": "https://raw.githubusercontent.com/droid-dataset/droid/33ae6a67274f36d2e29525b86f23a56616ef43a7/droid/robot_env.py",
+      "sha256": "41cff898b9e3c3b465c3465fd4b9889db70edd9da4c083af1789ea335ad6e116",
+      "bytes": 4887,
+      "selected_line_ranges": [
+        [
+          20,
+          50
+        ],
+        [
+          95,
+          133
+        ]
+      ],
+      "review_depth": "SELECTED_PASSAGES_OR_DOC_CONTRACT",
+      "permalink": "https://github.com/droid-dataset/droid/blob/33ae6a67274f36d2e29525b86f23a56616ef43a7/droid/robot_env.py"
+    },
+    {
+      "repo": "rail-berkeley/bridge_data_v2",
+      "commit": "bc60a35b701a12021c8c95e9d8601274d3acd928",
+      "path": "README.md",
+      "url": "https://raw.githubusercontent.com/rail-berkeley/bridge_data_v2/bc60a35b701a12021c8c95e9d8601274d3acd928/README.md",
+      "sha256": "495f26dbfea53876db3f470e7b8a04901962e9e86b170d65aa7408536945ff7b",
+      "bytes": 6902,
+      "selected_line_ranges": [
+        [
+          20,
+          72
+        ]
+      ],
+      "review_depth": "SELECTED_PASSAGES_OR_DOC_CONTRACT",
+      "permalink": "https://github.com/rail-berkeley/bridge_data_v2/blob/bc60a35b701a12021c8c95e9d8601274d3acd928/README.md"
+    },
+    {
+      "repo": "rail-berkeley/bridge_data_v2",
+      "commit": "bc60a35b701a12021c8c95e9d8601274d3acd928",
+      "path": "data_processing/bridgedata_raw_to_numpy.py",
+      "url": "https://raw.githubusercontent.com/rail-berkeley/bridge_data_v2/bc60a35b701a12021c8c95e9d8601274d3acd928/data_processing/bridgedata_raw_to_numpy.py",
+      "sha256": "66b0320a8de7e2b1ee6121f6dd4e92438d50134bd2e3c9d070190c67d2610079",
+      "bytes": 9946,
+      "selected_line_ranges": [
+        [
+          117,
+          139
+        ],
+        [
+          172,
+          230
+        ]
+      ],
+      "review_depth": "SELECTED_PASSAGES_OR_DOC_CONTRACT",
+      "permalink": "https://github.com/rail-berkeley/bridge_data_v2/blob/bc60a35b701a12021c8c95e9d8601274d3acd928/data_processing/bridgedata_raw_to_numpy.py"
+    },
+    {
+      "repo": "rail-berkeley/bridge_data_v2",
+      "commit": "bc60a35b701a12021c8c95e9d8601274d3acd928",
+      "path": "data_processing/bridgedata_numpy_to_tfrecord.py",
+      "url": "https://raw.githubusercontent.com/rail-berkeley/bridge_data_v2/bc60a35b701a12021c8c95e9d8601274d3acd928/data_processing/bridgedata_numpy_to_tfrecord.py",
+      "sha256": "147da4c90b09d33468400060008d1a56ba16a6f45ad1e8f389a2e0bfc6d21f0f",
+      "bytes": 4795,
+      "selected_line_ranges": [],
+      "review_depth": "CONTEXT_PATH_OR_SYMBOL_ONLY",
+      "permalink": "https://github.com/rail-berkeley/bridge_data_v2/blob/bc60a35b701a12021c8c95e9d8601274d3acd928/data_processing/bridgedata_numpy_to_tfrecord.py"
+    },
+    {
+      "repo": "rail-berkeley/bridge_data_v2",
+      "commit": "bc60a35b701a12021c8c95e9d8601274d3acd928",
+      "path": "jaxrl_m/data/bridge_dataset.py",
+      "url": "https://raw.githubusercontent.com/rail-berkeley/bridge_data_v2/bc60a35b701a12021c8c95e9d8601274d3acd928/jaxrl_m/data/bridge_dataset.py",
+      "sha256": "289012216f59a1cbfeedb3507fbfc80badad8d8edd53193287ff4f2dcf446d4f",
+      "bytes": 17296,
+      "selected_line_ranges": [],
+      "review_depth": "CONTEXT_PATH_OR_SYMBOL_ONLY",
+      "permalink": "https://github.com/rail-berkeley/bridge_data_v2/blob/bc60a35b701a12021c8c95e9d8601274d3acd928/jaxrl_m/data/bridge_dataset.py"
+    },
+    {
+      "repo": "google-deepmind/open_x_embodiment",
+      "commit": "9eeb68b989efbcf474e8fb9019e01d02b962a604",
+      "path": "README.md",
+      "url": "https://raw.githubusercontent.com/google-deepmind/open_x_embodiment/9eeb68b989efbcf474e8fb9019e01d02b962a604/README.md",
+      "sha256": "e7dbf6bb04559e981b7eab2e0f4510579bf82b09948a0fe6471ba1794f86ae59",
+      "bytes": 4719,
+      "selected_line_ranges": [
+        [
+          1,
+          37
+        ]
+      ],
+      "review_depth": "SELECTED_PASSAGES_OR_DOC_CONTRACT",
+      "permalink": "https://github.com/google-deepmind/open_x_embodiment/blob/9eeb68b989efbcf474e8fb9019e01d02b962a604/README.md"
+    },
+    {
+      "repo": "CIVIL2025/Implementation",
+      "commit": "785be3450b39232364fb16caf84ceeccae05dfb3",
+      "path": "README.md",
+      "url": "https://raw.githubusercontent.com/CIVIL2025/Implementation/785be3450b39232364fb16caf84ceeccae05dfb3/README.md",
+      "sha256": "fd6b39aeef52f4c4e588d75602bc4d893a026f1f76b32a9c0bee1d8216d721bc",
+      "bytes": 1702,
+      "selected_line_ranges": [
+        [
+          1,
+          46
+        ]
+      ],
+      "review_depth": "SELECTED_PASSAGES_OR_DOC_CONTRACT",
+      "permalink": "https://github.com/CIVIL2025/Implementation/blob/785be3450b39232364fb16caf84ceeccae05dfb3/README.md"
+    },
+    {
+      "repo": "CIVIL2025/Implementation",
+      "commit": "785be3450b39232364fb16caf84ceeccae05dfb3",
+      "path": "get_demo.py",
+      "url": "https://raw.githubusercontent.com/CIVIL2025/Implementation/785be3450b39232364fb16caf84ceeccae05dfb3/get_demo.py",
+      "sha256": "20b7ae610f32f1754e2f08a6578f3c46789635410ecf8314287cc0067e8a4a44",
+      "bytes": 5699,
+      "selected_line_ranges": [],
+      "review_depth": "CONTEXT_PATH_OR_SYMBOL_ONLY",
+      "permalink": "https://github.com/CIVIL2025/Implementation/blob/785be3450b39232364fb16caf84ceeccae05dfb3/get_demo.py"
+    },
+    {
+      "repo": "CIVIL2025/Implementation",
+      "commit": "785be3450b39232364fb16caf84ceeccae05dfb3",
+      "path": "preprocess_data_civil.py",
+      "url": "https://raw.githubusercontent.com/CIVIL2025/Implementation/785be3450b39232364fb16caf84ceeccae05dfb3/preprocess_data_civil.py",
+      "sha256": "6de180916db895e744c98a5a1199e5bca1de43eaea3102c1817b6d3b352218dc",
+      "bytes": 8244,
+      "selected_line_ranges": [
+        [
+          87,
+          114
+        ],
+        [
+          166,
+          199
+        ]
+      ],
+      "review_depth": "SELECTED_PASSAGES_OR_DOC_CONTRACT",
+      "permalink": "https://github.com/CIVIL2025/Implementation/blob/785be3450b39232364fb16caf84ceeccae05dfb3/preprocess_data_civil.py"
+    },
+    {
+      "repo": "CIVIL2025/Implementation",
+      "commit": "785be3450b39232364fb16caf84ceeccae05dfb3",
+      "path": "user_study.py",
+      "url": "https://raw.githubusercontent.com/CIVIL2025/Implementation/785be3450b39232364fb16caf84ceeccae05dfb3/user_study.py",
+      "sha256": "dfac6cfc5a591fce915e0c7ebc748db69d5ec73fb277b42ab20bcb908989c79b",
+      "bytes": 10459,
+      "selected_line_ranges": [
+        [
+          38,
+          73
+        ],
+        [
+          87,
+          101
+        ],
+        [
+          157,
+          228
+        ],
+        [
+          255,
+          278
+        ]
+      ],
+      "review_depth": "SELECTED_PASSAGES_OR_DOC_CONTRACT",
+      "permalink": "https://github.com/CIVIL2025/Implementation/blob/785be3450b39232364fb16caf84ceeccae05dfb3/user_study.py"
+    },
+    {
+      "repo": "CIVIL2025/Implementation",
+      "commit": "785be3450b39232364fb16caf84ceeccae05dfb3",
+      "path": "conf/dataset/user_study.yaml",
+      "url": "https://raw.githubusercontent.com/CIVIL2025/Implementation/785be3450b39232364fb16caf84ceeccae05dfb3/conf/dataset/user_study.yaml",
+      "sha256": "7f29fa261867d124237c2c06446af5060c59f8493bad47b5469d878038013dee",
+      "bytes": 367,
+      "selected_line_ranges": [
+        [
+          1,
+          17
+        ]
+      ],
+      "review_depth": "SELECTED_PASSAGES_OR_DOC_CONTRACT",
+      "permalink": "https://github.com/CIVIL2025/Implementation/blob/785be3450b39232364fb16caf84ceeccae05dfb3/conf/dataset/user_study.yaml"
+    },
+    {
+      "repo": "CIVIL2025/Implementation",
+      "commit": "785be3450b39232364fb16caf84ceeccae05dfb3",
+      "path": "test_calvin.py",
+      "url": "https://raw.githubusercontent.com/CIVIL2025/Implementation/785be3450b39232364fb16caf84ceeccae05dfb3/test_calvin.py",
+      "sha256": "96a42dc483abf7cf8fe605c52927a814ce3e6886d04ccdebb1f7b82bfa31eef3",
+      "bytes": 11828,
+      "selected_line_ranges": [
+        [
+          60,
+          143
+        ]
+      ],
+      "review_depth": "SELECTED_PASSAGES_OR_DOC_CONTRACT",
+      "permalink": "https://github.com/CIVIL2025/Implementation/blob/785be3450b39232364fb16caf84ceeccae05dfb3/test_calvin.py"
+    },
+    {
+      "repo": "CIVIL2025/Implementation",
+      "commit": "785be3450b39232364fb16caf84ceeccae05dfb3",
+      "path": "data_generation/generate_calvin.py",
+      "url": "https://raw.githubusercontent.com/CIVIL2025/Implementation/785be3450b39232364fb16caf84ceeccae05dfb3/data_generation/generate_calvin.py",
+      "sha256": "28e8517f5ded162ce9f9b45a4409b8dfae5b04faf2cf773c9be76fdf63166210",
+      "bytes": 5201,
+      "selected_line_ranges": [
+        [
+          77,
+          105
+        ]
+      ],
+      "review_depth": "SELECTED_PASSAGES_OR_DOC_CONTRACT",
+      "permalink": "https://github.com/CIVIL2025/Implementation/blob/785be3450b39232364fb16caf84ceeccae05dfb3/data_generation/generate_calvin.py"
+    },
+    {
+      "repo": "openvla/openvla",
+      "commit": "c8f03f48af692657d3060c19588038c7220e9af9",
+      "path": "prismatic/vla/datasets/rlds/oxe/transforms.py",
+      "url": "https://raw.githubusercontent.com/openvla/openvla/c8f03f48af692657d3060c19588038c7220e9af9/prismatic/vla/datasets/rlds/oxe/transforms.py",
+      "sha256": "5df4add86e1238da6f2383d581e18b7e587777de06a21584ceab8aea50969260",
+      "bytes": 36065,
+      "selected_line_ranges": [
+        [
+          31,
+          86
+        ]
+      ],
+      "review_depth": "SELECTED_PASSAGES_OR_DOC_CONTRACT",
+      "permalink": "https://github.com/openvla/openvla/blob/c8f03f48af692657d3060c19588038c7220e9af9/prismatic/vla/datasets/rlds/oxe/transforms.py"
+    },
+    {
+      "repo": "openvla/openvla",
+      "commit": "c8f03f48af692657d3060c19588038c7220e9af9",
+      "path": "prismatic/vla/datasets/rlds/utils/data_utils.py",
+      "url": "https://raw.githubusercontent.com/openvla/openvla/c8f03f48af692657d3060c19588038c7220e9af9/prismatic/vla/datasets/rlds/utils/data_utils.py",
+      "sha256": "631a45f38145b8e572dfee20f7b56f5806a440e8a33a6402856b7bf525aabe1a",
+      "bytes": 13416,
+      "selected_line_ranges": [
+        [
+          165,
+          172
+        ]
+      ],
+      "review_depth": "SELECTED_PASSAGES_OR_DOC_CONTRACT",
+      "permalink": "https://github.com/openvla/openvla/blob/c8f03f48af692657d3060c19588038c7220e9af9/prismatic/vla/datasets/rlds/utils/data_utils.py"
+    },
+    {
+      "repo": "openvla/openvla",
+      "commit": "c8f03f48af692657d3060c19588038c7220e9af9",
+      "path": "prismatic/vla/datasets/rlds/oxe/utils/droid_utils.py",
+      "url": "https://raw.githubusercontent.com/openvla/openvla/c8f03f48af692657d3060c19588038c7220e9af9/prismatic/vla/datasets/rlds/oxe/utils/droid_utils.py",
+      "sha256": "6eddeaf36eb335656435f8773ac715ab966994c2b97cf72f257751140c3c4099",
+      "bytes": 5607,
+      "selected_line_ranges": [
+        [
+          59,
+          110
+        ]
+      ],
+      "review_depth": "SELECTED_PASSAGES_OR_DOC_CONTRACT",
+      "permalink": "https://github.com/openvla/openvla/blob/c8f03f48af692657d3060c19588038c7220e9af9/prismatic/vla/datasets/rlds/oxe/utils/droid_utils.py"
+    },
+    {
+      "repo": "droid-dataset/droid_policy_learning",
+      "commit": "9a29c832b4c81bf38401111f5e4cdddaca217581",
+      "path": "examples/droid_dataloader.py",
+      "url": "https://raw.githubusercontent.com/droid-dataset/droid_policy_learning/9a29c832b4c81bf38401111f5e4cdddaca217581/examples/droid_dataloader.py",
+      "sha256": "78bab3a44359c2aceaf2d77f6a4cb38b5d7cb6f9aab6e3406d79756830a7b24d",
+      "bytes": 3440,
+      "selected_line_ranges": [
+        [
+          14,
+          71
+        ]
+      ],
+      "review_depth": "SELECTED_PASSAGES_OR_DOC_CONTRACT",
+      "permalink": "https://github.com/droid-dataset/droid_policy_learning/blob/9a29c832b4c81bf38401111f5e4cdddaca217581/examples/droid_dataloader.py"
+    },
+    {
+      "repo": "droid-dataset/droid_policy_learning",
+      "commit": "9a29c832b4c81bf38401111f5e4cdddaca217581",
+      "path": "README.md",
+      "url": "https://raw.githubusercontent.com/droid-dataset/droid_policy_learning/9a29c832b4c81bf38401111f5e4cdddaca217581/README.md",
+      "sha256": "017b89f99a2f1d122ec1dcb5d13f32ad07e854432bd4ba12d242f2d49da2a3eb",
+      "bytes": 10071,
+      "selected_line_ranges": [],
+      "review_depth": "CONTEXT_PATH_OR_SYMBOL_ONLY",
+      "permalink": "https://github.com/droid-dataset/droid_policy_learning/blob/9a29c832b4c81bf38401111f5e4cdddaca217581/README.md"
+    },
+    {
+      "repo": "kvablack/dlimp",
+      "commit": "92e3eca97af3b14d0b6aa15182c0dc240407698d",
+      "path": "rlds_converters/README.md",
+      "url": "https://raw.githubusercontent.com/kvablack/dlimp/92e3eca97af3b14d0b6aa15182c0dc240407698d/rlds_converters/README.md",
+      "sha256": "a3f4ff21f1b1799c59d9ba095ea0abe78ce55b59cf05068a7d52842c3012dca9",
+      "bytes": 1513,
+      "selected_line_ranges": [
+        [
+          1,
+          8
+        ]
+      ],
+      "review_depth": "SELECTED_PASSAGES_OR_DOC_CONTRACT",
+      "permalink": "https://github.com/kvablack/dlimp/blob/92e3eca97af3b14d0b6aa15182c0dc240407698d/rlds_converters/README.md"
+    },
+    {
+      "repo": "kvablack/dlimp",
+      "commit": "92e3eca97af3b14d0b6aa15182c0dc240407698d",
+      "path": "rlds_converters/bridge_dataset/bridge_dataset_dataset_builder.py",
+      "url": "https://raw.githubusercontent.com/kvablack/dlimp/92e3eca97af3b14d0b6aa15182c0dc240407698d/rlds_converters/bridge_dataset/bridge_dataset_dataset_builder.py",
+      "sha256": "0e7820ad257b2b17674aa5badd8e24520603d7ad2e890765f1eae3e24b40ffa5",
+      "bytes": 15164,
+      "selected_line_ranges": [
+        [
+          145,
+          208
+        ],
+        [
+          212,
+          243
+        ],
+        [
+          286,
+          327
+        ]
+      ],
+      "review_depth": "SELECTED_PASSAGES_OR_DOC_CONTRACT",
+      "permalink": "https://github.com/kvablack/dlimp/blob/92e3eca97af3b14d0b6aa15182c0dc240407698d/rlds_converters/bridge_dataset/bridge_dataset_dataset_builder.py"
+    },
+    {
+      "repo": "droid-dataset/droid_policy_learning",
+      "commit": "9a29c832b4c81bf38401111f5e4cdddaca217581",
+      "path": "robomimic/scripts/conversion/convert_droid.py",
+      "url": "https://raw.githubusercontent.com/droid-dataset/droid_policy_learning/9a29c832b4c81bf38401111f5e4cdddaca217581/robomimic/scripts/conversion/convert_droid.py",
+      "sha256": "82c4b16a12585242ee7afc3599d57c665d9806867b0bdbbb5d30341dda388ce2",
+      "bytes": 12065,
+      "selected_line_ranges": [],
+      "review_depth": "CONTEXT_PATH_OR_SYMBOL_ONLY",
+      "permalink": "https://github.com/droid-dataset/droid_policy_learning/blob/9a29c832b4c81bf38401111f5e4cdddaca217581/robomimic/scripts/conversion/convert_droid.py"
+    },
+    {
+      "repo": "droid-dataset/droid_policy_learning",
+      "commit": "9a29c832b4c81bf38401111f5e4cdddaca217581",
+      "path": "robomimic/utils/rlds_utils.py",
+      "url": "https://raw.githubusercontent.com/droid-dataset/droid_policy_learning/9a29c832b4c81bf38401111f5e4cdddaca217581/robomimic/utils/rlds_utils.py",
+      "sha256": "97c26f0cae681f9f48e0a040872451d080a54be3bcbbbb5d86466b778519de3c",
+      "bytes": 3209,
+      "selected_line_ranges": [
+        [
+          1,
+          58
+        ]
+      ],
+      "review_depth": "SELECTED_PASSAGES_OR_DOC_CONTRACT",
+      "permalink": "https://github.com/droid-dataset/droid_policy_learning/blob/9a29c832b4c81bf38401111f5e4cdddaca217581/robomimic/utils/rlds_utils.py"
+    }
+  ],
+  "public_inventory": {
+    "civil_payload_paths_only": [
+      {
+        "path": "panda_data_example/demo_sample.pkl",
+        "tree_bytes": 86031315
+      },
+      {
+        "path": "data/subjective_survey.csv",
+        "tree_bytes": 1904
+      }
+    ],
+    "payloads_not_opened": true,
+    "civil_complete_participant_subset_outcome_packet": "NOT_IDENTIFIED_IN_REVIEWED_PUBLIC_PATHS",
+    "unused_discovery_repository": "kpertsch/rlds_dataset_builder: generic builder found but official Bridge README routed to kvablack/dlimp; no source files fetched from generic candidate."
+  },
+  "validation": {
+    "pre_audit": "PASS: 1037 papers, 5185 standard notes, errors 0 warnings 0",
+    "post_audit": "PASS",
+    "temporary_files_removed": true,
+    "pre_canonical_sha256": {
+      "work/sources/papers.json": "9aaf36031bf776d554dd10f8f2f927d60ddd7b44ff02267181325275bcb74f06",
+      "work/sources/registry_meta.json": "1fbb093bf785ca218ead1804f95fdac7fa5d88ac5ed82b019f1766511b1eb56f",
+      "research/READING_TIERS.csv": "8b2ac89fff0d6d56950695d5bfb67daab8fbc51647454fa077beea970bb23f29",
+      "research/READING_STATUS.csv": "276c5531063e93f381de18b45fbf82dfa16703444f39658dfd4bfb10bbc17878",
+      "research/READING_STATUS_HISTORY.csv": "c91b6727a03529ba790447eb5106f5b04cc4364b0c90b3eed1afecf9b700e001"
+    },
+    "preexisting_dirty_files": 358,
+    "source_file_hash_checks": "27/27 PASS",
+    "errors": 0,
+    "warnings": 0,
+    "papers": 1037,
+    "intensive": 322,
+    "history": 47,
+    "standard_notes": 5185,
+    "markdown_files_checked": 5337,
+    "markdown_links_checked": 10174,
+    "commands": [
+      "python3 -m py_compile work/scripts/build_reading_tiers.py",
+      "python3 work/scripts/build_reading_tiers.py",
+      "python3 work/scripts/audit_repository.py",
+      "git diff --check"
+    ],
+    "canonical_sha256_unchanged": true,
+    "preexisting_files_unchanged": 350,
+    "preexisting_files_intentionally_edited": 8,
+    "intentionally_edited_files": [
+      "README.md",
+      "TODO.md",
+      "research/IDEA_BUILDUP_GUIDE.md",
+      "synthesis/02_rl_il_offline.md",
+      "synthesis/04_vla_generalist.md",
+      "work/update/CAUSAL_INFORMATION_COVERAGE_REVIEW_2026-10-23.md",
+      "work/update/README.md",
+      "work/update/UPDATES_2026-10-23.md"
+    ],
+    "temporary_cleanup_scope": "Only task-created temporary public code/doc/config files, repository tree metadata and preservation snapshot; no source dataset, notes, PDF or experiment artifact removal."
+  }
+}

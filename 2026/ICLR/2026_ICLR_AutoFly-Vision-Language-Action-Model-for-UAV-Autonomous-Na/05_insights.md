@@ -4,6 +4,8 @@
 > Evidence maturity: `FULL_TEXT_CHECKED`.
 > Analysis basis: full-text PDF body checked on 2026-09-03 (24 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=88RKxlFUNY; PDF retrieval source: https://openreview.net/pdf/1a99a8c26a0bf879894a517257af43defc03d88a.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
+> DOC-QA2 targeted source review: 2026-10-23; PDF pp. 4, 17. 손상 구간·직접 연결된 표 분류만 원문 이미지와 대조했다. 전체 주장 정독·실험 검증·reading status 승격을 뜻하지 않는다. [URL·PDF hash·수정 기록](../../../work/sources/pdf_note_review_followup_2026-10-23.json).
+
 ## Paper-supported conclusion
 
 > **Evidence boundary:** The following claims are restricted to selected PDF body sentences, captions and section anchors; exact table/equation values remain to be checked at those anchors.
@@ -43,7 +45,7 @@
 ### Reusable lesson in the robotics loop
 
 - **Closed-loop position:** `camera/depth stream, pose, map와 language goal → robot pose, free-space/semantic map와 local goal → collision-free trajectory 또는 velocity command`.
-- 이 논문의 재사용 가능한 지점은 3.1 TASK FORMULATION We formulate autonomous navigation as learning a control policy π that takes the current RGB observation ot ∈O, language instruction L, and coarse positional or directional guidance encoded as ...를 For a stochastic policy, the target value y is calculated as: y = r + γ(1 -d)  min i=1,2 Qθ′ i(s′, a′) -α log πϕ(a′/s′)  , (6) where γ is ...로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 robot pose, free-space/semantic map와 local goal가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 Dense Cylinders Scene Dense Forest Scene Dynamic Obstacle Scenarios Method SR CR PER SR CR PER SR CR PER w/ 57.2 21.1 78.3 53.6 23.7 77.3 50.7 28.2 73.9 w/o 49.3 28.7 ...에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
+- **Researcher interpretation (DOC-QA2):** AutoFly의 high-level action interface(Fig. 2)와 RL data-collection actor/critic objective(App. A.2.3)를 구별해 재사용해야 한다. Q-target을 정책의 행동 출력으로 해석하거나 해당 식만으로 recovery 효과를 주장하지 않는다.
 - The paper-specific mechanism to preserve in a reproduction is: This standardized backbone approach enables fair comparison of each method's core contributions while maintaining implementation feasibility within our experimental framework.
 - Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
 

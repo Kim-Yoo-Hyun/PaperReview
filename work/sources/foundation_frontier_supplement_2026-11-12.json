@@ -1,0 +1,1090 @@
+{
+  "work_id": "REG-R15",
+  "reviewed_on": "2026-11-12",
+  "scope": "Incremental foundation and 2024–2026 VLA/robotics supplement; not an exhaustive re-audit of all registry publications.",
+  "admission_input": "work/sources/foundation_frontier_admissions_2026-11-12.json",
+  "search_scope": [
+    "Official RSS 2026 proceedings",
+    "NeurIPS 2024–2025 proceedings",
+    "ICLR 2026 and CVPR 2026 discovery/deduplication",
+    "IJCAI 2026 proceedings",
+    "ICML/ICLR/NeurIPS/CoRL/AAAI foundational proceedings",
+    "IJRR/Artificial Intelligence/Annual Review of Control, Robotics, and Autonomous Systems",
+    "Author projects and arXiv for direct VLA RL preprints"
+  ],
+  "admitted": [
+    {
+      "paper_id": "pr-1180",
+      "title": "High-Dimensional Continuous Control Using Generalized Advantage Estimation",
+      "overview_path": "2016/ICLR/2016_ICLR_High-Dimensional-Continuous-Control-Using-Generalized-Adva/01_overview.md",
+      "tier": "CORE",
+      "cohort": "foundation_and_prerequisites",
+      "publication": {
+        "status": "peer_reviewed",
+        "kind": "conference",
+        "venue": "ICLR",
+        "year": 2016,
+        "venue_year": 2016,
+        "presentation": "unknown",
+        "venue_id": "iclr"
+      },
+      "sources": {
+        "primary": {
+          "url": "https://arxiv.org/abs/1506.02438",
+          "kind": "arxiv",
+          "scope": "paper_specific",
+          "verified_on": "2026-11-12"
+        },
+        "preprint": {
+          "url": "https://arxiv.org/abs/1506.02438",
+          "kind": "arxiv",
+          "scope": "paper_specific",
+          "verified_on": "2026-11-12"
+        },
+        "paper_pdf": null,
+        "project": null,
+        "code": null,
+        "venue_verification": {
+          "url": "https://www.iclr.cc/archive/www/2016.html",
+          "kind": "official_publication",
+          "scope": "venue_index",
+          "verified_on": "2026-11-12"
+        }
+      },
+      "admission_reason": "PPO 기반 VLA RL에서 advantage·bootstrap·시간 단위가 학습에 미치는 영향을 해석하기 위한 공통 원전이므로 CORE다.",
+      "verification_boundary": "ICLR 2016 공식 accepted conference list로 게재 확인. 2015 최초 preprint와 2018 v6를 별도 논문으로 만들지 않는다.",
+      "content_evidence": "ABSTRACT_CHECKED"
+    },
+    {
+      "paper_id": "pr-1181",
+      "title": "Policy invariance under reward transformations: Theory and application to reward shaping",
+      "overview_path": "1999/ICML/1999_ICML_Policy-invariance-under-reward-transformations-Theory-and/01_overview.md",
+      "tier": "CORE",
+      "cohort": "foundation_and_prerequisites",
+      "publication": {
+        "status": "peer_reviewed",
+        "kind": "conference",
+        "venue": "ICML",
+        "year": 1999,
+        "venue_year": 1999,
+        "presentation": "unknown",
+        "venue_id": "icml"
+      },
+      "sources": {
+        "primary": {
+          "url": "https://people.eecs.berkeley.edu/~russell/papers/icml99-shaping.pdf",
+          "kind": "author_paper",
+          "scope": "paper_specific",
+          "verified_on": "2026-11-12"
+        },
+        "preprint": null,
+        "paper_pdf": null,
+        "project": null,
+        "code": null,
+        "venue_verification": {
+          "url": "https://people.eecs.berkeley.edu/~russell/publications",
+          "kind": "author_publication_list",
+          "scope": "venue_index",
+          "verified_on": "2026-11-12"
+        }
+      },
+      "admission_reason": "VLM progress·단계 보상·접촉 보상으로 목표를 변경하는지 판단할 공통 이론 원전이므로 CORE다.",
+      "verification_boundary": "저자 원문 abstract와 Russell의 ICML-99 publication 기록 확인. PDF는 웹에서 확인했으며 local cache는 저장하지 않았다. ACM endpoint는 403으로 접근 실패해 DOI를 추정하지 않았다.",
+      "content_evidence": "ABSTRACT_CHECKED"
+    },
+    {
+      "paper_id": "pr-1182",
+      "title": "Universal Value Function Approximators",
+      "overview_path": "2015/ICML/2015_ICML_Universal-Value-Function-Approximators/01_overview.md",
+      "tier": "CORE",
+      "cohort": "foundation_and_prerequisites",
+      "publication": {
+        "status": "peer_reviewed",
+        "kind": "conference",
+        "venue": "ICML",
+        "year": 2015,
+        "venue_year": 2015,
+        "presentation": "unknown",
+        "venue_id": "icml"
+      },
+      "sources": {
+        "primary": {
+          "url": "https://proceedings.mlr.press/v37/schaul15.html",
+          "kind": "official_publication",
+          "scope": "paper_specific",
+          "verified_on": "2026-11-12"
+        },
+        "preprint": null,
+        "paper_pdf": null,
+        "project": null,
+        "code": null
+      },
+      "admission_reason": "HER·HIQL·목표 조건부 critic과 단일 VLA의 지시별 가치 표현을 이해하는 원전이므로 CORE다.",
+      "verification_boundary": "공식 초록과 metadata 수준의 정리다. 구체적 실험 조건·수치·본문 한계는 추가 확인이 필요하다.",
+      "content_evidence": "ABSTRACT_CHECKED"
+    },
+    {
+      "paper_id": "pr-1183",
+      "title": "Successor Features for Transfer in Reinforcement Learning",
+      "overview_path": "2017/NeurIPS/2017_NeurIPS_Successor-Features-for-Transfer-in-Reinforcement-Learning/01_overview.md",
+      "tier": "NEXT",
+      "cohort": "foundation_and_prerequisites",
+      "publication": {
+        "status": "peer_reviewed",
+        "kind": "conference",
+        "venue": "NeurIPS",
+        "year": 2017,
+        "venue_year": 2017,
+        "presentation": "unknown",
+        "venue_id": "neurips"
+      },
+      "sources": {
+        "primary": {
+          "url": "https://proceedings.neurips.cc/paper/2017/hash/350db081a661525235354dd3e19b8c05-Abstract.html",
+          "kind": "official_publication",
+          "scope": "paper_specific",
+          "verified_on": "2026-11-12"
+        },
+        "preprint": null,
+        "paper_pdf": null,
+        "project": null,
+        "code": null
+      },
+      "admission_reason": "보상 전이와 로봇 동역학 전이를 혼동하지 않게 하는 명확한 이론·로봇 비교 기준이다.",
+      "verification_boundary": "공식 초록과 metadata 수준의 정리다. 구체적 실험 조건·수치·본문 한계는 추가 확인이 필요하다.",
+      "content_evidence": "ABSTRACT_CHECKED"
+    },
+    {
+      "paper_id": "pr-1184",
+      "title": "AWAC: Accelerating Online Reinforcement Learning with Offline Datasets",
+      "overview_path": "2020/arXiv/2020_arXiv_AWAC-Accelerating-Online-Reinforcement-Learning-with-Offli/01_overview.md",
+      "tier": "NEXT",
+      "cohort": "foundation_and_prerequisites",
+      "publication": {
+        "status": "preprint",
+        "kind": "preprint",
+        "venue": "arXiv",
+        "year": 2020,
+        "venue_year": 2020,
+        "presentation": "unknown",
+        "venue_id": "arxiv"
+      },
+      "sources": {
+        "primary": {
+          "url": "https://arxiv.org/abs/2006.09359",
+          "kind": "arxiv",
+          "scope": "paper_specific",
+          "verified_on": "2026-11-12"
+        },
+        "preprint": {
+          "url": "https://arxiv.org/abs/2006.09359",
+          "kind": "arxiv",
+          "scope": "paper_specific",
+          "verified_on": "2026-11-12"
+        },
+        "paper_pdf": null,
+        "project": {
+          "url": "https://awacrl.github.io/",
+          "kind": "author_project",
+          "scope": "project_landing",
+          "verified_on": "2026-11-12"
+        },
+        "code": {
+          "url": "https://github.com/vitchyr/rlkit/tree/master/examples/awac",
+          "kind": "official_code",
+          "scope": "paper_specific",
+          "verified_on": "2026-11-12"
+        }
+      },
+      "admission_reason": "RL 이득이 성공 선택이나 weighted imitation으로 설명되는지 비교할 핵심 baseline이다.",
+      "verification_boundary": "저자 project·arXiv v6 확인. OpenReview forum은 browser challenge로 본문 접근 실패했고 공식 acceptance를 확인하지 못해 arXiv 2020으로 등록한다. Project의 code 링크는 식별했으나 해당 경로 직접 fetch는 실패했다.",
+      "content_evidence": "ABSTRACT_CHECKED"
+    },
+    {
+      "paper_id": "pr-1185",
+      "title": "Relative Entropy Policy Search",
+      "overview_path": "2010/AAAI/2010_AAAI_Relative-Entropy-Policy-Search/01_overview.md",
+      "tier": "REFERENCE",
+      "cohort": "foundation_and_prerequisites",
+      "publication": {
+        "status": "peer_reviewed",
+        "kind": "conference",
+        "venue": "AAAI",
+        "year": 2010,
+        "venue_year": 2010,
+        "presentation": "unknown",
+        "venue_id": "aaai"
+      },
+      "sources": {
+        "primary": {
+          "url": "https://ojs.aaai.org/index.php/AAAI/article/view/7727",
+          "kind": "official_publication",
+          "scope": "paper_specific",
+          "verified_on": "2026-11-12"
+        },
+        "preprint": null,
+        "paper_pdf": null,
+        "project": null,
+        "code": null
+      },
+      "admission_reason": "TRPO·MPO·KL 제약의 개념 계보를 보완할 원전이며 현재 공통 정독은 GAE/PPO를 우선한다.",
+      "verification_boundary": "공식 초록과 metadata 수준의 정리다. 구체적 실험 조건·수치·본문 한계는 추가 확인이 필요하다.",
+      "content_evidence": "ABSTRACT_CHECKED"
+    },
+    {
+      "paper_id": "pr-1186",
+      "title": "DART: Noise Injection for Robust Imitation Learning",
+      "overview_path": "2017/CoRL/2017_CoRL_DART-Noise-Injection-for-Robust-Imitation-Learning/01_overview.md",
+      "tier": "NEXT",
+      "cohort": "foundation_and_prerequisites",
+      "publication": {
+        "status": "peer_reviewed",
+        "kind": "conference",
+        "venue": "CoRL",
+        "year": 2017,
+        "venue_year": 2017,
+        "presentation": "unknown",
+        "venue_id": "corl"
+      },
+      "sources": {
+        "primary": {
+          "url": "https://proceedings.mlr.press/v78/laskey17a.html",
+          "kind": "official_publication",
+          "scope": "paper_specific",
+          "verified_on": "2026-11-12"
+        },
+        "preprint": {
+          "url": "https://arxiv.org/abs/1703.09327",
+          "kind": "arxiv",
+          "scope": "paper_specific",
+          "verified_on": "2026-11-12"
+        },
+        "paper_pdf": null,
+        "project": {
+          "url": "https://berkeleyautomation.github.io/DART/",
+          "kind": "author_project",
+          "scope": "project_landing",
+          "verified_on": "2026-11-12"
+        },
+        "code": {
+          "url": "https://github.com/BerkeleyAutomation/DART",
+          "kind": "official_code",
+          "scope": "paper_specific",
+          "verified_on": "2026-11-12"
+        }
+      },
+      "admission_reason": "복구 성공을 RL 고유 이득으로 해석하기 전 넘어야 할 강한 데이터 수집·모방 대안이다.",
+      "verification_boundary": "공식 CoRL abstract 및 저자 project/code 공개 확인. 공개 repository의 simulation 구현과 실제 HSR 재현 경로는 구별한다.",
+      "content_evidence": "ABSTRACT_CHECKED"
+    },
+    {
+      "paper_id": "pr-1187",
+      "title": "Between MDPs and semi-MDPs: A framework for temporal abstraction in reinforcement learning",
+      "overview_path": "1999/Artificial-Intelligence/1999_Artificial-Intelligence_Between-MDPs-and-semi-MDPs-A-framework-for-temporal-abstra/01_overview.md",
+      "tier": "REFERENCE",
+      "cohort": "foundation_and_prerequisites",
+      "publication": {
+        "status": "peer_reviewed",
+        "kind": "journal",
+        "venue": "Artificial Intelligence",
+        "year": 1999,
+        "venue_year": 1999,
+        "presentation": "unknown",
+        "venue_id": "artificial-intelligence"
+      },
+      "sources": {
+        "primary": {
+          "url": "https://www.sciencedirect.com/science/article/pii/S0004370299000521",
+          "kind": "official_publication",
+          "scope": "paper_specific",
+          "verified_on": "2026-11-12"
+        },
+        "preprint": null,
+        "paper_pdf": null,
+        "project": null,
+        "code": null
+      },
+      "admission_reason": "가변 chunk·재계획·중단을 해석할 기본 formulation을 보완하며 계층형 주제로 전환하라는 의미는 아니다.",
+      "verification_boundary": "공식 초록과 metadata 수준의 정리다. 구체적 실험 조건·수치·본문 한계는 추가 확인이 필요하다.",
+      "content_evidence": "ABSTRACT_CHECKED"
+    },
+    {
+      "paper_id": "pr-1188",
+      "title": "Reinforcement learning in robotics: A survey",
+      "overview_path": "2013/IJRR/2013_IJRR_Reinforcement-learning-in-robotics-A-survey/01_overview.md",
+      "tier": "REFERENCE",
+      "cohort": "foundation_and_prerequisites",
+      "publication": {
+        "status": "peer_reviewed",
+        "kind": "journal",
+        "venue": "IJRR",
+        "year": 2013,
+        "venue_year": 2013,
+        "presentation": "unknown",
+        "venue_id": "ijrr"
+      },
+      "sources": {
+        "primary": {
+          "url": "https://journals.sagepub.com/doi/abs/10.1177/0278364913495721",
+          "kind": "official_publication",
+          "scope": "paper_specific",
+          "verified_on": "2026-11-12"
+        },
+        "preprint": null,
+        "paper_pdf": null,
+        "project": {
+          "url": "https://www.ias.informatik.tu-darmstadt.de/Publications/BibTex?id=10613",
+          "kind": "author_project",
+          "scope": "project_landing",
+          "verified_on": "2026-11-12"
+        },
+        "code": null
+      },
+      "admission_reason": "로봇 문제의 제약에서 연구 질문을 세우기 위한 기반 survey로 최신 VLA 방법의 전제 점검에 필요하다.",
+      "verification_boundary": "Sage 검색의 publisher abstract/metadata와 저자 연구실 BibTeX·원문 초록으로 IJRR 2013 확인. Publisher 직접 open은 timeout. Survey 본문 전체 정독은 하지 않았다.",
+      "content_evidence": "ABSTRACT_CHECKED"
+    },
+    {
+      "paper_id": "pr-1189",
+      "title": "D4RL: Datasets for Deep Data-Driven Reinforcement Learning",
+      "overview_path": "2020/arXiv/2020_arXiv_D4RL-Datasets-for-Deep-Data-Driven-Reinforcement-Learning/01_overview.md",
+      "tier": "REFERENCE",
+      "cohort": "foundation_and_prerequisites",
+      "publication": {
+        "status": "preprint",
+        "kind": "preprint",
+        "venue": "arXiv",
+        "year": 2020,
+        "venue_year": 2020,
+        "presentation": "unknown",
+        "venue_id": "arxiv"
+      },
+      "sources": {
+        "primary": {
+          "url": "https://arxiv.org/abs/2004.07219",
+          "kind": "arxiv",
+          "scope": "paper_specific",
+          "verified_on": "2026-11-12"
+        },
+        "preprint": {
+          "url": "https://arxiv.org/abs/2004.07219",
+          "kind": "arxiv",
+          "scope": "paper_specific",
+          "verified_on": "2026-11-12"
+        },
+        "paper_pdf": null,
+        "project": {
+          "url": "https://github.com/Farama-Foundation/D4RL",
+          "kind": "author_project",
+          "scope": "project_landing",
+          "verified_on": "2026-11-12"
+        },
+        "code": {
+          "url": "https://github.com/Farama-Foundation/D4RL",
+          "kind": "official_code",
+          "scope": "paper_specific",
+          "verified_on": "2026-11-12"
+        }
+      },
+      "admission_reason": "CQL·IQL·Cal-QL의 데이터 조건과 결과를 읽기 위한 표준 benchmark의 누락을 보완한다.",
+      "verification_boundary": "arXiv v4와 공식 유지 repository 확인. 확인되지 않은 conference venue를 부여하지 않으며 현행 라이브러리의 실행 호환성을 보장하지 않는다.",
+      "content_evidence": "ABSTRACT_CHECKED"
+    },
+    {
+      "paper_id": "pr-1190",
+      "title": "Cal-QL: Calibrated Offline RL Pre-Training for Efficient Online Fine-Tuning",
+      "overview_path": "2023/NeurIPS/2023_NeurIPS_Cal-QL-Calibrated-Offline-RL-Pre-Training-for-Efficient-On/01_overview.md",
+      "tier": "NEXT",
+      "cohort": "foundation_and_prerequisites",
+      "publication": {
+        "status": "peer_reviewed",
+        "kind": "conference",
+        "venue": "NeurIPS",
+        "year": 2023,
+        "venue_year": 2023,
+        "presentation": "unknown",
+        "venue_id": "neurips"
+      },
+      "sources": {
+        "primary": {
+          "url": "https://proceedings.neurips.cc/paper_files/paper/2023/hash/c44a04289beaf0a7d968a94066a1d696-Abstract-Conference.html",
+          "kind": "official_publication",
+          "scope": "paper_specific",
+          "verified_on": "2026-11-12"
+        },
+        "preprint": {
+          "url": "https://arxiv.org/abs/2303.05479",
+          "kind": "arxiv",
+          "scope": "paper_specific",
+          "verified_on": "2026-11-12"
+        },
+        "paper_pdf": null,
+        "project": {
+          "url": "https://nakamotoo.github.io/Cal-QL/",
+          "kind": "author_project",
+          "scope": "project_landing",
+          "verified_on": "2026-11-12"
+        },
+        "code": {
+          "url": "https://github.com/nakamotoo/Cal-QL",
+          "kind": "official_code",
+          "scope": "paper_specific",
+          "verified_on": "2026-11-12"
+        }
+      },
+      "admission_reason": "초기 성능 손실을 semantic forgetting으로만 설명하지 않게 하는 critic calibration baseline이다.",
+      "verification_boundary": "공식 초록과 metadata 수준의 정리다. 구체적 실험 조건·수치·본문 한계는 추가 확인이 필요하다.",
+      "content_evidence": "ABSTRACT_CHECKED"
+    },
+    {
+      "paper_id": "pr-1191",
+      "title": "HIQL: Offline Goal-Conditioned RL with Latent States as Actions",
+      "overview_path": "2023/NeurIPS/2023_NeurIPS_HIQL-Offline-Goal-Conditioned-RL-with-Latent-States-as-Act/01_overview.md",
+      "tier": "NEXT",
+      "cohort": "foundation_and_prerequisites",
+      "publication": {
+        "status": "peer_reviewed",
+        "kind": "conference",
+        "venue": "NeurIPS",
+        "year": 2023,
+        "venue_year": 2023,
+        "presentation": "unknown",
+        "venue_id": "neurips"
+      },
+      "sources": {
+        "primary": {
+          "url": "https://proceedings.neurips.cc/paper_files/paper/2023/hash/6d7c4a0727e089ed6cdd3151cbe8d8ba-Abstract-Conference.html",
+          "kind": "official_publication",
+          "scope": "paper_specific",
+          "verified_on": "2026-11-12"
+        },
+        "preprint": null,
+        "paper_pdf": null,
+        "project": {
+          "url": "https://seohong.me/projects/hiql/",
+          "kind": "author_project",
+          "scope": "project_landing",
+          "verified_on": "2026-11-12"
+        },
+        "code": {
+          "url": "https://github.com/seohongpark/HIQL",
+          "kind": "official_code",
+          "scope": "paper_specific",
+          "verified_on": "2026-11-12"
+        }
+      },
+      "admission_reason": "공유 가치함수와 계층 정책을 단일 actor 공동 학습과 구별하고 장기 credit 문제의 강한 대안으로 비교한다.",
+      "verification_boundary": "공식 초록과 metadata 수준의 정리다. 구체적 실험 조건·수치·본문 한계는 추가 확인이 필요하다.",
+      "content_evidence": "ABSTRACT_CHECKED"
+    },
+    {
+      "paper_id": "pr-1192",
+      "title": "Is Value Learning Really the Main Bottleneck in Offline RL?",
+      "overview_path": "2024/NeurIPS/2024_NeurIPS_Is-Value-Learning-Really-the-Main-Bottleneck-in-Offline-RL/01_overview.md",
+      "tier": "NEXT",
+      "cohort": "recent_2024_2026",
+      "publication": {
+        "status": "peer_reviewed",
+        "kind": "conference",
+        "venue": "NeurIPS",
+        "year": 2024,
+        "venue_year": 2024,
+        "presentation": "unknown",
+        "venue_id": "neurips"
+      },
+      "sources": {
+        "primary": {
+          "url": "https://proceedings.neurips.cc/paper_files/paper/2024/hash/8ffb4e3118280a66b192b6f06e0e2596-Abstract-Conference.html",
+          "kind": "official_publication",
+          "scope": "paper_specific",
+          "verified_on": "2026-11-12"
+        },
+        "preprint": null,
+        "paper_pdf": null,
+        "project": null,
+        "code": null
+      },
+      "admission_reason": "단일 VLA critic 개선 후보가 actor 학습·coverage 효과를 놓치지 않도록 하는 핵심 원인 분석이다.",
+      "verification_boundary": "공식 초록과 metadata 수준의 정리다. 구체적 실험 조건·수치·본문 한계는 추가 확인이 필요하다.",
+      "content_evidence": "ABSTRACT_CHECKED"
+    },
+    {
+      "paper_id": "pr-1193",
+      "title": "Horizon Reduction Makes RL Scalable",
+      "overview_path": "2025/NeurIPS/2025_NeurIPS_Horizon-Reduction-Makes-RL-Scalable/01_overview.md",
+      "tier": "NEXT",
+      "cohort": "recent_2024_2026",
+      "publication": {
+        "status": "peer_reviewed",
+        "kind": "conference",
+        "venue": "NeurIPS",
+        "year": 2025,
+        "venue_year": 2025,
+        "presentation": "unknown",
+        "venue_id": "neurips"
+      },
+      "sources": {
+        "primary": {
+          "url": "https://proceedings.neurips.cc/paper_files/paper/2025/hash/0c66099070429b9b49ad8bb19c740c22-Abstract-Conference.html",
+          "kind": "official_publication",
+          "scope": "paper_specific",
+          "verified_on": "2026-11-12"
+        },
+        "preprint": {
+          "url": "https://arxiv.org/abs/2506.04168",
+          "kind": "arxiv",
+          "scope": "paper_specific",
+          "verified_on": "2026-11-12"
+        },
+        "paper_pdf": null,
+        "project": {
+          "url": "https://github.com/seohongpark/horizon-reduction",
+          "kind": "author_project",
+          "scope": "project_landing",
+          "verified_on": "2026-11-12"
+        },
+        "code": {
+          "url": "https://github.com/seohongpark/horizon-reduction",
+          "kind": "official_code",
+          "scope": "paper_specific",
+          "verified_on": "2026-11-12"
+        }
+      },
+      "admission_reason": "Chunk 길이·목표 분해와 데이터 scaling의 효과를 분리할 최신 기준 연구다.",
+      "verification_boundary": "공식 초록과 metadata 수준의 정리다. 구체적 실험 조건·수치·본문 한계는 추가 확인이 필요하다.",
+      "content_evidence": "ABSTRACT_CHECKED"
+    },
+    {
+      "paper_id": "pr-1194",
+      "title": "Deep Reinforcement Learning for Robotics: A Survey of Real-World Successes",
+      "overview_path": "2025/Annual-Review-of-Control/2025_Annual-Review-of-Control_Deep-Reinforcement-Learning-for-Robotics-A-Survey-of-Real/01_overview.md",
+      "tier": "REFERENCE",
+      "cohort": "recent_2024_2026",
+      "publication": {
+        "status": "peer_reviewed",
+        "kind": "journal",
+        "venue": "Annual Review of Control, Robotics, and Autonomous Systems",
+        "year": 2025,
+        "venue_year": 2025,
+        "presentation": "unknown",
+        "venue_id": "annual-review-of-control-robotics-and-autonomous-systems"
+      },
+      "sources": {
+        "primary": {
+          "url": "https://www.annualreviews.org/content/journals/10.1146/annurev-control-030323-022510",
+          "kind": "official_publication",
+          "scope": "paper_specific",
+          "verified_on": "2026-11-12"
+        },
+        "preprint": {
+          "url": "https://arxiv.org/abs/2408.03539",
+          "kind": "arxiv",
+          "scope": "paper_specific",
+          "verified_on": "2026-11-12"
+        },
+        "paper_pdf": null,
+        "project": null,
+        "code": null
+      },
+      "admission_reason": "석사 연구 후보의 구현 부담과 로봇 행동 기여를 평가할 최신 survey로 2013 원전과 함께 사용한다.",
+      "verification_boundary": "Publisher의 2025 volume 게재를 사용한다. 2024 online-first와 같은 제목의 AAAI 2025 요약은 별도 신규 논문으로 중복 등록하지 않는다.",
+      "content_evidence": "ABSTRACT_CHECKED"
+    },
+    {
+      "paper_id": "pr-1195",
+      "title": "Act2Goal: From World Model To General Goal-conditioned Policy",
+      "overview_path": "2026/RSS/2026_RSS_Act2Goal-From-World-Model-To-General-Goal-conditioned-Poli/01_overview.md",
+      "tier": "NEXT",
+      "cohort": "recent_2024_2026",
+      "publication": {
+        "status": "peer_reviewed",
+        "kind": "conference",
+        "venue": "RSS",
+        "year": 2026,
+        "venue_year": 2026,
+        "presentation": "unknown",
+        "venue_id": "rss"
+      },
+      "sources": {
+        "primary": {
+          "url": "https://www.roboticsproceedings.org/rss22/p015.html",
+          "kind": "official_publication",
+          "scope": "paper_specific",
+          "verified_on": "2026-11-12"
+        },
+        "preprint": {
+          "url": "https://arxiv.org/abs/2512.23541",
+          "kind": "arxiv",
+          "scope": "paper_specific",
+          "verified_on": "2026-11-12"
+        },
+        "paper_pdf": null,
+        "project": {
+          "url": "https://act2goal.github.io/",
+          "kind": "author_project",
+          "scope": "project_landing",
+          "verified_on": "2026-11-12"
+        },
+        "code": null
+      },
+      "admission_reason": "Hindsight 목표 변경·world model·단일 정책 연결의 직접 선행이며 언어 VLA와 시각 목표 정책의 경계를 드러낸다.",
+      "verification_boundary": "RSS 공식 abstract를 기준으로 기록. Project는 접근되지만 이번 웹 도구에서 본문을 읽지 못해 코드 공개 상태는 not identified다. Visual-goal 정책을 언어 지시 VLA와 동일시하지 않는다.",
+      "content_evidence": "ABSTRACT_CHECKED"
+    },
+    {
+      "paper_id": "pr-1196",
+      "title": "Causal World Modeling for Robot Control",
+      "overview_path": "2026/RSS/2026_RSS_Causal-World-Modeling-for-Robot-Control/01_overview.md",
+      "tier": "NEXT",
+      "cohort": "recent_2024_2026",
+      "publication": {
+        "status": "peer_reviewed",
+        "kind": "conference",
+        "venue": "RSS",
+        "year": 2026,
+        "venue_year": 2026,
+        "presentation": "unknown",
+        "venue_id": "rss"
+      },
+      "sources": {
+        "primary": {
+          "url": "https://www.roboticsproceedings.org/rss22/p016.html",
+          "kind": "official_publication",
+          "scope": "paper_specific",
+          "verified_on": "2026-11-12"
+        },
+        "preprint": null,
+        "paper_pdf": null,
+        "project": null,
+        "code": null
+      },
+      "admission_reason": "Architecture 통합과 RL 공동 갱신을 구별할 world-action 비교 대상으로 보완한다.",
+      "verification_boundary": "공식 RSS abstract만을 canonical scope로 사용한다. 같은 제목의 arXiv2601.21998은 LingBot-VA와 다른 저자 구성·설계를 표기하므로 version mapping을 확정하지 않았고 arXiv ID/code를 자동 합치지 않았다. 별도 중복 등록도 하지 않았다.",
+      "content_evidence": "ABSTRACT_CHECKED"
+    },
+    {
+      "paper_id": "pr-1197",
+      "title": "Tune to Learn: How Controller Gains Shape Robot Policy Learning",
+      "overview_path": "2026/RSS/2026_RSS_Tune-to-Learn-How-Controller-Gains-Shape-Robot-Policy-Lear/01_overview.md",
+      "tier": "NEXT",
+      "cohort": "recent_2024_2026",
+      "publication": {
+        "status": "peer_reviewed",
+        "kind": "conference",
+        "venue": "RSS",
+        "year": 2026,
+        "venue_year": 2026,
+        "presentation": "unknown",
+        "venue_id": "rss"
+      },
+      "sources": {
+        "primary": {
+          "url": "https://www.roboticsproceedings.org/rss22/p139.html",
+          "kind": "official_publication",
+          "scope": "paper_specific",
+          "verified_on": "2026-11-12"
+        },
+        "preprint": {
+          "url": "https://arxiv.org/abs/2604.02523",
+          "kind": "arxiv",
+          "scope": "paper_specific",
+          "verified_on": "2026-11-12"
+        },
+        "paper_pdf": null,
+        "project": {
+          "url": "https://younghyopark.me/tune-to-learn/",
+          "kind": "author_project",
+          "scope": "project_landing",
+          "verified_on": "2026-11-12"
+        },
+        "code": null
+      },
+      "admission_reason": "접촉 VLA RL의 이득을 baseline gain 튜닝과 분리해야 함을 보이는 직접 선행이다.",
+      "verification_boundary": "RSS의 Shape 제목을 사용하고 저자 페이지의 Affect 제목은 alias로 연결한다. Workshop award를 RSS 수상으로 기록하지 않는다.",
+      "content_evidence": "ABSTRACT_CHECKED"
+    },
+    {
+      "paper_id": "pr-1198",
+      "title": "Offline Policy Evaluation for Manipulation Policies via Discounted Liveness Formulation",
+      "overview_path": "2026/RSS/2026_RSS_Offline-Policy-Evaluation-for-Manipulation-Policies-via-Di/01_overview.md",
+      "tier": "NEXT",
+      "cohort": "recent_2024_2026",
+      "publication": {
+        "status": "peer_reviewed",
+        "kind": "conference",
+        "venue": "RSS",
+        "year": 2026,
+        "venue_year": 2026,
+        "presentation": "unknown",
+        "venue_id": "rss"
+      },
+      "sources": {
+        "primary": {
+          "url": "https://www.roboticsproceedings.org/rss22/p154.html",
+          "kind": "official_publication",
+          "scope": "paper_specific",
+          "verified_on": "2026-11-12"
+        },
+        "preprint": {
+          "url": "https://arxiv.org/abs/2605.11479",
+          "kind": "arxiv",
+          "scope": "paper_specific",
+          "verified_on": "2026-11-12"
+        },
+        "paper_pdf": null,
+        "project": null,
+        "code": null
+      },
+      "admission_reason": "실험 rollout 종료와 실제 실패를 구별하고 가치 진단의 target을 정할 최신 기준이다.",
+      "verification_boundary": "RSS official abstract의 두 simulation 과제를 기록한다. arXiv 초록의 추가 cloth demonstration은 venue 본문에서 동일성을 확인하기 전 평가 범위에 합치지 않았다.",
+      "content_evidence": "ABSTRACT_CHECKED"
+    },
+    {
+      "paper_id": "pr-1199",
+      "title": "AC2-VLA: Action-Context-Aware Adaptive Computation in Vision-Language-Action Models for Efficient Robotic Manipulation",
+      "overview_path": "2026/IJCAI/2026_IJCAI_AC2-VLA-Action-Context-Aware-Adaptive-Computation-in-Visio/01_overview.md",
+      "tier": "NEXT",
+      "cohort": "recent_2024_2026",
+      "publication": {
+        "status": "peer_reviewed",
+        "kind": "conference",
+        "venue": "IJCAI",
+        "year": 2026,
+        "venue_year": 2026,
+        "presentation": "unknown",
+        "venue_id": "ijcai"
+      },
+      "sources": {
+        "primary": {
+          "url": "https://ijcai.org/proceedings/2026/228",
+          "kind": "official_publication",
+          "scope": "paper_specific",
+          "verified_on": "2026-11-12"
+        },
+        "preprint": {
+          "url": "https://arxiv.org/abs/2601.19634",
+          "kind": "arxiv",
+          "scope": "paper_specific",
+          "verified_on": "2026-11-12"
+        },
+        "paper_pdf": null,
+        "project": {
+          "url": "https://github.com/SunnyYWD/AC-2-VLA",
+          "kind": "author_project",
+          "scope": "project_landing",
+          "verified_on": "2026-11-12"
+        },
+        "code": {
+          "url": "https://github.com/SunnyYWD/AC-2-VLA",
+          "kind": "official_code",
+          "scope": "paper_specific",
+          "verified_on": "2026-11-12"
+        }
+      },
+      "admission_reason": "RL 기반 시간 적응과 비교할 학습된 계산 절감 baseline이며 지연·feedback·성능의 비용 분리를 돕는다.",
+      "verification_boundary": "공식 초록과 metadata 수준의 정리다. 구체적 실험 조건·수치·본문 한계는 추가 확인이 필요하다.",
+      "content_evidence": "ABSTRACT_CHECKED"
+    },
+    {
+      "paper_id": "pr-1200",
+      "title": "WCM: A World Critic Model for Vision-Language-Action Reinforcement Learning",
+      "overview_path": "2026/arXiv/2026_arXiv_WCM-A-World-Critic-Model-for-Vision-Language-Action-Reinfo/01_overview.md",
+      "tier": "NEXT",
+      "cohort": "recent_2024_2026",
+      "publication": {
+        "status": "preprint",
+        "kind": "preprint",
+        "venue": "arXiv",
+        "year": 2026,
+        "venue_year": 2026,
+        "presentation": "unknown",
+        "venue_id": "arxiv"
+      },
+      "sources": {
+        "primary": {
+          "url": "https://arxiv.org/abs/2607.29613",
+          "kind": "arxiv",
+          "scope": "paper_specific",
+          "verified_on": "2026-11-12"
+        },
+        "preprint": {
+          "url": "https://arxiv.org/abs/2607.29613",
+          "kind": "arxiv",
+          "scope": "paper_specific",
+          "verified_on": "2026-11-12"
+        },
+        "paper_pdf": null,
+        "project": {
+          "url": "https://github.com/sylvestf/WCM",
+          "kind": "author_project",
+          "scope": "project_landing",
+          "verified_on": "2026-11-12"
+        },
+        "code": {
+          "url": "https://github.com/sylvestf/WCM",
+          "kind": "official_code",
+          "scope": "paper_specific",
+          "verified_on": "2026-11-12"
+        }
+      },
+      "admission_reason": "공유 표현·가치 공동 학습 후보의 직접 경쟁 선행이므로 단순 world-model 보조 loss를 신규 기여로 재제안하지 않게 한다.",
+      "verification_boundary": "arXiv v1와 공식 repository의 configs/scripts/world_critic 존재 확인. 학회 acceptance 및 실제 구현 재현은 확인하지 않았다.",
+      "content_evidence": "ABSTRACT_CHECKED"
+    },
+    {
+      "paper_id": "pr-1201",
+      "title": "Reinforcement Learning for Real-Time Vision-Language-Action Policies",
+      "overview_path": "2026/arXiv/2026_arXiv_Reinforcement-Learning-for-Real-Time-Vision-Language-Actio/01_overview.md",
+      "tier": "NEXT",
+      "cohort": "recent_2024_2026",
+      "publication": {
+        "status": "preprint",
+        "kind": "preprint",
+        "venue": "arXiv",
+        "year": 2026,
+        "venue_year": 2026,
+        "presentation": "unknown",
+        "venue_id": "arxiv"
+      },
+      "sources": {
+        "primary": {
+          "url": "https://arxiv.org/abs/2609.18207",
+          "kind": "arxiv",
+          "scope": "paper_specific",
+          "verified_on": "2026-11-12"
+        },
+        "preprint": {
+          "url": "https://arxiv.org/abs/2609.18207",
+          "kind": "arxiv",
+          "scope": "paper_specific",
+          "verified_on": "2026-11-12"
+        },
+        "paper_pdf": null,
+        "project": {
+          "url": "https://pd-perry.github.io/real-time-expo-ft/",
+          "kind": "author_project",
+          "scope": "project_landing",
+          "verified_on": "2026-11-12"
+        },
+        "code": {
+          "url": "https://github.com/pd-perry/expo-ft",
+          "kind": "official_code",
+          "scope": "paper_specific",
+          "verified_on": "2026-11-12"
+        }
+      },
+      "admission_reason": "지연·feedback 공백의 직접 선행이자 단일 정책 선호와 별도로 보존할 강한 editor pipeline baseline이다.",
+      "verification_boundary": "arXiv v1와 저자 project/code에서 EXPO-FT 원 방법과 real-time branch의 구분 확인. 공식 conference acceptance는 확인하지 않았다.",
+      "content_evidence": "ABSTRACT_CHECKED"
+    },
+    {
+      "paper_id": "pr-1202",
+      "title": "RoboAlign: Learning Test-Time Reasoning for Language-Action Alignment in Vision-Language-Action Models",
+      "overview_path": "2026/arXiv/2026_arXiv_RoboAlign-Learning-Test-Time-Reasoning-for-Language-Action/01_overview.md",
+      "tier": "NEXT",
+      "cohort": "recent_2024_2026",
+      "publication": {
+        "status": "preprint",
+        "kind": "preprint",
+        "venue": "arXiv",
+        "year": 2026,
+        "venue_year": 2026,
+        "presentation": "unknown",
+        "venue_id": "arxiv"
+      },
+      "sources": {
+        "primary": {
+          "url": "https://arxiv.org/abs/2603.21341",
+          "kind": "arxiv",
+          "scope": "paper_specific",
+          "verified_on": "2026-11-12"
+        },
+        "preprint": {
+          "url": "https://arxiv.org/abs/2603.21341",
+          "kind": "arxiv",
+          "scope": "paper_specific",
+          "verified_on": "2026-11-12"
+        },
+        "paper_pdf": null,
+        "project": null,
+        "code": null
+      },
+      "admission_reason": "VLM의 RL 정렬과 배포 VLA의 직접 RL 갱신을 구분할 선행으로 단일 정책 연구의 기여 경계를 보완한다.",
+      "verification_boundary": "arXiv v1의 정확한 제목 사용. 저자 페이지의 이전 제목은 alias로 보존한다. 검색 색인의 ICLR 2026 표기는 공식 acceptance로 확인하지 못해 arXiv로 등록한다. RoboAlign-R1 world-model 논문과 다르다.",
+      "content_evidence": "ABSTRACT_CHECKED"
+    },
+    {
+      "paper_id": "pr-1203",
+      "title": "STARE-VLA: Progressive Stage-Aware Reinforcement for Fine-Tuning Vision-Language-Action Models",
+      "overview_path": "2025/arXiv/2025_arXiv_STARE-VLA-Progressive-Stage-Aware-Reinforcement-for-Fine-T/01_overview.md",
+      "tier": "NEXT",
+      "cohort": "recent_2024_2026",
+      "publication": {
+        "status": "preprint",
+        "kind": "preprint",
+        "venue": "arXiv",
+        "year": 2025,
+        "venue_year": 2025,
+        "presentation": "unknown",
+        "venue_id": "arxiv"
+      },
+      "sources": {
+        "primary": {
+          "url": "https://arxiv.org/abs/2512.05107",
+          "kind": "arxiv",
+          "scope": "paper_specific",
+          "verified_on": "2026-11-12"
+        },
+        "preprint": {
+          "url": "https://arxiv.org/abs/2512.05107",
+          "kind": "arxiv",
+          "scope": "paper_specific",
+          "verified_on": "2026-11-12"
+        },
+        "paper_pdf": null,
+        "project": {
+          "url": "https://sites.google.com/view/stare-vla",
+          "kind": "author_project",
+          "scope": "project_landing",
+          "verified_on": "2026-11-12"
+        },
+        "code": null
+      },
+      "admission_reason": "단계별 credit·보상 shaping 자체가 기존 방법임을 반영하고 원 보상 보존·추가 supervision을 비교하는 직접 선행이다.",
+      "verification_boundary": "arXiv v2 및 저자 project 확인. 검색 색인의 ICLR 표기는 공식 proceedings/forum으로 확인하지 못해 arXiv 2025로 유지한다. 공개 구현 URL은 식별하지 못했다.",
+      "content_evidence": "ABSTRACT_CHECKED"
+    }
+  ],
+  "deduplication": {
+    "checks": [
+      "exact and distinctive title",
+      "normalized title",
+      "DOI/arXiv/OpenReview identity",
+      "existing paper folder"
+    ],
+    "existing_not_readmitted": [
+      "pr-0918",
+      "pr-1157",
+      "pr-0705",
+      "pr-1075",
+      "pr-1128",
+      "pr-1021",
+      "pr-0978",
+      "pr-0953",
+      "pr-1129",
+      "pr-0969"
+    ],
+    "version_cautions": [
+      "CauVA RSS title and LingBot-VA arXiv 2601.21998 mapping unresolved; no arXiv ID copied",
+      "AAAI 2025 short survey and Annual Review full survey not registered separately",
+      "AWAC/RoboAlign/STARE-VLA venue claims not officially verified; retained as arXiv",
+      "Tune to Learn Shape/Affect title variants treated as one work"
+    ]
+  },
+  "counts": {
+    "before": 1179,
+    "added": 24,
+    "after": 1203,
+    "recent_added": 12,
+    "foundation_prerequisites_added": 12,
+    "standard_notes_added": 120,
+    "verified_publications_added": 18,
+    "preprints_added": 6,
+    "tier_additions": {
+      "CORE": 3,
+      "NEXT": 16,
+      "REFERENCE": 5
+    },
+    "tier_after": {
+      "CORE": 50,
+      "NEXT": 402,
+      "REFERENCE": 509,
+      "ARCHIVE": 242
+    }
+  },
+  "preservation": {
+    "status": "passed",
+    "existing_paper_records_unchanged": 1179,
+    "existing_standard_notes_unchanged": 5895,
+    "existing_tiers_unchanged": 1179,
+    "user_reading_input_rows_preserved": 480,
+    "new_active_unread": 19,
+    "runtime_files_byte_identical": 236,
+    "staged_patch_byte_identical": true,
+    "preexisting_files_deleted": 0,
+    "changed_preexisting_files": [
+      "TODO.md",
+      "README.md",
+      "PAPER.md",
+      "AGENTS.md",
+      "research/REGISTRY_INDEX.csv",
+      "research/README.md",
+      "research/REGISTRY_STATS.md",
+      "research/READING_STATUS.csv",
+      "research/READING_TIERS.csv",
+      "research/READING_PLAN.md",
+      "synthesis/04_vla_generalist.md",
+      "synthesis/05_world_models_safety.md",
+      "synthesis/README.md",
+      "synthesis/02_rl_il_offline.md",
+      "synthesis/03_manipulation_contact.md",
+      "work/README.md",
+      "work/update/README.md",
+      "work/scripts/build_reading_tiers.py",
+      "work/sources/papers.json",
+      "work/sources/benchmark_catalog.json",
+      "work/sources/registry_meta.json",
+      "work/sources/resources.json"
+    ]
+  },
+  "validation": {
+    "status": "passed",
+    "registration_dry_run_and_apply": "24 additions; no identity collision",
+    "tier_generator_compile": "passed",
+    "tier_generator_rebuild": "passed",
+    "priority_reconcile_dry_run_after_apply": {
+      "papers_changed": 0,
+      "note_headers_changed": 0,
+      "reading_status_changed": false,
+      "source_evidence_changed": false
+    },
+    "catalogs": {
+      "benchmark_entries": 56,
+      "metric_entries": 29,
+      "benchmark_references": 943,
+      "metric_references": 1876,
+      "evidence": "cue_only"
+    },
+    "registry_views": {
+      "papers": 1203,
+      "resources": 655,
+      "relations": 50
+    },
+    "reading_history_tests": {
+      "passed": 6,
+      "failed": 0
+    },
+    "git_diff_check": "passed",
+    "git_cached_diff_check": "passed",
+    "corrected_during_audit": {
+      "new_note_evidence_header_format": 96,
+      "details": "Replaced Evidence with parser-compatible Evidence maturity; ABSTRACT_CHECKED unchanged."
+    },
+    "repository_audit": {
+      "papers": 1203,
+      "categories": 23,
+      "intensive": 452,
+      "inactive_reading_history": 47,
+      "standard_note_files": 6015,
+      "markdown_files_checked": 6241,
+      "markdown_links_checked": 13440,
+      "comparison_matrix_rows": 106,
+      "completed_matrix_rows": 5,
+      "errors": 0,
+      "warnings": 0
+    },
+    "new_repository_files": 123,
+    "temporary_task_files_removed": true
+  },
+  "research_state": "No native experiments, new topic verdicts, reading-status promotion, PDF download, dependency installation, commit or push."
+}

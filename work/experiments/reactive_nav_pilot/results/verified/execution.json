@@ -1,0 +1,14 @@
+{
+  "status": "COMPLETED",
+  "prefixes": 192,
+  "branch_episodes": 384,
+  "pre_event_failures": 0,
+  "calibration_episodes": 24,
+  "development_episodes": 12,
+  "test_scene_instances": 12,
+  "total_branch_ticks": 40570,
+  "actual_unique_test_ticks": 32890,
+  "platform": "Linux-6.10.14-linuxkit-aarch64-with-glibc2.36",
+  "python": "3.11.14 (main, Feb 24 2026, 19:56:57) [GCC 12.2.0]",
+  "adapter_unchanged": true
+}

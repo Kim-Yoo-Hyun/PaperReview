@@ -17,6 +17,8 @@
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (19 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
+> DOC-QA2 targeted source review: 2026-10-23; PDF pp. 7. 손상 구간·직접 연결된 표 분류만 원문 이미지와 대조했다. 전체 주장 정독·실험 검증·reading status 승격을 뜻하지 않는다. [URL·PDF hash·수정 기록](../../../work/sources/pdf_note_review_followup_2026-10-23.json).
+
 ## Why This Paper Is Here
 
 VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다. 본문은 However, previous trajectory-level diffusion models for robotic manipulation have two key limitations.를 문제로 두고, In summary, our contributions are mainly as followed: • We propose ET-SEED, an efficient trajectory-level SE(3) equivariant diffusion policy defined on SE(3) manifold, which achieves a proficient and generalizable manipulation policy wi ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
@@ -40,7 +42,7 @@ VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다
 - **p. 5 / 4 METHOD - extractive body cue:** This key design choice significantly reduces the training complexity, thereby enhancing the overall performance of our method.
 - **p. 7 / 4 METHOD - extractive body cue:** In each denoising step, the input of our denoising network sθ consists of observation O, noisy action sequence Ak, and scalar condition k, outputs the ...
 - **p. 4 / 4 METHOD - extractive body cue:** 2 is a general example to show how it works, given an observation and a noisy action sequence, our model first implement K -1 invariant ...
-- **p. 7 / 4 METHOD - extractive body cue:** Formally, sθ is defined as sθ(O, Ak; k) =  Einv(O, Ak; k), k > 1 Eequiv(O, Ak; k), k = 1 (9) As illustrated ...
+- **PDF p. 7, §4 / Eq. (9) (DOC-QA2 원문 대조):** Denoising network는 k>1에서 SE(3)-invariant backbone E_inv, 마지막 k=1에서 SE(3)-equivariant backbone E_equiv를 사용한다. 이는 diffusion iteration별 backbone 선택이다.
 
 ## Observation, State, and Output Interface
 

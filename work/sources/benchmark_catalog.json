@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_on": "2026-10-22",
+  "generated_on": "2026-11-16",
   "catalog_type": "benchmark",
   "evidence_policy": "Generated references are cue_only. Do not treat a token match as verified evaluation evidence; consult the paper's 04_evaluation.md and source location.",
   "entries": [
@@ -2059,6 +2059,11 @@
           "paper_id": "pr-0965",
           "source": "2026/ICRA/2026_ICRA_StreamVLN-Streaming-Vision-and-Language-Navigation-via-Slo/04_evaluation.md",
           "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-1160",
+          "source": "2026/RA-L/2026_RA-L_PROSPECT-Unified-Streaming-Vision-Language-Navigation-via/04_evaluation.md",
+          "evidence": "cue_only"
         }
       ],
       "reference_basis": "04_evaluation.md token cue; dataset/metric role, split, aggregation, and primary-vs-auxiliary status remain paper-specific.",
@@ -2355,6 +2360,16 @@
         {
           "paper_id": "pr-0998",
           "source": "2025/arXiv/2025_arXiv_HiMoE-VLA-Hierarchical-Mixture-of-Experts-for-Generalist-V/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-1174",
+          "source": "2026/arXiv/2026_arXiv_TEMPO-Semantic-Action-Decoupled-RL-Post-Training-for-Visio/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-1202",
+          "source": "2026/arXiv/2026_arXiv_RoboAlign-Learning-Test-Time-Reasoning-for-Language-Action/04_evaluation.md",
           "evidence": "cue_only"
         }
       ],
@@ -2757,10 +2772,151 @@
           "paper_id": "pr-1035",
           "source": "2026/arXiv/2026_arXiv_ExecVLA-Following-Fine-Grained-Execution-Constraints-in-Vi/04_evaluation.md",
           "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-1043",
+          "source": "2025/CoRL/2025_CoRL_Mechanistic-Interpretability-for-Steering-Vision-Language/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-1048",
+          "source": "2026/ICML/2026_ICML_Scaling-Robot-Policy-Evaluation-via-Discrete-Diffusion-Wor/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-1054",
+          "source": "2025/arXiv/2025_arXiv_LIBERO-PRO-Towards-Robust-and-Fair-Evaluation-of-Vision-La/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-1075",
+          "source": "2026/RSS/2026_RSS_ReSteer-Quantifying-and-Refining-the-Steerability-of-Multi/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-1076",
+          "source": "2026/arXiv/2026_arXiv_Causeway-Restoring-Task-Accessibility-for-Instruction-Swit/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-1083",
+          "source": "2026/RSS/2026_RSS_LIBERO-X-Robustness-Litmus-for-Vision-Language-Action-Mode/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-1091",
+          "source": "2026/ICLR/2026_ICLR_Self-Improving-Vision-Language-Action-Models-with-Data-Gen/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-1094",
+          "source": "2026/CoRL/2026_CoRL_EXPO-FT-Sample-Efficient-Reinforcement-Learning-Finetuning/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-1098",
+          "source": "2026/ICML/2026_ICML_From-Prior-to-Pro-Efficient-Skill-Mastery-via-Distribution/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-1099",
+          "source": "2026/NeurIPS/2026_NeurIPS_Beyond-Appearance-Shifts-Task-Semantic-Action-Calibration/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-1107",
+          "source": "2026/ICML/2026_ICML_RA-VLA-Retrieval-Augmented-VLA-for-Test-Time-Adaptation/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-1108",
+          "source": "2026/arXiv/2026_arXiv_When-Does-Retrieval-Help-A-Study-of-In-Context-Adaptation/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-1109",
+          "source": "2026/arXiv/2026_arXiv_Beyond-Reconstruction-What-Matters-in-Action-Tokenization/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-1113",
+          "source": "2026/arXiv/2026_arXiv_Learning-from-Hindsight-for-VLA-Reinforcement-Learning/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-1121",
+          "source": "2026/RSS/2026_RSS_Towards-Long-Lived-Robots-Continual-Learning-VLA-Models-vi/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-1133",
+          "source": "2026/CVPR/2026_CVPR_SRPO-Self-Referential-Policy-Optimization-for-Vision-Langu/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-1152",
+          "source": "2026/CVPR/2026_CVPR_MM-ACT-Learn-from-Multimodal-Parallel-Generation-to-Act/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-1153",
+          "source": "2026/ECCV/2026_ECCV_ContextFlow-In-Context-Flow-Matching-for-Robot-Manipulatio/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-1155",
+          "source": "2026/ECCV/2026_ECCV_Restoring-Linguistic-Grounding-in-VLA-Models-via-Train-Fre/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-1175",
+          "source": "2026/arXiv/2026_arXiv_When-Vision-Overrides-Language-Evaluating-and-Mitigating-C/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-1176",
+          "source": "2026/ECCV/2026_ECCV_Trajectory-Level-Continuous-Action-Representation-for-Robo/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-1177",
+          "source": "2026/arXiv/2026_arXiv_Same-Path-Less-Time-Training-Free-Fast-Execution-of-Vision/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-1178",
+          "source": "2026/arXiv/2026_arXiv_ActMem-VLA-Action-History-Memory-with-Dual-Expert-Denoisin/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-1202",
+          "source": "2026/arXiv/2026_arXiv_RoboAlign-Learning-Test-Time-Reasoning-for-Language-Action/04_evaluation.md",
+          "evidence": "cue_only"
         }
       ],
       "reference_basis": "04_evaluation.md token cue; dataset/metric role, split, aggregation, and primary-vs-auxiliary status remain paper-specific.",
       "family": "robot manipulation"
+    },
+    {
+      "benchmark_id": "benchmark:libero-x",
+      "name": "LIBERO-X",
+      "aliases": [
+        "LIBERO-X"
+      ],
+      "paper_references": [
+        {
+          "paper_id": "pr-0042",
+          "source": "2023/NeurIPS/2023_NeurIPS_Benchmarking-Knowledge-Transfer-for-Lifelong-Robot-Learnin/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-1083",
+          "source": "2026/RSS/2026_RSS_LIBERO-X-Robustness-Litmus-for-Vision-Language-Action-Mode/04_evaluation.md",
+          "evidence": "cue_only"
+        }
+      ],
+      "reference_basis": "04_evaluation.md token cue; dataset/metric role, split, aggregation, and primary-vs-auxiliary status remain paper-specific.",
+      "family": "VLA multi-dimensional robustness"
     },
     {
       "benchmark_id": "benchmark:libero-safety",
@@ -2793,6 +2949,16 @@
         {
           "paper_id": "pr-0952",
           "source": "2025/ICML/2025_ICML_Flow-Q-Learning/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-1144",
+          "source": "2026/ICLR/2026_ICLR_DEAS-DEtached-value-learning-with-Action-Sequence-for-Scal/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-1145",
+          "source": "2026/ICLR/2026_ICLR_Dichotomous-Diffusion-Policy-Optimization/04_evaluation.md",
           "evidence": "cue_only"
         }
       ],
@@ -2844,6 +3010,16 @@
         {
           "paper_id": "pr-0952",
           "source": "2025/ICML/2025_ICML_Flow-Q-Learning/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-1096",
+          "source": "2026/RA-L/2026_RA-L_Accelerating-Residual-Reinforcement-Learning-With-Uncertai/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-1125",
+          "source": "2026/RSS/2026_RSS_When-Life-Gives-You-BC-Make-Q-functions-Extracting-Q-value/04_evaluation.md",
           "evidence": "cue_only"
         }
       ],
@@ -3069,6 +3245,16 @@
           "paper_id": "pr-0938",
           "source": "2025/ICLR/2025_ICLR_Latent-Action-Pretraining-from-Videos/04_evaluation.md",
           "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-1039",
+          "source": "2026/ICLR/2026_ICLR_DataMIL-Selecting-Data-for-Robot-Imitation-Learning-with-D/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-1059",
+          "source": "2025/CoRL/2025_CoRL_ReMix-Optimizing-Data-Mixtures-for-Large-Scale-Imitation-L/04_evaluation.md",
+          "evidence": "cue_only"
         }
       ],
       "reference_basis": "04_evaluation.md token cue; dataset/metric role, split, aggregation, and primary-vs-auxiliary status remain paper-specific.",
@@ -3119,6 +3305,21 @@
         {
           "paper_id": "pr-0930",
           "source": "2024/RSS/2024_RSS_Consistency-Policy-Accelerated-Visuomotor-Policies-via-Con/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-1098",
+          "source": "2026/ICML/2026_ICML_From-Prior-to-Pro-Efficient-Skill-Mastery-via-Distribution/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-1109",
+          "source": "2026/arXiv/2026_arXiv_Beyond-Reconstruction-What-Matters-in-Action-Tokenization/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-1125",
+          "source": "2026/RSS/2026_RSS_When-Life-Gives-You-BC-Make-Q-functions-Extracting-Q-value/04_evaluation.md",
           "evidence": "cue_only"
         }
       ],
@@ -3196,6 +3397,11 @@
         {
           "paper_id": "pr-0958",
           "source": "2026/RSS/2026_RSS_RLux-VLA-A-Unified-and-Efficient-Framework-for-Reinforceme/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-1095",
+          "source": "2025/ICLR/2025_ICLR_Policy-Decorator-Model-Agnostic-Online-Refinement-for-Larg/04_evaluation.md",
           "evidence": "cue_only"
         }
       ],
@@ -3282,6 +3488,11 @@
         {
           "paper_id": "pr-0977",
           "source": "2026/RSS/2026_RSS_DISC-Decoupling-Instruction-from-State-Conditioned-Control/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-1139",
+          "source": "2025/ICCV/2025_ICCV_EC-Flow-Enabling-Versatile-Robotic-Manipulation-from-Actio/04_evaluation.md",
           "evidence": "cue_only"
         }
       ],
@@ -4003,6 +4214,21 @@
           "paper_id": "pr-0988",
           "source": "2026/Unverified/2026_Unverified_DialogVLA-Bridging-Reasoning-Action-in-Bimanual-Manipulati/04_evaluation.md",
           "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-1048",
+          "source": "2026/ICML/2026_ICML_Scaling-Robot-Policy-Evaluation-via-Discrete-Diffusion-Wor/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-1105",
+          "source": "2026/arXiv/2026_arXiv_Cooperative-Multi-Agent-Vision-Language-Action-Models-via/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-1109",
+          "source": "2026/arXiv/2026_arXiv_Beyond-Reconstruction-What-Matters-in-Action-Tokenization/04_evaluation.md",
+          "evidence": "cue_only"
         }
       ],
       "reference_basis": "04_evaluation.md token cue; dataset/metric role, split, aggregation, and primary-vs-auxiliary status remain paper-specific.",
@@ -4107,7 +4333,7 @@
         },
         {
           "paper_id": "pr-0703",
-          "source": "2025/arXiv/2025_arXiv_FlowDreamer-A-RGB-D-World-Model-with-Flow-based-Motion-Rep/04_evaluation.md",
+          "source": "2026/RA-L/2026_RA-L_FlowDreamer-A-RGB-D-World-Model-With-Flow-Based-Motion-Rep/04_evaluation.md",
           "evidence": "cue_only"
         },
         {
@@ -4124,10 +4350,41 @@
           "paper_id": "pr-0880",
           "source": "2025/RSS/2025_RSS_SpatialVLA-Exploring-Spatial-Representations-for-Visual-La/04_evaluation.md",
           "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-1091",
+          "source": "2026/ICLR/2026_ICLR_Self-Improving-Vision-Language-Action-Models-with-Data-Gen/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-1121",
+          "source": "2026/RSS/2026_RSS_Towards-Long-Lived-Robots-Continual-Learning-VLA-Models-vi/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-1203",
+          "source": "2025/arXiv/2025_arXiv_STARE-VLA-Progressive-Stage-Aware-Reinforcement-for-Fine-T/04_evaluation.md",
+          "evidence": "cue_only"
         }
       ],
       "reference_basis": "04_evaluation.md token cue; dataset/metric role, split, aggregation, and primary-vs-auxiliary status remain paper-specific.",
       "family": "robot manipulation / simulation"
+    },
+    {
+      "benchmark_id": "benchmark:simpler-in",
+      "name": "SIMPLER-IN",
+      "aliases": [
+        "SIMPLER-IN"
+      ],
+      "paper_references": [
+        {
+          "paper_id": "pr-1077",
+          "source": "2026/arXiv/2026_arXiv_Do-VLAs-Really-Follow-Instructions-Diagnosing-How-Level-In/04_evaluation.md",
+          "evidence": "cue_only"
+        }
+      ],
+      "reference_basis": "04_evaluation.md token cue; dataset/metric role, split, aggregation, and primary-vs-auxiliary status remain paper-specific.",
+      "family": "VLA instruction-following evaluation"
     },
     {
       "benchmark_id": "benchmark:robocasa",
@@ -4194,6 +4451,16 @@
         {
           "paper_id": "pr-0988",
           "source": "2026/Unverified/2026_Unverified_DialogVLA-Bridging-Reasoning-Action-in-Bimanual-Manipulati/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-1073",
+          "source": "2025/CoRL/2025_CoRL_Mobi-pi-Mobilizing-Your-Robot-Learning-Policy/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-1144",
+          "source": "2026/ICLR/2026_ICLR_DEAS-DEtached-value-learning-with-Action-Sequence-for-Scal/04_evaluation.md",
           "evidence": "cue_only"
         }
       ],
@@ -4264,6 +4531,22 @@
       "family": "embodied household tasks"
     },
     {
+      "benchmark_id": "benchmark:behavior-skill",
+      "name": "Behavior-Skill",
+      "aliases": [
+        "Behavior-Skill"
+      ],
+      "paper_references": [
+        {
+          "paper_id": "pr-1074",
+          "source": "2026/arXiv/2026_arXiv_Behavior-Skill-A-Fine-Grained-Benchmark-for-Evaluating-Vis/04_evaluation.md",
+          "evidence": "cue_only"
+        }
+      ],
+      "reference_basis": "04_evaluation.md token cue; dataset/metric role, split, aggregation, and primary-vs-auxiliary status remain paper-specific.",
+      "family": "VLA skill evaluation"
+    },
+    {
       "benchmark_id": "benchmark:vlabench",
       "name": "VLABench",
       "aliases": [
@@ -4284,10 +4567,48 @@
           "paper_id": "pr-0804",
           "source": "2026/CVPR/2026_CVPR_ACoT-VLA-Action-Chain-of-Thought-for-Vision-Language-Actio/04_evaluation.md",
           "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-1079",
+          "source": "2026/arXiv/2026_arXiv_Spa-Bench-A-Real-Robot-Benchmark-for-Spatial-Grounding-in/04_evaluation.md",
+          "evidence": "cue_only"
         }
       ],
       "reference_basis": "04_evaluation.md token cue; dataset/metric role, split, aggregation, and primary-vs-auxiliary status remain paper-specific.",
       "family": "VLA evaluation"
+    },
+    {
+      "benchmark_id": "benchmark:clevrskills",
+      "name": "ClevrSkills",
+      "aliases": [
+        "ClevrSkills"
+      ],
+      "paper_references": [
+        {
+          "paper_id": "pr-1078",
+          "source": "2024/NeurIPS/2024_NeurIPS_ClevrSkills-Compositional-Language-And-Visual-Reasoning-in/04_evaluation.md",
+          "evidence": "cue_only"
+        }
+      ],
+      "reference_basis": "04_evaluation.md token cue; dataset/metric role, split, aggregation, and primary-vs-auxiliary status remain paper-specific.",
+      "family": "compositional robot manipulation"
+    },
+    {
+      "benchmark_id": "benchmark:spa-bench-robotics",
+      "name": "Spa-Bench (robotics)",
+      "aliases": [
+        "Spa-Bench (robotics)",
+        "Spa-Bench: A Real-Robot Benchmark"
+      ],
+      "paper_references": [
+        {
+          "paper_id": "pr-1079",
+          "source": "2026/arXiv/2026_arXiv_Spa-Bench-A-Real-Robot-Benchmark-for-Spatial-Grounding-in/04_evaluation.md",
+          "evidence": "cue_only"
+        }
+      ],
+      "reference_basis": "04_evaluation.md token cue; dataset/metric role, split, aggregation, and primary-vs-auxiliary status remain paper-specific.",
+      "family": "VLA spatial grounding / counting"
     },
     {
       "benchmark_id": "benchmark:vla-arena",
@@ -4470,6 +4791,26 @@
         {
           "paper_id": "pr-0974",
           "source": "2026/ECCV/2026_ECCV_Persistent-Robot-World-Models-Stabilizing-Multi-Step-Rollo/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-1038",
+          "source": "2025/ICLR/2025_ICLR_What-Matters-in-Learning-from-Large-Scale-Datasets-for-Rob/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-1056",
+          "source": "2025/CoRL/2025_CoRL_RoboArena-Distributed-Real-World-Evaluation-of-Generalist/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-1094",
+          "source": "2026/CoRL/2026_CoRL_EXPO-FT-Sample-Efficient-Reinforcement-Learning-Finetuning/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-1120",
+          "source": "2026/RSS/2026_RSS_Visual-Verification-Enables-Inference-time-Steering-and-Au/04_evaluation.md",
           "evidence": "cue_only"
         }
       ],

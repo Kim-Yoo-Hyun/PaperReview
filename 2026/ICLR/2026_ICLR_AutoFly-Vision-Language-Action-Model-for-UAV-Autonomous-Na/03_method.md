@@ -4,6 +4,8 @@
 > Evidence maturity: `FULL_TEXT_CHECKED`.
 > Analysis basis: full-text PDF body checked on 2026-09-03 (24 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=88RKxlFUNY; public full-text mirror used for retrieval (canonical paper source retained): https://chatpaper.com/api/v1/articles/download/247860. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
+> DOC-QA2 targeted source review: 2026-10-23; PDF pp. 17. 손상 구간·직접 연결된 표 분류만 원문 이미지와 대조했다. 전체 주장 정독·실험 검증·reading status 승격을 뜻하지 않는다. [URL·PDF hash·수정 기록](../../../work/sources/pdf_note_review_followup_2026-10-23.json).
+
 ## Method in One Sentence
 
 PDF body method statement (p. 4 (3 METHOD), p. 20 (A.3.4 ANALYSIS OF SIMPLER ALTERNATIVE APPROACHES), p. 4 (3 METHOD), p. 20 (A.3.4 ANALYSIS OF SIMPLER ALTERNATIVE APPROACHES), p. 17 (A.2.3 DATA COLLECTION ALGORITHM BASED ON RL), p. 17 (A.2.3 DATA COLLECTION ALGORITHM BASED ON RL)): 3.1 TASK FORMULATION We formulate autonomous navigation as learning a control policy π that takes the current RGB observation ot ∈O, language instruction L, and coarse positional or directional guidance ...
@@ -49,7 +51,7 @@ PDF body method statement (p. 4 (3 METHOD), p. 20 (A.3.4 ANALYSIS OF SIMPLER ALT
 ## Objective / Update Rule
 
 - **p. 17 / A.2.3 DATA COLLECTION ALGORITHM BASED ON RL - extractive body cue:** When d = 0 (episode continues), the target includes both the immediate reward r and the discounted estimate of future returns.
-- **p. 17 / A.2.3 DATA COLLECTION ALGORITHM BASED ON RL - extractive body cue:** The specific supervision process for the actor network is as follows: Lπ(ϕ) = Es∼D  α log πϕ(a/s) -min i=1,2 Qθ(s, a)  , (7) ...
+- **PDF p. 17, §A.2.3 / Eq. (7) (DOC-QA2 원문 대조):** 데이터 수집용 stochastic actor는 entropy 항 α log πϕ(a given s)에서 두 critic 중 작은 Q 값을 뺀 expectation을 최소화한다. 이는 AutoFly 출력 action의 정의가 아니다.
 - **p. 4 / 3 METHOD - extractive body cue:** The goal is to derive an optimal policy π∗: (O, L) →A that generates a collision-free planning trajectory τ respecting UAV kinodynamic constraints, ultimately reaching ...
 - **p. 21 / A.4.1 BASELINE CONSTRUCTION DETAILS - extractive body cue:** Given the constraints of our UAV navigation domain, we adapt baseline architectures while preserving their core methodological contributions: • RT-1 (Brohan et al., 2022): We ...
 - **p. 22 / A.5.4 PARALLEL INFERENCE ARCHITECTURE - extractive body cue:** To minimize end-to-end latency, we implement a pipelined multi-process inference system that overlaps visual processing with LLM computation, as shown in Figure 14.
@@ -70,7 +72,7 @@ PDF body method statement (p. 4 (3 METHOD), p. 20 (A.3.4 ANALYSIS OF SIMPLER ALT
 ## Observation–State–Action Interface
 
 - **p. 4 / 3 METHOD - extractive body cue:** 3.1 TASK FORMULATION We formulate autonomous navigation as learning a control policy π that takes the current RGB observation ot ∈O, language instruction L, and ...
-- **p. 17 / A.2.3 DATA COLLECTION ALGORITHM BASED ON RL - extractive body cue:** For a stochastic policy, the target value y is calculated as: y = r + γ(1 -d)  min i=1,2 Qθ′ i(s′, a′) -α log ...
+- **PDF p. 17, §A.2.3 / Eq. (6) (DOC-QA2 원문 대조):** 데이터 수집용 critic target은 즉시 reward에 종료 여부로 마스킹된 discounted minimum target-Q minus entropy 항을 더한다. d=1이면 target은 즉시 reward다.
 - **p. 1 / 1 INTRODUCTION - extractive body cue:** Vision-language navigation (VLN) (Chen et al., 2019; Ku et al., 2020; Misra et al., 2018; Krantz et al., 2020; Anderson et al., 2018; Thomason et ...
 - **p. 4 / 3 METHOD - extractive body cue:** Our framework integrates three core components, including a visionlanguage model, pseudo-depth encoder, and action de-tokenizer, as illustrated in Figure 2.
 - **p. 17 / A.2.3 DATA COLLECTION ALGORITHM BASED ON RL - extractive body cue:** Qθ(s, a) represents the current Q-network's estimate for the state-action pair (s, a), indicating the expected cumulative reward obtainable after taking action a from state ...

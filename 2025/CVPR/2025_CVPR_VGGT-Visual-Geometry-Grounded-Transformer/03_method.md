@@ -4,6 +4,8 @@
 > Evidence maturity: `FULL_TEXT_CHECKED`.
 > Analysis basis: full-text PDF body checked on 2026-09-03 (20 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2503.11651; PDF retrieval source: https://arxiv.org/pdf/2503.11651. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
+> DOC-QA1 (2026-10-23): 제어문자·깨진 추출 구간과 직접 연결된 표 항목을 PDF 페이지 이미지와 대조했다. 확인 범위·원문 URL·페이지·수정 이력은 [대조 기록](../../../work/sources/pdf_note_review_2026-10-23.json)에 있다. 노트 전체의 정독이나 모든 기존 주장에 대한 재검증을 뜻하지 않으며 reading status는 유지한다.
+
 ## Method in One Sentence
 
 PDF body method statement (p. 5 (3.3. Prediction heads), p. 3 (3.1. Problem definition and notation), p. 3 (3.1. Problem definition and notation), p. 10 (Method), p. 6 (3.4. Training), p. 5 (3.3. Prediction heads)): In order to implement the tracking module T , we use the CoTracker2 architecture [57], which takes the dense tracking features Ti as input.
@@ -81,7 +83,7 @@ PDF body method statement (p. 5 (3.3. Prediction heads), p. 3 (3.1. Problem defi
 | Contract | Generic domain prior | PDF body cue | Unresolved detail |
 |---|---|---|---|
 | Horizon | single frame, multi-view accumulation 또는 online map horizon; exact window 확인 필요. | The order of the images in the input sequence is arbitrary, except that the first image is chosen as the reference frame. | episode/sequence/action-chunk boundary |
-| Rate / latency | per-frame/streaming inference와 downstream policy/control rate가 분리된다. | VGGT's transformer is a function that maps this sequence to a corresponding set of 3D annotations, one per frame: f  (Ii)N i=1 ... | Hz/fps, inference time and control rate |
+| Rate / latency | 입출력 정의만으로 frame rate나 control rate를 알 수 없음 | 원문 대조: 동일 장면의 N개 RGB image를 입력하여 image별 camera parameter, depth map, point map, tracking feature를 출력한다. Transformer의 tracking feature와 별도 tracking module이 산출하는 track을 구분한다. ([PDF p. 3](https://arxiv.org/pdf/2503.11651#page=3), §3.1 Problem definition and notation, Eq. (1)) | Timing 근거 별도 확인 필요 |
 | Memory | camera poses, map/scene graph/Gaussian state와 temporal feature. | We do not include examples with more than 32 frames, as DUSt3R runs out of memory beyond this limit. | window and reset |
 | Compute | 3D reconstruction/fusion, point/feature memory와 query cost가 latency를 결정한다. | We do not include examples with more than 32 frames, as DUSt3R runs out of memory beyond this limit. | hardware, batch and throughput |
 

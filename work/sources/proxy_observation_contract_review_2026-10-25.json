@@ -1,0 +1,507 @@
+{
+  "schema_version": 1,
+  "task_id": "GAP-N1",
+  "review_date": "2026-10-25",
+  "timezone": "Asia/Seoul",
+  "role": "Dated scoped design and evidence ledger; not a new gap/priority registry",
+  "report": "work/update/PROXY_OBSERVATION_CONTRACT_REVIEW_2026-10-25.md",
+  "canonical_question": "synthesis/02_rl_il_offline.md#gap-data-transfer-2026",
+  "decision": {
+    "task_status": "DONE",
+    "research_adoption": "HOLD",
+    "general_transfer_method": "NO-GO unchanged",
+    "diagnostic_design": "REVISE; one source-contract qualification justified",
+    "training": "HOLD",
+    "native_effect": "UNTESTED",
+    "novelty": "Not established; targeted search did not identify this exact contrast",
+    "next_task": "GAP-N2",
+    "next_status": "READY",
+    "next_scope": [
+      "raw/global episode and split join",
+      "history cutoff/mask train-eval contract",
+      "actual model input subgoal/label boundary",
+      "paired goal-planner-evaluator modification points"
+    ],
+    "next_failure_rule": "Close/revise current asset design if any connection cannot be made concrete; do not repeat metadata inventory."
+  },
+  "search_scope": {
+    "type": "Targeted cross-literature search after S1, not a systematic 2024-2026 review",
+    "queries": [
+      "robot data selection transfer proxy target policy fine tuning budget frozen backbone influence 2025 2026",
+      "data attribution transferability proxy model target model data selection ranking fine tuning 2024 2025 2026",
+      "VLA data curation ATHENA cross model transfer adaptation budget",
+      "robot data selection open loop loss closed loop success validation influence 2026",
+      "robot demonstration data selection partial observability memory history proxy policy",
+      "data curation memory robot policy demonstrations",
+      "STAFF Speculative ICLR 2025",
+      "Can Small Training Runs Reliably Guide Data Curation ICLR 2026",
+      "RoboMME tasks memory object hidden"
+    ],
+    "discovery_only_not_used_as_claim_evidence": [
+      "Lacuna and third-party search results",
+      "CAMP/REMM/HALO/MemER project discovery",
+      "Proxy Policy Steering",
+      "LeRobot RoboMME documentation and unofficial forks"
+    ],
+    "retrieval_limits": [
+      "OpenReview forum 2FZC0c06jP presented a browser challenge; official proceedings used.",
+      "STAFF v3 HTML returned 404; v1 HTML used and version boundary recorded."
+    ]
+  },
+  "web_sources": [
+    {
+      "title": "STAFF: Speculative Coreset Selection for Task-Specific Fine-tuning",
+      "venue": "ICLR 2025",
+      "official_url": "https://proceedings.iclr.cc/paper_files/paper/2025/hash/412360d2dd428c26f34918c8d682cf7e-Abstract-Conference.html",
+      "body_url": "https://arxiv.org/html/2410.01296v1",
+      "sections": [
+        "3.1 selected excerpt",
+        "3.2 selected excerpt"
+      ],
+      "boundary": "Official abstract/metadata and earlier arXiv v1 sections; not conference-final full-text review",
+      "finding": "Small-model scoring plus target verification/region coverage already exists."
+    },
+    {
+      "title": "Can Small Training Runs Reliably Guide Data Curation? Rethinking Proxy-Model Practice",
+      "venue": "ICLR 2026",
+      "official_url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/c7d04ce5e71efdfc7a4a78f7161238a9-Abstract-Conference.html",
+      "body_url": "https://arxiv.org/html/2512.24503v2",
+      "sections": [
+        "5.2 selected excerpt"
+      ],
+      "boundary": "Official metadata/abstract and theoretical-scope paragraph, not all experiments or proof audit",
+      "finding": "Hyperparameter-dependent ranking and tiny-LR patch already reported; random-feature theory does not establish VLA closed-loop success."
+    },
+    {
+      "title": "RoboMME: Benchmarking and Understanding Memory for Robotic Generalist Policies",
+      "venue": "ICML 2026",
+      "official_url": "https://proceedings.mlr.press/v306/dai26c.html",
+      "body_url": "https://arxiv.org/html/2603.04639v1",
+      "project_url": "https://robomme.github.io/",
+      "sections": [
+        "Appendix E.5 VideoUnmask selected excerpt",
+        "Project task descriptions and official repository links"
+      ],
+      "boundary": "No payload, video execution or complete paper reproduction",
+      "finding": "Video-to-execution task with hidden object/container mapping supplies a candidate fixture, not an already matched causal pair."
+    }
+  ],
+  "repositories": [
+    {
+      "repo": "RoboMME/robomme_benchmark",
+      "revision": "1babf64480e28320e0f9db7992554616ceefda0e",
+      "discovery": "official RoboMME project link, then public GitHub HEAD/tree API",
+      "runtime_verified": false
+    },
+    {
+      "repo": "RoboMME/robomme_policy_learning",
+      "revision": "ac846a9a4aec841e483b1dc5d620dfe426bde853",
+      "discovery": "official RoboMME project link, then public GitHub HEAD/tree API",
+      "runtime_verified": false
+    }
+  ],
+  "source_files": [
+    {
+      "repo": "RoboMME/robomme_benchmark",
+      "revision": "1babf64480e28320e0f9db7992554616ceefda0e",
+      "path": "readme.md",
+      "url": "https://raw.githubusercontent.com/RoboMME/robomme_benchmark/1babf64480e28320e0f9db7992554616ceefda0e/readme.md",
+      "sha256": "780b67e9af3cfb2ecd7f86b83160c9d56dcbd1a6c839b5682601cd9560dd113d",
+      "lines": 174,
+      "inspection": "selected_lines",
+      "line_ranges": [
+        [
+          25,
+          43
+        ],
+        [
+          65,
+          91
+        ],
+        [
+          116,
+          128
+        ]
+      ],
+      "executed": false
+    },
+    {
+      "repo": "RoboMME/robomme_benchmark",
+      "revision": "1babf64480e28320e0f9db7992554616ceefda0e",
+      "path": "src/robomme/robomme_env/VideoUnmask.py",
+      "url": "https://raw.githubusercontent.com/RoboMME/robomme_benchmark/1babf64480e28320e0f9db7992554616ceefda0e/src/robomme/robomme_env/VideoUnmask.py",
+      "sha256": "ffee21ff6946a96a22fdc2123b3d8d672a40f10010a6ef1c2b16c18156feeb75",
+      "lines": 406,
+      "inspection": "selected_lines",
+      "line_ranges": [
+        [
+          90,
+          117
+        ],
+        [
+          160,
+          260
+        ],
+        [
+          302,
+          343
+        ]
+      ],
+      "executed": false
+    },
+    {
+      "repo": "RoboMME/robomme_benchmark",
+      "revision": "1babf64480e28320e0f9db7992554616ceefda0e",
+      "path": "src/robomme/env_record_wrapper/episode_dataset_resolver.py",
+      "url": "https://raw.githubusercontent.com/RoboMME/robomme_benchmark/1babf64480e28320e0f9db7992554616ceefda0e/src/robomme/env_record_wrapper/episode_dataset_resolver.py",
+      "sha256": "85402f17ca3fc13139c639dcd455c2f95b792611e71a795e4862d272a096281d",
+      "lines": 320,
+      "inspection": "downloaded_context_not_used_in_decision",
+      "line_ranges": [],
+      "executed": false
+    },
+    {
+      "repo": "RoboMME/robomme_policy_learning",
+      "revision": "ac846a9a4aec841e483b1dc5d620dfe426bde853",
+      "path": "README.md",
+      "url": "https://raw.githubusercontent.com/RoboMME/robomme_policy_learning/ac846a9a4aec841e483b1dc5d620dfe426bde853/README.md",
+      "sha256": "1254a9e89fa2e138b584f89b3418f04bf285e25f48deca95f7fa52fe6cf87904",
+      "lines": 330,
+      "inspection": "selected_lines",
+      "line_ranges": [
+        [
+          160,
+          205
+        ],
+        [
+          214,
+          251
+        ]
+      ],
+      "executed": false
+    },
+    {
+      "repo": "RoboMME/robomme_policy_learning",
+      "revision": "ac846a9a4aec841e483b1dc5d620dfe426bde853",
+      "path": "examples/robomme/readme.md",
+      "url": "https://raw.githubusercontent.com/RoboMME/robomme_policy_learning/ac846a9a4aec841e483b1dc5d620dfe426bde853/examples/robomme/readme.md",
+      "sha256": "dfb510c468f725daf4afcf0cb0c00caecd02c0a599c28f35f141ea9780152753",
+      "lines": 33,
+      "inspection": "downloaded_context_not_used_in_decision",
+      "line_ranges": [],
+      "executed": false
+    },
+    {
+      "repo": "RoboMME/robomme_policy_learning",
+      "revision": "ac846a9a4aec841e483b1dc5d620dfe426bde853",
+      "path": "src/mme_vla_suite/training/dataset.py",
+      "url": "https://raw.githubusercontent.com/RoboMME/robomme_policy_learning/ac846a9a4aec841e483b1dc5d620dfe426bde853/src/mme_vla_suite/training/dataset.py",
+      "sha256": "435df6266d4fbc3c1c8ca1c3e7b72c7f53f398f929a62f7488daa64cdcecfa48",
+      "lines": 276,
+      "inspection": "selected_lines",
+      "line_ranges": [
+        [
+          95,
+          161
+        ],
+        [
+          212,
+          255
+        ]
+      ],
+      "executed": false
+    },
+    {
+      "repo": "RoboMME/robomme_policy_learning",
+      "revision": "ac846a9a4aec841e483b1dc5d620dfe426bde853",
+      "path": "src/mme_vla_suite/dataset_builder/build_robomme_dataset.py",
+      "url": "https://raw.githubusercontent.com/RoboMME/robomme_policy_learning/ac846a9a4aec841e483b1dc5d620dfe426bde853/src/mme_vla_suite/dataset_builder/build_robomme_dataset.py",
+      "sha256": "61825d6f6587e41514cadd8167806302344f4588cc2c5289740d437fec43b37e",
+      "lines": 318,
+      "inspection": "selected_lines",
+      "line_ranges": [
+        [
+          238,
+          299
+        ]
+      ],
+      "executed": false
+    },
+    {
+      "repo": "RoboMME/robomme_policy_learning",
+      "revision": "ac846a9a4aec841e483b1dc5d620dfe426bde853",
+      "path": "src/mme_vla_suite/training/config.py",
+      "url": "https://raw.githubusercontent.com/RoboMME/robomme_policy_learning/ac846a9a4aec841e483b1dc5d620dfe426bde853/src/mme_vla_suite/training/config.py",
+      "sha256": "ca95d2df1f53b4145c08f3adef82a354113736f0d09286cbc90ba91bdaf52357",
+      "lines": 639,
+      "inspection": "selected_lines",
+      "line_ranges": [
+        [
+          170,
+          210
+        ],
+        [
+          230,
+          256
+        ],
+        [
+          558,
+          582
+        ]
+      ],
+      "executed": false
+    }
+  ],
+  "reused_local_evidence": [
+    {
+      "path": "work/update/VLA_GAP_SELECTION_REVIEW_2026-10-24.md",
+      "sha256": "248fa1f389752af26aa007d4972511573ceff62e147179be70aa7b716584e495",
+      "depth": "Reuse prior recorded findings and boundaries"
+    },
+    {
+      "path": "work/sources/vla_gap_selection_review_2026-10-24.json",
+      "sha256": "d15714287ef782ef886bfa12038175592156e7fe6fbc650adb3e2c2585166ad9",
+      "depth": "Reuse prior recorded findings and boundaries"
+    },
+    {
+      "path": "work/update/GAP_W2_COMPARATIVE_REVIEW_2026-10-23.md",
+      "sha256": "e6b110b831f217548dd0f048073f0feed5024684dc6dc72e02ab0a414f979ab1",
+      "depth": "Reuse prior recorded findings and boundaries"
+    },
+    {
+      "path": "work/sources/gap_w2_review_2026-10-23.json",
+      "sha256": "8e2abe20d81970bb0f5a24c78f3dcacc4dd850ecfa8165ae17a4771c4500e896",
+      "depth": "Reuse prior recorded findings and boundaries"
+    },
+    {
+      "path": "work/sources/integrated_gap_review_2026-10-23.json",
+      "sha256": "0da61609617bf77cfc0592d6bf055e9a178711467f202acaf868c07ab5b76ae2",
+      "depth": "Reuse prior recorded findings and boundaries"
+    },
+    {
+      "path": "work/research_candidates/summaries/README.md",
+      "sha256": "dcf7d976f5db7a7794a79fc732bfb738c8a315c424cf89b75c9cbc2ccbfb0a4a",
+      "depth": "Reuse prior recorded findings and boundaries"
+    },
+    {
+      "path": "work/experiments/reactive_nav_pilot/RESULTS.md",
+      "sha256": "dda337c09ce2187c3f95664a0949aa34afcbfbe9985b610e0a331611770364a5",
+      "depth": "Reuse prior recorded findings and boundaries"
+    }
+  ],
+  "design_contract": {
+    "status": "PROPOSED_NONEXECUTABLE",
+    "executable": false,
+    "primary_question": "Does selector/target cue-access mismatch change subset utility for the SAME history-enabled target beyond optimization and coverage controls?",
+    "claim_not_allowed": [
+      "Memory improves robot performance as a new contribution",
+      "Information loss necessarily causes harmful selection",
+      "Generic small-to-large policy data transfer",
+      "Cheap target-score verification as a new method",
+      "Different observation contracts prove architecture-only causality"
+    ],
+    "manual_counterexample": {
+      "kind": "Analytical reasoning, not experiment",
+      "setup": "c in {-1,+1} equiprobable, a=c, constant current observation, constant prediction m",
+      "risk": "R(m)=1+m^2",
+      "implication": "At m=0 errors tie and validation gradient is zero; systematic harmful pruning is not implied. Not a theorem about all influence estimators."
+    },
+    "comparison": {
+      "target": "One history-enabled target B with a common initialization/training contract",
+      "subsets": [
+        "S_plus: selector has cue",
+        "S_minus: selector lacks cue",
+        "S_ctrl: same count of irrelevant frames removed",
+        "S_bal: task/target-location/length stratification",
+        "random",
+        "all-data (separate compute reference)",
+        "target-reselection (comparison, not optimum oracle)"
+      ],
+      "primary_contrast": "J_B(S_ctrl)-J_B(S_minus), with S_plus as unmasked reference",
+      "outcomes": [
+        "native task success",
+        "first correct container selection rate"
+      ],
+      "separate_diagnostics": [
+        "score correlation",
+        "subset overlap",
+        "conditional action/goal coverage"
+      ],
+      "required_controls": [
+        "Matched model capacity/initialization and token budget",
+        "Matched tuning budget plus tiny-LR alternative; do not assume fixed LR establishes dataset quality",
+        "No ground-truth subgoal in policy input",
+        "Normalize once from permitted training pool; not each subset using held-out data",
+        "Group-wise split and deterministic tie-breaking",
+        "No mask OOD result treated as causal evidence",
+        "Selector training/objective/phase aggregation must be frozen before implementation"
+      ],
+      "selector_estimator": "NOT_FROZEN: published selector adaptation and score objective require qualification; no new algorithm implemented"
+    },
+    "fixture": {
+      "task_family": "RoboMME VideoUnmask, easy 3-container variant",
+      "embodiment": "Panda",
+      "proposed_intervention": "Fixed container poses/camera/robot state; permute hidden color-location mapping, same requested target color; goal/planner/evaluator must all reflect target change",
+      "not_official_benchmark_reproduction": true,
+      "task_source_caveat": "Current source ties goal to bin_0/color_names[0]; color permutation alone does not implement this fixture.",
+      "group_members": 3,
+      "proposed_groups": {
+        "train": 12,
+        "selector_validation": 4,
+        "test": 8
+      },
+      "proposed_episode_cap": 72,
+      "power_analysis": false,
+      "actual_collected_episodes": 0,
+      "split_unit": "Entire matched scene group including masks/retries",
+      "collection_record_fields": [
+        "group_id",
+        "member_id",
+        "raw_episode_id",
+        "split",
+        "scene_seed",
+        "goal_color",
+        "color_bin_map_audit_only",
+        "cue_frame_ids",
+        "exec_start_idx",
+        "current_rgb_hash",
+        "proprio_hash",
+        "action_time_unit",
+        "first_selected_container",
+        "native_success",
+        "retry_id",
+        "reset_and_planner_cost"
+      ],
+      "unverified": [
+        "Rendered/current-observation equality and no shadow/contact leakage",
+        "Native competence",
+        "Raw/global ID join",
+        "Full memory causal cutoff",
+        "Weights and normalization hashes",
+        "Published checkpoint train-pool provenance"
+      ]
+    },
+    "resources": {
+      "docker_only": true,
+      "host_install": false,
+      "training_budget": null,
+      "checkpoint_revision": null,
+      "normalizer_hash": null,
+      "docker_image_digest": null,
+      "measured_vram": null,
+      "gpu_hours": null,
+      "next_stage": "Static source contract only; no acquisition/training authorized by document readiness"
+    },
+    "reject_rules": [
+      "No cue-specific subset penalty or opposite sign: do not claim universal harmful transfer",
+      "Simple stratification/normalization/tuning accounts for result: no new method",
+      "No target competence: isolate competence failure",
+      "No valid observation/evaluator pair: close current fixture design",
+      "Only metadata or GPU availability changes: no automatic research reopening"
+    ]
+  },
+  "operations": {
+    "code_execution": false,
+    "experiments": false,
+    "training": false,
+    "docker_changes": false,
+    "host_dependency_install": false,
+    "pdf_download": false,
+    "dataset_or_checkpoint_download": false,
+    "registry_registration": false,
+    "reading_status_change": false,
+    "tier_change": false,
+    "git_commit_or_push": false
+  },
+  "validation": {
+    "status": "PASS",
+    "pre_audit_errors": 0,
+    "pre_audit_warnings": 0,
+    "initial_dirty_present_files": 415,
+    "initial_missing_paths": [
+      "2025/IROS/2025_IROS_Splat-Nav-Safe-Real-Time-Robot-Navigation-in-Gaussian-Spla/01_overview.md",
+      "2025/IROS/2025_IROS_Splat-Nav-Safe-Real-Time-Robot-Navigation-in-Gaussian-Spla/02_problem.md",
+      "2025/IROS/2025_IROS_Splat-Nav-Safe-Real-Time-Robot-Navigation-in-Gaussian-Spla/03_method.md",
+      "2025/IROS/2025_IROS_Splat-Nav-Safe-Real-Time-Robot-Navigation-in-Gaussian-Spla/04_evaluation.md",
+      "2025/IROS/2025_IROS_Splat-Nav-Safe-Real-Time-Robot-Navigation-in-Gaussian-Spla/05_insights.md"
+    ],
+    "canonical_before": {
+      "PAPER.md": "b492fdb8b6ed5db0200ffa2f9f543a37561e8a454188922faa0b6289736de9e1",
+      "work/sources/papers.json": "9aaf36031bf776d554dd10f8f2f927d60ddd7b44ff02267181325275bcb74f06",
+      "work/sources/registry_meta.json": "1fbb093bf785ca218ead1804f95fdac7fa5d88ac5ed82b019f1766511b1eb56f",
+      "research/READING_TIERS.csv": "8b2ac89fff0d6d56950695d5bfb67daab8fbc51647454fa077beea970bb23f29",
+      "research/READING_STATUS.csv": "276c5531063e93f381de18b45fbf82dfa16703444f39658dfd4bfb10bbc17878",
+      "research/READING_STATUS_HISTORY.csv": "c91b6727a03529ba790447eb5106f5b04cc4364b0c90b3eed1afecf9b700e001"
+    },
+    "commands": [
+      {
+        "command": "python3 -m py_compile work/scripts/build_reading_tiers.py",
+        "exit_code": 0
+      },
+      {
+        "command": "python3 work/scripts/build_reading_tiers.py",
+        "exit_code": 0,
+        "tier_counts": {
+          "CORE": 47,
+          "NEXT": 275,
+          "REFERENCE": 473,
+          "ARCHIVE": 242
+        }
+      },
+      {
+        "command": "python3 work/scripts/audit_repository.py",
+        "exit_code": 0,
+        "papers": 1037,
+        "intensive": 322,
+        "standard_note_files": 5185,
+        "markdown_files_checked": 5349,
+        "markdown_links_checked": 10375,
+        "errors": [],
+        "warnings": []
+      },
+      {
+        "command": "git diff --check",
+        "exit_code": 0
+      }
+    ],
+    "canonical_after": {
+      "PAPER.md": "b492fdb8b6ed5db0200ffa2f9f543a37561e8a454188922faa0b6289736de9e1",
+      "work/sources/papers.json": "9aaf36031bf776d554dd10f8f2f927d60ddd7b44ff02267181325275bcb74f06",
+      "work/sources/registry_meta.json": "1fbb093bf785ca218ead1804f95fdac7fa5d88ac5ed82b019f1766511b1eb56f",
+      "research/READING_TIERS.csv": "8b2ac89fff0d6d56950695d5bfb67daab8fbc51647454fa077beea970bb23f29",
+      "research/READING_STATUS.csv": "276c5531063e93f381de18b45fbf82dfa16703444f39658dfd4bfb10bbc17878",
+      "research/READING_STATUS_HISTORY.csv": "c91b6727a03529ba790447eb5106f5b04cc4364b0c90b3eed1afecf9b700e001"
+    },
+    "canonical_hashes_preserved": true,
+    "changed_existing_task_files": [
+      "README.md",
+      "TODO.md",
+      "research/READING_PLAN.md",
+      "synthesis/02_rl_il_offline.md",
+      "synthesis/04_vla_generalist.md",
+      "synthesis/README.md",
+      "work/update/README.md"
+    ],
+    "unchanged_initial_dirty_files": 408,
+    "preexisting_missing_paths_preserved": true,
+    "reused_evidence_hashes_preserved": 7,
+    "generated_reading_plan_change": "Updated date only; verified against pre-task hash after date substitution",
+    "new_task_files": [
+      "work/sources/proxy_observation_contract_review_2026-10-25.json",
+      "work/update/PROXY_OBSERVATION_CONTRACT_REVIEW_2026-10-25.md",
+      "work/update/UPDATES_2026-10-25.md"
+    ],
+    "design_consistency": {
+      "executable": false,
+      "planned_episodes": 72,
+      "collected_episodes": 0
+    },
+    "temporary_cleanup": {
+      "removed_task_files": 13,
+      "code_doc_hashes_checked": 8,
+      "task_directory_absent": true,
+      "pointer_removed": true,
+      "pdf_or_model_payload_created": false
+    }
+  }
+}

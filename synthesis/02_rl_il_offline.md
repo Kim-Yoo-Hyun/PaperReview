@@ -1,6 +1,6 @@
 # RL, IL, Offline Learning, and Robot Data
 
-- Updated: 2026-10-23 KST
+- Updated: 2026-11-09 KST
 
 ## Scope
 
@@ -38,12 +38,15 @@ TD → Q-Learning → REINFORCE/Policy-Gradient Theorem → PILCO/TRPO/PPO/SAC/M
 
 ## Assigned Reading Queue
 
-### RL, IL, and policy learning foundations — 20
+### RL, IL, and policy learning foundations — 23
 
 | Tier | Paper | Year / Venue | Status | Evidence |
 |---|---|---|---|---|
 | CORE | [Learning to Predict by the Methods of Temporal Differences](../1988/Machine-Learning/1988_Machine-Learning_Learning-to-Predict-by-the-Methods-of-Temporal-Differences/01_overview.md) | 1988 / Machine Learning | `UNREAD` | `FULL_TEXT_CHECKED` |
+| CORE | [Policy invariance under reward transformations: Theory and application to reward shaping](../1999/ICML/1999_ICML_Policy-invariance-under-reward-transformations-Theory-and/01_overview.md) | 1999 / ICML | `UNREAD` | `ABSTRACT_CHECKED` |
+| CORE | [Universal Value Function Approximators](../2015/ICML/2015_ICML_Universal-Value-Function-Approximators/01_overview.md) | 2015 / ICML | `UNREAD` | `ABSTRACT_CHECKED` |
 | CORE | [Policy Gradient Methods for Reinforcement Learning with Function Approximation](../1999/NeurIPS/1999_NeurIPS_Policy-Gradient-Methods-for-Reinforcement-Learning-with-Fu/01_overview.md) | 1999 / NeurIPS | `UNREAD` | `FULL_TEXT_CHECKED` |
+| CORE | [High-Dimensional Continuous Control Using Generalized Advantage Estimation](../2016/ICLR/2016_ICLR_High-Dimensional-Continuous-Control-Using-Generalized-Adva/01_overview.md) | 2016 / ICLR | `UNREAD` | `ABSTRACT_CHECKED` |
 | CORE | [Proximal Policy Optimization Algorithms](../2017/arxiv/2017_arxiv_Proximal-Policy-Optimization-Algorithms/01_overview.md) | 2017 / arXiv | `UNREAD` | `FULL_TEXT_CHECKED` |
 | CORE | [Soft Actor-Critic: Off-Policy Maximum Entropy Deep Reinforcement Learning with a Stochastic Actor](../2018/ICML/2018_ICML_Soft-Actor-Critic-Off-Policy-Maximum-Entropy-Deep-Reinforc/01_overview.md) | 2018 / ICML | `UNREAD` | `FULL_TEXT_CHECKED` |
 | CORE | [Offline Reinforcement Learning with Implicit Q-Learning](../2022/ICLR/2022_ICLR_Offline-Reinforcement-Learning-with-Implicit-Q-Learning/01_overview.md) | 2022 / ICLR | `UNREAD` | `FULL_TEXT_CHECKED` |
@@ -57,13 +60,13 @@ TD → Q-Learning → REINFORCE/Policy-Gradient Theorem → PILCO/TRPO/PPO/SAC/M
 | CORE | [Flow Q-Learning](../2025/ICML/2025_ICML_Flow-Q-Learning/01_overview.md) | 2025 / ICML | `UNREAD` | `ABSTRACT_CHECKED` |
 | CORE | [Efficient Online Reinforcement Learning with Offline Data](../2023/ICML/2023_ICML_Efficient-Online-Reinforcement-Learning-with-Offline-Data/01_overview.md) | 2023 / ICML | `UNREAD` | `FULL_TEXT_CHECKED` |
 | CORE | [SERL: A Software Suite for Sample-Efficient Robotic Reinforcement Learning](../2024/ICRA/2024_ICRA_SERL-A-Software-Suite-for-Sample-Efficient-Robotic-Reinfor/01_overview.md) | 2024 / ICRA | `UNREAD` | `FULL_TEXT_CHECKED` |
-| CORE | [Precise and Dexterous Robotic Manipulation via Human-in-the-Loop Reinforcement Learning](../2024/arXiv/2024_arXiv_Precise-and-Dexterous-Robotic-Manipulation-via-Human-in-th/01_overview.md) | 2024 / arXiv | `UNREAD` | `FULL_TEXT_CHECKED` |
+| CORE | [Precise and dexterous robotic manipulation via human-in-the-loop reinforcement learning](../2025/Science-Robotics/2025_Science-Robotics_Precise-and-dexterous-robotic-manipulation-via-human-in-th/01_overview.md) | 2025 / Science Robotics | `UNREAD` | `FULL_TEXT_CHECKED` |
 | CORE | [RLDG: Robotic Generalist Policy Distillation via Reinforcement Learning](../2025/RSS/2025_RSS_RLDG-Robotic-Generalist-Policy-Distillation-via-Reinforcem/01_overview.md) | 2025 / RSS | `UNREAD` | `FULL_TEXT_CHECKED` |
 | CORE | [DROID: A Large-Scale In-The-Wild Robot Manipulation Dataset](../2024/RSS/2024_RSS_DROID-A-Large-Scale-In-The-Wild-Robot-Manipulation-Dataset/01_overview.md) | 2024 / RSS | `UNREAD` | `FULL_TEXT_CHECKED` |
 | CORE | [Benchmarking Knowledge Transfer for Lifelong Robot Learning](../2023/NeurIPS/2023_NeurIPS_Benchmarking-Knowledge-Transfer-for-Lifelong-Robot-Learnin/01_overview.md) | 2023 / NeurIPS | `UNREAD` | `FULL_TEXT_CHECKED` |
 | CORE | [Habitat: A Platform for Embodied AI Research](../2019/ICCV/2019_ICCV_Habitat-A-Platform-for-Embodied-AI-Research/01_overview.md) | 2019 / ICCV | `UNREAD` | `FULL_TEXT_CHECKED` |
 
-### RL, IL, offline learning, and robot data — 55
+### RL, IL, offline learning, and robot data — 96
 
 | Tier | Paper | Year / Venue | Status | Evidence |
 |---|---|---|---|---|
@@ -117,11 +120,52 @@ TD → Q-Learning → REINFORCE/Policy-Gradient Theorem → PILCO/TRPO/PPO/SAC/M
 | NEXT | [Evaluating Real-World Robot Manipulation Policies in Simulation](../2024/CoRL/2024_CoRL_Evaluating-Real-World-Robot-Manipulation-Policies-in-Simul/01_overview.md) | 2024 / CoRL | `UNREAD` | `FULL_TEXT_CHECKED` |
 | NEXT | [MimicPlay: Long-Horizon Imitation Learning by Watching Human Play](../2023/CoRL/2023_CoRL_MimicPlay-Long-Horizon-Imitation-Learning-by-Watching-Huma/01_overview.md) | 2023 / CoRL | `UNREAD` | `FULL_TEXT_CHECKED` |
 | NEXT | [Test-Time Adaptation for Online Vision-Language Navigation with Feedback-based Reinforcement Learning](../2025/ICML/2025_ICML_Test-Time-Adaptation-for-Online-Vision-Language-Navigation/01_overview.md) | 2025 / ICML | `UNREAD` | `FULL_TEXT_CHECKED` |
+| NEXT | [Studying the Interplay Between the Actor and Critic Representations in Reinforcement Learning](../2025/ICLR/2025_ICLR_Studying-the-Interplay-Between-the-Actor-and-Critic-Repres/01_overview.md) | 2025 / ICLR | `UNREAD` | `ABSTRACT_CHECKED` |
+| NEXT | [SPRINT: Scalable Policy Pre-Training via Language Instruction Relabeling](../2024/ICRA/2024_ICRA_SPRINT-Scalable-Policy-Pre-Training-via-Language-Instructi/01_overview.md) | 2024 / ICRA | `UNREAD` | `ABSTRACT_CHECKED` |
+| NEXT | [Autonomous Improvement of Instruction Following Skills via Foundation Models](../2024/CoRL/2024_CoRL_Autonomous-Improvement-of-Instruction-Following-Skills-via/01_overview.md) | 2024 / CoRL | `UNREAD` | `ABSTRACT_CHECKED` |
+| NEXT | [ReinFlow: Fine-tuning Flow Matching Policy with Online Reinforcement Learning](../2025/NeurIPS/2025_NeurIPS_ReinFlow-Fine-tuning-Flow-Matching-Policy-with-Online-Rein/01_overview.md) | 2025 / NeurIPS | `UNREAD` | `ABSTRACT_CHECKED` |
 | NEXT | [SAIL: Faster-than-Demonstration Execution of Imitation Learning Policies](../2025/CoRL/2025_CoRL_SAIL-Faster-than-Demonstration-Execution-of-Imitation-Lear/01_overview.md) | 2025 / CoRL | `UNREAD` | `ABSTRACT_CHECKED` |
 | NEXT | [AutoEval: Autonomous Evaluation of Generalist Robot Manipulation Policies in the Real World](../2025/CoRL/2025_CoRL_AutoEval-Autonomous-Evaluation-of-Generalist-Robot-Manipul/01_overview.md) | 2025 / CoRL | `UNREAD` | `ABSTRACT_CHECKED` |
 | NEXT | [Is Your Imitation Learning Policy Better than Mine? Policy Comparison with Near-Optimal Stopping](../2025/RSS/2025_RSS_Is-Your-Imitation-Learning-Policy-Better-than-Mine-Policy/01_overview.md) | 2025 / RSS | `UNREAD` | `ABSTRACT_CHECKED` |
 | NEXT | [Beyond Binary Success: Sample-Efficient and Statistically Rigorous Robot Policy Comparison](../2026/RSS/2026_RSS_Beyond-Binary-Success-Sample-Efficient-and-Statistically-R/01_overview.md) | 2026 / RSS | `UNREAD` | `ABSTRACT_CHECKED` |
 | NEXT | [RoboFollow: Unveiling the Instruction Following Mirage in Embodied Agents](../2026/CoRL/2026_CoRL_RoboFollow-Unveiling-the-Instruction-Following-Mirage-in-E/01_overview.md) | 2026 / CoRL | `UNREAD` | `ABSTRACT_CHECKED` |
+| NEXT | [What Matters in Learning from Large-Scale Datasets for Robot Manipulation](../2025/ICLR/2025_ICLR_What-Matters-in-Learning-from-Large-Scale-Datasets-for-Rob/01_overview.md) | 2025 / ICLR | `UNREAD` | `ABSTRACT_CHECKED` |
+| NEXT | [DataMIL: Selecting Data for Robot Imitation Learning with Datamodels](../2026/ICLR/2026_ICLR_DataMIL-Selecting-Data-for-Robot-Imitation-Learning-with-D/01_overview.md) | 2026 / ICLR | `UNREAD` | `ABSTRACT_CHECKED` |
+| NEXT | [ReMix: Optimizing Data Mixtures for Large Scale Imitation Learning](../2025/CoRL/2025_CoRL_ReMix-Optimizing-Data-Mixtures-for-Large-Scale-Imitation-L/01_overview.md) | 2025 / CoRL | `UNREAD` | `ABSTRACT_CHECKED` |
+| NEXT | [DexMimicGen: Automated Data Generation for Bimanual Dexterous Manipulation via Imitation Learning](../2025/ICRA/2025_ICRA_DexMimicGen-Automated-Data-Generation-for-Bimanual-Dextero/01_overview.md) | 2025 / ICRA | `UNREAD` | `ABSTRACT_CHECKED` |
+| NEXT | [TRANSIC: Sim-to-Real Policy Transfer by Learning from Online Correction](../2025/CoRL/2025_CoRL_TRANSIC-Sim-to-Real-Policy-Transfer-by-Learning-from-Onlin/01_overview.md) | 2025 / CoRL | `UNREAD` | `ABSTRACT_CHECKED` |
+| NEXT | [Equivariant diffusion policy for sample-efficient robotic manipulation](../2026/IJRR/2026_IJRR_Equivariant-diffusion-policy-for-sample-efficient-robotic/01_overview.md) | 2026 / IJRR | `UNREAD` | `ABSTRACT_CHECKED` |
+| NEXT | [Diagnosing Compositional Generalization in Sequential Robot Tasks](../2026/CoRL/2026_CoRL_Diagnosing-Compositional-Generalization-in-Sequential-Robo/01_overview.md) | 2026 / CoRL | `UNREAD` | `ABSTRACT_CHECKED` |
+| NEXT | [A Systematic Study of Data Modalities and Strategies for Co-training Large Behavior Models for Robot Manipulation](../2026/RSS/2026_RSS_A-Systematic-Study-of-Data-Modalities-and-Strategies-for-C/01_overview.md) | 2026 / RSS | `UNREAD` | `ABSTRACT_CHECKED` |
+| NEXT | [Emergence of Human to Robot Transfer in Vision-Language-Action Models](../2026/RSS/2026_RSS_Emergence-of-Human-to-Robot-Transfer-in-Vision-Language-Ac/01_overview.md) | 2026 / RSS | `UNREAD` | `ABSTRACT_CHECKED` |
+| NEXT | [Dejavu: Towards Experience Feedback Learning for Embodied Intelligence](../2026/CVPR/2026_CVPR_Dejavu-Towards-Experience-Feedback-Learning-for-Embodied-I/01_overview.md) | 2026 / CVPR | `UNREAD` | `ABSTRACT_CHECKED` |
+| NEXT | [EXPO: Stable Reinforcement Learning with Expressive Policies](../2026/ICLR/2026_ICLR_EXPO-Stable-Reinforcement-Learning-with-Expressive-Policie/01_overview.md) | 2026 / ICLR | `UNREAD` | `FULL_TEXT_CHECKED` |
+| NEXT | [Policy Decorator: Model-Agnostic Online Refinement for Large Policy Model](../2025/ICLR/2025_ICLR_Policy-Decorator-Model-Agnostic-Online-Refinement-for-Larg/01_overview.md) | 2025 / ICLR | `UNREAD` | `FULL_TEXT_CHECKED` |
+| NEXT | [Accelerating Residual Reinforcement Learning With Uncertainty Estimation](../2026/RA-L/2026_RA-L_Accelerating-Residual-Reinforcement-Learning-With-Uncertai/01_overview.md) | 2026 / RA-L | `UNREAD` | `FULL_TEXT_CHECKED` |
+| NEXT | [From Prior to Pro: Efficient Skill Mastery via Distribution Contractive RL Finetuning](../2026/ICML/2026_ICML_From-Prior-to-Pro-Efficient-Skill-Mastery-via-Distribution/01_overview.md) | 2026 / ICML | `UNREAD` | `FULL_TEXT_CHECKED` |
+| NEXT | [Latent Theory of Mind: A Decentralized Diffusion Architecture for Cooperative Manipulation](../2025/CoRL/2025_CoRL_Latent-Theory-of-Mind-A-Decentralized-Diffusion-Architectu/01_overview.md) | 2025 / CoRL | `UNREAD` | `ABSTRACT_CHECKED` |
+| NEXT | [PolaRiS: Scalable Real-to-Sim Evaluations for Generalist Robot Policies](../2026/RSS/2026_RSS_PolaRiS-Scalable-Real-to-Sim-Evaluations-for-Generalist-Ro/01_overview.md) | 2026 / RSS | `UNREAD` | `ABSTRACT_CHECKED` |
+| NEXT | [MolmoSpaces: Large-Scale Open Ecosystem for Robot Manipulation and Navigation](../2026/RSS/2026_RSS_MolmoSpaces-Large-Scale-Open-Ecosystem-for-Robot-Manipulat/01_overview.md) | 2026 / RSS | `UNREAD` | `ABSTRACT_CHECKED` |
+| NEXT | [When Life Gives You BC, Make Q-functions: Extracting Q-values from Behavior Cloning for On-Robot Reinforcement Learning](../2026/RSS/2026_RSS_When-Life-Gives-You-BC-Make-Q-functions-Extracting-Q-value/01_overview.md) | 2026 / RSS | `UNREAD` | `ABSTRACT_CHECKED` |
+| NEXT | [Long-Context Robot Imitation Learning by Focusing on Key History Frames](../2026/RSS/2026_RSS_Long-Context-Robot-Imitation-Learning-by-Focusing-on-Key-H/01_overview.md) | 2026 / RSS | `UNREAD` | `ABSTRACT_CHECKED` |
+| NEXT | [TMRL: Diffusion Timestep-Modulated Pretraining Enables Exploration for Efficient Policy Finetuning](../2026/RSS/2026_RSS_TMRL-Diffusion-Timestep-Modulated-Pretraining-Enables-Expl/01_overview.md) | 2026 / RSS | `UNREAD` | `ABSTRACT_CHECKED` |
+| NEXT | [ReWiND: Language-Guided Rewards Teach Robot Policies without New Demonstrations](../2025/CoRL/2025_CoRL_ReWiND-Language-Guided-Rewards-Teach-Robot-Policies-withou/01_overview.md) | 2025 / CoRL | `UNREAD` | `ABSTRACT_CHECKED` |
+| NEXT | [CoMo: Learning Continuous Latent Motion from Internet Videos for Scalable Robot Learning](../2026/CVPR/2026_CVPR_CoMo-Learning-Continuous-Latent-Motion-from-Internet-Video/01_overview.md) | 2026 / CVPR | `UNREAD` | `ABSTRACT_CHECKED` |
+| NEXT | [General Process Reward Modeling for Robotic Reinforcement Learning](../2026/CVPR/2026_CVPR_General-Process-Reward-Modeling-for-Robotic-Reinforcement/01_overview.md) | 2026 / CVPR | `UNREAD` | `ABSTRACT_CHECKED` |
+| NEXT | [Lifelong Autonomous Improvement of Navigation Foundation Models in the Wild](../2024/CoRL/2024_CoRL_Lifelong-Autonomous-Improvement-of-Navigation-Foundation-M/01_overview.md) | 2024 / CoRL | `UNREAD` | `ABSTRACT_CHECKED` |
+| NEXT | [Steering Your Generalists: Improving Robotic Foundation Models via Value Guidance](../2024/CoRL/2024_CoRL_Steering-Your-Generalists-Improving-Robotic-Foundation-Mod/01_overview.md) | 2024 / CoRL | `UNREAD` | `ABSTRACT_CHECKED` |
+| NEXT | [DEAS: DEtached value learning with Action Sequence for Scalable Offline RL](../2026/ICLR/2026_ICLR_DEAS-DEtached-value-learning-with-Action-Sequence-for-Scal/01_overview.md) | 2026 / ICLR | `UNREAD` | `ABSTRACT_CHECKED` |
+| NEXT | [PRIMT: Preference-based Reinforcement Learning with Multimodal Feedback and Trajectory Synthesis from Foundation Models](../2025/NeurIPS/2025_NeurIPS_PRIMT-Preference-based-Reinforcement-Learning-with-Multimo/01_overview.md) | 2025 / NeurIPS | `UNREAD` | `ABSTRACT_CHECKED` |
+| NEXT | [RL's Razor: Why Online Reinforcement Learning Forgets Less](../2026/ICLR/2026_ICLR_RL-s-Razor-Why-Online-Reinforcement-Learning-Forgets-Less/01_overview.md) | 2026 / ICLR | `UNREAD` | `ABSTRACT_CHECKED` |
+| NEXT | [Successor Features for Transfer in Reinforcement Learning](../2017/NeurIPS/2017_NeurIPS_Successor-Features-for-Transfer-in-Reinforcement-Learning/01_overview.md) | 2017 / NeurIPS | `UNREAD` | `ABSTRACT_CHECKED` |
+| NEXT | [AWAC: Accelerating Online Reinforcement Learning with Offline Datasets](../2020/arXiv/2020_arXiv_AWAC-Accelerating-Online-Reinforcement-Learning-with-Offli/01_overview.md) | 2020 / arXiv | `UNREAD` | `ABSTRACT_CHECKED` |
+| NEXT | [DART: Noise Injection for Robust Imitation Learning](../2017/CoRL/2017_CoRL_DART-Noise-Injection-for-Robust-Imitation-Learning/01_overview.md) | 2017 / CoRL | `UNREAD` | `ABSTRACT_CHECKED` |
+| NEXT | [Cal-QL: Calibrated Offline RL Pre-Training for Efficient Online Fine-Tuning](../2023/NeurIPS/2023_NeurIPS_Cal-QL-Calibrated-Offline-RL-Pre-Training-for-Efficient-On/01_overview.md) | 2023 / NeurIPS | `UNREAD` | `ABSTRACT_CHECKED` |
+| NEXT | [HIQL: Offline Goal-Conditioned RL with Latent States as Actions](../2023/NeurIPS/2023_NeurIPS_HIQL-Offline-Goal-Conditioned-RL-with-Latent-States-as-Act/01_overview.md) | 2023 / NeurIPS | `UNREAD` | `ABSTRACT_CHECKED` |
+| NEXT | [Is Value Learning Really the Main Bottleneck in Offline RL?](../2024/NeurIPS/2024_NeurIPS_Is-Value-Learning-Really-the-Main-Bottleneck-in-Offline-RL/01_overview.md) | 2024 / NeurIPS | `UNREAD` | `ABSTRACT_CHECKED` |
+| NEXT | [Horizon Reduction Makes RL Scalable](../2025/NeurIPS/2025_NeurIPS_Horizon-Reduction-Makes-RL-Scalable/01_overview.md) | 2025 / NeurIPS | `UNREAD` | `ABSTRACT_CHECKED` |
+| NEXT | [EgoDex: Learning Dexterous Manipulation from Large-Scale Egocentric Video](../2026/ICLR/2026_ICLR_EgoDex-Learning-Dexterous-Manipulation-from-Large-Scale-Eg/01_overview.md) | 2026 / ICLR | `UNREAD` | `ABSTRACT_CHECKED` |
+| NEXT | [Humanoid Everyday: A Comprehensive Robotic Dataset for Open-World Humanoid Manipulation](../2025/arXiv/2025_arXiv_Humanoid-Everyday-A-Comprehensive-Robotic-Dataset-for-Open/01_overview.md) | 2025 / arXiv | `UNREAD` | `ABSTRACT_CHECKED` |
 
 <!-- READING_QUEUE:END -->
 
@@ -208,9 +252,86 @@ TD → Q-Learning → REINFORCE/Policy-Gradient Theorem → PILCO/TRPO/PPO/SAC/M
 | C3: bounded action의 기존 이론 | [CAPG](../2018/ICML/2018_ICML_Clipped-Action-Policy-Gradient/01_overview.md) (2018 ICML); [MPG](../2019/ICLR/2019_ICLR_Marginal-Policy-Gradients-A-Unified-Family-of-Estimators-f/01_overview.md) (2019 ICLR) | 동일 실행 명령의 marginalization 자체는 선행 원리다. 한 checkpoint의 제한된 head 진단을 일반 정책 개선으로 확장하지 않는다. |
 | C5: reset-free learning | [Irreversible RL](../2025/NeurIPS/2025_NeurIPS_Robust-and-Scalable-Autonomous-Reinforcement-Learning-in-I/01_overview.md) (2025 NeurIPS); [Autonomous RL](../2022/ICLR/2022_ICLR_Autonomous-Reinforcement-Learning-Formalism-and-Benchmarki/01_overview.md) (2022 ICLR); [State-distribution matching](../2022/ICML/2022_ICML_A-State-Distribution-Matching-Approach-to-Non-Episodic-Rei/01_overview.md) (2022 ICML) | Reset 비용·분포 변화는 이미 문제화되어 있다. 전체 실패/retry/rescue ledger 없는 성공 데이터 집계는 새로운 coverage 근거가 아니다. |
 
+### Registry 연결 갱신 — 2026-10-25
+
+- [What Matters in Learning from Large-Scale Datasets for Robot Manipulation](../2025/ICLR/2025_ICLR_What-Matters-in-Learning-from-Large-Scale-Datasets-for-Rob/01_overview.md)
+- [DataMIL: Selecting Data for Robot Imitation Learning with Datamodels](../2026/ICLR/2026_ICLR_DataMIL-Selecting-Data-for-Robot-Imitation-Learning-with-D/01_overview.md)
+- [Difference-Aware Retrieval Policies for Imitation Learning](../2026/ICLR/2026_ICLR_Difference-Aware-Retrieval-Policies-for-Imitation-Learning/01_overview.md)
+- [STAFF: Speculative Coreset Selection for Task-Specific Fine-tuning](../2025/ICLR/2025_ICLR_STAFF-Speculative-Coreset-Selection-for-Task-Specific-Fine/01_overview.md)
+- [Can Small Training Runs Reliably Guide Data Curation? Rethinking Proxy-Model Practice](../2026/ICLR/2026_ICLR_Can-Small-Training-Runs-Reliably-Guide-Data-Curation-Rethi/01_overview.md)
+
+구성 정렬, performance-aware subset, 실행 중 retrieval, target verification, proxy 학습 설정은 서로 다른 설명이다. GAP-DATA-TRANSFER의 관측 정보 효과를 주장하기 전에 분리한다.
+
+이번 등록은 `ABSTRACT_CHECKED` 수준의 비교 연결이다. 기존 정독 matrix·reading status·연구 판단을 승격하지 않는다. [등록 범위와 source 경계](../work/update/REGISTRY_REFRESH_2026-10-25.md).
+
+### 2026-10-25 top-tier 보완 — 읽기 전 비교 연결
+
+> Researcher interpretation / CURATION-HYPOTHESIS. 신규 노트는 abstract/project 기반이며 아래 연결은 정독·실험 결과나 직접 citation 관계의 확인이 아니다.
+
+[ReMix](../2025/CoRL/2025_CoRL_ReMix-Optimizing-Data-Mixtures-for-Large-Scale-Imitation-L/01_overview.md)의 domain mixture, [DexMimicGen](../2025/ICRA/2025_ICRA_DexMimicGen-Automated-Data-Generation-for-Bimanual-Dextero/01_overview.md)의 trajectory 생성, [TRANSIC](../2025/CoRL/2025_CoRL_TRANSIC-Sim-to-Real-Policy-Transfer-by-Learning-from-Onlin/01_overview.md)의 online correction은 서로 다른 데이터 개입이다. 기존 DataMIL·HIL-SERL과 비교할 때 시연 수뿐 아니라 domain 비율, privileged state, 사람 개입 시간과 target 접근을 맞춘다. [Equivariant Diffusion Policy의 IJRR 확장](../2026/IJRR/2026_IJRR_Equivariant-diffusion-policy-for-sample-efficient-robotic/01_overview.md)은 구조적 대칭성으로 설명되는 데이터 효율을 대조한다.
+
+[Delphic](../2024/ICLR/2024_ICLR_Delphic-Offline-Reinforcement-Learning-under-Nonidentifiab/01_overview.md)과 [DML-IL](../2026/ICLR/2026_ICLR_Causal-Imitation-Learning-under-Expert-Observable-and-Expe/01_overview.md)은 숨은 정보 문제의 서로 다른 가정을 제공한다. 관측과 양립하는 모델 간 불확실성을 다루는 것과 유효한 history instrument로 식별하는 것을 구분한다. 의료/연속 제어 결과를 VLA 전이 효과로 옮겨 적지 않는다. GAP-CF·GAP-N의 기존 HOLD와 정보/비용 비교 요건은 유지한다.
+
 ## Open Questions
 
+<a id="foundation-frontier-2026"></a>
+### 기반 원전으로 최신 VLA RL의 기여를 구분하기
+
+**2026-11-12 / CURATION-HYPOTHESIS.** [REG-R15 등록](../work/update/FOUNDATION_FRONTIER_SUPPLEMENT_2026-11-12.md)의 초록·공식 출처에 기반한 비교 질문이다. 화살표는 개념 연결이며 직접 인용 관계나 실험 결과를 뜻하지 않는다.
+
+| 기반 → 후속 | 이미 알려진 내용과 확인할 가정 | 현재 연구에서 구분할 질문 |
+|---|---|---|
+| [GAE](https://arxiv.org/abs/1506.02438) → PPO·VLA RL | Advantage의 bias–variance 조절. Bootstrap·종료·할인의 시간 단위는 구현 확인 필요 | Chunk 길이 변경의 이득이 모델 표현보다 advantage/credit horizon 변경에서 오는가? |
+| [Potential-based shaping](https://people.eecs.berkeley.edu/~russell/papers/icml99-shaping.pdf) → stage/progress reward | 특정 reward transformation의 정책 불변성. 일반 learned progress reward에 자동 적용되지 않음 | 보조 reward가 탐색을 돕는 효과와 최적 행동의 목표 자체를 바꾸는 효과를 분리할 수 있는가? |
+| [UVFA](https://proceedings.mlr.press/v37/schaul15.html) → HER·HIQL·Act2Goal | 상태와 목표에 조건화한 value. [Successor Features](https://proceedings.neurips.cc/paper/2017/hash/350db081a661525235354dd3e19b8c05-Abstract.html)의 보상 전이는 같은 dynamics 가정을 구별해야 함 | Goal generalization, 언어 grounding, 다른 로봇의 dynamics 전이를 같은 성과로 세고 있지 않은가? |
+| [AWAC](https://arxiv.org/abs/2006.09359)·[Cal-QL](https://proceedings.neurips.cc/paper_files/paper/2023/hash/c44a04289beaf0a7d968a94066a1d696-Abstract-Conference.html) → VLA online adaptation | Offline 초기화·가중 행동 학습·value calibration의 기존 대안 | 초기 online 성능 하락이 의미 망각인지 value scale·policy extraction 문제인지 구분되는가? |
+| [Value bottleneck 분석](https://proceedings.neurips.cc/paper_files/paper/2024/hash/8ffb4e3118280a66b192b6f06e0e2596-Abstract-Conference.html) ↔ [Horizon Reduction](https://proceedings.neurips.cc/paper_files/paper/2025/hash/0c66099070429b9b49ad8bb19c740c22-Abstract-Conference.html) | Value 학습·정책 추출·장기 horizon은 다른 병목. Offline/goal-conditioned 결과를 모든 online VLA에 일반화하지 않음 | Critic 보조 loss를 추가하기 전에 extraction·n-step·정보 접근·실제 시간 horizon을 맞췄는가? |
+| [DART](https://proceedings.mlr.press/v78/laskey17a.html) ↔ RL recovery | 교란된 시연 수집으로 회복 관측의 coverage를 바꾸는 IL 대안 | 동일 시연·개입·reset 비용에서 recovery 이득이 RL objective 때문에 남는가? |
+
+[Options 원전](https://www.sciencedirect.com/science/article/pii/S0004370299000521)은 종료 규칙이 있는 시간 추상화의 기준이다. 고정 open-loop action chunk와 동일시하지 않는다. [D4RL](https://arxiv.org/abs/2004.07219)은 offline 데이터 조건을, [로봇 RL survey](https://journals.sagepub.com/doi/abs/10.1177/0278364913495721)와 [실물 성공 survey](https://www.annualreviews.org/content/journals/10.1146/annurev-control-030323-022510)는 데이터·reset·안전·제어 부담을 점검할 참조다. 이 등록은 기존 전이 NO-GO/HOLD를 해제하지 않는다.
+
+<a id="gap-retention-2026"></a>
+
+### RL 적응과 기존 행동 보존 — 2026-11-12 등록 연결
+
+[RL’s Razor](../2026/ICLR/2026_ICLR_RL-s-Razor-Why-Online-Reinforcement-Learning-Forgets-Less/01_overview.md)는 신규 과제 성능을 맞췄을 때 RL의 보존 이점과 정책 분포 변화의 관계를 보고한다. 따라서 RL이 망각을 일으킨다고 전제하지 않는다. 기존 과제의 초기 능력·학습률·KL·replay·같은 적응 비용을 확인한 뒤, 학습 관측에서의 작은 변화가 다른 유효 목표의 실제 행동도 설명하는지 묻는다. 이것은 초록 기반 비교 질문이며 일반적인 보존 법칙이나 새 기여의 입증이 아니다.
+
+VLA에서의 구체적인 지시쌍·추정 대상과 단순 대안은 [지시별 행동 보존](./04_vla_generalist.md#gap-instruction-retention-2026), 실행 조건은 해당 주제의 재현 문서가 소유한다.
+
+<a id="gap-allocation-2026"></a>
+### 계산 예산과 배포 목표를 고려한 다중 과제 VLA 강화학습
+
+**2026-11-09 / GAP-ALLOC-N2 / CURATION-HYPOTHESIS / 내부 비교 설계 완료·좁은 분석 후보 유지.** 지정 본문과 5개 공개 repository의 선택 경로를 대조했다. 상세 질문·대안·비교·7단계 상태는 [주제 내용](../work/research_topics/task_allocation/내용/README.md), 코드 revision·실행 경계는 [재현 방법](../work/research_topics/task_allocation/재현%20방법/README.md)과 [단일 원장](../work/research_topics/task_allocation/내용/sources.json)에 통합한다. UNIFIED의 표현 공유·HINDSIGHT의 목표 재지정·C5의 reset coverage와 구별한다.
+
+- **선행이 이미 해결한 것:** [DRATS §4·App. F.1](https://arxiv.org/html/2605.14350v1)은 worst return-gap sampling과 resampling 대 reweighting을 이미 비교한다. [VIP](https://arxiv.org/html/2602.01601v3)는 제한된 rollout 수의 variance 기반 배분을 다룬다. 일반 adaptive allocation이나 “수집/가중치를 처음 분리한다”는 주장은 제외한다.
+- **코드가 좁혀 준 질문:** VLA-RL의 공개 curriculum은 task 내부 초기 상태 선택이다. 확인한 SimpleVLA-RL/RLinf loop에서는 유효 episode 길이와 실제 계산 슬롯이 일치하지 않을 수 있고, RLinf embodied loss에는 길이 비율 보정 경로가 있다. 이는 정적 코드 사실이며 비용 크기·학습 효과를 측정한 결과가 아니다. [고정 source 근거](../work/research_topics/task_allocation/내용/sources.json)
+- **남은 연구자 질문:** 배포 task 분포와 기준 학습 surrogate를 고정할 때, 수집 배분의 이득이 실제 환경·추론·학습 예산하에서도 남는가? [PCM](https://arxiv.org/abs/2605.16154)의 chunk 계산 배분, [MPTS](https://doi.org/10.1038/s41467-026-74004-0)의 task-risk 예측 이후에도 남는 중요 조건을 찾아야 한다. 단순 길이/비용 보정이나 기존 sampler로 충분하면 새 방법 개발을 축소한다.
+
+**N2에서 구체화한 경계:** native filter는 row 제거가 아닌 mask이고 원 길이/전체 batch 분모가 유지된다. 고정 q의 p/q 보정과 정책별 적응 이력 비교를 나눴으며, 초기 상태 split 규칙·checkpoint/normalizer identity·비용 단위를 정했다. 고정 호출 비용이 같으면 inverse-cost 배분은 균등 배분과 같으므로 독립 알고리즘처럼 중복 실행하지 않는다. [식·손계산·비교 계약](../work/research_topics/task_allocation/내용/README.md#n2-contract)은 설계 근거이고 정책 효과의 증거가 아니다.
+
+**11/09 N2-R1 비실험 보완:** [새 근거·반례·설계](../work/research_topics/task_allocation/내용/README.md#nonexperimental-review)에서 Prism-GRPO/VSR을 추가 대조했다(둘 다 arXiv status). Task 평균 SR가 같아도 같은 초기 상태의 mixed-outcome group 확률은 달라질 수 있다. 이는 수작업 반례이며 실제 LIBERO 현상이 아니다. p/q 보정은 고정 surrogate 기대값을 유지하지만 variance·optimizer 경로를 유지하지 않아, Q-native/Q-fixed 차이를 목표 변경의 순수 효과로 해석하지 않는다. 다중 state calibration·U-distinct 조건부 기준선·group ESS·paired training-seed 통계를 설계했다. 알려진 항등식/단순 VLA 이식 자체의 신규성은 제외하며 좁은 실증 탐색을 유지한다. 이번 실험0, P0 실행 계약은 보존한다.
+
+**P0-PREP 완료·다음 GAP-ALLOC-P0 대기:** 현재 Mac ARM64/local Docker NVIDIA 할당 실패를 확인하고 runtime recipe·sampler/actor-facing sidecar·loss/IO fixture·launcher를 작성했다. Docker stdlib 제어24검사는 통과했지만 native tensor/IO/gradient는0이며 전체 worker/collector 연결은 미구현이다. 호환 local NVIDIA에서 bounded P0를 실행한다. 효과의 성숙도는 CURATION-HYPOTHESIS 그대로이고 외부 피드백·새 방법 기여·top-tier 출판 가능성은 미입증이다. 최초 발견 근거는 [초기 조사](../work/update/VLA_RL_ADDITIONAL_GAPS_2026-11-09.md)에 보존한다.
+
+### Reward·critic·탐색의 기여 분리 — 2026-11-08
+
+**CURATION-HYPOTHESIS.** [ReWiND](https://proceedings.mlr.press/v305/zhang25a.html)·[General Process Reward Modeling](https://openaccess.thecvf.com/content/CVPR2026/html/Tan_General_Process_Reward_Modeling_for_Robotic_Reinforcement_Learning_CVPR_2026_paper.html)·[PRIMT](https://proceedings.neurips.cc/paper_files/paper/2025/hash/e0d760e4495abf701b97c8acda111372-Abstract-Conference.html)는 언어 보상·단계 보상·합성 선호/hindsight를 이미 다룬다. 새 실패 활용 기여는 같은 라벨과 상호작용을 쓰는 모방·보상 정제 이후에도 원 과제의 held-out 이득이 남는지로 좁힌다. Reward model 학습 데이터와 새 과제별 추가 시연을 구분한다.
+
+[DEAS](https://proceedings.iclr.cc/paper_files/paper/2026/hash/68b7f71467c83d5d32275c5acbf6b588-Abstract-Conference.html)의 action-sequence value와 [Q2RL](https://roboticsproceedings.org/rss22/p153.html)의 BC 기반 value 초기화를 공동 표현 학습의 선행으로 대조한다. [TMRL](https://roboticsproceedings.org/rss22/p208.html)의 탐색 조절과 [OmniReset](https://proceedings.iclr.cc/paper_files/paper/2026/hash/8e3e3488623d64c493a7f11cf1f2e49f-Abstract-Conference.html)의 reset 다양성을 맞춘 뒤에도 효과가 남는지 확인해야 한다. 이 연결은 [새 등록](../work/update/TOP_TIER_SUPPLEMENT_2026-11-08.md)의 abstract 기반 비교이며 full-text synthesis나 실험 결과가 아니다.
+
+2026-11-03 최신 사용자 방향인 **VLA + RL** 재탐색은 [VLA Open Questions](./04_vla_generalist.md#gap-vla-rl-2026-11)에 통합한다. [42편 근거와 내부 비실험 buildup](../work/research_topics/vla_residual_update/내용/README.md)에서 residual의 독립 base-update 적응을 구체화했고 counterfactual reward coverage는 예비 후보로 남겼다. Actor 가중치·critic·replay 이전을 분리하며 모든 군에 같은 old raw data·새 critic을 제공한다. Q-filter·합성 행동 critic·DICE selective regularization은 선행이고 Fresh는 actor만 fresh다. N1은 base-action 입력 shift·Q 오류·gain/모방 대안과 A bootstrap 대 B 적응을 구분했다. 내부 검토는 완료, 현재 Mac NVIDIA 조건은 미충족이며 native image/adapter·효과·실제 외부 피드백은 미확인이다. 같은 데이터 success/return-weighted imitation·gain·Q 선택과 비교할 [실행 재개 명세](../work/research_topics/vla_residual_update/재현%20방법/README.md)를 보존한다. 기존 RETIRED 후보의 재개는 없다.
+
+### 2026 공식 보완: 데이터 구성과 배포 경험의 개입 위치
+
+[A Systematic Study of Data Modalities and Strategies for Co-training Large Behavior Models for Robot Manipulation](../2026/RSS/2026_RSS_A-Systematic-Study-of-Data-Modalities-and-Strategies-for-C/01_overview.md)와 [Emergence of Human to Robot Transfer in Vision-Language-Action Models](../2026/RSS/2026_RSS_Emergence-of-Human-to-Robot-Transfer-in-Vision-Language-Ac/01_overview.md)는 이종 자료의 학습 단계·다양성 조건을, [Dejavu](../2026/CVPR/2026_CVPR_Dejavu-Towards-Experience-Feedback-Learning-for-Embodied-I/01_overview.md)는 검색 경험을 이용하는 RL residual을 비교할 근거다. 모두 abstract/project 기반 연결이다. 같은 robot-data/compute에서 modality 효과를 분리하고, 성공 경험만 쌓는 bank의 이득과 residual 학습의 이득을 구분해야 한다. Frozen backbone을 전체 시스템 무학습으로 표현하지 않는다. 기존 RL 전이 후보의 판단을 자동 재개하지 않는다.
+
+
+2026-11-01 curation 연결: [Diagnosing Compositional Generalization](../2026/CoRL/2026_CoRL_Diagnosing-Compositional-Generalization-in-Sequential-Robo/01_overview.md)은 지시 공간 coverage와 단계 의존성을 데이터 구성 문제로 읽을 NEXT 선행이다. 같은 demonstration 예산에서 구성만 바꾼 결과와 policy 입력·분해를 바꾼 결과를 구별해야 한다. [집합·수량 질문](./04_vla_generalist.md#gap-object-set-2026)의 반복 대조와 연결하되 동일 모델 재현이나 사용자 정독으로 표시하지 않는다.
+
 현재 후보 판정은 [주제별 요약](../work/research_candidates/summaries/README.md)을 따른다. 아래 질문은 `CURATION-HYPOTHESIS`이며 재개 승인이 아니다.
+
+**2026-10-27 GAP-S2 평가 경계:** 학습 action 재사용·test 데이터 누출·OOD 성능 저하는 동의어가 아니다. [ALT, ICLR 2026](https://proceedings.iclr.cc/paper_files/paper/2026/hash/122ea6470232ee5e79a2649243348005-Abstract-Conference.html)의 희소 데이터 retrieval 결과를 반대 설명으로 포함하고 그룹 split·task validity·nearest-neighbor/BC 이후 남는 질문부터 확인한다. 일반 robustness/암기 benchmark는 이번에 채택하지 않았다. DATA-TRANSFER/C6는 재개하지 않으며 [종료 평가 질문](./04_vla_generalist.md#gap-termination-2026)은 별도 비교 계약이다. [GAP-S2 근거](../work/update/VLA_GAP_RESELECTION_2026-10-27.md).
+
 
 | 질문 | 구별할 예측 | 최소 대조·중단 조건 | 근거/판정 |
 |---|---|---|---|
@@ -219,3 +340,44 @@ TD → Q-Learning → REINFORCE/Policy-Gradient Theorem → PILCO/TRPO/PPO/SAC/M
 | RL 전이 대 imitation | 같은 성공/실패 데이터·interaction 예산에서 RL 이득이 selection/return-weighted imitation을 넘는가? | Native base competence를 먼저 확인한다. 초기 전이 연구는 RETIRED이며 새 승인·qualification 없이 재개하지 않는다. | [검토 근거](../work/research_candidates/summaries/00_CROSS_EMBODIMENT_RL.md) |
 | C1 관측의 선택 가치 | Look/wait/immediate의 순위가 상태에 따라 교차하고 가용 cue로 예측되는가? | 동일 물리 시간·자세의 one-step predictor/규칙 대조가 필요하다. 관측 개선만으로 RL 필요성을 주장하지 않는다. | [검토 근거](../work/research_candidates/2026-10-20_vla_rl/C1_REVIEW.md) |
 | C2 지시 coverage | 동일 reward label/data의 execution triple에서 RL의 추가 가치가 있는가? | 현재 label·coverage와 runtime 미충족으로 NO-GO다. 부분 route negative를 완전한 supervision으로 확대하지 않는다. | [검토 근거](../work/research_candidates/2026-10-20_vla_rl/C2_BUILDUP_RESULT.md) |
+
+2026-10-23 추가 조사에서 data selection·counterfactual supervision·시연 다양성 자체의 선행이 확인됐다. DataMIL·CAST·ECT와 비교한 **데이터 보완 종류의 선택** 질문은 [VLA Open Questions](./04_vla_generalist.md#gap-data-2026)에 통합한다. ECT의 직접 충돌 때문에 보류하며, 기존 C2/E1 또는 RL 전이 연구를 재개하는 근거로 사용하지 않는다.
+
+<a id="gap-causal-2026"></a>
+### GAP-CAUSAL — 편향된 offline data에서 무엇을 알 수 있고, 어떤 추가 정보가 필요한가?
+
+- 갱신: 2026-10-23, **GAP-CF1·CF2 DONE**. `CURATION-HYPOTHESIS` 유지; 현재 공개 자료를 쓰는 설계는 문헌 진단으로 종료한다. [14편 비교·반례](../work/update/CAUSAL_INFORMATION_COVERAGE_REVIEW_2026-10-23.md) · [DROID/Bridge/OXE/CIVIL 자료 충분성](../work/update/CAUSAL_DATA_SUFFICIENCY_REVIEW_2026-10-23.md) · [CF2 source/code ledger](../work/sources/causal_data_sufficiency_review_2026-10-23.json).
+- **이미 알려진 답:** [Kausik, AISTATS 2024](https://proceedings.mlr.press/v238/kausik24a.html)의 구조별 식별, [Two-way Deconfounder, NeurIPS 2024](https://proceedings.neurips.cc/paper_files/paper/2024/hash/8ecf25e3a462e9bb1e29662dfe7258fe-Abstract-Conference.html)의 latent 구조, [DML-IL, ICLR 2026](https://proceedings.iclr.cc/paper_files/paper/2026/hash/4415e8cb0741bc0beb79b316f0856108-Abstract-Conference.html)의 history IV, [CFQL, ICML 2026](https://proceedings.mlr.press/v306/li26ja.html)의 연속 flow 정책이 있다. 일반 deconfounding/VLA 적용 자체를 기여로 삼지 않는다. [CIVIL, Autonomous Robots 2026 §7](https://link.springer.com/article/10.1007/s10514-026-10266-3)은 추가 학습용 cue와 더 많은 시연을 같은 수집 시간에서 이미 비교한다.
+- **식별 경계:** confounder는 특정 action effect의 공통 원인인지 먼저 정의한다. Partial observability·shortcut·model 내부 activation 개입은 같은 개념이 아니다. Marginal action 빈도는 hidden condition별 support를 보장하지 않으며, cue를 기록해도 빠진 행동의 outcome이 생기지는 않는다. IV validity·known graph·noise horizon도 별도 가정이다. 반례와 실제 source 경계는 report에 둔다.
+- **남길 질문 — 연구자 해석:** 배포 정보와 수집 비용을 고정할 때, train-only cue 추가와 통제된 행동 수집 중 무엇이 held-out **정책 선택 오류/실제 성공**을 개선할지 예측하는 조건이 있는가? 좁아진 bound와 옳은 순위는 별도이며, 기존 CIVIL/Delphic/CFQL 및 active allocation을 넘는 예측은 아직 없다.
+- **경쟁 설명·최소 비교:** 원자료/cue-only/support-only/둘 모두, BC/history BC·관측 정렬·표적 수집·cue-supervised representation을 같은 budget으로 비교한다. 식별 가정에 맞는 causal estimator만 추가한다. Episode/시연자/context holdout, train-only 대 inference cue, intervention/human time/compute 비용을 분리한다. Factual/counterfactual text mask가 proprio도 지우는지 확인한다.
+- **기각·축소:** 생성 모형과 hidden condition별 support를 통제한 비교에서 단순 coverage/정렬 수정이 설명하면 causal 방법 주장을 줄인다. 관측 빈도만 맞춘 것으로 hidden confounding을 기각하지 않는다. Oracle/test leakage, invalid IV, 선택에 영향 없는 bound 개선은 충분한 근거가 아니다. 새로운 조건 예측 없는 cue-versus-demo 비교도 독립 주제로 채택하지 않는다.
+- **자료 심사 결과:** DROID/Bridge의 사후 언어, success-only loader, command와 도달 상태 기반 action의 차이, OXE의 coarse alignment는 숨은 조건의 support를 대신하지 못한다. CIVIL에는 비용 기록 code와 실제 선행 비교가 있으나, 확인한 공개 경로에서 전체 participant/cue/cost/subset/native outcome 연결은 미확보다. CALVIN 합성 cue 경로는 자연스러운 human 정보·비용 검증과 별개다. 구체적 source 위치와 범위는 CF2 report에 둔다.
+- **판정·재심사:** **일반 방법/단순 recipe 비교 NO-GO; 현재 공개 자료 설계 종료·문헌 진단 보존**. 행동 전 정보·원본 join·수집 비용·평가가 연결된 새 자료 또는 정당화된 식별 설계와 단순 대안 이후의 조건 예측이 확보될 때 재심사한다. 이는 causal learning 분야 전체의 NO-GO가 아니다. 같은 metadata 반복·GPU 확보만으로 CF3/학습을 시작하지 않으며 초기 RL 전이·C2·E1/E2 판정도 유지한다.
+
+<a id="gap-data-transfer-2026"></a>
+### GAP-DATA-TRANSFER — 좋은 학습 데이터의 선택 기준은 모델과 작업이 바뀌어도 유지되는가?
+
+- 갱신: 2026-10-26, GAP-N4 비실험 심사 반영. `CURATION-HYPOTHESIS`; data-centric ML·IL·generalization 질문. 기존 GAP-DATA의 relabel/collect 선택과 별개로 **이미 있는 데이터의 선택 효과가 다른 policy로 전달되는가**를 묻는다.
+- **이미 알려진 답:** [Data Scaling Laws, ICLR 2025](https://proceedings.iclr.cc/paper_files/paper/2025/hash/88b7b2c896506daabc8d3fd587055167-Abstract-Conference.html)은 다양성과 시연량의 관계를 분석하고, [What Matters, ICLR 2025](https://proceedings.iclr.cc/paper_files/paper/2025/hash/16466b6c95c5924784486ac5a3feeb65-Abstract-Conference.html)은 dataset 구성과 retrieval을 다룬다. [DataMIL, ICLR 2026](https://proceedings.iclr.cc/paper_files/paper/2026/hash/033d9e8dbbbc0ad90e59222cf1db0fc2-Abstract-Conference.html)은 policy 성능을 반영하는 선택의 직접 기준이다. 따라서 “quality filtering”, “diversity”, “성능 기반 선택” 자체는 기여 후보가 아니다.
+- **GAP-W2에서 확인한 직접 충돌:** [CUPID, CoRL 2025](https://proceedings.mlr.press/v305/agia25a.html)의 [§7.3·App. C.6](https://arxiv.org/html/2506.19121v2)는 DP가 고른 데이터를 π₀에 이전하는 실험을 이미 한다. [ATHENA §6.4](https://arxiv.org/html/2606.16208v1)는 π₀→π₀.₅ subset 전이를 보고한다(CoRL 2026 저자 표기, 공식 채택 미검증). [Smoothness audit §5.1·7](https://arxiv.org/html/2610.17427v1)은 GMM-BC와 DP에서 선택 효과가 달라지는 사례를 보고한다. 후자는 VLA 실험이 아니며 RoboPAD workshop 저자 표기를 NeurIPS main-track으로 취급하지 않는다. 전이 성공과 설정 의존성이 모두 보고되어 있으므로 두 현상의 존재 자체는 새 공백이 아니다.
+- **좁힌 질문 — 연구자 해석:** **어떤 측정 가능한 조건에서 source subset 재사용을 중단하고 target-specific 재선택을 해야 하는가?** 데이터 자체의 불안정 행동 제거와 특정 policy의 mode 표현/실행 한계를 구별하고, 별도 policy/task holdout에서 재선택의 이득·비용을 사전에 예측해야 한다. “모델에 따라 다르다”는 사후 설명을 넘는 기준은 아직 없다. 서로 다른 task·모델의 긍정/부정 결과를 모순으로 취급하지 않는다.
+- **최소 비교 설계:** 같은 data pool에서 random, 다양성/성공률/retrieval 기준, policy-aware 선택을 비교한다. Pool 크기·학습 step/token·subset 선택 계산을 고정하고 scene/object/trajectory 단위 holdout을 둔다. Source/target policy와 target-specific 재선택을 교차 비교해 재선택 대비 성능 차이·조건별 성공·선택/학습 비용을 측정한다. [DARP, ICLR 2026](https://proceedings.iclr.cc/paper_files/paper/2026/hash/8c2ecd140ebe227a531edc9a0c3b69d4-Abstract-Conference.html) 같은 inference retrieval은 추가 연산과 사용 데이터를 별도로 계산한다.
+- **반증·기여 가능성:** 단순 중복 제거·task 분포 일치·추가 학습량으로 모두 설명되면 새 선택 알고리즘 주장을 줄인다. 순위가 실제로 안정적이면 비싼 selector를 매 모델마다 학습할 필요가 없는 조건을 제시하는 결과도 가치가 있다. 반대로 예측 가능한 역전 경계가 확인되면 재사용 가능한 선택 지침이나 transfer-aware 선택으로 발전시킬 수 있다.
+- **비교 계약 보강:** `S_A→A`, `S_A→B`, `S_B→B`를 교차하며 `J_B(S_B)-J_B(S_A)`는 target selector 대비 차이이고 최적 subset regret가 아니다. Subset 수·유효 action 수, scene/trajectory split, selection rollout과 최종 test를 구분한다. DataMIL의 proxy demo와 CUPID/ATHENA의 rollout 비용도 분리한다. Pretraining·history·chunk·optimizer가 함께 바뀌면 architecture 단독 원인으로 해석하지 않는다. [상세 초안·코드 감사](../work/update/GAP_W2_COMPARATIVE_REVIEW_2026-10-23.md).
+- **현재 판단·재검토:** **일반 전이 주장 NO-GO / 조건 예측 후보 HOLD**. 직접 비교 5편과 scaling 배경 1편, DataMIL/CUPID/smoothness source를 대조했다. 새로운 조건 예측과 ID·split·target evaluator 구성이 구체화되면 작은 pilot을 검토할 수 있으나 현재 실행 manifest는 없다. GPU 확보만으로 시작하지 않는다. 사용자 읽기 상태와 기존 E1/C2 판정은 유지한다.
+
+**2026-10-25 GAP-N1 → N2 — 입력 정보 조건과 source 계약:** [N1 설계](../work/update/PROXY_OBSERVATION_CONTRACT_REVIEW_2026-10-25.md)는 selector에 없는 과거 cue를 target VLA가 사용할 때의 subset 전이를 묻는다. 같은 target B에서 cue 접근/동일 수의 무관 frame 제거/단순 층화·tuning 대안을 비교한다. 정보 부족이 해로운 선택을 보장하지 않는 반례와 STAFF·proxy 학습률 선행의 경계를 유지한다. [N2 심사](../work/update/PROXY_OBSERVATION_QUALIFICATION_REVIEW_2026-10-25.md)는 두 revision의 지정 source를 추적했다. FrameSamp index는 현재까지이며 mask가 attention에 전달되고, 선택한 perceptual 경로에서 정답 subgoal 문자열은 제거된다. 다만 raw/global ID·group split 대응표, 관측/action 시간 정렬·encoder provenance, 별도 language goal과 task/planner/evaluator의 동일 target 연결이 필요하다. Native pickup은 높이 threshold여서 별도 첫 선택 event 정의도 미완성이다. All-masked memory를 무정보 입력으로 가정하지 않는다. N2는 현재 자산 설계를 REVISE/HOLD로 두고 수정 packet을 요구했다. Native 효과·신규성은 미입증이며 기존 memory/causal 및 C1/E1/E2 판정은 유지한다.
+
+**GAP-N3 현재 적용:** [수정 packet과 검사](../work/update/PROXY_OBSERVATION_REPAIR_REVIEW_2026-10-25.md)에서 goal/planner/evaluator·metadata patch와 identity/time/input/mask helper를 만들었다. Docker 계약 17/17과 임시 원본 patch 적용/hash 대조는 통과했다. 실제 HDF5/모델 adapter 연결·관측 equality·native 효과는 미검증이며, 보조 접근 구간 event를 검증된 “첫 선택률”로 취급하지 않는다. **N3-A DONE, 전체 N3 PARTIAL; 일반 방법 NO-GO·연구 채택/수집/학습 HOLD**다. N3-B는 적합한 로컬 Docker의 작은 native fixture qualification 대기이며 현재 GPU allocation은 실패했다. Source/mock PASS로 신규성·실험-supported gap을 주장하지 않는다.
+
+**2026-10-26 GAP-N4 — 선행·효과 해석 보정:** [비실험 검토](../work/update/PROXY_SELECTION_IDENTIFIABILITY_REVIEW_2026-10-26.md)는 [DataMIL v2 App. C.2](https://arxiv.org/html/2505.09603v2)의 선택/최종 학습 양쪽 goal masking을 확인했다. 새로 확인한 [paired instruction corpus-selection preprint](https://arxiv.org/abs/2610.29646)는 진단의 상관과 실제 선택 가치를 구별하는 직접 선행이다(학회 채택 미확인). 남는 비교는 **selector의 cue 접근만 바꾸고 최종 B는 원래 history를 유지**하는 경우다. N1의 두 차이를 빼면 `J_ctrl−J_minus`가 되므로 이를 selector×target-memory interaction이라 부르지 않는다. Top-k ID가 같으면 순위 변화만으로 선택 효과를 주장할 수 없고, episode/group/token 비용과 단순 층화·oracle balance를 구분한다. 8 test group×3 배치는 독립 scene 24개가 아니며, N3 접근 event에 1/3 성공 상한을 적용하지 않는다. **진단 REVISE/HOLD, N3 gate NOT_MET 유지**. 같은 문헌의 반복 조사 대신 새 증거 또는 N3-B qualification 이후 미결 분석/실행 명세를 채운다. 세부 기각 규칙은 N4 report를 따른다.
+
+<a id="humanoid-data-2026"></a>
+## 인간·휴머노이드 자료의 역할 구분 — 2026-11-16
+
+**CURATION-HYPOTHESIS / abstract·공식 data schema 기반.** [EgoDex](../2026/ICLR/2026_ICLR_EgoDex-Learning-Dexterous-Manipulation-from-Large-Scale-Eg/01_overview.md)는 인간 손 궤적 예측 자료이고 [Humanoid Everyday](../2025/arXiv/2025_arXiv_Humanoid-Everyday-A-Comprehensive-Robotic-Dataset-for-Open/01_overview.md)는 로봇별 action schema를 가진 시연 자료다. Ψ₀ recipe의 전제이지만 손 예측과 robot closed-loop 성공을 같은 지표로 해석하지 않는다.
+
+Dataset 원출처를 우선한다. Ψ₀의 EgoDex900M 표기는 원자료 약90M과 불일치한다. HE 전체 corpus와 Ψ₀에서 사용한31h도 구별한다. [EgoDex 공식 schema/split](https://github.com/apple-aiml-research/ml-egodex) · [HE 공식 schema](https://github.com/physical-superintelligence-lab/Humanoid-Everyday).
+
+**Open question:** 같은 robot finetune/interaction budget에서 인간 pose 사전학습의 이득이 데이터 품질·retargeting·과제 중복 이후에도 남는가? RL 효과를 판단하기 전에 data recipe와 weighted imitation을 통제한다. 문헌 연결이며 실험 결과가 아니다.

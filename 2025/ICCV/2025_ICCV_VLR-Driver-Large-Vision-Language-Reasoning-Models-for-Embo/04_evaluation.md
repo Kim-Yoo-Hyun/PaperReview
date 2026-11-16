@@ -4,6 +4,8 @@
 > Evidence maturity: `FULL_TEXT_CHECKED`.
 > Analysis basis: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/ICCV2025/html/Kong_VLR-Driver_Large_Vision-Language-Reasoning_Models_for_Embodied_Autonomous_Driving_ICCV_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/ICCV2025/papers/Kong_VLR-Driver_Large_Vision-Language-Reasoning_Models_for_Embodied_Autonomous_Driving_ICCV_2025_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
+> DOC-QA2 targeted source review: 2026-10-23; PDF pp. 6. 손상 구간·직접 연결된 표 분류만 원문 이미지와 대조했다. 전체 주장 정독·실험 검증·reading status 승격을 뜻하지 않는다. [URL·PDF hash·수정 기록](../../../work/sources/pdf_note_review_followup_2026-10-23.json).
+
 ## Evaluation in One Sentence
 
 PDF body evaluation/result cue (p. 7 (5.2. Metrics), p. 8 (5.3. Comparisons with Existing Methods), p. 7 (Figure/Table caption), p. 8 (5.3. Comparisons with Existing Methods), p. 6 (4.1. Data Collection)): We employ four core metrics to evaluate AD performance: driving score (DS), route completion (RC), infraction score (IS), and success rate (SR).
@@ -131,7 +133,7 @@ PDF body evaluation/result cue (p. 7 (5.2. Metrics), p. 8 (5.3. Comparisons with
 
 | Body reproducibility cue | Anchor |
 |---|---|
-| The forward pass is computed as: y = W ′x =  W0 + α r B · A  x, (2) where y ... | p. 6 (3.3. Training Paradigm) |
+| LoRA parameterization y=(W₀+(α/r)BA)x; method 식이며 evaluation outcome이 아님 | PDF p. 6 §3.3 / Eq. (2) |
 | (4) We extend GRPO by introducing reasoning Step-GRPO, a supervised reasoning decision process that structures the output into multiple steps based on the CoT ... | p. 6 (3.3. Training Paradigm) |
 | Specifically, we use ViT-g/14 from EVACLIP [29] as the vision encoder and LLaVA-NeXT-Video7B [50] as the VLM. | p. 7 (5.1. Experimental Setup) |
 | In this study, we employ pre-trained LLaVA-NeXTVideo [50] as the VLM and CLIP [29] as the visual encoder. | p. 4 (3.1. Overview) |

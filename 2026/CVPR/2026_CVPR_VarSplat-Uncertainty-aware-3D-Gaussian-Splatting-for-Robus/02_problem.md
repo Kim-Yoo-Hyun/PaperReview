@@ -4,6 +4,8 @@
 > Evidence maturity: `FULL_TEXT_CHECKED`.
 > Analysis basis: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2026/html/Tran_VarSplat_Uncertainty-aware_3D_Gaussian_Splatting_for_Robust_RGB-D_SLAM_CVPR_2026_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2026/papers/Tran_VarSplat_Uncertainty-aware_3D_Gaussian_Splatting_for_Robust_RGB-D_SLAM_CVPR_2026_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
+> DOC-QA1 (2026-10-23): 제어문자·깨진 추출 구간과 직접 연결된 표 항목을 PDF 페이지 이미지와 대조했다. 확인 범위·원문 URL·페이지·수정 이력은 [대조 기록](../../../work/sources/pdf_note_review_2026-10-23.json)에 있다. 노트 전체의 정독이나 모든 기존 주장에 대한 재검증을 뜻하지 않으며 reading status는 유지한다.
+
 ## Problem in One Sentence
 
 PDF body framing (p. 2 (1. Introduction), p. 2 (1. Introduction)): To address these challenges, we introduce VarSplat, an uncertainty-aware RGB-D SLAM system leveraging 3D Gaussian Splatting.
@@ -51,7 +53,7 @@ PDF body contribution framing (p. 2 (1. Introduction), p. 3 (3. Method), p. 2 (1
 - **p. 3 / 3. Method - extractive body cue:** To address these issues, we introduce a novel uncertainty quantification pipeline based on per-pixel uncertainty map rendering.
 - **p. 2 / 1. Introduction - extractive body cue:** To address these challenges, we introduce VarSplat, an uncertainty-aware RGB-D SLAM system leveraging 3D Gaussian Splatting.
 - **p. 4 / 3.1. Per-pixel uncertainty rendering - extractive body cue:** By sharing the same single-pass rasterization as color and depth, V enables efficient, online, in-the-loop reliability estimation.
-- **p. 5 / 3.3. Downstream Pose Estimation - extractive body cue:** Ltrack = X λc  f wp⊙∥ˆI -I∥1  +(1-λc)∥ˆD-D∥1 (17) where 0 ≤λc ≤1 balances the contribution between photometric and geometric losses, and f ...
+- **원문 대조:** Tracking loss는 uncertainty weight를 곱한 RGB L1 residual과 depth L1 residual을 λ_c로 조합한다. Tracking 중 variance parameter를 고정하고 weight 경로의 gradient를 차단한다. ([PDF p. 5](https://openaccess.thecvf.com/content/CVPR2026/papers/Tran_VarSplat_Uncertainty-aware_3D_Gaussian_Splatting_for_Robust_RGB-D_SLAM_CVPR_2026_paper.pdf#page=5), §3.3 Downstream Pose Estimation, Eq. (17)).
 
 ## Assumptions and Failure Boundary
 

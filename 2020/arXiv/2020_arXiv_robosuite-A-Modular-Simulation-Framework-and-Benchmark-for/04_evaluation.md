@@ -4,6 +4,8 @@
 > Evidence maturity: `FULL_TEXT_CHECKED`.
 > Analysis basis: full-text PDF body checked on 2026-09-03 (19 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2009.12293; PDF retrieval source: https://arxiv.org/abs/2009.12293. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
+> DOC-QA2 targeted source review: 2026-10-23; PDF pp. 3. 손상 구간·직접 연결된 표 분류만 원문 이미지와 대조했다. 전체 주장 정독·실험 검증·reading status 승격을 뜻하지 않는다. [URL·PDF hash·수정 기록](../../../work/sources/pdf_note_review_followup_2026-10-23.json).
+
 ## Evaluation in One Sentence
 
 PDF body evaluation/result cue (p. 8 (1 Introduction), p. 9 (1 Introduction), p. 11 (1 Introduction), p. 7 (1 Introduction), p. 13 (1 Introduction), p. 15 (1 Introduction)): This newest model boasts an improved footprint and embedded force-torque sensor in its end effector.
@@ -120,7 +122,7 @@ PDF body evaluation/result cue (p. 8 (1 Introduction), p. 9 (1 Introduction), p.
 - **p. 11 / 1 Introduction - extractive body cue:** 2.4 Objects Objects, such as boxes and cans, are essential to building manipulation environments.
 - **p. 13 / 1 Introduction - extractive body cue:** 3 Benchmark Environments 3.1 Task Descriptions We provide a brief description of each environment below, along with a sequence of frames that depict a successful ...
 - **p. 15 / 1 Introduction - extractive body cue:** All agents were trained for 500 epochs with 500 steps per episode, and utilize the same standardized algorithm hyperparameters (see our benchmarking repo above for ...
-- **p. 3 / 1 Introduction - extractive body cue:** ,2 'HYLFH 3ROLF\ 5RERW 0RGHO 2EMHFW 0RGHO $UHQD 7DVN (QYLURQPHQW 5RERW 0X-R&R (QJLQH 6LPXODWLRQ0RGHO &RQWUROOHU REVHUYDWLRQV RU DFWLRQV WRUTXHV URERVXLWH UHZDUGV PHWDGDWD 6HQVRU VLPGDWD Figure ...
+- **PDF p. 3, Fig. 2 (DOC-QA2 원문 대조):** Actor 또는 I/O device가 environment에 action을 전달하고 controller가 torque로 변환해 MuJoCo에서 실행한다. Sensors의 observations와 environment의 rewards/metadata가 actor에 돌아간다. Task model은 robot·arena·object models로 구성된다. 그림 font의 잘못된 문자 매핑을 도식 및 caption으로 대체했다.
 - **p. 5 / 1 Introduction - extractive body cue:** 2.2 Robots Robots are a key component in robosuite, serving as the embodiment of the agent that interacts within the environment. robosuite captures this level ...
 
 ## Generalization and Failure Cases

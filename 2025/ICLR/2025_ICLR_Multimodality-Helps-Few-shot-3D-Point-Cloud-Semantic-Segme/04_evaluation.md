@@ -4,6 +4,8 @@
 > Evidence maturity: `FULL_TEXT_CHECKED`.
 > Analysis basis: full-text PDF body checked on 2026-09-03 (22 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=jXvwJ51vcK; public full-text mirror used for retrieval (canonical paper source retained): https://chatpaper.com/api/v1/articles/download/111762. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
+> DOC-QA2 targeted source review: 2026-10-23; PDF pp. 4. 손상 구간·직접 연결된 표 분류만 원문 이미지와 대조했다. 전체 주장 정독·실험 검증·reading status 승격을 뜻하지 않는다. [URL·PDF hash·수정 기록](../../../work/sources/pdf_note_review_followup_2026-10-23.json).
+
 ## Evaluation in One Sentence
 
 PDF body evaluation/result cue (p. 9 (Figure/Table caption), p. 8 (4 EXPERIMENTS), p. 10 (4 EXPERIMENTS), p. 10 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 2 (Figure/Table caption)): Figure 4: Qualitative comparison of predictions from each head and our final prediction using TACC (Default) in the 1-way 1-shot setting on the S3DIS dataset. The target classes in the ...
@@ -127,7 +129,7 @@ PDF body evaluation/result cue (p. 9 (Figure/Table caption), p. 8 (4 EXPERIMENTS
 - **p. 8 / 4 EXPERIMENTS - extractive body cue:** The initial pretraining phase spans 100 epochs, while the subsequent meta-learning phase includes 40,000 episodes, following An et al.
 - **p. 8 / 4 EXPERIMENTS - extractive body cue:** (2024), the evaluation sets consist of 1,000 episodes per class in the 1-way setting and 100 episodes per class combination in the 2-way setting.
 - **p. 18 / B ADDITIONAL IMPLEMENTATION DETAILS - extractive body cue:** Training and inference are conducted on four RTX 3090 GPUs.
-- **p. 4 / 3 METHODOLOGY - extractive body cue:** Each episode corresponds to an N-way K-shot segmentation task, containing a support set S =  {Xn,k s , Yn,k s }K k=1 N n=1 ...
+- **PDF p. 4, §3.1 (DOC-QA2 원문 대조):** N-way K-shot episode는 class별 K개의 point-cloud/point-label support와 query set으로 구성된다. Multimodal setting은 class names를 추가하며 2D RGB는 pretraining에 사용하고 meta-learning/inference에는 요구하지 않는다.
 - **p. 4 / 3 METHODOLOGY - extractive body cue:** The goal of FS-PCS is to segment the query samples {Xn q}N n=1 into N target classes and ‘background' by leveraging the knowledge of the ...
 
 ## Generalization and Failure Cases

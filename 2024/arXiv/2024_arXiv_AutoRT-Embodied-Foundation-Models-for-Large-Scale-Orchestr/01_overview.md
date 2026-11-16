@@ -12,6 +12,7 @@
 - Tier: NEXT
 - Tags: Robotics, robot data, Foundation Models, Fleet Learning, Google DeepMind
 - Official paper: https://deepmind.google/research/publications/48151/
+- Preprint: https://arxiv.org/abs/2401.12963 — 2026-11-06 official abstract/project metadata 확인; 정식 conference 게재로 승격하지 않음.
 - Full-text retrieval: https://deepmind.google/research/publications/48151/
 - Code/Project: not identified
 - Paper type: theory_or_foundation

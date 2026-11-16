@@ -4,6 +4,8 @@
 > Evidence maturity: `FULL_TEXT_CHECKED`.
 > Analysis basis: full-text PDF body checked on 2026-09-03 (27 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2112.12143; PDF retrieval source: https://arxiv.org/pdf/2112.12143. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
+> DOC-QA2 targeted source review: 2026-10-23; PDF pp. 13. 손상 구간·직접 연결된 표 분류만 원문 이미지와 대조했다. 전체 주장 정독·실험 검증·reading status 승격을 뜻하지 않는다. [URL·PDF hash·수정 기록](../../../work/sources/pdf_note_review_followup_2026-10-23.json).
+
 ## Evaluation in One Sentence
 
 PDF body evaluation/result cue (p. 11 (4 Experiments), p. 12 (4 Experiments), p. 12 (4 Experiments), p. 11 (4 Experiments), p. 13 (4 Experiments), p. 14 (4 Experiments)): OpenSeg significantly outperforms pre-trained ALIGN [23]: OpenSeg trained on COCO outperforms ALIGN baseline on all of the benchmarks significantly.
@@ -93,7 +95,7 @@ PDF body evaluation/result cue (p. 11 (4 Experiments), p. 12 (4 Experiments), p.
 | Then we discuss the experimental results with our open-vocabulary baselines and state-of-the-art open-vocabulary and zero-shot methods. | comparison identity and matched condition | p. 10 (4 Experiments) |
 | OpenSeg significantly outperforms pre-trained ALIGN [23]: OpenSeg trained on COCO outperforms ALIGN baseline on all of the benchmarks significantly. | comparison identity and matched condition | p. 11 (4 Experiments) |
 | ALIGN w/proposal baseline: The ALIGN, LSeg and LSeg+ baselines are methods that perform visual-semantic alignments without explicit visual grouping. | comparison identity and matched condition | p. 10 (4 Experiments) |
-| Narr.  8.8 12.2 28.6 48.2 72.2 4.4 Ablation Experiments Importance of backbone initialization: In order to save the computation, we initialize OpenSeg from ... | comparison identity and matched condition | p. 13 (4 Experiments) |
+| OpenSeg eff-b7 + prompt engineering: A-847/PC-459/A-150/PC-59/PAS-20 mIoU=8.8/12.2/28.6/48.2/72.2; COCO+Localized Narratives training. | Table 2 마지막 결과 행; target-dataset training 표시는 × | PDF p. 13 Table 2 |
 | For example, on PC-459 OpenSeg outperforms ALIGN and ALIGN w/proposals by +5.4 and +4.2 mIoU, respectively. | comparison identity and matched condition | p. 11 (4 Experiments) |
 | This model significantly outperforms the strongest LSeg model with ViT-L backbone (+19.9 mIoU on PASCAL-20). | comparison identity and matched condition | p. 12 (4 Experiments) |
 
@@ -110,7 +112,7 @@ PDF body evaluation/result cue (p. 11 (4 Experiments), p. 12 (4 Experiments), p.
 |---|---|---|
 | ALIGN w/proposal baseline: The ALIGN, LSeg and LSeg+ baselines are methods that perform visual-semantic alignments without explicit visual grouping. | component/input/data sensitivity | p. 10 (4 Experiments) |
 | This method performs inference without mask proposals. | component/input/data sensitivity | p. 13 (4 Experiments) |
-| Narr.  8.8 12.2 28.6 48.2 72.2 4.4 Ablation Experiments Importance of backbone initialization: In order to save the computation, we initialize OpenSeg from ... | component/input/data sensitivity | p. 13 (4 Experiments) |
+| Backbone initialization은 random / NoisyStudent / ALIGN을 비교한다. Text encoder는 pretrained ALIGN으로 유지하며 vision-backbone learning rate와 training steps는 조건별로 조정된다. | Table 3 ablation; 순수 동일-budget initialization 비교로 단정하지 않음 | PDF p. 13 §4.4 / Table 3 |
 | This procedure removes conjunctions, pronouns, adverbs, verbs, etc. which reduces the noises. | component/input/data sensitivity | p. 14 (4 Experiments) |
 | Figure 8. Predictions of OpenSeg on random examples in the A-150 dataset (Part1). For each example, top left is the input image, top right ... | component/input/data sensitivity | p. 24 (Figure/Table caption) |
 | Since we initialize the backbone of OpenSeg from ALIGN's pretrained checkpoint, we use ALIGN as a baseline. | component/input/data sensitivity | p. 10 (4 Experiments) |

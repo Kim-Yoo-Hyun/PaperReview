@@ -4,6 +4,8 @@
 > Evidence maturity: `FULL_TEXT_CHECKED`.
 > Analysis basis: full-text PDF body checked on 2026-09-03 (30 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=7BLXhmWvwF; PDF retrieval source: https://arxiv.org/pdf/2502.07005. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
+> DOC-QA1 (2026-10-23): 제어문자·깨진 추출 구간과 직접 연결된 표 항목을 PDF 페이지 이미지와 대조했다. 확인 범위·원문 URL·페이지·수정 이력은 [대조 기록](../../../work/sources/pdf_note_review_2026-10-23.json)에 있다. 노트 전체의 정독이나 모든 기존 주장에 대한 재검증을 뜻하지 않으며 reading status는 유지한다.
+
 ## Evaluation in One Sentence
 
 PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 25 (Figure/Table caption), p. 9 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS)): Figure 4: Performance of different models on the Cloth-Hanging task across varying sample spaces. Overall, performance improves as the sample space decreases. In terms of final performance, het- erogeneous models ...
@@ -148,7 +150,7 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 25 (Figure/Table
 | Additionally, adding attention significantly increases training time without improving performance, e.g., for HEPi it almost doubled. | p. 9 (4 EXPERIMENTS) |
 | We introduce two categories of tasks: rigid manipulation on diverse geometries and deformable object manipulation, all implemented in NVIDIA IsaacLab (Mittal et al., 2023) ... | p. 6 (4 EXPERIMENTS) |
 | Results are averaged over 10 seeds, using IQM with 95% confidence intervals. | p. 7 (4 EXPERIMENTS) |
-| The value function is computed as V (s) = MLPouter  P v∈V MLPinner(sv)  , where sv represents the feature of node v. | p. 5 (3 METHODOLOGY) |
+| 원문 대조: Value function은 각 node feature에 inner MLP를 적용하고 모든 node에 대해 합산한 뒤 outer MLP를 통과시키는 DeepSets 구조다. Node 순서에 대한 permutation invariance를 유지한다. ([PDF p. 5](https://arxiv.org/pdf/2502.07005#page=5), Value Function) | [PDF p. 5](https://arxiv.org/pdf/2502.07005#page=5), Value Function |
 | This, however, requires careful hyperparameters turning to make it work stably, as pointed out by Andrychowicz et al. | p. 5 (3 METHODOLOGY) |
 
 | Audit field | Current status |

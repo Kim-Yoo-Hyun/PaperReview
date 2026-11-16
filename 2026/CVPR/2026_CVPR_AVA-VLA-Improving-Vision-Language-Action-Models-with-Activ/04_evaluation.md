@@ -4,6 +4,8 @@
 > Evidence maturity: `FULL_TEXT_CHECKED`.
 > Analysis basis: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2026/html/Xiao_AVA-VLA_Improving_Vision-Language-Action_models_with_Active_Visual_Attention_CVPR_2026_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2026/papers/Xiao_AVA-VLA_Improving_Vision-Language-Action_models_with_Active_Visual_Attention_CVPR_2026_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
+> DOC-QA1 (2026-10-23): 제어문자·깨진 추출 구간과 직접 연결된 표 항목을 PDF 페이지 이미지와 대조했다. 확인 범위·원문 URL·페이지·수정 이력은 [대조 기록](../../../work/sources/pdf_note_review_2026-10-23.json)에 있다. 노트 전체의 정독이나 모든 기존 주장에 대한 재검증을 뜻하지 않으며 reading status는 유지한다.
+
 ## Evaluation in One Sentence
 
 PDF body evaluation/result cue (p. 7 (4.3. Ablation Studies), p. 7 (4.2. Evaluation Results), p. 6 (4.1. Experimental Setup), p. 6 (4.2. Evaluation Results), p. 8 (4.4. Analysis), p. 8 (4.4. Analysis)): Each component alone improves over OpenVLA-OFT, and their combination achieves the best overall performance.
@@ -150,7 +152,7 @@ PDF body evaluation/result cue (p. 7 (4.3. Ablation Studies), p. 7 (4.2. Evaluat
 | The corresponding recurrent state is computed by: rt-1 = B(ht-1 M ) ∈RLA×d, (5) where B is an MLP module that transforms the hidden ... | p. 3 (3.2. AVA-VLA Framework) |
 | A typical VLA model Pθ, parameterized by θ, consists of four main components: a Large-Language-Model (LLM) backbone M, a vision encoder E, a language ... | p. 3 (3.1. Preliminaries) |
 | (10) Then we compute the final soft weights for visual tokens at time t by ωt = ρtγ, where γ is a 2-dimensional vector. | p. 4 (3.3. Active Visual Attention) |
-| Then it computes the attention matrix and feeds the output into a self-attention layer Ot = Self-Att  Cross-Att(Qt, Kt, Vt)  . | p. 4 (3.3. Active Visual Attention) |
+| 원문 대조: AVA는 현재 visual query와 이전 recurrent state에서 만든 key/value 사이 cross-attention을 계산한 뒤 self-attention을 적용한다. 이어지는 FFN·softmax가 visual token을 강화하거나 약화하는 weight를 생성한다. ([PDF p. 4](https://openaccess.thecvf.com/content/CVPR2026/papers/Xiao_AVA-VLA_Improving_Vision-Language-Action_models_with_Active_Visual_Attention_CVPR_2026_paper.pdf#page=4), §3.3 Active Visual Attention, Eq. (9)) | [PDF p. 4](https://openaccess.thecvf.com/content/CVPR2026/papers/Xiao_AVA-VLA_Improving_Vision-Language-Action_models_with_Active_Visual_Attention_CVPR_2026_paper.pdf#page=4), §3.3 Active Visual Attention, Eq. (9) |
 
 | Audit field | Current status |
 |---|---|

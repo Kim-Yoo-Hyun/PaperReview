@@ -1,0 +1,9 @@
+{
+  "kind": "stdlib Docker control tests; no torch tensor/model/simulator",
+  "native_executed": false,
+  "tests_run": 24,
+  "failures": 0,
+  "errors": 0,
+  "successful": true,
+  "packet_sha": "afeef9229422d605233d052eff3d26e69a5de3e41c9d605003652b3c1885c430"
+}

@@ -4,6 +4,8 @@
 > Evidence maturity: `FULL_TEXT_CHECKED`.
 > Analysis basis: full-text PDF body checked on 2026-09-03 (16 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/1903.11027; PDF retrieval source: https://arxiv.org/pdf/1903.11027. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
+> DOC-QA2 targeted source review: 2026-10-23; PDF pp. 6. 손상 구간·직접 연결된 표 분류만 원문 이미지와 대조했다. 전체 주장 정독·실험 검증·reading status 승격을 뜻하지 않는다. [URL·PDF hash·수정 기록](../../../work/sources/pdf_note_review_followup_2026-10-23.json).
+
 ## Method in One Sentence
 
 PDF body method statement (p. 1 (1. Introduction), p. 1 (1. Introduction), p. 2 (1.1. Contributions), p. 2 (1. Introduction), p. 3 (1.2. Related datasets), p. 3 (2. The nuScenes dataset)): Furthermore the reflectance of lidar is an important feature [40, 51].
@@ -52,7 +54,7 @@ PDF body method statement (p. 1 (1. Introduction), p. 1 (1. Introduction), p. 2 
 - **p. 1 / 1. Introduction - extractive body cue:** However, the returns are even sparser than lidar and less precise in terms of localization.
 - **p. 4 / 2. The nuScenes dataset - extractive body cue:** 0.2◦heading, 0.1◦roll/pitch, 20mm RTK positioning, 1000Hz update rate Table 2.
 - **p. 5 / 2. The nuScenes dataset - extractive body cue:** At the same time they contain up to 40 radar returns at 10m and 10 at 50m.
-- **p. 6 / 3.2. Tracking - extractive body cue:** In the updated formulation sMOTAr[77]6, MOTA is therefore augmented by a term to adjust for the respective recall: sMOTAr = max  0, 1 -IDS ...
+- **PDF p. 6, §3.2 tracking (DOC-QA2 원문 대조):** sMOTA_r=max(0,1−(IDS_r+FP_r+FN_r−(1−r)P)/(rP)). Recall [0.1,1]에서 40-point interpolation하고 해당 값들을 평균한 sAMOTA를 primary tracking metric으로 사용한다.
 - **Formal bridge:** standardized episode e and interface -> method trajectory/action -> benchmark score and failure cost -> comparable score and protocol validity.
 - **Equation/algorithm anchors:** p. 6 (3.2. Tracking), p. 4 (2. The nuScenes dataset), p. 6 (3.1. Detection).
 - Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.

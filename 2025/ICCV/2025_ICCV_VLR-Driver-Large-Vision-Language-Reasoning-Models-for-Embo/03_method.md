@@ -4,6 +4,8 @@
 > Evidence maturity: `FULL_TEXT_CHECKED`.
 > Analysis basis: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/ICCV2025/html/Kong_VLR-Driver_Large_Vision-Language-Reasoning_Models_for_Embodied_Autonomous_Driving_ICCV_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/ICCV2025/papers/Kong_VLR-Driver_Large_Vision-Language-Reasoning_Models_for_Embodied_Autonomous_Driving_ICCV_2025_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
+> DOC-QA2 targeted source review: 2026-10-23; PDF pp. 6. 손상 구간·직접 연결된 표 분류만 원문 이미지와 대조했다. 전체 주장 정독·실험 검증·reading status 승격을 뜻하지 않는다. [URL·PDF hash·수정 기록](../../../work/sources/pdf_note_review_followup_2026-10-23.json).
+
 ## Method in One Sentence
 
 PDF body method statement (p. 6 (3.3. Training Paradigm), p. 6 (3.3. Training Paradigm), p. 4 (3. Method), p. 4 (3.1. Overview), p. 5 (3.2.1. Perception Level CoT), p. 5 (3.2.2. Decision Level CoT)): Specifically, we first generate multiple candidate decision answers for the current driving scenario using prompts within the VLR model; Then, following our ST-CoT strategy, the reasoning process is divided into ...
@@ -67,7 +69,7 @@ PDF body method statement (p. 6 (3.3. Training Paradigm), p. 6 (3.3. Training Pa
 
 ## Observation–State–Action Interface
 
-- **p. 6 / 3.3. Training Paradigm - extractive body cue:** The forward pass is computed as: y = W ′x =  W0 + α r B · A  x, (2) where y is ...
+- **PDF p. 6, §3.3 / Eq. (2) (DOC-QA2 원문 대조):** LoRA forward는 y=(W₀+(α/r)BA)x이다. Low-rank update는 모델 내부 선형 연산이며 observation sensor나 physical action의 정의가 아니다.
 - **p. 4 / 3.1. Overview - extractive body cue:** Subsequently, the compressed and cropped image data and the information from the ego's sensors are input into the model.
 - **p. 4 / 3.1. Overview - extractive body cue:** It can processes visual inputs, such as multi-view images, alongside textual information, including vehicle control signals.
 - **p. 2 / Body text (section not recovered) - extractive body cue:** Our proposed VLR-Driver not only inherits the global action optimization capability of VLA models, but also preserves the transparency of modular rule-based methods.

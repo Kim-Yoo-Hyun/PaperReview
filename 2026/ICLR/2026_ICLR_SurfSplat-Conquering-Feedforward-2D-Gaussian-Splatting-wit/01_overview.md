@@ -17,6 +17,8 @@
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (19 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
+> DOC-QA1 (2026-10-23): 제어문자·깨진 추출 구간과 직접 연결된 표 항목을 PDF 페이지 이미지와 대조했다. 확인 범위·원문 URL·페이지·수정 이력은 [대조 기록](../../../work/sources/pdf_note_review_2026-10-23.json)에 있다. 노트 전체의 정독이나 모든 기존 주장에 대한 재검증을 뜻하지 않으며 reading status는 유지한다.
+
 ## Why This Paper Is Here
 
 Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 Furthermore, most datasets lack out-of-distribution viewpoints for reliable assessment.를 문제로 두고, In summary, the main contributions of this work are as follows: • We propose SurfSplat, a feedforward network that reconstructs 3D scenes using 2D Gaussian surfels from sparse inputs.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
@@ -40,7 +42,7 @@ Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 �
 - **p. 6 / 3.1 PRELIMINARIES - extractive body cue:** To address this, we propose a forced alpha blending strategy that explicitly constrains each Gaussian's opacity.
 - **p. 4 / 3.1 PRELIMINARIES - extractive body cue:** In the multi-view branch, input images are first converted into low-resolution feature maps, which are then processed by multiple layers of self- and cross-attention Vaswani ...
 - **p. 4 / 3.1 PRELIMINARIES - extractive body cue:** To integrate these complementary sources effectively, we adopt a dual-path for feature extraction within our model architecture.
-- **p. 15 / A.1 ENCODER ARCHITECTURE - extractive body cue:** This module outputs multi-view-aware features  F i N i=1, where F i ∈R H s × W s ×C.
+- **원문 대조:** Multi-view branch는 strided-convolution backbone과 여섯 self/cross-attention layer를 거쳐 view별 H/s×W/s×C feature를 출력한다. 이는 reconstruction encoder의 중간 표현이며 robot-planning handoff의 직접 근거가 아니다. ([PDF p. 15](https://arxiv.org/pdf/2602.02000#page=15), Appendix A.1 Encoder Architecture).
 
 ## Observation, State, and Output Interface
 

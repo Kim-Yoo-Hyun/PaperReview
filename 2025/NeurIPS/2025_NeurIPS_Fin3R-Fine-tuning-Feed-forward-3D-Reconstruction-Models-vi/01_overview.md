@@ -17,6 +17,8 @@
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (22 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
+> DOC-QA2 targeted source review: 2026-10-23; PDF pp. 6. 손상 구간·직접 연결된 표 분류만 원문 이미지와 대조했다. 전체 주장 정독·실험 검증·reading status 승격을 뜻하지 않는다. [URL·PDF hash·수정 기록](../../../work/sources/pdf_note_review_followup_2026-10-23.json).
+
 ## Why This Paper Is Here
 
 Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 This persistent gap in performance raises a crucial question: why do these feed-forward models consistently struggle to capture high-fidelity geometry?를 문제로 두고, To directly address this challenge, we propose a refined integration of LoRA with a re-normalization strategy specifically designed to constrain feature norm drift.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
@@ -39,7 +41,7 @@ Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 �
 - **p. 6 / 3 Method - extractive body cue:** enforces robust multi-view matching while mitigating potential feature shift; to ensure this loss is applied only to multi-view samples, we introduce an indicator function 1mv(i) ...
 - **p. 3 / 1 Introduction - extractive body cue:** Our contributions are threefold: (i) a general encoder-only distillation strategy that enhances local geometric detail and overall robustness in feed-forward 3D reconstruction models; (ii) a ...
 - **p. 5 / 3 Method - extractive body cue:** Recall that feed-forward 3D reconstruction models typically consist of a shared encoder, which extracts features from input images, followed by a decoder that correlates these ...
-- **p. 6 / 3 Method - extractive body cue:** The overall training objective is the average loss over all N images, given by L = 1 N PN i=1  L(i) distill + L(i) ...
+- **PDF p. 6, §3 training objective (DOC-QA2 원문 대조):** 전체 objective는 N개 image에 대한 distillation loss와 pointmap loss의 합을 평균한다: L=(1/N)Σᵢ(L_distill⁽ⁱ⁾+L_pointmap⁽ⁱ⁾). Pointmap loss에는 multi-view sample에만 적용하는 indicator가 포함된다.
 - **p. 4 / 3 Method - extractive body cue:** Although CUT3R [65] leverages extensive depth supervision and VGGT [61] employs gradient-based loss to refine local geometry-with both methods incorporating dedicated self-view pointmap or depth ...
 
 ## Observation, State, and Output Interface

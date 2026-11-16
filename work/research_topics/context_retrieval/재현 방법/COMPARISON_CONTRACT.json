@@ -1,0 +1,487 @@
+{
+  "schema_version": 1,
+  "task_id": "GAP-RETRIEVAL-R2",
+  "design_revision": 3,
+  "updated": "2026-11-02",
+  "evidence_level": "CURATION-HYPOTHESIS",
+  "provenance": "N1 nonexperimental closure after prior A1 Docker CPU asset audit. N1 adds literature/source review and design only; no container, embedding, policy or simulator execution.",
+  "executable": false,
+  "automatic_execution_authorized": false,
+  "report": "../내용/README.md#retrieval-n1",
+  "source_ledger": "../내용/sources.json",
+  "question_owner": "../../../../synthesis/04_vla_generalist.md#gap-retrieval-library-2026",
+  "decision": {
+    "status": "EXPLORE_NONEXPERIMENTAL_BUILDUP_COMPLETE_NATIVE_PENDING",
+    "method_go": false,
+    "prepared_experiment_candidates": 3,
+    "new_p0_created": false
+  },
+  "scope": {
+    "question": "With target demonstrations and a frozen VLA fixed, does adding other-goal public reference demonstrations change old-task success, and is exact-instruction partitioning sufficient? Success-qualified donor expansion is a stronger claim requiring raw-trajectory/evaluator evidence.",
+    "model": "One frozen StellaVLA LIBERO checkpoint; one complete structured demonstration selected at episode start and held throughout the episode.",
+    "initial": "Two familiar LIBERO-Goal bowl-placement tasks; one target demonstration per task. This is a sparse-support diagnostic, not a coverage response curve.",
+    "not_claimed": [
+      "New retrieval/goal-filtering method",
+      "Parameter forgetting",
+      "Language generalization beyond exact catalog instructions",
+      "Task-wide or cross-embodiment improvement",
+      "Real deployment latency robustness",
+      "Adequate statistical power or publication-level novelty",
+      "All public references are certified successful or disjoint from model training/evaluation episodes",
+      "Pure semantic conflict isolated from prompt length, annotation quality or visual scene similarity"
+    ]
+  },
+  "source_pins": {
+    "stella_code": "e5634b31d4d0b555419fdaa192340f6f2698c894",
+    "stella_hf": "46d0cf698cacacc02edcf5301a7f30547e9b8cdb",
+    "libero": "8f1084e3132a39270c3a13ebe37270a43ece2a01",
+    "evidence": "R1 code/remote metadata plus A1 Docker-verified demo archive and manifest. Policy/encoder/base-VLM weights and normalizer payload checksums remain unverified.",
+    "image_encoder_hf": "f9e44c814b77203eaa57a6bdbbd535f21ede1415",
+    "qwen_base_vlm_hf": "ebb281ec70b05090aa6165b016eac8ec08e71b17"
+  },
+  "banks": {
+    "proposed_counts": {
+      "target_demos_per_task": 1,
+      "donor_demos_per_instruction": 1,
+      "expanded_instruction_groups": 3
+    },
+    "symbols": {
+      "d1": "Pinned public demo libero_goal#0; instruction/pool/frame integrity verified, native success/provenance not verified.",
+      "d2": "Pinned public demo libero_goal#19; instruction/pool/frame integrity verified, native success/provenance not verified.",
+      "d3": "Pinned public demo libero_goal#1; donor-only instruction/pool/frame integrity verified, native success/provenance not verified.",
+      "B0_A1": [
+        "d1"
+      ],
+      "B0_A2": [
+        "d2"
+      ],
+      "B1_both_queries": [
+        "d1",
+        "d2",
+        "d3"
+      ]
+    },
+    "selection_before_outcomes": "After artifact/provenance checks, choose the lexicographically first stable payload ID per specified goal. Freeze IDs before dev/evaluation outcomes; no quality/ranking/rollout-based cherry-picking.",
+    "identity": "d1/d2 payload bytes, frame order, instruction/plan/state text, preprocessing and embeddings are identical across banks. B1 is a strict union; no relabeling or recomputed bank-wide normalization.",
+    "qualification": "A1 verified public mappings, declared IDs, file presence/header/hash and byte-level nonduplication. Success, original trajectory identity and evaluation overlap remain unverified; visible terminal frames alone do not prove native success.",
+    "capacity_extension": "Public pack contains exactly one demo per each of 40 tasks. A target-support factor requires separately qualified additional demonstrations; this release alone cannot supply a dense-target comparison. Initial one-versus-three banks do not establish large-library scaling.",
+    "fallback": "If a specified goal lacks a usable public demo, revise the design before outcome collection. No automatic substitution with LIBERO-90, another checkpoint, generated demos or wrong_demo."
+  },
+  "information_contract": {
+    "policy": [
+      "Same runtime lang, primary/wrist RGB and current state_text",
+      "Same selected structured demonstration format, frozen policy/normalizer, action chunk/controller and evaluation clock"
+    ],
+    "selector_query": [
+      "Exact runtime lang supplied by task.language",
+      "Initial primary-camera RGB only, captured after the same reset/settle procedure"
+    ],
+    "selector_catalog": [
+      "Public demonstration instruction text and language aliases explicitly provided by the release and semantically checked",
+      "Released demonstration frames and stable payload IDs"
+    ],
+    "shared_information_boundary": "H/G/S/U have the same allowable query/catalog access. H/S use language, G uses vision, U ignores content. This compares practical strategies; identical consumed information is not claimed.",
+    "excluded": [
+      "Evaluator task_id or task classification/name fallback as a query label",
+      "Goal predicates, ground-truth object poses/segmentation, successful future evaluation trajectories",
+      "Current numeric state, state_text, demo plans/state text in the retrieval score",
+      "Evaluation success to choose donors, encoder, filter or tie breaks"
+    ],
+    "storage_identity": "Demo task indexes may address files after a public language mapping; they are not benchmark task IDs. Suite namespaces storage only. Episode keys are opaque grouping/cache identifiers and do not encode goal labels for retrieval.",
+    "resolver": "H uses exact normalized runtime instruction matching to a public demo-language group; normalization is lowercasing, strip and whitespace collapse. Release-provided aliases must be frozen and verified as equivalent, not inferred from benchmark ID. No longest-prefix or task-ID fallback in H/G/S/U.",
+    "language_limit": "Cabinet BDDL says drawer while runtime language says cabinet. Keep actual runtime string; never repair a join by silently changing the query."
+  },
+  "retrieval": {
+    "timing": "Once at the initial query, before policy action. No per-step reranking or action interpolation.",
+    "common_visual_score": {
+      "query": "zq = L2_normalize(E(initial primary RGB))",
+      "demo": "zd = L2_normalize(mean_j L2_normalize(E(released demo frame_j)))",
+      "score": "v(q,d) = dot(zq,zd); exact exhaustive ranking, descending score then stable payload ID.",
+      "encoder": {
+        "repository": "facebook/dinov2-base",
+        "revision": "f9e44c814b77203eaa57a6bdbbd535f21ede1415",
+        "feature": "Dinov2Model last_hidden_state[:,0,:], final CLS token, 768 dimensions; frozen eval/inference mode, float32; L2 normalization as specified.",
+        "weights_file": "model.safetensors",
+        "remote_size_bytes": 346345912,
+        "remote_lfs_sha256": "d73036b56966966d07975d696bde331762f37297e2f095de8cea0040c3aa0841",
+        "checksum_boundary": "Remote LFS catalog value, not downloaded or locally verified; no embedding computed.",
+        "preprocessing": {
+          "source": "https://huggingface.co/facebook/dinov2-base/blob/f9e44c814b77203eaa57a6bdbbd535f21ede1415/preprocessor_config.json",
+          "processor": "BitImageProcessor",
+          "convert_rgb": true,
+          "resize_shortest_edge": 256,
+          "resample": 3,
+          "center_crop": [
+            224,
+            224
+          ],
+          "rescale_factor": 0.00392156862745098,
+          "image_mean": [
+            0.485,
+            0.456,
+            0.406
+          ],
+          "image_std": [
+            0.229,
+            0.224,
+            0.225
+          ]
+        },
+        "preprocessing_scope": "Identical deterministic whole-image preprocessing for retrieval descriptors only; original VLA context frames are not changed. No task/object-specific crops or augmentations.",
+        "rationale": "A fixed, separately pretrained visual-feature baseline avoids fitting a scorer on evaluation outcomes. This is a design choice, not evidence it is the best retrieval encoder.",
+        "remaining": "Docker library/runtime pin and actual frame/view compatibility, local weights checksum and extraction path require qualification. Freeze those before feature computation; do not silently select another encoder after outcomes."
+      },
+      "frame_boundary": "Released frames represent subgoal end-states, not necessarily initial observations. This is demonstration visual similarity, not matched initial-state nearest-neighbor retrieval. View/panel compatibility with the pinned encoder preprocessing must be checked before extraction.",
+      "no_hidden_bank_effects": "Compute each demo descriptor once and reuse unchanged. No fitted index, approximate search, per-bank centering, z-scoring, PCA or normalization.",
+      "failure": "Zero/NaN descriptors or incompatible frame parsing are implementation/artifact failures, not VLA goal confusion."
+    },
+    "soft_prefilter": {
+      "instruction_unit": "Distinct normalized public demonstration instruction groups; exact aliases map to the same frozen group.",
+      "language_score": "Jaccard similarity of sets of lowercase alphanumeric tokens in runtime instruction and group instruction. Keep all tokens, no learned synonym model or outcome-tuned stopword list. Both-empty token sets are invalid inputs.",
+      "retained_groups": 2,
+      "tie_break": "Descending Jaccard score then lexicographic normalized instruction.",
+      "rule": "Keep all demos in top min(2, number_of_groups) groups, then apply the same visual scorer.",
+      "interpretation": "Soft means permissive top-two prefilter, not probabilistic weighting or a new semantic model.",
+      "degeneracy": "With at most two instruction groups S equals G. The three-group B1 avoids forced candidate-set equivalence, but S and G may still select the same demo; report that outcome rather than manufacture disagreement."
+    },
+    "arms": [
+      {
+        "id": "H",
+        "name": "Exact-instruction partition + shared visual score",
+        "bank_candidates": "Only the exact public-language goal group.",
+        "status": "Primary simple baseline; with one target demo it is deterministic and identical to stock selection when exact mapping succeeds."
+      },
+      {
+        "id": "G",
+        "name": "Global visual retrieval",
+        "bank_candidates": "All eligible demos.",
+        "status": "Primary whole-bank alternative; language still reaches the frozen VLA."
+      },
+      {
+        "id": "S",
+        "name": "Top-two lexical prefilter + shared visual score",
+        "bank_candidates": "Two instruction groups chosen by the fixed text rule.",
+        "status": "Primary permissive alternative; weak lexical errors are not evidence that all semantic filtering fails."
+      },
+      {
+        "id": "U",
+        "name": "Uniform random whole-demonstration selection",
+        "bank_candidates": "All eligible demos, each equally likely under the prespecified sampling procedure.",
+        "status": "Simple nonlearned baseline. B0 selects its singleton; B1 samples one complete reference once and keeps it for the episode. A single frozen draw per start is descriptive, not an estimate of the exact random-policy expectation."
+      }
+    ],
+    "stock_diagnostic": "Original seeded random-within-task selector remains a source/reference baseline. With one target demo and exact match it selects the same payload as H. For multiple target demos H is not the stock random selector; any stock comparison must be named separately and budgeted.",
+    "oracle_diagnostic": "Benchmark-ID routing may be used only to diagnose a mapping defect in a separate labeled run. It is not an automatic baseline or performance upper bound, and cannot repair H results silently.",
+    "empty_pool": "Before freeze, absent required demos or an unaudited alias means asset qualification is incomplete. After freeze, valid-query language/no-candidate failures are logged as retrieval-system failures and counted unsuccessful in assigned-unit system success. No silent fallback to task ID, arbitrary demo, or no-context inference.",
+    "no_context": "ctxdemo_dropout_p=0.0 in reviewed config; no-context is a separate OOD diagnostic, not a neutral baseline.",
+    "uniform_random": {
+      "procedure": "Sort eligible stable payload IDs lexicographically. Compute SHA256 of UTF-8 text 'retrieval-n1-u|20261102|<opaque paired-unit key>' with no trailing newline; interpret first 8 bytes as an unsigned big-endian seed for Python 3.10 random.Random(seed); select randrange(len(ids)). Keep the same seed across banks, use an isolated generator, and log the seed/candidate order/selected ID before actions.",
+      "unit_key": "Opaque unit identifiers p01..p08 in task order A1 then A2 and init slots 1..4. These keys do not provide task labels to a retrieval scorer.",
+      "boundary": "Frozen draw is not chosen from outcomes or optimized to cause disagreement. No resampling if it returns H's target or if the result is uninteresting. No unobserved contexts may be imputed to form a 1/3 average."
+    }
+  },
+  "budget": {
+    "context": {
+      "demonstrations": 1,
+      "policy_queries_for_retrieval": 0,
+      "prefix": "One complete released structured demo; no concatenation of candidates, generation of extra descriptions, or silent truncation.",
+      "max_demo_frames": 8,
+      "max_total_input_tokens": 2200
+    },
+    "ceilings": "One complete public demo with at most 8 frames. Design ceiling: 2200 total serialized model-input tokens, including expanded image/action tokens and the current observation/instruction, checked at every call. This conservative design guard uses the released config's nominal value; it is not a measured capacity or an active upstream inference truncation guarantee. Native processor qualification remains pending.",
+    "overflow": "No truncation, padding demos or changed instruction. A guard violation stops qualification/comparison as an input/runtime-invalid block, not goal confusion. Any common ceiling revision must precede outcome comparison and include all arms; do not discard only the failing arm or revise after seeing performance.",
+    "score_compute": "H/G/S may reuse the same frozen encodings, while U requires no encoder or similarity scoring. Do not charge U encoder computation it does not use; singleton selection may skip ranking. Report actual offline embedding storage/work, query encoding, filtering, candidate counts, selection and full-forward policy cost separately. Shared context ceilings are not identical actual compute.",
+    "clock": "Selection occurs while the simulated environment is paused at the paired initial snapshot. This estimates context-selection effects under a common control budget, not closed-loop effects of retrieval delay.",
+    "control": "Design fixed to LIBERO-Goal source defaults: 10 settling steps, then at most 300 policy control steps at 20 Hz; predict and execute chunks of 8, stopping after the first native target success or step 300. Last chunk executes at most 4 actions. Maximum 38 action requests per rollout; implementation and success predicate still require native confirmation.",
+    "original_cells": {
+      "tasks": 2,
+      "starts_per_task": 4,
+      "banks": 2,
+      "rules": 3,
+      "logical_cells": 48,
+      "paired_start_units": 8,
+      "status": "Historical revision-2 H/G/S allocation; superseded by current_cells, not 48 independent samples."
+    },
+    "equivalence_reuse": "B0 H/G/S/U and B1 H use the same target demo. If selected payload, all serialized model inputs, controller/policy revisions and complete simulator/RNG start state are equivalent, share that policy rollout. Any B1 arm selecting the same payload can also share it. At most three complete contexts per paired start still implies at most 24 unique rollouts when equivalence is verified.",
+    "proposed_max_unique_rollouts_if_equivalence_verified": 24,
+    "reuse_limit": "Never reuse retrieval-cost measurements as policy evidence. No 1/3 uniform expectation unless every context outcome is actually observed under the appropriate policy randomness. If nondeterminism invalidates reuse, revise allocation before outcomes; 64 cells are not 64 independent samples.",
+    "p0": "No P0 packet created. Future IO/input qualification is smaller and separate; 24/64 is not automatic rollout authorization.",
+    "current_cells": {
+      "tasks": 2,
+      "starts_per_task": 4,
+      "banks": 2,
+      "rules": 4,
+      "logical_cells": 64,
+      "paired_start_units": 8,
+      "arms": [
+        "H",
+        "G",
+        "S",
+        "U"
+      ],
+      "status": "Design only; no automatic execution"
+    }
+  },
+  "state_and_cache": {
+    "pairing": "For each task, restore the same complete initial simulator/controller/RNG state and verify initial observation/state digest for all conditions. Same numerical seed or episode index in different .pruned_init files is insufficient. Do not treat the two task goals as identical reset instances without separate validation.",
+    "seed": "Design seed 7 for simulator and all policy RNGs in each restored start, independent of bank/rule, matching the public evaluation default. U alone uses its isolated hash-derived RNG. Seed equality is not snapshot equality; native hashes remain pending.",
+    "isolation": "Use a fresh server/process for each condition, or replace all relevant demo/KV cache keys with checkpoint+serializer+bank_digest+rule_revision+query_instance+selected_payload_hash. Source keys omit bank/rule, so reusing them unchanged is invalid.",
+    "reset": "Clear action queues, controller state, context caches and per-episode counters before branching. Log actual selected payload and serialized prefix hash, not only intended selection.",
+    "invariance_control": "H must return byte-identical context for B0 and B1. Changed H selection/prompt is a routing/cache/preprocessing defect to resolve before interpreting policy changes. Same context with uncontrolled stochasticity is not bank-induced interference.",
+    "invalid_runtime": "Cache contamination, state-restore mismatch, corrupted inputs or model load failure invalidate the comparison block. Report the affected units and cause; do not cherry-pick valid successes or label these as scientific NO-GO.",
+    "prefix_kv": "Disable optional prefix KV reuse for the first research comparison by omitting kv_cache_key; use the full-forward path in all arms. Upstream's one-time max-action-difference tolerance is not proof of bit-identical behavior. Selection caches still need isolation. KV latency/accuracy is a separate later qualification, not a required mechanism in this question."
+  },
+  "outcomes": {
+    "unit": "One task-specific initial-state/RNG unit, paired across rules/banks. Maximum eight exploratory units nested within two tasks.",
+    "success": "Y_irb=1 if env.check_success() becomes true after a policy action within T=300; native mapping to _check_success must be confirmed, including any done flag. Do not label an unrelated done flag or an initially satisfied goal as a policy success. Stop after first target success or T in every arm.",
+    "terminal_categories": "At that common stopping rule's terminal state, record target and the predesignated opposite-bowl goal predicate separately: 00, 01, 10, 11. Native predicate access is evaluator-only.",
+    "wrong_goal": "W=(1-Y)*A_terminal, where A is the predesignated opposite-bowl predicate. 11 is not an error by definition; goal inclusion is not conflict. Other-goal retrieval alone and generic failure 00 are not wrong-goal execution.",
+    "invalid_alternative": "If the alternate predicate cannot be validated on the scene, mark W unavailable; retain target success and do not invent a proxy classifier.",
+    "primary": "For each rule r report mean_i(Y_i,r,B1 - Y_i,r,B0), with raw per-task counts of 1->0 regressions and 0->1 improvements separately.",
+    "strategy_contrast": "Compare G/S against H and U on B1 using the same paired units. H is a feasible simple baseline, not an upper bound. U is one prespecified sample per unit; do not claim a well-estimated random-policy expectation.",
+    "selector_diagnostics": [
+      "Selected payload/group and ranking scores",
+      "B0->B1 payload changes",
+      "Candidate-set equality and actual selected-context equality across arms",
+      "Actual frames/tokens, separate retrieval/policy costs",
+      "Retrieval-system failure and artifact/runtime-invalid counts"
+    ],
+    "analysis": "Report all eight paired units, all assigned conditions, raw per-task results and 1->0/0->1 counts. Do not count 64 cells or steps as independent samples. No significance, population equivalence, unseen-task generalization, test-set tuning or favorable-seed replacement. Pipeline-invalid blocks and valid-query retrieval failures have separate denominators.",
+    "attribution": "This total bank-intervention effect includes which context is selected, its image/text length and annotation quality. Fixed format/ceilings do not isolate pure semantic goal conflict. That stronger claim needs length/form-matched valid references and independent goal evidence; the current 8/5/6-frame pack cannot establish it."
+  },
+  "decisions": [
+    {
+      "condition": "Same serialized context across all natural expansion conditions",
+      "action": "Record an uninformative intervention for this setup; do not claim robust policies or force a wrong demo to obtain a positive finding."
+    },
+    {
+      "condition": "H protects old tasks and G/S provide no useful improvement within this small diagnostic",
+      "action": "Do not build a learned router on this evidence; report the simple baseline's sufficiency within the observed setting, without population equivalence claims."
+    },
+    {
+      "condition": "A cache, mapping, bank-normalization or initial-state bug explains differences",
+      "action": "Fix the implementation and rerun only a newly frozen valid block; classify as engineering evidence."
+    },
+    {
+      "condition": "Global/soft trade-off remains after the simple baseline with valid fixed support",
+      "action": "Consider a separate, independently sampled replication and a target-support factor; neither a new method nor a coverage threshold is established yet."
+    },
+    {
+      "condition": "Only hand-forced wrong_demo produces changes",
+      "action": "Limit result to a regression/replication of prior wrong-context studies."
+    },
+    {
+      "condition": "Base policy cannot perform the target task or structured context has no measurable influence in qualified dev",
+      "action": "Separate competence/interface limitations from retrieval effects; revise asset/model choice before larger comparison, without claiming the question false."
+    },
+    {
+      "condition": "Assets/resources missing",
+      "action": "Keep scientific candidate open; record exact unbound fields and wait. Do not repeat source-tree scans or unrelated proxy experiments."
+    }
+  ],
+  "unbound_execution": {
+    "actual_demo_indexes": {
+      "d1": 0,
+      "d2": 8,
+      "d3": 1
+    },
+    "payload_ids": [
+      "libero_goal#0",
+      "libero_goal#19",
+      "libero_goal#1"
+    ],
+    "local_archive_checksum": "699e71722960be7d2450d7c2fb6eed8b05bfd53e5fb08e4b9eba029ebd113bff",
+    "frame_hashes": "Verified in ASSET_AUDIT.json; archive stored only in a temporary Docker volume and removed after A1.",
+    "language_alias_map": "Exact runtime strings match directly; no alias or task-ID fallback needed for these three entries.",
+    "qualified_prefix_frame_and_token_ceilings": {
+      "demo_frames": 8,
+      "design_total_model_input_tokens": 2200,
+      "measured_prefix_tokens": null,
+      "native_ceiling_qualified": false
+    },
+    "checkpoint_and_normalizer_local_hashes": null,
+    "native_initial_snapshots_and_seeds": "Selection/seeds specified in protocol_design; raw initial-state hashes and full native restore remain unverified.",
+    "split_and_overlap_audit": null,
+    "native_alternate_goal_evaluator": null,
+    "selector_and_cache_implementation_revision": null,
+    "docker_image_digest_and_gpu_qualification": null,
+    "native_verified": false,
+    "external_independent_feedback_received": false,
+    "encoder_runtime_library_revision_and_local_weights_hash": null,
+    "demo_frame_view_and_preprocessing_compatibility": "261 headers are 256x256 PNG; six selected first/last frames visually inspected. Native query image orientation/processor parity remains unverified.",
+    "native_control_protocol_verified": false
+  },
+  "handoff": {
+    "next_id": "GAP-RETRIEVAL-P0-PREP",
+    "status": "WAITING_RESOURCE",
+    "task": "N1 nonexperimental closure complete. When compatible local NVIDIA resources are available, recheck environment and prepare the LIBERO-only image, full-forward selector bridge, actual input/normalizer hashes and smaller IO P0. Keep execution and source provenance limits explicit; do not repeat archive-only counts or run the 24/64-cell comparison automatically.",
+    "no_repeated_internal_todo": "No further same-source document loop. Asset overlap/provenance needs a new trajectory/evaluator source; native readiness needs actual build/IO evidence.",
+    "priority": "Existing prepared policy experiment candidates remain REVISION, HANDOFF, SET; REVISION first. Retrieval has a runnable CPU asset audit, not a fourth ready policy P0."
+  },
+  "latest_review_task": "GAP-RETRIEVAL-N1",
+  "asset_binding": {
+    "evidence": "ASSET_AUDIT.json",
+    "archive_sha256": "699e71722960be7d2450d7c2fb6eed8b05bfd53e5fb08e4b9eba029ebd113bff",
+    "manifest_sha256": "bc1b8e6bf374607785a79133b4884390999e06b10d92217ba4eb414f2ef8e35d",
+    "selected": [
+      {
+        "symbol": "d1",
+        "runtime_instruction": "put the bowl on the plate",
+        "demo_task_index": 0,
+        "payload_id": "libero_goal#0",
+        "canonical_payload_sha256": "0d1d7922e25c822fa2ffabc390524c7c279bd433f351ec287680db1561022bd9",
+        "frame_count": 8
+      },
+      {
+        "symbol": "d2",
+        "runtime_instruction": "put the bowl on top of the cabinet",
+        "demo_task_index": 8,
+        "payload_id": "libero_goal#19",
+        "canonical_payload_sha256": "c9e6d0edc47da9877f62be95d3dd6b6ea27007ab9672378380648e7c5afde111",
+        "frame_count": 5
+      },
+      {
+        "symbol": "d3",
+        "runtime_instruction": "put the wine bottle on the rack",
+        "demo_task_index": 1,
+        "payload_id": "libero_goal#1",
+        "canonical_payload_sha256": "2db3b7bd3cc90d0244c4ec355a8e90b68f21e467eb6dbc03f7fbc2a9e3057c66",
+        "frame_count": 6
+      }
+    ],
+    "actual_candidate_sets": "H returns the exact goal's singleton; S retains both bowl-goal demos for each query; G retains all three. Actual visual rank/selection remains uncomputed.",
+    "manual_preview": "First/last frame of each selected demo, six images total. Camera-style/visible placement inspected; no native release/contact/success certificate.",
+    "native_success": false,
+    "train_eval_overlap_verified": false
+  },
+  "native_resume_requirements": {
+    "status": "PREPARATION_REQUIREMENTS_ONLY_NO_NATIVE_IMAGE_OR_ADAPTER",
+    "source_dockerfile": "https://github.com/StellEdge-AI/StellaVLA/blob/e5634b31d4d0b555419fdaa192340f6f2698c894/docker/Dockerfile",
+    "host": "Linux x86-64 and selected local Docker with NVIDIA allocation, CUDA and EGL; no host installs, MPS/cloud fallback or emulated ARM policy run.",
+    "driver": "Verify the installed driver against the CUDA runtime actually provided by the built torch wheel. The Docker base tag alone does not certify CUDA compatibility.",
+    "memory": "Required host RAM/VRAM not measured. Public Stella checkpoint is 9,785,060,811 bytes; file size is not peak runtime memory. Check free memory and bounded model load before any rollout.",
+    "policy_environment": {
+      "python": "3.10",
+      "upstream_base": "nvidia/cuda:12.1.1-base-ubuntu22.04",
+      "torch": "2.6.0",
+      "torchvision": "0.21.0",
+      "transformers": "4.57.0",
+      "accelerate": "1.5.2",
+      "diffusers": "0.37.1",
+      "qwen_vl_utils": "0.0.14",
+      "safetensors": "0.8.0",
+      "huggingface_hub": "0.36.2",
+      "numpy": "2.2.6",
+      "pillow": "11.3.0",
+      "omegaconf": "2.3.0"
+    },
+    "simulator_environment": {
+      "python": "3.10",
+      "torch": "2.11.0+cpu",
+      "torchvision": "0.26.0+cpu",
+      "numpy": "1.24.4",
+      "mujoco": "3.2.3",
+      "robosuite": "1.4.0",
+      "bddl": "1.0.1",
+      "gym": "0.25.2",
+      "robomimic": "0.3.0"
+    },
+    "environment_variables": {
+      "MUJOCO_GL": "egl",
+      "PYOPENGL_PLATFORM": "egl",
+      "NVIDIA_DRIVER_CAPABILITIES": "compute,graphics,utility",
+      "HF_HOME": "/data/hf"
+    },
+    "asset_locations": "Docker named volume mounted at /data; pinned code under /workspace; demo manifest under /data/demo_packs/libero. Never use a developer-specific host path as an execution condition.",
+    "qwen_processor": "Qwen/Qwen3-VL-4B-Instruct at source_pins.qwen_base_vlm_hf, selected future reproducibility pin; exact original author's cached revision is unknown. Ensure model+tokenizer+processor revisions are actually passed or loaded from the pinned snapshot.",
+    "code_constraints": "Upstream Dockerfile installs three simulators/four environments and unpinned latest Miniforge plus some dependencies. Prepare a LIBERO-only recipe and runtime lock before model execution; do not automatically download LIBERO-plus 6.4 GB assets or VLA-Arena.",
+    "first_native_scope": "After a separate implementation/IO packet: qualify GPU/EGL, full untruncated input under the design 2200-token guard, one reset observation, selector/queue isolation and bounded action IO using full forward. No automatic 24/64 comparison."
+  },
+  "protocol_design": {
+    "status": "NONEXPERIMENTAL_DESIGN_FIXED_NATIVE_NOT_VERIFIED",
+    "suite": "libero_goal",
+    "task_order_index": 0,
+    "target_task_ids": {
+      "A1": 8,
+      "A2": 4
+    },
+    "dev_initial_state_slots": [
+      0
+    ],
+    "comparison_initial_state_slots": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "split": "Use each task's own pinned get_task_init_states result. Slot 0 is technical dev only; slots 1..4 are outcome-untouched descriptive comparison units. They are not certified training-disjoint or unseen-task holdouts. No automatic slot replacement if files are missing/duplicate/initially solved; resolve qualification before outcomes.",
+    "initial_state_sources": "Raw .pruned_init hashes, item count and task joins are pending native asset qualification. Payload ep_idx is never used to choose these slots.",
+    "simulator_seed": 7,
+    "policy_seed": 7,
+    "settling_steps": 10,
+    "settling_action": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      -1
+    ],
+    "policy_control_steps": 300,
+    "control_frequency_hz": 20,
+    "action_chunk_length": 8,
+    "actions_executed_per_query": 8,
+    "max_action_requests_per_rollout": 38,
+    "retrieval_timing": "After the 10 settling steps, capture the complete starting state and initial observation; freeze selection before any policy action.",
+    "target_success": "Read env.check_success() via the native goal predicate after each policy action, and cross-check done semantics during IO qualification.",
+    "sources": [
+      "https://github.com/StellEdge-AI/StellaVLA/blob/e5634b31d4d0b555419fdaa192340f6f2698c894/examples/LIBERO/eval_files/eval_libero.py#L94",
+      "https://github.com/StellEdge-AI/StellaVLA/blob/e5634b31d4d0b555419fdaa192340f6f2698c894/examples/LIBERO/eval_files/model2libero_interface.py#L110",
+      "https://github.com/Lifelong-Robot-Learning/LIBERO/blob/8f1084e3132a39270c3a13ebe37270a43ece2a01/libero/libero/envs/env_wrapper.py#L27"
+    ]
+  },
+  "nonexperimental_closure": {
+    "id": "GAP-RETRIEVAL-N1",
+    "status": "DONE_WITH_EXPLICIT_SOURCE_AND_EXECUTION_LIMITS",
+    "literature": "Added TOWN-VLA prompt-authority collision and ACL 2026 Stable Language Guidance as adjacent form/language confounds. Rechecked random selection in When Does Retrieval Help and StellaVLA Appendix A's author-reported leave-one-out training retrieval.",
+    "provenance": "Expert-demo and leave-one-out training statements do not certify the three released payloads' successful source trajectories or evaluation disjointness. No per-payload join or builder was identified in the bounded pinned public sources. Missing source evidence remains explicit; it is not a reason to repeat archive counts.",
+    "narrow_claim": "Descriptive old-task retention under fixed-support public-reference bank expansion. Successful-donor, semantic-mechanism, novel-router and broad-scaling claims remain unsupported.",
+    "discriminating_predictions": [
+      {
+        "alternative": "Input-invariant exact grouping is sufficient",
+        "observation": "H returns identical payload/input across banks; no repeatable G/S improvement over H beyond technical noise.",
+        "decision": "Keep simple operational guidance; no learned method justified."
+      },
+      {
+        "alternative": "Similarity search is unnecessary",
+        "observation": "G/S show no useful descriptive advantage over prespecified U.",
+        "decision": "Do not justify an additional encoder or trained selector from this pilot; eight units cannot establish population equivalence."
+      },
+      {
+        "alternative": "Useful cross-task information competes with old-task retention",
+        "observation": "Natural G/S selections produce reproducible gains and regressions with fixed target support, beyond H/U.",
+        "decision": "Consider independent-task/support-factor replication; not yet a novel method."
+      },
+      {
+        "alternative": "Input form, length, annotation or cache explains differences",
+        "observation": "Differences track input/format changes or disappear with a valid runtime correction.",
+        "decision": "Limit claim to total pipeline effect or engineering diagnosis; semantic conflict needs separate controls."
+      }
+    ],
+    "external_feedback": {
+      "received": false,
+      "sent": false,
+      "prepared_questions_in_report": true,
+      "required_to_begin_exploration": false
+    },
+    "this_review_execution": {
+      "docker_runs": 0,
+      "policy_runs": 0,
+      "embedding_runs": 0,
+      "simulator_runs": 0,
+      "weights_or_archive_downloads": 0,
+      "host_dependencies_installed": 0
+    }
+  }
+}

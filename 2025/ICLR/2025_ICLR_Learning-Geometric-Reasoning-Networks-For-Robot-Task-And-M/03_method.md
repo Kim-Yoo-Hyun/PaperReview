@@ -4,6 +4,8 @@
 > Evidence maturity: `FULL_TEXT_CHECKED`.
 > Analysis basis: full-text PDF body checked on 2026-09-03 (24 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=ajxAJ8GUX4; public full-text mirror used for retrieval (canonical paper source retained): https://chatpaper.com/api/v1/articles/download/112460. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
+> DOC-QA2 targeted source review: 2026-10-23; PDF pp. 4. 손상 구간·직접 연결된 표 분류만 원문 이미지와 대조했다. 전체 주장 정독·실험 검증·reading status 승격을 뜻하지 않는다. [URL·PDF hash·수정 기록](../../../work/sources/pdf_note_review_followup_2026-10-23.json).
+
 ## Method in One Sentence
 
 PDF body method statement (p. 14 (A IMPLEMENTATION DETAILS), p. 14 (A IMPLEMENTATION DETAILS)): Exceptionally, when training on the PR2-3D-4 dataset, we use a hidden size of 256 for the GO module as it yields better results.
@@ -14,7 +16,7 @@ PDF body method statement (p. 14 (A IMPLEMENTATION DETAILS), p. 14 (A IMPLEMENTA
 - **p. 14 / A IMPLEMENTATION DETAILS - extractive body cue:** During the pre-training stage, each module is trained for 100 epochs.
 - **p. 14 / A IMPLEMENTATION DETAILS - extractive body cue:** The total inference time of GRN is 5.5 ms in average, with the most significant portion spent on scene graph construction with an average time ...
 - **p. 14 / A IMPLEMENTATION DETAILS - extractive body cue:** The IK feasibility and GO modules take each a computation time of 0.5 ms.
-- **p. 4 / 1 INTRODUCTION - extractive body cue:** In summary, the task at hand is to learn two classification functions fF , fκ, and a regression function fρ s.t.:  Fa FG  ...
+- **PDF p. 4, §3 / Eq. (2) (DOC-QA2 원문 대조):** GRN은 feasibility classifier f_F와 IK classifier f_κ, obstruction regressor f_ρ를 학습한다. f_F는 object/environment와 예측 κ_G, ρ_G를 사용해 action·grasp feasibility 벡터 [F_a,F_G]ᵀ를 출력한다.
 - **p. 1 / 1 INTRODUCTION - extractive body cue:** Task and Motion Planning (TAMP) (Garrett et al., 2021) is a robotics problem in which the goal is to find a sequence of robot actions ...
 - **p. 6 / 1 INTRODUCTION - extractive body cue:** Once the multi-attention weights computed, our model computes a weighted average of the concatenated node and edge embeddings, followed by a LeakyReLU activation: h′ u ...
 - **p. 3 / 1 INTRODUCTION - extractive body cue:** These methods, however, lack interpretability and can not provide feedback on why actions are infeasible.
@@ -60,7 +62,7 @@ PDF body method statement (p. 14 (A IMPLEMENTATION DETAILS), p. 14 (A IMPLEMENTA
 
 ## Observation–State–Action Interface
 
-- **p. 4 / 1 INTRODUCTION - extractive body cue:** In summary, the task at hand is to learn two classification functions fF , fκ, and a regression function fρ s.t.:  Fa FG  ...
+- **PDF p. 4, §3 / Eq. (2) (DOC-QA2 원문 대조):** GRN은 feasibility classifier f_F와 IK classifier f_κ, obstruction regressor f_ρ를 학습한다. f_F는 object/environment와 예측 κ_G, ρ_G를 사용해 action·grasp feasibility 벡터 [F_a,F_G]ᵀ를 출력한다.
 - **p. 1 / 1 INTRODUCTION - extractive body cue:** Task and Motion Planning (TAMP) (Garrett et al., 2021) is a robotics problem in which the goal is to find a sequence of robot actions ...
 - **p. 6 / 1 INTRODUCTION - extractive body cue:** Once the multi-attention weights computed, our model computes a weighted average of the concatenated node and edge embeddings, followed by a LeakyReLU activation: h′ u ...
 - **p. 3 / 1 INTRODUCTION - extractive body cue:** These methods, however, lack interpretability and can not provide feedback on why actions are infeasible.

@@ -4,6 +4,8 @@
 > Evidence maturity: `FULL_TEXT_CHECKED`.
 > Analysis basis: full-text PDF body checked on 2026-09-03 (25 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openai.com/index/benchmarking-safe-exploration-in-deep-reinforcement-learning/; PDF retrieval source: https://cdn.openai.com/safexp-short.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
+> DOC-QA2 targeted source review: 2026-10-23; PDF pp. 14. 손상 구간·직접 연결된 표 분류만 원문 이미지와 대조했다. 전체 주장 정독·실험 검증·reading status 승격을 뜻하지 않는다. [URL·PDF hash·수정 기록](../../../work/sources/pdf_note_review_followup_2026-10-23.json).
+
 ## Evaluation in One Sentence
 
 PDF body evaluation/result cue (p. 21 (5.3 Results), p. 14 (5 Experiments), p. 10 (Figure/Table caption), p. 14 (5 Experiments), p. 15 (5 Experiments), p. 15 (5 Experiments)): By success, we mean attaining improvements simultaneously along both the episodic return axis and the constraint regret axis, while still producing a constraint-satisfying policy at the conclusion of training.
@@ -131,7 +133,7 @@ PDF body evaluation/result cue (p. 21 (5.3 Results), p. 14 (5 Experiments), p. 1
 | body limitation/failure cue | There are a number of avenues we consider promising for future work. | p. 21 (5.3 Results) |
 | body limitation/failure cue | Figure 6: Diversity of generated layouts for the Safexp-PointPush2-v0 env. 4.2 Safety Gym Benchmark Suite Safety Gym ships with a suite of pre-configured benchmark ... | p. 12 (Figure/Table caption) |
 | body limitation/failure cue | First and foremost, it corresponds directly to safety outcomes: a lower cost rate means that fewer unsafe things happened. | p. 14 (5 Experiments) |
-| body limitation/failure cue | E τ∼πθ XT t=0 ct  ≤d, where ct is the aggregate indicator cost function for the environment (ct = 1 for an unsafe ... | p. 14 (5 Experiments) |
+| Constraint definition | E[Σcₜ]≤d는 safety 요구를 하나로 합친 expected cumulative cost 제약이다. 모든 rollout에서 무사고를 보장하는 조건은 아니며, 정의 자체는 관측된 failure가 아니다. | PDF p. 14 §5 Eq. (3) |
 | body limitation/failure cue | 3Characteristic return and cumulative cost were obtained by averaging over the last five epochs of training to reduce noise. | p. 15 (5 Experiments) |
 
 - Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
@@ -163,7 +165,7 @@ PDF body evaluation/result cue (p. 21 (5.3 Results), p. 14 (5 Experiments), p. 1
 - **p. 21 / 5.3 Results - extractive body cue:** There are a number of avenues we consider promising for future work.
 - **p. 12 / Figure/Table caption - extractive body cue:** Figure 6: Diversity of generated layouts for the Safexp-PointPush2-v0 env. 4.2 Safety Gym Benchmark Suite Safety Gym ships with a suite of pre-configured benchmark environments, ...
 - **p. 14 / 5 Experiments - extractive body cue:** First and foremost, it corresponds directly to safety outcomes: a lower cost rate means that fewer unsafe things happened.
-- **p. 14 / 5 Experiments - extractive body cue:** E τ∼πθ XT t=0 ct  ≤d, where ct is the aggregate indicator cost function for the environment (ct = 1 for an unsafe interaction, ...
+- **PDF p. 14, §5 Eq. (3) (DOC-QA2 원문 대조):** 실험은 finite-horizon undiscounted return을 최대화하면서 E[Σₜ₌₀ᵀcₜ]≤d를 제약한다. cₜ는 source 종류와 무관하게 unsafe interaction이면 1인 aggregate indicator다. Episode cost와 전체 training steps당 cost rate는 별도 metric이다.
 - **p. 15 / 5 Experiments - extractive body cue:** 3Characteristic return and cumulative cost were obtained by averaging over the last five epochs of training to reduce noise.
 
 - **Evidence anchors reviewed:** datasets p. 15 (5 Experiments), p. 21 (5.3 Results), p. 15 (5 Experiments), p. 16 (5 Experiments), p. 16 (5.3 Results), p. 18 (5.3 Results), metrics p. 15 (5 Experiments), p. 16 (5.3 Results), p. 16 (5.3 Results), p. 15 (5 Experiments), p. 14 (5 Experiments), p. 14 (5 Experiments), baselines p. 21 (5.3 Results), p. 14 (5 Experiments), p. 21 (5.3 Results), p. 14 (5 Experiments), p. 16 (5.3 Results), p. 16 (5.3 Results), results p. 21 (5.3 Results), p. 14 (5 Experiments), p. 10 (Figure/Table caption), p. 14 (5 Experiments), p. 15 (5 Experiments), p. 15 (5 Experiments).

@@ -17,6 +17,8 @@
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
+> DOC-QA2 targeted source review: 2026-10-23; PDF pp. 4. 손상 구간·직접 연결된 표 분류만 원문 이미지와 대조했다. 전체 주장 정독·실험 검증·reading status 승격을 뜻하지 않는다. [URL·PDF hash·수정 기록](../../../work/sources/pdf_note_review_followup_2026-10-23.json).
+
 ## Why This Paper Is Here
 
 Robotics-enabling 3D perception의 generative 문제를 이해하기 위해 읽는다. 본문은 This limitation stems from missing information, since optimization-based approaches cannot synthesize contents beyond the observed data.를 문제로 두고, In summary, our contributions can be organized as follows: • We propose a pipeline for explorable 3D scene reconstruction, which incorporates the real-time rendering of 3DGS, video diffusion priors to complete missing ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
@@ -40,7 +42,7 @@ Robotics-enabling 3D perception의 generative 문제를 이해하기 위해 읽�
 - **p. 1 / 1. Introduction - extractive body cue:** This advancement has been further accelerated by recent 3D Gaussian Splatting (3DGS) [11], which enables highquality rendering in real-time.
 - **p. 3 / 3.1. Overview - extractive body cue:** NT r camera trajectories that maximizes the information gain are sampled, and each trajectory Trn consists of L progressively shifting virtual viewpoints: Trn = {V ...
 - **p. 4 / 3.3. Virtual view sampling - extractive body cue:** (b) Based on the optimized 3DGS and training viewpoints, we generate virtual camera trajectories, and enhance the rendered views using our diffusion-based enhancement model.
-- **p. 4 / 3.3. Virtual view sampling - extractive body cue:** (c) Finally, the scene is further optimized using both the original training viewpoints and the newly generated virtual viewpoints.  - 1 1 1 - ...
+- **PDF p. 4, Fig. 2(c) (DOC-QA2 원문 대조):** 원래 training viewpoints와 diffusion으로 보강한 virtual viewpoints를 함께 사용해 scene을 추가 최적화한다. 뒤에 붙었던 숫자·기호는 인접 Fig. 3의 정보량 도식에서 섞인 것으로 이 문장에서 제거했다.
 
 ## Observation, State, and Output Interface
 

@@ -1,0 +1,1067 @@
+{
+  "schema_version": 1,
+  "task_id": "GAP-AUTH3",
+  "completed_on": "2026-10-27",
+  "scope": "NON_EXPERIMENTAL_SOURCE_AND_INTERFACE_CONTRACT",
+  "report": "work/update/VLA_CONTACT_AUTHORIZATION_CONTRACT_REVIEW_2026-10-27.md",
+  "canonical_question": "synthesis/05_world_models_safety.md#gap-authorization-2026",
+  "prior_evidence": "work/sources/vla_contact_authorization_source_review_2026-10-27.json",
+  "status": {
+    "task": "DONE",
+    "interface_contract": "DOCUMENTED_V0",
+    "comparison_packet": "PARTIAL",
+    "research": "DIAGNOSTIC_REVISE",
+    "native_gate": "NOT_MET",
+    "effect": "NOT_TESTED",
+    "executable": false
+  },
+  "activity": {
+    "experiments": 0,
+    "inference": 0,
+    "training": 0,
+    "docker_or_gpu_probes": 0,
+    "package_installations": 0,
+    "cloud_model_calls": 0,
+    "pdf_downloads": 0,
+    "weight_payload_downloads": 0,
+    "init_payload_downloads": 0,
+    "registry_additions": 0,
+    "reading_promotions": 0
+  },
+  "counts": {
+    "new_openpi_revision": 1,
+    "openpi_reviewed_files": 12,
+    "openpi_context_only_files": 1,
+    "robosuite_release_reviewed_files": 7,
+    "checkpoint_objects_listed": 16,
+    "small_metadata_files_read": 3,
+    "prior_aegis_files_reused": 25
+  },
+  "code_files": [
+    {
+      "id": "C01",
+      "repo": "Physical-Intelligence/openpi",
+      "revision": "215abfb217dbac7d5f1273282331b9b1866c0479",
+      "path": "README.md",
+      "url": "https://raw.githubusercontent.com/Physical-Intelligence/openpi/215abfb217dbac7d5f1273282331b9b1866c0479/README.md",
+      "sha256": "567fc57766bd736664f50126cab8145af4071ca16cc5e238f2b11e369169c3b5",
+      "line_count": 323,
+      "reviewed_ranges": [
+        [
+          22,
+          84
+        ]
+      ],
+      "review_scope": "SPECIFIED_RANGES",
+      "executed": false
+    },
+    {
+      "id": "C02",
+      "repo": "Physical-Intelligence/openpi",
+      "revision": "215abfb217dbac7d5f1273282331b9b1866c0479",
+      "path": "src/openpi/training/config.py",
+      "url": "https://raw.githubusercontent.com/Physical-Intelligence/openpi/215abfb217dbac7d5f1273282331b9b1866c0479/src/openpi/training/config.py",
+      "sha256": "c34231f888dba5dc981d808765b3d98775ab845b04313bf53fcecd567c520b0d",
+      "line_count": 989,
+      "reviewed_ranges": [
+        [
+          75,
+          98
+        ],
+        [
+          106,
+          138
+        ],
+        [
+          179,
+          200
+        ],
+        [
+          281,
+          343
+        ],
+        [
+          743,
+          763
+        ]
+      ],
+      "review_scope": "SPECIFIED_RANGES",
+      "executed": false
+    },
+    {
+      "id": "C03",
+      "repo": "Physical-Intelligence/openpi",
+      "revision": "215abfb217dbac7d5f1273282331b9b1866c0479",
+      "path": "src/openpi/models/pi0_config.py",
+      "url": "https://raw.githubusercontent.com/Physical-Intelligence/openpi/215abfb217dbac7d5f1273282331b9b1866c0479/src/openpi/models/pi0_config.py",
+      "sha256": "d321858c30b398126035ea2b6da09e1c422eeeebb5ebf8df631daf9dc77647fa",
+      "line_count": 117,
+      "reviewed_ranges": [
+        [
+          18,
+          86
+        ]
+      ],
+      "review_scope": "SPECIFIED_RANGES",
+      "executed": false
+    },
+    {
+      "id": "C04",
+      "repo": "Physical-Intelligence/openpi",
+      "revision": "215abfb217dbac7d5f1273282331b9b1866c0479",
+      "path": "src/openpi/models/pi0.py",
+      "url": "https://raw.githubusercontent.com/Physical-Intelligence/openpi/215abfb217dbac7d5f1273282331b9b1866c0479/src/openpi/models/pi0.py",
+      "sha256": "24b32d7c6ed5e409459afa8ca5af96a4dae09c2dcdf48e828907e411f4f12342",
+      "line_count": 279,
+      "reviewed_ranges": [
+        [
+          66,
+          186
+        ],
+        [
+          216,
+          279
+        ]
+      ],
+      "review_scope": "SPECIFIED_RANGES",
+      "executed": false
+    },
+    {
+      "id": "C05",
+      "repo": "Physical-Intelligence/openpi",
+      "revision": "215abfb217dbac7d5f1273282331b9b1866c0479",
+      "path": "src/openpi/models/gemma.py",
+      "url": "https://raw.githubusercontent.com/Physical-Intelligence/openpi/215abfb217dbac7d5f1273282331b9b1866c0479/src/openpi/models/gemma.py",
+      "sha256": "7e42ada4ae7e9995f0ef3e33a0c224758323c2015e2d9d72ec15726a8a001d2a",
+      "line_count": 459,
+      "reviewed_ranges": [
+        [
+          44,
+          109
+        ],
+        [
+          158,
+          249
+        ],
+        [
+          283,
+          411
+        ],
+        [
+          424,
+          440
+        ]
+      ],
+      "review_scope": "SPECIFIED_RANGES",
+      "executed": false
+    },
+    {
+      "id": "C06",
+      "repo": "Physical-Intelligence/openpi",
+      "revision": "215abfb217dbac7d5f1273282331b9b1866c0479",
+      "path": "src/openpi/policies/policy_config.py",
+      "url": "https://raw.githubusercontent.com/Physical-Intelligence/openpi/215abfb217dbac7d5f1273282331b9b1866c0479/src/openpi/policies/policy_config.py",
+      "sha256": "aaf42ab04a33b6c91d2447926211646c33ebd8ebfa427f026d7b6c4f7c45ec52",
+      "line_count": 94,
+      "reviewed_ranges": [
+        [
+          16,
+          94
+        ]
+      ],
+      "review_scope": "SPECIFIED_RANGES",
+      "executed": false
+    },
+    {
+      "id": "C07",
+      "repo": "Physical-Intelligence/openpi",
+      "revision": "215abfb217dbac7d5f1273282331b9b1866c0479",
+      "path": "src/openpi/policies/policy.py",
+      "url": "https://raw.githubusercontent.com/Physical-Intelligence/openpi/215abfb217dbac7d5f1273282331b9b1866c0479/src/openpi/policies/policy.py",
+      "sha256": "a2ac5236e23b11d0f5a840d4a8fef148d89dba921d5452ec5dfcd5a6ffa46f20",
+      "line_count": 135,
+      "reviewed_ranges": [
+        [
+          24,
+          106
+        ]
+      ],
+      "review_scope": "SPECIFIED_RANGES",
+      "executed": false
+    },
+    {
+      "id": "C08",
+      "repo": "Physical-Intelligence/openpi",
+      "revision": "215abfb217dbac7d5f1273282331b9b1866c0479",
+      "path": "src/openpi/policies/libero_policy.py",
+      "url": "https://raw.githubusercontent.com/Physical-Intelligence/openpi/215abfb217dbac7d5f1273282331b9b1866c0479/src/openpi/policies/libero_policy.py",
+      "sha256": "d8679d99facc3fef48da07406081b20709ed872fcefdf7de67ede99422d623fa",
+      "line_count": 100,
+      "reviewed_ranges": [
+        [
+          20,
+          100
+        ]
+      ],
+      "review_scope": "SPECIFIED_RANGES",
+      "executed": false
+    },
+    {
+      "id": "C09",
+      "repo": "Physical-Intelligence/openpi",
+      "revision": "215abfb217dbac7d5f1273282331b9b1866c0479",
+      "path": "src/openpi/transforms.py",
+      "url": "https://raw.githubusercontent.com/Physical-Intelligence/openpi/215abfb217dbac7d5f1273282331b9b1866c0479/src/openpi/transforms.py",
+      "sha256": "a1b94e9e72849a18834778f229c6bb389a495eb7fbe0aa800edea728b9424ff4",
+      "line_count": 460,
+      "reviewed_ranges": [
+        [
+          120,
+          181
+        ],
+        [
+          248,
+          266
+        ]
+      ],
+      "review_scope": "SPECIFIED_RANGES",
+      "executed": false
+    },
+    {
+      "id": "C10",
+      "repo": "Physical-Intelligence/openpi",
+      "revision": "215abfb217dbac7d5f1273282331b9b1866c0479",
+      "path": "src/openpi/shared/normalize.py",
+      "url": "https://raw.githubusercontent.com/Physical-Intelligence/openpi/215abfb217dbac7d5f1273282331b9b1866c0479/src/openpi/shared/normalize.py",
+      "sha256": "6c2cea4946fb07e51801530400d2b2fd94730e195cd290d6b6960114eca9739d",
+      "line_count": 146,
+      "reviewed_ranges": [
+        [
+          120,
+          146
+        ]
+      ],
+      "review_scope": "SPECIFIED_RANGES",
+      "executed": false
+    },
+    {
+      "id": "C11",
+      "repo": "Physical-Intelligence/openpi",
+      "revision": "215abfb217dbac7d5f1273282331b9b1866c0479",
+      "path": "examples/libero/README.md",
+      "url": "https://raw.githubusercontent.com/Physical-Intelligence/openpi/215abfb217dbac7d5f1273282331b9b1866c0479/examples/libero/README.md",
+      "sha256": "a2caaf5459c4b01837b73aa93a6f69e8cdf10385b39c34eba36afa85f83fafe9",
+      "line_count": 71,
+      "reviewed_ranges": [
+        [
+          1,
+          71
+        ]
+      ],
+      "review_scope": "SPECIFIED_RANGES",
+      "executed": false
+    },
+    {
+      "id": "C12",
+      "repo": "Physical-Intelligence/openpi",
+      "revision": "215abfb217dbac7d5f1273282331b9b1866c0479",
+      "path": "src/openpi/models/model.py",
+      "url": "https://raw.githubusercontent.com/Physical-Intelligence/openpi/215abfb217dbac7d5f1273282331b9b1866c0479/src/openpi/models/model.py",
+      "sha256": "0d74bc1d8f4623ac3d8e543710b8bf75f9b95e588a3ebf6127c659e001385cff",
+      "line_count": 332,
+      "reviewed_ranges": [
+        [
+          125,
+          166
+        ],
+        [
+          186,
+          208
+        ]
+      ],
+      "review_scope": "SPECIFIED_RANGES",
+      "executed": false
+    },
+    {
+      "id": "C13",
+      "repo": "Physical-Intelligence/openpi",
+      "revision": "215abfb217dbac7d5f1273282331b9b1866c0479",
+      "path": "examples/convert_jax_model_to_pytorch.py",
+      "url": "https://raw.githubusercontent.com/Physical-Intelligence/openpi/215abfb217dbac7d5f1273282331b9b1866c0479/examples/convert_jax_model_to_pytorch.py",
+      "sha256": "62980fda1a1b1a09167d413232a2a9295db8370e52b58a70cfba52ef5d88c440",
+      "line_count": 587,
+      "reviewed_ranges": [],
+      "review_scope": "CONTEXT_FETCH_ONLY_NOT_REVIEWED",
+      "executed": false
+    },
+    {
+      "id": "R01",
+      "path": "robosuite/environments/base.py",
+      "sha256": "60eab4afd3dc95b4ac4cf0659fb9afe6360161912a4ac6931efe86ce1e1de519",
+      "line_count": 737,
+      "reviewed_ranges": [
+        [
+          171,
+          184
+        ],
+        [
+          364,
+          407
+        ],
+        [
+          565,
+          577
+        ]
+      ],
+      "review_scope": "SPECIFIED_RANGES",
+      "executed": false,
+      "distribution": "robosuite==1.4.1",
+      "url": "https://files.pythonhosted.org/packages/60/2f/bbcdf3130fc2c53c098d8699048724ac14292795dfb671168d1d5013fa03/robosuite-1.4.1-py3-none-any.whl#robosuite/environments/base.py"
+    },
+    {
+      "id": "R02",
+      "path": "robosuite/utils/sim_utils.py",
+      "sha256": "117200047fa29848f84924a5f9703a185269fcb12c6995c831736e3606df1b03",
+      "line_count": 67,
+      "reviewed_ranges": [
+        [
+          8,
+          40
+        ]
+      ],
+      "review_scope": "SPECIFIED_RANGES",
+      "executed": false,
+      "distribution": "robosuite==1.4.1",
+      "url": "https://files.pythonhosted.org/packages/60/2f/bbcdf3130fc2c53c098d8699048724ac14292795dfb671168d1d5013fa03/robosuite-1.4.1-py3-none-any.whl#robosuite/utils/sim_utils.py"
+    },
+    {
+      "id": "R03",
+      "path": "robosuite/utils/binding_utils.py",
+      "sha256": "5ac3c9da0cb9f85d694c6147103268df65151f751612a6c575ae0da4eb4988e4",
+      "line_count": 1177,
+      "reviewed_ranges": [
+        [
+          1082,
+          1092
+        ]
+      ],
+      "review_scope": "SPECIFIED_RANGES",
+      "executed": false,
+      "distribution": "robosuite==1.4.1",
+      "url": "https://files.pythonhosted.org/packages/60/2f/bbcdf3130fc2c53c098d8699048724ac14292795dfb671168d1d5013fa03/robosuite-1.4.1-py3-none-any.whl#robosuite/utils/binding_utils.py"
+    },
+    {
+      "id": "R04",
+      "path": "robosuite/models/grippers/panda_gripper.py",
+      "sha256": "a3760a8fc4599fa6f79914304b82466f3c1bda1a945943ca693bb57f00dc59eb",
+      "line_count": 66,
+      "reviewed_ranges": [
+        [
+          10,
+          66
+        ]
+      ],
+      "review_scope": "SPECIFIED_RANGES",
+      "executed": false,
+      "distribution": "robosuite==1.4.1",
+      "url": "https://files.pythonhosted.org/packages/60/2f/bbcdf3130fc2c53c098d8699048724ac14292795dfb671168d1d5013fa03/robosuite-1.4.1-py3-none-any.whl#robosuite/models/grippers/panda_gripper.py"
+    },
+    {
+      "id": "R05",
+      "path": "robosuite/models/base.py",
+      "sha256": "a5d7bc8c7f317735b76347c0038d3c0888e592da0ee059d0f937eb9f1b272b34",
+      "line_count": 696,
+      "reviewed_ranges": [
+        [
+          274,
+          295
+        ],
+        [
+          580,
+          625
+        ]
+      ],
+      "review_scope": "SPECIFIED_RANGES",
+      "executed": false,
+      "distribution": "robosuite==1.4.1",
+      "url": "https://files.pythonhosted.org/packages/60/2f/bbcdf3130fc2c53c098d8699048724ac14292795dfb671168d1d5013fa03/robosuite-1.4.1-py3-none-any.whl#robosuite/models/base.py"
+    },
+    {
+      "id": "R06",
+      "path": "robosuite-1.4.1.dist-info/METADATA",
+      "sha256": "47007dc72e97354a08e15f63a55dbea23881a1025ba60883c1c72b62054fffd4",
+      "line_count": 70,
+      "reviewed_ranges": [
+        [
+          1,
+          21
+        ]
+      ],
+      "review_scope": "SPECIFIED_RANGES",
+      "executed": false,
+      "distribution": "robosuite==1.4.1",
+      "url": "https://files.pythonhosted.org/packages/60/2f/bbcdf3130fc2c53c098d8699048724ac14292795dfb671168d1d5013fa03/robosuite-1.4.1-py3-none-any.whl#robosuite-1.4.1.dist-info/METADATA"
+    },
+    {
+      "id": "R07",
+      "path": "robosuite/macros.py",
+      "sha256": "85041caa914fbee7c9976e610ef8e0e76036af796ea65f07abb45c57962c6b25",
+      "line_count": 55,
+      "reviewed_ranges": [
+        [
+          10,
+          11
+        ],
+        [
+          46,
+          55
+        ]
+      ],
+      "review_scope": "SPECIFIED_RANGES",
+      "executed": false,
+      "distribution": "robosuite==1.4.1",
+      "url": "https://files.pythonhosted.org/packages/60/2f/bbcdf3130fc2c53c098d8699048724ac14292795dfb671168d1d5013fa03/robosuite-1.4.1-py3-none-any.whl#robosuite/macros.py"
+    }
+  ],
+  "sources": [
+    {
+      "id": "D01",
+      "url": "https://pypi.org/pypi/robosuite/1.4.1/json",
+      "scope": "Official version/distribution metadata, wheel URL, size and publisher digest"
+    },
+    {
+      "id": "D02",
+      "url": "https://pypi.org/project/robosuite/1.4.1/",
+      "scope": "Official release identity"
+    },
+    {
+      "id": "D03",
+      "url": "https://mujoco.readthedocs.io/en/3.2.3/computation/index.html",
+      "scope": "Contact margin/gap, simulation pipeline, consistency in mjData and reproducibility"
+    },
+    {
+      "id": "D04",
+      "url": "https://mujoco.readthedocs.io/en/3.2.3/APIreference/APItypes.html#mjcontact",
+      "scope": "dist, geom, exclude and efc_address"
+    },
+    {
+      "id": "D05",
+      "url": "https://arxiv.org/html/2606.09749v1",
+      "scope": "KNOWS sections 3.3-3.4 and 4.3 reviewed; Appendix7.2 source review reused from AUTH2; camera normalization, head selection and amortized timing boundary",
+      "publication_status": "preprint_under_review_no_new_acceptance_claim"
+    },
+    {
+      "id": "D06",
+      "url": "https://mujoco.readthedocs.io/en/3.2.3/programming/simulation.html",
+      "scope": "Initialization context only; not a full simulation manual review"
+    }
+  ],
+  "release_inspection": {
+    "version": "1.4.1",
+    "wheel_url": "https://files.pythonhosted.org/packages/60/2f/bbcdf3130fc2c53c098d8699048724ac14292795dfb671168d1d5013fa03/robosuite-1.4.1-py3-none-any.whl",
+    "wheel_size": 193518002,
+    "wheel_publisher_sha256": "62587cd5888d9d3d813f3ffcc7017f6f77efa618952527a0b9bb139ffd0a3741",
+    "full_wheel_hash_verified": false,
+    "method": "HTTP 206 ZIP range reads, selected entry CRC checked by zipfile; no installation, archive or assets saved",
+    "bytes_read": 137220,
+    "range_requests": 24,
+    "installed": false,
+    "whole_archive_saved": false,
+    "selected_entry_crc_checked": true,
+    "individual_source_sha256_verified": true
+  },
+  "checkpoint": {
+    "uri": "gs://openpi-assets/checkpoints/pi05_libero",
+    "listing_url": "https://storage.googleapis.com/storage/v1/b/openpi-assets/o?prefix=checkpoints%2Fpi05_libero%2F&fields=items%28name%2Csize%2Cmd5Hash%2Cgeneration%2Ccrc32c%29%2CnextPageToken",
+    "listing_complete": true,
+    "objects": [
+      {
+        "name": "checkpoints/pi05_libero/assets/physical-intelligence/libero/norm_stats.json",
+        "generation": "1757354341826612",
+        "size": "1914",
+        "md5Hash": "A9ECp3wKo0Ovv3VpyXu8ug==",
+        "crc32c": "l595yA=="
+      },
+      {
+        "name": "checkpoints/pi05_libero/params/_METADATA",
+        "generation": "1757354341847223",
+        "size": "23493",
+        "md5Hash": "h87nNUGOGM+SlQTXZuiH5w==",
+        "crc32c": "Pv6Rvg=="
+      },
+      {
+        "name": "checkpoints/pi05_libero/params/_sharding",
+        "generation": "1757354341829429",
+        "size": "17952",
+        "md5Hash": "uQbKjd0yzEAsRluwGbXx7g==",
+        "crc32c": "LEfJOw=="
+      },
+      {
+        "name": "checkpoints/pi05_libero/params/array_metadatas/process_0",
+        "generation": "1757354341837422",
+        "size": "9062",
+        "md5Hash": "6L3QQHzl7m1hSqp/D9Ilrw==",
+        "crc32c": "PlgOXQ=="
+      },
+      {
+        "name": "checkpoints/pi05_libero/params/d/98a77a52a8eb845ae4830eb7fe983979",
+        "generation": "1757354341898666",
+        "size": "42307",
+        "md5Hash": "yR0NA7yotjSH8i6fOWmjEQ==",
+        "crc32c": "SGdLxw=="
+      },
+      {
+        "name": "checkpoints/pi05_libero/params/manifest.ocdbt",
+        "generation": "1757354341840925",
+        "size": "120",
+        "md5Hash": "ScBVzgi9/ARq6oxG/2fzaw==",
+        "crc32c": "SGdLxw=="
+      },
+      {
+        "name": "checkpoints/pi05_libero/params/ocdbt.process_0/d/0eaaecefaa9720d30a32cc56e65fd345",
+        "generation": "1757354342041664",
+        "size": "2449323387",
+        "crc32c": "RnXVZg=="
+      },
+      {
+        "name": "checkpoints/pi05_libero/params/ocdbt.process_0/d/155391c1cbf93a1be16266de052e5b48",
+        "generation": "1757354341926731",
+        "size": "2307885530",
+        "crc32c": "Zdn1CA=="
+      },
+      {
+        "name": "checkpoints/pi05_libero/params/ocdbt.process_0/d/2b6985f48e9da86f68627a7608c5bc25",
+        "generation": "1757354341840735",
+        "size": "1077",
+        "md5Hash": "9FWQ08KGmJK/8T7dQ0vkQg==",
+        "crc32c": "SGdLxw=="
+      },
+      {
+        "name": "checkpoints/pi05_libero/params/ocdbt.process_0/d/475fab3ee8821662585a8cde3eb32e22",
+        "generation": "1757354341938583",
+        "size": "2150232827",
+        "crc32c": "yuEuTQ=="
+      },
+      {
+        "name": "checkpoints/pi05_libero/params/ocdbt.process_0/d/6c54da5a6f62c20a09c0f3f8c3329e00",
+        "generation": "1757354341906218",
+        "size": "1608436908",
+        "crc32c": "gpmyhg=="
+      },
+      {
+        "name": "checkpoints/pi05_libero/params/ocdbt.process_0/d/896bf93c5cf2e8ddd274a6ea0a2feec0",
+        "generation": "1757354341915025",
+        "size": "2240080987",
+        "crc32c": "4+0XtA=="
+      },
+      {
+        "name": "checkpoints/pi05_libero/params/ocdbt.process_0/d/bc613ff288a162563e622d01bb60622a",
+        "generation": "1757354341886074",
+        "size": "217",
+        "md5Hash": "wenKw3gyf+/fW/vslaBp7Q==",
+        "crc32c": "SGdLxw=="
+      },
+      {
+        "name": "checkpoints/pi05_libero/params/ocdbt.process_0/d/bda87d9791f23df771cd2d15293780cc",
+        "generation": "1757354341848154",
+        "size": "2926522",
+        "md5Hash": "vYZMwVn2STx4dPZljLmW3Q==",
+        "crc32c": "Ibt0iQ=="
+      },
+      {
+        "name": "checkpoints/pi05_libero/params/ocdbt.process_0/d/efbb46173882cb35ed41ffe0c2db8a5e",
+        "generation": "1757354341921326",
+        "size": "1680102856",
+        "crc32c": "nhZ3lQ=="
+      },
+      {
+        "name": "checkpoints/pi05_libero/params/ocdbt.process_0/manifest.ocdbt",
+        "generation": "1757354341843968",
+        "size": "322",
+        "md5Hash": "+aR0apS1rB7YibqQ1VVA7w==",
+        "crc32c": "SGdLxw=="
+      }
+    ],
+    "identity_boundary": "Generation/size/remote MD5/CRC manifest only; complete weights content not fetched or verified.",
+    "small_files": [
+      {
+        "object": {
+          "name": "checkpoints/pi05_libero/assets/physical-intelligence/libero/norm_stats.json",
+          "generation": "1757354341826612",
+          "size": "1914",
+          "md5Hash": "A9ECp3wKo0Ovv3VpyXu8ug==",
+          "crc32c": "l595yA=="
+        },
+        "url": "https://storage.googleapis.com/storage/v1/b/openpi-assets/o/checkpoints%2Fpi05_libero%2Fassets%2Fphysical-intelligence%2Flibero%2Fnorm_stats.json?alt=media&generation=1757354341826612",
+        "sha256": "b3a44bb2810436fb62917decaea58bd4d9110255df527dea21e8fd40c960bd84",
+        "md5_verified": true,
+        "keys": [
+          "norm_stats"
+        ],
+        "review_scope": "JSON keys and array lengths; bytes hashed, no parameter fitting"
+      },
+      {
+        "object": {
+          "name": "checkpoints/pi05_libero/params/_METADATA",
+          "generation": "1757354341847223",
+          "size": "23493",
+          "md5Hash": "h87nNUGOGM+SlQTXZuiH5w==",
+          "crc32c": "Pv6Rvg=="
+        },
+        "url": "https://storage.googleapis.com/storage/v1/b/openpi-assets/o/checkpoints%2Fpi05_libero%2Fparams%2F_METADATA?alt=media&generation=1757354341847223",
+        "sha256": "303a4e354814928e1d29b75e310f2c1ac7e7e29b62f48395b631045ca1cffc73",
+        "md5_verified": true,
+        "keys": [
+          "tree_metadata",
+          "use_zarr3",
+          "store_array_data_equal_to_fill_value",
+          "custom_metadata"
+        ],
+        "review_scope": "Metadata keys/structure inspected; write_shape is not a verified full logical tensor shape"
+      },
+      {
+        "object": {
+          "name": "checkpoints/pi05_libero/params/array_metadatas/process_0",
+          "generation": "1757354341837422",
+          "size": "9062",
+          "md5Hash": "6L3QQHzl7m1hSqp/D9Ilrw==",
+          "crc32c": "PlgOXQ=="
+        },
+        "url": "https://storage.googleapis.com/storage/v1/b/openpi-assets/o/checkpoints%2Fpi05_libero%2Fparams%2Farray_metadatas%2Fprocess_0?alt=media&generation=1757354341837422",
+        "sha256": "2b29474f08aa50922da11074deb4d7f35e30f0071a088a30f40df88edc1ebdb0",
+        "md5_verified": true,
+        "keys": [
+          "array_metadatas"
+        ],
+        "review_scope": "Metadata keys/structure inspected; write_shape is not a verified full logical tensor shape"
+      }
+    ],
+    "official_source_revision": "215abfb217dbac7d5f1273282331b9b1866c0479",
+    "backend_selected": "JAX",
+    "backend_basis": "Official bundle listing has Orbax/OCDBT params and no model.safetensors; loader branch inspected.",
+    "backend_executed": false,
+    "aegis_paper_run_weights_equivalence": "UNVERIFIED",
+    "config": {
+      "name": "pi05_libero",
+      "pi05": true,
+      "action_horizon": 10,
+      "action_dim": 32,
+      "max_token_len": 200,
+      "discrete_state_input": false,
+      "dtype": "bfloat16",
+      "extra_delta_transform": false,
+      "num_denoising_steps": 10,
+      "model_output_dim": 32,
+      "libero_output_dim": 7,
+      "executed_action_rows": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "norm": {
+      "asset_id": "physical-intelligence/libero",
+      "generation": "1757354341826612",
+      "sha256": "b3a44bb2810436fb62917decaea58bd4d9110255df527dea21e8fd40c960bd84",
+      "mode": "q01_q99_quantile",
+      "state_dim": 8,
+      "actions_dim": 7,
+      "formula": "2*(x-q01)/(q99-q01+1e-6)-1",
+      "epsilon": 0.000001,
+      "refit_allowed": false
+    },
+    "state_conditioning": {
+      "api_field_present": true,
+      "normalization_present": true,
+      "policy_value_conditioning": false,
+      "basis": "Static selected config: no discrete state tokens; PI05 suffix omits PI0 continuous state token; extra delta transform disabled. State shape/batching/controller use is distinct.",
+      "runtime_intervention_checked": false
+    }
+  },
+  "contracts": {
+    "all_implemented": false,
+    "inherited_tasks": [
+      "AUTH-T1",
+      "AUTH-T2"
+    ],
+    "task_identity_source": "AUTH2 task_packet; no task, init payload or native goal redefinition here",
+    "attention": {
+      "implemented": false,
+      "source_layers": 18,
+      "query_heads": 8,
+      "kv_heads": 1,
+      "head_dim": 256,
+      "primary": {
+        "name": "selection_free_proxy_v0",
+        "camera": "base_0_rgb",
+        "denoising": "last actual evaluation, record index and time",
+        "action_query_rows": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "aggregation": "equal mean over action rows, all 18 layers and all 8 query heads after per-row camera-conditional normalization",
+        "unique_query_window": 1
+      },
+      "formula": "For each query/head, softmax float32 RoPE/scaled logits restricted to valid camera keys. Full-key camera slice is a different statistic.",
+      "secondary": [
+        "full-key camera mass",
+        "wrist camera conditional map",
+        "per-head summaries for independently frozen dev-selected baseline"
+      ],
+      "score": "Sum of patch attention times fractional mask coverage divided by mask pixel area; common image transform and area unit.",
+      "confidence": "Top1-top2 density gap; not a calibrated probability",
+      "delta": null,
+      "delta_policy": "Select on disjoint dev data using false-exemption/coverage/normal-progress trade-off; equal calibration budget for threshold-only comparator; freeze before test.",
+      "invalid_rule": "No exemption on missing/nonfinite readout, camera span/mask mismatch, stale or mismatched query.",
+      "export_route": [
+        "gemma Attention/Block/layer scan auxiliary result",
+        "Pi0 sampler while-loop explicit auxiliary carry",
+        "Policy.infer unbatch auxiliary separately",
+        "append authorization_trace after LiberoOutputs"
+      ],
+      "preserve_nominal_actions": true,
+      "action_equivalence_verified": false,
+      "knows_reproduction": false,
+      "selected_head_validity_verified": false,
+      "claim_limit": "Average proxy failure cannot refute a validated selected-head baseline or prove policy intent error."
+    },
+    "contact": {
+      "implemented": false,
+      "dependency": "robosuite==1.4.1",
+      "client_mujoco_reference": "3.2.3",
+      "runtime_compatibility_verified": false,
+      "insertion": "MujocoEnv.step immediately after existing sim.forward and before _pre_action for every substep",
+      "boundary_time": "data.time with contact/qpos identity captured at that forward",
+      "post_step": "Optional transition record only, not relabeled as contact at newly integrated qpos",
+      "terminal_boundary": "Separate copied-data position/contact refresh; never add a new forward to live simulation. If absent, coverage=INCOMPLETE.",
+      "source_default_model_timestep_s": 0.002,
+      "source_control_hz": 20,
+      "conditional_substeps_per_control": 25,
+      "actual_opt_timestep_verified": false,
+      "actual_integrator_verified": false,
+      "primary_pair": "actual gripper.contact_geoms versus other-bowl collision geoms; unordered geom pairs",
+      "primary_predicate": "finite(dist) and dist <= 0; raw exclude and efc_address retained",
+      "secondary_predicate": "primary and exclude == 0 and efc_address >= 0; active constraint is not a force/damage claim",
+      "scope": "Discrete boundary geometric gripper-other-bowl contact before/at first target contact; not continuous collision coverage, full-arm safety, grasp or damage.",
+      "settled_initial_contact": "Ineligible initial case, retain in qualification denominator",
+      "simultaneous_target_other": "Counts other contact",
+      "oracle_phase_to_guard_allowed": false,
+      "geom_mapping": "Resolve prefixed contact_geoms and compiled IDs at reset; verify body descendants/collision flags; empty mappings fail. Evaluator-only namespace.",
+      "sampling_equivalence_verified": false,
+      "terminal_copy_path_verified": false
+    },
+    "schemas": {
+      "status": "FIELD_CONTRACT_ONLY_NOT_JSON_SCHEMA_VALIDATED",
+      "query": {
+        "required": [
+          "case_id",
+          "branch_id",
+          "query_id",
+          "control_tick",
+          "sim_time",
+          "rgb_hashes",
+          "image_transform",
+          "prompt_hash",
+          "checkpoint_identity",
+          "norm_sha256",
+          "noise_identity",
+          "camera_token_spans",
+          "nominal_chunk",
+          "attention_provenance"
+        ],
+        "forbidden": [
+          "truth_target_body_id",
+          "truth_geom_ids",
+          "oracle_phase"
+        ]
+      },
+      "perception": {
+        "required": [
+          "query_or_frame_id",
+          "visual_track_ids",
+          "mask_refs",
+          "mask_pixel_areas",
+          "camera_frame",
+          "camera_calibration",
+          "geometry",
+          "timestamp",
+          "validity",
+          "track_history"
+        ],
+        "forbidden": [
+          "simulator_segmentation_id_as_visual_track",
+          "simulator_object_pose_as_perception"
+        ]
+      },
+      "authorization": {
+        "required": [
+          "input_packet_hashes",
+          "exempt_visual_track_ids",
+          "protected_visual_track_ids",
+          "readout_or_rule_version",
+          "density_gap",
+          "delta",
+          "reason",
+          "fallback"
+        ]
+      },
+      "filter": {
+        "required": [
+          "nominal_action",
+          "action_units_and_limits",
+          "protected_constraints",
+          "solver_status",
+          "residual",
+          "output_action",
+          "fallback",
+          "wall_ms"
+        ]
+      },
+      "evaluator": {
+        "required": [
+          "case_id",
+          "branch_id",
+          "physics_sample_id",
+          "sampling_stage",
+          "sim_time",
+          "truth_body_geom_map",
+          "contact_geom_pairs",
+          "dist",
+          "exclude",
+          "efc_address",
+          "native_success",
+          "diagnostic_contact",
+          "termination_reason"
+        ],
+        "access": "Never routed to policy/guard"
+      },
+      "equality": "Same-prefix decision shares observation/noise/nominal chunk/geometry/controller/timing; after divergence each branch uses own observations under same pipeline."
+    },
+    "filter": {
+      "implemented": false,
+      "scope": "All valid protected visual tracks get constraints in one common QP; not first bounding-box-only.",
+      "uncertain_authorization": "No exemptions; protect all valid tracked objects",
+      "invalid_geometry_or_solver": "Terminate comparison as INVALID_FILTER, retain denominator; do not silently execute nominal action",
+      "solver_tolerances": null,
+      "geometry_margins": null,
+      "controller_scaling_manifest": null,
+      "real_robot_safety_stop_claim": false,
+      "failure_accounting": "Report all scheduled, eligible and invalid counts; never mark exception as safe success."
+    },
+    "comparisons": [
+      {
+        "id": "B0",
+        "role": "Unfiltered nominal policy, same logging validity requirements"
+      },
+      {
+        "id": "B1",
+        "role": "Internal readout with confidence fallback",
+        "implemented": false
+      },
+      {
+        "id": "B2",
+        "role": "Threshold-only alternative, same calibration budget"
+      },
+      {
+        "id": "B3",
+        "role": "Fix initially predicted visual target, never ground-truth target"
+      },
+      {
+        "id": "B4",
+        "role": "Original instruction plus perceived spatial relation, same geometry",
+        "local_perception_asset": null,
+        "relation_rule": null
+      },
+      {
+        "id": "B5",
+        "role": "Protect-all or explicit stop, report lost progress"
+      },
+      {
+        "id": "B6",
+        "role": "Oracle permission diagnostic upper reference, never deployment evidence"
+      }
+    ],
+    "budgets": {
+      "planned_reset_cases": 4,
+      "origin": "AUTH2 two tasks x candidate init indices 0,1; not yet checked valid",
+      "role": "Wiring/identity qualification only; not simultaneous head calibration and research test",
+      "executed": 0,
+      "settling_control_ticks": 20,
+      "followup_horizon_control_ticks": 300,
+      "control_period_ms": 50,
+      "policy_replan_ticks": 5,
+      "training_budget": 0,
+      "cloud_model_budget": 0,
+      "cost_units": [
+        "unique policy queries",
+        "control ticks",
+        "physics substeps",
+        "perception calls",
+        "cold_start_ms",
+        "synchronized_model_ms",
+        "serialization_ms",
+        "QP_ms",
+        "end_to_end_wall_ms",
+        "annotation_and_GT_cost"
+      ],
+      "independent_unit": "Reset/episode, not query/head/substep",
+      "latency_claim": "No deadline claim from amortized query time alone; source Policy timing precedes host materialization.",
+      "dev_test_split": null,
+      "hardware_measurements": null,
+      "resource_budget_verified": false
+    }
+  },
+  "findings": [
+    {
+      "id": "F1",
+      "kind": "SOURCE_SUPPORTED",
+      "claim": "Official pi05_libero configuration and remote bundle give a JAX reference; AEGIS historical weights equivalence is not established.",
+      "evidence": [
+        "C02",
+        "C06",
+        "C11",
+        "checkpoint"
+      ]
+    },
+    {
+      "id": "F2",
+      "kind": "STATIC_INFERENCE",
+      "claim": "Selected PI05 LIBERO action predictor does not condition on state values despite state API field; controller use is separate.",
+      "evidence": [
+        "C02",
+        "C04",
+        "C09"
+      ]
+    },
+    {
+      "id": "F3",
+      "kind": "SOURCE_SUPPORTED",
+      "claim": "Attention exists within JAX scan/while-loop but is not exported by current sampler/LiberoOutputs.",
+      "evidence": [
+        "C04",
+        "C05",
+        "C07",
+        "C08"
+      ]
+    },
+    {
+      "id": "F4",
+      "kind": "SOURCE_SUPPORTED",
+      "claim": "Contact helper uses geom membership without distance/exclusion filtering; recorder must distinguish substep and derived-state timing.",
+      "evidence": [
+        "R01",
+        "R02",
+        "R03",
+        "D03",
+        "D04"
+      ]
+    },
+    {
+      "id": "F5",
+      "kind": "DESIGN_NOT_VERIFIED",
+      "claim": "Common perception/multi-object filter and independent evaluator are prerequisites; documentation and checkpoint identity do not establish usefulness.",
+      "evidence": [
+        "contracts",
+        "prior_evidence"
+      ]
+    }
+  ],
+  "reject_or_revise": [
+    "Instrumentation changes nominal action for same inputs/noise: reject comparison.",
+    "Identity/time/phase leakage or mismatched timestep: reject comparison.",
+    "Same perception cannot distinguish bowl instances: separate perception failure; no deployment claim from oracle geometry.",
+    "Only unvalidated proxy fails: limit claim to proxy, do not refute KNOWS.",
+    "No natural high-gap wrong exemption witnessed: no observed natural mechanism; injection cannot establish frequency.",
+    "Threshold/initial lock/simple relation explains benefit: no learned-method contribution.",
+    "Contact reduction due only to stop/invalid or loss of normal progress: no useful safety-improvement claim.",
+    "Exemption error reduced without contact consequence: authorization diagnosis only."
+  ],
+  "unresolved": [
+    {
+      "id": "U1",
+      "item": "Common local perception asset, checkpoint/license and temporal visual identity; relation baseline",
+      "resolution": "AUTH4 nonexperimental bounded source review"
+    },
+    {
+      "id": "U2",
+      "item": "delta, head selection fairness, dev/test split, geometry/controller/solver numeric manifest",
+      "resolution": "Design choice + future disjoint calibration; not fabricated now"
+    },
+    {
+      "id": "U3",
+      "item": "Weights content verification, native reset/geom mapping/timestep/integrator, readout/action equivalence, terminal sampling",
+      "resolution": "Future explicitly scoped local Docker qualification"
+    },
+    {
+      "id": "U4",
+      "item": "Natural failure frequency, contact consequence and progress-preserving benefit",
+      "resolution": "Future native evidence; not source-only inference"
+    }
+  ],
+  "environment_boundary": {
+    "install_or_run_now": false,
+    "future_execution": "Local Docker only; separate OpenPI JAX server and SafeLIBERO client",
+    "upstream_readme": {
+      "os_tested": "Ubuntu 22.04",
+      "inference_gpu_memory": ">8 GB NVIDIA; upstream estimate only",
+      "source": "C01"
+    },
+    "current_profile_validated": false,
+    "image_digest": null,
+    "lock_resolved": false,
+    "driver_checked": false,
+    "no_host_mps_or_remote_cloud_fallback": true,
+    "automatic_pytorch_conversion": false
+  },
+  "next_task": {
+    "id": "GAP-AUTH4",
+    "status": "READY_NON_EXPERIMENTAL",
+    "scope": "Narrow one public local perception asset and simple relation/initial-lock baseline; audit checkpoint/license, mask/track/depth/frame/time, privilege/cost and discriminating prediction.",
+    "stop_rule": "If fair simple baseline or remaining distinct prediction cannot be secured, HOLD this design. Do not repeat metadata audits or launch training."
+  },
+  "preserved_research_state": "Existing DATA-TRANSFER/N3 and earlier candidate HOLD/NO-GO unchanged; CURATION-HYPOTHESIS; no native policy-effect or external researcher feedback.",
+  "validation": {
+    "status": "PASS_DOCUMENT_MAINTENANCE_ONLY",
+    "source_file_hashes_verified": true,
+    "source_range_bounds_checked": true,
+    "source_hash_files_checked": 20,
+    "small_metadata_hash_files_checked": 3,
+    "source_text_cleanup": "29 task-owned temporary source/metadata files deleted after hash verification; no package archive or weights saved",
+    "py_compile": "PASS",
+    "tier_generator": "PASS_UNCHANGED_COUNTS",
+    "git_diff_check": "PASS",
+    "modified_document_local_links_checked": 618,
+    "broken_local_links": 0,
+    "canonical_registry_manifest_meta_tier_tracker_hashes_unchanged": 6,
+    "preexisting_dirty_files": 639,
+    "edited_preexisting_files": 7,
+    "unrelated_dirty_files_preserved": 632,
+    "preexisting_missing_paths_preserved": 10,
+    "repository_audit_after": {
+      "errors": 0,
+      "warnings": 0,
+      "papers": 1072,
+      "intensive": 344,
+      "history": 47,
+      "standard_notes": 5360,
+      "markdown_files_checked": 5534,
+      "markdown_links_checked": 10874
+    },
+    "repository_audit_before": {
+      "errors": 0,
+      "warnings": 0,
+      "papers": 1072,
+      "core": 47,
+      "next": 297,
+      "reference": 486,
+      "archive": 242,
+      "active": 344,
+      "history": 47
+    }
+  }
+}

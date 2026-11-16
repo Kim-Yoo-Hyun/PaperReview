@@ -1,0 +1,724 @@
+{
+  "task_id": "GAP-TERM1",
+  "schema_version": "1.0",
+  "reviewed_on": "2026-10-27",
+  "task_status": "DONE",
+  "scope": "Nonexperimental direct-collision and stop/task/controller contract review after GAP-S2",
+  "research_decision": {
+    "independent_candidate": "NO-GO_CURRENT_FORMULATION",
+    "diagnostic": "HOLD",
+    "new_methods_adopted": 0,
+    "new_projects_adopted": 0,
+    "novelty": "NOT_ESTABLISHED",
+    "native_effect": "NOT_TESTED",
+    "rank_reversal": "NOT_TESTED",
+    "all_termination_research_rejected": false,
+    "resource_shortage_is_rejection_reason": false,
+    "inaccessible_P12_fulltext_is_rejection_reason": false,
+    "reason": "No ex ante condition separating residual policy-selection loss from simple calibration/hysteresis/deadline and task/controller changes; rank change alone is not an explanatory contribution."
+  },
+  "counts": {
+    "direct_papers": 4,
+    "selected_fulltexts": 3,
+    "official_abstract_metadata_only": 1,
+    "repositories": 3,
+    "revisions": 3,
+    "source_config_doc_files": 21,
+    "native_task_definitions": 2,
+    "verified_task_contrast_pairs": 0
+  },
+  "constraints": {
+    "experiments": false,
+    "simulation": false,
+    "policy_inference": false,
+    "learning": false,
+    "docker_gpu_probe": false,
+    "dependencies_installed": false,
+    "weights_or_datasets_downloaded": false,
+    "init_state_payload_downloaded": false,
+    "local_pdf_downloaded": false,
+    "registration": false,
+    "tier_change": false,
+    "reading_status_promotion": false,
+    "commit_or_push": false
+  },
+  "prior_2024_2026_scout": "work/sources/vla_gap_reselection_review_2026-10-27.json",
+  "papers": [
+    {
+      "source_id": "P9",
+      "title": "SparkVLA: Stop-Aware Hierarchical VLA with Adaptive Action Chunking for Long-Horizon Manipulation",
+      "public_year": 2026,
+      "venue_or_status": "arXiv 2608.16172v1",
+      "publication_status": "preprint",
+      "primary_url": "https://arxiv.org/abs/2608.16172",
+      "fulltext_url": "https://arxiv.org/html/2608.16172v1",
+      "registry_paper_id": null,
+      "reviewed_sections": "Algorithm 2; evaluation controls and final-state criteria",
+      "checked_on": "2026-10-27",
+      "registered_this_task": false
+    },
+    {
+      "source_id": "P10",
+      "title": "Echo: Coupled Action and Task Status Signal Denoising for Vision Language Action Models",
+      "public_year": 2026,
+      "venue_or_status": "arXiv 2610.31569v1",
+      "publication_status": "preprint",
+      "primary_url": "https://arxiv.org/abs/2610.31569",
+      "fulltext_url": "https://arxiv.org/html/2610.31569v1",
+      "registry_paper_id": null,
+      "reviewed_sections": "A.1-A.2; A.8-A.10",
+      "checked_on": "2026-10-27",
+      "registered_this_task": false
+    },
+    {
+      "source_id": "P11",
+      "title": "SEES: A Self-Evolving Embodied System via Failure-Guided VLA Policy Adaptation",
+      "public_year": 2026,
+      "venue_or_status": "arXiv 2609.32698v1",
+      "publication_status": "preprint",
+      "primary_url": "https://arxiv.org/abs/2609.32698",
+      "fulltext_url": "https://arxiv.org/html/2609.32698v1",
+      "registry_paper_id": null,
+      "reviewed_sections": "Appendix B",
+      "checked_on": "2026-10-27",
+      "registered_this_task": false
+    },
+    {
+      "source_id": "P12",
+      "title": "Every Failure Is a Timeout: Failure-Mode Homogeneity Makes Robot Policy Evaluators Unverifiable",
+      "public_year": 2026,
+      "venue_or_status": "ICLR 2027 Conference Submission; under review",
+      "publication_status": "under_review",
+      "primary_url": "https://openreview.net/forum?id=8GyKjbTQUd",
+      "fulltext_url": null,
+      "registry_paper_id": null,
+      "reviewed_sections": "official API note version 2 abstract and metadata only",
+      "checked_on": "2026-10-27",
+      "registered_this_task": false,
+      "primary_api": "https://api2.openreview.net/notes/search?term=Every%20Failure%20Is%20a%20Timeout&limit=3",
+      "fulltext_scope": "UNRESOLVED",
+      "code_link": "not present in checked metadata; full paper not inspected",
+      "metadata_capture_sha256": "99d41499372b2c84ffb85b1c773bf5f54a99a5139676661ef56579201796a0ee",
+      "publication_status_inference_forbidden": true,
+      "access_attempts": [
+        "official forum and API metadata",
+        "web PDF by forum ID: unavailable",
+        "web PDF by metadata content path: unavailable",
+        "official title and arXiv title search: no additional fulltext"
+      ],
+      "retry_policy": "stop repeated access attempts; no local PDF download"
+    }
+  ],
+  "code_sources": [
+    {
+      "repo": "lyfeng001/Echo-Sim",
+      "commit": "ed771cfcee11961529541edd7dcc7c16fee788d8",
+      "path": "echo/evaluation/evaluate.py",
+      "url": "https://github.com/lyfeng001/Echo-Sim/blob/ed771cfcee11961529541edd7dcc7c16fee788d8/echo/evaluation/evaluate.py",
+      "sha256": "f2f7fdee09182fb1220ff245a4e0db504289434ceba780c8224341a85e25e0a5",
+      "bytes": 13072,
+      "reviewed_ranges": [
+        [
+          70,
+          119
+        ],
+        [
+          194,
+          224
+        ]
+      ],
+      "review_depth": "selected_source_or_document_ranges_static_only",
+      "checked_on": "2026-10-27",
+      "executed": false,
+      "source_id": "C1"
+    },
+    {
+      "repo": "lyfeng001/Echo-Sim",
+      "commit": "ed771cfcee11961529541edd7dcc7c16fee788d8",
+      "path": "echo/evaluation/environment.py",
+      "url": "https://github.com/lyfeng001/Echo-Sim/blob/ed771cfcee11961529541edd7dcc7c16fee788d8/echo/evaluation/environment.py",
+      "sha256": "45ceb73218c4e9a1f8d3c211938e3fec254877e50bb4b9746448ec3529b63c54",
+      "bytes": 7655,
+      "reviewed_ranges": [
+        [
+          40,
+          82
+        ],
+        [
+          110,
+          175
+        ]
+      ],
+      "review_depth": "selected_source_or_document_ranges_static_only",
+      "checked_on": "2026-10-27",
+      "executed": false,
+      "source_id": "C2"
+    },
+    {
+      "repo": "lyfeng001/Echo-Sim",
+      "commit": "ed771cfcee11961529541edd7dcc7c16fee788d8",
+      "path": "echo/evaluation/signals.py",
+      "url": "https://github.com/lyfeng001/Echo-Sim/blob/ed771cfcee11961529541edd7dcc7c16fee788d8/echo/evaluation/signals.py",
+      "sha256": "73a57f21dfbc71f513b33b30efa588581762c1a04f77f8312374954c5f82f2ce",
+      "bytes": 7171,
+      "reviewed_ranges": [
+        [
+          14,
+          98
+        ]
+      ],
+      "review_depth": "selected_source_or_document_ranges_static_only",
+      "checked_on": "2026-10-27",
+      "executed": false,
+      "source_id": "C3"
+    },
+    {
+      "repo": "lyfeng001/Echo-Sim",
+      "commit": "ed771cfcee11961529541edd7dcc7c16fee788d8",
+      "path": "echo/models/policy.py",
+      "url": "https://github.com/lyfeng001/Echo-Sim/blob/ed771cfcee11961529541edd7dcc7c16fee788d8/echo/models/policy.py",
+      "sha256": "4cf62a377dea6f620901fb8e6e97fbfd6af1a33a2c86d9f03a39b260e747c587",
+      "bytes": 5321,
+      "reviewed_ranges": [
+        [
+          60,
+          94
+        ]
+      ],
+      "review_depth": "selected_source_or_document_ranges_static_only",
+      "checked_on": "2026-10-27",
+      "executed": false,
+      "source_id": "C4"
+    },
+    {
+      "repo": "lyfeng001/Echo-Sim",
+      "commit": "ed771cfcee11961529541edd7dcc7c16fee788d8",
+      "path": "configs/evaluation.json",
+      "url": "https://github.com/lyfeng001/Echo-Sim/blob/ed771cfcee11961529541edd7dcc7c16fee788d8/configs/evaluation.json",
+      "sha256": "c89055bf74746d5b3238bef59811f7cba32146c1469a2f7066b91ebdd1cd74e6",
+      "bytes": 476,
+      "reviewed_ranges": [
+        [
+          1,
+          17
+        ]
+      ],
+      "review_depth": "selected_source_or_document_ranges_static_only",
+      "checked_on": "2026-10-27",
+      "executed": false,
+      "source_id": "C5"
+    },
+    {
+      "repo": "lyfeng001/Echo-Sim",
+      "commit": "ed771cfcee11961529541edd7dcc7c16fee788d8",
+      "path": "configs/signals.json",
+      "url": "https://github.com/lyfeng001/Echo-Sim/blob/ed771cfcee11961529541edd7dcc7c16fee788d8/configs/signals.json",
+      "sha256": "1f26e614ed61c2d500b72e801ac88d5bd440c50137734ef8b1a7886f5a7dbad4",
+      "bytes": 173,
+      "reviewed_ranges": [
+        [
+          1,
+          8
+        ]
+      ],
+      "review_depth": "selected_source_or_document_ranges_static_only",
+      "checked_on": "2026-10-27",
+      "executed": false,
+      "source_id": "C6"
+    },
+    {
+      "repo": "lyfeng001/Echo-Sim",
+      "commit": "ed771cfcee11961529541edd7dcc7c16fee788d8",
+      "path": "configs/baseline.json",
+      "url": "https://github.com/lyfeng001/Echo-Sim/blob/ed771cfcee11961529541edd7dcc7c16fee788d8/configs/baseline.json",
+      "sha256": "4434892d7b387de84f4edc43a2004345d5f2ef33a9b5af009bc3db3b884b19f6",
+      "bytes": 935,
+      "reviewed_ranges": [
+        [
+          1,
+          41
+        ]
+      ],
+      "review_depth": "selected_source_or_document_ranges_static_only",
+      "checked_on": "2026-10-27",
+      "executed": false,
+      "source_id": "C7"
+    },
+    {
+      "repo": "lyfeng001/Echo-Sim",
+      "commit": "ed771cfcee11961529541edd7dcc7c16fee788d8",
+      "path": "configs/echo_tau07.json",
+      "url": "https://github.com/lyfeng001/Echo-Sim/blob/ed771cfcee11961529541edd7dcc7c16fee788d8/configs/echo_tau07.json",
+      "sha256": "94bf1b3313d7ae65776c57c047c69bb04e38e07f502b850ba67cb7bc3948941d",
+      "bytes": 953,
+      "reviewed_ranges": [
+        [
+          1,
+          42
+        ]
+      ],
+      "review_depth": "selected_source_or_document_ranges_static_only",
+      "checked_on": "2026-10-27",
+      "executed": false,
+      "source_id": "C8"
+    },
+    {
+      "repo": "lyfeng001/Echo-Sim",
+      "commit": "ed771cfcee11961529541edd7dcc7c16fee788d8",
+      "path": "docs/evaluation.md",
+      "url": "https://github.com/lyfeng001/Echo-Sim/blob/ed771cfcee11961529541edd7dcc7c16fee788d8/docs/evaluation.md",
+      "sha256": "df0d158f31ac9644843c39863f7d22ecc365ee57e14c6e0f364a168fc7040a69",
+      "bytes": 7557,
+      "reviewed_ranges": [
+        [
+          52,
+          60
+        ],
+        [
+          92,
+          96
+        ],
+        [
+          129,
+          160
+        ]
+      ],
+      "review_depth": "selected_source_or_document_ranges_static_only",
+      "checked_on": "2026-10-27",
+      "executed": false,
+      "source_id": "C9"
+    },
+    {
+      "repo": "lyfeng001/Echo-Sim",
+      "commit": "ed771cfcee11961529541edd7dcc7c16fee788d8",
+      "path": "LIBERO/libero/libero/envs/bddl_base_domain.py",
+      "url": "https://github.com/lyfeng001/Echo-Sim/blob/ed771cfcee11961529541edd7dcc7c16fee788d8/LIBERO/libero/libero/envs/bddl_base_domain.py",
+      "sha256": "055836670ac5fcac7e033fc86404718fd53854996e5776b1ff68b646f7bbcc9d",
+      "bytes": 32639,
+      "reviewed_ranges": [
+        [
+          800,
+          809
+        ]
+      ],
+      "review_depth": "selected_source_or_document_ranges_static_only",
+      "checked_on": "2026-10-27",
+      "executed": false,
+      "source_id": "C10"
+    },
+    {
+      "repo": "lyfeng001/Echo-Sim",
+      "commit": "ed771cfcee11961529541edd7dcc7c16fee788d8",
+      "path": "LIBERO/libero/libero/envs/env_wrapper.py",
+      "url": "https://github.com/lyfeng001/Echo-Sim/blob/ed771cfcee11961529541edd7dcc7c16fee788d8/LIBERO/libero/libero/envs/env_wrapper.py",
+      "sha256": "a782fb76c9792268d28979474fe72849e1e98ada49c8e997a65359a8d6b6acd0",
+      "bytes": 8781,
+      "reviewed_ranges": [
+        [
+          87,
+          104
+        ]
+      ],
+      "review_depth": "selected_source_or_document_ranges_static_only",
+      "checked_on": "2026-10-27",
+      "executed": false,
+      "source_id": "C11"
+    },
+    {
+      "repo": "lyfeng001/Echo-Sim",
+      "commit": "ed771cfcee11961529541edd7dcc7c16fee788d8",
+      "path": "LIBERO/libero/libero/envs/predicates/base_predicates.py",
+      "url": "https://github.com/lyfeng001/Echo-Sim/blob/ed771cfcee11961529541edd7dcc7c16fee788d8/LIBERO/libero/libero/envs/predicates/base_predicates.py",
+      "sha256": "319137e95330dbb22a266a8dceb8110f18413c2bf17461550222228c4bc310a1",
+      "bytes": 2650,
+      "reviewed_ranges": [
+        [
+          52,
+          118
+        ]
+      ],
+      "review_depth": "selected_source_or_document_ranges_static_only",
+      "checked_on": "2026-10-27",
+      "executed": false,
+      "source_id": "C12"
+    },
+    {
+      "repo": "lyfeng001/Echo-Sim",
+      "commit": "ed771cfcee11961529541edd7dcc7c16fee788d8",
+      "path": "LIBERO/libero/libero/envs/object_states/base_object_states.py",
+      "url": "https://github.com/lyfeng001/Echo-Sim/blob/ed771cfcee11961529541edd7dcc7c16fee788d8/LIBERO/libero/libero/envs/object_states/base_object_states.py",
+      "sha256": "ca6f53123336b6487bdb4feb02534ddb3a0627a4b847fe89da4460520ef01366",
+      "bytes": 8215,
+      "reviewed_ranges": [
+        [
+          34,
+          106
+        ],
+        [
+          137,
+          219
+        ]
+      ],
+      "review_depth": "selected_source_or_document_ranges_static_only",
+      "checked_on": "2026-10-27",
+      "executed": false,
+      "source_id": "C13"
+    },
+    {
+      "repo": "lyfeng001/Echo-Sim",
+      "commit": "ed771cfcee11961529541edd7dcc7c16fee788d8",
+      "path": "LIBERO/libero/libero/envs/problems/libero_tabletop_manipulation.py",
+      "url": "https://github.com/lyfeng001/Echo-Sim/blob/ed771cfcee11961529541edd7dcc7c16fee788d8/LIBERO/libero/libero/envs/problems/libero_tabletop_manipulation.py",
+      "sha256": "0defb17c0bbab8f6bd34c021ac15598ea101fe1e48690cb440d4ef92762880fe",
+      "bytes": 8877,
+      "reviewed_ranges": [
+        [
+          135,
+          160
+        ]
+      ],
+      "review_depth": "selected_source_or_document_ranges_static_only",
+      "checked_on": "2026-10-27",
+      "executed": false,
+      "source_id": "C14"
+    },
+    {
+      "repo": "lyfeng001/Echo-Sim",
+      "commit": "ed771cfcee11961529541edd7dcc7c16fee788d8",
+      "path": "LIBERO/libero/libero/envs/objects/articulated_objects.py",
+      "url": "https://github.com/lyfeng001/Echo-Sim/blob/ed771cfcee11961529541edd7dcc7c16fee788d8/LIBERO/libero/libero/envs/objects/articulated_objects.py",
+      "sha256": "f5187b0381d69a2a8736c1dcb646e5fa7c138a42950f92e30c21c2efaed52faa",
+      "bytes": 8126,
+      "reviewed_ranges": [
+        [
+          173,
+          194
+        ]
+      ],
+      "review_depth": "selected_source_or_document_ranges_static_only",
+      "checked_on": "2026-10-27",
+      "executed": false,
+      "source_id": "C15"
+    },
+    {
+      "repo": "lyfeng001/Echo-Sim",
+      "commit": "ed771cfcee11961529541edd7dcc7c16fee788d8",
+      "path": "LIBERO/libero/libero/bddl_files/libero_goal/put_the_bowl_on_the_plate.bddl",
+      "url": "https://github.com/lyfeng001/Echo-Sim/blob/ed771cfcee11961529541edd7dcc7c16fee788d8/LIBERO/libero/libero/bddl_files/libero_goal/put_the_bowl_on_the_plate.bddl",
+      "sha256": "358b7781437e412c67d6a7648c1c28796b6b1bf117a25e61316cb8dfeb940e5b",
+      "bytes": 2927,
+      "reviewed_ranges": [
+        [
+          124,
+          126
+        ]
+      ],
+      "review_depth": "selected_source_or_document_ranges_static_only",
+      "checked_on": "2026-10-27",
+      "executed": false,
+      "source_id": "C16"
+    },
+    {
+      "repo": "lyfeng001/Echo-Sim",
+      "commit": "ed771cfcee11961529541edd7dcc7c16fee788d8",
+      "path": "LIBERO/libero/libero/bddl_files/libero_goal/open_the_middle_drawer_of_the_cabinet.bddl",
+      "url": "https://github.com/lyfeng001/Echo-Sim/blob/ed771cfcee11961529541edd7dcc7c16fee788d8/LIBERO/libero/libero/bddl_files/libero_goal/open_the_middle_drawer_of_the_cabinet.bddl",
+      "sha256": "832ab48ec476807c767e8985666e295700f92d1f8daeae1c34eee1e75293769b",
+      "bytes": 2943,
+      "reviewed_ranges": [
+        [
+          123,
+          125
+        ]
+      ],
+      "review_depth": "selected_source_or_document_ranges_static_only",
+      "checked_on": "2026-10-27",
+      "executed": false,
+      "source_id": "C17"
+    },
+    {
+      "repo": "Lifelong-Robot-Learning/LIBERO",
+      "commit": "8f1084e3132a39270c3a13ebe37270a43ece2a01",
+      "path": "libero/libero/envs/bddl_base_domain.py",
+      "url": "https://github.com/Lifelong-Robot-Learning/LIBERO/blob/8f1084e3132a39270c3a13ebe37270a43ece2a01/libero/libero/envs/bddl_base_domain.py",
+      "sha256": "055836670ac5fcac7e033fc86404718fd53854996e5776b1ff68b646f7bbcc9d",
+      "bytes": 32639,
+      "reviewed_ranges": [
+        [
+          800,
+          809
+        ]
+      ],
+      "review_depth": "selected_source_or_document_ranges_static_only",
+      "checked_on": "2026-10-27",
+      "executed": false,
+      "source_id": "C18"
+    },
+    {
+      "repo": "Lifelong-Robot-Learning/LIBERO",
+      "commit": "8f1084e3132a39270c3a13ebe37270a43ece2a01",
+      "path": "libero/libero/envs/env_wrapper.py",
+      "url": "https://github.com/Lifelong-Robot-Learning/LIBERO/blob/8f1084e3132a39270c3a13ebe37270a43ece2a01/libero/libero/envs/env_wrapper.py",
+      "sha256": "a782fb76c9792268d28979474fe72849e1e98ada49c8e997a65359a8d6b6acd0",
+      "bytes": 8781,
+      "reviewed_ranges": [
+        [
+          87,
+          104
+        ]
+      ],
+      "review_depth": "selected_source_or_document_ranges_static_only",
+      "checked_on": "2026-10-27",
+      "executed": false,
+      "source_id": "C19"
+    },
+    {
+      "repo": "openvla/openvla",
+      "commit": "c8f03f48af692657d3060c19588038c7220e9af9",
+      "path": "experiments/robot/libero/run_libero_eval.py",
+      "url": "https://github.com/openvla/openvla/blob/c8f03f48af692657d3060c19588038c7220e9af9/experiments/robot/libero/run_libero_eval.py",
+      "sha256": "369d9fc3d59067998ebfadafbd516872c7ff6f9f06a0a48cda8b6ca48051de77",
+      "bytes": 11936,
+      "reviewed_ranges": [
+        [
+          164,
+          238
+        ]
+      ],
+      "review_depth": "selected_source_or_document_ranges_static_only",
+      "checked_on": "2026-10-27",
+      "executed": false,
+      "source_id": "C20"
+    },
+    {
+      "repo": "openvla/openvla",
+      "commit": "c8f03f48af692657d3060c19588038c7220e9af9",
+      "path": "experiments/robot/libero/libero_utils.py",
+      "url": "https://github.com/openvla/openvla/blob/c8f03f48af692657d3060c19588038c7220e9af9/experiments/robot/libero/libero_utils.py",
+      "sha256": "6c162ce0954c8659018ee8ff1604a33904b50ac0631a8ca0f8bf1f7a4d25181d",
+      "bytes": 3933,
+      "reviewed_ranges": [
+        [
+          18,
+          30
+        ]
+      ],
+      "review_depth": "selected_source_or_document_ranges_static_only",
+      "checked_on": "2026-10-27",
+      "executed": false,
+      "source_id": "C21"
+    }
+  ],
+  "source_identity_checks": [
+    {
+      "files": [
+        "C10",
+        "C18"
+      ],
+      "sha256_equal": true,
+      "scope": "bddl_base_domain.py only; not whole environment identity"
+    },
+    {
+      "files": [
+        "C11",
+        "C19"
+      ],
+      "sha256_equal": true,
+      "scope": "env_wrapper.py only; not dependencies/assets identity"
+    }
+  ],
+  "paper_code_boundary": {
+    "Echo_paper": "A.10 distinguishes baseline first-success break and Echo continuation; status signals do not control termination",
+    "Echo_pinned_code": "both use full-horizon rollout; terminal success already recorded",
+    "paper_run_environment_revision_verified": false,
+    "SEES": "oracle-controlled audit, different inputs/query timing; not online composite completion effect",
+    "SparkVLA": "subtask Stop and global episode termination are different interfaces"
+  },
+  "task_contracts": [
+    {
+      "id": "bowl_on_plate",
+      "source_ids": [
+        "C16",
+        "C12",
+        "C13",
+        "C14"
+      ],
+      "goal": "On(akita_black_bowl_1, plate_1)",
+      "predicate": "plate z <= bowl z AND object contact AND xy position distance < 0.03",
+      "release_checked": false,
+      "velocity_checked": false,
+      "dwell_checked": false,
+      "stronger_variant": "release plus maintained goal; must be reported separately from native task",
+      "native_rollout_verified": false
+    },
+    {
+      "id": "middle_drawer_open",
+      "source_ids": [
+        "C17",
+        "C12",
+        "C13",
+        "C14",
+        "C15"
+      ],
+      "goal": "Open(wooden_cabinet_1_middle_region)",
+      "predicate": "site-associated joint passes parent WoodenCabinet qpos < -0.14; joint asset units not audited",
+      "handle_release_checked": false,
+      "velocity_checked": false,
+      "dwell_checked": false,
+      "native_rollout_verified": false
+    }
+  ],
+  "controller_boundary": {
+    "source_ids": [
+      "C20",
+      "C21"
+    ],
+    "dummy_action": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      -1
+    ],
+    "runner_gripper_semantics": "-1 open, +1 close",
+    "generic_no_op_claim_rejected": true,
+    "candidate_stop_contract": "stop policy actions, keep physics running, explicit pose/gripper hold or task-valid release controller for fixed Delta",
+    "stability_of_candidate_controller": "NOT_VALIDATED",
+    "holding_task_fixture": "NOT_IDENTIFIED",
+    "Delta_and_gains": "NOT_FROZEN"
+  },
+  "comparison_contract": {
+    "executable": false,
+    "primary_estimand": "Q(policy, stop rule; G, K, T, Delta): valid autonomous completion probability under a shared explicit contract",
+    "baselines": [
+      "B0 fixed deadline",
+      "B1 common observation detector plus calibrated threshold",
+      "B2 same detector plus consecutive distinct-observation confirmations",
+      "B3 actual native stop if available; missing is missing",
+      "B4 evaluator-GT oracle reference only"
+    ],
+    "matched_fields": [
+      "frozen action checkpoint within each policy",
+      "normalizer/controller",
+      "task G and stop controller K",
+      "observer inputs and query timing",
+      "calibration labels/scenes and tuning budget",
+      "physical horizon T and post-stop Delta",
+      "query and inference cost reporting"
+    ],
+    "missing_cells": [
+      "OpenVLA runner has no native stop declaration",
+      "Echo signals have no stop-controller execution path",
+      "shared observer/checkpoint/task/controller packet not qualified"
+    ],
+    "causal_order": "observation before action; goal truth after action; no future GT boundary in online rule",
+    "independent_unit": "scene/init-state lineage; repeated frames/tokens/thresholds are not independent scenes",
+    "required_artifacts": [
+      "environment and task revision",
+      "checkpoint/normalizer",
+      "initial-state and RNG identity",
+      "observation/action/query timestamps",
+      "current goal and first-hit labels",
+      "stop declaration and executed controller",
+      "post-stop physics trace",
+      "split and baseline settings"
+    ],
+    "artifact_state": "specification in report and ledger only; no executable manifest, adapter, payload or result"
+  },
+  "conditional_identity": {
+    "type": "researcher algebra, not empirical result or novel theorem",
+    "assumptions": [
+      "matched pre-stop action/state prefix",
+      "valid declaration requires current G true",
+      "post-stop controller does not create a new goal attainment"
+    ],
+    "definitions": "p_i=oracle first-hit probability; q_i=valid autonomous completion; d_i=p_i-q_i>=0",
+    "given": "p_A>p_B",
+    "equivalence": "q_A<q_B iff d_A-d_B>p_A-p_B",
+    "limitation": "does not predict deficits from ex ante independent task conditions"
+  },
+  "reject_rules": [
+    "same prior or renamed metric only",
+    "post-hoc rank reversal without conditional explanation",
+    "GT boundary leakage",
+    "held signal counted as independent observations",
+    "extra time/input or strengthened task/controller explains contrast",
+    "common simple detector is sufficient"
+  ],
+  "followup": {
+    "next_id": "GAP-S3",
+    "status": "READY",
+    "scope": "nonexperimental VLA navigation/mobile-manipulation gap reselection against 2024-2026 official primary sources and latest collisions",
+    "candidate_presupposed": false,
+    "prior_overlap_first": [
+      "D2/D3",
+      "E2",
+      "RP-3",
+      "AUTH",
+      "reactive navigation"
+    ],
+    "simple_baselines": [
+      "retrieval and scene graph",
+      "geometric planning",
+      "skill handoff"
+    ],
+    "output": "bounded questions with primary sources, closest work, falsifiable conditional prediction and rejection criteria; zero selection allowed"
+  },
+  "reopen_gate": {
+    "id": "GAP-TERM-R1",
+    "status": "WAITING_EVIDENCE",
+    "requires": [
+      "natural matched-goal/controller/input case",
+      "ex ante prediction beyond simple baselines",
+      "updated direct-collision distinction"
+    ],
+    "GPU_or_same_metadata_is_sufficient": false,
+    "effect_need_not_be_preproved": true
+  },
+  "validation": {
+    "status": "PASS",
+    "python_compile_exit_code": 0,
+    "reading_generator_exit_code": 0,
+    "git_diff_check_exit_code": 0,
+    "repository_audit_exit_code": 0,
+    "repository_audit": {
+      "papers": 1072,
+      "tier_counts": {"CORE": 47, "NEXT": 297, "REFERENCE": 486, "ARCHIVE": 242},
+      "intensive": 344,
+      "inactive_reading_history": 47,
+      "standard_note_files": 5360,
+      "markdown_files_checked": 5537,
+      "markdown_links_checked": 10914,
+      "errors": [],
+      "warnings": []
+    },
+    "canonical_byte_preserved": [
+      "PAPER.md",
+      "work/sources/papers.json",
+      "work/sources/registry_meta.json",
+      "research/READING_TIERS.csv",
+      "research/READING_STATUS.csv",
+      "research/READING_STATUS_HISTORY.csv"
+    ],
+    "preexisting_dirty_files": 645,
+    "modified_preexisting_files": [
+      "README.md", "TODO.md", "research/IDEA_BUILDUP_GUIDE.md", "research/README.md",
+      "synthesis/04_vla_generalist.md", "synthesis/05_world_models_safety.md", "synthesis/README.md"
+    ],
+    "unrelated_preexisting_files_preserved": 638,
+    "preexisting_missing_paths_preserved": 10,
+    "new_files": [
+      "work/update/VLA_TERMINATION_CONTRACT_REVIEW_2026-10-27.md",
+      "work/sources/vla_termination_contract_review_2026-10-27.json"
+    ],
+    "experiment_execution": false
+  },
+  "cleanup": {
+    "temporary_public_source_files": 21,
+    "temporary_metadata_files": 3,
+    "removed": true,
+    "payload_downloaded": false
+  }
+}

@@ -4,6 +4,8 @@
 > Evidence maturity: `FULL_TEXT_CHECKED`.
 > Analysis basis: full-text PDF body checked on 2026-09-03 (9 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss17/p061.html; PDF retrieval source: https://www.roboticsproceedings.org/rss17/p061.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
+> DOC-QA2 targeted source review: 2026-10-23; PDF pp. 2. 손상 구간·직접 연결된 표 분류만 원문 이미지와 대조했다. 전체 주장 정독·실험 검증·reading status 승격을 뜻하지 않는다. [URL·PDF hash·수정 기록](../../../work/sources/pdf_note_review_followup_2026-10-23.json).
+
 ## Method in One Sentence
 
 PDF body method statement (p. 3 (II. REINFORCEMENT LEARNING FORMULATION), p. 2 (II. REINFORCEMENT LEARNING FORMULATION), p. 2 (II. REINFORCEMENT LEARNING FORMULATION), p. 3 (II. REINFORCEMENT LEARNING FORMULATION)): For sim-to-real training of the policy, we use Proximal Policy Optimization (PPO) [20], a model-free deep RL algorithm.
@@ -15,7 +17,7 @@ PDF body method statement (p. 3 (II. REINFORCEMENT LEARNING FORMULATION), p. 2 (
 - **p. 2 / II. REINFORCEMENT LEARNING FORMULATION - extractive body cue:** Action Space The output action at of the control policy at each time step (running at 40Hz) is an 11 dimensional vector with the first ...
 - **p. 3 / II. REINFORCEMENT LEARNING FORMULATION - extractive body cue:** Specifically, we use a KL-threshold-termination variant, wherein each time the policy is updated, the KL divergence between the updated policy and the former policy is ...
 - **p. 2 / II. REINFORCEMENT LEARNING FORMULATION - extractive body cue:** The RL optimization objective considered in this work is to learn a policy through interaction with the environment that maximizes the expected cumulative discounted reward ...
-- **p. 2 / II. REINFORCEMENT LEARNING FORMULATION - extractive body cue:** That is, find a policy π that maximizes: J(π) = E  ∑T t=0 γtRt  , where γ ∈[0,1] is the discount factor and ...
+- **PDF p. 2, §II RL formulation (DOC-QA2 원문 대조):** Policy objective는 J(π)=E[Σₜ₌₀ᵀ γᵗRₜ] 최대화이며 γ∈[0,1]이다. Dynamics randomization을 적용한 simulation training 후 real robot에 배치하는 설정이다.
 - **p. 3 / II. REINFORCEMENT LEARNING FORMULATION - extractive body cue:** We add additional cost terms on top of these foundational reward terms, including a cost incentivizing the policy to match a translational velocity and orientation.
 - **p. 3 / II. REINFORCEMENT LEARNING FORMULATION - extractive body cue:** For a detailed explanation of the reward function used, see the Appendix.
 
@@ -46,7 +48,7 @@ PDF body method statement (p. 3 (II. REINFORCEMENT LEARNING FORMULATION), p. 2 (
 ## Objective / Update Rule
 
 - **p. 2 / II. REINFORCEMENT LEARNING FORMULATION - extractive body cue:** The RL optimization objective considered in this work is to learn a policy through interaction with the environment that maximizes the expected cumulative discounted reward ...
-- **p. 2 / II. REINFORCEMENT LEARNING FORMULATION - extractive body cue:** That is, find a policy π that maximizes: J(π) = E  ∑T t=0 γtRt  , where γ ∈[0,1] is the discount factor and ...
+- **PDF p. 2, §II RL formulation (DOC-QA2 원문 대조):** Policy objective는 J(π)=E[Σₜ₌₀ᵀ γᵗRₜ] 최대화이며 γ∈[0,1]이다. Dynamics randomization을 적용한 simulation training 후 real robot에 배치하는 설정이다.
 - **p. 3 / II. REINFORCEMENT LEARNING FORMULATION - extractive body cue:** We add additional cost terms on top of these foundational reward terms, including a cost incentivizing the policy to match a translational velocity and orientation.
 - **p. 3 / II. REINFORCEMENT LEARNING FORMULATION - extractive body cue:** For a detailed explanation of the reward function used, see the Appendix.
 - **Formal bridge:** body/proprioceptive/terrain state -> joint action/torque/footstep -> return, tracking or stability objective -> progress, balance and terrain robustness.

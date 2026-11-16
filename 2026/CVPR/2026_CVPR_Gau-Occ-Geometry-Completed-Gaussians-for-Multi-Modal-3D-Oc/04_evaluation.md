@@ -4,6 +4,8 @@
 > Evidence maturity: `FULL_TEXT_CHECKED`.
 > Analysis basis: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2026/html/Lv_Gau-Occ_Geometry-Completed_Gaussians_for_Multi-Modal_3D_Occupancy_Prediction_CVPR_2026_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2026/papers/Lv_Gau-Occ_Geometry-Completed_Gaussians_for_Multi-Modal_3D_Occupancy_Prediction_CVPR_2026_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
+> DOC-QA1 (2026-10-23): 제어문자·깨진 추출 구간과 직접 연결된 표 항목을 PDF 페이지 이미지와 대조했다. 확인 범위·원문 URL·페이지·수정 이력은 [대조 기록](../../../work/sources/pdf_note_review_2026-10-23.json)에 있다. 노트 전체의 정독이나 모든 기존 주장에 대한 재검증을 뜻하지 않으며 reading status는 유지한다.
+
 ## Evaluation in One Sentence
 
 PDF body evaluation/result cue (p. 5 (4.2. Quantitative Results), p. 5 (4.2. Quantitative Results), p. 8 (4.4. Ablation Study), p. 6 (4.2. Quantitative Results), p. 6 (4.2. Quantitative Results), p. 7 (4.4. Ablation Study)): Across modalities, LiDARonly approaches generally outperform camera-only methods due to geometric cues, and multi-modal systems further improve performance.
@@ -147,7 +149,7 @@ PDF body evaluation/result cue (p. 5 (4.2. Quantitative Results), p. 5 (4.2. Qua
 | Removing GVR (Row 3) and directly feeding the original, unaggregated tokens Xi to cross-attention leads to markedly higher latency and memory usage, as the ... | p. 8 (4.4. Ablation Study) |
 | We propose Gau-Occ, a compact representation of 3D scenes using semantic Gaussians that jointly encode LiDAR geometry and multi-view semantics. | p. 2 (3. Proposed Approach) |
 | The completed points are encoded into geometric features to initialize density-aware semantic 3D Gaussians. | p. 3 (3.1. 3D Semantic Gaussian Scene Representation) |
-| Finally, fused features [fpc,i; fimg,i] are decoded through a two-layer FFN to update Gaussian attributes: [bµi,bsi,bri,bci] = FFN  [fpc,i; fimg,i]  , (17) The ... | p. 5 (3.4. Gaussian Anchor Fusion (GAF)) |
+| 원문 대조: Point-cloud feature와 image feature를 concatenate한 뒤 2-layer FFN이 Gaussian의 position offset, scale, rotation, semantic attribute를 갱신한다. Position은 기존 μ_i에 예측 offset을 더하고, refined Gaussian을 splat해 occupancy를 예측한다. ([PDF p. 5](https://openaccess.thecvf.com/content/CVPR2026/papers/Lv_Gau-Occ_Geometry-Completed_Gaussians_for_Multi-Modal_3D_Occupancy_Prediction_CVPR_2026_paper.pdf#page=5), §3.4 Gaussian Anchor Fusion, Eq. (17)) | [PDF p. 5](https://openaccess.thecvf.com/content/CVPR2026/papers/Lv_Gau-Occ_Geometry-Completed_Gaussians_for_Multi-Modal_3D_Occupancy_Prediction_CVPR_2026_paper.pdf#page=5), §3.4 Gaussian Anchor Fusion, Eq. (17) |
 | 3, instead of applying another attention block, we aggregate them via a geometry-aware VLAD-style [17] resampler using codewords {Cm}M m=1 that act as learnable ... | p. 5 (3.4. Gaussian Anchor Fusion (GAF)) |
 
 | Audit field | Current status |

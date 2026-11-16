@@ -1,0 +1,85 @@
+{
+  "task_id": "GAP-N3",
+  "completed_utc": "2026-10-25T09:16:30.204441+00:00",
+  "status": "PASS",
+  "tests_run": 17,
+  "passed_tests": [
+    "test_contract.ContractTests.test_approach_preserves_ambiguous_lift_and_no_commitment_outcomes",
+    "test_contract.ContractTests.test_approach_requires_two_distinct_ticks_and_latches",
+    "test_contract.ContractTests.test_approach_streak_resets_on_region_exit",
+    "test_contract.ContractTests.test_fixture_rejects_malformed_or_out_of_scope",
+    "test_contract.ContractTests.test_history_keeps_slots_and_matches_mask_counts",
+    "test_contract.ContractTests.test_history_rejects_future_absent_cue_and_changed_current",
+    "test_contract.ContractTests.test_identity_rejects_cross_split_group_and_duplicates",
+    "test_contract.ContractTests.test_identity_stable_after_file_reordering",
+    "test_contract.ContractTests.test_input_description_accepts_only_frozen_contract",
+    "test_contract.ContractTests.test_input_rejects_labels_overrides_allmask_and_encoder_mismatch",
+    "test_contract.ContractTests.test_time_alignment_rejects_gap_cross_episode_and_unknown_phase",
+    "test_contract.ContractTests.test_time_alignment_uses_next_action_and_drops_final",
+    "test_contract.SourceTests.test_metadata_roundtrip_and_builder_forwarding",
+    "test_contract.SourceTests.test_original_binding_is_not_counterfactual_fixture",
+    "test_contract.SourceTests.test_patch_nonfixture_keeps_first_bin",
+    "test_contract.SourceTests.test_three_colors_six_permutations_bind_same_target",
+    "test_contract.SourceTests.test_wrong_source_revision_rejected"
+  ],
+  "failures": [],
+  "errors": [],
+  "skipped": [],
+  "elapsed_seconds": 0.07854654199999977,
+  "python": "3.11.14",
+  "machine": "aarch64",
+  "image_reference": "python:3.11.14-slim-bookworm@sha256:65a93d69fa75478d554f4ad27c85c1e69fa184956261b4301ebaf6dbb0a3543d",
+  "evidence_type": "SYNTHETIC_CONTRACT_AND_ISOLATED_SOURCE_BINDING",
+  "boundary": "Upstream source parsed/compiled; selected AST call sites executed with stand-in actors/predicates. No simulator, renderer, native planner, learned model or tensor payload executed.",
+  "upstream_sources": [
+    {
+      "repo": "RoboMME/robomme_benchmark",
+      "revision": "1babf64480e28320e0f9db7992554616ceefda0e",
+      "path": "src/robomme/env_record_wrapper/episode_config_resolver.py",
+      "url": "https://raw.githubusercontent.com/RoboMME/robomme_benchmark/1babf64480e28320e0f9db7992554616ceefda0e/src/robomme/env_record_wrapper/episode_config_resolver.py",
+      "sha256": "f4db3e64bbbd3607eb6c28a9ba9f9fbfe90789cf18c2dcb1c570f8890f08ce33"
+    },
+    {
+      "repo": "RoboMME/robomme_benchmark",
+      "revision": "1babf64480e28320e0f9db7992554616ceefda0e",
+      "path": "src/robomme/robomme_env/VideoUnmask.py",
+      "url": "https://raw.githubusercontent.com/RoboMME/robomme_benchmark/1babf64480e28320e0f9db7992554616ceefda0e/src/robomme/robomme_env/VideoUnmask.py",
+      "sha256": "ffee21ff6946a96a22fdc2123b3d8d672a40f10010a6ef1c2b16c18156feeb75"
+    },
+    {
+      "repo": "RoboMME/robomme_benchmark",
+      "revision": "1babf64480e28320e0f9db7992554616ceefda0e",
+      "path": "src/robomme/robomme_env/utils/task_goal.py",
+      "url": "https://raw.githubusercontent.com/RoboMME/robomme_benchmark/1babf64480e28320e0f9db7992554616ceefda0e/src/robomme/robomme_env/utils/task_goal.py",
+      "sha256": "60a020f657cc89f67d8a3df2d95b19f8f0bfbf868b10b4db81b4d0ba12232223"
+    }
+  ],
+  "local_code_sha256": {
+    "PROTOCOL.json": "44cc33dc0382e4e89d115494509ea848fe530b623f7c59cf7cd5d10615efaf0a",
+    "check_contract.py": "5cfc0fbdf9a961a8835276998056e510e8528bbd0927c3bbf09cb07fd00883c8",
+    "fixture_api.py": "053979e82680fb016820f68ca90869cb9093cf9874fa1a387290bd967ec90971",
+    "run_contract.sh": "3d6bdc159f3b17165926ba17007e3576b291de13b62f01ce29dd838712153136",
+    "source_repair.py": "6bc4356c2d1202dcb45abc6b01de89e649ced14a3efd167513ae8ceb9b779db3",
+    "sources.lock.json": "08323c411fb64d20399ab9ddd9af5a3859e753519318f2cca465ea223e413d0a",
+    "test_contract.py": "8a8c5de3317d41270d1b8fb08a2b0f5a0ba4d8569c8b2817f56f95c0e891a94c"
+  },
+  "artifacts": {
+    "modified_source_sha256": {
+      "src/robomme/env_record_wrapper/episode_config_resolver.py": "af4a814e57b0f1174c65fc1dd6b8f2d929c7ff8ba8a69639fccb01e6e5089bbd",
+      "src/robomme/robomme_env/VideoUnmask.py": "2e034f84af34130882b8637ef3240923f7265ee9e588386b41702bbb965079f4",
+      "src/robomme/robomme_env/utils/task_goal.py": "d54a0ed70b7a1882a4897f7bd7323494057cee53fd282ee50c0f23899338d615",
+      "src/robomme/robomme_env/utils/proxy_fixture.py": "053979e82680fb016820f68ca90869cb9093cf9874fa1a387290bd967ec90971"
+    },
+    "patch_sha256": "aab11d5abf4fef2daa363299c44d9ce1f7d8b1e9ac8085e220d0db2631e3efeb"
+  },
+  "gates": {
+    "source_patch_and_contract": true,
+    "native_fixture": false,
+    "hdf5_builder_integration": false,
+    "actual_model_input_and_memory": false,
+    "research_pilot": false
+  },
+  "policy_rollouts": 0,
+  "native_episodes": 0,
+  "training_steps": 0
+}

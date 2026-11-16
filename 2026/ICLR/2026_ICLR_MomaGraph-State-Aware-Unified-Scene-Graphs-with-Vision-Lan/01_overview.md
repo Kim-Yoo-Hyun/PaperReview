@@ -17,6 +17,8 @@
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (26 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
+> DOC-QA1 (2026-10-23): 제어문자·깨진 추출 구간과 직접 연결된 표 항목을 PDF 페이지 이미지와 대조했다. 확인 범위·원문 URL·페이지·수정 이력은 [대조 기록](../../../work/sources/pdf_note_review_2026-10-23.json)에 있다. 노트 전체의 정독이나 모든 기존 주장에 대한 재검증을 뜻하지 않으며 reading status는 유지한다.
+
 ## Why This Paper Is Here
 
 VLA and generalist robot policies의 navigation 문제를 이해하기 위해 읽는다. 본문은 However, existing scene graphs suffer from notable limitations.를 문제로 두고, In summary, our work makes the following key contributions: • We propose MomaGraph, the first scene graph representation that jointly models spatial and functional relationships while incorporating part-level interactive nodes, providin ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
@@ -38,7 +40,7 @@ VLA and generalist robot policies의 navigation 문제를 이해하기 위해 �
 - **p. 6 / 4 METHOD - extractive body cue:** To address these limitations, we introduce MomaGraph-Scenes, the first dataset designed to provide a more comprehensive and task-relevant scene representation.
 - **p. 3 / 1 INTRODUCTION - extractive body cue:** Unlike prior graph-then-plan methods (Dai et al., 2024; Ekpo et al., 2024) that either assume reliable scene graphs or treat graph construction and planning as ...
 - **p. 3 / 1 INTRODUCTION - extractive body cue:** To overcome this gap, we propose the Graph-then-Plan strategy, which first generates task-specific scene graphs as an intermediate structured representation before high-level planning.
-- **p. 6 / 4 METHOD - extractive body cue:** After the agent executes an action at and observes the new environment state st+1, the scene graph is refined as: G(t+1) T = U  ...
+- **원문 대조:** Action a_t 실행 뒤 새 state s_{t+1}를 관측하면 U(G_T^{(t)},a_t,s_{t+1})로 graph를 갱신한다. 관측된 state transition에 맞지 않는 관계 가설은 제거하고 확인된 관계는 강화한다. ([PDF p. 6](https://arxiv.org/pdf/2512.16909#page=6), §4.3, Eq. (4), Figure 3).
 - **p. 5 / 4 METHOD - extractive body cue:** Reinforcement learning offers a more principled approach by encouraging the model to explore, reason, and iteratively refine its representations through outcome-driven feedback.
 - **p. 5 / 4 METHOD - extractive body cue:** 4.2 VLMS LEARN SCENE GRAPH REPRESENTATIONS WITH REINFORCEMENT LEARNING Existing open-source VLMs have demonstrated limited capability in generating accurate taskoriented scene graphs GT from multi-view ...
 

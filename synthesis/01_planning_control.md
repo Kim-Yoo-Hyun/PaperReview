@@ -45,7 +45,7 @@ Kalman filtering → A* heuristic search → POMDP belief-state planning → Hyb
 | CORE | [MuJoCo: A Physics Engine for Model-Based Control](../2012/IROS/2012_IROS_MuJoCo-A-Physics-Engine-for-Model-Based-Control/01_overview.md) | 2012 / IROS | `UNREAD` | `FULL_TEXT_CHECKED` |
 | CORE | [NoMaD: Goal Masked Diffusion Policies for Navigation and Exploration](../2024/ICRA/2024_ICRA_NoMaD-Goal-Masked-Diffusion-Policies-for-Navigation-and-Ex/01_overview.md) | 2024 / ICRA | `UNREAD` | `FULL_TEXT_CHECKED` |
 
-### Planning, control, simulation, and TAMP extensions — 16
+### Planning, control, simulation, and TAMP extensions — 17
 
 | Tier | Paper | Year / Venue | Status | Evidence |
 |---|---|---|---|---|
@@ -65,6 +65,7 @@ Kalman filtering → A* heuristic search → POMDP belief-state planning → Hyb
 | NEXT | [Parallel and Proximal Linear-Quadratic Methods for Real-Time Constrained Model-Predictive Control](../2024/RSS/2024_RSS_Parallel-and-Proximal-Linear-Quadratic-Methods-for-Real-Ti/01_overview.md) | 2024 / RSS | `UNREAD` | `FULL_TEXT_CHECKED` |
 | NEXT | [Differentiable Robust Model Predictive Control](../2024/RSS/2024_RSS_Differentiable-Robust-Model-Predictive-Control/01_overview.md) | 2024 / RSS | `UNREAD` | `FULL_TEXT_CHECKED` |
 | NEXT | [Linear-time Differential Inverse Kinematics: an Augmented Lagrangian Perspective](../2024/RSS/2024_RSS_Linear-time-Differential-Inverse-Kinematics-an-Augmented-L/01_overview.md) | 2024 / RSS | `UNREAD` | `FULL_TEXT_CHECKED` |
+| NEXT | [KinDER: A Physical Reasoning Benchmark for Robot Learning and Planning](../2026/RSS/2026_RSS_KinDER-A-Physical-Reasoning-Benchmark-for-Robot-Learning-a/01_overview.md) | 2026 / RSS | `UNREAD` | `ABSTRACT_CHECKED` |
 
 <!-- READING_QUEUE:END -->
 
@@ -151,3 +152,26 @@ Kalman filtering → A* heuristic search → POMDP belief-state planning → Hyb
 | 운반 feasibility | 동일 object/attachment 추정·grasp 후보·planning 시간에서 learned ranking이 planner 이후에도 실패를 줄이는가? | Planner timeout을 불가능 label로 쓰지 않는다. 동일 정보의 planner/ranker로 설명되면 새 방법 주장은 중단한다. | [검토 근거](../work/research_candidates/2026-10-22_d2_buildup/CLAIM_CONTRACT.md) |
 | 사건 이후 instruction switch | 같은 observation/history와 continuation skill에서 새 목표의 가능성 판단이 native 실행과 분리되는가? | Predicate planner+동일 LL을 대조한다. 같은 물체의 불가능 goal과 pre/post feasible witness가 없으면 비교를 시작하지 않는다. | [검토 근거](../work/research_candidates/2026-10-22_d3_buildup/R1_REVIEW.md) |
 | Navigation의 replanning | 동일 sensor·execution latency·replanning budget에서 NoMaD/NavDP의 순위가 유지되는가? | Privileged training과 controller를 맞추기 전 representation 개선으로 귀속하지 않는다. | 기존 track 비교의 연구자 질문; native 효과 미검증 |
+
+<a id="gap-plan-2026"></a>
+### GAP-PLAN — 반응하는 상대가 있는 환경에서 안전 보장은 언제 유지되는가?
+
+- 갱신: 2026-10-24 GAP-P4. 일반 연구 가설은 `CURATION-HYPOTHESIS`; **일반 adaptive safety/replanning 방법 NO-GO / 현재 상태 진단 HOLD / native VLA HOLD**. [P1 문헌](../work/update/REACTIVE_NAVIGATION_SAFETY_REVIEW_2026-10-23.md), [P2 정적 심사](../work/update/REACTIVE_NAVIGATION_EXECUTION_REVIEW_2026-10-23.md), [P3 계약 검사](../work/experiments/reactive_nav_contract/RESULTS.md), [P4 bounded pilot](../work/experiments/reactive_nav_pilot/RESULTS.md). 좁은 synthetic 반례/부정 근거가 생겼으나 일반 가설을 `EXPERIMENT-SUPPORTED`로 승격하지 않는다.
+- **직접 선행:** [GenSafeNav, CoRL 2025](https://proceedings.mlr.press/v305/yao25a.html)는 uncertainty-aware CRL뿐 아니라 부록의 robot visibility 교차 평가도 포함한다. [Who Moved My Distribution? §4](https://arxiv.org/html/2511.11567v1)는 내생적 shift를 직접 다루며 trajectory-max calibration·Lipschitz/contraction 조건을 사용한다. [Fb-CP, NeurIPS 2025](https://papers.nips.cc/paper_files/paper/2025/hash/ee1331338cdf0e4d1055304d875548df-Abstract-Conference.html)의 mission risk, [CERT-Replan, CoRL 2026](https://openreview.net/forum?id=xyRbF93MWh)의 위험 기반 mode 교체도 기존 결과다. 단순 reactive 비교·위험 trigger를 새 기여로 주장하지 않는다.
+- **보장 경계:** trajectory/mission 보장이 있는 선행을 framewise 방법으로 낮춰 해석하지 않는다. 한편 [CoCoNav §IV](https://arxiv.org/html/2608.07751v1)의 실행 첫 step·미검출/미인증 fallback 빈도와 [CERT §6](https://arxiv.org/html/2610.09302v1)의 robot-responsive 반응 제외 조건은 episode 무충돌·교착 해소와 구별한다. CoCoNav·Who Moved·PopNavShift의 공식 채택은 미확인이다.
+- **남길 질문 — 연구자 해석:** robot route/policy 변경이 상대 반응을 바꾼 직후 새 residual label이 도착하고 보정이 회복되기 전까지의 손실은, 단순 지연·예측 오류와 구별되는가? 동일 정보·예산에서 전환 event가 고정 wait/margin·adaptive CP보다 유용한 조건이 있는가? P4의 동결한 조건에서는 예상한 위험·보정 악화가 함께 나타나지 않았다. 다른 조건에서의 존재를 가정해 계속 sweep하지 않는다.
+- **비교·기각:** 1차 초안은 reactive/nonreactive × ego route 유지/변경 × actuator 지연이며, 동일 CV predictor·action 후보·물리 시간에서 fixed margin, timestamp-correct DtACI, rolling quantile, stop/wait/hysteresis를 비교한다. ORCA를 smooth/Lipschitz로 가정하지 않으며 별도 switching 반응법칙은 미정이라 제외했다. Robust MPC·CERT/CoCo 계열 확대는 작은 진단 뒤에 심사한다. 실제 collision·coverage·near miss·진행/교착·fallback을 분리하며 단순 대안으로 설명되면 새 방법을 중단한다. Shadow calibration은 동일 관측열의 차이를 보지만 calibration의 인과 매개효과를 자동 입증하지 않는다.
+- **자료·VLA 경계:** GenSafeNav의 실제 저장 설정·factory·ORCA human 반응은 연결되지만 valid-only ACI list·거리 정렬·자동 reset·truth lookahead baseline을 그대로 공정 비교에 쓰지 않는다. 현재 ABot point-goal은 pose/occupancy loop로, 반응형 human과 physical clock의 연결을 확인하지 못했다. THÖR-MAGNI는 실제 HRI 기록이지만 새 policy의 반사실 반응은 아니며 interpolation/best-marker 전처리를 online 관측으로 그대로 쓸 수 없다. 상태 기반 진단을 VLA 성능으로 부르지 않는다.
+- **실행 근거:** 새 상태 adapter의 로컬 ARM64 Docker 계약 13/13·3개 scene/150 tick 통과. 3,000 prediction ID·2,760 성숙 record를 저장 trace에서 독립 재결합했다. Duplicate-tick hysteresis 허점을 수정했다. 이는 GenSafeNav 재현이나 조건부 위험의 연구 증거가 아니다. M0/M3 반경은 수작업 fixture이고 smoke는 한 reactive/delay/event 설정이다.
+- **P4 결과:** 별도 episode-balanced calibration24개, dev12/test12 parameter-band scene에서384 branch를 실행했다. M1 무지연 위험 interaction +21.25pp지만 H5 miscoverage 변화 interaction −4.27pp로 joint gate 실패. 반응형 절대 위험은 유지5.42%→변경3.75%로 감소했으며, 양의 interaction은 비반응형의 더 큰 감소에서 왔다. 고정 margin/rolling quantile은 해당 변경 조건에서 유사한 진행·위험 screen 안에 있었고 wait의 낮은 위험에는 진행 손실이 따랐다. [분모·불확실성·shadow·한계](../work/experiments/reactive_nav_pilot/RESULTS.md).
+- **다음/재개:** 현재 설계의 추가 rollout·학습은 종료/HOLD. Geometry/진행·단순 대안과 갈리는 독립적 조건 예측을 새 protocol로 심사하기 전 재개하지 않는다. 저장 결과는 [Docker 재분석](../work/experiments/reactive_nav_pilot/README.md) 가능하다. Native VLA는 별도 연결 packet 확보 전 HOLD. 후속 DE1/DE2와 [GAP-S1 선택 심사](../work/update/VLA_GAP_SELECTION_REVIEW_2026-10-24.md)는 완료했다. 현재 인계는 [TODO](../TODO.md)를 따르며 P2 full research 설계의 자동 실행을 뜻하지 않는다.
+
+<a id="gap-hri-2026"></a>
+### GAP-HRI — 협업에서 질문·설명·행동 개입의 가치는 상대에 따라 어떻게 달라지는가?
+
+- 갱신: 2026-10-23 GAP-H1. `CURATION-HYPOTHESIS`; **일반 방법 NO-GO / 조건부 진단 REVISE·HOLD**. [14편·지정 본문 7편·공개 interface 비교](../work/update/HRI_HELP_RELIABILITY_REVIEW_2026-10-23.md). HRI 전체가 해결됐다는 판정이 아니다.
+- **직접 선행:** [RCIP, RSS 2024](https://www.roboticsproceedings.org/rss20/p027.html)·[UPS, RSS 2026](https://roboticsproceedings.org/rss22/p142.html)는 help routing을, [Ask-to-Clarify](https://arxiv.org/html/2509.15061v3)는 dialogue–manipulation 연결을 다룬다. [Failing Robot Ask §III-C·IV-C](https://arxiv.org/html/2609.21942v1)는 noisy scripted answerer와 비용을 이미 비교한다. [PACT §4–5](https://arxiv.org/html/2605.24350v1)는 partner/scene 변화, [UUPL, RSS 2025](https://www.roboticsproceedings.org/rss21/p091.html)은 user calibration을 다룬다. Noise·비용·개인화 하나를 추가하는 것만으로 차별화하지 않는다.
+- **확인한 경계:** RCIP의 도움 후 정확 행동 가정과 low-level 실행 한계, UPS의 diffusion-policy 실험·faithful WM/narration·학습 후 재보정, PARTNR의 실제 참가자/simulator 평가와 재시도 집계, LLawCo의 통신 baseline 대비 주장을 구별했다. [CoRI](https://proceedings.mlr.press/v305/wang25e.html)의 communication clarity는 도움 선택의 task utility와 별도다. 특정 논문의 미평가 조건을 분야 공백으로 단정하지 않는다.
+- **남은 질문 — 연구자 해석:** 질문 유형·상대 관측·작업 조건에 따라 응답 정확도와 지연이 함께 달라질 때, 평균 helper reliability로 정한 규칙과 조건부 규칙이 어떤 실제 행동 차이를 만드는가? [질문/정책 분리 평가](https://arxiv.org/abs/2604.00265)와 [혼잡에 따른 내생적 지연](https://arxiv.org/abs/2402.12237)도 기존 계보다. Known expected-cost rule·조건부 calibration 이후 남는 예측이 아직 미확보다.
+- **최소 비교·기각:** 같은 base skill·정보·시간에서 no/always ask, best fixed choice, expected-cost threshold, RCIP/UPS식 gating, 재관측·safe wait를 비교한다. 질문·대기·teleoperation·모니터링 시간을 각각 측정하고 participant/task holdout과 first/retry 분모를 고정한다. 요청한 사례만의 답변으로 미요청 상태의 helper 신뢰도를 추정하지 않는다. 지연/state freshness만의 효과면 기존 E2 계보로, skill 부족이면 competence 문제로 귀속한다.
+- **재개 조건·자원:** Question–reply–native outcome과 시점이 연결된 packet, 자연스러운 response 조건의 중요성, 단순 대안 이후의 전이 가능한 예측이 필요하다. 공개 source 정적 검토는 실행 준비도 보장이 아니다. GPU 확보만으로 실제 인간 workload·신뢰를 검증할 수 없고 cloud API로 local Docker 조건을 우회하지 않는다. D3/E2·C4/C6를 자동 재개하지 않는다.

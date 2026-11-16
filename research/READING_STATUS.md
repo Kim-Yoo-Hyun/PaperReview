@@ -1,9 +1,9 @@
 # Reading Status Guide
 
-- Updated: 2026-10-21 KST
+- Updated: 2026-11-05 KST
 
 - Canonical tracker: [READING_STATUS.csv](./READING_STATUS.csv)
-- Scope: CORE 47편 + NEXT 275편 = 322편
+- Scope: CORE 47편 + NEXT 334편 = 381편
 - Inactive history: [READING_STATUS_HISTORY.csv](./READING_STATUS_HISTORY.csv), 현재 47편. Active queue의 분모에 포함하지 않는다.
 - PDF 보유 여부는 읽기 우선순위, 상태 전환, 완료 판단에 사용하지 않는다.
 
@@ -61,4 +61,4 @@
 
 2026-10-19 재분류 후 기존 READ 5편은 active 1편과 history 4편으로 보존되어 있다. 이는 읽기 완료의 취소가 아니라 현재 우선순위의 변경이다.
 
-자동 작성 노트의 source 검토 수준과 사용자의 읽기 이력은 다르다. 현재 active 322편 중 321편은 UNREAD, 1편은 READ다. 2026-10-19·21·22 신규 intensive 52편은 UNREAD + ABSTRACT_CHECKED이며 D1 합성 diagnostic은 논문의 REPRODUCED 근거가 아니다. FULL_TEXT_CHECKED 노트가 있어도 사용자의 정독 근거가 없으면 UNREAD를 유지한다.
+자동 작성 노트의 source 검토 수준과 사용자의 읽기 이력은 다르다. 현재 active 344편 중 343편은 UNREAD, 1편은 READ다. 2026-10-19·21·22 신규 intensive 52편과 2026-10-25 REG-R2/R3 추가 22편은 UNREAD + ABSTRACT_CHECKED이며 D1 합성 diagnostic은 논문의 REPRODUCED 근거가 아니다. FULL_TEXT_CHECKED 노트가 있어도 사용자의 정독 근거가 없으면 UNREAD를 유지한다.

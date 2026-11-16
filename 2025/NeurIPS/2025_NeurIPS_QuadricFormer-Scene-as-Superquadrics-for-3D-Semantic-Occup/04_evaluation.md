@@ -4,6 +4,11 @@
 > Evidence maturity: `FULL_TEXT_CHECKED`.
 > Analysis basis: full-text PDF body checked on 2026-09-03 (14 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=eZNdkwJYbN; PDF retrieval source: https://arxiv.org/pdf/2506.10977. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
+> DOC-QA2 targeted source review: 2026-10-23; PDF pp. 4. 손상 구간·직접 연결된 표 분류만 원문 이미지와 대조했다. 전체 주장 정독·실험 검증·reading status 승격을 뜻하지 않는다. [URL·PDF hash·수정 기록](../../../work/sources/pdf_note_review_followup_2026-10-23.json).
+
+> DOC-QA3 (2026-10-23): Eq. (4)의 z 지수는 공개 CUDA primitive와 다르다. [u/v 기호 대응·실제 호출 경로](./03_method.md)에 기록했다. 이는 representation 정의의 정적 대조이며 occupancy 성능·gradient 검증 결과가 아니다.
+
+
 ## Evaluation in One Sentence
 
 PDF body evaluation/result cue (p. 9 (4 Experiments), p. 8 (4 Experiments), p. 8 (4 Experiments), p. 9 (4 Experiments), p. 7 (Figure/Table caption), p. 1 (Figure/Table caption)): The results demonstrate that increasing the crop & split number consistently improves performance.
@@ -144,7 +149,7 @@ PDF body evaluation/result cue (p. 9 (4 Experiments), p. 8 (4 Experiments), p. 8
 | The latency and memory are tested on an NVIDIA 4090 GPU with batch size one during inference, in accordance with Gaussian-based methods [15, 12]. | p. 7 (6 Superquadrics) |
 | We employ ResNet101-DCN with FCOS3D checkpoint for nuScenes. | p. 7 (4 Experiments) |
 | We train our model for 20 epochs on nuScenes with a batch of 8. | p. 8 (4 Experiments) |
-| Superquadrics are a parametric shape family with strong geometric expressiveness, defined as follows: f(x) =  x sx  2 ϵ2 +  y ... | p. 4 (6 Superquadrics) |
+| §3.2 Eq. (4)는 두 shape exponent를 더한 superquadric implicit surface를 정의한다. x/y 항을 합한 뒤 ε₂/ε₁ 승을 취하며, 렌더링된 원문의 z 항 지수는 2/ε₂로 표기되어 있다. 관행적인 superquadric 식으로 임의 변경하지 않았다. | PDF p. 4 Eq. (4); representation 정의이며 evaluation metric이 아님 |
 | 1, the occupancy probability distribution of the Gaussian G can be viewed as a set of iso-probability surfaces defined by: g(x) = -1 2 ... | p. 4 (6 Superquadrics) |
 | Image Encoder Quadric Encoder Sparse Conv. | p. 5 (6 Superquadrics) |
 | Voxelization Cross Attn FFN Quadric Decoder x B Blocks Pos. | p. 5 (6 Superquadrics) |

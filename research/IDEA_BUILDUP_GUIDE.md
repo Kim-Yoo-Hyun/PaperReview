@@ -1,27 +1,97 @@
 # 기존 논문에서 검증 가능한 연구 아이디어로: 본격 연구 전 빌드업 가이드
 
-- 작성·웹 확인: **2026-10-19 KST**
-- 대상: **VLA 기반으로 다양한 로봇의 manipulation·navigation을 다루는 연구**, 그리고 robot behavior에 기여하는 3D perception. 2026-10-21 최신 방향 탐색부터 RL은 필수 조건으로 두지 않는다.
+- 최초 작성: 2026-10-19 / 연구 방법론·웹 근거 갱신: **2026-11-03** / 안내 정리: **2026-11-07 KST**.
+- 현재 새 탐색은 **VLA + RL·단일 정책 학습 중심**이다. 후보별 적용·구현·효과 상태는 [현재 주제 index](../work/research_topics/README.md), 다음 행동은 [TODO](../TODO.md)가 관리한다. [기존 6개 적용 감사](../work/research_topics/README.md#nonexperimental-process-audit)는 11/04 기록이며 이후 FEEDBACK·UNIFIED·HINDSIGHT는 자체 문서에 7단계 상태를 기록한다. HINDSIGHT는 N2에서 내부 비실험 연구 설계를 마쳤고, native 사례·효과·외부 비판은 별도로 미확인이다. 문서 완료를 실행 준비나 가설 입증으로 간주하지 않는다.
+- 운영 기준은 [탐색 절차 감사](../work/update/BUILDUP_PROCESS_AUDIT_2026-10-28.md)의 탐색/진단/확증 구분을 따른다. 적용 이력은 [update index](../work/update/README.md)에 통합한다. 문서 완료·GPU 확보·검토 질문 준비를 각각 연구 효과·실행 가능·외부 피드백 수신으로 승격하지 않는다.
+- 대상: VLA 기반 manipulation·navigation을 출발점으로, **control·RL/IL·데이터 학습·변형체·world model·3D vision·HRI 등 인접 분야**의 연구 질문까지 포함한다. 2026-10-23 사용자 요청으로 공백 탐색 범위를 넓혔으며 VLA와 RL 모두 개별 질문의 필수 조건이 아니다.
 - 목적: 큰 학습·시스템 구현에 투자하기 전에 **어떤 새로운 지식을 만들 수 있는지, 가장 취약한 가정이 무엇인지, 이를 어떻게 적은 비용으로 확인할지** 판단한다.
 - 성격: 연구자의 공개 경험·교육 자료와 공식 학회·저널 지침을 조사한 방법론 문서. 아래 절차·양식·robotics 예시는 이를 저장소의 연구 방향에 맞게 구성한 **연구자 해석과 실무 제안**이다.
 
 연구 착수 전 모든 결과를 알 수는 없다. 여기서 확인하려는 것은 논문 채택 가능성의 점수가 아니라, **중요한 질문이 있고, 기존 지식과의 차이가 설명되며, 실패해도 판단을 갱신할 수 있는 실험이 있는가**다. 작은 진단 실험은 이 빌드업 단계에 포함한다.
 
-최신 적용 사례는 [E2 buildup](../work/research_candidates/2026-10-22_e2_buildup/README.md)이다. 기존 시간 표현·adaptive chunking·feedback 방법과 공개 controller 경로를 대조해 일반 신규 방법을 NO-GO, 통제 후 설계 판단이 달라지는지 묻는 진단을 REVISE/HOLD로 남겼다. 1–6 문헌/설계·7 해석적/source 검사·8 내부 판단까지 수행했으며 실제 정책 효과와 외부 연구자 피드백은 미완료다. 단계별 문서가 있다는 사실을 연구 기여의 입증으로 간주하지 않는다.
+현재 운영의 보완점은 **탐색 후보 선정, 탐색적 진단, 확증·본격 구현의 기준을 나누는 것**이다. 이전 가이드에도 불확실성을 허용하는 원칙은 있었지만, 최근 적용에서는 사전 조건부 설명·native packet 요건이 후보 선정까지 앞당겨졌다. 미확인은 반증이 아니며, 단순 baseline의 존재는 비교 필요성을 뜻한다. 그 baseline이 실제로 충분하다는 증거와 구별한다.
 
-이전 [D1 buildup](../work/research_candidates/2026-10-21_d1_buildup/README.md)은 broad 원인 구별 주장을 식별 가능성·행동 관련성의 조건부 진단으로 수정한 사례다. 문헌과 Docker 합성 검사를 실제 VLA 효과와 구분했으며, 후속 판단과 현재 작업은 [TODO](../TODO.md)를 따른다.
+<a id="nonexperimental-workflow"></a>
 
-이전 [C3 실행 행동과 RL update](../work/research_candidates/2026-10-21_execution_interface/README.md)에서는 native 함수의 mechanism 검사에 이어 실제 pretrained logits까지 측정했다. Gripper만 집계한 큰 상대 감소율이 전체 chunk에서는 작고 마지막 slot에 집중된다는 사실을 확인해 본격 학습 우선순위를 낮췄다. 현상의 존재, 실제 분포에서의 비중, 기존 이론과의 신규성, 정책 성능을 각각 따로 판정한 사례다.
+## 비실험 buildup을 실제로 진행하는 방법 — 2026-11-03 보완
 
-2026-10-22 [D1 baseline 확보](../work/research_candidates/2026-10-21_d1_buildup/BASELINE_DOSSIER.md)는 실험을 제외하고도 2–6단계의 문헌·interface·경쟁 설명·비교 설계를 보강한 사례다. 실험 자원의 부재가 buildup 전체의 중단을 뜻하지 않으며, baseline 문헌 준비 완료를 연구 기여 입증으로 바꾸지 않는다.
+여기서 **비실험 buildup**은 문헌 조사·연구 질문 구체화·논리 검토·비교 설계를 묶은 저장소의 운영 용어다. 아래는 공개 연구 지침을 종합한 실무 제안이며, 모든 top-tier 연구자가 따르는 표준 절차나 논문 채택을 보장하는 과정은 아니다. 문헌만으로 연구의 중요성과 설계의 타당성은 검토할 수 있지만 실제 실패 빈도·성능 이득·일반화는 확정할 수 없다.
 
-같은 날의 [주장·증거 계약](../work/research_candidates/2026-10-21_d1_buildup/CLAIM_EVIDENCE_CONTRACT.md)은 단순 보정으로 충분한 특수 경우를 먼저 도출하고, 그 설명을 배제할 task·관측 조건과 기각 규칙을 정리했다. [방법 감사](../work/research_candidates/2026-10-21_d1_buildup/BASELINE_METHOD_AUDIT.md)는 공식 수식과 공개 코드도 다를 수 있음을 확인했다. 진행 상태와 바로 다음 행동은 [TODO](../TODO.md)에서 관리하며 실제 정책 검증·외부 피드백은 미완료다.
+| 순서 | 지금 할 일 | 최소 산출물·다음 판단 |
+|---|---|---|
+| 1. 문제와 독자 | 어떤 실제 로봇 사용 상황에서 무엇이 어렵고, 답을 알면 누구의 결정이 달라지는지 쓴다 | 전문 약어 없이 문제 2–3문장. 새 방법이 없어도 중요한 질문이면 탐색 가능 |
+| 2. 가까운 선행 | 넓게 발견한 뒤 가장 가까운 연구의 formulation·입출력·비교 조건·한계를 깊게 읽는다 | 해결된 것/남은 것과 직접 근거. 전체 registry 정독을 착수 요건으로 삼지 않음 |
+| 3. 질문과 대안 | 주장 후보를 하나로 줄이고 이미 알려진 원리·더 단순한 설명·반례를 대조한다 | 반박 가능한 질문, 답이 없다는 주장과 아직 못 확인했다는 상태의 구분 |
+| 4. 짧은 논문 이야기 | 문제–선행 차이–예상 기여–필요한 증거를 일찍 써 본다 | 결과 칸은 미확인으로 남긴 한 페이지 설명. 문서를 길게 쓰는 것이 완료 조건은 아님 |
+| 5. 최소 비교 설계 | 기준선·공통 정보·관측 단위·비용·측정치·결과별 다음 결정을 정한다 | 어떤 관측이면 계속/수정/축소할지. 실행 전까지는 설계이며 결과가 아님 |
+| 6. 실행 부담 | GPU뿐 아니라 adapter·원 데이터·상태 복원·평가기·사람의 구현 시간을 확인한다 | 첫 구현 산출물과 재검토 시점. 모르는 공수는 미정으로 기록하고 무기한 확장을 피함 |
+| 7. 외부 비판과 반복 | 설명을 읽은 독립 연구자의 실제 반론을 받아 질문/비교를 고친다 | 질문 준비/실제 수신/반영을 구분. 미수신이면 내부 검토만 완료; 탐색 자체를 금지하지 않음 |
 
-후속 [D1-L3](../work/research_candidates/2026-10-21_d1_buildup/TASK_OBSERVABILITY_AUDIT.md)는 packet에 입력이 있는지에서 멈추지 않고 모델의 값 사용·output/controller까지 추적했다. `pi05_libero`의 state-value 전제 실패로 primary를 수정했고, task 이름 대신 실제 성공 predicate를 읽어 absolute-orientation 주장을 좁혔다. Source 적합성 심사만으로도 불필요한 정책 실험을 제거할 수 있지만, 대체 후보의 유용성까지 입증한 것은 아니다.
+문제·기존 한계·새 접근·중요성·위험·비용·기간·중간 점검을 함께 묻는 근거는 [DARPA Heilmeier Catechism](https://www.darpa.mil/about/heilmeier-catechism)이다. 이를 모든 후보가 통과해야 하는 점수표로 바꾸지는 않는다. 선택적으로 깊게 읽고 가정을 재구성하는 방법은 [Keshav의 three-pass reading](https://cs.uwaterloo.ca/~brecht/courses/854-http-video-2012/readings/keshav-paper-reading.pdf)을 참고한다.
 
-[D1-L4 계약](../work/research_candidates/2026-10-21_d1_buildup/PRE_EXPERIMENT_CONTRACT.md)은 planned artifact를 실제 JSON spec으로 만들고, report 오류·물리 변화·shared reset·split·정보/계산 예산·기각 기준을 고정했다. Flat state에 fixture/controller memory가 모두 들어 있지 않음을 확인하여 paired reset 검증을 추가했다. 이로써 계획한 비실험 L1–L4를 종료하고, 다음 투자 판단을 native G0/G1과 실제 외부 피드백에 연결한다. 실행 불가능한 설계 spec은 runtime manifest나 정책 효과 evidence를 대신하지 않는다.
+초기에 써 보며 생각을 명확히 하고 실제 독자의 비판을 받는 방법은 [Simon Peyton Jones의 강연·슬라이드](https://simon.peytonjones.org/great-research-paper/), 단순화·실패 이해·방향 재평가는 [MIT 교재 §52.2](https://visionbook.mit.edu/how_to_do_research.html)를 따른다. 이는 경험적 조언이지 해당 절차의 인과적 우월성이 검증됐다는 뜻은 아니다. [ICLR 2026 reviewer guide](https://iclr.cc/Conferences/2026/ReviewerGuide)는 명료한 문제·선행 맥락·주장을 뒷받침하는 증거·새 지식을 중시하고 SOTA를 필수로 두지 않는다. 이 **최종 논문 심사 관점**을 탐색 첫날의 증거 요구로 앞당기지 않는다.
 
-앞선 2026-10-21 적용 결과인 [C2 빌드업 1차 판단](../work/research_candidates/2026-10-20_vla_rl/C2_BUILDUP_RESULT.md)에서는 직접 충돌 문헌과 실제 데이터·Docker 전제를 확인했으며 완전한 label/coverage 및 native runtime이 성립하지 않아 당시 설계를 NO-GO로 종료했다. 부분 경유 supervision을 확인한 것과 RL의 정책 효과를 검증한 것은 다르다. C1은 [native probe](../work/experiments/vla_rl_active_handoff/RESULTS.md)에서 task competence를 확인하지 못해 큰 후속 실험을 보류했다. 이전 로봇 간 RL 전이와 지연 검토는 [핵심 결과·교훈](../work/experiments/vla_rl_cross_embodiment/RESULTS.md)으로 통합하고 종료했다. 아래 6절의 지연 예시는 선행 연구와의 충돌을 반영한 방법론 사례이며 활성 연구 제안이 아니다.
+**완료 표기:** `내부 비실험 검토 완료`는 현재 확보 가능한 문헌·논리·분석 설계가 정리됐다는 뜻이다. `외부 검토 완료`, `구현 검증 완료`, `연구 효과 확인`은 독립적으로 기록한다. 선행에 이미 있는 원리의 재조합이나 GPU 확보만으로 새 방법 기여가 확정되지 않는다.
+
+**문서 작업 종료와 공수 점검:** 새 source·반례·피드백이 판단을 바꾸지 않는다면 같은 검색과 체크리스트를 반복하지 않는다. 실제 구현을 선택한 뒤 첫 주가 끝날 때 아래 후보 감사표의 첫 산출물과 남은 의존성을 재검토하는 것을 기본 운영 제안으로 둔다. 이는 완료 시간 예측·학습 예산·자동 실행 승인이 아니다. 작업 가능 시간과 마감이 확인되면 조정한다. 기존 P0 상한과 Docker-only 규칙은 그대로 유지한다.
+
+<a id="stage-appropriate-gates"></a>
+
+## 0. 지금 결정하는 단계에 맞춰 요구한다
+
+| 단계 | 이번 결정에 필요한 최소 내용 | 아직 요구하지 않는 것 |
+|---|---|---|
+| 탐색 후보 선정 | 중요한 문제, 가까운 연구가 답한 범위, 아직 모르는 질문, 답에 따라 달라질 판단, 다음에 확인할 한 가지 | 완성된 원인 설명, 효과 방향, 단순 baseline의 실제 실패, 완성된 데이터·checkpoint·runtime packet |
+| 탐색적 진단 | 확인할 현상/비교 질문, 강한 단순 대안, 해석 가능한 관측 단위, 제한된 범위·비용·중단 조건. 실행한다면 해당 검사에 필요한 입출력·환경 계약 | 새 방법 우월성, 모든 경쟁 설명의 제거, 출판 수준 규모·전체 ablation, 미리 확정된 방향 가설 |
+| 확증·본격 구현 | 기여 유형에 맞는 주장, 공정 baseline, source/interface 확인, 고정할 metric/split/예산·해석 규칙, 실행에 필요한 manifest와 native qualification | SOTA 또는 새 architecture를 모든 기여 유형에 공통으로 요구하지 않음 |
+
+탐색 단계의 산출물은 **잠정 질문**이어도 된다. “현상이 언제 나타나는가”, “단순 baseline이 충분한가”, “평가 조건을 바꾸면 어떤 결론이 달라지는가” 자체를 조사할 수 있다. 인과 기제를 주장할 때에는 경쟁 설명을 구별하는 추가 검사가 필요하지만, 모든 탐색 질문이 시작부터 인과 설명을 가져야 하는 것은 아니다. 탐색 중 얻은 가설은 발견 경로를 밝히고 이후 새로운 자료·봉인된 holdout 등으로 검증한다. [Nosek et al., PNAS 2018](https://doi.org/10.1073/pnas.1708274114)
+
+**기여 유형부터 선택한다.** 방법은 개선/효율/일반화 등을, 평가·실증 연구는 중요한 결론의 타당성과 범위를, system은 실제 제약에서의 효용을, 개념 연구는 아이디어와 의미 있는 feasibility 근거를 심사한다. 새로운 알고리즘·완성된 mechanism·모든 baseline 능가를 공통 입장 조건으로 만들지 않는다. Concept/negative result라는 이름만으로 근거 기준이 낮아지는 것도 아니다. [NeurIPS 2026](https://neurips.cc/Conferences/2026/ReviewerGuidelines), [E&D 2026](https://neurips.cc/Conferences/2026/EvaluationsDatasetsReviewerGuidelines), [ECCV 2026](https://eccv.ecva.net/Conferences/2026/ReviewerContributionTypes)
+
+**기각과 미확인을 나눈다.** 같은 질문·조건·결론이 선행에 직접 포함됨, 핵심 논리 모순, 해당 비교의 실제 부정 결과는 그 범위의 기각 근거다. 반면 mechanism 미정, natural witness 미수집, 본문/공개 자산 미확인, GPU 미확보는 각각 탐색 과제·source 불확실성·실행 대기로 기록한다. 해당 정보가 결정에 필수이면 보류할 수 있지만 가치 없음으로 치환하지 않는다. 기존 `NO-GO`는 당시 설계의 투자 판단으로 보존하며 새로운 사실 없이 자동 재개하지 않는다.
+
+**검색과 문서 작업에도 종료점을 둔다.** 가까운 선행·강한 baseline·가장 중요한 미확인을 적고 다음 관측이 판단을 바꿀 수 있으면 그 단계의 문헌 검토를 마친다. 기본은 한 페이지 후보 카드와 판단을 바꾸는 source만이다. 더 깊게 읽을 때는 어느 질문을 해결하려는지 적는다. 모든 논문의 정독·모든 code file의 hash·전체 manifest를 초기 후보 카드의 필수 조건으로 만들지 않는다. 최종 주장 확정/구현 전 직접 충돌 확인은 유지한다.
+
+현재 비실험 요청에서는 문헌·공개 source·기존 보고 비교·수작업 논증으로 여기까지 진행한다. 이것으로 알 수 없는 효과는 `미확인`으로 남기고, 자원이 없어 결과를 못 얻는다는 이유로 후보를 계속 새 주제로 교체하지 않는다. 이후 실행되는 toy/probe도 로컬 Docker와 scoped implementation gate를 따른다.
+
+[GAP-TERM1](../work/update/VLA_TERMINATION_CONTRACT_REVIEW_2026-10-27.md)의 당시 설계 NO-GO·진단 HOLD는 역사로 보존한다. 순위 변화의 항등식이 새 이론이 아니라는 사실은 **평가 연구의 가치를 배제하지 않는다**. 중요한 평가 가정이 정책 선택을 얼마나·어디서 바꾸는지의 새로운 근거도 기여가 될 수 있다. GAP-PROC1은 절차만 교정했고, 후속 GAP-S3는 사용자 요청에 따라 평가 질문의 비실험 탐색을 재허용했다. 실제 중복·범위·효과의 증거 기준과 실행 전 계약은 유지한다.
+
+[AUTH4](../work/update/VLA_CONTACT_AUTHORIZATION_BASELINE_REVIEW_2026-10-27.md)의 초기 판단 출처×갱신 빈도 분리와 identity/geometry 구별, [N4](../work/update/PROXY_SELECTION_IDENTIFIABILITY_REVIEW_2026-10-26.md)의 입력·효과·통계 단위 구별도 유지한다. 조건부 논증·source 감사·문서 완료는 정책 효과 입증이 아니다.
+
+선행 [GAP-DE1](../work/update/DEFORMABLE_IDENTIFICATION_REVIEW_2026-10-24.md)은 task-oriented exploration이 이미 [RSS 2020](https://roboticsproceedings.org/rss16/p085.html)에 있고 [AdaptiGraph 부록](https://arxiv.org/html/2407.07889v1)에 단순 probe 비교도 있음을 반영했다. “식별할 수 있는가” 다음에는 “공통 feedback 행동으로도 해결되는데 식별하는 것은 아닌가”를 묻는다.
+
+직전 실험 적용인 [GAP-P4 bounded pilot](../work/experiments/reactive_nav_pilot/RESULTS.md)은 동결한 384 branch 비교에서 주 가설 joint gate를 통과하지 못했다. 양의 interaction과 절대 위험 증가를 구별하고 현재 설계를 추가 sweep 없이 HOLD로 갱신했다. [GAP-CF2](../work/update/CAUSAL_DATA_SUFFICIENCY_REVIEW_2026-10-23.md) 등 기존 검토의 판정과 [분야 확장 조사](../work/update/BROAD_RESEARCH_GAP_SCOUT_2026-10-23.md)·[VLA 조사](../work/update/VLA_GAP_SCOUT_2026-10-23.md)의 근거를 보존한다. 문헌 작업 완료는 신규 연구 GO나 실험 효과 입증이 아니며, 상세 적용 목록과 교훈은 아래 표를 따른다.
+
+이번 적용에서 추가한 판단 규칙: 서로 다른 제목의 논문을 모순으로 취급하기 전에 baseline 설정·예산 단위·결론을 대조한다. 예를 들어 [forgetting 저항성 연구, ICML 2026](https://proceedings.mlr.press/v306/liu26bu.html)와 [real-world continual VLA §5–6](https://arxiv.org/html/2605.26820v1)는 모두 적절한 replay의 효과를 지지한다. “기존 결과가 충돌한다”는 초기 동기가 본문에서 해소되면 후보 판단도 낮춰야 한다. 또한 공식 게재 논문으로 문제의 중요성을 확인하더라도 최신 preprint가 동일 개입을 이미 제안했는지 별도로 검색한다.
+
+과거 후보를 통해 확인한 운영 교훈은 아래와 같다. 현재 판정·재개 조건은 [16개 주제별 요약](../work/research_candidates/summaries/README.md)과 [TODO](../TODO.md)가 소유한다. 이 가이드는 진행 일지를 중복 관리하지 않는다.
+
+| 사례 | Buildup에서 재사용할 교훈 |
+|---|---|
+| [GAP-TERM1](../work/update/VLA_TERMINATION_CONTRACT_REVIEW_2026-10-27.md) | Goal predicate·종료 선언·종료 후 controller를 분리한다. Dummy action도 gripper를 바꿀 수 있고 release/dwell 추가는 task 강화다. Held signal은 새 관측이 아니며 subtask Stop은 global 종료가 아니다. 단순 순위 변화와 그 조건을 사전에 설명하는 기여를 구별한다. |
+| [GAP-S2](../work/update/VLA_GAP_RESELECTION_2026-10-27.md) | 행동 암기·학습 데이터 누출·OOD 실패를 구별한다. Goal 도달·끝 상태 유지·자율 종료는 다른 평가 계약이다. 본문 protocol과 공개 code revision이 다르면 결과를 합치지 않는다. 저장 trajectory 절단을 종료 이후의 반사실 실험으로 해석하지 않는다. |
+| [GAP-N4](../work/update/PROXY_SELECTION_IDENTIFIABILITY_REVIEW_2026-10-26.md) | 차이의 차이를 먼저 전개해 무엇이 상쇄되는지 확인한다. Selector와 최종 learner의 정보 개입, split과 selection 단위, 상관과 cutoff 이후의 선택 가치를 구분한다. Matched permutation·frame·학습 seed를 독립 scene 수로 합치지 않는다. |
+| C1/C2 및 초기 로봇 간 RL 전이 | Runtime·부분 label·base competence·정책 효과는 각각 다른 검사다. 전제가 안 맞으면 큰 학습에 앞서 설계를 수정한다. |
+| [C3](../work/research_candidates/2026-10-21_execution_interface/README.md) | Gripper 일부 slot의 큰 상대 변화가 전체 action에서 실질적일지는 별도 확인한다. 현상·분포상 비중·신규성·성능을 구별한다. |
+| [D1 baseline 감사](../work/research_candidates/2026-10-21_d1_buildup/BASELINE_METHOD_AUDIT.md)와 [task 감사](../work/research_candidates/2026-10-21_d1_buildup/TASK_OBSERVABILITY_AUDIT.md) | 논문 수식·공개 구현·실제 value path를 대조한다. 입력 packet에 값이 존재하는 것과 action에 사용되는 것은 다르다. |
+| [D1 실험 전 계약](../work/research_candidates/2026-10-21_d1_buildup/PRE_EXPERIMENT_CONTRACT.md) | 오류와 물리 변화를 분리하고 reset·controller memory까지 비교 계약에 넣는다. 문서 spec은 실행된 artifact가 아니다. |
+| [E2](../work/research_candidates/2026-10-22_e2_buildup/README.md) | 같은 temporal 원리·feedback family의 재명명을 피한다. 문헌/정적 검사는 native 정책 효과·외부 피드백과 구분한다. |
+| [GAP-R2](../work/update/CONTACT_INTERFACE_REVIEW_2026-10-23.md) | 구분되지 않는 숨은 상태가 있어도 공통으로 성공하는 보수적 행동이 존재할 수 있다. 센서 필요성을 주장하려면 그 행동과 충분한 history·고전 feedback을 비교한다. Public code/data의 존재·내용·실행 준비도는 별도로 확인한다. |
+| [GAP-W2](../work/update/GAP_W2_COMPARATIVE_REVIEW_2026-10-23.md) | Abstract에서 안 보이던 전이 실험이 부록에 있을 수 있다. 긍정 사례·실패 사례를 찾은 뒤에는 존재 주장이 아니라 새 조건 예측을 검토한다. 이론의 보장 범위와 구현의 유한 calibration support, README와 후속 논문 버전, architecture와 optimizer/history 변경을 구분한다. |
+| [GAP-L2](../work/update/LATENT_ACTION_REVIEW_2026-10-23.md) | Labels는 단계별 사용량과 unique ID 합집합을 함께 센다. Zero-shot은 어느 학습 단계에서 미노출인지 적는다. Decoder 인자 이름보다 실제 계산 경로를 확인하고, oracle latent probe·정책이 예측한 command·closed-loop 성공을 분리한다. 다른 supervision/backbone/head의 점수 차이를 representation 단독 효과로 쓰지 않는다. |
+| [GAP-WM1](../work/update/WORLD_MODEL_SELECTION_REVIEW_2026-10-23.md) | 고정 후보의 평균 평가 정확도와 탐색·선택 이후의 오류를 분리한다. Critical-state proxy는 개입 이득의 oracle이 아니며 단일 recorded action은 모든 대안의 실제 결과가 아니다. 공개 code의 완성도와 선행 방법의 존재도 별개다. |
+| [GAP-H1](../work/update/HRI_HELP_RELIABILITY_REVIEW_2026-10-23.md) | 도움 요청 횟수·답변 정확도·human time·native 성공을 구별한다. 실제 참가자의 simulator 평가와 scripted/LLM partner, skill API와 VLA를 혼동하지 않는다. 요청한 사례만의 label과 성공 재시도만의 집계가 어떤 선택 편향을 만드는지 확인한다. |
+| [GAP-CF1](../work/update/CAUSAL_INFORMATION_COVERAGE_REVIEW_2026-10-23.md) | Hidden information·conditional action support·유한 표본 오차를 구별한다. Train-only cue와 inference sensor 추가, model token 개입과 환경 action 개입을 분리한다. 관측 빈도·작은 ensemble 분산은 causal 식별의 증거가 아니며, 같은 시간의 cue 대 추가 시연 비교도 직접 선행을 확인한다. |
+| [GAP-CF2](../work/update/CAUSAL_DATA_SUFFICIENCY_REVIEW_2026-10-23.md) | 필드의 존재·시점·의미·가공 후 보존을 각각 확인한다. 사후 주석은 행동 전 정보가 아니며, command와 도달 상태 label, 원본 성공 판정과 recipe reward를 구별한다. 일부 writer에 없는 필드를 전체 release에 없다고 단정하지 않고, code의 비용 기록과 실제 공개 비교 자료도 분리한다. |
+| [GAP-P1](../work/update/REACTIVE_NAVIGATION_SAFETY_REVIEW_2026-10-23.md) | 보장 event·sampling unit·적용 policy·시간 범위를 먼저 적는다. Trajectory/mission 보장이 있는 선행을 framewise로 낮춰 해석하지 않는다. 실제 사람의 기록, 궤적 replay, robot-responsive simulation을 구별하며 평균 coverage와 전환 직후 실패·liveness를 따로 본다. Public release 이름이 같아도 원 논문의 환경/metric과 동일한지 확인한다. |
+| [GAP-P2](../work/update/REACTIVE_NAVIGATION_EXECUTION_REVIEW_2026-10-23.md) | 실제 entrypoint가 읽는 저장 config와 wrapper/reset까지 추적한다. 배열 순서·frame count 대신 identity와 physical target time으로 비교하고, 발행한 반경·terminal state를 보존한다. Offline interpolation·원본 truth lookahead·성공자 조건부 metric은 각각 online 정보·공정 baseline·전체 위험과 다르다. 실행 전 manifest는 미결 필드와 executable 상태를 드러내며, 작은 계약 검사와 연구 효과 pilot을 분리한다. |
+| [GAP-P3](../work/experiments/reactive_nav_contract/RESULTS.md) | 작은 계약 검사는 실제 dependency와 저장 trace까지 확인한다. 동일 tick의 반복 호출·예정/실제 실행 시각을 구분하며, 통과한 테스트의 허점도 code review와 반례로 보완한다. Fixture margin·한 설정의 smoke·계약용 executable manifest를 calibrated baseline·factorial 효과·full research 준비 완료로 승격하지 않는다. |
+| [GAP-P4](../work/experiments/reactive_nav_pilot/RESULTS.md) | 같은 prefix에서 분기하고 독립 calibration과 작은 held-out을 동결한다. 양의 차이의 차이는 처치군의 절대 악화를 뜻하지 않는다. 종료 후 위험과 미관측 label을 구분하고, coverage·진행·geometry와 단순 대안을 함께 본다. 사전 joint gate 실패 뒤 test 조건을 검색해 서사를 구하지 않고 HOLD로 갱신한다. |
+| [GAP-DE1](../work/update/DEFORMABLE_IDENTIFICATION_REVIEW_2026-10-24.md) | Joint의 대상(state/material/friction/attachment)을 정확히 적는다. Task relevance 자체도 과거 선행을 확인한다. 부록의 단순 대안·관측 tier의 가정·probe의 물리적 효과와 정보 효과를 대조하고, solver 시간과 총 비용을 구분한다. Segmentation text·LLM planner·native VLA를 같은 interface로 세지 않는다. |
+| [GAP-DE2](../work/update/DEFORMABLE_ASSET_SUFFICIENCY_REVIEW_2026-10-24.md) | Boundary라는 필드 이름보다 환경 attachment·grasp·geometric edge·workspace wall의 역할을 확인한다. Frame 수와 물리 시간, window와 독립 trial, 상위 timestamp와 최종 저장 필드를 구분한다. 사후 보간·재시도 필터·camera index 선택을 추적하되 payload 미검사 상태에서 데이터 전체의 오류율을 주장하지 않는다. |
+
+실험 자원이 없어도 문헌·interface·경쟁 설명·비교 설계를 검토할 수 있다. 이 준비를 연구 기여의 입증으로 바꾸지 않는다. 아래 지연·navigation·3D 예시는 방법론 설명이며 활성 연구 제안이 아니다.
 
 ## 1. 조사 범위와 읽는 방법
 
@@ -88,6 +158,8 @@ Karpathy의 사례에서 배울 부분은 특정 분야 조합 자체보다 **�
 | [NeurIPS 2026 Evaluations & Datasets 지침](https://neurips.cc/Conferences/2026/EvaluationsDatasetsReviewerGuidelines) | 기여 유형에 맞는 quality·clarity·significance·originality. 기존 평가의 한계와 negative result도 체계적으로 검증하면 가치가 있음 | 새 알고리즘이 없어도 평가 관행이나 기존 결론을 바꾸는가? 부정 결과를 설명할 통제가 있는가? |
 | [RSS 2026 Call for Papers](https://roboticsconference.org/2026/information/cfp/) | 새로운 scientific contribution과 systems contribution을 모두 모집 | 시스템 통합을 통해 어떤 새로운 robot capability 또는 재사용 가능한 설계 지식을 입증하는가? |
 | [IEEE T-RO Information for Authors](https://www.ieee-ras.org/publications/t-ro/t-ro-information-for-authors/) | 독창적이고 중요한 결과. 기존 연구의 증명·실험·설명을 단순히 늘리는 것 이상의 기여 요구 | 추가 구현·실험의 양을 제외해도 새로운 주장과 실질적인 발전이 남는가? |
+| [ECCV 2026 Contribution Types](https://eccv.ecva.net/Conferences/2026/ReviewerContributionTypes) | 기여 유형에 맞춰 평가하며 동일한 요구를 모든 논문에 강제하지 않음 | 새 알고리즘, 원인 설명, 시스템 능력, 평가 자산 중 무엇을 주장하는가? 그 유형에 맞는 결정적 증거는 무엇인가? |
+| [NeurIPS Paper Checklist](https://neurips.cc/public/guides/PaperChecklist) | 주장·한계, 실험의 변동, 재현에 필요한 설정·계산 정보 명시 | 관측 단위·seed·trial·예산을 구분하고, 결과보다 넓은 주장을 피할 수 있는가? |
 
 NeurIPS 항목은 **E&D track**의 지침이다. 이를 모든 트랙의 동일한 평가 규정으로 일반화하지 않는다. RSS는 연도별 페이지를 사용했다. 공식 웹사이트의 최신 연도 페이지와 과거 검색 색인이 다를 수 있으므로 실제 페이지의 연도를 확인한다.
 
@@ -100,6 +172,10 @@ NeurIPS 항목은 **E&D track**의 지침이다. 이를 모든 트랙의 동일�
 5. **재사용 가능성:** 특정 checkpoint·장면을 넘어 다른 연구자가 활용할 지식이나 도구가 남는가?
 
 예컨대 새 모듈의 성능 향상이 있어도 중요성과 차별성이 약할 수 있다. 반대로 단순한 방법이라도 기존 설명을 교정하거나 비용 제약 아래 가능한 행동을 바꾸면 검토할 가치가 있다. 기여의 크기는 후속 증거로 판단한다.
+
+**2026-10-23 보완:** 초기 진단 연구를 억지로 새 architecture로 포장하지 않는다. 그렇다고 실패 사례 수집만으로 기여가 성립하지도 않는다. 기존 설명과 다른 예측, 공정한 대조, 다른 조건에 재사용할 판단이 필요하다. ECCV의 기여 유형은 평가 관점이지 합격용 체크리스트가 아니며, ICLR은 SOTA 자체를 필수로 요구하지 않는다. 최근 preprint를 확인하는 것은 우리 투자 판단을 위한 검색 범위다. 이를 venue가 모든 동시기 preprint와의 비교를 의무화했다는 뜻으로 쓰지 않는다. [ECCV 지침](https://eccv.ecva.net/Conferences/2026/ReviewerContributionTypes), [ICLR 지침의 Evaluation·contemporaneous work](https://iclr.cc/Conferences/2026/ReviewerGuide).
+
+문헌 검토의 통과는 **다음 탐색 또는 작은 파일럿에 투자할 근거**다. 신규성·가설·정책 효과의 입증과 구분한다. 실험을 시작할 때는 질문, 직접 충돌 범위, 그 검사에 실행 가능한 비교와 해석·중단 기준을 확보한다. 탐색에서는 효과의 방향과 원인 가설이 미정이어도 되며, 확증 단계에서 주장과 분석을 고정한다.
 
 ## 4. 주제, 질문, 가설, 기여를 분리하기
 
@@ -114,12 +190,13 @@ NeurIPS 항목은 **E&D track**의 지침이다. 이를 모든 트랙의 동일�
 
 이 예시는 신규성을 주장하지 않는다. 특히 action chunk 길이와 반응성은 이미 연구된 문제다. 핵심은 알고리즘 이름을 먼저 고정하지 않고, **문제의 존재 → 설명 → 필요한 개입**으로 구체화하는 것이다.
 
-## 5. 문헌에서 아이디어로 넘어가는 8단계
+## 5. 공백 탐색 후 문헌에서 아이디어로 넘어가는 8단계
 
-이 단계는 조언을 종합한 실무 절차다. 앞 단계의 가정이 깨지면 돌아간다. 실험 결과와 문헌 조사는 서로를 계속 수정한다.
+이 단계는 조언을 종합한 실무 절차다. 2026-10-23부터 **단계 0의 공백 탐색을 먼저 수행**한다. 기존 후보의 1–8 단계 ID는 유지한다. 앞 단계의 가정이 깨지면 돌아가며, 실험 결과와 문헌 조사는 서로를 계속 수정한다. [VLA 적용](../work/update/VLA_GAP_SCOUT_2026-10-23.md) · [다분야 적용](../work/update/BROAD_RESEARCH_GAP_SCOUT_2026-10-23.md).
 
 ```mermaid
 flowchart TD
+    Z[공백 탐색: 알려진 답과 아직 모르는 조건 분리] --> A
     A[중요한 현상과 비용 정의] --> B[가까운 문헌과 가정 비교]
     B --> C[경쟁 가설과 차별성 확인]
     C --> D[주장과 필요한 증거를 한 페이지로 작성]
@@ -129,6 +206,21 @@ flowchart TD
     F -->|수정| B
     F -->|중단 또는 보류| H[이유와 재검토 조건 보존]
 ```
+
+### 단계 0. 방법 이름을 붙이기 전에 공백을 조사한다
+
+1. **범위를 고정한다.** 관심 시스템·행동·실패 비용, 검색 종료일, 최근 3개 calendar year, 우선 venue를 기록한다. 분야 전체의 미해결 문제를 증명하려 하지 말고 어떤 사용 조건의 판단을 바꿀지 정한다. VLA·RL·3D·새 센서의 사용 여부는 질문 뒤에 결정한다.
+2. **Registry와 외부 문헌을 함께 찾는다.** 정확한 제목뿐 아니라 현상·가정·경쟁 설명·동의어로 검색한다. 공식 proceedings/program → 저자 본문·code를 추적한다. 최근 preprint도 직접 충돌 확인에 포함하되 채택 논문과 구별한다. 발견 출처와 주장 근거를 분리한다.
+3. **알려진 답을 먼저 기록한다.** 논문별로 `질문 → 실제 평가 조건 → 확인된 범위 → 미확인 범위`를 적는다. 새 benchmark의 존재, 저자가 적은 limitation, registry에서의 누락은 각각 연구 공백의 증명이 아니다.
+4. **표면적 충돌을 해소한다.** 상반된 결과를 발견하면 observation/history, sensor coverage, action/controller, 데이터 support, train/test split, 예산, metric을 맞출 수 있는지 확인한다. 비교 조건이 다르면 우선 설명 가능한 조건 차이이며 논문 간 모순이라고 쓰지 않는다.
+5. **남은 질문의 가치를 검사한다.** 답에 따라 데이터 수집·센서 구매·controller 선택·평가 결론 중 무엇이 바뀌는지 적는다. 기존 방법을 다른 benchmark에서 실행하는 것만 남으면 독립 기여로 채택하지 않는다.
+6. **가장 강한 반례를 찾는다.** 새 후보가 과거 HOLD/NO-GO의 재명명인지 대조하고, 이미 같은 조건·대조·결론을 갖춘 논문을 우선 찾는다. 새 반례가 나오면 순위와 주장을 즉시 낮춘다. 검색 결과가 없다는 사실만으로 신규성을 확정하지 않는다.
+
+**산출물:** 날짜·검색 범위·source/version·확인 깊이·포함/제외 이유를 갖춘 조사 기록, track의 `Open Questions`에 있는 조건부 질문, 그리고 그 질문을 없앨 직접 선행 연구 또는 결과. 논문을 모두 정독했다거나 체계적 문헌고찰을 완료했다고 표시하지 않는다. 검색은 핵심 판단을 바꿀 미확인 문헌을 특정한 시점에 일단 닫고 후속 항목으로 넘길 수 있다.
+
+**분야 공백과 신규 기여를 나누는 규칙:** 선행 연구가 있다는 사실로 분야 전체를 NO-GO로 처리하지 않는다. `중요한 열린 문제 → 기존 방법이 답한 조건 → 아직 확인되지 않은 조건 → 우리 비교가 줄 추가 지식`을 각각 적는다. 저자의 future work도 후속 논문이 이미 해결했을 수 있으며, abstract에서 안 보이는 실험을 “없다”고 쓰지 않는다. 여러 분야를 비교할 때는 과학적 가치와 현재 자원의 적합성을 분리한다. Hardware가 없다는 이유로 문제의 가치를 낮추거나, GPU로 돌리기 쉽다는 이유로 신규성을 높이지 않는다. 이 규칙은 이번 조사에서 정리한 운영 원칙이다.
+
+문장마다 **논문이 보고한 사실 / 연구자 추론 / 아직 확인하지 않은 주장**을 나눈다. 이 구분은 조사용 표현이며 reading tracker의 status/evidence enum을 추가하는 것이 아니다. 단계 0은 MIT 교재의 가정 검사와 ICLR의 구체적 질문·새 지식 기준을 이 저장소에 적용한 절차이며, 해당 기관이 정한 공통 연구 순서가 아니다. [MIT 교재](https://visionbook.mit.edu/how_to_do_research.html), [ICLR 2026 지침](https://iclr.cc/Conferences/2026/ReviewerGuide).
 
 ### 단계 1. 해결되면 달라질 일을 먼저 적는다
 
@@ -175,7 +267,7 @@ DARPA의 Heilmeier 질문은 목표, 현재 접근과 한계, 새 접근의 이�
 | 평균 성능이 특정 실패를 가림 | 기존 metric이 무엇을 놓치며 결론이 바뀌는가? | 드물고 중요하지 않은 사례만 선별함 |
 | 새로운 센서·데이터·기반 모델을 사용할 수 있음 | 이전에는 검증 불가능했던 어떤 질문이 이제 가능한가? | 기존 방법에 자원만 추가한 효과 |
 
-이때 **가설 H1과 경쟁 설명 H0/H2**를 함께 작성한다. 예: 실패 원인이 feedback 시점인지, observation 품질인지, 학습 데이터 coverage인지 분리한다. 한 가설이 지지되지 않았다는 사실만으로 다른 가설이 참이라고 결론 내리지 않는다.
+확증할 설명이 생기면 **가설 H1과 경쟁 설명 H0/H2**를 함께 작성한다. 아직 현상 탐색 중이면 방향 없는 질문과 가능한 설명 목록으로 시작해도 된다. 예: 실패 원인이 feedback 시점인지, observation 품질인지, 학습 데이터 coverage인지 조사한다. 한 가설이 지지되지 않았다는 사실만으로 다른 가설이 참이라고 결론 내리지 않는다.
 
 ### 단계 5. 가장 가까운 선행 연구와 정면으로 비교한다
 
@@ -207,7 +299,7 @@ Top-tier 논문을 중심으로 읽되 novelty 검색에는 최신 preprint도 �
 |---|---|---|---|---|
 | 한 문장에 한 주장 | 관측·분석·실험·증명 중 적합한 것 | 가장 설득력 있는 대안 | 결과에 따라 판단이 달라지는 비교 | 미실행 / 예비 결과 / 검증 완료의 실제 범위 |
 
-예상 결과표를 만들 때 숫자는 채우지 않는다. 열·조건·metric과 가설별 방향만 적는다. 이 표의 목적은 긍정적인 결과를 약속하는 것이 아니라, **어떤 결과를 얻어도 해석할 준비를 하는 것**이다.
+예상 결과표를 만들 때 숫자는 채우지 않는다. 열·조건·metric과, 방향 가설이 있는 경우에만 그 방향을 적는다. 이 표의 목적은 긍정적인 결과를 약속하는 것이 아니라, **어떤 결과를 얻어도 판단을 갱신할 준비를 하는 것**이다. 탐색으로 얻은 예측을 사전에 정한 것처럼 쓰지 않는다.
 
 ### 단계 7. 가장 취약한 연결부터 저비용으로 검사한다
 
@@ -307,20 +399,23 @@ Navigation은 [navigation 관련 registry](../PAPER.md)와 [VLA synthesis](../sy
 
 ## 8. 진행·수정·중단 기준
 
-다음은 연구 투자 결정을 위한 제안이다. 각 항목을 `근거 있음 / 미확인 / 반대 근거 있음`으로 기록하고 source를 붙인다. 점수 합으로 약점을 숨기지 않는다.
+다음은 **본격적인 검증 투자**를 판단하는 기준이다. 초기 탐색 후보는 [단계별 최소 요건](#stage-appropriate-gates)을 적용하며 이 표의 모든 칸을 통과할 필요가 없다. 각 항목을 `근거 있음 / 미확인 / 반대 근거 있음`으로 기록하고 source를 붙인다. 점수 합으로 약점을 숨기지 않는다.
 
 | 검사 | 진행할 근거 | 수정·보류할 신호 |
 |---|---|---|
 | 문제의 존재와 중요성 | 실제 조건에서 관측되거나 명확한 이론적·문헌적 근거가 있음 | 제목·직감·고른 실패 영상만 있음 |
 | 선행 연구와의 차이 | 가까운 연구가 답한 범위와 남은 차이가 구체적임 | 이름만 다른 기존 메커니즘이거나 직접 경쟁 연구를 확인하지 않음 |
-| 가설의 식별 가능성 | 적어도 하나의 비교에서 경쟁 설명들의 예측이 달라짐 | 어떤 결과가 나와도 같은 주장으로 해석함 |
+| 주장에 맞는 검증 가능성 | 인과 주장이라면 경쟁 설명이 갈리는 비교, 실증·평가 질문이라면 결론을 갱신할 관측과 타당한 비교가 있음 | 어떤 결과가 나와도 같은 주장으로 해석함 |
 | 개선 여지 또는 설명의 가치 | 제안 intervention의 효과를 볼 여지가 있거나 중요한 기존 결론을 검증함 | baseline 오류를 고치면 질문 자체가 사라짐 |
 | 실행 조건 | 필요한 정보·환경·자원과 첫 실험의 경로가 확인됨 | 현재 얻을 수 없는 신호나 재현 불가능한 기반에 전적으로 의존함 |
 | 기여의 범위 | 다른 연구자가 재사용할 주장·조건·artifact를 설명할 수 있음 | 특정 장면·checkpoint의 tuning 성공만 남음 |
 
 - **진행:** 중요한 불확실성이 충분히 줄었고, 다음 비용을 쓰면 무엇을 알게 되는지 분명하다. 이제 scoped project 명세를 작성한다.
 - **수정:** 질문은 중요하지만 가설·센서 가정·baseline·실험 설계 중 일부가 맞지 않는다. 실패한 연결을 고치고 작은 검사를 반복한다.
-- **중단 또는 보류:** 이미 해결된 문제이거나, 새 지식이 약하거나, 현재 자원으로 구별할 검사가 없다. 이유와 재검토할 조건을 남긴다.
+- **현재 주장 기각:** 동일 조건에서 이미 답한 선행·논리 모순·적합한 부정 결과 등 근거를 명시한다. 분야 전체의 기각으로 확대하지 않는다.
+- **탐색/실행 보류:** 아직 중요한 정보·자원·판단할 검사가 부족하다. 부족한 것과 해결할 행동을 적으며 과학적 반증으로 표시하지 않는다. 탐색 예산을 모두 썼는데 다음 행동의 정보 가치가 작으면 우선순위를 내릴 수 있다.
+
+**후보 선택 자체의 종료 조건:** 여러 후보를 비교한 뒤 `현재 채택 후보 없음`을 선택할 수 있다. 직접 선행과의 충돌, 비교 자료 부족, 실제 부정 결과, 실행 자원 부족을 각각 기록하고 분야 전체의 실패로 합치지 않는다. 다음 작업은 같은 metadata 재심사가 아니라 판단을 바꿀 새 조건·관측 또는 구체적 수집 설계가 있을 때 연다. 긍정 효과나 완성된 공개 데이터가 먼저 있어야 하는 것은 아니다. 탐색은 중요한 현상/비교 질문과 작은 검사의 정보 가치·비용·중단 기준으로 설계할 수 있다. 원인 설명을 확증하려면 추가로 경쟁 설명의 예측이 갈리는 비교가 필요하다. [GAP-S1 적용 사례](../work/update/VLA_GAP_SELECTION_REVIEW_2026-10-24.md)의 과거 판정은 유지한다. 이는 저장소의 운영 규칙이며 학회의 일률적 채택 기준이 아니다.
 
 Negative result를 남길 때도 contribution audit가 필요하다. 부실한 구현이나 한두 조건의 실패와, 잘 통제된 조건에서 기존 평가 결론의 한계를 밝힌 결과는 다르다. [NeurIPS 2026 E&D, “Reproducibility, Auditing, and Stress-Testing of Evaluations”](https://neurips.cc/Conferences/2026/EvaluationsDatasetsReviewerGuidelines)
 
@@ -340,14 +435,33 @@ Negative result를 남길 때도 contribution audit가 필요하다. 부실한 �
 
 ## 10. 복사해서 쓰는 아이디어 검토 양식
 
-한 페이지로 시작하되 source anchor와 실험 설계는 필요에 따라 늘린다. 대괄호 항목은 미작성 필드이며 완료된 artifact를 뜻하지 않는다.
+초기 탐색은 다음 **다섯 항목으로 한 페이지 이내**에서 시작한다. 이 분량은 운영상 가이드이며 논문 수 quota가 아니다.
+
+1. 중요한 문제와 답이 바꿀 robot behavior/설계 판단.
+2. 가장 가까운 선행이 답한 것과 아직 미확인인 것 — source와 확인 깊이.
+3. 강한 단순 baseline과 **그것이 충분한지 아직 모른다는 사실**.
+4. 다음에 확인할 질문 하나와 가능한 답에 따른 판단 변화; 효과 방향은 미정 가능.
+5. 제한된 조사 범위·중단점, 실험이 필요해지는 지점과 현재 자원 상태.
+
+아래 확장 양식은 탐색적 진단·본격 구현을 구체화할 때 필요한 부분만 채운다. 아직 가설이나 runtime을 정할 단계가 아니면 해당 블록은 `현재 단계에서 미정`으로 두며 미작성 칸을 기각 점수로 세지 않는다.
 
 ```markdown
 # 후보명
 
 - 작성일 / 마지막 문헌 검색일:
-- 현재 결정: 탐색 / 파일럿 / 진행 / 수정 / 보류
+- 단계: 탐색 후보 / 탐색적 진단 / 확증·본격 구현
+- 기여 유형: 방법 / 실증·평가 / system / 개념·이론 / 미정
+- 현재 결정: 탐색 유지 / 진단 설계 / 진행 / 수정 / 보류 / 현재 주장 기각
 - 이번 검토의 핵심 불확실성:
+
+## 공백의 근거 — 방법 제안보다 먼저 작성
+- 검색 범위·기간·venue / 빠진 범위:
+- 알려진 답과 그 조건:
+- 아직 답하지 못했다고 판단한 정확한 질문:
+- 근거의 종류: 논문 보고 / 연구자 추론 / 미확인:
+- 가장 가까운 반례 논문 / 확인한 본문·부록·code 범위:
+- 과거 HOLD/NO-GO 후보와의 실질적 차이:
+- 답에 따라 달라질 의사결정 / 기존 baseline만으로 답할 수 있는지:
 
 ## 문제와 가치
 - 조건·로봇·실패/비용을 포함한 문제 한 문장:
@@ -364,7 +478,7 @@ Negative result를 남길 때도 contribution audit가 필요하다. 부실한 �
 - 그 차이가 중요한 이유:
 - 신규성을 무너뜨릴 수 있는 미확인 문헌:
 
-## 가설과 반증
+## 가설과 반증 — 설명/방향 가설이 생긴 경우
 - H1:
 - 가장 강한 경쟁 설명 H0/H2:
 - 예측이 달라지는 조건:
@@ -395,7 +509,7 @@ Negative result를 남길 때도 contribution audit가 필요하다. 부실한 �
 - 결정·이유·다음 검증·재검토 조건:
 ```
 
-형식적인 칸 채우기보다 **가장 취약한 주장 하나와 그것을 시험할 검사 하나**가 분명한지가 중요하다. 비용·효과 기준은 결과를 본 뒤 유리하게 바꾸지 말고, 바꿔야 한다면 변경 이유와 검증용 조건을 남긴다.
+형식적인 칸 채우기보다 **다음에 줄일 불확실성 하나와 그것을 확인할 행동 하나**가 분명한지가 중요하다. 탐색 중 설계·가설을 바꿀 수 있지만 이유와 관측 시점을 남긴다. 확증용 비용·효과 기준은 결과를 본 뒤 유리하게 바꾸지 않으며, 바꾸면 새 검증으로 구별한다.
 
 ## 11. 이 저장소에서 사용하는 방식
 
@@ -411,7 +525,7 @@ Negative result를 남길 때도 contribution audit가 필요하다. 부실한 �
 
 ## 12. 확인한 주요 원자료
 
-모두 2026-10-19에 웹 자료를 확인했다. 연구 조언은 오래되었더라도 방법론 자료로 사용했고, 공식 venue 기준은 아래 명시한 연도·페이지에 한정한다. 강연 영상 전체 시청이나 연구자 인터뷰를 수행한 조사는 아니다.
+아래 기존 자료는 2026-10-19에 확인했다. 2026-10-23에는 MIT 교재, DARPA, ICLR 2026, NeurIPS 2026 E&D를 재확인하고 ECCV 2026 기여 유형과 NeurIPS checklist를 추가했다. 나머지 자료의 확인일을 소급 갱신하지 않는다. 공식 기준은 해당 연도·track에 한정하며, 강연 전체 시청이나 연구자 인터뷰를 수행한 조사는 아니다.
 
 | 자료 | 저자·기관 / 확인 범위 | 이 문서에서 사용한 부분 |
 |---|---|---|
@@ -425,6 +539,8 @@ Negative result를 남길 때도 contribution audit가 필요하다. 부실한 �
 | [NeurIPS 2026 E&D Reviewing Guidelines](https://neurips.cc/Conferences/2026/EvaluationsDatasetsReviewerGuidelines) | NeurIPS 공식 E&D track 지침 | 기여 유형별 평가와 체계적인 부정 결과 |
 | [RSS 2026 Call for Papers](https://roboticsconference.org/2026/information/cfp/) | RSS 공식 연도별 페이지 | scientific / systems contribution 범위 |
 | [T-RO Information for Authors](https://www.ieee-ras.org/publications/t-ro/t-ro-information-for-authors/) | IEEE RAS 공식 저널 안내 | 중요성과 기존 연구 확장 시 요구되는 실질적 기여 |
+| [ECCV 2026 Contribution Types](https://eccv.ecva.net/Conferences/2026/ReviewerContributionTypes) | 2026-10-23 추가; 공식 reviewer 지침 | 알고리즘·이론·시스템·dataset 등 기여에 맞는 판단, 획일적 checklist 회피 |
+| [NeurIPS Paper Checklist](https://neurips.cc/public/guides/PaperChecklist) | 2026-10-23 추가; 공식 checklist | 주장 범위·한계·통계적 변동·계산 자원과 재현 정보 |
 
 실무 절차·비교표·가상 robotics 예시는 위 자료를 종합해 작성했다. 각 연구자가 이 문서의 8단계나 양식을 그대로 사용했다고 주장하지 않는다.
 
@@ -434,9 +550,9 @@ Negative result를 남길 때도 contribution audit가 필요하다. 부실한 �
 
 | 판단 층 | 재개 전에 필요한 근거 | 대체할 수 없는 것 |
 |---|---|---|
-| 연구 가치 | 직접 선행 이후의 구별되는 예측, 중요성, 간단한 baseline, 기각 기준 | GPU·Docker 실행 성공 |
+| 연구 가치 | 탐색은 중요한 미해결 질문과 정보 가치; 확증은 기여 유형에 맞는 주장·비교·기각 기준 | GPU·Docker 실행 성공 |
 | 데이터/평가 자격 | source episode identity, 관측 가능한 신호, action/시간 단위, 독립 outcome, split/reset | 파일명 연결·공통 task ID·성공 사례 수 |
 | 실행 준비 | 일관된 commit/checkpoint/normalizer/controller/evaluator, 장치·메모리, smallest native qualification | 논문 code URL·옛 runtime manifest |
 | 결과 해석 | 실제 실행 범위, 반복/분모, 비교 공정성, 반대 설명 | 문서 DONE·정적 API 검사·저장 logits 재계산 |
 
-다른 컴퓨터에서 재개할 때도 순서는 **연구 gate → 데이터/비교 계약 → Docker runtime → native baseline → 최소 구별 실험**이다. 저장된 결과 재분석은 별도 경로로 실행할 수 있으나 새로운 현상의 발견·학습 개선으로 표시하지 않는다. [실행 안내](../work/experiments/portable/README.md)는 Docker 내부 dependency, 입력 hash, 실행 범위와 미검증 플랫폼을 명시한다. GPU가 없어도 할 수 있는 작업은 실패한 같은 checklist 반복이 아니라, 판단을 바꿀 source/data·공정 baseline·구별되는 예측의 확보다.
+다른 컴퓨터에서 기존 실험을 재개할 때는 **후보별 재개 gate → 해당 검사의 데이터/비교 계약 → Docker runtime → native baseline → 최소 검사**를 따른다. 이 실행 순서를 초기 질문의 탐색 자격으로 사용하지 않는다. 저장된 결과 재분석은 별도 경로로 실행할 수 있으나 새로운 현상의 발견·학습 개선으로 표시하지 않는다. [실행 안내](../work/experiments/portable/README.md)는 Docker 내부 dependency, 입력 hash, 실행 범위와 미검증 플랫폼을 명시한다. GPU가 없을 때는 판단을 바꿀 문헌·공개 근거·수작업 논증·진단 설계를 수행하고, 그 범위를 넘어선 답은 미확인으로 남긴다.

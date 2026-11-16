@@ -1,4 +1,4 @@
-# RLux-VLA: A Unified and Efficient Framework for Reinforcement Learning of Vision-Language-Action Models
+# RLinf-VLA: A Unified and Efficient Framework for Reinforcement Learning of Vision-Language-Action Models
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `ABSTRACT_CHECKED`. abstract 기반 — 본문 수동 확인 필요.
@@ -22,11 +22,11 @@ Exact assumptions·negative results·transfer limits는 본문 확인 필요. �
 
 ### Reusable Lesson in the Robotics Loop
 
-Current trend / system. 여러 VLA·RL 알고리즘·시뮬레이터를 비교할 공통 interface와 resource allocation을 제공한다. SimpleVLA-RL 및 ConRFT 실험을 설계할 때 algorithm 효과와 시스템 throughput을 분리하는 데 유용하다. 공식 software에서는 RLinf-VLA라는 이름도 사용한다.
+Current trend / system. 여러 VLA·RL 알고리즘·시뮬레이터를 비교할 공통 interface와 resource allocation을 제공한다. SimpleVLA-RL 및 ConRFT 실험을 설계할 때 algorithm 효과와 시스템 throughput을 분리하는 데 유용하다. 공식 RSS title은 RLinf-VLA다.
 
 ### Dependency and Evolution
 
-OFT/π0 + SimpleVLA-RL → RLux-VLA; USER는 real-world system 비교.
+OFT/π0 + SimpleVLA-RL → RLinf-VLA; USER는 real-world system 비교.
 
 이 연결은 개념적 읽기·비교 경로다. 직접 citation 또는 검증된 derivation 관계라는 뜻은 아니다.
 

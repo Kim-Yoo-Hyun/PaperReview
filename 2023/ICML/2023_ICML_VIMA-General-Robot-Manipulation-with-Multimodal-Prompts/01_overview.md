@@ -17,6 +17,8 @@
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (48 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
+> DOC-QA2 targeted source review: 2026-10-23; PDF pp. 4. 손상 구간·직접 연결된 표 분류만 원문 이미지와 대조했다. 전체 주장 정독·실험 검증·reading status 승격을 뜻하지 않는다. [URL·PDF hash·수정 기록](../../../work/sources/pdf_note_review_followup_2026-10-23.json).
+
 ## Why This Paper Is Here
 
 VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다. 본문은 To enable a single agent with all these capabilities, we make three key contributions in this work: 1) a novel multimodal prompting formulation that converts a wide spectrum of robot manipulation tasks ...를 문제로 두고, To enable a single agent with all these capabilities, we make three key contributions in this work: 1) a novel multimodal prompting formulation that converts a wide spectrum of robot manipulation tasks ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
@@ -46,7 +48,7 @@ VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다
 
 | Role | PDF body evidence | Robotics interpretation | Anchor |
 |---|---|---|---|
-| Observation/input | Concretely, we learn a robot policy π(at/P, H), where H := o1, a1, o2, a2, . . . , ot  denotes the past interaction history, and ot ∈O, at ∈A are ... | image/video, language instruction, proprioception과 history | p. 4 (4. Novel task generalization. New tasks with novel), p. 2 (1. Introduction) |
+| Observation/input | 정책은 multimodal prompt P와 관측·행동 이력 H=[o₁,a₁,o₂,a₂,…,oₜ]에 조건화된다. | Prompt와 object-centric visual tokens 및 interaction history | PDF p. 4, §4 / Fig. 3; DOC-QA2 |
 | State/latent | Concretely, learn, robot, policy, at/P, where, denotes, past, interaction, history, observations, actions | language-grounded task state와 action-policy context | p. 4 (4. Novel task generalization. New tasks with novel), p. 2 (1. Introduction), p. 6 (5.1. Baselines) |
 | Output/action | VIMA encodes an input sequence of interleaving textual and visual prompt tokens with a pre-trained language model (Tsimpoukelli et al., 2021) and decodes robot control actions autoregressively for each environment interaction step. | continuous action, pose 또는 action chunk | p. 2 (1. Introduction), p. 6 (5.1. Baselines), p. 1 (1. Introduction) |
 | Objective/outcome | We follow behavioral cloning to train our models by minimizing the negative log-likelihood of predicted actions. | instruction following, task success, generalization과 latency | p. 5 (4. Novel task generalization. New tasks with novel), p. 1 (1. Introduction), p. 1 (1. Introduction) |

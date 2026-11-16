@@ -17,6 +17,8 @@
 - Paper type: theory_or_foundation
 - Source audit: full-text PDF body checked on 2026-09-03 (27 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
+> DOC-QA2 targeted source review: 2026-10-23; PDF pp. 11. 손상 구간·직접 연결된 표 분류만 원문 이미지와 대조했다. 전체 주장 정독·실험 검증·reading status 승격을 뜻하지 않는다. [URL·PDF hash·수정 기록](../../../work/sources/pdf_note_review_followup_2026-10-23.json).
+
 ## Why This Paper Is Here
 
 Locomotion, whole-body, mobile manipulation, and humanoids의 humanoid 문제를 이해하기 위해 읽는다. 본문은 Several practical challenges arise in the design of these systems, such as how to manage the complexity of the robot and environment model to efficiently do online planning and feedback control and ...를 문제로 두고, Unfortunately, the set of safe terrain is unlikely to be convex or even connected: in an environment as simple as a staircase, the safe terrain consists of the top surface of every ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
@@ -48,7 +50,7 @@ Locomotion, whole-body, mobile manipulation, and humanoids의 humanoid 문제를
 |---|---|---|---|
 | Observation/input | Note that inputs computed by solving this QP are, in general, not equal to those computed by thresholding the output of the closed-form LQR policy. | proprioception, reference pose/motion, visual or language command | p. 10 (4.1 General formulation), p. 11 (4.4 Additional costs and constraints) |
 | State/latent | Note, inputs, computed, solving, general, equal, thresholding, output, closed-form, LQR, policy, Given | whole-body pose, balance/contact state와 skill/mode | p. 10 (4.1 General formulation), p. 11 (4.4 Additional costs and constraints), p. 14 (5.1 Requirements and approach) |
-| Output/action | Given the current robot state, q, v, we can compute the equations of motion, H(q)˙v + C(q, v) = Bτ + JT λ, (25) H f Ha  ˙v + C f ... | joint/whole-body action, motion target 또는 task trajectory | p. 11 (4.4 Additional costs and constraints), p. 14 (5.1 Requirements and approach), p. 2 (1 Introduction) |
+| Dynamics / control constraint | H(q)v̇+C(q,v)=Bτ+Jᵀλ; unactuated floating-base와 actuated DOF로 분할한다. | QP feasibility constraint; 이 식 자체를 output action이라고 분류하지 않음 | PDF p. 11 §4.4 Eqs. (25)–(26) |
 | Objective/outcome | Then we solve an optimization problem that assigns contacts to these regions in a way that minimizes cost while respecting kinematic and dynamic constraints. | tracking, balance, skill/task success와 recovery | p. 3 (3 Motion planning), p. 6 (3.1.3 Determining the number of footsteps), p. 10 (4.1 General formulation) |
 
 ## Main Claims and Actual Contribution

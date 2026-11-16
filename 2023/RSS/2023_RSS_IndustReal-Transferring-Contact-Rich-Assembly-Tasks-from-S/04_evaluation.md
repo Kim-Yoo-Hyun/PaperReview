@@ -4,6 +4,8 @@
 > Evidence maturity: `FULL_TEXT_CHECKED`.
 > Analysis basis: full-text PDF body checked on 2026-09-03 (20 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2305.17110; PDF retrieval source: https://arxiv.org/pdf/2305.17110. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
+> DOC-QA2 targeted source review: 2026-10-23; PDF pp. 3. 손상 구간·직접 연결된 표 분류만 원문 이미지와 대조했다. 전체 주장 정독·실험 검증·reading status 승격을 뜻하지 않는다. [URL·PDF hash·수정 기록](../../../work/sources/pdf_note_review_followup_2026-10-23.json).
+
 ## Evaluation in One Sentence
 
 PDF body evaluation/result cue (p. 4 (Figure/Table caption), p. 8 (VI. REAL-WORLD EXPERIMENTS), p. 8 (VI. REAL-WORLD EXPERIMENTS), p. 1 (Figure/Table caption), p. 9 (VI. REAL-WORLD EXPERIMENTS), p. 6 (Figure/Table caption)): Fig. 3: Evaluation of Simulation-Aware Policy Update. Success rates are computed for episodes where the maximum interpenetration distance was less than the specified value at test time. Boxes indicate median ...
@@ -113,7 +115,7 @@ PDF body evaluation/result cue (p. 4 (Figure/Table caption), p. 8 (VI. REAL-WORL
 - Numeric sentences retained from the body:
 - **p. 8 / VI. REAL-WORLD EXPERIMENTS - extractive body cue:** Each method was tested on 3 different goals with 20 trials each.
 - **p. 8 / VI. REAL-WORLD EXPERIMENTS - extractive body cue:** Key Results: The system demonstrated low steady-state errors, with a mean distance-to-goal of 4.23 ± 1.96 mm.
-- **p. 3 / IV. POLICY LEARNING IN SIMULATION - extractive body cue:** However, all rewards could be expressed in the following general form: G = wh0..whm  H-1 X t=0 [wd0Rd0(t) + ... + wdnRdn(t)] + ws0Rs0 ...
+- **PDF p. 3, §IV-C Eq. (1) (DOC-QA2 원문 대조):** Return G는 horizon 동안의 weighted dense rewards와 terminal success bonuses를 더한 값을 multiplicative factors w_h0…w_hm으로 조정하는 형태다. Dense sum과 terminal bonuses 모두 바깥 괄호 안에 있으며 reward는 task-dependent다.
 - **p. 4 / IV. POLICY LEARNING IN SIMULATION - extractive body cue:** The module samples N = 1000 points on/inside the mesh of the plug, transforms the points to the socket frame, computes distances to the socket ...
 - **p. 4 / IV. POLICY LEARNING IN SIMULATION - extractive body cue:** After training policies with each strategy, we tested each policy in simulation over 5 seeds, with 1000 trials per seed; quantified dmax ip for each ...
 - **p. 4 / IV. POLICY LEARNING IN SIMULATION - extractive body cue:** 1 sample N points in mp →v, v = {v0, ..., vN-1}; 2 transform v to current mp pose pp in ms frame ; 3 ...

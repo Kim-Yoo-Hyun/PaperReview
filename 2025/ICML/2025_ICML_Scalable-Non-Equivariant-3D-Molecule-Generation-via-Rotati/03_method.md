@@ -4,6 +4,8 @@
 > Evidence maturity: `FULL_TEXT_CHECKED`.
 > Analysis basis: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=l5KpQ5MmaD; public full-text mirror used for retrieval (canonical paper source retained): https://chatpaper.com/api/v1/articles/download/165283. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
+> DOC-QA2 targeted source review: 2026-10-23; PDF pp. 3. 손상 구간·직접 연결된 표 분류만 원문 이미지와 대조했다. 전체 주장 정독·실험 검증·reading status 승격을 뜻하지 않는다. [URL·PDF hash·수정 기록](../../../work/sources/pdf_note_review_followup_2026-10-23.json).
+
 ## Method in One Sentence
 
 PDF body method statement (p. 4 (3.1. Aligned Latent Space), p. 3 (2.2. Diffusion Models), p. 5 (3.1. Aligned Latent Space), p. 5 (3.1. Aligned Latent Space), p. 4 (3.1. Aligned Latent Space), p. 3 (2.2. Diffusion Models)): Inputs: atomic coordinates x, atom features h Learnable parameters: rotation network Rθ, encoder Eη, decoder Dψ while not converged do Rθ ←Rθ(x, h) µx, µh ←Eη(Rθx, h) Subtract center of ...
@@ -72,7 +74,7 @@ PDF body method statement (p. 4 (3.1. Aligned Latent Space), p. 3 (2.2. Diffusio
 - **p. 3 / 2.3. Equivariance - extractive body cue:** One EGNN layer that takes xl, hl as inputs and outputs xl+1, hl+1 is defined as: mij = ϕe(hl i, hl j, d2 ij, aij), ...
 - **p. 4 / 3.1. Aligned Latent Space - extractive body cue:** Inputs: atomic coordinates x, atom features h Learnable parameters: rotation network Rθ, encoder Eη, decoder Dψ while not converged do Rθ ←Rθ(x, h) µx, µh ...
 - **p. 2 / 2.2. Diffusion Models - extractive body cue:** Given the distributions above and using Bayes' rule, we can derive the true posterior distribution of the forward transition (4), conditioned on x: q(zs/zt, x) ...
-- **p. 3 / 2.2. Diffusion Models - extractive body cue:** 2 (11) where ϵϕ denotes ϵϕ(αtx + σtϵ, t), the predicted noise that is output by the denoising network ϕ.
+- **PDF p. 3, Eqs. (11)–(12) (DOC-QA2 원문 대조):** Eq. (11)의 noise-prediction squared error에는 (SNR(t−1)/SNR(t)−1)/2 가중치가 있다. 실제 training objective Eq. (12)는 이 weighting을 버리고 t와 Gaussian noise에 대한 ‖ε−ε_ϕ‖² expectation을 사용한다.
 - **p. 4 / 3.1. Aligned Latent Space - extractive body cue:** Furthermore, there is no restriction on the input M, making it suitable for building on top of a neural network.
 - **p. 5 / 3.1. Aligned Latent Space - extractive body cue:** Note that both the input to the encoder E and the target of the reconstruction are the rotated molecule (Rθx, h).
 - **p. 2 / 1. Introduction - extractive body cue:** Autoencoders have been widely used to reduce input dimensions and improve efficiency for latent diffusion models (Rombach et al., 2022).

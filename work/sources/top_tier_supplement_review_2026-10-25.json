@@ -1,0 +1,1769 @@
+{
+  "task_id": "REG-R3",
+  "checked_on": "2026-10-25",
+  "scope": "2024–2026 selective top-tier Robotics/AI supplementation; not an exhaustive proceedings survey or full-text reading pass",
+  "baseline": {
+    "papers": 1055,
+    "CORE": 47,
+    "NEXT": 285,
+    "REFERENCE": 481,
+    "ARCHIVE": 242,
+    "active_tracker": 332,
+    "history_tracker": 47
+  },
+  "result": {
+    "papers": 1072,
+    "CORE": 47,
+    "NEXT": 297,
+    "REFERENCE": 486,
+    "ARCHIVE": 242,
+    "active_tracker": 344,
+    "history_tracker": 47,
+    "new_papers": 17,
+    "new_notes": 85
+  },
+  "admissions_manifest": "work/sources/top_tier_supplement_admissions_2026-10-25.json",
+  "admissions": [
+    {
+      "paper_id": "pr-1056",
+      "title": "RoboArena: Distributed Real-World Evaluation of Generalist Robot Policies",
+      "folder": "2025/CoRL/2025_CoRL_RoboArena-Distributed-Real-World-Evaluation-of-Generalist",
+      "publication": {
+        "status": "peer_reviewed",
+        "kind": "conference",
+        "presentation": "unknown",
+        "venue": "CoRL",
+        "year": 2025,
+        "venue_year": 2025,
+        "venue_id": "corl"
+      },
+      "sources": {
+        "primary": {
+          "url": "https://proceedings.mlr.press/v305/atreya25a.html",
+          "kind": "official_publication",
+          "scope": "paper_specific",
+          "verified_on": "2026-10-25"
+        },
+        "preprint": {
+          "url": "https://arxiv.org/abs/2506.18123",
+          "kind": "arxiv",
+          "scope": "paper_specific",
+          "verified_on": "2026-10-25"
+        },
+        "project": {
+          "url": "https://robo-arena.github.io/",
+          "kind": "official_project",
+          "scope": "paper_specific",
+          "verified_on": "2026-10-25"
+        },
+        "code": {
+          "url": "https://github.com/pranavatreya/roboarena_backend",
+          "kind": "official_code",
+          "scope": "paper_specific",
+          "verified_on": "2026-10-25"
+        },
+        "paper_pdf": null,
+        "venue_verification": {
+          "url": "https://proceedings.mlr.press/v305/atreya25a.html",
+          "kind": "official_publication",
+          "scope": "paper_specific",
+          "verified_on": "2026-10-25"
+        }
+      },
+      "tier": "NEXT",
+      "admission_reason": "LIBERO-Plus·THE COLOSSEUM의 고정 benchmark와 구별되는 실환경 평가 기준을 보완한다.",
+      "evidence": "ABSTRACT_CHECKED",
+      "source_boundary": "2026-10-25 공식 abstract/서지정보 및 명시된 저자 링크 확인. 이번 노트는 abstract 기반이며 본문 전체·코드 실행·payload는 미검증이다."
+    },
+    {
+      "paper_id": "pr-1057",
+      "title": "A Taxonomy for Evaluating Generalist Robot Manipulation Policies",
+      "folder": "2026/RA-L/2026_RA-L_A-Taxonomy-for-Evaluating-Generalist-Robot-Manipulation-Po",
+      "publication": {
+        "status": "peer_reviewed",
+        "kind": "journal",
+        "presentation": "unknown",
+        "venue": "RA-L",
+        "year": 2026,
+        "venue_year": 2026,
+        "venue_id": "ra-l"
+      },
+      "sources": {
+        "primary": {
+          "url": "https://arxiv.org/abs/2503.01238",
+          "kind": "arxiv",
+          "scope": "paper_specific",
+          "verified_on": "2026-10-25"
+        },
+        "preprint": {
+          "url": "https://arxiv.org/abs/2503.01238",
+          "kind": "arxiv",
+          "scope": "paper_specific",
+          "verified_on": "2026-10-25"
+        },
+        "project": {
+          "url": "https://stargen-taxonomy.github.io/",
+          "kind": "official_project",
+          "scope": "paper_specific",
+          "verified_on": "2026-10-25"
+        },
+        "code": null,
+        "paper_pdf": null,
+        "venue_verification": {
+          "url": "https://api.crossref.org/works/10.1109/LRA.2026.3656785",
+          "kind": "publisher_deposited_metadata",
+          "scope": "paper_specific",
+          "verified_on": "2026-10-25"
+        }
+      },
+      "tier": "NEXT",
+      "admission_reason": "VLA 일반화 주장을 시각 변화·언어 이해·행동 변화로 분해할 평가 formulation이다.",
+      "evidence": "ABSTRACT_CHECKED",
+      "source_boundary": "2026-10-25 공식 abstract/서지정보 및 명시된 저자 링크 확인. 이번 노트는 abstract 기반이며 본문 전체·코드 실행·payload는 미검증이다. IEEE 페이지 접근 제한으로 publisher-deposited Crossref metadata와 저자 project·arXiv의 RA-L 표기를 대조했다. 본문은 정독하지 않았다."
+    },
+    {
+      "paper_id": "pr-1058",
+      "title": "FMB: A functional manipulation benchmark for generalizable robotic learning",
+      "folder": "2025/IJRR/2025_IJRR_FMB-A-functional-manipulation-benchmark-for-generalizable",
+      "publication": {
+        "status": "peer_reviewed",
+        "kind": "journal",
+        "presentation": "unknown",
+        "venue": "IJRR",
+        "year": 2025,
+        "venue_year": 2025,
+        "venue_id": "ijrr"
+      },
+      "sources": {
+        "primary": {
+          "url": "https://journals.sagepub.com/doi/full/10.1177/02783649241276017",
+          "kind": "official_publication",
+          "scope": "paper_specific",
+          "verified_on": "2026-10-25"
+        },
+        "preprint": {
+          "url": "https://arxiv.org/abs/2401.08553",
+          "kind": "arxiv",
+          "scope": "paper_specific",
+          "verified_on": "2026-10-25"
+        },
+        "project": {
+          "url": "https://functional-manipulation-benchmark.github.io/",
+          "kind": "official_project",
+          "scope": "paper_specific",
+          "verified_on": "2026-10-25"
+        },
+        "code": {
+          "url": "https://github.com/rail-berkeley/fmb",
+          "kind": "official_code",
+          "scope": "paper_specific",
+          "verified_on": "2026-10-25"
+        },
+        "paper_pdf": null,
+        "venue_verification": {
+          "url": "https://journals.sagepub.com/doi/full/10.1177/02783649241276017",
+          "kind": "official_publication",
+          "scope": "paper_specific",
+          "verified_on": "2026-10-25"
+        }
+      },
+      "tier": "NEXT",
+      "admission_reason": "범용 pick-and-place 성능과 접촉 조립 능력을 구분할 benchmark를 보완한다.",
+      "evidence": "ABSTRACT_CHECKED",
+      "source_boundary": "2026-10-25 공식 abstract/서지정보 및 명시된 저자 링크 확인. 이번 노트는 abstract 기반이며 본문 전체·코드 실행·payload는 미검증이다. 공식 journal abstract와 서지정보·저자 project 확인. Online-first 2024-09-22, 권호 출판 2025를 구분해 registry year는 2025다."
+    },
+    {
+      "paper_id": "pr-1059",
+      "title": "ReMix: Optimizing Data Mixtures for Large Scale Imitation Learning",
+      "folder": "2025/CoRL/2025_CoRL_ReMix-Optimizing-Data-Mixtures-for-Large-Scale-Imitation-L",
+      "publication": {
+        "status": "peer_reviewed",
+        "kind": "conference",
+        "presentation": "unknown",
+        "venue": "CoRL",
+        "year": 2025,
+        "venue_year": 2024,
+        "venue_id": "corl"
+      },
+      "sources": {
+        "primary": {
+          "url": "https://proceedings.mlr.press/v270/hejna25a.html",
+          "kind": "official_publication",
+          "scope": "paper_specific",
+          "verified_on": "2026-10-25"
+        },
+        "preprint": null,
+        "project": {
+          "url": "https://github.com/jhejna/remix",
+          "kind": "official_project",
+          "scope": "paper_specific",
+          "verified_on": "2026-10-25"
+        },
+        "code": {
+          "url": "https://github.com/jhejna/remix",
+          "kind": "official_code",
+          "scope": "paper_specific",
+          "verified_on": "2026-10-25"
+        },
+        "paper_pdf": null,
+        "venue_verification": {
+          "url": "https://proceedings.mlr.press/v270/hejna25a.html",
+          "kind": "official_publication",
+          "scope": "paper_specific",
+          "verified_on": "2026-10-25"
+        }
+      },
+      "tier": "NEXT",
+      "admission_reason": "DataMIL의 subset 선택과 domain-level mixture 최적화를 구분하는 필수 비교군이다.",
+      "evidence": "ABSTRACT_CHECKED",
+      "source_boundary": "2026-10-25 공식 abstract/서지정보 및 명시된 저자 링크 확인. 이번 노트는 abstract 기반이며 본문 전체·코드 실행·payload는 미검증이다. CoRL 개최 2024, PMLR 출판 2025."
+    },
+    {
+      "paper_id": "pr-1060",
+      "title": "DexMimicGen: Automated Data Generation for Bimanual Dexterous Manipulation via Imitation Learning",
+      "folder": "2025/ICRA/2025_ICRA_DexMimicGen-Automated-Data-Generation-for-Bimanual-Dextero",
+      "publication": {
+        "status": "peer_reviewed",
+        "kind": "conference",
+        "presentation": "unknown",
+        "venue": "ICRA",
+        "year": 2025,
+        "venue_year": 2025,
+        "venue_id": "icra"
+      },
+      "sources": {
+        "primary": {
+          "url": "https://arxiv.org/abs/2410.24185",
+          "kind": "arxiv",
+          "scope": "paper_specific",
+          "verified_on": "2026-10-25"
+        },
+        "preprint": {
+          "url": "https://arxiv.org/abs/2410.24185",
+          "kind": "arxiv",
+          "scope": "paper_specific",
+          "verified_on": "2026-10-25"
+        },
+        "project": {
+          "url": "https://dexmimicgen.github.io/",
+          "kind": "official_project",
+          "scope": "paper_specific",
+          "verified_on": "2026-10-25"
+        },
+        "code": {
+          "url": "https://github.com/NVlabs/dexmimicgen",
+          "kind": "official_code",
+          "scope": "paper_specific",
+          "verified_on": "2026-10-25"
+        },
+        "paper_pdf": null,
+        "venue_verification": {
+          "url": "https://api.crossref.org/works/10.1109/ICRA55743.2025.11127809",
+          "kind": "publisher_deposited_metadata",
+          "scope": "paper_specific",
+          "verified_on": "2026-10-25"
+        }
+      },
+      "tier": "NEXT",
+      "admission_reason": "여러 embodiment의 데이터를 늘릴 때 실제 시연과 합성 trajectory의 역할을 비교할 자산이다.",
+      "evidence": "ABSTRACT_CHECKED",
+      "source_boundary": "2026-10-25 공식 abstract/서지정보 및 명시된 저자 링크 확인. 이번 노트는 abstract 기반이며 본문 전체·코드 실행·payload는 미검증이다. ICRA 2025 저자 project 표기와 IEEE-deposited Crossref metadata 대조. IEEE 직접 페이지는 browser challenge; abstract/project 범위만 확인."
+    },
+    {
+      "paper_id": "pr-1061",
+      "title": "TRANSIC: Sim-to-Real Policy Transfer by Learning from Online Correction",
+      "folder": "2025/CoRL/2025_CoRL_TRANSIC-Sim-to-Real-Policy-Transfer-by-Learning-from-Onlin",
+      "publication": {
+        "status": "peer_reviewed",
+        "kind": "conference",
+        "presentation": "unknown",
+        "venue": "CoRL",
+        "year": 2025,
+        "venue_year": 2024,
+        "venue_id": "corl"
+      },
+      "sources": {
+        "primary": {
+          "url": "https://proceedings.mlr.press/v270/jiang25a.html",
+          "kind": "official_publication",
+          "scope": "paper_specific",
+          "verified_on": "2026-10-25"
+        },
+        "preprint": {
+          "url": "https://arxiv.org/abs/2405.10315",
+          "kind": "arxiv",
+          "scope": "paper_specific",
+          "verified_on": "2026-10-25"
+        },
+        "project": {
+          "url": "https://transic-robot.github.io/",
+          "kind": "official_project",
+          "scope": "paper_specific",
+          "verified_on": "2026-10-25"
+        },
+        "code": {
+          "url": "https://github.com/transic-robot/transic",
+          "kind": "official_code",
+          "scope": "paper_specific",
+          "verified_on": "2026-10-25"
+        },
+        "paper_pdf": null,
+        "venue_verification": {
+          "url": "https://proceedings.mlr.press/v270/jiang25a.html",
+          "kind": "official_publication",
+          "scope": "paper_specific",
+          "verified_on": "2026-10-25"
+        }
+      },
+      "tier": "NEXT",
+      "admission_reason": "새 RL/VLA 적응 기여를 주장하기 전에 인간 개입·residual 학습으로 설명되는 이득을 대조한다.",
+      "evidence": "ABSTRACT_CHECKED",
+      "source_boundary": "2026-10-25 공식 abstract/서지정보 및 명시된 저자 링크 확인. 이번 노트는 abstract 기반이며 본문 전체·코드 실행·payload는 미검증이다. CoRL 개최 2024, PMLR 출판 2025."
+    },
+    {
+      "paper_id": "pr-1062",
+      "title": "Gen2Act: Human Video Generation in Novel Scenarios enables Generalizable Robot Manipulation",
+      "folder": "2025/CoRL/2025_CoRL_Gen2Act-Human-Video-Generation-in-Novel-Scenarios-enables",
+      "publication": {
+        "status": "peer_reviewed",
+        "kind": "conference",
+        "presentation": "unknown",
+        "venue": "CoRL",
+        "year": 2025,
+        "venue_year": 2025,
+        "venue_id": "corl"
+      },
+      "sources": {
+        "primary": {
+          "url": "https://proceedings.mlr.press/v305/bharadhwaj25a.html",
+          "kind": "official_publication",
+          "scope": "paper_specific",
+          "verified_on": "2026-10-25"
+        },
+        "preprint": {
+          "url": "https://arxiv.org/abs/2409.16283",
+          "kind": "arxiv",
+          "scope": "paper_specific",
+          "verified_on": "2026-10-25"
+        },
+        "project": {
+          "url": "https://homangab.github.io/gen2act/",
+          "kind": "official_project",
+          "scope": "paper_specific",
+          "verified_on": "2026-10-25"
+        },
+        "code": null,
+        "paper_pdf": null,
+        "venue_verification": {
+          "url": "https://proceedings.mlr.press/v305/bharadhwaj25a.html",
+          "kind": "official_publication",
+          "scope": "paper_specific",
+          "verified_on": "2026-10-25"
+        }
+      },
+      "tier": "NEXT",
+      "admission_reason": "VLA의 video prior가 action supervision을 어떻게 보완하는지 비교할 직접 선행이다.",
+      "evidence": "ABSTRACT_CHECKED",
+      "source_boundary": "2026-10-25 공식 abstract/서지정보 및 명시된 저자 링크 확인. 이번 노트는 abstract 기반이며 본문 전체·코드 실행·payload는 미검증이다."
+    },
+    {
+      "paper_id": "pr-1063",
+      "title": "Mobility VLA: Multimodal Instruction Navigation with Long-Context VLMs and Topological Graphs",
+      "folder": "2025/CoRL/2025_CoRL_Mobility-VLA-Multimodal-Instruction-Navigation-with-Long-C",
+      "publication": {
+        "status": "peer_reviewed",
+        "kind": "conference",
+        "presentation": "unknown",
+        "venue": "CoRL",
+        "year": 2025,
+        "venue_year": 2024,
+        "venue_id": "corl"
+      },
+      "sources": {
+        "primary": {
+          "url": "https://proceedings.mlr.press/v270/xu25b.html",
+          "kind": "official_publication",
+          "scope": "paper_specific",
+          "verified_on": "2026-10-25"
+        },
+        "preprint": {
+          "url": "https://arxiv.org/abs/2407.07775",
+          "kind": "arxiv",
+          "scope": "paper_specific",
+          "verified_on": "2026-10-25"
+        },
+        "project": null,
+        "code": null,
+        "paper_pdf": null,
+        "venue_verification": {
+          "url": "https://proceedings.mlr.press/v270/xu25b.html",
+          "kind": "official_publication",
+          "scope": "paper_specific",
+          "verified_on": "2026-10-25"
+        }
+      },
+      "tier": "NEXT",
+      "admission_reason": "NaVILA·NoMaD와 비교할 계층형 VLA navigation 및 환경 사전정보 기준이다.",
+      "evidence": "ABSTRACT_CHECKED",
+      "source_boundary": "2026-10-25 공식 abstract/서지정보 및 명시된 저자 링크 확인. 이번 노트는 abstract 기반이며 본문 전체·코드 실행·payload는 미검증이다. CoRL 개최 2024, PMLR 출판 2025."
+    },
+    {
+      "paper_id": "pr-1064",
+      "title": "TidyBot++: An Open-Source Holonomic Mobile Manipulator for Robot Learning",
+      "folder": "2025/CoRL/2025_CoRL_TidyBot++-An-Open-Source-Holonomic-Mobile-Manipulator-for",
+      "publication": {
+        "status": "peer_reviewed",
+        "kind": "conference",
+        "presentation": "unknown",
+        "venue": "CoRL",
+        "year": 2025,
+        "venue_year": 2024,
+        "venue_id": "corl"
+      },
+      "sources": {
+        "primary": {
+          "url": "https://proceedings.mlr.press/v270/wu25a.html",
+          "kind": "official_publication",
+          "scope": "paper_specific",
+          "verified_on": "2026-10-25"
+        },
+        "preprint": null,
+        "project": {
+          "url": "https://github.com/jimmyyhwu/tidybot2",
+          "kind": "official_project",
+          "scope": "paper_specific",
+          "verified_on": "2026-10-25"
+        },
+        "code": {
+          "url": "https://github.com/jimmyyhwu/tidybot2",
+          "kind": "official_code",
+          "scope": "paper_specific",
+          "verified_on": "2026-10-25"
+        },
+        "paper_pdf": null,
+        "venue_verification": {
+          "url": "https://proceedings.mlr.press/v270/wu25a.html",
+          "kind": "official_publication",
+          "scope": "paper_specific",
+          "verified_on": "2026-10-25"
+        }
+      },
+      "tier": "NEXT",
+      "admission_reason": "다양한 로봇 연구에서 policy 성능과 base의 운동학적 자유도 차이를 구분할 플랫폼 기준이다.",
+      "evidence": "ABSTRACT_CHECKED",
+      "source_boundary": "2026-10-25 공식 abstract/서지정보 및 명시된 저자 링크 확인. 이번 노트는 abstract 기반이며 본문 전체·코드 실행·payload는 미검증이다. CoRL 개최 2024, PMLR 출판 2025."
+    },
+    {
+      "paper_id": "pr-1065",
+      "title": "PhysTwin: Physics-Informed Reconstruction and Simulation of Deformable Objects from Videos",
+      "folder": "2025/ICCV/2025_ICCV_PhysTwin-Physics-Informed-Reconstruction-and-Simulation-of",
+      "publication": {
+        "status": "peer_reviewed",
+        "kind": "conference",
+        "presentation": "unknown",
+        "venue": "ICCV",
+        "year": 2025,
+        "venue_year": 2025,
+        "venue_id": "iccv"
+      },
+      "sources": {
+        "primary": {
+          "url": "https://openaccess.thecvf.com/content/ICCV2025/html/Jiang_PhysTwin_Physics-Informed_Reconstruction_and_Simulation_of_Deformable_Objects_from_Videos_ICCV_2025_paper.html",
+          "kind": "official_publication",
+          "scope": "paper_specific",
+          "verified_on": "2026-10-25"
+        },
+        "preprint": {
+          "url": "https://arxiv.org/abs/2503.17973",
+          "kind": "arxiv",
+          "scope": "paper_specific",
+          "verified_on": "2026-10-25"
+        },
+        "project": {
+          "url": "https://jianghanxiao.github.io/phystwin-web/",
+          "kind": "official_project",
+          "scope": "paper_specific",
+          "verified_on": "2026-10-25"
+        },
+        "code": {
+          "url": "https://github.com/Jianghanxiao/PhysTwin",
+          "kind": "official_code",
+          "scope": "paper_specific",
+          "verified_on": "2026-10-25"
+        },
+        "paper_pdf": null,
+        "venue_verification": {
+          "url": "https://openaccess.thecvf.com/content/ICCV2025/html/Jiang_PhysTwin_Physics-Informed_Reconstruction_and_Simulation_of_Deformable_Objects_from_Videos_ICCV_2025_paper.html",
+          "kind": "official_publication",
+          "scope": "paper_specific",
+          "verified_on": "2026-10-25"
+        }
+      },
+      "tier": "NEXT",
+      "admission_reason": "3D 외관 재구성과 행동에 유용한 물성 모델을 구별할 직접 연결 연구다.",
+      "evidence": "ABSTRACT_CHECKED",
+      "source_boundary": "2026-10-25 공식 abstract/서지정보 및 명시된 저자 링크 확인. 이번 노트는 abstract 기반이며 본문 전체·코드 실행·payload는 미검증이다."
+    },
+    {
+      "paper_id": "pr-1066",
+      "title": "Equivariant diffusion policy for sample-efficient robotic manipulation",
+      "folder": "2026/IJRR/2026_IJRR_Equivariant-diffusion-policy-for-sample-efficient-robotic",
+      "publication": {
+        "status": "peer_reviewed",
+        "kind": "journal",
+        "presentation": "unknown",
+        "venue": "IJRR",
+        "year": 2026,
+        "venue_year": 2026,
+        "venue_id": "ijrr"
+      },
+      "sources": {
+        "primary": {
+          "url": "https://journals.sagepub.com/doi/10.1177/02783649261424445",
+          "kind": "official_publication",
+          "scope": "paper_specific",
+          "verified_on": "2026-10-25"
+        },
+        "preprint": null,
+        "project": {
+          "url": "https://equidiff.github.io/",
+          "kind": "official_project",
+          "scope": "paper_specific",
+          "verified_on": "2026-10-25"
+        },
+        "code": {
+          "url": "https://github.com/pointW/equidiff",
+          "kind": "official_code",
+          "scope": "paper_specific",
+          "verified_on": "2026-10-25"
+        },
+        "paper_pdf": null,
+        "venue_verification": {
+          "url": "https://journals.sagepub.com/doi/10.1177/02783649261424445",
+          "kind": "official_publication",
+          "scope": "paper_specific",
+          "verified_on": "2026-10-25"
+        }
+      },
+      "tier": "NEXT",
+      "admission_reason": "일반화 이득이 더 큰 VLA보다 대칭성 같은 inductive bias로 설명되는지 대조할 기준이다.",
+      "evidence": "ABSTRACT_CHECKED",
+      "source_boundary": "2026-10-25 공식 abstract/서지정보 및 명시된 저자 링크 확인. 이번 노트는 abstract 기반이며 본문 전체·코드 실행·payload는 미검증이다. 공식 journal abstract·확장판 설명을 확인했다. CoRL 2024 원판이 미등록이므로 IJRR 2026 확장판 하나로 등록하고 원판은 alias/계보로 보존. 연결 code는 원판 기반이며 journal 전체 구현 coverage는 미검증."
+    },
+    {
+      "paper_id": "pr-1067",
+      "title": "A process-centric manipulation taxonomy for the organization, classification and synthesis of tactile robot skills",
+      "folder": "2025/Nature-Machine-Intellige/2025_Nature-Machine-Intellige_A-process-centric-manipulation-taxonomy-for-the-organizati",
+      "publication": {
+        "status": "peer_reviewed",
+        "kind": "journal",
+        "presentation": "unknown",
+        "venue": "Nature Machine Intelligence",
+        "year": 2025,
+        "venue_year": 2025,
+        "venue_id": "nature-machine-intelligence"
+      },
+      "sources": {
+        "primary": {
+          "url": "https://www.nature.com/articles/s42256-025-01045-3",
+          "kind": "official_publication",
+          "scope": "paper_specific",
+          "verified_on": "2026-10-25"
+        },
+        "preprint": null,
+        "project": null,
+        "code": null,
+        "paper_pdf": null,
+        "venue_verification": {
+          "url": "https://www.nature.com/articles/s42256-025-01045-3",
+          "kind": "official_publication",
+          "scope": "paper_specific",
+          "verified_on": "2026-10-25"
+        }
+      },
+      "tier": "REFERENCE",
+      "admission_reason": "언어 기반 skill 조합과 전문가가 명시한 물리적 요구·종료 조건을 비교할 참조다.",
+      "evidence": "ABSTRACT_CHECKED",
+      "source_boundary": "2026-10-25 공식 abstract/서지정보 및 명시된 저자 링크 확인. 이번 노트는 abstract 기반이며 본문 전체·코드 실행·payload는 미검증이다. Nature 공식 검색 인덱스의 abstract·서지정보 확인. 직접 HTML 접근은 인증 redirect로 제한; 본문 정독·code 확인으로 표시하지 않는다."
+    },
+    {
+      "paper_id": "pr-1068",
+      "title": "Learning Visuotactile Estimation and Control for Non-prehensile Manipulation under Occlusions",
+      "folder": "2025/CoRL/2025_CoRL_Learning-Visuotactile-Estimation-and-Control-for-Non-prehe",
+      "publication": {
+        "status": "peer_reviewed",
+        "kind": "conference",
+        "presentation": "unknown",
+        "venue": "CoRL",
+        "year": 2025,
+        "venue_year": 2024,
+        "venue_id": "corl"
+      },
+      "sources": {
+        "primary": {
+          "url": "https://proceedings.mlr.press/v270/ferrandis25a.html",
+          "kind": "official_publication",
+          "scope": "paper_specific",
+          "verified_on": "2026-10-25"
+        },
+        "preprint": null,
+        "project": null,
+        "code": null,
+        "paper_pdf": null,
+        "venue_verification": {
+          "url": "https://proceedings.mlr.press/v270/ferrandis25a.html",
+          "kind": "official_publication",
+          "scope": "paper_specific",
+          "verified_on": "2026-10-25"
+        }
+      },
+      "tier": "NEXT",
+      "admission_reason": "접촉 VLA의 센서 이득과 상태 추정·feedback controller 이득을 분리할 직접 대안이다.",
+      "evidence": "ABSTRACT_CHECKED",
+      "source_boundary": "2026-10-25 공식 abstract/서지정보 및 명시된 저자 링크 확인. 이번 노트는 abstract 기반이며 본문 전체·코드 실행·payload는 미검증이다. CoRL 개최 2024, PMLR 출판 2025."
+    },
+    {
+      "paper_id": "pr-1069",
+      "title": "General agents need world models",
+      "folder": "2025/ICML/2025_ICML_General-agents-need-world-models",
+      "publication": {
+        "status": "peer_reviewed",
+        "kind": "conference",
+        "presentation": "unknown",
+        "venue": "ICML",
+        "year": 2025,
+        "venue_year": 2025,
+        "venue_id": "icml"
+      },
+      "sources": {
+        "primary": {
+          "url": "https://proceedings.mlr.press/v267/richens25a.html",
+          "kind": "official_publication",
+          "scope": "paper_specific",
+          "verified_on": "2026-10-25"
+        },
+        "preprint": null,
+        "project": null,
+        "code": null,
+        "paper_pdf": null,
+        "venue_verification": {
+          "url": "https://proceedings.mlr.press/v267/richens25a.html",
+          "kind": "official_publication",
+          "scope": "paper_specific",
+          "verified_on": "2026-10-25"
+        }
+      },
+      "tier": "REFERENCE",
+      "admission_reason": "명시적 video model 사용과 정책에 내재한 예측 능력을 구별하는 AI 이론 참조다.",
+      "evidence": "ABSTRACT_CHECKED",
+      "source_boundary": "2026-10-25 공식 abstract/서지정보 및 명시된 저자 링크 확인. 이번 노트는 abstract 기반이며 본문 전체·코드 실행·payload는 미검증이다."
+    },
+    {
+      "paper_id": "pr-1070",
+      "title": "Benchmarking World-Model Learning with Environment-Level Queries",
+      "folder": "2026/ICML/2026_ICML_Benchmarking-World-Model-Learning-with-Environment-Level-Q",
+      "publication": {
+        "status": "peer_reviewed",
+        "kind": "conference",
+        "presentation": "unknown",
+        "venue": "ICML",
+        "year": 2026,
+        "venue_year": 2026,
+        "venue_id": "icml"
+      },
+      "sources": {
+        "primary": {
+          "url": "https://proceedings.mlr.press/v306/warrier26a.html",
+          "kind": "official_publication",
+          "scope": "paper_specific",
+          "verified_on": "2026-10-25"
+        },
+        "preprint": null,
+        "project": {
+          "url": "https://zenodo.org/records/19498269",
+          "kind": "official_project",
+          "scope": "paper_specific",
+          "verified_on": "2026-10-25"
+        },
+        "code": null,
+        "paper_pdf": null,
+        "venue_verification": {
+          "url": "https://proceedings.mlr.press/v306/warrier26a.html",
+          "kind": "official_publication",
+          "scope": "paper_specific",
+          "verified_on": "2026-10-25"
+        }
+      },
+      "tier": "REFERENCE",
+      "admission_reason": "VLA world model의 시각 품질·정책 순위와 환경 이해를 구분할 평가 방법론이다.",
+      "evidence": "ABSTRACT_CHECKED",
+      "source_boundary": "2026-10-25 공식 abstract/서지정보 및 명시된 저자 링크 확인. 이번 노트는 abstract 기반이며 본문 전체·코드 실행·payload는 미검증이다. 공식 PMLR abstract와 Software 링크 확인. Zenodo landing page 직접 접근 실패; 링크 존재만 기록하며 파일/코드 release와 실행 가능성은 미검증."
+    },
+    {
+      "paper_id": "pr-1071",
+      "title": "Delphic Offline Reinforcement Learning under Nonidentifiable Hidden Confounding",
+      "folder": "2024/ICLR/2024_ICLR_Delphic-Offline-Reinforcement-Learning-under-Nonidentifiab",
+      "publication": {
+        "status": "peer_reviewed",
+        "kind": "conference",
+        "presentation": "unknown",
+        "venue": "ICLR",
+        "year": 2024,
+        "venue_year": 2024,
+        "venue_id": "iclr"
+      },
+      "sources": {
+        "primary": {
+          "url": "https://proceedings.iclr.cc/paper_files/paper/2024/hash/0b9ff9baa226af39f86045ecdc173672-Abstract-Conference.html",
+          "kind": "official_publication",
+          "scope": "paper_specific",
+          "verified_on": "2026-10-25"
+        },
+        "preprint": null,
+        "project": null,
+        "code": null,
+        "paper_pdf": null,
+        "venue_verification": {
+          "url": "https://proceedings.iclr.cc/paper_files/paper/2024/hash/0b9ff9baa226af39f86045ecdc173672-Abstract-Conference.html",
+          "kind": "official_publication",
+          "scope": "paper_specific",
+          "verified_on": "2026-10-25"
+        }
+      },
+      "tier": "REFERENCE",
+      "admission_reason": "로봇 시연의 숨은 정보 문제를 단순 모델 불확실성과 혼동하지 않게 하는 방법론 참조다.",
+      "evidence": "ABSTRACT_CHECKED",
+      "source_boundary": "2026-10-25 공식 abstract/서지정보 및 명시된 저자 링크 확인. 이번 노트는 abstract 기반이며 본문 전체·코드 실행·payload는 미검증이다."
+    },
+    {
+      "paper_id": "pr-1072",
+      "title": "Causal Imitation Learning under Expert-Observable and Expert-Unobservable Confounding",
+      "folder": "2026/ICLR/2026_ICLR_Causal-Imitation-Learning-under-Expert-Observable-and-Expe",
+      "publication": {
+        "status": "peer_reviewed",
+        "kind": "conference",
+        "presentation": "unknown",
+        "venue": "ICLR",
+        "year": 2026,
+        "venue_year": 2026,
+        "venue_id": "iclr"
+      },
+      "sources": {
+        "primary": {
+          "url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/4415e8cb0741bc0beb79b316f0856108-Abstract-Conference.html",
+          "kind": "official_publication",
+          "scope": "paper_specific",
+          "verified_on": "2026-10-25"
+        },
+        "preprint": null,
+        "project": null,
+        "code": null,
+        "paper_pdf": null,
+        "venue_verification": {
+          "url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/4415e8cb0741bc0beb79b316f0856108-Abstract-Conference.html",
+          "kind": "official_publication",
+          "scope": "paper_specific",
+          "verified_on": "2026-10-25"
+        }
+      },
+      "tier": "REFERENCE",
+      "admission_reason": "VLA history 추가를 새 해결책으로 주장하기 전에 정보 비대칭과 도구변수 조건을 점검할 선행이다.",
+      "evidence": "ABSTRACT_CHECKED",
+      "source_boundary": "2026-10-25 공식 abstract/서지정보 및 명시된 저자 링크 확인. 이번 노트는 abstract 기반이며 본문 전체·코드 실행·payload는 미검증이다."
+    }
+  ],
+  "publisher_deposited_metadata": {
+    "10.1109/LRA.2026.3656785": {
+      "DOI": "10.1109/lra.2026.3656785",
+      "title": [
+        "A Taxonomy for Evaluating Generalist Robot Manipulation Policies"
+      ],
+      "container-title": [
+        "IEEE Robotics and Automation Letters"
+      ],
+      "type": "journal-article",
+      "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+      "volume": "11",
+      "issue": "3",
+      "page": "3182-3189",
+      "published": {
+        "date-parts": [
+          [
+            2026,
+            3
+          ]
+        ]
+      },
+      "published-online": null,
+      "published-print": {
+        "date-parts": [
+          [
+            2026,
+            3
+          ]
+        ]
+      },
+      "resource": {
+        "primary": {
+          "URL": "https://ieeexplore.ieee.org/document/11361080/"
+        }
+      }
+    },
+    "10.1109/ICRA55743.2025.11127809": {
+      "DOI": "10.1109/icra55743.2025.11127809",
+      "title": [
+        "DexMimicGen: Automated Data Generation for Bimanual Dexterous Manipulation via Imitation Learning"
+      ],
+      "container-title": [
+        "2025 IEEE International Conference on Robotics and Automation (ICRA)"
+      ],
+      "type": "proceedings-article",
+      "publisher": "IEEE",
+      "volume": null,
+      "issue": null,
+      "page": "16923-16930",
+      "published": {
+        "date-parts": [
+          [
+            2025,
+            5,
+            19
+          ]
+        ]
+      },
+      "published-online": null,
+      "published-print": {
+        "date-parts": [
+          [
+            2025,
+            5,
+            19
+          ]
+        ]
+      },
+      "resource": {
+        "primary": {
+          "URL": "https://ieeexplore.ieee.org/document/11127809/"
+        }
+      }
+    },
+    "10.1126/scirobotics.ads5033": {
+      "DOI": "10.1126/scirobotics.ads5033",
+      "title": [
+        "Precise and dexterous robotic manipulation via human-in-the-loop reinforcement learning"
+      ],
+      "container-title": [
+        "Science Robotics"
+      ],
+      "type": "journal-article",
+      "publisher": "American Association for the Advancement of Science (AAAS)",
+      "volume": "10",
+      "issue": "105",
+      "page": null,
+      "published": {
+        "date-parts": [
+          [
+            2025,
+            8,
+            20
+          ]
+        ]
+      },
+      "published-online": null,
+      "published-print": {
+        "date-parts": [
+          [
+            2025,
+            8,
+            20
+          ]
+        ]
+      },
+      "resource": {
+        "primary": {
+          "URL": "https://www.science.org/doi/10.1126/scirobotics.ads5033"
+        }
+      }
+    }
+  },
+  "metadata_migration": {
+    "paper_id": "pr-0914",
+    "previous_folder": "2024/arXiv/2024_arXiv_Precise-and-Dexterous-Robotic-Manipulation-via-Human-in-th",
+    "current_folder": "2025/Science-Robotics/2025_Science-Robotics_Precise-and-dexterous-robotic-manipulation-via-human-in-th",
+    "old_title": "Precise and Dexterous Robotic Manipulation via Human-in-the-Loop Reinforcement Learning",
+    "new_title": "Precise and dexterous robotic manipulation via human-in-the-loop reinforcement learning",
+    "note_analysis_bodies_preserved": true,
+    "pointer_files": [
+      "research/READING_STATUS.csv",
+      "synthesis/02_rl_il_offline.md",
+      "work/sources/fulltext_all_review_manifest_2026-09-02.json",
+      "work/sources/fulltext_core_next_review_manifest.json",
+      "work/update/UPDATES_2026-10-19.md"
+    ],
+    "content_review_preserved": true,
+    "source_audit": "2026-10-25 publisher-deposited Crossref metadata(Science Robotics 10(105), 2025-08-20, DOI 10.1126/scirobotics.ads5033)와 저자 project·기존 arXiv identity 대조. Publisher HTML은 403; journal 본문 재정독 없음. 기존 FULL_TEXT_CHECKED는 2026-09-03 preprint PDF review 근거를 보존한다.",
+    "event_year_correction": {
+      "paper_id": "pr-1044",
+      "old": 2025,
+      "new": 2024,
+      "publication_year": 2025
+    }
+  },
+  "author_link_discovery": [
+    {
+      "url": "https://robo-arena.github.io/",
+      "resolved": "https://robo-arena.github.io/",
+      "links": [],
+      "metadata": {}
+    },
+    {
+      "url": "https://functional-manipulation-benchmark.github.io/",
+      "resolved": "https://functional-manipulation-benchmark.github.io/",
+      "links": [
+        "https://arxiv.org/abs/2401.08553",
+        "https://charlesxu0124.github.io/",
+        "https://fangchenliu.github.io/",
+        "https://github.com/nerfies/nerfies.github.io",
+        "https://github.com/rail-berkeley/fmb",
+        "https://jeffreywu13579.github.io/",
+        "https://liam-tan.github.io/",
+        "https://rail-berkeley.github.io/bridgedata/",
+        "https://zipeng-lin.github.io/"
+      ],
+      "metadata": {}
+    },
+    {
+      "url": "https://proceedings.mlr.press/v270/hejna25a.html",
+      "resolved": "https://proceedings.mlr.press/v270/hejna25a.html",
+      "links": [
+        "https://github.com/jhejna/remix",
+        "https://github.com/mlresearch/v270",
+        "https://github.com/mlresearch/v270/edit/gh-pages/_posts/2025-01-12-hejna25a.md",
+        "https://openreview.net/forum?id=fIj88Tn3fc"
+      ],
+      "metadata": {
+        "citation_publisher": [
+          "PMLR"
+        ],
+        "citation_title": [
+          "ReMix: Optimizing Data Mixtures for Large Scale Imitation Learning"
+        ],
+        "citation_language": [
+          "en"
+        ],
+        "citation_abstract_html_url": [
+          "https://proceedings.mlr.press/v270/hejna25a.html"
+        ],
+        "citation_pdf_url": [
+          "https://raw.githubusercontent.com/mlresearch/v270/main/assets/hejna25a/hejna25a.pdf"
+        ],
+        "citation_firstpage": [
+          "145"
+        ],
+        "citation_lastpage": [
+          "164"
+        ],
+        "citation_author": [
+          "Joey Hejna",
+          "Chethan Anand Bhateja",
+          "Yichen Jiang",
+          "Karl Pertsch",
+          "Dorsa Sadigh"
+        ],
+        "citation_publication_date": [
+          "2025/01/12"
+        ],
+        "citation_inbook_title": [
+          "Conference on Robot Learning"
+        ],
+        "citation_conference_title": [
+          "Conference on Robot Learning"
+        ],
+        "citation_issn": [
+          "2640-3498"
+        ]
+      }
+    },
+    {
+      "url": "https://dexmimicgen.github.io/",
+      "resolved": "https://dexmimicgen.github.io/",
+      "links": [
+        "https://arxiv.org/abs/2410.24185",
+        "https://chernyadev.github.io/bigym/",
+        "https://github.com/NVlabs/dexmimicgen/",
+        "https://kevin-thankyou-lin.github.io/",
+        "https://nerfies.github.io/",
+        "https://wkwan7.github.io/",
+        "https://xieleo5.github.io/"
+      ],
+      "metadata": {}
+    },
+    {
+      "url": "https://transic-robot.github.io/",
+      "resolved": "https://transic-robot.github.io/",
+      "links": [
+        "https://arxiv.org/abs/2405.10315",
+        "https://github.com/transic-robot/transic",
+        "https://github.com/transic-robot/transic-envs"
+      ],
+      "metadata": {}
+    },
+    {
+      "url": "https://proceedings.mlr.press/v305/bharadhwaj25a.html",
+      "resolved": "https://proceedings.mlr.press/v305/bharadhwaj25a.html",
+      "links": [
+        "https://github.com/mlresearch/v305",
+        "https://github.com/mlresearch/v305/edit/gh-pages/_posts/2025-10-07-bharadhwaj25a.md",
+        "https://openreview.net/forum?id=HprBJupvvM"
+      ],
+      "metadata": {
+        "citation_publisher": [
+          "PMLR"
+        ],
+        "citation_title": [
+          "Gen2Act: Human Video Generation in Novel Scenarios enables Generalizable Robot Manipulation"
+        ],
+        "citation_language": [
+          "en"
+        ],
+        "citation_abstract_html_url": [
+          "https://proceedings.mlr.press/v305/bharadhwaj25a.html"
+        ],
+        "citation_pdf_url": [
+          "https://raw.githubusercontent.com/mlresearch/v305/main/assets/bharadhwaj25a/bharadhwaj25a.pdf"
+        ],
+        "citation_firstpage": [
+          "3936"
+        ],
+        "citation_lastpage": [
+          "3951"
+        ],
+        "citation_author": [
+          "Homanga Bharadhwaj",
+          "Debidatta Dwibedi",
+          "Abhinav Gupta",
+          "Shubham Tulsiani",
+          "Carl Doersch",
+          "Ted Xiao",
+          "Dhruv Shah",
+          "Fei Xia",
+          "Dorsa Sadigh",
+          "Sean Kirmani"
+        ],
+        "citation_publication_date": [
+          "2025/10/07"
+        ],
+        "citation_inbook_title": [
+          "Conference on Robot Learning"
+        ],
+        "citation_conference_title": [
+          "Conference on Robot Learning"
+        ],
+        "citation_issn": [
+          "2640-3498"
+        ]
+      }
+    },
+    {
+      "url": "https://proceedings.mlr.press/v270/xu25b.html",
+      "resolved": "https://proceedings.mlr.press/v270/xu25b.html",
+      "links": [
+        "https://github.com/mlresearch/v270",
+        "https://github.com/mlresearch/v270/edit/gh-pages/_posts/2025-01-12-xu25b.md",
+        "https://openreview.net/forum?id=JScswMfEQ0"
+      ],
+      "metadata": {
+        "citation_publisher": [
+          "PMLR"
+        ],
+        "citation_title": [
+          "Mobility VLA: Multimodal Instruction Navigation with Long-Context VLMs and Topological Graphs"
+        ],
+        "citation_language": [
+          "en"
+        ],
+        "citation_abstract_html_url": [
+          "https://proceedings.mlr.press/v270/xu25b.html"
+        ],
+        "citation_pdf_url": [
+          "https://raw.githubusercontent.com/mlresearch/v270/main/assets/xu25b/xu25b.pdf"
+        ],
+        "citation_firstpage": [
+          "3866"
+        ],
+        "citation_lastpage": [
+          "3887"
+        ],
+        "citation_author": [
+          "Zhuo Xu",
+          "Hao-Tien Lewis Chiang",
+          "Zipeng Fu",
+          "Mithun George Jacob",
+          "Tingnan Zhang",
+          "Tsang-Wei Edward Lee",
+          "Wenhao Yu",
+          "Connor Schenck",
+          "David Rendleman",
+          "Dhruv Shah",
+          "Fei Xia",
+          "Jasmine Hsu",
+          "Jonathan Hoech",
+          "Pete Florence",
+          "Sean Kirmani",
+          "Sumeet Singh",
+          "Vikas Sindhwani",
+          "Carolina Parada",
+          "Chelsea Finn",
+          "Peng Xu",
+          "Sergey Levine",
+          "Jie Tan"
+        ],
+        "citation_publication_date": [
+          "2025/01/12"
+        ],
+        "citation_inbook_title": [
+          "Conference on Robot Learning"
+        ],
+        "citation_conference_title": [
+          "Conference on Robot Learning"
+        ],
+        "citation_issn": [
+          "2640-3498"
+        ]
+      }
+    },
+    {
+      "url": "https://proceedings.mlr.press/v270/wu25a.html",
+      "resolved": "https://proceedings.mlr.press/v270/wu25a.html",
+      "links": [
+        "https://github.com/jimmyyhwu/tidybot2",
+        "https://github.com/mlresearch/v270",
+        "https://github.com/mlresearch/v270/edit/gh-pages/_posts/2025-01-12-wu25a.md",
+        "https://openreview.net/forum?id=L4p6zTlj6k"
+      ],
+      "metadata": {
+        "citation_publisher": [
+          "PMLR"
+        ],
+        "citation_title": [
+          "TidyBot++: An Open-Source Holonomic Mobile Manipulator for Robot Learning"
+        ],
+        "citation_language": [
+          "en"
+        ],
+        "citation_abstract_html_url": [
+          "https://proceedings.mlr.press/v270/wu25a.html"
+        ],
+        "citation_pdf_url": [
+          "https://raw.githubusercontent.com/mlresearch/v270/main/assets/wu25a/wu25a.pdf"
+        ],
+        "citation_firstpage": [
+          "3729"
+        ],
+        "citation_lastpage": [
+          "3741"
+        ],
+        "citation_author": [
+          "Jimmy Wu",
+          "William Chong",
+          "Robert Holmberg",
+          "Aaditya Prasad",
+          "Yihuai Gao",
+          "Oussama Khatib",
+          "Shuran Song",
+          "Szymon Rusinkiewicz",
+          "Jeannette Bohg"
+        ],
+        "citation_publication_date": [
+          "2025/01/12"
+        ],
+        "citation_inbook_title": [
+          "Conference on Robot Learning"
+        ],
+        "citation_conference_title": [
+          "Conference on Robot Learning"
+        ],
+        "citation_issn": [
+          "2640-3498"
+        ]
+      }
+    },
+    {
+      "url": "https://jianghanxiao.github.io/phystwin-web/",
+      "resolved": "https://jianghanxiao.github.io/phystwin-web/",
+      "links": [
+        "https://arxiv.org/abs/2503.17973",
+        "https://climatenerf.github.io/",
+        "https://dorverbin.github.io/refnerf/index.html",
+        "https://github.com/Jianghanxiao/PhysTwin",
+        "https://haoyuhsu.github.io/",
+        "https://jianghanxiao.github.io/",
+        "https://kywind.github.io/",
+        "https://nerfies.github.io/",
+        "https://yunzhuli.github.io/"
+      ],
+      "metadata": {}
+    },
+    {
+      "url": "https://equidiff.github.io/",
+      "resolved": "https://equidiff.github.io/",
+      "links": [
+        "https://github.com/nerfies/nerfies.github.io",
+        "https://github.com/pointW/equidiff",
+        "https://haojhuang.github.io/",
+        "https://mimicgen.github.io/",
+        "https://openreview.net/forum?id=wD2kUVLT1g",
+        "https://pointw.github.io/",
+        "https://pointw.github.io/equi_q_page/",
+        "https://pointw.github.io/equi_rl_page/",
+        "https://pointw.github.io/equi_robot_page/",
+        "https://pointw.github.io/extrinsic_page/"
+      ],
+      "metadata": {}
+    },
+    {
+      "url": "https://www.nature.com/articles/s42256-025-01045-3",
+      "resolved": "https://www.nature.com/articles/s42256-025-01045-3",
+      "links": [],
+      "metadata": {}
+    },
+    {
+      "url": "https://proceedings.mlr.press/v270/ferrandis25a.html",
+      "resolved": "https://proceedings.mlr.press/v270/ferrandis25a.html",
+      "links": [
+        "https://github.com/mlresearch/v270",
+        "https://github.com/mlresearch/v270/edit/gh-pages/_posts/2025-01-12-ferrandis25a.md",
+        "https://openreview.net/forum?id=oSU7M7MK6B"
+      ],
+      "metadata": {
+        "citation_publisher": [
+          "PMLR"
+        ],
+        "citation_title": [
+          "Learning Visuotactile Estimation and Control for Non-prehensile Manipulation under Occlusions"
+        ],
+        "citation_language": [
+          "en"
+        ],
+        "citation_abstract_html_url": [
+          "https://proceedings.mlr.press/v270/ferrandis25a.html"
+        ],
+        "citation_pdf_url": [
+          "https://raw.githubusercontent.com/mlresearch/v270/main/assets/ferrandis25a/ferrandis25a.pdf"
+        ],
+        "citation_firstpage": [
+          "1501"
+        ],
+        "citation_lastpage": [
+          "1515"
+        ],
+        "citation_author": [
+          "Juan Del Aguila Ferrandis",
+          "Joao Moura",
+          "Sethu Vijayakumar"
+        ],
+        "citation_publication_date": [
+          "2025/01/12"
+        ],
+        "citation_inbook_title": [
+          "Conference on Robot Learning"
+        ],
+        "citation_conference_title": [
+          "Conference on Robot Learning"
+        ],
+        "citation_issn": [
+          "2640-3498"
+        ]
+      }
+    },
+    {
+      "url": "https://proceedings.mlr.press/v267/richens25a.html",
+      "resolved": "https://proceedings.mlr.press/v267/richens25a.html",
+      "links": [
+        "https://github.com/mlresearch/v267",
+        "https://github.com/mlresearch/v267/edit/gh-pages/_posts/2025-10-06-richens25a.md",
+        "https://openreview.net/forum?id=dlIoumNiXt"
+      ],
+      "metadata": {
+        "citation_publisher": [
+          "PMLR"
+        ],
+        "citation_title": [
+          "General agents need world models"
+        ],
+        "citation_language": [
+          "en"
+        ],
+        "citation_abstract_html_url": [
+          "https://proceedings.mlr.press/v267/richens25a.html"
+        ],
+        "citation_pdf_url": [
+          "https://raw.githubusercontent.com/mlresearch/v267/main/assets/richens25a/richens25a.pdf"
+        ],
+        "citation_firstpage": [
+          "51659"
+        ],
+        "citation_lastpage": [
+          "51687"
+        ],
+        "citation_author": [
+          "Jonathan Richens",
+          "Tom Everitt",
+          "David Abel"
+        ],
+        "citation_publication_date": [
+          "2025/10/06"
+        ],
+        "citation_inbook_title": [
+          "International Conference on Machine Learning"
+        ],
+        "citation_conference_title": [
+          "International Conference on Machine Learning"
+        ],
+        "citation_issn": [
+          "2640-3498"
+        ]
+      }
+    },
+    {
+      "url": "https://proceedings.mlr.press/v306/warrier26a.html",
+      "resolved": "https://proceedings.mlr.press/v306/warrier26a.html",
+      "links": [
+        "https://github.com/mlresearch/v306",
+        "https://github.com/mlresearch/v306/edit/gh-pages/_posts/2026-09-29-warrier26a.md",
+        "https://openreview.net/forum?id=Ny6UYZ8ysN",
+        "https://zenodo.org/records/19498269"
+      ],
+      "metadata": {
+        "citation_publisher": [
+          "PMLR"
+        ],
+        "citation_title": [
+          "Benchmarking World-Model Learning with Environment-Level Queries"
+        ],
+        "citation_language": [
+          "en"
+        ],
+        "citation_abstract_html_url": [
+          "https://proceedings.mlr.press/v306/warrier26a.html"
+        ],
+        "citation_pdf_url": [
+          "https://raw.githubusercontent.com/mlresearch/v306/main/assets/warrier26a/warrier26a.pdf"
+        ],
+        "citation_firstpage": [
+          "133215"
+        ],
+        "citation_lastpage": [
+          "133246"
+        ],
+        "citation_author": [
+          "Archana Warrier",
+          "Dat Nguyen",
+          "Michelangelo Naim",
+          "Moksh Jain",
+          "Yichao Liang",
+          "Karen Schroeder",
+          "Cambridge Yang",
+          "Joshua B. Tenenbaum",
+          "Sebastian Josef Vollmer",
+          "Kevin Ellis",
+          "Zenna Tavares"
+        ],
+        "citation_publication_date": [
+          "2026/09/29"
+        ],
+        "citation_inbook_title": [
+          "International Conference on Machine Learning"
+        ],
+        "citation_conference_title": [
+          "International Conference on Machine Learning"
+        ],
+        "citation_issn": [
+          "2640-3498"
+        ]
+      }
+    },
+    {
+      "url": "https://proceedings.iclr.cc/paper_files/paper/2024/hash/0b9ff9baa226af39f86045ecdc173672-Abstract-Conference.html",
+      "resolved": "https://proceedings.iclr.cc/paper_files/paper/2024/hash/0b9ff9baa226af39f86045ecdc173672-Abstract-Conference.html",
+      "links": [],
+      "metadata": {
+        "citation_title": [
+          "Delphic Offline Reinforcement Learning under Nonidentifiable Hidden Confounding"
+        ],
+        "citation_author": [
+          "Pace, Alizée",
+          "Yèche, Hugo",
+          "Ha, David",
+          "Ratsch, Gunnar",
+          "Tennenholtz, Guy"
+        ],
+        "citation_journal_title": [
+          "International Conference on Learning Representations"
+        ],
+        "citation_volume": [
+          "2024"
+        ],
+        "citation_firstpage": [
+          "2768"
+        ],
+        "citation_lastpage": [
+          "2796"
+        ],
+        "citation_pdf_url": [
+          "https://proceedings.iclr.cc/paper_files/paper/2024/file/0b9ff9baa226af39f86045ecdc173672-Paper-Conference.pdf"
+        ],
+        "citation_publication_date": [
+          "2024-05-31"
+        ]
+      }
+    },
+    {
+      "url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/4415e8cb0741bc0beb79b316f0856108-Abstract-Conference.html",
+      "resolved": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/4415e8cb0741bc0beb79b316f0856108-Abstract-Conference.html",
+      "links": [],
+      "metadata": {
+        "citation_title": [
+          "Causal Imitation Learning under Expert-Observable and Expert-Unobservable Confounding"
+        ],
+        "citation_author": [
+          "Shao, Daqian",
+          "Kleine Buening, Thomas",
+          "Kwiatkowska, Marta"
+        ],
+        "citation_journal_title": [
+          "International Conference on Learning Representations"
+        ],
+        "citation_volume": [
+          "2026"
+        ],
+        "citation_firstpage": [
+          "40709"
+        ],
+        "citation_lastpage": [
+          "40733"
+        ],
+        "citation_pdf_url": [
+          "https://proceedings.iclr.cc/paper_files/paper/2026/file/4415e8cb0741bc0beb79b316f0856108-Paper-Conference.pdf"
+        ],
+        "citation_publication_date": [
+          "2026-04-20"
+        ]
+      }
+    }
+  ],
+  "public_repository_landing_checks": [
+    {
+      "url": "https://github.com/rail-berkeley/fmb",
+      "http_status": 200,
+      "resolved_url": "https://github.com/rail-berkeley/fmb",
+      "scope": "public repository landing only; no code execution, dependency or payload download"
+    },
+    {
+      "url": "https://github.com/jhejna/remix",
+      "http_status": 200,
+      "resolved_url": "https://github.com/jhejna/remix",
+      "scope": "public repository landing only; no code execution, dependency or payload download"
+    },
+    {
+      "url": "https://github.com/NVlabs/dexmimicgen",
+      "http_status": 200,
+      "resolved_url": "https://github.com/NVlabs/dexmimicgen",
+      "scope": "public repository landing only; no code execution, dependency or payload download"
+    },
+    {
+      "url": "https://github.com/transic-robot/transic",
+      "http_status": 200,
+      "resolved_url": "https://github.com/transic-robot/transic",
+      "scope": "public repository landing only; no code execution, dependency or payload download"
+    },
+    {
+      "url": "https://github.com/jimmyyhwu/tidybot2",
+      "http_status": 200,
+      "resolved_url": "https://github.com/jimmyyhwu/tidybot2",
+      "scope": "public repository landing only; no code execution, dependency or payload download"
+    },
+    {
+      "url": "https://github.com/Jianghanxiao/PhysTwin",
+      "http_status": 200,
+      "resolved_url": "https://github.com/Jianghanxiao/PhysTwin",
+      "scope": "public repository landing only; no code execution, dependency or payload download"
+    },
+    {
+      "url": "https://github.com/pointW/equidiff",
+      "http_status": 200,
+      "resolved_url": "https://github.com/pointW/equidiff",
+      "scope": "public repository landing only; no code execution, dependency or payload download"
+    },
+    {
+      "url": "https://github.com/pranavatreya/roboarena_backend",
+      "http_status": 200,
+      "resolved_url": "https://github.com/pranavatreya/roboarena_backend",
+      "scope": "public repository landing only; no code execution, dependency or payload download"
+    }
+  ],
+  "discovery_only_sources": [
+    "https://github.com/OpenMOSS/Awesome-WAM",
+    "https://github.com/weleen/awesome-agent/blob/main/paper_scrapper/CoRL2024_Papers.md"
+  ],
+  "discovery_policy": "Curated lists and secondary indexes were candidate discovery only. Publication facts use official proceedings/publisher/author pages and publisher-deposited Crossref metadata.",
+  "deduplication": {
+    "exact_and_distinctive_rg": "PAPER.md, READING_TIERS.csv, work/sources searched; source-ledger mentions separated from registry entries",
+    "normalized_title_and_alias_collisions": [],
+    "registration_dry_run": {
+      "accepted": 17,
+      "skipped_existing": 0,
+      "skipped_identifier_collision": 0
+    },
+    "existing_not_readded": [
+      "pr-0669",
+      "pr-0914",
+      "pr-0051",
+      "pr-0910",
+      "pr-0884",
+      "pr-0568",
+      "pr-0732",
+      "pr-0731"
+    ],
+    "version_policy": "EquiDiff CoRL original is not separately registered; IJRR extension is canonical, original title alias/lineage retained. HIL-SERL identity preserved."
+  },
+  "maintenance_fixes": [
+    "Preserve explicit publication.venue_year in enrich_record; raw venue label year still has precedence.",
+    "Decode percent-encoded paths only when reading local note files; retain Markdown/CSV URL encoding.",
+    "Update HIL-SERL exact CORE title query; preserve prior membership.",
+    "Repair prior REG-R2 report table header and distinguish actual event-year correction timing."
+  ],
+  "validation": {
+    "status": "passed",
+    "pre_audit_errors": [],
+    "pre_audit_warnings": [],
+    "experiments_executed": false,
+    "dependencies_installed": false,
+    "pdf_downloaded_or_deleted": false,
+    "docker_changed": false,
+    "git_commit_or_push": false,
+    "existing_active_rows_preserved": 332,
+    "existing_history_rows_preserved": 47,
+    "existing_tiers_preserved": 1055,
+    "new_active_rows": 12,
+    "new_active_status": "UNREAD + ABSTRACT_CHECKED",
+    "existing_manifest_changed_ids": {
+      "pr-0914": [
+        "reproducibility",
+        "identifiers",
+        "aliases",
+        "venue",
+        "provenance",
+        "evaluation_profile",
+        "curation",
+        "publication",
+        "role",
+        "page",
+        "venue_as_recorded",
+        "limitations",
+        "sources",
+        "year",
+        "folder",
+        "venue_canonical",
+        "title",
+        "source_audit"
+      ],
+      "pr-1044": [
+        "publication"
+      ]
+    },
+    "existing_manifest_unchanged_records": 1053,
+    "HIL_SERL_auto_fields_changed": [
+      "year",
+      "venue",
+      "title",
+      "overview_path"
+    ],
+    "only_other_tracker_changes": "generated sequence",
+    "normalizer_cases": [
+      {
+        "venue": "CoRL",
+        "supplied_venue_year": 2024,
+        "expected": 2024,
+        "passed": true
+      },
+      {
+        "venue": "CoRL",
+        "supplied_venue_year": null,
+        "expected": 2025,
+        "passed": true
+      },
+      {
+        "venue": "CoRL 2024",
+        "supplied_venue_year": 2025,
+        "expected": 2024,
+        "passed": true
+      },
+      {
+        "venue": "IJRR",
+        "supplied_venue_year": 2025,
+        "expected": 2025,
+        "passed": true
+      }
+    ],
+    "TidyBot_encoded_path_and_identity": "PASS",
+    "standard_notes_control_character_scan": {
+      "files": 5360,
+      "C0_C1_findings": 0
+    },
+    "active_status": {
+      "UNREAD": 343,
+      "READ": 1
+    },
+    "history_status": {
+      "READ": 4,
+      "UNREAD": 43
+    },
+    "new_note_header_checks": 85,
+    "new_note_header_errors": 0,
+    "HIL_SERL_analysis_bodies_preserved": 5,
+    "generator_idempotence": {
+      "files": 11,
+      "status": "PASS"
+    },
+    "dirty_worktree": {
+      "baseline_dirty_files": 537,
+      "untouched_existing_dirty_files": 507,
+      "scoped_existing_dirty_files_changed": [
+        "AGENTS.md",
+        "PAPER.md",
+        "README.md",
+        "TODO.md",
+        "research/READING_PLAN.md",
+        "research/READING_STATUS.csv",
+        "research/READING_STATUS.md",
+        "research/READING_TIERS.csv",
+        "research/README.md",
+        "research/REGISTRY_INDEX.csv",
+        "research/REGISTRY_STATS.md",
+        "synthesis/02_rl_il_offline.md",
+        "synthesis/03_manipulation_contact.md",
+        "synthesis/04_vla_generalist.md",
+        "synthesis/05_world_models_safety.md",
+        "synthesis/06_locomotion_whole_body.md",
+        "synthesis/07_robotics_3d_perception.md",
+        "synthesis/README.md",
+        "work/README.md",
+        "work/scripts/build_reading_tiers.py",
+        "work/sources/benchmark_catalog.json",
+        "work/sources/fulltext_all_review_manifest_2026-09-02.json",
+        "work/sources/fulltext_core_next_review_manifest.json",
+        "work/sources/metric_catalog.json",
+        "work/sources/papers.json",
+        "work/sources/registry_meta.json",
+        "work/sources/resources.json",
+        "work/update/README.md",
+        "work/update/REGISTRY_REFRESH_2026-10-25.md",
+        "work/update/UPDATES_2026-10-25.md"
+      ],
+      "prior_missing_paths_preserved": 5,
+      "unexpected_missing": []
+    },
+    "preexisting_old_history_records": "unchanged except current HIL-SERL path pointers; dates/hash/body evidence unchanged",
+    "manifest_sha256": "0af1d55c7f047c51a19dd2e1e507e1a27194cee6e93bb50a6d287f0ef2245805",
+    "repository_audit": {
+      "papers": 1072,
+      "categories": 23,
+      "tier_counts": {
+        "CORE": 47,
+        "NEXT": 297,
+        "REFERENCE": 486,
+        "ARCHIVE": 242
+      },
+      "intensive": 344,
+      "inactive_reading_history": 47,
+      "standard_note_files": 5360,
+      "catalog_entries": {
+        "benchmark": 51,
+        "metric": 29
+      },
+      "combined_resources": 549,
+      "registry_index_rows": 1072,
+      "comparison_matrix_rows": 106,
+      "completed_matrix_rows": 5,
+      "errors": [],
+      "warnings": []
+    },
+    "commands": [
+      "python3 work/scripts/register_papers.py --input work/sources/top_tier_supplement_admissions_2026-10-25.json [dry-run, then --apply]",
+      "python3 -m py_compile work/scripts/build_reading_tiers.py work/scripts/registry_schema.py work/scripts/audit_repository.py",
+      "python3 work/scripts/build_reading_tiers.py",
+      "python3 work/scripts/reconcile_registry.py --priorities-only [dry-run, then --apply]",
+      "python3 work/scripts/build_registry_catalogs.py [dry-run, then --apply]",
+      "python3 work/scripts/build_registry_views.py [dry-run, then --apply]",
+      "python3 work/scripts/audit_repository.py",
+      "git diff --check"
+    ],
+    "issues_found_and_fixed": [
+      "HIL-SERL exact title query needed journal capitalization.",
+      "TidyBot++ percent-encoded path was being read as a literal filesystem path.",
+      "One new theory role needed foundation enum; two new tags needed existing case conventions."
+    ],
+    "final_priority_reconcile_dry_run": {
+      "papers_changed": 0,
+      "note_headers_changed": 0,
+      "reading_status_changed": false,
+      "source_evidence_changed": false
+    },
+    "temporary_metadata_cleanup": {
+      "status": "completed",
+      "removed_files": [
+        {
+          "file": "metadata_migration.json",
+          "sha256": "0dd545088553b918937207efb77cd3894dd386fc73ef6d4d8bd2bf70db3bda3b"
+        },
+        {
+          "file": "hil_serl_notes_before.json",
+          "sha256": "9b644cccad08bdf66ef51071d0f13bf0ea06c47b5bac2dd60764cadf686e5d50"
+        },
+        {
+          "file": "papers.json",
+          "sha256": "5c9e893a1ab2820ed8d964dfd82500f76b96de80f4eb0745ca7299441a960bef"
+        },
+        {
+          "file": "code_availability.json",
+          "sha256": "21705b9f071b58f9d2be719c667784b7a0c56a0a6c48a2b00da531a13915f9e7"
+        },
+        {
+          "file": "source_links.json",
+          "sha256": "ad9a8dcbe46c128ebf974794073e5c562cf1e2dc8c00ebdf3f4210bcbf3885c5"
+        },
+        {
+          "file": "generator_idempotence.json",
+          "sha256": "f9085ad4224e99cf81f1b3eb1bc586c123a5edc1fe3252f74414f759ff9038e6"
+        },
+        {
+          "file": "snapshot.json",
+          "sha256": "80996dfb9971d4af87857b87167b757b07dcf11b113c239018c5dff5b94605f6"
+        },
+        {
+          "file": "preservation_checks.json",
+          "sha256": "cde743d79ec0eb0a09530678f11271d1b89dfc5eac9a19f6e10318478a9c40f4"
+        },
+        {
+          "file": "READING_STATUS.csv",
+          "sha256": "af6e114cb015e1fe567975923189129826d1c3c2b74a1ef4f59e3de780bbdd34"
+        },
+        {
+          "file": "READING_STATUS_HISTORY.csv",
+          "sha256": "c91b6727a03529ba790447eb5106f5b04cc4364b0c90b3eed1afecf9b700e001"
+        },
+        {
+          "file": "publisher_metadata.json",
+          "sha256": "46dcc2345ac4440aa3cea3335d784e133c7feb54a28ba80bc9d310037b904a68"
+        },
+        {
+          "file": "READING_TIERS.csv",
+          "sha256": "b62a86a52f631f20a3d0d2a6c3aa4401aca39904257310d1a0875ae765ddb49e"
+        }
+      ],
+      "source_evidence_retained_in_ledger": true,
+      "pdf_cache_untouched": true
+    }
+  }
+}

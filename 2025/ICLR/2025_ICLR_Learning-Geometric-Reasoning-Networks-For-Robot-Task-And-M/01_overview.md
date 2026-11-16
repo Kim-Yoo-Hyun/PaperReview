@@ -17,6 +17,8 @@
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (24 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
+> DOC-QA2 targeted source review: 2026-10-23; PDF pp. 4. 손상 구간·직접 연결된 표 분류만 원문 이미지와 대조했다. 전체 주장 정독·실험 검증·reading status 승격을 뜻하지 않는다. [URL·PDF hash·수정 기록](../../../work/sources/pdf_note_review_followup_2026-10-23.json).
+
 ## Why This Paper Is Here
 
 VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다. 본문은 However, action feasibility prediction presents several challenges.를 문제로 두고, The contributions of this paper are threefold: (1) We propose a novel GNN-based model for efficient and accurate action and grasp feasibility prediction in complex 3D environments.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
@@ -37,7 +39,7 @@ VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다
 - **p. 1 / 1 INTRODUCTION - extractive body cue:** To address these limitations, we propose a novel approach that leverages a GNN-based model for robot action and grasp feasibility prediction.
 - **p. 1 / 1 INTRODUCTION - extractive body cue:** Our method constructs a graph representation of 3D environments, where fixed and movable objects are represented as nodes, and edges capture spatial relationships and interaction ...
 - **p. 2 / 1 INTRODUCTION - extractive body cue:** (3) We provide comprehensive experiments showcasing our method's state-of-the-art (SOTA) performance, including evaluations of its interpretability and generalization capabilities.
-- **p. 4 / 1 INTRODUCTION - extractive body cue:** In summary, the task at hand is to learn two classification functions fF , fκ, and a regression function fρ s.t.:  Fa FG  ...
+- **PDF p. 4, §3 / Eq. (2) (DOC-QA2 원문 대조):** GRN은 feasibility classifier f_F와 IK classifier f_κ, obstruction regressor f_ρ를 학습한다. f_F는 object/environment와 예측 κ_G, ρ_G를 사용해 action·grasp feasibility 벡터 [F_a,F_G]ᵀ를 출력한다.
 - **p. 14 / A IMPLEMENTATION DETAILS - extractive body cue:** Exceptionally, when training on the PR2-3D-4 dataset, we use a hidden size of 256 for the GO module as it yields better results.
 - **p. 14 / A IMPLEMENTATION DETAILS - extractive body cue:** During the pre-training stage, each module is trained for 100 epochs.
 
@@ -45,7 +47,7 @@ VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다
 
 | Role | PDF body evidence | Robotics interpretation | Anchor |
 |---|---|---|---|
-| Observation/input | In summary, the task at hand is to learn two classification functions fF , fκ, and a regression function fρ s.t.:  Fa FG  = fF (O, E, κG, ρG) where ... | image/video, language instruction, proprioception과 history | p. 4 (1 INTRODUCTION), p. 1 (1 INTRODUCTION) |
+| Observation/input | Object O와 environment E의 graph, 그리고 IK/obstruction predictions κ_G·ρ_G | 3D object geometry와 관계 graph; image/language/proprioception template을 제거 | PDF p. 4, Eq. (2), §4.1; DOC-QA2 |
 | State/latent | summary, task, hand, learn, classification, functions, regression, function, where, GEOMETRIC, REASONING, NETWORKS | language-grounded task state와 action-policy context | p. 4 (1 INTRODUCTION), p. 1 (1 INTRODUCTION), p. 6 (1 INTRODUCTION) |
 | Output/action | Task and Motion Planning (TAMP) (Garrett et al., 2021) is a robotics problem in which the goal is to find a sequence of robot actions and their corresponding motions to transition an ... | continuous action, pose 또는 action chunk | p. 1 (1 INTRODUCTION), p. 6 (1 INTRODUCTION), p. 3 (1 INTRODUCTION) |
 | Objective/outcome | The total inference time of GRN is 5.5 ms in average, with the most significant portion spent on scene graph construction with an average time cost of 3 ms. | instruction following, task success, generalization과 latency | p. 14 (A IMPLEMENTATION DETAILS), p. 14 (A IMPLEMENTATION DETAILS) |
@@ -56,7 +58,7 @@ VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다
 - **p. 1 / 1 INTRODUCTION - extractive body cue:** To address these limitations, we propose a novel approach that leverages a GNN-based model for robot action and grasp feasibility prediction.
 - **p. 1 / 1 INTRODUCTION - extractive body cue:** Our method constructs a graph representation of 3D environments, where fixed and movable objects are represented as nodes, and edges capture spatial relationships and interaction ...
 - **p. 2 / 1 INTRODUCTION - extractive body cue:** (3) We provide comprehensive experiments showcasing our method's state-of-the-art (SOTA) performance, including evaluations of its interpretability and generalization capabilities.
-- **p. 4 / 1 INTRODUCTION - extractive body cue:** In summary, the task at hand is to learn two classification functions fF , fκ, and a regression function fρ s.t.:  Fa FG  ...
+- **PDF p. 4, §3 / Eq. (2) (DOC-QA2 원문 대조):** GRN은 feasibility classifier f_F와 IK classifier f_κ, obstruction regressor f_ρ를 학습한다. f_F는 object/environment와 예측 κ_G, ρ_G를 사용해 action·grasp feasibility 벡터 [F_a,F_G]ᵀ를 출력한다.
 - **p. 9 / 6 RESULTS - extractive body cue:** The results show that GRN achieves a better performance than the state-of-the-art on robots with various kinematics.
 - **p. 8 / 6 RESULTS - extractive body cue:** This allows our model to achieve an F1 score up to 10.3% higher than other GNN-based baselines on action feasibility prediction, and up to 21.8% ...
 - **p. 9 / 6 RESULTS - extractive body cue:** Moreover, the improved performance obtained using EGAT instead of classical GAT Veliˇckovi´c et al.

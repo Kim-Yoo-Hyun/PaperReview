@@ -48,7 +48,7 @@ CORE_GROUPS = OrderedDict(
                 "=Flow Q-Learning",
                 "=Efficient Online Reinforcement Learning with Offline Data",
                 "=SERL: A Software Suite for Sample-Efficient Robotic Reinforcement Learning",
-                "=Precise and Dexterous Robotic Manipulation via Human-in-the-Loop Reinforcement Learning",
+                "=Precise and dexterous robotic manipulation via human-in-the-loop reinforcement learning",
                 "=RLDG: Robotic Generalist Policy Distillation via Reinforcement Learning",
                 "=DROID: A Large-Scale In-The-Wild Robot Manipulation Dataset",
                 "=Benchmarking Knowledge Transfer for Lifelong Robot Learning",
@@ -171,6 +171,10 @@ NEXT_GROUPS = OrderedDict(
                 "=Evaluating Real-World Robot Manipulation Policies in Simulation",
                 "=MimicPlay: Long-Horizon Imitation Learning by Watching Human Play",
                 "=Test-Time Adaptation for Online Vision-Language Navigation with Feedback-based Reinforcement Learning",
+                "=Studying the Interplay Between the Actor and Critic Representations in Reinforcement Learning",
+                "=SPRINT: Scalable Policy Pre-Training via Language Instruction Relabeling",
+                "=Autonomous Improvement of Instruction Following Skills via Foundation Models",
+                "=ReinFlow: Fine-tuning Flow Matching Policy with Online Reinforcement Learning",
             ],
         ),
         (
@@ -178,7 +182,10 @@ NEXT_GROUPS = OrderedDict(
             [
                 "=What Can RL Bring to VLA Generalization? An Empirical Study",
                 "=SimpleVLA-RL: Scaling VLA Training via Reinforcement Learning",
-                "=RLux-VLA: A Unified and Efficient Framework for Reinforcement Learning of Vision-Language-Action Models",
+                "=RLinf-VLA: A Unified and Efficient Framework for Reinforcement Learning of Vision-Language-Action Models",
+                "=A Generalist Pair-wise Progress Critic Model for Vision-Language-Action Robots",
+                "=Learning from Hindsight for VLA Reinforcement Learning",
+                "=CAST: Counterfactual Labels Improve Instruction Following in Vision-Language-Action Models",
                 "=NaVid: Video-based VLM Plans the Next Step for Vision-and-Language Navigation",
                 "=StreamVLN: Streaming Vision-and-Language Navigation via SlowFast Context Modeling",
                 "=SocialNav: Training Human-Inspired Foundation Model for Socially-Aware Embodied Navigation",
@@ -374,7 +381,7 @@ NEXT_GROUPS = OrderedDict(
                 "=Mastering Diverse Domains through World Models",
                 "=PIN-WM: Learning Physics-INformed World Models for Non-Prehensile Manipulation",
                 "=Unified World Models: Coupling Video and Action Diffusion for Pretraining on Large Robotic Datasets",
-                "=FlowDreamer: A RGB-D World Model with Flow-based Motion Representations for Robot Manipulation",
+                "=FlowDreamer: A RGB-D World Model With Flow-Based Motion Representations for Robot Manipulation",
                 "=Can We Detect Failures Without Failure Data? Uncertainty-Aware Runtime Failure Detection for Imitation Learning Policies",
                 "=SAFE: Multitask Failure Detection for Vision-Language-Action Models",
                 "=WorldGym: World Model as An Environment for Policy Evaluation",
@@ -510,6 +517,11 @@ FOCUS_SOURCE_CHECKS = {
 }
 
 FOCUS_PRIORITY_RATIONALES = {
+    "pr-1113": "직접 선행. 실패의 보조 언어 목표와 원 지시를 공동 학습하는 LfH는 hindsight 재사용 자체의 신규성을 제한한다. 원 과제 전이를 위한 복수 valid-label 선택을 연구하기 전에 비교해야 한다. arXiv v2 기준이며 main-conference 채택은 미확인이다.",
+    "pr-1114": "언어 재라벨·skill chaining의 offline policy pretraining 선행. HER/goal-conditioned 학습에서 VLA hindsight 후학습으로 이어지는 차이와 추가 자료 효과를 구별하기 위해 읽는다.",
+    "pr-1115": "자율 경험 수집·VLM 평가·image-goal 학습을 결합한 실제 로봇 시스템. 단일 VLA RL과 분해된 정책의 정보/감독/상호작용 예산을 비교하는 기준이다.",
+    "pr-1116": "Flow Matching과 policy gradient를 연결하는 online RL 방법. DPPO/FQL 이후 생성 경로 likelihood·학습 noise·적은 생성 step을 비교할 때 필요하다. 후속 VLA repository 기능을 원 논문 결과와 구별한다.",
+    "pr-1117": "VLA 언어 추종을 위한 counterfactual instruction/action 증강. 실제 실패의 참인 hindsight 목표와 실행되지 않은 합성 행동 자료의 기여를 구분하는 직접 대조다. 공식 main venue 미확인 preprint다.",
     "pr-0951": "Foundation bridge. PPO를 denoising policy의 RL fine-tuning으로 연결한다. Diffusion Policy → DPPO → RL-100 등 직접 policy 개선을 비교하는 prerequisite이므로 CORE를 검토할 이유가 있다. VLA 자체를 제안한 논문은 아니다.",
     "pr-0952": "Foundation bridge. Expressive flow policy와 Q-learning/one-step actor를 연결한다. IQL/CQL 이후 flow-action RL과 Q-chunking 계열의 구현·비교 기준으로 중요하다. 평가가 곧 실제 robot VLA 학습을 입증하는 것은 아니다.",
     "pr-0953": "Current trend. Chunk 단위의 exploration과 TD backup을 결합한다. ACT/FAST의 표현 관점에 RLPD/FQL의 학습 관점을 더하므로 장기 manipulation의 비교 baseline으로 필요하다.",
@@ -517,7 +529,7 @@ FOCUS_PRIORITY_RATIONALES = {
     "pr-0955": "Current trend. Base policy weight를 고정하고 latent noise를 RL로 조정한다. ConRFT의 fine-tuning, RLDG의 distillation과 구분되는 adaptation baseline이며 generalist policy와 실제 robot 평가가 있다.",
     "pr-0956": "Benchmark / empirical study. Visual·semantic·execution generalization을 나누어 SFT와 RL을 비교한다. OpenVLA/OFT 이후 RL의 효과를 주장할 때 필요한 평가 기준이다. 해당 실험에서의 PPO 결과를 모든 VLA에 대한 우열로 일반화하지 않는다.",
     "pr-0957": "Current trend / system. OpenVLA-OFT에서 outcome reward와 scalable rollout/training을 다룬다. 현재 OFT → ConRFT 경로에 대규모 simulator RL의 비교 지점을 추가한다. Real-world 결과와 real-world online training의 범위는 구분해서 정독해야 한다.",
-    "pr-0958": "Current trend / system. 여러 VLA·RL 알고리즘·시뮬레이터를 비교할 공통 interface와 resource allocation을 제공한다. SimpleVLA-RL 및 ConRFT 실험을 설계할 때 algorithm 효과와 시스템 throughput을 분리하는 데 유용하다. 공식 software에서는 RLinf-VLA라는 이름도 사용한다.",
+    "pr-0958": "Current trend / system. 여러 VLA·RL 알고리즘·시뮬레이터를 비교할 공통 interface와 resource allocation을 제공한다. SimpleVLA-RL 및 ConRFT 실험을 설계할 때 algorithm 효과와 시스템 throughput을 분리하는 데 유용하다. 공식 RSS title은 RLinf-VLA다.",
     "pr-0959": "Current trend / real-robot system. Diffusion policy에서 imitation→offline/online RL과 빠른 실행을 연결한다. HIL-SERL/DPPO와 비교해 실제 interaction 비용·latency·복구를 읽을 가치가 크다. 제목/이름의 “100”을 모든 환경에서의 무실패 보장으로 해석하지 않는다.",
     "pr-0960": "Current trend. 실제 rollout으로 world model의 failure coverage를 개선하고 synthetic rollout으로 policy를 개선하는 반복 구조다. 이미 등록된 Ctrl-World/WMPO와 연결해 model bias와 real-data budget을 비교한다. Abstract만으로 특정 RL optimizer를 단정하지 않는다.",
     "pr-0961": "Current trend. Multi-view consistency와 chunk-level branched rollout으로 world-model RL의 오차 누적을 다룬다. WMPO/WorldGym을 읽을 때 직접 비교해야 할 누락 논문이다.",
@@ -530,7 +542,7 @@ FOCUS_PRIORITY_RATIONALES = {
     "pr-0968": "Current trend / action-relevant 3D. State와 action을 3D point flow로 표현하고 예측을 manipulation MPC에 연결한다. DP3/3D-VLA 이후 explicit geometry와 world model을 비교할 직접적인 연결이다. 본문 평가의 보장 범위와 calibration 의존성은 추가 확인 대상이다.",
     "pr-0969": "Benchmark. Stitching·장기 horizon·pixel input 등의 능력을 구분하는 기준이다. FQL/Q-chunking/DQC 결과를 이해하는 prerequisite이며 LIBERO/CALVIN과 평가 목적을 구분한다. Language-conditioned real-robot benchmark는 아니다.",
     "pr-0970": "Benchmark. Task success와 물리적 damage를 분리하고 damage-aware IL/RL 및 VLA 평가를 지원한다. 기존 safety/recovery 흐름에 contact·thermal·fluid damage라는 구체적인 평가 축을 보충한다.",
-    "pr-0971": "Current system. 실제 robot online RL에서 edge/cloud·buffer·weight synchronization을 구현할 때 SERL/HIL-SERL의 시스템 확장으로 읽는다. Simulator 중심 RLux-VLA와 역할이 다르다.",
+    "pr-0971": "Current system. 실제 robot online RL에서 edge/cloud·buffer·weight synchronization을 구현할 때 SERL/HIL-SERL의 시스템 확장으로 읽는다. Simulator 중심 RLinf-VLA와 역할이 다르다.",
     "pr-0972": "Current trend. RL fine-tuning 중 task-specific overfitting을 줄이는 것이 연구 질문일 때 RL4VLA/ConRFT와 비교한다. 새 architecture라는 이유만으로 CORE로 올리지는 않는다.",
     "pr-0973": "Current trend / simulator. Tactile feedback을 이용하는 insertion·contact RL을 선택할 때 relevant하다. HIL-SERL 등 실제 interaction 학습과 simulation fidelity/transfer를 비교한다. Peg insertion 결과를 범용 dexterity로 확대하지 않는다.",
     "pr-0835": "TD bootstrapping은 SAC·IQL·RLPD의 value target과 offline/online 오차를 이해하는 공통 기반이다.",
@@ -782,6 +794,494 @@ FOCUS_SOURCE_CHECKS.update({
     'pr-1037': 'https://openreview.net/forum?id=HkgqFiAcFm',
 })
 
+# Incremental registry refresh, 2026-10-25: preserve all earlier memberships.
+NEXT_GROUPS["RL, IL, offline learning, and robot data"].extend([
+    "=What Matters in Learning from Large-Scale Datasets for Robot Manipulation",
+    "=DataMIL: Selecting Data for Robot Imitation Learning with Datamodels"
+])
+NEXT_GROUPS["VLA, cross-embodiment, and long-horizon planning"].extend([
+    "=Mechanistic Interpretability for Steering Vision-Language-Action Models",
+    "=LIBERO-Plus: A Progressive Robustness Benchmark for Visual-Language-Action Models",
+    "=THE COLOSSEUM: A Benchmark for Evaluating Generalization for Robotic Manipulation",
+    "=RoboMME: Benchmarking and Understanding Memory for Robotic Generalist Policies",
+    "=Beyond Sight: Finetuning Generalist Robot Policies with Heterogeneous Sensors via Language Grounding"
+])
+NEXT_GROUPS["World models, uncertainty, failure detection, and recovery"].extend([
+    "=Simple Masked Training Strategies Yield Control Policies That Are Robust to Sensor Failure",
+    "=Scaling Robot Policy Evaluation via Discrete Diffusion World Model",
+    "=Towards Generalizable Safety in Crowd Navigation via Conformal Uncertainty Handling"
+])
+FOCUS_PRIORITY_RATIONALES.update({
+    "pr-1038": "단순 시각·공간 정렬로 설명되는 이득을 제거하기 위한 DataMIL·GAP-N1의 비교 기준이다.",
+    "pr-1039": "현재 proxy→target 데이터 전이 질문에서 반드시 대조할 performance-aware 선택 방법이다.",
+    "pr-1043": "Instruction 대응이나 VLA 행동 교정을 연구할 때 fine-tuning 없는 직접 baseline이다.",
+    "pr-1044": "새 multimodal VLA adaptation 전에 대조할 단순 sensor-dropout 기준이다.",
+    "pr-1045": "기본 성공률과 일반화 성능을 구분하는 현재 VLA 평가의 직접 기준이다.",
+    "pr-1046": "LIBERO 계열에 한정하지 않고 manipulation 일반화를 점검할 benchmark 계보다.",
+    "pr-1047": "현재 GAP-N1–N3의 직접 benchmark이며 memory 필요성과 단순 정보 누설을 구분하는 기준이다.",
+    "pr-1048": "World-model 평가를 연구할 때 시각 품질과 행동별 순위 신뢰도를 구분할 직접 비교군이다.",
+    "pr-1049": "GAP-P 계열에서 uncertainty 추가 자체를 새로운 navigation 기여로 삼지 않게 하는 직접 선행이다.",
+    "pr-1053": "새 sensor 결합을 연구할 때 naive finetuning·masked training과 함께 대조할 직접 기준이다."
+})
+FOCUS_REFERENCE_RATIONALES.update({
+    "pr-1040": "학습 전 subset 선택과 실행 중 retrieval의 효과를 분리할 직접 대안이다.",
+    "pr-1041": "Proxy scoring과 target 확인 자체를 새 VLA 기여로 재주장하지 않게 하는 GAP-N1의 직접 선행이다.",
+    "pr-1042": "GAP-N1에서 관측 정보 효과와 optimizer 설정 효과를 분리하는 필수 방법론 참조다.",
+    "pr-1050": "물성·boundary 식별과 task-oriented probing을 구별하는 GAP-DE의 직접 선행이다.",
+    "pr-1051": "물성 adaptation을 신규 방법으로 반복하지 않기 위한 GAP-DE의 모델 기반 대안이다.",
+    "pr-1052": "Semantic representation을 실제 contact/action에 연결하는 비교용 3D/affordance 지원 연구다.",
+    "pr-1054": "지시 교란 평가와 구현된 task의 유효성을 함께 점검할 비교 benchmark다.",
+    "pr-1055": "THE COLOSSEUM의 후속 평가 자산이며 다양한 로봇을 다루는 사용자 연구축과 직접 연결된다."
+})
+FOCUS_SOURCE_CHECKS.update({
+    "pr-1038": "https://proceedings.iclr.cc/paper_files/paper/2025/hash/16466b6c95c5924784486ac5a3feeb65-Abstract-Conference.html",
+    "pr-1039": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/033d9e8dbbbc0ad90e59222cf1db0fc2-Abstract-Conference.html",
+    "pr-1040": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/8c2ecd140ebe227a531edc9a0c3b69d4-Abstract-Conference.html",
+    "pr-1041": "https://proceedings.iclr.cc/paper_files/paper/2025/hash/412360d2dd428c26f34918c8d682cf7e-Abstract-Conference.html",
+    "pr-1042": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/c7d04ce5e71efdfc7a4a78f7161238a9-Abstract-Conference.html",
+    "pr-1043": "https://proceedings.mlr.press/v305/haon25a.html",
+    "pr-1044": "https://proceedings.mlr.press/v270/skand25a.html",
+    "pr-1045": "https://openaccess.thecvf.com/content/CVPR2026/html/Fei_LIBERO-Plus_A_Progressive_Robustness_Benchmark_for_Visual-Language-Action_Models_CVPR_2026_paper.html",
+    "pr-1046": "https://roboticsproceedings.org/rss20/p133.html",
+    "pr-1047": "https://proceedings.mlr.press/v306/dai26c.html",
+    "pr-1048": "https://proceedings.mlr.press/v306/li26hi.html",
+    "pr-1049": "https://proceedings.mlr.press/v305/yao25a.html",
+    "pr-1050": "https://www.roboticsproceedings.org/rss20/p007.html",
+    "pr-1051": "https://roboticsproceedings.org/rss20/p010.html",
+    "pr-1052": "https://www.ecva.net/papers/eccv_2024/papers_ECCV/html/5748_ECCV_2024_paper.php",
+    "pr-1053": "https://arxiv.org/abs/2501.04693",
+    "pr-1054": "https://arxiv.org/abs/2510.03827",
+    "pr-1055": "https://arxiv.org/abs/2605.27759"
+})
+FOCUS_REVIEW_DATES.update(dict.fromkeys((f"pr-{n:04d}" for n in range(1038, 1056)), "2026-10-25"))
+
+# Top-tier Robotics/AI supplement, 2026-10-25; no prior membership removed.
+NEXT_GROUPS["VLA, cross-embodiment, and long-horizon planning"].extend([
+    "=RoboArena: Distributed Real-World Evaluation of Generalist Robot Policies",
+    "=A Taxonomy for Evaluating Generalist Robot Manipulation Policies",
+    "=Gen2Act: Human Video Generation in Novel Scenarios enables Generalizable Robot Manipulation",
+    "=Mobility VLA: Multimodal Instruction Navigation with Long-Context VLMs and Topological Graphs"
+])
+NEXT_GROUPS["Contact-rich, deformable, force, and dexterous manipulation"].extend([
+    "=FMB: A functional manipulation benchmark for generalizable robotic learning",
+    "=Learning Visuotactile Estimation and Control for Non-prehensile Manipulation under Occlusions"
+])
+NEXT_GROUPS["RL, IL, offline learning, and robot data"].extend([
+    "=ReMix: Optimizing Data Mixtures for Large Scale Imitation Learning",
+    "=DexMimicGen: Automated Data Generation for Bimanual Dexterous Manipulation via Imitation Learning",
+    "=TRANSIC: Sim-to-Real Policy Transfer by Learning from Online Correction",
+    "=Equivariant diffusion policy for sample-efficient robotic manipulation"
+])
+NEXT_GROUPS["Locomotion, whole-body control, mobile manipulation, and humanoids"].extend([
+    "=TidyBot++: An Open-Source Holonomic Mobile Manipulator for Robot Learning"
+])
+NEXT_GROUPS["Active and embodied 3D Vision"].extend([
+    "=PhysTwin: Physics-Informed Reconstruction and Simulation of Deformable Objects from Videos"
+])
+FOCUS_PRIORITY_RATIONALES.update({
+    "pr-1056": "LIBERO-Plus·THE COLOSSEUM의 고정 benchmark와 구별되는 실환경 평가 기준을 보완한다.",
+    "pr-1057": "VLA 일반화 주장을 시각 변화·언어 이해·행동 변화로 분해할 평가 formulation이다.",
+    "pr-1058": "범용 pick-and-place 성능과 접촉 조립 능력을 구분할 benchmark를 보완한다.",
+    "pr-1059": "DataMIL의 subset 선택과 domain-level mixture 최적화를 구분하는 필수 비교군이다.",
+    "pr-1060": "여러 embodiment의 데이터를 늘릴 때 실제 시연과 합성 trajectory의 역할을 비교할 자산이다.",
+    "pr-1061": "새 RL/VLA 적응 기여를 주장하기 전에 인간 개입·residual 학습으로 설명되는 이득을 대조한다.",
+    "pr-1062": "VLA의 video prior가 action supervision을 어떻게 보완하는지 비교할 직접 선행이다.",
+    "pr-1063": "NaVILA·NoMaD와 비교할 계층형 VLA navigation 및 환경 사전정보 기준이다.",
+    "pr-1064": "다양한 로봇 연구에서 policy 성능과 base의 운동학적 자유도 차이를 구분할 플랫폼 기준이다.",
+    "pr-1065": "3D 외관 재구성과 행동에 유용한 물성 모델을 구별할 직접 연결 연구다.",
+    "pr-1066": "일반화 이득이 더 큰 VLA보다 대칭성 같은 inductive bias로 설명되는지 대조할 기준이다.",
+    "pr-1068": "접촉 VLA의 센서 이득과 상태 추정·feedback controller 이득을 분리할 직접 대안이다."
+})
+FOCUS_REFERENCE_RATIONALES.update({
+    "pr-1067": "언어 기반 skill 조합과 전문가가 명시한 물리적 요구·종료 조건을 비교할 참조다.",
+    "pr-1069": "명시적 video model 사용과 정책에 내재한 예측 능력을 구별하는 AI 이론 참조다.",
+    "pr-1070": "VLA world model의 시각 품질·정책 순위와 환경 이해를 구분할 평가 방법론이다.",
+    "pr-1071": "로봇 시연의 숨은 정보 문제를 단순 모델 불확실성과 혼동하지 않게 하는 방법론 참조다.",
+    "pr-1072": "VLA history 추가를 새 해결책으로 주장하기 전에 정보 비대칭과 도구변수 조건을 점검할 선행이다."
+})
+FOCUS_SOURCE_CHECKS.update({
+    "pr-1056": "https://proceedings.mlr.press/v305/atreya25a.html",
+    "pr-1057": "https://api.crossref.org/works/10.1109/LRA.2026.3656785",
+    "pr-1058": "https://journals.sagepub.com/doi/full/10.1177/02783649241276017",
+    "pr-1059": "https://proceedings.mlr.press/v270/hejna25a.html",
+    "pr-1060": "https://api.crossref.org/works/10.1109/ICRA55743.2025.11127809",
+    "pr-1061": "https://proceedings.mlr.press/v270/jiang25a.html",
+    "pr-1062": "https://proceedings.mlr.press/v305/bharadhwaj25a.html",
+    "pr-1063": "https://proceedings.mlr.press/v270/xu25b.html",
+    "pr-1064": "https://proceedings.mlr.press/v270/wu25a.html",
+    "pr-1065": "https://openaccess.thecvf.com/content/ICCV2025/html/Jiang_PhysTwin_Physics-Informed_Reconstruction_and_Simulation_of_Deformable_Objects_from_Videos_ICCV_2025_paper.html",
+    "pr-1066": "https://journals.sagepub.com/doi/10.1177/02783649261424445",
+    "pr-1067": "https://www.nature.com/articles/s42256-025-01045-3",
+    "pr-1068": "https://proceedings.mlr.press/v270/ferrandis25a.html",
+    "pr-1069": "https://proceedings.mlr.press/v267/richens25a.html",
+    "pr-1070": "https://proceedings.mlr.press/v306/warrier26a.html",
+    "pr-1071": "https://proceedings.iclr.cc/paper_files/paper/2024/hash/0b9ff9baa226af39f86045ecdc173672-Abstract-Conference.html",
+    "pr-1072": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/4415e8cb0741bc0beb79b316f0856108-Abstract-Conference.html"
+})
+FOCUS_REVIEW_DATES.update(dict.fromkeys((f"pr-{n:04d}" for n in range(1056, 1073)), "2026-10-25"))
+FOCUS_SOURCE_CHECKS["pr-0914"] = "https://www.science.org/doi/10.1126/scirobotics.ads5033"
+FOCUS_REVIEW_DATES["pr-0914"] = "2026-10-25"
+
+# Active HANDOFF prerequisites, 2026-10-28; preserve all earlier membership.
+NEXT_GROUPS["Locomotion, whole-body control, mobile manipulation, and humanoids"].append("=Mobi-π: Mobilizing Your Robot Learning Policy")
+NEXT_GROUPS["VLA, cross-embodiment, and long-horizon planning"].append("=Behavior-Skill: A Fine-Grained Benchmark for Evaluating Vision-Language-Action Policies in Long-Horizon Tasks")
+FOCUS_PRIORITY_RATIONALES.update({
+    "pr-1073": "Mobile ALOHA의 whole-body 데이터와 MoTo의 이동–조작 연결을 보완하며, HANDOFF의 정책별 도착 조건을 비교할 직접 선행이다.",
+    "pr-1074": "현재 HANDOFF P0의 직접적인 benchmark/source prerequisite다. 전체 task 성공률과 독립 skill 능력의 차이를 읽을 NEXT로 추가하되 preprint status를 유지한다.",
+})
+FOCUS_SOURCE_CHECKS.update({
+    "pr-1073": "https://proceedings.mlr.press/v305/yang25b.html",
+    "pr-1074": "https://arxiv.org/abs/2608.30536",
+})
+FOCUS_REVIEW_DATES.update({"pr-1073": "2026-10-28", "pr-1074": "2026-10-28"})
+
+# Active instruction revision prerequisites, 2026-10-31.
+NEXT_GROUPS["VLA, cross-embodiment, and long-horizon planning"].extend([
+    "=ReSteer: Quantifying and Refining the Steerability of Multitask Robot Policies",
+    "=Causeway: Restoring Task Accessibility for Instruction Switching in VLA Policies",
+    "=Do VLAs Really Follow Instructions? Diagnosing How-Level Instruction Following in Vision-Language-Action Models",
+])
+FOCUS_PRIORITY_RATIONALES.update({
+    "pr-1075": "현재 부분 지시 수정 후보의 기본 switching 선행이자 최소 실행의 직접 prerequisite다. 단순 task switch나 행동 큐 교체를 신규 기여로 삼지 않도록 NEXT에 추가한다.",
+    "pr-1076": "전환 실패를 의미 기억 오류로 오인하지 않기 위한 직접 경쟁 설명이다. 새 목표의 물리적 실행 가능성과 언어 해석을 분리할 NEXT로 추가하며 preprint status를 유지한다.",
+    "pr-1077": "현재 제약 유지·철회 후보에서 지시 반응, 목표 성공, 제약 준수를 분리할 직접 진단 선행이다. 평가 정의 자체를 새 기여로 과장하지 않기 위한 NEXT이며 preprint로 둔다.",
+})
+FOCUS_SOURCE_CHECKS.update({
+    "pr-1075": "https://roboticsproceedings.org/rss22/p143.html",
+    "pr-1076": "https://arxiv.org/abs/2609.30913",
+    "pr-1077": "https://arxiv.org/abs/2610.21251",
+})
+FOCUS_REVIEW_DATES.update(dict.fromkeys(("pr-1075", "pr-1076", "pr-1077"), "2026-10-31"))
+
+
+# Active object-set/counting prerequisites, 2026-11-01; preserve prior membership.
+NEXT_GROUPS["VLA, cross-embodiment, and long-horizon planning"].extend([
+    "=ClevrSkills: Compositional Language And Visual Reasoning in Robotics",
+    "=Spa-Bench: A Real-Robot Benchmark for Spatial Grounding in Vision-Language-Action Models",
+])
+NEXT_GROUPS["RL, IL, offline learning, and robot data"].extend([
+    "=Diagnosing Compositional Generalization in Sequential Robot Tasks",
+])
+FOCUS_PRIORITY_RATIONALES.update({
+    "pr-1078": "VIMA·VLABench와 함께 집합/수량 후보의 기존 조합 task와 평가 predicate를 이해할 NEXT benchmark다. 여러 물체 처리·나열 표현 자체를 새 기여로 삼지 않도록 등록한다.",
+    "pr-1079": "집합·수량 후보의 가장 직접적인 counting/직접 지시 비교 선행이다. 알려진 공간 grounding 실패를 새 공백으로 과장하지 않도록 NEXT에 등록하며 preprint 경계를 유지한다.",
+    "pr-1080": "DataMIL·ReMix의 데이터 선택 흐름과 SET의 단순 분해를 연결할 instruction-coverage 선행이다. 분해 자체를 신규 기여로 주장하지 않고 학습 support를 따질 NEXT로 등록한다.",
+})
+FOCUS_SOURCE_CHECKS.update({
+    "pr-1078": "https://proceedings.neurips.cc/paper_files/paper/2024/hash/439539557e9ba0d04055773ff1f3241c-Abstract-Datasets_and_Benchmarks_Track.html",
+    "pr-1079": "https://arxiv.org/abs/2610.12696",
+    "pr-1080": "https://arxiv.org/abs/2607.29687",
+})
+FOCUS_REVIEW_DATES.update(dict.fromkeys(("pr-1078", "pr-1079", "pr-1080"), "2026-11-01"))
+
+# 2026-11-02 official top-tier supplement; 9 NEXT / 1 REFERENCE.
+NEXT_GROUPS["VLA, cross-embodiment, and long-horizon planning"].extend([
+    "=RICL: Adding In-Context Adaptability to Pre-Trained Vision-Language-Action Models",
+    "=Scaling up Memory for Robotic Control via Experience Retrieval",
+    "=LIBERO-X: Robustness Litmus for Vision-Language-Action Models",
+    "=Learning Native Continuation for Action Chunking Flow Policies",
+    "=Stable Language Guidance for Vision–Language–Action Models",
+])
+NEXT_GROUPS["RL, IL, offline learning, and robot data"].extend([
+    "=A Systematic Study of Data Modalities and Strategies for Co-training Large Behavior Models for Robot Manipulation",
+    "=Emergence of Human to Robot Transfer in Vision-Language-Action Models",
+    "=Dejavu: Towards Experience Feedback Learning for Embodied Intelligence",
+])
+NEXT_GROUPS["Locomotion, whole-body control, mobile manipulation, and humanoids"].extend([
+    "=SAGA: Open-World Mobile Manipulation via Structured Affordance Grounding",
+])
+FOCUS_PRIORITY_RATIONALES.update({
+    "pr-1081": "OpenVLA·π0 계열의 후학습과 시연 검색을 잇는 직접 선행이다. 현재 bank 확장 질문에서 이미 알려진 ICL 능력·검색 이득을 신규성으로 재주장하지 않도록 NEXT로 등록한다.",
+    "pr-1082": "MemoryVLA와 계층 정책의 관계를 구체화하는 NEXT다. 외부 시연 검색과 실행 중 기억을 구분하고 SET의 counting 선행을 보완한다.",
+    "pr-1083": "LIBERO·LIBERO-Plus·VLABench 이후 복합 shift와 목표 다양성을 비교할 NEXT benchmark다. 같은 scene의 다른 goal을 다루는 연구에서 기존 평가 범위를 확인하는 데 필요하다.",
+    "pr-1084": "Open X-Embodiment·DataMIL·ReMix 이후 데이터 양과 종류의 효과를 분리하는 NEXT 실증 기준이다. 새로운 아키텍처보다 데이터 구성이라는 단순 대안을 먼저 검토하게 한다.",
+    "pr-1085": "Open X-Embodiment와 사람 영상 기반 로봇 학습을 잇는 NEXT 데이터 조건 연구다. Cross-embodiment 전이를 보편적 성질로 가정하지 않도록 비교 기준을 추가한다.",
+    "pr-1086": "ACT·Diffusion Policy와 RTC 이후 action interface를 이해할 NEXT다. Chunk queue나 지연으로 생긴 차이를 새로운 지시 이해/검색 효과로 혼동하지 않게 한다.",
+    "pr-1087": "Residual RL과 retrieval의 직접 결합이므로 NEXT에 추가한다. Bank 성장·frozen backbone이라는 조합 자체를 새 연구 공백으로 주장하지 않도록 현재 후보의 선행 경계를 보완한다.",
+    "pr-1088": "VoxPoser·Mobile ALOHA와 구조적 3D grounding을 잇는 NEXT다. 다양한 로봇을 다룬다는 목표에서 의미 표현과 embodiment별 제어의 경계를 비교한다.",
+    "pr-1089": "지시 수정·집합 지시·시연 검색 후보가 공유하는 언어 민감성의 NEXT 직접 대안이다. 같은 의미의 표현 차이를 새로운 task conflict로 해석하지 않도록 등록한다.",
+})
+FOCUS_SOURCE_CHECKS.update({
+    "pr-1081": "https://proceedings.mlr.press/v305/sridhar25a.html",
+    "pr-1082": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/9da515b1ad19d032a7398f00f5ff9b0c-Abstract-Conference.html",
+    "pr-1083": "https://roboticsproceedings.org/rss22/p097.html",
+    "pr-1084": "https://roboticsproceedings.org/rss22/p007.html",
+    "pr-1085": "https://roboticsproceedings.org/rss22/p072.html",
+    "pr-1086": "https://roboticsproceedings.org/rss22/p058.html",
+    "pr-1087": "https://openaccess.thecvf.com/content/CVPR2026/html/Wu_Dejavu_Towards_Experience_Feedback_Learning_for_Embodied_Intelligence_CVPR_2026_paper.html",
+    "pr-1088": "https://ieeexplore.ieee.org/document/11568510/",
+    "pr-1089": "https://aclanthology.org/2026.acl-long.190/",
+})
+FOCUS_REVIEW_DATES.update(dict.fromkeys(("pr-1081", "pr-1082", "pr-1083", "pr-1084", "pr-1085", "pr-1086", "pr-1087", "pr-1088", "pr-1089"), "2026-11-02"))
+
+
+# 2026-11-03 direct residual RL prerequisites; 7 NEXT, Q-filter foundation REFERENCE.
+NEXT_GROUPS["VLA, cross-embodiment, and long-horizon planning"].extend([
+    "=Self-Improving Vision-Language-Action Models with Data Generation via Residual RL",
+    "=Object-Centric Residual RL for Zero-Shot Sim-to-Real VLA Enhancement",
+    "=EXPO-FT: Sample-Efficient Reinforcement Learning Finetuning for Vision-Language-Action Models",
+])
+NEXT_GROUPS["RL, IL, offline learning, and robot data"].extend([
+    "=EXPO: Stable Reinforcement Learning with Expressive Policies",
+    "=Policy Decorator: Model-Agnostic Online Refinement for Large Policy Model",
+    "=Accelerating Residual Reinforcement Learning With Uncertainty Estimation",
+    "=From Prior to Pro: Efficient Skill Mastery via Distribution Contractive RL Finetuning",
+])
+FOCUS_PRIORITY_RATIONALES.update({
+    "pr-1091": "VLA의 residual 개선→데이터 생성→base 갱신을 잇는 직접 선행이다. 현재 후보에서 이 루프 자체를 새 기여로 주장하지 않도록 NEXT에 추가한다.",
+    "pr-1092": "Object-centric residual의 전이를 이미 다룬 직접 충돌 선행이다. 다양한 로봇·base 갱신 전이와 sim-to-real 전이를 구분할 NEXT다.",
+    "pr-1093": "Residual/editor와 value 선택을 결합한 강한 직접 baseline이다. Q 선택·base 모방·editor RL이라는 조합 자체의 신규성 주장을 막는 NEXT다.",
+    "pr-1094": "현재 VLA+RL 후보의 가장 가까운 공동 적응 baseline이다. 독립 base 갱신과 editor 공동 학습을 구별할 NEXT다.",
+    "pr-1095": "Frozen large policy+bounded residual의 핵심 비교 선행이다. 현재 후보의 scalar gain·탐색 schedule이라는 단순 대안을 놓치지 않도록 NEXT에 추가한다.",
+    "pr-1096": "현재 후보의 critic mismatch 대안을 검토할 직접 선행이다. 합성 행동 critic을 새 알고리즘으로 재주장하지 않도록 NEXT에 등록한다.",
+    "pr-1098": "Frozen prior+residual+선택적 모방의 최신 직접 선행이다. 현재 후보의 규칙 조합만으로 독립 방법 기여를 주장하지 않도록 NEXT에 추가한다.",
+})
+FOCUS_SOURCE_CHECKS.update({
+    "pr-1091": "https://iclr.cc/virtual/2026/poster/10008318",
+    "pr-1092": "https://www.corl.org/program/accepted-papers",
+    "pr-1093": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/d56a652ad743308b24b6c4d0e6411dd7-Abstract-Conference.html",
+    "pr-1094": "https://www.corl.org/program/accepted-papers",
+    "pr-1095": "https://proceedings.iclr.cc/paper_files/paper/2025/hash/45c361d4117d598d4bb6568b407e9ac9-Abstract-Conference.html",
+    "pr-1096": "https://api.crossref.org/works/10.1109/LRA.2025.3636808",
+    "pr-1098": "https://proceedings.mlr.press/v306/sun26al.html",
+})
+FOCUS_REVIEW_DATES.update({
+    "pr-1091": "2026-11-03",
+    "pr-1092": "2026-11-03",
+    "pr-1093": "2026-11-03",
+    "pr-1094": "2026-11-03",
+    "pr-1095": "2026-11-03",
+    "pr-1096": "2026-11-03",
+    "pr-1098": "2026-11-03",
+})
+
+# Publication update retains paper identity and reading inputs.
+FOCUS_REFERENCE_RATIONALES["pr-1097"] = "선택적 Q 기반 imitation의 직접 기원으로 REFERENCE에 추가한다. 2024–2026 최신 동향 수에는 포함하지 않으며 기존 SAC/DDPG 기반 읽기 흐름을 보완한다."
+FOCUS_SOURCE_CHECKS["pr-1097"] = "https://api.crossref.org/works/10.1109/ICRA.2018.8463162"
+FOCUS_REVIEW_DATES["pr-1097"] = "2026-11-03"
+FOCUS_SOURCE_CHECKS["pr-1080"] = "https://www.corl.org/program/accepted-papers"
+FOCUS_REVIEW_DATES["pr-1080"] = "2026-11-03"
+
+# 2026-11-05 integrated review: current six topics and two exploratory questions.
+NEXT_GROUPS["VLA, cross-embodiment, and long-horizon planning"].extend([
+    "=Beyond Appearance Shifts: Task-Semantic Action Calibration for VLA Models",
+    "=Not All Features Are Created Equal: A Mechanistic Study of Vision-Language-Action Models",
+    "=Embodied Interpretability: Linking Causal Understanding to Generalization in Vision-Language-Action Models",
+    "=RobustVLA: Robustness-Aware Reinforcement Post-Training for Vision-Language-Action Models",
+    "=CHORUS: Decentralized Multi-Embodiment Collaboration with One VLA Policy",
+    "=Cooperative Multi-Agent Vision-Language-Action Models via Reinforced Fine Tuning",
+    "=RA-VLA: Retrieval-Augmented VLA for Test-Time Adaptation",
+    "=When Does Retrieval Help? A Study of In-Context Adaptation in Vision-Language-Action Models",
+    "=Beyond Reconstruction: What Matters in Action Tokenization for Robot Policies?",
+])
+NEXT_GROUPS["RL, IL, offline learning, and robot data"].extend([
+    "=Latent Theory of Mind: A Decentralized Diffusion Architecture for Cooperative Manipulation",
+])
+NEXT_GROUPS["World models, uncertainty, failure detection, and recovery"].extend([
+    "=DRILL: Training World Models to Improve Policies, Not Predict Pixels",
+])
+FOCUS_PRIORITY_RATIONALES.update({
+    "pr-1099": "REVISION·FEEDBACK·residual 보정의 직접 충돌 선행. 변화에 반응하고 nuisance에 불변이라는 broad proposal의 재발명을 막는다.",
+    "pr-1100": "FEEDBACK의 출발 근거이자 과장 방지 선행. Activation replay 결과와 자연 정책의 closed-loop 행동을 구별하는 NEXT.",
+    "pr-1101": "FEEDBACK에서 attribution 자체를 새 기여로 주장하지 않도록 하는 직접 진단 baseline.",
+    "pr-1102": "FEEDBACK에서 단순 Jacobian 억제·강건 RL을 새 방법으로 제안하지 않도록 하는 직접 비교.",
+    "pr-1103": "CROSSPLAY의 decentralized 협력·상대 행동 모델링은 이미 존재함을 보여 주는 CoRL 직접 선행.",
+    "pr-1104": "CROSSPLAY에서 여러 embodiment·local-only 협력 자체를 새 기여로 주장하지 않도록 하는 직접 선행.",
+    "pr-1105": "CROSSPLAY에서 VLA+MARL 결합 자체의 신규성을 배제하는 가장 가까운 RL 선행.",
+    "pr-1106": "World-model utility라는 broad gap의 직접 충돌을 registry에 남겨 같은 제안을 반복하지 않도록 한다.",
+    "pr-1107": "RETRIEVAL 후보의 semantic retrieval·execution 결합이라는 넓은 주장이 이미 존재함을 확인하는 ICML 직접 선행.",
+    "pr-1108": "RETRIEVAL의 가장 직접적인 진단 선행으로, 단순 cross-task interference 발견만으로 기여를 주장하지 않게 한다.",
+    "pr-1109": "CODEC1의 broad motivation과 prefix/replanning confound를 가장 직접적으로 제한하는 선행.",
+})
+FOCUS_REFERENCE_RATIONALES.update({
+    "pr-1110": "FEEDBACK의 표현/행동 연결 진단 도구로 REFERENCE에 보존한다. 기존 mechanistic NEXT와 중복되는 도구 축이며 현재 학습 메커니즘의 직접 검증은 아니다.",
+})
+FOCUS_SOURCE_CHECKS.update({
+    "pr-1099": "https://neurips.cc/Downloads/2026",
+    "pr-1100": "https://neurips.cc/Downloads/2026",
+    "pr-1101": "https://proceedings.mlr.press/v306/zhang26gz.html",
+    "pr-1102": "https://arxiv.org/abs/2511.01331",
+    "pr-1103": "https://proceedings.mlr.press/v305/he25a.html",
+    "pr-1104": "https://arxiv.org/abs/2606.12352",
+    "pr-1105": "https://arxiv.org/abs/2609.36588",
+    "pr-1106": "https://neurips.cc/Downloads/2026",
+    "pr-1107": "https://proceedings.mlr.press/v306/jang26c.html",
+    "pr-1108": "https://arxiv.org/abs/2610.05492",
+    "pr-1109": "https://arxiv.org/abs/2610.09170",
+    "pr-1110": "https://aclanthology.org/2026.emnlp-main.2076/",
+})
+FOCUS_REVIEW_DATES.update({
+    "pr-1099": "2026-11-05",
+    "pr-1100": "2026-11-05",
+    "pr-1101": "2026-11-05",
+    "pr-1102": "2026-11-05",
+    "pr-1103": "2026-11-05",
+    "pr-1104": "2026-11-05",
+    "pr-1105": "2026-11-05",
+    "pr-1106": "2026-11-05",
+    "pr-1107": "2026-11-05",
+    "pr-1108": "2026-11-05",
+    "pr-1109": "2026-11-05",
+    "pr-1110": "2026-11-05",
+})
+
+# 2026-11-08 REG-R12: official 2024–2026 proceedings supplement.
+NEXT_GROUPS['RL, IL, offline learning, and robot data'].extend(['=PolaRiS: Scalable Real-to-Sim Evaluations for Generalist Robot Policies', '=MolmoSpaces: Large-Scale Open Ecosystem for Robot Manipulation and Navigation', '=When Life Gives You BC, Make Q-functions: Extracting Q-values from Behavior Cloning for On-Robot Reinforcement Learning', '=Long-Context Robot Imitation Learning by Focusing on Key History Frames', '=TMRL: Diffusion Timestep-Modulated Pretraining Enables Exploration for Efficient Policy Finetuning', '=ReWiND: Language-Guided Rewards Teach Robot Policies without New Demonstrations', '=CoMo: Learning Continuous Latent Motion from Internet Videos for Scalable Robot Learning', '=General Process Reward Modeling for Robotic Reinforcement Learning', '=Lifelong Autonomous Improvement of Navigation Foundation Models in the Wild', '=Steering Your Generalists: Improving Robotic Foundation Models via Value Guidance', '=DEAS: DEtached value learning with Action Sequence for Scalable Offline RL', '=PRIMT: Preference-based Reinforcement Learning with Multimodal Feedback and Trajectory Synthesis from Foundation Models'])
+NEXT_GROUPS['VLA, cross-embodiment, and long-horizon planning'].extend(['=LongNav-R1: Horizon-Adaptive Multi-Turn RL for Long-Horizon VLA Navigation', '=Visual Verification Enables Inference-time Steering and Autonomous Policy Improvement', '=Towards Long-Lived Robots: Continual Learning VLA Models via Reinforcement Fine-Tuning', '=LDA-1B: Scaling Latent Dynamics Action Model via Universal Embodied Data Ingestion', '=ControlVLA: Few-shot Object-centric Adaptation for Pre-trained Vision-Language-Action Models', '=SRPO: Self-Referential Policy Optimization for Vision-Language-Action Models', '=Joint-Aligned Latent Action: Towards Scalable VLA Pretraining in the Wild', '=RehearseVLA: Simulated Post-Training for VLAs with Physically-Consistent World Model', '=Contrast Sets for Evaluating Language-Guided Robot Policies', '=Fast-ThinkAct: Efficient Vision-Language-Action Reasoning via Verbalizable Latent Planning', '=MM-ACT: Learn from Multimodal Parallel Generation to Act', '=EvoVLA: Self-evolving Vision-Language-Action Model', '=Restoring Linguistic Grounding in VLA Models via Train-Free Attention Recalibration', '=VLA-R1: Enhancing Reasoning in Vision-Language-Action Models', '=MobileVLA-R1: Reinforcing Vision-Language-Action for Mobile Robots', '=Scaling Verification Can Be More Effective than Scaling Policy Learning for Vision-Language-Action Alignment', '=GRAD-NAV++: Vision-Language Model Enabled Visual Drone Navigation With Gaussian Radiance Fields and Differentiable Dynamics'])
+NEXT_GROUPS['Contact-rich, deformable, force, and dexterous manipulation'].extend(['=Force Policy: Learning Hybrid Force-Position Control Policy under Interaction Frame for Contact-Rich Manipulation', '=Emergent Dexterity Via Diverse Resets and Large-Scale Reinforcement Learning'])
+NEXT_GROUPS['Planning, control, simulation, and TAMP extensions'].extend(['=KinDER: A Physical Reasoning Benchmark for Robot Learning and Planning'])
+NEXT_GROUPS['Locomotion, whole-body control, mobile manipulation, and humanoids'].extend(['=MoMa-Kitchen: A 100K+ Benchmark for Affordance-Grounded Last-Mile Navigation in Mobile Manipulation'])
+FOCUS_PRIORITY_RATIONALES.update({
+    'pr-1118': 'SIMPLER·RoboCasa의 점수를 실제 개선으로 해석하기 전 필요한 평가 타당성 비교다.',
+    'pr-1119': '조작에서 설계한 VLA+RL 목적함수가 항법의 긴 시간축에도 유효한지 비교할 직접 선행이다.',
+    'pr-1120': 'RL 자체의 기여를 주장할 때 반드시 비교할 자율 데이터 선택·모방 대안이다.',
+    'pr-1121': '환경 return 최적화와 참조 행동 기반 RLVR을 구별하기 위한 직접 비교다.',
+    'pr-1122': '현재 후보의 한 benchmark 의존을 줄일 추가 환경·데이터 자원이다.',
+    'pr-1124': 'Unified VLA의 접촉 기여가 분리된 고주파 힘 제어보다 나은지 판단할 비교 기준이다.',
+    'pr-1125': 'BC prior 보존을 새 unified objective 없이 달성하는 강한 대안이다.',
+    'pr-1126': 'VLA의 실패가 언어 표현 문제인지 물리적 의사결정 문제인지 진단할 자원이다.',
+    'pr-1127': 'VLA memory를 늘리는 것과 필요한 정보만 남기는 것의 차이를 검증할 직접 선행이다.',
+    'pr-1128': 'VLA 내부 학습을 제안할 때 비교해야 할 사전학습 coverage·탐색 조절 대안이다.',
+    'pr-1129': '단일 모델의 행동·세계 예측 공유를 새 기여로 제안하기 전에 비교할 핵심 구조다.',
+    'pr-1130': '새 VLA-RL 보상이나 실패 재사용이 기존 언어 보상 일반화와 어떻게 다른지 비교할 선행이다.',
+    'pr-1131': 'RL이 반드시 필요한지를 판단할 저데이터 SFT·표현 적응 비교다.',
+    'pr-1133': 'HINDSIGHT의 실패 재사용이 이미 존재하는 self-reference reward shaping과 다른지 검토할 직접 선행이다.',
+    'pr-1134': 'Unified VLA-RL의 action representation 기여를 판단할 사전학습 비교 기준이다.',
+    'pr-1135': '행동 공간의 통합이 discrete/continuous 선택 자체의 효과인지 분리할 비교다.',
+    'pr-1136': 'VLA+RL 보상 설계와 HINDSIGHT의 대안 설명을 검토할 직접 선행이다.',
+    'pr-1137': 'VLAW 등과 함께 imagined rollout으로 실제 interaction을 대체하는 직접 비교 기준이다.',
+    'pr-1138': 'VLA+RL을 manipulation과 navigation에 통합할 때 성공 조건을 구체화하는 benchmark다.',
+    'pr-1140': 'VLA+RL의 지속 학습을 manipulation에 한정하지 않고 실제 항법 운영 조건과 비교할 기준이다.',
+    'pr-1141': 'VLA+RL 개선이 언어 민감도까지 바꾸는지 적은 실행으로 진단할 평가 설계의 선행이다.',
+    'pr-1143': '단일 정책을 RL로 갱신하는 방법이 추론 후보 선택보다 필요한 이유를 검증할 직접 대조군이다.',
+    'pr-1144': 'Chunk-aware actor-critic과 공유 표현 연구에서 반드시 넘어야 하는 직접 offline RL 선행이다.',
+    'pr-1146': 'VLA-RL의 탐색 개선이 정책 방법보다 reset coverage에서 오는지 분리할 중요한 대조군이다.',
+    'pr-1148': 'Hindsight 재사용과 foundation reward 결합이 이미 연구되었음을 보여 주는 비교 선행이다.',
+    'pr-1151': 'RL reasoning의 이득을 긴 텍스트 출력 없이 행동에 전달하는 대안으로 비교한다.',
+    'pr-1152': '하나의 VLA 내부 통합을 설계할 architecture 선행이며 RL objective 통합 효과로 해석하지 않는다.',
+    'pr-1154': 'VLA+RL 보상 개선에서 이미 다룬 near-miss 구분과 실제 물리 완료의 선행이다.',
+    'pr-1155': 'RL 이후 성공률이 언어 grounding을 보장하지 않는다는 직접 평가·간단 대안이다.',
+    'pr-1156': 'VLA의 RL이 환경 return이 아닌 검증 가능한 중간 출력 보상일 때의 직접 비교 기준이다.',
+    'pr-1157': 'Manipulation 외에 단일 VLA 후학습을 검토할 모바일 로봇 선행이다.',
+    'pr-1158': '정책 RL 갱신의 필요성을 검증할 강한 추론 계산량·검증 대안이다.',
+    'pr-1161': '언어·시각·행동과 differentiable RL을 결합한 직접 항법 선행이다. 기존 GRaD-Nav의 언어 조건부 확장이라 별도 등록한다.',
+})
+FOCUS_REFERENCE_RATIONALES.update({
+    'pr-1123': '새 VLA-RL 구조의 필요성을 판단할 때 참고할 강한 off-policy 학습 baseline이다.',
+    'pr-1132': '항법 VLA-RL에 인간 선호 보상을 붙일 때 참고할 구체적 reward-learning 대안이다.',
+    'pr-1139': '행동 표현을 통합하는 연구에서 object motion과 robot motion의 차이를 보존할 대안이다.',
+    'pr-1142': '단일 VLA 내부 RL이 계층형 분해보다 어떤 비용·일반화 이점을 주는지 비교하는 시스템 대안이다.',
+    'pr-1145': 'Diffusion RL 안정화의 알고리즘 대안으로 참고하며 로봇 조작 효과는 별도 검증한다.',
+    'pr-1147': 'Cross-embodiment VLA-RL의 필요성을 검증할 기하 prior+동역학 적응 기준이다.',
+    'pr-1149': '시각 VLA에 촉각을 넣기 전에 입력 유용성과 표현 학습을 분리할 진단 자원이다.',
+    'pr-1150': 'VLA policy RL과 world model RL을 구분하며 예측 개선이 행동에 전달되는지 물을 비교 자료다.',
+    'pr-1153': '적응을 RL update 없이 해결하는 비교 대안으로 등록한다.',
+    'pr-1159': 'VLA-RL 성능 병목이 reward보다 공간 지각에 있을 때 비교할 표현 대안이다.',
+    'pr-1160': '정책 내부 표현·미래 예측이 항법에 주는 효과를 RL 기여와 분리할 기준이다.',
+})
+FOCUS_SOURCE_CHECKS.update({
+    'pr-1118': 'https://roboticsproceedings.org/rss22/p062.html',
+    'pr-1119': 'https://roboticsproceedings.org/rss22/p068.html',
+    'pr-1120': 'https://roboticsproceedings.org/rss22/p079.html',
+    'pr-1121': 'https://roboticsproceedings.org/rss22/p086.html',
+    'pr-1122': 'https://roboticsproceedings.org/rss22/p091.html',
+    'pr-1123': 'https://roboticsproceedings.org/rss22/p099.html',
+    'pr-1124': 'https://roboticsproceedings.org/rss22/p128.html',
+    'pr-1125': 'https://roboticsproceedings.org/rss22/p153.html',
+    'pr-1126': 'https://roboticsproceedings.org/rss22/p184.html',
+    'pr-1127': 'https://roboticsproceedings.org/rss22/p201.html',
+    'pr-1128': 'https://roboticsproceedings.org/rss22/p208.html',
+    'pr-1129': 'https://roboticsproceedings.org/rss22/p210.html',
+    'pr-1130': 'https://proceedings.mlr.press/v305/zhang25a.html',
+    'pr-1131': 'https://proceedings.mlr.press/v305/li25c.html',
+    'pr-1132': 'https://proceedings.mlr.press/v305/seneviratne25a.html',
+    'pr-1133': 'https://openaccess.thecvf.com/content/CVPR2026/html/Fei_SRPO_Self-Referential_Policy_Optimization_for_Vision-Language-Action_Models_CVPR_2026_paper.html',
+    'pr-1134': 'https://openaccess.thecvf.com/content/CVPR2026/html/Luo_Joint-Aligned_Latent_Action_Towards_Scalable_VLA_Pretraining_in_the_Wild_CVPR_2026_paper.html',
+    'pr-1135': 'https://openaccess.thecvf.com/content/CVPR2026/html/Yang_CoMo_Learning_Continuous_Latent_Motion_from_Internet_Videos_for_Scalable_CVPR_2026_paper.html',
+    'pr-1136': 'https://openaccess.thecvf.com/content/CVPR2026/html/Tan_General_Process_Reward_Modeling_for_Robotic_Reinforcement_Learning_CVPR_2026_paper.html',
+    'pr-1137': 'https://openaccess.thecvf.com/content/CVPR2026/html/Xiao_RehearseVLA_Simulated_Post-Training_for_VLAs_with_Physically-Consistent_World_Model_CVPR_2026_paper.html',
+    'pr-1138': 'https://openaccess.thecvf.com/content/ICCV2025/html/Zhang_MoMa-Kitchen_A_100K_Benchmark_for_Affordance-Grounded_Last-Mile_Navigation_in_Mobile_ICCV_2025_paper.html',
+    'pr-1139': 'https://openaccess.thecvf.com/content/ICCV2025/html/Chen_EC-Flow_Enabling_Versatile_Robotic_Manipulation_from_Action-Unlabeled_Videos_via_Embodiment-Centric_ICCV_2025_paper.html',
+    'pr-1140': 'https://proceedings.mlr.press/v270/stachowicz25a.html',
+    'pr-1141': 'https://proceedings.mlr.press/v270/anwar25a.html',
+    'pr-1142': 'https://proceedings.mlr.press/v270/zhou25a.html',
+    'pr-1143': 'https://proceedings.mlr.press/v270/nakamoto25a.html',
+    'pr-1144': 'https://proceedings.iclr.cc/paper_files/paper/2026/hash/68b7f71467c83d5d32275c5acbf6b588-Abstract-Conference.html',
+    'pr-1145': 'https://proceedings.iclr.cc/paper_files/paper/2026/hash/64a0192102e1421a2b2c15ae0bdb9f3a-Abstract-Conference.html',
+    'pr-1146': 'https://proceedings.iclr.cc/paper_files/paper/2026/hash/8e3e3488623d64c493a7f11cf1f2e49f-Abstract-Conference.html',
+    'pr-1147': 'https://proceedings.iclr.cc/paper_files/paper/2026/hash/514bdfb12b318ad02c6f28dc68f2feea-Abstract-Conference.html',
+    'pr-1148': 'https://proceedings.neurips.cc/paper_files/paper/2025/hash/e0d760e4495abf701b97c8acda111372-Abstract-Conference.html',
+    'pr-1149': 'https://proceedings.neurips.cc/paper_files/paper/2025/hash/bc09efb501c801ed92e181e26a885c2d-Abstract-Conference.html',
+    'pr-1150': 'https://proceedings.neurips.cc/paper_files/paper/2025/hash/b63a24a1832bd14fa945c71f535c0095-Abstract-Conference.html',
+    'pr-1151': 'https://openaccess.thecvf.com/content/CVPR2026/html/Huang_Fast-ThinkAct_Efficient_Vision-Language-Action_Reasoning_via_Verbalizable_Latent_Planning_CVPR_2026_paper.html',
+    'pr-1152': 'https://openaccess.thecvf.com/content/CVPR2026/html/Liang_MM-ACT_Learn_from_Multimodal_Parallel_Generation_to_Act_CVPR_2026_paper.html',
+    'pr-1153': 'https://link.springer.com/chapter/10.1007/978-3-032-37531-5_16',
+    'pr-1154': 'https://link.springer.com/chapter/10.1007/978-3-032-37023-5_14',
+    'pr-1155': 'https://link.springer.com/chapter/10.1007/978-3-032-37152-2_3',
+    'pr-1156': 'https://eccv.ecva.net/Conferences/2026/AcceptedPapers',
+    'pr-1157': 'https://eccv.ecva.net/Conferences/2026/AcceptedPapers',
+    'pr-1158': 'https://eccv.ecva.net/Conferences/2026/AcceptedPapers',
+    'pr-1159': 'https://ieeexplore.ieee.org/document/11661761/',
+    'pr-1160': 'https://ieeexplore.ieee.org/document/11673313/',
+    'pr-1161': 'https://ieeexplore.ieee.org/document/11297793/',
+})
+FOCUS_REVIEW_DATES.update(dict.fromkeys(['pr-1118', 'pr-1119', 'pr-1120', 'pr-1121', 'pr-1122', 'pr-1123', 'pr-1124', 'pr-1125', 'pr-1126', 'pr-1127', 'pr-1128', 'pr-1129', 'pr-1130', 'pr-1131', 'pr-1132', 'pr-1133', 'pr-1134', 'pr-1135', 'pr-1136', 'pr-1137', 'pr-1138', 'pr-1139', 'pr-1140', 'pr-1141', 'pr-1142', 'pr-1143', 'pr-1144', 'pr-1145', 'pr-1146', 'pr-1147', 'pr-1148', 'pr-1149', 'pr-1150', 'pr-1151', 'pr-1152', 'pr-1153', 'pr-1154', 'pr-1155', 'pr-1156', 'pr-1157', 'pr-1158', 'pr-1159', 'pr-1160', 'pr-1161'], "2026-11-08"))
+
+# 2026-11-09 REG-R13: contact-adaptation prerequisites; abstract evidence only.
+NEXT_GROUPS['VLA, cross-embodiment, and long-horizon planning'].extend(['=TacCoRL: Integrating Tactile Feedback into VLA via Simulation', '=CompVLA: A Variable Compliance Vision-Language-Action Model for Contact-rich Manipulation', '=TORL-VLA: Tactile Guided Online Reinforcement Learning for Contact-Rich Manipulation', '=ForceRFT: Refining VLA Actions through Force-Guided Residual Reinforcement Learning', '=Facet-0: A Robotic Foundation Model for Contact-Rich Precise Manipulation', '=πRL: Online RL Fine-tuning for Flow-based Vision-Language-Action Models'])
+NEXT_GROUPS['Contact-rich, deformable, force, and dexterous manipulation'].extend(['=FORGE: Force-Guided Exploration for Robust Contact-Rich Manipulation Under Uncertainty', '=ContactBench 1.0: A Benchmark for Everyday Contact-Rich Robotic Manipulation'])
+FOCUS_PRIORITY_RATIONALES.update({'pr-1162': '촉각 추가와 단일 VLA RL 자체가 이미 선행임을 확인할 직접 비교다.', 'pr-1163': '강성 출력을 VLA에 추가하는 것 자체의 신규성을 배제할 직접 선행이다.', 'pr-1164': '접촉 VLA의 online RL과 사람 개입 credit 처리가 이미 다뤄졌음을 확인할 비교다.', 'pr-1165': 'RL 이득이 성공 데이터 선택·추가 imitation으로 설명되는지 판단할 직접 선행이다.', 'pr-1166': 'VLA의 추가 복잡도 전에 넘어야 할 비-VLA 접촉 RL 기준선이다.', 'pr-1167': '접촉 일반화 질문을 구체적인 물리 변화와 재현 자산으로 정의할 benchmark다.', 'pr-1168': 'Action–wrench 예측·가치·RL 결합 자체의 중복을 점검할 직접 경쟁 선행이다.', 'pr-1171': '현재 π₀ Flow-SDE/PPO backend의 likelihood·탐색 정의를 이해할 직접 prerequisite다.'})
+FOCUS_REFERENCE_RATIONALES.update({'pr-1169': '동작·강성 공동 RL 자체가 새롭지 않음을 보이는 controller 비교 자료다.', 'pr-1170': '단일 VLA RL 이전에 비교할 학습 없는 context/force 기반 controller 대안이다.'})
+FOCUS_SOURCE_CHECKS.update({'pr-1162': 'https://arxiv.org/abs/2606.11743', 'pr-1163': 'https://arxiv.org/abs/2609.23614', 'pr-1164': 'https://arxiv.org/abs/2606.09337', 'pr-1165': 'https://arxiv.org/abs/2609.22840', 'pr-1166': 'https://api.crossref.org/works/10.1109/LRA.2025.3551637', 'pr-1167': 'https://arxiv.org/abs/2610.24512', 'pr-1168': 'https://arxiv.org/abs/2609.01596', 'pr-1169': 'https://arxiv.org/abs/2609.13516', 'pr-1170': 'https://arxiv.org/abs/2601.15541', 'pr-1171': 'https://arxiv.org/abs/2510.25889'})
+FOCUS_REVIEW_DATES.update(dict.fromkeys(['pr-1162', 'pr-1163', 'pr-1164', 'pr-1165', 'pr-1166', 'pr-1167', 'pr-1168', 'pr-1169', 'pr-1170', 'pr-1171'], "2026-11-09"))
+
+# 2026-11-12 REG-R14: register cited retention/timing/memory prerequisites; abstract evidence.
+NEXT_GROUPS['RL, IL, offline learning, and robot data'].extend(["=RL's Razor: Why Online Reinforcement Learning Forgets Less"])
+NEXT_GROUPS['VLA, cross-embodiment, and long-horizon planning'].extend(['=Breaking Lock-In: Preserving Steerability under Low-Data VLA Post-Training', '=TEMPO: Semantic-Action Decoupled RL Post-Training for Vision-Language-Action Models', '=When Vision Overrides Language: Evaluating and Mitigating Counterfactual Failures in VLAs', '=Trajectory-Level Continuous Action Representation for Robotic Manipulation', "=Is Your Robot's Memory Just a Clock? Temporal Shortcuts in Memory-Augmented VLA Policies"])
+FOCUS_PRIORITY_RATIONALES.update({'pr-1172': 'RL이 지시 능력을 잃는다는 가정을 먼저 반박할 직접 선행이며 KL 진단의 기준이다.', 'pr-1173': '단순히 지시 보존·semantic freezing을 도입하는 것을 새 연구 기여로 주장하지 않도록 한다.', 'pr-1174': '단일 VLA 내부의 의미 보존과 모듈별 RL 갱신에 관한 직접 경쟁 선행이다.', 'pr-1175': 'LANGRET의 공개 장면·지시쌍·평가기 source이며 기존 counterfactual benchmark와의 중복을 드러낸다.', 'pr-1176': '제어 간격·물리 시간 조건부 행동 표현 자체를 새 공백으로 오인하지 않게 하는 기준이다.', 'pr-1179': '기억의 시간 편향 진단과 사건 기반 index가 이미 선행임을 반영할 직접 반대 근거다.'})
+FOCUS_REFERENCE_RATIONALES.update({'pr-1177': '제어 주기 학습 전에 넘어야 할 학습 없는 실행 대안이며 예비 timing 질문의 비교 자료다.', 'pr-1178': '행동 이력 memory의 강한 비교 자료이며 결과 기반 기억이라는 질문의 기존 대안을 구체화한다.'})
+FOCUS_SOURCE_CHECKS.update({'pr-1172': 'https://proceedings.iclr.cc/paper_files/paper/2026/hash/618c95f4557c15b253fb0e6f548ea0c0-Abstract-Conference.html', 'pr-1173': 'https://arxiv.org/abs/2604.23121', 'pr-1174': 'https://arxiv.org/abs/2608.07314', 'pr-1175': 'https://arxiv.org/abs/2602.17659', 'pr-1176': 'https://link.springer.com/chapter/10.1007/978-3-032-37369-4_24', 'pr-1177': 'https://arxiv.org/abs/2611.01390', 'pr-1178': 'https://arxiv.org/abs/2609.37307', 'pr-1179': 'https://arxiv.org/abs/2611.14488'})
+FOCUS_REVIEW_DATES.update(dict.fromkeys(['pr-1172', 'pr-1173', 'pr-1174', 'pr-1175', 'pr-1176', 'pr-1177', 'pr-1178', 'pr-1179'], "2026-11-12"))
+
+# 2026-11-12 REG-R15: foundational missing links and current VLA/robotics prerequisites.
+_rl_foundations = CORE_GROUPS["RL, IL, and policy learning foundations"]
+_rl_foundations.insert(
+    _rl_foundations.index("=Proximal Policy Optimization Algorithms"),
+    "=High-Dimensional Continuous Control Using Generalized Advantage Estimation",
+)
+_rl_foundations[1:1] = [
+    "=Policy invariance under reward transformations: Theory and application to reward shaping",
+    "=Universal Value Function Approximators",
+]
+NEXT_GROUPS["RL, IL, offline learning, and robot data"].extend(["=Successor Features for Transfer in Reinforcement Learning","=AWAC: Accelerating Online Reinforcement Learning with Offline Datasets","=DART: Noise Injection for Robust Imitation Learning","=Cal-QL: Calibrated Offline RL Pre-Training for Efficient Online Fine-Tuning","=HIQL: Offline Goal-Conditioned RL with Latent States as Actions","=Is Value Learning Really the Main Bottleneck in Offline RL?","=Horizon Reduction Makes RL Scalable"])
+NEXT_GROUPS["VLA, cross-embodiment, and long-horizon planning"].extend(["=Act2Goal: From World Model To General Goal-conditioned Policy","=AC2-VLA: Action-Context-Aware Adaptive Computation in Vision-Language-Action Models for Efficient Robotic Manipulation","=WCM: A World Critic Model for Vision-Language-Action Reinforcement Learning","=Reinforcement Learning for Real-Time Vision-Language-Action Policies","=RoboAlign: Learning Test-Time Reasoning for Language-Action Alignment in Vision-Language-Action Models","=STARE-VLA: Progressive Stage-Aware Reinforcement for Fine-Tuning Vision-Language-Action Models"])
+NEXT_GROUPS["World models, uncertainty, failure detection, and recovery"].extend(["=Causal World Modeling for Robot Control","=Offline Policy Evaluation for Manipulation Policies via Discounted Liveness Formulation"])
+NEXT_GROUPS["Contact-rich, deformable, force, and dexterous manipulation"].extend(["=Tune to Learn: How Controller Gains Shape Robot Policy Learning"])
+FOCUS_PRIORITY_RATIONALES.update({"pr-1180":"PPO 기반 VLA RL에서 advantage·bootstrap·시간 단위가 학습에 미치는 영향을 해석하기 위한 공통 원전이므로 CORE다.","pr-1181":"VLM progress·단계 보상·접촉 보상으로 목표를 변경하는지 판단할 공통 이론 원전이므로 CORE다.","pr-1182":"HER·HIQL·목표 조건부 critic과 단일 VLA의 지시별 가치 표현을 이해하는 원전이므로 CORE다.","pr-1183":"보상 전이와 로봇 동역학 전이를 혼동하지 않게 하는 명확한 이론·로봇 비교 기준이다.","pr-1184":"RL 이득이 성공 선택이나 weighted imitation으로 설명되는지 비교할 핵심 baseline이다.","pr-1186":"복구 성공을 RL 고유 이득으로 해석하기 전 넘어야 할 강한 데이터 수집·모방 대안이다.","pr-1190":"초기 성능 손실을 semantic forgetting으로만 설명하지 않게 하는 critic calibration baseline이다.","pr-1191":"공유 가치함수와 계층 정책을 단일 actor 공동 학습과 구별하고 장기 credit 문제의 강한 대안으로 비교한다.","pr-1192":"단일 VLA critic 개선 후보가 actor 학습·coverage 효과를 놓치지 않도록 하는 핵심 원인 분석이다.","pr-1193":"Chunk 길이·목표 분해와 데이터 scaling의 효과를 분리할 최신 기준 연구다.","pr-1195":"Hindsight 목표 변경·world model·단일 정책 연결의 직접 선행이며 언어 VLA와 시각 목표 정책의 경계를 드러낸다.","pr-1196":"Architecture 통합과 RL 공동 갱신을 구별할 world-action 비교 대상으로 보완한다.","pr-1197":"접촉 VLA RL의 이득을 baseline gain 튜닝과 분리해야 함을 보이는 직접 선행이다.","pr-1198":"실험 rollout 종료와 실제 실패를 구별하고 가치 진단의 target을 정할 최신 기준이다.","pr-1199":"RL 기반 시간 적응과 비교할 학습된 계산 절감 baseline이며 지연·feedback·성능의 비용 분리를 돕는다.","pr-1200":"공유 표현·가치 공동 학습 후보의 직접 경쟁 선행이므로 단순 world-model 보조 loss를 신규 기여로 재제안하지 않게 한다.","pr-1201":"지연·feedback 공백의 직접 선행이자 단일 정책 선호와 별도로 보존할 강한 editor pipeline baseline이다.","pr-1202":"VLM의 RL 정렬과 배포 VLA의 직접 RL 갱신을 구분할 선행으로 단일 정책 연구의 기여 경계를 보완한다.","pr-1203":"단계별 credit·보상 shaping 자체가 기존 방법임을 반영하고 원 보상 보존·추가 supervision을 비교하는 직접 선행이다."})
+FOCUS_REFERENCE_RATIONALES.update({"pr-1185":"TRPO·MPO·KL 제약의 개념 계보를 보완할 원전이며 현재 공통 정독은 GAE/PPO를 우선한다.","pr-1187":"가변 chunk·재계획·중단을 해석할 기본 formulation을 보완하며 계층형 주제로 전환하라는 의미는 아니다.","pr-1188":"로봇 문제의 제약에서 연구 질문을 세우기 위한 기반 survey로 최신 VLA 방법의 전제 점검에 필요하다.","pr-1189":"CQL·IQL·Cal-QL의 데이터 조건과 결과를 읽기 위한 표준 benchmark의 누락을 보완한다.","pr-1194":"석사 연구 후보의 구현 부담과 로봇 행동 기여를 평가할 최신 survey로 2013 원전과 함께 사용한다."})
+FOCUS_SOURCE_CHECKS.update({"pr-1180":"https://arxiv.org/abs/1506.02438","pr-1181":"https://people.eecs.berkeley.edu/~russell/papers/icml99-shaping.pdf","pr-1182":"https://proceedings.mlr.press/v37/schaul15.html","pr-1183":"https://proceedings.neurips.cc/paper/2017/hash/350db081a661525235354dd3e19b8c05-Abstract.html","pr-1184":"https://arxiv.org/abs/2006.09359","pr-1185":"https://ojs.aaai.org/index.php/AAAI/article/view/7727","pr-1186":"https://proceedings.mlr.press/v78/laskey17a.html","pr-1187":"https://www.sciencedirect.com/science/article/pii/S0004370299000521","pr-1188":"https://journals.sagepub.com/doi/abs/10.1177/0278364913495721","pr-1189":"https://arxiv.org/abs/2004.07219","pr-1190":"https://proceedings.neurips.cc/paper_files/paper/2023/hash/c44a04289beaf0a7d968a94066a1d696-Abstract-Conference.html","pr-1191":"https://proceedings.neurips.cc/paper_files/paper/2023/hash/6d7c4a0727e089ed6cdd3151cbe8d8ba-Abstract-Conference.html","pr-1192":"https://proceedings.neurips.cc/paper_files/paper/2024/hash/8ffb4e3118280a66b192b6f06e0e2596-Abstract-Conference.html","pr-1193":"https://proceedings.neurips.cc/paper_files/paper/2025/hash/0c66099070429b9b49ad8bb19c740c22-Abstract-Conference.html","pr-1194":"https://www.annualreviews.org/content/journals/10.1146/annurev-control-030323-022510","pr-1195":"https://www.roboticsproceedings.org/rss22/p015.html","pr-1196":"https://www.roboticsproceedings.org/rss22/p016.html","pr-1197":"https://www.roboticsproceedings.org/rss22/p139.html","pr-1198":"https://www.roboticsproceedings.org/rss22/p154.html","pr-1199":"https://ijcai.org/proceedings/2026/228","pr-1200":"https://arxiv.org/abs/2607.29613","pr-1201":"https://arxiv.org/abs/2609.18207","pr-1202":"https://arxiv.org/abs/2603.21341","pr-1203":"https://arxiv.org/abs/2512.05107"})
+FOCUS_REVIEW_DATES.update(dict.fromkeys(["pr-1180","pr-1181","pr-1182","pr-1183","pr-1184","pr-1185","pr-1186","pr-1187","pr-1188","pr-1189","pr-1190","pr-1191","pr-1192","pr-1193","pr-1194","pr-1195","pr-1196","pr-1197","pr-1198","pr-1199","pr-1200","pr-1201","pr-1202","pr-1203"], "2026-11-12"))
+
+# 2026-11-16 REG-R16: requested Psi-Zero and its direct data prerequisites.
+NEXT_GROUPS["VLA, cross-embodiment, and long-horizon planning"].append(
+    "=Ψ₀: An Open Foundation Model Towards Universal Humanoid Loco-Manipulation"
+)
+NEXT_GROUPS["RL, IL, offline learning, and robot data"].extend([
+    "=EgoDex: Learning Dexterous Manipulation from Large-Scale Egocentric Video",
+    "=Humanoid Everyday: A Comprehensive Robotic Dataset for Open-World Humanoid Manipulation",
+])
+FOCUS_PRIORITY_RATIONALES.update({
+    "pr-1204": "Human-video 표현 학습·humanoid action expert·RL 하위 제어의 역할을 분리할 직접 비교 논문이다. VLA 가중치의 reward 공동 갱신과 혼동하지 않는다.",
+    "pr-1205": "Ψ₀ 사전학습의 인간 데이터 전제이며 hand prediction과 robot closed-loop 성공을 구분할 핵심 데이터 기준이다.",
+    "pr-1206": "Ψ₀의 로봇 데이터 전제와 G1/H1 action schema를 비교하는 데 필요하며 전체 corpus와 모델 사용 subset을 구분한다.",
+})
+FOCUS_SOURCE_CHECKS.update({
+    "pr-1204": "https://www.roboticsproceedings.org/rss22/p021.html",
+    "pr-1205": "https://iclr.cc/Downloads/2026",
+    "pr-1206": "https://arxiv.org/abs/2510.08807",
+})
+FOCUS_REVIEW_DATES.update(dict.fromkeys(["pr-1204", "pr-1205", "pr-1206"], "2026-11-16"))
+
 SYNTHESIS_FILES = OrderedDict(
     [
         (
@@ -885,6 +1385,7 @@ REFERENCE_RECLASSIFIED_IDS = frozenset(
         "pr-0056",  # VGGT: generic visual-geometry foundation
         "pr-0757",  # Open3DSG: open-vocabulary scene-graph foundation
         "pr-0794",  # EmbodiedSplat: online semantic 3D perception without policy evaluation
+        "pr-0516",  # Preserve the existing CFG reference decision through the 2026-10-31 path repair
     }
 )
 
@@ -998,11 +1499,14 @@ def classify(rows: list[dict[str, str]]) -> tuple[dict[str, str], dict[str, str]
     # CORE/NEXT remain explicit in the groups above; new uncategorized papers fall
     # back to the robotics/VLA relevance rule below.
     existing_tiers: dict[str, str] = {}
+    existing_tiers_by_id: dict[str, str] = {}
     if INDEX.exists():
         with INDEX.open(newline="") as file:
             for old_row in csv.DictReader(file):
                 if old_row.get("tier") in {"REFERENCE", "ARCHIVE"}:
                     existing_tiers[old_row.get("overview_path", "")] = old_row["tier"]
+                    if old_row.get("paper_id"):
+                        existing_tiers_by_id[old_row["paper_id"]] = old_row["tier"]
 
     for row in rows:
         path = row["path"]
@@ -1028,7 +1532,7 @@ def classify(rows: list[dict[str, str]]) -> tuple[dict[str, str], dict[str, str]
             track_by_path[path] = "Outside current robotics-first scope"
             primary_track_by_path[path] = manifest_tracks.get(path)
             continue
-        existing_tier = existing_tiers.get(path)
+        existing_tier = existing_tiers.get(path) or existing_tiers_by_id.get(manifest_ids.get(path))
         if existing_tier == "REFERENCE":
             tier_by_path[path] = "REFERENCE"
             track_by_path[path] = "Curated reference"
@@ -1158,16 +1662,16 @@ def write_plan(
         "- Inactive reading history: [READING_STATUS_HISTORY.csv](./READING_STATUS_HISTORY.csv)",
         f"- Intensive-reading set: **{counts['CORE'] + counts['NEXT']} papers** "
         f"(CORE {counts['CORE']} + NEXT {counts['NEXT']})",
-        f"- Base tier review: {FOCUS_REVIEW_DATE}; incremental review: 2026-10-22. 후보별 비교 문헌 47편을 등록하고 NEXT 18 / REFERENCE 29편으로 배정했다. 기존 membership과 사용자 읽기 이력은 유지한다. 연구 초점은 VLA 기반 manipulation·navigation과 action-relevant 3D이며 RL은 선택 사항이다.",
+        f"- Base tier review: {FOCUS_REVIEW_DATE}; 최근 등록·게재 갱신은 [유지보수 이력](../work/update/README.md)을 따른다. 개별 membership은 이 생성기의 CORE/NEXT group으로 관리하고 사용자 읽기 이력은 보존한다. Registry는 VLA 기반 manipulation·navigation과 action-relevant 3D를 다루며, 현재 새 주제 탐색은 사용자 요청에 따라 VLA + RL을 우선한다.",
         "",
         "## Research Scope and Reading Policy",
         "",
-        "주 연구축은 VLA를 기반으로 다양한 로봇의 manipulation과 navigation을 다루는 것이다. RL은 연구 질문에 필요할 때 비교할 방법이다. "
+        "주 연구축은 VLA를 기반으로 다양한 로봇의 manipulation과 navigation을 다루는 것이다. 현재 새 탐색은 VLA + RL 결합이며, 기존 비-RL 후보의 문헌과 판단도 보존한다. "
         "관측·언어 지시·보상이 실제 행동과 일반화에 주는 효과, 로봇별 적응 비용과 기존 능력 보존을 함께 검토한다. "
         "3D vision은 policy state, spatial memory, affordance, localization, collision/contact reasoning이 실제 행동을 바꾸는 경우 우선한다.",
         "",
         "읽기 결과는 [7개 synthesis와 교차 질문 분류](../synthesis/README.md)에 연결한다. 행동 표현·시간/feedback·상태/기억·접촉/실행 가능성·적응/평가 신뢰도를 구분해 비교한다. "
-        "후보별 현재 판정과 재개 조건은 [16개 주제 요약](../work/research_candidates/summaries/README.md), 활성 작업은 [TODO](../TODO.md)에서 관리한다. 후보 HOLD/NO-GO와 GPU 확보는 아래 tier membership이나 실제 읽기 상태를 자동으로 바꾸지 않는다.",
+        "현재 후보는 [주제 index](../work/research_topics/README.md), 과거 판정은 [16개 주제 요약](../work/research_candidates/summaries/README.md), 활성 작업은 [TODO](../TODO.md)에서 관리한다. 후보 HOLD/NO-GO와 GPU 확보는 아래 tier membership이나 실제 읽기 상태를 자동으로 바꾸지 않는다.",
         "",
         "`observation/history → state/belief/3D memory → language/task/skill decision → VLA/policy/control → contact/failure feedback → adaptation/recovery (RL optional)`",
         "",
@@ -1220,11 +1724,12 @@ def write_plan(
         "",
         "| Branch | Foundation and comparison spine | NEXT extension | Exit artifact |",
         "|---|---|---|---|",
-        "| VLA + RL manipulation | PPO + Diffusion Policy → DPPO; IQL/CQL + Flow Matching → FQL; RLPD/SERL → HIL-SERL; OFT → ConRFT ↔ RLDG | DSRL, RL-100, SimpleVLA-RL, RLux-VLA, USER, RL4VLA, DyGRO-VLA | direct RL vs latent steering vs RL-data distillation; demonstration·interaction·compute를 맞춘 비교표 |",
+        "| VLA + RL manipulation | TD/GAE → PPO + Diffusion Policy → DPPO; IQL/CQL → AWAC/Cal-QL ↔ FQL; RLPD/SERL → HIL-SERL; OFT → ConRFT ↔ RLDG | SimpleVLA-RL, RL4VLA, WCM, RoboAlign, STARE-VLA; Real-Time EXPO-FT는 별도 editor 구조의 대안 | advantage/critic·actor 갱신 대상·배포 구조, demonstration·interaction·compute를 맞춘 비교표 |",
+        "| Reward, goals and temporal abstraction | Potential-based reward shaping; UVFA → HER ↔ Successor Features; options/semi-MDP | HIQL, Is Value Learning Really the Main Bottleneck in Offline RL?, Horizon Reduction, Act2Goal | 목표·전이 동역학·종료/할인 가정, value 오차와 policy extraction·horizon 병목을 분리한 표 |",
         "| Action representation and generalization | DAgger/RoboMimic → ACT/Diffusion Policy; DDPM/Flow Matching → Octo/OpenVLA/π0 → FAST/π0.5; DPPO/FQL | Q-chunking → DQC, SpatialVLA, reactive/force VLA | actor chunk·critic horizon·feedback rate·latency·action likelihood와 RL objective 표 |",
         "| Navigation and mobile manipulation | POMDP/Habitat/VLN-CE → ViNT/NoMaD; CLIP/ConceptFusion/VLFM → SayCan/NaVILA; Mobile ALOHA | NaVid → Uni-NaVid/StreamVLN, NavDP/LoGoPlanner, SocialNav, FeedTTA, GOAT, WMNav | goal type·memory·action granularity·collision·social compliance·SPL/success와 reward 접근 조건 표 |",
         "| Action-relevant 3D | RVT ↔ DP3; ConceptFusion ↔ VLFM | LoGoPlanner의 metric memory, PointWorld의 3D dynamics/MPC, VLMaps, PointVLA, Any3D-VLA | policy·data·compute를 고정한 RGB/3D 비교, pose/calibration 접근과 downstream failure |",
-        "| Evaluation, contact and recovery | LIBERO/CALVIN/DROID/Habitat; MuJoCo/impedance → Recovery RL/TD-MPC2 | OGBench, RL4VLA, OopsieVerse, Tac2Real, RLBench, ManiSkill3, FurnitureBench, SAFE | task/split·reward·damage·reset·intervention 비용, recovery·OOD protocol |",
+        "| Evaluation, contact and recovery | LIBERO/CALVIN/DROID/Habitat; DAgger → DART; MuJoCo/impedance → Recovery RL/TD-MPC2 | D4RL ↔ OGBench, Tune to Learn, Discounted Liveness OPE, OopsieVerse, Tac2Real, RLBench, ManiSkill3, FurnitureBench, SAFE | task/split·reward·gain·damage·reset·intervention 비용, recovery·truncation·OOD protocol |",
         "| World-model policy improvement | TD-MPC2 → Ctrl-World/WMPO/WorldGym | VLAW ↔ VLA-MBPO ↔ RISE; PointWorld의 MPC와 비교; PersistWorld는 prediction-fidelity 참조 | fixed real-data budget, imagined vs real success, failure coverage와 model bias의 분리 |",
         "",
         "Batch 산출물과 source location을 확인한 뒤에만 synthesis evidence로 사용한다. Benchmark 간 성공률을 같은 난이도의 점수로 합치지 않는다.",
@@ -1292,13 +1797,24 @@ def write_status(
         "personal_notes",
     ]
     preserved: dict[str, dict[str, str]] = {}
+    # A case-only filesystem repair must not discard reading inputs. Restrict
+    # this migration to a unique current path with the same stable paper ID;
+    # arbitrary missing paths still fail below.
+    paths_by_case: dict[str, list[str]] = {}
+    for path in paper_id_by_path:
+        paths_by_case.setdefault(path.casefold(), []).append(path)
     # Keep user inputs when a paper leaves the intensive set; active entries
     # override history on re-entry. Never infer a reading status from a tier.
     for source in (STATUS_HISTORY, STATUS):
         if source.exists():
             with source.open(newline="") as file:
                 for old_row in csv.DictReader(file):
-                    preserved[old_row.get("overview_path", "")] = old_row
+                    path = old_row.get("overview_path", "")
+                    if path not in paper_id_by_path:
+                        matches = paths_by_case.get(path.casefold(), [])
+                        if len(matches) == 1 and old_row.get("paper_id") and old_row["paper_id"] == paper_id_by_path[matches[0]]:
+                            path = matches[0]
+                    preserved[path] = old_row
 
     curated = [
         row for row in rows if tier_by_path[row["path"]] in {"CORE", "NEXT"}
@@ -1330,7 +1846,7 @@ def write_status(
         tier = tier_by_path[path]
         sequence_by_tier[tier] += 1
         old = preserved.get(path, {})
-        overview = ROOT / path.removeprefix("./")
+        overview = ROOT / urllib.parse.unquote(path.removeprefix("./"))
         evidence_match = re.search(
             r"Evidence maturity: `([^`]+)`", overview.read_text(encoding="utf-8")
         )
@@ -1382,6 +1898,7 @@ def write_status(
             "primary_track": primary_track_by_path.get(path) or "",
             "paper_id": paper_id_by_path.get(path) or "", "sequence": "",
             "year": row["year"], "venue": row["venue"], "title": row["title"],
+            "overview_path": path,
         })
         history_rows.append(saved)
     with STATUS_HISTORY.open("w", newline="") as file:

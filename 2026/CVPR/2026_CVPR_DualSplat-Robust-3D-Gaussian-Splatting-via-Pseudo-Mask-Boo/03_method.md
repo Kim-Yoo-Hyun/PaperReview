@@ -4,6 +4,8 @@
 > Evidence maturity: `FULL_TEXT_CHECKED`.
 > Analysis basis: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2026/html/Wang_DualSplat_Robust_3D_Gaussian_Splatting_via_Pseudo-Mask_Bootstrapping_from_Reconstruction_CVPR_2026_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2026/papers/Wang_DualSplat_Robust_3D_Gaussian_Splatting_via_Pseudo-Mask_Bootstrapping_from_Reconstruction_CVPR_2026_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
+> DOC-QA2 targeted source review: 2026-10-23; PDF pp. 5. 손상 구간·직접 연결된 표 분류만 원문 이미지와 대조했다. 전체 주장 정독·실험 검증·reading status 승격을 뜻하지 않는다. [URL·PDF hash·수정 기록](../../../work/sources/pdf_note_review_followup_2026-10-23.json).
+
 ## Method in One Sentence
 
 PDF body method statement (p. 5 (3.4. Reconstruction Failures to Object-Level Priors), p. 4 (3.2. Overview), p. 5 (3.4. Reconstruction Failures to Object-Level Priors), p. 4 (3.2. Overview), p. 3 (3.2. Overview), p. 3 (3.2. Overview)): We use DINOv2 [17] as the feature extraction backbone.
@@ -52,7 +54,7 @@ PDF body method statement (p. 5 (3.4. Reconstruction Failures to Object-Level Pr
 - **p. 4 / 3.2. Overview - extractive body cue:** (6) The resulting mask Mt is then applied in the masked reconstruction loss of Eq.
 - **p. 4 / 3.4. Reconstruction Failures to Object-Level Priors - extractive body cue:** The primary objective of this step is to translate these firstpass failures into reliable object-level priors for the second reconstruction stage, rather than directly outputting ...
 - **p. 5 / 3.4. Reconstruction Failures to Object-Level Priors - extractive body cue:** (15) The final MLP objective is LMLP = λrobustLrobust + λpriorLprior + Lreg.
-- **p. 5 / 3.4. Reconstruction Failures to Object-Level Priors - extractive body cue:** These loss functions are combined as: Lrobust = exp  -max(0, Tdensify -t) βrobustness  (Lcos + Lres) .
+- **PDF p. 5, §3.5 / Eq. (15) (DOC-QA2 원문 대조):** L_robust = exp(−max(0,T_densify−t)/β_robustness)·(L_cos+L_res). 이는 mask refinement loss의 시간별 weighting이며 failure observation 자체가 아니다.
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 5 (3.4. Reconstruction Failures to Object-Level Priors), p. 3 (3.1. Preliminaries), p. 3 (3.1. Preliminaries), p. 4 (3.2. Overview), p. 4 (3.4. Reconstruction Failures to Object-Level Priors), p. 5 (3.4. Reconstruction Failures to Object-Level Priors).
 - Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.

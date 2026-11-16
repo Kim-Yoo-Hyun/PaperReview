@@ -4,6 +4,8 @@
 > Evidence maturity: `FULL_TEXT_CHECKED`.
 > Analysis basis: full-text PDF body checked on 2026-09-03 (20 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/1912.01603; PDF retrieval source: https://arxiv.org/pdf/1912.01603. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
+> DOC-QA1 (2026-10-23): 제어문자·깨진 추출 구간과 직접 연결된 표 항목을 PDF 페이지 이미지와 대조했다. 확인 범위·원문 URL·페이지·수정 이력은 [대조 기록](../../../work/sources/pdf_note_review_2026-10-23.json)에 있다. 노트 전체의 정독이나 모든 기존 주장에 대한 재검증을 뜻하지 않으며 reading status는 유지한다.
+
 ## Evaluation in One Sentence
 
 PDF body evaluation/result cue (p. 8 (6 EXPERIMENTS), p. 9 (6 EXPERIMENTS), p. 9 (6 EXPERIMENTS), p. 8 (Figure/Table caption), p. 6 (Figure/Table caption), p. 16 (Figure/Table caption)): Baseline methods The highest reported performance on the continuous tasks is achieved by D4PG (Barth-Maron et al., 2018), an improved variant of DDPG (Lillicrap et al., 2015) that uses distributed ...
@@ -122,7 +124,7 @@ PDF body evaluation/result cue (p. 8 (6 EXPERIMENTS), p. 9 (6 EXPERIMENTS), p. 9
 - **p. 8 / 6 EXPERIMENTS - extractive body cue:** Agent observations are images of shape 64 × 64 × 3, actions range from 1 to 12 dimensions, rewards range from 0 to 1, episodes ...
 - **p. 8 / 6 EXPERIMENTS - extractive body cue:** The training time for our Dreamer implementation is about 3 hours per 106 environment steps on the control suite, compared to 11 hours for online ...
 - **p. 9 / 6 EXPERIMENTS - extractive body cue:** Performance curves for all 19 tasks with horizon of 20 are shown in Appendix D, where Dreamer outperforms the alternatives on 16 of 20 tasks, ...
-- **p. 4 / B Sequence length - extractive body cue:** State values can be estimated in multiple ways that trade off bias and variance (Sutton and Barto, 2018), VR(sτ) .= Eqθ,qφ  t+H X n=τ ...
+- **원문 대조:** V_R은 imagination horizon 안의 reward 합, V_N^k는 k-step reward와 bootstrap value, V_λ는 여러 k-step estimate의 지수가중 결합이다. 이 비교는 horizon 밖 reward와 bias–variance trade-off를 다룬다. ([PDF p. 4](https://arxiv.org/pdf/1912.01603#page=4), §3 Value estimation, Eqs. (4)–(6)).
 - **p. 5 / B Sequence length - extractive body cue:** We apply the representation model to the first 5 images of two hold-out trajectories and predict forward for 45 steps using the latent dynamics, given ...
 - **p. 6 / B Sequence length - extractive body cue:** Sparse Finger Spin Hopper Hop Acrobot Swingup 0 200 400 600 800 1000 Episode Return n/a n/a n/a n/a Dreamer (5e6 steps) PlaNet (5e6 steps) ...
 
@@ -145,7 +147,7 @@ PDF body evaluation/result cue (p. 8 (6 EXPERIMENTS), p. 9 (6 EXPERIMENTS), p. 9
 | We use a single Nvidia V100 GPU and 10 CPU cores for each training run. | p. 8 (6 EXPERIMENTS) |
 | With an average score of 823 across tasks after 5 × 106 environment steps, Dreamer exceeds the performance of the strong model-free D4PG agent ... | p. 9 (6 EXPERIMENTS) |
 | (c) The agent encodes the history of the episode to compute the current model state and predict the next action to execute in the ... | p. 3 (1 INTRODUCTION) |
-| Since all steps are implemented as neural networks, we analytically compute ∇φEqθ,qφ   Pt+H τ=t Vλ(sτ)  by stochastic backpropagation (Kingma and Welling, 2013; ... | p. 5 (B Sequence length) |
+| 원문 대조: Action model은 imagined state의 V_λ 합을 높이도록 action·state·reward·value 예측을 통한 gradient를 받는다. Value model은 stop-gradient target을 회귀하고, behavior learning 중 world model은 고정한다. ([PDF p. 5](https://arxiv.org/pdf/1912.01603#page=5), §3 Learning objective, Eqs. (7)–(8)) | [PDF p. 5](https://arxiv.org/pdf/1912.01603#page=5), §3 Learning objective, Eqs. (7)–(8) |
 | L Imagination horizon H Learning rate α 3 | p. 3 (B Sequence length) |
 | The representation model encodes observations and actions to create continuous vector-valued model states st with Markovian transitions (Watter et al., 2015; Zhang et al., ... | p. 2 (1 INTRODUCTION) |
 | Vk N estimates rewards beyond k steps with the learned value model. | p. 4 (B Sequence length) |

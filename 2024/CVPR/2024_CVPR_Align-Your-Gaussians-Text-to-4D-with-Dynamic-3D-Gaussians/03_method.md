@@ -4,6 +4,8 @@
 > Evidence maturity: `FULL_TEXT_CHECKED`.
 > Analysis basis: full-text PDF body checked on 2026-09-03 (13 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2024/html/Ling_Align_Your_Gaussians_Text-to-4D_with_Dynamic_3D_Gaussians_and_Composed_CVPR_2024_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2024/papers/Ling_Align_Your_Gaussians_Text-to-4D_with_Dynamic_3D_Gaussians_and_Composed_CVPR_2024_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
+> DOC-QA2 targeted source review: 2026-10-23; PDF pp. 5. 손상 구간·직접 연결된 표 분류만 원문 이미지와 대조했다. 전체 주장 정독·실험 검증·reading status 승격을 뜻하지 않는다. [URL·PDF hash·수정 기록](../../../work/sources/pdf_note_review_followup_2026-10-23.json).
+
 ## Method in One Sentence
 
 PDF body method statement (p. 5 (3.2. Text-to-4D as Compositional Generation), p. 4 (3.2. Text-to-4D as Compositional Generation), p. 3 (2. Background), p. 2 (1. Introduction), p. 2 (1. Introduction), p. 4 (3.2. Text-to-4D as Compositional Generation)): We disentangle optimization into first synthesizing a static 3D Gaussian-based object θ, and then learning the deformation field Φ to add scene dynamics.
@@ -73,7 +75,7 @@ PDF body method statement (p. 5 (3.2. Text-to-4D as Compositional Generation), p
 - **p. 4 / 3.2. Text-to-4D as Compositional Generation - extractive body cue:** This video DM provides temporal feedback when rendering 2D frame sequences from our dynamic 4D scenes.
 - **p. 6 / 3.3. AYG's Score Distillation in Practice - extractive body cue:** Inspired by this observation and aiming to avoid ProlificDreamer's cumbersome fine-tuning, we instead propose to simply set δvid/im gen = 0 entirely and optimize with ...
 - **p. 2 / 1. Introduction - extractive body cue:** Afterwards, we compose the gradients of a text-to-video and a text-to-image model; the gradients of the text-to-video model optimize the deformation field to capture temporal ...
-- **p. 5 / 3.2. Text-to-4D as Compositional Generation - extractive body cue:** To this end, we compose the text-to-image and text-to-video DMs and formally minimize a reverse KLD of the form KL  qΦ  {zci τi}F ...
+- **PDF p. 5, §3.2 / stage 2 (DOC-QA2 원문 대조):** Static 3D Gaussian을 고정한 stage 2에서 deformation field Φ를 최적화한다. Video와 image diffusion distribution의 조합을 대상으로 rendering distribution의 reverse KL을 최소화하는 formulation이다.
 - **p. 1 / Abstract - extractive body cue:** These techniques allow us to synthesize vivid dynamic scenes, outperform previous work qualitatively and quantitatively and achieve state-of-the-art text-to-4D performance.
 - **p. 2 / 1. Introduction - extractive body cue:** 1), achieving stateof-the-art text-to-4D performance.
 - **Normalized interface:** observation=conditioning observation와 noisy/intermediate sample; state=latent/noise variable와 conditional distribution; output/action=generated sample, action chunk 또는 trajectory.

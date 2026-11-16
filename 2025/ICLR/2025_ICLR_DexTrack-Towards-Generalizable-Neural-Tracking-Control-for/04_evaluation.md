@@ -4,6 +4,8 @@
 > Evidence maturity: `FULL_TEXT_CHECKED`.
 > Analysis basis: full-text PDF body checked on 2026-09-03 (25 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=ajSmXqgS24; PDF retrieval source: https://arxiv.org/pdf/2502.09614. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
+> DOC-QA1 (2026-10-23): 제어문자·깨진 추출 구간과 직접 연결된 표 항목을 PDF 페이지 이미지와 대조했다. 확인 범위·원문 URL·페이지·수정 이력은 [대조 기록](../../../work/sources/pdf_note_review_2026-10-23.json)에 있다. 노트 전체의 정독이나 모든 기존 주장에 대한 재검증을 뜻하지 않으며 reading status는 유지한다.
+
 ## Evaluation in One Sentence
 
 PDF body evaluation/result cue (p. 8 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 17 (B.1 DEXTEROUS MANIPULATION TRACKING CONTROL), p. 17 (B.1 DEXTEROUS MANIPULATION TRACKING CONTROL), p. 18 (B.2 REAL-WORLD EVALUATIONS), p. 9 (4 EXPERIMENTS)): As shown in Table 1, we achieve significantly higher success rates, calculated under two different thresholds, compared to the best-performing baseline across both datasets.
@@ -127,7 +129,7 @@ PDF body evaluation/result cue (p. 8 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 1
 - **p. 7 / 4 EXPERIMENTS - extractive body cue:** For the TACO dataset, we follow the generalization evaluating setting suggested by the authors (Liu et al., 2024b) and split the dataset into a training ...
 - **p. 7 / 4 EXPERIMENTS - extractive body cue:** We introduce five metrics to evaluate the tracking accuracy and task success: 1) Per-frame average object rotation error: Rerr = 1 N+1 PN n=0 Diff ...
 - **p. 7 / 4 EXPERIMENTS - extractive body cue:** 2) Per-frame average object translation error: Terr = 1 N+1 PN n=0 ∥tnˆtn∥, where tn and ˆtn are the tracked and reference translations.
-- **p. 7 / 4 EXPERIMENTS - extractive body cue:** 3) Per-frame average wrist position and rotation error: Ewrist = 1 N+1 PN n=0  0.5 Diff Angle(qwrist n , ˆqwrist n ) + 0.5∥twrist n ...
+- **원문 대조:** Wrist error는 각 frame의 wrist rotation 차이와 wrist translation의 L2 차이에 각각 0.5를 곱한 합을 N+1개 frame에 대해 평균한다. 이는 정의식이며 결과 수치나 성공률을 뜻하지 않는다. ([PDF p. 7](https://arxiv.org/pdf/2502.09614#page=7), §4.1 Experimental Settings, Metrics).
 - **p. 8 / 4 EXPERIMENTS - extractive body cue:** Thus, we primarily compare our method with model-free approaches: 1) DGrasp (Christen et al., 2022): Adapted to track by dividing sequences into subsequences of 10 ...
 
 ## Generalization and Failure Cases

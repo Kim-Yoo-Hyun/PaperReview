@@ -4,6 +4,8 @@
 > Evidence maturity: `FULL_TEXT_CHECKED`.
 > Analysis basis: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/ICCV2025/html/Zhang_Distilling_Diffusion_Models_to_Efficient_3D_LiDAR_Scene_Completion_ICCV_2025_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/ICCV2025/papers/Zhang_Distilling_Diffusion_Models_to_Efficient_3D_LiDAR_Scene_Completion_ICCV_2025_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
+> DOC-QA1 (2026-10-23): 제어문자·깨진 추출 구간과 직접 연결된 표 항목을 PDF 페이지 이미지와 대조했다. 확인 범위·원문 URL·페이지·수정 이력은 [대조 기록](../../../work/sources/pdf_note_review_2026-10-23.json)에 있다. 노트 전체의 정독이나 모든 기존 주장에 대한 재검증을 뜻하지 않으며 reading status는 유지한다.
+
 ## Method in One Sentence
 
 PDF body method statement (p. 4 (4. Method), p. 4 (4. Method), p. 3 (3.1. Brief introduction of diffusion models), p. 5 (4.2. Structural loss), p. 5 (4.2. Structural loss), p. 3 (3.2. 3D LiDAR scene completion diffusion models)): Firstly, we introduce the distillation method tailored for 3D LiDAR scene completion diffusion models in Sec.
@@ -83,7 +85,7 @@ PDF body method statement (p. 4 (4. Method), p. 4 (4. Method), p. 3 (3.1. Brief 
 
 | Contract | Generic domain prior | PDF body cue | Unresolved detail |
 |---|---|---|---|
-| Horizon | single frame, multi-view accumulation 또는 online map horizon; exact window 확인 필요. | (7) by minimizing the KL divergence between two distributions at different noise levels as: min η LKL = Et,ϵ  DKL  pt ... | episode/sequence/action-chunk boundary |
+| Horizon | Diffusion timestep과 robot episode horizon을 구분해야 함 | 원문 대조: Student가 생성한 장면 분포와 pretrained model의 분포 사이 KL을 최소화한다. 계산 가능한 근사를 위해 timestep t에서 잡음을 더한 두 분포를 비교하고 teacher와 auxiliary diffusion model의 score 차이로 gradient를 추정한다. 기존 '서로 다른 noise level'이라는 단편 대신 두 분포를 구분한다. ([PDF p. 4](https://openaccess.thecvf.com/content/ICCV2025/papers/Zhang_Distilling_Diffusion_Models_to_Efficient_3D_LiDAR_Scene_Completion_ICCV_2025_paper.pdf#page=4), §4.1 Distillation for 3D LiDAR scene completion, Eqs. (7)–(11)) | 이 KL 식으로 temporal window를 확정하지 않음 |
 | Rate / latency | per-frame/streaming inference와 downstream policy/control rate가 분리된다. | Our goal is to distill a pre-trained 3D LiDAR scene completion diffusion model into a student model with significantly fewer sampling steps, ... | Hz/fps, inference time and control rate |
 | Memory | camera poses, map/scene graph/Gaussian state와 temporal feature. | not recovered | window and reset |
 | Compute | 3D reconstruction/fusion, point/feature memory와 query cost가 latency를 결정한다. | In contrast, the scene completed by ScoreLiDAR with only 8 steps in Fig. | hardware, batch and throughput |

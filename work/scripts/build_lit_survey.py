@@ -1034,6 +1034,15 @@ At a matched data, compute, and action budget, does the paper's `{', '.join(tags
 
 
 def write_registry(papers: list[dict]) -> None:
+    # Historical discovery lists are incomplete. Never let a table rebuild
+    # silently remove identities already admitted to the canonical manifest.
+    if MANIFEST.exists():
+        existing = json.loads(MANIFEST.read_text(encoding="utf-8"))
+        existing_ids = {item["paper_id"] for item in existing}
+        incoming_ids = {item.get("paper_id") for item in papers}
+        missing = existing_ids - incoming_ids
+        if missing:
+            raise ValueError(f"Registry rebuild would omit {len(missing)} canonical paper IDs")
     try:
         from normalize_taxonomy import registry
     except ModuleNotFoundError:
@@ -1104,18 +1113,15 @@ def parse_args() -> argparse.Namespace:
 
 def main() -> None:
     args = parse_args()
-    WORK.mkdir(exist_ok=True)
-    papers = build_papers()
-    existing_by_title = {}
-    if MANIFEST.exists():
-        existing_by_title = {
-            item["title"].casefold(): item
-            for item in json.loads(MANIFEST.read_text(encoding="utf-8"))
-        }
-    for paper in papers:
-        existing = existing_by_title.get(paper["title"].casefold(), {})
-        paper["folder"] = existing.get("folder") or folder_name(paper)
-    print(f"[info] selected papers: {len(papers)}")
+    if not MANIFEST.exists():
+        raise SystemExit("Canonical manifest missing; refusing a legacy-list rebuild")
+    papers = json.loads(MANIFEST.read_text(encoding="utf-8"))
+    if not isinstance(papers, list) or not papers or any(
+        not all(item.get(key) for key in ("paper_id", "title", "folder"))
+        for item in papers
+    ):
+        raise SystemExit("Invalid canonical manifest; run the repository audit before writing")
+    print(f"[info] canonical papers: {len(papers)}")
 
     if args.refresh_metadata:
         fetch_arxiv_metadata(papers)

@@ -4,6 +4,8 @@
 > Evidence maturity: `FULL_TEXT_CHECKED`.
 > Analysis basis: full-text PDF body checked on 2026-09-03 (21 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=AUCYptvAf3; PDF retrieval source: https://arxiv.org/pdf/2410.03072. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
+> DOC-QA2 targeted source review: 2026-10-23; PDF pp. 4. 손상 구간·직접 연결된 표 분류만 원문 이미지와 대조했다. 전체 주장 정독·실험 검증·reading status 승격을 뜻하지 않는다. [URL·PDF hash·수정 기록](../../../work/sources/pdf_note_review_followup_2026-10-23.json).
+
 ## Method in One Sentence
 
 PDF body method statement (p. 14 (A.1.1 BEYOND FULL-HORIZON PLANNING), p. 6 (3 METHOD), p. 4 (3 METHOD), p. 4 (3 METHOD), p. 5 (3 METHOD), p. 3 (3 METHOD)): While full-horizon planners first generate a set of trajectories for all robots and then robots execute them as prescribed, windowed algorithms instead ask each robot to plan a short trajectory ...
@@ -69,7 +71,7 @@ PDF body method statement (p. 14 (A.1.1 BEYOND FULL-HORIZON PLANNING), p. 6 (3 M
 
 ## Observation–State–Action Interface
 
-- **p. 4 / 3 METHOD - extractive body cue:** Colored lines are only in MMD-PP, MMD-ECBS Input: Starts, goal conditions, and single-robot diffusion models  si start, T i, f i θ n i=1 ...
+- **PDF p. 4, Algorithm 1 (DOC-QA2 원문 대조):** Algorithm 1 입력은 robot별 start state·goal conditions·single-robot diffusion model이며 출력은 robot별 trajectories다. MMD-CBS와 색으로 구분된 PP/ECBS variant의 제약·return 위치를 혼합하지 않는다.
 - **p. 6 / 3 METHOD - extractive body cue:** Each experiment with n robots begins by randomly picking start and goal states on a map for various algorithms to compute valid trajectories τ (or ...
 - **p. 9 / 3 METHOD - extractive body cue:** For this purpose, our experiments assign a random sequence of three tasks per robot (a sequence of local maps), and randomly selects start and goal ...
 - **p. 4 / 3 METHOD - extractive body cue:** We propose five MMD variants, each inspired by a state-of-the-art search algorithm.

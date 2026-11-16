@@ -1,0 +1,795 @@
+{
+  "task": "GAP-P2",
+  "reviewed_on": "2026-10-23",
+  "timezone": "Asia/Seoul",
+  "report": "work/update/REACTIVE_NAVIGATION_EXECUTION_REVIEW_2026-10-23.md",
+  "manifest": "work/sources/reactive_navigation_preexperiment_manifest_2026-10-23.json",
+  "canonical_question": "synthesis/01_planning_control.md#gap-plan-2026",
+  "decision": {
+    "task": "DONE",
+    "broad_method": "NO-GO",
+    "synthetic_diagnostic": "REVISE_CONTRACT_QUALIFICATION_ALLOWED",
+    "native_vla": "HOLD",
+    "executable": false,
+    "next": "GAP-P3 bounded Docker contract qualification, not effect pilot"
+  },
+  "evidence_boundary": {
+    "static_source_only": true,
+    "external_code_import_or_execution": false,
+    "experiment": false,
+    "docker_probe": false,
+    "dependency_installation": false,
+    "dataset_or_checkpoint_download": false,
+    "pdf_download": false,
+    "registry_admissions": 0,
+    "reading_status_changes": 0,
+    "native_effect": "NOT_TESTED",
+    "actual_human_effect": "NOT_TESTED",
+    "external_researcher_feedback": "NOT_OBTAINED",
+    "absence_claim_scope": "Selected source paths, not ecosystem-wide absence"
+  },
+  "counts": {
+    "repository_revisions": 3,
+    "source_files": 34,
+    "selected_passage_files": 28,
+    "context_inventory_files": 6,
+    "official_dataset_document": 1
+  },
+  "repositories": [
+    {
+      "repository": "tasl-lab/GenSafeNav",
+      "commit": "01baf926a5c77c1a4ab28635658eb014ef4f1767",
+      "date": "2026-01-09T03:43:19Z",
+      "tree_truncated": false,
+      "file_inventory_count": 669,
+      "tree_metadata_sha256": "d4c578334107819a0abae621d2c73440b8f0b31152cb14a9e396ef411725b9c8",
+      "paper_run_revision_verified": false,
+      "checked_latest_commit": "01baf926a5c77c1a4ab28635658eb014ef4f1767"
+    },
+    {
+      "repository": "amap-cvlab/ABot-Navigation",
+      "commit": "2a0aefb56f1e2d315bba924239e9e8ad9dca9d92",
+      "date": "2026-08-05T07:30:42Z",
+      "tree_truncated": false,
+      "file_inventory_count": 1556,
+      "tree_metadata_sha256": "165bf91029b309e3f4c18a56230420a31f586d3860f1cb1823c85b472749eec8",
+      "paper_run_revision_verified": false,
+      "checked_latest_commit": "2a0aefb56f1e2d315bba924239e9e8ad9dca9d92"
+    },
+    {
+      "repository": "tmralmeida/thor-magni-tools",
+      "commit": "5d8040623034e4c21526792badb7b8d93e33f0ca",
+      "date": "2025-10-03T10:39:30Z",
+      "tree_truncated": false,
+      "paper_run_revision_verified": false
+    }
+  ],
+  "files": [
+    {
+      "repository": "tasl-lab/GenSafeNav",
+      "commit": "01baf926a5c77c1a4ab28635658eb014ef4f1767",
+      "path": "README.md",
+      "url": "https://raw.githubusercontent.com/tasl-lab/GenSafeNav/01baf926a5c77c1a4ab28635658eb014ef4f1767/README.md",
+      "sha256": "63ae993c01e8ab86ace9775db8b22179c45f0eb6f59a5dc63c2eee0a41cc1ba9",
+      "lines": 128,
+      "review_depth": "CONTEXT_INVENTORY_ONLY",
+      "reviewed_line_ranges": [],
+      "blob_url": "https://github.com/tasl-lab/GenSafeNav/blob/01baf926a5c77c1a4ab28635658eb014ef4f1767/README.md",
+      "boundary": "Static text only; not imported or executed; no whole-file or runtime claim beyond specified passages."
+    },
+    {
+      "repository": "tasl-lab/GenSafeNav",
+      "commit": "01baf926a5c77c1a4ab28635658eb014ef4f1767",
+      "path": "configs/config.py",
+      "url": "https://raw.githubusercontent.com/tasl-lab/GenSafeNav/01baf926a5c77c1a4ab28635658eb014ef4f1767/configs/config.py",
+      "sha256": "9ca45b3679c2435a15c4b408370c65a172c7823dff27d3c90ad9fdd0445deb60",
+      "lines": 198,
+      "review_depth": "SELECTED_PASSAGES",
+      "reviewed_line_ranges": [
+        [
+          13,
+          147
+        ]
+      ],
+      "blob_url": "https://github.com/tasl-lab/GenSafeNav/blob/01baf926a5c77c1a4ab28635658eb014ef4f1767/configs/config.py",
+      "boundary": "Static text only; not imported or executed; no whole-file or runtime claim beyond specified passages."
+    },
+    {
+      "repository": "tasl-lab/GenSafeNav",
+      "commit": "01baf926a5c77c1a4ab28635658eb014ef4f1767",
+      "path": "test.py",
+      "url": "https://raw.githubusercontent.com/tasl-lab/GenSafeNav/01baf926a5c77c1a4ab28635658eb014ef4f1767/test.py",
+      "sha256": "403da57b48af53d71c55e942a5bb6da4b949950820cf9a85b6deae2a296472cd",
+      "lines": 163,
+      "review_depth": "SELECTED_PASSAGES",
+      "reviewed_line_ranges": [
+        [
+          1,
+          163
+        ]
+      ],
+      "blob_url": "https://github.com/tasl-lab/GenSafeNav/blob/01baf926a5c77c1a4ab28635658eb014ef4f1767/test.py",
+      "boundary": "Static text only; not imported or executed; no whole-file or runtime claim beyond specified passages."
+    },
+    {
+      "repository": "tasl-lab/GenSafeNav",
+      "commit": "01baf926a5c77c1a4ab28635658eb014ef4f1767",
+      "path": "crowd_sim/__init__.py",
+      "url": "https://raw.githubusercontent.com/tasl-lab/GenSafeNav/01baf926a5c77c1a4ab28635658eb014ef4f1767/crowd_sim/__init__.py",
+      "sha256": "3ef3bb207aa8dc1ca535608d66b8aa79e3f5025bf5d710e0c65e21c29b6ba331",
+      "lines": 31,
+      "review_depth": "SELECTED_PASSAGES",
+      "reviewed_line_ranges": [
+        [
+          1,
+          31
+        ]
+      ],
+      "blob_url": "https://github.com/tasl-lab/GenSafeNav/blob/01baf926a5c77c1a4ab28635658eb014ef4f1767/crowd_sim/__init__.py",
+      "boundary": "Static text only; not imported or executed; no whole-file or runtime claim beyond specified passages."
+    },
+    {
+      "repository": "tasl-lab/GenSafeNav",
+      "commit": "01baf926a5c77c1a4ab28635658eb014ef4f1767",
+      "path": "crowd_sim/envs/__init__.py",
+      "url": "https://raw.githubusercontent.com/tasl-lab/GenSafeNav/01baf926a5c77c1a4ab28635658eb014ef4f1767/crowd_sim/envs/__init__.py",
+      "sha256": "5c942d8d83e6dfbdae9a4be9baabcf1e6b53235cae5bafc9b337792444daf3dc",
+      "lines": 5,
+      "review_depth": "SELECTED_PASSAGES",
+      "reviewed_line_ranges": [
+        [
+          1,
+          5
+        ]
+      ],
+      "blob_url": "https://github.com/tasl-lab/GenSafeNav/blob/01baf926a5c77c1a4ab28635658eb014ef4f1767/crowd_sim/envs/__init__.py",
+      "boundary": "Static text only; not imported or executed; no whole-file or runtime claim beyond specified passages."
+    },
+    {
+      "repository": "tasl-lab/GenSafeNav",
+      "commit": "01baf926a5c77c1a4ab28635658eb014ef4f1767",
+      "path": "crowd_sim/envs/crowd_sim.py",
+      "url": "https://raw.githubusercontent.com/tasl-lab/GenSafeNav/01baf926a5c77c1a4ab28635658eb014ef4f1767/crowd_sim/envs/crowd_sim.py",
+      "sha256": "8005adbb215959a7bfb41cdaa4382d09806142fe193a1e944e55c9495c93d81f",
+      "lines": 796,
+      "review_depth": "SELECTED_PASSAGES",
+      "reviewed_line_ranges": [
+        [
+          603,
+          626
+        ]
+      ],
+      "blob_url": "https://github.com/tasl-lab/GenSafeNav/blob/01baf926a5c77c1a4ab28635658eb014ef4f1767/crowd_sim/envs/crowd_sim.py",
+      "boundary": "Static text only; not imported or executed; no whole-file or runtime claim beyond specified passages."
+    },
+    {
+      "repository": "tasl-lab/GenSafeNav",
+      "commit": "01baf926a5c77c1a4ab28635658eb014ef4f1767",
+      "path": "crowd_sim/envs/crowd_sim_var_num.py",
+      "url": "https://raw.githubusercontent.com/tasl-lab/GenSafeNav/01baf926a5c77c1a4ab28635658eb014ef4f1767/crowd_sim/envs/crowd_sim_var_num.py",
+      "sha256": "8018e2af1c0f0ce30bae1fae8520b1d745a664302fd757b8bfad81522bc4dce8",
+      "lines": 685,
+      "review_depth": "SELECTED_PASSAGES",
+      "reviewed_line_ranges": [
+        [
+          179,
+          255
+        ],
+        [
+          260,
+          307
+        ],
+        [
+          329,
+          505
+        ]
+      ],
+      "blob_url": "https://github.com/tasl-lab/GenSafeNav/blob/01baf926a5c77c1a4ab28635658eb014ef4f1767/crowd_sim/envs/crowd_sim_var_num.py",
+      "boundary": "Static text only; not imported or executed; no whole-file or runtime claim beyond specified passages."
+    },
+    {
+      "repository": "tasl-lab/GenSafeNav",
+      "commit": "01baf926a5c77c1a4ab28635658eb014ef4f1767",
+      "path": "crowd_sim/envs/crowd_sim_pred.py",
+      "url": "https://raw.githubusercontent.com/tasl-lab/GenSafeNav/01baf926a5c77c1a4ab28635658eb014ef4f1767/crowd_sim/envs/crowd_sim_pred.py",
+      "sha256": "6c72136995e8b0027447600f9a62a8652eba9683fdb21825f9ac834dd3deeaa0",
+      "lines": 367,
+      "review_depth": "SELECTED_PASSAGES",
+      "reviewed_line_ranges": [
+        [
+          101,
+          225
+        ]
+      ],
+      "blob_url": "https://github.com/tasl-lab/GenSafeNav/blob/01baf926a5c77c1a4ab28635658eb014ef4f1767/crowd_sim/envs/crowd_sim_pred.py",
+      "boundary": "Static text only; not imported or executed; no whole-file or runtime claim beyond specified passages."
+    },
+    {
+      "repository": "tasl-lab/GenSafeNav",
+      "commit": "01baf926a5c77c1a4ab28635658eb014ef4f1767",
+      "path": "crowd_sim/envs/crowd_sim_pred_real_gst.py",
+      "url": "https://raw.githubusercontent.com/tasl-lab/GenSafeNav/01baf926a5c77c1a4ab28635658eb014ef4f1767/crowd_sim/envs/crowd_sim_pred_real_gst.py",
+      "sha256": "75fe8a6abc4e55735e5d75c8df4ed694f778c47478f615200640c31a127a603a",
+      "lines": 372,
+      "review_depth": "SELECTED_PASSAGES",
+      "reviewed_line_ranges": [
+        [
+          72,
+          150
+        ],
+        [
+          203,
+          236
+        ]
+      ],
+      "blob_url": "https://github.com/tasl-lab/GenSafeNav/blob/01baf926a5c77c1a4ab28635658eb014ef4f1767/crowd_sim/envs/crowd_sim_pred_real_gst.py",
+      "boundary": "Static text only; not imported or executed; no whole-file or runtime claim beyond specified passages."
+    },
+    {
+      "repository": "tasl-lab/GenSafeNav",
+      "commit": "01baf926a5c77c1a4ab28635658eb014ef4f1767",
+      "path": "crowd_sim/envs/utils/human.py",
+      "url": "https://raw.githubusercontent.com/tasl-lab/GenSafeNav/01baf926a5c77c1a4ab28635658eb014ef4f1767/crowd_sim/envs/utils/human.py",
+      "sha256": "54a76617c14edb3e9cbff4d6d90f247c974133fb926522bbb708e883d40f4889",
+      "lines": 74,
+      "review_depth": "SELECTED_PASSAGES",
+      "reviewed_line_ranges": [
+        [
+          1,
+          74
+        ]
+      ],
+      "blob_url": "https://github.com/tasl-lab/GenSafeNav/blob/01baf926a5c77c1a4ab28635658eb014ef4f1767/crowd_sim/envs/utils/human.py",
+      "boundary": "Static text only; not imported or executed; no whole-file or runtime claim beyond specified passages."
+    },
+    {
+      "repository": "tasl-lab/GenSafeNav",
+      "commit": "01baf926a5c77c1a4ab28635658eb014ef4f1767",
+      "path": "crowd_sim/envs/utils/agent.py",
+      "url": "https://raw.githubusercontent.com/tasl-lab/GenSafeNav/01baf926a5c77c1a4ab28635658eb014ef4f1767/crowd_sim/envs/utils/agent.py",
+      "sha256": "a2afb7609a8560c6b88069bafa631c7779950d8a1dae272dd4de650fa92da822",
+      "lines": 196,
+      "review_depth": "SELECTED_PASSAGES",
+      "reviewed_line_ranges": [
+        [
+          143,
+          196
+        ]
+      ],
+      "blob_url": "https://github.com/tasl-lab/GenSafeNav/blob/01baf926a5c77c1a4ab28635658eb014ef4f1767/crowd_sim/envs/utils/agent.py",
+      "boundary": "Static text only; not imported or executed; no whole-file or runtime claim beyond specified passages."
+    },
+    {
+      "repository": "tasl-lab/GenSafeNav",
+      "commit": "01baf926a5c77c1a4ab28635658eb014ef4f1767",
+      "path": "crowd_sim/envs/utils/robot.py",
+      "url": "https://raw.githubusercontent.com/tasl-lab/GenSafeNav/01baf926a5c77c1a4ab28635658eb014ef4f1767/crowd_sim/envs/utils/robot.py",
+      "sha256": "ba2a104f5dfa0cb0ed42be644d926363eae92b5669fc3289e3d52717f9dca823",
+      "lines": 41,
+      "review_depth": "CONTEXT_INVENTORY_ONLY",
+      "reviewed_line_ranges": [],
+      "blob_url": "https://github.com/tasl-lab/GenSafeNav/blob/01baf926a5c77c1a4ab28635658eb014ef4f1767/crowd_sim/envs/utils/robot.py",
+      "boundary": "Static text only; not imported or executed; no whole-file or runtime claim beyond specified passages."
+    },
+    {
+      "repository": "tasl-lab/GenSafeNav",
+      "commit": "01baf926a5c77c1a4ab28635658eb014ef4f1767",
+      "path": "crowd_nav/policy/orca.py",
+      "url": "https://raw.githubusercontent.com/tasl-lab/GenSafeNav/01baf926a5c77c1a4ab28635658eb014ef4f1767/crowd_nav/policy/orca.py",
+      "sha256": "3c7171cf727be7071fecb8a1877f5da53c65a800d29913acae1e439f18a1bf12",
+      "lines": 117,
+      "review_depth": "SELECTED_PASSAGES",
+      "reviewed_line_ranges": [
+        [
+          1,
+          117
+        ]
+      ],
+      "blob_url": "https://github.com/tasl-lab/GenSafeNav/blob/01baf926a5c77c1a4ab28635658eb014ef4f1767/crowd_nav/policy/orca.py",
+      "boundary": "Static text only; not imported or executed; no whole-file or runtime claim beyond specified passages."
+    },
+    {
+      "repository": "tasl-lab/GenSafeNav",
+      "commit": "01baf926a5c77c1a4ab28635658eb014ef4f1767",
+      "path": "rl/evaluation.py",
+      "url": "https://raw.githubusercontent.com/tasl-lab/GenSafeNav/01baf926a5c77c1a4ab28635658eb014ef4f1767/rl/evaluation.py",
+      "sha256": "f667f2ed8585a1e5c84b58b85d689f7c8a7623913c5f63034fb493d8b57a2d95",
+      "lines": 197,
+      "review_depth": "SELECTED_PASSAGES",
+      "reviewed_line_ranges": [
+        [
+          1,
+          197
+        ]
+      ],
+      "blob_url": "https://github.com/tasl-lab/GenSafeNav/blob/01baf926a5c77c1a4ab28635658eb014ef4f1767/rl/evaluation.py",
+      "boundary": "Static text only; not imported or executed; no whole-file or runtime claim beyond specified passages."
+    },
+    {
+      "repository": "tasl-lab/GenSafeNav",
+      "commit": "01baf926a5c77c1a4ab28635658eb014ef4f1767",
+      "path": "dt_aci/one_step_dtai.py",
+      "url": "https://raw.githubusercontent.com/tasl-lab/GenSafeNav/01baf926a5c77c1a4ab28635658eb014ef4f1767/dt_aci/one_step_dtai.py",
+      "sha256": "e4cd74c35f076a2014b33f0dd7614476634721d67218526d2dd15005039bff72",
+      "lines": 130,
+      "review_depth": "SELECTED_PASSAGES",
+      "reviewed_line_ranges": [
+        [
+          1,
+          74
+        ]
+      ],
+      "blob_url": "https://github.com/tasl-lab/GenSafeNav/blob/01baf926a5c77c1a4ab28635658eb014ef4f1767/dt_aci/one_step_dtai.py",
+      "boundary": "Static text only; not imported or executed; no whole-file or runtime claim beyond specified passages."
+    },
+    {
+      "repository": "amap-cvlab/ABot-Navigation",
+      "commit": "2a0aefb56f1e2d315bba924239e9e8ad9dca9d92",
+      "path": "README.md",
+      "url": "https://raw.githubusercontent.com/amap-cvlab/ABot-Navigation/2a0aefb56f1e2d315bba924239e9e8ad9dca9d92/README.md",
+      "sha256": "061c9ceb06bc9972064b7749956a7ecd125511213e34b09db3c298325789b225",
+      "lines": 185,
+      "review_depth": "CONTEXT_INVENTORY_ONLY",
+      "reviewed_line_ranges": [],
+      "blob_url": "https://github.com/amap-cvlab/ABot-Navigation/blob/2a0aefb56f1e2d315bba924239e9e8ad9dca9d92/README.md",
+      "boundary": "Static text only; not imported or executed; no whole-file or runtime claim beyond specified passages."
+    },
+    {
+      "repository": "amap-cvlab/ABot-Navigation",
+      "commit": "2a0aefb56f1e2d315bba924239e9e8ad9dca9d92",
+      "path": "abotn_evaluator/interface/point_goal.py",
+      "url": "https://raw.githubusercontent.com/amap-cvlab/ABot-Navigation/2a0aefb56f1e2d315bba924239e9e8ad9dca9d92/abotn_evaluator/interface/point_goal.py",
+      "sha256": "bb57a3afa206b0151466b8b7c7c4a8b5065cc212662dbcf837f57366ce92dcd4",
+      "lines": 141,
+      "review_depth": "SELECTED_PASSAGES",
+      "reviewed_line_ranges": [
+        [
+          18,
+          108
+        ]
+      ],
+      "blob_url": "https://github.com/amap-cvlab/ABot-Navigation/blob/2a0aefb56f1e2d315bba924239e9e8ad9dca9d92/abotn_evaluator/interface/point_goal.py",
+      "boundary": "Static text only; not imported or executed; no whole-file or runtime claim beyond specified passages."
+    },
+    {
+      "repository": "amap-cvlab/ABot-Navigation",
+      "commit": "2a0aefb56f1e2d315bba924239e9e8ad9dca9d92",
+      "path": "abotn_evaluator/point_goal/evaluator.py",
+      "url": "https://raw.githubusercontent.com/amap-cvlab/ABot-Navigation/2a0aefb56f1e2d315bba924239e9e8ad9dca9d92/abotn_evaluator/point_goal/evaluator.py",
+      "sha256": "4cc578f841de5bc3299116373360541f1e7b5dee9c01e0ad4807d6ca62439e98",
+      "lines": 958,
+      "review_depth": "SELECTED_PASSAGES",
+      "reviewed_line_ranges": [
+        [
+          135,
+          154
+        ],
+        [
+          370,
+          505
+        ],
+        [
+          558,
+          615
+        ]
+      ],
+      "blob_url": "https://github.com/amap-cvlab/ABot-Navigation/blob/2a0aefb56f1e2d315bba924239e9e8ad9dca9d92/abotn_evaluator/point_goal/evaluator.py",
+      "boundary": "Static text only; not imported or executed; no whole-file or runtime claim beyond specified passages."
+    },
+    {
+      "repository": "amap-cvlab/ABot-Navigation",
+      "commit": "2a0aefb56f1e2d315bba924239e9e8ad9dca9d92",
+      "path": "abotn_evaluator/point_goal/metrics.py",
+      "url": "https://raw.githubusercontent.com/amap-cvlab/ABot-Navigation/2a0aefb56f1e2d315bba924239e9e8ad9dca9d92/abotn_evaluator/point_goal/metrics.py",
+      "sha256": "c2155af2cc743f99fc38fc2642321bf7c2c0dc8204d62390e9756dbb73b8fb20",
+      "lines": 622,
+      "review_depth": "SELECTED_PASSAGES",
+      "reviewed_line_ranges": [
+        [
+          35,
+          101
+        ]
+      ],
+      "blob_url": "https://github.com/amap-cvlab/ABot-Navigation/blob/2a0aefb56f1e2d315bba924239e9e8ad9dca9d92/abotn_evaluator/point_goal/metrics.py",
+      "boundary": "Static text only; not imported or executed; no whole-file or runtime claim beyond specified passages."
+    },
+    {
+      "repository": "amap-cvlab/ABot-Navigation",
+      "commit": "2a0aefb56f1e2d315bba924239e9e8ad9dca9d92",
+      "path": "abotn_evaluator/config.py",
+      "url": "https://raw.githubusercontent.com/amap-cvlab/ABot-Navigation/2a0aefb56f1e2d315bba924239e9e8ad9dca9d92/abotn_evaluator/config.py",
+      "sha256": "5655b5669f5e9c0041aea54cad2079f1287225f2df1ad35b70a83d0d8e2f997b",
+      "lines": 160,
+      "review_depth": "CONTEXT_INVENTORY_ONLY",
+      "reviewed_line_ranges": [],
+      "blob_url": "https://github.com/amap-cvlab/ABot-Navigation/blob/2a0aefb56f1e2d315bba924239e9e8ad9dca9d92/abotn_evaluator/config.py",
+      "boundary": "Static text only; not imported or executed; no whole-file or runtime claim beyond specified passages."
+    },
+    {
+      "repository": "amap-cvlab/ABot-Navigation",
+      "commit": "2a0aefb56f1e2d315bba924239e9e8ad9dca9d92",
+      "path": "abotn_evaluator/scene.py",
+      "url": "https://raw.githubusercontent.com/amap-cvlab/ABot-Navigation/2a0aefb56f1e2d315bba924239e9e8ad9dca9d92/abotn_evaluator/scene.py",
+      "sha256": "5076d36f7ba3763439403dbf01e7e1c315890e15ff9de7f4a8877443664b85cf",
+      "lines": 736,
+      "review_depth": "SELECTED_PASSAGES",
+      "reviewed_line_ranges": [
+        [
+          571,
+          628
+        ]
+      ],
+      "blob_url": "https://github.com/amap-cvlab/ABot-Navigation/blob/2a0aefb56f1e2d315bba924239e9e8ad9dca9d92/abotn_evaluator/scene.py",
+      "boundary": "Static text only; not imported or executed; no whole-file or runtime claim beyond specified passages."
+    },
+    {
+      "repository": "tasl-lab/GenSafeNav",
+      "commit": "01baf926a5c77c1a4ab28635658eb014ef4f1767",
+      "path": "rl/networks/envs.py",
+      "url": "https://raw.githubusercontent.com/tasl-lab/GenSafeNav/01baf926a5c77c1a4ab28635658eb014ef4f1767/rl/networks/envs.py",
+      "sha256": "31fcb68e836a1d772ef6352e9e7cdec5a1430743a67151df53134e54888e56a9",
+      "lines": 311,
+      "review_depth": "SELECTED_PASSAGES",
+      "reviewed_line_ranges": [
+        [
+          1,
+          155
+        ]
+      ],
+      "blob_url": "https://github.com/tasl-lab/GenSafeNav/blob/01baf926a5c77c1a4ab28635658eb014ef4f1767/rl/networks/envs.py",
+      "boundary": "Static text only; not imported or executed; no whole-file or runtime claim beyond specified passages."
+    },
+    {
+      "repository": "tasl-lab/GenSafeNav",
+      "commit": "01baf926a5c77c1a4ab28635658eb014ef4f1767",
+      "path": "rl/vec_env/vec_pretext_normalize.py",
+      "url": "https://raw.githubusercontent.com/tasl-lab/GenSafeNav/01baf926a5c77c1a4ab28635658eb014ef4f1767/rl/vec_env/vec_pretext_normalize.py",
+      "sha256": "2ec746478069470a4db057515057505b40ec1a63681dd4f2c216d6d4700610b6",
+      "lines": 214,
+      "review_depth": "SELECTED_PASSAGES",
+      "reviewed_line_ranges": [
+        [
+          1,
+          214
+        ]
+      ],
+      "blob_url": "https://github.com/tasl-lab/GenSafeNav/blob/01baf926a5c77c1a4ab28635658eb014ef4f1767/rl/vec_env/vec_pretext_normalize.py",
+      "boundary": "Static text only; not imported or executed; no whole-file or runtime claim beyond specified passages."
+    },
+    {
+      "repository": "tasl-lab/GenSafeNav",
+      "commit": "01baf926a5c77c1a4ab28635658eb014ef4f1767",
+      "path": "rl/vec_env/vec_pretext_normalize_dummy.py",
+      "url": "https://raw.githubusercontent.com/tasl-lab/GenSafeNav/01baf926a5c77c1a4ab28635658eb014ef4f1767/rl/vec_env/vec_pretext_normalize_dummy.py",
+      "sha256": "9a6426d664ccbcb97ba7c647fd8b9323cd933cb7f2aa165bebc7af4d2cd3ef08",
+      "lines": 144,
+      "review_depth": "CONTEXT_INVENTORY_ONLY",
+      "reviewed_line_ranges": [],
+      "blob_url": "https://github.com/tasl-lab/GenSafeNav/blob/01baf926a5c77c1a4ab28635658eb014ef4f1767/rl/vec_env/vec_pretext_normalize_dummy.py",
+      "boundary": "Static text only; not imported or executed; no whole-file or runtime claim beyond specified passages."
+    },
+    {
+      "repository": "tasl-lab/GenSafeNav",
+      "commit": "01baf926a5c77c1a4ab28635658eb014ef4f1767",
+      "path": "trained_models/Ours_GST/arguments.py",
+      "url": "https://raw.githubusercontent.com/tasl-lab/GenSafeNav/01baf926a5c77c1a4ab28635658eb014ef4f1767/trained_models/Ours_GST/arguments.py",
+      "sha256": "7f1952877a1a43850e47a7f50868db24537517003b6b98b79a21b314e76223e0",
+      "lines": 228,
+      "review_depth": "SELECTED_PASSAGES",
+      "reviewed_line_ranges": [
+        [
+          9,
+          15
+        ],
+        [
+          205,
+          228
+        ]
+      ],
+      "blob_url": "https://github.com/tasl-lab/GenSafeNav/blob/01baf926a5c77c1a4ab28635658eb014ef4f1767/trained_models/Ours_GST/arguments.py",
+      "boundary": "Static text only; not imported or executed; no whole-file or runtime claim beyond specified passages."
+    },
+    {
+      "repository": "tasl-lab/GenSafeNav",
+      "commit": "01baf926a5c77c1a4ab28635658eb014ef4f1767",
+      "path": "trained_models/Ours_GST/configs/config.py",
+      "url": "https://raw.githubusercontent.com/tasl-lab/GenSafeNav/01baf926a5c77c1a4ab28635658eb014ef4f1767/trained_models/Ours_GST/configs/config.py",
+      "sha256": "9ca45b3679c2435a15c4b408370c65a172c7823dff27d3c90ad9fdd0445deb60",
+      "lines": 198,
+      "review_depth": "SELECTED_PASSAGES",
+      "reviewed_line_ranges": [
+        [
+          13,
+          176
+        ]
+      ],
+      "blob_url": "https://github.com/tasl-lab/GenSafeNav/blob/01baf926a5c77c1a4ab28635658eb014ef4f1767/trained_models/Ours_GST/configs/config.py",
+      "boundary": "Static text only; not imported or executed; no whole-file or runtime claim beyond specified passages."
+    },
+    {
+      "repository": "tmralmeida/thor-magni-tools",
+      "commit": "5d8040623034e4c21526792badb7b8d93e33f0ca",
+      "path": "README.md",
+      "url": "https://raw.githubusercontent.com/tmralmeida/thor-magni-tools/5d8040623034e4c21526792badb7b8d93e33f0ca/README.md",
+      "sha256": "eb32c99ad5df50ca1fb1dd5cf0ecada11be0cbb4baba8207358691d3c81c5c60",
+      "lines": 144,
+      "review_depth": "SELECTED_PASSAGES",
+      "reviewed_line_ranges": [
+        [
+          1,
+          144
+        ]
+      ],
+      "blob_url": "https://github.com/tmralmeida/thor-magni-tools/blob/5d8040623034e4c21526792badb7b8d93e33f0ca/README.md",
+      "boundary": "Static text only; not imported or executed; no whole-file or runtime claim beyond specified passages."
+    },
+    {
+      "repository": "tmralmeida/thor-magni-tools",
+      "commit": "5d8040623034e4c21526792badb7b8d93e33f0ca",
+      "path": "thor_magni_tools/io/files.py",
+      "url": "https://raw.githubusercontent.com/tmralmeida/thor-magni-tools/5d8040623034e4c21526792badb7b8d93e33f0ca/thor_magni_tools/io/files.py",
+      "sha256": "03d6934574ad4263e8c1924905066c2c15799452d565811d94579122763c1b5c",
+      "lines": 21,
+      "review_depth": "CONTEXT_INVENTORY_ONLY",
+      "reviewed_line_ranges": [],
+      "blob_url": "https://github.com/tmralmeida/thor-magni-tools/blob/5d8040623034e4c21526792badb7b8d93e33f0ca/thor_magni_tools/io/files.py",
+      "boundary": "Static text only; not imported or executed; no whole-file or runtime claim beyond specified passages."
+    },
+    {
+      "repository": "tmralmeida/thor-magni-tools",
+      "commit": "5d8040623034e4c21526792badb7b8d93e33f0ca",
+      "path": "thor_magni_tools/utils/load.py",
+      "url": "https://raw.githubusercontent.com/tmralmeida/thor-magni-tools/5d8040623034e4c21526792badb7b8d93e33f0ca/thor_magni_tools/utils/load.py",
+      "sha256": "e4cd284d6abebd692f4b750a5976e7867b07f73e25247d8a88c2de2f31df1a17",
+      "lines": 118,
+      "review_depth": "SELECTED_PASSAGES",
+      "reviewed_line_ranges": [
+        [
+          1,
+          111
+        ]
+      ],
+      "blob_url": "https://github.com/tmralmeida/thor-magni-tools/blob/5d8040623034e4c21526792badb7b8d93e33f0ca/thor_magni_tools/utils/load.py",
+      "boundary": "Static text only; not imported or executed; no whole-file or runtime claim beyond specified passages."
+    },
+    {
+      "repository": "tmralmeida/thor-magni-tools",
+      "commit": "5d8040623034e4c21526792badb7b8d93e33f0ca",
+      "path": "thor_magni_tools/preprocessing/reprocess.py",
+      "url": "https://raw.githubusercontent.com/tmralmeida/thor-magni-tools/5d8040623034e4c21526792badb7b8d93e33f0ca/thor_magni_tools/preprocessing/reprocess.py",
+      "sha256": "cc383938666c520f850ca7e1af4006596b35c5e03ee77e48b533d6bfc7ba84a3",
+      "lines": 228,
+      "review_depth": "SELECTED_PASSAGES",
+      "reviewed_line_ranges": [
+        [
+          35,
+          146
+        ],
+        [
+          173,
+          228
+        ]
+      ],
+      "blob_url": "https://github.com/tmralmeida/thor-magni-tools/blob/5d8040623034e4c21526792badb7b8d93e33f0ca/thor_magni_tools/preprocessing/reprocess.py",
+      "boundary": "Static text only; not imported or executed; no whole-file or runtime claim beyond specified passages."
+    },
+    {
+      "repository": "tmralmeida/thor-magni-tools",
+      "commit": "5d8040623034e4c21526792badb7b8d93e33f0ca",
+      "path": "thor_magni_tools/preprocessing/filtering.py",
+      "url": "https://raw.githubusercontent.com/tmralmeida/thor-magni-tools/5d8040623034e4c21526792badb7b8d93e33f0ca/thor_magni_tools/preprocessing/filtering.py",
+      "sha256": "2fd6f6804d40aac83526685de564d859a55e22a042aea482d3065720d1086d37",
+      "lines": 262,
+      "review_depth": "SELECTED_PASSAGES",
+      "reviewed_line_ranges": [
+        [
+          7,
+          110
+        ]
+      ],
+      "blob_url": "https://github.com/tmralmeida/thor-magni-tools/blob/5d8040623034e4c21526792badb7b8d93e33f0ca/thor_magni_tools/preprocessing/filtering.py",
+      "boundary": "Static text only; not imported or executed; no whole-file or runtime claim beyond specified passages."
+    },
+    {
+      "repository": "tmralmeida/thor-magni-tools",
+      "commit": "5d8040623034e4c21526792badb7b8d93e33f0ca",
+      "path": "thor_magni_tools/preprocessing/cfg.yaml",
+      "url": "https://raw.githubusercontent.com/tmralmeida/thor-magni-tools/5d8040623034e4c21526792badb7b8d93e33f0ca/thor_magni_tools/preprocessing/cfg.yaml",
+      "sha256": "f70a6de4492941bd4c96ec7f5ef138785215ddf28dd28793afee7aa10384cbeb",
+      "lines": 13,
+      "review_depth": "SELECTED_PASSAGES",
+      "reviewed_line_ranges": [
+        [
+          1,
+          13
+        ]
+      ],
+      "blob_url": "https://github.com/tmralmeida/thor-magni-tools/blob/5d8040623034e4c21526792badb7b8d93e33f0ca/thor_magni_tools/preprocessing/cfg.yaml",
+      "boundary": "Static text only; not imported or executed; no whole-file or runtime claim beyond specified passages."
+    },
+    {
+      "repository": "tasl-lab/GenSafeNav",
+      "commit": "01baf926a5c77c1a4ab28635658eb014ef4f1767",
+      "path": "rl/networks/dummy_vec_env.py",
+      "url": "https://raw.githubusercontent.com/tasl-lab/GenSafeNav/01baf926a5c77c1a4ab28635658eb014ef4f1767/rl/networks/dummy_vec_env.py",
+      "sha256": "6765f2aa59abea4f76ad457e8fa402fb2d59231d2a9d041ce0f39d31e7b1e3a6",
+      "lines": 88,
+      "review_depth": "SELECTED_PASSAGES",
+      "reviewed_line_ranges": [
+        [
+          1,
+          88
+        ]
+      ],
+      "blob_url": "https://github.com/tasl-lab/GenSafeNav/blob/01baf926a5c77c1a4ab28635658eb014ef4f1767/rl/networks/dummy_vec_env.py",
+      "boundary": "Static text only; not imported or executed; no whole-file or runtime claim beyond specified passages."
+    },
+    {
+      "repository": "tasl-lab/GenSafeNav",
+      "commit": "01baf926a5c77c1a4ab28635658eb014ef4f1767",
+      "path": "gst_updated/scripts/wrapper/crowd_nav_interface_parallel.py",
+      "url": "https://raw.githubusercontent.com/tasl-lab/GenSafeNav/01baf926a5c77c1a4ab28635658eb014ef4f1767/gst_updated/scripts/wrapper/crowd_nav_interface_parallel.py",
+      "sha256": "ab327853eac733a8c9fd56cf7976ba7125d87a4be78fe26284b0a8cde93e60e7",
+      "lines": 195,
+      "review_depth": "SELECTED_PASSAGES",
+      "reviewed_line_ranges": [
+        [
+          1,
+          118
+        ]
+      ],
+      "blob_url": "https://github.com/tasl-lab/GenSafeNav/blob/01baf926a5c77c1a4ab28635658eb014ef4f1767/gst_updated/scripts/wrapper/crowd_nav_interface_parallel.py",
+      "boundary": "Static text only; not imported or executed; no whole-file or runtime claim beyond specified passages."
+    }
+  ],
+  "web_sources": [
+    {
+      "url": "https://zenodo.org/records/13865754",
+      "title": "THOR-MAGNI v2 official dataset documentation",
+      "reviewed_sections": [
+        "scenarios 1–5",
+        "directory structure",
+        "CSV headers and timestamp conventions",
+        "sensor synchronization notes"
+      ],
+      "version": "2.0 published 2024-10-01",
+      "payload_downloaded": false,
+      "claim_boundary": "Schema and collection description only; no actual data row/join audit"
+    }
+  ],
+  "findings": [
+    {
+      "id": "P2-F01",
+      "claim": "Saved model config/arguments are the actual test defaults; root configuration alone insufficient",
+      "source_paths": [
+        "GenSafeNav/test.py",
+        "GenSafeNav/trained_models/Ours_GST/configs/config.py"
+      ]
+    },
+    {
+      "id": "P2-F02",
+      "claim": "Robot visibility gates ego-state input to ORCA humans; human actions precede new integration",
+      "source_paths": [
+        "GenSafeNav/crowd_sim/envs/crowd_sim.py",
+        "GenSafeNav/crowd_sim/envs/crowd_sim_pred.py"
+      ]
+    },
+    {
+      "id": "P2-F03",
+      "claim": "No explicit physical target-time keys in ACI valid-only list joins; sorting/replacement require identity audit",
+      "source_paths": [
+        "GenSafeNav/crowd_sim/envs/utils/human.py",
+        "GenSafeNav/crowd_sim/envs/crowd_sim_pred_real_gst.py",
+        "GenSafeNav/rl/vec_env/vec_pretext_normalize.py"
+      ],
+      "boundary": "Potential conditional failure; occurrence and performance effect not measured"
+    },
+    {
+      "id": "P2-F04",
+      "claim": "Robot ORCA branch uses internal truth lookahead; not a fair same-information baseline by default",
+      "source_paths": [
+        "GenSafeNav/crowd_sim/envs/crowd_sim_pred.py",
+        "GenSafeNav/crowd_sim/envs/crowd_sim_var_num.py"
+      ]
+    },
+    {
+      "id": "P2-F05",
+      "claim": "Auto-reset observation returned before evaluator path update; retain terminal state and episode key",
+      "source_paths": [
+        "GenSafeNav/rl/networks/dummy_vec_env.py",
+        "GenSafeNav/rl/evaluation.py"
+      ],
+      "boundary": "Static path finding, not reproduced numeric corruption"
+    },
+    {
+      "id": "P2-F06",
+      "claim": "Point-goal pose/occupancy loop lacks coupled pedestrian/physical clock in reviewed path; source interface uses front,left",
+      "source_paths": [
+        "ABot-Navigation/abotn_evaluator/interface/point_goal.py",
+        "ABot-Navigation/abotn_evaluator/point_goal/evaluator.py",
+        "ABot-Navigation/abotn_evaluator/scene.py"
+      ],
+      "boundary": "P1 docs coordinate convention must not substitute for actual interface"
+    },
+    {
+      "id": "P2-F07",
+      "claim": "THOR records human interaction but no counterfactual new ego policy outcome; interpolation/best-marker selection are offline transformations",
+      "source_paths": [
+        "thor-magni-tools/thor_magni_tools/preprocessing/reprocess.py",
+        "thor-magni-tools/thor_magni_tools/preprocessing/filtering.py"
+      ],
+      "boundary": "Trailing average is not centered; actual payload not inspected"
+    }
+  ],
+  "validation": {
+    "pre_audit": {
+      "papers": 1037,
+      "core": 47,
+      "next": 275,
+      "reference": 473,
+      "archive": 242,
+      "intensive": 322,
+      "history": 47,
+      "standard_notes": 5185,
+      "errors": [],
+      "warnings": []
+    },
+    "post_checks": {
+      "python3 -m py_compile work/scripts/build_reading_tiers.py": "PASS",
+      "python3 work/scripts/build_reading_tiers.py": "PASS; CORE47 NEXT275 REFERENCE473 ARCHIVE242",
+      "python3 work/scripts/audit_repository.py": {
+        "status": "PASS",
+        "papers": 1037,
+        "standard_notes": 5185,
+        "markdown_files": 5339,
+        "markdown_links": 10207,
+        "errors": [],
+        "warnings": []
+      },
+      "git diff --check": "PASS",
+      "new_manifest_json_nonexecution_state_and_34_source_hashes": "PASS"
+    },
+    "canonical_hash_preservation": {
+      "status": "PASS",
+      "sha256": {
+        "work/sources/papers.json": "9aaf36031bf776d554dd10f8f2f927d60ddd7b44ff02267181325275bcb74f06",
+        "work/sources/registry_meta.json": "1fbb093bf785ca218ead1804f95fdac7fa5d88ac5ed82b019f1766511b1eb56f",
+        "research/READING_TIERS.csv": "8b2ac89fff0d6d56950695d5bfb67daab8fbc51647454fa077beea970bb23f29",
+        "research/READING_STATUS.csv": "276c5531063e93f381de18b45fbf82dfa16703444f39658dfd4bfb10bbc17878",
+        "research/READING_STATUS_HISTORY.csv": "c91b6727a03529ba790447eb5106f5b04cc4364b0c90b3eed1afecf9b700e001"
+      }
+    },
+    "preexisting_dirty_preservation": {
+      "status": "PASS",
+      "initial_present_dirty_files": 362,
+      "initial_absent_dirty_paths": 5,
+      "unchanged_existing_dirty_files": 353,
+      "intentionally_updated_related_files": [
+        "synthesis/README.md",
+        "research/IDEA_BUILDUP_GUIDE.md",
+        "TODO.md",
+        "work/update/REACTIVE_NAVIGATION_SAFETY_REVIEW_2026-10-23.md",
+        "work/update/README.md",
+        "synthesis/01_planning_control.md",
+        "work/update/UPDATES_2026-10-23.md",
+        "README.md",
+        "synthesis/04_vla_generalist.md"
+      ],
+      "preexisting_missing_paths_still_absent": 5,
+      "new_artifacts": [
+        "work/sources/reactive_navigation_execution_review_2026-10-23.json",
+        "work/sources/reactive_navigation_preexperiment_manifest_2026-10-23.json",
+        "work/update/REACTIVE_NAVIGATION_EXECUTION_REVIEW_2026-10-23.md"
+      ]
+    },
+    "temporary_source_cleanup": {
+      "status": "PASS",
+      "removed_only_task_temp_files": 41,
+      "task_temp_directory_removed": true,
+      "pointer_removed": true,
+      "source_hashes_and_review_ranges_retained": true,
+      "repository_artifacts_deleted": 0
+    },
+    "git_commit_or_push": false
+  }
+}

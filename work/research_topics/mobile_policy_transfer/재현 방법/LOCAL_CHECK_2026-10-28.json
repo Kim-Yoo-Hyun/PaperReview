@@ -1,0 +1,241 @@
+{
+  "task_id": "GAP-HANDOFF-P0",
+  "observed_date_kst": "2026-10-28",
+  "scope": "read-only local host/daemon inspection and one GPU allocation probe",
+  "host": {
+    "os": "Darwin",
+    "architecture": "arm64",
+    "memory_bytes": 17179869184
+  },
+  "docker": {
+    "context": "desktop-linux",
+    "endpoint_kind": "local unix socket",
+    "environment_host_or_context_override": false,
+    "version": "28.3.3",
+    "os": "linux",
+    "architecture": "aarch64",
+    "cpus": 10,
+    "memory_bytes": 8218034176,
+    "runtimes": [
+      "io.containerd.runc.v2",
+      "runc"
+    ],
+    "running_containers_before": 0,
+    "all_containers_after": 0,
+    "images_before": 1,
+    "images_after": 1
+  },
+  "gpu_probe": {
+    "command": "docker run --rm --pull=never --network=none --read-only --gpus all --name paper-handoff-p0-gpu-check --label paperreview.task=handoff-p0 --entrypoint /bin/true paper-gap-p3:rvo-c2c46ba",
+    "exit_code": 125,
+    "error": "docker: Error response from daemon: could not select device driver \"\" with capabilities: [[gpu]]",
+    "container_process_started": false,
+    "model_or_simulator_executed": false
+  },
+  "image_identity": {
+    "tag_inspect_exit_code": 1,
+    "tag_inspect_error": "No such image: paper-gap-p3:rvo-c2c46ba",
+    "tag_listed_before_and_after": true,
+    "image_id_verified_later": "sha256:ec14bd72a90f89cb6f3c4b263bb35a81de7977dffb2e5a2cb7e96946f1545ebb",
+    "id_inspect_platform": "linux/arm64",
+    "interpretation": "Image tag inspection inconsistency recorded. GPU probe failed at device allocation; it is not evidence that the entrypoint or native environment ran.",
+    "purpose": "existing unrelated prior experiment image reused only for allocation probe; no pull or mutation"
+  },
+  "decision": {
+    "native_resource_gate": "NOT_MET",
+    "next_action": "portable preparation only",
+    "cuda_render_model_handoff": "NOT_RUN",
+    "cause": "Mac ARM64 Docker lacks the needed GPU allocation path; architecture also differs from proposed native recipe",
+    "research_candidate": "HANDOFF retained, effect unmeasured"
+  },
+  "cleanup": {
+    "task_containers_remaining": 0,
+    "new_images": 0,
+    "new_volumes": 0,
+    "downloads": 0,
+    "host_installations": 0,
+    "existing_image_preserved": true,
+    "global_prune_performed": false
+  },
+  "source_checks": [
+    {
+      "id": "server_pyproject",
+      "url": "https://raw.githubusercontent.com/mafangniu/pi05-behavior-skill/7ca6eace02aaba2d8ce19af600b85dd04a60d720/pyproject.toml",
+      "sha256": "3b32ad5b6d6b9d00aa421252d577038bbf47718ec834af7f016f1d755c33b7eb",
+      "scope": "full small config file"
+    },
+    {
+      "id": "server_python",
+      "url": "https://raw.githubusercontent.com/mafangniu/pi05-behavior-skill/7ca6eace02aaba2d8ce19af600b85dd04a60d720/.python-version",
+      "sha256": "bb0635f951bfd55419a47fc08a859192049b4d0949cf2d09a4d4d6b2cafafb94",
+      "scope": "full small config file"
+    },
+    {
+      "id": "benchmark_setup",
+      "url": "https://raw.githubusercontent.com/nubot-nudt/Behavior-Skill/d3593788bdc7bd3016d307ea9529fdb500c146ba/setup.sh",
+      "sha256": "3f090c534c56b89a18dcd8b16e2d7b20b4df44b4d2eda98a2bb0b88012859c47",
+      "scope": "setup.sh selected version/install lines; not executed",
+      "selected_lines": [
+        7,
+        8,
+        15,
+        27,
+        28,
+        35,
+        52,
+        53,
+        55,
+        56,
+        60,
+        62,
+        66,
+        67,
+        73,
+        74,
+        75,
+        87,
+        115,
+        143,
+        144,
+        145,
+        155,
+        156,
+        161,
+        162,
+        215,
+        216,
+        225,
+        226,
+        228,
+        229,
+        231,
+        232,
+        234,
+        235,
+        236,
+        237,
+        238,
+        241,
+        242,
+        243,
+        244,
+        246,
+        247,
+        248,
+        251,
+        252,
+        253,
+        273,
+        279,
+        284,
+        288,
+        293,
+        294,
+        296,
+        303,
+        306,
+        307,
+        308,
+        309,
+        310,
+        311,
+        312,
+        313,
+        314,
+        341,
+        346,
+        347,
+        352,
+        354,
+        355,
+        358,
+        360,
+        364,
+        367,
+        379,
+        380,
+        381,
+        395,
+        396,
+        412,
+        413,
+        414,
+        419,
+        425,
+        434,
+        435,
+        437
+      ]
+    }
+  ],
+  "official_references": [
+    {
+      "url": "https://docs.docker.com/desktop/features/gpu/",
+      "claim": "Linux-container --gpus passthrough on Docker Desktop is Windows WSL2 only; Model Runner acceleration on other platforms is a separate feature."
+    },
+    {
+      "url": "https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html",
+      "claim": "GPU driver and NVIDIA Container Toolkit are host prerequisites; not installed by this task."
+    }
+  ],
+  "source_access_limit": {
+    "url": "https://docs.isaacsim.omniverse.nvidia.com/4.5.0/installation/requirements.html",
+    "result": "404; no 5.x/6.x minimum substituted for 4.5"
+  },
+  "preflight_script_checks": {
+    "status": "PASS_FOR_CHECKED_PATHS",
+    "shell_syntax": {
+      "command": "sh -n work/experiments/vla_handoff_p0/resume.sh",
+      "exit_code": 0
+    },
+    "help": {
+      "exit_code": 0
+    },
+    "local_check": {
+      "command": "sh work/experiments/vla_handoff_p0/resume.sh check",
+      "exit_code": 3,
+      "expected": "reject linux/arm64 native recipe before any GPU container launch"
+    },
+    "remote_check": {
+      "command": "env DOCKER_HOST=tcp://127.0.0.1:2375 DOCKER_CONTEXT= sh work/experiments/vla_handoff_p0/resume.sh check",
+      "exit_code": 2,
+      "expected": "reject nonlocal socket before contacting daemon"
+    },
+    "successful_gpu_script_path": "NOT_RUN; no supported local GPU",
+    "native_experiments": "NOT_RUN"
+  },
+  "repository_validation": {
+    "status": "PASS",
+    "checks": [
+      "reading generator py_compile",
+      "reading generator with no content changes",
+      "git diff --check",
+      "repository audit; errors 0 warnings 0",
+      "JSON parse"
+    ],
+    "counts": {
+      "papers": 1072,
+      "tiers": {
+        "CORE": 47,
+        "NEXT": 297,
+        "REFERENCE": 486,
+        "ARCHIVE": 242
+      },
+      "active": 344,
+      "history": 47,
+      "notes": 5360,
+      "markdown_files": 5547,
+      "relative_links": 11034
+    },
+    "preservation": {
+      "prior_dirty": 664,
+      "changed_existing": 6,
+      "unchanged_existing": 658,
+      "prior_deleted_preserved": 10,
+      "new_files": 5,
+      "canonical_unchanged": 6,
+      "canonical_intentional_change": "AGENTS.md; prior text verified by reversing only the requested addition/date change",
+      "generator_changes": 0
+    }
+  }
+}

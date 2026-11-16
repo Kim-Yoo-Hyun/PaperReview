@@ -4,6 +4,8 @@
 > Evidence maturity: `FULL_TEXT_CHECKED`.
 > Analysis basis: full-text PDF body checked on 2026-09-03 (12 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/1707.06347; PDF retrieval source: https://arxiv.org/pdf/1707.06347. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
+> DOC-QA2 targeted source review: 2026-10-23; PDF pp. 5. 손상 구간·직접 연결된 표 분류만 원문 이미지와 대조했다. 전체 주장 정독·실험 검증·reading status 승격을 뜻하지 않는다. [URL·PDF hash·수정 기록](../../../work/sources/pdf_note_review_followup_2026-10-23.json).
+
 ## Method in One Sentence
 
 PDF body method statement (p. 1 (Abstract), p. 1 (1 Introduction), p. 2 (1 Introduction), p. 3 (1 1 + ϵ), p. 5 (1 1 + ϵ), p. 5 (1 1 + ϵ)): We propose a new family of policy gradient methods for reinforcement learning, which alternate between sampling data through interaction with the environment, and optimizing a "surrogate" objective function using stochastic ...
@@ -52,7 +54,7 @@ PDF body method statement (p. 1 (Abstract), p. 1 (1 Introduction), p. 2 (1 Intro
 - **p. 3 / 1 Introduction - extractive body cue:** Without a constraint, maximization of LCPI would lead to an excessively large policy update; hence, we now consider how to modify the objective, to penalize ...
 - **p. 2 / 1 Introduction - extractive body cue:** This problem can efficiently be approximately solved using the conjugate gradient algorithm, after making a linear approximation to the objective and a quadratic approximation to ...
 - **p. 4 / 1 1 + ϵ - extractive body cue:** For implementations that use automatic differentation, one simply constructs the loss LCLIP or LKLPEN instead of LPG, and one performs multiple steps of stochastic gradient ...
-- **p. 5 / 1 1 + ϵ - extractive body cue:** Combining these terms, we obtain the following objective, which is (approximately) maximized each iteration: LCLIP+V F+S t (θ) = ˆEt  LCLIP t (θ) -c1LV ...
+- **PDF p. 5, Eq. (9) (DOC-QA2 원문 대조):** 각 iteration에서 대략 최대화하는 결합 objective는 Êₜ[L_CLIP−c₁L_VF+c₂S(π_θ;sₜ)]다. Value loss는 squared target error이고 entropy는 bonus다. Minimized loss와 objective의 부호를 혼동하지 않는다.
 - **p. 1 / Abstract - extractive body cue:** Whereas standard policy gradient methods perform one gradient update per data sample, we propose a novel objective function that enables multiple epochs of minibatch updates.
 - **Formal bridge:** s_t/o_t -> a_t sampled or selected by πθ -> expected return / constrained return -> task return, success and safe execution.
 - **Equation/algorithm anchors:** p. 2 (1 Introduction), p. 4 (1 1 + ϵ), p. 1 (Abstract), p. 2 (1 Introduction), p. 3 (1 Introduction), p. 1 (Abstract).

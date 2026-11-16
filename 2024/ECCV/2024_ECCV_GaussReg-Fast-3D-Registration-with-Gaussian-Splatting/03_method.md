@@ -4,6 +4,8 @@
 > Evidence maturity: `FULL_TEXT_CHECKED`.
 > Analysis basis: full-text PDF body checked on 2026-09-03 (17 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.ecva.net/papers/eccv_2024/papers_ECCV/html/2380_ECCV_2024_paper.php; PDF retrieval source: https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/02380.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
+> DOC-QA2 targeted source review: 2026-10-23; PDF pp. 5. 손상 구간·직접 연결된 표 분류만 원문 이미지와 대조했다. 전체 주장 정독·실험 검증·reading status 승격을 뜻하지 않는다. [URL·PDF hash·수정 기록](../../../work/sources/pdf_note_review_followup_2026-10-23.json).
+
 ## Method in One Sentence
 
 PDF body method statement (p. 6 (3 Method), p. 7 (3 Method), p. 8 (3 Method), p. 6 (3 Method), p. 8 (3 Method), p. 7 (3 Method)): Our key idea is to first locate overlapping region between scene A and B and render some training images covering the region to support more precise geometric features for fine ...
@@ -16,7 +18,7 @@ PDF body method statement (p. 6 (3 Method), p. 7 (3 Method), p. 8 (3 Method), p.
 - **p. 6 / 3 Method - extractive body cue:** We apply two loss functions (overlap-aware circle loss and point matching loss) from the GeoTransformer [27] to constrain our coarse registration network.
 - **p. 8 / 3 Method - extractive body cue:** Training Strategy and Loss Function Overlap Image Selection is not involved in the training of the fine registration network.
 - **p. 7 / 3 Method - extractive body cue:** First, we input IA into a 2D CNN to get features RefA, {Srck A}n k=0, which turn into the cost volume CostA according to the ...
-- **p. 5 / 3 Method - extractive body cue:**   {(  ,  )}  I3D Feature Extraction Superpoint Match Point Match 
+- **PDF p. 5, Fig. 2 / §3.1 (DOC-QA2 원문 대조):** GaussReg은 coarse registration과 image-guided fine registration의 두 단계다. KPConv-FPN 및 superpoint/point matching 이후 overlap image selection과 I3D feature extraction으로 fine matching을 수행한다. 깨진 그림 glyph를 임의 수식으로 복원하지 않았다.
 - **p. 7 / 3 Method - extractive body cue:** Followed by the 3DCNN regularization, the probability volume PA ∈RD×H×W and feature volume FA ∈RC×D×H×W are obtained from the cost volumes, where C is the ...
 
 ## Design Rationale
@@ -33,7 +35,7 @@ PDF body method statement (p. 6 (3 Method), p. 7 (3 Method), p. 8 (3 Method), p.
 - **p. 6 / 3 Method - extractive body cue:** We apply two loss functions (overlap-aware circle loss and point matching loss) from the GeoTransformer [27] to constrain our coarse registration network.
 - **p. 8 / 3 Method - extractive body cue:** Training Strategy and Loss Function Overlap Image Selection is not involved in the training of the fine registration network.
 - **p. 7 / 3 Method - extractive body cue:** First, we input IA into a 2D CNN to get features RefA, {Srck A}n k=0, which turn into the cost volume CostA according to the ...
-- **p. 5 / 3 Method - extractive body cue:**   {(  ,  )}  I3D Feature Extraction Superpoint Match Point Match 
+- **PDF p. 5, Fig. 2 / §3.1 (DOC-QA2 원문 대조):** GaussReg은 coarse registration과 image-guided fine registration의 두 단계다. KPConv-FPN 및 superpoint/point matching 이후 overlap image selection과 I3D feature extraction으로 fine matching을 수행한다. 깨진 그림 glyph를 임의 수식으로 복원하지 않았다.
 - **Detected method headings:** 3 Method (p. 5)
 
 ## Pipeline

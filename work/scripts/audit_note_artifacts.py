@@ -29,6 +29,9 @@ NOTE_NAMES = (
 )
 
 EMAIL_RE = re.compile(r"\b[A-Za-z0-9._%+\-]+@[A-Za-z0-9.\-]+\.[A-Za-z]{2,}\b")
+# PDF fonts can map parentheses, minus signs, or Greek symbols to these
+# codepoints. Detect them, but never guess a replacement without the source.
+CONTROL_RE = re.compile(r"[\x00-\x08\x0b\x0c\x0e-\x1f\x7f-\x9f]")
 FRONT_MATTER_RE = re.compile(r"front matter", re.I)
 EQUAL_RE = re.compile(
     r"(?:[*†‡∗]\s*)?(?:equal (?:contribution|contributions|advising)|"
@@ -124,6 +127,8 @@ def note_paths() -> list[Path]:
 
 def issue_kinds(line: str) -> list[str]:
     issues: list[str] = []
+    if CONTROL_RE.search(line):
+        issues.append("control_character_source_review_required")
     if FRONT_MATTER_RE.search(line):
         issues.append("front_matter_anchor")
     if EQUAL_RE.search(line):
@@ -174,7 +179,8 @@ def scan(paths: list[Path]) -> dict:
         file_issues: Counter[str] = Counter()
         line_numbers: dict[str, list[int]] = {}
         text = path.read_text(encoding="utf-8", errors="ignore")
-        for line_number, line in enumerate(text.splitlines(), start=1):
+        # splitlines() silently treats some corrupt C0/C1 glyphs as newlines.
+        for line_number, line in enumerate(text.split("\n"), start=1):
             for issue in issue_kinds(line):
                 counts[issue] += 1
                 file_issues[issue] += 1
@@ -231,6 +237,8 @@ def finish_body_prefix(prefix: str) -> str:
 
 
 def clean_line(line: str, changes: Counter[str]) -> str | None:
+    if CONTROL_RE.search(line):
+        return line
     newline = "\n" if line.endswith("\n") else ""
     content = line[:-1] if newline else line
     original = content
@@ -451,6 +459,9 @@ def apply_cleanup(paths: list[Path]) -> dict:
     modified_files: list[str] = []
     for path in paths:
         original = path.read_text(encoding="utf-8", errors="ignore")
+        if CONTROL_RE.search(original):
+            # Preserve the entire contaminated note for a source-backed edit.
+            continue
         output: list[str] = []
         for line in original.splitlines(keepends=True):
             cleaned = clean_line(line, changes)
@@ -492,6 +503,7 @@ def main() -> int:
                 "affiliation mistaken for a section label relabelled as body section not recovered",
             ],
             "manual_review_only": [
+                "C0/C1 control characters: preserve the note; original PDF comparison required",
                 "ambiguous section labels such as a university/institute heading",
                 "OCR corruption that cannot be safely reconstructed",
                 "claims requiring the original PDF or experiment context",

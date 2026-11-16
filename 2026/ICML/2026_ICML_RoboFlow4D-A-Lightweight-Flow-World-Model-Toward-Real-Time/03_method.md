@@ -4,6 +4,18 @@
 > Evidence maturity: `FULL_TEXT_CHECKED`.
 > Analysis basis: full-text PDF body checked on 2026-09-03 (17 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=fh6XBnjFlv; PDF retrieval source: https://openreview.net/pdf/17509091f9a7574439da683639d4af0b20b10d5e.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
+> DOC-QA2 targeted source review: 2026-10-23; PDF pp. 6. 손상 구간·직접 연결된 표 분류만 원문 이미지와 대조했다. 전체 주장 정독·실험 검증·reading status 승격을 뜻하지 않는다. [URL·PDF hash·수정 기록](../../../work/sources/pdf_note_review_followup_2026-10-23.json).
+
+## DOC-QA3 — keyframe sampler의 공개 구현
+
+**원문 근거:** PDF p. 6 Eq. (6), arXiv v1 Appendix C Eq. (7)은 단일 power law와 floor를 쓴다. γ>1을 말단 집중으로 설명하지만, 표시식의 균등 k를 대입한 연속 좌표는 시작 쪽으로 조밀해진다.
+
+**공식 코드 근거:** `main` → `FutureKDataset` → `__getitem__` → `resample_on_traj`를 추적했다. 균등 u에 대해 왼쪽은 `w=0.5(2u)^γs`, 오른쪽은 `w=1−0.5[2(1−u)]^γe`이며 γs=1.2, γe=1.6이다. `round(start+(end−start)w)` 뒤 endpoints 고정·단조 보정을 하고, unique index 수가 `int(0.7K)` 미만이면 rounded uniform sampling으로 바꾼다. 반복 index는 허용한다. 정책 target helper에도 같은 형태가 있지만 모든 cache 생성 경로를 검증한 것은 아니다.
+
+**연구자 해석:** 현재 공개 구현은 양끝 sampling과 fallback을 갖는 별도 구현 계약이다. 인쇄 식의 exponent 하나를 수정한 것으로 축약하거나, 이 코드가 논문 결과를 생성한 정확한 버전이라고 가정하지 않는다.
+
+대조 근거: [원문](https://arxiv.org/html/2605.17522v1#S3.SS5) · [공식 구현 31c950750f00](https://github.com/EDEM-AI/RoboFlow4D/blob/31c950750f0074067cd7c8ff5df86b8d6fa6f223/3DFlowModel/train_flow_model.py#L815-L851) · [전체 호출 경로·파일 hash](../../../work/sources/paper_code_formula_review_2026-10-23.json). 검토일 2026-10-23. 지정 구간을 정적으로 읽었으며 코드 실행·의존성 설치는 하지 않았다. 논문 실험과 이 commit의 동일성 및 저자 확인 정오표는 미확인이다. 사용자 reading status는 유지한다.
+
 ## Method in One Sentence
 
 PDF body method statement (p. 6 (3.5. Data Generation and Training Objective), p. 4 (3.2. RoboFlow4D), p. 5 (3.2. RoboFlow4D), p. 3 (3.1. Overview), p. 4 (3.2. RoboFlow4D), p. 5 (3.2. RoboFlow4D)): The overall objective comprises three losses: (1) a diffusion denoising loss Ldiff drive the model to recover physically plausible trajectories from noisy inputs; (2) an alignment loss Lalign strengthening 2D-to-3D ...
@@ -80,7 +92,7 @@ PDF body method statement (p. 6 (3.5. Data Generation and Training Objective), p
 | Contract | Generic domain prior | PDF body cue | Unresolved detail |
 |---|---|---|---|
 | Horizon | instruction-conditioned task horizon; action chunk/skill termination 여부는 paper-specific. | Specifically, goal-oriented RoboFlow4D acts as a low-frequency flow planner, whose single-step plan extends beyond the time horizon of an action chunk. | episode/sequence/action-chunk boundary |
-| Rate / latency | policy inference/decoder rate와 low-level control rate가 분리된다; numeric value 확인 필요. | Keyframe selection follows a monotonic warping rule uk: uk =  k K -1 γ , tk = ⌊si + uk (ei ... | Hz/fps, inference time and control rate |
+| Keyframe sampling | u_k=(k/(K−1))^γ, t_k=floor(s_i+u_k(e_i−s_i)). | PDF p. 6 Eq. (6)의 atomic-task keyframe warping | Hz 근거가 아님. 본문은 γ>1에서 끝에 집중한다고 쓰지만, 균등 k를 이 식에 넣으면 시작 쪽에 집중하므로 원문과 공개 sampler를 위 DOC-QA3에서 구분 |
 | Memory | image-language-proprioception history, transformer context 또는 persistent memory. | not recovered | window and reset |
 | Compute | multimodal encoder, decoder/sampling steps와 action horizon이 latency를 결정한다. | Each task is evaluated over 100 trials. | hardware, batch and throughput |
 

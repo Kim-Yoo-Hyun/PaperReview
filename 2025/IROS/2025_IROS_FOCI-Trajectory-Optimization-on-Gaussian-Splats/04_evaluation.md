@@ -4,6 +4,8 @@
 > Evidence maturity: `FULL_TEXT_CHECKED`.
 > Analysis basis: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2505.08510; PDF retrieval source: https://arxiv.org/pdf/2505.08510. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
+> DOC-QA1 (2026-10-23): 제어문자·깨진 추출 구간과 직접 연결된 표 항목을 PDF 페이지 이미지와 대조했다. 확인 범위·원문 URL·페이지·수정 이력은 [대조 기록](../../../work/sources/pdf_note_review_2026-10-23.json)에 있다. 노트 전체의 정독이나 모든 기존 주장에 대한 재검증을 뜻하지 않으며 reading status는 유지한다.
+
 ## Evaluation in One Sentence
 
 PDF body evaluation/result cue (p. 5 (A. Trajectory Evaluation), p. 3 (III. METHOD)): Environment Initial Guess Time Solve Time # of Gaussians Narrow Corridor 0.24s 0.47s 24k Pillars 0.25s 0.45s 49k Machine Hall 0.22s 2.12s 243k Stonehenge 0.55s 0.83s 138k TABLE II: Planning ...
@@ -17,7 +19,7 @@ PDF body evaluation/result cue (p. 5 (A. Trajectory Evaluation), p. 3 (III. METH
 - **p. 5 / A. Trajectory Evaluation - extractive body cue:** The algorithm gracefully handles trajectories requiring additional turns while adapting the orientation to keep a maximum distance from the wall.
 - **p. 6 / Figure/Table caption - extractive body cue:** Fig. 4: Trajectories planned for the ANYmal robot through real world obstacles. On the bottom the actual robot can be seen at the site following ...
 - **p. 7 / Figure/Table caption - extractive body cue:** Fig. 8: Optimized trajectory for which the collision avoidance fails. b) Trajectories are parameterized over an interval that depends only on the number of control ...
-- **p. 3 / III. METHOD - extractive body cue:** The spline can then be evaluated with x(s′) =  1 s′ s′2 s′3 1 6   1 4 1 0 -3 0 3 ...
+- **원문 대조:** 균일 cubic B-spline의 각 segment는 네 control point의 가중합이다. H개 control point에서 H−3개 segment를 만들고, 이산화한 trajectory는 X=ΦQ로 표현한다. 잘린 행렬은 원문의 식 (1)을 참조한다. ([PDF p. 3](https://arxiv.org/pdf/2505.08510#page=3), §III-A Trajectory Representation, Eqs. (1)–(2)).
 
 ## Evaluation Type and Scope
 
@@ -33,7 +35,7 @@ PDF body evaluation/result cue (p. 5 (A. Trajectory Evaluation), p. 3 (III. METH
 | Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
 | A. Trajectory Evaluation | SYSTEM / EVALUATION SCOPE UNRESOLVED | Environment Initial Guess Time Solve Time # of Gaussians Narrow Corridor 0.24s 0.47s 24k Pillars 0.25s 0.45s 49k Machine Hall 0.22s 2.12s 243k Stonehenge ... | p. 5 (A. Trajectory Evaluation) |
-| III. METHOD | SYSTEM / EVALUATION SCOPE UNRESOLVED | The spline can then be evaluated with x(s′) =  1 s′ s′2 s′3 1 6   1 4 1 0 -3 0 ... | p. 3 (III. METHOD) |
+| §III-A trajectory formulation | METHOD DEFINITION; evaluation setting 아님 | 원문 대조: 균일 cubic B-spline의 각 segment는 네 control point의 가중합이다. H개 control point에서 H−3개 segment를 만들고, 이산화한 trajectory는 X=ΦQ로 표현한다. 잘린 행렬은 원문의 식 (1)을 참조한다. ([PDF p. 3](https://arxiv.org/pdf/2505.08510#page=3), §III-A Trajectory Representation, Eqs. (1)–(2)) | [PDF p. 3](https://arxiv.org/pdf/2505.08510#page=3), §III-A Trajectory Representation, Eqs. (1)–(2) |
 
 ## Dataset / Benchmark Role
 
@@ -98,11 +100,11 @@ PDF body evaluation/result cue (p. 5 (A. Trajectory Evaluation), p. 3 (III. METH
 | Claim or target | Result/condition cue | Evidence strength | Anchor |
 |---|---|---|---|
 | In this paper, we propose an algorithm that enables a robot to perform trajectory optimization directly on the 3D Gaussians. | Environment Initial Guess Time Solve Time # of Gaussians Narrow Corridor 0.24s 0.47s 24k Pillars 0.25s 0.45s 49k Machine Hall 0.22s 2.12s 243k Stonehenge ... | PDF body cue; verify exact table/figure and matched conditions | p. 5 (A. Trajectory Evaluation), p. 3 (III. METHOD) |
-| Primary metric/result | The spline can then be evaluated with x(s′) =  1 s′ s′2 s′3 1 6   1 4 1 0 -3 0 ... | numeric claim only at cited anchor | p. 3 (III. METHOD) |
+| Method definition (metric 아님) | 원문 대조: 균일 cubic B-spline의 각 segment는 네 control point의 가중합이다. H개 control point에서 H−3개 segment를 만들고, 이산화한 trajectory는 X=ΦQ로 표현한다. 잘린 행렬은 원문의 식 (1)을 참조한다. ([PDF p. 3](https://arxiv.org/pdf/2505.08510#page=3), §III-A Trajectory Representation, Eqs. (1)–(2)) | 이 spline 식에서 정량 성능을 추출하지 않음 | [PDF p. 3](https://arxiv.org/pdf/2505.08510#page=3), §III-A Trajectory Representation, Eqs. (1)–(2) |
 
 - Numeric sentences retained from the body:
 - **p. 5 / A. Trajectory Evaluation - extractive body cue:** Environment Initial Guess Time Solve Time # of Gaussians Narrow Corridor 0.24s 0.47s 24k Pillars 0.25s 0.45s 49k Machine Hall 0.22s 2.12s 243k Stonehenge 0.55s ...
-- **p. 3 / III. METHOD - extractive body cue:** The spline can then be evaluated with x(s′) =  1 s′ s′2 s′3 1 6   1 4 1 0 -3 0 3 ...
+- **원문 대조:** 균일 cubic B-spline의 각 segment는 네 control point의 가중합이다. H개 control point에서 H−3개 segment를 만들고, 이산화한 trajectory는 X=ΦQ로 표현한다. 잘린 행렬은 원문의 식 (1)을 참조한다. ([PDF p. 3](https://arxiv.org/pdf/2505.08510#page=3), §III-A Trajectory Representation, Eqs. (1)–(2)).
 
 ## Generalization and Failure Cases
 
@@ -126,7 +128,7 @@ PDF body evaluation/result cue (p. 5 (A. Trajectory Evaluation), p. 3 (III. METH
 | All experiments are run on an Intel i7-8750H with 16 GB of RAM and an NVIDIA RTX 2070 Max-Q. | p. 4 (IV. EXPERIMENTS) |
 | Furthermore, we demonstrate the use of the algorithm for navigating an ANYmal robot on hardware to highlight the importance of orientation-aware planning. | p. 5 (A. Trajectory Evaluation) |
 | We exploit the independent summation structure of the collision measure (Equation 5) and run this computation on the GPU in parallel. | p. 4 (III. METHOD) |
-| We compute the time derivative with dix dti = dix dsi   ds dt i and assume m := ds dt to be constant. | p. 3 (III. METHOD) |
+| 원문 대조: Progress variable s와 시간 t를 구분하며 m=ds/dt를 상수로 가정한다. 이 가정에서 i차 시간 미분은 s에 대한 i차 미분에 m^i를 곱해 계산한다. ([PDF p. 3](https://arxiv.org/pdf/2505.08510#page=3), §III-A Trajectory Representation) | [PDF p. 3](https://arxiv.org/pdf/2505.08510#page=3), §III-A Trajectory Representation |
 
 | Audit field | Current status |
 |---|---|

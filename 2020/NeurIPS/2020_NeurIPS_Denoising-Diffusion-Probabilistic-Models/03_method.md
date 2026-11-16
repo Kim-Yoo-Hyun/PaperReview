@@ -4,6 +4,8 @@
 > Evidence maturity: `FULL_TEXT_CHECKED`.
 > Analysis basis: full-text PDF body checked on 2026-09-03 (25 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2006.11239; PDF retrieval source: https://arxiv.org/pdf/2006.11239. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
+> DOC-QA2 targeted source review: 2026-10-23; PDF pp. 4. 손상 구간·직접 연결된 표 분류만 원문 이미지와 대조했다. 전체 주장 정독·실험 검증·reading status 승격을 뜻하지 않는다. [URL·PDF hash·수정 기록](../../../work/sources/pdf_note_review_followup_2026-10-23.json).
+
 ## Method in One Sentence
 
 PDF body method statement (p. 1 (Abstract), p. 5 (2 Background), p. 2 (1 Introduction), p. 1 (Abstract), p. 2 (1 Introduction), p. 4 (2 Background)): Our best results are obtained by training on a weighted variational bound designed according to a novel connection between diffusion probabilistic models and denoising score matching with Langevin dynamics, and ...
@@ -71,7 +73,7 @@ PDF body method statement (p. 1 (Abstract), p. 5 (2 Background), p. 2 (1 Introdu
 
 - **p. 1 / Abstract - extractive body cue:** On the unconditional CIFAR10 dataset, we obtain an Inception score of 9.46 and a state-of-the-art FID score of 3.17.
 - **p. 4 / 2 Background - extractive body cue:** This ensures that the neural network reverse process operates on consistently scaled inputs starting from the standard normal prior p(xT ).
-- **p. 4 / 2 Background - extractive body cue:** Since xt is available as input to the model, we may choose the parameterization µθ(xt, t) = ˜µt  xt, 1 √¯αt (xt - √ ...
+- **PDF p. 4, §3.2 / Eq. (11) (DOC-QA2 원문 대조):** 역과정 평균은 noise predictor로 재매개화된다: $\mu_\theta(x_t,t)=\frac{1}{\sqrt{\alpha_t}}(x_t-\frac{\beta_t}{\sqrt{1-\bar\alpha_t}}\epsilon_\theta(x_t,t))$. 잘린 중간식을 완전한 등식처럼 유지하지 않았다.
 - **p. 1 / Abstract - extractive body cue:** We present high quality image synthesis results using diffusion probabilistic models, a class of latent variable models inspired by considerations from nonequilibrium thermodynamics.
 - **p. 2 / 1 Introduction - extractive body cue:** We find that the majority of our models' lossless codelengths are consumed to describe imperceptible image details (Section 4.3).
 - **p. 2 / 1 Introduction - extractive body cue:** We present a more refined analysis of this phenomenon in the language of lossy compression, and we show that the sampling procedure of diffusion models ...

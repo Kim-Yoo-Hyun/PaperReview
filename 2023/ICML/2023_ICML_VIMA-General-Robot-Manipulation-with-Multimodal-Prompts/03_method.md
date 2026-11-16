@@ -4,6 +4,8 @@
 > Evidence maturity: `FULL_TEXT_CHECKED`.
 > Analysis basis: full-text PDF body checked on 2026-09-03 (48 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2210.03094; PDF retrieval source: https://arxiv.org/pdf/2210.03094. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
+> DOC-QA2 targeted source review: 2026-10-23; PDF pp. 4. 손상 구간·직접 연결된 표 분류만 원문 이미지와 대조했다. 전체 주장 정독·실험 검증·reading status 승격을 뜻하지 않는다. [URL·PDF hash·수정 기록](../../../work/sources/pdf_note_review_followup_2026-10-23.json).
+
 ## Method in One Sentence
 
 PDF body method statement (p. 4 (4. Novel task generalization. New tasks with novel), p. 6 (5.1. Baselines), p. 2 (1. Introduction), p. 4 (6. Visual reasoning), p. 1 (1. Introduction), p. 5 (4. Novel task generalization. New tasks with novel)): To learn an effective multi-task robot policy, we propose VIMA, a robot agent with a multi-task encoderdecoder architecture and object-centric design (Fig.
@@ -69,7 +71,7 @@ PDF body method statement (p. 4 (4. Novel task generalization. New tasks with no
 
 ## Observation–State–Action Interface
 
-- **p. 4 / 4. Novel task generalization. New tasks with novel - extractive body cue:** Concretely, we learn a robot policy π(at/P, H), where H := o1, a1, o2, a2, . . . , ot  denotes the past interaction ...
+- **PDF p. 4, §4 (DOC-QA2 원문 대조):** 정책 π(aₜ given P,H)는 prompt P와 관측·행동 이력 H=[o₁,a₁,o₂,a₂,…,oₜ]에 조건화된다. Object tokens는 bounding box 좌표와 cropped RGB patches에서 계산한다.
 - **p. 2 / 1. Introduction - extractive body cue:** VIMA encodes an input sequence of interleaving textual and visual prompt tokens with a pre-trained language model (Tsimpoukelli et al., 2021) and decodes robot control ...
 - **p. 6 / 5.1. Baselines - extractive body cue:** Input images are divided into patches and encoded by a ViT model to produce observation tokens.
 - **p. 1 / 1. Introduction - extractive body cue:** We start with the observation that many robot manipulation tasks can be formulated by multimodal prompts that interleave language and images or video frames (Fig.
@@ -85,7 +87,7 @@ PDF body method statement (p. 4 (4. Novel task generalization. New tasks with no
 |---|---|---|---|
 | Horizon | instruction-conditioned task horizon; action chunk/skill termination 여부는 paper-specific. | VIMA encodes an input sequence of interleaving textual and visual prompt tokens with a pre-trained language model (Tsimpoukelli et al., 2021) and ... | episode/sequence/action-chunk boundary |
 | Rate / latency | policy inference/decoder rate와 low-level control rate가 분리된다; numeric value 확인 필요. | We note that this can only be achieved with both cross-attention and object token sequence representations - altering any component will significantly ... | Hz/fps, inference time and control rate |
-| Memory | image-language-proprioception history, transformer context 또는 persistent memory. | Concretely, we learn a robot policy π(at/P, H), where H := o1, a1, o2, a2, . . . , ot  denotes ... | window and reset |
+| Memory | 과거 관측·행동 sequence를 정책 context로 사용한다. | H=[o₁,a₁,o₂,a₂,…,oₜ]; PDF p. 4, §4 | 이 정의만으로 정확한 context window나 reset 규칙은 확정하지 않음 |
 | Compute | multimodal encoder, decoder/sampling steps와 action horizon이 latency를 결정한다. | not stated or recoverable in the selected PDF body | hardware, batch and throughput |
 
 ## Training vs Inference

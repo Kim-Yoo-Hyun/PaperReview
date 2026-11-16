@@ -1,0 +1,22 @@
+{
+  "date": "2026-11-07",
+  "kind": "real local GPU allocation attempt before packet authoring; not repeated by launcher check",
+  "argv": [
+    "docker",
+    "run",
+    "--rm",
+    "--pull=never",
+    "--gpus",
+    "all",
+    "--entrypoint",
+    "/bin/true",
+    "paper-gap-p3:rvo-c2c46ba"
+  ],
+  "exit_code": 125,
+  "stderr": "docker: Error response from daemon: could not select device driver \"\" with capabilities: [[gpu]]",
+  "native_model_or_simulation_run": false,
+  "subsequent_launcher_check": "check/local_check.json",
+  "existing_cpu_image_id": "sha256:ec14bd72a90f89cb6f3c4b263bb35a81de7977dffb2e5a2cb7e96946f1545ebb",
+  "existing_images_preserved": true,
+  "new_native_images_pulled": false
+}

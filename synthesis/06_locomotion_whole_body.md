@@ -44,7 +44,7 @@ ZMP preview control → Dynamic WBC/HQP/NMPC → DeepMimic/AMP → PHC/MaskedMim
 | CORE | [ViNT: A Foundation Model for Visual Navigation](../2023/CoRL/2023_CoRL_ViNT-A-Foundation-Model-for-Visual-Navigation/01_overview.md) | 2023 / CoRL | `UNREAD` | `FULL_TEXT_CHECKED` |
 | CORE | [Mobile ALOHA: Learning Bimanual Mobile Manipulation using Low-Cost Whole-Body Teleoperation](../2024/CoRL/2024_CoRL_Mobile-ALOHA-Learning-Bimanual-Mobile-Manipulation-using-L/01_overview.md) | 2024 / CoRL | `UNREAD` | `FULL_TEXT_CHECKED` |
 
-### Locomotion, whole-body control, mobile manipulation, and humanoids — 12
+### Locomotion, whole-body control, mobile manipulation, and humanoids — 16
 
 | Tier | Paper | Year / Venue | Status | Evidence |
 |---|---|---|---|---|
@@ -60,6 +60,10 @@ ZMP preview control → Dynamic WBC/HQP/NMPC → DeepMimic/AMP → PHC/MaskedMim
 | NEXT | [Habitat 2.0: Training Home Assistants to Rearrange their Habitat](../2021/NeurIPS/2021_NeurIPS_Habitat-2.0-Training-Home-Assistants-to-Rearrange-their-Ha/01_overview.md) | 2021 / NeurIPS | `UNREAD` | `FULL_TEXT_CHECKED` |
 | NEXT | [MoManipVLA: Transferring Vision-language-action Models for General Mobile Manipulation](../2025/CVPR/2025_CVPR_MoManipVLA-Transferring-Vision-language-action-Models-for/01_overview.md) | 2025 / CVPR | `UNREAD` | `ABSTRACT_CHECKED` |
 | NEXT | [WholeBodyVLA: Towards Unified Latent VLA for Whole-body Loco-manipulation Control](../2026/ICLR/2026_ICLR_WholeBodyVLA-Towards-Unified-Latent-VLA-for-Whole-body-Loc/01_overview.md) | 2026 / ICLR | `UNREAD` | `ABSTRACT_CHECKED` |
+| NEXT | [TidyBot++: An Open-Source Holonomic Mobile Manipulator for Robot Learning](../2025/CoRL/2025_CoRL_TidyBot%2B%2B-An-Open-Source-Holonomic-Mobile-Manipulator-for/01_overview.md) | 2025 / CoRL | `UNREAD` | `ABSTRACT_CHECKED` |
+| NEXT | [Mobi-π: Mobilizing Your Robot Learning Policy](../2025/CoRL/2025_CoRL_Mobi-pi-Mobilizing-Your-Robot-Learning-Policy/01_overview.md) | 2025 / CoRL | `UNREAD` | `ABSTRACT_CHECKED` |
+| NEXT | [SAGA: Open-World Mobile Manipulation via Structured Affordance Grounding](../2026/RA-L/2026_RA-L_SAGA-Open-World-Mobile-Manipulation-via-Structured-Afforda/01_overview.md) | 2026 / RA-L | `UNREAD` | `ABSTRACT_CHECKED` |
+| NEXT | [MoMa-Kitchen: A 100K+ Benchmark for Affordance-Grounded Last-Mile Navigation in Mobile Manipulation](../2025/ICCV/2025_ICCV_MoMa-Kitchen-A-100K%2B-Benchmark-for-Affordance-Grounded-Las/01_overview.md) | 2025 / ICCV | `UNREAD` | `ABSTRACT_CHECKED` |
 
 <!-- READING_QUEUE:END -->
 
@@ -128,11 +132,88 @@ Humanoid를 별도 taxonomy로 분리하지 않고, control·adaptation·imitati
 |---|---|---|
 | Attachment와 이동 중 제어 | [Geometric Fabrics](../2025/RA-L/2025_RA-L_Globally-Guided-Geometric-Fabrics-for-Reactive-Mobile-Mani/01_overview.md) (2025 RA-L); [WBAG](../2026/arXiv/2026_arXiv_WBAG-A-Whole-Body-and-Attached-Geometry-Safety-Framework-f/01_overview.md) (2026 arXiv) | 이동체·팔·부착 물체의 제약을 VLA의 고수준 명령과 연결한다. Attached geometry 안전성을 명령 생성 능력과 분리한다. |
 
+### 2026-10-25 top-tier 보완 — 읽기 전 비교 연결
+
+> Researcher interpretation / CURATION-HYPOTHESIS. 신규 노트는 abstract/project 기반이며 아래 연결은 정독·실험 결과나 직접 citation 관계의 확인이 아니다.
+
+[TidyBot++](../2025/CoRL/2025_CoRL_TidyBot%2B%2B-An-Open-Source-Holonomic-Mobile-Manipulator-for/01_overview.md)는 Mobile ALOHA와 비교할 holonomic base·teleoperation 플랫폼이다. 다양한 arm을 지원하는 설계와 모든 arm 조합의 실증은 구분한다. Base의 planar 자유도와 reachability가 달라지면 같은 언어 과제도 action 난도가 달라질 수 있다.
+
+Cross-embodiment 비교에서는 base/arm action 단위·제어 주기·시연 비용·충돌 제약을 먼저 맞춘다. 플랫폼 공개만으로 policy transfer나 clone 후 실행 가능성을 입증하지 않는다.
+
 ## Open Questions
 
-현재 후보 판정은 [주제별 요약](../work/research_candidates/summaries/README.md)을 따른다. 아래 질문은 `CURATION-HYPOTHESIS`이며 재개 승인이 아니다.
+<a id="gap-mobile-contact-rl-2026"></a>
+### 접촉을 유지하는 이동 조작의 단일 VLA 강화학습
+
+**2026-11-09 / GAP-MOBILE-CONTACT-RL / 3순위 예비 탐색 / CURATION-HYPOTHESIS.** [선정 범위](../work/update/VLA_RL_ADDITIONAL_GAPS_2026-11-09.md#robotics-reorientation), [근거 R17–R20](../work/sources/vla_rl_additional_gaps_2026-11-09.json). 기존 HANDOFF의 정지 후 정책 교체/도착점 재사용 질문을 재명명한 것이 아니다.
+
+**질문:** 긴 서랍이나 문을 잡은 채 이동할 때, 한 VLA가 base와 arm의 행동을 함께 RL 후학습하여 접촉 상실·관절 한계·충돌을 줄일 수 있는가? Navigation 도착 성공이 아니라 **이동 중 조작 목표의 물리적 실행 가능성**을 측정한다. 처음부터 humanoid 균형까지 포함하지 않고, wheeled mobile manipulator의 한 과제로 좁힐 수 있다.
+
+**강한 선행:** [MoTo, CoRL 2025](https://proceedings.mlr.press/v305/wu25c.html)는 interaction-aware docking과 base/arm의 물리적 trajectory feasibility를, [Mobi-π, CoRL 2025](https://proceedings.mlr.press/v305/yang25b.html)는 기존 조작 정책에 적합한 base pose를 다룬다. [WholeBodyVLA, ICLR 2026](https://proceedings.iclr.cc/paper_files/paper/2026/hash/ff7373914a96956f2a7cacbdf3b0b8d8-Abstract-Conference.html)는 latent VLA와 loco-manipulation용 RL 제어를 제시한다. [MobileVLA-R1](https://aigeeksgroup.github.io/MobileVLA-R1/)도 언어 조건부 mobile action과 RL 후학습을 다룬다. “navigation과 manipulation을 연결한다”, “VLA에 base action을 추가한다”는 공백이 아니다.
+
+**남은 탐색:** 고정된 low-level servo 위에서 하나의 학습 정책이 base·arm reference를 출력할 때, 학습된 공동 적응이 coordinated whole-body MPC/IK·행동 모방·residual RL보다 낫게 만드는 접촉 조건은 무엇인가? WholeBodyVLA 등 본문/부록의 contact-maintenance 비교까지 확인하지 못해, 이 질문의 신규성은 접촉 후보보다 더 불확실하다. 사전 학습된 policy의 action space 확장 자체가 큰 구현 과제다.
+
+비교는 task 성공과 함께 grasp/contact 유지, wrench, collision, joint-limit margin, base 이동 거리·소요 시간을 기록한다. Staged docking은 참고선이며 강한 기준선은 **base와 arm을 동시에 조정하는 고전 whole-body 제어**다. 정지 후 수행해도 충분한 task만 골라 통합 모델을 주장하지 않는다. 두 학습 정책을 한 이름으로 감싼 시스템은 사용자가 원하는 단일 행동 정책과 구별한다. 공개 mobile checkpoint/환경/실물 플랫폼은 아직 고정하지 않았으며, 석사 범위의 검증 부담이 커 우선 실행 후보로 올리지 않는다.
+
+### 3D affordance와 whole-body 제어의 분리
+
+[SAGA](../2026/RA-L/2026_RA-L_SAGA-Open-World-Mobile-Manipulation-via-Structured-Afforda/01_overview.md)는 언어·point·시연을 3D affordance로 바꿔 quadrupedal manipulator를 조건화하는 비교 기준이다. Abstract/project 기반 해석이며, 여러 지시 형식 지원과 여러 embodiment로의 전이 입증을 구분한다. 같은 관측·skill/action budget에서 직접 목표 위치를 전달하는 단순 방식 이후 남는 이득은 무엇인가? HANDOFF의 상태 복원·정책 교체 효과를 이 논문으로 검증했다고 간주하지 않는다.
+
+
+2026-10-28 registry 연결: [Mobi-π](../2025/CoRL/2025_CoRL_Mobi-pi-Mobilizing-Your-Robot-Learning-Policy/01_overview.md)와 [Behavior-Skill](../2026/arXiv/2026_arXiv_Behavior-Skill-A-Fine-Grained-Benchmark-for-Evaluating-Vis/01_overview.md)을 NEXT로 등록했다. 각각 정책에 맞는 시작 pose 선택과 복원된 skill 시작 상태 평가의 기준이다. 아래 HANDOFF 지정 구간 비교는 그대로 보존하며 신규 노트는 `ABSTRACT_CHECKED`, 사용자 상태는 `UNREAD`다.
+
+현재 후보 판정은 [주제별 요약](../work/research_candidates/summaries/README.md)과 [TODO](../TODO.md)를 따른다. 아래 질문은 `CURATION-HYPOTHESIS`이며 실험 효과나 실행 승인을 뜻하지 않는다.
+
+<a id="gap-handoff-2026"></a>
+
+**11/01 PRE-GPU-3 보완:** [비실험 완결 검토](../work/update/THREE_CANDIDATES_NONEXPERIMENTAL_2026-11-01.md#handoff)와 [비교 계약](../work/research_topics/mobile_policy_transfer/재현%20방법/COMPARISON_CONTRACT.json)은 유한 calibration의 재선택 이득과 참 최적 조건 대비 손실을 구분한다. 모든 예정 calibration의 실패 포함 시간으로 tie를 풀고, 같은 k의 A/B 상태 공유와 k별 실제 도착 상태 차이를 분리했다. 단일-template·작은 표본·미구현 native 한계는 유지한다.
+
+### GAP-HANDOFF — VLA를 교체할 때 기존 도착 설정을 재사용해도 되는가?
+
+- **2026-10-28 GAP-HANDOFF1 DONE; 탐색 질문 유지·구체화.** [지정 5편 비교표와 작은 비교 초안](../work/research_topics/mobile_policy_transfer/내용/README.md#closest-work). 기여 유형은 평가·실증이다. 실제 효과는 **실험 필요·미확인**이며 신규성·독립 논문 가치도 미확정이다.
+- **GAP-SELECT-E1 결정: 첫 우선 후보.** [세 후보 비교와 선택 이유](../work/update/VLA_EXPLORATION_SELECTION_2026-10-28.md). Navigation–manipulation 연결과 VLA 교체 뒤 재검증 여부라는 판단의 직접성을 우선했다. C1보다 실행이 쉽다는 판단이나 효과·신규성·실행 준비 완료가 아니다. C1은 대안 후보, TERM은 질문을 보존하며 평가 원칙으로 활용한다.
+- **남기는 질문:** 같은 로봇·task에서 VLA A에 맞춰 고른 도착 설정을 B에 그대로 재사용할 수 있는가? B의 기준 시작 상태 성능으로 실제 도착 분포에서의 성능을 판단할 수 있는가? 답은 이동 모듈 재사용 또는 추가 validation의 필요성을 결정하는 데 쓰인다. 서로 다른 embodiment로의 확대는 후속 범위다.
+- **이번에 확인한 직접 선행:** [MoTo Table 1·§5.3](https://arxiv.org/html/2509.01658v1)은 이미 이동 방법×조작 정책을 비교한다. [ActiveAlign Table II](https://arxiv.org/html/2610.23378v1)에도 4 VLA×3 조건이 있으며 adaptation은 weights도 바꾼다. [Mobi-π](https://proceedings.mlr.press/v305/yang25b.html)의 policy-aware placement, [Semantic Handoff](https://arxiv.org/html/2607.06256v1)의 연결 실행 진단, [Behavior-Skill](https://arxiv.org/html/2608.30536v1)의 독립 복원 평가도 출발점이다. 일반적인 2×2 비교나 handoff 실패 자체는 새 기여로 주장하지 않는다.
+- **미확인:** 확인한 5편의 지정 구간에서 A로 선택·동결한 설정을 B에 이전하고, 제한된 B validation으로 재선택하는 비용까지 비교한 결과는 찾지 못했다. 전체 문헌 부재의 증명이 아니다. 실제 재사용 손실·안정성은 이 검토로 계산할 수 없다.
+- **강한 단순 대안:** 공통 도착 후보의 geometry/IK·충돌 검사와 시연 시야 검색, 같은 후보에서 소수의 B validation으로 단순 재선택. 새 selector/RL 없이 비교한다. 기존 Mobi-π/MoTo는 baseline 계보이며 통계적 재선택 자체도 새 방법이 아니다.
+- **작은 진단 초안:** A에서 선택·동결한 설정을 B에 재사용하고, B 재선택 및 고정 조건과 비교한다. 같은 도착 상태·goal·총시간을 맞추고 reference·조건부 조작 성공·전체 성공·추가 validation 비용을 구별한다. 10/31 metadata 확인 결과 현재 radio 목록은 한 scene-template이므로 독립 scene holdout은 아직 구성할 수 없다. 아래 후속 보완의 분할·해석 제한을 따른다.
+- **GAP-HANDOFF2 DONE — 공개 연결 PARTIAL:** [결과·source 경계](../work/research_topics/mobile_policy_transfer/내용/README.md#public-interface), [revision/hash ledger](../work/research_topics/mobile_policy_transfer/내용/sources.json). 2개 code revision의 10개 파일 지정 구간과 HF release metadata를 확인했다. π0.5 독립 skill 평가 경로를 특정했지만 원래 π0.5–GR00T 쌍과 실제 navigation 도착 연결은 미확보다. 실행하지 않았으며 연구 효과 반증이나 후보 탈락으로 해석하지 않는다.
+- **GAP-HANDOFF3 DONE — 동일 계열 교체로 축소·설계 초안 완료:** [공통 task·normalizer/controller 근거와 한 장 설계](../work/research_topics/mobile_policy_transfer/내용/README.md#design-history). A=`pi05-pt12-skill` → B=`pi05-pt50-skill`, radio navigation 0→pickup 1을 선택했다. Navigator N=A를 고정하고 도착 거리 세 후보에서 A 선택의 B 재사용 / 정책 무관 고정거리 / 12회 이하 B validation 재선택을 비교한다. 각 normalizer 유지·privileged geometry 종료·실제 도착에서 공통 정지 후 A/B 분기·전체 시작 분모/비용을 설계했다. 최대 110 phase와 2 dev/4 calibration/4 test는 **미실행 초안**이며 원본 instance별 grouping·최종 split은 미확정이다.
+- **GAP-HANDOFF-P0-PREP DONE / native P0 WAITING_RESOURCE:** [로컬 확인 결과](../work/research_topics/mobile_policy_transfer/재현%20방법/README.md#preparation-history): Mac/Docker ARM64·GPU allocation exit 125. [clone 재개 준비](../work/research_topics/mobile_policy_transfer/재현%20방법/README.md#execution)에 preflight script·revision/normalizer·환경/mount와 남은 구현을 기록했다. Sim Python 3.10/torch 2.6.0과 server Python 3.11/torch 2.7.1의 분리 및 transport 처리가 필요하다. 조건이 맞는 로컬 Docker에서 두 정책 IO·1개 dev 도착 분기까지 진행한다. Native adapter·image·manifest는 미완료이며 큰 비교/학습 자동 시작은 없다. 작은/0 차이를 재사용 동등성으로, 양의 차이를 일반적 전이 손실로 확대하지 않는다. Native·효과·신규성은 미검증이다.
+- **범위와 종료점:** A에서 고정해 재사용하는 것은 공통 후보 생성·선택 설정이며 장면 간 절대 좌표의 무조건 복사가 아니다. 구체 표현은 공개 경로 확인 후 정한다. 같은 5편의 문헌 감사는 반복하지 않는다. 공개 경로 미확보를 연구 반증이나 C1 자동 승격으로 바꾸지 않는다. C1이 endpoint-policy 호환성만 보이면 통합하고 TERM의 별도 stop 실험까지 첫 pilot에 넣지 않는다. 기존 D2/D3·RP-3 결과와 실행 gate는 유지한다.
+
+**2026-10-31 GPU 전 보완:** [정책 효과·분할·비용 검토](../work/update/PRE_GPU_BUILDUP_REVIEW_2026-10-31.md#mobile-policy-transfer)와 [10개 metadata 근거](../work/sources/pre_gpu_buildup_review_2026-10-31.json). 서로 다른 HDF5 경로 10개지만 모두 같은 scene model·instance template이고 `episode_id`는 모두 0이다. 기존 2/4/4를 독립 instance holdout으로 사용할 수 없으며, 6개 시연은 이동 종료와 집기 시작 annotation 경계가 다르다. 한 dev IO는 유지하고 후속 2/4/4는 동일-template 개발/조건 선택/기술적 평가로 범위를 수정했다. 정책×종료 조건별 결과로 전반적 능력 차이·조건 민감도·재선택 잡음을 구별한다. 효과·scene 복원·외부 피드백은 미검증이다.
+
+**비실험 잔여 보완:** [선택 불능·결측·비용 규칙](../work/update/PRE_GPU_BUILDUP_REVIEW_2026-10-31.md#remaining-work-review). Calibration이 모두 실패하거나 기술적 결측이 남으면 고정 0.9 m fallback을 data-driven 선택과 구별한다. A의 유효한 선택이 없으면 전이 손실 주장을 하지 않는다. 평가 4개의 이진 차이는 25%p 단위여서 작은 개선·동등성 확증은 불가능하다. ActiveAlign의 multi-backbone/endpoint 비교는 이미 H1에서 검토했으며 새로운 gap으로 재집계하지 않는다.
+
+GAP-HANDOFF2의 연결 표를 H3 결과로 갱신했으며, split/identity는 위 10/31 보완이 우선한다. Source 수준 확인이며 실행 가능성·효과 검증과 구별한다.
+
+| 연결 | 확인 | 남은 부분 |
+|---|---|---|
+| Task–정책 쌍 | [공식 release](https://huggingface.co/mafangniu/Behavior-Skill-VLA-Checkpoints)와 [논문 IV-D](https://arxiv.org/html/2608.30536v1#S4.SS4)를 연결해 12/50-task Skill·radio 선택 | 학습 episode 이력·unseen-scene·GR00T 쌍은 미확인. 같은 계열의 정책 묶음 교체로만 해석 |
+| Input/action | [π0.5 wrapper](https://github.com/mafangniu/pi05-behavior-skill/blob/7ca6eace02aaba2d8ce19af600b85dd04a60d720/src/openpi/shared/eval_b1k_wrapper.py)와 H3 loader/config 감사로 skill prompt·3 RGB·proprio, 각 normalizer·공통 controller 후보 연결 | Normalizer 내용은 서로 다름. 각자 유지하며 실제 slot/scale·queue/reset·정책 로드는 미검증 |
+| 상태 복원 | [loader](https://github.com/nubot-nudt/Behavior-Skill/blob/d3593788bdc7bd3016d307ea9529fdb500c146ba/benchmark/states/loader.py)는 scene·grasp 복원 후 정지/안정화 | 실제 도착 속도/접촉·controller/RNG까지 보존한 동일 상태 분기 미검증 |
+| 이동→조작 | [radio 예시](https://github.com/nubot-nudt/Behavior-Skill/blob/d3593788bdc7bd3016d307ea9529fdb500c146ba/data/skill_init_states/task-0000/episode_00000010/state_manifest.json)의 nav0 끝/pickup1 시작이 frame 265로 인접 | Human demo 경계다. Runner는 매 skill 시연 상태로 reset하므로 정책 navigation 결과의 전달이 아님 |
+| 설정 선택·결과/비용 | [H3 비교 초안](../work/research_topics/mobile_policy_transfer/내용/README.md#design-history-2-한-장-비교-설계-제안-v01-미실행)에 Reuse/Fixed/B-select·분모·비용·split/예산 작성 | 실제 도착 ID·branch·전체 시작 분모·재검증 비용은 아직 구현/측정하지 않음. 영상 후처리 step과 판정 시점 분리 |
 
 | 질문 | 구별할 예측 | 최소 대조·중단 조건 | 근거/판정 |
 |---|---|---|---|
 | VLA→저수준 command | 고정 low-level controller에서 command rate·delay·unsafe-command rejection이 base 안정성과 arm success를 어떻게 바꾸는가? | HOVER/SONIC류 controller의 입력 단위·termination·queue를 기록한다. Controller 교체 효과를 VLA 개선으로 귀속하지 않는다. | 기존 track 비교의 연구자 질문; native 효과 미검증 |
 | Whole-body contact | Human motion prior와 큰 tracking corpus가 task 성공·contact feasibility를 유지하면서 rare failure를 줄이는가? | Fall·actuator saturation·recovery onset의 event 분모를 남긴다. Tracking score와 manipulation 성공을 따로 평가한다. | 기존 track 비교의 연구자 질문; native 효과 미검증 |
+
+<a id="gap-thermal-2026"></a>
+### GAP-THERMAL — 순간적으로 가능한 행동을 장시간 반복할 수 있는가?
+
+- 갱신: 2026-10-23. `CURATION-HYPOTHESIS`; locomotion·whole-body control·actuator/thermal engineering 질문. [확장 조사](../work/update/BROAD_RESEARCH_GAP_SCOUT_2026-10-23.md).
+- **문제와 중요성:** 짧은 task 성공과 연속 운용의 능력은 다르다. Payload, ambient temperature, 이동/조작의 반복으로 열이 쌓이면 가능한 torque와 task schedule도 달라질 수 있다. 처리량과 회복 시간을 포함한 장시간 능력을 봐야 한다.
+- **이미 답한 범위:** [FALCON, L4DC 2026](https://proceedings.mlr.press/v331/zhang26a.html)은 force-adaptive humanoid loco-manipulation을 다룬다. 온도 기반 reward/input은 [thermal-aware quadruped policy](https://arxiv.org/abs/2603.01631), 성능/열 trade-off와 residual policy는 [후속 thermal residual policy](https://arxiv.org/html/2605.27046v3)에 이미 있다. 두 thermal 논문은 확인한 출처 기준 arXiv이며 acceptance를 확정하지 않는다. [Humanoids 2025 liquid-cooling leg](https://ieeexplore.ieee.org/abstract/document/11203109)처럼 hardware 설계도 직접 대안이다.
+- **남은 질문 — 연구자 해석:** 고정된 thermal model에서 배운 제한이 다른 payload·ambient·cooling 상태 및 이동/조작 전환에서도 충분한가? Task 하나의 속도를 낮추는 것보다 task sequence·rest·contact allocation을 바꾸는 것이 같은 열 한도에서 유효 처리량을 높이는 조건은 무엇인가? 일반적인 thermal-aware RL이라는 주장은 새롭지 않다.
+- **최소 검증:** 초기 온도·배터리·주변 온도·payload·냉각 대기·motor limits를 통제하고 온도·전류·joint command·contact를 같은 시간축에 남긴다. Torque derating, 고정 rest schedule, thermal-aware MPC/기존 RL, 제안된 scheduling을 같은 최대 온도·안전 한도에서 비교한다. 완료 task/hour, downtime, tracking/contact failure, 온도 추정 오차, 한도 초과를 기록한다. 더 느리게 움직인 효과를 제거하지 않고 endurance 향상으로만 보고하지 않는다.
+- **가치·반증·자원:** 운용 가치가 있지만 hardware 의존성이 가장 높다. 기존 derating/rest만으로 같은 처리량을 얻으면 새 학습의 필요성을 줄인다. 실제 thermal parameter와 장시간 telemetry 없이 simulator endurance를 실제 지속 시간으로 주장하지 않는다. 현재는 hardware/데이터 확보 전 문헌 보존 대상으로 둔다. GPU만으로 재개 가능한 주제가 아니다.
+
+<a id="psi0-controller-boundary"></a>
+## Ψ₀–AMO–SONIC의 비교 경계 — 2026-11-16
+
+[AMO](../2025/RSS/2025_RSS_AMO-Adaptive-Motion-Optimization-for-Hyper-Dexterous-Human/01_overview.md)의 OCR 기반 노트를 지정 본문으로 교정했다. Ψ₀ v1의 직접 하위 controller이며 adaptation/trajectory optimization과 RL lower policy를 구분한다. [SONIC](../2026/Science-Robotics/2026_Science-Robotics_SONIC-Supersizing-Motion-Tracking-for-Natural-Humanoid-Who/01_overview.md)은 공개 code/DOI를 보완했지만 과거 본문 전체를 이번에 다시 검토한 것은 아니다.
+
+[Ψ₀ 공개 repository](https://github.com/physical-superintelligence-lab/Psi0)의 후속 SONIC 모델은 논문 v1 AMO 결과와 같은 실행 조건이 아니다. Whole-body control token의 통합과 VLA backbone의 RL 공동 갱신을 구분한다. Open question은 controller 변경이 상위 VLA 성능 개선처럼 보이는 조건이며, 동일 feasible command·시간 예산에서 tracking과 task success를 따로 측정해야 한다. 새 효과를 입증하거나 기존 REFERENCE tier를 자동 승격한 것은 아니다.

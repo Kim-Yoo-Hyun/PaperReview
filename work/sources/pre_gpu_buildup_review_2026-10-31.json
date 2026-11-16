@@ -1,0 +1,608 @@
+{
+  "schema_version": 1,
+  "followup_nonexperimental_review": {
+    "task_id": "PRE-GPU-FOLLOWUP",
+    "checked_on": "2026-10-31",
+    "scope": "Non-experimental residual review; manual semantic specification and comparison rules. Existing direct papers rechecked; no new gap claimed from repeated literature.",
+    "report": "work/update/PRE_GPU_BUILDUP_REVIEW_2026-10-31.md#remaining-work-review",
+    "artifact": "work/research_candidates/2026-10-31_instruction_revision/SEMANTIC_CASES.json",
+    "execution": {
+      "model_inference": false,
+      "simulator": false,
+      "docker_probe": false,
+      "parser_execution": false,
+      "host_dependency_install": false,
+      "pdf_download": false,
+      "dataset_payload_read": false,
+      "external_messages_sent": false
+    },
+    "primary_sources": [
+      {
+        "url": "https://arxiv.org/html/2603.17524v2",
+        "sections": "3–4, setup and metric text",
+        "status": "preprint",
+        "use": "Fixed-goal execution constraints are already studied; text retains KineVLA labels, so no new quantitative/version-equivalence claim"
+      },
+      {
+        "url": "https://arxiv.org/abs/2506.03574",
+        "sections": "official metadata and abstract",
+        "status": "preprint",
+        "use": "v1 verified; guessed v2 HTML returned 404 and was not used"
+      },
+      {
+        "url": "https://arxiv.org/html/2506.03574v1",
+        "sections": "3–4, Limitations, switching evaluation definition",
+        "status": "preprint",
+        "use": "Contact-phase task switching/rollback is an existing problem; distinguish partial retention/revocation"
+      },
+      {
+        "url": "https://arxiv.org/html/2610.23378v1",
+        "sections": "IV-B Tables I–III, V",
+        "status": "preprint",
+        "use": "Recheck of existing H1 review, not a newly discovered gap; matched-state/data and multi-backbone results already exist"
+      },
+      {
+        "url": "https://proceedings.mlr.press/v305/yang25b.html",
+        "sections": "official CoRL 2025 abstract",
+        "use": "Policy mobilization is already formulated"
+      },
+      {
+        "url": "https://proceedings.mlr.press/v305/wu25c.html",
+        "sections": "official CoRL 2025 abstract",
+        "use": "Interaction-aware docking is already studied"
+      }
+    ],
+    "access_limits": [
+      {
+        "url": "https://openreview.net/forum?id=AY4totylcx",
+        "result": "web access unavailable; PDF endpoint also unavailable; no new full-text review claimed"
+      },
+      {
+        "url": "https://openreview.net/pdf?id=A9AQjk3dAt",
+        "result": "web access unavailable; existing registry review preserved"
+      },
+      {
+        "url": "https://arxiv.org/html/2506.03574v2",
+        "result": "404; followed official abstract HTML link to v1 instead"
+      }
+    ],
+    "search_queries": [
+      "\"VLA\" \"constraint\" \"revision\" \"2026\"",
+      "\"ExecVLA\" \"fine-grained\" constraints",
+      "\"ActiveAlign\" robot policy 2026",
+      "\"Mobi\" \"policy\" \"stopping\" \"transfer\" mobile manipulation 2025 2026"
+    ],
+    "new_design_fixes": [
+      "R4/R5 human-oracle prompt now uses only active goals/constraints, matching planned automatic renderer",
+      "Eight fixed English utterance pairs and manual before/after semantic records",
+      "Previous action post-state is checked before applying a revision at the same boundary",
+      "Shared-horizon post-revision metric distinguished from upstream first-hit IO",
+      "All-zero/incomplete calibration marked without supported setting selection; fixed 0.9 m fallback labeled",
+      "Four binary evaluation cases imply 25 percentage point resolution, not equivalence evidence",
+      "Calibration cost and future deployment count separated without invented utility conversion"
+    ],
+    "unchanged_scope": {
+      "native_p0_budgets": true,
+      "existing_candidate_verdicts": true,
+      "registry_reading_status": true,
+      "no_new_topic_selected": true,
+      "activealign_was_already_reviewed": true
+    },
+    "remaining": [
+      "native image/transport/observer/branch implementation and qualification",
+      "dev-dependent physical tolerances/horizon and runtime manifests",
+      "actual policy comparison",
+      "external researcher feedback"
+    ],
+    "protected_file_hashes_before": {
+      "AGENTS.md": "aeace23356d035e1df25b168d8374db62befa95b9a59854327fbd30e3c74874e",
+      "PAPER.md": "e43de2eaddddf7be5a00160d19a318e960d9132157970e2b8d0dc4f8c5ea9139",
+      "work/sources/papers.json": "129eac88784a86db199f341679726a4bb394d8886d55a38bf539f0b15c905d23",
+      "work/sources/registry_meta.json": "957aa2b9b3756d14eac6fa4a6acdb889b9088527ab893b75d5a4601f0a21c94e",
+      "research/READING_STATUS.csv": "5b2c5332c5895bb25aaf6734f5d08cfe45950309a64625b6a2d8f207427edc3c",
+      "research/READING_STATUS_HISTORY.csv": "c91b6727a03529ba790447eb5106f5b04cc4364b0c90b3eed1afecf9b700e001",
+      "research/READING_TIERS.csv": "9eeb29370a886d75eba96dd616a6e2127cfe7aef3503e53d1c48d27d0fb56b67",
+      "work/experiments/instruction_revision_p0/inside.py": "34b11a0ece7f054217ad2b2c03b0e69e4527bd5b44a4ffad0889a2eee63af12d",
+      "work/experiments/instruction_revision_p0/Dockerfile": "f5eb51cf3348ef3793719a5715f511810f3bee93138744b2a7d0192eaa609c28",
+      "work/experiments/instruction_revision_p0/LOCAL_CHECK_2026-10-31.json": "1ae5503bcef3ec73f39c0ae4903627f77741de8d8f31fc46934076f816c550cd",
+      "work/experiments/instruction_revision_p0/README.md": "fb438c6262b52725338c95c3edc45d65a20111f939b95f156368c338c11449ff",
+      "work/experiments/instruction_revision_p0/native_probe.py": "d0e3407851435a594f453791c89720bafe3e50d83d25e65cdb18fd96621b665c",
+      "work/experiments/instruction_revision_p0/.dockerignore": "6738ac649acaac05644fc92ca635f0353fb75cde4c320ba7537380485edbbb04",
+      "work/experiments/instruction_revision_p0/RESUME_PLAN.json": "1f89df3ed99278b2a4547e15e0f731dea390ab6e513c635267ab58b6d00cf691",
+      "work/experiments/instruction_revision_p0/resume.sh": "5f7f9df70d2eacea10f556e4ff63692d79e8e804ccc89dcee50da8fa8d0646b0",
+      "work/experiments/instruction_revision_p0/ARTIFACTS.json": "7ada1d265650dcf4d264144e78142b7ec9e0aeec3636d4bd9974f604ee078ba5",
+      "work/experiments/vla_handoff_p0/README.md": "69b3bd835aef8deebaa67fb2e0548df92229cbab885f52fab81e5b108eb7b7b4",
+      "work/experiments/vla_handoff_p0/LOCAL_CHECK_2026-10-28.json": "254cd3cc56e604a4b2701355076b6227f4374220e09597755f78e465eb028ed9",
+      "work/experiments/vla_handoff_p0/RESUME_PLAN.json": "95aed7b6a0d61a66f71a389c327f808620762c85113e17c930248412821c3926",
+      "work/experiments/vla_handoff_p0/resume.sh": "487c88ebf41a29bac5d31651e7211b0880f1a79efbad36461ebb21a198cf13dc"
+    },
+    "validation": {
+      "status": "passed",
+      "protected_files_sha256_unchanged": 20,
+      "semantic_case_records_checked": 8,
+      "repository_audit_errors": 0,
+      "repository_audit_warnings": 0,
+      "generator_compile_and_regeneration_passed": true,
+      "git_diff_check_passed": true,
+      "git_cached_diff_check_passed": true,
+      "semantic_specification_not_a_model_test": true
+    }
+  },
+  "checked_on": "2026-10-31",
+  "task_id": "PRE-GPU-BUILDUP-REVIEW",
+  "scope": "Non-experimental literature, static source, and dataset identity/annotation review",
+  "execution": {
+    "docker_probe": false,
+    "simulator": false,
+    "model_inference": false,
+    "upstream_code_execution": false,
+    "host_dependencies_installed": false,
+    "pdf_download": false,
+    "raw_scene_or_manifest_saved": false,
+    "scene_json_read_in_memory": true
+  },
+  "limits": [
+    "No scene rendering/state restoration or trajectory replay",
+    "Source IDs and hashes do not prove physically identical or independent states",
+    "No external researcher feedback received",
+    "No systematic/exhaustive literature review or novelty guarantee"
+  ],
+  "literature": [
+    {
+      "url": "https://arxiv.org/html/2502.19417v1",
+      "sections": "4.1–4.2, A.1",
+      "use": "Contextual interaction/negative tasks already studied; full-history recomputation baseline"
+    },
+    {
+      "url": "https://roboticsproceedings.org/rss22/p143.html",
+      "sections": "Official proceedings/abstract; previously read evaluator reused",
+      "use": "Steerability already studied"
+    },
+    {
+      "url": "https://arxiv.org/html/2609.30913v1",
+      "sections": "III-A/B, IV-B, V-A, VII",
+      "use": "State accessibility and privileged recovery are competing explanations, not new proposed mechanism",
+      "status": "arXiv preprint; no new acceptance claim"
+    },
+    {
+      "url": "https://arxiv.org/html/2610.21251v2",
+      "sections": "Abstract, B.3–B.4",
+      "use": "Neutral instruction control and response vs success distinction",
+      "status": "arXiv preprint"
+    },
+    {
+      "url": "https://arxiv.org/html/2505.23692v1",
+      "sections": "3.1–3.3, 4 assumptions",
+      "use": "Pose-dependent policy performance is already known; baseline information requirements differ"
+    },
+    {
+      "url": "https://proceedings.mlr.press/v305/yang25b.html",
+      "sections": "Official CoRL 2025 metadata (previous turn verified)",
+      "use": "Publication provenance"
+    },
+    {
+      "url": "https://proceedings.mlr.press/v305/wu25c.html",
+      "sections": "Official CoRL 2025 abstract (previous turn verified)",
+      "use": "Interaction-aware docking is already known"
+    },
+    {
+      "url": "https://arxiv.org/html/2607.06256v1",
+      "sections": "IV-D, V-B/C",
+      "use": "Navigation-to-ready failure and next-skill verifier already described; category labels not ground truth"
+    }
+  ],
+  "search_boundary": {
+    "queries": [
+      "robot instruction revision constraint preservation revocation VLA 2026",
+      "robot mobile manipulation policy replacement stopping criteria transfer calibration 2025 2026",
+      "ReSteer Hi Robot instruction constraints",
+      "policy mobilization cross policy transfer stopping 2025"
+    ],
+    "result": "Targeted search used for collision recheck; not evidence that no other work exists"
+  },
+  "mobile_identity_review": {
+    "dataset_revision": "0be968d3b61406ec366e1bcf7f50a9aa36bbc56f",
+    "eval_list_url": "https://huggingface.co/datasets/mafangniu/Behavior-Skill/resolve/0be968d3b61406ec366e1bcf7f50a9aa36bbc56f/eval_episodes.json",
+    "eval_list_sha256": "c204609e752acc236b29a8d91aa91160d01585f0c706435e1c55daca48895166",
+    "episode_count": 10,
+    "unique_source_hdf5_paths": 10,
+    "unique_scene_models": 1,
+    "unique_scene_instances": 1,
+    "local_episode_ids": [
+      0
+    ],
+    "nonzero_annotation_boundary_differences": 6,
+    "interpretation": "Ten source path identities, one scene-template identity. Original 2/4/4 is not a scene-instance-disjoint holdout. Single-dev IO remains; subsequent design is explicitly narrowed to within-template exploration, with physical duplicate/seed qualification still required.",
+    "revised_roles_not_runtime_manifest": {
+      "scope": "within-template exploratory diagnostic; no scene-generalization claim",
+      "dev": ["00000010", "00000250"],
+      "selection": ["00000470", "00000700", "00000940", "00001250"],
+      "descriptive_evaluation": ["00001590", "00001960", "00002600", "00003000"],
+      "group_disjoint": false,
+      "physical_state_independence_verified": false,
+      "large_pilot_auto_authorized": false
+    },
+    "rows": [
+      {
+        "episode": "00000010",
+        "manifest_url": "https://huggingface.co/datasets/mafangniu/Behavior-Skill/resolve/0be968d3b61406ec366e1bcf7f50a9aa36bbc56f/skill_init_states/task-0000/episode_00000010/state_manifest.json",
+        "manifest_sha256": "c853fc1f48795858d14c54d20a82cd35d46bb0d2de09fe0e52e1df185140757c",
+        "scene_url": "https://huggingface.co/datasets/mafangniu/Behavior-Skill/resolve/0be968d3b61406ec366e1bcf7f50a9aa36bbc56f/skill_init_states/task-0000/episode_00000010/skill_00_scene.json",
+        "scene_sha256": "f77dd6acfcf0eb07931db0cac13537cec57f29a84ecd7f800f55aadb551b5744",
+        "scene_bytes_read_in_memory": 491879,
+        "input_hdf5": "behavior_raw/task-0000/episode_00000010.hdf5",
+        "local_episode_id": 0,
+        "navigation_end_frame": 265,
+        "pickup_start_frame": 265,
+        "annotation_boundary_difference": 0,
+        "scene_model": "house_double_floor_lower",
+        "scene_instance": "house_double_floor_lower_task_turning_on_radio_0_0_template",
+        "object_bindings": {
+          "agent.n.01_1": "robot_r1",
+          "floor.n.01_1": "floors_ulujpr_0",
+          "radio_receiver.n.01_1": "radio_89",
+          "table.n.02_1": "coffee_table_koagbh_0"
+        },
+        "versions": {
+          "omnigibson": {
+            "version": "3.7.2",
+            "git_hash": "839cf641ae25661ef706afe5f1cf7b5818a1e00e"
+          },
+          "bddl": {
+            "version": "3.7.0",
+            "git_hash": "839cf641ae25661ef706afe5f1cf7b5818a1e00e"
+          },
+          "behavior-1k-assets": {
+            "version": "3.7.2rc1"
+          },
+          "omnigibson-robot-assets": {
+            "version": null,
+            "git_hash": "839cf641ae25661ef706afe5f1cf7b5818a1e00e"
+          }
+        }
+      },
+      {
+        "episode": "00000250",
+        "manifest_url": "https://huggingface.co/datasets/mafangniu/Behavior-Skill/resolve/0be968d3b61406ec366e1bcf7f50a9aa36bbc56f/skill_init_states/task-0000/episode_00000250/state_manifest.json",
+        "manifest_sha256": "df9534b88fa20da3c8b2fdb0674d00d47be114864c75b98b79fae91d7796e266",
+        "scene_url": "https://huggingface.co/datasets/mafangniu/Behavior-Skill/resolve/0be968d3b61406ec366e1bcf7f50a9aa36bbc56f/skill_init_states/task-0000/episode_00000250/skill_00_scene.json",
+        "scene_sha256": "19d3874c3ac6eab4a884d894a2687859353aa4cdd24d73c026747a674b5f9d38",
+        "scene_bytes_read_in_memory": 491878,
+        "input_hdf5": "behavior_raw/task-0000/episode_00000250.hdf5",
+        "local_episode_id": 0,
+        "navigation_end_frame": 848,
+        "pickup_start_frame": 848,
+        "annotation_boundary_difference": 0,
+        "scene_model": "house_double_floor_lower",
+        "scene_instance": "house_double_floor_lower_task_turning_on_radio_0_0_template",
+        "object_bindings": {
+          "agent.n.01_1": "robot_r1",
+          "floor.n.01_1": "floors_ulujpr_0",
+          "radio_receiver.n.01_1": "radio_89",
+          "table.n.02_1": "coffee_table_koagbh_0"
+        },
+        "versions": {
+          "omnigibson": {
+            "version": "3.7.2",
+            "git_hash": "839cf641ae25661ef706afe5f1cf7b5818a1e00e"
+          },
+          "bddl": {
+            "version": "3.7.0",
+            "git_hash": "839cf641ae25661ef706afe5f1cf7b5818a1e00e"
+          },
+          "behavior-1k-assets": {
+            "version": "3.7.2rc1"
+          },
+          "omnigibson-robot-assets": {
+            "version": null,
+            "git_hash": "839cf641ae25661ef706afe5f1cf7b5818a1e00e"
+          }
+        }
+      },
+      {
+        "episode": "00000470",
+        "manifest_url": "https://huggingface.co/datasets/mafangniu/Behavior-Skill/resolve/0be968d3b61406ec366e1bcf7f50a9aa36bbc56f/skill_init_states/task-0000/episode_00000470/state_manifest.json",
+        "manifest_sha256": "e206efdd983068055f2355df9afda577774270c2be58c09c5834ac5d4d3f922e",
+        "scene_url": "https://huggingface.co/datasets/mafangniu/Behavior-Skill/resolve/0be968d3b61406ec366e1bcf7f50a9aa36bbc56f/skill_init_states/task-0000/episode_00000470/skill_00_scene.json",
+        "scene_sha256": "79008a1d7b343efae1ea27a8a5ad3e0deea515d16b206fd44a474223fec05851",
+        "scene_bytes_read_in_memory": 491850,
+        "input_hdf5": "behavior_raw/task-0000/episode_00000470.hdf5",
+        "local_episode_id": 0,
+        "navigation_end_frame": 996,
+        "pickup_start_frame": 997,
+        "annotation_boundary_difference": 1,
+        "scene_model": "house_double_floor_lower",
+        "scene_instance": "house_double_floor_lower_task_turning_on_radio_0_0_template",
+        "object_bindings": {
+          "agent.n.01_1": "robot_r1",
+          "floor.n.01_1": "floors_ulujpr_0",
+          "radio_receiver.n.01_1": "radio_89",
+          "table.n.02_1": "coffee_table_koagbh_0"
+        },
+        "versions": {
+          "omnigibson": {
+            "version": "3.7.2",
+            "git_hash": "839cf641ae25661ef706afe5f1cf7b5818a1e00e"
+          },
+          "bddl": {
+            "version": "3.7.0",
+            "git_hash": "839cf641ae25661ef706afe5f1cf7b5818a1e00e"
+          },
+          "behavior-1k-assets": {
+            "version": "3.7.2rc1"
+          },
+          "omnigibson-robot-assets": {
+            "version": null,
+            "git_hash": "839cf641ae25661ef706afe5f1cf7b5818a1e00e"
+          }
+        }
+      },
+      {
+        "episode": "00000700",
+        "manifest_url": "https://huggingface.co/datasets/mafangniu/Behavior-Skill/resolve/0be968d3b61406ec366e1bcf7f50a9aa36bbc56f/skill_init_states/task-0000/episode_00000700/state_manifest.json",
+        "manifest_sha256": "dafe783a295a6e98d9f954ee7bb85e090ad10e106fef76794b752d6d3a10649e",
+        "scene_url": "https://huggingface.co/datasets/mafangniu/Behavior-Skill/resolve/0be968d3b61406ec366e1bcf7f50a9aa36bbc56f/skill_init_states/task-0000/episode_00000700/skill_00_scene.json",
+        "scene_sha256": "642189f4bac86f8e480e03365492d9f612e7cba765bfe3e67f6d95f411e9a765",
+        "scene_bytes_read_in_memory": 491878,
+        "input_hdf5": "behavior_raw/task-0000/episode_00000700.hdf5",
+        "local_episode_id": 0,
+        "navigation_end_frame": 449,
+        "pickup_start_frame": 832,
+        "annotation_boundary_difference": 383,
+        "scene_model": "house_double_floor_lower",
+        "scene_instance": "house_double_floor_lower_task_turning_on_radio_0_0_template",
+        "object_bindings": {
+          "agent.n.01_1": "robot_r1",
+          "floor.n.01_1": "floors_ulujpr_0",
+          "radio_receiver.n.01_1": "radio_89",
+          "table.n.02_1": "coffee_table_koagbh_0"
+        },
+        "versions": {
+          "omnigibson": {
+            "version": "3.7.2",
+            "git_hash": "839cf641ae25661ef706afe5f1cf7b5818a1e00e"
+          },
+          "bddl": {
+            "version": "3.7.0",
+            "git_hash": "839cf641ae25661ef706afe5f1cf7b5818a1e00e"
+          },
+          "behavior-1k-assets": {
+            "version": "3.7.2rc1"
+          },
+          "omnigibson-robot-assets": {
+            "version": null,
+            "git_hash": "839cf641ae25661ef706afe5f1cf7b5818a1e00e"
+          }
+        }
+      },
+      {
+        "episode": "00000940",
+        "manifest_url": "https://huggingface.co/datasets/mafangniu/Behavior-Skill/resolve/0be968d3b61406ec366e1bcf7f50a9aa36bbc56f/skill_init_states/task-0000/episode_00000940/state_manifest.json",
+        "manifest_sha256": "d64ca666671966361f8f614a85011884401e7cf0b1232df4a720dbd21d24b921",
+        "scene_url": "https://huggingface.co/datasets/mafangniu/Behavior-Skill/resolve/0be968d3b61406ec366e1bcf7f50a9aa36bbc56f/skill_init_states/task-0000/episode_00000940/skill_00_scene.json",
+        "scene_sha256": "842cd4c4cd29666f5d0e9b81baa686fc1ca2b7b03e473bf331d13a166bc926bc",
+        "scene_bytes_read_in_memory": 491881,
+        "input_hdf5": "behavior_raw/task-0000/episode_00000940.hdf5",
+        "local_episode_id": 0,
+        "navigation_end_frame": 927,
+        "pickup_start_frame": 1532,
+        "annotation_boundary_difference": 605,
+        "scene_model": "house_double_floor_lower",
+        "scene_instance": "house_double_floor_lower_task_turning_on_radio_0_0_template",
+        "object_bindings": {
+          "agent.n.01_1": "robot_r1",
+          "floor.n.01_1": "floors_ulujpr_0",
+          "radio_receiver.n.01_1": "radio_89",
+          "table.n.02_1": "coffee_table_koagbh_0"
+        },
+        "versions": {
+          "omnigibson": {
+            "version": "3.7.2",
+            "git_hash": "839cf641ae25661ef706afe5f1cf7b5818a1e00e"
+          },
+          "bddl": {
+            "version": "3.7.0",
+            "git_hash": "839cf641ae25661ef706afe5f1cf7b5818a1e00e"
+          },
+          "behavior-1k-assets": {
+            "version": "3.7.2rc1"
+          },
+          "omnigibson-robot-assets": {
+            "version": null,
+            "git_hash": "839cf641ae25661ef706afe5f1cf7b5818a1e00e"
+          }
+        }
+      },
+      {
+        "episode": "00001250",
+        "manifest_url": "https://huggingface.co/datasets/mafangniu/Behavior-Skill/resolve/0be968d3b61406ec366e1bcf7f50a9aa36bbc56f/skill_init_states/task-0000/episode_00001250/state_manifest.json",
+        "manifest_sha256": "8dae15ea006f06b171b2b4929601d6085c0484cb793a70c4731835c7a4887efe",
+        "scene_url": "https://huggingface.co/datasets/mafangniu/Behavior-Skill/resolve/0be968d3b61406ec366e1bcf7f50a9aa36bbc56f/skill_init_states/task-0000/episode_00001250/skill_00_scene.json",
+        "scene_sha256": "3c039a3514663b05d74813fb0a26a128fcc4bd793bdad5c61aa31e033c69db6c",
+        "scene_bytes_read_in_memory": 491866,
+        "input_hdf5": "behavior_raw/task-0000/episode_00001250.hdf5",
+        "local_episode_id": 0,
+        "navigation_end_frame": 634,
+        "pickup_start_frame": 635,
+        "annotation_boundary_difference": 1,
+        "scene_model": "house_double_floor_lower",
+        "scene_instance": "house_double_floor_lower_task_turning_on_radio_0_0_template",
+        "object_bindings": {
+          "agent.n.01_1": "robot_r1",
+          "floor.n.01_1": "floors_ulujpr_0",
+          "radio_receiver.n.01_1": "radio_89",
+          "table.n.02_1": "coffee_table_koagbh_0"
+        },
+        "versions": {
+          "omnigibson": {
+            "version": "3.7.2",
+            "git_hash": "839cf641ae25661ef706afe5f1cf7b5818a1e00e"
+          },
+          "bddl": {
+            "version": "3.7.0",
+            "git_hash": "839cf641ae25661ef706afe5f1cf7b5818a1e00e"
+          },
+          "behavior-1k-assets": {
+            "version": "3.7.2rc1"
+          },
+          "omnigibson-robot-assets": {
+            "version": null,
+            "git_hash": "839cf641ae25661ef706afe5f1cf7b5818a1e00e"
+          }
+        }
+      },
+      {
+        "episode": "00001590",
+        "manifest_url": "https://huggingface.co/datasets/mafangniu/Behavior-Skill/resolve/0be968d3b61406ec366e1bcf7f50a9aa36bbc56f/skill_init_states/task-0000/episode_00001590/state_manifest.json",
+        "manifest_sha256": "687caa4447f57646ddcf19f7131a10d5860ae046821f4d793c5c325f81cba977",
+        "scene_url": "https://huggingface.co/datasets/mafangniu/Behavior-Skill/resolve/0be968d3b61406ec366e1bcf7f50a9aa36bbc56f/skill_init_states/task-0000/episode_00001590/skill_00_scene.json",
+        "scene_sha256": "66a6076b7a7de368be739dad45528b17472dea4c4602c54dee4775ec7bf001cf",
+        "scene_bytes_read_in_memory": 491881,
+        "input_hdf5": "behavior_raw/task-0000/episode_00001590.hdf5",
+        "local_episode_id": 0,
+        "navigation_end_frame": 340,
+        "pickup_start_frame": 340,
+        "annotation_boundary_difference": 0,
+        "scene_model": "house_double_floor_lower",
+        "scene_instance": "house_double_floor_lower_task_turning_on_radio_0_0_template",
+        "object_bindings": {
+          "agent.n.01_1": "robot_r1",
+          "floor.n.01_1": "floors_ulujpr_0",
+          "radio_receiver.n.01_1": "radio_89",
+          "table.n.02_1": "coffee_table_koagbh_0"
+        },
+        "versions": {
+          "omnigibson": {
+            "version": "3.7.2",
+            "git_hash": "839cf641ae25661ef706afe5f1cf7b5818a1e00e"
+          },
+          "bddl": {
+            "version": "3.7.0",
+            "git_hash": "839cf641ae25661ef706afe5f1cf7b5818a1e00e"
+          },
+          "behavior-1k-assets": {
+            "version": "3.7.2rc1"
+          },
+          "omnigibson-robot-assets": {
+            "version": null,
+            "git_hash": "839cf641ae25661ef706afe5f1cf7b5818a1e00e"
+          }
+        }
+      },
+      {
+        "episode": "00001960",
+        "manifest_url": "https://huggingface.co/datasets/mafangniu/Behavior-Skill/resolve/0be968d3b61406ec366e1bcf7f50a9aa36bbc56f/skill_init_states/task-0000/episode_00001960/state_manifest.json",
+        "manifest_sha256": "ba0e49a12ce163e51e9c6041c1ee52d2949f26603f048b14a1b7601e7596233c",
+        "scene_url": "https://huggingface.co/datasets/mafangniu/Behavior-Skill/resolve/0be968d3b61406ec366e1bcf7f50a9aa36bbc56f/skill_init_states/task-0000/episode_00001960/skill_00_scene.json",
+        "scene_sha256": "7aead338e0a61753fdecb7fa5f9803025a9a6d437532cc52316ea8320563606b",
+        "scene_bytes_read_in_memory": 491875,
+        "input_hdf5": "behavior_raw/task-0000/episode_00001960.hdf5",
+        "local_episode_id": 0,
+        "navigation_end_frame": 574,
+        "pickup_start_frame": 588,
+        "annotation_boundary_difference": 14,
+        "scene_model": "house_double_floor_lower",
+        "scene_instance": "house_double_floor_lower_task_turning_on_radio_0_0_template",
+        "object_bindings": {
+          "agent.n.01_1": "robot_r1",
+          "floor.n.01_1": "floors_ulujpr_0",
+          "radio_receiver.n.01_1": "radio_89",
+          "table.n.02_1": "coffee_table_koagbh_0"
+        },
+        "versions": {
+          "omnigibson": {
+            "version": "3.7.2",
+            "git_hash": "839cf641ae25661ef706afe5f1cf7b5818a1e00e"
+          },
+          "bddl": {
+            "version": "3.7.0",
+            "git_hash": "839cf641ae25661ef706afe5f1cf7b5818a1e00e"
+          },
+          "behavior-1k-assets": {
+            "version": "3.7.2rc1"
+          },
+          "omnigibson-robot-assets": {
+            "version": null,
+            "git_hash": "839cf641ae25661ef706afe5f1cf7b5818a1e00e"
+          }
+        }
+      },
+      {
+        "episode": "00002600",
+        "manifest_url": "https://huggingface.co/datasets/mafangniu/Behavior-Skill/resolve/0be968d3b61406ec366e1bcf7f50a9aa36bbc56f/skill_init_states/task-0000/episode_00002600/state_manifest.json",
+        "manifest_sha256": "c81a803dc031b30f2a1fca8e4f4f32738fa359cde3b95ddcfe1e64320d4e0f08",
+        "scene_url": "https://huggingface.co/datasets/mafangniu/Behavior-Skill/resolve/0be968d3b61406ec366e1bcf7f50a9aa36bbc56f/skill_init_states/task-0000/episode_00002600/skill_00_scene.json",
+        "scene_sha256": "96ab1a1572d6d0bd75313bf837558dd0f6e6c0aaa15c5e8b8f0a995a49047080",
+        "scene_bytes_read_in_memory": 491860,
+        "input_hdf5": "behavior_raw/task-0000/episode_00002600.hdf5",
+        "local_episode_id": 0,
+        "navigation_end_frame": 402,
+        "pickup_start_frame": 402,
+        "annotation_boundary_difference": 0,
+        "scene_model": "house_double_floor_lower",
+        "scene_instance": "house_double_floor_lower_task_turning_on_radio_0_0_template",
+        "object_bindings": {
+          "agent.n.01_1": "robot_r1",
+          "floor.n.01_1": "floors_ulujpr_0",
+          "radio_receiver.n.01_1": "radio_89",
+          "table.n.02_1": "coffee_table_koagbh_0"
+        },
+        "versions": {
+          "omnigibson": {
+            "version": "3.7.2",
+            "git_hash": "839cf641ae25661ef706afe5f1cf7b5818a1e00e"
+          },
+          "bddl": {
+            "version": "3.7.0",
+            "git_hash": "839cf641ae25661ef706afe5f1cf7b5818a1e00e"
+          },
+          "behavior-1k-assets": {
+            "version": "3.7.2rc1"
+          },
+          "omnigibson-robot-assets": {
+            "version": null,
+            "git_hash": "839cf641ae25661ef706afe5f1cf7b5818a1e00e"
+          }
+        }
+      },
+      {
+        "episode": "00003000",
+        "manifest_url": "https://huggingface.co/datasets/mafangniu/Behavior-Skill/resolve/0be968d3b61406ec366e1bcf7f50a9aa36bbc56f/skill_init_states/task-0000/episode_00003000/state_manifest.json",
+        "manifest_sha256": "77ec591174d1af735503cdd35247c5bbf897cee884818f4b00d017ea5b0c8f10",
+        "scene_url": "https://huggingface.co/datasets/mafangniu/Behavior-Skill/resolve/0be968d3b61406ec366e1bcf7f50a9aa36bbc56f/skill_init_states/task-0000/episode_00003000/skill_00_scene.json",
+        "scene_sha256": "e0232544aed233c2c22d3d06564e825e0e9922683a2cbb2b22def71be923408f",
+        "scene_bytes_read_in_memory": 491901,
+        "input_hdf5": "behavior_raw/task-0000/episode_00003000.hdf5",
+        "local_episode_id": 0,
+        "navigation_end_frame": 460,
+        "pickup_start_frame": 461,
+        "annotation_boundary_difference": 1,
+        "scene_model": "house_double_floor_lower",
+        "scene_instance": "house_double_floor_lower_task_turning_on_radio_0_0_template",
+        "object_bindings": {
+          "agent.n.01_1": "robot_r1",
+          "floor.n.01_1": "floors_ulujpr_0",
+          "radio_receiver.n.01_1": "radio_89",
+          "table.n.02_1": "coffee_table_koagbh_0"
+        },
+        "versions": {
+          "omnigibson": {
+            "version": "3.7.2",
+            "git_hash": "839cf641ae25661ef706afe5f1cf7b5818a1e00e"
+          },
+          "bddl": {
+            "version": "3.7.0",
+            "git_hash": "839cf641ae25661ef706afe5f1cf7b5818a1e00e"
+          },
+          "behavior-1k-assets": {
+            "version": "3.7.2rc1"
+          },
+          "omnigibson-robot-assets": {
+            "version": null,
+            "git_hash": "839cf641ae25661ef706afe5f1cf7b5818a1e00e"
+          }
+        }
+      }
+    ]
+  }
+}

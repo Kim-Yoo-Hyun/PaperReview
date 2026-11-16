@@ -1,0 +1,174 @@
+{
+  "schema_version": 1,
+  "work_id": "REG-R8/BUILDUP-AUDIT2",
+  "checked_on": "2026-11-03",
+  "scope": "Targeted residual RL prerequisites, one publication migration, six-topic nonexperimental process audit; not an exhaustive proceedings or registry metadata rereview",
+  "registry": {
+    "before": 1090,
+    "after": 1098,
+    "admitted_paper_ids": [
+      "pr-1091",
+      "pr-1092",
+      "pr-1093",
+      "pr-1094",
+      "pr-1095",
+      "pr-1096",
+      "pr-1097",
+      "pr-1098"
+    ],
+    "tier_counts": {
+      "CORE": 47,
+      "NEXT": 321,
+      "REFERENCE": 488,
+      "ARCHIVE": 242
+    },
+    "standard_notes": 5490,
+    "active": 368,
+    "history": 47,
+    "publication_update": {
+      "paper_id": "pr-1080",
+      "old_venue": "arXiv",
+      "new_venue": "CoRL",
+      "official_evidence": "https://www.corl.org/program/accepted-papers",
+      "forum_id": "gQFYIM5dJy",
+      "presentation": "unknown",
+      "analysis_evidence_unchanged": true
+    },
+    "evidence_boundary": "8 new papers use previously checked selected full-text sections with fresh official publication checks; not full-paper user reading or reproduction"
+  },
+  "methodology_sources": [
+    {
+      "url": "https://www.darpa.mil/about/heilmeier-catechism",
+      "location": "eight research-program questions",
+      "use": "problem, importance, cost/time and milestones",
+      "boundary": "proposal heuristic, not universal admission rubric"
+    },
+    {
+      "url": "https://visionbook.mit.edu/how_to_do_research.html",
+      "location": "52.2",
+      "use": "simplification, failure analysis, periodic reconsideration",
+      "boundary": "research advice, not a controlled comparison of workflows"
+    },
+    {
+      "url": "https://simon.peytonjones.org/great-research-paper/",
+      "slides": "https://www.microsoft.com/en-us/research/uploads/prod/2016/07/How-to-write-a-great-research-paper.pdf",
+      "location": "early writing, one idea, readers/feedback",
+      "use": "draft to clarify thinking; actual independent critique",
+      "boundary": "prepared questions are not received feedback"
+    },
+    {
+      "url": "https://cs.uwaterloo.ca/~brecht/courses/854-http-video-2012/readings/keshav-paper-reading.pdf",
+      "location": "three passes",
+      "use": "depth selection and reconstruction of assumptions",
+      "boundary": "no requirement to read all registry papers"
+    },
+    {
+      "url": "https://iclr.cc/Conferences/2026/ReviewerGuide",
+      "location": "paper evaluation guidance",
+      "use": "clear problem/context, claim support and knowledge contribution; SOTA not mandatory",
+      "boundary": "final paper evaluation, not early exploration entry criteria"
+    }
+  ],
+  "candidate_audit": {
+    "topic_count": 6,
+    "canonical_report": "work/research_topics/README.md#nonexperimental-process-audit",
+    "internal_process": "broadly aligned: problem, closest work, alternatives and bounded comparison design",
+    "external_feedback": "not received in repository records for all six; no messages sent",
+    "fixed": [
+      "stale REVISION model-not-fixed wording",
+      "current six topics vs historical five-topic preference",
+      "human implementation effort and first review milestone",
+      "GPU-only blocker interpretation"
+    ],
+    "scientific_conclusions_changed": false,
+    "experiment_contracts_changed": false
+  },
+  "cleanup": {
+    "removed_generated_files": [
+      "work/scripts/__pycache__/registry_profiles.cpython-312.pyc",
+      "work/scripts/__pycache__/registry_schema.cpython-312.pyc"
+    ],
+    "retained_duplicate_provenance": [
+      "work/experiments/reactive_nav_pilot/results/verified/docker_version.json",
+      "work/experiments/reactive_nav_contract/results/verified/docker_version.json"
+    ],
+    "consolidation": "TODO repetitive handoff paragraphs compressed into existing topic/history links; no new per-topic audit reports",
+    "new_dependency_installations": 0
+  },
+  "validation": {
+    "state": "passed",
+    "pre_audit": {
+      "papers": 1090,
+      "standard_notes": 5450,
+      "errors": 0,
+      "warnings": 0
+    },
+    "post_audit_first_pass": {
+      "papers": 1098,
+      "standard_notes": 5490,
+      "errors": 0,
+      "warnings": 0
+    },
+    "reading_inputs_preserved": 408,
+    "new_reading_rows": 7,
+    "new_reading_status": "UNREAD",
+    "staged_index_preserved": true,
+    "post_audit": {
+      "papers": 1098,
+      "categories": 23,
+      "tier_counts": {
+        "CORE": 47,
+        "NEXT": 321,
+        "REFERENCE": 488,
+        "ARCHIVE": 242
+      },
+      "intensive": 368,
+      "inactive_history": 47,
+      "standard_note_files": 5490,
+      "benchmark_catalog_entries": 56,
+      "metric_catalog_entries": 29,
+      "resources": 577,
+      "index_rows": 1098,
+      "markdown_files_checked": 5695,
+      "markdown_links_checked": 11743,
+      "errors": 0,
+      "warnings": 0
+    },
+    "generator_compile": "passed",
+    "generator_rebuild": "passed",
+    "priorities_final_dry_run": {
+      "papers_changed": 0,
+      "note_headers_changed": 0,
+      "reading_status_changed": false,
+      "source_evidence_changed": false
+    },
+    "catalog_and_view_rebuild": "passed",
+    "control_character_scan": {
+      "standard_notes": 5490,
+      "findings": 0
+    },
+    "preservation": {
+      "protected_existing_files_unchanged_including_moved_notes": 5972,
+      "existing_standard_notes_byte_preserved": 5449,
+      "existing_overview_metadata_updates": 1,
+      "resume_directory_files_unchanged": 50,
+      "intentional_changed_or_removed": 31,
+      "unexpected_changes": [],
+      "new_files_including_5_moved_notes": 48,
+      "reading_inputs_preserved": 408,
+      "new_reading_rows": 7,
+      "staged_index_sha256": "0e8db46a624a0ad7e38ce9a6d484c80658cd6973608cbc0d6a0558cc4848ab51",
+      "git_diff_checks": "passed",
+      "new_file_json_whitespace": "passed",
+      "survey_registry_identities": "24 registered / 18 external; paths matched"
+    }
+  },
+  "execution": {
+    "experiment_runs": 0,
+    "docker_retries": 0,
+    "host_installs": 0,
+    "pdf_downloads": 0,
+    "external_messages": 0,
+    "git_commit_push": false
+  }
+}

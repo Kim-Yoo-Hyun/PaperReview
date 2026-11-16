@@ -4,6 +4,8 @@
 > Evidence maturity: `FULL_TEXT_CHECKED`.
 > Analysis basis: full-text PDF body checked on 2026-09-03 (24 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=SSE9myD9SG; public full-text mirror used for retrieval (canonical paper source retained): https://chatpaper.com/api/v1/articles/download/114008. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
+> DOC-QA2 targeted source review: 2026-10-23; PDF pp. 6. 손상 구간·직접 연결된 표 분류만 원문 이미지와 대조했다. 전체 주장 정독·실험 검증·reading status 승격을 뜻하지 않는다. [URL·PDF hash·수정 기록](../../../work/sources/pdf_note_review_followup_2026-10-23.json).
+
 ## Method in One Sentence
 
 PDF body method statement (p. 4 (3 METHODOLOGY), p. 3 (3 METHODOLOGY), p. 4 (3 METHODOLOGY), p. 6 (3 METHODOLOGY), p. 3 (3 METHODOLOGY), p. 5 (3 METHODOLOGY)): To train these semantically-enriched 3DGS models, the standard procedure consists of first generating the set of 2D language-feature maps H corresponding to the input images I.
@@ -16,7 +18,7 @@ PDF body method statement (p. 4 (3 METHODOLOGY), p. 3 (3 METHODOLOGY), p. 4 (3 M
 - **p. 6 / 3 METHODOLOGY - extractive body cue:** For two randomly selected samples (I1, W1) and (I2, W2) from the training set T r, where W1̸ = W2, we first utilize the camera ...
 - **p. 3 / 3 METHODOLOGY - extractive body cue:** This scene representation is learned from a training set T r = {(Ir 1, W r 1 ), (Ir 2, W r 2 ), . ...
 - **p. 5 / 3 METHODOLOGY - extractive body cue:** 1) to rasterize language embeddings, only substituting the 3D color features c with 3D semantic representations f (Eq.
-- **p. 6 / 3 METHODOLOGY - extractive body cue:** Based on the above, we formulate the loss function to optimize the overall scene representation as follows, ∀(I, W) ∈T r: Lraster(W) = Ev∈I  ...
+- **PDF p. 6, §3.2 / Eq. (8) (DOC-QA2 원문 대조):** Cross-modal rasterization loss는 렌더링 RGB와 관측 image 사이 MSE, 렌더링 language feature와 대응 language embedding 사이 MSE를 픽셀에 걸쳐 평균한다.
 - **p. 4 / 3 METHODOLOGY - extractive body cue:** 2) and the ground-truth 2D semantic embeddings: L = E(I,W )∈T rEv∈ILsem(F W (v), HW (v)), (3) where L is the overall optimization objective.
 
 ## Design Rationale
@@ -33,7 +35,7 @@ PDF body method statement (p. 4 (3 METHODOLOGY), p. 3 (3 METHODOLOGY), p. 4 (3 M
 - **p. 6 / 3 METHODOLOGY - extractive body cue:** For two randomly selected samples (I1, W1) and (I2, W2) from the training set T r, where W1̸ = W2, we first utilize the camera ...
 - **p. 3 / 3 METHODOLOGY - extractive body cue:** This scene representation is learned from a training set T r = {(Ir 1, W r 1 ), (Ir 2, W r 2 ), . ...
 - **p. 5 / 3 METHODOLOGY - extractive body cue:** 1) to rasterize language embeddings, only substituting the 3D color features c with 3D semantic representations f (Eq.
-- **p. 6 / 3 METHODOLOGY - extractive body cue:** Based on the above, we formulate the loss function to optimize the overall scene representation as follows, ∀(I, W) ∈T r: Lraster(W) = Ev∈I  ...
+- **PDF p. 6, §3.2 / Eq. (8) (DOC-QA2 원문 대조):** Cross-modal rasterization loss는 렌더링 RGB와 관측 image 사이 MSE, 렌더링 language feature와 대응 language embedding 사이 MSE를 픽셀에 걸쳐 평균한다.
 - **Detected method headings:** 3 METHODOLOGY (p. 3)
 
 ## Pipeline
@@ -50,7 +52,7 @@ PDF body method statement (p. 4 (3 METHODOLOGY), p. 3 (3 METHODOLOGY), p. 4 (3 M
 
 - **p. 4 / 3 METHODOLOGY - extractive body cue:** 2) and the ground-truth 2D semantic embeddings: L = E(I,W )∈T rEv∈ILsem(F W (v), HW (v)), (3) where L is the overall optimization objective.
 - **p. 4 / 3 METHODOLOGY - extractive body cue:** Once the data is prepared, the 3D Gaussians can be iteratively optimized by minimizing the distance between its rasterized 2D semantic embeddings (c.f.
-- **p. 6 / 3 METHODOLOGY - extractive body cue:** Based on the above, we formulate the loss function to optimize the overall scene representation as follows, ∀(I, W) ∈T r: Lraster(W) = Ev∈I  ...
+- **PDF p. 6, §3.2 / Eq. (8) (DOC-QA2 원문 대조):** Cross-modal rasterization loss는 렌더링 RGB와 관측 image 사이 MSE, 렌더링 language feature와 대응 language embedding 사이 MSE를 픽셀에 걸쳐 평균한다.
 - **p. 7 / 3 METHODOLOGY - extractive body cue:** By combining the rasterization loss (Eq.
 - **p. 7 / 3 METHODOLOGY - extractive body cue:** 8) and the camera view blending loss (Eq.
 - **p. 5 / 3 METHODOLOGY - extractive body cue:** 3, which shows how much the distribution of semantic indicator values differs from the color opacity after optimization.

@@ -1,0 +1,154 @@
+{
+  "schema_version": 1,
+  "task_id": "PRE-GPU-3/HANDOFF",
+  "updated": "2026-11-01",
+  "artifact_kind": "NONEXPERIMENTAL_COMPARISON_DESIGN",
+  "executable": false,
+  "automatic_execution_authorized": false,
+  "p0_unchanged": "RESUME_PLAN.json",
+  "earlier_design": "../내용/README.md#design-history",
+  "review": "../../../update/THREE_CANDIDATES_NONEXPERIMENTAL_2026-11-01.md#handoff",
+  "question": "How much observed gain does bounded recalibration offer over reusing a stopping condition after replacing the downstream policy bundle?",
+  "scope": {
+    "robot": "R1Pro",
+    "task": "turning_on_radio navigation -> pickup only",
+    "navigator": "A=pi05-pt12-skill",
+    "downstream": [
+      "A=pi05-pt12-skill",
+      "B=pi05-pt50-skill"
+    ],
+    "normalizers": "Each checkpoint retains its own pinned normalizer",
+    "no_claim": [
+      "pure training-data scale effect",
+      "new docking method",
+      "different embodiment transfer",
+      "scene-disjoint generalization",
+      "true optimal-setting regret from a finite selected comparator"
+    ]
+  },
+  "candidates": {
+    "distance_m": [
+      0.6,
+      0.9,
+      1.2
+    ],
+    "yaw_abs_max_degrees": 30,
+    "selection": "first crossing of horizontal base-target distance <= r and yaw condition; do not replace trajectory by teleport",
+    "hold_ticks": 15,
+    "hold": "base zero velocity, preserve current arm/trunk and gripper commands; no keep_still for objects",
+    "navigation_max_ticks": 600,
+    "pickup_max_ticks": 1800,
+    "action_hz_source": 30,
+    "physics_hz_source": 120,
+    "source_values_not_runtime_verified": true
+  },
+  "selection_rule": {
+    "data": "4 calibration sources x 3 candidates for each policy",
+    "require_all_nonmissing": true,
+    "rank": [
+      "maximum end-to-end successes incl navigation failures",
+      "minimum sum of actual navigation+hold+pickup control ticks over ALL 4 calibration attempts for each candidate",
+      "fixed tie order 0.9,0.6,1.2"
+    ],
+    "all_zero": "NO_OBSERVED_SUCCESS; fixed 0.9 fallback, not optimal A/B selection",
+    "any_technical_missing": "INCOMPLETE_CALIBRATION; no data-driven selection; fixed 0.9 fallback labelled",
+    "a_unselectable": "Do not report transfer of an A-calibrated optimum",
+    "b_calibration_pickup_max": 12,
+    "retry": 0
+  },
+  "roles": {
+    "dev": [
+      "00000010",
+      "00000250"
+    ],
+    "calibration": [
+      "00000470",
+      "00000700",
+      "00000940",
+      "00001250"
+    ],
+    "evaluation": [
+      "00001590",
+      "00001960",
+      "00002600",
+      "00003000"
+    ],
+    "group": "one shared scene-instance template; source paths distinct, physical independence unverified",
+    "learning_exposure": "unknown",
+    "seed_design": 7,
+    "seed_binding": "Design choice only; native manifest must bind simulator, policy and controller RNG. No runtime packet rewritten."
+  },
+  "counterfactual_capture": {
+    "same_candidate": "Run one common navigation+hold prefix then restore full identical state for A/B. Candidate-specific prefix is shared across policies only.",
+    "across_candidates": "Different stopping trajectories/states are intentionally part of the intervention; do not claim identical post-navigation states across k.",
+    "serialize": [
+      "physics positions/velocities/time",
+      "robot controller target/integrator/filter state",
+      "object/contact/assisted-grasp state",
+      "RNG streams",
+      "policy/queue cold-start convention",
+      "scene/task state and camera configuration"
+    ],
+    "reference": "Demo skill1 snapshot is a separate competence diagnostic, never the common arrived state"
+  },
+  "outcome": {
+    "Y": "navigation condition reached within budget AND pickup grasped predicate first-hit within budget",
+    "navigation_failure": 0,
+    "technical_failure": null,
+    "primary_rate": "verified Y=1 / all prespecified starts with unresolved count separately",
+    "secondary": [
+      "navigation reach",
+      "conditional pickup",
+      "right-hand instruction adherence",
+      "actual stop pose",
+      "zero travel",
+      "time/calls/cost"
+    ],
+    "grasp_semantics": "General BDDL grasp success is not automatically right-gripper adherence or stable grasp; report separately."
+  },
+  "estimands": {
+    "observed_reselection_gain": "mean_eval(Y_B(k_B_hat)-Y_B(k_A_hat))",
+    "fixed_gain": "mean_eval(Y_B(0.9)-Y_B(k_A_hat))",
+    "true_transfer_regret": "max_k mu_B(k)-mu_B(k_A_hat); generally not identified by the finite selected k_B_hat comparator",
+    "negative_reselection": "Allowed: finite calibration may choose poorly. Do not clamp negative estimates to zero.",
+    "interaction": "(meanY_B(k1)-meanY_B(k2))-(meanY_A(k1)-meanY_A(k2)); descriptive sensitivity, not geometry-only causal effect",
+    "no_leakage": "Never select k_B from evaluation or report best test candidate as observed primary benefit",
+    "same_choice": "k_A_hat == k_B_hat reuses the same recorded B outcome for both logical arms; report zero contrast and spent selection cost. Do not manufacture a setting effect from independent stochastic reruns of that identical arm."
+  },
+  "cost": {
+    "navigation_phase_plan_max": 30,
+    "pickup_phase_plan_max": 60,
+    "demo_reference_phase_plan_max": 20,
+    "total_phase_plan_max": 110,
+    "scope": "Prior future design estimate only; P0 unchanged; no execution authorization",
+    "actual": "Count unique physical runs once; tag logical reuse and amortization separately",
+    "selection_tie_cost": "All four attempts, including failed/no-arrival consumed ticks; not success-only duration",
+    "deployment": "Report calibration robot time and computation alongside per-task deployment cost. No arbitrary success-to-GPU-time conversion."
+  },
+  "statistical_scope": {
+    "one_template": true,
+    "eval_n_sources": 4,
+    "binary_difference_resolution_pp": 25,
+    "scene_bootstrap_supported": false,
+    "population_equivalence_supported": false,
+    "mandatory": "Raw policy x candidate cells, selected choices, paired gains, missingness bounds and per-source outcomes; no retrospective threshold tuning"
+  },
+  "counterexamples_reviewed": [
+    "Different finite calibration winners can arise without different true policy rankings",
+    "A uniformly weaker B is not by itself stopping-condition transfer loss",
+    "Different stopping thresholds can produce identical actual stop states",
+    "A fast failed attempt can win a tick tie; log the full success/tick table rather than describing it as better motion",
+    "All-zero or incomplete calibration cannot substantiate optimal-setting reuse"
+  ],
+  "remaining_dependencies": [
+    "native image/transport/adapter and state restoration",
+    "actual policy competence and physical state duplication",
+    "effect comparison within the declared limited population",
+    "independent external feedback"
+  ],
+  "external_feedback": {
+    "questions_prepared": true,
+    "received": false,
+    "sent": false
+  }
+}

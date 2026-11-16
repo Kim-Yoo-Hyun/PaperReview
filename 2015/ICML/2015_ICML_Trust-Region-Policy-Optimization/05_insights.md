@@ -4,6 +4,8 @@
 > Evidence maturity: `FULL_TEXT_CHECKED`.
 > Analysis basis: full-text PDF body checked on 2026-09-02 (16 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://proceedings.mlr.press/v37/schulman15.html; PDF retrieval source: https://arxiv.org/pdf/1502.05477. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
 
+> DOC-QA2 targeted source review: 2026-10-23; PDF pp. 4. 손상 구간·직접 연결된 표 분류만 원문 이미지와 대조했다. 전체 주장 정독·실험 검증·reading status 승격을 뜻하지 않는다. [URL·PDF hash·수정 기록](../../../work/sources/pdf_note_review_followup_2026-10-23.json).
+
 ## Paper-supported conclusion
 
 > **Evidence boundary:** The following claims are restricted to selected PDF body sentences, captions and section anchors; exact table/equation values remain to be checked at those anchors.
@@ -14,7 +16,7 @@
 - **p. 3 / 2 Preliminaries - extractive body cue:** Trust region policy optimization, which we propose in the following section, is an approximation to Algorithm 1, which uses a constraint on the KL divergence ...
 - **p. 5 / 2 Preliminaries - extractive body cue:** 6 Practical Algorithm Here we present two practical policy optimization algorithm based on the ideas above, which use either the single path or vine sampling ...
 - **p. 1 / 1 Introduction - extractive body cue:** In our experiments, we show that the same TRPO methods can learn complex policies for swimming, hopping, and walking, as well as playing Atari games ...
-- **p. 4 / 2 Preliminaries - extractive body cue:** Using q to denote the sampling distribution, the contribution of a single sn to the loss function is X a πθ(a/sn)Aθold(sn, a) = Ea∼q πθ(a/sn) ...
+- **PDF p. 4, §5 sampling / Eq. (14) (DOC-QA2 원문 대조):** 단일 state의 action expectation은 q에서 sampling한 π_θ(a given s)/q(a given s) importance weight로 추정한다. Q-value surrogate를 최대화하면서 old-to-new policy의 평균 KL divergence≤δ 조건을 둔다. Sampling distribution의 support 조건을 보존해야 한다.
 - **p. 5 / 3. Approximately solve this constrained optimization - extractive body cue:** We use the conjugate gradient algorithm followed by a line search, which is altogether only slightly more expensive than computing the gradient itself.
 - **p. 5 / 3. Approximately solve this constrained optimization - extractive body cue:** Empirically, it is hard to robustly choose the penalty coefficient, so we use a hard constraint instead of a penalty, with parameter δ (the bound ...
 - **Contribution anchor:** p. 2 (2 Preliminaries), p. 3 (2 Preliminaries), p. 5 (2 Preliminaries), p. 1 (1 Introduction), p. 4 (2 Preliminaries), p. 5 (3. Approximately solve this constrained optimization)

@@ -17,6 +17,8 @@
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (20 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
+> DOC-QA2 targeted source review: 2026-10-23; PDF pp. 5. 손상 구간·직접 연결된 표 분류만 원문 이미지와 대조했다. 전체 주장 정독·실험 검증·reading status 승격을 뜻하지 않는다. [URL·PDF hash·수정 기록](../../../work/sources/pdf_note_review_followup_2026-10-23.json).
+
 ## Why This Paper Is Here
 
 Manipulation, contact, tactile, and dexterity의 manipulation 문제를 이해하기 위해 읽는다. 본문은 Faced with such challenges, many existing works have sought to explicitly consider contact modes by either enumerating or sampling them.를 문제로 두고, Our first contribution is to establish the theoretical equivalence of the two smoothing schemes for simple systems under our framework (Sec.II,IV-C).를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
@@ -39,7 +41,7 @@ Manipulation, contact, tactile, and dexterity의 manipulation 문제를 이해�
 - **p. 1 / Abstract - extractive body cue:** Our final contribution resolves (iii), where we show that classical sampling-based motion planning algorithms can be effective in global planning when contact modes are abstracted ...
 - **p. 3 / II. LOCAL THEORY OF SMOOTHING - extractive body cue:** (1) which consists of the sensitivity term J(¯x) ∈Rm×n, and a bias term µ(¯x) ∈Rm, which we refer to as model parameters (J (¯x) , ...
 - **p. 6 / III. CONVEX QUASI-DYNAMIC DIFFERENTIABLE - extractive body cue:** Quasi-dynamic models, which previous works have used extensively for robotic manipulation [10], [11], [30], [31], [45], simplify Newtonian dynamics by removing terms related to velocity ...
-- **p. 5 / II. LOCAL THEORY OF SMOOTHING - extractive body cue:** 2) First-Order Randomized Smoothing: We use the following estimators for first-order randomized smoothing of dynamical systems, Aρ ≈1 N PN i=1  ∂ ∂xf(¯x + ...
+- **PDF p. 5, Eqs. (21a)–(22) (DOC-QA2 원문 대조):** First-order randomized smoothing은 perturbed state/input에서 dynamics Jacobians ∂f/∂x와 ∂f/∂u를 N samples 평균하여 A_ρ, B_ρ를 추정한다. c_ρ는 perturbed dynamics output 평균이다. Zeroth-order least-squares estimator Eq. (22)와 구별한다.
 - **p. 7 / III. CONVEX QUASI-DYNAMIC DIFFERENTIABLE - extractive body cue:** As the derivatives (30) are discontinuous functions of (q, u) [16], they are not a good local approximation of the CQDC dynamics unless multiple gradients ...
 
 ## Observation, State, and Output Interface

@@ -17,6 +17,8 @@
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (31 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
+> DOC-QA2 targeted source review: 2026-10-23; PDF pp. 2. 손상 구간·직접 연결된 표 분류만 원문 이미지와 대조했다. 전체 주장 정독·실험 검증·reading status 승격을 뜻하지 않는다. [URL·PDF hash·수정 기록](../../../work/sources/pdf_note_review_followup_2026-10-23.json).
+
 ## Why This Paper Is Here
 
 RL, IL, offline learning, and robot data의 offline_rl 문제를 이해하기 위해 읽는다. 본문은 However, applying RL to real-world problems consistently poses practical challenges: in contrast to the kinds of data-driven methods that have been successful in supervised learning [24, 11], RL is classically regarded as ...를 문제로 두고, We propose a novel method for learning such conservative Qfunctions via a simple modification to standard value-based RL algorithms.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
@@ -40,7 +42,7 @@ RL, IL, offline learning, and robot data의 offline_rl 문제를 이해하기 �
 - **p. 4 / 2 Preliminaries - extractive body cue:** Due to space constraints, we present these results in Theorem D.1 and Theorem D.2 in Appendix D.1.
 - **p. 6 / 2 Preliminaries - extractive body cue:** (6) The expression of ζ in Theorem 3.6 consists of two terms: the first term captures the decrease in policy performance in M, that occurs ...
 - **p. 2 / 2 Preliminaries - extractive body cue:** S, A represent state and action spaces, T(s′/s, a) and r(s, a) represent the dynamics and reward function, and γ ∈(0, 1) represents the discount ...
-- **p. 2 / 2 Preliminaries - extractive body cue:** Given a dataset D = {(s, a, rs′)} of tuples from trajectories collected under a behavior policy πβ: ˆQk+1 ←arg min Q Es,a,s′∼D  (r(s, ...
+- **PDF p. 2, §2 preliminaries (DOC-QA2 원문 대조):** Behavior dataset의 sampled transitions에서 Bellman-target squared residual을 최소화하는 policy evaluation과 Q 기반 policy improvement를 설명한다. Learned-policy target actions와 dataset behavior actions 사이의 distribution shift가 문제다. 이 식은 CQL conservative penalty 자체가 아닌 기본 actor-critic recipe다.
 
 ## Observation, State, and Output Interface
 

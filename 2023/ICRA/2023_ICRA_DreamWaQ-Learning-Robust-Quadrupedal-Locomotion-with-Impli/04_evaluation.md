@@ -4,6 +4,8 @@
 > Evidence maturity: `FULL_TEXT_CHECKED`.
 > Analysis basis: full-text PDF body checked on 2026-09-03 (7 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2301.10602; PDF retrieval source: https://arxiv.org/pdf/2301.10602. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
+> DOC-QA2 targeted source review: 2026-10-23; PDF pp. 3. 손상 구간·직접 연결된 표 분류만 원문 이미지와 대조했다. 전체 주장 정독·실험 검증·reading status 승격을 뜻하지 않는다. [URL·PDF hash·수정 기록](../../../work/sources/pdf_note_review_followup_2026-10-23.json).
+
 ## Evaluation in One Sentence
 
 PDF body evaluation/result cue (p. 5 (Figure/Table caption), p. 5 (III. EXPERIMENTS), p. 2 (3) A robustness and durability evaluation of the learned), p. 4 (III. EXPERIMENTS), p. 4 (III. EXPERIMENTS), p. 6 (Figure/Table caption)): Fig. 5: Estimation error of CENet and EstimatorNet. The superiority of CENet is highlighted when the robot's feet stumbled by stairs. barplot, as shown in Fig. 4. The significance of ...
@@ -120,7 +122,7 @@ PDF body evaluation/result cue (p. 5 (Figure/Table caption), p. 5 (III. EXPERIME
 - **p. 4 / III. EXPERIMENTS - extractive body cue:** The desired joint angles were tracked using a PD controller with proportional and derivative gains of Kp = 28 and Kd = 0.7, respectively at ...
 - **p. 5 / III. EXPERIMENTS - extractive body cue:** Algorithm Max. push (m/s) Survival rate (%) Baseline 0.511 ± 0.053 20.51 ± 6.44 AdaptationNet 0.714 ± 0.096 82.37 ± 2.49 EstimatorNet 0.871 ± 0.124 ...
 - **p. 5 / III. EXPERIMENTS - extractive body cue:** The robot's trajectory was measured using a real-time kinematic (RTK) GPS [39] with a frequency of 10 Hz, mounted on top of the robot.
-- **p. 3 / II. DREAMWAQ - extractive body cue:** Reward Equation (ri) Weight (wi) Lin. velocity tracking exp  -4(vcmd xy -vxy)2 1.0 Ang. velocity tracking exp  -4(ωcmd yaw -ωyaw)2 0.5 Linear velocity ...
+- **PDF p. 3, Table I / Eq. (4) (DOC-QA2 원문 대조):** Reward는 Σᵢwᵢrᵢ다. Linear velocity tracking exp(−4(v_xy^cmd−v_xy)²)는 weight 1.0, angular tracking exp(−4(ω_yaw^cmd−ω_yaw)²)는 0.5이며, 나머지 항은 vertical/angular velocity·orientation·power·action rate 등을 규제한다. Body-frame 정의와 reward weights를 evaluation success와 구분한다.
 
 ## Generalization and Failure Cases
 

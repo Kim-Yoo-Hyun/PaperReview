@@ -4,6 +4,8 @@
 > Evidence maturity: `FULL_TEXT_CHECKED`.
 > Analysis basis: full-text PDF body checked on 2026-09-03 (22 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=pZIeK0Xvph; PDF retrieval source: https://arxiv.org/pdf/2511.22429. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
+> DOC-QA2 targeted source review: 2026-10-23; PDF pp. 6. 손상 구간·직접 연결된 표 분류만 원문 이미지와 대조했다. 전체 주장 정독·실험 검증·reading status 승격을 뜻하지 않는다. [URL·PDF hash·수정 기록](../../../work/sources/pdf_note_review_followup_2026-10-23.json).
+
 ## Paper-supported conclusion
 
 > **Evidence boundary:** The following claims are restricted to selected PDF body sentences, captions and section anchors; exact table/equation values remain to be checked at those anchors.
@@ -16,7 +18,7 @@
 - **p. 6 / 3 Method - extractive body cue:** enforces robust multi-view matching while mitigating potential feature shift; to ensure this loss is applied only to multi-view samples, we introduce an indicator function 1mv(i) ...
 - **p. 3 / 1 Introduction - extractive body cue:** Our contributions are threefold: (i) a general encoder-only distillation strategy that enhances local geometric detail and overall robustness in feed-forward 3D reconstruction models; (ii) a ...
 - **p. 5 / 3 Method - extractive body cue:** Recall that feed-forward 3D reconstruction models typically consist of a shared encoder, which extracts features from input images, followed by a decoder that correlates these ...
-- **p. 6 / 3 Method - extractive body cue:** The overall training objective is the average loss over all N images, given by L = 1 N PN i=1  L(i) distill + L(i) ...
+- **PDF p. 6, §3 training objective (DOC-QA2 원문 대조):** 전체 objective는 N개 image에 대한 distillation loss와 pointmap loss의 합을 평균한다: L=(1/N)Σᵢ(L_distill⁽ⁱ⁾+L_pointmap⁽ⁱ⁾). Pointmap loss에는 multi-view sample에만 적용하는 indicator가 포함된다.
 - **Contribution anchor:** p. 5 (3 Method), p. 3 (1 Introduction), p. 5 (3 Method), p. 6 (3 Method), p. 3 (1 Introduction), p. 5 (3 Method)
 
 ### Strongest assumption and failure boundary

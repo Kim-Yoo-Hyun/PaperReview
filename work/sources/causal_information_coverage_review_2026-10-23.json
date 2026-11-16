@@ -1,0 +1,878 @@
+{
+  "task": "GAP-CF1",
+  "reviewed_on": "2026-10-23",
+  "timezone": "Asia/Seoul",
+  "report": "work/update/CAUSAL_INFORMATION_COVERAGE_REVIEW_2026-10-23.md",
+  "canonical_question": "synthesis/02_rl_il_offline.md#gap-causal-2026",
+  "scope": "Targeted literature and static public-source review; not exhaustive systematic review",
+  "decision": {
+    "task": "DONE",
+    "broad_method": "NO-GO",
+    "generic_cue_vs_more_demos": "NO-GO",
+    "conditional_diagnostic": "REVISE/HOLD",
+    "native_effect": "NOT_TESTED",
+    "external_researcher_feedback": "NOT_OBTAINED",
+    "next": "GAP-CF2 bounded data/protocol sufficiency audit; no payload download or experiment"
+  },
+  "counts": {
+    "papers": 14,
+    "official_recent_including_preproceedings": 11,
+    "preprint_formal_status_unverified": 1,
+    "official_listing_details_unresolved": 1,
+    "older_foundation": 1,
+    "selected_body": 12,
+    "abstract_only": 2,
+    "repositories": 9,
+    "source_files": 35,
+    "readme_files": 9,
+    "selected_logic_files": 14,
+    "context_inventory_files": 12
+  },
+  "search_scope": {
+    "window": "2024–2026 plus 2019 foundational collision",
+    "queries": [
+      "hidden confounding offline policy evaluation action coverage",
+      "causal imitation learning expert observable unobservable instrumental variables",
+      "causal flow policy VLA counterfactual intervention",
+      "robot imitation additional human cues equal demonstration time"
+    ],
+    "registry_comparison": "normalized title, aliases and public identifier matching; rg phrase checks",
+    "remaining_lineage": [
+      "adaptive instrumental-variable experimentation",
+      "initial-state interventions for deconfounded imitation",
+      "causal representation/data augmentation beyond reviewed sources"
+    ],
+    "excluded": [
+      {
+        "name": "B4MRL",
+        "reason": "Discovery venue claim inconsistent with primary PDF under-review header; not used as verified accepted source"
+      }
+    ]
+  },
+  "evidence_boundary": {
+    "no_experiment": true,
+    "no_dependencies_installed": true,
+    "no_dataset_or_weight_download": true,
+    "no_local_pdf_download": true,
+    "remote_pdf_text_used": true,
+    "no_registry_admission": true,
+    "no_reading_status_change": true,
+    "code_execution": false,
+    "repository_commits_are_paper_run_commits": false,
+    "arxiv_final_proceedings_equivalence_audited": false,
+    "proofs_independently_verified": false,
+    "manual_counterexample": "Original illustrative arithmetic; not a new theorem or executed simulation",
+    "version_issues": [
+      "F05 v2 body and older workshop-oriented README; v3 HTML unavailable",
+      "F08 official Downloads listing and author NeurIPS claim, individual poster detail inaccessible",
+      "F10 early arXiv body vs final ICLR2024 status",
+      "F12 v1 selected body, v2 HTML unavailable; numerical performance phrasing omitted",
+      "F13 official page explicitly pre-proceedings and pages TBD",
+      "F14 code commit predates 2026 journal extension"
+    ]
+  },
+  "sources": [
+    {
+      "id": "F01",
+      "title": "Offline Policy Evaluation and Optimization Under Confounding",
+      "year": 2024,
+      "venue": "AISTATS",
+      "status": "official_proceedings",
+      "official_url": "https://proceedings.mlr.press/v238/kausik24a.html",
+      "body_url": "https://proceedings.mlr.press/v238/kausik24a/kausik24a.pdf",
+      "locations": "Table 1; Sections 2–5; 4.1 Assumptions 4–6",
+      "identifiers": {
+        "arxiv": "2211.16583"
+      },
+      "repository": "hetankevin/off-policy",
+      "depth": "SELECTED_BODY_PASSAGES",
+      "registry_matches": []
+    },
+    {
+      "id": "F02",
+      "title": "Two-way Deconfounder for Off-policy Evaluation in Causal Reinforcement Learning",
+      "year": 2024,
+      "venue": "NeurIPS",
+      "status": "official_proceedings",
+      "official_url": "https://proceedings.neurips.cc/paper_files/paper/2024/hash/8ecf25e3a462e9bb1e29662dfe7258fe-Abstract-Conference.html",
+      "body_url": "https://arxiv.org/html/2412.05783v1",
+      "locations": "Sections 2,4,5.3; Appendix A.2–3",
+      "identifiers": {
+        "arxiv": "2412.05783"
+      },
+      "repository": "fsmiu/Two-way-Deconfounder",
+      "depth": "SELECTED_BODY_PASSAGES",
+      "registry_matches": []
+    },
+    {
+      "id": "F03",
+      "title": "Confounding Robust Deep Reinforcement Learning: A Causal Approach",
+      "year": 2025,
+      "venue": "NeurIPS",
+      "status": "official_proceedings",
+      "official_url": "https://proceedings.neurips.cc/paper_files/paper/2025/hash/c9a177f06ecd9892cd1664d89994fb58-Abstract-Conference.html",
+      "body_url": "https://arxiv.org/html/2510.21110v1",
+      "locations": "Sections 2–4; Appendix B.2,G",
+      "identifiers": {
+        "arxiv": "2510.21110"
+      },
+      "repository": "CausalAILab/Confounding-Robust-Deep-Reinforcement-Learning",
+      "depth": "SELECTED_BODY_PASSAGES",
+      "registry_matches": []
+    },
+    {
+      "id": "F04",
+      "title": "Automatic Reward Shaping from Confounded Offline Data",
+      "year": 2025,
+      "venue": "ICML",
+      "status": "official_proceedings",
+      "official_url": "https://proceedings.mlr.press/v267/li25dr.html",
+      "body_url": "https://arxiv.org/html/2505.11478v1",
+      "locations": "Sections 2–4",
+      "identifiers": {
+        "arxiv": "2505.11478"
+      },
+      "repository": "CausalAILab/Automatic-Reward-Shaping-From-Confounded-Offline-Data",
+      "depth": "SELECTED_BODY_PASSAGES",
+      "registry_matches": []
+    },
+    {
+      "id": "F05",
+      "title": "Causal Imitation Learning under Expert-Observable and Expert-Unobservable Confounding",
+      "year": 2026,
+      "venue": "ICLR",
+      "status": "official_proceedings",
+      "official_url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/4415e8cb0741bc0beb79b316f0856108-Abstract-Conference.html",
+      "body_url": "https://arxiv.org/html/2502.07656v2",
+      "locations": "Sections 3–5; Appendix D.2,E,F",
+      "identifiers": {
+        "arxiv": "2502.07656"
+      },
+      "repository": "shaodaqian/Confounded-IL",
+      "depth": "SELECTED_BODY_PASSAGES",
+      "registry_matches": [],
+      "aliases": [
+        "A Unifying Framework for Causal Imitation Learning with Hidden Confounders"
+      ]
+    },
+    {
+      "id": "F06",
+      "title": "Causal Imitation for Markov Decision Processes: a Partial Identification Approach",
+      "year": 2024,
+      "venue": "NeurIPS",
+      "status": "official_proceedings",
+      "official_url": "https://proceedings.neurips.cc/paper_files/paper/2024/hash/9f7f2f57d8eaf44b2f09020f64ff6d96-Abstract-Conference.html",
+      "body_url": "https://proceedings.neurips.cc/paper_files/paper/2024/file/9f7f2f57d8eaf44b2f09020f64ff6d96-Paper-Conference.pdf",
+      "locations": "Table 1; Sections 2.1,3.1–2",
+      "identifiers": {},
+      "repository": null,
+      "depth": "SELECTED_BODY_PASSAGES",
+      "registry_matches": []
+    },
+    {
+      "id": "F07",
+      "title": "Confounded Causal Imitation Learning with Instrumental Variables",
+      "year": 2025,
+      "venue": "arXiv",
+      "status": "formal_acceptance_unverified",
+      "official_url": "https://arxiv.org/abs/2507.17309",
+      "body_url": "https://arxiv.org/html/2507.17309v1",
+      "locations": "Sections 2–4",
+      "identifiers": {
+        "arxiv": "2507.17309"
+      },
+      "repository": null,
+      "depth": "SELECTED_BODY_PASSAGES",
+      "registry_matches": []
+    },
+    {
+      "id": "F08",
+      "title": "CofactVLA: Deconfounding Vision-Language-Action Models via Counterfactual Intervention",
+      "year": 2026,
+      "venue": "NeurIPS listing / arXiv body",
+      "status": "official_listing_detailed_status_unresolved",
+      "official_url": "https://neurips.cc/Downloads/2026",
+      "body_url": "https://arxiv.org/html/2608.04396v1",
+      "locations": "Sections 3–4.1; Appendix A.7",
+      "identifiers": {
+        "arxiv": "2608.04396"
+      },
+      "repository": "zhangy0822/CofactVLA",
+      "depth": "SELECTED_BODY_PASSAGES",
+      "registry_matches": []
+    },
+    {
+      "id": "F09",
+      "title": "Causal Confusion in Imitation Learning",
+      "year": 2019,
+      "venue": "NeurIPS",
+      "status": "official_proceedings",
+      "official_url": "https://papers.nips.cc/paper_files/paper/2019/hash/947018640bf36a2bb609d3557a285329-Abstract.html",
+      "body_url": null,
+      "locations": "Official abstract only",
+      "identifiers": {},
+      "repository": null,
+      "depth": "OFFICIAL_ABSTRACT_ONLY",
+      "registry_matches": []
+    },
+    {
+      "id": "F10",
+      "title": "Delphic Offline Reinforcement Learning under Nonidentifiable Hidden Confounding",
+      "year": 2024,
+      "venue": "ICLR",
+      "status": "official_proceedings",
+      "official_url": "https://proceedings.iclr.cc/paper_files/paper/2024/hash/0b9ff9baa226af39f86045ecdc173672-Abstract-Conference.html",
+      "body_url": "https://arxiv.org/html/2306.01157v1",
+      "locations": "Sections 3–4; initial version, not final-version equivalence audit",
+      "identifiers": {
+        "arxiv": "2306.01157"
+      },
+      "repository": null,
+      "depth": "SELECTED_BODY_PASSAGES",
+      "registry_matches": []
+    },
+    {
+      "id": "F11",
+      "title": "Mechanistic Interpretability for Steering Vision-Language-Action Models",
+      "year": 2025,
+      "venue": "CoRL",
+      "status": "official_proceedings",
+      "official_url": "https://proceedings.mlr.press/v305/haon25a.html",
+      "body_url": null,
+      "locations": "Official abstract only",
+      "identifiers": {},
+      "repository": null,
+      "depth": "OFFICIAL_ABSTRACT_ONLY",
+      "registry_matches": []
+    },
+    {
+      "id": "F12",
+      "title": "Causal Flow Q-Learning for Robust Offline Reinforcement Learning",
+      "year": 2026,
+      "venue": "ICML",
+      "status": "official_proceedings",
+      "official_url": "https://proceedings.mlr.press/v306/li26ja.html",
+      "body_url": "https://arxiv.org/html/2602.02847v1",
+      "locations": "Sections 2–4; Appendix B; v2 HTML unavailable",
+      "identifiers": {
+        "arxiv": "2602.02847"
+      },
+      "repository": "CausalAILab/Causal-Flow-Q-Learning-for-Robust-Offline-Reinforcement-Learning",
+      "depth": "SELECTED_BODY_PASSAGES",
+      "registry_matches": []
+    },
+    {
+      "id": "F13",
+      "title": "Scalable Causal Imitation Learning",
+      "year": 2026,
+      "venue": "RLJ/RLC",
+      "status": "official_preproceedings",
+      "official_url": "https://rlj.cs.umass.edu/2026/papers/Paper47.html",
+      "body_url": "https://arxiv.org/html/2607.17003v1",
+      "locations": "Sections 2,3.2; Appendix G; publisher pages TBD",
+      "identifiers": {
+        "arxiv": "2607.17003"
+      },
+      "repository": "CausalAILab/Scalable-Causal-Imitation-Learning",
+      "depth": "SELECTED_BODY_PASSAGES",
+      "registry_matches": []
+    },
+    {
+      "id": "F14",
+      "title": "Civil: causal and intuitive visual imitation learning",
+      "year": 2026,
+      "venue": "Autonomous Robots",
+      "status": "official_journal",
+      "official_url": "https://link.springer.com/article/10.1007/s10514-026-10266-3",
+      "body_url": "https://link.springer.com/article/10.1007/s10514-026-10266-3",
+      "locations": "Publisher Sections 1,6–7",
+      "identifiers": {
+        "arxiv": "2504.17959",
+        "doi": "10.1007/s10514-026-10266-3"
+      },
+      "repository": "CIVIL2025/Implementation",
+      "depth": "SELECTED_BODY_PASSAGES",
+      "registry_matches": []
+    }
+  ],
+  "repositories": [
+    {
+      "repo": "CIVIL2025/Implementation",
+      "commit": "785be3450b39232364fb16caf84ceeccae05dfb3",
+      "commit_date": "2025-05-05T20:44:22Z",
+      "truncated": false
+    },
+    {
+      "repo": "CausalAILab/Automatic-Reward-Shaping-From-Confounded-Offline-Data",
+      "commit": "67f4250101b981cfaaba3a5b1210cc6a49bada83",
+      "commit_date": "2026-05-19T04:49:26Z",
+      "truncated": false
+    },
+    {
+      "repo": "CausalAILab/Causal-Flow-Q-Learning-for-Robust-Offline-Reinforcement-Learning",
+      "commit": "1895eea5da95136652215b2b2f8367cb707355f8",
+      "commit_date": "2026-05-19T04:58:13Z",
+      "truncated": false
+    },
+    {
+      "repo": "CausalAILab/Confounding-Robust-Deep-Reinforcement-Learning",
+      "commit": "c9a4dfe9d471e5422f493268e106e1a174f1e72d",
+      "commit_date": "2026-06-08T01:55:36Z",
+      "truncated": false
+    },
+    {
+      "repo": "CausalAILab/Scalable-Causal-Imitation-Learning",
+      "commit": "2665d73bc9c9d9c49aadd59a5f5974762a65fdc7",
+      "commit_date": "2026-07-18T20:09:43Z",
+      "truncated": false
+    },
+    {
+      "repo": "fsmiu/Two-way-Deconfounder",
+      "commit": "d714206e64f63e9fbacaa8a0abd37f68916c809d",
+      "commit_date": "2024-12-19T11:30:13Z",
+      "truncated": false
+    },
+    {
+      "repo": "hetankevin/off-policy",
+      "commit": "ed813bf0dd2e6504677cf0056ffd3acbf62f9000",
+      "commit_date": "2024-03-25T00:00:53Z",
+      "truncated": false
+    },
+    {
+      "repo": "shaodaqian/Confounded-IL",
+      "commit": "ff0ce38c07ce8d0d959646a9a92a4de9734b0c15",
+      "commit_date": "2025-06-23T19:05:47Z",
+      "truncated": false
+    },
+    {
+      "repo": "zhangy0822/CofactVLA",
+      "commit": "f438fa6661c541898fc87397692c8d9fec8d2c4b",
+      "commit_date": "2026-10-21T02:02:32Z",
+      "truncated": false
+    }
+  ],
+  "source_files": [
+    {
+      "repo": "hetankevin/off-policy",
+      "commit": "ed813bf0dd2e6504677cf0056ffd3acbf62f9000",
+      "path": "README.md",
+      "url": "https://raw.githubusercontent.com/hetankevin/off-policy/ed813bf0dd2e6504677cf0056ffd3acbf62f9000/README.md",
+      "sha256": "842aa28f214dccb90155be58d66b2184afb94ae7b6720e9cc633e7e43cf9bdd0",
+      "bytes": 1691,
+      "permalink": "https://github.com/hetankevin/off-policy/blob/ed813bf0dd2e6504677cf0056ffd3acbf62f9000/README.md",
+      "review_depth": "README_ROUTING",
+      "selected_line_ranges": []
+    },
+    {
+      "repo": "hetankevin/off-policy",
+      "commit": "ed813bf0dd2e6504677cf0056ffd3acbf62f9000",
+      "path": "core/confound_env.py",
+      "url": "https://raw.githubusercontent.com/hetankevin/off-policy/ed813bf0dd2e6504677cf0056ffd3acbf62f9000/core/confound_env.py",
+      "sha256": "b08117932886fe28a0300f6962c69b281ae06d9d480f56bf82a3e6a96d46a019",
+      "bytes": 22454,
+      "permalink": "https://github.com/hetankevin/off-policy/blob/ed813bf0dd2e6504677cf0056ffd3acbf62f9000/core/confound_env.py",
+      "review_depth": "SELECTED_LOGIC_PASSAGES",
+      "selected_line_ranges": [
+        [
+          93,
+          113
+        ]
+      ]
+    },
+    {
+      "repo": "hetankevin/off-policy",
+      "commit": "ed813bf0dd2e6504677cf0056ffd3acbf62f9000",
+      "path": "mcmix/helpers.py",
+      "url": "https://raw.githubusercontent.com/hetankevin/off-policy/ed813bf0dd2e6504677cf0056ffd3acbf62f9000/mcmix/helpers.py",
+      "sha256": "7d3174971f10d0f6fff75dd33fcfc3bcb9e51571dafc855eca1772284c9b5d53",
+      "bytes": 3693,
+      "permalink": "https://github.com/hetankevin/off-policy/blob/ed813bf0dd2e6504677cf0056ffd3acbf62f9000/mcmix/helpers.py",
+      "review_depth": "SELECTED_LOGIC_PASSAGES",
+      "selected_line_ranges": [
+        [
+          29,
+          46
+        ]
+      ]
+    },
+    {
+      "repo": "fsmiu/Two-way-Deconfounder",
+      "commit": "d714206e64f63e9fbacaa8a0abd37f68916c809d",
+      "path": "README.md",
+      "url": "https://raw.githubusercontent.com/fsmiu/Two-way-Deconfounder/d714206e64f63e9fbacaa8a0abd37f68916c809d/README.md",
+      "sha256": "4feadfb54e503f863f73b92b3494480ab4ca21659c4c4df64c31d4a9ce3791e3",
+      "bytes": 1369,
+      "permalink": "https://github.com/fsmiu/Two-way-Deconfounder/blob/d714206e64f63e9fbacaa8a0abd37f68916c809d/README.md",
+      "review_depth": "README_ROUTING",
+      "selected_line_ranges": []
+    },
+    {
+      "repo": "fsmiu/Two-way-Deconfounder",
+      "commit": "d714206e64f63e9fbacaa8a0abd37f68916c809d",
+      "path": "sim_toy.py",
+      "url": "https://raw.githubusercontent.com/fsmiu/Two-way-Deconfounder/d714206e64f63e9fbacaa8a0abd37f68916c809d/sim_toy.py",
+      "sha256": "0ce401c03b88ecc2f5df4bbf4d8bd21f470e0cbd7691eda4f9b8889120450a93",
+      "bytes": 3629,
+      "permalink": "https://github.com/fsmiu/Two-way-Deconfounder/blob/d714206e64f63e9fbacaa8a0abd37f68916c809d/sim_toy.py",
+      "review_depth": "CONTEXT_PATH_OR_SYMBOL_INVENTORY_ONLY",
+      "selected_line_ranges": []
+    },
+    {
+      "repo": "fsmiu/Two-way-Deconfounder",
+      "commit": "d714206e64f63e9fbacaa8a0abd37f68916c809d",
+      "path": "toymodels/TWD_Model.py",
+      "url": "https://raw.githubusercontent.com/fsmiu/Two-way-Deconfounder/d714206e64f63e9fbacaa8a0abd37f68916c809d/toymodels/TWD_Model.py",
+      "sha256": "c6301e4b29a1a86f8474014bd744570f90e3f489aebbf633cc61fe8671547139",
+      "bytes": 4376,
+      "permalink": "https://github.com/fsmiu/Two-way-Deconfounder/blob/d714206e64f63e9fbacaa8a0abd37f68916c809d/toymodels/TWD_Model.py",
+      "review_depth": "CONTEXT_PATH_OR_SYMBOL_INVENTORY_ONLY",
+      "selected_line_ranges": []
+    },
+    {
+      "repo": "fsmiu/Two-way-Deconfounder",
+      "commit": "d714206e64f63e9fbacaa8a0abd37f68916c809d",
+      "path": "utils/MyDataSet.py",
+      "url": "https://raw.githubusercontent.com/fsmiu/Two-way-Deconfounder/d714206e64f63e9fbacaa8a0abd37f68916c809d/utils/MyDataSet.py",
+      "sha256": "61943f35c740a4c82b5d1d1e6be9c559cbbcb9f7d23ffe971df36659fe2e02bc",
+      "bytes": 593,
+      "permalink": "https://github.com/fsmiu/Two-way-Deconfounder/blob/d714206e64f63e9fbacaa8a0abd37f68916c809d/utils/MyDataSet.py",
+      "review_depth": "SELECTED_LOGIC_PASSAGES",
+      "selected_line_ranges": [
+        [
+          1,
+          22
+        ]
+      ]
+    },
+    {
+      "repo": "CausalAILab/Confounding-Robust-Deep-Reinforcement-Learning",
+      "commit": "c9a4dfe9d471e5422f493268e106e1a174f1e72d",
+      "path": "README.md",
+      "url": "https://raw.githubusercontent.com/CausalAILab/Confounding-Robust-Deep-Reinforcement-Learning/c9a4dfe9d471e5422f493268e106e1a174f1e72d/README.md",
+      "sha256": "a83e702fe4d5e9da33112f112be6931ca3dd1bd96b83ecf01b6788aec9664063",
+      "bytes": 6447,
+      "permalink": "https://github.com/CausalAILab/Confounding-Robust-Deep-Reinforcement-Learning/blob/c9a4dfe9d471e5422f493268e106e1a174f1e72d/README.md",
+      "review_depth": "README_ROUTING",
+      "selected_line_ranges": []
+    },
+    {
+      "repo": "CausalAILab/Confounding-Robust-Deep-Reinforcement-Learning",
+      "commit": "c9a4dfe9d471e5422f493268e106e1a174f1e72d",
+      "path": "student/dqn.py",
+      "url": "https://raw.githubusercontent.com/CausalAILab/Confounding-Robust-Deep-Reinforcement-Learning/c9a4dfe9d471e5422f493268e106e1a174f1e72d/student/dqn.py",
+      "sha256": "a072b695671a77836e1d3f64e023903ea8a8307a3a53ad26e2f78f8bd2978cbd",
+      "bytes": 19161,
+      "permalink": "https://github.com/CausalAILab/Confounding-Robust-Deep-Reinforcement-Learning/blob/c9a4dfe9d471e5422f493268e106e1a174f1e72d/student/dqn.py",
+      "review_depth": "SELECTED_LOGIC_PASSAGES",
+      "selected_line_ranges": [
+        [
+          194,
+          243
+        ],
+        [
+          298,
+          321
+        ]
+      ]
+    },
+    {
+      "repo": "CausalAILab/Confounding-Robust-Deep-Reinforcement-Learning",
+      "commit": "c9a4dfe9d471e5422f493268e106e1a174f1e72d",
+      "path": "student/utils.py",
+      "url": "https://raw.githubusercontent.com/CausalAILab/Confounding-Robust-Deep-Reinforcement-Learning/c9a4dfe9d471e5422f493268e106e1a174f1e72d/student/utils.py",
+      "sha256": "9f7496466ff31a7810d3733d0b6b34194a60ac20bb28833b475904cb842e072d",
+      "bytes": 2777,
+      "permalink": "https://github.com/CausalAILab/Confounding-Robust-Deep-Reinforcement-Learning/blob/c9a4dfe9d471e5422f493268e106e1a174f1e72d/student/utils.py",
+      "review_depth": "CONTEXT_PATH_OR_SYMBOL_INVENTORY_ONLY",
+      "selected_line_ranges": []
+    },
+    {
+      "repo": "CausalAILab/Confounding-Robust-Deep-Reinforcement-Learning",
+      "commit": "c9a4dfe9d471e5422f493268e106e1a174f1e72d",
+      "path": "run.py",
+      "url": "https://raw.githubusercontent.com/CausalAILab/Confounding-Robust-Deep-Reinforcement-Learning/c9a4dfe9d471e5422f493268e106e1a174f1e72d/run.py",
+      "sha256": "df71c2526592af071671d793edec96b8c8b8cd6a7661dd17a1cd1cc3f698ce6e",
+      "bytes": 8443,
+      "permalink": "https://github.com/CausalAILab/Confounding-Robust-Deep-Reinforcement-Learning/blob/c9a4dfe9d471e5422f493268e106e1a174f1e72d/run.py",
+      "review_depth": "CONTEXT_PATH_OR_SYMBOL_INVENTORY_ONLY",
+      "selected_line_ranges": []
+    },
+    {
+      "repo": "CausalAILab/Automatic-Reward-Shaping-From-Confounded-Offline-Data",
+      "commit": "67f4250101b981cfaaba3a5b1210cc6a49bada83",
+      "path": "README.md",
+      "url": "https://raw.githubusercontent.com/CausalAILab/Automatic-Reward-Shaping-From-Confounded-Offline-Data/67f4250101b981cfaaba3a5b1210cc6a49bada83/README.md",
+      "sha256": "dd10a03862a0893dfdc50822925d2cb961dd2402dd9319fb464609c943b80cf9",
+      "bytes": 6079,
+      "permalink": "https://github.com/CausalAILab/Automatic-Reward-Shaping-From-Confounded-Offline-Data/blob/67f4250101b981cfaaba3a5b1210cc6a49bada83/README.md",
+      "review_depth": "README_ROUTING",
+      "selected_line_ranges": []
+    },
+    {
+      "repo": "CausalAILab/Automatic-Reward-Shaping-From-Confounded-Offline-Data",
+      "commit": "67f4250101b981cfaaba3a5b1210cc6a49bada83",
+      "path": "calculate_values.py",
+      "url": "https://raw.githubusercontent.com/CausalAILab/Automatic-Reward-Shaping-From-Confounded-Offline-Data/67f4250101b981cfaaba3a5b1210cc6a49bada83/calculate_values.py",
+      "sha256": "f9f9f82283bdd91f732d343b62b85f9d87b6b12e2f5a9144f9ce6278d0f581b2",
+      "bytes": 17026,
+      "permalink": "https://github.com/CausalAILab/Automatic-Reward-Shaping-From-Confounded-Offline-Data/blob/67f4250101b981cfaaba3a5b1210cc6a49bada83/calculate_values.py",
+      "review_depth": "CONTEXT_PATH_OR_SYMBOL_INVENTORY_ONLY",
+      "selected_line_ranges": []
+    },
+    {
+      "repo": "CausalAILab/Automatic-Reward-Shaping-From-Confounded-Offline-Data",
+      "commit": "67f4250101b981cfaaba3a5b1210cc6a49bada83",
+      "path": "q_ucb.py",
+      "url": "https://raw.githubusercontent.com/CausalAILab/Automatic-Reward-Shaping-From-Confounded-Offline-Data/67f4250101b981cfaaba3a5b1210cc6a49bada83/q_ucb.py",
+      "sha256": "962f3a14b4fea5f46d193e023cd9a8001e0f4dfa302305542e71cd8e05902031",
+      "bytes": 9585,
+      "permalink": "https://github.com/CausalAILab/Automatic-Reward-Shaping-From-Confounded-Offline-Data/blob/67f4250101b981cfaaba3a5b1210cc6a49bada83/q_ucb.py",
+      "review_depth": "SELECTED_LOGIC_PASSAGES",
+      "selected_line_ranges": [
+        [
+          26,
+          90
+        ]
+      ]
+    },
+    {
+      "repo": "shaodaqian/Confounded-IL",
+      "commit": "ff0ce38c07ce8d0d959646a9a92a4de9734b0c15",
+      "path": "README.md",
+      "url": "https://raw.githubusercontent.com/shaodaqian/Confounded-IL/ff0ce38c07ce8d0d959646a9a92a4de9734b0c15/README.md",
+      "sha256": "bec883cce0c0a5f2a42bee72933fbb9aa89fa5faa0f359b4543473a9badb44a0",
+      "bytes": 745,
+      "permalink": "https://github.com/shaodaqian/Confounded-IL/blob/ff0ce38c07ce8d0d959646a9a92a4de9734b0c15/README.md",
+      "review_depth": "README_ROUTING",
+      "selected_line_ranges": []
+    },
+    {
+      "repo": "shaodaqian/Confounded-IL",
+      "commit": "ff0ce38c07ce8d0d959646a9a92a4de9734b0c15",
+      "path": "envs.py",
+      "url": "https://raw.githubusercontent.com/shaodaqian/Confounded-IL/ff0ce38c07ce8d0d959646a9a92a4de9734b0c15/envs.py",
+      "sha256": "7724685e7764b117270113a2f015c8a67e5e719fcb1b074b2dcb7b53c0769173",
+      "bytes": 33562,
+      "permalink": "https://github.com/shaodaqian/Confounded-IL/blob/ff0ce38c07ce8d0d959646a9a92a4de9734b0c15/envs.py",
+      "review_depth": "CONTEXT_PATH_OR_SYMBOL_INVENTORY_ONLY",
+      "selected_line_ranges": []
+    },
+    {
+      "repo": "shaodaqian/Confounded-IL",
+      "commit": "ff0ce38c07ce8d0d959646a9a92a4de9734b0c15",
+      "path": "learner.py",
+      "url": "https://raw.githubusercontent.com/shaodaqian/Confounded-IL/ff0ce38c07ce8d0d959646a9a92a4de9734b0c15/learner.py",
+      "sha256": "e6afbf1f3ac8b8c79585c0b8fe8b131dbd3618af944f488d194c154fe0963821",
+      "bytes": 17070,
+      "permalink": "https://github.com/shaodaqian/Confounded-IL/blob/ff0ce38c07ce8d0d959646a9a92a4de9734b0c15/learner.py",
+      "review_depth": "SELECTED_LOGIC_PASSAGES",
+      "selected_line_ranges": [
+        [
+          335,
+          430
+        ]
+      ]
+    },
+    {
+      "repo": "shaodaqian/Confounded-IL",
+      "commit": "ff0ce38c07ce8d0d959646a9a92a4de9734b0c15",
+      "path": "gym_main.py",
+      "url": "https://raw.githubusercontent.com/shaodaqian/Confounded-IL/ff0ce38c07ce8d0d959646a9a92a4de9734b0c15/gym_main.py",
+      "sha256": "4334454e4d8f897510c6f40d7dccee49823ba3e48baef9fe4b9c805cf3805791",
+      "bytes": 10542,
+      "permalink": "https://github.com/shaodaqian/Confounded-IL/blob/ff0ce38c07ce8d0d959646a9a92a4de9734b0c15/gym_main.py",
+      "review_depth": "SELECTED_LOGIC_PASSAGES",
+      "selected_line_ranges": [
+        [
+          48,
+          83
+        ]
+      ]
+    },
+    {
+      "repo": "CausalAILab/Causal-Flow-Q-Learning-for-Robust-Offline-Reinforcement-Learning",
+      "commit": "1895eea5da95136652215b2b2f8367cb707355f8",
+      "path": "README.md",
+      "url": "https://raw.githubusercontent.com/CausalAILab/Causal-Flow-Q-Learning-for-Robust-Offline-Reinforcement-Learning/1895eea5da95136652215b2b2f8367cb707355f8/README.md",
+      "sha256": "a74c6b96d7692f9d83a184039491294de82411493ea2cc48c3162d7f1b106c92",
+      "bytes": 6298,
+      "permalink": "https://github.com/CausalAILab/Causal-Flow-Q-Learning-for-Robust-Offline-Reinforcement-Learning/blob/1895eea5da95136652215b2b2f8367cb707355f8/README.md",
+      "review_depth": "README_ROUTING",
+      "selected_line_ranges": []
+    },
+    {
+      "repo": "CausalAILab/Causal-Flow-Q-Learning-for-Robust-Offline-Reinforcement-Learning",
+      "commit": "1895eea5da95136652215b2b2f8367cb707355f8",
+      "path": "agents/cfd_fql.py",
+      "url": "https://raw.githubusercontent.com/CausalAILab/Causal-Flow-Q-Learning-for-Robust-Offline-Reinforcement-Learning/1895eea5da95136652215b2b2f8367cb707355f8/agents/cfd_fql.py",
+      "sha256": "b5454eefc0df512868205409affd118328c947c213533b3afb2cb2bc3813d9d0",
+      "bytes": 12279,
+      "permalink": "https://github.com/CausalAILab/Causal-Flow-Q-Learning-for-Robust-Offline-Reinforcement-Learning/blob/1895eea5da95136652215b2b2f8367cb707355f8/agents/cfd_fql.py",
+      "review_depth": "CONTEXT_PATH_OR_SYMBOL_INVENTORY_ONLY",
+      "selected_line_ranges": []
+    },
+    {
+      "repo": "CausalAILab/Causal-Flow-Q-Learning-for-Robust-Offline-Reinforcement-Learning",
+      "commit": "1895eea5da95136652215b2b2f8367cb707355f8",
+      "path": "envs/env_utils.py",
+      "url": "https://raw.githubusercontent.com/CausalAILab/Causal-Flow-Q-Learning-for-Robust-Offline-Reinforcement-Learning/1895eea5da95136652215b2b2f8367cb707355f8/envs/env_utils.py",
+      "sha256": "28b9f6d0104362d877c1c95a238f5955937f27b6f0b4550fa1a886d7043a8170",
+      "bytes": 7126,
+      "permalink": "https://github.com/CausalAILab/Causal-Flow-Q-Learning-for-Robust-Offline-Reinforcement-Learning/blob/1895eea5da95136652215b2b2f8367cb707355f8/envs/env_utils.py",
+      "review_depth": "CONTEXT_PATH_OR_SYMBOL_INVENTORY_ONLY",
+      "selected_line_ranges": []
+    },
+    {
+      "repo": "CausalAILab/Scalable-Causal-Imitation-Learning",
+      "commit": "2665d73bc9c9d9c49aadd59a5f5974762a65fdc7",
+      "path": "README.md",
+      "url": "https://raw.githubusercontent.com/CausalAILab/Scalable-Causal-Imitation-Learning/2665d73bc9c9d9c49aadd59a5f5974762a65fdc7/README.md",
+      "sha256": "d36eb510497a0ced8a49f1d6fa529b6297fa2fea97d8e2ca3f7b9c8f8c0fc4ee",
+      "bytes": 2021,
+      "permalink": "https://github.com/CausalAILab/Scalable-Causal-Imitation-Learning/blob/2665d73bc9c9d9c49aadd59a5f5974762a65fdc7/README.md",
+      "review_depth": "README_ROUTING",
+      "selected_line_ranges": []
+    },
+    {
+      "repo": "CausalAILab/Scalable-Causal-Imitation-Learning",
+      "commit": "2665d73bc9c9d9c49aadd59a5f5974762a65fdc7",
+      "path": "causal_rl/algo/imitation/imitate.py",
+      "url": "https://raw.githubusercontent.com/CausalAILab/Scalable-Causal-Imitation-Learning/2665d73bc9c9d9c49aadd59a5f5974762a65fdc7/causal_rl/algo/imitation/imitate.py",
+      "sha256": "734779db9639ddcfbe60aa7c063427df5a38779548eeca7a58c5b3eba8bea500",
+      "bytes": 30449,
+      "permalink": "https://github.com/CausalAILab/Scalable-Causal-Imitation-Learning/blob/2665d73bc9c9d9c49aadd59a5f5974762a65fdc7/causal_rl/algo/imitation/imitate.py",
+      "review_depth": "SELECTED_LOGIC_PASSAGES",
+      "selected_line_ranges": [
+        [
+          206,
+          224
+        ],
+        [
+          691,
+          711
+        ]
+      ]
+    },
+    {
+      "repo": "CausalAILab/Scalable-Causal-Imitation-Learning",
+      "commit": "2665d73bc9c9d9c49aadd59a5f5974762a65fdc7",
+      "path": "causal_gym/envs/antmaze.py",
+      "url": "https://raw.githubusercontent.com/CausalAILab/Scalable-Causal-Imitation-Learning/2665d73bc9c9d9c49aadd59a5f5974762a65fdc7/causal_gym/envs/antmaze.py",
+      "sha256": "e677ca2d88fdf7852a321ef81064c224814c1175b305f3ad57ba57b3fe61a2e6",
+      "bytes": 23418,
+      "permalink": "https://github.com/CausalAILab/Scalable-Causal-Imitation-Learning/blob/2665d73bc9c9d9c49aadd59a5f5974762a65fdc7/causal_gym/envs/antmaze.py",
+      "review_depth": "CONTEXT_PATH_OR_SYMBOL_INVENTORY_ONLY",
+      "selected_line_ranges": []
+    },
+    {
+      "repo": "zhangy0822/CofactVLA",
+      "commit": "f438fa6661c541898fc87397692c8d9fec8d2c4b",
+      "path": "README.md",
+      "url": "https://raw.githubusercontent.com/zhangy0822/CofactVLA/f438fa6661c541898fc87397692c8d9fec8d2c4b/README.md",
+      "sha256": "247333245cbfacde8195327f3a50a88b632695685f68739d0732eefa22808baf",
+      "bytes": 7750,
+      "permalink": "https://github.com/zhangy0822/CofactVLA/blob/f438fa6661c541898fc87397692c8d9fec8d2c4b/README.md",
+      "review_depth": "README_ROUTING",
+      "selected_line_ranges": []
+    },
+    {
+      "repo": "zhangy0822/CofactVLA",
+      "commit": "f438fa6661c541898fc87397692c8d9fec8d2c4b",
+      "path": "scripts/cofact/run.py",
+      "url": "https://raw.githubusercontent.com/zhangy0822/CofactVLA/f438fa6661c541898fc87397692c8d9fec8d2c4b/scripts/cofact/run.py",
+      "sha256": "d6636fca17ad913c60507cf9420ee49627e277e503c107bff3455693bb69dbd9",
+      "bytes": 6120,
+      "permalink": "https://github.com/zhangy0822/CofactVLA/blob/f438fa6661c541898fc87397692c8d9fec8d2c4b/scripts/cofact/run.py",
+      "review_depth": "CONTEXT_PATH_OR_SYMBOL_INVENTORY_ONLY",
+      "selected_line_ranges": []
+    },
+    {
+      "repo": "zhangy0822/CofactVLA",
+      "commit": "f438fa6661c541898fc87397692c8d9fec8d2c4b",
+      "path": "src/lerobot/policies/pi05/modeling_pi05.py",
+      "url": "https://raw.githubusercontent.com/zhangy0822/CofactVLA/f438fa6661c541898fc87397692c8d9fec8d2c4b/src/lerobot/policies/pi05/modeling_pi05.py",
+      "sha256": "547590832f9ddc5868c67a3be31ea3ee4ac8d1df500a93ecd6f2964f49853ea4",
+      "bytes": 60440,
+      "permalink": "https://github.com/zhangy0822/CofactVLA/blob/f438fa6661c541898fc87397692c8d9fec8d2c4b/src/lerobot/policies/pi05/modeling_pi05.py",
+      "review_depth": "SELECTED_LOGIC_PASSAGES",
+      "selected_line_ranges": [
+        [
+          780,
+          820
+        ],
+        [
+          945,
+          980
+        ]
+      ]
+    },
+    {
+      "repo": "zhangy0822/CofactVLA",
+      "commit": "f438fa6661c541898fc87397692c8d9fec8d2c4b",
+      "path": "src/lerobot/policies/pi05/processor_pi05.py",
+      "url": "https://raw.githubusercontent.com/zhangy0822/CofactVLA/f438fa6661c541898fc87397692c8d9fec8d2c4b/src/lerobot/policies/pi05/processor_pi05.py",
+      "sha256": "267df9c34ebf78f45bcef61242a3f48a0edaf813e99b31ba4292c3c3cfe4301f",
+      "bytes": 7107,
+      "permalink": "https://github.com/zhangy0822/CofactVLA/blob/f438fa6661c541898fc87397692c8d9fec8d2c4b/src/lerobot/policies/pi05/processor_pi05.py",
+      "review_depth": "SELECTED_LOGIC_PASSAGES",
+      "selected_line_ranges": [
+        [
+          65,
+          84
+        ]
+      ]
+    },
+    {
+      "repo": "zhangy0822/CofactVLA",
+      "commit": "f438fa6661c541898fc87397692c8d9fec8d2c4b",
+      "path": "src/lerobot/policies/pi05/opg.py",
+      "url": "https://raw.githubusercontent.com/zhangy0822/CofactVLA/f438fa6661c541898fc87397692c8d9fec8d2c4b/src/lerobot/policies/pi05/opg.py",
+      "sha256": "e32738ea55186bcd3b4069d07260a179cf45af876458e2675525d834ceb03aca",
+      "bytes": 525,
+      "permalink": "https://github.com/zhangy0822/CofactVLA/blob/f438fa6661c541898fc87397692c8d9fec8d2c4b/src/lerobot/policies/pi05/opg.py",
+      "review_depth": "SELECTED_LOGIC_PASSAGES",
+      "selected_line_ranges": [
+        [
+          1,
+          11
+        ]
+      ]
+    },
+    {
+      "repo": "CausalAILab/Causal-Flow-Q-Learning-for-Robust-Offline-Reinforcement-Learning",
+      "commit": "1895eea5da95136652215b2b2f8367cb707355f8",
+      "path": "agents/en_cfd_fql.py",
+      "url": "https://raw.githubusercontent.com/CausalAILab/Causal-Flow-Q-Learning-for-Robust-Offline-Reinforcement-Learning/1895eea5da95136652215b2b2f8367cb707355f8/agents/en_cfd_fql.py",
+      "sha256": "851c827eeef1bf4ebc86023dc4e63923ce21409efccd8b4bc3d9dcba37cd96cf",
+      "bytes": 13794,
+      "permalink": "https://github.com/CausalAILab/Causal-Flow-Q-Learning-for-Robust-Offline-Reinforcement-Learning/blob/1895eea5da95136652215b2b2f8367cb707355f8/agents/en_cfd_fql.py",
+      "review_depth": "SELECTED_LOGIC_PASSAGES",
+      "selected_line_ranges": [
+        [
+          50,
+          109
+        ]
+      ]
+    },
+    {
+      "repo": "CausalAILab/Scalable-Causal-Imitation-Learning",
+      "commit": "2665d73bc9c9d9c49aadd59a5f5974762a65fdc7",
+      "path": "causal_rl/algo/imitation/gail/causal_gail.py",
+      "url": "https://raw.githubusercontent.com/CausalAILab/Scalable-Causal-Imitation-Learning/2665d73bc9c9d9c49aadd59a5f5974762a65fdc7/causal_rl/algo/imitation/gail/causal_gail.py",
+      "sha256": "7eafc3896cd0140068b8631c95bff3c4d0e7490d083c7849b80fedc206fb3d31",
+      "bytes": 22995,
+      "permalink": "https://github.com/CausalAILab/Scalable-Causal-Imitation-Learning/blob/2665d73bc9c9d9c49aadd59a5f5974762a65fdc7/causal_rl/algo/imitation/gail/causal_gail.py",
+      "review_depth": "CONTEXT_PATH_OR_SYMBOL_INVENTORY_ONLY",
+      "selected_line_ranges": []
+    },
+    {
+      "repo": "CIVIL2025/Implementation",
+      "commit": "785be3450b39232364fb16caf84ceeccae05dfb3",
+      "path": "README.md",
+      "url": "https://raw.githubusercontent.com/CIVIL2025/Implementation/785be3450b39232364fb16caf84ceeccae05dfb3/README.md",
+      "sha256": "fd6b39aeef52f4c4e588d75602bc4d893a026f1f76b32a9c0bee1d8216d721bc",
+      "bytes": 1702,
+      "permalink": "https://github.com/CIVIL2025/Implementation/blob/785be3450b39232364fb16caf84ceeccae05dfb3/README.md",
+      "review_depth": "README_ROUTING",
+      "selected_line_ranges": []
+    },
+    {
+      "repo": "CIVIL2025/Implementation",
+      "commit": "785be3450b39232364fb16caf84ceeccae05dfb3",
+      "path": "policy_models/civil_model.py",
+      "url": "https://raw.githubusercontent.com/CIVIL2025/Implementation/785be3450b39232364fb16caf84ceeccae05dfb3/policy_models/civil_model.py",
+      "sha256": "4c7ab385d88beeefe272a316d22ae328215e6197b531292ab3d056212b679409",
+      "bytes": 8896,
+      "permalink": "https://github.com/CIVIL2025/Implementation/blob/785be3450b39232364fb16caf84ceeccae05dfb3/policy_models/civil_model.py",
+      "review_depth": "SELECTED_LOGIC_PASSAGES",
+      "selected_line_ranges": [
+        [
+          60,
+          82
+        ],
+        [
+          104,
+          132
+        ],
+        [
+          153,
+          196
+        ]
+      ]
+    },
+    {
+      "repo": "CIVIL2025/Implementation",
+      "commit": "785be3450b39232364fb16caf84ceeccae05dfb3",
+      "path": "train_civil.py",
+      "url": "https://raw.githubusercontent.com/CIVIL2025/Implementation/785be3450b39232364fb16caf84ceeccae05dfb3/train_civil.py",
+      "sha256": "a52d89bc768996a0f875025ec53e9b9491f5e7a7edbb44a9ecc6bde94c4d83ed",
+      "bytes": 9897,
+      "permalink": "https://github.com/CIVIL2025/Implementation/blob/785be3450b39232364fb16caf84ceeccae05dfb3/train_civil.py",
+      "review_depth": "SELECTED_LOGIC_PASSAGES",
+      "selected_line_ranges": [
+        [
+          26,
+          45
+        ],
+        [
+          155,
+          180
+        ]
+      ]
+    },
+    {
+      "repo": "CIVIL2025/Implementation",
+      "commit": "785be3450b39232364fb16caf84ceeccae05dfb3",
+      "path": "user_study_eval.py",
+      "url": "https://raw.githubusercontent.com/CIVIL2025/Implementation/785be3450b39232364fb16caf84ceeccae05dfb3/user_study_eval.py",
+      "sha256": "e4d9f987fb0da93fb6ff1d305c6befbd3e0bf80f41c2618ff6f03f733fce459d",
+      "bytes": 13467,
+      "permalink": "https://github.com/CIVIL2025/Implementation/blob/785be3450b39232364fb16caf84ceeccae05dfb3/user_study_eval.py",
+      "review_depth": "CONTEXT_PATH_OR_SYMBOL_INVENTORY_ONLY",
+      "selected_line_ranges": []
+    }
+  ],
+  "validation": {
+    "pre_audit": "PASS: errors 0, warnings 0, papers 1037, notes 5185",
+    "post_audit": "PASS",
+    "temporary_files_removed": true,
+    "pre_canonical_sha256": {
+      "work/sources/papers.json": "9aaf36031bf776d554dd10f8f2f927d60ddd7b44ff02267181325275bcb74f06",
+      "work/sources/registry_meta.json": "1fbb093bf785ca218ead1804f95fdac7fa5d88ac5ed82b019f1766511b1eb56f",
+      "research/READING_TIERS.csv": "8b2ac89fff0d6d56950695d5bfb67daab8fbc51647454fa077beea970bb23f29",
+      "research/READING_STATUS.csv": "276c5531063e93f381de18b45fbf82dfa16703444f39658dfd4bfb10bbc17878",
+      "research/READING_STATUS_HISTORY.csv": "c91b6727a03529ba790447eb5106f5b04cc4364b0c90b3eed1afecf9b700e001"
+    },
+    "preexisting_dirty_files": 356,
+    "source_file_hash_checks": "35/35 PASS",
+    "new_registry_admissions": 0,
+    "registry_matches": 0,
+    "errors": 0,
+    "warnings": 0,
+    "papers": 1037,
+    "intensive": 322,
+    "history": 47,
+    "standard_notes": 5185,
+    "markdown_files_checked": 5336,
+    "markdown_links_checked": 10159,
+    "commands": [
+      "python3 -m py_compile work/scripts/build_reading_tiers.py",
+      "python3 work/scripts/build_reading_tiers.py",
+      "python3 work/scripts/audit_repository.py",
+      "git diff --check"
+    ],
+    "canonical_sha256_unchanged": true,
+    "preexisting_files_unchanged": 349,
+    "preexisting_files_intentionally_edited": 7,
+    "intentionally_edited_files": [
+      "README.md",
+      "TODO.md",
+      "research/IDEA_BUILDUP_GUIDE.md",
+      "synthesis/02_rl_il_offline.md",
+      "synthesis/04_vla_generalist.md",
+      "work/update/README.md",
+      "work/update/UPDATES_2026-10-23.md"
+    ],
+    "temporary_cleanup_scope": "Only task-created temporary public source/doc files, GitHub tree metadata and preservation snapshot. No repository paper/PDF/data removal."
+  }
+}

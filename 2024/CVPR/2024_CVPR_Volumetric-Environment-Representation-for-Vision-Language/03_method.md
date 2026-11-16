@@ -4,6 +4,8 @@
 > Evidence maturity: `FULL_TEXT_CHECKED`.
 > Analysis basis: full-text PDF body checked on 2026-09-03 (12 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2024/html/Liu_Volumetric_Environment_Representation_for_Vision-Language_Navigation_CVPR_2024_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2024/papers/Liu_Volumetric_Environment_Representation_for_Vision-Language_Navigation_CVPR_2024_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
+> DOC-QA2 targeted source review: 2026-10-23; PDF pp. 4. 손상 구간·직접 연결된 표 분류만 원문 이미지와 대조했다. 전체 주장 정독·실험 검증·reading status 승격을 뜻하지 않는다. [URL·PDF hash·수정 기록](../../../work/sources/pdf_note_review_followup_2026-10-23.json).
+
 ## Method in One Sentence
 
 PDF body method statement (p. 4 (3.2. Volume State Estimation), p. 3 (3.1. Environment Encoder), p. 4 (3.2. Volume State Estimation), p. 5 (3.4. Annotation Generation), p. 5 (3.3. Action Prediction), p. 3 (3. Approach)): The environment representation is first reshaped as F 3d′ t ∈ RDe×XY Z, and then adopt multi-layer transformers (MLT) to model the relations between E and F 3d′ t as ...
@@ -12,7 +14,7 @@ PDF body method statement (p. 4 (3.2. Volume State Estimation), p. 3 (3.1. Envir
 
 - **p. 4 / 3.2. Volume State Estimation - extractive body cue:** The environment representation is first reshaped as F 3d′ t ∈ RDe×XY Z, and then adopt multi-layer transformers (MLT) to model the relations between E ...
 - **p. 3 / 3.1. Environment Encoder - extractive body cue:** We introduce cross-view attention (CVA) to aggregate their features (F 2d for each view) into a unified volumetric representation F 3d with a group of ...
-- **p. 4 / 3.2. Volume State Estimation - extractive body cue:** Then we use MLPs for state estimation: p3d t = Softmax  MLP(  F 3d t )  ∈[0, 1]X×Y ×Z.
+- **PDF p. 4, §3.2 Eq. (4) (DOC-QA2 원문 대조):** Language와 volume features를 결합해 갱신한 F̄ₜ³ᵈ에 MLP와 Softmax를 적용하여 pₜ³ᵈ∈[0,1]^(X×Y×Z)의 spatial state probability를 얻는다. 이 식은 volume state estimation이며 motion execution/recovery command가 아니다.
 - **p. 5 / 3.4. Annotation Generation - extractive body cue:** In contrast to directly operating on a single panoramic image [105, 106], we use the embodied observations with multi-view images as input.
 - **p. 5 / 3.3. Action Prediction - extractive body cue:** The ultimate action probabilities are given as: ˆp2d t = [p2d→g t ; p2d t ] ∈[0, 1]/Vt/, ˆpg t = Wgpg t + (1 ...
 - **p. 3 / 3. Approach - extractive body cue:** At step t, an environment encoder is proposed to sample multi-view features (F 2d t of each view) into the volumetric space of VER, forming ...
@@ -29,7 +31,7 @@ PDF body method statement (p. 4 (3.2. Volume State Estimation), p. 3 (3.1. Envir
 
 - **p. 4 / 3.2. Volume State Estimation - extractive body cue:** The environment representation is first reshaped as F 3d′ t ∈ RDe×XY Z, and then adopt multi-layer transformers (MLT) to model the relations between E ...
 - **p. 3 / 3.1. Environment Encoder - extractive body cue:** We introduce cross-view attention (CVA) to aggregate their features (F 2d for each view) into a unified volumetric representation F 3d with a group of ...
-- **p. 4 / 3.2. Volume State Estimation - extractive body cue:** Then we use MLPs for state estimation: p3d t = Softmax  MLP(  F 3d t )  ∈[0, 1]X×Y ×Z.
+- **PDF p. 4, §3.2 Eq. (4) (DOC-QA2 원문 대조):** Language와 volume features를 결합해 갱신한 F̄ₜ³ᵈ에 MLP와 Softmax를 적용하여 pₜ³ᵈ∈[0,1]^(X×Y×Z)의 spatial state probability를 얻는다. 이 식은 volume state estimation이며 motion execution/recovery command가 아니다.
 - **p. 5 / 3.4. Annotation Generation - extractive body cue:** In contrast to directly operating on a single panoramic image [105, 106], we use the embodied observations with multi-view images as input.
 - **p. 5 / 3.3. Action Prediction - extractive body cue:** The ultimate action probabilities are given as: ˆp2d t = [p2d→g t ; p2d t ] ∈[0, 1]/Vt/, ˆpg t = Wgpg t + (1 ...
 - **p. 3 / 3. Approach - extractive body cue:** At step t, an environment encoder is proposed to sample multi-view features (F 2d t of each view) into the volumetric space of VER, forming ...
@@ -42,7 +44,7 @@ PDF body method statement (p. 4 (3.2. Volume State Estimation), p. 3 (3.1. Envir
 |---|---|---|---|---|---|---|
 | Map / localization state | sensor stream을 pose와 world map으로 누적한다 | camera/depth/LiDAR, odometry, history | mapping, localization, scene graph 또는 map update를 수행 | pose/map/free-space state | The environment representation is first reshaped as F 3d′ t ∈ RDe×XY Z, and then adopt multi-layer transformers (MLT) to model the ... | p. 4 (3.2. Volume State Estimation), p. 3 (3.1. Environment Encoder) |
 | Global / local decision | goal과 risk를 고려해 route를 정한다 | map, goal, obstacle/risk estimate | graph search, local planning, language grounding 또는 replanning을 수행 | path/waypoint/local goal | We introduce cross-view attention (CVA) to aggregate their features (F 2d for each view) into a unified volumetric representation F 3d with ... | p. 3 (3.1. Environment Encoder), p. 4 (3.2. Volume State Estimation) |
-| Motion execution / recovery | route를 velocity/action으로 실행하고 실패에 대응한다 | path와 current pose/feedback | tracking, collision check, recovery 또는 replan을 수행 | velocity/base command | Then we use MLPs for state estimation: p3d t = Softmax  MLP(  F 3d t )  ∈[0, 1]X×Y ×Z. | p. 4 (3.2. Volume State Estimation), p. 5 (3.4. Annotation Generation) |
+| Volume state estimation | Language-conditioned volume feature를 state probability로 변환 | Updated 3D representation F̄ₜ³ᵈ | MLP 및 Softmax | 3D spatial probability volume | pₜ³ᵈ=Softmax(MLP(F̄ₜ³ᵈ)) | PDF p. 4 §3.2 Eq. (4); velocity/recovery로 해석하지 않음 |
 
 - Pipeline rows are domain labels; the paper-specific operations are the extractive cues and section anchors in the same row.
 

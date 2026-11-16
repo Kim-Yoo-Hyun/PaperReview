@@ -4,6 +4,8 @@
 > Evidence maturity: `FULL_TEXT_CHECKED`.
 > Analysis basis: full-text PDF body checked on 2026-09-03 (18 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=d1wuA8oIH0; PDF retrieval source: https://openreview.net/pdf/7d1ac63392c225113c314e6263f1d18dfbff895e.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
+> DOC-QA1 (2026-10-23): 제어문자·깨진 추출 구간과 직접 연결된 표 항목을 PDF 페이지 이미지와 대조했다. 확인 범위·원문 URL·페이지·수정 이력은 [대조 기록](../../../work/sources/pdf_note_review_2026-10-23.json)에 있다. 노트 전체의 정독이나 모든 기존 주장에 대한 재검증을 뜻하지 않으며 reading status는 유지한다.
+
 ## Evaluation in One Sentence
 
 PDF body evaluation/result cue (p. 8 (5 Experiments), p. 9 (5 Experiments), p. 7 (5 Experiments), p. 9 (5 Experiments), p. 8 (5 Experiments), p. 7 (5 Experiments)): On average, EquAct outperforms all the baselines on all 3 settings. avg. success rate ↑ open drawer slide block sweep dust. meat off grill Method 10∗ 10 100 10∗ 10 ...
@@ -124,7 +126,7 @@ PDF body evaluation/result cue (p. 8 (5 Experiments), p. 9 (5 Experiments), p. 7
 - **p. 7 / 5 Experiments - extractive body cue:** We report the task success rate over 25 evaluation episodes per task, with a maximum of 25 steps per episode.
 - **p. 7 / 5 Experiments - extractive body cue:** All the baselines are trained and evaluated on a single RTX 4090 GPU with 24 GB memory.
 - **p. 9 / 5 Experiments - extractive body cue:** We evaluate 10 episodes for each task and report the binary success rate.
-- **p. 5 / 4 Method - extractive body cue:** During training, EquAct minimizes the following loss: L = E(o,n,¯a)∼D,a∼A h H  Qa(o, n, a), ¯a i = E h H( 3 X i=1 Qt(ai ...
+- **원문 대조:** 학습은 expert action을 후보 action 중 선택하는 classification으로 다루고 translation, rotation, gripper-open 예측에 cross-entropy를 사용한다. 식의 H는 cross-entropy이며 일반적인 RL return objective가 아니다. ([PDF p. 5](https://arxiv.org/pdf/2505.21351#page=5), §4 Method, training-loss equation).
 
 ## Generalization and Failure Cases
 

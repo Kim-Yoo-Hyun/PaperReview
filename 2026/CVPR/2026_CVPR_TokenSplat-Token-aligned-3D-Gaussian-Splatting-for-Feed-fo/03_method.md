@@ -4,6 +4,8 @@
 > Evidence maturity: `FULL_TEXT_CHECKED`.
 > Analysis basis: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2026/html/Li_TokenSplat_Token-aligned_3D_Gaussian_Splatting_for_Feed-forward_Pose-free_Reconstruction_CVPR_2026_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2026/papers/Li_TokenSplat_Token-aligned_3D_Gaussian_Splatting_for_Feed-forward_Pose-free_Reconstruction_CVPR_2026_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
+> DOC-QA2 targeted source review: 2026-10-23; PDF pp. 4. 손상 구간·직접 연결된 표 분류만 원문 이미지와 대조했다. 전체 주장 정독·실험 검증·reading status 승격을 뜻하지 않는다. [URL·PDF hash·수정 기록](../../../work/sources/pdf_note_review_followup_2026-10-23.json).
+
 ## Method in One Sentence
 
 PDF body method statement (p. 3 (3.2. Architecture), p. 4 (3.4. Token Fusion for Scene Reconstruction), p. 4 (3.3. Asymmetric Dual-Flow Decoder), p. 3 (3.2. Architecture), p. 2 (3.1. Problem Formulation), p. 5 (3.6. Loss Functions)): The outputs of these decoders are then utilized in two parallel branches: the Camera Pose Estimation Head predicts per-view camera transformations, while the Token-aligned Gaussian Prediction module aggregates multi-view tokens ...
@@ -52,7 +54,7 @@ PDF body method statement (p. 3 (3.2. Architecture), p. 4 (3.4. Token Fusion for
 - **p. 5 / 3.6. Loss Functions - extractive body cue:** The model is trained end-to-end with the total loss: L = Lrender + λcLpose, (17) where λc balances the contribution of the camera pose supervision.
 - **p. 3 / 3.1. Problem Formulation - extractive body cue:** (2) During training, both the 3D Gaussian attributes and camera poses are jointly optimized.
 - **p. 3 / 3.3. Asymmetric Dual-Flow Decoder - extractive body cue:** To prevent entangling viewpoint-specific cues with scene semantics, it employs an asymmetric update scheme where image tokens primarily aggregate scene context, whereas camera tokens extract ...
-- **p. 4 / 3.3. Asymmetric Dual-Flow Decoder - extractive body cue:** The updates are computed as: ˆtI i ←Softmax  QI iKI i ⊤/ √ d 
+- **PDF p. 4, §3.3 / Eqs. (3)–(4) (DOC-QA2 원문 대조):** Image token은 같은 view의 image Q/K/V로 self-attention하고, camera token은 camera query로 image key/value를 집계한다. Softmax에는 √d scaling이 있으며 value multiplication까지 포함해야 한다.
 - **p. 4 / 3.4. Token Fusion for Scene Reconstruction - extractive body cue:** Features are then progressively fused from deep to shallow layers using the residual fusion module RF composed of residual blocks and upsampling: F fusion nl ...
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 5 (3.6. Loss Functions), p. 5 (3.6. Loss Functions), p. 3 (3.3. Asymmetric Dual-Flow Decoder), p. 4 (3.3. Asymmetric Dual-Flow Decoder).

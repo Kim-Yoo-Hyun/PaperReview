@@ -4,6 +4,8 @@
 > Evidence maturity: `FULL_TEXT_CHECKED`.
 > Analysis basis: full-text PDF body checked on 2026-09-03 (39 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=dt940loCBT; PDF retrieval source: https://proceedings.neurips.cc/paper_files/paper/2025/file/e185c7be603426028c32ae1003a59d78-Paper-Conference.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
+> DOC-QA2 targeted source review: 2026-10-23; PDF pp. 31. 손상 구간·직접 연결된 표 분류만 원문 이미지와 대조했다. 전체 주장 정독·실험 검증·reading status 승격을 뜻하지 않는다. [URL·PDF hash·수정 기록](../../../work/sources/pdf_note_review_followup_2026-10-23.json).
+
 ## Method in One Sentence
 
 PDF body method statement (p. 32 (C.3 Model Selection), p. 33 (C.3 Model Selection), p. 32 (C.3 Model Selection), p. 33 (C.3 Model Selection), p. 31 (C.1 Details of SafeRL Training), p. 31 (C.1 Details of SafeRL Training)): 3) Action Decoder: A causal transformer decoder with 100-step context windows predicts discrete actions by attending to historical observations and actions.
@@ -14,7 +16,7 @@ PDF body method statement (p. 32 (C.3 Model Selection), p. 33 (C.3 Model Selecti
 - **p. 33 / C.3 Model Selection - extractive body cue:** We use AllenAct [85] and OmniSafe [39] as the training framework.
 - **p. 32 / C.3 Model Selection - extractive body cue:** 2) Visual Encoder: A goal-conditioned transformer encoder fuses RGB observations from dual cameras (navigation and manipulation views) with language embeddings, enabling cross-modal fusion.
 - **p. 33 / C.3 Model Selection - extractive body cue:** This combination of architectural strengths and training scalability makes SPOC an optimal base model for this work.
-- **p. 31 / C.1 Details of SafeRL Training - extractive body cue:** The corresponding surrogate losses are defined as follows: LR(θ; Dtask) = -El∼Dtask,τ∼πθ h Et h min  ρt(θ) ˆArt, clip (ρt(θ), 1 -ϵ, 1 + ...
+- **PDF p. 31, §C.1 / Eqs. (6)–(8) (DOC-QA2 원문 대조):** Reward와 cost advantage 각각에 PPO-style clipped surrogate를 적용한다. 결합 loss는 (L_R−λL_C)/(1+λ)이며, instantaneous cost와 trajectory cumulative cost를 구분한다.
 - **p. 31 / C.1 Details of SafeRL Training - extractive body cue:** The reward rt is a function of the current state st and the language instruction l: rt = r(st+1/st, at, l) (4) The total immediate ...
 - **p. 32 / C.1 Details of SafeRL Training - extractive body cue:** The combined loss L balances reward maximization and constraint satisfaction Lagrangian multiplier λ, where λ →0 prioritizes reward and λ →∞enforces strict constraint adherence.
 - **p. 32 / C.1 Details of SafeRL Training - extractive body cue:** This formulation ensures that λk increases when constraints are violated (i.e., when JC > b, where b is the threshold) and decreases otherwise, thereby enforcing ...
@@ -31,7 +33,7 @@ PDF body method statement (p. 32 (C.3 Model Selection), p. 33 (C.3 Model Selecti
 - **p. 33 / C.3 Model Selection - extractive body cue:** We use AllenAct [85] and OmniSafe [39] as the training framework.
 - **p. 32 / C.3 Model Selection - extractive body cue:** 2) Visual Encoder: A goal-conditioned transformer encoder fuses RGB observations from dual cameras (navigation and manipulation views) with language embeddings, enabling cross-modal fusion.
 - **p. 33 / C.3 Model Selection - extractive body cue:** This combination of architectural strengths and training scalability makes SPOC an optimal base model for this work.
-- **p. 31 / C.1 Details of SafeRL Training - extractive body cue:** The corresponding surrogate losses are defined as follows: LR(θ; Dtask) = -El∼Dtask,τ∼πθ h Et h min  ρt(θ) ˆArt, clip (ρt(θ), 1 -ϵ, 1 + ...
+- **PDF p. 31, §C.1 / Eqs. (6)–(8) (DOC-QA2 원문 대조):** Reward와 cost advantage 각각에 PPO-style clipped surrogate를 적용한다. 결합 loss는 (L_R−λL_C)/(1+λ)이며, instantaneous cost와 trajectory cumulative cost를 구분한다.
 - **p. 31 / C.1 Details of SafeRL Training - extractive body cue:** The reward rt is a function of the current state st and the language instruction l: rt = r(st+1/st, at, l) (4) The total immediate ...
 - **Detected method headings:** B.3 Automatic Trajectory Analysis by Large Language Models (p. 27); B.7 ISA with Alternative SafeRL Algorithms (p. 30); B.9 The Integrated Safety Approach (ISA) Pipeline (p. 30); C.3 Model Selection (p. 32)
 
@@ -48,7 +50,7 @@ PDF body method statement (p. 32 (C.3 Model Selection), p. 33 (C.3 Model Selecti
 ## Objective / Update Rule
 
 - **p. 32 / C.1 Details of SafeRL Training - extractive body cue:** The combined loss L balances reward maximization and constraint satisfaction Lagrangian multiplier λ, where λ →0 prioritizes reward and λ →∞enforces strict constraint adherence.
-- **p. 31 / C.1 Details of SafeRL Training - extractive body cue:** The corresponding surrogate losses are defined as follows: LR(θ; Dtask) = -El∼Dtask,τ∼πθ h Et h min  ρt(θ) ˆArt, clip (ρt(θ), 1 -ϵ, 1 + ...
+- **PDF p. 31, §C.1 / Eqs. (6)–(8) (DOC-QA2 원문 대조):** Reward와 cost advantage 각각에 PPO-style clipped surrogate를 적용한다. 결합 loss는 (L_R−λL_C)/(1+λ)이며, instantaneous cost와 trajectory cumulative cost를 구분한다.
 - **p. 31 / C.1 Details of SafeRL Training - extractive body cue:** The reward rt is a function of the current state st and the language instruction l: rt = r(st+1/st, at, l) (4) The total immediate ...
 - **p. 32 / C.1 Details of SafeRL Training - extractive body cue:** This formulation ensures that λk increases when constraints are violated (i.e., when JC > b, where b is the threshold) and decreases otherwise, thereby enforcing ...
 - **p. 33 / C.3 Model Selection - extractive body cue:** 3) Sim-to-Real Compatibility: SPOC's sim-to-real capability, as evidenced by its 56% real-world success rate (Table 9 in SPOC), can facilitate the generalization of our safety ...
@@ -90,7 +92,7 @@ PDF body method statement (p. 32 (C.3 Model Selection), p. 33 (C.3 Model Selecti
 
 - **p. 33 / C.3 Model Selection - extractive body cue:** We use AllenAct [85] and OmniSafe [39] as the training framework.
 - **p. 33 / C.3 Model Selection - extractive body cue:** This combination of architectural strengths and training scalability makes SPOC an optimal base model for this work.
-- **p. 31 / C.1 Details of SafeRL Training - extractive body cue:** The corresponding surrogate losses are defined as follows: LR(θ; Dtask) = -El∼Dtask,τ∼πθ h Et h min  ρt(θ) ˆArt, clip (ρt(θ), 1 -ϵ, 1 + ...
+- **PDF p. 31, §C.1 / Eqs. (6)–(8) (DOC-QA2 원문 대조):** Reward와 cost advantage 각각에 PPO-style clipped surrogate를 적용한다. 결합 loss는 (L_R−λL_C)/(1+λ)이며, instantaneous cost와 trajectory cumulative cost를 구분한다.
 - **p. 31 / C.1 Details of SafeRL Training - extractive body cue:** The reward rt is a function of the current state st and the language instruction l: rt = r(st+1/st, at, l) (4) The total immediate ...
 - **p. 32 / C.1 Details of SafeRL Training - extractive body cue:** At iteration k, the policy parameter θk is adjusted by a gradient step on the combined objective LR -λkLC, scaled by a learning rate η ...
 - **p. 7 / 5 Experiments - extractive body cue:** For simpler tasks like Safety-ObjNav and Safety-PickUp, we train for 15 million steps.

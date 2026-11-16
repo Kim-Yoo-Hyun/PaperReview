@@ -4,6 +4,8 @@
 > Evidence maturity: `FULL_TEXT_CHECKED`.
 > Analysis basis: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2026/html/Kim_Dexterous_World_Models_CVPR_2026_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2026/papers/Kim_Dexterous_World_Models_CVPR_2026_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
+> DOC-QA1 (2026-10-23): 제어문자·깨진 추출 구간과 직접 연결된 표 항목을 PDF 페이지 이미지와 대조했다. 확인 범위·원문 URL·페이지·수정 이력은 [대조 기록](../../../work/sources/pdf_note_review_2026-10-23.json)에 있다. 노트 전체의 정독이나 모든 기존 주장에 대한 재검증을 뜻하지 않으며 reading status는 유지한다.
+
 ## Method in One Sentence
 
 PDF body method statement (p. 3 (3.1. Formulation of Dexterous World Models), p. 4 (3.2. Scene-Action-Conditioned Video Diffusion), p. 4 (3.2. Scene-Action-Conditioned Video Diffusion), p. 5 (3.3. Paired Interaction Video Dataset Construction), p. 3 (3.1. Formulation of Dexterous World Models), p. 5 (3.2. Scene-Action-Conditioned Video Diffusion)): (2) Here, pd θ is the dynamics model that samples the scene and action-induced changes (S0, ∆S1:F ) given the actions A1:F = {C, H}1:F , while po θ is ...
@@ -67,7 +69,7 @@ PDF body method statement (p. 3 (3.1. Formulation of Dexterous World Models), p.
 
 ## Observation–State–Action Interface
 
-- **p. 3 / 3.1. Formulation of Dexterous World Models - extractive body cue:** The observation model can be simplified to po θ  V1:F / S0, ∆S1:F , C1:F  , as the visual outcome V1:F is conditionally independent ...
+- **원문 대조:** 초기 static scene S_0, interaction-induced changes ΔS_{1:F}, camera sequence C_{1:F}가 주어지면 observation model에서 hand-action input과 initial frame에 대한 직접 조건을 제거할 수 있다는 conditional-independence 설명이다. Action이 world dynamics에 필요 없다는 주장은 아니다. ([PDF p. 3](https://openaccess.thecvf.com/content/CVPR2026/papers/Kim_Dexterous_World_Models_CVPR_2026_paper.pdf#page=3), §3.1 Formulation of Dexterous World Models, Eq. (2)).
 - **p. 5 / 3.3. Paired Interaction Video Dataset Construction - extractive body cue:** For each prerecorded action sequence in TRUMANS, we render three synchronized outputs: (1) the interaction video captures the full human-scene interaction from the moving egocentric ...
 - **p. 2 / 1. Introduction - extractive body cue:** Furthermore, most video models [3, 42, 52] accept only textual instruction as "action input".
 - **p. 2 / 1. Introduction - extractive body cue:** Under this initialization, using the static scene video as input establishes a base output that preserves the egocentric camera motion and scene appearance without introducing ...

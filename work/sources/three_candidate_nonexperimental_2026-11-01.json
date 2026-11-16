@@ -1,0 +1,197 @@
+{
+  "task": "PRE-GPU-3",
+  "date": "2026-11-01",
+  "active_candidates": [
+    "instruction_revision",
+    "mobile_policy_transfer",
+    "object_set_cardinality"
+  ],
+  "scope": "Targeted nonexperimental completion audit, not an exhaustive new systematic survey",
+  "search_queries": [
+    "robot vision language action \"constraint\" \"revocation\" instruction revision 2025 2026",
+    "mobile manipulation policy transfer stopping criteria calibration Mobi MoTo 2025 2026",
+    "robot manipulation quantifiers exactly all object counting Spa-Bench 2026",
+    "\"wyIlqIMMnZ\"",
+    "Mobi policy mobilization no training data 2026 docking VLA"
+  ],
+  "sources": [
+    {
+      "id": "hi_robot",
+      "url": "https://proceedings.mlr.press/v267/shi25d.html",
+      "status": "ICML 2025 official proceedings verified",
+      "scope": "Official abstract/status rechecked; detailed prior review inherited",
+      "use": "Hierarchical instruction/feedback processing is prior art"
+    },
+    {
+      "id": "resteer",
+      "url": "https://roboticsproceedings.org/rss22/p143.html",
+      "status": "RSS 2026 official proceedings verified",
+      "scope": "Official abstract/status rechecked; earlier source-interface review retained",
+      "use": "Task switching and steerability are prior art"
+    },
+    {
+      "id": "rebind",
+      "url": "https://arxiv.org/html/2608.12599v1",
+      "status": "2026 preprint; venue unverified",
+      "scope": "Sections 3.1-3.4,4.1,5.5,6 and relevant appendix descriptions; selected full text, not all code",
+      "use": "Constraint ledger/revocation/net-specification compilation already studied outside robotics",
+      "code": "No executable author repository identified; no reproduction claim",
+      "registered": false,
+      "registration_reason": "Adjacent text-only prior used to bound novelty; no new Robotics tier admission in this task"
+    },
+    {
+      "id": "mobi_pi",
+      "url": "https://proceedings.mlr.press/v305/yang25b.html",
+      "status": "CoRL 2025 official proceedings verified",
+      "scope": "Abstract/status rechecked; earlier full-text/interface review retained",
+      "use": "Policy mobilization is already established"
+    },
+    {
+      "id": "moto",
+      "url": "https://proceedings.mlr.press/v305/wu25c.html",
+      "status": "CoRL 2025 official proceedings verified",
+      "scope": "Official abstract/status rechecked",
+      "use": "Interaction-aware docking is a direct comparator family"
+    },
+    {
+      "id": "clevrskills",
+      "url": "https://proceedings.neurips.cc/paper_files/paper/2024/hash/439539557e9ba0d04055773ff1f3241c-Abstract-Datasets_and_Benchmarks_Track.html",
+      "status": "NeurIPS 2024 Datasets and Benchmarks",
+      "scope": "Inherited from earlier same-date source audit; not newly full-text reviewed",
+      "use": "Compositional tasks and multiple-object instructions are prior art"
+    },
+    {
+      "id": "spa_bench",
+      "url": "https://arxiv.org/abs/2610.12696",
+      "status": "2026 preprint",
+      "scope": "Abstract/project rechecked; earlier selected full-text III-C-E and Appendix A retained",
+      "use": "Counting, matched direct instructions and no-action diagnoses already studied"
+    },
+    {
+      "id": "sequential_composition",
+      "url": "https://arxiv.org/html/2607.29687v1",
+      "status": "2026 preprint used; author venue claim independently unverified",
+      "scope": "Inherited same-date selected full-text and pinned official-code review",
+      "use": "Stagewise decomposition and future-constraint interactions are prior art"
+    },
+    {
+      "id": "qwen3_reference",
+      "url": "https://huggingface.co/Qwen/Qwen3-8B",
+      "status": "Official model release, not a robotics paper",
+      "scope": "Model card non-thinking guidance plus two small metadata JSONs in memory",
+      "metadata": {
+        "repo_id": "Qwen/Qwen3-8B",
+        "revision": "b968826d9c46dd6066d109eabc6255188de91218",
+        "source": "https://huggingface.co/api/models/Qwen/Qwen3-8B",
+        "files": [
+          {
+            "path": "config.json",
+            "url": "https://huggingface.co/Qwen/Qwen3-8B/resolve/b968826d9c46dd6066d109eabc6255188de91218/config.json",
+            "sha256": "f7c4eadfbbf522470667b797a3c89be2524832d2d599797248dc304fff447c30",
+            "bytes": 728,
+            "model_type": "qwen3",
+            "transformers_version": "4.51.0",
+            "chat_template_has_enable_thinking": false
+          },
+          {
+            "path": "tokenizer_config.json",
+            "url": "https://huggingface.co/Qwen/Qwen3-8B/resolve/b968826d9c46dd6066d109eabc6255188de91218/tokenizer_config.json",
+            "sha256": "d5d09f07b48c3086c508b30d1c9114bd1189145b74e982a265350c923acd8101",
+            "bytes": 9732,
+            "model_type": null,
+            "transformers_version": null,
+            "chat_template_has_enable_thinking": true
+          }
+        ],
+        "weights_downloaded": false
+      },
+      "use": "Specify first H/S reference without claiming strongest-model performance"
+    }
+  ],
+  "unresolved_discovery": [
+    {
+      "url": "https://openreview.net/forum?id=wyIlqIMMnZ",
+      "result": "Forum and PDF redirected to browser verification; title/status not verified, no support for claims drawn from snippet",
+      "blocking_current_scope": false
+    }
+  ],
+  "completed": [
+    "stage-by-stage audit of all three active candidates",
+    "limited adjacent-prior update and novelty boundary",
+    "specified shared revision model metadata/decoding/input/output/rule/render/observer contract",
+    "separated observed reselection gain from true optimal-setting regret, tie costs and paired missingness",
+    "prioritized simple quantified repetition before object-inventory/list pipeline",
+    "documented acceptance/calibration rules without invented measurements",
+    "prepared topic-specific criticism and external-review questions",
+    "updated three briefs, synthesis navigation and active candidate count"
+  ],
+  "not_completed": [
+    "independent external feedback not received",
+    "native implementation/calibration/execution",
+    "policy effects and publishable contribution evidence"
+  ],
+  "execution_boundary": {
+    "docker_commands": 0,
+    "model_calls": 0,
+    "parser_runs": 0,
+    "simulations": 0,
+    "weights_or_pdf_or_asset_payload_downloads": 0,
+    "host_dependency_installs": 0,
+    "registry_additions": 0,
+    "reading_promotions": 0,
+    "external_messages_sent": 0
+  },
+  "manual_counterexample_review": {
+    "status": "AUTHOR_REASONING_ONLY",
+    "revision": [
+      "permission is not obligation",
+      "pre-revocation violation survives revocation",
+      "quaternion signs equivalent",
+      "oracle semantic correctness does not imply motor competence"
+    ],
+    "handoff": [
+      "finite-selection winner is not true optimum",
+      "all-zero calibration cannot identify optimal reuse",
+      "different radii can yield identical reached state",
+      "success-only time tie is biased"
+    ],
+    "set": [
+      "left/right reference may change identity after movement",
+      "all/exactly equivalence only at matching eligible count",
+      "held contaminant must remain counted",
+      "conservative intermediate plan restricts paths beyond terminal semantics"
+    ]
+  },
+  "validation": {
+    "status": "PASS_DOCUMENT_AND_REGISTRY_AUDIT_ONLY",
+    "json_documents_checked": 4,
+    "contracts_executable": false,
+    "generator_compilation": "py_compile to TemporaryDirectory; removed on exit",
+    "commands": [
+      "python3 -B work/scripts/build_reading_tiers.py",
+      "python3 -B work/scripts/audit_repository.py",
+      "git diff --check"
+    ],
+    "repository_audit": {
+      "papers": 1077,
+      "tier_counts": {
+        "CORE": 47,
+        "NEXT": 302,
+        "REFERENCE": 486,
+        "ARCHIVE": 242
+      },
+      "standard_note_files": 5385,
+      "markdown_files_checked": 5591,
+      "markdown_links_checked": 11307,
+      "errors": [],
+      "warnings": []
+    },
+    "preservation": {
+      "protected_files_checked": 33,
+      "changed_protected_files": [],
+      "staged_entries_digest_unchanged": true,
+      "scope": "Registry identity/tier/reading records, original semantic cases and all three existing P0 packet files"
+    },
+    "not_a_claim_of": "Model/parser/simulator execution, native runtime compatibility or policy efficacy"
+  }
+}

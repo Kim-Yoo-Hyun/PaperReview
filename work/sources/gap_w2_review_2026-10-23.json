@@ -1,0 +1,678 @@
+{
+  "schema_version": "1.0",
+  "kind": "bounded_cross_paper_source_and_static_interface_audit",
+  "task": "GAP-W2",
+  "checked_on": "2026-10-23",
+  "scope": "GEOMETRY -> DATA-TRANSFER -> SYSID; 13 direct papers plus one scaling background; selected full-text sections, not complete paper reading.",
+  "claim_boundary": "Author claims, static interfaces and researcher hypotheses are separate. No experiments, formal new-paper admission or reading-status promotion.",
+  "search_scope": {
+    "window": "2024-2026",
+    "primary_sources": [
+      "PMLR",
+      "ICLR proceedings",
+      "RSS proceedings",
+      "IEEE DOI/publisher",
+      "author arXiv HTML",
+      "official author GitHub/project"
+    ],
+    "representative_queries": [
+      "\"curation transfer\" robot policy CUPID 2026",
+      "\"data selection\" \"policy\" \"transfer\" robot 2026 CUPID DataMIL",
+      "\"ATHENA\" \"Accelerated\" \"CoRL\" 2026",
+      "\"Smoothness Ranks Skill, Not Success\" conference",
+      "\"A Control Barrier Function for Safe Navigation with Online Gaussian Splatting Maps\" ICRA"
+    ],
+    "limits": [
+      "Not exhaustive proceedings/journal search or citation saturation.",
+      "Author-reported venues/workshop labels are not independently verified main-track acceptance.",
+      "IEEE challenge pages do not provide current paper-specific content verification.",
+      "No local PDF download, payload/checkpoint download, code execution or dependency installation."
+    ]
+  },
+  "counts": {
+    "records": 14,
+    "direct_comparison": 13,
+    "background_control": 1,
+    "geometry": 5,
+    "data_transfer": 6,
+    "sysid": 3,
+    "registry_identity_linked": 2,
+    "pinned_code_repositories": 6,
+    "selected_source_config_files": 14
+  },
+  "registry_snapshot": {
+    "total": 1037,
+    "manifest_modified": false,
+    "reading_status_modified": false
+  },
+  "records": [
+    {
+      "source_id": "G01",
+      "lens": "GEOMETRY",
+      "title": "Splat-Nav: Safe Real-Time Robot Navigation in Gaussian Splatting Maps",
+      "role": "direct_comparison",
+      "arxiv_version": "2403.02751v3",
+      "full_text_url": "https://arxiv.org/html/2403.02751v3",
+      "venue": "T-RO 2025",
+      "publication_evidence": "prior_W1_publisher_evidence_reused",
+      "publication_url": "https://doi.org/10.1109/tro.2025.3552348",
+      "sections_inspected": [
+        "III",
+        "VI-B",
+        "VIII"
+      ],
+      "content_review": "selected_full_text_sections",
+      "known_answer": "Map-relative corridor safety; missing obstacles are an explicit limitation.",
+      "registry_match": {
+        "status": "identity_linked",
+        "paper_id": "pr-0284",
+        "overview_path": "2025/T-RO/2025_T-RO_Splat-Nav-Safe-Real-Time-Robot-Navigation-in-Gaussian-Spla/01_overview.md",
+        "metadata_resolution": {
+          "task_id": "META-W1",
+          "resolved_on": "2026-10-23",
+          "canonical_venue": "T-RO",
+          "source_ledger": "work/sources/splat_nav_metadata_2026-10-23.json",
+          "scope": "Current navigation pointer corrected; earlier inspection and discrepancy text retained as historical observations."
+        }
+      },
+      "code_repo": "chengine/splatnav",
+      "checked_on": "2026-10-23",
+      "novel_gap_proven": false,
+      "code_executed": false,
+      "metadata_boundary": "W1 verified publisher indexing reused; current DOI resolves to IEEE challenge. Existing IROS path/publication mismatch remains META-W1."
+    },
+    {
+      "source_id": "G02",
+      "lens": "GEOMETRY",
+      "title": "A Control Barrier Function for Safe Navigation with Online Gaussian Splatting Maps",
+      "role": "direct_comparison",
+      "arxiv_version": "2409.09868v2",
+      "full_text_url": "https://arxiv.org/html/2409.09868v2",
+      "venue": "ICRA 2025 (author/secondary record; official page not readable)",
+      "publication_evidence": "author_reported_not_independently_verified",
+      "publication_url": "https://cap.stanford.edu/profiles/viewCV?facultyId=223386&name=Monroe_Kennedy",
+      "sections_inspected": [
+        "III",
+        "IV",
+        "V",
+        "VII"
+      ],
+      "content_review": "selected_full_text_sections",
+      "known_answer": "SAFER-Splat; CBF on online splats does not establish missing-obstacle calibration.",
+      "registry_match": {
+        "status": "not_matched_by_normalized_title_or_observed_arxiv",
+        "paper_id": null
+      },
+      "code_repo": null,
+      "checked_on": "2026-10-23",
+      "novel_gap_proven": false,
+      "code_executed": false,
+      "title_boundary": "v1 includes SAFER-Splat prefix; v2 and bibliographic title omit it. Same arXiv identity, not two papers."
+    },
+    {
+      "source_id": "G03",
+      "lens": "GEOMETRY",
+      "title": "AirSplan: Risk-Aware Motion Planning for Quadrotors in Cluttered 3D Gaussian Splats",
+      "role": "direct_comparison",
+      "arxiv_version": "2609.21226v1",
+      "full_text_url": "https://arxiv.org/html/2609.21226v1",
+      "venue": "IROS 2026 (author-reported)",
+      "publication_evidence": "author_reported_not_independently_verified",
+      "publication_url": "https://arxiv.org/abs/2609.21226",
+      "sections_inspected": [
+        "III",
+        "IV-B3",
+        "IV-C",
+        "V-B"
+      ],
+      "content_review": "selected_full_text_sections",
+      "known_answer": "FRS approximation calibration differs from map calibration; depth supervision differs across compared methods.",
+      "registry_match": {
+        "status": "not_matched_by_normalized_title_or_observed_arxiv",
+        "paper_id": null
+      },
+      "code_repo": null,
+      "checked_on": "2026-10-23",
+      "novel_gap_proven": false,
+      "code_executed": false
+    },
+    {
+      "source_id": "G04",
+      "lens": "GEOMETRY",
+      "title": "Perceive With Confidence: Statistical Safety Assurances for Navigation with Learning-Based Perception",
+      "role": "direct_comparison",
+      "arxiv_version": "2403.08185v2",
+      "full_text_url": "https://arxiv.org/html/2403.08185v2",
+      "venue": "CoRL 2024; PMLR publication 2025",
+      "publication_evidence": "official_proceedings",
+      "publication_url": "https://proceedings.mlr.press/v270/dixit25a.html",
+      "sections_inspected": [
+        "2",
+        "3",
+        "4",
+        "F.3"
+      ],
+      "content_review": "selected_full_text_sections",
+      "known_answer": "Environment-level calibration handles closed-loop state shift under assumptions; unknown-space planning already exists.",
+      "registry_match": {
+        "status": "not_matched_by_normalized_title_or_observed_arxiv",
+        "paper_id": null
+      },
+      "code_repo": "irom-princeton/perception-guarantees",
+      "checked_on": "2026-10-23",
+      "novel_gap_proven": false,
+      "code_executed": false,
+      "version_boundary": "v2 used for selected content; v3 expanded author/content not merged into conference claims."
+    },
+    {
+      "source_id": "G05",
+      "lens": "GEOMETRY",
+      "title": "SemSafe-3DGS: Semantic Risk-Aware Active Navigation in Uncertain 3D Gaussian Splatting Maps",
+      "role": "direct_comparison",
+      "arxiv_version": "2609.19330v1",
+      "full_text_url": "https://arxiv.org/html/2609.19330v1",
+      "venue": "arXiv 2026",
+      "publication_evidence": "preprint_status_unverified",
+      "publication_url": "https://arxiv.org/abs/2609.19330",
+      "sections_inspected": [
+        "III-A",
+        "III-B",
+        "III-C",
+        "IV"
+      ],
+      "content_review": "selected_full_text_sections",
+      "known_answer": "Trajectory-relevant active perception and risk-aware CBF are direct prior work.",
+      "registry_match": {
+        "status": "not_matched_by_normalized_title_or_observed_arxiv",
+        "paper_id": null
+      },
+      "code_repo": null,
+      "checked_on": "2026-10-23",
+      "novel_gap_proven": false,
+      "code_executed": false
+    },
+    {
+      "source_id": "D01",
+      "lens": "DATA-TRANSFER",
+      "title": "DataMIL: Selecting Data for Robot Imitation Learning with Datamodels",
+      "role": "direct_comparison",
+      "arxiv_version": "2505.09603v2",
+      "full_text_url": "https://arxiv.org/html/2505.09603v2",
+      "venue": "ICLR 2026",
+      "publication_evidence": "official_proceedings",
+      "publication_url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/033d9e8dbbbc0ad90e59222cf1db0fc2-Abstract-Conference.html",
+      "sections_inspected": [
+        "4",
+        "5",
+        "6",
+        "C.7",
+        "D",
+        "F.2",
+        "G"
+      ],
+      "content_review": "selected_full_text_sections",
+      "known_answer": "Policy-aware selection; proxy vs rollout paths and selection cost must be separated.",
+      "registry_match": {
+        "status": "not_matched_by_normalized_title_or_observed_arxiv",
+        "paper_id": null
+      },
+      "code_repo": "UT-Austin-RobIn/datamil",
+      "checked_on": "2026-10-23",
+      "novel_gap_proven": false,
+      "code_executed": false,
+      "version_boundary": "Later author manuscript inspected; detailed identity with conference camera-ready not established."
+    },
+    {
+      "source_id": "D02",
+      "lens": "DATA-TRANSFER",
+      "title": "What Matters in Learning from Large-Scale Datasets for Robot Manipulation",
+      "role": "direct_comparison",
+      "arxiv_version": "2506.13536v1",
+      "full_text_url": "https://arxiv.org/html/2506.13536v1",
+      "venue": "ICLR 2025",
+      "publication_evidence": "official_proceedings",
+      "publication_url": "https://proceedings.iclr.cc/paper_files/paper/2025/hash/16466b6c95c5924784486ac5a3feeb65-Abstract-Conference.html",
+      "sections_inspected": [
+        "3",
+        "5",
+        "E"
+      ],
+      "content_review": "selected_full_text_sections",
+      "known_answer": "Camera/spatial alignment and co-training ratio are strong competing explanations.",
+      "registry_match": {
+        "status": "not_matched_by_normalized_title_or_observed_arxiv",
+        "paper_id": null
+      },
+      "code_repo": null,
+      "checked_on": "2026-10-23",
+      "novel_gap_proven": false,
+      "code_executed": false
+    },
+    {
+      "source_id": "D03",
+      "lens": "DATA-TRANSFER",
+      "title": "CUPID: Curating Data your Robot Loves with Influence Functions",
+      "role": "direct_comparison",
+      "arxiv_version": "2506.19121v2",
+      "full_text_url": "https://arxiv.org/html/2506.19121v2",
+      "venue": "CoRL 2025",
+      "publication_evidence": "official_proceedings",
+      "publication_url": "https://proceedings.mlr.press/v305/agia25a.html",
+      "sections_inspected": [
+        "4",
+        "5",
+        "7.2",
+        "7.3",
+        "9",
+        "C.6"
+      ],
+      "content_review": "selected_full_text_sections",
+      "known_answer": "DP-curated data transferred to pi0 is already evaluated; generic transfer claim collides.",
+      "registry_match": {
+        "status": "not_matched_by_normalized_title_or_observed_arxiv",
+        "paper_id": null
+      },
+      "code_repo": "agiachris/cupid",
+      "checked_on": "2026-10-23",
+      "novel_gap_proven": false,
+      "code_executed": false
+    },
+    {
+      "source_id": "D04",
+      "lens": "DATA-TRANSFER",
+      "title": "ATHENA: Accelerated Multi-Task Heterogeneous Influence Functions for Robot Data Curation",
+      "role": "direct_comparison",
+      "arxiv_version": "2606.16208v1",
+      "full_text_url": "https://arxiv.org/html/2606.16208v1",
+      "venue": "arXiv 2026; CoRL 2026 author-reported",
+      "publication_evidence": "author_reported_not_independently_verified",
+      "publication_url": "https://arxiv.org/abs/2606.16208",
+      "sections_inspected": [
+        "3",
+        "4.2",
+        "5",
+        "6.4",
+        "8"
+      ],
+      "content_review": "selected_full_text_sections",
+      "known_answer": "pi0-to-pi0.5 curated subset transfer already reported; official acceptance not independently verified.",
+      "registry_match": {
+        "status": "not_matched_by_normalized_title_or_observed_arxiv",
+        "paper_id": null
+      },
+      "code_repo": null,
+      "checked_on": "2026-10-23",
+      "novel_gap_proven": false,
+      "code_executed": false,
+      "project_url": "https://sii-quantum.github.io/ATHENA.github.io/",
+      "venue_author_url": "https://dirtyharrylyl.github.io/",
+      "release_boundary": "Project code link resolves to project itself; implementation repository not identified in inspected links."
+    },
+    {
+      "source_id": "D05",
+      "lens": "DATA-TRANSFER",
+      "title": "Smoothness Ranks Skill, Not Success: An Audit of Published Trajectory-Smoothness Curation Metrics Under Episode-Length Controls",
+      "role": "direct_comparison",
+      "arxiv_version": "2610.17427v1",
+      "full_text_url": "https://arxiv.org/html/2610.17427v1",
+      "venue": "arXiv 2026; NeurIPS 2026 RoboPAD Workshop author-reported, not main conference",
+      "publication_evidence": "author_reported_workshop_not_independently_verified",
+      "publication_url": "https://arxiv.org/abs/2610.17427",
+      "sections_inspected": [
+        "5",
+        "5.1",
+        "6",
+        "7"
+      ],
+      "content_review": "selected_full_text_sections",
+      "known_answer": "Policy-dependent curation effect reported; non-VLA and bundled configuration changes limit causal attribution.",
+      "registry_match": {
+        "status": "not_matched_by_normalized_title_or_observed_arxiv",
+        "paper_id": null
+      },
+      "code_repo": "imjbassi/smoothness-metric-audit",
+      "checked_on": "2026-10-23",
+      "novel_gap_proven": false,
+      "code_executed": false,
+      "release_boundary": "Pinned README retains older 5-seed broad claim; arXiv v1 narrows claims. Two run configs show optimizer/batch/history changes."
+    },
+    {
+      "source_id": "D06",
+      "lens": "DATA-TRANSFER",
+      "title": "Data Scaling Laws in Imitation Learning for Robotic Manipulation",
+      "role": "background_control",
+      "arxiv_version": "2410.18647v4",
+      "full_text_url": "https://arxiv.org/html/2410.18647v4",
+      "venue": "ICLR 2025",
+      "publication_evidence": "official_proceedings",
+      "publication_url": "https://proceedings.iclr.cc/paper_files/paper/2025/hash/88b7b2c896506daabc8d3fd587055167-Abstract-Conference.html",
+      "sections_inspected": [
+        "6",
+        "7"
+      ],
+      "content_review": "selected_full_text_sections",
+      "known_answer": "Background control: single-task diversity and model-size study is not a universal language-task scaling law.",
+      "registry_match": {
+        "status": "identity_linked",
+        "paper_id": "pr-0580",
+        "overview_path": "2025/ICLR/2025_ICLR_Data-Scaling-Laws-in-Imitation-Learning-for-Robotic-Manipu/01_overview.md"
+      },
+      "code_repo": null,
+      "checked_on": "2026-10-23",
+      "novel_gap_proven": false,
+      "code_executed": false,
+      "version_boundary": "Later author manuscript inspected; detailed identity with conference camera-ready not established."
+    },
+    {
+      "source_id": "S01",
+      "lens": "SYSID",
+      "title": "Sampling-based System Identification with Active Exploration for Legged Sim2Real Learning",
+      "role": "direct_comparison",
+      "arxiv_version": "2505.14266v1",
+      "full_text_url": "https://arxiv.org/html/2505.14266v1",
+      "venue": "CoRL 2025",
+      "publication_evidence": "official_proceedings",
+      "publication_url": "https://proceedings.mlr.press/v305/sobanbabu25a.html",
+      "sections_inspected": [
+        "3",
+        "4",
+        "5",
+        "7"
+      ],
+      "content_review": "selected_full_text_sections",
+      "known_answer": "Active identification already combines multi-step parameter fit and FIM-based excitation.",
+      "registry_match": {
+        "status": "not_matched_by_normalized_title_or_observed_arxiv",
+        "paper_id": null
+      },
+      "code_repo": "LeCAR-Lab/SPI-Active",
+      "checked_on": "2026-10-23",
+      "novel_gap_proven": false,
+      "code_executed": false,
+      "title_boundary": "Official PMLR title omits Robot; arXiv title includes Robot. Same work."
+    },
+    {
+      "source_id": "S02",
+      "lens": "SYSID",
+      "title": "Abstract Sim2Real through Approximate Information States",
+      "role": "direct_comparison",
+      "arxiv_version": "2604.15289v1",
+      "full_text_url": "https://arxiv.org/html/2604.15289v1",
+      "venue": "RA-L 2026 / IROS presentation (author-reported)",
+      "publication_evidence": "author_reported_not_independently_verified",
+      "publication_url": "https://pages.cs.wisc.edu/~gearless_joe/astra/",
+      "sections_inspected": [
+        "III",
+        "IV",
+        "V-E",
+        "VI"
+      ],
+      "content_review": "selected_full_text_sections",
+      "known_answer": "History-based grounding addresses non-Markov abstractions; known mapping and target data are required.",
+      "registry_match": {
+        "status": "not_matched_by_normalized_title_or_observed_arxiv",
+        "paper_id": null
+      },
+      "code_repo": null,
+      "checked_on": "2026-10-23",
+      "novel_gap_proven": false,
+      "code_executed": false
+    },
+    {
+      "source_id": "S03",
+      "lens": "SYSID",
+      "title": "Distributionally Robust Control via Stein Variational Inference for Contact-rich Manipulation",
+      "role": "direct_comparison",
+      "arxiv_version": "2605.19029v1",
+      "full_text_url": "https://arxiv.org/html/2605.19029v1",
+      "venue": "RSS 2026",
+      "publication_evidence": "official_proceedings",
+      "publication_url": "https://www.roboticsproceedings.org/rss22/p061.html",
+      "sections_inspected": [
+        "III",
+        "V-A3",
+        "VI"
+      ],
+      "content_review": "selected_full_text_sections",
+      "known_answer": "Task-sensitive uncertainty already separates exact parameter identification from control; uncertainty class assumed known.",
+      "registry_match": {
+        "status": "not_matched_by_normalized_title_or_observed_arxiv",
+        "paper_id": null
+      },
+      "code_repo": null,
+      "checked_on": "2026-10-23",
+      "novel_gap_proven": false,
+      "code_executed": false
+    }
+  ],
+  "code_audits": [
+    {
+      "repo": "chengine/splatnav",
+      "url": "https://github.com/chengine/splatnav",
+      "revision": "e996e229daca4e25703a13243541371290a6f7f8",
+      "tree_file_count": 60,
+      "tree_truncated": false,
+      "readme_sha256": "b04457bc760be6a6bf8abb9f1d8f2ffaaeaad92df4f32326049531e2094d49a7",
+      "inspection": "README and complete tree; selected source/config lines only",
+      "files": [
+        {
+          "path": "run_splatplan.py",
+          "url": "https://raw.githubusercontent.com/chengine/splatnav/e996e229daca4e25703a13243541371290a6f7f8/run_splatplan.py",
+          "sha256": "e0c621d7247adb3aef91c7bbf6f7df204a678c3a065df6fed17ebb2aa9d69d3d"
+        },
+        {
+          "path": "splatplan/splatplan.py",
+          "url": "https://raw.githubusercontent.com/chengine/splatnav/e996e229daca4e25703a13243541371290a6f7f8/splatplan/splatplan.py",
+          "sha256": "e299227e54ca0ed884c40aa4c9b0af28c13176dd3a495588f70130cbbe1ec2d0"
+        }
+      ],
+      "code_executed": false,
+      "data_payload_verified": false,
+      "checkpoint_verified": false,
+      "runtime_qualified": false
+    },
+    {
+      "repo": "irom-princeton/perception-guarantees",
+      "url": "https://github.com/irom-princeton/perception-guarantees",
+      "revision": "927b3748ba90f5c7b3efa8fa39c68da279b84d79",
+      "tree_file_count": 141,
+      "tree_truncated": false,
+      "readme_sha256": "da92d82ac595166518ca76d9b17808f18f38a6b6518f244eb2026fd8081cd37a",
+      "inspection": "README and complete tree; selected source/config lines only",
+      "files": [
+        {
+          "path": "cp_bound.py",
+          "url": "https://raw.githubusercontent.com/irom-princeton/perception-guarantees/927b3748ba90f5c7b3efa8fa39c68da279b84d79/cp_bound.py",
+          "sha256": "759fd6a29b346cd347f05554ba625202818d24854c09f14ef7c550b439ca950b"
+        }
+      ],
+      "code_executed": false,
+      "data_payload_verified": false,
+      "checkpoint_verified": false,
+      "runtime_qualified": false
+    },
+    {
+      "repo": "UT-Austin-RobIn/datamil",
+      "url": "https://github.com/UT-Austin-RobIn/datamil",
+      "revision": "f8fc4abccacd1e2b070e68128a7f2bce98f4b303",
+      "tree_file_count": 55,
+      "tree_truncated": false,
+      "readme_sha256": "da03c244da0a111ecd94d8b68a52a6cc283d0fc5d19af880f2939d0fe3b34bdc",
+      "inspection": "README and complete tree; selected source/config lines only",
+      "files": [
+        {
+          "path": "scripts/configs/dm_libero_config.py",
+          "url": "https://raw.githubusercontent.com/UT-Austin-RobIn/datamil/f8fc4abccacd1e2b070e68128a7f2bce98f4b303/scripts/configs/dm_libero_config.py",
+          "sha256": "1fef6b9d531e7c9e89cdccb065f06c17fde8d1cb75bad7858464896f904cc806"
+        },
+        {
+          "path": "scripts/configs/cotrain_libero_config.py",
+          "url": "https://raw.githubusercontent.com/UT-Austin-RobIn/datamil/f8fc4abccacd1e2b070e68128a7f2bce98f4b303/scripts/configs/cotrain_libero_config.py",
+          "sha256": "1cae4127226db4691927f09d0fedd0c041d4c380026e0a2cacea82b36dea7111"
+        },
+        {
+          "path": "scripts/selected_cotrain_libero.sh",
+          "url": "https://raw.githubusercontent.com/UT-Austin-RobIn/datamil/f8fc4abccacd1e2b070e68128a7f2bce98f4b303/scripts/selected_cotrain_libero.sh",
+          "sha256": "e90ca3c05b15185f292303e55d6674592c412ad9b73179bfe0b19b268b3e4131"
+        },
+        {
+          "path": "datamil/data/dataset.py",
+          "url": "https://raw.githubusercontent.com/UT-Austin-RobIn/datamil/f8fc4abccacd1e2b070e68128a7f2bce98f4b303/datamil/data/dataset.py",
+          "sha256": "6f9447bd14dc2683f3d0044fadc85d7349f41a5fcee02dbc0b2cb6a656ee0083"
+        }
+      ],
+      "code_executed": false,
+      "data_payload_verified": false,
+      "checkpoint_verified": false,
+      "runtime_qualified": false
+    },
+    {
+      "repo": "agiachris/cupid",
+      "url": "https://github.com/agiachris/cupid",
+      "revision": "2941eba9427a3398d3cbe26b10c01e3ece56bd18",
+      "tree_file_count": 519,
+      "tree_truncated": false,
+      "readme_sha256": "f3399b118ca4159e3e069d2424d95d814eefe42a7427d84d6d0ae002adbe0c0c",
+      "inspection": "README and complete tree; selected source/config lines only",
+      "files": [
+        {
+          "path": "scripts/train/retrain_policies.sh",
+          "url": "https://raw.githubusercontent.com/agiachris/cupid/2941eba9427a3398d3cbe26b10c01e3ece56bd18/scripts/train/retrain_policies.sh",
+          "sha256": "f0ea155bc6d46596c079e6f27e59425dc8657289ce53b813fd727ad3941e2143"
+        },
+        {
+          "path": "eval_demonstration_scores.py",
+          "url": "https://raw.githubusercontent.com/agiachris/cupid/2941eba9427a3398d3cbe26b10c01e3ece56bd18/eval_demonstration_scores.py",
+          "sha256": "76debbf7d86d5a183f4629cf49748f1f5a6dec5b2650a8a4f7c5cb49b615799e"
+        }
+      ],
+      "code_executed": false,
+      "data_payload_verified": false,
+      "checkpoint_verified": false,
+      "runtime_qualified": false
+    },
+    {
+      "repo": "LeCAR-Lab/SPI-Active",
+      "url": "https://github.com/LeCAR-Lab/SPI-Active",
+      "revision": "edc07d0b957bce9a430aa5a48b71a266a0a9f635",
+      "tree_file_count": 505,
+      "tree_truncated": false,
+      "readme_sha256": "45f544916503f42b96025f3a23e7d17172f62cc427b932f267392bdbcb85375e",
+      "inspection": "README and complete tree; selected source/config lines only",
+      "files": [
+        {
+          "path": "active_sysid.md",
+          "url": "https://raw.githubusercontent.com/LeCAR-Lab/SPI-Active/edc07d0b957bce9a430aa5a48b71a266a0a9f635/active_sysid.md",
+          "sha256": "73b4f3b98a76ba7a03cdb574d0d6d83237ac15e43c780f830b30e3f726446166"
+        },
+        {
+          "path": "spigym/config/algo/active_sysid.yaml",
+          "url": "https://raw.githubusercontent.com/LeCAR-Lab/SPI-Active/edc07d0b957bce9a430aa5a48b71a266a0a9f635/spigym/config/algo/active_sysid.yaml",
+          "sha256": "74e507007cd4d681c4140d5e1abfe71394fd875b13d547416dae8eee938aaca4"
+        },
+        {
+          "path": "spigym/envs/downstream_tasks.md",
+          "url": "https://raw.githubusercontent.com/LeCAR-Lab/SPI-Active/edc07d0b957bce9a430aa5a48b71a266a0a9f635/spigym/envs/downstream_tasks.md",
+          "sha256": "ff8205aa29e6dea546023aa906bb6460f6567fdd479c9e1e9d6a08ff85645352"
+        }
+      ],
+      "code_executed": false,
+      "data_payload_verified": false,
+      "checkpoint_verified": false,
+      "runtime_qualified": false
+    },
+    {
+      "repo": "imjbassi/smoothness-metric-audit",
+      "url": "https://github.com/imjbassi/smoothness-metric-audit",
+      "revision": "162f056f967251c53f29ab84e248c520d80ab4b9",
+      "tree_file_count": 203,
+      "tree_truncated": false,
+      "readme_sha256": "8f9c08d5b41a688193beb739176a1d877f0ff781cf469fbd9540099bf9a45a8b",
+      "inspection": "README and complete tree; selected source/config lines only",
+      "files": [
+        {
+          "path": "results/run_configs/results_train_jerk_s0.json",
+          "url": "https://raw.githubusercontent.com/imjbassi/smoothness-metric-audit/162f056f967251c53f29ab84e248c520d80ab4b9/results/run_configs/results_train_jerk_s0.json",
+          "sha256": "a8086491d8384a55cf6c407fd3fc1282548bc8c5c6b1c33f0d93a6cca69d8404"
+        },
+        {
+          "path": "results/run_configs/results_train_dp_jerk_s0.json",
+          "url": "https://raw.githubusercontent.com/imjbassi/smoothness-metric-audit/162f056f967251c53f29ab84e248c520d80ab4b9/results/run_configs/results_train_dp_jerk_s0.json",
+          "sha256": "da7c1d8d7b2a17c861e48460e3824fdaf27f69c6343b372c0123ded02c9efe76"
+        }
+      ],
+      "code_executed": false,
+      "data_payload_verified": false,
+      "checkpoint_verified": false,
+      "runtime_qualified": false
+    }
+  ],
+  "decisions": {
+    "GEOMETRY": {
+      "research": "REVISE",
+      "execution": "HOLD_RESEARCH",
+      "reason": "Calibration/unknown space/active perception already exist; distinguish assumption boundary from novel prediction."
+    },
+    "DATA-TRANSFER": {
+      "research": "NO-GO for generic transfer claim; REVISE narrow diagnostic",
+      "execution": "HOLD_RESEARCH",
+      "reason": "CUPID/ATHENA positive transfer and smoothness policy-dependent effects collide with broad claim."
+    },
+    "SYSID": {
+      "research": "REVISE",
+      "execution": "HOLD_RESEARCH",
+      "reason": "Active ID/history correction/task-aware uncertainty already exist; concrete separable physical case missing."
+    }
+  },
+  "next_task": "GAP-L2",
+  "validation": {
+    "status": "passed",
+    "checked_on": "2026-10-23",
+    "commands": [
+      {
+        "command": "python3 -m py_compile work/scripts/build_reading_tiers.py",
+        "exit_code": 0
+      },
+      {
+        "command": "python3 work/scripts/build_reading_tiers.py",
+        "exit_code": 0
+      },
+      {
+        "command": "python3 work/scripts/audit_repository.py",
+        "exit_code": 0,
+        "errors": 0,
+        "warnings": 0
+      },
+      {
+        "command": "git diff --check",
+        "exit_code": 0
+      }
+    ],
+    "registry_counts": {
+      "papers": 1037,
+      "CORE": 47,
+      "NEXT": 275,
+      "REFERENCE": 473,
+      "ARCHIVE": 242,
+      "intensive": 322,
+      "history": 47,
+      "standard_notes": 5185
+    },
+    "ledger_counts_and_identity_matches": "passed",
+    "canonical_sha256_unchanged": {
+      "work/sources/papers.json": "61df569612b1ebcb886ad7c7e9eaf95a6e617ae8b261e27a372c362a7ef15774",
+      "research/READING_STATUS.csv": "ee7fb3c7b0b4c5c0ee7b4ece15d8643857c54dc8c172b1645fda5249e4a22d62",
+      "research/READING_STATUS_HISTORY.csv": "c91b6727a03529ba790447eb5106f5b04cc4364b0c90b3eed1afecf9b700e001",
+      "research/READING_TIERS.csv": "404a469fa41cecff03ad015c4cee67a6da400346524a196d4a975477a8a8123e"
+    },
+    "baseline_dirty_files": 161,
+    "intentionally_updated_existing_files": 10,
+    "unrelated_dirty_files_preserved": 151,
+    "task_local_links_checked": 543,
+    "broken_task_local_links": 0,
+    "experiments_run": false,
+    "pdfs_cached": false,
+    "dependencies_installed": false,
+    "git_published": false
+  }
+}

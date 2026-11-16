@@ -13,9 +13,11 @@
 - Tags: VLA, Vision-Language Model, Robotics, Reinforcement Learning
 - Official paper: https://openreview.net/forum?id=fh6XBnjFlv
 - Full-text retrieval: https://openreview.net/pdf/17509091f9a7574439da683639d4af0b20b10d5e.pdf
-- Code/Project: not identified
+- Code/Project: [공식 code](https://github.com/EDEM-AI/RoboFlow4D) · [저자 project](https://simonlinsx.github.io/RoboFlow4D_Page/)
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (17 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+
+> DOC-QA3 (2026-10-23): [RoboFlow4D의 지정 수식·공개 구현 대조](./03_method.md). Commit `31c950750f0074067cd7c8ff5df86b8d6fa6f223`의 정적 검토이며 paper-run 버전·실행 결과는 미확인. [결과와 경계](../../../work/update/PAPER_CODE_FORMULA_REVIEW_2026-10-23.md).
 
 ## Why This Paper Is Here
 

@@ -1,0 +1,186 @@
+{
+  "task": "GAP-P4",
+  "frozen_on": "2026-10-24",
+  "scope": "Bounded synthetic state-based diagnostic; no VLA, learning or formal guarantee",
+  "parent_contract": "../reactive_nav_contract/RUN_MANIFEST.json",
+  "adapter": "../reactive_nav_contract/adapter.py",
+  "image": "paper-gap-p3:rvo-c2c46ba",
+  "image_id": "sha256:ec14bd72a90f89cb6f3c4b263bb35a81de7977dffb2e5a2cb7e96946f1545ebb",
+  "research_question": "Does ego-route change interact with reactive ORCA humans to create additional transient miscoverage/risk after controlling for actuation delay and simple margins/wait?",
+  "event": {
+    "tick": 40,
+    "physical_time_s": 10,
+    "pre_target_window_s": [
+      5,
+      10
+    ],
+    "post_target_window_s": [
+      10,
+      15
+    ],
+    "hold": "Same waypoint (2,2) before/after event",
+    "switch": "At tick40 change (2,2) to (2,-2); same final goal (12,0)",
+    "prefix": "Same world, predictor, calibrator, controller and RNG snapshot within method/reaction/delay before branching",
+    "boundary": "Remaining route lengths may differ at fork. Log both and do not infer calibration mediation from interaction alone."
+  },
+  "splits": {
+    "generator": "Four crossing lines around origin with staggered arrival, angular-band and seed holdout",
+    "generalization_boundary": "Parameter-band holdout in one topology/ORCA model, not semantic family or cross-environment generalization",
+    "development": {
+      "seed_start": 72001,
+      "count": 12,
+      "angle_centers_deg": [
+        80,
+        125,
+        175
+      ],
+      "instances_per_band": 4
+    },
+    "calibration": {
+      "seed_start": 73001,
+      "count": 24,
+      "angle_centers_deg": [
+        55,
+        105,
+        145
+      ],
+      "instances_per_band": 8
+    },
+    "test": {
+      "seed_start": 74001,
+      "count": 12,
+      "angle_centers_deg": [
+        35,
+        92,
+        160
+      ],
+      "instances_per_band": 4
+    },
+    "angle_jitter_deg": 3,
+    "arrival_times_s": [
+      10.5,
+      11.5,
+      12.5,
+      13.5
+    ],
+    "arrival_jitter_s": 0.4,
+    "line_offsets_m": [
+      0,
+      1.5,
+      -1.5,
+      3
+    ],
+    "offset_jitter_m": 0.15,
+    "angle_offsets_deg": [
+      0,
+      180,
+      45,
+      -45
+    ],
+    "focus_xy": [
+      0,
+      0
+    ],
+    "ego_xy": [
+      -12,
+      0
+    ]
+  },
+  "execution": {
+    "docker_only": true,
+    "dt_s": 0.25,
+    "horizon_steps": 5,
+    "episode_max_ticks": 120,
+    "controller": "P3 unchanged: 33 candidates; coefficients/thresholds unchanged",
+    "calibrator_rng": "SHA256 named streams as P3; cloned before hold/switch",
+    "main_methods": [
+      "M0",
+      "M1",
+      "M2",
+      "M3"
+    ],
+    "reaction": [
+      false,
+      true
+    ],
+    "delay_ticks": [
+      0,
+      2
+    ],
+    "events": [
+      false,
+      true
+    ],
+    "max_test_branches": 384,
+    "development_rollouts": 12,
+    "calibration_rollouts": 24,
+    "exogenous_changes": false,
+    "network": "none",
+    "host_install": false
+  },
+  "methods": {
+    "M0": "fixed episode-balanced empirical 90% residual quantile per horizon from calibration split",
+    "M1": "P3 timestamp-aware DtACI initialized to same estimated radii",
+    "M2": "P3 rolling empirical quantile, same initial radii; seed with 24 per-episode 90% residual quantiles for warm start",
+    "M3": "M0 radii plus P3 stop/wait/hysteresis; no tuning",
+    "boundary": "M2 warm start uses one calibration summary per episode, then appends online residuals; no finite-sample/mission certificate claimed"
+  },
+  "calibration": {
+    "reference_controller": "P3 M0 with original fixed fixture radii, no tuning",
+    "reaction_schedule": "index % 2",
+    "delay_schedule": "(index // 2) % 2 times 2 ticks",
+    "event_schedule": "(index // 4) % 2",
+    "radius_estimator": "Weighted empirical 90th quantile of matured residuals; each episode has total weight 1, within-episode residuals equal weight. Horizons separate.",
+    "sample_unit": "episodes; correlated frames not independent statistical samples",
+    "clip_m": [
+      0,
+      1
+    ],
+    "all_observed_prefixes_included": true,
+    "no_success_filter": true,
+    "minimum_episodes_per_horizon": 20,
+    "minimum_matured_residuals_per_episode_horizon": 1,
+    "guarantee": "NONE; adaptive deployment, dependent data and changed scene parameters violate naive calibration interpretation"
+  },
+  "gates": {
+    "development_min_alive_at_event": 9,
+    "development_min_route_fork_possible": 9,
+    "calibration_min_episodes_per_horizon": 20,
+    "test_min_complete_four_cells_per_method_delay": 9,
+    "stop_on_nonfinite_or_contract_failure": true,
+    "not_met_action": "Write qualified negative/limited result; no extra test search, scene replacement, learning or automatic scale-up"
+  },
+  "metrics": {
+    "primary_risk": "Fraction of 20 post-event ticks with swept clearance <=0.25m; after collision fill remaining risk-window ticks with failure=1; after goal fill0 and log exposure.",
+    "collision": "Any swept clearance<0 per episode and within post window; denominator includes all started branches and explicitly lists pre-event failures.",
+    "progress": "Distance-to-final-goal reduction in [10,15]s; terminal position held, plus full final distance/time/path; voluntary wait reported separately",
+    "coverage": "Per-episode per-horizon mean uncovered among matured valid targets in [5,10) and [10,15); report available/invalid/right-censored denominators, never zero-fill unobserved labels",
+    "other": [
+      "fallback proportion",
+      "radius saturation",
+      "no-progress: <0.1m displacement over any5s window while >0.5m from goal",
+      "fork remaining route length difference",
+      "human effect NOT_MEASURED without separate no-ego reference"
+    ]
+  },
+  "analysis": {
+    "interaction": "(reactive switch-hold)-(nonreactive switch-hold), per method/delay, paired by scene; also unreactive switch cost and raw pre/post changes",
+    "coverage_interaction": "Interaction in post-minus-pre miscoverage for each horizon, with H=5 predeclared diagnostic focus; no pooled independent-frame CI",
+    "risk_floor": "Report count of episodes with any post near-risk/collision; all-zero risk cannot establish a safety gain",
+    "uncertainty": "Scene-cluster percentile bootstrap 1000 resamples seed95001; n<=12, descriptive, not confirmatory significance",
+    "shadow": "On M0 executed observation streams, run all four forecast/calibrator states with same observations. Shadow M3 forecasts equal M0; no shadow deployment claim.",
+    "continue_rule": "Only if no-delay M1 has positive transient risk interaction >=0.05 AND H5 miscoverage-change interaction >=0.05, at least9 complete paired scenes, and pattern not eliminated by M0, M2 or M3 at matched progress (within0.5m) and risk tolerance0.02; even then diagnostic REVISE, not method GO.",
+    "alternative_rule": "If only delayed cells show pattern: delay-specific REVISE. If all risk zero or labels/cells insufficient: INCONCLUSIVE/HOLD. If fixed margin or wait explains pattern: reject new-method justification in this pilot.",
+    "threshold_boundary": "Thresholds are local smallest-practical-effect screening choices, not universal scientific constants or p-values; freeze before test.",
+    "simple_explanation_rule": "For each baseline M0/M2/M3 at the same delay, compare reactive-switch branches paired by scene: at least9 pairs, absolute mean progress difference vs M1 <=0.5m, mean risk difference <=0.02, and baseline joint risk/coverage interaction fails the two0.05 thresholds. This is a descriptive screen, not equivalence or mediation proof."
+  },
+  "frozen_artifacts": {
+    "pilot.py": "20d22b283b82f5c990210ecb1cc339fb8302820fbe2d37d6cacc61a452c6905e",
+    "analyse.py": "9cae12c59ca0cbe4a8cc80695c28e65b8e49bab6260b96fc8ac867a4cb9dcc66",
+    "run.sh": "90e2bd5ffd826de41220639799f1cb30f2264ceb2643f6dc2604f8742c032be6",
+    "/contract/adapter.py": "953abd5ea587485b0b2223dca529e2b7352761b641f7814e057de9ff392b49f2",
+    "/contract/scenes.json": "0eba05eaf928d2659432d7d23bcf04563bb22beaad3d2bce0e630fa36c02266d"
+  },
+  "runtime_qualified": "P3 passes; P4-specific boundary checks required before pilot",
+  "test_tuning": false
+}

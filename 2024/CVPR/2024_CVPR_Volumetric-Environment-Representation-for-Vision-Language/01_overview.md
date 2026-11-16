@@ -17,6 +17,8 @@
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (12 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
+> DOC-QA2 targeted source review: 2026-10-23; PDF pp. 4. 손상 구간·직접 연결된 표 분류만 원문 이미지와 대조했다. 전체 주장 정독·실험 검증·reading status 승격을 뜻하지 않는다. [URL·PDF hash·수정 기록](../../../work/sources/pdf_note_review_followup_2026-10-23.json).
+
 ## Why This Paper Is Here
 
 Robotics-enabling 3D perception의 navigation 문제를 이해하기 위해 읽는다. 본문은 Thus, they encounter challenges in capturing 3D geometry and semantics in complex scenes.를 문제로 두고, In this article, we propose a Volumetric Environment Representation (VER) that quantizes the physical world into structured 3D cells (Fig.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
@@ -40,7 +42,7 @@ Robotics-enabling 3D perception의 navigation 문제를 이해하기 위해 읽�
 - **p. 4 / 3.2. Volume State Estimation - extractive body cue:** MLT consists of stacked selfattention blocks.
 - **p. 4 / 3.2. Volume State Estimation - extractive body cue:** The environment representation is first reshaped as F 3d′ t ∈ RDe×XY Z, and then adopt multi-layer transformers (MLT) to model the relations between E ...
 - **p. 3 / 3.1. Environment Encoder - extractive body cue:** We introduce cross-view attention (CVA) to aggregate their features (F 2d for each view) into a unified volumetric representation F 3d with a group of ...
-- **p. 4 / 3.2. Volume State Estimation - extractive body cue:** Then we use MLPs for state estimation: p3d t = Softmax  MLP(  F 3d t )  ∈[0, 1]X×Y ×Z.
+- **PDF p. 4, §3.2 Eq. (4) (DOC-QA2 원문 대조):** Language와 volume features를 결합해 갱신한 F̄ₜ³ᵈ에 MLP와 Softmax를 적용하여 pₜ³ᵈ∈[0,1]^(X×Y×Z)의 spatial state probability를 얻는다. 이 식은 volume state estimation이며 motion execution/recovery command가 아니다.
 
 ## Observation, State, and Output Interface
 

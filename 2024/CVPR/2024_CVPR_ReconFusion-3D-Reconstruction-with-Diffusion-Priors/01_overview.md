@@ -17,6 +17,8 @@
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
+> DOC-QA2 targeted source review: 2026-10-23; PDF pp. 4. 손상 구간·직접 연결된 표 분류만 원문 이미지와 대조했다. 전체 주장 정독·실험 검증·reading status 승격을 뜻하지 않는다. [URL·PDF hash·수정 기록](../../../work/sources/pdf_note_review_followup_2026-10-23.json).
+
 ## Why This Paper Is Here
 
 Robotics-enabling 3D perception의 generative 문제를 이해하기 위해 읽는다. 본문은 NeRF's dense capture requirement poses a major challenge, necessitating tens to hundreds of images for even simple objects to ensure a clean reconstruction (Fig.를 문제로 두고, This enables our models to scale to large numbers of input images while selecting inputs that are most useful for the sampled novel view.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
@@ -49,7 +51,7 @@ Robotics-enabling 3D perception의 generative 문제를 이해하기 위해 읽�
 | Observation/input | The encoder of our PixelNeRF is a small U-Net that takes as input an image of resolution 512×512 and outputs a feature map of resolution 64 × 64 with 128 channels (see ... | conditioning observation와 noisy/intermediate sample | p. 5 (3.3. Implementation Details), p. 4 (3.2. 3D Reconstruction with Diffusion Priors) |
 | State/latent | encoder, PixelNeRF, small, U-Net, takes, input, image, resolution, outputs, feature, channels, supplement | latent/noise variable와 conditional distribution | p. 5 (3.3. Implementation Details), p. 4 (3.2. 3D Reconstruction with Diffusion Priors), p. 1 (1. Introduction) |
 | Output/action | To enable 3D reconstruction from a smaller number of posed inputs, we augment the state-of-the-art 3D reconstruction pipeline from Zip-NeRF [2] with a prior from our diffusion model trained for novel view ... | generated sample, action chunk 또는 trajectory | p. 4 (3.2. 3D Reconstruction with Diffusion Priors), p. 1 (1. Introduction), p. 2 (1. Introduction) |
-| Objective/outcome | The NeRF parameters ψ are optimized by minimizing the reconstruction error between a rendered image x = x(ψ, πobs) and an observed image xobs at pose πobs: LRecon(ψ) = Exobs,πobs  ℓ(x(ψ, ... | distribution fit, multimodality, sample quality와 latency | p. 4 (3.2. 3D Reconstruction with Diffusion Priors), p. 4 (3.2. 3D Reconstruction with Diffusion Priors), p. 5 (3.3. Implementation Details) |
+| Objective/outcome | 관측 camera pose에서 NeRF가 렌더링한 image와 관측 image의 reconstruction error를 평균한다. | Observed-view reconstruction loss; diffusion prior와 별도 항 | PDF p. 4 §3.2 / Eq. (4) |
 
 ## Main Claims and Actual Contribution
 

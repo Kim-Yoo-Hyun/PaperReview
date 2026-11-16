@@ -4,6 +4,8 @@
 > Evidence maturity: `FULL_TEXT_CHECKED`.
 > Analysis basis: full-text PDF body checked on 2026-09-03 (15 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2201.05989; PDF retrieval source: https://arxiv.org/pdf/2201.05989. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
+> DOC-QA1 (2026-10-23): 제어문자·깨진 추출 구간과 직접 연결된 표 항목을 PDF 페이지 이미지와 대조했다. 확인 범위·원문 URL·페이지·수정 이력은 [대조 기록](../../../work/sources/pdf_note_review_2026-10-23.json)에 있다. 노트 전체의 정독이나 모든 기존 주장에 대한 재검증을 뜻하지 않으며 reading status는 유지한다.
+
 ## Method in One Sentence
 
 PDF body method statement (p. 13 (B IMPLEMENTATION DETAILS OF NGLOD), p. 13 (B IMPLEMENTATION DETAILS OF NGLOD)): 2021] such that it closely resembles that of our hash encoding, only differing in the underlying data structure; i.e. using the vertices of an octree around ground-truth triangle mesh to ...
@@ -74,7 +76,7 @@ PDF body method statement (p. 13 (B IMPLEMENTATION DETAILS OF NGLOD), p. 13 (B I
 | Contract | Generic domain prior | PDF body cue | Unresolved detail |
 |---|---|---|---|
 | Horizon | single frame, multi-view accumulation 또는 online map horizon; exact window 확인 필요. | Neural radiance caching is a challenging application, because it is supervised online during real-time rendering. | episode/sequence/action-chunk boundary |
-| Rate / latency | per-frame/streaming inference와 downstream policy/control rate가 분리된다. | Bearded Man ©Oliver Laric (CC BY-NC-SA 2.0) Feature buffers 𝑚 enc(𝑥;𝜃); Φ Predicted color Online supervised training Real-time sparse path tracer Fig. | Hz/fps, inference time and control rate |
+| Rate / latency | 렌더링 중 온라인 학습의 시간 예산 | Figure 8: training budget 1 ms/frame. 기존 cue는 Figure 7 저작권 문구와 Figure 8 라벨이 섞여 있었다. | 로봇 제어 Hz 근거 없음; PDF p. 8, Figure 8; [PDF p. 8](https://arxiv.org/pdf/2201.05989#page=8), Figure 8 |
 | Memory | camera poses, map/scene graph/Gaussian state와 temporal feature. | not recovered | window and reset |
 | Compute | 3D reconstruction/fusion, point/feature memory와 query cost가 latency를 결정한다. | [2021]-our encoding results in sharper reconstruction while incurring only a mild performance overhead of 0.7 ms that reduces the frame rate from ... | hardware, batch and throughput |
 

@@ -13,6 +13,7 @@ __pycache__/
 *.log
 tmp/
 temp/
+/work/research_topics/contact_adaptation/재현 방법/runs/
 
 # Large or generated files
 *.zip

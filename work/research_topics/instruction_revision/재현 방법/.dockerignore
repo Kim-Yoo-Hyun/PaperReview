@@ -1,0 +1,6 @@
+*
+!Dockerfile
+!RESUME_PLAN.json
+!ARTIFACTS.json
+!inside.py
+!native_probe.py

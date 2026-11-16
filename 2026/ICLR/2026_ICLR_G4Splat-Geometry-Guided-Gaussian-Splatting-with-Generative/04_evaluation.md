@@ -4,6 +4,8 @@
 > Evidence maturity: `FULL_TEXT_CHECKED`.
 > Analysis basis: full-text PDF body checked on 2026-09-03 (28 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=kdPmsMVhZf; public full-text mirror used for retrieval (canonical paper source retained): https://chatpaper.com/api/v1/articles/download/247273. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
+> DOC-QA2 targeted source review: 2026-10-23; PDF pp. 27. 손상 구간·직접 연결된 표 분류만 원문 이미지와 대조했다. 전체 주장 정독·실험 검증·reading status 승격을 뜻하지 않는다. [URL·PDF hash·수정 기록](../../../work/sources/pdf_note_review_followup_2026-10-23.json).
+
 ## Evaluation in One Sentence
 
 PDF body evaluation/result cue (p. 8 (4 EXPERIMENTS), p. 10 (4.2 RESULTS), p. 25 (C.7 IMPLEMENTATION DETAILS), p. 8 (4 EXPERIMENTS), p. 1 (Figure/Table caption), p. 9 (4.2 RESULTS)): Our method significantly outperforms all baselines across both reconstruction and rendering metrics.
@@ -75,7 +77,7 @@ PDF body evaluation/result cue (p. 8 (4 EXPERIMENTS), p. 10 (4.2 RESULTS), p. 25
 
 | Metric/result evidence | Definition and aggregation to verify | Anchor |
 |---|---|---|
-| Metric Definition Chamfer Distance (CD) Accuracy+Completeness 2 Accuracy mean p∈P  min p∗∈P ∗//p -p∗//1  Completeness mean p∗∈P ∗  min p∈P//p -p∗//1 ... | definition/direction/unit from same section | p. 27 (C.7 IMPLEMENTATION DETAILS) |
+| Table A4는 CD=(Accuracy+Completeness)/2, 두 방향 nearest-point L1 distance 평균, F-score=2PR/(P+R)를 정의한다. Precision/recall은 L1 distance<0.05인 비율이다. | CD는 낮을수록, F-score는 높을수록 좋음; source의 norm·threshold 유지 | PDF p. 27 Table A4 |
 | Metrics Reconstruction quality is quantified using Chamfer Distance (CD), F-Score, and Normal Consistency (NC), while rendering performance is measured via PSNR, SSIM, and LPIPS. | definition/direction/unit from same section | p. 8 (4 EXPERIMENTS) |
 | Moreover, in scenes with complex lighting, where existing baselines struggle to achieve accurate reconstruction even with dense input views, our approach leverages accurate geometry ... | definition/direction/unit from same section | p. 9 (4.2 RESULTS) |
 | The accurate planar depth also enables linear alignment of monocular depth maps, improving depth accuracy of unobserved non-planar regions as well. | definition/direction/unit from same section | p. 10 (4.2 RESULTS) |
@@ -125,9 +127,9 @@ PDF body evaluation/result cue (p. 8 (4 EXPERIMENTS), p. 10 (4.2 RESULTS), p. 25
 - Numeric sentences retained from the body:
 - **p. 7 / 4 EXPERIMENTS - extractive body cue:** The real-world datasets include 6 scenes from ScanNet++ (Yeshwanth et al., 2023), 3 scenes from DeepBlending (Hedman et al., 2018) and 9 scenes from Mip-NeRF ...
 - **p. 24 / C.7 IMPLEMENTATION DETAILS - extractive body cue:** We implement our model in PyTorch (Paszke et al., 2019) and conduct all experiments on a single NVIDIA A100 GPU, except for the dense-view reconstruction ...
-- **p. 27 / C.7 IMPLEMENTATION DETAILS - extractive body cue:** Metric Definition Chamfer Distance (CD) Accuracy+Completeness 2 Accuracy mean p∈P  min p∗∈P ∗//p -p∗//1  Completeness mean p∗∈P ∗  min p∈P//p -p∗//1  ...
+- **PDF p. 27, Table A4 (DOC-QA2 원문 대조):** Table A4는 CD=(Accuracy+Completeness)/2, 두 방향 nearest-point L1 distance 평균, F-score=2PR/(P+R)를 정의한다. Precision/recall은 L1 distance<0.05인 비율이다. 이는 reconstruction metric 정의이며 training loss가 아니다.
 - **p. 24 / C.7 IMPLEMENTATION DETAILS - extractive body cue:** We implement our model in PyTorch (Paszke et al., 2019) and conduct all experiments on a single NVIDIA A100 GPU, except for the dense-view reconstruction ...
-- **p. 27 / C.7 IMPLEMENTATION DETAILS - extractive body cue:** Metric Definition Chamfer Distance (CD) Accuracy+Completeness 2 Accuracy mean p∈P  min p∗∈P ∗//p -p∗//1  Completeness mean p∗∈P ∗  min p∈P//p -p∗//1  ...
+- **PDF p. 27, Table A4 (DOC-QA2 원문 대조):** Table A4는 CD=(Accuracy+Completeness)/2, 두 방향 nearest-point L1 distance 평균, F-score=2PR/(P+R)를 정의한다. Precision/recall은 L1 distance<0.05인 비율이다. 이는 reconstruction metric 정의이며 training loss가 아니다.
 
 ## Generalization and Failure Cases
 

@@ -17,6 +17,8 @@
 - Paper type: benchmark_or_dataset
 - Source audit: full-text PDF body checked on 2026-09-03 (17 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
+> DOC-QA2 targeted source review: 2026-10-23; PDF pp. 6. 손상 구간·직접 연결된 표 분류만 원문 이미지와 대조했다. 전체 주장 정독·실험 검증·reading status 승격을 뜻하지 않는다. [URL·PDF hash·수정 기록](../../../work/sources/pdf_note_review_followup_2026-10-23.json).
+
 ## Why This Paper Is Here
 
 Robotics-enabling 3D perception의 benchmark 문제를 이해하기 위해 읽는다. 본문은 Complementary sensor modalities enable to cope with deficits or failures of particular sensors.를 문제로 두고, In summary, our main contributions are: • We present a point-wise annotated dataset of point cloud sequences with an unprecedented number of classes and unseen level-of-detail for each scan. • We furthermore ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
@@ -37,7 +39,7 @@ Robotics-enabling 3D perception의 benchmark 문제를 이해하기 위해 읽�
 - **p. 2 / 1. Introduction - extractive body cue:** To close this gap we propose SemanticKITTI, a large dataset showing unprecedented detail in point-wise annotation with 28 classes, which is suited for various tasks.
 - **p. 1 / 1. Introduction - extractive body cue:** They mainly fulfill three purposes: (i) they provide a basis to measure progress, since they allow to provide results that are reproducible and comparable, (ii) ...
 - **p. 7 / Approach - extractive body cue:** We expect that new approaches could explicitly exploit the sequential information by using multiple input streams to the architecture or even recurrent neural networks to ...
-- **p. 6 / Approach - extractive body cue:** Approach num. parameters train time inference time (million)  GPU hours epoch   seconds point cloud  PointNet 3 4 0.5 PointNet++ 6 16 ...
+- **PDF p. 6, Table 3 (DOC-QA2 원문 대조):** Table 3의 열은 parameters (million), training time (GPU hours/epoch), inference time (seconds/point cloud)다. 예를 들어 PointNet은 3/4/0.5, DarkNet53Seg는 50/3/0.1이다. 숫자만 분리해 동일 단위로 해석하지 않는다.
 
 ## Observation, State, and Output Interface
 

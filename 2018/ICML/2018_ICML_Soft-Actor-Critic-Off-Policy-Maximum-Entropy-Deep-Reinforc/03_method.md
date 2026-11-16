@@ -4,6 +4,8 @@
 > Evidence maturity: `FULL_TEXT_CHECKED`.
 > Analysis basis: full-text PDF body checked on 2026-09-03 (14 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://proceedings.mlr.press/v80/haarnoja18b.html; PDF retrieval source: https://arxiv.org/pdf/1801.01290. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
+> DOC-QA2 targeted source review: 2026-10-23; PDF pp. 5. 손상 구간·직접 연결된 표 분류만 원문 이미지와 대조했다. 전체 주장 정독·실험 검증·reading status 승격을 뜻하지 않는다. [URL·PDF hash·수정 기록](../../../work/sources/pdf_note_review_followup_2026-10-23.json).
+
 ## Method in One Sentence
 
 PDF body method statement (p. 3 (4. From Soft Policy Iteration to Soft), p. 5 (4.2. Soft Actor-Critic), p. 6 (4.2. Soft Actor-Critic), p. 4 (4.2. Soft Actor-Critic), p. 5 (4.2. Soft Actor-Critic), p. 3 (4. From Soft Policy Iteration to Soft)): We will first present this derivation, verify that the corresponding algorithm converges to the optimal policy from its density class, and then present a practical deep reinforcement learning algorithm based ...
@@ -49,9 +51,9 @@ PDF body method statement (p. 3 (4. From Soft Policy Iteration to Soft), p. 5 (4
 ## Objective / Update Rule
 
 - **p. 4 / 4.1. Derivation of Soft Policy Iteration - extractive body cue:** Let πold ∈Π and let πnew be the optimizer of the minimization problem defined in Equation 4.
-- **p. 5 / 4.2. Soft Actor-Critic - extractive body cue:** The soft Q-function parameters can be trained to minimize the soft Bellman residual JQ(θ) = E(st,at)∼D 1 2  Qθ(st, at) -ˆQ(st, at) 2 , ...
+- **PDF p. 5, Eqs. (7)–(8) (DOC-QA2 원문 대조):** Soft Q loss는 replay samples에 대한 ½(Q_θ−Q̂)² expectation이고 target Q̂=r+γE[V_ψ̄(s′)]다. 이 버전은 별도의 target value network를 사용하므로 후속 SAC 구현 식으로 대체하지 않는다.
 - **p. 4 / 4.1. Derivation of Soft Policy Iteration - extractive body cue:** For this projection, we can show that the new, projected policy has a higher value than the old policy with respect to the objective in ...
-- **p. 5 / 4.2. Soft Actor-Critic - extractive body cue:** Finally, the policy parameters can be learned by directly minimizing the expected KL-divergence in Equation 4: Jπ(φ) = Est∼D  DKL  πφ( · /st)
+- **PDF p. 5, Eqs. (10)–(12) (DOC-QA2 원문 대조):** Policy는 π_ϕ와 exp(Q_θ)/Z_θ 사이 KL divergence expectation을 최소화한다. Reparameterization 후 log π_ϕ(a given s)−Q_θ(s,a)의 expectation으로 쓸 수 있으며 partition function은 policy parameter에 독립이다.
 - **p. 6 / 4.2. Soft Actor-Critic - extractive body cue:** Soft Actor-Critic 0.0 0.2 0.4 0.6 0.8 1.0 million steps 0 1000 2000 3000 4000 average return (a) Hopper-v1 0.0 0.2 0.4 0.6 0.8 1.0 ...
 - **Formal bridge:** s_t/o_t -> a_t sampled or selected by πθ -> expected return / constrained return -> task return, success and safe execution.
 - **Equation/algorithm anchors:** p. 4 (4.1. Derivation of Soft Policy Iteration), p. 4 (4.1. Derivation of Soft Policy Iteration), p. 5 (4.2. Soft Actor-Critic), p. 5 (4.2. Soft Actor-Critic).

@@ -17,6 +17,8 @@
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (9 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
+> DOC-QA2 targeted source review: 2026-10-23; PDF pp. 4. 손상 구간·직접 연결된 표 분류만 원문 이미지와 대조했다. 전체 주장 정독·실험 검증·reading status 승격을 뜻하지 않는다. [URL·PDF hash·수정 기록](../../../work/sources/pdf_note_review_followup_2026-10-23.json).
+
 ## Why This Paper Is Here
 
 Manipulation, contact, tactile, and dexterity의 manipulation 문제를 이해하기 위해 읽는다. 본문은 However, lack of a prior knowledge about u and pt, conditional flow matching (Lipman et al.를 문제로 두고, In summary, our main contributions are threefold: • We first propose a 3D flow-based policy generation framework that conditions the 3D visual representation and can generate robust robotic actions with few demonstrations, ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
@@ -82,7 +84,7 @@ Manipulation, contact, tactile, and dexterity의 manipulation 문제를 이해�
 - **p. 4 / Abstract - extractive body cue:** Due to the complexity of the target distribution solution, Consistency-FM does not regress directly on the ground truth vector field, instead, it directly defines a ...
 - **p. 3 / Abstract - extractive body cue:** Expert demonstrations Policy FlowPolicy State Noise a1 a0 Action Flow Network Execute Single-view Images Robot state Encoder Sparse 3D Encoder Compact 3D Repr.
 - **p. 3 / Abstract - extractive body cue:** The top section visualizes FlowPolicy, where a straight-line flow enables the fastest data transition from the noise distribution to the action distribution (Adroit: Open the ...
-- **p. 4 / Abstract - extractive body cue:** The expectation is to find an ODE whose solution transmits the noise x0 ∼p0 to the data x1 ∼p1:  dξx(t) dt = νθ(t, ξx(t)) ...
+- **PDF p. 4, Preliminaries / Eq. (1) (DOC-QA2 원문 대조):** Flow ODE는 dξ_x(t)/dt=ν_θ(t,ξ_x(t)), initial condition ξ_x(0)=x다. Noise distribution p₀를 data distribution p₁로 옮기는 vector field를 학습한다. Piecewise brace는 두 조건을 묶으며 별도 branch policy를 뜻하지 않는다.
 
 ## Why Read It
 

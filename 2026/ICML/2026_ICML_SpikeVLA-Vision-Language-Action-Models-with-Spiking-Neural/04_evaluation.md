@@ -4,6 +4,8 @@
 > Evidence maturity: `FULL_TEXT_CHECKED`.
 > Analysis basis: full-text PDF body checked on 2026-09-03 (16 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=W86R5sIsxE; PDF retrieval source: https://openreview.net/pdf/27ac3094b9d6afc1c8c39e0ae99418fd937e0219.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
+> DOC-QA2 targeted source review: 2026-10-23; PDF pp. 4. 손상 구간·직접 연결된 표 분류만 원문 이미지와 대조했다. 전체 주장 정독·실험 검증·reading status 승격을 뜻하지 않는다. [URL·PDF hash·수정 기록](../../../work/sources/pdf_note_review_followup_2026-10-23.json).
+
 ## Evaluation in One Sentence
 
 PDF body evaluation/result cue (p. 6 (4.2. Main Results), p. 6 (4.2. Main Results), p. 15 (Figure/Table caption), p. 7 (4.2. Main Results), p. 7 (Figure/Table caption), p. 8 (Figure/Table caption)): As shown in Table 2, it achieves a strong and stable navigation performance, maintaining high metric scores compared to NaVILA (Cheng et al., 2025).
@@ -117,7 +119,7 @@ PDF body evaluation/result cue (p. 6 (4.2. Main Results), p. 6 (4.2. Main Result
 | Primary metric/result | The current results suggest that SpikeVLA achieves performance comparable to strong baselines (Zhang et al., 2024a; Cheng et al., 2025) under the same RGB-only, ... | numeric claim only at cited anchor | p. 6 (4.2. Main Results) |
 
 - Numeric sentences retained from the body:
-- **p. 4 / 3.3. Multimodal Spiking Large Language Model - extractive body cue:** It =  Vh, Vc, T  ∈R(196×t+196+Ntext)×d, (6) where Vh ∈R(196×t)×d are history visual tokens, Vc ∈ R196×d are current visual tokens, T ∈RNtext×d ...
+- **PDF p. 4, §3.3 / Eq. (6) (DOC-QA2 원문 대조):** 입력 token sequence는 history visual V_h, current visual V_c, text T를 concatenate한다. 총 길이는 196t+196+N_text, embedding dimension은 d다. 이 항목은 method input 정의이며 평가 성능 수치가 아니다.
 - **p. 5 / 3.3. Multimodal Spiking Large Language Model - extractive body cue:** To stabilize training, we merge L consecutive fine-grained steps into a multi-level spike token: si[t′] = (t′+1)L-1 X t=t′L Si,t, t′ = 0, . . ...
 
 ## Generalization and Failure Cases

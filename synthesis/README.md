@@ -1,10 +1,14 @@
 # Robotics Research Synthesis
 
-- Updated: 2026-10-23 KST
+- Updated: 2026-11-16 KST
+
+**현재 새 탐색은 VLA + RL·단일 정책 학습 중심**이다. [Hindsight 목표 선택](./04_vla_generalist.md#gap-hindsight-transfer)을 포함한 논문 간 질문을 여기서 관리한다. 현재 11개 주제의 가능성·준비 상태는 [주제 index](../work/research_topics/README.md), 선택한 다음 행동은 [TODO](../TODO.md)에 통합하며 실행 인계를 중복하지 않는다.
 
 이 디렉토리는 논문별 요약을 반복하는 곳이 아니라, CORE/NEXT 논문을 연구 트랙별로 비교하고 근거 기반 `Open Questions`를 축적하는 공간이다.
 
-현재 초점은 VLA 기반 manipulation·navigation과 action-relevant 3D다. 최신 후보 탐색에서는 RL을 필수 조건으로 두지 않는다. Generated queue는 CORE 47 + NEXT 275편을 7개 primary track에 배정한다. 수동 comparison matrix의 기존 읽기 결과는 tier 변경 후에도 보존한다. 읽기 순서의 기준은 [READING_PLAN.md](../research/READING_PLAN.md)이며, 각 트랙의 Reading Path는 비교 계보를 설명한다.
+집중 읽기의 출발점은 VLA 기반 manipulation·navigation과 action-relevant 3D다. 기존 control·causal/offline RL·데이터 학습·변형체·world model·장시간 운용·3D·HRI/multi-agent 비교도 보존한다. Generated queue는 CORE/NEXT를 7개 primary track에 배정하며 수동 comparison matrix의 읽기 결과를 덮어쓰지 않는다. 규모·읽기 순서의 기준은 [READING_PLAN.md](../research/READING_PLAN.md)이며, 각 트랙의 Reading Path는 비교 계보를 설명한다.
+
+[11/16 보완](../work/update/REGISTRY_ACCURACY_PSI0_2026-11-16.md)은 [Ψ₀ 학습/제어 경계](./04_vla_generalist.md#psi0-2026), [데이터 전제](./02_rl_il_offline.md#humanoid-data-2026), [AMO/SONIC 버전 비교](./06_locomotion_whole_body.md#psi0-controller-boundary)를 추가한다. 앞선 기반→frontier 및 지시·시간·기억 비교는 유지하며 사용자 reading status나 정독 comparison matrix를 승격하지 않는다.
 
 ## Documents
 
@@ -21,6 +25,8 @@ Cross-track gap/idea 문서는 현재 삭제 정책에 따라 활성 source of t
 문헌 비교에서 얻은 질문을 본격적인 연구로 발전시키기 전에는 [아이디어 빌드업 가이드](../research/IDEA_BUILDUP_GUIDE.md)의 closest-work 비교, 경쟁 가설, 최소 파일럿과 진행·수정·중단 기준을 적용할 수 있다. 이 문서는 연구 방법론 안내이며 별도의 gap/idea registry나 활성 프로젝트 목록이 아니다.
 
 ## Update Rule
+
+2026-10-28 [절차 감사](../work/update/BUILDUP_PROCESS_AUDIT_2026-10-28.md) 이후 새 질문은 [탐색 단계의 최소 요건](../research/IDEA_BUILDUP_GUIDE.md#stage-appropriate-gates)으로 선정한다. 방향 가설·완성된 mechanism 없이도 중요한 실증/평가 질문을 보존할 수 있다. 단순 baseline의 존재와 실제 충분성을 구별하며 기존 후보의 상태는 자동 변경하지 않는다.
 
 논문을 `READ`로 바꿀 때 해당 트랙 문서의 comparison matrix에 한 행을 추가한다. `SYNTHESIZED`는 다음 조건을 모두 만족할 때만 사용한다.
 
@@ -51,9 +57,29 @@ Cross-track gap/idea 문서는 현재 삭제 정책에 따라 활성 source of t
 | 상태·관측·memory | 사용 가능한 cue, 가시성, stale state, 관측 비용 | [3D](./07_robotics_3d_perception.md), [VLA](./04_vla_generalist.md) |
 | 접촉·실행 가능성·목표 변경 | attachment, contact mode, 사건 시점, feasible witness | [manipulation](./03_manipulation_contact.md), [planning](./01_planning_control.md) |
 | 적응·보존·평가 신뢰도 | data/interaction 예산, 독립 outcome, reset/selection ledger | [RL/IL](./02_rl_il_offline.md), [safety](./05_world_models_safety.md) |
+| 식별 가능성·데이터 선택의 전달 | hidden cue, coverage, source/target policy, 선택 계산 비용 | [CAUSAL](./02_rl_il_offline.md#gap-causal-2026), [DATA-TRANSFER](./02_rl_il_offline.md#gap-data-transfer-2026) |
+| 모델 오차·물성·행동에 충분한 추정 | parameter vs model class, material/boundary, probe와 control utility | [SYSID](./05_world_models_safety.md#gap-sysid-2026), [DEFORM](./03_manipulation_contact.md#gap-deform-2026), [WM](./05_world_models_safety.md#gap-wm-2026) |
+| 안전의 적용 범위·지속 운용 | 반응하는 상대, 지도/실공간 차이, 온도·payload·처리량 | [PLAN](./01_planning_control.md#gap-plan-2026), [GEOMETRY](./07_robotics_3d_perception.md#gap-geometry-2026), [THERMAL](./06_locomotion_whole_body.md#gap-thermal-2026) |
+| 사람·다중 에이전트의 협업 | partner 능력, 응답 신뢰도·지연, task outcome·human workload | [HRI](./01_planning_control.md#gap-hri-2026) |
+| VLA의 센싱과 영상 행동 표현 | 실행 시 contact 정보와 controller, 학습 시 video representation과 물리 supervision의 차이 | [CONTACT](./03_manipulation_contact.md#gap-contact-2026), [LATENT](./04_vla_generalist.md#gap-latent-2026) |
+| VLA의 기억과 능력 보존 | memory/control confound, replay/normalizer·compute·phase coverage; 직접 선행으로 현재 보류 | [MEMORY](./04_vla_generalist.md#gap-memory-2026), [RETENTION](./04_vla_generalist.md#gap-retention-2026) |
 
 ## 이번 합성의 근거 경계
 
-2026-10-23 갱신은 [2026-10-22 등록 47편](../work/update/REGISTRY_ROLLUP_2026-10-22.md), 기존 source 감사와 [16개 후보 결과](../work/research_candidates/summaries/README.md)를 합성한다. 외부 paper의 새 full-text review나 사용자 정독 완료가 아니다. 각 track의 새 표는 **연구자 해석 / CURATION-HYPOTHESIS**이며 paper-supported claim, source 감사, 실제 측정을 구분한다. 공식 metadata의 확인일은 manifest의 원래 날짜를 유지한다.
+최근 [GAP-P4](../work/experiments/reactive_nav_pilot/RESULTS.md)는 [P3 계약 검사](../work/experiments/reactive_nav_contract/RESULTS.md) 뒤 로컬 Docker에서 dev12/cal24/test12 scene·384 branch를 비교했다. 위험 interaction은 양수였으나 보정 악화 방향은 반대여서 사전 joint gate가 실패했다. [GAP-PLAN](./01_planning_control.md#gap-plan-2026)은 **현재 진단 HOLD·일반 방법 NO-GO·native VLA HOLD**다. 좁은 synthetic negative evidence와 일반 가설·사용자 읽기 status를 구분한다. 이후 [GAP-DE1/DE2](../work/update/DEFORMABLE_ASSET_SUFFICIENCY_REVIEW_2026-10-24.md)는 변형체의 현재 공개 자산 설계를 종료했고, S1은 이 자료 부족을 P4의 실험 결과와 구분했다. 현재 인계는 [TODO](../TODO.md)를 따른다.
+
+2026-10-23 첫 갱신은 [2026-10-22 등록 47편](../work/update/REGISTRY_ROLLUP_2026-10-22.md), 기존 source 감사와 [16개 후보 결과](../work/research_candidates/summaries/README.md)를 합성했다. 이 부분은 외부 paper의 새 full-text review나 사용자 정독 완료가 아니다. 이후 [GAP-R1 외부 조사](../work/update/VLA_GAP_SCOUT_2026-10-23.md)에서는 46건의 primary paper 자료와 resource 1건을 확인하고, 일부 직접 충돌 논문의 지정 본문·부록을 대조했다. 논문별 확인 깊이는 [source ledger](../work/sources/vla_gap_scout_2026-10-23.json)를 따른다. 모두를 전체 정독한 것으로 표시하지 않는다.
+
+[GAP-W1 분야 확장](../work/update/BROAD_RESEARCH_GAP_SCOUT_2026-10-23.md)은 40건의 논문 근거를 통해 9개 조건부 질문을 추가했다. 7건은 지정 본문, 1건은 저자 method 설명, 나머지는 abstract/공식 색인 중심이다. [Source별 경계](../work/sources/broad_gap_scout_2026-10-23.json)를 유지하며, 기존 조사와 중복된 논문도 있어 두 목록의 수를 신규 논문 수로 합산하지 않는다. 새 질문은 모두 `CURATION-HYPOTHESIS`이고 별도 신규성 입증·사용자 정독·실험 완료를 뜻하지 않는다.
+
+새 질문의 canonical 내용은 [접촉 센싱의 정보/제어 구분](./03_manipulation_contact.md#gap-contact-2026)과 [데이터 보완 선택의 직접 충돌](./04_vla_generalist.md#gap-data-2026)에 있다. 접촉은 GAP-R2 직접 비교 후 **REVISE / 진단 후보 HOLD**, 데이터 보완도 보류다. 각 track의 새 표는 **연구자 해석 / CURATION-HYPOTHESIS**이며 paper-supported claim, source 감사, 실제 측정을 구분한다. Manifest metadata 확인일·읽기 상태는 그대로 유지한다.
+
+[GAP-V2 통합 비교](../work/update/INTEGRATED_GAP_REVIEW_2026-10-23.md)는 2024–2026 문헌 30건을 확인/재확인해 VLA 4축과 다른 분야 9축을 함께 검토했다. 공식 publication 근거 20건·저자 venue 1건·preprint 9건, 지정 HTML 구간 대조 6건이다. 추가 VLA 질문은 LATENT·MEMORY·RETENTION이며, 뒤 두 질문은 직접 충돌로 보류했다. 후속 [GAP-R2](../work/update/CONTACT_INTERFACE_REVIEW_2026-10-23.md)는 접촉 8편의 지정 본문/부록·RDP 공식 근거와 공개 code/data를 대조했다. 조사 목록 간 중복을 신규 논문 수로 합산하지 않는다. 질문의 상세 조건은 각 track의 Open Questions에 둔다.
+
+[GAP-W2 직접 비교](../work/update/GAP_W2_COMPARATIVE_REVIEW_2026-10-23.md)는 GEOMETRY 5편·DATA-TRANSFER 6편(배경 1편 포함)·SYSID 3편의 지정 구간과 6개 code revision을 대조했다. Calibration/unknown-space·active perception, DP→π₀·π₀→π₀.₅ 데이터 전이, history 기반 grounding이 이미 존재한다. 넓은 신규 주장을 줄이고 세 분야의 진단 질문은 HOLD로 남겼다.
+
+후속 [GAP-L2 latent-action 검토](../work/update/LATENT_ACTION_REVIEW_2026-10-23.md)는 직접 6편 지정 본문/부록과 registry 기반 2편, GitHub 4개 revision·HF 4개 목록을 대조했다. 일반 supervision/alignment/proxy 주장은 직접 충돌하며, 물리 조건에 따른 label 사용 위치의 예측만 REVISE / HOLD로 남겼다. Label 합집합·teacher/policy/decoder·단계별 holdout의 차이를 [VLA Open Questions](./04_vla_generalist.md#gap-latent-2026)에 반영했다. 두 작업 모두 새로운 가설의 성숙도·사용자 reading status를 올리지 않았다. 다음 활성 작업은 [TODO](../TODO.md)가 소유한다.
 
 같은 정의·통계 원리·기존 method family를 새 기여로 다시 제안하지 않는다. 후보의 진행 이력은 요약과 dossier에 두고, 여기에는 비교 후 남은 질문·최소 baseline·기각 조건만 남긴다. 현재 E1/E2를 포함한 native 연구 실험은 HOLD이며 GPU만으로 판정을 바꾸지 않는다. 저장된 C3 수치의 [Docker 재분석](../work/experiments/portable/README.md)은 정책 효과 검증과 구분한다.
+
+[REG-R3 top-tier 보완](../work/update/TOP_TIER_SUPPLEMENT_2026-10-25.md)은 17편의 abstract 기반 노트와 6개 track의 비교 연결을 추가했다. RoboArena/STAR-Gen의 평가 분해, 데이터 개입·접촉 controller·환경 질의의 차이를 반영했고 기존 연구 gate와 읽기 matrix는 보존했다.

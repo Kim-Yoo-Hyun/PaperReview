@@ -1,0 +1,350 @@
+{
+  "work_id": "REG-R10",
+  "date": "2026-11-06",
+  "scope": "All local registry structure/identity/notes checked; selected ten preprint publication/source records checked online. Not a full online re-review of 1110 papers.",
+  "metadata_checks": [
+    {
+      "paper_id": "pr-0702",
+      "title": "Robotic World Model: A Neural Network Simulator for Robust Policy Optimization in Robotics",
+      "sources": [
+        "https://arxiv.org/abs/2501.10100",
+        "https://simulatingrobotworlds.github.io/papers.html",
+        "https://embodied-world-models.github.io/"
+      ],
+      "finding": "Workshop listings observed; no verified main-conference promotion. Retain arXiv canonical record.",
+      "before": {
+        "year": 2025,
+        "venue": "arXiv",
+        "folder": "2025/arXiv/2025_arXiv_Robotic-World-Model-A-Neural-Network-Simulator-for-Robust",
+        "identifiers": {
+          "arxiv": "2501.10100"
+        }
+      },
+      "after": {
+        "year": 2025,
+        "venue": "arXiv",
+        "folder": "2025/arXiv/2025_arXiv_Robotic-World-Model-A-Neural-Network-Simulator-for-Robust",
+        "identifiers": {
+          "arxiv": "2501.10100"
+        }
+      }
+    },
+    {
+      "paper_id": "pr-0703",
+      "title": "FlowDreamer: A RGB-D World Model With Flow-Based Motion Representations for Robot Manipulation",
+      "sources": [
+        "https://api.crossref.org/works/10.1109/LRA.2026.3653273",
+        "https://doi.org/10.1109/LRA.2026.3653273",
+        "https://sharinka0715.github.io/FlowDreamer/",
+        "https://github.com/sharinka0715/FlowDreamer/"
+      ],
+      "finding": "IEEE-deposited Crossref metadata + official author project confirm RA-L 2026, volume 11 issue 3 pages 2466–2473. Xplore returns JS challenge; not bypassed. Journal final full text not compared.",
+      "before": {
+        "year": 2025,
+        "venue": "arXiv",
+        "folder": "2025/arXiv/2025_arXiv_FlowDreamer-A-RGB-D-World-Model-with-Flow-based-Motion-Rep",
+        "identifiers": {
+          "arxiv": "2505.10075"
+        }
+      },
+      "after": {
+        "year": 2026,
+        "venue": "RA-L",
+        "folder": "2026/RA-L/2026_RA-L_FlowDreamer-A-RGB-D-World-Model-With-Flow-Based-Motion-Rep",
+        "identifiers": {
+          "arxiv": "2505.10075",
+          "doi": "10.1109/LRA.2026.3653273"
+        }
+      }
+    },
+    {
+      "paper_id": "pr-0705",
+      "title": "World Action Models are Zero-shot Policies",
+      "sources": [
+        "https://arxiv.org/abs/2602.15922"
+      ],
+      "finding": "Preprint metadata rechecked; no verified conference promotion.",
+      "before": {
+        "year": 2026,
+        "venue": "arXiv",
+        "folder": "2026/arXiv/2026_arXiv_World-Action-Models-are-Zero-shot-Policies",
+        "identifiers": {
+          "arxiv": "2602.15922"
+        }
+      },
+      "after": {
+        "year": 2026,
+        "venue": "arXiv",
+        "folder": "2026/arXiv/2026_arXiv_World-Action-Models-are-Zero-shot-Policies",
+        "identifiers": {
+          "arxiv": "2602.15922"
+        }
+      }
+    },
+    {
+      "paper_id": "pr-0858",
+      "title": "AutoRT: Embodied Foundation Models for Large Scale Orchestration of Robotic Agents",
+      "sources": [
+        "https://arxiv.org/abs/2401.12963",
+        "https://auto-rt.github.io/"
+      ],
+      "finding": "Official project cites arXiv. Add missing arXiv identity; no conference promotion.",
+      "before": {
+        "year": 2024,
+        "venue": "arXiv",
+        "folder": "2024/arXiv/2024_arXiv_AutoRT-Embodied-Foundation-Models-for-Large-Scale-Orchestr",
+        "identifiers": {}
+      },
+      "after": {
+        "year": 2024,
+        "venue": "arXiv",
+        "folder": "2024/arXiv/2024_arXiv_AutoRT-Embodied-Foundation-Models-for-Large-Scale-Orchestr",
+        "identifiers": {
+          "arxiv": "2401.12963"
+        }
+      }
+    },
+    {
+      "paper_id": "pr-0860",
+      "title": "Gemini Robotics: Bringing AI into the Physical World",
+      "sources": [
+        "https://arxiv.org/abs/2503.20020"
+      ],
+      "finding": "Original technical report retained; current product landing describes newer Gemini Robotics 2 and must not replace this paper evidence.",
+      "before": {
+        "year": 2025,
+        "venue": "arXiv",
+        "folder": "2025/arXiv/2025_arXiv_Gemini-Robotics-Bringing-AI-into-the-Physical-World",
+        "identifiers": {
+          "arxiv": "2503.20020"
+        }
+      },
+      "after": {
+        "year": 2025,
+        "venue": "arXiv",
+        "folder": "2025/arXiv/2025_arXiv_Gemini-Robotics-Bringing-AI-into-the-Physical-World",
+        "identifiers": {
+          "arxiv": "2503.20020"
+        }
+      }
+    },
+    {
+      "paper_id": "pr-0863",
+      "title": "Isaac Lab: A GPU-Accelerated Simulation Framework for Multi-Modal Robot Learning",
+      "sources": [
+        "https://arxiv.org/abs/2511.04831",
+        "https://research.nvidia.com/publication/2025-09_isaac-lab-gpu-accelerated-simulation-framework-multi-modal-robot-learning",
+        "https://isaac-sim.github.io/IsaacLab/main/",
+        "https://github.com/isaac-sim/IsaacLab"
+      ],
+      "finding": "Official documentation cites technical report; add arXiv identity and released official code. Current software features are not retroactive claims of the 2025 report.",
+      "before": {
+        "year": 2025,
+        "venue": "arXiv",
+        "folder": "2025/arXiv/2025_arXiv_Isaac-Lab-A-GPU-Accelerated-Simulation-Framework-for-Multi",
+        "identifiers": {}
+      },
+      "after": {
+        "year": 2025,
+        "venue": "arXiv",
+        "folder": "2025/arXiv/2025_arXiv_Isaac-Lab-A-GPU-Accelerated-Simulation-Framework-for-Multi",
+        "identifiers": {
+          "arxiv": "2511.04831"
+        }
+      }
+    },
+    {
+      "paper_id": "pr-0869",
+      "title": "NVIDIA Isaac GR00T N1: An Open Foundation Model for Humanoid Robots",
+      "sources": [
+        "https://arxiv.org/abs/2503.14734",
+        "https://research.nvidia.com/labs/lpr/publication/gr00tn1_2025/",
+        "https://research.nvidia.com/publication/2025-03_nvidia-isaac-gr00t-n1-open-foundation-model-humanoid-robots"
+      ],
+      "finding": "Official lab lists ArXiv Preprint. Add missing arXiv identity and title alias; retain canonical official NVIDIA title/folder.",
+      "before": {
+        "year": 2025,
+        "venue": "arXiv",
+        "folder": "2025/arXiv/2025_arXiv_NVIDIA-Isaac-GR00T-N1-An-Open-Foundation-Model-for-Humanoi",
+        "identifiers": {}
+      },
+      "after": {
+        "year": 2025,
+        "venue": "arXiv",
+        "folder": "2025/arXiv/2025_arXiv_NVIDIA-Isaac-GR00T-N1-An-Open-Foundation-Model-for-Humanoi",
+        "identifiers": {
+          "arxiv": "2503.14734"
+        }
+      }
+    },
+    {
+      "paper_id": "pr-0915",
+      "title": "SmolVLA: A Vision-Language-Action Model for Affordable and Efficient Robotics",
+      "sources": [
+        "https://arxiv.org/abs/2506.01844"
+      ],
+      "finding": "Preprint metadata rechecked; no verified conference promotion.",
+      "before": {
+        "year": 2025,
+        "venue": "arXiv",
+        "folder": "2025/arXiv/2025_arXiv_SmolVLA-A-Vision-Language-Action-Model-for-Affordable-and",
+        "identifiers": {
+          "arxiv": "2506.01844"
+        }
+      },
+      "after": {
+        "year": 2025,
+        "venue": "arXiv",
+        "folder": "2025/arXiv/2025_arXiv_SmolVLA-A-Vision-Language-Action-Model-for-Affordable-and",
+        "identifiers": {
+          "arxiv": "2506.01844"
+        }
+      }
+    },
+    {
+      "paper_id": "pr-0916",
+      "title": "Gemini Robotics 1.5: Pushing the Frontier of Generalist Robots with Advanced Embodied Reasoning, Thinking, and Motion Transfer",
+      "sources": [
+        "https://arxiv.org/abs/2510.03342"
+      ],
+      "finding": "Version metadata rechecked; no verified conference promotion. Do not reinterpret current model landing as the 1.5 paper.",
+      "before": {
+        "year": 2025,
+        "venue": "arXiv",
+        "folder": "2025/arXiv/2025_arXiv_Gemini-Robotics-1.5-Pushing-the-Frontier-of-Generalist-Rob",
+        "identifiers": {
+          "arxiv": "2510.03342"
+        }
+      },
+      "after": {
+        "year": 2025,
+        "venue": "arXiv",
+        "folder": "2025/arXiv/2025_arXiv_Gemini-Robotics-1.5-Pushing-the-Frontier-of-Generalist-Rob",
+        "identifiers": {
+          "arxiv": "2510.03342"
+        }
+      }
+    },
+    {
+      "paper_id": "pr-1022",
+      "title": "RoboReward: General-Purpose Vision-Language Reward Models for Robotics",
+      "sources": [
+        "https://arxiv.org/abs/2601.00675"
+      ],
+      "finding": "Preprint metadata rechecked. Search returned an under-review submission, not verified acceptance; retain arXiv.",
+      "before": {
+        "year": 2026,
+        "venue": "arXiv",
+        "folder": "2026/arXiv/2026_arXiv_RoboReward-General-Purpose-Vision-Language-Reward-Models-f",
+        "identifiers": {
+          "arxiv": "2601.00675"
+        }
+      },
+      "after": {
+        "year": 2026,
+        "venue": "arXiv",
+        "folder": "2026/arXiv/2026_arXiv_RoboReward-General-Purpose-Vision-Language-Reward-Models-f",
+        "identifiers": {
+          "arxiv": "2601.00675"
+        }
+      }
+    }
+  ],
+  "path_migrations": [
+    {
+      "paper_id": "pr-0703",
+      "old": "2025/arXiv/2025_arXiv_FlowDreamer-A-RGB-D-World-Model-with-Flow-based-Motion-Rep",
+      "new": "2026/RA-L/2026_RA-L_FlowDreamer-A-RGB-D-World-Model-With-Flow-Based-Motion-Rep",
+      "reason": "verified preprint-to-journal update; stable paper_id and user reading fields retained"
+    }
+  ],
+  "preservation": {
+    "reading_status_changed": false,
+    "research_effect_claims_changed": false,
+    "pdf_downloaded": false,
+    "experimental_dependencies_installed": false
+  },
+  "cleanup": {
+    "deleted_cache": [
+      {
+        "path": "work/scripts/__pycache__/build_reading_tiers.cpython-312.pyc",
+        "size": 137812,
+        "sha256": "9fbe392cf7fd4b8f0c7fef3ac7e7b0a65c71133ee487c4623e8c47af77ec5a9d",
+        "reason": "regenerable bytecode; source preserved"
+      },
+      {
+        "path": "work/scripts/__pycache__/registry_profiles.cpython-312.pyc",
+        "size": 26142,
+        "sha256": "f9da206ea47769a095f57d5afbfc5a330a476ae4d06e9dcb2d9145bee21c9518",
+        "reason": "regenerable bytecode; source preserved"
+      },
+      {
+        "path": "work/scripts/__pycache__/registry_schema.cpython-312.pyc",
+        "size": 27877,
+        "sha256": "0280257c4a816f9629a940efaefab8d87aff05d8ddfe8e9e2842c2ad8673ab52",
+        "reason": "regenerable bytecode; source preserved"
+      }
+    ],
+    "duplicate_runtime_records_preserved": [
+      "work/experiments/reactive_nav_pilot/results/verified/docker_version.json",
+      "work/experiments/reactive_nav_contract/results/verified/docker_version.json"
+    ],
+    "content_consolidated": [
+      "README.md",
+      "TODO.md",
+      "research/README.md",
+      "research/IDEA_BUILDUP_GUIDE.md",
+      "synthesis/README.md",
+      "work/README.md"
+    ],
+    "paper_note_correction": {
+      "paper_id": "pr-0703",
+      "scope": "Five notes: metadata/title and category-derived safety interpretations; duplicate motivation/generic question consolidated. Existing preprint numeric/page cues retained; journal final text not re-read."
+    }
+  },
+  "validation": {
+    "repository_audit": {
+      "papers": 1110,
+      "categories": 23,
+      "tier_counts": {"CORE": 47, "NEXT": 332, "REFERENCE": 489, "ARCHIVE": 242},
+      "intensive": 379,
+      "inactive_reading_history": 47,
+      "standard_note_files": 5550,
+      "catalog_entries": {"benchmark": 56, "metric": 29},
+      "combined_resources": 586,
+      "registry_index_rows": 1110,
+      "markdown_files_checked": 5761,
+      "markdown_links_checked": 11992,
+      "comparison_matrix_rows": 106,
+      "completed_matrix_rows": 5,
+      "errors": [],
+      "warnings": []
+    },
+    "document_maintenance_tests": {"passed": 8, "failed": 0},
+    "reading_history_tests": {"passed": 6, "failed": 0},
+    "note_artifact_dry_run": {"notes_scanned": 5550, "findings": 0},
+    "generator_compile_and_rebuild": "passed",
+    "priority_only_reconcile": {"proposed_changes": 0, "applied_changes": 0},
+    "default_survey_cli": "1110 canonical records loaded; PAPER, manifest and registry metadata hashes unchanged",
+    "reading_user_records_preserved": 426,
+    "reading_user_fields_preserved": [
+      "status", "evidence_level", "started_on", "completed_on",
+      "problem_and_assumptions", "observation_state_action_control",
+      "embodiment_task_data_metrics", "failure_modes", "research_relevance",
+      "next_action", "personal_notes"
+    ],
+    "protected_research_files_preserved": 345,
+    "preexisting_staged_diff_preserved": true,
+    "frozen_vrl_source_preserved": true,
+    "git_diff_check": "passed",
+    "limits": "Structural and extraction-artifact checks do not certify every note's semantics, independent reading completion, policy effects or native reproducibility. Online metadata checks cover the ten named records only."
+  },
+  "generator_fix": {
+    "observed_legacy_list_count": 811,
+    "canonical_count": 1110,
+    "paper_table_restored_from_manifest": true,
+    "canonical_manifest_or_note_files_lost": false,
+    "behavior": "CLI uses canonical manifest; write_registry rejects omitted existing stable IDs before writing",
+    "tests": "work/scripts/test_document_maintenance.py"
+  }
+}

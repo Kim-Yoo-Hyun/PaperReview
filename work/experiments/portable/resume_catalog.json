@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_on": "2026-10-23",
+  "updated_on": "2026-10-29",
   "scope": "Docker-only on user-selected local clone; no native policy resume authorized by resource availability alone",
   "inputs_for_c3_replay": [
     {
@@ -20,6 +20,16 @@
     }
   ],
   "tasks": [
+    {
+      "id": "HANDOFF_P0_NATIVE",
+      "status": "WAITING_RESOURCE_AND_IMPLEMENTATION",
+      "research_summary_from_repository_root": "synthesis/06_locomotion_whole_body.md",
+      "executable": false,
+      "command": null,
+      "preflight_only_command": "sh work/experiments/vla_handoff_p0/resume.sh check",
+      "resume_plan_from_repository_root": "work/experiments/vla_handoff_p0/RESUME_PLAN.json",
+      "boundary": "Preflight is available; native sim/server images, transport, handoff adapter and runtime manifest remain incomplete. Existing resource record is historical; inspect the current local Docker before resuming."
+    },
     {
       "id": "C3_SAVED_LOGITS",
       "status": "READY_REPLAY",

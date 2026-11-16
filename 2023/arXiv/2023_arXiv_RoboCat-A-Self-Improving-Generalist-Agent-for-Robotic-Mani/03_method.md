@@ -4,6 +4,8 @@
 > Evidence maturity: `FULL_TEXT_CHECKED`.
 > Analysis basis: full-text PDF body checked on 2026-09-03 (60 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2306.11706; PDF retrieval source: https://arxiv.org/pdf/2306.11706. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
+> DOC-QA2 targeted source review: 2026-10-23; PDF pp. 4. 손상 구간·직접 연결된 표 분류만 원문 이미지와 대조했다. 전체 주장 정독·실험 검증·reading status 승격을 뜻하지 않는다. [URL·PDF hash·수정 기록](../../../work/sources/pdf_note_review_followup_2026-10-23.json).
+
 ## Method in One Sentence
 
 PDF body method statement (p. 2 (1 Introduction), p. 4 (1 Introduction), p. 2 (1 Introduction), p. 5 (1 Introduction), p. 5 (1 Introduction), p. 4 (1 Introduction)): Our main contributions in this work are outlined below: (1) we demonstrate, for the first time, that a large transformer sequence model can solve a large set of dexterous tasks ...
@@ -71,7 +73,7 @@ PDF body method statement (p. 2 (1 Introduction), p. 4 (1 Introduction), p. 2 (1
 
 - **p. 2 / 1 Introduction - extractive body cue:** Our agent handles these variations natively without requiring common action or observation representations, by leveraging the transformer's ability to input and output variable-length sequences based ...
 - **p. 3 / 1 Introduction - extractive body cue:** Our goal-conditioned agent is represented by a policy π(at/ot, gt), where at denotes the action vector, ot = (xt, It) are the proprioceptive observation (e.g. ...
-- **p. 4 / 1 Introduction - extractive body cue:** Concretely, a tokenised trajectory ˆτ ∈ˆD is represented as ˆτ =  x1:L 1 , I1:M 1 , g1:N 1 , a1:Q 1 , ..., ...
+- **PDF p. 4, Eq. (2) (DOC-QA2 원문 대조):** Trajectory는 각 time step의 proprioception x, image I, goal g, action a tokens를 순서대로 연결하며 마지막 observation/goal까지 포함한다. Proprioception/action token 수 L,Q는 embodiment별로 달라지고 goal observation은 episode 안에서 고정되어 반복된다.
 - **p. 6 / 1 Introduction - extractive body cue:** A policy pool is simply a collection of policies (or policies implicitly defined by a pool of goal images) with overlapping start and end states.
 - **p. 2 / 1 Introduction - extractive body cue:** As a step towards this goal, we trained RoboCat on a very large dataset of diverse manipulation behaviours: precise and dexterous vision-based tasks, performed with ...
 - **p. 4 / 1 Introduction - extractive body cue:** Note that the dimensionality of the actions and proprioception observations vary across embodiments.

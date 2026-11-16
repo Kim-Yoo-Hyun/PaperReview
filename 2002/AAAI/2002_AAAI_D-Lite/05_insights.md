@@ -2,7 +2,12 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://idm-lab.org/bib/abstracts/Koen02e.html; PDF retrieval source: https://www.cs.cmu.edu/~motionplanning/papers/sbp_papers/integrated3/koenig_dstarlite_aaai02b.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; legacy extraction flag: high; severe font-encoding corruption found in DOC-QA1); canonical paper source: https://idm-lab.org/bib/abstracts/Koen02e.html; PDF retrieval source: https://www.cs.cmu.edu/~motionplanning/papers/sbp_papers/integrated3/koenig_dstarlite_aaai02b.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+
+> DOC-QA1 (2026-10-23): 제어문자·깨진 추출 구간과 직접 연결된 표 항목을 PDF 페이지 이미지와 대조했다. 확인 범위·원문 URL·페이지·수정 이력은 [대조 기록](../../../work/sources/pdf_note_review_2026-10-23.json)에 있다. 노트 전체의 정독이나 모든 기존 주장에 대한 재검증을 뜻하지 않으며 reading status는 유지한다.
+
+
+> 정오표: 저자 페이지는 Figure 4의 line 33″에서 no-known-path 판단의 주석을 `rhs(s_start)=∞`로 명시한다. 이번 CMU PDF의 해당 줄도 rhs를 사용한다. [저자 정오표](https://idm-lab.org/bib/abstracts/Koen02e.html), PDF p. 5.
 
 ## Paper-supported conclusion
 
@@ -13,7 +18,7 @@
 - **p. 1 / Abstract - extractive body cue:** To gain insight into its behavior, we present various theoretical properties of LPA* that also apply to D* Lite.
 - **p. 1 / Abstract - extractive body cue:** Building on LPA*, we therefore present D* Lite, a novel replanning method that implements the same navigation strategy as D* but is algorithmically different.
 - **p. 4 / Abstract - extractive body cue:** We now use LPA* to develop D* Lite, that repeatedly determines shortest paths between the current vertex of the robot and the goal vertex as ...
-- **p. 3 / Abstract - extractive body cue:** Lifelong Planning A*: The Algorithm The main function Main() of LPA* first calls Initialize() to initialize the search problem  17  .
+- **원문 대조:** LPA*는 g를 infinity로 초기화하고 start의 rhs를 0으로 두어 priority queue에서 탐색을 시작한다. Edge cost가 바뀌면 영향을 받는 vertex의 rhs와 queue membership을 UpdateVertex로 갱신한 뒤 ComputeShortestPath를 호출한다. ([PDF p. 3](https://www.cs.cmu.edu/~motionplanning/papers/sbp_papers/integrated3/koenig_dstarlite_aaai02b.pdf#page=3), Lifelong Planning A*: The Algorithm; Figure 2 on p. 2).
 - **p. 1 / Abstract - extractive body cue:** The resulting D* Lite algorithm is easy to understand and analyze.
 - **p. 1 / Abstract - extractive body cue:** It implements the same behavior as Stentz' Focussed Dynamic A* but is algorithmically different.
 - **p. 2 / Abstract - extractive body cue:** It applies to finite graph search problems on known graphs whose edge costs increase or decrease over time (which can also be used to model ...
@@ -23,7 +28,7 @@
 
 - **p. 2 / Abstract - extractive body cue:** The challenge is to identify these cells efficiently.
 - **p. 4 / Abstract - extractive body cue:** They change to infinity when the robot discovers that they cannot be traversed.
-- **p. 2 / Abstract - extractive body cue:** (It does nothing if the current priority of vertex ] already equals ` .) Finally, U.Remove RT]AS removes vertex ] from priority queue U . ...
+- **원문 대조:** U.Update(s,k)는 queue 안 vertex s의 priority를 k로 바꾸며 같으면 아무 작업도 하지 않는다. U.Remove(s)는 s를 queue에서 제거한다. 이는 queue API 정의이며 failure나 ablation 결과가 아니다. ([PDF p. 2](https://www.cs.cmu.edu/~motionplanning/papers/sbp_papers/integrated3/koenig_dstarlite_aaai02b.pdf#page=2), Figure 2 위 priority-queue API).
 - **p. 1 / Abstract - extractive body cue:** It is currently also being integrated into Mars Rover prototypes and tactical mobile robot prototypes for urban reconnaissance (Matthies et al.
 - **p. 1 / Abstract - extractive body cue:** Introduction Incremental search methods, such as DynamicSWSF-FP (Ramalingam & Reps 1996), are currently not much used in artificial intelligence.
 - **p. 7 / A B - extractive body cue:** Uniform discretizations can prevent one from finding a path if they are too coarse-grained (for example, because the resolution prevents one from noticing small gaps ...
@@ -61,7 +66,7 @@
 2. Use the paper-reported resource/task cue: Since all methods move the robot in the same way and D* has already been demonstrated with great success on real robots, we only need to perform a simulation study..
 3. Compare against the body-reported baseline or a matched simpler baseline: D* Lite outperforms D* Lite without incremental search (that is, A*) according to all three performance measures, even more than a factor of four for the vertex expansions..
 4. Report the body metric and its denominator/aggregation: Thus, D* Lite always scores zero and methods that score above zero perform worse than D* Lite..
-5. Re-run the body-reported ablation/failure condition: To maintain Invariants 13, ComputeShortestPath() therefore updates rhs-values of these vertices, checks their local consistency, and adds them to or removes them from the priority queue accordingly  0608  ..
+5. **재현 계획의 원문 근거:** Edge cost 또는 g의 변경으로 영향을 받는 vertex의 rhs를 재계산하고 local consistency에 맞춰 queue를 수정한다. 이 문단은 invariant 유지 절차이며 논문이 보고한 ablation 또는 failure 실험은 아니다. ([PDF p. 3](https://www.cs.cmu.edu/~motionplanning/papers/sbp_papers/integrated3/koenig_dstarlite_aaai02b.pdf#page=3), Lifelong Planning A*: The Algorithm). 실제 재현은 이 문헌 대조에서 수행하지 않았다.
 6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
 
 ### What would count as a successful reproduction

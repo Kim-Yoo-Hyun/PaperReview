@@ -1,0 +1,830 @@
+{
+  "schema_version": "1.0",
+  "kind": "dated_literature_source_audit_not_registry_or_priority_source",
+  "checked_on": "2026-10-23",
+  "task": "GAP-R1",
+  "scope": "VLA-first gap scoping; selective primary-source checks, not systematic full-text review of all venue papers",
+  "registry_snapshot": {
+    "total": 1037,
+    "recent_2024_2026": 757,
+    "recent_year_venue_counts": {
+      "2024 ACM Transactions on Graphics": 1,
+      "2024 CVPR": 45,
+      "2024 CoRL": 16,
+      "2024 ECCV": 34,
+      "2024 ICLR": 6,
+      "2024 ICML": 3,
+      "2024 ICRA": 12,
+      "2024 NeurIPS": 4,
+      "2024 RA-L": 5,
+      "2024 RSS": 24,
+      "2024 Robotics: Science and Systems": 2,
+      "2024 Science Robotics": 1,
+      "2024 arXiv": 2,
+      "2025 3DV": 15,
+      "2025 AAAI": 4,
+      "2025 CVPR": 31,
+      "2025 CoRL": 12,
+      "2025 ICCV": 72,
+      "2025 ICLR": 43,
+      "2025 ICML": 24,
+      "2025 ICRA": 11,
+      "2025 IROS": 15,
+      "2025 Nature": 1,
+      "2025 NeurIPS": 45,
+      "2025 RA-L": 7,
+      "2025 RSS": 64,
+      "2025 Technical Report": 2,
+      "2025 WACV": 5,
+      "2025 arXiv": 11,
+      "2026 AAAI": 2,
+      "2026 CVPR": 61,
+      "2026 CVPR-Workshop": 1,
+      "2026 CoRL": 4,
+      "2026 ECCV": 5,
+      "2026 Entropy": 1,
+      "2026 ICLR": 52,
+      "2026 ICML": 42,
+      "2026 ICRA": 24,
+      "2026 IROS": 3,
+      "2026 NeurIPS": 1,
+      "2026 RA-L": 6,
+      "2026 RSS": 13,
+      "2026 Science Robotics": 2,
+      "2026 Unverified": 1,
+      "2026 arXiv": 22
+    }
+  },
+  "search_scope": {
+    "years": [
+      2024,
+      2025,
+      2026
+    ],
+    "venues": [
+      "CVPR",
+      "NeurIPS",
+      "ICCV",
+      "ECCV",
+      "ICRA",
+      "IROS",
+      "CoRL",
+      "ICLR",
+      "RSS",
+      "ICML",
+      "RA-L",
+      "T-RO",
+      "IJRR",
+      "Science Robotics"
+    ],
+    "query_families": [
+      "VLA instruction grounding / language neglect / counterfactual supervision",
+      "VLA compositional generalization / action support / data selection / relabeling",
+      "force tactile VLA / sensor failure / force distillation / contact benchmark",
+      "mobile manipulation interaction-aware navigation / affordance",
+      "world model policy evaluation / action faithfulness",
+      "official reviewer contribution types / research process"
+    ],
+    "negative_or_unresolved": [
+      "IROS LangGap official-program query did not resolve acceptance; author statement kept separate",
+      "ICML dWorldEval official query did not resolve acceptance",
+      "IEEE/OpenReview/CVF individual endpoints sometimes inaccessible; no status inferred from access failure",
+      "T-RO and Science Robotics searched, but no newly verified decisive primary paper retained; journal coverage weaker than conference coverage",
+      "ICCV 2024/2026 and ECCV 2025 are not treated as annual missing venue slots",
+      "No claim of exhaustive search, citation saturation, code execution, or independently confirmed novel gap"
+    ]
+  },
+  "records": [
+    {
+      "source_id": "S01",
+      "title": "ForceVLA: Enhancing VLA Models with a Force-aware MoE for Contact-rich Manipulation",
+      "publication_status": "2025 NeurIPS; official proceedings",
+      "url": "https://papers.nips.cc/paper_files/paper/2025/hash/8633b46e12cc5f2ee1f05a6ca2c65b38-Abstract-Conference.html",
+      "checked_on": "2026-10-23",
+      "inspected_scope": "official abstract",
+      "bounded_implication": "Force-aware fusion already exists; not a new contribution by itself.",
+      "registry_ids": [
+        "pr-0128"
+      ],
+      "registry_match_method": "normalized exact title or source arXiv ID; other version aliases require admission review",
+      "additional_sources": [],
+      "registry_overviews": [
+        "2025/NeurIPS/2025_NeurIPS_ForceVLA-Enhancing-VLA-Models-with-a-Force-aware-MoE-for-C/01_overview.md"
+      ]
+    },
+    {
+      "source_id": "S02",
+      "title": "ForceVLA2: Unleashing Hybrid Force-Position Control with Force Awareness for Contact-Rich Manipulation",
+      "publication_status": "2026 CVPR; official CVF",
+      "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Li_ForceVLA2_Unleashing_Hybrid_Force-Position_Control_with_Force_Awareness_for_Contact-Rich_CVPR_2026_paper.html",
+      "checked_on": "2026-10-23",
+      "inspected_scope": "official abstract + arXiv 2603.15169v1 method and Appendix D",
+      "bounded_implication": "Hybrid force-position action and force prompts already studied; task/control differences prevent direct cross-paper effect comparison.",
+      "registry_ids": [
+        "pr-0691"
+      ],
+      "registry_match_method": "normalized exact title or source arXiv ID; other version aliases require admission review",
+      "additional_sources": [
+        "https://arxiv.org/html/2603.15169v1",
+        "https://sites.google.com/view/force-vla2/home"
+      ],
+      "registry_overviews": [
+        "2026/CVPR/2026_CVPR_ForceVLA2-Unleashing-Hybrid-Force-Position-Control-with-Fo/01_overview.md"
+      ]
+    },
+    {
+      "source_id": "S03",
+      "title": "AT-VLA: Adaptive Tactile Injection for Enhanced Feedback Reaction in Vision-Language-Action Models",
+      "publication_status": "2026 CVPR; registry venue retained, CVF endpoint inaccessible this pass",
+      "url": "https://arxiv.org/html/2605.07308v1",
+      "checked_on": "2026-10-23",
+      "inspected_scope": "sections 3, 4.2, 4.3; Tables 2 and 3",
+      "bounded_implication": "Fast tactile feedback, gated injection and missing-modality ablations already studied; some task initializations differ across baselines.",
+      "registry_ids": [
+        "pr-0690"
+      ],
+      "registry_match_method": "normalized exact title or source arXiv ID; other version aliases require admission review",
+      "additional_sources": [
+        "https://sites.google.com/view/at-vla"
+      ],
+      "registry_overviews": [
+        "2026/CVPR/2026_CVPR_AT-VLA-Adaptive-Tactile-Injection-for-Enhanced-Feedback-Re/01_overview.md"
+      ]
+    },
+    {
+      "source_id": "S04",
+      "title": "FD-VLA: Force-Distilled Vision-Language-Action Model for Contact-Rich Manipulation",
+      "publication_status": "2026 ICRA; official program + existing registry",
+      "url": "https://arxiv.org/html/2602.02142v1",
+      "checked_on": "2026-10-23",
+      "inspected_scope": "abstract; section III force-token mechanism",
+      "bounded_implication": "Training-time force supervision can be distilled into vision/state-conditioned tokens; not evidence that inference-time force is unnecessary under all mechanical shifts.",
+      "registry_ids": [
+        "pr-0185"
+      ],
+      "registry_match_method": "normalized exact title or source arXiv ID; other version aliases require admission review",
+      "additional_sources": [
+        "https://ras.papercept.net/conferences/conferences/ICRA26/program/ICRA26_ContentListWeb_5.html"
+      ],
+      "registry_overviews": [
+        "2026/ICRA/2026_ICRA_FD-VLA-Force-Distilled-Vision-Language-Action-Model-for-Co/01_overview.md"
+      ]
+    },
+    {
+      "source_id": "S05",
+      "title": "ContactBench 1.0: A Benchmark for Everyday Contact-Rich Robotic Manipulation",
+      "publication_status": "2026 arXiv; acceptance unverified",
+      "url": "https://arxiv.org/html/2610.24512v1",
+      "checked_on": "2026-10-23",
+      "inspected_scope": "sections IV, V-A through V-D, VI",
+      "bounded_implication": "Six evaluated real tasks; tactile comparison on four. No consistent ID benefit, but RDP benefits on a hidden-mechanics case. Coverage, incidental cues and single-task fine-tuning constrain interpretation.",
+      "registry_ids": [],
+      "registry_match_method": "normalized exact title or source arXiv ID; other version aliases require admission review",
+      "additional_sources": [
+        "https://jingyi-xiang.github.io/contactbench"
+      ],
+      "registry_overviews": []
+    },
+    {
+      "source_id": "S06",
+      "title": "ForceDelta-VLA: Distilling Force-Conditioned ActionCorrections for Contact-Rich Manipulation",
+      "publication_status": "2026 arXiv; acceptance unverified",
+      "url": "https://arxiv.org/abs/2609.18242",
+      "checked_on": "2026-10-23",
+      "inspected_scope": "abstract only",
+      "bounded_implication": "Distilled force-conditioned fast corrections already proposed; unlike FD-VLA this still uses recent force at execution.",
+      "registry_ids": [],
+      "registry_match_method": "normalized exact title or source arXiv ID; other version aliases require admission review",
+      "additional_sources": [],
+      "registry_overviews": []
+    },
+    {
+      "source_id": "S07",
+      "title": "Beyond Sight: Finetuning Generalist Robot Policies with Heterogeneous Sensors via Language Grounding",
+      "publication_status": "2025 arXiv; ICRA author-reported, official status not reverified",
+      "url": "https://arxiv.org/abs/2501.04693",
+      "checked_on": "2026-10-23",
+      "inspected_scope": "abstract + author project",
+      "bounded_implication": "FuSe already addresses heterogeneous sensor adaptation; generic multimodal VLA fusion is occupied.",
+      "registry_ids": [],
+      "registry_match_method": "normalized exact title or source arXiv ID; other version aliases require admission review",
+      "additional_sources": [
+        "https://fuse-model.github.io/"
+      ],
+      "registry_overviews": []
+    },
+    {
+      "source_id": "S08",
+      "title": "Simple Masked Training Strategies Yield Control Policies That Are Robust to Sensor Failure",
+      "publication_status": "CoRL 8th conference; PMLR publication 2025",
+      "url": "https://proceedings.mlr.press/v270/skand25a.html",
+      "checked_on": "2026-10-23",
+      "inspected_scope": "official abstract and bibliography",
+      "bounded_implication": "Modality-drop training and sensor-failure robustness predate a proposed VLA-specific wrapper.",
+      "registry_ids": [],
+      "registry_match_method": "normalized exact title or source arXiv ID; other version aliases require admission review",
+      "additional_sources": [],
+      "registry_overviews": []
+    },
+    {
+      "source_id": "S09",
+      "title": "DataMIL: Selecting Data for Robot Imitation Learning with Datamodels",
+      "publication_status": "2026 ICLR; official proceedings",
+      "url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/033d9e8dbbbc0ad90e59222cf1db0fc2-Abstract-Conference.html",
+      "checked_on": "2026-10-23",
+      "inspected_scope": "official abstract; arXiv 2505.09603v1 introduction",
+      "bounded_implication": "Policy-aware data selection already studied; not itself a rule choosing annotation repair versus physical collection.",
+      "registry_ids": [],
+      "registry_match_method": "normalized exact title or source arXiv ID; other version aliases require admission review",
+      "additional_sources": [
+        "https://arxiv.org/html/2505.09603v1",
+        "https://robin-lab.cs.utexas.edu/datamodels4imitation/"
+      ],
+      "registry_overviews": []
+    },
+    {
+      "source_id": "S10",
+      "title": "LangGap: Diagnosing and Closing the Language Gap in Vision-Language-Action Models",
+      "publication_status": "2026 arXiv; IROS author-reported, official program not located",
+      "url": "https://arxiv.org/html/2603.00592v1",
+      "checked_on": "2026-10-23",
+      "inspected_scope": "sections III through V",
+      "bounded_implication": "Same-layout instruction tests and targeted data already expose language dependence; generic language-neglect diagnosis is occupied.",
+      "registry_ids": [],
+      "registry_match_method": "normalized exact title or source arXiv ID; other version aliases require admission review",
+      "additional_sources": [
+        "https://github.com/YC11Hou/langgap"
+      ],
+      "registry_overviews": []
+    },
+    {
+      "source_id": "S11",
+      "title": "CounterAlign: Counterfactual Supervision for Vision-Language-Action Models",
+      "publication_status": "2026 CoRL; existing registry verification, forum inaccessible this pass",
+      "url": "https://arxiv.org/html/2608.21740v1",
+      "checked_on": "2026-10-23",
+      "inspected_scope": "sections 3.1 through 3.3",
+      "bounded_implication": "Positive-unlabeled treatment avoids equating every joint relabeling with failure; critic relabels instruction rather than inventing next states for altered actions.",
+      "registry_ids": [
+        "pr-1033"
+      ],
+      "registry_match_method": "normalized exact title or source arXiv ID; other version aliases require admission review",
+      "additional_sources": [],
+      "registry_overviews": [
+        "2026/CoRL/2026_CoRL_CounterAlign-Counterfactual-Supervision-for-Vision-Languag/01_overview.md"
+      ]
+    },
+    {
+      "source_id": "S12",
+      "title": "CAST: Counterfactual Labels Improve Instruction Following in Vision-Language-Action Models",
+      "publication_status": "2025 arXiv; acceptance unverified",
+      "url": "https://arxiv.org/html/2508.13446v1",
+      "checked_on": "2026-10-23",
+      "inspected_scope": "sections III, IV, VII; v1 only, later-version changes not audited",
+      "bounded_implication": "Atomic navigation policy generates alternative action labels; this is more than paraphrasing existing instructions and is not automatically valid for contact manipulation.",
+      "registry_ids": [],
+      "registry_match_method": "normalized exact title or source arXiv ID; other version aliases require admission review",
+      "additional_sources": [
+        "https://cast-vla.github.io/",
+        "https://github.com/catglossop/CAST"
+      ],
+      "registry_overviews": []
+    },
+    {
+      "source_id": "S13",
+      "title": "When Instructions Retrieve Trajectories: Diagnosing and Mitigating Generalization Failures in VLA Models",
+      "publication_status": "2026 arXiv; acceptance unverified",
+      "url": "https://arxiv.org/html/2609.39971v1",
+      "checked_on": "2026-10-23",
+      "inspected_scope": "sections 1, 2, 5.3; Appendix K",
+      "bounded_implication": "ECT already contrasts useful existing counterparts and new action-valid demonstrations with budget controls. Strong collision for a generic data-repair-versus-collection proposal.",
+      "registry_ids": [],
+      "registry_match_method": "normalized exact title or source arXiv ID; other version aliases require admission review",
+      "additional_sources": [],
+      "registry_overviews": []
+    },
+    {
+      "source_id": "S14",
+      "title": "When Vision Overrides Language: Evaluating and Mitigating Counterfactual Failures in VLAs",
+      "publication_status": "2026 arXiv; acceptance unverified",
+      "url": "https://arxiv.org/abs/2602.17659",
+      "checked_on": "2026-10-23",
+      "inspected_scope": "abstract, latest landing page; v2 dated July 15",
+      "bounded_implication": "LIBERO-CF and counterfactual action guidance already test alternative instructions; full method audit pending.",
+      "registry_ids": [],
+      "registry_match_method": "normalized exact title or source arXiv ID; other version aliases require admission review",
+      "additional_sources": [],
+      "registry_overviews": []
+    },
+    {
+      "source_id": "S15",
+      "title": "LIBERO-Plus: A Progressive Robustness Benchmark for Visual-Language-Action Models",
+      "publication_status": "2026 CVPR; official proceedings listing",
+      "url": "https://openaccess.thecvf.com/CVPR2026?day=2026-06-07",
+      "checked_on": "2026-10-23",
+      "inspected_scope": "title/bibliography in official daily listing; not full-text reviewed",
+      "bounded_implication": "Robustness benchmark exists; no metric or dataset role inferred beyond the verified record.",
+      "registry_ids": [],
+      "registry_match_method": "normalized exact title or source arXiv ID; other version aliases require admission review",
+      "additional_sources": [],
+      "registry_overviews": []
+    },
+    {
+      "source_id": "S16",
+      "title": "LIBERO-PRO: Towards Robust and Fair Evaluation of Vision-Language-Action Models Beyond Memorization",
+      "publication_status": "2025 arXiv; current acceptance unverified",
+      "url": "https://arxiv.org/abs/2510.03827",
+      "checked_on": "2026-10-23",
+      "inspected_scope": "abstract; ECT protocol discussion separately inspected",
+      "bounded_implication": "Memorization-sensitive evaluation already exists; perturbation correctness needs checking before reuse.",
+      "registry_ids": [],
+      "registry_match_method": "normalized exact title or source arXiv ID; other version aliases require admission review",
+      "additional_sources": [],
+      "registry_overviews": []
+    },
+    {
+      "source_id": "S17",
+      "title": "VLABench: A Large-Scale Benchmark for Language-Conditioned Robotics Manipulation with Long-Horizon Reasoning Tasks",
+      "publication_status": "2025 ICCV; official CVF",
+      "url": "https://openaccess.thecvf.com/content/ICCV2025/papers/Zhang_VLABench_A_Large-Scale_Benchmark_for_Language-Conditioned_Robotics_Manipulation_with_Long-Horizon_ICCV_2025_paper.pdf",
+      "checked_on": "2026-10-23",
+      "inspected_scope": "official PDF search excerpt, not full paper review",
+      "bounded_implication": "Language-conditioned long-horizon benchmark is established; its task or metric details require full-text review before an experiment.",
+      "registry_ids": [
+        "pr-0788"
+      ],
+      "registry_match_method": "normalized exact title or source arXiv ID; other version aliases require admission review",
+      "additional_sources": [],
+      "registry_overviews": [
+        "2025/ICCV/2025_ICCV_VLABench-A-Large-Scale-Benchmark-for-Language-Conditioned/01_overview.md"
+      ]
+    },
+    {
+      "source_id": "S18",
+      "title": "A Taxonomy for Evaluating Generalist Robot Manipulation Policies",
+      "publication_status": "2025 arXiv, updated 2026; RA-L author-reported, publisher not accessed",
+      "url": "https://arxiv.org/abs/2503.01238",
+      "checked_on": "2026-10-23",
+      "inspected_scope": "abstract and author project",
+      "bounded_implication": "STAR-Gen separates visual, semantic and behavioral generalization; a taxonomy alone is not an unoccupied gap.",
+      "registry_ids": [],
+      "registry_match_method": "normalized exact title or source arXiv ID; other version aliases require admission review",
+      "additional_sources": [
+        "https://stargen-taxonomy.github.io/"
+      ],
+      "registry_overviews": []
+    },
+    {
+      "source_id": "S19",
+      "title": "Grounding Robot Generalization in Training Data via Retrieval-Augmented VLMs",
+      "publication_status": "2026 arXiv; acceptance unverified",
+      "url": "https://arxiv.org/abs/2603.11426",
+      "checked_on": "2026-10-23",
+      "inspected_scope": "abstract + author RADAR project methods/evaluation",
+      "bounded_implication": "Training-support-aware diagnostics exist; nearest retrieved examples do not certify absence of support in the full training data.",
+      "registry_ids": [],
+      "registry_match_method": "normalized exact title or source arXiv ID; other version aliases require admission review",
+      "additional_sources": [
+        "https://radar-analysis.github.io/"
+      ],
+      "registry_overviews": []
+    },
+    {
+      "source_id": "S20",
+      "title": "Efficient Data Collection for Robotic Manipulation via Compositional Generalization",
+      "publication_status": "2024 RSS; official proceedings",
+      "url": "https://roboticsproceedings.org/rss20/p013.html",
+      "checked_on": "2026-10-23",
+      "inspected_scope": "official abstract",
+      "bounded_implication": "Compositional data collection is established; new data budgeting needs a different testable claim.",
+      "registry_ids": [],
+      "registry_match_method": "normalized exact title or source arXiv ID; other version aliases require admission review",
+      "additional_sources": [],
+      "registry_overviews": []
+    },
+    {
+      "source_id": "S21",
+      "title": "Latent Action Pretraining from Videos",
+      "publication_status": "2025 ICLR; official proceedings",
+      "url": "https://proceedings.iclr.cc/paper_files/paper/2025/hash/45d74e190008c7bff2845ffc8e3facd3-Abstract-Conference.html",
+      "checked_on": "2026-10-23",
+      "inspected_scope": "official abstract",
+      "bounded_implication": "Video-based latent action pretraining is a prior method family, not a new gap.",
+      "registry_ids": [
+        "pr-0938"
+      ],
+      "registry_match_method": "normalized exact title or source arXiv ID; other version aliases require admission review",
+      "additional_sources": [],
+      "registry_overviews": [
+        "2025/ICLR/2025_ICLR_Latent-Action-Pretraining-from-Videos/01_overview.md"
+      ]
+    },
+    {
+      "source_id": "S22",
+      "title": "What Can RL Bring to VLA Generalization? An Empirical Study",
+      "publication_status": "2025 NeurIPS; official proceedings",
+      "url": "https://proceedings.neurips.cc/paper_files/paper/2025/hash/8c0fabe372177d2aded596be2d3b4544-Abstract-Conference.html",
+      "checked_on": "2026-10-23",
+      "inspected_scope": "official abstract",
+      "bounded_implication": "RL generalization requires setting-specific interpretation; RL is not a prerequisite for the new questions.",
+      "registry_ids": [
+        "pr-0956"
+      ],
+      "registry_match_method": "normalized exact title or source arXiv ID; other version aliases require admission review",
+      "additional_sources": [],
+      "registry_overviews": [
+        "2025/NeurIPS/2025_NeurIPS_What-Can-RL-Bring-to-VLA-Generalization-An-Empirical-Study/01_overview.md"
+      ]
+    },
+    {
+      "source_id": "S23",
+      "title": "MoTo: A Zero-shot Plug-in Interaction-aware Navigation for General Mobile Manipulation",
+      "publication_status": "2025 CoRL; official PMLR",
+      "url": "https://proceedings.mlr.press/v305/wu25c.html",
+      "checked_on": "2026-10-23",
+      "inspected_scope": "official abstract",
+      "bounded_implication": "Interaction-aware docking/navigation and base-arm feasibility already studied; generic navigation-to-manipulation handoff is occupied.",
+      "registry_ids": [
+        "pr-0060"
+      ],
+      "registry_match_method": "normalized exact title or source arXiv ID; other version aliases require admission review",
+      "additional_sources": [],
+      "registry_overviews": [
+        "2025/CoRL/2025_CoRL_MoTo-A-Zero-shot-Plug-in-Interaction-aware-Navigation-for/01_overview.md"
+      ]
+    },
+    {
+      "source_id": "S24",
+      "title": "MoManipVLA: Transferring Vision-language-action Models for General Mobile Manipulation",
+      "publication_status": "2025 CVPR; existing registry, author source rechecked",
+      "url": "https://arxiv.org/abs/2503.13446",
+      "checked_on": "2026-10-23",
+      "inspected_scope": "abstract/project; CVF HTML inaccessible",
+      "bounded_implication": "Mobile transfer of manipulation VLAs is established; separate base placement from policy competence.",
+      "registry_ids": [
+        "pr-0975"
+      ],
+      "registry_match_method": "normalized exact title or source arXiv ID; other version aliases require admission review",
+      "additional_sources": [],
+      "registry_overviews": [
+        "2025/CVPR/2025_CVPR_MoManipVLA-Transferring-Vision-language-action-Models-for/01_overview.md"
+      ]
+    },
+    {
+      "source_id": "S25",
+      "title": "Robo-ABC: Affordance Generalization Beyond Categories via Semantic Correspondence for Robot Manipulation",
+      "publication_status": "2024 ECCV; official proceedings",
+      "url": "https://www.ecva.net/papers/eccv_2024/papers_ECCV/html/5748_ECCV_2024_paper.php",
+      "checked_on": "2026-10-23",
+      "inspected_scope": "official abstract",
+      "bounded_implication": "Semantic correspondence/affordance is adjacent action-relevant vision prior, not grounds for a generic 3D-plus-VLA claim.",
+      "registry_ids": [],
+      "registry_match_method": "normalized exact title or source arXiv ID; other version aliases require admission review",
+      "additional_sources": [],
+      "registry_overviews": []
+    },
+    {
+      "source_id": "S26",
+      "title": "LIBERO-Safety: A Comprehensive Benchmark for Physical and Semantic Safety in Vision-Language-Action Models",
+      "publication_status": "2026 ECCV; existing registry and author acceptance notice, official listing not independently resolved",
+      "url": "https://github.com/LIBERO-SAFETY/LIBERO-Safety",
+      "checked_on": "2026-10-23",
+      "inspected_scope": "README task suites and release status",
+      "bounded_implication": "Physical/semantic safety benchmarking is occupied; advertised collection generator is not assumed executable.",
+      "registry_ids": [
+        "pr-0259"
+      ],
+      "registry_match_method": "normalized exact title or source arXiv ID; other version aliases require admission review",
+      "additional_sources": [],
+      "registry_overviews": [
+        "2026/ECCV/2026_ECCV_LIBERO-Safety-A-Comprehensive-Benchmark-for-Physical-and-S/01_overview.md"
+      ]
+    },
+    {
+      "source_id": "S27",
+      "title": "How VLAs (Really) Work In Open-World Environments",
+      "publication_status": "2026 arXiv; IROS status unverified this pass",
+      "url": "https://arxiv.org/abs/2604.21192",
+      "checked_on": "2026-10-23",
+      "inspected_scope": "abstract",
+      "bounded_implication": "Final success can hide unsafe process behavior; generic trajectory-safety auditing is already a question in the literature.",
+      "registry_ids": [],
+      "registry_match_method": "normalized exact title or source arXiv ID; other version aliases require admission review",
+      "additional_sources": [],
+      "registry_overviews": []
+    },
+    {
+      "source_id": "S28",
+      "title": "dWorldEval: Scalable Robotic Policy Evaluation via Discrete Diffusion World Model",
+      "publication_status": "2026; ICML author-reported, official acceptance not located",
+      "url": "https://dworldeval.github.io/",
+      "checked_on": "2026-10-23",
+      "inspected_scope": "author project abstract/method overview",
+      "bounded_implication": "Policy evaluation/ranking with world models is established; full text and ranking protocol not audited.",
+      "registry_ids": [],
+      "registry_match_method": "normalized exact title or source arXiv ID; other version aliases require admission review",
+      "additional_sources": [],
+      "registry_overviews": []
+    },
+    {
+      "source_id": "S29",
+      "title": "WorldEval: World Model as Real-World Robot Policies Evaluator",
+      "publication_status": "2025/2026 version year and venue unresolved",
+      "url": "https://worldeval.github.io/",
+      "checked_on": "2026-10-23",
+      "inspected_scope": "author project overview",
+      "bounded_implication": "World-model-based policy evaluation exists; this source cannot establish a new action-ranking gap.",
+      "registry_ids": [],
+      "registry_match_method": "normalized exact title or source arXiv ID; other version aliases require admission review",
+      "additional_sources": [],
+      "registry_overviews": []
+    },
+    {
+      "source_id": "S30",
+      "title": "RoboWorld: Fast and Reliable Neural Simulators for Generalist Robot Policy Evaluation",
+      "publication_status": "2026 arXiv; acceptance unverified",
+      "url": "https://arxiv.org/abs/2607.01060",
+      "checked_on": "2026-10-23",
+      "inspected_scope": "primary abstract search result",
+      "bounded_implication": "Neural simulation for policy evaluation is a direct collision family; details pending.",
+      "registry_ids": [],
+      "registry_match_method": "normalized exact title or source arXiv ID; other version aliases require admission review",
+      "additional_sources": [],
+      "registry_overviews": []
+    },
+    {
+      "source_id": "S31",
+      "title": "DreamTrue: Action-Faithful Robot World Model with Counterfactual Post-Training",
+      "publication_status": "2026 arXiv; acceptance unverified",
+      "url": "https://arxiv.org/abs/2610.12468",
+      "checked_on": "2026-10-23",
+      "inspected_scope": "primary abstract search result",
+      "bounded_implication": "Action fidelity and counterfactual post-training already claimed; no independent reproduction.",
+      "registry_ids": [],
+      "registry_match_method": "normalized exact title or source arXiv ID; other version aliases require admission review",
+      "additional_sources": [],
+      "registry_overviews": []
+    },
+    {
+      "source_id": "S32",
+      "title": "How Should World Models Be Evaluated? A Decision-Making-Centric Position",
+      "publication_status": "2026 arXiv; acceptance unverified",
+      "url": "https://arxiv.org/abs/2606.15032",
+      "checked_on": "2026-10-23",
+      "inspected_scope": "primary abstract search result; position paper",
+      "bounded_implication": "Decision-centric world-model evaluation is already advocated; a position is not empirical validation.",
+      "registry_ids": [],
+      "registry_match_method": "normalized exact title or source arXiv ID; other version aliases require admission review",
+      "additional_sources": [],
+      "registry_overviews": []
+    },
+    {
+      "source_id": "S33",
+      "title": "Language-Driven Multi-Task Manipulation With Action-Mask-Enhanced Multimodal Learning",
+      "publication_status": "2026 RA-L; publisher-indexed metadata/abstract, page later challenged",
+      "url": "https://doi.org/10.1109/LRA.2026.3674003",
+      "checked_on": "2026-10-23",
+      "inspected_scope": "publisher search abstract; DOI resolves IEEE 11434491, full text not accessed",
+      "bounded_implication": "Action masking and subtask termination are adjacent prior work; journal coverage is partial.",
+      "registry_ids": [],
+      "registry_match_method": "normalized exact title or source arXiv ID; other version aliases require admission review",
+      "additional_sources": [],
+      "registry_overviews": []
+    },
+    {
+      "source_id": "S34",
+      "title": "Bridging language and action: A survey of language-conditioned robot manipulation",
+      "publication_status": "2026 IJRR; publisher record",
+      "url": "https://journals.sagepub.com/doi/10.1177/02783649261468360",
+      "checked_on": "2026-10-23",
+      "inspected_scope": "publisher metadata/abstract; survey discovery only",
+      "bounded_implication": "Used for taxonomy and discovery, not evidence that a particular gap remains unsolved.",
+      "registry_ids": [],
+      "registry_match_method": "normalized exact title or source arXiv ID; other version aliases require admission review",
+      "additional_sources": [],
+      "registry_overviews": []
+    },
+    {
+      "source_id": "S35",
+      "title": "Inductive Generalization for Robotic Manipulation",
+      "publication_status": "2026 arXiv; acceptance unverified",
+      "url": "https://arxiv.org/html/2606.20999v1",
+      "checked_on": "2026-10-23",
+      "inspected_scope": "introduction and section outline only",
+      "bounded_implication": "Progressive generalization difficulty is an existing evaluation direction; detailed limitations not reviewed.",
+      "registry_ids": [],
+      "registry_match_method": "normalized exact title or source arXiv ID; other version aliases require admission review",
+      "additional_sources": [],
+      "registry_overviews": []
+    },
+    {
+      "source_id": "S36",
+      "title": "ReconVLA: Reconstructive Vision-Language-Action Model as Effective Robot Perceiver",
+      "publication_status": "2026 AAAI; official proceedings",
+      "url": "https://ojs.aaai.org/index.php/AAAI/article/view/38921",
+      "checked_on": "2026-10-23",
+      "inspected_scope": "official abstract and publication metadata",
+      "bounded_implication": "Reconstruction-guided visual grounding already exists; generic visual attention repair is occupied.",
+      "registry_ids": [],
+      "registry_match_method": "normalized exact title or source arXiv ID; other version aliases require admission review",
+      "additional_sources": [],
+      "registry_overviews": []
+    },
+    {
+      "source_id": "S37",
+      "title": "Exploring the Limits of Compositional Generalization in Vision-Language-Action Manipulation",
+      "publication_status": "2026 NeurIPS official program/poster listed; proceedings publication not asserted",
+      "url": "https://neurips.cc/virtual/2026/poster/139255",
+      "checked_on": "2026-10-23",
+      "inspected_scope": "official poster abstract retrieved via HTTPS HTML; no full-text or code review",
+      "bounded_implication": "RoboCombine already diagnoses atomic-skill handoff states and proposes broader initiation support; generic composition failure is occupied.",
+      "registry_ids": [],
+      "registry_match_method": "normalized exact title or source arXiv ID; other version aliases require admission review",
+      "retrieval": "Python standard-library urllib, read-only HTML; web open endpoint failed",
+      "abstract_sha256": "81ebee488821f56bb52fdaf14087e19bc9bd187974aabd6b07c104ac0b3355ac",
+      "additional_sources": [],
+      "registry_overviews": []
+    },
+    {
+      "source_id": "S38",
+      "title": "Counterfactual Instruction Grounding for Vision-Language-Action Models",
+      "publication_status": "2026 NeurIPS official program/poster listed; proceedings publication not asserted",
+      "url": "https://neurips.cc/virtual/2026/poster/152584",
+      "checked_on": "2026-10-23",
+      "inspected_scope": "official poster abstract retrieved via HTTPS HTML; no full-text or code review",
+      "bounded_implication": "CIG already proposes contrastive counterfactual instruction grounding; generic language-aware likelihood objectives are occupied.",
+      "registry_ids": [],
+      "registry_match_method": "normalized exact title or source arXiv ID; other version aliases require admission review",
+      "retrieval": "Python standard-library urllib, read-only HTML; web open endpoint failed",
+      "abstract_sha256": "a041c521a9926a0a1a6efb1c00ddaf60708f03bedae1f266a3d7034d386d98ba",
+      "additional_sources": [],
+      "registry_overviews": []
+    },
+    {
+      "source_id": "S39",
+      "title": "Not All Features Are Created Equal: A Mechanistic Study of Vision-Language-Action Models",
+      "publication_status": "2026 NeurIPS official program/poster listed; proceedings publication not asserted",
+      "url": "https://neurips.cc/virtual/2026/poster/148883",
+      "checked_on": "2026-10-23",
+      "inspected_scope": "official poster abstract retrieved via HTTPS HTML; no full-text or code review",
+      "bounded_implication": "Mechanistic internal-state interventions already study feature use; conclusions depend on model family and task.",
+      "registry_ids": [],
+      "registry_match_method": "normalized exact title or source arXiv ID; other version aliases require admission review",
+      "retrieval": "Python standard-library urllib, read-only HTML; web open endpoint failed",
+      "abstract_sha256": "4657cb459c41715055fe41b5f555f8ba9e4743fc88c9dddb2df4d454b7d8a268",
+      "additional_sources": [],
+      "registry_overviews": []
+    },
+    {
+      "source_id": "S40",
+      "title": "CofactVLA: Deconfounding Vision-Language-Action Models via Counterfactual Intervention",
+      "publication_status": "2026 NeurIPS official program/poster listed; proceedings publication not asserted",
+      "url": "https://neurips.cc/virtual/2026/poster/153110",
+      "checked_on": "2026-10-23",
+      "inspected_scope": "official poster abstract retrieved via HTTPS HTML; no full-text or code review",
+      "bounded_implication": "CofactVLA already proposes counterfactual deconfounding; author causal interpretation not independently validated.",
+      "registry_ids": [],
+      "registry_match_method": "normalized exact title or source arXiv ID; other version aliases require admission review",
+      "retrieval": "Python standard-library urllib, read-only HTML; web open endpoint failed",
+      "abstract_sha256": "75929ff29fc8553e51d008487e4f12c5905b06c77847190a201765f7f4098b4d",
+      "additional_sources": [],
+      "registry_overviews": []
+    },
+    {
+      "source_id": "S41",
+      "title": "Say the Same, Act Differently: Text-Orthogonal Action Subspaces in Reasoning Vision-Language-Action Models",
+      "publication_status": "2026 NeurIPS official program/poster listed; proceedings publication not asserted",
+      "url": "https://neurips.cc/virtual/2026/poster/154708",
+      "checked_on": "2026-10-23",
+      "inspected_scope": "official poster abstract retrieved via HTTPS HTML; no full-text or code review",
+      "bounded_implication": "Textual rationales need not capture action-relevant hidden-state changes; generic rationale-faithfulness diagnosis is occupied.",
+      "registry_ids": [],
+      "registry_match_method": "normalized exact title or source arXiv ID; other version aliases require admission review",
+      "retrieval": "Python standard-library urllib, read-only HTML; web open endpoint failed",
+      "abstract_sha256": "a5591099d8df6a4f84c6caa61baa7e2af75ef8e561f3718548bf10ac5e1f58e2",
+      "additional_sources": [],
+      "registry_overviews": []
+    },
+    {
+      "source_id": "S42",
+      "title": "Failing Forward: Adaptive Failure-Informed Learning for Vision-Language-Action Models",
+      "publication_status": "2026 NeurIPS official program/poster listed; proceedings publication not asserted",
+      "url": "https://neurips.cc/virtual/2026/poster/155737",
+      "checked_on": "2026-10-23",
+      "inspected_scope": "official poster abstract retrieved via HTTPS HTML; no full-text or code review",
+      "bounded_implication": "AFIL already learns from failures using adaptive guidance; failure-informed learning alone is not a new contribution.",
+      "registry_ids": [],
+      "registry_match_method": "normalized exact title or source arXiv ID; other version aliases require admission review",
+      "retrieval": "Python standard-library urllib, read-only HTML; web open endpoint failed",
+      "abstract_sha256": "e9a52a19e647b5a6c23cf66bed2f7f1f398e8b2acebc7c0de684d7f5daf816de",
+      "additional_sources": [],
+      "registry_overviews": []
+    },
+    {
+      "source_id": "S43",
+      "title": "Beyond Data Scaling: Representation-Centric Pre-training for Vision-Language-Action Models",
+      "publication_status": "2026 NeurIPS official program/poster listed; proceedings publication not asserted",
+      "url": "https://neurips.cc/virtual/2026/poster/155956",
+      "checked_on": "2026-10-23",
+      "inspected_scope": "official poster abstract retrieved via HTTPS HTML; no full-text or code review",
+      "bounded_implication": "Representation-centric multi-head pretraining already targets transfer and preservation; semantic retention alone is not a new contribution.",
+      "registry_ids": [],
+      "registry_match_method": "normalized exact title or source arXiv ID; other version aliases require admission review",
+      "retrieval": "Python standard-library urllib, read-only HTML; web open endpoint failed",
+      "abstract_sha256": "237a643dd9b3847a59ba08901899b330a0187f79fb32160f2a10609acb5f1ca1",
+      "additional_sources": [],
+      "registry_overviews": []
+    },
+    {
+      "source_id": "S44",
+      "title": "OpenVLA: An Open-Source Vision-Language-Action Model",
+      "publication_status": "CoRL 2024; PMLR publication 2025",
+      "url": "https://proceedings.mlr.press/v270/kim25c.html",
+      "checked_on": "2026-10-23",
+      "inspected_scope": "official abstract and bibliography",
+      "bounded_implication": "Open VLA adaptation baseline; model availability does not establish matched experimental competence.",
+      "registry_ids": [
+        "pr-0051"
+      ],
+      "registry_match_method": "normalized exact title; version aliases require admission review",
+      "registry_overviews": [
+        "2024/CoRL/2024_CoRL_OpenVLA-An-Open-Source-Vision-Language-Action-Model/01_overview.md"
+      ],
+      "additional_sources": []
+    },
+    {
+      "source_id": "S45",
+      "title": "DROID: A Large-Scale In-The-Wild Robot Manipulation Dataset",
+      "publication_status": "2024 RSS; official proceedings",
+      "url": "https://roboticsproceedings.org/rss20/p120.html",
+      "checked_on": "2026-10-23",
+      "inspected_scope": "official abstract and bibliography",
+      "bounded_implication": "Diverse real robot demonstrations are an existing resource; language/action coverage for a specific question still needs auditing.",
+      "registry_ids": [
+        "pr-0732"
+      ],
+      "registry_match_method": "normalized exact title; version aliases require admission review",
+      "registry_overviews": [
+        "2024/RSS/2024_RSS_DROID-A-Large-Scale-In-The-Wild-Robot-Manipulation-Dataset/01_overview.md"
+      ],
+      "additional_sources": []
+    },
+    {
+      "source_id": "S46",
+      "title": "THE COLOSSEUM: A Benchmark for Evaluating Generalization for Robotic Manipulation",
+      "publication_status": "2024 RSS; official proceedings",
+      "url": "https://roboticsproceedings.org/rss20/p133.html",
+      "checked_on": "2026-10-23",
+      "inspected_scope": "official abstract and bibliography",
+      "bounded_implication": "Controlled visual and physical perturbations already benchmark generalization; generic robustness testing is not a new contribution.",
+      "registry_ids": [],
+      "registry_match_method": "normalized exact title; version aliases require admission review",
+      "registry_overviews": [],
+      "additional_sources": []
+    }
+  ],
+  "resource_only": [
+    {
+      "title": "OpenViTac",
+      "url": "https://github.com/FVL-Repo/OpenViTac",
+      "scope": "author README, benchmark scope; no formal paper status established",
+      "checked_on": "2026-10-23"
+    }
+  ],
+  "interpretation_locations": [
+    "synthesis/03_manipulation_contact.md#gap-contact-2026",
+    "synthesis/04_vla_generalist.md#gap-data-2026"
+  ],
+  "policy": {
+    "new_papers_registered": 0,
+    "reading_status_promoted": false,
+    "experiments_executed": false,
+    "local_pdf_downloads": 0,
+    "preprint_is_accepted_paper": false,
+    "secondary_lists_are_discovery_only": true
+  },
+  "counts": {
+    "paper_sources": 46,
+    "registry_matched": 13,
+    "not_matched_pending_admission_review": 33,
+    "resource_only": 1
+  },
+  "validation": {
+    "commands_passed": [
+      "python3 -m py_compile work/scripts/build_reading_tiers.py",
+      "python3 work/scripts/build_reading_tiers.py",
+      "python3 work/scripts/audit_repository.py",
+      "git diff --check"
+    ],
+    "repository_errors": 0,
+    "repository_warnings": 0,
+    "unchanged_sha256": {
+      "work/sources/papers.json": "61df569612b1ebcb886ad7c7e9eaf95a6e617ae8b261e27a372c362a7ef15774",
+      "research/READING_STATUS.csv": "ee7fb3c7b0b4c5c0ee7b4ece15d8643857c54dc8c172b1645fda5249e4a22d62",
+      "research/READING_STATUS_HISTORY.csv": "c91b6727a03529ba790447eb5106f5b04cc4364b0c90b3eed1afecf9b700e001",
+      "research/READING_TIERS.csv": "404a469fa41cecff03ad015c4cee67a6da400346524a196d4a975477a8a8123e"
+    },
+    "preexisting_dirty_worktree_preserved": true,
+    "committed_or_pushed_this_task": false
+  }
+}

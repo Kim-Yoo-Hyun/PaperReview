@@ -11,13 +11,15 @@
 - Primary track: RL, IL, offline learning, and robot data
 - Tier: REFERENCE
 - Tags: Robotics, simulation, GPU, Robot Learning, NVIDIA
-- Official paper: https://research.nvidia.com/labs/prl/publication/isaaclab2025/
+- Official paper: https://arxiv.org/abs/2511.04831
 - Full-text retrieval: https://research.nvidia.com/labs/prl/publication/isaaclab2025/
-- Code/Project: https://isaac-sim.github.io/IsaacLab/
+- Code/Project: https://github.com/isaac-sim/IsaacLab · https://isaac-sim.github.io/IsaacLab/
 - Paper type: benchmark_or_dataset
 - Source audit: full-text PDF body checked on 2026-09-03 (53 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
+
+> Metadata refresh 2026-11-06: 공식 NVIDIA publication·documentation과 repository에서 arXiv 식별자 및 code 공개를 확인했다. Technical report/arXiv 분류 유지. 아래 기존 body 검토 기록과 현재 소프트웨어 문서의 기능을 구분하며 native 재현이나 본문 재정독을 뜻하지 않는다.
 
 RL, IL, offline learning, and robot data의 benchmark 문제를 이해하기 위해 읽는다. 본문은 These limitations are especially acute in rare but safety-critical situations.를 문제로 두고, This enables large-scale data collection, systematic stress testing, and the development of algorithms that transfer more effectively to real-world systems.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
 

@@ -17,6 +17,8 @@
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (31 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
+> DOC-QA2 targeted source review: 2026-10-23; PDF pp. 4. 손상 구간·직접 연결된 표 분류만 원문 이미지와 대조했다. 전체 주장 정독·실험 검증·reading status 승격을 뜻하지 않는다. [URL·PDF hash·수정 기록](../../../work/sources/pdf_note_review_followup_2026-10-23.json).
+
 ## Why This Paper Is Here
 
 RL, IL, offline learning, and robot data의 il 문제를 이해하기 위해 읽는다. 본문은 The failures of the Nearest-Neighbor baseline, with only 0-4% success rate, show that generalization is required for this task.를 문제로 두고, In this work, we propose to reformulate BC using implicit models - specifically, the composition of argmin with a continuous energy function Eθ (see Sec.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
@@ -70,7 +72,7 @@ RL, IL, offline learning, and robot data의 il 문제를 이해하기 위해 읽
 |---|---|---|---|
 | Evaluation type | EMPIRICAL / REAL-ROBOT OR HARDWARE | do not infer unreported downstream behavior | p. 5 (Figure/Table caption), p. 6 (Figure/Table caption) |
 | Embodiment/environment | Real-world robot results, success % shown is mean +/- std.dev (20 rollouts per seed, 3 seeds = 60 trials per method per task). | hardware/simulator version and reset protocol | p. 6 (1 Introduction), p. 7 (1 Introduction) |
-| Dataset/benchmark | Standard deviations are shown in Tables 2, 3, 4, 5, 6. image human unknown multimodal Benchmark input demos cardinality solutions D4RL Human-Experts     Particle Integrator     ... | role, split, size and leakage | p. 6 (1 Introduction), p. 7 (1 Introduction), p. 4 (1 Introduction), p. 1 (Abstract) |
+| Dataset/benchmark | Table 1은 D4RL Human-Experts·Particle Integrator·Block Pushing·Planar Sweeping·Bi-Manual Sweeping·Real Robot을 image input, human demos, unknown cardinality, multimodal solutions로 구분한다. 예: D4RL Human-Experts는 human demos만, Real Robot은 image input·human demos·multimodal solutions가 체크된다. | Benchmark attributes; dataset size나 split의 근거는 아님 | PDF p. 4 Table 1 |
 | Metric | Table 6. Real-world robot results, success % shown is mean +/- std.dev (20 rollouts per seed, 3 seeds = 60 trials per method per task). Across all four tasks, we observe significantly ... | definition, denominator, direction and uncertainty | p. 6 (Figure/Table caption), p. 7 (Figure/Table caption), p. 5 (Figure/Table caption) |
 | Baseline/ablation | Table 2. Baseline comparisons on D4RL [17] tasks with human-expert data. Results shown are the average of 3 random seeds, 100 evaluations each, with ± std. dev. Baselines from [26] and [27] ... | fair input/data/compute/action matching | p. 5 (Figure/Table caption), p. 1 (Abstract), p. 1 (1 Introduction) |
 

@@ -17,6 +17,8 @@
 - Paper type: theory_or_foundation
 - Source audit: full-text PDF body checked on 2026-09-03 (14 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
+> DOC-QA2 targeted source review: 2026-10-23; PDF pp. 6. 손상 구간·직접 연결된 표 분류만 원문 이미지와 대조했다. 전체 주장 정독·실험 검증·reading status 승격을 뜻하지 않는다. [URL·PDF hash·수정 기록](../../../work/sources/pdf_note_review_followup_2026-10-23.json).
+
 ## Why This Paper Is Here
 
 RL, IL, offline learning, and robot data의 il 문제를 이해하기 위해 읽는다. 본문은 Given that learner's true goal often is to take actions imitating the expert-indeed, many IRL algorithms are evaluated on the quality of the optimal actions of the costs they learn-why, then, must ...를 문제로 두고, We show that a certain instantiation of our framework draws an analogy between imitation learning and generative adversarial networks, from which we derive a model-free imitation learning algorithm that obtains significant performance ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
@@ -40,7 +42,7 @@ RL, IL, offline learning, and robot data의 il 문제를 이해하기 위해 읽
 - **p. 4 / 2 Background - extractive body cue:** Keeping in mind that we wish to eventually develop an imitation learning algorithm suitable for large environments, we would like to relax Eq.
 - **p. 2 / 1 Introduction - extractive body cue:** networks [9], a technique from the deep learning community that has led to recent successes in modeling distributions of natural images: our algorithm harnesses generative ...
 - **p. 4 / 2 Background - extractive body cue:** For a class of cost functions C ⊂RS×A, an apprenticeship learning algorithm finds a policy that performs better than the expert across C, by optimizing ...
-- **p. 6 / 2. Form a gradient estimate with Eq. (12) with c∗ - extractive body cue:** We propose the following new cost regularizer that combines the best of both worlds, as we will show in the coming sections: ψGA(c) ≜ EπE[g(c(s, ...
+- **PDF p. 6, Eq. (13) (DOC-QA2 원문 대조):** ψ_GA(c)는 모든 위치에서 c<0일 때 expert occupancy에 대한 E[g(c(s,a))], 그 외에는 +∞다. g(x)=−x−log(1−exp(x)) for x<0, 그 외 +∞. 유한 cost 영역과 piecewise 조건을 보존한다.
 
 ## Observation, State, and Output Interface
 

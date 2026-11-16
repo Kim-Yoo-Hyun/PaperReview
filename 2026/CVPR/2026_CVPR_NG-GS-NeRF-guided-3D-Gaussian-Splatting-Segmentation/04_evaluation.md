@@ -4,6 +4,8 @@
 > Evidence maturity: `FULL_TEXT_CHECKED`.
 > Analysis basis: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openaccess.thecvf.com/content/CVPR2026/html/He_NG-GS_NeRF-guided_3D_Gaussian_Splatting_Segmentation_CVPR_2026_paper.html; PDF retrieval source: https://openaccess.thecvf.com/content/CVPR2026/papers/He_NG-GS_NeRF-guided_3D_Gaussian_Splatting_Segmentation_CVPR_2026_paper.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
+> DOC-QA1 (2026-10-23): 제어문자·깨진 추출 구간과 직접 연결된 표 항목을 PDF 페이지 이미지와 대조했다. 확인 범위·원문 URL·페이지·수정 이력은 [대조 기록](../../../work/sources/pdf_note_review_2026-10-23.json)에 있다. 노트 전체의 정독이나 모든 기존 주장에 대한 재검증을 뜻하지 않으며 reading status는 유지한다.
+
 ## Evaluation in One Sentence
 
 PDF body evaluation/result cue (p. 7 (5.3. Qualitative Results), p. 7 (5.4. Computational Efficiency Analysis), p. 6 (5.2. Quantitative Results), p. 8 (5.6. Hyper-parameter Analysis), p. 8 (5.6. Hyper-parameter Analysis), p. 3 (Figure/Table caption)): Red bounding boxes highlight key areas where our method has achieved significant improvements in boundary segmentation and spatial continuity.
@@ -137,8 +139,8 @@ PDF body evaluation/result cue (p. 7 (5.3. Qualitative Results), p. 7 (5.4. Comp
 | Method B-mIoU mAcc mIoU COB-GS [37] 52.8 80.2 61.6 Ours 59.6 84.1 64.3 Implementation details. | p. 6 (5.1. Implementation Details) |
 | To efficiently encode multi-scale spatial information, we incorporate multi-resolution hash encoding (MRHE), which enhances the representation capacity while maintaining computational efficiency. • NeRF-GS Joint ... | p. 3 (4. Method) |
 | After obtaining boundary Gaussian points, we compute their distribution range [Bmin, Bmax] on the image plane. | p. 4 (4.1. Edge Gaussian Continuity) |
-| Subsequently, we employ RBF to compute the spatial correlation weight between the query point and its neighbor Gaussian points: wi,j = exp  -∥qi ... | p. 4 (4.1. Edge Gaussian Continuity) |
-| 2 2 + wα  αgs i -αnerf i 2 + wv Var (Ri) i , (16) where B represents the set of pixels in ... | p. 5 (4.2. NeRF-GS Joint Optimization) |
+| 원문 대조: Query q_i와 K-NN Gaussian center x_j의 spatial weight는 exp(−∥q_i−x_j∥²/(2σ²))이다. 이 weight를 L1 normalization한 뒤 neighbor feature를 가중합해 interpolation feature를 만든다. ([PDF p. 4](https://openaccess.thecvf.com/content/CVPR2026/papers/He_NG-GS_NeRF-guided_3D_Gaussian_Splatting_Segmentation_CVPR_2026_paper.pdf#page=4), §4.1 RBF interpolation, Eq. (8)) | [PDF p. 4](https://openaccess.thecvf.com/content/CVPR2026/papers/He_NG-GS_NeRF-guided_3D_Gaussian_Splatting_Segmentation_CVPR_2026_paper.pdf#page=4), §4.1 RBF interpolation, Eq. (8) |
+| 원문 대조: Boundary alignment loss는 boundary pixel 집합 B에서 NeRF–3DGS의 RGB 차이, w_α로 가중한 opacity 차이, w_v로 가중한 local color variance를 합해 평균한다. 원문의 R_i는 해당 pixel 주변 7×7 block이다. ([PDF p. 5](https://openaccess.thecvf.com/content/CVPR2026/papers/He_NG-GS_NeRF-guided_3D_Gaussian_Splatting_Segmentation_CVPR_2026_paper.pdf#page=5), §4.2 Loss functions, Eq. (16)) | [PDF p. 5](https://openaccess.thecvf.com/content/CVPR2026/papers/He_NG-GS_NeRF-guided_3D_Gaussian_Splatting_Segmentation_CVPR_2026_paper.pdf#page=5), §4.2 Loss functions, Eq. (16) |
 
 | Audit field | Current status |
 |---|---|

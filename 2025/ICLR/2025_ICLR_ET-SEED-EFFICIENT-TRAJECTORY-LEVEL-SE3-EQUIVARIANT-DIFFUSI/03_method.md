@@ -4,6 +4,8 @@
 > Evidence maturity: `FULL_TEXT_CHECKED`.
 > Analysis basis: full-text PDF body checked on 2026-09-03 (19 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=OheAR2xrtb; public full-text mirror used for retrieval (canonical paper source retained): https://chatpaper.com/api/v1/articles/download/114743. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
+> DOC-QA2 targeted source review: 2026-10-23; PDF pp. 7. 손상 구간·직접 연결된 표 분류만 원문 이미지와 대조했다. 전체 주장 정독·실험 검증·reading status 승격을 뜻하지 않는다. [URL·PDF hash·수정 기록](../../../work/sources/pdf_note_review_followup_2026-10-23.json).
+
 ## Method in One Sentence
 
 PDF body method statement (p. 7 (4 METHOD), p. 4 (4 METHOD), p. 7 (4 METHOD), p. 4 (4 METHOD), p. 5 (4 METHOD), p. 6 (4 METHOD)): In each denoising step, the input of our denoising network sθ consists of observation O, noisy action sequence Ak, and scalar condition k, outputs the predicted relative transformation between Ak ...
@@ -12,7 +14,7 @@ PDF body method statement (p. 7 (4 METHOD), p. 4 (4 METHOD), p. 7 (4 METHOD), p.
 
 - **p. 7 / 4 METHOD - extractive body cue:** In each denoising step, the input of our denoising network sθ consists of observation O, noisy action sequence Ak, and scalar condition k, outputs the ...
 - **p. 4 / 4 METHOD - extractive body cue:** 2 is a general example to show how it works, given an observation and a noisy action sequence, our model first implement K -1 invariant ...
-- **p. 7 / 4 METHOD - extractive body cue:** Formally, sθ is defined as sθ(O, Ak; k) =  Einv(O, Ak; k), k > 1 Eequiv(O, Ak; k), k = 1 (9) As illustrated ...
+- **PDF p. 7, §4 / Eq. (9) (DOC-QA2 원문 대조):** Denoising network는 k>1에서 SE(3)-invariant backbone E_inv, 마지막 k=1에서 SE(3)-equivariant backbone E_equiv를 사용한다. 이는 diffusion iteration별 backbone 선택이다.
 - **p. 4 / 4 METHOD - extractive body cue:** In this paper, we propose ET-SEED, a trajectorylevel end-to-end SE(3) equivariant diffusion model for robotic manipulation.
 - **p. 5 / 4 METHOD - extractive body cue:** In this paper, based on SE(3) Transformer (Fuchs et al., 2020), we propose SE(3) equivariant backbone Eequiv and invariant backbone Einv, which are suitable for ...
 - **p. 6 / 4 METHOD - extractive body cue:** SE(3) Transformer have same network architecture, the feature types of input and output differ, resulting in different coefficient matrices in network forward.
@@ -29,7 +31,7 @@ PDF body method statement (p. 7 (4 METHOD), p. 4 (4 METHOD), p. 7 (4 METHOD), p.
 
 - **p. 7 / 4 METHOD - extractive body cue:** In each denoising step, the input of our denoising network sθ consists of observation O, noisy action sequence Ak, and scalar condition k, outputs the ...
 - **p. 4 / 4 METHOD - extractive body cue:** 2 is a general example to show how it works, given an observation and a noisy action sequence, our model first implement K -1 invariant ...
-- **p. 7 / 4 METHOD - extractive body cue:** Formally, sθ is defined as sθ(O, Ak; k) =  Einv(O, Ak; k), k > 1 Eequiv(O, Ak; k), k = 1 (9) As illustrated ...
+- **PDF p. 7, §4 / Eq. (9) (DOC-QA2 원문 대조):** Denoising network는 k>1에서 SE(3)-invariant backbone E_inv, 마지막 k=1에서 SE(3)-equivariant backbone E_equiv를 사용한다. 이는 diffusion iteration별 backbone 선택이다.
 - **p. 4 / 4 METHOD - extractive body cue:** In this paper, we propose ET-SEED, a trajectorylevel end-to-end SE(3) equivariant diffusion model for robotic manipulation.
 - **p. 5 / 4 METHOD - extractive body cue:** In this paper, based on SE(3) Transformer (Fuchs et al., 2020), we propose SE(3) equivariant backbone Eequiv and invariant backbone Einv, which are suitable for ...
 - **p. 6 / 4 METHOD - extractive body cue:** SE(3) Transformer have same network architecture, the feature types of input and output differ, resulting in different coefficient matrices in network forward.
@@ -42,14 +44,14 @@ PDF body method statement (p. 7 (4 METHOD), p. 4 (4 METHOD), p. 7 (4 METHOD), p.
 |---|---|---|---|---|---|---|
 | Multimodal task encoding | vision·language·proprioception·3D context를 결합한다 | image/video, instruction, state/history | pretrained encoder, adapter, attention, grounding 또는 fusion을 적용 | task-conditioned context | In each denoising step, the input of our denoising network sθ consists of observation O, noisy action sequence Ak, and scalar condition ... | p. 7 (4 METHOD), p. 4 (4 METHOD) |
 | Action / skill decoding | context에서 continuous action 또는 skill을 생성한다 | context와 history | autoregressive, diffusion, flow, value-guided 또는 skill decoder를 적용 | action, pose, option 또는 action chunk | 2 is a general example to show how it works, given an observation and a noisy action sequence, our model first implement ... | p. 4 (4 METHOD), p. 7 (4 METHOD) |
-| Receding execution / feedback | 예측을 부분 실행하고 다시 관측한다 | action chunk와 current observation | execute, replan, terminate, recover 또는 memory update를 수행 | next action/feedback state | Formally, sθ is defined as sθ(O, Ak; k) =  Einv(O, Ak; k), k > 1 Eequiv(O, Ak; k), k = 1 ... | p. 7 (4 METHOD), p. 4 (4 METHOD) |
+| Denoising backbone schedule | 전체 policy의 SE(3) equivariance 구성 | Observation O, noisy action sequence Aᵏ, step k | k>1: E_inv; k=1: E_equiv | Relative transformation prediction | Eq. (9)의 case 정의이며 receding-horizon feedback 실험이 아님 | PDF p. 7, §4, Eqs. (8)–(9) |
 
 - Pipeline rows are domain labels; the paper-specific operations are the extractive cues and section anchors in the same row.
 
 ## Objective / Update Rule
 
 - **p. 5 / 4 METHOD - extractive body cue:** In practice, we observe that training neural networks to approximate the properties of p2 and p3 is much more challenging compared to p1, both in ...
-- **p. 7 / 4 METHOD - extractive body cue:** Formally, sθ is defined as sθ(O, Ak; k) =  Einv(O, Ak; k), k > 1 Eequiv(O, Ak; k), k = 1 (9) As illustrated ...
+- **PDF p. 7, §4 / Eq. (9) (DOC-QA2 원문 대조):** Denoising network는 k>1에서 SE(3)-invariant backbone E_inv, 마지막 k=1에서 SE(3)-equivariant backbone E_equiv를 사용한다. 이는 diffusion iteration별 backbone 선택이다.
 - **p. 7 / 4 METHOD - extractive body cue:** 3 , the input of reverse process is an observation O, an noisy action sequence AK = [HK 0 , HK 1 , ..., HK ...
 - **p. 4 / 4 METHOD - extractive body cue:** We will discuss equivariant Markov processes further to explain the correctness and advantages of our proposed diffusion process in section 4.1 , with only one ...
 - **p. 6 / 4 METHOD - extractive body cue:** Inspired by standard diffusion model, ET-SEED progressively disturbs the noise-free action H0 ∈ SE(3) into a noisy action HK.

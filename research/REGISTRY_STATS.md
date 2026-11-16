@@ -1,43 +1,43 @@
 # Registry Statistics
 
-- Generated: 2026-10-23 KST
+- Generated: 2026-11-16 KST
 - Source: [papers.json](../work/sources/papers.json)
 - This is a generated diagnostic view; edit the manifest, tracker, or tier generator instead.
 
 ## Snapshot
 
-- Papers: **1037**
-- Resources in the combined view: **521**
-- Curated relation edges: **49**
-- Papers with outgoing relations: **40**
-- Papers participating in a relation: **60**
-- Structured evaluation profiles: **1037**
-- Reproducibility profiles: **1037**
-- Lineage coverage profiles: **1037**
-- Papers with explicit trial/seed cues: **248**
-- Papers without DOI/arXiv/OpenReview identifier: **357**
+- Papers: **1206**
+- Resources in the combined view: **658**
+- Curated relation edges: **50**
+- Papers with outgoing relations: **41**
+- Papers participating in a relation: **62**
+- Structured evaluation profiles: **1206**
+- Reproducibility profiles: **1206**
+- Lineage coverage profiles: **1206**
+- Papers with explicit trial/seed cues: **247**
+- Papers without DOI/arXiv/OpenReview identifier: **363**
 
 ## Tier
 
 | Value | Count |
 |---|---:|
-| REFERENCE | 473 |
-| NEXT | 275 |
+| REFERENCE | 509 |
+| NEXT | 405 |
 | ARCHIVE | 242 |
-| CORE | 47 |
+| CORE | 50 |
 
 ## Evidence level
 
 | Value | Count |
 |---|---:|
-| FULL_TEXT_CHECKED | 950 |
-| ABSTRACT_CHECKED | 87 |
+| FULL_TEXT_CHECKED | 968 |
+| ABSTRACT_CHECKED | 238 |
 
 ## Reading status (intensive set)
 
 | Value | Count |
 |---|---:|
-| UNREAD | 321 |
+| UNREAD | 454 |
 | READ | 1 |
 
 ## Reading status (inactive history; excluded from intensive denominator)
@@ -51,24 +51,24 @@
 
 | Value | Count |
 |---|---:|
-| recorded | 1037 |
+| recorded | 1206 |
 
 ## Curation roles
 
 | Value | Count |
 |---|---:|
-| method | 819 |
-| foundation | 114 |
-| benchmark_or_dataset | 74 |
-| system | 30 |
+| method | 945 |
+| foundation | 124 |
+| benchmark_or_dataset | 99 |
+| system | 40 |
 
 ## Publication kind
 
 | Value | Count |
 |---|---:|
-| conference | 914 |
-| journal | 67 |
-| preprint | 49 |
+| conference | 1033 |
+| journal | 84 |
+| preprint | 82 |
 | technical_report | 4 |
 | workshop | 2 |
 | other | 1 |
@@ -77,42 +77,42 @@
 
 | Value | Count |
 |---|---:|
-| identified | 680 |
-| source_only | 357 |
+| identified | 843 |
+| source_only | 363 |
 
 ## Primary source scope
 
 | Value | Count |
 |---|---:|
-| paper_specific | 994 |
+| paper_specific | 1163 |
 | venue_index | 43 |
 
 ## Code status
 
 | Value | Count |
 |---|---:|
-| not_identified | 566 |
-| project_only | 296 |
-| released | 142 |
-| not_released | 33 |
+| not_identified | 615 |
+| project_only | 309 |
+| released | 243 |
+| not_released | 39 |
 
 ## Data status
 
 | Value | Count |
 |---|---:|
-| not_identified | 870 |
+| not_identified | 1033 |
 | not_applicable | 102 |
-| released | 63 |
+| released | 69 |
 | not_released | 2 |
 
 ## Evaluation type
 
 | Value | Count |
 |---|---:|
-| EMPIRICAL / REAL-ROBOT OR HARDWARE | 448 |
+| EMPIRICAL / REAL-ROBOT OR HARDWARE | 447 |
 | EMPIRICAL / SOURCE-REPORTED EVALUATION | 274 |
+| not_recorded | 257 |
 | SYSTEM / EVALUATION SCOPE UNRESOLVED | 95 |
-| not_recorded | 87 |
 | BENCHMARK / DATASET | 69 |
 | EMPIRICAL / SIMULATION | 64 |
 
@@ -120,10 +120,10 @@
 
 | Value | Count |
 |---|---:|
-| real_robot | 448 |
+| real_robot | 447 |
 | source_reported | 274 |
+| not_recorded | 257 |
 | scope_unresolved | 95 |
-| not_recorded | 87 |
 | benchmark_or_dataset | 69 |
 | simulation | 64 |
 
@@ -131,22 +131,22 @@
 
 | Value | Count |
 |---|---:|
-| dataset_or_benchmark=reported | 949 |
-| metrics=reported | 949 |
-| statistics=reported | 941 |
-| baselines=reported | 940 |
-| split_or_generalization=reported | 928 |
-| failure_cases=reported | 928 |
-| ablations=reported | 921 |
-| trials_or_seeds=not_recorded | 789 |
-| trials_or_seeds=reported | 248 |
-| split_or_generalization=not_recorded | 109 |
-| failure_cases=not_recorded | 109 |
-| dataset_or_benchmark=not_recorded | 88 |
-| metrics=not_recorded | 87 |
-| baselines=not_recorded | 87 |
-| ablations=not_recorded | 87 |
-| statistics=not_recorded | 87 |
+| trials_or_seeds=not_recorded | 959 |
+| dataset_or_benchmark=reported | 948 |
+| metrics=reported | 948 |
+| statistics=reported | 940 |
+| baselines=reported | 939 |
+| split_or_generalization=reported | 927 |
+| failure_cases=reported | 927 |
+| ablations=reported | 920 |
+| split_or_generalization=not_recorded | 279 |
+| failure_cases=not_recorded | 279 |
+| dataset_or_benchmark=not_recorded | 258 |
+| metrics=not_recorded | 257 |
+| baselines=not_recorded | 257 |
+| ablations=not_recorded | 257 |
+| statistics=not_recorded | 257 |
+| trials_or_seeds=reported | 247 |
 | ablations=not_reported | 29 |
 | baselines=not_reported | 10 |
 | statistics=not_reported | 9 |
@@ -156,49 +156,49 @@
 
 | Value | Count |
 |---|---:|
-| metadata_audited | 1037 |
+| metadata_audited | 1206 |
 
 ## Checkpoint status
 
 | Value | Count |
 |---|---:|
-| not_recorded | 1030 |
-| reported | 7 |
+| not_recorded | 1196 |
+| reported | 10 |
 
 ## Configuration status
 
 | Value | Count |
 |---|---:|
-| reported | 950 |
-| not_recorded | 87 |
+| reported | 949 |
+| not_recorded | 257 |
 
 ## Environment status
 
 | Value | Count |
 |---|---:|
-| reported | 950 |
-| not_recorded | 87 |
+| reported | 949 |
+| not_recorded | 257 |
 
 ## Run-condition status
 
 | Value | Count |
 |---|---:|
-| reported | 941 |
-| not_recorded | 96 |
+| reported | 940 |
+| not_recorded | 266 |
 
 ## Lineage coverage status
 
 | Value | Count |
 |---|---:|
-| no_curated_edge_recorded | 709 |
-| candidate_only | 268 |
-| curated_edges | 60 |
+| no_curated_edge_recorded | 875 |
+| candidate_only | 269 |
+| curated_edges | 62 |
 
 ## Relation type
 
 | Value | Count |
 |---|---:|
-| extends | 26 |
+| extends | 27 |
 | builds_on | 13 |
 | baseline_for | 6 |
 | uses_dataset | 4 |
@@ -209,7 +209,7 @@
 |---|---:|
 | verified | 26 |
 | inferred | 18 |
-| manual | 5 |
+| manual | 6 |
 
 ## Relation evidence scope
 
@@ -217,7 +217,7 @@
 |---|---:|
 | paper_body | 28 |
 | title_lineage | 16 |
-| official_project | 3 |
+| official_project | 4 |
 | official_abstract | 2 |
 
 ## Curated relation edges
@@ -275,6 +275,7 @@ The manifest is the source of truth; this table is a compact human-readable edge
 | `pr-0931` Diffusion Meets DAgger: Supercharging Eye-in-hand Imitation Learning | `extends` | `pr-0522` A Reduction of Imitation Learning and Structured Prediction to No-Regret Online Learning | `verified` | `paper_body` |
 | `pr-0948` Habitat 2.0: Training Home Assistants to Rearrange their Habitat | `extends` | `pr-0500` Habitat: A Platform for Embodied AI Research | `inferred` | `title_lineage` |
 | `pr-0949` Habitat 3.0: A Co-Habitat for Humans, Avatars, and Robots | `extends` | `pr-0948` Habitat 2.0: Training Home Assistants to Rearrange their Habitat | `inferred` | `title_lineage` |
+| `pr-1161` GRAD-NAV++: Vision-Language Model Enabled Visual Drone Navigation With Gaussian Radiance Fields and Differentiable Dynamics | `extends` | `pr-0290` GRaD-Nav: Efficiently Learning Visual Drone Navigation with Gaussian Radiance Fields and Differentiable Dynamics | `manual` | `official_project` |
 
 ## Note evidence gaps
 

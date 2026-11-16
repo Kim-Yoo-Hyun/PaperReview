@@ -186,3 +186,7 @@ PDF body evaluation/result cue (p. 19 (Figure/Table caption), p. 4 (Figure/Table
 - **Metric evidence:** SONIC: Supersizing Motion Tracking for Natural Humanoid Whole-Body Control 4m 10m 22m 100m Frames (millions) 98.6% 98.8% 99.0% 99.2% 99.4% 99.6% 99.8% Success Rate 24.4mm 24.2mm 23.9mm 23.8mm 22.7mm 22.6mm ... (p. 4, 2.1. Motion Tracking).
 - **Baseline/ablation evidence:** For baseline comparisons, we additionally evaluated on PHUMA [43], a publicly available dataset of 3 (p. 3, 2.1. Motion Tracking).
 - **Failure/negative evidence:** Our metric, similar to [29], captured the physically meaningful failure modes such as falling. (p. 5, 2.1. Motion Tracking).
+
+## Release Boundary — 2026-11-16
+
+공식 repository의 `gear_sonic` 및 checkpoint/배포 안내를 확인했다. 과거 평가 본문을 새 release의 재현 결과로 바꾸지 않는다. 이번 검토는 코드/weights 다운로드나 실행을 하지 않았다. [공식 project](https://nvlabs.github.io/GEAR-SONIC/) · [공식 code](https://github.com/NVlabs/GR00T-WholeBodyControl).

@@ -4,6 +4,8 @@
 > Evidence maturity: `FULL_TEXT_CHECKED`.
 > Analysis basis: full-text PDF body checked on 2026-09-03 (47 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://is.mpg.de/ics/publications/ijspeert_nc_2013; PDF retrieval source: https://www.pure.ed.ac.uk/ws/portalfiles/portal/7874487/NECO_a_00393.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
+> DOC-QA2 targeted source review: 2026-10-23; PDF pp. 7. 손상 구간·직접 연결된 표 분류만 원문 이미지와 대조했다. 전체 주장 정독·실험 검증·reading status 승격을 뜻하지 않는다. [URL·PDF hash·수정 기록](../../../work/sources/pdf_note_review_followup_2026-10-23.json).
+
 ## Method in One Sentence
 
 PDF body method statement (p. 6 (2 A Learnable Nonlinear Attractor Systems), p. 4 (1 Introduction), p. 3 (1 Introduction), p. 4 (1 Introduction), p. 3 (1 Introduction), p. 6 (2 A Learnable Nonlinear Attractor Systems)): Thus, as a novel component, we introduce a replacement of time by means of the following first-order linear dynamics in x τ ˙x = -αxx, (2.2) where αx is a ...
@@ -75,7 +77,7 @@ PDF body method statement (p. 6 (2 A Learnable Nonlinear Attractor Systems), p. 
 - **p. 8 / 2 A Learnable Nonlinear Attractor Systems - extractive body cue:** As shown in the vector field plots of Figure 2, at every moment of time (represented by the phase variable x), there is an attractor ...
 - **p. 5 / 2 A Learnable Nonlinear Attractor Systems - extractive body cue:** The system needs to be able to incorporate coupling terms, for example, as typically used in synchronization studies or phase resetting studies and as needed ...
 - **p. 7 / 2 A Learnable Nonlinear Attractor Systems - extractive body cue:** Given that equation 2.2 is a linear differential equation, there exists a simple exponential function that relates time and the state x of this equation.
-- **p. 7 / 2 A Learnable Nonlinear Attractor Systems - extractive body cue:** With equation 2.2, we can reformulate our forcing term to become f (x) = N i=1 i(x)wi N i=1 i(x) x(g -y0) (2.3) with N ...
+- **PDF p. 7, Eq. (2.3) (DOC-QA2 원문 대조):** Forcing term f(x)=(ΣᵢΨᵢ(x)wᵢ/ΣᵢΨᵢ(x))·x(g−y₀). Phase x는 목표 도달 시 forcing을 소멸시키며 g−y₀는 movement amplitude scaling에 사용한다. 이 절의 전개는 g≠y₀를 가정한다.
 - **Normalized interface:** observation=joint/task state, reference와 sensor feedback; state=state estimate, task-space error와 control decision; output/action=torque, force, velocity 또는 position command.
 - Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 

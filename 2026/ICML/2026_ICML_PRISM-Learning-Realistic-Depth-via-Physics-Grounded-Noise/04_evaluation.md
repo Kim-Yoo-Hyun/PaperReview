@@ -4,6 +4,8 @@
 > Evidence maturity: `FULL_TEXT_CHECKED`.
 > Analysis basis: full-text PDF body checked on 2026-09-03 (35 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=AnofTirXgv; PDF retrieval source: https://openreview.net/pdf/9655ce373e592ae3473dc14dddd5cc2be47a3b47.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
+> DOC-QA2 targeted source review: 2026-10-23; PDF pp. 8. 손상 구간·직접 연결된 표 분류만 원문 이미지와 대조했다. 전체 주장 정독·실험 검증·reading status 승격을 뜻하지 않는다. [URL·PDF hash·수정 기록](../../../work/sources/pdf_note_review_followup_2026-10-23.json).
+
 ## Evaluation in One Sentence
 
 PDF body evaluation/result cue (p. 8 (5.3. Downstream Application Evaluation), p. 8 (Figure/Table caption), p. 7 (5.2. Depth Fidelity Evaluation), p. 9 (Figure/Table caption), p. 24 (Figure/Table caption), p. 24 (Figure/Table caption)): By physically grounding noise synthesis, PRISM forces the policy to learn compliant behaviors robust to sensor dropouts (e.g., inferring geometry from boundaries), achieving an average success rate of 92.5% and ...
@@ -58,7 +60,7 @@ PDF body evaluation/result cue (p. 8 (5.3. Downstream Application Evaluation), p
 - **p. 7 / Figure/Table caption - extractive body cue:** Table 1. Quantitative comparison of depth synthesis fidelity on ByteCameraDepth (In-Domain of Realsense D435). We evaluate three aspects: Overall Metrics (global reconstruction quality), Sensing Invalidation ...
 - **p. 7 / Figure/Table caption - extractive body cue:** Figure 5. Hardware Requirement of Downstream Evaluation. The real-world setup consists of two platforms: Franka Research 3 for specular and deformable manipulation tasks, and Realman ...
 - **p. 7 / Figure/Table caption - extractive body cue:** Table 2. Cross-camera synthesis generalization. Models trained on ByteCameraDepth are directly tested on NYU-Depth-v2 (Zero- shot in Kinect Camera) to assess robustness.
-- **p. 8 / Figure/Table caption - extractive body cue:** Table 3. Multi-task manipulation success rates with RISE policy. We evaluate 6 tasks with diverse properties: Specular (☼), Deformable (<), Articulated (), and Long-Horizon (7). ...
+- **PDF p. 8, Table 3 (DOC-QA2 원문 대조):** Table 3은 RISE로 6개 manipulation task를 평가하며 specular·deformable·articulated·long-horizon 특성을 icon으로 표시한다. 각 task 값은 3 seeds에서 20 trials당 성공 횟수의 mean±std이고, 마지막 행만 평균 성공률이다. PRISM은 평균 92.5%, Stable-S2R은 90.8%다.
 
 ## Embodiment / Environment
 
@@ -124,9 +126,9 @@ PDF body evaluation/result cue (p. 8 (5.3. Downstream Application Evaluation), p
 - **p. 6 / 5.1. Experimental Settings - extractive body cue:** Training proceeds in two phases totaling 100 epochs: first freezing the VAE and U-Net to optimize only the ControlNet, followed by joint fine-tuning where the ...
 - **p. 6 / 5.1. Experimental Settings - extractive body cue:** Inference utilizes DDIM sampling (50 steps, 9.0 scale).
 - **p. 7 / 5.1. Experimental Settings - extractive body cue:** Inaccuracy MAE ↓ RMSE ↓AbsRel ↓δ < 1.25 ↑ IoU ↑ F1 ↑ Recall ↑MAE ↓RMSE ↓Acc-δ ↑ GazeboDR 0.203 0.258 0.167 0.724 - - ...
-- **p. 8 / 5.2. Depth Fidelity Evaluation - extractive body cue:** We evaluate 6 tasks with diverse properties: Specular (☼), Deformable (<), Articulated (), and Long-Horizon (7).
+- **PDF p. 8, Table 3 (DOC-QA2 원문 대조):** Table 3은 RISE로 6개 manipulation task를 평가하며 specular·deformable·articulated·long-horizon 특성을 icon으로 표시한다. 각 task 값은 3 seeds에서 20 trials당 성공 횟수의 mean±std이고, 마지막 행만 평균 성공률이다. PRISM은 평균 92.5%, Stable-S2R은 90.8%다.
 - **p. 8 / 5.2. Depth Fidelity Evaluation - extractive body cue:** Results are reported as mean ± std across 3 random seeds (/20 trials).
-- **p. 8 / 5.2. Depth Fidelity Evaluation - extractive body cue:** Task Properties Explicit Analytical Modeling Implicit Data-Driven Modeling ☼<  7 GazeboDR DepthSynth ActiveStereo DCL-Depth Stable-S2R PRISM Can-to-Plate ✓ 18.7±0.6 20.0±0.0 20.0±0.0 20.0±0.0 20.0±0.0 20.0±0.0 ...
+- **PDF p. 8, Table 3 (DOC-QA2 원문 대조):** Table 3은 RISE로 6개 manipulation task를 평가하며 specular·deformable·articulated·long-horizon 특성을 icon으로 표시한다. 각 task 값은 3 seeds에서 20 trials당 성공 횟수의 mean±std이고, 마지막 행만 평균 성공률이다. PRISM은 평균 92.5%, Stable-S2R은 90.8%다.
 
 ## Generalization and Failure Cases
 

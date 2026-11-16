@@ -1,0 +1,1014 @@
+[
+  {
+    "admission_key": "ricl",
+    "title": "RICL: Adding In-Context Adaptability to Pre-Trained Vision-Language-Action Models",
+    "year": 2025,
+    "venue": "CoRL",
+    "category": "VLA and Generalist Robot Policies",
+    "primary_track": "VLA and generalist robot policies",
+    "page": "https://proceedings.mlr.press/v305/sridhar25a.html",
+    "project": "https://ricl-vla.github.io/",
+    "identifiers": {
+      "arxiv": "2508.02062",
+      "openreview": "6AASPlloSt"
+    },
+    "aliases": [
+      "RICL"
+    ],
+    "tags": [
+      "VLA",
+      "in-context-learning",
+      "retrieval",
+      "manipulation"
+    ],
+    "paper_type": "method",
+    "admission_group": "VLA, cross-embodiment, and long-horizon planning",
+    "problem": "사전학습 VLA가 새 시연을 문맥으로 읽는 능력을 자동으로 갖추지 못하는 문제를 다룬다.",
+    "method": "소규모 robot 시연으로 in-context 적응 능력을 후학습하고, 배포 시 관련 시연 구간을 검색해 정책 문맥에 제공한다.",
+    "interface": "현재 관측·지시와 검색된 시연 → π0-FAST 기반 정책 → 로봇 행동. ICL 능력을 만드는 후학습과 새 task에서의 무갱신 적응을 구분한다.",
+    "evaluation": "새 조작 과제의 소수 시연을 이용한 적응과 추가 fine-tuning을 비교한다. 공식 abstract의 개선 주장이며 개별 trial·split은 확인 필요다.",
+    "role": "OpenVLA·π0 계열의 후학습과 시연 검색을 잇는 직접 선행이다. 현재 bank 확장 질문에서 이미 알려진 ICL 능력·검색 이득을 신규성으로 재주장하지 않도록 NEXT로 등록한다.",
+    "lineage": "개념적 비교 경로: OpenVLA·π0 계열의 후학습과 시연 검색을 잇는 직접 선행이다. 현재 bank 확장 질문에서 이미 알려진 ICL 능력·검색 이득을 신규성으로 재주장하지 않도록 NEXT로 등록한다. 직접 citation 계보나 검증된 파생 관계를 새로 확정한 것은 아니다.",
+    "question": "같은 target 시연과 policy를 유지할 때 다른 목표 시연의 추가가 기존 과제 결과에 주는 변화는 task별 검색으로 제거되는가?",
+    "minimal_experiment": "연구자 제안: 같은 target 시연과 policy를 유지할 때 다른 목표 시연의 추가가 기존 과제 결과에 주는 변화는 task별 검색으로 제거되는가? 먼저 시연 구간·action interpolation·target-task split·검색 query와 inference 예산을 대조하고, 실행은 별도 local Docker qualification 뒤 가장 작은 paired 비교로 한정한다.",
+    "verification_questions": "시연 구간·action interpolation·target-task split·검색 query와 inference 예산",
+    "pdf": "",
+    "publication": {
+      "status": "peer_reviewed",
+      "kind": "conference",
+      "presentation": "unknown",
+      "venue": "CoRL",
+      "year": 2025,
+      "venue_year": 2025,
+      "venue_id": "corl"
+    },
+    "sources": {
+      "primary": {
+        "url": "https://proceedings.mlr.press/v305/sridhar25a.html",
+        "kind": "official_proceedings",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-02"
+      },
+      "preprint": {
+        "url": "https://arxiv.org/abs/2508.02062",
+        "kind": "arxiv",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-02"
+      },
+      "project": {
+        "url": "https://ricl-vla.github.io/",
+        "kind": "official_project",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-02"
+      },
+      "code": {
+        "url": "https://github.com/ricl-vla/ricl_openpi",
+        "kind": "official_code",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-02"
+      },
+      "paper_pdf": null,
+      "venue_verification": {
+        "url": "https://proceedings.mlr.press/v305/sridhar25a.html",
+        "kind": "official_proceedings",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-02"
+      }
+    },
+    "artifacts": {
+      "code_status": "released",
+      "data_status": "not_identified",
+      "local_pdf_cache": false
+    },
+    "evidence": "ABSTRACT_CHECKED",
+    "note_format": "abstract_analysis_v1",
+    "source_audit": "2026-11-02 공식 proceedings/publisher의 서지·abstract와 저자 project/code 소개를 확인했다. 노트는 abstract/project 기반이며 본문 정독·native 실행을 뜻하지 않는다. 사용자 읽기 상태는 UNREAD 유지.",
+    "admission_tier": "NEXT",
+    "relations": [],
+    "curation": {
+      "admission_reason": "OpenVLA·π0 계열의 후학습과 시연 검색을 잇는 직접 선행이다. 현재 bank 확장 질문에서 이미 알려진 ICL 능력·검색 이득을 신규성으로 재주장하지 않도록 NEXT로 등록한다.",
+      "tier_reason": "OpenVLA·π0 계열의 후학습과 시연 검색을 잇는 직접 선행이다. 현재 bank 확장 질문에서 이미 알려진 ICL 능력·검색 이득을 신규성으로 재주장하지 않도록 NEXT로 등록한다.",
+      "rationale_status": "recorded",
+      "rationale_basis": "2026-11-02 targeted official top-tier gap supplement; researcher interpretation",
+      "rationale_reviewed_on": "2026-11-02",
+      "scope_status": "active",
+      "roles": [
+        "method"
+      ],
+      "role_basis": "manual admission review",
+      "priority_source_check": {
+        "url": "https://proceedings.mlr.press/v305/sridhar25a.html",
+        "checked_on": "2026-11-02",
+        "scope": "official_abstract_or_project; priority review only"
+      }
+    }
+  },
+  {
+    "admission_key": "memer",
+    "title": "Scaling up Memory for Robotic Control via Experience Retrieval",
+    "year": 2026,
+    "venue": "ICLR",
+    "category": "VLA and Generalist Robot Policies",
+    "primary_track": "VLA and generalist robot policies",
+    "page": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/9da515b1ad19d032a7398f00f5ff9b0c-Abstract-Conference.html",
+    "project": "https://jen-pan.github.io/memer/",
+    "identifiers": {
+      "arxiv": "2510.20328"
+    },
+    "aliases": [
+      "MemER",
+      "MemER: Scaling Up Memory for Robot Control via Experience Retrieval"
+    ],
+    "tags": [
+      "VLA",
+      "episodic-memory",
+      "hierarchical-control",
+      "long-horizon"
+    ],
+    "paper_type": "method",
+    "admission_group": "VLA, cross-embodiment, and long-horizon planning",
+    "problem": "긴 관측 이력을 모두 처리하는 비용과 무차별 subsampling의 정보 손실을 함께 다룬다.",
+    "method": "상위 정책이 과거의 중요한 keyframe을 선택·추적하고 최근 관측과 함께 하위 정책용 지시를 만든다.",
+    "interface": "이력 keyframe·현재 관측·task → 상위 언어 지시 → π0.5 하위 조작 정책. Episode 내 기억과 외부 시연 bank는 다른 정보원이다.",
+    "evaluation": "수분 동안의 기억이 필요한 실제 로봇 조작 과제 3개에서 비교한다. 프로젝트의 object search·counting·dust-and-replace는 task 설명이며 독립 재현 결과가 아니다.",
+    "role": "MemoryVLA와 계층 정책의 관계를 구체화하는 NEXT다. 외부 시연 검색과 실행 중 기억을 구분하고 SET의 counting 선행을 보완한다.",
+    "lineage": "개념적 비교 경로: MemoryVLA와 계층 정책의 관계를 구체화하는 NEXT다. 외부 시연 검색과 실행 중 기억을 구분하고 SET의 counting 선행을 보완한다. 직접 citation 계보나 검증된 파생 관계를 새로 확정한 것은 아니다.",
+    "question": "동일한 이력 접근과 입력 token 예산에서 선택 keyframe의 이득은 단순 시간 subsampling 이후에도 남는가?",
+    "minimal_experiment": "연구자 제안: 동일한 이력 접근과 입력 token 예산에서 선택 keyframe의 이득은 단순 시간 subsampling 이후에도 남는가? 먼저 선택 supervision·실패 후 이력 분포·최근 frame 예산. 공식 proceedings는 Qwen 7B, project는 3B로 표기하므로 backbone 크기는 version 확인 필요을 대조하고, 실행은 별도 local Docker qualification 뒤 가장 작은 paired 비교로 한정한다.",
+    "verification_questions": "선택 supervision·실패 후 이력 분포·최근 frame 예산. 공식 proceedings는 Qwen 7B, project는 3B로 표기하므로 backbone 크기는 version 확인 필요",
+    "pdf": "",
+    "publication": {
+      "status": "peer_reviewed",
+      "kind": "conference",
+      "presentation": "unknown",
+      "venue": "ICLR",
+      "year": 2026,
+      "venue_year": 2026,
+      "venue_id": "iclr"
+    },
+    "sources": {
+      "primary": {
+        "url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/9da515b1ad19d032a7398f00f5ff9b0c-Abstract-Conference.html",
+        "kind": "official_proceedings",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-02"
+      },
+      "preprint": {
+        "url": "https://arxiv.org/abs/2510.20328",
+        "kind": "arxiv",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-02"
+      },
+      "project": {
+        "url": "https://jen-pan.github.io/memer/",
+        "kind": "official_project",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-02"
+      },
+      "code": {
+        "url": "https://github.com/memer-policy/memer",
+        "kind": "official_code",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-02"
+      },
+      "paper_pdf": null,
+      "venue_verification": {
+        "url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/9da515b1ad19d032a7398f00f5ff9b0c-Abstract-Conference.html",
+        "kind": "official_proceedings",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-02"
+      }
+    },
+    "artifacts": {
+      "code_status": "released",
+      "data_status": "not_identified",
+      "local_pdf_cache": false
+    },
+    "evidence": "ABSTRACT_CHECKED",
+    "note_format": "abstract_analysis_v1",
+    "source_audit": "2026-11-02 공식 proceedings/publisher의 서지·abstract와 저자 project/code 소개를 확인했다. 노트는 abstract/project 기반이며 본문 정독·native 실행을 뜻하지 않는다. 사용자 읽기 상태는 UNREAD 유지.",
+    "admission_tier": "NEXT",
+    "relations": [],
+    "curation": {
+      "admission_reason": "MemoryVLA와 계층 정책의 관계를 구체화하는 NEXT다. 외부 시연 검색과 실행 중 기억을 구분하고 SET의 counting 선행을 보완한다.",
+      "tier_reason": "MemoryVLA와 계층 정책의 관계를 구체화하는 NEXT다. 외부 시연 검색과 실행 중 기억을 구분하고 SET의 counting 선행을 보완한다.",
+      "rationale_status": "recorded",
+      "rationale_basis": "2026-11-02 targeted official top-tier gap supplement; researcher interpretation",
+      "rationale_reviewed_on": "2026-11-02",
+      "scope_status": "active",
+      "roles": [
+        "method"
+      ],
+      "role_basis": "manual admission review",
+      "priority_source_check": {
+        "url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/9da515b1ad19d032a7398f00f5ff9b0c-Abstract-Conference.html",
+        "checked_on": "2026-11-02",
+        "scope": "official_abstract_or_project; priority review only"
+      }
+    }
+  },
+  {
+    "admission_key": "libero_x",
+    "title": "LIBERO-X: Robustness Litmus for Vision-Language-Action Models",
+    "year": 2026,
+    "venue": "RSS",
+    "category": "Benchmarks and Datasets",
+    "primary_track": "VLA and generalist robot policies",
+    "page": "https://roboticsproceedings.org/rss22/p097.html",
+    "project": "https://meituan.github.io/LIBERO-X/",
+    "identifiers": {
+      "arxiv": "2602.06556",
+      "doi": "10.15607/RSS.2026.XXII.097"
+    },
+    "aliases": [
+      "LIBERO-X"
+    ],
+    "tags": [
+      "VLA",
+      "benchmark",
+      "robustness",
+      "instruction-grounding"
+    ],
+    "paper_type": "benchmark_or_dataset",
+    "admission_group": "VLA, cross-embodiment, and long-horizon planning",
+    "problem": "단일 교란이나 균질한 장면만으로 평가하면 VLA의 공간·물체·지시 일반화 한계를 가릴 수 있다.",
+    "method": "난이도별 복합 교란 평가와 장면당 여러 조작 목표를 포함하는 teleoperation 데이터를 결합한 benchmark를 제시한다.",
+    "interface": "공간 배치·물체 속성·지시 표현을 바꾼 관측과 task → VLA 행동 → 다차원 label별 평가.",
+    "evaluation": "대표 VLA를 누적 교란 조건에서 비교한다. 공개 project는 training 2,520 demonstrations·600 tasks·100 scenes를 명시한다. 이를 test trial 수와 혼동하지 않는다.",
+    "role": "LIBERO·LIBERO-Plus·VLABench 이후 복합 shift와 목표 다양성을 비교할 NEXT benchmark다. 같은 scene의 다른 goal을 다루는 연구에서 기존 평가 범위를 확인하는 데 필요하다.",
+    "lineage": "개념적 비교 경로: LIBERO·LIBERO-Plus·VLABench 이후 복합 shift와 목표 다양성을 비교할 NEXT benchmark다. 같은 scene의 다른 goal을 다루는 연구에서 기존 평가 범위를 확인하는 데 필요하다. 직접 citation 계보나 검증된 파생 관계를 새로 확정한 것은 아니다.",
+    "question": "동일 scene·target support에서 시각 교란과 의미상 같은 지시 변형이 검색 선택과 실제 성공에 주는 영향을 분리할 수 있는가?",
+    "minimal_experiment": "연구자 제안: 동일 scene·target support에서 시각 교란과 의미상 같은 지시 변형이 검색 선택과 실제 성공에 주는 영향을 분리할 수 있는가? 먼저 train/evaluation scene 중복·difficulty별 sample 수·실제 init state 공개 범위·predicate 정의을 대조하고, 실행은 별도 local Docker qualification 뒤 가장 작은 paired 비교로 한정한다.",
+    "verification_questions": "train/evaluation scene 중복·difficulty별 sample 수·실제 init state 공개 범위·predicate 정의",
+    "pdf": "",
+    "publication": {
+      "status": "peer_reviewed",
+      "kind": "conference",
+      "presentation": "unknown",
+      "venue": "RSS",
+      "year": 2026,
+      "venue_year": 2026,
+      "venue_id": "rss"
+    },
+    "sources": {
+      "primary": {
+        "url": "https://roboticsproceedings.org/rss22/p097.html",
+        "kind": "official_proceedings",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-02"
+      },
+      "preprint": {
+        "url": "https://arxiv.org/abs/2602.06556",
+        "kind": "arxiv",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-02"
+      },
+      "project": {
+        "url": "https://meituan.github.io/LIBERO-X/",
+        "kind": "official_project",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-02"
+      },
+      "code": {
+        "url": "https://github.com/meituan/LIBERO-X",
+        "kind": "official_code",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-02"
+      },
+      "paper_pdf": null,
+      "venue_verification": {
+        "url": "https://roboticsproceedings.org/rss22/p097.html",
+        "kind": "official_proceedings",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-02"
+      }
+    },
+    "artifacts": {
+      "code_status": "released",
+      "data_status": "released",
+      "local_pdf_cache": false
+    },
+    "evidence": "ABSTRACT_CHECKED",
+    "note_format": "abstract_analysis_v1",
+    "source_audit": "2026-11-02 공식 proceedings/publisher의 서지·abstract와 저자 project/code 소개를 확인했다. 노트는 abstract/project 기반이며 본문 정독·native 실행을 뜻하지 않는다. 사용자 읽기 상태는 UNREAD 유지.",
+    "admission_tier": "NEXT",
+    "relations": [],
+    "curation": {
+      "admission_reason": "LIBERO·LIBERO-Plus·VLABench 이후 복합 shift와 목표 다양성을 비교할 NEXT benchmark다. 같은 scene의 다른 goal을 다루는 연구에서 기존 평가 범위를 확인하는 데 필요하다.",
+      "tier_reason": "LIBERO·LIBERO-Plus·VLABench 이후 복합 shift와 목표 다양성을 비교할 NEXT benchmark다. 같은 scene의 다른 goal을 다루는 연구에서 기존 평가 범위를 확인하는 데 필요하다.",
+      "rationale_status": "recorded",
+      "rationale_basis": "2026-11-02 targeted official top-tier gap supplement; researcher interpretation",
+      "rationale_reviewed_on": "2026-11-02",
+      "scope_status": "active",
+      "roles": [
+        "benchmark_or_dataset"
+      ],
+      "role_basis": "manual admission review",
+      "priority_source_check": {
+        "url": "https://roboticsproceedings.org/rss22/p097.html",
+        "checked_on": "2026-11-02",
+        "scope": "official_abstract_or_project; priority review only"
+      }
+    }
+  },
+  {
+    "admission_key": "cotraining",
+    "title": "A Systematic Study of Data Modalities and Strategies for Co-training Large Behavior Models for Robot Manipulation",
+    "year": 2026,
+    "venue": "RSS",
+    "category": "Robot Learning and Data",
+    "primary_track": "RL, IL, offline learning, and robot data",
+    "page": "https://roboticsproceedings.org/rss22/p007.html",
+    "project": "https://co-training-lbm.github.io/",
+    "identifiers": {
+      "arxiv": "2602.01067",
+      "doi": "10.15607/RSS.2026.XXII.007"
+    },
+    "aliases": [],
+    "tags": [
+      "VLA",
+      "co-training",
+      "robot-data",
+      "generalization"
+    ],
+    "paper_type": "method",
+    "admission_group": "RL, IL, offline learning, and robot data",
+    "problem": "이종 데이터의 종류와 섞는 학습 단계가 로봇 일반화에 어떤 차이를 만드는지 체계적으로 검토한다.",
+    "method": "vision-language 자료·robot 언어 annotation·다른 embodiment 데이터·human video·이산 action token을 여러 co-training 전략으로 비교한다.",
+    "interface": "여러 modality의 supervision → 공통 VLA 학습 → 목표 로봇 조작. Test-time context 교체와 training-data 혼합은 구분한다.",
+    "evaluation": "공식 abstract는 89개 정책을 simulation과 실제 로봇에서 평가했다고 보고한다. 모든 modality가 유익하다는 결론은 아니며 이산 action-token 변형의 이득은 해당 비교에서 유의하지 않았다.",
+    "role": "Open X-Embodiment·DataMIL·ReMix 이후 데이터 양과 종류의 효과를 분리하는 NEXT 실증 기준이다. 새로운 아키텍처보다 데이터 구성이라는 단순 대안을 먼저 검토하게 한다.",
+    "lineage": "개념적 비교 경로: Open X-Embodiment·DataMIL·ReMix 이후 데이터 양과 종류의 효과를 분리하는 NEXT 실증 기준이다. 새로운 아키텍처보다 데이터 구성이라는 단순 대안을 먼저 검토하게 한다. 직접 citation 계보나 검증된 파생 관계를 새로 확정한 것은 아니다.",
+    "question": "동일 robot-data·학습 compute 예산에서 추가 modality의 이득은 언어 grounding 개선과 action coverage 확대 중 어느 조건에 따라 달라지는가?",
+    "minimal_experiment": "연구자 제안: 동일 robot-data·학습 compute 예산에서 추가 modality의 이득은 언어 grounding 개선과 action coverage 확대 중 어느 조건에 따라 달라지는가? 먼저 modality별 token/compute 균형·학습 단계·동일 task split·negative result의 적용 범위을 대조하고, 실행은 별도 local Docker qualification 뒤 가장 작은 paired 비교로 한정한다.",
+    "verification_questions": "modality별 token/compute 균형·학습 단계·동일 task split·negative result의 적용 범위",
+    "pdf": "",
+    "publication": {
+      "status": "peer_reviewed",
+      "kind": "conference",
+      "presentation": "unknown",
+      "venue": "RSS",
+      "year": 2026,
+      "venue_year": 2026,
+      "venue_id": "rss"
+    },
+    "sources": {
+      "primary": {
+        "url": "https://roboticsproceedings.org/rss22/p007.html",
+        "kind": "official_proceedings",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-02"
+      },
+      "preprint": {
+        "url": "https://arxiv.org/abs/2602.01067",
+        "kind": "arxiv",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-02"
+      },
+      "project": {
+        "url": "https://co-training-lbm.github.io/",
+        "kind": "official_project",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-02"
+      },
+      "code": null,
+      "paper_pdf": null,
+      "venue_verification": {
+        "url": "https://roboticsproceedings.org/rss22/p007.html",
+        "kind": "official_proceedings",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-02"
+      }
+    },
+    "artifacts": {
+      "code_status": "project_only",
+      "data_status": "not_identified",
+      "local_pdf_cache": false
+    },
+    "evidence": "ABSTRACT_CHECKED",
+    "note_format": "abstract_analysis_v1",
+    "source_audit": "2026-11-02 공식 proceedings/publisher의 서지·abstract와 저자 project/code 소개를 확인했다. 노트는 abstract/project 기반이며 본문 정독·native 실행을 뜻하지 않는다. 사용자 읽기 상태는 UNREAD 유지.",
+    "admission_tier": "NEXT",
+    "relations": [],
+    "curation": {
+      "admission_reason": "Open X-Embodiment·DataMIL·ReMix 이후 데이터 양과 종류의 효과를 분리하는 NEXT 실증 기준이다. 새로운 아키텍처보다 데이터 구성이라는 단순 대안을 먼저 검토하게 한다.",
+      "tier_reason": "Open X-Embodiment·DataMIL·ReMix 이후 데이터 양과 종류의 효과를 분리하는 NEXT 실증 기준이다. 새로운 아키텍처보다 데이터 구성이라는 단순 대안을 먼저 검토하게 한다.",
+      "rationale_status": "recorded",
+      "rationale_basis": "2026-11-02 targeted official top-tier gap supplement; researcher interpretation",
+      "rationale_reviewed_on": "2026-11-02",
+      "scope_status": "active",
+      "roles": [
+        "method"
+      ],
+      "role_basis": "manual admission review",
+      "priority_source_check": {
+        "url": "https://roboticsproceedings.org/rss22/p007.html",
+        "checked_on": "2026-11-02",
+        "scope": "official_abstract_or_project; priority review only"
+      }
+    }
+  },
+  {
+    "admission_key": "human_transfer",
+    "title": "Emergence of Human to Robot Transfer in Vision-Language-Action Models",
+    "year": 2026,
+    "venue": "RSS",
+    "category": "Robot Learning and Data",
+    "primary_track": "RL, IL, offline learning, and robot data",
+    "page": "https://roboticsproceedings.org/rss22/p072.html",
+    "project": "not identified",
+    "identifiers": {
+      "arxiv": "2512.22414",
+      "doi": "10.15607/RSS.2026.XXII.072"
+    },
+    "aliases": [],
+    "tags": [
+      "VLA",
+      "human-video",
+      "cross-embodiment",
+      "data-scaling"
+    ],
+    "paper_type": "method",
+    "admission_group": "RL, IL, offline learning, and robot data",
+    "problem": "사람 영상의 지식이 로봇 행동으로 전이되려면 어떤 사전학습 조건이 필요한지 묻는다.",
+    "method": "Human video와 robot data를 함께 학습하며 robot 사전학습의 scene·task·embodiment 다양성과 전이의 관계를 조사한다.",
+    "interface": "사람/로봇 경험 → VLA co-training → 사람 자료에서만 본 조건의 로봇 행동. 다양성 조건의 관찰을 모든 로봇에 대한 전이 보장으로 확대하지 않는다.",
+    "evaluation": "사전학습의 다양성을 달리하며 human-only generalization 조건을 평가한다. Abstract는 충분히 다양한 robot 사전학습 이후의 전이 이득을 보고한다.",
+    "role": "Open X-Embodiment와 사람 영상 기반 로봇 학습을 잇는 NEXT 데이터 조건 연구다. Cross-embodiment 전이를 보편적 성질로 가정하지 않도록 비교 기준을 추가한다.",
+    "lineage": "개념적 비교 경로: Open X-Embodiment와 사람 영상 기반 로봇 학습을 잇는 NEXT 데이터 조건 연구다. Cross-embodiment 전이를 보편적 성질로 가정하지 않도록 비교 기준을 추가한다. 직접 citation 계보나 검증된 파생 관계를 새로 확정한 것은 아니다.",
+    "question": "목표 robot 데이터량을 고정했을 때 human-data 이득의 변화는 scene/task 다양성과 embodiment 다양성을 각각 통제해도 남는가?",
+    "minimal_experiment": "연구자 제안: 목표 robot 데이터량을 고정했을 때 human-data 이득의 변화는 scene/task 다양성과 embodiment 다양성을 각각 통제해도 남는가? 먼저 다양성 대 데이터량 분리·사람 행동 supervision 생성·평가 task 누출·동일 compute을 대조하고, 실행은 별도 local Docker qualification 뒤 가장 작은 paired 비교로 한정한다.",
+    "verification_questions": "다양성 대 데이터량 분리·사람 행동 supervision 생성·평가 task 누출·동일 compute",
+    "pdf": "",
+    "publication": {
+      "status": "peer_reviewed",
+      "kind": "conference",
+      "presentation": "unknown",
+      "venue": "RSS",
+      "year": 2026,
+      "venue_year": 2026,
+      "venue_id": "rss"
+    },
+    "sources": {
+      "primary": {
+        "url": "https://roboticsproceedings.org/rss22/p072.html",
+        "kind": "official_proceedings",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-02"
+      },
+      "preprint": {
+        "url": "https://arxiv.org/abs/2512.22414",
+        "kind": "arxiv",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-02"
+      },
+      "project": null,
+      "code": null,
+      "paper_pdf": null,
+      "venue_verification": {
+        "url": "https://roboticsproceedings.org/rss22/p072.html",
+        "kind": "official_proceedings",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-02"
+      }
+    },
+    "artifacts": {
+      "code_status": "not_identified",
+      "data_status": "not_identified",
+      "local_pdf_cache": false
+    },
+    "evidence": "ABSTRACT_CHECKED",
+    "note_format": "abstract_analysis_v1",
+    "source_audit": "2026-11-02 공식 proceedings/publisher의 서지·abstract와 저자 project/code 소개를 확인했다. 노트는 abstract/project 기반이며 본문 정독·native 실행을 뜻하지 않는다. 사용자 읽기 상태는 UNREAD 유지.",
+    "admission_tier": "NEXT",
+    "relations": [],
+    "curation": {
+      "admission_reason": "Open X-Embodiment와 사람 영상 기반 로봇 학습을 잇는 NEXT 데이터 조건 연구다. Cross-embodiment 전이를 보편적 성질로 가정하지 않도록 비교 기준을 추가한다.",
+      "tier_reason": "Open X-Embodiment와 사람 영상 기반 로봇 학습을 잇는 NEXT 데이터 조건 연구다. Cross-embodiment 전이를 보편적 성질로 가정하지 않도록 비교 기준을 추가한다.",
+      "rationale_status": "recorded",
+      "rationale_basis": "2026-11-02 targeted official top-tier gap supplement; researcher interpretation",
+      "rationale_reviewed_on": "2026-11-02",
+      "scope_status": "active",
+      "roles": [
+        "method"
+      ],
+      "role_basis": "manual admission review",
+      "priority_source_check": {
+        "url": "https://roboticsproceedings.org/rss22/p072.html",
+        "checked_on": "2026-11-02",
+        "scope": "official_abstract_or_project; priority review only"
+      }
+    }
+  },
+  {
+    "admission_key": "legato",
+    "title": "Learning Native Continuation for Action Chunking Flow Policies",
+    "year": 2026,
+    "venue": "RSS",
+    "category": "VLA and Generalist Robot Policies",
+    "primary_track": "VLA and generalist robot policies",
+    "page": "https://roboticsproceedings.org/rss22/p058.html",
+    "project": "https://lyfeng001.github.io/Legato/",
+    "identifiers": {
+      "arxiv": "2602.12978",
+      "doi": "10.15607/RSS.2026.XXII.058"
+    },
+    "aliases": [
+      "Legato"
+    ],
+    "tags": [
+      "VLA",
+      "action-chunking",
+      "flow-policy",
+      "real-time-control"
+    ],
+    "paper_type": "method",
+    "admission_group": "VLA, cross-embodiment, and long-horizon planning",
+    "problem": "Action chunk 경계의 불연속과 multimodal switching이 로봇 동작을 지연시키는 문제를 다룬다.",
+    "method": "알려진 action과 noise를 섞는 schedule 및 flow 학습을 통해 chunk continuation을 정책 자체가 익히게 한다.",
+    "interface": "관측·이전 action 정보·continuation schedule → flow action chunk → 실행. Inference-time RTC와 학습된 continuation을 구분한다.",
+    "evaluation": "다섯 실제 조작 과제에서 RTC와 비교해 동작 smoothness와 완료 시간을 평가한다. 공개 코드 링크는 Kinetix simulation 범위이며 전체 실기 경로 공개를 뜻하지 않는다.",
+    "role": "ACT·Diffusion Policy와 RTC 이후 action interface를 이해할 NEXT다. Chunk queue나 지연으로 생긴 차이를 새로운 지시 이해/검색 효과로 혼동하지 않게 한다.",
+    "lineage": "개념적 비교 경로: ACT·Diffusion Policy와 RTC 이후 action interface를 이해할 NEXT다. Chunk queue나 지연으로 생긴 차이를 새로운 지시 이해/검색 효과로 혼동하지 않게 한다. 직접 citation 계보나 검증된 파생 관계를 새로 확정한 것은 아니다.",
+    "question": "같은 추론 지연과 action budget에서 continuation 이득이 smoothness를 넘어 task success에도 유지되는가?",
+    "minimal_experiment": "연구자 제안: 같은 추론 지연과 action budget에서 continuation 이득이 smoothness를 넘어 task success에도 유지되는가? 먼저 schedule·delay 분포·실기 controller·성공/시간 trade-off·Kinetix와 실기 구현 차이을 대조하고, 실행은 별도 local Docker qualification 뒤 가장 작은 paired 비교로 한정한다.",
+    "verification_questions": "schedule·delay 분포·실기 controller·성공/시간 trade-off·Kinetix와 실기 구현 차이",
+    "pdf": "",
+    "publication": {
+      "status": "peer_reviewed",
+      "kind": "conference",
+      "presentation": "unknown",
+      "venue": "RSS",
+      "year": 2026,
+      "venue_year": 2026,
+      "venue_id": "rss"
+    },
+    "sources": {
+      "primary": {
+        "url": "https://roboticsproceedings.org/rss22/p058.html",
+        "kind": "official_proceedings",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-02"
+      },
+      "preprint": {
+        "url": "https://arxiv.org/abs/2602.12978",
+        "kind": "arxiv",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-02"
+      },
+      "project": {
+        "url": "https://lyfeng001.github.io/Legato/",
+        "kind": "official_project",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-02"
+      },
+      "code": {
+        "url": "https://github.com/lyfeng001/Legato-kinetix",
+        "kind": "official_code",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-02"
+      },
+      "paper_pdf": null,
+      "venue_verification": {
+        "url": "https://roboticsproceedings.org/rss22/p058.html",
+        "kind": "official_proceedings",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-02"
+      }
+    },
+    "artifacts": {
+      "code_status": "released",
+      "data_status": "not_identified",
+      "local_pdf_cache": false
+    },
+    "evidence": "ABSTRACT_CHECKED",
+    "note_format": "abstract_analysis_v1",
+    "source_audit": "2026-11-02 공식 proceedings/publisher의 서지·abstract와 저자 project/code 소개를 확인했다. 노트는 abstract/project 기반이며 본문 정독·native 실행을 뜻하지 않는다. 사용자 읽기 상태는 UNREAD 유지.",
+    "admission_tier": "NEXT",
+    "relations": [],
+    "curation": {
+      "admission_reason": "ACT·Diffusion Policy와 RTC 이후 action interface를 이해할 NEXT다. Chunk queue나 지연으로 생긴 차이를 새로운 지시 이해/검색 효과로 혼동하지 않게 한다.",
+      "tier_reason": "ACT·Diffusion Policy와 RTC 이후 action interface를 이해할 NEXT다. Chunk queue나 지연으로 생긴 차이를 새로운 지시 이해/검색 효과로 혼동하지 않게 한다.",
+      "rationale_status": "recorded",
+      "rationale_basis": "2026-11-02 targeted official top-tier gap supplement; researcher interpretation",
+      "rationale_reviewed_on": "2026-11-02",
+      "scope_status": "active",
+      "roles": [
+        "method"
+      ],
+      "role_basis": "manual admission review",
+      "priority_source_check": {
+        "url": "https://roboticsproceedings.org/rss22/p058.html",
+        "checked_on": "2026-11-02",
+        "scope": "official_abstract_or_project; priority review only"
+      }
+    }
+  },
+  {
+    "admission_key": "dejavu",
+    "title": "Dejavu: Towards Experience Feedback Learning for Embodied Intelligence",
+    "year": 2026,
+    "venue": "CVPR",
+    "category": "Robot Learning and Data",
+    "primary_track": "RL, IL, offline learning, and robot data",
+    "page": "https://openaccess.thecvf.com/content/CVPR2026/html/Wu_Dejavu_Towards_Experience_Feedback_Learning_for_Embodied_Intelligence_CVPR_2026_paper.html",
+    "project": "https://dejavu2025.github.io/",
+    "identifiers": {
+      "arxiv": "2510.10181"
+    },
+    "aliases": [
+      "Dejavu",
+      "EFN"
+    ],
+    "tags": [
+      "VLA",
+      "residual-RL",
+      "experience-retrieval",
+      "post-deployment"
+    ],
+    "paper_type": "method",
+    "admission_group": "RL, IL, offline learning, and robot data",
+    "problem": "고정 VLA가 배포 후 쌓이는 경험을 행동 개선에 사용하는 경로를 다룬다.",
+    "method": "검색한 경험을 조건으로 residual action을 내는 EFN을 RL로 학습하고, 배포 중 성공 trajectory를 경험 bank에 추가한다.",
+    "interface": "현재 관측·지시·검색 경험과 base VLA action → EFN 보정 → 실행. Base parameter 고정이 전체 시스템 무학습을 뜻하지 않는다.",
+    "evaluation": "공식 abstract와 author project는 여러 embodied task 및 실제 조작 사례를 보고한다. 정량 성과·matched bank의 범위는 본문 확인 전 확정하지 않는다.",
+    "role": "Residual RL과 retrieval의 직접 결합이므로 NEXT에 추가한다. Bank 성장·frozen backbone이라는 조합 자체를 새 연구 공백으로 주장하지 않도록 현재 후보의 선행 경계를 보완한다.",
+    "lineage": "개념적 비교 경로: Residual RL과 retrieval의 직접 결합이므로 NEXT에 추가한다. Bank 성장·frozen backbone이라는 조합 자체를 새 연구 공백으로 주장하지 않도록 현재 후보의 선행 경계를 보완한다. 직접 citation 계보나 검증된 파생 관계를 새로 확정한 것은 아니다.",
+    "question": "목표 경험을 고정하고 다른 목표 경험만 추가해도 EFN의 이득이 남는가, 아니면 성공 데이터 선택과 학습된 residual이 설명하는가?",
+    "minimal_experiment": "연구자 제안: 목표 경험을 고정하고 다른 목표 경험만 추가해도 EFN의 이득이 남는가, 아니면 성공 데이터 선택과 학습된 residual이 설명하는가? 먼저 EFN 학습/배포 갱신 경계·success-only bank 편향·task filter·residual 없는 대안·동일 경험 예산을 대조하고, 실행은 별도 local Docker qualification 뒤 가장 작은 paired 비교로 한정한다.",
+    "verification_questions": "EFN 학습/배포 갱신 경계·success-only bank 편향·task filter·residual 없는 대안·동일 경험 예산",
+    "pdf": "",
+    "publication": {
+      "status": "peer_reviewed",
+      "kind": "conference",
+      "presentation": "unknown",
+      "venue": "CVPR",
+      "year": 2026,
+      "venue_year": 2026,
+      "venue_id": "cvpr"
+    },
+    "sources": {
+      "primary": {
+        "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Wu_Dejavu_Towards_Experience_Feedback_Learning_for_Embodied_Intelligence_CVPR_2026_paper.html",
+        "kind": "official_proceedings",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-02"
+      },
+      "preprint": {
+        "url": "https://arxiv.org/abs/2510.10181",
+        "kind": "arxiv",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-02"
+      },
+      "project": {
+        "url": "https://dejavu2025.github.io/",
+        "kind": "official_project",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-02"
+      },
+      "code": null,
+      "paper_pdf": null,
+      "venue_verification": {
+        "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Wu_Dejavu_Towards_Experience_Feedback_Learning_for_Embodied_Intelligence_CVPR_2026_paper.html",
+        "kind": "official_proceedings",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-02"
+      }
+    },
+    "artifacts": {
+      "code_status": "not_released",
+      "data_status": "not_identified",
+      "local_pdf_cache": false
+    },
+    "evidence": "ABSTRACT_CHECKED",
+    "note_format": "abstract_analysis_v1",
+    "source_audit": "2026-11-02 공식 proceedings/publisher의 서지·abstract와 저자 project/code 소개를 확인했다. 노트는 abstract/project 기반이며 본문 정독·native 실행을 뜻하지 않는다. 사용자 읽기 상태는 UNREAD 유지.",
+    "admission_tier": "NEXT",
+    "relations": [],
+    "curation": {
+      "admission_reason": "Residual RL과 retrieval의 직접 결합이므로 NEXT에 추가한다. Bank 성장·frozen backbone이라는 조합 자체를 새 연구 공백으로 주장하지 않도록 현재 후보의 선행 경계를 보완한다.",
+      "tier_reason": "Residual RL과 retrieval의 직접 결합이므로 NEXT에 추가한다. Bank 성장·frozen backbone이라는 조합 자체를 새 연구 공백으로 주장하지 않도록 현재 후보의 선행 경계를 보완한다.",
+      "rationale_status": "recorded",
+      "rationale_basis": "2026-11-02 targeted official top-tier gap supplement; researcher interpretation",
+      "rationale_reviewed_on": "2026-11-02",
+      "scope_status": "active",
+      "roles": [
+        "method"
+      ],
+      "role_basis": "manual admission review",
+      "priority_source_check": {
+        "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Wu_Dejavu_Towards_Experience_Feedback_Learning_for_Embodied_Intelligence_CVPR_2026_paper.html",
+        "checked_on": "2026-11-02",
+        "scope": "official_abstract_or_project; priority review only"
+      }
+    }
+  },
+  {
+    "admission_key": "saga",
+    "title": "SAGA: Open-World Mobile Manipulation via Structured Affordance Grounding",
+    "year": 2026,
+    "venue": "RA-L",
+    "category": "Locomotion, Whole-Body, and Mobile Manipulation",
+    "primary_track": "Locomotion, whole-body, mobile manipulation, and humanoids",
+    "page": "https://ieeexplore.ieee.org/document/11568510/",
+    "project": "https://robot-saga.github.io/",
+    "identifiers": {
+      "arxiv": "2512.12842",
+      "doi": "10.1109/LRA.2026.3703996"
+    },
+    "aliases": [
+      "SAGA"
+    ],
+    "tags": [
+      "mobile-manipulation",
+      "affordance",
+      "3D-grounding",
+      "whole-body"
+    ],
+    "paper_type": "method",
+    "admission_group": "Locomotion, whole-body control, mobile manipulation, and humanoids",
+    "problem": "다양한 지시와 환경을 하나의 이동 조작 제어기로 연결할 때 semantic intent와 시각 변동을 분리한다.",
+    "method": "Task를 구조화된 affordance로 표현하고 관측의 3D heatmap에 grounding하여 whole-body 조작 정책을 조건화한다.",
+    "interface": "언어·지정 point·예시 시연 → 관측에 정렬된 affordance → quadrupedal manipulator의 whole-body 행동.",
+    "evaluation": "실제 quadrupedal manipulator의 11개 task에서 end-to-end 및 modular 대안과 비교한다. IEEE의 RA-L 11(9), 2026 게재를 우선하며 lab page의 오래된 under-review 표기는 채택하지 않는다.",
+    "role": "VoxPoser·Mobile ALOHA와 구조적 3D grounding을 잇는 NEXT다. 다양한 로봇을 다룬다는 목표에서 의미 표현과 embodiment별 제어의 경계를 비교한다.",
+    "lineage": "개념적 비교 경로: VoxPoser·Mobile ALOHA와 구조적 3D grounding을 잇는 NEXT다. 다양한 로봇을 다룬다는 목표에서 의미 표현과 embodiment별 제어의 경계를 비교한다. 직접 citation 계보나 검증된 파생 관계를 새로 확정한 것은 아니다.",
+    "question": "같은 3D 관측과 skill budget에서 affordance 표현의 이득이 목표 위치를 직접 전달하는 단순 방식 이후에도 남는가?",
+    "minimal_experiment": "연구자 제안: 같은 3D 관측과 skill budget에서 affordance 표현의 이득이 목표 위치를 직접 전달하는 단순 방식 이후에도 남는가? 먼저 affordance 생성 오차·policy가 받는 GT·whole-body action 공간·zero/few-shot split을 대조하고, 실행은 별도 local Docker qualification 뒤 가장 작은 paired 비교로 한정한다.",
+    "verification_questions": "affordance 생성 오차·policy가 받는 GT·whole-body action 공간·zero/few-shot split",
+    "pdf": "",
+    "publication": {
+      "status": "peer_reviewed",
+      "kind": "journal",
+      "presentation": "unknown",
+      "venue": "RA-L",
+      "year": 2026,
+      "venue_year": 2026,
+      "venue_id": "ral"
+    },
+    "sources": {
+      "primary": {
+        "url": "https://ieeexplore.ieee.org/document/11568510/",
+        "kind": "publisher",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-02"
+      },
+      "preprint": {
+        "url": "https://arxiv.org/abs/2512.12842",
+        "kind": "arxiv",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-02"
+      },
+      "project": {
+        "url": "https://robot-saga.github.io/",
+        "kind": "official_project",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-02"
+      },
+      "code": null,
+      "paper_pdf": null,
+      "venue_verification": {
+        "url": "https://ieeexplore.ieee.org/document/11568510/",
+        "kind": "publisher",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-02"
+      },
+      "author_lab": {
+        "url": "https://msc.berkeley.edu/research/locomotion/saga.html",
+        "kind": "official_project",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-02"
+      }
+    },
+    "artifacts": {
+      "code_status": "project_only",
+      "data_status": "not_identified",
+      "local_pdf_cache": false
+    },
+    "evidence": "ABSTRACT_CHECKED",
+    "note_format": "abstract_analysis_v1",
+    "source_audit": "2026-11-02 공식 proceedings/publisher의 서지·abstract와 저자 project/code 소개를 확인했다. IEEE indexed publisher 내용으로 게재를 확인했고 직접 본문 접근은 제한적이었다. 노트는 abstract/project 기반이며 본문 정독·native 실행을 뜻하지 않는다. 사용자 읽기 상태는 UNREAD 유지.",
+    "admission_tier": "NEXT",
+    "relations": [],
+    "curation": {
+      "admission_reason": "VoxPoser·Mobile ALOHA와 구조적 3D grounding을 잇는 NEXT다. 다양한 로봇을 다룬다는 목표에서 의미 표현과 embodiment별 제어의 경계를 비교한다.",
+      "tier_reason": "VoxPoser·Mobile ALOHA와 구조적 3D grounding을 잇는 NEXT다. 다양한 로봇을 다룬다는 목표에서 의미 표현과 embodiment별 제어의 경계를 비교한다.",
+      "rationale_status": "recorded",
+      "rationale_basis": "2026-11-02 targeted official top-tier gap supplement; researcher interpretation",
+      "rationale_reviewed_on": "2026-11-02",
+      "scope_status": "active",
+      "roles": [
+        "method"
+      ],
+      "role_basis": "manual admission review",
+      "priority_source_check": {
+        "url": "https://ieeexplore.ieee.org/document/11568510/",
+        "checked_on": "2026-11-02",
+        "scope": "official_abstract_or_project; priority review only"
+      }
+    }
+  },
+  {
+    "admission_key": "stable_language",
+    "title": "Stable Language Guidance for Vision–Language–Action Models",
+    "year": 2026,
+    "venue": "ACL",
+    "category": "VLA and Generalist Robot Policies",
+    "primary_track": "VLA and generalist robot policies",
+    "page": "https://aclanthology.org/2026.acl-long.190/",
+    "project": "https://github.com/Doo-mon/RSS",
+    "identifiers": {
+      "arxiv": "2601.04052",
+      "doi": "10.18653/v1/2026.acl-long.190"
+    },
+    "aliases": [
+      "Residual Semantic Steering"
+    ],
+    "tags": [
+      "VLA",
+      "language-grounding",
+      "robustness",
+      "semantic-steering"
+    ],
+    "paper_type": "method",
+    "admission_group": "VLA, cross-embodiment, and long-horizon planning",
+    "problem": "시각 prior가 언어의 의도를 압도하고 표현 변화에 정책이 민감해지는 문제를 다룬다.",
+    "method": "Paraphrase에 대한 Monte Carlo 통합과 visual affordance prior를 분리하는 residual semantic steering을 결합한다.",
+    "interface": "시각 관측·언어 표현들의 분포 → 의미/affordance 분리 추론 → VLA 행동. 검색한 demo를 바꾸는 개입과 현재 지시를 바꾸는 개입은 다르다.",
+    "evaluation": "공식 abstract는 manipulation benchmark의 언어 교란 강건성을 보고한다. Backbone·실기 여부·세부 성공률은 이번 abstract 확인 범위에서 확정하지 않는다.",
+    "role": "지시 수정·집합 지시·시연 검색 후보가 공유하는 언어 민감성의 NEXT 직접 대안이다. 같은 의미의 표현 차이를 새로운 task conflict로 해석하지 않도록 등록한다.",
+    "lineage": "개념적 비교 경로: 지시 수정·집합 지시·시연 검색 후보가 공유하는 언어 민감성의 NEXT 직접 대안이다. 같은 의미의 표현 차이를 새로운 task conflict로 해석하지 않도록 등록한다. 직접 citation 계보나 검증된 파생 관계를 새로 확정한 것은 아니다.",
+    "question": "언어 의미를 유지하고 길이·추론 횟수를 맞춘 대조에서도 steering 이득이 단순 paraphrase ensemble 이후 남는가?",
+    "minimal_experiment": "연구자 제안: 언어 의미를 유지하고 길이·추론 횟수를 맞춘 대조에서도 steering 이득이 단순 paraphrase ensemble 이후 남는가? 먼저 semantic prior 제거 방식·추가 decode 비용·paraphrase 정답 정보·평가 instruction 분리을 대조하고, 실행은 별도 local Docker qualification 뒤 가장 작은 paired 비교로 한정한다.",
+    "verification_questions": "semantic prior 제거 방식·추가 decode 비용·paraphrase 정답 정보·평가 instruction 분리",
+    "pdf": "",
+    "publication": {
+      "status": "peer_reviewed",
+      "kind": "conference",
+      "presentation": "unknown",
+      "venue": "ACL",
+      "year": 2026,
+      "venue_year": 2026,
+      "venue_id": "acl"
+    },
+    "sources": {
+      "primary": {
+        "url": "https://aclanthology.org/2026.acl-long.190/",
+        "kind": "official_proceedings",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-02"
+      },
+      "preprint": {
+        "url": "https://arxiv.org/abs/2601.04052",
+        "kind": "arxiv",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-02"
+      },
+      "project": {
+        "url": "https://github.com/Doo-mon/RSS",
+        "kind": "official_project",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-02"
+      },
+      "code": {
+        "url": "https://github.com/Doo-mon/RSS",
+        "kind": "official_code",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-02"
+      },
+      "paper_pdf": null,
+      "venue_verification": {
+        "url": "https://aclanthology.org/2026.acl-long.190/",
+        "kind": "official_proceedings",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-02"
+      }
+    },
+    "artifacts": {
+      "code_status": "released",
+      "data_status": "not_identified",
+      "local_pdf_cache": false
+    },
+    "evidence": "ABSTRACT_CHECKED",
+    "note_format": "abstract_analysis_v1",
+    "source_audit": "2026-11-02 공식 proceedings/publisher의 서지·abstract와 저자 project/code 소개를 확인했다. 노트는 abstract/project 기반이며 본문 정독·native 실행을 뜻하지 않는다. 사용자 읽기 상태는 UNREAD 유지.",
+    "admission_tier": "NEXT",
+    "relations": [],
+    "curation": {
+      "admission_reason": "지시 수정·집합 지시·시연 검색 후보가 공유하는 언어 민감성의 NEXT 직접 대안이다. 같은 의미의 표현 차이를 새로운 task conflict로 해석하지 않도록 등록한다.",
+      "tier_reason": "지시 수정·집합 지시·시연 검색 후보가 공유하는 언어 민감성의 NEXT 직접 대안이다. 같은 의미의 표현 차이를 새로운 task conflict로 해석하지 않도록 등록한다.",
+      "rationale_status": "recorded",
+      "rationale_basis": "2026-11-02 targeted official top-tier gap supplement; researcher interpretation",
+      "rationale_reviewed_on": "2026-11-02",
+      "scope_status": "active",
+      "roles": [
+        "method"
+      ],
+      "role_basis": "manual admission review",
+      "priority_source_check": {
+        "url": "https://aclanthology.org/2026.acl-long.190/",
+        "checked_on": "2026-11-02",
+        "scope": "official_abstract_or_project; priority review only"
+      }
+    }
+  },
+  {
+    "admission_key": "lilac",
+    "title": "LILAC: Language-Conditioned Object-Centric Optical Flow for Open-Loop Trajectory Generation",
+    "year": 2026,
+    "venue": "RA-L",
+    "category": "VLA and Generalist Robot Policies",
+    "primary_track": "VLA and generalist robot policies",
+    "page": "https://ieeexplore.ieee.org/abstract/document/11478289",
+    "project": "https://lilac-75srg.kinsta.page/",
+    "identifiers": {
+      "arxiv": "2603.25481",
+      "doi": "10.1109/LRA.2026.3682441"
+    },
+    "aliases": [
+      "LILAC"
+    ],
+    "tags": [
+      "VLA",
+      "optical-flow",
+      "trajectory-generation",
+      "human-video"
+    ],
+    "paper_type": "method",
+    "admission_group": null,
+    "problem": "사람/웹 영상에서 얻은 움직임을 언어에 맞는 로봇 궤적으로 변환하는 데 필요한 정렬을 다룬다.",
+    "method": "언어와 RGB로 object-centric 2D flow를 생성하고 이를 6-DoF 로봇 trajectory로 변환한다.",
+    "interface": "단일 초기 RGB·지시 → motion flow → 로봇 궤적. Open-loop 궤적 생성과 실행 중 feedback/replanning은 구분한다.",
+    "evaluation": "Flow 품질 benchmark와 자유형 지시의 실제 조작을 평가한다. IEEE RA-L 11(6), 2026 게재를 확인했다.",
+    "role": "Flow/geometry를 action으로 연결하는 REFERENCE다. 현재 frozen VLA 검색 실험의 직접 prerequisite는 아니므로 NEXT를 늘리기보다 표현·개방루프 비교가 필요할 때 찾도록 둔다.",
+    "lineage": "개념적 비교 경로: Flow/geometry를 action으로 연결하는 REFERENCE다. 현재 frozen VLA 검색 실험의 직접 prerequisite는 아니므로 NEXT를 늘리기보다 표현·개방루프 비교가 필요할 때 찾도록 둔다. 직접 citation 계보나 검증된 파생 관계를 새로 확정한 것은 아니다.",
+    "question": "같은 robot supervision과 초기 관측에서 flow 중간 표현이 직접 waypoint 예측보다 유리한 조건은 무엇이며 실행 중 변화에는 어떻게 대응하는가?",
+    "minimal_experiment": "연구자 제안: 같은 robot supervision과 초기 관측에서 flow 중간 표현이 직접 waypoint 예측보다 유리한 조건은 무엇이며 실행 중 변화에는 어떻게 대응하는가? 먼저 2D→6-DoF 변환·embodiment별 calibration·실행 feedback. 공식 abstract와 project 본문의 loss/adapter 명칭이 달라 원문 version 확인 필요을 대조하고, 실행은 별도 local Docker qualification 뒤 가장 작은 paired 비교로 한정한다.",
+    "verification_questions": "2D→6-DoF 변환·embodiment별 calibration·실행 feedback. 공식 abstract와 project 본문의 loss/adapter 명칭이 달라 원문 version 확인 필요",
+    "pdf": "",
+    "publication": {
+      "status": "peer_reviewed",
+      "kind": "journal",
+      "presentation": "unknown",
+      "venue": "RA-L",
+      "year": 2026,
+      "venue_year": 2026,
+      "venue_id": "ral"
+    },
+    "sources": {
+      "primary": {
+        "url": "https://ieeexplore.ieee.org/abstract/document/11478289",
+        "kind": "publisher",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-02"
+      },
+      "preprint": {
+        "url": "https://arxiv.org/abs/2603.25481",
+        "kind": "arxiv",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-02"
+      },
+      "project": {
+        "url": "https://lilac-75srg.kinsta.page/",
+        "kind": "official_project",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-02"
+      },
+      "code": null,
+      "paper_pdf": null,
+      "venue_verification": {
+        "url": "https://ieeexplore.ieee.org/abstract/document/11478289",
+        "kind": "publisher",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-02"
+      }
+    },
+    "artifacts": {
+      "code_status": "not_released",
+      "data_status": "not_identified",
+      "local_pdf_cache": false
+    },
+    "evidence": "ABSTRACT_CHECKED",
+    "note_format": "abstract_analysis_v1",
+    "source_audit": "2026-11-02 공식 proceedings/publisher의 서지·abstract와 저자 project/code 소개를 확인했다. IEEE indexed publisher 내용으로 게재를 확인했고 직접 본문 접근은 제한적이었다. 노트는 abstract/project 기반이며 본문 정독·native 실행을 뜻하지 않는다. 사용자 읽기 상태는 UNREAD 유지.",
+    "admission_tier": "REFERENCE",
+    "relations": [],
+    "curation": {
+      "admission_reason": "Flow/geometry를 action으로 연결하는 REFERENCE다. 현재 frozen VLA 검색 실험의 직접 prerequisite는 아니므로 NEXT를 늘리기보다 표현·개방루프 비교가 필요할 때 찾도록 둔다.",
+      "tier_reason": "Flow/geometry를 action으로 연결하는 REFERENCE다. 현재 frozen VLA 검색 실험의 직접 prerequisite는 아니므로 NEXT를 늘리기보다 표현·개방루프 비교가 필요할 때 찾도록 둔다.",
+      "rationale_status": "recorded",
+      "rationale_basis": "2026-11-02 targeted official top-tier gap supplement; researcher interpretation",
+      "rationale_reviewed_on": "2026-11-02",
+      "scope_status": "active",
+      "roles": [
+        "method"
+      ],
+      "role_basis": "manual admission review",
+      "priority_source_check": {
+        "url": "https://ieeexplore.ieee.org/abstract/document/11478289",
+        "checked_on": "2026-11-02",
+        "scope": "official_abstract_or_project; priority review only"
+      }
+    }
+  }
+]

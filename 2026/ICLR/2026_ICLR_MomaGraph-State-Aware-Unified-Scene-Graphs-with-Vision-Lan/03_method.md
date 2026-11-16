@@ -4,6 +4,8 @@
 > Evidence maturity: `FULL_TEXT_CHECKED`.
 > Analysis basis: full-text PDF body checked on 2026-09-03 (26 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=3eTr9dGwJv; PDF retrieval source: https://openreview.net/pdf/3f888689e829f4172ae97d1dfac5f1b62ddb30c3.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
+> DOC-QA1 (2026-10-23): 제어문자·깨진 추출 구간과 직접 연결된 표 항목을 PDF 페이지 이미지와 대조했다. 확인 범위·원문 URL·페이지·수정 이력은 [대조 기록](../../../work/sources/pdf_note_review_2026-10-23.json)에 있다. 노트 전체의 정독이나 모든 기존 주장에 대한 재검증을 뜻하지 않으며 reading status는 유지한다.
+
 ## Method in One Sentence
 
 PDF body method statement (p. 6 (4 METHOD), p. 6 (4 METHOD), p. 5 (4 METHOD), p. 5 (4 METHOD), p. 19 (A.3 TRAINING CURVE), p. 7 (4 METHOD)): To address these limitations, we introduce MomaGraph-Scenes, the first dataset designed to provide a more comprehensive and task-relevant scene representation.
@@ -11,7 +13,7 @@ PDF body method statement (p. 6 (4 METHOD), p. 6 (4 METHOD), p. 5 (4 METHOD), p.
 ## Method Body Digest
 
 - **p. 6 / 4 METHOD - extractive body cue:** To address these limitations, we introduce MomaGraph-Scenes, the first dataset designed to provide a more comprehensive and task-relevant scene representation.
-- **p. 6 / 4 METHOD - extractive body cue:** After the agent executes an action at and observes the new environment state st+1, the scene graph is refined as: G(t+1) T = U  ...
+- **원문 대조:** Action a_t 실행 뒤 새 state s_{t+1}를 관측하면 U(G_T^{(t)},a_t,s_{t+1})로 graph를 갱신한다. 관측된 state transition에 맞지 않는 관계 가설은 제거하고 확인된 관계는 강화한다. ([PDF p. 6](https://arxiv.org/pdf/2512.16909#page=6), §4.3, Eq. (4), Figure 3).
 - **p. 5 / 4 METHOD - extractive body cue:** Reinforcement learning offers a more principled approach by encouraging the model to explore, reason, and iteratively refine its representations through outcome-driven feedback.
 - **p. 5 / 4 METHOD - extractive body cue:** 4.2 VLMS LEARN SCENE GRAPH REPRESENTATIONS WITH REINFORCEMENT LEARNING Existing open-source VLMs have demonstrated limited capability in generating accurate taskoriented scene graphs GT from multi-view ...
 - **p. 19 / A.3 TRAINING CURVE - extractive body cue:** The format reward quickly reaches 1.0 within the first 25 steps, showing the model rapidly learns to produce valid JSON-structured outputs.
@@ -28,7 +30,7 @@ PDF body method statement (p. 6 (4 METHOD), p. 6 (4 METHOD), p. 5 (4 METHOD), p.
 ## Source Evidence Cues
 
 - **p. 6 / 4 METHOD - extractive body cue:** To address these limitations, we introduce MomaGraph-Scenes, the first dataset designed to provide a more comprehensive and task-relevant scene representation.
-- **p. 6 / 4 METHOD - extractive body cue:** After the agent executes an action at and observes the new environment state st+1, the scene graph is refined as: G(t+1) T = U  ...
+- **원문 대조:** Action a_t 실행 뒤 새 state s_{t+1}를 관측하면 U(G_T^{(t)},a_t,s_{t+1})로 graph를 갱신한다. 관측된 state transition에 맞지 않는 관계 가설은 제거하고 확인된 관계는 강화한다. ([PDF p. 6](https://arxiv.org/pdf/2512.16909#page=6), §4.3, Eq. (4), Figure 3).
 - **p. 5 / 4 METHOD - extractive body cue:** Reinforcement learning offers a more principled approach by encouraging the model to explore, reason, and iteratively refine its representations through outcome-driven feedback.
 - **p. 5 / 4 METHOD - extractive body cue:** 4.2 VLMS LEARN SCENE GRAPH REPRESENTATIONS WITH REINFORCEMENT LEARNING Existing open-source VLMs have demonstrated limited capability in generating accurate taskoriented scene graphs GT from multi-view ...
 - **p. 19 / A.3 TRAINING CURVE - extractive body cue:** The format reward quickly reaches 1.0 within the first 25 steps, showing the model rapidly learns to produce valid JSON-structured outputs.
@@ -73,7 +75,7 @@ PDF body method statement (p. 6 (4 METHOD), p. 6 (4 METHOD), p. 5 (4 METHOD), p.
 - **p. 5 / 4 METHOD - extractive body cue:** 4.1 MOMAGRAPH DEFINITION Given a single indoor room, the agent receives as input a set of multi-view images {Ii}n i=1 and a natural language instruction ...
 - **p. 5 / 4 METHOD - extractive body cue:** 4.2 VLMS LEARN SCENE GRAPH REPRESENTATIONS WITH REINFORCEMENT LEARNING Existing open-source VLMs have demonstrated limited capability in generating accurate taskoriented scene graphs GT from multi-view ...
 - **p. 3 / 1 INTRODUCTION - extractive body cue:** VLMs (OpenAI, 2023; Team et al., 2025; Ahn et al., 2022) have gained significant attention in robotic task planning (Niu et al., 2024; Yue et ...
-- **p. 6 / 4 METHOD - extractive body cue:** After the agent executes an action at and observes the new environment state st+1, the scene graph is refined as: G(t+1) T = U  ...
+- **원문 대조:** Action a_t 실행 뒤 새 state s_{t+1}를 관측하면 U(G_T^{(t)},a_t,s_{t+1})로 graph를 갱신한다. 관측된 state transition에 맞지 않는 관계 가설은 제거하고 확인된 관계는 강화한다. ([PDF p. 6](https://arxiv.org/pdf/2512.16909#page=6), §4.3, Eq. (4), Figure 3).
 - **p. 7 / 4 METHOD - extractive body cue:** This design encourages the model to learn how to ground natural instructions into the appropriate set of objects and relationships, rather than relying on object ...
 - **p. 2 / 1 INTRODUCTION - extractive body cue:** To support this representation, we build MomaGraph-Scenes, the first dataset that jointly models spatial and functional relationships with part-level annotations, encompassing multi-view observations, executed actions, ...
 - **Normalized interface:** observation=camera/depth stream, pose, map와 language goal; state=robot pose, free-space/semantic map와 local goal; output/action=collision-free trajectory 또는 velocity command.
@@ -84,7 +86,7 @@ PDF body method statement (p. 6 (4 METHOD), p. 6 (4 METHOD), p. 5 (4 METHOD), p.
 | Contract | Generic domain prior | PDF body cue | Unresolved detail |
 |---|---|---|---|
 | Horizon | map-level start-goal plan과 local controller horizon을 계층적으로 분리한다. | Beyond these core capabilities, we further design tasks on Dynamic Verification and Long-horizon Task Decomposition to evaluate temporal reasoning and multi-steps planning. | episode/sequence/action-chunk boundary |
-| Rate / latency | mapping/localization, global planner, local planner와 base controller rate를 구분한다. | Formally, at time step t, the task-oriented scene graph is represented as: G(t) T =  N (t) T , ET ,(t) s ... | Hz/fps, inference time and control rate |
+| Rate / latency | Graph 정의는 update frequency나 latency를 제시하지 않음 | 원문 대조: 시각 t의 task-oriented graph는 task-relevant candidate object node, spatial edge, hypothesized functional edge로 구성된다. 초기 functional relation은 one-to-many일 수 있다. 현재 공개본의 해당 시간 인덱스 식은 PDF p. 6이다. ([PDF p. 6](https://arxiv.org/pdf/2512.16909#page=6), §4.3 State-Aware Dynamic Scene Graph Update, Eq. (3)) | Timing 근거 별도 확인 필요 |
 | Memory | map/scene graph, pose history와 current local goal. | not stated or recoverable in the selected PDF body | window and reset |
 | Compute | map update, collision checking, path search와 replanning frequency가 결정한다. | As shown in Figure 6, our system achieves an 80% success rate in graph generation, 87.5% success rate in planning (conditioned on ... | hardware, batch and throughput |
 

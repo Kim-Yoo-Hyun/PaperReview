@@ -4,6 +4,8 @@
 > Evidence maturity: `FULL_TEXT_CHECKED`.
 > Analysis basis: full-text PDF body checked on 2026-09-03 (27 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://www.research.ed.ac.uk/en/publications/optimization-based-locomotion-planning-estimation-and-controldesi/; PDF retrieval source: https://www.cs.cmu.edu/~cga/z/Kuindersma_AURO_2016.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
+> DOC-QA2 targeted source review: 2026-10-23; PDF pp. 11. 손상 구간·직접 연결된 표 분류만 원문 이미지와 대조했다. 전체 주장 정독·실험 검증·reading status 승격을 뜻하지 않는다. [URL·PDF hash·수정 기록](../../../work/sources/pdf_note_review_followup_2026-10-23.json).
+
 ## Paper-supported conclusion
 
 > **Evidence boundary:** The following claims are restricted to selected PDF body sentences, captions and section anchors; exact table/equation values remain to be checked at those anchors.
@@ -43,7 +45,7 @@
 ### Reusable lesson in the robotics loop
 
 - **Closed-loop position:** `proprioception, reference pose/motion, visual or language command → whole-body pose, balance/contact state와 skill/mode → joint/whole-body action, motion target 또는 task trajectory`.
-- 이 논문의 재사용 가능한 지점은 Note that inputs computed by solving this QP are, in general, not equal to those computed by thresholding the output of the closed-form LQR policy.를 Given the current robot state, q, v, we can compute the equations of motion, H(q)˙v + C(q, v) = Bτ + JT λ, (25) H f Ha  ˙v + C f ...로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 whole-body pose, balance/contact state와 skill/mode가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 The robot's trailing foot eventually collided with the front of the step resulting in a fall.에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
+**Researcher interpretation (DOC-QA2):** Full-body feasibility constraints를 갖춘 QP와 단순한 command clipping을 비교하려면 dynamics, contact forces, torque limits와 tracking reference를 동일하게 두어야 한다. Eqs. (25)–(26)은 이 비교의 constraint interface를 제공하며 recovery 효과를 직접 입증하지 않는다. (PDF p. 11 §4.4)
 - The paper-specific mechanism to preserve in a reproduction is: Unfortunately, the set of safe terrain is unlikely to be convex or even connected: in an environment as simple as a staircase, the safe terrain consists of the top surface of every ...
 - Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
 

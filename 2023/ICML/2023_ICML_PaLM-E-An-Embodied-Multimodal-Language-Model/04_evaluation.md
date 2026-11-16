@@ -4,6 +4,8 @@
 > Evidence maturity: `FULL_TEXT_CHECKED`.
 > Analysis basis: full-text PDF body checked on 2026-09-03 (18 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2303.03378; PDF retrieval source: https://arxiv.org/pdf/2303.03378. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
+> DOC-QA1 (2026-10-23): 제어문자·깨진 추출 구간과 직접 연결된 표 항목을 PDF 페이지 이미지와 대조했다. 확인 범위·원문 URL·페이지·수정 이력은 [대조 기록](../../../work/sources/pdf_note_review_2026-10-23.json)에 있다. 노트 전체의 정독이나 모든 기존 주장에 대한 재검증을 뜻하지 않으며 reading status는 유지한다.
+
 ## Evaluation in One Sentence
 
 PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 9 (6.5. Performance on General Visual-Language Tasks), p. 6 (6. Experiments), p. 7 (6.2. TAMP Environment), p. 9 (7. Summary of Experiments & Discussion), p. 7 (6.3. Language-Table Environment)): Table 1: Comparison of different input representations on TAMP environment (in terms of success rates), where data from TAMP constitutes only 1% (i.e., 320 samples for p1, p2 each) of ...
@@ -15,7 +17,7 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 9 (6.5. Performa
 - **p. 7 / 6.2. TAMP Environment - extractive body cue:** 7, the input representations are trained on a dataset containing 96,000 training scenes of solely the TAMP environment, i.e. no other data is part of ...
 - **p. 6 / 6. Experiments - extractive body cue:** 1) include a Task and Motion Planning (TAMP) domain where a robot has to manipulate (grasp and stack) objects, a table-top pushing environment, and a ...
 - **p. 9 / 7. Summary of Experiments & Discussion - extractive body cue:** Compared to available massive language or vision-language datasets, robotics data is significantly less abundant.
-- **p. 8 / 6.4. Mobile Manipulation Environment - extractive body cue:** ObjectLLM Embodied VQA Planning centric pre-train q1 q2 q3 q4 p1 p2 SayCan (oracle afford.) (Ahn et al., 2022)  - - - - 38.7 ...
+- **원문 대조:** Table 1은 TAMP에서 input representation별 embodied VQA q1–q4와 planning p1–p2 성공률을 비교한다. SayCan (oracle afford.) 행의 planning 값은 p1=38.7%, p2=33.3%이며 VQA는 dash다. Figure 5의 mobile-manipulation 시연과 같은 평가로 합치지 않는다. ([PDF p. 8](https://arxiv.org/pdf/2303.03378#page=8), Table 1, TAMP environment).
 - **p. 9 / 6.5. Performance on General Visual-Language Tasks - extractive body cue:** PaLM-E: An Embodied Multimodal Language Model Zero-shot Baselines Task 1 Task 2 Task 3 SayCan (oracle afford.) (Ahn et al., 2022) 0.0 - - PaLI ...
 - **p. 8 / 6.4. Mobile Manipulation Environment - extractive body cue:** The prompt structure for this task is Human: <instruction> Robot: <step history>.
 
@@ -45,7 +47,7 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 9 (6.5. Performa
 - **p. 7 / 6.2. TAMP Environment - extractive body cue:** 7, the input representations are trained on a dataset containing 96,000 training scenes of solely the TAMP environment, i.e. no other data is part of ...
 - **p. 6 / 6. Experiments - extractive body cue:** 1) include a Task and Motion Planning (TAMP) domain where a robot has to manipulate (grasp and stack) objects, a table-top pushing environment, and a ...
 - **p. 9 / 7. Summary of Experiments & Discussion - extractive body cue:** Compared to available massive language or vision-language datasets, robotics data is significantly less abundant.
-- **p. 8 / 6.4. Mobile Manipulation Environment - extractive body cue:** ObjectLLM Embodied VQA Planning centric pre-train q1 q2 q3 q4 p1 p2 SayCan (oracle afford.) (Ahn et al., 2022)  - - - - 38.7 ...
+- **원문 대조:** Table 1은 TAMP에서 input representation별 embodied VQA q1–q4와 planning p1–p2 성공률을 비교한다. SayCan (oracle afford.) 행의 planning 값은 p1=38.7%, p2=33.3%이며 VQA는 dash다. Figure 5의 mobile-manipulation 시연과 같은 평가로 합치지 않는다. ([PDF p. 8](https://arxiv.org/pdf/2303.03378#page=8), Table 1, TAMP environment).
 - **p. 9 / 6.5. Performance on General Visual-Language Tasks - extractive body cue:** PaLM-E: An Embodied Multimodal Language Model Zero-shot Baselines Task 1 Task 2 Task 3 SayCan (oracle afford.) (Ahn et al., 2022) 0.0 - - PaLI ...
 - **p. 8 / 6.4. Mobile Manipulation Environment - extractive body cue:** The prompt structure for this task is Human: <instruction> Robot: <step history>.
 
@@ -77,7 +79,7 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 9 (6.5. Performa
 |---|---|---|
 | 7 (appendix) shows planning success rates and VQA performance for the TAMP environment. | definition/direction/unit from same section | p. 6 (6.2. TAMP Environment) |
 | 2 reports success rates on long-horizon tasks from the Language-Table environment (Lynch et al., 2022). | definition/direction/unit from same section | p. 7 (6.3. Language-Table Environment) |
-| ObjectLLM Embodied VQA Planning centric pre-train q1 q2 q3 q4 p1 p2 SayCan (oracle afford.) (Ahn et al., 2022)  - - - - ... | definition/direction/unit from same section | p. 8 (6.4. Mobile Manipulation Environment) |
+| 원문 대조: Table 1은 TAMP에서 input representation별 embodied VQA q1–q4와 planning p1–p2 성공률을 비교한다. SayCan (oracle afford.) 행의 planning 값은 p1=38.7%, p2=33.3%이며 VQA는 dash다. Figure 5의 mobile-manipulation 시연과 같은 평가로 합치지 않는다. ([PDF p. 8](https://arxiv.org/pdf/2303.03378#page=8), Table 1, TAMP environment) | 성공률 %, TAMP Table 1 조건에 한정 | [PDF p. 8](https://arxiv.org/pdf/2303.03378#page=8), Table 1, TAMP environment |
 | Table 7: Success rates on TAMP environment for different input representations. 3-5 objects in the scene correspond to the training distribution. OOD tasks means ... | definition/direction/unit from same section | p. 16 (Figure/Table caption) |
 | Affordance PaLI (Zero-shot) (Chen et al., 2022) 0.73 0.62 CLIP-FT (Xiao et al., 2022) 0.65 - CLIP-FT-hindsight (Xiao et al., 2022) 0.89 - QT-OPT ... | definition/direction/unit from same section | p. 9 (6.5. Performance on General Visual-Language Tasks) |
 | Table 9: Mobile manipulation environment: failure detection, showing individual precision and recall scores. | definition/direction/unit from same section | p. 18 (Figure/Table caption) |
@@ -95,7 +97,7 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 9 (6.5. Performa
 | PaLM-E: An Embodied Multimodal Language Model Zero-shot Baselines Task 1 Task 2 Task 3 SayCan (oracle afford.) (Ahn et al., 2022) 0.0 - - ... | comparison identity and matched condition | p. 9 (6.5. Performance on General Visual-Language Tasks) |
 | Table 5: Results on general visual-language tasks. For the gen- eralist models, they are the same checkpoint across the different evaluations, while task-specific finetuned ... | comparison identity and matched condition | p. 9 (Figure/Table caption) |
 | Table 7: Success rates on TAMP environment for different input representations. 3-5 objects in the scene correspond to the training distribution. OOD tasks means ... | comparison identity and matched condition | p. 16 (Figure/Table caption) |
-| ObjectLLM Embodied VQA Planning centric pre-train q1 q2 q3 q4 p1 p2 SayCan (oracle afford.) (Ahn et al., 2022)  - - - - ... | comparison identity and matched condition | p. 8 (6.4. Mobile Manipulation Environment) |
+| 원문 대조: Table 1은 TAMP에서 input representation별 embodied VQA q1–q4와 planning p1–p2 성공률을 비교한다. SayCan (oracle afford.) 행의 planning 값은 p1=38.7%, p2=33.3%이며 VQA는 dash다. Figure 5의 mobile-manipulation 시연과 같은 평가로 합치지 않는다. ([PDF p. 8](https://arxiv.org/pdf/2303.03378#page=8), Table 1, TAMP environment) | SayCan oracle-affordance baseline; mobile real-robot trial과 별도 | [PDF p. 8](https://arxiv.org/pdf/2303.03378#page=8), Table 1, TAMP environment |
 
 | Fairness dimension | Required matched condition |
 |---|---|
@@ -128,7 +130,7 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 9 (6.5. Performa
 - **p. 7 / 6.3. Language-Table Environment - extractive body cue:** Scaling the 12B model to the 84B model leads to improvements on 2 of 3 tasks.
 - **p. 7 / 6.3. Language-Table Environment - extractive body cue:** Given the observed image and a long-horizon goal, e.g. "sort the blocks by colors into corners", PaLM-E outputs language subgoals at 1 Hz to the ...
 - **p. 7 / 6.3. Language-Table Environment - extractive body cue:** (2022), that output low-level robot actions at 5 Hz.
-- **p. 8 / 6.4. Mobile Manipulation Environment - extractive body cue:** ObjectLLM Embodied VQA Planning centric pre-train q1 q2 q3 q4 p1 p2 SayCan (oracle afford.) (Ahn et al., 2022)  - - - - 38.7 ...
+- **원문 대조:** Table 1은 TAMP에서 input representation별 embodied VQA q1–q4와 planning p1–p2 성공률을 비교한다. SayCan (oracle afford.) 행의 planning 값은 p1=38.7%, p2=33.3%이며 VQA는 dash다. Figure 5의 mobile-manipulation 시연과 같은 평가로 합치지 않는다. ([PDF p. 8](https://arxiv.org/pdf/2303.03378#page=8), Table 1, TAMP environment).
 
 ## Generalization and Failure Cases
 

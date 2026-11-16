@@ -13,9 +13,16 @@
 - Tags: Robotics, humanoid, whole-body control, Motion Tracking, NVIDIA
 - Official paper: https://research.nvidia.com/labs/dair/publication/sonic2026/
 - Full-text retrieval: https://research.nvidia.com/labs/dair/publication/sonic2026/
-- Code/Project: https://research.nvidia.com/labs/dair/publication/sonic2026/
+- Project: https://nvlabs.github.io/GEAR-SONIC/
+- Code: https://github.com/NVlabs/GR00T-WholeBodyControl
+- DOI: 10.1126/scirobotics.aed4592
+- Preprint: https://arxiv.org/abs/2511.07820 (v4, 2026-08-13)
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (39 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+
+## Source Update — 2026-11-16
+
+공식 project와 arXiv journal reference로 Science Robotics 11(117), eaed4592 (2026)를 재확인했다. Publisher 직접 본문은403으로 확인하지 못했다. 위 과거 PDF review는 당시 기록이며 이번 재검토 범위는 metadata·공개 구현이다. Code 상태를 project-only에서 released로 수정한다. 공식 code/checkpoint 링크의 존재가 로컬 재현 성공을 뜻하지 않는다.
 
 ## Why This Paper Is Here
 

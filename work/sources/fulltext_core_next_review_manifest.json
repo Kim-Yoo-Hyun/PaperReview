@@ -401,7 +401,7 @@
     {
       "paper_id": "pr-0021",
       "title": "RT-1: Robotics Transformer for Real-World Control at Scale",
-      "folder": "2022/arxiv/2022_arxiv_RT-1-Robotics-Transformer-for-Real-World-Control-at-Scale",
+      "folder": "2022/arXiv/2022_arxiv_RT-1-Robotics-Transformer-for-Real-World-Control-at-Scale",
       "target": "tmp/pdfs/fulltext_core_next_2026-09-02/pr-0021.pdf",
       "candidate_urls": [
         "https://arxiv.org/pdf/2212.06817",
@@ -2812,7 +2812,7 @@
     {
       "paper_id": "pr-0284",
       "title": "Splat-Nav: Safe Real-Time Robot Navigation in Gaussian Splatting Maps",
-      "folder": "2025/IROS/2025_IROS_Splat-Nav-Safe-Real-Time-Robot-Navigation-in-Gaussian-Spla",
+      "folder": "2025/T-RO/2025_T-RO_Splat-Nav-Safe-Real-Time-Robot-Navigation-in-Gaussian-Spla",
       "target": "tmp/pdfs/fulltext_core_next_2026-09-02/pr-0284.pdf",
       "candidate_urls": [
         "https://arxiv.org/pdf/2403.02751",
@@ -8110,8 +8110,8 @@
     },
     {
       "paper_id": "pr-0703",
-      "title": "FlowDreamer: A RGB-D World Model with Flow-based Motion Representations for Robot Manipulation",
-      "folder": "2025/arXiv/2025_arXiv_FlowDreamer-A-RGB-D-World-Model-with-Flow-based-Motion-Rep",
+      "title": "FlowDreamer: A RGB-D World Model With Flow-Based Motion Representations for Robot Manipulation",
+      "folder": "2026/RA-L/2026_RA-L_FlowDreamer-A-RGB-D-World-Model-With-Flow-Based-Motion-Rep",
       "target": "tmp/pdfs/fulltext_core_next_2026-09-02/pr-0703.pdf",
       "candidate_urls": [
         "https://arxiv.org/pdf/2505.10075",
@@ -8160,7 +8160,11 @@
         "captions": 15
       },
       "note_basis": "full-text PDF body with page-aware extractive cues",
-      "reviewed_on": "2026-09-02"
+      "reviewed_on": "2026-09-02",
+      "identity_at_review": {
+        "title": "FlowDreamer: A RGB-D World Model with Flow-based Motion Representations for Robot Manipulation",
+        "folder": "2025/arXiv/2025_arXiv_FlowDreamer-A-RGB-D-World-Model-with-Flow-based-Motion-Rep"
+      }
     },
     {
       "paper_id": "pr-0709",
@@ -15034,7 +15038,7 @@
     {
       "paper_id": "pr-0914",
       "title": "Precise and Dexterous Robotic Manipulation via Human-in-the-Loop Reinforcement Learning",
-      "folder": "2024/arXiv/2024_arXiv_Precise-and-Dexterous-Robotic-Manipulation-via-Human-in-th",
+      "folder": "2025/Science-Robotics/2025_Science-Robotics_Precise-and-dexterous-robotic-manipulation-via-human-in-th",
       "target": "tmp/pdfs/fulltext_core_next_2026-09-02/pr-0914.pdf",
       "candidate_urls": [
         "https://arxiv.org/pdf/2410.21845",

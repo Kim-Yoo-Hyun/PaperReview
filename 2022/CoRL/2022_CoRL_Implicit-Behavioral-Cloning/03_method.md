@@ -4,6 +4,8 @@
 > Evidence maturity: `FULL_TEXT_CHECKED`.
 > Analysis basis: full-text PDF body checked on 2026-09-03 (31 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://proceedings.mlr.press/v164/florence22a.html; PDF retrieval source: https://arxiv.org/pdf/2109.00137. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
+> DOC-QA2 targeted source review: 2026-10-23; PDF pp. 4. 손상 구간·직접 연결된 표 분류만 원문 이미지와 대조했다. 전체 주장 정독·실험 검증·reading status 승격을 뜻하지 않는다. [URL·PDF hash·수정 기록](../../../work/sources/pdf_note_review_followup_2026-10-23.json).
+
 ## Method in One Sentence
 
 PDF body method statement (p. 2 (1 Introduction), p. 2 (1 Introduction), p. 1 (1 Introduction), p. 1 (1 Introduction), p. 6 (1 Introduction), p. 4 (1 Introduction)): We use either a) a derivative-free (sampling-based) optimization procedure, b) an auto-regressive variant of the derivative-free optimizer which performs coordinate descent, or c) gradient-based Langevin sampling [11, 12] with gradient ...
@@ -75,7 +77,7 @@ PDF body method statement (p. 2 (1 Introduction), p. 2 (1 Introduction), p. 1 (1
 - **p. 6 / 1 Introduction - extractive body cue:** In both cases, state observations as inputs do not perform well compared with image pixel inputs.
 - **p. 6 / 1 Introduction - extractive body cue:** Perspective RGB images from a simulated camera are used as visual input, along with current end effector poses as state input.
 - **p. 4 / 1 Introduction - extractive body cue:** Visual Generalization Of particular relevance to learning visuomotor policies, we also find striking differences in extrapolation ability with converting high-dimensional image inputs into continuous outputs.
-- **p. 4 / 1 Introduction - extractive body cue:** Standard deviations are shown in Tables 2, 3, 4, 5, 6. image human unknown multimodal Benchmark input demos cardinality solutions D4RL Human-Experts    ...
+- **PDF p. 4, Table 1 (DOC-QA2 원문 대조):** Table 1은 D4RL Human-Experts·Particle Integrator·Block Pushing·Planar Sweeping·Bi-Manual Sweeping·Real Robot을 image input, human demos, unknown cardinality, multimodal solutions로 구분한다. 예: D4RL Human-Experts는 human demos만, Real Robot은 image input·human demos·multimodal solutions가 체크된다.
 - **Normalized interface:** observation=observation history와 expert trajectory/action; state=behavior policy와 temporal action context; output/action=predicted action 또는 action chunk.
 - Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 

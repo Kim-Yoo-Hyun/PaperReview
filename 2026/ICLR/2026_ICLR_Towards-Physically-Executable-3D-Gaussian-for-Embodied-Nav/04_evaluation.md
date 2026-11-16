@@ -4,6 +4,9 @@
 > Evidence maturity: `FULL_TEXT_CHECKED`.
 > Analysis basis: full-text PDF body checked on 2026-09-03 (21 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=HB6KvsqcAn; public full-text mirror used for retrieval (canonical paper source retained): https://chatpaper.com/api/v1/articles/download/246616. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
+> DOC-QA3 (2026-10-23): PS는 원문의 heading-change 식과 공개 코드의 XY 위치 차분 지표가 다르다. [정확한 구현·호출 경로와 비교 경계](./03_method.md)를 적용한다. 이 차이를 확인하기 전에는 paper PS와 공개 코드 PS를 같은 metric으로 합치지 않는다.
+
+
 ## Evaluation in One Sentence
 
 PDF body evaluation/result cue (p. 9 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 10 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS)): Even the recent SOTA model NaVILA achieves only a 0.39 success rate on high-level instructions, significantly lower than its 0.56 success rate on low-level instructions.

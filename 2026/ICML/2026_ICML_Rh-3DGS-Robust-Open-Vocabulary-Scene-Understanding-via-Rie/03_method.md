@@ -4,6 +4,8 @@
 > Evidence maturity: `FULL_TEXT_CHECKED`.
 > Analysis basis: full-text PDF body checked on 2026-09-03 (27 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=bjtuHOb3vN; PDF retrieval source: https://openreview.net/pdf/8310d4c5a6346eaadb420914138e1711121a0ff8.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
+> DOC-QA2 targeted source review: 2026-10-23; PDF pp. 3. 손상 구간·직접 연결된 표 분류만 원문 이미지와 대조했다. 전체 주장 정독·실험 검증·reading status 승격을 뜻하지 않는다. [URL·PDF hash·수정 기록](../../../work/sources/pdf_note_review_followup_2026-10-23.json).
+
 ## Method in One Sentence
 
 PDF body method statement (p. 3 (4.1. Problem Formulation and Notation), p. 4 (4.2. Overview), p. 4 (4.1. Problem Formulation and Notation), p. 5 (4.4. Visibility-Weighted Fr´echet Mean (VFM)), p. 5 (4.3. Visibility-Calibrated Distillation (VCD)), p. 3 (4.1. Problem Formulation and Notation)): Each Gaussian stores a lowdimensional semantic latent fi ∈Rd and a lightweight decoder maps it to the teacher feature space: hi = Dec(fi) ∈ RD.
@@ -72,7 +74,7 @@ PDF body method statement (p. 3 (4.1. Problem Formulation and Notation), p. 4 (4
 - **p. 4 / 4.1. Problem Formulation and Notation - extractive body cue:** Rh-3DGS 𝒊 radius 𝜸 same semantic (in 𝓝) excluded 𝑳𝑳𝑰𝑪 Local consistency Build 𝓝𝒓𝒔𝒆𝒎(𝒊) 𝒙𝒊, sem(𝒊) 𝒇𝒊 LIC semantic radius graph Posed RGB images {𝐼𝑣} ...
 - **p. 3 / 4.1. Problem Formulation and Notation - extractive body cue:** The rasterizer also outputs the accumulated opacity Av,u and depth moments D(1) v,u, D(2) v,u (with the same compositing weights).
 - **p. 4 / 4.3. Visibility-Calibrated Distillation (VCD) - extractive body cue:** It outputs a per-pixel weight map and reweights semantic supervision.
-- **p. 3 / 4.1. Problem Formulation and Notation - extractive body cue:** We compute the expected depth ¯Dv,u = D(1) v,u Av,u+ϵ and ray variance Varv,u =  D(2) v,u Av,u+ϵ -¯D2 v,u  +, used by ...
+- **PDF p. 3, §3.2 rasterization statistics (DOC-QA2 원문 대조):** Expected depth는 D̄=D⁽¹⁾/(A+ε), ray variance는 [D⁽²⁾/(A+ε)−D̄²]₊다. 같은 compositing weights에서 opacity와 depth moments를 얻고 VCD에 사용한다.
 - **p. 5 / 4.4. Visibility-Weighted Fr´echet Mean (VFM) - extractive body cue:** VCD down-weights mixed-depth and occlusion pixels.
 - **p. 5 / 4.4. Visibility-Weighted Fr´echet Mean (VFM) - extractive body cue:** We propose Visibility-Weighted Fr´echet Mean (VFM).
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.

@@ -4,6 +4,8 @@
 > Evidence maturity: `FULL_TEXT_CHECKED`.
 > Analysis basis: full-text PDF body checked on 2026-09-03 (6 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://doi.org/10.1109/ICRA.2011.5980280; PDF retrieval source: https://whiteoak.umd.edu/roswiki/attachments/Papers%282f%29ICRA2011_Kalakrishnan/kalakrishnan_icra2011.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
+> DOC-QA2 targeted source review: 2026-10-23; PDF pp. 2. 손상 구간·직접 연결된 표 분류만 원문 이미지와 대조했다. 전체 주장 정독·실험 검증·reading status 승격을 뜻하지 않는다. [URL·PDF hash·수정 기록](../../../work/sources/pdf_note_review_followup_2026-10-23.json).
+
 ## Evaluation in One Sentence
 
 PDF body evaluation/result cue (p. 5 (V. EXPERIMENTS), p. 5 (V. EXPERIMENTS), p. 4 (V. EXPERIMENTS), p. 1 (Figure/Table caption), p. 6 (Figure/Table caption)): The execution times are comparable, even though CHOMP usually requires more iterations to achieve success.
@@ -133,7 +135,7 @@ PDF body evaluation/result cue (p. 5 (V. EXPERIMENTS), p. 5 (V. EXPERIMENTS), p.
 | Each trajectory was 5 seconds long, discretized into 100 time-steps. | p. 5 (V. EXPERIMENTS) |
 | In the constrained scenario, 93.3% of trials resulted in plans that were both collision-free and satisfied the task constraints. | p. 5 (V. EXPERIMENTS) |
 | In the case of the path integral stochastic optimal control formalism, these controls are computed for every state xti as δˆu = R p(x)δu ... | p. 2 (III. THE STOMP ALGORITHM) |
-| Thus the stochastic gradient is now formulated as follows: δˆθG = Z exp  -1 λS(θ)  δθ d(δθ) (10) Even though our optimization ... | p. 2 (III. THE STOMP ALGORITHM) |
+| Eq. (10)의 stochastic-gradient 유도는 cost-weighted trajectory perturbations를 적분한다. 잘린 적분식을 완전한 실행 알고리즘이나 평가 결과로 제시하지 않는다. | PDF p. 2 §III / Eq. (10) |
 | (N -1), compute: [ ˜ δθ]i = PK k=1 P(˜θk,i)[ϵk]i 4) Compute δθ = M ˜ δθ | p. 3 (III. THE STOMP ALGORITHM) |
 | Scaling this to multiple dimensions simply involves performing the sampling and update steps for each dimension independently in each iteration. | p. 4 (IV. MOTION PLANNING FOR A ROBOT ARM) |
 | The signed EDT d(x), computed throughout the voxel grid, provides information about the distance to the boundary of the closest obstacle, both inside and ... | p. 4 (IV. MOTION PLANNING FOR A ROBOT ARM) |

@@ -1,0 +1,21 @@
+{
+  "removed_our_leftover_containers": [],
+  "retained_images": [
+    {
+      "Containers": "0",
+      "CreatedAt": "2026-10-23 23:03:57 +0900 KST",
+      "CreatedSince": "2 weeks ago",
+      "Digest": "<none>",
+      "ID": "sha256:ec14bd72a90f89cb6f3c4b263bb35a81de7977dffb2e5a2cb7e96946f1545ebb",
+      "Repository": "paper-gap-p3",
+      "SharedSize": "N/A",
+      "Size": "240MB",
+      "Tag": "rvo-c2c46ba",
+      "UniqueSize": "N/A",
+      "VirtualSize": "240.4MB"
+    }
+  ],
+  "created_images": [],
+  "existing_user_assets_deleted": false,
+  "control_test_containers_used_rm": true
+}
