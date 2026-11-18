@@ -1,5 +1,7 @@
 # Registry 보완·중복 정리 — 2026-11-01
 
+> 2026-11-17 인계: 이 문서의 폐기 후보(HANDOFF/SET/RETRIEVAL/CODEC1/ALLOC/HINDSIGHT/VRL) 계획·명령은 당시 기록이다. 현재는 RETIRED이며 새 실행 queue가 아니다. 링크는 핵심 보존본 또는 삭제 전 Git revision으로 연결한다.
+
 - Task: **REG-R6**
 - 범위: 최근 연구 검토의 미등록 직접 선행 보완, SET 보고서 병합, 활성 인계·생성 view 정합성. 전체 1,080편의 최신 게재 상태를 전수 재조사한 작업은 아니다.
 - [등록 입력](../sources/registry_admissions_2026-11-01.json) · [삭제/병합·검증 ledger](../sources/registry_maintenance_2026-11-01.json)
@@ -26,8 +28,8 @@
 
 | 정리 대상 | 남긴 위치·판단 |
 |---|---|
-| SET 최초 탐색·source 심사·비실험 보완 3개 보고서 | [문헌·source·설계 통합 검토](../research_topics/object_set/내용/README.md#source-review) 1개. Code permalink·의미 사례·서로 다른 predicate·반증 규칙·과거 미선정 이유 보존 |
-| SET 최초 P0 준비·재점검 2개 보고서 | [실행 준비·재점검 통합 기록](../research_topics/object_set/재현%20방법/README.md#preparation-history) 1개. 최초 GPU exit 125와 후속 check exit 3, source 고정/adapter 차이와 검사 범위 구분 |
+| SET 최초 탐색·source 심사·비실험 보완 3개 보고서 | [문헌·source·설계 통합 검토](../research_topics/retired/README.md#object_set) 1개. Code permalink·의미 사례·서로 다른 predicate·반증 규칙·과거 미선정 이유 보존 |
+| SET 최초 P0 준비·재점검 2개 보고서 | [실행 준비·재점검 통합 기록](../research_topics/retired/README.md#object_set) 1개. 최초 GPU exit 125와 후속 check exit 3, source 고정/adapter 차이와 검사 범위 구분 |
 | Python bytecode 2개 | 재생성 가능한 cache만 삭제. 의존성·환경 패키지 삭제는 하지 않음 |
 | TODO·research 안내의 반복 완료 설명 | 최근 완료·현재 세 후보·실제 재개 조건으로 축약. 우선순위는 REVISION 우선 유지 |
 | 내용이 동일한 과거 Docker version JSON 2개 | 서로 다른 실험의 증거이므로 각각 보존 |
@@ -44,8 +46,8 @@
 | REG-R5 / 10-31 | [이전 registry 정리](./REGISTRY_MAINTENANCE_2026-10-31.md): 직접 선행 3편, 이전 보고서 병합과 Linux 경로 정합성; 당시 1,077편 |
 | PRE-GPU-FOLLOWUP / 10-31 | [두 후보 비실험 검토](./PRE_GPU_BUILDUP_REVIEW_2026-10-31.md#remaining-work-review): 의미/observer·선택 불능·분모/비용, 실제 효과 미확인 |
 | GAP-REVISION-P0 / 10-31 | [준비 결과](../research_topics/instruction_revision/재현%20방법/README.md#preparation-history): R8 IO packet 작성, native 0·image 미빌드 |
-| GAP-NEXT-SCOUT / GAP-SET-R1 / GAP-SET-N1 / 11-01 | [통합 검토](../research_topics/object_set/내용/README.md#source-review): category-first·자유 subset·참조/종료 집합·292개 문서 집합 정합성; 정책 효과 아님 |
-| GAP-SET-P0-PREP / GAP-SET-P0-R1 / 11-01 | [통합 준비 기록](../research_topics/object_set/재현%20방법/README.md#preparation-history): 미빌드 packet·native 0, 이후 오래된 image 거부/IK·결과 분류 등 준비 검사 10개 |
+| GAP-NEXT-SCOUT / GAP-SET-R1 / GAP-SET-N1 / 11-01 | [통합 검토](../research_topics/retired/README.md#object_set): category-first·자유 subset·참조/종료 집합·292개 문서 집합 정합성; 정책 효과 아님 |
+| GAP-SET-P0-PREP / GAP-SET-P0-R1 / 11-01 | [통합 준비 기록](../research_topics/retired/README.md#object_set): 미빌드 packet·native 0, 이후 오래된 image 거부/IK·결과 분류 등 준비 검사 10개 |
 | PRE-GPU-3 / 11-01 | [세 후보 최종 비실험 보완](./THREE_CANDIDATES_NONEXPERIMENTAL_2026-11-01.md): 문헌·논리·설계 완료; 구현·교정·효과·독립 피드백 미완료 |
 
 ## 검증

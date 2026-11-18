@@ -1,5 +1,7 @@
 # C1-E1 — 추가 관측을 언제 생략할 수 있는가
 
+> 2026-11-17 인계: 이 문서의 폐기 후보(HANDOFF/SET/RETRIEVAL/CODEC1/ALLOC/HINDSIGHT/VRL) 계획·명령은 당시 기록이다. 현재는 RETIRED이며 새 실행 queue가 아니다. 링크는 핵심 보존본 또는 삭제 전 Git revision으로 연결한다.
+
 - 확인일: **2026-10-28 KST / 비실험 문헌 비교 완료**.
 - 범위: 기존 C1와 지정 3편의 arXiv v1 본문 구간·공식 abstract. 세 논문은 **2026 preprint**로 취급하며 top-tier acceptance를 확인한 것으로 표시하지 않는다. [Source ledger](../sources/c1_observation_cost_review_2026-10-28.json).
 - 결론: **작은 평가·실증 질문으로 유지한다.** 같은 frozen VLA에서 초기 관측만 사용하는 간단한 규칙으로 추가 관측을 생략해 시간·동작을 줄일 수 있는지 묻는다. 성공률 유지, 선택의 필요성, 신규성·독립 논문 가치는 아직 미확인이다.
@@ -26,7 +28,7 @@
 
 **정렬에 대한 주의 — 연구자 해석:** AP endpoint에 적응된 정책이 skip 시작 상태도 잘 처리하는지는 따로 관찰해야 한다. 반대로 원래 정책에 look만 붙여 생기는 손실은 새 이미지의 가치와 endpoint 지원 범위를 함께 반영한다. Standard의 immediate 결과와 adapted 정책의 look 결과를 빼서 선택 자체의 이득으로 부르면 안 된다. 처음부터 양쪽 성공을 증명해야 탐색할 수 있는 것은 아니며, 관찰된 차이의 해석 범위를 제한하면 된다.
 
-**가장 작은 구분:** C1은 한 정책 안에서 look을 할지 결정한다. [HANDOFF](../research_topics/mobile_policy_transfer/내용/README.md#closest-work)는 A에서 고른 도착 설정을 B에 재사용할지 결정한다. C1의 결과가 endpoint와 정책의 호환성만 보여 준다면 HANDOFF의 한 사례로 통합하고 독립 기여 두 개로 세지 않는다.
+**가장 작은 구분:** C1은 한 정책 안에서 look을 할지 결정한다. [HANDOFF](../research_topics/retired/README.md#mobile_policy_transfer)는 A에서 고른 도착 설정을 B에 재사용할지 결정한다. C1의 결과가 endpoint와 정책의 호환성만 보여 준다면 HANDOFF의 한 사례로 통합하고 독립 기여 두 개로 세지 않는다.
 
 ## 3. 작은 비교 초안 — 실행 계획은 아직 아님
 

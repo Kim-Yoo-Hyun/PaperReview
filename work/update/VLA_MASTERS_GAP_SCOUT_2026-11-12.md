@@ -1,5 +1,7 @@
 # 석사 연구를 위한 VLA·Robotics 공백 탐색
 
+> 2026-11-17 인계: 이 문서의 폐기 후보(HANDOFF/SET/RETRIEVAL/CODEC1/ALLOC/HINDSIGHT/VRL) 계획·명령은 당시 기록이다. 현재는 RETIRED이며 새 실행 queue가 아니다. 링크는 핵심 보존본 또는 삭제 전 Git revision으로 연결한다.
+
 - 조사: 2026-11-11–12 KST / GAP-MASTERS-SCOUT
 - 상태: **공백 후보 탐색 완료, CURATION-HYPOTHESIS**. 아래 순서는 이번 세 질문의 후속 검토 순서이며 논문 채택 확률·기존 11개 주제의 전체 재순위가 아니다.
 - 근거: [22편 source·확인 범위](../sources/vla_masters_gap_scout_2026-11-12.json), [현재 후보](../research_topics/README.md), [비실험 buildup 절차](../../research/IDEA_BUILDUP_GUIDE.md#nonexperimental-workflow). 논문 보고와 연구자 가설을 구별한다.
@@ -100,7 +102,7 @@ CoRL 2024의 PMLR 출판 연도 2025를 행사 연도와 구별했다. VLA-CF의
 
 따라서 “시간이 흘러도 작업은 안 됐는데 기억만 진행한다”, “event 기반 memory를 쓰자”를 새 기여로 채택하지 않는다. 남길 수 있는 질문은 물체를 집으려 했지만 실패하거나 놓은 뒤 미끄러져 목표가 취소된 경우, **실제 목표 상태와 command history의 불일치**를 어떤 정보로 구분하는가다. 이조차 위 최신 연구의 본문·failure coverage와 기존 outcome-aware memory를 확인하기 전에는 독립 공백으로 승격하지 않는다.
 
-기존 [SET](../research_topics/object_set/내용/README.md)의 진행/수량 진단과 [FEEDBACK](../research_topics/visual_feedback/내용/README.md)의 물리 변화 이후 관측 활용에 연결한다. 결과를 아는 oracle progress를 policy에 주는 조건은 상한 비교로 구분하며 배포 가능한 해결책처럼 쓰지 않는다. 새 12번째 memory topic이나 GPU 실행 자료는 만들지 않는다.
+기존 [SET](../research_topics/retired/README.md#object_set)의 진행/수량 진단과 [FEEDBACK](../research_topics/visual_feedback/내용/README.md)의 물리 변화 이후 관측 활용에 연결한다. 결과를 아는 oracle progress를 policy에 주는 조건은 상한 비교로 구분하며 배포 가능한 해결책처럼 쓰지 않는다. 새 12번째 memory topic이나 GPU 실행 자료는 만들지 않는다.
 
 ## 6. 기존 후보와 겹치는 부분·보존할 판정
 

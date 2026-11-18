@@ -14,6 +14,7 @@ __pycache__/
 tmp/
 temp/
 /work/research_topics/contact_adaptation/재현 방법/runs/
+/work/research_topics/relation_exploration/재현 방법/runs/
 
 # Large or generated files
 *.zip
@@ -29,3 +30,4 @@ temp/
 # Optional: downloaded paper PDFs
 # If you want to upload only your own notes/reviews, keep this enabled.
 *.pdf
+/work/research_topics/pose_active_perception/재현 방법/runs/

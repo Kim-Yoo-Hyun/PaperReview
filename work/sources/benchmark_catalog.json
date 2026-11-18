@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_on": "2026-11-16",
+  "generated_on": "2026-11-18",
   "catalog_type": "benchmark",
   "evidence_policy": "Generated references are cue_only. Do not treat a token match as verified evaluation evidence; consult the paper's 04_evaluation.md and source location.",
   "entries": [
@@ -2892,6 +2892,16 @@
           "paper_id": "pr-1202",
           "source": "2026/arXiv/2026_arXiv_RoboAlign-Learning-Test-Time-Reasoning-for-Language-Action/04_evaluation.md",
           "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-1212",
+          "source": "2026/RSS/2026_RSS_Universal-Pose-Pretraining-for-Generalizable-Vision-Langua/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-1214",
+          "source": "2026/CVPR/2026_CVPR_GeoPredict-Leveraging-Predictive-Kinematics-and-3D-Gaussia/04_evaluation.md",
+          "evidence": "cue_only"
         }
       ],
       "reference_basis": "04_evaluation.md token cue; dataset/metric role, split, aggregation, and primary-vs-auxiliary status remain paper-specific.",
@@ -3320,6 +3330,11 @@
         {
           "paper_id": "pr-1125",
           "source": "2026/RSS/2026_RSS_When-Life-Gives-You-BC-Make-Q-functions-Extracting-Q-value/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-1222",
+          "source": "2025/arXiv/2025_arXiv_SOE-Sample-Efficient-Robot-Policy-Self-Improvement-via-On/04_evaluation.md",
           "evidence": "cue_only"
         }
       ],
@@ -4229,6 +4244,16 @@
           "paper_id": "pr-1109",
           "source": "2026/arXiv/2026_arXiv_Beyond-Reconstruction-What-Matters-in-Action-Tokenization/04_evaluation.md",
           "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-1212",
+          "source": "2026/RSS/2026_RSS_Universal-Pose-Pretraining-for-Generalizable-Vision-Langua/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-1216",
+          "source": "2026/CVPR/2026_CVPR_Action-Geometry-Prediction-with-3D-Geometric-Prior-for-Bim/04_evaluation.md",
+          "evidence": "cue_only"
         }
       ],
       "reference_basis": "04_evaluation.md token cue; dataset/metric role, split, aggregation, and primary-vs-auxiliary status remain paper-specific.",
@@ -4461,6 +4486,11 @@
         {
           "paper_id": "pr-1144",
           "source": "2026/ICLR/2026_ICLR_DEAS-DEtached-value-learning-with-Action-Sequence-for-Scal/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-1214",
+          "source": "2026/CVPR/2026_CVPR_GeoPredict-Leveraging-Predictive-Kinematics-and-3D-Gaussia/04_evaluation.md",
           "evidence": "cue_only"
         }
       ],

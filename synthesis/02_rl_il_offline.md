@@ -66,7 +66,7 @@ TD → Q-Learning → REINFORCE/Policy-Gradient Theorem → PILCO/TRPO/PPO/SAC/M
 | CORE | [Benchmarking Knowledge Transfer for Lifelong Robot Learning](../2023/NeurIPS/2023_NeurIPS_Benchmarking-Knowledge-Transfer-for-Lifelong-Robot-Learnin/01_overview.md) | 2023 / NeurIPS | `UNREAD` | `FULL_TEXT_CHECKED` |
 | CORE | [Habitat: A Platform for Embodied AI Research](../2019/ICCV/2019_ICCV_Habitat-A-Platform-for-Embodied-AI-Research/01_overview.md) | 2019 / ICCV | `UNREAD` | `FULL_TEXT_CHECKED` |
 
-### RL, IL, offline learning, and robot data — 96
+### RL, IL, offline learning, and robot data — 100
 
 | Tier | Paper | Year / Venue | Status | Evidence |
 |---|---|---|---|---|
@@ -166,6 +166,10 @@ TD → Q-Learning → REINFORCE/Policy-Gradient Theorem → PILCO/TRPO/PPO/SAC/M
 | NEXT | [Horizon Reduction Makes RL Scalable](../2025/NeurIPS/2025_NeurIPS_Horizon-Reduction-Makes-RL-Scalable/01_overview.md) | 2025 / NeurIPS | `UNREAD` | `ABSTRACT_CHECKED` |
 | NEXT | [EgoDex: Learning Dexterous Manipulation from Large-Scale Egocentric Video](../2026/ICLR/2026_ICLR_EgoDex-Learning-Dexterous-Manipulation-from-Large-Scale-Eg/01_overview.md) | 2026 / ICLR | `UNREAD` | `ABSTRACT_CHECKED` |
 | NEXT | [Humanoid Everyday: A Comprehensive Robotic Dataset for Open-World Humanoid Manipulation](../2025/arXiv/2025_arXiv_Humanoid-Everyday-A-Comprehensive-Robotic-Dataset-for-Open/01_overview.md) | 2025 / arXiv | `UNREAD` | `ABSTRACT_CHECKED` |
+| NEXT | [Learning to Look: Seeking Information for Decision Making via Policy Factorization](../2024/CoRL/2024_CoRL_Learning-to-Look-Seeking-Information-for-Decision-Making-v/01_overview.md) | 2024 / CoRL | `UNREAD` | `ABSTRACT_CHECKED` |
+| NEXT | [Real-World Reinforcement Learning of Active Perception Behaviors](../2025/NeurIPS/2025_NeurIPS_Real-World-Reinforcement-Learning-of-Active-Perception-Beh/01_overview.md) | 2025 / NeurIPS | `UNREAD` | `ABSTRACT_CHECKED` |
+| NEXT | [Colored Noise in PPO: Improved Exploration and Performance through Correlated Action Sampling](../2024/AAAI/2024_AAAI_Colored-Noise-in-PPO-Improved-Exploration-and-Performance/01_overview.md) | 2024 / AAAI | `UNREAD` | `ABSTRACT_CHECKED` |
+| NEXT | [SOE: Sample-Efficient Robot Policy Self-Improvement via On-Manifold Exploration](../2025/arXiv/2025_arXiv_SOE-Sample-Efficient-Robot-Policy-Self-Improvement-via-On/01_overview.md) | 2025 / arXiv | `UNREAD` | `ABSTRACT_CHECKED` |
 
 <!-- READING_QUEUE:END -->
 
@@ -274,6 +278,13 @@ TD → Q-Learning → REINFORCE/Policy-Gradient Theorem → PILCO/TRPO/PPO/SAC/M
 
 ## Open Questions
 
+<a id="relation-exploration-2026"></a>
+### 작업 중 변하는 접촉 관계와 VLA의 RL 탐색 — 2026-11-17
+
+**CURATION-HYPOTHESIS / N1 선행·N2 입출력 계약 완료.** [StructRL](https://arxiv.org/html/2608.15139v1)의 학습 scale·시간 상관, [Lattice](https://proceedings.neurips.cc/paper_files/paper/2023/hash/b0ca717599b7ba84d5e4f4c8b1ef6657-Abstract-Conference.html)의 state-dependent full covariance, [RL-SCT](https://link.springer.com/article/10.1007/s10514-024-10164-6)의 phase별 제약 전환은 기존 기여다. 남길 질문은 같은 VLA feature로 양팔 상대 운동의 결합 weight를 학습할 필요가 generic covariance·수작업 phase rule 이후에도 남는가다. 큰 손–물체 graph를 축소하고, 공개 `lift_pot`·`handover_block`·`pick_dual_bottles`의 평가 범위를 구분했다. [내용·likelihood·비교 설계](../work/research_topics/relation_exploration/내용/README.md) / [source·명령/측정 상태·재개 조건](../work/research_topics/relation_exploration/재현%20방법/README.md). 설계 REVISE 후 탐색 계속이다. N2에서 π₀.₅ state token/quantile inverse·no-grad sampler, RoboTwin RL 경로의 정지 잡음/궤적 축약을 대조해 actor와 controller 효과를 분리하도록 명세했다. P0-PREP에서 portable loader/actor·FK/contact logger·launcher를 작성하고 정적 검사했다. 현재 launcher는 daemon 연결 실패(exit3)이며 Docker 검사·native 효과·실행·reading status는 승격하지 않았다. 다음은 호환 로컬 NVIDIA의 bounded P0다.
+
+**2026-11-18 등록 연결 / CURATION-HYPOTHESIS.** [Colored Noise PPO](../2024/AAAI/2024_AAAI_Colored-Noise-in-PPO-Improved-Exploration-and-Performance/01_overview.md)의 시간 상관, [StructRL](../2026/arXiv/2026_arXiv_StructRL-Structured-Action-Space-Exploration-for-Flow-Base/01_overview.md)의 action-space 구조, [SOE](../2025/arXiv/2025_arXiv_SOE-Sample-Efficient-Robot-Policy-Self-Improvement-via-On/01_overview.md)의 on-manifold 탐색을 관계 조건 actor의 대안으로 등록했다. [AAWR](../2025/NeurIPS/2025_NeurIPS_Real-World-Reinforcement-Learning-of-Active-Perception-Beh/01_overview.md)의 privileged critic 기반 능동 관측과는 훈련 정보·보상·행동 공간을 맞춰야 비교할 수 있다. 외부 탐색 모듈의 성과를 단일 VLA 가중치 공동 갱신의 근거로 사용하지 않는다. Publication 미확인 preprint와 공식 논문을 구별한 [REG-R17](../work/update/REGISTRY_MAINTENANCE_2026-11-18.md)을 참조한다.
+
 <a id="foundation-frontier-2026"></a>
 ### 기반 원전으로 최신 VLA RL의 기여를 구분하기
 
@@ -301,17 +312,9 @@ VLA에서의 구체적인 지시쌍·추정 대상과 단순 대안은 [지시�
 <a id="gap-allocation-2026"></a>
 ### 계산 예산과 배포 목표를 고려한 다중 과제 VLA 강화학습
 
-**2026-11-09 / GAP-ALLOC-N2 / CURATION-HYPOTHESIS / 내부 비교 설계 완료·좁은 분석 후보 유지.** 지정 본문과 5개 공개 repository의 선택 경로를 대조했다. 상세 질문·대안·비교·7단계 상태는 [주제 내용](../work/research_topics/task_allocation/내용/README.md), 코드 revision·실행 경계는 [재현 방법](../work/research_topics/task_allocation/재현%20방법/README.md)과 [단일 원장](../work/research_topics/task_allocation/내용/sources.json)에 통합한다. UNIFIED의 표현 공유·HINDSIGHT의 목표 재지정·C5의 reset coverage와 구별한다.
+**2026-11-17: 현재 ALLOC 설계는 RETIRED.** [폐기 이유·핵심](../work/research_topics/retired/README.md#task_allocation). 일반 sampling/weighting과 상태별 group 신호의 문제에 가까우며 현 설계의 로봇·비전 기여가 약하다. 단순 비용 보정·uniform 배분 대비 실제 이득은 미측정이다. GPU 부재에 따른 반증이 아니다.
 
-- **선행이 이미 해결한 것:** [DRATS §4·App. F.1](https://arxiv.org/html/2605.14350v1)은 worst return-gap sampling과 resampling 대 reweighting을 이미 비교한다. [VIP](https://arxiv.org/html/2602.01601v3)는 제한된 rollout 수의 variance 기반 배분을 다룬다. 일반 adaptive allocation이나 “수집/가중치를 처음 분리한다”는 주장은 제외한다.
-- **코드가 좁혀 준 질문:** VLA-RL의 공개 curriculum은 task 내부 초기 상태 선택이다. 확인한 SimpleVLA-RL/RLinf loop에서는 유효 episode 길이와 실제 계산 슬롯이 일치하지 않을 수 있고, RLinf embodied loss에는 길이 비율 보정 경로가 있다. 이는 정적 코드 사실이며 비용 크기·학습 효과를 측정한 결과가 아니다. [고정 source 근거](../work/research_topics/task_allocation/내용/sources.json)
-- **남은 연구자 질문:** 배포 task 분포와 기준 학습 surrogate를 고정할 때, 수집 배분의 이득이 실제 환경·추론·학습 예산하에서도 남는가? [PCM](https://arxiv.org/abs/2605.16154)의 chunk 계산 배분, [MPTS](https://doi.org/10.1038/s41467-026-74004-0)의 task-risk 예측 이후에도 남는 중요 조건을 찾아야 한다. 단순 길이/비용 보정이나 기존 sampler로 충분하면 새 방법 개발을 축소한다.
-
-**N2에서 구체화한 경계:** native filter는 row 제거가 아닌 mask이고 원 길이/전체 batch 분모가 유지된다. 고정 q의 p/q 보정과 정책별 적응 이력 비교를 나눴으며, 초기 상태 split 규칙·checkpoint/normalizer identity·비용 단위를 정했다. 고정 호출 비용이 같으면 inverse-cost 배분은 균등 배분과 같으므로 독립 알고리즘처럼 중복 실행하지 않는다. [식·손계산·비교 계약](../work/research_topics/task_allocation/내용/README.md#n2-contract)은 설계 근거이고 정책 효과의 증거가 아니다.
-
-**11/09 N2-R1 비실험 보완:** [새 근거·반례·설계](../work/research_topics/task_allocation/내용/README.md#nonexperimental-review)에서 Prism-GRPO/VSR을 추가 대조했다(둘 다 arXiv status). Task 평균 SR가 같아도 같은 초기 상태의 mixed-outcome group 확률은 달라질 수 있다. 이는 수작업 반례이며 실제 LIBERO 현상이 아니다. p/q 보정은 고정 surrogate 기대값을 유지하지만 variance·optimizer 경로를 유지하지 않아, Q-native/Q-fixed 차이를 목표 변경의 순수 효과로 해석하지 않는다. 다중 state calibration·U-distinct 조건부 기준선·group ESS·paired training-seed 통계를 설계했다. 알려진 항등식/단순 VLA 이식 자체의 신규성은 제외하며 좁은 실증 탐색을 유지한다. 이번 실험0, P0 실행 계약은 보존한다.
-
-**P0-PREP 완료·다음 GAP-ALLOC-P0 대기:** 현재 Mac ARM64/local Docker NVIDIA 할당 실패를 확인하고 runtime recipe·sampler/actor-facing sidecar·loss/IO fixture·launcher를 작성했다. Docker stdlib 제어24검사는 통과했지만 native tensor/IO/gradient는0이며 전체 worker/collector 연결은 미구현이다. 호환 local NVIDIA에서 bounded P0를 실행한다. 효과의 성숙도는 CURATION-HYPOTHESIS 그대로이고 외부 피드백·새 방법 기여·top-tier 출판 가능성은 미입증이다. 최초 발견 근거는 [초기 조사](../work/update/VLA_RL_ADDITIONAL_GAPS_2026-11-09.md)에 보존한다.
+문헌 비교 원칙은 남긴다. [PrismGRPO](https://arxiv.org/abs/2608.17423)·[VSR](https://arxiv.org/abs/2610.15888) 이후 표본 수와 GPU/환경 비용, task 평균 성공과 상태 내 group 신호를 구분해야 한다. 별도 allocator를 개발할 현재 계획은 없다. 상세 수식·계약·준비 검사는 폐기 요약의 고정 이력에서 추적한다.
 
 ### Reward·critic·탐색의 기여 분리 — 2026-11-08
 
@@ -319,7 +322,7 @@ VLA에서의 구체적인 지시쌍·추정 대상과 단순 대안은 [지시�
 
 [DEAS](https://proceedings.iclr.cc/paper_files/paper/2026/hash/68b7f71467c83d5d32275c5acbf6b588-Abstract-Conference.html)의 action-sequence value와 [Q2RL](https://roboticsproceedings.org/rss22/p153.html)의 BC 기반 value 초기화를 공동 표현 학습의 선행으로 대조한다. [TMRL](https://roboticsproceedings.org/rss22/p208.html)의 탐색 조절과 [OmniReset](https://proceedings.iclr.cc/paper_files/paper/2026/hash/8e3e3488623d64c493a7f11cf1f2e49f-Abstract-Conference.html)의 reset 다양성을 맞춘 뒤에도 효과가 남는지 확인해야 한다. 이 연결은 [새 등록](../work/update/TOP_TIER_SUPPLEMENT_2026-11-08.md)의 abstract 기반 비교이며 full-text synthesis나 실험 결과가 아니다.
 
-2026-11-03 최신 사용자 방향인 **VLA + RL** 재탐색은 [VLA Open Questions](./04_vla_generalist.md#gap-vla-rl-2026-11)에 통합한다. [42편 근거와 내부 비실험 buildup](../work/research_topics/vla_residual_update/내용/README.md)에서 residual의 독립 base-update 적응을 구체화했고 counterfactual reward coverage는 예비 후보로 남겼다. Actor 가중치·critic·replay 이전을 분리하며 모든 군에 같은 old raw data·새 critic을 제공한다. Q-filter·합성 행동 critic·DICE selective regularization은 선행이고 Fresh는 actor만 fresh다. N1은 base-action 입력 shift·Q 오류·gain/모방 대안과 A bootstrap 대 B 적응을 구분했다. 내부 검토는 완료, 현재 Mac NVIDIA 조건은 미충족이며 native image/adapter·효과·실제 외부 피드백은 미확인이다. 같은 데이터 success/return-weighted imitation·gain·Q 선택과 비교할 [실행 재개 명세](../work/research_topics/vla_residual_update/재현%20방법/README.md)를 보존한다. 기존 RETIRED 후보의 재개는 없다.
+2026-11-03 최신 사용자 방향인 **VLA + RL** 재탐색은 [VLA Open Questions](./04_vla_generalist.md#gap-vla-rl-2026-11)에 통합한다. [42편 근거와 내부 비실험 buildup](../work/research_topics/retired/README.md#vla_residual_update)에서 residual의 독립 base-update 적응을 구체화했고 counterfactual reward coverage는 예비 후보로 남겼다. Actor 가중치·critic·replay 이전을 분리하며 모든 군에 같은 old raw data·새 critic을 제공한다. Q-filter·합성 행동 critic·DICE selective regularization은 선행이고 Fresh는 actor만 fresh다. N1은 base-action 입력 shift·Q 오류·gain/모방 대안과 A bootstrap 대 B 적응을 구분했다. 내부 검토는 완료, 현재 Mac NVIDIA 조건은 미충족이며 native image/adapter·효과·실제 외부 피드백은 미확인이다. 같은 데이터 success/return-weighted imitation·gain·Q 선택과 비교할 [실행 재개 명세](../work/research_topics/retired/README.md#vla_residual_update)를 보존한다. 기존 RETIRED 후보의 재개는 없다.
 
 ### 2026 공식 보완: 데이터 구성과 배포 경험의 개입 위치
 

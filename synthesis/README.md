@@ -1,8 +1,10 @@
 # Robotics Research Synthesis
 
-- Updated: 2026-11-16 KST
+- Updated: 2026-11-18 KST
 
-**현재 새 탐색은 VLA + RL·단일 정책 학습 중심**이다. [Hindsight 목표 선택](./04_vla_generalist.md#gap-hindsight-transfer)을 포함한 논문 간 질문을 여기서 관리한다. 현재 11개 주제의 가능성·준비 상태는 [주제 index](../work/research_topics/README.md), 선택한 다음 행동은 [TODO](../TODO.md)에 통합하며 실행 인계를 중복하지 않는다.
+**현재는 물체 자세·능동 관측 후보의 N1/N2 비실험 검토·비교 명세를 완료**했다. P0 recipe·scene/IO probe는 작성했고 로컬 daemon 실패로 native 검증을 대기한다. 효과 검증은 없다. 조작용 3D 추정은 두 번째 초기 후보로 보존한다. [새 두 후보와 직접 선행](../work/update/NEW_FIELD_SCOUT_2026-11-17.md#pose-reconstruction), [접촉 관계 기반 RL 탐색의 N1/N2·P0 준비](../work/research_topics/relation_exploration/내용/README.md), [유지·예비 후보](../work/research_topics/README.md), [폐기7개](../work/research_topics/retired/README.md)를 구별한다. 새 질문은 [3D perception Open Questions](./07_robotics_3d_perception.md#pose-reconstruction-2026)에 연결한다. 다음 행동은 [TODO](../TODO.md), 검색 용어는 [buildup guide](../research/IDEA_BUILDUP_GUIDE.md#search-map-2026-11-17)가 소유한다. 문헌 질문의 존재를 효과 입증이나 실행 완료로 세지 않는다.
+
+[11/18 보강](../work/update/REGISTRY_MAINTENANCE_2026-11-18.md)에서 pose·active perception·geometry·exploration 직접 선행18편을 registry/queue에 연결했다. 새 노트는 초록 기반이며 정독 comparison row나 사용자 상태를 자동 승격하지 않았다.
 
 이 디렉토리는 논문별 요약을 반복하는 곳이 아니라, CORE/NEXT 논문을 연구 트랙별로 비교하고 근거 기반 `Open Questions`를 축적하는 공간이다.
 

@@ -1,5 +1,7 @@
 # VLA 지시 수정·멀티모달 지시·부분 관측의 연구 공백 비교
 
+> 2026-11-17 인계: 이 문서의 폐기 후보(HANDOFF/SET/RETRIEVAL/CODEC1/ALLOC/HINDSIGHT/VRL) 계획·명령은 당시 기록이다. 현재는 RETIRED이며 새 실행 queue가 아니다. 링크는 핵심 보존본 또는 삭제 전 Git revision으로 연결한다.
+
 - 작성: 2026-10-29 KST
 - 작업: GAP-S4 DONE — 문헌 기반 후보 선정과 최소 비교 초안
 - 선택: **부분 지시 수정 이후 VLA의 제약 보존과 실행 일관성**. 탐색할 가치가 있는 평가·실증 질문이며, 새 방법의 필요성·효과·독립 논문 가치는 미확인이다.
@@ -8,7 +10,7 @@
 
 ## 1. 범위와 이번 결정
 
-[빌드업 단계별 기준](../../research/IDEA_BUILDUP_GUIDE.md#stage-appropriate-gates)에 따라 중요한 질문, 가까운 선행, 강한 단순 대안, 다음 확인 항목을 비교했다. GPU가 없다는 이유로 이전 주제를 폐기하지 않는다. 이동–조작의 정책 교체와 navigation 종료 조건에 관한 [기존 연구](../research_topics/mobile_policy_transfer/내용/README.md#overview)는 자원·구현 대기 상태를 유지한다.
+[빌드업 단계별 기준](../../research/IDEA_BUILDUP_GUIDE.md#stage-appropriate-gates)에 따라 중요한 질문, 가까운 선행, 강한 단순 대안, 다음 확인 항목을 비교했다. GPU가 없다는 이유로 이전 주제를 폐기하지 않는다. 이동–조작의 정책 교체와 navigation 종료 조건에 관한 [기존 연구](../research_topics/retired/README.md#mobile_policy_transfer)는 자원·구현 대기 상태를 유지한다.
 
 Registry 1,074편의 관련 항목과 기존 후보 기록을 출발점으로, 2024–2026 외부 primary source **9편**을 이번 비교의 근거로 사용했다. 공식 venue 확인 6편(RSS 2024/2026, ICML 2025/2026, ICLR 2026, Findings of EMNLP 2025), preprint 3편이다. 이 중 6편은 지정 본문 구간까지, 3편은 abstract 중심으로 확인했다. 모든 학회의 전체 논문을 조사하거나 9편을 전부 정독한 것은 아니다. Findings를 EMNLP main으로, preprint를 채택 논문으로 표시하지 않는다.
 

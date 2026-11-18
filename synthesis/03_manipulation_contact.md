@@ -43,7 +43,7 @@ Planning Optimal Grasps → Contact-Invariant Optimization → GraspNet/Contact-
 | CORE | [Learning Fine-Grained Bimanual Manipulation with Low-Cost Hardware](../2023/RSS/2023_RSS_Learning-Fine-Grained-Bimanual-Manipulation-with-Low-Cost/01_overview.md) | 2023 / RSS | `UNREAD` | `FULL_TEXT_CHECKED` |
 | CORE | [3D Diffusion Policy: Generalizable Visuomotor Policy Learning via Simple 3D Representations](../2024/RSS/2024_RSS_3D-Diffusion-Policy-Generalizable-Visuomotor-Policy-Learni/01_overview.md) | 2024 / RSS | `UNREAD` | `FULL_TEXT_CHECKED` |
 
-### Contact-rich, deformable, force, and dexterous manipulation — 56
+### Contact-rich, deformable, force, and dexterous manipulation — 58
 
 | Tier | Paper | Year / Venue | Status | Evidence |
 |---|---|---|---|---|
@@ -103,6 +103,8 @@ Planning Optimal Grasps → Contact-Invariant Optimization → GraspNet/Contact-
 | NEXT | [FORGE: Force-Guided Exploration for Robust Contact-Rich Manipulation Under Uncertainty](../2025/RA-L/2025_RA-L_FORGE-Force-Guided-Exploration-for-Robust-Contact-Rich-Man/01_overview.md) | 2025 / RA-L | `UNREAD` | `ABSTRACT_CHECKED` |
 | NEXT | [ContactBench 1.0: A Benchmark for Everyday Contact-Rich Robotic Manipulation](../2026/arXiv/2026_arXiv_ContactBench-1.0-A-Benchmark-for-Everyday-Contact-Rich-Rob/01_overview.md) | 2026 / arXiv | `UNREAD` | `ABSTRACT_CHECKED` |
 | NEXT | [Tune to Learn: How Controller Gains Shape Robot Policy Learning](../2026/RSS/2026_RSS_Tune-to-Learn-How-Controller-Gains-Shape-Robot-Policy-Lear/01_overview.md) | 2026 / RSS | `UNREAD` | `ABSTRACT_CHECKED` |
+| NEXT | [Action-Geometry Prediction with 3D Geometric Prior for Bimanual Manipulation](../2026/CVPR/2026_CVPR_Action-Geometry-Prediction-with-3D-Geometric-Prior-for-Bim/01_overview.md) | 2026 / CVPR | `UNREAD` | `ABSTRACT_CHECKED` |
+| NEXT | [Guiding real-world reinforcement learning for in-contact manipulation tasks with Shared Control Templates](../2024/Autonomous-Robots/2024_Autonomous-Robots_Guiding-real-world-reinforcement-learning-for-in-contact-m/01_overview.md) | 2024 / Autonomous Robots | `UNREAD` | `ABSTRACT_CHECKED` |
 
 <!-- READING_QUEUE:END -->
 

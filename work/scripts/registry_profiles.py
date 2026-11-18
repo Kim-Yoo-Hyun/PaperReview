@@ -223,10 +223,10 @@ def _explicit_data_status(text: str, paper_type: str, benchmark_cues: list[dict]
     if data_release.search(text):
         return "released", "note_cue"
     if benchmark_cues:
-        return "not_identified", "full_text_note_audited; no explicit data artifact release statement"
+        return "not_identified", "note_cue_scan; no explicit data artifact release statement"
     if paper_type == "theory_or_foundation":
         return "not_applicable", "paper_type and evaluation note scope; no data artifact cue"
-    return "not_identified", "full_text note audited; no explicit data artifact status identified"
+    return "not_identified", "note_cue_scan; no explicit data artifact status identified"
 
 
 def _checkpoint_status(text: str) -> tuple[str, str]:

@@ -1,5 +1,7 @@
 # VLA + RL 연구 공백 재탐색 — 2024–2026 문헌 비교
 
+> 2026-11-17 인계: 이 문서의 폐기 후보(HANDOFF/SET/RETRIEVAL/CODEC1/ALLOC/HINDSIGHT/VRL) 계획·명령은 당시 기록이다. 현재는 RETIRED이며 새 실행 queue가 아니다. 링크는 핵심 보존본 또는 삭제 전 Git revision으로 연결한다.
+
 - 조사일: 2026-11-03 KST / 작업: `GAP-VRL-S1`, 후속 `R1`·`R2`·`P0-PREP`·`N1`
 - 목적: 석사 과정에서 명확한 기여를 만들 수 있는 **VLA + RL** 질문을 찾는다. 성능 개선·학습 데이터·배포 제어·통합 시스템을 모두 검토한다.
 - 범위: registry 1,090편의 metadata 검색과 관련 기존 합성/후보 검토, 외부 공식 proceedings·program·저자 본문 확인. 전체 1,090편 정독이나 모든 venue의 전수조사가 아니다.
@@ -7,7 +9,7 @@
 - 근거별 확인 깊이·registry identity·누락 후보·접근 제한: [단일 source ledger](../sources/vla_rl_gap_review_2026-11-03.json).
 - 현행 질문의 위치: [VLA Open Questions](../../synthesis/04_vla_generalist.md#gap-vla-rl-2026-11). 이 문서는 날짜별 비교 근거이며 별도의 우선순위 registry가 아니다.
 - 완료 범위: S1–R2 문헌·비교 설계, 후속 N1 내부 비실험 검토 및 읽기 전용 local Docker 확인. **정책 실행·학습·GPU allocation·성능 측정·실제 외부 피드백은 없다.** 후보의 신규성·효과·채택 가능성은 미입증이다.
-- **현재 결론:** [내부 비실험 buildup 완료](#nonexperimental-completion), 탐색 유지. 독립적인 VLA 업데이트 후 residual 재사용 비용을 묻되 Q-filter 조합 자체의 신규성을 주장하지 않는다. 현재 local Docker는 NVIDIA 조건 미충족이며 [내용·재현 방법](../research_topics/vla_residual_update/내용/README.md)으로 통합했다. 다음은 호환 컴퓨터에서 미구현 image/adapter부터 완성하는 `GAP-VRL-P0`다.
+- **현재 결론:** [내부 비실험 buildup 완료](#nonexperimental-completion), 탐색 유지. 독립적인 VLA 업데이트 후 residual 재사용 비용을 묻되 Q-filter 조합 자체의 신규성을 주장하지 않는다. 현재 local Docker는 NVIDIA 조건 미충족이며 [내용·재현 방법](../research_topics/retired/README.md#vla_residual_update)으로 통합했다. 다음은 호환 컴퓨터에서 미구현 image/adapter부터 완성하는 `GAP-VRL-P0`다.
 
 ## 1. 이번에 우선 탐색할 질문
 
@@ -184,7 +186,7 @@ NaVILA는 VLA 중간 명령과 RL locomotion을 결합하고, TIC-VLA는 비동�
 
 R1은 `CONTINUE_EXPLORATION_NARROWED`로 완료했다. Object-Centric·FIRe의 residual 전이, EXPO 계열의 공동 적응을 반영하여 단순 VLA 간 전이의 최초 주장을 버리고 독립 checkpoint 교체 후 재사용 비용으로 질문을 좁혔다. 공개 A/B revisions·같은 normalizer·parameter key를 확인했지만 exact-parent·native IO·residual checkpoint는 미확인이었다.
 
-상세 직접 비교는 [주제 내용](../research_topics/vla_residual_update/내용/README.md), checkpoint/source는 [재현 방법](../research_topics/vla_residual_update/재현%20방법/README.md#checkpoints)으로 통합했다. 당시 검증·준비 범위는 원장의 `r1_review`에 보존한다.
+상세 직접 비교는 [주제 내용](../research_topics/retired/README.md#vla_residual_update), checkpoint/source는 [재현 방법](../research_topics/retired/README.md#vla_residual_update)으로 통합했다. 당시 검증·준비 범위는 원장의 `r1_review`에 보존한다.
 
 <a id="residual-r2"></a>
 
@@ -192,15 +194,15 @@ R1은 `CONTINUE_EXPLORATION_NARROWED`로 완료했다. Object-Centric·FIRe의 r
 
 R2는 `DESIGN_READY_EXPLORATION_NATIVE_UNVERIFIED`로 완료했다. 한 LIBERO task에서 actor만 이전하고, 새 critic·동결 A encoder·공통 old data를 사용하며 gain/warm/fresh/단일 Q-filter/imitation 대조와 예산을 고정했다. 규칙 자체의 신규성은 미확정이며 학습·정책 결과는 없었다.
 
-설명은 [내용 §3–7](../research_topics/vla_residual_update/내용/README.md), 단일 기계 계약은 [source 원장](../sources/vla_rl_gap_review_2026-11-03.json)의 `r2_review.comparison_contract`에 있다. 기존 보고서의 R1/R2 중복 본문을 이 주제의 `내용/`·`재현 방법/`으로 이동했다. 당시 audit와 5,994개 파일·staged index 보존 결과는 원장의 `r2_review.validation`에 유지한다.
+설명은 [내용 §3–7](../research_topics/retired/README.md#vla_residual_update), 단일 기계 계약은 [source 원장](../sources/vla_rl_gap_review_2026-11-03.json)의 `r2_review.comparison_contract`에 있다. 기존 보고서의 R1/R2 중복 본문을 이 주제의 `내용/`·`재현 방법/`으로 이동했다. 당시 audit와 5,994개 파일·staged index 보존 결과는 원장의 `r2_review.validation`에 유지한다.
 
 <a id="nonexperimental-completion"></a>
 
 ## 12. 비실험 buildup 종료와 local Docker 확인
 
-2026-11-03 후속 요청으로 `GAP-VRL-P0-PREP`의 자원 확인과 `GAP-VRL-N1`의 내부 비실험 보완을 완료했다. 현재 Darwin arm64·local Docker Desktop Linux aarch64·7.65 GiB, NVIDIA runtime 미표시 및 사용자 비-NVIDIA 설명으로 target CUDA 조건 미충족을 확인했다. 새 allocation container·다운로드·추론·학습은 실행하지 않았다. [정확한 command/관측 및 재개 계획](../research_topics/vla_residual_update/재현%20방법/RESUME_PLAN.json).
+2026-11-03 후속 요청으로 `GAP-VRL-P0-PREP`의 자원 확인과 `GAP-VRL-N1`의 내부 비실험 보완을 완료했다. 현재 Darwin arm64·local Docker Desktop Linux aarch64·7.65 GiB, NVIDIA runtime 미표시 및 사용자 비-NVIDIA 설명으로 target CUDA 조건 미충족을 확인했다. 새 allocation container·다운로드·추론·학습은 실행하지 않았다. [정확한 command/관측 및 재개 계획](https://github.com/Kim-Yoo-Hyun/PaperReview/blob/5bec2cfa8a31758ca8e5be9c19c39dc4c23bb096/work/research_topics/vla_residual_update/%EC%9E%AC%ED%98%84%20%EB%B0%A9%EB%B2%95/RESUME_PLAN.json).
 
-추가 검토에서 base-action 입력 분포 변화·critic 추정 오차·단순 gain/모방 대안을 명시하고 A bootstrap과 B 적응의 target을 구분했다. 원 SETUP의 unpinned 의존성과 driver/CUDA 표기를 검토하여 검증된 lock으로 잘못 전달하지 않도록 했다. [Guide 단계 0–8 완료 범위·주장–증거·독립 검토 질문](../research_topics/vla_residual_update/내용/README.md#nonexperimental-completion)을 작성했다.
+추가 검토에서 base-action 입력 분포 변화·critic 추정 오차·단순 gain/모방 대안을 명시하고 A bootstrap과 B 적응의 target을 구분했다. 원 SETUP의 unpinned 의존성과 driver/CUDA 표기를 검토하여 검증된 lock으로 잘못 전달하지 않도록 했다. [Guide 단계 0–8 완료 범위·주장–증거·독립 검토 질문](../research_topics/retired/README.md#vla_residual_update)을 작성했다.
 
 **현재 판단:** 작은 비교를 할 가치가 있는 탐색 후보. 가능한 내부 비실험 검토는 완료했으며 실제 효과·독립 기여·외부 피드백은 미확인이다. 다음은 호환 NVIDIA 컴퓨터에서 미구현 image/adapter/assets부터 완성하는 `GAP-VRL-P0`다. GPU 확보만으로 실행 준비/연구 가치가 자동 확정되지 않는다. 같은 metadata/문헌 집계나 현재 실패 조건의 GPU probe를 반복하지 않는다.
 

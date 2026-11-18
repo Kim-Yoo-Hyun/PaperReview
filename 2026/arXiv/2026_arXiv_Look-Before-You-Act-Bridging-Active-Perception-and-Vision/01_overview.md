@@ -6,7 +6,7 @@
 - Year/Venue: 2026 / arXiv
 - Category: VLA and Generalist Robot Policies
 - Primary track: VLA and generalist robot policies
-- Tier: REFERENCE
+- Tier: NEXT
 - Tags: VLA, action-interface, cross-embodiment
 - Aliases: ActiveAlign
 - Official paper: https://arxiv.org/abs/2610.23378

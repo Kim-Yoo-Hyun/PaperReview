@@ -1,10 +1,12 @@
 # 기존 후보 밖의 VLA + RL 연구 공백 추가 탐색
 
+> 2026-11-17 인계: 이 문서의 폐기 후보(HANDOFF/SET/RETRIEVAL/CODEC1/ALLOC/HINDSIGHT/VRL) 계획·명령은 당시 기록이다. 현재는 RETIRED이며 새 실행 queue가 아니다. 링크는 핵심 보존본 또는 삭제 전 Git revision으로 연결한다.
+
 - 검토일: 2026-11-09 KST
 - 이 보고서의 작업: **GAP-ROBOTICS-SCOUT — Robotics 중심 재선정**. 접촉 적응 우선·복구 가능성 보존/접촉 유지 이동 조작 예비. 후속 **[CONTACT-RL-N1/N2 완료](../research_topics/contact_adaptation/내용/README.md)**: 지정 본문·공개 구현 대조 뒤 조합 신규성 제외, charger 삽입의 좁은 비교 탐색 유지. 단일 π₀·관절 gain·동일 비용 비교와 sensor/controller P0-A 요구를 정했다. 내부 비실험 설계에 이어 P0-PREP 재개 코드도 작성했다. 현재 Mac NVIDIA allocation 실패·Docker stdlib16검사만 확인했으며 native runtime·효과는 미검증이다. 상세 결과는 주제별 두 README에 통합했다. 최초 GAP-SCOUT-NOV09의 질문과 제외 이력은 아래에 보존한다.
 - 최초 scout 근거: [15편 source 원장](../sources/vla_rl_additional_gaps_2026-11-09.json). Registry 7편과 외부 8편을 대조했다. 대부분 초록·공식 project 범위이며 VIP, Grounding Sim-to-Real, RLIF, PACT는 가까운 본문 구간도 확인했다. 전체 정독·공개 코드 감사·실험 완료 수가 아니다.
 - 최초 두 질문의 canonical 내용: synthesis의 [수집 예산 배분](../../synthesis/02_rl_il_offline.md#gap-allocation-2026), [물리 조건 민감도](../../synthesis/05_world_models_safety.md#gap-physics-2026). 이 보고서는 선정 이유·검색 범위·제외 이력을 보존한다.
-- 후속: 같은 날 **[GAP-ALLOC-N1 초기 buildup](../research_topics/task_allocation/내용/README.md)**을 완료하고 과제 배분의 상세 내용을 주제별 두 폴더로 통합했다. 아래 9개 주제·다음 N1 표기는 최초 scout 시점의 기록이다. 후속 N2 내부 설계·P0-PREP도 완료했으며 당시 다음 행동은 호환 local NVIDIA에서 P0 native 검증이었다. 이후 사용자의 Robotics 중심 요청으로 과제 배분을 예비로 돌렸다. 현재 상태는 [TODO](../../TODO.md)가 소유한다.
+- 후속: 같은 날 **[GAP-ALLOC-N1 초기 buildup](../research_topics/retired/README.md#task_allocation)**을 완료하고 과제 배분의 상세 내용을 주제별 두 폴더로 통합했다. 아래 9개 주제·다음 N1 표기는 최초 scout 시점의 기록이다. 후속 N2 내부 설계·P0-PREP도 완료했으며 당시 다음 행동은 호환 local NVIDIA에서 P0 native 검증이었다. 이후 사용자의 Robotics 중심 요청으로 과제 배분을 예비로 돌렸다. 현재 상태는 [TODO](../../TODO.md)가 소유한다.
 
 <a id="robotics-reorientation"></a>
 ## Robotics 중심 재선정 — 2026-11-09

@@ -226,7 +226,7 @@ Exact assumptions·negative results·transfer limits는 본문 확인 필요. �
 
 ### Dependency and Evolution
 
-{item['lineage']}.
+{item['lineage'].rstrip('.')}.
 
 이 연결은 개념적 읽기·비교 경로다. 직접 citation 또는 검증된 derivation 관계라는 뜻은 아니다.
 

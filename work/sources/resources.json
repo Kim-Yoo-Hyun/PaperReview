@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_on": "2026-11-16",
+  "generated_on": "2026-11-18",
   "source_of_truth": "work/sources/papers.json plus benchmark_catalog.json and metric_catalog.json",
   "evidence_policy": "benchmark/metric references remain cue_only; code_or_project entries record linked manifest URLs and do not prove reproducibility.",
   "entries": [
@@ -1879,6 +1879,16 @@
           "paper_id": "pr-1202",
           "source": "2026/arXiv/2026_arXiv_RoboAlign-Learning-Test-Time-Reasoning-for-Language-Action/04_evaluation.md",
           "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-1212",
+          "source": "2026/RSS/2026_RSS_Universal-Pose-Pretraining-for-Generalizable-Vision-Langua/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-1214",
+          "source": "2026/CVPR/2026_CVPR_GeoPredict-Leveraging-Predictive-Kinematics-and-3D-Gaussia/04_evaluation.md",
+          "evidence": "cue_only"
         }
       ],
       "evidence": "cue_only",
@@ -3514,6 +3524,11 @@
           "paper_id": "pr-1144",
           "source": "2026/ICLR/2026_ICLR_DEAS-DEtached-value-learning-with-Action-Sequence-for-Scal/04_evaluation.md",
           "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-1214",
+          "source": "2026/CVPR/2026_CVPR_GeoPredict-Leveraging-Predictive-Kinematics-and-3D-Gaussia/04_evaluation.md",
+          "evidence": "cue_only"
         }
       ],
       "evidence": "cue_only",
@@ -3581,6 +3596,11 @@
         {
           "paper_id": "pr-1125",
           "source": "2026/RSS/2026_RSS_When-Life-Gives-You-BC-Make-Q-functions-Extracting-Q-value/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-1222",
+          "source": "2025/arXiv/2025_arXiv_SOE-Sample-Efficient-Robot-Policy-Self-Improvement-via-On/04_evaluation.md",
           "evidence": "cue_only"
         }
       ],
@@ -3707,6 +3727,16 @@
         {
           "paper_id": "pr-1109",
           "source": "2026/arXiv/2026_arXiv_Beyond-Reconstruction-What-Matters-in-Action-Tokenization/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-1212",
+          "source": "2026/RSS/2026_RSS_Universal-Pose-Pretraining-for-Generalizable-Vision-Langua/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-1216",
+          "source": "2026/CVPR/2026_CVPR_Action-Geometry-Prediction-with-3D-Geometric-Prior-for-Bim/04_evaluation.md",
           "evidence": "cue_only"
         }
       ],
@@ -5512,6 +5542,18 @@
       "verified_on": "2026-09-01"
     },
     {
+      "resource_id": "code:02e36557d993",
+      "resource_type": "code_or_project",
+      "name": "FoundationPose",
+      "url": "https://github.com/NVlabs/FoundationPose",
+      "paper_ids": [
+        "pr-1207"
+      ],
+      "evidence": "manifest_link",
+      "availability": "released",
+      "verified_on": "2026-11-18"
+    },
+    {
       "resource_id": "code:02f37b52594f",
       "resource_type": "code_or_project",
       "name": "CLIP",
@@ -6232,6 +6274,18 @@
       "verified_on": null
     },
     {
+      "resource_id": "code:21a78d72dca0",
+      "resource_type": "code_or_project",
+      "name": "GAP",
+      "url": "https://github.com/Chongyang-99/GAP",
+      "paper_ids": [
+        "pr-1216"
+      ],
+      "evidence": "manifest_link",
+      "availability": "released",
+      "verified_on": "2026-11-18"
+    },
+    {
       "resource_id": "code:21d1a993adc6",
       "resource_type": "code_or_project",
       "name": "irl",
@@ -6386,6 +6440,18 @@
       "evidence": "manifest_link",
       "availability": "project_only",
       "verified_on": "2026-10-22"
+    },
+    {
+      "resource_id": "code:26243786dbc5",
+      "resource_type": "code_or_project",
+      "name": "ActiveODPE",
+      "url": "https://trailab.github.io/ActiveODPE/",
+      "paper_ids": [
+        "pr-1209"
+      ],
+      "evidence": "manifest_link",
+      "availability": "project_only",
+      "verified_on": "2026-11-18"
     },
     {
       "resource_id": "code:264cf657a88e",
@@ -6951,6 +7017,18 @@
       "evidence": "manifest_link",
       "availability": "project_only",
       "verified_on": "2026-11-07"
+    },
+    {
+      "resource_id": "code:3c8ecc53377f",
+      "resource_type": "code_or_project",
+      "name": "GeoPredict",
+      "url": "https://github.com/jingjingqian75/GeoPredict",
+      "paper_ids": [
+        "pr-1214"
+      ],
+      "evidence": "manifest_link",
+      "availability": "released",
+      "verified_on": "2026-11-18"
     },
     {
       "resource_id": "code:3d8ac25df8e0",
@@ -7601,6 +7679,18 @@
       "verified_on": "2026-07-02"
     },
     {
+      "resource_id": "code:52ca80551631",
+      "resource_type": "code_or_project",
+      "name": "PoseVLA",
+      "url": "https://hetolin.github.io/PoseVLA/",
+      "paper_ids": [
+        "pr-1212"
+      ],
+      "evidence": "manifest_link",
+      "availability": "project_only",
+      "verified_on": "2026-11-18"
+    },
+    {
       "resource_id": "code:538458d0b804",
       "resource_type": "code_or_project",
       "name": "moma-llm.cs.uni-freiburg.de",
@@ -7863,6 +7953,18 @@
       "evidence": "manifest_link",
       "availability": "released",
       "verified_on": "2026-11-16"
+    },
+    {
+      "resource_id": "code:5c89f8f15ead",
+      "resource_type": "code_or_project",
+      "name": "RMFPose",
+      "url": "https://github.com/shabiouyang/RMFPose",
+      "paper_ids": [
+        "pr-1211"
+      ],
+      "evidence": "manifest_link",
+      "availability": "released",
+      "verified_on": "2026-11-18"
     },
     {
       "resource_id": "code:5cd5cdbf9efb",
@@ -8454,6 +8556,18 @@
       "verified_on": null
     },
     {
+      "resource_id": "code:7995d9d74cde",
+      "resource_type": "code_or_project",
+      "name": "l2l",
+      "url": "https://github.com/UT-Austin-RobIn/l2l",
+      "paper_ids": [
+        "pr-1208"
+      ],
+      "evidence": "manifest_link",
+      "availability": "released",
+      "verified_on": "2026-11-18"
+    },
+    {
       "resource_id": "code:7998b6fd72b8",
       "resource_type": "code_or_project",
       "name": "batch-online-rl",
@@ -8730,6 +8844,18 @@
       "verified_on": "2026-07-02"
     },
     {
+      "resource_id": "code:846ede8ebd13",
+      "resource_type": "code_or_project",
+      "name": "robo3r",
+      "url": "https://yangsizhe.github.io/robo3r/",
+      "paper_ids": [
+        "pr-1213"
+      ],
+      "evidence": "manifest_link",
+      "availability": "project_only",
+      "verified_on": "2026-11-18"
+    },
+    {
       "resource_id": "code:84b4f8697c70",
       "resource_type": "code_or_project",
       "name": "roboverseorg.github.io",
@@ -8908,6 +9034,18 @@
       "evidence": "manifest_link",
       "availability": "project_only",
       "verified_on": "2026-07-02"
+    },
+    {
+      "resource_id": "code:895f6070aa82",
+      "resource_type": "code_or_project",
+      "name": "UA-Pose",
+      "url": "https://github.com/minfenli/UA-Pose",
+      "paper_ids": [
+        "pr-1210"
+      ],
+      "evidence": "manifest_link",
+      "availability": "project_only",
+      "verified_on": "2026-11-18"
     },
     {
       "resource_id": "code:89e55f3f83e4",
@@ -10991,6 +11129,18 @@
       "verified_on": "2026-10-21"
     },
     {
+      "resource_id": "code:d615bd7164d8",
+      "resource_type": "code_or_project",
+      "name": "aawr",
+      "url": "https://penn-pal-lab.github.io/aawr/",
+      "paper_ids": [
+        "pr-1217"
+      ],
+      "evidence": "manifest_link",
+      "availability": "project_only",
+      "verified_on": "2026-11-18"
+    },
+    {
       "resource_id": "code:d61b1dc46af3",
       "resource_type": "code_or_project",
       "name": "hpt",
@@ -11181,6 +11331,18 @@
       "evidence": "manifest_link",
       "availability": "project_only",
       "verified_on": null
+    },
+    {
+      "resource_id": "code:da2964d18531",
+      "resource_type": "code_or_project",
+      "name": "SOE",
+      "url": "https://github.com/EricJin2002/SOE",
+      "paper_ids": [
+        "pr-1222"
+      ],
+      "evidence": "manifest_link",
+      "availability": "released",
+      "verified_on": "2026-11-18"
     },
     {
       "resource_id": "code:dafc8034315c",
@@ -12310,6 +12472,18 @@
       "evidence": "manifest_link",
       "availability": "not_identified",
       "verified_on": "2026-11-12"
+    },
+    {
+      "resource_id": "code:ffa479f23005",
+      "resource_type": "code_or_project",
+      "name": "cn-ppo-paper-code",
+      "url": "https://github.com/jkbjh/cn-ppo-paper-code",
+      "paper_ids": [
+        "pr-1218"
+      ],
+      "evidence": "manifest_link",
+      "availability": "released",
+      "verified_on": "2026-11-18"
     },
     {
       "resource_id": "code:ffd51ddaa0c3",
@@ -22014,6 +22188,16 @@
         {
           "paper_id": "pr-1175",
           "source": "2026/arXiv/2026_arXiv_When-Vision-Overrides-Language-Evaluating-and-Mitigating-C/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-1223",
+          "source": "2025/arXiv/2025_arXiv_ActivePose-Active-6D-Object-Pose-Estimation-and-Tracking-f/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-1224",
+          "source": "2026/arXiv/2026_arXiv_Imagine-then-Verify-Affordance-Targeted-Active-Perception/04_evaluation.md",
           "evidence": "cue_only"
         }
       ],

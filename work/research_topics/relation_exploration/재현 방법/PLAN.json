@@ -1,0 +1,105 @@
+{
+  "version": 1,
+  "task": "GAP-RELATION-EXPLORE-P0",
+  "readiness": "PREPARED_UNEXECUTED",
+  "sources": {
+    "openpi": {
+      "repo": "Physical-Intelligence/openpi",
+      "commit": "215abfb217dbac7d5f1273282331b9b1866c0479"
+    },
+    "robotwin": {
+      "repo": "RoboTwin-Platform/RoboTwin",
+      "commit": "dca9ec682688821c42944eacd7f5dd9bfb15396f"
+    }
+  },
+  "base_image": "rlinf/rlinf@sha256:e3952705e6d38d9b5cb6235aaf2661d5e4112ede95fdf61a69c46beb7d14cf3c",
+  "base_image_tag_at_review": "agentic-rlinf0.4-robotwin",
+  "model": {
+    "model_id": "motus-robotics/pi0.5_robotwin2",
+    "revision": "effc6e1a99bd4d0edf9447e8ba313def67649cfe",
+    "normalizer_path": "assets/pi0.5_clean_randomize_joint_training/norm_stats.json",
+    "normalizer_sha256": "1dce5ceb9a98eaa6ae587795e0e8977dc3ce046a7ba0a5ec07858ea896ed1adb",
+    "weight_sha256": "de8e03a445f3e0af417a9d61a903d342fca5b6a5b4fdc6f20445e14ad25692eb"
+  },
+  "assets": {
+    "dataset": "TianxingChen/RoboTwin2.0",
+    "revision": "3dc3b798668feb99ac61cc9086d84cbcc3d79186",
+    "archives": [
+      {
+        "path": "embodiments.zip",
+        "upstream_lfs": {
+          "sha256": "85ffeff55a5066def5931224a85cfa3f8abaa1fbf779bd17789a7fb3f85bc789",
+          "size": 219847741,
+          "pointerSize": 134
+        }
+      },
+      {
+        "path": "objects.zip",
+        "upstream_lfs": {
+          "sha256": "6aa56b3cf1e1064f7c809308144da36b00815f8b137fef2d7e4de856f8becf27",
+          "size": 3737778549,
+          "pointerSize": 135
+        }
+      }
+    ],
+    "background_excluded": "demo_clean random_background=false; no texture archive needed for selected setup"
+  },
+  "budget": {
+    "checkpoint_loads": 1,
+    "tasks": [
+      "lift_pot",
+      "handover_block",
+      "pick_dual_bottles"
+    ],
+    "task_config": "demo_clean",
+    "requested_seed_per_task": 0,
+    "one_retry_seed": 1,
+    "module_seed": 0,
+    "max_setup_attempts": 6,
+    "max_valid_scenes": 3,
+    "max_policy_queries": 3,
+    "max_replays": 3,
+    "max_commands": 3,
+    "max_full_ode_forwards": 7,
+    "euler_steps_per_forward": 10,
+    "max_backwards": 1,
+    "optimizer_steps": 0,
+    "max_fk_evaluations": 75,
+    "max_physics_per_setup_attempt": 5000,
+    "max_physics_per_command": 1000,
+    "max_total_physics_steps": 33000,
+    "scene_timestep_s": 0.004,
+    "p0_arm_command_delta_limit_rad": 0.05,
+    "same_weights_density_abs_tolerance": 0.0001,
+    "bounds_boundary": "design caps, unexecuted; all setup/stability/retry/warmup/control physics counted; no silent relaxation",
+    "fk_budget_note": "25 relative FK evaluations per observation x3; clarifies N2 ambiguous total before any execution"
+  },
+  "actor": {
+    "lambda_max": 10,
+    "eta": 0.05,
+    "sigma_arm": 0.1,
+    "sigma_gripper": 0.1
+  },
+  "physics": {
+    "timestep": 0.004,
+    "planner_backend": "mplib",
+    "near_plane": 0.01,
+    "fk_eps_rad": 0.0001,
+    "fk_pose_atol_m": 0.0001,
+    "fk_rotation_atol_rad": 0.001
+  },
+  "resources": {
+    "daemon_ram_floor_gib": 32,
+    "free_vram_floor_mib": 24576,
+    "free_disk_floor_gib": 100,
+    "note": "conservative preparation settings, not measured minimum; full backward may require more memory"
+  },
+  "python": {
+    "simulator": "/opt/venv/openpi/bin/python",
+    "actor": "/opt/relation-openpi/bin/python"
+  },
+  "upstream_hashes": {
+    "envs/_base_task.py": "6b3f74b038509ef989913b3f6f37c74e1d0b7156d201a1bf0100f9ccb6b0d46b",
+    "envs/camera/camera.py": "49ff2005d14749caa5fd9698d35f6f937664bde89cfdf0ab93675204c85bbf33"
+  }
+}

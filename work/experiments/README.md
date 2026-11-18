@@ -1,18 +1,18 @@
 # 실험 근거와 재개 범위
 
-- Updated: 2026-11-06 KST
+- Updated: 2026-11-17 KST
 
-현재 8개 주제의 준비·실제 실행/미구현 상태는 [주제별 `내용/`·`재현 방법/`](../research_topics/README.md)에 통합했다. UNIFIED는 P0 실행 코드·recipe를 작성했고 실제 native build·IO/gradient 검증을 기다린다. 이 디렉토리는 과거 실행 근거를 보존한다. 아래 새 준비 2개와 기존 3개 정책 준비는 연구 효과가 확인된 실험 수를 뜻하지 않는다.
+현재 **유지 3개·예비 1개**의 준비·실행/미구현 상태는 [주제 index](../research_topics/README.md)가 소유한다. 이 디렉토리는 과거 실험 근거를 보존한다. 폐기 7개는 실행 대기에서 제거했고 [토큰화·자산 감사의 핵심 증거](../research_topics/retired/README.md)만 모았다. 과거 준비 검사는 실제 정책 실행이나 연구 효과가 아니다.
 
 실행 당시 driver·raw evidence·source/hash·runtime manifest는 보존한다. C3는 [portable replay](./portable/README.md), GAP-P3는 [계약 검사 재개 안내](./reactive_nav_contract/README.md)를 사용한다. 과거 manifest의 절대 경로·컨테이너 이름을 새 컴퓨터의 현재 환경으로 취급하지 않는다.
 
 | 실험/진단 | 실제 수행 범위 | 현재 재개 판단 |
 |---|---|---|
+| [POSE-ACTIVE P0 준비](../research_topics/pose_active_perception/재현%20방법/README.md#resume) | 11/17 launcher run: local daemon 연결 실패(exit3); 정적 컴파일만 확인 | Scene/evaluator·camera/제한된 복원·SpatialVLA IO recipe 작성. Docker 제어10검사·native0; normalizer/FP/전체 label·학습 미구현 |
+| [LANGRET P0 준비](../research_topics/unified_vla_rl/재현%20방법/README.md#langret-p0-preparation) | 11/12 Docker 제어22검사; native 실행0 | 유지. Native image/payload·IO/gradient·목표별 초기 능력 미확인. 기존 U1은 별도 대안 |
+| [CONTACT P0 준비](../research_topics/contact_adaptation/재현%20방법/README.md#resume) | 11/09 Docker stdlib16검사; native 실행0 | 유지. P0-A sensor/controller 확인이 먼저이며 VLA 학습 효과는 별도 |
 | [FEEDBACK P0 준비](../research_topics/visual_feedback/재현%20방법/README.md#resume) | 11/06 local Mac ARM 조건에서 exit 3, Docker CPU 제어 검사 9개 통과; native 실행 0 | 단일 모델·reset 2·query 3·control 6·physics 2,000 이내 IO 초안. 호환 NVIDIA build/closure·CUDA/Vulkan·실제 IO·상태 분기 교정 대기 |
-| [VRL P0 준비](../research_topics/vla_residual_update/재현%20방법/README.md#resume) | 11/05 local Mac ARM 조건에서 exit 3, Docker CPU 제어 검사 9개 통과; native 실행 0 | A/B 2 queries·warmup 포함 36 env steps 이내 IO 초안. Native image/IO·residual 학습·효과는 미확인 |
-| [물체 집합·수량 P0 준비](../research_topics/object_set/재현%20방법/README.md#execution) | 2026-11-01 local Docker ARM64·GPU allocation 실패(exit 125), launcher 차단 확인. Native 실행 0 | 새 미빌드 packet. 공개 π0/config·normalizer·seen-category dev 고정, Docker recipe·bounded adapter 작성. 호환 환경에서 1 rollout·최대 200 control step/40 inference. Image/dependency·asset·CUDA/EGL·native 능력은 미확인; 집합/수량 task와 효과 비교 미구현 |
-| [지시 전환 P0 준비](../research_topics/instruction_revision/재현%20방법/README.md#execution) | 2026-10-31 Docker ARM64·GPU allocation 실패(exit 125), portable launcher 차단 확인. Native 정책 실행 0 | 기존 REVISION/HANDOFF/SET 묶음 내 우선. 고정 source/checkpoint·Dockerfile·R8 단일 IO probe 작성, image 미빌드. 호환 컴퓨터에서 단계별 실행 후 실제 runtime manifest 확보. R1/R4 제약 observer·paired branch·H/S updater 미구현 |
-| [HANDOFF P0 준비](../research_topics/mobile_policy_transfer/재현%20방법/README.md#execution) | 2026-10-28 Docker ARM64·GPU allocation 실패와 resource script 점검. Native 정책 실행 0 | 자원 대기 보존. 호환 로컬 Docker에서 check → gpu 후 sim/server 환경·transport/handoff adapter를 완성해 최소 IO/1 dev 확인. Image·adapter·최종 split/seed/runtime manifest 미완료 |
+| [지시 전환 P0 준비](../research_topics/instruction_revision/재현%20방법/README.md#execution) | 2026-10-31 Docker ARM64·GPU allocation 실패(exit 125), portable launcher 차단 확인. Native 정책 실행 0 | 예비 후보로 보존하며 현재 자동 실행 대상이 아님. 고정 source/checkpoint·Dockerfile·R8 단일 IO probe 작성, image 미빌드. 호환 컴퓨터에서 단계별 실행 후 실제 runtime manifest 확보. R1/R4 제약 observer·paired branch·H/S updater 미구현 |
 | [GAP-N3-A 관측 정보 계약](./proxy_observation_contract/README.md) | ARM64 Docker source/합성 계약 17/17, 수정 patch 적용/hash 확인. Native·VLA·학습 0 | 계약 재실행 가능. 전체 N3 PARTIAL; N3-B native qualification은 local Docker 자원 대기. [환경 설정](./proxy_observation_contract/ENVIRONMENT.md) 작성 완료, native image/실제 데이터/model adapter·연구 gate 미충족 |
 | [GAP-P3 reactive navigation](./reactive_nav_contract/RESULTS.md) | ARM64 Docker CPU 계약 13/13·3개 scene/150 tick, 저장 trace 시간/ID/FIFO 재결합 | 계약 검사 재실행 가능. 후속 bounded 비교는 GAP-P4로 완료; native VLA HOLD |
 | [GAP-P4 bounded navigation](./reactive_nav_pilot/RESULTS.md) | Dev12/cal24/test12·384 branch·192 paired prefix. 주 가설 joint gate 실패·저장 trace 검증 PASS | 현재 진단 HOLD·일반 방법 NO-GO·native VLA HOLD. [Docker 저장 결과 재분석](./reactive_nav_pilot/README.md) 가능; 추가 rollout/학습은 새 조건 예측 전 보류 |

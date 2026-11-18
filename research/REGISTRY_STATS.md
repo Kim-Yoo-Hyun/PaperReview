@@ -1,28 +1,28 @@
 # Registry Statistics
 
-- Generated: 2026-11-16 KST
+- Generated: 2026-11-18 KST
 - Source: [papers.json](../work/sources/papers.json)
 - This is a generated diagnostic view; edit the manifest, tracker, or tier generator instead.
 
 ## Snapshot
 
-- Papers: **1206**
-- Resources in the combined view: **658**
+- Papers: **1224**
+- Resources in the combined view: **670**
 - Curated relation edges: **50**
 - Papers with outgoing relations: **41**
 - Papers participating in a relation: **62**
-- Structured evaluation profiles: **1206**
-- Reproducibility profiles: **1206**
-- Lineage coverage profiles: **1206**
+- Structured evaluation profiles: **1224**
+- Reproducibility profiles: **1224**
+- Lineage coverage profiles: **1224**
 - Papers with explicit trial/seed cues: **247**
-- Papers without DOI/arXiv/OpenReview identifier: **363**
+- Papers without DOI/arXiv/OpenReview identifier: **366**
 
 ## Tier
 
 | Value | Count |
 |---|---:|
-| REFERENCE | 509 |
-| NEXT | 405 |
+| REFERENCE | 508 |
+| NEXT | 424 |
 | ARCHIVE | 242 |
 | CORE | 50 |
 
@@ -31,13 +31,13 @@
 | Value | Count |
 |---|---:|
 | FULL_TEXT_CHECKED | 968 |
-| ABSTRACT_CHECKED | 238 |
+| ABSTRACT_CHECKED | 256 |
 
 ## Reading status (intensive set)
 
 | Value | Count |
 |---|---:|
-| UNREAD | 454 |
+| UNREAD | 473 |
 | READ | 1 |
 
 ## Reading status (inactive history; excluded from intensive denominator)
@@ -51,13 +51,13 @@
 
 | Value | Count |
 |---|---:|
-| recorded | 1206 |
+| recorded | 1224 |
 
 ## Curation roles
 
 | Value | Count |
 |---|---:|
-| method | 945 |
+| method | 963 |
 | foundation | 124 |
 | benchmark_or_dataset | 99 |
 | system | 40 |
@@ -66,9 +66,9 @@
 
 | Value | Count |
 |---|---:|
-| conference | 1033 |
-| journal | 84 |
-| preprint | 82 |
+| conference | 1044 |
+| journal | 87 |
+| preprint | 86 |
 | technical_report | 4 |
 | workshop | 2 |
 | other | 1 |
@@ -77,31 +77,31 @@
 
 | Value | Count |
 |---|---:|
-| identified | 843 |
-| source_only | 363 |
+| identified | 858 |
+| source_only | 366 |
 
 ## Primary source scope
 
 | Value | Count |
 |---|---:|
-| paper_specific | 1163 |
+| paper_specific | 1181 |
 | venue_index | 43 |
 
 ## Code status
 
 | Value | Count |
 |---|---:|
-| not_identified | 615 |
-| project_only | 309 |
-| released | 243 |
+| not_identified | 621 |
+| project_only | 314 |
+| released | 250 |
 | not_released | 39 |
 
 ## Data status
 
 | Value | Count |
 |---|---:|
-| not_identified | 1033 |
-| not_applicable | 102 |
+| not_identified | 1050 |
+| not_applicable | 103 |
 | released | 69 |
 | not_released | 2 |
 
@@ -110,8 +110,8 @@
 | Value | Count |
 |---|---:|
 | EMPIRICAL / REAL-ROBOT OR HARDWARE | 447 |
+| not_recorded | 275 |
 | EMPIRICAL / SOURCE-REPORTED EVALUATION | 274 |
-| not_recorded | 257 |
 | SYSTEM / EVALUATION SCOPE UNRESOLVED | 95 |
 | BENCHMARK / DATASET | 69 |
 | EMPIRICAL / SIMULATION | 64 |
@@ -121,8 +121,8 @@
 | Value | Count |
 |---|---:|
 | real_robot | 447 |
+| not_recorded | 275 |
 | source_reported | 274 |
-| not_recorded | 257 |
 | scope_unresolved | 95 |
 | benchmark_or_dataset | 69 |
 | simulation | 64 |
@@ -131,7 +131,7 @@
 
 | Value | Count |
 |---|---:|
-| trials_or_seeds=not_recorded | 959 |
+| trials_or_seeds=not_recorded | 977 |
 | dataset_or_benchmark=reported | 948 |
 | metrics=reported | 948 |
 | statistics=reported | 940 |
@@ -139,13 +139,13 @@
 | split_or_generalization=reported | 927 |
 | failure_cases=reported | 927 |
 | ablations=reported | 920 |
-| split_or_generalization=not_recorded | 279 |
-| failure_cases=not_recorded | 279 |
-| dataset_or_benchmark=not_recorded | 258 |
-| metrics=not_recorded | 257 |
-| baselines=not_recorded | 257 |
-| ablations=not_recorded | 257 |
-| statistics=not_recorded | 257 |
+| split_or_generalization=not_recorded | 297 |
+| failure_cases=not_recorded | 297 |
+| dataset_or_benchmark=not_recorded | 276 |
+| metrics=not_recorded | 275 |
+| baselines=not_recorded | 275 |
+| ablations=not_recorded | 275 |
+| statistics=not_recorded | 275 |
 | trials_or_seeds=reported | 247 |
 | ablations=not_reported | 29 |
 | baselines=not_reported | 10 |
@@ -156,13 +156,13 @@
 
 | Value | Count |
 |---|---:|
-| metadata_audited | 1206 |
+| metadata_audited | 1224 |
 
 ## Checkpoint status
 
 | Value | Count |
 |---|---:|
-| not_recorded | 1196 |
+| not_recorded | 1214 |
 | reported | 10 |
 
 ## Configuration status
@@ -170,27 +170,27 @@
 | Value | Count |
 |---|---:|
 | reported | 949 |
-| not_recorded | 257 |
+| not_recorded | 275 |
 
 ## Environment status
 
 | Value | Count |
 |---|---:|
 | reported | 949 |
-| not_recorded | 257 |
+| not_recorded | 275 |
 
 ## Run-condition status
 
 | Value | Count |
 |---|---:|
 | reported | 940 |
-| not_recorded | 266 |
+| not_recorded | 284 |
 
 ## Lineage coverage status
 
 | Value | Count |
 |---|---:|
-| no_curated_edge_recorded | 875 |
+| no_curated_edge_recorded | 893 |
 | candidate_only | 269 |
 | curated_edges | 62 |
 

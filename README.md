@@ -1,10 +1,10 @@
 # PaperReview — Robotics-first Literature System
 
-- Snapshot verified: 2026-11-16 KST
+- Snapshot verified: 2026-11-18 KST
 
-`PaperReview`는 **VLA + RL·단일 정책 학습을 중심으로 다양한 로봇 manipulation·navigation을 연구하는 문헌 저장소**다. 3D vision은 행동에 필요한 표현과 상태 추정으로 연결한다. 현재 선택한 후속은 [RL 후학습의 지시별 행동 보존](./work/research_topics/unified_vla_rl/내용/README.md#langret-n2)이며, 접촉 적응을 포함한 기존 후보도 보존한다. [11개 주제 index](./work/research_topics/README.md)가 후보별 판단을, [TODO](./TODO.md)가 다음 행동을 관리한다.
+`PaperReview`는 **VLA + RL + Computer Vision + Robotics**를 연구하는 문헌 저장소다. 최신 요청의 [물체 자세·능동 관측 / 3D 재구성·로봇 추정 탐색](./work/update/NEW_FIELD_SCOUT_2026-11-17.md#pose-reconstruction)에서 새 후보 두 개를 정리했다. [작업에 필요한 pose 모호성의 능동 관측](./work/research_topics/pose_active_perception/내용/README.md)은 N1/N2 비실험 검토와 행동 양립성 비교 명세를 완료했다. 이어 Docker recipe·custom evaluator·VLA 후보 IO probe를 작성했고 현재 로컬 daemon 연결 실패로 native 검증을 대기한다. [재개 방법·미검증 범위](./work/research_topics/pose_active_perception/재현%20방법/README.md#p0-preparation)를 남겼다. [조작 허용 오차를 반영하는 3D 추정](./work/research_topics/task_geometry_estimation/내용/README.md)은 두 번째 초기 후보다. 앞선 [접촉 관계 기반 RL 탐색](./work/research_topics/relation_exploration/내용/README.md)은 P0 코드 준비 후 native 검증 대기를 유지한다. [주제 index](./work/research_topics/README.md)는 유지3·예비1·새 탐색의 성숙도를 구별하고, [TODO](./TODO.md)는 다음 행동을 관리한다. 기존 7개 [폐기 판단](./work/research_topics/retired/README.md)은 유지한다. 새 두 후보의 신규성·정책 효과·실행 환경은 아직 확립되지 않았다.
 
-최신 Ψ₀ 등록·정확성 보완 범위는 [REG-R16](./work/update/REGISTRY_ACCURACY_PSI0_2026-11-16.md)에, 실험 준비·실제 확인·미구현 범위는 각 주제의 `재현 방법/`에 둔다. 문서와 제어 검사 완료를 정책 성능이나 독립 연구 기여의 증거로 해석하지 않는다.
+최신 [REG-R17](./work/update/REGISTRY_MAINTENANCE_2026-11-18.md)에서 pose/active perception·3D geometry·RL exploration 직접 선행18편을 보강하고 SaPaVe·ActiveAlign을 NEXT로 조정했다. 앞선 Ψ₀ 등록·정확성 보완 범위는 [REG-R16](./work/update/REGISTRY_ACCURACY_PSI0_2026-11-16.md)에, 실험 준비·실제 확인·미구현 범위는 각 주제의 `재현 방법/`에 둔다. 문서와 제어 검사 완료를 정책 성능이나 독립 연구 기여의 증거로 해석하지 않는다.
 
 핵심 폐루프는 다음과 같다.
 
@@ -39,12 +39,12 @@ Registry의 수집·정리 범위는 다음과 같다.
 | 전체 논문·검색·통계 | [PAPER](./PAPER.md), [registry index](./research/REGISTRY_INDEX.csv), [stats](./research/REGISTRY_STATS.md) |
 | 읽기 순서·상태·buildup 절차 | [research 안내](./research/README.md), [READING_PLAN](./research/READING_PLAN.md), [buildup guide](./research/IDEA_BUILDUP_GUIDE.md) |
 | 논문 간 비교·연구 공백 | [7개 synthesis와 교차 질문](./synthesis/README.md) |
-| 추가 공백·석사 연구 적합성 | [11/12 VLA·Robotics 공백 비교](./work/update/VLA_MASTERS_GAP_SCOUT_2026-11-12.md) — 지시별 행동 보존·제어 간격·결과 기반 기억, 선행/반대 근거·석사 부담 |
-| 현재 11개 연구 주제의 가능성·재현 방법 | [통합 index](./work/research_topics/README.md) — 기여 판단·준비/실제 실행 범위의 대표 문서 |
+| 검색 방향·석사 연구 적합성 | [분야별 검색 지도](./research/IDEA_BUILDUP_GUIDE.md#search-map-2026-11-17), [11/17 후보 폐기·선정](./work/update/CANDIDATE_TRIAGE_2026-11-17.md) |
+| 유지 3개·예비 1개·새 탐색의 가능성·재현 방법 | [통합 index](./work/research_topics/README.md) — 기여 판단·준비/실제 실행 범위의 대표 문서 |
 | 과거 후보의 결과·GPU 후속·한계 | [16개 주제별 요약](./work/research_candidates/summaries/README.md) |
 | Clone 후 실행 준비·실험 근거 | [주제별 준비 상태·재현 안내](./work/research_topics/README.md), [과거 실험 index](./work/experiments/README.md), [C3 저장 결과 replay](./work/experiments/portable/README.md) |
 | Canonical identity·source·resource | [papers.json](./work/sources/papers.json), [schema](./work/sources/registry.schema.json), [resources](./work/sources/resources.json) |
-| 유지보수·최신 보강 | [work 안내](./work/README.md), [11/16 Ψ₀·데이터 전제·정확성 보완](./work/update/REGISTRY_ACCURACY_PSI0_2026-11-16.md) |
+| 유지보수·최신 보강 | [work 안내](./work/README.md), [11/18 직접 선행·정합·게시](./work/update/REGISTRY_MAINTENANCE_2026-11-18.md) |
 | 완료 작업·과거 source/검증 | [update index](./work/update/README.md), [10/23–28 작업 이력](./work/update/TASK_HISTORY_2026-10-28.md) |
 
 
@@ -52,15 +52,15 @@ Registry의 수집·정리 범위는 다음과 같다.
 
 | 항목 | 수치 |
 |---|---:|
-| 전체 registry / 표준 노트 | **1,206편 / 6,030개** |
-| CORE / NEXT / REFERENCE / ARCHIVE | **50 / 405 / 509 / 242편** |
-| 집중 읽기 / inactive history | **455 / 47편** |
+| 전체 registry / 표준 노트 | **1,224편 / 6,120개** |
+| CORE / NEXT / REFERENCE / ARCHIVE | **50 / 424 / 508 / 242편** |
+| 집중 읽기 / inactive history | **474 / 47편** |
 | 사용자 READ 기록 | **5편: active 1 / history 4** |
-| Source evidence | **FULL_TEXT_CHECKED 968 / ABSTRACT_CHECKED 238편** |
+| Source evidence | **FULL_TEXT_CHECKED 968 / ABSTRACT_CHECKED 256편** |
 | Canonical category / primary reading track | **23 / 7개** |
-| 전체 연도 / 최근 2024–2026 | **1960–2026 / 913편** |
+| 전체 연도 / 최근 2024–2026 | **1960–2026 / 931편** |
 
-연도·venue·source·resource 집계는 [REGISTRY_STATS](./research/REGISTRY_STATS.md)를 따른다. [11/16 보완](./work/update/REGISTRY_ACCURACY_PSI0_2026-11-16.md)에서 Ψ₀·EgoDex·Humanoid Everyday를 추가하고 AMO의 OCR 설명·SONIC의 공개 코드/식별자를 바로잡았다. 전체 구조·중복·링크를 검사했으며 전체1,206편의 과학적 내용을 전수 재검증한 것은 아니다. 과거 등록 규모·검토 범위는 [update index](./work/update/README.md)에 보존한다.
+연도·venue·source·resource 집계는 [REGISTRY_STATS](./research/REGISTRY_STATS.md)를 따른다. [11/16 보완](./work/update/REGISTRY_ACCURACY_PSI0_2026-11-16.md)에서 Ψ₀·EgoDex·Humanoid Everyday를 추가하고 AMO의 OCR 설명·SONIC의 공개 코드/식별자를 바로잡았다. 전체 구조·중복·링크를 검사했으며 전체1,224편의 과학적 내용을 전수 재검증한 것은 아니다. 과거 등록 규모·검토 범위는 [update index](./work/update/README.md)에 보존한다.
 
 `FULL_TEXT_CHECKED`는 기록된 source 검토 범위이며 사용자 정독 완료나 모든 문장·실험 수치의 정확성을 인증하지 않는다. 기존 950편의 PDF 기반 기록과 후속 18편의 지정 본문 절 확인을 구분한다. 과거 OCR·추출·원문 대조의 cohort/예외는 [source review 기록](./work/sources/fulltext_all_review_manifest_2026-09-02.json)과 [품질 검토 이력](./work/update/README.md)에 보존한다. FlowDreamer의 safety 템플릿 해석 수정은 11/06 기록이다.
 

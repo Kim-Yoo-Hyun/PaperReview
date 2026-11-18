@@ -1,5 +1,7 @@
 # 접촉 조작에서 VLA 강화학습과 가변 임피던스 제어
 
+**현행 투자 판단 — 2026-11-17:** [유지 후보](../../README.md#candidate-priority)다. 동작과 관절 강성 배율의 RL을 접촉 실패와 연결하는 좁은 비교를 남긴다. 조합 자체의 신규성은 제외하며 고정 gain·force-rule·동작만 학습하는 기준선과 비교해야 한다. 아래 설계와 실행 준비를 유지하되 연구 효과는 미확인이다.
+
 Updated: 2026-11-09 KST. **N2 내부 설계·P0 실행 자료 작성 완료 / native 검증 대기 / 좁은 탐색 유지·독립 방법 기여 미확립.** 이 문서는 [Robotics 중심 공백 탐색](../../../update/VLA_RL_ADDITIONAL_GAPS_2026-11-09.md#robotics-reorientation)의 접촉 후보를 구체화한다. [입출력·제어·환경 계약](../재현%20방법/README.md#n2-interface), [단일 source 원장 `contact_n1`·`contact_n2`](../../../sources/vla_rl_additional_gaps_2026-11-09.json), [다음 TODO](../../../../TODO.md)를 함께 본다. 계약의 수치는 앞으로 검증할 설계값이며 실행 결과가 아니다.
 
 <a id="registry-sync"></a>

@@ -1,0 +1,6 @@
+*
+!Dockerfile
+!PLAN.json
+!probe.py
+!checks.py
+!requirements.txt

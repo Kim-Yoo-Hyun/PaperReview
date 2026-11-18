@@ -1,5 +1,7 @@
 # GAP-TERM-E1 — 종료 평가에 따라 VLA 선택이 달라지는가
 
+> 2026-11-17 인계: 이 문서의 폐기 후보(HANDOFF/SET/RETRIEVAL/CODEC1/ALLOC/HINDSIGHT/VRL) 계획·명령은 당시 기록이다. 현재는 RETIRED이며 새 실행 queue가 아니다. 링크는 핵심 보존본 또는 삭제 전 Git revision으로 연결한다.
+
 - 확인일: **2026-10-28 KST / DONE — 비실험 비교 정리**.
 - 결론: **평가·실증 질문을 유지한다.** 최초 목표 달성으로 고른 정책이 공통 종료 규칙에서도 좋은 선택인지, 그 선택이 안정적인 범위가 어디인지 조사할 수 있다. 순위 역전·새 종료 방법을 필수 결과로 요구하지 않는다. 실제 효과·독립 논문 가치·신규성은 미확인이다.
 - 범위: [GAP-TERM1](./VLA_TERMINATION_CONTRACT_REVIEW_2026-10-27.md)의 source 감사를 재사용하고 Echo·SEES·SparkVLA의 지정 본문 구간만 웹에서 재확인했다. 세 자료는 확인한 **2026 arXiv preprint 버전**이며 acceptance를 검증한 것은 아니다. P12는 2026-10-27 공식 abstract/metadata 확인에 머물며 본문 접근을 반복하지 않았다.
@@ -62,7 +64,7 @@
 - **현재 문헌 단계 종료:** 같은 P12 접근이나 21파일 감사는 반복하지 않는다. 실제 효과는 원자료 또는 실행이 필요한 미확인으로 남긴다. 이는 자원이 없다는 이유로 TERM을 폐기한다는 뜻이 아니다.
 - **다음 GAP-SELECT-E1 READY — 비실험:** 완료된 HANDOFF·C1·TERM 카드로 첫 탐색 pilot의 우선 후보 하나를 고른다. 질문의 중요성, 기존 연구와의 차이, 가장 작은 관측의 정보 가치, 알려진 실행 부담을 비교한다. 선택 이유와 첫 확인 항목을 TODO/기존 카드에 남기며 새 주제·새 방법·실행 manifest를 자동 생성하지 않는다. 확인된 결과를 미리 요구하거나 미측정 성공 확률을 점수로 만들지 않는다.
 
-실제 실행이 필요해지면 선택한 작은 비교에 맞는 입출력·환경·checkpoint·scene split·종료 동작을 먼저 확인하고 로컬 Docker에서만 진행한다. GPU 상태는 이번에 재측정하지 않았다. [HANDOFF](../research_topics/mobile_policy_transfer/내용/README.md#closest-work)·[C1](./C1_OBSERVATION_COST_REVIEW_2026-10-28.md)와 과거 다른 후보의 결과·실행 gate는 유지한다.
+실제 실행이 필요해지면 선택한 작은 비교에 맞는 입출력·환경·checkpoint·scene split·종료 동작을 먼저 확인하고 로컬 Docker에서만 진행한다. GPU 상태는 이번에 재측정하지 않았다. [HANDOFF](../research_topics/retired/README.md#mobile_policy_transfer)·[C1](./C1_OBSERVATION_COST_REVIEW_2026-10-28.md)와 과거 다른 후보의 결과·실행 gate는 유지한다.
 
 ## 5. 문서 검증
 

@@ -1,5 +1,7 @@
 # 두 연구 후보의 GPU 전 비실험 buildup 검토
 
+> 2026-11-17 인계: 이 문서의 폐기 후보(HANDOFF/SET/RETRIEVAL/CODEC1/ALLOC/HINDSIGHT/VRL) 계획·명령은 당시 기록이다. 현재는 RETIRED이며 새 실행 queue가 아니다. 링크는 핵심 보존본 또는 삭제 전 Git revision으로 연결한다.
+
 - 검토일: 2026-10-31 KST / registry 정리에서 두 보고서를 병합했다.
 - [부분 지시 수정](#instruction-revision) · [모바일 조작 정책 교체](#mobile-policy-transfer)
 - 주제별 판단·표·source·미구현 범위는 보존했다. 원래 경로·SHA256은 [정리 ledger](../sources/registry_maintenance_2026-10-31.json)에 기록한다.
@@ -115,7 +117,7 @@ Oracle 전체 지시는 같은 renderer를 사용하되 의미 정답을 가진 
 ## 모바일 조작 정책 교체: GPU 확보 전 buildup 보완
 
 - 작성: 2026-10-31 KST / 비실험 검토 완료, **1개 dev 실행 탐색 유지·후속 분할 설계 수정**.
-- 대상: [연구 개요](../research_topics/mobile_policy_transfer/내용/README.md#overview), [기존 H3 비교 초안](../research_topics/mobile_policy_transfer/내용/README.md#design-history), [실행 준비](../research_topics/mobile_policy_transfer/재현%20방법/README.md#execution).
+- 대상: [연구 개요](../research_topics/retired/README.md#mobile_policy_transfer), [기존 H3 비교 초안](../research_topics/retired/README.md#mobile_policy_transfer), [실행 준비](../research_topics/retired/README.md#mobile_policy_transfer).
 - 문헌 지정 구간·공개 JSON의 identity/annotation을 검토했다. Scene JSON은 메모리에서 읽어 metadata와 hash만 요약했고 원본을 저장·렌더링·복원하지 않았다. Simulator/model/Docker probe·패키지 설치·PDF 다운로드는 없었다. [출처와 10개 레코드](../sources/pre_gpu_buildup_review_2026-10-31.json).
 
 ### 1. 선행 대비 주장과 baseline 범위

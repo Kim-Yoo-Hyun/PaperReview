@@ -1,5 +1,7 @@
 # Registry 최신화·정리 — 2026-10-28
 
+> 2026-11-17 인계: 이 문서의 폐기 후보(HANDOFF/SET/RETRIEVAL/CODEC1/ALLOC/HINDSIGHT/VRL) 계획·명령은 당시 기록이다. 현재는 RETIRED이며 새 실행 queue가 아니다. 링크는 핵심 보존본 또는 삭제 전 Git revision으로 연결한다.
+
 - Task: `REG-R4`
 - Started: 2026-10-28 KST / final validation: 2026-10-29 KST
 - Scope: 현재 registry·안내 문서·dependency/cache 정리. 기존 dirty worktree를 출발점으로 사용했다.
@@ -12,7 +14,7 @@
 | [Mobi-π](../../2025/CoRL/2025_CoRL_Mobi-pi-Mobilizing-Your-Robot-Learning-Policy/01_overview.md) · pr-1073 | [CoRL 2025 / PMLR](https://proceedings.mlr.press/v305/yang25b.html), [저자 project](https://mobipi.github.io/), [공식 code](https://github.com/yjy0625/mobipi) | 조작 정책에 적합한 base pose 선택을 다루는 HANDOFF 직접 선행. Whole-body/mobile manipulation NEXT |
 | [Behavior-Skill](../../2026/arXiv/2026_arXiv_Behavior-Skill-A-Fine-Grained-Benchmark-for-Evaluating-Vis/01_overview.md) · pr-1074 | [arXiv 2026](https://arxiv.org/abs/2608.30536), [공식 code](https://github.com/nubot-nudt/Behavior-Skill). Peer-reviewed venue 미확인 | 복원된 시작 상태의 skill 평가와 실제 연결 실행을 비교할 현재 prerequisite. VLA NEXT |
 
-두 논문은 최근 HANDOFF 검토에 쓰였지만 registry에 빠져 있었다. Title/alias·arXiv ID와 기존 manifest를 대조하고 등록기를 dry-run한 뒤 추가했다. 표준 노트 10개는 이번 공식 abstract/project 수준의 `ABSTRACT_CHECKED`, 사용자 읽기 상태는 `UNREAD`다. 기존 지정 본문·code 구간 검토는 [H1 source](../research_topics/mobile_policy_transfer/내용/sources.json), [H2 source](../research_topics/mobile_policy_transfer/내용/sources.json), [H3 source](../research_topics/mobile_policy_transfer/내용/sources.json)의 범위로 보존한다.
+두 논문은 최근 HANDOFF 검토에 쓰였지만 registry에 빠져 있었다. Title/alias·arXiv ID와 기존 manifest를 대조하고 등록기를 dry-run한 뒤 추가했다. 표준 노트 10개는 이번 공식 abstract/project 수준의 `ABSTRACT_CHECKED`, 사용자 읽기 상태는 `UNREAD`다. 기존 지정 본문·code 구간 검토는 [H1 source](https://github.com/Kim-Yoo-Hyun/PaperReview/blob/5bec2cfa8a31758ca8e5be9c19c39dc4c23bb096/work/research_topics/mobile_policy_transfer/%EB%82%B4%EC%9A%A9/sources.json), [H2 source](https://github.com/Kim-Yoo-Hyun/PaperReview/blob/5bec2cfa8a31758ca8e5be9c19c39dc4c23bb096/work/research_topics/mobile_policy_transfer/%EB%82%B4%EC%9A%A9/sources.json), [H3 source](https://github.com/Kim-Yoo-Hyun/PaperReview/blob/5bec2cfa8a31758ca8e5be9c19c39dc4c23bb096/work/research_topics/mobile_policy_transfer/%EB%82%B4%EC%9A%A9/sources.json)의 범위로 보존한다.
 
 현재 **1,074편 / CORE 47 · NEXT 299 · REFERENCE 486 · ARCHIVE 242**, 집중 읽기 346편·history 47편이다. 표준 노트는 5,370개다. 모든 1,074편의 최신 게재 상태를 다시 조사한 전수 문헌 검토는 아니다. 현재 직접 선행의 누락 보완과 전체 로컬 무결성 검사다. 기존 Semantic Handoff는 [arXiv 서지](https://arxiv.org/abs/2607.06256)의 RSS SemRob Workshop 표기를 확인했지만 main-track 논문으로 승격하거나 이번 등록에 추가하지 않았다.
 
@@ -38,4 +40,4 @@
 
 ## 다음 행동
 
-[TODO](../../TODO.md)의 HANDOFF-P0 자원 대기를 유지한다. [재개 준비](../research_topics/mobile_policy_transfer/재현%20방법/README.md#execution)에서 현재 컴퓨터의 로컬 Docker 조건을 확인하고, 충족 시 허용된 최소 실행을 진행한다. 이번 유지보수만으로 연구 효과·신규성·native 실행 가능성을 입증하지 않는다. Git commit/push는 이번 범위에 포함하지 않았다.
+[TODO](../../TODO.md)의 HANDOFF-P0 자원 대기를 유지한다. [재개 준비](../research_topics/retired/README.md#mobile_policy_transfer)에서 현재 컴퓨터의 로컬 Docker 조건을 확인하고, 충족 시 허용된 최소 실행을 진행한다. 이번 유지보수만으로 연구 효과·신규성·native 실행 가능성을 입증하지 않는다. Git commit/push는 이번 범위에 포함하지 않았다.

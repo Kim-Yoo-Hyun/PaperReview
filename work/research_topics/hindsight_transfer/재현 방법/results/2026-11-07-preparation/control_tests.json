@@ -1,8 +1,0 @@
-{
-  "kind": "stdlib Docker control tests; no model/simulator",
-  "tests_run": 15,
-  "failures": 0,
-  "errors": 0,
-  "successful": true,
-  "packet_sha": "6c351beb49da78d9f2c899ff2c5489ccb7c85b4ee45ecc64b5e468826f98f689"
-}

@@ -160,46 +160,17 @@ Cross-embodiment 비교에서는 base/arm action 단위·제어 주기·시연 �
 [SAGA](../2026/RA-L/2026_RA-L_SAGA-Open-World-Mobile-Manipulation-via-Structured-Afforda/01_overview.md)는 언어·point·시연을 3D affordance로 바꿔 quadrupedal manipulator를 조건화하는 비교 기준이다. Abstract/project 기반 해석이며, 여러 지시 형식 지원과 여러 embodiment로의 전이 입증을 구분한다. 같은 관측·skill/action budget에서 직접 목표 위치를 전달하는 단순 방식 이후 남는 이득은 무엇인가? HANDOFF의 상태 복원·정책 교체 효과를 이 논문으로 검증했다고 간주하지 않는다.
 
 
-2026-10-28 registry 연결: [Mobi-π](../2025/CoRL/2025_CoRL_Mobi-pi-Mobilizing-Your-Robot-Learning-Policy/01_overview.md)와 [Behavior-Skill](../2026/arXiv/2026_arXiv_Behavior-Skill-A-Fine-Grained-Benchmark-for-Evaluating-Vis/01_overview.md)을 NEXT로 등록했다. 각각 정책에 맞는 시작 pose 선택과 복원된 skill 시작 상태 평가의 기준이다. 아래 HANDOFF 지정 구간 비교는 그대로 보존하며 신규 노트는 `ABSTRACT_CHECKED`, 사용자 상태는 `UNREAD`다.
-
-현재 후보 판정은 [주제별 요약](../work/research_candidates/summaries/README.md)과 [TODO](../TODO.md)를 따른다. 아래 질문은 `CURATION-HYPOTHESIS`이며 실험 효과나 실행 승인을 뜻하지 않는다.
-
 <a id="gap-handoff-2026"></a>
+### GAP-HANDOFF — 정책 교체 후 접근 조건 재사용
 
-**11/01 PRE-GPU-3 보완:** [비실험 완결 검토](../work/update/THREE_CANDIDATES_NONEXPERIMENTAL_2026-11-01.md#handoff)와 [비교 계약](../work/research_topics/mobile_policy_transfer/재현%20방법/COMPARISON_CONTRACT.json)은 유한 calibration의 재선택 이득과 참 최적 조건 대비 손실을 구분한다. 모든 예정 calibration의 실패 포함 시간으로 tie를 풀고, 같은 k의 A/B 상태 공유와 k별 실제 도착 상태 차이를 분리했다. 단일-template·작은 표본·미구현 native 한계는 유지한다.
+**2026-11-17: HANDOFF 독립 주제 RETIRED.** [이유·핵심 기록](../work/research_topics/retired/README.md#mobile_policy_transfer). [Mobi-π](../2025/CoRL/2025_CoRL_Mobi-pi-Mobilizing-Your-Robot-Learning-Policy/01_overview.md)의 정책별 시작 pose와 [Behavior-Skill](../2026/arXiv/2026_arXiv_Behavior-Skill-A-Fine-Grained-Benchmark-for-Evaluating-Vis/01_overview.md)의 복원 skill 평가가 선행이다. A에 맞춘 접근 조건의 B 재사용이라는 좁은 차이에 비해 mobile stack·transport·동일 상태 분기와 여러 환경 검증 부담이 크다. 현재 한 scene template의 metadata는 독립 scene holdout을 만들지 못한다.
 
-### GAP-HANDOFF — VLA를 교체할 때 기존 도착 설정을 재사용해도 되는가?
+보존할 원칙은 복원된 skill 상태의 능력과 실제 navigation 도착 상태의 능력을 구분하는 것이다. 실제 전이 손실·재선택 이득은 미측정이며 GPU 부재로 반증한 것이 아니다. 과거 비교 설계/명령은 폐기 요약의 고정 commit에서 추적하고 현재 실행 계획에서 제외한다.
 
-- **2026-10-28 GAP-HANDOFF1 DONE; 탐색 질문 유지·구체화.** [지정 5편 비교표와 작은 비교 초안](../work/research_topics/mobile_policy_transfer/내용/README.md#closest-work). 기여 유형은 평가·실증이다. 실제 효과는 **실험 필요·미확인**이며 신규성·독립 논문 가치도 미확정이다.
-- **GAP-SELECT-E1 결정: 첫 우선 후보.** [세 후보 비교와 선택 이유](../work/update/VLA_EXPLORATION_SELECTION_2026-10-28.md). Navigation–manipulation 연결과 VLA 교체 뒤 재검증 여부라는 판단의 직접성을 우선했다. C1보다 실행이 쉽다는 판단이나 효과·신규성·실행 준비 완료가 아니다. C1은 대안 후보, TERM은 질문을 보존하며 평가 원칙으로 활용한다.
-- **남기는 질문:** 같은 로봇·task에서 VLA A에 맞춰 고른 도착 설정을 B에 그대로 재사용할 수 있는가? B의 기준 시작 상태 성능으로 실제 도착 분포에서의 성능을 판단할 수 있는가? 답은 이동 모듈 재사용 또는 추가 validation의 필요성을 결정하는 데 쓰인다. 서로 다른 embodiment로의 확대는 후속 범위다.
-- **이번에 확인한 직접 선행:** [MoTo Table 1·§5.3](https://arxiv.org/html/2509.01658v1)은 이미 이동 방법×조작 정책을 비교한다. [ActiveAlign Table II](https://arxiv.org/html/2610.23378v1)에도 4 VLA×3 조건이 있으며 adaptation은 weights도 바꾼다. [Mobi-π](https://proceedings.mlr.press/v305/yang25b.html)의 policy-aware placement, [Semantic Handoff](https://arxiv.org/html/2607.06256v1)의 연결 실행 진단, [Behavior-Skill](https://arxiv.org/html/2608.30536v1)의 독립 복원 평가도 출발점이다. 일반적인 2×2 비교나 handoff 실패 자체는 새 기여로 주장하지 않는다.
-- **미확인:** 확인한 5편의 지정 구간에서 A로 선택·동결한 설정을 B에 이전하고, 제한된 B validation으로 재선택하는 비용까지 비교한 결과는 찾지 못했다. 전체 문헌 부재의 증명이 아니다. 실제 재사용 손실·안정성은 이 검토로 계산할 수 없다.
-- **강한 단순 대안:** 공통 도착 후보의 geometry/IK·충돌 검사와 시연 시야 검색, 같은 후보에서 소수의 B validation으로 단순 재선택. 새 selector/RL 없이 비교한다. 기존 Mobi-π/MoTo는 baseline 계보이며 통계적 재선택 자체도 새 방법이 아니다.
-- **작은 진단 초안:** A에서 선택·동결한 설정을 B에 재사용하고, B 재선택 및 고정 조건과 비교한다. 같은 도착 상태·goal·총시간을 맞추고 reference·조건부 조작 성공·전체 성공·추가 validation 비용을 구별한다. 10/31 metadata 확인 결과 현재 radio 목록은 한 scene-template이므로 독립 scene holdout은 아직 구성할 수 없다. 아래 후속 보완의 분할·해석 제한을 따른다.
-- **GAP-HANDOFF2 DONE — 공개 연결 PARTIAL:** [결과·source 경계](../work/research_topics/mobile_policy_transfer/내용/README.md#public-interface), [revision/hash ledger](../work/research_topics/mobile_policy_transfer/내용/sources.json). 2개 code revision의 10개 파일 지정 구간과 HF release metadata를 확인했다. π0.5 독립 skill 평가 경로를 특정했지만 원래 π0.5–GR00T 쌍과 실제 navigation 도착 연결은 미확보다. 실행하지 않았으며 연구 효과 반증이나 후보 탈락으로 해석하지 않는다.
-- **GAP-HANDOFF3 DONE — 동일 계열 교체로 축소·설계 초안 완료:** [공통 task·normalizer/controller 근거와 한 장 설계](../work/research_topics/mobile_policy_transfer/내용/README.md#design-history). A=`pi05-pt12-skill` → B=`pi05-pt50-skill`, radio navigation 0→pickup 1을 선택했다. Navigator N=A를 고정하고 도착 거리 세 후보에서 A 선택의 B 재사용 / 정책 무관 고정거리 / 12회 이하 B validation 재선택을 비교한다. 각 normalizer 유지·privileged geometry 종료·실제 도착에서 공통 정지 후 A/B 분기·전체 시작 분모/비용을 설계했다. 최대 110 phase와 2 dev/4 calibration/4 test는 **미실행 초안**이며 원본 instance별 grouping·최종 split은 미확정이다.
-- **GAP-HANDOFF-P0-PREP DONE / native P0 WAITING_RESOURCE:** [로컬 확인 결과](../work/research_topics/mobile_policy_transfer/재현%20방법/README.md#preparation-history): Mac/Docker ARM64·GPU allocation exit 125. [clone 재개 준비](../work/research_topics/mobile_policy_transfer/재현%20방법/README.md#execution)에 preflight script·revision/normalizer·환경/mount와 남은 구현을 기록했다. Sim Python 3.10/torch 2.6.0과 server Python 3.11/torch 2.7.1의 분리 및 transport 처리가 필요하다. 조건이 맞는 로컬 Docker에서 두 정책 IO·1개 dev 도착 분기까지 진행한다. Native adapter·image·manifest는 미완료이며 큰 비교/학습 자동 시작은 없다. 작은/0 차이를 재사용 동등성으로, 양의 차이를 일반적 전이 손실로 확대하지 않는다. Native·효과·신규성은 미검증이다.
-- **범위와 종료점:** A에서 고정해 재사용하는 것은 공통 후보 생성·선택 설정이며 장면 간 절대 좌표의 무조건 복사가 아니다. 구체 표현은 공개 경로 확인 후 정한다. 같은 5편의 문헌 감사는 반복하지 않는다. 공개 경로 미확보를 연구 반증이나 C1 자동 승격으로 바꾸지 않는다. C1이 endpoint-policy 호환성만 보이면 통합하고 TERM의 별도 stop 실험까지 첫 pilot에 넣지 않는다. 기존 D2/D3·RP-3 결과와 실행 gate는 유지한다.
-
-**2026-10-31 GPU 전 보완:** [정책 효과·분할·비용 검토](../work/update/PRE_GPU_BUILDUP_REVIEW_2026-10-31.md#mobile-policy-transfer)와 [10개 metadata 근거](../work/sources/pre_gpu_buildup_review_2026-10-31.json). 서로 다른 HDF5 경로 10개지만 모두 같은 scene model·instance template이고 `episode_id`는 모두 0이다. 기존 2/4/4를 독립 instance holdout으로 사용할 수 없으며, 6개 시연은 이동 종료와 집기 시작 annotation 경계가 다르다. 한 dev IO는 유지하고 후속 2/4/4는 동일-template 개발/조건 선택/기술적 평가로 범위를 수정했다. 정책×종료 조건별 결과로 전반적 능력 차이·조건 민감도·재선택 잡음을 구별한다. 효과·scene 복원·외부 피드백은 미검증이다.
-
-**비실험 잔여 보완:** [선택 불능·결측·비용 규칙](../work/update/PRE_GPU_BUILDUP_REVIEW_2026-10-31.md#remaining-work-review). Calibration이 모두 실패하거나 기술적 결측이 남으면 고정 0.9 m fallback을 data-driven 선택과 구별한다. A의 유효한 선택이 없으면 전이 손실 주장을 하지 않는다. 평가 4개의 이진 차이는 25%p 단위여서 작은 개선·동등성 확증은 불가능하다. ActiveAlign의 multi-backbone/endpoint 비교는 이미 H1에서 검토했으며 새로운 gap으로 재집계하지 않는다.
-
-GAP-HANDOFF2의 연결 표를 H3 결과로 갱신했으며, split/identity는 위 10/31 보완이 우선한다. Source 수준 확인이며 실행 가능성·효과 검증과 구별한다.
-
-| 연결 | 확인 | 남은 부분 |
-|---|---|---|
-| Task–정책 쌍 | [공식 release](https://huggingface.co/mafangniu/Behavior-Skill-VLA-Checkpoints)와 [논문 IV-D](https://arxiv.org/html/2608.30536v1#S4.SS4)를 연결해 12/50-task Skill·radio 선택 | 학습 episode 이력·unseen-scene·GR00T 쌍은 미확인. 같은 계열의 정책 묶음 교체로만 해석 |
-| Input/action | [π0.5 wrapper](https://github.com/mafangniu/pi05-behavior-skill/blob/7ca6eace02aaba2d8ce19af600b85dd04a60d720/src/openpi/shared/eval_b1k_wrapper.py)와 H3 loader/config 감사로 skill prompt·3 RGB·proprio, 각 normalizer·공통 controller 후보 연결 | Normalizer 내용은 서로 다름. 각자 유지하며 실제 slot/scale·queue/reset·정책 로드는 미검증 |
-| 상태 복원 | [loader](https://github.com/nubot-nudt/Behavior-Skill/blob/d3593788bdc7bd3016d307ea9529fdb500c146ba/benchmark/states/loader.py)는 scene·grasp 복원 후 정지/안정화 | 실제 도착 속도/접촉·controller/RNG까지 보존한 동일 상태 분기 미검증 |
-| 이동→조작 | [radio 예시](https://github.com/nubot-nudt/Behavior-Skill/blob/d3593788bdc7bd3016d307ea9529fdb500c146ba/data/skill_init_states/task-0000/episode_00000010/state_manifest.json)의 nav0 끝/pickup1 시작이 frame 265로 인접 | Human demo 경계다. Runner는 매 skill 시연 상태로 reset하므로 정책 navigation 결과의 전달이 아님 |
-| 설정 선택·결과/비용 | [H3 비교 초안](../work/research_topics/mobile_policy_transfer/내용/README.md#design-history-2-한-장-비교-설계-제안-v01-미실행)에 Reuse/Fixed/B-select·분모·비용·split/예산 작성 | 실제 도착 ID·branch·전체 시작 분모·재검증 비용은 아직 구현/측정하지 않음. 영상 후처리 step과 판정 시점 분리 |
-
-| 질문 | 구별할 예측 | 최소 대조·중단 조건 | 근거/판정 |
-|---|---|---|---|
-| VLA→저수준 command | 고정 low-level controller에서 command rate·delay·unsafe-command rejection이 base 안정성과 arm success를 어떻게 바꾸는가? | HOVER/SONIC류 controller의 입력 단위·termination·queue를 기록한다. Controller 교체 효과를 VLA 개선으로 귀속하지 않는다. | 기존 track 비교의 연구자 질문; native 효과 미검증 |
-| Whole-body contact | Human motion prior와 큰 tracking corpus가 task 성공·contact feasibility를 유지하면서 rare failure를 줄이는가? | Fall·actuator saturation·recovery onset의 event 분모를 남긴다. Tracking score와 manipulation 성공을 따로 평가한다. | 기존 track 비교의 연구자 질문; native 효과 미검증 |
+| 문헌 질문 | 비교에서 구별할 것 |
+|---|---|
+| VLA→저수준 command | 고정 controller의 command rate·delay·unsafe rejection과 controller 교체 효과 |
+| Whole-body contact | Motion tracking과 task 성공, 접촉/actuator margin·회복의 실제 사건 분모 |
 
 <a id="gap-thermal-2026"></a>
 ### GAP-THERMAL — 순간적으로 가능한 행동을 장시간 반복할 수 있는가?

@@ -57,7 +57,7 @@ Gato/CLIP/CLIPort → PaLM-E/RT-1/RT-2 → MT-Opt/AutoRT data engine → Open X-
 | CORE | [NaVILA: Legged Robot Vision-Language-Action Model for Navigation](../2025/RSS/2025_RSS_NaVILA-Legged-Robot-Vision-Language-Action-Model-for-Navig/01_overview.md) | 2025 / RSS | `UNREAD` | `FULL_TEXT_CHECKED` |
 | CORE | [CALVIN: A Benchmark for Language-Conditioned Policy Learning for Long-Horizon Robot Manipulation Tasks](../2022/RA-L/2022_RA-L_CALVIN-A-Benchmark-for-Language-Conditioned-Policy-Learnin/01_overview.md) | 2022 / RA-L | `UNREAD` | `FULL_TEXT_CHECKED` |
 
-### VLA, cross-embodiment, and long-horizon planning — 150
+### VLA, cross-embodiment, and long-horizon planning — 156
 
 | Tier | Paper | Year / Venue | Status | Evidence |
 |---|---|---|---|---|
@@ -211,6 +211,12 @@ Gato/CLIP/CLIPort → PaLM-E/RT-1/RT-2 → MT-Opt/AutoRT data engine → Open X-
 | NEXT | [RoboAlign: Learning Test-Time Reasoning for Language-Action Alignment in Vision-Language-Action Models](../2026/arXiv/2026_arXiv_RoboAlign-Learning-Test-Time-Reasoning-for-Language-Action/01_overview.md) | 2026 / arXiv | `UNREAD` | `ABSTRACT_CHECKED` |
 | NEXT | [STARE-VLA: Progressive Stage-Aware Reinforcement for Fine-Tuning Vision-Language-Action Models](../2025/arXiv/2025_arXiv_STARE-VLA-Progressive-Stage-Aware-Reinforcement-for-Fine-T/01_overview.md) | 2025 / arXiv | `UNREAD` | `ABSTRACT_CHECKED` |
 | NEXT | [Ψ₀: An Open Foundation Model Towards Universal Humanoid Loco-Manipulation](../2026/RSS/2026_RSS_An-Open-Foundation-Model-Towards-Universal-Humanoid-Loco-M/01_overview.md) | 2026 / RSS | `UNREAD` | `FULL_TEXT_CHECKED` |
+| NEXT | [Universal Pose Pretraining for Generalizable Vision-Language-Action Policies](../2026/RSS/2026_RSS_Universal-Pose-Pretraining-for-Generalizable-Vision-Langua/01_overview.md) | 2026 / RSS | `UNREAD` | `ABSTRACT_CHECKED` |
+| NEXT | [GeoPredict: Leveraging Predictive Kinematics and 3D Gaussian Geometry for Precise VLA Manipulation](../2026/CVPR/2026_CVPR_GeoPredict-Leveraging-Predictive-Kinematics-and-3D-Gaussia/01_overview.md) | 2026 / CVPR | `UNREAD` | `ABSTRACT_CHECKED` |
+| NEXT | [ReconVLA: Reconstructive Vision-Language-Action Model as Effective Robot Perceiver](../2026/AAAI/2026_AAAI_ReconVLA-Reconstructive-Vision-Language-Action-Model-as-Ef/01_overview.md) | 2026 / AAAI | `UNREAD` | `ABSTRACT_CHECKED` |
+| NEXT | [StructRL: Structured Action-Space Exploration for Flow-Based VLAs](../2026/arXiv/2026_arXiv_StructRL-Structured-Action-Space-Exploration-for-Flow-Base/01_overview.md) | 2026 / arXiv | `UNREAD` | `ABSTRACT_CHECKED` |
+| NEXT | [SaPaVe: Towards Active Perception and Manipulation in Vision-Language Action Models for Robotics](../2026/CVPR/2026_CVPR_SaPaVe-Towards-Active-Perception-and-Manipulation-in-Visio/01_overview.md) | 2026 / CVPR | `UNREAD` | `FULL_TEXT_CHECKED` |
+| NEXT | [Look Before You Act: Bridging Active Perception and Vision-Language-Action Models via Observation-Aligned Data Adaptation](../2026/arXiv/2026_arXiv_Look-Before-You-Act-Bridging-Active-Perception-and-Vision/01_overview.md) | 2026 / arXiv | `UNREAD` | `ABSTRACT_CHECKED` |
 
 <!-- READING_QUEUE:END -->
 
@@ -320,6 +326,16 @@ Gato/CLIP/CLIPort → PaLM-E/RT-1/RT-2 → MT-Opt/AutoRT data engine → Open X-
 
 ## Open Questions
 
+### 물체 자세·3D 추정을 단일 VLA의 행동에 연결하는 조건 — 2026-11-17
+
+**CURATION-HYPOTHESIS.** [Pose-VLA](https://roboticsproceedings.org/rss22/p145.html)의 pose pretraining과 [SaPaVe](https://openaccess.thecvf.com/content/CVPR2026/html/Liu_SaPaVe_Towards_Active_Perception_and_Manipulation_in_Vision-Language_Action_Models_CVPR_2026_paper.html)의 카메라/조작 공동 학습 이후, pose token 추가나 통합 architecture만으로 새 기여를 주장하지 않는다. 여러 pose 가설의 행동 양립성, 입력 geometry 오류의 방향별 조작 영향을 두 초기 질문으로 나눴다. [3D track의 직접 선행과 질문](./07_robotics_3d_perception.md#pose-reconstruction-2026) 및 [후보 index](../work/research_topics/README.md)를 따른다. RL은 해당 학습에 필요할 때 선택하며, pipeline 연결·배포 시 단일 정책·같은 가중치의 공동 갱신을 구별한다. 효과/신규성은 미확립이다.
+
+**2026-11-18 등록 연결 / CURATION-HYPOTHESIS.** [Pose-VLA](../2026/RSS/2026_RSS_Universal-Pose-Pretraining-for-Generalizable-Vision-Langua/01_overview.md)는 pose/trajectory pretraining, [GeoPredict](../2026/CVPR/2026_CVPR_GeoPredict-Leveraging-Predictive-Kinematics-and-3D-Gaussia/01_overview.md)는 훈련 시 3D geometry supervision, [ReconVLA](../2026/AAAI/2026_AAAI_ReconVLA-Reconstructive-Vision-Language-Action-Model-as-Ef/01_overview.md)는 2D target-region 재구성으로 구별한다. ReconVLA를 3D reconstruction 방법으로 분류하지 않는다. [Robo3R](../2026/RSS/2026_RSS_Robo3R-Enhancing-Robotic-Manipulation-with-Accurate-Feed-F/01_overview.md)의 robot-frame geometry와 [GAP](../2026/CVPR/2026_CVPR_Action-Geometry-Prediction-with-3D-Geometric-Prior-for-Bim/01_overview.md)의 미래 action/geometry 공동 예측을 비교하되 geometry supervision 자체를 새 기여로 주장하지 않는다. [REG-R17](../work/update/REGISTRY_MAINTENANCE_2026-11-18.md)의 paper-note는 abstract/project 확인이며 연구 후보의 효과·정독 상태는 승격하지 않았다.
+
+### 같은 목표의 환경별 RL 적응을 단일 정책에 통합할 수 있는가 — 2026-11-17
+
+**CURATION-HYPOTHESIS / R1 이력, R2 현재 선택에서 제외.** [MergeVLA](https://mergevla.github.io/)와 [PolicyWeave](https://arxiv.org/html/2609.33125v1) 이후 일반 VLA 전문가 병합, RL 후학습 이득 통합은 새 기여가 아니다. 남을 수 있는 질문은 같은 embodiment·task·action interface에서 시각/물리 환경별 RL 갱신을 합쳐 미관측 요인 조합에 일반화하는 조건이다. 표준 static merge·context 선택·공동 RL·전문가 증류보다 중요한 차이가 있는지 미확인이다. LANGRET의 지시별 행동 보존이나 폐기 VRL의 residual 재사용과 구별한다. [후보 카드·직접 선행·비용](../work/update/NEW_FIELD_SCOUT_2026-11-17.md#merge). R2 재검색에서는 방법 기여가 더 구체적인 [접촉 관계 기반 탐색 분포](../work/update/NEW_FIELD_SCOUT_2026-11-17.md#relation-exploration)를 다음 검토 대상으로 선택했다.
+
 <a id="foundation-frontier-2026"></a>
 ### 새 직접 선행의 학습 대상과 배포 구조
 
@@ -334,7 +350,7 @@ Gato/CLIP/CLIPort → PaLM-E/RT-1/RT-2 → MT-Opt/AutoRT data engine → Open X-
 | [AC2-VLA](https://ijcai.org/proceedings/2026/228), IJCAI 2026 | Action context에 따른 adaptive computation과 self-distillation | RL 없이 계산을 줄이는 대안과 동일 control clock·관측 age·wall-clock 비용을 비교 |
 | [Act2Goal](https://www.roboticsproceedings.org/rss22/p015.html), RSS 2026 | World model에서 visual-goal policy를 만들고 hindsight 적응을 수행 | Visual goal을 language instruction과 혼동하지 않음. Hindsight 적응을 reward-based RL로 자동 분류하지 않음 |
 
-현재 연구 계약·순위는 유지한다. 신규성 또는 P1 학습 비교를 주장하기 전 해당 주제와 직접 겹치는 본문·공개 구현을 대조한다. 새 초록 등록만으로 기여의 중복/비중복이나 정책 효과를 확정하지 않는다.
+이 등록 당시에는 연구 계약·순위를 바꾸지 않았다. 현행 유지·폐기는 [주제 index](../work/research_topics/README.md)를 따른다. 신규성 또는 P1 학습 비교를 주장하기 전 해당 주제와 직접 겹치는 본문·공개 구현을 대조한다. 새 초록 등록만으로 기여의 중복/비중복이나 정책 효과를 확정하지 않는다.
 
 ### 단일 VLA의 RL 이득과 대안 설명 — 2026-11-08
 
@@ -343,59 +359,35 @@ Gato/CLIP/CLIPort → PaLM-E/RT-1/RT-2 → MT-Opt/AutoRT data engine → Open X-
 [Contrast Sets](https://proceedings.mlr.press/v270/anwar25a.html)·[ICBench/IGAR](https://link.springer.com/chapter/10.1007/978-3-032-37152-2_3)를 사용하면 정상 지시 성공과 모순 지시에서의 잘못된 실행을 분리할 수 있다. 무조건 정지와 inference attention 보정도 대안이다. 평균 성공 향상이 언어 grounding 향상이라는 주장을 곧바로 지지하지는 않는다. 새 44편의 노트·분류·버전 경계는 [REG-R12](../work/update/TOP_TIER_SUPPLEMENT_2026-11-08.md)에 연결했다. 기존 후보 판정과 사용자 정독 상태는 유지한다.
 
 <a id="gap-hindsight-transfer"></a>
+### 참인 hindsight 목표와 원 과제 전이
 
-### 참인 hindsight 목표 중 원 과제 학습에 유용한 것은 무엇인가? — 2026-11-07
+**2026-11-17: 현재 HINDSIGHT 설계는 RETIRED.** [폐기 이유](../work/research_topics/retired/README.md#hindsight_transfer). [LfH](../2026/arXiv/2026_arXiv_Learning-from-Hindsight-for-VLA-Reinforcement-Learning/01_overview.md), [SPRINT](https://doi.org/10.1109/ICRA57147.2024.10610606), [SOAR](https://proceedings.mlr.press/v270/zhou25b.html) 이후 언어 재라벨·실패 재사용 자체는 새 기여가 아니다. 유효 목표 중 원 과제 전이를 돕는 선택이라는 좁은 차이에 비해 label 유효성·support·학습 비교 부담이 크다.
 
-정식 등록: [LfH](../2026/arXiv/2026_arXiv_Learning-from-Hindsight-for-VLA-Reinforcement-Learning/01_overview.md)와 [CAST](../2025/arXiv/2025_arXiv_CAST-Counterfactual-Labels-Improve-Instruction-Following-i/01_overview.md)의 paper별 5-note를 추가했다. 둘 다 main venue를 확정하지 않은 preprint이며, 아래 질문의 선행 관계를 명확히 하기 위한 등록이다. 새 노트는 abstract/project 기반·UNREAD이고 실제 읽기 matrix나 효과 증거로 승격하지 않는다. SPRINT·SOAR·ReinFlow의 다른 학습 경계는 [등록 검토](../work/update/REGISTRY_MAINTENANCE_2026-11-07.md#admissions)에서 연결한다.
+재사용할 구분은 보조 목표의 성공과 원래 지시의 성공, 목표 선택과 동일 라벨 모방의 차이다. 실제 전이 효과는 미측정이며 폐기는 투자 판단이다. 과거 N2/P0 계약을 현재 실행 대기로 복제하지 않는다.
 
-**CURATION-HYPOTHESIS / 신규 조건부 탐색.** [SPRINT, ICRA 2024](https://doi.org/10.1109/ICRA57147.2024.10610606)와 [SOAR, CoRL 2024](https://proceedings.mlr.press/v270/zhou25b.html), [LfH 최신 v2, 2026 preprint](https://arxiv.org/html/2607.09042v2)의 계보 이후 일반적인 언어 재라벨·실패 재사용을 신규성으로 삼지 않는다. 남길 질문은 **같은 실패 group에 가능한 여러 참인 보조 목표 중, 무엇으로 학습해야 원래 명령한 과제에 도움이 되는가**다. 목표와의 객체/행동 관계·정책 분포 중첩을 후보 설명으로 두되 기존 task-specific goal selection과의 차이도 추가 검토한다.
+### 기존 후보와 함께 심사한 VLA + RL 질문
 
-단순 객체/행동 일치·무작위 valid label·기존 hindsight 방식·동일 라벨 모방을 대조하고, 보조 목표 성공보다 원 목표의 held-out 성공과 전체 비용을 본다. 이것은 효과가 있다는 문헌 결론이 아니라 새 비교 가설이다. 선행의 이미 수행한 보정/모방 대조, 확인한 version/code 범위와 남은 검토는 [주제 문서](../work/research_topics/hindsight_transfer/내용/README.md)와 단일 source ledger에 통합한다. N2에서 내부 비실험 연구 설계를 마쳤으나 실제 정책 실행·독립 기여는 미확인이다.
-
-**N1 보완:** [선행/code·과제 검토](../work/research_topics/hindsight_transfer/내용/README.md#n1-review)에서 CHER·OL-AUX 등의 일반 adaptive selection/weighting 중복을 확인했다. LIBERO의 실제 conjunction predicate와 RLinf token re-score 경로를 선정했지만, 복수 valid-label witness는 없다. 보상 벡터가 달라지는 전체 선택 효과와 같은 벡터에서의 instruction-conditioning 진단을 구별한다. All-failure GRPO group에는 원 reward gradient가 없어 같은 batch의 cosine 선택만으로 유용성을 알아낼 수 없다. 이는 식의 성질이지 새 실험 발견이 아니다. 좁은 분석 탐색 유지·방법 신규성 미확정이다. **[N2 계약](../work/research_topics/hindsight_transfer/내용/README.md#n2-contract)**에서 같은 장면의 다른 공개 목표 A/B와 적응 단계의 분할, 고정 pool의 U/O/G paired 비교를 정했다. 같은 지시에서 objective 값 0과 gradient 0은 다르므로 λ=1·scalar cap off로 공통 조건을 고정했다. 이는 LfH 정확 재현이 아닌 좁은 진단이다. P0 실행 자료를 작성하고 Mac NVIDIA 조건 미충족을 확인했다. Docker CPU 제어 검사만 통과했으며 native IO/gradient·의미 효과·다과제 일반화는 아직 미측정이다.
-
-### 기존 후보와 함께 심사한 VLA + RL 질문 — 2026-11-05
-
-아래 두 질문은 11/05 외부 문헌에서 좁힌 **CURATION-HYPOTHESIS / 탐색 후보**다. [당시 6개+새 2개 검토](../work/update/INTEGRATED_GAP_REVIEW_2026-11-05.md)와 [31편 원장](../work/sources/vla_rl_new_gap_scan_2026-11-05.json)을 보존한다. 당시 VRL 주 탐색·FEEDBACK 진단 권고 이후 UNIFIED가 추가되어 당시 주제 문서는 **8개**였고 11/07 HINDSIGHT 추가 후 현행은 9개다. [11/07 현행 투자 판단](../work/research_topics/README.md#candidate-priority)은 UNIFIED 우선·VRL/REVISION 대안·FEEDBACK 보조 진단으로 정리했다. 실행 가능한 정도와 연구 가치를 구별하며 선택한 다음 행동은 [TODO](../TODO.md)를 따른다.
-
-**새 직접 충돌:** [BAS-VLA §4–5·A.2.1](https://arxiv.org/html/2609.23650v1)는 nuisance 불변성과 semantic-change 반응을 함께 다루며 목표·관계·순서 변경까지 평가한다. 따라서 FEEDBACK은 RL과 유효 관측 가치의 관계, REVISION은 다중 수정의 유지/철회 공동 기준으로 좁힌다. [ProAct Appendix C.3](https://arxiv.org/pdf/2610.09170v1)는 H/실행 길이와 tokenizer-free control을 이미 비교하므로 CODEC1의 일반 motivation을 기여로 재주장하지 않는다. 공개 checkpoint 진단과 data-matched RL 인과효과는 구별한다. 새 등록 및 확인 범위는 [12편 원장](../work/sources/registry_admissions_2026-11-05.json)을 따른다.
+11/05의 [통합 검토](../work/update/INTEGRATED_GAP_REVIEW_2026-11-05.md)는 당시 이력이다. 11/17에는 VRL을 폐기하고 FEEDBACK을 신뢰성 문헌 탐색의 출발점으로 남겼다. [현행 투자 판단](../work/research_topics/README.md#candidate-priority)과 실행 가능성은 별개다.
 
 <a id="gap-feedback-2026"></a>
 
-- **RL은 VLA의 목표 관련 피드백 활용을 어떻게 바꾸는가?** [RL 일반화 연구, NeurIPS 2025](https://proceedings.neurips.cc/paper_files/paper/2025/hash/8c0fabe372177d2aded596be2d3b4544-Abstract-Conference.html)는 실행 중 물체 이동을, [Not All Features v6](https://arxiv.org/pdf/2603.19233v6)는 activation 주입 아래 좌표 결합을, [Embodied Interpretability, ICML 2026](https://proceedings.mlr.press/v306/zhang26gz.html)은 시각 attribution을 이미 다룬다. 남겨 둘 질문은 post-training에 따른 **유효한 상태 변화 반응·nuisance 불변성·기본 운동 능력의 구별**이다. 물리 변화×관측 가용성, 같은 데이터 모방, control rate/horizon 대조를 통해 조사한다. 정상 정책이 항상 관측을 무시한다거나 관측 민감도가 클수록 좋다고 가정하지 않는다. [후보 카드·해석 경계](../work/update/VLA_RL_NEW_GAP_SCAN_2026-11-05.md#feedback).
-
-**11/06 source 대조:** [N2 학습 계보·추정 대상 비교](../work/update/INTEGRATED_GAP_REVIEW_2026-11-05.md#integrated-n2)에서 RL4VLA의 native normalizer 차이·기본 stochastic evaluation·step-5 평가 함수의 물체 이동을 확인했다. 각 checkpoint의 물리 변화×1-query 관측 지연 상호작용과 공개 RL/SFT 간 연관을 구별한다. 같은 데이터 모방 대조는 아직 없는 후속 학습이며 RL 목적함수의 인과효과는 미검증이다. VRL의 모든 residual arm도 과거 데이터에 접근하므로 초기화/anchor 효과와 과거 데이터 유무 효과를 구분한다. 직접 adapter/경험 데이터 공유 없이 공통 기록 형식만 재사용한다.
-
-**11/06 P0 준비 후속:** [내용·기여 경계](../work/research_topics/visual_feedback/내용/README.md)와 [bounded IO 재개](../work/research_topics/visual_feedback/재현%20방법/README.md)에 통합했다. 평가 함수 재호출의 물리 개입을 막고 3 queries·6 control steps로 제한한다. Mac ARM의 native 자원 미충족, Docker CPU 제어 검사 9개 통과는 정책 효과와 별개다. Four-cell rollout·전체 상태 복원·RL 목적함수 효과는 미검증이다.
+**시각 피드백 활용 — 유지.** [BAS-VLA](https://arxiv.org/html/2609.23650v1)는 nuisance 불변성과 의미 변화의 반응을 이미 다룬다. 공개 RL/SFT 비교는 데이터·normalizer 차이 때문에 RL 목적함수만의 인과효과가 아니다. [관측 지연 진단과 최신 실패/복구 선행](../work/research_topics/visual_feedback/내용/README.md#reliability-scout-2026)은 새 관측의 행동상 가치와 실패 원인·유용한 개입을 구별한다. Native 효과는 미확인이다.
 
 <a id="gap-crossplay-2026"></a>
 
-- **공동 RL의 이득은 처음 만난 VLA 팀원과도 유지되는가?** [LatentToM, CoRL 2025](https://proceedings.mlr.press/v305/he25a.html), [CHORUS](https://arxiv.org/html/2606.12352v1), [multi-agent VLA reinforced fine-tuning](https://arxiv.org/html/2609.36588v1)은 분산 협력·동료 반응·다중 agent RL의 직접 선행이다. 새 질문은 같은 role의 운동 능력과 관측 접근권을 통제했을 때 **독립 학습 정책들의 협력 관습이 얼마나 호환되는가**다. Self-play/cross-play와 역할 prompt·동기화·population training을 비교한다. [Other-Play](https://proceedings.mlr.press/v119/hu20a.html) 이래의 문제이므로 cross-play나 VLA+MARL 결합 자체를 새 기여로 삼지 않는다. [후보 카드·강한 대안](../work/update/VLA_RL_NEW_GAP_SCAN_2026-11-05.md#cross-play).
-
-같은 검색에서 world-model의 policy utility는 [DRILL](https://arxiv.org/html/2610.30814v1), imagined candidate audit는 [TIF](https://arxiv.org/abs/2611.04873)와 직접 겹쳤다. 이 넓은 방향은 새로운 후보로 채택하지 않았다. 세부 source 확인·작은 비교가 남아 있으며 신규성/효과가 입증된 질문은 없다.
+**독립 팀원의 협력 일반화 — 문헌 질문 보존.** [당시 탐색](../work/update/VLA_RL_NEW_GAP_SCAN_2026-11-05.md#cross-play)의 MARL/cross-play와 로봇 능력·정보 접근 대조가 선행되어야 한다. 현재 4개 후보나 실행 queue에 포함하지 않는다.
 
 <a id="gap-vla-rl-2026-11"></a>
+### Base 업데이트와 residual·보상 자료의 재사용
 
-### VLA + RL 재탐색: base 업데이트와 보상 학습의 coverage
+**2026-11-17: residual 재사용(VRL) 설계는 RETIRED.** [이유·검증 경계](../work/research_topics/retired/README.md#vla_residual_update). A의 보정 학습부터 B의 적응까지 필요한 비용에 비해 gain·warm-start·동일 데이터 모방 이후 차이가 불명확하다. 계층형 구조라는 이유만으로 폐기하지 않았으며 residual RL 분야 전체를 제외하지 않는다.
 
-- **상태:** 2026-11-03 `GAP-VRL-N1` **내부 비실험 buildup 완료·탐색 유지**, `CURATION-HYPOTHESIS`. [주제 내용·완료 범위](../work/research_topics/vla_residual_update/내용/README.md#nonexperimental-completion) · [누적 42편 source/계약](../work/sources/vla_rl_gap_review_2026-11-03.json). 2018 Q-filter foundation 1편은 2024–2026 trend와 분리한다. 현재 Mac local Docker는 NVIDIA 조건 미충족이다. 기존 5개 주제의 판단을 유지하고 VRL을 6번째 문서 주제로 통합했으나 새 runnable packet은 아니다.
-- **1순위 질문:** 같은 robot/controller에서 독립적으로 업데이트된 VLA B의 개선을 보존하면서 A용 residual을 적은 추가 interaction으로 적응할 수 있는가? Object-Centric의 정렬된 sim/real 전이·PLD의 residual 데이터→SFT뿐 아니라 [EXPO](https://proceedings.iclr.cc/paper_files/paper/2026/hash/d56a652ad743308b24b6c4d0e6411dd7-Abstract-Conference.html)/[EXPO-FT](https://arxiv.org/html/2605.25477v1)의 base/editor 공동 학습과 Q 선택이 선행한다. [FIRe 저자 project](https://rcilab.khu.ac.kr/FIRe/)는 같은 residual의 여러 backbone 전이를 명시한다(RA-L 제출, acceptance·paper/code 미확인). 따라서 전이·공동 학습 자체는 신규 주장이 아니다.
-- **R1에서 구체화한 것:** SimpleVLA-RL의 공개 SFT/RL A/B revision·normalizer bytes·982 parameter key 집합이 일치한다. Exact-parent·native 호환성·성능·학습된 residual은 미확보다. 같은 additive 좌표의 `r_keep=(a_A+r_A)-a_B`는 이전 합성 정책만 복원하므로 B 활용의 증거가 아니다. A/A+rA/B/B+rA, scalar gain, matched-budget warm-start/fresh RL, 같은 데이터 imitation, EXPO식 대안을 비교한다. Base-action shift와 방문 상태 변화는 별도 진단하며 action 거리를 성공률로 대체하지 않는다.
-- **R2에서 정한 것:** LIBERO 책 배치 1 task, A actor만 이전·동결 A vision representation·새 critic·모든 군의 공통 old raw data로 비교한다. 두 critic이 기존 보정 또는 새 base를 현재 actor보다 높게 평가할 때 해당 reference로만 당기는 TD3 규칙을 둔다. [Q-filter](https://arxiv.org/pdf/1709.10089)와 [DICE-RL](https://proceedings.mlr.press/v306/sun26al.html)의 선택적 정규화가 선행하므로 조합 자체의 알고리즘 신규성은 약하다. Gain, fresh/warm, 무조건 old anchor, base/teacher Q-filter, 같은 데이터 imitation·Q 선택을 대조한다. 초기 가설의 가치는 독립 update 후 재사용 비용에 관한 새로운 실증 근거에 달려 있다.
-- **2순위 질문:** 목표별 시연 coverage가 counterfactual reward의 negative 선정과 offline RL 지시 준수를 바꾸는가? [CounterAlign](https://arxiv.org/html/2608.21740v1)은 shared-action ambiguity·관측/행동 similarity filter·nnPU를 이미 다룬다. 부록 식 (9)의 max similarity가 reference support에 의존한다는 점에서, 같은 의미의 tuple과 actor transition을 고정하고 reference coverage만 바꾸는 질문을 남겼다. Max의 집합 의존성은 분석적 성질이며 실제 label 오류·성능 하락을 관측한 것은 아니다. 원 필터+nnPU·goal balancing·threshold calibration이 필수 대안이다.
-- **예비 질문:** 학생 관측으로 실행 가능한 RL 교사 행동 생성, world/reward 모델의 공동 오류를 구별하는 독립 task 검증. 각각 기존 GAP-CF 및 C4/GAP-WM과 겹친다. 새 matched 근거 없이 독립 주제로 재개하지 않는다.
-- **비실험 보완·다음:** 고정 encoder로도 base-action 입력 shift·critic 오류는 남으며 gain/모방 대안을 구분했다. [재현 방법](../work/research_topics/vla_residual_update/재현%20방법/README.md)에 환경·source·미구현 adapter/lock·clone 재개 순서를 기록했다. 다음 `GAP-VRL-P0`는 호환 NVIDIA 자원과 구현 대기이며 최대 36 env steps·2 VLA queries의 IO다. 같은 내부 문헌 집계나 현재 GPU 실패 probe를 반복하지 않는다. 정책 효과·독립 방법 기여·실제 외부 피드백은 미확인이다.
+보상 reference coverage·label 신뢰도와 policy 학습 데이터 증가 효과는 분리할 비교 원칙이다. [과거 CounterAlign 비교](../work/update/VLA_RL_GAP_REVIEW_2026-11-03.md#counterfactual-coverage)는 문헌 질문으로만 보존한다. 두 질문 모두 현재 자동 실행 대상이 아니다.
 
 <a id="gap-action-codec-2026"></a>
+### 행동 토큰화의 복원 점수와 실행 성능
 
-### 행동 토큰화의 전체 복원 점수와 실행 예정 구간의 관계
-
-- **추가 비실험 보완:** [N1 검토](../work/research_topics/action_tokenization/내용/README.md#nonexperimental-followup)에서 해독형 AR과 token co-training을 분리했다. 전체/앞부분 오차 순위 차이는 평균 support의 차이로도 설명되므로, 고정 H·동일 의미 입력·원 normalizer·calibration에서 맞춘 rate와 별도 평가 episode를 요구하는 작은 비교로 수정했다. OAT/Praxis 공개 evaluator와 ActionCodec2 model card를 대조했으나 바로 사용할 호환 learned checkpoint를 확정한 것은 아니다. 기존 CPU 결과 보존·새 실험 없음·독립 방법 GO 근거 부족 유지.
-- **상태:** 2026-11-03 [CODEC1 내부 buildup·Docker CPU 진단 완료](../work/research_topics/action_tokenization/내용/README.md). 제한된 codec 성질에는 실험 근거가 있다. 정책 성능 관련 질문은 `CURATION-HYPOTHESIS`이며 새 방법 GO로 올리지 않는다. [Source/version·확인 범위](../work/research_topics/action_tokenization/내용/sources.json).
-- **알려진 답:** FAST(RSS 2025)의 전역 DCT 양자화, OAT(RSS 2026)의 예측/실행 horizon 분석, ProAct(2026-10 preprint)의 복원·예측 가능성·해독 견고성 분석이 선행한다. 복원 오차와 정책 성공의 차이 또는 horizon 분리 자체를 신규성으로 주장하지 않는다. 공식 status·본문 위치는 위 비교표에 연결했다.
-- **남긴 질문 — 연구자 해석:** 동일 원 행동의 앞부분을 고정할 때 인코딩할 미래 길이/내용이 그 앞부분의 복원과 tokenizer 선택에 얼마나 영향을 주는가? 실제 controller 허용 오차와 자연적인 실행 선택을 바꾸는지는 미검증이다. Token prefix와 시간상 action prefix는 다르다.
-- **실제 결과:** 공개 시뮬레이션 시연 2종·20 episode·101 window에서 공식 FAST의 앞부분 복원이 달라졌다. 전체/앞부분 오차의 선호 불일치는 episode 2/10·4/10이지만 데이터셋 평균의 순위 역전은 없었다. 고정 길이의 합성 suffix 대조도 수행했다. Pointwise 불변성 대조는 통과했으나 bitrate는 맞추지 않았다. 정책·로봇 성공을 측정한 결과가 아니다.
-- **판단·다음 조건:** 좁은 평가 후보로 보존한다. 알려진 양자화 성질 이후 남는 중요한 기여는 아직 약하다. 후속을 선택하면 supported horizon·원 normalizer의 learned codec과 bitrate를 맞춘 단순 대안을 먼저 구체화한다. 현재 그 실행 packet은 없다. 기존 C3 RL token-equivalence나 E2 timing 후보를 재개한 것이 아니며 세 정책 P0의 순서를 바꾸지 않는다.
+**2026-11-17: CODEC1 독립 주제 RETIRED.** [CPU 결과·폐기 이유](../work/research_topics/retired/README.md#action_tokenization). 20 episode·101 window는 offline 복원 진단이며 실제 robot rollout/성공 개선이 아니다. [ProAct](https://arxiv.org/abs/2610.09170) 이후 복원 점수가 정책 성능과 같지 않다는 일반 관찰을 신규성으로 삼지 않는다. Metric별 codec 선택과 실제 행동 변화의 구별은 평가 원칙으로 남긴다.
 
 ### 2026 문헌 보완: 검색·기억·언어·제어의 구분
 
@@ -405,33 +397,16 @@ Gato/CLIP/CLIPort → PaLM-E/RT-1/RT-2 → MT-Opt/AutoRT data engine → Open X-
 
 
 <a id="gap-retrieval-library-2026"></a>
-### 시연 저장소 확장에 따른 VLA의 기존 과제 성능 보존
+### 시연 저장소 확장과 기존 과제 성능
 
-- **상태:** 2026-11-02 [N1 내부 비실험 buildup 완료](../work/research_topics/context_retrieval/내용/README.md#retrieval-n1), 탐색 후보 유지·`CURATION-HYPOTHESIS`. [단계 0–8 검토](../work/research_topics/context_retrieval/내용/README.md)와 [source/code ledger](../work/research_topics/context_retrieval/내용/sources.json). 기존 실험 대기 3개와 별도이며 새 P0는 없다.
-- **알려진 답:** CoRL 2025 RICL의 시연 기반 적응, 2026 When Does Retrieval Help의 관련 과제 재사용/충돌, StellaVLA의 correct/no/wrong context 비교가 직접 선행이다. ReCAP은 pool 확장과 target-task 시연 추가를 함께 평가한다. 논문별 공식 status·본문 위치·확인 깊이는 위 보고서의 비교표를 따른다. Retrieval/phase gating 자체는 새 방법으로 주장하지 않는다.
-- **남는 질문 — 연구자 해석:** 목표 시연과 고정 VLA를 유지하면서 다른 목표의 공개 reference 시연을 추가하면 기존 과제의 성공·퇴행은 어떻게 바뀌는가? 목표별 partition/언어 prefilter로 충분한가, sparse target support에서 유용한 재사용까지 잃는가? 검토한 범위에서 남긴 조건부 질문이며 전 분야 신규성의 확정이 아니다. 성공이 인증된 시연의 효과·독립 평가라는 주장은 per-payload 원 trajectory 근거가 추가로 필요하다.
-- **최소 대조:** 같은 target bank·policy·초기 상태·context 예산에서 원 bank와 확장 bank를 비교한다. 전체 검색, 목표별 검색, 언어 prefilter, 균등 무작위 선택을 두고 성공↔실패 전환을 각각 센다. Goal inclusion과 배타적 wrong-goal을 구분한다. Task-ID oracle과 실제 언어 기반 선택을 섞지 않는다.
-- **Source·자산 경계:** [통합 R1/R2/A1 기록](../work/research_topics/context_retrieval/내용/README.md#retrieval-a1)에 selector와 실제 40개 시연·261 frame 감사를 보존했다. 목표/목표/donor는 `libero_goal#0/#19/#1`, frame은 8/5/6개다. 시연 성공·원 trajectory와 평가 중복·정책 능력은 미검증이며 공개 pack만으로 dense target support를 만들 수 없다.
-- **N1 보완:** TOWN-VLA의 prompt compatibility/복원과 ACL 2026 Stable Language Guidance를 대조해 신규성·형식/의미 기제를 더 좁혔다. 공식 source와 확인 깊이는 [N1 비교표](../work/research_topics/context_retrieval/내용/README.md#retrieval-n1)를 따른다. 무작위 U·제어/분할 설계·전체 입력 guard를 revision 3에 추가했다. 64개 논리 칸은 8 paired 시작 단위이며 실행 동등성 확인 시 최대 24개 고유 rollout이다. 이 규모는 실행 승인이나 검정력 확보가 아니다. 현재 시연의 8/5/6 frame 차이로 순수한 목표 의미 충돌을 분리할 수 없다.
-- **축소/다음 관측:** 단순 목표별 검색이 충분하거나 구현 보정만으로 차이가 사라지면 방법 연구로 확장하지 않는다. 문헌·논리 설계와 공개 자산 구조 감사는 종료했다. 현재 local Docker의 GPU allocation은 실패했고 native image/selector/cache·작은 IO 검증은 남았다. CPU 자산 재개 경로는 네 번째 정책 P0 packet이 아니다. Frozen θ에서도 context가 바뀐다는 사실 자체는 새 기여가 아니다. 학습 replay인 GAP-RETENTION, episode memory인 GAP-MEMORY/RP-3를 자동 재개하지 않는다.
+**2026-11-17: RETRIEVAL 독립 주제 RETIRED.** [자산 감사·이유](../work/research_topics/retired/README.md#context_retrieval). [When Does Retrieval Help?](https://arxiv.org/abs/2610.05492)는 검색 표현과 실제 도움이 되는 retrieval의 차이를 다룬다. 저자의 NeurIPS workshop 표기를 본 학회로 승격하지 않는다. 목표별 검색 이후 차이가 좁고 성공 시연·평가 독립성 근거와 native 입력 확보 부담이 크다. 검색 자료 identity 확인은 성공 인증과 다르며, frozen weights도 context 변화의 영향을 받는다는 사실 자체는 새 기여가 아니다.
 
 <a id="gap-object-set-2026"></a>
+### 물체 집합 선택·수량 지시
 
-### 물체 집합 선택·수량 지시 이행 — CURATION-HYPOTHESIS
+**2026-11-17: SET 독립 주제 RETIRED.** [폐기 이유·핵심](../work/research_topics/retired/README.md#object_set). [ClevrSkills](../2024/NeurIPS/2024_NeurIPS_ClevrSkills-Compositional-Language-And-Visual-Reasoning-in/01_overview.md)·[Spa-Bench](../2026/arXiv/2026_arXiv_Spa-Bench-A-Real-Robot-Benchmark-for-Spatial-Grounding-in/01_overview.md)·[순차 조합 진단](../2026/CoRL/2026_CoRL_Diagnosing-Compositional-Generalization-in-Sequential-Robo/01_overview.md)의 조합/grounding 문제와 비교한다. 단순 k회 반복·counter 이후 잔여 차이는 미측정이며 새 evaluator 구축의 비중이 커 현재 주력 투자에서 제외했다.
 
-Registry 연결: [ClevrSkills](../2024/NeurIPS/2024_NeurIPS_ClevrSkills-Compositional-Language-And-Visual-Reasoning-in/01_overview.md), [Spa-Bench](../2026/arXiv/2026_arXiv_Spa-Bench-A-Real-Robot-Benchmark-for-Spatial-Grounding-in/01_overview.md), [순차 조합 진단](../2026/CoRL/2026_CoRL_Diagnosing-Compositional-Generalization-in-Sequential-Robo/01_overview.md). 신규 정독 결과가 아닌 직접 선행의 curation 연결이다.
-
-**11/01 PRE-GPU-3 보완:** [첫 비교 계약](../work/update/THREE_CANDIDATES_NONEXPERIMENTAL_2026-11-01.md#set)은 익숙한 범주·빈 접시의 D 원 지시 대 R 단순 k회 반복부터다. 참조 동치가 미검증인 L/A 나열·분해는 후속으로 둔다. 이동 후 순위 참조의 변화, 중간 보존 지시와 terminal-only 목표의 차이, evaluator ID 불변성·관측 교정 규칙을 명세했다. 기존 단일 dev P0는 유지한다.
-
-- **질문·현재 판단:** 익숙한 물체 범주에서 ALL/EXACTLY-k 지시의 행동 차이가 나타나는가? 자동 나열·반복이 충분하다면 그 이득은 대상 선택·참조·시간적 분해로 설명되는가? [비실험 buildup](../work/research_topics/object_set/내용/README.md#source-review-nonexperimental-design)에서 **제한 탐색 유지**로 판단했다. 색×모양 조합과 학습-OOD 주장은 별도 검증 전 확장하지 않는다. [8개 의미 사례](../work/research_topics/object_set/재현%20방법/SEMANTIC_CASES.json)는 추상 명세이고 [P0](../work/research_topics/object_set/재현%20방법/README.md#execution)는 미빌드·native 0이다.
-- **이미 알려진 것:** [ClevrSkills, NeurIPS 2024](https://proceedings.neurips.cc/paper_files/paper/2024/hash/439539557e9ba0d04055773ff1f3241c-Abstract-Datasets_and_Benchmarks_Track.html)는 속성 기반 다중 대상·조합 실행, [VLABench, ICCV 2025](https://openaccess.thecvf.com/content/ICCV2025/html/Zhang_VLABench_A_Large-Scale_Benchmark_for_Language-Conditioned_Robotics_Manipulation_with_Long-Horizon_ICCV_2025_paper.html)는 의미·다단계 과제, [RoboMME, ICML 2026](https://proceedings.mlr.press/v306/dai26c.html)는 반복 횟수·기억을 다룬다. [Spa-Bench, arXiv 2026](https://arxiv.org/html/2610.12696v1)은 수량×전이의 미관측 조합과 직접 조작 지시 대조까지 제공한다. [Diagnosing Compositional Generalization, CoRL 2026](https://arxiv.org/html/2607.29687v1)는 instruction coverage와 단계별 분해도 분석한다(11/03 공식 accepted list로 venue 갱신; 분석 근거는 기존 arXiv 지정 절). 일반 counting·조합 일반화·oracle 대조·원자 분해는 새 기여가 아니다.
-- **source에서 좁힌 차이:** ClevrSkills Sort2d에는 일반/물체 나열 prompt가, VLABench에는 복수 class 배정을 허용하는 OR가 이미 있다. 지정된 물체 목록의 AND는 임의 k개·비대상 제외와 같지 않다. 이번 all/exactly-k 조합에는 기존 엔진 위의 새 task/evaluator 구성이 필요하며, 단순 evaluator 추가 자체를 기여로 세지 않는다. 관련 코드·commit·사례별 재사용 범위는 R1에 기록했다.
-- **강한 대안·평가:** [비교 계약](../work/research_topics/object_set/재현%20방법/COMPARISON_CONTRACT.json)은 D 원 지시, L 자동 나열, A 같은 예측 subset의 원자 분해, R 제한된 EXACTLY-k 반복, 표현 대조와 oracle 진단을 구별한다. D/L은 선택·추가 계산을 포함한 pipeline 효과이고 순수 수량 추론 차이가 아니다. 여러 유효 subset과 초기 내부 물체를 포함하며, 파지 중인 비대상을 안정 배치 set에서 뺐다는 이유로 혼입까지 무시하지 않는다. 공통 종료·정보/참조·분모/결측·group split을 명세했다. Renderer/observer·실제 효과는 미검증이다.
-- **다음 관측:** [연구 개요](../work/research_topics/object_set/내용/README.md#overview)의 비실험 보완은 완료했다. 기존 P0의 1 checkpoint·1 dev·1 rollout·200 control step/40 inference로 실제 연결을 먼저 확인한다. 이후 category-level 다중 instance·참조·native evaluator·자동 baseline을 구현하고 비교 설정을 고정해야 한다. 외부 피드백은 미수신이며 GPU 확보만으로 buildup 완료가 아니다. REVISION 우선순위·HANDOFF 및 과거 gate는 유지한다.
-
-2026-10-28 읽기 연결: [Behavior-Skill](../2026/arXiv/2026_arXiv_Behavior-Skill-A-Fine-Grained-Benchmark-for-Evaluating-Vis/01_overview.md)은 task 전체 결과와 개별 skill 능력을 분리할 benchmark다. 복원된 시연 상태의 능력을 실제 앞선 skill이 만든 도착 상태에서의 능력으로 확대하지 않는다. [HANDOFF 비교](./06_locomotion_whole_body.md#gap-handoff-2026)와 연결하며 새 정독·실험 결과는 아니다.
-
-현재 후보 판정은 [주제별 요약](../work/research_candidates/summaries/README.md)과 [TODO](../TODO.md)를 따른다. 아래 질문은 `CURATION-HYPOTHESIS`이며 실험 효과나 실행 승인을 뜻하지 않는다.
+수량 오류를 참조·진행 추적·실행 능력으로 구분하고, terminal-only 목표와 중간 보존 제약을 구별하는 평가 원칙은 남긴다. 기존 논문이 모든 수량 문제를 해결했다고 주장하지 않는다.
 
 <a id="gap-instruction-revision-2026"></a>
 

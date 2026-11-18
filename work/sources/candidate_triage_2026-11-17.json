@@ -1,0 +1,1036 @@
+{
+  "task": "CANDIDATE-TRIAGE-R2",
+  "reviewed_on": "2026-11-17",
+  "authority": "User explicitly requested deletion/retirement of weak candidates; reliability/failure/UQ prioritized within VLA+RL+Computer Vision+Robotics",
+  "recovery_commit": "5bec2cfa8a31758ca8e5be9c19c39dc4c23bb096",
+  "before_topics": 11,
+  "after_topics": 4,
+  "active_investigations": [
+    "visual_feedback",
+    "unified_vla_rl",
+    "contact_adaptation"
+  ],
+  "reserve": [
+    "instruction_revision"
+  ],
+  "retired": {
+    "action_tokenization": {
+      "name": "행동 토큰화의 실행 구간 복원",
+      "id": "CODEC1",
+      "reason": "기존 CPU 결과는 알려진 양자화·복원 특성의 범위를 벗어나지 못했다. 실제 codec/정책 선택을 바꾸는 증거 없이 독립 방법으로 확장할 이유가 약하다.",
+      "result": "20 episode·101 window의 offline 진단은 실제 결과다. Robot rollout 101회 또는 정책 성공 개선은 아니다.",
+      "reuse": "복원 오차와 행동 성능을 분리하는 평가 원칙.",
+      "sources": [
+        "https://arxiv.org/abs/2610.09170"
+      ],
+      "decision": "RETIRED",
+      "old_folder": "work/research_topics/action_tokenization",
+      "archive_anchor": "action_tokenization",
+      "history_url": "https://github.com/Kim-Yoo-Hyun/PaperReview/tree/5bec2cfa8a31758ca8e5be9c19c39dc4c23bb096/work/research_topics/action_tokenization"
+    },
+    "context_retrieval": {
+      "name": "시연 저장소 확장과 기존 과제 성능 보존",
+      "id": "RETRIEVAL",
+      "reason": "Cross-task 검색의 도움/간섭은 이미 선행에 있고 목표별 분리보다 나은 기여가 좁다. 시연 성공·평가 독립성 provenance와 native 입력까지 별도 확보해야 해 투자 효율이 낮다.",
+      "result": "12,840,960-byte archive hash와 261개 frame 등 CPU 자산 감사를 수행했다. 성공 시연 인증·정책 효과는 미검증이다.",
+      "reuse": "검색 자료의 identity·성공·평가 중복을 구분하는 원칙.",
+      "sources": [
+        "https://arxiv.org/abs/2610.05492"
+      ],
+      "decision": "RETIRED",
+      "old_folder": "work/research_topics/context_retrieval",
+      "archive_anchor": "context_retrieval",
+      "history_url": "https://github.com/Kim-Yoo-Hyun/PaperReview/tree/5bec2cfa8a31758ca8e5be9c19c39dc4c23bb096/work/research_topics/context_retrieval"
+    },
+    "object_set": {
+      "name": "물체 집합 선택·수량 지시",
+      "id": "SET",
+      "reason": "단순 k회 반복·외부 counter 이후 남는 실패가 확인되지 않았고 counting/조합 benchmark와 겹친다. 현재 RL·시각 신뢰성 중심 연구와의 연결보다 evaluator 구축 부담이 크다.",
+      "result": "비실험 설계와 Docker 제어/준비 검사만 수행했다. Native 다중 물체 능력·수량/선택 효과는 미검증이다.",
+      "reuse": "수량 오류를 객체 grounding·진행 상태·운동 실패로 나누는 평가 항목.",
+      "sources": [
+        "https://proceedings.neurips.cc/paper_files/paper/2024/hash/439539557e9ba0d04055773ff1f3241c-Abstract-Datasets_and_Benchmarks_Track.html"
+      ],
+      "decision": "RETIRED",
+      "old_folder": "work/research_topics/object_set",
+      "archive_anchor": "object_set",
+      "history_url": "https://github.com/Kim-Yoo-Hyun/PaperReview/tree/5bec2cfa8a31758ca8e5be9c19c39dc4c23bb096/work/research_topics/object_set"
+    },
+    "mobile_policy_transfer": {
+      "name": "모바일 조작 정책 교체와 접근 조건 전이",
+      "id": "HANDOFF",
+      "reason": "기존 policy mobilization 이후 남는 질문이 좁고 현재 한 scene template로 일반성을 보이기 어렵다. Mobile stack·transport·동일 상태 분기 구현 부담이 석사 주력 후보의 기여 기대에 비해 높다.",
+      "result": "단일 scene template·자원/정적 source 검토와 실행 설계만 있다. 실제 도착→정지→A/B 분기와 정책 비교는 미실행이다.",
+      "reuse": "정책 교체 시 접근 조건 재검증과 전반적 조작 능력의 분리.",
+      "sources": [
+        "https://proceedings.mlr.press/v305/yang25b.html"
+      ],
+      "decision": "RETIRED",
+      "old_folder": "work/research_topics/mobile_policy_transfer",
+      "archive_anchor": "mobile_policy_transfer",
+      "history_url": "https://github.com/Kim-Yoo-Hyun/PaperReview/tree/5bec2cfa8a31758ca8e5be9c19c39dc4c23bb096/work/research_topics/mobile_policy_transfer"
+    },
+    "task_allocation": {
+      "name": "계산 예산을 고려한 다중 과제 VLA RL",
+      "id": "ALLOC",
+      "reason": "샘플 배분·가중치·group variance의 일반 RL 문제로 수렴하며 현재 설계의 CV/로봇 고유 기여가 약하다. 단순 uniform/비용 보정 대비 이득이 미확인인 상태에서 여러 학습 run을 투자할 우선순위가 낮다.",
+      "result": "N2-R1 설계와 CPU 제어24검사만 수행했다. Native 학습비용·성능·allocator 효과는 미측정이다.",
+      "reuse": "Episode 수와 실제 GPU/환경 비용을 분리하고 고정 배포 목적을 유지하는 실험 원칙.",
+      "sources": [
+        "https://arxiv.org/html/2608.17423v1",
+        "https://arxiv.org/html/2610.15888v1"
+      ],
+      "decision": "RETIRED",
+      "old_folder": "work/research_topics/task_allocation",
+      "archive_anchor": "task_allocation",
+      "history_url": "https://github.com/Kim-Yoo-Hyun/PaperReview/tree/5bec2cfa8a31758ca8e5be9c19c39dc4c23bb096/work/research_topics/task_allocation"
+    },
+    "hindsight_transfer": {
+      "name": "원 과제 전이를 고려한 hindsight 목표 선택",
+      "id": "HINDSIGHT",
+      "reason": "LfH 등 이후 남는 차이는 유효한 재라벨 간 선택이라는 좁은 부분이다. 동일 실패·라벨 정확성·원 목표 전이·sampling support를 함께 맞춘 학습의 부담에 비해 방법 근거가 약하다.",
+      "result": "A/B 비교·분할·공통 loss 설계와 CPU 제어15검사만 있다. 자연 witness·native 효과는 미확인이다.",
+      "reuse": "성공/실패 데이터와 원 목표 관련성을 구분하는 baseline.",
+      "sources": [
+        "https://arxiv.org/abs/2607.09042"
+      ],
+      "decision": "RETIRED",
+      "old_folder": "work/research_topics/hindsight_transfer",
+      "archive_anchor": "hindsight_transfer",
+      "history_url": "https://github.com/Kim-Yoo-Hyun/PaperReview/tree/5bec2cfa8a31758ca8e5be9c19c39dc4c23bb096/work/research_topics/hindsight_transfer"
+    },
+    "vla_residual_update": {
+      "name": "VLA 교체 후 residual RL 재사용·적응",
+      "id": "VRL",
+      "reason": "Base A의 residual 학습과 B 적응을 모두 해야 하며 정확한 A→B 계보·B 자체 우월성도 미확정이다. Warm-start·gain·동일 데이터 모방 뒤에 남는 독립 원리의 근거가 비용에 비해 약하다. 단지 계층형이라서 폐기한 것은 아니다.",
+      "result": "Native A/B IO·residual 유용성은 미검증이다. 기존 Docker CPU 제어9검사는 준비 증거다.",
+      "reuse": "Residual·action editing은 다른 retained 후보의 강한 비교군으로 계속 사용 가능.",
+      "sources": [
+        "https://arxiv.org/html/2606.18953v1",
+        "https://arxiv.org/html/2511.00091v1"
+      ],
+      "decision": "RETIRED",
+      "old_folder": "work/research_topics/vla_residual_update",
+      "archive_anchor": "vla_residual_update",
+      "history_url": "https://github.com/Kim-Yoo-Hyun/PaperReview/tree/5bec2cfa8a31758ca8e5be9c19c39dc4c23bb096/work/research_topics/vla_residual_update"
+    }
+  },
+  "files": {
+    "work/research_topics/action_tokenization/내용/README.md": {
+      "sha256": "1105a3f0a7703d677cc2f506066fc16ee885005d459458260df02e6e6c667a08",
+      "topic": "action_tokenization",
+      "action": "deleted",
+      "destination": null,
+      "summary": "work/research_topics/retired/README.md#action_tokenization",
+      "history_url": "https://github.com/Kim-Yoo-Hyun/PaperReview/blob/5bec2cfa8a31758ca8e5be9c19c39dc4c23bb096/work/research_topics/action_tokenization/%EB%82%B4%EC%9A%A9/README.md"
+    },
+    "work/research_topics/action_tokenization/내용/sources.json": {
+      "sha256": "30ba64f10dcbd6f1aae9825f6981cb938bf5214a4543c18d79987f4110222669",
+      "topic": "action_tokenization",
+      "action": "deleted",
+      "destination": null,
+      "summary": "work/research_topics/retired/README.md#action_tokenization",
+      "history_url": "https://github.com/Kim-Yoo-Hyun/PaperReview/blob/5bec2cfa8a31758ca8e5be9c19c39dc4c23bb096/work/research_topics/action_tokenization/%EB%82%B4%EC%9A%A9/sources.json"
+    },
+    "work/research_topics/action_tokenization/재현 방법/.dockerignore": {
+      "sha256": "a30ad6f894e5d8c7dd8219cbd1fa558bcecd6695be9c109d41df33d2d8fc9e81",
+      "topic": "action_tokenization",
+      "action": "deleted",
+      "destination": null,
+      "summary": "work/research_topics/retired/README.md#action_tokenization",
+      "history_url": "https://github.com/Kim-Yoo-Hyun/PaperReview/blob/5bec2cfa8a31758ca8e5be9c19c39dc4c23bb096/work/research_topics/action_tokenization/%EC%9E%AC%ED%98%84%20%EB%B0%A9%EB%B2%95/.dockerignore"
+    },
+    "work/research_topics/action_tokenization/재현 방법/CONTRACT.json": {
+      "sha256": "4d6a0aeb9539b123c347e47458889a4b5177df24dc1a27242fae2ad113196d16",
+      "topic": "action_tokenization",
+      "action": "moved_evidence",
+      "destination": "work/research_topics/retired/evidence/action_tokenization/CONTRACT.json",
+      "summary": "work/research_topics/retired/README.md#action_tokenization",
+      "history_url": "https://github.com/Kim-Yoo-Hyun/PaperReview/blob/5bec2cfa8a31758ca8e5be9c19c39dc4c23bb096/work/research_topics/action_tokenization/%EC%9E%AC%ED%98%84%20%EB%B0%A9%EB%B2%95/CONTRACT.json"
+    },
+    "work/research_topics/action_tokenization/재현 방법/CONTRACT_SUFFIX.json": {
+      "sha256": "7fcd72a807f18f2a25f0418bfdd7dc2459248242733980b129b28d31efae3bac",
+      "topic": "action_tokenization",
+      "action": "moved_evidence",
+      "destination": "work/research_topics/retired/evidence/action_tokenization/CONTRACT_SUFFIX.json",
+      "summary": "work/research_topics/retired/README.md#action_tokenization",
+      "history_url": "https://github.com/Kim-Yoo-Hyun/PaperReview/blob/5bec2cfa8a31758ca8e5be9c19c39dc4c23bb096/work/research_topics/action_tokenization/%EC%9E%AC%ED%98%84%20%EB%B0%A9%EB%B2%95/CONTRACT_SUFFIX.json"
+    },
+    "work/research_topics/action_tokenization/재현 방법/Dockerfile": {
+      "sha256": "00d8b9b542663a296ab7aa2032073bb3c8854136b20337b247946a54f7839726",
+      "topic": "action_tokenization",
+      "action": "deleted",
+      "destination": null,
+      "summary": "work/research_topics/retired/README.md#action_tokenization",
+      "history_url": "https://github.com/Kim-Yoo-Hyun/PaperReview/blob/5bec2cfa8a31758ca8e5be9c19c39dc4c23bb096/work/research_topics/action_tokenization/%EC%9E%AC%ED%98%84%20%EB%B0%A9%EB%B2%95/Dockerfile"
+    },
+    "work/research_topics/action_tokenization/재현 방법/README.md": {
+      "sha256": "d2a06e519172102d428bc6ed2a0f431ea8ecb7a98f9c059a6c8c809089bc3f9d",
+      "topic": "action_tokenization",
+      "action": "deleted",
+      "destination": null,
+      "summary": "work/research_topics/retired/README.md#action_tokenization",
+      "history_url": "https://github.com/Kim-Yoo-Hyun/PaperReview/blob/5bec2cfa8a31758ca8e5be9c19c39dc4c23bb096/work/research_topics/action_tokenization/%EC%9E%AC%ED%98%84%20%EB%B0%A9%EB%B2%95/README.md"
+    },
+    "work/research_topics/action_tokenization/재현 방법/probe.py": {
+      "sha256": "306dc9bbe25f44b4bcfc9926c026430ff0f1732b2ec0daa041a71912d3d7559f",
+      "topic": "action_tokenization",
+      "action": "deleted",
+      "destination": null,
+      "summary": "work/research_topics/retired/README.md#action_tokenization",
+      "history_url": "https://github.com/Kim-Yoo-Hyun/PaperReview/blob/5bec2cfa8a31758ca8e5be9c19c39dc4c23bb096/work/research_topics/action_tokenization/%EC%9E%AC%ED%98%84%20%EB%B0%A9%EB%B2%95/probe.py"
+    },
+    "work/research_topics/action_tokenization/재현 방법/requirements.lock": {
+      "sha256": "131fa4e8b71d48816be5d4832e11b1284e52df3fe4a2e61ab744f4d3274da1e4",
+      "topic": "action_tokenization",
+      "action": "deleted",
+      "destination": null,
+      "summary": "work/research_topics/retired/README.md#action_tokenization",
+      "history_url": "https://github.com/Kim-Yoo-Hyun/PaperReview/blob/5bec2cfa8a31758ca8e5be9c19c39dc4c23bb096/work/research_topics/action_tokenization/%EC%9E%AC%ED%98%84%20%EB%B0%A9%EB%B2%95/requirements.lock"
+    },
+    "work/research_topics/action_tokenization/재현 방법/results/runtime.json": {
+      "sha256": "e31360ecb8627024dea41b7ecec13442a06ee44cf7669134c0da2e9d44be5482",
+      "topic": "action_tokenization",
+      "action": "moved_evidence",
+      "destination": "work/research_topics/retired/evidence/action_tokenization/results/runtime.json",
+      "summary": "work/research_topics/retired/README.md#action_tokenization",
+      "history_url": "https://github.com/Kim-Yoo-Hyun/PaperReview/blob/5bec2cfa8a31758ca8e5be9c19c39dc4c23bb096/work/research_topics/action_tokenization/%EC%9E%AC%ED%98%84%20%EB%B0%A9%EB%B2%95/results/runtime.json"
+    },
+    "work/research_topics/action_tokenization/재현 방법/results/suffix_verified/results.json": {
+      "sha256": "1962318499150d3de847ae3ee70b75eb70d119b321e98b57be4d05865e149173",
+      "topic": "action_tokenization",
+      "action": "moved_evidence",
+      "destination": "work/research_topics/retired/evidence/action_tokenization/results/suffix_verified/results.json",
+      "summary": "work/research_topics/retired/README.md#action_tokenization",
+      "history_url": "https://github.com/Kim-Yoo-Hyun/PaperReview/blob/5bec2cfa8a31758ca8e5be9c19c39dc4c23bb096/work/research_topics/action_tokenization/%EC%9E%AC%ED%98%84%20%EB%B0%A9%EB%B2%95/results/suffix_verified/results.json"
+    },
+    "work/research_topics/action_tokenization/재현 방법/results/verified/results.json": {
+      "sha256": "1d486da76d24e039f125f8a577cca0b21b02dde297771d6c8619d5f42002d620",
+      "topic": "action_tokenization",
+      "action": "moved_evidence",
+      "destination": "work/research_topics/retired/evidence/action_tokenization/results/verified/results.json",
+      "summary": "work/research_topics/retired/README.md#action_tokenization",
+      "history_url": "https://github.com/Kim-Yoo-Hyun/PaperReview/blob/5bec2cfa8a31758ca8e5be9c19c39dc4c23bb096/work/research_topics/action_tokenization/%EC%9E%AC%ED%98%84%20%EB%B0%A9%EB%B2%95/results/verified/results.json"
+    },
+    "work/research_topics/action_tokenization/재현 방법/run.sh": {
+      "sha256": "1dd61226ab13f4959330fe00dab164770f616da8afcbf069545cce84f50f8532",
+      "topic": "action_tokenization",
+      "action": "deleted",
+      "destination": null,
+      "summary": "work/research_topics/retired/README.md#action_tokenization",
+      "history_url": "https://github.com/Kim-Yoo-Hyun/PaperReview/blob/5bec2cfa8a31758ca8e5be9c19c39dc4c23bb096/work/research_topics/action_tokenization/%EC%9E%AC%ED%98%84%20%EB%B0%A9%EB%B2%95/run.sh"
+    },
+    "work/research_topics/action_tokenization/재현 방법/suffix_probe.py": {
+      "sha256": "89466418532593c86301345076f9044e2443c175112551ad6490dbf2dc7d7ff6",
+      "topic": "action_tokenization",
+      "action": "deleted",
+      "destination": null,
+      "summary": "work/research_topics/retired/README.md#action_tokenization",
+      "history_url": "https://github.com/Kim-Yoo-Hyun/PaperReview/blob/5bec2cfa8a31758ca8e5be9c19c39dc4c23bb096/work/research_topics/action_tokenization/%EC%9E%AC%ED%98%84%20%EB%B0%A9%EB%B2%95/suffix_probe.py"
+    },
+    "work/research_topics/context_retrieval/내용/README.md": {
+      "sha256": "12aebbd470d88dda73d5403110bbb81ed5124580f2599e72a0ab970c7d13efbc",
+      "topic": "context_retrieval",
+      "action": "deleted",
+      "destination": null,
+      "summary": "work/research_topics/retired/README.md#context_retrieval",
+      "history_url": "https://github.com/Kim-Yoo-Hyun/PaperReview/blob/5bec2cfa8a31758ca8e5be9c19c39dc4c23bb096/work/research_topics/context_retrieval/%EB%82%B4%EC%9A%A9/README.md"
+    },
+    "work/research_topics/context_retrieval/내용/sources.json": {
+      "sha256": "288a1e5b828ae11f2ce0c819c0ec8a9a823d048cd3206b379932c8ef8167d40a",
+      "topic": "context_retrieval",
+      "action": "deleted",
+      "destination": null,
+      "summary": "work/research_topics/retired/README.md#context_retrieval",
+      "history_url": "https://github.com/Kim-Yoo-Hyun/PaperReview/blob/5bec2cfa8a31758ca8e5be9c19c39dc4c23bb096/work/research_topics/context_retrieval/%EB%82%B4%EC%9A%A9/sources.json"
+    },
+    "work/research_topics/context_retrieval/재현 방법/ASSET_AUDIT.json": {
+      "sha256": "11f8c07b08252c57e63f5286812d1fa82022dfd348d340d5057981569c7ff44f",
+      "topic": "context_retrieval",
+      "action": "moved_evidence",
+      "destination": "work/research_topics/retired/evidence/context_retrieval/ASSET_AUDIT.json",
+      "summary": "work/research_topics/retired/README.md#context_retrieval",
+      "history_url": "https://github.com/Kim-Yoo-Hyun/PaperReview/blob/5bec2cfa8a31758ca8e5be9c19c39dc4c23bb096/work/research_topics/context_retrieval/%EC%9E%AC%ED%98%84%20%EB%B0%A9%EB%B2%95/ASSET_AUDIT.json"
+    },
+    "work/research_topics/context_retrieval/재현 방법/COMPARISON_CONTRACT.json": {
+      "sha256": "83d367c83d78c521f1034878f9d82567622b48c04523fcbba806d3a3a4b52759",
+      "topic": "context_retrieval",
+      "action": "moved_evidence",
+      "destination": "work/research_topics/retired/evidence/context_retrieval/COMPARISON_CONTRACT.json",
+      "summary": "work/research_topics/retired/README.md#context_retrieval",
+      "history_url": "https://github.com/Kim-Yoo-Hyun/PaperReview/blob/5bec2cfa8a31758ca8e5be9c19c39dc4c23bb096/work/research_topics/context_retrieval/%EC%9E%AC%ED%98%84%20%EB%B0%A9%EB%B2%95/COMPARISON_CONTRACT.json"
+    },
+    "work/research_topics/context_retrieval/재현 방법/README.md": {
+      "sha256": "86cdc4026e870063640a06405ecdb80f238b8ce9a12f60fec2e74fcbc8bc9d02",
+      "topic": "context_retrieval",
+      "action": "deleted",
+      "destination": null,
+      "summary": "work/research_topics/retired/README.md#context_retrieval",
+      "history_url": "https://github.com/Kim-Yoo-Hyun/PaperReview/blob/5bec2cfa8a31758ca8e5be9c19c39dc4c23bb096/work/research_topics/context_retrieval/%EC%9E%AC%ED%98%84%20%EB%B0%A9%EB%B2%95/README.md"
+    },
+    "work/research_topics/context_retrieval/재현 방법/asset_audit.py": {
+      "sha256": "13ddbda69dc0ca567a165d69ca06b1e2f7ac006ecaacf73e825629f0849ec5a4",
+      "topic": "context_retrieval",
+      "action": "deleted",
+      "destination": null,
+      "summary": "work/research_topics/retired/README.md#context_retrieval",
+      "history_url": "https://github.com/Kim-Yoo-Hyun/PaperReview/blob/5bec2cfa8a31758ca8e5be9c19c39dc4c23bb096/work/research_topics/context_retrieval/%EC%9E%AC%ED%98%84%20%EB%B0%A9%EB%B2%95/asset_audit.py"
+    },
+    "work/research_topics/context_retrieval/재현 방법/resume_assets.sh": {
+      "sha256": "053534ff3dad61e23fd648131bd71b1dbd797bd64a2f4690771b2be82cd8c50c",
+      "topic": "context_retrieval",
+      "action": "deleted",
+      "destination": null,
+      "summary": "work/research_topics/retired/README.md#context_retrieval",
+      "history_url": "https://github.com/Kim-Yoo-Hyun/PaperReview/blob/5bec2cfa8a31758ca8e5be9c19c39dc4c23bb096/work/research_topics/context_retrieval/%EC%9E%AC%ED%98%84%20%EB%B0%A9%EB%B2%95/resume_assets.sh"
+    },
+    "work/research_topics/object_set/내용/README.md": {
+      "sha256": "d790899a5804f66b127c7aff5241101de5ef7918642a4a27e2a7464ca3e9ecc8",
+      "topic": "object_set",
+      "action": "deleted",
+      "destination": null,
+      "summary": "work/research_topics/retired/README.md#object_set",
+      "history_url": "https://github.com/Kim-Yoo-Hyun/PaperReview/blob/5bec2cfa8a31758ca8e5be9c19c39dc4c23bb096/work/research_topics/object_set/%EB%82%B4%EC%9A%A9/README.md"
+    },
+    "work/research_topics/object_set/내용/sources.json": {
+      "sha256": "36369285a6cf203c1fcfe389dc51afcc7b97596bb14cacd27b36a9ad7ef1b995",
+      "topic": "object_set",
+      "action": "deleted",
+      "destination": null,
+      "summary": "work/research_topics/retired/README.md#object_set",
+      "history_url": "https://github.com/Kim-Yoo-Hyun/PaperReview/blob/5bec2cfa8a31758ca8e5be9c19c39dc4c23bb096/work/research_topics/object_set/%EB%82%B4%EC%9A%A9/sources.json"
+    },
+    "work/research_topics/object_set/재현 방법/.dockerignore": {
+      "sha256": "93f9f879fea3e8f7bfb510a19e2cd461be06f91083e52d3048261a73f8383a64",
+      "topic": "object_set",
+      "action": "deleted",
+      "destination": null,
+      "summary": "work/research_topics/retired/README.md#object_set",
+      "history_url": "https://github.com/Kim-Yoo-Hyun/PaperReview/blob/5bec2cfa8a31758ca8e5be9c19c39dc4c23bb096/work/research_topics/object_set/%EC%9E%AC%ED%98%84%20%EB%B0%A9%EB%B2%95/.dockerignore"
+    },
+    "work/research_topics/object_set/재현 방법/ARTIFACTS.json": {
+      "sha256": "fc586257efe0ff2dfc41d151f00216165bc99302ab1c8588f29ad8ab840b1369",
+      "topic": "object_set",
+      "action": "deleted",
+      "destination": null,
+      "summary": "work/research_topics/retired/README.md#object_set",
+      "history_url": "https://github.com/Kim-Yoo-Hyun/PaperReview/blob/5bec2cfa8a31758ca8e5be9c19c39dc4c23bb096/work/research_topics/object_set/%EC%9E%AC%ED%98%84%20%EB%B0%A9%EB%B2%95/ARTIFACTS.json"
+    },
+    "work/research_topics/object_set/재현 방법/COMPARISON_CONTRACT.json": {
+      "sha256": "6f0324c636883ff4547af7c1122a396bbe903c5cbb8b68ef35dec374ae45e7a2",
+      "topic": "object_set",
+      "action": "deleted",
+      "destination": null,
+      "summary": "work/research_topics/retired/README.md#object_set",
+      "history_url": "https://github.com/Kim-Yoo-Hyun/PaperReview/blob/5bec2cfa8a31758ca8e5be9c19c39dc4c23bb096/work/research_topics/object_set/%EC%9E%AC%ED%98%84%20%EB%B0%A9%EB%B2%95/COMPARISON_CONTRACT.json"
+    },
+    "work/research_topics/object_set/재현 방법/Dockerfile": {
+      "sha256": "c67edfa3f4fd06002bee1c653730713cdef2b4657167fa40e9d19f1798e677f6",
+      "topic": "object_set",
+      "action": "deleted",
+      "destination": null,
+      "summary": "work/research_topics/retired/README.md#object_set",
+      "history_url": "https://github.com/Kim-Yoo-Hyun/PaperReview/blob/5bec2cfa8a31758ca8e5be9c19c39dc4c23bb096/work/research_topics/object_set/%EC%9E%AC%ED%98%84%20%EB%B0%A9%EB%B2%95/Dockerfile"
+    },
+    "work/research_topics/object_set/재현 방법/LOCAL_CHECK_2026-11-01.json": {
+      "sha256": "a0b18deb9c8fc5bd49d087a91650909aeabec1c4c177e961531123b247485517",
+      "topic": "object_set",
+      "action": "deleted",
+      "destination": null,
+      "summary": "work/research_topics/retired/README.md#object_set",
+      "history_url": "https://github.com/Kim-Yoo-Hyun/PaperReview/blob/5bec2cfa8a31758ca8e5be9c19c39dc4c23bb096/work/research_topics/object_set/%EC%9E%AC%ED%98%84%20%EB%B0%A9%EB%B2%95/LOCAL_CHECK_2026-11-01.json"
+    },
+    "work/research_topics/object_set/재현 방법/READINESS_REVIEW_2026-11-01.json": {
+      "sha256": "8f2a3527a18adf47e2491b581afa5eb7ec5c49fece55d40ab58c9ba31b99b409",
+      "topic": "object_set",
+      "action": "deleted",
+      "destination": null,
+      "summary": "work/research_topics/retired/README.md#object_set",
+      "history_url": "https://github.com/Kim-Yoo-Hyun/PaperReview/blob/5bec2cfa8a31758ca8e5be9c19c39dc4c23bb096/work/research_topics/object_set/%EC%9E%AC%ED%98%84%20%EB%B0%A9%EB%B2%95/READINESS_REVIEW_2026-11-01.json"
+    },
+    "work/research_topics/object_set/재현 방법/README.md": {
+      "sha256": "f93948d3cd62c11201a0c59bfca381ba64768636ca16dd5850b3a636015455a0",
+      "topic": "object_set",
+      "action": "deleted",
+      "destination": null,
+      "summary": "work/research_topics/retired/README.md#object_set",
+      "history_url": "https://github.com/Kim-Yoo-Hyun/PaperReview/blob/5bec2cfa8a31758ca8e5be9c19c39dc4c23bb096/work/research_topics/object_set/%EC%9E%AC%ED%98%84%20%EB%B0%A9%EB%B2%95/README.md"
+    },
+    "work/research_topics/object_set/재현 방법/RESUME_PLAN.json": {
+      "sha256": "51a01538fd9765a8123953cf7244debf3220c344d032b81ccda3e47d7dca4602",
+      "topic": "object_set",
+      "action": "deleted",
+      "destination": null,
+      "summary": "work/research_topics/retired/README.md#object_set",
+      "history_url": "https://github.com/Kim-Yoo-Hyun/PaperReview/blob/5bec2cfa8a31758ca8e5be9c19c39dc4c23bb096/work/research_topics/object_set/%EC%9E%AC%ED%98%84%20%EB%B0%A9%EB%B2%95/RESUME_PLAN.json"
+    },
+    "work/research_topics/object_set/재현 방법/SEMANTIC_CASES.json": {
+      "sha256": "1eea5f59ac7df7cfe956988b5c5b512b6d0847a4c57f3694ab300645630ec92e",
+      "topic": "object_set",
+      "action": "deleted",
+      "destination": null,
+      "summary": "work/research_topics/retired/README.md#object_set",
+      "history_url": "https://github.com/Kim-Yoo-Hyun/PaperReview/blob/5bec2cfa8a31758ca8e5be9c19c39dc4c23bb096/work/research_topics/object_set/%EC%9E%AC%ED%98%84%20%EB%B0%A9%EB%B2%95/SEMANTIC_CASES.json"
+    },
+    "work/research_topics/object_set/재현 방법/inside.py": {
+      "sha256": "748b6f5533a6d656ba8794a32490d6d30f0e2b80da7532628c2b99ae5a9b5378",
+      "topic": "object_set",
+      "action": "deleted",
+      "destination": null,
+      "summary": "work/research_topics/retired/README.md#object_set",
+      "history_url": "https://github.com/Kim-Yoo-Hyun/PaperReview/blob/5bec2cfa8a31758ca8e5be9c19c39dc4c23bb096/work/research_topics/object_set/%EC%9E%AC%ED%98%84%20%EB%B0%A9%EB%B2%95/inside.py"
+    },
+    "work/research_topics/object_set/재현 방법/native_probe.py": {
+      "sha256": "709361527a5671cc0d116ec9bb8616bbfeb6c6adab5a8cfe8dd3d4c00af90faa",
+      "topic": "object_set",
+      "action": "deleted",
+      "destination": null,
+      "summary": "work/research_topics/retired/README.md#object_set",
+      "history_url": "https://github.com/Kim-Yoo-Hyun/PaperReview/blob/5bec2cfa8a31758ca8e5be9c19c39dc4c23bb096/work/research_topics/object_set/%EC%9E%AC%ED%98%84%20%EB%B0%A9%EB%B2%95/native_probe.py"
+    },
+    "work/research_topics/object_set/재현 방법/packet_checks.py": {
+      "sha256": "056e41913f79ca6a18439136a595f71a100cbff29a2f380a1d5c40ba5cf54642",
+      "topic": "object_set",
+      "action": "deleted",
+      "destination": null,
+      "summary": "work/research_topics/retired/README.md#object_set",
+      "history_url": "https://github.com/Kim-Yoo-Hyun/PaperReview/blob/5bec2cfa8a31758ca8e5be9c19c39dc4c23bb096/work/research_topics/object_set/%EC%9E%AC%ED%98%84%20%EB%B0%A9%EB%B2%95/packet_checks.py"
+    },
+    "work/research_topics/object_set/재현 방법/resume.sh": {
+      "sha256": "10dc1d29e8a5995c8567958ff75aa66493ad37fbb188e4449a2577d2840d8b2a",
+      "topic": "object_set",
+      "action": "deleted",
+      "destination": null,
+      "summary": "work/research_topics/retired/README.md#object_set",
+      "history_url": "https://github.com/Kim-Yoo-Hyun/PaperReview/blob/5bec2cfa8a31758ca8e5be9c19c39dc4c23bb096/work/research_topics/object_set/%EC%9E%AC%ED%98%84%20%EB%B0%A9%EB%B2%95/resume.sh"
+    },
+    "work/research_topics/object_set/재현 방법/sim-requirements.in": {
+      "sha256": "a6f119251c7776034c3b5453d2ccd90a6c2e43c6c2fe779e90714068224f1d8f",
+      "topic": "object_set",
+      "action": "deleted",
+      "destination": null,
+      "summary": "work/research_topics/retired/README.md#object_set",
+      "history_url": "https://github.com/Kim-Yoo-Hyun/PaperReview/blob/5bec2cfa8a31758ca8e5be9c19c39dc4c23bb096/work/research_topics/object_set/%EC%9E%AC%ED%98%84%20%EB%B0%A9%EB%B2%95/sim-requirements.in"
+    },
+    "work/research_topics/object_set/재현 방법/test_packet_checks.py": {
+      "sha256": "2d0341aca039038e6e1ac958686546b824dd566add95ab3961383b95aebba496",
+      "topic": "object_set",
+      "action": "deleted",
+      "destination": null,
+      "summary": "work/research_topics/retired/README.md#object_set",
+      "history_url": "https://github.com/Kim-Yoo-Hyun/PaperReview/blob/5bec2cfa8a31758ca8e5be9c19c39dc4c23bb096/work/research_topics/object_set/%EC%9E%AC%ED%98%84%20%EB%B0%A9%EB%B2%95/test_packet_checks.py"
+    },
+    "work/research_topics/mobile_policy_transfer/내용/README.md": {
+      "sha256": "7467c991b42a434a4a9188d7d60b5d88be90f18227b01609da32a22ec5eddcb7",
+      "topic": "mobile_policy_transfer",
+      "action": "deleted",
+      "destination": null,
+      "summary": "work/research_topics/retired/README.md#mobile_policy_transfer",
+      "history_url": "https://github.com/Kim-Yoo-Hyun/PaperReview/blob/5bec2cfa8a31758ca8e5be9c19c39dc4c23bb096/work/research_topics/mobile_policy_transfer/%EB%82%B4%EC%9A%A9/README.md"
+    },
+    "work/research_topics/mobile_policy_transfer/내용/sources.json": {
+      "sha256": "fd574571c640e58316a1950ec4de260d63f27e2870ca7e80be3638f27efdab16",
+      "topic": "mobile_policy_transfer",
+      "action": "deleted",
+      "destination": null,
+      "summary": "work/research_topics/retired/README.md#mobile_policy_transfer",
+      "history_url": "https://github.com/Kim-Yoo-Hyun/PaperReview/blob/5bec2cfa8a31758ca8e5be9c19c39dc4c23bb096/work/research_topics/mobile_policy_transfer/%EB%82%B4%EC%9A%A9/sources.json"
+    },
+    "work/research_topics/mobile_policy_transfer/재현 방법/COMPARISON_CONTRACT.json": {
+      "sha256": "ea3092d625a23efd178cdb65a46530aae565dc6645aff1ab74052c899f411e9c",
+      "topic": "mobile_policy_transfer",
+      "action": "deleted",
+      "destination": null,
+      "summary": "work/research_topics/retired/README.md#mobile_policy_transfer",
+      "history_url": "https://github.com/Kim-Yoo-Hyun/PaperReview/blob/5bec2cfa8a31758ca8e5be9c19c39dc4c23bb096/work/research_topics/mobile_policy_transfer/%EC%9E%AC%ED%98%84%20%EB%B0%A9%EB%B2%95/COMPARISON_CONTRACT.json"
+    },
+    "work/research_topics/mobile_policy_transfer/재현 방법/LOCAL_CHECK_2026-10-28.json": {
+      "sha256": "254cd3cc56e604a4b2701355076b6227f4374220e09597755f78e465eb028ed9",
+      "topic": "mobile_policy_transfer",
+      "action": "deleted",
+      "destination": null,
+      "summary": "work/research_topics/retired/README.md#mobile_policy_transfer",
+      "history_url": "https://github.com/Kim-Yoo-Hyun/PaperReview/blob/5bec2cfa8a31758ca8e5be9c19c39dc4c23bb096/work/research_topics/mobile_policy_transfer/%EC%9E%AC%ED%98%84%20%EB%B0%A9%EB%B2%95/LOCAL_CHECK_2026-10-28.json"
+    },
+    "work/research_topics/mobile_policy_transfer/재현 방법/README.md": {
+      "sha256": "bfe2d6ff63030b88883801ba6da7fc58708f5b613418bf83f58abd1a098d79a8",
+      "topic": "mobile_policy_transfer",
+      "action": "deleted",
+      "destination": null,
+      "summary": "work/research_topics/retired/README.md#mobile_policy_transfer",
+      "history_url": "https://github.com/Kim-Yoo-Hyun/PaperReview/blob/5bec2cfa8a31758ca8e5be9c19c39dc4c23bb096/work/research_topics/mobile_policy_transfer/%EC%9E%AC%ED%98%84%20%EB%B0%A9%EB%B2%95/README.md"
+    },
+    "work/research_topics/mobile_policy_transfer/재현 방법/RESUME_PLAN.json": {
+      "sha256": "43cb5742da1e4a7969ef5e1a0014a63b0a5d05847c595bff7a9bbe4c9e709beb",
+      "topic": "mobile_policy_transfer",
+      "action": "deleted",
+      "destination": null,
+      "summary": "work/research_topics/retired/README.md#mobile_policy_transfer",
+      "history_url": "https://github.com/Kim-Yoo-Hyun/PaperReview/blob/5bec2cfa8a31758ca8e5be9c19c39dc4c23bb096/work/research_topics/mobile_policy_transfer/%EC%9E%AC%ED%98%84%20%EB%B0%A9%EB%B2%95/RESUME_PLAN.json"
+    },
+    "work/research_topics/mobile_policy_transfer/재현 방법/resume.sh": {
+      "sha256": "1c1fe9300291dfed6143555ca34fd8f0366563d49c2cc6408488f21e3b118bb9",
+      "topic": "mobile_policy_transfer",
+      "action": "deleted",
+      "destination": null,
+      "summary": "work/research_topics/retired/README.md#mobile_policy_transfer",
+      "history_url": "https://github.com/Kim-Yoo-Hyun/PaperReview/blob/5bec2cfa8a31758ca8e5be9c19c39dc4c23bb096/work/research_topics/mobile_policy_transfer/%EC%9E%AC%ED%98%84%20%EB%B0%A9%EB%B2%95/resume.sh"
+    },
+    "work/research_topics/task_allocation/내용/README.md": {
+      "sha256": "228b23d7a0238d134c4ef5514604396b537e7c929d255c9b458a495294767ddd",
+      "topic": "task_allocation",
+      "action": "deleted",
+      "destination": null,
+      "summary": "work/research_topics/retired/README.md#task_allocation",
+      "history_url": "https://github.com/Kim-Yoo-Hyun/PaperReview/blob/5bec2cfa8a31758ca8e5be9c19c39dc4c23bb096/work/research_topics/task_allocation/%EB%82%B4%EC%9A%A9/README.md"
+    },
+    "work/research_topics/task_allocation/내용/sources.json": {
+      "sha256": "666f50c6d7ac4e7dcb222c2bcc433415d9857e458f0c23a64adc69052d453dde",
+      "topic": "task_allocation",
+      "action": "deleted",
+      "destination": null,
+      "summary": "work/research_topics/retired/README.md#task_allocation",
+      "history_url": "https://github.com/Kim-Yoo-Hyun/PaperReview/blob/5bec2cfa8a31758ca8e5be9c19c39dc4c23bb096/work/research_topics/task_allocation/%EB%82%B4%EC%9A%A9/sources.json"
+    },
+    "work/research_topics/task_allocation/재현 방법/Dockerfile": {
+      "sha256": "8314facd3e13cf7f80a042724138d64504c9d7f17a4d67e728ffee26f852ed09",
+      "topic": "task_allocation",
+      "action": "deleted",
+      "destination": null,
+      "summary": "work/research_topics/retired/README.md#task_allocation",
+      "history_url": "https://github.com/Kim-Yoo-Hyun/PaperReview/blob/5bec2cfa8a31758ca8e5be9c19c39dc4c23bb096/work/research_topics/task_allocation/%EC%9E%AC%ED%98%84%20%EB%B0%A9%EB%B2%95/Dockerfile"
+    },
+    "work/research_topics/task_allocation/재현 방법/README.md": {
+      "sha256": "b5c3342028a72dc54295fd82bfd0ac5214cb19212b727fc825b039dcaebc55cb",
+      "topic": "task_allocation",
+      "action": "deleted",
+      "destination": null,
+      "summary": "work/research_topics/retired/README.md#task_allocation",
+      "history_url": "https://github.com/Kim-Yoo-Hyun/PaperReview/blob/5bec2cfa8a31758ca8e5be9c19c39dc4c23bb096/work/research_topics/task_allocation/%EC%9E%AC%ED%98%84%20%EB%B0%A9%EB%B2%95/README.md"
+    },
+    "work/research_topics/task_allocation/재현 방법/allocation.py": {
+      "sha256": "7375b8975cc23839da7f769c0c78ae8960aaac6638118e333ce8620f6418b188",
+      "topic": "task_allocation",
+      "action": "deleted",
+      "destination": null,
+      "summary": "work/research_topics/retired/README.md#task_allocation",
+      "history_url": "https://github.com/Kim-Yoo-Hyun/PaperReview/blob/5bec2cfa8a31758ca8e5be9c19c39dc4c23bb096/work/research_topics/task_allocation/%EC%9E%AC%ED%98%84%20%EB%B0%A9%EB%B2%95/allocation.py"
+    },
+    "work/research_topics/task_allocation/재현 방법/probe.py": {
+      "sha256": "e31c54c902861b9d27a920d487f1b32c2c0c5047c2083cf7471565faf35b3c1b",
+      "topic": "task_allocation",
+      "action": "deleted",
+      "destination": null,
+      "summary": "work/research_topics/retired/README.md#task_allocation",
+      "history_url": "https://github.com/Kim-Yoo-Hyun/PaperReview/blob/5bec2cfa8a31758ca8e5be9c19c39dc4c23bb096/work/research_topics/task_allocation/%EC%9E%AC%ED%98%84%20%EB%B0%A9%EB%B2%95/probe.py"
+    },
+    "work/research_topics/task_allocation/재현 방법/results/2026-11-09-preparation/cleanup.json": {
+      "sha256": "37c9662f52c87df4a3733a6b5353ddfbb4c924c30ceccdfac35a99604880cadd",
+      "topic": "task_allocation",
+      "action": "deleted",
+      "destination": null,
+      "summary": "work/research_topics/retired/README.md#task_allocation",
+      "history_url": "https://github.com/Kim-Yoo-Hyun/PaperReview/blob/5bec2cfa8a31758ca8e5be9c19c39dc4c23bb096/work/research_topics/task_allocation/%EC%9E%AC%ED%98%84%20%EB%B0%A9%EB%B2%95/results/2026-11-09-preparation/cleanup.json"
+    },
+    "work/research_topics/task_allocation/재현 방법/results/2026-11-09-preparation/control_test_run.json": {
+      "sha256": "10ccb8fac1acab85f286a40f18298a53b89fc25d2f197ecbcfd354cc0f32f343",
+      "topic": "task_allocation",
+      "action": "deleted",
+      "destination": null,
+      "summary": "work/research_topics/retired/README.md#task_allocation",
+      "history_url": "https://github.com/Kim-Yoo-Hyun/PaperReview/blob/5bec2cfa8a31758ca8e5be9c19c39dc4c23bb096/work/research_topics/task_allocation/%EC%9E%AC%ED%98%84%20%EB%B0%A9%EB%B2%95/results/2026-11-09-preparation/control_test_run.json"
+    },
+    "work/research_topics/task_allocation/재현 방법/results/2026-11-09-preparation/control_tests.json": {
+      "sha256": "178b01fdccf46f93afdc17ff93191851b116c1b338d602e57e776c95e9273e51",
+      "topic": "task_allocation",
+      "action": "deleted",
+      "destination": null,
+      "summary": "work/research_topics/retired/README.md#task_allocation",
+      "history_url": "https://github.com/Kim-Yoo-Hyun/PaperReview/blob/5bec2cfa8a31758ca8e5be9c19c39dc4c23bb096/work/research_topics/task_allocation/%EC%9E%AC%ED%98%84%20%EB%B0%A9%EB%B2%95/results/2026-11-09-preparation/control_tests.json"
+    },
+    "work/research_topics/task_allocation/재현 방법/results/2026-11-09-preparation/launcher-check/local_check.json": {
+      "sha256": "e694a8c1c56c04ca9e3687af7eac95e8be1993a9b9bae17060565ac8540a560b",
+      "topic": "task_allocation",
+      "action": "deleted",
+      "destination": null,
+      "summary": "work/research_topics/retired/README.md#task_allocation",
+      "history_url": "https://github.com/Kim-Yoo-Hyun/PaperReview/blob/5bec2cfa8a31758ca8e5be9c19c39dc4c23bb096/work/research_topics/task_allocation/%EC%9E%AC%ED%98%84%20%EB%B0%A9%EB%B2%95/results/2026-11-09-preparation/launcher-check/local_check.json"
+    },
+    "work/research_topics/task_allocation/재현 방법/results/2026-11-09-preparation/resource_check.json": {
+      "sha256": "1ad534a6b5174d2168af69b7f384e7865c4045fd21f7ed5bb2d82e348b01660e",
+      "topic": "task_allocation",
+      "action": "deleted",
+      "destination": null,
+      "summary": "work/research_topics/retired/README.md#task_allocation",
+      "history_url": "https://github.com/Kim-Yoo-Hyun/PaperReview/blob/5bec2cfa8a31758ca8e5be9c19c39dc4c23bb096/work/research_topics/task_allocation/%EC%9E%AC%ED%98%84%20%EB%B0%A9%EB%B2%95/results/2026-11-09-preparation/resource_check.json"
+    },
+    "work/research_topics/task_allocation/재현 방법/resume.py": {
+      "sha256": "e55e66a301b2fc9b00cf7292f5c5cb5cba6a32da92139187e08ef9c655f536f4",
+      "topic": "task_allocation",
+      "action": "deleted",
+      "destination": null,
+      "summary": "work/research_topics/retired/README.md#task_allocation",
+      "history_url": "https://github.com/Kim-Yoo-Hyun/PaperReview/blob/5bec2cfa8a31758ca8e5be9c19c39dc4c23bb096/work/research_topics/task_allocation/%EC%9E%AC%ED%98%84%20%EB%B0%A9%EB%B2%95/resume.py"
+    },
+    "work/research_topics/task_allocation/재현 방법/test_packet.py": {
+      "sha256": "cc51ffaafaff1aca4653c63116049e091a3bb32c830323a58ba2b74e17ebb0c9",
+      "topic": "task_allocation",
+      "action": "deleted",
+      "destination": null,
+      "summary": "work/research_topics/retired/README.md#task_allocation",
+      "history_url": "https://github.com/Kim-Yoo-Hyun/PaperReview/blob/5bec2cfa8a31758ca8e5be9c19c39dc4c23bb096/work/research_topics/task_allocation/%EC%9E%AC%ED%98%84%20%EB%B0%A9%EB%B2%95/test_packet.py"
+    },
+    "work/research_topics/hindsight_transfer/내용/README.md": {
+      "sha256": "7dd38d4b09d61eb1bc54112e07260dd200b7b3a8276d0c81cf1162eec2a7d45e",
+      "topic": "hindsight_transfer",
+      "action": "deleted",
+      "destination": null,
+      "summary": "work/research_topics/retired/README.md#hindsight_transfer",
+      "history_url": "https://github.com/Kim-Yoo-Hyun/PaperReview/blob/5bec2cfa8a31758ca8e5be9c19c39dc4c23bb096/work/research_topics/hindsight_transfer/%EB%82%B4%EC%9A%A9/README.md"
+    },
+    "work/research_topics/hindsight_transfer/내용/sources.json": {
+      "sha256": "20fb767485bf70724fd6cfa919f181168bc80a0d976f521677c7693c828dddcf",
+      "topic": "hindsight_transfer",
+      "action": "deleted",
+      "destination": null,
+      "summary": "work/research_topics/retired/README.md#hindsight_transfer",
+      "history_url": "https://github.com/Kim-Yoo-Hyun/PaperReview/blob/5bec2cfa8a31758ca8e5be9c19c39dc4c23bb096/work/research_topics/hindsight_transfer/%EB%82%B4%EC%9A%A9/sources.json"
+    },
+    "work/research_topics/hindsight_transfer/재현 방법/Dockerfile": {
+      "sha256": "e13072b33d0b5c06304685332fda07ea775bf290ac727ae583d7202dde0aa676",
+      "topic": "hindsight_transfer",
+      "action": "deleted",
+      "destination": null,
+      "summary": "work/research_topics/retired/README.md#hindsight_transfer",
+      "history_url": "https://github.com/Kim-Yoo-Hyun/PaperReview/blob/5bec2cfa8a31758ca8e5be9c19c39dc4c23bb096/work/research_topics/hindsight_transfer/%EC%9E%AC%ED%98%84%20%EB%B0%A9%EB%B2%95/Dockerfile"
+    },
+    "work/research_topics/hindsight_transfer/재현 방법/README.md": {
+      "sha256": "fd0ac47afc690052b72fd41120f688fbe71036a9b022cc07a73f7c2ea3d64f50",
+      "topic": "hindsight_transfer",
+      "action": "deleted",
+      "destination": null,
+      "summary": "work/research_topics/retired/README.md#hindsight_transfer",
+      "history_url": "https://github.com/Kim-Yoo-Hyun/PaperReview/blob/5bec2cfa8a31758ca8e5be9c19c39dc4c23bb096/work/research_topics/hindsight_transfer/%EC%9E%AC%ED%98%84%20%EB%B0%A9%EB%B2%95/README.md"
+    },
+    "work/research_topics/hindsight_transfer/재현 방법/probe.py": {
+      "sha256": "83291d4d93ef7283411be0c5adb7c149927674c6682ba3da6ff8e2a483cf008e",
+      "topic": "hindsight_transfer",
+      "action": "deleted",
+      "destination": null,
+      "summary": "work/research_topics/retired/README.md#hindsight_transfer",
+      "history_url": "https://github.com/Kim-Yoo-Hyun/PaperReview/blob/5bec2cfa8a31758ca8e5be9c19c39dc4c23bb096/work/research_topics/hindsight_transfer/%EC%9E%AC%ED%98%84%20%EB%B0%A9%EB%B2%95/probe.py"
+    },
+    "work/research_topics/hindsight_transfer/재현 방법/results/2026-11-07-preparation/check/local_check.json": {
+      "sha256": "8c78e8d1ccfc4ebdb78b010c08421f4e2e326f60795d21deb0264430a5c4b67e",
+      "topic": "hindsight_transfer",
+      "action": "deleted",
+      "destination": null,
+      "summary": "work/research_topics/retired/README.md#hindsight_transfer",
+      "history_url": "https://github.com/Kim-Yoo-Hyun/PaperReview/blob/5bec2cfa8a31758ca8e5be9c19c39dc4c23bb096/work/research_topics/hindsight_transfer/%EC%9E%AC%ED%98%84%20%EB%B0%A9%EB%B2%95/results/2026-11-07-preparation/check/local_check.json"
+    },
+    "work/research_topics/hindsight_transfer/재현 방법/results/2026-11-07-preparation/control_tests.json": {
+      "sha256": "b9e009ddcbbbdb70c0c8bfdea7cf477c402581be61a3985b62ee0ffee9fdea2f",
+      "topic": "hindsight_transfer",
+      "action": "deleted",
+      "destination": null,
+      "summary": "work/research_topics/retired/README.md#hindsight_transfer",
+      "history_url": "https://github.com/Kim-Yoo-Hyun/PaperReview/blob/5bec2cfa8a31758ca8e5be9c19c39dc4c23bb096/work/research_topics/hindsight_transfer/%EC%9E%AC%ED%98%84%20%EB%B0%A9%EB%B2%95/results/2026-11-07-preparation/control_tests.json"
+    },
+    "work/research_topics/hindsight_transfer/재현 방법/results/2026-11-07-preparation/gpu_allocation.json": {
+      "sha256": "c54e9332bc25f42033d6b418e4e37733bcbeb1028ad451246ceeb2555b2f9855",
+      "topic": "hindsight_transfer",
+      "action": "deleted",
+      "destination": null,
+      "summary": "work/research_topics/retired/README.md#hindsight_transfer",
+      "history_url": "https://github.com/Kim-Yoo-Hyun/PaperReview/blob/5bec2cfa8a31758ca8e5be9c19c39dc4c23bb096/work/research_topics/hindsight_transfer/%EC%9E%AC%ED%98%84%20%EB%B0%A9%EB%B2%95/results/2026-11-07-preparation/gpu_allocation.json"
+    },
+    "work/research_topics/hindsight_transfer/재현 방법/resume.py": {
+      "sha256": "ea46c9e71c2201ff7a94dd88df7655440d317ae94d0f9165d994206b51013c6c",
+      "topic": "hindsight_transfer",
+      "action": "deleted",
+      "destination": null,
+      "summary": "work/research_topics/retired/README.md#hindsight_transfer",
+      "history_url": "https://github.com/Kim-Yoo-Hyun/PaperReview/blob/5bec2cfa8a31758ca8e5be9c19c39dc4c23bb096/work/research_topics/hindsight_transfer/%EC%9E%AC%ED%98%84%20%EB%B0%A9%EB%B2%95/resume.py"
+    },
+    "work/research_topics/hindsight_transfer/재현 방법/test_packet.py": {
+      "sha256": "c5508873630a66b4c6679a636cd301ecb8d11fe94b79194488f88b5aec093c2c",
+      "topic": "hindsight_transfer",
+      "action": "deleted",
+      "destination": null,
+      "summary": "work/research_topics/retired/README.md#hindsight_transfer",
+      "history_url": "https://github.com/Kim-Yoo-Hyun/PaperReview/blob/5bec2cfa8a31758ca8e5be9c19c39dc4c23bb096/work/research_topics/hindsight_transfer/%EC%9E%AC%ED%98%84%20%EB%B0%A9%EB%B2%95/test_packet.py"
+    },
+    "work/research_topics/vla_residual_update/내용/README.md": {
+      "sha256": "53ae9741da0c52535a207d9f6512e0e19296d76e3153a9a40bcdd3022f9dfcc7",
+      "topic": "vla_residual_update",
+      "action": "deleted",
+      "destination": null,
+      "summary": "work/research_topics/retired/README.md#vla_residual_update",
+      "history_url": "https://github.com/Kim-Yoo-Hyun/PaperReview/blob/5bec2cfa8a31758ca8e5be9c19c39dc4c23bb096/work/research_topics/vla_residual_update/%EB%82%B4%EC%9A%A9/README.md"
+    },
+    "work/research_topics/vla_residual_update/재현 방법/.dockerignore": {
+      "sha256": "e1a796d6df6dd3847f98f9a5d6184ae95960ce787b7e2fac39856a18dd8cd64c",
+      "topic": "vla_residual_update",
+      "action": "deleted",
+      "destination": null,
+      "summary": "work/research_topics/retired/README.md#vla_residual_update",
+      "history_url": "https://github.com/Kim-Yoo-Hyun/PaperReview/blob/5bec2cfa8a31758ca8e5be9c19c39dc4c23bb096/work/research_topics/vla_residual_update/%EC%9E%AC%ED%98%84%20%EB%B0%A9%EB%B2%95/.dockerignore"
+    },
+    "work/research_topics/vla_residual_update/재현 방법/Dockerfile": {
+      "sha256": "5995dd584fcc68526e64381553bd5a8d6d7beb33827f07ba3cbb9498ecb5abf7",
+      "topic": "vla_residual_update",
+      "action": "deleted",
+      "destination": null,
+      "summary": "work/research_topics/retired/README.md#vla_residual_update",
+      "history_url": "https://github.com/Kim-Yoo-Hyun/PaperReview/blob/5bec2cfa8a31758ca8e5be9c19c39dc4c23bb096/work/research_topics/vla_residual_update/%EC%9E%AC%ED%98%84%20%EB%B0%A9%EB%B2%95/Dockerfile"
+    },
+    "work/research_topics/vla_residual_update/재현 방법/README.md": {
+      "sha256": "0abeef6b3a99742cff614314d0a2242d12867e42fb79b6b9bb8d67ffa5dc8e32",
+      "topic": "vla_residual_update",
+      "action": "deleted",
+      "destination": null,
+      "summary": "work/research_topics/retired/README.md#vla_residual_update",
+      "history_url": "https://github.com/Kim-Yoo-Hyun/PaperReview/blob/5bec2cfa8a31758ca8e5be9c19c39dc4c23bb096/work/research_topics/vla_residual_update/%EC%9E%AC%ED%98%84%20%EB%B0%A9%EB%B2%95/README.md"
+    },
+    "work/research_topics/vla_residual_update/재현 방법/RESUME_PLAN.json": {
+      "sha256": "0b34204f7eeb59be473d33e3066d8dc5221b56aa8fbdf6fd416a32779dcbdd2e",
+      "topic": "vla_residual_update",
+      "action": "deleted",
+      "destination": null,
+      "summary": "work/research_topics/retired/README.md#vla_residual_update",
+      "history_url": "https://github.com/Kim-Yoo-Hyun/PaperReview/blob/5bec2cfa8a31758ca8e5be9c19c39dc4c23bb096/work/research_topics/vla_residual_update/%EC%9E%AC%ED%98%84%20%EB%B0%A9%EB%B2%95/RESUME_PLAN.json"
+    },
+    "work/research_topics/vla_residual_update/재현 방법/native_p0.py": {
+      "sha256": "b17480e08f9eafe20fe734028a170a62869f769385e9f2ee45f7d51670734c29",
+      "topic": "vla_residual_update",
+      "action": "deleted",
+      "destination": null,
+      "summary": "work/research_topics/retired/README.md#vla_residual_update",
+      "history_url": "https://github.com/Kim-Yoo-Hyun/PaperReview/blob/5bec2cfa8a31758ca8e5be9c19c39dc4c23bb096/work/research_topics/vla_residual_update/%EC%9E%AC%ED%98%84%20%EB%B0%A9%EB%B2%95/native_p0.py"
+    },
+    "work/research_topics/vla_residual_update/재현 방법/requirements.txt": {
+      "sha256": "b4c0db744e1c0b02c26305cb249b6cfb1ee9de55d0772fd56d973af3f4073121",
+      "topic": "vla_residual_update",
+      "action": "deleted",
+      "destination": null,
+      "summary": "work/research_topics/retired/README.md#vla_residual_update",
+      "history_url": "https://github.com/Kim-Yoo-Hyun/PaperReview/blob/5bec2cfa8a31758ca8e5be9c19c39dc4c23bb096/work/research_topics/vla_residual_update/%EC%9E%AC%ED%98%84%20%EB%B0%A9%EB%B2%95/requirements.txt"
+    },
+    "work/research_topics/vla_residual_update/재현 방법/resume.py": {
+      "sha256": "efd95c62d59c1090fddf816da70f1ec50d0dc4649126b4a140443f8a75e5b747",
+      "topic": "vla_residual_update",
+      "action": "deleted",
+      "destination": null,
+      "summary": "work/research_topics/retired/README.md#vla_residual_update",
+      "history_url": "https://github.com/Kim-Yoo-Hyun/PaperReview/blob/5bec2cfa8a31758ca8e5be9c19c39dc4c23bb096/work/research_topics/vla_residual_update/%EC%9E%AC%ED%98%84%20%EB%B0%A9%EB%B2%95/resume.py"
+    },
+    "work/research_topics/vla_residual_update/재현 방법/test_packet.py": {
+      "sha256": "6b5ec379b0e7633cd905dcd7ad37726bacc966e24e82ae9d73547249bcf1aeb6",
+      "topic": "vla_residual_update",
+      "action": "deleted",
+      "destination": null,
+      "summary": "work/research_topics/retired/README.md#vla_residual_update",
+      "history_url": "https://github.com/Kim-Yoo-Hyun/PaperReview/blob/5bec2cfa8a31758ca8e5be9c19c39dc4c23bb096/work/research_topics/vla_residual_update/%EC%9E%AC%ED%98%84%20%EB%B0%A9%EB%B2%95/test_packet.py"
+    }
+  },
+  "preserved_evidence": {
+    "work/research_topics/action_tokenization/재현 방법/CONTRACT.json": "work/research_topics/retired/evidence/action_tokenization/CONTRACT.json",
+    "work/research_topics/action_tokenization/재현 방법/CONTRACT_SUFFIX.json": "work/research_topics/retired/evidence/action_tokenization/CONTRACT_SUFFIX.json",
+    "work/research_topics/action_tokenization/재현 방법/results/runtime.json": "work/research_topics/retired/evidence/action_tokenization/results/runtime.json",
+    "work/research_topics/action_tokenization/재현 방법/results/verified/results.json": "work/research_topics/retired/evidence/action_tokenization/results/verified/results.json",
+    "work/research_topics/action_tokenization/재현 방법/results/suffix_verified/results.json": "work/research_topics/retired/evidence/action_tokenization/results/suffix_verified/results.json",
+    "work/research_topics/context_retrieval/재현 방법/ASSET_AUDIT.json": "work/research_topics/retired/evidence/context_retrieval/ASSET_AUDIT.json",
+    "work/research_topics/context_retrieval/재현 방법/COMPARISON_CONTRACT.json": "work/research_topics/retired/evidence/context_retrieval/COMPARISON_CONTRACT.json"
+  },
+  "inbound_markdown_changes": {
+    "TODO.md": 16,
+    "synthesis/04_vla_generalist.md": 18,
+    "synthesis/06_locomotion_whole_body.md": 8,
+    "synthesis/02_rl_il_offline.md": 8,
+    "work/research_topics/README.md": 22,
+    "work/update/VLA_MASTERS_GAP_SCOUT_2026-11-12.md": 1,
+    "work/update/SIX_CANDIDATE_BUILDUP_STATE_2026-11-04.md": 5,
+    "work/update/C1_OBSERVATION_COST_REVIEW_2026-10-28.md": 1,
+    "work/update/VLA_TERMINATION_COMPARISON_2026-10-28.md": 1,
+    "work/update/REGISTRY_MAINTENANCE_2026-11-01.md": 4,
+    "work/update/VLA_RL_GAP_REVIEW_2026-11-03.md": 6,
+    "work/update/THREE_CANDIDATES_NONEXPERIMENTAL_2026-11-01.md": 5,
+    "work/update/README.md": 23,
+    "work/update/VLA_GAP_SELECTION_2026-10-29.md": 1,
+    "work/update/REGISTRY_MAINTENANCE_2026-10-28.md": 4,
+    "work/update/TASK_HISTORY_2026-10-28.md": 8,
+    "work/update/PRE_GPU_BUILDUP_REVIEW_2026-10-31.md": 3,
+    "work/update/VLA_RL_ADDITIONAL_GAPS_2026-11-09.md": 1,
+    "work/update/VLA_EXPLORATION_SELECTION_2026-10-28.md": 1,
+    "work/experiments/README.md": 3
+  },
+  "historical_notices": [
+    "work/update/VLA_MASTERS_GAP_SCOUT_2026-11-12.md",
+    "work/update/SIX_CANDIDATE_BUILDUP_STATE_2026-11-04.md",
+    "work/update/C1_OBSERVATION_COST_REVIEW_2026-10-28.md",
+    "work/update/VLA_TERMINATION_COMPARISON_2026-10-28.md",
+    "work/update/REGISTRY_MAINTENANCE_2026-11-01.md",
+    "work/update/VLA_RL_GAP_REVIEW_2026-11-03.md",
+    "work/update/THREE_CANDIDATES_NONEXPERIMENTAL_2026-11-01.md",
+    "work/update/VLA_GAP_SELECTION_2026-10-29.md",
+    "work/update/REGISTRY_MAINTENANCE_2026-10-28.md",
+    "work/update/TASK_HISTORY_2026-10-28.md",
+    "work/update/PRE_GPU_BUILDUP_REVIEW_2026-10-31.md",
+    "work/update/VLA_RL_ADDITIONAL_GAPS_2026-11-09.md",
+    "work/update/VLA_EXPLORATION_SELECTION_2026-10-28.md"
+  ],
+  "scientific_boundary": "Portfolio decision, not experimental falsification; no candidate rejected only because of absent GPU. Existing paper registry and user reading status unchanged.",
+  "external_sources": [
+    {
+      "source_id": "Sentinel",
+      "title": "Unpacking Failure Modes of Generative Policies: Runtime Monitoring of Consistency and Progress",
+      "venue_status": "CoRL 2024; PMLR publication 2025",
+      "url": "https://proceedings.mlr.press/v270/agia25a.html",
+      "review_scope": "official abstract",
+      "implication": "Temporal action consistency and task progress monitoring already exist.",
+      "checked_on": "2026-11-17",
+      "experiment_reproduced": false
+    },
+    {
+      "source_id": "SAFE",
+      "title": "SAFE: Multitask Failure Detection for Vision-Language-Action Models",
+      "venue_status": "NeurIPS 2025 main conference",
+      "url": "https://proceedings.neurips.cc/paper_files/paper/2025/hash/392d0d05e2f514063e6ce6f8b370834c-Abstract-Conference.html",
+      "review_scope": "official abstract",
+      "implication": "Internal VLA feature-based failure prediction and conformal calibration are prior work.",
+      "checked_on": "2026-11-17",
+      "experiment_reproduced": false
+    },
+    {
+      "source_id": "AHA",
+      "title": "AHA: A Vision-Language-Model for Detecting and Reasoning Over Failures in Robotic Manipulation",
+      "venue_status": "ICLR 2025",
+      "url": "https://proceedings.iclr.cc/paper_files/paper/2025/hash/70a06501001e1820fd1eb9ee821302d2-Abstract-Conference.html",
+      "review_scope": "official abstract",
+      "implication": "Failure explanations, synthetic failures, and uses in planning/rewards are already studied.",
+      "checked_on": "2026-11-17",
+      "experiment_reproduced": false
+    },
+    {
+      "source_id": "FAIL-Detect",
+      "title": "FAIL-Detect",
+      "venue_status": "RSS 2025",
+      "url": "https://www.roboticsproceedings.org/rss21/p073.html",
+      "review_scope": "official abstract; short name used here",
+      "implication": "Success-only uncertainty-based failure detection is not a new gap.",
+      "checked_on": "2026-11-17",
+      "experiment_reproduced": false
+    },
+    {
+      "source_id": "ReSteer",
+      "title": "ReSteer",
+      "venue_status": "RSS 2026",
+      "url": "https://roboticsproceedings.org/rss22/p143.html",
+      "review_scope": "official abstract; short name used here",
+      "implication": "State-dependent task steerability constrains generic instruction-changing novelty.",
+      "checked_on": "2026-11-17",
+      "experiment_reproduced": false
+    },
+    {
+      "source_id": "ClevrSkills",
+      "title": "ClevrSkills",
+      "venue_status": "NeurIPS 2024 Datasets and Benchmarks",
+      "url": "https://proceedings.neurips.cc/paper_files/paper/2024/hash/439539557e9ba0d04055773ff1f3241c-Abstract-Datasets_and_Benchmarks_Track.html",
+      "review_scope": "official abstract; short name used here",
+      "implication": "Compositional manipulation precedent; does not establish that every quantity task is solved.",
+      "checked_on": "2026-11-17",
+      "experiment_reproduced": false
+    },
+    {
+      "source_id": "Mobi-pi",
+      "title": "Mobi-π: Mobilizing Your Robot Learning Policy",
+      "venue_status": "CoRL 2025",
+      "url": "https://proceedings.mlr.press/v305/yang25b.html",
+      "review_scope": "official abstract",
+      "implication": "Policy-aware mobilization is a direct predecessor to HANDOFF.",
+      "checked_on": "2026-11-17",
+      "experiment_reproduced": false
+    },
+    {
+      "source_id": "SFF",
+      "title": "Streaming Failure Forecasting: VLA Failure Monitors That Keep Learning After Deployment",
+      "venue_status": "arXiv 2026; main-conference acceptance unverified",
+      "url": "https://arxiv.org/html/2611.11688v1",
+      "review_scope": "abstract; sections 3–4 and 7; relevant appendix I passages",
+      "implication": "Online last-layer/threshold updates and task/policy-version drift already studied; real robot evidence is recorded replay, not live deployment. Early timing is not irrecoverability timing. Stopped/censored-label checks exist; do not claim none.",
+      "checked_on": "2026-11-17",
+      "experiment_reproduced": false
+    },
+    {
+      "source_id": "SAFECAST",
+      "title": "SAFECAST",
+      "venue_status": "arXiv 2026; main-conference acceptance unverified",
+      "url": "https://arxiv.org/abs/2608.04246",
+      "review_scope": "abstract only; short name used here",
+      "implication": "Contrast-set calibration under deployment shift is direct competition.",
+      "checked_on": "2026-11-17",
+      "experiment_reproduced": false
+    },
+    {
+      "source_id": "VLA-Tug",
+      "title": "Failure Prediction and Classification in Vision-Language-Action Models Via Calibrated Latent Probing",
+      "venue_status": "arXiv 2026; main-conference acceptance unverified",
+      "url": "https://arxiv.org/abs/2611.08425",
+      "review_scope": "abstract only",
+      "implication": "Latent failure prediction/type classification already studied; no code or implementation verification this task.",
+      "checked_on": "2026-11-17",
+      "experiment_reproduced": false
+    },
+    {
+      "source_id": "No Free Checker",
+      "title": "No Free Checker: A Survey of Verifiers for Robot Policies",
+      "venue_status": "arXiv 2026; main-conference acceptance unverified",
+      "url": "https://arxiv.org/abs/2609.09250",
+      "review_scope": "abstract only",
+      "implication": "Terminology/discovery only; not evidence of absence of competing work.",
+      "checked_on": "2026-11-17",
+      "experiment_reproduced": false
+    },
+    {
+      "source_id": "AHEAD",
+      "title": "Intercepting the Future: Latent-Space Predictive World Model for Dynamic VLA Manipulation",
+      "venue_status": "arXiv 2026; main-conference acceptance unverified",
+      "url": "https://arxiv.org/html/2606.02486v1",
+      "review_scope": "abstract/project and section 6.1 limitations",
+      "implication": "Low-order dynamics, explicit depth and motion-estimate uncertainty propagation are limitations; combination with RL/3D is not thereby a proven gap.",
+      "checked_on": "2026-11-17",
+      "experiment_reproduced": false
+    },
+    {
+      "source_id": "B2FF",
+      "title": "Back to the Familiar Future: Failure Recovery for VLA Policies via Pre-Imagined Milestone Selection",
+      "venue_status": "arXiv 2026; main-conference acceptance unverified",
+      "url": "https://arxiv.org/html/2606.09258v1",
+      "review_scope": "abstract and section 5 limitations",
+      "implication": "Recoverable deviations with observable/reachable objects and existing skills; not severe perception/grounding or irreversible changes.",
+      "checked_on": "2026-11-17",
+      "experiment_reproduced": false
+    },
+    {
+      "source_id": "LfH",
+      "title": "Learning from Hindsight for VLA Reinforcement Learning",
+      "venue_status": "arXiv 2026; main-conference acceptance unverified",
+      "url": "https://arxiv.org/abs/2607.09042",
+      "review_scope": "abstract rechecked; earlier designated full-text/code review in archived dossier",
+      "implication": "Generic failed-rollout language relabeling/RL is occupied; current narrower goal selection retired on contribution/cost grounds.",
+      "checked_on": "2026-11-17",
+      "experiment_reproduced": false
+    },
+    {
+      "source_id": "Retrieval-help",
+      "title": "When Does Retrieval Help?",
+      "venue_status": "arXiv 2026; author workshop claim is not NeurIPS main-conference acceptance",
+      "url": "https://arxiv.org/abs/2610.05492",
+      "review_scope": "abstract only; short title used here",
+      "implication": "Retrieval representation/diagnostics and actual task benefit differ; stronger related-task retrieval precedent.",
+      "checked_on": "2026-11-17",
+      "experiment_reproduced": false
+    },
+    {
+      "source_id": "ProAct",
+      "title": "Beyond Reconstruction: What Matters in Action Tokenization for Robot Policies?",
+      "venue_status": "arXiv 2026; main-conference acceptance unverified",
+      "url": "https://arxiv.org/abs/2610.09170",
+      "review_scope": "abstract rechecked; prior appendix review retained in history",
+      "implication": "Reconstruction is not policy predictability/robustness; current CODEC1 result is not a policy gain.",
+      "checked_on": "2026-11-17",
+      "experiment_reproduced": false
+    }
+  ],
+  "validation": {
+    "status": "PASS",
+    "before_audit_errors": 0,
+    "before_audit_warnings": 0,
+    "after_audit": {
+      "papers": 1206,
+      "categories": 23,
+      "tier_counts": {
+        "CORE": 50,
+        "NEXT": 405,
+        "REFERENCE": 509,
+        "ARCHIVE": 242
+      },
+      "intensive": 455,
+      "inactive_reading_history": 47,
+      "standard_note_files": 6030,
+      "catalog_entries": {
+        "benchmark": 56,
+        "metric": 29
+      },
+      "combined_resources": 658,
+      "registry_index_rows": 1206,
+      "markdown_files_checked": 6245,
+      "markdown_links_checked": 13224,
+      "comparison_matrix_rows": 106,
+      "completed_matrix_rows": 5,
+      "errors": [],
+      "warnings": []
+    },
+    "preservation": {
+      "removed_old_paths": 77,
+      "deleted_without_move": 70,
+      "moved_evidence_identical": 7,
+      "standard_notes_bytes_unchanged": 6030,
+      "kept_runtime_files_bytes_unchanged": 43,
+      "manifest_paper_tracker_tiers_bytes_unchanged": true,
+      "generated_queue_bytes_unchanged": true,
+      "changed_document_fragments_checked": 362,
+      "fragment_issues": [],
+      "local_experiments_run": false,
+      "docker_assets_changed": false
+    },
+    "required_py_compile": "PASS",
+    "required_build_reading_tiers": "PASS; same memberships and user inputs",
+    "reading_history_regression_tests": {
+      "passed": 6,
+      "failed": 0
+    },
+    "git_diff_check": "PASS",
+    "task_generated_python_cache_removed": 2,
+    "new_paper_or_note_changes": 0,
+    "scientific_effect_verified": false,
+    "live_code_references_to_removed_topics": 0
+  },
+  "experiments_run": false,
+  "docker_assets_changed": false,
+  "prior_review_sources": [
+    {
+      "name": "PrismGRPO",
+      "url": "https://arxiv.org/html/2608.17423v1"
+    },
+    {
+      "name": "VSR",
+      "url": "https://arxiv.org/html/2610.15888v1"
+    },
+    {
+      "name": "Object-centric residual RL",
+      "url": "https://arxiv.org/html/2606.18953v1"
+    },
+    {
+      "name": "PLD",
+      "url": "https://arxiv.org/html/2511.00091v1"
+    }
+  ],
+  "prior_review_boundary": "References from existing dossiers; not newly full-text-verified in this task. Original review scope/source hashes are in recovery commit and shared ledgers.",
+  "research_claims": {
+    "retirement_is_investment_decision": true,
+    "retirement_is_experimental_falsification": false,
+    "gpu_absence_is_retirement_reason": false,
+    "new_reliability_gap_proven": false,
+    "native_policy_effects_verified": false,
+    "reading_status_changed": false,
+    "registry_admissions": 0,
+    "registry_deletions": 0
+  },
+  "next_task": {
+    "id": "GAP-RELIABILITY-N1",
+    "status": "READY_NONEXPERIMENTAL",
+    "topic": "visual_feedback",
+    "scope": "Compare failure source and useful recovery intervention against direct prior work; no new folder or automatic experiment."
+  }
+}

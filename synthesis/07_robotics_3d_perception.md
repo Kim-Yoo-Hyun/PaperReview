@@ -45,7 +45,7 @@ ICP → PointNet → DROID-SLAM/3DGS/DUSt3R/VGGT → Dense Object Nets/NDF/Dense
 | CORE | [VLFM: Vision-Language Frontier Maps for Zero-Shot Semantic Navigation](../2024/ICRA/2024_ICRA_VLFM-Vision-Language-Frontier-Maps-for-Zero-Shot-Semantic/01_overview.md) | 2024 / ICRA | `UNREAD` | `FULL_TEXT_CHECKED` |
 | CORE | [Beyond the Nav-Graph: Vision-and-Language Navigation in Continuous Environments](../2020/ECCV/2020_ECCV_Beyond-the-Nav-Graph-Vision-and-Language-Navigation-in-Con/01_overview.md) | 2020 / ECCV | `UNREAD` | `FULL_TEXT_CHECKED` |
 
-### Active and embodied 3D Vision — 23
+### Active and embodied 3D Vision — 30
 
 | Tier | Paper | Year / Venue | Status | Evidence |
 |---|---|---|---|---|
@@ -72,6 +72,13 @@ ICP → PointNet → DROID-SLAM/3DGS/DUSt3R/VGGT → Dense Object Nets/NDF/Dense
 | NEXT | [IGL-Nav: Incremental 3D Gaussian Localization for Image-goal Navigation](../2025/ICCV/2025_ICCV_IGL-Nav-Incremental-3D-Gaussian-Localization-for-Image-goa/01_overview.md) | 2025 / ICCV | `UNREAD` | `FULL_TEXT_CHECKED` |
 | NEXT | [Move to Understand a 3D Scene: Bridging Visual Grounding and Exploration for Efficient and Versatile Embodied Navigation](../2025/ICCV/2025_ICCV_Move-to-Understand-a-3D-Scene-Bridging-Visual-Grounding-an/01_overview.md) | 2025 / ICCV | `UNREAD` | `FULL_TEXT_CHECKED` |
 | NEXT | [PhysTwin: Physics-Informed Reconstruction and Simulation of Deformable Objects from Videos](../2025/ICCV/2025_ICCV_PhysTwin-Physics-Informed-Reconstruction-and-Simulation-of/01_overview.md) | 2025 / ICCV | `UNREAD` | `ABSTRACT_CHECKED` |
+| NEXT | [FoundationPose: Unified 6D Pose Estimation and Tracking of Novel Objects](../2024/CVPR/2024_CVPR_FoundationPose-Unified-6D-Pose-Estimation-and-Tracking-of/01_overview.md) | 2024 / CVPR | `UNREAD` | `ABSTRACT_CHECKED` |
+| NEXT | [Active 6D pose estimation for textureless objects using multi-view RGB frames](../2026/IJRR/2026_IJRR_Active-6D-pose-estimation-for-textureless-objects-using-mu/01_overview.md) | 2026 / IJRR | `UNREAD` | `ABSTRACT_CHECKED` |
+| NEXT | [RFMPose: Generative Category-level Object Pose Estimation via Riemannian Flow Matching](../2025/NeurIPS/2025_NeurIPS_RFMPose-Generative-Category-level-Object-Pose-Estimation-v/01_overview.md) | 2025 / NeurIPS | `UNREAD` | `ABSTRACT_CHECKED` |
+| NEXT | [Robo3R: Enhancing Robotic Manipulation with Accurate Feed-Forward 3D Reconstruction](../2026/RSS/2026_RSS_Robo3R-Enhancing-Robotic-Manipulation-with-Accurate-Feed-F/01_overview.md) | 2026 / RSS | `UNREAD` | `ABSTRACT_CHECKED` |
+| NEXT | [Robotic task success evaluation under multi-modal non-parametric object pose uncertainty](../2025/Industrial-Robot/2025_Industrial-Robot_Robotic-task-success-evaluation-under-multi-modal-non-para/01_overview.md) | 2025 / Industrial Robot | `UNREAD` | `ABSTRACT_CHECKED` |
+| NEXT | [ActivePose: Active 6D Object Pose Estimation and Tracking for Robotic Manipulation](../2025/arXiv/2025_arXiv_ActivePose-Active-6D-Object-Pose-Estimation-and-Tracking-f/01_overview.md) | 2025 / arXiv | `UNREAD` | `ABSTRACT_CHECKED` |
+| NEXT | [Imagine then Verify: Affordance-Targeted Active Perception for Task-Oriented Grasping in Cluttered Scenes](../2026/arXiv/2026_arXiv_Imagine-then-Verify-Affordance-Targeted-Active-Perception/01_overview.md) | 2026 / arXiv | `UNREAD` | `ABSTRACT_CHECKED` |
 
 <!-- READING_QUEUE:END -->
 
@@ -159,6 +166,19 @@ Robo-ABC는 contact correspondence를 실제 manipulation에 연결하는 참조
 동일한 영상 적합도를 갖는 모델들의 action ranking이 다른지 확인해야 reconstruction을 robot behavior의 근거로 연결할 수 있다. 새로운 state/material/boundary 증거 없이 GAP-DE의 종료된 자산 심사를 반복하지 않는다.
 
 ## Open Questions
+
+<a id="pose-reconstruction-2026"></a>
+### 물체 pose 모호성과 작업에 필요한 geometry — 2026-11-17
+
+**CURATION-HYPOTHESIS / 추가 탐색, 새 정독·실험 결과 아님.** [DISaM](https://proceedings.mlr.press/v270/dass25a.html)은 행동 불확실성에 따른 관측, [ATAP](https://arxiv.org/html/2609.23504v1)은 affordance 가설의 다음 시점 검증, [Naik 등](https://arxiv.org/abs/2403.10874)은 pose 오차와 허용 오차 분포의 성공 평가를 이미 다룬다. 남을 수 있는 질문은 **여러 pose에서 공통으로 성공하는 행동의 존재**를 학습하면 pose entropy·action disagreement와 달리 불필요한 재관측을 줄일 수 있는가다. N1에서 **공통 성공 행동 선택 원리도 기존 허용 오차 평가의 확장으로 구현 가능**함을 확인해, 공유 VLA 표현의 성공 양립성 학습이 같은 label의 lookup/분리 classifier보다 유용한지로 좁혔다. DISaM은 context별 행동 분포 간 KL이므로 같은 다봉 분포는 높은 원시 분산에도 KL이 0일 수 있다. Valid multimodality는 승리 예측이 아닌 음성 대조다. 네 사례는 논리 명세이며 측정 결과가 아니다. [POSE-ACTIVE의 선행·사례·대안](../work/research_topics/pose_active_perception/내용/README.md). N2는 실제 VLA의 4-step 후보, pose 집합과 성공 label, 배치/방향 evaluator를 명세했다. 원 VLA에 pose 조건이 없으므로 같은 RGB 반복 점수를 pose별 KL로 쓰지 않는다. Frozen feature head는 진단이며 공동 정책 학습과 구별한다. [N2 결과](../work/research_topics/pose_active_perception/내용/README.md#n2-result)와 [P0 코드 준비](../work/research_topics/pose_active_perception/내용/README.md#p0-preparation-result)를 마쳤다. 현재 local daemon 연결 실패로 native 검증 대기이며, 작성한 evaluator fixture를 실제 pose ambiguity·정책 성공의 증거로 세지 않는다.
+
+[Robo3R](https://roboticsproceedings.org/rss22/p056.html)의 robot-frame metric geometry, [GeoPredict](https://openaccess.thecvf.com/content/CVPR2026/html/Qian_GeoPredict_Leveraging_Predictive_Kinematics_and_3D_Gaussian_Geometry_for_Precise_CVPR_2026_paper.html)의 궤적 주변 refinement, [PRISM](https://arxiv.org/html/2610.14704v1)의 precision-aware VLA 학습 이후, **같은 전체 3D 오차에서도 방향별 task tolerance와 오차 원인으로 행동 실패를 설명할 수 있는가?** Local shape·object pose·camera/scale 오류를 분리하고 ROI/tolerance rule과 비교한다. [TASK-GEOMETRY](../work/research_topics/task_geometry_estimation/내용/README.md). Geometry를 실제로 소비하는 언어 조건 정책과 기본 조작 능력이 필요하며 단순 3D metric 개선은 VLA 효과가 아니다. SpatialVLA의 frozen depth 개입 지점은 source로 확인했지만 adapter·native 호환·정밀 조작 기본 능력은 미검증이다. 1번이 구현상 더 쉽다는 초기 판단은 유보한다. 두 질문 모두 초기 탐색이며 C1/D3 등 기존 gate를 해제하지 않는다.
+
+**2026-11-18 등록 연결 / CURATION-HYPOTHESIS.** [FoundationPose](../2024/CVPR/2024_CVPR_FoundationPose-Unified-6D-Pose-Estimation-and-Tracking-of/01_overview.md)·[RFMPose](../2025/NeurIPS/2025_NeurIPS_RFMPose-Generative-Category-level-Object-Pose-Estimation-v/01_overview.md)는 pose 가설의 생성/점수 가정, [ActiveODPE](../2026/IJRR/2026_IJRR_Active-6D-pose-estimation-for-textureless-objects-using-mu/01_overview.md)는 pose 정확도 중심 관측, [다봉 pose 불확실성의 task 성공 평가](../2025/Industrial-Robot/2025_Industrial-Robot_Robotic-task-success-evaluation-under-multi-modal-non-para/01_overview.md)는 성공 허용 집합의 직접 비교로 등록했다. [DISaM](../2024/CoRL/2024_CoRL_Learning-to-Look-Seeking-Information-for-Decision-Making-v/01_overview.md)·[ATAP](../2026/arXiv/2026_arXiv_Imagine-then-Verify-Affordance-Targeted-Active-Perception/01_overview.md)의 관측 목적을 함께 비교한다. 점수·likelihood를 보정된 posterior나 실제 행동 성공률로 간주하지 않는다. 추가/승격 문헌의 확인 범위는 [REG-R17](../work/update/REGISTRY_MAINTENANCE_2026-11-18.md)을 따른다.
+
+### 미지의 손목 카메라 장착 변화와 행동 기반 적응 — 2026-11-17
+
+**CURATION-HYPOTHESIS / R1 이력, R2 현재 선택에서 제외.** [CamVLA §5](https://arxiv.org/html/2607.05396v1#S5)는 손목 카메라 교란을 범위 밖으로 두며, [CoRe-VLA Fig.1](https://arxiv.org/html/2609.37150v1)은 외부 시점 변화 때 손목 장착을 유지한다. 알려지지 않은 wrist-to-EEF 변환을 영상·고유감각·행동 이력으로 추정하는 VLA가, 같은 시간의 고전적 보정/시점 증강보다 유용한가? 일반 능동 관측이나 hand–eye calibration 자체는 기존 방법이다. 외부 view만으로 충분한 경우와 구별하며 RL 필요성도 확인해야 한다. [새 분야 비교·최소 사례·대안](../work/update/NEW_FIELD_SCOUT_2026-11-17.md#camera). 추가 확인한 [ICWM](https://arxiv.org/abs/2606.26025)은 짧은 자가 상호작용으로 시스템 구성을 추론해 카메라 변화에 적응하므로 기여 경계를 더 좁힌다. 아직 효과·독립 신규성을 검증하지 않았고 사용자 reading status는 바꾸지 않았다.
 
 현재 후보 판정은 [주제별 요약](../work/research_candidates/summaries/README.md)을 따른다. 아래 질문은 `CURATION-HYPOTHESIS`이며 재개 승인이 아니다.
 

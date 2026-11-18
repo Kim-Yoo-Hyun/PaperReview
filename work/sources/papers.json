@@ -171796,16 +171796,21 @@
     "paper_type": "method",
     "relations": [],
     "curation": {
-      "admission_reason": "SaPaVe: Towards Active Perception and Manipulation in Vision-Language Action Models for Robotics is retained as REFERENCE because it provides an algorithmic or policy mechanism around VLA, active perception, Robotics for targeted comparison in VLA and generalist robot policies; it is not required for the current intensive reading spine.",
+      "admission_reason": "Camera와 manipulation action의 decoupled 공동 학습·active benchmark가 현재 능동 관측 후보의 직접 비교이므로 REFERENCE에서 NEXT로 승격한다.",
       "rationale_status": "recorded",
-      "rationale_basis": "curation_backfill_reference_archive_2026-09-02",
+      "rationale_basis": "vla_rl_manipulation_navigation_focus_review",
       "roles": [
         "method"
       ],
       "role_basis": "paper_type_and_canonical_category",
-      "scope_status": "adjacent",
-      "tier_reason": "Important on-demand reference, but not required in the current intensive sequence.",
-      "rationale_reviewed_on": "2026-09-02"
+      "scope_status": "active",
+      "tier_reason": "Camera와 manipulation action의 decoupled 공동 학습·active benchmark가 현재 능동 관측 후보의 직접 비교이므로 REFERENCE에서 NEXT로 승격한다.",
+      "rationale_reviewed_on": "2026-11-18",
+      "priority_source_check": {
+        "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Liu_SaPaVe_Towards_Active_Perception_and_Manipulation_in_Vision-Language_Action_Models_CVPR_2026_paper.html",
+        "checked_on": "2026-11-18",
+        "scope": "official_abstract_or_project; priority review only"
+      }
     },
     "provenance": {
       "metadata_source_kind": "cvf",
@@ -217494,19 +217499,19 @@
     "note_format": "abstract_analysis_v1",
     "relations": [],
     "curation": {
-      "admission_reason": "C1/D1의 능동 관측·관측 정렬 주장과 직접 충돌한다. REFERENCE: 해당 후보의 한계·대안 점검 때 참조하며 집중 읽기에는 추가하지 않는다.",
-      "tier_reason": "C1/D1의 능동 관측·관측 정렬 주장과 직접 충돌한다. REFERENCE: 해당 후보의 한계·대안 점검 때 참조하며 집중 읽기에는 추가하지 않는다.",
+      "admission_reason": "관측 종료 상태에 맞춘 continuation adaptation은 현재 pose-active 비교의 필수 통제이며 REFERENCE에서 NEXT로 승격한다.",
+      "tier_reason": "관측 종료 상태에 맞춘 continuation adaptation은 현재 pose-active 비교의 필수 통제이며 REFERENCE에서 NEXT로 승격한다.",
       "rationale_status": "recorded",
-      "rationale_basis": "2026-10-22 candidate rollup; researcher interpretation",
-      "rationale_reviewed_on": "2026-10-22",
-      "scope_status": "adjacent",
+      "rationale_basis": "vla_rl_manipulation_navigation_focus_review",
+      "rationale_reviewed_on": "2026-11-18",
+      "scope_status": "active",
       "roles": [
         "method"
       ],
       "role_basis": "manual admission review",
       "priority_source_check": {
         "url": "https://arxiv.org/abs/2610.23378",
-        "checked_on": "2026-10-22",
+        "checked_on": "2026-11-18",
         "scope": "official_abstract_or_project; priority review only"
       }
     },
@@ -250508,6 +250513,3282 @@
       "legacy_summary_candidate_paper_ids": [],
       "legacy_summary_present": true,
       "audited_on": "2026-11-16",
+      "audit_scope": "all_registry",
+      "basis": "manifest relations are curated edges; queue adjacency and legacy lineage matches are retained as non-relational candidates. Absence of an edge is not a claim that the paper has no citations."
+    }
+  },
+  {
+    "title": "FoundationPose: Unified 6D Pose Estimation and Tracking of Novel Objects",
+    "year": 2024,
+    "venue": "CVPR",
+    "category": "Robotics-Enabling 3D Perception",
+    "primary_track": "Robotics-enabling 3D perception",
+    "tags": [
+      "6D pose",
+      "tracking",
+      "RGB-D",
+      "novel objects"
+    ],
+    "aliases": [
+      "FoundationPose"
+    ],
+    "identifiers": {},
+    "page": "https://openaccess.thecvf.com/content/CVPR2024/html/Wen_FoundationPose_Unified_6D_Pose_Estimation_and_Tracking_of_Novel_Objects_CVPR_2024_paper.html",
+    "project": "https://nvlabs.github.io/FoundationPose/",
+    "pdf": "",
+    "sources": {
+      "primary": {
+        "url": "https://openaccess.thecvf.com/content/CVPR2024/html/Wen_FoundationPose_Unified_6D_Pose_Estimation_and_Tracking_of_Novel_Objects_CVPR_2024_paper.html",
+        "kind": "cvf",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-18"
+      },
+      "paper_pdf": null,
+      "venue_verification": {
+        "url": "https://openaccess.thecvf.com/content/CVPR2024/html/Wen_FoundationPose_Unified_6D_Pose_Estimation_and_Tracking_of_Novel_Objects_CVPR_2024_paper.html",
+        "kind": "cvf",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-18"
+      },
+      "project": {
+        "url": "https://nvlabs.github.io/FoundationPose/",
+        "kind": "author_project",
+        "scope": "project_landing",
+        "verified_on": "2026-11-18"
+      },
+      "code": {
+        "url": "https://github.com/NVlabs/FoundationPose",
+        "kind": "official_code",
+        "scope": "code_repository",
+        "verified_on": "2026-11-18"
+      },
+      "preprint": null
+    },
+    "publication": {
+      "status": "peer_reviewed",
+      "kind": "conference",
+      "venue": "CVPR",
+      "year": 2024,
+      "venue_year": 2024,
+      "presentation": "unknown",
+      "venue_id": "cvpr"
+    },
+    "artifacts": {
+      "code_status": "released",
+      "data_status": "not_applicable",
+      "local_pdf_cache": false
+    },
+    "admission_tier": "NEXT",
+    "admission_group": "Active and embodied 3D Vision",
+    "relations": [],
+    "note_format": "abstract_analysis_v1",
+    "evidence": "ABSTRACT_CHECKED",
+    "problem": "미지 물체의 pose 추정과 추적에서 완전 CAD와 소수 reference 관측의 서로 다른 전제를 통합한다.",
+    "method": "Neural implicit 표현으로 두 입력 조건을 연결해 동일 pose 모듈을 재사용한다. 새 물체별 fine-tuning 없이 적용하는 설정이다.",
+    "interface": "RGB-D와 CAD 또는 reference 관측에서 물체 6D pose·tracking 출력을 얻는다. 행동 정책 자체는 아니다.",
+    "evaluation": "공식 project는 미지 물체 pose estimation/tracking의 일반화를 제시한다. 이번 등록에서는 세부 trial·로봇 성공률을 확정하지 않는다.",
+    "role": "현재 능동 관측 후보의 pose baseline이며 CAD/reference·score·좌표 가정을 판단하는 직접 NEXT다.",
+    "lineage": "기하학적 pose/registration → FoundationPose → ActivePose의 시점 선택과 비교한다.",
+    "question": "같은 pose 오차에서도 task별 허용 오차에 따라 필요한 추가 관측이 달라지는가?",
+    "minimal_experiment": "동일 CAD·깊이·카메라 조건에서 pose coverage와 실제 배치 성공을 따로 측정한다.",
+    "verification_questions": "Model-free reference 요구·대칭 처리·ranking score와 보정 확률의 차이",
+    "source_audit": "2026-11-18: 공식 초록·bibliographic record와 연결된 저자 자료 확인. Abstract 기반 등록이며 본문 전체·실험 재현은 미확인. 직접 HTML 접근 제한은 공식 사이트의 검색 색인 abstract/BibTeX 및 저자 abstract/project 자료로 교차 확인; HTML 전면 열람으로 기록하지 않음.",
+    "curation": {
+      "admission_reason": "현재 능동 관측 후보의 pose baseline이며 CAD/reference·score·좌표 가정을 판단하는 직접 NEXT다.",
+      "tier_reason": "현재 능동 관측 후보의 pose baseline이며 CAD/reference·score·좌표 가정을 판단하는 직접 NEXT다.",
+      "rationale_status": "recorded",
+      "scope_status": "active",
+      "roles": [
+        "method"
+      ],
+      "role_basis": "manual admission review",
+      "rationale_basis": "vla_rl_manipulation_navigation_focus_review",
+      "rationale_reviewed_on": "2026-11-18",
+      "priority_source_check": {
+        "url": "https://openaccess.thecvf.com/content/CVPR2024/html/Wen_FoundationPose_Unified_6D_Pose_Estimation_and_Tracking_of_Novel_Objects_CVPR_2024_paper.html",
+        "checked_on": "2026-11-18",
+        "scope": "official_abstract_or_project; priority review only"
+      }
+    },
+    "folder": "2024/CVPR/2024_CVPR_FoundationPose-Unified-6D-Pose-Estimation-and-Tracking-of",
+    "venue_as_recorded": "CVPR",
+    "venue_canonical": "CVPR",
+    "paper_type": "theory_or_foundation",
+    "provenance": {
+      "metadata_source_kind": "cvf",
+      "content_evidence": "ABSTRACT_CHECKED",
+      "source_audit_status": "recorded",
+      "metadata_checked_on": "2026-11-18",
+      "source_audit_note": "2026-11-18: 공식 초록·bibliographic record와 연결된 저자 자료 확인. Abstract 기반 등록이며 본문 전체·실험 재현은 미확인. 직접 HTML 접근 제한은 공식 사이트의 검색 색인 abstract/BibTeX 및 저자 abstract/project 자료로 교차 확인; HTML 전면 열람으로 기록하지 않음.",
+      "schema_version": "1.0",
+      "schema_migrated_on": "2026-11-18",
+      "note_evidence": {
+        "01_overview.md": "ABSTRACT_CHECKED",
+        "02_problem.md": "ABSTRACT_CHECKED",
+        "03_method.md": "ABSTRACT_CHECKED",
+        "04_evaluation.md": "ABSTRACT_CHECKED",
+        "05_insights.md": "ABSTRACT_CHECKED"
+      }
+    },
+    "paper_id": "pr-1207",
+    "evaluation_profile": {
+      "profile_version": "1.0",
+      "status": "structured_note_cues",
+      "type": "not_recorded",
+      "settings": [
+        "not_recorded"
+      ],
+      "protocol": {
+        "dataset_or_benchmark": "not_recorded",
+        "metrics": "not_recorded",
+        "baselines": "not_recorded",
+        "ablations": "not_recorded",
+        "split_or_generalization": "not_recorded",
+        "trials_or_seeds": "not_recorded",
+        "statistics": "not_recorded",
+        "failure_cases": "not_recorded"
+      },
+      "trial_evidence": [],
+      "benchmark_cues": [],
+      "metric_cues": [],
+      "source_note": "2024/CVPR/2024_CVPR_FoundationPose-Unified-6D-Pose-Estimation-and-Tracking-of/04_evaluation.md",
+      "reviewed_on": "2026-11-18",
+      "basis": "Abstract/project-only note cues; detailed protocol remains not_recorded. Source claims are not full-text or experiment verification; catalog links are cue_only."
+    },
+    "reproducibility": {
+      "profile_version": "1.0",
+      "status": "metadata_audited",
+      "code": {
+        "status": "released",
+        "source": "https://github.com/NVlabs/FoundationPose",
+        "evidence": "manifest_link"
+      },
+      "data": {
+        "status": "not_applicable",
+        "source": null,
+        "evidence": "paper_type and evaluation note scope; no data artifact cue"
+      },
+      "checkpoint": {
+        "status": "not_recorded",
+        "evidence": "no explicit checkpoint availability cue"
+      },
+      "configuration": {
+        "status": "not_recorded",
+        "evidence": "note_cue_or_not_recorded"
+      },
+      "environment": {
+        "status": "not_recorded",
+        "evidence": "04_evaluation.md section cue"
+      },
+      "run_conditions": {
+        "status": "not_recorded",
+        "evidence": "04_evaluation.md trial/statistics cue"
+      },
+      "reviewed_on": "2026-11-18",
+      "source_note": "2024/CVPR/2024_CVPR_FoundationPose-Unified-6D-Pose-Estimation-and-Tracking-of/04_evaluation.md",
+      "basis": "Manifest artifact links and abstract/project-only note cues; full-text protocol and reproducible execution have not been checked."
+    },
+    "lineage_profile": {
+      "profile_version": "1.0",
+      "status": "no_curated_edge_recorded",
+      "outgoing_paper_ids": [],
+      "incoming_paper_ids": [],
+      "queue_adjacency_paper_ids": [],
+      "legacy_summary_candidate_paper_ids": [],
+      "legacy_summary_present": true,
+      "audited_on": "2026-11-18",
+      "audit_scope": "all_registry",
+      "basis": "manifest relations are curated edges; queue adjacency and legacy lineage matches are retained as non-relational candidates. Absence of an edge is not a claim that the paper has no citations."
+    }
+  },
+  {
+    "title": "Learning to Look: Seeking Information for Decision Making via Policy Factorization",
+    "year": 2024,
+    "venue": "CoRL",
+    "category": "Robot Learning and Data",
+    "primary_track": "RL, IL, offline learning, and robot data",
+    "tags": [
+      "active perception",
+      "policy factorization",
+      "partial observability"
+    ],
+    "aliases": [
+      "DISaM",
+      "Learning to Look"
+    ],
+    "identifiers": {
+      "arxiv": "2410.18964"
+    },
+    "page": "https://proceedings.mlr.press/v270/dass25a.html",
+    "project": "https://robin-lab.cs.utexas.edu/learning2look/",
+    "pdf": "",
+    "sources": {
+      "primary": {
+        "url": "https://proceedings.mlr.press/v270/dass25a.html",
+        "kind": "proceedings",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-18"
+      },
+      "paper_pdf": null,
+      "venue_verification": {
+        "url": "https://proceedings.mlr.press/v270/dass25a.html",
+        "kind": "proceedings",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-18"
+      },
+      "preprint": {
+        "url": "https://arxiv.org/abs/2410.18964",
+        "kind": "arxiv",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-18"
+      },
+      "project": {
+        "url": "https://robin-lab.cs.utexas.edu/learning2look/",
+        "kind": "author_project",
+        "scope": "project_landing",
+        "verified_on": "2026-11-18"
+      },
+      "code": {
+        "url": "https://github.com/UT-Austin-RobIn/l2l",
+        "kind": "official_code",
+        "scope": "code_repository",
+        "verified_on": "2026-11-18"
+      }
+    },
+    "publication": {
+      "status": "peer_reviewed",
+      "kind": "conference",
+      "venue": "CoRL",
+      "year": 2024,
+      "venue_year": 2024,
+      "presentation": "unknown",
+      "venue_id": "corl"
+    },
+    "artifacts": {
+      "code_status": "released",
+      "data_status": "not_identified",
+      "local_pdf_cache": false
+    },
+    "admission_tier": "NEXT",
+    "admission_group": "RL, IL, offline learning, and robot data",
+    "relations": [],
+    "note_format": "abstract_analysis_v1",
+    "evidence": "ABSTRACT_CHECKED",
+    "problem": "조작에 필요한 숨은 정보를 얻는 행동과 그 정보를 이용하는 행동을 함께 학습해야 한다.",
+    "method": "정보 탐색과 조작 정책을 분리하고 조작 정책에서 탐색 reward를 구성하는 DISaM을 제안한다.",
+    "interface": "관측·context에서 정보 수집 또는 조작으로 전환한다. 두 정책 분해를 단일 VLA 공동 학습으로 부르지 않는다.",
+    "evaluation": "공식 초록은 simulation·실세계의 정보 탐색이 필요한 조작 과제 5개를 평가한다고 명시한다.",
+    "role": "행동 불확실성 기반 관측 전환이 이미 존재함을 확인할 필수 직접 선행이다.",
+    "lineage": "POMDP/정보 수집 → DISaM → 현재 pose별 행동 양립성 질문을 비교한다.",
+    "question": "정책 분포 차이와 실제 공통 성공 행동의 존재가 어긋나는 사례에서 별도 성공 예측이 유용한가?",
+    "minimal_experiment": "동일 context·행동 후보·관측 예산에서 분포 간 KL과 성공 lookup을 비교한다.",
+    "verification_questions": "Context privilege·KL 대상 분포·학습 reward·전환 threshold",
+    "source_audit": "2026-11-18: 공식 초록·bibliographic record와 연결된 저자 자료 확인. Abstract 기반 등록이며 본문 전체·실험 재현은 미확인. 행사 CoRL 2024와 PMLR vol.270의 2025 출판을 구별; 폴더 연도는 행사 기준이다.",
+    "curation": {
+      "admission_reason": "행동 불확실성 기반 관측 전환이 이미 존재함을 확인할 필수 직접 선행이다.",
+      "tier_reason": "행동 불확실성 기반 관측 전환이 이미 존재함을 확인할 필수 직접 선행이다.",
+      "rationale_status": "recorded",
+      "scope_status": "active",
+      "roles": [
+        "method"
+      ],
+      "role_basis": "manual admission review",
+      "rationale_basis": "vla_rl_manipulation_navigation_focus_review",
+      "rationale_reviewed_on": "2026-11-18",
+      "priority_source_check": {
+        "url": "https://proceedings.mlr.press/v270/dass25a.html",
+        "checked_on": "2026-11-18",
+        "scope": "official_abstract_or_project; priority review only"
+      }
+    },
+    "folder": "2024/CoRL/2024_CoRL_Learning-to-Look-Seeking-Information-for-Decision-Making-v",
+    "venue_as_recorded": "CoRL",
+    "venue_canonical": "CoRL",
+    "paper_type": "method",
+    "provenance": {
+      "metadata_source_kind": "pmlr",
+      "content_evidence": "ABSTRACT_CHECKED",
+      "source_audit_status": "recorded",
+      "metadata_checked_on": "2026-11-18",
+      "source_audit_note": "2026-11-18: 공식 초록·bibliographic record와 연결된 저자 자료 확인. Abstract 기반 등록이며 본문 전체·실험 재현은 미확인. 행사 CoRL 2024와 PMLR vol.270의 2025 출판을 구별; 폴더 연도는 행사 기준이다.",
+      "schema_version": "1.0",
+      "schema_migrated_on": "2026-11-18",
+      "note_evidence": {
+        "01_overview.md": "ABSTRACT_CHECKED",
+        "02_problem.md": "ABSTRACT_CHECKED",
+        "03_method.md": "ABSTRACT_CHECKED",
+        "04_evaluation.md": "ABSTRACT_CHECKED",
+        "05_insights.md": "ABSTRACT_CHECKED"
+      }
+    },
+    "paper_id": "pr-1208",
+    "evaluation_profile": {
+      "profile_version": "1.0",
+      "status": "structured_note_cues",
+      "type": "not_recorded",
+      "settings": [
+        "not_recorded"
+      ],
+      "protocol": {
+        "dataset_or_benchmark": "not_recorded",
+        "metrics": "not_recorded",
+        "baselines": "not_recorded",
+        "ablations": "not_recorded",
+        "split_or_generalization": "not_recorded",
+        "trials_or_seeds": "not_recorded",
+        "statistics": "not_recorded",
+        "failure_cases": "not_recorded"
+      },
+      "trial_evidence": [],
+      "benchmark_cues": [],
+      "metric_cues": [],
+      "source_note": "2024/CoRL/2024_CoRL_Learning-to-Look-Seeking-Information-for-Decision-Making-v/04_evaluation.md",
+      "reviewed_on": "2026-11-18",
+      "basis": "Abstract/project-only note cues; detailed protocol remains not_recorded. Source claims are not full-text or experiment verification; catalog links are cue_only."
+    },
+    "reproducibility": {
+      "profile_version": "1.0",
+      "status": "metadata_audited",
+      "code": {
+        "status": "released",
+        "source": "https://github.com/UT-Austin-RobIn/l2l",
+        "evidence": "manifest_link"
+      },
+      "data": {
+        "status": "not_identified",
+        "source": null,
+        "evidence": "note_cue_scan; no explicit data artifact status identified"
+      },
+      "checkpoint": {
+        "status": "not_recorded",
+        "evidence": "no explicit checkpoint availability cue"
+      },
+      "configuration": {
+        "status": "not_recorded",
+        "evidence": "note_cue_or_not_recorded"
+      },
+      "environment": {
+        "status": "not_recorded",
+        "evidence": "04_evaluation.md section cue"
+      },
+      "run_conditions": {
+        "status": "not_recorded",
+        "evidence": "04_evaluation.md trial/statistics cue"
+      },
+      "reviewed_on": "2026-11-18",
+      "source_note": "2024/CoRL/2024_CoRL_Learning-to-Look-Seeking-Information-for-Decision-Making-v/04_evaluation.md",
+      "basis": "Manifest artifact links and abstract/project-only note cues; full-text protocol and reproducible execution have not been checked."
+    },
+    "lineage_profile": {
+      "profile_version": "1.0",
+      "status": "no_curated_edge_recorded",
+      "outgoing_paper_ids": [],
+      "incoming_paper_ids": [],
+      "queue_adjacency_paper_ids": [],
+      "legacy_summary_candidate_paper_ids": [],
+      "legacy_summary_present": true,
+      "audited_on": "2026-11-18",
+      "audit_scope": "all_registry",
+      "basis": "manifest relations are curated edges; queue adjacency and legacy lineage matches are retained as non-relational candidates. Absence of an edge is not a claim that the paper has no citations."
+    }
+  },
+  {
+    "title": "Active 6D pose estimation for textureless objects using multi-view RGB frames",
+    "year": 2026,
+    "venue": "IJRR",
+    "category": "Robotics-Enabling 3D Perception",
+    "primary_track": "Robotics-enabling 3D perception",
+    "tags": [
+      "active perception",
+      "6D pose",
+      "RGB",
+      "next-best-view"
+    ],
+    "aliases": [
+      "ActiveODPE"
+    ],
+    "identifiers": {
+      "arxiv": "2503.03726",
+      "doi": "10.1177/02783649251411922"
+    },
+    "page": "https://journals.sagepub.com/doi/10.1177/02783649251411922",
+    "project": "https://trailab.github.io/ActiveODPE/",
+    "pdf": "",
+    "sources": {
+      "primary": {
+        "url": "https://journals.sagepub.com/doi/10.1177/02783649251411922",
+        "kind": "publisher",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-18"
+      },
+      "paper_pdf": null,
+      "venue_verification": {
+        "url": "https://journals.sagepub.com/doi/10.1177/02783649251411922",
+        "kind": "publisher",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-18"
+      },
+      "preprint": {
+        "url": "https://arxiv.org/abs/2503.03726",
+        "kind": "arxiv",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-18"
+      },
+      "project": {
+        "url": "https://trailab.github.io/ActiveODPE/",
+        "kind": "author_project",
+        "scope": "project_landing",
+        "verified_on": "2026-11-18"
+      },
+      "code": null
+    },
+    "publication": {
+      "status": "peer_reviewed",
+      "kind": "journal",
+      "venue": "IJRR",
+      "year": 2026,
+      "venue_year": 2026,
+      "presentation": "unknown",
+      "venue_id": "ijrr"
+    },
+    "artifacts": {
+      "code_status": "project_only",
+      "data_status": "not_identified",
+      "local_pdf_cache": false
+    },
+    "admission_tier": "NEXT",
+    "admission_group": "Active and embodied 3D Vision",
+    "relations": [],
+    "note_format": "abstract_analysis_v1",
+    "evidence": "ABSTRACT_CHECKED",
+    "problem": "무텍스처·대칭·가림 때문에 단일 RGB 관측만으로 물체 자세를 구별하기 어렵다.",
+    "method": "Translation을 먼저 추정하고 canonical-scale template으로 orientation을 추정한 뒤 pose uncertainty를 줄일 다음 view를 선택한다.",
+    "interface": "다중 RGB·알려진 물체 geometry와 camera 관측에서 pose 및 다음 카메라 시점을 출력한다.",
+    "evaluation": "ROBI·TOD·T-ROBI에서 같은 view의 추정 성능과 적은 view로 얻는 정확도를 비교한다. VLA 행동 효과 평가로 확장하지 않는다.",
+    "role": "Pose 정확도 중심 NBV와 task 성공 중심 관측 중단을 비교할 journal 기준이다.",
+    "lineage": "FoundationPose의 pose 기준과 ActiveODPE의 RGB NBV를 정보 조건별로 비교한다.",
+    "question": "동일 view 비용에서 pose 정확도를 충분히 높이기 전에도 조작을 성공할 수 있는 조건은 무엇인가?",
+    "minimal_experiment": "같은 추정 후보와 카메라 budget에서 pose uncertainty 규칙과 task tolerance 규칙을 비교한다.",
+    "verification_questions": "CAD·calibration 요구·transparent dataset 조건·실제 이동 비용",
+    "source_audit": "2026-11-18: 공식 초록·bibliographic record와 연결된 저자 자료 확인. Abstract 기반 등록이며 본문 전체·실험 재현은 미확인.",
+    "curation": {
+      "admission_reason": "Pose 정확도 중심 NBV와 task 성공 중심 관측 중단을 비교할 journal 기준이다.",
+      "tier_reason": "Pose 정확도 중심 NBV와 task 성공 중심 관측 중단을 비교할 journal 기준이다.",
+      "rationale_status": "recorded",
+      "scope_status": "active",
+      "roles": [
+        "method"
+      ],
+      "role_basis": "manual admission review",
+      "rationale_basis": "vla_rl_manipulation_navigation_focus_review",
+      "rationale_reviewed_on": "2026-11-18",
+      "priority_source_check": {
+        "url": "https://journals.sagepub.com/doi/10.1177/02783649251411922",
+        "checked_on": "2026-11-18",
+        "scope": "official_abstract_or_project; priority review only"
+      }
+    },
+    "folder": "2026/IJRR/2026_IJRR_Active-6D-pose-estimation-for-textureless-objects-using-mu",
+    "venue_as_recorded": "IJRR",
+    "venue_canonical": "IJRR",
+    "paper_type": "method",
+    "provenance": {
+      "metadata_source_kind": "publisher_or_project",
+      "content_evidence": "ABSTRACT_CHECKED",
+      "source_audit_status": "recorded",
+      "metadata_checked_on": "2026-11-18",
+      "source_audit_note": "2026-11-18: 공식 초록·bibliographic record와 연결된 저자 자료 확인. Abstract 기반 등록이며 본문 전체·실험 재현은 미확인.",
+      "schema_version": "1.0",
+      "schema_migrated_on": "2026-11-18",
+      "note_evidence": {
+        "01_overview.md": "ABSTRACT_CHECKED",
+        "02_problem.md": "ABSTRACT_CHECKED",
+        "03_method.md": "ABSTRACT_CHECKED",
+        "04_evaluation.md": "ABSTRACT_CHECKED",
+        "05_insights.md": "ABSTRACT_CHECKED"
+      }
+    },
+    "paper_id": "pr-1209",
+    "evaluation_profile": {
+      "profile_version": "1.0",
+      "status": "structured_note_cues",
+      "type": "not_recorded",
+      "settings": [
+        "not_recorded"
+      ],
+      "protocol": {
+        "dataset_or_benchmark": "not_recorded",
+        "metrics": "not_recorded",
+        "baselines": "not_recorded",
+        "ablations": "not_recorded",
+        "split_or_generalization": "not_recorded",
+        "trials_or_seeds": "not_recorded",
+        "statistics": "not_recorded",
+        "failure_cases": "not_recorded"
+      },
+      "trial_evidence": [],
+      "benchmark_cues": [],
+      "metric_cues": [],
+      "source_note": "2026/IJRR/2026_IJRR_Active-6D-pose-estimation-for-textureless-objects-using-mu/04_evaluation.md",
+      "reviewed_on": "2026-11-18",
+      "basis": "Abstract/project-only note cues; detailed protocol remains not_recorded. Source claims are not full-text or experiment verification; catalog links are cue_only."
+    },
+    "reproducibility": {
+      "profile_version": "1.0",
+      "status": "metadata_audited",
+      "code": {
+        "status": "project_only",
+        "source": "https://trailab.github.io/ActiveODPE/",
+        "evidence": "manifest_link"
+      },
+      "data": {
+        "status": "not_identified",
+        "source": null,
+        "evidence": "note_cue_scan; no explicit data artifact status identified"
+      },
+      "checkpoint": {
+        "status": "not_recorded",
+        "evidence": "no explicit checkpoint availability cue"
+      },
+      "configuration": {
+        "status": "not_recorded",
+        "evidence": "note_cue_or_not_recorded"
+      },
+      "environment": {
+        "status": "not_recorded",
+        "evidence": "04_evaluation.md section cue"
+      },
+      "run_conditions": {
+        "status": "not_recorded",
+        "evidence": "04_evaluation.md trial/statistics cue"
+      },
+      "reviewed_on": "2026-11-18",
+      "source_note": "2026/IJRR/2026_IJRR_Active-6D-pose-estimation-for-textureless-objects-using-mu/04_evaluation.md",
+      "basis": "Manifest artifact links and abstract/project-only note cues; full-text protocol and reproducible execution have not been checked."
+    },
+    "lineage_profile": {
+      "profile_version": "1.0",
+      "status": "no_curated_edge_recorded",
+      "outgoing_paper_ids": [],
+      "incoming_paper_ids": [],
+      "queue_adjacency_paper_ids": [],
+      "legacy_summary_candidate_paper_ids": [],
+      "legacy_summary_present": true,
+      "audited_on": "2026-11-18",
+      "audit_scope": "all_registry",
+      "basis": "manifest relations are curated edges; queue adjacency and legacy lineage matches are retained as non-relational candidates. Absence of an edge is not a claim that the paper has no citations."
+    }
+  },
+  {
+    "title": "UA-Pose: Uncertainty-Aware 6D Object Pose Estimation and Online Object Completion with Partial References",
+    "year": 2025,
+    "venue": "CVPR",
+    "category": "Robotics-Enabling 3D Perception",
+    "primary_track": "Robotics-enabling 3D perception",
+    "tags": [
+      "6D pose",
+      "partial references",
+      "uncertainty",
+      "object completion"
+    ],
+    "aliases": [
+      "UA-Pose"
+    ],
+    "identifiers": {
+      "arxiv": "2506.07996"
+    },
+    "page": "https://openaccess.thecvf.com/content/CVPR2025/html/Li_UA-Pose_Uncertainty-Aware_6D_Object_Pose_Estimation_and_Online_Object_Completion_CVPR_2025_paper.html",
+    "project": "https://minfenli.github.io/UA-Pose/",
+    "pdf": "",
+    "sources": {
+      "primary": {
+        "url": "https://openaccess.thecvf.com/content/CVPR2025/html/Li_UA-Pose_Uncertainty-Aware_6D_Object_Pose_Estimation_and_Online_Object_Completion_CVPR_2025_paper.html",
+        "kind": "cvf",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-18"
+      },
+      "paper_pdf": null,
+      "venue_verification": {
+        "url": "https://openaccess.thecvf.com/content/CVPR2025/html/Li_UA-Pose_Uncertainty-Aware_6D_Object_Pose_Estimation_and_Online_Object_Completion_CVPR_2025_paper.html",
+        "kind": "cvf",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-18"
+      },
+      "preprint": {
+        "url": "https://arxiv.org/abs/2506.07996",
+        "kind": "arxiv",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-18"
+      },
+      "project": {
+        "url": "https://minfenli.github.io/UA-Pose/",
+        "kind": "author_project",
+        "scope": "project_landing",
+        "verified_on": "2026-11-18"
+      },
+      "code": {
+        "url": "https://github.com/minfenli/UA-Pose",
+        "kind": "official_code",
+        "scope": "code_repository",
+        "verified_on": "2026-11-18"
+      }
+    },
+    "publication": {
+      "status": "peer_reviewed",
+      "kind": "conference",
+      "venue": "CVPR",
+      "year": 2025,
+      "venue_year": 2025,
+      "presentation": "unknown",
+      "venue_id": "cvpr"
+    },
+    "artifacts": {
+      "code_status": "project_only",
+      "data_status": "not_identified",
+      "local_pdf_cache": false
+    },
+    "admission_tier": "REFERENCE",
+    "admission_group": "Active and embodied 3D Vision",
+    "relations": [],
+    "note_format": "abstract_analysis_v1",
+    "evidence": "ABSTRACT_CHECKED",
+    "problem": "완전 CAD나 전체 표면 reference 없이 부분 관측만으로 미지 물체 pose를 추정해야 한다.",
+    "method": "부분 3D 모델의 관측·미관측 영역 불확실성을 활용해 pose 신뢰도와 온라인 completion sampling을 다룬다.",
+    "interface": "Known-pose RGB-D 소수 관측 또는 한 장의 reference 이미지에서 출발해 pose와 보완된 물체 표현을 출력한다.",
+    "evaluation": "YCB-Video·YCBInEOAT·HO3D의 로봇/손 조작 RGB-D 시퀀스를 평가한다. 제어 정책 성공의 실증과 구별한다.",
+    "role": "CAD 완전성 전제를 완화하는 geometry 대안으로 보존하되 첫 active-pose 비교의 필수 정독에서는 REFERENCE로 둔다.",
+    "lineage": "FoundationPose의 reference 전제 → UA-Pose의 부분 object 표현을 비교한다.",
+    "question": "미관측 표면 completion의 오차가 pose confidence와 조작 실패를 함께 악화시키는가?",
+    "minimal_experiment": "관측 coverage를 맞추고 completion 유무의 pose 오차와 downstream 배치 오류를 분리한다.",
+    "verification_questions": "Image-to-3D 전제·미관측 uncertainty의 calibration·실세계 control 평가",
+    "source_audit": "2026-11-18: 공식 초록·bibliographic record와 연결된 저자 자료 확인. Abstract 기반 등록이며 본문 전체·실험 재현은 미확인. 직접 HTML 접근 제한은 공식 사이트의 검색 색인 abstract/BibTeX 및 저자 abstract/project 자료로 교차 확인; HTML 전면 열람으로 기록하지 않음. Official GitHub root에는 README와 images만 확인됨; 구현 release로 세지 않는다.",
+    "curation": {
+      "admission_reason": "CAD 완전성 전제를 완화하는 geometry 대안으로 보존하되 첫 active-pose 비교의 필수 정독에서는 REFERENCE로 둔다.",
+      "tier_reason": "CAD 완전성 전제를 완화하는 geometry 대안으로 보존하되 첫 active-pose 비교의 필수 정독에서는 REFERENCE로 둔다.",
+      "rationale_status": "recorded",
+      "scope_status": "adjacent",
+      "roles": [
+        "method"
+      ],
+      "role_basis": "manual admission review",
+      "rationale_basis": "vla_rl_manipulation_navigation_focus_review",
+      "rationale_reviewed_on": "2026-11-18",
+      "priority_source_check": {
+        "url": "https://openaccess.thecvf.com/content/CVPR2025/html/Li_UA-Pose_Uncertainty-Aware_6D_Object_Pose_Estimation_and_Online_Object_Completion_CVPR_2025_paper.html",
+        "checked_on": "2026-11-18",
+        "scope": "official_abstract_or_project; priority review only"
+      }
+    },
+    "folder": "2025/CVPR/2025_CVPR_UA-Pose-Uncertainty-Aware-6D-Object-Pose-Estimation-and-On",
+    "venue_as_recorded": "CVPR",
+    "venue_canonical": "CVPR",
+    "paper_type": "method",
+    "provenance": {
+      "metadata_source_kind": "cvf",
+      "content_evidence": "ABSTRACT_CHECKED",
+      "source_audit_status": "recorded",
+      "metadata_checked_on": "2026-11-18",
+      "source_audit_note": "2026-11-18: 공식 초록·bibliographic record와 연결된 저자 자료 확인. Abstract 기반 등록이며 본문 전체·실험 재현은 미확인. 직접 HTML 접근 제한은 공식 사이트의 검색 색인 abstract/BibTeX 및 저자 abstract/project 자료로 교차 확인; HTML 전면 열람으로 기록하지 않음. Official GitHub root에는 README와 images만 확인됨; 구현 release로 세지 않는다.",
+      "schema_version": "1.0",
+      "schema_migrated_on": "2026-11-18",
+      "note_evidence": {
+        "01_overview.md": "ABSTRACT_CHECKED",
+        "02_problem.md": "ABSTRACT_CHECKED",
+        "03_method.md": "ABSTRACT_CHECKED",
+        "04_evaluation.md": "ABSTRACT_CHECKED",
+        "05_insights.md": "ABSTRACT_CHECKED"
+      }
+    },
+    "paper_id": "pr-1210",
+    "evaluation_profile": {
+      "profile_version": "1.0",
+      "status": "structured_note_cues",
+      "type": "not_recorded",
+      "settings": [
+        "not_recorded"
+      ],
+      "protocol": {
+        "dataset_or_benchmark": "not_recorded",
+        "metrics": "not_recorded",
+        "baselines": "not_recorded",
+        "ablations": "not_recorded",
+        "split_or_generalization": "not_recorded",
+        "trials_or_seeds": "not_recorded",
+        "statistics": "not_recorded",
+        "failure_cases": "not_recorded"
+      },
+      "trial_evidence": [],
+      "benchmark_cues": [],
+      "metric_cues": [],
+      "source_note": "2025/CVPR/2025_CVPR_UA-Pose-Uncertainty-Aware-6D-Object-Pose-Estimation-and-On/04_evaluation.md",
+      "reviewed_on": "2026-11-18",
+      "basis": "Abstract/project-only note cues; detailed protocol remains not_recorded. Source claims are not full-text or experiment verification; catalog links are cue_only."
+    },
+    "reproducibility": {
+      "profile_version": "1.0",
+      "status": "metadata_audited",
+      "code": {
+        "status": "project_only",
+        "source": "https://github.com/minfenli/UA-Pose",
+        "evidence": "manifest_link"
+      },
+      "data": {
+        "status": "not_identified",
+        "source": null,
+        "evidence": "note_cue_scan; no explicit data artifact status identified"
+      },
+      "checkpoint": {
+        "status": "not_recorded",
+        "evidence": "no explicit checkpoint availability cue"
+      },
+      "configuration": {
+        "status": "not_recorded",
+        "evidence": "note_cue_or_not_recorded"
+      },
+      "environment": {
+        "status": "not_recorded",
+        "evidence": "04_evaluation.md section cue"
+      },
+      "run_conditions": {
+        "status": "not_recorded",
+        "evidence": "04_evaluation.md trial/statistics cue"
+      },
+      "reviewed_on": "2026-11-18",
+      "source_note": "2025/CVPR/2025_CVPR_UA-Pose-Uncertainty-Aware-6D-Object-Pose-Estimation-and-On/04_evaluation.md",
+      "basis": "Manifest artifact links and abstract/project-only note cues; full-text protocol and reproducible execution have not been checked."
+    },
+    "lineage_profile": {
+      "profile_version": "1.0",
+      "status": "no_curated_edge_recorded",
+      "outgoing_paper_ids": [],
+      "incoming_paper_ids": [],
+      "queue_adjacency_paper_ids": [],
+      "legacy_summary_candidate_paper_ids": [],
+      "legacy_summary_present": true,
+      "audited_on": "2026-11-18",
+      "audit_scope": "all_registry",
+      "basis": "manifest relations are curated edges; queue adjacency and legacy lineage matches are retained as non-relational candidates. Absence of an edge is not a claim that the paper has no citations."
+    }
+  },
+  {
+    "title": "RFMPose: Generative Category-level Object Pose Estimation via Riemannian Flow Matching",
+    "year": 2025,
+    "venue": "NeurIPS",
+    "category": "Robotics-Enabling 3D Perception",
+    "primary_track": "Robotics-enabling 3D perception",
+    "tags": [
+      "6D pose",
+      "Flow Matching",
+      "multi-hypothesis",
+      "symmetry"
+    ],
+    "aliases": [
+      "RFMPose"
+    ],
+    "identifiers": {
+      "doi": "10.52202/085713-2267"
+    },
+    "page": "https://proceedings.neurips.cc/paper_files/paper/2025/hash/618c0a236e7aace748d09bc8fbed3e4d-Abstract-Conference.html",
+    "project": "https://github.com/shabiouyang/RMFPose",
+    "pdf": "",
+    "sources": {
+      "primary": {
+        "url": "https://proceedings.neurips.cc/paper_files/paper/2025/hash/618c0a236e7aace748d09bc8fbed3e4d-Abstract-Conference.html",
+        "kind": "proceedings",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-18"
+      },
+      "paper_pdf": null,
+      "venue_verification": {
+        "url": "https://proceedings.neurips.cc/paper_files/paper/2025/hash/618c0a236e7aace748d09bc8fbed3e4d-Abstract-Conference.html",
+        "kind": "proceedings",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-18"
+      },
+      "code": {
+        "url": "https://github.com/shabiouyang/RMFPose",
+        "kind": "official_code",
+        "scope": "code_repository",
+        "verified_on": "2026-11-18"
+      },
+      "preprint": null,
+      "project": {
+        "url": "https://github.com/shabiouyang/RMFPose",
+        "kind": "code"
+      }
+    },
+    "publication": {
+      "status": "peer_reviewed",
+      "kind": "conference",
+      "venue": "NeurIPS",
+      "year": 2025,
+      "venue_year": 2025,
+      "presentation": "unknown",
+      "venue_id": "neurips"
+    },
+    "artifacts": {
+      "code_status": "released",
+      "data_status": "not_identified",
+      "local_pdf_cache": false
+    },
+    "admission_tier": "NEXT",
+    "admission_group": "Active and embodied 3D Vision",
+    "relations": [],
+    "note_format": "abstract_analysis_v1",
+    "evidence": "ABSTRACT_CHECKED",
+    "problem": "Category-level pose의 대칭과 다중 가능한 해를 한 점 추정만으로 표현하기 어렵다.",
+    "method": "Riemannian flow와 geodesic 경로·optimal transport를 사용하며 likelihood 추정 경로를 제안한다.",
+    "interface": "물체 관측의 category-level 6D pose 후보를 생성한다. Generative likelihood는 task 성공 확률과 별개다.",
+    "evaluation": "Omni6DPose의 pose metric과 sim-to-real/추적 확장을 보고한다. 이번 등록에서는 정책 제어 trial을 추정하지 않는다.",
+    "role": "유한 pose 가설 생성과 score 해석을 비교하는 직접 NEXT다.",
+    "lineage": "Flow Matching의 생성 표현 → RFMPose → pose 가설별 행동 양립성 평가로 연결한다.",
+    "question": "Pose 후보의 likelihood 순위가 조작에 필요한 가설 coverage를 보장하는가?",
+    "minimal_experiment": "동일 K에서 top-score와 diversity-preserving 후보의 task-relevant coverage를 비교한다.",
+    "verification_questions": "Likelihood 구현·symmetry convention·공개 checkpoint·tracking 평가 조건",
+    "source_audit": "2026-11-18: 공식 초록·bibliographic record와 연결된 저자 자료 확인. Abstract 기반 등록이며 본문 전체·실험 재현은 미확인. 공식 repository 철자는 RMFPose다. 논문의 likelihood 제안과 이전 코드 감사의 특정 aggregation 경로를 구별한다.",
+    "curation": {
+      "admission_reason": "유한 pose 가설 생성과 score 해석을 비교하는 직접 NEXT다.",
+      "tier_reason": "유한 pose 가설 생성과 score 해석을 비교하는 직접 NEXT다.",
+      "rationale_status": "recorded",
+      "scope_status": "active",
+      "roles": [
+        "method"
+      ],
+      "role_basis": "manual admission review",
+      "rationale_basis": "vla_rl_manipulation_navigation_focus_review",
+      "rationale_reviewed_on": "2026-11-18",
+      "priority_source_check": {
+        "url": "https://proceedings.neurips.cc/paper_files/paper/2025/hash/618c0a236e7aace748d09bc8fbed3e4d-Abstract-Conference.html",
+        "checked_on": "2026-11-18",
+        "scope": "official_abstract_or_project; priority review only"
+      }
+    },
+    "folder": "2025/NeurIPS/2025_NeurIPS_RFMPose-Generative-Category-level-Object-Pose-Estimation-v",
+    "venue_as_recorded": "NeurIPS",
+    "venue_canonical": "NeurIPS",
+    "paper_type": "method",
+    "provenance": {
+      "metadata_source_kind": "publisher_or_project",
+      "content_evidence": "ABSTRACT_CHECKED",
+      "source_audit_status": "recorded",
+      "metadata_checked_on": "2026-11-18",
+      "source_audit_note": "2026-11-18: 공식 초록·bibliographic record와 연결된 저자 자료 확인. Abstract 기반 등록이며 본문 전체·실험 재현은 미확인. 공식 repository 철자는 RMFPose다. 논문의 likelihood 제안과 이전 코드 감사의 특정 aggregation 경로를 구별한다.",
+      "schema_version": "1.0",
+      "schema_migrated_on": "2026-11-18",
+      "note_evidence": {
+        "01_overview.md": "ABSTRACT_CHECKED",
+        "02_problem.md": "ABSTRACT_CHECKED",
+        "03_method.md": "ABSTRACT_CHECKED",
+        "04_evaluation.md": "ABSTRACT_CHECKED",
+        "05_insights.md": "ABSTRACT_CHECKED"
+      }
+    },
+    "paper_id": "pr-1211",
+    "evaluation_profile": {
+      "profile_version": "1.0",
+      "status": "structured_note_cues",
+      "type": "not_recorded",
+      "settings": [
+        "not_recorded"
+      ],
+      "protocol": {
+        "dataset_or_benchmark": "not_recorded",
+        "metrics": "not_recorded",
+        "baselines": "not_recorded",
+        "ablations": "not_recorded",
+        "split_or_generalization": "not_recorded",
+        "trials_or_seeds": "not_recorded",
+        "statistics": "not_recorded",
+        "failure_cases": "not_recorded"
+      },
+      "trial_evidence": [],
+      "benchmark_cues": [],
+      "metric_cues": [],
+      "source_note": "2025/NeurIPS/2025_NeurIPS_RFMPose-Generative-Category-level-Object-Pose-Estimation-v/04_evaluation.md",
+      "reviewed_on": "2026-11-18",
+      "basis": "Abstract/project-only note cues; detailed protocol remains not_recorded. Source claims are not full-text or experiment verification; catalog links are cue_only."
+    },
+    "reproducibility": {
+      "profile_version": "1.0",
+      "status": "metadata_audited",
+      "code": {
+        "status": "released",
+        "source": "https://github.com/shabiouyang/RMFPose",
+        "evidence": "manifest_link"
+      },
+      "data": {
+        "status": "not_identified",
+        "source": null,
+        "evidence": "note_cue_scan; no explicit data artifact status identified"
+      },
+      "checkpoint": {
+        "status": "not_recorded",
+        "evidence": "no explicit checkpoint availability cue"
+      },
+      "configuration": {
+        "status": "not_recorded",
+        "evidence": "note_cue_or_not_recorded"
+      },
+      "environment": {
+        "status": "not_recorded",
+        "evidence": "04_evaluation.md section cue"
+      },
+      "run_conditions": {
+        "status": "not_recorded",
+        "evidence": "04_evaluation.md trial/statistics cue"
+      },
+      "reviewed_on": "2026-11-18",
+      "source_note": "2025/NeurIPS/2025_NeurIPS_RFMPose-Generative-Category-level-Object-Pose-Estimation-v/04_evaluation.md",
+      "basis": "Manifest artifact links and abstract/project-only note cues; full-text protocol and reproducible execution have not been checked."
+    },
+    "lineage_profile": {
+      "profile_version": "1.0",
+      "status": "no_curated_edge_recorded",
+      "outgoing_paper_ids": [],
+      "incoming_paper_ids": [],
+      "queue_adjacency_paper_ids": [],
+      "legacy_summary_candidate_paper_ids": [],
+      "legacy_summary_present": true,
+      "audited_on": "2026-11-18",
+      "audit_scope": "all_registry",
+      "basis": "manifest relations are curated edges; queue adjacency and legacy lineage matches are retained as non-relational candidates. Absence of an edge is not a claim that the paper has no citations."
+    }
+  },
+  {
+    "title": "Universal Pose Pretraining for Generalizable Vision-Language-Action Policies",
+    "year": 2026,
+    "venue": "RSS",
+    "category": "VLA and Generalist Robot Policies",
+    "primary_track": "VLA and generalist robot policies",
+    "tags": [
+      "VLA",
+      "pose tokens",
+      "pretraining",
+      "embodiment alignment"
+    ],
+    "aliases": [
+      "Pose-VLA"
+    ],
+    "identifiers": {
+      "doi": "10.15607/RSS.2026.XXII.145"
+    },
+    "page": "https://roboticsproceedings.org/rss22/p145.html",
+    "project": "https://hetolin.github.io/PoseVLA/",
+    "pdf": "",
+    "sources": {
+      "primary": {
+        "url": "https://roboticsproceedings.org/rss22/p145.html",
+        "kind": "proceedings",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-18"
+      },
+      "paper_pdf": null,
+      "venue_verification": {
+        "url": "https://roboticsproceedings.org/rss22/p145.html",
+        "kind": "proceedings",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-18"
+      },
+      "project": {
+        "url": "https://hetolin.github.io/PoseVLA/",
+        "kind": "author_project",
+        "scope": "project_landing",
+        "verified_on": "2026-11-18"
+      },
+      "preprint": null,
+      "code": null
+    },
+    "publication": {
+      "status": "peer_reviewed",
+      "kind": "conference",
+      "venue": "RSS",
+      "year": 2026,
+      "venue_year": 2026,
+      "presentation": "unknown",
+      "venue_id": "rss"
+    },
+    "artifacts": {
+      "code_status": "project_only",
+      "data_status": "not_identified",
+      "local_pdf_cache": false
+    },
+    "admission_tier": "NEXT",
+    "admission_group": "VLA, cross-embodiment, and long-horizon planning",
+    "relations": [],
+    "note_format": "abstract_analysis_v1",
+    "evidence": "ABSTRACT_CHECKED",
+    "problem": "VQA 중심 표현과 희소한 로봇 action supervision이 세밀한 3D 상태 차이를 학습하기 어렵게 한다.",
+    "method": "Camera-centric pose token으로 공간·trajectory 사전학습을 한 뒤 로봇 action space에 적응한다.",
+    "interface": "3D pose·trajectory supervision으로 표현을 학습하고 embodiment별 행동을 출력한다.",
+    "evaluation": "공식 초록은 RoboTwin 2.0·LIBERO 및 실세계 물체 일반화 실험을 명시한다.",
+    "role": "Pose 표현을 VLA에 넣는 것만으로 새 기여를 주장하지 않도록 하는 직접 선행이다.",
+    "lineage": "SpatialVLA의 spatial embedding과 Pose-VLA의 pose pretraining을 정보/학습 target별로 비교한다.",
+    "question": "Pose token이 정확도 외에 실제 필요한 관측 여부를 예측하는 데 도움이 되는가?",
+    "minimal_experiment": "같은 robot demonstrations에서 pose pretraining 유무와 성공 head 공유 여부를 분리한다.",
+    "verification_questions": "3D 데이터 규모·pose supervision·camera convention·test object 중복",
+    "source_audit": "2026-11-18: 공식 초록·bibliographic record와 연결된 저자 자료 확인. Abstract 기반 등록이며 본문 전체·실험 재현은 미확인.",
+    "curation": {
+      "admission_reason": "Pose 표현을 VLA에 넣는 것만으로 새 기여를 주장하지 않도록 하는 직접 선행이다.",
+      "tier_reason": "Pose 표현을 VLA에 넣는 것만으로 새 기여를 주장하지 않도록 하는 직접 선행이다.",
+      "rationale_status": "recorded",
+      "scope_status": "active",
+      "roles": [
+        "method"
+      ],
+      "role_basis": "manual admission review",
+      "rationale_basis": "vla_rl_manipulation_navigation_focus_review",
+      "rationale_reviewed_on": "2026-11-18",
+      "priority_source_check": {
+        "url": "https://roboticsproceedings.org/rss22/p145.html",
+        "checked_on": "2026-11-18",
+        "scope": "official_abstract_or_project; priority review only"
+      }
+    },
+    "folder": "2026/RSS/2026_RSS_Universal-Pose-Pretraining-for-Generalizable-Vision-Langua",
+    "venue_as_recorded": "RSS",
+    "venue_canonical": "RSS",
+    "paper_type": "method",
+    "provenance": {
+      "metadata_source_kind": "publisher_or_project",
+      "content_evidence": "ABSTRACT_CHECKED",
+      "source_audit_status": "recorded",
+      "metadata_checked_on": "2026-11-18",
+      "source_audit_note": "2026-11-18: 공식 초록·bibliographic record와 연결된 저자 자료 확인. Abstract 기반 등록이며 본문 전체·실험 재현은 미확인.",
+      "schema_version": "1.0",
+      "schema_migrated_on": "2026-11-18",
+      "note_evidence": {
+        "01_overview.md": "ABSTRACT_CHECKED",
+        "02_problem.md": "ABSTRACT_CHECKED",
+        "03_method.md": "ABSTRACT_CHECKED",
+        "04_evaluation.md": "ABSTRACT_CHECKED",
+        "05_insights.md": "ABSTRACT_CHECKED"
+      }
+    },
+    "paper_id": "pr-1212",
+    "evaluation_profile": {
+      "profile_version": "1.0",
+      "status": "structured_note_cues",
+      "type": "not_recorded",
+      "settings": [
+        "not_recorded"
+      ],
+      "protocol": {
+        "dataset_or_benchmark": "not_recorded",
+        "metrics": "not_recorded",
+        "baselines": "not_recorded",
+        "ablations": "not_recorded",
+        "split_or_generalization": "not_recorded",
+        "trials_or_seeds": "not_recorded",
+        "statistics": "not_recorded",
+        "failure_cases": "not_recorded"
+      },
+      "trial_evidence": [],
+      "benchmark_cues": [],
+      "metric_cues": [],
+      "source_note": "2026/RSS/2026_RSS_Universal-Pose-Pretraining-for-Generalizable-Vision-Langua/04_evaluation.md",
+      "reviewed_on": "2026-11-18",
+      "basis": "Abstract/project-only note cues; detailed protocol remains not_recorded. Source claims are not full-text or experiment verification; catalog links are cue_only."
+    },
+    "reproducibility": {
+      "profile_version": "1.0",
+      "status": "metadata_audited",
+      "code": {
+        "status": "project_only",
+        "source": "https://hetolin.github.io/PoseVLA/",
+        "evidence": "manifest_link"
+      },
+      "data": {
+        "status": "not_identified",
+        "source": null,
+        "evidence": "note_cue_scan; no explicit data artifact status identified"
+      },
+      "checkpoint": {
+        "status": "not_recorded",
+        "evidence": "no explicit checkpoint availability cue"
+      },
+      "configuration": {
+        "status": "not_recorded",
+        "evidence": "note_cue_or_not_recorded"
+      },
+      "environment": {
+        "status": "not_recorded",
+        "evidence": "04_evaluation.md section cue"
+      },
+      "run_conditions": {
+        "status": "not_recorded",
+        "evidence": "04_evaluation.md trial/statistics cue"
+      },
+      "reviewed_on": "2026-11-18",
+      "source_note": "2026/RSS/2026_RSS_Universal-Pose-Pretraining-for-Generalizable-Vision-Langua/04_evaluation.md",
+      "basis": "Manifest artifact links and abstract/project-only note cues; full-text protocol and reproducible execution have not been checked."
+    },
+    "lineage_profile": {
+      "profile_version": "1.0",
+      "status": "no_curated_edge_recorded",
+      "outgoing_paper_ids": [],
+      "incoming_paper_ids": [],
+      "queue_adjacency_paper_ids": [],
+      "legacy_summary_candidate_paper_ids": [],
+      "legacy_summary_present": true,
+      "audited_on": "2026-11-18",
+      "audit_scope": "all_registry",
+      "basis": "manifest relations are curated edges; queue adjacency and legacy lineage matches are retained as non-relational candidates. Absence of an edge is not a claim that the paper has no citations."
+    }
+  },
+  {
+    "title": "Robo3R: Enhancing Robotic Manipulation with Accurate Feed-Forward 3D Reconstruction",
+    "year": 2026,
+    "venue": "RSS",
+    "category": "Robotics-Enabling 3D Perception",
+    "primary_track": "Robotics-enabling 3D perception",
+    "tags": [
+      "3D reconstruction",
+      "metric scale",
+      "robot state",
+      "manipulation"
+    ],
+    "aliases": [
+      "Robo3R"
+    ],
+    "identifiers": {
+      "doi": "10.15607/RSS.2026.XXII.056"
+    },
+    "page": "https://roboticsproceedings.org/rss22/p056.html",
+    "project": "https://yangsizhe.github.io/robo3r/",
+    "pdf": "",
+    "sources": {
+      "primary": {
+        "url": "https://roboticsproceedings.org/rss22/p056.html",
+        "kind": "proceedings",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-18"
+      },
+      "paper_pdf": null,
+      "venue_verification": {
+        "url": "https://roboticsproceedings.org/rss22/p056.html",
+        "kind": "proceedings",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-18"
+      },
+      "project": {
+        "url": "https://yangsizhe.github.io/robo3r/",
+        "kind": "author_project",
+        "scope": "project_landing",
+        "verified_on": "2026-11-18"
+      },
+      "preprint": null,
+      "code": null
+    },
+    "publication": {
+      "status": "peer_reviewed",
+      "kind": "conference",
+      "venue": "RSS",
+      "year": 2026,
+      "venue_year": 2026,
+      "presentation": "unknown",
+      "venue_id": "rss"
+    },
+    "artifacts": {
+      "code_status": "project_only",
+      "data_status": "not_identified",
+      "local_pdf_cache": false
+    },
+    "admission_tier": "NEXT",
+    "admission_group": "Active and embodied 3D Vision",
+    "relations": [],
+    "note_format": "abstract_analysis_v1",
+    "evidence": "ABSTRACT_CHECKED",
+    "problem": "깊이 센서와 기존 재구성의 scale/정밀도 오차가 로봇 물리 상호작용을 방해한다.",
+    "method": "RGB와 robot state에서 local geometry·camera pose를 추정하고 robot frame의 metric geometry로 정렬한다.",
+    "interface": "RGB/로봇 상태 → point map·camera pose·robot-frame scene geometry; 별도 downstream policy에 전달한다.",
+    "evaluation": "Robo3R-4M 합성 데이터로 학습하고 imitation·sim-to-real·grasp synthesis·collision-free planning의 downstream 효과를 평가한다.",
+    "role": "TASK-GEOMETRY가 일반 재구성 정확도 개선의 반복인지 판단할 직접 비교다.",
+    "lineage": "DUSt3R/VGGT의 reconstruction 표현과 Robo3R의 robot-frame geometry를 구별한다.",
+    "question": "전체 geometry 오차보다 접촉 영역의 task tolerance가 행동 성공을 더 잘 예측하는가?",
+    "minimal_experiment": "같은 policy와 RGB에서 local shape·scale·extrinsic 오류를 독립적으로 주입한다.",
+    "verification_questions": "Robot state privilege·similarity transform·훈련 물체 중복·latency",
+    "source_audit": "2026-11-18: 공식 초록·bibliographic record와 연결된 저자 자료 확인. Abstract 기반 등록이며 본문 전체·실험 재현은 미확인.",
+    "curation": {
+      "admission_reason": "TASK-GEOMETRY가 일반 재구성 정확도 개선의 반복인지 판단할 직접 비교다.",
+      "tier_reason": "TASK-GEOMETRY가 일반 재구성 정확도 개선의 반복인지 판단할 직접 비교다.",
+      "rationale_status": "recorded",
+      "scope_status": "active",
+      "roles": [
+        "method"
+      ],
+      "role_basis": "manual admission review",
+      "rationale_basis": "vla_rl_manipulation_navigation_focus_review",
+      "rationale_reviewed_on": "2026-11-18",
+      "priority_source_check": {
+        "url": "https://roboticsproceedings.org/rss22/p056.html",
+        "checked_on": "2026-11-18",
+        "scope": "official_abstract_or_project; priority review only"
+      }
+    },
+    "folder": "2026/RSS/2026_RSS_Robo3R-Enhancing-Robotic-Manipulation-with-Accurate-Feed-F",
+    "venue_as_recorded": "RSS",
+    "venue_canonical": "RSS",
+    "paper_type": "method",
+    "provenance": {
+      "metadata_source_kind": "publisher_or_project",
+      "content_evidence": "ABSTRACT_CHECKED",
+      "source_audit_status": "recorded",
+      "metadata_checked_on": "2026-11-18",
+      "source_audit_note": "2026-11-18: 공식 초록·bibliographic record와 연결된 저자 자료 확인. Abstract 기반 등록이며 본문 전체·실험 재현은 미확인.",
+      "schema_version": "1.0",
+      "schema_migrated_on": "2026-11-18",
+      "note_evidence": {
+        "01_overview.md": "ABSTRACT_CHECKED",
+        "02_problem.md": "ABSTRACT_CHECKED",
+        "03_method.md": "ABSTRACT_CHECKED",
+        "04_evaluation.md": "ABSTRACT_CHECKED",
+        "05_insights.md": "ABSTRACT_CHECKED"
+      }
+    },
+    "paper_id": "pr-1213",
+    "evaluation_profile": {
+      "profile_version": "1.0",
+      "status": "structured_note_cues",
+      "type": "not_recorded",
+      "settings": [
+        "not_recorded"
+      ],
+      "protocol": {
+        "dataset_or_benchmark": "not_recorded",
+        "metrics": "not_recorded",
+        "baselines": "not_recorded",
+        "ablations": "not_recorded",
+        "split_or_generalization": "not_recorded",
+        "trials_or_seeds": "not_recorded",
+        "statistics": "not_recorded",
+        "failure_cases": "not_recorded"
+      },
+      "trial_evidence": [],
+      "benchmark_cues": [],
+      "metric_cues": [],
+      "source_note": "2026/RSS/2026_RSS_Robo3R-Enhancing-Robotic-Manipulation-with-Accurate-Feed-F/04_evaluation.md",
+      "reviewed_on": "2026-11-18",
+      "basis": "Abstract/project-only note cues; detailed protocol remains not_recorded. Source claims are not full-text or experiment verification; catalog links are cue_only."
+    },
+    "reproducibility": {
+      "profile_version": "1.0",
+      "status": "metadata_audited",
+      "code": {
+        "status": "project_only",
+        "source": "https://yangsizhe.github.io/robo3r/",
+        "evidence": "manifest_link"
+      },
+      "data": {
+        "status": "not_identified",
+        "source": null,
+        "evidence": "note_cue_scan; no explicit data artifact status identified"
+      },
+      "checkpoint": {
+        "status": "not_recorded",
+        "evidence": "no explicit checkpoint availability cue"
+      },
+      "configuration": {
+        "status": "not_recorded",
+        "evidence": "note_cue_or_not_recorded"
+      },
+      "environment": {
+        "status": "not_recorded",
+        "evidence": "04_evaluation.md section cue"
+      },
+      "run_conditions": {
+        "status": "not_recorded",
+        "evidence": "04_evaluation.md trial/statistics cue"
+      },
+      "reviewed_on": "2026-11-18",
+      "source_note": "2026/RSS/2026_RSS_Robo3R-Enhancing-Robotic-Manipulation-with-Accurate-Feed-F/04_evaluation.md",
+      "basis": "Manifest artifact links and abstract/project-only note cues; full-text protocol and reproducible execution have not been checked."
+    },
+    "lineage_profile": {
+      "profile_version": "1.0",
+      "status": "no_curated_edge_recorded",
+      "outgoing_paper_ids": [],
+      "incoming_paper_ids": [],
+      "queue_adjacency_paper_ids": [],
+      "legacy_summary_candidate_paper_ids": [],
+      "legacy_summary_present": true,
+      "audited_on": "2026-11-18",
+      "audit_scope": "all_registry",
+      "basis": "manifest relations are curated edges; queue adjacency and legacy lineage matches are retained as non-relational candidates. Absence of an edge is not a claim that the paper has no citations."
+    }
+  },
+  {
+    "title": "GeoPredict: Leveraging Predictive Kinematics and 3D Gaussian Geometry for Precise VLA Manipulation",
+    "year": 2026,
+    "venue": "CVPR",
+    "category": "VLA and Generalist Robot Policies",
+    "primary_track": "VLA and generalist robot policies",
+    "tags": [
+      "VLA",
+      "3D Gaussian",
+      "predictive geometry",
+      "kinematics"
+    ],
+    "aliases": [
+      "GeoPredict"
+    ],
+    "identifiers": {},
+    "page": "https://openaccess.thecvf.com/content/CVPR2026/html/Qian_GeoPredict_Leveraging_Predictive_Kinematics_and_3D_Gaussian_Geometry_for_Precise_CVPR_2026_paper.html",
+    "project": "https://github.com/jingjingqian75/GeoPredict",
+    "pdf": "",
+    "sources": {
+      "primary": {
+        "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Qian_GeoPredict_Leveraging_Predictive_Kinematics_and_3D_Gaussian_Geometry_for_Precise_CVPR_2026_paper.html",
+        "kind": "cvf",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-18"
+      },
+      "paper_pdf": null,
+      "venue_verification": {
+        "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Qian_GeoPredict_Leveraging_Predictive_Kinematics_and_3D_Gaussian_Geometry_for_Precise_CVPR_2026_paper.html",
+        "kind": "cvf",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-18"
+      },
+      "code": {
+        "url": "https://github.com/jingjingqian75/GeoPredict",
+        "kind": "official_code",
+        "scope": "code_repository",
+        "verified_on": "2026-11-18"
+      },
+      "preprint": null,
+      "project": {
+        "url": "https://github.com/jingjingqian75/GeoPredict",
+        "kind": "code"
+      }
+    },
+    "publication": {
+      "status": "peer_reviewed",
+      "kind": "conference",
+      "venue": "CVPR",
+      "year": 2026,
+      "venue_year": 2026,
+      "presentation": "unknown",
+      "venue_id": "cvpr"
+    },
+    "artifacts": {
+      "code_status": "released",
+      "data_status": "not_identified",
+      "local_pdf_cache": false
+    },
+    "admission_tier": "NEXT",
+    "admission_group": "VLA, cross-embodiment, and long-horizon planning",
+    "relations": [],
+    "note_format": "abstract_analysis_v1",
+    "evidence": "ABSTRACT_CHECKED",
+    "problem": "반응형 2D VLA가 정밀한 3D 상태 변화와 미래 움직임을 충분히 다루지 못한다.",
+    "method": "로봇 keypoint trajectory와 3D Gaussian geometry 예측을 학습 supervision으로 사용한다.",
+    "interface": "Motion history·영상에서 action을 생성하며 3D decoding은 학습용이다. 배포 query token과 native 3D reconstruction을 구별한다.",
+    "evaluation": "RoboCasa Human-50·LIBERO·실세계 조작에서 geometry 관련 이득을 평가한다.",
+    "role": "3D reconstruction auxiliary loss 자체가 새 기여가 아님을 보여 주는 직접 VLA 비교다.",
+    "lineage": "SpatialVLA의 입력 geometry와 GeoPredict의 학습 시 미래 geometry supervision을 비교한다.",
+    "question": "접촉 ROI의 예측 오차를 줄이는 supervision이 전체 scene reconstruction보다 행동에 유리한가?",
+    "minimal_experiment": "같은 policy/data에서 global geometry와 task-local geometry loss를 compute-matched 비교한다.",
+    "verification_questions": "Depth supervision·keypoint target·배포 추가 token 비용·baseline data fairness",
+    "source_audit": "2026-11-18: 공식 초록·bibliographic record와 연결된 저자 자료 확인. Abstract 기반 등록이며 본문 전체·실험 재현은 미확인. 직접 HTML 접근 제한은 공식 사이트의 검색 색인 abstract/BibTeX 및 저자 abstract/project 자료로 교차 확인; HTML 전면 열람으로 기록하지 않음.",
+    "curation": {
+      "admission_reason": "3D reconstruction auxiliary loss 자체가 새 기여가 아님을 보여 주는 직접 VLA 비교다.",
+      "tier_reason": "3D reconstruction auxiliary loss 자체가 새 기여가 아님을 보여 주는 직접 VLA 비교다.",
+      "rationale_status": "recorded",
+      "scope_status": "active",
+      "roles": [
+        "method"
+      ],
+      "role_basis": "manual admission review",
+      "rationale_basis": "vla_rl_manipulation_navigation_focus_review",
+      "rationale_reviewed_on": "2026-11-18",
+      "priority_source_check": {
+        "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Qian_GeoPredict_Leveraging_Predictive_Kinematics_and_3D_Gaussian_Geometry_for_Precise_CVPR_2026_paper.html",
+        "checked_on": "2026-11-18",
+        "scope": "official_abstract_or_project; priority review only"
+      }
+    },
+    "folder": "2026/CVPR/2026_CVPR_GeoPredict-Leveraging-Predictive-Kinematics-and-3D-Gaussia",
+    "venue_as_recorded": "CVPR",
+    "venue_canonical": "CVPR",
+    "paper_type": "method",
+    "provenance": {
+      "metadata_source_kind": "cvf",
+      "content_evidence": "ABSTRACT_CHECKED",
+      "source_audit_status": "recorded",
+      "metadata_checked_on": "2026-11-18",
+      "source_audit_note": "2026-11-18: 공식 초록·bibliographic record와 연결된 저자 자료 확인. Abstract 기반 등록이며 본문 전체·실험 재현은 미확인. 직접 HTML 접근 제한은 공식 사이트의 검색 색인 abstract/BibTeX 및 저자 abstract/project 자료로 교차 확인; HTML 전면 열람으로 기록하지 않음.",
+      "schema_version": "1.0",
+      "schema_migrated_on": "2026-11-18",
+      "note_evidence": {
+        "01_overview.md": "ABSTRACT_CHECKED",
+        "02_problem.md": "ABSTRACT_CHECKED",
+        "03_method.md": "ABSTRACT_CHECKED",
+        "04_evaluation.md": "ABSTRACT_CHECKED",
+        "05_insights.md": "ABSTRACT_CHECKED"
+      }
+    },
+    "paper_id": "pr-1214",
+    "evaluation_profile": {
+      "profile_version": "1.0",
+      "status": "structured_note_cues",
+      "type": "not_recorded",
+      "settings": [
+        "not_recorded"
+      ],
+      "protocol": {
+        "dataset_or_benchmark": "not_recorded",
+        "metrics": "not_recorded",
+        "baselines": "not_recorded",
+        "ablations": "not_recorded",
+        "split_or_generalization": "not_recorded",
+        "trials_or_seeds": "not_recorded",
+        "statistics": "not_recorded",
+        "failure_cases": "not_recorded"
+      },
+      "trial_evidence": [],
+      "benchmark_cues": [],
+      "metric_cues": [],
+      "source_note": "2026/CVPR/2026_CVPR_GeoPredict-Leveraging-Predictive-Kinematics-and-3D-Gaussia/04_evaluation.md",
+      "reviewed_on": "2026-11-18",
+      "basis": "Abstract/project-only note cues; detailed protocol remains not_recorded. Source claims are not full-text or experiment verification; catalog links are cue_only."
+    },
+    "reproducibility": {
+      "profile_version": "1.0",
+      "status": "metadata_audited",
+      "code": {
+        "status": "released",
+        "source": "https://github.com/jingjingqian75/GeoPredict",
+        "evidence": "manifest_link"
+      },
+      "data": {
+        "status": "not_identified",
+        "source": null,
+        "evidence": "note_cue_scan; no explicit data artifact status identified"
+      },
+      "checkpoint": {
+        "status": "not_recorded",
+        "evidence": "no explicit checkpoint availability cue"
+      },
+      "configuration": {
+        "status": "not_recorded",
+        "evidence": "note_cue_or_not_recorded"
+      },
+      "environment": {
+        "status": "not_recorded",
+        "evidence": "04_evaluation.md section cue"
+      },
+      "run_conditions": {
+        "status": "not_recorded",
+        "evidence": "04_evaluation.md trial/statistics cue"
+      },
+      "reviewed_on": "2026-11-18",
+      "source_note": "2026/CVPR/2026_CVPR_GeoPredict-Leveraging-Predictive-Kinematics-and-3D-Gaussia/04_evaluation.md",
+      "basis": "Manifest artifact links and abstract/project-only note cues; full-text protocol and reproducible execution have not been checked."
+    },
+    "lineage_profile": {
+      "profile_version": "1.0",
+      "status": "no_curated_edge_recorded",
+      "outgoing_paper_ids": [],
+      "incoming_paper_ids": [],
+      "queue_adjacency_paper_ids": [],
+      "legacy_summary_candidate_paper_ids": [],
+      "legacy_summary_present": true,
+      "audited_on": "2026-11-18",
+      "audit_scope": "all_registry",
+      "basis": "manifest relations are curated edges; queue adjacency and legacy lineage matches are retained as non-relational candidates. Absence of an edge is not a claim that the paper has no citations."
+    }
+  },
+  {
+    "title": "ReconVLA: Reconstructive Vision-Language-Action Model as Effective Robot Perceiver",
+    "year": 2026,
+    "venue": "AAAI",
+    "category": "VLA and Generalist Robot Policies",
+    "primary_track": "VLA and generalist robot policies",
+    "tags": [
+      "VLA",
+      "visual grounding",
+      "reconstruction",
+      "manipulation"
+    ],
+    "aliases": [
+      "ReconVLA"
+    ],
+    "identifiers": {
+      "doi": "10.1609/aaai.v40i22.38921"
+    },
+    "page": "https://ojs.aaai.org/index.php/AAAI/article/view/38921",
+    "project": "not identified",
+    "pdf": "",
+    "sources": {
+      "primary": {
+        "url": "https://ojs.aaai.org/index.php/AAAI/article/view/38921",
+        "kind": "proceedings",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-18"
+      },
+      "paper_pdf": null,
+      "venue_verification": {
+        "url": "https://ojs.aaai.org/index.php/AAAI/article/view/38921",
+        "kind": "proceedings",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-18"
+      },
+      "preprint": null,
+      "project": null,
+      "code": null
+    },
+    "publication": {
+      "status": "peer_reviewed",
+      "kind": "conference",
+      "venue": "AAAI",
+      "year": 2026,
+      "venue_year": 2026,
+      "presentation": "unknown",
+      "venue_id": "aaai"
+    },
+    "artifacts": {
+      "code_status": "not_identified",
+      "data_status": "not_identified",
+      "local_pdf_cache": false
+    },
+    "admission_tier": "NEXT",
+    "admission_group": "VLA, cross-embodiment, and long-horizon planning",
+    "relations": [],
+    "note_format": "abstract_analysis_v1",
+    "evidence": "ABSTRACT_CHECKED",
+    "problem": "VLA의 attention이 실제 조작 대상 대신 관련 없는 영역에 분산될 수 있다.",
+    "method": "시각 출력으로 target gaze 영역을 복원하는 diffusion transformer를 학습해 implicit grounding을 유도한다.",
+    "interface": "언어·영상에서 action과 학습용 target-region reconstruction을 연결한다. 3D metric reconstruction 방법은 아니다.",
+    "evaluation": "공개 로봇 데이터 기반 사전학습과 simulation·실세계 조작 평가를 보고한다.",
+    "role": "TASK-GEOMETRY의 이득이 단순 target attention/영역 supervision 때문인지 비교할 선행이다.",
+    "lineage": "OpenVLA/SpatialVLA의 시각 표현과 ReconVLA의 2D target reconstruction을 비교한다.",
+    "question": "Task-local geometry supervision의 효과가 같은 ROI의 2D reconstruction만으로 설명되는가?",
+    "minimal_experiment": "ROI·학습 데이터·추가 parameter를 맞추고 2D/3D auxiliary target을 대조한다.",
+    "verification_questions": "Gaze-region label 생성·data overlap·loss weighting·추론 경로",
+    "source_audit": "2026-11-18: 공식 초록·bibliographic record와 연결된 저자 자료 확인. Abstract 기반 등록이며 본문 전체·실험 재현은 미확인. 직접 HTML 접근 제한은 공식 사이트의 검색 색인 abstract/BibTeX 및 저자 abstract/project 자료로 교차 확인; HTML 전면 열람으로 기록하지 않음.",
+    "curation": {
+      "admission_reason": "TASK-GEOMETRY의 이득이 단순 target attention/영역 supervision 때문인지 비교할 선행이다.",
+      "tier_reason": "TASK-GEOMETRY의 이득이 단순 target attention/영역 supervision 때문인지 비교할 선행이다.",
+      "rationale_status": "recorded",
+      "scope_status": "active",
+      "roles": [
+        "method"
+      ],
+      "role_basis": "manual admission review",
+      "rationale_basis": "vla_rl_manipulation_navigation_focus_review",
+      "rationale_reviewed_on": "2026-11-18",
+      "priority_source_check": {
+        "url": "https://ojs.aaai.org/index.php/AAAI/article/view/38921",
+        "checked_on": "2026-11-18",
+        "scope": "official_abstract_or_project; priority review only"
+      }
+    },
+    "folder": "2026/AAAI/2026_AAAI_ReconVLA-Reconstructive-Vision-Language-Action-Model-as-Ef",
+    "venue_as_recorded": "AAAI",
+    "venue_canonical": "AAAI",
+    "paper_type": "method",
+    "provenance": {
+      "metadata_source_kind": "publisher_or_project",
+      "content_evidence": "ABSTRACT_CHECKED",
+      "source_audit_status": "recorded",
+      "metadata_checked_on": "2026-11-18",
+      "source_audit_note": "2026-11-18: 공식 초록·bibliographic record와 연결된 저자 자료 확인. Abstract 기반 등록이며 본문 전체·실험 재현은 미확인. 직접 HTML 접근 제한은 공식 사이트의 검색 색인 abstract/BibTeX 및 저자 abstract/project 자료로 교차 확인; HTML 전면 열람으로 기록하지 않음.",
+      "schema_version": "1.0",
+      "schema_migrated_on": "2026-11-18",
+      "note_evidence": {
+        "01_overview.md": "ABSTRACT_CHECKED",
+        "02_problem.md": "ABSTRACT_CHECKED",
+        "03_method.md": "ABSTRACT_CHECKED",
+        "04_evaluation.md": "ABSTRACT_CHECKED",
+        "05_insights.md": "ABSTRACT_CHECKED"
+      }
+    },
+    "paper_id": "pr-1215",
+    "evaluation_profile": {
+      "profile_version": "1.0",
+      "status": "structured_note_cues",
+      "type": "not_recorded",
+      "settings": [
+        "not_recorded"
+      ],
+      "protocol": {
+        "dataset_or_benchmark": "not_recorded",
+        "metrics": "not_recorded",
+        "baselines": "not_recorded",
+        "ablations": "not_recorded",
+        "split_or_generalization": "not_recorded",
+        "trials_or_seeds": "not_recorded",
+        "statistics": "not_recorded",
+        "failure_cases": "not_recorded"
+      },
+      "trial_evidence": [],
+      "benchmark_cues": [],
+      "metric_cues": [],
+      "source_note": "2026/AAAI/2026_AAAI_ReconVLA-Reconstructive-Vision-Language-Action-Model-as-Ef/04_evaluation.md",
+      "reviewed_on": "2026-11-18",
+      "basis": "Abstract/project-only note cues; detailed protocol remains not_recorded. Source claims are not full-text or experiment verification; catalog links are cue_only."
+    },
+    "reproducibility": {
+      "profile_version": "1.0",
+      "status": "metadata_audited",
+      "code": {
+        "status": "not_identified",
+        "source": null,
+        "evidence": "not_identified"
+      },
+      "data": {
+        "status": "not_identified",
+        "source": null,
+        "evidence": "note_cue_scan; no explicit data artifact status identified"
+      },
+      "checkpoint": {
+        "status": "not_recorded",
+        "evidence": "no explicit checkpoint availability cue"
+      },
+      "configuration": {
+        "status": "not_recorded",
+        "evidence": "note_cue_or_not_recorded"
+      },
+      "environment": {
+        "status": "not_recorded",
+        "evidence": "04_evaluation.md section cue"
+      },
+      "run_conditions": {
+        "status": "not_recorded",
+        "evidence": "04_evaluation.md trial/statistics cue"
+      },
+      "reviewed_on": "2026-11-18",
+      "source_note": "2026/AAAI/2026_AAAI_ReconVLA-Reconstructive-Vision-Language-Action-Model-as-Ef/04_evaluation.md",
+      "basis": "Manifest artifact links and abstract/project-only note cues; full-text protocol and reproducible execution have not been checked."
+    },
+    "lineage_profile": {
+      "profile_version": "1.0",
+      "status": "no_curated_edge_recorded",
+      "outgoing_paper_ids": [],
+      "incoming_paper_ids": [],
+      "queue_adjacency_paper_ids": [],
+      "legacy_summary_candidate_paper_ids": [],
+      "legacy_summary_present": true,
+      "audited_on": "2026-11-18",
+      "audit_scope": "all_registry",
+      "basis": "manifest relations are curated edges; queue adjacency and legacy lineage matches are retained as non-relational candidates. Absence of an edge is not a claim that the paper has no citations."
+    }
+  },
+  {
+    "title": "Action-Geometry Prediction with 3D Geometric Prior for Bimanual Manipulation",
+    "year": 2026,
+    "venue": "CVPR",
+    "category": "Manipulation, Contact, and Dexterity",
+    "primary_track": "Manipulation, contact, tactile, and dexterity",
+    "tags": [
+      "bimanual manipulation",
+      "3D geometry",
+      "diffusion policy",
+      "action chunk"
+    ],
+    "aliases": [
+      "GAP"
+    ],
+    "identifiers": {},
+    "page": "https://openaccess.thecvf.com/content/CVPR2026/papers/Xu_Action-Geometry_Prediction_with_3D_Geometric_Prior_for_Bimanual_Manipulation_CVPR_2026_paper.pdf",
+    "project": "https://github.com/Chongyang-99/GAP",
+    "pdf": "",
+    "sources": {
+      "primary": {
+        "url": "https://openaccess.thecvf.com/content/CVPR2026/papers/Xu_Action-Geometry_Prediction_with_3D_Geometric_Prior_for_Bimanual_Manipulation_CVPR_2026_paper.pdf",
+        "kind": "cvf",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-18"
+      },
+      "paper_pdf": null,
+      "venue_verification": {
+        "url": "https://openaccess.thecvf.com/CVPR2026?day=2026-06-07",
+        "kind": "cvf",
+        "scope": "venue_index",
+        "verified_on": "2026-11-18"
+      },
+      "code": {
+        "url": "https://github.com/Chongyang-99/GAP",
+        "kind": "official_code",
+        "scope": "code_repository",
+        "verified_on": "2026-11-18"
+      },
+      "preprint": null,
+      "project": {
+        "url": "https://github.com/Chongyang-99/GAP",
+        "kind": "code"
+      }
+    },
+    "publication": {
+      "status": "peer_reviewed",
+      "kind": "conference",
+      "venue": "CVPR",
+      "year": 2026,
+      "venue_year": 2026,
+      "presentation": "unknown",
+      "venue_id": "cvpr"
+    },
+    "artifacts": {
+      "code_status": "released",
+      "data_status": "not_identified",
+      "local_pdf_cache": false
+    },
+    "admission_tier": "NEXT",
+    "admission_group": "Contact-rich, deformable, force, and dexterous manipulation",
+    "relations": [],
+    "note_format": "abstract_analysis_v1",
+    "evidence": "ABSTRACT_CHECKED",
+    "problem": "양팔 조작은 물체와 두 팔의 geometry 변화를 함께 예측해야 한다.",
+    "method": "3D foundation latent·2D semantic feature·proprioception을 합쳐 action chunk와 미래 3D latent를 공동 예측한다.",
+    "interface": "RGB·proprioception → action chunk 및 dense point map으로 해석할 미래 latent. RL exploration covariance와 별개다.",
+    "evaluation": "RoboTwin simulation과 실세계 양팔 조작에서 성공·협응·공간 예측을 비교한다.",
+    "role": "관계 기반 탐색 후보에서 geometry representation 이득과 exploration 변경의 이득을 구별하는 직접 비교다.",
+    "lineage": "Diffusion Policy/DP3 → GAP의 action-geometry 예측 → 관계 조건 탐색을 비교한다.",
+    "question": "Geometry 예측을 이미 학습한 actor에서도 관계별 exploration 분포 변경이 추가로 유효한가?",
+    "minimal_experiment": "동일 action-geometry backbone과 데이터에서 독립/관계 조건 noise만 바꾼다.",
+    "verification_questions": "미래 geometry target·3D foundation freeze 여부·양팔 action frame·data budget",
+    "source_audit": "2026-11-18: 공식 초록·bibliographic record와 연결된 저자 자료 확인. Abstract 기반 등록이며 본문 전체·실험 재현은 미확인. 직접 HTML 접근 제한은 공식 사이트의 검색 색인 abstract/BibTeX 및 저자 abstract/project 자료로 교차 확인; HTML 전면 열람으로 기록하지 않음. GAP는 공식 CVF PDF의 색인 abstract/header 및 CVF 일자별 BibTeX로 확인했다. PDF local cache는 만들지 않았다.",
+    "curation": {
+      "admission_reason": "관계 기반 탐색 후보에서 geometry representation 이득과 exploration 변경의 이득을 구별하는 직접 비교다.",
+      "tier_reason": "관계 기반 탐색 후보에서 geometry representation 이득과 exploration 변경의 이득을 구별하는 직접 비교다.",
+      "rationale_status": "recorded",
+      "scope_status": "active",
+      "roles": [
+        "method"
+      ],
+      "role_basis": "manual admission review",
+      "rationale_basis": "vla_rl_manipulation_navigation_focus_review",
+      "rationale_reviewed_on": "2026-11-18",
+      "priority_source_check": {
+        "url": "https://openaccess.thecvf.com/content/CVPR2026/papers/Xu_Action-Geometry_Prediction_with_3D_Geometric_Prior_for_Bimanual_Manipulation_CVPR_2026_paper.pdf",
+        "checked_on": "2026-11-18",
+        "scope": "official_abstract_or_project; priority review only"
+      }
+    },
+    "folder": "2026/CVPR/2026_CVPR_Action-Geometry-Prediction-with-3D-Geometric-Prior-for-Bim",
+    "venue_as_recorded": "CVPR",
+    "venue_canonical": "CVPR",
+    "paper_type": "method",
+    "provenance": {
+      "metadata_source_kind": "cvf",
+      "content_evidence": "ABSTRACT_CHECKED",
+      "source_audit_status": "recorded",
+      "metadata_checked_on": "2026-11-18",
+      "source_audit_note": "2026-11-18: 공식 초록·bibliographic record와 연결된 저자 자료 확인. Abstract 기반 등록이며 본문 전체·실험 재현은 미확인. 직접 HTML 접근 제한은 공식 사이트의 검색 색인 abstract/BibTeX 및 저자 abstract/project 자료로 교차 확인; HTML 전면 열람으로 기록하지 않음. GAP는 공식 CVF PDF의 색인 abstract/header 및 CVF 일자별 BibTeX로 확인했다. PDF local cache는 만들지 않았다.",
+      "schema_version": "1.0",
+      "schema_migrated_on": "2026-11-18",
+      "note_evidence": {
+        "01_overview.md": "ABSTRACT_CHECKED",
+        "02_problem.md": "ABSTRACT_CHECKED",
+        "03_method.md": "ABSTRACT_CHECKED",
+        "04_evaluation.md": "ABSTRACT_CHECKED",
+        "05_insights.md": "ABSTRACT_CHECKED"
+      }
+    },
+    "paper_id": "pr-1216",
+    "evaluation_profile": {
+      "profile_version": "1.0",
+      "status": "structured_note_cues",
+      "type": "not_recorded",
+      "settings": [
+        "not_recorded"
+      ],
+      "protocol": {
+        "dataset_or_benchmark": "not_recorded",
+        "metrics": "not_recorded",
+        "baselines": "not_recorded",
+        "ablations": "not_recorded",
+        "split_or_generalization": "not_recorded",
+        "trials_or_seeds": "not_recorded",
+        "statistics": "not_recorded",
+        "failure_cases": "not_recorded"
+      },
+      "trial_evidence": [],
+      "benchmark_cues": [],
+      "metric_cues": [],
+      "source_note": "2026/CVPR/2026_CVPR_Action-Geometry-Prediction-with-3D-Geometric-Prior-for-Bim/04_evaluation.md",
+      "reviewed_on": "2026-11-18",
+      "basis": "Abstract/project-only note cues; detailed protocol remains not_recorded. Source claims are not full-text or experiment verification; catalog links are cue_only."
+    },
+    "reproducibility": {
+      "profile_version": "1.0",
+      "status": "metadata_audited",
+      "code": {
+        "status": "released",
+        "source": "https://github.com/Chongyang-99/GAP",
+        "evidence": "manifest_link"
+      },
+      "data": {
+        "status": "not_identified",
+        "source": null,
+        "evidence": "note_cue_scan; no explicit data artifact status identified"
+      },
+      "checkpoint": {
+        "status": "not_recorded",
+        "evidence": "no explicit checkpoint availability cue"
+      },
+      "configuration": {
+        "status": "not_recorded",
+        "evidence": "note_cue_or_not_recorded"
+      },
+      "environment": {
+        "status": "not_recorded",
+        "evidence": "04_evaluation.md section cue"
+      },
+      "run_conditions": {
+        "status": "not_recorded",
+        "evidence": "04_evaluation.md trial/statistics cue"
+      },
+      "reviewed_on": "2026-11-18",
+      "source_note": "2026/CVPR/2026_CVPR_Action-Geometry-Prediction-with-3D-Geometric-Prior-for-Bim/04_evaluation.md",
+      "basis": "Manifest artifact links and abstract/project-only note cues; full-text protocol and reproducible execution have not been checked."
+    },
+    "lineage_profile": {
+      "profile_version": "1.0",
+      "status": "no_curated_edge_recorded",
+      "outgoing_paper_ids": [],
+      "incoming_paper_ids": [],
+      "queue_adjacency_paper_ids": [],
+      "legacy_summary_candidate_paper_ids": [],
+      "legacy_summary_present": true,
+      "audited_on": "2026-11-18",
+      "audit_scope": "all_registry",
+      "basis": "manifest relations are curated edges; queue adjacency and legacy lineage matches are retained as non-relational candidates. Absence of an edge is not a claim that the paper has no citations."
+    }
+  },
+  {
+    "title": "Real-World Reinforcement Learning of Active Perception Behaviors",
+    "year": 2025,
+    "venue": "NeurIPS",
+    "category": "Robot Learning and Data",
+    "primary_track": "RL, IL, offline learning, and robot data",
+    "tags": [
+      "active perception",
+      "real-world RL",
+      "privileged value",
+      "partial observability"
+    ],
+    "aliases": [
+      "AAWR"
+    ],
+    "identifiers": {
+      "doi": "10.52202/085713-3910"
+    },
+    "page": "https://papers.neurips.cc/paper_files/paper/2025/hash/aa1b1a959c80086cba61d0fd66de412f-Abstract-Conference.html",
+    "project": "https://penn-pal-lab.github.io/aawr/",
+    "pdf": "",
+    "sources": {
+      "primary": {
+        "url": "https://papers.neurips.cc/paper_files/paper/2025/hash/aa1b1a959c80086cba61d0fd66de412f-Abstract-Conference.html",
+        "kind": "proceedings",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-18"
+      },
+      "paper_pdf": null,
+      "venue_verification": {
+        "url": "https://papers.neurips.cc/paper_files/paper/2025/hash/aa1b1a959c80086cba61d0fd66de412f-Abstract-Conference.html",
+        "kind": "proceedings",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-18"
+      },
+      "project": {
+        "url": "https://penn-pal-lab.github.io/aawr/",
+        "kind": "author_project",
+        "scope": "project_landing",
+        "verified_on": "2026-11-18"
+      },
+      "preprint": null,
+      "code": null
+    },
+    "publication": {
+      "status": "peer_reviewed",
+      "kind": "conference",
+      "venue": "NeurIPS",
+      "year": 2025,
+      "venue_year": 2025,
+      "presentation": "unknown",
+      "venue_id": "neurips"
+    },
+    "artifacts": {
+      "code_status": "project_only",
+      "data_status": "not_identified",
+      "local_pdf_cache": false
+    },
+    "admission_tier": "NEXT",
+    "admission_group": "RL, IL, offline learning, and robot data",
+    "relations": [],
+    "note_format": "abstract_analysis_v1",
+    "evidence": "ABSTRACT_CHECKED",
+    "problem": "부분 관측 때문에 범용 robot policy가 필요한 정보 수집 행동을 하지 못한다.",
+    "method": "훈련 때만 사용하는 추가 센서로 privileged value를 학습하고 advantage-weighted regression으로 정책을 개선한다.",
+    "interface": "훈련 critic의 privileged 정보와 배포 actor의 제한된 관측을 구분하는 AAWR이다.",
+    "evaluation": "공식 초록은 3개 로봇·8개 조작 과제 및 generalist 초기 정책의 능동 관측 개선을 명시한다.",
+    "role": "VLA+RL로 관측 행동을 만든다는 넓은 주장을 제한하는 핵심 실세계 기준이다.",
+    "lineage": "AWAC/advantage-weighted imitation → AAWR → pose ambiguity 기반 active VLA 질문을 비교한다.",
+    "question": "동일 privileged label 예산에서 성공 양립성 학습이 value-weighted 정책 개선보다 관측을 잘 선택하는가?",
+    "minimal_experiment": "Actor 관측과 critic privilege를 분리하고 같은 초기 정책·interaction budget에서 비교한다.",
+    "verification_questions": "추가 센서 접근·초기 demonstrations·advantage 추정·배포 observation",
+    "source_audit": "2026-11-18: 공식 초록·bibliographic record와 연결된 저자 자료 확인. Abstract 기반 등록이며 본문 전체·실험 재현은 미확인.",
+    "curation": {
+      "admission_reason": "VLA+RL로 관측 행동을 만든다는 넓은 주장을 제한하는 핵심 실세계 기준이다.",
+      "tier_reason": "VLA+RL로 관측 행동을 만든다는 넓은 주장을 제한하는 핵심 실세계 기준이다.",
+      "rationale_status": "recorded",
+      "scope_status": "active",
+      "roles": [
+        "method"
+      ],
+      "role_basis": "manual admission review",
+      "rationale_basis": "vla_rl_manipulation_navigation_focus_review",
+      "rationale_reviewed_on": "2026-11-18",
+      "priority_source_check": {
+        "url": "https://papers.neurips.cc/paper_files/paper/2025/hash/aa1b1a959c80086cba61d0fd66de412f-Abstract-Conference.html",
+        "checked_on": "2026-11-18",
+        "scope": "official_abstract_or_project; priority review only"
+      }
+    },
+    "folder": "2025/NeurIPS/2025_NeurIPS_Real-World-Reinforcement-Learning-of-Active-Perception-Beh",
+    "venue_as_recorded": "NeurIPS",
+    "venue_canonical": "NeurIPS",
+    "paper_type": "method",
+    "provenance": {
+      "metadata_source_kind": "publisher_or_project",
+      "content_evidence": "ABSTRACT_CHECKED",
+      "source_audit_status": "recorded",
+      "metadata_checked_on": "2026-11-18",
+      "source_audit_note": "2026-11-18: 공식 초록·bibliographic record와 연결된 저자 자료 확인. Abstract 기반 등록이며 본문 전체·실험 재현은 미확인.",
+      "schema_version": "1.0",
+      "schema_migrated_on": "2026-11-18",
+      "note_evidence": {
+        "01_overview.md": "ABSTRACT_CHECKED",
+        "02_problem.md": "ABSTRACT_CHECKED",
+        "03_method.md": "ABSTRACT_CHECKED",
+        "04_evaluation.md": "ABSTRACT_CHECKED",
+        "05_insights.md": "ABSTRACT_CHECKED"
+      }
+    },
+    "paper_id": "pr-1217",
+    "evaluation_profile": {
+      "profile_version": "1.0",
+      "status": "structured_note_cues",
+      "type": "not_recorded",
+      "settings": [
+        "not_recorded"
+      ],
+      "protocol": {
+        "dataset_or_benchmark": "not_recorded",
+        "metrics": "not_recorded",
+        "baselines": "not_recorded",
+        "ablations": "not_recorded",
+        "split_or_generalization": "not_recorded",
+        "trials_or_seeds": "not_recorded",
+        "statistics": "not_recorded",
+        "failure_cases": "not_recorded"
+      },
+      "trial_evidence": [],
+      "benchmark_cues": [],
+      "metric_cues": [],
+      "source_note": "2025/NeurIPS/2025_NeurIPS_Real-World-Reinforcement-Learning-of-Active-Perception-Beh/04_evaluation.md",
+      "reviewed_on": "2026-11-18",
+      "basis": "Abstract/project-only note cues; detailed protocol remains not_recorded. Source claims are not full-text or experiment verification; catalog links are cue_only."
+    },
+    "reproducibility": {
+      "profile_version": "1.0",
+      "status": "metadata_audited",
+      "code": {
+        "status": "project_only",
+        "source": "https://penn-pal-lab.github.io/aawr/",
+        "evidence": "manifest_link"
+      },
+      "data": {
+        "status": "not_identified",
+        "source": null,
+        "evidence": "note_cue_scan; no explicit data artifact status identified"
+      },
+      "checkpoint": {
+        "status": "not_recorded",
+        "evidence": "no explicit checkpoint availability cue"
+      },
+      "configuration": {
+        "status": "not_recorded",
+        "evidence": "note_cue_or_not_recorded"
+      },
+      "environment": {
+        "status": "not_recorded",
+        "evidence": "04_evaluation.md section cue"
+      },
+      "run_conditions": {
+        "status": "not_recorded",
+        "evidence": "04_evaluation.md trial/statistics cue"
+      },
+      "reviewed_on": "2026-11-18",
+      "source_note": "2025/NeurIPS/2025_NeurIPS_Real-World-Reinforcement-Learning-of-Active-Perception-Beh/04_evaluation.md",
+      "basis": "Manifest artifact links and abstract/project-only note cues; full-text protocol and reproducible execution have not been checked."
+    },
+    "lineage_profile": {
+      "profile_version": "1.0",
+      "status": "no_curated_edge_recorded",
+      "outgoing_paper_ids": [],
+      "incoming_paper_ids": [],
+      "queue_adjacency_paper_ids": [],
+      "legacy_summary_candidate_paper_ids": [],
+      "legacy_summary_present": true,
+      "audited_on": "2026-11-18",
+      "audit_scope": "all_registry",
+      "basis": "manifest relations are curated edges; queue adjacency and legacy lineage matches are retained as non-relational candidates. Absence of an edge is not a claim that the paper has no citations."
+    }
+  },
+  {
+    "title": "Colored Noise in PPO: Improved Exploration and Performance through Correlated Action Sampling",
+    "year": 2024,
+    "venue": "AAAI",
+    "category": "Robot Learning and Data",
+    "primary_track": "RL, IL, offline learning, and robot data",
+    "tags": [
+      "PPO",
+      "exploration",
+      "temporal correlation",
+      "action noise"
+    ],
+    "aliases": [
+      "Colored Noise PPO"
+    ],
+    "identifiers": {
+      "arxiv": "2312.11091",
+      "doi": "10.1609/aaai.v38i11.29139"
+    },
+    "page": "https://ojs.aaai.org/index.php/AAAI/article/view/29139",
+    "project": "https://github.com/jkbjh/cn-ppo-paper-code",
+    "pdf": "",
+    "sources": {
+      "primary": {
+        "url": "https://ojs.aaai.org/index.php/AAAI/article/view/29139",
+        "kind": "proceedings",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-18"
+      },
+      "paper_pdf": null,
+      "venue_verification": {
+        "url": "https://ojs.aaai.org/index.php/AAAI/article/view/29139",
+        "kind": "proceedings",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-18"
+      },
+      "preprint": {
+        "url": "https://arxiv.org/abs/2312.11091",
+        "kind": "arxiv",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-18"
+      },
+      "code": {
+        "url": "https://github.com/jkbjh/cn-ppo-paper-code",
+        "kind": "official_code",
+        "scope": "code_repository",
+        "verified_on": "2026-11-18"
+      },
+      "project": {
+        "url": "https://github.com/jkbjh/cn-ppo-paper-code",
+        "kind": "code"
+      }
+    },
+    "publication": {
+      "status": "peer_reviewed",
+      "kind": "conference",
+      "venue": "AAAI",
+      "year": 2024,
+      "venue_year": 2024,
+      "presentation": "unknown",
+      "venue_id": "aaai"
+    },
+    "artifacts": {
+      "code_status": "released",
+      "data_status": "not_identified",
+      "local_pdf_cache": false
+    },
+    "admission_tier": "NEXT",
+    "admission_group": "RL, IL, offline learning, and robot data",
+    "relations": [],
+    "note_format": "abstract_analysis_v1",
+    "evidence": "ABSTRACT_CHECKED",
+    "problem": "PPO의 시간적으로 독립적인 action noise가 탐색 trajectory의 구조를 놓칠 수 있다.",
+    "method": "시간 상관을 갖는 colored noise로 stochastic action sampling을 바꾸고 noise color와 병렬 환경 수의 영향을 비교한다.",
+    "interface": "On-policy stochastic actor의 action sampling을 바꾼다. VLA나 양팔 관계 학습을 직접 제안한 것은 아니다.",
+    "evaluation": "On-policy RL의 correlated/white noise와 병렬 data 수집 조건을 비교한다. 이 조사에서 실제 로봇 trial은 확인하지 않았다.",
+    "role": "복잡한 관계 noise 학습 전에 비교해야 할 단순 시간 상관 탐색 baseline이다.",
+    "lineage": "PPO → Colored Noise PPO → StructRL의 실행 action-space noise를 비교한다.",
+    "question": "관계 조건 noise의 이득이 시간 smoothing만으로 설명되는가?",
+    "minimal_experiment": "같은 variance·시간 상관·학습 예산에서 관계 조건과 고정 colored noise를 대조한다.",
+    "verification_questions": "행동 likelihood와 trajectory correlation·noise 재사용·seed/환경 수",
+    "source_audit": "2026-11-18: 공식 초록·bibliographic record와 연결된 저자 자료 확인. Abstract 기반 등록이며 본문 전체·실험 재현은 미확인. 직접 HTML 접근 제한은 공식 사이트의 검색 색인 abstract/BibTeX 및 저자 abstract/project 자료로 교차 확인; HTML 전면 열람으로 기록하지 않음.",
+    "curation": {
+      "admission_reason": "복잡한 관계 noise 학습 전에 비교해야 할 단순 시간 상관 탐색 baseline이다.",
+      "tier_reason": "복잡한 관계 noise 학습 전에 비교해야 할 단순 시간 상관 탐색 baseline이다.",
+      "rationale_status": "recorded",
+      "scope_status": "active",
+      "roles": [
+        "method"
+      ],
+      "role_basis": "manual admission review",
+      "rationale_basis": "vla_rl_manipulation_navigation_focus_review",
+      "rationale_reviewed_on": "2026-11-18",
+      "priority_source_check": {
+        "url": "https://ojs.aaai.org/index.php/AAAI/article/view/29139",
+        "checked_on": "2026-11-18",
+        "scope": "official_abstract_or_project; priority review only"
+      }
+    },
+    "folder": "2024/AAAI/2024_AAAI_Colored-Noise-in-PPO-Improved-Exploration-and-Performance",
+    "venue_as_recorded": "AAAI",
+    "venue_canonical": "AAAI",
+    "paper_type": "method",
+    "provenance": {
+      "metadata_source_kind": "publisher_or_project",
+      "content_evidence": "ABSTRACT_CHECKED",
+      "source_audit_status": "recorded",
+      "metadata_checked_on": "2026-11-18",
+      "source_audit_note": "2026-11-18: 공식 초록·bibliographic record와 연결된 저자 자료 확인. Abstract 기반 등록이며 본문 전체·실험 재현은 미확인. 직접 HTML 접근 제한은 공식 사이트의 검색 색인 abstract/BibTeX 및 저자 abstract/project 자료로 교차 확인; HTML 전면 열람으로 기록하지 않음.",
+      "schema_version": "1.0",
+      "schema_migrated_on": "2026-11-18",
+      "note_evidence": {
+        "01_overview.md": "ABSTRACT_CHECKED",
+        "02_problem.md": "ABSTRACT_CHECKED",
+        "03_method.md": "ABSTRACT_CHECKED",
+        "04_evaluation.md": "ABSTRACT_CHECKED",
+        "05_insights.md": "ABSTRACT_CHECKED"
+      }
+    },
+    "paper_id": "pr-1218",
+    "evaluation_profile": {
+      "profile_version": "1.0",
+      "status": "structured_note_cues",
+      "type": "not_recorded",
+      "settings": [
+        "not_recorded"
+      ],
+      "protocol": {
+        "dataset_or_benchmark": "not_recorded",
+        "metrics": "not_recorded",
+        "baselines": "not_recorded",
+        "ablations": "not_recorded",
+        "split_or_generalization": "not_recorded",
+        "trials_or_seeds": "not_recorded",
+        "statistics": "not_recorded",
+        "failure_cases": "not_recorded"
+      },
+      "trial_evidence": [],
+      "benchmark_cues": [],
+      "metric_cues": [],
+      "source_note": "2024/AAAI/2024_AAAI_Colored-Noise-in-PPO-Improved-Exploration-and-Performance/04_evaluation.md",
+      "reviewed_on": "2026-11-18",
+      "basis": "Abstract/project-only note cues; detailed protocol remains not_recorded. Source claims are not full-text or experiment verification; catalog links are cue_only."
+    },
+    "reproducibility": {
+      "profile_version": "1.0",
+      "status": "metadata_audited",
+      "code": {
+        "status": "released",
+        "source": "https://github.com/jkbjh/cn-ppo-paper-code",
+        "evidence": "manifest_link"
+      },
+      "data": {
+        "status": "not_identified",
+        "source": null,
+        "evidence": "note_cue_scan; no explicit data artifact status identified"
+      },
+      "checkpoint": {
+        "status": "not_recorded",
+        "evidence": "no explicit checkpoint availability cue"
+      },
+      "configuration": {
+        "status": "not_recorded",
+        "evidence": "note_cue_or_not_recorded"
+      },
+      "environment": {
+        "status": "not_recorded",
+        "evidence": "04_evaluation.md section cue"
+      },
+      "run_conditions": {
+        "status": "not_recorded",
+        "evidence": "04_evaluation.md trial/statistics cue"
+      },
+      "reviewed_on": "2026-11-18",
+      "source_note": "2024/AAAI/2024_AAAI_Colored-Noise-in-PPO-Improved-Exploration-and-Performance/04_evaluation.md",
+      "basis": "Manifest artifact links and abstract/project-only note cues; full-text protocol and reproducible execution have not been checked."
+    },
+    "lineage_profile": {
+      "profile_version": "1.0",
+      "status": "no_curated_edge_recorded",
+      "outgoing_paper_ids": [],
+      "incoming_paper_ids": [],
+      "queue_adjacency_paper_ids": [],
+      "legacy_summary_candidate_paper_ids": [],
+      "legacy_summary_present": true,
+      "audited_on": "2026-11-18",
+      "audit_scope": "all_registry",
+      "basis": "manifest relations are curated edges; queue adjacency and legacy lineage matches are retained as non-relational candidates. Absence of an edge is not a claim that the paper has no citations."
+    }
+  },
+  {
+    "title": "Guiding real-world reinforcement learning for in-contact manipulation tasks with Shared Control Templates",
+    "year": 2024,
+    "venue": "Autonomous Robots",
+    "category": "Manipulation, Contact, and Dexterity",
+    "primary_track": "Manipulation, contact, tactile, and dexterity",
+    "tags": [
+      "real-world RL",
+      "contact",
+      "constraints",
+      "shared control"
+    ],
+    "aliases": [
+      "RL-SCT"
+    ],
+    "identifiers": {
+      "doi": "10.1007/s10514-024-10164-6"
+    },
+    "page": "https://link.springer.com/article/10.1007/s10514-024-10164-6",
+    "project": "not identified",
+    "pdf": "",
+    "sources": {
+      "primary": {
+        "url": "https://link.springer.com/article/10.1007/s10514-024-10164-6",
+        "kind": "publisher",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-18"
+      },
+      "paper_pdf": null,
+      "venue_verification": {
+        "url": "https://link.springer.com/article/10.1007/s10514-024-10164-6",
+        "kind": "publisher",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-18"
+      },
+      "preprint": null,
+      "project": null,
+      "code": null
+    },
+    "publication": {
+      "status": "peer_reviewed",
+      "kind": "journal",
+      "venue": "Autonomous Robots",
+      "year": 2024,
+      "venue_year": 2024,
+      "presentation": "unknown",
+      "venue_id": "autonomous-robots"
+    },
+    "artifacts": {
+      "code_status": "not_identified",
+      "data_status": "not_identified",
+      "local_pdf_cache": false
+    },
+    "admission_tier": "NEXT",
+    "admission_group": "Contact-rich, deformable, force, and dexterous manipulation",
+    "relations": [],
+    "note_format": "abstract_analysis_v1",
+    "evidence": "ABSTRACT_CHECKED",
+    "problem": "접촉 과제의 자유로운 RL 탐색은 많은 실제 상호작용과 위험한 동작을 요구한다.",
+    "method": "물체 관계·task geometry의 알려진 제약을 shared-control template으로 표현해 RL이 탐색하는 차원을 줄인다.",
+    "interface": "Template가 제한한 state/action 공간에서 unknown task knowledge를 학습한다. 단일 VLA 내부의 learned exploration은 아니다.",
+    "evaluation": "7-DoF 실제 로봇의 pouring·grid-clamp placement를 다룬다. 논문의 안전 주장 조건을 보편적 보증으로 일반화하지 않는다.",
+    "role": "관계/geometry로 탐색을 제한한다는 원리를 이미 제시한 직접 선행이다.",
+    "lineage": "제약 제어 → Shared Control Templates → 관계 조건 VLA exploration을 비교한다.",
+    "question": "학습한 관계 조건 탐색이 고정 task template의 구현 비용과 일반화 한계를 줄이는가?",
+    "minimal_experiment": "고정 제약 template과 learned weighting에 동일 관계 정보·action budget을 제공한다.",
+    "verification_questions": "수동 task constraint·phase 전환·안전 보증 전제·reward 정보",
+    "source_audit": "2026-11-18: 공식 초록·bibliographic record와 연결된 저자 자료 확인. Abstract 기반 등록이며 본문 전체·실험 재현은 미확인. Autonomous Robots journal로 기록하며 top-tier conference 논문으로 묶지 않는다.",
+    "curation": {
+      "admission_reason": "관계/geometry로 탐색을 제한한다는 원리를 이미 제시한 직접 선행이다.",
+      "tier_reason": "관계/geometry로 탐색을 제한한다는 원리를 이미 제시한 직접 선행이다.",
+      "rationale_status": "recorded",
+      "scope_status": "active",
+      "roles": [
+        "method"
+      ],
+      "role_basis": "manual admission review",
+      "rationale_basis": "vla_rl_manipulation_navigation_focus_review",
+      "rationale_reviewed_on": "2026-11-18",
+      "priority_source_check": {
+        "url": "https://link.springer.com/article/10.1007/s10514-024-10164-6",
+        "checked_on": "2026-11-18",
+        "scope": "official_abstract_or_project; priority review only"
+      }
+    },
+    "folder": "2024/Autonomous-Robots/2024_Autonomous-Robots_Guiding-real-world-reinforcement-learning-for-in-contact-m",
+    "venue_as_recorded": "Autonomous Robots",
+    "venue_canonical": "Autonomous Robots",
+    "paper_type": "method",
+    "provenance": {
+      "metadata_source_kind": "publisher_or_project",
+      "content_evidence": "ABSTRACT_CHECKED",
+      "source_audit_status": "recorded",
+      "metadata_checked_on": "2026-11-18",
+      "source_audit_note": "2026-11-18: 공식 초록·bibliographic record와 연결된 저자 자료 확인. Abstract 기반 등록이며 본문 전체·실험 재현은 미확인. Autonomous Robots journal로 기록하며 top-tier conference 논문으로 묶지 않는다.",
+      "schema_version": "1.0",
+      "schema_migrated_on": "2026-11-18",
+      "note_evidence": {
+        "01_overview.md": "ABSTRACT_CHECKED",
+        "02_problem.md": "ABSTRACT_CHECKED",
+        "03_method.md": "ABSTRACT_CHECKED",
+        "04_evaluation.md": "ABSTRACT_CHECKED",
+        "05_insights.md": "ABSTRACT_CHECKED"
+      }
+    },
+    "paper_id": "pr-1219",
+    "evaluation_profile": {
+      "profile_version": "1.0",
+      "status": "structured_note_cues",
+      "type": "not_recorded",
+      "settings": [
+        "not_recorded"
+      ],
+      "protocol": {
+        "dataset_or_benchmark": "not_recorded",
+        "metrics": "not_recorded",
+        "baselines": "not_recorded",
+        "ablations": "not_recorded",
+        "split_or_generalization": "not_recorded",
+        "trials_or_seeds": "not_recorded",
+        "statistics": "not_recorded",
+        "failure_cases": "not_recorded"
+      },
+      "trial_evidence": [],
+      "benchmark_cues": [],
+      "metric_cues": [],
+      "source_note": "2024/Autonomous-Robots/2024_Autonomous-Robots_Guiding-real-world-reinforcement-learning-for-in-contact-m/04_evaluation.md",
+      "reviewed_on": "2026-11-18",
+      "basis": "Abstract/project-only note cues; detailed protocol remains not_recorded. Source claims are not full-text or experiment verification; catalog links are cue_only."
+    },
+    "reproducibility": {
+      "profile_version": "1.0",
+      "status": "metadata_audited",
+      "code": {
+        "status": "not_identified",
+        "source": null,
+        "evidence": "not_identified"
+      },
+      "data": {
+        "status": "not_identified",
+        "source": null,
+        "evidence": "note_cue_scan; no explicit data artifact status identified"
+      },
+      "checkpoint": {
+        "status": "not_recorded",
+        "evidence": "no explicit checkpoint availability cue"
+      },
+      "configuration": {
+        "status": "not_recorded",
+        "evidence": "note_cue_or_not_recorded"
+      },
+      "environment": {
+        "status": "not_recorded",
+        "evidence": "04_evaluation.md section cue"
+      },
+      "run_conditions": {
+        "status": "not_recorded",
+        "evidence": "04_evaluation.md trial/statistics cue"
+      },
+      "reviewed_on": "2026-11-18",
+      "source_note": "2024/Autonomous-Robots/2024_Autonomous-Robots_Guiding-real-world-reinforcement-learning-for-in-contact-m/04_evaluation.md",
+      "basis": "Manifest artifact links and abstract/project-only note cues; full-text protocol and reproducible execution have not been checked."
+    },
+    "lineage_profile": {
+      "profile_version": "1.0",
+      "status": "no_curated_edge_recorded",
+      "outgoing_paper_ids": [],
+      "incoming_paper_ids": [],
+      "queue_adjacency_paper_ids": [],
+      "legacy_summary_candidate_paper_ids": [],
+      "legacy_summary_present": true,
+      "audited_on": "2026-11-18",
+      "audit_scope": "all_registry",
+      "basis": "manifest relations are curated edges; queue adjacency and legacy lineage matches are retained as non-relational candidates. Absence of an edge is not a claim that the paper has no citations."
+    }
+  },
+  {
+    "title": "Robotic task success evaluation under multi-modal non-parametric object pose uncertainty",
+    "year": 2025,
+    "venue": "Industrial Robot",
+    "category": "Robotics-Enabling 3D Perception",
+    "primary_track": "Robotics-enabling 3D perception",
+    "tags": [
+      "pose uncertainty",
+      "task success",
+      "mobile manipulation",
+      "tolerance"
+    ],
+    "aliases": [],
+    "identifiers": {
+      "arxiv": "2403.10874",
+      "doi": "10.1108/IR-10-2024-0467"
+    },
+    "page": "https://www.emerald.com/ir/article-abstract/52/5/651/1254840/Robotic-task-success-evaluation-under-multi-modal?redirectedFrom=PDF",
+    "project": "not identified",
+    "pdf": "",
+    "sources": {
+      "primary": {
+        "url": "https://www.emerald.com/ir/article-abstract/52/5/651/1254840/Robotic-task-success-evaluation-under-multi-modal?redirectedFrom=PDF",
+        "kind": "publisher",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-18"
+      },
+      "paper_pdf": null,
+      "venue_verification": {
+        "url": "https://www.emerald.com/ir/article-abstract/52/5/651/1254840/Robotic-task-success-evaluation-under-multi-modal?redirectedFrom=PDF",
+        "kind": "publisher",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-18"
+      },
+      "preprint": {
+        "url": "https://arxiv.org/abs/2403.10874",
+        "kind": "arxiv",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-18"
+      },
+      "project": null,
+      "code": null
+    },
+    "publication": {
+      "status": "peer_reviewed",
+      "kind": "journal",
+      "venue": "Industrial Robot",
+      "year": 2025,
+      "venue_year": 2025,
+      "presentation": "unknown",
+      "venue_id": "industrial-robot"
+    },
+    "artifacts": {
+      "code_status": "not_identified",
+      "data_status": "not_identified",
+      "local_pdf_cache": false
+    },
+    "admission_tier": "NEXT",
+    "admission_group": "Active and embodied 3D Vision",
+    "relations": [],
+    "note_format": "abstract_analysis_v1",
+    "evidence": "ABSTRACT_CHECKED",
+    "problem": "정확한 pose가 아니어도 task가 성공할 수 있으므로 pose error만으로 행동 여부를 결정하기 어렵다.",
+    "method": "Simulation으로 허용 pose-error 공간을 미리 구하고 다봉 추정 오차 분포와 적분해 task 성공 가능성을 계산한다.",
+    "interface": "Pose uncertainty와 task-specific acceptable-error 공간에서 성공 가능성을 얻는다. VLA 표현 학습은 별도다.",
+    "evaluation": "공식 publisher 초록은 두 mobile manipulation task의 성공/실패 평가를 명시한다.",
+    "role": "불확실성이 남아도 성공하면 행동한다는 원리를 신규성에서 제외하게 하는 직접 비교다.",
+    "lineage": "Pose-error uncertainty → task tolerance integration → 후보 행동별 성공 lookup과 비교한다.",
+    "question": "같은 simulation label 예산에서 learned shared VLA head가 후보별 lookup보다 일반화하는가?",
+    "minimal_experiment": "동일 pose 가설·행동 후보에 lookup과 별도 classifier·공유 head를 비교한다.",
+    "verification_questions": "허용 오차 precompute 비용·동역학 전제·online pose distribution·최종본과 preprint 차이",
+    "source_audit": "2026-11-18: 공식 초록·bibliographic record와 연결된 저자 자료 확인. Abstract 기반 등록이며 본문 전체·실험 재현은 미확인. Industrial Robot 52(5), 651–662; top-tier로 표시하지 않는다. 2024 preprint와 2025 journal은 동일 entry로 관리.",
+    "curation": {
+      "admission_reason": "불확실성이 남아도 성공하면 행동한다는 원리를 신규성에서 제외하게 하는 직접 비교다.",
+      "tier_reason": "불확실성이 남아도 성공하면 행동한다는 원리를 신규성에서 제외하게 하는 직접 비교다.",
+      "rationale_status": "recorded",
+      "scope_status": "active",
+      "roles": [
+        "method"
+      ],
+      "role_basis": "manual admission review",
+      "rationale_basis": "vla_rl_manipulation_navigation_focus_review",
+      "rationale_reviewed_on": "2026-11-18",
+      "priority_source_check": {
+        "url": "https://www.emerald.com/ir/article-abstract/52/5/651/1254840/Robotic-task-success-evaluation-under-multi-modal?redirectedFrom=PDF",
+        "checked_on": "2026-11-18",
+        "scope": "official_abstract_or_project; priority review only"
+      }
+    },
+    "folder": "2025/Industrial-Robot/2025_Industrial-Robot_Robotic-task-success-evaluation-under-multi-modal-non-para",
+    "venue_as_recorded": "Industrial Robot",
+    "venue_canonical": "Industrial Robot",
+    "paper_type": "method",
+    "provenance": {
+      "metadata_source_kind": "publisher_or_project",
+      "content_evidence": "ABSTRACT_CHECKED",
+      "source_audit_status": "recorded",
+      "metadata_checked_on": "2026-11-18",
+      "source_audit_note": "2026-11-18: 공식 초록·bibliographic record와 연결된 저자 자료 확인. Abstract 기반 등록이며 본문 전체·실험 재현은 미확인. Industrial Robot 52(5), 651–662; top-tier로 표시하지 않는다. 2024 preprint와 2025 journal은 동일 entry로 관리.",
+      "schema_version": "1.0",
+      "schema_migrated_on": "2026-11-18",
+      "note_evidence": {
+        "01_overview.md": "ABSTRACT_CHECKED",
+        "02_problem.md": "ABSTRACT_CHECKED",
+        "03_method.md": "ABSTRACT_CHECKED",
+        "04_evaluation.md": "ABSTRACT_CHECKED",
+        "05_insights.md": "ABSTRACT_CHECKED"
+      }
+    },
+    "paper_id": "pr-1220",
+    "evaluation_profile": {
+      "profile_version": "1.0",
+      "status": "structured_note_cues",
+      "type": "not_recorded",
+      "settings": [
+        "not_recorded"
+      ],
+      "protocol": {
+        "dataset_or_benchmark": "not_recorded",
+        "metrics": "not_recorded",
+        "baselines": "not_recorded",
+        "ablations": "not_recorded",
+        "split_or_generalization": "not_recorded",
+        "trials_or_seeds": "not_recorded",
+        "statistics": "not_recorded",
+        "failure_cases": "not_recorded"
+      },
+      "trial_evidence": [],
+      "benchmark_cues": [],
+      "metric_cues": [],
+      "source_note": "2025/Industrial-Robot/2025_Industrial-Robot_Robotic-task-success-evaluation-under-multi-modal-non-para/04_evaluation.md",
+      "reviewed_on": "2026-11-18",
+      "basis": "Abstract/project-only note cues; detailed protocol remains not_recorded. Source claims are not full-text or experiment verification; catalog links are cue_only."
+    },
+    "reproducibility": {
+      "profile_version": "1.0",
+      "status": "metadata_audited",
+      "code": {
+        "status": "not_identified",
+        "source": null,
+        "evidence": "not_identified"
+      },
+      "data": {
+        "status": "not_identified",
+        "source": null,
+        "evidence": "note_cue_scan; no explicit data artifact status identified"
+      },
+      "checkpoint": {
+        "status": "not_recorded",
+        "evidence": "no explicit checkpoint availability cue"
+      },
+      "configuration": {
+        "status": "not_recorded",
+        "evidence": "note_cue_or_not_recorded"
+      },
+      "environment": {
+        "status": "not_recorded",
+        "evidence": "04_evaluation.md section cue"
+      },
+      "run_conditions": {
+        "status": "not_recorded",
+        "evidence": "04_evaluation.md trial/statistics cue"
+      },
+      "reviewed_on": "2026-11-18",
+      "source_note": "2025/Industrial-Robot/2025_Industrial-Robot_Robotic-task-success-evaluation-under-multi-modal-non-para/04_evaluation.md",
+      "basis": "Manifest artifact links and abstract/project-only note cues; full-text protocol and reproducible execution have not been checked."
+    },
+    "lineage_profile": {
+      "profile_version": "1.0",
+      "status": "no_curated_edge_recorded",
+      "outgoing_paper_ids": [],
+      "incoming_paper_ids": [],
+      "queue_adjacency_paper_ids": [],
+      "legacy_summary_candidate_paper_ids": [],
+      "legacy_summary_present": true,
+      "audited_on": "2026-11-18",
+      "audit_scope": "all_registry",
+      "basis": "manifest relations are curated edges; queue adjacency and legacy lineage matches are retained as non-relational candidates. Absence of an edge is not a claim that the paper has no citations."
+    }
+  },
+  {
+    "title": "StructRL: Structured Action-Space Exploration for Flow-Based VLAs",
+    "year": 2026,
+    "venue": "arXiv",
+    "category": "VLA and Generalist Robot Policies",
+    "primary_track": "VLA and generalist robot policies",
+    "tags": [
+      "VLA",
+      "RL",
+      "flow policy",
+      "structured exploration"
+    ],
+    "aliases": [
+      "StructRL"
+    ],
+    "identifiers": {
+      "arxiv": "2608.15139"
+    },
+    "page": "https://arxiv.org/abs/2608.15139",
+    "project": "not identified",
+    "pdf": "",
+    "sources": {
+      "primary": {
+        "url": "https://arxiv.org/abs/2608.15139",
+        "kind": "arxiv",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-18"
+      },
+      "paper_pdf": null,
+      "preprint": {
+        "url": "https://arxiv.org/abs/2608.15139",
+        "kind": "arxiv",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-18"
+      },
+      "project": null,
+      "code": null
+    },
+    "publication": {
+      "status": "preprint",
+      "kind": "preprint",
+      "venue": "arXiv",
+      "year": 2026,
+      "venue_year": 2026,
+      "presentation": "unknown",
+      "venue_id": "arxiv"
+    },
+    "artifacts": {
+      "code_status": "not_identified",
+      "data_status": "not_identified",
+      "local_pdf_cache": false
+    },
+    "admission_tier": "NEXT",
+    "admission_group": "VLA, cross-embodiment, and long-horizon planning",
+    "relations": [],
+    "note_format": "abstract_analysis_v1",
+    "evidence": "ABSTRACT_CHECKED",
+    "problem": "Flow 중간에 넣은 구조적 탐색 noise가 남은 denoising 과정에서 약해질 수 있다.",
+    "method": "Deterministic ODE decoder 뒤 실행 action space에 구조적 noise를 넣고 last-step replay로 정책 갱신 신호를 구성한다.",
+    "interface": "VLA flow decoder와 실행 행동의 stochasticity를 분리한다. 조건부 양팔 관계 학습의 선행 경계를 정한다.",
+    "evaluation": "초록은 로봇 조작의 online RL 탐색을 대상으로 한다. 이번 등록에서는 task별 수치·동일 compute 여부를 확정하지 않는다.",
+    "role": "관계 기반 RL 탐색의 noise 위치·시간 구조·재채점 설계와 직접 충돌하는 최신 선행이다.",
+    "lineage": "Flow Matching/PPO·Colored Noise → StructRL → 관계 조건 covariance의 차이를 심사한다.",
+    "question": "실행 action noise의 구조를 이미 맞춘 뒤에도 시각/상태 조건 관계 학습의 이득이 남는가?",
+    "minimal_experiment": "동일 ODE·variance·time correlation·replay에서 관계 conditioning만 비교한다.",
+    "verification_questions": "Last-step likelihood 의미·noise covariance·중간 flow dilution 분석·코드 호환",
+    "source_audit": "2026-11-18: 공식 초록·bibliographic record와 연결된 저자 자료 확인. Abstract 기반 등록이며 본문 전체·실험 재현은 미확인. 이전 project URL은 이번 도구에서 접근 실패하여 새 release 상태를 확정하지 않았다. 공식 conference/journal acceptance 확인을 확보하지 못해 preprint 유지.",
+    "curation": {
+      "admission_reason": "관계 기반 RL 탐색의 noise 위치·시간 구조·재채점 설계와 직접 충돌하는 최신 선행이다.",
+      "tier_reason": "관계 기반 RL 탐색의 noise 위치·시간 구조·재채점 설계와 직접 충돌하는 최신 선행이다.",
+      "rationale_status": "recorded",
+      "scope_status": "active",
+      "roles": [
+        "method"
+      ],
+      "role_basis": "manual admission review",
+      "rationale_basis": "vla_rl_manipulation_navigation_focus_review",
+      "rationale_reviewed_on": "2026-11-18",
+      "priority_source_check": {
+        "url": "https://arxiv.org/abs/2608.15139",
+        "checked_on": "2026-11-18",
+        "scope": "official_abstract_or_project; priority review only"
+      }
+    },
+    "folder": "2026/arXiv/2026_arXiv_StructRL-Structured-Action-Space-Exploration-for-Flow-Base",
+    "venue_as_recorded": "arXiv",
+    "venue_canonical": "arXiv",
+    "paper_type": "method",
+    "provenance": {
+      "metadata_source_kind": "arxiv",
+      "content_evidence": "ABSTRACT_CHECKED",
+      "source_audit_status": "recorded",
+      "metadata_checked_on": "2026-11-18",
+      "source_audit_note": "2026-11-18: 공식 초록·bibliographic record와 연결된 저자 자료 확인. Abstract 기반 등록이며 본문 전체·실험 재현은 미확인. 이전 project URL은 이번 도구에서 접근 실패하여 새 release 상태를 확정하지 않았다. 공식 conference/journal acceptance 확인을 확보하지 못해 preprint 유지.",
+      "schema_version": "1.0",
+      "schema_migrated_on": "2026-11-18",
+      "note_evidence": {
+        "01_overview.md": "ABSTRACT_CHECKED",
+        "02_problem.md": "ABSTRACT_CHECKED",
+        "03_method.md": "ABSTRACT_CHECKED",
+        "04_evaluation.md": "ABSTRACT_CHECKED",
+        "05_insights.md": "ABSTRACT_CHECKED"
+      }
+    },
+    "paper_id": "pr-1221",
+    "evaluation_profile": {
+      "profile_version": "1.0",
+      "status": "structured_note_cues",
+      "type": "not_recorded",
+      "settings": [
+        "not_recorded"
+      ],
+      "protocol": {
+        "dataset_or_benchmark": "not_recorded",
+        "metrics": "not_recorded",
+        "baselines": "not_recorded",
+        "ablations": "not_recorded",
+        "split_or_generalization": "not_recorded",
+        "trials_or_seeds": "not_recorded",
+        "statistics": "not_recorded",
+        "failure_cases": "not_recorded"
+      },
+      "trial_evidence": [],
+      "benchmark_cues": [],
+      "metric_cues": [],
+      "source_note": "2026/arXiv/2026_arXiv_StructRL-Structured-Action-Space-Exploration-for-Flow-Base/04_evaluation.md",
+      "reviewed_on": "2026-11-18",
+      "basis": "Abstract/project-only note cues; detailed protocol remains not_recorded. Source claims are not full-text or experiment verification; catalog links are cue_only."
+    },
+    "reproducibility": {
+      "profile_version": "1.0",
+      "status": "metadata_audited",
+      "code": {
+        "status": "not_identified",
+        "source": null,
+        "evidence": "not_identified"
+      },
+      "data": {
+        "status": "not_identified",
+        "source": null,
+        "evidence": "note_cue_scan; no explicit data artifact status identified"
+      },
+      "checkpoint": {
+        "status": "not_recorded",
+        "evidence": "no explicit checkpoint availability cue"
+      },
+      "configuration": {
+        "status": "not_recorded",
+        "evidence": "note_cue_or_not_recorded"
+      },
+      "environment": {
+        "status": "not_recorded",
+        "evidence": "04_evaluation.md section cue"
+      },
+      "run_conditions": {
+        "status": "not_recorded",
+        "evidence": "04_evaluation.md trial/statistics cue"
+      },
+      "reviewed_on": "2026-11-18",
+      "source_note": "2026/arXiv/2026_arXiv_StructRL-Structured-Action-Space-Exploration-for-Flow-Base/04_evaluation.md",
+      "basis": "Manifest artifact links and abstract/project-only note cues; full-text protocol and reproducible execution have not been checked."
+    },
+    "lineage_profile": {
+      "profile_version": "1.0",
+      "status": "no_curated_edge_recorded",
+      "outgoing_paper_ids": [],
+      "incoming_paper_ids": [],
+      "queue_adjacency_paper_ids": [],
+      "legacy_summary_candidate_paper_ids": [],
+      "legacy_summary_present": true,
+      "audited_on": "2026-11-18",
+      "audit_scope": "all_registry",
+      "basis": "manifest relations are curated edges; queue adjacency and legacy lineage matches are retained as non-relational candidates. Absence of an edge is not a claim that the paper has no citations."
+    }
+  },
+  {
+    "title": "SOE: Sample-Efficient Robot Policy Self-Improvement via On-Manifold Exploration",
+    "year": 2025,
+    "venue": "arXiv",
+    "category": "Robot Learning and Data",
+    "primary_track": "RL, IL, offline learning, and robot data",
+    "tags": [
+      "robot self-improvement",
+      "latent exploration",
+      "action manifold",
+      "manipulation"
+    ],
+    "aliases": [
+      "SOE"
+    ],
+    "identifiers": {
+      "arxiv": "2509.19292"
+    },
+    "page": "https://arxiv.org/abs/2509.19292",
+    "project": "https://ericjin2002.github.io/SOE/",
+    "pdf": "",
+    "sources": {
+      "primary": {
+        "url": "https://arxiv.org/abs/2509.19292",
+        "kind": "arxiv",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-18"
+      },
+      "paper_pdf": null,
+      "preprint": {
+        "url": "https://arxiv.org/abs/2509.19292",
+        "kind": "arxiv",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-18"
+      },
+      "project": {
+        "url": "https://ericjin2002.github.io/SOE/",
+        "kind": "author_project",
+        "scope": "project_landing",
+        "verified_on": "2026-11-18"
+      },
+      "code": {
+        "url": "https://github.com/EricJin2002/SOE",
+        "kind": "official_code",
+        "scope": "code_repository",
+        "verified_on": "2026-11-18"
+      }
+    },
+    "publication": {
+      "status": "preprint",
+      "kind": "preprint",
+      "venue": "arXiv",
+      "year": 2025,
+      "venue_year": 2025,
+      "presentation": "unknown",
+      "venue_id": "arxiv"
+    },
+    "artifacts": {
+      "code_status": "released",
+      "data_status": "not_identified",
+      "local_pdf_cache": false
+    },
+    "admission_tier": "NEXT",
+    "admission_group": "RL, IL, offline learning, and robot data",
+    "relations": [],
+    "note_format": "abstract_analysis_v1",
+    "evidence": "ABSTRACT_CHECKED",
+    "problem": "기존 policy의 action mode collapse와 무작위 perturbation이 유효한 탐색을 제한한다.",
+    "method": "Task 관련 latent를 학습하고 유효한 행동 manifold에서 탐색하며 human-guided exploration을 지원한다.",
+    "interface": "기본 policy에 추가하는 latent exploration 모듈이며 원 VLA 가중치의 공동 갱신과 구별해야 한다.",
+    "evaluation": "저자 project는 robomimic의 4개 simulation task와 mug hanging·toaster loading·lamp capping 실제 과제를 제시한다.",
+    "role": "관계 조건 탐색이 일반 latent/on-manifold 탐색보다 필요한지 확인할 직접 baseline이다.",
+    "lineage": "정책 사전학습 → SOE latent exploration → StructRL/관계 조건 탐색을 비교한다.",
+    "question": "같은 backbone과 유효 행동 coverage에서 관계 조건이 latent exploration보다 이득을 주는가?",
+    "minimal_experiment": "공통 policy·latent capacity·interaction budget에서 조건 없는 manifold와 관계 conditioning을 대조한다.",
+    "verification_questions": "Manifold 학습 데이터·추가 supervision·policy update 방식·안전 주장 조건",
+    "source_audit": "2026-11-18: 공식 초록·bibliographic record와 연결된 저자 자료 확인. Abstract 기반 등록이며 본문 전체·실험 재현은 미확인. 저자 repo ICRA2026 표기와 일부 BibTeX IROS2025 문구가 혼재한다. 공식 proceedings identity를 확보하지 못해 arXiv2025 유지. 공식 conference/journal acceptance 확인을 확보하지 못해 preprint 유지.",
+    "curation": {
+      "admission_reason": "관계 조건 탐색이 일반 latent/on-manifold 탐색보다 필요한지 확인할 직접 baseline이다.",
+      "tier_reason": "관계 조건 탐색이 일반 latent/on-manifold 탐색보다 필요한지 확인할 직접 baseline이다.",
+      "rationale_status": "recorded",
+      "scope_status": "active",
+      "roles": [
+        "method"
+      ],
+      "role_basis": "manual admission review",
+      "rationale_basis": "vla_rl_manipulation_navigation_focus_review",
+      "rationale_reviewed_on": "2026-11-18",
+      "priority_source_check": {
+        "url": "https://arxiv.org/abs/2509.19292",
+        "checked_on": "2026-11-18",
+        "scope": "official_abstract_or_project; priority review only"
+      }
+    },
+    "folder": "2025/arXiv/2025_arXiv_SOE-Sample-Efficient-Robot-Policy-Self-Improvement-via-On",
+    "venue_as_recorded": "arXiv",
+    "venue_canonical": "arXiv",
+    "paper_type": "method",
+    "provenance": {
+      "metadata_source_kind": "arxiv",
+      "content_evidence": "ABSTRACT_CHECKED",
+      "source_audit_status": "recorded",
+      "metadata_checked_on": "2026-11-18",
+      "source_audit_note": "2026-11-18: 공식 초록·bibliographic record와 연결된 저자 자료 확인. Abstract 기반 등록이며 본문 전체·실험 재현은 미확인. 저자 repo ICRA2026 표기와 일부 BibTeX IROS2025 문구가 혼재한다. 공식 proceedings identity를 확보하지 못해 arXiv2025 유지. 공식 conference/journal acceptance 확인을 확보하지 못해 preprint 유지.",
+      "schema_version": "1.0",
+      "schema_migrated_on": "2026-11-18",
+      "note_evidence": {
+        "01_overview.md": "ABSTRACT_CHECKED",
+        "02_problem.md": "ABSTRACT_CHECKED",
+        "03_method.md": "ABSTRACT_CHECKED",
+        "04_evaluation.md": "ABSTRACT_CHECKED",
+        "05_insights.md": "ABSTRACT_CHECKED"
+      }
+    },
+    "paper_id": "pr-1222",
+    "evaluation_profile": {
+      "profile_version": "1.0",
+      "status": "structured_note_cues",
+      "type": "not_recorded",
+      "settings": [
+        "not_recorded"
+      ],
+      "protocol": {
+        "dataset_or_benchmark": "not_recorded",
+        "metrics": "not_recorded",
+        "baselines": "not_recorded",
+        "ablations": "not_recorded",
+        "split_or_generalization": "not_recorded",
+        "trials_or_seeds": "not_recorded",
+        "statistics": "not_recorded",
+        "failure_cases": "not_recorded"
+      },
+      "trial_evidence": [],
+      "benchmark_cues": [],
+      "metric_cues": [],
+      "source_note": "2025/arXiv/2025_arXiv_SOE-Sample-Efficient-Robot-Policy-Self-Improvement-via-On/04_evaluation.md",
+      "reviewed_on": "2026-11-18",
+      "basis": "Abstract/project-only note cues; detailed protocol remains not_recorded. Source claims are not full-text or experiment verification; catalog links are cue_only."
+    },
+    "reproducibility": {
+      "profile_version": "1.0",
+      "status": "metadata_audited",
+      "code": {
+        "status": "released",
+        "source": "https://github.com/EricJin2002/SOE",
+        "evidence": "manifest_link"
+      },
+      "data": {
+        "status": "not_identified",
+        "source": null,
+        "evidence": "note_cue_scan; no explicit data artifact status identified"
+      },
+      "checkpoint": {
+        "status": "not_recorded",
+        "evidence": "no explicit checkpoint availability cue"
+      },
+      "configuration": {
+        "status": "not_recorded",
+        "evidence": "note_cue_or_not_recorded"
+      },
+      "environment": {
+        "status": "not_recorded",
+        "evidence": "04_evaluation.md section cue"
+      },
+      "run_conditions": {
+        "status": "not_recorded",
+        "evidence": "04_evaluation.md trial/statistics cue"
+      },
+      "reviewed_on": "2026-11-18",
+      "source_note": "2025/arXiv/2025_arXiv_SOE-Sample-Efficient-Robot-Policy-Self-Improvement-via-On/04_evaluation.md",
+      "basis": "Manifest artifact links and abstract/project-only note cues; full-text protocol and reproducible execution have not been checked."
+    },
+    "lineage_profile": {
+      "profile_version": "1.0",
+      "status": "no_curated_edge_recorded",
+      "outgoing_paper_ids": [],
+      "incoming_paper_ids": [],
+      "queue_adjacency_paper_ids": [],
+      "legacy_summary_candidate_paper_ids": [],
+      "legacy_summary_present": true,
+      "audited_on": "2026-11-18",
+      "audit_scope": "all_registry",
+      "basis": "manifest relations are curated edges; queue adjacency and legacy lineage matches are retained as non-relational candidates. Absence of an edge is not a claim that the paper has no citations."
+    }
+  },
+  {
+    "title": "ActivePose: Active 6D Object Pose Estimation and Tracking for Robotic Manipulation",
+    "year": 2025,
+    "venue": "arXiv",
+    "category": "Robotics-Enabling 3D Perception",
+    "primary_track": "Robotics-enabling 3D perception",
+    "tags": [
+      "active perception",
+      "6D pose",
+      "VLM",
+      "next-best-view"
+    ],
+    "aliases": [
+      "ActivePose"
+    ],
+    "identifiers": {
+      "arxiv": "2509.11364"
+    },
+    "page": "https://arxiv.org/abs/2509.11364",
+    "project": "not identified",
+    "pdf": "",
+    "sources": {
+      "primary": {
+        "url": "https://arxiv.org/abs/2509.11364",
+        "kind": "arxiv",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-18"
+      },
+      "paper_pdf": null,
+      "preprint": {
+        "url": "https://arxiv.org/abs/2509.11364",
+        "kind": "arxiv",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-18"
+      },
+      "project": null,
+      "code": null
+    },
+    "publication": {
+      "status": "preprint",
+      "kind": "preprint",
+      "venue": "arXiv",
+      "year": 2025,
+      "venue_year": 2025,
+      "presentation": "unknown",
+      "venue_id": "arxiv"
+    },
+    "artifacts": {
+      "code_status": "not_identified",
+      "data_status": "not_identified",
+      "local_pdf_cache": false
+    },
+    "admission_tier": "NEXT",
+    "admission_group": "Active and embodied 3D Vision",
+    "relations": [],
+    "note_format": "abstract_analysis_v1",
+    "evidence": "ABSTRACT_CHECKED",
+    "problem": "고정 카메라와 pose ambiguity가 물체 이동·가림 상황의 추정과 추적을 불안정하게 한다.",
+    "method": "CAD virtual view와 FoundationPose 기반 정보로 VLM이 모호성을 평가하고 다음 camera view를 선택한다.",
+    "interface": "RGB 관측·CAD 기반 가상 시점 → ambiguity score·NBV·pose tracking으로 이어진다.",
+    "evaluation": "공식 초록은 로봇 조작을 위한 active pose estimation/tracking을 다룬다. Task별 성공률과 camera 이동 비용은 본문 확인 필요다.",
+    "role": "Pose estimation+active perception 조합이 이미 구현됐음을 보여 주는 직접 선행이다.",
+    "lineage": "FoundationPose → ActivePose → task-conditioned 관측 중단을 비교한다.",
+    "question": "Pose ambiguity가 커도 공통 성공 행동이 있을 때 추가 관측을 생략해도 되는가?",
+    "minimal_experiment": "같은 후보 시점과 pose estimator에서 pose uncertainty와 성공 tolerance의 중단 판단을 비교한다.",
+    "verification_questions": "VLM score calibration·CAD render 조건·물리 camera 비용·task success 기준",
+    "source_audit": "2026-11-18: 공식 초록·bibliographic record와 연결된 저자 자료 확인. Abstract 기반 등록이며 본문 전체·실험 재현은 미확인. 현재 abstract는 2026-03-07 v2; 최초 공개 연도 2025 유지. 이전 N1의 v1 지정 절 검토와 같은 본문으로 취급하지 않는다. 공식 conference/journal acceptance 확인을 확보하지 못해 preprint 유지.",
+    "curation": {
+      "admission_reason": "Pose estimation+active perception 조합이 이미 구현됐음을 보여 주는 직접 선행이다.",
+      "tier_reason": "Pose estimation+active perception 조합이 이미 구현됐음을 보여 주는 직접 선행이다.",
+      "rationale_status": "recorded",
+      "scope_status": "active",
+      "roles": [
+        "method"
+      ],
+      "role_basis": "manual admission review",
+      "rationale_basis": "vla_rl_manipulation_navigation_focus_review",
+      "rationale_reviewed_on": "2026-11-18",
+      "priority_source_check": {
+        "url": "https://arxiv.org/abs/2509.11364",
+        "checked_on": "2026-11-18",
+        "scope": "official_abstract_or_project; priority review only"
+      }
+    },
+    "folder": "2025/arXiv/2025_arXiv_ActivePose-Active-6D-Object-Pose-Estimation-and-Tracking-f",
+    "venue_as_recorded": "arXiv",
+    "venue_canonical": "arXiv",
+    "paper_type": "method",
+    "provenance": {
+      "metadata_source_kind": "arxiv",
+      "content_evidence": "ABSTRACT_CHECKED",
+      "source_audit_status": "recorded",
+      "metadata_checked_on": "2026-11-18",
+      "source_audit_note": "2026-11-18: 공식 초록·bibliographic record와 연결된 저자 자료 확인. Abstract 기반 등록이며 본문 전체·실험 재현은 미확인. 현재 abstract는 2026-03-07 v2; 최초 공개 연도 2025 유지. 이전 N1의 v1 지정 절 검토와 같은 본문으로 취급하지 않는다. 공식 conference/journal acceptance 확인을 확보하지 못해 preprint 유지.",
+      "schema_version": "1.0",
+      "schema_migrated_on": "2026-11-18",
+      "note_evidence": {
+        "01_overview.md": "ABSTRACT_CHECKED",
+        "02_problem.md": "ABSTRACT_CHECKED",
+        "03_method.md": "ABSTRACT_CHECKED",
+        "04_evaluation.md": "ABSTRACT_CHECKED",
+        "05_insights.md": "ABSTRACT_CHECKED"
+      }
+    },
+    "paper_id": "pr-1223",
+    "evaluation_profile": {
+      "profile_version": "1.0",
+      "status": "structured_note_cues",
+      "type": "not_recorded",
+      "settings": [
+        "not_recorded"
+      ],
+      "protocol": {
+        "dataset_or_benchmark": "not_recorded",
+        "metrics": "not_recorded",
+        "baselines": "not_recorded",
+        "ablations": "not_recorded",
+        "split_or_generalization": "not_recorded",
+        "trials_or_seeds": "not_recorded",
+        "statistics": "not_recorded",
+        "failure_cases": "not_recorded"
+      },
+      "trial_evidence": [],
+      "benchmark_cues": [],
+      "metric_cues": [],
+      "source_note": "2025/arXiv/2025_arXiv_ActivePose-Active-6D-Object-Pose-Estimation-and-Tracking-f/04_evaluation.md",
+      "reviewed_on": "2026-11-18",
+      "basis": "Abstract/project-only note cues; detailed protocol remains not_recorded. Source claims are not full-text or experiment verification; catalog links are cue_only."
+    },
+    "reproducibility": {
+      "profile_version": "1.0",
+      "status": "metadata_audited",
+      "code": {
+        "status": "not_identified",
+        "source": null,
+        "evidence": "not_identified"
+      },
+      "data": {
+        "status": "not_identified",
+        "source": null,
+        "evidence": "note_cue_scan; no explicit data artifact status identified"
+      },
+      "checkpoint": {
+        "status": "not_recorded",
+        "evidence": "no explicit checkpoint availability cue"
+      },
+      "configuration": {
+        "status": "not_recorded",
+        "evidence": "note_cue_or_not_recorded"
+      },
+      "environment": {
+        "status": "not_recorded",
+        "evidence": "04_evaluation.md section cue"
+      },
+      "run_conditions": {
+        "status": "not_recorded",
+        "evidence": "04_evaluation.md trial/statistics cue"
+      },
+      "reviewed_on": "2026-11-18",
+      "source_note": "2025/arXiv/2025_arXiv_ActivePose-Active-6D-Object-Pose-Estimation-and-Tracking-f/04_evaluation.md",
+      "basis": "Manifest artifact links and abstract/project-only note cues; full-text protocol and reproducible execution have not been checked."
+    },
+    "lineage_profile": {
+      "profile_version": "1.0",
+      "status": "no_curated_edge_recorded",
+      "outgoing_paper_ids": [],
+      "incoming_paper_ids": [],
+      "queue_adjacency_paper_ids": [],
+      "legacy_summary_candidate_paper_ids": [],
+      "legacy_summary_present": true,
+      "audited_on": "2026-11-18",
+      "audit_scope": "all_registry",
+      "basis": "manifest relations are curated edges; queue adjacency and legacy lineage matches are retained as non-relational candidates. Absence of an edge is not a claim that the paper has no citations."
+    }
+  },
+  {
+    "title": "Imagine then Verify: Affordance-Targeted Active Perception for Task-Oriented Grasping in Cluttered Scenes",
+    "year": 2026,
+    "venue": "arXiv",
+    "category": "Robotics-Enabling 3D Perception",
+    "primary_track": "Robotics-enabling 3D perception",
+    "tags": [
+      "active perception",
+      "affordance",
+      "grasping",
+      "shape completion"
+    ],
+    "aliases": [
+      "ATAP"
+    ],
+    "identifiers": {
+      "arxiv": "2609.23504"
+    },
+    "page": "https://arxiv.org/abs/2609.23504",
+    "project": "not identified",
+    "pdf": "",
+    "sources": {
+      "primary": {
+        "url": "https://arxiv.org/abs/2609.23504",
+        "kind": "arxiv",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-18"
+      },
+      "paper_pdf": null,
+      "preprint": {
+        "url": "https://arxiv.org/abs/2609.23504",
+        "kind": "arxiv",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-18"
+      },
+      "project": null,
+      "code": null
+    },
+    "publication": {
+      "status": "preprint",
+      "kind": "preprint",
+      "venue": "arXiv",
+      "year": 2026,
+      "venue_year": 2026,
+      "presentation": "unknown",
+      "venue_id": "arxiv"
+    },
+    "artifacts": {
+      "code_status": "not_identified",
+      "data_status": "not_identified",
+      "local_pdf_cache": false
+    },
+    "admission_tier": "NEXT",
+    "admission_group": "Active and embodied 3D Vision",
+    "relations": [],
+    "note_format": "abstract_analysis_v1",
+    "evidence": "ABSTRACT_CHECKED",
+    "problem": "가려진 기능 영역을 찾는 grasp에서 물체 전체를 스캔하면 관측 budget을 낭비할 수 있다.",
+    "method": "완성 shape에서 affordance 가설을 만들고 entropy 감소·실제 관측 검증을 함께 고려해 다음 시점을 정한다.",
+    "interface": "부분 관측·task → affordance 후보 → 카메라 시점 → functional grasp로 연결한다.",
+    "evaluation": "Simulation과 실제 cluttered scene의 기능적 grasp 및 NBV step을 평가한다. 전체 pouring/insertion 성공과 구별한다.",
+    "role": "Task-aware NBV와 verification 기반 중단이 이미 있는 점을 반영할 직접 비교다.",
+    "lineage": "Shape completion/affordance → ATAP → 후보 행동의 continuation 성공을 다루는 질문을 비교한다.",
+    "question": "Affordance가 검증돼도 실행 후보의 성공 집합은 충돌할 수 있는가?",
+    "minimal_experiment": "동일 visibility·pose 정보·budget에서 affordance verification과 후보별 task success를 대조한다.",
+    "verification_questions": "Shape hallucination·hypothesis weighting·view feasibility·stop threshold",
+    "source_audit": "2026-11-18: 공식 초록·bibliographic record와 연결된 저자 자료 확인. Abstract 기반 등록이며 본문 전체·실험 재현은 미확인.  공식 conference/journal acceptance 확인을 확보하지 못해 preprint 유지.",
+    "curation": {
+      "admission_reason": "Task-aware NBV와 verification 기반 중단이 이미 있는 점을 반영할 직접 비교다.",
+      "tier_reason": "Task-aware NBV와 verification 기반 중단이 이미 있는 점을 반영할 직접 비교다.",
+      "rationale_status": "recorded",
+      "scope_status": "active",
+      "roles": [
+        "method"
+      ],
+      "role_basis": "manual admission review",
+      "rationale_basis": "vla_rl_manipulation_navigation_focus_review",
+      "rationale_reviewed_on": "2026-11-18",
+      "priority_source_check": {
+        "url": "https://arxiv.org/abs/2609.23504",
+        "checked_on": "2026-11-18",
+        "scope": "official_abstract_or_project; priority review only"
+      }
+    },
+    "folder": "2026/arXiv/2026_arXiv_Imagine-then-Verify-Affordance-Targeted-Active-Perception",
+    "venue_as_recorded": "arXiv",
+    "venue_canonical": "arXiv",
+    "paper_type": "method",
+    "provenance": {
+      "metadata_source_kind": "arxiv",
+      "content_evidence": "ABSTRACT_CHECKED",
+      "source_audit_status": "recorded",
+      "metadata_checked_on": "2026-11-18",
+      "source_audit_note": "2026-11-18: 공식 초록·bibliographic record와 연결된 저자 자료 확인. Abstract 기반 등록이며 본문 전체·실험 재현은 미확인.  공식 conference/journal acceptance 확인을 확보하지 못해 preprint 유지.",
+      "schema_version": "1.0",
+      "schema_migrated_on": "2026-11-18",
+      "note_evidence": {
+        "01_overview.md": "ABSTRACT_CHECKED",
+        "02_problem.md": "ABSTRACT_CHECKED",
+        "03_method.md": "ABSTRACT_CHECKED",
+        "04_evaluation.md": "ABSTRACT_CHECKED",
+        "05_insights.md": "ABSTRACT_CHECKED"
+      }
+    },
+    "paper_id": "pr-1224",
+    "evaluation_profile": {
+      "profile_version": "1.0",
+      "status": "structured_note_cues",
+      "type": "not_recorded",
+      "settings": [
+        "not_recorded"
+      ],
+      "protocol": {
+        "dataset_or_benchmark": "not_recorded",
+        "metrics": "not_recorded",
+        "baselines": "not_recorded",
+        "ablations": "not_recorded",
+        "split_or_generalization": "not_recorded",
+        "trials_or_seeds": "not_recorded",
+        "statistics": "not_recorded",
+        "failure_cases": "not_recorded"
+      },
+      "trial_evidence": [],
+      "benchmark_cues": [],
+      "metric_cues": [],
+      "source_note": "2026/arXiv/2026_arXiv_Imagine-then-Verify-Affordance-Targeted-Active-Perception/04_evaluation.md",
+      "reviewed_on": "2026-11-18",
+      "basis": "Abstract/project-only note cues; detailed protocol remains not_recorded. Source claims are not full-text or experiment verification; catalog links are cue_only."
+    },
+    "reproducibility": {
+      "profile_version": "1.0",
+      "status": "metadata_audited",
+      "code": {
+        "status": "not_identified",
+        "source": null,
+        "evidence": "not_identified"
+      },
+      "data": {
+        "status": "not_identified",
+        "source": null,
+        "evidence": "note_cue_scan; no explicit data artifact status identified"
+      },
+      "checkpoint": {
+        "status": "not_recorded",
+        "evidence": "no explicit checkpoint availability cue"
+      },
+      "configuration": {
+        "status": "not_recorded",
+        "evidence": "note_cue_or_not_recorded"
+      },
+      "environment": {
+        "status": "not_recorded",
+        "evidence": "04_evaluation.md section cue"
+      },
+      "run_conditions": {
+        "status": "not_recorded",
+        "evidence": "04_evaluation.md trial/statistics cue"
+      },
+      "reviewed_on": "2026-11-18",
+      "source_note": "2026/arXiv/2026_arXiv_Imagine-then-Verify-Affordance-Targeted-Active-Perception/04_evaluation.md",
+      "basis": "Manifest artifact links and abstract/project-only note cues; full-text protocol and reproducible execution have not been checked."
+    },
+    "lineage_profile": {
+      "profile_version": "1.0",
+      "status": "no_curated_edge_recorded",
+      "outgoing_paper_ids": [],
+      "incoming_paper_ids": [],
+      "queue_adjacency_paper_ids": [],
+      "legacy_summary_candidate_paper_ids": [],
+      "legacy_summary_present": true,
+      "audited_on": "2026-11-18",
       "audit_scope": "all_registry",
       "basis": "manifest relations are curated edges; queue adjacency and legacy lineage matches are retained as non-relational candidates. Absence of an edge is not a claim that the paper has no citations."
     }

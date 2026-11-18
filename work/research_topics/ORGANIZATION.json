@@ -663,5 +663,36 @@
       "new_images": 0
     },
     "execution_on_another_computer": false
+  },
+  "retirement_2026_11_17": {
+    "decision": "7 standalone topics retired; 3 active investigations and 1 reserve remain",
+    "ledger": "work/sources/candidate_triage_2026-11-17.json",
+    "summary": "work/research_topics/retired/README.md",
+    "retired_topics": [
+      "action_tokenization",
+      "context_retrieval",
+      "object_set",
+      "mobile_policy_transfer",
+      "task_allocation",
+      "hindsight_transfer",
+      "vla_residual_update"
+    ],
+    "surviving_topics": [
+      "visual_feedback",
+      "unified_vla_rl",
+      "contact_adaptation",
+      "instruction_revision"
+    ],
+    "historical_paths_policy": "Earlier paths/counts/hashes describe the earlier migration. For removed destinations use the new ledger; old runtime JSON is not an active plan."
+  },
+  "pose_reconstruction_scout_2026_11_17": {
+    "status": "two initial research questions; not native-ready",
+    "topics": [
+      "pose_active_perception",
+      "task_geometry_estimation"
+    ],
+    "layout": "Exactly 내용/README.md and 재현 방법/README.md per new topic",
+    "source_ledger": "work/sources/new_field_scout_2026-11-17.json#pose_reconstruction_scout",
+    "existing_migration_and_retirement_records": "preserved; historical counts above are not current candidate counts"
   }
 }

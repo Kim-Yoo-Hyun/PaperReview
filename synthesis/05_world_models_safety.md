@@ -182,6 +182,13 @@ World-model policy ranking, 센서 결손 대비, 군중 예측 보정의 적용
 
 ## Open Questions
 
+<a id="reliability-intervention-2026"></a>
+### 시각 실패 정보가 실제 복구 결정을 바꾸는가?
+
+**2026-11-17 / 탐색 가설.** [SAFE](https://proceedings.neurips.cc/paper_files/paper/2025/hash/392d0d05e2f514063e6ce6f8b370834c-Abstract-Conference.html)의 VLA 내부 특징, [SFF](https://arxiv.org/abs/2611.11688)의 배포 후 monitor 갱신은 일반 탐지·재보정의 선행이다. [B2FF §5](https://arxiv.org/html/2606.09258v1)는 회복 가능한 이탈과 기존 skill을 가정하고 [AHEAD §6.1](https://arxiv.org/html/2606.02486v1)는 운동 추정의 불확실성 전파를 한계로 둔다. 공식 게재와 2026 preprint, 초록 확인과 지정 절 확인을 구분한다.
+
+새로 대조할 질문은 **시각 추정 오류와 행동 능력 부족을 구별하는 정보가 같은 비용의 재관측·재시도보다 유용한 복구 선택을 만드는가**다. Failure score·원인 설명·개입 성공 가능성은 서로 다르며 그 구분 자체는 기여가 아니다. 같은 상태의 정보 개입·기본 능력·단순 기준선 이후 남는 차이를 확인해야 한다. 근거·다음 비교와 기존 D1/FEEDBACK의 경계는 [주제 문서](../work/research_topics/visual_feedback/내용/README.md#reliability-scout-2026)에 통합한다. 새 방법/공백은 아직 확정하지 않았다. 이전 후보 중 7개는 [폐기](../work/research_topics/retired/README.md)했고 아래 과거 문헌 질문을 자동 실행 계획으로 해석하지 않는다.
+
 ### Recovery 평가와 action-conditioned 세계 모델의 출처 경계
 
 **2026-11-12 / 초록 기반 CURATION-HYPOTHESIS.** [Discounted Liveness OPE, RSS 2026](https://www.roboticsproceedings.org/rss22/p154.html)는 recovery 도중 끝나는 데이터의 truncation bias와 manipulation policy 평가를 다룬다. 관측된 실패가 정책 능력 부족인지 관측 기간·종료 규칙의 효과인지 구분할 직접 선행이다. RSS 초록의 두 simulation task 범위를 사용했으며 preprint의 추가 cloth demo를 같은 최종본의 실물 증거로 합치지 않았다. Offline 평가값의 개선은 native closed-loop 성공률의 검증이 아니다.

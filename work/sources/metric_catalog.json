@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_on": "2026-11-16",
+  "generated_on": "2026-11-18",
   "catalog_type": "metric",
   "evidence_policy": "Generated references are cue_only. Do not treat a token match as verified evaluation evidence; consult the paper's 04_evaluation.md and source location.",
   "entries": [
@@ -5967,6 +5967,16 @@
         {
           "paper_id": "pr-1175",
           "source": "2026/arXiv/2026_arXiv_When-Vision-Overrides-Language-Evaluating-and-Mitigating-C/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-1223",
+          "source": "2025/arXiv/2025_arXiv_ActivePose-Active-6D-Object-Pose-Estimation-and-Tracking-f/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-1224",
+          "source": "2026/arXiv/2026_arXiv_Imagine-then-Verify-Affordance-Targeted-Active-Perception/04_evaluation.md",
           "evidence": "cue_only"
         }
       ],

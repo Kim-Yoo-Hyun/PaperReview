@@ -1,9 +1,11 @@
 # GAP-SELECT-E1 — 첫 탐색 후보로 HANDOFF 선정
 
+> 2026-11-17 인계: 이 문서의 폐기 후보(HANDOFF/SET/RETRIEVAL/CODEC1/ALLOC/HINDSIGHT/VRL) 계획·명령은 당시 기록이다. 현재는 RETIRED이며 새 실행 queue가 아니다. 링크는 핵심 보존본 또는 삭제 전 Git revision으로 연결한다.
+
 - 결정일: **2026-10-28 KST / DONE — 비실험 후보 선정**.
 - **우선 후보: HANDOFF.** 같은 로봇에서 VLA A에 맞춰 선택한 도착 설정을 B로 교체한 뒤에도 재사용할 수 있는지 먼저 탐색한다. C1은 대안 후보, TERM은 독립 질문을 보존하면서 공통 평가 원칙으로 활용한다.
 - 이는 **후속 확인의 순서**다. 연구 효과·신규성·논문 채택 가능성·실행 준비 완료를 뜻하지 않는다. 세 후보의 증거 성숙도는 `CURATION-HYPOTHESIS` 그대로다.
-- 근거는 완료된 [HANDOFF 비교](../research_topics/mobile_policy_transfer/내용/README.md#closest-work), [C1 비교](./C1_OBSERVATION_COST_REVIEW_2026-10-28.md), [TERM 비교](./VLA_TERMINATION_COMPARISON_2026-10-28.md)와 [단계별 buildup 기준](../../research/IDEA_BUILDUP_GUIDE.md#stage-appropriate-gates)이다. 이번에는 새 웹 조사·동일 source 재감사 없이 기존 근거로 판단했다. 아래 우선순위는 **연구자 판단**이며 미측정 성공 확률을 수치화하지 않았다.
+- 근거는 완료된 [HANDOFF 비교](../research_topics/retired/README.md#mobile_policy_transfer), [C1 비교](./C1_OBSERVATION_COST_REVIEW_2026-10-28.md), [TERM 비교](./VLA_TERMINATION_COMPARISON_2026-10-28.md)와 [단계별 buildup 기준](../../research/IDEA_BUILDUP_GUIDE.md#stage-appropriate-gates)이다. 이번에는 새 웹 조사·동일 source 재감사 없이 기존 근거로 판단했다. 아래 우선순위는 **연구자 판단**이며 미측정 성공 확률을 수치화하지 않았다.
 
 ## 1. 세 후보를 비교한 이유
 

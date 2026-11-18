@@ -1,8 +1,10 @@
 # 세 실험 대기 후보의 비실험 buildup 완결 검토
 
+> 2026-11-17 인계: 이 문서의 폐기 후보(HANDOFF/SET/RETRIEVAL/CODEC1/ALLOC/HINDSIGHT/VRL) 계획·명령은 당시 기록이다. 현재는 RETIRED이며 새 실행 queue가 아니다. 링크는 핵심 보존본 또는 삭제 전 Git revision으로 연결한다.
+
 - Date: 2026-11-01 KST / Task: **PRE-GPU-3**
 - 범위: 현재 공개 근거로 수행할 수 있는 문헌·논리·비교·채점·분석·외부 검토 준비. **Docker 확인/실행, 모델 호출, 시뮬레이션, 패키지 설치, PDF·weights·asset 다운로드는 하지 않았다.**
-- 기준: [buildup 가이드 단계 0–8](../../research/IDEA_BUILDUP_GUIDE.md#5-공백-탐색-후-문헌에서-아이디어로-넘어가는-8단계). [기존 두 후보](./PRE_GPU_BUILDUP_REVIEW_2026-10-31.md)와 [SET 검토](../research_topics/object_set/내용/README.md#source-review-nonexperimental-design)의 완료 내용을 재작성하지 않고 누락·모호한 부분을 보완했다.
+- 기준: [buildup 가이드 단계 0–8](../../research/IDEA_BUILDUP_GUIDE.md#5-공백-탐색-후-문헌에서-아이디어로-넘어가는-8단계). [기존 두 후보](./PRE_GPU_BUILDUP_REVIEW_2026-10-31.md)와 [SET 검토](../research_topics/retired/README.md#object_set)의 완료 내용을 재작성하지 않고 누락·모호한 부분을 보완했다.
 - [확인 source·범위](../sources/three_candidate_nonexperimental_2026-11-01.json). 현 연구 단계의 설계 문서이며 실행 manifest나 사전등록 서비스 등록본이 아니다.
 
 ## 1. 후보 수와 완료의 의미
@@ -66,7 +68,7 @@
 
 ## 4. 모바일 조작: 재사용 손실과 재선택 이득
 
-[연구 개요](../research_topics/mobile_policy_transfer/내용/README.md#overview)와 [새 단일 비교 계약](../research_topics/mobile_policy_transfer/재현%20방법/COMPARISON_CONTRACT.json)을 연결했다. 기존 10개 source·단일 template 결과는 다시 수집하지 않았고, 2/4/4의 역할과 1개 dev P0를 유지했다.
+[연구 개요](../research_topics/retired/README.md#mobile_policy_transfer)와 [새 단일 비교 계약](https://github.com/Kim-Yoo-Hyun/PaperReview/blob/5bec2cfa8a31758ca8e5be9c19c39dc4c23bb096/work/research_topics/mobile_policy_transfer/%EC%9E%AC%ED%98%84%20%EB%B0%A9%EB%B2%95/COMPARISON_CONTRACT.json)을 연결했다. 기존 10개 source·단일 template 결과는 다시 수집하지 않았고, 2/4/4의 역할과 1개 dev P0를 유지했다.
 
 [Mobi-π](https://proceedings.mlr.press/v305/yang25b.html)와 [MoTo](https://proceedings.mlr.press/v305/wu25c.html)의 CoRL 2025 공식 metadata·문제 범위를 확인했다. Policy별 적합한 base pose와 interaction-aware docking은 이미 다루는 문제다. 이 후보는 새로운 docking 최적화법이 아니라 **같은 navigator 아래 checkpoint+normalizer 묶음 교체 시 제한된 재검증의 효용**을 묻는다.
 
@@ -92,7 +94,7 @@
 
 ## 5. 물체 집합·수량: 첫 비교를 더 단순하게
 
-[연구 개요](../research_topics/object_set/내용/README.md#overview)와 기존 [비교 계약 revision 2](../research_topics/object_set/재현%20방법/COMPARISON_CONTRACT.json)를 갱신했다. 8개 추상 의미 사례와 단일 배 조작 P0는 그대로다.
+[연구 개요](../research_topics/retired/README.md#object_set)와 기존 [비교 계약 revision 2](https://github.com/Kim-Yoo-Hyun/PaperReview/blob/5bec2cfa8a31758ca8e5be9c19c39dc4c23bb096/work/research_topics/object_set/%EC%9E%AC%ED%98%84%20%EB%B0%A9%EB%B2%95/COMPARISON_CONTRACT.json)를 갱신했다. 8개 추상 의미 사례와 단일 배 조작 P0는 그대로다.
 
 기존 [ClevrSkills](https://proceedings.neurips.cc/paper_files/paper/2024/hash/439539557e9ba0d04055773ff1f3241c-Abstract-Datasets_and_Benchmarks_Track.html), [Spa-Bench](https://arxiv.org/html/2610.12696v1), [순차 조합 진단](https://arxiv.org/html/2607.29687v1)의 알려진 범위를 유지한다. 이번 Spa-Bench 재확인에서도 counting·같은 장면의 직접 지시·무행동 진단이 가까운 선행이다. 단순히 ‘VLA가 수량 지시를 어려워한다’는 주장은 별도 신규성이 아니다.
 

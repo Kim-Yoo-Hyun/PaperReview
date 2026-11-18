@@ -1,5 +1,7 @@
 # 현재 6개 후보의 비실험 buildup 상태 보강
 
+> 2026-11-17 인계: 이 문서의 폐기 후보(HANDOFF/SET/RETRIEVAL/CODEC1/ALLOC/HINDSIGHT/VRL) 계획·명령은 당시 기록이다. 현재는 RETIRED이며 새 실행 queue가 아니다. 링크는 핵심 보존본 또는 삭제 전 Git revision으로 연결한다.
+
 - Work ID: BUILDUP-6-STATE
 - Updated: 2026-11-04 KST
 - 요청: 기존 6개 후보를 비실험 buildup 과정에 맞게 보강.
@@ -12,12 +14,12 @@
 
 | 주제 | 보강한 내용 | 보존한 연구 판단 |
 |---|---|---|
-| [VLA residual 재사용](../research_topics/vla_residual_update/내용/README.md#buildup-status) | 기존 가중치 가치와 gain/critic/모방 대안, 구축 총비용과 교체 이후 추가 비용, A residual bootstrap 선행 조건 | 탐색 유지; 규칙 조합의 독립 신규성·효과 미검증 |
+| [VLA residual 재사용](../research_topics/retired/README.md#vla_residual_update) | 기존 가중치 가치와 gain/critic/모방 대안, 구축 총비용과 교체 이후 추가 비용, A residual bootstrap 선행 조건 | 탐색 유지; 규칙 조합의 독립 신규성·효과 미검증 |
 | [부분 지시 수정](../research_topics/instruction_revision/내용/README.md#buildup-status) | 의미 갱신·제약 이행·기본 능력의 결과 분기, 공통 renderer/observer 교정의 역할 | 좁은 평가 후보 유지; 자동 updater·native 효과 미검증 |
-| [모바일 정책 교체](../research_topics/mobile_policy_transfer/내용/README.md#buildup-status) | 같은 설정의 결과 공유, 유한 재선택의 음수 이득, 실패를 포함한 시간 비용 | 조건부 평가 후보 유지; 한 template·동일 로봇 범위 |
-| [물체 집합·수량](../research_topics/object_set/내용/README.md#buildup-status) | 반복의 충분성과 대상/참조/전환 효과, 전략의 중간 제약과 terminal-only 의미 구분 | 제한된 탐색 유지; 다중 물체 능력·evaluator 미검증 |
-| [시연 저장소 확장](../research_topics/context_retrieval/내용/README.md#buildup-status) | H 불변성의 sanity-check 역할, 성공 donor/평가 독립성에 필요한 원 trajectory 연결, 제한된 reference 진단 경로 | 자료 경계를 둔 탐색 유지; 신규 router·광범위 scaling 근거 없음 |
-| [행동 토큰화](../research_topics/action_tokenization/내용/README.md#buildup-status) | 알려진 양자화 설명과 실질적 설정 선택의 구분, 호환 codec 조건과 선택 가능한 후속의 경계 | 좁은 평가 자료 보존; 독립 방법 투자 근거 부족 |
+| [모바일 정책 교체](../research_topics/retired/README.md#mobile_policy_transfer) | 같은 설정의 결과 공유, 유한 재선택의 음수 이득, 실패를 포함한 시간 비용 | 조건부 평가 후보 유지; 한 template·동일 로봇 범위 |
+| [물체 집합·수량](../research_topics/retired/README.md#object_set) | 반복의 충분성과 대상/참조/전환 효과, 전략의 중간 제약과 terminal-only 의미 구분 | 제한된 탐색 유지; 다중 물체 능력·evaluator 미검증 |
+| [시연 저장소 확장](../research_topics/retired/README.md#context_retrieval) | H 불변성의 sanity-check 역할, 성공 donor/평가 독립성에 필요한 원 trajectory 연결, 제한된 reference 진단 경로 | 자료 경계를 둔 탐색 유지; 신규 router·광범위 scaling 근거 없음 |
+| [행동 토큰화](../research_topics/retired/README.md#action_tokenization) | 알려진 양자화 설명과 실질적 설정 선택의 구분, 호환 codec 조건과 선택 가능한 후속의 경계 | 좁은 평가 자료 보존; 독립 방법 투자 근거 부족 |
 
 각 문서에 7단계 상태·한 문단 기여 가설·결과에 따른 다음 판단·비용·첫 구현 점검·외부 검토 질문을 넣었다. VRL/RETRIEVAL/CODEC의 이전 단계별 표는 현행 표로 교체해 중복을 줄였다. 다른 세 후보는 기존 내용 문서 안에 같은 형식의 현행 상태 절을 추가했다. 주제별 새 파일은 만들지 않았다.
 

@@ -1,0 +1,869 @@
+{
+  "audit_id": "REG-R17",
+  "reviewed_on": "2026-11-18",
+  "report": "work/update/REGISTRY_MAINTENANCE_2026-11-18.md",
+  "scope": "Incremental registration of direct references from recent candidate scouting; whole-registry structural checks, not a full scientific re-review of 1224 papers.",
+  "before": {
+    "papers": 1206,
+    "standard_notes": 6030,
+    "tiers": {
+      "CORE": 50,
+      "NEXT": 405,
+      "REFERENCE": 509,
+      "ARCHIVE": 242
+    }
+  },
+  "after": {
+    "papers": 1224,
+    "standard_notes": 6120,
+    "tiers": {
+      "CORE": 50,
+      "NEXT": 424,
+      "REFERENCE": 508,
+      "ARCHIVE": 242
+    },
+    "intensive_reading": 474,
+    "reading_history": 47,
+    "resources": 670
+  },
+  "admission": {
+    "inputs": 19,
+    "new": 18,
+    "duplicate_skipped": {
+      "title": "Look Before You Act: Bridging Active Perception and Vision-Language-Action Models via Observation-Aligned Data Adaptation",
+      "paper_id": "pr-1030"
+    },
+    "evidence": "ABSTRACT_CHECKED",
+    "new_reading_status": "UNREAD"
+  },
+  "new_papers": [
+    {
+      "paper_id": "pr-1207",
+      "title": "FoundationPose: Unified 6D Pose Estimation and Tracking of Novel Objects",
+      "publication": {
+        "status": "peer_reviewed",
+        "kind": "conference",
+        "venue": "CVPR",
+        "year": 2024,
+        "venue_year": 2024,
+        "presentation": "unknown",
+        "venue_id": "cvpr"
+      },
+      "overview": "2024/CVPR/2024_CVPR_FoundationPose-Unified-6D-Pose-Estimation-and-Tracking-of/01_overview.md",
+      "authority": {
+        "url": "https://openaccess.thecvf.com/content/CVPR2024/html/Wen_FoundationPose_Unified_6D_Pose_Estimation_and_Tracking_of_Novel_Objects_CVPR_2024_paper.html",
+        "kind": "cvf",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-18"
+      },
+      "code_status": "released"
+    },
+    {
+      "paper_id": "pr-1208",
+      "title": "Learning to Look: Seeking Information for Decision Making via Policy Factorization",
+      "publication": {
+        "status": "peer_reviewed",
+        "kind": "conference",
+        "venue": "CoRL",
+        "year": 2024,
+        "venue_year": 2024,
+        "presentation": "unknown",
+        "venue_id": "corl"
+      },
+      "overview": "2024/CoRL/2024_CoRL_Learning-to-Look-Seeking-Information-for-Decision-Making-v/01_overview.md",
+      "authority": {
+        "url": "https://proceedings.mlr.press/v270/dass25a.html",
+        "kind": "proceedings",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-18"
+      },
+      "code_status": "released"
+    },
+    {
+      "paper_id": "pr-1209",
+      "title": "Active 6D pose estimation for textureless objects using multi-view RGB frames",
+      "publication": {
+        "status": "peer_reviewed",
+        "kind": "journal",
+        "venue": "IJRR",
+        "year": 2026,
+        "venue_year": 2026,
+        "presentation": "unknown",
+        "venue_id": "ijrr"
+      },
+      "overview": "2026/IJRR/2026_IJRR_Active-6D-pose-estimation-for-textureless-objects-using-mu/01_overview.md",
+      "authority": {
+        "url": "https://journals.sagepub.com/doi/10.1177/02783649251411922",
+        "kind": "publisher",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-18"
+      },
+      "code_status": "project_only"
+    },
+    {
+      "paper_id": "pr-1210",
+      "title": "UA-Pose: Uncertainty-Aware 6D Object Pose Estimation and Online Object Completion with Partial References",
+      "publication": {
+        "status": "peer_reviewed",
+        "kind": "conference",
+        "venue": "CVPR",
+        "year": 2025,
+        "venue_year": 2025,
+        "presentation": "unknown",
+        "venue_id": "cvpr"
+      },
+      "overview": "2025/CVPR/2025_CVPR_UA-Pose-Uncertainty-Aware-6D-Object-Pose-Estimation-and-On/01_overview.md",
+      "authority": {
+        "url": "https://openaccess.thecvf.com/content/CVPR2025/html/Li_UA-Pose_Uncertainty-Aware_6D_Object_Pose_Estimation_and_Online_Object_Completion_CVPR_2025_paper.html",
+        "kind": "cvf",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-18"
+      },
+      "code_status": "project_only"
+    },
+    {
+      "paper_id": "pr-1211",
+      "title": "RFMPose: Generative Category-level Object Pose Estimation via Riemannian Flow Matching",
+      "publication": {
+        "status": "peer_reviewed",
+        "kind": "conference",
+        "venue": "NeurIPS",
+        "year": 2025,
+        "venue_year": 2025,
+        "presentation": "unknown",
+        "venue_id": "neurips"
+      },
+      "overview": "2025/NeurIPS/2025_NeurIPS_RFMPose-Generative-Category-level-Object-Pose-Estimation-v/01_overview.md",
+      "authority": {
+        "url": "https://proceedings.neurips.cc/paper_files/paper/2025/hash/618c0a236e7aace748d09bc8fbed3e4d-Abstract-Conference.html",
+        "kind": "proceedings",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-18"
+      },
+      "code_status": "released"
+    },
+    {
+      "paper_id": "pr-1212",
+      "title": "Universal Pose Pretraining for Generalizable Vision-Language-Action Policies",
+      "publication": {
+        "status": "peer_reviewed",
+        "kind": "conference",
+        "venue": "RSS",
+        "year": 2026,
+        "venue_year": 2026,
+        "presentation": "unknown",
+        "venue_id": "rss"
+      },
+      "overview": "2026/RSS/2026_RSS_Universal-Pose-Pretraining-for-Generalizable-Vision-Langua/01_overview.md",
+      "authority": {
+        "url": "https://roboticsproceedings.org/rss22/p145.html",
+        "kind": "proceedings",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-18"
+      },
+      "code_status": "project_only"
+    },
+    {
+      "paper_id": "pr-1213",
+      "title": "Robo3R: Enhancing Robotic Manipulation with Accurate Feed-Forward 3D Reconstruction",
+      "publication": {
+        "status": "peer_reviewed",
+        "kind": "conference",
+        "venue": "RSS",
+        "year": 2026,
+        "venue_year": 2026,
+        "presentation": "unknown",
+        "venue_id": "rss"
+      },
+      "overview": "2026/RSS/2026_RSS_Robo3R-Enhancing-Robotic-Manipulation-with-Accurate-Feed-F/01_overview.md",
+      "authority": {
+        "url": "https://roboticsproceedings.org/rss22/p056.html",
+        "kind": "proceedings",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-18"
+      },
+      "code_status": "project_only"
+    },
+    {
+      "paper_id": "pr-1214",
+      "title": "GeoPredict: Leveraging Predictive Kinematics and 3D Gaussian Geometry for Precise VLA Manipulation",
+      "publication": {
+        "status": "peer_reviewed",
+        "kind": "conference",
+        "venue": "CVPR",
+        "year": 2026,
+        "venue_year": 2026,
+        "presentation": "unknown",
+        "venue_id": "cvpr"
+      },
+      "overview": "2026/CVPR/2026_CVPR_GeoPredict-Leveraging-Predictive-Kinematics-and-3D-Gaussia/01_overview.md",
+      "authority": {
+        "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Qian_GeoPredict_Leveraging_Predictive_Kinematics_and_3D_Gaussian_Geometry_for_Precise_CVPR_2026_paper.html",
+        "kind": "cvf",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-18"
+      },
+      "code_status": "released"
+    },
+    {
+      "paper_id": "pr-1215",
+      "title": "ReconVLA: Reconstructive Vision-Language-Action Model as Effective Robot Perceiver",
+      "publication": {
+        "status": "peer_reviewed",
+        "kind": "conference",
+        "venue": "AAAI",
+        "year": 2026,
+        "venue_year": 2026,
+        "presentation": "unknown",
+        "venue_id": "aaai"
+      },
+      "overview": "2026/AAAI/2026_AAAI_ReconVLA-Reconstructive-Vision-Language-Action-Model-as-Ef/01_overview.md",
+      "authority": {
+        "url": "https://ojs.aaai.org/index.php/AAAI/article/view/38921",
+        "kind": "proceedings",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-18"
+      },
+      "code_status": "not_identified"
+    },
+    {
+      "paper_id": "pr-1216",
+      "title": "Action-Geometry Prediction with 3D Geometric Prior for Bimanual Manipulation",
+      "publication": {
+        "status": "peer_reviewed",
+        "kind": "conference",
+        "venue": "CVPR",
+        "year": 2026,
+        "venue_year": 2026,
+        "presentation": "unknown",
+        "venue_id": "cvpr"
+      },
+      "overview": "2026/CVPR/2026_CVPR_Action-Geometry-Prediction-with-3D-Geometric-Prior-for-Bim/01_overview.md",
+      "authority": {
+        "url": "https://openaccess.thecvf.com/content/CVPR2026/papers/Xu_Action-Geometry_Prediction_with_3D_Geometric_Prior_for_Bimanual_Manipulation_CVPR_2026_paper.pdf",
+        "kind": "cvf",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-18"
+      },
+      "code_status": "released"
+    },
+    {
+      "paper_id": "pr-1217",
+      "title": "Real-World Reinforcement Learning of Active Perception Behaviors",
+      "publication": {
+        "status": "peer_reviewed",
+        "kind": "conference",
+        "venue": "NeurIPS",
+        "year": 2025,
+        "venue_year": 2025,
+        "presentation": "unknown",
+        "venue_id": "neurips"
+      },
+      "overview": "2025/NeurIPS/2025_NeurIPS_Real-World-Reinforcement-Learning-of-Active-Perception-Beh/01_overview.md",
+      "authority": {
+        "url": "https://papers.neurips.cc/paper_files/paper/2025/hash/aa1b1a959c80086cba61d0fd66de412f-Abstract-Conference.html",
+        "kind": "proceedings",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-18"
+      },
+      "code_status": "project_only"
+    },
+    {
+      "paper_id": "pr-1218",
+      "title": "Colored Noise in PPO: Improved Exploration and Performance through Correlated Action Sampling",
+      "publication": {
+        "status": "peer_reviewed",
+        "kind": "conference",
+        "venue": "AAAI",
+        "year": 2024,
+        "venue_year": 2024,
+        "presentation": "unknown",
+        "venue_id": "aaai"
+      },
+      "overview": "2024/AAAI/2024_AAAI_Colored-Noise-in-PPO-Improved-Exploration-and-Performance/01_overview.md",
+      "authority": {
+        "url": "https://ojs.aaai.org/index.php/AAAI/article/view/29139",
+        "kind": "proceedings",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-18"
+      },
+      "code_status": "released"
+    },
+    {
+      "paper_id": "pr-1219",
+      "title": "Guiding real-world reinforcement learning for in-contact manipulation tasks with Shared Control Templates",
+      "publication": {
+        "status": "peer_reviewed",
+        "kind": "journal",
+        "venue": "Autonomous Robots",
+        "year": 2024,
+        "venue_year": 2024,
+        "presentation": "unknown",
+        "venue_id": "autonomous-robots"
+      },
+      "overview": "2024/Autonomous-Robots/2024_Autonomous-Robots_Guiding-real-world-reinforcement-learning-for-in-contact-m/01_overview.md",
+      "authority": {
+        "url": "https://link.springer.com/article/10.1007/s10514-024-10164-6",
+        "kind": "publisher",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-18"
+      },
+      "code_status": "not_identified"
+    },
+    {
+      "paper_id": "pr-1220",
+      "title": "Robotic task success evaluation under multi-modal non-parametric object pose uncertainty",
+      "publication": {
+        "status": "peer_reviewed",
+        "kind": "journal",
+        "venue": "Industrial Robot",
+        "year": 2025,
+        "venue_year": 2025,
+        "presentation": "unknown",
+        "venue_id": "industrial-robot"
+      },
+      "overview": "2025/Industrial-Robot/2025_Industrial-Robot_Robotic-task-success-evaluation-under-multi-modal-non-para/01_overview.md",
+      "authority": {
+        "url": "https://www.emerald.com/ir/article-abstract/52/5/651/1254840/Robotic-task-success-evaluation-under-multi-modal?redirectedFrom=PDF",
+        "kind": "publisher",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-18"
+      },
+      "code_status": "not_identified"
+    },
+    {
+      "paper_id": "pr-1221",
+      "title": "StructRL: Structured Action-Space Exploration for Flow-Based VLAs",
+      "publication": {
+        "status": "preprint",
+        "kind": "preprint",
+        "venue": "arXiv",
+        "year": 2026,
+        "venue_year": 2026,
+        "presentation": "unknown",
+        "venue_id": "arxiv"
+      },
+      "overview": "2026/arXiv/2026_arXiv_StructRL-Structured-Action-Space-Exploration-for-Flow-Base/01_overview.md",
+      "authority": {
+        "url": "https://arxiv.org/abs/2608.15139",
+        "kind": "arxiv",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-18"
+      },
+      "code_status": "not_identified"
+    },
+    {
+      "paper_id": "pr-1222",
+      "title": "SOE: Sample-Efficient Robot Policy Self-Improvement via On-Manifold Exploration",
+      "publication": {
+        "status": "preprint",
+        "kind": "preprint",
+        "venue": "arXiv",
+        "year": 2025,
+        "venue_year": 2025,
+        "presentation": "unknown",
+        "venue_id": "arxiv"
+      },
+      "overview": "2025/arXiv/2025_arXiv_SOE-Sample-Efficient-Robot-Policy-Self-Improvement-via-On/01_overview.md",
+      "authority": {
+        "url": "https://arxiv.org/abs/2509.19292",
+        "kind": "arxiv",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-18"
+      },
+      "code_status": "released"
+    },
+    {
+      "paper_id": "pr-1223",
+      "title": "ActivePose: Active 6D Object Pose Estimation and Tracking for Robotic Manipulation",
+      "publication": {
+        "status": "preprint",
+        "kind": "preprint",
+        "venue": "arXiv",
+        "year": 2025,
+        "venue_year": 2025,
+        "presentation": "unknown",
+        "venue_id": "arxiv"
+      },
+      "overview": "2025/arXiv/2025_arXiv_ActivePose-Active-6D-Object-Pose-Estimation-and-Tracking-f/01_overview.md",
+      "authority": {
+        "url": "https://arxiv.org/abs/2509.11364",
+        "kind": "arxiv",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-18"
+      },
+      "code_status": "not_identified"
+    },
+    {
+      "paper_id": "pr-1224",
+      "title": "Imagine then Verify: Affordance-Targeted Active Perception for Task-Oriented Grasping in Cluttered Scenes",
+      "publication": {
+        "status": "preprint",
+        "kind": "preprint",
+        "venue": "arXiv",
+        "year": 2026,
+        "venue_year": 2026,
+        "presentation": "unknown",
+        "venue_id": "arxiv"
+      },
+      "overview": "2026/arXiv/2026_arXiv_Imagine-then-Verify-Affordance-Targeted-Active-Perception/01_overview.md",
+      "authority": {
+        "url": "https://arxiv.org/abs/2609.23504",
+        "kind": "arxiv",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-18"
+      },
+      "code_status": "not_identified"
+    }
+  ],
+  "promotions": [
+    {
+      "paper_id": "pr-0805",
+      "from": "REFERENCE",
+      "to": "NEXT",
+      "reason": "Camera와 manipulation action의 decoupled 공동 학습·active benchmark가 현재 능동 관측 후보의 직접 비교이므로 REFERENCE에서 NEXT로 승격한다.",
+      "source_check": {
+        "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Liu_SaPaVe_Towards_Active_Perception_and_Manipulation_in_Vision-Language_Action_Models_CVPR_2026_paper.html",
+        "checked_on": "2026-11-18",
+        "scope": "official_abstract_or_project; priority review only"
+      }
+    },
+    {
+      "paper_id": "pr-1030",
+      "from": "REFERENCE",
+      "to": "NEXT",
+      "reason": "관측 종료 상태에 맞춘 continuation adaptation은 현재 pose-active 비교의 필수 통제이며 REFERENCE에서 NEXT로 승격한다.",
+      "source_check": {
+        "url": "https://arxiv.org/abs/2610.23378",
+        "checked_on": "2026-11-18",
+        "scope": "official_abstract_or_project; priority review only"
+      }
+    }
+  ],
+  "access_boundaries": [
+    "CVF HTML access was partly denied; official indexed abstracts/BibTeX and author project/abstract material were cross-checked.",
+    "AAAI direct pages were bot-protected; official-domain indexed metadata and abstract/preprint were checked.",
+    "SOE author repository mentions ICRA 2026 but official acceptance identity was not verified; retain arXiv 2025.",
+    "UA-Pose repository contains README and images; project_only, not a released implementation.",
+    "No PDF, checkpoint, simulator asset, package installation or experiment in this registry task."
+  ],
+  "repository_metadata_checks": [
+    {
+      "repo": "Chongyang-99/GAP",
+      "url": "https://api.github.com/repos/Chongyang-99/GAP/contents",
+      "items": [
+        {
+          "name": ".gitignore",
+          "type": "file"
+        },
+        {
+          "name": "README.md",
+          "type": "file"
+        },
+        {
+          "name": "__init__.py",
+          "type": "file"
+        },
+        {
+          "name": "deploy_policy.py",
+          "type": "file"
+        },
+        {
+          "name": "deploy_policy.yml",
+          "type": "file"
+        },
+        {
+          "name": "eval.sh",
+          "type": "file"
+        },
+        {
+          "name": "gap_policy",
+          "type": "dir"
+        },
+        {
+          "name": "pretrained",
+          "type": "dir"
+        },
+        {
+          "name": "process_data.sh",
+          "type": "file"
+        },
+        {
+          "name": "scripts",
+          "type": "dir"
+        },
+        {
+          "name": "thirdparty",
+          "type": "dir"
+        },
+        {
+          "name": "train.sh",
+          "type": "file"
+        }
+      ]
+    },
+    {
+      "repo": "EricJin2002/SOE",
+      "url": "https://api.github.com/repos/EricJin2002/SOE/contents",
+      "items": [
+        {
+          "name": ".gitignore",
+          "type": "file"
+        },
+        {
+          "name": "README.md",
+          "type": "file"
+        },
+        {
+          "name": "media",
+          "type": "dir"
+        },
+        {
+          "name": "realworld",
+          "type": "dir"
+        },
+        {
+          "name": "requirements.txt",
+          "type": "file"
+        },
+        {
+          "name": "simulation",
+          "type": "dir"
+        },
+        {
+          "name": "src",
+          "type": "dir"
+        }
+      ]
+    },
+    {
+      "repo": "NVlabs/FoundationPose",
+      "url": "https://api.github.com/repos/NVlabs/FoundationPose/contents",
+      "items": [
+        {
+          "name": ".gitignore",
+          "type": "file"
+        },
+        {
+          "name": "LICENSE",
+          "type": "file"
+        },
+        {
+          "name": "Utils.py",
+          "type": "file"
+        },
+        {
+          "name": "assets",
+          "type": "dir"
+        },
+        {
+          "name": "build_all.sh",
+          "type": "file"
+        },
+        {
+          "name": "build_all_conda.sh",
+          "type": "file"
+        },
+        {
+          "name": "bundlesdf",
+          "type": "dir"
+        },
+        {
+          "name": "check_env.py",
+          "type": "file"
+        },
+        {
+          "name": "datareader.py",
+          "type": "file"
+        },
+        {
+          "name": "docker",
+          "type": "dir"
+        },
+        {
+          "name": "environment.yml",
+          "type": "file"
+        },
+        {
+          "name": "estimater.py",
+          "type": "file"
+        },
+        {
+          "name": "learning",
+          "type": "dir"
+        },
+        {
+          "name": "mycpp",
+          "type": "dir"
+        },
+        {
+          "name": "offscreen_renderer.py",
+          "type": "file"
+        },
+        {
+          "name": "readme.md",
+          "type": "file"
+        },
+        {
+          "name": "requirements.txt",
+          "type": "file"
+        },
+        {
+          "name": "run_demo.py",
+          "type": "file"
+        },
+        {
+          "name": "run_linemod.py",
+          "type": "file"
+        },
+        {
+          "name": "run_ycb_video.py",
+          "type": "file"
+        }
+      ]
+    },
+    {
+      "repo": "UT-Austin-RobIn/l2l",
+      "url": "https://api.github.com/repos/UT-Austin-RobIn/l2l/contents",
+      "items": [
+        {
+          "name": ".gitignore",
+          "type": "file"
+        },
+        {
+          "name": ".gitmodules",
+          "type": "file"
+        },
+        {
+          "name": "README.md",
+          "type": "file"
+        },
+        {
+          "name": "assets",
+          "type": "dir"
+        },
+        {
+          "name": "l2l",
+          "type": "dir"
+        },
+        {
+          "name": "requirements.txt",
+          "type": "file"
+        },
+        {
+          "name": "setup.py",
+          "type": "file"
+        },
+        {
+          "name": "stable-baselines3",
+          "type": "file"
+        }
+      ]
+    },
+    {
+      "repo": "jingjingqian75/GeoPredict",
+      "url": "https://api.github.com/repos/jingjingqian75/GeoPredict/contents",
+      "items": [
+        {
+          "name": ".gitignore",
+          "type": "file"
+        },
+        {
+          "name": "LICENSE.txt",
+          "type": "file"
+        },
+        {
+          "name": "assets",
+          "type": "dir"
+        },
+        {
+          "name": "configs",
+          "type": "dir"
+        },
+        {
+          "name": "data_processing",
+          "type": "dir"
+        },
+        {
+          "name": "docs",
+          "type": "dir"
+        },
+        {
+          "name": "models",
+          "type": "dir"
+        },
+        {
+          "name": "readme.md",
+          "type": "file"
+        },
+        {
+          "name": "requirements.txt",
+          "type": "file"
+        },
+        {
+          "name": "test_robocasa.sh",
+          "type": "file"
+        },
+        {
+          "name": "tools",
+          "type": "dir"
+        },
+        {
+          "name": "train_robocasa.sh",
+          "type": "file"
+        },
+        {
+          "name": "utils",
+          "type": "dir"
+        }
+      ]
+    },
+    {
+      "repo": "jkbjh/cn-ppo-paper-code",
+      "url": "https://api.github.com/repos/jkbjh/cn-ppo-paper-code/contents",
+      "items": [
+        {
+          "name": "LICENSE",
+          "type": "file"
+        },
+        {
+          "name": "README.md",
+          "type": "file"
+        },
+        {
+          "name": "cnppo",
+          "type": "dir"
+        },
+        {
+          "name": "pyproject.toml",
+          "type": "file"
+        },
+        {
+          "name": "setup.py",
+          "type": "file"
+        }
+      ]
+    },
+    {
+      "repo": "minfenli/UA-Pose",
+      "url": "https://api.github.com/repos/minfenli/UA-Pose/contents",
+      "items": [
+        {
+          "name": "README.md",
+          "type": "file"
+        },
+        {
+          "name": "images",
+          "type": "dir"
+        }
+      ]
+    },
+    {
+      "repo": "shabiouyang/RMFPose",
+      "url": "https://api.github.com/repos/shabiouyang/RMFPose/contents",
+      "items": [
+        {
+          "name": "README.txt",
+          "type": "file"
+        },
+        {
+          "name": "configs",
+          "type": "dir"
+        },
+        {
+          "name": "networks",
+          "type": "dir"
+        },
+        {
+          "name": "readme.md",
+          "type": "file"
+        },
+        {
+          "name": "runners",
+          "type": "dir"
+        },
+        {
+          "name": "scripts",
+          "type": "dir"
+        },
+        {
+          "name": "utils",
+          "type": "dir"
+        }
+      ]
+    }
+  ],
+  "preservation": {
+    "old_manifest_records": 1206,
+    "changed_old_fields": {
+      "pr-0805": [
+        "curation"
+      ],
+      "pr-1030": [
+        "curation"
+      ]
+    },
+    "old_standard_notes": 6030,
+    "unchanged_old_note_files": 6028,
+    "changed_old_notes": [
+      "2026/CVPR/2026_CVPR_SaPaVe-Towards-Active-Perception-and-Manipulation-in-Visio/01_overview.md",
+      "2026/arXiv/2026_arXiv_Look-Before-You-Act-Bridging-Active-Perception-and-Vision/01_overview.md"
+    ],
+    "note_change_scope": "Only overview reading-priority header of two promoted papers.",
+    "reading_input_rows_preserved": 502,
+    "reading_fields_checked": [
+      "status",
+      "evidence_level",
+      "started_on",
+      "completed_on",
+      "problem_and_assumptions",
+      "observation_state_action_control",
+      "embodiment_task_data_metrics",
+      "failure_modes",
+      "research_relevance",
+      "next_action",
+      "personal_notes"
+    ],
+    "existing_pose_relation_reproduction_files_preserved": 17,
+    "files_removed_during_this_turn": [],
+    "prior_topic_retirements": "Seven prior user-authorized topic retirements retain compact evidence and Git history; included in publication, not new deletions by this task."
+  },
+  "profile_wording_fix": "Automatic data-artifact cue scans no longer describe themselves as full-text review; corrected generator fallback and new records only, preserving older audited profiles.",
+  "validation": {
+    "reading_history_unit_tests": "PASS (6)",
+    "actual_reading_input_preservation": "PASS",
+    "whole_repository_audit": {
+      "status": "PASS",
+      "papers": 1224,
+      "notes": 6120,
+      "markdown_files": 6343,
+      "markdown_links": 13592,
+      "errors": 0,
+      "warnings": 0
+    },
+    "staged_diff": {
+      "status": "PASS",
+      "whitespace": "PASS",
+      "files": 246,
+      "change_types": {
+        "M": 52,
+        "A": 117,
+        "D": 69,
+        "R": 8
+      },
+      "binary_changes": 0,
+      "scope": "New registry notes, generators, derived indices, prior authorized topic triage, candidate source/preparation records, navigation and maintenance documentation."
+    },
+    "document_maintenance_unit_tests": "PASS (8)",
+    "script_compile": "PASS (tier generator, registration, profile helper)",
+    "priority_reconciliation_idempotence": "PASS (0 records / 0 headers changed)",
+    "registry_views": "regenerated; dry-run counts match",
+    "data_artifact_evidence_fallback": "PASS for benchmark-cue and no-cue paths",
+    "working_diff_check": "PASS"
+  },
+  "publication": {
+    "status": "PENDING",
+    "remote": "origin",
+    "branch": "main"
+  }
+}

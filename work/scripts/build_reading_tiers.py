@@ -1282,6 +1282,40 @@ FOCUS_SOURCE_CHECKS.update({
 })
 FOCUS_REVIEW_DATES.update(dict.fromkeys(["pr-1204", "pr-1205", "pr-1206"], "2026-11-16"))
 
+# 2026-11-18 REG-R17: direct active-perception, geometry and exploration prerequisites.
+NEXT_GROUPS['Active and embodied 3D Vision'].extend([
+    '=FoundationPose: Unified 6D Pose Estimation and Tracking of Novel Objects',
+    '=Active 6D pose estimation for textureless objects using multi-view RGB frames',
+    '=RFMPose: Generative Category-level Object Pose Estimation via Riemannian Flow Matching',
+    '=Robo3R: Enhancing Robotic Manipulation with Accurate Feed-Forward 3D Reconstruction',
+    '=Robotic task success evaluation under multi-modal non-parametric object pose uncertainty',
+    '=ActivePose: Active 6D Object Pose Estimation and Tracking for Robotic Manipulation',
+    '=Imagine then Verify: Affordance-Targeted Active Perception for Task-Oriented Grasping in Cluttered Scenes',
+])
+NEXT_GROUPS['RL, IL, offline learning, and robot data'].extend([
+    '=Learning to Look: Seeking Information for Decision Making via Policy Factorization',
+    '=Real-World Reinforcement Learning of Active Perception Behaviors',
+    '=Colored Noise in PPO: Improved Exploration and Performance through Correlated Action Sampling',
+    '=SOE: Sample-Efficient Robot Policy Self-Improvement via On-Manifold Exploration',
+])
+NEXT_GROUPS['VLA, cross-embodiment, and long-horizon planning'].extend([
+    '=Universal Pose Pretraining for Generalizable Vision-Language-Action Policies',
+    '=GeoPredict: Leveraging Predictive Kinematics and 3D Gaussian Geometry for Precise VLA Manipulation',
+    '=ReconVLA: Reconstructive Vision-Language-Action Model as Effective Robot Perceiver',
+    '=StructRL: Structured Action-Space Exploration for Flow-Based VLAs',
+    '=SaPaVe: Towards Active Perception and Manipulation in Vision-Language Action Models for Robotics',
+    '=Look Before You Act: Bridging Active Perception and Vision-Language-Action Models via Observation-Aligned Data Adaptation',
+])
+NEXT_GROUPS['Contact-rich, deformable, force, and dexterous manipulation'].extend([
+    '=Action-Geometry Prediction with 3D Geometric Prior for Bimanual Manipulation',
+    '=Guiding real-world reinforcement learning for in-contact manipulation tasks with Shared Control Templates',
+])
+FOCUS_REFERENCE_RATIONALES.pop("pr-1030", None)
+FOCUS_PRIORITY_RATIONALES.update({'pr-1207': '현재 능동 관측 후보의 pose baseline이며 CAD/reference·score·좌표 가정을 판단하는 직접 NEXT다.', 'pr-1208': '행동 불확실성 기반 관측 전환이 이미 존재함을 확인할 필수 직접 선행이다.', 'pr-1209': 'Pose 정확도 중심 NBV와 task 성공 중심 관측 중단을 비교할 journal 기준이다.', 'pr-1211': '유한 pose 가설 생성과 score 해석을 비교하는 직접 NEXT다.', 'pr-1212': 'Pose 표현을 VLA에 넣는 것만으로 새 기여를 주장하지 않도록 하는 직접 선행이다.', 'pr-1213': 'TASK-GEOMETRY가 일반 재구성 정확도 개선의 반복인지 판단할 직접 비교다.', 'pr-1214': '3D reconstruction auxiliary loss 자체가 새 기여가 아님을 보여 주는 직접 VLA 비교다.', 'pr-1215': 'TASK-GEOMETRY의 이득이 단순 target attention/영역 supervision 때문인지 비교할 선행이다.', 'pr-1216': '관계 기반 탐색 후보에서 geometry representation 이득과 exploration 변경의 이득을 구별하는 직접 비교다.', 'pr-1217': 'VLA+RL로 관측 행동을 만든다는 넓은 주장을 제한하는 핵심 실세계 기준이다.', 'pr-1218': '복잡한 관계 noise 학습 전에 비교해야 할 단순 시간 상관 탐색 baseline이다.', 'pr-1219': '관계/geometry로 탐색을 제한한다는 원리를 이미 제시한 직접 선행이다.', 'pr-1220': '불확실성이 남아도 성공하면 행동한다는 원리를 신규성에서 제외하게 하는 직접 비교다.', 'pr-1221': '관계 기반 RL 탐색의 noise 위치·시간 구조·재채점 설계와 직접 충돌하는 최신 선행이다.', 'pr-1222': '관계 조건 탐색이 일반 latent/on-manifold 탐색보다 필요한지 확인할 직접 baseline이다.', 'pr-1223': 'Pose estimation+active perception 조합이 이미 구현됐음을 보여 주는 직접 선행이다.', 'pr-1224': 'Task-aware NBV와 verification 기반 중단이 이미 있는 점을 반영할 직접 비교다.', 'pr-0805': 'Camera와 manipulation action의 decoupled 공동 학습·active benchmark가 현재 능동 관측 후보의 직접 비교이므로 REFERENCE에서 NEXT로 승격한다.', 'pr-1030': '관측 종료 상태에 맞춘 continuation adaptation은 현재 pose-active 비교의 필수 통제이며 REFERENCE에서 NEXT로 승격한다.'})
+FOCUS_REFERENCE_RATIONALES.update({'pr-1210': 'CAD 완전성 전제를 완화하는 geometry 대안으로 보존하되 첫 active-pose 비교의 필수 정독에서는 REFERENCE로 둔다.'})
+FOCUS_SOURCE_CHECKS.update({'pr-1207': 'https://openaccess.thecvf.com/content/CVPR2024/html/Wen_FoundationPose_Unified_6D_Pose_Estimation_and_Tracking_of_Novel_Objects_CVPR_2024_paper.html', 'pr-1208': 'https://proceedings.mlr.press/v270/dass25a.html', 'pr-1209': 'https://journals.sagepub.com/doi/10.1177/02783649251411922', 'pr-1210': 'https://openaccess.thecvf.com/content/CVPR2025/html/Li_UA-Pose_Uncertainty-Aware_6D_Object_Pose_Estimation_and_Online_Object_Completion_CVPR_2025_paper.html', 'pr-1211': 'https://proceedings.neurips.cc/paper_files/paper/2025/hash/618c0a236e7aace748d09bc8fbed3e4d-Abstract-Conference.html', 'pr-1212': 'https://roboticsproceedings.org/rss22/p145.html', 'pr-1213': 'https://roboticsproceedings.org/rss22/p056.html', 'pr-1214': 'https://openaccess.thecvf.com/content/CVPR2026/html/Qian_GeoPredict_Leveraging_Predictive_Kinematics_and_3D_Gaussian_Geometry_for_Precise_CVPR_2026_paper.html', 'pr-1215': 'https://ojs.aaai.org/index.php/AAAI/article/view/38921', 'pr-1216': 'https://openaccess.thecvf.com/content/CVPR2026/papers/Xu_Action-Geometry_Prediction_with_3D_Geometric_Prior_for_Bimanual_Manipulation_CVPR_2026_paper.pdf', 'pr-1217': 'https://papers.neurips.cc/paper_files/paper/2025/hash/aa1b1a959c80086cba61d0fd66de412f-Abstract-Conference.html', 'pr-1218': 'https://ojs.aaai.org/index.php/AAAI/article/view/29139', 'pr-1219': 'https://link.springer.com/article/10.1007/s10514-024-10164-6', 'pr-1220': 'https://www.emerald.com/ir/article-abstract/52/5/651/1254840/Robotic-task-success-evaluation-under-multi-modal?redirectedFrom=PDF', 'pr-1221': 'https://arxiv.org/abs/2608.15139', 'pr-1222': 'https://arxiv.org/abs/2509.19292', 'pr-1223': 'https://arxiv.org/abs/2509.11364', 'pr-1224': 'https://arxiv.org/abs/2609.23504', 'pr-0805': 'https://openaccess.thecvf.com/content/CVPR2026/html/Liu_SaPaVe_Towards_Active_Perception_and_Manipulation_in_Vision-Language_Action_Models_CVPR_2026_paper.html', 'pr-1030': 'https://arxiv.org/abs/2610.23378'})
+FOCUS_REVIEW_DATES.update(dict.fromkeys(['pr-1207', 'pr-1208', 'pr-1209', 'pr-1210', 'pr-1211', 'pr-1212', 'pr-1213', 'pr-1214', 'pr-1215', 'pr-1216', 'pr-1217', 'pr-1218', 'pr-1219', 'pr-1220', 'pr-1221', 'pr-1222', 'pr-1223', 'pr-1224', 'pr-0805', 'pr-1030'], "2026-11-18"))
+
 SYNTHESIS_FILES = OrderedDict(
     [
         (

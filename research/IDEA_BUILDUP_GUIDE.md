@@ -1,7 +1,7 @@
 # 기존 논문에서 검증 가능한 연구 아이디어로: 본격 연구 전 빌드업 가이드
 
-- 최초 작성: 2026-10-19 / 연구 방법론·웹 근거 갱신: **2026-11-03** / 안내 정리: **2026-11-07 KST**.
-- 현재 새 탐색은 **VLA + RL·단일 정책 학습 중심**이다. 후보별 적용·구현·효과 상태는 [현재 주제 index](../work/research_topics/README.md), 다음 행동은 [TODO](../TODO.md)가 관리한다. [기존 6개 적용 감사](../work/research_topics/README.md#nonexperimental-process-audit)는 11/04 기록이며 이후 FEEDBACK·UNIFIED·HINDSIGHT는 자체 문서에 7단계 상태를 기록한다. HINDSIGHT는 N2에서 내부 비실험 연구 설계를 마쳤고, native 사례·효과·외부 비판은 별도로 미확인이다. 문서 완료를 실행 준비나 가설 입증으로 간주하지 않는다.
+- 최초 작성: 2026-10-19 / 연구 방법론·웹 근거 갱신: **2026-11-03** / 검색 지도·후보 정리: **2026-11-17 KST**.
+- 현재 새 탐색은 **VLA + RL + Computer Vision + Robotics**, 사용자의 최신 후속에 따라 **새 검색 분야와 명확한 main contribution**을 우선한다. 신뢰성·불확실성·실패/복구는 중요한 축으로 유지하되 탐색 범위를 제한하지 않는다. 후보별 적용·구현·효과 상태는 [현재 주제 index](../work/research_topics/README.md), 다음 행동은 [TODO](../TODO.md)가 관리한다. 기존 11개 중 7개를 폐기하고 3개 유지·1개 예비로 줄였다. [이전 적용 감사](../work/research_topics/README.md#nonexperimental-process-audit)는 당시 기록이다. 문서 완료를 실행 준비나 가설 입증으로 간주하지 않는다.
 - 운영 기준은 [탐색 절차 감사](../work/update/BUILDUP_PROCESS_AUDIT_2026-10-28.md)의 탐색/진단/확증 구분을 따른다. 적용 이력은 [update index](../work/update/README.md)에 통합한다. 문서 완료·GPU 확보·검토 질문 준비를 각각 연구 효과·실행 가능·외부 피드백 수신으로 승격하지 않는다.
 - 대상: VLA 기반 manipulation·navigation을 출발점으로, **control·RL/IL·데이터 학습·변형체·world model·3D vision·HRI 등 인접 분야**의 연구 질문까지 포함한다. 2026-10-23 사용자 요청으로 공백 탐색 범위를 넓혔으며 VLA와 RL 모두 개별 질문의 필수 조건이 아니다.
 - 목적: 큰 학습·시스템 구현에 투자하기 전에 **어떤 새로운 지식을 만들 수 있는지, 가장 취약한 가정이 무엇인지, 이를 어떻게 적은 비용으로 확인할지** 판단한다.
@@ -189,6 +189,8 @@ NeurIPS 항목은 **E&D track**의 지침이다. 이를 모든 트랙의 동일�
 | 기여 후보 | 특정 변화 조건에서 갱신 시점의 효과와 비용을 분리하는 평가·설계 지식 | 실제 결과와 선행 연구 대비 차이가 필요하다 |
 
 이 예시는 신규성을 주장하지 않는다. 특히 action chunk 길이와 반응성은 이미 연구된 문제다. 핵심은 알고리즘 이름을 먼저 고정하지 않고, **문제의 존재 → 설명 → 필요한 개입**으로 구체화하는 것이다.
+
+<a id="5-문헌에서-아이디어로-넘어가는-8단계"></a>
 
 ## 5. 공백 탐색 후 문헌에서 아이디어로 넘어가는 8단계
 
@@ -556,3 +558,62 @@ Negative result를 남길 때도 contribution audit가 필요하다. 부실한 �
 | 결과 해석 | 실제 실행 범위, 반복/분모, 비교 공정성, 반대 설명 | 문서 DONE·정적 API 검사·저장 logits 재계산 |
 
 다른 컴퓨터에서 기존 실험을 재개할 때는 **후보별 재개 gate → 해당 검사의 데이터/비교 계약 → Docker runtime → native baseline → 최소 검사**를 따른다. 이 실행 순서를 초기 질문의 탐색 자격으로 사용하지 않는다. 저장된 결과 재분석은 별도 경로로 실행할 수 있으나 새로운 현상의 발견·학습 개선으로 표시하지 않는다. [실행 안내](../work/experiments/portable/README.md)는 Docker 내부 dependency, 입력 hash, 실행 범위와 미검증 플랫폼을 명시한다. GPU가 없을 때는 판단을 바꿀 문헌·공개 근거·수작업 논증·진단 설계를 수행하고, 그 범위를 넘어선 답은 미확인으로 남긴다.
+
+<a id="search-map-2026-11-17"></a>
+
+## VLA + RL + Computer Vision + Robotics 검색 지도 — 2026-11-17
+
+사용자의 분야별 검색 제안을 기존 buildup에 통합한다. 아래는 **검색 어휘**이며 각 조합이 새 연구 공백이라는 뜻은 아니다. 신뢰성·실패 문제를 먼저 찾되 성능 개선·단일 정책 학습·유용한 시스템 기여도 열어 둔다. RL과 vision을 제목에 모두 넣는 것보다 로봇의 어떤 행동 결정이 바뀌는지가 중요하다.
+
+| 분야 | 함께 돌려 검색할 표현 |
+|---|---|
+| VLA × RL 알고리즘 | RL fine-tuning, reinforced fine-tuning/RFT, post-training; off-policy/on-policy, offline-to-online; residual/action editing; advantage-conditioned, critic, Q-chunking; PPO/GRPO for diffusion/flow matching, noise-space steering, consistency policy, LoRA; test-time adaptation, self-improving |
+| 보상·성공·진행도 | reward model, VLM-as-reward/judge, success detector/classifier, progress estimator, process reward, dense reward from video; reward hacking/calibration, failure analysis, goal-conditioned value, temporal distance |
+| 실제 로봇 RL | real-world/sample-efficient RL, human intervention, DAgger, reset-free/autonomous reset, forward-backward policy, continual/lifelong/deployment-time learning |
+| World model·상상 학습 | embodied world model, action-conditioned video, WAM, latent dynamics, imagination/model-based RL, Dreamer/MBPO, policy verification, real2sim/sim2real, digital twin, hallucination control, model-policy co-evolution |
+| 3D·4D·동적 장면 | spatial/geometry-aware VLA, point-cloud policy, spatiotemporal/4D; scene flow, CoTracker/TAP, optical flow; dynamic manipulation, interception/catching/conveyor; 3D/4D Gaussian, VGGT/depth, multi-view consistency, viewpoint robustness |
+| 물체 상태·추적 | 6D pose estimation/tracking, FoundationPose, novel-object/category-level/model-free pose; symmetry/occlusion/multi-hypothesis/SE(3) distribution; re-initialization/re-detection, object-centric policy/permanence, SAM2, grounding/keypoint/affordance, active perception/next-best-view |
+| **신뢰성·불확실성·실패 — 우선** | failure detection/prediction, runtime monitoring/verification, anomaly/OOD detection, covariate/policy/monitor drift; conformal prediction, ECE/calibration, selective prediction/abstention; epistemic/aleatoric UQ, hidden-state/latent probe, ensemble; failure attribution/root cause/taxonomy, perception vs policy failure; recovery/rollback/retry, confidence gate/fallback, graceful degradation |
+| 기억·장기 작업 | memory-augmented/retrieval-augmented policy, episodic/working/spatial/object/failure memory, non-Markovian/POMDP, history compression/keyframe/recurrent/Mamba, negative experience, retrieve-then-steer, progress tracking |
+| 안전 | safe/constrained RL/CMDP, safety filter/CBF, chunk-level safety, shielding/reachability/runtime assurance, semantic safety, fragile-object/HRI/whole-body safety, adversarial attack/backdoor |
+| 일반화·평가 | LIBERO/Plus/PRO/Safety, VLABench, RoboTwin, SimplerEnv, ManiSkill, RoboMME, MIKASA-Robo, DOMINO, CALVIN; camera/light/layout/instruction shift, cross-embodiment, sim-real correlation, reproducibility/evaluation harness |
+| 효율·배포 | small/efficient VLA, SmolVLA, quantization/distillation/token caching/early exit, action/real-time chunking, asynchronous/latency-aware control, on-device, inference-time compute/speculative decoding/dual system |
+| 데이터 | augmentation/domain randomization, synthetic/video-to-action/latent action, egocentric video, UMI/teleoperation quality, curation/filtering, failure/counterfactual/recovery data, perturbation injection |
+| 기반 모델의 역할 | hierarchical VLA, VLM planner, embodied reasoning/chain-of-thought, code-as-policy/skill library, agentic policy, closed-loop monitoring; 단일 정책·공유 학습과 배포 시 모듈 연결 구분 |
+| 비전 + 촉각·힘 | visuo-tactile, force-aware VLA, contact-rich manipulation/insertion, proprioception fusion, adaptive/variable impedance |
+
+Benchmark/모델 이름은 후보 발견용이다. 현재 공개 상태·정식 명칭·version·실제 평가 역할은 원 논문과 공식 code에서 확인한다. 이 표의 이름만으로 registry 신규 등록이나 사용 가능한 baseline이라고 판정하지 않는다.
+
+### 질문에서 시작하는 검색식
+
+한 번에 모든 키워드를 AND로 묶지 않는다. 따옴표 exact phrase와 표현을 바꾼 검색을 함께 쓰고, `VLA`뿐 아니라 `vision-language-action`·`robot policy`·`manipulation`을 교체한다.
+
+```text
+("VLA" OR "vision-language-action") ("failure detection" OR "runtime monitoring")
+"robot manipulation" "perception failure" "policy failure"
+"VLA" "failure attribution" recovery
+"VLA" "policy update" (calibration OR "monitor drift")
+"object pose uncertainty" (manipulation OR "fallback policy")
+"pose tracking" "failure recovery" manipulation
+"VLA" "residual RL" perception
+"VLM reward" "failure detector" "real-world RL"
+"negative memory" "failure retrieval" "robot policy"
+"conformal prediction" "VLA" recalibration
+"perception uncertainty" ("safety filter" OR "control barrier function")
+"dynamic manipulation" "motion uncertainty" policy
+("diffusion policy" OR "flow matching") "reinforcement learning" contact
+"vision-language-action" "language grounding" "reinforcement learning"
+```
+
+2024–2026을 기본 최신 범위로 하고 기반 논문은 citation lineage로 따로 확인한다. CVPR/ICCV/ECCV·NeurIPS/ICLR/ICML·CoRL/RSS/ICRA/IROS 및 T-RO/RA-L/IJRR/Science Robotics의 공식 proceedings/publisher를 우선한다. arXiv·저자 project/code도 직접 경쟁 연구에 포함하되 workshop·under review·preprint를 본 학회 채택으로 올리지 않는다. 연도/venue별 quota는 두지 않는다.
+
+### 발견 → 공백 심사
+
+1. **구체적인 로봇 실패 상황을 먼저 한 문장으로 쓴다.** 예: 물체 재추적 이후에도 잘못 집는 경우, 새 관측 부족인지 실행 능력 부족인지에 따라 도움이 되는 조치가 다른가? 아직 실패 빈도를 측정하지 않았다면 가설로 표시한다.
+2. Survey/awesome list·alphaXiv·Hugging Face Papers·arXiv cs.RO/cs.CV로 용어와 계보를 찾는다. 사용자가 언급한 제목 불명의 survey나 “200편 이상/2026년 8월” 서술은 원문 확인 없이 사실로 기록하지 않는다. 이번 [No Free Checker](https://arxiv.org/abs/2609.09250)는 verifier 용어 지도에만 사용했다.
+3. 가장 가까운 3–5편의 공식 본문·한계·공개 interface를 대조하고 references/cited-by/similar papers로 후속을 찾는다. Workshop은 발견 경로이지 본 학회 게재의 증거가 아니다. 논문 제목보다 실제 입력·학습 대상·개입 시점·관측 가능한 신호·실험 조건을 비교한다.
+4. 한계 문장은 **아이디어 출발점**으로만 쓴다. 이미 후속이 해결했는지, 강한 단순 방법이 있는지, 어려움을 제거하면 실제 행동 결정이 바뀌는지 확인한다. 제한된 검색으로 “아무도 하지 않았다”고 쓰지 않는다.
+5. 공백 후보를 하나의 구별 가능한 질문으로 줄인다. 최소한 **중요한 로봇 상황 / 직접 선행과 차이 / 단순 대안 / 어떤 관측이면 판단이 바뀌는지**를 기록한다. 미관측 성능을 탐색 진입 전에 요구하지 않는다. 높은 구현 부담과 기여의 불명확성이 함께 지속되면 투자 후보에서 내릴 수 있다.
+6. 기존 `내용/README.md`에 확인한 근거와 미확인을 통합한다. 검색 결과마다 새 주제 폴더·중복 brief를 만들지 않는다. 구현을 선택했을 때만 기존 Docker-only 절차로 최소 검증을 준비한다.
+
+이번 직접 선행 대조에서 **일반 실패 탐지·latent probe·배포 후 온라인 보정은 이미 혼잡한 범위**임을 확인했다. [SFF](https://arxiv.org/abs/2611.11688)는 정책 변화와 온라인 monitor 갱신을 다루며, [AHEAD](https://arxiv.org/html/2606.02486v1)의 지각 추정 한계와 [B2FF](https://arxiv.org/html/2606.09258v1)의 회복 가능성 가정은 다른 문제다. 이들을 연결한 구체 질문과 확인 경계는 [시각 피드백 탐색](../work/research_topics/visual_feedback/내용/README.md#reliability-scout-2026)에 모았다. 서로 다른 논문의 한계를 나열하거나 모듈을 연결하는 것만으로 신규성을 주장하지 않는다.
