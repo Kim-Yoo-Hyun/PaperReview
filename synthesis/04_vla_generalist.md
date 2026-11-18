@@ -57,7 +57,7 @@ Gato/CLIP/CLIPort → PaLM-E/RT-1/RT-2 → MT-Opt/AutoRT data engine → Open X-
 | CORE | [NaVILA: Legged Robot Vision-Language-Action Model for Navigation](../2025/RSS/2025_RSS_NaVILA-Legged-Robot-Vision-Language-Action-Model-for-Navig/01_overview.md) | 2025 / RSS | `UNREAD` | `FULL_TEXT_CHECKED` |
 | CORE | [CALVIN: A Benchmark for Language-Conditioned Policy Learning for Long-Horizon Robot Manipulation Tasks](../2022/RA-L/2022_RA-L_CALVIN-A-Benchmark-for-Language-Conditioned-Policy-Learnin/01_overview.md) | 2022 / RA-L | `UNREAD` | `FULL_TEXT_CHECKED` |
 
-### VLA, cross-embodiment, and long-horizon planning — 156
+### VLA, cross-embodiment, and long-horizon planning — 158
 
 | Tier | Paper | Year / Venue | Status | Evidence |
 |---|---|---|---|---|
@@ -217,6 +217,8 @@ Gato/CLIP/CLIPort → PaLM-E/RT-1/RT-2 → MT-Opt/AutoRT data engine → Open X-
 | NEXT | [StructRL: Structured Action-Space Exploration for Flow-Based VLAs](../2026/arXiv/2026_arXiv_StructRL-Structured-Action-Space-Exploration-for-Flow-Base/01_overview.md) | 2026 / arXiv | `UNREAD` | `ABSTRACT_CHECKED` |
 | NEXT | [SaPaVe: Towards Active Perception and Manipulation in Vision-Language Action Models for Robotics](../2026/CVPR/2026_CVPR_SaPaVe-Towards-Active-Perception-and-Manipulation-in-Visio/01_overview.md) | 2026 / CVPR | `UNREAD` | `FULL_TEXT_CHECKED` |
 | NEXT | [Look Before You Act: Bridging Active Perception and Vision-Language-Action Models via Observation-Aligned Data Adaptation](../2026/arXiv/2026_arXiv_Look-Before-You-Act-Bridging-Active-Perception-and-Vision/01_overview.md) | 2026 / arXiv | `UNREAD` | `ABSTRACT_CHECKED` |
+| NEXT | [Understanding the Impact of Geometric Foundation Models on Vision-Language-Action Models](../2026/ECCV/2026_ECCV_Understanding-the-Impact-of-Geometric-Foundation-Models-on/01_overview.md) | 2026 / ECCV | `UNREAD` | `ABSTRACT_CHECKED` |
+| NEXT | [PRISM: Precision Forcing for Generalist Vision-Language-Action Policies](../2026/arXiv/2026_arXiv_PRISM-Precision-Forcing-for-Generalist-Vision-Language-Act/01_overview.md) | 2026 / arXiv | `UNREAD` | `ABSTRACT_CHECKED` |
 
 <!-- READING_QUEUE:END -->
 
@@ -331,6 +333,10 @@ Gato/CLIP/CLIPort → PaLM-E/RT-1/RT-2 → MT-Opt/AutoRT data engine → Open X-
 **CURATION-HYPOTHESIS.** [Pose-VLA](https://roboticsproceedings.org/rss22/p145.html)의 pose pretraining과 [SaPaVe](https://openaccess.thecvf.com/content/CVPR2026/html/Liu_SaPaVe_Towards_Active_Perception_and_Manipulation_in_Vision-Language_Action_Models_CVPR_2026_paper.html)의 카메라/조작 공동 학습 이후, pose token 추가나 통합 architecture만으로 새 기여를 주장하지 않는다. 여러 pose 가설의 행동 양립성, 입력 geometry 오류의 방향별 조작 영향을 두 초기 질문으로 나눴다. [3D track의 직접 선행과 질문](./07_robotics_3d_perception.md#pose-reconstruction-2026) 및 [후보 index](../work/research_topics/README.md)를 따른다. RL은 해당 학습에 필요할 때 선택하며, pipeline 연결·배포 시 단일 정책·같은 가중치의 공동 갱신을 구별한다. 효과/신규성은 미확립이다.
 
 **2026-11-18 등록 연결 / CURATION-HYPOTHESIS.** [Pose-VLA](../2026/RSS/2026_RSS_Universal-Pose-Pretraining-for-Generalizable-Vision-Langua/01_overview.md)는 pose/trajectory pretraining, [GeoPredict](../2026/CVPR/2026_CVPR_GeoPredict-Leveraging-Predictive-Kinematics-and-3D-Gaussia/01_overview.md)는 훈련 시 3D geometry supervision, [ReconVLA](../2026/AAAI/2026_AAAI_ReconVLA-Reconstructive-Vision-Language-Action-Model-as-Ef/01_overview.md)는 2D target-region 재구성으로 구별한다. ReconVLA를 3D reconstruction 방법으로 분류하지 않는다. [Robo3R](../2026/RSS/2026_RSS_Robo3R-Enhancing-Robotic-Manipulation-with-Accurate-Feed-F/01_overview.md)의 robot-frame geometry와 [GAP](../2026/CVPR/2026_CVPR_Action-Geometry-Prediction-with-3D-Geometric-Prior-for-Bim/01_overview.md)의 미래 action/geometry 공동 예측을 비교하되 geometry supervision 자체를 새 기여로 주장하지 않는다. [REG-R17](../work/update/REGISTRY_MAINTENANCE_2026-11-18.md)의 paper-note는 abstract/project 확인이며 연구 후보의 효과·정독 상태는 승격하지 않았다.
+
+**2026-11-18 2번 후보 N1:** [TASK-GEOMETRY](../work/research_topics/task_geometry_estimation/내용/README.md#n1-question)는 정책에 중요한 추정 오차를 학습한다는 기존 원리를 새 기여에서 제외했다. 동일 VLA 입력의 통제된 오류 개입을 먼저 검토하며 frozen 진단·geometry adapter 학습·정책 공동 갱신을 구분한다. 실제 효과나 사용자 정독 상태는 승격하지 않았다.
+
+**REG-R18 등록 연결 / CURATION-HYPOTHESIS:** [EDI](../2026/arXiv/2026_arXiv_Estimate-Don-t-Imitate-Reusing-Differentiable-State-Based/01_overview.md) · [Geometry Impact(ECCV2026)](../2026/ECCV/2026_ECCV_Understanding-the-Impact-of-Geometric-Foundation-Models-on/01_overview.md) · [PRISM Precision Forcing](../2026/arXiv/2026_arXiv_PRISM-Precision-Forcing-for-Generalist-Vision-Language-Act/01_overview.md)를 직접 비교로 추가했다. Action-consistency 추정·geometry 결합 분석·정밀도 supervision 이후 남는 질문을 비교하며 사용자 정독이나 효과를 승격하지 않는다.
 
 ### 같은 목표의 환경별 RL 적응을 단일 정책에 통합할 수 있는가 — 2026-11-17
 

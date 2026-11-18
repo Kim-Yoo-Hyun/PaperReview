@@ -6,14 +6,14 @@
 
 ## Snapshot
 
-- Papers: **1224**
-- Resources in the combined view: **670**
+- Papers: **1227**
+- Resources in the combined view: **671**
 - Curated relation edges: **50**
 - Papers with outgoing relations: **41**
 - Papers participating in a relation: **62**
-- Structured evaluation profiles: **1224**
-- Reproducibility profiles: **1224**
-- Lineage coverage profiles: **1224**
+- Structured evaluation profiles: **1227**
+- Reproducibility profiles: **1227**
+- Lineage coverage profiles: **1227**
 - Papers with explicit trial/seed cues: **247**
 - Papers without DOI/arXiv/OpenReview identifier: **366**
 
@@ -22,7 +22,7 @@
 | Value | Count |
 |---|---:|
 | REFERENCE | 508 |
-| NEXT | 424 |
+| NEXT | 427 |
 | ARCHIVE | 242 |
 | CORE | 50 |
 
@@ -31,13 +31,13 @@
 | Value | Count |
 |---|---:|
 | FULL_TEXT_CHECKED | 968 |
-| ABSTRACT_CHECKED | 256 |
+| ABSTRACT_CHECKED | 259 |
 
 ## Reading status (intensive set)
 
 | Value | Count |
 |---|---:|
-| UNREAD | 473 |
+| UNREAD | 476 |
 | READ | 1 |
 
 ## Reading status (inactive history; excluded from intensive denominator)
@@ -51,13 +51,13 @@
 
 | Value | Count |
 |---|---:|
-| recorded | 1224 |
+| recorded | 1227 |
 
 ## Curation roles
 
 | Value | Count |
 |---|---:|
-| method | 963 |
+| method | 966 |
 | foundation | 124 |
 | benchmark_or_dataset | 99 |
 | system | 40 |
@@ -66,9 +66,9 @@
 
 | Value | Count |
 |---|---:|
-| conference | 1044 |
+| conference | 1045 |
+| preprint | 88 |
 | journal | 87 |
-| preprint | 86 |
 | technical_report | 4 |
 | workshop | 2 |
 | other | 1 |
@@ -77,30 +77,30 @@
 
 | Value | Count |
 |---|---:|
-| identified | 858 |
+| identified | 861 |
 | source_only | 366 |
 
 ## Primary source scope
 
 | Value | Count |
 |---|---:|
-| paper_specific | 1181 |
+| paper_specific | 1184 |
 | venue_index | 43 |
 
 ## Code status
 
 | Value | Count |
 |---|---:|
-| not_identified | 621 |
+| not_identified | 623 |
 | project_only | 314 |
-| released | 250 |
+| released | 251 |
 | not_released | 39 |
 
 ## Data status
 
 | Value | Count |
 |---|---:|
-| not_identified | 1050 |
+| not_identified | 1053 |
 | not_applicable | 103 |
 | released | 69 |
 | not_released | 2 |
@@ -110,7 +110,7 @@
 | Value | Count |
 |---|---:|
 | EMPIRICAL / REAL-ROBOT OR HARDWARE | 447 |
-| not_recorded | 275 |
+| not_recorded | 278 |
 | EMPIRICAL / SOURCE-REPORTED EVALUATION | 274 |
 | SYSTEM / EVALUATION SCOPE UNRESOLVED | 95 |
 | BENCHMARK / DATASET | 69 |
@@ -121,7 +121,7 @@
 | Value | Count |
 |---|---:|
 | real_robot | 447 |
-| not_recorded | 275 |
+| not_recorded | 278 |
 | source_reported | 274 |
 | scope_unresolved | 95 |
 | benchmark_or_dataset | 69 |
@@ -131,7 +131,7 @@
 
 | Value | Count |
 |---|---:|
-| trials_or_seeds=not_recorded | 977 |
+| trials_or_seeds=not_recorded | 980 |
 | dataset_or_benchmark=reported | 948 |
 | metrics=reported | 948 |
 | statistics=reported | 940 |
@@ -139,13 +139,13 @@
 | split_or_generalization=reported | 927 |
 | failure_cases=reported | 927 |
 | ablations=reported | 920 |
-| split_or_generalization=not_recorded | 297 |
-| failure_cases=not_recorded | 297 |
-| dataset_or_benchmark=not_recorded | 276 |
-| metrics=not_recorded | 275 |
-| baselines=not_recorded | 275 |
-| ablations=not_recorded | 275 |
-| statistics=not_recorded | 275 |
+| split_or_generalization=not_recorded | 300 |
+| failure_cases=not_recorded | 300 |
+| dataset_or_benchmark=not_recorded | 279 |
+| metrics=not_recorded | 278 |
+| baselines=not_recorded | 278 |
+| ablations=not_recorded | 278 |
+| statistics=not_recorded | 278 |
 | trials_or_seeds=reported | 247 |
 | ablations=not_reported | 29 |
 | baselines=not_reported | 10 |
@@ -156,13 +156,13 @@
 
 | Value | Count |
 |---|---:|
-| metadata_audited | 1224 |
+| metadata_audited | 1227 |
 
 ## Checkpoint status
 
 | Value | Count |
 |---|---:|
-| not_recorded | 1214 |
+| not_recorded | 1217 |
 | reported | 10 |
 
 ## Configuration status
@@ -170,27 +170,27 @@
 | Value | Count |
 |---|---:|
 | reported | 949 |
-| not_recorded | 275 |
+| not_recorded | 278 |
 
 ## Environment status
 
 | Value | Count |
 |---|---:|
 | reported | 949 |
-| not_recorded | 275 |
+| not_recorded | 278 |
 
 ## Run-condition status
 
 | Value | Count |
 |---|---:|
 | reported | 940 |
-| not_recorded | 284 |
+| not_recorded | 287 |
 
 ## Lineage coverage status
 
 | Value | Count |
 |---|---:|
-| no_curated_edge_recorded | 893 |
+| no_curated_edge_recorded | 896 |
 | candidate_only | 269 |
 | curated_edges | 62 |
 

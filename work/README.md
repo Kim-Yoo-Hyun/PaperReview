@@ -16,7 +16,7 @@
 
 ## 보존과 정리
 
-[11/16 Ψ₀·정확성 보완](./update/REGISTRY_ACCURACY_PSI0_2026-11-16.md)에서 직접 논문3편을 등록하고 AMO OCR·SONIC 공개 자료를 교정했다. 11/18 [REG-R17](./update/REGISTRY_MAINTENANCE_2026-11-18.md)에서 미등록 직접 선행18편과 문서/생성 view를 보강했다. 현재 수량은 [생성 통계](../research/REGISTRY_STATS.md), 과거 등록·삭제 근거는 [update index](./update/README.md), 후보·준비/실행 범위는 주제 index가 소유한다.
+[11/16 Ψ₀·정확성 보완](./update/REGISTRY_ACCURACY_PSI0_2026-11-16.md)에서 직접 논문3편을 등록하고 AMO OCR·SONIC 공개 자료를 교정했다. 11/18 [REG-R17](./update/REGISTRY_MAINTENANCE_2026-11-18.md)에서 미등록 직접 선행18편과 문서/생성 view를 보강했다. 후속 [REG-R18](./update/REGISTRY_MAINTENANCE_2026-11-18.md#reg-r18)에서 geometry 직접 선행3편을 등록하고 중복된 완료 안내·재생성 가능한 cache를 정리했다. 현재 수량은 [생성 통계](../research/REGISTRY_STATS.md), 과거 등록·삭제 근거는 [update index](./update/README.md), 후보·준비/실행 범위는 주제 index가 소유한다.
 
 이전의 보고서 병합·일회 script 제거·source report 통합은 [update index](./update/README.md)의 날짜별 기록을 따른다. 현재 source나 실행 근거가 없는 파일로 확인된 경우에만 정리하며, 오래됐다는 이유만으로 역사적 증거를 지우지 않는다.
 

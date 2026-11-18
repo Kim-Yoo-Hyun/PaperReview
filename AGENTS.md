@@ -63,10 +63,10 @@ Humanoid는 별도 taxonomy로 만들지 않는다. Locomotion, whole-body contr
 | Artifact | Role | Editing rule |
 |---|---|---|
 | [TODO.md](./TODO.md) | 활성 작업·직전 완료·다음 행동·의존성 인계 | 시작/완료 시 결과 링크와 다음 항목을 갱신한다. 문서 작업 완료를 연구 가설 입증으로 표시하지 않으며 읽기 priority source로 쓰지 않는다. |
-| [PAPER.md](./PAPER.md) | 전체 1,224편 registry와 topic navigation | 구조를 유지한다. 논문 추가 시 row와 실제 folder가 일치해야 한다. |
+| [PAPER.md](./PAPER.md) | 전체 1,227편 registry와 topic navigation | 구조를 유지한다. 논문 추가 시 row와 실제 folder가 일치해야 한다. |
 | [READING_PLAN.md](./research/READING_PLAN.md) | 우선순위 기준, 연구 관점, 읽기 순서, CORE/NEXT 장기 정독 목록 | `build_reading_tiers.py`가 생성한다. 직접 수정하지 않는다. |
 | [READING_TIERS.csv](./research/READING_TIERS.csv) | 전체 registry의 단일 tier assignment | 생성 파일. 직접 수정하지 않는다. |
-| [READING_STATUS.csv](./research/READING_STATUS.csv) | 474편 정독 진행 상태와 사용자 분석 | 상태·분석 필드는 직접 편집 가능. 생성기는 기존 입력을 보존해야 한다. |
+| [READING_STATUS.csv](./research/READING_STATUS.csv) | 477편 정독 진행 상태와 사용자 분석 | 상태·분석 필드는 직접 편집 가능. 생성기는 기존 입력을 보존해야 한다. |
 | [READING_STATUS_HISTORY.csv](./research/READING_STATUS_HISTORY.csv) | 집중 읽기에서 빠진 47편의 기존 상태·분석 보존 | 생성기는 active tracker와 함께 읽고 재승격 시 사용자 입력을 복원한다. 우선순위 source가 아니다. |
 | [READING_STATUS.md](./research/READING_STATUS.md) | 상태값과 완료 규칙 | 상태 정의 변경 시 tracker와 synthesis 규칙도 함께 점검한다. |
 | [synthesis/](./synthesis/) | 7개 트랙의 cross-paper comparison과 paper lineage | queue marker 내부는 자동 생성, 나머지는 수동 합성 영역이다. |
@@ -82,7 +82,7 @@ Humanoid는 별도 taxonomy로 만들지 않는다. Locomotion, whole-body contr
 | [research/REGISTRY_INDEX.csv](./research/REGISTRY_INDEX.csv) / [REGISTRY_STATS.md](./research/REGISTRY_STATS.md) | 전체 paper를 filter/search하고 registry 품질을 점검하는 생성 view | 직접 수정하지 않는다. manifest·tier·tracker에서 재생성한다. |
 | [work/scripts/audit_repository.py](./work/scripts/audit_repository.py) | registry·tier·tracker·queue·note·taxonomy 무결성 검사 | read-only이며 주요 변경 전후에 실행한다. |
 
-[2026-11-05 통합 검토](./work/update/INTEGRATED_GAP_REVIEW_2026-11-05.md)에서 기존·신규 후보를 함께 대조하고 직접 선행 12편을 추가했다. 11/06 [UNIFIED-N1](./work/research_topics/unified_vla_rl/내용/README.md#n1-review)에서 직접 선행 2편을 추가했다. 11/12 [REG-R14](./work/update/REGISTRY_MAINTENANCE_2026-11-12.md)에서 최근 공백 조사에 인용한 미등록8편을 추가했다. 이어서 [REG-R15](./work/update/FOUNDATION_FRONTIER_SUPPLEMENT_2026-11-12.md)에서 기반·핵심 비교12편과 최근12편을 추가했다. 11/16 [REG-R16](./work/update/REGISTRY_ACCURACY_PSI0_2026-11-16.md)에서 Ψ₀와 데이터 전제2편을 등록하고 AMO/SONIC의 설명·공개 자료를 교정했다. 11/18 [REG-R17](./work/update/REGISTRY_MAINTENANCE_2026-11-18.md)에서 직접 선행18편을 추가하고 SaPaVe·ActiveAlign을 NEXT로 조정했다. 현재 snapshot은 CORE 50편, NEXT 424편, REFERENCE 508편, ARCHIVE 242편이다. 등록·병합의 과거 수량과 근거는 [update index](./work/update/README.md)에 보존하며 기존 연구 판단은 유지한다. 이 숫자는 결과이지 목표 quota가 아니다. 논문 중요성 때문에 필요하면 CORE/NEXT를 늘릴 수 있으며, 장기 정독 규모 100–150편은 운영상 가이드일 뿐 hard cap이 아니다.
+[2026-11-05 통합 검토](./work/update/INTEGRATED_GAP_REVIEW_2026-11-05.md)에서 기존·신규 후보를 함께 대조하고 직접 선행 12편을 추가했다. 11/06 [UNIFIED-N1](./work/research_topics/unified_vla_rl/내용/README.md#n1-review)에서 직접 선행 2편을 추가했다. 11/12 [REG-R14](./work/update/REGISTRY_MAINTENANCE_2026-11-12.md)에서 최근 공백 조사에 인용한 미등록8편을 추가했다. 이어서 [REG-R15](./work/update/FOUNDATION_FRONTIER_SUPPLEMENT_2026-11-12.md)에서 기반·핵심 비교12편과 최근12편을 추가했다. 11/16 [REG-R16](./work/update/REGISTRY_ACCURACY_PSI0_2026-11-16.md)에서 Ψ₀와 데이터 전제2편을 등록하고 AMO/SONIC의 설명·공개 자료를 교정했다. 11/18 [REG-R17](./work/update/REGISTRY_MAINTENANCE_2026-11-18.md)에서 직접 선행18편을 추가하고 SaPaVe·ActiveAlign을 NEXT로 조정했다. 같은 날 [REG-R18](./work/update/REGISTRY_MAINTENANCE_2026-11-18.md#reg-r18)에서 geometry 후보의 직접 선행3편을 추가했다. 현재 snapshot은 CORE 50편, NEXT 427편, REFERENCE 508편, ARCHIVE 242편이다. 등록·병합의 과거 수량과 근거는 [update index](./work/update/README.md)에 보존하며 기존 연구 판단은 유지한다. 이 숫자는 결과이지 목표 quota가 아니다. 논문 중요성 때문에 필요하면 CORE/NEXT를 늘릴 수 있으며, 장기 정독 규모 100–150편은 운영상 가이드일 뿐 hard cap이 아니다.
 
 ## 4. Canonical Robotics Taxonomy
 
@@ -126,7 +126,7 @@ NEXT는 CORE를 전제로 읽는 전문화·확장·frontier다.
 
 ### REFERENCE
 
-- 중요한 foundation, baseline, dataset, benchmark, survey이지만 현재 474편 정독 흐름의 prerequisite는 아니다.
+- 중요한 foundation, baseline, dataset, benchmark, survey이지만 현재 477편 정독 흐름의 prerequisite는 아니다.
 - 특정 실험이나 아이디어를 설계할 때 찾아 읽는다.
 - `READING_PLAN.md`의 CORE/NEXT와 비교해 중요한 논문이 REFERENCE에 남아 있지 않은지 정기적으로 승격 감사한다.
 
@@ -470,7 +470,7 @@ git diff --check
 - 모든 registry paper가 정확히 하나의 `CORE/NEXT/REFERENCE/ARCHIVE` tier에 속하는가
 - CORE/NEXT 사이에 중복이 없는가
 - CORE/NEXT 모든 paper가 `READING_PLAN.md`와 `READING_STATUS.csv`에 나타나는가
-- 474편이 7개 synthesis queue에 정확히 한 번씩 배정되는가
+- 477편이 7개 synthesis queue에 정확히 한 번씩 배정되는가
 - Tier 판단에 PDF 상태가 들어가지 않았는가
 
 ### Tracker integrity
@@ -520,8 +520,8 @@ git diff --check
 
 질문의 기준을 먼저 분리한다.
 
-- Registry composition: 전체 1,224편 기준
-- Intensive reading: CORE+NEXT 기준 (현재 474편)
+- Registry composition: 전체 1,227편 기준
+- Intensive reading: CORE+NEXT 기준 (현재 477편)
 - Reading progress: `READING_STATUS.csv` 기준
 - Priority, reading order, detailed robotics coverage: `READING_PLAN.md` 기준
 

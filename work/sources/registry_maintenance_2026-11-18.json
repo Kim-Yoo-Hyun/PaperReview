@@ -878,5 +878,160 @@
       "working_tree_clean": true
     },
     "boundary": "Clone verification checks registry and prepared files; no native simulator, inference or training execution."
+  },
+  "followup_r18": {
+    "audit_id": "REG-R18",
+    "reviewed_on": "2026-11-18",
+    "report": "work/update/REGISTRY_MAINTENANCE_2026-11-18.md#reg-r18",
+    "scope": "Recent topic buildup integration, three direct literature prerequisites, duplicate navigation/history cleanup and GitHub publication",
+    "before": {
+      "papers": 1224,
+      "notes": 6120,
+      "CORE": 50,
+      "NEXT": 424,
+      "REFERENCE": 508,
+      "ARCHIVE": 242
+    },
+    "after": {
+      "papers": 1227,
+      "notes": 6135,
+      "CORE": 50,
+      "NEXT": 427,
+      "REFERENCE": 508,
+      "ARCHIVE": 242
+    },
+    "new_papers": [
+      {
+        "paper_id": "pr-1225",
+        "title": "Estimate, Don't Imitate: Reusing Differentiable State-Based Policies for Visuomotor Control",
+        "folder": "2026/arXiv/2026_arXiv_Estimate-Don-t-Imitate-Reusing-Differentiable-State-Based",
+        "publication": {
+          "status": "preprint",
+          "kind": "preprint",
+          "venue": "arXiv",
+          "year": 2026,
+          "venue_year": 2026,
+          "presentation": "unknown",
+          "venue_id": "arxiv"
+        },
+        "primary_source": "https://arxiv.org/abs/2609.34018",
+        "preprint": "https://arxiv.org/abs/2609.34018",
+        "admission_reason": "현재 geometry 후보의 action-consistency 대조를 정하는 직접 NEXT다. 행동에 중요한 추정 오차를 학습한다는 원리를 신규성에서 제외하게 한다.",
+        "evidence": "ABSTRACT_CHECKED",
+        "tier": "NEXT"
+      },
+      {
+        "paper_id": "pr-1226",
+        "title": "Understanding the Impact of Geometric Foundation Models on Vision-Language-Action Models",
+        "folder": "2026/ECCV/2026_ECCV_Understanding-the-Impact-of-Geometric-Foundation-Models-on",
+        "publication": {
+          "status": "peer_reviewed",
+          "kind": "conference",
+          "venue": "ECCV",
+          "year": 2026,
+          "venue_year": 2026,
+          "presentation": "unknown",
+          "venue_id": "eccv"
+        },
+        "primary_source": "https://link.springer.com/chapter/10.1007/978-3-032-37271-0_2",
+        "preprint": "https://arxiv.org/abs/2605.24642",
+        "admission_reason": "단순 geometry 오차–성공률 상관도 이미 분석됐음을 확인할 직접 NEXT다. 신규 후보는 동일 상태 개입·단순 대안 이후의 차이를 보여야 한다.",
+        "evidence": "ABSTRACT_CHECKED",
+        "tier": "NEXT"
+      },
+      {
+        "paper_id": "pr-1227",
+        "title": "PRISM: Precision Forcing for Generalist Vision-Language-Action Policies",
+        "folder": "2026/arXiv/2026_arXiv_PRISM-Precision-Forcing-for-Generalist-Vision-Language-Act",
+        "publication": {
+          "status": "preprint",
+          "kind": "preprint",
+          "venue": "arXiv",
+          "year": 2026,
+          "venue_year": 2026,
+          "presentation": "unknown",
+          "venue_id": "arxiv"
+        },
+        "primary_source": "https://arxiv.org/abs/2610.14704",
+        "preprint": "https://arxiv.org/abs/2610.14704",
+        "admission_reason": "작업 허용 오차에 따른 학습 가중과 표현 내재화를 이미 다룬 직접 NEXT다. 일반 tolerance-weighted VLA 학습을 새 기여로 주장하지 않도록 한다.",
+        "evidence": "ABSTRACT_CHECKED",
+        "tier": "NEXT"
+      }
+    ],
+    "verification": [
+      {
+        "source": "https://link.springer.com/chapter/10.1007/978-3-032-37271-0_2",
+        "finding": "Official ECCV2026 chapter, first online 2026-09-11; DOI and arXiv same identity recorded"
+      },
+      {
+        "source": "https://arxiv.org/abs/2609.34018",
+        "finding": "Official preprint abstract; ICRA2026 author-card claim not promoted without proceedings"
+      },
+      {
+        "source": "https://arxiv.org/abs/2610.14704",
+        "finding": "Preprint and author project manuscript status; not the depth PRISM pr-0458"
+      },
+      {
+        "source": "https://api.github.com/repos/seen-e/PRISM/contents",
+        "finding": "prism/openpi/starvla/configs/scripts directories visible; native implementation untested"
+      },
+      {
+        "source": "https://api.github.com/repos/HHI-Robot-Learning/26-DistillingSGRL",
+        "finding": "HTTP404; reason unknown"
+      }
+    ],
+    "cleanup": {
+      "removed_rebuildable_cache": [
+        "work/scripts/__pycache__/build_reading_tiers.cpython-312.pyc",
+        "work/scripts/__pycache__/registry_profiles.cpython-312.pyc",
+        "work/scripts/__pycache__/normalize_taxonomy.cpython-312.pyc",
+        "work/scripts/__pycache__/registry_schema.cpython-312.pyc",
+        "work/scripts/__pycache__/audit_repository.cpython-312.pyc",
+        "work/scripts/__pycache__/build_registry_views.cpython-312.pyc",
+        "work/scripts/__pycache__/taxonomy.cpython-312.pyc",
+        "work/scripts/__pycache__/audit_note_artifacts.cpython-312.pyc",
+        "work/scripts/__pycache__/build_lit_survey.cpython-312.pyc"
+      ],
+      "exact_duplicate_work_markdown_groups": 0,
+      "content_consolidation": [
+        "TODO completed-history repetition replaced with canonical topic/update index links",
+        "README and research navigation simplified; current geometry topic status corrected",
+        "No duplicate work Markdown files found; no old research evidence/notes/recipe removed"
+      ]
+    },
+    "preservation": {
+      "prior_1224_papers": "PASS: full record equality",
+      "all_prior_reading_rows": "PASS: 521 active/history rows, user status/analysis unchanged",
+      "historical_research_decisions": "UNCHANGED",
+      "topic_P0_runtime": "NOT_EXECUTED; prepared artifacts retained",
+      "prior_standard_notes": "PASS: 6120 byte-identical",
+      "topic_P0_artifact_hashes": "PASS: 8 prepared artifact hashes unchanged",
+      "research_source_ledger": "PASS: unchanged from turn start"
+    },
+    "validation": {
+      "status": "PASS",
+      "audit": {
+        "papers": 1227,
+        "standard_note_files": 6135,
+        "markdown_files_checked": 6358,
+        "markdown_links_checked": 13636,
+        "errors": 0,
+        "warnings": 0
+      },
+      "reading_history_tests": 6,
+      "document_maintenance_tests": 8,
+      "python_static_compile": "PASS",
+      "tier_generator": "PASS",
+      "catalogs_and_registry_views": "PASS",
+      "priority_reconciliation": "new papers only; reading/source evidence unchanged",
+      "diff_check": "PASS",
+      "native_experiments": "NOT_RUN"
+    },
+    "publication": {
+      "status": "PREPARED",
+      "remote": "origin",
+      "branch": "main"
+    }
   }
 }

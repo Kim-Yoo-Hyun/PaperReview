@@ -6082,6 +6082,18 @@
       "verified_on": "2026-10-22"
     },
     {
+      "resource_id": "code:1898ca66f995",
+      "resource_type": "code_or_project",
+      "name": "PRISM",
+      "url": "https://github.com/seen-e/PRISM",
+      "paper_ids": [
+        "pr-1227"
+      ],
+      "evidence": "manifest_link",
+      "availability": "released",
+      "verified_on": "2026-11-18"
+    },
+    {
       "resource_id": "code:18c38c81978b",
       "resource_type": "code_or_project",
       "name": "datamil",

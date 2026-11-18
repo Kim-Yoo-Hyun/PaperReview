@@ -1,10 +1,12 @@
-# REG-R17 — 직접 선행 보강과 연구 workspace 게시 완료
+# REG-R17 / REG-R18 — 직접 선행 보강·registry 정리·게시
 
 - Reviewed: 2026-11-18 KST
 - 범위: 최근 후보 탐색의 미등록 직접 선행·비교 baseline 보강, 읽기 우선순위 정합, 누적 후보 정리/재개 자료의 GitHub 반영
 - [검증 원장](../sources/registry_maintenance_2026-11-18.json) · [전체 registry](../../PAPER.md) · [현재 TODO](../../TODO.md)
 
-## 등록과 publication 경계
+최신 후속은 아래 [REG-R18](#reg-r18)이며, 기존 REG-R17의 수량·게시 검증은 당시 기록으로 보존한다.
+
+## REG-R17 등록과 publication 경계
 
 **19개 등록 입력을 대조해 신규18편·기등록1편을 확인했다.** ActiveAlign은 `pr-1030`으로 이미 있어 재등록하지 않았다. 신규18편은 공식 top-tier conference/IJRR12편, 직접 비교가 필요한 Autonomous Robots·Industrial Robot2편, venue 미확인 preprint4편이다. 전체2024–2026 문헌을 다시 전수 조사했다는 뜻은 아니며 최근 탐색에 인용된 missing link 중심의 보강이다.
 
@@ -44,7 +46,7 @@
 
 데이터 artifact의 자동 cue 검사에 `full_text note audited`가 붙던 기본 문구를 `note_cue_scan`으로 수정했다. 신규17개 미확인 항목에 반영했으며 과거 수동 검토 profile은 보존한다. RFMPose의 태그는 기존 `Flow Matching`과 통일했고 새 노트의 중복 마침표도 제거했다.
 
-## 현재 상태
+## REG-R17 당시 상태
 
 Registry **1,224편·표준 노트6,120개**, CORE50/NEXT424/REFERENCE508/ARCHIVE242, 집중 읽기474편. Source evidence FULL_TEXT_CHECKED968/ABSTRACT_CHECKED256. 연구 후보의 효과·신규성·native 검증 상태는 바꾸지 않는다. 11/17의 daemon 실패를 오늘의 재측정으로 기록하지 않으며 이번 작업은 registry 유지보수로 실험을 요청하거나 실행하지 않았다.
 
@@ -64,3 +66,28 @@ Registry **1,224편·표준 노트6,120개**, CORE50/NEXT424/REFERENCE508/ARCHIV
 ### 원격 사본 확인
 
 GitHub에서 새로 shallow clone한 content commit에서 registry 감사 오류0·경고0, 읽기 이력6검사·문서 유지보수8검사 PASS. 추적 파일6,712개가 로컬과 byte-identical이며 clone worktree는 clean이었다. 이 확인은 registry와 준비 파일의 전달·구조 검증이며 native 실행의 재현 성공을 의미하지 않는다. 게시 확인 결과는 별도 문서 커밋으로 같은 `main`에 반영한다.
+
+<a id="reg-r18"></a>
+## REG-R18 — 3D 추정 직접 선행과 문서 정리
+
+같은 날 후속 유지보수다. TASK-GEOMETRY N1·P0 준비를 registry 안내에 반영하고, 직접 비교에 사용한 미등록3편을 정식 등록했다. 새 주제 탐색이나 전체 문헌 전수 재검증은 아니다.
+
+| 등록 | 확인한 출처·상태 | 추가 이유 |
+|---|---|---|
+| [Estimate, Don't Imitate: Reusing Differentiable State-Based Policies for Visuomotor Control](../../2026/arXiv/2026_arXiv_Estimate-Don-t-Imitate-Reusing-Differentiable-State-Based/01_overview.md) | [arXiv 2026](https://arxiv.org/abs/2609.34018) | Frozen expert를 통한 action-consistency 추정 학습이라는 직접 비교. 저자 ICRA 표기는 공식 확인이 없어 채택하지 않음. |
+| [Understanding the Impact of Geometric Foundation Models on Vision-Language-Action Models](../../2026/ECCV/2026_ECCV_Understanding-the-Impact-of-Geometric-Foundation-Models-on/01_overview.md) | [ECCV 2026](https://link.springer.com/chapter/10.1007/978-3-032-37271-0_2) | Springer에서 ECCV2026 출판을 새로 확인. Geometry 정확도와 VLA 성능의 단순 비교도 기존 연구임을 반영. |
+| [PRISM: Precision Forcing for Generalist Vision-Language-Action Policies](../../2026/arXiv/2026_arXiv_PRISM-Precision-Forcing-for-Generalist-Vision-Language-Act/01_overview.md) | [arXiv 2026](https://arxiv.org/abs/2610.14704) | 정밀도 요구에 따른 flow supervision/표현 학습의 직접 비교. pr-0458의 동명 depth PRISM과 다른 논문. |
+
+세 편 모두 NEXT이며 5개 표준 노트를 작성했다. 신규 노트의 evidence는 **ABSTRACT_CHECKED**, 사용자 읽기는 **UNREAD**다. 기존 dossier의 지정 본문 검토와 혼합하지 않는다. PRISM의 저자 project와 GitHub 코드 디렉토리는 확인했지만 실행·release 품질을 검증한 것은 아니다. EDI code 링크의404와 Geometry Impact code 미식별은 미공개 이유를 뜻하지 않는다. Geometry Impact에 DOI와 arXiv identity를 함께 기록해 출판본 중복 등록을 방지한다.
+
+**정리:** README·research 안내의 오래된 후보 상태를 고치고, TODO의 반복된 완료 이력을 canonical 주제/공통 index 링크로 줄였다. 새 날짜별 주제 문서는 만들지 않고 기존 두 폴더와 이 11/18 report/source 원장을 사용했다. `work/scripts/__pycache__`의 재생성 가능한 bytecode9개를 제거했다. 완전히 같은 work Markdown 파일은 발견되지 않았다. 과거 과학적 결과·원시 근거·논문 노트·재개용 recipe는 보존한다.
+
+**현재 snapshot:** 1,227편·표준 노트6,135개, CORE50/NEXT427/REFERENCE508/ARCHIVE242, 집중 읽기477편·history47편. Source evidence FULL_TEXT_CHECKED968/ABSTRACT_CHECKED259. 기존1,224편과 사용자 분석·연구 판정은 유지했다. 새 P0 파일은 준비 상태이며 이번 유지보수에서 Docker 실험을 실행하지 않았다.
+
+<!-- REG_R18_VALIDATION:START -->
+- Registry 감사 **PASS — 오류0·경고0**: paper1,227·note6,135·Markdown6,358·local link13,636.
+- 읽기 이력6검사·문서 유지보수8검사 PASS. Python 정적 컴파일, tier/catalog/view 생성, priority 정합, `git diff --check` PASS.
+- 기존1,224편 manifest record·6,120개 표준 노트와 기존521개 active/history 행의 상태·분석을 보존했다. NEXT sequence 등 생성 필드만 재배치했다.
+- TASK-GEOMETRY의 준비 artifact8개 hash와 기존 source 원장을 보존했다. Docker 제어11검사·native 모델/physics는 이번에도 실행하지 않았다.
+- GitHub `origin/main` 게시 전 검증 완료. 실제 게시·원격 사본 확인은 아래 후속 기록으로 구별한다.
+<!-- REG_R18_VALIDATION:END -->

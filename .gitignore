@@ -31,3 +31,4 @@ temp/
 # If you want to upload only your own notes/reviews, keep this enabled.
 *.pdf
 /work/research_topics/pose_active_perception/재현 방법/runs/
+/work/research_topics/task_geometry_estimation/재현 방법/runs/

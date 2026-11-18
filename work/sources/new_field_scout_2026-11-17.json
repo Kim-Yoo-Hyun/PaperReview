@@ -4537,5 +4537,769 @@
       "pr-1030"
     ],
     "boundary": "Historical registration_state/registry_matches above describe their original task date; current manifest identity follows this append-only mapping. No research-effect or reading-state upgrade."
+  },
+  "task_geometry_n1": {
+    "task": "TASK-GEOMETRY-N1",
+    "date": "2026-11-18",
+    "task_status": "DONE_INTERNAL_NONEXPERIMENTAL_FIRST_PASS",
+    "research_decision": "REVISE_THEN_CONTINUE_BOUNDED_DIAGNOSTIC",
+    "evidence_maturity": "CURATION-HYPOTHESIS; selected source sections checked, proposed effects unverified",
+    "selected_next": "TASK-GEOMETRY-P0-PREP",
+    "canonical_documents": [
+      "work/research_topics/task_geometry_estimation/내용/README.md",
+      "work/research_topics/task_geometry_estimation/재현 방법/README.md"
+    ],
+    "scope_boundary": "Current candidate 2 only. No claim of exhaustive literature coverage, source-file runtime correctness, independent method novelty, actual external feedback or publication likelihood.",
+    "search": {
+      "window": "2024-2026 plus existing lineage",
+      "queries": [
+        "task geometry precision VLA 2026",
+        "task-oriented 3D reconstruction robot manipulation 2024 2025 2026",
+        "VLA depth uncertainty 2025 2026",
+        "PRISM Precision-Aware robot VLA",
+        "manipulation task-aware depth CVPR 2024 2025 2026",
+        "robot task-driven reconstruction learning 2024 2025",
+        "VLA geometry calibration error",
+        "decision-focused perception robotics pose estimation",
+        "GeomVLA site:openreview.net",
+        "Lift3D Policy arxiv",
+        "decision-focused perception robot manipulation reconstruction",
+        "Estimate, Don’t Imitate robot",
+        "GeomVLA Unifying Scene OpenReview CoRL2026",
+        "task-oriented depth estimation policy robotics",
+        "HvKifHMHcM CoRL",
+        "Estimate, Don't Imitate code",
+        "VLA geometry invariance task"
+      ],
+      "authority_policy": "Official proceedings when available, then author paper/project/source; preprint status kept when acceptance could not be verified.",
+      "registration_policy": "New external comparisons retained in this ledger; no paper admission or reading status change by this N1 task."
+    },
+    "sources": [
+      {
+        "key": "spatialvla",
+        "title": "SpatialVLA: Exploring Spatial Representations for Visual-Language-Action Models",
+        "status": "RSS 2025 official",
+        "url": "https://roboticsproceedings.org/rss21/p011.html",
+        "review_extent": "official abstract; pinned model/processor/training source",
+        "registry_paper_id": "pr-0880",
+        "checked_on": "2026-11-18",
+        "new_registration": false
+      },
+      {
+        "key": "robo3r",
+        "title": "Robo3R: Enhancing Robotic Manipulation with Accurate Feed-Forward 3D Reconstruction",
+        "status": "RSS 2026; registry authority retained",
+        "url": "https://arxiv.org/html/2602.10101v1",
+        "review_extent": "III formulation and IV-B imitation interface/baselines",
+        "registry_paper_id": "pr-1213",
+        "checked_on": "2026-11-18",
+        "new_registration": false
+      },
+      {
+        "key": "geopredict",
+        "title": "GeoPredict: Leveraging Predictive Kinematics and 3D Gaussian Geometry for Precise VLA Manipulation",
+        "status": "CVPR 2026; registry authority retained",
+        "url": "https://arxiv.org/html/2512.16811v1",
+        "review_extent": "3.3-3.4 and official training/loss source",
+        "registry_paper_id": "pr-1214",
+        "checked_on": "2026-11-18",
+        "new_registration": false
+      },
+      {
+        "key": "lift3d",
+        "title": "Lift3D Policy: Lifting 2D Foundation Models for Robust 3D Robotic Manipulation",
+        "status": "CVPR 2025 official-domain indexed record; longer preprint title in 2024 v1",
+        "url": "https://arxiv.org/html/2411.18623v1",
+        "review_extent": "3.1-3.2; official CVF title/status indexed; direct HTML403",
+        "registry_paper_id": "pr-0780",
+        "checked_on": "2026-11-18",
+        "new_registration": false
+      },
+      {
+        "key": "prism_precision",
+        "title": "PRISM: Precision Forcing for Generalist Vision-Language-Action Policies",
+        "status": "2026 preprint; acceptance unverified",
+        "url": "https://arxiv.org/html/2610.14704v1",
+        "review_extent": "2 physical tolerance and 3 precision proxy/weighting; distinct from pr-0458",
+        "registry_paper_id": null,
+        "checked_on": "2026-11-18",
+        "new_registration": false
+      },
+      {
+        "key": "estimate_dont_imitate",
+        "title": "Estimate, Don't Imitate: Reusing Differentiable State-Based Policies for Visuomotor Control",
+        "status": "2026 preprint; author dataset card ICRA2026 claim not independently verified",
+        "url": "https://arxiv.org/html/2609.34018v1",
+        "review_extent": "III-C mixed state/action loss, sensitivity metric and V-C limitations of interpretation",
+        "registry_paper_id": null,
+        "checked_on": "2026-11-18",
+        "new_registration": false
+      },
+      {
+        "key": "gfm_impact",
+        "title": "Understanding the Impact of Geometric Foundation Models on Vision-Language-Action Models",
+        "status": "2026 preprint; acceptance unverified",
+        "url": "https://arxiv.org/html/2605.24642v1",
+        "review_extent": "5.1 matched evaluation, 5.5 reconstruction error/episode success correlation; limits of one VLA/GFM setting",
+        "registry_paper_id": null,
+        "checked_on": "2026-11-18",
+        "new_registration": false
+      },
+      {
+        "key": "geomvla",
+        "title": "GeomVLA: Unifying Scene, Motion, and Action in 3D",
+        "status": "author-reported CoRL2026; official forum/API blocked in this review",
+        "url": "https://arxiv.org/html/2609.13812v2",
+        "review_extent": "3 shared robot-frame geometry; project/calibration dependency; code link404",
+        "registry_paper_id": null,
+        "checked_on": "2026-11-18",
+        "new_registration": false
+      },
+      {
+        "key": "flowvla",
+        "title": "FlowVLA: Enabling World Dynamics Understanding through Pluggable 3D Flow Learning",
+        "status": "2026 arXiv; no venue inference",
+        "url": "https://arxiv.org/abs/2610.16160",
+        "review_extent": "abstract only; training-only 3D flow adjacent comparison",
+        "registry_paper_id": null,
+        "checked_on": "2026-11-18",
+        "new_registration": false
+      }
+    ],
+    "source_audit": {
+      "repositories": [
+        {
+          "repo": "ARISE-Initiative/robosuite",
+          "revision": "5ce6643f3092639d08f7b0f90ed1c6a84f50552c",
+          "default_branch": "master",
+          "tree_truncated": false
+        },
+        {
+          "repo": "DelinQu/SimplerEnv-OpenVLA",
+          "revision": "ccfe3809766839a2fcfb7a3d3c9abff585189188",
+          "default_branch": "main",
+          "tree_truncated": false
+        },
+        {
+          "repo": "SpatialVLA/SpatialVLA",
+          "revision": "18fd74b2a633ec8d9ec7aadcd803969555cc9fbd",
+          "default_branch": "main",
+          "tree_truncated": false
+        },
+        {
+          "repo": "jingjingqian75/GeoPredict",
+          "revision": "5191756e8c4f16de2b63c28636341f2d4f5cdf2e",
+          "default_branch": "main",
+          "tree_truncated": false
+        }
+      ],
+      "files": [
+        {
+          "repo": "SpatialVLA/SpatialVLA",
+          "revision": "18fd74b2a633ec8d9ec7aadcd803969555cc9fbd",
+          "path": "model/modeling_spatialvla.py",
+          "url": "https://raw.githubusercontent.com/SpatialVLA/SpatialVLA/18fd74b2a633ec8d9ec7aadcd803969555cc9fbd/model/modeling_spatialvla.py",
+          "sha256": "90a78b54600b3a028b05691974c035bb9f2bd844596790be05be993e586d689b",
+          "bytes": 24255,
+          "review_scope": "get_image_features, backproject_patch, frequency_encoding; camera coordinates, two no-grad boundaries, area aggregation",
+          "executed": false
+        },
+        {
+          "repo": "SpatialVLA/SpatialVLA",
+          "revision": "18fd74b2a633ec8d9ec7aadcd803969555cc9fbd",
+          "path": "model/processing_spatialvla.py",
+          "url": "https://raw.githubusercontent.com/SpatialVLA/SpatialVLA/18fd74b2a633ec8d9ec7aadcd803969555cc9fbd/model/processing_spatialvla.py",
+          "sha256": "c20b15460633f65809788c633936347fada2f2bbcfffba898d2f0b4b99807b33",
+          "bytes": 11776,
+          "review_scope": "intrinsic resize/default selection; prior N2 action-normalization boundary retained",
+          "executed": false
+        },
+        {
+          "repo": "SpatialVLA/SpatialVLA",
+          "revision": "18fd74b2a633ec8d9ec7aadcd803969555cc9fbd",
+          "path": "model/configuration_spatialvla.py",
+          "url": "https://raw.githubusercontent.com/SpatialVLA/SpatialVLA/18fd74b2a633ec8d9ec7aadcd803969555cc9fbd/model/configuration_spatialvla.py",
+          "sha256": "367dd0f0fa05eb072ace9100d0a6ad3a073fcd916b05c31e7c8419f9e7a440c0",
+          "bytes": 4587,
+          "review_scope": "pin/hash checked; configuration cross-checked with HF JSON, not full-file review",
+          "executed": false
+        },
+        {
+          "repo": "SpatialVLA/SpatialVLA",
+          "revision": "18fd74b2a633ec8d9ec7aadcd803969555cc9fbd",
+          "path": "train/spatialvla_finetune.py",
+          "url": "https://raw.githubusercontent.com/SpatialVLA/SpatialVLA/18fd74b2a633ec8d9ec7aadcd803969555cc9fbd/train/spatialvla_finetune.py",
+          "sha256": "9b70cb853cf0acb7ccccb2f07c31e0828a047fa16bccb79448475a3b7ad970c8",
+          "bytes": 14393,
+          "review_scope": "selected README/configuration/training or wrapper symbols and identity cross-check; not full execution validation",
+          "executed": false
+        },
+        {
+          "repo": "SpatialVLA/SpatialVLA",
+          "revision": "18fd74b2a633ec8d9ec7aadcd803969555cc9fbd",
+          "path": "README.md",
+          "url": "https://raw.githubusercontent.com/SpatialVLA/SpatialVLA/18fd74b2a633ec8d9ec7aadcd803969555cc9fbd/README.md",
+          "sha256": "b1a65fd6bda9000447a178e19c6a3badb9943f56a8aa48ee00e6f889b5e3225a",
+          "bytes": 20623,
+          "review_scope": "selected README/configuration/training or wrapper symbols and identity cross-check; not full execution validation",
+          "executed": false
+        },
+        {
+          "repo": "SpatialVLA/SpatialVLA",
+          "revision": "18fd74b2a633ec8d9ec7aadcd803969555cc9fbd",
+          "path": "requirements.txt",
+          "url": "https://raw.githubusercontent.com/SpatialVLA/SpatialVLA/18fd74b2a633ec8d9ec7aadcd803969555cc9fbd/requirements.txt",
+          "sha256": "e2daa3288de01efd3634275a66d1d00566dd437412360abec23540083bae21bf",
+          "bytes": 454,
+          "review_scope": "selected README/configuration/training or wrapper symbols and identity cross-check; not full execution validation",
+          "executed": false
+        },
+        {
+          "repo": "ARISE-Initiative/robosuite",
+          "revision": "5ce6643f3092639d08f7b0f90ed1c6a84f50552c",
+          "path": "robosuite/environments/manipulation/nut_assembly.py",
+          "url": "https://raw.githubusercontent.com/ARISE-Initiative/robosuite/5ce6643f3092639d08f7b0f90ed1c6a84f50552c/robosuite/environments/manipulation/nut_assembly.py",
+          "sha256": "1fa55f7dd94e11ac18e94a308ea0517edca82926ac633ef5323a35a68685e354",
+          "bytes": 30575,
+          "review_scope": "on_peg and _check_success predicates",
+          "executed": false
+        },
+        {
+          "repo": "ARISE-Initiative/robosuite",
+          "revision": "5ce6643f3092639d08f7b0f90ed1c6a84f50552c",
+          "path": "robosuite/environments/manipulation/two_arm_peg_in_hole.py",
+          "url": "https://raw.githubusercontent.com/ARISE-Initiative/robosuite/5ce6643f3092639d08f7b0f90ed1c6a84f50552c/robosuite/environments/manipulation/two_arm_peg_in_hole.py",
+          "sha256": "597d7359136128529b18612d682190593b73293bc7cf3d8bbb7347ca4da569a3",
+          "bytes": 23866,
+          "review_scope": "_check_success and _compute_orientation predicates",
+          "executed": false
+        },
+        {
+          "repo": "ARISE-Initiative/robosuite",
+          "revision": "5ce6643f3092639d08f7b0f90ed1c6a84f50552c",
+          "path": "robosuite/utils/camera_utils.py",
+          "url": "https://raw.githubusercontent.com/ARISE-Initiative/robosuite/5ce6643f3092639d08f7b0f90ed1c6a84f50552c/robosuite/utils/camera_utils.py",
+          "sha256": "320d1fccc23ea09334d747093c12ec014fdad072b71308026cf1dfe48db98afb",
+          "bytes": 24242,
+          "review_scope": "intrinsic, camera extrinsic correction, normalized-to-metric depth",
+          "executed": false
+        },
+        {
+          "repo": "ARISE-Initiative/robosuite",
+          "revision": "5ce6643f3092639d08f7b0f90ed1c6a84f50552c",
+          "path": "robosuite/models/assets/objects/square-nut.xml",
+          "url": "https://raw.githubusercontent.com/ARISE-Initiative/robosuite/5ce6643f3092639d08f7b0f90ed1c6a84f50552c/robosuite/models/assets/objects/square-nut.xml",
+          "sha256": "d7310836fb05f1ba02f35c7915b7b3a4557fe1c2bd11e859c1559a80270d48dd",
+          "bytes": 1733,
+          "review_scope": "text asset identity/hash cross-check against prior N1; not a new native mesh audit",
+          "executed": false
+        },
+        {
+          "repo": "ARISE-Initiative/robosuite",
+          "revision": "5ce6643f3092639d08f7b0f90ed1c6a84f50552c",
+          "path": "robosuite/models/assets/arenas/pegs_arena.xml",
+          "url": "https://raw.githubusercontent.com/ARISE-Initiative/robosuite/5ce6643f3092639d08f7b0f90ed1c6a84f50552c/robosuite/models/assets/arenas/pegs_arena.xml",
+          "sha256": "d734129237879d9dbfae44c46dd9952072a0d3eecba35196440ddd1d8b8af316",
+          "bytes": 5320,
+          "review_scope": "peg collision and visual shapes, camera definitions",
+          "executed": false
+        },
+        {
+          "repo": "jingjingqian75/GeoPredict",
+          "revision": "5191756e8c4f16de2b63c28636341f2d4f5cdf2e",
+          "path": "readme.md",
+          "url": "https://raw.githubusercontent.com/jingjingqian75/GeoPredict/5191756e8c4f16de2b63c28636341f2d4f5cdf2e/readme.md",
+          "sha256": "97a58584c2616b6d9eff4ef6b671bac043347e58444578fd337a6483b1537d4d",
+          "bytes": 5328,
+          "review_scope": "selected README/configuration/training or wrapper symbols and identity cross-check; not full execution validation",
+          "executed": false
+        },
+        {
+          "repo": "jingjingqian75/GeoPredict",
+          "revision": "5191756e8c4f16de2b63c28636341f2d4f5cdf2e",
+          "path": "docs/train.md",
+          "url": "https://raw.githubusercontent.com/jingjingqian75/GeoPredict/5191756e8c4f16de2b63c28636341f2d4f5cdf2e/docs/train.md",
+          "sha256": "120f226a0ddf4c5e9fb6295ab16ee80cb3d1ae12baa088222c08d383ac5f7f34",
+          "bytes": 4589,
+          "review_scope": "dependencies, CUDA/BF16, dataset layout, entry and batch configuration",
+          "executed": false
+        },
+        {
+          "repo": "jingjingqian75/GeoPredict",
+          "revision": "5191756e8c4f16de2b63c28636341f2d4f5cdf2e",
+          "path": "models/gaussian.py",
+          "url": "https://raw.githubusercontent.com/jingjingqian75/GeoPredict/5191756e8c4f16de2b63c28636341f2d4f5cdf2e/models/gaussian.py",
+          "sha256": "fedcb88a7fad3bfd9fa785f04bb7718900a939ae9b8f0c5f034ac3a764ddbb49",
+          "bytes": 7719,
+          "review_scope": "pin/hash and renderer structure inventory; detailed CUDA correctness not reviewed",
+          "executed": false
+        },
+        {
+          "repo": "jingjingqian75/GeoPredict",
+          "revision": "5191756e8c4f16de2b63c28636341f2d4f5cdf2e",
+          "path": "tools/train_robocasa.py",
+          "url": "https://raw.githubusercontent.com/jingjingqian75/GeoPredict/5191756e8c4f16de2b63c28636341f2d4f5cdf2e/tools/train_robocasa.py",
+          "sha256": "efbc5e940bd476a46e29f29d2873db09572d9df6c97432cd7f3c1c120499a795",
+          "bytes": 5857,
+          "review_scope": "selected README/configuration/training or wrapper symbols and identity cross-check; not full execution validation",
+          "executed": false
+        },
+        {
+          "repo": "DelinQu/SimplerEnv-OpenVLA",
+          "revision": "ccfe3809766839a2fcfb7a3d3c9abff585189188",
+          "path": "simpler_env/policies/spatialvla/spatialvla_model.py",
+          "url": "https://raw.githubusercontent.com/DelinQu/SimplerEnv-OpenVLA/ccfe3809766839a2fcfb7a3d3c9abff585189188/simpler_env/policies/spatialvla/spatialvla_model.py",
+          "sha256": "2df24e1579c5b5f2348d74b43820c9fab77ec23be1cc83914a0e5593c3d44238",
+          "bytes": 9977,
+          "review_scope": "selected README/configuration/training or wrapper symbols and identity cross-check; not full execution validation",
+          "executed": false
+        },
+        {
+          "repo": "DelinQu/SimplerEnv-OpenVLA",
+          "revision": "ccfe3809766839a2fcfb7a3d3c9abff585189188",
+          "path": "README.md",
+          "url": "https://raw.githubusercontent.com/DelinQu/SimplerEnv-OpenVLA/ccfe3809766839a2fcfb7a3d3c9abff585189188/README.md",
+          "sha256": "cfeeff91143048f7f59c588c16375d52a7869d208c7d640c8918683f77fd79ce",
+          "bytes": 21573,
+          "review_scope": "selected README/configuration/training or wrapper symbols and identity cross-check; not full execution validation",
+          "executed": false
+        },
+        {
+          "repo": "jingjingqian75/GeoPredict",
+          "revision": "5191756e8c4f16de2b63c28636341f2d4f5cdf2e",
+          "path": "models/geopredict.py",
+          "url": "https://raw.githubusercontent.com/jingjingqian75/GeoPredict/5191756e8c4f16de2b63c28636341f2d4f5cdf2e/models/geopredict.py",
+          "sha256": "6853f2f6e2e1134f0b44f94bd3fb56424a0c0906b9809f3232b70caaebdf6fe7",
+          "bytes": 26764,
+          "review_scope": "compute_loss action/keypoint/current-future-depth terms; no execution",
+          "executed": false
+        }
+      ],
+      "remote_text_metadata": [
+        {
+          "key": "hf_modeling",
+          "url": "https://huggingface.co/IPEC-COMMUNITY/spatialvla-4b-224-pt/resolve/886c4557dfde53b44c0f74fde7d89bf83a26c3cd/modeling_spatialvla.py",
+          "bytes": 24286,
+          "sha256": "a04008cf364e094079493e5982fa2b32fca12874b0a42b645e0aecab024e7236"
+        },
+        {
+          "key": "hf_config",
+          "url": "https://huggingface.co/IPEC-COMMUNITY/spatialvla-4b-224-pt/resolve/886c4557dfde53b44c0f74fde7d89bf83a26c3cd/config.json",
+          "bytes": 8126,
+          "sha256": "0c5d94be86f9e15b708650c4b829033ae99243f85507012b1dafa0263f799909"
+        },
+        {
+          "key": "hf_processor",
+          "url": "https://huggingface.co/IPEC-COMMUNITY/spatialvla-4b-224-pt/resolve/886c4557dfde53b44c0f74fde7d89bf83a26c3cd/processor_config.json",
+          "bytes": 71325,
+          "sha256": "8712b6d5171f74e90f951ec7b148ab90509f28434e36b2da959527fa0ddb57ea"
+        }
+      ],
+      "text_files_identity_checked": 21,
+      "boundary": "File identities/hashes plus selected symbols/sections were inspected. Some unchanged files cross-reference prior source review; not all 21 files were newly read in full. No code imported or run."
+    },
+    "access_boundaries": [
+      {
+        "url": "https://openreview.net/forum?id=HvKifHMHcM",
+        "result": "browser verification challenge"
+      },
+      {
+        "url": "https://api2.openreview.net/notes?id=HvKifHMHcM",
+        "result": "HTTP403"
+      },
+      {
+        "url": "https://github.com/ziyin-xiong/GeomVLA",
+        "result": "HTTP404; cause unknown"
+      },
+      {
+        "url": "https://github.com/HHI-Robot-Learning/26-DistillingSGRL",
+        "result": "HTTP404; cause unknown"
+      },
+      {
+        "url": "https://huggingface.co/datasets/Shcherba/csrl-robohub-data",
+        "result": "author asset card read; ICRA2026 claim not upgraded to official venue; no assets downloaded"
+      },
+      {
+        "url": "https://openaccess.thecvf.com/content/CVPR2025/html/Jia_Lift3D_Policy_Lifting_2D_Foundation_Models_for_Robust_3D_Robotic_CVPR_2025_paper.html",
+        "result": "direct403; official indexed record and preprint cross-check"
+      }
+    ],
+    "findings": [
+      {
+        "id": "G1",
+        "claim": "Task-relevant depth/geometry supervision and tolerance-weighted action error already exist.",
+        "sources": [
+          "geopredict",
+          "lift3d",
+          "prism_precision"
+        ]
+      },
+      {
+        "id": "G2",
+        "claim": "Frozen-policy sensitivity for state estimation is a direct method collision, not a new contribution from replacing state with depth/VLA.",
+        "sources": [
+          "estimate_dont_imitate"
+        ]
+      },
+      {
+        "id": "G3",
+        "claim": "Reconstruction-quality versus VLA-success analysis already exists; narrow to controlled within-state interventions, avoid correlation-as-causality.",
+        "sources": [
+          "gfm_impact"
+        ]
+      },
+      {
+        "id": "G4",
+        "claim": "SpatialVLA camera-depth representation has two no-grad boundaries and area downsampling; input gradient and physical error family must be handled explicitly.",
+        "source_file": "model/modeling_spatialvla.py"
+      },
+      {
+        "id": "G5",
+        "claim": "Built-in nut/peg success predicates are not direct mechanical tolerance certificates.",
+        "source_files": [
+          "robosuite/environments/manipulation/nut_assembly.py",
+          "robosuite/environments/manipulation/two_arm_peg_in_hole.py"
+        ]
+      },
+      {
+        "id": "G6",
+        "claim": "GeoPredict training code is now confirmed in the inspected official tree; runtime remains unverified.",
+        "source_files": [
+          "docs/train.md",
+          "tools/train_robocasa.py",
+          "models/geopredict.py"
+        ]
+      }
+    ],
+    "analytic_cases": [
+      "3mm error versus8mm/2mm admissible1D margins",
+      "same support/energy but task-axis differences require physically representable perturbations",
+      "area-aggregation nullspace",
+      "action change need not equal task failure",
+      "oracle depth may induce distribution shift"
+    ],
+    "case_boundary": "Logical examples only. No synthetic numerical experiment, simulator rollout or model inference was executed.",
+    "comparison_contract": {
+      "first_backbone": "SpatialVLA HF pinned revision",
+      "intervention_point": "post-resize/crop depth, pre-area-aggregation",
+      "first_scope": "camera-depth range/ROI errors; no arbitrary robot-frame XYZ substitution",
+      "error_unit": "camera-frame meters, matched support, RMS after area aggregation",
+      "unit": "saved state x instruction x perturbation; paired episode/family splits",
+      "main_outcomes": [
+        "released task success",
+        "signed task margin",
+        "contact/collision failure",
+        "time"
+      ],
+      "diagnostic_only": [
+        "logit/token/action differences"
+      ],
+      "baselines": [
+        "original",
+        "identity adapter",
+        "global scale/bias",
+        "global/ROI geometry metrics",
+        "explicit oracle tolerance rule",
+        "same-size geometry-only/ROI adapter",
+        "action-consistency adapter inspired by EDI"
+      ],
+      "candidate_learning": "task-margin supervised depth correction after a diagnostic motivates it; not an established novel algorithm",
+      "hidden_from_policy": [
+        "GT pose",
+        "mesh",
+        "true error",
+        "test tolerance",
+        "future outcome"
+      ],
+      "next_budget": {
+        "scene": 1,
+        "instructions": 2,
+        "geometry_conditions": 4,
+        "queries_max": 8,
+        "tokens_per_query_max": 12,
+        "ar_steps_max": 96,
+        "setup_physics_steps_max": 10000,
+        "vla_physical_commands": 0,
+        "optimizer_steps": 0
+      },
+      "recipe_executable": false,
+      "error_matching_boundary": {
+        "injected": "RMS(X_perturbed-X_reference) after area aggregation",
+        "actual": "RMS(X_perturbed-X_GT) on the same support",
+        "rule": "Equal injected magnitude is not equal actual reconstruction error. Equal actual-error claims require GT-error matching with predeclared tolerance; P0 is only input-path verification."
+      }
+    },
+    "external_feedback": {
+      "status": "NOT_RECEIVED",
+      "questions": [
+        "Is ROI/action-consistency enough at the same label cost?",
+        "Does the remaining geometry-induced failure change a practical robot design decision?",
+        "Does the effect persist on naturally occurring reconstruction errors?"
+      ]
+    },
+    "local_check": {
+      "checked_on": "2026-11-18",
+      "system": {
+        "system": "Darwin",
+        "machine": "arm64"
+      },
+      "host_ram_bytes": 17179869184,
+      "docker_client_version": "28.3.3",
+      "context": "desktop-linux",
+      "endpoint_kind": "local Unix socket",
+      "endpoint_recording_policy": "User-specific socket path intentionally omitted from portable instructions.",
+      "command_results": [
+        {
+          "command": [
+            "sysctl",
+            "-n",
+            "hw.memsize"
+          ],
+          "exit_code": 0,
+          "stdout": "17179869184"
+        },
+        {
+          "command": [
+            "docker",
+            "context",
+            "show"
+          ],
+          "exit_code": 0,
+          "stdout": "desktop-linux"
+        },
+        {
+          "command": [
+            "docker",
+            "context",
+            "inspect",
+            "desktop-linux",
+            "--format",
+            "{{json .Endpoints.docker}}"
+          ],
+          "exit_code": 0,
+          "result": "local Unix endpoint confirmed"
+        },
+        {
+          "command": [
+            "docker",
+            "info",
+            "--format",
+            "{{json .}}"
+          ],
+          "exit_code": 1,
+          "stderr_summary": "Cannot connect to Docker daemon at local Unix socket."
+        }
+      ],
+      "status": "BLOCKED_DAEMON",
+      "server_and_gpu_probe": "NOT_REACHED",
+      "empty_info_fields_are_not_inventory": true
+    },
+    "execution": {
+      "docker_experiments": 0,
+      "native_inference": 0,
+      "training": 0,
+      "host_dependency_installs": 0,
+      "pdf_downloads": 0,
+      "weight_asset_downloads": 0,
+      "containers_created": 0,
+      "images_created": 0,
+      "code_source_read_only": true
+    },
+    "unimplemented": [
+      "depth override wrapper",
+      "Docker recipe and launcher",
+      "task evaluator",
+      "task normalizer and controller mapping",
+      "base task competence",
+      "paired rollout labels",
+      "geometry adapter training"
+    ],
+    "registry_changes": {
+      "papers_added": 0,
+      "tiers_changed": false,
+      "reading_status_changed": false,
+      "paper_notes_changed": false
+    },
+    "legacy_preservation": "All pre-existing ledger keys and other candidates, including pose-active reproduction artifacts, preserved.",
+    "validation": {
+      "status": "PASS",
+      "checked_at": "2026-11-18",
+      "commands": [
+        "python3 -m py_compile work/scripts/build_reading_tiers.py (external PYTHONPYCACHEPREFIX)",
+        "python3 work/scripts/build_reading_tiers.py",
+        "git diff --check",
+        "python3 work/scripts/audit_repository.py"
+      ],
+      "audit": {
+        "papers": 1224,
+        "standard_note_files": 6120,
+        "markdown_files_checked": 6343,
+        "markdown_links_checked": 13600,
+        "errors": 0,
+        "warnings": 0
+      },
+      "tier_counts": {
+        "CORE": 50,
+        "NEXT": 424,
+        "REFERENCE": 508,
+        "ARCHIVE": 242
+      },
+      "preservation": {
+        "preexisting_ledger_sections_unchanged": true,
+        "paper_manifest_unchanged": true,
+        "active_and_historical_reading_input_unchanged": true,
+        "other_topic_artifacts_unchanged": true
+      },
+      "scope": "Repository integrity and source/design records only; no Docker image, native inference, policy performance, or learned method validated."
+    }
+  },
+  "task_geometry_p0_preparation": {
+    "task": "TASK-GEOMETRY-P0-PREP",
+    "date": "2026-11-18",
+    "status": "PREPARED_UNEXECUTED",
+    "research_decision": "CONTINUE_BOUNDED_INPUT_DIAGNOSTIC",
+    "evidence_maturity": "CURATION-HYPOTHESIS",
+    "canonical_documents": [
+      "work/research_topics/task_geometry_estimation/내용/README.md#p0-preparation-result",
+      "work/research_topics/task_geometry_estimation/재현 방법/README.md#resume"
+    ],
+    "source_review": [
+      {
+        "key": "model",
+        "url": "https://huggingface.co/IPEC-COMMUNITY/spatialvla-4b-224-pt/resolve/886c4557dfde53b44c0f74fde7d89bf83a26c3cd/modeling_spatialvla.py",
+        "sha256": "a04008cf364e094079493e5982fa2b32fca12874b0a42b645e0aecab024e7236",
+        "bytes": 24286
+      },
+      {
+        "key": "processor",
+        "url": "https://huggingface.co/IPEC-COMMUNITY/spatialvla-4b-224-pt/resolve/886c4557dfde53b44c0f74fde7d89bf83a26c3cd/processing_spatialvla.py",
+        "sha256": "c20b15460633f65809788c633936347fada2f2bbcfffba898d2f0b4b99807b33",
+        "bytes": 11776
+      },
+      {
+        "key": "config",
+        "url": "https://huggingface.co/IPEC-COMMUNITY/spatialvla-4b-224-pt/resolve/886c4557dfde53b44c0f74fde7d89bf83a26c3cd/config.json",
+        "sha256": "0c5d94be86f9e15b708650c4b829033ae99243f85507012b1dafa0263f799909",
+        "bytes": 8126
+      },
+      {
+        "key": "binding",
+        "url": "https://raw.githubusercontent.com/ARISE-Initiative/robosuite/5ce6643f3092639d08f7b0f90ed1c6a84f50552c/robosuite/utils/binding_utils.py",
+        "sha256": "a3d2526fb2e60875e2c3a87b8828b8e3b512781708c80d0c96ee6024980896c8",
+        "bytes": 42364
+      }
+    ],
+    "shared_artifacts": {
+      "plan": {
+        "path": "../../pose_active_perception/재현 방법/PLAN.json",
+        "sha256": "ce2d5648c380482d36e0b58d4203b43c4136282cc51c6e5d5e39bb4fba7a97ae"
+      },
+      "helper": {
+        "path": "../../pose_active_perception/재현 방법/probe.py",
+        "sha256": "18b9367f02de74f434ee8ce1448bc48e77e2291062cf3da333987aa35174c5d4"
+      },
+      "requirements": {
+        "path": "../../pose_active_perception/재현 방법/requirements.txt",
+        "sha256": "416fbc8b4707d7c676f37354a4a22f39f6c812679721cde0fcda74e9d944fa04"
+      }
+    },
+    "authored_artifact_sha256": {
+      "PLAN.json": "921fd4c62ae1640600ac9a3bfadc306cabf59f42188867c1ad3a7811061919c4",
+      "config.py": "90e5550c56f043b8cd0671c75575473d880c31de77e79eab92926349a769c6ab",
+      "Dockerfile": "dc237dfd85c82bcc0bff80abdfa7f9554a7722af760cbb3bd03d4afe8c542b34",
+      "resume.py": "46018160099749921c31aabd308c68e3aed630504622d079d885387616e1714c",
+      "geometry.py": "b125227339b67cabb0c30999b8da503ebe23145d7b6104097407cdd3835509c8",
+      "probe.py": "fc79fd6eefd56c82d53d712461071b271206cd66ad6e14f07a30f61beedb707b",
+      "checks.py": "91bebd475f8f45b48833559cf3830c765359379593676f3fb5b8230a20ed9e38",
+      "results/preparation/local_check.json": "605f9bf0f2f47282b471b0b37dc03dbdd53b841697b0fc95ee3e75249508154f"
+    },
+    "implementation": [
+      "Post-crop/pre-area instance-local depth override, restoring original bound method on exception",
+      "Pass-through original, identical reinjection, evaluator-only ROI bias, within-cell permutation",
+      "Single script-positioned fixture with metric depth/segmentation/K/CV extrinsic; no policy command or success evaluation",
+      "Strict HF base loader plus original spatial-token copy, inspected remote module digest check",
+      "Separate E_inj versus E_gt and ROI error; preserve actual ray dtype and report nominal-coordinate difference",
+      "Two instructions by four conditions, fresh cache, first-token logits and valid-only normalized decode",
+      "Portable Docker recipe, pinned shared metadata/helper/requirements, new launcher, 11 container checks"
+    ],
+    "source_findings": [
+      {
+        "finding": "Pinned custom from_pretrained assumes model return, conflicting with output_loading_info tuple",
+        "boundary": "Source reasoning; base-loader replacement not runtime verified"
+      },
+      {
+        "finding": "Reduced-precision ray buffer may round nominal pixel centers",
+        "boundary": "Analytical dtype risk; actual buffer delta logged only in future native run"
+      }
+    ],
+    "limits": {
+      "physics_steps": 10000,
+      "queries": 8,
+      "model_steps": 96,
+      "tokens_per_query": 12,
+      "optimizer_steps": 0,
+      "vla_commands": 0
+    },
+    "environment": {
+      "base_image_inherited_from": "pose_active_perception/재현 방법/PLAN.json",
+      "torch": "2.5.1",
+      "torchvision": "0.20.1",
+      "transformers": "4.47.0",
+      "numpy": "1.26.4",
+      "attention": "eager",
+      "precision": "BF16 model; float32 K",
+      "native_validation": false,
+      "deterministic_algorithms": true
+    },
+    "actual_execution": {
+      "host_platform": {
+        "system": "Darwin",
+        "machine": "arm64"
+      },
+      "launcher": "resume.py run --output results/preparation",
+      "launcher_exit": 3,
+      "status": "BLOCKED_DAEMON",
+      "local_context": "desktop-linux",
+      "evidence": "work/research_topics/task_geometry_estimation/재현 방법/results/preparation/local_check.json",
+      "containers_created": 0,
+      "images_built_or_pulled": 0,
+      "native_queries": 0,
+      "physics_steps": 0,
+      "optimizer_steps": 0,
+      "host_packages_weights_assets_installed": 0,
+      "container_checks_run": 0
+    },
+    "validation": {
+      "static_compile": "PASS",
+      "portable_source_context": "PASS; source/config copy only, no Docker build",
+      "container_checks": "NOT_RUN (11 authored)",
+      "tier_generator": "PASS; assignments unchanged",
+      "diff_check": "PASS",
+      "repository_audit": {
+        "status": "PASS",
+        "papers": 1224,
+        "standard_note_files": 6120,
+        "markdown_files_checked": 6343,
+        "markdown_links_checked": 13615,
+        "errors": 0,
+        "warnings": 0
+      },
+      "scope": "Static preparation and repository integrity; not native runtime or scientific validation"
+    },
+    "unimplemented": [
+      "Task evaluator with release/dwell/contact margins",
+      "Task action normalizer and base manipulation competence",
+      "Natural error distribution and matched-error continuation dataset",
+      "Differentiable depth adapter and action/task-margin training",
+      "External researcher feedback"
+    ],
+    "next": "TASK-GEOMETRY-P0 / NATIVE_RESOURCE_WAIT",
+    "preservation": {
+      "existing_ledger_sections": "UNCHANGED",
+      "other_topic_files": "PASS; hashes unchanged",
+      "registry_and_reading": "UNCHANGED"
+    },
+    "boundary": "Preparation and fail-closed local-daemon check only; not native runtime or research-effect evidence.",
+    "temporary_source_cache": "Task-specific read-only source cache removed after review; URLs/hashes retained"
   }
 }

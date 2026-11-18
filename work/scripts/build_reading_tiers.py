@@ -1316,6 +1316,26 @@ FOCUS_REFERENCE_RATIONALES.update({'pr-1210': 'CAD 완전성 전제를 완화하
 FOCUS_SOURCE_CHECKS.update({'pr-1207': 'https://openaccess.thecvf.com/content/CVPR2024/html/Wen_FoundationPose_Unified_6D_Pose_Estimation_and_Tracking_of_Novel_Objects_CVPR_2024_paper.html', 'pr-1208': 'https://proceedings.mlr.press/v270/dass25a.html', 'pr-1209': 'https://journals.sagepub.com/doi/10.1177/02783649251411922', 'pr-1210': 'https://openaccess.thecvf.com/content/CVPR2025/html/Li_UA-Pose_Uncertainty-Aware_6D_Object_Pose_Estimation_and_Online_Object_Completion_CVPR_2025_paper.html', 'pr-1211': 'https://proceedings.neurips.cc/paper_files/paper/2025/hash/618c0a236e7aace748d09bc8fbed3e4d-Abstract-Conference.html', 'pr-1212': 'https://roboticsproceedings.org/rss22/p145.html', 'pr-1213': 'https://roboticsproceedings.org/rss22/p056.html', 'pr-1214': 'https://openaccess.thecvf.com/content/CVPR2026/html/Qian_GeoPredict_Leveraging_Predictive_Kinematics_and_3D_Gaussian_Geometry_for_Precise_CVPR_2026_paper.html', 'pr-1215': 'https://ojs.aaai.org/index.php/AAAI/article/view/38921', 'pr-1216': 'https://openaccess.thecvf.com/content/CVPR2026/papers/Xu_Action-Geometry_Prediction_with_3D_Geometric_Prior_for_Bimanual_Manipulation_CVPR_2026_paper.pdf', 'pr-1217': 'https://papers.neurips.cc/paper_files/paper/2025/hash/aa1b1a959c80086cba61d0fd66de412f-Abstract-Conference.html', 'pr-1218': 'https://ojs.aaai.org/index.php/AAAI/article/view/29139', 'pr-1219': 'https://link.springer.com/article/10.1007/s10514-024-10164-6', 'pr-1220': 'https://www.emerald.com/ir/article-abstract/52/5/651/1254840/Robotic-task-success-evaluation-under-multi-modal?redirectedFrom=PDF', 'pr-1221': 'https://arxiv.org/abs/2608.15139', 'pr-1222': 'https://arxiv.org/abs/2509.19292', 'pr-1223': 'https://arxiv.org/abs/2509.11364', 'pr-1224': 'https://arxiv.org/abs/2609.23504', 'pr-0805': 'https://openaccess.thecvf.com/content/CVPR2026/html/Liu_SaPaVe_Towards_Active_Perception_and_Manipulation_in_Vision-Language_Action_Models_CVPR_2026_paper.html', 'pr-1030': 'https://arxiv.org/abs/2610.23378'})
 FOCUS_REVIEW_DATES.update(dict.fromkeys(['pr-1207', 'pr-1208', 'pr-1209', 'pr-1210', 'pr-1211', 'pr-1212', 'pr-1213', 'pr-1214', 'pr-1215', 'pr-1216', 'pr-1217', 'pr-1218', 'pr-1219', 'pr-1220', 'pr-1221', 'pr-1222', 'pr-1223', 'pr-1224', 'pr-0805', 'pr-1030'], "2026-11-18"))
 
+# 2026-11-18 REG-R18: direct task-geometry collisions; user reading status stays UNREAD.
+NEXT_GROUPS['Active and embodied 3D Vision'].append(
+    "=Estimate, Don't Imitate: Reusing Differentiable State-Based Policies for Visuomotor Control"
+)
+NEXT_GROUPS['VLA, cross-embodiment, and long-horizon planning'].extend([
+    '=Understanding the Impact of Geometric Foundation Models on Vision-Language-Action Models',
+    '=PRISM: Precision Forcing for Generalist Vision-Language-Action Policies',
+])
+FOCUS_PRIORITY_RATIONALES.update({
+    'pr-1225': 'Frozen expert의 action-consistency 추정 학습은 현재 geometry 후보가 넘어야 할 직접 비교다.',
+    'pr-1226': 'Geometry 결합과 재구성 품질–VLA 성능 분석의 ECCV 기준으로, 단순 상관 분석의 신규성 한계를 확인한다.',
+    'pr-1227': '정밀도 요구에 따른 flow supervision·표현 학습이 이미 존재하므로 task-aware geometry의 잔여 기여를 비교한다.',
+})
+FOCUS_SOURCE_CHECKS.update({
+    'pr-1225': 'https://arxiv.org/abs/2609.34018',
+    'pr-1226': 'https://link.springer.com/chapter/10.1007/978-3-032-37271-0_2',
+    'pr-1227': 'https://arxiv.org/abs/2610.14704',
+})
+FOCUS_REVIEW_DATES.update(dict.fromkeys(['pr-1225', 'pr-1226', 'pr-1227'], '2026-11-18'))
+
 SYNTHESIS_FILES = OrderedDict(
     [
         (
