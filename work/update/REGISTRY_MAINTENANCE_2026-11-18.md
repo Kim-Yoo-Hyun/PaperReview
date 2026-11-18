@@ -1,4 +1,4 @@
-# REG-R17 — 직접 선행 보강과 연구 workspace 게시 준비
+# REG-R17 — 직접 선행 보강과 연구 workspace 게시 완료
 
 - Reviewed: 2026-11-18 KST
 - 범위: 최근 후보 탐색의 미등록 직접 선행·비교 baseline 보강, 읽기 우선순위 정합, 누적 후보 정리/재개 자료의 GitHub 반영
@@ -58,5 +58,9 @@ Registry **1,224편·표준 노트6,120개**, CORE50/NEXT424/REFERENCE508/ARCHIV
 - Tier/등록/profile script 컴파일, tier·catalog·resource/index 재생성, priority reconciliation dry-run(변경0), `git diff --check` PASS.
 - 기존1,206편 manifest는 승격2편의 curation 외 동일. 기존6,030노트 중6,028개 byte-identical; 승격2편 overview는 읽기 우선순위 header만 변경. Pose/관계 탐색의 기존 재현 파일17개도 byte-identical.
 - 초기 검사의 태그 대소문자 충돌·manifest hash 불일치를 수정한 뒤 전체 감사 PASS. 미확인 native 효과·읽기 상태의 임의 승격은 없다.
-- Staged 변경246파일·binary0·`git diff --cached --check` PASS. 기존 폐기7개 이력/재현 자료와 새 registry 보강만 포함한다. GitHub 게시·remote clone 확인을 이어서 수행하며 게시 commit은 아래에 기록한다.
+- Staged 변경246파일·binary0·`git diff --cached --check` PASS. 기존 폐기7개 이력/재현 자료와 새 registry 보강만 포함한다. GitHub `origin/main` 게시 완료: [content commit `1fb886cf`](https://github.com/Kim-Yoo-Hyun/PaperReview/commit/1fb886cf42120d784b6de1fd3b2bee7643babf3e).
 <!-- VALIDATION:END -->
+
+### 원격 사본 확인
+
+GitHub에서 새로 shallow clone한 content commit에서 registry 감사 오류0·경고0, 읽기 이력6검사·문서 유지보수8검사 PASS. 추적 파일6,712개가 로컬과 byte-identical이며 clone worktree는 clean이었다. 이 확인은 registry와 준비 파일의 전달·구조 검증이며 native 실행의 재현 성공을 의미하지 않는다. 게시 확인 결과는 별도 문서 커밋으로 같은 `main`에 반영한다.

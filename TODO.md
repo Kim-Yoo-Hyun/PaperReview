@@ -4,7 +4,7 @@ Updated: 2026-11-18 KST. 연구 후보 판단은 [통합 index](./work/research_
 
 ## 직전 완료
 
-- **REG-R17 — registry 갱신·게시 준비:** [직접 선행18편/90노트 보강 및 정합 검토](./work/update/REGISTRY_MAINTENANCE_2026-11-18.md). ActiveAlign 중복 제외, SaPaVe·ActiveAlign NEXT 승격, 사용자 읽기 이력·실험 대기/폐기 판단 보존. 최종 GitHub 게시 확인은 해당 보고서를 따른다.
+- **REG-R17 — DONE (registry 갱신·GitHub 게시):** [직접 선행18편/90노트 보강 및 정합 검토](./work/update/REGISTRY_MAINTENANCE_2026-11-18.md). ActiveAlign 중복 제외, SaPaVe·ActiveAlign NEXT 승격, 사용자 읽기 이력·실험 대기/폐기 판단 보존. GitHub `main` 게시·새 clone 감사 PASS(오류0·경고0), 게시 commit과 확인 범위는 해당 보고서를 따른다.
 
 - **POSE-ACTIVE-P0-PREP — DONE (준비 범위):** [Docker recipe·PLAN·launcher·scene/evaluator·camera/제한된 복원·VLA 12-token 후보/순차 재채점·제어 검사10개](./work/research_topics/pose_active_perception/재현%20방법/README.md#p0-preparation)를 작성했다. Python 정적 컴파일 확인. 새 launcher의 실제 `run`은 현재 local daemon 연결 실패로 **BLOCKED_DAEMON / exit3**. Image build·Docker 검사·native 실행·host package/weight/asset 설치는 없다. VLA physical command는 task normalizer 부재로 차단하며 FoundationPose·물리 camera·전체 label/학습은 미구현이다. [판정](./work/research_topics/pose_active_perception/내용/README.md#p0-preparation-result)은 좁은 탐색 CONTINUE·효과/신규성 미확립. 다음은 호환 local NVIDIA의 bounded P0다.
 

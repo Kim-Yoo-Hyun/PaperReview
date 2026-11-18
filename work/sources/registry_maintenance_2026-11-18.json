@@ -862,8 +862,21 @@
     "working_diff_check": "PASS"
   },
   "publication": {
-    "status": "PENDING",
+    "status": "PUBLISHED_VERIFIED",
     "remote": "origin",
-    "branch": "main"
+    "branch": "main",
+    "content_commit": "1fb886cf42120d784b6de1fd3b2bee7643babf3e",
+    "content_commit_url": "https://github.com/Kim-Yoo-Hyun/PaperReview/commit/1fb886cf42120d784b6de1fd3b2bee7643babf3e",
+    "remote_branch_matches_content_commit": true,
+    "fresh_clone": {
+      "source": "https://github.com/Kim-Yoo-Hyun/PaperReview.git",
+      "depth": 1,
+      "repository_audit": "PASS; 0 errors, 0 warnings",
+      "reading_history_tests": 6,
+      "document_maintenance_tests": 8,
+      "tracked_files_byte_identical": 6712,
+      "working_tree_clean": true
+    },
+    "boundary": "Clone verification checks registry and prepared files; no native simulator, inference or training execution."
   }
 }
