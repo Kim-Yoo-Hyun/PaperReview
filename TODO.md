@@ -4,7 +4,7 @@ Updated: 2026-11-18 KST. 연구 후보 판단은 [통합 index](./work/research_
 
 ## 직전 완료
 
-- **REG-R18 — 정합 검증·게시 준비:** [직접 선행3편/15노트와 registry 정리](./work/update/REGISTRY_MAINTENANCE_2026-11-18.md#reg-r18). Geometry Impact의 ECCV2026 정식 출판 확인, EDI·PRISM Precision Forcing은 preprint. 전체1,227편·CORE50/NEXT427/REFERENCE508/ARCHIVE242. 사용자 읽기 기록과 기존 연구 판단 보존.
+- **REG-R18 — DONE (정리·GitHub 게시):** [직접 선행3편/15노트와 registry 정리](./work/update/REGISTRY_MAINTENANCE_2026-11-18.md#reg-r18). Geometry Impact의 ECCV2026 정식 출판 확인, EDI·PRISM Precision Forcing은 preprint. 전체1,227편·CORE50/NEXT427/REFERENCE508/ARCHIVE242. 사용자 읽기 기록과 기존 연구 판단 보존. GitHub main 게시 및 새 clone 감사·14검사 PASS.
 - **TASK-GEOMETRY-P0-PREP — DONE (준비 범위):** [Depth override·scene/strict loader·2지시×4조건·Docker recipe·검사11개](./work/research_topics/task_geometry_estimation/재현%20방법/README.md#resume) 작성. 정적 컴파일 확인, 새 launcher는 **BLOCKED_DAEMON / exit3**. Docker 검사/native/학습/host 설치0. [내용·한계](./work/research_topics/task_geometry_estimation/내용/README.md#p0-preparation-result), [원장](./work/sources/new_field_scout_2026-11-17.json). 다음은 호환 local NVIDIA의 bounded P0다.
 
 N1/N2의 문헌·설계, POSE-ACTIVE·관계 기반 탐색의 준비, REG-R17 등록·게시와 후보 폐기 이력은 [update index](./work/update/README.md)와 각 주제 문서에 보존한다. TODO에는 최근 완료·다음 행동·재개 조건만 유지한다.

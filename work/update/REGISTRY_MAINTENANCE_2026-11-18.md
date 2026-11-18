@@ -89,5 +89,6 @@ GitHub에서 새로 shallow clone한 content commit에서 registry 감사 오류
 - 읽기 이력6검사·문서 유지보수8검사 PASS. Python 정적 컴파일, tier/catalog/view 생성, priority 정합, `git diff --check` PASS.
 - 기존1,224편 manifest record·6,120개 표준 노트와 기존521개 active/history 행의 상태·분석을 보존했다. NEXT sequence 등 생성 필드만 재배치했다.
 - TASK-GEOMETRY의 준비 artifact8개 hash와 기존 source 원장을 보존했다. Docker 제어11검사·native 모델/physics는 이번에도 실행하지 않았다.
-- GitHub `origin/main` 게시 전 검증 완료. 실제 게시·원격 사본 확인은 아래 후속 기록으로 구별한다.
+- GitHub `origin/main` 게시 완료: [content commit `5ee0f986`](https://github.com/Kim-Yoo-Hyun/PaperReview/commit/5ee0f986ee3ebe307a0d10c566911adf62550718).
+- GitHub에서 새로 clone한 content commit에서도 감사 오류0·경고0, 읽기 이력6검사·문서 유지보수8검사 PASS. 추적 파일6,735개 byte-identical·clone worktree clean. 다른 경로에서 TASK-GEOMETRY 공유 manifest/hash·source build context 확인. Docker image/native 실행 검증은 아니다.
 <!-- REG_R18_VALIDATION:END -->

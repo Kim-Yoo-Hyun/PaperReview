@@ -1029,9 +1029,23 @@
       "native_experiments": "NOT_RUN"
     },
     "publication": {
-      "status": "PREPARED",
+      "status": "PUBLISHED",
       "remote": "origin",
-      "branch": "main"
+      "branch": "main",
+      "content_commit": "5ee0f986ee3ebe307a0d10c566911adf62550718",
+      "url": "https://github.com/Kim-Yoo-Hyun/PaperReview/commit/5ee0f986ee3ebe307a0d10c566911adf62550718",
+      "fresh_clone": {
+        "content_commit": "5ee0f986ee3ebe307a0d10c566911adf62550718",
+        "audit_errors": 0,
+        "audit_warnings": 0,
+        "reading_history_tests": 6,
+        "document_maintenance_tests": 8,
+        "tracked_files_byte_identical": 6735,
+        "worktree": "CLEAN",
+        "relative_manifest_and_build_context": "PASS; source/config only",
+        "native_execution": false
+      },
+      "scope": "This records the tested content commit. The following documentation commit only records publication and verification."
     }
   }
 }
