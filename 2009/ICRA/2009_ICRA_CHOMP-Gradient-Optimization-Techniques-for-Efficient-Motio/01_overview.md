@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-Planning and control의 planning 문제를 이해하기 위해 읽는다. 본문은 Few current approaches to optimal control are equipped to handle obstacle avoidance, though.를 문제로 두고, In this paper, we present Covariant Hamiltonian Optimization for Motion Planning (CHOMP), a novel method for generating and optimizing trajectories for robotic systems.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — Few current approaches to optimal control are equipped to handle obstacle avoidance, though.
+
+방법 관련 발췌 — In this paper, we present Covariant Hamiltonian Optimization for Motion Planning (CHOMP), a novel method for generating and optimizing trajectories for robotic systems.
 
 ## Problem and Motivation
 
@@ -86,7 +88,7 @@ Planning and control의 planning 문제를 이해하기 위해 읽는다. 본문
 
 ## Why Read It
 
-Planning and control의 planning 문제를 이해하기 위해 읽는다. 본문은 Few current approaches to optimal control are equipped to handle obstacle avoidance, though.를 문제로 두고, In this paper, we present Covariant Hamiltonian Optimization for Motion Planning (CHOMP), a novel method for generating and optimizing trajectories for robotic systems.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 3 (II. THE CHOMP ALGORITHM), p. 3 (II. THE CHOMP ALGORITHM), p. 2 (II. THE CHOMP ALGORITHM), p. 2 (II. THE CHOMP ALGORITHM) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 1 (I. INTRODUCTION), p. 3 (II. THE CHOMP ALGORITHM), p. 2 (II. THE CHOMP ALGORITHM)이다.
 
 ## Semantic QA — PDF body cross-check
 

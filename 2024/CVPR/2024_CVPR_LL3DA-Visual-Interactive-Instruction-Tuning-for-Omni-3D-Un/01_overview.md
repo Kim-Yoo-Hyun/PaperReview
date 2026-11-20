@@ -19,7 +19,7 @@
 
 ## Why This Paper Is Here
 
-Planning and control의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 Though these methods have achieved remarkable success addressing different challenges in understanding 3D worlds with natural language, there are certain limitations.를 문제로 두고, To summarize, our key contributions lie in: • We present a LLM-based solution for understanding, reasoning, and planning in complex 3D environments. • Our model takes both the textual instructions and visual ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+LL3DA는 점군과 사용자의 언어·시각 지시를 받아 3D 장면에 대한 텍스트를 생성한다.
 
 ## Problem and Motivation
 
@@ -52,16 +52,10 @@ Planning and control의 3d_perception 문제를 이해하기 위해 읽는다. �
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** To summarize, our key contributions lie in: • We present a LLM-based solution for understanding, reasoning, and planning in complex 3D environments. • Our model ...
-- **p. 2 / 1. Introduction - extractive body cue:** Additionally, by introducing additional visual interactions, our method could further remove the ambiguities within the vague textual instructions.
-- **p. 3 / 3. Methodology - extractive body cue:** Next, we introduce our model design in details (Sec.
-- **p. 3 / 3.1. Problem Formatting - extractive body cue:** 2 (a), the input of our model consists of a 3D scene represented by a set of points PC, the textual instruction It, and potential ...
-- **p. 4 / 3.2. Model Design - extractive body cue:** (1) Here, fenc consists of d-dimensioned features for M points uniformly down-sampled from the input 3D scene through the Farthest Point Sampling (FPS) algorithm.
-- **p. 5 / 5.2. Comparison with SoTA Specialists - extractive body cue:** Results show that our method consistently outperforms existing methods on all the evaluation sets, and surpasses the generation based method, 3D-LLM, by a large margin ...
-- **p. 7 / 5.3. Ablation Studies - extractive body cue:** Results show that the additional textual instructions and visual prompts improve the task diversity and further improve the performance on 3D Question Answering.
-- **p. 6 / 5.3. Ablation Studies - extractive body cue:** The "early fusion" enables direct interaction with the 3D scene, thus it achieves a better performance.
+- 장면의 점군을 직접 입력받고 시각적 단서로 어떤 물체를 가리키는지 지정한다.
+- 출력을 3D 장면 설명과 시각 질의응답에서 평가한다.
 
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+[원문 초록](https://arxiv.org/abs/2311.18651)
 
 ## Evaluation Scope
 
@@ -80,4 +74,4 @@ Planning and control의 3d_perception 문제를 이해하기 위해 읽는다. �
 
 ## Why Read It
 
-Planning and control의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 Though these methods have achieved remarkable success addressing different challenges in understanding 3D worlds with natural language, there are certain limitations.를 문제로 두고, To summarize, our key contributions lie in: • We present a LLM-based solution for understanding, reasoning, and planning in complex 3D environments. • Our model takes both the textual instructions and visual ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (1. Introduction), p. 1 (1. Introduction), p. 1 (1. Introduction), p. 2 (1. Introduction), p. 3 (3.1. Problem Formatting), p. 3 (3.1. Problem Formatting) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 2 (1. Introduction), p. 1 (1. Introduction), p. 3 (3.1. Problem Formatting)이다.

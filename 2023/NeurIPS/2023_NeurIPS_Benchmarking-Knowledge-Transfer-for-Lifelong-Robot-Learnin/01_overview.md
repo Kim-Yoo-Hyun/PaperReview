@@ -20,7 +20,7 @@
 
 ## Why This Paper Is Here
 
-RL, IL, offline learning, and robot data의 benchmark 문제를 이해하기 위해 읽는다. 본문은 A robot in the real world, however, often cannot choose which task to encounter first.를 문제로 두고, We present an initial study using LIBERO to investigate five major research topics in LLDM (Figure 1): 1) knowledge transfer with different types of distribution shift; 2) neural architecture design; 3) lifelong ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+조작 과업을 순차적으로 배울 때 과거 지식의 전이와 망각을 측정하는 벤치마크다.
 
 ## Problem and Motivation
 
@@ -54,16 +54,10 @@ RL, IL, offline learning, and robot data의 benchmark 문제를 이해하기 위
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1 Introduction - extractive body cue:** We present an initial study using LIBERO to investigate five major research topics in LLDM (Figure 1): 1) knowledge transfer with different types of distribution ...
-- **p. 1 / Abstract - extractive body cue:** To advance research in LLDM, we introduce LIBERO, a novel benchmark of lifelong learning for robot manipulation.
-- **p. 3 / 2 Background - extractive body cue:** We present four task suites in Section 4.2: three task suites for studying the transfer of knowledge about spatial relationships, object concepts, and task goals ...
-- **p. 1 / 1 Introduction - extractive body cue:** A longstanding goal in machine learning is to develop a generalist agent that can perform a wide range of tasks.
-- **p. 2 / 1 Introduction - extractive body cue:** LIBERO is scalable, extendable, and designed explicitly for studying lifelong learning in robot manipulation.
-- **p. 8 / 5 Experiments - extractive body cue:** This is surprising since it indicates all lifelong learning algorithms we consider actually hurt forward transfer; 2) PACKNET outperforms other lifelong learning algorithms on LIBERO-X ...
-- **p. 6 / 5 Experiments - extractive body cue:** Q6: Can supervised pretraining improve downstream lifelong learning performance in LLDM?
-- **p. 6 / 5 Experiments - extractive body cue:** Then, we find the earliest epoch e∗ i in which the agent achieves the best performance on task i (i.e., e∗ i = arg mine ...
+- 물체·공간 배치·목표 등을 달리한 태스크 묶음과 시연을 구축한다.
+- 동일한 태스크 순서에서 평생학습 알고리즘과 정책 구조를 비교한다.
 
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+[검증한 원문](https://proceedings.neurips.cc/paper_files/paper/2023/hash/8c3c666820ea055a77726d66fc7d447f-Abstract-Datasets_and_Benchmarks.html)
 
 ## Evaluation Scope
 
@@ -83,7 +77,7 @@ RL, IL, offline learning, and robot data의 benchmark 문제를 이해하기 위
 
 ## Why Read It
 
-RL, IL, offline learning, and robot data의 benchmark 문제를 이해하기 위해 읽는다. 본문은 A robot in the real world, however, often cannot choose which task to encounter first.를 문제로 두고, We present an initial study using LIBERO to investigate five major research topics in LLDM (Figure 1): 1) knowledge transfer with different types of distribution shift; 2) neural architecture design; 3) lifelong ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 4 (2 Background), p. 1 (1 Introduction), p. 2 (1 Introduction), p. 2 (1 Introduction), p. 3 (2 Background), p. 1 (Abstract) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 4 (2 Background), p. 1 (1 Introduction), p. 2 (1 Introduction), p. 3 (2 Background), p. 1 (Abstract)이다.
 
 ## Semantic QA — PDF body cross-check
 

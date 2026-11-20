@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 Estimating geometry through contact-rich interactions is not a trivial problem.를 문제로 두고, Fusing vision and contact rich physics, our method recovers the occluded geometry through object interactions with the robot and environment, The robot end effector in yellow shows the robot-object interaction,를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — Estimating geometry through contact-rich interactions is not a trivial problem.
+
+방법 관련 발췌 — Fusing vision and contact rich physics, our method recovers the occluded geometry through object interactions with the robot and environment, The robot end effector in yellow shows the robot-object interaction,
 
 ## Problem and Motivation
 
@@ -85,7 +87,7 @@ Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 �
 
 ## Why Read It
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 Estimating geometry through contact-rich interactions is not a trivial problem.를 문제로 두고, Fusing vision and contact rich physics, our method recovers the occluded geometry through object interactions with the robot and environment, The robot end effector in yellow shows the robot-object interaction,를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1. INTRODUCTION), p. 1 (1. INTRODUCTION), p. 4 (IV. APPROACH), p. 2 (C. Simultaneous Tracking and Shape Reconstruction), p. 4 (IV. APPROACH), p. 2 (C. Simultaneous Tracking and Shape Reconstruction) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 1 (1. INTRODUCTION), p. 4 (IV. APPROACH), p. 2 (C. Simultaneous Tracking and Shape Reconstruction)이다.
 
 ## Semantic QA — PDF body cross-check
 

@@ -80,7 +80,7 @@ VoxAct-B는 언어 지시와 복셀 관측으로 양팔 조작에서 움직이�
 
 ## Why Read It
 
-VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다. 본문은 However, they are generally sample inefficient, and using primitives can hinder generalization to different tasks as they are not easily adaptable to other types of tasks.를 문제로 두고, To this end, we propose VoxAct-B, a novel voxel-based, language-conditioned method for bimanual manipulation.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1 Introduction), p. 1 (1 Introduction), p. 5 (4 Method), p. 5 (4 Method), p. 14 (A.1 Additional Implementation Details), p. 17 (C Additional Implementation Details for the Baselines) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 1 (1 Introduction), p. 5 (4 Method), p. 14 (A.1 Additional Implementation Details), p. 17 (C Additional Implementation Details for the Baselines)이다.
 
 ## Semantic QA — PDF body cross-check
 

@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-Manipulation, contact, tactile, and dexterity의 tactile 문제를 이해하기 위해 읽는다. 본문은 Those tasks, however, are still challenges for robots because they are not yet able to fully apply tactile sensing.를 문제로 두고, In the past decades, researchers have developed many different tactile sensors for robots [1-4], and the core part of those tactile sensors is to detect the contact and contact force, or force ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — Those tasks, however, are still challenges for robots because they are not yet able to fully apply tactile sensing.
+
+방법 관련 발췌 — In the past decades, researchers have developed many different tactile sensors for robots [1-4], and the core part of those tactile sensors is to detect the contact and contact force, or force ...
 
 ## Problem and Motivation
 
@@ -84,7 +86,7 @@ Manipulation, contact, tactile, and dexterity의 tactile 문제를 이해하기 
 
 ## Why Read It
 
-Manipulation, contact, tactile, and dexterity의 tactile 문제를 이해하기 위해 읽는다. 본문은 Those tasks, however, are still challenges for robots because they are not yet able to fully apply tactile sensing.를 문제로 두고, In the past decades, researchers have developed many different tactile sensors for robots [1-4], and the core part of those tactile sensors is to detect the contact and contact force, or force ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (1. Introduction), p. 2 (1. Introduction), p. 7 (3.3. Algorithm for Measuring Shape), p. 7 (3.3. Algorithm for Measuring Shape), p. 8 (3.3. Algorithm for Measuring Shape), p. 9 (Figure/Table caption) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 2 (1. Introduction), p. 7 (3.3. Algorithm for Measuring Shape), p. 8 (3.3. Algorithm for Measuring Shape), p. 9 (Figure/Table caption)이다.
 
 ## Semantic QA — PDF body cross-check
 

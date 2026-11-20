@@ -19,7 +19,7 @@
 
 ## Why This Paper Is Here
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 The underwater 3D scene reconstruction is a challenging, yet interesting problem with applications ranging from naval robots to VR experiences.를 문제로 두고, Loss Function Alignment: We propose a novel loss function designed to align 3DGS with human perception of High Dynamic Range (HDR) and low-light scenes.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+WaterSplatting은 수중 장면에서 물체의 외관과 물을 통과하는 빛의 산란을 별도로 모델링한다.
 
 ## Problem and Motivation
 
@@ -51,16 +51,10 @@ Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 �
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** Loss Function Alignment: We propose a novel loss function designed to align 3DGS with human perception of High Dynamic Range (HDR) and low-light scenes.
-- **p. 2 / 1. Introduction - extractive body cue:** Splatting with Medium: We introduce a novel approach that combines the strengths of Gaussian Splatting (GS) and volume rendering.
-- **p. 3 / 3.2. Splatting with Medium - extractive body cue:** We illustrate the pipeline of our method in Fig.
-- **p. 4 / 3.3. Loss Function Alignment - extractive body cue:** For the case of our 3DGS-based model, we propose a regularized loss function LReg: we apply pixel-wise weight W = {wi,j} on both rendered estimate ...
-- **p. 3 / 3.2. Splatting with Medium - extractive body cue:** Under the occlusion of both primitives and medium, our model acquires the transmittance along the ray and is capable of synthesizing medium component and object ...
-- **p. 7 / 4.1. Results - extractive body cue:** Our rendering without medium and depth maps significantly outperform those from the SeaThru-NeRF, especially in scenes that are farther from the camera.
-- **p. 6 / 4.1. Results - extractive body cue:** Our method achieves better rendering quality and preserves finer distant geometric details while reducing the amount of floaters.
-- **p. 7 / 4.1. Results - extractive body cue:** We also achieve higher PSNR values in both scenes.
+- 3D 가우시안은 장면을 표현하고 별도의 체적장이 수중 매질을 나타낸다.
+- SeaThru-NeRF에서 영상 렌더링을 평가하며 매질의 영향을 분리해 장면 외관을 복원한다.
 
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+[원문 초록](https://arxiv.org/abs/2408.08206)
 
 ## Evaluation Scope
 
@@ -84,4 +78,4 @@ Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 �
 
 ## Why Read It
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 The underwater 3D scene reconstruction is a challenging, yet interesting problem with applications ranging from naval robots to VR experiences.를 문제로 두고, Loss Function Alignment: We propose a novel loss function designed to align 3DGS with human perception of High Dynamic Range (HDR) and low-light scenes.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 4 (3.3. Loss Function Alignment), p. 3 (3.1. Preliminaries), p. 5 (3.3. Loss Function Alignment), p. 3 (3. Method), p. 4 (3.3. Loss Function Alignment), p. 5 (3.3. Loss Function Alignment) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 4 (3.3. Loss Function Alignment), p. 3 (3.1. Preliminaries), p. 5 (3.3. Loss Function Alignment), p. 3 (3. Method)이다.

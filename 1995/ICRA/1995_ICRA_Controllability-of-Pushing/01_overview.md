@@ -21,7 +21,9 @@
 
 ## Why This Paper Is Here
 
-Locomotion, whole-body, mobile manipulation, and humanoids의 manipulation 문제를 이해하기 위해 읽는다. 본문은 If the object is too large to be grasped or too heavy to be carried, however, this approach fails.를 문제로 두고, Proof: Proposition 5 in Appendix B of (Barraquand and Latombe [5]) provesthe case when V consists oftwo velocity를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — If the object is too large to be grasped or too heavy to be carried, however, this approach fails.
+
+방법 관련 발췌 — Proof: Proposition 5 in Appendix B of (Barraquand and Latombe [5]) provesthe case when V consists oftwo velocity
 
 ## Problem and Motivation
 
@@ -82,4 +84,4 @@ Locomotion, whole-body, mobile manipulation, and humanoids의 manipulation 문�
 
 ## Why Read It
 
-Locomotion, whole-body, mobile manipulation, and humanoids의 manipulation 문제를 이해하기 위해 읽는다. 본문은 If the object is too large to be grasped or too heavy to be carried, however, this approach fails.를 문제로 두고, Proof: Proposition 5 in Appendix B of (Barraquand and Latombe [5]) provesthe case when V consists oftwo velocity를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1 Introduction), p. 1 (1 Introduction), p. 1 (Abstract), p. 1 (1 Introduction), p. 3 (X. The Lie algebra), p. 4 (C H can be followed) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 1 (1 Introduction), p. 1 (Abstract), p. 3 (X. The Lie algebra), p. 4 (C H can be followed)이다.

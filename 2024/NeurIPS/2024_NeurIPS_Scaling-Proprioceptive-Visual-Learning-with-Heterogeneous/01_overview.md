@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-VLA and generalist robot policies의 robot_data 문제를 이해하기 위해 읽는다. 본문은 Recent progress in open-source large-scale data collection [14, 75] has made this path possible, but the heterogeneity (such as varying robot hardware and different environments) present in large-scale robotic data has posed ...를 문제로 두고, We introduce Heterogeneous Pre-trained Transformers (HPT), a family of architecture designed to scalably learn from data across heterogeneous embodiments.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — Recent progress in open-source large-scale data collection [14, 75] has made this path possible, but the heterogeneity (such as varying robot hardware and different environments) present in large-scale robotic data has posed ...
+
+방법 관련 발췌 — We introduce Heterogeneous Pre-trained Transformers (HPT), a family of architecture designed to scalably learn from data across heterogeneous embodiments.
 
 ## Problem and Motivation
 
@@ -84,7 +86,7 @@ VLA and generalist robot policies의 robot_data 문제를 이해하기 위해 �
 
 ## Why Read It
 
-VLA and generalist robot policies의 robot_data 문제를 이해하기 위해 읽는다. 본문은 Recent progress in open-source large-scale data collection [14, 75] has made this path possible, but the heterogeneity (such as varying robot hardware and different environments) present in large-scale robotic data has posed ...를 문제로 두고, We introduce Heterogeneous Pre-trained Transformers (HPT), a family of architecture designed to scalably learn from data across heterogeneous embodiments.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1 Introduction), p. 2 (1 Introduction), p. 6 (1 Introduction), p. 6 (1 Introduction), p. 8 (1 Introduction), p. 17 (A Implementation Details) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 1 (1 Introduction), p. 2 (1 Introduction), p. 6 (1 Introduction), p. 8 (1 Introduction), p. 17 (A Implementation Details)이다.
 
 ## Semantic QA — PDF body cross-check
 

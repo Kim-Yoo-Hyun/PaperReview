@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-Manipulation, contact, tactile, and dexterity의 tactile 문제를 이해하기 위해 읽는다. 본문은 [12], [13], [14], [15], the main bottleneck for wide adoption of touch sensing in robotic manipulation is the lack of sensors that fulfill at the same time all the requirements of being ...를 문제로 두고, To better fulfill these requirements, in this paper, we present the design of a novel tactile sensor.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — [12], [13], [14], [15], the main bottleneck for wide adoption of touch sensing in robotic manipulation is the lack of sensors that fulfill at the same time all the requirements of being ...
+
+방법 관련 발췌 — To better fulfill these requirements, in this paper, we present the design of a novel tactile sensor.
 
 ## Problem and Motivation
 
@@ -78,7 +80,7 @@ Manipulation, contact, tactile, and dexterity의 tactile 문제를 이해하기 
 
 ## Why Read It
 
-Manipulation, contact, tactile, and dexterity의 tactile 문제를 이해하기 위해 읽는다. 본문은 [12], [13], [14], [15], the main bottleneck for wide adoption of touch sensing in robotic manipulation is the lack of sensors that fulfill at the same time all the requirements of being ...를 문제로 두고, To better fulfill these requirements, in this paper, we present the design of a novel tactile sensor.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 1 (Abstract), p. 1 (I. INTRODUCTION), p. 7 (V. EXPERIMENTAL RESULTS) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 1 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 1 (Abstract), p. 7 (V. EXPERIMENTAL RESULTS)이다.
 
 ## Semantic QA — PDF body cross-check
 

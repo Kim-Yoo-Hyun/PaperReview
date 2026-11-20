@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-Planning and control의 navigation 문제를 이해하기 위해 읽는다. 본문은 First, our model directly predicts robust multi-level semantic features for future candidate locations, avoiding the difficulty of pixel-level image reconstruction in unseen environments as used in existing methods like RNR-Map [24, 35] ...를 문제로 두고, In this work, our main contributions include: • We propose a hierarchical neural radiance representation model to produce multi-level semantic representations for future environments with better quality and efficiency. • Utilizing predi ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — First, our model directly predicts robust multi-level semantic features for future candidate locations, avoiding the difficulty of pixel-level image reconstruction in unseen environments as used in existing methods like RNR-Map [24, 35] ...
+
+방법 관련 발췌 — In this work, our main contributions include: • We propose a hierarchical neural radiance representation model to produce multi-level semantic representations for future environments with better quality and efficiency. • Utilizing predi ...
 
 ## Problem and Motivation
 
@@ -84,7 +86,7 @@ Planning and control의 navigation 문제를 이해하기 위해 읽는다. 본�
 
 ## Why Read It
 
-Planning and control의 navigation 문제를 이해하기 위해 읽는다. 본문은 First, our model directly predicts robust multi-level semantic features for future candidate locations, avoiding the difficulty of pixel-level image reconstruction in unseen environments as used in existing methods like RNR-Map [24, 35] ...를 문제로 두고, In this work, our main contributions include: • We propose a hierarchical neural radiance representation model to produce multi-level semantic representations for future environments with better quality and efficiency. • Utilizing predi ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (1. Introduction), p. 1 (1. Introduction), p. 1 (1. Introduction), p. 2 (1. Introduction), p. 5 (3.2. Hierarchical Neural Radiance Representation), p. 4 (3.2. Hierarchical Neural Radiance Representation) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 2 (1. Introduction), p. 1 (1. Introduction), p. 5 (3.2. Hierarchical Neural Radiance Representation), p. 4 (3.2. Hierarchical Neural Radiance Representation)이다.
 
 ## Semantic QA — PDF body cross-check
 

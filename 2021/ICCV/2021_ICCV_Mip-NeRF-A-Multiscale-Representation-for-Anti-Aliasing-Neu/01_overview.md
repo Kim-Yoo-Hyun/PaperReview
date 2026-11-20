@@ -19,7 +19,7 @@
 
 ## Why This Paper Is Here
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 This is a generalization of NeRF's positional encoding (PE) that allows a region of space to be compactly featurized, as opposed to a single point in space.를 문제로 두고, To encode a 3D position and its surrounding Gaussian region, we propose a new feature representation: an integrated positional encoding (IPE).를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+mip-NeRF는 한 픽셀이 보는 공간 범위를 반영해 서로 다른 축척에서 장면을 렌더링한다.
 
 ## Problem and Motivation
 
@@ -52,16 +52,10 @@ Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 �
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** To encode a 3D position and its surrounding Gaussian region, we propose a new feature representation: an integrated positional encoding (IPE).
-- **p. 2 / 1. Introduction - extractive body cue:** On a challenging multiresolution benchmark we present, mip-NeRF is able to reduce error rates relative to NeRF by 60% on average (see Figure 2 for ...
-- **p. 6 / 3.2. Architecture - extractive body cue:** See the supplement for additional details and some additional differences between JaxNeRF and mip-NeRF that do not affect performance significantly and are incidental to our ...
-- **p. 1 / 1. Introduction - extractive body cue:** Neural volumetric representations such as neural radiance fields (NeRF) [30] have emerged as a compelling strategy for learning to represent 3D objects and scenes from ...
-- **p. 4 / 3. Method - extractive body cue:** This use of conical frustums and IPE features also allows us to reduce NeRF's two separate "coarse" and "fine" MLPs into a single multiscale MLP, ...
-- **p. 8 / 4. Results - extractive body cue:** [30], mip-NeRF significantly outperforms NeRF and our improved version of NeRF, particularly on small or thin objects such as the holes of the LEGO truck ...
-- **p. 7 / 4. Results - extractive body cue:** Mip-NeRF reduces average error by 60% on this task and outperforms NeRF by a large margin on all metrics and all scales. "Centering" pixels improves ...
-- **p. 7 / 4. Results - extractive body cue:** Mip-NeRF outperforms NeRF and its improved version by a significant margin, both visually and quantitatively.
+- 카메라 광선을 원뿔대 영역으로 확장해 각 픽셀의 유한한 면적을 고려한다.
+- 여러 해상도의 영상에서 앨리어싱과 복원 오차를 기존 NeRF와 비교한다.
 
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+[원문 초록](https://arxiv.org/abs/2103.13415)
 
 ## Evaluation Scope
 
@@ -81,4 +75,4 @@ Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 �
 
 ## Why Read It
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 This is a generalization of NeRF's positional encoding (PE) that allows a region of space to be compactly featurized, as opposed to a single point in space.를 문제로 두고, To encode a 3D position and its surrounding Gaussian region, we propose a new feature representation: an integrated positional encoding (IPE).를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (1. Introduction), p. 4 (3. Method), p. 6 (3.2. Architecture), p. 5 (3.1. Cone Tracing and Positional Encoding), p. 5 (3.1. Cone Tracing and Positional Encoding), p. 4 (3.1. Cone Tracing and Positional Encoding) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 2 (1. Introduction), p. 4 (3. Method), p. 6 (3.2. Architecture), p. 5 (3.1. Cone Tracing and Positional Encoding), p. 4 (3.1. Cone Tracing and Positional Encoding)이다.

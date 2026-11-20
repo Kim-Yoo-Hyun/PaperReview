@@ -76,4 +76,4 @@ robosuite는 조작 로봇·그리퍼·제어기·과제를 조합해 학습 정
 
 ## Why Read It
 
-Manipulation, contact, tactile, and dexterity의 benchmark 문제를 이해하기 위해 읽는다. 본문은 Nonetheless, the challenges of reproducibility and the limited accessibility of robot hardware have impaired research progress [5].를 문제로 두고, Our framework supports multiple sensing modalities, such as RGB-D cameras, force-torque measurements, and proprioceptive data, allowing multimodal solutions to be developed.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1 Introduction), p. 1 (1 Introduction), p. 6 (1 Introduction), p. 6 (1 Introduction), p. 7 (1 Introduction), p. 3 (1 Introduction) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 1 (1 Introduction), p. 6 (1 Introduction), p. 7 (1 Introduction), p. 3 (1 Introduction)이다.

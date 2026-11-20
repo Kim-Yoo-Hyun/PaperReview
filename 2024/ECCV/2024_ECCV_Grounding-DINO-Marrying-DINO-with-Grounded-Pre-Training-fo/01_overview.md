@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-Foundations: Vision and Language Models의 upstream 문제를 이해하기 위해 읽는다. 본문은 Most existing open-set models [14,21] rely on pre-trained CLIP models for concept generalization.를 문제로 두고, To mitigate this issue and improve model performance during grounded training, we introduce a technique that utilizes sub-sentence level text features.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — Most existing open-set models [14,21] rely on pre-trained CLIP models for concept generalization.
+
+방법 관련 발췌 — To mitigate this issue and improve model performance during grounded training, we introduce a technique that utilizes sub-sentence level text features.
 
 ## Problem and Motivation
 
@@ -84,4 +86,4 @@ Foundations: Vision and Language Models의 upstream 문제를 이해하기 위�
 
 ## Why Read It
 
-Foundations: Vision and Language Models의 upstream 문제를 이해하기 위해 읽는다. 본문은 Most existing open-set models [14,21] rely on pre-trained CLIP models for concept generalization.를 문제로 두고, To mitigate this issue and improve model performance during grounded training, we introduce a technique that utilizes sub-sentence level text features.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 3 (1 Introduction), p. 2 (1 Introduction), p. 2 (1 Introduction), p. 4 (1 Introduction), p. 5 (1. Model Overall), p. 19 (A.1 Hyperparameters) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 3 (1 Introduction), p. 2 (1 Introduction), p. 4 (1 Introduction), p. 5 (1. Model Overall), p. 19 (A.1 Hyperparameters)이다.

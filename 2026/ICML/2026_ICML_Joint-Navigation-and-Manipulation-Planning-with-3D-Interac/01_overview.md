@@ -20,7 +20,9 @@
 
 ## Why This Paper Is Here
 
-Manipulation, contact, tactile, and dexterity의 mobile_manipulation 문제를 이해하기 위해 읽는다. 본문은 However, such independently designed policies and limited heuristics struggle to generalize across diverse situations.를 문제로 두고, In summary, we propose 3D Interaction Chains (3D-IC) for the OVMM task in this paper.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — However, such independently designed policies and limited heuristics struggle to generalize across diverse situations.
+
+방법 관련 발췌 — In summary, we propose 3D Interaction Chains (3D-IC) for the OVMM task in this paper.
 
 ## Problem and Motivation
 
@@ -87,4 +89,4 @@ Manipulation, contact, tactile, and dexterity의 mobile_manipulation 문제를 �
 
 ## Why Read It
 
-Manipulation, contact, tactile, and dexterity의 mobile_manipulation 문제를 이해하기 위해 읽는다. 본문은 However, such independently designed policies and limited heuristics struggle to generalize across diverse situations.를 문제로 두고, In summary, we propose 3D Interaction Chains (3D-IC) for the OVMM task in this paper.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (1. Introduction), p. 2 (1. Introduction), p. 1 (1. Introduction), p. 1 (1. Introduction), p. 3 (3. Preliminaries of Mobile Manipulation), p. 3 (4.1. Unified Modeling of Multi-stage Interaction) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 2 (1. Introduction), p. 1 (1. Introduction), p. 3 (3. Preliminaries of Mobile Manipulation), p. 3 (4.1. Unified Modeling of Multi-stage Interaction)이다.

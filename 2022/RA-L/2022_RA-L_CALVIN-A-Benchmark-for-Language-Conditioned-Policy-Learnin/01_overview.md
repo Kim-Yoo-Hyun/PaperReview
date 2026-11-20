@@ -75,7 +75,7 @@ CALVIN은 언어 지시에 따라 여러 조작 기술을 잇달아 수행하는
 
 ## Why Read It
 
-VLA and generalist robot policies의 benchmark 문제를 이해하기 위해 읽는다. 본문은 Models that can overcome these challenges will begin to close the gap towards scalable, general-purpose, language-driven robotics.를 문제로 두고, In this paper, we present CALVIN (Composing Actions from Language and Vision), an open-source simulated benchmark to learn longhorizon language-conditioned tasks.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (1. CALVIN includes ∼24 hours teleoperated unstructured play), p. 1 (A LONG-STANDING goal for robotics and embodied), p. 1 (Body text (section boundary not confidently recovered)), p. 2 (1. CALVIN includes ∼24 hours teleoperated unstructured play), p. 3 (3) CALVIN Challenge), p. 6 (IV. BASELINE MODELS) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 2 (1. CALVIN includes ∼24 hours teleoperated unstructured play), p. 1 (A LONG-STANDING goal for robotics and embodied), p. 1 (Body text (section boundary not confidently recovered)), p. 3 (3) CALVIN Challenge), p. 6 (IV. BASELINE MODELS)이다.
 
 ## Semantic QA — PDF body cross-check
 

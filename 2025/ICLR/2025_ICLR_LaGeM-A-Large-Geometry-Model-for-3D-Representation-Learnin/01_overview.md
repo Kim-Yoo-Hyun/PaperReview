@@ -19,7 +19,7 @@
 
 ## Why This Paper Is Here
 
-Robotics-enabling 3D perception의 generative 문제를 이해하기 위해 읽는다. 본문은 However, as there is no encoder, new objects cannot be mapped to latent space easily.를 문제로 두고, We summarize our contributions as follows: • We propose a hierarchical autoencoder architecture with faster training time and low memory consumption.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+LaGeM은 3D 형상을 세부 수준별 잠재 표현으로 압축하고 이 표현을 생성 모델에 사용한다.
 
 ## Problem and Motivation
 
@@ -53,16 +53,10 @@ Robotics-enabling 3D perception의 generative 문제를 이해하기 위해 읽�
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** We summarize our contributions as follows: • We propose a hierarchical autoencoder architecture with faster training time and low memory consumption.
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** The latent space is composed of several levels. • The model is capable of training on large-scale datasets like objaverse. • We propose a cascaded ...
-- **p. 3 / 1 INTRODUCTION - extractive body cue:** We proposed a U-Net-style transformer for the autoencoding.
-- **p. 3 / 1 INTRODUCTION - extractive body cue:** To train the generative diffusion models in the latent space, we propose the cascaded latent diffusion models.
-- **p. 5 / 3 METHODOLOGY - extractive body cue:** Motivated by this, we propose a cascaded latent diffusion model.
-- **p. 7 / 4 EXPERIMENTS - extractive body cue:** While for LaGeM-Objaverse, there is a large improvement in both training cost and quantitative results.
-- **p. 7 / 4 EXPERIMENTS - extractive body cue:** The quantitative results show an improvement of almost 50 percent averaged across the complete dataset in terms of the metric Chamfer.
-- **p. 8 / 4 EXPERIMENTS - extractive body cue:** We show autoencoding results on ShapeNet.
+- 계층적 오토인코더가 순서 없는 벡터 집합으로 서로 다른 규모의 형상 특징을 나타낸다.
+- 저자는 형상 복원과 잠재 공간에서의 확산 기반 생성을 평가한다.
 
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+[원문 초록](https://proceedings.iclr.cc/paper_files/paper/2025/hash/76c5401551bbe8337dc38a2bd5eb394e-Abstract-Conference.html)
 
 ## Evaluation Scope
 
@@ -82,4 +76,4 @@ Robotics-enabling 3D perception의 generative 문제를 이해하기 위해 읽�
 
 ## Why Read It
 
-Robotics-enabling 3D perception의 generative 문제를 이해하기 위해 읽는다. 본문은 However, as there is no encoder, new objects cannot be mapped to latent space easily.를 문제로 두고, We summarize our contributions as follows: • We propose a hierarchical autoencoder architecture with faster training time and low memory consumption.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (1 INTRODUCTION), p. 1 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 3 (1 INTRODUCTION), p. 3 (1 INTRODUCTION), p. 5 (3 METHODOLOGY) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 2 (1 INTRODUCTION), p. 1 (1 INTRODUCTION), p. 3 (1 INTRODUCTION), p. 5 (3 METHODOLOGY)이다.

@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-RL, IL, offline learning, and robot data의 offline_rl 문제를 이해하기 위해 읽는다. 본문은 Our results suggest that MOPO substantially outperforms these prior methods on the offline RL benchmark D4RL [18] as well as on offline RL problems where the agent must generalize to out-of-distribution states ...를 문제로 두고, The primary contribution of this work is an offline model-based RL algorithm that optimizes a policy in an uncertainty-penalized MDP, where the reward function is penalized by an estimate of the model's ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — Our results suggest that MOPO substantially outperforms these prior methods on the offline RL benchmark D4RL [18] as well as on offline RL problems where the agent must generalize to out-of-distribution states ...
+
+방법 관련 발췌 — The primary contribution of this work is an offline model-based RL algorithm that optimizes a policy in an uncertainty-penalized MDP, where the reward function is penalized by an estimate of the model's ...
 
 ## Problem and Motivation
 
@@ -86,7 +88,7 @@ RL, IL, offline learning, and robot data의 offline_rl 문제를 이해하기 �
 
 ## Why Read It
 
-RL, IL, offline learning, and robot data의 offline_rl 문제를 이해하기 위해 읽는다. 본문은 Our results suggest that MOPO substantially outperforms these prior methods on the offline RL benchmark D4RL [18] as well as on offline RL problems where the agent must generalize to out-of-distribution states ...를 문제로 두고, The primary contribution of this work is an offline model-based RL algorithm that optimizes a policy in an uncertainty-penalized MDP, where the reward function is penalized by an estimate of the model's ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (1 Introduction), p. 1 (1 Introduction), p. 2 (1 Introduction), p. 3 (3 Preliminaries), p. 7 (3 Preliminaries), p. 4 (3 Preliminaries) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 2 (1 Introduction), p. 1 (1 Introduction), p. 3 (3 Preliminaries), p. 7 (3 Preliminaries), p. 4 (3 Preliminaries)이다.
 
 ## Semantic QA — PDF body cross-check
 

@@ -21,7 +21,9 @@
 
 ## Why This Paper Is Here
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 To address this limitation, some works [11], [12] have proposed instance-oriented open-vocabulary mapping methods.를 문제로 두고, In summary, Our contributions are summarized as follows: • We present OpenObj, the open-vocabulary object-level neural radiance fields with fine-grained understanding, supporting downstream tasks at multiple scales. • We propose a two-s ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — To address this limitation, some works [11], [12] have proposed instance-oriented open-vocabulary mapping methods.
+
+방법 관련 발췌 — In summary, Our contributions are summarized as follows: • We present OpenObj, the open-vocabulary object-level neural radiance fields with fine-grained understanding, supporting downstream tasks at multiple scales. • We propose a two-s ...
 
 ## Problem and Motivation
 
@@ -87,4 +89,4 @@ Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 �
 
 ## Why Read It
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 To address this limitation, some works [11], [12] have proposed instance-oriented open-vocabulary mapping methods.를 문제로 두고, In summary, Our contributions are summarized as follows: • We present OpenObj, the open-vocabulary object-level neural radiance fields with fine-grained understanding, supporting downstream tasks at multiple scales. • We propose a two-s ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 3 (III. OPENOBJ), p. 5 (III. OPENOBJ), p. 2 (I. INTRODUCTION) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 1 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 3 (III. OPENOBJ), p. 5 (III. OPENOBJ)이다.

@@ -19,7 +19,7 @@
 
 ## Why This Paper Is Here
 
-VLA and generalist robot policies의 locomotion 문제를 이해하기 위해 읽는다. 본문은 We construct a height map from raw LiDAR point clouds and introduce randomization to bridge the sim-to-real gap.를 문제로 두고, To better simulate the challenges of locomotion navigation in VLN, we introduce a new benchmark, VLN-CE-Isaac, using Isaac Sim.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+영상·지시에서 중간 수준 이동 명령을 생성하고 시각 보행 제어기가 이를 실행한다.
 
 ## Problem and Motivation
 
@@ -53,16 +53,10 @@ VLA and generalist robot policies의 locomotion 문제를 이해하기 위해 �
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / I. INTRODUCTION - extractive body cue:** To better simulate the challenges of locomotion navigation in VLN, we introduce a new benchmark, VLN-CE-Isaac, using Isaac Sim.
-- **p. 2 / I. INTRODUCTION - extractive body cue:** Inspired by the recent progress on VLM [10, 11] for spatial location and distance reasoning, we propose NaVILA, a twolevel framework for legged robot VLN: ...
-- **p. 3 / II. METHOD - extractive body cue:** VILA consists of three main components: a vision encoder, a projector, and an LLM.
-- **p. 3 / II. METHOD - extractive body cue:** To address this challenge, we opt for image-based vision-language models in our approach.
-- **p. 4 / II. METHOD - extractive body cue:** This flexibility allows us to enhance generalizability for navigation.
-- **p. 8 / III. EXPERIMENTS - extractive body cue:** Workspace Home Outdoor Simple Complex Simple Complex Simple Complex NE↓SR↑NE↓SR↑NE↓SR↑NE↓SR↑NE↓SR↑NE↓SR↑ Unitree Go2 GPT-4o [28] 2.01 0.67 2.38 0.33 1.49 0.53 3.00 0.00 - 0.67 - ...
-- **p. 6 / III. EXPERIMENTS - extractive body cue:** As shown in Table II, our method significantly outperforms NaVid, the current state-of-the-art model, with a substantial 10% improvement in SR.
-- **p. 7 / III. EXPERIMENTS - extractive body cue:** Error ↓ Collision Rate ↓ ROA(w/BCLoss) [68] 0.189 0.152 3.25 ROA [68] 0.161 0.152 3.09 NaVILA 0.066 0.113 0.81 the vision-based policy outperforms the blind ...
+- 언어 경로 데이터와 영상 예제로 상위 내비게이션 모델을 학습한다.
+- 강화학습한 이동 정책과 결합해 사족 및 이족 플랫폼의 탐색을 평가한다.
 
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+[검증한 원문](https://www.roboticsproceedings.org/rss21/p018.html)
 
 ## Evaluation Scope
 
@@ -86,7 +80,7 @@ VLA and generalist robot policies의 locomotion 문제를 이해하기 위해 �
 
 ## Why Read It
 
-VLA and generalist robot policies의 locomotion 문제를 이해하기 위해 읽는다. 본문은 We construct a height map from raw LiDAR point clouds and introduce randomization to bridge the sim-to-real gap.를 문제로 두고, To better simulate the challenges of locomotion navigation in VLN, we introduce a new benchmark, VLN-CE-Isaac, using Isaac Sim.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 3 (II. METHOD), p. 3 (II. METHOD), p. 2 (II. METHOD), p. 5 (II. METHOD) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 2 (I. INTRODUCTION), p. 3 (II. METHOD), p. 2 (II. METHOD), p. 5 (II. METHOD)이다.
 
 ## Semantic QA — PDF body cross-check
 

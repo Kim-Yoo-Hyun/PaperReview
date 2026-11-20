@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다. 본문은 For instance, in the packing battery task illustrated in Figure 2, specifying the mug or branch instance, the probability of each battery-slot pair is 1/18, imposing an additional axis of multi-modality in ...를 문제로 두고, In contrast, our framework is capable of understanding potentially ambiguous natural language instructions by using visual-semantic reasoning capabilities of VLM and generated code as an intermediate representation.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — For instance, in the packing battery task illustrated in Figure 2, specifying the mug or branch instance, the probability of each battery-slot pair is 1/18, imposing an additional axis of multi-modality in ...
+
+방법 관련 발췌 — In contrast, our framework is capable of understanding potentially ambiguous natural language instructions by using visual-semantic reasoning capabilities of VLM and generated code as an intermediate representation.
 
 ## Problem and Motivation
 
@@ -86,7 +88,7 @@ VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다
 
 ## Why Read It
 
-VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다. 본문은 For instance, in the packing battery task illustrated in Figure 2, specifying the mug or branch instance, the probability of each battery-slot pair is 1/18, imposing an additional axis of multi-modality in ...를 문제로 두고, In contrast, our framework is capable of understanding potentially ambiguous natural language instructions by using visual-semantic reasoning capabilities of VLM and generated code as an intermediate representation.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 3 (A. Problem Statement), p. 3 (A. Problem Statement), p. 9 (B. Analysis of Existing Imitation Learning Algorithm), p. 6 (B. Analysis of Existing Imitation Learning Algorithm), p. 7 (B. Analysis of Existing Imitation Learning Algorithm), p. 7 (B. Analysis of Existing Imitation Learning Algorithm) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 3 (A. Problem Statement), p. 9 (B. Analysis of Existing Imitation Learning Algorithm), p. 6 (B. Analysis of Existing Imitation Learning Algorithm), p. 7 (B. Analysis of Existing Imitation Learning Algorithm)이다.
 
 ## Semantic QA — PDF body cross-check
 

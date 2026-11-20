@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-Locomotion, whole-body, mobile manipulation, and humanoids의 humanoid 문제를 이해하기 위해 읽는다. 본문은 Authoring motions for simulated characters remains notoriously difficult, and current interfaces still cannot provide users with an effective means of eliciting the desired behaviours from simulated characters.를 문제로 두고, Although our framework consists of individual components that have been known for some time, the particular combination of these components in the context of data-driven and physics-based character animation is novel and, ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — Authoring motions for simulated characters remains notoriously difficult, and current interfaces still cannot provide users with an effective means of eliciting the desired behaviours from simulated characters.
+
+방법 관련 발췌 — Although our framework consists of individual components that have been known for some time, the particular combination of these components in the context of data-driven and physics-based character animation is novel and, ...
 
 ## Problem and Motivation
 
@@ -84,7 +86,7 @@ Locomotion, whole-body, mobile manipulation, and humanoids의 humanoid 문제를
 
 ## Why Read It
 
-Locomotion, whole-body, mobile manipulation, and humanoids의 humanoid 문제를 이해하기 위해 읽는다. 본문은 Authoring motions for simulated characters remains notoriously difficult, and current interfaces still cannot provide users with an effective means of eliciting the desired behaviours from simulated characters.를 문제로 두고, Although our framework consists of individual components that have been known for some time, the particular combination of these components in the context of data-driven and physics-based character animation is novel and, ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1 INTRODUCTION), p. 1 (1 INTRODUCTION), p. 5 (4 BACKGROUND), p. 5 (4 BACKGROUND), p. 6 (4 BACKGROUND), p. 6 (4 BACKGROUND) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 1 (1 INTRODUCTION), p. 5 (4 BACKGROUND), p. 6 (4 BACKGROUND)이다.
 
 ## Semantic QA — PDF body cross-check
 

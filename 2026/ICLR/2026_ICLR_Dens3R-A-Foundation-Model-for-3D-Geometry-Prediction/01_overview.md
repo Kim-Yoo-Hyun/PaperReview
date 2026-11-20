@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 However, training such a multi-task, multi-output 3D foundation model still faces significant challenges.를 문제로 두고, For the training strategy, we propose a novel two-staged approach.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — However, training such a multi-task, multi-output 3D foundation model still faces significant challenges.
+
+방법 관련 발췌 — For the training strategy, we propose a novel two-staged approach.
 
 ## Problem and Motivation
 
@@ -86,4 +88,4 @@ Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 �
 
 ## Why Read It
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 However, training such a multi-task, multi-output 3D foundation model still faces significant challenges.를 문제로 두고, For the training strategy, we propose a novel two-staged approach.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 3 (1 INTRODUCTION), p. 3 (1 INTRODUCTION), p. 7 (3 METHOD), p. 5 (3 METHOD) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 2 (1 INTRODUCTION), p. 3 (1 INTRODUCTION), p. 7 (3 METHOD), p. 5 (3 METHOD)이다.

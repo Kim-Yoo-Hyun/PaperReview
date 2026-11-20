@@ -21,7 +21,9 @@
 
 ## Why This Paper Is Here
 
-Robotics-enabling 3D perception의 navigation 문제를 이해하기 위해 읽는다. 본문은 (A) Dense image-based representations contain heavy token redundancy and lack explicit spatial structure.를 문제로 두고, Our main contributions are summarized as follows: • We propose Geometry-Aware BEV (GA-BEV), a compact and 3D-grounded representation that combines explicit depth-based projected features with implicit geometric priors from pretrained 3D ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — (A) Dense image-based representations contain heavy token redundancy and lack explicit spatial structure.
+
+방법 관련 발췌 — Our main contributions are summarized as follows: • We propose Geometry-Aware BEV (GA-BEV), a compact and 3D-grounded representation that combines explicit depth-based projected features with implicit geometric priors from pretrained 3D ...
 
 ## Problem and Motivation
 
@@ -86,4 +88,4 @@ Robotics-enabling 3D perception의 navigation 문제를 이해하기 위해 읽�
 
 ## Why Read It
 
-Robotics-enabling 3D perception의 navigation 문제를 이해하기 위해 읽는다. 본문은 (A) Dense image-based representations contain heavy token redundancy and lack explicit spatial structure.를 문제로 두고, Our main contributions are summarized as follows: • We propose Geometry-Aware BEV (GA-BEV), a compact and 3D-grounded representation that combines explicit depth-based projected features with implicit geometric priors from pretrained 3D ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1. Introduction), p. 1 (1. Introduction), p. 2 (1. Introduction), p. 4 (3.1. Preliminary), p. 2 (1. Introduction), p. 5 (3.3. Geometry-Aware VLN Framework) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 1 (1. Introduction), p. 2 (1. Introduction), p. 4 (3.1. Preliminary), p. 5 (3.3. Geometry-Aware VLN Framework)이다.

@@ -80,4 +80,4 @@
 
 ## Why Read It
 
-Planning and control의 il 문제를 이해하기 위해 읽는다. 본문은 Control inputs are high-dimensional and difficult to search (e.g., 23 DoF robot with a multi-finger hand).를 문제로 두고, We also compare our method to visual encoders trained by supervised learning on ImageNet (Deng et al., 2009), the choice of encoder in most vision tasks.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1. Introduction), p. 2 (1. Introduction), p. 2 (1. Introduction), p. 4 (3.1. Motivation), p. 3 (2.2. Learning Motor Control from Pixels), p. 3 (2.1. Masked Visual Pre-training) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 1 (1. Introduction), p. 2 (1. Introduction), p. 4 (3.1. Motivation), p. 3 (2.2. Learning Motor Control from Pixels), p. 3 (2.1. Masked Visual Pre-training)이다.

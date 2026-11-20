@@ -19,7 +19,7 @@
 
 ## Why This Paper Is Here
 
-RL, IL, offline learning, and robot data의 rl 문제를 이해하기 위해 읽는다. 본문은 Q-learning (with function approximation) fails on many simple problems1 and is poorly understood, vanilla policy gradient methods have poor data effiency and robustness; and trust region policy optimization (TRPO) is relatively complica ...를 문제로 두고, Whereas standard policy gradient methods perform one gradient update per data sample, we propose a novel objective function that enables multiple epochs of minibatch updates.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+수집한 정책 롤아웃을 여러 번 재사용해 근접 정책 갱신을 수행한다.
 
 ## Problem and Motivation
 
@@ -53,16 +53,10 @@ RL, IL, offline learning, and robot data의 rl 문제를 이해하기 위해 읽
 
 ## Main Claims and Actual Contribution
 
-- **p. 1 / Abstract - extractive body cue:** Whereas standard policy gradient methods perform one gradient update per data sample, we propose a novel objective function that enables multiple epochs of minibatch updates.
-- **p. 1 / 1 Introduction - extractive body cue:** We propose a novel objective with clipped probability ratios, which forms a pessimistic estimate (i.e., lower bound) of the performance of the policy.
-- **p. 3 / 1 Introduction - extractive body cue:** The main objective we propose is the following: LCLIP (θ) = ˆEt h min(rt(θ) ˆAt, clip(rt(θ), 1 -ϵ, 1 + ϵ) ˆAt) i (7) where ...
-- **p. 7 / 6 Experiments - extractive body cue:** We see that PPO outperforms the previous methods on almost all the continuous control environments.
-- **p. 6 / 6 Experiments - extractive body cue:** 0.69 Table 1: Results from continuous control benchmark.
-- **p. 6 / 6 Experiments - extractive body cue:** Note that we also tried clipping in log space, but found the performance to be no better.
-- **p. 7 / 6 Experiments - extractive body cue:** A2C stands for advantage actor critic, and is a synchronous version of A3C, which we found to have the same or better performance than the ...
-- **p. 8 / 6 Experiments - extractive body cue:** A table of results and learning curves for all 49 games is provided in Appendix B.
+- 정책 확률비의 변화에 제한을 두는 clipped surrogate를 제안한다.
+- 시뮬레이션 보행과 Atari에서 정책 경사 계열 알고리즘을 비교한다.
 
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+[검증한 원문](https://arxiv.org/abs/1707.06347)
 
 ## Evaluation Scope
 
@@ -81,7 +75,7 @@ RL, IL, offline learning, and robot data의 rl 문제를 이해하기 위해 읽
 
 ## Why Read It
 
-RL, IL, offline learning, and robot data의 rl 문제를 이해하기 위해 읽는다. 본문은 Q-learning (with function approximation) fails on many simple problems1 and is poorly understood, vanilla policy gradient methods have poor data effiency and robustness; and trust region policy optimization (TRPO) is relatively complica ...를 문제로 두고, Whereas standard policy gradient methods perform one gradient update per data sample, we propose a novel objective function that enables multiple epochs of minibatch updates.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1 Introduction), p. 1 (1 Introduction), p. 2 (1 Introduction), p. 2 (1 Introduction), p. 1 (Abstract), p. 1 (1 Introduction) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 1 (1 Introduction), p. 2 (1 Introduction), p. 1 (Abstract)이다.
 
 ## Semantic QA — PDF body cross-check
 

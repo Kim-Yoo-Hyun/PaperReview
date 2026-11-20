@@ -19,7 +19,7 @@
 
 ## Why This Paper Is Here
 
-Robotics-enabling 3D perception의 generative 문제를 이해하기 위해 읽는다. 본문은 However, these approaches inherently lack cross-view geometric consistency, because single-image SR independently sharpens each frame without enforcing geometric alignment [5, 6, 17, 36, 38], while flow-based video SR suffers from optic ...를 문제로 두고, Beyond iterative refinement, we introduce an expandable continuous Level-of-Detail (LoD) representation that elevates LoD from a discrete efficiency-oriented mechanism to a continuous generative scaffold.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+GaussianZoom은 저해상도 관측으로부터 점차 확대해 볼 수 있는 3D 장면을 생성한다.
 
 ## Problem and Motivation
 
@@ -53,16 +53,10 @@ Robotics-enabling 3D perception의 generative 문제를 이해하기 위해 읽�
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** Beyond iterative refinement, we introduce an expandable continuous Level-of-Detail (LoD) representation that elevates LoD from a discrete efficiency-oriented mechanism to a continuous generative scaffold.
-- **p. 2 / 1. Introduction - extractive body cue:** To this end, we propose GaussianZoom, a progressive zoom-in generative 3D Gaussian Splatting framework that performs iterative coupling between geometry-consistent modeling and semantic-guided detail synthesis.
-- **p. 4 / 4.1. Multi-View Consistent SR Module - extractive body cue:** Our framework jointly leverages geometry-aware alignment, semantic priors, and a continuous Level-ofDetail (LoD) representation to perform generative zoom-in reconstruction.
-- **p. 8 / Method - extractive body cue:** 3, our method achieves the lowest FVD scores on both Mip-NeRF360 and Tanks&Temples, indicating superior temporal consistency.
-- **p. 5 / 4.2. Continuous LoD Representation - extractive body cue:** Conversely, when ψ′/ψ falls below 1/s, the primitive sufficiently covers its projected footprint, and its contribution is increased while finer-level components are suppressed.
-- **p. 7 / 5.1. Experiment Settings - extractive body cue:** 2), our method achieves the best performance across all no-reference metrics, including CLIPIQA, MUSIQ, and NIQE.
-- **p. 7 / 5.1. Experiment Settings - extractive body cue:** The lower FID further reflects the improved stability and coherence of the reconstructed high-frequency details.
-- **p. 3 / Figure/Table caption - extractive body cue:** Figure 2. Comparison between flow-based and depth-based warp- ing. The proposed depth-guided alignment achieves geometri- cally consistent correspondences across views and effectively sup- presses ghosting ...
+- 깊이를 이용한 시점 간 특징 정렬과 시각·언어 모델을 이용한 세부 합성을 결합한다.
+- 확대 배율에 따라 가우시안의 가시성을 조절해 여러 축척의 장면을 렌더링한다.
 
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+[원문 초록](https://openaccess.thecvf.com/content/CVPR2026/html/Shi_GaussianZoom_Progressive_Zoom-in_Generative_3D_Gaussian_Splatting_with_Geometric_and_CVPR_2026_paper.html)
 
 ## Evaluation Scope
 
@@ -84,4 +78,4 @@ Robotics-enabling 3D perception의 generative 문제를 이해하기 위해 읽�
 
 ## Why Read It
 
-Robotics-enabling 3D perception의 generative 문제를 이해하기 위해 읽는다. 본문은 However, these approaches inherently lack cross-view geometric consistency, because single-image SR independently sharpens each frame without enforcing geometric alignment [5, 6, 17, 36, 38], while flow-based video SR suffers from optic ...를 문제로 두고, Beyond iterative refinement, we introduce an expandable continuous Level-of-Detail (LoD) representation that elevates LoD from a discrete efficiency-oriented mechanism to a continuous generative scaffold.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (1. Introduction), p. 2 (1. Introduction), p. 1 (1. Introduction), p. 1 (1. Introduction), p. 5 (4.1. Multi-View Consistent SR Module), p. 4 (4.1. Multi-View Consistent SR Module) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 2 (1. Introduction), p. 1 (1. Introduction), p. 5 (4.1. Multi-View Consistent SR Module), p. 4 (4.1. Multi-View Consistent SR Module)이다.

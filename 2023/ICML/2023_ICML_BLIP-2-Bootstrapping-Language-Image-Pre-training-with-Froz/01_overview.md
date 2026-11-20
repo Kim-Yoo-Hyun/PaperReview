@@ -76,4 +76,4 @@ BLIP-2는 고정된 이미지 인코더와 대형 언어 모델 사이에서 작
 
 ## Why Read It
 
-Foundations: Vision and Language Models의 upstream 문제를 이해하기 위해 읽는다. 본문은 We pre-train a lightweight Querying Transformer following a two-stage strategy to bridge the modality gap.를 문제로 두고, To achieve effective vision-language alignment with frozen unimodal models, we propose a Querying Transformer (QFormer) pre-trained with a new two-stage pre-training strategy.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1. Introduction), p. 1 (1. Introduction), p. 2 (1. Introduction), p. 3 (3.1. Model Architecture), p. 3 (3.2. Bootstrap Vision-Language Representation), p. 2 (3.1. Model Architecture) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 1 (1. Introduction), p. 2 (1. Introduction), p. 3 (3.1. Model Architecture), p. 3 (3.2. Bootstrap Vision-Language Representation), p. 2 (3.1. Model Architecture)이다.

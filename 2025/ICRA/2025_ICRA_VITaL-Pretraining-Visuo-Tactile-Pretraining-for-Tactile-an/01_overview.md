@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-VLA and generalist robot policies의 tactile 문제를 이해하기 위해 읽는다. 본문은 Achieving proficiency in complex manipulation tasks remains a longstanding challenge in robotics, with applications ranging from industrial automation to clay sculpting [1], [2].를 문제로 두고, Next, we propose a new methodology for using tactile data in imitation learning: VITaL (Vison-only Imitation using Tactile Latent) pretraining, in which we discard the tactile encoder and use the pretrained vision ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — Achieving proficiency in complex manipulation tasks remains a longstanding challenge in robotics, with applications ranging from industrial automation to clay sculpting [1], [2].
+
+방법 관련 발췌 — Next, we propose a new methodology for using tactile data in imitation learning: VITaL (Vison-only Imitation using Tactile Latent) pretraining, in which we discard the tactile encoder and use the pretrained vision ...
 
 ## Problem and Motivation
 
@@ -84,4 +86,4 @@ VLA and generalist robot policies의 tactile 문제를 이해하기 위해 읽�
 
 ## Why Read It
 
-VLA and generalist robot policies의 tactile 문제를 이해하기 위해 읽는다. 본문은 Achieving proficiency in complex manipulation tasks remains a longstanding challenge in robotics, with applications ranging from industrial automation to clay sculpting [1], [2].를 문제로 두고, Next, we propose a new methodology for using tactile data in imitation learning: VITaL (Vison-only Imitation using Tactile Latent) pretraining, in which we discard the tactile encoder and use the pretrained vision ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 3 (III. METHODS), p. 3 (III. METHODS), p. 2 (1) Action), p. 2 (1) Action) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 1 (I. INTRODUCTION), p. 3 (III. METHODS), p. 2 (1) Action)이다.

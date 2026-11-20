@@ -19,7 +19,7 @@
 
 ## Why This Paper Is Here
 
-VLA and generalist robot policies의 mobile_manipulation 문제를 이해하기 위해 읽는다. 본문은 We evaluate our framework across a range of 90 tasks organised into four levels of difficulty.를 문제로 두고, Firstly, we present a mechanism that enables the LLM to conduct a semantic search for a taskrelevant subgraph G′ by manipulating the nodes of a ‘collapsed' 3DSG, which exposes only the top ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+계층적 3D 장면 그래프에서 지시에 필요한 부분을 선택해 대규모 공간의 로봇 계획을 생성한다.
 
 ## Problem and Motivation
 
@@ -52,16 +52,10 @@ VLA and generalist robot policies의 mobile_manipulation 문제를 이해하기 
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1 Introduction - extractive body cue:** Firstly, we present a mechanism that enables the LLM to conduct a semantic search for a taskrelevant subgraph G′ by manipulating the nodes of a ...
-- **p. 2 / 1 Introduction - extractive body cue:** To this end, we present a scalable approach to ground LLM-based task planners across environments spanning multiple rooms and floors.
-- **p. 3 / 1 Introduction - extractive body cue:** We evaluate our framework across a range of 90 tasks organised into four levels of difficulty.
-- **p. 1 / 1 Introduction - extractive body cue:** This enables robots to plan complex strategies for a diverse range of tasks that require a substantial amount of background knowledge and semantic comprehension.
-- **p. 3 / 1 Introduction - extractive body cue:** Our approach SayPlan ensures feasible and grounded plan generation for a mobile manipulator robot operating in large-scale environments spanning multiple floors and rooms.
-- **p. 6 / 5 Results - extractive body cue:** The table shows the semantic search success rate in finding a suitable subgraph for planning.
-- **p. 7 / Figure/Table caption - extractive body cue:** Figure 3: Scene Graph Token Progression Dur- ing Semantic Search. This graph illustrates the scalability of our approach to large-scale 3D scene graphs. Note the ...
-- **p. 46 / Figure/Table caption - extractive body cue:** Figure 8: Evaluating the performance of SayPlan's causal planning capabilities as the scale of the environment increases. For the office environment used in this study, ...
+- 언어 모델이 그래프를 펼치거나 접어 과제 관련 부분만 문맥에 유지한다.
+- 시뮬레이터 피드백으로 실행 불가능한 단계의 원인을 받아 재계획한다.
 
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+[검증한 원문](https://proceedings.mlr.press/v229/rana23a.html)
 
 ## Evaluation Scope
 
@@ -81,7 +75,7 @@ VLA and generalist robot policies의 mobile_manipulation 문제를 이해하기 
 
 ## Why Read It
 
-VLA and generalist robot policies의 mobile_manipulation 문제를 이해하기 위해 읽는다. 본문은 We evaluate our framework across a range of 90 tasks organised into four levels of difficulty.를 문제로 두고, Firstly, we present a mechanism that enables the LLM to conduct a semantic search for a taskrelevant subgraph G′ by manipulating the nodes of a ‘collapsed' 3DSG, which exposes only the top ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 3 (1 Introduction), p. 1 (1 Introduction), p. 1 (1 Introduction), p. 2 (1 Introduction), p. 2 (1 Introduction), p. 13 (A Implementation Details) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 3 (1 Introduction), p. 1 (1 Introduction), p. 2 (1 Introduction), p. 13 (A Implementation Details)이다.
 
 ## Semantic QA — PDF body cross-check
 

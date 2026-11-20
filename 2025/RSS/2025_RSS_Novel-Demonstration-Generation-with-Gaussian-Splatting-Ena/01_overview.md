@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-RL, IL, offline learning, and robot data의 il 문제를 이해하기 위해 읽는다. 본문은 However, the Sim-to-Real gap presents를 문제로 두고, Our method enables autonomous editing of the reconstructed scene to generate diverse demonstrations with various configurations.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — However, the Sim-to-Real gap presents
+
+방법 관련 발췌 — Our method enables autonomous editing of the reconstructed scene to generate diverse demonstrations with various configurations.
 
 ## Problem and Motivation
 
@@ -86,7 +88,7 @@ RL, IL, offline learning, and robot data의 il 문제를 이해하기 위해 읽
 
 ## Why Read It
 
-RL, IL, offline learning, and robot data의 il 문제를 이해하기 위해 읽는다. 본문은 However, the Sim-to-Real gap presents를 문제로 두고, Our method enables autonomous editing of the reconstructed scene to generate diverse demonstrations with various configurations.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1. INrRopucTION), p. 3 (C. Gaussian planting in Roboties), p. 2 (B. Data Augmentation for Policy Learning), p. 1 (Abstract), p. 2 (1. INrRopucTION), p. 2 (A. Generalizable Policy in Robot Manipulation) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 1 (1. INrRopucTION), p. 3 (C. Gaussian planting in Roboties), p. 2 (B. Data Augmentation for Policy Learning), p. 1 (Abstract), p. 2 (1. INrRopucTION), p. 2 (A. Generalizable Policy in Robot Manipulation)이다.
 
 ## Semantic QA — PDF body cross-check
 

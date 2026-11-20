@@ -19,7 +19,7 @@
 
 ## Why This Paper Is Here
 
-RL, IL, offline learning, and robot data의 il 문제를 이해하기 위해 읽는다. 본문은 SERL: A Software Suite for Sample-Efficient Robotic Reinforcement Learning challenge of navigating this design space, rather than limitations of algorithms per se, that limit adoption.를 문제로 두고, However, in the process of evaluating our framework, we also make a scientifically interesting empirical observation: when implemented properly in a carefully engineered software package, current sample-efficient robotic RL methods can ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+실제 로봇에서 시각적 보상과 오프폴리시 학습을 결합해 조작 기술을 훈련할 수 있는 도구를 제공한다.
 
 ## Problem and Motivation
 
@@ -53,16 +53,10 @@ RL, IL, offline learning, and robot data의 il 문제를 이해하기 위해 읽
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** However, in the process of evaluating our framework, we also make a scientifically interesting empirical observation: when implemented properly in a carefully engineered software package, ...
-- **p. 2 / 1. Introduction - extractive body cue:** SERL consists of the following components: (1) a high-quality RL implementation that is geared towards real-world robotic learning and supports image observations and demonstrations; (2) ...
-- **p. 6 / 4.6. Relative Observation and Action Frame - extractive body cue:** To develop an agent capable of adapting to a dynamic target, we propose a training procedure that simulates a moving target without the need for ...
-- **p. 7 / 4.6. Relative Observation and Action Frame - extractive body cue:** The overall success rates for our method are generally higher, and the training times are generally lower, as compared to prior results.
-- **p. 7 / 4.6. Relative Observation and Action Frame - extractive body cue:** SERL: A Software Suite for Sample-Efficient Robotic Reinforcement Learning Figure 5: Illustration of the robot performing each task with our method: PCB Insertion (top left), ...
-- **p. 8 / 5. Experiments - extractive body cue:** The learned RL policies not only outperformed their BC counterparts by as much as 10x in terms of success rate but also improved on the ...
-- **p. 9 / 5. Experiments - extractive body cue:** The policy converged in 19 minutes and achieved a 100/100 success rate with 20 initial human demonstrations, successfully reproducing our results.
-- **p. 8 / 5. Experiments - extractive body cue:** Our RL policies achieve perfect success rates on all three tasks over all 100 trials.
+- 실기 제어와 데이터 수집·정책 갱신을 연결하는 소프트웨어 구성요소를 제공한다.
+- 삽입·케이블 배치·물체 재배치 과제에서 학습한 정책과 리셋 절차를 평가한다.
 
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+[검증한 원문](https://arxiv.org/abs/2401.16013)
 
 ## Evaluation Scope
 
@@ -80,7 +74,7 @@ RL, IL, offline learning, and robot data의 il 문제를 이해하기 위해 읽
 
 ## Why Read It
 
-RL, IL, offline learning, and robot data의 il 문제를 이해하기 위해 읽는다. 본문은 SERL: A Software Suite for Sample-Efficient Robotic Reinforcement Learning challenge of navigating this design space, rather than limitations of algorithms per se, that limit adoption.를 문제로 두고, However, in the process of evaluating our framework, we also make a scientifically interesting empirical observation: when implemented properly in a carefully engineered software package, current sample-efficient robotic RL methods can ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (1. Introduction), p. 2 (1. Introduction), p. 1 (1. Introduction), p. 3 (3. Preliminaries and Problem Statement), p. 3 (3. Preliminaries and Problem Statement), p. 6 (4.5. Impedance Controller for Contact-Rich) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 2 (1. Introduction), p. 1 (1. Introduction), p. 3 (3. Preliminaries and Problem Statement), p. 6 (4.5. Impedance Controller for Contact-Rich)이다.
 
 ## Semantic QA — PDF body cross-check
 

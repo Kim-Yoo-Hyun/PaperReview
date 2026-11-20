@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다. 본문은 This poses several challenges, as outlined in prior work [108], stemming from variations in kinematic configuration, control scheme, camera viewpoint, and end-effector morphology.를 문제로 두고, To summarize, our key contributions are:를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — This poses several challenges, as outlined in prior work [108], stemming from variations in kinematic configuration, control scheme, camera viewpoint, and end-effector morphology.
+
+방법 관련 발췌 — To summarize, our key contributions are:
 
 ## Problem and Motivation
 
@@ -86,7 +88,7 @@ VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다
 
 ## Why Read It
 
-VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다. 본문은 This poses several challenges, as outlined in prior work [108], stemming from variations in kinematic configuration, control scheme, camera viewpoint, and end-effector morphology.를 문제로 두고, To summarize, our key contributions are:를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (I. INTRODUCTION), p. 4 (4) We assume that the background and lighting conditions), p. 3 (III. PROBLEM STATEMENT), p. 3 (III. PROBLEM STATEMENT), p. 4 (4) We assume that the background and lighting conditions), p. 4 (4) We assume that the background and lighting conditions) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 2 (I. INTRODUCTION), p. 4 (4) We assume that the background and lighting conditions), p. 3 (III. PROBLEM STATEMENT)이다.
 
 ## Semantic QA — PDF body cross-check
 

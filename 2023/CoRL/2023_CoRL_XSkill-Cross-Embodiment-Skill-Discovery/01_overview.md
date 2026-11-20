@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-VLA and generalist robot policies의 il 문제를 이해하기 위해 읽는다. 본문은 With the proposed skill alignment transformer, the algorithm can robustly align skills in the human video to the robot visual observation, despite the embodiment difference and unexpected execution failures.를 문제로 두고, Together with the new cross-embodiment dataset in simulation and the real world, we hope to inspire future exploration in this area. • Introducing the first attempt toward this task XSkill that consists ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — With the proposed skill alignment transformer, the algorithm can robustly align skills in the human video to the robot visual observation, despite the embodiment difference and unexpected execution failures.
+
+방법 관련 발췌 — Together with the new cross-embodiment dataset in simulation and the real world, we hope to inspire future exploration in this area. • Introducing the first attempt toward this task XSkill that consists ...
 
 ## Problem and Motivation
 
@@ -81,7 +83,7 @@ VLA and generalist robot policies의 il 문제를 이해하기 위해 읽는다.
 
 ## Why Read It
 
-VLA and generalist robot policies의 il 문제를 이해하기 위해 읽는다. 본문은 With the proposed skill alignment transformer, the algorithm can robustly align skills in the human video to the robot visual observation, despite the embodiment difference and unexpected execution failures.를 문제로 두고, Together with the new cross-embodiment dataset in simulation and the real world, we hope to inspire future exploration in this area. • Introducing the first attempt toward this task XSkill that consists ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (1 Introduction), p. 2 (1 Introduction), p. 3 (3 Approach), p. 4 (3 Approach), p. 3 (3 Approach), p. 4 (3 Approach) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 2 (1 Introduction), p. 3 (3 Approach), p. 4 (3 Approach)이다.
 
 ## Semantic QA — PDF body cross-check
 

@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-World models, safety, uncertainty, and recovery의 safety 문제를 이해하기 위해 읽는다. 본문은 Initially, it may be tempting use the VLM directly as a black-box solver of Eq.1 (ie. t0 solve the overarching behavior generation problem) by simply passing it the Ix action plan options, ...를 문제로 두고, In Figure 4, we present examples of runtime policy steering using our approach for the Fork task and additional examples for Cup and Bag tasks are included in Appendix B2.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — Initially, it may be tempting use the VLM directly as a black-box solver of Eq.1 (ie. t0 solve the overarching behavior generation problem) by simply passing it the Ix action plan options, ...
+
+방법 관련 발췌 — In Figure 4, we present examples of runtime policy steering using our approach for the Fork task and additional examples for Cup and Bag tasks are included in Appendix B2.
 
 ## Problem and Motivation
 
@@ -85,7 +87,7 @@ World models, safety, uncertainty, and recovery의 safety 문제를 이해하기
 
 ## Why Read It
 
-World models, safety, uncertainty, and recovery의 safety 문제를 이해하기 위해 읽는다. 본문은 Initially, it may be tempting use the VLM directly as a black-box solver of Eq.1 (ie. t0 solve the overarching behavior generation problem) by simply passing it the Ix action plan options, ...를 문제로 두고, In Figure 4, we present examples of runtime policy steering using our approach for the Fork task and additional examples for Cup and Bag tasks are included in Appendix B2.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 3 (1. InTRopucTION), p. 1 (1. InTRopucTION), p. 3 (1. InTRopucTION), p. 2 (1. InTRopucTION), p. 2 (1. InTRopucTION), p. 9 (B. Policy Steering for Open-World Alignment) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 3 (1. InTRopucTION), p. 1 (1. InTRopucTION), p. 2 (1. InTRopucTION), p. 9 (B. Policy Steering for Open-World Alignment)이다.
 
 ## Semantic QA — PDF body cross-check
 

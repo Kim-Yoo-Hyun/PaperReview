@@ -19,7 +19,7 @@
 
 ## Why This Paper Is Here
 
-Robotics-enabling 3D perception의 benchmark 문제를 이해하기 위해 읽는다. 본문은 We investigate the difficulty of this task, and particularly the difficulty of operating in unseen environments, using several baselines and a sequence-to-sequence model based on methods successfully applied to other vision and ...를 문제로 두고, To enable the reproducible evaluation of VLN methods, we present the Matterport3D Simulator.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+실내 스캔의 경로와 사람이 작성한 지시를 대응시켜 언어 지시 내비게이션 과제를 정의한다.
 
 ## Problem and Motivation
 
@@ -52,16 +52,10 @@ Robotics-enabling 3D perception의 benchmark 문제를 이해하기 위해 읽�
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** To enable the reproducible evaluation of VLN methods, we present the Matterport3D Simulator.
-- **p. 2 / 1. Introduction - extractive body cue:** We introduce the Matterport3D Simulator, a software framework for visual reinforcement learning using the Matterport3D panoramic RGB-D dataset [11]; 2.
-- **p. 1 / 1. Introduction - extractive body cue:** The dataset particularly has been designed to simplify the application of vision and language methods to what might otherwise seem a distant problem.
-- **p. 7 / 6. Results - extractive body cue:** As illustrated in Table 1, our exploitative RANDOM agent achieves an average success rate of 13.2% on the test set (which appears to be slightly ...
-- **p. 8 / 6. Results - extractive body cue:** Both methods improve significantly over the RANDOM baseline, as illustrated in Figure 8.
-- **p. 7 / 6. Results - extractive body cue:** In comparison, AMT workers achieve 86.4% success on the test set, illustrating the high quality of the dataset instructions.
-- **p. 8 / 6. Results - extractive body cue:** Even using strong regularization (dropout and weight decay), performance in unseen environments plateaus quickly, but further training continues to improve performance in the training environments.
-- **p. 5 / 4.4. Evaluation Protocol - extractive body cue:** One of the strengths of the R2R task is that, in contrast to many other vision and language tasks such as image captioning and visual ...
+- Matterport3D의 파노라마 연결 그래프에서 이동하는 시뮬레이터와 R2R 데이터를 구축한다.
+- 시각·언어 시퀀스 정책의 익숙한 건물과 새로운 건물에서의 경로 추종을 비교한다.
 
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+[검증한 원문](https://openaccess.thecvf.com/content_cvpr_2018/html/Anderson_Vision-and-Language_Navigation_Interpreting_CVPR_2018_paper.html)
 
 ## Evaluation Scope
 
@@ -79,4 +73,4 @@ Robotics-enabling 3D perception의 benchmark 문제를 이해하기 위해 읽�
 
 ## Why Read It
 
-Robotics-enabling 3D perception의 benchmark 문제를 이해하기 위해 읽는다. 본문은 We investigate the difficulty of this task, and particularly the difficulty of operating in unseen environments, using several baselines and a sequence-to-sequence model based on methods successfully applied to other vision and ...를 문제로 두고, To enable the reproducible evaluation of VLN methods, we present the Matterport3D Simulator.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (1. Introduction), p. 1 (1. Introduction), p. 1 (1. Introduction), p. 2 (1. Introduction), p. 6 (5.1. Sequence-to-Sequence Model), p. 6 (5.1. Sequence-to-Sequence Model) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 2 (1. Introduction), p. 1 (1. Introduction), p. 6 (5.1. Sequence-to-Sequence Model)이다.

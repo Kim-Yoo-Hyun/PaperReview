@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-Locomotion, whole-body, mobile manipulation, and humanoids의 locomotion 문제를 이해하기 위해 읽는다. 본문은 This result runs counter to the principles articulated in several prior works, which suggest either than simulated training is critical for robotic locomotion because the training times are too long [22], [32]-[35], ...를 문제로 두고, Our main contribution is an empirical demonstration that current deep RL methods can effectively learn quadrupedal locomotion directly in the real world in under 20 minutes. 를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — This result runs counter to the principles articulated in several prior works, which suggest either than simulated training is critical for robotic locomotion because the training times are too long [22], [32]-[35], ...
+
+방법 관련 발췌 — Our main contribution is an empirical demonstration that current deep RL methods can effectively learn quadrupedal locomotion directly in the real world in under 20 minutes.
 
 ## Problem and Motivation
 
@@ -79,4 +81,4 @@ Locomotion, whole-body, mobile manipulation, and humanoids의 locomotion 문제�
 
 ## Why Read It
 
-Locomotion, whole-body, mobile manipulation, and humanoids의 locomotion 문제를 이해하기 위해 읽는다. 본문은 This result runs counter to the principles articulated in several prior works, which suggest either than simulated training is critical for robotic locomotion because the training times are too long [22], [32]-[35], ...를 문제로 두고, Our main contribution is an empirical demonstration that current deep RL methods can effectively learn quadrupedal locomotion directly in the real world in under 20 minutes. 를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 4 (B. Efficient Model-Free RL), p. 4 (B. Efficient Model-Free RL), p. 6 (V. SIMULATION ANALYSIS) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 1 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 4 (B. Efficient Model-Free RL), p. 6 (V. SIMULATION ANALYSIS)이다.

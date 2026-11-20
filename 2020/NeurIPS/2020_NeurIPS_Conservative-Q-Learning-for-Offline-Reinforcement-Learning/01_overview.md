@@ -82,7 +82,7 @@ CQL은 고정된 오프라인 자료로 정책을 학습할 때 자료 밖 행�
 
 ## Why Read It
 
-RL, IL, offline learning, and robot data의 offline_rl 문제를 이해하기 위해 읽는다. 본문은 However, applying RL to real-world problems consistently poses practical challenges: in contrast to the kinds of data-driven methods that have been successful in supervised learning [24, 11], RL is classically regarded as ...를 문제로 두고, We propose a novel method for learning such conservative Qfunctions via a simple modification to standard value-based RL algorithms.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1 Introduction), p. 1 (1 Introduction), p. 5 (2 Preliminaries), p. 5 (2 Preliminaries), p. 6 (2 Preliminaries), p. 5 (2 Preliminaries) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 1 (1 Introduction), p. 5 (2 Preliminaries), p. 6 (2 Preliminaries)이다.
 
 ## Semantic QA — PDF body cross-check
 

@@ -342,10 +342,8 @@ def overview_note(
         else ""
     )
     why = (
-        f"{track}의 {domain} 문제를 이해하기 위해 읽는다. 본문은 "
-        f"{first(problem, 'paper-specific bottleneck not recovered')}를 문제로 두고, "
-        f"{first(changes, 'paper-specific contribution not recovered')}를 통해 "
-        "observation-to-action closed loop의 한 지점을 바꾼다."
+        f"문제 관련 발췌 — {first(problem, '확인 필요').strip()}\n\n"
+        f"방법 관련 발췌 — {first(changes, '확인 필요').strip()}"
     )
     return (
         f"# {item['title']}\n\n"
@@ -397,7 +395,7 @@ def overview_note(
         + "\n\n## Explicit Limitations and Failure Boundary\n\n"
         + cue_lines(failures, "explicit limitation/failure cue not recovered from the body", 7)
         + "\n\n## Why Read It\n\n"
-        + f"{why} Revisit {anchor(combined_evidence(ev['problem'], ev['method'], ev['results'], limit=6))} to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.\n"
+        + f"방법과 평가 범위를 대조할 원문 구간은 {anchor(combined_evidence(ev['problem'], ev['method'], ev['results'], limit=6))}이다.\n"
     )
 
 

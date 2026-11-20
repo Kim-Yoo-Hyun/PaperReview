@@ -20,7 +20,9 @@
 
 ## Why This Paper Is Here
 
-VLA and generalist robot policies의 mobile_manipulation 문제를 이해하기 위해 읽는다. 본문은 However, directly applying pre-trained VLMs to our embodied agent presents challenges of domain shift: 1) Rare grounding tasks: Robotic planners and controllers require multi-modal inputs, including both tools and coordinates in the ...를 문제로 두고, In summary, our contributions are as follows: • We propose OWMM-Agent, a unified VLM-based agent architecture for open-world mobile manipulation, capable of global scene understanding, state tracking, and end-to-end action generation. • ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — However, directly applying pre-trained VLMs to our embodied agent presents challenges of domain shift: 1) Rare grounding tasks: Robotic planners and controllers require multi-modal inputs, including both tools and coordinates in the ...
+
+방법 관련 발췌 — In summary, our contributions are as follows: • We propose OWMM-Agent, a unified VLM-based agent architecture for open-world mobile manipulation, capable of global scene understanding, state tracking, and end-to-end action generation. • ...
 
 ## Problem and Motivation
 
@@ -84,4 +86,4 @@ VLA and generalist robot policies의 mobile_manipulation 문제를 이해하기 
 
 ## Why Read It
 
-VLA and generalist robot policies의 mobile_manipulation 문제를 이해하기 위해 읽는다. 본문은 However, directly applying pre-trained VLMs to our embodied agent presents challenges of domain shift: 1) Rare grounding tasks: Robotic planners and controllers require multi-modal inputs, including both tools and coordinates in the ...를 문제로 두고, In summary, our contributions are as follows: • We propose OWMM-Agent, a unified VLM-based agent architecture for open-world mobile manipulation, capable of global scene understanding, state tracking, and end-to-end action generation. • ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (1 Introduction), p. 2 (1 Introduction), p. 3 (1 Introduction), p. 3 (1 Introduction), p. 5 (3 Methodology), p. 6 (3 Methodology) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 2 (1 Introduction), p. 3 (1 Introduction), p. 5 (3 Methodology), p. 6 (3 Methodology)이다.

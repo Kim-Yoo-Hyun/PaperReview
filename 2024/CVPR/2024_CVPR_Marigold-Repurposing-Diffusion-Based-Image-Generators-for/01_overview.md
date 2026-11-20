@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 Empowered by the underlying diffusion prior of natural images, Marigold exhibits excellent zero-shot generalization: Without ever having seen real depth maps, it attains state-ofthe-art performance on several real datasets.를 문제로 두고, Capitalizing on that, we propose the following test-time ensembling scheme, capable of combining multiple inference passes over the same input.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — Empowered by the underlying diffusion prior of natural images, Marigold exhibits excellent zero-shot generalization: Without ever having seen real depth maps, it attains state-ofthe-art performance on several real datasets.
+
+방법 관련 발췌 — Capitalizing on that, we propose the following test-time ensembling scheme, capable of combining multiple inference passes over the same input.
 
 ## Problem and Motivation
 
@@ -83,4 +85,4 @@ Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 �
 
 ## Why Read It
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 Empowered by the underlying diffusion prior of natural images, Marigold exhibits excellent zero-shot generalization: Without ever having seen real depth maps, it attains state-ofthe-art performance on several real datasets.를 문제로 두고, Capitalizing on that, we propose the following test-time ensembling scheme, capable of combining multiple inference passes over the same input.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (1. Introduction), p. 1 (1. Introduction), p. 2 (1. Introduction), p. 5 (3.4. Inference), p. 4 (3.2. Network Architecture), p. 4 (3.1. Generative Formulation) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 2 (1. Introduction), p. 1 (1. Introduction), p. 5 (3.4. Inference), p. 4 (3.2. Network Architecture), p. 4 (3.1. Generative Formulation)이다.

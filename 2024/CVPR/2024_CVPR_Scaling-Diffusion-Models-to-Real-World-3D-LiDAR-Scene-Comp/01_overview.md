@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 Computer vision techniques play a central role in the perception stack of autonomous vehicles.를 문제로 두고, In summary, our key contributions are: • We propose a novel scene-scale diffusion scheme for 3D sensor data that operates at the point level. • We propose a regularization that approximates the ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — Computer vision techniques play a central role in the perception stack of autonomous vehicles.
+
+방법 관련 발췌 — In summary, our key contributions are: • We propose a novel scene-scale diffusion scheme for 3D sensor data that operates at the point level. • We propose a regularization that approximates the ...
 
 ## Problem and Motivation
 
@@ -84,4 +86,4 @@ Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 �
 
 ## Why Read It
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 Computer vision techniques play a central role in the perception stack of autonomous vehicles.를 문제로 두고, In summary, our key contributions are: • We propose a novel scene-scale diffusion scheme for 3D sensor data that operates at the point level. • We propose a regularization that approximates the ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 5 (3.6. Noise predictor architecture), p. 4 (3.2. Diffusion scene completion), p. 5 (3.6. Noise predictor architecture), p. 3 (3.1. Denoising diffusion probabilistic models), p. 3 (3.1. Denoising diffusion probabilistic models), p. 6 (4.1. Scene reconstruction) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 5 (3.6. Noise predictor architecture), p. 4 (3.2. Diffusion scene completion), p. 3 (3.1. Denoising diffusion probabilistic models), p. 6 (4.1. Scene reconstruction)이다.

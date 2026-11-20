@@ -78,4 +78,4 @@ ST4R-Splat은 언어 표현이 지정하는 대상을 시간에 따라 변하는
 
 ## Why Read It
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 However, these representations are primarily optimized for geometric fidelity and novel view synthesis, inherently lacking support for semantic reasoning and language-based scene understanding.를 문제로 두고, In summary, our main contributions are as follows: • We introduce the novel task of STRS-4DGS (SpatioTemporal Referring Segmentation in 4D Gaussian Splatting) and construct a corresponding benchmark with spatio-temporally grounded refer ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1. Introduction), p. 1 (1. Introduction), p. 2 (1. Introduction), p. 3 (3.1. Preliminaries), p. 3 (3.2. Overview), p. 3 (3.3. Object Captioning via Multimodal Prompting) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 1 (1. Introduction), p. 2 (1. Introduction), p. 3 (3.1. Preliminaries), p. 3 (3.2. Overview), p. 3 (3.3. Object Captioning via Multimodal Prompting)이다.

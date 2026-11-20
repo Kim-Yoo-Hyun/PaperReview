@@ -21,7 +21,9 @@
 
 ## Why This Paper Is Here
 
-Robotics-enabling 3D perception의 generative 문제를 이해하기 위해 읽는다. 본문은 Our BDM brings rich prior knowledge into the shape reconstruction process, fixing the incorrect predictions by the baseline (top row).를 문제로 두고, The contribution of our paper is summarized as follows: • We present Bayesian Diffusion Models (BDM), a new statistical inference algorithm that couples diffusionbased bottom-up and top-down processes in a joint framework.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — Our BDM brings rich prior knowledge into the shape reconstruction process, fixing the incorrect predictions by the baseline (top row).
+
+방법 관련 발췌 — The contribution of our paper is summarized as follows: • We present Bayesian Diffusion Models (BDM), a new statistical inference algorithm that couples diffusionbased bottom-up and top-down processes in a joint framework.
 
 ## Problem and Motivation
 
@@ -83,4 +85,4 @@ Robotics-enabling 3D perception의 generative 문제를 이해하기 위해 읽�
 
 ## Why Read It
 
-Robotics-enabling 3D perception의 generative 문제를 이해하기 위해 읽는다. 본문은 Our BDM brings rich prior knowledge into the shape reconstruction process, fixing the incorrect predictions by the baseline (top row).를 문제로 두고, The contribution of our paper is summarized as follows: • We present Bayesian Diffusion Models (BDM), a new statistical inference algorithm that couples diffusionbased bottom-up and top-down processes in a joint framework.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1. Introduction), p. 1 (1. Introduction), p. 2 (1. Introduction), p. 2 (1. Introduction), p. 3 (3.1. Bayesian Inference with Stochastic Gradient), p. 3 (3. Method) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 1 (1. Introduction), p. 2 (1. Introduction), p. 3 (3.1. Bayesian Inference with Stochastic Gradient), p. 3 (3. Method)이다.

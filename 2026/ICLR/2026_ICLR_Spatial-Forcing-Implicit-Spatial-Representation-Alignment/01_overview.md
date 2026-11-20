@@ -21,7 +21,9 @@
 
 ## Why This Paper Is Here
 
-VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다. 본문은 However, some limitations make it difficult to develop a universal and scalable 3D strategy for this paradigm: (1) Reliable 3D를 문제로 두고, To bridge the gap, we propose Spatial Forcing (SF), a simple yet effective alignment strategy that implicitly forces VLA models to acquire spatial-aware knowledge.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — However, some limitations make it difficult to develop a universal and scalable 3D strategy for this paradigm: (1) Reliable 3D
+
+방법 관련 발췌 — To bridge the gap, we propose Spatial Forcing (SF), a simple yet effective alignment strategy that implicitly forces VLA models to acquire spatial-aware knowledge.
 
 ## Problem and Motivation
 
@@ -84,4 +86,4 @@ VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다
 
 ## Why Read It
 
-VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다. 본문은 However, some limitations make it difficult to develop a universal and scalable 3D strategy for this paradigm: (1) Reliable 3D를 문제로 두고, To bridge the gap, we propose Spatial Forcing (SF), a simple yet effective alignment strategy that implicitly forces VLA models to acquire spatial-aware knowledge.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1 INTRODUCTION), p. 1 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 3 (2.1 PRELIMINARIES), p. 3 (2.1 PRELIMINARIES) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 1 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 3 (2.1 PRELIMINARIES)이다.

@@ -2,12 +2,12 @@
 
 - Generated: 2026-11-20 KST
 - Source: [papers.json](../work/sources/papers.json)
-- This is a generated diagnostic view; edit the manifest, tracker, or tier generator instead.
+- 분포와 검색 필드는 원장·등급표·읽기 이력에서 생성한다. 교정 후 오류율과 미확인 항목은 [원문 감사](./SOURCE_AUDIT.md)에서 확인한다.
 
 ## Snapshot
 
 - Papers: **1252**
-- Resources in the combined view: **682**
+- Resources in the combined view: **685**
 - Curated relation edges: **91**
 - Papers with outgoing relations: **69**
 - Papers participating in a relation: **109**
@@ -16,6 +16,29 @@
 - Lineage coverage profiles: **1252**
 - Papers with explicit trial/seed cues: **246**
 - Papers without DOI/arXiv/OpenReview identifier: **364**
+
+## 연도와 발표처
+
+| 등록 연도 | 편수 |
+|---|---:|
+| 2024 | 181 |
+| 2025 | 411 |
+| 2026 | 367 |
+| 그 밖의 연도 | 293 |
+
+| 발표처·공개처 | 편수 |
+|---|---:|
+| CVPR | 175 |
+| RSS | 154 |
+| ICLR | 136 |
+| CoRL | 114 |
+| NeurIPS | 100 |
+| ICML | 100 |
+| ICCV | 96 |
+| ICRA | 71 |
+| 그 밖의 발표처·공개처 | 306 |
+
+프리프린트는 등록한 공개 연도를 따른다. 전체 연도·발표처·등급 조합은 [검색 색인](./REGISTRY_INDEX.csv)에서 확인할 수 있다.
 
 ## Tier
 
@@ -89,8 +112,8 @@
 
 | Value | Count |
 |---|---:|
-| not_identified | 656 |
-| released | 392 |
+| not_identified | 653 |
+| released | 395 |
 | project_only | 191 |
 | not_released | 13 |
 
@@ -162,8 +185,8 @@
 
 | Value | Count |
 |---|---:|
-| not_recorded | 1173 |
-| reported | 79 |
+| not_recorded | 1170 |
+| reported | 82 |
 
 ## Configuration status
 

@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-Robotics-enabling 3D perception의 generative 문제를 이해하기 위해 읽는다. 본문은 However, such 3D ground truth is difficult and expensive to obtain, e.g. by accumulating Lidar scans from a This ICCV paper is the Open Access version, provided by the Computer Vision Foundation.를 문제로 두고, Furthermore, we show that our method has unique advantages when it comes to dynamic scenes.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — However, such 3D ground truth is difficult and expensive to obtain, e.g. by accumulating Lidar scans from a This ICCV paper is the Open Access version, provided by the Computer Vision Foundation.
+
+방법 관련 발췌 — Furthermore, we show that our method has unique advantages when it comes to dynamic scenes.
 
 ## Problem and Motivation
 
@@ -84,4 +86,4 @@ Robotics-enabling 3D perception의 generative 문제를 이해하기 위해 읽�
 
 ## Why Read It
 
-Robotics-enabling 3D perception의 generative 문제를 이해하기 위해 읽는다. 본문은 However, such 3D ground truth is difficult and expensive to obtain, e.g. by accumulating Lidar scans from a This ICCV paper is the Open Access version, provided by the Computer Vision Foundation.를 문제로 두고, Furthermore, we show that our method has unique advantages when it comes to dynamic scenes.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1. Introduction), p. 2 (1. Introduction), p. 1 (1. Introduction), p. 2 (1. Introduction), p. 4 (3.2. Training the View Completion Model), p. 5 (3.4. Distilling into a Scene Reconstruction Model) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 1 (1. Introduction), p. 2 (1. Introduction), p. 4 (3.2. Training the View Completion Model), p. 5 (3.4. Distilling into a Scene Reconstruction Model)이다.

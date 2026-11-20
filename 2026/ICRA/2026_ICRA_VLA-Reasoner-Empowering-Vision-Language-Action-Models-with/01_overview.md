@@ -80,4 +80,4 @@ VLA-Reasoner는 기존 VLA가 낸 후보 행동의 미래를 월드 모델로 �
 
 ## Why Read It
 
-VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다. 본문은 However, current VLAs also face critical limitations.를 문제로 두고, Our contributions are summarized as follows: • We propose a plug-in framework named VLA-Reasoner that empowers VLAs with structured reasoning to address their incremental deviations during deployment. • We adapt a modified ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 4 (III. METHOD), p. 4 (III. METHOD) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 1 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 4 (III. METHOD)이다.

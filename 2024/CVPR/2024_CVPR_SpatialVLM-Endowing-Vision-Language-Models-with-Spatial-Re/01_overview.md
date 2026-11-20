@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2024 / CVPR
-- Authors: Boyuan Chen, Zhuo Xu, Sean Kirmani, Brian Ichter, Danny Driess, Pete Florence, Dorsa Sadigh, Leonidas Guibas, Fei Xia
+- Authors: Boyuan Chen, Zhuo Xu, Sean Kirmani, Brian Ichter, Dorsa Sadigh, Leonidas Guibas, Fei Xia
 - Primary track: Robotics-enabling 3D perception
 - Tier: REFERENCE
 - Tags: Vision-Language Model, spatial reasoning, Robotics
@@ -80,4 +80,4 @@ SpatialVLM은 장면의 정성적·정량적 공간 관계를 묻는 자료를 �
 
 ## Why Read It
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 Automatic data generation and augmentation techniques are one approach to deal with the data limitation problem [38, 53, 56, 66].를 문제로 두고, To this end, we propose a system called SpatialVLM that enables data generation and training of VLMs to enhance their spatial reasoning capabilities.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (1. Introduction), p. 2 (1. Introduction), p. 4 (3. SpatialVLM), p. 1 (Body text (section not recovered)), p. 2 (1. Introduction), p. 6 (3.3. Learning Spatial Reasoning) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 2 (1. Introduction), p. 4 (3. SpatialVLM), p. 1 (Body text (section not recovered)), p. 6 (3.3. Learning Spatial Reasoning)이다.

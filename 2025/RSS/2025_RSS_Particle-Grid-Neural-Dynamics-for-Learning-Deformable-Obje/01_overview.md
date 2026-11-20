@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-World models, safety, uncertainty, and recovery의 safety 문제를 이해하기 위해 읽는다. 본문은 For example, physics-based simulators [12, 31] often struggle to generalize to the real world due to the inherent simto-real gap and the difficulties of system identification and state estimation, Meanwhile, video-based predictive ...를 문제로 두고, The model updates particle positions X,...+ with the predicted velocities Vs>.s¢ to perform iterative rollouts (b) Our framework enables 3D action-conditioned video prediction by reconstructing objects with 3D Gaussian Splatting and int ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — For example, physics-based simulators [12, 31] often struggle to generalize to the real world due to the inherent simto-real gap and the difficulties of system identification and state estimation, Meanwhile, video-based predictive ...
+
+방법 관련 발췌 — The model updates particle positions X,...+ with the predicted velocities Vs>.s¢ to perform iterative rollouts (b) Our framework enables 3D action-conditioned video prediction by reconstructing objects with 3D Gaussian Splatting and int ...
 
 ## Problem and Motivation
 
@@ -80,7 +82,7 @@ World models, safety, uncertainty, and recovery의 safety 문제를 이해하기
 
 ## Why Read It
 
-World models, safety, uncertainty, and recovery의 safety 문제를 이해하기 위해 읽는다. 본문은 For example, physics-based simulators [12, 31] often struggle to generalize to the real world due to the inherent simto-real gap and the difficulties of system identification and state estimation, Meanwhile, video-based predictive ...를 문제로 두고, The model updates particle positions X,...+ with the predicted velocities Vs>.s¢ to perform iterative rollouts (b) Our framework enables 3D action-conditioned video prediction by reconstructing objects with 3D Gaussian Splatting and int ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 3 (B. Learning-Based Deformable Modeling), p. 5 (B. Model Components) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 1 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 3 (B. Learning-Based Deformable Modeling), p. 5 (B. Model Components)이다.
 
 ## Semantic QA — PDF body cross-check
 

@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-Manipulation, contact, tactile, and dexterity의 tactile 문제를 이해하기 위해 읽는다. 본문은 This gap arises due to the lack of relevant data at a comparable scale for tactile sensing.를 문제로 두고, Our method makes use of Audio-Visual Instance Discrimination (AVID) [14], a selfsupervised learning approach to learn audio-visual representations, pre-trained on Audioset [15], a dataset containing 1Robotics Institute, Carnegie Mellon ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — This gap arises due to the lack of relevant data at a comparable scale for tactile sensing.
+
+방법 관련 발췌 — Our method makes use of Audio-Visual Instance Discrimination (AVID) [14], a selfsupervised learning approach to learn audio-visual representations, pre-trained on Audioset [15], a dataset containing 1Robotics Institute, Carnegie Mellon ...
 
 ## Problem and Motivation
 
@@ -84,4 +86,4 @@ Manipulation, contact, tactile, and dexterity의 tactile 문제를 이해하기 
 
 ## Why Read It
 
-Manipulation, contact, tactile, and dexterity의 tactile 문제를 이해하기 위해 읽는다. 본문은 This gap arises due to the lack of relevant data at a comparable scale for tactile sensing.를 문제로 두고, Our method makes use of Audio-Visual Instance Discrimination (AVID) [14], a selfsupervised learning approach to learn audio-visual representations, pre-trained on Audioset [15], a dataset containing 1Robotics Institute, Carnegie Mellon ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 3 (III. MANIPULATION WITH AUDIO-VISUAL PRETRAINING), p. 3 (III. MANIPULATION WITH AUDIO-VISUAL PRETRAINING), p. 2 (III. MANIPULATION WITH AUDIO-VISUAL PRETRAINING), p. 2 (III. MANIPULATION WITH AUDIO-VISUAL PRETRAINING) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 1 (I. INTRODUCTION), p. 3 (III. MANIPULATION WITH AUDIO-VISUAL PRETRAINING), p. 2 (III. MANIPULATION WITH AUDIO-VISUAL PRETRAINING)이다.

@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 In addressing the above challenges, one common strategy is to represent the dynamic scenes as a combination of a static canonical field and a deformation model [11, 16, 17, 27, 33, 34, ...를 문제로 두고, Our main contributions are summarized as: • We propose a geometry-aware feature extraction network based on 3D Gaussian distribution to better utilize local geometric information. • We propose to use continuous 6D ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — In addressing the above challenges, one common strategy is to represent the dynamic scenes as a combination of a static canonical field and a deformation model [11, 16, 17, 27, 33, 34, ...
+
+방법 관련 발췌 — Our main contributions are summarized as: • We propose a geometry-aware feature extraction network based on 3D Gaussian distribution to better utilize local geometric information. • We propose to use continuous 6D ...
 
 ## Problem and Motivation
 
@@ -85,4 +87,4 @@ Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 �
 
 ## Why Read It
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 In addressing the above challenges, one common strategy is to represent the dynamic scenes as a combination of a static canonical field and a deformation model [11, 16, 17, 27, 33, 34, ...를 문제로 두고, Our main contributions are summarized as: • We propose a geometry-aware feature extraction network based on 3D Gaussian distribution to better utilize local geometric information. • We propose to use continuous 6D ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1. Introduction), p. 2 (1. Introduction), p. 1 (1. Introduction), p. 2 (1. Introduction), p. 4 (3.1. Preliminary), p. 4 (3.2. Gaussian Canonical Field) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 1 (1. Introduction), p. 2 (1. Introduction), p. 4 (3.1. Preliminary), p. 4 (3.2. Gaussian Canonical Field)이다.

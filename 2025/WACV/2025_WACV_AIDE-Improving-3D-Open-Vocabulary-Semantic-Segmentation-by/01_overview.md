@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-Robotics-enabling 3D perception의 navigation 문제를 이해하기 위해 읽는다. 본문은 In summary, our contributions are as follows, • We identify two significant challenges within existing methods, i.e., the misalignment in 3D-scene-image-totext data pairs and the need to adapt text encoders into 1Higher ...를 문제로 두고, To address these issues, we propose a novel AlIgned 3D Open-Vocabulary SEmantic Segmentation framework, called AIDE.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — In summary, our contributions are as follows, • We identify two significant challenges within existing methods, i.e., the misalignment in 3D-scene-image-totext data pairs and the need to adapt text encoders into 1Higher ...
+
+방법 관련 발췌 — To address these issues, we propose a novel AlIgned 3D Open-Vocabulary SEmantic Segmentation framework, called AIDE.
 
 ## Problem and Motivation
 
@@ -81,4 +83,4 @@ Robotics-enabling 3D perception의 navigation 문제를 이해하기 위해 읽�
 
 ## Why Read It
 
-Robotics-enabling 3D perception의 navigation 문제를 이해하기 위해 읽는다. 본문은 In summary, our contributions are as follows, • We identify two significant challenges within existing methods, i.e., the misalignment in 3D-scene-image-totext data pairs and the need to adapt text encoders into 1Higher ...를 문제로 두고, To address these issues, we propose a novel AlIgned 3D Open-Vocabulary SEmantic Segmentation framework, called AIDE.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (1. Introduction), p. 1 (1. Introduction), p. 2 (1. Introduction), p. 4 (3.1. Problem Definition), p. 3 (3.1. Problem Definition), p. 5 (3.4. Adaptive Segmentation-Text Modeling) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 2 (1. Introduction), p. 1 (1. Introduction), p. 4 (3.1. Problem Definition), p. 3 (3.1. Problem Definition), p. 5 (3.4. Adaptive Segmentation-Text Modeling)이다.

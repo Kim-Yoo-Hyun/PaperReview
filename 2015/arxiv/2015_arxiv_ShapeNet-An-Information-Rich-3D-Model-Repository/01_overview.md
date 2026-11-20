@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-Robotics-enabling 3D perception의 benchmark 문제를 이해하기 위해 읽는다. 본문은 However, a critical bottleneck facing the adoption of data-driven methods for 3D content is the lack of large-scale, curated datasets of 3D models that are available to the community.를 문제로 두고, Motivated by the far-reaching impact of dataset efforts such as the Penn Treebank [20], WordNet [21] and ImageNet [4], which collectively have tens of thousands of citations, we propose establishing ShapeNet: a ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — However, a critical bottleneck facing the adoption of data-driven methods for 3D content is the lack of large-scale, curated datasets of 3D models that are available to the community.
+
+방법 관련 발췌 — Motivated by the far-reaching impact of dataset efforts such as the Penn Treebank [20], WordNet [21] and ImageNet [4], which collectively have tens of thousands of citations, we propose establishing ShapeNet: a ...
 
 ## Problem and Motivation
 
@@ -81,4 +83,4 @@ Robotics-enabling 3D perception의 benchmark 문제를 이해하기 위해 읽�
 
 ## Why Read It
 
-Robotics-enabling 3D perception의 benchmark 문제를 이해하기 위해 읽는다. 본문은 However, a critical bottleneck facing the adoption of data-driven methods for 3D content is the lack of large-scale, curated datasets of 3D models that are available to the community.를 문제로 두고, Motivated by the far-reaching impact of dataset efforts such as the Penn Treebank [20], WordNet [21] and ImageNet [4], which collectively have tens of thousands of citations, we propose establishing ShapeNet: a ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1. Introduction), p. 1 (1. Introduction), p. 2 (1. Introduction), p. 6 (4.2. Hierarchical Rigid Alignment), p. 1 (1. Introduction), p. 6 (4.1. Category Annotation) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 1 (1. Introduction), p. 2 (1. Introduction), p. 6 (4.2. Hierarchical Rigid Alignment), p. 6 (4.1. Category Annotation)이다.

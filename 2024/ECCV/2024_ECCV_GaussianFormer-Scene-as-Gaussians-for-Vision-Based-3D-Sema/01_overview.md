@@ -72,4 +72,4 @@ GaussianFormer는 카메라 영상으로부터 3차원 의미 점유를 객체 �
 
 ## Why Read It
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 It is also more difficult to capture scene dynamics with grid-based representations since it is objects instead of grids that move in the 3D space [59].를 문제로 두고, We propose a GaussianFormer model to effectively obtain 3D semantic Gaussians from image inputs.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (1 Introduction), p. 2 (1 Introduction), p. 3 (1 Introduction), p. 1 (Body text (section not recovered)), p. 2 (1 Introduction), p. 1 (Body text (section not recovered)) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 2 (1 Introduction), p. 3 (1 Introduction), p. 1 (Body text (section not recovered))이다.

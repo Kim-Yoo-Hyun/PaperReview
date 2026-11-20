@@ -77,7 +77,7 @@
 
 ## Why Read It
 
-Planning and control의 planning 문제를 이해하기 위해 읽는다. 본문은 Problems like the one described above can be modeled as partially observable Markov decision processes (POMDPs).를 문제로 두고, This paper is intended to make two contributions.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (1 Introduction), p. 2 (1 Introduction), p. 3 (1 Introduction), p. 3 (1 Introduction), p. 4 (1 Introduction), p. 23 (4.5. Alternative Approaches) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 2 (1 Introduction), p. 3 (1 Introduction), p. 4 (1 Introduction), p. 23 (4.5. Alternative Approaches)이다.
 
 ## Semantic QA — PDF body cross-check
 

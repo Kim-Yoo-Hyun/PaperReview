@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-Robotics-enabling 3D perception의 navigation 문제를 이해하기 위해 읽는다. 본문은 However, AE has a notable limitation: its training involves each ground-truth image from the test set.를 문제로 두고, Second, we propose Appearancefrom-Motion embedding (AfME), which takes poses as input and eliminates the need for training on the left half of each ground-truth image in the test set.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — However, AE has a notable limitation: its training involves each ground-truth image from the test set.
+
+방법 관련 발췌 — Second, we propose Appearancefrom-Motion embedding (AfME), which takes poses as input and eliminates the need for training on the left half of each ground-truth image in the test set.
 
 ## Problem and Motivation
 
@@ -82,4 +84,4 @@ Robotics-enabling 3D perception의 navigation 문제를 이해하기 위해 읽�
 
 ## Why Read It
 
-Robotics-enabling 3D perception의 navigation 문제를 이해하기 위해 읽는다. 본문은 However, AE has a notable limitation: its training involves each ground-truth image from the test set.를 문제로 두고, Second, we propose Appearancefrom-Motion embedding (AfME), which takes poses as input and eliminates the need for training on the left half of each ground-truth image in the test set.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (1. Introduction), p. 2 (1. Introduction), p. 1 (1. Introduction), p. 1 (Abstract), p. 2 (1. Introduction), p. 4 (4.2. Appearance-from-Motion Embedding) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 2 (1. Introduction), p. 1 (1. Introduction), p. 1 (Abstract), p. 4 (4.2. Appearance-from-Motion Embedding)이다.

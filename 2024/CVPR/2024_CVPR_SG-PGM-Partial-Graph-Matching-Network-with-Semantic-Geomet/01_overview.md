@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-Robotics-enabling 3D perception의 navigation 문제를 이해하기 위해 읽는다. 본문은 SGAligner [34] is the first work specifically focusing on this problem.를 문제로 두고, It consists of a finite set of object nodes V = {v1, v2, ..., vM}, an adjacency matrix A ∈{0, 1}M×M, a node feature matrix X ∈RM×· and a edge feature matrix ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — SGAligner [34] is the first work specifically focusing on this problem.
+
+방법 관련 발췌 — It consists of a finite set of object nodes V = {v1, v2, ..., vM}, an adjacency matrix A ∈{0, 1}M×M, a node feature matrix X ∈RM×· and a edge feature matrix ...
 
 ## Problem and Motivation
 
@@ -84,4 +86,4 @@ Robotics-enabling 3D perception의 navigation 문제를 이해하기 위해 읽�
 
 ## Why Read It
 
-Robotics-enabling 3D perception의 navigation 문제를 이해하기 위해 읽는다. 본문은 SGAligner [34] is the first work specifically focusing on this problem.를 문제로 두고, It consists of a finite set of object nodes V = {v1, v2, ..., vM}, an adjacency matrix A ∈{0, 1}M×M, a node feature matrix X ∈RM×· and a edge feature matrix ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1. Introduction), p. 1 (1. Introduction), p. 2 (1. Introduction), p. 2 (1. Introduction), p. 4 (3.1. Scene Graph Matching Network), p. 3 (3.1. Scene Graph Matching Network) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 1 (1. Introduction), p. 2 (1. Introduction), p. 4 (3.1. Scene Graph Matching Network), p. 3 (3.1. Scene Graph Matching Network)이다.

@@ -79,4 +79,4 @@ Diff3F는 텍스처가 없는 3D 형상에 사전학습된 2D 확산 모델의 �
 
 ## Why Read It
 
-Robotics-enabling 3D perception의 generative 문제를 이해하기 위해 읽는다. 본문은 A significant challenge is to address the absence of textures on most 3D models.를 문제로 두고, We propose a simple and robust solution.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (1. Introduction), p. 2 (1. Introduction), p. 5 (3.2. Semantics through Painting), p. 4 (3.2. Semantics through Painting), p. 3 (3. Method), p. 4 (3.2. Semantics through Painting) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 2 (1. Introduction), p. 5 (3.2. Semantics through Painting), p. 4 (3.2. Semantics through Painting), p. 3 (3. Method)이다.

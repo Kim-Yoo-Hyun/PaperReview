@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-Robotics-enabling 3D perception의 navigation 문제를 이해하기 위해 읽는다. 본문은 This implies that monocular VINS estimators cannot start from a stationary condition, but rather launch from an unknown moving state.를 문제로 두고, 2 To address all these issues, we propose VINS-Mono, a robust and versatile monocular visual-inertial state estimator.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — This implies that monocular VINS estimators cannot start from a stationary condition, but rather launch from an unknown moving state.
+
+방법 관련 발췌 — 2 To address all these issues, we propose VINS-Mono, a robust and versatile monocular visual-inertial state estimator.
 
 ## Problem and Motivation
 
@@ -85,4 +87,4 @@ Robotics-enabling 3D perception의 navigation 문제를 이해하기 위해 읽�
 
 ## Why Read It
 
-Robotics-enabling 3D perception의 navigation 문제를 이해하기 위해 읽는다. 본문은 This implies that monocular VINS estimators cannot start from a stationary condition, but rather launch from an unknown moving state.를 문제로 두고, 2 To address all these issues, we propose VINS-Mono, a robust and versatile monocular visual-inertial state estimator.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 11 (VIII. GLOBAL POSE GRAPH OPTIMIZATION), p. 11 (VIII. GLOBAL POSE GRAPH OPTIMIZATION), p. 14 (IX. EXPERIMENTAL RESULTS) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 1 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 11 (VIII. GLOBAL POSE GRAPH OPTIMIZATION), p. 14 (IX. EXPERIMENTAL RESULTS)이다.

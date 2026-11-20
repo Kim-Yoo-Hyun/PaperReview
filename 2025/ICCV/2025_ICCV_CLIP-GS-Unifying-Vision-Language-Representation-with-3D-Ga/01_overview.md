@@ -76,4 +76,4 @@ CLIP-GS는 3D 가우시안을 토큰열로 변환해 영상·언어와 대응하
 
 ## Why Read It
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 Therefore, enhancing 3D perception via 3DGS models has become an urgent challenge to address.를 문제로 두고, Overall, our contributions are summarized as follows: • We propose CLIP-GS, a simple yet effective framework for encoding 3DGS into features, leveraging a contrastive learning paradigm for multimodal per-taining. • We develop ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (1. Introduction), p. 2 (1. Introduction), p. 1 (1. Introduction), p. 3 (4. Methodology), p. 4 (4.2. Multi-model Alignment), p. 7 (Method) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 2 (1. Introduction), p. 1 (1. Introduction), p. 3 (4. Methodology), p. 4 (4.2. Multi-model Alignment), p. 7 (Method)이다.

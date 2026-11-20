@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-World models, safety, uncertainty, and recovery의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 While these models achieve impressive perceptual quality and scale well with growing data and compute, their current form inherently lacks the ability to predict long-horizon dynamics, especially in partially observable environments (Fi ...를 문제로 두고, To support more complex tasks, such as 3D partially observed world modeling, we introduce an abstract version of the flow equivariant recurrence relation which supports arbitrary encoders and update operations.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — While these models achieve impressive perceptual quality and scale well with growing data and compute, their current form inherently lacks the ability to predict long-horizon dynamics, especially in partially observable environments (Fi ...
+
+방법 관련 발췌 — To support more complex tasks, such as 3D partially observed world modeling, we introduce an abstract version of the flow equivariant recurrence relation which supports arbitrary encoders and update operations.
 
 ## Problem and Motivation
 
@@ -86,4 +88,4 @@ World models, safety, uncertainty, and recovery의 3d_perception 문제를 이�
 
 ## Why Read It
 
-World models, safety, uncertainty, and recovery의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 While these models achieve impressive perceptual quality and scale well with growing data and compute, their current form inherently lacks the ability to predict long-horizon dynamics, especially in partially observable environments (Fi ...를 문제로 두고, To support more complex tasks, such as 3D partially observed world modeling, we introduce an abstract version of the flow equivariant recurrence relation which supports arbitrary encoders and update operations.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (2. Background), p. 2 (2. Background), p. 1 (1. Introduction), p. 5 (3.1. Generalized Flow Equivariance), p. 4 (3.1. Generalized Flow Equivariance), p. 2 (3.1. Generalized Flow Equivariance) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 2 (2. Background), p. 1 (1. Introduction), p. 5 (3.1. Generalized Flow Equivariance), p. 4 (3.1. Generalized Flow Equivariance), p. 2 (3.1. Generalized Flow Equivariance)이다.

@@ -278,10 +278,12 @@
       "3D Vision",
       "Graph Reasoning"
     ],
-    "project": "not identified",
+    "project": "https://ianhuang0630.github.io/BlenderAlchemyWeb/",
     "pdf": "https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/12578.pdf",
     "page": "https://www.ecva.net/papers/eccv_2024/papers_ECCV/html/12578_ECCV_2024_paper.php",
-    "authors": "Ian Huang*, Guandao Yang, Leonidas Guibas"
+    "authors": "Ian Huang*, Guandao Yang, Leonidas Guibas",
+    "sources": {"project": {"url": "https://ianhuang0630.github.io/BlenderAlchemyWeb/", "kind": "author_project", "scope": "project_landing", "verified_on": "2026-11-20"}, "code": {"url": "https://github.com/ianhuang0630/BlenderAlchemyOfficial", "kind": "official_code", "scope": "project_landing", "verified_on": "2026-11-20"}},
+    "artifacts": {"code_status": "released"}
   },
   {
     "title": "Exploiting Semantic Reconstruction to Mitigate Hallucinations in Vision-Language Models",
@@ -920,7 +922,9 @@
       "Robotics"
     ],
     "project": "https://tiny-vla.github.io/",
-    "arxiv": "2409.12514"
+    "arxiv": "2409.12514",
+    "authors": ["Junjie Wen", "Yichen Zhu", "Jinming Li", "Minjie Zhu", "Zhibin Tang", "Kun Wu", "Zhiyuan Xu", "Ning Liu", "Ran Cheng", "Chaomin Shen", "Yaxin Peng", "Feifei Feng", "Jian Tang"],
+    "provenance": {"authors_verification": {"source": "https://api.crossref.org/works/10.1109/LRA.2025.3544909", "verified_on": "2026-11-20", "basis": "IEEE 등록 서지와 채택 후 저자 PDF 1쪽 모두 다섯 번째 저자를 Zhibin Tang으로 표기한다."}}
   },
   {
     "title": "Dynamic Open-Vocabulary 3D Scene Graphs for Long-term Language-Guided Mobile Manipulation",
@@ -1204,7 +1208,9 @@
       "Gaussian Splatting"
     ],
     "project": "not identified",
-    "arxiv": "2606.20424"
+    "arxiv": "2606.20424",
+    "authors": ["Shikuan Shi", "Chunran Zheng", "Jiaming Xu", "Tianyong Ye", "Tao Yu", "Man He", "Yukang Cui"],
+    "provenance": {"authors_verification": {"source": "https://2026.ieee-iros.org/program/paper-index/", "verified_on": "2026-11-20", "basis": "IROS 논문 번호 3918의 저자 명단(au)에는 프리프린트에 없는 Man He가 여섯 번째로 기재됐다."}}
   },
   {
     "title": "FAST-LIVGO: A Degeneracy-Robust LiDAR-Inertial-Visual-GNSS Fusion Odometry",

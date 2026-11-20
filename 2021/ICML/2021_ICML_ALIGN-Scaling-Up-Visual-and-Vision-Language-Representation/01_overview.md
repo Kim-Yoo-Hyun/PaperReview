@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-Foundations: Vision and Language Models의 upstream 문제를 이해하기 위해 읽는다. 본문은 Curation of such pre-training datasets requires heavy work on data gathering, sampling, and human annotation, and hence is difficult to scale.를 문제로 두고, Moreover, such cross-modality matching naturally enables zero-shot image classification when feeding the classnames into the text encoder, achieving 76.4% top-1 accuracy in ImageNet without using any of its training samples.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — Curation of such pre-training datasets requires heavy work on data gathering, sampling, and human annotation, and hence is difficult to scale.
+
+방법 관련 발췌 — Moreover, such cross-modality matching naturally enables zero-shot image classification when feeding the classnames into the text encoder, achieving 76.4% top-1 accuracy in ImageNet without using any of its training samples.
 
 ## Problem and Motivation
 
@@ -81,4 +83,4 @@ Foundations: Vision and Language Models의 upstream 문제를 이해하기 위�
 
 ## Why Read It
 
-Foundations: Vision and Language Models의 upstream 문제를 이해하기 위해 읽는다. 본문은 Curation of such pre-training datasets requires heavy work on data gathering, sampling, and human annotation, and hence is difficult to scale.를 문제로 두고, Moreover, such cross-modality matching naturally enables zero-shot image classification when feeding the classnames into the text encoder, achieving 76.4% top-1 accuracy in ImageNet without using any of its training samples.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1. Introduction), p. 1 (1. Introduction), p. 3 (4.1. Pre-training on Noisy Image-Text Pairs), p. 3 (4.1. Pre-training on Noisy Image-Text Pairs), p. 4 (4.3. Transferring to Visual Classification), p. 9 (8. Multilingual ALIGN Model) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 1 (1. Introduction), p. 3 (4.1. Pre-training on Noisy Image-Text Pairs), p. 4 (4.3. Transferring to Visual Classification), p. 9 (8. Multilingual ALIGN Model)이다.

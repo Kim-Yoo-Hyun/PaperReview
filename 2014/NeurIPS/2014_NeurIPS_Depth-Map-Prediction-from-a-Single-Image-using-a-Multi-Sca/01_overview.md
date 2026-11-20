@@ -76,4 +76,4 @@
 
 ## Why Read It
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 Moreover, the task is inherently ambiguous, and a technically ill-posed problem: Given an image, an infinite number of possible world scenes may have produced it.를 문제로 두고, In this paper we present a new approach for estimating depth from a single image.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1 Introduction), p. 1 (1 Introduction), p. 3 (3 Approach), p. 4 (3 Approach), p. 2 (3 Approach), p. 2 (3 Approach) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 1 (1 Introduction), p. 3 (3 Approach), p. 4 (3 Approach), p. 2 (3 Approach)이다.

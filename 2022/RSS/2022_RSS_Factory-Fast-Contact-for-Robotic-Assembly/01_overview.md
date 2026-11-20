@@ -19,7 +19,7 @@
 
 ## Why This Paper Is Here
 
-Manipulation, contact, tactile, and dexterity의 manipulation 문제를 이해하기 위해 읽는다. 본문은 However, assembly has been exceptionally difficult to automate due to physical complexity, part variability, and strict reliability requirements [42].를 문제로 두고, In this work, we present Factory, a set of physics simulation methods and robot learning tools for such interactions (Fig.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+조립 부품의 다수 접촉을 빠르게 계산하는 시뮬레이션과 학습용 조립 과업을 제시한다.
 
 ## Problem and Motivation
 
@@ -53,16 +53,10 @@ Manipulation, contact, tactile, and dexterity의 manipulation 문제를 이해�
 
 ## Main Claims and Actual Contribution
 
-- **p. 1 / I. INTRODUCTION - extractive body cue:** In this work, we present Factory, a set of physics simulation methods and robot learning tools for such interactions (Fig.
-- **p. 4 / III. CONTACT-RICH SIMULATION METHODS - extractive body cue:** Specifically, given a triangle mesh representing the boundaries of the object, we generate an SDF for the mesh at initialization time and store it as ...
-- **p. 1 / I. INTRODUCTION - extractive body cue:** Meanwhile, physics simulation has become a powerful tool for robotics development.
-- **p. 2 / I. INTRODUCTION - extractive body cue:** The suite includes 60 carefully-designed assets, 3 robotic assembly environments, and 7 classical robot controllers.
-- **p. 2 / I. INTRODUCTION - extractive body cue:** We aim for Factory to greatly accelerate research and development in robotic assembly, as well as serve as a powerful tool for contact-rich simulation of ...
-- **p. 9 / V. REINFORCEMENT LEARNING - extractive body cue:** With the above approach, the Pick policy was able to achieve a 100% success rate within the randomization bounds.
-- **p. 10 / V. REINFORCEMENT LEARNING - extractive body cue:** With this strategy, we achieved an end-to-end Pick, Place, and Screw success rate of 74.2%.
-- **p. 10 / V. REINFORCEMENT LEARNING - extractive body cue:** Using the above configuration, a final Screw policy was trained over 4096 gradient updates and achieved an 85.6% success rate over 1024 episodes.
+- 접촉 생성과 축소·해결을 결합해 다수 조립 환경을 병렬 시뮬레이션한다.
+- 가상 조립 작업에서 강화학습 정책을 훈련하고 접촉력의 물리적 타당성을 점검한다.
 
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+[검증한 원문](https://www.roboticsproceedings.org/rss18/p035.html)
 
 ## Evaluation Scope
 
@@ -86,7 +80,7 @@ Manipulation, contact, tactile, and dexterity의 manipulation 문제를 이해�
 
 ## Why Read It
 
-Manipulation, contact, tactile, and dexterity의 manipulation 문제를 이해하기 위해 읽는다. 본문은 However, assembly has been exceptionally difficult to automate due to physical complexity, part variability, and strict reliability requirements [42].를 문제로 두고, In this work, we present Factory, a set of physics simulation methods and robot learning tools for such interactions (Fig.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 5 (III. CONTACT-RICH SIMULATION METHODS), p. 4 (III. CONTACT-RICH SIMULATION METHODS), p. 4 (III. CONTACT-RICH SIMULATION METHODS) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 1 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 5 (III. CONTACT-RICH SIMULATION METHODS), p. 4 (III. CONTACT-RICH SIMULATION METHODS)이다.
 
 ## Semantic QA — PDF body cross-check
 

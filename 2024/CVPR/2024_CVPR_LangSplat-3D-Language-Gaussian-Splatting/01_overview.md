@@ -19,7 +19,7 @@
 
 ## Why This Paper Is Here
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 However, these methods [18, 24] suffer from significant limitations in both speed and accuracy, severely constraining their practical applicability.를 문제로 두고, A scenespecific autoencoder is further introduced to alleviate the memory cost issue imposed by explicit modeling. • We propose to learn the hierarchical semantics defined by SAM to address the point ambiguity ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+LangSplat은 3D 가우시안에 언어 특징을 담아 자연어로 장면 속 영역을 검색한다.
 
 ## Problem and Motivation
 
@@ -53,16 +53,10 @@ Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 �
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** A scenespecific autoencoder is further introduced to alleviate the memory cost issue imposed by explicit modeling. • We propose to learn the hierarchical semantics defined ...
-- **p. 2 / 1. Introduction - extractive body cue:** We summarize the contributions of this paper as follows: • We propose the LangSplat, which is the first 3D Gaussian Splatting-based method for 3D language ...
-- **p. 4 / 3.3. 3D Gaussian Splatting for Language Fields - extractive body cue:** To address this issue, we present the first 3D Gaussian Splatting-based method for 3D language field modeling.
-- **p. 4 / 3.2. Learning Hierarchical Semantics with SAM - extractive body cue:** In this paper, we propose leveraging SAM to obtain precise object masks, which are then used to acquire pixel-aligned features.
-- **p. 5 / 3.3. 3D Gaussian Splatting for Language Fields - extractive body cue:** To reduce memory cost and improve efficiency, we introduce a scenewise language autoencoder.
-- **p. 6 / 4.2. Results on the LERF dataset - extractive body cue:** We observe that our method achieves an overall accuracy of 84.3%, significantly outperforming LERF.
-- **p. 7 / 4.3. Results on the 3D-OVS dataset - extractive body cue:** We observe that LangSplat not only outperforms 2D-based methods such as ODISE [46] and OV-Seg [23], but also achieves better results than 3D-based methods in20057
-- **p. 7 / 4.2. Results on the LERF dataset - extractive body cue:** In the end, our LangSplat achieved a 119 × speedup over LERF while significantly surpassing LERF in terms of accuracy.
+- 가우시안에 CLIP 특징을 학습시키고 SAM이 구분한 영역을 이용해 여러 수준의 의미를 표현한다.
+- 텍스트 질의에 해당하는 위치·영역과 언어 특징 렌더링의 효율을 평가한다.
 
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+[원문 초록](https://openaccess.thecvf.com/content/CVPR2024/html/Qin_LangSplat_3D_Language_Gaussian_Splatting_CVPR_2024_paper.html)
 
 ## Evaluation Scope
 
@@ -82,4 +76,4 @@ Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 �
 
 ## Why Read It
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 However, these methods [18, 24] suffer from significant limitations in both speed and accuracy, severely constraining their practical applicability.를 문제로 두고, A scenespecific autoencoder is further introduced to alleviate the memory cost issue imposed by explicit modeling. • We propose to learn the hierarchical semantics defined by SAM to address the point ambiguity ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (1. Introduction), p. 2 (1. Introduction), p. 5 (3.3. 3D Gaussian Splatting for Language Fields), p. 4 (3.2. Learning Hierarchical Semantics with SAM), p. 5 (3.3. 3D Gaussian Splatting for Language Fields), p. 3 (3. Proposed Approach) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 2 (1. Introduction), p. 5 (3.3. 3D Gaussian Splatting for Language Fields), p. 4 (3.2. Learning Hierarchical Semantics with SAM), p. 3 (3. Proposed Approach)이다.

@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-RL, IL, offline learning, and robot data의 offline_rl 문제를 이해하기 위해 읽는다. 본문은 One challenge for offline RL is the problem of extrapolation error [Fujimoto et al., 2019b], which is generalization error in the approximate value function, induced by selecting actions not contained in the ...를 문제로 두고, Consequently, offline RL enables the use of previously logged data or leveraging an expert, such as a human operator, without any of the risk associated with an untrained RL agent.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — One challenge for offline RL is the problem of extrapolation error [Fujimoto et al., 2019b], which is generalization error in the approximate value function, induced by selecting actions not contained in the ...
+
+방법 관련 발췌 — Consequently, offline RL enables the use of previously logged data or leveraging an expert, such as a human operator, without any of the risk associated with an untrained RL agent.
 
 ## Problem and Motivation
 
@@ -83,7 +85,7 @@ RL, IL, offline learning, and robot data의 offline_rl 문제를 이해하기 �
 
 ## Why Read It
 
-RL, IL, offline learning, and robot data의 offline_rl 문제를 이해하기 위해 읽는다. 본문은 One challenge for offline RL is the problem of extrapolation error [Fujimoto et al., 2019b], which is generalization error in the approximate value function, induced by selecting actions not contained in the ...를 문제로 두고, Consequently, offline RL enables the use of previously logged data or leveraging an expert, such as a human operator, without any of the risk associated with an untrained RL agent.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 3 (3 Background), p. 4 (3 Background), p. 3 (3 Background), p. 5 (3 Background), p. 6 (3 Background), p. 4 (3 Background) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 3 (3 Background), p. 4 (3 Background), p. 5 (3 Background), p. 6 (3 Background)이다.
 
 ## Semantic QA — PDF body cross-check
 

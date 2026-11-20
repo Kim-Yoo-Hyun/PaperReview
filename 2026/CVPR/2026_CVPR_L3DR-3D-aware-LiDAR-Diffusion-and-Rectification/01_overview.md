@@ -21,7 +21,9 @@
 
 ## Why This Paper Is Here
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 L3DR works by tackling two challenges.를 문제로 두고, The contributions of this work can be summarized in three major aspects: • We propose a 3D-aware LiDAR Diffusion and Rectification framework that rectifies RV geometry artifacts with a 3D residual regression ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — L3DR works by tackling two challenges.
+
+방법 관련 발췌 — The contributions of this work can be summarized in three major aspects: • We propose a 3D-aware LiDAR Diffusion and Rectification framework that rectifies RV geometry artifacts with a 3D residual regression ...
 
 ## Problem and Motivation
 
@@ -87,4 +89,4 @@ Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 �
 
 ## Why Read It
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 L3DR works by tackling two challenges.를 문제로 두고, The contributions of this work can be summarized in three major aspects: • We propose a 3D-aware LiDAR Diffusion and Rectification framework that rectifies RV geometry artifacts with a 3D residual regression ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (1. Introduction), p. 5 (4.3. Residual Regression Training), p. 4 (4.2. LiDAR Diffusion Training), p. 4 (4. Method), p. 5 (4.3. Residual Regression Training), p. 6 (4.4. Diffusion-agnostic Inference) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 2 (1. Introduction), p. 5 (4.3. Residual Regression Training), p. 4 (4.2. LiDAR Diffusion Training), p. 4 (4. Method), p. 6 (4.4. Diffusion-agnostic Inference)이다.

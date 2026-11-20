@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 The evaluation of the generation of 3D mesh can be challenging due to the lack of direct correspondence with ground truth data.를 문제로 두고, In MeshLLM, we introduce a progressive training strategy that begins with KNN-based Primitive-Mesh samples, followed by Semantic-based Primitive-Mesh samples, and concludes with training on specific mesh generation and understanding tasks.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — The evaluation of the generation of 3D mesh can be challenging due to the lack of direct correspondence with ground truth data.
+
+방법 관련 발췌 — In MeshLLM, we introduce a progressive training strategy that begins with KNN-based Primitive-Mesh samples, followed by Semantic-based Primitive-Mesh samples, and concludes with training on specific mesh generation and understanding tasks.
 
 ## Problem and Motivation
 
@@ -73,4 +75,4 @@ Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 �
 
 ## Why Read It
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 The evaluation of the generation of 3D mesh can be challenging due to the lack of direct correspondence with ground truth data.를 문제로 두고, In MeshLLM, we introduce a progressive training strategy that begins with KNN-based Primitive-Mesh samples, followed by Semantic-based Primitive-Mesh samples, and concludes with training on specific mesh generation and understanding tasks.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1.2. Metric Details), p. 1 (2.1. Shape Novelty Analysis), p. 1 (1.1. Construction of Primitive-Mesh), p. 1 (1.1. Construction of Primitive-Mesh), p. 3 (Figure/Table caption), p. 1 (1.1. Construction of Primitive-Mesh) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 1 (1.2. Metric Details), p. 1 (2.1. Shape Novelty Analysis), p. 1 (1.1. Construction of Primitive-Mesh), p. 3 (Figure/Table caption)이다.

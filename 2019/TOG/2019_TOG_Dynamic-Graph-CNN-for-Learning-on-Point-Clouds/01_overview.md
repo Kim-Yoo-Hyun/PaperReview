@@ -75,4 +75,4 @@ DGCNN은 점군의 이웃 관계를 특징 공간에서 다시 구성하면서 �
 
 ## Why Read It
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 This independence, however, neglects the geometric relationships among points, presenting a fundamental limitation that cannot capture local features.를 문제로 두고, We summarize the key contributions of our work as follows: • We present a novel operation for learning from point clouds, EdgeConv, to better capture local geometric features of point clouds while ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 1 (Body text (section not recovered)), p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 1 (Body text (section not recovered)) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 2 (1 INTRODUCTION), p. 1 (Body text (section not recovered))이다.

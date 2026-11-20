@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다. 본문은 1, varying the execution horizon leads to substantial performance fluctuations-ranging from consistent successes to frequent failures.를 문제로 두고, (2) Building on these insights, we propose AutoHorizon, a novel attention-guided strategy that dynamically estimates the execution horizon for each action chunk, allowing the policy to adapt to varying perceptual conditions.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — 1, varying the execution horizon leads to substantial performance fluctuations-ranging from consistent successes to frequent failures.
+
+방법 관련 발췌 — (2) Building on these insights, we propose AutoHorizon, a novel attention-guided strategy that dynamically estimates the execution horizon for each action chunk, allowing the policy to adapt to varying perceptual conditions.
 
 ## Problem and Motivation
 
@@ -83,4 +85,4 @@ VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다
 
 ## Why Read It
 
-VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다. 본문은 1, varying the execution horizon leads to substantial performance fluctuations-ranging from consistent successes to frequent failures.를 문제로 두고, (2) Building on these insights, we propose AutoHorizon, a novel attention-guided strategy that dynamically estimates the execution horizon for each action chunk, allowing the policy to adapt to varying perceptual conditions.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1. Introduction), p. 1 (1. Introduction), p. 2 (1. Introduction), p. 3 (3.1. Preliminary), p. 6 (3.4. AutoHorizon), p. 5 (3.4. AutoHorizon) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 1 (1. Introduction), p. 2 (1. Introduction), p. 3 (3.1. Preliminary), p. 6 (3.4. AutoHorizon), p. 5 (3.4. AutoHorizon)이다.

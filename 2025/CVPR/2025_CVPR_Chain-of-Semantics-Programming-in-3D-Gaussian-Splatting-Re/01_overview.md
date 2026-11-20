@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 This oversight in capturing the connection and conditionality of spatial relationships results in a significant performance gap in grounding between these zero-shot methods and the current stateof-the-art supervised approaches.를 문제로 두고, Our contributions are summarized as follows: • We propose a chain of semantics programming method with the grounded-aware self-check mechanism for enhanced grounded reasoning in the 3DVG task. • We introduce a ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — This oversight in capturing the connection and conditionality of spatial relationships results in a significant performance gap in grounding between these zero-shot methods and the current stateof-the-art supervised approaches.
+
+방법 관련 발췌 — Our contributions are summarized as follows: • We propose a chain of semantics programming method with the grounded-aware self-check mechanism for enhanced grounded reasoning in the 3DVG task. • We introduce a ...
 
 ## Problem and Motivation
 
@@ -82,4 +84,4 @@ Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 �
 
 ## Why Read It
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 This oversight in capturing the connection and conditionality of spatial relationships results in a significant performance gap in grounding between these zero-shot methods and the current stateof-the-art supervised approaches.를 문제로 두고, Our contributions are summarized as follows: • We propose a chain of semantics programming method with the grounded-aware self-check mechanism for enhanced grounded reasoning in the 3DVG task. • We introduce a ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (1. Introduction), p. 1 (1. Introduction), p. 1 (1. Introduction), p. 2 (1. Introduction), p. 4 (3.2. Dynamic Interaction in 3DGS Representation), p. 4 (3.3. Chain of Semantics Programming) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 2 (1. Introduction), p. 1 (1. Introduction), p. 4 (3.2. Dynamic Interaction in 3DGS Representation), p. 4 (3.3. Chain of Semantics Programming)이다.

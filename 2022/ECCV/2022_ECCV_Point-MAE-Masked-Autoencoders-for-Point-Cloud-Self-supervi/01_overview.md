@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 To this end, we first analyze the main challenges of introducing masked autoencoding for point cloud from the following aspects: (i) Lack of a unified Transformer architecture.를 문제로 두고, Our main contributions can be summarized as follows: (1) We propose a novel scheme of masked autoencoders for point cloud selfsupervised learning, addressing key issues including backbone architecture, early leakage of location ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — To this end, we first analyze the main challenges of introducing masked autoencoding for point cloud from the following aspects: (i) Lack of a unified Transformer architecture.
+
+방법 관련 발췌 — Our main contributions can be summarized as follows: (1) We propose a novel scheme of masked autoencoders for point cloud selfsupervised learning, addressing key issues including backbone architecture, early leakage of location ...
 
 ## Problem and Motivation
 
@@ -82,4 +84,4 @@ Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 �
 
 ## Why Read It
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 To this end, we first analyze the main challenges of introducing masked autoencoding for point cloud from the following aspects: (i) Lack of a unified Transformer architecture.를 문제로 두고, Our main contributions can be summarized as follows: (1) We propose a novel scheme of masked autoencoders for point cloud selfsupervised learning, addressing key issues including backbone architecture, early leakage of location ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 3 (1 Introduction), p. 3 (1 Introduction), p. 4 (1 Introduction), p. 5 (1 Introduction), p. 5 (1 Introduction), p. 1 (4 Tencent Data Platform) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 3 (1 Introduction), p. 4 (1 Introduction), p. 5 (1 Introduction), p. 1 (4 Tencent Data Platform)이다.

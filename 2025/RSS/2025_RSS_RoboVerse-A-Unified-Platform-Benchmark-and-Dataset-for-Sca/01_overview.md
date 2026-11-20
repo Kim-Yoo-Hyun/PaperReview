@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-RL, IL, offline learning, and robot data의 benchmark 문제를 이해하기 위해 읽는다. 본문은 However, replicating these successes in robotics remains challenging due to the difficulty of collecting high-quality, diverse data and the lack of widely recognized evaluation protocols.를 문제로 두고, Additionally, we propose unified benchmarks for imitation learning and reinforcement ‘data is resource-intensive learning, enabling consistent evaluation across different levels of ‘real-world scenarios generalization.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — However, replicating these successes in robotics remains challenging due to the difficulty of collecting high-quality, diverse data and the lack of widely recognized evaluation protocols.
+
+방법 관련 발췌 — Additionally, we propose unified benchmarks for imitation learning and reinforcement ‘data is resource-intensive learning, enabling consistent evaluation across different levels of ‘real-world scenarios generalization.
 
 ## Problem and Motivation
 
@@ -86,7 +88,7 @@ RL, IL, offline learning, and robot data의 benchmark 문제를 이해하기 위
 
 ## Why Read It
 
-RL, IL, offline learning, and robot data의 benchmark 문제를 이해하기 위해 읽는다. 본문은 However, replicating these successes in robotics remains challenging due to the difficulty of collecting high-quality, diverse data and the lack of widely recognized evaluation protocols.를 문제로 두고, Additionally, we propose unified benchmarks for imitation learning and reinforcement ‘data is resource-intensive learning, enabling consistent evaluation across different levels of ‘real-world scenarios generalization.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (1. IyrRopucTION), p. 2 (1. IyrRopucTION), p. 3 (B. Large-Scale Roboties Dataset), p. 1 (Abstract), p. 3 (C. Benchmarking in Robotics), p. 5 (IV. ROBOVERSE DATASET) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 2 (1. IyrRopucTION), p. 3 (B. Large-Scale Roboties Dataset), p. 1 (Abstract), p. 3 (C. Benchmarking in Robotics), p. 5 (IV. ROBOVERSE DATASET)이다.
 
 ## Semantic QA — PDF body cross-check
 

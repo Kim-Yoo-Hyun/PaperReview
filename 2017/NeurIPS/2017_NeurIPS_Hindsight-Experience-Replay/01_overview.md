@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-RL, IL, offline learning, and robot data의 rl 문제를 이해하기 위해 읽는다. 본문은 These results are indicative of the practical challenges with reward shaping, and that shaped rewards would often constitute a compromise on the metric we truly care about (such as binary success/failure).를 문제로 두고, In this paper we introduce a technique called Hindsight Experience Replay (HER) which allows the algorithm to perform exactly this kind of reasoning and can be combined with any off-policy RL algorithm.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — These results are indicative of the practical challenges with reward shaping, and that shaped rewards would often constitute a compromise on the metric we truly care about (such as binary success/failure).
+
+방법 관련 발췌 — In this paper we introduce a technique called Hindsight Experience Replay (HER) which allows the algorithm to perform exactly this kind of reasoning and can be combined with any off-policy RL algorithm.
 
 ## Problem and Motivation
 
@@ -85,7 +87,7 @@ RL, IL, offline learning, and robot data의 rl 문제를 이해하기 위해 읽
 
 ## Why Read It
 
-RL, IL, offline learning, and robot data의 rl 문제를 이해하기 위해 읽는다. 본문은 These results are indicative of the practical challenges with reward shaping, and that shaped rewards would often constitute a compromise on the metric we truly care about (such as binary success/failure).를 문제로 두고, In this paper we introduce a technique called Hindsight Experience Replay (HER) which allows the algorithm to perform exactly this kind of reasoning and can be combined with any off-policy RL algorithm.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 5 (2 Background), p. 1 (1 Introduction), p. 3 (2 Background), p. 3 (2 Background), p. 1 (1 Introduction), p. 4 (2 Background) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 5 (2 Background), p. 1 (1 Introduction), p. 3 (2 Background), p. 4 (2 Background)이다.
 
 ## Semantic QA — PDF body cross-check
 

@@ -20,7 +20,9 @@
 
 ## Why This Paper Is Here
 
-VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다. 본문은 While this manner enables long-form reasoning without step-level supervision, the reliance on QA-style reward signals limits their ability to support long-horizon planning and makes it difficult to connect reasoning with real-world acti ...를 문제로 두고, Our main contributions are summarized as follows: • We propose ThinkAct, a dual-system framework that mutually enhances action execution and visualgrounded embodied reasoning connected by visual latent planning. • We leverage the ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — While this manner enables long-form reasoning without step-level supervision, the reliance on QA-style reward signals limits their ability to support long-horizon planning and makes it difficult to connect reasoning with real-world acti ...
+
+방법 관련 발췌 — Our main contributions are summarized as follows: • We propose ThinkAct, a dual-system framework that mutually enhances action execution and visualgrounded embodied reasoning connected by visual latent planning. • We leverage the ...
 
 ## Problem and Motivation
 
@@ -87,4 +89,4 @@ VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다
 
 ## Why Read It
 
-VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다. 본문은 While this manner enables long-form reasoning without step-level supervision, the reliance on QA-style reward signals limits their ability to support long-horizon planning and makes it difficult to connect reasoning with real-world acti ...를 문제로 두고, Our main contributions are summarized as follows: • We propose ThinkAct, a dual-system framework that mutually enhances action execution and visualgrounded embodied reasoning connected by visual latent planning. • We leverage the ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (1. Introduction), p. 3 (3.1. Problem Formulation), p. 6 (3.4. Learning Strategy and Inference), p. 6 (3.4. Learning Strategy and Inference), p. 4 (3.1. Problem Formulation), p. 4 (3.2. Reinforced Visual Latent Planning for Embodied Reasoning) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 2 (1. Introduction), p. 3 (3.1. Problem Formulation), p. 6 (3.4. Learning Strategy and Inference), p. 4 (3.1. Problem Formulation), p. 4 (3.2. Reinforced Visual Latent Planning for Embodied Reasoning)이다.

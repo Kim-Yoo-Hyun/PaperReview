@@ -19,7 +19,7 @@
 
 ## Why This Paper Is Here
 
-Manipulation, contact, tactile, and dexterity의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 To address the challenges, previous arts have made great progress in general manipulation policy learning, which can be divided into two categories including perceptive methods and generative methods.를 문제로 두고, Our contributions can be summarized as follows: - We propose a dynamic Gaussian Splatting framework to learn the scenelevel spatiotemporal dynamics in general robotic manipulation tasks, so that the robotic agent can ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+행동 조건부 미래 장면을 예측하는 3D Gaussian 표현을 시연 기반 조작 정책과 함께 학습한다.
 
 ## Problem and Motivation
 
@@ -53,16 +53,10 @@ Manipulation, contact, tactile, and dexterity의 3d_perception 문제를 이해�
 
 ## Main Claims and Actual Contribution
 
-- **p. 3 / 1 Introduction - extractive body cue:** Our contributions can be summarized as follows: - We propose a dynamic Gaussian Splatting framework to learn the scenelevel spatiotemporal dynamics in general robotic manipulation ...
-- **p. 2 / 1 Introduction - extractive body cue:** In this paper, we propose a ManiGaussian method that leverages a dynamic Gassuain Splatting framework for multi-task robotic manipulation.
-- **p. 2 / 1 Introduction - extractive body cue:** Different from conventional methods which only focus on semantic representation, our method mines the scene-level spatiotemporal dynamics via future scene reconstruction.
-- **p. 3 / 1 Introduction - extractive body cue:** We evaluate our ManiGaussian method on the RLBench dataset [26] with 10 tasks and 166 variants, where our method outperforms the state-of-the-art multi-task robotic manipulation ...
-- **p. 5 / 3 Approach - extractive body cue:** In this section, we first briefly introduce preliminaries on the problem formulation (Section 3.1), and then we present an overview of our pipeline (Section 3.2).
-- **p. 11 / 4 Experiments - extractive body cue:** Our method achieves the best performance with an average success rate of 44.8%, which is state-of-the-art, outperforming the previous arts including both perceptive and generative-based ...
-- **p. 12 / 4 Experiments - extractive body cue:** Though the dynamic loss may slightly impact short-term results due to the balance of different loss items, it significantly improves overall performance.
-- **p. 10 / 4 Experiments - extractive body cue:** The diversity of these tasks requires the agent to acquire generalizable knowledge about the intrinsical scene-level spatial-temporal dynamics for manipulation, rather than solely relying on ...
+- 여러 카메라에서 보이는 장면에 대해 동적 Gaussian 표현을 최적화한다.
+- 미래 장면 재구성 보조 목적이 다중 태스크 행동 예측에 주는 효과를 비교한다.
 
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+[검증한 원문](https://www.ecva.net/papers/eccv_2024/papers_ECCV/html/5194_ECCV_2024_paper.php)
 
 ## Evaluation Scope
 
@@ -86,7 +80,7 @@ Manipulation, contact, tactile, and dexterity의 3d_perception 문제를 이해�
 
 ## Why Read It
 
-Manipulation, contact, tactile, and dexterity의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 To address the challenges, previous arts have made great progress in general manipulation policy learning, which can be divided into two categories including perceptive methods and generative methods.를 문제로 두고, Our contributions can be summarized as follows: - We propose a dynamic Gaussian Splatting framework to learn the scenelevel spatiotemporal dynamics in general robotic manipulation tasks, so that the robotic agent can ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (1 Introduction), p. 2 (1 Introduction), p. 3 (1 Introduction), p. 8 (3 Approach), p. 6 (3 Approach), p. 10 (3 Approach) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 2 (1 Introduction), p. 3 (1 Introduction), p. 8 (3 Approach), p. 6 (3 Approach), p. 10 (3 Approach)이다.
 
 ## Semantic QA — PDF body cross-check
 

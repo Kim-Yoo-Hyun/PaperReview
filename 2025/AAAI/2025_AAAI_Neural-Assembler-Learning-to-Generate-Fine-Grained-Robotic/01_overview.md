@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-Planning and control의 benchmark 문제를 이해하기 위해 읽는다. 본문은 These assembly challenges are pervasive in daily life, as in scenarios like constructing LEGO models Chung et al.를 문제로 두고, For this novel task, we propose an end-to-end neural network, dubbed as Neural Assembler.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — These assembly challenges are pervasive in daily life, as in scenarios like constructing LEGO models Chung et al.
+
+방법 관련 발췌 — For this novel task, we propose an end-to-end neural network, dubbed as Neural Assembler.
 
 ## Problem and Motivation
 
@@ -84,7 +86,7 @@ Planning and control의 benchmark 문제를 이해하기 위해 읽는다. 본�
 
 ## Why Read It
 
-Planning and control의 benchmark 문제를 이해하기 위해 읽는다. 본문은 These assembly challenges are pervasive in daily life, as in scenarios like constructing LEGO models Chung et al.를 문제로 두고, For this novel task, we propose an end-to-end neural network, dubbed as Neural Assembler.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1 Introduction), p. 1 (1 Introduction), p. 2 (1 Introduction), p. 2 (1 Introduction), p. 13 (A.2 Implementation Details), p. 12 (A.2 Implementation Details) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 1 (1 Introduction), p. 2 (1 Introduction), p. 13 (A.2 Implementation Details), p. 12 (A.2 Implementation Details)이다.
 
 ## Semantic QA — PDF body cross-check
 

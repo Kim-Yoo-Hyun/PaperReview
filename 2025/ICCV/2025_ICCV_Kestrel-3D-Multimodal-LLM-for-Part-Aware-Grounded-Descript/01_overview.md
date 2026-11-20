@@ -19,7 +19,7 @@
 
 ## Why This Paper Is Here
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 However, a critical limitation persists: existing 3D MLLMs often fail to capture the fine-grained details of object parts and their material properties, which are essential for precise real-world interaction.를 문제로 두고, In summary, our contributions are as follows: • We introduce Part-Aware Point Grounded Description (PaPGD), a novel task that challenges 3D MLLMs to achieve detailed object understanding through materialaware, part-level segmentation an ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+Kestrel은 3D 물체의 특정 부위를 찾아 그 부위에 근거한 설명을 생성한다.
 
 ## Problem and Motivation
 
@@ -53,16 +53,10 @@ Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 �
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** In summary, our contributions are as follows: • We introduce Part-Aware Point Grounded Description (PaPGD), a novel task that challenges 3D MLLMs to achieve detailed ...
-- **p. 2 / 1. Introduction - extractive body cue:** To tackle the challenges posed by PaPGD, we propose Kestrel, a novel part-aware 3D MLLM designed to capture the intricate spatial and compositional details required ...
-- **p. 3 / 4. Method - extractive body cue:** To bridge this gap, we propose Kestrel, which combines a 3D MLLM with a query refinement mechanism to enable fine-grained part segmentation along with detailed ...
-- **p. 4 / 4.1. Kestrel - extractive body cue:** We introduce projector P1 to align the latent space of language and 3D vision.
-- **p. 6 / Model - extractive body cue:** In addition, we propose a new evaluation for the 3D CompositionAware Language Comprehension (3D-CALC) capabilities of 3D MLLMs.
-- **p. 5 / 5. Experiments - extractive body cue:** 5.2 investigates the performance of Kestrel in single-part grounding from both direct segmentation (3DCoMPaT-GrIn and PartNetMobility [63]) and reasoning segmentation perspectives (3DCoMPaT-GrIn and RPSeg3D [26]).
-- **p. 5 / Figure/Table caption - extractive body cue:** Figure 3. Qualitative results of Kestrel on Part-Aware Point Grounded Description, Reasoning and Direct Segmentation. The results show that Kestrel is capable of detailed 3D ...
-- **p. 6 / Figure/Table caption - extractive body cue:** Table 1. Part-Aware Point Grounded Description Results. Comparison of models on language understanding and multi-part grounding. Results marked with ! indicate metrics for the model ...
+- 여러 수준의 점 특징을 전달하고 질의 표현을 보정해 작은 부위를 식별한다.
+- 저자는 생성된 부위 설명과 그 설명이 가리키는 3D 분할을 평가한다.
 
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+[원문 초록](https://openaccess.thecvf.com/content/ICCV2025/html/Ahmed_Kestrel_3D_Multimodal_LLM_for_Part-Aware_Grounded_Description_ICCV_2025_paper.html)
 
 ## Evaluation Scope
 
@@ -83,4 +77,4 @@ Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 �
 
 ## Why Read It
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 However, a critical limitation persists: existing 3D MLLMs often fail to capture the fine-grained details of object parts and their material properties, which are essential for precise real-world interaction.를 문제로 두고, In summary, our contributions are as follows: • We introduce Part-Aware Point Grounded Description (PaPGD), a novel task that challenges 3D MLLMs to achieve detailed object understanding through materialaware, part-level segmentation an ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (1. Introduction), p. 1 (1. Introduction), p. 2 (1. Introduction), p. 4 (4.1. Kestrel), p. 4 (4.1. Kestrel), p. 3 (4. Method) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 2 (1. Introduction), p. 1 (1. Introduction), p. 4 (4.1. Kestrel), p. 3 (4. Method)이다.

@@ -79,4 +79,4 @@ pixelSplat은 카메라 자세를 아는 두 영상으로부터 새 장면의 3D
 
 ## Why Read It
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 In contrast, in the generalizable case, we need to back-propagate gradients through the representation and thus cannot rely on non-differentiable operations.를 문제로 두고, Our method consists of a two-view image encoder and a pixel-aligned Gaussian prediction module.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1. Introduction), p. 2 (1. Introduction), p. 1 (1. Introduction), p. 1 (Abstract), p. 3 (4. Image-conditioned 3D Gaussian Inference), p. 4 (4.1. Resolving Scale Ambiguity) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 1 (1. Introduction), p. 2 (1. Introduction), p. 1 (Abstract), p. 3 (4. Image-conditioned 3D Gaussian Inference), p. 4 (4.1. Resolving Scale Ambiguity)이다.

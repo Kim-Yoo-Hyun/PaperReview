@@ -71,7 +71,7 @@ MPO는 연속 제어에서 오프폴리시 경험으로 정책을 개선하는 �
 
 ## Why Read It
 
-RL, IL, offline learning, and robot data의 rl 문제를 이해하기 위해 읽는다. 본문은 While also popular, these algorithms can be difficult to tune, especially for high-dimensional domains like general robot manipulation tasks.를 문제로 두고, In this paper we propose a novel off-policy algorithm that benefits from the best properties of both classes.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1 INTRODUCTION), p. 1 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 1 (ABSTRACT), p. 1 (1 INTRODUCTION), p. 2 (1 INTRODUCTION) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 1 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 1 (ABSTRACT)이다.
 
 ## Semantic QA — PDF body cross-check
 

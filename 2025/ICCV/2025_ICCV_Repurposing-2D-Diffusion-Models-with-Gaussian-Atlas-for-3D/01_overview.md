@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-Robotics-enabling 3D perception의 generative 문제를 이해하기 위해 읽는다. 본문은 However, such models have significant limitations especially when trained solely on 3D data, as high-quality 3D data is relatively scarce compared to 2D images.를 문제로 두고, To summarize, our major contributions are three-fold: (i) We present a large-scale dataset, GaussianVerse, consisting of 205,737 high-quality 3D Gaussian fittings for diverse objects sampled from Sketchfab [43]; (ii) We propose a ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — However, such models have significant limitations especially when trained solely on 3D data, as high-quality 3D data is relatively scarce compared to 2D images.
+
+방법 관련 발췌 — To summarize, our major contributions are three-fold: (i) We present a large-scale dataset, GaussianVerse, consisting of 205,737 high-quality 3D Gaussian fittings for diverse objects sampled from Sketchfab [43]; (ii) We propose a ...
 
 ## Problem and Motivation
 
@@ -84,4 +86,4 @@ Robotics-enabling 3D perception의 generative 문제를 이해하기 위해 읽�
 
 ## Why Read It
 
-Robotics-enabling 3D perception의 generative 문제를 이해하기 위해 읽는다. 본문은 However, such models have significant limitations especially when trained solely on 3D data, as high-quality 3D data is relatively scarce compared to 2D images.를 문제로 두고, To summarize, our major contributions are three-fold: (i) We present a large-scale dataset, GaussianVerse, consisting of 205,737 high-quality 3D Gaussian fittings for diverse objects sampled from Sketchfab [43]; (ii) We propose a ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1. Introduction), p. 1 (1. Introduction), p. 2 (1. Introduction), p. 2 (1. Introduction), p. 4 (4. Formulating 3D Gaussians as 2D Atlas), p. 1 (1. Introduction) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 1 (1. Introduction), p. 2 (1. Introduction), p. 4 (4. Formulating 3D Gaussians as 2D Atlas)이다.

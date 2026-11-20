@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-Planning and control의 control 문제를 이해하기 위해 읽는다. 본문은 However, when applied to autonomous systems acting in the real-world, deterministic MPC is often unable to respond to large disturbances that occur due to environmental factors, model uncertainty, etc.를 문제로 두고, The main contribution of this work is the development of a novel differentiable tube-based MPC (DT-MPC) framework for safe, robust control.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — However, when applied to autonomous systems acting in the real-world, deterministic MPC is often unable to respond to large disturbances that occur due to environmental factors, model uncertainty, etc.
+
+방법 관련 발췌 — The main contribution of this work is the development of a novel differentiable tube-based MPC (DT-MPC) framework for safe, robust control.
 
 ## Problem and Motivation
 
@@ -86,7 +88,7 @@ Planning and control의 control 문제를 이해하기 위해 읽는다. 본문�
 
 ## Why Read It
 
-Planning and control의 control 문제를 이해하기 위해 읽는다. 본문은 However, when applied to autonomous systems acting in the real-world, deterministic MPC is often unable to respond to large disturbances that occur due to environmental factors, model uncertainty, etc.를 문제로 두고, The main contribution of this work is the development of a novel differentiable tube-based MPC (DT-MPC) framework for safe, robust control.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (I. INTRODUCTION), p. 2 (II. MATHEMATICAL BACKGROUND), p. 3 (II. MATHEMATICAL BACKGROUND), p. 1 (I. INTRODUCTION), p. 3 (II. MATHEMATICAL BACKGROUND), p. 5 (III. GENERALIZED DIFFERENTIABLE OPTIMAL CONTROL) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 1 (I. INTRODUCTION), p. 2 (II. MATHEMATICAL BACKGROUND), p. 3 (II. MATHEMATICAL BACKGROUND), p. 5 (III. GENERALIZED DIFFERENTIABLE OPTIMAL CONTROL)이다.
 
 ## Semantic QA — PDF body cross-check
 

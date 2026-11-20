@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다. 본문은 However, democratizing such an expensive framework for all robotics practitioners proves difficult as it utilizes private models and necessitates †를 문제로 두고, To this end, we introduce RoboFlamingo, a novel vision-language manipulation framework that leverages publicly accessible pre-trained VLMs to effectively construct manipulation policies for robotics.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — However, democratizing such an expensive framework for all robotics practitioners proves difficult as it utilizes private models and necessitates †
+
+방법 관련 발췌 — To this end, we introduce RoboFlamingo, a novel vision-language manipulation framework that leverages publicly accessible pre-trained VLMs to effectively construct manipulation policies for robotics.
 
 ## Problem and Motivation
 
@@ -83,7 +85,7 @@ VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다
 
 ## Why Read It
 
-VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다. 본문은 However, democratizing such an expensive framework for all robotics practitioners proves difficult as it utilizes private models and necessitates †를 문제로 두고, To this end, we introduce RoboFlamingo, a novel vision-language manipulation framework that leverages publicly accessible pre-trained VLMs to effectively construct manipulation policies for robotics.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1 INTRODUCTION), p. 1 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 4 (3 BACKGROUND), p. 5 (3 BACKGROUND), p. 8 (2) Does vision-language (VL) pre-training improve downstream robotic tasks?) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 1 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 4 (3 BACKGROUND), p. 5 (3 BACKGROUND), p. 8 (2) Does vision-language (VL) pre-training improve downstream robotic tasks?)이다.
 
 ## Semantic QA — PDF body cross-check
 

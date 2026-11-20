@@ -75,4 +75,4 @@ Transformer는 순환층 없이 어텐션을 사용해 입력 문장을 다른 �
 
 ## Why Read It
 
-Foundations: Vision and Language Models의 upstream 문제를 이해하기 위해 읽는다. 본문은 This makes it more difficult to learn dependencies between distant positions [12].를 문제로 두고, In this work we propose the Transformer, a model architecture eschewing recurrence and instead relying entirely on an attention mechanism to draw global dependencies between input and output.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (2 Background), p. 2 (1 Introduction), p. 6 (2 Background), p. 6 (2 Background), p. 7 (2 Background), p. 1 (Abstract) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 2 (2 Background), p. 2 (1 Introduction), p. 6 (2 Background), p. 7 (2 Background), p. 1 (Abstract)이다.

@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 However, in large-scale field missions or high-speed Unmanned Aerial Vehicle (UAV) flights, pure LIVO systems still face critical limitations.를 문제로 두고, To address these issues, we propose a tightly-coupled multi-sensor fusion system formulated within an Error-State Iterated Kalman Filter (ESIKF), aiming at globally consistent mapping in highly dynamic scenarios and robust operation in ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — However, in large-scale field missions or high-speed Unmanned Aerial Vehicle (UAV) flights, pure LIVO systems still face critical limitations.
+
+방법 관련 발췌 — To address these issues, we propose a tightly-coupled multi-sensor fusion system formulated within an Error-State Iterated Kalman Filter (ESIKF), aiming at globally consistent mapping in highly dynamic scenarios and robust operation in ...
 
 ## Problem and Motivation
 
@@ -82,4 +84,4 @@ Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 �
 
 ## Why Read It
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 However, in large-scale field missions or high-speed Unmanned Aerial Vehicle (UAV) flights, pure LIVO systems still face critical limitations.를 문제로 두고, To address these issues, we propose a tightly-coupled multi-sensor fusion system formulated within an Error-State Iterated Kalman Filter (ESIKF), aiming at globally consistent mapping in highly dynamic scenarios and robust operation in ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 2 (III. METHODOLOGY), p. 3 (III. METHODOLOGY), p. 2 (III. METHODOLOGY), p. 3 (III. METHODOLOGY) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 1 (I. INTRODUCTION), p. 2 (III. METHODOLOGY), p. 3 (III. METHODOLOGY)이다.

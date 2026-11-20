@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-Locomotion, whole-body, mobile manipulation, and humanoids의 humanoid 문제를 이해하기 위해 읽는다. 본문은 However, it can be exceptionally difficult to design a style-reward 𝑟𝑆 that leads a character to learn naturalistic behaviors, or behaviors that conform to a particular style.를 문제로 두고, The central contribution of this work is an adversarial learning approach for physics-based character animation that combines goalconditioned reinforcement with an adversarial motion prior, which enables the style of a character's movem ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — However, it can be exceptionally difficult to design a style-reward 𝑟𝑆 that leads a character to learn naturalistic behaviors, or behaviors that conform to a particular style.
+
+방법 관련 발췌 — The central contribution of this work is an adversarial learning approach for physics-based character animation that combines goalconditioned reinforcement with an adversarial motion prior, which enables the style of a character's movem ...
 
 ## Problem and Motivation
 
@@ -84,7 +86,7 @@ Locomotion, whole-body, mobile manipulation, and humanoids의 humanoid 문제를
 
 ## Why Read It
 
-Locomotion, whole-body, mobile manipulation, and humanoids의 humanoid 문제를 이해하기 위해 읽는다. 본문은 However, it can be exceptionally difficult to design a style-reward 𝑟𝑆 that leads a character to learn naturalistic behaviors, or behaviors that conform to a particular style.를 문제로 두고, The central contribution of this work is an adversarial learning approach for physics-based character animation that combines goalconditioned reinforcement with an adversarial motion prior, which enables the style of a character's movem ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 5 (4 BACKGROUND), p. 5 (4 BACKGROUND), p. 1 (1 INTRODUCTION), p. 1 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 7 (4 BACKGROUND) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 5 (4 BACKGROUND), p. 1 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 7 (4 BACKGROUND)이다.
 
 ## Semantic QA — PDF body cross-check
 

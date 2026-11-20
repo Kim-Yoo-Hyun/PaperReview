@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-Planning and control의 planning 문제를 이해하기 위해 읽는다. 본문은 Streams allow a planner to reason about conditions on the inputs and outputs of a conditional generator while treating its implementation as a black box.를 문제로 두고, We propose PDDLStream, a planning language that introduces streams as an interface for incorporating sam- ∗We gratefully acknowledge support from NSF grants 1523767 and 1723381; from AFOSR grant FA9550-17-1-0165; from ONR grant ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — Streams allow a planner to reason about conditions on the inputs and outputs of a conditional generator while treating its implementation as a black box.
+
+방법 관련 발췌 — We propose PDDLStream, a planning language that introduces streams as an interface for incorporating sam- ∗We gratefully acknowledge support from NSF grants 1523767 and 1723381; from AFOSR grant FA9550-17-1-0165; from ONR grant ...
 
 ## Problem and Motivation
 
@@ -72,7 +74,7 @@ Planning and control의 planning 문제를 이해하기 위해 읽는다. 본문
 
 ## Why Read It
 
-Planning and control의 planning 문제를 이해하기 위해 읽는다. 본문은 Streams allow a planner to reason about conditions on the inputs and outputs of a conditional generator while treating its implementation as a black box.를 문제로 두고, We propose PDDLStream, a planning language that introduces streams as an interface for incorporating sam- ∗We gratefully acknowledge support from NSF grants 1523767 and 1723381; from AFOSR grant FA9550-17-1-0165; from ONR grant ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1 Introduction), p. 1 (1 Introduction), p. 1 (1 Introduction), p. 8 (9 Experiments), p. 8 (9 Experiments) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 1 (1 Introduction), p. 8 (9 Experiments)이다.
 
 ## Semantic QA — PDF body cross-check
 

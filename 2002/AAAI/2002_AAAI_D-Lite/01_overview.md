@@ -24,7 +24,9 @@
 
 ## Why This Paper Is Here
 
-Planning and control의 navigation 문제를 이해하기 위해 읽는다. 본문은 The challenge is to identify these cells efficiently.를 문제로 두고, To gain insight into its behavior, we present various theoretical properties of LPA* that also apply to D* Lite.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — The challenge is to identify these cells efficiently.
+
+방법 관련 발췌 — To gain insight into its behavior, we present various theoretical properties of LPA* that also apply to D* Lite.
 
 ## Problem and Motivation
 
@@ -91,4 +93,4 @@ Planning and control의 navigation 문제를 이해하기 위해 읽는다. 본�
 
 ## Why Read It
 
-Planning and control의 navigation 문제를 이해하기 위해 읽는다. 본문은 The challenge is to identify these cells efficiently.를 문제로 두고, To gain insight into its behavior, we present various theoretical properties of LPA* that also apply to D* Lite.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (Abstract), p. 4 (Abstract), p. 2 (Abstract), p. 1 (Abstract), p. 1 (Abstract), p. 3 (Abstract) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 2 (Abstract), p. 4 (Abstract), p. 1 (Abstract), p. 3 (Abstract)이다.

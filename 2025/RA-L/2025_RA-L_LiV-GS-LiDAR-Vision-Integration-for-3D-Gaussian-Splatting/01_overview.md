@@ -78,4 +78,4 @@ LiV-GS는 실외 SLAM에서 LiDAR 기하와 영상 색 정보를 3D 가우시안
 
 ## Why Read It
 
-Robotics-enabling 3D perception의 navigation 문제를 이해하기 위해 읽는다. 본문은 Outdoor SLAM and scene reconstruction face unique challenges, such as lighting variations and unbounded depth scales, which make indoor RGBD-based solutions inadequate [4]-[8].를 문제로 두고, To the end, we introduce LiV-GS, a SLAM framework that uses 3D Gaussian spatial representations to seamlessly integrate LiDAR and camera images.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 4 (III. METHODOLOGY), p. 4 (III. METHODOLOGY), p. 3 (III. METHODOLOGY), p. 3 (III. METHODOLOGY) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 1 (I. INTRODUCTION), p. 4 (III. METHODOLOGY), p. 3 (III. METHODOLOGY)이다.

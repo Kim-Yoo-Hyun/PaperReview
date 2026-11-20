@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-Locomotion, whole-body, mobile manipulation, and humanoids의 humanoid 문제를 이해하기 위해 읽는다. 본문은 Prior works in physics-based simulation has addressed these challenges by developing specialized controllers for specific tasks such as locomotion, object interaction, and VR tracking.를 문제로 두고, Our framework consists of two stages.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — Prior works in physics-based simulation has addressed these challenges by developing specialized controllers for specific tasks such as locomotion, object interaction, and VR tracking.
+
+방법 관련 발췌 — Our framework consists of two stages.
 
 ## Problem and Motivation
 
@@ -85,7 +87,7 @@ Locomotion, whole-body, mobile manipulation, and humanoids의 humanoid 문제를
 
 ## Why Read It
 
-Locomotion, whole-body, mobile manipulation, and humanoids의 humanoid 문제를 이해하기 위해 읽는다. 본문은 Prior works in physics-based simulation has addressed these challenges by developing specialized controllers for specific tasks such as locomotion, object interaction, and VR tracking.를 문제로 두고, Our framework consists of two stages.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 4 (3 PRELIMINARIES), p. 7 (3. Inference), p. 4 (3 PRELIMINARIES), p. 8 (3. Inference) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 2 (1 INTRODUCTION), p. 4 (3 PRELIMINARIES), p. 7 (3. Inference), p. 8 (3. Inference)이다.
 
 ## Semantic QA — PDF body cross-check
 

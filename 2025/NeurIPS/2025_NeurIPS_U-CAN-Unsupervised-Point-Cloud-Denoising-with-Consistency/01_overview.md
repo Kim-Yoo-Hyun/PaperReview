@@ -20,7 +20,7 @@
 
 ## Why This Paper Is Here
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 However, the current unsupervised approaches still struggle to predict를 문제로 두고, Our main contributions can be summarized as follows. • We introduce U-CAN, a novel framework for unsupervised point cloud denoising by leveraging a neural network to infer a multi-step denoising path for ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+U-CAN은 잡음 없는 정답 점군 없이 여러 관측의 일관성을 이용해 점군의 잡음을 제거한다.
 
 ## Problem and Motivation
 
@@ -52,16 +52,10 @@ Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 �
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1 Introduction - extractive body cue:** Our main contributions can be summarized as follows. • We introduce U-CAN, a novel framework for unsupervised point cloud denoising by leveraging a neural network ...
-- **p. 2 / 1 Introduction - extractive body cue:** In response to this challenge, we introduce a novel consistency-aware constraint that specifically targets the denoising geometric consistency.
-- **p. 1 / Abstract - extractive body cue:** We achieve this by a novel loss which enables statistical reasoning on multiple noisy point cloud observations.
-- **p. 1 / Abstract - extractive body cue:** In this work, we introduce U-CAN, an Unsupervised framework for point cloud denoising with Consistency-Aware Noise2Noise matching.
-- **p. 9 / 4 Experiments - extractive body cue:** 3, where our method significantly outperforms DMR-TTD and ScoreDenoise-TTD, and also achieve better performance than the supervised method PU-Net designed for the upsampling task.
-- **p. 7 / 4 Experiments - extractive body cue:** As presented, our model significantly outperforms previous unsupervised denoising methods, especially for noises with large variances, and can even rival the results of supervised methods ...
-- **p. 8 / 4 Experiments - extractive body cue:** Specifically, by introducing the proposed denoising consistency constraint into ZS-N2N, we achieve significant improvements of nearly 1 dB over the baseline ZS-N2N.
-- **p. 7 / 4 Experiments - extractive body cue:** In particular, at the 10K resolution and under noise levels of 2% and 3%, our method outperforms all other supervised and unsupervised methods in the ...
+- 형상이나 장면의 각 점에 대해 여러 단계의 잡음 제거 경로를 예측한다.
+- 서로 잡음이 있는 관측을 대응시켜 깨끗한 점군과의 쌍을 만드는 비용을 줄인다.
 
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+[원문 초록](https://neurips.cc/virtual/2025/poster/116646)
 
 ## Evaluation Scope
 
@@ -85,4 +79,4 @@ Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 �
 
 ## Why Read It
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 However, the current unsupervised approaches still struggle to predict를 문제로 두고, Our main contributions can be summarized as follows. • We introduce U-CAN, a novel framework for unsupervised point cloud denoising by leveraging a neural network to infer a multi-step denoising path for ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1 Introduction), p. 2 (1 Introduction), p. 2 (1 Introduction), p. 1 (1 Introduction), p. 2 (1 Introduction), p. 1 (Abstract) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 1 (1 Introduction), p. 2 (1 Introduction), p. 1 (Abstract)이다.

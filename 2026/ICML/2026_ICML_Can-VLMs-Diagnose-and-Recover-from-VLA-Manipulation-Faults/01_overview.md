@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-World models, safety, uncertainty, and recovery의 benchmark 문제를 이해하기 위해 읽는다. 본문은 However, due to current technical limitations, existing VLA models fre를 문제로 두고, To address these challenges, we introduce VLA-FixBench, a benchmark for VLM-assisted VLA fault diagnosis and recovery, with over 6,000 annotated failure cases across perception, planning, and control.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — However, due to current technical limitations, existing VLA models fre
+
+방법 관련 발췌 — To address these challenges, we introduce VLA-FixBench, a benchmark for VLM-assisted VLA fault diagnosis and recovery, with over 6,000 annotated failure cases across perception, planning, and control.
 
 ## Problem and Motivation
 
@@ -85,7 +87,7 @@ World models, safety, uncertainty, and recovery의 benchmark 문제를 이해하
 
 ## Why Read It
 
-World models, safety, uncertainty, and recovery의 benchmark 문제를 이해하기 위해 읽는다. 본문은 However, due to current technical limitations, existing VLA models fre를 문제로 두고, To address these challenges, we introduce VLA-FixBench, a benchmark for VLM-assisted VLA fault diagnosis and recovery, with over 6,000 annotated failure cases across perception, planning, and control.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1. Introduction), p. 1 (1. Introduction), p. 2 (1. Introduction), p. 2 (1. Introduction), p. 3 (Approach), p. 3 (Approach) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 1 (1. Introduction), p. 2 (1. Introduction), p. 3 (Approach)이다.
 
 ## Semantic QA — PDF body cross-check
 

@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다. 본문은 To address these challenges and utilize VLMs more effectively, prior work has primarily adopted two strategies.를 문제로 두고, We propose a unified framework that enables simultaneous multimodal reasoning and language-steered latent action planning using a single VLM (Figure 2 (1) and (2)).를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — To address these challenges and utilize VLMs more effectively, prior work has primarily adopted two strategies.
+
+방법 관련 발췌 — We propose a unified framework that enables simultaneous multimodal reasoning and language-steered latent action planning using a single VLM (Figure 2 (1) and (2)).
 
 ## Problem and Motivation
 
@@ -86,4 +88,4 @@ VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다
 
 ## Why Read It
 
-VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다. 본문은 To address these challenges and utilize VLMs more effectively, prior work has primarily adopted two strategies.를 문제로 두고, We propose a unified framework that enables simultaneous multimodal reasoning and language-steered latent action planning using a single VLM (Figure 2 (1) and (2)).를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1 INTRODUCTION), p. 1 (1 INTRODUCTION), p. 4 (3. Atomic-Instruction Manipulation), p. 4 (3. Atomic-Instruction Manipulation), p. 2 (3. Atomic-Instruction Manipulation), p. 5 (3. Atomic-Instruction Manipulation) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 1 (1 INTRODUCTION), p. 4 (3. Atomic-Instruction Manipulation), p. 2 (3. Atomic-Instruction Manipulation), p. 5 (3. Atomic-Instruction Manipulation)이다.

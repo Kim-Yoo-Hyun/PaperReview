@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-World models, safety, uncertainty, and recovery의 robot_data 문제를 이해하기 위해 읽는다. 본문은 For example, R3M (Nair et al., 2022) and MVP (Xiao et al., 2022) learn discriminative representations from large-scale video datasets such as Ego4D (Grauman et al., 2022), while UniPI (Du et al., ...를 문제로 두고, Additionally, We evaluate our method on six challenging real-world tasks with over 900 trials.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — For example, R3M (Nair et al., 2022) and MVP (Xiao et al., 2022) learn discriminative representations from large-scale video datasets such as Ego4D (Grauman et al., 2022), while UniPI (Du et al., ...
+
+방법 관련 발췌 — Additionally, We evaluate our method on six challenging real-world tasks with over 900 trials.
 
 ## Problem and Motivation
 
@@ -83,4 +85,4 @@ World models, safety, uncertainty, and recovery의 robot_data 문제를 이해�
 
 ## Why Read It
 
-World models, safety, uncertainty, and recovery의 robot_data 문제를 이해하기 위해 읽는다. 본문은 For example, R3M (Nair et al., 2022) and MVP (Xiao et al., 2022) learn discriminative representations from large-scale video datasets such as Ego4D (Grauman et al., 2022), while UniPI (Du et al., ...를 문제로 두고, Additionally, We evaluate our method on six challenging real-world tasks with over 900 trials.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 16 (A.2 NETWORK ARCHITECTURE), p. 15 (A.1 IMPLEMENTATION DETAILS), p. 4 (3 METHOD), p. 4 (3 METHOD) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 2 (1 INTRODUCTION), p. 16 (A.2 NETWORK ARCHITECTURE), p. 15 (A.1 IMPLEMENTATION DETAILS), p. 4 (3 METHOD)이다.

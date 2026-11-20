@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 Moreover, vision-language models like CLIP (Radford et al., 2021) and LSeg (Li et al., 2022) have been bridging the gap between color images and semantic features in 2D space.를 문제로 두고, Besides, we introduce a language-specific parameter that enables the meaningful blending of language features from different Gaussians.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — Moreover, vision-language models like CLIP (Radford et al., 2021) and LSeg (Li et al., 2022) have been bridging the gap between color images and semantic features in 2D space.
+
+방법 관련 발췌 — Besides, we introduce a language-specific parameter that enables the meaningful blending of language features from different Gaussians.
 
 ## Problem and Motivation
 
@@ -83,4 +85,4 @@ Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 �
 
 ## Why Read It
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 Moreover, vision-language models like CLIP (Radford et al., 2021) and LSeg (Li et al., 2022) have been bridging the gap between color images and semantic features in 2D space.를 문제로 두고, Besides, we introduce a language-specific parameter that enables the meaningful blending of language features from different Gaussians.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 1 (1 INTRODUCTION), p. 4 (3 METHODOLOGY), p. 3 (3 METHODOLOGY) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 1 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 4 (3 METHODOLOGY), p. 3 (3 METHODOLOGY)이다.

@@ -20,7 +20,9 @@
 
 ## Why This Paper Is Here
 
-Planning and control의 planning 문제를 이해하기 위해 읽는다. 본문은 Such strategies are challenged in long-horizon settings, where the 1 를 문제로 두고, We propose Text2Motion, a language-based planning framework that interfaces an LLM with a library of learned skills and a geometric feasibility planner [8] to solve complex sequential manipulation tasks (Figure 1).를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — Such strategies are challenged in long-horizon settings, where the 1
+
+방법 관련 발췌 — We propose Text2Motion, a language-based planning framework that interfaces an LLM with a library of learned skills and a geometric feasibility planner [8] to solve complex sequential manipulation tasks (Figure 1).
 
 ## Problem and Motivation
 
@@ -87,4 +89,4 @@ Planning and control의 planning 문제를 이해하기 위해 읽는다. 본문
 
 ## Why Read It
 
-Planning and control의 planning 문제를 이해하기 위해 읽는다. 본문은 Such strategies are challenged in long-horizon settings, where the 1 를 문제로 두고, We propose Text2Motion, a language-based planning framework that interfaces an LLM with a library of learned skills and a geometric feasibility planner [8] to solve complex sequential manipulation tasks (Figure 1).를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1 Introduction), p. 3 (3.1 LLM and skill library), p. 4 (3.2 The planning objective), p. 1 (1 Introduction), p. 2 (1 Introduction), p. 5 (4.2 Shooting-based planning) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 1 (1 Introduction), p. 3 (3.1 LLM and skill library), p. 4 (3.2 The planning objective), p. 2 (1 Introduction), p. 5 (4.2 Shooting-based planning)이다.

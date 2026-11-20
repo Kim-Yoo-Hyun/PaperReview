@@ -77,4 +77,4 @@ ProgPrompt는 이용 가능한 로봇 행동과 환경 물체를 프로그램 �
 
 ## Why Read It
 
-Planning and control의 planning 문제를 이해하기 위해 읽는다. 본문은 We illustrate a scenario where an assertion succeeds or fails, and how the generated plan corrects the error before executing the next step.를 문제로 두고, We present a programmatic LLM prompt structure that enables plan generation functional across situated environments, robot capabilities, and tasks.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 2 (I. INTRODUCTION) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 2 (I. INTRODUCTION), p. 1 (I. INTRODUCTION)이다.

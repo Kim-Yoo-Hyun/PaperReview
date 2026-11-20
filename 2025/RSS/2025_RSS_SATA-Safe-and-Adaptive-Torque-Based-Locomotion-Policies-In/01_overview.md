@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-Locomotion, whole-body, mobile manipulation, and humanoids의 locomotion 문제를 이해하기 위해 읽는다. 본문은 However, challenges such as a highly nonlinear state ‘space and inefficient exploration during training have hindered their broader adoption, To address these limit를 문제로 두고, + Stable and Efficient Torque-Based Learning: We propose «novel framework for learning torque-based loco- ‘motion policies with a growth mechanism that gradually. unlocks torque limits, control frequency, and reward terms, enhancing sam ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — However, challenges such as a highly nonlinear state ‘space and inefficient exploration during training have hindered their broader adoption, To address these limit
+
+방법 관련 발췌 — + Stable and Efficient Torque-Based Learning: We propose «novel framework for learning torque-based loco- ‘motion policies with a growth mechanism that gradually. unlocks torque limits, control frequency, and reward terms, enhancing sam ...
 
 ## Problem and Motivation
 
@@ -86,4 +88,4 @@ Locomotion, whole-body, mobile manipulation, and humanoids의 locomotion 문제�
 
 ## Why Read It
 
-Locomotion, whole-body, mobile manipulation, and humanoids의 locomotion 문제를 이해하기 위해 읽는다. 본문은 However, challenges such as a highly nonlinear state ‘space and inefficient exploration during training have hindered their broader adoption, To address these limit를 문제로 두고, + Stable and Efficient Torque-Based Learning: We propose «novel framework for learning torque-based loco- ‘motion policies with a growth mechanism that gradually. unlocks torque limits, control frequency, and reward terms, enhancing sam ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (Abstract), p. 1 (1. Iyrropuction), p. 2 (1. Iyrropuction), p. 2 (1. Iyrropuction), p. 4 (A. Biomechanical Modet), p. 5 (A. Implementation of the Growth Mechanism) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 1 (Abstract), p. 1 (1. Iyrropuction), p. 2 (1. Iyrropuction), p. 4 (A. Biomechanical Modet), p. 5 (A. Implementation of the Growth Mechanism)이다.

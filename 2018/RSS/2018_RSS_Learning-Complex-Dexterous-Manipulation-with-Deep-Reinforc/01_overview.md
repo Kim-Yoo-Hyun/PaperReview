@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-RL, IL, offline learning, and robot data의 il 문제를 이해하기 위해 읽는다. 본문은 However, these methods typically rely on accurate dynamics models and state estimates, which are often difficult to obtain for contact rich manipulation tasks, especially in the real world.를 문제로 두고, To overcome this challenge, we propose to augment the policy search process with a small number of human demonstrations collected in virtual reality (VR).를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — However, these methods typically rely on accurate dynamics models and state estimates, which are often difficult to obtain for contact rich manipulation tasks, especially in the real world.
+
+방법 관련 발췌 — To overcome this challenge, we propose to augment the policy search process with a small number of human demonstrations collected in virtual reality (VR).
 
 ## Problem and Motivation
 
@@ -82,7 +84,7 @@ RL, IL, offline learning, and robot data의 il 문제를 이해하기 위해 읽
 
 ## Why Read It
 
-RL, IL, offline learning, and robot data의 il 문제를 이해하기 위해 읽는다. 본문은 However, these methods typically rely on accurate dynamics models and state estimates, which are often difficult to obtain for contact rich manipulation tasks, especially in the real world.를 문제로 두고, To overcome this challenge, we propose to augment the policy search process with a small number of human demonstrations collected in virtual reality (VR).를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 5 (IV. DEMO AUGMENTED POLICY GRADIENT (DAPG)), p. 5 (IV. DEMO AUGMENTED POLICY GRADIENT (DAPG)) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 1 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 5 (IV. DEMO AUGMENTED POLICY GRADIENT (DAPG))이다.
 
 ## Semantic QA — PDF body cross-check
 

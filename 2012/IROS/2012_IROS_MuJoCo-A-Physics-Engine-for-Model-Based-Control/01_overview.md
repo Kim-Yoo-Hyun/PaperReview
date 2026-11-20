@@ -80,7 +80,7 @@ MuJoCo는 접촉이 있는 다관절 동역학을 모델 기반 제어에 필요
 
 ## Why Read It
 
-Planning and control의 simulation 문제를 이해하기 위해 읽는다. 본문은 However they lack the speed, accuracy and overall feature sets needed to automate the controller design process itself.를 문제로 두고, This is useful for approximating derivatives via finite differencing, which in turn enables numerical optimization. • Inverse dynamics can always be computed, even in the presence of contacts and equality constraints.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 7 (III. MODELING), p. 2 (II. ALGORITHMIC FOUNDATIONS) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 1 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 7 (III. MODELING), p. 2 (II. ALGORITHMIC FOUNDATIONS)이다.
 
 ## Semantic QA — PDF body cross-check
 

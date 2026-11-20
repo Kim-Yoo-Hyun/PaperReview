@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-Robotics-enabling 3D perception의 navigation 문제를 이해하기 위해 읽는다. 본문은 In our experiments, the proposal network and the bounding box regressors are not the current performance bottleneck, as modern detectors use an over-sufficient number of proposals in testing (1K proposals for < ...를 문제로 두고, This also enables our method to learn detectors for new classes which would have been impossible to predict and assign.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — In our experiments, the proposal network and the bounding box regressors are not the current performance bottleneck, as modern detectors use an over-sufficient number of proposals in testing (1K proposals for < ...
+
+방법 관련 발췌 — This also enables our method to learn detectors for new classes which would have been impossible to predict and assign.
 
 ## Problem and Motivation
 
@@ -84,4 +86,4 @@ Robotics-enabling 3D perception의 navigation 문제를 이해하기 위해 읽�
 
 ## Why Read It
 
-Robotics-enabling 3D perception의 navigation 문제를 이해하기 위해 읽는다. 본문은 In our experiments, the proposal network and the bounding box regressors are not the current performance bottleneck, as modern detectors use an over-sufficient number of proposals in testing (1K proposals for < ...를 문제로 두고, This also enables our method to learn detectors for new classes which would have been impossible to predict and assign.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 5 (3 Preliminaries), p. 1 (1 Introduction), p. 1 (1 Introduction), p. 4 (3 Preliminaries), p. 4 (3 Preliminaries), p. 2 (X. Zhou et al) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 5 (3 Preliminaries), p. 1 (1 Introduction), p. 4 (3 Preliminaries), p. 2 (X. Zhou et al)이다.

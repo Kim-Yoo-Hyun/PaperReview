@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-Robotics-enabling 3D perception의 navigation 문제를 이해하기 위해 읽는다. 본문은 This gives free computation for various attributes and relationships. • We propose a two-step robustification approach to optimizing semantic recognition using imperfect existing detectors, which allows the automation of a mainly manual ...를 문제로 두고, The input to our method is the typical output of 3D scanners and consists of 3D mesh models, registered RGB panoramas and the corresponding camera parameters, such as the data in Matterport3D ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — This gives free computation for various attributes and relationships. • We propose a two-step robustification approach to optimizing semantic recognition using imperfect existing detectors, which allows the automation of a mainly manual ...
+
+방법 관련 발췌 — The input to our method is the typical output of 3D scanners and consists of 3D mesh models, registered RGB panoramas and the corresponding camera parameters, such as the data in Matterport3D ...
 
 ## Problem and Motivation
 
@@ -85,4 +87,4 @@ Robotics-enabling 3D perception의 navigation 문제를 이해하기 위해 읽�
 
 ## Why Read It
 
-Robotics-enabling 3D perception의 navigation 문제를 이해하기 위해 읽는다. 본문은 This gives free computation for various attributes and relationships. • We propose a two-step robustification approach to optimizing semantic recognition using imperfect existing detectors, which allows the automation of a mainly manual ...를 문제로 두고, The input to our method is the typical output of 3D scanners and consists of 3D mesh models, registered RGB panoramas and the corresponding camera parameters, such as the data in Matterport3D ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (1. Introduction), p. 3 (C S1), p. 4 (4. Constructing the 3D Scene Graph), p. 4 (3. 3D Scene Graph Structure), p. 2 (1. Introduction), p. 1 (Abstract) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 2 (1. Introduction), p. 3 (C S1), p. 4 (4. Constructing the 3D Scene Graph), p. 4 (3. 3D Scene Graph Structure), p. 1 (Abstract)이다.

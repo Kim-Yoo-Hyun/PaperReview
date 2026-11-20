@@ -79,7 +79,7 @@ NoMaD는 목표 영상의 유무에 따라 하나의 확산 정책으로 목표�
 
 ## Why Read It
 
-Planning and control의 navigation 문제를 이해하기 위해 읽는다. 본문은 Prior works have often addressed this challenge by training a separate high-level policy or goal proposal system that generates suitable exploratory tasks, for example using high-level planning [1], hierarchical reinforcement learning [ ...를 문제로 두고, In this paper, we present a design for such a policy by combining a Transformer backbone for encoding the highdimensional stream of visual observations with diffusion models for modeling a sequence of ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (I. INTRODUCTION), p. 2 (III. PRELIMINARIES), p. 1 (I. INTRODUCTION), p. 2 (III. PRELIMINARIES), p. 4 (IV. METHOD), p. 3 (IV. METHOD) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 1 (I. INTRODUCTION), p. 2 (III. PRELIMINARIES), p. 4 (IV. METHOD), p. 3 (IV. METHOD)이다.
 
 ## Semantic QA — PDF body cross-check
 

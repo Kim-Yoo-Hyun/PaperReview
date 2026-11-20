@@ -80,4 +80,4 @@ OVA-Fields는 자연어 질의로 3D 장면에서 로봇이 상호작용할 수 
 
 ## Why Read It
 
-VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다. 본문은 The first challenge is that current models mainly predict affordances for single objects [5, 6, 25, 36], relying on isolated 2D images or high-quality 3D point clouds that require precise scanning and ...를 문제로 두고, Here, we introduce our framework, OVA-Fields, which enables accurate affordance detection in 3D scenes based on natural language queries.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1. Introduction), p. 2 (1. Introduction), p. 2 (1. Introduction), p. 1 (1. Introduction), p. 3 (3.2. Spatial Feature Extraction and Feature Fusion), p. 4 (3.2. Spatial Feature Extraction and Feature Fusion) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 1 (1. Introduction), p. 2 (1. Introduction), p. 3 (3.2. Spatial Feature Extraction and Feature Fusion), p. 4 (3.2. Spatial Feature Extraction and Feature Fusion)이다.

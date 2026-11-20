@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-Planning and control의 navigation 문제를 이해하기 위해 읽는다. 본문은 However, this simple black-box approach impairs VLA Model Modular System Instruction Actions Planning Model Instruction Sub-instructions Grounding Model Navigation Model Actions No target, explore Target is grounded, navigate x x No syn ...를 문제로 두고, In summary, our main contributions are: • We propose D3D-VLP, a 3D vision-language-planning model that unifies multi-step planning, grounding, and navigation in unseen and dynamic environments within a single 3D memory and ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — However, this simple black-box approach impairs VLA Model Modular System Instruction Actions Planning Model Instruction Sub-instructions Grounding Model Navigation Model Actions No target, explore Target is grounded, navigate x x No syn ...
+
+방법 관련 발췌 — In summary, our main contributions are: • We propose D3D-VLP, a 3D vision-language-planning model that unifies multi-step planning, grounding, and navigation in unseen and dynamic environments within a single 3D memory and ...
 
 ## Problem and Motivation
 
@@ -76,4 +78,4 @@ Planning and control의 navigation 문제를 이해하기 위해 읽는다. 본�
 
 ## Why Read It
 
-Planning and control의 navigation 문제를 이해하기 위해 읽는다. 본문은 However, this simple black-box approach impairs VLA Model Modular System Instruction Actions Planning Model Instruction Sub-instructions Grounding Model Navigation Model Actions No target, explore Target is grounded, navigate x x No syn ...를 문제로 두고, In summary, our main contributions are: • We propose D3D-VLP, a 3D vision-language-planning model that unifies multi-step planning, grounding, and navigation in unseen and dynamic environments within a single 3D memory and ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1. Introduction), p. 1 (1. Introduction), p. 2 (1. Introduction), p. 2 (1. Introduction), p. 2 (3. Our Method), p. 3 (3. Our Method) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 1 (1. Introduction), p. 2 (1. Introduction), p. 2 (3. Our Method), p. 3 (3. Our Method)이다.

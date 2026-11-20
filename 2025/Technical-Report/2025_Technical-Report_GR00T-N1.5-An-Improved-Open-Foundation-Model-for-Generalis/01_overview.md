@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-VLA and generalist robot policies의 humanoid 문제를 이해하기 위해 읽는다. 본문은 We expect users of N1.5 should observe better performance compared to N1, in particular improved generalization and better language following ability.를 문제로 두고, We introduce GR00T N1.5, an upgraded version of the GR00T N1 foundation model for humanoid robots.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — We expect users of N1.5 should observe better performance compared to N1, in particular improved generalization and better language following ability.
+
+방법 관련 발췌 — We introduce GR00T N1.5, an upgraded version of the GR00T N1 foundation model for humanoid robots.
 
 ## Problem and Motivation
 
@@ -81,4 +83,4 @@ VLA and generalist robot policies의 humanoid 문제를 이해하기 위해 읽�
 
 ## Why Read It
 
-VLA and generalist robot policies의 humanoid 문제를 이해하기 위해 읽는다. 본문은 We expect users of N1.5 should observe better performance compared to N1, in particular improved generalization and better language following ability.를 문제로 두고, We introduce GR00T N1.5, an upgraded version of the GR00T N1 foundation model for humanoid robots.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (Introduction), p. 1 (Architecture), p. 2 (Generalization to novel behaviors using Neural Trajectories), p. 2 (Learning to manipulate novel objects from human ego videos), p. 3 (Post-training on Unitree G1), p. 1 (Architecture) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 1 (Introduction), p. 1 (Architecture), p. 2 (Generalization to novel behaviors using Neural Trajectories), p. 2 (Learning to manipulate novel objects from human ego videos), p. 3 (Post-training on Unitree G1)이다.

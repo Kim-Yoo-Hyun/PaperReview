@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 The SSC literature mainly relies on cross-entropy loss which considers each voxel independently, lacking context awareness.를 문제로 두고, Our framework infers dense semantic scenes, hallucinating scenery outside the field of view of the image (dark voxels, right). and outdoor scenes.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — The SSC literature mainly relies on cross-entropy loss which considers each voxel independently, lacking context awareness.
+
+방법 관련 발췌 — Our framework infers dense semantic scenes, hallucinating scenery outside the field of view of the image (dark voxels, right). and outdoor scenes.
 
 ## Problem and Motivation
 
@@ -82,4 +84,4 @@ Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 �
 
 ## Why Read It
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 The SSC literature mainly relies on cross-entropy loss which considers each voxel independently, lacking context awareness.를 문제로 두고, Our framework infers dense semantic scenes, hallucinating scenery outside the field of view of the image (dark voxels, right). and outdoor scenes.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1. Introduction), p. 1 (1. Introduction), p. 2 (3. Method), p. 3 (3.1. Features Line of Sight Projection (FLoSP)), p. 2 (3. Method), p. 3 (3.2. 3D Context Relation Prior (3D CRP)) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 1 (1. Introduction), p. 2 (3. Method), p. 3 (3.1. Features Line of Sight Projection (FLoSP)), p. 3 (3.2. 3D Context Relation Prior (3D CRP))이다.

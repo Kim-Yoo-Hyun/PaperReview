@@ -78,7 +78,7 @@ Relay Policy Learning은 긴 조작 과제를 중간 목표들로 나누고 모�
 
 ## Why Read It
 
-RL, IL, offline learning, and robot data의 il 문제를 이해하기 위해 읽는다. 본문은 However, HRL methods have traditionally struggled due to various practical challenges such as exploration [5], skill segmentation [6] and reward definition [7].를 문제로 두고, Lastly, and most importantly, since our method ensures that every low-level trajectory is goal-conditioned (allowing for a simple reward specification) and of the same, limited length, it is very amenable to reinforcement ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1 Introduction), p. 5 (3 Preliminaries), p. 6 (3 Preliminaries), p. 6 (3 Preliminaries), p. 7 (3 Preliminaries), p. 3 (3 Preliminaries) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 1 (1 Introduction), p. 5 (3 Preliminaries), p. 6 (3 Preliminaries), p. 7 (3 Preliminaries), p. 3 (3 Preliminaries)이다.
 
 ## Semantic QA — PDF body cross-check
 

@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-Locomotion, whole-body, mobile manipulation, and humanoids의 locomotion 문제를 이해하기 위해 읽는다. 본문은 However, low cost poses a new challenge for parkour which is not as prominent in prior walking works.를 문제로 두고, To allow the robot to adjust itself as per the obstacle type at deployment, we propose a novel dual distillation method.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — However, low cost poses a new challenge for parkour which is not as prominent in prior walking works.
+
+방법 관련 발췌 — To allow the robot to adjust itself as per the obstacle type at deployment, we propose a novel dual distillation method.
 
 ## Problem and Motivation
 
@@ -83,7 +85,7 @@ Locomotion, whole-body, mobile manipulation, and humanoids의 locomotion 문제�
 
 ## Why Read It
 
-Locomotion, whole-body, mobile manipulation, and humanoids의 locomotion 문제를 이해하기 위해 읽는다. 본문은 However, low cost poses a new challenge for parkour which is not as prominent in prior walking works.를 문제로 두고, To allow the robot to adjust itself as per the obstacle type at deployment, we propose a novel dual distillation method.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 3 (1 Introduction), p. 3 (1 Introduction), p. 6 (3 Method), p. 5 (3 Method), p. 5 (3 Method), p. 6 (3 Method) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 3 (1 Introduction), p. 6 (3 Method), p. 5 (3 Method)이다.
 
 ## Semantic QA — PDF body cross-check
 

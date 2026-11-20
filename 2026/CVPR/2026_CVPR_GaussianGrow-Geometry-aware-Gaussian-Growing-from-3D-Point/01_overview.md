@@ -77,4 +77,4 @@ GaussianGrow는 점군 기하와 텍스트를 조건으로 3D 가우시안 장�
 
 ## Why Read It
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 mains limited due to the lack of proper geometry priors.를 문제로 두고, Our contributions can be summarized as follows: • We propose GaussianGrow, a novel approach that generates 3D Gaussians by learning to grow them from easily accessible 3D point clouds with supervisions from ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (1. Introduction), p. 2 (1. Introduction), p. 5 (3.3. Iterative Inpainting and Refinement), p. 5 (3.2. Appearance Generation), p. 4 (3.2. Appearance Generation), p. 3 (3.2. Appearance Generation) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 2 (1. Introduction), p. 5 (3.3. Iterative Inpainting and Refinement), p. 5 (3.2. Appearance Generation), p. 4 (3.2. Appearance Generation), p. 3 (3.2. Appearance Generation)이다.

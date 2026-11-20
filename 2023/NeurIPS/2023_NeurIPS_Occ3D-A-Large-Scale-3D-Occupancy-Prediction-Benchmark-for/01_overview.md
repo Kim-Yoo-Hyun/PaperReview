@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-Robotics-enabling 3D perception의 benchmark 문제를 이해하기 위해 읽는다. 본문은 While the resulting 3D bounding boxes are compact, the level of expressiveness they provide is restricted, as illustrated in Figure 1: (1) 3D bounding box representation erases the geometric details of objects, ...를 문제로 두고, The contributions of this work are as follows: (1) We introduce Occ3D, a high-quality 3D occupancy prediction benchmark to facilitate research in this emerging area; (2) We put forward a rigorous automatic ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — While the resulting 3D bounding boxes are compact, the level of expressiveness they provide is restricted, as illustrated in Figure 1: (1) 3D bounding box representation erases the geometric details of objects, ...
+
+방법 관련 발췌 — The contributions of this work are as follows: (1) We introduce Occ3D, a high-quality 3D occupancy prediction benchmark to facilitate research in this emerging area; (2) We put forward a rigorous automatic ...
 
 ## Problem and Motivation
 
@@ -81,4 +83,4 @@ Robotics-enabling 3D perception의 benchmark 문제를 이해하기 위해 읽�
 
 ## Why Read It
 
-Robotics-enabling 3D perception의 benchmark 문제를 이해하기 위해 읽는다. 본문은 While the resulting 3D bounding boxes are compact, the level of expressiveness they provide is restricted, as illustrated in Figure 1: (1) 3D bounding box representation erases the geometric details of objects, ...를 문제로 두고, The contributions of this work are as follows: (1) We introduce Occ3D, a high-quality 3D occupancy prediction benchmark to facilitate research in this emerging area; (2) We put forward a rigorous automatic ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (1 Introduction), p. 2 (1 Introduction), p. 1 (Abstract), p. 2 (1 Introduction), p. 2 (1 Introduction), p. 1 (Abstract) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 2 (1 Introduction), p. 1 (Abstract)이다.

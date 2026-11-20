@@ -11,7 +11,7 @@
 | 분야별 비교 | [분야별 합성](./synthesis/README.md) · [로보틱스 연구 동향](./work/update/ROBOTICS_TRENDS.md) |
 | 연구 질문과 다음 검증 | [연구 설계](./research/RESEARCH_GUIDE.md) · [연구 후보](./work/research_topics/README.md) · [다음 작업](./TODO.md) |
 | 실험 재현 | [Docker 재현](./work/experiments/README.md) |
-| 원문 검토와 유지보수 | [원문 감사 및 교정](./research/SOURCE_AUDIT.md#교정-재검증) · [표본 감사와 누락 심사](./research/README.md) · [레지스트리 변경](./work/update/REGISTRY.md) · [운영 규칙](./AGENTS.md) |
+| 출처와 등록 품질 | [오류율·원문 감사](./research/SOURCE_AUDIT.md) · [누락 심사](./research/GAPFILL.md) · [등록·분류 기준](./work/update/REGISTRY.md) · [운영 규칙](./AGENTS.md) |
 
 ## 현황
 

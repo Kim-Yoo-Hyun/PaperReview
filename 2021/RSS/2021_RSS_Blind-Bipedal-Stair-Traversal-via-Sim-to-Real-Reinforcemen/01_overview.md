@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-Locomotion, whole-body, mobile manipulation, and humanoids의 locomotion 문제를 이해하기 위해 읽는다. 본문은 On stair-like environments, this is especially apparent due to the difficulty of recovery from missteps with only two legs.를 문제로 두고, We present a training pipeline which produces policies capable of blindly ascending and descending stairs in the real world.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — On stair-like environments, this is especially apparent due to the difficulty of recovery from missteps with only two legs.
+
+방법 관련 발췌 — We present a training pipeline which produces policies capable of blindly ascending and descending stairs in the real world.
 
 ## Problem and Motivation
 
@@ -85,4 +87,4 @@ Locomotion, whole-body, mobile manipulation, and humanoids의 locomotion 문제�
 
 ## Why Read It
 
-Locomotion, whole-body, mobile manipulation, and humanoids의 locomotion 문제를 이해하기 위해 읽는다. 본문은 On stair-like environments, this is especially apparent due to the difficulty of recovery from missteps with only two legs.를 문제로 두고, We present a training pipeline which produces policies capable of blindly ascending and descending stairs in the real world.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 3 (II. REINFORCEMENT LEARNING FORMULATION), p. 2 (II. REINFORCEMENT LEARNING FORMULATION) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 1 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 3 (II. REINFORCEMENT LEARNING FORMULATION), p. 2 (II. REINFORCEMENT LEARNING FORMULATION)이다.

@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 [15] introduced 3D Gaussian Splatting (3D-GS) to tackle this limitation using a set of differentiable 3D Gaussians that can achieve state-of-the-art rendering quality and real-time speed on a single GPU, outperforming previous ...를 문제로 두고, To sum up, our contributions can be summarized as follows: - We introduce the first structure-aware 3D Gaussian Splatting method that leverages both local and global structure of the scene. - We ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — [15] introduced 3D Gaussian Splatting (3D-GS) to tackle this limitation using a set of differentiable 3D Gaussians that can achieve state-of-the-art rendering quality and real-time speed on a single GPU, outperforming previous ...
+
+방법 관련 발췌 — To sum up, our contributions can be summarized as follows: - We introduce the first structure-aware 3D Gaussian Splatting method that leverages both local and global structure of the scene. - We ...
 
 ## Problem and Motivation
 
@@ -82,4 +84,4 @@ Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 �
 
 ## Why Read It
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 [15] introduced 3D Gaussian Splatting (3D-GS) to tackle this limitation using a set of differentiable 3D Gaussians that can achieve state-of-the-art rendering quality and real-time speed on a single GPU, outperforming previous ...를 문제로 두고, To sum up, our contributions can be summarized as follows: - We introduce the first structure-aware 3D Gaussian Splatting method that leverages both local and global structure of the scene. - We ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (1 Introduction), p. 1 (1 Introduction), p. 3 (1 Introduction), p. 7 (3 Method), p. 6 (3 Method), p. 6 (3 Method) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 2 (1 Introduction), p. 1 (1 Introduction), p. 3 (1 Introduction), p. 7 (3 Method), p. 6 (3 Method)이다.

@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 feature embeddings, causing difficulty in separating new or occluded categories from existing ones.를 문제로 두고, To address these challenges, we propose a novel framework built upon the powerful 3D scene representation of 3D Gaussian Splatting (3DGS) [18] that jointly tackles new-class discovery and low-rank semantic adaptation for ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — feature embeddings, causing difficulty in separating new or occluded categories from existing ones.
+
+방법 관련 발췌 — To address these challenges, we propose a novel framework built upon the powerful 3D scene representation of 3D Gaussian Splatting (3DGS) [18] that jointly tackles new-class discovery and low-rank semantic adaptation for ...
 
 ## Problem and Motivation
 
@@ -86,4 +88,4 @@ Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 �
 
 ## Why Read It
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 feature embeddings, causing difficulty in separating new or occluded categories from existing ones.를 문제로 두고, To address these challenges, we propose a novel framework built upon the powerful 3D scene representation of 3D Gaussian Splatting (3DGS) [18] that jointly tackles new-class discovery and low-rank semantic adaptation for ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (1. Introduction), p. 1 (1. Introduction), p. 2 (1. Introduction), p. 1 (1. Introduction), p. 4 (4.3. Gradient Low-Rank Mechanism for Semantic), p. 5 (4.4. Detection of Invisible Classes) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 2 (1. Introduction), p. 1 (1. Introduction), p. 4 (4.3. Gradient Low-Rank Mechanism for Semantic), p. 5 (4.4. Detection of Invisible Classes)이다.

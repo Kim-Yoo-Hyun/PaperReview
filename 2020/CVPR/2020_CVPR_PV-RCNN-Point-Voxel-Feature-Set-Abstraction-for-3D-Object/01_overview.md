@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 However, we show that a unified framework could integrate the best of the two types of methods, and surpass the prior stateof-the-art 3D detection methods with remarkable margins.를 문제로 두고, We propose a novel 3D object detection framework, PVRCNN (Illustrated in Fig.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — However, we show that a unified framework could integrate the best of the two types of methods, and surpass the prior stateof-the-art 3D detection methods with remarkable margins.
+
+방법 관련 발췌 — We propose a novel 3D object detection framework, PVRCNN (Illustrated in Fig.
 
 ## Problem and Motivation
 
@@ -80,4 +82,4 @@ Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 �
 
 ## Why Read It
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 However, we show that a unified framework could integrate the best of the two types of methods, and surpass the prior stateof-the-art 3D detection methods with remarkable margins.를 문제로 두고, We propose a novel 3D object detection framework, PVRCNN (Illustrated in Fig.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1. Introduction), p. 2 (1. Introduction), p. 1 (1. Introduction), p. 6 (3.4. Training losses), p. 8 (4.3. 3D Detection on the Waymo Open Dataset), p. 7 (4.2. 3D Detection on the KITTI Dataset) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 1 (1. Introduction), p. 2 (1. Introduction), p. 6 (3.4. Training losses), p. 8 (4.3. 3D Detection on the Waymo Open Dataset), p. 7 (4.2. 3D Detection on the KITTI Dataset)이다.

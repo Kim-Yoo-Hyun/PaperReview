@@ -68,6 +68,7 @@ Humanoid는 별도 taxonomy로 만들지 않는다. Locomotion, whole-body contr
 | [work/sources/resources.json](./work/sources/resources.json) | benchmark/dataset·metric·code/project를 합친 단일 resource view | 생성 파일. 기존 benchmark/metric 항목은 `cue_only`이며 code/project URL은 manifest link일 뿐 재현성 증거가 아니다. |
 | [research/REGISTRY_INDEX.csv](./research/REGISTRY_INDEX.csv) / [REGISTRY_STATS.md](./research/REGISTRY_STATS.md) | 전체 paper를 filter/search하고 registry 품질을 점검하는 생성 view | 직접 수정하지 않는다. manifest·tier·tracker에서 재생성한다. |
 | [work/scripts/audit_repository.py](./work/scripts/audit_repository.py) | registry·tier·tracker·queue·note·taxonomy 무결성 검사 | read-only이며 주요 변경 전후에 실행한다. |
+| [원문 감사](./research/SOURCE_AUDIT.md) | 교정 전후 오류율, 현재 미확인 범위, 이전 감사 | 논문별 판정·근거를 [감사 원장](./work/sources/batches/source_audit_2026_11.jsonl)에 반영하고 `render_source_audit.py --write --verify-corrections`로 생성한다. |
 
 등급 규모는 가이드이며 중요도에 따라 CORE/NEXT를 조정한다. 현재 수량은 [통계](./research/REGISTRY_STATS.md)가 관리한다.
 
@@ -220,7 +221,7 @@ paper.pdf            # optional, non-canonical
 ### 작업 문서와 후보 명칭
 
 - Markdown 첫 제목은 역할이나 주제를 드러내는 짧은 명사구로 쓴다. `연구 후보`, `접촉 적응`, `접촉 적응 재현`처럼 같은 주제에 같은 표현을 쓴다. 날짜, 작업 ID, 상태는 필요한 경우 본문에 둔다.
-- 공통 문서는 `REGISTRY_AUDIT.md`처럼 짧은 `UPPER_SNAKE_CASE.md`, 분야별 비교는 `04_vla.md`처럼 `NN_<short_topic>.md`를 사용한다. 기존 생성 파일의 경로는 생성기와 참조를 함께 갱신할 수 있을 때만 변경한다.
+- 공통 문서는 `SOURCE_AUDIT.md`처럼 짧은 `UPPER_SNAKE_CASE.md`, 분야별 비교는 `04_vla.md`처럼 `NN_<short_topic>.md`를 사용한다. 기존 생성 파일의 경로는 생성기와 참조를 함께 갱신할 수 있을 때만 변경한다.
 - 현행 후보는 `work/research_topics/<short_topic>/`의 영문 `lower_snake_case` 디렉토리를 사용한다. 각 주제는 `내용/README.md`와 `재현 방법/README.md`를 진입점으로 삼는다.
 - 종료·보류 후보에서 재사용할 수 있는 측정, 판단의 근거, 재개에 필요한 새 증거는 [결과](./work/research_topics/RESULTS.md)에 합친다. 구형 dossier와 중복 로그는 핵심 내용을 합치거나 Git 이력에서 복원할 수 있는지 확인한 뒤 작업본에서 제거한다. 재현에 쓰는 코드·원시 입력은 해당 실행 경로에 둔다.
 

@@ -19,7 +19,7 @@
 
 ## Why This Paper Is Here
 
-Benchmarks and Datasets의 benchmark 문제를 이해하기 위해 읽는다. 본문은 However, we also recognize that training robots in the real world is slow (the real world runs no faster than real time and cannot be parallelized), dangerous (poorly-trained agents can unwittingly injure ...를 문제로 두고, Specifically, Habitat consists of the following: 1.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+스캔된 실내 장면에서 내비게이션 에이전트를 훈련하고 비교할 플랫폼을 제시한다.
 
 ## Problem and Motivation
 
@@ -53,16 +53,10 @@ Benchmarks and Datasets의 benchmark 문제를 이해하기 위해 읽는다. �
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** Specifically, Habitat consists of the following: 1.
-- **p. 2 / 1. Introduction - extractive body cue:** We propose a unified embodied agent stack with the Habitat platform, including generic dataset support, a highly performant simulator (Habitat-Sim), and a flexible API (Habitat-API) ...
-- **p. 1 / Abstract - extractive body cue:** We present Habitat, a platform for research in embodied artificial intelligence (AI).
-- **p. 4 / 3. Habitat Platform - extractive body cue:** RGB, depth, contact, GPS, compass sensors) attached to each agent. - Scenario and task API: allows portable definition of tasks and their evaluation protocols. - ...
-- **p. 1 / Abstract - extractive body cue:** Habitat enables training embodied agents (virtual robots) in highly efficient photorealistic 3D simulation.
-- **p. 7 / 5. Results and Findings - extractive body cue:** Interestingly, RGB agents do not significantly outperform Blind agents; we hypothesize because both are equipped with GPS sensors.
-- **p. 8 / 5. Results and Findings - extractive body cue:** Our findings so far are that RL (PPO) agents significantly outperform SLAM [20].
-- **p. 7 / 5. Results and Findings - extractive body cue:** All RL (PPO) agents start out with far worse SPL, but RL (PPO) Depth, in particular, improves dramatically and matches the classic baseline at approximately ...
+- 센서·장면 설정이 가능한 렌더링 시뮬레이터와 학습용 API를 제공한다.
+- PointNav에서 입력 센서와 학습량을 바꾸어 학습 정책과 고전적 경로 탐색을 비교한다.
 
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+[검증한 원문](https://openaccess.thecvf.com/content_ICCV_2019/html/Savva_Habitat_A_Platform_for_Embodied_AI_Research_ICCV_2019_paper.html)
 
 ## Evaluation Scope
 
@@ -84,4 +78,4 @@ Benchmarks and Datasets의 benchmark 문제를 이해하기 위해 읽는다. �
 
 ## Why Read It
 
-Benchmarks and Datasets의 benchmark 문제를 이해하기 위해 읽는다. 본문은 However, we also recognize that training robots in the real world is slow (the real world runs no faster than real time and cannot be parallelized), dangerous (poorly-trained agents can unwittingly injure ...를 문제로 두고, Specifically, Habitat consists of the following: 1.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1. Introduction), p. 2 (1. Introduction), p. 2 (1. Introduction), p. 2 (1. Introduction), p. 5 (4. PointGoal Navigation at Scale), p. 4 (3. Habitat Platform) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 1 (1. Introduction), p. 2 (1. Introduction), p. 5 (4. PointGoal Navigation at Scale), p. 4 (3. Habitat Platform)이다.

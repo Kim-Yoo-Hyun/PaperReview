@@ -19,7 +19,7 @@
 
 ## Why This Paper Is Here
 
-Planning and control의 estimation 문제를 이해하기 위해 읽는다. 본문은 (3) Important generalizations (e.g., growing-memory filters, nonstationary prediction) require new derivations, frequently of considerable difficulty to the nonspecialist.를 문제로 두고, The new method developed here is applied to two well-known problems, confirming and extending earlier results.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+Kalman은 상태공간 표현에서 관측이 들어올 때마다 동적 시스템의 상태 추정치를 갱신하는 선형 필터를 도출한다.
 
 ## Problem and Motivation
 
@@ -53,16 +53,10 @@ Planning and control의 estimation 문제를 이해하기 위해 읽는다. 본�
 
 ## Main Claims and Actual Contribution
 
-- **p. 1 / Introduction - extractive body cue:** The new method developed here is applied to two well-known problems, confirming and extending earlier results.
-- **p. 9 / Introduction - extractive body cue:** (q) The duality theorem offers a powerful tool for developing more deeply the theory (as opposed to the computation) of Wiener filters, as mentioned in ...
-- **p. 8 / Introduction - extractive body cue:** This is due to two things: (1) The time dependence of Φ(t + 1; t) and M(t); (2) the fact that the estimation starts at ...
-- **p. 4 / Introduction - extractive body cue:** These results may be summarized as follows:
-- **p. 4 / Introduction - extractive body cue:** These results are well-known though not easily accessible in the control systems literature.
-- **p. 7 / Introduction - extractive body cue:** (i) The results stated in Theorem 3 do not resolve completely Problem I.
-- **p. 7 / Introduction - extractive body cue:** If t1 ≥ t + 1, we first observe by repeated application of (16) that x(t + s) = Φ(t + s; t + 1)x(t ...
-- **p. 8 / Introduction - extractive body cue:** and the minimum performance index at time t is given by
+- 최적 추정 오차의 공분산 방정식으로부터 필터 계수를 계산한다.
+- 잡음 없는 조절 문제와 필터링 사이의 쌍대성을 보이고 예제에 적용한다.
 
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+[원문 초록](https://api.crossref.org/works/10.1115/1.3662552)
 
 ## Evaluation Scope
 
@@ -86,7 +80,7 @@ Planning and control의 estimation 문제를 이해하기 위해 읽는다. 본�
 
 ## Why Read It
 
-Planning and control의 estimation 문제를 이해하기 위해 읽는다. 본문은 (3) Important generalizations (e.g., growing-memory filters, nonstationary prediction) require new derivations, frequently of considerable difficulty to the nonspecialist.를 문제로 두고, The new method developed here is applied to two well-known problems, confirming and extending earlier results.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (Introduction), p. 2 (Introduction), p. 1 (Introduction), p. 3 (Introduction), p. 4 (Introduction), p. 5 (Introduction) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 1 (Introduction), p. 2 (Introduction), p. 3 (Introduction), p. 4 (Introduction), p. 5 (Introduction)이다.
 
 ## Semantic QA — PDF body cross-check
 

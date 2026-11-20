@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-Manipulation, contact, tactile, and dexterity의 robot_data 문제를 이해하기 위해 읽는다. 본문은 They are designed to highlight the role of geometric structure in manipulation tasks, with a progressive increase in difficulty, from simple rigid-body manipulation with diverse objects to more challenging tasks involving multiple ...를 문제로 두고, To evaluate our approach and future advancements in this direction, we propose a novel suite of seven tasks, realized using NIVIDA IsaacLab (Mittal et al., 2023) to utilize its GPU-based simulation engine.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — They are designed to highlight the role of geometric structure in manipulation tasks, with a progressive increase in difficulty, from simple rigid-body manipulation with diverse objects to more challenging tasks involving multiple ...
+
+방법 관련 발췌 — To evaluate our approach and future advancements in this direction, we propose a novel suite of seven tasks, realized using NIVIDA IsaacLab (Mittal et al., 2023) to utilize its GPU-based simulation engine.
 
 ## Problem and Motivation
 
@@ -86,4 +88,4 @@ Manipulation, contact, tactile, and dexterity의 robot_data 문제를 이해하�
 
 ## Why Read It
 
-Manipulation, contact, tactile, and dexterity의 robot_data 문제를 이해하기 위해 읽는다. 본문은 They are designed to highlight the role of geometric structure in manipulation tasks, with a progressive increase in difficulty, from simple rigid-body manipulation with diverse objects to more challenging tasks involving multiple ...를 문제로 두고, To evaluate our approach and future advancements in this direction, we propose a novel suite of seven tasks, realized using NIVIDA IsaacLab (Mittal et al., 2023) to utilize its GPU-based simulation engine.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 1 (1 INTRODUCTION), p. 1 (1 INTRODUCTION), p. 3 (2 BACKGROUND), p. 3 (3 METHODOLOGY) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 2 (1 INTRODUCTION), p. 1 (1 INTRODUCTION), p. 3 (2 BACKGROUND), p. 3 (3 METHODOLOGY)이다.

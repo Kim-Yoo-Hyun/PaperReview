@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-Manipulation, contact, tactile, and dexterity의 manipulation 문제를 이해하기 위해 읽는다. 본문은 Fig, 2: (a) The peg-in-hole problem is considered as inserting peg into its matching hole on a planar board (a randomly generated peg is adopted as the example).를 문제로 두고, (b) A paired comer on the peg and hole: this local geometry enables the downstream iterative insertion process.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — Fig, 2: (a) The peg-in-hole problem is considered as inserting peg into its matching hole on a planar board (a randomly generated peg is adopted as the example).
+
+방법 관련 발췌 — (b) A paired comer on the peg and hole: this local geometry enables the downstream iterative insertion process.
 
 ## Problem and Motivation
 
@@ -76,7 +78,7 @@ Manipulation, contact, tactile, and dexterity의 manipulation 문제를 이해�
 
 ## Why Read It
 
-Manipulation, contact, tactile, and dexterity의 manipulation 문제를 이해하기 위해 읽는다. 본문은 Fig, 2: (a) The peg-in-hole problem is considered as inserting peg into its matching hole on a planar board (a randomly generated peg is adopted as the example).를 문제로 두고, (b) A paired comer on the peg and hole: this local geometry enables the downstream iterative insertion process.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 3 (A. Preliminaries), p. 4 (B. Problem Statement), p. 4 (A. Preliminaries), p. 5 (A. Task Mechanics and Interaction Primitives), p. 5 (A. Task Mechanics and Interaction Primitives), p. 4 (IV. FUNNEL-BASED MANIPULATION PLANNING) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 3 (A. Preliminaries), p. 4 (B. Problem Statement), p. 4 (A. Preliminaries), p. 5 (A. Task Mechanics and Interaction Primitives), p. 4 (IV. FUNNEL-BASED MANIPULATION PLANNING)이다.
 
 ## Semantic QA — PDF body cross-check
 

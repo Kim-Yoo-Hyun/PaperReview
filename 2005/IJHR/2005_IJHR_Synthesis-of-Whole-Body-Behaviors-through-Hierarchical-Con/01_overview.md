@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-Locomotion, whole-body, mobile manipulation, and humanoids의 humanoid 문제를 이해하기 위해 읽는다. 본문은 Controlling humanoids in these environments requires us to synthesize and change complex whole-body behaviors on-demand in the presence of high uncertainty.를 문제로 두고, In contrast, our methodology integrates constraints in the control formulation as primary controls and projects the operational tasks and the posture primitives into the constraint motion null-space, thus eliminating the motion componen ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — Controlling humanoids in these environments requires us to synthesize and change complex whole-body behaviors on-demand in the presence of high uncertainty.
+
+방법 관련 발췌 — In contrast, our methodology integrates constraints in the control formulation as primary controls and projects the operational tasks and the posture primitives into the constraint motion null-space, thus eliminating the motion componen ...
 
 ## Problem and Motivation
 
@@ -85,4 +87,4 @@ Locomotion, whole-body, mobile manipulation, and humanoids의 humanoid 문제를
 
 ## Why Read It
 
-Locomotion, whole-body, mobile manipulation, and humanoids의 humanoid 문제를 이해하기 위해 읽는다. 본문은 Controlling humanoids in these environments requires us to synthesize and change complex whole-body behaviors on-demand in the presence of high uncertainty.를 문제로 두고, In contrast, our methodology integrates constraints in the control formulation as primary controls and projects the operational tasks and the posture primitives into the constraint motion null-space, thus eliminating the motion componen ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1. Introduction), p. 2 (1. Introduction), p. 2 (1. Introduction), p. 1 (Body text (section not recovered)), p. 4 (3. Integration of constraints), p. 1 (1. Introduction) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 1 (1. Introduction), p. 2 (1. Introduction), p. 1 (Body text (section not recovered)), p. 4 (3. Integration of constraints)이다.

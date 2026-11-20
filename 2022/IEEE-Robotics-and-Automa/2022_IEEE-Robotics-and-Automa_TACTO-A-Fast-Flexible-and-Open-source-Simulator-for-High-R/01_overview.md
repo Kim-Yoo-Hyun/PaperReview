@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-Manipulation, contact, tactile, and dexterity의 simulation 문제를 이해하기 위해 읽는다. 본문은 One aspect that has proven so far to be difficult to simulate is tactile sensing, and in particular visionbased tactile sensors [2], [3], [4] which provide rich highresolution measurements.를 문제로 두고, This allows to perform orders of magnitude more experiments at a fraction of the effort, and in many cases of the time.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — One aspect that has proven so far to be difficult to simulate is tactile sensing, and in particular visionbased tactile sensors [2], [3], [4] which provide rich highresolution measurements.
+
+방법 관련 발췌 — This allows to perform orders of magnitude more experiments at a fraction of the effort, and in many cases of the time.
 
 ## Problem and Motivation
 
@@ -78,4 +80,4 @@ Manipulation, contact, tactile, and dexterity의 simulation 문제를 이해하�
 
 ## Why Read It
 
-Manipulation, contact, tactile, and dexterity의 simulation 문제를 이해하기 위해 읽는다. 본문은 One aspect that has proven so far to be difficult to simulate is tactile sensing, and in particular visionbased tactile sensors [2], [3], [4] which provide rich highresolution measurements.를 문제로 두고, This allows to perform orders of magnitude more experiments at a fraction of the effort, and in many cases of the time.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (I. INTRODUCTION), p. 3 (1. Phong's model for RGB rendering from Depth (simple), p. 3 (1. Phong's model for RGB rendering from Depth (simple), p. 6 (IV. SIMULATED EXPERIMENTS), p. 5 (IV. SIMULATED EXPERIMENTS), p. 7 (V. SIM2REAL EXPERIMENTS) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 1 (I. INTRODUCTION), p. 3 (1. Phong's model for RGB rendering from Depth (simple), p. 6 (IV. SIMULATED EXPERIMENTS), p. 5 (IV. SIMULATED EXPERIMENTS), p. 7 (V. SIM2REAL EXPERIMENTS)이다.

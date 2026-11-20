@@ -19,7 +19,7 @@
 
 ## Why This Paper Is Here
 
-World models, safety, uncertainty, and recovery의 safety 문제를 이해하기 위해 읽는다. 본문은 Additionally, existing datasets predominantly consist of expert demonstrations, lacking the stochasticity in intentions necessary for learning strong action controllability.를 문제로 두고, By scaling up human videos and introducing continuous latent actions as unified proxy, we present DreamDojo, the first world model of its kind that shows zero-shot generalization to unseen objects and novel ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+사람의 1인칭 영상에서 상호작용 동역학을 사전학습한 뒤 로봇 행동에 조건화해 미래 영상을 생성한다.
 
 ## Problem and Motivation
 
@@ -53,16 +53,10 @@ World models, safety, uncertainty, and recovery의 safety 문제를 이해하기
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** By scaling up human videos and introducing continuous latent actions as unified proxy, we present DreamDojo, the first world model of its kind that shows ...
-- **p. 2 / 1. Introduction - extractive body cue:** In this work, we introduce DreamDojo, a foundation world model for open-world dexterous robot tasks.
-- **p. 3 / 3.1. Overview - extractive body cue:** Our whole training procedure consists of three phases: 3
-- **p. 5 / 3.3.1. Model Architecture - extractive body cue:** To realize precise action following, we propose two improvements based on the original architecture.
-- **p. 3 / 1. Introduction - extractive body cue:** It also enables live teleoperation and online model-based planning.
-- **p. 13 / Figure/Table caption - extractive body cue:** Table 7: Generalization ability after distillation. Thanks to our strong pretraining, DreamDojo shows consistently better generalization than the baseline after distillation. Lastly, we ablate the ...
-- **p. 14 / Figure/Table caption - extractive body cue:** Figure 6: Live teleoperation. We can teleoperate a virtual G1 robot using the PICO VR controller in real time. to DreamDojo to predict future video ...
-- **p. 12 / 4.5. Ablations of Our Design Choices - extractive body cue:** Both relative actions and chunked injection can significantly improve simulation quality, indicating their importance for achieving precise action controllability.
+- 행동 레이블이 없는 사람 영상에 잠재 행동을 사용하고 로봇 데이터로 후속 학습한다.
+- 여러 로봇의 행동 조건과 미관측 장면에서 영상 예측을 평가하고 추론용 증류를 수행한다.
 
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+[검증한 원문](https://proceedings.mlr.press/v306/gao26q.html)
 
 ## Evaluation Scope
 
@@ -86,7 +80,7 @@ World models, safety, uncertainty, and recovery의 safety 문제를 이해하기
 
 ## Why Read It
 
-World models, safety, uncertainty, and recovery의 safety 문제를 이해하기 위해 읽는다. 본문은 Additionally, existing datasets predominantly consist of expert demonstrations, lacking the stochasticity in intentions necessary for learning strong action controllability.를 문제로 두고, By scaling up human videos and introducing continuous latent actions as unified proxy, we present DreamDojo, the first world model of its kind that shows zero-shot generalization to unseen objects and novel ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (1. Introduction), p. 2 (1. Introduction), p. 3 (1. Introduction), p. 6 (3.3.1. Model Architecture), p. 7 (3.3.2. Pretraining from Human Videos), p. 5 (3.3.1. Model Architecture) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 2 (1. Introduction), p. 3 (1. Introduction), p. 6 (3.3.1. Model Architecture), p. 7 (3.3.2. Pretraining from Human Videos), p. 5 (3.3.1. Model Architecture)이다.
 
 ## Semantic QA — PDF body cross-check
 

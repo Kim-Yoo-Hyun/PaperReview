@@ -76,7 +76,7 @@ Gemini Robotics는 멀티모달 기반 모델을 실제 로봇 행동 생성에 
 
 ## Why Read It
 
-VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다. 본문은 However, as a VLM, there are inherent limitations for robot control, especially for more dexterous tasks, due to the intermediate steps needed to connect the model's innate embodied reasoning capabilities to robotic ...를 문제로 두고, To this end, we introduce the Gemini Robotics family of embodied AI models, built on top of Gemini 2.0, our most advanced multimodal foundation model.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 13 (2.0 Flash), p. 3 (1. Introduction), p. 8 (3.5 Sonnet), p. 12 (2.3. Gemini 2.0 Enables Zero and Few-Shot Robot Control), p. 2 (1. Introduction), p. 14 (3. Robot Actions with Gemini Robotics) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 13 (2.0 Flash), p. 3 (1. Introduction), p. 8 (3.5 Sonnet), p. 12 (2.3. Gemini 2.0 Enables Zero and Few-Shot Robot Control), p. 2 (1. Introduction), p. 14 (3. Robot Actions with Gemini Robotics)이다.
 
 ## Semantic QA — PDF body cross-check
 

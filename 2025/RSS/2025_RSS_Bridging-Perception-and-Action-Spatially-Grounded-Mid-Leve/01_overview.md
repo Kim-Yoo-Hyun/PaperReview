@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-RL, IL, offline learning, and robot data의 robot_data 문제를 이해하기 위해 읽는다. 본문은 Large pre-trained robotics models have made significant progress in recent years towards improving robotic generalization capabilities by leveraging large-scale pre-training datasets, However, these models still face challenges in adapt ...를 문제로 두고, We show that while different mid-level representations excel at different tasks, our method can leverage these task-specitfic benefits to achieve consistently higher performance on a wide range of environments.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — Large pre-trained robotics models have made significant progress in recent years towards improving robotic generalization capabilities by leveraging large-scale pre-training datasets, However, these models still face challenges in adapt ...
+
+방법 관련 발췌 — We show that while different mid-level representations excel at different tasks, our method can leverage these task-specitfic benefits to achieve consistently higher performance on a wide range of environments.
 
 ## Problem and Motivation
 
@@ -82,7 +84,7 @@ RL, IL, offline learning, and robot data의 robot_data 문제를 이해하기 �
 
 ## Why Read It
 
-RL, IL, offline learning, and robot data의 robot_data 문제를 이해하기 위해 읽는다. 본문은 Large pre-trained robotics models have made significant progress in recent years towards improving robotic generalization capabilities by leveraging large-scale pre-training datasets, However, these models still face challenges in adapt ...를 문제로 두고, We show that while different mid-level representations excel at different tasks, our method can leverage these task-specitfic benefits to achieve consistently higher performance on a wide range of environments.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1. Ivrropuction), p. 2 (1. Ivrropuction), p. 3 (1. Ivrropuction), p. 1 (1. Ivrropuction), p. 2 (1. Ivrropuction), p. 4 (V. ARCHITECTURE) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 1 (1. Ivrropuction), p. 2 (1. Ivrropuction), p. 3 (1. Ivrropuction), p. 4 (V. ARCHITECTURE)이다.
 
 ## Semantic QA — PDF body cross-check
 

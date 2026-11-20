@@ -75,4 +75,4 @@
 
 ## Why Read It
 
-Robotics-enabling 3D perception의 benchmark 문제를 이해하기 위해 읽는다. 본문은 Although there has been impressive research progress on this topic, a significant limitation is the availability suitable RGB-D datasets from which models can be trained.를 문제로 두고, In this paper, we introduce Matterport3D, a large-scale RGB-D dataset containing 10,800 panoramic views from 194,400 RGB-D images of 90 building-scale scenes.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1. Introduction), p. 1 (1. Introduction), p. 2 (1. Introduction), p. 6 (4.3. Surface Normal Estimation), p. 8 (4.5. Semantic Voxel Labeling), p. 7 (4.3. Surface Normal Estimation) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 1 (1. Introduction), p. 2 (1. Introduction), p. 6 (4.3. Surface Normal Estimation), p. 8 (4.5. Semantic Voxel Labeling), p. 7 (4.3. Surface Normal Estimation)이다.

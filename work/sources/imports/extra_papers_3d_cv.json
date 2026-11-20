@@ -311,7 +311,8 @@
     ],
     "project": "not identified",
     "pdf": "https://openaccess.thecvf.com/content/CVPR2024/papers/Cheng_HandDiff_3D_Hand_Pose_Estimation_with_Diffusion_on_Image-Point_Cloud_CVPR_2024_paper.pdf",
-    "page": "https://openaccess.thecvf.com/content/CVPR2024/html/Cheng_HandDiff_3D_Hand_Pose_Estimation_with_Diffusion_on_Image-Point_Cloud_CVPR_2024_paper.html"
+    "page": "https://openaccess.thecvf.com/content/CVPR2024/html/Cheng_HandDiff_3D_Hand_Pose_Estimation_with_Diffusion_on_Image-Point_Cloud_CVPR_2024_paper.html",
+    "reproducibility": {"checkpoint": {"status": "reported", "source": "https://api.github.com/repos/cwc1260/HandDiff/git/trees/f7fb3e813a3bcfb06b902e697de58c7ef7bcc43e?recursive=1", "verified_on": "2026-11-20", "evidence": "NYU 실험 모델 best_model.pth의 분할 압축 파일 z01·z02·zip 세 개와 각 크기를 저자 트리에서 확인했다."}}
   },
   {
     "title": "IPoD: Implicit Field Learning with Point Diffusion for Generalizable 3D Object Reconstruction from Single RGB-D Images",

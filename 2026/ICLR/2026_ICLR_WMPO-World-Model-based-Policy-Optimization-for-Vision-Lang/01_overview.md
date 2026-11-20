@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-World models, safety, uncertainty, and recovery의 safety 문제를 이해하기 위해 읽는다. 본문은 Nevertheless, integrating these models with existing VLAs remains a challenge.를 문제로 두고, To this end, we propose World Model-based Policy Optimization (WMPO), as illustrated in Fig.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — Nevertheless, integrating these models with existing VLAs remains a challenge.
+
+방법 관련 발췌 — To this end, we propose World Model-based Policy Optimization (WMPO), as illustrated in Fig.
 
 ## Problem and Motivation
 
@@ -85,7 +87,7 @@ World models, safety, uncertainty, and recovery의 safety 문제를 이해하기
 
 ## Why Read It
 
-World models, safety, uncertainty, and recovery의 safety 문제를 이해하기 위해 읽는다. 본문은 Nevertheless, integrating these models with existing VLAs remains a challenge.를 문제로 두고, To this end, we propose World Model-based Policy Optimization (WMPO), as illustrated in Fig.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (1 Introduction), p. 1 (1 Introduction), p. 2 (1 Introduction), p. 3 (1 Introduction), p. 2 (1 Introduction), p. 4 (1. Imagined Trajectory Generation) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 2 (1 Introduction), p. 1 (1 Introduction), p. 3 (1 Introduction), p. 4 (1. Imagined Trajectory Generation)이다.
 
 ## Semantic QA — PDF body cross-check
 

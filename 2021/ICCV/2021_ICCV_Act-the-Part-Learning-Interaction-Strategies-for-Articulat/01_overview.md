@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 Passive part segmentation algorithms require detailed annotation and cannot generalize to new categories.를 문제로 두고, To address these challenges, we introduce Act the Part 를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — Passive part segmentation algorithms require detailed annotation and cannot generalize to new categories.
+
+방법 관련 발췌 — To address these challenges, we introduce Act the Part
 
 ## Problem and Motivation
 
@@ -86,7 +88,7 @@ Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 �
 
 ## Why Read It
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 Passive part segmentation algorithms require detailed annotation and cannot generalize to new categories.를 문제로 두고, To address these challenges, we introduce Act the Part 를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1. Introduction), p. 1 (1. Introduction), p. 3 (3.1. Problem Formulation), p. 2 (1. Introduction), p. 2 (1. Introduction), p. 4 (3.2. Learning to Act to Discover Parts) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 1 (1. Introduction), p. 3 (3.1. Problem Formulation), p. 2 (1. Introduction), p. 4 (3.2. Learning to Act to Discover Parts)이다.
 
 ## Semantic QA — PDF body cross-check
 

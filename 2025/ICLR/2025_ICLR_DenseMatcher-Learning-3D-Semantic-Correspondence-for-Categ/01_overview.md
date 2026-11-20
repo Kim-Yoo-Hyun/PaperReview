@@ -78,7 +78,7 @@ DenseMatcher는 구조가 비슷한 물체 사이의 조밀한 3D 대응점을 �
 
 ## Why Read It
 
-Manipulation, contact, tactile, and dexterity의 vla 문제를 이해하기 위해 읽는다. 본문은 In summary, we make the following contributions: (i) a novel 3d matching dataset that remedies the lack of texture information and categories in previous datasets, (ii) a 3D dense correspondence model framework ...를 문제로 두고, In summary, we make the following contributions: (i) a novel 3d matching dataset that remedies the lack of texture information and categories in previous datasets, (ii) a 3D dense correspondence model framework ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 6 (1 INTRODUCTION), p. 3 (1 INTRODUCTION), p. 3 (1 INTRODUCTION), p. 18 (A.3.2 TRAINING DENSEMATCHER) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 2 (1 INTRODUCTION), p. 6 (1 INTRODUCTION), p. 3 (1 INTRODUCTION), p. 18 (A.3.2 TRAINING DENSEMATCHER)이다.
 
 ## Semantic QA — PDF body cross-check
 

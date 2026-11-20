@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-RL, IL, offline learning, and robot data의 il 문제를 이해하기 위해 읽는다. 본문은 In robotics, we often do not have access to data at a similar scale due to the difficulty and cost of collection Moreover. even if we assume access to more data, existing ...를 문제로 두고, come this challenge we propose Demonstration Information Estimation, which uses k-nearest-neighbor (k-NN) estimates of mutual information, Our method involves three steps - representation learning, mutual information estimation, and sco ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — In robotics, we often do not have access to data at a similar scale due to the difficulty and cost of collection Moreover. even if we assume access to more data, existing ...
+
+방법 관련 발췌 — come this challenge we propose Demonstration Information Estimation, which uses k-nearest-neighbor (k-NN) estimates of mutual information, Our method involves three steps - representation learning, mutual information estimation, and sco ...
 
 ## Problem and Motivation
 
@@ -84,4 +86,4 @@ RL, IL, offline learning, and robot data의 il 문제를 이해하기 위해 읽
 
 ## Why Read It
 
-RL, IL, offline learning, and robot data의 il 문제를 이해하기 위해 읽는다. 본문은 In robotics, we often do not have access to data at a similar scale due to the difficulty and cost of collection Moreover. even if we assume access to more data, existing ...를 문제로 두고, come this challenge we propose Demonstration Information Estimation, which uses k-nearest-neighbor (k-NN) estimates of mutual information, Our method involves three steps - representation learning, mutual information estimation, and sco ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1. Iyrropucrion), p. 3 (B. Demonstration Curation), p. 3 (B. Demonstration Curation), p. 4 (V. MetHop), p. 4 (I N\), p. 18 (C. Implementation Derails) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 1 (1. Iyrropucrion), p. 3 (B. Demonstration Curation), p. 4 (V. MetHop), p. 4 (I N\), p. 18 (C. Implementation Derails)이다.

@@ -76,4 +76,4 @@ GaussianVLM은 언어 특징을 3D 가우시안 장면에 배치해 실내 장�
 
 ## Why Read It
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 We argue that using the existing solutions, meaningfully understanding such representations via LLMs is a very challenging task - due to the high density of high-dimensional language features.를 문제로 두고, Overall, this work makes the following contributions: • We introduce a fully scene-centric 3D VLM that achieves SOTA results, without requiring any dependencies on object detectors, on benchmark datasets for reasoning tasks ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (I. INTRODUCTION), p. 3 (III. METHOD), p. 4 (III. METHOD), p. 3 (III. METHOD), p. 4 (III. METHOD), p. 5 (IV. EXPERIMENTS) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 2 (I. INTRODUCTION), p. 3 (III. METHOD), p. 4 (III. METHOD), p. 5 (IV. EXPERIMENTS)이다.

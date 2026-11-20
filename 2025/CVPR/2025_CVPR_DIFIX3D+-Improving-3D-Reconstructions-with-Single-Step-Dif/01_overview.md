@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-Robotics-enabling 3D perception의 generative 문제를 이해하기 위해 읽는다. 본문은 In this work, we tackle the challenge of using 2D diffusion priors to improve 3D reconstruction of large scenes in an efficient manner.를 문제로 두고, (ii) We propose an update pipeline that progressively refines the 3D representation by distilling back the improved novel views, thus ensuring multi-view consistency and significantly enhanced quality of the 3D representation.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — In this work, we tackle the challenge of using 2D diffusion priors to improve 3D reconstruction of large scenes in an efficient manner.
+
+방법 관련 발췌 — (ii) We propose an update pipeline that progressively refines the 3D representation by distilling back the improved novel views, thus ensuring multi-view consistency and significantly enhanced quality of the 3D representation.
 
 ## Problem and Motivation
 
@@ -83,4 +85,4 @@ Robotics-enabling 3D perception의 generative 문제를 이해하기 위해 읽�
 
 ## Why Read It
 
-Robotics-enabling 3D perception의 generative 문제를 이해하기 위해 읽는다. 본문은 In this work, we tackle the challenge of using 2D diffusion priors to improve 3D reconstruction of large scenes in an efficient manner.를 문제로 두고, (ii) We propose an update pipeline that progressively refines the 3D representation by distilling back the improved novel views, thus ensuring multi-view consistency and significantly enhanced quality of the 3D representation.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (1. Introduction), p. 2 (1. Introduction), p. 4 (4. Boosting 3D Reconstruction with DM priors), p. 6 (4. Boosting 3D Reconstruction with DM priors), p. 4 (4. Boosting 3D Reconstruction with DM priors), p. 5 (4. Boosting 3D Reconstruction with DM priors) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 2 (1. Introduction), p. 4 (4. Boosting 3D Reconstruction with DM priors), p. 6 (4. Boosting 3D Reconstruction with DM priors), p. 5 (4. Boosting 3D Reconstruction with DM priors)이다.

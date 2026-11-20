@@ -21,7 +21,9 @@
 
 ## Why This Paper Is Here
 
-Planning and control의 control 문제를 이해하기 위해 읽는다. 본문은 Indeed, in certain games DQN is able to discover a relatively long-term strategy (for example, Breakout: the agent learns the optimal strategy, which is to first dig a tunnel around the side ...를 문제로 두고, Notably, our method was able to train large neural networks using a reinforcementlearningsignalandstochasticgradientdescentinastablemannerillustrated by the temporal evolution of two indices of learning (the agent's average score-per-ep ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — Indeed, in certain games DQN is able to discover a relatively long-term strategy (for example, Breakout: the agent learns the optimal strategy, which is to first dig a tunnel around the side ...
+
+방법 관련 발췌 — Notably, our method was able to train large neural networks using a reinforcementlearningsignalandstochasticgradientdescentinastablemannerillustrated by the temporal evolution of two indices of learning (the agent's average score-per-ep ...
 
 ## Problem and Motivation
 
@@ -87,4 +89,4 @@ Planning and control의 control 문제를 이해하기 위해 읽는다. 본문�
 
 ## Why Read It
 
-Planning and control의 control 문제를 이해하기 위해 읽는다. 본문은 Indeed, in certain games DQN is able to discover a relatively long-term strategy (for example, Breakout: the agent learns the optimal strategy, which is to first dig a tunnel around the side ...를 문제로 두고, Notably, our method was able to train large neural networks using a reinforcementlearningsignalandstochasticgradientdescentinastablemannerillustrated by the temporal evolution of two indices of learning (the agent's average score-per-ep ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 4 (2 6 F E B R U A R Y), p. 2 (2 6 F E B R U A R Y), p. 2 (2 6 F E B R U A R Y), p. 3 (V O L), p. 4 (2 6 F E B R U A R Y), p. 6 (84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 4 (2 6 F E B R U A R Y), p. 2 (2 6 F E B R U A R Y), p. 3 (V O L), p. 6 (84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess)이다.

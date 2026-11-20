@@ -10,16 +10,17 @@
 - Authors: Yi Li, Yuquan Deng, Jesse Zhang, Joel Jang, Marius Memmel, Caelan Garrett, Fabio Ramos, Dieter Fox, Anqi Li, Abhishek Gupta, Ankit Goyal
 - Primary track: VLA and generalist robot policies
 - Tier: REFERENCE
-- Tags: Robotics, Reinforcement Learning
+- Tags: Robotics, VLA, Imitation Learning, robot manipulation
 - Official paper: https://proceedings.iclr.cc/paper_files/paper/2025/hash/3bfee3bc6639c36e6e7b058db909f760-Abstract-Conference.html
 - Full-text retrieval: https://proceedings.iclr.cc/paper_files/paper/2025/file/3bfee3bc6639c36e6e7b058db909f760-Paper-Conference.pdf
-- Code/Project: not identified
+- Code/Project: https://hamster-robot.github.io/
+- 상위 경로 모델의 추론 코드와 가중치 파일을 확인했다. [구현](https://github.com/liyi14/HAMSTER_beta/blob/526a37f59f97c445005fcdf28f2cfb81ea742e4b/server.py) · [가중치](https://huggingface.co/yili18/Hamster_dev/blob/794f1f925c87e861d2f562943e978cc11f8c344d/VILA1.5-13b-robopoint_1432k%2Brlbench_all_tasks_256_1000_eps_sketch_v5_alpha%2Bdroid_train99_sketch_v5_alpha_fix%2Bbridge_data_v2_train90_10k_sketch_v5_alpha-e1-LR1e-5/llm/model-00001-of-00006.safetensors)
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (29 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
-VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다. 본문은 A line of prior work (Brohan et al., 2023a; Kim et al., 2024; Black et al., 2024) builds open-world vision-language-action models (VLAs) by finetuning off-the-shelf pretrained VLMs to directly produce robot actions.를 문제로 두고, It is important to note that while we are certainly not the first to propose hierarchical VLA models (Gu et al., 2023; Nasiriany et al., 2024a), we propose the novel insight that ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+HAMSTER는 한 장의 RGB 영상과 작업 지시에서 예측한 2D 말단 경로를 3D 조작 정책의 조건으로 사용한다.
 
 ## Problem and Motivation
 
@@ -53,16 +54,10 @@ VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다
 
 ## Main Claims and Actual Contribution
 
-- **p. 3 / 1 INTRODUCTION - extractive body cue:** It is important to note that while we are certainly not the first to propose hierarchical VLA models (Gu et al., 2023; Nasiriany et al., ...
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** To this end, we propose a hierarchical architecture for VLAs, HAMSTER (Hierarchical Action Models with SeparaTEd Path Representations), where large fine-tuned VLMs are connected to ...
-- **p. 5 / 3 BACKGROUND - extractive body cue:** It consists of two interconnected models: first, a higher-level VLM that is finetuned on large-scale, off-domain data to produce intermediate 2D path guidance (detailed in ...
-- **p. 6 / 3 BACKGROUND - extractive body cue:** A sample consists of a prompt z like Locate object between the marked items, an input image img and answer ans like [(0.25, 0.11), (0.22, ...
-- **p. 6 / 3 BACKGROUND - extractive body cue:** This dataset consists of data automatically generated in simulation and collected from existing real-world datasets; its diverse tasks enable the HAMSTER VLM to reason about ...
-- **p. 9 / Figure/Table caption - extractive body cue:** Table 2: Real world results demonstrate HAMSTER general- izes to better to novel camera views (see Fig.Figure 6). We ran 10 trails and report averaged ...
-- **p. 25 / Figure/Table caption - extractive body cue:** Table 5: Ranking-based human evaluation of different VLMs, averaged across various real-world evaluation tasks. Results indicate that HAMSTER including simulation data is most effective since ...
-- **p. 2 / Figure/Table caption - extractive body cue:** Figure 1: Overview of HAMSTER, VLAs and "smaller" imitation learning methods. HAMSTER's hierarchi- cal design results in better generalization with a small amount of in-domain ...
+- 상위 시각·언어 모델은 스케치와 시뮬레이션 등에서 얻은 경로를 이용해 대략적인 움직임을 예측한다.
+- 하위 정책은 예측 경로와 3D 관측을 이용해 정밀 동작을 생성한다. 저자들은 실물 탁상 조작과 시뮬레이션에서 일반화를 평가한다.
 
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+[ICLR 게재본](https://proceedings.iclr.cc/paper_files/paper/2025/file/3bfee3bc6639c36e6e7b058db909f760-Paper-Conference.pdf)
 
 ## Evaluation Scope
 
@@ -86,4 +81,4 @@ VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다
 
 ## Why Read It
 
-VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다. 본문은 A line of prior work (Brohan et al., 2023a; Kim et al., 2024; Black et al., 2024) builds open-world vision-language-action models (VLAs) by finetuning off-the-shelf pretrained VLMs to directly produce robot actions.를 문제로 두고, It is important to note that while we are certainly not the first to propose hierarchical VLA models (Gu et al., 2023; Nasiriany et al., 2024a), we propose the novel insight that ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1 INTRODUCTION), p. 5 (3 BACKGROUND), p. 10 (3 BACKGROUND), p. 1 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 20 (B.1 VLM IMPLEMENTATION DETAILS) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 1 (1 INTRODUCTION), p. 5 (3 BACKGROUND), p. 10 (3 BACKGROUND), p. 2 (1 INTRODUCTION), p. 20 (B.1 VLM IMPLEMENTATION DETAILS)이다.

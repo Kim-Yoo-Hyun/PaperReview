@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-Manipulation, contact, tactile, and dexterity의 planning 문제를 이해하기 위해 읽는다. 본문은 We attempt to avoid such failures by constraining the abstract plan steps so that they are serializable [1]; that is, so that for any realization of the first plan step, there exist ...를 문제로 두고, The architecture can be thought of as doing a depth-first traversal of a planning tree, and is implemented as a recursive algorithm, as shown below.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — We attempt to avoid such failures by constraining the abstract plan steps so that they are serializable [1]; that is, so that for any realization of the first plan step, there exist ...
+
+방법 관련 발췌 — The architecture can be thought of as doing a depth-first traversal of a planning tree, and is implemented as a recursive algorithm, as shown below.
 
 ## Problem and Motivation
 
@@ -75,4 +77,4 @@ Manipulation, contact, tactile, and dexterity의 planning 문제를 이해하기
 
 ## Why Read It
 
-Manipulation, contact, tactile, and dexterity의 planning 문제를 이해하기 위해 읽는다. 본문은 We attempt to avoid such failures by constraining the abstract plan steps so that they are serializable [1]; that is, so that for any realization of the first plan step, there exist ...를 문제로 두고, The architecture can be thought of as doing a depth-first traversal of a planning tree, and is implemented as a recursive algorithm, as shown below.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 7 (V. ALGORITHMS), p. 7 (V. ALGORITHMS), p. 3 (B C), p. 6 (C C) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 1 (I. INTRODUCTION), p. 7 (V. ALGORITHMS), p. 3 (B C), p. 6 (C C)이다.

@@ -20,7 +20,9 @@
 
 ## Why This Paper Is Here
 
-World models, safety, uncertainty, and recovery의 safety 문제를 이해하기 위해 읽는다. 본문은 To overcome these challenges, we make three key changes to model learning.를 문제로 두고, (Top) We present a framework for MPC using a task-oriented latent dynamics model and value function learned jointly by temporal difference learning.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — To overcome these challenges, we make three key changes to model learning.
+
+방법 관련 발췌 — (Top) We present a framework for MPC using a task-oriented latent dynamics model and value function learned jointly by temporal difference learning.
 
 ## Problem and Motivation
 
@@ -83,4 +85,4 @@ World models, safety, uncertainty, and recovery의 safety 문제를 이해하기
 
 ## Why Read It
 
-World models, safety, uncertainty, and recovery의 safety 문제를 이해하기 위해 읽는다. 본문은 To overcome these challenges, we make three key changes to model learning.를 문제로 두고, (Top) We present a framework for MPC using a task-oriented latent dynamics model and value function learned jointly by temporal difference learning.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (1. Introduction), p. 2 (1. Introduction), p. 1 (1. Introduction), p. 1 (1. Introduction), p. 4 (4. Task-Oriented Latent Dynamics Model), p. 5 (4. Task-Oriented Latent Dynamics Model) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 2 (1. Introduction), p. 1 (1. Introduction), p. 4 (4. Task-Oriented Latent Dynamics Model), p. 5 (4. Task-Oriented Latent Dynamics Model)이다.

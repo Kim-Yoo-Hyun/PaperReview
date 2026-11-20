@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-Locomotion, whole-body, mobile manipulation, and humanoids의 locomotion 문제를 이해하기 위해 읽는다. 본문은 Robustly achieving such an integration of vision and locomotion remains an open problem for bipedal robots.를 문제로 두고, The relative encoding means that the heights vary as the robot moves up and down during its gait, but enables us to avoid using global mapping and odometry estimation techniques, 3) user ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — Robustly achieving such an integration of vision and locomotion remains an open problem for bipedal robots.
+
+방법 관련 발췌 — The relative encoding means that the heights vary as the robot moves up and down during its gait, but enables us to avoid using global mapping and odometry estimation techniques, 3) user ...
 
 ## Problem and Motivation
 
@@ -84,4 +86,4 @@ Locomotion, whole-body, mobile manipulation, and humanoids의 locomotion 문제�
 
 ## Why Read It
 
-Locomotion, whole-body, mobile manipulation, and humanoids의 locomotion 문제를 이해하기 위해 읽는다. 본문은 Robustly achieving such an integration of vision and locomotion remains an open problem for bipedal robots.를 문제로 두고, The relative encoding means that the heights vary as the robot moves up and down during its gait, but enables us to avoid using global mapping and odometry estimation techniques, 3) user ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 3 (IV. LEARNING A TERRAIN-AWARE LOCOMOTION POLICY), p. 2 (IV. LEARNING A TERRAIN-AWARE LOCOMOTION POLICY), p. 3 (IV. LEARNING A TERRAIN-AWARE LOCOMOTION POLICY), p. 4 (IV. LEARNING A TERRAIN-AWARE LOCOMOTION POLICY) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 1 (I. INTRODUCTION), p. 3 (IV. LEARNING A TERRAIN-AWARE LOCOMOTION POLICY), p. 2 (IV. LEARNING A TERRAIN-AWARE LOCOMOTION POLICY), p. 4 (IV. LEARNING A TERRAIN-AWARE LOCOMOTION POLICY)이다.

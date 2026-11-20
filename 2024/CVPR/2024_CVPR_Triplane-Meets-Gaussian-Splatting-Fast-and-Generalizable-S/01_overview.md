@@ -75,4 +75,4 @@
 
 ## Why Read It
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 However, the inherent ambiguity and lack of information in single images pose a substantial challenge in accurately recovering the complete, ∗Intern at VAST † Corresponding authors This CVPR paper is the Open ...를 문제로 두고, Our approach consists of two networks for reconstructing the point cloud and triplane from the input image, employing a fully transformer-based architecture for both.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1. Introduction), p. 1 (1. Introduction), p. 2 (1. Introduction), p. 2 (1. Introduction), p. 4 (3. Method), p. 5 (3.2. Reconstruction from Single-View Images) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 1 (1. Introduction), p. 2 (1. Introduction), p. 4 (3. Method), p. 5 (3.2. Reconstruction from Single-View Images)이다.

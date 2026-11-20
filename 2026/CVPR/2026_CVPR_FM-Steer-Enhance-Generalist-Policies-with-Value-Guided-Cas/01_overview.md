@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-VLA and generalist robot policies의 safety 문제를 이해하기 위해 읽는다. 본문은 However, robot control has stricter real-time requirements than text generation: extra inference computation can introduce delays, causing jitter or even task failure.를 문제로 두고, In summary, the main contributions of this work are: • We propose FM-Steer, a test-time computing framework that enhances flow-based Vision-Language-Action models while improving the robot control frequency. • We introduce value-guided ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — However, robot control has stricter real-time requirements than text generation: extra inference computation can introduce delays, causing jitter or even task failure.
+
+방법 관련 발췌 — In summary, the main contributions of this work are: • We propose FM-Steer, a test-time computing framework that enhances flow-based Vision-Language-Action models while improving the robot control frequency. • We introduce value-guided ...
 
 ## Problem and Motivation
 
@@ -85,4 +87,4 @@ VLA and generalist robot policies의 safety 문제를 이해하기 위해 읽는
 
 ## Why Read It
 
-VLA and generalist robot policies의 safety 문제를 이해하기 위해 읽는다. 본문은 However, robot control has stricter real-time requirements than text generation: extra inference computation can introduce delays, causing jitter or even task failure.를 문제로 두고, In summary, the main contributions of this work are: • We propose FM-Steer, a test-time computing framework that enhances flow-based Vision-Language-Action models while improving the robot control frequency. • We introduce value-guided ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (1. Introduction), p. 2 (1. Introduction), p. 4 (4.1. Value-Guided Test-Time Sampling), p. 4 (4.2. Cascaded Action Denoising), p. 7 (5.3. Efficiency Improvement), p. 3 (4.1. Value-Guided Test-Time Sampling) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 2 (1. Introduction), p. 4 (4.1. Value-Guided Test-Time Sampling), p. 4 (4.2. Cascaded Action Denoising), p. 7 (5.3. Efficiency Improvement), p. 3 (4.1. Value-Guided Test-Time Sampling)이다.

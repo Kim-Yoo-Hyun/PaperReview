@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-Locomotion, whole-body, mobile manipulation, and humanoids의 humanoid 문제를 이해하기 위해 읽는다. 본문은 The root movement goal gm can also be intuitively given by joystick commands, enabling convenient deployment in the real world. methods on both of these two form factors tend to produce singular ...를 문제로 두고, We also compare our method with applying more imitation constraints on legged motion in both simulation and the real world and show our approach that relaxes the constraints indeed leads to better ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — The root movement goal gm can also be intuitively given by joystick commands, enabling convenient deployment in the real world. methods on both of these two form factors tend to produce singular ...
+
+방법 관련 발췌 — We also compare our method with applying more imitation constraints on legged motion in both simulation and the real world and show our approach that relaxes the constraints indeed leads to better ...
 
 ## Problem and Motivation
 
@@ -82,4 +84,4 @@ Locomotion, whole-body, mobile manipulation, and humanoids의 humanoid 문제를
 
 ## Why Read It
 
-Locomotion, whole-body, mobile manipulation, and humanoids의 humanoid 문제를 이해하기 위해 읽는다. 본문은 The root movement goal gm can also be intuitively given by joystick commands, enabling convenient deployment in the real world. methods on both of these two form factors tend to produce singular ...를 문제로 두고, We also compare our method with applying more imitation constraints on legged motion in both simulation and the real world and show our approach that relaxes the constraints indeed leads to better ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (I. INTRODUCTION), p. 3 (II. PROBLEM FORMULATION), p. 2 (I. INTRODUCTION), p. 3 (II. PROBLEM FORMULATION), p. 3 (II. PROBLEM FORMULATION), p. 3 (II. PROBLEM FORMULATION) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 2 (I. INTRODUCTION), p. 3 (II. PROBLEM FORMULATION)이다.

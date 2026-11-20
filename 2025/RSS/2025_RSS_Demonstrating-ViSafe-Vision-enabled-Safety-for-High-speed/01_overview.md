@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-World models, safety, uncertainty, and recovery의 safety 문제를 이해하기 위해 읽는다. 본문은 However, most existing avoidance logics require special sensors and information to provide RAS.를 문제로 두고, There are variants of this algorithm for different agent types in different airspaces (ACAS Xa, Xu), etc. ‘The key factor driving the development of ACAS algorithms is the availability of extended surveillance ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — However, most existing avoidance logics require special sensors and information to provide RAS.
+
+방법 관련 발췌 — There are variants of this algorithm for different agent types in different airspaces (ACAS Xa, Xu), etc. ‘The key factor driving the development of ACAS algorithms is the availability of extended surveillance ...
 
 ## Problem and Motivation
 
@@ -79,7 +81,7 @@ World models, safety, uncertainty, and recovery의 safety 문제를 이해하기
 
 ## Why Read It
 
-World models, safety, uncertainty, and recovery의 safety 문제를 이해하기 위해 읽는다. 본문은 However, most existing avoidance logics require special sensors and information to provide RAS.를 문제로 두고, There are variants of this algorithm for different agent types in different airspaces (ACAS Xa, Xu), etc. ‘The key factor driving the development of ACAS algorithms is the availability of extended surveillance ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (4) First-of-its-kind real-world flight tests demonstrating that), p. 2 (I. INTRopI), p. 3 (B. Control Barrier Functions for Aerial Collision Avoidance), p. 3 (B. Control Barrier Functions for Aerial Collision Avoidance), p. 1 (Abstract), p. 7 (C. Supervisory Safety Controller) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 2 (4) First-of-its-kind real-world flight tests demonstrating that), p. 2 (I. INTRopI), p. 3 (B. Control Barrier Functions for Aerial Collision Avoidance), p. 1 (Abstract), p. 7 (C. Supervisory Safety Controller)이다.
 
 ## Semantic QA — PDF body cross-check
 

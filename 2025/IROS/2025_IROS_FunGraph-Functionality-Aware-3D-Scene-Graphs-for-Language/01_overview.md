@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-Robotics-enabling 3D perception의 navigation 문제를 이해하기 위해 읽는다. 본문은 One of the key challenges in modeling intra-object relationships is accurately perceiving functional object parts.를 문제로 두고, 3 provides an overview of our method.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — One of the key challenges in modeling intra-object relationships is accurately perceiving functional object parts.
+
+방법 관련 발췌 — 3 provides an overview of our method.
 
 ## Problem and Motivation
 
@@ -83,4 +85,4 @@ Robotics-enabling 3D perception의 navigation 문제를 이해하기 위해 읽�
 
 ## Why Read It
 
-Robotics-enabling 3D perception의 navigation 문제를 이해하기 위해 읽는다. 본문은 One of the key challenges in modeling intra-object relationships is accurately perceiving functional object parts.를 문제로 두고, 3 provides an overview of our method.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 3 (III. METHOD), p. 3 (III. METHOD), p. 5 (III. METHOD), p. 4 (III. METHOD) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 1 (I. INTRODUCTION), p. 3 (III. METHOD), p. 5 (III. METHOD), p. 4 (III. METHOD)이다.

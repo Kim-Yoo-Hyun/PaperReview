@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-Locomotion, whole-body, mobile manipulation, and humanoids의 humanoid 문제를 이해하기 위해 읽는다. 본문은 However, these methods encounter great challenges when applied to humanoid robots, primarily due to a key difference를 문제로 두고, To address these challenges, we introduce BEAMDOJO, a reinforcement learning (RL) framework designed for enabling agile humanoid locomotion on sparse footholds.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — However, these methods encounter great challenges when applied to humanoid robots, primarily due to a key difference
+
+방법 관련 발췌 — To address these challenges, we introduce BEAMDOJO, a reinforcement learning (RL) framework designed for enabling agile humanoid locomotion on sparse footholds.
 
 ## Problem and Motivation
 
@@ -86,4 +88,4 @@ Locomotion, whole-body, mobile manipulation, and humanoids의 humanoid 문제를
 
 ## Why Read It
 
-Locomotion, whole-body, mobile manipulation, and humanoids의 humanoid 문제를 이해하기 위해 읽는다. 본문은 However, these methods encounter great challenges when applied to humanoid robots, primarily due to a key difference를 문제로 두고, To address these challenges, we introduce BEAMDOJO, a reinforcement learning (RL) framework designed for enabling agile humanoid locomotion on sparse footholds.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1. INrRopucTION), p. 1 (Abstract), p. 2 (1. INrRopucTION), p. 2 (1. INrRopucTION), p. 3 (B. Reinforcement Learning in Locomotion Control), p. 2 (A. Locomotion on Sparse Footholds) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 1 (1. INrRopucTION), p. 1 (Abstract), p. 2 (1. INrRopucTION), p. 3 (B. Reinforcement Learning in Locomotion Control), p. 2 (A. Locomotion on Sparse Footholds)이다.

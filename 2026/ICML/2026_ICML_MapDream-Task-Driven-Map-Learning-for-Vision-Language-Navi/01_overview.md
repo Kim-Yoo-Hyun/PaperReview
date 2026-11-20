@@ -21,7 +21,9 @@
 
 ## Why This Paper Is Here
 
-Robotics-enabling 3D perception의 navigation 문제를 이해하기 위해 읽는다. 본문은 A central difficulty of VLN is partial observability.를 문제로 두고, Our main contributions are: • We first introduce a task-driven perspective on map representations for VLN, reframing maps as representations shaped by downstream navigation objectives rather than fixed by expert design. • ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — A central difficulty of VLN is partial observability.
+
+방법 관련 발췌 — Our main contributions are: • We first introduce a task-driven perspective on map representations for VLN, reframing maps as representations shaped by downstream navigation objectives rather than fixed by expert design. • ...
 
 ## Problem and Motivation
 
@@ -85,4 +87,4 @@ Robotics-enabling 3D perception의 navigation 문제를 이해하기 위해 읽�
 
 ## Why Read It
 
-Robotics-enabling 3D perception의 navigation 문제를 이해하기 위해 읽는다. 본문은 A central difficulty of VLN is partial observability.를 문제로 두고, Our main contributions are: • We first introduce a task-driven perspective on map representations for VLN, reframing maps as representations shaped by downstream navigation objectives rather than fixed by expert design. • ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1. Introduction), p. 2 (1. Introduction), p. 2 (1. Introduction), p. 1 (1. Introduction), p. 4 (3.1. Overview), p. 4 (3.3. Supervised Pre-training) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 1 (1. Introduction), p. 2 (1. Introduction), p. 4 (3.1. Overview), p. 4 (3.3. Supervised Pre-training)이다.

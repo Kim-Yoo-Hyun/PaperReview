@@ -19,7 +19,7 @@
 
 ## Why This Paper Is Here
 
-Manipulation, contact, tactile, and dexterity의 tactile 문제를 이해하기 위해 읽는다. 본문은 To bridge this gap, we contribute the PHYSICLEAR dataset, which comprises GelSight images on a variety of real world objects, along with object labels and part annotations.를 문제로 두고, PHYSICLEAR and OCTOPI (with key contributions starred).를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+Octopi는 촉각 영상을 언어 모델과 결합해 물체의 물리적 속성을 예측하고 이에 대한 질문에 답한다.
 
 ## Problem and Motivation
 
@@ -53,16 +53,10 @@ Manipulation, contact, tactile, and dexterity의 tactile 문제를 이해하기 
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / I. INTRODUCTION - extractive body cue:** PHYSICLEAR and OCTOPI (with key contributions starred).
-- **p. 2 / I. INTRODUCTION - extractive body cue:** Dataset Property Label Availability Property Diversity Object Diversity Material Diversity Hardness Dataset (2016) [59] Yes (only hardness) Yes Yes Medium Clothing Dataset (2018) [61] Yes ...
-- **p. 1 / I. INTRODUCTION - extractive body cue:** In experiments, we show that OCTOPI is able to use its tactile modality to predict object properties and reason about scenarios including avocado ripeness.
-- **p. 1 / Abstract - extractive body cue:** In this work, we investigate combining tactile perception with language, which enables embodied systems to obtain physical properties through interaction and apply commonsense reasoning.
-- **p. 7 / VI. EXPERIMENTAL RESULTS - extractive body cue:** For both OCTOPI7b and OCTOPI-13b, including the object property significantly improves performance, which supports our overall hypothesis that leveraging these properties is helpful for these ...
-- **p. 8 / VI. EXPERIMENTAL RESULTS - extractive body cue:** For avocado property prediction, OCTOPI-13b achieves an accuracy of 35.50%, which is significantly higher than that of the random baseline (3.70%).
-- **p. 6 / VI. EXPERIMENTAL RESULTS - extractive body cue:** To address the above questions, we evaluated OCTOPI using (i) accuracy on the physical understanding tasks in PHYSICLEAR's test set, (ii) accuracy on scenario reasoning ...
-- **p. 7 / VI. EXPERIMENTAL RESULTS - extractive body cue:** This suggests that OCTOPI's physical understanding improves significantly with LLM size.
+- PhysiCLeAR에는 GelSight 촉각 영상과 물성 판단을 위한 주석이 들어 있다.
+- 중간 물성 예측이 촉각 기반 질의응답에 미치는 영향을 평가한다.
 
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+[원문 초록](https://arxiv.org/abs/2405.02794)
 
 ## Evaluation Scope
 
@@ -80,7 +74,7 @@ Manipulation, contact, tactile, and dexterity의 tactile 문제를 이해하기 
 
 ## Why Read It
 
-Manipulation, contact, tactile, and dexterity의 tactile 문제를 이해하기 위해 읽는다. 본문은 To bridge this gap, we contribute the PHYSICLEAR dataset, which comprises GelSight images on a variety of real world objects, along with object labels and part annotations.를 문제로 두고, PHYSICLEAR and OCTOPI (with key contributions starred).를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 4 (III. PHYSICLEAR - TACTILE AND PHYSICAL), p. 4 (IV. OCTOPI - VISION-LANGUAGE PROPERTY-GUIDED), p. 1 (Abstract) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 1 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 4 (III. PHYSICLEAR - TACTILE AND PHYSICAL), p. 4 (IV. OCTOPI - VISION-LANGUAGE PROPERTY-GUIDED), p. 1 (Abstract)이다.
 
 ## Semantic QA — PDF body cross-check
 

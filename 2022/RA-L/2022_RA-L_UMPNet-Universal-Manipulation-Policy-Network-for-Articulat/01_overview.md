@@ -19,7 +19,7 @@
 
 ## Why This Paper Is Here
 
-Manipulation, contact, tactile, and dexterity의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 However, such policies are often time-consuming to design and fail to generalize across objects with different articulation structures.를 문제로 두고, In summary, we present a unified framework that discovers possible manipulation policies for an articulated object from visual observations.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+RGB-D로 관절 물체의 작용점과 이동 방향을 예측해 닫힌루프에서 조작한다.
 
 ## Problem and Motivation
 
@@ -53,16 +53,10 @@ Manipulation, contact, tactile, and dexterity의 3d_perception 문제를 이해�
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / I. INTRODUCTION - extractive body cue:** In summary, we present a unified framework that discovers possible manipulation policies for an articulated object from visual observations.
-- **p. 3 / III. APPROACH - extractive body cue:** To address this issue, we proposes an "Arrow-of-Time" (AoT) action attribute that indicates
-- **p. 2 / I. INTRODUCTION - extractive body cue:** We validate our approach on two manipulation tasks (1) open-ended state exploration and (2) goal-conditioned manipulation.
-- **p. 1 / I. INTRODUCTION - extractive body cue:** To achieve this goal, we formulate an action trajectory by its initial 3D position and a sequence of action directions, which allows the network to ...
-- **p. 3 / III. APPROACH - extractive body cue:** For single-step interaction, any action that changes the object's state would result in a novel state.
-- **p. 5 / IV. EVALUATION - extractive body cue:** When combined with heuristic filter, the performance improves slightly.
-- **p. 5 / IV. EVALUATION - extractive body cue:** I we can see that [ Where2Act ] is able to achieve similar performance in "single action effects", however, both [ Where2Act ] and [ ...
-- **p. 6 / IV. EVALUATION - extractive body cue:** As a result, [ UMPNet ] can achieve better performance in both metrics.
+- 자기주도 탐색으로 사람 시연 없이 상호작용 정책을 학습한다.
+- Arrow-of-Time으로 과거 상태를 향하는 행동과 새로운 상태를 향하는 행동을 구분한다.
 
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+[검증한 원문](https://arxiv.org/abs/2109.05668)
 
 ## Evaluation Scope
 
@@ -85,7 +79,7 @@ Manipulation, contact, tactile, and dexterity의 3d_perception 문제를 이해�
 
 ## Why Read It
 
-Manipulation, contact, tactile, and dexterity의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 However, such policies are often time-consuming to design and fail to generalize across objects with different articulation structures.를 문제로 두고, In summary, we present a unified framework that discovers possible manipulation policies for an articulated object from visual observations.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 3 (III. APPROACH), p. 3 (III. APPROACH) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 1 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 3 (III. APPROACH)이다.
 
 ## Semantic QA — PDF body cross-check
 

@@ -19,7 +19,7 @@
 
 ## Why This Paper Is Here
 
-RL, IL, offline learning, and robot data의 offline_rl 문제를 이해하기 위해 읽는다. 본문은 However, this also carries with it major challenges: improving the policy beyond the level of the behavior policy that collected the data requires estimating values for actions other than those that were ...를 문제로 두고, We propose a new offline RL method that never needs to evaluate actions outside of the dataset, but still enables the learned policy to improve substantially over the best behavior in the ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+오프라인 데이터에 없는 행동의 Q 값을 직접 조회하지 않고 정책을 개선한다.
 
 ## Problem and Motivation
 
@@ -53,16 +53,10 @@ RL, IL, offline learning, and robot data의 offline_rl 문제를 이해하기 �
 
 ## Main Claims and Actual Contribution
 
-- **p. 1 / ABSTRACT - extractive body cue:** We propose a new offline RL method that never needs to evaluate actions outside of the dataset, but still enables the learned policy to improve ...
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** Our method is easy to implement by making a small change to the loss function in a simple SARSA-like TD update and is computationally very ...
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** The key idea in our method is to approximate an upper expectile of the distribution over values with respect to the distribution of dataset actions ...
-- **p. 6 / 3 PRELIMINARIES - extractive body cue:** In the following theorems, we show that under certain assumptions, our method indeed approximates the optimal state-action value Q∗and performs multi-step dynamical programming.
-- **p. 7 / 3 PRELIMINARIES - extractive body cue:** 5 EXPERIMENTAL EVALUATION Our experiments aim to evaluate our method comparatively, in contrast to prior offline RL methods, and in particular to understand how our ...
-- **p. 9 / Figure/Table caption - extractive body cue:** Table 2: Online finetuning results showing the initial perfor- mance after offline RL, and performance after 1M steps of on- line RL. In all tasks, ...
-- **p. 9 / 3 PRELIMINARIES - extractive body cue:** On the Ant Maze domains, IQL significantly outperforms both prior methods after online finetuning.
-- **p. 8 / Figure/Table caption - extractive body cue:** Table 1: Averaged normalized scores on MuJoCo locomotion and Ant Maze tasks. Our method outperforms prior methods on the challenging Ant Maze tasks, which require ...
+- 가치함수에 비대칭 expectile 회귀를 사용한다.
+- 학습한 advantage로 데이터 속 행동의 모방 손실에 가중치를 주어 정책을 추출한다.
 
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+[검증한 원문](https://iclr.cc/virtual/2022/poster/5941)
 
 ## Evaluation Scope
 
@@ -83,7 +77,7 @@ RL, IL, offline learning, and robot data의 offline_rl 문제를 이해하기 �
 
 ## Why Read It
 
-RL, IL, offline learning, and robot data의 offline_rl 문제를 이해하기 위해 읽는다. 본문은 However, this also carries with it major challenges: improving the policy beyond the level of the behavior policy that collected the data requires estimating values for actions other than those that were ...를 문제로 두고, We propose a new offline RL method that never needs to evaluate actions outside of the dataset, but still enables the learned policy to improve substantially over the best behavior in the ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1 INTRODUCTION), p. 1 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 3 (3 PRELIMINARIES), p. 1 (ABSTRACT) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 1 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 3 (3 PRELIMINARIES), p. 1 (ABSTRACT)이다.
 
 ## Semantic QA — PDF body cross-check
 

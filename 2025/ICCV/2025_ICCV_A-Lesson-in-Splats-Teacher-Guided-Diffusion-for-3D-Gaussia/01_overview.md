@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-Robotics-enabling 3D perception의 generative 문제를 이해하기 위해 읽는다. 본문은 However, diffusion models for 3D generation face a fundamental limitation due to their training process, in which the denoiser - which operates in 3D - is trained on noisy samples using their ...를 문제로 두고, Although the bootstrapping stage precedes finetuning in the pipeline, we present it second in this manuscript to facilitate a smoother explanation of our core contributions.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — However, diffusion models for 3D generation face a fundamental limitation due to their training process, in which the denoiser - which operates in 3D - is trained on noisy samples using their ...
+
+방법 관련 발췌 — Although the bootstrapping stage precedes finetuning in the pipeline, we present it second in this manuscript to facilitate a smoother explanation of our core contributions.
 
 ## Problem and Motivation
 
@@ -83,4 +85,4 @@ Robotics-enabling 3D perception의 generative 문제를 이해하기 위해 읽�
 
 ## Why Read It
 
-Robotics-enabling 3D perception의 generative 문제를 이해하기 위해 읽는다. 본문은 However, diffusion models for 3D generation face a fundamental limitation due to their training process, in which the denoiser - which operates in 3D - is trained on noisy samples using their ...를 문제로 두고, Although the bootstrapping stage precedes finetuning in the pipeline, we present it second in this manuscript to facilitate a smoother explanation of our core contributions.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (1. Introduction), p. 2 (1. Introduction), p. 5 (3.2. Noisy Teacher Bootstrapping), p. 5 (3.3. Cycle Consistency Regularization), p. 3 (3. Method), p. 7 (4.4. Additional View Guidance) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 2 (1. Introduction), p. 5 (3.2. Noisy Teacher Bootstrapping), p. 5 (3.3. Cycle Consistency Regularization), p. 3 (3. Method), p. 7 (4.4. Additional View Guidance)이다.

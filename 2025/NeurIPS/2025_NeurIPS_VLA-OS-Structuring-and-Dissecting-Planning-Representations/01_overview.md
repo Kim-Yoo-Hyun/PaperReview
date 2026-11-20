@@ -20,7 +20,9 @@
 
 ## Why This Paper Is Here
 
-VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다. 본문은 3) Bottleneck: Between task planning and policy learning, which presents a greater challenge for current manipulation tasks?를 문제로 두고, To systematically investigate the impacts of different planning paradigms and representations isolating from network architectures and training data, in this paper, we introduce VLA-OS, a unified VLA architecture series capable of vario ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — 3) Bottleneck: Between task planning and policy learning, which presents a greater challenge for current manipulation tasks?
+
+방법 관련 발췌 — To systematically investigate the impacts of different planning paradigms and representations isolating from network architectures and training data, in this paper, we introduce VLA-OS, a unified VLA architecture series capable of vario ...
 
 ## Problem and Motivation
 
@@ -86,4 +88,4 @@ VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다
 
 ## Why Read It
 
-VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다. 본문은 3) Bottleneck: Between task planning and policy learning, which presents a greater challenge for current manipulation tasks?를 문제로 두고, To systematically investigate the impacts of different planning paradigms and representations isolating from network architectures and training data, in this paper, we introduce VLA-OS, a unified VLA architecture series capable of vario ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (1 Introduction), p. 2 (1 Introduction), p. 3 (1 Introduction), p. 1 (1 Introduction), p. 3 (1 Introduction), p. 6 (3.1 Preliminaries) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 2 (1 Introduction), p. 3 (1 Introduction), p. 1 (1 Introduction), p. 6 (3.1 Preliminaries)이다.

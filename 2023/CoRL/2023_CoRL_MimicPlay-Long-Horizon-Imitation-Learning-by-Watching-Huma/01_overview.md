@@ -76,7 +76,7 @@ MimicPlay는 사람이 물체를 자유롭게 조작하는 영상에서 장기 �
 
 ## Why Read It
 
-RL, IL, offline learning, and robot data의 il 문제를 이해하기 위해 읽는다. 본문은 Efficiently teaching robots to perform general-purpose manipulation tasks is a long-standing challenge.를 문제로 두고, To summarize, the main contributions of our work are as follows: • A novel paradigm for learning 3D-aware latent plans from cheap human play data. • A hierarchical framework that trains a ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1 Introduction), p. 2 (1 Introduction), p. 2 (1 Introduction), p. 14 (A Implementation details), p. 14 (A Implementation details), p. 7 (5 Results) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 1 (1 Introduction), p. 2 (1 Introduction), p. 14 (A Implementation details), p. 7 (5 Results)이다.
 
 ## Semantic QA — PDF body cross-check
 

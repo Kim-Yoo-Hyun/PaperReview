@@ -15,11 +15,11 @@ from collections import Counter, defaultdict
 from pathlib import Path
 
 try:
-    from render_source_audit import render as render_source_audit
+    from render_source_audit import check_applied, render as render_source_audit
     from registry_profiles import ARTIFACT_STATUSES, EVALUATION_SETTINGS, LINEAGE_STATUSES, PROTOCOL_STATUSES, REPRO_STATUSES
     from registry_schema import CURATION_ROLES, DATA_STATUSES, FACET_KEYS, PRIMARY_TRACKS, SCHEMA_VERSION, validate_record_shape, venue_id_for
 except ModuleNotFoundError:
-    from .render_source_audit import render as render_source_audit
+    from .render_source_audit import check_applied, render as render_source_audit
     from .registry_profiles import ARTIFACT_STATUSES, EVALUATION_SETTINGS, LINEAGE_STATUSES, PROTOCOL_STATUSES, REPRO_STATUSES
     from .registry_schema import CURATION_ROLES, DATA_STATUSES, FACET_KEYS, PRIMARY_TRACKS, SCHEMA_VERSION, validate_record_shape, venue_id_for
 
@@ -803,6 +803,8 @@ def main() -> None:
                 report = (ROOT / source_audit["report"]).read_text(encoding="utf-8")
                 if report != render_source_audit(audited, source_audit):
                     errors.append("source audit report differs from its dated evidence ledger")
+                if source_audit.get("postcheck", {}).get("manifest_sha256") == file_sha256(MANIFEST):
+                    check_applied(audited, papers, ROOT)
             except (OSError, ValueError, KeyError, TypeError) as exc:
                 errors.append(f"could not validate dated source audit: {exc}")
         if meta.get("schema_version") != SCHEMA_VERSION or meta.get("paper_count") != len(papers):

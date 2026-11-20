@@ -79,4 +79,4 @@ RynnVLA-001은 사람의 1인칭 비디오로 영상 생성을 사전학습한 �
 
 ## Why Read It
 
-VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다. 본문은 Another line of studies works on exploiting massive prior knowledge from pretrained generative models (Cheang et al., 2024; Hu et al., 2024) or VLMs (Zitkovich et al., 2023; Kim et al., 2024; ...를 문제로 두고, In this work, we propose RynnVLA-001, a VLA model enhanced by video generation pretraining.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1 Introduction), p. 2 (1 INTRODUCTION), p. 1 (1 Introduction), p. 2 (1 INTRODUCTION), p. 4 (3 METHODOLOGY), p. 6 (3 METHODOLOGY) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 1 (1 Introduction), p. 2 (1 INTRODUCTION), p. 4 (3 METHODOLOGY), p. 6 (3 METHODOLOGY)이다.

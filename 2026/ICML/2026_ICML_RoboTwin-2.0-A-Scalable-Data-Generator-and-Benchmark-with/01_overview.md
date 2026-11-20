@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-VLA and generalist robot policies의 benchmark 문제를 이해하기 위해 읽는다. 본문은 First, they lack automated quality control: without an expert-level validation loop, many generated trajectories include execution failures or suboptimal grasps, which degrade policy learning.를 문제로 두고, In summary, our main contributions are as follows: (1) We develop an automated expert data generation framework that integrates multimodal large language models with simulation-in-theloop feedback to ensure high-quality, expert-level tr ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — First, they lack automated quality control: without an expert-level validation loop, many generated trajectories include execution failures or suboptimal grasps, which degrade policy learning.
+
+방법 관련 발췌 — In summary, our main contributions are as follows: (1) We develop an automated expert data generation framework that integrates multimodal large language models with simulation-in-theloop feedback to ensure high-quality, expert-level tr ...
 
 ## Problem and Motivation
 
@@ -86,4 +88,4 @@ VLA and generalist robot policies의 benchmark 문제를 이해하기 위해 읽
 
 ## Why Read It
 
-VLA and generalist robot policies의 benchmark 문제를 이해하기 위해 읽는다. 본문은 First, they lack automated quality control: without an expert-level validation loop, many generated trajectories include execution failures or suboptimal grasps, which degrade policy learning.를 문제로 두고, In summary, our main contributions are as follows: (1) We develop an automated expert data generation framework that integrates multimodal large language models with simulation-in-theloop feedback to ensure high-quality, expert-level tr ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (1 Introduction), p. 2 (1 Introduction), p. 3 (1 Introduction), p. 3 (2 Method), p. 3 (2 Method), p. 4 (2 Method) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 2 (1 Introduction), p. 3 (1 Introduction), p. 3 (2 Method), p. 4 (2 Method)이다.

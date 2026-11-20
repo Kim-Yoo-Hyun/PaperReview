@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-Locomotion, whole-body, mobile manipulation, and humanoids의 mobile_manipulation 문제를 이해하기 위해 읽는다. 본문은 In deployment scenarios such as homes and warehouses, mobile robots are expected to autonomously navigate for extended periods, seamlessly executing tasks articulated in terms that are intuitively understandable by human operators.를 문제로 두고, This enables GOAT to distinguish between different instances of the same category to enable navigation to targets specified by images and fine-grained language descriptions.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — In deployment scenarios such as homes and warehouses, mobile robots are expected to autonomously navigate for extended periods, seamlessly executing tasks articulated in terms that are intuitively understandable by human operators.
+
+방법 관련 발췌 — This enables GOAT to distinguish between different instances of the same category to enable navigation to targets specified by images and fine-grained language descriptions.
 
 ## Problem and Motivation
 
@@ -74,7 +76,7 @@ Locomotion, whole-body, mobile manipulation, and humanoids의 mobile_manipulatio
 
 ## Why Read It
 
-Locomotion, whole-body, mobile manipulation, and humanoids의 mobile_manipulation 문제를 이해하기 위해 읽는다. 본문은 In deployment scenarios such as homes and warehouses, mobile robots are expected to autonomously navigate for extended periods, seamlessly executing tasks articulated in terms that are intuitively understandable by human operators.를 문제로 두고, This enables GOAT to distinguish between different instances of the same category to enable navigation to targets specified by images and fine-grained language descriptions.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 4 (IV. GOAT METHOD), p. 4 (IV. GOAT METHOD), p. 3 (IV. GOAT METHOD), p. 3 (IV. GOAT METHOD), p. 5 (V. RESULTS), p. 5 (V. RESULTS) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 4 (IV. GOAT METHOD), p. 3 (IV. GOAT METHOD), p. 5 (V. RESULTS)이다.
 
 ## Semantic QA — PDF body cross-check
 

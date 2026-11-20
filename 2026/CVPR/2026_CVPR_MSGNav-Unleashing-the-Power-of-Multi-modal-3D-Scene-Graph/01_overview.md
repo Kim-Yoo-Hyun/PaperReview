@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-Robotics-enabling 3D perception의 navigation 문제를 이해하기 위해 읽는다. 본문은 Previous RL-based embodied navigation methods suffer from poor generalization and a large sim-to-real gap [44].를 문제로 두고, Our contributions can be summarized as follows: • M3DSG: We propose a multi-modal 3D scene graph that incorporates visual information, overcoming pure-text limitations and enhancing open-vocabulary scene representation for embodied navi ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — Previous RL-based embodied navigation methods suffer from poor generalization and a large sim-to-real gap [44].
+
+방법 관련 발췌 — Our contributions can be summarized as follows: • M3DSG: We propose a multi-modal 3D scene graph that incorporates visual information, overcoming pure-text limitations and enhancing open-vocabulary scene representation for embodied navi ...
 
 ## Problem and Motivation
 
@@ -82,4 +84,4 @@ Robotics-enabling 3D perception의 navigation 문제를 이해하기 위해 읽�
 
 ## Why Read It
 
-Robotics-enabling 3D perception의 navigation 문제를 이해하기 위해 읽는다. 본문은 Previous RL-based embodied navigation methods suffer from poor generalization and a large sim-to-real gap [44].를 문제로 두고, Our contributions can be summarized as follows: • M3DSG: We propose a multi-modal 3D scene graph that incorporates visual information, overcoming pure-text limitations and enhancing open-vocabulary scene representation for embodied navi ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (1. Introduction), p. 2 (1. Introduction), p. 3 (1. Introduction), p. 3 (3.1.1. Problem definition), p. 6 (3.3.4. Visibility-based Viewpoint Decision (VVD)), p. 8 (4.3.3. Decision-making for "Last-mile") to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 2 (1. Introduction), p. 3 (1. Introduction), p. 3 (3.1.1. Problem definition), p. 6 (3.3.4. Visibility-based Viewpoint Decision (VVD)), p. 8 (4.3.3. Decision-making for "Last-mile")이다.

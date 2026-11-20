@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-Manipulation, contact, tactile, and dexterity의 manipulation 문제를 이해하기 위해 읽는다. 본문은 (III) Fewer hyperparameters: the proposed model has fewer parameters, making it easy to tune, and it also supports model auto-tuning using any learning framework ‘The goal of the new contact model is ...를 문제로 두고, Our method consistently achieves state-of-the ) a 96.5% average success rate across all objects를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — (III) Fewer hyperparameters: the proposed model has fewer parameters, making it easy to tune, and it also supports model auto-tuning using any learning framework ‘The goal of the new contact model is ...
+
+방법 관련 발췌 — Our method consistently achieves state-of-the ) a 96.5% average success rate across all objects
 
 ## Problem and Motivation
 
@@ -84,7 +86,7 @@ Manipulation, contact, tactile, and dexterity의 manipulation 문제를 이해�
 
 ## Why Read It
 
-Manipulation, contact, tactile, and dexterity의 manipulation 문제를 이해하기 위해 읽는다. 본문은 (III) Fewer hyperparameters: the proposed model has fewer parameters, making it easy to tune, and it also supports model auto-tuning using any learning framework ‘The goal of the new contact model is ...를 문제로 두고, Our method consistently achieves state-of-the ) a 96.5% average success rate across all objects를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (Abstract), p. 1 (Abstract), p. 1 (Abstract), p. 2 (A. Rigid Body Multi-contact Models), p. 3 (C. Reinforcement Learning for Dexterous Manipulation), p. 2 (A. Rigid Body Multi-contact Models) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 2 (Abstract), p. 1 (Abstract), p. 2 (A. Rigid Body Multi-contact Models), p. 3 (C. Reinforcement Learning for Dexterous Manipulation)이다.
 
 ## Semantic QA — PDF body cross-check
 

@@ -19,7 +19,7 @@
 
 ## Why This Paper Is Here
 
-VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다. 본문은 Existing approaches that fine-tune VLAs using the base ‘model's autoregressive training recipe face two key limitations: slow inference speed (3-5 Hz) unsuitable for high-frequency control, and unreliable task execution on bimanual mani ...를 문제로 두고, In the next section, ‘we present a parallel generation scheme that enables efficient action chunking.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+OpenVLA의 행동 표현·디코딩·목적함수를 비교해 빠른 연속 행동 예측용 미세조정법을 구성한다.
 
 ## Problem and Motivation
 
@@ -53,16 +53,10 @@ VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다
 
 ## Main Claims and Actual Contribution
 
-- **p. 3 / 1. Iyrropucrion - extractive body cue:** In the next section, ‘we present a parallel generation scheme that enables efficient action chunking.
-- **p. 1 / Abstract - extractive body cue:** We propose OpenVLA™ OFT, an instantiation of this sels a new state of the art on the L wation benchmark, significantly boosting OpenVLA's average success ...
-- **p. 1 / 1. Iyrropucrion - extractive body cue:** Building on these insights, we introduce OpenVLA-OFT: an instantiation of an Optimized Fine-Tuning (OFT) recipe that integrates parallel decoding and action chunking, continuous action representations, ...
-- **p. 14 / B. Implementation Details - extractive body cue:** LI regression: The MLP action head consists of 4 layers with ReLU activation, mapping final Llama-2 decoder layer hidden states directly to continuous actions.
-- **p. 2 / 1. Iyrropucrion - extractive body cue:** With 25-timestep action ‘chunks, OpenVLA-OFT+ achieves 43% faster throughput than base OpenVLA, demonstrating that our new fine-tuning recipe ‘enables real-time robot control with strong task ...
-- **p. 9 / C. ALOHA Task Performance Results - extractive body cue:** Finally, OpenVLA-OFT+ achieves the highest performance across both task execution and language following (see Figure 7 for examples of successful task rollouts).
-- **p. 5 / A. LIBERO Experimental Setup - extractive body cue:** For methods using action chunking, we set chunk size to A' = 8 to match the Diffusion Policy baseline [5], and execute full chunks before ...
-- **p. 8 / C. ALOHA Task Performance Results - extractive body cue:** ACT, while able to complete basic tasks, produces less precise actions and achieves the lowest overall performance.
+- 병렬 디코딩·행동 청킹·L1 행동 회귀를 결합한다.
+- LIBERO와 ALOHA 양팔 과업에서 속도·성공률과 지시 조건화의 영향을 분석한다.
 
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+[검증한 원문](https://www.roboticsproceedings.org/rss21/p017.html)
 
 ## Evaluation Scope
 
@@ -86,7 +80,7 @@ VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다
 
 ## Why Read It
 
-VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다. 본문은 Existing approaches that fine-tune VLAs using the base ‘model's autoregressive training recipe face two key limitations: slow inference speed (3-5 Hz) unsuitable for high-frequency control, and unreliable task execution on bimanual mani ...를 문제로 두고, In the next section, ‘we present a parallel generation scheme that enables efficient action chunking.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 3 (A. VIA Fine-Tuning Design Decisions), p. 2 (1. Iyrropucrion), p. 3 (A. VIA Fine-Tuning Design Decisions), p. 4 (B. Implementing Alternative Design Components), p. 1 (1. Iyrropucrion), p. 14 (B. Implementation Details) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 3 (A. VIA Fine-Tuning Design Decisions), p. 2 (1. Iyrropucrion), p. 4 (B. Implementing Alternative Design Components), p. 1 (1. Iyrropucrion), p. 14 (B. Implementation Details)이다.
 
 ## Semantic QA — PDF body cross-check
 

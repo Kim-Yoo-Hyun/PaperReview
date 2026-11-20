@@ -21,7 +21,7 @@
 
 ## Why This Paper Is Here
 
-Manipulation, contact, tactile, and dexterity의 manipulation 문제를 이해하기 위해 읽는다. 본문은 To collect the required extensive number of demonstrations, the entire data-gathering process can span several days due to its long-horizon nature and failure-prone process.를 문제로 두고, To this end, we introduce 3D Diffusion Policy (DP3), which mainly consists of two critical parts: (a) Perception.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+희소한 점군 표현을 조건으로 확산 정책이 조작 행동을 생성하도록 학습한다.
 
 ## Problem and Motivation
 
@@ -55,16 +55,10 @@ Manipulation, contact, tactile, and dexterity의 manipulation 문제를 이해�
 
 ## Main Claims and Actual Contribution
 
-- **p. 3 / III. METHOD - extractive body cue:** To this end, we introduce 3D Diffusion Policy (DP3), which mainly consists of two critical parts: (a) Perception.
-- **p. 1 / I. INTRODUCTION - extractive body cue:** To tackle this challenging problem, we introduce 3D Diffusion Policy (DP3), a simple yet effective visual imitation learning algorithm that integrates the strengths of 3D ...
-- **p. 3 / III. METHOD - extractive body cue:** The network, termed as DP3 Encoder, is conceptually simple: it consists of a three-layer MLP, a max-pooling function as an order-equivariant operation to pool point ...
-- **p. 2 / I. INTRODUCTION - extractive body cue:** To comprehensively evaluate DP3, we have developed a simulation benchmark comprising 72 diverse robotic tasks from 7 domains, alongside 4 real-world tasks including challenging dexterous ...
-- **p. 4 / Figure/Table caption - extractive body cue:** Fig. 2: Overview of 3D Diffusion Policy (DP3). Above: In the training phase, DP3 simultaneously trains its perception module and decision-making process in an end-to-end ...
-- **p. 5 / IV. SIMULATION EXPERIMENTS - extractive body cue:** We observe that DP3 achieves a success rate exceeding 90% in TABLE III: Task suite of DP3, including Adroit [49], BiDexHands [8], DexArt [5], DexDeform ...
-- **p. 5 / IV. SIMULATION EXPERIMENTS - extractive body cue:** The success rates for experts are given in Appendix C.
-- **p. 6 / Figure/Table caption - extractive body cue:** Fig. 5: Learning efficiency. We sample 12 simulation tasks and show the learning curves of DP3 and Diffusion Policy. DP3 demonstrates a rapid convergence towards ...
+- 경량 점군 인코더와 행동 디노이징을 결합한다.
+- 다양한 시뮬레이션·실물 조작 과제에서 2D 시각 정책 대비 일반화를 평가한다.
 
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+[검증한 원문](https://www.roboticsproceedings.org/rss20/p067.html)
 
 ## Evaluation Scope
 
@@ -87,7 +81,7 @@ Manipulation, contact, tactile, and dexterity의 manipulation 문제를 이해�
 
 ## Why Read It
 
-Manipulation, contact, tactile, and dexterity의 manipulation 문제를 이해하기 위해 읽는다. 본문은 To collect the required extensive number of demonstrations, the entire data-gathering process can span several days due to its long-horizon nature and failure-prone process.를 문제로 두고, To this end, we introduce 3D Diffusion Policy (DP3), which mainly consists of two critical parts: (a) Perception.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 3 (III. METHOD), p. 3 (III. METHOD), p. 4 (III. METHOD), p. 4 (III. METHOD) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 1 (I. INTRODUCTION), p. 3 (III. METHOD), p. 4 (III. METHOD)이다.
 
 ## Semantic QA — PDF body cross-check
 

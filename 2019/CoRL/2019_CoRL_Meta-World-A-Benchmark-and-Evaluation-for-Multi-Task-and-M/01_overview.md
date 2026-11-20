@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-Manipulation, contact, tactile, and dexterity의 benchmark 문제를 이해하기 위해 읽는다. 본문은 We provide an evaluation protocol with evaluation modes of varying difficulty, and observe that current methods only show success in the easiest modes.를 문제로 두고, To this end, we present a benchmark of simulated manipulation tasks with everyday objects, all of which are contained in a shared, table-top environment with a simulated Sawyer arm.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — We provide an evaluation protocol with evaluation modes of varying difficulty, and observe that current methods only show success in the easiest modes.
+
+방법 관련 발췌 — To this end, we present a benchmark of simulated manipulation tasks with everyday objects, all of which are contained in a shared, table-top environment with a simulated Sawyer arm.
 
 ## Problem and Motivation
 
@@ -85,4 +87,4 @@ Manipulation, contact, tactile, and dexterity의 benchmark 문제를 이해하�
 
 ## Why Read It
 
-Manipulation, contact, tactile, and dexterity의 benchmark 문제를 이해하기 위해 읽는다. 본문은 We provide an evaluation protocol with evaluation modes of varying difficulty, and observe that current methods only show success in the easiest modes.를 문제로 두고, To this end, we present a benchmark of simulated manipulation tasks with everyday objects, all of which are contained in a shared, table-top environment with a simulated Sawyer arm.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (1 Introduction), p. 2 (1 Introduction), p. 1 (1 Introduction), p. 1 (1 Introduction), p. 1 (Abstract), p. 1 (Abstract) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 2 (1 Introduction), p. 1 (1 Introduction), p. 1 (Abstract)이다.

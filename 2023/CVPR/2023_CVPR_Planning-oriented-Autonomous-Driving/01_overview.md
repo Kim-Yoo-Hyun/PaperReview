@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-Planning and control의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 Although such a design simplifies the R&D difficulty across teams, it bares the risk of information loss across modules, error accumulation and feature misalignment due to the isolation of optimization targets [57,66,82].를 문제로 두고, To address this, we present OccFormer to incorporate both scene-level and agent-level semantics in two aspects: (1) a dense scene feature acquires agent-level features via an exquisitely designed attention module when unrolling ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — Although such a design simplifies the R&D difficulty across teams, it bares the risk of information loss across modules, error accumulation and feature misalignment due to the isolation of optimization targets [57,66,82].
+
+방법 관련 발췌 — To address this, we present OccFormer to incorporate both scene-level and agent-level semantics in two aspects: (1) a dense scene feature acquires agent-level features via an exquisitely designed attention module when unrolling ...
 
 ## Problem and Motivation
 
@@ -85,4 +87,4 @@ Planning and control의 3d_perception 문제를 이해하기 위해 읽는다. �
 
 ## Why Read It
 
-Planning and control의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 Although such a design simplifies the R&D difficulty across teams, it bares the risk of information loss across modules, error accumulation and feature misalignment due to the isolation of optimization targets [57,66,82].를 문제로 두고, To address this, we present OccFormer to incorporate both scene-level and agent-level semantics in two aspects: (1) a dense scene feature acquires agent-level features via an exquisitely designed attention module when unrolling ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1. Introduction), p. 2 (1. Introduction), p. 5 (2. Methodology), p. 5 (2. Methodology), p. 2 (2. Methodology), p. 4 (2. Methodology) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 1 (1. Introduction), p. 2 (1. Introduction), p. 5 (2. Methodology), p. 2 (2. Methodology), p. 4 (2. Methodology)이다.

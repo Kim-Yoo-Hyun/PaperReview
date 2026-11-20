@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 Large language models (LLMs) often have difficulty interpreting such descriptions [17, 51], yet resolving these ambiguities is crucial for improving grounding accuracy [20].를 문제로 두고, In summary, our contributions are fourfold: • We propose ViewSRD, a framework that formulates 3D visual grounding as a structured multi-view decomposition process, effectively handling complex multi-anchor queries and mitigating text-vi ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — Large language models (LLMs) often have difficulty interpreting such descriptions [17, 51], yet resolving these ambiguities is crucial for improving grounding accuracy [20].
+
+방법 관련 발췌 — In summary, our contributions are fourfold: • We propose ViewSRD, a framework that formulates 3D visual grounding as a structured multi-view decomposition process, effectively handling complex multi-anchor queries and mitigating text-vi ...
 
 ## Problem and Motivation
 
@@ -83,4 +85,4 @@ Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 �
 
 ## Why Read It
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 Large language models (LLMs) often have difficulty interpreting such descriptions [17, 51], yet resolving these ambiguities is crucial for improving grounding accuracy [20].를 문제로 두고, In summary, our contributions are fourfold: • We propose ViewSRD, a framework that formulates 3D visual grounding as a structured multi-view decomposition process, effectively handling complex multi-anchor queries and mitigating text-vi ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (2. The nightstand is closest to the wall), p. 2 (2. The nightstand is closest to the wall), p. 1 (2. The nightstand is closest to the wall), p. 2 (2. The nightstand is closest to the wall), p. 3 (3. ViewSRD), p. 5 (3.3. Multi-view Textual-Scene Interaction Module) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 1 (2. The nightstand is closest to the wall), p. 2 (2. The nightstand is closest to the wall), p. 3 (3. ViewSRD), p. 5 (3.3. Multi-view Textual-Scene Interaction Module)이다.

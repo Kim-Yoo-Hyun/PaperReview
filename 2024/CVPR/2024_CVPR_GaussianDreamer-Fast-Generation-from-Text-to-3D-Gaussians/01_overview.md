@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-Robotics-enabling 3D perception의 generative 문제를 이해하기 위해 읽는다. 본문은 The scale of current 3D datasets is far smaller than 2D datasets.를 문제로 두고, Our contributions can be summarized as follows. • We propose a text-to-3D method, named as GaussianDreamer which bridges the 3D and 2D diffusion models via Gaussian splitting, enjoying both 3D consistency and ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — The scale of current 3D datasets is far smaller than 2D datasets.
+
+방법 관련 발췌 — Our contributions can be summarized as follows. • We propose a text-to-3D method, named as GaussianDreamer which bridges the 3D and 2D diffusion models via Gaussian splitting, enjoying both 3D consistency and ...
 
 ## Problem and Motivation
 
@@ -81,4 +83,4 @@ Robotics-enabling 3D perception의 generative 문제를 이해하기 위해 읽�
 
 ## Why Read It
 
-Robotics-enabling 3D perception의 generative 문제를 이해하기 위해 읽는다. 본문은 The scale of current 3D datasets is far smaller than 2D datasets.를 문제로 두고, Our contributions can be summarized as follows. • We propose a text-to-3D method, named as GaussianDreamer which bridges the 3D and 2D diffusion models via Gaussian splitting, enjoying both 3D consistency and ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1. Introduction), p. 2 (1. Introduction), p. 2 (1. Introduction), p. 4 (3.3. Gaussian Initialization with 3D Diffusion), p. 4 (3.2. Overall Framework), p. 3 (3. Method) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 1 (1. Introduction), p. 2 (1. Introduction), p. 4 (3.3. Gaussian Initialization with 3D Diffusion), p. 4 (3.2. Overall Framework), p. 3 (3. Method)이다.

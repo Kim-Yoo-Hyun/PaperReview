@@ -19,7 +19,7 @@
 
 ## Why This Paper Is Here
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 Finally, the least obvious limitation is derived from the way these models compute the point-level features: Although the projected open-vocabulary features are fine-grained at the level of the geometrical scene representation, the ...를 문제로 두고, To summarize our key contributions: • We propose a hierarchical open-vocabulary 3D segmentation method capable of segmenting both entire objects and their parts given arbitrary textual queries, by aggregating features anchored to ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+Search3D는 자유로운 텍스트 질의로 3D 장면의 물체와 그보다 작은 부위·속성 영역을 찾는다.
 
 ## Problem and Motivation
 
@@ -53,16 +53,10 @@ Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 �
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / I. INTRODUCTION - extractive body cue:** To summarize our key contributions: • We propose a hierarchical open-vocabulary 3D segmentation method capable of segmenting both entire objects and their parts given arbitrary ...
-- **p. 2 / I. INTRODUCTION - extractive body cue:** To evaluate our method, we introduce a novel evaluation suite for open-vocabulary scene-scale 3D part segmentation based on MultiScan [16].
-- **p. 3 / III. METHOD - extractive body cue:** We introduce a novel hierarchical 3D scene representation enabling open-vocabulary segmentation for scene entities at multiple granularities, including objects and their parts.
-- **p. 1 / I. INTRODUCTION - extractive body cue:** 1: We propose Search3D, a method for open-vocabulary 3D search at multiple levels of granularity.
-- **p. 1 / I. INTRODUCTION - extractive body cue:** This enables searching across objects, parts, and attributes matching any given user query (right). critical to scene interaction.
-- **p. 6 / V. EXPERIMENTS - extractive body cue:** It demonstrates the strong open-vocabulary part-segmentation performance of our segment-level features, with at least + 13.8 AP improvement over baseline methods.
-- **p. 6 / V. EXPERIMENTS - extractive body cue:** V, our method has very strong 3D instance segmentation performance, outperforming other counterparts that rely solely on 3D masks for identifying object-level instances.
-- **p. 7 / V. EXPERIMENTS - extractive body cue:** II, where oracle mask experiment yields much higher AP scores than those with predicted part masks, indicating room for improvement in 3D part mask quality.
+- 여러 크기의 장면 요소에 대응하는 표현을 사용해 세밀한 질의를 지원한다.
+- MultiScan 기반 부위 분할 벤치마크와 ScanNet++의 세밀한 부위 주석을 제공한다.
 
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+[원문 초록](https://arxiv.org/abs/2409.18431)
 
 ## Evaluation Scope
 
@@ -81,4 +75,4 @@ Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 �
 
 ## Why Read It
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 Finally, the least obvious limitation is derived from the way these models compute the point-level features: Although the projected open-vocabulary features are fine-grained at the level of the geometrical scene representation, the ...를 문제로 두고, To summarize our key contributions: • We propose a hierarchical open-vocabulary 3D segmentation method capable of segmenting both entire objects and their parts given arbitrary textual queries, by aggregating features anchored to ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 2 (I. INTRODUCTION) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 2 (I. INTRODUCTION), p. 1 (I. INTRODUCTION)이다.

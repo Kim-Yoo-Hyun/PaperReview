@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-Manipulation, contact, tactile, and dexterity의 manipulation 문제를 이해하기 위해 읽는다. 본문은 The optimality gap δopt can then be overestimated as δopt = Cround -Copt Copt ≤Cround -Crelax Crelax = δrelax (2) Finally, we note that the original problem description in [1], [52] has ...를 문제로 두고, Our method approximates these bilinearities using a tight Semidefinite Programming (SDP) relaxation for each contact mode.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — The optimality gap δopt can then be overestimated as δopt = Cround -Copt Copt ≤Cround -Crelax Crelax = δrelax (2) Finally, we note that the original problem description in [1], [52] has ...
+
+방법 관련 발췌 — Our method approximates these bilinearities using a tight Semidefinite Programming (SDP) relaxation for each contact mode.
 
 ## Problem and Motivation
 
@@ -85,7 +87,7 @@ Manipulation, contact, tactile, and dexterity의 manipulation 문제를 이해�
 
 ## Why Read It
 
-Manipulation, contact, tactile, and dexterity의 manipulation 문제를 이해하기 위해 읽는다. 본문은 The optimality gap δopt can then be overestimated as δopt = Cround -Copt Copt ≤Cround -Crelax Crelax = δrelax (2) Finally, we note that the original problem description in [1], [52] has ...를 문제로 두고, Our method approximates these bilinearities using a tight Semidefinite Programming (SDP) relaxation for each contact mode.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 3 (V. BACKGROUND AND OPTIMIZATION TOOLS), p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 3 (V. BACKGROUND AND OPTIMIZATION TOOLS), p. 2 (I. INTRODUCTION), p. 7 (VII. MOTION PLANNING FOR PLANAR PUSHING) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 3 (V. BACKGROUND AND OPTIMIZATION TOOLS), p. 1 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 7 (VII. MOTION PLANNING FOR PLANAR PUSHING)이다.
 
 ## Semantic QA — PDF body cross-check
 

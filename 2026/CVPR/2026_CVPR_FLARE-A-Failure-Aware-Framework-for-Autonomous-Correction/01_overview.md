@@ -80,7 +80,7 @@ FLARE는 조작 오류의 종류에 따라 현재 동작을 다시 시도하거�
 
 ## Why Read It
 
-World models, safety, uncertainty, and recovery의 safety 문제를 이해하기 위해 읽는다. 본문은 We formalize this challenge by introducing a taxonomy of failure states.를 문제로 두고, To this end, we propose FLARE, a Failure-Aware Retry/Reset framework designed to transform brittle VLAs into resilient embodied agents (Fig.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 3 (3.1. Problem Formulation), p. 3 (3.1. Problem Formulation), p. 1 (1. Introduction), p. 1 (1. Introduction), p. 2 (1. Introduction), p. 3 (3.1. Problem Formulation) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 3 (3.1. Problem Formulation), p. 1 (1. Introduction), p. 2 (1. Introduction)이다.
 
 ## Semantic QA — PDF body cross-check
 

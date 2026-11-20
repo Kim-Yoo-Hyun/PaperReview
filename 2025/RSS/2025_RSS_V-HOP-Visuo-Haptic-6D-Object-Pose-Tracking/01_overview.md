@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-Manipulation, contact, tactile, and dexterity의 tactile 문제를 이해하기 위해 읽는다. 본문은 (i) Domain generalization: Compared to visual-only baselines, visuo-tactile approaches struggle to generalize, hindered by insufficient data diversity and model scalability.를 문제로 두고, First, we introduce a novel unified haptic representation that facilitates cross-embodiment learning.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — (i) Domain generalization: Compared to visual-only baselines, visuo-tactile approaches struggle to generalize, hindered by insufficient data diversity and model scalability.
+
+방법 관련 발췌 — First, we introduce a novel unified haptic representation that facilitates cross-embodiment learning.
 
 ## Problem and Motivation
 
@@ -84,7 +86,7 @@ Manipulation, contact, tactile, and dexterity의 tactile 문제를 이해하기 
 
 ## Why Read It
 
-Manipulation, contact, tactile, and dexterity의 tactile 문제를 이해하기 위해 읽는다. 본문은 (i) Domain generalization: Compared to visual-only baselines, visuo-tactile approaches struggle to generalize, hindered by insufficient data diversity and model scalability.를 문제로 두고, First, we introduce a novel unified haptic representation that facilitates cross-embodiment learning.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1. INTRODUCTION), p. 1 (1. INTRODUCTION), p. 2 (1. INTRODUCTION), p. 2 (1. INTRODUCTION), p. 3 (III. MeTHODOLOGY), p. 3 (III. MeTHODOLOGY) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 1 (1. INTRODUCTION), p. 2 (1. INTRODUCTION), p. 3 (III. MeTHODOLOGY)이다.
 
 ## Semantic QA — PDF body cross-check
 

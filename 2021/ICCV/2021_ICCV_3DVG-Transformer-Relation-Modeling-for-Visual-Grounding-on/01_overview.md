@@ -19,7 +19,7 @@
 
 ## Why This Paper Is Here
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 Moreover, due to the relatively small scales of recent visual grounding datasets, the existing methods also suffer from the overfitting problem, which also prevents these methods from learning a generalizable visual grounding ...를 문제로 두고, 3.1, we present an overview of our method.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+3DVG-Transformer는 점군에서 자연어가 지시하는 물체를 찾는다.
 
 ## Problem and Motivation
 
@@ -53,16 +53,10 @@ Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 �
 
 ## Main Claims and Actual Contribution
 
-- **p. 3 / 3. Methodology - extractive body cue:** 3.1, we present an overview of our method.
-- **p. 3 / 3. Methodology - extractive body cue:** 3.4, we introduce the objective function of our method, which also includes a pair of feature augmentation strategies for alleviating overfitting.
-- **p. 2 / 1. Introduction - extractive body cue:** The contribution of this work is three-fold: (1) A simple and strong visual grounding framework (referred to as 3DVG-Transformer) specifically designed for point clouds, which ...
-- **p. 1 / 1. Introduction - extractive body cue:** To this end, we propose a relation-aware visual grounding method on 3D point clouds, named as 3DVGTransformer.
-- **p. 1 / 1. Introduction - extractive body cue:** While our method follows the ground-bydetection strategy from ScanRefer [6], we additionally exploit various relations among proposals at both the object proposal generation stage and ...
-- **p. 7 / Figure/Table caption - extractive body cue:** Figure 3. Qualitative results from ScanRefer [6] and our 3DVG-Transformer. The GT boxes are marked in blue. If one predicted box has an IoU score ...
-- **p. 7 / 4.2. Comparisons with the state-of-the-art methods - extractive body cue:** The proposed 3DVGTransformer achieves the overall accuracy of 40.8% and 51.4% on Nr3D and Sr3D respectively, which outperforms all the baseline methods by a large ...
-- **p. 8 / 4.3. Ablation Study and Analysis - extractive body cue:** As shown in Table 4, the best results are achieved by using our default strategy, while the localization accuracies without using the coordinate-guided attention strategy ...
+- 좌표를 이용해 주변 물체와의 관계를 후보 표현에 반영한다.
+- 언어와 후보 간 주의로 같은 종류의 물체를 구별하고 ScanRefer와 ReferIt3D에서 위치 식별을 평가한다.
 
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+[원문 초록](https://openaccess.thecvf.com/content/ICCV2021/html/Zhao_3DVG-Transformer_Relation_Modeling_for_Visual_Grounding_on_Point_Clouds_ICCV_2021_paper.html)
 
 ## Evaluation Scope
 
@@ -81,4 +75,4 @@ Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 �
 
 ## Why Read It
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 Moreover, due to the relatively small scales of recent visual grounding datasets, the existing methods also suffer from the overfitting problem, which also prevents these methods from learning a generalizable visual grounding ...를 문제로 두고, 3.1, we present an overview of our method.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1. Introduction), p. 1 (1. Introduction), p. 4 (3.2. Relation-enhanced Proposal Generation), p. 4 (3.2. Relation-enhanced Proposal Generation), p. 5 (3.3. Cross-modal Proposal Disambiguation), p. 5 (3.3. Cross-modal Proposal Disambiguation) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 1 (1. Introduction), p. 4 (3.2. Relation-enhanced Proposal Generation), p. 5 (3.3. Cross-modal Proposal Disambiguation)이다.

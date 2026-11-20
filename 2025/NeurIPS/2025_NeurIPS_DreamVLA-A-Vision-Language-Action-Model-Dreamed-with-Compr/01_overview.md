@@ -22,7 +22,9 @@
 
 ## Why This Paper Is Here
 
-VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다. 본문은 Despite success, these methods naturally exhibit limitations in redundant reconstruction [95], and lack spatial and semantic information.를 문제로 두고, The key contributions of our work are summarized as follows: • We recast the vision-language-action model as a perception-prediction-action model and make the model explicitly predict a compact set of dynamic, spatial ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — Despite success, these methods naturally exhibit limitations in redundant reconstruction [95], and lack spatial and semantic information.
+
+방법 관련 발췌 — The key contributions of our work are summarized as follows: • We recast the vision-language-action model as a perception-prediction-action model and make the model explicitly predict a compact set of dynamic, spatial ...
 
 ## Problem and Motivation
 
@@ -89,4 +91,4 @@ VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다
 
 ## Why Read It
 
-VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다. 본문은 Despite success, these methods naturally exhibit limitations in redundant reconstruction [95], and lack spatial and semantic information.를 문제로 두고, The key contributions of our work are summarized as follows: • We recast the vision-language-action model as a perception-prediction-action model and make the model explicitly predict a compact set of dynamic, spatial ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 3 (1 Introduction), p. 2 (1 Introduction), p. 3 (1 Introduction), p. 1 (1 Introduction), p. 2 (1 Introduction), p. 4 (3 Methodology) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 3 (1 Introduction), p. 2 (1 Introduction), p. 1 (1 Introduction), p. 4 (3 Methodology)이다.

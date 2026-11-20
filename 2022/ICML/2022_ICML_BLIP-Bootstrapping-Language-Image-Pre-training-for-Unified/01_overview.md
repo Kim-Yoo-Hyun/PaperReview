@@ -75,4 +75,4 @@ BLIP은 영상과 문장의 이해·생성을 함께 사전학습하고, 잡음�
 
 ## Why Read It
 
-Foundations: Vision and Language Models의 upstream 문제를 이해하기 위해 읽는다. 본문은 However, existing methods have two major limitations: (1) Model perspective: most methods either adopt an encoder-based model (Radford et al., 2021; Li et al., 2021a), or an encoder-decoder (Cho et al., 2021; ...를 문제로 두고, To this end, we propose BLIP: Bootstrapping LanguageImage Pre-training for unified vision-language understanding and generation.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1. Introduction), p. 1 (1. Introduction), p. 3 (3. Method), p. 3 (3.1. Model Architecture), p. 4 (3.3. CapFilt), p. 4 (3.3. CapFilt) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 1 (1. Introduction), p. 3 (3. Method), p. 3 (3.1. Model Architecture), p. 4 (3.3. CapFilt)이다.

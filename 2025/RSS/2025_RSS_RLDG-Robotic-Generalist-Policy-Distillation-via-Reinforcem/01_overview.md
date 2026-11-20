@@ -19,7 +19,7 @@
 
 ## Why This Paper Is Here
 
-RL, IL, offline learning, and robot data의 robot_data 문제를 이해하기 위해 읽는다. 본문은 While directly finetuning foundation models with reinforcement learning is possible in principle, it presents significant challenges including optimization instability, computational costs, and potential catastrophic forgetting of pre-t ...를 문제로 두고, To tackle this challenge, we propose Reinforcement Learning Distilled Generalist (RLDG), a simple yet effective method that leverages reinforcement learning to generate high-quality training data for robotic foundation models.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+실기 RL 전문가가 생성한 성공 궤적을 범용 정책의 감독 데이터로 사용한다.
 
 ## Problem and Motivation
 
@@ -51,16 +51,10 @@ RL, IL, offline learning, and robot data의 robot_data 문제를 이해하기 �
 
 ## Main Claims and Actual Contribution
 
-- **p. 1 / 1. Introduction - extractive body cue:** To tackle this challenge, we propose Reinforcement Learning Distilled Generalist (RLDG), a simple yet effective method that leverages reinforcement learning to generate high-quality training data ...
-- **p. 4 / 3.3. Generalist Policy Finetuning - extractive body cue:** Specifically, suppose we have a pre-trained policy 𝜋0, we fine-tune it with taskspecific dataset 𝐷(𝑠𝑡,𝑎𝑡) with the following supervised learning objective: (𝜃) = -𝔼(𝑠𝑡,𝑎𝑡)∼[log 𝜋𝜃(𝑎𝑡/𝑠𝑡)] ...
-- **p. 4 / 3.1. Online RL Training - extractive body cue:** We can formulate each robotic task as a Markov Decision Process (MDP), where the state 𝑠𝑡consists of RGB images and proprioceptive information, and actions 𝑎𝑡represent ...
-- **p. 5 / 3.3. Generalist Policy Finetuning - extractive body cue:** Octo is another open-source generalist robotic policy, designed to adapt to diverse sensory inputs and action spaces efficiently.
-- **p. 7 / 4.2. RLDG vs. Conventional Fine-tuning - extractive body cue:** When evaluated on seen (VGA) and unseen (Type C) Connector Insertion tasks, RLDG shows superior sample efficiency, requiring significantly fewer demonstrations to achieve perfect success ...
-- **p. 7 / Figure/Table caption - extractive body cue:** Figure 4: Success rate comparison of OpenVLA and Octo policies fine-tuned with RLDG versus conventional methods using human demonstrations. Both generalists trained with RLDG consistently ...
-- **p. 6 / 4.2. RLDG vs. Conventional Fine-tuning - extractive body cue:** The benefit of RLDG is equally pronounced for Octo, where it improved the success rate by 10% and 6
-- **p. 6 / 4.2. RLDG vs. Conventional Fine-tuning - extractive body cue:** On each task, both OpenVLA and Octo fine-tuned with RL-generated data consistently achieved higher success rates than their counterparts trained with human demonstrations, in both ...
+- 과업별 전문가를 먼저 학습한 뒤 여러 전문가의 롤아웃을 하나의 학생 학습 자료로 통합한다.
+- 같은 조작 과제에서 사람 시연과 전문가 데이터를 사용한 범용 정책을 비교한다.
 
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+[검증한 원문](https://www.roboticsproceedings.org/rss21/p028.html)
 
 ## Evaluation Scope
 
@@ -83,7 +77,7 @@ RL, IL, offline learning, and robot data의 robot_data 문제를 이해하기 �
 
 ## Why Read It
 
-RL, IL, offline learning, and robot data의 robot_data 문제를 이해하기 위해 읽는다. 본문은 While directly finetuning foundation models with reinforcement learning is possible in principle, it presents significant challenges including optimization instability, computational costs, and potential catastrophic forgetting of pre-t ...를 문제로 두고, To tackle this challenge, we propose Reinforcement Learning Distilled Generalist (RLDG), a simple yet effective method that leverages reinforcement learning to generate high-quality training data for robotic foundation models.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1. Introduction), p. 1 (1. Introduction), p. 5 (3.3. Generalist Policy Finetuning), p. 4 (3.1. Online RL Training), p. 4 (3.3. Generalist Policy Finetuning), p. 5 (3.3. Generalist Policy Finetuning) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 1 (1. Introduction), p. 5 (3.3. Generalist Policy Finetuning), p. 4 (3.1. Online RL Training), p. 4 (3.3. Generalist Policy Finetuning)이다.
 
 ## Semantic QA — PDF body cross-check
 

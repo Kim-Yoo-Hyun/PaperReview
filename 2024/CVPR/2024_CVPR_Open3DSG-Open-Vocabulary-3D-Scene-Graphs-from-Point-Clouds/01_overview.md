@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-Robotics-enabling 3D perception의 navigation 문제를 이해하기 위해 읽는다. 본문은 Open-vocabulary 3D scene understanding methods propose a solution towards these challenges by training a model not on a fixed label set but rather aligning the 3D model with 2D foundation models [14, ...를 문제로 두고, We highlight the following three contributions: • We are the first to present a method to create an interactive graph representation of a scene from a 3D point cloud, which can be ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — Open-vocabulary 3D scene understanding methods propose a solution towards these challenges by training a model not on a fixed label set but rather aligning the 3D model with 2D foundation models [14, ...
+
+방법 관련 발췌 — We highlight the following three contributions: • We are the first to present a method to create an interactive graph representation of a scene from a 3D point cloud, which can be ...
 
 ## Problem and Motivation
 
@@ -83,4 +85,4 @@ Robotics-enabling 3D perception의 navigation 문제를 이해하기 위해 읽�
 
 ## Why Read It
 
-Robotics-enabling 3D perception의 navigation 문제를 이해하기 위해 읽는다. 본문은 Open-vocabulary 3D scene understanding methods propose a solution towards these challenges by training a model not on a fixed label set but rather aligning the 3D model with 2D foundation models [14, ...를 문제로 두고, We highlight the following three contributions: • We are the first to present a method to create an interactive graph representation of a scene from a 3D point cloud, which can be ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1. Introduction), p. 2 (1. Introduction), p. 3 (3. Method), p. 3 (3. Method), p. 6 (4.1. Experimental Setup), p. 7 (4.2. Closed-set 3D scene graph prediction) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 1 (1. Introduction), p. 2 (1. Introduction), p. 3 (3. Method), p. 6 (4.1. Experimental Setup), p. 7 (4.2. Closed-set 3D scene graph prediction)이다.

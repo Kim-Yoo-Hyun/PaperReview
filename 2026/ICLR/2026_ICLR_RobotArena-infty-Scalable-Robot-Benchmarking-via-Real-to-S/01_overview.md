@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-Benchmarks and Datasets의 benchmark 문제를 이해하기 위해 읽는다. 본문은 While recent years have witnessed substantial progress in developing more capable and general robot policies, their evaluation remains a persistent challenge and lacks standardization.를 문제로 두고, RobotArena ∞: We introduce RobotArena ∞, a new benchmarking framework that scales robot evaluation by deploying policies in automatically constructed simulated environments and assessing them through automatic VLM score and online human ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — While recent years have witnessed substantial progress in developing more capable and general robot policies, their evaluation remains a persistent challenge and lacks standardization.
+
+방법 관련 발췌 — RobotArena ∞: We introduce RobotArena ∞, a new benchmarking framework that scales robot evaluation by deploying policies in automatically constructed simulated environments and assessing them through automatic VLM score and online human ...
 
 ## Problem and Motivation
 
@@ -86,4 +88,4 @@ Benchmarks and Datasets의 benchmark 문제를 이해하기 위해 읽는다. �
 
 ## Why Read It
 
-Benchmarks and Datasets의 benchmark 문제를 이해하기 위해 읽는다. 본문은 While recent years have witnessed substantial progress in developing more capable and general robot policies, their evaluation remains a persistent challenge and lacks standardization.를 문제로 두고, RobotArena ∞: We introduce RobotArena ∞, a new benchmarking framework that scales robot evaluation by deploying policies in automatically constructed simulated environments and assessing them through automatic VLM score and online human ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1 INTRODUCTION), p. 1 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 3 (1 INTRODUCTION), p. 3 (1 INTRODUCTION), p. 2 (1 INTRODUCTION) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 1 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 3 (1 INTRODUCTION)이다.

@@ -78,4 +78,4 @@ Latent Diffusion은 사전학습한 오토인코더의 잠재 공간에서 확�
 
 ## Why Read It
 
-Foundations: Generative Models의 generative 문제를 이해하기 위해 읽는다. 본문은 (iii) We show that, in contrast to previous work [93] which learns both an encoder/decoder architecture and a score-based prior simultaneously, our approach does not require a delicate weighting of reconstruction and ...를 문제로 두고, In sum, our work makes the following contributions: (i) In contrast to purely transformer-based approaches [23,66], our method scales more graceful to higher dimensional data and can thus (a) work on a ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (1. Introduction), p. 4 (3.3. Conditioning Mechanisms), p. 3 (3.1. Perceptual Image Compression), p. 4 (3.2. Latent Diffusion Models), p. 3 (3. Method), p. 5 (3.3. Conditioning Mechanisms) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 2 (1. Introduction), p. 4 (3.3. Conditioning Mechanisms), p. 3 (3.1. Perceptual Image Compression), p. 4 (3.2. Latent Diffusion Models), p. 3 (3. Method), p. 5 (3.3. Conditioning Mechanisms)이다.

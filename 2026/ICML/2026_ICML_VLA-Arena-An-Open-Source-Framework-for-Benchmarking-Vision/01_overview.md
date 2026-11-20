@@ -80,7 +80,7 @@ VLA-Arena는 여러 VLA의 과제 수행과 안전성을 같은 환경에서 비
 
 ## Why Read It
 
-VLA and generalist robot policies의 benchmark 문제를 이해하기 위해 읽는다. 본문은 This lack of integration prevents understanding how models handle concurrent challenges across visual, linguistic, and structural dimensions of task.를 문제로 두고, We introduce VLA-Arena, the first benchmark to structurally evaluate the performance and safety of VLAs.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (1. Introduction), p. 3 (1. Introduction), p. 2 (1. Introduction), p. 3 (1. Introduction), p. 6 (3. Task Suites in VLA-Arena), p. 2 (1. Introduction) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 2 (1. Introduction), p. 3 (1. Introduction), p. 6 (3. Task Suites in VLA-Arena)이다.
 
 ## Semantic QA — PDF body cross-check
 

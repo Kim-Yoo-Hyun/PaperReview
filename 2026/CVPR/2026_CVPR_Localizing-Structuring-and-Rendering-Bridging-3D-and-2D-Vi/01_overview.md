@@ -77,4 +77,4 @@ DiffRender-VLA는 미분 가능한 렌더링을 매개로 3D 장면 정보와 2D
 
 ## Why Read It
 
-VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다. 본문은 The key difficulty lies in coupling geometric reasoning with semantic perception-robots must not only reason about 3D spatial structures but also interpret visual cues in an interpretable, image-centric manner.를 문제로 두고, Our main contributions are as follows: • We propose DiffRender-VLA, a unified framework that bridges 3D spatial reasoning and 2D visual perception to transfer geometric understanding into imageinterpretable action policies. • We ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (1. Introduction), p. 2 (1. Introduction), p. 6 (3.4. Fine-Grained Action Prediction), p. 5 (3.4. Fine-Grained Action Prediction), p. 3 (3.1. Localizing Coarse Target Region), p. 3 (3.1. Localizing Coarse Target Region) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 2 (1. Introduction), p. 6 (3.4. Fine-Grained Action Prediction), p. 5 (3.4. Fine-Grained Action Prediction), p. 3 (3.1. Localizing Coarse Target Region)이다.

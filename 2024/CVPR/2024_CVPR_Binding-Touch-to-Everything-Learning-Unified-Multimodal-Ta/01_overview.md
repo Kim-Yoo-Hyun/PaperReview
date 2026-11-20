@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-Manipulation, contact, tactile, and dexterity의 tactile 문제를 이해하기 위해 읽는다. 본문은 An emerging line of work has addressed the challenges of learning from other low-resource modalities, like sound, point clouds, and depth, by aligning examples with pretrained vision-language embeddings [35, 64, 109].를 문제로 두고, First, we present our contrastive visuo-tactile pretraining, inspired by [35], that can emerge interconnections of touch and other modalities.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — An emerging line of work has addressed the challenges of learning from other low-resource modalities, like sound, point clouds, and depth, by aligning examples with pretrained vision-language embeddings [35, 64, 109].
+
+방법 관련 발췌 — First, we present our contrastive visuo-tactile pretraining, inspired by [35], that can emerge interconnections of touch and other modalities.
 
 ## Problem and Motivation
 
@@ -82,7 +84,7 @@ Manipulation, contact, tactile, and dexterity의 tactile 문제를 이해하기 
 
 ## Why Read It
 
-Manipulation, contact, tactile, and dexterity의 tactile 문제를 이해하기 위해 읽는다. 본문은 An emerging line of work has addressed the challenges of learning from other low-resource modalities, like sound, point clouds, and depth, by aligning examples with pretrained vision-language embeddings [35, 64, 109].를 문제로 두고, First, we present our contrastive visuo-tactile pretraining, inspired by [35], that can emerge interconnections of touch and other modalities.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (1. Introduction), p. 2 (1. Introduction), p. 3 (3. Method), p. 3 (3. Method), p. 5 (Method), p. 7 (4.3. Cross-modal retrieval with touch) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 2 (1. Introduction), p. 3 (3. Method), p. 5 (Method), p. 7 (4.3. Cross-modal retrieval with touch)이다.
 
 ## Semantic QA — PDF body cross-check
 

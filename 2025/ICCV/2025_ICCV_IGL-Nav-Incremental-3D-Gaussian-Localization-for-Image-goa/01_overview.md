@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-Robotics-enabling 3D perception의 navigation 문제를 이해하기 위해 읽는다. 본문은 To address these limitations, RNRMap [14] introduces a renderable neural radiance map representation.를 문제로 두고, To this end, we propose IGL-Nav, an Incremental 3D Gaussian Localization framework that (1) progressively constructs 3DGS through feed-forward prediction, eliminating offline optimization; and (2) enables efficient hierarchical goal sea ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — To address these limitations, RNRMap [14] introduces a renderable neural radiance map representation.
+
+방법 관련 발췌 — To this end, we propose IGL-Nav, an Incremental 3D Gaussian Localization framework that (1) progressively constructs 3DGS through feed-forward prediction, eliminating offline optimization; and (2) enables efficient hierarchical goal sea ...
 
 ## Problem and Motivation
 
@@ -81,7 +83,7 @@ Robotics-enabling 3D perception의 navigation 문제를 이해하기 위해 읽�
 
 ## Why Read It
 
-Robotics-enabling 3D perception의 navigation 문제를 이해하기 위해 읽는다. 본문은 To address these limitations, RNRMap [14] introduces a renderable neural radiance map representation.를 문제로 두고, To this end, we propose IGL-Nav, an Incremental 3D Gaussian Localization framework that (1) progressively constructs 3DGS through feed-forward prediction, eliminating offline optimization; and (2) enables efficient hierarchical goal sea ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1. Introduction), p. 2 (1. Introduction), p. 3 (3.1. Problem Statement), p. 1 (1. Introduction), p. 2 (1. Introduction), p. 3 (3.2. Incremental Scene Representation) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 1 (1. Introduction), p. 2 (1. Introduction), p. 3 (3.1. Problem Statement), p. 3 (3.2. Incremental Scene Representation)이다.
 
 ## Semantic QA — PDF body cross-check
 

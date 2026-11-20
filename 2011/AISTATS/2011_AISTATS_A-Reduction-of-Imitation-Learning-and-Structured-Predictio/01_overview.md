@@ -79,7 +79,7 @@ DAgger는 학습 중인 정책이 스스로 방문한 상태에서 전문가 행
 
 ## Why Read It
 
-RL, IL, offline learning, and robot data의 il 문제를 이해하기 위해 읽는다. 본문은 The interaction between policy and the resulting distribution makes optimization difficult as it results in a non-convex objective even if the loss ℓ(s, ·) is convex in π for all states s.를 문제로 두고, We propose a new meta-algorithm for imitation learning which learns a stationary deterministic policy guaranteed to perform well under its induced distribution of states (number of mistakes/costs that grows linearly in T ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (2 PRELIMINARIES), p. 2 (2 PRELIMINARIES), p. 3 (2 PRELIMINARIES), p. 1 (1 INTRODUCTION), p. 3 (2 PRELIMINARIES), p. 2 (1 INTRODUCTION) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 2 (2 PRELIMINARIES), p. 3 (2 PRELIMINARIES), p. 1 (1 INTRODUCTION), p. 2 (1 INTRODUCTION)이다.
 
 ## Semantic QA — PDF body cross-check
 

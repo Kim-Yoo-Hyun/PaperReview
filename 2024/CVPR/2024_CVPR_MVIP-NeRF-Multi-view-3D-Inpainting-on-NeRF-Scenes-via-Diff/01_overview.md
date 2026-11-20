@@ -21,7 +21,9 @@
 
 ## Why This Paper Is Here
 
-Robotics-enabling 3D perception의 generative 문제를 이해하기 위해 읽는다. 본문은 However, this method is difficult to adapt to scenes with large view variations and requires non-trivial depth alignment.를 문제로 두고, To this end, we present MVIP-NeRF, a novel approach that performs multiview-consistent inpainting in NeRF scenes via diffusion priors.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — However, this method is difficult to adapt to scenes with large view variations and requires non-trivial depth alignment.
+
+방법 관련 발췌 — To this end, we present MVIP-NeRF, a novel approach that performs multiview-consistent inpainting in NeRF scenes via diffusion priors.
 
 ## Problem and Motivation
 
@@ -86,4 +88,4 @@ Robotics-enabling 3D perception의 generative 문제를 이해하기 위해 읽�
 
 ## Why Read It
 
-Robotics-enabling 3D perception의 generative 문제를 이해하기 위해 읽는다. 본문은 However, this method is difficult to adapt to scenes with large view variations and requires non-trivial depth alignment.를 문제로 두고, To this end, we present MVIP-NeRF, a novel approach that performs multiview-consistent inpainting in NeRF scenes via diffusion priors.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (1. Introduction), p. 1 (1. Introduction), p. 2 (1. Introduction), p. 4 (3.2. Problem formulation and overview), p. 4 (3.2. Problem formulation and overview), p. 4 (3.3. Appearance Diffusion Prior) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 2 (1. Introduction), p. 1 (1. Introduction), p. 4 (3.2. Problem formulation and overview), p. 4 (3.3. Appearance Diffusion Prior)이다.

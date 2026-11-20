@@ -19,7 +19,7 @@
 
 ## Why This Paper Is Here
 
-World models, safety, uncertainty, and recovery의 safety 문제를 이해하기 위해 읽는다. 본문은 Moreover, existing models typically lack the fine-grained control required to capture the 1 를 문제로 두고, In this paper, we introduce Ctrl-World, a Controllable, multi-view generative world model designed for policy-in-the-loop interaction, enabling multi-step rollouts entirely within imagination space, as illustrated in Figure 1.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+로봇 행동에 조건화한 다중 시점 영상 세계 모델을 사용해 정책을 가상으로 실행한다.
 
 ## Problem and Motivation
 
@@ -53,16 +53,10 @@ World models, safety, uncertainty, and recovery의 safety 문제를 이해하기
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** In this paper, we introduce Ctrl-World, a Controllable, multi-view generative world model designed for policy-in-the-loop interaction, enabling multi-step rollouts entirely within imagination space, as illustrated ...
-- **p. 1 / ABSTRACT - extractive body cue:** We show that our method can accurately rank policy performance without real-world robot rollouts.
-- **p. 3 / 1 INTRODUCTION - extractive body cue:** Building on early works (Finn & Levine, 2017; Ebert et al., 2018; Xie et al., 2019; Dasari et al., 2019; Yang et al., 2023; Wu ...
-- **p. 5 / 1 INTRODUCTION - extractive body cue:** To explore a larger search space, we introduce structured perturbations to encourage diversity in rollouts.
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** The core contribution of this work is a controllable world model for robot manipulation.
-- **p. 9 / 5 EXPERIMENTS - extractive body cue:** Spatial Shape Towel-Dir Novel-Obj Average 0.0 0.2 0.4 0.6 0.8 1.0 Success rate 0.29 0.44 0.57 0.25 0.39 0.88 0.91 0.80 0.75 0.83 Base Policy ...
-- **p. 9 / 5 EXPERIMENTS - extractive body cue:** While the pretrained π0.5 policy achieves low success rates on unfamiliar objects and novel instructions, post-training aligns the model with new instructions and boosts the ...
-- **p. 6 / 5 EXPERIMENTS - extractive body cue:** As shown in Table 1, Ctrl-World-third-view outperforms these prior models, and multi-view joint prediction further improves generation quality.
+- 시간 이력과 여러 시점의 관측을 결합해 연속적인 행동 조건부 영상을 생성한다.
+- 가상 롤아웃을 정책 평가와 지시 수행 개선을 위한 데이터 생성에 적용한다.
 
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+[검증한 원문](https://proceedings.iclr.cc/paper_files/paper/2026/hash/0ae94013da7cd459402fd77874e09ee3-Abstract-Conference.html)
 
 ## Evaluation Scope
 
@@ -86,7 +80,7 @@ World models, safety, uncertainty, and recovery의 safety 문제를 이해하기
 
 ## Why Read It
 
-World models, safety, uncertainty, and recovery의 safety 문제를 이해하기 위해 읽는다. 본문은 Moreover, existing models typically lack the fine-grained control required to capture the 1 를 문제로 두고, In this paper, we introduce Ctrl-World, a Controllable, multi-view generative world model designed for policy-in-the-loop interaction, enabling multi-step rollouts entirely within imagination space, as illustrated in Figure 1.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1 INTRODUCTION), p. 1 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 3 (1 INTRODUCTION), p. 3 (1 INTRODUCTION), p. 3 (1 INTRODUCTION) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 1 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 3 (1 INTRODUCTION)이다.
 
 ## Semantic QA — PDF body cross-check
 

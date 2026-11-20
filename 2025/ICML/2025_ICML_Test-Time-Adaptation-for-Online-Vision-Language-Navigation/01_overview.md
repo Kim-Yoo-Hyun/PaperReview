@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-RL, IL, offline learning, and robot data의 navigation 문제를 이해하기 위해 읽는다. 본문은 For example, when the initial navigation fails, entropy minimization intensifies the probabilities of the actions that lead to failure in repeated episodes.를 문제로 두고, In summary, the contributions of this work are as follows. • We introduce FEEDTTA, a novel TTA framework for online VLN utilizing feedback-based RL.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — For example, when the initial navigation fails, entropy minimization intensifies the probabilities of the actions that lead to failure in repeated episodes.
+
+방법 관련 발췌 — In summary, the contributions of this work are as follows. • We introduce FEEDTTA, a novel TTA framework for online VLN utilizing feedback-based RL.
 
 ## Problem and Motivation
 
@@ -86,4 +88,4 @@ RL, IL, offline learning, and robot data의 navigation 문제를 이해하기 �
 
 ## Why Read It
 
-RL, IL, offline learning, and robot data의 navigation 문제를 이해하기 위해 읽는다. 본문은 For example, when the initial navigation fails, entropy minimization intensifies the probabilities of the actions that lead to failure in repeated episodes.를 문제로 두고, In summary, the contributions of this work are as follows. • We introduce FEEDTTA, a novel TTA framework for online VLN utilizing feedback-based RL.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1. Introduction), p. 1 (1. Introduction), p. 2 (1. Introduction), p. 2 (1. Introduction), p. 3 (3.1. Task Description), p. 3 (3.2. Binary Episodic Feedback) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 1 (1. Introduction), p. 2 (1. Introduction), p. 3 (3.1. Task Description), p. 3 (3.2. Binary Episodic Feedback)이다.

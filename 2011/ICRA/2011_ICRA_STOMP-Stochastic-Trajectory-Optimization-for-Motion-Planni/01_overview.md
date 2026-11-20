@@ -77,4 +77,4 @@ STOMP는 잡음을 더한 궤적들의 비용을 이용해 로봇 동작 계획�
 
 ## Why Read It
 
-Planning and control의 planning 문제를 이해하기 위해 읽는다. 본문은 We present a new approach to motion planning using a stochastic trajectory optimization framework.를 문제로 두고, In this paper, we present a new approach to motion planning that can deal with general constraints.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (III. THE STOMP ALGORITHM), p. 2 (III. THE STOMP ALGORITHM), p. 4 (IV. MOTION PLANNING FOR A ROBOT ARM), p. 4 (IV. MOTION PLANNING FOR A ROBOT ARM), p. 3 (IV. MOTION PLANNING FOR A ROBOT ARM), p. 5 (V. EXPERIMENTS) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 2 (III. THE STOMP ALGORITHM), p. 4 (IV. MOTION PLANNING FOR A ROBOT ARM), p. 3 (IV. MOTION PLANNING FOR A ROBOT ARM), p. 5 (V. EXPERIMENTS)이다.

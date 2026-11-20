@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-Manipulation, contact, tactile, and dexterity의 manipulation 문제를 이해하기 위해 읽는다. 본문은 However, a major challenge with closed-loop grasp control is that the sensorimotor loop must be closed on the visual modality, which is very difficult to utilize effectively with standard optimal control methods ...를 문제로 두고, We show that our method attains a high success rate across a range of objects not seen during training, and our qualitative experiments show that this high success rate is due to ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — However, a major challenge with closed-loop grasp control is that the sensorimotor loop must be closed on the visual modality, which is very difficult to utilize effectively with standard optimal control methods ...
+
+방법 관련 발췌 — We show that our method attains a high success rate across a range of objects not seen during training, and our qualitative experiments show that this high success rate is due to ...
 
 ## Problem and Motivation
 
@@ -86,4 +88,4 @@ Manipulation, contact, tactile, and dexterity의 manipulation 문제를 이해�
 
 ## Why Read It
 
-Manipulation, contact, tactile, and dexterity의 manipulation 문제를 이해하기 위해 읽는다. 본문은 However, a major challenge with closed-loop grasp control is that the sensorimotor loop must be closed on the visual modality, which is very difficult to utilize effectively with standard optimal control methods ...를 문제로 두고, We show that our method attains a high success rate across a range of objects not seen during training, and our qualitative experiments show that this high success rate is due to ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (1 Introduction), p. 1 (1 Introduction), p. 2 (1 Introduction), p. 1 (1 Introduction), p. 8 (Method), p. 7 (Method) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 2 (1 Introduction), p. 1 (1 Introduction), p. 8 (Method), p. 7 (Method)이다.

@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-RL, IL, offline learning, and robot data의 offline_rl 문제를 이해하기 위해 읽는다. 본문은 Moreover, there usually exist suboptimal behaviors within a successful demonstration, such as retrying to grip the item if the first attempt fails.를 문제로 두고, As a direct approach that uses graph search rather than deep RL, our method enjoys high time efficiency.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — Moreover, there usually exist suboptimal behaviors within a successful demonstration, such as retrying to grip the item if the first attempt fails.
+
+방법 관련 발췌 — As a direct approach that uses graph search rather than deep RL, our method enjoys high time efficiency.
 
 ## Problem and Motivation
 
@@ -86,4 +88,4 @@ RL, IL, offline learning, and robot data의 offline_rl 문제를 이해하기 �
 
 ## Why Read It
 
-RL, IL, offline learning, and robot data의 offline_rl 문제를 이해하기 위해 읽는다. 본문은 Moreover, there usually exist suboptimal behaviors within a successful demonstration, such as retrying to grip the item if the first attempt fails.를 문제로 두고, As a direct approach that uses graph search rather than deep RL, our method enjoys high time efficiency.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 3 (III. PRELIMINARIES), p. 4 (IV. POLICY LEARNING), p. 4 (IV. POLICY LEARNING) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 2 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 3 (III. PRELIMINARIES), p. 4 (IV. POLICY LEARNING)이다.

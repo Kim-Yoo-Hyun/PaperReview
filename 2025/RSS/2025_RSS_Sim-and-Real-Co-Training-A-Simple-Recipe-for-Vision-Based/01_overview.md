@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-RL, IL, offline learning, and robot data의 humanoid 문제를 이해하기 위해 읽는다. 본문은 However, they involve considerable cost, time, and scalability challenges, and it remains unclear whether simply scaling real-world data collection alone is sufficient to train generalist robot models.를 문제로 두고, We define these parameters in more detail and quantify them in Section IV, when we introduce the domains and tasks, and we study how important it is to align each factor between ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — However, they involve considerable cost, time, and scalability challenges, and it remains unclear whether simply scaling real-world data collection alone is sufficient to train generalist robot models.
+
+방법 관련 발췌 — We define these parameters in more detail and quantify them in Section IV, when we introduce the domains and tasks, and we study how important it is to align each factor between ...
 
 ## Problem and Motivation
 
@@ -85,7 +87,7 @@ RL, IL, offline learning, and robot data의 humanoid 문제를 이해하기 위�
 
 ## Why Read It
 
-RL, IL, offline learning, and robot data의 humanoid 문제를 이해하기 위해 읽는다. 본문은 However, they involve considerable cost, time, and scalability challenges, and it remains unclear whether simply scaling real-world data collection alone is sufficient to train generalist robot models.를 문제로 두고, We define these parameters in more detail and quantify them in Section IV, when we introduce the domains and tasks, and we study how important it is to align each factor between ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1. IyrRopucTION), p. 1 (Abstract), p. 2 (1. IyrRopucTION), p. 2 (B. Sim-to-Real and Sim-Real Co-Training), p. 4 (IV. Srupy Serur), p. 3 (A. Co-Training on Real-World and Simulation Data) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 1 (1. IyrRopucTION), p. 1 (Abstract), p. 2 (1. IyrRopucTION), p. 2 (B. Sim-to-Real and Sim-Real Co-Training), p. 4 (IV. Srupy Serur), p. 3 (A. Co-Training on Real-World and Simulation Data)이다.
 
 ## Semantic QA — PDF body cross-check
 

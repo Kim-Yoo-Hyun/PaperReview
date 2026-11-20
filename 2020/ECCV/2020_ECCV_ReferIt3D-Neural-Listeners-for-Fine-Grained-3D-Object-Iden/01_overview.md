@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 Solving such a reference problem directly in 3D space - i.e., without a camera view dependency - can benefit many downstream robotics applications, including embodied question answering [21], visual- and language-based navigation ...를 문제로 두고, For Sr3D we propose a simple but effective methodology for building template-based and spatially-oriented object referential language in 3D scenes.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — Solving such a reference problem directly in 3D space - i.e., without a camera view dependency - can benefit many downstream robotics applications, including embodied question answering [21], visual- and language-based navigation ...
+
+방법 관련 발췌 — For Sr3D we propose a simple but effective methodology for building template-based and spatially-oriented object referential language in 3D scenes.
 
 ## Problem and Motivation
 
@@ -82,4 +84,4 @@ Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 �
 
 ## Why Read It
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 Solving such a reference problem directly in 3D space - i.e., without a camera view dependency - can benefit many downstream robotics applications, including embodied question answering [21], visual- and language-based navigation ...를 문제로 두고, For Sr3D we propose a simple but effective methodology for building template-based and spatially-oriented object referential language in 3D scenes.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (1 Introduction), p. 2 (1 Introduction), p. 1 (body section not recovered), p. 1 (1 Introduction), p. 2 (1 Introduction), p. 3 (1 Introduction) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 2 (1 Introduction), p. 1 (body section not recovered), p. 1 (1 Introduction), p. 3 (1 Introduction)이다.

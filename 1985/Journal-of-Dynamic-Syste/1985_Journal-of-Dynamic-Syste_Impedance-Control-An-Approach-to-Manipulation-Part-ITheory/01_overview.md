@@ -19,7 +19,7 @@
 
 ## Why This Paper Is Here
 
-Planning and control의 manipulation 문제를 이해하기 위해 읽는다. 본문은 However, as described above, while a constrained inertial object can always be pushed on, it cannot always be moved; These systems are properly described as admittances.를 문제로 두고, In Part I this approach is developed by considering the mechanics of interaction between physical systems.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+접촉 중인 조작기와 환경 사이에서 제어해야 할 운동–힘의 동적 관계를 정식화한다.
 
 ## Problem and Motivation
 
@@ -53,12 +53,10 @@ Planning and control의 manipulation 문제를 이해하기 위해 읽는다. �
 
 ## Main Claims and Actual Contribution
 
-- **p. 1 / Body text (section boundary not confidently recovered) - extractive body cue:** In Part I this approach is developed by considering the mechanics of interaction between physical systems.
-- **p. 1 / Body text (section boundary not confidently recovered) - extractive body cue:** The approach developed encompasses and includes the simple positioning or transporting tasks typically performed by robots and/or prostheses.
-- **p. 2 / Body text (section boundary not confidently recovered) - extractive body cue:** In the following it is developed from some simple and physically reasonable assumptions.
-- **p. 5 / 1 Y - extractive body cue:** The separation of the controller action into a (vector) motion component and a impedance component (which has the properties of a tensor) can be achieved ...
+- 관성 물체와 상호작용할 때 임피던스와 어드미턴스의 차이를 유도한다.
+- 비선형 조작기의 상호작용을 나타내기 위한 일반화된 등가 표현을 제시한다.
 
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+[검증한 원문](https://api.crossref.org/works/10.1115/1.3140702)
 
 ## Evaluation Scope
 
@@ -82,7 +80,7 @@ Planning and control의 manipulation 문제를 이해하기 위해 읽는다. �
 
 ## Why Read It
 
-Planning and control의 manipulation 문제를 이해하기 위해 읽는다. 본문은 However, as described above, while a constrained inertial object can always be pushed on, it cannot always be moved; These systems are properly described as admittances.를 문제로 두고, In Part I this approach is developed by considering the mechanics of interaction between physical systems.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 4 (Body text (section boundary not confidently recovered)), p. 3 (Body text (section boundary not confidently recovered)), p. 3 (Body text (section boundary not confidently recovered)), p. 1 (Body text (section boundary not confidently recovered)), p. 1 (Body text (section boundary not confidently recovered)), p. 2 (Body text (section boundary not confidently recovered)) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 4 (Body text (section boundary not confidently recovered)), p. 3 (Body text (section boundary not confidently recovered)), p. 1 (Body text (section boundary not confidently recovered)), p. 2 (Body text (section boundary not confidently recovered))이다.
 
 ## Semantic QA — PDF body cross-check
 

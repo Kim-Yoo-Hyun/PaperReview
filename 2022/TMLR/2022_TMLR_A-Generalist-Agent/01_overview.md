@@ -20,7 +20,9 @@
 
 ## Why This Paper Is Here
 
-VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다. 본문은 There are two challenges in this benchmark: Skill Mastery (where the agent is provided data from the 5 test object triplets it is later tested on) and Skill Generalization (where data can ...를 문제로 두고, During evaluation, the agent can be prompted using a successful demonstration of the desired task, which we do by default in all control results that we present here.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — There are two challenges in this benchmark: Skill Mastery (where the agent is provided data from the 5 test object triplets it is later tested on) and Skill Generalization (where data can ...
+
+방법 관련 발췌 — During evaluation, the agent can be prompted using a successful demonstration of the desired task, which we do by default in all control results that we present here.
 
 ## Problem and Motivation
 
@@ -87,7 +89,7 @@ VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다
 
 ## Why Read It
 
-VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다. 본문은 There are two challenges in this benchmark: Skill Mastery (where the agent is provided data from the 5 test object triplets it is later tested on) and Skill Generalization (where data can ...를 문제로 두고, During evaluation, the agent can be prompted using a successful demonstration of the desired task, which we do by default in all control results that we present here.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 7 (1 Introduction), p. 10 (1 Introduction), p. 14 (1 Introduction), p. 8 (1 Introduction), p. 9 (1 Introduction), p. 4 (1 Introduction) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 7 (1 Introduction), p. 10 (1 Introduction), p. 14 (1 Introduction), p. 8 (1 Introduction), p. 9 (1 Introduction), p. 4 (1 Introduction)이다.
 
 ## Semantic QA — PDF body cross-check
 

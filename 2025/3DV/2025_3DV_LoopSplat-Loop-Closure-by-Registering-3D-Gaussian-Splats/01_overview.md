@@ -78,4 +78,4 @@ LoopSplat은 RGB-D SLAM에서 서로 다른 지역 가우시안 지도를 정합
 
 ## Why Read It
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 To address limitations of current systems, we seek a coupled SLAM system that avoids saving all mapped input frames and is able to extract loop constraints directly from the dense map, without ...를 문제로 두고, We introduce LoopSplat, a coupled RGB-D SLAM system based on Gaussian Splatting, featuring a novel loop closure module.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (1. Introduction), p. 1 (1. Introduction), p. 2 (1. Introduction), p. 1 (1. Introduction), p. 6 (Method), p. 6 (Method) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 2 (1. Introduction), p. 1 (1. Introduction), p. 6 (Method)이다.

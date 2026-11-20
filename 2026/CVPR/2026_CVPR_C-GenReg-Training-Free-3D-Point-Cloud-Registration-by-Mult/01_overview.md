@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 However, these methods primarily rely on single-view generation and lack mechanisms for handling multiple geometrically related views.를 문제로 두고, Standard point cloud registration consists of feature extraction, feature matching, and robust pose estimation (e.g.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — However, these methods primarily rely on single-view generation and lack mechanisms for handling multiple geometrically related views.
+
+방법 관련 발췌 — Standard point cloud registration consists of feature extraction, feature matching, and robust pose estimation (e.g.
 
 ## Problem and Motivation
 
@@ -80,4 +82,4 @@ Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 �
 
 ## Why Read It
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 However, these methods primarily rely on single-view generation and lack mechanisms for handling multiple geometrically related views.를 문제로 두고, Standard point cloud registration consists of feature extraction, feature matching, and robust pose estimation (e.g.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (1. Introduction), p. 3 (3.1. Problem Definition), p. 1 (1. Introduction), p. 1 (1. Introduction), p. 2 (1. Introduction), p. 5 (3.5. Match-then-Fuse Probabilistic Fusion) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 2 (1. Introduction), p. 3 (3.1. Problem Definition), p. 1 (1. Introduction), p. 5 (3.5. Match-then-Fuse Probabilistic Fusion)이다.

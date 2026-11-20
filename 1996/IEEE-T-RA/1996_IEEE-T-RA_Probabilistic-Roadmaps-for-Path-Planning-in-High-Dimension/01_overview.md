@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-Planning and control의 planning 문제를 이해하기 위해 읽는다. 본문은 However, while building the roadmap, our method heuristically identifies "difficult" regions in free C-space and generates additional configurations in those regions to increase network connectivity.를 문제로 두고, Our method emphasizes efficiency and is primarily developed for robots with many dofs which move in static ‘environments.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — However, while building the roadmap, our method heuristically identifies "difficult" regions in free C-space and generates additional configurations in those regions to increase network connectivity.
+
+방법 관련 발췌 — Our method emphasizes efficiency and is primarily developed for robots with many dofs which move in static ‘environments.
 
 ## Problem and Motivation
 
@@ -84,7 +86,7 @@ Planning and control의 planning 문제를 이해하기 위해 읽는다. 본문
 
 ## Why Read It
 
-Planning and control의 planning 문제를 이해하기 위해 읽는다. 본문은 However, while building the roadmap, our method heuristically identifies "difficult" regions in free C-space and generates additional configurations in those regions to increase network connectivity.를 문제로 두고, Our method emphasizes efficiency and is primarily developed for robots with many dofs which move in static ‘environments.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 3 (I. RELATION 70 Previous Work), p. 1 (1. IntRopuction), p. 2 (I. RELATION 70 Previous Work), p. 2 (I. RELATION 70 Previous Work), p. 1 (1. IntRopuction), p. 7 (B. The Query Phase) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 3 (I. RELATION 70 Previous Work), p. 1 (1. IntRopuction), p. 2 (I. RELATION 70 Previous Work), p. 7 (B. The Query Phase)이다.
 
 ## Semantic QA — PDF body cross-check
 

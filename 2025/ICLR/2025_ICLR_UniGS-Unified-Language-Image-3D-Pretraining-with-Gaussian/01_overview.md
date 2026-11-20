@@ -19,7 +19,7 @@
 
 ## Why This Paper Is Here
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 While point clouds serve as a natural step towards 3D representations, there are inherent limitations when using them to represent 3D objects.를 문제로 두고, Our contributions can be summarized as follows: • We propose UniGS, a novel unified text-image-3D pre-training framework, which leverages 3DGS as the 3D representation for learning a more general and stronger multi-modal ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+UniGS는 3D 가우시안으로 표현한 물체를 이미지·텍스트 특징 공간에 정렬한다.
 
 ## Problem and Motivation
 
@@ -53,16 +53,10 @@ Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 �
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** Our contributions can be summarized as follows: • We propose UniGS, a novel unified text-image-3D pre-training framework, which leverages 3DGS as the 3D representation for ...
-- **p. 3 / 3 METHODOLOGY - extractive body cue:** In this section, we introduce our proposed UniGS in detail.
-- **p. 3 / 3 METHODOLOGY - extractive body cue:** The proposed cross-modal contrastive learning framework for multi-modal alignment is then presented in Section 3.2 before we introduce the details of the Gaussian-Aware Guidance in ...
-- **p. 4 / 3 METHODOLOGY - extractive body cue:** Finally, we present how we ensemble 3DGS datasets from existing datasets in Section 3.5.
-- **p. 6 / 3 METHODOLOGY - extractive body cue:** Instead, with recent advances in large-scare multi-view datasets (Yu et al., 2023), our method adopts 3DGS representations and designs a ViT-based Encoder to encode the ...
-- **p. 9 / Figure/Table caption - extractive body cue:** Table 5: Zero-shot classification with point clouds on ABO. Avg. denotes mean average classifica- tion accuracy. Results illustrate that properly converting point clouds into 3DGS ...
-- **p. 7 / 4 EXPERIMENT - extractive body cue:** As shown in Table 1, UniGS outperforms the current state-of-the-art approaches across all datasets and improves the Top 1 retrieval accuracy of CLIP2 and Uni3D ...
-- **p. 10 / 4 EXPERIMENT - extractive body cue:** On the contrary, training directly from scratch can better learn the feature information of 3DGS, revealing that incorrect model design can hinder subsequent learning due ...
+- 사전학습한 시각·언어 모델의 표현을 기준으로 3D 인코더를 학습한다.
+- 학습한 표현으로 추가 범주 학습 없는 분류와 텍스트 기반 검색을 평가한다.
 
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+[원문 초록](https://proceedings.iclr.cc/paper_files/paper/2025/hash/d826f5aadb26db488b8686097ceea2d1-Abstract-Conference.html)
 
 ## Evaluation Scope
 
@@ -84,4 +78,4 @@ Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 �
 
 ## Why Read It
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 While point clouds serve as a natural step towards 3D representations, there are inherent limitations when using them to represent 3D objects.를 문제로 두고, Our contributions can be summarized as follows: • We propose UniGS, a novel unified text-image-3D pre-training framework, which leverages 3DGS as the 3D representation for learning a more general and stronger multi-modal ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 4 (3 METHODOLOGY), p. 5 (3 METHODOLOGY), p. 4 (3 METHODOLOGY), p. 6 (3 METHODOLOGY) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 2 (1 INTRODUCTION), p. 4 (3 METHODOLOGY), p. 5 (3 METHODOLOGY), p. 6 (3 METHODOLOGY)이다.

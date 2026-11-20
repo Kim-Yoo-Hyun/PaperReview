@@ -20,7 +20,7 @@
 
 ## Why This Paper Is Here
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 However, performing 3D spatial reasoning from scanning videos presents two significant challenges: (1) Spatial Uncertainty.를 문제로 두고, Our contributions are summarized as follows: • We introduce SpatialMind, a spatial prompting strategy that decomposes spatial reasoning into structured steps, enabling pre-trained VLMs to perform multi-step inference over spatial relati ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+SpatialMind와 ScanForgeQA는 영상에 담긴 물체 관계와 배치를 묻는 질문에 답하도록 시각·언어 모델을 학습하고 평가한다.
 
 ## Problem and Motivation
 
@@ -54,16 +54,10 @@ Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 �
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1 Introduction - extractive body cue:** Our contributions are summarized as follows: • We introduce SpatialMind, a spatial prompting strategy that decomposes spatial reasoning into structured steps, enabling pre-trained VLMs to ...
-- **p. 2 / 1 Introduction - extractive body cue:** To address these challenges, we propose a dual approach for enhancing 3D spatial reasoning in pre-trained VLMs, without modifying their underlying architecture.
-- **p. 5 / A B - extractive body cue:** The final dataset consists of 34,116 single-room scenes across six common categories: bedroom, kitchen, bathroom, living room, dining room, and storage room.
-- **p. 1 / Abstract - extractive body cue:** This framework combines SpatialMind, a structured prompting strategy that decomposes complex scenes and questions into interpretable reasoning steps, with ScanForgeQA, a scalable question-answering dataset built ...
-- **p. 5 / A B - extractive body cue:** Each scene is scanned using two complementary strategies designed to emulate natural human visual exploration: Orbit Scan.
-- **p. 8 / 5 Experiments - extractive body cue:** Results show that this strategy achieves improved performance, surpassing the original Qwen2.5-VL-7B baseline, suggesting that spatial fine-tuning can be harmonized with broader capabilities through data ...
-- **p. 7 / 5 Experiments - extractive body cue:** Across all models, a consistent trend emerges: the +Des variant outperforms others, followed by +Grid, while +Map yields the least improvement.
-- **p. 8 / 5 Experiments - extractive body cue:** The results, reported in the "+Both" row of Table 1, show consistent performance improvements across all evaluated models.
+- SpatialMind는 장면과 질문을 공간 추론 단계로 나눈다.
+- ScanForgeQA는 시뮬레이션 장면으로 공간 질의응답 데이터를 구성해 미세조정에 사용한다.
 
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+[원문 초록](https://neurips.cc/virtual/2025/poster/117952)
 
 ## Evaluation Scope
 
@@ -84,4 +78,4 @@ Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 �
 
 ## Why Read It
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 However, performing 3D spatial reasoning from scanning videos presents two significant challenges: (1) Spatial Uncertainty.를 문제로 두고, Our contributions are summarized as follows: • We introduce SpatialMind, a spatial prompting strategy that decomposes spatial reasoning into structured steps, enabling pre-trained VLMs to perform multi-step inference over spatial relati ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1 Introduction), p. 1 (1 Introduction), p. 2 (1 Introduction), p. 2 (1 Introduction), p. 2 (1 Introduction), p. 1 (1 Introduction) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 1 (1 Introduction), p. 2 (1 Introduction)이다.

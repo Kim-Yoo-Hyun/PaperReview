@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-Locomotion, whole-body, mobile manipulation, and humanoids의 mobile_manipulation 문제를 이해하기 위해 읽는다. 본문은 Get the Water Cook Food Pick up the Fruit Mobile Trajectory Arm Trajectory Fixed-base Manipulation MoTo AnyGrasp OpenVLA RDT-1B iDP3 Figure 1: MoTo can be plugged into any fixed-base manipulation model and ...를 문제로 두고, In this paper, we propose to solve the problem of mobile manipulation with an interaction-aware navigation policy, namely Move and Touch (MoTo).를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — Get the Water Cook Food Pick up the Fruit Mobile Trajectory Arm Trajectory Fixed-base Manipulation MoTo AnyGrasp OpenVLA RDT-1B iDP3 Figure 1: MoTo can be plugged into any fixed-base manipulation model and ...
+
+방법 관련 발췌 — In this paper, we propose to solve the problem of mobile manipulation with an interaction-aware navigation policy, namely Move and Touch (MoTo).
 
 ## Problem and Motivation
 
@@ -83,4 +85,4 @@ Locomotion, whole-body, mobile manipulation, and humanoids의 mobile_manipulatio
 
 ## Why Read It
 
-Locomotion, whole-body, mobile manipulation, and humanoids의 mobile_manipulation 문제를 이해하기 위해 읽는다. 본문은 Get the Water Cook Food Pick up the Fruit Mobile Trajectory Arm Trajectory Fixed-base Manipulation MoTo AnyGrasp OpenVLA RDT-1B iDP3 Figure 1: MoTo can be plugged into any fixed-base manipulation model and ...를 문제로 두고, In this paper, we propose to solve the problem of mobile manipulation with an interaction-aware navigation policy, namely Move and Touch (MoTo).를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (1 Introduction), p. 1 (1 Introduction), p. 2 (1 Introduction), p. 3 (1 Introduction), p. 3 (1 Introduction), p. 6 (4 Approach) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 2 (1 Introduction), p. 1 (1 Introduction), p. 3 (1 Introduction), p. 6 (4 Approach)이다.

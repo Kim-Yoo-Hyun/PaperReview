@@ -19,7 +19,7 @@
 
 ## Why This Paper Is Here
 
-Robotics-enabling 3D perception의 vla 문제를 이해하기 위해 읽는다. 본문은 C2FARM [5] represents the scene with multi-resolution voxels and achieves strong performance on difficult RLBench tasks.를 문제로 두고, To summarize, our contributions are threefold: first, we propose RVT, a multi-view transformer for 3D object manipulation that is accurate and scalable; second, we investigate various design choices for the multi-view transformer ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+로봇 작업 공간을 가상 시점에 투영하고 시점 간 정보를 결합해 언어 지시에 맞는 조작 자세를 예측한다.
 
 ## Problem and Motivation
 
@@ -53,16 +53,10 @@ Robotics-enabling 3D perception의 vla 문제를 이해하기 위해 읽는다. 
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1 Introduction - extractive body cue:** To summarize, our contributions are threefold: first, we propose RVT, a multi-view transformer for 3D object manipulation that is accurate and scalable; second, we investigate ...
-- **p. 2 / 1 Introduction - extractive body cue:** To this end, we propose RVT (Robotic View Transformer) that significantly outperforms the SOTA voxel-based method both in terms of success rate and training time, ...
-- **p. 3 / 3 Method - extractive body cue:** The input consists of (1) a language description of the task, (2) the current visual state (from RGB-D camera(s)), and (3) the current gripper state ...
-- **p. 1 / 1 Introduction - extractive body cue:** This hinders fast development and prototyping.
-- **p. 6 / 4 Experiments - extractive body cue:** Overall, RVT outperforms all baselines with the best rank and success rate when averaged across all tasks.
-- **p. 8 / 4 Experiments - extractive body cue:** Our model overall achieves an 82.5% success rate on non-marker tasks.
-- **p. 8 / 4 Experiments - extractive body cue:** Overall, RVT achieves high success rates for the stack block task (100%) and the press sanitizer task (80%).
-- **p. 6 / 4 Experiments - extractive body cue:** It outperforms prior state-of-the-art methods, C2F-ARM, by 42 percentage points (213% relative improvement); and PerAct by 13 percentage points (26% relative improvement).
+- 명시적인 3D 복셀 연산 대신 여러 뷰의 토큰에 attention을 적용한다.
+- 동일한 다중 태스크 정책을 RLBench와 실물 조작에서 평가한다.
 
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+[검증한 원문](https://proceedings.mlr.press/v229/goyal23a.html)
 
 ## Evaluation Scope
 
@@ -84,7 +78,7 @@ Robotics-enabling 3D perception의 vla 문제를 이해하기 위해 읽는다. 
 
 ## Why Read It
 
-Robotics-enabling 3D perception의 vla 문제를 이해하기 위해 읽는다. 본문은 C2FARM [5] represents the scene with multi-resolution voxels and achieves strong performance on difficult RLBench tasks.를 문제로 두고, To summarize, our contributions are threefold: first, we propose RVT, a multi-view transformer for 3D object manipulation that is accurate and scalable; second, we investigate various design choices for the multi-view transformer ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1 Introduction), p. 2 (1 Introduction), p. 2 (1 Introduction), p. 5 (3 Method), p. 4 (3 Method), p. 4 (3 Method) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 1 (1 Introduction), p. 2 (1 Introduction), p. 5 (3 Method), p. 4 (3 Method)이다.
 
 ## Semantic QA — PDF body cross-check
 

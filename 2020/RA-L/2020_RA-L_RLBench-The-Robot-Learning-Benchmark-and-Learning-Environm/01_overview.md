@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-RL, IL, offline learning, and robot data의 benchmark 문제를 이해하기 위해 읽는다. 본문은 The benchmark includes 100 completely unique, hand-designed tasks ranging in difficulty (shown in Figure 1), which share a common Franka Emika Panda robot arm, featuring a range of sensor modalities, including joint ...를 문제로 두고, To that end, we present RLBench, which is an ambitious large-scale benchmark and learning environment designed to facilitate research in a number of both classical and deep-learning based robot manipulation areas.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — The benchmark includes 100 completely unique, hand-designed tasks ranging in difficulty (shown in Figure 1), which share a common Franka Emika Panda robot arm, featuring a range of sensor modalities, including joint ...
+
+방법 관련 발췌 — To that end, we present RLBench, which is an ambitious large-scale benchmark and learning environment designed to facilitate research in a number of both classical and deep-learning based robot manipulation areas.
 
 ## Problem and Motivation
 
@@ -79,7 +81,7 @@ RL, IL, offline learning, and robot data의 benchmark 문제를 이해하기 위
 
 ## Why Read It
 
-RL, IL, offline learning, and robot data의 benchmark 문제를 이해하기 위해 읽는다. 본문은 The benchmark includes 100 completely unique, hand-designed tasks ranging in difficulty (shown in Figure 1), which share a common Franka Emika Panda robot arm, featuring a range of sensor modalities, including joint ...를 문제로 두고, To that end, we present RLBench, which is an ambitious large-scale benchmark and learning environment designed to facilitate research in a number of both classical and deep-learning based robot manipulation areas.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 3 (III. BENCHMARK PROPERTIES), p. 4 (IV. RLBENCH), p. 1 (I. INTRODUCTION) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 1 (I. INTRODUCTION), p. 3 (III. BENCHMARK PROPERTIES), p. 4 (IV. RLBENCH)이다.
 
 ## Semantic QA — PDF body cross-check
 

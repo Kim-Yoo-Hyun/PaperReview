@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-World models, safety, uncertainty, and recovery의 humanoid 문제를 이해하기 위해 읽는다. 본문은 Our proposed RL. framework addresses these limitations by achieving posture adaptivity and real-world deployability without predefined motions, enabling smooth, stable, and robust standing-up across a wide range of laboratory and outdoo ...를 문제로 두고, To enable postureadaptive motion beyond the ground, we introduce multiple terrains for training and a vertical pull force during the initial stages to facilitate exploration, Given the multiple stages of the task, ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — Our proposed RL. framework addresses these limitations by achieving posture adaptivity and real-world deployability without predefined motions, enabling smooth, stable, and robust standing-up across a wide range of laboratory and outdoo ...
+
+방법 관련 발췌 — To enable postureadaptive motion beyond the ground, we introduce multiple terrains for training and a vertical pull force during the initial stages to facilitate exploration, Given the multiple stages of the task, ...
 
 ## Problem and Motivation
 
@@ -86,4 +88,4 @@ World models, safety, uncertainty, and recovery의 humanoid 문제를 이해하�
 
 ## Why Read It
 
-World models, safety, uncertainty, and recovery의 humanoid 문제를 이해하기 위해 읽는다. 본문은 Our proposed RL. framework addresses these limitations by achieving posture adaptivity and real-world deployability without predefined motions, enabling smooth, stable, and robust standing-up across a wide range of laboratory and outdoo ...를 문제로 두고, To enable postureadaptive motion beyond the ground, we introduce multiple terrains for training and a vertical pull force during the initial stages to facilitate exploration, Given the multiple stages of the task, ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 12 (B. More Implementation Details), p. 13 (B. More Implementation Details), p. 12 (B. More Implementation Details), p. 13 (B. More Implementation Details) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 2 (I. INTRODUCTION), p. 12 (B. More Implementation Details), p. 13 (B. More Implementation Details)이다.

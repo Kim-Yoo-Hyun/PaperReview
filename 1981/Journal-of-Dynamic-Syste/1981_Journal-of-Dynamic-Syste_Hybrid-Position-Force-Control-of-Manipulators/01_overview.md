@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-Planning and control의 manipulation 문제를 이해하기 위해 읽는다. 본문은 The slow progress is due partly to a lack of rugged, reliable sensors of sufficient precision and versatility.를 문제로 두고, Note that the method we propose here does not prescribe particular feedback control laws for the regulation of errors.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — The slow progress is due partly to a lack of rugged, reliable sensors of sufficient precision and versatility.
+
+방법 관련 발췌 — Note that the method we propose here does not prescribe particular feedback control laws for the regulation of errors.
 
 ## Problem and Motivation
 
@@ -84,7 +86,7 @@ Planning and control의 manipulation 문제를 이해하기 위해 읽는다. �
 
 ## Why Read It
 
-Planning and control의 manipulation 문제를 이해하기 위해 읽는다. 본문은 The slow progress is due partly to a lack of rugged, reliable sensors of sufficient precision and versatility.를 문제로 두고, Note that the method we propose here does not prescribe particular feedback control laws for the regulation of errors.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (Body text (section boundary not confidently recovered)), p. 1 (Body text (section boundary not confidently recovered)), p. 2 (Body text (section boundary not confidently recovered)), p. 2 (Body text (section boundary not confidently recovered)), p. 3 (Body text (section boundary not confidently recovered)), p. 4 (Body text (section boundary not confidently recovered)) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 1 (Body text (section boundary not confidently recovered)), p. 2 (Body text (section boundary not confidently recovered)), p. 3 (Body text (section boundary not confidently recovered)), p. 4 (Body text (section boundary not confidently recovered))이다.
 
 ## Semantic QA — PDF body cross-check
 

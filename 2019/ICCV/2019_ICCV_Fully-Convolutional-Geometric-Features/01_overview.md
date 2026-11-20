@@ -78,4 +78,4 @@ FCGF는 점군 전체에 3D 완전 합성곱을 적용해 정합에 사용할 �
 
 ## Why Read It
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 Furthermore, current pipelines limit spatial context by focusing on patches with restricted spatial extent.를 문제로 두고, In this section, we propose metric learning losses for fully-convolutional feature learning.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1. Introduction), p. 1 (1. Introduction), p. 2 (1. Introduction), p. 7 (6.4. Hardest-contrastive and Hardest-triplet Losses), p. 7 (6.4. Hardest-contrastive and Hardest-triplet Losses), p. 3 (4.2. Hardest-contrastive and Hardest-triplet Losses) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 1 (1. Introduction), p. 2 (1. Introduction), p. 7 (6.4. Hardest-contrastive and Hardest-triplet Losses), p. 3 (4.2. Hardest-contrastive and Hardest-triplet Losses)이다.

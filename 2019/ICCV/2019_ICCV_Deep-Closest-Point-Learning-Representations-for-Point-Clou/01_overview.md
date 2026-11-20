@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 Many modeling and computational challenges hamper the design of a stable and efficient registration method.를 문제로 두고, Contributions: Our contributions include the following: • We identify sub-network architectures designed to address difficulties in the classical ICP pipeline. • We propose a simple architecture to predict a rigid transformation alignin ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — Many modeling and computational challenges hamper the design of a stable and efficient registration method.
+
+방법 관련 발췌 — Contributions: Our contributions include the following: • We identify sub-network architectures designed to address difficulties in the classical ICP pipeline. • We propose a simple architecture to predict a rigid transformation alignin ...
 
 ## Problem and Motivation
 
@@ -78,4 +80,4 @@ Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 �
 
 ## Why Read It
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 Many modeling and computational challenges hamper the design of a stable and efficient registration method.를 문제로 두고, Contributions: Our contributions include the following: • We identify sub-network architectures designed to address difficulties in the classical ICP pipeline. • We propose a simple architecture to predict a rigid transformation alignin ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1. Introduction), p. 2 (1. Introduction), p. 2 (1. Introduction), p. 3 (3. Problem Statement), p. 3 (3. Problem Statement), p. 5 (4.5. Loss) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 1 (1. Introduction), p. 2 (1. Introduction), p. 3 (3. Problem Statement), p. 5 (4.5. Loss)이다.

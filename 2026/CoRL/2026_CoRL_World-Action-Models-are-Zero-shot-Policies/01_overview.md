@@ -81,4 +81,4 @@ DreamZero는 영상과 행동을 공동으로 예측하는 월드 액션 모델�
 
 ## Why Read It
 
-VLA and generalist robot policies의 safety 문제를 이해하기 위해 읽는다. 본문은 Although VLM priors encode what to do at a semantic level, they lack representations of how actions should be executed with precise spatial awareness, aligned with geometry, dynamics, and motor control (Chen ...를 문제로 두고, Second, and more surprisingly, we show that DreamZero enables few-shot embodiment adaptation: a model pretrained on AgiBot G1 adapts to an entirely new robot (YAM) with only 30 minutes of play data, ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (1. Introduction), p. 2 (1. Introduction), p. 3 (1. Introduction), p. 3 (1. Introduction), p. 7 (3.1. Model Architecture), p. 7 (3.1. Model Architecture) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 2 (1. Introduction), p. 3 (1. Introduction), p. 7 (3.1. Model Architecture)이다.

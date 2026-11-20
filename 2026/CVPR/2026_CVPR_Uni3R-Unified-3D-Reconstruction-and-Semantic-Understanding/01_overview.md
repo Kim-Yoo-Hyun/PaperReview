@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 Recent efforts, including LangSplat [28] and Feature-3DGS [45], have incorporated semantic fields into 3D Gaussian Splatting, yet remain constrained by scene-specific optimization and lack scalability in real-world, zero-shot applications.를 문제로 두고, Our contributions are summarized as follows: • We introduce Uni3R, a novel feed-forward architecture that unifies 3D reconstruction and semantic understanding.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — Recent efforts, including LangSplat [28] and Feature-3DGS [45], have incorporated semantic fields into 3D Gaussian Splatting, yet remain constrained by scene-specific optimization and lack scalability in real-world, zero-shot applications.
+
+방법 관련 발췌 — Our contributions are summarized as follows: • We introduce Uni3R, a novel feed-forward architecture that unifies 3D reconstruction and semantic understanding.
 
 ## Problem and Motivation
 
@@ -82,4 +84,4 @@ Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 �
 
 ## Why Read It
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 Recent efforts, including LangSplat [28] and Feature-3DGS [45], have incorporated semantic fields into 3D Gaussian Splatting, yet remain constrained by scene-specific optimization and lack scalability in real-world, zero-shot applications.를 문제로 두고, Our contributions are summarized as follows: • We introduce Uni3R, a novel feed-forward architecture that unifies 3D reconstruction and semantic understanding.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (1. Introduction), p. 2 (1. Introduction), p. 4 (3.1.2. Cross-View Transformer Encoder), p. 4 (3.1.2. Cross-View Transformer Encoder), p. 5 (3.3. Training Objectives), p. 6 (3.3. Training Objectives) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 2 (1. Introduction), p. 4 (3.1.2. Cross-View Transformer Encoder), p. 5 (3.3. Training Objectives), p. 6 (3.3. Training Objectives)이다.

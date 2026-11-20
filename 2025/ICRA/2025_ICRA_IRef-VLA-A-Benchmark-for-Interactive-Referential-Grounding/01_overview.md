@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-VLA and generalist robot policies의 benchmark 문제를 이해하기 위해 읽는다. 본문은 Despite impressive recent advancements with foundation models, such problems remain difficult when applied to robotics as current methods fail to offer the accuracy and robustness needed for real-world deployment [13].를 문제로 두고, To advance the path towards more intelligent interaction in natural language navigation, we propose the IRef-VLA dataset as a benchmark for both the referential objectgrounding task, and a novel extension of this ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — Despite impressive recent advancements with foundation models, such problems remain difficult when applied to robotics as current methods fail to offer the accuracy and robustness needed for real-world deployment [13].
+
+방법 관련 발췌 — To advance the path towards more intelligent interaction in natural language navigation, we propose the IRef-VLA dataset as a benchmark for both the referential objectgrounding task, and a novel extension of this ...
 
 ## Problem and Motivation
 
@@ -75,4 +77,4 @@ VLA and generalist robot policies의 benchmark 문제를 이해하기 위해 읽
 
 ## Why Read It
 
-VLA and generalist robot policies의 benchmark 문제를 이해하기 위해 읽는다. 본문은 Despite impressive recent advancements with foundation models, such problems remain difficult when applied to robotics as current methods fail to offer the accuracy and robustness needed for real-world deployment [13].를 문제로 두고, To advance the path towards more intelligent interaction in natural language navigation, we propose the IRef-VLA dataset as a benchmark for both the referential objectgrounding task, and a novel extension of this ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 1 (Abstract), p. 5 (Figure/Table caption), p. 1 (I. INTRODUCTION) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 1 (I. INTRODUCTION), p. 1 (Abstract), p. 5 (Figure/Table caption)이다.

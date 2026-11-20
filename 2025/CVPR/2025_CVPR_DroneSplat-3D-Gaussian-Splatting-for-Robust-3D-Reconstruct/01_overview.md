@@ -78,4 +78,4 @@ DroneSplat은 움직이는 방해물이 포함된 드론 영상에서 정적 장
 
 ## Why Read It
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 However, despite incorporating geometric priors, InstantSplat lacks corresponding optimization in 3DGS, undermining the abundant priors.를 문제로 두고, To address these challenges, we introduce DroneSplat, a robust 3D gaussian splatting framework tailored for inthe-wild drone imagery.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (1. Introduction), p. 2 (1. Introduction), p. 1 (1. Introduction), p. 4 (3.2. Adaptive Local-Global Masking), p. 4 (3.2. Adaptive Local-Global Masking), p. 5 (3.2. Adaptive Local-Global Masking) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 2 (1. Introduction), p. 1 (1. Introduction), p. 4 (3.2. Adaptive Local-Global Masking), p. 5 (3.2. Adaptive Local-Global Masking)이다.

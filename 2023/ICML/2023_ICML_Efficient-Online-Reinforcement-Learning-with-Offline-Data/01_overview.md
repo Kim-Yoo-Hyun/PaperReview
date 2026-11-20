@@ -75,7 +75,7 @@ RLPD는 기존 오프라인 데이터와 온라인 상호작용을 함께 사용
 
 ## Why Read It
 
-RL, IL, offline learning, and robot data의 offline_rl 문제를 이해하기 위해 읽는다. 본문은 While the individual ingredients of RLPD are refreshingly simple modifications on existing RL components, we show that their combination delivers state-of-the-art performance on a number of popular online RL with offline data ...를 문제로 두고, First, we propose a simple mechanism for incorporating the prior data.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (1. Introduction), p. 1 (1. Introduction), p. 1 (1. Introduction), p. 2 (1. Introduction), p. 3 (3. Preliminaries), p. 5 (4.4. Per-Environment Design Choices) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 2 (1. Introduction), p. 1 (1. Introduction), p. 3 (3. Preliminaries), p. 5 (4.4. Per-Environment Design Choices)이다.
 
 ## Semantic QA — PDF body cross-check
 

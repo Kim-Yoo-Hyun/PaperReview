@@ -19,7 +19,7 @@
 
 ## Why This Paper Is Here
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 This limitation often leads to incomplete occupancy estimates and coarse free-space predictions in complex driving scenes.를 문제로 두고, In summary, our contributions are: • We propose Gau-Occ, a compact Gaussian-based framework that unifies LiDAR and multi-view images for 3D semantic occupancy prediction. • We introduce LCD, a learned module that ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+Gau-Occ는 희소 라이다와 다중 시점 영상에서 3D 공간의 점유 상태와 의미 범주를 예측한다.
 
 ## Problem and Motivation
 
@@ -53,16 +53,10 @@ Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 �
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** In summary, our contributions are: • We propose Gau-Occ, a compact Gaussian-based framework that unifies LiDAR and multi-view images for 3D semantic occupancy prediction. • ...
-- **p. 1 / 1. Introduction - extractive body cue:** We propose Gau-Occ, a framework that leverages learnable semantic Gaussian anchors for efficient scene representation.
-- **p. 2 / 1. Introduction - extractive body cue:** Second, we propose the Gaussian Anchor Fusion (GAF) module, which aligns multi-view image semantics with a LiDAR-anchored 3D structural prior.
-- **p. 3 / 3.2. LiDAR Completion Diffuser (LCD) - extractive body cue:** We propose the LiDAR Completion Diffuser (LCD), a local diffusion model that reconstructs dense, geometrically consistent point clouds from sparse scans.
-- **p. 4 / 3.4. Gaussian Anchor Fusion (GAF) - extractive body cue:** To unify precise LiDAR geometry with rich image semantics, we propose Gaussian Anchor Fusion (GAF), a geometry-conditioned multi-modal fusion module that extracts, samples, and aggregates ...
-- **p. 5 / 4.2. Quantitative Results - extractive body cue:** Across modalities, LiDARonly approaches generally outperform camera-only methods due to geometric cues, and multi-modal systems further improve performance.
-- **p. 5 / 4.2. Quantitative Results - extractive body cue:** Gau-Occ achieves a new state of the art with 55.1 mIoU, surpassing DAOcc by +0.8, SDGOcc by +3.4, and even outperforming radar-augmented OccFusion by +6.4.
-- **p. 8 / 4.4. Ablation Study - extractive body cue:** The full GAF configuration (Row 4) achieves optimal results, validating the necessity of both geometry-guided sampling and refinement in building a robust multi-modal representation.
+- 라이다의 빈 구조를 보완하고 그 결과를 의미 정보가 있는 3D 가우시안으로 표현한다.
+- 가우시안 위치를 기준으로 여러 카메라의 특징을 융합해 공간 점유를 추정한다.
 
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+[원문 초록](https://openaccess.thecvf.com/content/CVPR2026/html/Lv_Gau-Occ_Geometry-Completed_Gaussians_for_Multi-Modal_3D_Occupancy_Prediction_CVPR_2026_paper.html)
 
 ## Evaluation Scope
 
@@ -84,4 +78,4 @@ Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 �
 
 ## Why Read It
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 This limitation often leads to incomplete occupancy estimates and coarse free-space predictions in complex driving scenes.를 문제로 두고, In summary, our contributions are: • We propose Gau-Occ, a compact Gaussian-based framework that unifies LiDAR and multi-view images for 3D semantic occupancy prediction. • We introduce LCD, a learned module that ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1. Introduction), p. 1 (1. Introduction), p. 2 (1. Introduction), p. 4 (3.4. Gaussian Anchor Fusion (GAF)), p. 3 (3.1. 3D Semantic Gaussian Scene Representation), p. 2 (3. Proposed Approach) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 1 (1. Introduction), p. 2 (1. Introduction), p. 4 (3.4. Gaussian Anchor Fusion (GAF)), p. 3 (3.1. 3D Semantic Gaussian Scene Representation), p. 2 (3. Proposed Approach)이다.

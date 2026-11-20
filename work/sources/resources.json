@@ -7807,6 +7807,18 @@
       "verified_on": "2026-11-20"
     },
     {
+      "resource_id": "code:5afbbd3970a2",
+      "resource_type": "code_or_project",
+      "name": "Dr-Splat",
+      "url": "https://github.com/kaist-ami/Dr-Splat",
+      "paper_ids": [
+        "pr-0776"
+      ],
+      "evidence": "manifest_link",
+      "availability": "released",
+      "verified_on": "2026-11-20"
+    },
+    {
       "resource_id": "code:5b00d80b4458",
       "resource_type": "code_or_project",
       "name": "cosmos-policy",
@@ -8089,6 +8101,18 @@
       "url": "https://github.com/concept-fusion/concept-fusion",
       "paper_ids": [
         "pr-0030"
+      ],
+      "evidence": "manifest_link",
+      "availability": "released",
+      "verified_on": "2026-11-20"
+    },
+    {
+      "resource_id": "code:64bc3bdf9a94",
+      "resource_type": "code_or_project",
+      "name": "BlenderAlchemyOfficial",
+      "url": "https://github.com/ianhuang0630/BlenderAlchemyOfficial",
+      "paper_ids": [
+        "pr-0218"
       ],
       "evidence": "manifest_link",
       "availability": "released",
@@ -12539,6 +12563,18 @@
       ],
       "evidence": "manifest_link",
       "availability": "project_only",
+      "verified_on": "2026-11-20"
+    },
+    {
+      "resource_id": "code:fb9f6939a4ab",
+      "resource_type": "code_or_project",
+      "name": "HAMSTER_beta",
+      "url": "https://github.com/liyi14/HAMSTER_beta",
+      "paper_ids": [
+        "pr-0066"
+      ],
+      "evidence": "manifest_link",
+      "availability": "released",
       "verified_on": "2026-11-20"
     },
     {

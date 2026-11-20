@@ -19,7 +19,7 @@
 
 ## Why This Paper Is Here
 
-Robotics-enabling 3D perception의 navigation 문제를 이해하기 위해 읽는다. 본문은 However, existing methods [7, 8, 22, 24] that use learnable 3D scene representations for vision-language tasks typically rely only on spatial coordinates and fail to incorporate semantic relationships between objects - limiting ...를 문제로 두고, To summarize, our contributions are as follows: • We introduce 3DGraphLLM, the first method for creating a learnable 3D scene graph representation specifically designed for LLMs.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+3DGraphLLM은 물체 사이의 의미 관계를 담은 3D 장면 그래프로 언어 모델의 장면 이해를 돕는다.
 
 ## Problem and Motivation
 
@@ -53,16 +53,10 @@ Robotics-enabling 3D perception의 navigation 문제를 이해하기 위해 읽�
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** To summarize, our contributions are as follows: • We introduce 3DGraphLLM, the first method for creating a learnable 3D scene graph representation specifically designed for ...
-- **p. 2 / 1. Introduction - extractive body cue:** It enables semantic relationships between objects in a scene to be mapped directly into the LLM's token embedding space. • We propose an algorithm that ...
-- **p. 3 / 3.1. Model Architecture - extractive body cue:** Thus, the set V of vertices of the graph consists of n point clouds {Pi}n i=1, where Pi ∈Rmi×6.
-- **p. 3 / 3. Method - extractive body cue:** A scene graph consists of nodes representing the objects and edges corresponding to semantic relationships between them.
-- **p. 4 / 3.1. Model Architecture - extractive body cue:** We introduce trainable layers to map the extracted graph node and edge features into the token embedding space of a pre-trained LLM.
-- **p. 7 / 4.2. Ablation Studies - extractive body cue:** 4, incorporating a scene graph representation significantly improves the performance of the LLMs across all three 3D Vision-Language tasks: visual grounding, scene description, and question ...
-- **p. 6 / 4.1. Experimental Results - extractive body cue:** 2, our method significantly outperforms the baseline approach Chat-Scene [25] on the two ScanNet 3D referred object grounding benchmarks, ScanRefer [5] and Multi3DRefer [60], as ...
-- **p. 6 / 4.1. Experimental Results - extractive body cue:** 3DGraphLLM achieves results comparable to the state-of-the-art method GPT4Scene8890
+- 학습 가능한 장면 그래프 표현을 3D 시각·언어 과제의 모델 입력으로 사용한다.
+- 물체 지시, 질의응답, 설명 생성에서 의미 관계를 쓰지 않는 기준선과 비교한다.
 
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+[원문 초록](https://openaccess.thecvf.com/content/ICCV2025/html/Zemskova_3DGraphLLM_Combining_Semantic_Graphs_and_Large_Language_Models_for_3D_ICCV_2025_paper.html)
 
 ## Evaluation Scope
 
@@ -83,4 +77,4 @@ Robotics-enabling 3D perception의 navigation 문제를 이해하기 위해 읽�
 
 ## Why Read It
 
-Robotics-enabling 3D perception의 navigation 문제를 이해하기 위해 읽는다. 본문은 However, existing methods [7, 8, 22, 24] that use learnable 3D scene representations for vision-language tasks typically rely only on spatial coordinates and fail to incorporate semantic relationships between objects - limiting ...를 문제로 두고, To summarize, our contributions are as follows: • We introduce 3DGraphLLM, the first method for creating a learnable 3D scene graph representation specifically designed for LLMs.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (1. Introduction), p. 1 (1. Introduction), p. 4 (3.1. Model Architecture), p. 4 (3.1. Model Architecture), p. 3 (3.1. Model Architecture), p. 3 (3.1. Model Architecture) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 2 (1. Introduction), p. 1 (1. Introduction), p. 4 (3.1. Model Architecture), p. 3 (3.1. Model Architecture)이다.

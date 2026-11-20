@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-Foundations: Generative Models의 generative 문제를 이해하기 위해 읽는다. 본문은 The latter allows for fast adaptive sampling via black-box ODE solvers, flexible data manipulation via latent codes, a uniquely identifiable encoding, and notably, exact likelihood computation.를 문제로 두고, In addition, we propose a new SDE under our framework that achieves a likelihood value of 2.99 bits/dim on uniformly dequantized CIFAR-10 images, setting a new record on this task.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — The latter allows for fast adaptive sampling via black-box ODE solvers, flexible data manipulation via latent codes, a uniquely identifiable encoding, and notably, exact likelihood computation.
+
+방법 관련 발췌 — In addition, we propose a new SDE under our framework that achieves a likelihood value of 2.99 bits/dim on uniformly dequantized CIFAR-10 images, setting a new record on this task.
 
 ## Problem and Motivation
 
@@ -86,4 +88,4 @@ Foundations: Generative Models의 generative 문제를 이해하기 위해 읽�
 
 ## Why Read It
 
-Foundations: Generative Models의 generative 문제를 이해하기 위해 읽는다. 본문은 The latter allows for fast adaptive sampling via black-box ODE solvers, flexible data manipulation via latent codes, a uniquely identifiable encoding, and notably, exact likelihood computation.를 문제로 두고, In addition, we propose a new SDE under our framework that achieves a likelihood value of 2.99 bits/dim on uniformly dequantized CIFAR-10 images, setting a new record on this task.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (1 INTRODUCTION), p. 8 (2 BACKGROUND), p. 8 (2 BACKGROUND), p. 2 (1 INTRODUCTION), p. 3 (2 BACKGROUND), p. 2 (1 INTRODUCTION) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 2 (1 INTRODUCTION), p. 8 (2 BACKGROUND), p. 3 (2 BACKGROUND)이다.

@@ -19,7 +19,7 @@
 
 ## Why This Paper Is Here
 
-RL, IL, offline learning, and robot data의 benchmark 문제를 이해하기 위해 읽는다. 본문은 Unfortunately, a lack of suitable benchmark and human datasets have made studying this setting difficult.를 문제로 두고, We present success rates averaged over 3 seeds for each method across the low-dim Machine-Generated (MG), Proficient-Human (PH), and Multi-Human (MH) datasets.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+사람 시연에서 조작 정책을 학습할 때 알고리즘과 데이터 품질의 영향을 통제 비교한다.
 
 ## Problem and Motivation
 
@@ -53,15 +53,10 @@ RL, IL, offline learning, and robot data의 benchmark 문제를 이해하기 위
 
 ## Main Claims and Actual Contribution
 
-- **p. 3 / Dataset - extractive body cue:** We present success rates averaged over 3 seeds for each method across the low-dim Machine-Generated (MG), Proficient-Human (PH), and Multi-Human (MH) datasets.
-- **p. 3 / Dataset - extractive body cue:** Unlike traditional supervised learning, where model selection can be achieved by using the model with the lowest validation loss [21], offline policy learning often suffers ...
-- **p. 6 / 4 Experiments - extractive body cue:** However, BC-RNN outperforms BC on all datasets (7%-35% improvement).
-- **p. 6 / Figure/Table caption - extractive body cue:** Figure 5: (left) Effect of Policy Selection Criteria. We compare how performance decreases when choosing the policy to evaluate by using the lowest validation loss, ...
-- **p. 5 / 4 Experiments - extractive body cue:** 4.1 Algorithm Comparison on Single and Multi-Human Demonstrations (C1, C2) We trained and evaluated all algorithms on the Proficient-Human (PH) and Multi-Human (MH) datasets and ...
-- **p. 7 / 4 Experiments - extractive body cue:** We first note that less complex tasks (Lift, Can) can yield proficient policies (75%-100% success rate) using a small fraction of the data (20%).
-- **p. 8 / 4 Experiments - extractive body cue:** We train BC-RNN and report the final policy checkpoint success rate, over 30 rollouts, due to the time-consuming nature of real world policy evaluation.
+- 시뮬레이션·실기 과업과 숙련도가 다른 작업자의 시연 데이터를 구축한다.
+- 오프라인 학습 알고리즘, 시계열 정책과 관측 설계가 성능에 주는 영향을 분석한다.
 
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+[검증한 원문](https://proceedings.mlr.press/v164/mandlekar22a.html)
 
 ## Evaluation Scope
 
@@ -84,7 +79,7 @@ RL, IL, offline learning, and robot data의 benchmark 문제를 이해하기 위
 
 ## Why Read It
 
-RL, IL, offline learning, and robot data의 benchmark 문제를 이해하기 위해 읽는다. 본문은 Unfortunately, a lack of suitable benchmark and human datasets have made studying this setting difficult.를 문제로 두고, We present success rates averaged over 3 seeds for each method across the low-dim Machine-Generated (MG), Proficient-Human (PH), and Multi-Human (MH) datasets.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (1 Introduction), p. 2 (1 Introduction), p. 1 (1 Introduction), p. 1 (1 Introduction), p. 2 (1 Introduction), p. 3 (Dataset) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 2 (1 Introduction), p. 1 (1 Introduction), p. 3 (Dataset)이다.
 
 ## Semantic QA — PDF body cross-check
 

@@ -19,7 +19,7 @@
 
 ## Why This Paper Is Here
 
-Robotics-enabling 3D perception의 navigation 문제를 이해하기 위해 읽는다. 본문은 However, this task poses significant challenges due to the scarcity of dense 3D semantic annotations, which are difficult to gather and scale to a large vocabulary space.를 문제로 두고, To this end, we propose a holistic Regional Point Language Contrastive learning framework, named RegionPLC.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+RegionPLC는 영역 단위의 언어와 점군의 대응을 학습해 새로운 범주의 3D 물체를 인식한다.
 
 ## Problem and Motivation
 
@@ -53,16 +53,10 @@ Robotics-enabling 3D perception의 navigation 문제를 이해하기 위해 읽�
 
 ## Main Claims and Actual Contribution
 
-- **p. 1 / 1. Introduction - extractive body cue:** To this end, we propose a holistic Regional Point Language Contrastive learning framework, named RegionPLC.
-- **p. 1 / 1. Introduction - extractive body cue:** By doing so, our method can yield denser 3D-language supervision and circumvent the knowledge limitations of a single foundation model, facilitating resource-efficient and large-vocabulary 3D ...
-- **p. 2 / 1. Introduction - extractive body cue:** Our method significantly outperforms existing open-world scene understanding methods, achieving an average of 17.2% gains in terms of unseen category mIoU for semantic segmentation and ...
-- **p. 2 / 1. Introduction - extractive body cue:** Furthermore, with region-level language data, we introduce a regionaware point-discriminative contrastive loss that prevents the optimization of point-wise embeddings from being disturbed by nearby points ...
-- **p. 4 / 3.4. Boost Synergy of Diverse 3D-language Sources - extractive body cue:** In this regard, we propose a Supplementary-orientated Fusion (SFusion) strategy to integrate the most diverse semantic clues while filtering out potential conflicts from different caption ...
-- **p. 4 / 3.3. Benchmark and Analysis on Regional 3D - extractive body cue:** As shown in the upper of Table 1, no single type of 3D-language source consistently outperforms others in all settings, and each association has its ...
-- **p. 4 / 3.3. Benchmark and Analysis on Regional 3D - extractive body cue:** Hence, we examine their synergy effect for better performance.
-- **p. 6 / Figure/Table caption - extractive body cue:** Table 3. Results for open-world 3D instance segmentation on ScanNet in terms of hAP50 / mAPB 50 / mAPN 50. 3D Instance Segmentation. As our ...
+- 여러 2D 기반 모델의 출력을 모아 3D 영역별 언어 감독 신호를 만든다.
+- 영역과 점 수준 대조학습을 적용하고 의미·인스턴스 분할에서 평가한다.
 
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+[원문 초록](https://openaccess.thecvf.com/content/CVPR2024/html/Yang_RegionPLC_Regional_Point-Language_Contrastive_Learning_for_Open-World_3D_Scene_Understanding_CVPR_2024_paper.html)
 
 ## Evaluation Scope
 
@@ -81,4 +75,4 @@ Robotics-enabling 3D perception의 navigation 문제를 이해하기 위해 읽�
 
 ## Why Read It
 
-Robotics-enabling 3D perception의 navigation 문제를 이해하기 위해 읽는다. 본문은 However, this task poses significant challenges due to the scarcity of dense 3D semantic annotations, which are difficult to gather and scale to a large vocabulary space.를 문제로 두고, To this end, we propose a holistic Regional Point Language Contrastive learning framework, named RegionPLC.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1. Introduction), p. 1 (1. Introduction), p. 2 (1. Introduction), p. 6 (4.3. Annotation-free Open World), p. 5 (3.5. Region-aware Point-discriminative Contrastive), p. 5 (3.5. Region-aware Point-discriminative Contrastive) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 1 (1. Introduction), p. 2 (1. Introduction), p. 6 (4.3. Annotation-free Open World), p. 5 (3.5. Region-aware Point-discriminative Contrastive)이다.

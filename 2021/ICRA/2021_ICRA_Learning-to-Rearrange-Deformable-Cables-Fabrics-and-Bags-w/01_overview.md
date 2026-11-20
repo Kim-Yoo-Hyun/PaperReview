@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-Manipulation, contact, tactile, and dexterity의 manipulation 문제를 이해하기 위해 읽는다. 본문은 Manipulating deformable objects is a long-standing challenge in robotics with a wide range of real-world applications.를 문제로 두고, For several tasks in the benchmark, we propose to tackle them using novel goal-conditioned variants of Transporter Network [68] architectures.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — Manipulating deformable objects is a long-standing challenge in robotics with a wide range of real-world applications.
+
+방법 관련 발췌 — For several tasks in the benchmark, we propose to tackle them using novel goal-conditioned variants of Transporter Network [68] architectures.
 
 ## Problem and Motivation
 
@@ -86,4 +88,4 @@ Manipulation, contact, tactile, and dexterity의 manipulation 문제를 이해�
 
 ## Why Read It
 
-Manipulation, contact, tactile, and dexterity의 manipulation 문제를 이해하기 위해 읽는다. 본문은 Manipulating deformable objects is a long-standing challenge in robotics with a wide range of real-world applications.를 문제로 두고, For several tasks in the benchmark, we propose to tackle them using novel goal-conditioned variants of Transporter Network [68] architectures.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 3 (III. BACKGROUND), p. 2 (III. BACKGROUND), p. 2 (III. BACKGROUND), p. 3 (IV. GOAL-CONDITIONED TRANSPORTER NETWORKS) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 1 (I. INTRODUCTION), p. 3 (III. BACKGROUND), p. 2 (III. BACKGROUND), p. 3 (IV. GOAL-CONDITIONED TRANSPORTER NETWORKS)이다.

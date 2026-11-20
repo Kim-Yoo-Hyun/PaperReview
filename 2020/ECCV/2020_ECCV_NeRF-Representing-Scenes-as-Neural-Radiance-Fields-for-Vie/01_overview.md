@@ -78,4 +78,4 @@
 
 ## Why Read It
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 In this work, we address the long-standing problem of view synthesis in a new way by directly optimizing parameters of a continuous 5D scene representation to minimize the error of rendering a ...를 문제로 두고, We address these issues by transforming input 5D coordinates with a positional encoding that enables the MLP to represent higher frequency functions, and we propose a hierarchical sampling procedure to reduce the ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1 Introduction), p. 17 (A Additional Implementation Details), p. 18 (A Additional Implementation Details), p. 18 (A Additional Implementation Details), p. 14 (9) Complete Model), p. 17 (A Additional Implementation Details) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 1 (1 Introduction), p. 17 (A Additional Implementation Details), p. 18 (A Additional Implementation Details), p. 14 (9) Complete Model)이다.

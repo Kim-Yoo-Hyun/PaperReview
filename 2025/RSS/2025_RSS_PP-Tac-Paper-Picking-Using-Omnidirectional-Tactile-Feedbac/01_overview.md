@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-Manipulation, contact, tactile, and dexterity의 tactile 문제를 이해하기 위해 읽는다. 본문은 Next, we aim to address the challenge of grasping thin, deformable paper-like objects from flat surfaces.를 문제로 두고, To address this, we propose a visionindependent tactile-based approach. ‘The core idea leverages tactile feedback to maintain contact conditions (as defined in Section IV), facilitating the creation of a buckling region for ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — Next, we aim to address the challenge of grasping thin, deformable paper-like objects from flat surfaces.
+
+방법 관련 발췌 — To address this, we propose a visionindependent tactile-based approach. ‘The core idea leverages tactile feedback to maintain contact conditions (as defined in Section IV), facilitating the creation of a buckling region for ...
 
 ## Problem and Motivation
 
@@ -86,7 +88,7 @@ Manipulation, contact, tactile, and dexterity의 tactile 문제를 이해하기 
 
 ## Why Read It
 
-Manipulation, contact, tactile, and dexterity의 tactile 문제를 이해하기 위해 읽는다. 본문은 Next, we aim to address the challenge of grasping thin, deformable paper-like objects from flat surfaces.를 문제로 두고, To address this, we propose a visionindependent tactile-based approach. ‘The core idea leverages tactile feedback to maintain contact conditions (as defined in Section IV), facilitating the creation of a buckling region for ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 4 (IV. PROBLEM STATEMENT), p. 4 (IV. PROBLEM STATEMENT), p. 5 (IV. PROBLEM STATEMENT), p. 5 (IV. PROBLEM STATEMENT), p. 6 (A. Implementation Details), p. 6 (B. PP-Tac Policy) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 4 (IV. PROBLEM STATEMENT), p. 5 (IV. PROBLEM STATEMENT), p. 6 (A. Implementation Details), p. 6 (B. PP-Tac Policy)이다.
 
 ## Semantic QA — PDF body cross-check
 

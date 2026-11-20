@@ -19,7 +19,7 @@
 
 ## Why This Paper Is Here
 
-Robotics-enabling 3D perception의 generative 문제를 이해하기 위해 읽는다. 본문은 However, unlike 2D images arranged in regular grids, point clouds lack a consistent topology, making the annotation process both expensive and labor-intensive.를 문제로 두고, Considering this, we propose Point-MaDi, a novel Point cloud Masked autoencoding Diffusion framework.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+Point-MaDi는 마스킹과 확산을 결합해 라벨 없는 점군의 표현을 사전학습한다.
 
 ## Problem and Motivation
 
@@ -51,16 +51,10 @@ Robotics-enabling 3D perception의 generative 문제를 이해하기 위해 읽�
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1 Introduction - extractive body cue:** Considering this, we propose Point-MaDi, a novel Point cloud Masked autoencoding Diffusion framework.
-- **p. 1 / Abstract - extractive body cue:** Specifically, we introduce a center diffusion mechanism in the encoder, noising and predicting the coordinates of both visible and masked patch centers without ground-truth positional ...
-- **p. 8 / Figure/Table caption - extractive body cue:** Tab. 2. Our Point-MaDi achieves state-of-the-art performance, with a category mIoU of 84.8% and an instance mIoU of 86.3%, improving over Point-MAE by 0.6% and ...
-- **p. 7 / 4 Experiments - extractive body cue:** Our Point-MaDi achieves superior performance on all subsets, reaching 95.52%, 93.46%, and 89.52% accuracies, respectively.
-- **p. 7 / 4 Experiments - extractive body cue:** While diffusion-based methods like PointDif may not consistently dominate on the relatively clean and less diverse ModelNet40 dataset, our Point-MaDi still achieves 93.8% accuracy, demonstrating ...
-- **p. 9 / 4 Experiments - extractive body cue:** 4, the joint decoder achieves the best overall performance.
-- **p. 9 / 4 Experiments - extractive body cue:** 5, the Rand & Block strategy achieves the best performance under the same masking ratio.
-- **p. 8 / 4 Experiments - extractive body cue:** Cls. mIoU Inst. mIoU mAcc mIoU Supervised Learning Only PointNet [34] CVPR 2017 80.4 83.7 49.0 41.1 DGCNN [51] TOG 2019 82.3 85.2 - - ...
+- 마스킹한 점군을 복원하는 데 두 확산 과제를 사용해 패치 중심 좌표에 의존하는 문제를 다룬다.
+- 학습한 표현을 점군 분류와 분할 벤치마크에서 평가한다.
 
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+[원문 초록](https://neurips.cc/virtual/2025/poster/115683)
 
 ## Evaluation Scope
 
@@ -84,4 +78,4 @@ Robotics-enabling 3D perception의 generative 문제를 이해하기 위해 읽�
 
 ## Why Read It
 
-Robotics-enabling 3D perception의 generative 문제를 이해하기 위해 읽는다. 본문은 However, unlike 2D images arranged in regular grids, point clouds lack a consistent topology, making the annotation process both expensive and labor-intensive.를 문제로 두고, Considering this, we propose Point-MaDi, a novel Point cloud Masked autoencoding Diffusion framework.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1 Introduction), p. 2 (1 Introduction), p. 1 (1 Introduction), p. 2 (1 Introduction), p. 1 (Abstract), p. 1 (Abstract) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 1 (1 Introduction), p. 2 (1 Introduction), p. 1 (Abstract)이다.

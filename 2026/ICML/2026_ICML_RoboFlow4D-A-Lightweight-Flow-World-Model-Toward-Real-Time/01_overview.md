@@ -21,7 +21,9 @@
 
 ## Why This Paper Is Here
 
-VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다. 본문은 Although this paradigm has demonstrated substantial effectiveness, it still encounters unknown failures.를 문제로 두고, To enable real-time robotic deployment, we propose RoboFlow4D, an end-to-end lightweight world model that directly predicts a sequence of multi-frame 3D flows (i.e., flows across 4D spacetime), conditioned on RGB images and ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — Although this paradigm has demonstrated substantial effectiveness, it still encounters unknown failures.
+
+방법 관련 발췌 — To enable real-time robotic deployment, we propose RoboFlow4D, an end-to-end lightweight world model that directly predicts a sequence of multi-frame 3D flows (i.e., flows across 4D spacetime), conditioned on RGB images and ...
 
 ## Problem and Motivation
 
@@ -84,4 +86,4 @@ VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다
 
 ## Why Read It
 
-VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다. 본문은 Although this paradigm has demonstrated substantial effectiveness, it still encounters unknown failures.를 문제로 두고, To enable real-time robotic deployment, we propose RoboFlow4D, an end-to-end lightweight world model that directly predicts a sequence of multi-frame 3D flows (i.e., flows across 4D spacetime), conditioned on RGB images and ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1. Introduction), p. 1 (1. Introduction), p. 2 (1. Introduction), p. 2 (1. Introduction), p. 6 (3.5. Data Generation and Training Objective), p. 4 (3.2. RoboFlow4D) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 1 (1. Introduction), p. 2 (1. Introduction), p. 6 (3.5. Data Generation and Training Objective), p. 4 (3.2. RoboFlow4D)이다.

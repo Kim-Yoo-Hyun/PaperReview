@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다. 본문은 To ‘maintain consistency with the pretraining setup of the VLMs, existing VLA models (7, 29, 3] typically use a single-image observation v, rather than utilizing the full observations v1. ‘At test time, ...를 문제로 두고, Sec- ‘ond, we propose a data collection framework that enables non-experts to collect robot data only through natural language and augment the human-collected demonstration data, Third, experiments demonstrate that CLIP-RT outperforms O ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — To ‘maintain consistency with the pretraining setup of the VLMs, existing VLA models (7, 29, 3] typically use a single-image observation v, rather than utilizing the full observations v1. ‘At test time, ...
+
+방법 관련 발췌 — Sec- ‘ond, we propose a data collection framework that enables non-experts to collect robot data only through natural language and augment the human-collected demonstration data, Third, experiments demonstrate that CLIP-RT outperforms O ...
 
 ## Problem and Motivation
 
@@ -82,7 +84,7 @@ VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다
 
 ## Why Read It
 
-VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다. 본문은 To ‘maintain consistency with the pretraining setup of the VLMs, existing VLA models (7, 29, 3] typically use a single-image observation v, rather than utilizing the full observations v1. ‘At test time, ...를 문제로 두고, Sec- ‘ond, we propose a data collection framework that enables non-experts to collect robot data only through natural language and augment the human-collected demonstration data, Third, experiments demonstrate that CLIP-RT outperforms O ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (A. Preliminaries), p. 4 (C. In-Domain Data Collection), p. 2 (Abstract), p. 2 (Abstract), p. 4 (B. CLIP-Based Robotics Transformer (CLIP-RT)), p. 1 (Abstract) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 2 (A. Preliminaries), p. 4 (C. In-Domain Data Collection), p. 2 (Abstract), p. 4 (B. CLIP-Based Robotics Transformer (CLIP-RT)), p. 1 (Abstract)이다.
 
 ## Semantic QA — PDF body cross-check
 

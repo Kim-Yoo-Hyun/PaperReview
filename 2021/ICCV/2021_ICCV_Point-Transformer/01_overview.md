@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 A variety of approaches to deep learning on 3D point clouds have arisen in response to this challenge.를 문제로 두고, It consists of 16,880 models from 16 shape categories, with 14,006 3D models for training and 2,874 for testing.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — A variety of approaches to deep learning on 3D point clouds have arisen in response to this challenge.
+
+방법 관련 발췌 — It consists of 16,880 models from 16 shape categories, with 14,006 3D models for training and 2,874 for testing.
 
 ## Problem and Motivation
 
@@ -82,4 +84,4 @@ Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 �
 
 ## Why Read It
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 A variety of approaches to deep learning on 3D point clouds have arisen in response to this challenge.를 문제로 두고, It consists of 16,880 models from 16 shape categories, with 14,006 3D models for training and 2,874 for testing.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1. Introduction), p. 1 (1. Introduction), p. 2 (1. Introduction), p. 6 (4.3. Object Part Segmentation), p. 5 (3.5. Network Architecture), p. 5 (3.5. Network Architecture) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 1 (1. Introduction), p. 2 (1. Introduction), p. 6 (4.3. Object Part Segmentation), p. 5 (3.5. Network Architecture)이다.

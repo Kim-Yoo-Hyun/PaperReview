@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 However, LiDAR inherently faces limitations in detecting small or distant objects due to its radial emission pattern, which results in sparse returns along each laser ray (Li et al., 2022b).를 문제로 두고, Our contributions can be summarized as: 1) We present IAL, a novel transformer-based multi-modal framework for multimodal 3D panoptic segmentation, eliminating the cumbersome post-processing steps required by previous methods.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — However, LiDAR inherently faces limitations in detecting small or distant objects due to its radial emission pattern, which results in sparse returns along each laser ray (Li et al., 2022b).
+
+방법 관련 발췌 — Our contributions can be summarized as: 1) We present IAL, a novel transformer-based multi-modal framework for multimodal 3D panoptic segmentation, eliminating the cumbersome post-processing steps required by previous methods.
 
 ## Problem and Motivation
 
@@ -82,4 +84,4 @@ Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 �
 
 ## Why Read It
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 However, LiDAR inherently faces limitations in detecting small or distant objects due to its radial emission pattern, which results in sparse returns along each laser ray (Li et al., 2022b).를 문제로 두고, Our contributions can be summarized as: 1) We present IAL, a novel transformer-based multi-modal framework for multimodal 3D panoptic segmentation, eliminating the cumbersome post-processing steps required by previous methods.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1. Introduction), p. 2 (1. Introduction), p. 1 (1. Introduction), p. 2 (1. Introduction), p. 4 (3. Methodology), p. 6 (3.3. Prior-Based Query Generation) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 1 (1. Introduction), p. 2 (1. Introduction), p. 4 (3. Methodology), p. 6 (3.3. Prior-Based Query Generation)이다.

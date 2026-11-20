@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2023 / NeurIPS
-- Authors: Arjun Majumdar, Karmesh Yadav, Sergio Arnaud, Yecheng Jason Ma, Claire Chen, Sneha Silwal, Aryan Jain, Vincent-Pierre Berges, Pieter Abbeel, Jitendra Malik, Dhruv Batra, Yixin Lin, Oleksandr Maksymets, Aravind Rajeswaran, Franziska Meier
+- Authors: Arjun Majumdar, Karmesh Yadav, Sergio Arnaud, Yecheng Jason Ma, Claire Chen, Sneha Silwal, Aryan Jain, Vincent-Pierre Berges, Tingfan Wu, Jay Vakil, Pieter Abbeel, Jitendra Malik, Dhruv Batra, Yixin Lin, Oleksandr Maksymets, Aravind Rajeswaran, Franziska Meier
 - Primary track: RL, IL, offline learning, and robot data
 - Tier: NEXT
 - Tags: Robotics, representation learning, Embodied AI, Benchmark
@@ -20,7 +20,9 @@
 
 ## Why This Paper Is Here
 
-RL, IL, offline learning, and robot data의 benchmark 문제를 이해하기 위해 읽는다. 본문은 Our findings reveal a challenge and opportunity for the community - the search for a PVR that is universally dominant (or "foundational") for EAI calls for innovations in architecture, learning paradigm, data ...를 문제로 두고, The visual cortex is a region of an organism's brain, which together with the motor cortex, enables sight to be converted into movement.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — Our findings reveal a challenge and opportunity for the community - the search for a PVR that is universally dominant (or "foundational") for EAI calls for innovations in architecture, learning paradigm, data ...
+
+방법 관련 발췌 — The visual cortex is a region of an organism's brain, which together with the motor cortex, enables sight to be converted into movement.
 
 ## Problem and Motivation
 
@@ -87,7 +89,7 @@ RL, IL, offline learning, and robot data의 benchmark 문제를 이해하기 위
 
 ## Why Read It
 
-RL, IL, offline learning, and robot data의 benchmark 문제를 이해하기 위해 읽는다. 본문은 Our findings reveal a challenge and opportunity for the community - the search for a PVR that is universally dominant (or "foundational") for EAI calls for innovations in architecture, learning paradigm, data ...를 문제로 두고, The visual cortex is a region of an organism's brain, which together with the motor cortex, enables sight to be converted into movement.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 3 (1 Introduction), p. 1 (1 Introduction), p. 2 (1 Introduction), p. 2 (1 Introduction), p. 3 (1 Introduction), p. 16 (A.2 Overview of Downstream Policy Learning in CORTEXBENCH) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 3 (1 Introduction), p. 1 (1 Introduction), p. 2 (1 Introduction), p. 16 (A.2 Overview of Downstream Policy Learning in CORTEXBENCH)이다.
 
 ## Semantic QA — PDF body cross-check
 

@@ -79,4 +79,4 @@ PDFactor는 점군에서 세 직교 평면의 특징을 구성하고, 관측과 
 
 ## Why Read It
 
-Manipulation, contact, tactile, and dexterity의 manipulation 문제를 이해하기 위해 읽는다. 본문은 However, the number of discretized bins needed to approximate a continuous action space grows exponentially with increasing dimensionality, making it difficult to maintain accuracy and scalability as task complexity increases.를 문제로 두고, In this work, we propose PDFactor, a novel multi-task manipulation agent that leverages a tri-perspective view transformer to learn a hybrid action representation.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (1. Introduction), p. 2 (1. Introduction), p. 1 (1. Introduction), p. 1 (1. Introduction), p. 3 (3. Method), p. 5 (3. We aim to model their joint dis) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 2 (1. Introduction), p. 1 (1. Introduction), p. 3 (3. Method), p. 5 (3. We aim to model their joint dis)이다.

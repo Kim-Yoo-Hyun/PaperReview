@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-Robotics-enabling 3D perception의 navigation 문제를 이해하기 위해 읽는다. 본문은 Despite its promising applications, automatic generation of precise and complete semantic occupancy annotations from raw sensor data remains a fundamental challenge, particularly in the pursuit of costeffective solutions for real-world ...를 문제로 두고, Our main contributions include: • We present AutoOcc, a vision-centric automatic annotation pipeline that supports open-ended semantic 3D occupancy label generation, based on vision-language guided differentiable reconstruction. • We de ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — Despite its promising applications, automatic generation of precise and complete semantic occupancy annotations from raw sensor data remains a fundamental challenge, particularly in the pursuit of costeffective solutions for real-world ...
+
+방법 관련 발췌 — Our main contributions include: • We present AutoOcc, a vision-centric automatic annotation pipeline that supports open-ended semantic 3D occupancy label generation, based on vision-language guided differentiable reconstruction. • We de ...
 
 ## Problem and Motivation
 
@@ -81,4 +83,4 @@ Robotics-enabling 3D perception의 navigation 문제를 이해하기 위해 읽�
 
 ## Why Read It
 
-Robotics-enabling 3D perception의 navigation 문제를 이해하기 위해 읽는다. 본문은 Despite its promising applications, automatic generation of precise and complete semantic occupancy annotations from raw sensor data remains a fundamental challenge, particularly in the pursuit of costeffective solutions for real-world ...를 문제로 두고, Our main contributions include: • We present AutoOcc, a vision-centric automatic annotation pipeline that supports open-ended semantic 3D occupancy label generation, based on vision-language guided differentiable reconstruction. • We de ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1. Introduction), p. 2 (1. Introduction), p. 2 (1. Introduction), p. 1 (1. Introduction), p. 4 (3.1. Vision-Language Guidance), p. 4 (3.1. Vision-Language Guidance) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 1 (1. Introduction), p. 2 (1. Introduction), p. 4 (3.1. Vision-Language Guidance)이다.

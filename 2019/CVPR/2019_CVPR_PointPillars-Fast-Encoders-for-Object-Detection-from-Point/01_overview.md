@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 Deploying autonomous vehicles (AVs) in urban environments poses a difficult technological challenge.를 문제로 두고, Both network consists of three blocks, Block1(S, 4, C), Block2(2S, 6, 2C), and Block3(4S, 6, 4C).를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — Deploying autonomous vehicles (AVs) in urban environments poses a difficult technological challenge.
+
+방법 관련 발췌 — Both network consists of three blocks, Block1(S, 4, C), Block2(2S, 6, 2C), and Block3(4S, 6, 4C).
 
 ## Problem and Motivation
 
@@ -78,4 +80,4 @@ Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 �
 
 ## Why Read It
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 Deploying autonomous vehicles (AVs) in urban environments poses a difficult technological challenge.를 문제로 두고, Both network consists of three blocks, Block1(S, 4, C), Block2(2S, 6, 2C), and Block3(4S, 6, 4C).를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1. Introduction), p. 5 (3.2. Loss), p. 5 (3.2. Loss), p. 6 (4.3. Data Augmentation), p. 7 (Method), p. 4 (3. Implementation Details) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 1 (1. Introduction), p. 5 (3.2. Loss), p. 6 (4.3. Data Augmentation), p. 7 (Method), p. 4 (3. Implementation Details)이다.

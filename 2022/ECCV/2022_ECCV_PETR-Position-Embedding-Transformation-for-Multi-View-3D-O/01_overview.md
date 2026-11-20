@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 However, such 2D-to-3D transformation in DETR3D [51] may introduce several problems.를 문제로 두고, To summarize, our contributions are: - We propose a simple and elegant framework, termed PETR, for multi-view 3D object detection.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — However, such 2D-to-3D transformation in DETR3D [51] may introduce several problems.
+
+방법 관련 발췌 — To summarize, our contributions are: - We propose a simple and elegant framework, termed PETR, for multi-view 3D object detection.
 
 ## Problem and Motivation
 
@@ -82,4 +84,4 @@ Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 �
 
 ## Why Read It
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 However, such 2D-to-3D transformation in DETR3D [51] may introduce several problems.를 문제로 두고, To summarize, our contributions are: - We propose a simple and elegant framework, termed PETR, for multi-view 3D object detection.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1 Introduction), p. 1 (1 Introduction), p. 5 (3 Method), p. 7 (3 Method), p. 5 (3 Method), p. 6 (3 Method) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 1 (1 Introduction), p. 5 (3 Method), p. 7 (3 Method), p. 6 (3 Method)이다.

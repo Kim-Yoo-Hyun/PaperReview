@@ -69,4 +69,4 @@ Tensor Field Networks는 점군의 회전·이동에 맞추어 특징이 정해�
 
 ## Why Read It
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 We introduce tensor field neural networks, which are locally equivariant to 3D rotations, translations, and permutations of points at every layer.를 문제로 두고, In this paper, we present a family of networks that enjoy richer equivariance: the symmetries of 3D Euclidean space.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (Abstract), p. 2 (Abstract), p. 2 (Abstract), p. 1 (Abstract), p. 1 (Abstract), p. 9 (Figure/Table caption) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 1 (Abstract), p. 2 (Abstract), p. 9 (Figure/Table caption)이다.

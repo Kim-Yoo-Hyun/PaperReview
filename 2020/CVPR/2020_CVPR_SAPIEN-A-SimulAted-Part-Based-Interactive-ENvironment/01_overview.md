@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-RL, IL, offline learning, and robot data의 benchmark 문제를 이해하기 위해 읽는다. 본문은 It faces challenges from four main aspects: 1) The environment needs to reproduce the real-world physics to some level.를 문제로 두고, The input of the agent consists of point clouds, normal maps and segmentation masks captured by three fixed cameras mounted on the left, right and front of the arena respectively.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — It faces challenges from four main aspects: 1) The environment needs to reproduce the real-world physics to some level.
+
+방법 관련 발췌 — The input of the agent consists of point clouds, normal maps and segmentation masks captured by three fixed cameras mounted on the left, right and front of the arena respectively.
 
 ## Problem and Motivation
 
@@ -82,4 +84,4 @@ RL, IL, offline learning, and robot data의 benchmark 문제를 이해하기 위
 
 ## Why Read It
 
-RL, IL, offline learning, and robot data의 benchmark 문제를 이해하기 위해 읽는다. 본문은 It faces challenges from four main aspects: 1) The environment needs to reproduce the real-world physics to some level.를 문제로 두고, The input of the agent consists of point clouds, normal maps and segmentation masks captured by three fixed cameras mounted on the left, right and front of the arena respectively.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1. Introduction), p. 1 (1. Introduction), p. 8 (4.2. Robotic Interaction), p. 7 (4.2. Robotic Interaction), p. 8 (4.2. Robotic Interaction), p. 7 (4.2. Robotic Interaction) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 1 (1. Introduction), p. 8 (4.2. Robotic Interaction), p. 7 (4.2. Robotic Interaction)이다.

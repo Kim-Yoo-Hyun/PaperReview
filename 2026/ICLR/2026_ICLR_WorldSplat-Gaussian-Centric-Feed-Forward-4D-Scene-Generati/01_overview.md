@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-Robotics-enabling 3D perception의 generative 문제를 이해하기 위해 읽는다. 본문은 Existing video generators (Mao et al., 2024; Gao et al., 2023; Wen et al., 2024; Li et al., 2024a; Gao et al., 2024b) work in the 2D image domain and often lack ...를 문제로 두고, Our framework creates a dynamic 4D Gaussian representation and renders the novel views along any user-defined camera trajectory without per-scene optimization.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — Existing video generators (Mao et al., 2024; Gao et al., 2023; Wen et al., 2024; Li et al., 2024a; Gao et al., 2024b) work in the 2D image domain and often lack ...
+
+방법 관련 발췌 — Our framework creates a dynamic 4D Gaussian representation and renders the novel views along any user-defined camera trajectory without per-scene optimization.
 
 ## Problem and Motivation
 
@@ -86,4 +88,4 @@ Robotics-enabling 3D perception의 generative 문제를 이해하기 위해 읽�
 
 ## Why Read It
 
-Robotics-enabling 3D perception의 generative 문제를 이해하기 위해 읽는다. 본문은 Existing video generators (Mao et al., 2024; Gao et al., 2023; Wen et al., 2024; Li et al., 2024a; Gao et al., 2024b) work in the 2D image domain and often lack ...를 문제로 두고, Our framework creates a dynamic 4D Gaussian representation and renders the novel views along any user-defined camera trajectory without per-scene optimization.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1 INTRODUCTION), p. 1 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 15 (A.1 ARCHITECTURES), p. 5 (3 METHOD) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 1 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 15 (A.1 ARCHITECTURES), p. 5 (3 METHOD)이다.

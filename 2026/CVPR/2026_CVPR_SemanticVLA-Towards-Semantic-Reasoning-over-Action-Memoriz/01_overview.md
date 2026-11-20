@@ -79,4 +79,4 @@ SemanticVLA는 명시적인 의미 추론 경로와 잠재 추론 경로를 함�
 
 ## Why Read It
 
-VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다. 본문은 This brittleness stems from two fundamental limitations in current VLA architectures.를 문제로 두고, Our approach consists of three stages: (1) Semantic Latent Token Pretraining (Sec.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (1. Introduction), p. 2 (1. Introduction), p. 5 (3.3. Flow Matching Action Decoding), p. 4 (3.1. Semantic Latent Action Tokenizer), p. 5 (3.3. Flow Matching Action Decoding), p. 3 (3.1. Semantic Latent Action Tokenizer) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 2 (1. Introduction), p. 5 (3.3. Flow Matching Action Decoding), p. 4 (3.1. Semantic Latent Action Tokenizer), p. 3 (3.1. Semantic Latent Action Tokenizer)이다.

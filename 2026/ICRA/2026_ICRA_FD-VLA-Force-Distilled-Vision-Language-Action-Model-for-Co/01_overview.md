@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다. 본문은 This enables practical deployment on a wide range of robot platforms that lack force sensors, reducing hardware cost and 를 문제로 두고, In summary, the main contributions of this work are summarized as follows: • We propose the FD-VLA framework that injects a distilled force token into the VLA model to improve contact-rich manipulation. ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — This enables practical deployment on a wide range of robot platforms that lack force sensors, reducing hardware cost and
+
+방법 관련 발췌 — In summary, the main contributions of this work are summarized as follows: • We propose the FD-VLA framework that injects a distilled force token into the VLA model to improve contact-rich manipulation. ...
 
 ## Problem and Motivation
 
@@ -84,4 +86,4 @@ VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다
 
 ## Why Read It
 
-VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다. 본문은 This enables practical deployment on a wide range of robot platforms that lack force sensors, reducing hardware cost and 를 문제로 두고, In summary, the main contributions of this work are summarized as follows: • We propose the FD-VLA framework that injects a distilled force token into the VLA model to improve contact-rich manipulation. ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 3 (III. METHODOLOGY), p. 4 (III. METHODOLOGY), p. 4 (III. METHODOLOGY), p. 5 (III. METHODOLOGY) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 1 (I. INTRODUCTION), p. 3 (III. METHODOLOGY), p. 4 (III. METHODOLOGY), p. 5 (III. METHODOLOGY)이다.

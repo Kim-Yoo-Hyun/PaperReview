@@ -20,7 +20,9 @@
 
 ## Why This Paper Is Here
 
-Manipulation, contact, tactile, and dexterity의 manipulation 문제를 이해하기 위해 읽는다. 본문은 This enables imitation from few demonstrations, but current approaches-which operate in 2D-suffer several key limitations.를 문제로 두고, We present a novel representation that models dense correspondence across object instances at the level of points and local coordinate frames.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — This enables imitation from few demonstrations, but current approaches-which operate in 2D-suffer several key limitations.
+
+방법 관련 발췌 — We present a novel representation that models dense correspondence across object instances at the level of points and local coordinate frames.
 
 ## Problem and Motivation
 
@@ -87,7 +89,7 @@ Manipulation, contact, tactile, and dexterity의 manipulation 문제를 이해�
 
 ## Why Read It
 
-Manipulation, contact, tactile, and dexterity의 manipulation 문제를 이해하기 위해 읽는다. 본문은 This enables imitation from few demonstrations, but current approaches-which operate in 2D-suffer several key limitations.를 문제로 두고, We present a novel representation that models dense correspondence across object instances at the level of points and local coordinate frames.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 3 (II. METHOD), p. 3 (II. METHOD) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 2 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 3 (II. METHOD)이다.
 
 ## Semantic QA — PDF body cross-check
 

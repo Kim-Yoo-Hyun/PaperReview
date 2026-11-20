@@ -79,7 +79,7 @@ Decision Transformer는 목표 누적 보상과 이전 상태·행동을 조건�
 
 ## Why Read It
 
-RL, IL, offline learning, and robot data의 rl 문제를 이해하기 위해 읽는다. 본문은 To get an intuition for our proposal, consider the task of finding the shortest path on a directed graph, which can be posed as an RL problem.를 문제로 두고, Training dataset consists of random walk trajectories and their per-node returns-to-go (middle).를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 3 (1 Introduction), p. 3 (1 Introduction), p. 4 (3 Method), p. 4 (3 Method), p. 6 (3 Method), p. 6 (3 Method) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 3 (1 Introduction), p. 4 (3 Method), p. 6 (3 Method)이다.
 
 ## Semantic QA — PDF body cross-check
 

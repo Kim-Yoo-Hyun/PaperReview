@@ -13,13 +13,13 @@
 - Tags: Gaussian Splatting, language embedding, grounding
 - Official paper: https://openaccess.thecvf.com/content/CVPR2025/html/Jun-Seong_Dr._Splat_Directly_Referring_3D_Gaussian_Splatting_via_Direct_Language_CVPR_2025_paper.html
 - Full-text retrieval: https://openaccess.thecvf.com/content/CVPR2025/papers/Jun-Seong_Dr._Splat_Directly_Referring_3D_Gaussian_Splatting_via_Direct_Language_CVPR_2025_paper.pdf
-- Code/Project: not identified
+- Code/Project: https://drsplat.github.io/
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 Despite its promise, such rendering-based distillation methods [30, 34] share two limitations.를 문제로 두고, Splat, direct registration and referencing of language-aligned features in 3D Gaussians, bypassing intermediate rendering and preserving feature accuracy. • We introduce the PQ encoding method for compact feature representation, reducin ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+Dr. Splat은 언어 특징을 3D 가우시안에 직접 연결해 텍스트로 장면 요소를 찾는다.
 
 ## Problem and Motivation
 
@@ -53,16 +53,10 @@ Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 �
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** Splat, direct registration and referencing of language-aligned features in 3D Gaussians, bypassing intermediate rendering and preserving feature accuracy. • We introduce the PQ encoding method ...
-- **p. 2 / 1. Introduction - extractive body cue:** Our contributions are summarized as follows: • We propose Dr.
-- **p. 3 / 3. Dr. Splat - extractive body cue:** Then, we introduce Product Quantization (PQ) into our framework to efficiently store Gaussian-registered language embeddings, Sec.
-- **p. 4 / 3.1. Feature registration process - extractive body cue:** The proposed process can be interpreted as an inverse volume rendering without gradient-based optimization, which enables our method to be faster than the prior methods ...
-- **p. 1 / 1. Introduction - extractive body cue:** Our method directly links language features to 3D Gaussians, enabling efficient and complete spatial coverage.
-- **p. 8 / 4.2. 3D object localization - extractive body cue:** Even with the 3D space search method, OpenGaussian [37], our model consistently demonstrates superior performance and achieves higher accuracy in localization.
-- **p. 8 / 4.4. Ablation study - extractive body cue:** We observe that increasing the aggregating number of Gaussians per ray improves localization performance; however, it results in higher memory consumption and the number of ...
-- **p. 7 / 4. Experiments - extractive body cue:** Note that, not specifically designed for segmentation, it achieves high performance as a result of language-based Gaussian updates.
+- 각 픽셀의 광선에 크게 기여한 가우시안에 CLIP 특징을 할당한다.
+- 곱 양자화로 특징을 압축하고 열린 어휘 3D 인식에서 정확도와 자원 사용을 평가한다.
 
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+[원문 초록](https://openaccess.thecvf.com/content/CVPR2025/html/Jun-Seong_Dr._Splat_Directly_Referring_3D_Gaussian_Splatting_via_Direct_Language_CVPR_2025_paper.html)
 
 ## Evaluation Scope
 
@@ -83,4 +77,4 @@ Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 �
 
 ## Why Read It
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 Despite its promise, such rendering-based distillation methods [30, 34] share two limitations.를 문제로 두고, Splat, direct registration and referencing of language-aligned features in 3D Gaussians, bypassing intermediate rendering and preserving feature accuracy. • We introduce the PQ encoding method for compact feature representation, reducin ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1. Introduction), p. 1 (1. Introduction), p. 2 (1. Introduction), p. 2 (1. Introduction), p. 2 (1. Introduction), p. 2 (1. Introduction) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 1 (1. Introduction), p. 2 (1. Introduction)이다.

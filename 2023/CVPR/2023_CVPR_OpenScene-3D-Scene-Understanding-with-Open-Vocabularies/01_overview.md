@@ -19,7 +19,7 @@
 
 ## Why This Paper Is Here
 
-Robotics-enabling 3D perception의 navigation 문제를 이해하기 위해 읽는다. 본문은 Traditional 3D scene understanding approaches rely on labeled 3D datasets to train a model for a single task with supervision.를 문제로 두고, Overall, our contributions are summarized as follows: • We introduce open vocabulary 3D scene understanding tasks where arbitrary text queries are used for semantic segmentation, affordance estimation, room type classification, 3D objec ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+OpenScene은 텍스트와 3D 점을 같은 특징 공간에서 비교해 장면을 검색하고 분할한다.
 
 ## Problem and Motivation
 
@@ -51,16 +51,10 @@ Robotics-enabling 3D perception의 navigation 문제를 이해하기 위해 읽�
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** Overall, our contributions are summarized as follows: • We introduce open vocabulary 3D scene understanding tasks where arbitrary text queries are used for semantic segmentation, ...
-- **p. 2 / 1. Introduction - extractive body cue:** We present OpenScene, a simple yet effective zero-shot approach for open-vocabulary 3D scene understanding.
-- **p. 4 / 3.3. 2D-3D Feature Ensemble - extractive body cue:** Although one can already perform open-vocabulary queries with the 2D fused features F2D or 3D distilled features F3D, here we introduce a 2D-3D ensemble method ...
-- **p. 3 / 3. Method - extractive body cue:** An overview of our approach is illustrated in Fig.
-- **p. 3 / 3.1. Image Feature Fusion - extractive body cue:** The first step in our approach is to extract dense perpixel embeddings for each RGB image from a 2D visuallanguage segmentation model, and then back-project ...
-- **p. 5 / 4.1. Comparisons - extractive body cue:** Again, we outperform the zero-shot baseline (MSeg Voting) on both mIoU and mAcc metrics all three datasets.
-- **p. 5 / 4. Experiments - extractive body cue:** Still, both of our variants show significantly better performance in both mIoU and mAcc. detailed scenes, and thus provides the opportunity to stress open-vocabulary queries.
-- **p. 6 / 4.1. Comparisons - extractive body cue:** Comparison of semantic segmentation performance of different 3D features computed by our method. the mean accuracy for groups of 20 classes ranked by frequency.
+- 이미지와 텍스트에 정렬된 CLIP 표현을 3D 장면의 점마다 예측한다.
+- 텍스트 질의와 점 특징의 유사도를 이용해 학습 때 정하지 않은 범주의 영역을 찾는다.
 
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+[원문 초록](https://arxiv.org/abs/2211.15654)
 
 ## Evaluation Scope
 
@@ -83,4 +77,4 @@ Robotics-enabling 3D perception의 navigation 문제를 이해하기 위해 읽�
 
 ## Why Read It
 
-Robotics-enabling 3D perception의 navigation 문제를 이해하기 위해 읽는다. 본문은 Traditional 3D scene understanding approaches rely on labeled 3D datasets to train a model for a single task with supervision.를 문제로 두고, Overall, our contributions are summarized as follows: • We introduce open vocabulary 3D scene understanding tasks where arbitrary text queries are used for semantic segmentation, affordance estimation, room type classification, 3D objec ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 4 (3.2. 3D Distillation), p. 3 (3.1. Image Feature Fusion), p. 3 (3. Method), p. 4 (3.3. 2D-3D Feature Ensemble), p. 5 (4.1. Comparisons), p. 5 (4. Experiments) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 4 (3.2. 3D Distillation), p. 3 (3.1. Image Feature Fusion), p. 3 (3. Method), p. 4 (3.3. 2D-3D Feature Ensemble), p. 5 (4.1. Comparisons), p. 5 (4. Experiments)이다.

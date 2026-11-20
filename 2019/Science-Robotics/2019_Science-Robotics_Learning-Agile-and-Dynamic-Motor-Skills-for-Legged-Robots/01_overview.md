@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-Locomotion, whole-body, mobile manipulation, and humanoids의 locomotion 문제를 이해하기 위해 읽는다. 본문은 The nominal posture cannot be adjusted to this level in the approach of Bellicoso et al. since this would drastically increase the rate of failure (falling).를 문제로 두고, Furthermore, the system still consists of two independent modules that do not adapt to each other's performance characteristics.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — The nominal posture cannot be adjusted to this level in the approach of Bellicoso et al. since this would drastically increase the rate of failure (falling).
+
+방법 관련 발췌 — Furthermore, the system still consists of two independent modules that do not adapt to each other's performance characteristics.
 
 ## Problem and Motivation
 
@@ -86,4 +88,4 @@ Locomotion, whole-body, mobile manipulation, and humanoids의 locomotion 문제�
 
 ## Why Read It
 
-Locomotion, whole-body, mobile manipulation, and humanoids의 locomotion 문제를 이해하기 위해 읽는다. 본문은 The nominal posture cannot be adjusted to this level in the approach of Bellicoso et al. since this would drastically increase the rate of failure (falling).를 문제로 두고, Furthermore, the system still consists of two independent modules that do not adapt to each other's performance characteristics.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 4 (Body text (section not recovered)), p. 1 (Body text (section not recovered)), p. 2 (Body text (section not recovered)), p. 1 (Body text (section not recovered)), p. 2 (Body text (section not recovered)), p. 3 (Body text (section not recovered)) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 4 (Body text (section not recovered)), p. 1 (Body text (section not recovered)), p. 2 (Body text (section not recovered)), p. 3 (Body text (section not recovered))이다.

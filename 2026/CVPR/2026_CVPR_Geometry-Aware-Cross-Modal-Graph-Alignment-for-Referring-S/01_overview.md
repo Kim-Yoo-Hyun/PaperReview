@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 First, the language encoder inherently lacks explicit positional encoding, which limits its ability to represent spatial prepositions and relational geometry.를 문제로 두고, Our contributions are: • We introduce a geometry-aware perspective for language grounding that embeds explicit spatial structure into linguistic features, enabling more accurate reasoning. • We propose a cross-modal relational alignment ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — First, the language encoder inherently lacks explicit positional encoding, which limits its ability to represent spatial prepositions and relational geometry.
+
+방법 관련 발췌 — Our contributions are: • We introduce a geometry-aware perspective for language grounding that embeds explicit spatial structure into linguistic features, enabling more accurate reasoning. • We propose a cross-modal relational alignment ...
 
 ## Problem and Motivation
 
@@ -82,4 +84,4 @@ Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 �
 
 ## Why Read It
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 First, the language encoder inherently lacks explicit positional encoding, which limits its ability to represent spatial prepositions and relational geometry.를 문제로 두고, Our contributions are: • We introduce a geometry-aware perspective for language grounding that embeds explicit spatial structure into linguistic features, enabling more accurate reasoning. • We propose a cross-modal relational alignment ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (1. Introduction), p. 2 (1. Introduction), p. 5 (5.3. 3D Scene Graph Construction (3DSGC)), p. 5 (5.3. 3D Scene Graph Construction (3DSGC)), p. 7 (6.2. Comparisons with State-of-the-Arts), p. 7 (6.2. Comparisons with State-of-the-Arts) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 2 (1. Introduction), p. 5 (5.3. 3D Scene Graph Construction (3DSGC)), p. 7 (6.2. Comparisons with State-of-the-Arts)이다.

@@ -21,7 +21,9 @@
 
 ## Why This Paper Is Here
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 The aforementioned analysis highlights an unresolved core challenge: how to enhance the spatial intelligence of VLMs without extra 3D prior inputs or third-party spatial encoders, while preserving their general-purpose capabilities.를 문제로 두고, Our main contributions are summarized as follows: • We propose SpatioLM, a purely 2D vision-language framework that elicits implicit 3D geometric structure from pretrained VLM vision tokens, eliminating reliance on sensor-based or ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — The aforementioned analysis highlights an unresolved core challenge: how to enhance the spatial intelligence of VLMs without extra 3D prior inputs or third-party spatial encoders, while preserving their general-purpose capabilities.
+
+방법 관련 발췌 — Our main contributions are summarized as follows: • We propose SpatioLM, a purely 2D vision-language framework that elicits implicit 3D geometric structure from pretrained VLM vision tokens, eliminating reliance on sensor-based or ...
 
 ## Problem and Motivation
 
@@ -86,4 +88,4 @@ Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 �
 
 ## Why Read It
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 The aforementioned analysis highlights an unresolved core challenge: how to enhance the spatial intelligence of VLMs without extra 3D prior inputs or third-party spatial encoders, while preserving their general-purpose capabilities.를 문제로 두고, Our main contributions are summarized as follows: • We propose SpatioLM, a purely 2D vision-language framework that elicits implicit 3D geometric structure from pretrained VLM vision tokens, eliminating reliance on sensor-based or ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (1. Introduction), p. 2 (1. Introduction), p. 5 (3.3. Loss Design), p. 5 (3.3. Loss Design), p. 3 (3. Method), p. 3 (3.1. Problem definition and notation) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 2 (1. Introduction), p. 5 (3.3. Loss Design), p. 3 (3. Method), p. 3 (3.1. Problem definition and notation)이다.

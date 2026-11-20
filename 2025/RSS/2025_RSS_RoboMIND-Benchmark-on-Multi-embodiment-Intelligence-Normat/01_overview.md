@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-RL, IL, offline learning, and robot data의 benchmark 문제를 이해하기 위해 읽는다. 본문은 In contrast 0 the acquisition of vision or language data, which can often be sourced through web-based collection methods (32, 55], collecting robotic data is difficult because such data cannot be easily ...를 문제로 두고, demonstrate that RoboMIND can be effectively utilized by various single-task imitation learning algorithms and suecessfully adapted t0 VLA large models. ‘The high-quality information provided by our dataset enables successful task execu ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — In contrast 0 the acquisition of vision or language data, which can often be sourced through web-based collection methods (32, 55], collecting robotic data is difficult because such data cannot be easily ...
+
+방법 관련 발췌 — demonstrate that RoboMIND can be effectively utilized by various single-task imitation learning algorithms and suecessfully adapted t0 VLA large models. ‘The high-quality information provided by our dataset enables successful task execu ...
 
 ## Problem and Motivation
 
@@ -86,7 +88,7 @@ RL, IL, offline learning, and robot data의 benchmark 문제를 이해하기 위
 
 ## Why Read It
 
-RL, IL, offline learning, and robot data의 benchmark 문제를 이해하기 위해 읽는다. 본문은 In contrast 0 the acquisition of vision or language data, which can often be sourced through web-based collection methods (32, 55], collecting robotic data is difficult because such data cannot be easily ...를 문제로 두고, demonstrate that RoboMIND can be effectively utilized by various single-task imitation learning algorithms and suecessfully adapted t0 VLA large models. ‘The high-quality information provided by our dataset enables successful task execu ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (I. INTRODUCTION), p. 3 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 4 (I. INTRODUCTION), p. 3 (I. INTRODUCTION), p. 12 (C. Vision-Language-Action Large Models) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 2 (I. INTRODUCTION), p. 3 (I. INTRODUCTION), p. 4 (I. INTRODUCTION), p. 12 (C. Vision-Language-Action Large Models)이다.
 
 ## Semantic QA — PDF body cross-check
 

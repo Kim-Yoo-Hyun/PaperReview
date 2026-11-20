@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다. 본문은 While semantic generalization has improved in VLA models through extensive robotic training data, a critical gap persists in their manipulation accuracy for downstream tasks (Brohan et al., 2023; Black et al.; Li ...를 문제로 두고, Overall, the core contributions of this paper include: • We propose ReinboT, a novel end-to-end VLA model that integrates RL returns maximization to enhance robotic manipulation capabilities. • We introduce a reward ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — While semantic generalization has improved in VLA models through extensive robotic training data, a critical gap persists in their manipulation accuracy for downstream tasks (Brohan et al., 2023; Black et al.; Li ...
+
+방법 관련 발췌 — Overall, the core contributions of this paper include: • We propose ReinboT, a novel end-to-end VLA model that integrates RL returns maximization to enhance robotic manipulation capabilities. • We introduce a reward ...
 
 ## Problem and Motivation
 
@@ -81,4 +83,4 @@ VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다
 
 ## Why Read It
 
-VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다. 본문은 While semantic generalization has improved in VLA models through extensive robotic training data, a critical gap persists in their manipulation accuracy for downstream tasks (Brohan et al., 2023; Black et al.; Li ...를 문제로 두고, Overall, the core contributions of this paper include: • We propose ReinboT, a novel end-to-end VLA model that integrates RL returns maximization to enhance robotic manipulation capabilities. • We introduce a reward ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1. Introduction), p. 1 (1. Introduction), p. 2 (1. Introduction), p. 2 (1. Introduction), p. 4 (4.2. End-to-end Reinforced VLA model), p. 3 (3.2. Max-Return Sequence Modeling) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 1 (1. Introduction), p. 2 (1. Introduction), p. 4 (4.2. End-to-end Reinforced VLA model), p. 3 (3.2. Max-Return Sequence Modeling)이다.

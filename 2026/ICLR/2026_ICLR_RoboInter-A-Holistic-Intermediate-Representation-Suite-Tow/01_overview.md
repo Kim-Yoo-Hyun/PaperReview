@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-Manipulation, contact, tactile, and dexterity의 benchmark 문제를 이해하기 위해 읽는다. 본문은 Although web-scale multimodal data enables broad semantic reasoning, existing large-scale robot datasets (et al., 2023; Khazatsky et al., 2024; Wu et al., 2024; Bu et al., 2025) remain costly and tightly coupled ...를 문제로 두고, To address this gap, we propose the RoboInter Manipulation Suite, illustrated in Figure.1.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — Although web-scale multimodal data enables broad semantic reasoning, existing large-scale robot datasets (et al., 2023; Khazatsky et al., 2024; Wu et al., 2024; Bu et al., 2025) remain costly and tightly coupled ...
+
+방법 관련 발췌 — To address this gap, we propose the RoboInter Manipulation Suite, illustrated in Figure.1.
 
 ## Problem and Motivation
 
@@ -85,4 +87,4 @@ Manipulation, contact, tactile, and dexterity의 benchmark 문제를 이해하�
 
 ## Why Read It
 
-Manipulation, contact, tactile, and dexterity의 benchmark 문제를 이해하기 위해 읽는다. 본문은 Although web-scale multimodal data enables broad semantic reasoning, existing large-scale robot datasets (et al., 2023; Khazatsky et al., 2024; Wu et al., 2024; Bu et al., 2025) remain costly and tightly coupled ...를 문제로 두고, To address this gap, we propose the RoboInter Manipulation Suite, illustrated in Figure.1.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1 INTRODUCTION), p. 1 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 3 (1 INTRODUCTION), p. 27 (A.4.1 TRAINING DETAILS OF PLANNER AND EXECUTOR) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 1 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 3 (1 INTRODUCTION), p. 27 (A.4.1 TRAINING DETAILS OF PLANNER AND EXECUTOR)이다.

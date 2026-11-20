@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-Manipulation, contact, tactile, and dexterity의 tactile 문제를 이해하기 위해 읽는다. 본문은 4: FACTR allows our policy to beter integrate force information without overfittng to visual information, resulting in better generalization를 문제로 두고, For the decoder, we introduce & action tokens, A ¢ R**¢.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — 4: FACTR allows our policy to beter integrate force information without overfittng to visual information, resulting in better generalization
+
+방법 관련 발췌 — For the decoder, we introduce & action tokens, A ¢ R**¢.
 
 ## Problem and Motivation
 
@@ -81,7 +83,7 @@ Manipulation, contact, tactile, and dexterity의 tactile 문제를 이해하기 
 
 ## Why Read It
 
-Manipulation, contact, tactile, and dexterity의 tactile 문제를 이해하기 위해 읽는다. 본문은 4: FACTR allows our policy to beter integrate force information without overfittng to visual information, resulting in better generalization를 문제로 두고, For the decoder, we introduce & action tokens, A ¢ R**¢.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 5 (A. Problem Statement and Base Model), p. 5 (A. Problem Statement and Base Model), p. 5 (A. Problem Statement and Base Model), p. 4 (A. Problem Statement and Base Model), p. 4 (A. Problem Statement and Base Model), p. 8 (C. Policy Evaluation) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 5 (A. Problem Statement and Base Model), p. 4 (A. Problem Statement and Base Model), p. 8 (C. Policy Evaluation)이다.
 
 ## Semantic QA — PDF body cross-check
 

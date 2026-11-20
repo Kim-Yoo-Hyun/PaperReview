@@ -20,7 +20,7 @@
 
 ## Why This Paper Is Here
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 Eliminating camera pose as input remains a key challenge in 3D reconstruction.를 문제로 두고, To address these limitations, we propose a novel object-centric memory mechanism, Dual-Key 3D Object Memory, that consists of a key-value memory bank.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+OnlineSplatter는 단안 영상에서 자유롭게 움직이는 물체를 온라인으로 3D 복원한다.
 
 ## Problem and Motivation
 
@@ -54,16 +54,10 @@ Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 �
 
 ## Main Claims and Actual Contribution
 
-- **p. 5 / 3 Method - extractive body cue:** To address these limitations, we propose a novel object-centric memory mechanism, Dual-Key 3D Object Memory, that consists of a key-value memory bank.
-- **p. 4 / 3 Method - extractive body cue:** The input to our framework consists of a stream of RGB images {Vt}N t=0, where object masks {Mt}N t=0 are generated and applied to remove ...
-- **p. 2 / 1 Introduction - extractive body cue:** Our contributions are: (i) a novel feed-forward framework for object-centric online 3D reconstruction that operates on monocular RGB streams in real-time, eliminating the need for ...
-- **p. 2 / 1 Introduction - extractive body cue:** Motivated by these challenges, we propose OnlineSplatter, a feed-forward framework for online reconstruction of freely moving objects.
-- **p. 3 / 3 Method - extractive body cue:** To differentiate and contextualize these tokens, we introduce 3
-- **p. 8 / 4.2 Results - extractive body cue:** Even with fewer than four observations, OnlineSplatter significantly outperforms all baselines.
-- **p. 7 / 4 Experiments - extractive body cue:** We therefore design a stage-wise evaluation protocol that examines performance across three distinct phases: 1) Early Stage (Tearly := {1 ≤t ≤4}): Tests the model's ...
-- **p. 8 / 4.2 Results - extractive body cue:** Across all metrics and stages, OnlineSplatter achieves superior performance-improving up to +7.596 PSNR and +0.106 SSIM on GSO, and +4.981 PSNR and +0.092 SSIM on ...
+- 첫 프레임을 기준으로 물체 중심 가우시안을 갱신하며 카메라 자세나 깊이를 입력으로 요구하지 않는다.
+- 외관·형상 정보와 관측 방향을 저장하는 메모리로 여러 프레임의 증거를 결합한다.
 
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+[원문 초록](https://neurips.cc/virtual/2025/poster/117447)
 
 ## Evaluation Scope
 
@@ -86,4 +80,4 @@ Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 �
 
 ## Why Read It
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 Eliminating camera pose as input remains a key challenge in 3D reconstruction.를 문제로 두고, To address these limitations, we propose a novel object-centric memory mechanism, Dual-Key 3D Object Memory, that consists of a key-value memory bank.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (1 Introduction), p. 2 (1 Introduction), p. 3 (1 Introduction), p. 3 (1 Introduction), p. 4 (3 Method), p. 5 (3 Method) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 2 (1 Introduction), p. 3 (1 Introduction), p. 4 (3 Method), p. 5 (3 Method)이다.

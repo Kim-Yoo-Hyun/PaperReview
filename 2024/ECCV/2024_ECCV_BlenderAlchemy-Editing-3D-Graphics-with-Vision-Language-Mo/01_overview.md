@@ -13,13 +13,13 @@
 - Tags: Vision-Language Model, 3D Vision, Graph Reasoning
 - Official paper: https://www.ecva.net/papers/eccv_2024/papers_ECCV/html/12578_ECCV_2024_paper.php
 - Full-text retrieval: https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/12578.pdf
-- Code/Project: not identified
+- Code/Project: https://ianhuang0630.github.io/BlenderAlchemyWeb/
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (18 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 However, for all of the work mentioned so far, their fundamentally image-based or latent-based representations make the output materials difficult to edit in existing 3D graphics pipelines.를 문제로 두고, We show that our method can outperform prior works designed for similar problem settings, such as BlenderGPT [1].를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+BlenderAlchemy는 자연어와 참조 이미지로 Blender 장면을 편집하는 절차를 생성한다.
 
 ## Problem and Motivation
 
@@ -53,16 +53,10 @@ Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 �
 
 ## Main Claims and Actual Contribution
 
-- **p. 3 / 1 Introduction - extractive body cue:** We show that our method can outperform prior works designed for similar problem settings, such as BlenderGPT [1].
-- **p. 3 / 1 Introduction - extractive body cue:** We show that our method is capable of accomplishing graphical design tasks within Blender, guided by user intention in the form of text and images.
-- **p. 7 / 3 Method - extractive body cue:** Inspired by works like [51], we propose a visual state evaluator V (S1, S2, I), which is tasked with returning whichever of the two visual ...
-- **p. 7 / 3 Method - extractive body cue:** BlenderAlchemy 7 To discover a good edit to p0, we introduce the procedure outlined in Algorithm 1, an iterative refinement loop that repeatedly uses a ...
-- **p. 8 / 3 Method - extractive body cue:** Instead, we propose supplementing the text-to-program understanding of VLM's with the text-to-image understanding in state-of-the-art image generation models.
-- **p. 11 / Figure/Table caption - extractive body cue:** Table 1: CLIP scores of BlenderAlchemy vs. BlenderGPT for the text-based material editing task. We find that a version of our system that has no ...
-- **p. 2 / Figure/Table caption - extractive body cue:** Fig. 1: Overview of BlenderAlchemy. Given an input Blender state and a user intention specified using either language or reference images, BlenderAlchemy edits the Blender ...
-- **p. 9 / 4 Experiments - extractive body cue:** To match the number of edit generator queries we make, we run their method a maximum of 32 times, using the first successful example as ...
+- 시각·언어 모델이 편집 결과를 살피며 원하는 장면에 맞게 프로그램을 수정한다.
+- 재질·형상 편집과 제품 렌더링의 조명 조절로 결과를 평가한다.
 
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+[원문 초록](https://www.ecva.net/papers/eccv_2024/papers_ECCV/html/12578_ECCV_2024_paper.php)
 
 ## Evaluation Scope
 
@@ -82,4 +76,4 @@ Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 �
 
 ## Why Read It
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 However, for all of the work mentioned so far, their fundamentally image-based or latent-based representations make the output materials difficult to edit in existing 3D graphics pipelines.를 문제로 두고, We show that our method can outperform prior works designed for similar problem settings, such as BlenderGPT [1].를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 4 (1 Introduction), p. 2 (1 Introduction), p. 3 (1 Introduction), p. 4 (1 Introduction), p. 3 (1 Introduction), p. 7 (3 Method) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 4 (1 Introduction), p. 2 (1 Introduction), p. 3 (1 Introduction), p. 7 (3 Method)이다.

@@ -79,4 +79,4 @@
 
 ## Why Read It
 
-VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다. 본문은 Diffusion Policy may struggle to attain robust 3D generalization without training on a large amount of costly human demonstrations to exhaust the possible 3D arrangements of the scene.를 문제로 두고, The contributions of this work are: 1. a novel method, Spherical Diffusion Policy, which is equivariant to 3D rotations and invariant to 3D translations enabling generalization to unseen scenes, 2. a novel ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1. Introduction), p. 2 (1. Introduction), p. 2 (1. Introduction), p. 4 (4.1. Method Overview), p. 4 (4.2. Representing State and Action by Spherical Signal), p. 5 (4.4. Spherical FiLM Conditioning Layer) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 1 (1. Introduction), p. 2 (1. Introduction), p. 4 (4.1. Method Overview), p. 4 (4.2. Representing State and Action by Spherical Signal), p. 5 (4.4. Spherical FiLM Conditioning Layer)이다.

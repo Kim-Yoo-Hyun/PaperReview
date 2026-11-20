@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-RL, IL, offline learning, and robot data의 robot_data 문제를 이해하기 위해 읽는다. 본문은 This lack of diversity and scale makes it difficult to learn representations that are broadly applicable.를 문제로 두고, We hypothesize that a good representation for vision-based robotic manipulation consists of three components.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — This lack of diversity and scale makes it difficult to learn representations that are broadly applicable.
+
+방법 관련 발췌 — We hypothesize that a good representation for vision-based robotic manipulation consists of three components.
 
 ## Problem and Motivation
 
@@ -79,7 +81,7 @@ RL, IL, offline learning, and robot data의 robot_data 문제를 이해하기 �
 
 ## Why Read It
 
-RL, IL, offline learning, and robot data의 robot_data 문제를 이해하기 위해 읽는다. 본문은 This lack of diversity and scale makes it difficult to learn representations that are broadly applicable.를 문제로 두고, We hypothesize that a good representation for vision-based robotic manipulation consists of three components.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1 Introduction), p. 1 (1 Introduction), p. 2 (1 Introduction), p. 2 (1 Introduction), p. 14 (A.3 Additional Implementation Details), p. 14 (A.3 Additional Implementation Details) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 1 (1 Introduction), p. 2 (1 Introduction), p. 14 (A.3 Additional Implementation Details)이다.
 
 ## Semantic QA — PDF body cross-check
 

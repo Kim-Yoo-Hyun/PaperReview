@@ -80,4 +80,4 @@ SayCan은 언어 모델이 지시와 맞는다고 평가한 기술과 현재 로
 
 ## Why Read It
 
-VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다. 본문은 With prompt engineering, a LLM may be capable of splitting the high-level instruction into sub-tasks, but it cannot do so without the context of what the robot is capable of given its ...를 문제로 두고, We evaluate our method on a number of real-world robotic tasks, where we show the need for real-world grounding and that this approach is capable of completing long-horizon, abstract, natural language instructions ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (1 Introduction), p. 2 (1 Introduction), p. 11 (5.1 Results), p. 3 (2 Preliminaries), p. 7 (5.1 Results), p. 1 (Abstract) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 2 (1 Introduction), p. 11 (5.1 Results), p. 3 (2 Preliminaries), p. 7 (5.1 Results), p. 1 (Abstract)이다.

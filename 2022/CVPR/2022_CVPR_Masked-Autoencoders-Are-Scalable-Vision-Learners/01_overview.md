@@ -14,12 +14,13 @@
 - Official paper: https://arxiv.org/abs/2111.06377
 - Full-text retrieval: https://arxiv.org/pdf/2111.06377
 - Code/Project: https://github.com/facebookresearch/mae
+- 저자 배포표에 있는 사전학습 ViT-Base 가중치 파일에 접근을 확인했다. [배포 안내](https://github.com/facebookresearch/mae/blob/efb2a8062c206524e35e47d04501ed4f544c0ae8/README.md)
 - Paper type: theory_or_foundation
 - Source audit: full-text PDF body checked on 2026-09-03 (14 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
-Foundations: Vision and Language Models의 upstream 문제를 이해하기 위해 읽는다. 본문은 This architectural gap, however, has been addressed with the introduction of Vision Transformers (ViT) [16] and should no longer present an obstacle.를 문제로 두고, Driven by this analysis, we present a simple, effective, and scalable form of a masked autoencoder (MAE) for visual representation learning.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+Masked Autoencoders는 가려진 이미지 패치의 픽셀을 복원하면서 시각 표현을 사전학습한다.
 
 ## Problem and Motivation
 
@@ -53,16 +54,10 @@ Foundations: Vision and Language Models의 upstream 문제를 이해하기 위�
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** Driven by this analysis, we present a simple, effective, and scalable form of a masked autoencoder (MAE) for visual representation learning.
-- **p. 11 / A. Implementation Details - extractive body cue:** It has a stack of Transformer blocks [57], and each block consists of a multi-head self-attention block and an MLP block, both having LayerNorm (LN) ...
-- **p. 2 / 1. Introduction - extractive body cue:** For each triplet, we show the masked image (left), our MAE reconstruction† (middle), and the ground-truth (right).
-- **p. 3 / 3. Approach - extractive body cue:** Like all autoencoders, our approach has an encoder that maps the observed signal to a latent representation, and a decoder that reconstructs the original signal ...
-- **p. 3 / 3. Approach - extractive body cue:** This allows us to train very large encoders with only a fraction of compute and memory.
-- **p. 8 / 5. Transfer Learning Experiments - extractive body cue:** More significantly, with the larger ViT-L, our MAE pre-training outperforms supervised pre-training by 4.0 points (53.3 vs.
-- **p. 5 / 4.1. Main Properties - extractive body cue:** By removing the mask token from the encoder, we constrain the encoder to always see real patches and thus improve accuracy.
-- **p. 5 / 4.1. Main Properties - extractive body cue:** A deep decoder can improve linear probing accuracy. dim ft lin 128 84.9 69.1 256 84.8 71.3 512 84.9 73.5 768 84.4 73.1 1024 84.3 ...
+- 인코더는 보이는 패치만 처리하고 가벼운 디코더가 가려진 패치를 복원한다.
+- 높은 마스킹 비율을 사용한 사전학습을 이미지 분류와 전이 과제에서 평가한다.
 
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+[원문 초록](https://arxiv.org/abs/2111.06377)
 
 ## Evaluation Scope
 
@@ -86,4 +81,4 @@ Foundations: Vision and Language Models의 upstream 문제를 이해하기 위�
 
 ## Why Read It
 
-Foundations: Vision and Language Models의 upstream 문제를 이해하기 위해 읽는다. 본문은 This architectural gap, however, has been addressed with the introduction of Vision Transformers (ViT) [16] and should no longer present an obstacle.를 문제로 두고, Driven by this analysis, we present a simple, effective, and scalable form of a masked autoencoder (MAE) for visual representation learning.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1. Introduction), p. 2 (1. Introduction), p. 2 (1. Introduction), p. 3 (1. Introduction), p. 3 (3. Approach), p. 3 (3. Approach) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 1 (1. Introduction), p. 2 (1. Introduction), p. 3 (1. Introduction), p. 3 (3. Approach)이다.

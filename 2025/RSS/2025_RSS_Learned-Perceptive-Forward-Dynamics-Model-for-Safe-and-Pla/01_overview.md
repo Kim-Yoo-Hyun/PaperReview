@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-World models, safety, uncertainty, and recovery의 locomotion 문제를 이해하기 위해 읽는다. 본문은 However, open challenges remain to incorporate 3) perception to target rough environments and the transfer from simulation to the real system.를 문제로 두고, To overcome these issues, we propose a novel learned perceptive를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — However, open challenges remain to incorporate 3) perception to target rough environments and the transfer from simulation to the real system.
+
+방법 관련 발췌 — To overcome these issues, we propose a novel learned perceptive
 
 ## Problem and Motivation
 
@@ -86,7 +88,7 @@ World models, safety, uncertainty, and recovery의 locomotion 문제를 이해�
 
 ## Why Read It
 
-World models, safety, uncertainty, and recovery의 locomotion 문제를 이해하기 위해 읽는다. 본문은 However, open challenges remain to incorporate 3) perception to target rough environments and the transfer from simulation to the real system.를 문제로 두고, To overcome these issues, we propose a novel learned perceptive를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (1. Inrropucrion), p. 2 (1. Inrropucrion), p. 1 (Body text (section boundary not confidently recovered)), p. 3 (B. Planning), p. 3 (A. Dynamics Modeling), p. 5 (B. Model Architecture) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 2 (1. Inrropucrion), p. 1 (Body text (section boundary not confidently recovered)), p. 3 (B. Planning), p. 3 (A. Dynamics Modeling), p. 5 (B. Model Architecture)이다.
 
 ## Semantic QA — PDF body cross-check
 

@@ -13,11 +13,35 @@ import build_registry_views as views
 import audit_note_artifacts as artifacts
 import build_lit_survey as survey
 import registry_profiles as profiles
-from render_source_audit import check_applied
+from reconcile_registry import build_facets
+from render_source_audit import OPEN, PASS, check_applied, current_checks
 from registry_schema import enrich_record, validate_record_shape
 
 
 class DocumentMaintenanceTest(unittest.TestCase):
+    def test_reinforcement_is_not_a_contact_or_force_sensor_cue(self):
+        paper = {"title": "Reinforcement learning", "tags": []}
+        facets = build_facets(paper)
+        self.assertIn("reinforcement_learning", facets["learning"])
+        self.assertNotIn("contact_rich", facets["interaction"])
+        self.assertNotIn("force_torque", facets["modality"])
+        paper["tags"] = ["force-feedback"]
+        facets = build_facets(paper)
+        self.assertIn("force_torque", facets["modality"])
+        self.assertIn("contact_rich", facets["interaction"])
+
+    def test_source_recheck_updates_each_endpoint_and_release_independently(self):
+        row = {"checks": {"link": {"status": OPEN, "endpoints": {
+            "primary": {"state": "opened"}, "pdf": {"state": "access-unconfirmed"}}},
+            "code": {"status": OPEN}, "weights": {"status": OPEN}, "authors": {"status": PASS}},
+            "followup": {"pdf": {"status": PASS}, "project": {"status": OPEN}},
+            "postcheck": {"bibliography": {"primary": "https://example.org/paper"},
+                          "resources": {"code": {"status": PASS}},
+                          "qualification": {"field": "authors", "status": OPEN}}}
+        self.assertEqual(current_checks(row), {"link": OPEN, "code": PASS, "weights": OPEN, "authors": OPEN})
+        row["postcheck"]["resources"]["project"] = {"status": PASS}
+        self.assertEqual(current_checks(row)["link"], PASS)
+
     def test_audited_code_address_and_release_status_are_independent(self):
         repo = "https://example.org/code"
         implementation = repo + "/policy.py"

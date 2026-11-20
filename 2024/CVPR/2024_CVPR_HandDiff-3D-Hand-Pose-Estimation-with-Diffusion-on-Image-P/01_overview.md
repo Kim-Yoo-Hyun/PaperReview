@@ -14,12 +14,13 @@
 - Official paper: https://openaccess.thecvf.com/content/CVPR2024/html/Cheng_HandDiff_3D_Hand_Pose_Estimation_with_Diffusion_on_Image-Point_Cloud_CVPR_2024_paper.html
 - Full-text retrieval: https://openaccess.thecvf.com/content/CVPR2024/papers/Cheng_HandDiff_3D_Hand_Pose_Estimation_with_Diffusion_on_Image-Point_Cloud_CVPR_2024_paper.pdf
 - Code/Project: https://github.com/cwc1260/HandDiff
+- NYU 실험 모델 best_model.pth의 분할 압축 파일 z01·z02·zip 세 개와 각 크기를 저자 트리에서 확인했다. [배포 안내](https://github.com/cwc1260/HandDiff/blob/f7fb3e813a3bcfb06b902e697de58c7ef7bcc43e/README.md)
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
-Robotics-enabling 3D perception의 generative 문제를 이해하기 위해 읽는다. 본문은 One of the significant limitations of current 3D DMs is their reliance on a global latent condition, which overlooks crucial local detail information needed for accurate estimation of joint locations.를 문제로 두고, The following is a summary of our primary contributions: • We propose a novel diffusion-based model for hand pose estimation that utilizes the depth image and point cloud input as a multi-modal ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+HandDiff는 깊이 영상에서 얻은 점군을 조건으로 손 관절의 3D 위치를 추정한다.
 
 ## Problem and Motivation
 
@@ -53,16 +54,10 @@ Robotics-enabling 3D perception의 generative 문제를 이해하기 위해 읽�
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** The following is a summary of our primary contributions: • We propose a novel diffusion-based model for hand pose estimation that utilizes the depth image ...
-- **p. 2 / 1. Introduction - extractive body cue:** This model progressively denoises a noise distribution, accurately determining the 3D coordinates of hand joints. • We propose a novel joint-wise local feature-aware denoising module ...
-- **p. 3 / 3.2. Joint-wise Local Feature-conditioned Denoiser - extractive body cue:** In order to differentiate between different joints and levels of noise, we introduce a joint indicator and a time-step embedding, respectively.
-- **p. 3 / 3.2. Joint-wise Local Feature-conditioned Denoiser - extractive body cue:** (1) The denoiser consists of the following elements: 1) a local feature sampler, 2) a joint indicator & timestep embedding, 3) a kinematic correspondence-aware aggregation ...
-- **p. 1 / 1. Introduction - extractive body cue:** Recent developments in 3D Hand Pose Estimation (HPE) based on deep learning [5, 6, 9, 11, 12, 15, 16, Depth + points 3D pose 𝐉𝟎 ...
-- **p. 6 / 4.3. Comparison with State-of-the-Art Methods - extractive body cue:** The results also demonstrate that the proposed HandDiff significantly outperforms other 2D image-based methods by large margins since HandDiff directly performs the processing on the ...
-- **p. 5 / 4.2. Datasets and Evaluation Metrics - extractive body cue:** We employ two commonly used metrics, the mean joint error, and the success rate, to evaluate the performance of hand pose estimation.
-- **p. 6 / 4.3. Comparison with State-of-the-Art Methods - extractive body cue:** The results show that HandDiff achieves the new state-of-the-art record with mean distance errors of 5.72 and 6.53 mm on two challenging datasets, ICVL and ...
+- 확산 과정에서 관절별 조건과 주변의 세부 관측을 이용해 관절 좌표를 복원한다.
+- 평가 대상은 손 자세 추정 벤치마크에서의 관절 위치다.
 
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+[원문 초록](https://openaccess.thecvf.com/content/CVPR2024/html/Cheng_HandDiff_3D_Hand_Pose_Estimation_with_Diffusion_on_Image-Point_Cloud_CVPR_2024_paper.html)
 
 ## Evaluation Scope
 
@@ -86,4 +81,4 @@ Robotics-enabling 3D perception의 generative 문제를 이해하기 위해 읽�
 
 ## Why Read It
 
-Robotics-enabling 3D perception의 generative 문제를 이해하기 위해 읽는다. 본문은 One of the significant limitations of current 3D DMs is their reliance on a global latent condition, which overlooks crucial local detail information needed for accurate estimation of joint locations.를 문제로 두고, The following is a summary of our primary contributions: • We propose a novel diffusion-based model for hand pose estimation that utilizes the depth image and point cloud input as a multi-modal ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (1. Introduction), p. 1 (1. Introduction), p. 2 (1. Introduction), p. 1 (1. Introduction), p. 3 (3. The Proposed Hand Pose Diffusion Model), p. 3 (3.2. Joint-wise Local Feature-conditioned Denoiser) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 2 (1. Introduction), p. 1 (1. Introduction), p. 3 (3. The Proposed Hand Pose Diffusion Model), p. 3 (3.2. Joint-wise Local Feature-conditioned Denoiser)이다.

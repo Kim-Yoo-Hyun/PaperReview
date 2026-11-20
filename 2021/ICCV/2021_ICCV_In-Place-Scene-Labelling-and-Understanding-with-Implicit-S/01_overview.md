@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 Semantic scene understanding means attaching class laFusion via Learning Label Denoising Super-Resolution Label Propagation Label Synthesis Label Interpolation Figure 1: Neural radiance fields (NeRF) jointly encoding appearance and geom ...를 문제로 두고, In addition, multi-view consistency is inherent to the training process and enables the network to produce accurate semantic labels of the scene, including for views that are substantially different from any in ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — Semantic scene understanding means attaching class laFusion via Learning Label Denoising Super-Resolution Label Propagation Label Synthesis Label Interpolation Figure 1: Neural radiance fields (NeRF) jointly encoding appearance and geom ...
+
+방법 관련 발췌 — In addition, multi-view consistency is inherent to the training process and enables the network to produce accurate semantic labels of the scene, including for views that are substantially different from any in ...
 
 ## Problem and Motivation
 
@@ -84,4 +86,4 @@ Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 �
 
 ## Why Read It
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 Semantic scene understanding means attaching class laFusion via Learning Label Denoising Super-Resolution Label Propagation Label Synthesis Label Interpolation Figure 1: Neural radiance fields (NeRF) jointly encoding appearance and geom ...를 문제로 두고, In addition, multi-view consistency is inherent to the training process and enables the network to produce accurate semantic labels of the scene, including for views that are substantially different from any in ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1. Introduction), p. 3 (3.4. Implementation), p. 3 (3.4. Implementation), p. 4 (3.4. Implementation), p. 8 (4.4. Semantic Fusion), p. 4 (4.2. Semantic Neural Radiance Fields) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 1 (1. Introduction), p. 3 (3.4. Implementation), p. 4 (3.4. Implementation), p. 8 (4.4. Semantic Fusion), p. 4 (4.2. Semantic Neural Radiance Fields)이다.

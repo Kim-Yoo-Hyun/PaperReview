@@ -76,4 +76,4 @@ QuickSplat은 3D 표면 복원에 쓸 가우시안 초기값을 신경망으로 
 
 ## Why Read It
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 In particular, achieving both high fidelity as well as efficient and fast reconstruction for large scenes remains a difficult problem.를 문제로 두고, To summarize, our contributions are: • We propose a learned, generalized initializer network, that leverages scene priors to create effective Gaussian initializations for more efficient and accurate 3D surface reconstruction optimizatio ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1. Introduction), p. 2 (1. Introduction), p. 2 (1. Introduction), p. 1 (1. Introduction), p. 4 (3.3. Iterative Gaussian Optimization), p. 3 (3.2. Initialization Prior) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 1 (1. Introduction), p. 2 (1. Introduction), p. 4 (3.3. Iterative Gaussian Optimization), p. 3 (3.2. Initialization Prior)이다.

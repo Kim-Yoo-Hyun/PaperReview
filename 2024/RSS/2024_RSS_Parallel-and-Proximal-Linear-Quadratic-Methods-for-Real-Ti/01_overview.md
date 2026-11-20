@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-Planning and control의 humanoid 문제를 이해하기 위해 읽는다. 본문은 While solving the LQR is often a bottleneck in recent efficient optimal control solvers [21, 36, 22], most of them rely on sequential implementation without exploiting the parallelization capabilities of modern processing ...를 문제로 두고, We present this as a secondary contribution of this paper, which we have implemented and evaluated in the experimental section.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — While solving the LQR is often a bottleneck in recent efficient optimal control solvers [21, 36, 22], most of them rely on sequential implementation without exploiting the parallelization capabilities of modern processing ...
+
+방법 관련 발췌 — We present this as a secondary contribution of this paper, which we have implemented and evaluated in the experimental section.
 
 ## Problem and Motivation
 
@@ -79,7 +81,7 @@ Planning and control의 humanoid 문제를 이해하기 위해 읽는다. 본문
 
 ## Why Read It
 
-Planning and control의 humanoid 문제를 이해하기 위해 읽는다. 본문은 While solving the LQR is often a bottleneck in recent efficient optimal control solvers [21, 36, 22], most of them rely on sequential implementation without exploiting the parallelization capabilities of modern processing ...를 문제로 두고, We present this as a secondary contribution of this paper, which we have implemented and evaluated in the experimental section.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 4 (III. RICCATI EQUATIONS FOR THE PROXIMAL LQ PROBLEM), p. 8 (VI. IMPLEMENTATION IN A NONLINEAR TRAJECTORY) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 1 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 4 (III. RICCATI EQUATIONS FOR THE PROXIMAL LQ PROBLEM), p. 8 (VI. IMPLEMENTATION IN A NONLINEAR TRAJECTORY)이다.
 
 ## Semantic QA — PDF body cross-check
 

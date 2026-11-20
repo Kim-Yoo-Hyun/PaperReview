@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-Manipulation, contact, tactile, and dexterity의 benchmark 문제를 이해하기 위해 읽는다. 본문은 In summary, current VLG and grasping research highlight a clear gap between semantic understanding and manipulation reasoning, making them insufficient for real-world robotic scenarios that require fine-grained, multi-modal perception.를 문제로 두고, 1, we propose the RealVLG framework, which unifies visuallanguage grounding and grasping tasks within a single research paradigm.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — In summary, current VLG and grasping research highlight a clear gap between semantic understanding and manipulation reasoning, making them insufficient for real-world robotic scenarios that require fine-grained, multi-modal perception.
+
+방법 관련 발췌 — 1, we propose the RealVLG framework, which unifies visuallanguage grounding and grasping tasks within a single research paradigm.
 
 ## Problem and Motivation
 
@@ -83,4 +85,4 @@ Manipulation, contact, tactile, and dexterity의 benchmark 문제를 이해하�
 
 ## Why Read It
 
-Manipulation, contact, tactile, and dexterity의 benchmark 문제를 이해하기 위해 읽는다. 본문은 In summary, current VLG and grasping research highlight a clear gap between semantic understanding and manipulation reasoning, making them insufficient for real-world robotic scenarios that require fine-grained, multi-modal perception.를 문제로 두고, 1, we propose the RealVLG framework, which unifies visuallanguage grounding and grasping tasks within a single research paradigm.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (1. Introduction), p. 2 (1. Introduction), p. 6 (4.3. Task-Specific Pipelines and Verifiable Rewards), p. 5 (4.1. Overview), p. 6 (4.2. Policy Optimization with Verifiable Rewards), p. 7 (4.3. Task-Specific Pipelines and Verifiable Rewards) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 2 (1. Introduction), p. 6 (4.3. Task-Specific Pipelines and Verifiable Rewards), p. 5 (4.1. Overview), p. 6 (4.2. Policy Optimization with Verifiable Rewards), p. 7 (4.3. Task-Specific Pipelines and Verifiable Rewards)이다.

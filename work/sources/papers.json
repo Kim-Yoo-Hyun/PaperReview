@@ -4003,12 +4003,8 @@
       ],
       "setting": [],
       "embodiment": [],
-      "interaction": [
-        "contact_rich"
-      ],
-      "modality": [
-        "force_torque"
-      ]
+      "interaction": [],
+      "modality": []
     },
     "facet_provenance": "curation taxonomy cue; exact task/evaluation role remains in paper notes.",
     "evaluation_profile": {
@@ -6740,7 +6736,9 @@
       },
       "checkpoint": {
         "status": "not_recorded",
-        "evidence": "no explicit checkpoint availability cue"
+        "source": "https://github.com/zlccccc/3DVG-Transformer/tree/25497c99b1e2249e82ea0392b27d908076f3e884",
+        "verified_on": "2026-11-20",
+        "evidence": "저자 README의 명시적 다운로드는 입력 특징용 ENet이다. 이 버전의 원 모델 체크포인트는 저장소 트리와 릴리스에서 확인되지 않았다."
       },
       "configuration": {
         "status": "reported",
@@ -6754,7 +6752,7 @@
         "status": "reported",
         "evidence": "04_evaluation.md trial/statistics cue"
       },
-      "reviewed_on": "2026-09-04",
+      "reviewed_on": "2026-11-20",
       "source_note": "2021/ICCV/2021_ICCV_3DVG-Transformer-Relation-Modeling-for-Visual-Grounding-on/04_evaluation.md",
       "basis": "manifest artifact links plus full-text evaluation/method note cues; availability is not a claim of reproducible execution unless an explicit source or experiment check exists."
     },
@@ -10484,9 +10482,9 @@
         }
       },
       "authors_verification": {
-        "source": "https://arxiv.org/abs/2203.17270",
+        "source": "https://arxiv.org/pdf/2203.17270",
         "verified_on": "2026-11-20",
-        "basis": "논문 표제면 또는 출판사 서지에 실린 순서"
+        "basis": "저자 표제면과 Springer 등록 서지에서 Yu Qiao의 이름 순서를 확인했다."
       }
     },
     "paper_id": "pr-0043",
@@ -10607,7 +10605,7 @@
       "Enze Xie",
       "Chonghao Sima",
       "Tong Lu",
-      "Qiao Yu",
+      "Yu Qiao",
       "Jifeng Dai"
     ]
   },
@@ -10740,9 +10738,9 @@
         }
       },
       "authors_verification": {
-        "source": "https://arxiv.org/abs/2205.13542",
+        "source": "https://arxiv.org/pdf/2205.13542",
         "verified_on": "2026-11-20",
-        "basis": "논문 표제면 또는 출판사 서지에 실린 순서"
+        "basis": "저자 원문 표제면과 IEEE 서지에 있는 가운데 이니셜을 보완했다."
       }
     },
     "paper_id": "pr-0044",
@@ -10850,7 +10848,7 @@
       "Alexander Amini",
       "Xinyu Yang",
       "Huizi Mao",
-      "Daniela Rus",
+      "Daniela L. Rus",
       "Song Han"
     ]
   },
@@ -11675,9 +11673,9 @@
         }
       },
       "authors_verification": {
-        "source": "https://arxiv.org/abs/2401.12168",
+        "source": "https://openaccess.thecvf.com/content/CVPR2024/papers/Chen_SpatialVLM_Endowing_Vision-Language_Models_with_Spatial_Reasoning_Capabilities_CVPR_2024_paper.pdf",
         "verified_on": "2026-11-20",
-        "basis": "논문 표제면 또는 출판사 서지에 실린 순서"
+        "basis": "CVPR 게재 PDF 1쪽 저자 7명을 확인했다. 프리프린트의 두 이름이 게재본용 저자열에 남아 있었다."
       }
     },
     "paper_id": "pr-0048",
@@ -11775,8 +11773,6 @@
       "Zhuo Xu",
       "Sean Kirmani",
       "Brian Ichter",
-      "Danny Driess",
-      "Pete Florence",
       "Dorsa Sadigh",
       "Leonidas Guibas",
       "Fei Xia"
@@ -16073,16 +16069,19 @@
     "category": "VLA and Generalist Robot Policies",
     "tags": [
       "Robotics",
-      "Reinforcement Learning"
+      "VLA",
+      "Imitation Learning",
+      "robot manipulation"
     ],
     "folder": "2025/ICLR/2025_ICLR_HAMSTER-Hierarchical-Action-Models-for-Open-World-Robot-Ma",
     "pdf": "https://proceedings.iclr.cc/paper_files/paper/2025/file/3bfee3bc6639c36e6e7b058db909f760-Paper-Conference.pdf",
     "page": "https://proceedings.iclr.cc/paper_files/paper/2025/hash/3bfee3bc6639c36e6e7b058db909f760-Abstract-Conference.html",
-    "project": "not identified from OpenReview",
+    "project": "https://hamster-robot.github.io/",
     "venue_as_recorded": "ICLR 2025 Poster",
     "venue_canonical": "ICLR",
     "identifiers": {
-      "openreview": "h7aQxzKbq6"
+      "openreview": "h7aQxzKbq6",
+      "arxiv": "2502.05485"
     },
     "publication": {
       "venue": "ICLR",
@@ -16100,15 +16099,30 @@
         "scope": "paper_specific",
         "verified_on": "2026-11-20"
       },
-      "preprint": null,
+      "preprint": {
+        "url": "https://arxiv.org/abs/2502.05485",
+        "kind": "arxiv",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-20"
+      },
       "paper_pdf": {
         "url": "https://proceedings.iclr.cc/paper_files/paper/2025/file/3bfee3bc6639c36e6e7b058db909f760-Paper-Conference.pdf",
         "kind": "publisher_pdf",
         "scope": "paper_specific",
         "verified_on": "2026-11-20"
       },
-      "project": null,
-      "code": null,
+      "project": {
+        "url": "https://hamster-robot.github.io/",
+        "kind": "author_project",
+        "scope": "project_landing",
+        "verified_on": "2026-11-20"
+      },
+      "code": {
+        "url": "https://github.com/liyi14/HAMSTER_beta",
+        "kind": "official_code",
+        "scope": "project_landing",
+        "verified_on": "2026-11-20"
+      },
       "alternate_at_audit": {
         "url": "https://openreview.net/forum?id=h7aQxzKbq6",
         "kind": "openreview",
@@ -16117,7 +16131,7 @@
       }
     },
     "artifacts": {
-      "code_status": "not_identified",
+      "code_status": "released",
       "data_status": "not_identified",
       "local_pdf_cache": false
     },
@@ -16194,23 +16208,21 @@
     "paper_id": "pr-0066",
     "source_audit": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
     "facets": {
+      "interaction": [
+        "grasping"
+      ],
+      "setting": [],
       "learning": [
-        "reinforcement_learning",
+        "imitation_learning",
         "vla"
       ],
       "control_level": [
         "policy"
       ],
-      "setting": [],
       "embodiment": [
         "arm"
       ],
-      "interaction": [
-        "contact_rich",
-        "grasping"
-      ],
       "modality": [
-        "force_torque",
         "language"
       ]
     },
@@ -16250,18 +16262,22 @@
       "profile_version": "1.0",
       "status": "metadata_audited",
       "code": {
-        "status": "not_identified",
-        "source": null,
-        "evidence": "not_identified"
+        "status": "released",
+        "source": "https://raw.githubusercontent.com/liyi14/HAMSTER_beta/526a37f59f97c445005fcdf28f2cfb81ea742e4b/server.py",
+        "verified_on": "2026-11-20",
+        "evidence": "저자가 공개한 상위 경로 모델 추론 서버의 구현이다. 학습 전 과정과 하위 제어기의 공개 범위는 미확인이다."
       },
       "data": {
         "status": "not_identified",
-        "source": null,
-        "evidence": "existing manifest artifact status preserved"
+        "source": "https://hamster-robot.github.io/",
+        "verified_on": "2026-11-20",
+        "evidence": "프로젝트가 자체 데이터 배포를 예고한다. 원 연구 전체 학습 자료의 배포 항목은 미확인이다."
       },
       "checkpoint": {
-        "status": "not_recorded",
-        "evidence": "no explicit checkpoint availability cue"
+        "status": "reported",
+        "source": "https://huggingface.co/yili18/Hamster_dev/blob/794f1f925c87e861d2f562943e978cc11f8c344d/VILA1.5-13b-robopoint_1432k%2Brlbench_all_tasks_256_1000_eps_sketch_v5_alpha%2Bdroid_train99_sketch_v5_alpha_fix%2Bbridge_data_v2_train90_10k_sketch_v5_alpha-e1-LR1e-5/llm/model-00001-of-00006.safetensors",
+        "verified_on": "2026-11-20",
+        "evidence": "저자 README가 연결한 공개 모델 저장소의 고정 리비전에서 상위 경로 예측 모델의 가중치 조각을 확인했다."
       },
       "configuration": {
         "status": "reported",
@@ -16275,7 +16291,7 @@
         "status": "reported",
         "evidence": "04_evaluation.md trial/statistics cue"
       },
-      "reviewed_on": "2026-09-04",
+      "reviewed_on": "2026-11-20",
       "source_note": "2025/ICLR/2025_ICLR_HAMSTER-Hierarchical-Action-Models-for-Open-World-Robot-Ma/04_evaluation.md",
       "basis": "manifest artifact links plus full-text evaluation/method note cues; availability is not a claim of reproducible execution unless an explicit source or experiment check exists."
     },
@@ -19325,11 +19341,8 @@
       ],
       "setting": [],
       "embodiment": [],
-      "interaction": [
-        "contact_rich"
-      ],
+      "interaction": [],
       "modality": [
-        "force_torque",
         "language",
         "rgb"
       ]
@@ -23235,11 +23248,9 @@
         "arm"
       ],
       "interaction": [
-        "contact_rich",
         "grasping"
       ],
       "modality": [
-        "force_torque",
         "language",
         "rgb"
       ]
@@ -24253,11 +24264,9 @@
         "arm"
       ],
       "interaction": [
-        "contact_rich",
         "grasping"
       ],
       "modality": [
-        "force_torque",
         "language",
         "rgb"
       ]
@@ -27381,11 +27390,9 @@
         "dexterous_hand"
       ],
       "interaction": [
-        "contact_rich",
         "grasping"
       ],
       "modality": [
-        "force_torque",
         "language",
         "rgb"
       ]
@@ -27658,11 +27665,8 @@
       ],
       "setting": [],
       "embodiment": [],
-      "interaction": [
-        "contact_rich"
-      ],
+      "interaction": [],
       "modality": [
-        "force_torque",
         "language",
         "rgb"
       ]
@@ -28180,12 +28184,9 @@
         "mobile"
       ],
       "interaction": [
-        "contact_rich",
         "navigation"
       ],
-      "modality": [
-        "force_torque"
-      ]
+      "modality": []
     },
     "facet_provenance": "curation taxonomy cue; exact task/evaluation role remains in paper notes.",
     "evaluation_profile": {
@@ -29686,11 +29687,8 @@
       ],
       "setting": [],
       "embodiment": [],
-      "interaction": [
-        "contact_rich"
-      ],
+      "interaction": [],
       "modality": [
-        "force_torque",
         "language",
         "rgb"
       ]
@@ -29949,11 +29947,9 @@
         "mobile"
       ],
       "interaction": [
-        "contact_rich",
         "grasping"
       ],
       "modality": [
-        "force_torque",
         "language",
         "rgb"
       ]
@@ -31148,11 +31144,8 @@
       ],
       "setting": [],
       "embodiment": [],
-      "interaction": [
-        "contact_rich"
-      ],
+      "interaction": [],
       "modality": [
-        "force_torque",
         "language",
         "rgb"
       ]
@@ -32425,11 +32418,9 @@
         "arm"
       ],
       "interaction": [
-        "contact_rich",
         "grasping"
       ],
       "modality": [
-        "force_torque",
         "language"
       ]
     },
@@ -33402,11 +33393,9 @@
         "mobile"
       ],
       "interaction": [
-        "contact_rich",
         "navigation"
       ],
       "modality": [
-        "force_torque",
         "language",
         "rgb"
       ]
@@ -36026,11 +36015,8 @@
         "real_robot"
       ],
       "embodiment": [],
-      "interaction": [
-        "contact_rich"
-      ],
+      "interaction": [],
       "modality": [
-        "force_torque",
         "language",
         "rgb"
       ]
@@ -37003,11 +36989,9 @@
         "mobile"
       ],
       "interaction": [
-        "contact_rich",
         "navigation"
       ],
       "modality": [
-        "force_torque",
         "language",
         "rgb"
       ]
@@ -38524,11 +38508,9 @@
         "arm"
       ],
       "interaction": [
-        "contact_rich",
         "grasping"
       ],
       "modality": [
-        "force_torque",
         "language"
       ]
     },
@@ -39596,11 +39578,8 @@
       ],
       "setting": [],
       "embodiment": [],
-      "interaction": [
-        "contact_rich"
-      ],
+      "interaction": [],
       "modality": [
-        "force_torque",
         "language",
         "rgb"
       ]
@@ -40104,12 +40083,9 @@
         "mobile"
       ],
       "interaction": [
-        "contact_rich",
         "navigation"
       ],
-      "modality": [
-        "force_torque"
-      ]
+      "modality": []
     },
     "facet_provenance": "curation taxonomy cue; exact task/evaluation role remains in paper notes.",
     "evaluation_profile": {
@@ -40364,11 +40340,9 @@
         "arm"
       ],
       "interaction": [
-        "contact_rich",
         "grasping"
       ],
       "modality": [
-        "force_torque",
         "language",
         "rgb"
       ]
@@ -43462,11 +43436,9 @@
         "arm"
       ],
       "interaction": [
-        "contact_rich",
         "grasping"
       ],
       "modality": [
-        "force_torque",
         "language",
         "point_cloud"
       ]
@@ -47159,11 +47131,9 @@
         "arm"
       ],
       "interaction": [
-        "contact_rich",
         "grasping"
       ],
       "modality": [
-        "force_torque",
         "language",
         "rgb"
       ]
@@ -47412,11 +47382,8 @@
       ],
       "setting": [],
       "embodiment": [],
-      "interaction": [
-        "contact_rich"
-      ],
+      "interaction": [],
       "modality": [
-        "force_torque",
         "language",
         "rgb"
       ]
@@ -52999,7 +52966,7 @@
     "folder": "2024/ECCV/2024_ECCV_BlenderAlchemy-Editing-3D-Graphics-with-Vision-Language-Mo",
     "pdf": "https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/12578.pdf",
     "page": "https://www.ecva.net/papers/eccv_2024/papers_ECCV/html/12578_ECCV_2024_paper.php",
-    "project": "not identified",
+    "project": "https://ianhuang0630.github.io/BlenderAlchemyWeb/",
     "venue_as_recorded": "ECCV",
     "venue_canonical": "ECCV",
     "identifiers": {},
@@ -53024,11 +52991,21 @@
         "url": "https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/12578.pdf",
         "kind": "publisher_or_project"
       },
-      "project": null,
-      "code": null
+      "project": {
+        "url": "https://ianhuang0630.github.io/BlenderAlchemyWeb/",
+        "kind": "author_project",
+        "scope": "project_landing",
+        "verified_on": "2026-11-20"
+      },
+      "code": {
+        "url": "https://github.com/ianhuang0630/BlenderAlchemyOfficial",
+        "kind": "official_code",
+        "scope": "project_landing",
+        "verified_on": "2026-11-20"
+      }
     },
     "artifacts": {
-      "code_status": "not_identified",
+      "code_status": "released",
       "data_status": "not_identified",
       "local_pdf_cache": false
     },
@@ -53151,9 +53128,10 @@
       "profile_version": "1.0",
       "status": "metadata_audited",
       "code": {
-        "status": "not_identified",
-        "source": null,
-        "evidence": "not_identified"
+        "status": "released",
+        "source": "https://raw.githubusercontent.com/ianhuang0630/BlenderAlchemyOfficial/4444411592150a72d01d55ef84b1ac844b0b2ad0/refinement_process.py",
+        "verified_on": "2026-11-20",
+        "evidence": "공식 구현 파일 refinement_process.py의 내용을 확인했다."
       },
       "data": {
         "status": "not_identified",
@@ -53176,7 +53154,7 @@
         "status": "reported",
         "evidence": "04_evaluation.md trial/statistics cue"
       },
-      "reviewed_on": "2026-09-04",
+      "reviewed_on": "2026-11-20",
       "source_note": "2024/ECCV/2024_ECCV_BlenderAlchemy-Editing-3D-Graphics-with-Vision-Language-Mo/04_evaluation.md",
       "basis": "manifest artifact links plus full-text evaluation/method note cues; availability is not a claim of reproducible execution unless an explicit source or experiment check exists."
     },
@@ -64342,9 +64320,9 @@
         }
       },
       "authors_verification": {
-        "source": "https://arxiv.org/abs/2409.12514",
+        "source": "https://api.crossref.org/works/10.1109/LRA.2025.3544909",
         "verified_on": "2026-11-20",
-        "basis": "논문 표제면 또는 출판사 서지에 실린 순서"
+        "basis": "IEEE 등록 서지와 채택 후 저자 PDF 1쪽 모두 다섯 번째 저자를 Zhibin Tang으로 표기한다."
       }
     },
     "paper_id": "pr-0268",
@@ -64501,6 +64479,7 @@
       "Yichen Zhu",
       "Jinming Li",
       "Minjie Zhu",
+      "Zhibin Tang",
       "Kun Wu",
       "Zhiyuan Xu",
       "Ning Liu",
@@ -65310,11 +65289,8 @@
       ],
       "setting": [],
       "embodiment": [],
-      "interaction": [
-        "contact_rich"
-      ],
+      "interaction": [],
       "modality": [
-        "force_torque",
         "language",
         "rgb"
       ]
@@ -66965,11 +66941,9 @@
         "mobile"
       ],
       "interaction": [
-        "contact_rich",
         "navigation"
       ],
       "modality": [
-        "force_torque",
         "language",
         "rgb"
       ]
@@ -67234,11 +67208,9 @@
         "legged"
       ],
       "interaction": [
-        "contact_rich",
         "locomotion"
       ],
       "modality": [
-        "force_torque",
         "language",
         "rgb"
       ]
@@ -69755,9 +69727,9 @@
         }
       },
       "authors_verification": {
-        "source": "https://arxiv.org/abs/2606.20424",
+        "source": "https://2026.ieee-iros.org/program/paper-index/",
         "verified_on": "2026-11-20",
-        "basis": "논문 표제면 또는 출판사 서지에 실린 순서"
+        "basis": "IROS 논문 번호 3918의 저자 명단(au)에는 프리프린트에 없는 Man He가 여섯 번째로 기재됐다."
       }
     },
     "paper_id": "pr-0291",
@@ -69861,6 +69833,7 @@
       "Jiaming Xu",
       "Tianyong Ye",
       "Tao Yu",
+      "Man He",
       "Yukang Cui"
     ],
     "aliases": [
@@ -75645,8 +75618,10 @@
         "evidence": "이전 자동 추출값에 논문별 배포 파일이나 저자의 배포 경로가 기록되지 않았다. 해당 버전의 공개 여부는 미확인."
       },
       "checkpoint": {
-        "status": "not_recorded",
-        "evidence": "no explicit checkpoint availability cue"
+        "status": "reported",
+        "source": "https://api.github.com/repos/cwc1260/HandDiff/git/trees/f7fb3e813a3bcfb06b902e697de58c7ef7bcc43e?recursive=1",
+        "verified_on": "2026-11-20",
+        "evidence": "NYU 실험 모델 best_model.pth의 분할 압축 파일 z01·z02·zip 세 개와 각 크기를 저자 트리에서 확인했다."
       },
       "configuration": {
         "status": "reported",
@@ -114351,9 +114326,9 @@
         }
       },
       "authors_verification": {
-        "source": "https://api.crossref.org/works/10.1109/ISMAR.2011.6092378",
+        "source": "https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/ismar2011.pdf",
         "verified_on": "2026-11-20",
-        "basis": "논문 표제면 또는 출판사 서지에 실린 순서"
+        "basis": "ISMAR 원문 1쪽의 두 줄 저자 배열을 읽기 순서대로 옮기고 Pushmeet Kohli의 철자를 확인했다."
       }
     },
     "paper_id": "pr-0489",
@@ -114456,15 +114431,15 @@
     },
     "authors": [
       "Richard A. Newcombe",
-      "Andrew Fitzgibbon",
       "Shahram Izadi",
       "Otmar Hilliges",
       "David Molyneaux",
       "David Kim",
       "Andrew J. Davison",
-      "Pushmeet Kohi",
+      "Pushmeet Kohli",
       "Jamie Shotton",
-      "Steve Hodges"
+      "Steve Hodges",
+      "Andrew Fitzgibbon"
     ]
   },
   {
@@ -122226,12 +122201,8 @@
       ],
       "setting": [],
       "embodiment": [],
-      "interaction": [
-        "contact_rich"
-      ],
-      "modality": [
-        "force_torque"
-      ]
+      "interaction": [],
+      "modality": []
     },
     "facet_provenance": "curation taxonomy cue; exact task/evaluation role remains in paper notes.",
     "evaluation_profile": {
@@ -122464,12 +122435,8 @@
       ],
       "setting": [],
       "embodiment": [],
-      "interaction": [
-        "contact_rich"
-      ],
-      "modality": [
-        "force_torque"
-      ]
+      "interaction": [],
+      "modality": []
     },
     "facet_provenance": "curation taxonomy cue; exact task/evaluation role remains in paper notes.",
     "evaluation_profile": {
@@ -123908,8 +123875,10 @@
         "evidence": "existing manifest artifact status preserved"
       },
       "checkpoint": {
-        "status": "not_recorded",
-        "evidence": "no explicit checkpoint availability cue"
+        "status": "reported",
+        "source": "https://dl.fbaipublicfiles.com/mae/pretrain/mae_pretrain_vit_base.pth",
+        "verified_on": "2026-11-20",
+        "evidence": "저자 배포표에 있는 사전학습 ViT-Base 가중치 파일에 접근을 확인했다."
       },
       "configuration": {
         "status": "reported",
@@ -123923,7 +123892,7 @@
         "status": "reported",
         "evidence": "04_evaluation.md trial/statistics cue"
       },
-      "reviewed_on": "2026-09-04",
+      "reviewed_on": "2026-11-20",
       "source_note": "2022/CVPR/2022_CVPR_Masked-Autoencoders-Are-Scalable-Vision-Learners/04_evaluation.md",
       "basis": "manifest artifact links plus full-text evaluation/method note cues; availability is not a claim of reproducible execution unless an explicit source or experiment check exists."
     },
@@ -131437,11 +131406,9 @@
         "arm"
       ],
       "interaction": [
-        "contact_rich",
         "grasping"
       ],
       "modality": [
-        "force_torque",
         "rgb"
       ]
     },
@@ -131909,12 +131876,9 @@
       ],
       "embodiment": [],
       "interaction": [
-        "contact_rich",
         "locomotion"
       ],
-      "modality": [
-        "force_torque"
-      ]
+      "modality": []
     },
     "facet_provenance": "curation taxonomy cue; exact task/evaluation role remains in paper notes.",
     "evaluation_profile": {
@@ -133131,13 +133095,11 @@
         "mobile"
       ],
       "interaction": [
-        "contact_rich",
         "grasping",
         "locomotion",
         "whole_body"
       ],
       "modality": [
-        "force_torque",
         "rgb"
       ]
     },
@@ -134346,14 +134308,11 @@
         "mobile"
       ],
       "interaction": [
-        "contact_rich",
         "grasping",
         "locomotion",
         "whole_body"
       ],
-      "modality": [
-        "force_torque"
-      ]
+      "modality": []
     },
     "facet_provenance": "curation taxonomy cue; exact task/evaluation role remains in paper notes.",
     "evaluation_profile": {
@@ -134586,13 +134545,11 @@
         "mobile"
       ],
       "interaction": [
-        "contact_rich",
         "grasping",
         "locomotion",
         "whole_body"
       ],
       "modality": [
-        "force_torque",
         "rgb"
       ]
     },
@@ -135324,13 +135281,10 @@
         "arm"
       ],
       "interaction": [
-        "contact_rich",
         "deformable",
         "grasping"
       ],
-      "modality": [
-        "force_torque"
-      ]
+      "modality": []
     },
     "facet_provenance": "curation taxonomy cue; exact task/evaluation role remains in paper notes.",
     "evaluation_profile": {
@@ -136342,12 +136296,9 @@
         "arm"
       ],
       "interaction": [
-        "contact_rich",
         "grasping"
       ],
-      "modality": [
-        "force_torque"
-      ]
+      "modality": []
     },
     "facet_provenance": "curation taxonomy cue; exact task/evaluation role remains in paper notes.",
     "evaluation_profile": {
@@ -139165,12 +139116,8 @@
       "embodiment": [
         "humanoid"
       ],
-      "interaction": [
-        "contact_rich"
-      ],
-      "modality": [
-        "force_torque"
-      ]
+      "interaction": [],
+      "modality": []
     },
     "facet_provenance": "curation taxonomy cue; exact task/evaluation role remains in paper notes.",
     "evaluation_profile": {
@@ -139423,12 +139370,9 @@
         "humanoid"
       ],
       "interaction": [
-        "contact_rich",
         "locomotion"
       ],
-      "modality": [
-        "force_torque"
-      ]
+      "modality": []
     },
     "facet_provenance": "curation taxonomy cue; exact task/evaluation role remains in paper notes.",
     "evaluation_profile": {
@@ -139861,11 +139805,9 @@
         "humanoid"
       ],
       "interaction": [
-        "contact_rich",
         "locomotion"
       ],
       "modality": [
-        "force_torque",
         "proprioception"
       ]
     },
@@ -141017,9 +140959,7 @@
         "locomotion",
         "whole_body"
       ],
-      "modality": [
-        "force_torque"
-      ]
+      "modality": []
     },
     "facet_provenance": "curation taxonomy cue; exact task/evaluation role remains in paper notes.",
     "evaluation_profile": {
@@ -142205,14 +142145,11 @@
         "mobile"
       ],
       "interaction": [
-        "contact_rich",
         "grasping",
         "locomotion",
         "whole_body"
       ],
-      "modality": [
-        "force_torque"
-      ]
+      "modality": []
     },
     "facet_provenance": "curation taxonomy cue; exact task/evaluation role remains in paper notes.",
     "evaluation_profile": {
@@ -143839,12 +143776,8 @@
       ],
       "setting": [],
       "embodiment": [],
-      "interaction": [
-        "contact_rich"
-      ],
-      "modality": [
-        "force_torque"
-      ]
+      "interaction": [],
+      "modality": []
     },
     "facet_provenance": "curation taxonomy cue; exact task/evaluation role remains in paper notes.",
     "evaluation_profile": {
@@ -144064,12 +143997,8 @@
       ],
       "setting": [],
       "embodiment": [],
-      "interaction": [
-        "contact_rich"
-      ],
-      "modality": [
-        "force_torque"
-      ]
+      "interaction": [],
+      "modality": []
     },
     "facet_provenance": "curation taxonomy cue; exact task/evaluation role remains in paper notes.",
     "evaluation_profile": {
@@ -144286,12 +144215,8 @@
       ],
       "setting": [],
       "embodiment": [],
-      "interaction": [
-        "contact_rich"
-      ],
-      "modality": [
-        "force_torque"
-      ]
+      "interaction": [],
+      "modality": []
     },
     "facet_provenance": "curation taxonomy cue; exact task/evaluation role remains in paper notes.",
     "evaluation_profile": {
@@ -144547,12 +144472,8 @@
       ],
       "setting": [],
       "embodiment": [],
-      "interaction": [
-        "contact_rich"
-      ],
-      "modality": [
-        "force_torque"
-      ]
+      "interaction": [],
+      "modality": []
     },
     "facet_provenance": "curation taxonomy cue; exact task/evaluation role remains in paper notes.",
     "evaluation_profile": {
@@ -144767,12 +144688,8 @@
       ],
       "setting": [],
       "embodiment": [],
-      "interaction": [
-        "contact_rich"
-      ],
-      "modality": [
-        "force_torque"
-      ]
+      "interaction": [],
+      "modality": []
     },
     "facet_provenance": "curation taxonomy cue; exact task/evaluation role remains in paper notes.",
     "evaluation_profile": {
@@ -145028,12 +144945,8 @@
       ],
       "setting": [],
       "embodiment": [],
-      "interaction": [
-        "contact_rich"
-      ],
-      "modality": [
-        "force_torque"
-      ]
+      "interaction": [],
+      "modality": []
     },
     "facet_provenance": "curation taxonomy cue; exact task/evaluation role remains in paper notes.",
     "evaluation_profile": {
@@ -145248,12 +145161,8 @@
       ],
       "setting": [],
       "embodiment": [],
-      "interaction": [
-        "contact_rich"
-      ],
-      "modality": [
-        "force_torque"
-      ]
+      "interaction": [],
+      "modality": []
     },
     "facet_provenance": "curation taxonomy cue; exact task/evaluation role remains in paper notes.",
     "evaluation_profile": {
@@ -145505,12 +145414,8 @@
       ],
       "setting": [],
       "embodiment": [],
-      "interaction": [
-        "contact_rich"
-      ],
-      "modality": [
-        "force_torque"
-      ]
+      "interaction": [],
+      "modality": []
     },
     "facet_provenance": "curation taxonomy cue; exact task/evaluation role remains in paper notes.",
     "evaluation_profile": {
@@ -145740,12 +145645,8 @@
       ],
       "setting": [],
       "embodiment": [],
-      "interaction": [
-        "contact_rich"
-      ],
-      "modality": [
-        "force_torque"
-      ]
+      "interaction": [],
+      "modality": []
     },
     "facet_provenance": "curation taxonomy cue; exact task/evaluation role remains in paper notes.",
     "evaluation_profile": {
@@ -145987,12 +145888,8 @@
       ],
       "setting": [],
       "embodiment": [],
-      "interaction": [
-        "contact_rich"
-      ],
-      "modality": [
-        "force_torque"
-      ]
+      "interaction": [],
+      "modality": []
     },
     "facet_provenance": "curation taxonomy cue; exact task/evaluation role remains in paper notes.",
     "evaluation_profile": {
@@ -146218,12 +146115,9 @@
         "arm"
       ],
       "interaction": [
-        "contact_rich",
         "grasping"
       ],
-      "modality": [
-        "force_torque"
-      ]
+      "modality": []
     },
     "facet_provenance": "curation taxonomy cue; exact task/evaluation role remains in paper notes.",
     "evaluation_profile": {
@@ -146475,12 +146369,8 @@
       ],
       "setting": [],
       "embodiment": [],
-      "interaction": [
-        "contact_rich"
-      ],
-      "modality": [
-        "force_torque"
-      ]
+      "interaction": [],
+      "modality": []
     },
     "facet_provenance": "curation taxonomy cue; exact task/evaluation role remains in paper notes.",
     "evaluation_profile": {
@@ -146713,12 +146603,8 @@
         "real_robot"
       ],
       "embodiment": [],
-      "interaction": [
-        "contact_rich"
-      ],
-      "modality": [
-        "force_torque"
-      ]
+      "interaction": [],
+      "modality": []
     },
     "facet_provenance": "curation taxonomy cue; exact task/evaluation role remains in paper notes.",
     "evaluation_profile": {
@@ -146998,12 +146884,8 @@
       ],
       "setting": [],
       "embodiment": [],
-      "interaction": [
-        "contact_rich"
-      ],
-      "modality": [
-        "force_torque"
-      ]
+      "interaction": [],
+      "modality": []
     },
     "facet_provenance": "curation taxonomy cue; exact task/evaluation role remains in paper notes.",
     "evaluation_profile": {
@@ -147255,12 +147137,8 @@
       ],
       "setting": [],
       "embodiment": [],
-      "interaction": [
-        "contact_rich"
-      ],
-      "modality": [
-        "force_torque"
-      ]
+      "interaction": [],
+      "modality": []
     },
     "facet_provenance": "curation taxonomy cue; exact task/evaluation role remains in paper notes.",
     "evaluation_profile": {
@@ -147487,12 +147365,8 @@
       ],
       "setting": [],
       "embodiment": [],
-      "interaction": [
-        "contact_rich"
-      ],
-      "modality": [
-        "force_torque"
-      ]
+      "interaction": [],
+      "modality": []
     },
     "facet_provenance": "curation taxonomy cue; exact task/evaluation role remains in paper notes.",
     "evaluation_profile": {
@@ -148009,12 +147883,8 @@
       ],
       "setting": [],
       "embodiment": [],
-      "interaction": [
-        "contact_rich"
-      ],
-      "modality": [
-        "force_torque"
-      ]
+      "interaction": [],
+      "modality": []
     },
     "facet_provenance": "curation taxonomy cue; exact task/evaluation role remains in paper notes.",
     "evaluation_profile": {
@@ -148225,12 +148095,9 @@
         "dexterous_hand"
       ],
       "interaction": [
-        "contact_rich",
         "grasping"
       ],
-      "modality": [
-        "force_torque"
-      ]
+      "modality": []
     },
     "facet_provenance": "curation taxonomy cue; exact task/evaluation role remains in paper notes.",
     "evaluation_profile": {
@@ -148693,12 +148560,9 @@
         "arm"
       ],
       "interaction": [
-        "contact_rich",
         "grasping"
       ],
-      "modality": [
-        "force_torque"
-      ]
+      "modality": []
     },
     "facet_provenance": "curation taxonomy cue; exact task/evaluation role remains in paper notes.",
     "evaluation_profile": {
@@ -152790,14 +152654,11 @@
         "mobile"
       ],
       "interaction": [
-        "contact_rich",
         "grasping",
         "locomotion",
         "whole_body"
       ],
-      "modality": [
-        "force_torque"
-      ]
+      "modality": []
     },
     "facet_provenance": "curation taxonomy cue; exact task/evaluation role remains in paper notes.",
     "evaluation_profile": {
@@ -153006,14 +152867,11 @@
         "mobile"
       ],
       "interaction": [
-        "contact_rich",
         "grasping",
         "locomotion",
         "whole_body"
       ],
-      "modality": [
-        "force_torque"
-      ]
+      "modality": []
     },
     "facet_provenance": "curation taxonomy cue; exact task/evaluation role remains in paper notes.",
     "evaluation_profile": {
@@ -153231,14 +153089,11 @@
         "mobile"
       ],
       "interaction": [
-        "contact_rich",
         "grasping",
         "locomotion",
         "whole_body"
       ],
-      "modality": [
-        "force_torque"
-      ]
+      "modality": []
     },
     "facet_provenance": "curation taxonomy cue; exact task/evaluation role remains in paper notes.",
     "evaluation_profile": {
@@ -153746,14 +153601,11 @@
         "mobile"
       ],
       "interaction": [
-        "contact_rich",
         "grasping",
         "locomotion",
         "whole_body"
       ],
-      "modality": [
-        "force_torque"
-      ]
+      "modality": []
     },
     "facet_provenance": "curation taxonomy cue; exact task/evaluation role remains in paper notes.",
     "evaluation_profile": {
@@ -153965,14 +153817,11 @@
         "mobile"
       ],
       "interaction": [
-        "contact_rich",
         "grasping",
         "locomotion",
         "whole_body"
       ],
-      "modality": [
-        "force_torque"
-      ]
+      "modality": []
     },
     "facet_provenance": "curation taxonomy cue; exact task/evaluation role remains in paper notes.",
     "evaluation_profile": {
@@ -154190,14 +154039,11 @@
         "mobile"
       ],
       "interaction": [
-        "contact_rich",
         "grasping",
         "locomotion",
         "whole_body"
       ],
-      "modality": [
-        "force_torque"
-      ]
+      "modality": []
     },
     "facet_provenance": "curation taxonomy cue; exact task/evaluation role remains in paper notes.",
     "evaluation_profile": {
@@ -154424,14 +154270,11 @@
         "mobile"
       ],
       "interaction": [
-        "contact_rich",
         "grasping",
         "locomotion",
         "whole_body"
       ],
-      "modality": [
-        "force_torque"
-      ]
+      "modality": []
     },
     "facet_provenance": "curation taxonomy cue; exact task/evaluation role remains in paper notes.",
     "evaluation_profile": {
@@ -154845,14 +154688,11 @@
         "mobile"
       ],
       "interaction": [
-        "contact_rich",
         "grasping",
         "locomotion",
         "whole_body"
       ],
-      "modality": [
-        "force_torque"
-      ]
+      "modality": []
     },
     "facet_provenance": "curation taxonomy cue; exact task/evaluation role remains in paper notes.",
     "evaluation_profile": {
@@ -157974,12 +157814,8 @@
       ],
       "setting": [],
       "embodiment": [],
-      "interaction": [
-        "contact_rich"
-      ],
-      "modality": [
-        "force_torque"
-      ]
+      "interaction": [],
+      "modality": []
     },
     "facet_provenance": "curation taxonomy cue; exact task/evaluation role remains in paper notes.",
     "evaluation_profile": {
@@ -158189,12 +158025,8 @@
         "real_robot"
       ],
       "embodiment": [],
-      "interaction": [
-        "contact_rich"
-      ],
-      "modality": [
-        "force_torque"
-      ]
+      "interaction": [],
+      "modality": []
     },
     "facet_provenance": "curation taxonomy cue; exact task/evaluation role remains in paper notes.",
     "evaluation_profile": {
@@ -158431,12 +158263,8 @@
       ],
       "setting": [],
       "embodiment": [],
-      "interaction": [
-        "contact_rich"
-      ],
-      "modality": [
-        "force_torque"
-      ]
+      "interaction": [],
+      "modality": []
     },
     "facet_provenance": "curation taxonomy cue; exact task/evaluation role remains in paper notes.",
     "evaluation_profile": {
@@ -158902,12 +158730,8 @@
       ],
       "setting": [],
       "embodiment": [],
-      "interaction": [
-        "contact_rich"
-      ],
-      "modality": [
-        "force_torque"
-      ]
+      "interaction": [],
+      "modality": []
     },
     "facet_provenance": "curation taxonomy cue; exact task/evaluation role remains in paper notes.",
     "evaluation_profile": {
@@ -159154,12 +158978,8 @@
       ],
       "setting": [],
       "embodiment": [],
-      "interaction": [
-        "contact_rich"
-      ],
-      "modality": [
-        "force_torque"
-      ]
+      "interaction": [],
+      "modality": []
     },
     "facet_provenance": "curation taxonomy cue; exact task/evaluation role remains in paper notes.",
     "evaluation_profile": {
@@ -159388,12 +159208,8 @@
         "real_robot"
       ],
       "embodiment": [],
-      "interaction": [
-        "contact_rich"
-      ],
-      "modality": [
-        "force_torque"
-      ]
+      "interaction": [],
+      "modality": []
     },
     "facet_provenance": "curation taxonomy cue; exact task/evaluation role remains in paper notes.",
     "evaluation_profile": {
@@ -159610,12 +159426,8 @@
       ],
       "setting": [],
       "embodiment": [],
-      "interaction": [
-        "contact_rich"
-      ],
-      "modality": [
-        "force_torque"
-      ]
+      "interaction": [],
+      "modality": []
     },
     "facet_provenance": "curation taxonomy cue; exact task/evaluation role remains in paper notes.",
     "evaluation_profile": {
@@ -162908,12 +162720,8 @@
         "long_horizon"
       ],
       "embodiment": [],
-      "interaction": [
-        "contact_rich"
-      ],
-      "modality": [
-        "force_torque"
-      ]
+      "interaction": [],
+      "modality": []
     },
     "facet_provenance": "curation taxonomy cue; exact task/evaluation role remains in paper notes.",
     "evaluation_profile": {
@@ -172307,9 +172115,7 @@
         "contact_rich",
         "grasping"
       ],
-      "modality": [
-        "force_torque"
-      ]
+      "modality": []
     },
     "facet_provenance": "curation taxonomy cue; exact task/evaluation role remains in paper notes.",
     "evaluation_profile": {
@@ -172545,9 +172351,7 @@
         "contact_rich",
         "grasping"
       ],
-      "modality": [
-        "force_torque"
-      ]
+      "modality": []
     },
     "facet_provenance": "curation taxonomy cue; exact task/evaluation role remains in paper notes.",
     "evaluation_profile": {
@@ -172810,9 +172614,7 @@
         "deformable",
         "grasping"
       ],
-      "modality": [
-        "force_torque"
-      ]
+      "modality": []
     },
     "facet_provenance": "curation taxonomy cue; exact task/evaluation role remains in paper notes.",
     "evaluation_profile": {
@@ -174234,12 +174036,9 @@
         "dexterous_hand"
       ],
       "interaction": [
-        "contact_rich",
         "grasping"
       ],
-      "modality": [
-        "force_torque"
-      ]
+      "modality": []
     },
     "facet_provenance": "curation taxonomy cue; exact task/evaluation role remains in paper notes.",
     "evaluation_profile": {
@@ -176464,11 +176263,9 @@
         "arm"
       ],
       "interaction": [
-        "contact_rich",
         "grasping"
       ],
       "modality": [
-        "force_torque",
         "rgb"
       ]
     },
@@ -181492,7 +181289,7 @@
     "folder": "2025/CVPR/2025_CVPR_Dr.-Splat-Directly-Referring-3D-Gaussian-Splatting-via-Dir",
     "pdf": "https://openaccess.thecvf.com/content/CVPR2025/papers/Jun-Seong_Dr._Splat_Directly_Referring_3D_Gaussian_Splatting_via_Direct_Language_CVPR_2025_paper.pdf",
     "page": "https://openaccess.thecvf.com/content/CVPR2025/html/Jun-Seong_Dr._Splat_Directly_Referring_3D_Gaussian_Splatting_via_Direct_Language_CVPR_2025_paper.html",
-    "project": "not identified from primary page",
+    "project": "https://drsplat.github.io/",
     "venue_as_recorded": "CVPR 2025",
     "venue_canonical": "CVPR",
     "identifiers": {},
@@ -181517,11 +181314,21 @@
         "url": "https://openaccess.thecvf.com/content/CVPR2025/papers/Jun-Seong_Dr._Splat_Directly_Referring_3D_Gaussian_Splatting_via_Direct_Language_CVPR_2025_paper.pdf",
         "kind": "cvf"
       },
-      "project": null,
-      "code": null
+      "project": {
+        "url": "https://drsplat.github.io/",
+        "kind": "author_project",
+        "scope": "project_landing",
+        "verified_on": "2026-11-20"
+      },
+      "code": {
+        "url": "https://github.com/kaist-ami/Dr-Splat",
+        "kind": "official_code",
+        "scope": "project_landing",
+        "verified_on": "2026-11-20"
+      }
     },
     "artifacts": {
-      "code_status": "not_identified",
+      "code_status": "released",
       "data_status": "not_identified",
       "local_pdf_cache": false
     },
@@ -181644,9 +181451,10 @@
       "profile_version": "1.0",
       "status": "metadata_audited",
       "code": {
-        "status": "not_identified",
-        "source": null,
-        "evidence": "not_identified"
+        "status": "released",
+        "source": "https://raw.githubusercontent.com/kaist-ami/Dr-Splat/efc48b59bfbf26b98ba429f36e0ebcc308b8812a/labeling_gaussians.py",
+        "verified_on": "2026-11-20",
+        "evidence": "공식 구현 파일 labeling_gaussians.py의 내용을 확인했다."
       },
       "data": {
         "status": "not_identified",
@@ -181669,7 +181477,7 @@
         "status": "reported",
         "evidence": "04_evaluation.md trial/statistics cue"
       },
-      "reviewed_on": "2026-09-04",
+      "reviewed_on": "2026-11-20",
       "source_note": "2025/CVPR/2025_CVPR_Dr.-Splat-Directly-Referring-3D-Gaussian-Splatting-via-Dir/04_evaluation.md",
       "basis": "manifest artifact links plus full-text evaluation/method note cues; availability is not a claim of reproducible execution unless an explicit source or experiment check exists."
     },
@@ -191786,9 +191594,7 @@
         "contact_rich",
         "grasping"
       ],
-      "modality": [
-        "force_torque"
-      ]
+      "modality": []
     },
     "facet_provenance": "curation taxonomy cue; exact task/evaluation role remains in paper notes.",
     "evaluation_profile": {
@@ -193927,12 +193733,8 @@
       ],
       "setting": [],
       "embodiment": [],
-      "interaction": [
-        "contact_rich"
-      ],
-      "modality": [
-        "force_torque"
-      ]
+      "interaction": [],
+      "modality": []
     },
     "facet_provenance": "curation taxonomy cue; exact task/evaluation role remains in paper notes.",
     "evaluation_profile": {
@@ -194573,12 +194375,8 @@
       ],
       "setting": [],
       "embodiment": [],
-      "interaction": [
-        "contact_rich"
-      ],
-      "modality": [
-        "force_torque"
-      ]
+      "interaction": [],
+      "modality": []
     },
     "facet_provenance": "curation taxonomy cue; exact task/evaluation role remains in paper notes.",
     "evaluation_profile": {
@@ -195042,13 +194840,9 @@
     },
     "paper_id": "pr-0835",
     "facets": {
-      "interaction": [
-        "contact_rich"
-      ],
+      "interaction": [],
       "embodiment": [],
-      "modality": [
-        "force_torque"
-      ],
+      "modality": [],
       "control_level": [
         "policy"
       ],
@@ -195258,12 +195052,8 @@
       ],
       "setting": [],
       "embodiment": [],
-      "interaction": [
-        "contact_rich"
-      ],
-      "modality": [
-        "force_torque"
-      ]
+      "interaction": [],
+      "modality": []
     },
     "facet_provenance": "curation taxonomy cue; exact task/evaluation role remains in paper notes.",
     "evaluation_profile": {
@@ -195468,12 +195258,8 @@
       ],
       "setting": [],
       "embodiment": [],
-      "interaction": [
-        "contact_rich"
-      ],
-      "modality": [
-        "force_torque"
-      ]
+      "interaction": [],
+      "modality": []
     },
     "facet_provenance": "curation taxonomy cue; exact task/evaluation role remains in paper notes.",
     "evaluation_profile": {
@@ -195689,12 +195475,8 @@
       ],
       "setting": [],
       "embodiment": [],
-      "interaction": [
-        "contact_rich"
-      ],
-      "modality": [
-        "force_torque"
-      ]
+      "interaction": [],
+      "modality": []
     },
     "facet_provenance": "curation taxonomy cue; exact task/evaluation role remains in paper notes.",
     "evaluation_profile": {
@@ -196805,9 +196587,9 @@
         "tracker_status_is_independent": true
       },
       "authors_verification": {
-        "source": "https://arxiv.org/abs/2303.18240",
+        "source": "https://proceedings.neurips.cc/paper_files/paper/2023/file/022ca1bed6b574b962c48a2856eb207b-Paper-Conference.pdf",
         "verified_on": "2026-11-20",
-        "basis": "논문 표제면 또는 출판사 서지에 실린 순서"
+        "basis": "NeurIPS 게재본 1쪽에서 Vincent-Pierre Berges와 Pieter Abbeel 사이 두 저자를 확인했다."
       }
     },
     "paper_id": "pr-0843",
@@ -196911,6 +196693,8 @@
       "Sneha Silwal",
       "Aryan Jain",
       "Vincent-Pierre Berges",
+      "Tingfan Wu",
+      "Jay Vakil",
       "Pieter Abbeel",
       "Jitendra Malik",
       "Dhruv Batra",
@@ -197073,12 +196857,9 @@
         "arm"
       ],
       "interaction": [
-        "contact_rich",
         "grasping"
       ],
-      "modality": [
-        "force_torque"
-      ]
+      "modality": []
     },
     "facet_provenance": "curation taxonomy cue; exact task/evaluation role remains in paper notes.",
     "evaluation_profile": {
@@ -198746,14 +198527,11 @@
         "mobile"
       ],
       "interaction": [
-        "contact_rich",
         "grasping",
         "locomotion",
         "whole_body"
       ],
-      "modality": [
-        "force_torque"
-      ]
+      "modality": []
     },
     "facet_provenance": "curation taxonomy cue; exact task/evaluation role remains in paper notes.",
     "evaluation_profile": {
@@ -199238,12 +199016,8 @@
       ],
       "setting": [],
       "embodiment": [],
-      "interaction": [
-        "contact_rich"
-      ],
-      "modality": [
-        "force_torque"
-      ]
+      "interaction": [],
+      "modality": []
     },
     "facet_provenance": "curation taxonomy cue; exact task/evaluation role remains in paper notes.",
     "evaluation_profile": {
@@ -199468,12 +199242,8 @@
       ],
       "setting": [],
       "embodiment": [],
-      "interaction": [
-        "contact_rich"
-      ],
-      "modality": [
-        "force_torque"
-      ]
+      "interaction": [],
+      "modality": []
     },
     "facet_provenance": "curation taxonomy cue; exact task/evaluation role remains in paper notes.",
     "evaluation_profile": {
@@ -199699,12 +199469,8 @@
       ],
       "setting": [],
       "embodiment": [],
-      "interaction": [
-        "contact_rich"
-      ],
-      "modality": [
-        "force_torque"
-      ]
+      "interaction": [],
+      "modality": []
     },
     "facet_provenance": "curation taxonomy cue; exact task/evaluation role remains in paper notes.",
     "evaluation_profile": {
@@ -199916,12 +199682,8 @@
       ],
       "setting": [],
       "embodiment": [],
-      "interaction": [
-        "contact_rich"
-      ],
-      "modality": [
-        "force_torque"
-      ]
+      "interaction": [],
+      "modality": []
     },
     "facet_provenance": "curation taxonomy cue; exact task/evaluation role remains in paper notes.",
     "evaluation_profile": {
@@ -201271,12 +201033,8 @@
         "simulation"
       ],
       "embodiment": [],
-      "interaction": [
-        "contact_rich"
-      ],
-      "modality": [
-        "force_torque"
-      ]
+      "interaction": [],
+      "modality": []
     },
     "facet_provenance": "curation taxonomy cue; exact task/evaluation role remains in paper notes.",
     "evaluation_profile": {
@@ -202147,11 +201905,8 @@
       ],
       "setting": [],
       "embodiment": [],
-      "interaction": [
-        "contact_rich"
-      ],
+      "interaction": [],
       "modality": [
-        "force_torque",
         "language"
       ]
     },
@@ -202374,11 +202129,8 @@
         "sim_to_real"
       ],
       "embodiment": [],
-      "interaction": [
-        "contact_rich"
-      ],
+      "interaction": [],
       "modality": [
-        "force_torque",
         "language"
       ]
     },
@@ -202603,7 +202355,7 @@
       "authors_verification": {
         "source": "https://arxiv.org/abs/2210.13702",
         "verified_on": "2026-11-20",
-        "basis": "논문 표제면 또는 출판사 서지에 실린 순서"
+        "basis": "연구실·프리프린트는 14명이며 IEEE가 예치한 DOI 서지는 11명이다. 원장은 저자판의 14명을 보존하고 ICRA 최종 표제면의 인원은 미확인으로 둔다."
       }
     },
     "paper_id": "pr-0866",
@@ -202624,9 +202376,7 @@
         "contact_rich",
         "grasping"
       ],
-      "modality": [
-        "force_torque"
-      ]
+      "modality": []
     },
     "facet_provenance": "curation taxonomy cue; exact task/evaluation role remains in paper notes.",
     "evaluation_profile": {
@@ -203124,14 +202874,11 @@
         "mobile"
       ],
       "interaction": [
-        "contact_rich",
         "grasping",
         "locomotion",
         "whole_body"
       ],
-      "modality": [
-        "force_torque"
-      ]
+      "modality": []
     },
     "facet_provenance": "curation taxonomy cue; exact task/evaluation role remains in paper notes.",
     "evaluation_profile": {
@@ -204739,12 +204486,8 @@
         "real_robot"
       ],
       "embodiment": [],
-      "interaction": [
-        "contact_rich"
-      ],
-      "modality": [
-        "force_torque"
-      ]
+      "interaction": [],
+      "modality": []
     },
     "facet_provenance": "curation taxonomy cue; exact task/evaluation role remains in paper notes.",
     "evaluation_profile": {
@@ -204988,12 +204731,8 @@
         "real_robot"
       ],
       "embodiment": [],
-      "interaction": [
-        "contact_rich"
-      ],
-      "modality": [
-        "force_torque"
-      ]
+      "interaction": [],
+      "modality": []
     },
     "facet_provenance": "curation taxonomy cue; exact task/evaluation role remains in paper notes.",
     "evaluation_profile": {
@@ -207315,11 +207054,9 @@
         "arm"
       ],
       "interaction": [
-        "contact_rich",
         "grasping"
       ],
       "modality": [
-        "force_torque",
         "language"
       ]
     },
@@ -207568,12 +207305,9 @@
         "arm"
       ],
       "interaction": [
-        "contact_rich",
         "grasping"
       ],
-      "modality": [
-        "force_torque"
-      ]
+      "modality": []
     },
     "facet_provenance": "curation taxonomy cue; exact task/evaluation role remains in paper notes.",
     "evaluation_profile": {
@@ -213944,7 +213678,7 @@
         "status": "released",
         "source": "https://huggingface.co/datasets/agibot-world/AgiBotWorld-Alpha/blob/128665c9e0244c45d1cbe5c13f5a4706afd24f27/observations/327/648642-685032.tar",
         "verified_on": "2026-11-20",
-        "evidence": "AgiBot World Alpha 의 로봇 관측·작업 자료. 다른 릴리스는 이 확인 범위에 포함되지 않는다. observations/327/648642-685032.tar (저자 배포 목록의 파일 크기·revision 확인)."
+        "evidence": "AgiBot World Alpha의 해당 리비전 파일 목록에서 observations/327/648642-685032.tar를 확인했다. 파일 접근에는 Hugging Face의 이용 조건 동의가 필요하다. 다른 릴리스는 미확인이다."
       },
       "checkpoint": {
         "status": "not_recorded",
@@ -214199,12 +213933,9 @@
         "dexterous_hand"
       ],
       "interaction": [
-        "contact_rich",
         "grasping"
       ],
-      "modality": [
-        "force_torque"
-      ]
+      "modality": []
     },
     "facet_provenance": "curation taxonomy cue; exact task/evaluation role remains in paper notes.",
     "evaluation_profile": {
@@ -217083,12 +216814,8 @@
       ],
       "setting": [],
       "embodiment": [],
-      "interaction": [
-        "contact_rich"
-      ],
-      "modality": [
-        "force_torque"
-      ]
+      "interaction": [],
+      "modality": []
     },
     "facet_provenance": "curation taxonomy cue; exact task/evaluation role remains in paper notes.",
     "evaluation_profile": {
@@ -239206,12 +238933,10 @@
         "state_estimation"
       ],
       "modality": [
-        "force_torque",
         "language",
         "rgb"
       ],
       "interaction": [
-        "contact_rich",
         "grasping"
       ]
     }
@@ -243979,9 +243704,9 @@
         "05_insights.md": "ABSTRACT_CHECKED"
       },
       "authors_verification": {
-        "source": "https://api.crossref.org/works/10.1109/lra.2026.3741771",
+        "source": "https://arxiv.org/pdf/2605.27759",
         "verified_on": "2026-11-20",
-        "basis": "논문 표제면 또는 출판사 서지에 실린 순서"
+        "basis": "RA-L 채택 원고 1쪽과 IEEE 서지의 가운데 이니셜을 보완했다."
       },
       "identifier_status": "identified",
       "primary_source_scope": "paper_specific"
@@ -244065,7 +243790,7 @@
       "Hojung Lim",
       "Alina Du",
       "Jesse Thomason",
-      "Gaurav Sukhatme",
+      "Gaurav S. Sukhatme",
       "Ishika Singh"
     ]
   },
@@ -257820,12 +257545,9 @@
         "policy"
       ],
       "modality": [
-        "force_torque",
         "language"
       ],
-      "interaction": [
-        "contact_rich"
-      ]
+      "interaction": []
     }
   },
   {

@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-VLA and generalist robot policies의 mobile_manipulation 문제를 이해하기 위해 읽는다. 본문은 However, these prior works typically restrict their investigations to sets of similar embodiments - e.g., arms with parallel jaw grippers.를 문제로 두고, While the particular training methodology and model architecture are based on prior techniques, the empirical findings are a novel contribution of our work, demonstrating for the first time that navigation data can ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — However, these prior works typically restrict their investigations to sets of similar embodiments - e.g., arms with parallel jaw grippers.
+
+방법 관련 발췌 — While the particular training methodology and model architecture are based on prior techniques, the empirical findings are a novel contribution of our work, demonstrating for the first time that navigation data can ...
 
 ## Problem and Motivation
 
@@ -83,7 +85,7 @@ VLA and generalist robot policies의 mobile_manipulation 문제를 이해하기 
 
 ## Why Read It
 
-VLA and generalist robot policies의 mobile_manipulation 문제를 이해하기 위해 읽는다. 본문은 However, these prior works typically restrict their investigations to sets of similar embodiments - e.g., arms with parallel jaw grippers.를 문제로 두고, While the particular training methodology and model architecture are based on prior techniques, the empirical findings are a novel contribution of our work, demonstrating for the first time that navigation data can ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 3 (III. PRELIMINARIES), p. 5 (IV. HETEROGENEOUS CROSS-EMBODIMENT LEARNING) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 1 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 3 (III. PRELIMINARIES), p. 5 (IV. HETEROGENEOUS CROSS-EMBODIMENT LEARNING)이다.
 
 ## Semantic QA — PDF body cross-check
 

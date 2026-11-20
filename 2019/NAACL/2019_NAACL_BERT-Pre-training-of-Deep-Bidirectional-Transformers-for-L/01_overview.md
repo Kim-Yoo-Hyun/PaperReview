@@ -76,4 +76,4 @@ BERT는 문장의 좌우 문맥을 함께 사용하는 언어 표현을 사전�
 
 ## Why Read It
 
-Foundations: Vision and Language Models의 upstream 문제를 이해하기 위해 읽는다. 본문은 The major limitation is that standard language models are unidirectional, and this limits the choice of architectures that can be used during pre-training.를 문제로 두고, Unlike left-toright language model pre-training, the MLM objective enables the representation to fuse the left and the right context, which allows us to pretrain a deep bidirectional Transformer.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1 Introduction), p. 1 (1 Introduction), p. 1 (Abstract), p. 2 (1 Introduction), p. 2 (1 Introduction), p. 5 (C T1) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 1 (1 Introduction), p. 1 (Abstract), p. 2 (1 Introduction), p. 5 (C T1)이다.

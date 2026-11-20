@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-Foundations: Vision and Language Models의 upstream 문제를 이해하기 위해 읽는다. 본문은 Both of the above ideas, however, have key limitations.를 문제로 두고, We show that chain-ofthought prompting not only enables language models to perform symbolic reasoning tasks that are challenging in the standard prompting setting, but also facilitates length generalization to inference-time inputs long ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — Both of the above ideas, however, have key limitations.
+
+방법 관련 발췌 — We show that chain-ofthought prompting not only enables language models to perform symbolic reasoning tasks that are challenging in the standard prompting setting, but also facilitates length generalization to inference-time inputs long ...
 
 ## Problem and Motivation
 
@@ -86,4 +88,4 @@ Foundations: Vision and Language Models의 upstream 문제를 이해하기 위�
 
 ## Why Read It
 
-Foundations: Vision and Language Models의 upstream 문제를 이해하기 위해 읽는다. 본문은 Both of the above ideas, however, have key limitations.를 문제로 두고, We show that chain-ofthought prompting not only enables language models to perform symbolic reasoning tasks that are challenging in the standard prompting setting, but also facilitates length generalization to inference-time inputs long ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (1 Introduction), p. 2 (1 Introduction), p. 5 (3.2 Results), p. 8 (3.2 Results), p. 5 (3.2 Results), p. 4 (1 Introduction) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 2 (1 Introduction), p. 5 (3.2 Results), p. 8 (3.2 Results), p. 4 (1 Introduction)이다.

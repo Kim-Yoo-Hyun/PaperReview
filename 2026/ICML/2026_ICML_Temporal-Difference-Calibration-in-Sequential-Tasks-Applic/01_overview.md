@@ -20,7 +20,7 @@
 
 ## Why This Paper Is Here
 
-World models, safety, uncertainty, and recovery의 safety 문제를 이해하기 위해 읽는다. 본문은 However, neural networks are commonly used in sequential decision problems as well, for example, in reinforcement and imitation learning (Black et al., 2024; Guo et al., 2025).를 문제로 두고, Before that, in Algorithm 1, we provide a brief summary of our method, which we call TemporalDifference Q-based Calibration, TDQC for short.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+에피소드 종료 시에만 판정되는 성공 여부를 바탕으로 중간 시점의 성공 확률을 보정한다.
 
 ## Problem and Motivation
 
@@ -54,16 +54,10 @@ World models, safety, uncertainty, and recovery의 safety 문제를 이해하기
 
 ## Main Claims and Actual Contribution
 
-- **p. 6 / 5. Method - extractive body cue:** Before that, in Algorithm 1, we provide a brief summary of our method, which we call TemporalDifference Q-based Calibration, TDQC for short.
-- **p. 1 / 1. Introduction - extractive body cue:** This is a desirable property as it enables downstream safety mechanisms that depend on the model's confidence.
-- **p. 2 / 1. Introduction - extractive body cue:** This is essential to measure calibration of black-box models, for which the hidden state is often not accessible from APIs; • We show that the ...
-- **p. 2 / 1. Introduction - extractive body cue:** This fundamental link allows us to bridge algorithmic insights from RL to sequential calibration, such as the ubiquitous Temporal-Difference (TD) loss (Sutton & Barto, 2018; ...
-- **p. 5 / 5. Method - extractive body cue:** Value estimation is a well-studied problem in RL (Mannor et al., 2026) and allows us to add the family of value estimation algorithms to the ...
-- **p. 23 / Figure/Table caption - extractive body cue:** Figure 5. Extended Analysis of Guided Action Search and TDQC Efficiency. The results demonstrate that RNN-TDQC provides the highest success rates, while the Threshold 0.35 ...
-- **p. 2 / Figure/Table caption - extractive body cue:** Figure 1. Sequential Brier scores across benchmarks. Sequential Brier score (lower is better) on an unseen validation set averaged over 21 random seeds (train/validation task ...
-- **p. 10 / Figure/Table caption - extractive body cue:** Figure 4. Averaged success rates over additional simulation steps for action selection configurations. All experiments evalu- ate 3 unseen tasks from LIBERO-10 taken with OpenVLA, ...
+- 순차적 Brier 위험의 최적 예측과 정책 가치함수의 관계를 유도한다.
+- 시간차 학습을 이용해 부분 궤적으로부터 신뢰도를 보정하는 방법을 평가한다.
 
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+[검증한 원문](https://proceedings.mlr.press/v306/francis-meretzki26a.html)
 
 ## Evaluation Scope
 
@@ -87,7 +81,7 @@ World models, safety, uncertainty, and recovery의 safety 문제를 이해하기
 
 ## Why Read It
 
-World models, safety, uncertainty, and recovery의 safety 문제를 이해하기 위해 읽는다. 본문은 However, neural networks are commonly used in sequential decision problems as well, for example, in reinforcement and imitation learning (Black et al., 2024; Guo et al., 2025).를 문제로 두고, Before that, in Algorithm 1, we provide a brief summary of our method, which we call TemporalDifference Q-based Calibration, TDQC for short.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1. Introduction), p. 2 (1. Introduction), p. 1 (1. Introduction), p. 2 (1. Introduction), p. 5 (4. Problem Formulation), p. 6 (5. Method) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 1 (1. Introduction), p. 2 (1. Introduction), p. 5 (4. Problem Formulation), p. 6 (5. Method)이다.
 
 ## Semantic QA — PDF body cross-check
 

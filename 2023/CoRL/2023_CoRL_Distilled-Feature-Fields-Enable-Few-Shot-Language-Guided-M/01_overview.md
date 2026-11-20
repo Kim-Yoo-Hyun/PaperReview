@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-Manipulation, contact, tactile, and dexterity의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 What form of scene representation would facilitate open-set generalization for robotic manipulation systems?를 문제로 두고, 3 Feature Fields for Robotic Manipulation (F3RM) We present Feature Fields for Robotic Manipulation (F3RM), our approach for distilling pre-trained representations from vision and vision-language models into 3D feature fields for open-e ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — What form of scene representation would facilitate open-set generalization for robotic manipulation systems?
+
+방법 관련 발췌 — 3 Feature Fields for Robotic Manipulation (F3RM) We present Feature Fields for Robotic Manipulation (F3RM), our approach for distilling pre-trained representations from vision and vision-language models into 3D feature fields for open-e ...
 
 ## Problem and Motivation
 
@@ -84,7 +86,7 @@ Manipulation, contact, tactile, and dexterity의 3d_perception 문제를 이해�
 
 ## Why Read It
 
-Manipulation, contact, tactile, and dexterity의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 What form of scene representation would facilitate open-set generalization for robotic manipulation systems?를 문제로 두고, 3 Feature Fields for Robotic Manipulation (F3RM) We present Feature Fields for Robotic Manipulation (F3RM), our approach for distilling pre-trained representations from vision and vision-language models into 3D feature fields for open-e ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1 Introduction), p. 1 (1 Introduction), p. 4 (6 DOF Gripper Pose), p. 5 (6 DOF Gripper Pose), p. 5 (6 DOF Gripper Pose), p. 3 (3. Language-Guided Manipulation) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 1 (1 Introduction), p. 4 (6 DOF Gripper Pose), p. 5 (6 DOF Gripper Pose), p. 3 (3. Language-Guided Manipulation)이다.
 
 ## Semantic QA — PDF body cross-check
 

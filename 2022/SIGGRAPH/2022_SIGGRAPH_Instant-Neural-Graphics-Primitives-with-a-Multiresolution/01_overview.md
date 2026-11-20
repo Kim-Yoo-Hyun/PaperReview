@@ -21,7 +21,7 @@
 
 ## Why This Paper Is Here
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 2017], where they help the neural network to identify the location it is currently processing.를 문제로 두고, Our method-Figure 2 (e,f)-combines both ideas to reduce waste.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+Instant Neural Graphics Primitives는 다중 해상도 해시 인코딩으로 신경 그래픽 표현의 학습과 렌더링을 가속한다.
 
 ## Problem and Motivation
 
@@ -54,16 +54,10 @@ Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 �
 
 ## Main Claims and Actual Contribution
 
-- **p. 3 / 1 INTRODUCTION - extractive body cue:** Our method-Figure 2 (e,f)-combines both ideas to reduce waste.
-- **p. 3 / 1 INTRODUCTION - extractive body cue:** To illustrate the trade-offs and to motivate our method, Figure 2 shows the effect on reconstruction quality of a neural radiance field for several different ...
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** This enables the use of smaller, more efficient MLPs.
-- **p. 13 / B IMPLEMENTATION DETAILS OF NGLOD - extractive body cue:** We obtained the most favorable performance vs. quality trade-off at a roughly equal number of trainable parameters as our method, through the following configuration: (1) ...
-- **원문 대조:** 해상도를 기하급수적으로 늘리면 N_min부터 N_max까지의 범위를 O(log(N_max/N_min))개 level로 포괄할 수 있다. 이는 해시 인코딩의 다중 해상도 구성에 관한 설명이다. ([PDF p. 5](https://arxiv.org/pdf/2201.05989#page=5), Implicit hash collision resolution).
-- **p. 10 / 24.2 M - extractive body cue:** It approaches NeRF's quality after training for just ∼5 min, yet is outperformed by our full method after training for 5 s-15 s, amounting to ...
-- **p. 9 / 24.2 M - extractive body cue:** Due to the small size and efficient implementation of the MLP, it is only 15% more expensive-well worth the significantly improved quality. function, which we ...
-- **p. 3 / Figure/Table caption - extractive body cue:** Fig. 2. A demonstration of the reconstruction quality of different encodings and parametric data structures for storing trainable feature embeddings. Each configuration was trained for ...
+- 작은 신경망에 학습 가능한 특징 벡터를 담은 다중 해상도 해시 테이블을 결합한다.
+- GPU용 CUDA 구현을 이용해 여러 그래픽 표현의 최적화 시간과 결과 품질을 평가한다.
 
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+[원문 초록](https://arxiv.org/abs/2201.05989)
 
 ## Evaluation Scope
 
@@ -87,4 +81,4 @@ Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 �
 
 ## Why Read It
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 2017], where they help the neural network to identify the location it is currently processing.를 문제로 두고, Our method-Figure 2 (e,f)-combines both ideas to reduce waste.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 3 (1 INTRODUCTION), p. 3 (1 INTRODUCTION), p. 6 (1 INTRODUCTION), p. 13 (B IMPLEMENTATION DETAILS OF NGLOD) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 2 (1 INTRODUCTION), p. 3 (1 INTRODUCTION), p. 6 (1 INTRODUCTION), p. 13 (B IMPLEMENTATION DETAILS OF NGLOD)이다.

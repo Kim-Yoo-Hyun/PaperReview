@@ -79,7 +79,7 @@ PointNet은 순서가 없는 3차원 점 집합을 직접 처리해 물체를 �
 
 ## Why Read It
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 The problem of processing unordered sets by neural nets is a very general and fundamental problem - we expect that our ideas can be transferred to other domains as well.를 문제로 두고, The key contributions of our work are as follows: • We design a novel deep net architecture suitable for consuming unordered point sets in 3D; • We show how such a net ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (1. Introduction), p. 4 (4.2. PointNet Architecture), p. 3 (4.2. PointNet Architecture), p. 4 (4.2. PointNet Architecture), p. 3 (4.2. PointNet Architecture), p. 7 (5.1. Applications) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 2 (1. Introduction), p. 4 (4.2. PointNet Architecture), p. 3 (4.2. PointNet Architecture), p. 7 (5.1. Applications)이다.
 
 ## Semantic QA — PDF body cross-check
 

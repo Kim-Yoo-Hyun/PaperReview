@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 Therefore, how to design a network that achieves good performance despite the lack of 2D anno를 문제로 두고, In summary, the main contributions of this paper are as follows: - We propose a weakly supervised method 3DSS-VLG for 3D WSSS, which takes 2D images as a bridge, and leverages natural ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — Therefore, how to design a network that achieves good performance despite the lack of 2D anno
+
+방법 관련 발췌 — In summary, the main contributions of this paper are as follows: - We propose a weakly supervised method 3DSS-VLG for 3D WSSS, which takes 2D images as a bridge, and leverages natural ...
 
 ## Problem and Motivation
 
@@ -80,4 +82,4 @@ Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 �
 
 ## Why Read It
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 Therefore, how to design a network that achieves good performance despite the lack of 2D anno를 문제로 두고, In summary, the main contributions of this paper are as follows: - We propose a weakly supervised method 3DSS-VLG for 3D WSSS, which takes 2D images as a bridge, and leverages natural ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (X. Xu et al), p. 2 (X. Xu et al), p. 3 (X. Xu et al), p. 1 (Body text (section not recovered)), p. 1 (Body text (section not recovered)), p. 1 (Body text (section not recovered)) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 2 (X. Xu et al), p. 3 (X. Xu et al), p. 1 (Body text (section not recovered))이다.

@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-RL, IL, offline learning, and robot data의 benchmark 문제를 이해하기 위해 읽는다. 본문은 Existing GPU simulators have limitations that hinder the generalization and scalability of previous. work These simulators lack support for heterogeneous simulation, Where each parallel environment contains different scenes Additionally ...를 문제로 두고, We propose ManiSkill3 to address past imitations and open source the framework under the Apache-2.0 license, building upon past work in ManiSkill 1 and 2 (38, 19}.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — Existing GPU simulators have limitations that hinder the generalization and scalability of previous. work These simulators lack support for heterogeneous simulation, Where each parallel environment contains different scenes Additionally ...
+
+방법 관련 발췌 — We propose ManiSkill3 to address past imitations and open source the framework under the Apache-2.0 license, building upon past work in ManiSkill 1 and 2 (38, 19}.
 
 ## Problem and Motivation
 
@@ -84,7 +86,7 @@ RL, IL, offline learning, and robot data의 benchmark 문제를 이해하기 위
 
 ## Why Read It
 
-RL, IL, offline learning, and robot data의 benchmark 문제를 이해하기 위해 읽는다. 본문은 Existing GPU simulators have limitations that hinder the generalization and scalability of previous. work These simulators lack support for heterogeneous simulation, Where each parallel environment contains different scenes Additionally ...를 문제로 두고, We propose ManiSkill3 to address past imitations and open source the framework under the Apache-2.0 license, building upon past work in ManiSkill 1 and 2 (38, 19}.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1. INTRODUCTION), p. 1 (1. INTRODUCTION), p. 1 (Abstract), p. 3 (B. GPU Parallelized Simulation and Rendering), p. 2 (5) Scalable Dataset Generation Pipeline from Few), p. 2 (4) Simple Unified API to Easily Manage and Build) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 1 (1. INTRODUCTION), p. 1 (Abstract), p. 3 (B. GPU Parallelized Simulation and Rendering), p. 2 (5) Scalable Dataset Generation Pipeline from Few), p. 2 (4) Simple Unified API to Easily Manage and Build)이다.
 
 ## Semantic QA — PDF body cross-check
 

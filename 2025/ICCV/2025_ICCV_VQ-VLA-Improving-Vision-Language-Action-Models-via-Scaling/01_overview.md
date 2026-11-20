@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다. 본문은 In this paper, we delve deeper into the potential of action tokenization, with a specific emphasis on its scalability and accuracy.를 문제로 두고, In summary, our contributions are as follows: • We propose a general convolutional residual VQ-VAEbased framework for action tokenizers. • We demonstrate that action tokenizers can be effectively scaled by leveraging large-scale ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — In this paper, we delve deeper into the potential of action tokenization, with a specific emphasis on its scalability and accuracy.
+
+방법 관련 발췌 — In summary, our contributions are as follows: • We propose a general convolutional residual VQ-VAEbased framework for action tokenizers. • We demonstrate that action tokenizers can be effectively scaled by leveraging large-scale ...
 
 ## Problem and Motivation
 
@@ -82,4 +84,4 @@ VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다
 
 ## Why Read It
 
-VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다. 본문은 In this paper, we delve deeper into the potential of action tokenization, with a specific emphasis on its scalability and accuracy.를 문제로 두고, In summary, our contributions are as follows: • We propose a general convolutional residual VQ-VAEbased framework for action tokenizers. • We demonstrate that action tokenizers can be effectively scaled by leveraging large-scale ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1. Introduction), p. 4 (3.4. Integrating Residual VQ-VAE as Action Tok), p. 4 (3.4. Integrating Residual VQ-VAE as Action Tok), p. 3 (3.3. Training Residual VQ-VAE), p. 3 (3. Methods), p. 2 (3. Methods) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 1 (1. Introduction), p. 4 (3.4. Integrating Residual VQ-VAE as Action Tok), p. 3 (3.3. Training Residual VQ-VAE), p. 3 (3. Methods), p. 2 (3. Methods)이다.

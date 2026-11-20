@@ -20,7 +20,9 @@
 
 ## Why This Paper Is Here
 
-World models, safety, uncertainty, and recovery의 safety 문제를 이해하기 위해 읽는다. 본문은 However, some tasks involve rewards that are difficult or even infeasible to specify.를 문제로 두고, GPC consists of three components: • Generative policy training.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — However, some tasks involve rewards that are difficult or even infeasible to specify.
+
+방법 관련 발췌 — GPC consists of three components: • Generative policy training.
 
 ## Problem and Motivation
 
@@ -81,4 +83,4 @@ World models, safety, uncertainty, and recovery의 safety 문제를 이해하기
 
 ## Why Read It
 
-World models, safety, uncertainty, and recovery의 safety 문제를 이해하기 위해 읽는다. 본문은 However, some tasks involve rewards that are difficult or even infeasible to specify.를 문제로 두고, GPC consists of three components: • Generative policy training.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 3 (III. OVERVIEW OF GENERATIVE PREDICTIVE CONTROL), p. 1 (B EHAVIOR cloning (BC) with generative models has), p. 4 (IV. WORLD MODEL LEARNING), p. 1 (Abstract), p. 3 (III. OVERVIEW OF GENERATIVE PREDICTIVE CONTROL), p. 1 (B EHAVIOR cloning (BC) with generative models has) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 3 (III. OVERVIEW OF GENERATIVE PREDICTIVE CONTROL), p. 1 (B EHAVIOR cloning (BC) with generative models has), p. 4 (IV. WORLD MODEL LEARNING), p. 1 (Abstract)이다.

@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-Locomotion, whole-body, mobile manipulation, and humanoids의 mobile_manipulation 문제를 이해하기 위해 읽는다. 본문은 However, each camera requires an adapter cable that converts the camera board's JST connector to a USB-A port, and the ‘cameras cannot be daisy-chained.를 문제로 두고, In summary, our primary contribution is the RoboPanoptes system, demonstrating novel whole-body dexterity capabilities through whole-body vision.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — However, each camera requires an adapter cable that converts the camera board's JST connector to a USB-A port, and the ‘cameras cannot be daisy-chained.
+
+방법 관련 발췌 — In summary, our primary contribution is the RoboPanoptes system, demonstrating novel whole-body dexterity capabilities through whole-body vision.
 
 ## Problem and Motivation
 
@@ -85,7 +87,7 @@ Locomotion, whole-body, mobile manipulation, and humanoids의 mobile_manipulatio
 
 ## Why Read It
 
-Locomotion, whole-body, mobile manipulation, and humanoids의 mobile_manipulation 문제를 이해하기 위해 읽는다. 본문은 However, each camera requires an adapter cable that converts the camera board's JST connector to a USB-A port, and the ‘cameras cannot be daisy-chained.를 문제로 두고, In summary, our primary contribution is the RoboPanoptes system, demonstrating novel whole-body dexterity capabilities through whole-body vision.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 4 (IV. MODULAR HARDWARE DESIGN), p. 2 (1. Ivrropuction), p. 3 (C. Whole-body Sensing), p. 1 (1. Ivrropuction), p. 1 (Abstract), p. 4 (VI. WHOLE-Bopy VisUoMOTOR POLICY) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 4 (IV. MODULAR HARDWARE DESIGN), p. 2 (1. Ivrropuction), p. 3 (C. Whole-body Sensing), p. 1 (1. Ivrropuction), p. 1 (Abstract), p. 4 (VI. WHOLE-Bopy VisUoMOTOR POLICY)이다.
 
 ## Semantic QA — PDF body cross-check
 

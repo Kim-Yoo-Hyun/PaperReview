@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-Planning and control의 navigation 문제를 이해하기 위해 읽는다. 본문은 Large Language Models (LLMs) offer this capability through the vast commonsense priors, yet they lack spatial grounding required for navigation.를 문제로 두고, In summary, the contributions of this work are threefold: • We propose SAGE-Nav, a hierarchical navigation 를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — Large Language Models (LLMs) offer this capability through the vast commonsense priors, yet they lack spatial grounding required for navigation.
+
+방법 관련 발췌 — In summary, the contributions of this work are threefold: • We propose SAGE-Nav, a hierarchical navigation
 
 ## Problem and Motivation
 
@@ -83,4 +85,4 @@ Planning and control의 navigation 문제를 이해하기 위해 읽는다. 본�
 
 ## Why Read It
 
-Planning and control의 navigation 문제를 이해하기 위해 읽는다. 본문은 Large Language Models (LLMs) offer this capability through the vast commonsense priors, yet they lack spatial grounding required for navigation.를 문제로 두고, In summary, the contributions of this work are threefold: • We propose SAGE-Nav, a hierarchical navigation 를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 2 (IV. PROPOSED METHOD), p. 3 (IV. PROPOSED METHOD), p. 2 (IV. PROPOSED METHOD) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 1 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 2 (IV. PROPOSED METHOD), p. 3 (IV. PROPOSED METHOD)이다.

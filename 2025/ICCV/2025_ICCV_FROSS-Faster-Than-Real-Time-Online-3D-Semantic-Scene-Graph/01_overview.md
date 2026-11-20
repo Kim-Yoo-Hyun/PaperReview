@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-Robotics-enabling 3D perception의 navigation 문제를 이해하기 위해 읽는다. 본문은 FROSS: Faster-than-Real-Time Online 3D Semantic Scene Graph Generation from RGB-D Images Supplementary Material를 문제로 두고, In this section, we present the evaluation of two models: the original EGTR [12] 2D SG generation model and our modified version employed in FROSS, RT-DETR+EGTR.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — FROSS: Faster-than-Real-Time Online 3D Semantic Scene Graph Generation from RGB-D Images Supplementary Material
+
+방법 관련 발췌 — In this section, we present the evaluation of two models: the original EGTR [12] 2D SG generation model and our modified version employed in FROSS, RT-DETR+EGTR.
 
 ## Problem and Motivation
 
@@ -74,4 +76,4 @@ Robotics-enabling 3D perception의 navigation 문제를 이해하기 위해 읽�
 
 ## Why Read It
 
-Robotics-enabling 3D perception의 navigation 문제를 이해하기 위해 읽는다. 본문은 FROSS: Faster-than-Real-Time Online 3D Semantic Scene Graph Generation from RGB-D Images Supplementary Material를 문제로 두고, In this section, we present the evaluation of two models: the original EGTR [12] 2D SG generation model and our modified version employed in FROSS, RT-DETR+EGTR.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 3 (8. Statistics of the ReplicaSSG Dataset), p. 2 (7.3. 2D Scene Graph Generation Performance), p. 2 (Figure/Table caption), p. 1 (7.1. Object and Predicate Performance per Class), p. 1 (7.1. Object and Predicate Performance per Class), p. 3 (Figure/Table caption) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 3 (8. Statistics of the ReplicaSSG Dataset), p. 2 (7.3. 2D Scene Graph Generation Performance), p. 2 (Figure/Table caption), p. 1 (7.1. Object and Predicate Performance per Class), p. 3 (Figure/Table caption)이다.

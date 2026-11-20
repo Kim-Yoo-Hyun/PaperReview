@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 However, the rendering performance of this method is also not competitive, suffering from poor detail recovery and floaters due to the lack of prior geometric constraints.를 문제로 두고, The contributions of our method are as follows. • We propose Librated-GS, a novel initialization approach to eliminate the reliance on SfM points of 3D Gaussian Splatting. • We align monocular depths ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — However, the rendering performance of this method is also not competitive, suffering from poor detail recovery and floaters due to the lack of prior geometric constraints.
+
+방법 관련 발췌 — The contributions of our method are as follows. • We propose Librated-GS, a novel initialization approach to eliminate the reliance on SfM points of 3D Gaussian Splatting. • We align monocular depths ...
 
 ## Problem and Motivation
 
@@ -84,4 +86,4 @@ Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 �
 
 ## Why Read It
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 However, the rendering performance of this method is also not competitive, suffering from poor detail recovery and floaters due to the lack of prior geometric constraints.를 문제로 두고, The contributions of our method are as follows. • We propose Librated-GS, a novel initialization approach to eliminate the reliance on SfM points of 3D Gaussian Splatting. • We align monocular depths ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (1. Introduction), p. 2 (1. Introduction), p. 1 (1. Introduction), p. 3 (3. Method), p. 2 (3. Method), p. 3 (3.2. Effective Depth Alignment) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 2 (1. Introduction), p. 1 (1. Introduction), p. 3 (3. Method), p. 2 (3. Method), p. 3 (3.2. Effective Depth Alignment)이다.

@@ -75,4 +75,4 @@ Dense Prediction Transformer는 시각 Transformer의 여러 층에서 얻은 �
 
 ## Why Read It
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 While these techniques can significantly improve prediction quality, the networks are still bottlenecked by their fundamental building block: the convolution.를 문제로 두고, In this work, we introduce the dense prediction transformer (DPT).를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1. Introduction), p. 1 (1. Introduction), p. 2 (1. Introduction), p. 3 (3. Architecture), p. 4 (3. Architecture), p. 3 (3. Architecture) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 1 (1. Introduction), p. 2 (1. Introduction), p. 3 (3. Architecture), p. 4 (3. Architecture)이다.

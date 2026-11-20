@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 Multimodal large language models (MLLMs) excel at 2D visual understanding but remain limited in their ability to reason about 3D space.를 문제로 두고, We use the MM1.5 architecture [85, 128] (focusing on the mobile-friendly 3B variant), comprising of a DFN-CLIP [34, 89] image encoder and a decoder-only LLM backbone, which are bridged via a C-Abstractor ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — Multimodal large language models (MLLMs) excel at 2D visual understanding but remain limited in their ability to reason about 3D space.
+
+방법 관련 발췌 — We use the MM1.5 architecture [85, 128] (focusing on the mobile-friendly 3B variant), comprising of a DFN-CLIP [34, 89] image encoder and a decoder-only LLM backbone, which are bridged via a C-Abstractor ...
 
 ## Problem and Motivation
 
@@ -80,4 +82,4 @@ Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 �
 
 ## Why Read It
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 Multimodal large language models (MLLMs) excel at 2D visual understanding but remain limited in their ability to reason about 3D space.를 문제로 두고, We use the MM1.5 architecture [85, 128] (focusing on the mobile-friendly 3B variant), comprising of a DFN-CLIP [34, 89] image encoder and a decoder-only LLM backbone, which are bridged via a C-Abstractor ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 4 (4.1. Model Architecture), p. 4 (4.2. Data and Training), p. 6 (Model), p. 6 (Model), p. 7 (Model), p. 7 (Model) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 4 (4.1. Model Architecture), p. 4 (4.2. Data and Training), p. 6 (Model), p. 7 (Model)이다.

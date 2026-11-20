@@ -366,7 +366,7 @@
     "year": 2023,
     "venue": "NeurIPS",
     "category": "Robot Learning and Data",
-    "tags": ["Robotics", "Representation Learning", "Embodied AI", "Benchmark"],
+    "tags": ["Robotics", "representation learning", "Embodied AI", "Benchmark"],
     "page": "https://arxiv.org/abs/2303.18240",
     "project": "https://eai-vc.github.io/",
     "evidence": "ABSTRACT_CHECKED",
@@ -377,7 +377,9 @@
     "interface": "visual observation encoder를 navigation/manipulation policy의 perception front-end로 사용한다.",
     "evaluation": "다양한 embodied tasks, adaptation regimes와 representation baselines를 포괄한다.",
     "limitations": "benchmark aggregate가 contact, latency, recovery 등 task-specific closed-loop 요구를 충분히 반영하는지는 별도 분석이 필요하다.",
-    "lineage": "MVP/R3M 등 representation 비교 → VC-1 → embodied foundation encoder와 action-relevance audit로 이어진다."
+    "lineage": "MVP/R3M 등 representation 비교 → VC-1 → embodied foundation encoder와 action-relevance audit로 이어진다.",
+    "authors": ["Arjun Majumdar", "Karmesh Yadav", "Sergio Arnaud", "Yecheng Jason Ma", "Claire Chen", "Sneha Silwal", "Aryan Jain", "Vincent-Pierre Berges", "Tingfan Wu", "Jay Vakil", "Pieter Abbeel", "Jitendra Malik", "Dhruv Batra", "Yixin Lin", "Oleksandr Maksymets", "Aravind Rajeswaran", "Franziska Meier"],
+    "provenance": {"authors_verification": {"source": "https://proceedings.neurips.cc/paper_files/paper/2023/file/022ca1bed6b574b962c48a2856eb207b-Paper-Conference.pdf", "verified_on": "2026-11-20", "basis": "NeurIPS 게재본 1쪽에서 Vincent-Pierre Berges와 Pieter Abbeel 사이 두 저자를 확인했다."}}
   },
   {
     "title": "Meta-World: A Benchmark and Evaluation for Multi-Task and Meta Reinforcement Learning",

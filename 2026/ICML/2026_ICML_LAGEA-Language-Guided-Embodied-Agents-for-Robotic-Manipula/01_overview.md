@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다. 본문은 Yet converting such priors into reliable learning signals still hinges on reward design, which remains a bottleneck across tasks and scenes.를 문제로 두고, For this purpose, we present our framework LAGEA, which addresses this by using VLMs to generate episodic natural-language reflections on a robot's 1 를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — Yet converting such priors into reliable learning signals still hinges on reward design, which remains a bottleneck across tasks and scenes.
+
+방법 관련 발췌 — For this purpose, we present our framework LAGEA, which addresses this by using VLMs to generate episodic natural-language reflections on a robot's 1
 
 ## Problem and Motivation
 
@@ -86,4 +88,4 @@ VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다
 
 ## Why Read It
 
-VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다. 본문은 Yet converting such priors into reliable learning signals still hinges on reward design, which remains a bottleneck across tasks and scenes.를 문제로 두고, For this purpose, we present our framework LAGEA, which addresses this by using VLMs to generate episodic natural-language reflections on a robot's 1 를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1. Introduction), p. 1 (1. Introduction), p. 2 (1. Introduction), p. 2 (1. Introduction), p. 4 (3.1.3. FEEDBACK ALIGNMENT), p. 4 (3.2. Reward Generation) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 1 (1. Introduction), p. 2 (1. Introduction), p. 4 (3.1.3. FEEDBACK ALIGNMENT), p. 4 (3.2. Reward Generation)이다.

@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-Planning and control의 humanoid 문제를 이해하기 위해 읽는다. 본문은 Also, especially interesting tasks such as periodic gaits could not be transferred to hardware due to model mismatches and lack of robustness of the plans.를 문제로 두고, In this paper, we present a whole-body Nonlinear Model Predictive Control (NMPC) approach for Rigid Body Dynamics (RBD) systems subject to contacts.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — Also, especially interesting tasks such as periodic gaits could not be transferred to hardware due to model mismatches and lack of robustness of the plans.
+
+방법 관련 발췌 — In this paper, we present a whole-body Nonlinear Model Predictive Control (NMPC) approach for Rigid Body Dynamics (RBD) systems subject to contacts.
 
 ## Problem and Motivation
 
@@ -86,7 +88,7 @@ Planning and control의 humanoid 문제를 이해하기 위해 읽는다. 본문
 
 ## Why Read It
 
-Planning and control의 humanoid 문제를 이해하기 위해 읽는다. 본문은 Also, especially interesting tasks such as periodic gaits could not be transferred to hardware due to model mismatches and lack of robustness of the plans.를 문제로 두고, In this paper, we present a whole-body Nonlinear Model Predictive Control (NMPC) approach for Rigid Body Dynamics (RBD) systems subject to contacts.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 3 (III. NMPC APPROACH), p. 3 (III. NMPC APPROACH) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 2 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 3 (III. NMPC APPROACH)이다.
 
 ## Semantic QA — PDF body cross-check
 

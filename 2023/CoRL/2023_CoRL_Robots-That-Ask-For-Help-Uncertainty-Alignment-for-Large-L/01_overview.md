@@ -80,4 +80,4 @@ KnowNo는 언어 모델 계획기가 적절한 다음 행동을 확정할 수 �
 
 ## Why Read It
 
-World models, safety, uncertainty, and recovery의 safety 문제를 이해하기 위해 읽는다. 본문은 However, one of the major challenges with current LLMs is their tendency to hallucinate, i.e., to confidently generate outputs that are plausible but incorrect and untethered from reality.를 문제로 두고, Here, we present a novel extension of CP to multi-step settings that tackles this challenge.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1 Introduction), p. 5 (1 Introduction), p. 1 (1 Introduction), p. 2 (1 Introduction), p. 4 (1 Introduction), p. 2 (1 Introduction) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 1 (1 Introduction), p. 5 (1 Introduction), p. 2 (1 Introduction), p. 4 (1 Introduction)이다.

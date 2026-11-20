@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다. 본문은 Developing bimanual manipulation foundation models confronts the dual challenges of data scarcity and architectural limitations.를 문제로 두고, In this paper, we introduce the Robotics Diffusion Transformer (RDT), the largest bimanual manipulation foundation model with strong generalizability.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — Developing bimanual manipulation foundation models confronts the dual challenges of data scarcity and architectural limitations.
+
+방법 관련 발췌 — In this paper, we introduce the Robotics Diffusion Transformer (RDT), the largest bimanual manipulation foundation model with strong generalizability.
 
 ## Problem and Motivation
 
@@ -85,7 +87,7 @@ VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다
 
 ## Why Read It
 
-VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다. 본문은 Developing bimanual manipulation foundation models confronts the dual challenges of data scarcity and architectural limitations.를 문제로 두고, In this paper, we introduce the Robotics Diffusion Transformer (RDT), the largest bimanual manipulation foundation model with strong generalizability.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1 INTRODUCTION), p. 1 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 1 (1 INTRODUCTION), p. 2 (1 INTRODUCTION)이다.
 
 ## Semantic QA — PDF body cross-check
 

@@ -79,4 +79,4 @@ EGNN은 그래프의 노드 특징과 좌표를 함께 갱신하면서 회전·�
 
 ## Why Read It
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 Many problems exhibit 3D translation and rotation symmetries.를 문제로 두고, In this section we introduce the relevant materials on equivariance and graph neural networks which will later complement the definition of our method.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1. Introduction), p. 1 (1. Introduction), p. 6 (5.2. Graph Autoencoder), p. 7 (5.2. Graph Autoencoder), p. 8 (5.2. Graph Autoencoder), p. 6 (5.2. Graph Autoencoder) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 1 (1. Introduction), p. 6 (5.2. Graph Autoencoder), p. 7 (5.2. Graph Autoencoder), p. 8 (5.2. Graph Autoencoder)이다.

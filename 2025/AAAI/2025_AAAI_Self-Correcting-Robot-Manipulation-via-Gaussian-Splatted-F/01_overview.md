@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-World models, safety, uncertainty, and recovery의 safety 문제를 이해하기 위해 읽는다. 본문은 Foresight-driven self-correction When action execution fails, existing methods often lack the capability for self-correction to complete the task and may even enter ‘untrained states', which poses significant destructive results.를 문제로 두고, In this paper, we propose a novel approach to ascertain the necessity of replanning by predicting the environmental structural information of future keyframes, thereby assessing the attainment of objectives for subsequent keyframes.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — Foresight-driven self-correction When action execution fails, existing methods often lack the capability for self-correction to complete the task and may even enter ‘untrained states', which poses significant destructive results.
+
+방법 관련 발췌 — In this paper, we propose a novel approach to ascertain the necessity of replanning by predicting the environmental structural information of future keyframes, thereby assessing the attainment of objectives for subsequent keyframes.
 
 ## Problem and Motivation
 
@@ -86,7 +88,7 @@ World models, safety, uncertainty, and recovery의 safety 문제를 이해하기
 
 ## Why Read It
 
-World models, safety, uncertainty, and recovery의 safety 문제를 이해하기 위해 읽는다. 본문은 Foresight-driven self-correction When action execution fails, existing methods often lack the capability for self-correction to complete the task and may even enter ‘untrained states', which poses significant destructive results.를 문제로 두고, In this paper, we propose a novel approach to ascertain the necessity of replanning by predicting the environmental structural information of future keyframes, thereby assessing the attainment of objectives for subsequent keyframes.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 3 (2. By incorporating the proposed self-correction scheme), p. 1 (Abstract), p. 1 (Abstract), p. 2 (2. By incorporating the proposed self-correction scheme), p. 3 (2. By incorporating the proposed self-correction scheme), p. 1 (Abstract) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 3 (2. By incorporating the proposed self-correction scheme), p. 1 (Abstract), p. 2 (2. By incorporating the proposed self-correction scheme)이다.
 
 ## Semantic QA — PDF body cross-check
 

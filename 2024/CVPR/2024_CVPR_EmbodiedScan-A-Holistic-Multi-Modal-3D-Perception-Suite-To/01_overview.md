@@ -19,7 +19,7 @@
 
 ## Why This Paper Is Here
 
-Robotics-enabling 3D perception의 benchmark 문제를 이해하기 위해 읽는다. 본문은 Regarding data, earlier datasets targeting egocentric RGB-D inputs are either too small [12, 45] or lack comprehensive annotations [6, 51] to support the aforemenThis CVPR paper is the Open Access version, provided ...를 문제로 두고, Building upon this database, we introduce a baseline framework named Embodied Perceptron.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+EmbodiedScan은 여러 시점의 RGB-D 관측과 언어를 사용하는 3D 장면 인식 데이터와 평가 과제를 제공한다.
 
 ## Problem and Motivation
 
@@ -53,16 +53,10 @@ Robotics-enabling 3D perception의 benchmark 문제를 이해하기 위해 읽�
 
 ## Main Claims and Actual Contribution
 
-- **p. 1 / Abstract - extractive body cue:** Building upon this database, we introduce a baseline framework named Embodied Perceptron.
-- **p. 1 / Abstract - extractive body cue:** To address the gap, we introduce EmbodiedScan, a multi-modal, ego-centric 3D perception dataset and benchmark for holistic 3D scene understanding.
-- **p. 7 / 5.1. Fundamental 3D Perception Benchmarks - extractive body cue:** Substituting this with our decoder design markedly improves performance.
-- **p. 3 / Figure/Table caption - extractive body cue:** Figure 3. EmbodiedScan annotation and statistics. (a) UI for 3D box annotation. We select keyframes and generate their SAM masks with corresponding axis-aligned boxes. With ...
-- **p. 7 / 5.1. Fundamental 3D Perception Benchmarks - extractive body cue:** Nevertheless, all models have substantial potential for improvement, demonstrating the challenges of this new dataset and setup.
-- **p. 8 / 5.2. Language-Grounded Benchmark - extractive body cue:** Our baseline outperforms all due to the strong multi-modal encoder.
-- **p. 8 / 5.1. Fundamental 3D Perception Benchmarks - extractive body cue:** Similarly, our method outperforms others, providing a solid baseline for future studies.
-- **p. 2 / Dataset - extractive body cue:** Detailed analysis further underscores the value of EmbodiedScan and highlights the primary challenges posed by this new setup.
+- 물체의 3D 상자와 의미 점유 주석을 장면 관측과 연결한다.
+- Embodied Perceptron 기준 모델을 다양한 입력 시점 수의 3D 지각 과제로 평가한다.
 
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+[원문 초록](https://openaccess.thecvf.com/content/CVPR2024/html/Wang_EmbodiedScan_A_Holistic_Multi-Modal_3D_Perception_Suite_Towards_Embodied_AI_CVPR_2024_paper.html)
 
 ## Evaluation Scope
 
@@ -85,4 +79,4 @@ Robotics-enabling 3D perception의 benchmark 문제를 이해하기 위해 읽�
 
 ## Why Read It
 
-Robotics-enabling 3D perception의 benchmark 문제를 이해하기 위해 읽는다. 본문은 Regarding data, earlier datasets targeting egocentric RGB-D inputs are either too small [12, 45] or lack comprehensive annotations [6, 51] to support the aforemenThis CVPR paper is the Open Access version, provided ...를 문제로 두고, Building upon this database, we introduce a baseline framework named Embodied Perceptron.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1. Introduction), p. 1 (1. Introduction), p. 6 (4.1. Multi-Modal 3D Encoder), p. 5 (4.1. Multi-Modal 3D Encoder), p. 6 (4.2. Sparse & Dense Decoder), p. 1 (Abstract) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 1 (1. Introduction), p. 6 (4.1. Multi-Modal 3D Encoder), p. 5 (4.1. Multi-Modal 3D Encoder), p. 6 (4.2. Sparse & Dense Decoder), p. 1 (Abstract)이다.

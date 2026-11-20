@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-Robotics-enabling 3D perception의 generative 문제를 이해하기 위해 읽는다. 본문은 While this approach has proven effective for 2D images [9,26,39,43], applying it to 3D point clouds presents a far greater challenge due to the unstructured nature of point clouds and the inherent ...를 문제로 두고, To this end, we introduce a novel, training-free test-time adaptation method called 3D Denoising Diffusion TestTime Adaptation (3DD-TTA).를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — While this approach has proven effective for 2D images [9,26,39,43], applying it to 3D point clouds presents a far greater challenge due to the unstructured nature of point clouds and the inherent ...
+
+방법 관련 발췌 — To this end, we introduce a novel, training-free test-time adaptation method called 3D Denoising Diffusion TestTime Adaptation (3DD-TTA).
 
 ## Problem and Motivation
 
@@ -86,4 +88,4 @@ Robotics-enabling 3D perception의 generative 문제를 이해하기 위해 읽�
 
 ## Why Read It
 
-Robotics-enabling 3D perception의 generative 문제를 이해하기 위해 읽는다. 본문은 While this approach has proven effective for 2D images [9,26,39,43], applying it to 3D point clouds presents a far greater challenge due to the unstructured nature of point clouds and the inherent ...를 문제로 두고, To this end, we introduce a novel, training-free test-time adaptation method called 3D Denoising Diffusion TestTime Adaptation (3DD-TTA).를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (1. Introduction), p. 1 (1. Introduction), p. 1 (1. Introduction), p. 2 (1. Introduction), p. 4 (3.1. Preliminaries), p. 5 (3.3. Denoising Diffusion-based Adaption Method) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 2 (1. Introduction), p. 1 (1. Introduction), p. 4 (3.1. Preliminaries), p. 5 (3.3. Denoising Diffusion-based Adaption Method)이다.

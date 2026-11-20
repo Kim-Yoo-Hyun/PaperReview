@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-Locomotion, whole-body, mobile manipulation, and humanoids의 humanoid 문제를 이해하기 위해 읽는다. 본문은 6 Limitation and Future Works One limitation of our work is the lacking knowledge of when the controller will fail.를 문제로 두고, In Section 4, we show how our framework, WoCoCo, can be applied to a variety of challenging dynamic tasks with flexible definitions and representations of contact and task goals.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — 6 Limitation and Future Works One limitation of our work is the lacking knowledge of when the controller will fail.
+
+방법 관련 발췌 — In Section 4, we show how our framework, WoCoCo, can be applied to a variety of challenging dynamic tasks with flexible definitions and representations of contact and task goals.
 
 ## Problem and Motivation
 
@@ -86,7 +88,7 @@ Locomotion, whole-body, mobile manipulation, and humanoids의 humanoid 문제를
 
 ## Why Read It
 
-Locomotion, whole-body, mobile manipulation, and humanoids의 humanoid 문제를 이해하기 위해 읽는다. 본문은 6 Limitation and Future Works One limitation of our work is the lacking knowledge of when the controller will fail.를 문제로 두고, In Section 4, we show how our framework, WoCoCo, can be applied to a variety of challenging dynamic tasks with flexible definitions and representations of contact and task goals.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 8 (1 Introduction), p. 5 (1 Introduction), p. 2 (1 Introduction), p. 4 (1 Introduction), p. 2 (1 Introduction), p. 3 (1 Introduction) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 8 (1 Introduction), p. 5 (1 Introduction), p. 2 (1 Introduction), p. 4 (1 Introduction), p. 3 (1 Introduction)이다.
 
 ## Semantic QA — PDF body cross-check
 

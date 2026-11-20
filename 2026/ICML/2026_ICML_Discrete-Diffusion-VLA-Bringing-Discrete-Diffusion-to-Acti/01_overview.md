@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다. 본문은 OpenVLA (Kim et al., 2024), π0-FAST (Pertsch et al., 2025)); and (2) a separate action head that employs MLP or continuous diffusion to map VLM output latent tokens to executable actions (e.g., ...를 문제로 두고, In summary, our contributions are threefold: 1) We introduce the first discrete diffusion VLA, unifying action generation with vision-language modeling in one transformer, demonstrating superior retention of pretrained VL capabilities.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — OpenVLA (Kim et al., 2024), π0-FAST (Pertsch et al., 2025)); and (2) a separate action head that employs MLP or continuous diffusion to map VLM output latent tokens to executable actions (e.g., ...
+
+방법 관련 발췌 — In summary, our contributions are threefold: 1) We introduce the first discrete diffusion VLA, unifying action generation with vision-language modeling in one transformer, demonstrating superior retention of pretrained VL capabilities.
 
 ## Problem and Motivation
 
@@ -85,4 +87,4 @@ VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다
 
 ## Why Read It
 
-VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다. 본문은 OpenVLA (Kim et al., 2024), π0-FAST (Pertsch et al., 2025)); and (2) a separate action head that employs MLP or continuous diffusion to map VLM output latent tokens to executable actions (e.g., ...를 문제로 두고, In summary, our contributions are threefold: 1) We introduce the first discrete diffusion VLA, unifying action generation with vision-language modeling in one transformer, demonstrating superior retention of pretrained VL capabilities.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1. Introduction), p. 1 (1. Introduction), p. 2 (1. Introduction), p. 2 (1. Introduction), p. 5 (3.5. Adaptive Decoding and Secondary Re-Masking), p. 3 (3.1. Overview) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 1 (1. Introduction), p. 2 (1. Introduction), p. 5 (3.5. Adaptive Decoding and Secondary Re-Masking), p. 3 (3.1. Overview)이다.

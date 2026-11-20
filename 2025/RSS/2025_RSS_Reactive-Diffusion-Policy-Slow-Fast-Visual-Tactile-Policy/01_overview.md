@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-Manipulation, contact, tactile, and dexterity의 tactile 문제를 이해하기 위해 읽는다. 본문은 In order to compensate for the limitations of purely visual input, numerous approaches [40 27, 45, 64, 31] have explored the integration of tactile input into imitation learning policies However, most of ...를 문제로 두고, To address these challenges, we introduce TactAR, 4 low-cost tleoperation system that provides real-time tactile feedback through Augmented Reality (AR), along with Reactive Diffusion Policy (RDP), a novel slow-fast visuale {actile imit ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — In order to compensate for the limitations of purely visual input, numerous approaches [40 27, 45, 64, 31] have explored the integration of tactile input into imitation learning policies However, most of ...
+
+방법 관련 발췌 — To address these challenges, we introduce TactAR, 4 low-cost tleoperation system that provides real-time tactile feedback through Augmented Reality (AR), along with Reactive Diffusion Policy (RDP), a novel slow-fast visuale {actile imit ...
 
 ## Problem and Motivation
 
@@ -85,7 +87,7 @@ Manipulation, contact, tactile, and dexterity의 tactile 문제를 이해하기 
 
 ## Why Read It
 
-Manipulation, contact, tactile, and dexterity의 tactile 문제를 이해하기 위해 읽는다. 본문은 In order to compensate for the limitations of purely visual input, numerous approaches [40 27, 45, 64, 31] have explored the integration of tactile input into imitation learning policies However, most of ...를 문제로 두고, To address these challenges, we introduce TactAR, 4 low-cost tleoperation system that provides real-time tactile feedback through Augmented Reality (AR), along with Reactive Diffusion Policy (RDP), a novel slow-fast visuale {actile imit ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (I. Ivrropucrion), p. 3 (B. Robot Data Collection System), p. 4 (A. 3D Deformation Field Extraction), p. 1 (Abstract), p. 1 (Abstract), p. 5 (B. Slow-Fast Policy Learning) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 2 (I. Ivrropucrion), p. 3 (B. Robot Data Collection System), p. 4 (A. 3D Deformation Field Extraction), p. 1 (Abstract), p. 5 (B. Slow-Fast Policy Learning)이다.
 
 ## Semantic QA — PDF body cross-check
 

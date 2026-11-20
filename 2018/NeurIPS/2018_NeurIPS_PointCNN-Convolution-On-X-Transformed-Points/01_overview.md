@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 (1b) We illustrate the problems and challenges of applying convolutions on point clouds in Figure 1.를 문제로 두고, In this paper, we propose to learn a K × K X-transformation for the coordinates of K input points (p1, p2, ..., pK), with a multilayer perceptron [39], i.e., X = MLP(p1, ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — (1b) We illustrate the problems and challenges of applying convolutions on point clouds in Figure 1.
+
+방법 관련 발췌 — In this paper, we propose to learn a K × K X-transformation for the coordinates of K input points (p1, p2, ..., pK), with a multilayer perceptron [39], i.e., X = MLP(p1, ...
 
 ## Problem and Motivation
 
@@ -78,4 +80,4 @@ Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 �
 
 ## Why Read It
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 (1b) We illustrate the problems and challenges of applying convolutions on point clouds in Figure 1.를 문제로 두고, In this paper, we propose to learn a K × K X-transformation for the coordinates of K input points (p1, p2, ..., pK), with a multilayer perceptron [39], i.e., X = MLP(p1, ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1 Introduction), p. 1 (Abstract), p. 2 (1 Introduction), p. 1 (1 Introduction), p. 2 (1 Introduction), p. 14 (Figure/Table caption) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 1 (1 Introduction), p. 1 (Abstract), p. 2 (1 Introduction), p. 14 (Figure/Table caption)이다.

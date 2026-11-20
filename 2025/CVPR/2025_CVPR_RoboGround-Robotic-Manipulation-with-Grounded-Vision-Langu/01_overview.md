@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다. 본문은 However, it is still challenging for these methods to generalize를 문제로 두고, In this work, we introduce grounding masks as a promising intermediate representation that balances two key aspects: (1) Effective spatial guidance, which not only specifies target objects and placement areas but also ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — However, it is still challenging for these methods to generalize
+
+방법 관련 발췌 — In this work, we introduce grounding masks as a promising intermediate representation that balances two key aspects: (1) Effective spatial guidance, which not only specifies target objects and placement areas but also ...
 
 ## Problem and Motivation
 
@@ -81,4 +83,4 @@ VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다
 
 ## Why Read It
 
-VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다. 본문은 However, it is still challenging for these methods to generalize를 문제로 두고, In this work, we introduce grounding masks as a promising intermediate representation that balances two key aspects: (1) Effective spatial guidance, which not only specifies target objects and placement areas but also ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1. Introduction), p. 1 (1. Introduction), p. 2 (1. Introduction), p. 2 (1. Introduction), p. 6 (4.4. Training and Inference), p. 5 (4.3. Grounded Policy Network) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 1 (1. Introduction), p. 2 (1. Introduction), p. 6 (4.4. Training and Inference), p. 5 (4.3. Grounded Policy Network)이다.

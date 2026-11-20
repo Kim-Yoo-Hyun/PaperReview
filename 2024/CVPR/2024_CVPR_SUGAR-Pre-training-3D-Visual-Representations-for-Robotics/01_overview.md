@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-Robotics-enabling 3D perception의 vla 문제를 이해하기 위해 읽는다. 본문은 Pretraining in existing work, however, is typically limited to single objects and complete point clouds, hence, ignoring This CVPR paper is the Open Access version, provided by the Computer Vision Foundation.를 문제로 두고, In summary, the contributions of our work are three-fold: • We present SUGAR - a framework with versatile transformer architecture for 3D point cloud representation learning on cluttered scenes. • We pre-train ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — Pretraining in existing work, however, is typically limited to single objects and complete point clouds, hence, ignoring This CVPR paper is the Open Access version, provided by the Computer Vision Foundation.
+
+방법 관련 발췌 — In summary, the contributions of our work are three-fold: • We present SUGAR - a framework with versatile transformer architecture for 3D point cloud representation learning on cluttered scenes. • We pre-train ...
 
 ## Problem and Motivation
 
@@ -82,7 +84,7 @@ Robotics-enabling 3D perception의 vla 문제를 이해하기 위해 읽는다. 
 
 ## Why Read It
 
-Robotics-enabling 3D perception의 vla 문제를 이해하기 위해 읽는다. 본문은 Pretraining in existing work, however, is typically limited to single objects and complete point clouds, hence, ignoring This CVPR paper is the Open Access version, provided by the Computer Vision Foundation.를 문제로 두고, In summary, the contributions of our work are three-fold: • We present SUGAR - a framework with versatile transformer architecture for 3D point cloud representation learning on cluttered scenes. • We pre-train ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1. Introduction), p. 1 (1. Introduction), p. 2 (1. Introduction), p. 2 (1. Introduction), p. 6 (1) OBJ ONLY which only includes ground truth segmented), p. 6 (1) OBJ ONLY which only includes ground truth segmented) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 1 (1. Introduction), p. 2 (1. Introduction), p. 6 (1) OBJ ONLY which only includes ground truth segmented)이다.
 
 ## Semantic QA — PDF body cross-check
 

@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-Locomotion, whole-body, mobile manipulation, and humanoids의 locomotion 문제를 이해하기 위해 읽는다. 본문은 However, training solely with task rewards introduces two major challenges: these rewards are prone (o exploitation (reward hacking), and the exploration process can lack sufficient direction.를 문제로 두고, Rather than enforcing strict adherence to a reference trajectory, we propose treating it as a hint to guide exploration, In our approach, « WBC is frst pre-trained on random base velocities and ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — However, training solely with task rewards introduces two major challenges: these rewards are prone (o exploitation (reward hacking), and the exploration process can lack sufficient direction.
+
+방법 관련 발췌 — Rather than enforcing strict adherence to a reference trajectory, we propose treating it as a hint to guide exploration, In our approach, « WBC is frst pre-trained on random base velocities and ...
 
 ## Problem and Motivation
 
@@ -86,4 +88,4 @@ Locomotion, whole-body, mobile manipulation, and humanoids의 locomotion 문제�
 
 ## Why Read It
 
-Locomotion, whole-body, mobile manipulation, and humanoids의 locomotion 문제를 이해하기 위해 읽는다. 본문은 However, training solely with task rewards introduces two major challenges: these rewards are prone (o exploitation (reward hacking), and the exploration process can lack sufficient direction.를 문제로 두고, Rather than enforcing strict adherence to a reference trajectory, we propose treating it as a hint to guide exploration, In our approach, « WBC is frst pre-trained on random base velocities and ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (Body text (section not recovered)), p. 1 (1. Iyrropucrion), p. 2 (1. Iyrropucrion), p. 2 (1. Iyrropucrion), p. 3 (A. Unsupervised Actuator Net), p. 3 (B. Whole-body Controller Pre-training) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 1 (Body text (section not recovered)), p. 1 (1. Iyrropucrion), p. 2 (1. Iyrropucrion), p. 3 (A. Unsupervised Actuator Net), p. 3 (B. Whole-body Controller Pre-training)이다.

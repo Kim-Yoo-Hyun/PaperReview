@@ -21,7 +21,9 @@
 
 ## Why This Paper Is Here
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 We address this problem by introducing a novel Failureto-Prior paradigm.를 문제로 두고, Our method is built on a Failure-to-Prior principle: reconstruction failures caused by view-inconsistent transients are not merely artifacts to suppress, but signals that can be mined into priors.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — We address this problem by introducing a novel Failureto-Prior paradigm.
+
+방법 관련 발췌 — Our method is built on a Failure-to-Prior principle: reconstruction failures caused by view-inconsistent transients are not merely artifacts to suppress, but signals that can be mined into priors.
 
 ## Problem and Motivation
 
@@ -88,4 +90,4 @@ Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 �
 
 ## Why Read It
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 We address this problem by introducing a novel Failureto-Prior paradigm.를 문제로 두고, Our method is built on a Failure-to-Prior principle: reconstruction failures caused by view-inconsistent transients are not merely artifacts to suppress, but signals that can be mined into priors.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (1. Introduction), p. 2 (1. Introduction), p. 1 (1. Introduction), p. 1 (1. Introduction), p. 5 (3.4. Reconstruction Failures to Object-Level Priors), p. 4 (3.2. Overview) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 2 (1. Introduction), p. 1 (1. Introduction), p. 5 (3.4. Reconstruction Failures to Object-Level Priors), p. 4 (3.2. Overview)이다.

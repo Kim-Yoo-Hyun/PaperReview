@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-Foundations: Vision and Language Models의 upstream 문제를 이해하기 위해 읽는다. 본문은 text specific, many existing self-supervised methods have shown their potential on images with convnets [10, 12, 30, 33].를 문제로 두고, However, our method shares also similarities with knowledge distillation [35] and we present it under this angle.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — text specific, many existing self-supervised methods have shown their potential on images with convnets [10, 12, 30, 33].
+
+방법 관련 발췌 — However, our method shares also similarities with knowledge distillation [35] and we present it under this angle.
 
 ## Problem and Motivation
 
@@ -85,4 +87,4 @@ Foundations: Vision and Language Models의 upstream 문제를 이해하기 위�
 
 ## Why Read It
 
-Foundations: Vision and Language Models의 upstream 문제를 이해하기 위해 읽는다. 본문은 text specific, many existing self-supervised methods have shown their potential on images with convnets [10, 12, 30, 33].를 문제로 두고, However, our method shares also similarities with knowledge distillation [35] and we present it under this angle.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (1. Introduction), p. 4 (3.1. SSL with Knowledge Distillation), p. 4 (3.1. SSL with Knowledge Distillation), p. 3 (3.1. SSL with Knowledge Distillation), p. 3 (3.1. SSL with Knowledge Distillation), p. 6 (4.1. Comparing with SSL frameworks on ImageNet) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 2 (1. Introduction), p. 4 (3.1. SSL with Knowledge Distillation), p. 3 (3.1. SSL with Knowledge Distillation), p. 6 (4.1. Comparing with SSL frameworks on ImageNet)이다.

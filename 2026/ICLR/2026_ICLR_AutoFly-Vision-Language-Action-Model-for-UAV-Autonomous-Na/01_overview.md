@@ -21,7 +21,9 @@
 
 ## Why This Paper Is Here
 
-VLA and generalist robot policies의 navigation 문제를 이해하기 위해 읽는다. 본문은 Vision-language navigation (VLN) requires intelligent agents to navigate environments by interpreting linguistic instructions alongside visual observations, serving as a cornerstone task in Embodied AI.를 문제로 두고, This standardized backbone approach enables fair comparison of each method's core contributions while maintaining implementation feasibility within our experimental framework.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — Vision-language navigation (VLN) requires intelligent agents to navigate environments by interpreting linguistic instructions alongside visual observations, serving as a cornerstone task in Embodied AI.
+
+방법 관련 발췌 — This standardized backbone approach enables fair comparison of each method's core contributions while maintaining implementation feasibility within our experimental framework.
 
 ## Problem and Motivation
 
@@ -86,4 +88,4 @@ VLA and generalist robot policies의 navigation 문제를 이해하기 위해 �
 
 ## Why Read It
 
-VLA and generalist robot policies의 navigation 문제를 이해하기 위해 읽는다. 본문은 Vision-language navigation (VLN) requires intelligent agents to navigate environments by interpreting linguistic instructions alongside visual observations, serving as a cornerstone task in Embodied AI.를 문제로 두고, This standardized backbone approach enables fair comparison of each method's core contributions while maintaining implementation feasibility within our experimental framework.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 4 (3 METHOD), p. 20 (A.3.4 ANALYSIS OF SIMPLER ALTERNATIVE APPROACHES), p. 4 (3 METHOD), p. 20 (A.3.4 ANALYSIS OF SIMPLER ALTERNATIVE APPROACHES), p. 17 (A.2.3 DATA COLLECTION ALGORITHM BASED ON RL), p. 17 (A.2.3 DATA COLLECTION ALGORITHM BASED ON RL) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 4 (3 METHOD), p. 20 (A.3.4 ANALYSIS OF SIMPLER ALTERNATIVE APPROACHES), p. 17 (A.2.3 DATA COLLECTION ALGORITHM BASED ON RL)이다.

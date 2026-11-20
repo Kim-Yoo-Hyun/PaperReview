@@ -19,7 +19,7 @@
 
 ## Why This Paper Is Here
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 Our analysis shows that directly inputting scene videos into VLMs fails in 3D scene understanding due to two factors: i) the lack of a global scene representation, ii) misalignment between per-frame local ...를 문제로 두고, Our paper makes these major contributions: • We introduce GPT4Scene, a framework that enhances Vision-Language Models (VLMs) to comprehend 3D scenes directly from pure vision input. • We introduce two techniques: i) ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+GPT4Scene은 장면 전체와 개별 영상 프레임의 대응을 시각적으로 제시해 3D 이해를 돕는다.
 
 ## Problem and Motivation
 
@@ -52,16 +52,10 @@ Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 �
 
 ## Main Claims and Actual Contribution
 
-- **p. 3 / 1 INTRODUCTION - extractive body cue:** Our paper makes these major contributions: • We introduce GPT4Scene, a framework that enhances Vision-Language Models (VLMs) to comprehend 3D scenes directly from pure vision ...
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** To address this, we propose GPT4Scene, a framework that enhances VLMs' spatial understanding (see Figure 1).
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** For smaller open-source vision-language models (VLMs), we introduce ScanAlign, a multimodal dataset comprising 165K aligned data pairs featuring STO-marker-annotated video frames, BEV images, and textual ...
-- **p. 3 / 2 METHODOLOGY - extractive body cue:** Here we introduce GPT4Scene's architecture.
-- **p. 4 / 2 METHODOLOGY - extractive body cue:** To help VLMs focus on specific objects, we introduce Spatial-Temporal Object markers (STO-markers), ensuring consistency between 2D frames and the 3D BEV image.
-- **p. 5 / 3 EXPERIMENTS - extractive body cue:** In terms of specific metrics, models fine-tuned using the GPT4Scene framework (based on the ScanAlign dataset) show outstanding performance: Qwen2-VL-7B (GPT4Scene) achieves a BLEU-1 score ...
-- **p. 9 / Figure/Table caption - extractive body cue:** Figure 5: GPT-Score evaluation. GPT4Scene holds an advantage on object-level tasks than Chat-scene. minimal improvements for the 3D QA task, which involves more general scene ...
-- **p. 6 / 3 EXPERIMENTS - extractive body cue:** These models not only significantly outperform the untuned baseline VLMs but also comprehensively outperform the previous SOTA models in the 3D point cloud LLM category ...
+- 조감도와 물체 표식을 활용해 여러 시점에 걸친 대응을 시각·언어 모델에 제시한다.
+- 주석이 붙은 영상 데이터로 공개 모델을 미세조정하고 3D 장면 이해 과제에서 평가한다.
 
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+[원문 초록](https://proceedings.iclr.cc/paper_files/paper/2026/hash/fef126561bbf9d4467dbb8d27334b8fe-Abstract-Conference.html)
 
 ## Evaluation Scope
 
@@ -84,4 +78,4 @@ Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 �
 
 ## Why Read It
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 Our analysis shows that directly inputting scene videos into VLMs fails in 3D scene understanding due to two factors: i) the lack of a global scene representation, ii) misalignment between per-frame local ...를 문제로 두고, Our paper makes these major contributions: • We introduce GPT4Scene, a framework that enhances Vision-Language Models (VLMs) to comprehend 3D scenes directly from pure vision input. • We introduce two techniques: i) ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 3 (2 METHODOLOGY), p. 4 (2 METHODOLOGY), p. 4 (2 METHODOLOGY), p. 5 (3 EXPERIMENTS) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 2 (1 INTRODUCTION), p. 3 (2 METHODOLOGY), p. 4 (2 METHODOLOGY), p. 5 (3 EXPERIMENTS)이다.

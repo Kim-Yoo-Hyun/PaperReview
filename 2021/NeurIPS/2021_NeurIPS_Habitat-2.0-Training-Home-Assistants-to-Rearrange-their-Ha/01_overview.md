@@ -19,7 +19,7 @@
 
 ## Why This Paper Is Here
 
-Locomotion, whole-body, mobile manipulation, and humanoids의 benchmark 문제를 이해하기 위해 읽는다. 본문은 Training and testing such robots in hardware directly is slow, expensive, and difficult to reproduce.를 문제로 두고, To support this long-term research agenda, we present: • ReplicaCAD: an artist-authored fully-interactive recreation of ‘FRL-apartment' spaces from the Replica dataset [2] consisting of 111 unique layouts of a single apartment backgroun ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+관절 물체와 물리를 갖춘 실내 장면에서 모바일 로봇의 물체 재배치를 평가한다.
 
 ## Problem and Motivation
 
@@ -53,16 +53,10 @@ Locomotion, whole-body, mobile manipulation, and humanoids의 benchmark 문제�
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1 Introduction - extractive body cue:** To support this long-term research agenda, we present: • ReplicaCAD: an artist-authored fully-interactive recreation of ‘FRL-apartment' spaces from the Replica dataset [2] consisting of 111 ...
-- **p. 1 / Abstract - extractive body cue:** We introduce Habitat 2.0 (H2.0), a simulation platform for training virtual robots in interactive 3D environments and complex physics-enabled scenarios.
-- **p. 1 / Abstract - extractive body cue:** Specifically, we present: (i) ReplicaCAD: an artist-authored, annotated, reconfigurable 3D dataset of apartments (matching real spaces) with articulated objects (e.g. cabinets and drawers that can ...
-- **p. 2 / 1 Introduction - extractive body cue:** Developing such embodied intelligent systems is a goal of deep scientific and societal value.
-- **p. 3 / 1 Introduction - extractive body cue:** H2.0 is free, open-sourced under the MIT license, and under active development.
-- **p. 10 / Figure/Table caption - extractive body cue:** Figure 5: Success rates for Home Assistant Benchmark tasks. Due to the difficulty of full HAB tasks, we analyze performance as completing a part of ...
-- **p. 6 / Figure/Table caption - extractive body cue:** Table 2: Benchmarking H2.0 performance: simulation steps per second (higher better) over 10 runs and a 95% confidence-interval In Idle, the agent is executing random ...
-- **p. 8 / Figure/Table caption - extractive body cue:** Table 3: Pick generalization analysis: success rates with mean and standard error on 600 episodes (and across 3 seeds for MonolithicRL). Systematic Generalization. With H2.0 ...
+- 재구성 가능한 주거 장면 데이터 ReplicaCAD와 빠른 상호작용 시뮬레이터를 구축한다.
+- 열기·집기·이동 등 기술을 긴 재배치 과업으로 구성해 학습 및 계획 방법을 비교한다.
 
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+[검증한 원문](https://proceedings.neurips.cc/paper_files/paper/2021/hash/021bbc7ee20b71134d53e20206bd6feb-Abstract.html)
 
 ## Evaluation Scope
 
@@ -86,4 +80,4 @@ Locomotion, whole-body, mobile manipulation, and humanoids의 benchmark 문제�
 
 ## Why Read It
 
-Locomotion, whole-body, mobile manipulation, and humanoids의 benchmark 문제를 이해하기 위해 읽는다. 본문은 Training and testing such robots in hardware directly is slow, expensive, and difficult to reproduce.를 문제로 두고, To support this long-term research agenda, we present: • ReplicaCAD: an artist-authored fully-interactive recreation of ‘FRL-apartment' spaces from the Replica dataset [2] consisting of 111 unique layouts of a single apartment backgroun ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (1 Introduction), p. 3 (1 Introduction), p. 2 (1 Introduction), p. 3 (1 Introduction), p. 1 (Abstract), p. 2 (1 Introduction) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 2 (1 Introduction), p. 3 (1 Introduction), p. 1 (Abstract)이다.

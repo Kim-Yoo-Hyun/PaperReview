@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다. 본문은 This disparity is widely recognized as the "seeing-to-doing gap" (Yuan et al., 2025): a failure to reliably translate rich perceptual understanding into effective robotic actions.를 문제로 두고, To bridge this gap, we propose pointing as an intuitive and effective paradigm to connect high-level understanding with generalizable action.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — This disparity is widely recognized as the "seeing-to-doing gap" (Yuan et al., 2025): a failure to reliably translate rich perceptual understanding into effective robotic actions.
+
+방법 관련 발췌 — To bridge this gap, we propose pointing as an intuitive and effective paradigm to connect high-level understanding with generalizable action.
 
 ## Problem and Motivation
 
@@ -83,4 +85,4 @@ VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다
 
 ## Why Read It
 
-VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다. 본문은 This disparity is widely recognized as the "seeing-to-doing gap" (Yuan et al., 2025): a failure to reliably translate rich perceptual understanding into effective robotic actions.를 문제로 두고, To bridge this gap, we propose pointing as an intuitive and effective paradigm to connect high-level understanding with generalizable action.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1 INTRODUCTION), p. 1 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 18 (B IMPLEMENTATION DETAILS OF EMBODIED-R1), p. 18 (B IMPLEMENTATION DETAILS OF EMBODIED-R1), p. 9 (4 EXPERIMENTS) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 1 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 18 (B IMPLEMENTATION DETAILS OF EMBODIED-R1), p. 9 (4 EXPERIMENTS)이다.

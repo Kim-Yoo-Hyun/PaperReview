@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다. 본문은 However, since these methods primarily rely on offline per-scene reconstruction, their computational demands pose significant challenges [49, 91] on applying them in robotic manipulation, especially for Model-based Reinforcement Learnin ...를 문제로 두고, In summary, our main contributions are threefold. • We introduce GWM, a novel 3D world model that is instantiated with a Gaussian diffusion transformer and a Gaussian VAE for efficient dynamic modeling.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — However, since these methods primarily rely on offline per-scene reconstruction, their computational demands pose significant challenges [49, 91] on applying them in robotic manipulation, especially for Model-based Reinforcement Learnin ...
+
+방법 관련 발췌 — In summary, our main contributions are threefold. • We introduce GWM, a novel 3D world model that is instantiated with a Gaussian diffusion transformer and a Gaussian VAE for efficient dynamic modeling.
 
 ## Problem and Motivation
 
@@ -81,4 +83,4 @@ VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다
 
 ## Why Read It
 
-VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다. 본문은 However, since these methods primarily rely on offline per-scene reconstruction, their computational demands pose significant challenges [49, 91] on applying them in robotic manipulation, especially for Model-based Reinforcement Learnin ...를 문제로 두고, In summary, our main contributions are threefold. • We introduce GWM, a novel 3D world model that is instantiated with a Gaussian diffusion transformer and a Gaussian VAE for efficient dynamic modeling.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (1. Introduction), p. 2 (1. Introduction), p. 4 (3.1. World State Encoding), p. 5 (3.3. GWM for Policy Learning), p. 3 (3.1. World State Encoding), p. 4 (3.1. World State Encoding) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 2 (1. Introduction), p. 4 (3.1. World State Encoding), p. 5 (3.3. GWM for Policy Learning), p. 3 (3.1. World State Encoding)이다.

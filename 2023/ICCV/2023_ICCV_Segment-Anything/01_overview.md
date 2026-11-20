@@ -80,4 +80,4 @@ Segment Anything은 점이나 상자 등으로 대상을 지정해 마스크를 
 
 ## Why Read It
 
-Foundations: Vision and Language Models의 upstream 문제를 이해하기 위해 읽는다. 본문은 These "foundation models" [8] can generalize to tasks and data distributions beyond those seen during training.를 문제로 두고, We introduce each interconnected component next, followed by the dataset we created and the experiments that demonstrate the effectiveness of our approach.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1. Introduction), p. 1 (1. Introduction), p. 2 (3. What data can power this task and model?), p. 5 (3. Segment Anything Model), p. 2 (3. What data can power this task and model?), p. 5 (3. Segment Anything Model) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 1 (1. Introduction), p. 2 (3. What data can power this task and model?), p. 5 (3. Segment Anything Model)이다.

@@ -352,7 +352,7 @@ def build_stats(papers: list[dict], resources: dict, rows: list[dict[str, str]])
         "",
         f"- Generated: {date.today()} KST",
         "- Source: [papers.json](../work/sources/papers.json)",
-        "- This is a generated diagnostic view; edit the manifest, tracker, or tier generator instead.",
+        "- 분포와 검색 필드는 원장·등급표·읽기 이력에서 생성한다. 교정 후 오류율과 미확인 항목은 [원문 감사](./SOURCE_AUDIT.md)에서 확인한다.",
         "",
         "## Snapshot",
         "",
@@ -368,6 +368,16 @@ def build_stats(papers: list[dict], resources: dict, rows: list[dict[str, str]])
         f"- Papers without DOI/arXiv/OpenReview identifier: **{sum(value == 'source_only' for value in identifiers.elements())}**",
         "",
     ]
+    counts_by_year = Counter(p["year"] for p in papers)
+    recent_years = range(date.today().year - 2, date.today().year + 1)
+    lines += ["## 연도와 발표처", "", "| 등록 연도 | 편수 |", "|---|---:|"]
+    lines += [f"| {year} | {counts_by_year[year]} |" for year in recent_years]
+    lines += [f"| 그 밖의 연도 | {len(papers) - sum(counts_by_year[y] for y in recent_years)} |", ""]
+    venues = Counter(p["venue_canonical"] for p in papers)
+    leading = venues.most_common(8)
+    lines += ["| 발표처·공개처 | 편수 |", "|---|---:|", *(f"| {venue} | {n} |" for venue, n in leading),
+              f"| 그 밖의 발표처·공개처 | {len(papers) - sum(n for _, n in leading)} |", "",
+              "프리프린트는 등록한 공개 연도를 따른다. 전체 연도·발표처·등급 조합은 [검색 색인](./REGISTRY_INDEX.csv)에서 확인할 수 있다.", ""]
     lines += table("Tier", tier)
     lines += table("Evidence level", evidence)
     lines += table("Reading status (intensive set)", status)

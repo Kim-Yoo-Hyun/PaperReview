@@ -80,4 +80,4 @@ PointDiT는 단일 영상에 대응하는 3D 점 지도를 영상 공간의 확�
 
 ## Why Read It
 
-Robotics-enabling 3D perception의 generative 문제를 이해하기 위해 읽는다. 본문은 Existing approaches to this challenge fall broadly into two categories.를 문제로 두고, Inspired by JiT (Li & He, 2026), we introduce a minimalist pixel-space diffusion framework that trains directly on the raw point map space.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1. Introduction), p. 2 (1. Introduction), p. 2 (1. Introduction), p. 5 (3.3. Training), p. 3 (3. Approach), p. 5 (3.2. Architecture) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 1 (1. Introduction), p. 2 (1. Introduction), p. 5 (3.3. Training), p. 3 (3. Approach), p. 5 (3.2. Architecture)이다.

@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-Locomotion, whole-body, mobile manipulation, and humanoids의 locomotion 문제를 이해하기 위해 읽는다. 본문은 This transfer has proven quite challenging, because the sim-to-real gap itself is the result of multiple factors: (a) the physical robot and its model in the simulator differ significantly; (b) realworld terrains ...를 문제로 두고, The combination of these components enables the robot to adapt to novel situations in fractions of a second.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — This transfer has proven quite challenging, because the sim-to-real gap itself is the result of multiple factors: (a) the physical robot and its model in the simulator differ significantly; (b) realworld terrains ...
+
+방법 관련 발췌 — The combination of these components enables the robot to adapt to novel situations in fractions of a second.
 
 ## Problem and Motivation
 
@@ -85,7 +87,7 @@ Locomotion, whole-body, mobile manipulation, and humanoids의 locomotion 문제�
 
 ## Why Read It
 
-Locomotion, whole-body, mobile manipulation, and humanoids의 locomotion 문제를 이해하기 위해 읽는다. 본문은 This transfer has proven quite challenging, because the sim-to-real gap itself is the result of multiple factors: (a) the physical robot and its model in the simulator differ significantly; (b) realworld terrains ...를 문제로 두고, The combination of these components enables the robot to adapt to novel situations in fractions of a second.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (I. INTRODUCTION), p. 2 (10 Hz), p. 2 (10 Hz), p. 1 (Abstract), p. 4 (III. RAPID MOTOR ADAPTATION), p. 5 (B. Adaptation Module) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 1 (I. INTRODUCTION), p. 2 (10 Hz), p. 1 (Abstract), p. 4 (III. RAPID MOTOR ADAPTATION), p. 5 (B. Adaptation Module)이다.
 
 ## Semantic QA — PDF body cross-check
 

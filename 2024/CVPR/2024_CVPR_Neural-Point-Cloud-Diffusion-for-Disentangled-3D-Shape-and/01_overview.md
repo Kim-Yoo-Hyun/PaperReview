@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-Robotics-enabling 3D perception의 generative 문제를 이해하기 위해 읽는다. 본문은 Thus, one of these factors cannot be changed independently.를 문제로 두고, In contrast, we propose a method that enables individual generation of shape and appearance by introducing a hybrid approach that consists of a neural point cloud hosting a continuous radiance field.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — Thus, one of these factors cannot be changed independently.
+
+방법 관련 발췌 — In contrast, we propose a method that enables individual generation of shape and appearance by introducing a hybrid approach that consists of a neural point cloud hosting a continuous radiance field.
 
 ## Problem and Motivation
 
@@ -80,4 +82,4 @@ Robotics-enabling 3D perception의 generative 문제를 이해하기 위해 읽�
 
 ## Why Read It
 
-Robotics-enabling 3D perception의 generative 문제를 이해하기 위해 읽는다. 본문은 Thus, one of these factors cannot be changed independently.를 문제로 두고, In contrast, we propose a method that enables individual generation of shape and appearance by introducing a hybrid approach that consists of a neural point cloud hosting a continuous radiance field.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1. Introduction), p. 1 (1. Introduction), p. 5 (3.3. Neural point cloud diffusion), p. 4 (3.2. Autodecoding for diffusion), p. 4 (3.2. Autodecoding for diffusion), p. 3 (3. Method) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 1 (1. Introduction), p. 5 (3.3. Neural point cloud diffusion), p. 4 (3.2. Autodecoding for diffusion), p. 3 (3. Method)이다.

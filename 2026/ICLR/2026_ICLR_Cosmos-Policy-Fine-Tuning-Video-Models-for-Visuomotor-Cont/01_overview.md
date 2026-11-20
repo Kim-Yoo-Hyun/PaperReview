@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-World models, safety, uncertainty, and recovery의 safety 문제를 이해하기 위해 읽는다. 본문은 In this work, we address these limitations with Cosmos Policy: an effective robot policy that is adapted from a pretrained video model (Cosmos-Predict2-2B (NVIDIA et al., 2025)) through a single stage of ...를 문제로 두고, We evaluate our method in two modes: first as a direct policy (without planning) and then with model-based planning using the future state and value predictions.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — In this work, we address these limitations with Cosmos Policy: an effective robot policy that is adapted from a pretrained video model (Cosmos-Predict2-2B (NVIDIA et al., 2025)) through a single stage of ...
+
+방법 관련 발췌 — We evaluate our method in two modes: first as a direct policy (without planning) and then with model-based planning using the future state and value predictions.
 
 ## Problem and Motivation
 
@@ -86,4 +88,4 @@ World models, safety, uncertainty, and recovery의 safety 문제를 이해하기
 
 ## Why Read It
 
-World models, safety, uncertainty, and recovery의 safety 문제를 이해하기 위해 읽는다. 본문은 In this work, we address these limitations with Cosmos Policy: an effective robot policy that is adapted from a pretrained video model (Cosmos-Predict2-2B (NVIDIA et al., 2025)) through a single stage of ...를 문제로 두고, We evaluate our method in two modes: first as a direct policy (without planning) and then with model-based planning using the future state and value predictions.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (1 INTRODUCTION), p. 6 (3 PRELIMINARIES), p. 6 (3 PRELIMINARIES), p. 2 (1 INTRODUCTION), p. 4 (3 PRELIMINARIES), p. 17 (A.2.2 LIBERO TRAINING DETAILS) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 2 (1 INTRODUCTION), p. 6 (3 PRELIMINARIES), p. 4 (3 PRELIMINARIES), p. 17 (A.2.2 LIBERO TRAINING DETAILS)이다.

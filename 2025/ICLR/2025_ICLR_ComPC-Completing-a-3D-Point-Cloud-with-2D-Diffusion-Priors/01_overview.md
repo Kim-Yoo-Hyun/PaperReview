@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-Planning and control의 generative 문제를 이해하기 위해 읽는다. 본문은 However, they face challenges in handling data that differs from what they were trained on, such as unseen object categories or real-world scans.를 문제로 두고, Our main contributions can be summarized as below: • We propose the Partial Gaussian Initialization to generate a reference image for partial points, which is observed from an estimated reference viewpoint; • ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — However, they face challenges in handling data that differs from what they were trained on, such as unseen object categories or real-world scans.
+
+방법 관련 발췌 — Our main contributions can be summarized as below: • We propose the Partial Gaussian Initialization to generate a reference image for partial points, which is observed from an estimated reference viewpoint; • ...
 
 ## Problem and Motivation
 
@@ -85,4 +87,4 @@ Planning and control의 generative 문제를 이해하기 위해 읽는다. 본�
 
 ## Why Read It
 
-Planning and control의 generative 문제를 이해하기 위해 읽는다. 본문은 However, they face challenges in handling data that differs from what they were trained on, such as unseen object categories or real-world scans.를 문제로 두고, Our main contributions can be summarized as below: • We propose the Partial Gaussian Initialization to generate a reference image for partial points, which is observed from an estimated reference viewpoint; • ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1 INTRODUCTION), p. 1 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 3 (1 INTRODUCTION), p. 4 (3 METHODOLOGY) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 1 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 3 (1 INTRODUCTION), p. 4 (3 METHODOLOGY)이다.

@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 Recent advancements in embodied artificial intelligence have emphasized the importance of connecting 3D scene understanding with natural language [16,27, 29, 44, 71].를 문제로 두고, In this section, we present PQ3D, which consists of three main modules: Task Prompt Encoding, 3D Scene Encoding, and Prompt-guided Query Learning, as depicted in Fig.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — Recent advancements in embodied artificial intelligence have emphasized the importance of connecting 3D scene understanding with natural language [16,27, 29, 44, 71].
+
+방법 관련 발췌 — In this section, we present PQ3D, which consists of three main modules: Task Prompt Encoding, 3D Scene Encoding, and Prompt-guided Query Learning, as depicted in Fig.
 
 ## Problem and Motivation
 
@@ -81,4 +83,4 @@ Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 �
 
 ## Why Read It
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 Recent advancements in embodied artificial intelligence have emphasized the importance of connecting 3D scene understanding with natural language [16,27, 29, 44, 71].를 문제로 두고, In this section, we present PQ3D, which consists of three main modules: Task Prompt Encoding, 3D Scene Encoding, and Prompt-guided Query Learning, as depicted in Fig.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 7 (3 Method), p. 6 (3 Method), p. 8 (3 Method), p. 7 (3 Method), p. 6 (3 Method), p. 8 (3 Method) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 7 (3 Method), p. 6 (3 Method), p. 8 (3 Method)이다.

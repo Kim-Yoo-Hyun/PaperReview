@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-Manipulation, contact, tactile, and dexterity의 manipulation 문제를 이해하기 위해 읽는다. 본문은 As a result, CordViP not only effectively addresses occlusion challenges during dexterous manipulation but also significantly improves the model's ability to comprehend spatial interactions and collaborative dynamics.를 문제로 두고, To this end, we propose the interaction-aware generation of 3D point clouds, enabling the reconstruction of crucial spatial information,를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — As a result, CordViP not only effectively addresses occlusion challenges during dexterous manipulation but also significantly improves the model's ability to comprehend spatial interactions and collaborative dynamics.
+
+방법 관련 발췌 — To this end, we propose the interaction-aware generation of 3D point clouds, enabling the reconstruction of crucial spatial information,
 
 ## Problem and Motivation
 
@@ -83,7 +85,7 @@ Manipulation, contact, tactile, and dexterity의 manipulation 문제를 이해�
 
 ## Why Read It
 
-Manipulation, contact, tactile, and dexterity의 manipulation 문제를 이해하기 위해 읽는다. 본문은 As a result, CordViP not only effectively addresses occlusion challenges during dexterous manipulation but also significantly improves the model's ability to comprehend spatial interactions and collaborative dynamics.를 문제로 두고, To this end, we propose the interaction-aware generation of 3D point clouds, enabling the reconstruction of crucial spatial information,를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 3 (A. Problem Formulation), p. 3 (A. Problem Formulation), p. 5 (C. Comact and Coordination-Enhanced Feature Extraction), p. 5 (C. Comact and Coordination-Enhanced Feature Extraction), p. 14 (B. Implementation Details), p. 14 (B. Implementation Details) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 3 (A. Problem Formulation), p. 5 (C. Comact and Coordination-Enhanced Feature Extraction), p. 14 (B. Implementation Details)이다.
 
 ## Semantic QA — PDF body cross-check
 

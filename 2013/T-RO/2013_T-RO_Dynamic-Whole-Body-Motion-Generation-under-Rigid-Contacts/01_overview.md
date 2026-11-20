@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-Planning and control의 humanoid 문제를 이해하기 위해 읽는다. 본문은 However, inequality constraints cannot be taken into account explicitly.를 문제로 두고, In this paper, we propose a generic solution to take into account equalities and inequalities in a strict hierarchy to generate a dynamic motion.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — However, inequality constraints cannot be taken into account explicitly.
+
+방법 관련 발췌 — In this paper, we propose a generic solution to take into account equalities and inequalities in a strict hierarchy to generate a dynamic motion.
 
 ## Problem and Motivation
 
@@ -86,7 +88,7 @@ Planning and control의 humanoid 문제를 이해하기 위해 읽는다. 본문
 
 ## Why Read It
 
-Planning and control의 humanoid 문제를 이해하기 위해 읽는다. 본문은 However, inequality constraints cannot be taken into account explicitly.를 문제로 두고, In this paper, we propose a generic solution to take into account equalities and inequalities in a strict hierarchy to generate a dynamic motion.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 3 (I. INTRODUCTION), p. 3 (I. INTRODUCTION), p. 7 (V. REDUCED FORMULATION OF RIGID PLANAR CONTACTS), p. 7 (V. REDUCED FORMULATION OF RIGID PLANAR CONTACTS) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 2 (I. INTRODUCTION), p. 3 (I. INTRODUCTION), p. 7 (V. REDUCED FORMULATION OF RIGID PLANAR CONTACTS)이다.
 
 ## Semantic QA — PDF body cross-check
 

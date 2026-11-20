@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다. 본문은 Consequently, MLLMs lack prior knowledge in this field while successful training for these tasks necessitates extensive data to achieve desired generalization ability.를 문제로 두고, Meanwhile, in real-world experiments, our method shows strong generalization ability, with or without TTA strategy.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — Consequently, MLLMs lack prior knowledge in this field while successful training for these tasks necessitates extensive data to achieve desired generalization ability.
+
+방법 관련 발췌 — Meanwhile, in real-world experiments, our method shows strong generalization ability, with or without TTA strategy.
 
 ## Problem and Motivation
 
@@ -80,4 +82,4 @@ VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다
 
 ## Why Read It
 
-VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다. 본문은 Consequently, MLLMs lack prior knowledge in this field while successful training for these tasks necessitates extensive data to achieve desired generalization ability.를 문제로 두고, Meanwhile, in real-world experiments, our method shows strong generalization ability, with or without TTA strategy.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (1. Introduction), p. 1 (1. Introduction), p. 2 (1. Introduction), p. 1 (1. Introduction), p. 6 (3.3. Sim-to-real Transfer), p. 3 (3.1. Fine-tuning Strategy) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 2 (1. Introduction), p. 1 (1. Introduction), p. 6 (3.3. Sim-to-real Transfer), p. 3 (3.1. Fine-tuning Strategy)이다.

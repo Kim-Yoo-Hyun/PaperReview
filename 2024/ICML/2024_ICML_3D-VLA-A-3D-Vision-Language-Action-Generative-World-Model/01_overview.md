@@ -19,7 +19,7 @@
 
 ## Why This Paper Is Here
 
-VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다. 본문은 Another challenge for building such a generative world model lies in the lack of data.를 문제로 두고, Thirdly, to better encode dynamics with our framework, we introduce the <scene> </scene> tokens to enclose the embeddings of a static scene.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+3차원 장면·언어·행동 토큰을 연결하고 목표 관측을 생성해 조작 행동을 예측한다.
 
 ## Problem and Motivation
 
@@ -53,16 +53,10 @@ VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다
 
 ## Main Claims and Actual Contribution
 
-- **p. 5 / 4.2.2. INTERACTION TOKENS - extractive body cue:** Thirdly, to better encode dynamics with our framework, we introduce the <scene> </scene> tokens to enclose the embeddings of a static scene.
-- **p. 2 / 1. Introduction - extractive body cue:** To sum up, we have the following contributions: • We propose 3D-VLA, a new family of 3D vision-languageaction embodied foundation models that unify 3D perception, ...
-- **p. 5 / 4.2.2. INTERACTION TOKENS - extractive body cue:** To enhance the model's comprehension of 3D scenes and facilitate interaction within these environments, we introduce a novel set of interaction tokens.
-- **p. 1 / 1. Introduction - extractive body cue:** To this end, we propose 3D-VLA by introducing a new family of embodied foundation models that seamlessly link 3D perception, reasoning, and action through a ...
-- **p. 2 / 1. Introduction - extractive body cue:** Recognizing the inadequacy of multimodal generation ability in embodied foundation models, we propose to inject the goal generation ability into 3D-VLA.
-- **p. 8 / Figure/Table caption - extractive body cue:** Table 6. Evaluation of action planning on CALVIN dataset. matches the baseline performance in most tasks within the RLBench action prediction, showing its planning capability. ...
-- **p. 7 / 5.1. 3D Reasoning and Localization - extractive body cue:** In Tables 1, 3D-VLA outperforms all 2D VLM methods on language reasoning tasks.
-- **p. 3 / Figure/Table caption - extractive body cue:** Figure 2. Overview of our 3D-VLA pipeline. The left part shows our goal-generation capability. Our model can imagine the final state image and point cloud ...
+- 3D 언어 모델에 물체·장면·행동 상호작용 토큰을 도입한다.
+- 영상과 점군 목표 생성기를 훈련하고 시뮬레이션에서 행동 예측과 장기 수행을 평가한다.
 
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+[검증한 원문](https://proceedings.mlr.press/v235/zhen24a.html)
 
 ## Evaluation Scope
 
@@ -83,7 +77,7 @@ VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다
 
 ## Why Read It
 
-VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다. 본문은 Another challenge for building such a generative world model lies in the lack of data.를 문제로 두고, Thirdly, to better encode dynamics with our framework, we introduce the <scene> </scene> tokens to enclose the embeddings of a static scene.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (1. Introduction), p. 1 (1. Introduction), p. 1 (1. Introduction), p. 2 (1. Introduction), p. 5 (4.3. Injecting Goal Generation Ability into 3D-VLA), p. 5 (4.2.2. INTERACTION TOKENS) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 2 (1. Introduction), p. 1 (1. Introduction), p. 5 (4.3. Injecting Goal Generation Ability into 3D-VLA), p. 5 (4.2.2. INTERACTION TOKENS)이다.
 
 ## Semantic QA — PDF body cross-check
 

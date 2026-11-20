@@ -74,4 +74,4 @@ Align Your Gaussians는 텍스트로 지정한 장면과 움직임을 동적 3D 
 
 ## Why Read It
 
-Robotics-enabling 3D perception의 generative 문제를 이해하기 위해 읽는다. 본문은 We also propose a new view-guidance method to generate consistent 3D scenes for initialization of the 4D stage, and we leverage the concurrent classifier score distillation method [102].를 문제로 두고, We propose Align Your Gaussians (AYG), a novel method for 4D content creation.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (1. Introduction), p. 5 (3.2. Text-to-4D as Compositional Generation), p. 4 (3.2. Text-to-4D as Compositional Generation), p. 3 (2. Background), p. 2 (1. Introduction), p. 2 (1. Introduction) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 2 (1. Introduction), p. 5 (3.2. Text-to-4D as Compositional Generation), p. 4 (3.2. Text-to-4D as Compositional Generation), p. 3 (2. Background)이다.

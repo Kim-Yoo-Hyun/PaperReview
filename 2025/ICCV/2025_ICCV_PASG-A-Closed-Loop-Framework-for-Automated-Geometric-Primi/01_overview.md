@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다. 본문은 This limitation stems from insufficient semantic understanding of object canonical spaces-for instance, manually annotated "handle centers" for teapots lack contextual semantics (such as functional descriptions and usage scenarios), lea ...를 문제로 두고, Our contributions are as follows: • We propose a novel framework that automatically annotates hierarchical semantics for object interaction primitives, bridging the gap between low-level geometric features and high-level task semantics. ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — This limitation stems from insufficient semantic understanding of object canonical spaces-for instance, manually annotated "handle centers" for teapots lack contextual semantics (such as functional descriptions and usage scenarios), lea ...
+
+방법 관련 발췌 — Our contributions are as follows: • We propose a novel framework that automatically annotates hierarchical semantics for object interaction primitives, bridging the gap between low-level geometric features and high-level task semantics. ...
 
 ## Problem and Motivation
 
@@ -84,4 +86,4 @@ VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다
 
 ## Why Read It
 
-VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다. 본문은 This limitation stems from insufficient semantic understanding of object canonical spaces-for instance, manually annotated "handle centers" for teapots lack contextual semantics (such as functional descriptions and usage scenarios), lea ...를 문제로 두고, Our contributions are as follows: • We propose a novel framework that automatically annotates hierarchical semantics for object interaction primitives, bridging the gap between low-level geometric features and high-level task semantics. ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (1. Introduction), p. 2 (1. Introduction), p. 4 (3.2. Geometry Primitive Extraction), p. 5 (3.3. Task-Oriented Semantic Annotation), p. 3 (Method), p. 3 (2.2. Spatial Reasoning for Manipulation) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 2 (1. Introduction), p. 4 (3.2. Geometry Primitive Extraction), p. 5 (3.3. Task-Oriented Semantic Annotation), p. 3 (Method), p. 3 (2.2. Spatial Reasoning for Manipulation)이다.

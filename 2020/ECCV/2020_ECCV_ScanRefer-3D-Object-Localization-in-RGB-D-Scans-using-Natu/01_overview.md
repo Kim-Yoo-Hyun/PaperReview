@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 However, these methods and datasets are restricted to 2D images, where object localization fails to capture the true 3D extent of an object (see Fig.를 문제로 두고, Our architecture consists of two main modules: 1) detection & encoding; 2) fusion & localization (Fig.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — However, these methods and datasets are restricted to 2D images, where object localization fails to capture the true 3D extent of an object (see Fig.
+
+방법 관련 발췌 — Our architecture consists of two main modules: 1) detection & encoding; 2) fusion & localization (Fig.
 
 ## Problem and Motivation
 
@@ -84,4 +86,4 @@ Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 �
 
 ## Why Read It
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 However, these methods and datasets are restricted to 2D images, where object localization fails to capture the true 3D extent of an object (see Fig.를 문제로 두고, Our architecture consists of two main modules: 1) detection & encoding; 2) fusion & localization (Fig.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (1 Introduction), p. 2 (1 Introduction), p. 7 (5 Method), p. 7 (5 Method), p. 9 (5 Method), p. 6 (5 Method) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 2 (1 Introduction), p. 7 (5 Method), p. 9 (5 Method), p. 6 (5 Method)이다.

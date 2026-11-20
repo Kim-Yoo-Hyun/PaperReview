@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-Robotics-enabling 3D perception의 navigation 문제를 이해하기 위해 읽는다. 본문은 To tackle the challenge, one of the most important bottlenecks lies on the difficulty in getting high-quality perception data when training the policy in conventional simulators [10], [11].를 문제로 두고, Our main contributions are: • We introduce a simulator for training robot vision-based control policies by integrating 3DGS for high-fidelity visuals with a differentiable dynamics model to enable end-to-end gradient computation. • ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — To tackle the challenge, one of the most important bottlenecks lies on the difficulty in getting high-quality perception data when training the policy in conventional simulators [10], [11].
+
+방법 관련 발췌 — Our main contributions are: • We introduce a simulator for training robot vision-based control policies by integrating 3DGS for high-fidelity visuals with a differentiable dynamics model to enable end-to-end gradient computation. • ...
 
 ## Problem and Motivation
 
@@ -83,4 +85,4 @@ Robotics-enabling 3D perception의 navigation 문제를 이해하기 위해 읽�
 
 ## Why Read It
 
-Robotics-enabling 3D perception의 navigation 문제를 이해하기 위해 읽는다. 본문은 To tackle the challenge, one of the most important bottlenecks lies on the difficulty in getting high-quality perception data when training the policy in conventional simulators [10], [11].를 문제로 두고, Our main contributions are: • We introduce a simulator for training robot vision-based control policies by integrating 3DGS for high-fidelity visuals with a differentiable dynamics model to enable end-to-end gradient computation. • ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 2 (II. BACKGROUND), p. 3 (III. METHOD), p. 3 (III. METHOD) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 1 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 2 (II. BACKGROUND), p. 3 (III. METHOD)이다.

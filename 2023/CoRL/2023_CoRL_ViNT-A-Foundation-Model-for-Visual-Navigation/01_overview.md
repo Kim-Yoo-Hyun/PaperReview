@@ -79,7 +79,7 @@ ViNT는 여러 이동 로봇의 주행 자료에서 목표에 도달하는 정�
 
 ## Why Read It
 
-Locomotion, whole-body, mobile manipulation, and humanoids의 navigation 문제를 이해하기 위해 읽는다. 본문은 Although this paradigm has been successful in many domains, it is difficult to apply in robotics due to the sheer diversity of environments, platforms, and applications.를 문제로 두고, We propose a novel exploration algorithm for the visual navigation paradigm using a diffusion model to propose short-horizon goals, and demonstrate that it enables ViNT to navigate in novel environments.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1 Introduction), p. 2 (1 Introduction), p. 2 (1 Introduction), p. 18 (B.2 Subgoal Diffusion), p. 18 (B.2 Subgoal Diffusion), p. 21 (B.4 Fine-tuning ViNT) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 1 (1 Introduction), p. 2 (1 Introduction), p. 18 (B.2 Subgoal Diffusion), p. 21 (B.4 Fine-tuning ViNT)이다.
 
 ## Semantic QA — PDF body cross-check
 

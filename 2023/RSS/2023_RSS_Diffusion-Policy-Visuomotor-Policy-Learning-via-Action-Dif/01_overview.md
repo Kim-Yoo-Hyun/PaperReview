@@ -79,7 +79,7 @@ Diffusion Policy는 시각 관측을 조건으로 행동 시퀀스를 반복 복
 
 ## Why Read It
 
-RL, IL, offline learning, and robot data의 il 문제를 이해하기 위해 읽는다. 본문은 (2022) fails to commit to a single mode due to its lack of temporal action consistency.를 문제로 두고, To successfully employ diffusion models for visuomotor policy learning, we present the following technical contributions that enhance the performance of Diffusion Policy and unlock its full potential on physical robots: • Closed-loop ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 5 (1 Introduction), p. 1 (1 Introduction), p. 4 (1 Introduction), p. 5 (1 Introduction), p. 1 (1 Introduction), p. 16 (A.4 Hyperparameters) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 5 (1 Introduction), p. 1 (1 Introduction), p. 4 (1 Introduction), p. 16 (A.4 Hyperparameters)이다.
 
 ## Semantic QA — PDF body cross-check
 

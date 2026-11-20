@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 reasonable quality curve data but has difficulty with very noisy curves because the method uses arclenath sampling of the curves to obtain corresponding point sets.를 문제로 두고, The SVD approach, based on the eross- ‘covariance matrix of two point distributions, does, however, ‘generalize easily ton dimensions and would be our method of choice for n > 3 in any ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — reasonable quality curve data but has difficulty with very noisy curves because the method uses arclenath sampling of the curves to obtain corresponding point sets.
+
+방법 관련 발췌 — The SVD approach, based on the eross- ‘covariance matrix of two point distributions, does, however, ‘generalize easily ton dimensions and would be our method of choice for n > 3 in any ...
 
 ## Problem and Motivation
 
@@ -86,7 +88,7 @@ Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 �
 
 ## Why Read It
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 reasonable quality curve data but has difficulty with very noisy curves because the method uses arclenath sampling of the curves to obtain corresponding point sets.를 문제로 두고, The SVD approach, based on the eross- ‘covariance matrix of two point distributions, does, however, ‘generalize easily ton dimensions and would be our method of choice for n > 3 in any ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (1) Point sets), p. 2 (1) Point sets), p. 4 (B. Point to Implicit Entity Distance), p. 4 (B. Point to Implicit Entity Distance), p. 1 (1. Istmopuction), p. 1 (1) Point sets) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 2 (1) Point sets), p. 4 (B. Point to Implicit Entity Distance), p. 1 (1. Istmopuction), p. 1 (1) Point sets)이다.
 
 ## Semantic QA — PDF body cross-check
 

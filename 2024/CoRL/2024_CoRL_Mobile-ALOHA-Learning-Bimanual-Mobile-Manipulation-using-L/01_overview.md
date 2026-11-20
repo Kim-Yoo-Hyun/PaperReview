@@ -82,7 +82,7 @@ Mobile ALOHA는 이동 베이스와 두 팔을 함께 원격조작해 모은 시
 
 ## Why Read It
 
-Locomotion, whole-body, mobile manipulation, and humanoids의 mobile_manipulation 문제를 이해하기 위해 읽는다. 본문은 (1) We lack accessible, plug-and-play hardware for whole-body teleoperation.를 문제로 두고, On the hardware front, we present Mobile ALOHA, a low-cost and whole-body teleoperation system for collecting bimanual mobile manipulation data.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (1. Introduction), p. 2 (1. Introduction), p. 5 (3. Mobile ALOHA Hardware), p. 2 (1. Introduction), p. 5 (3. Mobile ALOHA Hardware), p. 2 (1. Introduction) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 2 (1. Introduction), p. 5 (3. Mobile ALOHA Hardware)이다.
 
 ## Semantic QA — PDF body cross-check
 

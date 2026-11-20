@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 Although these approaches partially alleviate the challenges of sparse-view reconstruction such as rendering uncertainty and geometric inconsistency, they do not fundamentally resolve the issue.를 문제로 두고, Hence, we introduce a variational optimization scheme to obtain a cleaner and more structured initialization.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — Although these approaches partially alleviate the challenges of sparse-view reconstruction such as rendering uncertainty and geometric inconsistency, they do not fundamentally resolve the issue.
+
+방법 관련 발췌 — Hence, we introduce a variational optimization scheme to obtain a cleaner and more structured initialization.
 
 ## Problem and Motivation
 
@@ -86,4 +88,4 @@ Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 �
 
 ## Why Read It
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 Although these approaches partially alleviate the challenges of sparse-view reconstruction such as rendering uncertainty and geometric inconsistency, they do not fundamentally resolve the issue.를 문제로 두고, Hence, we introduce a variational optimization scheme to obtain a cleaner and more structured initialization.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1. Introduction), p. 1 (1. Introduction), p. 4 (4.1. Variational Bayesian Initialization), p. 4 (4.1. Variational Bayesian Initialization), p. 6 (4.3. Kalman Filtering for Position Denoising), p. 5 (4.2. Prior-Guided Adaptive Density Control) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 1 (1. Introduction), p. 4 (4.1. Variational Bayesian Initialization), p. 6 (4.3. Kalman Filtering for Position Denoising), p. 5 (4.2. Prior-Guided Adaptive Density Control)이다.

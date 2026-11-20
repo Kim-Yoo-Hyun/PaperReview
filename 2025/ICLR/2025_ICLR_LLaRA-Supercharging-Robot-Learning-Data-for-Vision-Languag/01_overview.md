@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다. 본문은 The resulting VLMs exhibit strong vision-language skills, but not without limitations such as spatial awareness (Chen et al., 2023; Ranasinghe et al., 2024b) or niche-domain understanding.를 문제로 두고, Such a formulation based on conversation-style instruction-response data enables us to convert a VLM into a robot action policy effortlessly.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — The resulting VLMs exhibit strong vision-language skills, but not without limitations such as spatial awareness (Chen et al., 2023; Ranasinghe et al., 2024b) or niche-domain understanding.
+
+방법 관련 발췌 — Such a formulation based on conversation-style instruction-response data enables us to convert a VLM into a robot action policy effortlessly.
 
 ## Problem and Motivation
 
@@ -82,4 +84,4 @@ VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다
 
 ## Why Read It
 
-VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다. 본문은 The resulting VLMs exhibit strong vision-language skills, but not without limitations such as spatial awareness (Chen et al., 2023; Ranasinghe et al., 2024b) or niche-domain understanding.를 문제로 두고, Such a formulation based on conversation-style instruction-response data enables us to convert a VLM into a robot action policy effortlessly.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 16 (A.1.1 BUILD inBC DATASET FROM EXPERT TRAJECTORIES), p. 16 (A.1.1 BUILD inBC DATASET FROM EXPERT TRAJECTORIES), p. 19 (A.3 INFERENCE), p. 18 (A.3 INFERENCE) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 2 (1 INTRODUCTION), p. 16 (A.1.1 BUILD inBC DATASET FROM EXPERT TRAJECTORIES), p. 19 (A.3 INFERENCE), p. 18 (A.3 INFERENCE)이다.

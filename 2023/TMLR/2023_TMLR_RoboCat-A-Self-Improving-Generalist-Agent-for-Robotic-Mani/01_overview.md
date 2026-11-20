@@ -20,7 +20,9 @@
 
 ## Why This Paper Is Here
 
-VLA and generalist robot policies의 robot_data 문제를 이해하기 위해 읽는다. 본문은 In the real world, the shafts are metallic and the base is not fixed to the basket, which significantly increases the difficulty of the task.를 문제로 두고, Our main contributions in this work are outlined below: (1) we demonstrate, for the first time, that a large transformer sequence model can solve a large set of dexterous tasks on multiple ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — In the real world, the shafts are metallic and the base is not fixed to the basket, which significantly increases the difficulty of the task.
+
+방법 관련 발췌 — Our main contributions in this work are outlined below: (1) we demonstrate, for the first time, that a large transformer sequence model can solve a large set of dexterous tasks on multiple ...
 
 ## Problem and Motivation
 
@@ -87,4 +89,4 @@ VLA and generalist robot policies의 robot_data 문제를 이해하기 위해 �
 
 ## Why Read It
 
-VLA and generalist robot policies의 robot_data 문제를 이해하기 위해 읽는다. 본문은 In the real world, the shafts are metallic and the base is not fixed to the basket, which significantly increases the difficulty of the task.를 문제로 두고, Our main contributions in this work are outlined below: (1) we demonstrate, for the first time, that a large transformer sequence model can solve a large set of dexterous tasks on multiple ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 8 (1 Introduction), p. 9 (1 Introduction), p. 11 (4.3 Evaluation), p. 2 (1 Introduction), p. 5 (1 Introduction), p. 2 (1 Introduction) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 8 (1 Introduction), p. 9 (1 Introduction), p. 11 (4.3 Evaluation), p. 2 (1 Introduction), p. 5 (1 Introduction)이다.

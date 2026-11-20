@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-Planning and control의 planning 문제를 이해하기 위해 읽는다. 본문은 MANY PROBLEIVIS of engineering and scientific importance can be related to the general problem of finding a path through a graph.를 문제로 두고, Procedures developed via the heuristic approach generally have not been able to guarantee that minimum cost solution paths will always be found.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — MANY PROBLEIVIS of engineering and scientific importance can be related to the general problem of finding a path through a graph.
+
+방법 관련 발췌 — Procedures developed via the heuristic approach generally have not been able to guarantee that minimum cost solution paths will always be found.
 
 ## Problem and Motivation
 
@@ -82,7 +84,7 @@ Planning and control의 planning 문제를 이해하기 위해 읽는다. 본문
 
 ## Why Read It
 
-Planning and control의 planning 문제를 이해하기 위해 읽는다. 본문은 MANY PROBLEIVIS of engineering and scientific importance can be related to the general problem of finding a path through a graph.를 문제로 두고, Procedures developed via the heuristic approach generally have not been able to guarantee that minimum cost solution paths will always be found.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (A. The Problem of Finding Paths Through Graphs), p. 1 (A. The Problem of Finding Paths Through Graphs), p. 2 (2) The heuristic approach typically uses special knowl), p. 2 (2) The heuristic approach typically uses special knowl), p. 3 (II. AN ADMISSIBLE SEARCHING ALGORITHM), p. 3 (II. AN ADMISSIBLE SEARCHING ALGORITHM) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 1 (A. The Problem of Finding Paths Through Graphs), p. 2 (2) The heuristic approach typically uses special knowl), p. 3 (II. AN ADMISSIBLE SEARCHING ALGORITHM)이다.
 
 ## Semantic QA — PDF body cross-check
 

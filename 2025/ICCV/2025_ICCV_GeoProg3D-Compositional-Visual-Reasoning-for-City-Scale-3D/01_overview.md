@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 However, when extending conventional 3D language fields for large-scale urban 3D scenes, two fundamental difficulties emerge: (1) Scalability for city-scale 3D data: Since existing methods primarily focus on indoor scenes, the highfidel ...를 문제로 두고, In summary, our contributions are threefold: • We propose GeoProg3D, a framework for compositional reasoning over city-scale 3D language fields, where visual programming can perform various 3D geographic vision tasks via image ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — However, when extending conventional 3D language fields for large-scale urban 3D scenes, two fundamental difficulties emerge: (1) Scalability for city-scale 3D data: Since existing methods primarily focus on indoor scenes, the highfidel ...
+
+방법 관련 발췌 — In summary, our contributions are threefold: • We propose GeoProg3D, a framework for compositional reasoning over city-scale 3D language fields, where visual programming can perform various 3D geographic vision tasks via image ...
 
 ## Problem and Motivation
 
@@ -78,4 +80,4 @@ Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 �
 
 ## Why Read It
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 However, when extending conventional 3D language fields for large-scale urban 3D scenes, two fundamental difficulties emerge: (1) Scalability for city-scale 3D data: Since existing methods primarily focus on indoor scenes, the highfidel ...를 문제로 두고, In summary, our contributions are threefold: • We propose GeoProg3D, a framework for compositional reasoning over city-scale 3D language fields, where visual programming can perform various 3D geographic vision tasks via image ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (1. Introduction), p. 2 (1. Introduction), p. 7 (5.2. Experimental results), p. 7 (5.2. Experimental results), p. 5 (Figure/Table caption), p. 8 (5.2. Experimental results) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 2 (1. Introduction), p. 7 (5.2. Experimental results), p. 5 (Figure/Table caption), p. 8 (5.2. Experimental results)이다.

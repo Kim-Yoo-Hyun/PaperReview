@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 Some recent approaches aim to bridge the gap between rendering and simulation integrating physics-based This ICCV paper is the Open Access version, provided by the Computer Vision Foundation.를 문제로 두고, Our method is the only one that can simulate the entire scene at a much faster speed. priors into 3D object representations using physical simulators [4, 7, 27].를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — Some recent approaches aim to bridge the gap between rendering and simulation integrating physics-based This ICCV paper is the Open Access version, provided by the Computer Vision Foundation.
+
+방법 관련 발췌 — Our method is the only one that can simulate the entire scene at a much faster speed. priors into 3D object representations using physical simulators [4, 7, 27].
 
 ## Problem and Motivation
 
@@ -80,4 +82,4 @@ Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 �
 
 ## Why Read It
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 Some recent approaches aim to bridge the gap between rendering and simulation integrating physics-based This ICCV paper is the Open Access version, provided by the Computer Vision Foundation.를 문제로 두고, Our method is the only one that can simulate the entire scene at a much faster speed. priors into 3D object representations using physical simulators [4, 7, 27].를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1. Introduction), p. 2 (1. Introduction), p. 2 (1. Introduction), p. 4 (4.2. MLLM-based Physical Property Perception), p. 3 (4. Our Methodology), p. 3 (4.1. 3D Open-vocabulary Segmentation) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 1 (1. Introduction), p. 2 (1. Introduction), p. 4 (4.2. MLLM-based Physical Property Perception), p. 3 (4. Our Methodology), p. 3 (4.1. 3D Open-vocabulary Segmentation)이다.

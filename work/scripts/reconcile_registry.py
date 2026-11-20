@@ -679,7 +679,8 @@ def build_facets(item: dict) -> dict[str, list[str]]:
         add("modality", "lidar")
     if contains(text, "tactile", "touch"):
         add("modality", "tactile")
-    if contains(text, "force", "wrench", "impedance"):
+    force_cue = bool(re.search(r"\bforces?\b", text))
+    if force_cue or contains(text, "wrench", "impedance"):
         add("modality", "force_torque")
     if contains(text, "propriocept"):
         add("modality", "proprioception")
@@ -735,7 +736,7 @@ def build_facets(item: dict) -> dict[str, list[str]]:
     if contains(text, "long-horizon", "long horizon", "lifelong"):
         add("setting", "long_horizon")
 
-    if contains(text, "contact", "tactile", "force", "impedance", "peg-in-hole"):
+    if force_cue or contains(text, "contact", "tactile", "impedance", "peg-in-hole"):
         add("interaction", "contact_rich")
     if contains(text, "grasp", "manipulation"):
         add("interaction", "grasping")

@@ -80,4 +80,4 @@ Robotic World Model은 여러 스텝에 걸쳐 정확한 예측을 유지하는 
 
 ## Why Read It
 
-World models, safety, uncertainty, and recovery의 simulation 문제를 이해하기 위해 읽는다. 본문은 A prevalent limitation in many approaches is the lack of adaptation and learning once the policy is deployed on the real system [5, 6, 7, 8].를 문제로 두고, Our contributions are summarized as follows: (i) We introduce a novel network architecture and training framework that enables the learning of reliable world models capable of long autoregressive rollouts, a critical property ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1 Introduction), p. 3 (1 Introduction), p. 1 (1 Introduction), p. 2 (1 Introduction), p. 2 (1 Introduction), p. 6 (3 Approach) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 1 (1 Introduction), p. 3 (1 Introduction), p. 2 (1 Introduction), p. 6 (3 Approach)이다.

@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-World models, safety, uncertainty, and recovery의 navigation 문제를 이해하기 위해 읽는다. 본문은 However, their approach relies on a fixed camera, lacks a ong-term map, and rebuilds environmental knowledge from seratch with each observation.를 문제로 두고, Therefore, we propose Calibrated Neural-Accelerated Belief Updates (CNABUs) to learn a belief propagation model that generalizes to novel scenarios and provides confidence: calibrated predictions for unknown areas.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — However, their approach relies on a fixed camera, lacks a ong-term map, and rebuilds environmental knowledge from seratch with each observation.
+
+방법 관련 발췌 — Therefore, we propose Calibrated Neural-Accelerated Belief Updates (CNABUs) to learn a belief propagation model that generalizes to novel scenarios and provides confidence: calibrated predictions for unknown areas.
 
 ## Problem and Motivation
 
@@ -86,7 +88,7 @@ World models, safety, uncertainty, and recovery의 navigation 문제를 이해�
 
 ## Why Read It
 
-World models, safety, uncertainty, and recovery의 navigation 문제를 이해하기 위해 읽는다. 본문은 However, their approach relies on a fixed camera, lacks a ong-term map, and rebuilds environmental knowledge from seratch with each observation.를 문제로 두고, Therefore, we propose Calibrated Neural-Accelerated Belief Updates (CNABUs) to learn a belief propagation model that generalizes to novel scenarios and provides confidence: calibrated predictions for unknown areas.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (B. Mechanical Search in Shelves and Piles), p. 1 (2. The proticted elit map is visualized), p. 1 (2. The proticted elit map is visualized), p. 2 (2. The proticted elit map is visualized), p. 3 (B. Mechanical Search in Shelves and Piles), p. 13 (B. CNABU Implementation Details) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 2 (B. Mechanical Search in Shelves and Piles), p. 1 (2. The proticted elit map is visualized), p. 2 (2. The proticted elit map is visualized), p. 3 (B. Mechanical Search in Shelves and Piles), p. 13 (B. CNABU Implementation Details)이다.
 
 ## Semantic QA — PDF body cross-check
 

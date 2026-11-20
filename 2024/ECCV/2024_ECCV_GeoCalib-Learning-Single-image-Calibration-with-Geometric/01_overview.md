@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 Veicht et al. ✓accurate ✗not robust man-made natural input image classical geometry lines & vanishing points black-box learning end-to-end training GeoCalib learning & optimization FAILURE horizon line estimated gravity & camera intrins ...를 문제로 두고, Camera calibration consists of estimating the intrinsic and extrinsic parameters of a camera.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — Veicht et al. ✓accurate ✗not robust man-made natural input image classical geometry lines & vanishing points black-box learning end-to-end training GeoCalib learning & optimization FAILURE horizon line estimated gravity & camera intrins ...
+
+방법 관련 발췌 — Camera calibration consists of estimating the intrinsic and extrinsic parameters of a camera.
 
 ## Problem and Motivation
 
@@ -86,4 +88,4 @@ Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 �
 
 ## Why Read It
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 Veicht et al. ✓accurate ✗not robust man-made natural input image classical geometry lines & vanishing points black-box learning end-to-end training GeoCalib learning & optimization FAILURE horizon line estimated gravity & camera intrins ...를 문제로 두고, Camera calibration consists of estimating the intrinsic and extrinsic parameters of a camera.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (1 Introduction), p. 2 (1 Introduction), p. 3 (1 Introduction), p. 3 (1 Introduction), p. 1 (1 Introduction), p. 1 (2 Microsoft Mixed Reality & AI Lab) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 2 (1 Introduction), p. 3 (1 Introduction), p. 1 (1 Introduction), p. 1 (2 Microsoft Mixed Reality & AI Lab)이다.

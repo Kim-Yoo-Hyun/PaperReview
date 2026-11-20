@@ -19,7 +19,7 @@
 
 ## Why This Paper Is Here
 
-RL, IL, offline learning, and robot data의 rl 문제를 이해하기 위해 읽는다. 본문은 Both of these challenges severely limit the applicability of model-free deep RL to real-world tasks.를 문제로 두고, We present empirical results that show that soft actor-critic attains a substantial improvement in both performance and sample efficiency over both off-policy and on-policy prior methods.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+확률 정책의 기대 보상과 엔트로피를 함께 최적화하는 오프폴리시 actor–critic을 제시한다.
 
 ## Problem and Motivation
 
@@ -53,16 +53,10 @@ RL, IL, offline learning, and robot data의 rl 문제를 이해하기 위해 읽
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** We present empirical results that show that soft actor-critic attains a substantial improvement in both performance and sample efficiency over both off-policy and on-policy prior ...
-- **p. 2 / 1. Introduction - extractive body cue:** We present a convergence proof for policy iteration in the maximum entropy framework, and then introduce a new algorithm based on an approximation to this ...
-- **p. 3 / 3.2. Maximum Entropy Reinforcement Learning - extractive body cue:** Though such algorithms have previously been proposed for conventional reinforcement learning, our method is, to our knowledge, the first off-policy actor-critic method in the maximum ...
-- **p. 6 / 5. Experiments - extractive body cue:** The stability of the algorithm also plays a large role in performance: easier tasks make it more practical to tune hyperparameters to achieve good results, ...
-- **p. 7 / 5.1. Comparative Evaluation - extractive body cue:** The results show that, overall, SAC performs comparably to the baseline methods on the easier tasks and outperforms them on the harder tasks with a ...
-- **p. 6 / 5. Experiments - extractive body cue:** Our SQL implementation also includes two Q-functions, which we found to improve its performance in most environments.
-- **p. 7 / 5.2. Ablation Study - extractive body cue:** The results in the previous section suggest that algorithms based on the maximum entropy principle can outperform conventional RL methods on challenging tasks such as ...
-- **p. 8 / 5.2. Ablation Study - extractive body cue:** We found this variant to benefit from taking more than one gradient step between the environment steps, which can improve performance but also increases the ...
+- soft policy iteration에서 연속 행동용 actor·critic 갱신식을 도출한다.
+- 시뮬레이션 연속 제어에서 학습 안정성과 샘플 효율을 비교한다.
 
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+[검증한 원문](https://proceedings.mlr.press/v80/haarnoja18b.html)
 
 ## Evaluation Scope
 
@@ -86,7 +80,7 @@ RL, IL, offline learning, and robot data의 rl 문제를 이해하기 위해 읽
 
 ## Why Read It
 
-RL, IL, offline learning, and robot data의 rl 문제를 이해하기 위해 읽는다. 본문은 Both of these challenges severely limit the applicability of model-free deep RL to real-world tasks.를 문제로 두고, We present empirical results that show that soft actor-critic attains a substantial improvement in both performance and sample efficiency over both off-policy and on-policy prior methods.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1. Introduction), p. 1 (1. Introduction), p. 2 (1. Introduction), p. 2 (1. Introduction), p. 3 (3.2. Maximum Entropy Reinforcement Learning), p. 3 (4. From Soft Policy Iteration to Soft) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 1 (1. Introduction), p. 2 (1. Introduction), p. 3 (3.2. Maximum Entropy Reinforcement Learning), p. 3 (4. From Soft Policy Iteration to Soft)이다.
 
 ## Semantic QA — PDF body cross-check
 

@@ -19,7 +19,7 @@
 
 ## Why This Paper Is Here
 
-Robotics-enabling 3D perception의 navigation 문제를 이해하기 위해 읽는다. 본문은 Natural language can further enhance this prior semantic knowledge, depending on the context.를 문제로 두고, In this work, we propose Vision-Language Frontier Maps (VLFM), a zero-shot approach for target-driven semantic navigation to an unseen object in a novel environment.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+영상과 목표 범주의 의미적 관련도를 지도로 누적해 다음 탐색 경계를 선택한다.
 
 ## Problem and Motivation
 
@@ -50,16 +50,10 @@ Robotics-enabling 3D perception의 navigation 문제를 이해하기 위해 읽�
 
 ## Main Claims and Actual Contribution
 
-- **p. 1 / I. INTRODUCTION - extractive body cue:** In this work, we propose Vision-Language Frontier Maps (VLFM), a zero-shot approach for target-driven semantic navigation to an unseen object in a novel environment.
-- **p. 2 / I. INTRODUCTION - extractive body cue:** In contrast to prior language-based zero-shot semantic navigation methods [2]-[4], our method does not rely on object detectors and language models (e.g., ChatGPT, BERT) to ...
-- **p. 2 / I. INTRODUCTION - extractive body cue:** We also demonstrate our approach in the real world on a Boston Dynamics Spot mobile manipulation platform by navigating efficiently to unseen semantic targets across ...
-- **p. 1 / I. INTRODUCTION - extractive body cue:** How do humans navigate in novel environments?
-- **p. 5 / V. EXPERIMENTAL SETUP - extractive body cue:** For all approaches, we report success rate (SR) and Success weighted by inverse Path Length (SPL) [31].
-- **p. 5 / V. EXPERIMENTAL SETUP - extractive body cue:** Our method outperforms previous zero-shot methods and performs competitively against methods directly trained on the Object Navigation task.
-- **p. 3 / Figure/Table caption - extractive body cue:** Fig. 3: Left: Visualization of how the confidence score of a pixel within the robot's FOV is determined based on its location relative to the ...
-- **p. 4 / Figure/Table caption - extractive body cue:** Fig. 4: VLFM iteratively constructs value maps for target-driven navigation by using BLIP-2 to compute the cosine similarity between a text prompt incorporating the target ...
+- 점유 지도의 frontier에 시각언어 가치 지도의 점수를 결합한다.
+- 실내 ObjectNav와 Spot 로봇 배치에서 미지 공간의 물체 탐색을 평가한다.
 
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+[검증한 원문](https://arxiv.org/abs/2312.03275)
 
 ## Evaluation Scope
 
@@ -78,7 +72,7 @@ Robotics-enabling 3D perception의 navigation 문제를 이해하기 위해 읽�
 
 ## Why Read It
 
-Robotics-enabling 3D perception의 navigation 문제를 이해하기 위해 읽는다. 본문은 Natural language can further enhance this prior semantic knowledge, depending on the context.를 문제로 두고, In this work, we propose Vision-Language Frontier Maps (VLFM), a zero-shot approach for target-driven semantic navigation to an unseen object in a novel environment.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 2 (III. PROBLEM FORMULATION), p. 5 (V. EXPERIMENTAL SETUP), p. 1 (Figure/Table caption) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 1 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 2 (III. PROBLEM FORMULATION), p. 5 (V. EXPERIMENTAL SETUP), p. 1 (Figure/Table caption)이다.
 
 ## Semantic QA — PDF body cross-check
 

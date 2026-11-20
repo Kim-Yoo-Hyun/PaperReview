@@ -79,4 +79,4 @@ Generative Gaussian Splatting은 자세를 아는 한 장 이상의 참조 영�
 
 ## Why Read It
 
-Robotics-enabling 3D perception의 generative 문제를 이해하기 위해 읽는다. 본문은 However, these works cannot leverage pre-trained video diffusion models, because of their custom network architectures for incorporating the 3D representation.를 문제로 두고, We summarize our main contributions as follows: • We propose an approach that directly integrates an explicit 3D representation with a pre-trained latent video diffusion backbone, thereby improving 3D consistency of the ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1. Introduction), p. 1 (1. Introduction), p. 2 (1. Introduction), p. 2 (1. Introduction), p. 3 (3.2. Integrating 3D Constraints), p. 3 (3.1. Pose-Conditional Image-To-Video Architecture) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 1 (1. Introduction), p. 2 (1. Introduction), p. 3 (3.2. Integrating 3D Constraints), p. 3 (3.1. Pose-Conditional Image-To-Video Architecture)이다.

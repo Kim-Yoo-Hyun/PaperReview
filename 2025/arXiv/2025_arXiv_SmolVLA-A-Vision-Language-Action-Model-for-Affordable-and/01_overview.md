@@ -19,7 +19,7 @@
 
 ## Why This Paper Is Here
 
-VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다. 본문은 To address this limitation, a growing body of work has begun exploring robotics foundation models in the form of vision-language-action (VLA) models (Team et al., 2024; O'Neill et al., 2024; Brohan et ...를 문제로 두고, We present SmolVLA, a compact and efficient vision-language agent optimized for training on consumer-grade GPUs and deployment on CPUs.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+소형 VLM과 flow 행동 전문가를 결합해 저비용 로봇에서 지시 조건부 조작을 수행한다.
 
 ## Problem and Motivation
 
@@ -52,16 +52,10 @@ VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1 Introduction - extractive body cue:** We present SmolVLA, a compact and efficient vision-language agent optimized for training on consumer-grade GPUs and deployment on CPUs.
-- **p. 2 / 1 Introduction - extractive body cue:** In this work, we introduce SmolVLA, an open-source initiative featuring a compact yet capable VLA model, released alongside reproducible and efficient training and inference recipes.
-- **p. 1 / Abstract - extractive body cue:** SmolVLA consists of a compact pretrained vision-language model, discarding the last L -N layers (scissors icon).
-- **p. 1 / Abstract - extractive body cue:** In this work, we present SmolVLA, a small, efficient, and community-driven VLA that drastically reduces both training and inference costs, while retaining competitive performance.
-- **p. 12 / 4 Experiments - extractive body cue:** Asynchronous inference achieves similar success rates (left) but is significantly faster (middle) and complete more tasks (right) in fixed-time settings.
-- **p. 12 / 4 Experiments - extractive body cue:** As shown in Figure 5a, both inference modes achieve comparable success rates across three real-world tasks.
-- **p. 14 / 4 Experiments - extractive body cue:** Sampling new observations more frequently (e.g., every 1 or 10 steps) significantly improves performance.
-- **p. 11 / 4 Experiments - extractive body cue:** The results show that, pretraining on community datasets leads to a substantial performance improvement (from 51.7 to 78.3).
+- 커뮤니티 시연으로 사전학습한 경량 정책을 시뮬레이션과 실제 로봇에서 미세조정한다.
+- 관측 송신과 행동 예측을 비동기화해 로봇이 추론 결과를 기다리는 시간을 줄인다.
 
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+[검증한 원문](https://arxiv.org/abs/2506.01844)
 
 ## Evaluation Scope
 
@@ -83,7 +77,7 @@ VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다
 
 ## Why Read It
 
-VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다. 본문은 To address this limitation, a growing body of work has begun exploring robotics foundation models in the form of vision-language-action (VLA) models (Team et al., 2024; O'Neill et al., 2024; Brohan et ...를 문제로 두고, We present SmolVLA, a compact and efficient vision-language agent optimized for training on consumer-grade GPUs and deployment on CPUs.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (1 Introduction), p. 2 (1 Introduction), p. 2 (1 Introduction), p. 2 (1 Introduction), p. 1 (Abstract), p. 1 (Abstract) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 2 (1 Introduction), p. 1 (Abstract)이다.
 
 ## Semantic QA — PDF body cross-check
 

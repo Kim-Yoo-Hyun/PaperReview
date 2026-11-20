@@ -79,7 +79,7 @@ Where2Explore는 관절 물체에서 상호작용할 위치를 골라 새로운 
 
 ## Why Read It
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 This limitation hinders the efficiency and safety of real-world applications of robots.를 문제로 두고, The results demonstrate our framework's capability to efficiently explore novel categories by exploiting geometric similarity.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1 Introduction), p. 1 (1 Introduction), p. 2 (1 Introduction), p. 2 (1 Introduction), p. 3 (1 Introduction), p. 6 (4 Method) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 1 (1 Introduction), p. 2 (1 Introduction), p. 3 (1 Introduction), p. 6 (4 Method)이다.
 
 ## Semantic QA — PDF body cross-check
 

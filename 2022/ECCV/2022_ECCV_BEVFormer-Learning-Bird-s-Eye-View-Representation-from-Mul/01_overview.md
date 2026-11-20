@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2022 / ECCV
-- Authors: Zhiqi Li, Wenhai Wang, Hongyang Li, Enze Xie, Chonghao Sima, Tong Lu, Qiao Yu, Jifeng Dai
+- Authors: Zhiqi Li, Wenhai Wang, Hongyang Li, Enze Xie, Chonghao Sima, Tong Lu, Yu Qiao, Jifeng Dai
 - Primary track: Planning and control
 - Tier: REFERENCE
 - Tags: sensor fusion, 3D perception, multi-view
@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-Planning and control의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 However, the existing state-of-the-art multi-camera 3D detection methods rarely exploit temporal information.를 문제로 두고, Our main contributions are as follows: • We propose BEVFormer, a spatiotemporal transformer encoder that projects multi-camera and/or timestamp input to BEV representations.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — However, the existing state-of-the-art multi-camera 3D detection methods rarely exploit temporal information.
+
+방법 관련 발췌 — Our main contributions are as follows: • We propose BEVFormer, a spatiotemporal transformer encoder that projects multi-camera and/or timestamp input to BEV representations.
 
 ## Problem and Motivation
 
@@ -83,4 +85,4 @@ Planning and control의 3d_perception 문제를 이해하기 위해 읽는다. �
 
 ## Why Read It
 
-Planning and control의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 However, the existing state-of-the-art multi-camera 3D detection methods rarely exploit temporal information.를 문제로 두고, Our main contributions are as follows: • We propose BEVFormer, a spatiotemporal transformer encoder that projects multi-camera and/or timestamp input to BEV representations.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (1 Introduction), p. 2 (1 Introduction), p. 3 (1 Introduction), p. 16 (A.3 Task Heads), p. 16 (A.3 Task Heads), p. 10 (Figure/Table caption) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 2 (1 Introduction), p. 3 (1 Introduction), p. 16 (A.3 Task Heads), p. 10 (Figure/Table caption)이다.

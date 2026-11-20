@@ -21,7 +21,9 @@
 
 ## Why This Paper Is Here
 
-Robotics-enabling 3D perception의 generative 문제를 이해하기 위해 읽는다. 본문은 The world around us is filled with natural structures, such as trees, that humans can interpret even when parts of them are occluded; however, this remains a challenge for computer vision systems.를 문제로 두고, In summary, our key contributions are: • A tree skeletonization approach using 3D point clouds as input that employs a novel diffusion-based formulation for generating an implicit representation of a graphlike structure ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — The world around us is filled with natural structures, such as trees, that humans can interpret even when parts of them are occluded; however, this remains a challenge for computer vision systems.
+
+방법 관련 발췌 — In summary, our key contributions are: • A tree skeletonization approach using 3D point clouds as input that employs a novel diffusion-based formulation for generating an implicit representation of a graphlike structure ...
 
 ## Problem and Motivation
 
@@ -88,4 +90,4 @@ Robotics-enabling 3D perception의 generative 문제를 이해하기 위해 읽�
 
 ## Why Read It
 
-Robotics-enabling 3D perception의 generative 문제를 이해하기 위해 읽는다. 본문은 The world around us is filled with natural structures, such as trees, that humans can interpret even when parts of them are occluded; however, this remains a challenge for computer vision systems.를 문제로 두고, In summary, our key contributions are: • A tree skeletonization approach using 3D point clouds as input that employs a novel diffusion-based formulation for generating an implicit representation of a graphlike structure ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1. Introduction), p. 2 (1. Introduction), p. 2 (1. Introduction), p. 1 (1. Introduction), p. 3 (3. Our Approach), p. 4 (3.1. Denoising diffusion probabilistic models) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 1 (1. Introduction), p. 2 (1. Introduction), p. 3 (3. Our Approach), p. 4 (3.1. Denoising diffusion probabilistic models)이다.

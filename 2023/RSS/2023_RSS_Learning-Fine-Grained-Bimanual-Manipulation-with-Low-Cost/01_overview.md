@@ -20,7 +20,7 @@
 
 ## Why This Paper Is Here
 
-Manipulation, contact, tactile, and dexterity의 manipulation 문제를 이해하기 위해 읽는다. 본문은 However, low-cost hardware is inevitably less precise than high-end platforms, making the sensing and planning challenge more pronounced.를 문제로 두고, The key contribution of this paper is a low-cost system for learning fine manipulation, comprising a teleoperation system and a novel imitation learning algorithm.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+저비용 양팔 원격조작 장치로 모은 시연을 사용해 정밀 조작용 행동 청크를 학습한다.
 
 ## Problem and Motivation
 
@@ -54,16 +54,10 @@ Manipulation, contact, tactile, and dexterity의 manipulation 문제를 이해�
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / I. INTRODUCTION - extractive body cue:** The key contribution of this paper is a low-cost system for learning fine manipulation, comprising a teleoperation system and a novel imitation learning algorithm.
-- **p. 2 / I. INTRODUCTION - extractive body cue:** To further improve the smoothness of the policy, we propose temporal ensembling, which queries the policy more frequently and averages across the overlapping action chunks.
-- **p. 1 / I. INTRODUCTION - extractive body cue:** In this work, we seek to develop a low-cost system for fine manipulation that is, in contrast, accessible and reproducible.
-- **p. 4 / IV. ACTION CHUNKING WITH TRANSFORMERS - extractive body cue:** We therefore develop a novel algorithm, Action Chunking with Transformers (ACT), to leverage the data collected by ALOHA.
-- **p. 5 / IV. ACTION CHUNKING WITH TRANSFORMERS - extractive body cue:** Implementing ACT We implement the CVAE encoder and decoder with transformers, as transformers are designed for both synthesizing information across a sequence and generating new ...
-- **p. 9 / V. EXPERIMENTS - extractive body cue:** ACT achieves the highest success rate compared to all prior methods, outperforming the second best algorithm by a large margin on each task.
-- **p. 10 / Figure/Table caption - extractive body cue:** Fig. 8: (a) We augment two baselines with action chunking, with different values of chunk size k on the x-axis, and success rate on the ...
-- **p. 9 / V. EXPERIMENTS - extractive body cue:** Our method ACT reaches 84% success for Cup Open, 20% for Thread Velcro, 64% for Prep Tape and 92% for Put On Shoe, again outperforming ...
+- ALOHA에서 리더·팔로워 관절을 대응시켜 양손 시연을 수집한다.
+- ACT가 관절 목표의 시퀀스를 예측하고 겹치는 예측을 시간적으로 결합한다.
 
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+[검증한 원문](https://www.roboticsproceedings.org/rss19/p016.html)
 
 ## Evaluation Scope
 
@@ -86,7 +80,7 @@ Manipulation, contact, tactile, and dexterity의 manipulation 문제를 이해�
 
 ## Why Read It
 
-Manipulation, contact, tactile, and dexterity의 manipulation 문제를 이해하기 위해 읽는다. 본문은 However, low-cost hardware is inevitably less precise than high-end platforms, making the sensing and planning challenge more pronounced.를 문제로 두고, The key contribution of this paper is a low-cost system for learning fine manipulation, comprising a teleoperation system and a novel imitation learning algorithm.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 5 (IV. ACTION CHUNKING WITH TRANSFORMERS), p. 6 (IV. ACTION CHUNKING WITH TRANSFORMERS) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 1 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 5 (IV. ACTION CHUNKING WITH TRANSFORMERS), p. 6 (IV. ACTION CHUNKING WITH TRANSFORMERS)이다.
 
 ## Semantic QA — PDF body cross-check
 

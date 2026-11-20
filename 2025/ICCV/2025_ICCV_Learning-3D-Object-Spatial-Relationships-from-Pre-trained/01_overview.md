@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-Robotics-enabling 3D perception의 generative 문제를 이해하기 위해 읽는다. 본문은 While some are constrained by physical laws (e.g., objects can rest on others but cannot float in mid-air), many arise from functional usage, reflecting how humans interact with and arrange these objects.를 문제로 두고, In summary, our main contributions are as follows: (1) We formulate a novel representation for object-object spatial relationships (OOR); (2) We introduce an effective pipeline to generate diverse 3D OOR data from ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — While some are constrained by physical laws (e.g., objects can rest on others but cannot float in mid-air), many arise from functional usage, reflecting how humans interact with and arrange these objects.
+
+방법 관련 발췌 — In summary, our main contributions are as follows: (1) We formulate a novel representation for object-object spatial relationships (OOR); (2) We introduce an effective pipeline to generate diverse 3D OOR data from ...
 
 ## Problem and Motivation
 
@@ -83,4 +85,4 @@ Robotics-enabling 3D perception의 generative 문제를 이해하기 위해 읽�
 
 ## Why Read It
 
-Robotics-enabling 3D perception의 generative 문제를 이해하기 위해 읽는다. 본문은 While some are constrained by physical laws (e.g., objects can rest on others but cannot float in mid-air), many arise from functional usage, reflecting how humans interact with and arrange these objects.를 문제로 두고, In summary, our main contributions are as follows: (1) We formulate a novel representation for object-object spatial relationships (OOR); (2) We introduce an effective pipeline to generate diverse 3D OOR data from ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1. Introduction), p. 2 (1. Introduction), p. 2 (1. Introduction), p. 3 (3.2. 3D OOR Samples Generation), p. 4 (3.2. 3D OOR Samples Generation), p. 5 (3.3. OOR Diffusion) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 1 (1. Introduction), p. 2 (1. Introduction), p. 3 (3.2. 3D OOR Samples Generation), p. 4 (3.2. 3D OOR Samples Generation), p. 5 (3.3. OOR Diffusion)이다.

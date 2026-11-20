@@ -14,12 +14,15 @@
 - Official paper: https://api.crossref.org/works/10.1109/iros60139.2025.11247088
 - Full-text retrieval: https://arxiv.org/pdf/2503.06669
 - Code/Project: https://github.com/OpenDriveLab/AgiBot-World
+- AgiBot World Alpha의 관측 파일은 공개 목록에 있으며, 내려받으려면 이용 조건에 동의해야 한다. [파일 목록](https://huggingface.co/api/datasets/agibot-world/AgiBotWorld-Alpha/tree/128665c9e0244c45d1cbe5c13f5a4706afd24f27/observations/327)
 - Paper type: benchmark_or_dataset
 - Source audit: full-text PDF body checked on 2026-09-03 (9 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
-RL, IL, offline learning, and robot data의 humanoid 문제를 이해하기 위해 읽는다. 본문은 While significant progress has been made in general-purpose foundational models for natural language processing [1] and computer vision [2], robotics lags behind due to the difficulty of (high-quality) data collection.를 문제로 두고, Following our dataset, to address the limitations of previous robot foundation models that heavily rely on indomain robot datasets, we present Genie Operator-1 (GO1), a novel generalist policy that utilizes latent action ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — While significant progress has been made in general-purpose foundational models for natural language processing [1] and computer vision [2], robotics lags behind due to the difficulty of (high-quality) data collection.
+
+방법 관련 발췌 — Following our dataset, to address the limitations of previous robot foundation models that heavily rely on indomain robot datasets, we present Genie Operator-1 (GO1), a novel generalist policy that utilizes latent action ...
 
 ## Problem and Motivation
 
@@ -84,7 +87,7 @@ RL, IL, offline learning, and robot data의 humanoid 문제를 이해하기 위�
 
 ## Why Read It
 
-RL, IL, offline learning, and robot data의 humanoid 문제를 이해하기 위해 읽는다. 본문은 While significant progress has been made in general-purpose foundational models for natural language processing [1] and computer vision [2], robotics lags behind due to the difficulty of (high-quality) data collection.를 문제로 두고, Following our dataset, to address the limitations of previous robot foundation models that heavily rely on indomain robot datasets, we present Genie Operator-1 (GO1), a novel generalist policy that utilizes latent action ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 7 (2) Implementation Details), p. 7 (2) Implementation Details) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 1 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 7 (2) Implementation Details)이다.
 
 ## Semantic QA — PDF body cross-check
 

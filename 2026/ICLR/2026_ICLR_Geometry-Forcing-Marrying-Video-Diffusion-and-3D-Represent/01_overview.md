@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-World models, safety, uncertainty, and recovery의 generative 문제를 이해하기 위해 읽는다. 본문은 Bridging the gap between video diffusion models and the dynamic 3D structure of the world presents significant challenges, primarily due to the limited annotated 3D data.를 문제로 두고, To align these two representations, our method introduces two complementary alignment objectives: Angular Alignment and Scale Alignment.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — Bridging the gap between video diffusion models and the dynamic 3D structure of the world presents significant challenges, primarily due to the limited annotated 3D data.
+
+방법 관련 발췌 — To align these two representations, our method introduces two complementary alignment objectives: Angular Alignment and Scale Alignment.
 
 ## Problem and Motivation
 
@@ -86,4 +88,4 @@ World models, safety, uncertainty, and recovery의 generative 문제를 이해�
 
 ## Why Read It
 
-World models, safety, uncertainty, and recovery의 generative 문제를 이해하기 위해 읽는다. 본문은 Bridging the gap between video diffusion models and the dynamic 3D structure of the world presents significant challenges, primarily due to the limited annotated 3D data.를 문제로 두고, To align these two representations, our method introduces two complementary alignment objectives: Angular Alignment and Scale Alignment.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 4 (3 PRELIMINARIES), p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 4 (3 PRELIMINARIES), p. 5 (3 PRELIMINARIES), p. 20 (C.4 METRICS) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 4 (3 PRELIMINARIES), p. 2 (1 INTRODUCTION), p. 5 (3 PRELIMINARIES), p. 20 (C.4 METRICS)이다.

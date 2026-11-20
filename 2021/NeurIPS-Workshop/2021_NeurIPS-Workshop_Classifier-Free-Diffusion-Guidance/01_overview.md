@@ -20,7 +20,9 @@
 
 ## Why This Paper Is Here
 
-Foundations: Generative Models의 generative 문제를 이해하기 위해 읽는다. 본문은 (6) has no classifier gradient present, so taking a step in the ˜ϵθ direction cannot be interpreted as a gradient-based adversarial attack on an image classifier.를 문제로 두고, To resolve these questions, we present classifier-free guidance, our guidance method which avoids any classifier entirely.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — (6) has no classifier gradient present, so taking a step in the ˜ϵθ direction cannot be interpreted as a gradient-based adversarial attack on an image classifier.
+
+방법 관련 발췌 — To resolve these questions, we present classifier-free guidance, our guidance method which avoids any classifier entirely.
 
 ## Problem and Motivation
 
@@ -83,4 +85,4 @@ Foundations: Generative Models의 generative 문제를 이해하기 위해 읽�
 
 ## Why Read It
 
-Foundations: Generative Models의 generative 문제를 이해하기 위해 읽는다. 본문은 (6) has no classifier gradient present, so taking a step in the ˜ϵθ direction cannot be interpreted as a gradient-based adversarial attack on an image classifier.를 문제로 두고, To resolve these questions, we present classifier-free guidance, our guidance method which avoids any classifier entirely.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 5 (2 BACKGROUND), p. 5 (2 BACKGROUND), p. 1 (1 INTRODUCTION), p. 3 (2 BACKGROUND), p. 3 (2 BACKGROUND), p. 3 (2 BACKGROUND) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 5 (2 BACKGROUND), p. 1 (1 INTRODUCTION), p. 3 (2 BACKGROUND)이다.

@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-Planning and control의 benchmark 문제를 이해하기 위해 읽는다. 본문은 Through systematic evaluation, we reveal critical insights into the current limitations of LLM-based planners, opening interesting future research directions.를 문제로 두고, To bridge this gap, we introduce Planning And Reasoning Tasks in humaN-Robot collaboration (PARTNR), a novel benchmark that evaluates the ability of embodied AI agents to collaborate with humans across a range ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — Through systematic evaluation, we reveal critical insights into the current limitations of LLM-based planners, opening interesting future research directions.
+
+방법 관련 발췌 — To bridge this gap, we introduce Planning And Reasoning Tasks in humaN-Robot collaboration (PARTNR), a novel benchmark that evaluates the ability of embodied AI agents to collaborate with humans across a range ...
 
 ## Problem and Motivation
 
@@ -86,4 +88,4 @@ Planning and control의 benchmark 문제를 이해하기 위해 읽는다. 본�
 
 ## Why Read It
 
-Planning and control의 benchmark 문제를 이해하기 위해 읽는다. 본문은 Through systematic evaluation, we reveal critical insights into the current limitations of LLM-based planners, opening interesting future research directions.를 문제로 두고, To bridge this gap, we introduce Planning And Reasoning Tasks in humaN-Robot collaboration (PARTNR), a novel benchmark that evaluates the ability of embodied AI agents to collaborate with humans across a range ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (1 INTRODUCTION), p. 1 (1 INTRODUCTION), p. 1 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 34 (A.9.2 IMPLEMENTATION DETAILS), p. 31 (A.8 IMPLEMENTATION DETAILS FOR REACT AGENTS) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 2 (1 INTRODUCTION), p. 1 (1 INTRODUCTION), p. 34 (A.9.2 IMPLEMENTATION DETAILS), p. 31 (A.8 IMPLEMENTATION DETAILS FOR REACT AGENTS)이다.

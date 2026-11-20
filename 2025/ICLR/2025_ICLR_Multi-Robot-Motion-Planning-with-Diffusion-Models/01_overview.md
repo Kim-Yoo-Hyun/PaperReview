@@ -82,4 +82,4 @@ MMD는 단일 로봇 데이터로 학습한 확산 모델을 조합해 여러 �
 
 ## Why Read It
 
-Planning and control의 planning 문제를 이해하기 위해 읽는다. 본문은 Importantly, our approach calls for learning only single-robot diffusion models, which does away with the difficulty of obtaining multi-robot interaction data and breaks the curse of dimensionality.를 문제로 두고, Our contributions in this paper are threefold: (1) We propose a novel data-efficient framework for multirobot diffusion planning inspired by constraint-based search algorithms.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (1 INTRODUCTION), p. 1 (1 INTRODUCTION), p. 1 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 3 (1 INTRODUCTION), p. 14 (A.1.1 BEYOND FULL-HORIZON PLANNING) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 2 (1 INTRODUCTION), p. 1 (1 INTRODUCTION), p. 3 (1 INTRODUCTION), p. 14 (A.1.1 BEYOND FULL-HORIZON PLANNING)이다.

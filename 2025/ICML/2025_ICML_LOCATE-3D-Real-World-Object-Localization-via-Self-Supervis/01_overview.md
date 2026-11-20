@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-RL, IL, offline learning, and robot data의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 They often require human annotation at inference time in the form of detailed 3D meshes or object instance segmentation, making them difficult to deploy on real-world devices.를 문제로 두고, Specifically, each decoder module consists of three attention blocks: (1) a self-attention block that enables queries to refine their representations through mutual interaction, (2) a cross-attention block where queries extract relevant ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — They often require human annotation at inference time in the form of detailed 3D meshes or object instance segmentation, making them difficult to deploy on real-world devices.
+
+방법 관련 발췌 — Specifically, each decoder module consists of three attention blocks: (1) a self-attention block that enables queries to refine their representations through mutual interaction, (2) a cross-attention block where queries extract relevant ...
 
 ## Problem and Motivation
 
@@ -84,4 +86,4 @@ RL, IL, offline learning, and robot data의 3d_perception 문제를 이해하기
 
 ## Why Read It
 
-RL, IL, offline learning, and robot data의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 They often require human annotation at inference time in the form of detailed 3D meshes or object instance segmentation, making them difficult to deploy on real-world devices.를 문제로 두고, Specifically, each decoder module consists of three attention blocks: (1) a self-attention block that enables queries to refine their representations through mutual interaction, (2) a cross-attention block where queries extract relevant ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1. Introduction), p. 3 (1. Introduction), p. 4 (1. Introduction), p. 2 (1. Introduction), p. 2 (1. Introduction), p. 5 (2.3.2. TRAINING LOCATE 3D) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 1 (1. Introduction), p. 3 (1. Introduction), p. 4 (1. Introduction), p. 2 (1. Introduction), p. 5 (2.3.2. TRAINING LOCATE 3D)이다.

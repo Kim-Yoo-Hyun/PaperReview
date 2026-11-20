@@ -19,7 +19,7 @@
 
 ## Why This Paper Is Here
 
-Robotics-enabling 3D perception의 navigation 문제를 이해하기 위해 읽는다. 본문은 In this work, we bridge the gap between the rich open-set capabilities enabled by large foundation models and the semantic reasoning abilities expected of futuristic 3D mapping systems.를 문제로 두고, To mitigate this, we introduce a novel mechanism to construct pixel-aligned features that combine global (image-level) context encapsulated in models like CLIP, with local (region-level) information.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+RGB-D 관측에 정렬한 개방어휘 특징을 3차원 지도에 누적해 다양한 질의로 물체를 찾는다.
 
 ## Problem and Motivation
 
@@ -53,16 +53,10 @@ Robotics-enabling 3D perception의 navigation 문제를 이해하기 위해 읽�
 
 ## Main Claims and Actual Contribution
 
-- **p. 4 / IV. THE ConceptFusion APPROACH - extractive body cue:** To mitigate this, we introduce a novel mechanism to construct pixel-aligned features that combine global (image-level) context encapsulated in models like CLIP, with local (region-level) ...
-- **p. 2 / I. INTRODUCTION - extractive body cue:** Our key contributions are the following: • An approach to open-set multimodal 3D mapping that constructs map representations queryable by text, image, audio, and click ...
-- **p. 4 / IV. THE ConceptFusion APPROACH - extractive body cue:** Given an input image X ∈R3×H×W , our method uses a foundation model F as a feature extractor to produce three types of embeddings, which ...
-- **p. 2 / I. INTRODUCTION - extractive body cue:** Crucially, we show that this approach is conceptually simple, principled, and effective even in the zero-shot setting (requiring no additional training or finetuning of foundation ...
-- **p. 5 / IV. THE ConceptFusion APPROACH - extractive body cue:** To the right, we show sample reconstructions and semantic annotations over two sub-sequences.
-- **p. 6 / IV. THE ConceptFusion APPROACH - extractive body cue:** By applying both quantization and tracing techniques to our models, we are able to achieve significant improvements in their efficiency, without compromising their accuracy.
-- **p. 10 / 4) What previously infeasible downstream use-cases can - extractive body cue:** We see that, each component of the proposed method results in clear, significant improvement in performance.
-- **p. 8 / 4) What previously infeasible downstream use-cases can - extractive body cue:** Here, we again observe that ConceptFusion outperforms other finetuned foundation models by a significant margin in terms of both 3D mIoU and detection accuracy.
+- 픽셀의 국소·전역 특징을 결합하고 관측 시점 사이에서 같은 지도 점에 융합한다.
+- UnCoCo 데이터와 탁상 재배치 사례를 통해 개념 검색과 행동 연결을 평가한다.
 
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+[검증한 원문](https://www.roboticsproceedings.org/rss19/p066.html)
 
 ## Evaluation Scope
 
@@ -86,7 +80,7 @@ Robotics-enabling 3D perception의 navigation 문제를 이해하기 위해 읽�
 
 ## Why Read It
 
-Robotics-enabling 3D perception의 navigation 문제를 이해하기 위해 읽는다. 본문은 In this work, we bridge the gap between the rich open-set capabilities enabled by large foundation models and the semantic reasoning abilities expected of futuristic 3D mapping systems.를 문제로 두고, To mitigate this, we introduce a novel mechanism to construct pixel-aligned features that combine global (image-level) context encapsulated in models like CLIP, with local (region-level) information.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 4 (IV. THE ConceptFusion APPROACH), p. 4 (IV. THE ConceptFusion APPROACH), p. 6 (IV. THE ConceptFusion APPROACH), p. 6 (IV. THE ConceptFusion APPROACH) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 2 (I. INTRODUCTION), p. 4 (IV. THE ConceptFusion APPROACH), p. 6 (IV. THE ConceptFusion APPROACH)이다.
 
 ## Semantic QA — PDF body cross-check
 

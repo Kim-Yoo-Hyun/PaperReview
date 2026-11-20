@@ -75,4 +75,4 @@
 
 ## Why Read It
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 However, SVD alone lacks long-range modeling capability, which is critical for capturing hierarchical dependencies among attributes.를 문제로 두고, Our chief contributions are threefold: • We explore a novel mechanism, i.e., attribute-to-location clue reasoning, for performing 3D visual grounding. • We propose a novel framework VGMamba, comprising three core modules: the ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (1. Introduction), p. 2 (1. Introduction), p. 1 (1. Introduction), p. 1 (1. Introduction), p. 2 (3. Overview of State Space Models), p. 5 (4.4. Training Objectives) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 2 (1. Introduction), p. 1 (1. Introduction), p. 2 (3. Overview of State Space Models), p. 5 (4.4. Training Objectives)이다.

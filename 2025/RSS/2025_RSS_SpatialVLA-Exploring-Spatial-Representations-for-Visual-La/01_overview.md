@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다. 본문은 However, developing such generalist robot policies with 3D spatial intelligence encounters two primary challenges in the aspects of robot observation and action.를 문제로 두고, In summary, the contributions of this work consist of a novel generalist robot policy that explores spatial representations for robot foundation models, sophisticated designs on Ego3D Posi tion Encoding and Adaptive Action ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — However, developing such generalist robot policies with 3D spatial intelligence encounters two primary challenges in the aspects of robot observation and action.
+
+방법 관련 발췌 — In summary, the contributions of this work consist of a novel generalist robot policy that explores spatial representations for robot foundation models, sophisticated designs on Ego3D Posi tion Encoding and Adaptive Action ...
 
 ## Problem and Motivation
 
@@ -85,7 +87,7 @@ VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다
 
 ## Why Read It
 
-VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다. 본문은 However, developing such generalist robot policies with 3D spatial intelligence encounters two primary challenges in the aspects of robot observation and action.를 문제로 두고, In summary, the contributions of this work consist of a novel generalist robot policy that explores spatial representations for robot foundation models, sophisticated designs on Ego3D Posi tion Encoding and Adaptive Action ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 3 (A. The SpatialVLA Model Architecture), p. 5 (B. The Pre-training and Post-training Scheme), p. 4 (B. The Pre-training and Post-training Scheme) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 2 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 3 (A. The SpatialVLA Model Architecture), p. 5 (B. The Pre-training and Post-training Scheme), p. 4 (B. The Pre-training and Post-training Scheme)이다.
 
 ## Semantic QA — PDF body cross-check
 

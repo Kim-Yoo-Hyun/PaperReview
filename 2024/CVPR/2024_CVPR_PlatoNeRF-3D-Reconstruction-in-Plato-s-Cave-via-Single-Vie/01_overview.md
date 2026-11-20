@@ -19,7 +19,7 @@
 
 ## Why This Paper Is Here
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 While promising, a limitation of existing methods is generalization to the lower spatial- and temporal-resolutions of lidars found on consumer devices.를 문제로 두고, Our method consists of three steps.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+PlatoNeRF는 단일 시점 라이다에서 두 번 반사된 빛을 이용해 보이는 구조와 가려진 구조를 복원한다.
 
 ## Problem and Motivation
 
@@ -52,16 +52,10 @@ Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 �
 
 ## Main Claims and Actual Contribution
 
-- **p. 4 / 3.1. Notations and Problem Definition - extractive body cue:** Our method consists of three steps.
-- **p. 2 / 1. Introduction - extractive body cue:** Furthermore, using lidar allows our method to operate with higher ambient light and lower scene albedo than RGB methods that exploit shadows.
-- **p. 2 / 1. Introduction - extractive body cue:** We use this data to evaluate our method and our baselines.
-- **p. 3 / 3.1. Notations and Problem Definition - extractive body cue:** The lidar system consists of a SPAD sensor and pulsed laser at known positions xs and xl respectively.
-- **p. 5 / 3.3. Implementation Details - extractive body cue:** Our method requires five inputs per pixel: (1) sensor location op = xs and ray direction dp, (2) laser location xl, (3) distance from the ...
-- **p. 7 / 4.2. Results - extractive body cue:** PlatoNeRF method achieves competitive performance.
-- **p. 7 / 4.2. Results - extractive body cue:** Due to our use of an implicit representation, we achieve much smoother results than BF Lidar.
-- **p. 5 / 3.3. Implementation Details - extractive body cue:** After 25,000 iterations, when an accurate initial estimate of the virtual detector xp is obtained, we set β to 1/6,000 in most experiments to encourage ...
+- 라이다의 시간 분해 관측으로 두 번 반사되는 광경로를 모델링하고 NeRF를 학습한다.
+- 장면 형상 복원과 센서의 공간·시간 해상도 변화에 따른 결과를 평가한다.
 
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+[원문 초록](https://openaccess.thecvf.com/content/CVPR2024/html/Klinghoffer_PlatoNeRF_3D_Reconstruction_in_Platos_Cave_via_Single-View_Two-Bounce_Lidar_CVPR_2024_paper.html)
 
 ## Evaluation Scope
 
@@ -85,4 +79,4 @@ Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 �
 
 ## Why Read It
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 While promising, a limitation of existing methods is generalization to the lower spatial- and temporal-resolutions of lidars found on consumer devices.를 문제로 두고, Our method consists of three steps.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (1. Introduction), p. 1 (1. Introduction), p. 2 (1. Introduction), p. 1 (1. Introduction), p. 3 (3.1. Notations and Problem Definition), p. 5 (3.3. Implementation Details) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 2 (1. Introduction), p. 1 (1. Introduction), p. 3 (3.1. Notations and Problem Definition), p. 5 (3.3. Implementation Details)이다.

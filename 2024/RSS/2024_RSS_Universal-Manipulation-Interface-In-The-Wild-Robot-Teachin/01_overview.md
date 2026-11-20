@@ -19,7 +19,7 @@
 
 ## Why This Paper Is Here
 
-RL, IL, offline learning, and robot data의 il 문제를 이해하기 위해 읽는다. 본문은 As a result, despite achieving impressive visual diversity across hundreds of environments, the collected actions are constrained to simple grasping [41] or quasi-static pick-andplace [50, 36], lacking action diversity.를 문제로 두고, 2), we show that UMI is capable of achieving a wide range of manipulation tasks that involve dynamic, bimanual, precise and long-horizon actions by only changing the training data for each task ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+휴대형 그리퍼로 일상 환경에서 수집한 사람 시연을 로봇 조작 정책으로 옮긴다.
 
 ## Problem and Motivation
 
@@ -50,16 +50,10 @@ RL, IL, offline learning, and robot data의 il 문제를 이해하기 위해 읽
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / I. INTRODUCTION - extractive body cue:** 2), we show that UMI is capable of achieving a wide range of manipulation tasks that involve dynamic, bimanual, precise and long-horizon actions by only ...
-- **p. 2 / I. INTRODUCTION - extractive body cue:** Furthermore, when trained with diverse human demonstrations, the final policy exhibits zero-shot generalization to novel environments and objects, achieving a remarkable 70% success rate in ...
-- **p. 3 / III. METHOD - extractive body cue:** It is designed with the following goals in mind: • Portable.
-- **p. 3 / III. METHOD - extractive body cue:** Universal Manipulation Interface (UMI) is hand-held data collection and policy learning framework that allows direct transfer from in-the-wild human demonstrations to deployable robot policies.
-- **p. 7 / V. CAPABILITY EXPERIMENTS - extractive body cue:** This baseline only achieves 11/20 = 55% success rate.
-- **p. 7 / V. CAPABILITY EXPERIMENTS - extractive body cue:** This experiment achieves 18/20 = 90% success rate, with the 2 failure cases being joint limit violations, which could have been avoided if we had ...
-- **p. 8 / V. CAPABILITY EXPERIMENTS - extractive body cue:** The delta action baseline achieves 16/20 = 80% success rate.
-- **p. 8 / V. CAPABILITY EXPERIMENTS - extractive body cue:** Our policy (with inference time latency matching) achieves 105/120 = 87.5% success rate, counted by the number of objects successfully tossed to their corresponding bin.
+- 손목 카메라·그리퍼 개방 폭·시각 추정 자세를 정렬해 행동 시퀀스를 복원한다.
+- 상대 행동 표현과 시간 지연 보상을 적용해 단팔·양팔 로봇에서 시연의 전이를 평가한다.
 
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+[검증한 원문](https://www.roboticsproceedings.org/rss20/p045.html)
 
 ## Evaluation Scope
 
@@ -83,7 +77,7 @@ RL, IL, offline learning, and robot data의 il 문제를 이해하기 위해 읽
 
 ## Why Read It
 
-RL, IL, offline learning, and robot data의 il 문제를 이해하기 위해 읽는다. 본문은 As a result, despite achieving impressive visual diversity across hundreds of environments, the collected actions are constrained to simple grasping [41] or quasi-static pick-andplace [50, 36], lacking action diversity.를 문제로 두고, 2), we show that UMI is capable of achieving a wide range of manipulation tasks that involve dynamic, bimanual, precise and long-horizon actions by only changing the training data for each task ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 3 (III. METHOD), p. 3 (III. METHOD) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 1 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 3 (III. METHOD)이다.
 
 ## Semantic QA — PDF body cross-check
 

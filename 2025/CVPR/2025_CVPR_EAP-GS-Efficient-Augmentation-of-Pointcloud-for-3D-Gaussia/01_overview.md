@@ -19,7 +19,7 @@
 
 ## Why This Paper Is Here
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 In practice, a sufficient number of images are often difficult to obtain due to various limitations.를 문제로 두고, Therefore, we propose a pointcloud generation method specifically designed for 3DGS initialization, which significantly increases the number of initial points.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+EAP-GS는 소수 영상으로 장면을 복원할 때 3D Gaussian Splatting의 초기 점 분포를 보완한다.
 
 ## Problem and Motivation
 
@@ -53,16 +53,10 @@ Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 �
 
 ## Main Claims and Actual Contribution
 
-- **p. 5 / 3.2. Attentional Pointcloud Augmentation - extractive body cue:** Therefore, we propose a pointcloud generation method specifically designed for 3DGS initialization, which significantly increases the number of initial points.
-- **p. 2 / 1. Introduction - extractive body cue:** In summary, our main contributions are as follows: • A key insight that inadequate initialization can lead to poor performance in few-shot optimization, which is ...
-- **p. 2 / 1. Introduction - extractive body cue:** To address this, we propose an easy-to-implement attentional pointcloud augmentation technique to improve the accuracy of 3DGS reconstruction.
-- **p. 4 / 3.2. Attentional Pointcloud Augmentation - extractive body cue:** The input to reconstruction stage consists of the n scene views I = {Ii ∈RH×W/i = 1, ..., n} and 16501
-- **p. 4 / 3. Method - extractive body cue:** 3.2, we present an Attentional Pointcloud Augmentation technique to effectively increase the number of initial points and harmonize the overall pointcloud density distribution of the ...
-- **p. 7 / 4.3. Ablation Studies - extractive body cue:** APA significantly improves the overall number and distribution of initial points, resulting in more accurate and reasonable scene geometry.
-- **p. 7 / 4.2. Experimental Results - extractive body cue:** Our method achieves leading scores across all metrics while using fewer Gaussians and requiring less computation time.
-- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Comparison of the FSGS [41] and our proposed EAP-GS with 12 training views. With Attentional Pointcloud Augmenta- tion technique, our method generates significantly ...
+- 기하 구조가 있으나 관측점이 드문 영역에 점을 보강한다.
+- 실내외 장면에서 점 보강이 복원에 미치는 영향을 비교한다.
 
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+[원문 초록](https://openaccess.thecvf.com/content/CVPR2025/html/Dai_EAP-GS_Efficient_Augmentation_of_Pointcloud_for_3D_Gaussian_Splatting_in_CVPR_2025_paper.html)
 
 ## Evaluation Scope
 
@@ -82,4 +76,4 @@ Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 �
 
 ## Why Read It
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 In practice, a sufficient number of images are often difficult to obtain due to various limitations.를 문제로 두고, Therefore, we propose a pointcloud generation method specifically designed for 3DGS initialization, which significantly increases the number of initial points.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (1. Introduction), p. 2 (1. Introduction), p. 5 (3.2. Attentional Pointcloud Augmentation), p. 4 (3.1. Preliminary), p. 5 (3.2. Attentional Pointcloud Augmentation), p. 4 (3.1. Preliminary) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 2 (1. Introduction), p. 5 (3.2. Attentional Pointcloud Augmentation), p. 4 (3.1. Preliminary)이다.

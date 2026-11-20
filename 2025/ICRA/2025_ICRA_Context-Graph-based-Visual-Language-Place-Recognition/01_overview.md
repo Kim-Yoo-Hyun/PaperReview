@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 Additionally, a significant limitation is the need for labor-intensive dataset labeling for training.를 문제로 두고, The main contributions of this paper are as follows: • Visual-language vocabulary-based place recognition system: We introduce the concept of Visual-Language Vocabulary to generate a vocabulary using pixel-level semantic descriptors ext ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — Additionally, a significant limitation is the need for labor-intensive dataset labeling for training.
+
+방법 관련 발췌 — The main contributions of this paper are as follows: • Visual-language vocabulary-based place recognition system: We introduce the concept of Visual-Language Vocabulary to generate a vocabulary using pixel-level semantic descriptors ext ...
 
 ## Problem and Motivation
 
@@ -82,4 +84,4 @@ Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 �
 
 ## Why Read It
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 Additionally, a significant limitation is the need for labor-intensive dataset labeling for training.를 문제로 두고, The main contributions of this paper are as follows: • Visual-language vocabulary-based place recognition system: We introduce the concept of Visual-Language Vocabulary to generate a vocabulary using pixel-level semantic descriptors ext ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 3 (III. METHODS), p. 3 (III. METHODS) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 1 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 3 (III. METHODS)이다.

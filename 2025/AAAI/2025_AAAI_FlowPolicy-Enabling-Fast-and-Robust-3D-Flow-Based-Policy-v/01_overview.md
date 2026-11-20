@@ -21,7 +21,9 @@
 
 ## Why This Paper Is Here
 
-Manipulation, contact, tactile, and dexterity의 manipulation 문제를 이해하기 위해 읽는다. 본문은 However, lack of a prior knowledge about u and pt, conditional flow matching (Lipman et al.를 문제로 두고, In summary, our main contributions are threefold: • We first propose a 3D flow-based policy generation framework that conditions the 3D visual representation and can generate robust robotic actions with few demonstrations, ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — However, lack of a prior knowledge about u and pt, conditional flow matching (Lipman et al.
+
+방법 관련 발췌 — In summary, our main contributions are threefold: • We first propose a 3D flow-based policy generation framework that conditions the 3D visual representation and can generate robust robotic actions with few demonstrations, ...
 
 ## Problem and Motivation
 
@@ -88,7 +90,7 @@ Manipulation, contact, tactile, and dexterity의 manipulation 문제를 이해�
 
 ## Why Read It
 
-Manipulation, contact, tactile, and dexterity의 manipulation 문제를 이해하기 위해 읽는다. 본문은 However, lack of a prior knowledge about u and pt, conditional flow matching (Lipman et al.를 문제로 두고, In summary, our main contributions are threefold: • We first propose a 3D flow-based policy generation framework that conditions the 3D visual representation and can generate robust robotic actions with few demonstrations, ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 4 (Abstract), p. 1 (Abstract), p. 2 (Abstract), p. 2 (Abstract), p. 3 (Abstract), p. 2 (Abstract) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 4 (Abstract), p. 1 (Abstract), p. 2 (Abstract), p. 3 (Abstract)이다.
 
 ## Semantic QA — PDF body cross-check
 

@@ -82,7 +82,7 @@ PaLM-E는 영상·상태 등 연속 관측을 언어 모델 입력에 넣어 로
 
 ## Why Read It
 
-VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다. 본문은 However, a limitation of such models for inference in the real world is the issue of grounding: while training LLMs on massive textual data may lead to representations that relate to our ...를 문제로 두고, In this paper we propose embodied language models, which 를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1. Introduction), p. 1 (1. Introduction), p. 3 (1. Introduction), p. 2 (1. Introduction), p. 2 (1. Introduction), p. 5 (5. Training Recipes) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 1 (1. Introduction), p. 3 (1. Introduction), p. 2 (1. Introduction), p. 5 (5. Training Recipes)이다.
 
 ## Semantic QA — PDF body cross-check
 

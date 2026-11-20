@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-Planning and control의 mobile_manipulation 문제를 이해하기 위해 읽는다. 본문은 Planning failures occur when the planner fails to generate the correct action sequence.를 문제로 두고, This library consists of four promptable predicates that can be addressed through prompt engineering based on the reasoning ability of state-of-the-art LLMs, such as holding and on, and six predicates determined by ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — Planning failures occur when the planner fails to generate the correct action sequence.
+
+방법 관련 발췌 — This library consists of four promptable predicates that can be addressed through prompt engineering based on the reasoning ability of state-of-the-art LLMs, such as holding and on, and six predicates determined by ...
 
 ## Problem and Motivation
 
@@ -86,7 +88,7 @@ Planning and control의 mobile_manipulation 문제를 이해하기 위해 읽는
 
 ## Why Read It
 
-Planning and control의 mobile_manipulation 문제를 이해하기 위해 읽는다. 본문은 Planning failures occur when the planner fails to generate the correct action sequence.를 문제로 두고, This library consists of four promptable predicates that can be addressed through prompt engineering based on the reasoning ability of state-of-the-art LLMs, such as holding and on, and six predicates determined by ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 7 (Problem Formulation), p. 5 (Problem Formulation), p. 6 (Problem Formulation), p. 7 (Problem Formulation), p. 3 (Problem Formulation), p. 5 (Problem Formulation) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 7 (Problem Formulation), p. 5 (Problem Formulation), p. 6 (Problem Formulation), p. 3 (Problem Formulation)이다.
 
 ## Semantic QA — PDF body cross-check
 

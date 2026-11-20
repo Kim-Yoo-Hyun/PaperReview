@@ -20,7 +20,9 @@
 
 ## Why This Paper Is Here
 
-Manipulation, contact, tactile, and dexterity의 manipulation 문제를 이해하기 위해 읽는다. 본문은 We show this yields significant speed improvements with respect to our prior work [2, 3].를 문제로 두고, We present three main contributions: • Mechanics of motion cones for planar tasks in the gravity plane.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — We show this yields significant speed improvements with respect to our prior work [2, 3].
+
+방법 관련 발췌 — We present three main contributions: • Mechanics of motion cones for planar tasks in the gravity plane.
 
 ## Problem and Motivation
 
@@ -82,7 +84,7 @@ Manipulation, contact, tactile, and dexterity의 manipulation 문제를 이해�
 
 ## Why Read It
 
-Manipulation, contact, tactile, and dexterity의 manipulation 문제를 이해하기 위해 읽는다. 본문은 We show this yields significant speed improvements with respect to our prior work [2, 3].를 문제로 두고, We present three main contributions: • Mechanics of motion cones for planar tasks in the gravity plane.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 7 (VI. PLANNING IN-HAND MANIPULATIONS VIA), p. 6 (VI. PLANNING IN-HAND MANIPULATIONS VIA), p. 6 (VI. PLANNING IN-HAND MANIPULATIONS VIA) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 1 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 7 (VI. PLANNING IN-HAND MANIPULATIONS VIA), p. 6 (VI. PLANNING IN-HAND MANIPULATIONS VIA)이다.
 
 ## Semantic QA — PDF body cross-check
 

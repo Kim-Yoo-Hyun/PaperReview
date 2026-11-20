@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-RL, IL, offline learning, and robot data의 robot_data 문제를 이해하기 위해 읽는다. 본문은 Pilco reduces model bias, one of the key problems of model-based reinforcement learning, in a principled way.를 문제로 두고, In this paper, we introduce pilco, a practical, data-efficient model-based policy search method.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — Pilco reduces model bias, one of the key problems of model-based reinforcement learning, in a principled way.
+
+방법 관련 발췌 — In this paper, we introduce pilco, a practical, data-efficient model-based policy search method.
 
 ## Problem and Motivation
 
@@ -81,7 +83,7 @@ RL, IL, offline learning, and robot data의 robot_data 문제를 이해하기 �
 
 ## Why Read It
 
-RL, IL, offline learning, and robot data의 robot_data 문제를 이해하기 위해 읽는다. 본문은 Pilco reduces model bias, one of the key problems of model-based reinforcement learning, in a principled way.를 문제로 두고, In this paper, we introduce pilco, a practical, data-efficient model-based policy search method.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (Abstract), p. 1 (Abstract), p. 2 (2.1. Dynamics Model Learning), p. 2 (2.1. Dynamics Model Learning), p. 5 (2.3. Analytic Gradients for Policy Improvement), p. 2 (2. Model-based Indirect Policy Search) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 1 (Abstract), p. 2 (2.1. Dynamics Model Learning), p. 5 (2.3. Analytic Gradients for Policy Improvement), p. 2 (2. Model-based Indirect Policy Search)이다.
 
 ## Semantic QA — PDF body cross-check
 

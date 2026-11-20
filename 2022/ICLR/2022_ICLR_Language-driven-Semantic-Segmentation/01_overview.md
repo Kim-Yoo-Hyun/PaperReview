@@ -76,4 +76,4 @@ LSeg는 영상의 각 위치에 대해 주어진 텍스트 레이블과의 대�
 
 ## Why Read It
 
-Robotics-enabling 3D perception의 navigation 문제를 이해하기 위해 읽는다. 본문은 The main reason for the restricted label sets in existing methods is the cost of annotating images to produce sufficient training data.를 문제로 두고, Our approach enables the synthesis of zero-shot semantic segmentation models on the fly.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 1 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 4 (C Input Label Set) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 1 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 4 (C Input Label Set)이다.

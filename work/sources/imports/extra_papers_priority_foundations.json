@@ -72,7 +72,9 @@
     "tags": ["3D Vision", "SLAM", "RGB-D", "3D reconstruction"],
     "pdf": "https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/ismar2011.pdf",
     "page": "https://www.microsoft.com/en-us/research/publication/kinectfusion-real-time-dense-surface-mapping-tracking/",
-    "project": "not released"
+    "project": "not released",
+    "authors": ["Richard A. Newcombe", "Shahram Izadi", "Otmar Hilliges", "David Molyneaux", "David Kim", "Andrew J. Davison", "Pushmeet Kohli", "Jamie Shotton", "Steve Hodges", "Andrew Fitzgibbon"],
+    "provenance": {"authors_verification": {"source": "https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/ismar2011.pdf", "verified_on": "2026-11-20", "basis": "ISMAR 원문 1쪽의 두 줄 저자 배열을 읽기 순서대로 옮기고 Pushmeet Kohli의 철자를 확인했다."}}
   },
   {
     "title": "BundleFusion: Real-time Globally Consistent 3D Reconstruction using On-the-fly Surface Reintegration",
@@ -445,7 +447,8 @@
     "category": "Foundations: Vision Foundation Models",
     "tags": ["Vision Foundation Model", "self-supervised", "representation"],
     "arxiv": "2111.06377",
-    "project": "https://github.com/facebookresearch/mae"
+    "project": "https://github.com/facebookresearch/mae",
+    "reproducibility": {"checkpoint": {"status": "reported", "source": "https://dl.fbaipublicfiles.com/mae/pretrain/mae_pretrain_vit_base.pth", "verified_on": "2026-11-20", "evidence": "저자 배포표에 있는 사전학습 ViT-Base 가중치 파일에 접근을 확인했다."}}
   },
   {
     "title": "Emerging Properties in Self-Supervised Vision Transformers",

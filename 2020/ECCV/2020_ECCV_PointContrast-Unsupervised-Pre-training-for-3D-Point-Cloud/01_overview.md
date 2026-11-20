@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 This status quo can be attributed to multiple reasons: 1) Lack of large-scale and high-quality data: compared to 2D images, 3D data is harder to collect, more expensive to label, and the ...를 문제로 두고, Our contributions can be summarized as follows: - We evaluate, for the first time, the transferability of learned representation in 3D point clouds to high-level scene understanding. - Our results indicate that ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — This status quo can be attributed to multiple reasons: 1) Lack of large-scale and high-quality data: compared to 2D images, 3D data is harder to collect, more expensive to label, and the ...
+
+방법 관련 발췌 — Our contributions can be summarized as follows: - We evaluate, for the first time, the transferability of learned representation in 3D point clouds to high-level scene understanding. - Our results indicate that ...
 
 ## Problem and Motivation
 
@@ -83,4 +85,4 @@ Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 �
 
 ## Why Read It
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 This status quo can be attributed to multiple reasons: 1) Lack of large-scale and high-quality data: compared to 2D images, 3D data is harder to collect, more expensive to label, and the ...를 문제로 두고, Our contributions can be summarized as follows: - We evaluate, for the first time, the transferability of learned representation in 3D point clouds to high-level scene understanding. - Our results indicate that ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (1 Introduction), p. 2 (1 Introduction), p. 2 (1 Introduction), p. 1 (body section not recovered), p. 2 (1 Introduction), p. 1 (1 Introduction) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 2 (1 Introduction), p. 1 (body section not recovered), p. 1 (1 Introduction)이다.

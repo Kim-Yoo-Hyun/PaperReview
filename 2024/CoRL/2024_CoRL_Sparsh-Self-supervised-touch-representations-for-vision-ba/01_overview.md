@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-Manipulation, contact, tactile, and dexterity의 tactile 문제를 이해하기 위해 읽는다. 본문은 Curation of new & existing datasets, unlabeled for SSL and labeled for benchmarking.를 문제로 두고, In this work, we introduce a family of touch representations for vision-based tactile sensors trained with SSL.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — Curation of new & existing datasets, unlabeled for SSL and labeled for benchmarking.
+
+방법 관련 발췌 — In this work, we introduce a family of touch representations for vision-based tactile sensors trained with SSL.
 
 ## Problem and Motivation
 
@@ -85,7 +87,7 @@ Manipulation, contact, tactile, and dexterity의 tactile 문제를 이해하기 
 
 ## Why Read It
 
-Manipulation, contact, tactile, and dexterity의 tactile 문제를 이해하기 위해 읽는다. 본문은 Curation of new & existing datasets, unlabeled for SSL and labeled for benchmarking.를 문제로 두고, In this work, we introduce a family of touch representations for vision-based tactile sensors trained with SSL.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (1 Introduction), p. 2 (1 Introduction), p. 1 (Abstract), p. 1 (Abstract), p. 2 (1 Introduction), p. 8 (8 Discussion) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 2 (1 Introduction), p. 1 (Abstract), p. 8 (8 Discussion)이다.
 
 ## Semantic QA — PDF body cross-check
 

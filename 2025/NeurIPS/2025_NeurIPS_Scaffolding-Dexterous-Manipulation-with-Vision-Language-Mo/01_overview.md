@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다. 본문은 To avoid both data scarcity and the embodiment gap, a combination of reinforcement learning (RL) and sim-to-real transfer has emerged as a promising approach by enabling large-scale experience generation [3].를 문제로 두고, Moreover, we showcase that our method transfers to realworld robotic hands without any human demonstrations or handcrafted rewards.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — To avoid both data scarcity and the embodiment gap, a combination of reinforcement learning (RL) and sim-to-real transfer has emerged as a promising approach by enabling large-scale experience generation [3].
+
+방법 관련 발췌 — Moreover, we showcase that our method transfers to realworld robotic hands without any human demonstrations or handcrafted rewards.
 
 ## Problem and Motivation
 
@@ -86,4 +88,4 @@ VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다
 
 ## Why Read It
 
-VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다. 본문은 To avoid both data scarcity and the embodiment gap, a combination of reinforcement learning (RL) and sim-to-real transfer has emerged as a promising approach by enabling large-scale experience generation [3].를 문제로 두고, Moreover, we showcase that our method transfers to realworld robotic hands without any human demonstrations or handcrafted rewards.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1 Introduction), p. 1 (1 Introduction), p. 2 (1 Introduction), p. 2 (1 Introduction), p. 5 (2. Plan Generation 𝜏), p. 5 (2. Plan Generation 𝜏) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 1 (1 Introduction), p. 2 (1 Introduction), p. 5 (2. Plan Generation 𝜏)이다.

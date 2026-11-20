@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 However, the unmodified utilization of mamba does not yield satisfactory performance on 3D-VL tasks due to the following challenges: (1) 3D point clouds are sparse, unordered and encode rich spatial information.를 문제로 두고, To capture spatial relationships of 3D object sequences while enhancing fine-grained interactions of 3D-VL interaction, we develop a Mamba Mixer module, which consists of a relation-prioritized spatial scanning and a channel twisting.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — However, the unmodified utilization of mamba does not yield satisfactory performance on 3D-VL tasks due to the following challenges: (1) 3D point clouds are sparse, unordered and encode rich spatial information.
+
+방법 관련 발췌 — To capture spatial relationships of 3D object sequences while enhancing fine-grained interactions of 3D-VL interaction, we develop a Mamba Mixer module, which consists of a relation-prioritized spatial scanning and a channel twisting.
 
 ## Problem and Motivation
 
@@ -82,4 +84,4 @@ Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 �
 
 ## Why Read It
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 However, the unmodified utilization of mamba does not yield satisfactory performance on 3D-VL tasks due to the following challenges: (1) 3D point clouds are sparse, unordered and encode rich spatial information.를 문제로 두고, To capture spatial relationships of 3D object sequences while enhancing fine-grained interactions of 3D-VL interaction, we develop a Mamba Mixer module, which consists of a relation-prioritized spatial scanning and a channel twisting.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (1. Introduction), p. 2 (1. Introduction), p. 3 (2.2. State Space Models and Visual Applications), p. 4 (3.2. Multi-Modal Mamba Mixer Block), p. 3 (3.1. Overall Framework), p. 4 (3.2. Multi-Modal Mamba Mixer Block) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 2 (1. Introduction), p. 3 (2.2. State Space Models and Visual Applications), p. 4 (3.2. Multi-Modal Mamba Mixer Block), p. 3 (3.1. Overall Framework)이다.

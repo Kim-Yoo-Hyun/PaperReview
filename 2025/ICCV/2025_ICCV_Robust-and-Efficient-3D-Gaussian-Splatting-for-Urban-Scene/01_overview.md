@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 However, its *Corresponding author explicit representation introduces scalability challenges, as spatial complexity increases with scene size.를 문제로 두고, The main contributions are summarized as follows: • We propose a novel visibility-based data division strategy and in-partition prioritized densification method, to achieve efficient urban-scale scene reconstruction. • A controllable LO ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — However, its *Corresponding author explicit representation introduces scalability challenges, as spatial complexity increases with scene size.
+
+방법 관련 발췌 — The main contributions are summarized as follows: • We propose a novel visibility-based data division strategy and in-partition prioritized densification method, to achieve efficient urban-scale scene reconstruction. • A controllable LO ...
 
 ## Problem and Motivation
 
@@ -84,4 +86,4 @@ Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 �
 
 ## Why Read It
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 However, its *Corresponding author explicit representation introduces scalability challenges, as spatial complexity increases with scene size.를 문제로 두고, The main contributions are summarized as follows: • We propose a novel visibility-based data division strategy and in-partition prioritized densification method, to achieve efficient urban-scale scene reconstruction. • A controllable LO ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (1. Introduction), p. 1 (1. Introduction), p. 2 (1. Introduction), p. 2 (1. Introduction), p. 6 (3.6. Loss of Individual Partition Training), p. 5 (3.5.1. Appearance Transform Module) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 1 (1. Introduction), p. 2 (1. Introduction), p. 6 (3.6. Loss of Individual Partition Training), p. 5 (3.5.1. Appearance Transform Module)이다.

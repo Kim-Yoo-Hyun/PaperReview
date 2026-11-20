@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-World models, safety, uncertainty, and recovery의 safety 문제를 이해하기 위해 읽는다. 본문은 To address these challenges, we propose DREAMGEN, a new synthetic data pipeline that leverages video world models to create realistic training data at scale with minimal manual labor or engineering.를 문제로 두고, Lastly, we introduce DreamGen Bench (Section 4), a new video generation benchmark designed to evaluate how well different video world models adapt to novel robot embodiments.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — To address these challenges, we propose DREAMGEN, a new synthetic data pipeline that leverages video world models to create realistic training data at scale with minimal manual labor or engineering.
+
+방법 관련 발췌 — Lastly, we introduce DreamGen Bench (Section 4), a new video generation benchmark designed to evaluate how well different video world models adapt to novel robot embodiments.
 
 ## Problem and Motivation
 
@@ -83,7 +85,7 @@ World models, safety, uncertainty, and recovery의 safety 문제를 이해하기
 
 ## Why Read It
 
-World models, safety, uncertainty, and recovery의 safety 문제를 이해하기 위해 읽는다. 본문은 To address these challenges, we propose DREAMGEN, a new synthetic data pipeline that leverages video world models to create realistic training data at scale with minimal manual labor or engineering.를 문제로 두고, Lastly, we introduce DreamGen Bench (Section 4), a new video generation benchmark designed to evaluate how well different video world models adapt to novel robot embodiments.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (1 Introduction), p. 2 (1 Introduction), p. 3 (1 Introduction), p. 3 (1 Introduction), p. 4 (1 Introduction), p. 4 (1 Introduction) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 2 (1 Introduction), p. 3 (1 Introduction), p. 4 (1 Introduction)이다.
 
 ## Semantic QA — PDF body cross-check
 

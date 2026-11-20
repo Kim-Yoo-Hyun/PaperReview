@@ -19,7 +19,9 @@
 
 ## Why This Paper Is Here
 
-Locomotion, whole-body, mobile manipulation, and humanoids의 humanoid 문제를 이해하기 위해 읽는다. 본문은 However, due to limitations in the accuracy, inference speed, and difficulty in handling occlusions of pose estimation, such approaches cannot guarantee rapid and accurate pose acquisition.를 문제로 두고, We introduce the training settings and three key techniques of our framework in this section를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+문제 관련 발췌 — However, due to limitations in the accuracy, inference speed, and difficulty in handling occlusions of pose estimation, such approaches cannot guarantee rapid and accurate pose acquisition.
+
+방법 관련 발췌 — We introduce the training settings and three key techniques of our framework in this section
 
 ## Problem and Motivation
 
@@ -85,7 +87,7 @@ Locomotion, whole-body, mobile manipulation, and humanoids의 humanoid 문제를
 
 ## Why Read It
 
-Locomotion, whole-body, mobile manipulation, and humanoids의 humanoid 문제를 이해하기 위해 읽는다. 본문은 However, due to limitations in the accuracy, inference speed, and difficulty in handling occlusions of pose estimation, such approaches cannot guarantee rapid and accurate pose acquisition.를 문제로 두고, We introduce the training settings and three key techniques of our framework in this section를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (A. Teleoperation Systems), p. 1 (Abstract), p. 1 (Abstract), p. 2 (Abstract), p. 3 (B. Whole-body Loco-Manipulation), p. 8 (A. Humanoid Whole-body Control) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 2 (A. Teleoperation Systems), p. 1 (Abstract), p. 2 (Abstract), p. 3 (B. Whole-body Loco-Manipulation), p. 8 (A. Humanoid Whole-body Control)이다.
 
 ## Semantic QA — PDF body cross-check
 

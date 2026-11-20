@@ -19,7 +19,7 @@
 
 ## Why This Paper Is Here
 
-Robotics-enabling 3D perception의 benchmark 문제를 이해하기 위해 읽는다. 본문은 However, these techniques are each independently far from perfect and such an agent would need to learn the limitations of these lowerlevel control systems - facing consequences when proposed waypoints cannot be ...를 문제로 두고, In this work, we develop a continuous setting that enables these types of studies and take a first step towards integrating VLN agents with control via low-level actions.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+언어 경로 지시를 따라가는 문제를 미리 정한 내비게이션 그래프에서 연속 공간으로 옮긴다.
 
 ## Problem and Motivation
 
@@ -53,16 +53,10 @@ Robotics-enabling 3D perception의 benchmark 문제를 이해하기 위해 읽�
 
 ## Main Claims and Actual Contribution
 
-- **p. 3 / 1 Introduction - extractive body cue:** In this work, we develop a continuous setting that enables these types of studies and take a first step towards integrating VLN agents with control ...
-- **p. 1 / 1 Introduction - extractive body cue:** This paradigm enables efficient data collection and high visual fidelity compared to 3D scanning or creating synthetic environments; however, scenes are only observed from a ...
-- **p. 4 / 1 Introduction - extractive body cue:** To summarize our contributions, we: - Lift the VLN task to continuous 3D environments - removing many unrealistic assumptions imposed by the nav-graph-based representation.
-- **p. 1 / 1 Introduction - extractive body cue:** Many of these tasks have been developed from datasets of panoramic images captured in real scenes - e.g.
-- **p. 3 / 1 Introduction - extractive body cue:** We develop agent architectures for this task and explore how popular mechanisms for VLN transfer to the VLN-CE setting.
-- **p. 12 / 5 Experiments - extractive body cue:** Despite having no learned components nor processing any input, both these agents achieve approximately 3% success rates in val-unseen.
-- **p. 12 / 5 Experiments - extractive body cue:** We find that depth is a very strong signal for learning, with models lacking it (No Depth and No Vision) failing to outperform chance (≤1% ...
-- **p. 11 / 5 Experiments - extractive body cue:** For our discussion, we will examine success rate and SPL as the primary metrics for performance and use NDTW to describe how paths differ in ...
+- R2R 경로를 시뮬레이터의 저수준 행동으로 변환한 에피소드를 구축한다.
+- 단일 모달리티와 교차 모달 attention 기반 정책을 비교해 연속 공간에서의 성능 차이를 측정한다.
 
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+[검증한 원문](https://arxiv.org/abs/2004.02857)
 
 ## Evaluation Scope
 
@@ -86,4 +80,4 @@ Robotics-enabling 3D perception의 benchmark 문제를 이해하기 위해 읽�
 
 ## Why Read It
 
-Robotics-enabling 3D perception의 benchmark 문제를 이해하기 위해 읽는다. 본문은 However, these techniques are each independently far from perfect and such an agent would need to learn the limitations of these lowerlevel control systems - facing consequences when proposed waypoints cannot be ...를 문제로 두고, In this work, we develop a continuous setting that enables these types of studies and take a first step towards integrating VLN agents with control via low-level actions.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 3 (1 Introduction), p. 2 (1 Introduction), p. 3 (1 Introduction), p. 2 (1 Introduction), p. 4 (1 Introduction), p. 3 (1 Introduction) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 3 (1 Introduction), p. 2 (1 Introduction), p. 4 (1 Introduction)이다.

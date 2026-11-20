@@ -19,7 +19,7 @@
 
 ## Why This Paper Is Here
 
-World models, safety, uncertainty, and recovery의 safety 문제를 이해하기 위해 읽는다. 본문은 However, accurately predicting raw future observations (e.g., images or proprioceptive features) over long time horizons is a difficult problem, and does not necessarily lead to effective control (Lambert et al., 2020).를 문제로 두고, In this work, we present TDMPC2: a significant step towards achieving this goal.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+공유 잠재 동역학 모델로 여러 연속 제어 과제를 학습하고 실행 시 행동 시퀀스를 계획한다.
 
 ## Problem and Motivation
 
@@ -53,16 +53,10 @@ World models, safety, uncertainty, and recovery의 safety 문제를 이해하기
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** In this work, we present TDMPC2: a significant step towards achieving this goal.
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** Our algorithmic contributions, which have been key to achieving this milestone, are two-fold: (1) improved algorithmic robustness by revisiting core design choices, and (2) careful ...
-- **p. 1 / ABSTRACT - extractive body cue:** In this work, we present TD-MPC2: a series of improvements upon the TD-MPC algorithm.
-- **p. 3 / 2 BACKGROUND - extractive body cue:** We introduce the TD-MPC2 algorithm in the following, and provide a full list of algorithmic improvements in Appendix A.
-- **p. 3 / 2 BACKGROUND - extractive body cue:** Specifically, we propose a series of improvements to the TD-MPC algorithm, which have been key to achieving strong algorithmic robustness (can use the same hyperparameters ...
-- **p. 22 / Figure/Table caption - extractive body cue:** Figure 13. Single-task Meta-World results. Success rate (%) as a function of environment steps. TD-MPC2 performance is comparable to existing methods on easy tasks, while ...
-- **p. 23 / Figure/Table caption - extractive body cue:** Figure 16. Single-task MyoSuite results. Success rate (%) as a function of environment steps. This task domain includes high-dimensional contact-rich musculoskeletal motor control (A ∈R39) ...
-- **p. 5 / Figure/Table caption - extractive body cue:** Figure 4. Single-task RL. Episode return (DMControl) and success rate (others) as a function of environment steps across 104 continuous control tasks spanning 4 diverse ...
+- 명시적인 관측 복원 없이 잠재 상태 전이·보상·가치를 학습한다.
+- 서로 다른 태스크와 모델 크기에서 단일·다중 태스크 학습을 함께 평가한다.
 
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+[검증한 원문](https://proceedings.iclr.cc/paper_files/paper/2024/hash/cf73d57b6dcda32b293df7c2d5341f49-Abstract-Conference.html)
 
 ## Evaluation Scope
 
@@ -86,7 +80,7 @@ World models, safety, uncertainty, and recovery의 safety 문제를 이해하기
 
 ## Why Read It
 
-World models, safety, uncertainty, and recovery의 safety 문제를 이해하기 위해 읽는다. 본문은 However, accurately predicting raw future observations (e.g., images or proprioceptive features) over long time horizons is a difficult problem, and does not necessarily lead to effective control (Lambert et al., 2020).를 문제로 두고, In this work, we present TDMPC2: a significant step towards achieving this goal.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 3 (2 BACKGROUND), p. 5 (2 BACKGROUND), p. 5 (2 BACKGROUND), p. 1 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 3 (2 BACKGROUND) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+방법과 평가 범위를 대조할 원문 구간은 p. 3 (2 BACKGROUND), p. 5 (2 BACKGROUND), p. 1 (1 INTRODUCTION), p. 2 (1 INTRODUCTION)이다.
 
 ## Semantic QA — PDF body cross-check
 
