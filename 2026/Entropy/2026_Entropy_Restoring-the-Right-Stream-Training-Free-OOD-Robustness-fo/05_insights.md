@@ -12,7 +12,7 @@ Gated Per-Stream Manifold Restoration으로 visual/state 입력을 따로 복원
 
 OpenVLA-OFT와 LIBERO-Plus 평가를 보고한다.
 
-근거: [공식 paper/abstract](https://www.mdpi.com/1099-4300/28/9/975) · [저자 project/code](https://www.mdpi.com/1099-4300/28/9/975). 이는 논문의 abstract/project 주장 범위이며 독립 재현 결과가 아니다.
+근거: [공식 paper/abstract](https://www.mdpi.com/1099-4300/28/9/975) · 저자 프로젝트·코드 주소 미확인. 이는 논문의 abstract/project 주장 범위이며 독립 재현 결과가 아니다.
 
 ### Evidence Boundary
 

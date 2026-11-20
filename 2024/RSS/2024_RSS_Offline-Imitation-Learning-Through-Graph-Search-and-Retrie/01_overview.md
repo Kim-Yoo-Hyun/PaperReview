@@ -13,7 +13,7 @@
 - Tags: Robotics, Imitation Learning, offline learning, graph search, retrieval
 - Official paper: https://www.roboticsproceedings.org/rss20/p054.html
 - Full-text retrieval: https://www.roboticsproceedings.org/rss20/p054.pdf
-- Code/Project: https://www.roboticsproceedings.org/rss20/p054.html
+- Code/Project: https://zhaohengyin.github.io/gsr/
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 

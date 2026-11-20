@@ -30,4 +30,4 @@ intrinsic/extrinsic 접근, depth 정렬, asynchronous 비용.
 
 ## Evidence Anchor
 
-[공식 paper/abstract](https://arxiv.org/abs/2609.37150) · [저자 project/code](https://arxiv.org/abs/2609.37150). Exact objective, constraints, success definition은 본문 수동 확인 필요.
+[공식 paper/abstract](https://arxiv.org/abs/2609.37150) · 저자 프로젝트·코드 주소 미확인. Exact objective, constraints, success definition은 본문 수동 확인 필요.

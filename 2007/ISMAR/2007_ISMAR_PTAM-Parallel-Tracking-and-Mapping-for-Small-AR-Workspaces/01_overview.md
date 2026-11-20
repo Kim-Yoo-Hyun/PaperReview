@@ -1,7 +1,7 @@
 # Parallel Tracking and Mapping for Small AR Workspaces
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; title-token overlap first two pages=0.833); canonical paper source: https://www.robots.ox.ac.uk/~gk/PTAM/.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; title-token overlap first two pages=0.833); canonical paper source: https://api.crossref.org/works/10.1109/ISMAR.2007.4538852.
 > PDF retrieval source: https://www.robots.ox.ac.uk/~gk/publications/KleinMurray2007ISMAR.pdf. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.

@@ -1,7 +1,7 @@
 # Rapidly-Exploring Random Trees: A New Tool for Path Planning
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-03 (4 pages; tesseract OCR fallback; title-token overlap first two pages=1.0); canonical paper source: https://lavalle.pl/rrtpubs.html.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (4 pages; tesseract OCR fallback; title-token overlap first two pages=1.0); canonical paper source: https://lavalle.pl/papers/Lav98c.pdf.
 > PDF retrieval source: https://lavalle.pl/papers/Lav98c.pdf. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.

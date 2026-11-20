@@ -1,7 +1,7 @@
 # 4D-VLA: Spatiotemporal Vision-Language-Action Pretraining with Cross-Scene Calibration
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-03 (17 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://openreview.net/forum?id=yFjgV3cJje.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (17 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://neurips.cc/virtual/2025/poster/115166.
 > PDF retrieval source: https://arxiv.org/pdf/2506.22242. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
@@ -12,7 +12,8 @@
 - Tier: REFERENCE
 - Tags: VLA, Vision-Language Model
 - Official paper: https://neurips.cc/virtual/2025/poster/115166
-- Full-text retrieval: https://arxiv.org/pdf/2506.22242
+- Published PDF: https://proceedings.neurips.cc/paper_files/paper/2025/file/30b9c38b9ebeee281cd2bc41d39bf0e7-Paper-Conference.pdf
+- Full-text retrieval at original review: https://arxiv.org/pdf/2506.22242
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (17 pages; PyMuPDF text; title-token overlap first two pages=1.0)

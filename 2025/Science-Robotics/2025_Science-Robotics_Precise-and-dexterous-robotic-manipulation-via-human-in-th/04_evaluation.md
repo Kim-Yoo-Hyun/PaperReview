@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-03 (54 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2410.21845; PDF retrieval source: https://arxiv.org/pdf/2410.21845. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (54 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://api.crossref.org/works/10.1126/scirobotics.ads5033; PDF retrieval source: https://arxiv.org/pdf/2410.21845. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 
 > Publication metadata update (2026-10-25): [Science Robotics 2025](https://www.science.org/doi/10.1126/scirobotics.ads5033), [publisher-deposited metadata](https://api.crossref.org/works/10.1126/scirobotics.ads5033). 아래 본문·페이지 근거는 기존 arXiv PDF review를 보존한다. Journal 본문 재정독이나 reading status 변경은 아니다.

@@ -1,7 +1,7 @@
 # LoopSplat: Loop Closure by Registering 3D Gaussian Splats
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-03 (19 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://3dvconf.github.io/2025/accepted-papers/.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (19 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://api.crossref.org/works/10.1109/3dv66043.2025.00020.
 > PDF retrieval source: https://openreview.net/attachment?id=0CNSbBa85A&name=pdf. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
@@ -11,7 +11,7 @@
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
 - Tags: Gaussian Splatting, 3D Vision
-- Official paper: https://3dvconf.github.io/2025/schedule_updated2.csv
+- Official paper: https://api.crossref.org/works/10.1109/3dv66043.2025.00020
 - Full-text retrieval: https://arxiv.org/pdf/2408.10154.pdf
 - Code/Project: not identified
 - Paper type: method

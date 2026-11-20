@@ -2,6 +2,7 @@
 
 import argparse
 import json
+from collections import Counter
 from pathlib import Path
 
 
@@ -15,10 +16,85 @@ FIELDS = {
 }
 PASS, EDIT, OPEN = "통과", "수정 필요", "존재 불확실"
 TIERS = ("CORE", "NEXT", "REFERENCE", "ARCHIVE")
+FOLLOWUP_FIELDS = {"primary": "대표 서지", "arxiv": "arXiv 식별자", "doi": "DOI",
+                   "project": "프로젝트 주소", "code_url": "코드 주소", "pdf": "원문 PDF",
+                   "title": "제목", "authors": "저자", "code": "코드", "weights": "가중치", "data": "데이터"}
 
 
 def final(check):
     return check.get("after", check["status"])
+
+
+def check_applied(rows, papers, root):
+    """Compare the dated corrections (including later evidence) with this checkout."""
+    by_id = {p["paper_id"]: p for p in papers}
+    errors = []
+    original = later = 0
+    for row in rows:
+        pid = row["id"]
+        paper = by_id[pid]
+        follow = row.get("followup", {})
+
+        def expect(field, value, target):
+            if value != target:
+                errors.append(f"{pid} {field} differs from the reviewed correction")
+
+        def check_source(field, target):
+            source_key = {"pdf": "paper_pdf", "code_url": "code"}.get(field, field)
+            actual = (paper["sources"].get(source_key) or {}).get("url")
+            expect(f"sources.{source_key}", actual, target)
+            if field in ("primary", "pdf"):
+                key = "page" if field == "primary" else "pdf"
+                expect(key, paper.get(key) or None, target)
+
+        def check_artifact(field, target):
+            key = "checkpoint" if field == "weights" else field
+            expect(f"reproducibility.{key}", paper["reproducibility"][key]["status"], target)
+            if field != "weights":
+                expect(f"artifacts.{key}_status", paper["artifacts"][key + "_status"], target)
+
+        for field, item in row["checks"].items():
+            if item.get("kind") != "오류":
+                continue
+            original += 1
+            corrected = item["corrected"]
+            if field == "link":
+                for key, value in corrected.items():
+                    follow_key = "code_url" if key == "code" else key
+                    check_source(key, follow.get(follow_key, {}).get("corrected", value))
+            elif field == "summary":
+                overview = (root / paper["folder"] / "01_overview.md").read_text()
+                claims = [corrected] if isinstance(corrected, str) else [corrected["summary"], *corrected["contributions"]]
+                if not all(claim in overview for claim in claims):
+                    errors.append(f"{pid} reviewed summary or contribution missing from overview")
+            elif field in ("code", "weights", "data"):
+                check_artifact(field, follow.get(field, {}).get("corrected", corrected))
+            else:
+                expect(field, paper[field], follow.get(field, {}).get("corrected", corrected))
+                if field in ("year", "venue"):
+                    expect("publication." + field, paper["publication"][field], paper[field])
+        for field, item in follow.items():
+            later += 1
+            if field in ("primary", "project", "pdf", "code_url"):
+                check_source(field, item["corrected"])
+            elif field in ("doi", "arxiv"):
+                expect(field, paper["identifiers"].get(field), item["corrected"])
+                if field == "arxiv":
+                    check_source("preprint", item["source"])
+            elif field in ("code", "weights", "data"):
+                check_artifact(field, item["corrected"])
+                profile = paper["reproducibility"]["checkpoint" if field == "weights" else field]
+                expect(field + " evidence", profile.get("source"), item["source"])
+            elif field == "title":
+                expect(field, paper[field], item["corrected"])
+            elif field == "authors":
+                expect(field, paper[field], item["corrected"])
+                overview = (root / paper["folder"] / "01_overview.md").read_text()
+                if "- Authors: " + ", ".join(item["corrected"]) not in overview.splitlines():
+                    errors.append(f"{pid} reviewed author byline missing from overview")
+    if errors:
+        raise ValueError("\n".join(errors))
+    return original, later
 
 
 def tally(rows, fields):
@@ -53,12 +129,55 @@ def validate(rows, meta):
                 not {"before", "corrected"}.issubset(check)
             ):
                 raise ValueError(f"Incomplete correction for {row['id']} {name}")
+        for name, change in row.get("followup", {}).items():
+            if (name not in FOLLOWUP_FIELDS or change.get("kind") not in ("오류", "보완")
+                or change.get("status") not in (PASS, OPEN) or not change.get("basis")
+                or not change.get("source", "").startswith("https://")
+                or not {"before", "corrected"}.issubset(change)):
+                raise ValueError(f"Incomplete follow-up for {row['id']} {name}")
 
 
 def mark(c):
     if c["status"] == EDIT:
         return ("오" if c["kind"] == "오류" else "보") + "→" + {PASS: "✓", OPEN: "?", EDIT: "!"}[final(c)]
     return "✓" if c["status"] == PASS else "?"
+
+
+def followup_report(rows):
+    updated = [r for r in rows if r.get("followup")]
+    if not updated:
+        return []
+    counts = Counter((field, v["kind"], v["status"]) for r in updated for field, v in r["followup"].items())
+    faults = sum(n for (_, kind, _), n in counts.items() if kind == "오류")
+    affected = sum(any(v["kind"] == "오류" for v in r["followup"].values()) for r in updated)
+    checked_pdf = sum(r.get("followup", {}).get("pdf", {}).get("status") == PASS
+                      and r["checks"]["link"].get("endpoints", {}).get("pdf", {}).get("state") == "access-unconfirmed"
+                      for r in rows)
+    lines = ["", "## 교정 재검증", "",
+             f"첫 감사 뒤 {len(updated):,}편에서 {sum(counts.values())}개 필드를 재검토해 반영했다. "
+             f"그중 {affected}편에서 현재 기록과 근거가 어긋난 {faults}건을 고쳤다. "
+             f"앞서 접근을 확인하지 못했던 PDF 주소 {checked_pdf}건은 표제면을 확인한 판본으로 교체했다. "
+             "아래 표의 단위는 논문별 필드다. "
+             "같은 사실이 여러 노트·색인에 반복된 경우는 한 번만 센다. "
+             "‘현재 미확인’에는 잘못된 주소를 제거한 뒤 대체 주소를 찾지 못한 경우와 배포 근거가 부족해 기존 단정을 거둔 경우가 포함된다. "
+             "[이전 값·현재 값·직접 근거](../work/sources/batches/source_audit_2026_11.jsonl)", "",
+             "| 필드 | 확인 오류 교정 | 근거 보완 | 현재 통과 | 현재 미확인 |",
+             "|---|---:|---:|---:|---:|"]
+    for field, label in FOLLOWUP_FIELDS.items():
+        fixed, unconfirmed = counts[field, "오류", PASS], counts[field, "오류", OPEN]
+        added, qualified = counts[field, "보완", PASS], counts[field, "보완", OPEN]
+        lines.append(f"| {label} | {fixed + unconfirmed} | {added + qualified} | "
+                     f"{fixed + added} | {unconfirmed + qualified} |")
+    core_open = sum(r["tier_at_audit"] == "CORE" and any(
+        r.get("followup", {}).get(k, {}).get("status", final(r["checks"][k])) == OPEN
+        for k in ("code", "weights", "data")) for r in rows)
+    next_summaries = sum(r["tier_at_audit"] == "NEXT" and final(r["checks"]["summary"]) == OPEN for r in rows)
+    lines += ["", f"교정 후에도 CORE {core_open}편에는 공개 자료 세 종류 중 미확인 항목이 있다. "
+              f"NEXT {next_summaries}편은 요약·기여의 원문 대조가 남았다."]
+    lines += ["", "아래 배치별 오류율과 논문별 기호는 첫 감사 시점의 기록이다. "
+              "해당 ID의 `followup`에 이후 판정과 변경 사유가 있다. "
+              "`python3 work/scripts/render_source_audit.py --verify-corrections`로 이 판본의 교정값을 원장 및 요약과 다시 대조할 수 있다."]
+    return lines
 
 
 def render(rows, meta):
@@ -79,6 +198,7 @@ def render(rows, meta):
         f"**{errors}/{n:,}편({pct(errors,n)})**이다. 여러 필드에 걸친 오류는 총 {count_errors}건이다. "
         f"[교정 전 원장](https://github.com/Kim-Yoo-Hyun/PaperReview/blob/{meta['baseline_commit']}/work/sources/papers.json) · "
         "[논문별 판정·교정값·원문 위치](../work/sources/batches/source_audit_2026_11.jsonl)",
+        *followup_report(rows),
         "", "## 판정 기준", "",
         "- **통과**는 해당 항목의 기록과 근거가 일치한다는 뜻이다. **수정 필요**는 교정 전 판정이며, 원문과 모순되거나 오류가 입증된 기록은 ‘오류’, 누락·불완전 기록을 채우거나 근거 없는 단정을 완화한 경우는 ‘보완’으로 구분한다.",
         "- 저자 필드의 빈칸을 채우거나 `project_only`에서 구현 파일을 처음 식별한 경우는 보완으로 집계한다. `not_released`로 기록한 산출물의 실제 배포 파일을 확인한 경우는 오류다.",
@@ -153,9 +273,15 @@ def render(rows, meta):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--write", action="store_true", help="write the dated Markdown report")
+    parser.add_argument("--verify-corrections", action="store_true",
+                        help="compare this audit's effective corrections with the current manifest and notes")
     args = parser.parse_args()
     meta = json.loads((ROOT / "work/sources/registry_meta.json").read_text())["source_audit"]
     rows = [json.loads(s) for s in SOURCE.read_text().splitlines()]
+    if args.verify_corrections:
+        papers = json.loads((ROOT / "work/sources/papers.json").read_text())
+        original, later = check_applied(rows, papers, ROOT)
+        print(f"Matched {original} original corrections and {later} follow-up fields")
     text = render(rows, meta)
     if args.write:
         REPORT.write_text(text)

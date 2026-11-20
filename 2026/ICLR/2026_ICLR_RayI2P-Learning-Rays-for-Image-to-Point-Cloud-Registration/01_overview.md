@@ -1,7 +1,7 @@
 # RayI2P: Learning Rays for Image-to-Point Cloud Registration
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-03 (18 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://openreview.net/forum?id=arfeGsDWoq.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (18 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://proceedings.iclr.cc/paper_files/paper/2026/hash/49f42aafbcce59b2665640cb9f3d794f-Abstract-Conference.html.
 > PDF retrieval source: https://chatpaper.com/api/v1/articles/download/247078. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.

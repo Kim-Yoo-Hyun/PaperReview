@@ -1,7 +1,7 @@
 # Fin3R: Fine-tuning Feed-forward 3D Reconstruction Models via Monocular Knowledge Distillation
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-03 (22 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://openreview.net/forum?id=pZIeK0Xvph.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (22 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://neurips.cc/virtual/2025/poster/115951.
 > PDF retrieval source: https://arxiv.org/pdf/2511.22429. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
@@ -12,7 +12,8 @@
 - Tier: REFERENCE
 - Tags: 3D reconstruction, depth, 3D Vision
 - Official paper: https://neurips.cc/virtual/2025/poster/115951
-- Full-text retrieval: https://arxiv.org/pdf/2511.22429
+- Published PDF: https://proceedings.neurips.cc/paper_files/paper/2025/file/dfcf77638847c79bcf1a1449db85218d-Paper-Conference.pdf
+- Full-text retrieval at original review: https://arxiv.org/pdf/2511.22429
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (22 pages; PyMuPDF text; title-token overlap first two pages=1.0)

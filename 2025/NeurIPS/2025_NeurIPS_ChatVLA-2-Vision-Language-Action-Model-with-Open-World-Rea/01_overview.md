@@ -1,7 +1,7 @@
-# ChatVLA-2: Vision-Language-Action Model with Open-World Reasoning
+# ChatVLA-2: Vision-Language-Action Model with Open-World Embodied Reasoning from Pretrained Knowledge
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-03 (16 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://openreview.net/forum?id=1lyKflUOhp.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (16 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://neurips.cc/virtual/2025/poster/120199.
 > PDF retrieval source: https://arxiv.org/pdf/2505.21906.pdf. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
@@ -11,8 +11,10 @@
 - Primary track: VLA and generalist robot policies
 - Tier: REFERENCE
 - Tags: VLA, Vision-Language Model, Reinforcement Learning
+- Publication index title: ChatVLA-2: Vision-Language-Action Model with Open-World Reasoning
 - Official paper: https://neurips.cc/virtual/2025/poster/120199
-- Full-text retrieval: https://arxiv.org/pdf/2505.21906.pdf
+- Published PDF: https://proceedings.neurips.cc/paper_files/paper/2025/file/41128e5b3a7622da5b17588757599077-Paper-Conference.pdf
+- Full-text retrieval at original review: https://arxiv.org/pdf/2505.21906.pdf
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (16 pages; PyMuPDF text; title-token overlap first two pages=1.0)

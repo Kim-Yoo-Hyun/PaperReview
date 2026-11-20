@@ -1,7 +1,7 @@
 # Spiral: Semantic-Aware Progressive LiDAR Scene Generation and Understanding
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-03 (24 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://openreview.net/forum?id=SoqzNbcBjy.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (24 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://neurips.cc/virtual/2025/poster/117899.
 > PDF retrieval source: https://arxiv.org/pdf/2505.22643. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
@@ -12,7 +12,8 @@
 - Tier: REFERENCE
 - Tags: sensor fusion, LiDAR, semantic, alignment, Diffusion, Generation, 3D Vision
 - Official paper: https://neurips.cc/virtual/2025/poster/117899
-- Full-text retrieval: https://arxiv.org/pdf/2505.22643
+- Published PDF: https://proceedings.neurips.cc/paper_files/paper/2025/file/536d643875321d6c3282ee8c7ea5eb6a-Paper-Conference.pdf
+- Full-text retrieval at original review: https://arxiv.org/pdf/2505.22643
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (24 pages; PyMuPDF text; title-token overlap first two pages=1.0)

@@ -13,7 +13,8 @@
 - Tags: Robotics, quadruped locomotion, Reinforcement Learning, terrain estimation
 - Official paper: https://arxiv.org/abs/2301.10602
 - Full-text retrieval: https://arxiv.org/pdf/2301.10602
-- Code/Project: https://github.com/antonilo/rl_locomotion
+- Code/Project: not identified
+- Code availability: 기존 링크는 RMA·Cross-Modal Supervision 구현이다. 원 DreamWaQ의 저자 구현은 미확인. [근거](https://github.com/antonilo/rl_locomotion)
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (7 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 

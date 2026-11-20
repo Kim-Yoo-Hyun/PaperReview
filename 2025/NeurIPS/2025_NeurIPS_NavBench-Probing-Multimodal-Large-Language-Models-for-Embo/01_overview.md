@@ -1,7 +1,7 @@
 # NavBench: Probing Multimodal Large Language Models for Embodied Navigation
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-03 (14 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://openreview.net/forum?id=nf8PKQKtl2.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (14 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://neurips.cc/virtual/2025/poster/116120.
 > PDF retrieval source: https://arxiv.org/pdf/2506.01031. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
@@ -12,7 +12,8 @@
 - Tier: REFERENCE
 - Tags: Navigation
 - Official paper: https://neurips.cc/virtual/2025/poster/116120
-- Full-text retrieval: https://arxiv.org/pdf/2506.01031
+- Published PDF: https://proceedings.neurips.cc/paper_files/paper/2025/file/8932bbe603280f51d425e2781cd6ea6e-Paper-Conference.pdf
+- Full-text retrieval at original review: https://arxiv.org/pdf/2506.01031
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (14 pages; PyMuPDF text; title-token overlap first two pages=1.0)

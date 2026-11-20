@@ -1,7 +1,7 @@
 # LLaRA: Supercharging Robot Learning Data for Vision-Language Policy
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-03 (47 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://openreview.net/forum?id=iVxxgZlXh6.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (47 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://proceedings.iclr.cc/paper_files/paper/2025/hash/909f526db5127f8bd8158af32d9e313a-Abstract-Conference.html.
 > PDF retrieval source: https://chatpaper.com/api/v1/articles/download/113062. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.

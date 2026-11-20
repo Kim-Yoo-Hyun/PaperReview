@@ -13,7 +13,7 @@
 - Tags: Robotics, quadruped locomotion, safe locomotion, torque control
 - Official paper: https://www.roboticsproceedings.org/rss21/p124.html
 - Full-text retrieval: https://www.roboticsproceedings.org/rss21/p124.pdf
-- Code/Project: https://www.roboticsproceedings.org/rss21/p124.html
+- Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (13 pages; tesseract OCR fallback; title-token overlap first two pages=1.0)
 

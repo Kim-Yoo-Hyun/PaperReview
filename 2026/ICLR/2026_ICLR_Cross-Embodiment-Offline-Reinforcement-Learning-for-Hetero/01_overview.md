@@ -13,7 +13,7 @@
 - Tags: Robotics, offline reinforcement learning, cross-embodiment, transfer
 - Official paper: https://iclr.cc/virtual/2026/poster/10010454
 - Full-text retrieval: https://arxiv.org/pdf/2602.18025
-- Code/Project: https://iclr.cc/virtual/2026/poster/10010454
+- Code/Project: https://haruki-abe.github.io/cross_embodiment_offline_rl_website/
 - Paper type: benchmark_or_dataset
 - Source audit: full-text PDF body checked on 2026-09-03 (22 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 

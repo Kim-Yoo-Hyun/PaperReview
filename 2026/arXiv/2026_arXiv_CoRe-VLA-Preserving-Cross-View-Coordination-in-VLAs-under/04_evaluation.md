@@ -46,4 +46,4 @@ Known-transform comparator와 같은 관측으로 변환을 추정하는 baselin
 
 ## Evidence Anchor
 
-[공식 paper/abstract](https://arxiv.org/abs/2609.37150) · [저자 project/code](https://arxiv.org/abs/2609.37150). Main table·appendix·negative result는 본문 수동 확인 필요.
+[공식 paper/abstract](https://arxiv.org/abs/2609.37150) · 저자 프로젝트·코드 주소 미확인. Main table·appendix·negative result는 본문 수동 확인 필요.

@@ -1,7 +1,7 @@
 # Reasoning-VLA: An Efficient and Spatial-Guided General Vision-Language-Action Reasoning Model for Autonomous Driving
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-03 (17 pages; PyMuPDF text; title-token overlap first two pages=0.917); canonical paper source: https://openreview.net/forum?id=c4iSIrb6Iv.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (17 pages; PyMuPDF text; title-token overlap first two pages=0.917); canonical paper source: https://icml.cc/virtual/2026/poster/62900.
 > PDF retrieval source: https://openreview.net/pdf/2958fe5249a1a673a414d689de7784b306b2a02a.pdf. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
@@ -12,7 +12,8 @@
 - Tier: REFERENCE
 - Tags: VLA, Vision-Language Model, Robotics, 3D Vision, Reinforcement Learning
 - Official paper: https://icml.cc/virtual/2026/poster/62900
-- Full-text retrieval: https://openreview.net/pdf/2958fe5249a1a673a414d689de7784b306b2a02a.pdf
+- Published PDF: https://raw.githubusercontent.com/mlresearch/v306/main/assets/zhang26ib/zhang26ib.pdf
+- Full-text retrieval at original review: https://openreview.net/pdf/2958fe5249a1a673a414d689de7784b306b2a02a.pdf
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (17 pages; PyMuPDF text; title-token overlap first two pages=0.917)

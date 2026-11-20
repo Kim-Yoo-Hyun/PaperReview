@@ -13,6 +13,7 @@
 - Official paper: https://api.crossref.org/works/10.1109/LRA.2025.3551637
 - Venue verification: https://api.crossref.org/works/10.1109/LRA.2025.3551637
 - Code/Project: https://noseworm.github.io/forge/
+- Code availability: Isaac Lab 2.3에 배포된 FORGE 시뮬레이터 환경·보상 구현(부분). 실기 정책 파일은 미확인. · forge_env.py · ForgeEnv [근거](https://raw.githubusercontent.com/isaac-sim/IsaacLab/v2.3.0/source/isaaclab_tasks/isaaclab_tasks/direct/forge/forge_env.py)
 - Code: https://github.com/isaac-sim/IsaacLab/tree/v2.3.0/source/isaaclab_tasks/isaaclab_tasks/direct/forge
 - Source audit: 2026-11-09: official abstract/project 및 metadata 확인. 2024 preprint와 2025 RA-L은 같은 논문이다. Publisher-deposited Crossref DOI metadata와 저자 연구실 RA-L 기록 확인; IEEE 본문 endpoint는 HTTP418로 직접 접근 실패. Code Coming Soon. 새 5-note는 abstract 기반이며 전체 본문/실행/사용자 정독을 뜻하지 않는다.
 

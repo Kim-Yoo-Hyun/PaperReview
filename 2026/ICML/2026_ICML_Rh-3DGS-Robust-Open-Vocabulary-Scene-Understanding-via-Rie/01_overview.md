@@ -1,18 +1,19 @@
 # Rh-3DGS: Robust Open-Vocabulary Scene Understanding via Riemannian Huber Distillation and Manifold-Aware Sampling
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-03 (27 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://openreview.net/forum?id=bjtuHOb3vN.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (27 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://icml.cc/virtual/2026/poster/62937.
 > PDF retrieval source: https://openreview.net/pdf/8310d4c5a6346eaadb420914138e1711121a0ff8.pdf. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2026 / ICML
-- Authors: Xinpeng Zhao, Jiang Jie, Fengyuan Zhang, Lixin Zhan, Dong Wang, Qinyuan Bu, Jiahang Tu, Guangzhen Yao
+- Authors: Xinpeng Zhao, Jie Jiang, Fengyuan Zhang, Lixin Zhan, Dong Wang, Qinyuan Bu, Jiahang Tu, Guangzhen Yao
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
 - Tags: semantic, alignment, 3D Vision
 - Official paper: https://icml.cc/virtual/2026/poster/62937
-- Full-text retrieval: https://openreview.net/pdf/8310d4c5a6346eaadb420914138e1711121a0ff8.pdf
+- Published PDF: https://raw.githubusercontent.com/mlresearch/v306/main/assets/zhao26s/zhao26s.pdf
+- Full-text retrieval at original review: https://openreview.net/pdf/8310d4c5a6346eaadb420914138e1711121a0ff8.pdf
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (27 pages; PyMuPDF text; title-token overlap first two pages=1.0)

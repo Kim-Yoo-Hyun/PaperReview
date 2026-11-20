@@ -12,7 +12,7 @@ Unified latent VLA와 loco-manipulation-oriented low-level RL을 연결한다.
 
 Humanoid loco-manipulation과 확장 task를 보고한다.
 
-근거: [공식 paper/abstract](https://proceedings.iclr.cc/paper_files/paper/2026/hash/ff7373914a96956f2a7cacbdf3b0b8d8-Abstract-Conference.html) · [저자 project/code](https://opendrivelab.com/WholebodyVLA). 이는 논문의 abstract/project 주장 범위이며 독립 재현 결과가 아니다.
+근거: [공식 paper/abstract](https://proceedings.iclr.cc/paper_files/paper/2026/hash/ff7373914a96956f2a7cacbdf3b0b8d8-Abstract-Conference.html) · [저자 project/code](https://wholebodyvla.github.io/). 이는 논문의 abstract/project 주장 범위이며 독립 재현 결과가 아니다.
 
 ### Evidence Boundary
 

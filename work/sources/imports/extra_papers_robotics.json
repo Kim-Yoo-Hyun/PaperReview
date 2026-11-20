@@ -127,7 +127,7 @@
     "project": "https://berkeleyautomation.github.io/dex-net/"
   },
   {
-    "title": "QT-Opt: Scalable Deep Reinforcement Learning for Vision-Based Robotic Manipulation",
+    "title": "Scalable Deep Reinforcement Learning for Vision-Based Robotic Manipulation",
     "year": 2018,
     "venue": "CoRL",
     "category": "Foundations: Robot Learning and Sim-to-Real",

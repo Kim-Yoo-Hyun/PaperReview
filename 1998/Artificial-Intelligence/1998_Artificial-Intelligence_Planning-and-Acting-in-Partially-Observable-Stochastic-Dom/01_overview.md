@@ -1,7 +1,7 @@
 # Planning and Acting in Partially Observable Stochastic Domains
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-03 (45 pages; tesseract OCR fallback; title-token overlap first two pages=1.0); canonical paper source: https://www.sciencedirect.com/science/article/pii/S000437029800023X.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (45 pages; tesseract OCR fallback; title-token overlap first two pages=1.0); canonical paper source: https://api.crossref.org/works/10.1016/S0004-3702(98)00023-X.
 > PDF retrieval source: https://www.cassandra.org/arc/papers/aij98.pdf. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.

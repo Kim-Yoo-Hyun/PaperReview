@@ -1,8 +1,8 @@
 # Memory Retrieval in Visuomotor Policies for Long-Horizon Robot Control
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://roboticsconference.org/program/papers/10/.
-> PDF retrieval source: https://roboticsconference.org/program/papers/10/. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://www.roboticsproceedings.org/rss22/p010.html.
+> review-time program locator (PDF retrieval URL not recorded). Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
@@ -12,8 +12,8 @@
 - Tier: NEXT
 - Tags: Robotics, VLA, memory, long-horizon, partial observability, Imitation Learning, retrieval
 - Official paper: https://www.roboticsproceedings.org/rss22/p010.html
-- Full-text retrieval: https://roboticsconference.org/program/papers/10/
-- Code/Project: not identified
+- Published PDF: https://www.roboticsproceedings.org/rss22/p010.pdf
+- Code/Project: https://robin-lab.cs.utexas.edu/HALO/
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 

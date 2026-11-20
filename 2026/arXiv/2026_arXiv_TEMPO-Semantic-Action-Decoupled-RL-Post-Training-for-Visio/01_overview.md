@@ -32,7 +32,7 @@ VLM을 동결하고 semantic projection과 action expert를 서로 다른 빈도
 
 CALVIN과 실제 조작 과제에서 후학습 정책·갱신 전략을 비교한다.
 
-근거: [공식 paper/abstract](https://arxiv.org/abs/2608.07314) · [저자 project/code](https://anonymous.4open.science/w/tempo-page/). 정확한 수치·baseline fairness·failure 범위는 본문 확인 전까지 확정하지 않는다.
+근거: [공식 paper/abstract](https://arxiv.org/abs/2608.07314) · 저자 프로젝트·코드 주소 미확인. 정확한 수치·baseline fairness·failure 범위는 본문 확인 전까지 확정하지 않는다.
 
 ## Why This Paper Is Here — Researcher Interpretation
 

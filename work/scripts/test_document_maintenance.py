@@ -13,10 +13,24 @@ import build_registry_views as views
 import audit_note_artifacts as artifacts
 import build_lit_survey as survey
 import registry_profiles as profiles
+from render_source_audit import check_applied
 from registry_schema import enrich_record, validate_record_shape
 
 
 class DocumentMaintenanceTest(unittest.TestCase):
+    def test_audited_code_address_and_release_status_are_independent(self):
+        repo = "https://example.org/code"
+        implementation = repo + "/policy.py"
+        rows = [{"id": "pr-0001", "checks": {"link": {"kind": "오류", "corrected": {"code": repo}}},
+                 "followup": {"code": {"corrected": "released", "source": implementation}}}]
+        paper = {"paper_id": "pr-0001", "sources": {"code": {"url": repo}},
+                 "artifacts": {"code_status": "released"},
+                 "reproducibility": {"code": {"status": "released", "source": implementation}}}
+        self.assertEqual(check_applied(rows, [paper], Path(".")), (1, 1))
+        paper["sources"]["code"]["url"] = "https://example.org/old-repository"
+        with self.assertRaisesRegex(ValueError, r"pr-0001 sources\.code"):
+            check_applied(rows, [paper], Path("."))
+
     def test_legacy_code_scope_normalizes_and_unrecognized_scopes_fail(self):
         code = {"kind": "official_code", "url": "https://example.org/repository",
                 "scope": "code_repository", "verified_on": "2026-11-18"}

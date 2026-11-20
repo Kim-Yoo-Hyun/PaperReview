@@ -46,4 +46,4 @@ Trials/seeds, confidence interval, checkpoint/commit, reset/timeout, hardware와
 
 ## Evidence Anchor
 
-[공식 paper/abstract](https://www.mdpi.com/1099-4300/28/9/975) · [저자 project/code](https://www.mdpi.com/1099-4300/28/9/975). Main table·appendix·negative result는 본문 수동 확인 필요.
+[공식 paper/abstract](https://www.mdpi.com/1099-4300/28/9/975) · 저자 프로젝트·코드 주소 미확인. Main table·appendix·negative result는 본문 수동 확인 필요.

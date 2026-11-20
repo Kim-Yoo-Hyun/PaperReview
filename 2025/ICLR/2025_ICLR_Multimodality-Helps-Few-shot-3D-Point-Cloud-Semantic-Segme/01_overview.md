@@ -1,7 +1,7 @@
 # Multimodality Helps Few-shot 3D Point Cloud Semantic Segmentation
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-03 (22 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://openreview.net/forum?id=jXvwJ51vcK.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (22 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://proceedings.iclr.cc/paper_files/paper/2025/hash/8b21a7ea42cbcd1c29a7a88c444cce45-Abstract-Conference.html.
 > PDF retrieval source: https://chatpaper.com/api/v1/articles/download/111762. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.

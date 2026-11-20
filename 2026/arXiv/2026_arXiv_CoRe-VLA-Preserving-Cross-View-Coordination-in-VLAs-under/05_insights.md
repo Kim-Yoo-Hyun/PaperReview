@@ -12,7 +12,7 @@ Point-cloud reprojection과 render 복원, execution alignment로 training view�
 
 5 real-robot task, LIBERO-100와 LIBERO-Plus를 보고한다.
 
-근거: [공식 paper/abstract](https://arxiv.org/abs/2609.37150) · [저자 project/code](https://arxiv.org/abs/2609.37150). 이는 논문의 abstract/project 주장 범위이며 독립 재현 결과가 아니다.
+근거: [공식 paper/abstract](https://arxiv.org/abs/2609.37150) · 저자 프로젝트·코드 주소 미확인. 이는 논문의 abstract/project 주장 범위이며 독립 재현 결과가 아니다.
 
 ### Evidence Boundary
 

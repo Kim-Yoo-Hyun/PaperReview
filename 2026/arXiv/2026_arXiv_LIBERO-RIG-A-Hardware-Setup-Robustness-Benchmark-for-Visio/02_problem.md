@@ -30,4 +30,4 @@ LIBERO 기반 여러 VLA와 hardware severity 조건을 평가한다.
 
 ## Evidence Anchor
 
-[공식 paper/abstract](https://arxiv.org/abs/2610.18843) · [저자 project/code](https://arxiv.org/abs/2610.18843). Exact objective, constraints, success definition은 본문 수동 확인 필요.
+[공식 paper/abstract](https://arxiv.org/abs/2610.18843) · 저자 프로젝트·코드 주소 미확인. Exact objective, constraints, success definition은 본문 수동 확인 필요.

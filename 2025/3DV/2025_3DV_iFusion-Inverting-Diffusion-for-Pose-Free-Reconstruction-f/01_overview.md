@@ -1,18 +1,19 @@
 # iFusion: Inverting Diffusion for Pose-Free Reconstruction from Sparse Views
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-03 (14 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://3dvconf.github.io/2025/accepted-papers/.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (14 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://api.crossref.org/works/10.1109/3dv66043.2025.00080.
 > PDF retrieval source: https://openreview.net/attachment?id=W7vOFBCGPm&name=pdf. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / 3DV
-- Authors: Chin-Hsuan Wu, Yen-Chun Chen, Bolivar Enrique Solarte, Lu Yuan, Min Sun
+- Authors: Chin-Hsuan Wu, Yen-Chun Chen, Bolivar Solarte, Lu Yuan, Min Sun
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
 - Tags: 3D reconstruction, geometry, Diffusion, Generation, 3D Vision
-- Official paper: https://3dvconf.github.io/2025/schedule_updated2.csv
-- Full-text retrieval: https://openreview.net/attachment?id=W7vOFBCGPm&name=pdf
+- Official paper: https://api.crossref.org/works/10.1109/3dv66043.2025.00080
+- Preprint PDF: https://arxiv.org/pdf/2312.17250
+- Full-text retrieval at original review: https://openreview.net/attachment?id=W7vOFBCGPm&name=pdf
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (14 pages; PyMuPDF text; title-token overlap first two pages=1.0)

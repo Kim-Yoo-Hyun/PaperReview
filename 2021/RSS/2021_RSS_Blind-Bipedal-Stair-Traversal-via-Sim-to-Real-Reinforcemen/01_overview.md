@@ -13,7 +13,7 @@
 - Tags: Robotics, bipedal locomotion, Reinforcement Learning, sim-to-real, proprioception
 - Official paper: https://www.roboticsproceedings.org/rss17/p061.html
 - Full-text retrieval: https://www.roboticsproceedings.org/rss17/p061.pdf
-- Code/Project: https://www.roboticsproceedings.org/rss17/p061.html
+- Code/Project: not identified
 - Paper type: theory_or_foundation
 - Source audit: full-text PDF body checked on 2026-09-03 (9 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 

@@ -1,7 +1,7 @@
 # FFRob: Leveraging Symbolic Planning for Efficient Task and Motion Planning
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-03 (35 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://journals.sagepub.com/doi/10.1177/0278364917739114.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (35 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://api.crossref.org/works/10.1177/0278364917739114.
 > PDF retrieval source: https://journals.sagepub.com/doi/10.1177/0278364917739114. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.

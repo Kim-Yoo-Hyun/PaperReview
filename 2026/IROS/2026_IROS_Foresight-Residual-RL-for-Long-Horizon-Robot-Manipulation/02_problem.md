@@ -30,4 +30,4 @@ Simulation의 여러 단계 manipulation을 보고한다.
 
 ## Evidence Anchor
 
-[공식 paper/abstract](https://arxiv.org/abs/2607.16506) · [저자 project/code](https://jaysparrow.github.io/foresight-residual-rl). Exact objective, constraints, success definition은 본문 수동 확인 필요.
+[공식 paper/abstract](https://arxiv.org/abs/2607.16506) · 저자 프로젝트·코드 주소 미확인. Exact objective, constraints, success definition은 본문 수동 확인 필요.

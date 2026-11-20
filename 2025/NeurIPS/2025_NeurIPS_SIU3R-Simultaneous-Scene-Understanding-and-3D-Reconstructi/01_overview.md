@@ -1,7 +1,7 @@
 # SIU3R: Simultaneous Scene Understanding and 3D Reconstruction Beyond Feature Alignment
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-03 (24 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://openreview.net/forum?id=GtImvTta8x.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (24 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://neurips.cc/virtual/2025/poster/118929.
 > PDF retrieval source: https://arxiv.org/pdf/2507.02705. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
@@ -12,7 +12,8 @@
 - Tier: REFERENCE
 - Tags: 3D reconstruction, semantic, alignment, 3D Vision
 - Official paper: https://neurips.cc/virtual/2025/poster/118929
-- Full-text retrieval: https://arxiv.org/pdf/2507.02705
+- Published PDF: https://proceedings.neurips.cc/paper_files/paper/2025/file/a070d9c5759cea39a5e166fdd2df0435-Paper-Conference.pdf
+- Full-text retrieval at original review: https://arxiv.org/pdf/2507.02705
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (24 pages; PyMuPDF text; title-token overlap first two pages=1.0)

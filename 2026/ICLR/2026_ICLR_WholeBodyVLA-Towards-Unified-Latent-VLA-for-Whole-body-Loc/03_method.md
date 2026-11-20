@@ -34,4 +34,4 @@ Action horizon, denoising/rollout horizon, memory 길이, policy inference rate�
 
 ## Evidence Anchor
 
-[공식 paper/abstract](https://proceedings.iclr.cc/paper_files/paper/2026/hash/ff7373914a96956f2a7cacbdf3b0b8d8-Abstract-Conference.html) · [저자 project/code](https://opendrivelab.com/WholebodyVLA). 수식·세부 구현·코드 실행은 미검증이다.
+[공식 paper/abstract](https://proceedings.iclr.cc/paper_files/paper/2026/hash/ff7373914a96956f2a7cacbdf3b0b8d8-Abstract-Conference.html) · [저자 project/code](https://wholebodyvla.github.io/). 수식·세부 구현·코드 실행은 미검증이다.

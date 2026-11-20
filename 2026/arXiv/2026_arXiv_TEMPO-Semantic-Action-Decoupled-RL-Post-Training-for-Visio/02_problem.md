@@ -30,4 +30,4 @@ CALVIN과 실제 조작 과제에서 후학습 정책·갱신 전략을 비교�
 
 ## Evidence Anchor
 
-[공식 paper/abstract](https://arxiv.org/abs/2608.07314) · [저자 project/code](https://anonymous.4open.science/w/tempo-page/). Exact objective, constraints, success definition은 본문 수동 확인 필요.
+[공식 paper/abstract](https://arxiv.org/abs/2608.07314) · 저자 프로젝트·코드 주소 미확인. Exact objective, constraints, success definition은 본문 수동 확인 필요.

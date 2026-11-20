@@ -1,17 +1,17 @@
 # FlowMap: High-Quality Camera Poses, Intrinsics, and Depth via Gradient Descent
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-03 (28 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://3dvconf.github.io/2025/accepted-papers/.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (28 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://api.crossref.org/works/10.1109/3dv66043.2025.00041.
 > PDF retrieval source: https://openreview.net/attachment?id=QI6HrBseVF&name=pdf. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / 3DV
-- Authors: Cameron Omid Smith, David Charatan, Ayush Tewari, Vincent Sitzmann
+- Authors: Cameron Smith, David Charatan, Ayush Tewari, Vincent Sitzmann
 - Primary track: Robotics-enabling 3D perception
 - Tier: REFERENCE
 - Tags: geometry, depth, 3D Vision
-- Official paper: https://3dvconf.github.io/2025/schedule_updated2.csv
+- Official paper: https://api.crossref.org/works/10.1109/3dv66043.2025.00041
 - Full-text retrieval: https://arxiv.org/pdf/2404.15259.pdf
 - Code/Project: not identified
 - Paper type: method

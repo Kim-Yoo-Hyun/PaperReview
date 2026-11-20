@@ -12,7 +12,7 @@
 
 Continual learning benchmark에서 경험/생성 replay 비교를 보고한다.
 
-근거: [공식 paper/abstract](https://proceedings.neurips.cc/paper/2019/hash/15825aee15eb335cc13f9b559f166ee8-Abstract.html) · [저자 project/code](https://github.com/optimass/MaximallyInterferedRetrieval). 이는 논문의 abstract/project 주장 범위이며 독립 재현 결과가 아니다.
+근거: [공식 paper/abstract](https://proceedings.neurips.cc/paper/2019/hash/15825aee15eb335cc13f9b559f166ee8-Abstract.html) · [저자 project/code](https://github.com/optimass/Maximally_Interfered_Retrieval). 이는 논문의 abstract/project 주장 범위이며 독립 재현 결과가 아니다.
 
 ### Evidence Boundary
 

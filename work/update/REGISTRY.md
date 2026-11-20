@@ -4,6 +4,10 @@
 
 ### 원문 전수 감사
 
+첫 감사의 109편·132개 오류를 현재 원장과 대조했다. 후속 대조에서는 42편에서 추가로 확인한 44개 오류를 고쳤다. 대표 원문이 바뀐 293편의 노트 1,465곳과 재등록 입력 12개의 기록을 동기화했다. 3DV 2025 논문 15편에는 각각의 출판 서지와 DOI를 연결했다. 논문별 이전 값과 근거는 감사 원장의 `followup`에 보존한다. [교정과 검증 범위](../../research/SOURCE_AUDIT.md#교정-재검증)
+
+ManiSkill은 게재본 표제면에 맞춰 중복된 저자명을 고쳤다. DreamWaQ에 연결돼 있던 다른 논문의 구현 주소를 제거했고, Contact-Anchored Policies는 저자 저장소의 학습 구현을 확인해 공개 상태를 고쳤다. [ManiSkill 게재본](https://datasets-benchmarks-proceedings.neurips.cc/paper_files/paper/2021/file/eda80a3d5b344bc40f3bc04f65b7a357-Paper-round2.pdf) · [DreamWaQ 원문](https://arxiv.org/abs/2301.10602) · [기존 링크의 실제 구현](https://github.com/antonilo/rl_locomotion) · [Contact-Anchored Policies 구현](https://github.com/jeffacce/cap-policy)
+
 1,252편을 안정 ID 순서로 13개 배치로 나눠 검토했다. 논문별 판정표에서 교정 전 오류율, 확인한 태그 불일치와 남은 검증 범위를 확인할 수 있다. 잘못된 PDF에 기반한 논문 3편은 해당 게재본에서 문제·방법·실험을 다시 확인해 노트 5개씩을 교정했다. GraspNet도 CVPR 게재본을 기준으로 갱신했다. [전수 감사](../../research/SOURCE_AUDIT.md) · [논문별 교정 근거](../sources/batches/source_audit_2026_11.jsonl)
 
 ### 공유 제어 문헌과 공개 자료

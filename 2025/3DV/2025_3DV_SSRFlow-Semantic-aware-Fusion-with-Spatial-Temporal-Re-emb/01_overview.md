@@ -1,7 +1,7 @@
 # SSRFlow: Semantic-aware Fusion with Spatial Temporal Re-embedding for Real-world Scene Flow
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-03 (19 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://3dvconf.github.io/2025/accepted-papers/.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (19 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://api.crossref.org/works/10.1109/3dv66043.2025.00032.
 > PDF retrieval source: https://openreview.net/attachment?id=9abfUtE6iQ&name=pdf. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
@@ -11,7 +11,7 @@
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
 - Tags: sensor fusion, LiDAR, semantic, alignment, 3D Vision
-- Official paper: https://3dvconf.github.io/2025/schedule_updated2.csv
+- Official paper: https://api.crossref.org/works/10.1109/3dv66043.2025.00032
 - Full-text retrieval: https://arxiv.org/pdf/2408.07825.pdf
 - Code/Project: not identified
 - Paper type: method

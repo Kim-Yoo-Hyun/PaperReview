@@ -1064,6 +1064,10 @@ def main() -> None:
             completed_matrix_rows += 1
     for item in papers:
         provenance = item.get("provenance") or {}
+        urls = {(item["sources"].get(key) or {}).get("url") for key in ("project", "code")} - {None}
+        legacy_project = item.get("project") or ""
+        if (urls or legacy_project.startswith("http")) and legacy_project not in urls:
+            errors.append(f"project display disagrees with project/code sources: {item['paper_id']}")
         note_map = provenance.get("note_evidence")
         if not isinstance(note_map, dict):
             errors.append(f"missing provenance.note_evidence: {item.get('paper_id')}")
@@ -1077,7 +1081,18 @@ def main() -> None:
                 displayed = re.sub(r"^(?:Overview|Problem|Method|Evaluation|Insights)\s*[-—:]\s*", "", title.group(1)) if title else ""
                 if " ".join(displayed.split()) != " ".join(item["title"].split()):
                     errors.append(f"note title mismatch: {item.get('paper_id')} {name}")
+                cited = re.search(r"(?im)^> .*?canonical paper source: (https?://[^;\s]+)", content)
+                if cited and cited.group(1).rstrip(".") != item["page"].rstrip("."):
+                    errors.append(f"note cites a stale canonical source: {item['paper_id']} {name}")
                 if name == "01_overview.md":
+                    for label, expected in (("Official paper", item["page"]),
+                                            ("Authors", ", ".join(item.get("authors") or []))):
+                        header = re.search(rf"(?m)^- {label}: (.+)$", content)
+                        if expected and header and header.group(1) != expected:
+                            errors.append(f"overview {label} mismatch: {item['paper_id']}")
+                    project = re.search(r"(?m)^- Code/Project: (.+)$", content)
+                    if project and (urls or project[1].startswith("http")) and project[1] not in urls:
+                        errors.append(f"overview project/code disagrees with sources: {item['paper_id']}")
                     for label, expected in (("Tags", ", ".join(item["tags"])), ("Category", item["category"])):
                         header = re.search(rf"(?m)^- {label}: (.+)$", content)
                         if header and header.group(1) != expected:

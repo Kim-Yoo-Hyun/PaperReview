@@ -1,18 +1,19 @@
 # Rethinking Serialization in Linear 3D Vision: Decoupling Anisotropic Geometry from Isotropic Semantics
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-03 (14 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://openreview.net/forum?id=MSVQM8Ub2y.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (14 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://icml.cc/virtual/2026/poster/64540.
 > PDF retrieval source: https://openreview.net/pdf/fa9e033b756ac063d19be2b3bb91daea759e1ae1.pdf. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2026 / ICML
-- Authors: Yinyun Yan, Liping Zhang, Tingran Wang, Jiaxin Deng, Changshuo Wang, Limin Jiang, Shanwei Gao, Xin Ning
+- Authors: YinYun Yan, Liping Zhang, Tingran Wang, Jiaxin Deng, Changshuo Wang, Limin Jiang, Shanwei Gao, Xin Ning
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
 - Tags: semantic, alignment, 3D Vision
 - Official paper: https://icml.cc/virtual/2026/poster/64540
-- Full-text retrieval: https://openreview.net/pdf/fa9e033b756ac063d19be2b3bb91daea759e1ae1.pdf
+- Published PDF: https://raw.githubusercontent.com/mlresearch/v306/main/assets/yan26v/yan26v.pdf
+- Full-text retrieval at original review: https://openreview.net/pdf/fa9e033b756ac063d19be2b3bb91daea759e1ae1.pdf
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (14 pages; PyMuPDF text; title-token overlap first two pages=1.0)

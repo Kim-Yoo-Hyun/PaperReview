@@ -1,7 +1,7 @@
 # RoboRefer: Towards Spatial Referring with Reasoning in Vision-Language Models for Robotics
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-03 (71 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://openreview.net/forum?id=OGxalNUHbJ.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (71 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://neurips.cc/virtual/2025/poster/118306.
 > PDF retrieval source: https://openreview.net/pdf/81387e1e7f5169279b63c293ca88b1e4a8bc7e35.pdf. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
@@ -12,7 +12,8 @@
 - Tier: NEXT
 - Tags: Vision-Language Model, Robotics, 3D Vision
 - Official paper: https://neurips.cc/virtual/2025/poster/118306
-- Full-text retrieval: https://openreview.net/pdf/81387e1e7f5169279b63c293ca88b1e4a8bc7e35.pdf
+- Published PDF: https://proceedings.neurips.cc/paper_files/paper/2025/file/29416b66c2149872b9d1415a3fd2c5e0-Paper-Conference.pdf
+- Full-text retrieval at original review: https://openreview.net/pdf/81387e1e7f5169279b63c293ca88b1e4a8bc7e35.pdf
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (71 pages; PyMuPDF text; title-token overlap first two pages=1.0)

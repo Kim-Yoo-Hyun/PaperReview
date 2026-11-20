@@ -1,7 +1,7 @@
 # Dynam3D: Dynamic Layered 3D Tokens Empower VLM for Vision-and-Language Navigation
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-03 (14 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://openreview.net/forum?id=s6k9l5yX8e.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (14 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://neurips.cc/virtual/2025/oral/130277.
 > PDF retrieval source: https://arxiv.org/pdf/2505.11383. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
@@ -12,7 +12,8 @@
 - Tier: REFERENCE
 - Tags: Vision-Language Model, 3D Vision, Navigation
 - Official paper: https://neurips.cc/virtual/2025/oral/130277
-- Full-text retrieval: https://arxiv.org/pdf/2505.11383
+- Published PDF: https://proceedings.neurips.cc/paper_files/paper/2025/file/e1a1847e39a7b79b41199176b152f0e6-Paper-Conference.pdf
+- Full-text retrieval at original review: https://arxiv.org/pdf/2505.11383
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (14 pages; PyMuPDF text; title-token overlap first two pages=1.0)

@@ -1,7 +1,7 @@
 # Learning Locomotion Skills for Cassie: Iterative Design and Sim-to-Real
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; title-token overlap first two pages=0.875); canonical paper source: https://www.cs.ubc.ca/~van/papers/2019-CORL-cassie/index.html.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; title-token overlap first two pages=0.875); canonical paper source: https://proceedings.mlr.press/v100/xie20a.html.
 > PDF retrieval source: https://arxiv.org/pdf/1903.09537. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.

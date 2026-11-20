@@ -13,7 +13,7 @@
 - Tags: Robotics, quadruped locomotion, loco-manipulation, human demonstrations
 - Official paper: https://www.roboticsproceedings.org/rss21/p122.html
 - Full-text retrieval: https://www.roboticsproceedings.org/rss21/p122.pdf
-- Code/Project: https://www.roboticsproceedings.org/rss21/p122.html
+- Code/Project: https://human2bots.github.io/
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (17 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 

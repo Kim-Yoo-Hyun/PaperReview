@@ -30,4 +30,4 @@ Humanoid loco-manipulation과 확장 task를 보고한다.
 
 ## Evidence Anchor
 
-[공식 paper/abstract](https://proceedings.iclr.cc/paper_files/paper/2026/hash/ff7373914a96956f2a7cacbdf3b0b8d8-Abstract-Conference.html) · [저자 project/code](https://opendrivelab.com/WholebodyVLA). Exact objective, constraints, success definition은 본문 수동 확인 필요.
+[공식 paper/abstract](https://proceedings.iclr.cc/paper_files/paper/2026/hash/ff7373914a96956f2a7cacbdf3b0b8d8-Abstract-Conference.html) · [저자 project/code](https://wholebodyvla.github.io/). Exact objective, constraints, success definition은 본문 수동 확인 필요.

@@ -12,7 +12,7 @@ Sensor availability와 task intent를 이용해 sparse expert를 routing한다.
 
 LIBERO, RoboCasa GR1, 실제 dual-arm 평가를 보고한다.
 
-근거: [공식 paper/abstract](https://arxiv.org/abs/2607.03693) · [저자 project/code](https://arxiv.org/abs/2607.03693). 이는 논문의 abstract/project 주장 범위이며 독립 재현 결과가 아니다.
+근거: [공식 paper/abstract](https://arxiv.org/abs/2607.03693) · 저자 프로젝트·코드 주소 미확인. 이는 논문의 abstract/project 주장 범위이며 독립 재현 결과가 아니다.
 
 ### Evidence Boundary
 

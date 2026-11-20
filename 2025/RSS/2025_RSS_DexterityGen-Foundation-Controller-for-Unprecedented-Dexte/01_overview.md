@@ -1,20 +1,20 @@
 # DexterityGen: Foundation Controller for Unprecedented Dexterity
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-03 (14 pages; tesseract OCR fallback; title-token overlap first two pages=1.0); canonical paper source: https://roboticsconference.org/2026/program/papers/103/.
-> PDF retrieval source: https://roboticsconference.org/2026/program/papers/103/. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (14 pages; tesseract OCR fallback; title-token overlap first two pages=1.0); canonical paper source: https://www.roboticsproceedings.org/rss21/p103.html.
+> review-time program locator (PDF retrieval URL not recorded). Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / RSS
-- Authors: Zhao-Heng Yin, Changhao Wang, Luis Pineda, Francois Robert Hogan, Chaithanya Krishna Bodduluri, Akash Sharma, Patrick Lancaster, Ishita Prasad, Mrinal Kalakrishnan, Jitendra Malik, Mike Lambeta, Tingfan Wu, Pieter Abbeel, Mustafa Mukadam
+- Authors: Zhao-Heng Yin, Changhao Wang, Luis Pineda, Francois Hogan, Krishna Bodduluri, Akash Sharma, Patrick Lancaster, Ishita Prasad, Mrinal Kalakrishnan, Jitendra Malik, Mike Lambeta, Tingfan Wu, Pieter Abbeel, Mustafa Mukadam
 - Primary track: Manipulation, contact, tactile, and dexterity
 - Tier: NEXT
 - Tags: Robotics, dexterous manipulation, Reinforcement Learning, foundation controller, teleoperation, sim-to-real, tool use
 - Official paper: https://www.roboticsproceedings.org/rss21/p103.html
 - Venue verification: https://www.roboticsproceedings.org/rss21/p103.html
-- Full-text retrieval: https://roboticsconference.org/2026/program/papers/103/
-- Code/Project: https://roboticsconference.org/2026/program/papers/103/
+- Published PDF: https://www.roboticsproceedings.org/rss21/p103.pdf
+- Code/Project: https://zhaohengyin.github.io/dexteritygen/
 - Paper type: theory_or_foundation
 - Source audit: full-text PDF body checked on 2026-09-03 (14 pages; tesseract OCR fallback; title-token overlap first two pages=1.0)
 

@@ -1,7 +1,7 @@
 # HybridVLA: Collaborative Diffusion and Autoregression in a Unified Vision-Language-Action Model
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-03 (27 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://openreview.net/forum?id=H1KDMNOKQn.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (27 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://proceedings.iclr.cc/paper_files/paper/2026/hash/82ad13ec01f9fe44c01cb91814fd7b8c-Abstract-Conference.html.
 > PDF retrieval source: https://chatpaper.com/api/v1/articles/download/245878. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.

@@ -12,7 +12,7 @@
 - Aliases:
 - Official paper: https://arxiv.org/abs/2610.18843
 - Venue verification: https://arxiv.org/abs/2610.18843
-- Code/Project: https://arxiv.org/abs/2610.18843
+- Code/Project: not identified
 - Code: not_identified
 - Source audit: 2026-10-21: official abstract / author project 확인. 5개 note는 abstract 기반이며 사용자 정독을 의미하지 않는다.
 
@@ -32,7 +32,7 @@ Native VLA observation/action interface에 setup perturbation을 주입한다.
 
 LIBERO 기반 여러 VLA와 hardware severity 조건을 평가한다.
 
-근거: [공식 paper/abstract](https://arxiv.org/abs/2610.18843) · [저자 project/code](https://arxiv.org/abs/2610.18843). 정확한 수치·baseline fairness·failure 범위는 본문 확인 전까지 확정하지 않는다.
+근거: [공식 paper/abstract](https://arxiv.org/abs/2610.18843) · 저자 프로젝트·코드 주소 미확인. 정확한 수치·baseline fairness·failure 범위는 본문 확인 전까지 확정하지 않는다.
 
 ## Why This Paper Is Here — Researcher Interpretation
 

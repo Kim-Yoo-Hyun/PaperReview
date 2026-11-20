@@ -32,7 +32,7 @@ VLA 행동·종료 state → 미래 성공 예측 → residual policy 학습.
 
 Simulation의 여러 단계 manipulation을 보고한다.
 
-근거: [공식 paper/abstract](https://arxiv.org/abs/2607.16506) · [저자 project/code](https://jaysparrow.github.io/foresight-residual-rl). 정확한 수치·baseline fairness·failure 범위는 본문 확인 전까지 확정하지 않는다.
+근거: [공식 paper/abstract](https://arxiv.org/abs/2607.16506) · 저자 프로젝트·코드 주소 미확인. 정확한 수치·baseline fairness·failure 범위는 본문 확인 전까지 확정하지 않는다.
 
 ## Why This Paper Is Here — Researcher Interpretation
 

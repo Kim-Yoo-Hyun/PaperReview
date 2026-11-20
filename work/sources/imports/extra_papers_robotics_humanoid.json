@@ -65,7 +65,7 @@
     "tags": ["Robotics", "bipedal locomotion", "recurrent policy", "sim-to-real", "online adaptation"],
     "pdf": "https://www.roboticsproceedings.org/rss16/p031.pdf",
     "page": "https://www.roboticsproceedings.org/rss16/p031.html",
-    "project": "https://www.roboticsproceedings.org/rss16/p031.html"
+    "project": "not identified"
   },
   {
     "title": "Blind Bipedal Stair Traversal via Sim-to-Real Reinforcement Learning",
@@ -75,7 +75,7 @@
     "tags": ["Robotics", "bipedal locomotion", "reinforcement learning", "sim-to-real", "proprioception"],
     "pdf": "https://www.roboticsproceedings.org/rss17/p061.pdf",
     "page": "https://www.roboticsproceedings.org/rss17/p061.html",
-    "project": "https://www.roboticsproceedings.org/rss17/p061.html"
+    "project": "not identified"
   },
   {
     "title": "HumanoidBench: Simulated Humanoid Benchmark for Whole-Body Locomotion and Manipulation",
@@ -124,8 +124,8 @@
     "category": "Locomotion and Whole-Body Control",
     "tags": ["Robotics", "humanoid", "whole-body control", "sequential contacts", "reinforcement learning"],
     "arxiv": "2406.06005",
-    "page": "https://openreview.net/forum?id=Czs2xH9114",
-    "project": "https://wococo-humanoid.github.io/"
+    "page": "https://proceedings.mlr.press/v270/zhang25a.html",
+    "project": "https://lecar-lab.github.io/wococo/"
   },
   {
     "title": "AMO: Adaptive Motion Optimization for Hyper-Dexterous Humanoid Whole-Body Control",
@@ -145,7 +145,7 @@
     "tags": ["Robotics", "humanoid", "standing up", "fall recovery", "sim-to-real"],
     "pdf": "https://www.roboticsproceedings.org/rss21/p064.pdf",
     "page": "https://www.roboticsproceedings.org/rss21/p064.html",
-    "project": "https://taohuang13.github.io/humanoid-standingup.github.io/"
+    "project": "https://github.com/InternRobotics/HoST"
   },
   {
     "title": "LangWBC: Language-Directed Humanoid Whole-Body Control via End-to-End Learning",
@@ -225,7 +225,7 @@
     "tags": ["Robotics", "humanoid", "visual sim-to-real", "loco-manipulation", "teacher-student learning"],
     "pdf": "https://openaccess.thecvf.com/content/CVPR2026/papers/He_VIRAL_Visual_Sim-to-Real_at_Scale_for_Humanoid_Loco-Manipulation_CVPR_2026_paper.pdf",
     "page": "https://openaccess.thecvf.com/content/CVPR2026/html/He_VIRAL_Visual_Sim-to-Real_at_Scale_for_Humanoid_Loco-Manipulation_CVPR_2026_paper.html",
-    "project": "https://openaccess.thecvf.com/content/CVPR2026/html/He_VIRAL_Visual_Sim-to-Real_at_Scale_for_Humanoid_Loco-Manipulation_CVPR_2026_paper.html"
+    "project": "https://viral-humanoid.github.io/"
   },
   {
     "title": "Opening the Sim-to-Real Door for Humanoid Pixel-to-Action Policy Transfer",
@@ -235,6 +235,6 @@
     "tags": ["Robotics", "humanoid", "pixel-to-action", "visual sim-to-real", "articulated object manipulation"],
     "pdf": "https://openaccess.thecvf.com/content/CVPR2026/papers/Xue_Opening_the_Sim-to-Real_Door_for_Humanoid_Pixel-to-Action_Policy_Transfer_CVPR_2026_paper.pdf",
     "page": "https://openaccess.thecvf.com/content/CVPR2026/html/Xue_Opening_the_Sim-to-Real_Door_for_Humanoid_Pixel-to-Action_Policy_Transfer_CVPR_2026_paper.html",
-    "project": "https://openaccess.thecvf.com/content/CVPR2026/html/Xue_Opening_the_Sim-to-Real_Door_for_Humanoid_Pixel-to-Action_Policy_Transfer_CVPR_2026_paper.html"
+    "project": "https://doorman-humanoid.github.io/"
   }
 ]

@@ -1,7 +1,7 @@
 # DynaRend: Learning 3D Dynamics via Masked Future Rendering for Robotic Manipulation
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-03 (20 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://openreview.net/forum?id=r4dzaP61QH.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (20 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://neurips.cc/virtual/2025/poster/115816.
 > PDF retrieval source: https://arxiv.org/pdf/2510.24261. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
@@ -12,7 +12,8 @@
 - Tier: REFERENCE
 - Tags: Robotics, 3D Vision
 - Official paper: https://neurips.cc/virtual/2025/poster/115816
-- Full-text retrieval: https://arxiv.org/pdf/2510.24261
+- Published PDF: https://proceedings.neurips.cc/paper_files/paper/2025/file/6f86111e54988eaf91e7bb7e88dd7f7b-Paper-Conference.pdf
+- Full-text retrieval at original review: https://arxiv.org/pdf/2510.24261
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (20 pages; PyMuPDF text; title-token overlap first two pages=1.0)

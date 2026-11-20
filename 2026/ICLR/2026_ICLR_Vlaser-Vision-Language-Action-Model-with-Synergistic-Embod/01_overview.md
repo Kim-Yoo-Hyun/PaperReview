@@ -1,7 +1,7 @@
 # Vlaser: Vision-Language-Action Model with Synergistic Embodied Reasoning
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-03 (30 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://openreview.net/forum?id=8xTDnj39Ti.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (30 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://proceedings.iclr.cc/paper_files/paper/2026/hash/6bb891f36b1e5aa28f72f00a7c78bb94-Abstract-Conference.html.
 > PDF retrieval source: https://chatpaper.com/api/v1/articles/download/247589. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.

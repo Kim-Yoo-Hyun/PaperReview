@@ -1,7 +1,7 @@
 # Joint Navigation and Manipulation Planning with 3D Interaction Chains
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-03 (16 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://openreview.net/forum?id=oVB2xYWvpv.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (16 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://icml.cc/virtual/2026/poster/61610.
 > PDF retrieval source: https://openreview.net/pdf/fa35fc3f33ae33100b9b86126d95a99def1057d8.pdf. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
@@ -12,7 +12,8 @@
 - Tier: REFERENCE
 - Tags: Vision-Language Model, Robotics, 3D Vision, Navigation
 - Official paper: https://icml.cc/virtual/2026/poster/61610
-- Full-text retrieval: https://openreview.net/pdf/fa35fc3f33ae33100b9b86126d95a99def1057d8.pdf
+- Published PDF: https://raw.githubusercontent.com/mlresearch/v306/main/assets/zhang26ip/zhang26ip.pdf
+- Full-text retrieval at original review: https://openreview.net/pdf/fa35fc3f33ae33100b9b86126d95a99def1057d8.pdf
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (16 pages; PyMuPDF text; title-token overlap first two pages=1.0)

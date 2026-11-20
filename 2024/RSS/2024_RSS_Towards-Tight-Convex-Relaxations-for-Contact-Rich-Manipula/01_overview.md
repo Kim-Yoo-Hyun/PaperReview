@@ -13,7 +13,7 @@
 - Tags: Robotics, contact-rich manipulation, convex relaxation, trajectory optimization
 - Official paper: https://www.roboticsproceedings.org/rss20/p132.html
 - Full-text retrieval: https://www.roboticsproceedings.org/rss20/p132.pdf
-- Code/Project: https://www.roboticsproceedings.org/rss20/p132.html
+- Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (12 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 

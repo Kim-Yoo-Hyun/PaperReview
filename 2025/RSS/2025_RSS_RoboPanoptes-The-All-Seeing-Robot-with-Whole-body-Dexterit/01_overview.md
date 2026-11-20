@@ -13,7 +13,7 @@
 - Tags: Robotics, mobile manipulation, whole-body control, whole-body perception
 - Official paper: https://www.roboticsproceedings.org/rss21/p042.html
 - Full-text retrieval: https://www.roboticsproceedings.org/rss21/p042.pdf
-- Code/Project: https://www.roboticsproceedings.org/rss21/p042.html
+- Code/Project: https://robopanoptes.github.io/
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (13 pages; tesseract OCR fallback; title-token overlap first two pages=1.0)
 

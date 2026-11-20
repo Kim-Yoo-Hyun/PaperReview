@@ -1,18 +1,20 @@
-# GeGS-PCR: Fast and Robust Color 3D Point Cloud Registration with Two-Stage Geometric-3DGS Fusion
+# GeGS-PCR: Effective and Robust 3D Point Cloud Registration with Two-Stage Color-Enhanced Geometric-3DGS Fusion
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-03 (23 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://openreview.net/forum?id=UkBwyp3aXG.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (23 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://neurips.cc/virtual/2025/poster/117748.
 > PDF retrieval source: https://arxiv.org/pdf/2604.17721. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / NeurIPS
-- Authors: Jiayi Tian, Haiduo Huang, Tian Xia, Wenzhe zhao, Pengju Ren
+- Authors: Jiayi Tian, Haiduo Huang, Tian Xia, Wenzhe Zhao, Pengju Ren
 - Primary track: Robotics-enabling 3D perception
 - Tier: REFERENCE
 - Tags: geometry, sensor fusion, LiDAR, point cloud, 3D Vision
+- Publication index title: GeGS-PCR: Fast and Robust Color 3D Point Cloud Registration with Two-Stage Geometric-3DGS Fusion
 - Official paper: https://neurips.cc/virtual/2025/poster/117748
-- Full-text retrieval: https://arxiv.org/pdf/2604.17721
+- Published PDF: https://proceedings.neurips.cc/paper_files/paper/2025/file/0d2e544c1baa964a0e274e711ecdacf5-Paper-Conference.pdf
+- Full-text retrieval at original review: https://arxiv.org/pdf/2604.17721
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (23 pages; PyMuPDF text; title-token overlap first two pages=1.0)

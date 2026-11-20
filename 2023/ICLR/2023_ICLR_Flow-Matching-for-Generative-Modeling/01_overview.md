@@ -12,8 +12,9 @@
 - Tier: CORE
 - Tags: Flow Matching, generative modeling, continuous normalizing flow, image generation
 - Official paper: https://iclr.cc/virtual/2023/poster/11309
-- Full-text retrieval: https://openreview.net/pdf?id=PqvMRDCJT9t
-- Code/Project: https://openreview.net/forum?id=PqvMRDCJT9t
+- Preprint PDF: https://arxiv.org/pdf/2210.02747
+- Full-text retrieval at original review: https://openreview.net/pdf?id=PqvMRDCJT9t
+- Code/Project: not identified
 - Paper type: theory_or_foundation
 - Source audit: full-text PDF body checked on 2026-09-03 (28 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 

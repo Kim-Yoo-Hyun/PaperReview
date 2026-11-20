@@ -71,7 +71,7 @@
     "category": "3D Reconstruction, Geometry, and SLAM",
     "tags": ["3D Vision", "SLAM", "RGB-D", "3D reconstruction"],
     "pdf": "https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/ismar2011.pdf",
-    "page": "https://www.microsoft.com/en-us/research/publication/kinectfusion-real-time-dense-surface-mapping-and-tracking/",
+    "page": "https://www.microsoft.com/en-us/research/publication/kinectfusion-real-time-dense-surface-mapping-tracking/",
     "project": "not released"
   },
   {
@@ -193,8 +193,8 @@
   },
   {
     "title": "Neural Descriptor Fields: SE(3)-Equivariant Object Representations for Manipulation",
-    "year": 2021,
-    "venue": "CoRL",
+    "year": 2022,
+    "venue": "ICRA",
     "category": "Equivariance, Diffusion, and 3D Action",
     "tags": ["Robotics", "equivariant", "3D geometry", "manipulation"],
     "arxiv": "2112.05124",
@@ -273,7 +273,7 @@
     "project": "https://lingjie0206.github.io/papers/NeuS/"
   },
   {
-    "title": "SSCNet: Semantic Scene Completion from a Single Depth Image",
+    "title": "Semantic Scene Completion From a Single Depth Image",
     "year": 2017,
     "venue": "CVPR",
     "category": "Foundations: 3D Semantic Occupancy",
@@ -310,8 +310,8 @@
   },
   {
     "title": "Classifier-Free Diffusion Guidance",
-    "year": 2022,
-    "venue": "arxiv",
+    "year": 2021,
+    "venue": "NeurIPS Workshop",
     "category": "Foundations: Diffusion and Generative Models",
     "tags": ["Diffusion", "guidance", "generation"],
     "arxiv": "2207.12598",
@@ -391,7 +391,7 @@
     "project": "https://github.com/openai/baselines"
   },
   {
-    "title": "PTAM: Parallel Tracking and Mapping for Small AR Workspaces",
+    "title": "Parallel Tracking and Mapping for Small AR Workspaces",
     "year": 2007,
     "venue": "ISMAR",
     "category": "Foundations: SLAM and Sensor Geometry",
@@ -466,7 +466,7 @@
     "project": "https://github.com/IDEA-Research/GroundingDINO"
   },
   {
-    "title": "ALIGN: Scaling Up Visual and Vision-Language Representation Learning With Noisy Text Supervision",
+    "title": "Scaling Up Visual and Vision-Language Representation Learning With Noisy Text Supervision",
     "year": 2021,
     "venue": "ICML",
     "category": "Foundations: Vision-Language Models",
@@ -494,7 +494,7 @@
   },
   {
     "title": "BC-Z: Zero-Shot Task Generalization with Robotic Imitation Learning",
-    "year": 2022,
+    "year": 2021,
     "venue": "CoRL",
     "category": "Foundations: Vision-Language-Action and Robotics",
     "tags": ["Robotics", "Imitation Learning", "Vision-Language Action"],
@@ -567,7 +567,7 @@
     "project": "https://github.com/isl-org/lang-seg"
   },
   {
-    "title": "OpenSeg: Scaling Open-Vocabulary Image Segmentation with Image-Level Labels",
+    "title": "Scaling Open-Vocabulary Image Segmentation with Image-Level Labels",
     "year": 2022,
     "venue": "ECCV",
     "category": "Open-Vocabulary 3D Mapping",
@@ -603,7 +603,7 @@
     "project": "https://tsinghua-mars-lab.github.io/Occ3D/"
   },
   {
-    "title": "Waymo Open Dataset: An Autonomous Driving Dataset",
+    "title": "Scalability in Perception for Autonomous Driving: Waymo Open Dataset",
     "year": 2020,
     "venue": "CVPR",
     "category": "Benchmarks and Datasets",

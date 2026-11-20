@@ -34,4 +34,4 @@ Virtual-update 비용을 포함해 uniform·MIR·제안 score의 retention을 �
 
 ## Evidence Anchor
 
-[공식 paper/abstract](https://proceedings.neurips.cc/paper/2019/hash/15825aee15eb335cc13f9b559f166ee8-Abstract.html) · [저자 project/code](https://github.com/optimass/MaximallyInterferedRetrieval). 수식·세부 구현·코드 실행은 미검증이다.
+[공식 paper/abstract](https://proceedings.neurips.cc/paper/2019/hash/15825aee15eb335cc13f9b559f166ee8-Abstract.html) · [저자 project/code](https://github.com/optimass/Maximally_Interfered_Retrieval). 수식·세부 구현·코드 실행은 미검증이다.

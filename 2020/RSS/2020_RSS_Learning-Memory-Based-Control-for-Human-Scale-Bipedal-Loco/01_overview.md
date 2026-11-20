@@ -13,7 +13,7 @@
 - Tags: Robotics, bipedal locomotion, recurrent policy, sim-to-real, online adaptation
 - Official paper: https://www.roboticsproceedings.org/rss16/p031.html
 - Full-text retrieval: https://www.roboticsproceedings.org/rss16/p031.pdf
-- Code/Project: https://www.roboticsproceedings.org/rss16/p031.html
+- Code/Project: not identified
 - Paper type: theory_or_foundation
 - Source audit: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 

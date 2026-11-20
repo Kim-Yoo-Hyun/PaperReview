@@ -13,6 +13,7 @@
 - Official paper: https://www.roboticsproceedings.org/rss22/p141.html
 - Venue verification: https://www.roboticsproceedings.org/rss22/p141.html
 - Code/Project: https://cap-policy.github.io/
+- Code availability: CAP 저자 저장소의 모방학습 손실 구현. imitation-in-homes/loss_fns/diffusion_policy_loss_fn.py [근거](https://raw.githubusercontent.com/jeffacce/cap-policy/8ab11176ecb61a5e88f290958877ab17a6f3e8e2/imitation-in-homes/loss_fns/diffusion_policy_loss_fn.py)
 - Code: https://github.com/jeffacce/cap-policy
 - Source audit: 2026-10-21: official abstract / author project 확인. 5개 note는 abstract 기반이며 사용자 정독을 의미하지 않는다.
 

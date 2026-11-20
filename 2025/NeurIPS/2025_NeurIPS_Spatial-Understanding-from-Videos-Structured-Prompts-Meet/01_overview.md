@@ -1,7 +1,7 @@
 # Spatial Understanding from Videos: Structured Prompts Meet Simulation Data
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-03 (23 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://openreview.net/forum?id=SBYCu5uJJf.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (23 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://neurips.cc/virtual/2025/poster/117952.
 > PDF retrieval source: https://arxiv.org/pdf/2506.03642. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
@@ -12,7 +12,8 @@
 - Tier: ARCHIVE
 - Tags: Vision-Language Model, 3D Vision
 - Official paper: https://neurips.cc/virtual/2025/poster/117952
-- Full-text retrieval: https://arxiv.org/pdf/2506.03642
+- Published PDF: https://proceedings.neurips.cc/paper_files/paper/2025/file/9541101fbc2f24bce5f2462b95db88c4-Paper-Conference.pdf
+- Full-text retrieval at original review: https://arxiv.org/pdf/2506.03642
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (23 pages; PyMuPDF text; title-token overlap first two pages=1.0)

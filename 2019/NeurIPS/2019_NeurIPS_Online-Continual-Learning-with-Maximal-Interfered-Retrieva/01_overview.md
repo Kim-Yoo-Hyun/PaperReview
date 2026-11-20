@@ -32,7 +32,7 @@ Continual 학습에서 과거 memory를 무작위로 고르는 한계를 다룬�
 
 Continual learning benchmark에서 경험/생성 replay 비교를 보고한다.
 
-근거: [공식 paper/abstract](https://proceedings.neurips.cc/paper/2019/hash/15825aee15eb335cc13f9b559f166ee8-Abstract.html) · [저자 project/code](https://github.com/optimass/MaximallyInterferedRetrieval). 정확한 수치·baseline fairness·failure 범위는 본문 확인 전까지 확정하지 않는다.
+근거: [공식 paper/abstract](https://proceedings.neurips.cc/paper/2019/hash/15825aee15eb335cc13f9b559f166ee8-Abstract.html) · [저자 project/code](https://github.com/optimass/Maximally_Interfered_Retrieval). 정확한 수치·baseline fairness·failure 범위는 본문 확인 전까지 확정하지 않는다.
 
 ## Why This Paper Is Here — Researcher Interpretation
 

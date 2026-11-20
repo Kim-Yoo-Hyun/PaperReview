@@ -12,7 +12,7 @@
 
 LIBERO 기반 여러 VLA와 hardware severity 조건을 평가한다.
 
-근거: [공식 paper/abstract](https://arxiv.org/abs/2610.18843) · [저자 project/code](https://arxiv.org/abs/2610.18843). 이는 논문의 abstract/project 주장 범위이며 독립 재현 결과가 아니다.
+근거: [공식 paper/abstract](https://arxiv.org/abs/2610.18843) · 저자 프로젝트·코드 주소 미확인. 이는 논문의 abstract/project 주장 범위이며 독립 재현 결과가 아니다.
 
 ### Evidence Boundary
 

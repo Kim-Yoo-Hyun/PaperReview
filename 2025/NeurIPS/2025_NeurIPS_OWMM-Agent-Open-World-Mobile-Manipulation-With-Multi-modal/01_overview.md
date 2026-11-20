@@ -1,7 +1,7 @@
 # OWMM-Agent: Open World Mobile Manipulation With Multi-modal Agentic Data Synthesis
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-03 (19 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://openreview.net/forum?id=vSLzoUoJt6.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (19 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://neurips.cc/virtual/2025/poster/115408.
 > PDF retrieval source: https://arxiv.org/pdf/2506.04217. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
@@ -12,7 +12,8 @@
 - Tier: REFERENCE
 - Tags: Vision-Language Model, Robotics, Reinforcement Learning
 - Official paper: https://neurips.cc/virtual/2025/poster/115408
-- Full-text retrieval: https://arxiv.org/pdf/2506.04217
+- Published PDF: https://proceedings.neurips.cc/paper_files/paper/2025/file/bc97207e3979d1cc23109db0be0e8ed2-Paper-Conference.pdf
+- Full-text retrieval at original review: https://arxiv.org/pdf/2506.04217
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (19 pages; PyMuPDF text; title-token overlap first two pages=1.0)

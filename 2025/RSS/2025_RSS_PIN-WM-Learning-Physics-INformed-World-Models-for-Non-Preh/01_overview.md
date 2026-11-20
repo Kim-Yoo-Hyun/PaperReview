@@ -13,7 +13,7 @@
 - Tags: Robotics, world model, physics-informed learning, non-prehensile manipulation
 - Official paper: https://www.roboticsproceedings.org/rss21/p153.html
 - Full-text retrieval: https://www.roboticsproceedings.org/rss21/p153.pdf
-- Code/Project: https://www.roboticsproceedings.org/rss21/p153.html
+- Code/Project: https://pinwm.github.io/
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (14 pages; tesseract OCR fallback; title-token overlap first two pages=1.0)
 

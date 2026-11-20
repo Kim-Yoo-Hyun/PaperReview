@@ -1,8 +1,8 @@
 # TactAlign: Human-to-Robot Policy Transfer via Tactile Alignment
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-03 (16 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://roboticsconference.org/program/papers/6/.
-> PDF retrieval source: https://roboticsconference.org/program/papers/6/. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (16 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://www.roboticsproceedings.org/rss22/p006.html.
+> review-time program locator (PDF retrieval URL not recorded). Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
@@ -12,8 +12,8 @@
 - Tier: NEXT
 - Tags: Robotics, tactile, cross-embodiment, human-to-robot transfer, contact-rich manipulation, dexterity, representation alignment
 - Official paper: https://www.roboticsproceedings.org/rss22/p006.html
-- Full-text retrieval: https://roboticsconference.org/program/papers/6/
-- Code/Project: not identified
+- Published PDF: https://www.roboticsproceedings.org/rss22/p006.pdf
+- Code/Project: https://yswi.github.io/tactalign/
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (16 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 

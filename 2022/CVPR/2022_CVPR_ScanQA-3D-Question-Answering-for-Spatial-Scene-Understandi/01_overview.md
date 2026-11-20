@@ -14,6 +14,7 @@
 - Official paper: https://arxiv.org/abs/2112.10482
 - Full-text retrieval: https://arxiv.org/pdf/2112.10482
 - Code/Project: https://github.com/ATR-DBI/ScanQA
+- Data availability: 공식 문항·응답 주석. 원본 ScanNet 스캔의 라이선스와 분리. · ScanQA_v1.0_train.json, ScanQA_v1.0_val.json [근거](https://drive.google.com/drive/folders/1-21A3TBE0QuofEwDg5oDz2z0HEdbVgL2?usp=sharing)
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (20 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 

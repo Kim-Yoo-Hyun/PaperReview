@@ -1,7 +1,7 @@
 # MS-GS: Multi-Appearance Sparse-View 3D Gaussian Splatting in the Wild
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-03 (21 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://openreview.net/forum?id=efDNv5XvVo.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (21 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://neurips.cc/virtual/2025/poster/116898.
 > PDF retrieval source: https://arxiv.org/pdf/2509.15548. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
@@ -12,7 +12,8 @@
 - Tier: ARCHIVE
 - Tags: Gaussian Splatting, 3D Vision
 - Official paper: https://neurips.cc/virtual/2025/poster/116898
-- Full-text retrieval: https://arxiv.org/pdf/2509.15548
+- Published PDF: https://proceedings.neurips.cc/paper_files/paper/2025/file/58d451ce195db5729b0386a35c74405a-Paper-Conference.pdf
+- Full-text retrieval at original review: https://arxiv.org/pdf/2509.15548
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (21 pages; PyMuPDF text; title-token overlap first two pages=1.0)

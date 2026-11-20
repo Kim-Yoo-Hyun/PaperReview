@@ -1,7 +1,7 @@
 # Geometry Forcing: Marrying Video Diffusion and 3D Representation for Consistent World Modeling
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-03 (24 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://openreview.net/forum?id=ULXYZCms41.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (24 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://proceedings.iclr.cc/paper_files/paper/2026/hash/c196239c5f9481e0db2755f31fe4585f-Abstract-Conference.html.
 > PDF retrieval source: https://chatpaper.com/api/v1/articles/download/247965. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.

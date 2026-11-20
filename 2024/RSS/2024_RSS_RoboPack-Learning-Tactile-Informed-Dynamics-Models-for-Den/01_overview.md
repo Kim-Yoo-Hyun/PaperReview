@@ -13,7 +13,7 @@
 - Tags: Robotics, contact-rich manipulation, tactile sensing, dynamics model
 - Official paper: https://www.roboticsproceedings.org/rss20/p130.html
 - Full-text retrieval: https://www.roboticsproceedings.org/rss20/p130.pdf
-- Code/Project: https://www.roboticsproceedings.org/rss20/p130.html
+- Code/Project: https://robo-pack.github.io/
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (17 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 

@@ -13,7 +13,7 @@
 - Tags: Robotics, mobile manipulation, articulated objects, real-world evaluation
 - Official paper: https://www.roboticsproceedings.org/rss21/p033.html
 - Full-text retrieval: https://www.roboticsproceedings.org/rss21/p033.pdf
-- Code/Project: https://www.roboticsproceedings.org/rss21/p033.html
+- Code/Project: https://arjung128.github.io/opening-articulated-structures/
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (25 pages; tesseract OCR fallback; title-token overlap first two pages=1.0)
 

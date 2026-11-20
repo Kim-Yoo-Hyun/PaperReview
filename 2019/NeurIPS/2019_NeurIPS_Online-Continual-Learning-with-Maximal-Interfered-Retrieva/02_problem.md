@@ -30,4 +30,4 @@ Continual learning benchmark에서 경험/생성 replay 비교를 보고한다.
 
 ## Evidence Anchor
 
-[공식 paper/abstract](https://proceedings.neurips.cc/paper/2019/hash/15825aee15eb335cc13f9b559f166ee8-Abstract.html) · [저자 project/code](https://github.com/optimass/MaximallyInterferedRetrieval). Exact objective, constraints, success definition은 본문 수동 확인 필요.
+[공식 paper/abstract](https://proceedings.neurips.cc/paper/2019/hash/15825aee15eb335cc13f9b559f166ee8-Abstract.html) · [저자 project/code](https://github.com/optimass/Maximally_Interfered_Retrieval). Exact objective, constraints, success definition은 본문 수동 확인 필요.

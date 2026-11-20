@@ -1,7 +1,7 @@
 # Object-X: Learning to Reconstruct Multi-Modal 3D Object Representations
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-03 (26 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://openreview.net/forum?id=nI7wKr4eop.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (26 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://neurips.cc/virtual/2025/poster/116149.
 > PDF retrieval source: https://arxiv.org/pdf/2506.04789. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
@@ -12,7 +12,8 @@
 - Tier: REFERENCE
 - Tags: 3D Vision
 - Official paper: https://neurips.cc/virtual/2025/poster/116149
-- Full-text retrieval: https://arxiv.org/pdf/2506.04789
+- Published PDF: https://proceedings.neurips.cc/paper_files/paper/2025/file/259774803d1f4302cb0a1eff47562888-Paper-Conference.pdf
+- Full-text retrieval at original review: https://arxiv.org/pdf/2506.04789
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (26 pages; PyMuPDF text; title-token overlap first two pages=1.0)

@@ -46,4 +46,4 @@ Known missingness와 present-but-corrupt 조건을 같은 정보로 비교한다
 
 ## Evidence Anchor
 
-[공식 paper/abstract](https://arxiv.org/abs/2607.03693) · [저자 project/code](https://arxiv.org/abs/2607.03693). Main table·appendix·negative result는 본문 수동 확인 필요.
+[공식 paper/abstract](https://arxiv.org/abs/2607.03693) · 저자 프로젝트·코드 주소 미확인. Main table·appendix·negative result는 본문 수동 확인 필요.

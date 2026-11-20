@@ -7,7 +7,7 @@
 ## Snapshot
 
 - Papers: **1252**
-- Resources in the combined view: **698**
+- Resources in the combined view: **682**
 - Curated relation edges: **91**
 - Papers with outgoing relations: **69**
 - Papers participating in a relation: **109**
@@ -15,7 +15,7 @@
 - Reproducibility profiles: **1252**
 - Lineage coverage profiles: **1252**
 - Papers with explicit trial/seed cues: **246**
-- Papers without DOI/arXiv/OpenReview identifier: **365**
+- Papers without DOI/arXiv/OpenReview identifier: **364**
 
 ## Tier
 
@@ -76,32 +76,31 @@
 
 | Value | Count |
 |---|---:|
-| identified | 887 |
-| source_only | 365 |
+| identified | 888 |
+| source_only | 364 |
 
 ## Primary source scope
 
 | Value | Count |
 |---|---:|
-| paper_specific | 1237 |
-| venue_index | 15 |
+| paper_specific | 1252 |
 
 ## Code status
 
 | Value | Count |
 |---|---:|
-| not_identified | 640 |
-| released | 387 |
-| project_only | 211 |
-| not_released | 14 |
+| not_identified | 656 |
+| released | 392 |
+| project_only | 191 |
+| not_released | 13 |
 
 ## Data status
 
 | Value | Count |
 |---|---:|
-| not_identified | 1013 |
-| released | 138 |
-| not_applicable | 100 |
+| not_identified | 1058 |
+| not_applicable | 99 |
+| released | 94 |
 | not_released | 1 |
 
 ## Evaluation type
@@ -163,8 +162,8 @@
 
 | Value | Count |
 |---|---:|
-| not_recorded | 1168 |
-| reported | 84 |
+| not_recorded | 1173 |
+| reported | 79 |
 
 ## Configuration status
 

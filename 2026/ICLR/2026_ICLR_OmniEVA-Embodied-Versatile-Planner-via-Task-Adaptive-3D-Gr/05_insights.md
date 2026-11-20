@@ -2,7 +2,7 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-03 (52 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://openreview.net/forum?id=tkEmIJv1tB; PDF retrieval source: https://openreview.net/pdf/bfa0207180125aef0eb8698b2cfa415bd87a9e00.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (52 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://proceedings.iclr.cc/paper_files/paper/2026/hash/7b122d0a0dcb1a86ffa25ccba154652b-Abstract-Conference.html; PDF retrieval source: https://openreview.net/pdf/bfa0207180125aef0eb8698b2cfa415bd87a9e00.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Paper-supported conclusion
 

@@ -13,7 +13,7 @@
 - Tags: Robotics, Reinforcement Learning, policy optimization, on-policy RL
 - Official paper: https://proceedings.mlr.press/v37/schulman15.html
 - Full-text retrieval: https://arxiv.org/pdf/1502.05477
-- Code/Project: https://proceedings.mlr.press/v37/schulman15.html
+- Code/Project: not identified
 - Paper type: theory_or_foundation
 - Source audit: full-text PDF body checked on 2026-09-03 (16 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 

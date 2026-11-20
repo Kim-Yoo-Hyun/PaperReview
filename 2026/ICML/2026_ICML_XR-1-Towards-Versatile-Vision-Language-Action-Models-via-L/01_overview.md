@@ -1,7 +1,7 @@
 # XR-1: Towards Versatile Vision-Language-Action Models via Learning Unified Vision-Motion Representations
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-03 (45 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://openreview.net/forum?id=JO0IsGJg16.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (45 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://icml.cc/virtual/2026/oral/71118.
 > PDF retrieval source: https://openreview.net/pdf/181715f87df4dd5677ebf2619dcb456e071c95dd.pdf. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
@@ -12,7 +12,8 @@
 - Tier: REFERENCE
 - Tags: VLA, Vision-Language Model, Imitation Learning
 - Official paper: https://icml.cc/virtual/2026/oral/71118
-- Full-text retrieval: https://openreview.net/pdf/181715f87df4dd5677ebf2619dcb456e071c95dd.pdf
+- Published PDF: https://raw.githubusercontent.com/mlresearch/v306/main/assets/fan26f/fan26f.pdf
+- Full-text retrieval at original review: https://openreview.net/pdf/181715f87df4dd5677ebf2619dcb456e071c95dd.pdf
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (45 pages; PyMuPDF text; title-token overlap first two pages=1.0)

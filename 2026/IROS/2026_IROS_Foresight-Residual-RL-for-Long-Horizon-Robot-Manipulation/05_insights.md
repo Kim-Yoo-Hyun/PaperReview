@@ -12,7 +12,7 @@ Downstream rollout의 성공 예측을 terminal-state 평가에 사용해 residu
 
 Simulation의 여러 단계 manipulation을 보고한다.
 
-근거: [공식 paper/abstract](https://arxiv.org/abs/2607.16506) · [저자 project/code](https://jaysparrow.github.io/foresight-residual-rl). 이는 논문의 abstract/project 주장 범위이며 독립 재현 결과가 아니다.
+근거: [공식 paper/abstract](https://arxiv.org/abs/2607.16506) · 저자 프로젝트·코드 주소 미확인. 이는 논문의 abstract/project 주장 범위이며 독립 재현 결과가 아니다.
 
 ### Evidence Boundary
 

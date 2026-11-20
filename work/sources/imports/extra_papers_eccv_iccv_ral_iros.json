@@ -910,7 +910,7 @@
     "arxiv": "2409.18431"
   },
   {
-    "title": "TinyVLA: Towards Fast, Data-Efficient Vision-Language-Action Models for Robotic Manipulation",
+    "title": "TinyVLA: Toward Fast, Data-Efficient Vision-Language-Action Models for Robotic Manipulation",
     "year": 2025,
     "venue": "RA-L",
     "category": "Vision-Language-Action and Robot Manipulation",
@@ -976,7 +976,7 @@
   },
   {
     "title": "LAMP: Implicit Language Map for Robot Navigation",
-    "year": 2026,
+    "year": 2025,
     "venue": "RA-L",
     "category": "Navigation and Embodied AI",
     "tags": [
@@ -995,7 +995,7 @@
       "VLA",
       "Vision-Language Model"
     ],
-    "project": "https://tum-lsy.github.io/CLARE/",
+    "project": "https://tum-lsy.github.io/clare",
     "arxiv": "2601.09512"
   },
   {
@@ -1008,7 +1008,7 @@
       "Navigation",
       "Gaussian Splatting"
     ],
-    "project": "https://syeon-yoo.github.io/readygo/",
+    "project": "https://syeon-yoo.github.io/ready-go-site/",
     "arxiv": "2602.11575"
   },
   {
@@ -1088,7 +1088,7 @@
   {
     "title": "LiV-GS: LiDAR-Vision Integration for 3D Gaussian Splatting SLAM in Outdoor Environments",
     "year": 2025,
-    "venue": "IROS 2025",
+    "venue": "RA-L",
     "category": "Language-Embedded NeRF and Gaussian Fields",
     "tags": [
       "3D Vision",
@@ -1100,7 +1100,7 @@
   {
     "title": "MR-COGraphs: Communication-efficient Multi-Robot Open-vocabulary Mapping System via 3D Scene Graphs",
     "year": 2025,
-    "venue": "IROS 2025",
+    "venue": "RA-L",
     "category": "3D Scene Graphs and Graph Reasoning",
     "tags": [
       "Robotics",
@@ -1196,7 +1196,7 @@
     "arxiv": "2503.03984"
   },
   {
-    "title": "LIT-GS: LiDAR-Inertial-Thermal Gaussian Splatting for Illumination-Robust Mapping",
+    "title": "LIT-GS: LiDAR-Inertial-Thermal 3D Gaussian Splatting for Illumination-Robust Mapping",
     "year": 2026,
     "venue": "IROS 2026",
     "category": "Language-Embedded NeRF and Gaussian Fields",

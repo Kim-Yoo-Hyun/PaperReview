@@ -1,7 +1,7 @@
 # PLANA3R: Zero-shot Metric Planar 3D Reconstruction via Feed-forward Planar Splatting
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-03 (18 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://openreview.net/forum?id=YTwRZP8mNO.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (18 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://arxiv.org/abs/2510.18714.
 > PDF retrieval source: https://arxiv.org/pdf/2510.18714. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
@@ -12,7 +12,8 @@
 - Tier: ARCHIVE
 - Tags: Gaussian Splatting, 3D reconstruction, 3D Vision
 - Official paper: https://arxiv.org/abs/2510.18714
-- Full-text retrieval: https://arxiv.org/pdf/2510.18714
+- Published PDF: https://proceedings.neurips.cc/paper_files/paper/2025/file/fc8ee7c7ab5b5f6b1615045dfb617ed6-Paper-Conference.pdf
+- Full-text retrieval at original review: https://arxiv.org/pdf/2510.18714
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (18 pages; PyMuPDF text; title-token overlap first two pages=1.0)

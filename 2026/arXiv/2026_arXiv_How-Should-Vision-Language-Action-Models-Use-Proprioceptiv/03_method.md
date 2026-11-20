@@ -34,4 +34,4 @@ Action horizon, denoising/rollout horizon, memory 길이, policy inference rate�
 
 ## Evidence Anchor
 
-[공식 paper/abstract](https://arxiv.org/abs/2608.03052) · [저자 project/code](https://arxiv.org/abs/2608.03052). 수식·세부 구현·코드 실행은 미검증이다.
+[공식 paper/abstract](https://arxiv.org/abs/2608.03052) · 저자 프로젝트·코드 주소 미확인. 수식·세부 구현·코드 실행은 미검증이다.

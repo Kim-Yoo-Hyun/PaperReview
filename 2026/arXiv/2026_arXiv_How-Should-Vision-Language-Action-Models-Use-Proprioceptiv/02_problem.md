@@ -30,4 +30,4 @@ world-frame localization 포함 여부, native state 사용, checkpoint 공개.
 
 ## Evidence Anchor
 
-[공식 paper/abstract](https://arxiv.org/abs/2608.03052) · [저자 project/code](https://arxiv.org/abs/2608.03052). Exact objective, constraints, success definition은 본문 수동 확인 필요.
+[공식 paper/abstract](https://arxiv.org/abs/2608.03052) · 저자 프로젝트·코드 주소 미확인. Exact objective, constraints, success definition은 본문 수동 확인 필요.

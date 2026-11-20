@@ -1,7 +1,7 @@
 # RoboOmni: Actions Are Just Another Modality for Vision-Language Models
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-03 (25 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://openreview.net/forum?id=qdXOfyGMuB.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (25 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://icml.cc/virtual/2026/poster/61401.
 > PDF retrieval source: https://openreview.net/pdf/b090562c668703f4568061335c66e0e592e16d9d.pdf. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
@@ -12,7 +12,8 @@
 - Tier: REFERENCE
 - Tags: Vision-Language Model, Robotics
 - Official paper: https://icml.cc/virtual/2026/poster/61401
-- Full-text retrieval: https://openreview.net/pdf/b090562c668703f4568061335c66e0e592e16d9d.pdf
+- Published PDF: https://raw.githubusercontent.com/mlresearch/v306/main/assets/wang26v/wang26v.pdf
+- Full-text retrieval at original review: https://openreview.net/pdf/b090562c668703f4568061335c66e0e592e16d9d.pdf
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (25 pages; PyMuPDF text; title-token overlap first two pages=1.0)

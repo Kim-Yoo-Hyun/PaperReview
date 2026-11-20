@@ -13,7 +13,7 @@
 - Tags: Robotics, world model, uncertainty, long-horizon prediction, model-based reinforcement learning
 - Official paper: https://iclr.cc/virtual/2026/poster/10007319
 - Full-text retrieval: https://proceedings.iclr.cc/paper_files/paper/2026/file/ad222e6e38e26e3f00d85829b9e02f43-Paper-Conference.pdf
-- Code/Project: https://iclr.cc/virtual/2026/poster/10007319
+- Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (21 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 

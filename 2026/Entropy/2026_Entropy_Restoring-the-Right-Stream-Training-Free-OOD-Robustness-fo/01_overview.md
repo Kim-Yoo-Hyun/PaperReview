@@ -12,7 +12,7 @@
 - Aliases:
 - Official paper: https://api.crossref.org/works/10.3390/e28090975
 - Venue verification: https://www.mdpi.com/1099-4300/28/9/975
-- Code/Project: https://www.mdpi.com/1099-4300/28/9/975
+- Code/Project: not identified
 - Code: not_identified
 - Source audit: 2026-10-21: official abstract / author project 확인. 5개 note는 abstract 기반이며 사용자 정독을 의미하지 않는다.
 
@@ -32,7 +32,7 @@ Gated Per-Stream Manifold Restoration으로 visual/state 입력을 따로 복원
 
 OpenVLA-OFT와 LIBERO-Plus 평가를 보고한다.
 
-근거: [공식 paper/abstract](https://www.mdpi.com/1099-4300/28/9/975) · [저자 project/code](https://www.mdpi.com/1099-4300/28/9/975). 정확한 수치·baseline fairness·failure 범위는 본문 확인 전까지 확정하지 않는다.
+근거: [공식 paper/abstract](https://www.mdpi.com/1099-4300/28/9/975) · 저자 프로젝트·코드 주소 미확인. 정확한 수치·baseline fairness·failure 범위는 본문 확인 전까지 확정하지 않는다.
 
 ## Why This Paper Is Here — Researcher Interpretation
 

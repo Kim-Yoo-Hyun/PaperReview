@@ -1,7 +1,7 @@
 # FastSLAM: A Factored Solution to the Simultaneous Localization and Mapping Problem
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-03 (6 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://www.cs.cmu.edu/~thrun/papers/montemerlo.fastslam-tr.html.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (6 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://cdn.aaai.org/AAAI/2002/AAAI02-089.pdf.
 > PDF retrieval source: https://cdn.aaai.org/AAAI/2002/AAAI02-089.pdf. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.

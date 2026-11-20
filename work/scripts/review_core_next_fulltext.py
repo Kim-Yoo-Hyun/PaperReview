@@ -187,17 +187,15 @@ def source_url(item: dict[str, Any]) -> str:
 
 
 def project_url(item: dict[str, Any]) -> str:
-    for value in (
-        item.get("project"),
-        (item.get("sources") or {}).get("project", {}).get("url")
-        if isinstance((item.get("sources") or {}).get("project"), dict)
-        else None,
-        (item.get("sources") or {}).get("code", {}).get("url")
-        if isinstance((item.get("sources") or {}).get("code"), dict)
-        else None,
-    ):
+    sources = item.get("sources") or {}
+    for key in ("project", "code"):
+        entry = sources.get(key)
+        value = entry.get("url") if isinstance(entry, dict) else None
         if isinstance(value, str) and value.startswith(("http://", "https://")):
             return value
+    value = item.get("project")
+    if isinstance(value, str) and value.startswith(("http://", "https://")):
+        return value
     return "not identified"
 
 
@@ -305,6 +303,14 @@ def overview_note(
     dataset = ev["dataset"]
     metrics = ev["metrics"]
     code = project_url(item)
+    authors = item.get("authors") or "not identified"
+    if isinstance(authors, list):
+        authors = ", ".join(authors)
+    reviewed_pdf = (item.get("sources") or {}).get("paper_pdf") or {}
+    pdf_line = ""
+    if reviewed_pdf.get("verified_on") and reviewed_pdf.get("kind") in ("publisher_pdf", "arxiv_pdf"):
+        label = "Published PDF" if reviewed_pdf["kind"] == "publisher_pdf" else "Preprint PDF"
+        pdf_line = f"- {label}: {reviewed_pdf['url']}\n"
     paper_type = item.get("paper_type") or "not recorded"
     eval_type = evaluation_type(item, domain, ev)
     observation = first(interface[:1], scope[1])
@@ -348,12 +354,13 @@ def overview_note(
         f"> {'PDF retrieval source' if source_kind == 'PDF' else 'Body source'}: {retrieval_source(record, item)[1]}. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.\n\n"
         f"> Evidence boundary: {boundary_note}.\n\n"
         f"- Year/Venue: {item.get('year', row.get('year', 'not recorded'))} / {item.get('venue', row.get('venue', 'not recorded'))}\n"
-        f"- Authors: not duplicated here when not verified in the registry source\n"
+        f"- Authors: {authors}\n"
         f"- Primary track: {track}\n"
         f"- Tier: {row.get('tier', 'not recorded')}\n"
         f"- Tags: {tags}\n"
         f"- Official paper: {source_url(item)}\n"
-        f"- Full-text retrieval: {retrieval_source(record, item)[1]}\n"
+        f"{pdf_line}"
+        f"- Full-text retrieval at original review: {retrieval_source(record, item)[1]}\n"
         f"- Code/Project: {code}\n"
         f"- Paper type: {paper_type}\n"
         f"- Source audit: {source_audit}\n\n"

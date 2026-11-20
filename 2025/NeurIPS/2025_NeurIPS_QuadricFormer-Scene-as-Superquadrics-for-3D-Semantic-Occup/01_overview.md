@@ -1,7 +1,7 @@
 # QuadricFormer: Scene as Superquadrics for 3D Semantic Occupancy Prediction
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-03 (14 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://openreview.net/forum?id=eZNdkwJYbN.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (14 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://neurips.cc/virtual/2025/poster/116903.
 > PDF retrieval source: https://arxiv.org/pdf/2506.10977. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
@@ -12,7 +12,8 @@
 - Tier: REFERENCE
 - Tags: sensor fusion, LiDAR, semantic, alignment, 3D Vision
 - Official paper: https://neurips.cc/virtual/2025/poster/116903
-- Full-text retrieval: https://arxiv.org/pdf/2506.10977
+- Published PDF: https://proceedings.neurips.cc/paper_files/paper/2025/file/4470d0b5795c3721e2a622a249ef2154-Paper-Conference.pdf
+- Full-text retrieval at original review: https://arxiv.org/pdf/2506.10977
 - Code/Project: https://zuosc19.github.io/QuadricFormer/
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (14 pages; PyMuPDF text; title-token overlap first two pages=1.0)

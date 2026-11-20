@@ -1,20 +1,21 @@
 # AutoRT: Embodied Foundation Models for Large Scale Orchestration of Robotic Agents
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-03 (26 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://deepmind.google/research/publications/48151/.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (26 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://arxiv.org/abs/2401.12963.
 > PDF retrieval source: https://deepmind.google/research/publications/48151/. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2024 / arXiv
-- Authors: Michael Ahn, Debidatta Dwibedi, Chelsea Finn, Montse Gonzalez Arenas, Keerthana Gopalakrishnan, Karol Hausman, Brian Ichter, Alex Irpan, Nikhil Joshi, Ryan Julian, Sean Kirmani, Isabel Leal, Edward Lee, Sergey Levine, Yao Lu, Isabel Leal, Sharath Maddineni, Kanishka Rao, Dorsa Sadigh, Pannag Sanketi, Pierre Sermanet, Quan Vuong, Stefan Welker, Fei Xia, Ted Xiao, Peng Xu, Steve Xu, Zhuo Xu
+- Authors: Michael Ahn, Debidatta Dwibedi, Chelsea Finn, Montse Gonzalez Arenas, Keerthana Gopalakrishnan, Karol Hausman, Brian Ichter, Alex Irpan, Nikhil Joshi, Ryan Julian, Sean Kirmani, Isabel Leal, Edward Lee, Sergey Levine, Yao Lu, Sharath Maddineni, Kanishka Rao, Dorsa Sadigh, Pannag Sanketi, Pierre Sermanet, Quan Vuong, Stefan Welker, Fei Xia, Ted Xiao, Peng Xu, Steve Xu, Zhuo Xu
 - Primary track: VLA and generalist robot policies
 - Tier: NEXT
 - Tags: Robotics, robot data, Foundation Models, Fleet Learning, Google DeepMind
 - Official paper: https://arxiv.org/abs/2401.12963
 - Preprint: https://arxiv.org/abs/2401.12963 — 2026-11-06 official abstract/project metadata 확인; 정식 conference 게재로 승격하지 않음.
 - Full-text retrieval: https://deepmind.google/research/publications/48151/
-- Code/Project: not identified
+- Code/Project: https://auto-rt.github.io/
+- Data availability: 저자는 실제 로봇 에피소드 수집과 학습 사용을 보고한다. 기존 데이터 비해당 분류를 교정했다. 해당 에피소드의 저자 배포 범위는 미확인. [근거](https://arxiv.org/html/2401.12963)
 - Paper type: theory_or_foundation
 - Source audit: full-text PDF body checked on 2026-09-03 (26 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 

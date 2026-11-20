@@ -2,7 +2,7 @@
 
 ## 재개 순서
 
-**다음 원장 감사.** 1,252편의 첫 전수 대조에서 CORE 50편의 요약·기여와 태그를 확인했다. NEXT에서 요약·기여가 미확인인 362편을 앞선 배치 순서로 대조한다. CORE 중 공개 자료 3종의 판정이 하나라도 남은 44편에서는 해당 버전의 배포 파일이나 저자의 공개 조건을 우선 확인한다. [등급별 잔여 범위와 배치별 논문](./research/SOURCE_AUDIT.md#읽기-등급별-확인-범위)
+**다음 원장 감사.** NEXT에서 요약·기여가 미확인인 362편을 기존 100편 배치 순서로 대조한다. CORE 50편은 요약·기여와 태그 대조를 마쳤고, 이 중 43편은 코드·가중치·데이터 중 한 가지 이상이 미확인이다. 해당 논문 버전의 배포 파일과 저자의 공개 조건을 확인한다. [교정 후 잔여 범위](./research/SOURCE_AUDIT.md#교정-재검증)
 
 **다음 연구 작업은 G1이 걸쇠를 당기다가 저항이 갑자기 사라질 때 균형을 유지하는지 시뮬레이션에서 확인하는 것이다.** 후보 4의 첫 비교는 다음 순서로 진행한다. [선행 연구와 판별 기준](./work/research_topics/README.md#g1-load-release) · [공개 G1 모델](https://github.com/google-deepmind/mujoco_menagerie/blob/main/unitree_g1/README.md)
 
@@ -24,6 +24,6 @@
 
 ## 직전 완료
 
-- **원문 전수 감사.** 안정 ID를 기준으로 100편씩 12개 배치와 마지막 52편을 검토했다. 교정 전 오류와 누락 보완을 별도로 집계했다. [배치별 결과](./research/SOURCE_AUDIT.md#배치별-결과) · [논문별 근거와 이전 값](./work/sources/batches/source_audit_2026_11.jsonl)
+- **원문 감사 교정.** 13개 배치의 기존 오류 132건을 현행 값과 대조했다. 추가로 확인한 오류 44건을 고쳤고, 접근을 확인하지 못했던 PDF 41건에 표제면을 확인한 판본을 연결했다. [교정 결과](./research/SOURCE_AUDIT.md#교정-재검증) · [논문별 이전 값과 근거](./work/sources/batches/source_audit_2026_11.jsonl)
 - **시연의 선택적 재수집.** 네 원격조작 자료를 대조했다. 원래 요청을 복원할 수 없으면서 같은 작업에서 가이드 방향만 바꿔 재시연할 수 있는 표본이 확보될 때까지 파일럿을 보류한다. [결과](./work/research_topics/demonstration_recollection/내용/README.md) · [공개 표본 재검산](./work/research_topics/demonstration_recollection/재현%20방법/README.md)
 - **레지스트리.** 공유 제어 원문 2편을 등록하고 DROID 공개 자료를 교정했다. 기존 23편의 등록 판정과 이전 실험의 수치·재개 조건은 각 결과 문서에서 확인할 수 있다. [등록과 교정](./work/update/REGISTRY.md) · [누락 심사](./research/GAPFILL.md) · [종료·보류 결과](./work/research_topics/RESULTS.md)

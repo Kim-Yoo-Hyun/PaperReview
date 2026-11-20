@@ -13,7 +13,7 @@
 - Tags: Robotics, Imitation Learning, scaling laws, robot data
 - Official paper: https://www.roboticsproceedings.org/rss21/p025.html
 - Full-text retrieval: https://www.roboticsproceedings.org/rss21/p025.pdf
-- Code/Project: https://www.roboticsproceedings.org/rss21/p025.html
+- Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (15 pages; tesseract OCR fallback; title-token overlap first two pages=1.0)
 

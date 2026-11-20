@@ -1,7 +1,7 @@
 # VLA-OS: Structuring and Dissecting Planning Representations and Paradigms in Vision-Language-Action Models
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-03 (26 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://openreview.net/forum?id=PQYazNKEYo.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (26 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://neurips.cc/virtual/2025/poster/118219.
 > PDF retrieval source: https://arxiv.org/pdf/2506.17561. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
@@ -12,7 +12,8 @@
 - Tier: REFERENCE
 - Tags: VLA, Vision-Language Model, Robotics
 - Official paper: https://neurips.cc/virtual/2025/poster/118219
-- Full-text retrieval: https://arxiv.org/pdf/2506.17561
+- Published PDF: https://proceedings.neurips.cc/paper_files/paper/2025/file/c7af751b5e0a407c62ac023e3cb381f9-Paper-Conference.pdf
+- Full-text retrieval at original review: https://arxiv.org/pdf/2506.17561
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (26 pages; PyMuPDF text; title-token overlap first two pages=1.0)

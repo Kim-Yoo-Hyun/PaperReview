@@ -41,7 +41,7 @@
 
 ### 4. 휴머노이드가 당기던 손의 저항이 사라질 때의 균형
 
-**연구 질문.** 당겨서 걸쇠를 여는 작업에서, 풀리기 전에는 힘을 내면서 해제 직후의 과도한 몸통 운동을 줄일 수 있는가? 지속 저항과 갑작스러운 해제 조건에서 해제 전 당김 거리·힘을 맞춰 비교한다. 전신 접촉 제어의 출발점은 `pr-0603` WoCoCo와 `pr-0666` Dynamic Whole-Body Motion Generation이다. [WoCoCo](https://openreview.net/forum?id=Czs2xH9114) · [전신 접촉 제어](https://hal.science/lirmm-00831097)
+**연구 질문.** 당겨서 걸쇠를 여는 작업에서, 풀리기 전에는 힘을 내면서 해제 직후의 과도한 몸통 운동을 줄일 수 있는가? 지속 저항과 갑작스러운 해제 조건에서 해제 전 당김 거리·힘을 맞춰 비교한다. 전신 접촉 제어의 출발점은 `pr-0603` WoCoCo와 `pr-0666` Dynamic Whole-Body Motion Generation이다. [WoCoCo](https://proceedings.mlr.press/v270/zhang25a.html) · [전신 접촉 제어](https://hal.science/lirmm-00831097)
 
 **가까운 선행과 차이.** ① *Brace Yourself*는 G1의 반대쪽 손 지지로 힘 추종을 개선했다. ② Ctrl-F는 줄의 장력과 충격을 포함한 상호작용력을 명령한다. ③ *A System for Fast, Resilient, and Adaptable Loco-Manipulation*은 실물에서 걸쇠를 풀고 문을 당겨 통과하는 전체 과제를 수행했다. 이미 구현된 문 열기에서 남는 질문은 같은 당김 작업량·시간에서 **해제 자체가 만든 초기 균형 손실**과 이를 줄이는 제어의 일반화다. [Brace Yourself §IV–VI](https://arxiv.org/html/2609.25486#S4) · [Ctrl-F §4–5](https://arxiv.org/html/2611.05507#S4) · [문 열기 실기 §IV](https://arxiv.org/html/2609.01518#S4)
 

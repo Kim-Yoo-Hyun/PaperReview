@@ -71,9 +71,9 @@
     "venue": "RSS 2026",
     "category": "Manipulation, Contact, and Dexterity",
     "tags": ["Robotics", "tactile", "cross-embodiment", "human-to-robot transfer", "contact-rich manipulation", "dexterity", "representation alignment"],
-    "pdf": "",
-    "page": "https://roboticsconference.org/program/papers/6/",
-    "project": "https://roboticsconference.org/program/papers/6/",
+    "pdf": "https://www.roboticsproceedings.org/rss22/p006.pdf",
+    "page": "https://www.roboticsproceedings.org/rss22/p006.html",
+    "project": "https://yswi.github.io/tactalign/",
     "role": "paired data와 동일 sensor 없이 human tactile signal을 robot tactile latent로 옮기는 RSS 2026 기준점. G-01의 cross-sensor/cross-embodiment boundary를 직접 시험한다."
   },
   {
@@ -82,20 +82,20 @@
     "venue": "RSS 2026",
     "category": "World Models, Safety, and Recovery",
     "tags": ["Robotics", "VLA", "memory", "long horizon", "partial observability", "imitation learning", "retrieval"],
-    "pdf": "",
-    "page": "https://roboticsconference.org/program/papers/10/",
-    "project": "https://roboticsconference.org/program/papers/10/",
+    "pdf": "https://www.roboticsproceedings.org/rss22/p010.pdf",
+    "page": "https://www.roboticsproceedings.org/rss22/p010.html",
+    "project": "https://robin-lab.cs.utexas.edu/HALO/",
     "role": "HALO의 task-relevant sparse memory retrieval과 drift 완화 설계를 통해 G-04의 stale memory·long-horizon failure를 최신 closed-loop 기준으로 보강한다."
   },
   {
     "title": "DexterityGen: Foundation Controller for Unprecedented Dexterity",
-    "year": 2026,
+    "year": 2025,
     "venue": "RSS 2026",
     "category": "Manipulation, Contact, and Dexterity",
     "tags": ["Robotics", "dexterous manipulation", "reinforcement learning", "foundation controller", "teleoperation", "sim-to-real", "tool use"],
-    "pdf": "",
-    "page": "https://roboticsconference.org/2026/program/papers/103/",
-    "project": "https://roboticsconference.org/2026/program/papers/103/",
+    "pdf": "https://www.roboticsproceedings.org/rss21/p103.pdf",
+    "page": "https://www.roboticsproceedings.org/rss21/p103.html",
+    "project": "https://zhaohengyin.github.io/dexteritygen/",
     "role": "RL로 저수준 dexterous primitive를 선학습하고 human teleoperation을 prompt로 쓰는 RSS 2026 foundation controller. Dexterous long-horizon skill과 contact stability의 최신 anchor."
   }
 ]

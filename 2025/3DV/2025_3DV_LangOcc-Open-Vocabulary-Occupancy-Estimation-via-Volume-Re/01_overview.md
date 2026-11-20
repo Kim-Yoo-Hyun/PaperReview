@@ -1,7 +1,7 @@
 # LangOcc: Open Vocabulary Occupancy Estimation via Volume Rendering
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-03 (13 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://3dvconf.github.io/2025/accepted-papers/.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (13 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://api.crossref.org/works/10.1109/3dv66043.2025.00024.
 > PDF retrieval source: https://openreview.net/attachment?id=KhjlXNbYea&name=pdf. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
@@ -11,8 +11,9 @@
 - Primary track: Robotics-enabling 3D perception
 - Tier: REFERENCE
 - Tags: sensor fusion, LiDAR, 3D Vision
-- Official paper: https://3dvconf.github.io/2025/schedule_updated2.csv
-- Full-text retrieval: https://openreview.net/attachment?id=KhjlXNbYea&name=pdf
+- Official paper: https://api.crossref.org/works/10.1109/3dv66043.2025.00024
+- Preprint PDF: https://arxiv.org/pdf/2407.17310
+- Full-text retrieval at original review: https://openreview.net/attachment?id=KhjlXNbYea&name=pdf
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (13 pages; PyMuPDF text; title-token overlap first two pages=1.0)

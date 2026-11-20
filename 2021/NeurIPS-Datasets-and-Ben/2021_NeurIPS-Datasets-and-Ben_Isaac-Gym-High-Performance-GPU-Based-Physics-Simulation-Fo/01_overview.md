@@ -1,7 +1,7 @@
 # Isaac Gym: High Performance GPU Based Physics Simulation For Robot Learning
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-03 (32 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://research.nvidia.com/labs/srl/publication/makoviychuk-2021-isaac/.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (32 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://arxiv.org/abs/2108.10470.
 > PDF retrieval source: https://research.nvidia.com/labs/srl/publication/makoviychuk-2021-isaac/. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.

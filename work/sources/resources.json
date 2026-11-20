@@ -5641,18 +5641,6 @@
       "verified_on": "2026-11-20"
     },
     {
-      "resource_id": "code:046b3eb6e3c0",
-      "resource_type": "code_or_project",
-      "name": "p128.html",
-      "url": "https://www.roboticsproceedings.org/rss21/p128.html",
-      "paper_ids": [
-        "pr-0672"
-      ],
-      "evidence": "manifest_link",
-      "availability": "project_only",
-      "verified_on": "2026-11-20"
-    },
-    {
       "resource_id": "code:05c472092ca6",
       "resource_type": "code_or_project",
       "name": "bot_site",
@@ -5810,18 +5798,6 @@
       "verified_on": "2026-11-20"
     },
     {
-      "resource_id": "code:0d91131d3014",
-      "resource_type": "code_or_project",
-      "name": "p135.html",
-      "url": "https://www.roboticsproceedings.org/rss20/p135.html",
-      "paper_ids": [
-        "pr-0648"
-      ],
-      "evidence": "manifest_link",
-      "availability": "project_only",
-      "verified_on": "2026-11-20"
-    },
-    {
       "resource_id": "code:0daa1c22a5d1",
       "resource_type": "code_or_project",
       "name": "IsaacGymEnvs",
@@ -5876,30 +5852,6 @@
       "url": "https://github.com/robometer/robometer",
       "paper_ids": [
         "pr-1021"
-      ],
-      "evidence": "manifest_link",
-      "availability": "released",
-      "verified_on": "2026-11-20"
-    },
-    {
-      "resource_id": "code:0fe21c23d238",
-      "resource_type": "code_or_project",
-      "name": "p137.html",
-      "url": "https://www.roboticsproceedings.org/rss21/p137.html",
-      "paper_ids": [
-        "pr-0708"
-      ],
-      "evidence": "manifest_link",
-      "availability": "project_only",
-      "verified_on": "2026-11-20"
-    },
-    {
-      "resource_id": "code:109fd7cf8d3e",
-      "resource_type": "code_or_project",
-      "name": "rl_locomotion",
-      "url": "https://github.com/antonilo/rl_locomotion",
-      "paper_ids": [
-        "pr-0659"
       ],
       "evidence": "manifest_link",
       "availability": "released",
@@ -6218,6 +6170,18 @@
       "verified_on": "2026-11-20"
     },
     {
+      "resource_id": "code:1f37284472a1",
+      "resource_type": "code_or_project",
+      "name": "HALO",
+      "url": "https://github.com/UT-Austin-RobIn/HALO",
+      "paper_ids": [
+        "pr-0819"
+      ],
+      "evidence": "manifest_link",
+      "availability": "released",
+      "verified_on": "2026-11-20"
+    },
+    {
       "resource_id": "code:1f5762b25d3e",
       "resource_type": "code_or_project",
       "name": "extreme-parkour.github.io",
@@ -6482,18 +6446,6 @@
       "verified_on": "2026-11-20"
     },
     {
-      "resource_id": "code:269f750a0cc7",
-      "resource_type": "code_or_project",
-      "name": "p061.html",
-      "url": "https://www.roboticsproceedings.org/rss17/p061.html",
-      "paper_ids": [
-        "pr-0598"
-      ],
-      "evidence": "manifest_link",
-      "availability": "project_only",
-      "verified_on": "2026-11-20"
-    },
-    {
       "resource_id": "code:26b2efd918f9",
       "resource_type": "code_or_project",
       "name": "tidybot2",
@@ -6736,6 +6688,18 @@
       "verified_on": "2026-11-20"
     },
     {
+      "resource_id": "code:310ecfd918ab",
+      "resource_type": "code_or_project",
+      "name": "lightning-grasp",
+      "url": "https://github.com/zhaohengyin/lightning-grasp",
+      "paper_ids": [
+        "pr-0820"
+      ],
+      "evidence": "manifest_link",
+      "availability": "released",
+      "verified_on": "2026-11-20"
+    },
+    {
       "resource_id": "code:3161aab3ba53",
       "resource_type": "code_or_project",
       "name": "3D-VLA",
@@ -6904,18 +6868,6 @@
       "verified_on": "2026-11-20"
     },
     {
-      "resource_id": "code:35d343a513b2",
-      "resource_type": "code_or_project",
-      "name": "10007319",
-      "url": "https://iclr.cc/virtual/2026/poster/10007319",
-      "paper_ids": [
-        "pr-0697"
-      ],
-      "evidence": "manifest_link",
-      "availability": "project_only",
-      "verified_on": "2026-11-20"
-    },
-    {
       "resource_id": "code:35db88510efe",
       "resource_type": "code_or_project",
       "name": "qc",
@@ -6950,6 +6902,18 @@
       "evidence": "manifest_link",
       "availability": "released",
       "verified_on": "2026-11-19"
+    },
+    {
+      "resource_id": "code:36b465918c4e",
+      "resource_type": "code_or_project",
+      "name": "gsr",
+      "url": "https://zhaohengyin.github.io/gsr/",
+      "paper_ids": [
+        "pr-0638"
+      ],
+      "evidence": "manifest_link",
+      "availability": "project_only",
+      "verified_on": "2026-11-20"
     },
     {
       "resource_id": "code:3720677cb566",
@@ -6994,18 +6958,6 @@
       "url": "https://akashsharma02.github.io/ptld-website/",
       "paper_ids": [
         "pr-1248"
-      ],
-      "evidence": "manifest_link",
-      "availability": "project_only",
-      "verified_on": "2026-11-20"
-    },
-    {
-      "resource_id": "code:3959f7f7b601",
-      "resource_type": "code_or_project",
-      "name": "p111.html",
-      "url": "https://www.roboticsproceedings.org/rss21/p111.html",
-      "paper_ids": [
-        "pr-0652"
       ],
       "evidence": "manifest_link",
       "availability": "project_only",
@@ -7229,24 +7181,24 @@
       "verified_on": "2026-11-20"
     },
     {
-      "resource_id": "code:42c4da6f8cb0",
+      "resource_id": "code:41ec2860fc6b",
       "resource_type": "code_or_project",
-      "name": "spatial-vlm.github.io",
-      "url": "https://spatial-vlm.github.io/",
+      "name": "robopanoptes.github.io",
+      "url": "https://robopanoptes.github.io/",
       "paper_ids": [
-        "pr-0048"
+        "pr-0671"
       ],
       "evidence": "manifest_link",
       "availability": "project_only",
       "verified_on": "2026-11-20"
     },
     {
-      "resource_id": "code:43374ad4cc54",
+      "resource_id": "code:42c4da6f8cb0",
       "resource_type": "code_or_project",
-      "name": "schulman15.html",
-      "url": "https://proceedings.mlr.press/v37/schulman15.html",
+      "name": "spatial-vlm.github.io",
+      "url": "https://spatial-vlm.github.io/",
       "paper_ids": [
-        "pr-0615"
+        "pr-0048"
       ],
       "evidence": "manifest_link",
       "availability": "project_only",
@@ -7398,18 +7350,6 @@
       "verified_on": "2026-11-20"
     },
     {
-      "resource_id": "code:47a98189de04",
-      "resource_type": "code_or_project",
-      "name": "Liu_PALM_Progress-Aware_Policy_Learning_via_Affordance_Reasoning_for_Long-Horizon_Robotic_CVPR_2026_paper.html",
-      "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Liu_PALM_Progress-Aware_Policy_Learning_via_Affordance_Reasoning_for_Long-Horizon_Robotic_CVPR_2026_paper.html",
-      "paper_ids": [
-        "pr-0695"
-      ],
-      "evidence": "manifest_link",
-      "availability": "project_only",
-      "verified_on": "2026-11-20"
-    },
-    {
       "resource_id": "code:47da99bb4546",
       "resource_type": "code_or_project",
       "name": "where2explore",
@@ -7443,18 +7383,6 @@
       ],
       "evidence": "manifest_link",
       "availability": "released",
-      "verified_on": "2026-11-20"
-    },
-    {
-      "resource_id": "code:49fdefd45d4e",
-      "resource_type": "code_or_project",
-      "name": "10010454",
-      "url": "https://iclr.cc/virtual/2026/poster/10010454",
-      "paper_ids": [
-        "pr-0626"
-      ],
-      "evidence": "manifest_link",
-      "availability": "project_only",
       "verified_on": "2026-11-20"
     },
     {
@@ -7494,18 +7422,6 @@
       "verified_on": "2026-11-20"
     },
     {
-      "resource_id": "code:4b2d2b27b9ae",
-      "resource_type": "code_or_project",
-      "name": "Li_AT-VLA_Adaptive_Tactile_Injection_for_Enhanced_Feedback_Reaction_in_Vision-Language-Action_CVPR_2026_paper.html",
-      "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Li_AT-VLA_Adaptive_Tactile_Injection_for_Enhanced_Feedback_Reaction_in_Vision-Language-Action_CVPR_2026_paper.html",
-      "paper_ids": [
-        "pr-0690"
-      ],
-      "evidence": "manifest_link",
-      "availability": "project_only",
-      "verified_on": "2026-11-20"
-    },
-    {
       "resource_id": "code:4b673d910c56",
       "resource_type": "code_or_project",
       "name": "spin-robot.github.io",
@@ -7536,18 +7452,6 @@
       "url": "https://umass-embodied-agi.github.io/robodreamer/",
       "paper_ids": [
         "pr-0699"
-      ],
-      "evidence": "manifest_link",
-      "availability": "project_only",
-      "verified_on": "2026-11-20"
-    },
-    {
-      "resource_id": "code:4bf27cf9aa15",
-      "resource_type": "code_or_project",
-      "name": "p132.html",
-      "url": "https://www.roboticsproceedings.org/rss20/p132.html",
-      "paper_ids": [
-        "pr-0650"
       ],
       "evidence": "manifest_link",
       "availability": "project_only",
@@ -8227,6 +8131,18 @@
       "verified_on": "2026-11-20"
     },
     {
+      "resource_id": "code:6586990d845d",
+      "resource_type": "code_or_project",
+      "name": "auto-rt.github.io",
+      "url": "https://auto-rt.github.io/",
+      "paper_ids": [
+        "pr-0858"
+      ],
+      "evidence": "manifest_link",
+      "availability": "project_only",
+      "verified_on": "2026-11-20"
+    },
+    {
       "resource_id": "code:65a7400e0d2d",
       "resource_type": "code_or_project",
       "name": "bet",
@@ -8377,18 +8293,6 @@
       "url": "https://sites.google.com/berkeley.edu/recovery-rl/",
       "paper_ids": [
         "pr-0677"
-      ],
-      "evidence": "manifest_link",
-      "availability": "project_only",
-      "verified_on": "2026-11-20"
-    },
-    {
-      "resource_id": "code:6aeab7b8cce2",
-      "resource_type": "code_or_project",
-      "name": "p124.html",
-      "url": "https://www.roboticsproceedings.org/rss21/p124.html",
-      "paper_ids": [
-        "pr-0664"
       ],
       "evidence": "manifest_link",
       "availability": "project_only",
@@ -8553,6 +8457,18 @@
       "verified_on": "2026-11-20"
     },
     {
+      "resource_id": "code:719eff6cc062",
+      "resource_type": "code_or_project",
+      "name": "dwm",
+      "url": "https://snuvclab.github.io/dwm/",
+      "paper_ids": [
+        "pr-0686"
+      ],
+      "evidence": "manifest_link",
+      "availability": "project_only",
+      "verified_on": "2026-11-20"
+    },
+    {
       "resource_id": "code:7233fb6617db",
       "resource_type": "code_or_project",
       "name": "ASAP",
@@ -8595,6 +8511,18 @@
       "url": "https://github.com/CUT3R/CUT3R",
       "paper_ids": [
         "pr-0057"
+      ],
+      "evidence": "manifest_link",
+      "availability": "released",
+      "verified_on": "2026-11-20"
+    },
+    {
+      "resource_id": "code:73e6c4210453",
+      "resource_type": "code_or_project",
+      "name": "dex-retargeting",
+      "url": "https://github.com/dexsuite/dex-retargeting",
+      "paper_ids": [
+        "pr-0726"
       ],
       "evidence": "manifest_link",
       "availability": "released",
@@ -8921,7 +8849,7 @@
         "pr-0978"
       ],
       "evidence": "manifest_link",
-      "availability": "not_released",
+      "availability": "released",
       "verified_on": "2026-11-20"
     },
     {
@@ -8991,18 +8919,6 @@
       "url": "https://deepmind.google/models/gemini-robotics/",
       "paper_ids": [
         "pr-0860"
-      ],
-      "evidence": "manifest_link",
-      "availability": "project_only",
-      "verified_on": "2026-11-20"
-    },
-    {
-      "resource_id": "code:82ec2733f699",
-      "resource_type": "code_or_project",
-      "name": "Peng_Counterfactual_VLA_Self-Reflective_Vision-Language-Action_Model_with_Adaptive_Reasoning_CVPR_2026_paper.html",
-      "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Peng_Counterfactual_VLA_Self-Reflective_Vision-Language-Action_Model_with_Adaptive_Reasoning_CVPR_2026_paper.html",
-      "paper_ids": [
-        "pr-0693"
       ],
       "evidence": "manifest_link",
       "availability": "project_only",
@@ -9111,18 +9027,6 @@
       "url": "https://planetrl.github.io/",
       "paper_ids": [
         "pr-0679"
-      ],
-      "evidence": "manifest_link",
-      "availability": "project_only",
-      "verified_on": "2026-11-20"
-    },
-    {
-      "resource_id": "code:862114a53c6e",
-      "resource_type": "code_or_project",
-      "name": "forum?id=PqvMRDCJT9t",
-      "url": "https://openreview.net/forum?id=PqvMRDCJT9t",
-      "paper_ids": [
-        "pr-0745"
       ],
       "evidence": "manifest_link",
       "availability": "project_only",
@@ -9393,15 +9297,27 @@
       "verified_on": "2026-11-20"
     },
     {
-      "resource_id": "code:8e1dda04fbdf",
+      "resource_id": "code:8d7c6edc95a0",
       "resource_type": "code_or_project",
-      "name": "Kim_Dexterous_World_Models_CVPR_2026_paper.html",
-      "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Kim_Dexterous_World_Models_CVPR_2026_paper.html",
+      "name": "ManiSkill-Legacy",
+      "url": "https://github.com/haosulab/ManiSkill-Legacy",
       "paper_ids": [
-        "pr-0686"
+        "pr-0847"
       ],
       "evidence": "manifest_link",
-      "availability": "project_only",
+      "availability": "released",
+      "verified_on": "2026-11-20"
+    },
+    {
+      "resource_id": "code:8dfba325919f",
+      "resource_type": "code_or_project",
+      "name": "stretch-open",
+      "url": "https://github.com/arjung128/stretch-open",
+      "paper_ids": [
+        "pr-0673"
+      ],
+      "evidence": "manifest_link",
+      "availability": "released",
       "verified_on": "2026-11-20"
     },
     {
@@ -9678,18 +9594,6 @@
       ],
       "evidence": "manifest_link",
       "availability": "released",
-      "verified_on": "2026-11-20"
-    },
-    {
-      "resource_id": "code:96410261441b",
-      "resource_type": "code_or_project",
-      "name": "Zhang_AtomicVLA_Unlocking_the_Potential_of_Atomic_Skill_Learning_in_Robots_CVPR_2026_paper.html",
-      "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Zhang_AtomicVLA_Unlocking_the_Potential_of_Atomic_Skill_Learning_in_Robots_CVPR_2026_paper.html",
-      "paper_ids": [
-        "pr-0692"
-      ],
-      "evidence": "manifest_link",
-      "availability": "project_only",
       "verified_on": "2026-11-20"
     },
     {
@@ -9995,18 +9899,6 @@
       "verified_on": "2026-11-20"
     },
     {
-      "resource_id": "code:a0d6f02c1488",
-      "resource_type": "code_or_project",
-      "name": "p023.html",
-      "url": "https://www.roboticsproceedings.org/rss21/p023.html",
-      "paper_ids": [
-        "pr-0639"
-      ],
-      "evidence": "manifest_link",
-      "availability": "project_only",
-      "verified_on": "2026-11-20"
-    },
-    {
       "resource_id": "code:a13776c91de4",
       "resource_type": "code_or_project",
       "name": "sg-pgm",
@@ -10157,18 +10049,6 @@
       "url": "https://deepmind.google/discover/blog/robocat-a-self-improving-robotic-agent/",
       "paper_ids": [
         "pr-0723"
-      ],
-      "evidence": "manifest_link",
-      "availability": "project_only",
-      "verified_on": "2026-11-20"
-    },
-    {
-      "resource_id": "code:a5c8be5e602f",
-      "resource_type": "code_or_project",
-      "name": "p130.html",
-      "url": "https://www.roboticsproceedings.org/rss20/p130.html",
-      "paper_ids": [
-        "pr-0649"
       ],
       "evidence": "manifest_link",
       "availability": "project_only",
@@ -10367,18 +10247,6 @@
       "verified_on": "2026-11-20"
     },
     {
-      "resource_id": "code:abf39a29bd7b",
-      "resource_type": "code_or_project",
-      "name": "p122.html",
-      "url": "https://www.roboticsproceedings.org/rss21/p122.html",
-      "paper_ids": [
-        "pr-0663"
-      ],
-      "evidence": "manifest_link",
-      "availability": "project_only",
-      "verified_on": "2026-11-20"
-    },
-    {
       "resource_id": "code:ac40c2aed70a",
       "resource_type": "code_or_project",
       "name": "semantic-kitti.org",
@@ -10428,6 +10296,18 @@
       "verified_on": "2026-11-20"
     },
     {
+      "resource_id": "code:ad55c05069b3",
+      "resource_type": "code_or_project",
+      "name": "pinwm.github.io",
+      "url": "https://pinwm.github.io/",
+      "paper_ids": [
+        "pr-0685"
+      ],
+      "evidence": "manifest_link",
+      "availability": "project_only",
+      "verified_on": "2026-11-20"
+    },
+    {
       "resource_id": "code:adc16a96f325",
       "resource_type": "code_or_project",
       "name": "www.lerf.io",
@@ -10449,6 +10329,18 @@
       ],
       "evidence": "manifest_link",
       "availability": "not_released",
+      "verified_on": "2026-11-20"
+    },
+    {
+      "resource_id": "code:aeba7cc5bc3b",
+      "resource_type": "code_or_project",
+      "name": "robo-pack.github.io",
+      "url": "https://robo-pack.github.io/",
+      "paper_ids": [
+        "pr-0649"
+      ],
+      "evidence": "manifest_link",
+      "availability": "project_only",
       "verified_on": "2026-11-20"
     },
     {
@@ -10645,12 +10537,12 @@
       "verified_on": "2026-11-20"
     },
     {
-      "resource_id": "code:b503b210b713",
+      "resource_id": "code:b411cd643ad6",
       "resource_type": "code_or_project",
-      "name": "103",
-      "url": "https://roboticsconference.org/2026/program/papers/103/",
+      "name": "cross_embodiment_offline_rl_website",
+      "url": "https://haruki-abe.github.io/cross_embodiment_offline_rl_website/",
       "paper_ids": [
-        "pr-0820"
+        "pr-0626"
       ],
       "evidence": "manifest_link",
       "availability": "project_only",
@@ -10702,18 +10594,6 @@
       ],
       "evidence": "manifest_link",
       "availability": "released",
-      "verified_on": "2026-11-20"
-    },
-    {
-      "resource_id": "code:b6c97822f602",
-      "resource_type": "code_or_project",
-      "name": "p033.html",
-      "url": "https://www.roboticsproceedings.org/rss21/p033.html",
-      "paper_ids": [
-        "pr-0673"
-      ],
-      "evidence": "manifest_link",
-      "availability": "project_only",
       "verified_on": "2026-11-20"
     },
     {
@@ -10969,6 +10849,18 @@
       "verified_on": "2026-11-20"
     },
     {
+      "resource_id": "code:bd73853a5b2a",
+      "resource_type": "code_or_project",
+      "name": "doorman-humanoid.github.io",
+      "url": "https://doorman-humanoid.github.io/",
+      "paper_ids": [
+        "pr-0614"
+      ],
+      "evidence": "manifest_link",
+      "availability": "project_only",
+      "verified_on": "2026-11-20"
+    },
+    {
       "resource_id": "code:bde48c8432ed",
       "resource_type": "code_or_project",
       "name": "mipnerf",
@@ -10989,7 +10881,7 @@
         "pr-1109"
       ],
       "evidence": "manifest_link",
-      "availability": "not_released",
+      "availability": "project_only",
       "verified_on": "2026-11-20"
     },
     {
@@ -11101,18 +10993,6 @@
       "verified_on": "2026-11-20"
     },
     {
-      "resource_id": "code:c71aa8752ecf",
-      "resource_type": "code_or_project",
-      "name": "He_VIRAL_Visual_Sim-to-Real_at_Scale_for_Humanoid_Loco-Manipulation_CVPR_2026_paper.html",
-      "url": "https://openaccess.thecvf.com/content/CVPR2026/html/He_VIRAL_Visual_Sim-to-Real_at_Scale_for_Humanoid_Loco-Manipulation_CVPR_2026_paper.html",
-      "paper_ids": [
-        "pr-0613"
-      ],
-      "evidence": "manifest_link",
-      "availability": "project_only",
-      "verified_on": "2026-11-20"
-    },
-    {
       "resource_id": "code:c82e3f79a149",
       "resource_type": "code_or_project",
       "name": "awac",
@@ -11149,36 +11029,12 @@
       "verified_on": "2026-11-20"
     },
     {
-      "resource_id": "code:c9058a1542d2",
-      "resource_type": "code_or_project",
-      "name": "p054.html",
-      "url": "https://www.roboticsproceedings.org/rss20/p054.html",
-      "paper_ids": [
-        "pr-0638"
-      ],
-      "evidence": "manifest_link",
-      "availability": "project_only",
-      "verified_on": "2026-11-20"
-    },
-    {
       "resource_id": "code:c942c76a3a94",
       "resource_type": "code_or_project",
       "name": "scalable-deep-reinforcement-learning.html",
       "url": "https://ai.googleblog.com/2018/06/scalable-deep-reinforcement-learning.html",
       "paper_ids": [
         "pr-0563"
-      ],
-      "evidence": "manifest_link",
-      "availability": "project_only",
-      "verified_on": "2026-11-20"
-    },
-    {
-      "resource_id": "code:c97bd6308e80",
-      "resource_type": "code_or_project",
-      "name": "p025.html",
-      "url": "https://www.roboticsproceedings.org/rss21/p025.html",
-      "paper_ids": [
-        "pr-0640"
       ],
       "evidence": "manifest_link",
       "availability": "project_only",
@@ -11329,18 +11185,6 @@
       "verified_on": "2026-11-20"
     },
     {
-      "resource_id": "code:cefbf7917fe7",
-      "resource_type": "code_or_project",
-      "name": "Li_ForceVLA2_Unleashing_Hybrid_Force-Position_Control_with_Force_Awareness_for_Contact-Rich_CVPR_2026_paper.html",
-      "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Li_ForceVLA2_Unleashing_Hybrid_Force-Position_Control_with_Force_Awareness_for_Contact-Rich_CVPR_2026_paper.html",
-      "paper_ids": [
-        "pr-0691"
-      ],
-      "evidence": "manifest_link",
-      "availability": "project_only",
-      "verified_on": "2026-11-20"
-    },
-    {
       "resource_id": "code:cf37cab0f655",
       "resource_type": "code_or_project",
       "name": "progprompt-vh",
@@ -11362,18 +11206,6 @@
       ],
       "evidence": "manifest_link",
       "availability": "released",
-      "verified_on": "2026-11-20"
-    },
-    {
-      "resource_id": "code:cfb667fe9ce0",
-      "resource_type": "code_or_project",
-      "name": "p125.html",
-      "url": "https://www.roboticsproceedings.org/rss21/p125.html",
-      "paper_ids": [
-        "pr-0665"
-      ],
-      "evidence": "manifest_link",
-      "availability": "project_only",
       "verified_on": "2026-11-20"
     },
     {
@@ -11447,18 +11279,6 @@
       ],
       "evidence": "manifest_link",
       "availability": "released",
-      "verified_on": "2026-11-20"
-    },
-    {
-      "resource_id": "code:d1832880afef",
-      "resource_type": "code_or_project",
-      "name": "p042.html",
-      "url": "https://www.roboticsproceedings.org/rss21/p042.html",
-      "paper_ids": [
-        "pr-0671"
-      ],
-      "evidence": "manifest_link",
-      "availability": "project_only",
       "verified_on": "2026-11-20"
     },
     {
@@ -11810,18 +11630,6 @@
       "verified_on": "2026-11-20"
     },
     {
-      "resource_id": "code:ddf647bcf077",
-      "resource_type": "code_or_project",
-      "name": "maniskill.ai",
-      "url": "https://maniskill.ai/",
-      "paper_ids": [
-        "pr-0847"
-      ],
-      "evidence": "manifest_link",
-      "availability": "project_only",
-      "verified_on": "2026-11-20"
-    },
-    {
       "resource_id": "code:de63a46c4312",
       "resource_type": "code_or_project",
       "name": "self-improve-VLA-PLD",
@@ -11966,18 +11774,6 @@
       "verified_on": "2026-11-20"
     },
     {
-      "resource_id": "code:e2c05f9af6c7",
-      "resource_type": "code_or_project",
-      "name": "Xue_Opening_the_Sim-to-Real_Door_for_Humanoid_Pixel-to-Action_Policy_Transfer_CVPR_2026_paper.html",
-      "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Xue_Opening_the_Sim-to-Real_Door_for_Humanoid_Pixel-to-Action_Policy_Transfer_CVPR_2026_paper.html",
-      "paper_ids": [
-        "pr-0614"
-      ],
-      "evidence": "manifest_link",
-      "availability": "project_only",
-      "verified_on": "2026-11-20"
-    },
-    {
       "resource_id": "code:e2cd762be301",
       "resource_type": "code_or_project",
       "name": "learning-from-play.github.io",
@@ -12110,6 +11906,18 @@
       "verified_on": "2026-11-20"
     },
     {
+      "resource_id": "code:e7a4a42cf456",
+      "resource_type": "code_or_project",
+      "name": "articubot.github.io",
+      "url": "https://articubot.github.io/",
+      "paper_ids": [
+        "pr-0674"
+      ],
+      "evidence": "manifest_link",
+      "availability": "project_only",
+      "verified_on": "2026-11-20"
+    },
+    {
       "resource_id": "code:e7f6176bd312",
       "resource_type": "code_or_project",
       "name": "WMNav",
@@ -12146,18 +11954,6 @@
       "verified_on": "2026-11-20"
     },
     {
-      "resource_id": "code:e8aecefd0b11",
-      "resource_type": "code_or_project",
-      "name": "p031.html",
-      "url": "https://www.roboticsproceedings.org/rss16/p031.html",
-      "paper_ids": [
-        "pr-0597"
-      ],
-      "evidence": "manifest_link",
-      "availability": "project_only",
-      "verified_on": "2026-11-20"
-    },
-    {
       "resource_id": "code:e8ddacd0807e",
       "resource_type": "code_or_project",
       "name": "D4RL",
@@ -12179,6 +11975,18 @@
       ],
       "evidence": "manifest_link",
       "availability": "project_only",
+      "verified_on": "2026-11-20"
+    },
+    {
+      "resource_id": "code:e975d796b379",
+      "resource_type": "code_or_project",
+      "name": "tactalign",
+      "url": "https://yswi.github.io/tactalign/",
+      "paper_ids": [
+        "pr-0818"
+      ],
+      "evidence": "manifest_link",
+      "availability": "not_released",
       "verified_on": "2026-11-20"
     },
     {
@@ -12371,6 +12179,18 @@
       ],
       "evidence": "manifest_link",
       "availability": "released",
+      "verified_on": "2026-11-20"
+    },
+    {
+      "resource_id": "code:ef28cd887db3",
+      "resource_type": "code_or_project",
+      "name": "viral-humanoid.github.io",
+      "url": "https://viral-humanoid.github.io/",
+      "paper_ids": [
+        "pr-0613"
+      ],
+      "evidence": "manifest_link",
+      "availability": "project_only",
       "verified_on": "2026-11-20"
     },
     {
@@ -12674,6 +12494,18 @@
       "verified_on": "2026-11-20"
     },
     {
+      "resource_id": "code:f92992b0422c",
+      "resource_type": "code_or_project",
+      "name": "human2bots.github.io",
+      "url": "https://human2bots.github.io/",
+      "paper_ids": [
+        "pr-0663"
+      ],
+      "evidence": "manifest_link",
+      "availability": "project_only",
+      "verified_on": "2026-11-20"
+    },
+    {
       "resource_id": "code:f94e95d22b30",
       "resource_type": "code_or_project",
       "name": "roto",
@@ -12782,18 +12614,6 @@
       "verified_on": "2026-11-20"
     },
     {
-      "resource_id": "code:fdcab919c3c6",
-      "resource_type": "code_or_project",
-      "name": "p153.html",
-      "url": "https://www.roboticsproceedings.org/rss21/p153.html",
-      "paper_ids": [
-        "pr-0685"
-      ],
-      "evidence": "manifest_link",
-      "availability": "project_only",
-      "verified_on": "2026-11-20"
-    },
-    {
       "resource_id": "code:fe4d057d6841",
       "resource_type": "code_or_project",
       "name": "pddlstream",
@@ -12839,18 +12659,6 @@
       ],
       "evidence": "manifest_link",
       "availability": "released",
-      "verified_on": "2026-11-20"
-    },
-    {
-      "resource_id": "code:ffd51ddaa0c3",
-      "resource_type": "code_or_project",
-      "name": "p156.html",
-      "url": "https://www.roboticsproceedings.org/rss21/p156.html",
-      "paper_ids": [
-        "pr-0674"
-      ],
-      "evidence": "manifest_link",
-      "availability": "project_only",
       "verified_on": "2026-11-20"
     },
     {

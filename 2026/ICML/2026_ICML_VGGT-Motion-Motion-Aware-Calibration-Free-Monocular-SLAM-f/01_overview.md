@@ -1,7 +1,7 @@
 # VGGT-Motion: Motion-Aware Calibration-Free Monocular SLAM for Long-Range Consistency
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-03 (22 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://openreview.net/forum?id=GyRMbsYFiG.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (22 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://icml.cc/virtual/2026/poster/65079.
 > PDF retrieval source: https://openreview.net/pdf/dd631f65ff2ca6199a6897ee3816879152720eef.pdf. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.

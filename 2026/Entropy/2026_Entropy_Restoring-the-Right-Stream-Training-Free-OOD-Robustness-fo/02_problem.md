@@ -30,4 +30,4 @@ OpenVLA-OFT와 LIBERO-Plus 평가를 보고한다.
 
 ## Evidence Anchor
 
-[공식 paper/abstract](https://www.mdpi.com/1099-4300/28/9/975) · [저자 project/code](https://www.mdpi.com/1099-4300/28/9/975). Exact objective, constraints, success definition은 본문 수동 확인 필요.
+[공식 paper/abstract](https://www.mdpi.com/1099-4300/28/9/975) · 저자 프로젝트·코드 주소 미확인. Exact objective, constraints, success definition은 본문 수동 확인 필요.
