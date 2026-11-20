@@ -7,19 +7,19 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / 3DV
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Cameron Omid Smith, David Charatan, Ayush Tewari, Vincent Sitzmann
 - Primary track: Robotics-enabling 3D perception
 - Tier: REFERENCE
 - Tags: geometry, depth, 3D Vision
-- Official paper: https://3dvconf.github.io/2025/accepted-papers/
-- Full-text retrieval: https://openreview.net/attachment?id=QI6HrBseVF&name=pdf
+- Official paper: https://3dvconf.github.io/2025/schedule_updated2.csv
+- Full-text retrieval: https://arxiv.org/pdf/2404.15259.pdf
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (28 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 However, conventional SfM has a major limitation: it is not differentiable with respect to its free variables (camera poses, camera intrinsics, and perpixel depths).를 문제로 두고, In this paper, we present FlowMap, a differentiable and surprisingly simple camera and geometry estimation method whose outputs enable photorealistic novel view synthesis.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+FlowMap은 영상의 광류를 이용해 카메라 자세·내부 파라미터·깊이를 경사하강법으로 추정한다.
 
 ## Problem and Motivation
 
@@ -53,16 +53,10 @@ Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 �
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1 Introduction - extractive body cue:** In this paper, we present FlowMap, a differentiable and surprisingly simple camera and geometry estimation method whose outputs enable photorealistic novel view synthesis.
-- **p. 2 / 1 Introduction - extractive body cue:** We show that this uniquely enables high-quality SfM via gradient descent while making FlowMap compatible with standard deep-learning pipelines.
-- **p. 1 / Body text (section not recovered) - extractive body cue:** We empirically show that camera parameters and dense depth recovered by our method enable photo-realistic novel view synthesis on 360◦trajectories using Gaussian Splatting.
-- **p. 1 / Body text (section not recovered) - extractive body cue:** Our method not only far outperforms prior gradient-descent based bundle adjustment methods, but surprisingly performs on par with COLMAP, the state-of-the-art SfM method, on the ...
-- **p. 11 / 6 Results - extractive body cue:** Quantitatively, FlowMap performs slightly better than COLMAP SfM and significantly outperforms DROID-SLAM and NoPE-NeRF.
-- **p. 13 / 6 Results - extractive body cue:** 7 Ablations and Analysis We perform ablations to answer the following questions: - Question 1: Are FlowMap's reparameterizations of depth, pose, and intrinsics necessary, or ...
-- **p. 14 / Figure/Table caption - extractive body cue:** Fig. 10: Effects of pretraining. While a randomly initialized FlowMap network often provides accurate poses after optimization, pre-training leads to faster convergence and slightly improved ...
-- **p. 13 / 6 Results - extractive body cue:** We find that free-variable variants of FlowMap produce significantly worse reconstruction results and converge much more slowly, confirming that FlowMap's reparameterizations are crucial.
+- 카메라와 장면 기하에 대해 미분 가능한 정합 문제를 구성한다.
+- 추정한 기하를 새 시점 합성에 사용할 수 있는지 확인한다.
 
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+[저자 원문](https://3dvconf.github.io/2025/schedule_updated2.csv)
 
 ## Evaluation Scope
 

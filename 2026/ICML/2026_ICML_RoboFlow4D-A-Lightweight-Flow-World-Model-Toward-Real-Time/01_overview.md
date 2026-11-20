@@ -7,13 +7,13 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2026 / ICML
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Sixu Lin, Junliang Chen, Huaiyuan Xu, Zhuohao Li, Guangming Wang, Yixiong Jing, Sheng Xu, Runyi Zhao, Brian Sheil, Lap-Pui Chau, Guiliang Liu
 - Primary track: VLA and generalist robot policies
 - Tier: REFERENCE
 - Tags: VLA, Vision-Language Model, Robotics, Reinforcement Learning
-- Official paper: https://openreview.net/forum?id=fh6XBnjFlv
-- Full-text retrieval: https://openreview.net/pdf/17509091f9a7574439da683639d4af0b20b10d5e.pdf
-- Code/Project: [공식 code](https://github.com/EDEM-AI/RoboFlow4D) · [저자 project](https://simonlinsx.github.io/RoboFlow4D_Page/)
+- Official paper: https://icml.cc/virtual/2026/poster/62543
+- Full-text retrieval: https://arxiv.org/pdf/2605.17522.pdf
+- Code/Project: https://simonlinsx.github.io/RoboFlow4D_Page/
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (17 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 

@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2024 / RSS
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Soroush Nasiriany, Abhiram Maddukuri, Lance Zhang, Adeet Parikh, Aaron Lo, Abhishek Joshi, Ajay Mandlekar, Yuke Zhu
 - Primary track: VLA and generalist robot policies
 - Tier: REFERENCE
 - Tags: Robotics, Benchmark, simulation, household manipulation, long-horizon tasks, generalist policy

@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2023 / CVPR
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Yihan Hu, Jiazhi Yang, Li Chen, Keyu Li, Chonghao Sima, Xizhou Zhu, Siqi Chai, Senyao Du, Tianwei Lin, Wenhai Wang, Lewei Lu, Xiaosong Jia, Qiang Liu, Jifeng Dai, Yu Qiao, Hongyang Li
 - Primary track: Planning and control
 - Tier: REFERENCE
 - Tags: Planning, sensor fusion, 3D perception

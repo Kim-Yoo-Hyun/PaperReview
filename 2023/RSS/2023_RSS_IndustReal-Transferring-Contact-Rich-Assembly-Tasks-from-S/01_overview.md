@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2023 / RSS
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Bingjie Tang, Michael A Lin, Iretiayo A Akinola, Ankur Handa, Gaurav S Sukhatme, Fabio Ramos, Dieter Fox, Yashraj S Narang
 - Primary track: Manipulation, contact, tactile, and dexterity
 - Tier: NEXT
 - Tags: Robotics, assembly, contact-rich manipulation, Reinforcement Learning, sim-to-real, industrial robotics

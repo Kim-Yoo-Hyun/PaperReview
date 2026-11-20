@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2021 / ICCV
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Jonathan T. Barron, Ben Mildenhall, Matthew Tancik, Peter Hedman, Ricardo Martin-Brualla, Pratul P. Srinivasan
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
 - Tags: NeRF, 3D Vision, representation, geometry

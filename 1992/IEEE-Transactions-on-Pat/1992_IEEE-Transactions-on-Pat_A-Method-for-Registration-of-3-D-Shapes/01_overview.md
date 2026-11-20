@@ -7,11 +7,11 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 1992 / IEEE Transactions on Pattern Analysis and Machine Intelligence
-- Authors: not duplicated here when not verified in the registry source
+- Authors: P.J. Besl, Neil D. McKay
 - Primary track: Robotics-enabling 3D perception
 - Tier: REFERENCE
 - Tags: Robotics, 3D Registration, ICP, state estimation
-- Official paper: https://doi.org/10.1109/34.121791
+- Official paper: https://api.crossref.org/works/10.1109/34.121791
 - Full-text retrieval: https://doi.org/10.1109/34.121791
 - Code/Project: not identified
 - Paper type: method

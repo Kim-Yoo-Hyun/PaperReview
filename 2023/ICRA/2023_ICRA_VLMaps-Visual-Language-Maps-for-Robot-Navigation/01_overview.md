@@ -1,4 +1,4 @@
-# VLMaps: Visual-Language Maps for Robot Navigation
+# Visual Language Maps for Robot Navigation
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
 > Analysis basis: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://arxiv.org/abs/2210.05714.
@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2023 / ICRA
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Chenguang Huang, Oier Mees, Andy Zeng, Wolfram Burgard
 - Primary track: Robotics-enabling 3D perception
 - Tier: NEXT
 - Tags: Vision-Language Navigation, semantic map, Robotics

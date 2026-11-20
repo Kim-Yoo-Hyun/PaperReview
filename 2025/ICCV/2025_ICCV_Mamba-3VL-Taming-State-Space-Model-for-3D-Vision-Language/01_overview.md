@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / ICCV
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Yuan Wang, Yuxin Chen, Zhongang Qi, Lijun Liu, Jile Jiao, Xuetao Feng, Yujia Liang, Ying Shan, Zhipeng Zhang
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
 - Tags: 3D Vision

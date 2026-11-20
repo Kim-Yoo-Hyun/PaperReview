@@ -7,19 +7,19 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2024 / ECCV
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Yiyang Chen, Siyan Dong, Xulong Wang, Lulu Cai, Youyi Zheng, Yanchao Yang
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
 - Tags: NeRF, 3D reconstruction, 3D Vision
 - Official paper: https://www.ecva.net/papers/eccv_2024/papers_ECCV/html/8870_ECCV_2024_paper.php
 - Full-text retrieval: https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/08870.pdf
-- Code/Project: not identified
+- Code/Project: https://github.com/Iris-cyy/SG-NeRF
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (18 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
-Robotics-enabling 3D perception의 navigation 문제를 이해하기 위해 읽는다. 본문은 Outlier images can happen when repetitive patterns or textureless regions are present, resulting in SfM failures.를 문제로 두고, In this paper, we propose a novel framework that jointly optimizes the neural radiance field with a scene graph to alleviate the influence of outliers.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+SG-NeRF는 신경 방사장과 장면 그래프를 함께 최적화해 3D 표면을 복원한다.
 
 ## Problem and Motivation
 
@@ -53,16 +53,10 @@ Robotics-enabling 3D perception의 navigation 문제를 이해하기 위해 읽�
 
 ## Main Claims and Actual Contribution
 
-- **p. 3 / 1 Introduction - extractive body cue:** In this paper, we propose a novel framework that jointly optimizes the neural radiance field with a scene graph to alleviate the influence of outliers.
-- **p. 3 / 1 Introduction - extractive body cue:** The images are casually captured without being carefully selected, which can lead to failures of state-of-the-art SfM systems. - Accordingly, we propose a novel method ...
-- **p. 2 / 1 Introduction - extractive body cue:** Our method works effectively and can produce high-quality 3D reconstructions. produce a sparse scene representation.
-- **p. 5 / 3 Method - extractive body cue:** 3.1 Scene Graph A scene graph G = (V, E) in SfM consists of a set of nodes V and edges E.
-- **p. 5 / 3 Method - extractive body cue:** Lastly, we introduce a coarse-to-fine training strategy to ensure an efficient and stable training process (Sec.
-- **p. 13 / 7.71 3.77† - extractive body cue:** While BARF* achieves the best results in scene 37, it is more likely to impose negative impact on camera poses, thereby has worse performance in ...
-- **p. 11 / 4 Experiments - extractive body cue:** Overall, our method achieves the best reconstruction results.
-- **p. 12 / 4 Experiments - extractive body cue:** In contrast, our method shows robustness to pose errors and outperforms NeuS by 61% in Chamfer distance and by 15% in F-score.
+- 영상들 사이의 기하 일관성을 장면 그래프로 표현한다.
+- 장면 그래프의 정합과 신경 표면 재구성을 공동으로 개선한다.
 
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+[저자 원문](https://www.ecva.net/papers/eccv_2024/papers_ECCV/html/8870_ECCV_2024_paper.php)
 
 ## Evaluation Scope
 

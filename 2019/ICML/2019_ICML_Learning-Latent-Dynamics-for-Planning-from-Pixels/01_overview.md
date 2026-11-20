@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2019 / ICML
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Danijar Hafner, Timothy Lillicrap, Ian Fischer, Ruben Villegas, David Ha, Honglak Lee, James Davidson
 - Primary track: World models, safety, uncertainty, and recovery
 - Tier: NEXT
 - Tags: Robotics, world model, Planning, latent dynamics

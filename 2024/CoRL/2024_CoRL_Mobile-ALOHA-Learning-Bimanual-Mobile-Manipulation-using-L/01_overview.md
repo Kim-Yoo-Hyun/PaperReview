@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2024 / CoRL
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Zipeng Fu, Tony Z. Zhao, Chelsea Finn
 - Primary track: Locomotion, whole-body, mobile manipulation, and humanoids
 - Tier: CORE
 - Tags: Robotics, mobile manipulation, bimanual manipulation, teleoperation
@@ -21,7 +21,7 @@
 
 ## Why This Paper Is Here
 
-Locomotion, whole-body, mobile manipulation, and humanoids의 mobile_manipulation 문제를 이해하기 위해 읽는다. 본문은 (1) We lack accessible, plug-and-play hardware for whole-body teleoperation.를 문제로 두고, On the hardware front, we present Mobile ALOHA, a low-cost and whole-body teleoperation system for collecting bimanual mobile manipulation data.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+Mobile ALOHA는 이동 베이스와 두 팔을 함께 원격조작해 모은 시연으로 이동 조작 정책을 학습한다.
 
 ## Problem and Motivation
 
@@ -55,16 +55,10 @@ Locomotion, whole-body, mobile manipulation, and humanoids의 mobile_manipulatio
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** On the hardware front, we present Mobile ALOHA, a low-cost and whole-body teleoperation system for collecting bimanual mobile manipulation data.
-- **p. 2 / 1. Introduction - extractive body cue:** The main contribution of this paper is a system for learning complex mobile bimanual manipulation tasks.
-- **p. 1 / 1. Introduction - extractive body cue:** Imitation learning from human-provided demonstrations is a promising tool for developing generalist robots, as it allows people to teach arbitrary skills to robots.
-- **p. 4 / 3. Mobile ALOHA Hardware - extractive body cue:** Connecting the operator to the mobile manipulator directly also enables coarse haptic feedback when the robot collides with objects.
-- **p. 1 / Abstract - extractive body cue:** In this work, we develop a system for imitating mobile manipulation tasks that are bimanual and require whole-body control.
-- **p. 8 / 6.1. Co-training Improves Performance - extractive body cue:** Co-training improves the whole-task success rate in 5 out of the 7 tasks, with a boost of 45%, 20%, 80%, 95% and 80% respectively.
-- **p. 7 / Figure/Table caption - extractive body cue:** Table 1: Co-training improves ACT performance. Across 7 challenging mobile manipulation tasks, co-training with static ALOHA dataset consistently improve the success rate (%) of ACT. ...
-- **p. 9 / Figure/Table caption - extractive body cue:** Table 4: Co-train vs. Pre-train. Co-train outperforms pre-train on the Wipe Wine task. For pre-train, we first train ACT on the static ALOHA data and ...
+- 기존 양팔 ALOHA에 이동 베이스와 전신 원격조작 인터페이스를 더한다.
+- 이 시스템의 시연만 사용한 행동복제와 기존 고정형 ALOHA 시연을 함께 사용한 행동복제를 실제 이동 조작에서 비교한다.
 
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+[저자 원문](https://proceedings.mlr.press/v270/fu25b.html)
 
 ## Evaluation Scope
 

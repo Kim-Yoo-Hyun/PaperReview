@@ -7,13 +7,13 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / ICML
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Fengyun Wang, Sicheng Yu, Jiawei Wu, Jinhui Tang, Hanwang Zhang, Qianru Sun
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
 - Tags: Vision-Language Model, 3D Vision
-- Official paper: https://openreview.net/forum?id=IkhJApkJQ3
-- Full-text retrieval: https://chatpaper.com/api/v1/articles/download/168051
-- Code/Project: [공식 code](https://github.com/fereenwong/cdViews)
+- Official paper: https://proceedings.mlr.press/v267/wang25ef.html
+- Full-text retrieval: https://raw.githubusercontent.com/mlresearch/v267/main/assets/wang25ef/wang25ef.pdf
+- Code/Project: https://github.com/fereenwong/cdViews
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (16 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 

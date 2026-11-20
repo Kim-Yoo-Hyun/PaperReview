@@ -7,11 +7,11 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2011 / ISMAR
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Richard A. Newcombe, Andrew Fitzgibbon, Shahram Izadi, Otmar Hilliges, David Molyneaux, David Kim, Andrew J. Davison, Pushmeet Kohi, Jamie Shotton, Steve Hodges
 - Primary track: Robotics-enabling 3D perception
 - Tier: REFERENCE
 - Tags: 3D Vision, SLAM, RGB-D, 3D reconstruction
-- Official paper: https://www.microsoft.com/en-us/research/publication/kinectfusion-real-time-dense-surface-mapping-and-tracking/
+- Official paper: https://www.microsoft.com/en-us/research/publication/kinectfusion-real-time-dense-surface-mapping-tracking/
 - Full-text retrieval: https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/ismar2011.pdf
 - Code/Project: not identified
 - Paper type: method

@@ -7,11 +7,11 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2026 / Science Robotics
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Zhengyi Luo, Ye Yuan, Tingwu Wang, Chenran Li, Fernando Castañeda, Sirui Chen, Zi-Ang Cao, Jiefeng Li, David Minor, Qingwei Ben, Jinhyung Park, David Sami, Zi Wang, Xingye Da, Runyu Ding, Cyrus Hogg, Lina Song, Edy Lim, Eugene Jeong, Tairan He, Haoru Xue, Wenli Xiao, Simon Yuen, Jan Kautz, Yan Chang, Umar Iqbal, Linxi “Jim” Fan, Yuke Zhu
 - Primary track: Locomotion, whole-body, mobile manipulation, and humanoids
 - Tier: REFERENCE
 - Tags: Robotics, humanoid, whole-body control, Motion Tracking, NVIDIA
-- Official paper: https://research.nvidia.com/labs/dair/publication/sonic2026/
+- Official paper: https://api.crossref.org/works/10.1126/scirobotics.aed4592
 - Full-text retrieval: https://research.nvidia.com/labs/dair/publication/sonic2026/
 - Project: https://nvlabs.github.io/GEAR-SONIC/
 - Code: https://github.com/NVlabs/GR00T-WholeBodyControl
@@ -26,7 +26,7 @@
 
 ## Why This Paper Is Here
 
-Locomotion, whole-body, mobile manipulation, and humanoids의 humanoid 문제를 이해하기 위해 읽는다. 본문은 These foundation models have shown a consistent pattern: scale unlocks emergent capabilities, generalization, and robustness that smaller models cannot achieve [7-9].를 문제로 두고, We propose Supersizing mOtion tracking for Natural humanoId Control (SONIC), a framework that enables natural humanoid control across a wide range of applications (Movie S1).를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+SONIC은 다양한 인간형 동작을 추종할 수 있는 전신 제어기를 대규모 모션 학습으로 훈련한다.
 
 ## Problem and Motivation
 
@@ -60,16 +60,10 @@ Locomotion, whole-body, mobile manipulation, and humanoids의 humanoid 문제를
 
 ## Main Claims and Actual Contribution
 
-- **p. 3 / 1. Introduction - extractive body cue:** We propose Supersizing mOtion tracking for Natural humanoId Control (SONIC), a framework that enables natural humanoid control across a wide range of applications (Movie S1).
-- **p. 2 / 1. Introduction - extractive body cue:** In addition, we show how such a motion tracker can be applied to meaningful downstream tasks, and introduce two key contributions.
-- **p. 3 / 1. Introduction - extractive body cue:** Third, we provide a comprehensive evaluation demonstrating humanoid control scaling trends, zero-shot transfer to unseen motions, robust simto-real deployment on physical humanoid robots, and successful ...
-- **p. 2 / 1. Introduction - extractive body cue:** SONIC: Supersizing Motion Tracking for Natural Humanoid Whole-Body Control Figure 1: SONIC enables diverse humanoid tasks through a universal control policy that handles diverse input ...
-- **p. 15 / 3.2. Universal Humanoid Motion Tracking - extractive body cue:** Notably, when the input command is human motion 𝑔ℎ, the encoder-decoder acts as a retargeting pipeline from human to robot motion, and ℒrecon serves as ...
-- **p. 19 / Figure/Table caption - extractive body cue:** Table 3: Ablation studies. SR denotes success rate. Each entry reports a single evaluation per configuration on the full test split (descriptive; no statistical test ...
-- **p. 4 / Figure/Table caption - extractive body cue:** Figure 2: Scaling and benchmarking of SONIC for universal motion tracking. (A to C) Effect of scaling data size, model size, and compute on test-content ...
-- **p. 5 / 2.1. Motion Tracking - extractive body cue:** Scaling yielded consistent improvements on both test-content (out-of-distribution, OOD) and test-repetition: the largest model achieved 99.6% success with 23.8 mm MPJPE-L on test-content, compared to ...
+- 추종 동작의 다양성과 모델 크기를 확장한다.
+- 다양한 동작에 걸친 휴머노이드의 전신 제어를 평가한다.
 
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+[저자 원문](https://api.crossref.org/works/10.1126/scirobotics.aed4592)
 
 ## Evaluation Scope
 

@@ -7,12 +7,12 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2026 / ICLR
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Hao Li, Ziqin Wang, Zi-han Ding, Shuai Yang, Yilun Chen, Yang Tian, Xiaolin Hu, Tai Wang, Dahua Lin, Feng Zhao, Si Liu, Jiangmiao Pang
 - Primary track: Manipulation, contact, tactile, and dexterity
 - Tier: REFERENCE
 - Tags: Vision-Language Model, Robotics, Benchmark
-- Official paper: https://openreview.net/forum?id=PGUC3mmMoi
-- Full-text retrieval: https://chatpaper.com/api/v1/articles/download/248392
+- Official paper: https://proceedings.iclr.cc/paper_files/paper/2026/hash/b81d83165e3145a2e7d33bb5e33ea913-Abstract-Conference.html
+- Full-text retrieval: https://proceedings.iclr.cc/paper_files/paper/2026/file/b81d83165e3145a2e7d33bb5e33ea913-Paper-Conference.pdf
 - Code/Project: not identified
 - Paper type: benchmark_or_dataset
 - Source audit: full-text PDF body checked on 2026-09-03 (68 pages; PyMuPDF text; title-token overlap first two pages=1.0)

@@ -7,11 +7,11 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2002 / AAAI
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Sven Koenig, Maxim Likhachev
 - Primary track: Planning and control
 - Tier: REFERENCE
 - Tags: Robotics, path planning, incremental search, Navigation
-- Official paper: https://idm-lab.org/bib/abstracts/Koen02e.html
+- Official paper: https://cdn.aaai.org/AAAI/2002/AAAI02-072.pdf
 - Full-text retrieval: https://www.cs.cmu.edu/~motionplanning/papers/sbp_papers/integrated3/koenig_dstarlite_aaai02b.pdf
 - Code/Project: not identified
 - Paper type: theory_or_foundation

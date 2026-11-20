@@ -7,11 +7,11 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2018 / ICLR
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Abbas Abdolmaleki, Jost Tobias Springenberg, Yuval Tassa, Remi Munos, Nicolas Heess, Martin Riedmiller
 - Primary track: RL, IL, offline learning, and robot data
 - Tier: NEXT
 - Tags: Robotics, Reinforcement Learning, policy optimization, Off-Policy Learning
-- Official paper: https://openreview.net/forum?id=S1ANxQW0b
+- Official paper: https://arxiv.org/abs/1806.06920
 - Full-text retrieval: https://openreview.net/forum?id=S1ANxQW0b
 - Code/Project: not identified
 - Paper type: theory_or_foundation
@@ -19,7 +19,7 @@
 
 ## Why This Paper Is Here
 
-RL, IL, offline learning, and robot data의 rl 문제를 이해하기 위해 읽는다. 본문은 While also popular, these algorithms can be difficult to tune, especially for high-dimensional domains like general robot manipulation tasks.를 문제로 두고, In this paper we propose a novel off-policy algorithm that benefits from the best properties of both classes.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+MPO는 연속 제어에서 오프폴리시 경험으로 정책을 개선하는 문제를 최대 사후확률 최적화로 다룬다.
 
 ## Problem and Motivation
 
@@ -50,16 +50,10 @@ RL, IL, offline learning, and robot data의 rl 문제를 이해하기 위해 읽
 
 ## Main Claims and Actual Contribution
 
-- **p. 1 / 1 INTRODUCTION - extractive body cue:** In this paper we propose a novel off-policy algorithm that benefits from the best properties of both classes.
-- **p. 1 / ABSTRACT - extractive body cue:** We introduce a new algorithm for reinforcement learning called Maximum aposteriori Policy Optimisation (MPO) based on coordinate ascent on a relativeentropy objective.
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** We show below that several algorithms, including TRPO, can be directly related to this perspective.
-- **p. 9 / 5 EXPERIMENTS - extractive body cue:** This difference is so extreme that in several instances the PPO baseline converges an order of magnitude slower than the off-policy algorithms and we thus ...
-- **p. 9 / 5 EXPERIMENTS - extractive body cue:** For the Humanoid running domain we can observe a similar trend to the experiments from the previous section: MPO quickly finds a stable running policy, ...
-- **p. 8 / 5 EXPERIMENTS - extractive body cue:** Furthermore, we can observe that changing from the non-parametric variational distribution to a parametric distribution3 (which, as described above, can be related to PPO) results ...
-- **p. 7 / 5 EXPERIMENTS - extractive body cue:** While we include plots depicting the performance of our algorithm on all tasks below; comparing it against the state-of-the-art algorithms in terms of data-efficiency.
-- **p. 8 / 5 EXPERIMENTS - extractive body cue:** We plot the median performance over 10 experiments with different random seeds.
+- 정책 개선과 파라미터 갱신을 교대로 수행한다.
+- 확률적 최적화 절차를 연속 제어 과제에서 평가한다.
 
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+[저자 원문](https://arxiv.org/abs/1806.06920)
 
 ## Evaluation Scope
 

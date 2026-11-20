@@ -50,7 +50,7 @@
         "2022/NeurIPS/2022_NeurIPS_Training-language-models-to-follow-instructions-with-human/05_insights.md",
         "2023/ICML/2023_ICML_BLIP-2-Bootstrapping-Language-Image-Pre-training-with-Froz/05_insights.md",
         "2023/ICRA/2023_ICRA_DreamWaQ-Learning-Robust-Quadrupedal-Locomotion-with-Impli/05_insights.md",
-        "2023/ICRA/2023_ICRA_Text2Motion-From-Natural-Language-Instructions-to-Feasible/05_insights.md",
+        "2023/Autonomous-Robots/2023_Autonomous-Robots_Text2Motion-From-Natural-Language-Instructions-to-Feasible/05_insights.md",
         "2023/RSS/2023_RSS_Demonstrating-A-Walk-in-the-Park-Learning-to-Walk-in-20-Mi/05_insights.md",
         "2024/CVPR/2024_CVPR_Marigold-Repurposing-Diffusion-Based-Image-Generators-for/05_insights.md",
         "2025/CVPR/2025_CVPR_VGGT-Visual-Geometry-Grounded-Transformer/05_insights.md",
@@ -446,7 +446,7 @@
         }
       },
       {
-        "path": "2023/ICRA/2023_ICRA_Text2Motion-From-Natural-Language-Instructions-to-Feasible/05_insights.md",
+        "path": "2023/Autonomous-Robots/2023_Autonomous-Robots_Text2Motion-From-Natural-Language-Instructions-to-Feasible/05_insights.md",
         "issues": {
           "source_header": 1
         },
@@ -494,7 +494,7 @@
       "2026/ICRA/2026_ICRA_OmniRetarget-Interaction-Preserving-Data-Generation-for-Hu/05_insights.md",
       "2023/ICRA/2023_ICRA_DreamWaQ-Learning-Robust-Quadrupedal-Locomotion-with-Impli/05_insights.md",
       "2023/RSS/2023_RSS_Demonstrating-A-Walk-in-the-Park-Learning-to-Walk-in-20-Mi/05_insights.md",
-      "2023/ICRA/2023_ICRA_Text2Motion-From-Natural-Language-Instructions-to-Feasible/05_insights.md"
+      "2023/Autonomous-Robots/2023_Autonomous-Robots_Text2Motion-From-Natural-Language-Instructions-to-Feasible/05_insights.md"
     ],
     "modified_file_count": 34,
     "changes": {

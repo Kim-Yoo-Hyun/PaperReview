@@ -3,7 +3,8 @@
 > Evidence maturity: `ABSTRACT_CHECKED`. abstract 기반 — 본문 수동 확인 필요.
 > 자동 작성 노트는 실제 정독을 뜻하지 않는다. 사용자 reading status는 UNREAD로 시작한다.
 
-- Year/Venue: 2025 / CoRL
+- Year/Venue
+- Authors: Nadun Ranawaka Arachchige, Zhenyang Chen, Wonsuhk Jung, Woo Chul Shin, Rohan Bansal, Pierre Barroso, Yu Hang He, Yingyan Celine Lin, Benjamin Joffe, Shreyas Kousik, Danfei Xu
 - Category: Robot Learning and Data
 - Primary track: RL, IL, offline learning, and robot data
 - Tier: NEXT
@@ -12,7 +13,7 @@
 - Official paper: https://proceedings.mlr.press/v305/arachchige25a.html
 - Venue verification: https://proceedings.mlr.press/v305/arachchige25a.html
 - Code/Project: https://nadunranawaka1.github.io/sail-policy
-- Code: project_only
+- Code: https://github.com/nadunRanawaka1/SAIL
 - Source audit: 2026-10-22 공식 abstract/arXiv abstract와 publication metadata 확인. 새 5개 note는 abstract 수준의 분석이며 상세 본문·코드 감사는 기존 buildup dossier의 명시 범위만 따른다.
 
 ## Problem and Importance

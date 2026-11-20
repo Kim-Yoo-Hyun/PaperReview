@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2024 / ICRA
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Xuxin Cheng, Kexin Shi, Ananye Agarwal, Deepak Pathak
 - Primary track: Locomotion, whole-body, mobile manipulation, and humanoids
 - Tier: REFERENCE
 - Tags: Robotics, quadruped locomotion, parkour, Reinforcement Learning

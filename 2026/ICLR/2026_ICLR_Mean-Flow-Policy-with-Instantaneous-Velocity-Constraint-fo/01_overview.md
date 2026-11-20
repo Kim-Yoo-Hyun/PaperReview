@@ -7,11 +7,11 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2026 / ICLR
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Guojian Zhan, Letian Tao, Pengcheng Wang, Yixiao Wang, Yuxin Chen, Yiheng Li, Hongyang Li, Masayoshi Tomizuka, Shengbo Li
 - Primary track: Manipulation, contact, tactile, and dexterity
 - Tier: REFERENCE
 - Tags: Robotics, flow policy, one-step generation, manipulation
-- Official paper: https://openreview.net/forum?id=mIeKe74W43
+- Official paper: https://proceedings.iclr.cc/paper_files/paper/2026/hash/fe7f375ef01e43f17d2c32b28a176577-Abstract-Conference.html
 - Full-text retrieval: https://arxiv.org/pdf/2602.13810
 - Code/Project: not identified
 - Paper type: method

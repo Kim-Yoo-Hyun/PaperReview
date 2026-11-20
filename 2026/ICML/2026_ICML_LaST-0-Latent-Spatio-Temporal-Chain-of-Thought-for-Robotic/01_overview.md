@@ -7,12 +7,12 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2026 / ICML
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Zhuoyang Liu, Jiaming Liu, Hao Chen, Jiale Yu, Ziyu Guo, Chengkai Hou, Chenyang Gu, Xiangju Mi, Renrui Zhang, Kun Wu, Zhengping Che, Jian Tang, Pheng-Ann Heng, Shanghang Zhang
 - Primary track: VLA and generalist robot policies
 - Tier: REFERENCE
 - Tags: VLA, Vision-Language Model, Robotics
-- Official paper: https://openreview.net/forum?id=lwOoBzJykL
-- Full-text retrieval: https://openreview.net/pdf/0e9ec532d1e01f801ca9bc49e258c05cf3a207f5.pdf
+- Official paper: https://icml.cc/virtual/2026/poster/61887
+- Full-text retrieval: https://arxiv.org/pdf/2601.05248.pdf
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (23 pages; PyMuPDF text; title-token overlap first two pages=1.0)

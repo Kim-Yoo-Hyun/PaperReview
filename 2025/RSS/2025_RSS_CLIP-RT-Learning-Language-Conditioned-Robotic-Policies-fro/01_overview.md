@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / RSS
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Gi-Cheon Kang, Junghyun Kim, Kyuhwan Shim, Jun Ki Lee, Byoung-Tak Zhang
 - Primary track: VLA and generalist robot policies
 - Tier: NEXT
 - Tags: VLA, language supervision, motion primitives, contrastive imitation, Open X-Embodiment, real-world manipulation

@@ -7,11 +7,11 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2012 / IROS
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Emanuel Todorov, Tom Erez, Yuval Tassa
 - Primary track: Planning and control
 - Tier: CORE
 - Tags: Robotics, simulation, Physics Engine, Control
-- Official paper: https://doi.org/10.1109/IROS.2012.6386109
+- Official paper: https://api.crossref.org/works/10.1109/IROS.2012.6386109
 - Full-text retrieval: https://doi.org/10.1109/IROS.2012.6386109
 - Code/Project: https://mujoco.org/
 - Paper type: benchmark_or_dataset
@@ -19,7 +19,7 @@
 
 ## Why This Paper Is Here
 
-Planning and control의 simulation 문제를 이해하기 위해 읽는다. 본문은 However they lack the speed, accuracy and overall feature sets needed to automate the controller design process itself.를 문제로 두고, This is useful for approximating derivatives via finite differencing, which in turn enables numerical optimization. • Inverse dynamics can always be computed, even in the presence of contacts and equality constraints.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+MuJoCo는 접촉이 있는 다관절 동역학을 모델 기반 제어에 필요한 속도로 계산하는 물리 엔진이다.
 
 ## Problem and Motivation
 
@@ -53,16 +53,10 @@ Planning and control의 simulation 문제를 이해하기 위해 읽는다. 본�
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / I. INTRODUCTION - extractive body cue:** This is useful for approximating derivatives via finite differencing, which in turn enables numerical optimization. • Inverse dynamics can always be computed, even in the ...
-- **p. 2 / II. ALGORITHMIC FOUNDATIONS - extractive body cue:** The procedure for solving the above equations of motion consists of the following steps:
-- **p. 6 / III. MODELING - extractive body cue:** A MuJoCo model consists of one or several kinematic trees, which can have f1oating bases including isolated objects.
-- **p. 1 / I. INTRODUCTION - extractive body cue:** Existing physics engines can be used to test controllers that are already designed.
-- **p. 1 / I. INTRODUCTION - extractive body cue:** As Sims [7] pointed out, if the physics engine allows cheating the optimization algorithm will find a way to exploit it - and produce a ...
-- **p. 2 / I. INTRODUCTION - extractive body cue:** Although this approach is a significant improvement over earlier spring-damper models of contact, it still requires manual tuning and small time steps.
-- **p. 4 / 5) Integrate numerically to obtain the next state - extractive body cue:** Each iteration involves factorization of a -by-matrix; this could potentially be improved using Hessian-free methods.
-- **p. 5 / 5) Integrate numerically to obtain the next state - extractive body cue:** Of course violations should be difficult to achieve, i.e. the inferred control force should be large in the corresponding subspace.
+- 일반화 좌표와 재귀 계산으로 다관절 계를 표현하고 속도 단계에서 접촉 반응을 계산한다.
+- 순·역동역학을 제공하고 여러 상태·제어의 계산을 병렬화해 샘플링과 유한차분 기반 최적화를 지원한다.
 
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+[저자 원문](https://homes.cs.washington.edu/~todorov/papers/TodorovIROS12.pdf)
 
 ## Evaluation Scope
 

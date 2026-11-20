@@ -7,11 +7,11 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2005 / IJHR
-- Authors: not duplicated here when not verified in the registry source
+- Authors: LUIS SENTIS, OUSSAMA KHATIB
 - Primary track: Locomotion, whole-body, mobile manipulation, and humanoids
 - Tier: REFERENCE
 - Tags: Robotics, humanoid, whole-body control, task hierarchy, operational space
-- Official paper: https://ai.stanford.edu/~lsentis/files/publications.html
+- Official paper: https://api.crossref.org/works/10.1142/S0219843605000594
 - Full-text retrieval: https://ai.stanford.edu/manips/publications/pdfs/Sentis_2005_IJHR.pdf
 - Code/Project: https://ai.stanford.edu/~lsentis/files/publications.html
 - Paper type: theory_or_foundation

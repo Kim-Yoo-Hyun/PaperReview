@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2020 / NeurIPS
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Aviral Kumar, Aurick Zhou, George Tucker, Sergey Levine
 - Primary track: RL, IL, offline learning, and robot data
 - Tier: CORE
 - Tags: Robotics, offline reinforcement learning, conservative learning, Q-learning
@@ -21,7 +21,7 @@
 
 ## Why This Paper Is Here
 
-RL, IL, offline learning, and robot data의 offline_rl 문제를 이해하기 위해 읽는다. 본문은 However, applying RL to real-world problems consistently poses practical challenges: in contrast to the kinds of data-driven methods that have been successful in supervised learning [24, 11], RL is classically regarded as ...를 문제로 두고, We propose a novel method for learning such conservative Qfunctions via a simple modification to standard value-based RL algorithms.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+CQL은 고정된 오프라인 자료로 정책을 학습할 때 자료 밖 행동의 가치가 과대평가되는 문제를 다룬다.
 
 ## Problem and Motivation
 
@@ -55,16 +55,10 @@ RL, IL, offline learning, and robot data의 offline_rl 문제를 이해하기 �
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1 Introduction - extractive body cue:** We propose a novel method for learning such conservative Qfunctions via a simple modification to standard value-based RL algorithms.
-- **p. 2 / 1 Introduction - extractive body cue:** The key idea behind our method is to minimize values under an appropriately chosen distribution over state-action tuples, and then further tighten this bound by ...
-- **p. 5 / 2 Preliminaries - extractive body cue:** 3.3 Safe Policy Improvement Guarantees In Section 3.1 we proposed novel objectives for Q-function training such that the expected value of a policy under the ...
-- **p. 1 / Abstract - extractive body cue:** In this paper, we propose conservative Q-learning (CQL), which aims to address these limitations by learning a conservative Q-function such that the expected value of ...
-- **p. 4 / 2 Preliminaries - extractive body cue:** Due to space constraints, we present these results in Theorem D.1 and Theorem D.2 in Appendix D.1.
-- **p. 8 / Figure/Table caption - extractive body cue:** Table 2: Normalized scores of all methods on AntMaze, Adroit, and kitchen domains from D4RL, averaged across 4 seeds. On the harder mazes, CQL is ...
-- **p. 31 / Figure/Table caption - extractive body cue:** Table 6: Average return obtained by CQL(H) and CQL(H) without the dataset average Q-value maximization term. The latter formulation corresponds to Equation 1, which is ...
-- **p. 8 / Figure/Table caption - extractive body cue:** Table 1: Performance of CQL(H) and prior methods on gym domains from D4RL, on the normalized return metric, averaged over 4 seeds. Note that CQL ...
+- 벨만 오차에 Q값 정규화 항을 추가해 학습 정책의 기대 가치를 보수적으로 추정한다.
+- 가치 하한이 성립하는 조건을 분석하고 이산 및 연속 제어의 오프라인 자료로 정책을 비교한다.
 
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+[저자 원문](https://proceedings.neurips.cc/paper/2020/hash/0d2b2061826a5df3221116a5085a6052-Abstract.html)
 
 ## Evaluation Scope
 

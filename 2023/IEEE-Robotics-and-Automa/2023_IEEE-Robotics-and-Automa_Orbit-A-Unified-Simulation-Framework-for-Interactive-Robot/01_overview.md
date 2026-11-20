@@ -7,11 +7,11 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2023 / IEEE Robotics and Automation Letters
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Mayank Mittal, Calvin Yu, Qinxi Yu, Jingzhou Liu, Nikita Rudin, David Hoeller, Jia Lin Yuan, Ritvik Singh, Yunrong Guo, Hammad Mazhar, Ajay Mandlekar, Buck Babich, Gavriel State, Marco Hutter, Animesh Garg
 - Primary track: RL, IL, offline learning, and robot data
 - Tier: REFERENCE
 - Tags: Robotics, simulation, Robot Learning, Benchmark, NVIDIA
-- Official paper: https://doi.org/10.1109/LRA.2023.3270034
+- Official paper: https://api.crossref.org/works/10.1109/LRA.2023.3270034
 - Full-text retrieval: https://doi.org/10.1109/LRA.2023.3270034
 - Code/Project: https://isaac-orbit.github.io/
 - Paper type: benchmark_or_dataset

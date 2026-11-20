@@ -7,11 +7,11 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2026 / ICRA
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Haonan Chen, Jingxiang Guo, Bangjun Wang, Tianrui Zhang, Xuchuan Huang, Boren Zheng, Yiwen Hou, Chenrui Tie, Jiajun Deng, Lin Shao
 - Primary track: VLA and generalist robot policies
 - Tier: REFERENCE
 - Tags: VLA, Vision-Language Model, Robotics, Reinforcement Learning
-- Official paper: https://ras.papercept.net/conferences/conferences/ICRA26/program/ICRA26_ContentListWeb_4.html
+- Official paper: https://api.crossref.org/works/10.1109/icra57385.2026.11696379
 - Full-text retrieval: https://arxiv.org/pdf/2506.23919
 - Code/Project: not identified
 - Paper type: method
@@ -19,7 +19,7 @@
 
 ## Why This Paper Is Here
 
-VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다. 본문은 This generalization gap is the primary barrier hindering the practical deployment of autonomous robots in unstructured environments.를 문제로 두고, To summarize, our key contributions are: • We introduce Goal-VLA, a decoupled hierarchical framework that leverages an Image-Generative VLM as a world model to generate goal object states, serving as the bridge ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+Goal-VLA는 영상 생성 시각언어 모델이 제시한 물체 중심 목표를 로봇 행동 생성에 사용한다.
 
 ## Problem and Motivation
 
@@ -53,16 +53,10 @@ VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / I. INTRODUCTION - extractive body cue:** To summarize, our key contributions are: • We introduce Goal-VLA, a decoupled hierarchical framework that leverages an Image-Generative VLM as a world model to generate ...
-- **p. 2 / I. INTRODUCTION - extractive body cue:** To this end, we propose a decoupled architecture that leverages the VLM as an objectcentric world model.
-- **p. 3 / III. METHOD - extractive body cue:** The overall workflow of our framework is illustrated conceptually in Figure 2 and detailed procedurally in Algorithm 1.
-- **p. 4 / III. METHOD - extractive body cue:** This overlay is crucial as it provides an in-context visualization of the goal, which mitigates the semantic gap and enables a more robust evaluation. • ...
-- **p. 1 / I. INTRODUCTION - extractive body cue:** These models are either developed by finetuning existing Vision-Language Models (VLMs) [7]-[9]
-- **p. 6 / IV. EXPERIMENT - extractive body cue:** Our method, Goal-VLA, achieves a remarkable average success rate of 59.9%, significantly outperforming all baselines across a diverse set of eight manipulation tasks.
-- **p. 7 / IV. EXPERIMENT - extractive body cue:** As shown in Table III, our method achieves a 60% average success rate, significantly outperforming baselines like MOKA (22.5%) and MolmoAct (27.5%).
-- **p. 7 / IV. EXPERIMENT - extractive body cue:** Starting from a 40.0% success rate for the baseline model, adding Input Enhancement provides the most significant single improvement (+27.5pp), while the Reflector alone yields ...
+- 물체의 목표 상태 예측과 행동 생성을 분리한다.
+- 새 조작 과제에서 목표 영상 조건을 사용하는 정책을 평가한다.
 
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+[저자 원문](https://arxiv.org/abs/2506.23919)
 
 ## Evaluation Scope
 

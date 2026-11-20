@@ -2,13 +2,14 @@
 
 > Evidence maturity: `FULL_TEXT_CHECKED` — 지정 절만 확인한 기록이며 전체 정독·실험 재현을 뜻하지 않는다.
 
-- Year/Venue: 2026 / CoRL (official accepted list; final text not verified)
+- Year/Venue
+- Authors: Perry Dong, Kuo-Han Hung, Tian Gao, Dorsa Sadigh, Chelsea Finn
 - Category: VLA and Generalist Robot Policies
 - Primary track: VLA and generalist robot policies
 - Tier: NEXT
 - Tags: VLA, reinforcement-learning, action-chunking, residual-policy
 - Aliases: EXPO-FT
-- Official paper: https://openreview.net/forum?id=U3Nmrhun8B
+- Official paper: https://arxiv.org/abs/2605.25477
 - Venue verification: https://www.corl.org/program/accepted-papers
 - Code/Project: https://pd-perry.github.io/expo-ft/
 - Code: https://github.com/pd-perry/expo-ft

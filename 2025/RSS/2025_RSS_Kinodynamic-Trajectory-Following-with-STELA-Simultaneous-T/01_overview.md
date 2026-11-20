@@ -7,13 +7,13 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / RSS
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Edgar Granados, Sumanth Tangirala, Kostas Bekris
 - Primary track: Planning and control
 - Tier: NEXT
 - Tags: Robotics, trajectory following, state estimation, motion planning, online adaptation, mobile robot
 - Official paper: https://www.roboticsproceedings.org/rss21/p008.html
 - Full-text retrieval: https://www.roboticsproceedings.org/rss21/p008.pdf
-- Code/Project: https://go.rutgers.edu/46618xjt
+- Code/Project: not identified
 - Paper type: theory_or_foundation
 - Source audit: full-text PDF body checked on 2026-09-03 (15 pages; tesseract OCR fallback; title-token overlap first two pages=1.0)
 

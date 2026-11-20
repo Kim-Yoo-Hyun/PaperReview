@@ -7,12 +7,12 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2026 / ICML
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Hansen Jin Lillemark, Benhao Huang, Fangneng Zhan, Yilun Du, Thomas Anderson Keller
 - Primary track: World models, safety, uncertainty, and recovery
 - Tier: REFERENCE
 - Tags: equivariant, 3D Vision
-- Official paper: https://openreview.net/forum?id=jgqFnXEDGG
-- Full-text retrieval: https://openreview.net/pdf/25b19208166528c9c48b16cdd741d730218a8089.pdf
+- Official paper: https://icml.cc/virtual/2026/poster/62119
+- Full-text retrieval: https://arxiv.org/pdf/2601.01075.pdf
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (35 pages; PyMuPDF text; title-token overlap first two pages=1.0)

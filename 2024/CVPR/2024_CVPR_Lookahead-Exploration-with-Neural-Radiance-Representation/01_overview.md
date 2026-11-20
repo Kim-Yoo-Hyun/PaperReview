@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2024 / CVPR
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Zihan Wang, Xiangyang Li, Jiahao Yang, Yeqi Liu, Junjie Hu, Ming Jiang, Shuqiang Jiang
 - Primary track: Planning and control
 - Tier: NEXT
 - Tags: Vision-Language Navigation, NeRF, Planning

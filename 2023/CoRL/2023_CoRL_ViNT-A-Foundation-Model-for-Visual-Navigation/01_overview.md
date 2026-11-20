@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2023 / CoRL
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Dhruv Shah, Ajay Sridhar, Nitish Dashora, Kyle Stachowicz, Kevin Black, Noriaki Hirose, Sergey Levine
 - Primary track: Locomotion, whole-body, mobile manipulation, and humanoids
 - Tier: CORE
 - Tags: Robotics, Navigation, visual navigation, foundation model, goal-conditioned policy, cross-platform
@@ -19,7 +19,7 @@
 
 ## Why This Paper Is Here
 
-Locomotion, whole-body, mobile manipulation, and humanoids의 navigation 문제를 이해하기 위해 읽는다. 본문은 Although this paradigm has been successful in many domains, it is difficult to apply in robotics due to the sheer diversity of environments, platforms, and applications.를 문제로 두고, We propose a novel exploration algorithm for the visual navigation paradigm using a diffusion model to propose short-horizon goals, and demonstrate that it enables ViNT to navigate in novel environments.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+ViNT는 여러 이동 로봇의 주행 자료에서 목표에 도달하는 정책을 사전학습해 새 플랫폼과 환경의 시각 내비게이션에 활용한다.
 
 ## Problem and Motivation
 
@@ -53,16 +53,10 @@ Locomotion, whole-body, mobile manipulation, and humanoids의 navigation 문제�
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1 Introduction - extractive body cue:** We propose a novel exploration algorithm for the visual navigation paradigm using a diffusion model to propose short-horizon goals, and demonstrate that it enables ViNT ...
-- **p. 2 / 1 Introduction - extractive body cue:** To this end, we propose the Visual Navigation Transformer, or ViNT: a cross-embodiment foundation model for visual navigation with strong zero-shot generalization.
-- **p. 20 / B.3 Long-Horizon Physical Search via Topological Graphs - extractive body cue:** Each ResNet consists of 2 residual blocks.
-- **p. 19 / B.3 Long-Horizon Physical Search via Topological Graphs - extractive body cue:** For our experiments, we considered three heuristics to demonstrate the flexibility of our approach: • Coverage exploration: We have no long-horizon guidance for coverage exploration, ...
-- **p. 6 / Figure/Table caption - extractive body cue:** Figure 4: Adapting ViNT to different goals using a new tunable goal token. Full model fine-tuning: While ViNT demonstrates strong zero-shot generalization to new environments ...
-- **p. 9 / Figure/Table caption - extractive body cue:** Table 3: Left: ViNT can be fine-tuned end-to-end (Images) or adapted to downstream tasks (Positions and Routing), and outperforms training from scratch and other pre-training ...
-- **p. 8 / Figure/Table caption - extractive body cue:** Figure 7: Satellite-guided physical search with ViNT. We visualize a 765m rollout of ViNT with a satellite image-based heuristic from start (orange) to goal (green). ...
-- **p. 6 / Figure/Table caption - extractive body cue:** Figure 5: ViNT accomplishes long-horizon navigation with a variety of objectives in indoor and outdoor environments; example trajectories between start (orange) and goal (green) visualized ...
+- 서로 다른 주행 자료에 공통 목표 도달 목적함수와 트랜스포머를 적용하고 기체 간 전이를 평가한다.
+- 시각 목표 정책에 단기 목표 제안이나 장거리 탐색 보조를 결합해 새로운 환경에서 주행한다.
 
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+[저자 원문](https://proceedings.mlr.press/v229/shah23a.html)
 
 ## Evaluation Scope
 

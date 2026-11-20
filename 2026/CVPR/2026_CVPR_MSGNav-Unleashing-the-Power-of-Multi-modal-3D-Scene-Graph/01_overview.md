@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2026 / CVPR
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Xun Huang, Shijia Zhao, Yunxiang Wang, Xin Lu, Wanfa Zhang, Rongsheng Qu, Weixin Li, Yunhong Wang, Chenglu Wen
 - Primary track: Robotics-enabling 3D perception
 - Tier: REFERENCE
 - Tags: 3D Scene Graph, Navigation, zero-shot

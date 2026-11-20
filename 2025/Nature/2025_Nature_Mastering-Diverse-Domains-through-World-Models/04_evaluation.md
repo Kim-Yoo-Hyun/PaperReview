@@ -1,4 +1,4 @@
-# Evaluation - Mastering Diverse Domains through World Models
+# Evaluation - Mastering diverse control tasks through world models
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.

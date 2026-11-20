@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2017 / CVPR
-- Authors: not duplicated here when not verified in the registry source
+- Authors: R. Qi Charles, Hao Su, Mo Kaichun, Leonidas J. Guibas
 - Primary track: Robotics-enabling 3D perception
 - Tier: NEXT
 - Tags: 3D geometry, point cloud, representation
@@ -19,7 +19,7 @@
 
 ## Why This Paper Is Here
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 The problem of processing unordered sets by neural nets is a very general and fundamental problem - we expect that our ideas can be transferred to other domains as well.를 문제로 두고, The key contributions of our work are as follows: • We design a novel deep net architecture suitable for consuming unordered point sets in 3D; • We show how such a net ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+PointNet은 순서가 없는 3차원 점 집합을 직접 처리해 물체를 분류하거나 점별 분할 결과를 출력한다.
 
 ## Problem and Motivation
 
@@ -52,16 +52,10 @@ Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 �
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** The key contributions of our work are as follows: • We design a novel deep net architecture suitable for consuming unordered point sets in 3D; ...
-- **p. 1 / 1. Introduction - extractive body cue:** We propose a novel deep net architecture that consumes raw point cloud (set of points) without voxelization or rendering.
-- **p. 1 / 1. Introduction - extractive body cue:** The PointNet, however, * indicates.
-- **p. 2 / 1. Introduction - extractive body cue:** We show that our network can approximate any set function that is continuous.
-- **p. 4 / 4.2. PointNet Architecture - extractive body cue:** Our input form of point clouds allows us to achieve this goal in a much simpler way compared with [9].
-- **p. 7 / 5.1. Applications - extractive body cue:** Results are shown in Table 3, where our PointNet method significantly outperforms the baseline method.
-- **p. 5 / 5.1. Applications - extractive body cue:** Even though we are working on a brand new data representation (point sets), we are able to achieve comparable or even better performance on benchmarks ...
-- **p. 6 / 5.1. Applications - extractive body cue:** Our model achieved state-of-the-art performance among methods based on 3D input (volumetric and point cloud).
+- 점별 공유 변환과 대칭 집계 함수로 입력 순서에 불변인 표현을 만든다.
+- 물체 분류와 부분·장면 분할 과제에서 점 집합 표현을 평가한다.
 
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+[저자 원문](https://arxiv.org/abs/1612.00593)
 
 ## Evaluation Scope
 

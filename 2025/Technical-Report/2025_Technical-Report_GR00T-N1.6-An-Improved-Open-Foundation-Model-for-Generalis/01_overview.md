@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / Technical Report
-- Authors: not duplicated here when not verified in the registry source
+- Authors: GEAR Team, Allison Azzolini, Johan Bjorck, Valts Blukis, Fernando Castañeda, Rahul Chand, Yan Chang, Danyi Chen, Nikita Cherniadev, Xingye Da, Runyu Ding, Shunjia Ding, Hassan Eslami, Linxi "Jim" Fan, Yu Fang, Max Fu, Shenyuan Gao, Yunhao Ge, Fengyuan Hu, Spencer Huang, Joel Jang, Xiaowei Jiang, Yunfan Jiang, Ryan Julian, Kaushil Kundalia, Jan Kautz, Zhiqi Li, Kevin Lin, Wei Liu, Runyu Lu, Zhengyi Luo, Loic Magne, Yunze Man, Ajay Mandlekar, Abhishek Mishra, Avnish Narayan, Connor Pederson, Nadun Ranawaka, Scott Reed, Sunil Srinivasa, You Liang Tan, Guanzhi Wang, Jing Wang, Qi Wang, Shihao Wang, Jimmy Wu, Yubo Wu, Yuqi Xie, Tianyi Xiong, Mengda Xu, Yinzhen Xu, Fu-En Yang, Seonghyeon Ye, Zhiding Yu, K.R. Zentner, Zhe Zhang, Kaiyuan Zheng, Ruijie Zheng, Yuke Zhu
 - Primary track: VLA and generalist robot policies
 - Tier: NEXT
 - Tags: VLA, humanoid, foundation model, whole-body control, long-horizon, robot data

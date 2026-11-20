@@ -7,12 +7,12 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / 3DV
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Bardienus Pieter Duisterhof, Lojze Zust, Philippe Weinzaepfel, Vincent Leroy, Yohann Cabon, Jerome Revaud
 - Primary track: Robotics-enabling 3D perception
 - Tier: REFERENCE
 - Tags: geometry, 3D Vision
-- Official paper: https://3dvconf.github.io/2025/accepted-papers/
-- Full-text retrieval: https://openreview.net/attachment?id=5uw1GRBFoT&name=pdf
+- Official paper: https://3dvconf.github.io/2025/schedule_updated2.csv
+- Full-text retrieval: https://arxiv.org/pdf/2409.19152.pdf
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (18 pages; PyMuPDF text; title-token overlap first two pages=1.0)

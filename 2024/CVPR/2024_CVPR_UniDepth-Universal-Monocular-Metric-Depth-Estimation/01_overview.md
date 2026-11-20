@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2024 / CVPR
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Luigi Piccinelli, Yung-Hsu Yang, Christos Sakaridis, Mattia Segu, Siyuan Li, Luc Van Gool, Fisher Yu
 - Primary track: Robotics-enabling 3D perception
 - Tier: REFERENCE
 - Tags: depth, 3D Vision
@@ -19,7 +19,7 @@
 
 ## Why This Paper Is Here
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 However, relying only on this single additional module clearly results in challenges related to training stability and scale ambiguity.를 문제로 두고, We introduce UniDepth, a novel approach that directly predicts 3D points in a scene with only one image as input.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+UniDepth는 단일 영상으로 장면의 미터 단위 깊이와 3D 점을 예측한다.
 
 ## Problem and Motivation
 
@@ -51,16 +51,10 @@ Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 �
 
 ## Main Claims and Actual Contribution
 
-- **p. 1 / 1. Introduction - extractive body cue:** We introduce UniDepth, a novel approach that directly predicts 3D points in a scene with only one image as input.
-- **p. 2 / 1. Introduction - extractive body cue:** Additionally, we introduce a geometric invariance loss to enhance the robustness of depth estimation.
-- **p. 2 / 1. Introduction - extractive body cue:** We propose an effective pseudo-spherical representation of the output space to disentangle the camera and depth dimensions of this space.
-- **p. 4 / 3.3. Geometric Invariance Loss - extractive body cue:** To this end, we propose a geometric invariance loss to enforce the consistency of camera-prompted depth features of the same scene from different acquisition sensors.
-- **p. 1 / 1. Introduction - extractive body cue:** Our approach, named UniDepth, is the first that attempts to solve this challenging task without restrictions on scene composition and setup and distinguishes itself through ...
-- **p. 6 / 4.2. Comparison with the State of the Art - extractive body cue:** Importantly, the KITTI Depth Prediction Benchmark, which provides a perfectly fair evaluation, underscores the excellent zero-shot performance of our method and its robustness compared to ...
-- **p. 6 / 4.2. Comparison with the State of the Art - extractive body cue:** Experiments show that not only is the performance preserved for most of the test sets, but UniDepth with the bootstrapped camera can also outperform models ...
-- **p. 8 / 4.3. Ablation Study - extractive body cue:** This approach hurts generalization, as evidenced by ARelC in the out-of-domain evaluation, despite the slight improvement in in-domain ARelC.
+- 카메라 기하와 깊이를 구분해 학습할 수 있는 출력을 사용한다.
+- 여러 카메라와 장면에 대한 단안 깊이 추정을 평가한다.
 
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+[저자 원문](https://openaccess.thecvf.com/content/CVPR2024/html/Piccinelli_UniDepth_Universal_Monocular_Metric_Depth_Estimation_CVPR_2024_paper.html)
 
 ## Evaluation Scope
 

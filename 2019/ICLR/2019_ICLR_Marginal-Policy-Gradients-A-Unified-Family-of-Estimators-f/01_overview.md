@@ -3,14 +3,15 @@
 > Evidence maturity: `ABSTRACT_CHECKED`. abstract 기반 — 본문 수동 확인 필요.
 > 자동 작성 노트는 실제 정독을 뜻하지 않는다. 사용자 reading status는 UNREAD로 시작한다.
 
-- Year/Venue: 2019 / ICLR
+- Year/Venue
+- Authors: Carson Eisenach, Haichuan Yang, Ji Liu, Han Liu
 - Category: Robotics Foundations: Robot Learning
 - Primary track: RL, IL, offline learning, and robot data
 - Tier: REFERENCE
 - Tags: RL, evaluation, learning-foundation
 - Aliases: MPG
-- Official paper: https://openreview.net/forum?id=HkgqFiAcFm
-- Venue verification: https://iclr.cc/Downloads/2019
+- Official paper: https://arxiv.org/abs/1806.05134
+- Venue verification: https://openreview.net/pdf?id=HkgqFiAcFm
 - Code/Project: not identified
 - Code: not_identified
 - Source audit: 2026-10-22 공식 abstract/arXiv abstract와 publication metadata 확인. 새 5개 note는 abstract 수준의 분석이며 상세 본문·코드 감사는 기존 buildup dossier의 명시 범위만 따른다. OpenReview live challenge; ICLR 공식 Downloads/2019와 공식 indexed accepted manuscript를 확인했다. Content는 arXiv abstract 기준.

@@ -7,12 +7,12 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2026 / ICML
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Zhixuan Liang, Yizhuo Li, Tianshuo Yang, Chengyue Wu, Sitong Mao, Liuao Pei, Tian Nian, Shunbo Zhou, Xiaokang Yang, Jiangmiao Pang, Yao Mu, Ping Luo
 - Primary track: VLA and generalist robot policies
 - Tier: REFERENCE
 - Tags: VLA, Vision-Language Model, Robotics, Diffusion
-- Official paper: https://openreview.net/forum?id=c3BVcHcSiR
-- Full-text retrieval: https://openreview.net/pdf/7c6c1101cef920f79b251ef422b6399d7e8f4ae1.pdf
+- Official paper: https://icml.cc/virtual/2026/poster/62902
+- Full-text retrieval: https://arxiv.org/pdf/2508.20072.pdf
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (17 pages; PyMuPDF text; title-token overlap first two pages=1.0)

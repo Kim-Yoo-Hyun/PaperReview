@@ -3,7 +3,8 @@
 > Evidence maturity: `ABSTRACT_CHECKED`. abstract 기반 — 본문 수동 확인 필요.
 > 자동 작성 노트는 실제 정독을 뜻하지 않는다. 사용자 reading status는 UNREAD로 시작한다.
 
-- Year/Venue: 2025 / NeurIPS
+- Year/Venue
+- Authors: Edward Hu, Jie Wang, Xingfang Yuan, Fiona Luo, Muyao Li, Gaspard Lambrechts, Oleh Rybkin, Dinesh Jayaraman
 - Category: Robot Learning and Data
 - Primary track: RL, IL, offline learning, and robot data
 - Tier: NEXT
@@ -12,7 +13,7 @@
 - Official paper: https://papers.neurips.cc/paper_files/paper/2025/hash/aa1b1a959c80086cba61d0fd66de412f-Abstract-Conference.html
 - Venue verification: https://papers.neurips.cc/paper_files/paper/2025/hash/aa1b1a959c80086cba61d0fd66de412f-Abstract-Conference.html
 - Code/Project: https://penn-pal-lab.github.io/aawr/
-- Code: project_only
+- Code: https://github.com/penn-pal-lab/aawr
 - Source audit: 2026-11-18: 공식 초록·bibliographic record와 연결된 저자 자료 확인. Abstract 기반 등록이며 본문 전체·실험 재현은 미확인.
 
 ## Problem and Importance

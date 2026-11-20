@@ -7,11 +7,11 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2019 / CoRL
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Zhaoming Xie, Patrick Clary, Jeremy Dao, Pedro Morais, Jonanthan Hurst, Michiel Panne
 - Primary track: Locomotion, whole-body, mobile manipulation, and humanoids
 - Tier: REFERENCE
 - Tags: Robotics, bipedal locomotion, Reinforcement Learning, sim-to-real, Cassie
-- Official paper: https://www.cs.ubc.ca/~van/papers/2019-CORL-cassie/index.html
+- Official paper: https://proceedings.mlr.press/v100/xie20a.html
 - Full-text retrieval: https://arxiv.org/pdf/1903.09537
 - Code/Project: https://www.cs.ubc.ca/~van/papers/2019-CORL-cassie/index.html
 - Paper type: theory_or_foundation

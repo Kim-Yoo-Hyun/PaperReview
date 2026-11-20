@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2024 / CoRL
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Moo Jin Kim, Karl Pertsch, Siddharth Karamcheti, Ted Xiao, Ashwin Balakrishna, Suraj Nair, Rafael Rafailov, Ethan P Foster, Pannag R Sanketi, Quan Vuong, Thomas Kollar, Benjamin Burchfiel, Russ Tedrake, Dorsa Sadigh, Sergey Levine, Percy Liang, Chelsea Finn
 - Primary track: VLA and generalist robot policies
 - Tier: CORE
 - Tags: VLA, Robotics, Imitation Learning
@@ -19,7 +19,7 @@
 
 ## Why This Paper Is Here
 
-VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다. 본문은 While reproducing this scale of pretraining for robotics is still an open challenge - even the largest robot manipulation datasets [1, 11] only have 100K to 1M examples - this imbalance suggests ...를 문제로 두고, To this end, we introduce OpenVLA, a 7B-parameter open-source VLA that establishes a new state of the art for generalist robot manipulation policies.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+OpenVLA는 서로 다른 로봇의 시연을 이용해 영상·언어 입력에서 행동을 예측하는 공개 조작 정책이다.
 
 ## Problem and Motivation
 
@@ -50,16 +50,10 @@ VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1 Introduction - extractive body cue:** To this end, we introduce OpenVLA, a 7B-parameter open-source VLA that establishes a new state of the art for generalist robot manipulation policies.
-- **p. 2 / 1 Introduction - extractive body cue:** OpenVLA consists of a pretrained visuallyconditioned language model backbone that captures visual features at multiple granularities, fine-tuned on a large, diverse dataset of 970k robot ...
-- **p. 3 / 1 Introduction - extractive body cue:** As a final contribution, we open-source all models, deployment and fine-tuning notebooks, and the OpenVLA codebase for training VLAs at scale, with the hope that ...
-- **p. 1 / Body text (section boundary not confidently recovered) - extractive body cue:** Addressing these challenges, we introduce OpenVLA, a 7B-parameter open-source VLA trained on a diverse collection of 970k real-world robot demonstrations.
-- **p. 1 / Body text (section boundary not confidently recovered) - extractive body cue:** OpenVLA: [ x, , Grip] = … Δ Δθ Δ Multi-Robot Control & Efficient Fine-Tuning Large-Scale Robot Training Data Fully Data Weights Code Open-Source Figure ...
-- **p. 6 / Figure/Table caption - extractive body cue:** Figure 3: Bridge V2 WidowX evaluation task categories and results. We evaluate OpenVLA and prior state-of- the-art generalist robot policies on a comprehensive suite of ...
-- **p. 25 / Figure/Table caption - extractive body cue:** Table 6: Detailed Google robot evaluation results. We report full evaluation results for Google robot evaluations discussed in Section 4.1. Each generalist policy is evaluated ...
-- **p. 7 / 4 Experiments - extractive body cue:** Notably, prior works achieve strong performance only in either precise or diverse tasks, resulting in widely varying success rates.
+- DINOv2와 SigLIP의 시각 특징을 Llama 2 언어 모델에 연결하고 로봇 시연으로 학습한다.
+- 여러 기체에서 범용 정책을 평가하고, 새 조작 환경에서는 제한된 추가 시연을 이용한 미세조정을 비교한다.
 
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+[저자 원문](https://proceedings.mlr.press/v270/kim25c.html)
 
 ## Evaluation Scope
 

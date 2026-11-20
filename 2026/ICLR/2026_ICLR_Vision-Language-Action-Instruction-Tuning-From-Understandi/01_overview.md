@@ -7,12 +7,12 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2026 / ICLR
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Shuai Yang, Hao Li, Bin Wang, Yilun Chen, Yang Tian, Tai Wang, Hanqing Wang, Feng Zhao, Yiyi Liao, Jiangmiao Pang
 - Primary track: VLA and generalist robot policies
 - Tier: REFERENCE
 - Tags: VLA, Vision-Language Model, Robotics
-- Official paper: https://openreview.net/forum?id=tsxwloasw5
-- Full-text retrieval: https://chatpaper.com/api/v1/articles/download/248397
+- Official paper: https://proceedings.iclr.cc/paper_files/paper/2026/hash/f81332c0e757b169c66d436ec2fff624-Abstract-Conference.html
+- Full-text retrieval: https://proceedings.iclr.cc/paper_files/paper/2026/file/f81332c0e757b169c66d436ec2fff624-Paper-Conference.pdf
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (48 pages; PyMuPDF text; title-token overlap first two pages=1.0)

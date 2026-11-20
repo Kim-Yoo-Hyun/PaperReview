@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / ICCV
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Yueh-Cheng Liu, Lukas Höllein, Matthias Nießner, Angela Dai
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
 - Tags: Gaussian Splatting, 3D reconstruction, 3D Vision
@@ -19,7 +19,7 @@
 
 ## Why This Paper Is Here
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 In particular, achieving both high fidelity as well as efficient and fast reconstruction for large scenes remains a difficult problem.를 문제로 두고, To summarize, our contributions are: • We propose a learned, generalized initializer network, that leverages scene priors to create effective Gaussian initializations for more efficient and accurate 3D surface reconstruction optimizatio ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+QuickSplat은 3D 표면 복원에 쓸 가우시안 초기값을 신경망으로 예측한다.
 
 ## Problem and Motivation
 
@@ -53,16 +53,10 @@ Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 �
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** To summarize, our contributions are: • We propose a learned, generalized initializer network, that leverages scene priors to create effective Gaussian initializations for more efficient ...
-- **p. 2 / 1. Introduction - extractive body cue:** To this end, we propose a novel generalized prior for 3D surface reconstruction.
-- **p. 3 / 3.2. Initialization Prior - extractive body cue:** The first step in our method is to create an initialization of all Gaussians G.
-- **p. 3 / 3.1. Surface Representation - extractive body cue:** We propose to predict G with neural networks instead of optimizing the primitives directly with gradient descent.
-- **p. 4 / 3.3. Iterative Gaussian Optimization - extractive body cue:** To this end, we introduce another learnable component, the densifier network θD, that predicts additional voxel features in free space.
-- **p. 5 / 4. Experiments - extractive body cue:** PGSR renders unbiased depth maps from flattened 3D Gaussians and introduces both single-view and multi-view regularization losses to improve geometric reconstruction.
-- **p. 6 / Figure/Table caption - extractive body cue:** Fig. 4. In general, our proposed QuickSplat achieves better performance: it reconstructs scenes with cleaner structures and flat surfaces that matches the ground truth compared ...
-- **p. 6 / Figure/Table caption - extractive body cue:** Table 2. Ablation study. We ablate the impact of our learned priors for initialization, densification, and optimization updates. Only using our optimizer network does not ...
+- 장면마다 원시 요소를 처음부터 최적화하는 비용을 줄인다.
+- 학습한 초기값을 사용한 표면 복원의 품질과 시간을 비교한다.
 
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+[저자 원문](https://openaccess.thecvf.com/content/ICCV2025/html/Liu_QuickSplat_Fast_3D_Surface_Reconstruction_via_Learned_Gaussian_Initialization_ICCV_2025_paper.html)
 
 ## Evaluation Scope
 

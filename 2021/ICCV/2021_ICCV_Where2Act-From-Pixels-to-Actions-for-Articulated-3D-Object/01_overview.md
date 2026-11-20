@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2021 / ICCV
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Kaichun Mo, Leonidas J. Guibas, Mustafa Mukadam, Abhinav Gupta, Shubham Tulsiani
 - Primary track: Robotics-enabling 3D perception
 - Tier: NEXT
 - Tags: Robotics, 3D Vision, affordance, articulated objects, active perception, point cloud

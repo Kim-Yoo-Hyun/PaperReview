@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2026 / CVPR
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Likui Zhang, Tao Tang, Zhihao Zhan, Xiuwei Chen, Zisheng Chen, Jianhua Han, Jiangtong Zhu, Pei Xu, Hang Xu, Hefeng Wu, Liang Lin, Xiaodan Liang
 - Primary track: VLA and generalist robot policies
 - Tier: NEXT
 - Tags: Robotics, VLA, atomic skills, skill composition, long-horizon manipulation

@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2022 / NeurIPS
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Nur Muhammad Shafiullah, Zichen Cui, Ariuntuya (Arty) Altanzaya, Lerrel Pinto
 - Primary track: RL, IL, offline learning, and robot data
 - Tier: NEXT
 - Tags: Robotics, Imitation Learning, Transformer, multimodal actions
@@ -19,7 +19,7 @@
 
 ## Why This Paper Is Here
 
-RL, IL, offline learning, and robot data의 il 문제를 이해하기 위해 읽는다. 본문은 However, unlike previous efforts similar to Mixture Density Networks (MDN) to do so, whose limitations have been explored in Florence et al.를 문제로 두고, In this work, we present Behavior Transformers (BeT), a new method for learning behaviors from rich, distributionally multi-modal data.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+Behavior Transformer는 시연의 여러 행동 양식을 하나의 정책에서 모방한다.
 
 ## Problem and Motivation
 
@@ -53,16 +53,10 @@ RL, IL, offline learning, and robot data의 il 문제를 이해하기 위해 읽
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1 Introduction - extractive body cue:** In this work, we present Behavior Transformers (BeT), a new method for learning behaviors from rich, distributionally multi-modal data.
-- **p. 4 / 1 Introduction - extractive body cue:** To address this, we propose a new factoring of the action prediction task by dividing each action in two parts: a categorical variable denoting an ...
-- **p. 1 / Abstract - extractive body cue:** In this work, we present Behavior Transformer (BeT), a new technique to model unlabeled demonstration data with multiple modes.
-- **p. 1 / 1 Introduction - extractive body cue:** This is in stark contrast to vision and language tasks, where pretrained models and data-driven priors are the norm [19, 11, 32, 6], which allows ...
-- **p. 2 / 1 Introduction - extractive body cue:** This allows us to model high-dimensional, continuous multi-modal action distributions as categorical distributions without learning complicated generative models [42, 20].
-- **p. 2 / Figure/Table caption - extractive body cue:** Figure 1: Unconditional rollouts from BeT models trained from multi-modal demonstartions on the CARLA, Block push, and Franka Kitchen environments. Due to the multi-modal architecture ...
-- **p. 6 / 3 Experiments - extractive body cue:** We see that BeT outperforms all other methods in all environments except CARLA, where it is narrowly outperformed by LWR.
-- **p. 6 / 3 Experiments - extractive body cue:** While IBC is slower than explicit BC models because of their sampling requirements, they have been shown to learn well on multi-modal data, and outperform ...
+- 연속 행동을 대표 행동과 잔차로 분해한다.
+- 상태 이력으로 행동 양식과 미세한 보정을 함께 예측한다.
 
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+[저자 원문](https://proceedings.neurips.cc/paper_files/paper/2022/hash/90d17e882adbdda42349db6f50123817-Abstract-Conference.html)
 
 ## Evaluation Scope
 

@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2026 / CVPR
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Ganlong Zhao, Zijia Tang, Xingping Chen, Zhanghui Kuang, Ye Tian, Guanbin Li
 - Primary track: World models, safety, uncertainty, and recovery
 - Tier: NEXT
 - Tags: Robotics, VLA, failure recovery, retry, reset, contact-rich manipulation, safety
@@ -19,7 +19,7 @@
 
 ## Why This Paper Is Here
 
-World models, safety, uncertainty, and recovery의 safety 문제를 이해하기 위해 읽는다. 본문은 We formalize this challenge by introducing a taxonomy of failure states.를 문제로 두고, To this end, we propose FLARE, a Failure-Aware Retry/Reset framework designed to transform brittle VLAs into resilient embodied agents (Fig.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+FLARE는 조작 오류의 종류에 따라 현재 동작을 다시 시도하거나 환경을 복원한 뒤 정책을 재개한다.
 
 ## Problem and Motivation
 
@@ -53,16 +53,10 @@ World models, safety, uncertainty, and recovery의 safety 문제를 이해하기
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** To this end, we propose FLARE, a Failure-Aware Retry/Reset framework designed to transform brittle VLAs into resilient embodied agents (Fig.
-- **p. 2 / 1. Introduction - extractive body cue:** We introduce a perturbation-bridging augmentation strategy that injects random pose perturbations between task segments, followed by a bridging segments that reconnects them.
-- **p. 3 / 3. Methodology - extractive body cue:** Our method provides a distinct solution for each case, training a unified VLA system to handle both (Fig.
-- **p. 3 / 3. Methodology - extractive body cue:** We introduce the Retry/Reset framework, a unified approach built upon a taxonomy of failures as either In-Distribution (ID) or Out-of-Distribution (OOD) errors.
-- **p. 5 / 3.4. Unified Training and Closed-Loop Inference - extractive body cue:** This design allows each policy to achieve high performance on its specific task while enabling straightforward systemlevel scaling.
-- **p. 6 / Figure/Table caption - extractive body cue:** Table 1. Our method achieves state-of-the-art performance on 8 out of 9 tasks. On the remaining task, Threading D0, although we do not obtain the ...
-- **p. 6 / 4. Experiment - extractive body cue:** In this case, our method still achieves comparable performance, even when multiple baselines (PhoenixHuman, π0.5) reach a 100% success rate.
-- **p. 7 / 5.1. Analysis of Perturbation & Bridging - extractive body cue:** The best performance is achieved when r = 30◦and t = 0.7 in 0 10 20 30 40 50 60 70 80 Rotation Angle (degrees) ...
+- 시연에 교란과 복귀 구간을 삽입해 작은 실행 편차에 적응하도록 한다.
+- 다시 시도할 수 있는 실패와 상태 복원이 필요한 실패를 구분한다.
 
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+[저자 원문](https://openaccess.thecvf.com/content/CVPR2026/html/Zhao_FLARE_A_Failure-Aware_Framework_for_Autonomous_Correction_and_Recovery_in_CVPR_2026_paper.html)
 
 ## Evaluation Scope
 

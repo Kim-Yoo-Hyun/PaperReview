@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2022 / T-RO
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Wei Xu, Yixi Cai, Dongjiao He, Jiarong Lin, Fu Zhang
 - Primary track: Robotics-enabling 3D perception
 - Tier: REFERENCE
 - Tags: Robotics, state estimation, LiDAR-inertial odometry, SLAM, direct registration, real-time

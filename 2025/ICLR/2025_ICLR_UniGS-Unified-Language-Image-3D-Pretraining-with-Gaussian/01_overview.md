@@ -7,12 +7,12 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / ICLR
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Haoyuan Li, Yanpeng Zhou, Tao Tang, Jifei Song, Yihan Zeng, Michael Kampffmeyer, Hang Xu, Xiaodan Liang
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
 - Tags: 3D Vision, Gaussian Splatting
-- Official paper: https://openreview.net/forum?id=6U2KI1dpfl
-- Full-text retrieval: https://chatpaper.com/api/v1/articles/download/113642
+- Official paper: https://proceedings.iclr.cc/paper_files/paper/2025/hash/d826f5aadb26db488b8686097ceea2d1-Abstract-Conference.html
+- Full-text retrieval: https://proceedings.iclr.cc/paper_files/paper/2025/file/d826f5aadb26db488b8686097ceea2d1-Paper-Conference.pdf
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (21 pages; PyMuPDF text; title-token overlap first two pages=1.0)

@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / CVPR
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Qingqing Zhao, Yao Lu, Moo Jin Kim, Zipeng Fu, Zhuoyang Zhang, Yecheng Wu, Zhaoshuo Li, Qianli Ma, Song Han, Chelsea Finn, Ankur Handa, Tsung-Yi Lin, Gordon Wetzstein, Ming-Yu Liu, Donglai Xiang
 - Primary track: VLA and generalist robot policies
 - Tier: REFERENCE
 - Tags: VLA, Chain-of-Thought, Robotics

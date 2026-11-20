@@ -7,12 +7,12 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / ICML
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Paul Mcvay, Sergio Arnaud, Ada Martin, Arjun Majumdar, Krishna Murthy Jatavallabhula, Phillip Thomas, Ruslan Partsey, Daniel Dugas, Abha Gejji, Alexander Sax, Vincent-Pierre Berges, Mikael Henaff, Ayush Jain, Ang Cao, Ishita Prasad, Mrinal Kalakrishnan, Michael Rabbat, Nicolas Ballas, Mido Assran, Oleksandr Maksymets, Aravind Rajeswaran, Franziska Meier
 - Primary track: RL, IL, offline learning, and robot data
 - Tier: REFERENCE
 - Tags: 3D Vision, Reinforcement Learning
-- Official paper: https://openreview.net/forum?id=FKi6yjXwCN
-- Full-text retrieval: https://chatpaper.com/api/v1/articles/download/165205
+- Official paper: https://proceedings.mlr.press/v267/mcvay25a.html
+- Full-text retrieval: https://raw.githubusercontent.com/mlresearch/v267/main/assets/mcvay25a/mcvay25a.pdf
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (27 pages; PyMuPDF text; title-token overlap first two pages=1.0)

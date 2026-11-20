@@ -7,12 +7,12 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2026 / ICLR
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Weijia Dou, Xu Zhang, Yi Bin, Jian Liu, Bo Peng, Guoqing Wang, Yang Yang, Heng Tao Shen
 - Primary track: Robotics-enabling 3D perception
 - Tier: REFERENCE
 - Tags: semantic, alignment, 3D Vision
-- Official paper: https://openreview.net/forum?id=mN49LupE8l
-- Full-text retrieval: https://chatpaper.com/api/v1/articles/download/248164
+- Official paper: https://proceedings.iclr.cc/paper_files/paper/2026/hash/039bc8e424e1fc196b4203555b54ebc4-Abstract-Conference.html
+- Full-text retrieval: https://proceedings.iclr.cc/paper_files/paper/2026/file/039bc8e424e1fc196b4203555b54ebc4-Paper-Conference.pdf
 - Code/Project: not identified
 - Paper type: system
 - Source audit: full-text PDF body checked on 2026-09-03 (22 pages; PyMuPDF text; title-token overlap first two pages=1.0)

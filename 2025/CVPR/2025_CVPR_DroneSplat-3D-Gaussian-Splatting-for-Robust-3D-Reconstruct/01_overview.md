@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / CVPR
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Jiadong Tang, Yu Gao, Dianyi Yang, Liqi Yan, Yufeng Yue, Yi Yang
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
 - Tags: Gaussian Splatting, 3D reconstruction, 3D Vision
@@ -19,7 +19,7 @@
 
 ## Why This Paper Is Here
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 However, despite incorporating geometric priors, InstantSplat lacks corresponding optimization in 3DGS, undermining the abundant priors.를 문제로 두고, To address these challenges, we introduce DroneSplat, a robust 3D gaussian splatting framework tailored for inthe-wild drone imagery.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+DroneSplat은 움직이는 방해물이 포함된 드론 영상에서 정적 장면을 3D 가우시안으로 복원한다.
 
 ## Problem and Motivation
 
@@ -53,16 +53,10 @@ Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 �
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** To address these challenges, we introduce DroneSplat, a robust 3D gaussian splatting framework tailored for inthe-wild drone imagery.
-- **p. 2 / 1. Introduction - extractive body cue:** For the issue of viewpoint sparsity, our framework employs a multi-view stereo model to provide rich geometric priors by predicting dense 3D points.
-- **p. 4 / 3.2. Adaptive Local-Global Masking - extractive body cue:** To establish an accurate and appropriate threshold across different scenarios and training stages, we propose an adaptive method to adjust threshold based on real-time residuals ...
-- **p. 7 / Method - extractive body cue:** Our method outperforms baseline methods on scenes with various numbers of dynamic distractors, while Ours(COLMAP) leading the rest.
-- **p. 1 / 1. Introduction - extractive body cue:** Recently, radiance field methods, such as NeRF [23] and 3D Gaussian Splatting (3DGS) [11], have shown remarkable potential in 3D representation and novel view synthesis.
-- **p. 6 / 4.2. Comparison - extractive body cue:** Our method achieves the highest quantitative results, effectively eliminating dynamic distractors while preserving static details.
-- **p. 6 / 4.2. Comparison - extractive body cue:** As shown in Figure 6 and Figure 7, our approach outperforms all baseline method on both DroneSplat(dynamic) datatset and NeRF On-the-go dataset.
-- **p. 8 / Figure/Table caption - extractive body cue:** Figure 11. The ablations of Voxel-guided 3DGS on the Drone- splat(static) and UrbanScene3D dataset. The 1st , 2nd and 3rd best results are highlighted. 11, ...
+- 촬영 중 위치가 바뀌는 물체의 영향을 다룬다.
+- 동적 방해물의 수가 다른 장면에서 재구성 결과를 비교한다.
 
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+[저자 원문](https://openaccess.thecvf.com/content/CVPR2025/html/Tang_DroneSplat_3D_Gaussian_Splatting_for_Robust_3D_Reconstruction_from_In-the-Wild_CVPR_2025_paper.html)
 
 ## Evaluation Scope
 

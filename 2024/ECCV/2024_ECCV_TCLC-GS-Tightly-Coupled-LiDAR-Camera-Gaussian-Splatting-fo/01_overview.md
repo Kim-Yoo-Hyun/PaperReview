@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2024 / ECCV
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Cheng Zhao, su sun, Ruoyu Wang, Yuliang Guo, Jun-Jun Wan, Zhou Huang, Xinyu Huang, Yingjie Victor Chen, Liu Ren
 - Primary track: Robotics-enabling 3D perception
 - Tier: REFERENCE
 - Tags: Gaussian Splatting

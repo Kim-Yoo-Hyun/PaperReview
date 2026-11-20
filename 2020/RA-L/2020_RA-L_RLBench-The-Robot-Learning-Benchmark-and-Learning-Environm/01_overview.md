@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2020 / RA-L
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Stephen James, Zicong Ma, David Rovick Arrojo, Andrew J. Davison
 - Primary track: RL, IL, offline learning, and robot data
 - Tier: NEXT
 - Tags: Robotics, Benchmark, Imitation Learning, Reinforcement Learning, multi-task manipulation, 3D Vision

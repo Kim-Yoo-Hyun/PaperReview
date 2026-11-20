@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2023 / CVPR
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Le Xue, Mingfei Gao, Chen Xing, Roberto Martín-Martín, Jiajun Wu, Caiming Xiong, Ran Xu, Juan Carlos Niebles, Silvio Savarese
 - Primary track: Robotics-enabling 3D perception
 - Tier: REFERENCE
 - Tags: 3D Vision, Vision-Language Model, point cloud, alignment

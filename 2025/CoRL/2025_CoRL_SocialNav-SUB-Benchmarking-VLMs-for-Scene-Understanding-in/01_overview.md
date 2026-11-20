@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / CoRL
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Michael Joseph Munje, Chen Tang, Shuijing Liu, Zichao Hu, Yifeng Zhu, Jiaxun Cui, Garrett Warnell, Joydeep Biswas, Peter Stone
 - Primary track: Robotics-enabling 3D perception
 - Tier: REFERENCE
 - Tags: VLM, Navigation, Benchmark

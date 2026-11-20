@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / RSS
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Wenxuan Li, Hang Zhao, Zhiyuan Yu, Yu Du, Qin Zou, Ruizhen Hu, Kai Xu
 - Primary track: World models, safety, uncertainty, and recovery
 - Tier: NEXT
 - Tags: Robotics, world model, physics-informed learning, non-prehensile manipulation

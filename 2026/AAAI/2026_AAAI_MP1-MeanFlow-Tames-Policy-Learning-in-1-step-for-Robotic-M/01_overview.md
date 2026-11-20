@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2026 / AAAI
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Juyi Sheng, Ziyi Wang, Peiming Li, Mengyuan Liu
 - Primary track: RL, IL, offline learning, and robot data
 - Tier: NEXT
 - Tags: Robotics, Imitation Learning, 3D point cloud, Flow Matching, action policy, inference efficiency, real-world manipulation

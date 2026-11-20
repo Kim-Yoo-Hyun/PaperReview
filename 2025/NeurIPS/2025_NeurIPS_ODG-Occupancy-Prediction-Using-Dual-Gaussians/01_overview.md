@@ -7,11 +7,11 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / NeurIPS
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Yunxiao Shi, Yinhao Zhu, Shizhong Han, Jisoo Jeong, Amin Ansari, Hong Cai, Fatih Porikli
 - Primary track: Robotics-enabling 3D perception
 - Tier: REFERENCE
 - Tags: Gaussian Splatting, sensor fusion, LiDAR, 3D Vision
-- Official paper: https://openreview.net/forum?id=CkmLys7ipp
+- Official paper: https://neurips.cc/virtual/2025/poster/119271
 - Full-text retrieval: https://arxiv.org/pdf/2506.09417.pdf
 - Code/Project: not identified
 - Paper type: method

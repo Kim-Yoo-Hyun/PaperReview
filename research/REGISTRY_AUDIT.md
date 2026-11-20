@@ -65,7 +65,7 @@
 | 1968 | 1 | 0.1% |
 | 1960 | 1 | 0.1% |
 
-`year`와 `publication.venue_year`가 다른 항목은 6편이다. 모두 2025년 기록에 2024년 venue year가 붙어 있다. 이 차이는 집계 열 선택에 따라 2024·2025년 숫자를 바꾸므로 원장 값의 출처를 확인할 대상이다. [pr-1044](../2025/CoRL/2025_CoRL_Simple-Masked-Training-Strategies-Yield-Control-Policies-T/01_overview.md) · [pr-1059](../2025/CoRL/2025_CoRL_ReMix-Optimizing-Data-Mixtures-for-Large-Scale-Imitation-L/01_overview.md) · [pr-1061](../2025/CoRL/2025_CoRL_TRANSIC-Sim-to-Real-Policy-Transfer-by-Learning-from-Onlin/01_overview.md) · [pr-1063](../2025/CoRL/2025_CoRL_Mobility-VLA-Multimodal-Instruction-Navigation-with-Long-C/01_overview.md) · [pr-1064](../2025/CoRL/2025_CoRL_TidyBot++-An-Open-Source-Holonomic-Mobile-Manipulator-for/01_overview.md) · [pr-1068](../2025/CoRL/2025_CoRL_Learning-Visuotactile-Estimation-and-Control-for-Non-prehe/01_overview.md)
+`year`와 `publication.venue_year`가 다른 항목은 6편이다. 모두 2025년 기록에 2024년 venue year가 붙어 있다. 이 차이는 집계 열 선택에 따라 2024·2025년 숫자를 바꾸므로 원장 값의 출처를 확인할 대상이다. [pr-1044](../2024/CoRL/2024_CoRL_Simple-Masked-Training-Strategies-Yield-Control-Policies-T/01_overview.md) · [pr-1059](../2024/CoRL/2024_CoRL_ReMix-Optimizing-Data-Mixtures-for-Large-Scale-Imitation-L/01_overview.md) · [pr-1061](../2024/CoRL/2024_CoRL_TRANSIC-Sim-to-Real-Policy-Transfer-by-Learning-from-Onlin/01_overview.md) · [pr-1063](../2024/CoRL/2024_CoRL_Mobility-VLA-Multimodal-Instruction-Navigation-with-Long-C/01_overview.md) · [pr-1064](../2024/CoRL/2024_CoRL_TidyBot++-An-Open-Source-Holonomic-Mobile-Manipulator-for/01_overview.md) · [pr-1068](../2024/CoRL/2024_CoRL_Learning-Visuotactile-Estimation-and-Control-for-Non-prehe/01_overview.md)
 
 ### 발표처별
 
@@ -148,7 +148,7 @@
 |---|---|---|---|
 | 식별 키·제목·연도·Tier·분류·태그 | 0 | 0.0% | 각 필드 0건 |
 | 발표처 필드 | 0 | 0.0% | 빈 값 기준 |
-| 발표처 미확인 | 1 | 0.1% | Unverified 1편 · DialogVLA [pr-0988](../2026/Unverified/2026_Unverified_DialogVLA-Bridging-Reasoning-Action-in-Bimanual-Manipulati/01_overview.md) |
+| 발표처 미확인 | 1 | 0.1% | Unverified 1편 · DialogVLA [pr-0988](../2026/IROS/2026_IROS_DialogVLA-Bridging-Reasoning-Action-in-Bimanual-Manipulati/01_overview.md) |
 | 논문 페이지·주 출처 URL | 0 | 0.0% | `page`와 `sources.primary.url` 각각 |
 | 논문 단위 주 출처 | 43 | 3.5% | 학회 목록 43편. 프리프린트/PDF 등 대체 URL이 각 항목에 있음 |
 | PDF URL | 356 | 29.0% | 선택 필드 · 로컬 PDF 캐시와 별도 |

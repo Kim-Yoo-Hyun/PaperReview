@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2015 / IJCAI
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Marc Toussaint
 - Primary track: Planning and control
 - Tier: NEXT
 - Tags: Robotics, Planning, task and motion planning, optimization

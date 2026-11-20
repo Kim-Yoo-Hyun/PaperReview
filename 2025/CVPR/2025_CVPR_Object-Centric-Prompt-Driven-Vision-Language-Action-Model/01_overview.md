@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / CVPR
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Xiaoqi Li, Jingyun Xu, Mingxu Zhang, Jiaming Liu, Yan Shen, Iaroslav Ponomarenko, Jiahui Xu, Liang Heng, Siyuan Huang, Shanghang Zhang, Hao Dong
 - Primary track: VLA and generalist robot policies
 - Tier: REFERENCE
 - Tags: VLA, prompting, Robotics

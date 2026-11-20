@@ -7,11 +7,11 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / NeurIPS
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Zhao-Heng Yin, Sherry Yang, Pieter Abbeel
 - Primary track: RL, IL, offline learning, and robot data
 - Tier: REFERENCE
 - Tags: Robotics, learning from human videos, 3D motion field, cross-embodiment
-- Official paper: https://openreview.net/forum?id=kp9B9iQDIt
+- Official paper: https://neurips.cc/virtual/2025/poster/116341
 - Full-text retrieval: https://arxiv.org/pdf/2506.04227
 - Code/Project: not identified
 - Paper type: method
@@ -19,7 +19,7 @@
 
 ## Why This Paper Is Here
 
-RL, IL, offline learning, and robot data의 robot_data 문제를 이해하기 위해 읽는다. 본문은 Recently, human-object interaction videos stand out as a particularly promising avenue to overcome this challenge.를 문제로 두고, We present a simple and novel architecture that can learn to see and predict object-centric 3D motion field in the real world for control.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+사람 조작 영상에서 물체 중심 3D 운동장을 추정해 로봇 행동을 지정한다.
 
 ## Problem and Motivation
 
@@ -53,16 +53,10 @@ RL, IL, offline learning, and robot data의 robot_data 문제를 이해하기 �
 
 ## Main Claims and Actual Contribution
 
-- **p. 3 / 1 Introduction - extractive body cue:** We present a simple and novel architecture that can learn to see and predict object-centric 3D motion field in the real world for control.
-- **p. 3 / 1 Introduction - extractive body cue:** We propose to use object-centric 3D motion field for robot learning from videos and present a novel learning framework for extracting this representation for control.
-- **p. 1 / Abstract - extractive body cue:** We introduce two novel components in its implementation.
-- **p. 1 / Abstract - extractive body cue:** Experiments show that our method reduces 3D motion estimation error by over 50% compared to the latest method, achieve 55% average success rate in diverse ...
-- **p. 4 / 2 Preliminaries - extractive body cue:** We first discuss a very simple pipeline for this purpose as suggested by latest works [55] and its fundamental limitations, and then we introduce our ...
-- **p. 8 / Figure/Table caption - extractive body cue:** Figure 8: (Left) SE3 motion estimation performance in real world. Our method achieves lower error compared to baseline. (Middle) Intrinsics Map Ablation Studies. Both inverse ...
-- **p. 9 / 5 Experiments - extractive body cue:** Main Results We show the success rate of different methods in Figure 8 Right.
-- **p. 9 / 5 Experiments - extractive body cue:** We find that our method significantly outperformed the other evaluated methods.
+- 잡음 있는 깊이 관측에서 물체의 미세한 3D 운동을 추정한다.
+- 추출한 운동 표현을 새 조작 상황의 제어에 사용한다.
 
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+[저자 원문](https://neurips.cc/virtual/2025/poster/116341)
 
 ## Evaluation Scope
 

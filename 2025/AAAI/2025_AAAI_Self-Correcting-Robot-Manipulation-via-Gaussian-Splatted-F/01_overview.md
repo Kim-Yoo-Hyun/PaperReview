@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / AAAI
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Shaohui Pan, Yong Xu, Ruotao Xu, Zihan Zhou, Si Wu, Zhuliang Yu
 - Primary track: World models, safety, uncertainty, and recovery
 - Tier: NEXT
 - Tags: Robotics, world model, failure recovery, Gaussian Splatting, foresight, manipulation

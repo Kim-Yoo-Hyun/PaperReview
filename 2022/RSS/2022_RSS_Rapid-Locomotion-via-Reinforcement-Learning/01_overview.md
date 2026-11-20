@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2022 / RSS
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Gabriel B. Margolis, Ge Yang, Kartik Paigwar, Tao Chen, Pulkit Agrawal
 - Primary track: Locomotion, whole-body, mobile manipulation, and humanoids
 - Tier: REFERENCE
 - Tags: Robotics, quadruped locomotion, Reinforcement Learning, high-speed locomotion

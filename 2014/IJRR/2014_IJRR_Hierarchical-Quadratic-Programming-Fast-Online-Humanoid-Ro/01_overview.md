@@ -7,11 +7,11 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2014 / IJRR
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Adrien Escande, Nicolas Mansard, Pierre-Brice Wieber
 - Primary track: Planning and control
 - Tier: REFERENCE
 - Tags: Robotics, whole-body control, hierarchical QP, task hierarchy
-- Official paper: https://doi.org/10.1177/0278364914521306
+- Official paper: https://api.crossref.org/works/10.1177/0278364914521306
 - Full-text retrieval: https://gepettoweb.laas.fr/uploads/Publications/2014_escande_ijrr.pdf
 - Code/Project: not identified
 - Paper type: theory_or_foundation

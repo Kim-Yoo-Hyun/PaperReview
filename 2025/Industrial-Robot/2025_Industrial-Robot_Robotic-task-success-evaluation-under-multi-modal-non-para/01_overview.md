@@ -3,13 +3,14 @@
 > Evidence maturity: `ABSTRACT_CHECKED`. abstract 기반 — 본문 수동 확인 필요.
 > 자동 작성 노트는 실제 정독을 뜻하지 않는다. 사용자 reading status는 UNREAD로 시작한다.
 
-- Year/Venue: 2025 / Industrial Robot
+- Year/Venue
+- Authors: Lakshadeep Naik, Thorbjørn Mosekjær Iversen, Aljaz Kramberger, Norbert Krüger
 - Category: Robotics-Enabling 3D Perception
 - Primary track: Robotics-enabling 3D perception
 - Tier: NEXT
 - Tags: pose uncertainty, task success, mobile manipulation, tolerance
 - Aliases:
-- Official paper: https://www.emerald.com/ir/article-abstract/52/5/651/1254840/Robotic-task-success-evaluation-under-multi-modal?redirectedFrom=PDF
+- Official paper: https://api.crossref.org/works/10.1108/IR-10-2024-0467
 - Venue verification: https://www.emerald.com/ir/article-abstract/52/5/651/1254840/Robotic-task-success-evaluation-under-multi-modal?redirectedFrom=PDF
 - Code/Project: not identified
 - Code: not_identified

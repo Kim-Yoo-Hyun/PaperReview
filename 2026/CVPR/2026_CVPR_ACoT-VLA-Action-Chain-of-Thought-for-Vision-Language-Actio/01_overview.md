@@ -7,13 +7,13 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2026 / CVPR
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Linqing Zhong, Yi Liu, Yifei Wei, Ziyu Xiong, Si Liu, Guanghui Ren
 - Primary track: VLA and generalist robot policies
 - Tier: REFERENCE
 - Tags: VLA, Chain-of-Thought, Planning
 - Official paper: https://openaccess.thecvf.com/content/CVPR2026/html/Zhong_ACoT-VLA_Action_Chain-of-Thought_for_Vision-Language-Action_Models_CVPR_2026_paper.html
 - Full-text retrieval: https://openaccess.thecvf.com/content/CVPR2026/papers/Zhong_ACoT-VLA_Action_Chain-of-Thought_for_Vision-Language-Action_Models_CVPR_2026_paper.pdf
-- Code/Project: not identified
+- Code/Project: https://github.com/AgibotTech/ACoT-VLA
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 

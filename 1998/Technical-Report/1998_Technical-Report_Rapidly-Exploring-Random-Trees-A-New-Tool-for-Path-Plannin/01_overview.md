@@ -7,11 +7,11 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 1998 / Technical Report
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Steven M. LaValle
 - Primary track: Planning and control
 - Tier: NEXT
 - Tags: Robotics, motion planning, RRT, kinodynamic planning
-- Official paper: https://lavalle.pl/rrtpubs.html
+- Official paper: https://lavalle.pl/papers/Lav98c.pdf
 - Full-text retrieval: https://lavalle.pl/papers/Lav98c.pdf
 - Code/Project: not identified
 - Paper type: theory_or_foundation

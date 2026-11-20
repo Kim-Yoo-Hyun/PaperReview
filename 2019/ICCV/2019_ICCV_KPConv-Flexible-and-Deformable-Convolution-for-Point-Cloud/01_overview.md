@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2019 / ICCV
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Hugues Thomas, Charles R. Qi, Jean-Emmanuel Deschaud, Beatriz Marcotegui, Francois Goulette, Leonidas Guibas
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
 - Tags: point cloud, 3D Vision

@@ -1,4 +1,4 @@
-# Method - CenterPoint: Center-based 3D Object Detection and Tracking
+# Method - Center-Based 3D Object Detection and Tracking
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.

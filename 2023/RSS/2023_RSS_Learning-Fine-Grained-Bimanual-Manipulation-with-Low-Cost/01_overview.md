@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2023 / RSS
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Tony Z. Zhao, Vikash Kumar, Sergey Levine, Chelsea Finn
 - Primary track: Manipulation, contact, tactile, and dexterity
 - Tier: CORE
 - Tags: Robotics, bimanual manipulation, Imitation Learning, action chunking

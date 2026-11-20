@@ -7,12 +7,12 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / ICML
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Shuting He, Guangquan Jie, Changshuo Wang, Yun Zhou, Shuming Hu, Guanbin Li, Henghui Ding
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
 - Tags: 3D Vision, Gaussian Splatting
-- Official paper: https://openreview.net/forum?id=reuShgiHdg
-- Full-text retrieval: https://chatpaper.com/api/v1/articles/download/165044
+- Official paper: https://proceedings.mlr.press/v267/he25h.html
+- Full-text retrieval: https://raw.githubusercontent.com/mlresearch/v267/main/assets/he25h/he25h.pdf
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (12 pages; PyMuPDF text; title-token overlap first two pages=1.0)

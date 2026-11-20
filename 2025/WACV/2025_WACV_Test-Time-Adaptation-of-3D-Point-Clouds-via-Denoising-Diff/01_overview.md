@@ -7,13 +7,13 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / WACV
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Hamidreza Dastmalchi, Aijun An, Ali Cheraghian, Shafin Rahman, Sameera Ramasinghe
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
 - Tags: Diffusion, Generation, point cloud, 3D Vision
 - Official paper: https://openaccess.thecvf.com/content/WACV2025/html/Dastmalchi_Test-Time_Adaptation_of_3D_Point_Clouds_via_Denoising_Diffusion_Models_WACV_2025_paper.html
 - Full-text retrieval: https://openaccess.thecvf.com/content/WACV2025/papers/Dastmalchi_Test-Time_Adaptation_of_3D_Point_Clouds_via_Denoising_Diffusion_Models_WACV_2025_paper.pdf
-- Code/Project: not identified
+- Code/Project: https://github.com/hamidreza-dastmalchi/3DD-TTA
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 

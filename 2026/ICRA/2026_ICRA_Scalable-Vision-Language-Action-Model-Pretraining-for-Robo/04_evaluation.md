@@ -1,4 +1,4 @@
-# Evaluation - Scalable Vision-Language-Action Model Pretraining for Robotic Dexterous Manipulation with Real-Life Human Activity Videos
+# Evaluation - Scalable Vision-Language-Action Model Pretraining for Robotic Manipulation with Real-Life Human Activity Videos
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.

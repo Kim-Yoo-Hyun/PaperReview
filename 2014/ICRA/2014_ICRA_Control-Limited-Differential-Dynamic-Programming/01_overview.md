@@ -7,11 +7,11 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2014 / ICRA
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Yuval Tassa, Nicolas Mansard, Emo Todorov
 - Primary track: Manipulation, contact, tactile, and dexterity
 - Tier: NEXT
 - Tags: Robotics, optimal control, trajectory optimization, control limits
-- Official paper: https://doi.org/10.1109/ICRA.2014.6907001
+- Official paper: https://api.crossref.org/works/10.1109/ICRA.2014.6907001
 - Full-text retrieval: https://roboti.us/lab/papers/TassaICRA14.pdf
 - Code/Project: not identified
 - Paper type: theory_or_foundation

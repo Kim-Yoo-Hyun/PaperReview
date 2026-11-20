@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2017 / ICRA
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Grady Williams, Nolan Wagener, Brian Goldfain, Paul Drews, James M. Rehg, Byron Boots, Evangelos A. Theodorou
 - Primary track: Planning and control
 - Tier: NEXT
 - Tags: Robotics, model predictive control, model-based RL, Planning

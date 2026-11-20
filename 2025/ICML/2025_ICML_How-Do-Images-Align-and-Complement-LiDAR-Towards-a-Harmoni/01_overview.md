@@ -7,12 +7,12 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / ICML
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Yining Pan, Qiongjie Cui, Xulei Yang, Na Zhao
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
 - Tags: 3D Vision
-- Official paper: https://openreview.net/forum?id=F7BOaYmWl7
-- Full-text retrieval: https://chatpaper.com/api/v1/articles/download/167147
+- Official paper: https://proceedings.mlr.press/v267/pan25c.html
+- Full-text retrieval: https://raw.githubusercontent.com/mlresearch/v267/main/assets/pan25c/pan25c.pdf
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (17 pages; PyMuPDF text; title-token overlap first two pages=1.0)

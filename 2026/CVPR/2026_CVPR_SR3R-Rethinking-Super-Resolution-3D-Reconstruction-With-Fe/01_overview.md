@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2026 / CVPR
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Xiang Feng, Xiangbo Wang, Tieshi Zhong, Chengkai Wang, Yiting Zhao, Tianxiang Xu, Zhenzhong Kuang, Feiwei Qin, Xuefei Yin, Yanming Zhu
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
 - Tags: Gaussian Splatting, 3D reconstruction, 3D Vision

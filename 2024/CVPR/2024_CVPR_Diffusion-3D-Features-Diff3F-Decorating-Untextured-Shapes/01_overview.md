@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2024 / CVPR
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Niladri Shekhar Dutt, Sanjeev Muralikrishnan, Niloy J. Mitra
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
 - Tags: semantic, alignment, Diffusion, Generation, 3D Vision
@@ -19,7 +19,7 @@
 
 ## Why This Paper Is Here
 
-Robotics-enabling 3D perception의 generative 문제를 이해하기 위해 읽는다. 본문은 A significant challenge is to address the absence of textures on most 3D models.를 문제로 두고, We propose a simple and robust solution.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+Diff3F는 텍스처가 없는 3D 형상에 사전학습된 2D 확산 모델의 의미 특징을 부여한다.
 
 ## Problem and Motivation
 
@@ -53,16 +53,10 @@ Robotics-enabling 3D perception의 generative 문제를 이해하기 위해 읽�
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** We propose a simple and robust solution.
-- **p. 2 / 1. Introduction - extractive body cue:** We present DIFFUSION 3D FEATURES (DIFF3F), a simple and practical framework for extracting semantic features that eliminates the need for additional training or optimization.
-- **p. 6 / 3.4. Computing Correspondence - extractive body cue:** We report correspondence accuracy within 1% error tolerance, with our method against competing works.
-- **p. 3 / 3. Method - extractive body cue:** This enables DIFF3F to produce semantic descriptors in a zero-shot way.
-- **p. 7 / 4.4. Evaluation on Human Shapes - extractive body cue:** Our method achieves a state-of-theart correspondence accuracy of 26.41% at 1% error tolerance, an improvement of 5%.
-- **p. 7 / 4.4. Evaluation on Human Shapes - extractive body cue:** We choose baseline methods trained on SURREAL as it is a significantly larger dataset (consisting of human shapes) than SHREC'19, leading to improved performance.
-- **p. 6 / 4.1. Datasets and Benchmarks - extractive body cue:** For DPC and SE-ORNet, we choose SURREAL and SMAL as the training sets for human and animal shapes, respectively - these larger datasets lead to ...
-- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Correspondence in-the-wild. We introduce DIFF3F, a novel feature distiller that harnesses the expressive power of in- painting diffusion features and distills them to ...
+- 여러 시점에서 형상을 관찰해 얻은 특징을 3D 표면에 모은다.
+- 추가 학습 없이 형상 사이의 의미 대응을 평가한다.
 
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+[저자 원문](https://openaccess.thecvf.com/content/CVPR2024/html/Dutt_Diffusion_3D_Features_Diff3F_Decorating_Untextured_Shapes_with_Distilled_Semantic_CVPR_2024_paper.html)
 
 ## Evaluation Scope
 

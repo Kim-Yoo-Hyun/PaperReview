@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2018 / ICML
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Tuomas Haarnoja, Aurick Zhou, Pieter Abbeel, Sergey Levine
 - Primary track: RL, IL, offline learning, and robot data
 - Tier: CORE
 - Tags: Robotics, Reinforcement Learning, continuous control, maximum entropy

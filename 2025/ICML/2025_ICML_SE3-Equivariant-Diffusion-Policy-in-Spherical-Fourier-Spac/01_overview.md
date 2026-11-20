@@ -7,19 +7,19 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / ICML
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Xupeng Zhu, Fan Wang, Robin Walters, Jane Shi
 - Primary track: VLA and generalist robot policies
 - Tier: REFERENCE
 - Tags: Robotics, Diffusion, Imitation Learning, equivariant
-- Official paper: https://openreview.net/forum?id=U5nRMOs8Ed
-- Full-text retrieval: https://chatpaper.com/api/v1/articles/download/167962
+- Official paper: https://proceedings.mlr.press/v267/zhu25u.html
+- Full-text retrieval: https://raw.githubusercontent.com/mlresearch/v267/main/assets/zhu25u/zhu25u.pdf
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (20 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
-VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다. 본문은 Diffusion Policy may struggle to attain robust 3D generalization without training on a large amount of costly human demonstrations to exhaust the possible 3D arrangements of the scene.를 문제로 두고, The contributions of this work are: 1. a novel method, Spherical Diffusion Policy, which is equivariant to 3D rotations and invariant to 3D translations enabling generalization to unseen scenes, 2. a novel ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+로봇 시연의 장면과 행동을 함께 변환해 물체 배치가 달라졌을 때도 일관되게 행동하는 확산 정책을 학습한다.
 
 ## Problem and Motivation
 
@@ -53,16 +53,10 @@ VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** The contributions of this work are: 1. a novel method, Spherical Diffusion Policy, which is equivariant to 3D rotations and invariant to 3D translations enabling ...
-- **p. 1 / 1. Introduction - extractive body cue:** We propose Spherical Diffusion Policy (SDP), a Fourier space SE(3) equivariant method that automatically adapts to changes in the scene.
-- **p. 1 / 1. Introduction - extractive body cue:** In contrast, our method is light and SE(3) equivariant across multiple objects, allowing it to perform more complicated tasks with less engineering.
-- **p. 4 / 4.1. Method Overview - extractive body cue:** Additionally, we propose bi-manual relative action representation.
-- **p. 4 / 4.2. Representing State and Action by Spherical Signal - extractive body cue:** In this section, we propose a spherical representation of the state and action for the policy.
-- **p. 6 / 5.1. Simulation Experiments - extractive body cue:** Notably, as the tilting range increases, SDP achieves a more significant relative performance improvement over the baselines.
-- **p. 9 / Figure/Table caption - extractive body cue:** Figure 6. Impact of training dataset size on task success rates: in- creasing the number of demonstrations from 100 to 316 (a 3× increase) yields ...
-- **p. 6 / 5.1. Simulation Experiments - extractive body cue:** We report the maximum test success rate throughout training, averaging results over 50 rollouts for each of the three seeds.
+- 구면 푸리에 공간에 상태와 행동을 표현하고 장면 표현에 조건화해 행동 궤적의 잡음을 제거한다.
+- 위치와 방향을 바꾼 조작에서 단팔과 양팔을 포함해 시뮬레이션과 실물 로봇을 평가한다.
 
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+[저자 원문](https://proceedings.mlr.press/v267/zhu25u.html)
 
 ## Evaluation Scope
 

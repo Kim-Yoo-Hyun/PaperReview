@@ -7,12 +7,12 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2026 / ICLR
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Yifu Yuan, Haiqin Cui, Yibin Chen, Zibin Dong, Fei Ni, Longxin Kou, Jinyi Liu, Pengyi Li, YAN ZHENG, Jianye Hao
 - Primary track: VLA and generalist robot policies
 - Tier: REFERENCE
 - Tags: Vision-Language Model, Robotics, 3D Vision
-- Official paper: https://openreview.net/forum?id=yngvAamNQi
-- Full-text retrieval: https://chatpaper.com/api/v1/articles/download/245158
+- Official paper: https://proceedings.iclr.cc/paper_files/paper/2026/hash/d2eedb7ecf14b50967c5de98e30e0ffc-Abstract-Conference.html
+- Full-text retrieval: https://proceedings.iclr.cc/paper_files/paper/2026/file/d2eedb7ecf14b50967c5de98e30e0ffc-Paper-Conference.pdf
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (34 pages; PyMuPDF text; title-token overlap first two pages=1.0)

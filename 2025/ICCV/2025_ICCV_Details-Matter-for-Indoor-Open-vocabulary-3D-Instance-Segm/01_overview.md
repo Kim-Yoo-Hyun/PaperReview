@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / ICCV
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Sanghun Jung, Jingjing Zheng, Ke Zhang, Nan Qiao, Albert Y. C. Chen, Lu Xia, Chi Liu, Yuyin Sun, Xiao Zeng, Hsiang-Wei Huang, Byron Boots, Min Sun, Cheng-Hao Kuo
 - Primary track: Robotics-enabling 3D perception
 - Tier: REFERENCE
 - Tags: 3D Vision, semantic

@@ -7,11 +7,11 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2022 / IEEE Robotics and Automation Letters
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Shaoxiong Wang, Mike Lambeta, Po-Wei Chou, Roberto Calandra
 - Primary track: Manipulation, contact, tactile, and dexterity
 - Tier: REFERENCE
 - Tags: Robotics, tactile sensing, simulation, contact
-- Official paper: https://doi.org/10.1109/LRA.2022.3146945
+- Official paper: https://api.crossref.org/works/10.1109/LRA.2022.3146945
 - Full-text retrieval: https://doi.org/10.1109/LRA.2022.3146945
 - Code/Project: https://github.com/facebookresearch/tacto
 - Paper type: benchmark_or_dataset

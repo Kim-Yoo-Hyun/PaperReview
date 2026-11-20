@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / ICCV
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Yue Li, Qi Ma, Runyi Yang, Huapeng Li, Mengjiao Ma, Bin Ren, Nikola Popovic, Nicu Sebe, Ender Konukoglu, Theo Gevers, Luc Van Gool, Martin R. Oswald, Danda Pani Paudel
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
 - Tags: Gaussian Splatting, Vision-Language, semantic

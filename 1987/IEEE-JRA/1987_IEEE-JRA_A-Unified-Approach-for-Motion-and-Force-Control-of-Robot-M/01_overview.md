@@ -7,11 +7,11 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 1987 / IEEE JRA
-- Authors: not duplicated here when not verified in the registry source
+- Authors: O. Khatib
 - Primary track: Planning and control
 - Tier: REFERENCE
 - Tags: Robotics, operational space control, force control, manipulation
-- Official paper: https://cs.stanford.edu/group/manips/publications.html
+- Official paper: https://api.crossref.org/works/10.1109/JRA.1987.1087068
 - Full-text retrieval: https://cs.stanford.edu/group/manips/publications/pdfs/Khatib_1987_RA.pdf
 - Code/Project: not identified
 - Paper type: theory_or_foundation

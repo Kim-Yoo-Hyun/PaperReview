@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2026 / CVPR
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Fei Ni, Zhuo Chen, Yifu Yuan, Zibin Dong, Xianze Yao, Shan Luo, Jianye Hao, Jiankang Deng, Stefanos Zafeiriou
 - Primary track: VLA and generalist robot policies
 - Tier: REFERENCE
 - Tags: VLA, semantic reasoning, Planning
@@ -19,7 +19,7 @@
 
 ## Why This Paper Is Here
 
-VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다. 본문은 This brittleness stems from two fundamental limitations in current VLA architectures.를 문제로 두고, Our approach consists of three stages: (1) Semantic Latent Token Pretraining (Sec.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+SemanticVLA는 명시적인 의미 추론 경로와 잠재 추론 경로를 함께 사용해 로봇 행동을 생성한다.
 
 ## Problem and Motivation
 
@@ -52,16 +52,10 @@ VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다
 
 ## Main Claims and Actual Contribution
 
-- **p. 3 / 3. Method - extractive body cue:** Our approach consists of three stages: (1) Semantic Latent Token Pretraining (Sec.
-- **p. 2 / 1. Introduction - extractive body cue:** By bridging VLM reasoning and action control through semantically explicit trace and compact latent action tokens, our approach enables genuine reasoning rather than action memorization.
-- **p. 2 / 1. Introduction - extractive body cue:** To this end, we introduce SemanticVLA, a dual-path reasoning framework that synergistically combines explicit trace reasoning and latent action planning.
-- **p. 3 / 3.1. Semantic Latent Action Tokenizer - extractive body cue:** To bridge this gap, we propose leveraging spatial trace priors as explicit supervision to guide latent action learning while excluding language from pretraining.
-- **p. 4 / 3.2. VLM Co-training with Trace and Latent Action - extractive body cue:** This synergy enables latent tokens to compensate for trace's coordinate imprecision through learned visual attention to task-relevant context, while trace scaffolding filters visual variations to ...
-- **p. 6 / 4.1. Simulation Benchmarks - extractive body cue:** As shown in Table 1, SemanticVLA achieves 97.0% average success rate, outperforming strong baselines across task categories.
-- **p. 6 / 4.1. Simulation Benchmarks - extractive body cue:** SemanticVLA achieves 65.1% average success rate, outperforming competitive baselines and demonstrating effective transfer of trace-guided spatial understanding across manipulation primitives.
-- **p. 7 / 4.3. Instruction Variance Robustness - extractive body cue:** Dashed bars: success rates with original instructions; Solid bars: rephrased instructions with similar task semantics. across perturbations, only 9.4% on LIBERO and significantly outperforming baselines ...
+- 의미 내용을 담는 잠재 토큰을 학습한다.
+- 추론 경로가 일반화와 행동 생성에 주는 효과를 평가한다.
 
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+[저자 원문](https://openaccess.thecvf.com/content/CVPR2026/html/Ni_SemanticVLA_Towards_Semantic_Reasoning_over_Action_Memorization_via_Synergistic_Explicit_CVPR_2026_paper.html)
 
 ## Evaluation Scope
 

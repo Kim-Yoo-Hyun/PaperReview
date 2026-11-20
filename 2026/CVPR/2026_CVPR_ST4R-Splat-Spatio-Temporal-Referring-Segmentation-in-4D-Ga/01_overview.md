@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2026 / CVPR
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Yuming Meng, Dong Wu, Hongbin Zha
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
 - Tags: Gaussian Splatting, 4D, referring segmentation
@@ -19,7 +19,7 @@
 
 ## Why This Paper Is Here
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 However, these representations are primarily optimized for geometric fidelity and novel view synthesis, inherently lacking support for semantic reasoning and language-based scene understanding.를 문제로 두고, In summary, our main contributions are as follows: • We introduce the novel task of STRS-4DGS (SpatioTemporal Referring Segmentation in 4D Gaussian Splatting) and construct a corresponding benchmark with spatio-temporally grounded refer ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+ST4R-Splat은 언어 표현이 지정하는 대상을 시간에 따라 변하는 3D 가우시안 장면에서 분할한다.
 
 ## Problem and Motivation
 
@@ -53,16 +53,10 @@ Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 �
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** In summary, our main contributions are as follows: • We introduce the novel task of STRS-4DGS (SpatioTemporal Referring Segmentation in 4D Gaussian Splatting) and construct ...
-- **p. 1 / 1. Introduction - extractive body cue:** To address these challenges, we propose ST4R-Splat, the pioneering framework for STRS-4DGS.
-- **p. 2 / 1. Introduction - extractive body cue:** These results validate our framework and establish a strong foundation for languagedriven scene understanding in dynamic 4D environments.
-- **p. 1 / 1. Introduction - extractive body cue:** However, these representations are primarily optimized for geometric fidelity and novel view synthesis, inherently lacking support for semantic reasoning and language-based scene understanding.
-- **p. 3 / 3.1. Preliminaries - extractive body cue:** This allows 4DGS to reconstruct complex motion and appearance changes over time.
-- **p. 6 / 4.2. Results - extractive body cue:** ST4RSplat achieves an average accuracy of 83.44% and vIoU 17603
-- **p. 6 / 4.2. Results - extractive body cue:** Our method achieves an average mIoU of 77.67%, demonstrating exceptional segmentation performance.
-- **p. 7 / 4.2. Results - extractive body cue:** Best results are highlighted in bold. of 57.98%, substantially outperforming 4DLangSplat.
+- 공간 위치와 시간 조건을 함께 사용해 지시 대상을 찾는다.
+- 분할 결과와 해당 대상 마스크의 겹침을 평가한다.
 
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+[저자 원문](https://openaccess.thecvf.com/content/CVPR2026/html/Meng_ST4R-Splat_Spatio-Temporal_Referring_Segmentation_in_4D_Gaussian_Splatting_CVPR_2026_paper.html)
 
 ## Evaluation Scope
 

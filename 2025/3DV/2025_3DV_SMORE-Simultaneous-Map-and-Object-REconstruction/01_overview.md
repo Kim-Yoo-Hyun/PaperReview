@@ -7,11 +7,11 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / 3DV
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Nathaniel Eliot Chodosh, Anish Madan, Simon Lucey, Deva Ramanan
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
 - Tags: 3D reconstruction, 3D Vision
-- Official paper: https://3dvconf.github.io/2025/accepted-papers/
+- Official paper: https://3dvconf.github.io/2025/schedule_updated2.csv
 - Full-text retrieval: https://openreview.net/attachment?id=1NhnG9BvQB&name=pdf
 - Code/Project: not identified
 - Paper type: method

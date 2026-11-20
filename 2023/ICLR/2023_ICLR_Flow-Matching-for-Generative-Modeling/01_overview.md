@@ -7,10 +7,10 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2023 / ICLR
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Yaron Lipman, Ricky T. Q. Chen, Heli Ben-Hamu, Maximilian Nickel, Matt Le
 - Primary track: RL, IL, offline learning, and robot data
 - Tier: CORE
-- Tags: Flow Matching, generative modeling, continuous normalizing flow, action generation
+- Tags: Flow Matching, generative modeling, continuous normalizing flow, image generation
 - Official paper: https://iclr.cc/virtual/2023/poster/11309
 - Full-text retrieval: https://openreview.net/pdf?id=PqvMRDCJT9t
 - Code/Project: https://openreview.net/forum?id=PqvMRDCJT9t
@@ -19,7 +19,7 @@
 
 ## Why This Paper Is Here
 
-RL, IL, offline learning, and robot data의 generative 문제를 이해하기 위해 읽는다. 본문은 (2018)) require expensive numerical ODE simulations, while existing simulation-free methods either involve intractable integrals (Rozen et al., 2021) or biased gradients (Ben-Hamu et al., 2022).를 문제로 두고, Preprint In particular, we propose the Flow Matching objective (Section 3), a simple and intuitive training objective to regress onto a target vector field that generates a desired probability path.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+Flow Matching은 연속 정규화 흐름이 따를 벡터장을 조건부 확률 경로에서 회귀해 생성 모델을 학습한다.
 
 ## Problem and Motivation
 
@@ -53,16 +53,10 @@ RL, IL, offline learning, and robot data의 generative 문제를 이해하기 �
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** Preprint In particular, we propose the Flow Matching objective (Section 3), a simple and intuitive training objective to regress onto a target vector field that ...
-- **p. 4 / 1 INTRODUCTION - extractive body cue:** Instead, we propose a simpler objective, which surprisingly will result in the same optima as the original objective.
-- **p. 1 / ABSTRACT - extractive body cue:** We introduce a new paradigm for generative modeling built on Continuous Normalizing Flows (CNFs), allowing us to train CNFs at unprecedented scale.
-- **p. 1 / ABSTRACT - extractive body cue:** Specifically, we present the notion of Flow Matching (FM), a simulation-free approach for training CNFs based on regressing vector fields of fixed conditional probability paths.
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** Then, inspired by denoising score matching, we show that a per-example training objective, termed Conditional Flow Matching (CFM), provides equivalent gradients and does not require ...
-- **p. 7 / 6 EXPERIMENTS - extractive body cue:** We discuss how sample generation is improved by directly parameterizing the generating vector field and using the Flow Matching objective.
-- **p. 9 / 6 EXPERIMENTS - extractive body cue:** FM-OT achieves similar PSNR and SSIM values to (Saharia et al., 2022) while considerably improving on FID and IS, which as argued by (Saharia et ...
-- **p. 9 / 6 EXPERIMENTS - extractive body cue:** Secondly, Figure 7 (right) shows how FID changes as a result of the computational cost, where we find FM with OT is able to achieve ...
+- 학습 중 흐름 자체를 시뮬레이션하지 않고 조건부 경로가 제공하는 목표 벡터장을 이용한다.
+- 확산 경로와 최적수송 보간 경로를 다루며 ImageNet 이미지 생성에서 가능도와 표본 품질을 평가한다.
 
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+[저자 원문](https://iclr.cc/virtual/2023/poster/11309)
 
 ## Evaluation Scope
 

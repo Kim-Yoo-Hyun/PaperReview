@@ -7,12 +7,12 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / ICML
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Jianke Zhang, Yanjiang Guo, Yucheng Hu, Xiaoyu Chen, Xiang Zhu, Jianyu Chen
 - Primary track: VLA and generalist robot policies
 - Tier: REFERENCE
 - Tags: VLA, Vision-Language Model
-- Official paper: https://openreview.net/forum?id=V7JPraxi5j
-- Full-text retrieval: https://chatpaper.com/api/v1/articles/download/168156
+- Official paper: https://proceedings.mlr.press/v267/zhang25w.html
+- Full-text retrieval: https://raw.githubusercontent.com/mlresearch/v267/main/assets/zhang25w/zhang25w.pdf
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (12 pages; PyMuPDF text; title-token overlap first two pages=1.0)

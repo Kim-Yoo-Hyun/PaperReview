@@ -1,4 +1,4 @@
-# Marigold: Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation
+# Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
 > Analysis basis: full-text PDF body checked on 2026-09-03 (33 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://arxiv.org/abs/2312.02145.
@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2024 / CVPR
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Bingxin Ke, Anton Obukhov, Shengyu Huang, Nando Metzger, Rodrigo Caye Daudt, Konrad Schindler
 - Primary track: Robotics-enabling 3D perception
 - Tier: REFERENCE
 - Tags: Diffusion, Generation, depth, 3D Vision

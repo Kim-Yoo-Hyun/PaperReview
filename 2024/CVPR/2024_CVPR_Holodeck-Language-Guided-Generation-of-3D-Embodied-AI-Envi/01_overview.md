@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2024 / CVPR
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Yue Yang, Fan-Yun Sun, Luca Weihs, Eli VanderBilt, Alvaro Herrasti, Winson Han, Jiajun Wu, Nick Haber, Ranjay Krishna, Lingjie Liu, Chris Callison-Burch, Mark Yatskar, Aniruddha Kembhavi, Christopher Clark
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
 - Tags: Generation, 3D scene, Embodied AI

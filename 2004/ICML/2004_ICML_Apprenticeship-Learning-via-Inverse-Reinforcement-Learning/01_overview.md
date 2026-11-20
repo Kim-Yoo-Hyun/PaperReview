@@ -7,11 +7,11 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2004 / ICML
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Pieter Abbeel, Andrew Y. Ng
 - Primary track: RL, IL, offline learning, and robot data
 - Tier: REFERENCE
 - Tags: Robotics, Imitation Learning, inverse reinforcement learning, apprenticeship learning
-- Official paper: https://ai.stanford.edu/~pabbeel/irl/
+- Official paper: https://api.crossref.org/works/10.1145/1015330.1015430
 - Full-text retrieval: https://ai.stanford.edu/~ang/papers/icml04-apprentice.pdf
 - Code/Project: https://ai.stanford.edu/~pabbeel/irl/
 - Paper type: theory_or_foundation

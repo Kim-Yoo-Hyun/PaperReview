@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2017 / NeurIPS
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Charles Ruizhongtai Qi, Li Yi, Hao Su, Leonidas Guibas
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
 - Tags: 3D geometry, point cloud, representation
@@ -19,7 +19,7 @@
 
 ## Why This Paper Is Here
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 Deciding the appropriate scale of local neighborhood balls, however, is a more challenging yet intriguing problem, due to the entanglement of feature scale and non-uniformity of input point set.를 문제로 두고, We introduce a hierarchical neural network, named as PointNet++, to process a set of points sampled in a metric space in a hierarchical fashion.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+PointNet++는 점군을 국소 이웃으로 묶고 여러 공간 규모의 특징을 계층적으로 집계한다.
 
 ## Problem and Motivation
 
@@ -53,16 +53,10 @@ Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 �
 
 ## Main Claims and Actual Contribution
 
-- **p. 1 / 1 Introduction - extractive body cue:** We introduce a hierarchical neural network, named as PointNet++, to process a set of points sampled in a metric space in a hierarchical fashion.
-- **p. 2 / 3 Method - extractive body cue:** Finally, we propose our PointNet++ that is able to robustly learn features even in non-uniformly sampled point sets (Sec.
-- **p. 3 / 3 Method - extractive body cue:** We introduce the layers of a set abstraction level in the following paragraphs.
-- **p. 3 / 3 Method - extractive body cue:** In convolutional neural networks, a local region of a pixel consists of pixels with array indices within certain Manhattan distance (kernel size) of the pixel.
-- **p. 4 / 3 Method - extractive body cue:** To achieve this goal we propose density adaptive PointNet layers (Fig.
-- **p. 5 / 4 Experiments - extractive body cue:** Firstly, our hierarchical learning architecture achieves significantly better performance than the non-hierarchical PointNet [20].
-- **p. 6 / Figure/Table caption - extractive body cue:** Figure 4: Left: Point cloud with random point dropout. Right: Curve showing advantage of our density adaptive strategy in dealing with non-uniform density. DP means ...
-- **p. 3 / Figure/Table caption - extractive body cue:** Figure 2: Illustration of our hierarchical feature learning architecture and its application for set segmentation and classification using points in 2D Euclidean space as an ...
+- 거리 공간에서 점을 표집하고 이웃마다 PointNet을 적용한다.
+- 점 밀도가 일정하지 않은 조건에서 다중 규모 특징의 효과를 비교한다.
 
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+[저자 원문](https://proceedings.neurips.cc/paper_files/paper/2017/hash/d8bf84be3800d12f74d8b05e9b89836f-Abstract.html)
 
 ## Evaluation Scope
 

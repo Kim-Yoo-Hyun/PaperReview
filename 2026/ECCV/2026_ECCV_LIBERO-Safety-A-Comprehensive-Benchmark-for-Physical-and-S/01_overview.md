@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2026 / ECCV
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Rongxu Cui, Zongzheng Zhang, Jingrui Pang, Haohan Chi, Jinbang Guo, Saining Zhang, Shaoxuan Xie, Xin Jin, Yao Mu, Jiaolong Yang, Guocai Yao, Xianyuan Zhan, Ya-Qin Zhang, Hao Zhao
 - Primary track: VLA and generalist robot policies
 - Tier: NEXT
 - Tags: VLA, Vision-Language Model, Benchmark, semantic

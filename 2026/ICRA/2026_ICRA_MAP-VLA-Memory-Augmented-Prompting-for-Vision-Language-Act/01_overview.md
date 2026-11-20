@@ -7,11 +7,11 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2026 / ICRA
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Runhao Li, Wenkai Guo, Zhenyu Wu, Changyuan Wang, Haoyuan Deng, Zhenyu Weng, Yap-Peng Tan, Ziwei Wang
 - Primary track: VLA and generalist robot policies
 - Tier: REFERENCE
 - Tags: VLA, Vision-Language Model, Robotics
-- Official paper: https://ras.papercept.net/conferences/conferences/ICRA26/program/ICRA26_ContentListWeb_4.html
+- Official paper: https://api.crossref.org/works/10.1109/icra57385.2026.11697046
 - Full-text retrieval: https://arxiv.org/pdf/2511.09516v1
 - Code/Project: not identified
 - Paper type: method

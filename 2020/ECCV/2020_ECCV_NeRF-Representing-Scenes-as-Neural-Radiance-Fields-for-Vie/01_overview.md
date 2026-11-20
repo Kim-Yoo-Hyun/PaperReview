@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2020 / ECCV
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Ben Mildenhall, Pratul P. Srinivasan, Matthew Tancik, Jonathan T. Barron, Ravi Ramamoorthi, Ren Ng
 - Primary track: Robotics-enabling 3D perception
 - Tier: REFERENCE
 - Tags: NeRF, 3D reconstruction, representation
@@ -19,7 +19,7 @@
 
 ## Why This Paper Is Here
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 In this work, we address the long-standing problem of view synthesis in a new way by directly optimizing parameters of a continuous 5D scene representation to minimize the error of rendering a ...를 문제로 두고, We address these issues by transforming input 5D coordinates with a positional encoding that enables the MLP to represent higher frequency functions, and we propose a hierarchical sampling procedure to reduce the ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+자세를 아는 여러 시점의 영상으로 연속적인 복사장을 학습해 새로운 시점의 영상을 합성한다.
 
 ## Problem and Motivation
 
@@ -51,16 +51,10 @@ Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 �
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1 Introduction - extractive body cue:** We address these issues by transforming input 5D coordinates with a positional encoding that enables the MLP to represent higher frequency functions, and we propose ...
-- **p. 1 / 1 Introduction - extractive body cue:** Our method optimizes a deep fully-connected neural network without any convolutional layers (often referred to as a multilayer perceptron or MLP) to represent this function ...
-- **p. 2 / 1 Introduction - extractive body cue:** Crucially, our method overcomes the prohibitive storage costs of discretized voxel grids when modeling complex scenes at high-resolutions.
-- **p. 17 / A Additional Implementation Details - extractive body cue:** Volume Bounds Our method renders views by querying the neural radiance field representation at continuous 5D coordinates along camera rays.
-- **p. 3 / 1 Introduction - extractive body cue:** As far as we know, this paper presents the first continuous neural scene representation that is able to render high-resolution photorealistic novel views of real ...
-- **p. 10 / Figure/Table caption - extractive body cue:** Table 1: Our method quantitatively outperforms prior work on datasets of both synthetic and real images. We report PSNR/SSIM (higher is better) and LPIPS [50] ...
-- **p. 9 / 6 Results - extractive body cue:** 8 and 6) show that our method outperforms prior work, and provide extensive ablation studies to validate our design choices (Table 2).
-- **p. 9 / 6 Results - extractive body cue:** We urge the reader to view our supplementary video to better appreciate our method's significant improvement over baseline methods when rendering smooth paths of novel ...
+- 3차원 위치와 시선 방향을 입력받아 밀도와 색을 내는 신경망으로 장면을 표현한다.
+- 각 카메라 광선을 따라 색과 밀도를 적분하고, 렌더링된 영상과 입력 영상의 차이로 표현을 학습한다.
 
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+[저자 원문](https://arxiv.org/abs/2003.08934)
 
 ## Evaluation Scope
 

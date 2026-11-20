@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2024 / RSS
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Samson Yu, Lin Kelvin, Anxing Xiao, Jiafei Duan, Harold Soh
 - Primary track: Manipulation, contact, tactile, and dexterity
 - Tier: NEXT
 - Tags: Robotics, tactile sensing, Vision-Language, object properties, multimodal reasoning

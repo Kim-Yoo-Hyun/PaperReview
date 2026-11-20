@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2021 / RSS
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Jonah Siekmann, Kevin Green, John Warila, Alan Fern, Jonathan Hurst
 - Primary track: Locomotion, whole-body, mobile manipulation, and humanoids
 - Tier: REFERENCE
 - Tags: Robotics, bipedal locomotion, Reinforcement Learning, sim-to-real, proprioception

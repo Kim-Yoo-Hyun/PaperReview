@@ -1,4 +1,4 @@
-# VIMA: General Robot Manipulation with Multimodal Prompts
+# VIMA: Robot Manipulation with Multimodal Prompts
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
 > Analysis basis: full-text PDF body checked on 2026-09-03 (48 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://arxiv.org/abs/2210.03094.
@@ -7,11 +7,11 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2023 / ICML
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Yunfan Jiang, Agrim Gupta, Zichen Zhang, Guanzhi Wang, Yongqiang Dou, Yanjun Chen, Li Fei-Fei, Anima Anandkumar, Yuke Zhu, Linxi Fan
 - Primary track: VLA and generalist robot policies
 - Tier: NEXT
 - Tags: Vision-Language-Action, Imitation Learning, Robotics
-- Official paper: https://arxiv.org/abs/2210.03094
+- Official paper: https://proceedings.mlr.press/v202/jiang23b.html
 - Full-text retrieval: https://arxiv.org/pdf/2210.03094
 - Code/Project: https://vimalabs.github.io/
 - Paper type: method

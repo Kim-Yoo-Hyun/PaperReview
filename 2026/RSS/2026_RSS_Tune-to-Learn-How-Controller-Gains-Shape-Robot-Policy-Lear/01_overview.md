@@ -3,7 +3,8 @@
 > Evidence maturity: `ABSTRACT_CHECKED`. abstract 기반 — 본문 수동 확인 필요.
 > 자동 작성 노트는 실제 정독을 뜻하지 않는다. 사용자 reading status는 UNREAD로 시작한다.
 
-- Year/Venue: 2026 / RSS
+- Year/Venue
+- Authors: Antonia Bronars, Younghyo Park, Pulkit Agrawal
 - Category: Manipulation, Contact, and Dexterity
 - Primary track: Manipulation, contact, tactile, and dexterity
 - Tier: NEXT

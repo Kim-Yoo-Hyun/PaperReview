@@ -7,11 +7,11 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2022 / CoRL
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Chengshu Li, Ruohan Zhang, Josiah Wong, Cem Gokmen, Sanjana Srivastava, Roberto Martín-Martín, Chen Wang, Gabrael Levine, Michael Lingelbach, Jiankai Sun, Mona Anvari, Minjune Hwang, Manasi Sharma, Arman Aydin, Dhruva Bansal, Samuel Hunter, Kyu-Young Kim, Alan Lou, Caleb R Matthews, Ivan Villa-Renteria, Jerry Huayang Tang, Claire Tang, Fei Xia, Silvio Savarese, Hyowon Gweon, Karen Liu, Jiajun Wu, Li Fei-Fei
 - Primary track: RL, IL, offline learning, and robot data
 - Tier: REFERENCE
 - Tags: Robotics, Benchmark, Embodied AI, long-horizon tasks, simulation, household robotics
-- Official paper: https://proceedings.mlr.press/v205/li23s.html
+- Official paper: https://proceedings.mlr.press/v205/li23a.html
 - Full-text retrieval: https://arxiv.org/pdf/2403.09227
 - Code/Project: https://behavior.stanford.edu/
 - Paper type: benchmark_or_dataset

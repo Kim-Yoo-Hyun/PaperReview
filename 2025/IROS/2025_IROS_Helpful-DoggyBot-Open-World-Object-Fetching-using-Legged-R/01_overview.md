@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / IROS
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Qi Wu, Zipeng Fu, Xuxin Cheng, Xiaolong Wang, Chelsea Finn
 - Primary track: VLA and generalist robot policies
 - Tier: REFERENCE
 - Tags: Vision-Language Model, Robotics, Reinforcement Learning

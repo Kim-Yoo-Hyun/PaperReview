@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / AAAI
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Fangyuan Wang, Shipeng Lyu, Peng Zhou, Anqing Duan, Guodong Guo, David Navarro-Alarcon
 - Primary track: Planning and control
 - Tier: NEXT
 - Tags: Robotics, task and motion planning, PDDL, mobile manipulation, long-horizon, language grounding, real-world

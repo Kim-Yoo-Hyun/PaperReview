@@ -7,11 +7,11 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2023 / ICRA
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Ankur Handa, Arthur Allshire, Viktor Makoviychuk, Aleksei Petrenko, Ritvik Singh, Jingzhou Liu, Denys Makoviichuk, Karl Van Wyk, Alexander Zhurkevich, Balakumar Sundaralingam, Yashraj Narang, Jean-Francois Lafleche, Dieter Fox, Gavriel State
 - Primary track: Manipulation, contact, tactile, and dexterity
 - Tier: NEXT
 - Tags: Robotics, dexterous manipulation, sim-to-real, Reinforcement Learning, NVIDIA
-- Official paper: https://research.nvidia.com/publication/2023-06_dextreme-transfer-agile-hand-manipulation-simulation-reality
+- Official paper: https://arxiv.org/abs/2210.13702
 - Full-text retrieval: https://research.nvidia.com/publication/2023-06_dextreme-transfer-agile-hand-manipulation-simulation-reality
 - Code/Project: not identified
 - Paper type: method

@@ -11,7 +11,7 @@
 - Primary track: Planning and control
 - Tier: REFERENCE
 - Tags: Robotics, motion planning, trajectory optimization, collision avoidance
-- Official paper: https://doi.org/10.1177/0278364914528132
+- Official paper: https://api.crossref.org/works/10.1177/0278364914528132
 - Full-text retrieval: https://rll.berkeley.edu/trajopt/ijrr/2013-IJRR-TRAJOPT.pdf
 - Code/Project: https://rll.berkeley.edu/trajopt/
 - Paper type: theory_or_foundation

@@ -7,11 +7,11 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2026 / ICLR
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Jialiang Zhang, Haoran Geng, Yang You, Congyue Deng, Pieter Abbeel, Jitendra Malik, Leonidas Guibas
 - Primary track: RL, IL, offline learning, and robot data
 - Tier: REFERENCE
 - Tags: Robotics, kinematics, action representation, Imitation Learning
-- Official paper: https://openreview.net/forum?id=IZHk6BXBST
+- Official paper: https://proceedings.iclr.cc/paper_files/paper/2026/hash/eb9b18ccb76a1156af5779ffdca1d91f-Abstract-Conference.html
 - Full-text retrieval: https://arxiv.org/pdf/2506.02618
 - Code/Project: not identified
 - Paper type: method

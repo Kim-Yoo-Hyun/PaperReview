@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2022 / CoRL
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Wenlong Huang, Fei Xia, Ted Xiao, Harris Chan, Jacky Liang, Pete Florence, Andy Zeng, Jonathan Tompson, Igor Mordatch, Yevgen Chebotar, Pierre Sermanet, Tomas Jackson, Noah Brown, Linda Luu, Sergey Levine, Karol Hausman, brian ichter
 - Primary track: VLA and generalist robot policies
 - Tier: NEXT
 - Tags: Robotics, LLM planning, feedback, replanning, long-horizon manipulation

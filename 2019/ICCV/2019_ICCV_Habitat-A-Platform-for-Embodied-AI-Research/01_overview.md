@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2019 / ICCV
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Manolis Savva, Abhishek Kadian, Oleksandr Maksymets, Yili Zhao, Erik Wijmans, Bhavana Jain, Julian Straub, Jia Liu, Vladlen Koltun, Jitendra Malik, Devi Parikh, Dhruv Batra
 - Primary track: RL, IL, offline learning, and robot data
 - Tier: CORE
 - Tags: Robotics, Navigation, Embodied AI, Benchmark

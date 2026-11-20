@@ -7,11 +7,11 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2022 / ICLR
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Ilya Kostrikov, Ashvin Nair, Sergey Levine
 - Primary track: RL, IL, offline learning, and robot data
 - Tier: CORE
 - Tags: Robotics, offline reinforcement learning, implicit Q-learning, continuous control
-- Official paper: https://openreview.net/forum?id=68n2s9ZJWF8
+- Official paper: https://iclr.cc/virtual/2022/poster/5941
 - Full-text retrieval: https://arxiv.org/pdf/2110.06169
 - Code/Project: https://github.com/ikostrikov/implicit_q_learning
 - Paper type: method

@@ -7,13 +7,13 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2018 / CoRL
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Peter R. Florence, Lucas Manuelli, Russ Tedrake
 - Primary track: Manipulation, contact, tactile, and dexterity
 - Tier: NEXT
 - Tags: Robotics, manipulation, Dense Descriptors, representation learning
 - Official paper: https://proceedings.mlr.press/v87/florence18a.html
 - Full-text retrieval: https://proceedings.mlr.press/v87/florence18a.html
-- Code/Project: https://dense-object-nets.github.io/
+- Code/Project: https://github.com/RobotLocomotion/pytorch-dense-correspondence
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (13 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 

@@ -7,11 +7,11 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2011 / ICRA
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Mrinal Kalakrishnan, Sachin Chitta, Evangelos Theodorou, Peter Pastor, Stefan Schaal
 - Primary track: Planning and control
 - Tier: REFERENCE
 - Tags: Robotics, motion planning, trajectory optimization, stochastic optimization
-- Official paper: https://doi.org/10.1109/ICRA.2011.5980280
+- Official paper: https://api.crossref.org/works/10.1109/ICRA.2011.5980280
 - Full-text retrieval: https://whiteoak.umd.edu/roswiki/attachments/Papers%282f%29ICRA2011_Kalakrishnan/kalakrishnan_icra2011.pdf
 - Code/Project: https://moveit.github.io/moveit_tutorials/doc/stomp_planner/stomp_planner_tutorial.html
 - Paper type: theory_or_foundation
@@ -19,7 +19,7 @@
 
 ## Why This Paper Is Here
 
-Planning and control의 planning 문제를 이해하기 위해 읽는다. 본문은 We present a new approach to motion planning using a stochastic trajectory optimization framework.를 문제로 두고, In this paper, we present a new approach to motion planning that can deal with general constraints.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+STOMP는 잡음을 더한 궤적들의 비용을 이용해 로봇 동작 계획을 반복 개선한다.
 
 ## Problem and Motivation
 
@@ -51,16 +51,10 @@ Planning and control의 planning 문제를 이해하기 위해 읽는다. 본문
 
 ## Main Claims and Actual Contribution
 
-- **p. 1 / I. INTRODUCTION - extractive body cue:** In this paper, we present a new approach to motion planning that can deal with general constraints.
-- **p. 2 / III. THE STOMP ALGORITHM - extractive body cue:** Inspired by previous work in the probability matching literature [10] as well as recent work in the areas of path integral reinforcement learning [11], we ...
-- **p. 1 / I. INTRODUCTION - extractive body cue:** Our approach involves stochastic trajectory optimization using a series of noisy trajectories.
-- **p. 2 / III. THE STOMP ALGORITHM - extractive body cue:** This allows us to optimize arbitrary costs q(˜θ) for which derivatives are not available, or are non-differentiable or non-smooth.
-- **p. 4 / IV. MOTION PLANNING FOR A ROBOT ARM - extractive body cue:** We address the design of a cost function that allows planning for obstacle avoidance, optimization of task constraints, and minimization of joint torques.
-- **p. 5 / V. EXPERIMENTS - extractive body cue:** The execution times are comparable, even though CHOMP usually requires more iterations to achieve success.
-- **p. 5 / V. EXPERIMENTS - extractive body cue:** The exploration noise magnitude for STOMP, and the gradient descent step size for CHOMP were both tuned to achieve good performance without instability.
-- **p. 4 / V. EXPERIMENTS - extractive body cue:** Hence, performance will vary depending on the initial
+- 표본 궤적의 비용에서 각 시점의 궤적 갱신량을 구한다.
+- 미분하기 어려운 비용을 포함한 경로 계획에 적용한다.
 
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+[저자 원문](https://whiteoak.umd.edu/roswiki/attachments/Papers%282f%29ICRA2011_Kalakrishnan/kalakrishnan_icra2011.pdf)
 
 ## Evaluation Scope
 

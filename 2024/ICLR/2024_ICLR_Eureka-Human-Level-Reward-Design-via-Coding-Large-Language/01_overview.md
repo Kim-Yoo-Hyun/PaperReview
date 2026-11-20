@@ -7,11 +7,11 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2024 / ICLR
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Yecheng Jason Ma, William Liang, Guanzhi Wang, De-An Huang, Osbert Bastani, Dinesh Jayaraman, Yuke Zhu, Jim Fan, anima anandkumar
 - Primary track: RL, IL, offline learning, and robot data
 - Tier: NEXT
 - Tags: Robotics, Reinforcement Learning, Reward Design, Large Language Model, NVIDIA
-- Official paper: https://openreview.net/forum?id=IEduRUO55F
+- Official paper: https://proceedings.iclr.cc/paper_files/paper/2024/hash/70c26937fbf3d4600b69a129031b66ec-Abstract-Conference.html
 - Full-text retrieval: https://openreview.net/forum?id=IEduRUO55F
 - Code/Project: https://eureka-research.github.io/
 - Paper type: method

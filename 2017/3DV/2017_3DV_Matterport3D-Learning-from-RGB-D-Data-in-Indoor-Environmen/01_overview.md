@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2017 / 3DV
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Angel Chang, Angela Dai, Thomas Funkhouser, Maciej Halber, Matthias Nießner, Manolis Savva, Shuran Song, Andy Zeng, Yinda Zhang
 - Primary track: Robotics-enabling 3D perception
 - Tier: REFERENCE
 - Tags: 3D Vision, Dataset, RGB-D, Navigation
@@ -19,7 +19,7 @@
 
 ## Why This Paper Is Here
 
-Robotics-enabling 3D perception의 benchmark 문제를 이해하기 위해 읽는다. 본문은 Although there has been impressive research progress on this topic, a significant limitation is the availability suitable RGB-D datasets from which models can be trained.를 문제로 두고, In this paper, we introduce Matterport3D, a large-scale RGB-D dataset containing 10,800 panoramic views from 194,400 RGB-D images of 90 building-scale scenes.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+건물 단위 RGB-D 파노라마와 정렬된 3D 주석을 제공해 실내 장면 이해를 평가한다.
 
 ## Problem and Motivation
 
@@ -53,16 +53,10 @@ Robotics-enabling 3D perception의 benchmark 문제를 이해하기 위해 읽�
 
 ## Main Claims and Actual Contribution
 
-- **p. 1 / Abstract - extractive body cue:** In this paper, we introduce Matterport3D, a large-scale RGB-D dataset containing 10,800 panoramic views from 194,400 RGB-D images of 90 building-scale scenes.
-- **p. 4 / 3.3. Properties of the Dataset - extractive body cue:** Providing scans of homes in their entirety enables opportunities for learning about long-range context, which is critical for holistic scene understanding and autonomous navigation.
-- **p. 4 / 3.3. Properties of the Dataset - extractive body cue:** This multiplicity and diversity of views enables opportunities for learning to predict view-dependent surface properties, such as material reflectance [4, 26], and for learning to ...
-- **p. 2 / 1. Introduction - extractive body cue:** The surface normals estimated from highquality depths in diverse scenes allows training models for normal estimation from color images that outperform previous ones.
-- **p. 2 / 1. Introduction - extractive body cue:** The precise global alignment over building scale allows training for state-of-the-art keypoint descriptors that can robustly match keypoints from drastically varying camera views.
-- **p. 9 / Figure/Table caption - extractive body cue:** Table 5: Region-type classification results. Each entry lists the prediction accuracy (percentage correct). By comparing the accuracy between [single] and [pano] we can see an ...
-- **p. 6 / Figure/Table caption - extractive body cue:** Table 1: Keypoint matching results. Error (%) at 95% re- call on ground truth correspondences from the SUN3D test- ing scenes. We see an improvement ...
-- **p. 6 / Figure/Table caption - extractive body cue:** Table 2: View overlap prediction results. Results on SUN3D and Matterport3D dataset measured by normalized discounted cumulative gain. From the comparison we can clearly see ...
+- 동일 건물에서 얻은 다수 시점을 정합하고 카메라 자세·표면 재구성·의미 분할 주석을 제공한다.
+- 표면 법선 예측, 영역 분류와 의미 분할 등 수집 자료로 평가할 수 있는 과제를 실험한다.
 
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+[저자 원문](https://arxiv.org/abs/1709.06158)
 
 ## Evaluation Scope
 

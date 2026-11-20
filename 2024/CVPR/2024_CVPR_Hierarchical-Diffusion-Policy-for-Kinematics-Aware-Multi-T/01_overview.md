@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2024 / CVPR
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Xiao Ma, Sumit Patidar, Iain Haughton, Stephen James
 - Primary track: Manipulation, contact, tactile, and dexterity
 - Tier: REFERENCE
 - Tags: Diffusion, Robotics, Imitation Learning

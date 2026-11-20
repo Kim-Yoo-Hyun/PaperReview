@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2017 / ICML
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Joshua Achiam, David Held, Aviv Tamar, Pieter Abbeel
 - Primary track: RL, IL, offline learning, and robot data
 - Tier: NEXT
 - Tags: Robotics, safe reinforcement learning, constraints, policy optimization

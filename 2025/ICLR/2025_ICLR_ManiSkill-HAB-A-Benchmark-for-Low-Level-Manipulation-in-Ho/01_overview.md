@@ -7,11 +7,11 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / ICLR
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Arth Shukla, Stone Tao, Hao Su
 - Primary track: Manipulation, contact, tactile, and dexterity
 - Tier: REFERENCE
 - Tags: Robotics, Benchmark, home rearrangement, Reinforcement Learning
-- Official paper: https://openreview.net/forum?id=6bKEWevgSd
+- Official paper: https://proceedings.iclr.cc/paper_files/paper/2025/hash/27aa3a0e6d63db269977bb2df5607cb8-Abstract-Conference.html
 - Full-text retrieval: https://arxiv.org/pdf/2412.13211
 - Code/Project: not identified
 - Paper type: benchmark_or_dataset

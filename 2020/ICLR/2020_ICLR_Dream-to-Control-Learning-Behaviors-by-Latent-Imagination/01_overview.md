@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2020 / ICLR
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Danijar Hafner, Timothy Lillicrap, Jimmy Ba, Mohammad Norouzi
 - Primary track: World models, safety, uncertainty, and recovery
 - Tier: NEXT
 - Tags: Robotics, world model, latent imagination, model-based reinforcement learning

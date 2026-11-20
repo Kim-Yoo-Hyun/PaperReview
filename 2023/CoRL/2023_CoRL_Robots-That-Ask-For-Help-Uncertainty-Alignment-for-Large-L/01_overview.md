@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2023 / CoRL
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Allen Z. Ren, Anushri Dixit, Alexandra Bodrova, Sumeet Singh, Stephen Tu, Noah Brown, Peng Xu, Leila Takayama, Fei Xia, Jake Varley, Zhenjia Xu, Dorsa Sadigh, Andy Zeng, Anirudha Majumdar
 - Primary track: World models, safety, uncertainty, and recovery
 - Tier: REFERENCE
 - Tags: Robotics, LLM planning, uncertainty, conformal prediction, human intervention
@@ -19,7 +19,7 @@
 
 ## Why This Paper Is Here
 
-World models, safety, uncertainty, and recovery의 safety 문제를 이해하기 위해 읽는다. 본문은 However, one of the major challenges with current LLMs is their tendency to hallucinate, i.e., to confidently generate outputs that are plausible but incorrect and untethered from reality.를 문제로 두고, Here, we present a novel extension of CP to multi-step settings that tackles this challenge.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+KnowNo는 언어 모델 계획기가 적절한 다음 행동을 확정할 수 없을 때 로봇이 도움을 요청하게 한다.
 
 ## Problem and Motivation
 
@@ -53,16 +53,10 @@ World models, safety, uncertainty, and recovery의 safety 문제를 이해하기
 
 ## Main Claims and Actual Contribution
 
-- **p. 5 / 1 Introduction - extractive body cue:** Here, we present a novel extension of CP to multi-step settings that tackles this challenge.
-- **p. 2 / 1 Introduction - extractive body cue:** We propose KNOWNO- Know When You Don't Know - a framework for aligning the uncertainty of LLM-based planners utilizing the theory of conformal prediction (CP) ...
-- **p. 4 / 1 Introduction - extractive body cue:** We introduce CP below, and then present the different practical settings we consider (possibly involving multiple planning steps and/or multiple correct plans per step).
-- **p. 5 / 1 Introduction - extractive body cue:** Suppose that each data point consists of a sequence of augmented context x = (˜x0,˜x1,...,˜xT-1) and true labels y = (y0,y1,...,yT-1), where T is the ...
-- **p. 6 / 1 Introduction - extractive body cue:** We extend our method and confidence guarantees to this setting for both single- and multi-step problems in Section A3 and Section A4.
-- **p. 8 / 4 Experiments - extractive body cue:** Nonetheless, KnowNo still achieves 1-ϵ target success rate, as the coverage guarantee from CP makes no assumption about the LLM confidences (e.g., calibrated or accurate) ...
-- **p. 2 / Figure/Table caption - extractive body cue:** Figure 1: KNOWNO uses Conformal Prediction (CP) to align the uncertainty of LLM planners. Given a language instruction, an LLM generates possible next steps and ...
-- **p. 7 / 4 Experiments - extractive body cue:** KNOWNO achieves target task success rate consistently.
+- 보정 자료로 다음 행동 후보의 집합을 구성한다.
+- 여러 단계의 계획에서 작업 성공과 도움 요청의 관계를 평가한다.
 
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+[저자 원문](https://proceedings.mlr.press/v229/ren23a.html)
 
 ## Evaluation Scope
 

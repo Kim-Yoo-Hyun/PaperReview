@@ -60,7 +60,7 @@ ZMP preview control → Dynamic WBC/HQP/NMPC → DeepMimic/AMP → PHC/MaskedMim
 | NEXT | [Habitat 2.0: Training Home Assistants to Rearrange their Habitat](../2021/NeurIPS/2021_NeurIPS_Habitat-2.0-Training-Home-Assistants-to-Rearrange-their-Ha/01_overview.md) | 2021 / NeurIPS | `UNREAD` | `FULL_TEXT_CHECKED` |
 | NEXT | [MoManipVLA: Transferring Vision-language-action Models for General Mobile Manipulation](../2025/CVPR/2025_CVPR_MoManipVLA-Transferring-Vision-language-action-Models-for/01_overview.md) | 2025 / CVPR | `UNREAD` | `ABSTRACT_CHECKED` |
 | NEXT | [WholeBodyVLA: Towards Unified Latent VLA for Whole-body Loco-manipulation Control](../2026/ICLR/2026_ICLR_WholeBodyVLA-Towards-Unified-Latent-VLA-for-Whole-body-Loc/01_overview.md) | 2026 / ICLR | `UNREAD` | `ABSTRACT_CHECKED` |
-| NEXT | [TidyBot++: An Open-Source Holonomic Mobile Manipulator for Robot Learning](../2025/CoRL/2025_CoRL_TidyBot%2B%2B-An-Open-Source-Holonomic-Mobile-Manipulator-for/01_overview.md) | 2025 / CoRL | `UNREAD` | `ABSTRACT_CHECKED` |
+| NEXT | [TidyBot++: An Open-Source Holonomic Mobile Manipulator for Robot Learning](../2024/CoRL/2024_CoRL_TidyBot%2B%2B-An-Open-Source-Holonomic-Mobile-Manipulator-for/01_overview.md) | 2024 / CoRL | `UNREAD` | `ABSTRACT_CHECKED` |
 | NEXT | [Mobi-π: Mobilizing Your Robot Learning Policy](../2025/CoRL/2025_CoRL_Mobi-pi-Mobilizing-Your-Robot-Learning-Policy/01_overview.md) | 2025 / CoRL | `UNREAD` | `ABSTRACT_CHECKED` |
 | NEXT | [SAGA: Open-World Mobile Manipulation via Structured Affordance Grounding](../2026/RA-L/2026_RA-L_SAGA-Open-World-Mobile-Manipulation-via-Structured-Afforda/01_overview.md) | 2026 / RA-L | `UNREAD` | `ABSTRACT_CHECKED` |
 | NEXT | [MoMa-Kitchen: A 100K+ Benchmark for Affordance-Grounded Last-Mile Navigation in Mobile Manipulation](../2025/ICCV/2025_ICCV_MoMa-Kitchen-A-100K%2B-Benchmark-for-Affordance-Grounded-Las/01_overview.md) | 2025 / ICCV | `UNREAD` | `ABSTRACT_CHECKED` |
@@ -140,7 +140,7 @@ Humanoid를 별도 taxonomy로 분리하지 않고, control·adaptation·imitati
 
 > Researcher interpretation / CURATION-HYPOTHESIS. 신규 노트는 abstract/project 기반이며 아래 연결은 정독·실험 결과나 직접 citation 관계의 확인이 아니다.
 
-[TidyBot++](../2025/CoRL/2025_CoRL_TidyBot%2B%2B-An-Open-Source-Holonomic-Mobile-Manipulator-for/01_overview.md)는 Mobile ALOHA와 비교할 holonomic base·teleoperation 플랫폼이다. 다양한 arm을 지원하는 설계와 모든 arm 조합의 실증은 구분한다. Base의 planar 자유도와 reachability가 달라지면 같은 언어 과제도 action 난도가 달라질 수 있다.
+[TidyBot++](../2024/CoRL/2024_CoRL_TidyBot%2B%2B-An-Open-Source-Holonomic-Mobile-Manipulator-for/01_overview.md)는 Mobile ALOHA와 비교할 holonomic base·teleoperation 플랫폼이다. 다양한 arm을 지원하는 설계와 모든 arm 조합의 실증은 구분한다. Base의 planar 자유도와 reachability가 달라지면 같은 언어 과제도 action 난도가 달라질 수 있다.
 
 Cross-embodiment 비교에서는 base/arm action 단위·제어 주기·시연 비용·충돌 제약을 먼저 맞춘다. 플랫폼 공개만으로 policy transfer나 clone 후 실행 가능성을 입증하지 않는다.
 

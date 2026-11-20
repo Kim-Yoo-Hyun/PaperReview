@@ -7,11 +7,11 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2021 / ACM Transactions on Graphics
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Xue Bin Peng, Ze Ma, Pieter Abbeel, Sergey Levine, Angjoo Kanazawa
 - Primary track: Locomotion, whole-body, mobile manipulation, and humanoids
 - Tier: REFERENCE
 - Tags: Robotics, humanoid, Reinforcement Learning, motion imitation, whole-body control
-- Official paper: https://doi.org/10.1145/3450626.3459670
+- Official paper: https://xbpeng.github.io/projects/AMP/
 - Full-text retrieval: https://doi.org/10.1145/3450626.3459670
 - Code/Project: https://xbpeng.github.io/projects/AMP/
 - Paper type: method

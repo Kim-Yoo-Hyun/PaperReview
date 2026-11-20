@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2026 / CVPR
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Seungjun Lee, Zihan Wang, Yunsong Wang, Gim Hee Lee
 - Primary track: Robotics-enabling 3D perception
 - Tier: REFERENCE
 - Tags: Gaussian Splatting, open-vocabulary, semantic

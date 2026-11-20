@@ -7,12 +7,12 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / ICLR
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Xiang Li, Cristina Mata, Jongwoo Park, Kumara Kahatapitiya, Yoo Jang, Jinghuan Shang, Kanchana Ranasinghe, Ryan Burgert, Mu Cai, Yong Jae Lee, Michael Ryoo
 - Primary track: VLA and generalist robot policies
 - Tier: REFERENCE
 - Tags: Vision-Language Model, Robotics
-- Official paper: https://openreview.net/forum?id=iVxxgZlXh6
-- Full-text retrieval: https://chatpaper.com/api/v1/articles/download/113062
+- Official paper: https://proceedings.iclr.cc/paper_files/paper/2025/hash/909f526db5127f8bd8158af32d9e313a-Abstract-Conference.html
+- Full-text retrieval: https://proceedings.iclr.cc/paper_files/paper/2025/file/909f526db5127f8bd8158af32d9e313a-Paper-Conference.pdf
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (47 pages; PyMuPDF text; title-token overlap first two pages=1.0)

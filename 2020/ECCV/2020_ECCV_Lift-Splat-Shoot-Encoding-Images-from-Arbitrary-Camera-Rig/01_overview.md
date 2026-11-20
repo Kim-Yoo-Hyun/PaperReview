@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2020 / ECCV
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Jonah Philion, Sanja Fidler
 - Primary track: Robotics-enabling 3D perception
 - Tier: REFERENCE
 - Tags: 3D Vision, BEV, sensor fusion, camera
@@ -19,7 +19,7 @@
 
 ## Why This Paper Is Here
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 As a result, the model cannot learn in a data-driven way what the best way is to fuse information across cameras.를 문제로 두고, In this section, we present our approach for learning bird's-eye-view representations of scenes from image data captured by an arbitrary camera rig.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+Lift-Splat-Shoot는 여러 카메라의 영상을 하나의 조감도 좌표계에 통합한다.
 
 ## Problem and Motivation
 
@@ -53,16 +53,10 @@ Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 �
 
 ## Main Claims and Actual Contribution
 
-- **p. 4 / 3 Method - extractive body cue:** In this section, we present our approach for learning bird's-eye-view representations of scenes from image data captured by an arbitrary camera rig.
-- **p. 2 / 1 Introduction - extractive body cue:** We propose a model named "Lift-Splat" that preserves the 3 symmetries identified above by design while also being end-to-end differentiable.
-- **p. 2 / 1 Introduction - extractive body cue:** In Section 3.3, we propose a method for "shooting" proposal trajectories into this reference plane for interpretable end-to-end motion planning.
-- **p. 3 / 1 Introduction - extractive body cue:** We present empirical evidence in Sec 5 that our model learns an effective mechanism for fusing information from a distribution of possible inputs.
-- **p. 6 / 3 Method - extractive body cue:** 3.3 Shoot: Motion Planning Key aspect of our Lift-Splat model is that it enables end-to-end cost map learning for motion planning from camera-only input.
-- **p. 10 / Figure/Table caption - extractive body cue:** Table 2: Map IOU in BEV frame 5.2 Segmentation We demonstrate that our Lift-Splat model is able to learn semantic 3D repre- sentations given supervision ...
-- **p. 4 / Figure/Table caption - extractive body cue:** Fig. 3: We visualize the "lift" step of our model. For each pixel, we predict a categorical distribution over depth α ∈△D-1 (left) and a ...
-- **p. 11 / 6 DOF localization and rasterize - extractive body cue:** In Table 3, we show that the performance of our model for car segmentation improves when additional cameras are available at test time without any ...
+- 각 카메라의 영상 특징을 예상 깊이를 따라 3D로 펼쳐 올린다.
+- 공통 조감도에서 여러 시점의 특징을 모아 하류 과제에 사용한다.
 
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+[저자 원문](https://arxiv.org/abs/2008.05711)
 
 ## Evaluation Scope
 

@@ -7,13 +7,13 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2023 / arXiv
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Bo Liu, Yuqian Jiang, Xiaohan Zhang, Qiang Liu, Shiqi Zhang, Joydeep Biswas, Peter Stone
 - Primary track: Planning and control
 - Tier: REFERENCE
 - Tags: Robotics, LLM planning, classical planning, PDDL, plan verification
 - Official paper: https://arxiv.org/abs/2304.11477
 - Full-text retrieval: https://arxiv.org/pdf/2304.11477
-- Code/Project: https://github.com/Cranial-XIX/llm-p
+- Code/Project: https://github.com/Cranial-XIX/llm-pddl
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 

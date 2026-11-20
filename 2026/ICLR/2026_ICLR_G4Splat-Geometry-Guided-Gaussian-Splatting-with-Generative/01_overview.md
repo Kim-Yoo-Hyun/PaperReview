@@ -7,12 +7,12 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2026 / ICLR
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Junfeng Ni, Yixin Chen, Zhifei Yang, Yu Liu, Ruijie Lu, Song-Chun Zhu, Siyuan Huang
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
 - Tags: Gaussian Splatting, Diffusion, Generation, 3D Vision
-- Official paper: https://openreview.net/forum?id=kdPmsMVhZf
-- Full-text retrieval: https://chatpaper.com/api/v1/articles/download/247273
+- Official paper: https://proceedings.iclr.cc/paper_files/paper/2026/hash/e0ac27bf3327c9cb99cc5f548db4f73a-Abstract-Conference.html
+- Full-text retrieval: https://proceedings.iclr.cc/paper_files/paper/2026/file/e0ac27bf3327c9cb99cc5f548db4f73a-Paper-Conference.pdf
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (28 pages; PyMuPDF text; title-token overlap first two pages=1.0)

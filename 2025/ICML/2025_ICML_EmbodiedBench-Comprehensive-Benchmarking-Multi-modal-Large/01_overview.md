@@ -7,12 +7,12 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / ICML
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Rui Yang, Hanyang Chen, Junyu Zhang, Mark Zhao, Cheng Qian, Kangrui Wang, Qineng Wang, Teja Venkat Koripella, Marziyeh Movahedi, Manling Li, Heng Ji, Huan Zhang, Tong Zhang
 - Primary track: Benchmarks and Datasets
 - Tier: REFERENCE
 - Tags: Benchmark
-- Official paper: https://openreview.net/forum?id=DgGF2LEBPS
-- Full-text retrieval: https://chatpaper.com/api/v1/articles/download/164956
+- Official paper: https://proceedings.mlr.press/v267/yang25f.html
+- Full-text retrieval: https://raw.githubusercontent.com/mlresearch/v267/main/assets/yang25f/yang25f.pdf
 - Code/Project: not identified
 - Paper type: benchmark_or_dataset
 - Source audit: full-text PDF body checked on 2026-09-03 (56 pages; PyMuPDF text; title-token overlap first two pages=1.0)

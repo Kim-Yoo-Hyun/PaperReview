@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2021 / ICCV
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Mathilde Caron, Hugo Touvron, Ishan Misra, Hervé Jégou, Julien Mairal, Piotr Bojanowski, Armand Joulin
 - Primary track: Foundations: Vision and Language Models
 - Tier: REFERENCE
 - Tags: Vision Foundation Model, self-supervised, representation

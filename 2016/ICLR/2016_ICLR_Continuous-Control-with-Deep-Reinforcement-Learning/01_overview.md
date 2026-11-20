@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2016 / ICLR
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Timothy P. Lillicrap, Jonathan J. Hunt, Alexander Pritzel, Nicolas Heess, Tom Erez, Yuval Tassa, David Silver, Daan Wierstra
 - Primary track: RL, IL, offline learning, and robot data
 - Tier: NEXT
 - Tags: Robotics, Reinforcement Learning, continuous control, actor-critic
@@ -21,7 +21,7 @@
 
 ## Why This Paper Is Here
 
-RL, IL, offline learning, and robot data의 rl 문제를 이해하기 위해 읽는다. 본문은 However, this has many limitations, most notably the curse of dimensionality: the number of actions increases exponentially with the number of degrees of freedom.를 문제로 두고, In this work we present a model-free, off-policy actor-critic algorithm using deep function approximators that can learn policies in high-dimensional, continuous action spaces.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+DDPG는 결정론적 정책과 행동가치 함수를 함께 학습해 고차원 연속 행동을 제어한다.
 
 ## Problem and Motivation
 
@@ -55,16 +55,10 @@ RL, IL, offline learning, and robot data의 rl 문제를 이해하기 위해 읽
 
 ## Main Claims and Actual Contribution
 
-- **p. 1 / 1 INTRODUCTION - extractive body cue:** In this work we present a model-free, off-policy actor-critic algorithm using deep function approximators that can learn policies in high-dimensional, continuous action spaces.
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** In order to evaluate our method we constructed a variety of challenging physical control problems that involve complex multi-joint movements, unstable and rich contact dynamics, ...
-- **p. 1 / ABSTRACT - extractive body cue:** We present an actor-critic, model-free algorithm based on the deterministic policy gradient that can operate over continuous action spaces.
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** However, as we show below, a naive application of this actor-critic method with neural function approximators is unstable for challenging problems.
-- **p. 3 / 2 BACKGROUND - extractive body cue:** Our contribution here is to provide modifications to DPG, inspired by the success of DQN, which allow it to use neural network function approximators to ...
-- **p. 7 / Figure/Table caption - extractive body cue:** Table 1: Performance after training across all environments for at most 2.5 million steps. We report both the average and best observed (across 5 runs). ...
-- **p. 5 / 4 RESULTS - extractive body cue:** We normalized the scores using two baselines.
-- **p. 5 / 4 RESULTS - extractive body cue:** We also report results with components of our algorithm (i.e. the target network or batch normalization) removed.
+- 경험 재생을 사용하는 오프폴리시 actor–critic을 구성한다.
+- 연속 제어 과제에서 심층 함수 근사를 이용한 학습을 비교한다.
 
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+[저자 원문](https://arxiv.org/abs/1509.02971)
 
 ## Evaluation Scope
 

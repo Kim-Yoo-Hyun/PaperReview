@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2020 / NeurIPS
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Fabian Fuchs, Daniel Worrall, Volker Fischer, Max Welling
 - Primary track: Robotics-enabling 3D perception
 - Tier: REFERENCE
 - Tags: equivariant, 3D geometry, Transformer
@@ -19,7 +19,7 @@
 
 ## Why This Paper Is Here
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 However, their generality of application means that for specific tasks, knowledge of existing underlying structure is unused.를 문제로 두고, In this paper, we propose the SE(3)-Transformer shown in Fig.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+SE(3)-Transformer는 입력 점들의 3차원 회전·이동에 대해 지정된 방식으로 변환되는 특징을 어텐션으로 학습한다.
 
 ## Problem and Motivation
 
@@ -53,16 +53,10 @@ Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 �
 
 ## Main Claims and Actual Contribution
 
-- **p. 1 / 1 Introduction - extractive body cue:** In this paper, we propose the SE(3)-Transformer shown in Fig.
-- **p. 5 / 3 Method - extractive body cue:** Here, we present the SE(3)-Transformer.
-- **p. 5 / 3 Method - extractive body cue:** This mechanism consists of a normalised inner product between a query vector qi 5
-- **p. 6 / 3 Method - extractive body cue:** Attentive: We propose an extension of linear self-interaction, attentive self-interaction, combining self-interaction and nonlinearity.
-- **p. 8 / 4 Experiments - extractive body cue:** If both training and test set are not rotated (x = 0 in a), breaking the symmetry of the SE(3)-Transformer by providing the z-component of ...
-- **p. 7 / 4 Experiments - extractive body cue:** Our model outperforms both an attention-based, but not rotation-equivariant approach (Set Transformer) and a equivariant approach which does not levarage attention (Tensor Field).
-- **p. 22 / Figure/Table caption - extractive body cue:** Figure 7: Attention block for the QM9 dataset. Each component is listed with a tuple of numbers representing the output feature types and multiplicities, so ...
-- **p. 8 / 4 Experiments - extractive body cue:** This results in a performance loss when deploying a fully SO(3) invariant model (see Fig.
+- 대칭 조건을 만족하는 특징과 어텐션 가중치를 구성한다.
+- 기하학적 대칭을 활용하는 점 집합 예측 과제에서 성능을 평가한다.
 
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+[저자 원문](https://proceedings.neurips.cc/paper_files/paper/2020/hash/15231a7ce4ba789d13b722cc5c955834-Abstract.html)
 
 ## Evaluation Scope
 

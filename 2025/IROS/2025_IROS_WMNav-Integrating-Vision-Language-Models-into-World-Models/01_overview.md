@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / IROS
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Dujun Nie, Xianda Guo, Yiqun Duan, Ruijun Zhang, Long Chen
 - Primary track: World models, safety, uncertainty, and recovery
 - Tier: NEXT
 - Tags: Vision-Language Model, Navigation, Reinforcement Learning

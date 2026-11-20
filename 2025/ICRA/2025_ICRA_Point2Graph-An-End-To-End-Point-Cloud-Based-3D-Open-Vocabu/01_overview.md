@@ -7,11 +7,11 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / ICRA
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Yifan Xu, Ziming Luo, Qianwei Wang, Vineet Kamat, Carol Menassa
 - Primary track: Robotics-enabling 3D perception
 - Tier: REFERENCE
 - Tags: Robotics, 3D Vision, Navigation, Graph Reasoning, semantic
-- Official paper: https://www.proceedings.com/content/081/081087webtoc.pdf
+- Official paper: https://api.crossref.org/works/10.1109/icra55743.2025.11127471
 - Full-text retrieval: https://arxiv.org/pdf/2409.10350v1
 - Code/Project: not identified
 - Paper type: method

@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2022 / ICML
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Junnan Li, Dongxu Li, Caiming Xiong, Steven Hoi
 - Primary track: Foundations: Vision and Language Models
 - Tier: REFERENCE
 - Tags: Vision-Language Model, alignment, Generation
@@ -19,7 +19,7 @@
 
 ## Why This Paper Is Here
 
-Foundations: Vision and Language Models의 upstream 문제를 이해하기 위해 읽는다. 본문은 However, existing methods have two major limitations: (1) Model perspective: most methods either adopt an encoder-based model (Radford et al., 2021; Li et al., 2021a), or an encoder-decoder (Cho et al., 2021; ...를 문제로 두고, To this end, we propose BLIP: Bootstrapping LanguageImage Pre-training for unified vision-language understanding and generation.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+BLIP은 영상과 문장의 이해·생성을 함께 사전학습하고, 잡음이 있는 웹 설명을 생성·필터링한다.
 
 ## Problem and Motivation
 
@@ -53,16 +53,10 @@ Foundations: Vision and Language Models의 upstream 문제를 이해하기 위�
 
 ## Main Claims and Actual Contribution
 
-- **p. 1 / 1. Introduction - extractive body cue:** To this end, we propose BLIP: Bootstrapping LanguageImage Pre-training for unified vision-language understanding and generation.
-- **p. 2 / 1. Introduction - extractive body cue:** We propose multimodal mixture of encoder-decoder, a unified vision-language model which can operate in one of the three functionalities: (1) Unimodal encoder is trained with ...
-- **p. 3 / 3. Method - extractive body cue:** We propose BLIP, a unified VLP framework to learn from noisy image-text pairs.
-- **p. 3 / 3.1. Model Architecture - extractive body cue:** In order to pre-train a unified model with both understanding and generation capabilities, we propose multimodal mixture of encoder-decoder (MED), a multi-task model which can ...
-- **p. 4 / 3.3. CapFilt - extractive body cue:** We propose Captioning and Filtering (CapFilt), a new method to improve the quality of the text corpus.
-- **p. 8 / Figure/Table caption - extractive body cue:** Table 11. Comparisons with state-of-the-art methods for video question answering. We report top-1 test accuracy on two datasets. Despite the domain difference and lack of ...
-- **p. 4 / 4.2. Effect of CapFilt - extractive body cue:** Furthermore, by using a large captioner and filter with ViT-L, performance of the base model can also be improved.
-- **p. 4 / 4.2. Effect of CapFilt - extractive body cue:** When only the captioner or the filter is applied to the dataset with 14M images, performance improvement can be observed.
+- 캡션 생성기가 새 설명을 제안하고 필터가 맞지 않는 영상·문장 쌍을 제거한다.
+- 같은 사전학습 표현을 시각언어 이해와 생성 과제에 적용한다.
 
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+[저자 원문](https://proceedings.mlr.press/v162/li22n.html)
 
 ## Evaluation Scope
 

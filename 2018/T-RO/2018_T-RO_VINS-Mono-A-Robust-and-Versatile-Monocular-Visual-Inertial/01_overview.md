@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2018 / T-RO
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Tong Qin, Peiliang Li, Shaojie Shen
 - Primary track: Robotics-enabling 3D perception
 - Tier: REFERENCE
 - Tags: Robotics, state estimation, visual-inertial odometry, SLAM, sensor fusion, flight control

@@ -7,11 +7,11 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2026 / ICML
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Shichao Fan, Kun Wu, Zhengping Che, Xinhua Wang, Di Wu, Fei Liao, Ning Liu, Yixue Zhang, Zhen Zhao, Zhiyuan Xu, Meng Li, Qingjie Liu, Shanghang Zhang, Min Wan, Jian Tang
 - Primary track: VLA and generalist robot policies
 - Tier: REFERENCE
 - Tags: VLA, Vision-Language Model, Imitation Learning
-- Official paper: https://openreview.net/forum?id=JO0IsGJg16
+- Official paper: https://icml.cc/virtual/2026/oral/71118
 - Full-text retrieval: https://openreview.net/pdf/181715f87df4dd5677ebf2619dcb456e071c95dd.pdf
 - Code/Project: not identified
 - Paper type: method

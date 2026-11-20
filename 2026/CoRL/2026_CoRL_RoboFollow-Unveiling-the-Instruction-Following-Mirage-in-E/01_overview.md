@@ -3,14 +3,15 @@
 > Evidence maturity: `ABSTRACT_CHECKED`. abstract 기반 — 본문 수동 확인 필요.
 > 자동 작성 노트는 실제 정독을 뜻하지 않는다. 사용자 reading status는 UNREAD로 시작한다.
 
-- Year/Venue: 2026 / CoRL
+- Year/Venue
+- Authors: Chang Guo, Yukun Xie, Bohan Tan, Zheng Chang, Zhaokai Yin, Qianli Ma, Yingqiao Wang, Chao Liang, Zhipeng Zhang
 - Category: Benchmarks and Datasets
 - Primary track: RL, IL, offline learning, and robot data
 - Tier: NEXT
 - Tags: robot-evaluation, Benchmark, policy-comparison
 - Aliases:
-- Official paper: https://openreview.net/forum?id=A9AQjk3dAt
-- Venue verification: https://openreview.net/forum?id=A9AQjk3dAt
+- Official paper: https://arxiv.org/abs/2609.25636
+- Venue verification: https://www.corl.org/program/accepted-papers
 - Code/Project: https://github.com/AutoLab-SAI-SJTU/RoboFollow
 - Code: https://github.com/AutoLab-SAI-SJTU/RoboFollow
 - Source audit: 2026-10-22 공식 abstract/arXiv abstract와 publication metadata 확인. 새 5개 note는 abstract 수준의 분석이며 상세 본문·코드 감사는 기존 buildup dossier의 명시 범위만 따른다. 공식 OpenReview 검색 API의 Conference venueid·CoRL 2026 Poster를 확인했다.

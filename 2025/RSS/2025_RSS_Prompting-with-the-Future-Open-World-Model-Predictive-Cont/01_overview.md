@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / RSS
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Chuanruo Ning, Kuan Fang, Wei-Chiu Ma
 - Primary track: World models, safety, uncertainty, and recovery
 - Tier: NEXT
 - Tags: Robotics, world model, model predictive control, digital twin, VLM, contact-rich manipulation

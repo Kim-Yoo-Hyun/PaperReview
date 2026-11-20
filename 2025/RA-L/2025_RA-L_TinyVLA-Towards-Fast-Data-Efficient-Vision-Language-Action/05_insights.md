@@ -1,4 +1,4 @@
-# Insights — TinyVLA: Towards Fast, Data-Efficient Vision-Language-Action Models for Robotic Manipulation
+# Insights — TinyVLA: Toward Fast, Data-Efficient Vision-Language-Action Models for Robotic Manipulation
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.

@@ -1,4 +1,4 @@
-# Method - UMPNet: Universal Manipulation Policy Network for Articulated Objects
+# Method - Universal Manipulation Policy Network for Articulated Objects
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.

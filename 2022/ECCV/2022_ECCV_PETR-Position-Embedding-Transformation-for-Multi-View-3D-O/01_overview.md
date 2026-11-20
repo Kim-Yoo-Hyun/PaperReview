@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2022 / ECCV
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Yingfei Liu, Tiancai Wang, Xiangyu Zhang, Jian Sun
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
 - Tags: 3D Vision

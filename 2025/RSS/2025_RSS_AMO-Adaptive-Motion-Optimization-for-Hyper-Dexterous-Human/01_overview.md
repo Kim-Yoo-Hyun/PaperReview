@@ -3,7 +3,8 @@
 > Evidence maturity: `FULL_TEXT_CHECKED`.
 > Source audit: 2026-11-16: RSS metadata·arXiv v1 §III–V/Table II–IV·공식 코드로 OCR/설명 교정. 과거2026-09-03 PDF review 기록은 보존; 사용자 reading status 변경 없음.
 
-- Year/Venue: 2025 / RSS
+- Year/Venue
+- Authors: Jialong Li, Xuxin Cheng, Tianshu Huang, Shiqi Yang, Ri-Zhao Qiu, Xiaolong Wang
 - Primary track: Locomotion, whole-body, mobile manipulation, and humanoids
 - Tags: Robotics, humanoid, whole-body control, trajectory optimization, sim-to-real
 - Official paper: https://www.roboticsproceedings.org/rss21/p061.html

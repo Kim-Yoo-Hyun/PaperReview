@@ -7,11 +7,11 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / RSS
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Chuning Zhu, Raymond Yu, Siyuan Feng, Benjamin Burchfiel, Paarth Shah, Abhishek Gupta
 - Primary track: World models, safety, uncertainty, and recovery
 - Tier: NEXT
 - Tags: Robotics, VLA, world model, video diffusion, action diffusion, robot data
-- Official paper: https://roboticsconference.org/2025/program/papers/15/
+- Official paper: https://www.roboticsproceedings.org/rss21/p015.html
 - Full-text retrieval: https://arxiv.org/pdf/2504.02792
 - Code/Project: https://weirdlabuw.github.io/uwm/
 - Paper type: benchmark_or_dataset

@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2014 / NeurIPS
-- Authors: not duplicated here when not verified in the registry source
+- Authors: David Eigen, Christian Puhrsch, Rob Fergus
 - Primary track: Robotics-enabling 3D perception
 - Tier: REFERENCE
 - Tags: 3D Vision, monocular depth, geometry
@@ -19,7 +19,7 @@
 
 ## Why This Paper Is Here
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 Moreover, the task is inherently ambiguous, and a technically ill-posed problem: Given an image, an infinite number of possible world scenes may have produced it.를 문제로 두고, In this paper we present a new approach for estimating depth from a single image.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+단안 깊이 예측을 전체 장면 구조 추정과 국소 정제의 두 단계로 학습한다.
 
 ## Problem and Motivation
 
@@ -53,16 +53,10 @@ Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 �
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1 Introduction - extractive body cue:** In this paper we present a new approach for estimating depth from a single image.
-- **p. 3 / 3 Approach - extractive body cue:** The fine-scale network stack consists of convolutional layers only, along with one pooling stage for the first layer edge features.
-- **p. 4 / 3 Approach - extractive body cue:** In addition to the scale-invariant error, we also measure the performance of our method according to several error metrics have been proposed in prior works, ...
-- **p. 1 / 1 Introduction - extractive body cue:** Thus, stereo depth estimation can be reduced to developing robust image point correspondences - which can often be found using local appearance features.
-- **p. 2 / 3 Approach - extractive body cue:** Similarly, the lower and middle layers are designed to combine information from different parts of the image through max-pooling operations to a small spatial dimension.
-- **p. 7 / Figure/Table caption - extractive body cue:** Figure 3: Qualitative comparison of Make3D, our method trained with l2 loss (λ = 0), and our method trained with both l2 and scale-invariant loss ...
-- **p. 6 / 5 Results - extractive body cue:** Our system achieves the best performance on all metrics, obtaining an average 35% relative gain compared to the runner-up.
-- **p. 6 / 5 Results - extractive body cue:** While we did not observe numeric gains using λ = 0.5 over λ = 0, it did produce slight qualitative improvements in the more detailed ...
+- 전역 네트워크가 단일 영상에서 대략적인 깊이 지도를 추정한다.
+- 더 세밀한 네트워크가 영상 단서와 전역 예측을 함께 사용해 결과를 정제한다.
 
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+[저자 원문](https://proceedings.neurips.cc/paper_files/paper/2014/hash/91c56ce4a249fae5419b90cba831e303-Abstract.html)
 
 ## Evaluation Scope
 

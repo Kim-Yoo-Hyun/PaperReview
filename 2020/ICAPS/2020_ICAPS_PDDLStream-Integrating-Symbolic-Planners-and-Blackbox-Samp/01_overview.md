@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2020 / ICAPS
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Caelan Reed Garrett, Tomás Lozano-Pérez, Leslie Pack Kaelbling
 - Primary track: Planning and control
 - Tier: NEXT
 - Tags: Robotics, task and motion planning, symbolic planning, sampling, manipulation planning

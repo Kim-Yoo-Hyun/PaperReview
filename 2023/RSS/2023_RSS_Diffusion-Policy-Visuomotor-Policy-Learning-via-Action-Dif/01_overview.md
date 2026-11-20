@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2023 / RSS
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Cheng Chi, Siyuan Feng, Yilun Du, Zhenjia Xu, Eric Cousineau, Benjamin CM Burchfiel, Shuran Song
 - Primary track: RL, IL, offline learning, and robot data
 - Tier: CORE
 - Tags: Diffusion, Imitation Learning, Robotics
@@ -19,7 +19,7 @@
 
 ## Why This Paper Is Here
 
-RL, IL, offline learning, and robot data의 il 문제를 이해하기 위해 읽는다. 본문은 (2022) fails to commit to a single mode due to its lack of temporal action consistency.를 문제로 두고, To successfully employ diffusion models for visuomotor policy learning, we present the following technical contributions that enhance the performance of Diffusion Policy and unlock its full potential on physical robots: • Closed-loop ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+Diffusion Policy는 시각 관측을 조건으로 행동 시퀀스를 반복 복원하고, 실행 중 새 관측을 받아 후속 행동을 다시 계획한다.
 
 ## Problem and Motivation
 
@@ -52,16 +52,10 @@ RL, IL, offline learning, and robot data의 il 문제를 이해하기 위해 읽
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1 Introduction - extractive body cue:** To successfully employ diffusion models for visuomotor policy learning, we present the following technical contributions that enhance the performance of Diffusion Policy and unlock its ...
-- **p. 4 / 1 Introduction - extractive body cue:** (2020), we introduce a novel transformer-based DDPM which adopts the transformer architecture from minGPT Shafiullah et al.
-- **p. 2 / 1 Introduction - extractive body cue:** We introduce a visionconditioned diffusion policy, where the visual observations are treated as conditioning instead of a part of the joint data distribution.
-- **p. 4 / 1 Introduction - extractive body cue:** Third, we removed inpainting-based goal state conditioning due to incompatibility with our framework utilizing a receding prediction horizon.
-- **p. 1 / 1 Introduction - extractive body cue:** This formulation allows robot policies to inherit several key properties from diffusion models - significantly improving performance. • Expressing multimodal action distributions.
-- **p. 7 / Figure/Table caption - extractive body cue:** Table 1. Behavior Cloning Benchmark (State Policy) We present success rates with different checkpoint selection methods in the format of (max performance) / (average of ...
-- **p. 9 / Figure/Table caption - extractive body cue:** Tab. 6. Diffusion Policy with R3M achieves an 80% success rate but predicts jittery actions and is more likely to get stuck compared to the ...
-- **p. 6 / 5 Evaluation - extractive body cue:** We found Diffusion Policy to consistently outperform the prior state-of-the-art on all of the tested benchmarks, with an average success-rate improvement of 46.9%.
+- 조건부 잡음 제거로 다봉 행동 분포를 표현한다.
+- 다수의 조작 과제에서 시연으로 학습한 정책을 기존 방법과 비교한다.
 
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+[저자 원문](https://www.roboticsproceedings.org/rss19/p026.html)
 
 ## Evaluation Scope
 

@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2023 / RSS
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Krishna Murthy Jatavallabhula, Alihusein Kuwajerwala, Qiao Gu, Mohd Omama, Ganesh Iyer, Soroush Saryazdi, Tao Chen, Alaa Maalouf, Shuang Li, Nikhil Varma Keetha, Ayush Tewari, Joshua Tenenbaum, Celso de Melo, Madhava Krishna, Liam Paull, Florian Shkurti, Antonio Torralba
 - Primary track: Robotics-enabling 3D perception
 - Tier: CORE
 - Tags: sensor fusion, open-vocabulary, SLAM, Robotics

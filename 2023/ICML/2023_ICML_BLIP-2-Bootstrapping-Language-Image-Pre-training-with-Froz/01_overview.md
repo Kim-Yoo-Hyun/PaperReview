@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2023 / ICML
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Junnan Li, Dongxu Li, Silvio Savarese, Steven Hoi
 - Primary track: Foundations: Vision and Language Models
 - Tier: REFERENCE
 - Tags: Vision-Language Model, LLM, alignment
@@ -19,7 +19,7 @@
 
 ## Why This Paper Is Here
 
-Foundations: Vision and Language Models의 upstream 문제를 이해하기 위해 읽는다. 본문은 We pre-train a lightweight Querying Transformer following a two-stage strategy to bridge the modality gap.를 문제로 두고, To achieve effective vision-language alignment with frozen unimodal models, we propose a Querying Transformer (QFormer) pre-trained with a new two-stage pre-training strategy.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+BLIP-2는 고정된 이미지 인코더와 대형 언어 모델 사이에서 작은 질의 Transformer를 학습한다.
 
 ## Problem and Motivation
 
@@ -53,16 +53,10 @@ Foundations: Vision and Language Models의 upstream 문제를 이해하기 위�
 
 ## Main Claims and Actual Contribution
 
-- **p. 1 / 1. Introduction - extractive body cue:** To achieve effective vision-language alignment with frozen unimodal models, we propose a Querying Transformer (QFormer) pre-trained with a new two-stage pre-training strategy.
-- **p. 1 / 1. Introduction - extractive body cue:** In this paper, we propose a generic and Querying Transformer Q-Former Large Language Model (LLM) Queries Text Image Encoder Bootstrapping Pre-trained Image Models Bootstrapping Pre-trained ...
-- **p. 2 / 3.1. Model Architecture - extractive body cue:** We propose Q-Former as the trainable module to bridge the gap between a frozen image encoder and a frozen LLM.
-- **p. 2 / 3. Method - extractive body cue:** We propose BLIP-2, a new vision-language pre-training method that bootstraps from frozen pre-trained unimodal models.
-- **p. 6 / 4. Experiment - extractive body cue:** Compared to previous state-of-the-art models, BLIP-2 achieves improved performance while requiring substantially fewer number of trainable parameters during vision-language pre-training.
-- **p. 6 / 4.1. Instructed Zero-shot Image-to-Text Generation - extractive body cue:** (2) Within the same LLM family, larger models outperform smaller ones.
-- **p. 7 / Figure/Table caption - extractive body cue:** Table 4. Comparison with state-of-the-art models fine-tuned for visual question answering. of-the-art performance with significant improvement on NoCaps over existing methods, demonstrating strong gener- alization ...
-- **p. 8 / Figure/Table caption - extractive body cue:** Table 6. The image-grounded text generation (ITG) loss improves image-text retrieval performance by enforcing the queries to extract language-relevant visual features.
+- 시각 표현과 언어 표현을 연결하는 부분을 두 단계로 사전학습한다.
+- 고정된 기반 모델을 사용해 영상 이해와 언어 생성을 평가한다.
 
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+[저자 원문](https://proceedings.mlr.press/v202/li23q.html)
 
 ## Evaluation Scope
 

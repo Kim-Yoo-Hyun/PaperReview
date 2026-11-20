@@ -8,7 +8,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2020 / NeurIPS
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Jonathan Ho, Ajay Jain, Pieter Abbeel
 - Primary track: RL, IL, offline learning, and robot data
 - Tier: CORE
 - Tags: Diffusion, Generation

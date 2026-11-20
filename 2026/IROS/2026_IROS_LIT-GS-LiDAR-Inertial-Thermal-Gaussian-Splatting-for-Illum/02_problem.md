@@ -1,4 +1,4 @@
-# Problem - LIT-GS: LiDAR-Inertial-Thermal Gaussian Splatting for Illumination-Robust Mapping
+# Problem - LIT-GS: LiDAR-Inertial-Thermal 3D Gaussian Splatting for Illumination-Robust Mapping
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.

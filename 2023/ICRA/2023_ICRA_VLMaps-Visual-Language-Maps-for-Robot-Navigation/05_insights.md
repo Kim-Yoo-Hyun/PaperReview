@@ -1,4 +1,4 @@
-# Insights — VLMaps: Visual-Language Maps for Robot Navigation
+# Insights — Visual Language Maps for Robot Navigation
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.

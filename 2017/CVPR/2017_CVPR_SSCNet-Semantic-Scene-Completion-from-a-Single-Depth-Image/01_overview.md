@@ -1,4 +1,4 @@
-# SSCNet: Semantic Scene Completion from a Single Depth Image
+# Semantic Scene Completion From a Single Depth Image
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
 > Analysis basis: full-text PDF body checked on 2026-09-03 (14 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://arxiv.org/abs/1611.08974.
@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2017 / CVPR
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Shuran Song, Fisher Yu, Andy Zeng, Angel X. Chang, Manolis Savva, Thomas Funkhouser
 - Primary track: Robotics-enabling 3D perception
 - Tier: REFERENCE
 - Tags: 3D Vision, semantic, occupancy, geometry

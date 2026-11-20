@@ -7,12 +7,12 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / ICLR
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Songming Liu, Lingxuan Wu, Bangguo Li, Hengkai Tan, Huayu Chen, Zhengyi Wang, Ke Xu, Hang Su, Jun Zhu
 - Primary track: VLA and generalist robot policies
 - Tier: NEXT
 - Tags: Robotics, Diffusion
-- Official paper: https://openreview.net/forum?id=yAzN4tz7oI
-- Full-text retrieval: https://openreview.net/pdf/29d56379d000b8c0e05906c5958e67e2e870ab0c.pdf
+- Official paper: https://proceedings.iclr.cc/paper_files/paper/2025/hash/49f80e4d2471ad4f2edf4f5f1ab62339-Abstract-Conference.html
+- Full-text retrieval: https://arxiv.org/pdf/2410.07864
 - Code/Project: not identified
 - Paper type: theory_or_foundation
 - Source audit: full-text PDF body checked on 2026-09-03 (28 pages; PyMuPDF text; title-token overlap first two pages=1.0)

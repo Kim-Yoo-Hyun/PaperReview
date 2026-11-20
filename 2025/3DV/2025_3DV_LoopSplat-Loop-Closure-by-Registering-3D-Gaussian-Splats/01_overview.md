@@ -7,19 +7,19 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / 3DV
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Liyuan Zhu, Yue Li, Erik Sandström, Shengyu Huang, Konrad Schindler, Iro Armeni
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
 - Tags: Gaussian Splatting, 3D Vision
-- Official paper: https://3dvconf.github.io/2025/accepted-papers/
-- Full-text retrieval: https://openreview.net/attachment?id=0CNSbBa85A&name=pdf
+- Official paper: https://3dvconf.github.io/2025/schedule_updated2.csv
+- Full-text retrieval: https://arxiv.org/pdf/2408.10154.pdf
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (19 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 To address limitations of current systems, we seek a coupled SLAM system that avoids saving all mapped input frames and is able to extract loop constraints directly from the dense map, without ...를 문제로 두고, We introduce LoopSplat, a coupled RGB-D SLAM system based on Gaussian Splatting, featuring a novel loop closure module.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+LoopSplat은 RGB-D SLAM에서 서로 다른 지역 가우시안 지도를 정합해 루프를 닫는다.
 
 ## Problem and Motivation
 
@@ -53,16 +53,10 @@ Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 �
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** We introduce LoopSplat, a coupled RGB-D SLAM system based on Gaussian Splatting, featuring a novel loop closure module.
-- **p. 2 / 1. Introduction - extractive body cue:** To this end, we propose a dense RGB-D SLAM system that uses submaps of 3D Gaussians for local frame-to-model tracking and dense mapping and is ...
-- **p. 6 / 4.1. Tracking - extractive body cue:** We note that the ground truth poses in ScanNet, derived from BundleFusion [18], appear to have limited accuracy: visual inspection suggests that our method achieves ...
-- **p. 7 / 4.2. Reconstruction - extractive body cue:** Our method recovers more geometric details (e.g., on the chairs).
-- **p. 7 / 4.3. Rendering - extractive body cue:** It is noteworthy that both the NeRF-based LoopySLAM and Point-SLAM methods require ground truth depth input to guide the depth rendering, whereas our method, leveraging ...
-- **p. 5 / Figure/Table caption - extractive body cue:** Table 2. Tracking Performance on ScanNet++ [93] (ATE RMSE ↓[cm]). LoopSplat achieves the highest accuracy and can robustly deal with the large camera motions in ...
-- **p. 7 / Figure/Table caption - extractive body cue:** Table 6. Rendering Performance on 3 Datasets. LoopSplat achieves competitive results on synthetic and real-world datasets. Gray indicates evaluation on submaps instead of a global ...
-- **p. 6 / Figure/Table caption - extractive body cue:** Table 3. Tracking Performance on ScanNet [17]. LoopSplat outperforms 3DGS-based systems by a large margin and is on par with the state-of-the-art baselines. real-world datasets, ...
+- 카메라가 이전 장소를 다시 방문하면 지역 지도들의 상대 변환을 추정한다.
+- 재방문 보정이 궤적과 재구성에 미치는 효과를 평가한다.
 
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+[저자 원문](https://3dvconf.github.io/2025/schedule_updated2.csv)
 
 ## Evaluation Scope
 

@@ -7,11 +7,11 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2024 / TMLR
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Maxime Oquab, Timothée Darcet, Théo Moutakanni, Huy Vo, Marc Szafraniec, Vasil Khalidov, Pierre Fernandez, Daniel Haziza, Francisco Massa, Alaaeldin El-Nouby, Mahmoud Assran, Nicolas Ballas, Wojciech Galuba, Russell Howes, Po-Yao Huang, Shang-Wen Li, Ishan Misra, Michael Rabbat, Vasu Sharma, Gabriel Synnaeve, Hu Xu, Hervé Jegou, Julien Mairal, Patrick Labatut, Armand Joulin, Piotr Bojanowski
 - Primary track: Foundations: Vision and Language Models
 - Tier: REFERENCE
 - Tags: self-supervised, representation
-- Official paper: https://openreview.net/forum?id=a68SUt6zFt
+- Official paper: https://iclr.cc/virtual/2025/poster/31510
 - Preprint: https://arxiv.org/abs/2304.07193 (2023)
 - Full-text retrieval: https://arxiv.org/pdf/2304.07193
 - Code/Project: https://github.com/facebookresearch/dinov2
@@ -20,7 +20,7 @@
 
 ## Why This Paper Is Here
 
-Foundations: Vision and Language Models의 upstream 문제를 이해하기 위해 읽는다. 본문은 A major difficulty when dealing with images in the wild is to rebalance concepts and avoid overfitting on a few dominant modes.를 문제로 두고, Most of our technical contributions are tailored toward stabilizing and accelerating discriminative self-supervised learning when scaling in model and data sizes.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+DINOv2는 라벨 없는 정제 이미지로 시각 모델을 자기지도 학습하고, 그 표현을 이미지 수준과 화소 수준의 인식에 재사용한다.
 
 ## Problem and Motivation
 
@@ -54,16 +54,10 @@ Foundations: Vision and Language Models의 upstream 문제를 이해하기 위�
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1 Introduction - extractive body cue:** Most of our technical contributions are tailored toward stabilizing and accelerating discriminative self-supervised learning when scaling in model and data sizes.
-- **p. 2 / 1 Introduction - extractive body cue:** We gathered a small but diverse corpus of 142M images to validate our approach.
-- **p. 3 / 1 Introduction - extractive body cue:** We show performance on eight types of vision tasks, as presented in Sec.
-- **p. 10 / Figure/Table caption - extractive body cue:** Figure 6: Role of resolution. Performance of ViT-L/16 trained on ImageNet-1k at fixed resolution ("224" and "416") or trained at 224 then 416 for a ...
-- **p. 13 / 7 Results - extractive body cue:** Interestingly, our model significantly outperforms OpenCLIP ViT-G/14 on both variants of iNaturalist (+8.6% and +9.7% for 2018 and 2021 respectively), and lags slightly behind on ...
-- **p. 14 / 7 Results - extractive body cue:** We see that our features significantly outperform both SSL (+41% mAP on Oxford-Hard), and weakly-supervised (+34% mAP on Oxford-Hard) ones.
-- **p. 14 / 7 Results - extractive body cue:** Our model significantly outperforms state-of-the-art SSL models, with most notable differences on Stanford Cars (+14.8% versus DINO ViT-B/8) and FGVC Aircraft (+14.8% versus iBOT ViT-L/16).
-- **p. 8 / Figure/Table caption - extractive body cue:** Table 2: Ablation of the source of pretraining data. We compare the INet-22k dataset that was used in iBOT to our dataset, LVD-142M. Each model ...
+- 데이터 선별과 대규모 자기지도 학습의 안정화 기법을 결합한다.
+- 동결한 시각 특징으로 여러 하류 과제의 전이 성능을 평가한다.
 
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+[저자 원문](https://arxiv.org/abs/2304.07193)
 
 ## Evaluation Scope
 

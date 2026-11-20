@@ -7,13 +7,13 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2024 / CVPR
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Wencan Cheng, Hao Tang, Luc Van Gool, Jong Hwan Ko
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
 - Tags: geometry, Diffusion, Generation, point cloud, 3D Vision
 - Official paper: https://openaccess.thecvf.com/content/CVPR2024/html/Cheng_HandDiff_3D_Hand_Pose_Estimation_with_Diffusion_on_Image-Point_Cloud_CVPR_2024_paper.html
 - Full-text retrieval: https://openaccess.thecvf.com/content/CVPR2024/papers/Cheng_HandDiff_3D_Hand_Pose_Estimation_with_Diffusion_on_Image-Point_Cloud_CVPR_2024_paper.pdf
-- Code/Project: not identified
+- Code/Project: https://github.com/cwc1260/HandDiff
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 

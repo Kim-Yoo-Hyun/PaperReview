@@ -2,7 +2,8 @@
 
 > Evidence maturity: `FULL_TEXT_CHECKED`. 지정 본문 절만 확인; 전체 정독·재현 아님.
 
-- Year/Venue: 2026 / NeurIPS
+- Year/Venue
+- Authors: Shuaijun Liu, Feiyang You, Chengyu Wu, Shuyang Hao, Chenglong Zhang, Jingyao Cai, Xingwei Chen, Li Sun, Ningxin Su
 - Category: VLA and Generalist Robot Policies
 - Primary track: VLA and generalist robot policies
 - Tier: NEXT
@@ -10,7 +11,7 @@
 - Official paper: https://arxiv.org/abs/2609.23650
 - Venue verification: https://neurips.cc/Downloads/2026
 - Code/Project: https://nebulis-lab.com/BAS-VLA/
-- Code: project_only
+- Code: https://github.com/NEBULIS-Lab/BAS-VLA
 - Source audit: 2026-11-05: §3–4, §5.1–5.3, Tables 6–7, Appendix A.2.1. 지정 본문 절만 확인; 전체 정독·수식 검증 아님. Venue와 읽은 preprint version을 구별. Native 실행 0; 사용자 읽기 UNREAD.
 
 ## Problem and Contribution

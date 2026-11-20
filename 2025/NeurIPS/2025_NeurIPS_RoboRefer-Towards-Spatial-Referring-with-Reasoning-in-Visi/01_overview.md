@@ -7,11 +7,11 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / NeurIPS
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Enshen Zhou, Jingkun An, Cheng Chi, Yi Han, Shanyu Rong, Chi Zhang, Pengwei Wang, Zhongyuan Wang, Tiejun Huang, Lu Sheng, Shanghang Zhang
 - Primary track: Robotics-enabling 3D perception
 - Tier: NEXT
 - Tags: Vision-Language Model, Robotics, 3D Vision
-- Official paper: https://openreview.net/forum?id=OGxalNUHbJ
+- Official paper: https://neurips.cc/virtual/2025/poster/118306
 - Full-text retrieval: https://openreview.net/pdf/81387e1e7f5169279b63c293ca88b1e4a8bc7e35.pdf
 - Code/Project: not identified
 - Paper type: method

@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2024 / CVPR
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Jihan Yang, Runyu Ding, Weipeng Deng, Zhe Wang, Xiaojuan Qi
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
 - Tags: point-language, open-world, semantic

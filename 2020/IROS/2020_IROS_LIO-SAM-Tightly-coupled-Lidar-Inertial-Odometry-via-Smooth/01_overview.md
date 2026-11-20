@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2020 / IROS
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Tixiao Shan, Brendan Englot, Drew Meyers, Wei Wang, Carlo Ratti, Daniela Rus
 - Primary track: Robotics-enabling 3D perception
 - Tier: REFERENCE
 - Tags: Robotics, state estimation, LiDAR-inertial odometry, SLAM, factor graph, mapping

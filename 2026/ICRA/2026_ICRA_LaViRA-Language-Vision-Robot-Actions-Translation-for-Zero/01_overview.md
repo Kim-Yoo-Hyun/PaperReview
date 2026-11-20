@@ -7,11 +7,11 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2026 / ICRA
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Hongyu Ding, Ziming Xu, Yuk Tung Samuel Fang, You Wu, Zixuan Chen, Jieqi Shi, Jing Huo, Yifan Zhang, Yang Gao
 - Primary track: Robotics-enabling 3D perception
 - Tier: REFERENCE
 - Tags: Robotics, Navigation
-- Official paper: https://ras.papercept.net/conferences/conferences/ICRA26/program/ICRA26_ContentListWeb_4.html
+- Official paper: https://api.crossref.org/works/10.1109/icra57385.2026.11696861
 - Full-text retrieval: https://arxiv.org/pdf/2510.19655
 - Code/Project: not identified
 - Paper type: method

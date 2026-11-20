@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / WACV
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Rao Fu, Jingyu Liu, Xilun Chen, Yixin Nie, Wenhan Xiong
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
 - Tags: LLM, 3D visual reasoning, Vision-Language

@@ -7,11 +7,11 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 1992 / ICRA
-- Authors: not duplicated here when not verified in the registry source
+- Authors: C. Ferrari, J. Canny
 - Primary track: Manipulation, contact, tactile, and dexterity
 - Tier: REFERENCE
 - Tags: Robotics, Grasp Planning, manipulation, contact
-- Official paper: https://doi.org/10.1109/ROBOT.1992.219918
+- Official paper: https://api.crossref.org/works/10.1109/ROBOT.1992.219918
 - Full-text retrieval: https://doi.org/10.1109/ROBOT.1992.219918
 - Code/Project: not identified
 - Paper type: theory_or_foundation

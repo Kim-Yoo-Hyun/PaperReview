@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2024 / ECCV
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Gengze Zhou, Yicong Hong, Zun Wang, Xin Eric Wang, Qi Wu
 - Primary track: Robotics-enabling 3D perception
 - Tier: REFERENCE
 - Tags: Vision-Language Model, Navigation

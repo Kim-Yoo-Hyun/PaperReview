@@ -7,12 +7,12 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / ICLR
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Haoyi Zhu, Honghui Yang, Yating Wang, Jiange Yang, Limin Wang, Tong He
 - Primary track: VLA and generalist robot policies
 - Tier: REFERENCE
 - Tags: Robotics, 3D Vision
-- Official paper: https://openreview.net/forum?id=6TLdqAZgzn
-- Full-text retrieval: https://chatpaper.com/api/v1/articles/download/114708
+- Official paper: https://proceedings.iclr.cc/paper_files/paper/2025/hash/421fcf51a0e243f15f977553a6f482cb-Abstract-Conference.html
+- Full-text retrieval: https://proceedings.iclr.cc/paper_files/paper/2025/file/421fcf51a0e243f15f977553a6f482cb-Paper-Conference.pdf
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (31 pages; PyMuPDF text; title-token overlap first two pages=1.0)

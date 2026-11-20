@@ -1,4 +1,4 @@
-# Insights — EnerGS: Energy-Based Gaussian Splatting under Partial Geometric Priors
+# Insights — EnerGS: Energy-Based Gaussian Splatting with Partial Geometric Priors
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.

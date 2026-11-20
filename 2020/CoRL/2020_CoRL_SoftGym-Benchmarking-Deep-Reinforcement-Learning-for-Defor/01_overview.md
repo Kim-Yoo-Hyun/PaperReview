@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2020 / CoRL
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Xingyu Lin, Yufei Wang, Jake Olkin, David Held
 - Primary track: Manipulation, contact, tactile, and dexterity
 - Tier: NEXT
 - Tags: Robotics, deformable object, Benchmark, Reinforcement Learning, simulation

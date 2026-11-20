@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2022 / CVPR
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Jonathan T. Barron, Ben Mildenhall, Dor Verbin, Pratul P. Srinivasan, Peter Hedman
 - Primary track: Robotics-enabling 3D perception
 - Tier: REFERENCE
 - Tags: NeRF, 3D Vision, representation, geometry

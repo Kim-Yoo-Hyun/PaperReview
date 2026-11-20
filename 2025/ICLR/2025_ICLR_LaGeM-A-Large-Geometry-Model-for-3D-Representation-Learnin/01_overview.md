@@ -7,12 +7,12 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / ICLR
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Biao Zhang, Peter Wonka
 - Primary track: Robotics-enabling 3D perception
 - Tier: REFERENCE
 - Tags: Diffusion, Generation, 3D Vision
-- Official paper: https://openreview.net/forum?id=72OSO38a2z
-- Full-text retrieval: https://chatpaper.com/api/v1/articles/download/114810
+- Official paper: https://proceedings.iclr.cc/paper_files/paper/2025/hash/76c5401551bbe8337dc38a2bd5eb394e-Abstract-Conference.html
+- Full-text retrieval: https://proceedings.iclr.cc/paper_files/paper/2025/file/76c5401551bbe8337dc38a2bd5eb394e-Paper-Conference.pdf
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (18 pages; PyMuPDF text; title-token overlap first two pages=1.0)

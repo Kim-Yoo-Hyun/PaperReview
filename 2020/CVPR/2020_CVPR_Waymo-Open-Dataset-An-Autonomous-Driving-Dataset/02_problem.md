@@ -1,4 +1,4 @@
-# Problem - Waymo Open Dataset: An Autonomous Driving Dataset
+# Problem - Scalability in Perception for Autonomous Driving: Waymo Open Dataset
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.

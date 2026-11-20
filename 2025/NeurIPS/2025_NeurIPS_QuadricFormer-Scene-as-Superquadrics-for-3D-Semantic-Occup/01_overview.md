@@ -7,13 +7,13 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / NeurIPS
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Sicheng Zuo, Wenzhao Zheng, Xiaoyong Han, Longchao Yang, yong pan, Jiwen Lu
 - Primary track: Robotics-enabling 3D perception
 - Tier: REFERENCE
 - Tags: sensor fusion, LiDAR, semantic, alignment, 3D Vision
-- Official paper: https://openreview.net/forum?id=eZNdkwJYbN
+- Official paper: https://neurips.cc/virtual/2025/poster/116903
 - Full-text retrieval: https://arxiv.org/pdf/2506.10977
-- Code/Project: [공식 code](https://github.com/zuosc19/QuadricFormer) · [저자 project](https://zuosc19.github.io/QuadricFormer/)
+- Code/Project: https://zuosc19.github.io/QuadricFormer/
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (14 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 

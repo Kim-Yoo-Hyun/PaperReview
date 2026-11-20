@@ -7,11 +7,11 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / ICLR
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Yorai Shaoul, Itamar Mishani, Shivam Vats, Jiaoyang Li, Maxim Likhachev
 - Primary track: Planning and control
 - Tier: REFERENCE
 - Tags: Robotics, multi-robot, motion planning, diffusion model
-- Official paper: https://openreview.net/forum?id=AUCYptvAf3
+- Official paper: https://proceedings.iclr.cc/paper_files/paper/2025/hash/eee6efe709623f36483e3fbb0bb513dd-Abstract-Conference.html
 - Full-text retrieval: https://arxiv.org/pdf/2410.03072
 - Code/Project: not identified
 - Paper type: system
@@ -21,7 +21,7 @@
 
 ## Why This Paper Is Here
 
-Planning and control의 planning 문제를 이해하기 위해 읽는다. 본문은 Importantly, our approach calls for learning only single-robot diffusion models, which does away with the difficulty of obtaining multi-robot interaction data and breaks the curse of dimensionality.를 문제로 두고, Our contributions in this paper are threefold: (1) We propose a novel data-efficient framework for multirobot diffusion planning inspired by constraint-based search algorithms.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+MMD는 단일 로봇 데이터로 학습한 확산 모델을 조합해 여러 로봇의 장시간 경로를 계획한다.
 
 ## Problem and Motivation
 
@@ -55,16 +55,10 @@ Planning and control의 planning 문제를 이해하기 위해 읽는다. 본문
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** Our contributions in this paper are threefold: (1) We propose a novel data-efficient framework for multirobot diffusion planning inspired by constraint-based search algorithms.
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** In this paper, we propose a data-efficient and scalable multi-robot diffusion planning algorithm, Multi-robot Multi-model planning Diffusion (MMD), that addresses both these challenges by combining ...
-- **p. 3 / 3 METHOD - extractive body cue:** Next, we introduce five MMD algorithms, each inspired by a MAPF algorithm regarding constraint placement and timing.
-- **p. 3 / 3 METHOD - extractive body cue:** We present Multi-robot Multi-model planning Diffusion (MMD), an algorithm for flexibly scaling diffusion planning to multiple robots and long horizons using only single-robot data.
-- **p. 4 / 3 METHOD - extractive body cue:** We propose five MMD variants, each inspired by a state-of-the-art search algorithm.
-- **p. 8 / Figure/Table caption - extractive body cue:** Figure 3: Analysis of success rates and data adherence scores, in randomly generated planning queries, of all MMD instantiations and a MAPF method with and ...
-- **p. 15 / Figure/Table caption - extractive body cue:** Table 1: Comparison of methods by number of agents in the Empty environment (left) and the Highways environment (right). S is the success rate (%), ...
-- **p. 10 / Figure/Table caption - extractive body cue:** Figure 5: Experimental setup and results for scaling MMD to larger environments and longer plan- ning horizons. MMD still relies on single agent data in ...
+- 여러 로봇과 구간의 경로 분포를 연결한다.
+- 충돌 제약을 다루는 탐색 전략들을 같은 계획 문제에서 비교한다.
 
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+[저자 원문](https://proceedings.iclr.cc/paper_files/paper/2025/hash/eee6efe709623f36483e3fbb0bb513dd-Abstract-Conference.html)
 
 ## Evaluation Scope
 

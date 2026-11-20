@@ -8,7 +8,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / RSS
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Karl Pertsch, Kyle Stachowicz, Brian Ichter, Danny Driess, Suraj Nair, Quan Vuong, Oier Mees, Chelsea Finn, Sergey Levine
 - Primary track: VLA and generalist robot policies
 - Tier: CORE
 - Tags: Robotics, VLA, action tokenization, high-frequency control, cross-embodiment, efficiency

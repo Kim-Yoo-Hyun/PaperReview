@@ -7,11 +7,11 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / NeurIPS
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Siyu Xu, Yunke Wang, Chenghao Xia, Dihao Zhu, Tao Huang, Chang Xu
 - Primary track: VLA and generalist robot policies
 - Tier: REFERENCE
 - Tags: VLA, Vision-Language Model, Robotics
-- Official paper: https://openreview.net/forum?id=QZYZ0Xm58q
+- Official paper: https://neurips.cc/virtual/2025/poster/118121
 - Full-text retrieval: https://arxiv.org/pdf/2502.02175
 - Code/Project: not identified
 - Paper type: method

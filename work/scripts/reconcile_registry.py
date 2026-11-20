@@ -1030,7 +1030,11 @@ def reconcile(
             if isinstance(primary, dict) and normalized_url(primary.get("url")) in shared_primary
             else "paper_specific"
         )
-        if review:
+        corrected_review = provenance.get("source_identity_correction")
+        if corrected_review:
+            # A later title-page check can invalidate the PDF selected by an older review.
+            provenance["review"] = dict(corrected_review)
+        elif review:
             selected_scope = review_scopes.get(paper_id, "unknown")
             review_path = next(
                 path for path, payload in review_manifests.items()
@@ -1057,6 +1061,8 @@ def reconcile(
         note_review_map = dict(provenance.get("note_review") or {})
         for note_name, entry in note_reviews.get(paper_id, {}).items():
             note_review_map[note_name] = note_review_summary(entry)
+            if corrected_review:
+                note_review_map[note_name]["superseded_by"] = corrected_review["manifest"]
         if note_review_map:
             provenance["note_review"] = note_review_map
         provenance["evidence_reconciliation"] = {

@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2019 / NAACL
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Jacob Devlin, Ming-Wei Chang, Kenton Lee, Kristina Toutanova
 - Primary track: Foundations: Vision and Language Models
 - Tier: REFERENCE
 - Tags: LLM, Transformer, pretraining
@@ -19,7 +19,7 @@
 
 ## Why This Paper Is Here
 
-Foundations: Vision and Language Models의 upstream 문제를 이해하기 위해 읽는다. 본문은 The major limitation is that standard language models are unidirectional, and this limits the choice of architectures that can be used during pre-training.를 문제로 두고, Unlike left-toright language model pre-training, the MLM objective enables the representation to fuse the left and the right context, which allows us to pretrain a deep bidirectional Transformer.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+BERT는 문장의 좌우 문맥을 함께 사용하는 언어 표현을 사전학습하고 이를 여러 언어 이해 과제에 미세조정한다.
 
 ## Problem and Motivation
 
@@ -53,16 +53,10 @@ Foundations: Vision and Language Models의 upstream 문제를 이해하기 위�
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1 Introduction - extractive body cue:** Unlike left-toright language model pre-training, the MLM objective enables the representation to fuse the left and the right context, which allows us to pretrain a ...
-- **p. 2 / 1 Introduction - extractive body cue:** The contributions of our paper are as follows: • We demonstrate the importance of bidirectional pre-training for language representations.
-- **p. 1 / Abstract - extractive body cue:** We introduce a new language representation model called BERT, which stands for Bidirectional Encoder Representations from Transformers.
-- **p. 3 / C T1 - extractive body cue:** There are two steps in our framework: pre-training and fine-tuning.
-- **p. 3 / C T1 - extractive body cue:** 3 BERT We introduce BERT and its detailed implementation in this section.
-- **p. 6 / 4 Experiments - extractive body cue:** Both BERTBASE and BERTLARGE outperform all systems on all tasks by a substantial margin, obtaining 4.5% and 7.0% respective average accuracy improvement over the prior ...
-- **p. 8 / 4 Experiments - extractive body cue:** This does significantly improve results on SQuAD, but the results are still far worse than those of the pretrained bidirectional models.
-- **p. 8 / 4 Experiments - extractive body cue:** It is also perhaps surprising that we are able to achieve such significant improvements on top of models which are already quite large relative to ...
+- 가린 토큰을 복원하도록 양방향 Transformer를 학습한다.
+- 사전학습한 표현을 문장 수준과 토큰 수준의 과제에 전이한다.
 
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+[저자 원문](https://arxiv.org/abs/1810.04805)
 
 ## Evaluation Scope
 

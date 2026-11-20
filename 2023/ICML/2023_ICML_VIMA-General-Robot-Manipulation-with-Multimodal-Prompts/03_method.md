@@ -1,4 +1,4 @@
-# Method - VIMA: General Robot Manipulation with Multimodal Prompts
+# Method - VIMA: Robot Manipulation with Multimodal Prompts
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.

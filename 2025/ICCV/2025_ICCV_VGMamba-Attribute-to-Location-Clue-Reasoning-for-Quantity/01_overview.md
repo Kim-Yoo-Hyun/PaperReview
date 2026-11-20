@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / ICCV
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Yihang Zhu, Jinhao Zhang, Yuxuan Wang, Aming Wu, Cheng Deng
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
 - Tags: 3D Vision
@@ -19,7 +19,7 @@
 
 ## Why This Paper Is Here
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 However, SVD alone lacks long-range modeling capability, which is critical for capturing hierarchical dependencies among attributes.를 문제로 두고, Our chief contributions are threefold: • We explore a novel mechanism, i.e., attribute-to-location clue reasoning, for performing 3D visual grounding. • We propose a novel framework VGMamba, comprising three core modules: the ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+점군 속 물체를 언어로 지정할 때 속성 단서를 먼저 찾고 위치 단서로 대상을 좁힌다.
 
 ## Problem and Motivation
 
@@ -53,16 +53,10 @@ Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 �
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** Our chief contributions are threefold: • We explore a novel mechanism, i.e., attribute-to-location clue reasoning, for performing 3D visual grounding. • We propose a novel ...
-- **p. 2 / 1. Introduction - extractive body cue:** To be specific, we propose VGMamba, a novel architecture that systematically models attribute-to-location dependencies while efficiently capturing long-range interactions.
-- **p. 3 / 3. Overview of State Space Models - extractive body cue:** Finally, we present an Instructive Dual-Mamba block to localize the object that matches the given query. Δ to convert continuous parameters into discrete ones.
-- **p. 5 / 4.4. Training Objectives - extractive body cue:** Building on previous work [42], the loss of VGMamba consists of the 3D Visual Grounding loss Lref, text-object contrastive loss Lcon, and object detection loss ...
-- **p. 3 / 3. Overview of State Space Models - extractive body cue:** Then, a location mamba is further designed to select location-relevant objects.
-- **p. 7 / Figure/Table caption - extractive body cue:** Table 4. Ablation study of proposed modules on Multi3DRefer. its intricate and free-form textual descriptions, which in- crease the difficulty of cross-modal alignment. Despite this, ...
-- **p. 8 / 5.3. Ablation Studies - extractive body cue:** VGMamba achieves the highest accuracy with significantly lower FLOPs than methods like Chat-Scene, demonstrating superior efficiency.
-- **p. 6 / 5.1.3. Baseline Comparison - extractive body cue:** 1, with the following key observations: (i) Our method achieves state-of-the-art performance with an overall accuracy of 60.0% at IoU 0.25 and 53.9% at IoU ...
+- 점군과 언어 특징을 분해해 속성을 처리하고 위치 모듈로 공간 단서를 결합한다.
+- 속성·위치·언어를 결합해 지시 대상의 위치를 예측하고 시각적 참조 대상 찾기 데이터셋에서 평가한다.
 
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+[저자 원문](https://openaccess.thecvf.com/content/ICCV2025/html/Zhu_VGMamba_Attribute-to-Location_Clue_Reasoning_for_Quantity-Agnostic_3D_Visual_Grounding_ICCV_2025_paper.html)
 
 ## Evaluation Scope
 

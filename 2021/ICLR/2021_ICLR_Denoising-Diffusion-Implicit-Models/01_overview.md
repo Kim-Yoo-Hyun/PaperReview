@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2021 / ICLR
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Jiaming Song, Chenlin Meng, Stefano Ermon
 - Primary track: Foundations: Generative Models
 - Tier: REFERENCE
 - Tags: Diffusion, sampling, Generation

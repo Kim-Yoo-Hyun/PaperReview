@@ -7,10 +7,10 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2024 / CVPR
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Lucas Nunes, Rodrigo Marcuzzi, Benedikt Mersch, Jens Behley, Cyrill Stachniss
 - Primary track: Robotics-enabling 3D perception
 - Tier: REFERENCE
-- Tags: sensor fusion, LiDAR, Diffusion, Generation, 3D Vision
+- Tags: LiDAR, Diffusion, Generation, 3D Vision
 - Official paper: https://openaccess.thecvf.com/content/CVPR2024/html/Nunes_Scaling_Diffusion_Models_to_Real-World_3D_LiDAR_Scene_Completion_CVPR_2024_paper.html
 - Full-text retrieval: https://openaccess.thecvf.com/content/CVPR2024/papers/Nunes_Scaling_Diffusion_Models_to_Real-World_3D_LiDAR_Scene_Completion_CVPR_2024_paper.pdf
 - Code/Project: not identified

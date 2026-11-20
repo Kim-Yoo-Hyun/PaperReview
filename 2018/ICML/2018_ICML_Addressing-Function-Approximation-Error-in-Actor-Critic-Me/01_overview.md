@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2018 / ICML
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Scott Fujimoto, Herke van Hoof, David Meger
 - Primary track: RL, IL, offline learning, and robot data
 - Tier: NEXT
 - Tags: Robotics, Reinforcement Learning, continuous control, actor-critic
@@ -19,7 +19,7 @@
 
 ## Why This Paper Is Here
 
-RL, IL, offline learning, and robot data의 rl 문제를 이해하기 위해 읽는다. 본문은 Our proposed method addresses these issues, and greatly outperforms the current state of the art.를 문제로 두고, Finally, we introduce a novel regularization strategy, where a SARSA-style update bootstraps similar action estimates to further reduce variance.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+TD3는 연속 제어의 actor–critic에서 가치 과대추정과 정책 갱신 오차를 줄인다.
 
 ## Problem and Motivation
 
@@ -53,16 +53,10 @@ RL, IL, offline learning, and robot data의 rl 문제를 이해하기 위해 읽
 
 ## Main Claims and Actual Contribution
 
-- **p. 1 / 1. Introduction - extractive body cue:** Finally, we introduce a novel regularization strategy, where a SARSA-style update bootstraps similar action estimates to further reduce variance.
-- **p. 1 / 1. Introduction - extractive body cue:** Second, to address the coupling of value and policy, we propose delaying policy updates until the value estimate has converged.
-- **p. 5 / 5.2. Target Networks and Delayed Policy Updates - extractive body cue:** We propose delaying policy updates until the value error is as small as possible.
-- **p. 6 / 5.3. Target Policy Smoothing Regularization - extractive body cue:** We introduce a regularization strategy for deep value learning, target policy smoothing, which mimics the learning update from SARSA (Sutton & Barto, 1998).
-- **p. 6 / 5.3. Target Policy Smoothing Regularization - extractive body cue:** We propose that fitting the value of a small area around the target action y = r + Eϵ [Qθ′(s′, πφ′(s′) + ϵ)] , (13) ...
-- **p. 8 / 6.2. Ablation Studies - extractive body cue:** Method HCheetah Hopper Walker2d Ant TD3 9532.99 3304.75 4565.24 4185.06 DDPG 3162.50 1731.94 1520.90 816.35 AHE 8401.02 1061.77 2362.13 564.07 AHE + DP 7588.64 1465.11 ...
-- **p. 8 / 6.1. Evaluation - extractive body cue:** TD3 matches or outperforms all other algorithms in both final performance and learning speed across all tasks.
-- **p. 6 / 6. Experiments - extractive body cue:** We present the Twin Delayed Deep Deterministic policy gradient algorithm (TD3), which builds on the Deep Deterministic Policy Gradient algorithm (DDPG) (Lillicrap et al., 2015) ...
+- 두 가치 추정과 목표 정책 평활화를 사용한다.
+- 비평가에 비해 정책을 느리게 갱신하는 효과를 비교한다.
 
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+[저자 원문](https://arxiv.org/abs/1802.09477)
 
 ## Evaluation Scope
 

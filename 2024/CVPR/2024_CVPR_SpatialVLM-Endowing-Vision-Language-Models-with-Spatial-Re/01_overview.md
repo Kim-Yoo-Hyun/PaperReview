@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2024 / CVPR
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Boyuan Chen, Zhuo Xu, Sean Kirmani, Brian Ichter, Danny Driess, Pete Florence, Dorsa Sadigh, Leonidas Guibas, Fei Xia
 - Primary track: Robotics-enabling 3D perception
 - Tier: REFERENCE
 - Tags: Vision-Language Model, spatial reasoning, Robotics
@@ -19,7 +19,7 @@
 
 ## Why This Paper Is Here
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 Automatic data generation and augmentation techniques are one approach to deal with the data limitation problem [38, 53, 56, 66].를 문제로 두고, To this end, we propose a system called SpatialVLM that enables data generation and training of VLMs to enhance their spatial reasoning capabilities.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+SpatialVLM은 장면의 정성적·정량적 공간 관계를 묻는 자료를 만들어 시각언어 모델을 학습한다.
 
 ## Problem and Motivation
 
@@ -53,16 +53,10 @@ Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 �
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** To this end, we propose a system called SpatialVLM that enables data generation and training of VLMs to enhance their spatial reasoning capabilities.
-- **p. 2 / 1. Introduction - extractive body cue:** Our main contributions are: • We endow VLMs quantitative spatial reasoning capability, which is a fundamental capability of humans.
-- **p. 1 / Body text (section not recovered) - extractive body cue:** To this end, we present a system to facilitate this approach.
-- **p. 1 / Body text (section not recovered) - extractive body cue:** GPT-4V Spatial-VLM Figure 1 / We present SpatialVLM, a data synthesis and pre-training mechanism to enhance VLMs' spatial reasoning capabilities.
-- **p. 4 / 3. SpatialVLM - extractive body cue:** To equip VLMs with both qualitatively and quantitatively spatial reasoning capabilities, we propose to generate a large-scale spatial VQA dataset, which is used to train ...
-- **p. 9 / 4.1. Spatial VQA performance - extractive body cue:** Our approach SpatialVLM achieves significantly higher success rate than all baselines, achieving inrange results on almost half of the questions.
-- **p. 8 / 4.1. Spatial VQA performance - extractive body cue:** It is shown that SpatialVLM is able to achieve significantly higher accuracy compared to all baselines that are not trained using the synthetic spatial VQA ...
-- **p. 8 / 4.1. Spatial VQA performance - extractive body cue:** Therefore, to evaluate the performance of the VLMs, we use human raters to determine if an answer is correct, and show the success rates of ...
+- 영상에서 공간 질문의 학습 예시를 생성한다.
+- 모델이 공간 관계와 거리를 추론하는지 평가한다.
 
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+[저자 원문](https://arxiv.org/abs/2401.12168)
 
 ## Evaluation Scope
 

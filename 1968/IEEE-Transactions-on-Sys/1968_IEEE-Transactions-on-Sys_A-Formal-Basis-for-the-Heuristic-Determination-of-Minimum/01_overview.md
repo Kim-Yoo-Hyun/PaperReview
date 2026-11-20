@@ -7,11 +7,11 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 1968 / IEEE Transactions on Systems Science and Cybernetics
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Peter Hart, Nils Nilsson, Bertram Raphael
 - Primary track: Planning and control
 - Tier: REFERENCE
 - Tags: Robotics, Planning, graph search, A*
-- Official paper: https://doi.org/10.1109/TSSC.1968.300136
+- Official paper: https://api.crossref.org/works/10.1109/TSSC.1968.300136
 - Full-text retrieval: https://people.stfx.ca/jdelamer/courses/csci-564/_downloads/b2220c66675ddde471ca1795147b8e86/A_Formal_Basis_for_the_Heuristic_Determination_of_Minimum_Cost_Paths.pdf
 - Code/Project: not identified
 - Paper type: theory_or_foundation

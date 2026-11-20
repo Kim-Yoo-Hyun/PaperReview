@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2023 / CoRL
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Ankit Goyal, Jie Xu, Yijie Guo, Valts Blukis, Yu-Wei Chao, Dieter Fox
 - Primary track: Robotics-enabling 3D perception
 - Tier: CORE
 - Tags: Robotics, 3D manipulation, Transformer

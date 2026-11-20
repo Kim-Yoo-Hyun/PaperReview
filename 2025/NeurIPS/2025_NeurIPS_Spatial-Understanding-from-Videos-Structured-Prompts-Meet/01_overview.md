@@ -7,11 +7,11 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / NeurIPS
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Haoyu Zhang, Meng Liu, Zaijing Li, Haokun Wen, Weili Guan, Yaowei Wang, Liqiang Nie
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
 - Tags: Vision-Language Model, 3D Vision
-- Official paper: https://openreview.net/forum?id=SBYCu5uJJf
+- Official paper: https://neurips.cc/virtual/2025/poster/117952
 - Full-text retrieval: https://arxiv.org/pdf/2506.03642
 - Code/Project: not identified
 - Paper type: method

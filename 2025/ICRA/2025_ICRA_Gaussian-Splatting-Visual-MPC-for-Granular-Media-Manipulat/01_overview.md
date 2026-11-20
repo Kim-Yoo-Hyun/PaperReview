@@ -7,11 +7,11 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / ICRA
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Wei-Cheng Tseng, Ellina Zhang, Krishna Murthy Jatavallabhula, Florian Shkurti
 - Primary track: Manipulation, contact, tactile, and dexterity
 - Tier: NEXT
 - Tags: Robotics, Gaussian Splatting
-- Official paper: https://www.proceedings.com/content/081/081087webtoc.pdf
+- Official paper: https://api.crossref.org/works/10.1109/icra55743.2025.11128002
 - Full-text retrieval: https://arxiv.org/pdf/2410.09740v3
 - Code/Project: not identified
 - Paper type: method
@@ -19,7 +19,7 @@
 
 ## Why This Paper Is Here
 
-Manipulation, contact, tactile, and dexterity의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 However, these models often underperform compared to linear dynamics models due to a lack of inductive biases.를 문제로 두고, We form the node features of the GNN as (ci t,σi t ,Ri t,gi t,si t) for node vi t. f consists of node encoder fenc with node representation ¯vi from vi ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+시각적 모델 예측 제어를 위해 3D 가우시안으로 입상 물질의 장면을 나타내고 조작 결과를 예측한다.
 
 ## Problem and Motivation
 
@@ -53,16 +53,10 @@ Manipulation, contact, tactile, and dexterity의 3d_perception 문제를 이해�
 
 ## Main Claims and Actual Contribution
 
-- **p. 3 / IV. OUR APPROACH - extractive body cue:** We form the node features of the GNN as (ci t,σi t ,Ri t,gi t,si t) for node vi t. f consists of node encoder ...
-- **p. 1 / I. INTRODUCTION - extractive body cue:** Our method takes a few multi-view images of a scene and their corresponding camera poses as input, and (a) converts them into their Gaussian splatting ...
-- **p. 1 / I. INTRODUCTION - extractive body cue:** Our contribution: We use the Gaussian splats representing the scene at each time as a state vector that can be manipulated via MPC, effectively lowering ...
-- **p. 2 / I. INTRODUCTION - extractive body cue:** Our model successfully enables solutions of complex planning tasks.
-- **p. 2 / I. INTRODUCTION - extractive body cue:** This representation enables robots to optimize their actions, anticipate challenges, and adapt to dynamic environments.
-- **p. 5 / V. EXPERIMENTAL RESULTS - extractive body cue:** Manipulation Results TABLE I MANIPULATION SUCCESS RATE IN SIMULATION (MAX = 1.0) Collection Splitting Redistributing NeRF-dy [38] 0.67 0.43 0.31 Dyn-Res [16] 0.79 0.72 0.67 ...
-- **p. 5 / V. EXPERIMENTAL RESULTS - extractive body cue:** Our approach achieves higher performance than NeRF-dy while requiring fewer views.
-- **p. 6 / V. EXPERIMENTAL RESULTS - extractive body cue:** Qualitative results from real-world experiments.
+- 여러 시점의 영상에서 입상 물질 상태를 구성한다.
+- 예측 모델을 이용한 계획과 조작 결과를 비교한다.
 
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+[저자 원문](https://arxiv.org/abs/2410.09740)
 
 ## Evaluation Scope
 

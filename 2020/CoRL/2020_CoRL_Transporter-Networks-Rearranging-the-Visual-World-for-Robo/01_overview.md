@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2020 / CoRL
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Andy Zeng, Pete Florence, Jonathan Tompson, Stefan Welker, Jonathan Chien, Maria Attarian, Travis Armstrong, Ivan Krasin, Dan Duong, Vikas Sindhwani, Johnny Lee
 - Primary track: Manipulation, contact, tactile, and dexterity
 - Tier: REFERENCE
 - Tags: Robotics, Vision-Language-Action, equivariance, Imitation Learning
@@ -19,7 +19,7 @@
 
 ## Why This Paper Is Here
 
-Manipulation, contact, tactile, and dexterity의 manipulation 문제를 이해하기 위해 읽는다. 본문은 This naturally leads us to ask: is there structure that we can incorporate into our end-to-end models to improve their learning efficiency, without imposing any of the limitations or burdens of explicit ...를 문제로 두고, Transporter Networks decompose the problem into (i) picking and (ii) pick-conditioned placing: fpick(ot)→Tpick fplace(ot,Tpick)→Tplace We present a solution to both with Transporter Networks - but in this work, our primary contribution ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+Transporter Networks는 영상 특징의 공간 변환으로 조작 대상과 그 대상을 놓을 위치를 예측한다.
 
 ## Problem and Motivation
 
@@ -53,16 +53,10 @@ Manipulation, contact, tactile, and dexterity의 manipulation 문제를 이해�
 
 ## Main Claims and Actual Contribution
 
-- **p. 3 / 3 Method - extractive body cue:** Transporter Networks decompose the problem into (i) picking and (ii) pick-conditioned placing: fpick(ot)→Tpick fplace(ot,Tpick)→Tplace We present a solution to both with Transporter Networks - but ...
-- **p. 1 / 1 Introduction - extractive body cue:** Our method uses 3D reconstruction to project visual data onto a spatiallyconsistent representation as input, with which it is able to better exploit equivariance [13, ...
-- **p. 1 / 1 Introduction - extractive body cue:** In this work, we propose the Transporter Network, a simple end-to-end model architecture that preserves spatial structure for vision-based manipulation, without object-centric assumptions: • Manipulation ...
-- **p. 2 / 1 Introduction - extractive body cue:** We propose a simple model architecture that learns to attend to a local region and predict its spatial displacement, while retaining the spatial structure of ...
-- **p. 4 / 3 Method - extractive body cue:** Our method preserves rotation and translation equivariance for efficient learning.
-- **p. 7 / Figure/Table caption - extractive body cue:** Table 2. Baseline comparisons. Task success rate (mean %) vs. # of demonstration episodes (1, 10, 100, or 1000) used in training. Generalizing to Unseen ...
-- **p. 6 / 4 Results - extractive body cue:** We report results with the models that have achieved highest validation performance during training, averaged over 100 unseen test runs for each task.
-- **p. 6 / 4 Results - extractive body cue:** Our method does not require 3 cameras - having more cameras only improves visual coverage.
+- 집을 위치 주변 특징을 장면의 다른 위치와 대응시킨다.
+- 공간적 배치가 중요한 로봇 재배열 과제에서 학습된 행동을 평가한다.
 
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+[저자 원문](https://proceedings.mlr.press/v155/zeng21a.html)
 
 ## Evaluation Scope
 

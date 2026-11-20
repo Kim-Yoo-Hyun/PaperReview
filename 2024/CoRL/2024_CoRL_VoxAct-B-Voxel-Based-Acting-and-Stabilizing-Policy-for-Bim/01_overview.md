@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2024 / CoRL
-- Authors: not duplicated here when not verified in the registry source
+- Authors: I-Chun Arthur Liu, Sicheng He, Daniel Seita, Gaurav S. Sukhatme
 - Primary track: VLA and generalist robot policies
 - Tier: NEXT
 - Tags: VLM, 3D manipulation, bimanual, Robotics
@@ -19,7 +19,7 @@
 
 ## Why This Paper Is Here
 
-VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다. 본문은 However, they are generally sample inefficient, and using primitives can hinder generalization to different tasks as they are not easily adaptable to other types of tasks.를 문제로 두고, To this end, we propose VoxAct-B, a novel voxel-based, language-conditioned method for bimanual manipulation.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+VoxAct-B는 언어 지시와 복셀 관측으로 양팔 조작에서 움직이는 팔과 물체를 안정시키는 팔의 행동을 예측한다.
 
 ## Problem and Motivation
 
@@ -53,16 +53,10 @@ VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다
 
 ## Main Claims and Actual Contribution
 
-- **p. 1 / 1 Introduction - extractive body cue:** To this end, we propose VoxAct-B, a novel voxel-based, language-conditioned method for bimanual manipulation.
-- **p. 4 / 4 Method - extractive body cue:** This allows our method to learn to map the appropriate acting or stabilizing actions to a given arm during training.
-- **p. 1 / 1 Introduction - extractive body cue:** To address this, we propose utilizing VLMs to focus on the most pertinent regions within the scene by cropping out less relevant regions.
-- **p. 2 / 1 Introduction - extractive body cue:** We introduce a bimanual version of Open Drawer, Open Jar, Put Item in Drawer, and Hand Over Item tasks.
-- **p. 5 / 4 Method - extractive body cue:** The overall training loss for VoxAct-B is: Ltotal = Lacting + Lstabilizing (1) and where for both values of arm ∈{acting, stabilizing}, we have Larm ...
-- **p. 16 / C Additional Implementation Details for the Baselines - extractive body cue:** We found the Time-series Diffusion Transformer to outperform the CNN-based Diffusion Policy on Open Drawer and Open Jar, while both of them achieved comparable success ...
-- **p. 6 / 5 Experiments - extractive body cue:** We adapt the Mobile ALOHA repository for ACT and a CNN-based Diffusion Policy, and we tune their parameters (e.g., chunk size and action horizon) to ...
-- **p. 7 / 6 Results - extractive body cue:** Through ablations of ACT and Diffusion Policy, we found that removing environment variations greatly improved their performance.
+- 두 팔의 역할을 구분해 행동을 학습한다.
+- 서랍과 병 열기 등 양팔 과제로 정책을 평가한다.
 
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+[저자 원문](https://proceedings.mlr.press/v270/liu25i.html)
 
 ## Evaluation Scope
 

@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / CVPR
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Jiaxin Shi, Mingyue Xiang, Hao Sun, Yixuan Huang, Zhi Weng
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
 - Tags: Gaussian Splatting, semantic, grounding

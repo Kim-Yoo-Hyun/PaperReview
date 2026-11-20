@@ -7,11 +7,11 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 1985 / Journal of Dynamic Systems, Measurement, and Control
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Neville Hogan
 - Primary track: Planning and control
 - Tier: CORE
 - Tags: Robotics, Impedance Control, contact, manipulation
-- Official paper: https://doi.org/10.1115/1.3140702
+- Official paper: https://api.crossref.org/works/10.1115/1.3140702
 - Full-text retrieval: https://doi.org/10.1115/1.3140702
 - Code/Project: not identified
 - Paper type: theory_or_foundation

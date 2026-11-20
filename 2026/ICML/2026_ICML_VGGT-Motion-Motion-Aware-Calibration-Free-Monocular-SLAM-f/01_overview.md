@@ -7,12 +7,12 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2026 / ICML
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Zhuang Xiong, Chen Zhang, Qingshan Xu, Wenbing Tao
 - Primary track: Robotics-enabling 3D perception
 - Tier: REFERENCE
 - Tags: geometry, depth, 3D Vision
-- Official paper: https://openreview.net/forum?id=GyRMbsYFiG
-- Full-text retrieval: https://openreview.net/pdf/dd631f65ff2ca6199a6897ee3816879152720eef.pdf
+- Official paper: https://icml.cc/virtual/2026/poster/65079
+- Full-text retrieval: https://arxiv.org/pdf/2602.05508.pdf
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (22 pages; PyMuPDF text; title-token overlap first two pages=1.0)

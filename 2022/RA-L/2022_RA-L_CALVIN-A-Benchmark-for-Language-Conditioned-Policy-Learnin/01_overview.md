@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2022 / RA-L
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Oier Mees, Lukas Hermann, Erick Rosete-Beas, Wolfram Burgard Burgard
 - Primary track: VLA and generalist robot policies
 - Tier: CORE
 - Tags: Vision-Language-Action, Benchmark, Robotics
@@ -19,7 +19,7 @@
 
 ## Why This Paper Is Here
 
-VLA and generalist robot policies의 benchmark 문제를 이해하기 위해 읽는다. 본문은 Models that can overcome these challenges will begin to close the gap towards scalable, general-purpose, language-driven robotics.를 문제로 두고, In this paper, we present CALVIN (Composing Actions from Language and Vision), an open-source simulated benchmark to learn longhorizon language-conditioned tasks.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+CALVIN은 언어 지시에 따라 여러 조작 기술을 잇달아 수행하는 정책을 평가하는 시뮬레이션 벤치마크다.
 
 ## Problem and Motivation
 
@@ -52,16 +52,10 @@ VLA and generalist robot policies의 benchmark 문제를 이해하기 위해 읽
 
 ## Main Claims and Actual Contribution
 
-- **p. 1 / Abstract - extractive body cue:** In this paper, we present CALVIN (Composing Actions from Language and Vision), an open-source simulated benchmark to learn longhorizon language-conditioned tasks.
-- **p. 2 / A LONG-STANDING goal for robotics and embodied - extractive body cue:** To address this problem we present CALVIN, a new opensource simulated benchmark that links human language to robot motor skills, behaviors, and objects in interactive ...
-- **p. 3 / III. CALVIN - extractive body cue:** The CALVIN benchmark consists of three key components, which are:
-- **p. 4 / 3) CALVIN Challenge - extractive body cue:** This style of data is very different from commonly used task-specific data, which only consists of expert trajectories.
-- **p. 4 / 3) CALVIN Challenge - extractive body cue:** Thus, to accelerate progress in language-driven robotics, we present a set of evaluation protocols of varying difficulty by choosing different combinations of sensor suites and ...
-- **p. 6 / V. EXPERIMENTAL RESULTS - extractive body cue:** We observe that the baseline with images of the static camera achieves a success rate of 53.9% for the MTLC evaluation setting, when training and ...
-- **p. 7 / V. EXPERIMENTAL RESULTS - extractive body cue:** The best MCIL model achieves a success rate of 0.08% when following chains of five language instructions in a row when training and testing on ...
-- **p. 6 / V. EXPERIMENTAL RESULTS - extractive body cue:** The success rate stays comparable when including a gripper camera, depth channels or tactile sensing.
+- 센서 구성과 언어 지시를 바꿀 수 있는 조작 환경, 시연 자료와 기준 정책을 제공한다.
+- 새 지시·환경·물체에서 일련의 하위 작업을 얼마나 연속으로 완료하는지 평가한다.
 
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+[저자 원문](https://arxiv.org/abs/2112.03227)
 
 ## Evaluation Scope
 

@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2021 / RSS
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Ashish Kumar, Zipeng Fu, Deepak Pathak, Jitendra Malik
 - Primary track: Locomotion, whole-body, mobile manipulation, and humanoids
 - Tier: NEXT
 - Tags: Robotics, locomotion, sim-to-real, online adaptation

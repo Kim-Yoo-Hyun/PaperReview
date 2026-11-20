@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / CVPR
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Yueru Jia, Jiaming Liu, Sixiang Chen, Chenyang Gu, Zhilve Wang, Longzan Luo, Xiaoqi Li, Pengwei Wang, Zhongyuan Wang, Renrui Zhang, Shanghang Zhang
 - Primary track: VLA and generalist robot policies
 - Tier: REFERENCE
 - Tags: 3D Vision, foundation model, Robotics

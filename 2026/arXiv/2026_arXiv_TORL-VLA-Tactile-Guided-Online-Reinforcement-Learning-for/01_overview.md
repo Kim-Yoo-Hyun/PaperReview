@@ -3,7 +3,8 @@
 > Evidence maturity: `ABSTRACT_CHECKED`. abstract 기반 — 본문 수동 확인 필요.
 > 자동 작성 노트는 실제 정독을 뜻하지 않는다. 사용자 reading status는 UNREAD로 시작한다.
 
-- Year/Venue: 2026 / arXiv
+- Year/Venue
+- Authors: Huaihang Zheng, Yi Yang, Kai Ma, Shenglin Xu, Tian Xie, Guozheng Li, Xiangyu Wang, Yiren Ma, Si Liu, Yinian Mao, Baoxu Liu
 - Category: VLA and Generalist Robot Policies
 - Primary track: VLA and generalist robot policies
 - Tier: NEXT
@@ -12,7 +13,7 @@
 - Official paper: https://arxiv.org/abs/2606.09337
 - Venue verification: https://arxiv.org/abs/2606.09337
 - Code/Project: https://torl-vla.github.io/
-- Code: not_released
+- Code: not identified
 - Source audit: 2026-11-09: official abstract/project 및 metadata 확인. 최신 v3 abstract 확인; N1 본문 대조는 v1이다. Project는 TORL code Coming Soon이며 연결된 RLT 재현 코드는 TORL 구현으로 간주하지 않는다. 새 5-note는 abstract 기반이며 전체 본문/실행/사용자 정독을 뜻하지 않는다.
 
 ## Problem and Importance

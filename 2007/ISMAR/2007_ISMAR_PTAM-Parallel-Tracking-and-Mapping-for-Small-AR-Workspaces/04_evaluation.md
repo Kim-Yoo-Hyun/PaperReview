@@ -1,4 +1,4 @@
-# Evaluation - PTAM: Parallel Tracking and Mapping for Small AR Workspaces
+# Evaluation - Parallel Tracking and Mapping for Small AR Workspaces
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.

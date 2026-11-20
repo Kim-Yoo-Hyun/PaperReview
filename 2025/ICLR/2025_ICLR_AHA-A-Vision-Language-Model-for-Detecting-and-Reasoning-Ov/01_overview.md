@@ -7,19 +7,19 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / ICLR
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Jiafei Duan, Wilbert Pumacay, Nishanth Kumar, Yi Ru Wang, Shulin Tian, Wentao Yuan, Ranjay Krishna, Dieter Fox, Ajay Mandlekar, Yijie Guo
 - Primary track: VLA and generalist robot policies
 - Tier: NEXT
 - Tags: Vision-Language Model, Robotics
-- Official paper: https://openreview.net/forum?id=JVkdSi7Ekg
-- Full-text retrieval: https://openreview.net/pdf/baa69f167306f963174767be4974c69528aa6379.pdf
+- Official paper: https://proceedings.iclr.cc/paper_files/paper/2025/hash/70a06501001e1820fd1eb9ee821302d2-Abstract-Conference.html
+- Full-text retrieval: https://arxiv.org/pdf/2410.00371
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (15 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
-VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다. 본문은 While these models excel at task execution, they often face challenges in detecting and reasoning over failures-skills that are crucial for navigating dynamic and complex environments.를 문제로 두고, We introduce AHA, an open-source vision-language model (VLM) that uses natural language to detect and reason about failures in robotic manipulation.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+AHA는 로봇 조작이 실패한 장면에서 무엇이 잘못됐는지를 자연어로 설명하는 시각언어 모델이다.
 
 ## Problem and Motivation
 
@@ -53,16 +53,10 @@ VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1 Introduction - extractive body cue:** We introduce AHA, an open-source vision-language model (VLM) that uses natural language to detect and reason about failures in robotic manipulation.
-- **p. 2 / 1 Introduction - extractive body cue:** We introduce FailGen, a data generation pipeline for the procedural generation of failure demonstration data for robotic manipulation tasks across simulators.
-- **p. 7 / 4 Method - extractive body cue:** This structured input enables consistent handling of data across different tasks and viewpoints.
-- **p. 10 / 4 Method - extractive body cue:** AHA enables efficient reward synthesis for reinforcement learning.
-- **p. 7 / 4 Method - extractive body cue:** To achieve this, we developed FailGen, an environment wrapper that can be easily applied to any robot manipulation simulator.
-- **p. 9 / Figure/Table caption - extractive body cue:** Figure 3: (Left) Scaling law with the AHA dataset. Scaling of effect of model performance with varying domain specific fine-tuning data. (Right) Downstream Robotic Application ...
-- **p. 10 / 4 Method - extractive body cue:** This resulted in success across all five tasks within the budget constraints, and our approach outperformed GPT4o by a significant margin of 22.34% in task ...
-- **p. 10 / 4 Method - extractive body cue:** We demonstrated that AHA can be integrated into existing LLM/VLM-assisted robotic applications to provide failure reasoning and feedback, helping to accelerate and improve task success ...
+- FailGen으로 조작 시연에 여러 유형의 실패를 발생시킨다.
+- 이 자료를 이용해 실패 감지와 원인 설명을 학습한다.
 
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+[저자 원문](https://proceedings.iclr.cc/paper_files/paper/2025/hash/70a06501001e1820fd1eb9ee821302d2-Abstract-Conference.html)
 
 ## Evaluation Scope
 

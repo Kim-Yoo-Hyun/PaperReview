@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / RSS
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Yifan Yin, Zhengtao Han, Shivam Aarya, Shuhang Xu, Jianxin Wang, Jiawei Peng, Angtian Wang, Alan Yuille, Tianmin Shu
 - Primary track: VLA and generalist robot policies
 - Tier: NEXT
 - Tags: Robotics, Benchmark, part-level grounding, 3D manipulation, language instruction, long-horizon

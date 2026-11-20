@@ -7,12 +7,12 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2026 / ICLR
-- Authors: not duplicated here when not verified in the registry source
+- Authors: 昊 李, Zhengyu Zou, Fangfu Liu, zhang xuanyang, Fangzhou Hong, Yukang Cao, Yushi LAN, Manyuan Zhang, Gang Yu, Dingwen Zhang, Ziwei Liu
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
 - Tags: 3D reconstruction, semantic, alignment, 3D Vision
-- Official paper: https://openreview.net/forum?id=swiL18PmUV
-- Full-text retrieval: https://chatpaper.com/api/v1/articles/download/248038
+- Official paper: https://proceedings.iclr.cc/paper_files/paper/2026/hash/e1f20114b5233d395486f9cf5b3e0535-Abstract-Conference.html
+- Full-text retrieval: https://proceedings.iclr.cc/paper_files/paper/2026/file/e1f20114b5233d395486f9cf5b3e0535-Paper-Conference.pdf
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (26 pages; PyMuPDF text; title-token overlap first two pages=1.0)

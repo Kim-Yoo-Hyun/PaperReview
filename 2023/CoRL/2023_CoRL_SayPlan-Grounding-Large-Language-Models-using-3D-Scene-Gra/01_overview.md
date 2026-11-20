@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2023 / CoRL
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Krishan Rana, Jesse Haviland, Sourav Garg, Jad Abou-Chakra, Ian Reid, Niko Suenderhauf
 - Primary track: VLA and generalist robot policies
 - Tier: NEXT
 - Tags: Robotics, 3D Vision, LLM planning, 3D Scene Graph, replanning, mobile manipulation

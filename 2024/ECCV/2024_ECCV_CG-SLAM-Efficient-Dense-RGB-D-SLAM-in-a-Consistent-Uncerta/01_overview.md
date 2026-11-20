@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2024 / ECCV
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Jiarui Hu, Xianhao Chen, Boyin Feng, Guanglin Li, Liangjing Yang, Hujun Bao, Guofeng Zhang, Zhaopeng Cui
 - Primary track: World models, safety, uncertainty, and recovery
 - Tier: REFERENCE
 - Tags: Gaussian Splatting, geometry, 3D Vision

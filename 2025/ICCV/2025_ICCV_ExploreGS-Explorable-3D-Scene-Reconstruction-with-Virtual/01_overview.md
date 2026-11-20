@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / ICCV
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Minsu Kim, Subin Jeon, In Cho, Mijin Yoo, Seon Joo Kim
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
 - Tags: 3D reconstruction, Diffusion, Generation, 3D Vision
@@ -21,7 +21,7 @@
 
 ## Why This Paper Is Here
 
-Robotics-enabling 3D perception의 generative 문제를 이해하기 위해 읽는다. 본문은 This limitation stems from missing information, since optimization-based approaches cannot synthesize contents beyond the observed data.를 문제로 두고, In summary, our contributions can be organized as follows: • We propose a pipeline for explorable 3D scene reconstruction, which incorporates the real-time rendering of 3DGS, video diffusion priors to complete missing ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+ExploreGS는 입력 시점 밖에서도 탐색할 수 있는 장면을 가상 카메라와 확산 사전분포로 복원한다.
 
 ## Problem and Motivation
 
@@ -55,16 +55,10 @@ Robotics-enabling 3D perception의 generative 문제를 이해하기 위해 읽�
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** In summary, our contributions can be organized as follows: • We propose a pipeline for explorable 3D scene reconstruction, which incorporates the real-time rendering of ...
-- **p. 2 / 1. Introduction - extractive body cue:** In this paper, we introduce ExploreGS, a pipeline that enables explorable scene reconstruction using diffusion priors and 3DGS.
-- **p. 3 / 3.2. Scene initialization - extractive body cue:** To this end, we introduce a simple rasterization-based algorithm to construct the occupancy grid O ∈RS×S×S.
-- **p. 3 / 3.3. Virtual view sampling - extractive body cue:** After initializing the target scene, our method utilizes video diffusion priors to supplement the missing information from 27044
-- **p. 1 / 1. Introduction - extractive body cue:** This advancement has been further accelerated by recent 3D Gaussian Splatting (3DGS) [11], which enables highquality rendering in real-time.
-- **p. 6 / 5.2. Results - extractive body cue:** Since our method effectively removes artifacts and fills missing regions, as observed in the qualitative analysis, our model outperforms across all metrics, particularly in PSNR ...
-- **p. 7 / 5.2. Results - extractive body cue:** See the supplementary materials for additional results.
-- **p. 7 / 5.2. Results - extractive body cue:** Although ViewExtrapolator [19] utilizes a video diffusion prior and thereby shows competitive performance compared to 3DGS variants, it underperforms in challenging scenarios.
+- 점유 지도를 이용해 새로운 카메라 시점을 샘플링한다.
+- 가상 관측을 3D 가우시안 장면 복원에 사용한다.
 
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+[저자 원문](https://openaccess.thecvf.com/content/ICCV2025/html/Kim_ExploreGS_Explorable_3D_Scene_Reconstruction_with_Virtual_Camera_Samplings_and_ICCV_2025_paper.html)
 
 ## Evaluation Scope
 

@@ -7,12 +7,12 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2026 / ICML
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Yifan Liu, Zhiyuan Min, Zhenwei Wang, Junta Wu, Tengfei Wang, Yixuan Yuan, Yawei Luo, Chunchao Guo
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
 - Tags: 3D reconstruction, 3D Vision
-- Official paper: https://openreview.net/forum?id=HFNJOpXHfm
-- Full-text retrieval: https://openreview.net/pdf/d37648c3826e3031b270765b6a36790ab19140f8.pdf
+- Official paper: https://icml.cc/virtual/2026/poster/65052
+- Full-text retrieval: https://arxiv.org/pdf/2510.10726.pdf
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (23 pages; PyMuPDF text; title-token overlap first two pages=1.0)

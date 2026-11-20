@@ -7,11 +7,11 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2026 / ICML
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Bowen Yan, Jiahao Xiao, Kehui Liu, Jianbo Zhang, Zicheng Zhang, Qi Jia, Zhongjie Jia, Haoming Song, Chunyi Li, Bin Zhao, Guangtao Zhai
 - Primary track: World models, safety, uncertainty, and recovery
 - Tier: NEXT
 - Tags: Robotics, VLA, failure diagnosis, recovery, Benchmark, LIBERO, real robot
-- Official paper: https://kakigo.github.io/VLA-FixBench/
+- Official paper: https://icml.cc/virtual/2026/poster/64203
 - Full-text retrieval: https://kakigo.github.io/VLA-FixBench/
 - Code/Project: https://kakigo.github.io/VLA-FixBench/
 - Paper type: benchmark_or_dataset

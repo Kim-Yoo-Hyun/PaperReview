@@ -7,12 +7,12 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2026 / ICML
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Ruiqi Song, Dujun Nie, Siyu Teng, Baiyong Ding, Xiaotong Zhang, Dong Li, Chenming Zhang, Yuchen Li, Hangbin Wu, Long Chen
 - Primary track: VLA and generalist robot policies
 - Tier: REFERENCE
 - Tags: VLA, Vision-Language Model
-- Official paper: https://openreview.net/forum?id=W86R5sIsxE
-- Full-text retrieval: https://openreview.net/pdf/27ac3094b9d6afc1c8c39e0ae99418fd937e0219.pdf
+- Official paper: https://icml.cc/virtual/2026/poster/63548
+- Full-text retrieval: https://arxiv.org/pdf/2606.27807.pdf
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (16 pages; PyMuPDF text; title-token overlap first two pages=1.0)

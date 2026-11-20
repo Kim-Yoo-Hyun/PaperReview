@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2024 / CVPR
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Rui Liu, Wenguan Wang, Yi Yang
 - Primary track: Robotics-enabling 3D perception
 - Tier: NEXT
 - Tags: Vision-Language Navigation, 3D geometry, representation

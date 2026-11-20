@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2024 / ICRA
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Isabel Leal, Krzysztof Choromanski, Deepali Jain, Avinava Dubey, Jake Varley, Michael Ryoo, Yao Lu, Frederick Liu, Vikas Sindhwani, Quan Vuong, Tamas Sarlos, Ken Oslund, Karol Hausman, Kanishka Rao
 - Primary track: VLA and generalist robot policies
 - Tier: REFERENCE
 - Tags: Robotics, robot policy, efficient attention, manipulation

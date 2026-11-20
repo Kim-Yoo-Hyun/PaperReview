@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2023 / RSS
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Ilya Kostrikov, Laura M Smith, Sergey Levine
 - Primary track: Locomotion, whole-body, mobile manipulation, and humanoids
 - Tier: REFERENCE
 - Tags: Robotics, quadruped locomotion, real-world reinforcement learning, sample efficiency

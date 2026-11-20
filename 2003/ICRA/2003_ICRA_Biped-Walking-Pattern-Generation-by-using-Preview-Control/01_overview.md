@@ -7,11 +7,11 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2003 / ICRA
-- Authors: not duplicated here when not verified in the registry source
+- Authors: S. Kajita, F. Kanehiro, K. Kaneko, K. Fujiwara, K. Harada, K. Yokoi, H. Hirukawa
 - Primary track: Locomotion, whole-body, mobile manipulation, and humanoids
 - Tier: REFERENCE
 - Tags: Robotics, humanoid, locomotion, ZMP, Control
-- Official paper: https://doi.org/10.1109/ROBOT.2003.1241826
+- Official paper: https://api.crossref.org/works/10.1109/ROBOT.2003.1241826
 - Full-text retrieval: https://doi.org/10.1109/ROBOT.2003.1241826
 - Code/Project: not identified
 - Paper type: method

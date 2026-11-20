@@ -989,7 +989,7 @@
         },
         {
           "paper_id": "pr-0704",
-          "source": "2025/RA-L/2025_RA-L_Strengthening-Generative-Robot-Policies-through-Predictive/04_evaluation.md",
+          "source": "2026/RA-L/2026_RA-L_Strengthening-Generative-Robot-Policies-through-Predictive/04_evaluation.md",
           "evidence": "cue_only"
         },
         {
@@ -1232,11 +1232,6 @@
         {
           "paper_id": "pr-0548",
           "source": "2020/CVPR/2020_CVPR_Waymo-Open-Dataset-An-Autonomous-Driving-Dataset/04_evaluation.md",
-          "evidence": "cue_only"
-        },
-        {
-          "paper_id": "pr-0560",
-          "source": "2016/JMLR/2016_JMLR_Learning-Neural-Network-Policies-with-Guided-Policy-Search/04_evaluation.md",
           "evidence": "cue_only"
         },
         {
@@ -1728,7 +1723,7 @@
         },
         {
           "paper_id": "pr-0187",
-          "source": "2026/ICRA/2026_ICRA_GaussianVLM-Scene-Centric-3D-Vision-Language-Models-Using/04_evaluation.md",
+          "source": "2025/RA-L/2025_RA-L_GaussianVLM-Scene-Centric-3D-Vision-Language-Models-Using/04_evaluation.md",
           "evidence": "cue_only"
         },
         {
@@ -1743,7 +1738,7 @@
         },
         {
           "paper_id": "pr-0194",
-          "source": "2026/ICRA/2026_ICRA_VISTA-Open-Vocabulary-Task-Relevant-Robot-Exploration-with/04_evaluation.md",
+          "source": "2026/RA-L/2026_RA-L_VISTA-Open-Vocabulary-Task-Relevant-Robot-Exploration-with/04_evaluation.md",
           "evidence": "cue_only"
         },
         {
@@ -2068,7 +2063,7 @@
         },
         {
           "paper_id": "pr-0273",
-          "source": "2026/RA-L/2026_RA-L_LAMP-Implicit-Language-Map-for-Robot-Navigation/04_evaluation.md",
+          "source": "2025/RA-L/2025_RA-L_LAMP-Implicit-Language-Map-for-Robot-Navigation/04_evaluation.md",
           "evidence": "cue_only"
         },
         {
@@ -2093,12 +2088,12 @@
         },
         {
           "paper_id": "pr-0282",
-          "source": "2025/IROS/2025_IROS_LiV-GS-LiDAR-Vision-Integration-for-3D-Gaussian-Splatting/04_evaluation.md",
+          "source": "2025/RA-L/2025_RA-L_LiV-GS-LiDAR-Vision-Integration-for-3D-Gaussian-Splatting/04_evaluation.md",
           "evidence": "cue_only"
         },
         {
           "paper_id": "pr-0283",
-          "source": "2025/IROS/2025_IROS_MR-COGraphs-Communication-efficient-Multi-Robot-Open-vocab/04_evaluation.md",
+          "source": "2025/RA-L/2025_RA-L_MR-COGraphs-Communication-efficient-Multi-Robot-Open-vocab/04_evaluation.md",
           "evidence": "cue_only"
         },
         {
@@ -3308,7 +3303,7 @@
         },
         {
           "paper_id": "pr-0721",
-          "source": "2023/ICRA/2023_ICRA_Text2Motion-From-Natural-Language-Instructions-to-Feasible/04_evaluation.md",
+          "source": "2023/Autonomous-Robots/2023_Autonomous-Robots_Text2Motion-From-Natural-Language-Instructions-to-Feasible/04_evaluation.md",
           "evidence": "cue_only"
         },
         {
@@ -3676,7 +3671,7 @@
         },
         {
           "paper_id": "pr-0021",
-          "source": "2022/arXiv/2022_arxiv_RT-1-Robotics-Transformer-for-Real-World-Control-at-Scale/04_evaluation.md",
+          "source": "2023/RSS/2023_RSS_RT-1-Robotics-Transformer-for-Real-World-Control-at-Scale/04_evaluation.md",
           "evidence": "cue_only"
         },
         {
@@ -3701,7 +3696,7 @@
         },
         {
           "paper_id": "pr-0036",
-          "source": "2023/CoRL/2023_CoRL_Perceiver-Actor-A-Multi-Task-Transformer-for-Robotic-Manip/04_evaluation.md",
+          "source": "2022/CoRL/2022_CoRL_Perceiver-Actor-A-Multi-Task-Transformer-for-Robotic-Manip/04_evaluation.md",
           "evidence": "cue_only"
         },
         {
@@ -4306,7 +4301,7 @@
         },
         {
           "paper_id": "pr-0194",
-          "source": "2026/ICRA/2026_ICRA_VISTA-Open-Vocabulary-Task-Relevant-Robot-Exploration-with/04_evaluation.md",
+          "source": "2026/RA-L/2026_RA-L_VISTA-Open-Vocabulary-Task-Relevant-Robot-Exploration-with/04_evaluation.md",
           "evidence": "cue_only"
         },
         {
@@ -4446,7 +4441,7 @@
         },
         {
           "paper_id": "pr-0273",
-          "source": "2026/RA-L/2026_RA-L_LAMP-Implicit-Language-Map-for-Robot-Navigation/04_evaluation.md",
+          "source": "2025/RA-L/2025_RA-L_LAMP-Implicit-Language-Map-for-Robot-Navigation/04_evaluation.md",
           "evidence": "cue_only"
         },
         {
@@ -4486,7 +4481,7 @@
         },
         {
           "paper_id": "pr-0283",
-          "source": "2025/IROS/2025_IROS_MR-COGraphs-Communication-efficient-Multi-Robot-Open-vocab/04_evaluation.md",
+          "source": "2025/RA-L/2025_RA-L_MR-COGraphs-Communication-efficient-Multi-Robot-Open-vocab/04_evaluation.md",
           "evidence": "cue_only"
         },
         {
@@ -4546,7 +4541,7 @@
         },
         {
           "paper_id": "pr-0503",
-          "source": "2021/CoRL/2021_CoRL_Neural-Descriptor-Fields-SE3-Equivariant-Object-Representa/04_evaluation.md",
+          "source": "2022/ICRA/2022_ICRA_Neural-Descriptor-Fields-SE3-Equivariant-Object-Representa/04_evaluation.md",
           "evidence": "cue_only"
         },
         {
@@ -4566,7 +4561,7 @@
         },
         {
           "paper_id": "pr-0536",
-          "source": "2022/CoRL/2022_CoRL_BC-Z-Zero-Shot-Task-Generalization-with-Robotic-Imitation/04_evaluation.md",
+          "source": "2021/CoRL/2021_CoRL_BC-Z-Zero-Shot-Task-Generalization-with-Robotic-Imitation/04_evaluation.md",
           "evidence": "cue_only"
         },
         {
@@ -4597,11 +4592,6 @@
         {
           "paper_id": "pr-0558",
           "source": "2014/IJRR/2014_IJRR_Motion-Planning-with-Sequential-Convex-Optimization-and-Co/04_evaluation.md",
-          "evidence": "cue_only"
-        },
-        {
-          "paper_id": "pr-0560",
-          "source": "2016/JMLR/2016_JMLR_Learning-Neural-Network-Policies-with-Guided-Policy-Search/04_evaluation.md",
           "evidence": "cue_only"
         },
         {
@@ -4861,7 +4851,7 @@
         },
         {
           "paper_id": "pr-0625",
-          "source": "2024/CoRL/2024_CoRL_Q-Transformer-Scalable-Offline-Reinforcement-Learning-via/04_evaluation.md",
+          "source": "2023/CoRL/2023_CoRL_Q-Transformer-Scalable-Offline-Reinforcement-Learning-via/04_evaluation.md",
           "evidence": "cue_only"
         },
         {
@@ -4885,11 +4875,6 @@
           "evidence": "cue_only"
         },
         {
-          "paper_id": "pr-0631",
-          "source": "2017/CoRL/2017_CoRL_One-Shot-Visual-Imitation-Learning-via-Meta-Learning/04_evaluation.md",
-          "evidence": "cue_only"
-        },
-        {
           "paper_id": "pr-0632",
           "source": "2018/ICLR/2018_ICLR_Learning-Robust-Rewards-with-Adversarial-Inverse-Reinforce/04_evaluation.md",
           "evidence": "cue_only"
@@ -4901,17 +4886,17 @@
         },
         {
           "paper_id": "pr-0634",
-          "source": "2020/CoRL/2020_CoRL_Learning-Latent-Plans-from-Play/04_evaluation.md",
+          "source": "2019/CoRL/2019_CoRL_Learning-Latent-Plans-from-Play/04_evaluation.md",
           "evidence": "cue_only"
         },
         {
           "paper_id": "pr-0635",
-          "source": "2020/CoRL/2020_CoRL_Relay-Policy-Learning-Solving-Long-Horizon-Tasks-via-Imita/04_evaluation.md",
+          "source": "2019/CoRL/2019_CoRL_Relay-Policy-Learning-Solving-Long-Horizon-Tasks-via-Imita/04_evaluation.md",
           "evidence": "cue_only"
         },
         {
           "paper_id": "pr-0636",
-          "source": "2022/CoRL/2022_CoRL_Implicit-Behavioral-Cloning/04_evaluation.md",
+          "source": "2021/CoRL/2021_CoRL_Implicit-Behavioral-Cloning/04_evaluation.md",
           "evidence": "cue_only"
         },
         {
@@ -4932,11 +4917,6 @@
         {
           "paper_id": "pr-0640",
           "source": "2025/RSS/2025_RSS_Robot-Learning-with-Super-Linear-Scaling/04_evaluation.md",
-          "evidence": "cue_only"
-        },
-        {
-          "paper_id": "pr-0645",
-          "source": "2020/CVPR/2020_CVPR_GraspNet-1Billion-A-Large-Scale-Benchmark-for-General-Obje/04_evaluation.md",
           "evidence": "cue_only"
         },
         {
@@ -5036,12 +5016,12 @@
         },
         {
           "paper_id": "pr-0677",
-          "source": "2020/RA-L/2020_RA-L_Recovery-RL-Safe-Reinforcement-Learning-with-Learned-Recov/04_evaluation.md",
+          "source": "2021/RA-L/2021_RA-L_Recovery-RL-Safe-Reinforcement-Learning-with-Learned-Recov/04_evaluation.md",
           "evidence": "cue_only"
         },
         {
           "paper_id": "pr-0681",
-          "source": "2022/ICLR/2022_ICLR_Temporal-Difference-Learning-for-Model-Predictive-Control/04_evaluation.md",
+          "source": "2022/ICML/2022_ICML_Temporal-Difference-Learning-for-Model-Predictive-Control/04_evaluation.md",
           "evidence": "cue_only"
         },
         {
@@ -5116,7 +5096,7 @@
         },
         {
           "paper_id": "pr-0705",
-          "source": "2026/arXiv/2026_arXiv_World-Action-Models-are-Zero-shot-Policies/04_evaluation.md",
+          "source": "2026/CoRL/2026_CoRL_World-Action-Models-are-Zero-shot-Policies/04_evaluation.md",
           "evidence": "cue_only"
         },
         {
@@ -5171,7 +5151,7 @@
         },
         {
           "paper_id": "pr-0721",
-          "source": "2023/ICRA/2023_ICRA_Text2Motion-From-Natural-Language-Instructions-to-Feasible/04_evaluation.md",
+          "source": "2023/Autonomous-Robots/2023_Autonomous-Robots_Text2Motion-From-Natural-Language-Instructions-to-Feasible/04_evaluation.md",
           "evidence": "cue_only"
         },
         {
@@ -5181,7 +5161,7 @@
         },
         {
           "paper_id": "pr-0723",
-          "source": "2023/arXiv/2023_arXiv_RoboCat-A-Self-Improving-Generalist-Agent-for-Robotic-Mani/04_evaluation.md",
+          "source": "2023/TMLR/2023_TMLR_RoboCat-A-Self-Improving-Generalist-Agent-for-Robotic-Mani/04_evaluation.md",
           "evidence": "cue_only"
         },
         {
@@ -5206,7 +5186,7 @@
         },
         {
           "paper_id": "pr-0728",
-          "source": "2023/arXiv/2023_arXiv_RT-Trajectory-Robotic-Task-Generalization-via-Hindsight-Tr/04_evaluation.md",
+          "source": "2024/ICLR/2024_ICLR_RT-Trajectory-Robotic-Task-Generalization-via-Hindsight-Tr/04_evaluation.md",
           "evidence": "cue_only"
         },
         {
@@ -5251,7 +5231,7 @@
         },
         {
           "paper_id": "pr-0739",
-          "source": "2022/ICRA/2022_ICRA_FlingBot-The-Unreasonable-Effectiveness-of-Dynamic-Manipul/04_evaluation.md",
+          "source": "2021/CoRL/2021_CoRL_FlingBot-The-Unreasonable-Effectiveness-of-Dynamic-Manipul/04_evaluation.md",
           "evidence": "cue_only"
         },
         {
@@ -5486,7 +5466,7 @@
         },
         {
           "paper_id": "pr-0820",
-          "source": "2026/RSS/2026_RSS_DexterityGen-Foundation-Controller-for-Unprecedented-Dexte/04_evaluation.md",
+          "source": "2025/RSS/2025_RSS_DexterityGen-Foundation-Controller-for-Unprecedented-Dexte/04_evaluation.md",
           "evidence": "cue_only"
         },
         {
@@ -5541,7 +5521,7 @@
         },
         {
           "paper_id": "pr-0843",
-          "source": "2023/arXiv/2023_arXiv_Where-are-we-in-the-search-for-an-Artificial-Visual-Cortex/04_evaluation.md",
+          "source": "2023/NeurIPS/2023_NeurIPS_Where-are-we-in-the-search-for-an-Artificial-Visual-Cortex/04_evaluation.md",
           "evidence": "cue_only"
         },
         {
@@ -5581,7 +5561,7 @@
         },
         {
           "paper_id": "pr-0857",
-          "source": "2022/arXiv/2022_arXiv_A-Generalist-Agent/04_evaluation.md",
+          "source": "2022/TMLR/2022_TMLR_A-Generalist-Agent/04_evaluation.md",
           "evidence": "cue_only"
         },
         {
@@ -5966,7 +5946,7 @@
         },
         {
           "paper_id": "pr-1175",
-          "source": "2026/arXiv/2026_arXiv_When-Vision-Overrides-Language-Evaluating-and-Mitigating-C/04_evaluation.md",
+          "source": "2026/CoRL/2026_CoRL_When-Vision-Overrides-Language-Evaluating-and-Mitigating-C/04_evaluation.md",
           "evidence": "cue_only"
         },
         {
@@ -6163,7 +6143,7 @@
         },
         {
           "paper_id": "pr-0194",
-          "source": "2026/ICRA/2026_ICRA_VISTA-Open-Vocabulary-Task-Relevant-Robot-Exploration-with/04_evaluation.md",
+          "source": "2026/RA-L/2026_RA-L_VISTA-Open-Vocabulary-Task-Relevant-Robot-Exploration-with/04_evaluation.md",
           "evidence": "cue_only"
         },
         {
@@ -6448,12 +6428,12 @@
         },
         {
           "paper_id": "pr-0820",
-          "source": "2026/RSS/2026_RSS_DexterityGen-Foundation-Controller-for-Unprecedented-Dexte/04_evaluation.md",
+          "source": "2025/RSS/2025_RSS_DexterityGen-Foundation-Controller-for-Unprecedented-Dexte/04_evaluation.md",
           "evidence": "cue_only"
         },
         {
           "paper_id": "pr-0843",
-          "source": "2023/arXiv/2023_arXiv_Where-are-we-in-the-search-for-an-Artificial-Visual-Cortex/04_evaluation.md",
+          "source": "2023/NeurIPS/2023_NeurIPS_Where-are-we-in-the-search-for-an-Artificial-Visual-Cortex/04_evaluation.md",
           "evidence": "cue_only"
         },
         {
@@ -6600,7 +6580,7 @@
         },
         {
           "paper_id": "pr-0194",
-          "source": "2026/ICRA/2026_ICRA_VISTA-Open-Vocabulary-Task-Relevant-Robot-Exploration-with/04_evaluation.md",
+          "source": "2026/RA-L/2026_RA-L_VISTA-Open-Vocabulary-Task-Relevant-Robot-Exploration-with/04_evaluation.md",
           "evidence": "cue_only"
         },
         {
@@ -6635,7 +6615,7 @@
         },
         {
           "paper_id": "pr-0273",
-          "source": "2026/RA-L/2026_RA-L_LAMP-Implicit-Language-Map-for-Robot-Navigation/04_evaluation.md",
+          "source": "2025/RA-L/2025_RA-L_LAMP-Implicit-Language-Map-for-Robot-Navigation/04_evaluation.md",
           "evidence": "cue_only"
         },
         {
@@ -6896,7 +6876,7 @@
         },
         {
           "paper_id": "pr-0187",
-          "source": "2026/ICRA/2026_ICRA_GaussianVLM-Scene-Centric-3D-Vision-Language-Models-Using/04_evaluation.md",
+          "source": "2025/RA-L/2025_RA-L_GaussianVLM-Scene-Centric-3D-Vision-Language-Models-Using/04_evaluation.md",
           "evidence": "cue_only"
         },
         {
@@ -6978,7 +6958,7 @@
         },
         {
           "paper_id": "pr-0187",
-          "source": "2026/ICRA/2026_ICRA_GaussianVLM-Scene-Centric-3D-Vision-Language-Models-Using/04_evaluation.md",
+          "source": "2025/RA-L/2025_RA-L_GaussianVLM-Scene-Centric-3D-Vision-Language-Models-Using/04_evaluation.md",
           "evidence": "cue_only"
         },
         {
@@ -7065,7 +7045,7 @@
         },
         {
           "paper_id": "pr-0187",
-          "source": "2026/ICRA/2026_ICRA_GaussianVLM-Scene-Centric-3D-Vision-Language-Models-Using/04_evaluation.md",
+          "source": "2025/RA-L/2025_RA-L_GaussianVLM-Scene-Centric-3D-Vision-Language-Models-Using/04_evaluation.md",
           "evidence": "cue_only"
         },
         {
@@ -7220,7 +7200,7 @@
         },
         {
           "paper_id": "pr-0187",
-          "source": "2026/ICRA/2026_ICRA_GaussianVLM-Scene-Centric-3D-Vision-Language-Models-Using/04_evaluation.md",
+          "source": "2025/RA-L/2025_RA-L_GaussianVLM-Scene-Centric-3D-Vision-Language-Models-Using/04_evaluation.md",
           "evidence": "cue_only"
         },
         {
@@ -7437,7 +7417,7 @@
         },
         {
           "paper_id": "pr-0625",
-          "source": "2024/CoRL/2024_CoRL_Q-Transformer-Scalable-Offline-Reinforcement-Learning-via/04_evaluation.md",
+          "source": "2023/CoRL/2023_CoRL_Q-Transformer-Scalable-Offline-Reinforcement-Learning-via/04_evaluation.md",
           "evidence": "cue_only"
         },
         {
@@ -7494,7 +7474,7 @@
         },
         {
           "paper_id": "pr-0194",
-          "source": "2026/ICRA/2026_ICRA_VISTA-Open-Vocabulary-Task-Relevant-Robot-Exploration-with/04_evaluation.md",
+          "source": "2026/RA-L/2026_RA-L_VISTA-Open-Vocabulary-Task-Relevant-Robot-Exploration-with/04_evaluation.md",
           "evidence": "cue_only"
         },
         {
@@ -7534,7 +7514,7 @@
         },
         {
           "paper_id": "pr-0282",
-          "source": "2025/IROS/2025_IROS_LiV-GS-LiDAR-Vision-Integration-for-3D-Gaussian-Splatting/04_evaluation.md",
+          "source": "2025/RA-L/2025_RA-L_LiV-GS-LiDAR-Vision-Integration-for-3D-Gaussian-Splatting/04_evaluation.md",
           "evidence": "cue_only"
         },
         {
@@ -8011,7 +7991,7 @@
         },
         {
           "paper_id": "pr-0194",
-          "source": "2026/ICRA/2026_ICRA_VISTA-Open-Vocabulary-Task-Relevant-Robot-Exploration-with/04_evaluation.md",
+          "source": "2026/RA-L/2026_RA-L_VISTA-Open-Vocabulary-Task-Relevant-Robot-Exploration-with/04_evaluation.md",
           "evidence": "cue_only"
         },
         {
@@ -8036,7 +8016,7 @@
         },
         {
           "paper_id": "pr-0282",
-          "source": "2025/IROS/2025_IROS_LiV-GS-LiDAR-Vision-Integration-for-3D-Gaussian-Splatting/04_evaluation.md",
+          "source": "2025/RA-L/2025_RA-L_LiV-GS-LiDAR-Vision-Integration-for-3D-Gaussian-Splatting/04_evaluation.md",
           "evidence": "cue_only"
         },
         {
@@ -8406,7 +8386,7 @@
         },
         {
           "paper_id": "pr-0704",
-          "source": "2025/RA-L/2025_RA-L_Strengthening-Generative-Robot-Policies-through-Predictive/04_evaluation.md",
+          "source": "2026/RA-L/2026_RA-L_Strengthening-Generative-Robot-Policies-through-Predictive/04_evaluation.md",
           "evidence": "cue_only"
         },
         {
@@ -8453,7 +8433,7 @@
         },
         {
           "paper_id": "pr-0194",
-          "source": "2026/ICRA/2026_ICRA_VISTA-Open-Vocabulary-Task-Relevant-Robot-Exploration-with/04_evaluation.md",
+          "source": "2026/RA-L/2026_RA-L_VISTA-Open-Vocabulary-Task-Relevant-Robot-Exploration-with/04_evaluation.md",
           "evidence": "cue_only"
         },
         {
@@ -8468,7 +8448,7 @@
         },
         {
           "paper_id": "pr-0282",
-          "source": "2025/IROS/2025_IROS_LiV-GS-LiDAR-Vision-Integration-for-3D-Gaussian-Splatting/04_evaluation.md",
+          "source": "2025/RA-L/2025_RA-L_LiV-GS-LiDAR-Vision-Integration-for-3D-Gaussian-Splatting/04_evaluation.md",
           "evidence": "cue_only"
         },
         {
@@ -8870,7 +8850,7 @@
         },
         {
           "paper_id": "pr-0282",
-          "source": "2025/IROS/2025_IROS_LiV-GS-LiDAR-Vision-Integration-for-3D-Gaussian-Splatting/04_evaluation.md",
+          "source": "2025/RA-L/2025_RA-L_LiV-GS-LiDAR-Vision-Integration-for-3D-Gaussian-Splatting/04_evaluation.md",
           "evidence": "cue_only"
         },
         {
@@ -9598,11 +9578,6 @@
           "evidence": "cue_only"
         },
         {
-          "paper_id": "pr-0645",
-          "source": "2020/CVPR/2020_CVPR_GraspNet-1Billion-A-Large-Scale-Benchmark-for-General-Obje/04_evaluation.md",
-          "evidence": "cue_only"
-        },
-        {
           "paper_id": "pr-0797",
           "source": "2026/CVPR/2026_CVPR_Localizing-Structuring-and-Rendering-Bridging-3D-and-2D-Vi/04_evaluation.md",
           "evidence": "cue_only"
@@ -9631,7 +9606,7 @@
         },
         {
           "paper_id": "pr-0635",
-          "source": "2020/CoRL/2020_CoRL_Relay-Policy-Learning-Solving-Long-Horizon-Tasks-via-Imita/04_evaluation.md",
+          "source": "2019/CoRL/2019_CoRL_Relay-Policy-Learning-Solving-Long-Horizon-Tasks-via-Imita/04_evaluation.md",
           "evidence": "cue_only"
         },
         {
@@ -9703,17 +9678,17 @@
         },
         {
           "paper_id": "pr-0677",
-          "source": "2020/RA-L/2020_RA-L_Recovery-RL-Safe-Reinforcement-Learning-with-Learned-Recov/04_evaluation.md",
+          "source": "2021/RA-L/2021_RA-L_Recovery-RL-Safe-Reinforcement-Learning-with-Learned-Recov/04_evaluation.md",
           "evidence": "cue_only"
         },
         {
           "paper_id": "pr-0820",
-          "source": "2026/RSS/2026_RSS_DexterityGen-Foundation-Controller-for-Unprecedented-Dexte/04_evaluation.md",
+          "source": "2025/RSS/2025_RSS_DexterityGen-Foundation-Controller-for-Unprecedented-Dexte/04_evaluation.md",
           "evidence": "cue_only"
         },
         {
           "paper_id": "pr-0843",
-          "source": "2023/arXiv/2023_arXiv_Where-are-we-in-the-search-for-an-Artificial-Visual-Cortex/04_evaluation.md",
+          "source": "2023/NeurIPS/2023_NeurIPS_Where-are-we-in-the-search-for-an-Artificial-Visual-Cortex/04_evaluation.md",
           "evidence": "cue_only"
         },
         {

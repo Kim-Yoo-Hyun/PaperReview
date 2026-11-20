@@ -3,11 +3,12 @@
 > Evidence maturity: `ABSTRACT_CHECKED`. abstract 기반 — 본문 수동 확인 필요.
 > 자동 작성 노트는 실제 정독을 뜻하지 않는다. 사용자 reading status는 UNREAD로 시작한다.
 
-- Year/Venue: 2026 / RSS
+- Year/Venue
+- Authors: Yuan Liu, Haoran Li, Shuai Tian, Yuxing Qin, Yuhui Chen, Yupeng Zheng, Yongzhen Huang, Dongbin Zhao
 - Category: VLA and Generalist Robot Policies
 - Primary track: VLA and generalist robot policies
 - Tier: NEXT
-- Tags: VLA, continual-learning, reward-modeling, action-chunking
+- Tags: VLA, continual-learning, Reinforcement Learning, action-chunking
 - Aliases: LifeLong-RFT
 - Official paper: https://roboticsproceedings.org/rss22/p086.html
 - Venue verification: https://roboticsproceedings.org/rss22/p086.html

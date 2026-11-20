@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2023 / ICRA
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Zhijian Liu, Haotian Tang, Alexander Amini, Xinyu Yang, Huizi Mao, Daniela Rus, Song Han
 - Primary track: Robotics-enabling 3D perception
 - Tier: REFERENCE
 - Tags: sensor fusion, LiDAR, 3D perception

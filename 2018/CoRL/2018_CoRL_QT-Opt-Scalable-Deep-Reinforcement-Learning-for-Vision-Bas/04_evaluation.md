@@ -1,4 +1,4 @@
-# Evaluation - QT-Opt: Scalable Deep Reinforcement Learning for Vision-Based Robotic Manipulation
+# Evaluation - Scalable Deep Reinforcement Learning for Vision-Based Robotic Manipulation
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.

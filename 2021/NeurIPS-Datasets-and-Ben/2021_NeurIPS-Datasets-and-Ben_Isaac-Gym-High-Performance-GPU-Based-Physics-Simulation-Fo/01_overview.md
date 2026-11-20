@@ -7,11 +7,11 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2021 / NeurIPS Datasets and Benchmarks
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Viktor Makoviychuk, Lukasz Wawrzyniak, Yunrong Guo, Michelle Lu, Kier Storey, Miles Macklin, David Hoeller, Nikita Rudin, Arthur Allshire, Ankur Handa, Gavriel State
 - Primary track: RL, IL, offline learning, and robot data
 - Tier: NEXT
 - Tags: Robotics, simulation, GPU, Reinforcement Learning, NVIDIA
-- Official paper: https://research.nvidia.com/labs/srl/publication/makoviychuk-2021-isaac/
+- Official paper: https://arxiv.org/abs/2108.10470
 - Full-text retrieval: https://research.nvidia.com/labs/srl/publication/makoviychuk-2021-isaac/
 - Code/Project: not identified
 - Paper type: benchmark_or_dataset

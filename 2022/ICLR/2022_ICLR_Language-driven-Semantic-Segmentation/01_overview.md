@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2022 / ICLR
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Boyi Li, Kilian Q. Weinberger, Serge Belongie, Vladlen Koltun, René Ranftl
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
 - Tags: Vision-Language Model, semantic, open-vocabulary, alignment
@@ -19,7 +19,7 @@
 
 ## Why This Paper Is Here
 
-Robotics-enabling 3D perception의 navigation 문제를 이해하기 위해 읽는다. 본문은 The main reason for the restricted label sets in existing methods is the cost of annotating images to produce sufficient training data.를 문제로 두고, Our approach enables the synthesis of zero-shot semantic segmentation models on the fly.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+LSeg는 영상의 각 위치에 대해 주어진 텍스트 레이블과의 대응을 계산해 의미 분할한다.
 
 ## Problem and Motivation
 
@@ -53,16 +53,10 @@ Robotics-enabling 3D perception의 navigation 문제를 이해하기 위해 읽�
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** Our approach enables the synthesis of zero-shot semantic segmentation models on the fly.
-- **p. 1 / 1 INTRODUCTION - extractive body cue:** In this work, we present a simple approach to leveraging modern language models to increase the flexibility and generality of semantic segmentation models.
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** We propose to use state-of-the-art text encoders that have been co-trained on visual data, such as CLIP, to embed labels from the training set into ...
-- **p. 1 / ABSTRACT - extractive body cue:** We present LSeg, a novel model for language-driven semantic image segmentation.
-- **p. 5 / C Input Label Set - extractive body cue:** In contrast, our approach can dynamically handle label sets with varying length, content, and order.
-- **p. 7 / 4 EXPERIMENTS - extractive body cue:** We notice that a consistent improvement can be achieved by adding a few regularization blocks.
-- **p. 7 / 4 EXPERIMENTS - extractive body cue:** The strongest improvement is achieved by stacking two BottleneckBlocks, an addition to the architecture that incurs little overhead.
-- **p. 8 / 4 EXPERIMENTS - extractive body cue:** We observe that using RN50×16 achieves the best performance among all text encoders and surpasses the weakest ViT-B/32 text encoder by 2.5%.
+- 영상 특징을 텍스트 인코더의 레이블 표현과 정렬한다.
+- 학습 시 고정된 클래스 밖의 텍스트 레이블로도 영역을 지정한다.
 
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+[저자 원문](https://arxiv.org/abs/2201.03546)
 
 ## Evaluation Scope
 

@@ -7,11 +7,11 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / ICRA
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Haochen Zhang, Nader Zantout, Pujith Kachana, Ji Zhang, Wenshan Wang
 - Primary track: VLA and generalist robot policies
 - Tier: REFERENCE
 - Tags: VLA, 3D Vision, Benchmark
-- Official paper: https://www.proceedings.com/content/081/081087webtoc.pdf
+- Official paper: https://arxiv.org/abs/2503.17406
 - Full-text retrieval: https://arxiv.org/pdf/2503.17406v1
 - Code/Project: not identified
 - Paper type: benchmark_or_dataset

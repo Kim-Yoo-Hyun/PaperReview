@@ -7,11 +7,11 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2026 / ICRA
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Jiaxing Liu, Zexi Zhang, Xiaoyan Li, Boyue Wang, Yongli Hu, Baocai Yin
 - Primary track: Robotics-enabling 3D perception
 - Tier: REFERENCE
 - Tags: Vision-Language Model, Navigation
-- Official paper: https://ras.papercept.net/conferences/conferences/ICRA26/program/ICRA26_ContentListWeb_5.html
+- Official paper: https://api.crossref.org/works/10.1109/icra57385.2026.11696642
 - Full-text retrieval: https://arxiv.org/pdf/2603.02972
 - Code/Project: not identified
 - Paper type: method

@@ -7,11 +7,11 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2019 / Technical Report
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Alex Ray, Joshua Achiam, Dario Amodei
 - Primary track: World models, safety, uncertainty, and recovery
 - Tier: REFERENCE
 - Tags: Robotics, safe reinforcement learning, Safety Gym, Benchmark, constraints
-- Official paper: https://openai.com/index/benchmarking-safe-exploration-in-deep-reinforcement-learning/
+- Official paper: https://cdn.openai.com/safexp-short.pdf
 - Full-text retrieval: https://cdn.openai.com/safexp-short.pdf
 - Code/Project: https://github.com/openai/safety-gym
 - Paper type: benchmark_or_dataset

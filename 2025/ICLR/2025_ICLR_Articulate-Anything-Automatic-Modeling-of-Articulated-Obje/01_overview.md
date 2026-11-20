@@ -7,12 +7,12 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / ICLR
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Long Le, Jason Xie, William Liang, Hung-Ju Wang, Yue Yang, Yecheng Jason Ma, Kyle Vedder, Arjun Krishna, Dinesh Jayaraman, ERIC EATON
 - Primary track: VLA and generalist robot policies
 - Tier: REFERENCE
 - Tags: Vision-Language Model, Robotics
-- Official paper: https://openreview.net/forum?id=s3FTX4Ay55
-- Full-text retrieval: https://chatpaper.com/api/v1/articles/download/114017
+- Official paper: https://proceedings.iclr.cc/paper_files/paper/2025/hash/2c8047bf3ed8ef6905351608d641f02f-Abstract-Conference.html
+- Full-text retrieval: https://proceedings.iclr.cc/paper_files/paper/2025/file/2c8047bf3ed8ef6905351608d641f02f-Paper-Conference.pdf
 - Code/Project: not identified
 - Paper type: theory_or_foundation
 - Source audit: full-text PDF body checked on 2026-09-03 (25 pages; PyMuPDF text; title-token overlap first two pages=1.0)

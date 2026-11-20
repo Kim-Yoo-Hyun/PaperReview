@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2024 / RSS
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Aidan Curtis, George Matheos, Nishad Gothoskar, Vikash Mansinghka, Joshua B. Tenenbaum, Tomás Lozano-Pérez, Leslie Pack Kaelbling
 - Primary track: Planning and control
 - Tier: NEXT
 - Tags: Robotics, TAMP, POMDP, uncertainty, risk-aware planning, closed-loop control

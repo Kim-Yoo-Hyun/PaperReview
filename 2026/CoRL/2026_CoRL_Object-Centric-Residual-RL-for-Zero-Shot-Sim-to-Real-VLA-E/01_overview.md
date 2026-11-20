@@ -2,13 +2,14 @@
 
 > Evidence maturity: `FULL_TEXT_CHECKED` — 지정 절만 확인한 기록이며 전체 정독·실험 재현을 뜻하지 않는다.
 
-- Year/Venue: 2026 / CoRL (official accepted list; final text not verified)
+- Year/Venue
+- Authors: Kinam Kim, Namiko Saito, Heecheol Kim, Katsushi Ikeuchi, Jaegul Choo, Yasuyuki Matsushita
 - Category: VLA and Generalist Robot Policies
 - Primary track: VLA and generalist robot policies
 - Tier: NEXT
 - Tags: VLA, residual-RL, object-centric, sim-to-real
 - Aliases: Object-Centric Residual RL
-- Official paper: https://openreview.net/forum?id=tAXtXe4Oqd
+- Official paper: https://arxiv.org/abs/2606.18953
 - Venue verification: https://www.corl.org/program/accepted-papers
 - Code/Project: https://www.microsoft.com/en-us/research/articles/object-centric-residual-rl/
 - Code: not identified

@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2024 / ICLR
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Xinghang Li, Minghuan Liu, Hanbo Zhang, Cunjun Yu, Jie Xu, Hongtao Wu, Chilam Cheang, Ya Jing, Weinan Zhang, Huaping Liu, Hang Li, Tao Kong
 - Primary track: VLA and generalist robot policies
 - Tier: NEXT
 - Tags: Robotics, VLA, VLM, Imitation Learning, language-conditioned manipulation, policy head

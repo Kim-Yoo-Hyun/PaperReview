@@ -7,11 +7,11 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / NeurIPS
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Vincent de Bakker, Joey Hejna, Tyler Ga Wei Lum, Onur Celik, Aleksandar Taranovic, Denis Blessing, Gerhard Neumann, Jeannette Bohg, Dorsa Sadigh
 - Primary track: VLA and generalist robot policies
 - Tier: REFERENCE
 - Tags: Vision-Language Model, Robotics, Reinforcement Learning
-- Official paper: https://openreview.net/forum?id=PdRf0O7baQ
+- Official paper: https://neurips.cc/virtual/2025/poster/118204
 - Full-text retrieval: https://arxiv.org/pdf/2506.19212.pdf
 - Code/Project: not identified
 - Paper type: method

@@ -7,12 +7,12 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / ICML
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Haoquan Fang, Markus Grotz, Wilbert Pumacay, Yi Ru Wang, Dieter Fox, Ranjay Krishna, Jiafei Duan
 - Primary track: VLA and generalist robot policies
 - Tier: REFERENCE
 - Tags: Robotics, Imitation Learning
-- Official paper: https://openreview.net/forum?id=anSWDvJm8v
-- Full-text retrieval: https://chatpaper.com/api/v1/articles/download/168185
+- Official paper: https://proceedings.mlr.press/v267/fang25c.html
+- Full-text retrieval: https://raw.githubusercontent.com/mlresearch/v267/main/assets/fang25c/fang25c.pdf
 - Code/Project: not identified
 - Paper type: theory_or_foundation
 - Source audit: full-text PDF body checked on 2026-09-03 (18 pages; PyMuPDF text; title-token overlap first two pages=1.0)

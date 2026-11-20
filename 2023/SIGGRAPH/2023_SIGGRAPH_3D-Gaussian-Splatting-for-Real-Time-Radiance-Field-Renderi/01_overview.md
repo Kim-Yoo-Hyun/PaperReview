@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2023 / SIGGRAPH
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Bernhard Kerbl, Georgios Kopanas, Thomas Leimkühler, George Drettakis
 - Primary track: Robotics-enabling 3D perception
 - Tier: REFERENCE
 - Tags: Gaussian Splatting, 3D reconstruction, representation
@@ -19,7 +19,7 @@
 
 ## Why This Paper Is Here
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 2022], but struggle to achieve the visual quality obtained by the current SOTA NeRF methods, i.e., Mip-NeRF360 [Barron et al.를 문제로 두고, To summarize, we provide the following contributions: • The introduction of anisotropic 3D Gaussians as a high-quality, unstructured representation of radiance fields. • An optimization method of 3D Gaussian properties, interleaved with ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+3D Gaussian Splatting은 여러 시점의 사진에서 3차원 가우시안의 위치·모양·모양새를 최적화해 새 시점의 영상을 실시간으로 렌더링한다.
 
 ## Problem and Motivation
 
@@ -51,16 +51,10 @@ Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 �
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** To summarize, we provide the following contributions: • The introduction of anisotropic 3D Gaussians as a high-quality, unstructured representation of radiance fields. • An optimization ...
-- **p. 1 / 1 INTRODUCTION - extractive body cue:** We introduce a new approach that combines the best of both worlds: our 3D Gaussian representation allows optimization with state-of-the-art (SOTA) visual quality and competitive ...
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** Note that for the NeRF-synthetic dataset, our method achieves high quality even with random initialization.
-- **p. 1 / Body text (section boundary not confidently recovered) - extractive body cue:** We introduce three key elements that allow us to achieve state-of-the-art visual quality while maintaining competitive training times and importantly allow high-quality real-time (≥30 fps) ...
-- **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1. Our method achieves real-time rendering of radiance fields with quality that equals the previous method with the best quality [Barron et al. 2022], ...
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** 2022], we achieve high-quality results with only SfM points as input.
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** Our results on previously published datasets show that we can optimize our 3D Gaussians from multi-view captures and achieve equal or better quality than the ...
-- **p. 1 / 1 INTRODUCTION - extractive body cue:** Recent methods achieve fast training [Fridovich-Keil ACM Trans.
+- 학습 중 가우시안의 밀도와 비등방성 공분산을 조절한다.
+- 가시성을 고려하는 스플래팅 렌더러로 영상 품질과 렌더링 속도를 비교한다.
 
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+[저자 원문](https://arxiv.org/abs/2308.04079)
 
 ## Evaluation Scope
 

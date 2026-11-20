@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / RSS
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Jason Jingzhou Liu, Yulong Li, Kenneth Shaw, Tony Tao, Russ Salakhutdinov, Deepak Pathak
 - Primary track: Manipulation, contact, tactile, and dexterity
 - Tier: NEXT
 - Tags: Robotics, tactile/force, force feedback, contact-rich manipulation, Imitation Learning, curriculum learning

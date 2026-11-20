@@ -7,11 +7,11 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2024 / ICRA
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Jingyun Yang, Max Sobol Mark, Brandon Vu, Archit Sharma, Jeannette Bohg, Chelsea Finn
 - Primary track: RL, IL, offline learning, and robot data
 - Tier: NEXT
 - Tags: Robotics, Reinforcement Learning, offline RL, reward model, real-world adaptation, policy fine-tuning
-- Official paper: https://ieeexplore.ieee.org/document/10610421/
+- Official paper: https://api.crossref.org/works/10.1109/ICRA57147.2024.10610421
 - Full-text retrieval: https://arxiv.org/pdf/2310.15145
 - Code/Project: https://robofume.github.io
 - Paper type: method

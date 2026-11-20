@@ -7,11 +7,11 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2024 / arXiv
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Michael Ahn, Debidatta Dwibedi, Chelsea Finn, Montse Gonzalez Arenas, Keerthana Gopalakrishnan, Karol Hausman, Brian Ichter, Alex Irpan, Nikhil Joshi, Ryan Julian, Sean Kirmani, Isabel Leal, Edward Lee, Sergey Levine, Yao Lu, Isabel Leal, Sharath Maddineni, Kanishka Rao, Dorsa Sadigh, Pannag Sanketi, Pierre Sermanet, Quan Vuong, Stefan Welker, Fei Xia, Ted Xiao, Peng Xu, Steve Xu, Zhuo Xu
 - Primary track: VLA and generalist robot policies
 - Tier: NEXT
 - Tags: Robotics, robot data, Foundation Models, Fleet Learning, Google DeepMind
-- Official paper: https://deepmind.google/research/publications/48151/
+- Official paper: https://arxiv.org/abs/2401.12963
 - Preprint: https://arxiv.org/abs/2401.12963 — 2026-11-06 official abstract/project metadata 확인; 정식 conference 게재로 승격하지 않음.
 - Full-text retrieval: https://deepmind.google/research/publications/48151/
 - Code/Project: not identified

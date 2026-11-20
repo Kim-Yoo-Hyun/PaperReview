@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / RSS
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Arjun Gupta, Michelle Zhang, Rishik Sathua, Saurabh Gupta
 - Primary track: Locomotion, whole-body, mobile manipulation, and humanoids
 - Tier: NEXT
 - Tags: Robotics, mobile manipulation, articulated objects, real-world evaluation

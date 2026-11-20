@@ -7,11 +7,11 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2002 / AAAI
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Michael Montemerlo, Sebastian Thrun, Daphne Koller, Ben Wegbreit
 - Primary track: Robotics-enabling 3D perception
 - Tier: REFERENCE
 - Tags: Robotics, SLAM, particle filter, state estimation
-- Official paper: https://www.cs.cmu.edu/~thrun/papers/montemerlo.fastslam-tr.html
+- Official paper: https://cdn.aaai.org/AAAI/2002/AAAI02-089.pdf
 - Full-text retrieval: https://cdn.aaai.org/AAAI/2002/AAAI02-089.pdf
 - Code/Project: not identified
 - Paper type: method

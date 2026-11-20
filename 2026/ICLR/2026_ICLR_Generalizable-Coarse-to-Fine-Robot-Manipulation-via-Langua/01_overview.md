@@ -7,12 +7,12 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2026 / ICLR
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Jianshu Hu, Lidi Wang, Shujia Li, Yunpeng Jiang, Xiao Li, Paul Weng, Yutong Ban
 - Primary track: VLA and generalist robot policies
 - Tier: REFERENCE
 - Tags: Robotics, 3D Vision, Imitation Learning
-- Official paper: https://openreview.net/forum?id=WXFfMLyB6y
-- Full-text retrieval: https://chatpaper.com/api/v1/articles/download/244660
+- Official paper: https://proceedings.iclr.cc/paper_files/paper/2026/hash/314129fede356d33eb7719d9edb01cc7-Abstract-Conference.html
+- Full-text retrieval: https://proceedings.iclr.cc/paper_files/paper/2026/file/314129fede356d33eb7719d9edb01cc7-Paper-Conference.pdf
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (19 pages; PyMuPDF text; title-token overlap first two pages=1.0)

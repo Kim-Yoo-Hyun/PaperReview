@@ -3,14 +3,15 @@
 > Evidence maturity: `ABSTRACT_CHECKED`. abstract 기반 — 본문 수동 확인 필요.
 > 자동 작성 노트는 실제 정독을 뜻하지 않는다. 사용자 reading status는 UNREAD로 시작한다.
 
-- Year/Venue: 2024 / CoRL
+- Year/Venue
+- Authors: Zhiyuan Zhou, Pranav Atreya, Abraham Lee, Homer Rich Walke, Oier Mees, Sergey Levine
 - Category: Robot Learning and Data
 - Primary track: RL, IL, offline learning, and robot data
 - Tier: NEXT
 - Tags: autonomous-data, instruction-following, goal-conditioned-policy, hindsight-learning
 - Aliases: SOAR
 - Official paper: https://proceedings.mlr.press/v270/zhou25b.html
-- Venue verification: https://proceedings.mlr.press/v270/
+- Venue verification: https://proceedings.mlr.press/v270/zhou25b.html
 - Code/Project: https://soar-autonomous-improvement.github.io/
 - Code: https://github.com/soar-autonomous-improvement/code-release
 - Source audit: 2026-11-07: 공식 metadata/abstract·저자 project/README 확인. CoRL 행사 연도 2024, PMLR270 발행 연도 2025를 구분. 공식 proceedings와 저자 project/code 확인; OpenReview forum은 challenge로 본문 접근 실패. Project의 Data Coming Soon과 abstract의 공개 주장을 구분하여 data_status는 미확인으로 둔다. 사용자 reading status UNREAD 유지.

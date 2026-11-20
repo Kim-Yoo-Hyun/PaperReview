@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2021 / NeurIPS
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Andrew Szot, Alexander Clegg, Eric Undersander, Erik Wijmans, Yili Zhao, John Turner, Noah Maestre, Mustafa Mukadam, Devendra Singh Chaplot, Oleksandr Maksymets, Aaron Gokaslan, Vladimír Vondruš, Sameer Dharur, Franziska Meier, Wojciech Galuba, Angel Chang, Zsolt Kira, Vladlen Koltun, Jitendra Malik, Manolis Savva, Dhruv Batra
 - Primary track: Locomotion, whole-body, mobile manipulation, and humanoids
 - Tier: NEXT
 - Tags: Robotics, simulation, mobile manipulation, Benchmark, physics, long-horizon tasks

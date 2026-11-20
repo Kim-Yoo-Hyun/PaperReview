@@ -7,12 +7,12 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / 3DV
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Vitor Campagnolo Guizilini, Pavel Tokmakov, Achal Dave, Rares Andrei Ambrus
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
 - Tags: Diffusion, Generation, depth, 3D Vision
-- Official paper: https://3dvconf.github.io/2025/accepted-papers/
-- Full-text retrieval: https://openreview.net/attachment?id=VSG65wVNuL&name=pdf
+- Official paper: https://3dvconf.github.io/2025/schedule_updated2.csv
+- Full-text retrieval: https://arxiv.org/pdf/2409.09896.pdf
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (14 pages; PyMuPDF text; title-token overlap first two pages=1.0)

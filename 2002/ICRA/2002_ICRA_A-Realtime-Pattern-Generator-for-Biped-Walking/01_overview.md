@@ -7,11 +7,11 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2002 / ICRA
-- Authors: not duplicated here when not verified in the registry source
+- Authors: S. Kajita, F. Kanehiro, K. Kaneko, K. Fujiwara, K. Yokoi, H. Hirukawa
 - Primary track: Locomotion, whole-body, mobile manipulation, and humanoids
 - Tier: REFERENCE
 - Tags: Robotics, humanoid, bipedal locomotion, 3D linear inverted pendulum, real-time control
-- Official paper: https://doi.org/10.1109/ROBOT.2002.1013335
+- Official paper: https://api.crossref.org/works/10.1109/ROBOT.2002.1013335
 - Full-text retrieval: https://www.cs.cmu.edu/~cga/legs/kuff1e.pdf
 - Code/Project: not identified
 - Paper type: theory_or_foundation

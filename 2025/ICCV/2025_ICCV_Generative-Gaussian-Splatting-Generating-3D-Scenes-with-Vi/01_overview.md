@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / ICCV
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Katja Schwarz, Norman Müller, Peter Kontschieder
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
 - Tags: Gaussian Splatting, Diffusion, Generation, 3D Vision
@@ -19,7 +19,7 @@
 
 ## Why This Paper Is Here
 
-Robotics-enabling 3D perception의 generative 문제를 이해하기 위해 읽는다. 본문은 However, these works cannot leverage pre-trained video diffusion models, because of their custom network architectures for incorporating the 3D representation.를 문제로 두고, We summarize our main contributions as follows: • We propose an approach that directly integrates an explicit 3D representation with a pre-trained latent video diffusion backbone, thereby improving 3D consistency of the ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+Generative Gaussian Splatting은 자세를 아는 한 장 이상의 참조 영상으로 일관된 3D 장면을 생성한다.
 
 ## Problem and Motivation
 
@@ -53,16 +53,10 @@ Robotics-enabling 3D perception의 generative 문제를 이해하기 위해 읽�
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** We summarize our main contributions as follows: • We propose an approach that directly integrates an explicit 3D representation with a pre-trained latent video diffusion ...
-- **p. 3 / 3.2. Integrating 3D Constraints - extractive body cue:** To address this limitation, we introduce a stronger bias in the model to learn correct spatial relationships between frames.
-- **p. 3 / 3. Method - extractive body cue:** We introduce Generative Gaussian Splatting (GGS) which directly synthesizes 3D-consistent scenes from one or more posed reference images.
-- **p. 4 / 3.2. Integrating 3D Constraints - extractive body cue:** We introduce noise only to the latents of the target images {zl tgt,0}L l=1, while leaving the reference images noise-free.
-- **p. 2 / 1. Introduction - extractive body cue:** Another interesting property of our approach is that using an explicit 3D representation like Gaussian splats supports training with additional depth supervision where available, resulting ...
-- **p. 6 / 4.1. Scene Synthesis From a Single Image - extractive body cue:** On RealEstate10K, our approach significantly improves image quality and 3D consistency over the baselines.
-- **p. 8 / 4.3. Autoregressive Scene Synthesis - extractive body cue:** With improved consistency, floating artifacts in the reconstructions are significantly reduced (see also Fig.
-- **p. 6 / 4.2. Scene Synthesis From Two Images - extractive body cue:** Our approach achieves similar results on RealEstate10K but does not reach the same reconstruction quality on ScanNet++.
+- 참조 영상을 조건으로 목표 시점에 영상 확산 사전분포를 사용한다.
+- 생성 과정의 다중 시점 정보를 3D 가우시안 표현에 반영한다.
 
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+[저자 원문](https://openaccess.thecvf.com/content/ICCV2025/html/Schwarz_Generative_Gaussian_Splatting_Generating_3D_Scenes_with_Video_Diffusion_Priors_ICCV_2025_paper.html)
 
 ## Evaluation Scope
 

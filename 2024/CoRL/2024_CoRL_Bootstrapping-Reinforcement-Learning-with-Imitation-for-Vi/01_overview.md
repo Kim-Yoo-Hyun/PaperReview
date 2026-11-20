@@ -7,11 +7,11 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2024 / CoRL
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Jiaxu Xing, Angel Romero, Leonard Bauersfeld, Davide Scaramuzza
 - Primary track: Locomotion, whole-body, mobile manipulation, and humanoids
 - Tier: REFERENCE
 - Tags: Robotics, aerial robotics, Reinforcement Learning, Imitation Learning
-- Official paper: https://openreview.net/forum?id=bt0PX0e4rE
+- Official paper: https://proceedings.mlr.press/v270/xing25a.html
 - Full-text retrieval: https://arxiv.org/pdf/2403.12203
 - Code/Project: https://bootstrap-rl-with-il.github.io/
 - Paper type: method

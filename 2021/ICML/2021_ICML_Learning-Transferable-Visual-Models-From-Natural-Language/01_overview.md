@@ -8,7 +8,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2021 / ICML
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Alec Radford, Jong Wook Kim, Chris Hallacy, Aditya Ramesh, Gabriel Goh, Sandhini Agarwal, Girish Sastry, Amanda Askell, Pamela Mishkin, Jack Clark, Gretchen Krueger, Ilya Sutskever
 - Primary track: VLA and generalist robot policies
 - Tier: CORE
 - Tags: CLIP, Vision-Language Model, alignment

@@ -7,11 +7,11 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2011 / ICRA
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Leslie Pack Kaelbling, Tomas Lozano-Perez
 - Primary track: Manipulation, contact, tactile, and dexterity
 - Tier: REFERENCE
 - Tags: Robotics, Planning, task and motion planning, manipulation
-- Official paper: https://doi.org/10.1109/ICRA.2011.5980391
+- Official paper: https://api.crossref.org/works/10.1109/ICRA.2011.5980391
 - Full-text retrieval: https://doi.org/10.1109/ICRA.2011.5980391
 - Code/Project: not identified
 - Paper type: theory_or_foundation

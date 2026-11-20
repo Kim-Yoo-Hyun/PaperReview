@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2020 / ECCV
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Jacob Krantz, Erik Wijmans, Arjun Majumdar, Dhruv Batra, Stefan Lee
 - Primary track: Robotics-enabling 3D perception
 - Tier: CORE
 - Tags: Vision-Language Navigation, Robotics, Navigation, Benchmark

@@ -7,11 +7,11 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2024 / CoRL
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Tairan He, Zhengyi Luo, Xialin He, Wenli Xiao, Chong Zhang, Weinan Zhang, Kris M. Kitani, Changliu Liu, Guanya Shi
 - Primary track: Locomotion, whole-body, mobile manipulation, and humanoids
 - Tier: REFERENCE
 - Tags: Robotics, humanoid, whole-body teleoperation, loco-manipulation, Imitation Learning
-- Official paper: https://openreview.net/forum?id=oL1WEZQal8
+- Official paper: https://proceedings.mlr.press/v270/he25b.html
 - Full-text retrieval: https://arxiv.org/pdf/2406.08858
 - Code/Project: https://omni.human2humanoid.com/
 - Paper type: method

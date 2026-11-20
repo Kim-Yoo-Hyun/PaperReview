@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2023 / ICCV
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Alexander Kirillov, Eric Mintun, Nikhila Ravi, Hanzi Mao, Chloe Rolland, Laura Gustafson, Tete Xiao, Spencer Whitehead, Alexander C. Berg, Wan-Yen Lo, Piotr Dollar, Ross Girshick
 - Primary track: Foundations: Vision and Language Models
 - Tier: REFERENCE
 - Tags: segmentation, foundation model, prompting
@@ -19,7 +19,7 @@
 
 ## Why This Paper Is Here
 
-Foundations: Vision and Language Models의 upstream 문제를 이해하기 위해 읽는다. 본문은 These "foundation models" [8] can generalize to tasks and data distributions beyond those seen during training.를 문제로 두고, We introduce each interconnected component next, followed by the dataset we created and the experiments that demonstrate the effectiveness of our approach.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+Segment Anything은 점이나 상자 등으로 대상을 지정해 마스크를 생성하는 모델과 그 학습에 사용한 대규모 분할 데이터셋을 제시한다.
 
 ## Problem and Motivation
 
@@ -53,16 +53,10 @@ Foundations: Vision and Language Models의 upstream 문제를 이해하기 위�
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 3. What data can power this task and model? - extractive body cue:** We introduce each interconnected component next, followed by the dataset we created and the experiments that demonstrate the effectiveness of our approach.
-- **p. 1 / 1. Introduction - extractive body cue:** That is, we seek to develop a promptable model and pre-train it on a broad dataset using a task that enables powerful generalization.
-- **p. 2 / 3. What data can power this task and model? - extractive body cue:** Inspired by this line of work, we propose the promptable segmentation task, where the goal is to return a valid segmentation mask given any segmentation ...
-- **p. 5 / 3. Segment Anything Model - extractive body cue:** This runtime performance enables seamless, real-time interactive prompting of our model.
-- **p. 1 / 1. Introduction - extractive body cue:** To develop them, we address the following questions about image segmentation:
-- **p. 9 / 7.1. Zero-Shot Single Point Valid Mask Evaluation - extractive body cue:** SAM significantly outperforms prior interactive segmenters with 1 point and is on par with more points.
-- **p. 9 / 7.1. Zero-Shot Single Point Valid Mask Evaluation - extractive body cue:** We observe that the gap between SAM and the baselines grows and SAM is able to achieve comparable results under either sampling method.
-- **p. 12 / 7.6. Ablations - extractive body cue:** (Left) Each data engine stage leads to improvements on our 23 dataset suite, and training with only the automatic data (our default) yields similar results ...
+- 프롬프트를 주면 대응하는 마스크를 출력하는 분할 과제를 정의한다.
+- 모델이 데이터 수집을 보조하고, 수집한 마스크를 다시 모델 개선에 사용한다.
 
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+[저자 원문](https://openaccess.thecvf.com/content/ICCV2023/html/Kirillov_Segment_Anything_ICCV_2023_paper.html)
 
 ## Evaluation Scope
 

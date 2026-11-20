@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2024 / ECCV
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Jiahao Chang, Yinglin Xu, Yihao Li, Yuantao Chen, Wensen Feng, Xiaoguang Han
 - Primary track: Robotics-enabling 3D perception
 - Tier: REFERENCE
 - Tags: Gaussian Splatting, geometry, 3D Vision

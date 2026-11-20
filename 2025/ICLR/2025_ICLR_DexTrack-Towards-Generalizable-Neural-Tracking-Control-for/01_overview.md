@@ -7,11 +7,11 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / ICLR
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Xueyi Liu, Jianibieke Adalibieke, Qianwei Han, Yuzhe Qin, Li Yi
 - Primary track: Manipulation, contact, tactile, and dexterity
 - Tier: REFERENCE
 - Tags: Robotics, dexterous manipulation, tracking control, human demonstration
-- Official paper: https://openreview.net/forum?id=ajSmXqgS24
+- Official paper: https://proceedings.iclr.cc/paper_files/paper/2025/hash/d5a1f97d2b922da92e880d13b7d2bf02-Abstract-Conference.html
 - Full-text retrieval: https://arxiv.org/pdf/2502.09614
 - Code/Project: https://meowuu7.github.io/DexTrack/
 - Paper type: method
@@ -19,7 +19,7 @@
 
 ## Why This Paper Is Here
 
-Manipulation, contact, tactile, and dexterity의 manipulation 문제를 이해하기 위해 읽는다. 본문은 However, challenges remain due to noisy kinematic references, differences in morphology between human and robotic hands, complex dynamics with rich contacts, and diverse object geometry and skills.를 문제로 두고, Our contributions are threefold: • We present a generalizable neural tracking controller that progressively improves its performance through iterative mining and incorporating high-quality tracking demonstrations. • We introduce a train ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+DexTrack은 다양한 손·물체 궤적을 추종하는 다관절 손 제어기를 학습한다.
 
 ## Problem and Motivation
 
@@ -50,16 +50,10 @@ Manipulation, contact, tactile, and dexterity의 manipulation 문제를 이해�
 
 ## Main Claims and Actual Contribution
 
-- **p. 3 / 1 INTRODUCTION - extractive body cue:** Our contributions are threefold: • We present a generalizable neural tracking controller that progressively improves its performance through iterative mining and incorporating high-quality tracking demonstrations. ...
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** Based upon the previous observations, we propose DexTrack, a novel neural tracking controller for dexterous manipulation, guided by human references.
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** To make sure the data flywheel functions effectively, we introduce two key designs.
-- **p. 3 / 1 INTRODUCTION - extractive body cue:** We propose a data-driven way to generate homotopy paths, enabling solving challenging tracking problems.
-- **p. 1 / ABSTRACT - extractive body cue:** Our method achieves over a 10% improvement in success rates compared to leading baselines.
-- **p. 8 / 4 EXPERIMENTS - extractive body cue:** As shown in Table 1, we achieve significantly higher success rates, calculated under two different thresholds, compared to the best-performing baseline across both datasets.
-- **p. 7 / 4 EXPERIMENTS - extractive body cue:** On average, our method improves the tracking success rate by over 10% compared to the best prior methods.
-- **p. 17 / B.1 DEXTEROUS MANIPULATION TRACKING CONTROL - extractive body cue:** The final model trained in this way achieves 42.13% and 60.41% success rates under two thresholds.
+- 성공한 추종 시연들을 구성해 정책 학습에 사용한다.
+- 어려운 궤적까지 연결하는 중간 경로를 데이터로부터 생성한다.
 
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+[저자 원문](https://proceedings.iclr.cc/paper_files/paper/2025/hash/d5a1f97d2b922da92e880d13b7d2bf02-Abstract-Conference.html)
 
 ## Evaluation Scope
 

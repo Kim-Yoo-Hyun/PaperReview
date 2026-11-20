@@ -2,7 +2,8 @@
 
 > Evidence maturity: `FULL_TEXT_CHECKED` — 지정 절만 확인한 기록이며 전체 정독·실험 재현을 뜻하지 않는다.
 
-- Year/Venue: 2026 / ICML
+- Year/Venue
+- Authors: Zhanyi Sun, Shuran Song
 - Category: Robot Learning and Data
 - Primary track: RL, IL, offline learning, and robot data
 - Tier: NEXT

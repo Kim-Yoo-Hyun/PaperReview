@@ -12,10 +12,10 @@
 - Primary track: Robotics-enabling 3D perception
 - Tier: NEXT
 - Tags: Robotics, Navigation, Gaussian Splatting
-- Official paper: https://doi.org/10.1109/TRO.2025.3552348
+- Official paper: https://api.crossref.org/works/10.1109/tro.2025.3552348
 - Preprint: https://arxiv.org/abs/2403.02751 (first submitted 2024-03-05; v3 2025-01-11)
 - Full-text retrieval: https://arxiv.org/pdf/2403.02751
-- Code/Project: [official code](https://github.com/chengine/splatnav) · [project](https://chengine.github.io/splatnav/); links verified, execution not checked in META-W1
+- Code/Project: https://chengine.github.io/splatnav/
 - Conference presentation: IROS 2025, reported by the [author laboratory](https://sites.temple.edu/trail/publications/) separately from T-RO publication. Its linked [conference program](https://ras.papercept.net/conferences/conferences/IROS25/program/IROS25_ContentListWeb_3.html) could not be retrieved in this pass; oral/poster format remains unverified.
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (20 pages; PyMuPDF text; title-token overlap first two pages=1.0)

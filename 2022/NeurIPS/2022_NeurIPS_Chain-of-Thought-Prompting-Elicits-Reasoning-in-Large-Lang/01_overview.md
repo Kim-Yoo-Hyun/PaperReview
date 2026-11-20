@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2022 / NeurIPS
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Jason Wei, Xuezhi Wang, Dale Schuurmans, Maarten Bosma, brian ichter, Fei Xia, Ed Chi, Quoc V Le, Denny Zhou
 - Primary track: Foundations: Vision and Language Models
 - Tier: REFERENCE
 - Tags: LLM, reasoning, Chain-of-Thought

@@ -7,12 +7,12 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2026 / ICLR
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Yuanchen Ju, Yongyuan Liang, Yen-Jen Wang, Gireesh Nandiraju, Yuanliang Ju, Seungjae (Jay) Lee, Qiao Gu, Elvis Hsieh, Furong Huang, Koushil Sreenath
 - Primary track: VLA and generalist robot policies
 - Tier: NEXT
 - Tags: Vision-Language Model, Robotics, 3D Vision, Graph Reasoning
-- Official paper: https://openreview.net/forum?id=3eTr9dGwJv
-- Full-text retrieval: https://openreview.net/pdf/3f888689e829f4172ae97d1dfac5f1b62ddb30c3.pdf
+- Official paper: https://proceedings.iclr.cc/paper_files/paper/2026/hash/9baf31febefde7bd76023c2d2f13cbd7-Abstract-Conference.html
+- Full-text retrieval: https://proceedings.iclr.cc/paper_files/paper/2026/file/9baf31febefde7bd76023c2d2f13cbd7-Paper-Conference.pdf
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (26 pages; PyMuPDF text; title-token overlap first two pages=1.0)

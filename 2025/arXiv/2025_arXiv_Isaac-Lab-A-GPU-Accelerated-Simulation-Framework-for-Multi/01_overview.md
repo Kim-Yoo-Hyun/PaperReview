@@ -7,21 +7,19 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / arXiv
-- Authors: not duplicated here when not verified in the registry source
+- Authors: NVIDIA, Mayank Mittal, Pascal Roth, James Tigue, Antoine Richard, Octi Zhang, Peter Du, Antonio Serrano-Muñoz, Xinjie Yao, René Zurbrügg, Nikita Rudin, Lukasz Wawrzyniak, Milad Rakhsha, Alain Denzler, Eric Heiden, Ales Borovicka, Ossama Ahmed, Iretiayo Akinola, Abrar Anwar, Mark T. Carlson, Ji Yuan Feng, Animesh Garg, Renato Gasoto, Lionel Gulich, Yijie Guo, M. Gussert, Alex Hansen, Mihir Kulkarni, Chenran Li, Wei Liu, Viktor Makoviychuk, Grzegorz Malczyk, Hammad Mazhar, Masoud Moghani, Adithyavairavan Murali, Michael Noseworthy, Alexander Poddubny, Nathan Ratliff, Welf Rehberg, Clemens Schwarke, Ritvik Singh, James Latham Smith, Bingjie Tang, Ruchik Thaker, Matthew Trepte, Karl Van Wyk, Fangzhou Yu, Alex Millane, Vikram Ramasamy, Remo Steiner, Sangeeta Subramanian, Clemens Volk, CY Chen, Neel Jawale, Ashwin Varghese Kuruttukulam, Michael A. Lin, Ajay Mandlekar, Karsten Patzwaldt, John Welsh, Huihua Zhao, Fatima Anes, Jean-Francois Lafleche, Nicolas Moënne-Loccoz, Soowan Park, Rob Stepinski, Dirk Van Gelder, Chris Amevor, Jan Carius, Jumyung Chang, Anka He Chen, Pablo de Heras Ciechomski, Gilles Daviet, Mohammad Mohajerani, Julia von Muralt, Viktor Reutskyy, Michael Sauter, Simon Schirm, Eric L. Shi, Pierre Terdiman, Kenny Vilella, Tobias Widmer, Gordon Yeoman, Tiffany Chen, Sergey Grizan, Cathy Li, Lotus Li, Connor Smith, Rafael Wiltz, Kostas Alexis, Yan Chang, David Chu, Linxi "Jim" Fan, Farbod Farshidian, Ankur Handa, Spencer Huang, Marco Hutter, Yashraj Narang, Soha Pouya, Shiwei Sheng, Yuke Zhu, Miles Macklin, Adam Moravanszky, Philipp Reist, Yunrong Guo, David Hoeller, Gavriel State
 - Primary track: RL, IL, offline learning, and robot data
 - Tier: REFERENCE
 - Tags: Robotics, simulation, GPU, Robot Learning, NVIDIA
 - Official paper: https://arxiv.org/abs/2511.04831
 - Full-text retrieval: https://research.nvidia.com/labs/prl/publication/isaaclab2025/
-- Code/Project: https://github.com/isaac-sim/IsaacLab · https://isaac-sim.github.io/IsaacLab/
+- Code/Project: https://isaac-sim.github.io/IsaacLab/
 - Paper type: benchmark_or_dataset
 - Source audit: full-text PDF body checked on 2026-09-03 (53 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
-> Metadata refresh 2026-11-06: 공식 NVIDIA publication·documentation과 repository에서 arXiv 식별자 및 code 공개를 확인했다. Technical report/arXiv 분류 유지. 아래 기존 body 검토 기록과 현재 소프트웨어 문서의 기능을 구분하며 native 재현이나 본문 재정독을 뜻하지 않는다.
-
-RL, IL, offline learning, and robot data의 benchmark 문제를 이해하기 위해 읽는다. 본문은 These limitations are especially acute in rare but safety-critical situations.를 문제로 두고, This enables large-scale data collection, systematic stress testing, and the development of algorithms that transfer more effectively to real-world systems.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+Isaac Lab은 GPU 병렬 물리, 렌더링, 센서와 액추에이터 모델을 조합해 로봇 학습 환경을 구성하는 시뮬레이션 프레임워크다.
 
 ## Problem and Motivation
 
@@ -55,16 +53,10 @@ RL, IL, offline learning, and robot data의 benchmark 문제를 이해하기 위
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** This enables large-scale data collection, systematic stress testing, and the development of algorithms that transfer more effectively to real-world systems.
-- **p. 2 / 1. Introduction - extractive body cue:** A landmark contribution in this space came from NVIDIA Isaac Gym (Makoviychuk et al., 2021), which demonstrated for the first time that end-to-end RL for ...
-- **p. 3 / 1. Introduction - extractive body cue:** Key contributions of Isaac Lab • Modular and scalable framework: Built on NVIDIA Omniverse, enabling high-fidelity, GPUaccelerated simulation for complex robots and tasks. • Advanced ...
-- **p. 39 / 7.1.2. Architecture and Design Principles - extractive body cue:** Users can integrate only the components they need, supporting both lightweight prototypes and full production systems. • Flexible Selection API: Similar to PhysX's Tensor API, ...
-- **p. 15 / 3.4.3. Motion Planning - extractive body cue:** The cuRobo (Sundaralingam et al., 2023) integration in Isaac Lab enables fast, GPU-parallelized collision-aware motion planning.
-- **p. 33 / Figure/Table caption - extractive body cue:** Figure 27: Assembly Environments in Isaac Lab (Tang et al., 2023). Left: Simulation. Right: Real World. The Factory environments combine SDF-based con- tact generation, a ...
-- **p. 21 / Figure/Table caption - extractive body cue:** Figure 15: Log-scale throughput comparison for perceptive learning task in dexterous manipulation (DextrAH). Results are shown for the Tiled and Raycaster-based camera at 64x64 resolution ...
-- **p. 22 / Figure/Table caption - extractive body cue:** Figure 16: Log-scale throughput comparison of the rough terrain locomotion task for ANYmal-D robot imple- mented using the manager-based and direct workflows. Right: The plot ...
+- 같은 환경에서 다중 주기 센서, 도메인 무작위화와 데이터 수집 과정을 구성한다.
+- 전신 제어, 접촉 조작과 시연 기반 학습 등에서 프레임워크를 적용한 사례를 제시한다.
 
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+[저자 원문](https://arxiv.org/abs/2511.04831)
 
 ## Evaluation Scope
 

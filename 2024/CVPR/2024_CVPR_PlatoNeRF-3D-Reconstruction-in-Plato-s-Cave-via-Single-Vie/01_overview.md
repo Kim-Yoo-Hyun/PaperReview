@@ -7,10 +7,10 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2024 / CVPR
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Tzofi Klinghoffer, Xiaoyu Xiang, Siddharth Somasundaram, Yuchen Fan, Christian Richardt, Ramesh Raskar, Rakesh Ranjan
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
-- Tags: NeRF, 3D reconstruction, sensor fusion, LiDAR, 3D Vision
+- Tags: NeRF, 3D reconstruction, LiDAR, 3D Vision
 - Official paper: https://openaccess.thecvf.com/content/CVPR2024/html/Klinghoffer_PlatoNeRF_3D_Reconstruction_in_Platos_Cave_via_Single-View_Two-Bounce_Lidar_CVPR_2024_paper.html
 - Full-text retrieval: https://openaccess.thecvf.com/content/CVPR2024/papers/Klinghoffer_PlatoNeRF_3D_Reconstruction_in_Platos_Cave_via_Single-View_Two-Bounce_Lidar_CVPR_2024_paper.pdf
 - Code/Project: not identified

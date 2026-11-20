@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / CVPR
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Jingyi Tian, Le Wang, Sanping Zhou, Sen Wang, Jiayi Li, Haowen Sun, Wei Tang
 - Primary track: Manipulation, contact, tactile, and dexterity
 - Tier: REFERENCE
 - Tags: Diffusion, Robotics, 3D action
@@ -19,7 +19,7 @@
 
 ## Why This Paper Is Here
 
-Manipulation, contact, tactile, and dexterity의 manipulation 문제를 이해하기 위해 읽는다. 본문은 However, the number of discretized bins needed to approximate a continuous action space grows exponentially with increasing dimensionality, making it difficult to maintain accuracy and scalability as task complexity increases.를 문제로 두고, In this work, we propose PDFactor, a novel multi-task manipulation agent that leverages a tri-perspective view transformer to learn a hybrid action representation.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+PDFactor는 점군에서 세 직교 평면의 특징을 구성하고, 관측과 정렬된 확산장으로 6자유도 조작 행동을 예측한다.
 
 ## Problem and Motivation
 
@@ -53,16 +53,10 @@ Manipulation, contact, tactile, and dexterity의 manipulation 문제를 이해�
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** In this work, we propose PDFactor, a novel multi-task manipulation agent that leverages a tri-perspective view transformer to learn a hybrid action representation.
-- **p. 2 / 1. Introduction - extractive body cue:** To summarise, our work presents the following three contributions: • We formulate a hybrid action representation termed Policy Diffusion Field to ground continuous and multimodal ...
-- **p. 3 / 3. Method - extractive body cue:** In particular, given RGB-D observations \protect \mathbf {o}, language instruction \protect \mathbf {l} and robot proprioception \protect \mathbf {c}, our goal is to learn a ...
-- **p. 5 / 3.4. Score Matching Loss - extractive body cue:** After obtaining three 2D feature planes, we introduce score matching loss.
-- **p. 5 / Model - extractive body cue:** We show detailed model configurations in Tab.
-- **p. 6 / 4.2. Comparison with State-of-the-Art Methods - extractive body cue:** Our method achieves the best performance with an average success rate of 87.3% among all 18 tasks, an absolute improvement of 5.9% over RVT-2, the ...
-- **p. 8 / Figure/Table caption - extractive body cue:** Figure 5. (a) Learning efficiency. We show the learning curves of PDFactor and RVT-2. PDFactor demonstrates faster convergence with a higher performance than previous state-of-the-art ...
-- **p. 6 / 4.1. Experiment Setup - extractive body cue:** We evaluate policies by task completion success rate, which is the proportion of execution trajectories that achieve the goal conditions specified in the language instructions.
+- 세 방향의 영상 특징을 결합해 위치별 행동 분포를 표현한다.
+- 여러 조작 태스크의 실행 성공률로 제어 정책을 평가한다.
 
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+[저자 원문](https://openaccess.thecvf.com/content/CVPR2025/html/Tian_PDFactor_Learning_Tri-Perspective_View_Policy_Diffusion_Field_for_Multi-Task_Robotic_CVPR_2025_paper.html)
 
 ## Evaluation Scope
 

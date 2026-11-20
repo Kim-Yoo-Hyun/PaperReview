@@ -7,12 +7,12 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / ICLR
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Yutong Chen, Marko Mihajlovic, Xiyi Chen, Yiming Wang, Sergey Prokudin, Siyu Tang
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
 - Tags: Gaussian Splatting, point cloud, 3D Vision
-- Official paper: https://openreview.net/forum?id=9NfHbWKqMF
-- Full-text retrieval: https://chatpaper.com/api/v1/articles/download/111734
+- Official paper: https://proceedings.iclr.cc/paper_files/paper/2025/hash/8cbde11e5e271ef9ff67fc9f292e43ed-Abstract-Conference.html
+- Full-text retrieval: https://proceedings.iclr.cc/paper_files/paper/2025/file/8cbde11e5e271ef9ff67fc9f292e43ed-Paper-Conference.pdf
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (27 pages; PyMuPDF text; title-token overlap first two pages=1.0)

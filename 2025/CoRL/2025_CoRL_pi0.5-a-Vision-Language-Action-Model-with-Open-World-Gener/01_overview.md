@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / CoRL
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Kevin Black, Noah Brown, James Darpinian, Karan Dhabalia, Danny Driess, Adnan Esmail, Michael Robert Equi, Chelsea Finn, Niccolo Fusai, Manuel Y. Galliker, Dibya Ghosh, Lachy Groom, Karol Hausman, brian ichter, Szymon Jakubczak, Tim Jones, Liyiming Ke, Devin LeBlanc, Sergey Levine, Adrian Li-Bell, Mohith Mothukuri, Suraj Nair, Karl Pertsch, Allen Z. Ren, Lucy Xiaoyang Shi, Laura Smith, Jost Tobias Springenberg, Kyle Stachowicz, James Tanner, Quan Vuong, Homer Walke, Anna Walling, Haohuan Wang, Lili Yu, Ury Zhilinsky
 - Primary track: VLA and generalist robot policies
 - Tier: CORE
 - Tags: VLA, open-world, Robotics
@@ -19,7 +19,7 @@
 
 ## Why This Paper Is Here
 
-VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다. 본문은 A person can draw on a lifetime of experience to synthesize appropriate solutions to each of these challenges.를 문제로 두고, Our central contribution is a system for training a highly generalizable VLA, π0.5, together with a proof of concept that generalization can emerge from this model when it is trained on appropriately ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+π0.5는 여러 로봇의 행동, 웹 데이터, 의미 단위 하위 작업을 함께 학습해 새로운 장소에서 조작하는 능력을 평가한다.
 
 ## Problem and Motivation
 
@@ -49,16 +49,10 @@ VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1 Introduction - extractive body cue:** Our central contribution is a system for training a highly generalizable VLA, π0.5, together with a proof of concept that generalization can emerge from this ...
-- **p. 8 / Figure/Table caption - extractive body cue:** Figure 10: Comparing π0.5 with other models. Our full model significantly outperforms both π0 and π0-FAST+Flow in the mock home test environments. We compare π0.5 ...
-- **p. 7 / Figure/Table caption - extractive body cue:** Figure 6: Evaluating performance with different numbers of locations. Performance over the four test tasks - "dishes in sink", "items in drawer", "laundry basket", "make ...
-- **p. 20 / Figure/Table caption - extractive body cue:** Figure 13: Robot system overview. We use two mobile manipulator platforms - each has four cameras (for- ward, backward, and both wrists), two 6 DoF ...
-- **p. 24 / Figure/Table caption - extractive body cue:** Figure 18: Per-task performance breakdown for high-level inference methods. We evaluate the full π0.5 model and various high-level inference baselines across four representative household tasks. ...
-- **p. 7 / Figure/Table caption - extractive body cue:** Figure 7: Evaluating language following with dif- ferent numbers of training locations. We evalu- ate language following rate and success rate for pick- ing up ...
-- **p. 6 / Figure/Table caption - extractive body cue:** Figure 4: Evaluation environments. We evaluate π0.5 in entirely new kitchens and bedrooms that were not seen during training, with novel objects, backgrounds, and layouts. ...
-- **p. 22 / Figure/Table caption - extractive body cue:** Figure 15: Comparing π0.5 with other models on language following. We evaluate language following capabilities of π0.5 , π0, and π0-FAST+Flow, finding π0.5 outperforms each, ...
+- 관측 영상·언어·물체 검출·하위 작업 예측·저수준 행동을 결합한 학습 예제를 구성한다.
+- 훈련 장소와 다른 실제 가정에서 물체 정리처럼 여러 단계가 필요한 조작을 평가한다.
 
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+[저자 원문](https://proceedings.mlr.press/v305/black25a.html)
 
 ## Evaluation Scope
 

@@ -7,12 +7,12 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2026 / ICML
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Tianxing Chen, Zanxin Chen, Baijun Chen, Zijian Cai, Yibin Liu, Zixuan Li, Qiwei Liang, Xianliang Lin, Yiheng Ge, Zhenyu Gu, Weiliang Deng, Yubin Guo, Tian Nian, Xuanbing Xie, Qiangyu Chen, Kailun Su, Tianling Xu, Guodong Liu, Mengkang Hu, Huan-ang Gao, Kaixuan Wang, Zhixuan Liang, Yusen Qin, Xiaokang Yang, Ping Luo, Yao Mu
 - Primary track: VLA and generalist robot policies
 - Tier: REFERENCE
 - Tags: VLA, Robotics, Benchmark
-- Official paper: https://openreview.net/forum?id=itonej9GIV
-- Full-text retrieval: https://openreview.net/pdf/7cbb20fa3292d18ddb89823a5e7c3df7e52a3eb3.pdf
+- Official paper: https://icml.cc/virtual/2026/poster/62192
+- Full-text retrieval: https://arxiv.org/pdf/2506.18088.pdf
 - Code/Project: not identified
 - Paper type: benchmark_or_dataset
 - Source audit: full-text PDF body checked on 2026-09-03 (24 pages; PyMuPDF text; title-token overlap first two pages=1.0)

@@ -7,11 +7,11 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / NeurIPS
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Zihan Wang, Seungjun Lee, Gim Hee Lee
 - Primary track: Robotics-enabling 3D perception
 - Tier: REFERENCE
 - Tags: Vision-Language Model, 3D Vision, Navigation
-- Official paper: https://openreview.net/forum?id=s6k9l5yX8e
+- Official paper: https://neurips.cc/virtual/2025/oral/130277
 - Full-text retrieval: https://arxiv.org/pdf/2505.11383
 - Code/Project: not identified
 - Paper type: method

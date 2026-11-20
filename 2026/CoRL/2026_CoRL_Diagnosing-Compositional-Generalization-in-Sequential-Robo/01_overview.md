@@ -3,13 +3,14 @@
 > Evidence maturity: `ABSTRACT_CHECKED`. abstract 기반 — 본문 수동 확인 필요.
 > 자동 작성 노트는 실제 정독을 뜻하지 않는다. 사용자 reading status는 UNREAD로 시작한다.
 
-- Year/Venue: 2026 / CoRL (official accepted list; presentation not upgraded)
+- Year/Venue
+- Authors: Yixiao Wang, Cheng-En Wu, Lingfeng Sun, Pengcheng Wang, Xiang Ji, Boyuan Liang, Guojian Zhan, Masayoshi Tomizuka
 - Category: Robot Learning and Data
 - Primary track: RL, IL, offline learning, and robot data
 - Tier: NEXT
 - Tags: Robotics, imitation-learning, instruction-coverage, compositional-generalization
 - Aliases:
-- Official paper: https://openreview.net/forum?id=gQFYIM5dJy
+- Official paper: https://arxiv.org/abs/2607.29687
 - Venue verification: https://www.corl.org/program/accepted-papers
 - Code/Project: https://yixiaowang7.github.io/Diagnosing_Compositional_Generalization_Robot_Page/
 - Code: https://github.com/YixiaoWang7/Diagnosing_Compositional_Generalization_Robot

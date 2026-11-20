@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2026 / ICML
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Qiwei Wu, Rui Zhang, Xin Xiang, Tao Li, Weihua Zhang, Junjie Lai, Renjing Xu
 - Primary track: Manipulation, contact, tactile, and dexterity
 - Tier: NEXT
 - Tags: VLA, tactile, force feedback, contact-rich manipulation, Benchmark, dexterity, language-conditioned manipulation

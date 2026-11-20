@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / ICCV
-- Authors: not duplicated here when not verified in the registry source
+- Authors: SungMin Jang, Wonjun Kim
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
 - Tags: 3D Vision, Gaussian Splatting, semantic
@@ -19,7 +19,7 @@
 
 ## Why This Paper Is Here
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 To do this, most previous methods have utilized high-quality 3D point clouds [19, 25], however, it is quite difficult to acquire data, which reflects various realworld environments, with language annotations.를 문제로 두고, The main contribution of the proposed method can be summarized as follows: • We propose a novel framework that enforces language embeddings in the Gaussian field to be located closer in the ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+물체 정체성을 보존하도록 언어 가우시안 장을 학습해, 임의 어휘로 3D 장면을 분할한다.
 
 ## Problem and Motivation
 
@@ -53,16 +53,10 @@ Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 �
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** The main contribution of the proposed method can be summarized as follows: • We propose a novel framework that enforces language embeddings in the Gaussian ...
-- **p. 2 / 1. Introduction - extractive body cue:** In this paper, we propose an identity-aware language Gaussian field to resolve the aforementioned problem in open-vocabulary 3D semantic segmentation.
-- **p. 3 / 3.2. Identity-aware Semantic Consistency Learning - extractive body cue:** To address this issue, we introduce an identity-aware semantic consistency learning scheme.
-- **p. 3 / 3.2. Identity-aware Semantic Consistency Learning - extractive body cue:** Specifically, we incorporate the identity information into our framework, inspired by the concept of the identity encoding for segmentation and editing in 3D scenes [31].
-- **p. 4 / 3.3. Progressive Mask Expanding - extractive body cue:** To resolve this problem, we propose a progressive mask expanding scheme.
-- **p. 5 / 4.3. Performance Evaluation - extractive body cue:** Specifically, the proposed method achieves 80.5 mIoU and 76.0 mBIoU on the LERF dataset, which outperforms the stateof-the-art methods by a considerable margin for all ...
-- **p. 5 / 4.3. Performance Evaluation - extractive body cue:** As can be seen, the proposed method achieves 94.4 mIoU, which shows the superior performance compared to previous methods.
-- **p. 7 / 4.4. Ablation Study - extractive body cue:** As can be seen, the performance of open-vocabulary 3D semantic segmentation is considerably improved as each component is added to the baseline.
+- 서로 다른 시점에서 같은 대상의 의미 표현이 일관되도록 학습한다.
+- 개방 어휘 질의에서 해당 영역이 올바르게 분리되는지 평가한다.
 
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+[저자 원문](https://openaccess.thecvf.com/content/ICCV2025/html/Jang_Identity-aware_Language_Gaussian_Splatting_for_Open-vocabulary_3D_Semantic_Segmentation_ICCV_2025_paper.html)
 
 ## Evaluation Scope
 

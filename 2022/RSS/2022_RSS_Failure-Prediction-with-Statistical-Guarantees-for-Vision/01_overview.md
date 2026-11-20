@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2022 / RSS
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Alec Farid, David Snyder, Allen Z. Ren, Anirudha Majumdar
 - Primary track: World models, safety, uncertainty, and recovery
 - Tier: REFERENCE
 - Tags: Robotics, failure prediction, vision-based control, statistical guarantees, safe deployment

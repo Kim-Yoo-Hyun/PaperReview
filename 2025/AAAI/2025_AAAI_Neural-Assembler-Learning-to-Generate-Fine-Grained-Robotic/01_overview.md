@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / AAAI
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Hongyu Yan, Yadong Mu
 - Primary track: Planning and control
 - Tier: NEXT
 - Tags: Robotics, assembly, multi-view, 3D correspondence, task planning, Benchmark

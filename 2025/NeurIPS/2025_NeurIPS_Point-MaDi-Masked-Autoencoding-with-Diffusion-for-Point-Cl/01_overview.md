@@ -7,11 +7,11 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / NeurIPS
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Xiaoyang Xiao, Runzhao Yao, Zhiqiang Tian, Shaoyi Du
 - Primary track: Robotics-enabling 3D perception
 - Tier: REFERENCE
 - Tags: Diffusion, Generation, point cloud, 3D Vision
-- Official paper: https://openreview.net/forum?id=sYeE1obXGG
+- Official paper: https://neurips.cc/virtual/2025/poster/115683
 - Full-text retrieval: https://papers.nips.cc/paper_files/paper/2025/file/4809dd4b628b6253d0aad0154014f7a3-Paper-Conference.pdf
 - Code/Project: not identified
 - Paper type: method

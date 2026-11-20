@@ -7,11 +7,11 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2026 / ICRA
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Heyu Guo, Shanmu Wang, Ruichun Ma, Shiqi Jiang, Yasaman Ghasempour, Omid Abari, Baining Guo, Lili Qiu
 - Primary track: VLA and generalist robot policies
 - Tier: REFERENCE
 - Tags: VLA, Robotics
-- Official paper: https://ras.papercept.net/conferences/conferences/ICRA26/program/ICRA26_ContentListWeb_4.html
+- Official paper: https://api.crossref.org/works/10.1109/icra57385.2026.11695776
 - Full-text retrieval: https://arxiv.org/pdf/2511.01210
 - Code/Project: not identified
 - Paper type: method

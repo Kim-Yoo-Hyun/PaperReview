@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2023 / NeurIPS
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Chuanruo Ning, Ruihai Wu, Haoran Lu, Kaichun Mo, Hao Dong
 - Primary track: Robotics-enabling 3D perception
 - Tier: NEXT
 - Tags: Robotics, 3D Vision, active exploration, affordance, articulated objects, few-shot learning
@@ -19,7 +19,7 @@
 
 ## Why This Paper Is Here
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 This limitation hinders the efficiency and safety of real-world applications of robots.를 문제로 두고, The results demonstrate our framework's capability to efficiently explore novel categories by exploiting geometric similarity.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+Where2Explore는 관절 물체에서 상호작용할 위치를 골라 새로운 범주의 행동 가능 영역을 적은 시행으로 학습한다.
 
 ## Problem and Motivation
 
@@ -53,16 +53,10 @@ Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 �
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1 Introduction - extractive body cue:** The results demonstrate our framework's capability to efficiently explore novel categories by exploiting geometric similarity.
-- **p. 2 / 1 Introduction - extractive body cue:** We evaluate our framework by training our model on constrained object categories and applying few-shot learning to novel categories with limited shapes.
-- **p. 5 / 4 Method - extractive body cue:** As shown in the right part of figure 2, when faced with a novel category, our framework will first predict the similarity of the objects.
-- **p. 3 / 4 Method - extractive body cue:** Next, we introduce the ‘similarity module' to form a representation that connects the geometries in the supporting set with geometries across category boundaries.
-- **p. 3 / 4 Method - extractive body cue:** As shown in Figure 2, we propose the ‘Where2Explore' framework to explicitly leverage the similar semantics on local geometries shared across different categories for cross-category ...
-- **p. 7 / 5 Experiments - extractive body cue:** For both the F-score and sample success rate, we use the average score of the four different training category combinations.
-- **p. 8 / 5 Experiments - extractive body cue:** Our framework also achieves comparable performance compared with Full-data, which is trained on all categories with abundant data.
-- **p. 7 / 5 Experiments - extractive body cue:** We calculate the sample success rate by randomly selecting one action predicted as successful by the affordance module, performing the interaction, and observing the result.
+- 서로 다른 물체 범주가 공유하는 국소 기하를 활용한다.
+- 제한된 새 물체·상호작용으로 전이한 결과를 평가한다.
 
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+[저자 원문](https://proceedings.neurips.cc/paper_files/paper/2023/hash/0e7e2af2e5ba822c9ad35a37b31b5dd4-Abstract-Conference.html)
 
 ## Evaluation Scope
 

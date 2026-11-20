@@ -7,11 +7,11 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2026 / ICML
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Dong Wang, Zilong Chen, Jirong Liu, Ziqing Qiao, Xin Xiao, Bingyi Kang, Hongtao Wu, Xiao Ma, Tao Kong, Huaping Liu
 - Primary track: VLA and generalist robot policies
 - Tier: REFERENCE
 - Tags: Vision-Language Model, Robotics
-- Official paper: https://openreview.net/forum?id=qdXOfyGMuB
+- Official paper: https://icml.cc/virtual/2026/poster/61401
 - Full-text retrieval: https://openreview.net/pdf/b090562c668703f4568061335c66e0e592e16d9d.pdf
 - Code/Project: not identified
 - Paper type: method

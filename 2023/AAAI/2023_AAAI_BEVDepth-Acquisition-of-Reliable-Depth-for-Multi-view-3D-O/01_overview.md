@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2023 / AAAI
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Yinhao Li, Zheng Ge, Guanyi Yu, Jinrong Yang, Zengran Wang, Yukang Shi, Jianjian Sun, Zeming Li
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
 - Tags: depth, 3D Vision

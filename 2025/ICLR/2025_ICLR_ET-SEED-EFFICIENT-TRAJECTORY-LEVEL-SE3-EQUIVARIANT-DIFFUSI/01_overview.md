@@ -7,12 +7,12 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / ICLR
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Chenrui Tie, Yue Chen, Ruihai Wu, Boxuan Dong, Zeyi Li, Chongkai Gao, Hao Dong
 - Primary track: VLA and generalist robot policies
 - Tier: REFERENCE
 - Tags: Robotics, Diffusion, equivariant
-- Official paper: https://openreview.net/forum?id=OheAR2xrtb
-- Full-text retrieval: https://chatpaper.com/api/v1/articles/download/114743
+- Official paper: https://proceedings.iclr.cc/paper_files/paper/2025/hash/969a11f489c59c50c2cfe8c407c68a9b-Abstract-Conference.html
+- Full-text retrieval: https://proceedings.iclr.cc/paper_files/paper/2025/file/969a11f489c59c50c2cfe8c407c68a9b-Paper-Conference.pdf
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (19 pages; PyMuPDF text; title-token overlap first two pages=1.0)

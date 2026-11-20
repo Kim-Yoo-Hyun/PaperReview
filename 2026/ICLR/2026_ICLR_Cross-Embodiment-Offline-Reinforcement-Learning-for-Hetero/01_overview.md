@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2026 / ICLR
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Haruki Abe, Takayuki Osa, YUSUKE Mukuta, Tatsuya Harada
 - Primary track: RL, IL, offline learning, and robot data
 - Tier: REFERENCE
 - Tags: Robotics, offline reinforcement learning, cross-embodiment, transfer
@@ -19,7 +19,7 @@
 
 ## Why This Paper Is Here
 
-RL, IL, offline learning, and robot data의 offline_rl 문제를 이해하기 위해 읽는다. 본문은 To fill this gap, we introduce the new benchmark that systematically combines offline RL with cross-embodiment learning, analyze the interactions between these paradigms, and propose methods to mitigate the challenges that arise ...를 문제로 두고, 3.3 NETWORK ARCHITECTURE In this section, we present our approach to cross-embodiment learning in an offline RL setting.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+서로 다른 로봇의 오프라인 자료를 함께 학습할 때 기체별 기울기 충돌이 어떻게 정책을 제약하는지 평가한다.
 
 ## Problem and Motivation
 
@@ -53,16 +53,10 @@ RL, IL, offline learning, and robot data의 offline_rl 문제를 이해하기 �
 
 ## Main Claims and Actual Contribution
 
-- **p. 4 / 1 INTRODUCTION - extractive body cue:** 3.3 NETWORK ARCHITECTURE In this section, we present our approach to cross-embodiment learning in an offline RL setting.
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** To address this, we propose a novel group-task update strategy based on robot embodiment information.
-- **p. 5 / 1 INTRODUCTION - extractive body cue:** To address this issue, we propose a novel mitigation strategy that groups robots according to their embodiment, thus reducing gradient conflicts.
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** We introduce and analyze the new benchmark that combines offline RL with crossembodiment learning across up to 16 distinct robot platforms.
-- **p. 3 / 1 INTRODUCTION - extractive body cue:** To fill this gap, we introduce the new benchmark that systematically combines offline RL with cross-embodiment learning, analyze the interactions between these paradigms, and propose ...
-- **p. 9 / 1 INTRODUCTION - extractive body cue:** From the table, EG achieves the most stable and substantial improvement on the 70% Suboptimal Forward dataset (+14.41, +38.34%).
-- **p. 8 / 1 INTRODUCTION - extractive body cue:** First, we evaluate performance improvements in cross-embodiment offline RL on six datasets containing varying proportions of suboptimal data.
-- **p. 9 / 1 INTRODUCTION - extractive body cue:** It is somewhat surprising that the Heuristic split did not improve performance.
+- 여러 기체를 포함한 오프라인 강화학습 벤치마크를 구성한다.
+- 로봇을 기체별로 묶어 학습 간섭을 줄이는 방법을 비교한다.
 
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+[저자 원문](https://proceedings.iclr.cc/paper_files/paper/2026/hash/24a0f56452202e8433d582dbf5095c32-Abstract-Conference.html)
 
 ## Evaluation Scope
 

@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2021 / ICRA
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Martin Sundermeyer, Arsalan Mousavian, Rudolph Triebel, Dieter Fox
 - Primary track: Manipulation, contact, tactile, and dexterity
 - Tier: NEXT
 - Tags: Robotics, grasping, contact prediction, 6-DoF grasp

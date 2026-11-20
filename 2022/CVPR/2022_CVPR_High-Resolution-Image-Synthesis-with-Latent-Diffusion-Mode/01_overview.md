@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2022 / CVPR
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Robin Rombach, Andreas Blattmann, Dominik Lorenz, Patrick Esser, Björn Ommer
 - Primary track: Foundations: Generative Models
 - Tier: REFERENCE
 - Tags: Diffusion, latent representation, Generation
@@ -19,7 +19,7 @@
 
 ## Why This Paper Is Here
 
-Foundations: Generative Models의 generative 문제를 이해하기 위해 읽는다. 본문은 (iii) We show that, in contrast to previous work [93] which learns both an encoder/decoder architecture and a score-based prior simultaneously, our approach does not require a delicate weighting of reconstruction and ...를 문제로 두고, In sum, our work makes the following contributions: (i) In contrast to purely transformer-based approaches [23,66], our method scales more graceful to higher dimensional data and can thus (a) work on a ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+Latent Diffusion은 사전학습한 오토인코더의 잠재 공간에서 확산 과정을 학습해 고해상도 이미지를 생성한다.
 
 ## Problem and Motivation
 
@@ -52,16 +52,10 @@ Foundations: Generative Models의 generative 문제를 이해하기 위해 읽�
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** In sum, our work makes the following contributions: (i) In contrast to purely transformer-based approaches [23,66], our method scales more graceful to higher dimensional data ...
-- **p. 2 / 1. Introduction - extractive body cue:** We propose latent diffusion models (LDMs) as an effective generative model and a separate mild compression stage that only eliminates imperceptible details.
-- **p. 3 / 3. Method - extractive body cue:** We propose to circumvent this drawback by introducing an explicit separation of the compressive from the generative learning phase (see Fig.
-- **p. 3 / 3.1. Perceptual Image Compression - extractive body cue:** Our perceptual compression model is based on previous work [23] and consists of an autoencoder trained by combination of a perceptual loss [106] and a ...
-- **p. 4 / 3.3. Conditioning Mechanisms - extractive body cue:** To pre-process y from various modalities (such as language prompts) we introduce a domain specific encoder τθ that projects y to an intermediate representation τθ(y) ...
-- **p. 5 / 4.1. On Perceptual Compression Tradeoffs - extractive body cue:** Especially compared to pixel-based LDM-1, they achieve much lower FID scores while simultaneously significantly increasing sample throughput.
-- **p. 23 / Figure/Table caption - extractive body cue:** Table 11. ×4 upscaling results on ImageNet-Val. (2562); †: FID features computed on validation split, ‡: FID features computed on train split. We also include ...
-- **p. 6 / 4.2. Image Generation with Latent Diffusion - extractive body cue:** We outperform prior diffusion based approaches on all but the LSUN-Bedrooms dataset, where our score is close to ADM [15], despite utilizing half its parameters ...
+- 화소 공간의 반복 연산을 압축된 잠재 표현으로 옮긴다.
+- 교차 어텐션으로 텍스트 등 다양한 조건을 생성 과정에 입력한다.
 
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+[저자 원문](https://openaccess.thecvf.com/content/CVPR2022/html/Rombach_High-Resolution_Image_Synthesis_With_Latent_Diffusion_Models_CVPR_2022_paper.html)
 
 ## Evaluation Scope
 

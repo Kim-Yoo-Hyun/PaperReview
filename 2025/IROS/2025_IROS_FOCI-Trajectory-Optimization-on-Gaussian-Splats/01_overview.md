@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / IROS
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Mario Gomez Andreu, Maximum Wilder-Smith, Victor Klemm, Vaishakh Patil, Jesus Tordesillas, Marco Hutter
 - Primary track: Planning and control
 - Tier: NEXT
 - Tags: Gaussian Splatting

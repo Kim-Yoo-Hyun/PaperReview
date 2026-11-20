@@ -7,11 +7,11 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 1960 / Journal of Basic Engineering
-- Authors: not duplicated here when not verified in the registry source
+- Authors: R. E. Kalman
 - Primary track: Planning and control
 - Tier: REFERENCE
 - Tags: Robotics, state estimation, Kalman Filter, Control
-- Official paper: https://doi.org/10.1115/1.3662552
+- Official paper: https://api.crossref.org/works/10.1115/1.3662552
 - Full-text retrieval: https://doi.org/10.1115/1.3662552
 - Code/Project: not identified
 - Paper type: theory_or_foundation

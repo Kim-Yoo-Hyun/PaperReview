@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2024 / ICML
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Haoyu Zhen, Xiaowen Qiu, Peihao Chen, Jincheng Yang, Xin Yan, Yilun Du, Yining Hong, Chuang Gan
 - Primary track: VLA and generalist robot policies
 - Tier: NEXT
 - Tags: Robotics, VLA, 3D reasoning, world model, action tokens, Planning

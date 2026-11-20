@@ -3,13 +3,14 @@
 > Evidence maturity: `ABSTRACT_CHECKED`. abstract 기반 — 본문 수동 확인 필요.
 > 자동 작성 노트는 실제 정독을 뜻하지 않는다. 사용자 reading status는 UNREAD로 시작한다.
 
-- Year/Venue: 2025 / IJRR
+- Year/Venue
+- Authors: Jianlan Luo, Charles Xu, Fangchen Liu, Liam Tan, Zipeng Lin, Jeffrey Wu, Pieter Abbeel, Sergey Levine
 - Category: Manipulation, Contact, and Dexterity
 - Primary track: Manipulation, contact, tactile, and dexterity
 - Tier: NEXT
 - Tags: Robotics, Benchmark, assembly, skill-composition
 - Aliases: FMB, Functional Manipulation Benchmark
-- Official paper: https://journals.sagepub.com/doi/full/10.1177/02783649241276017
+- Official paper: https://api.crossref.org/works/10.1177/02783649241276017
 - Venue verification: https://journals.sagepub.com/doi/full/10.1177/02783649241276017
 - Code/Project: https://functional-manipulation-benchmark.github.io/
 - Code: https://github.com/rail-berkeley/fmb

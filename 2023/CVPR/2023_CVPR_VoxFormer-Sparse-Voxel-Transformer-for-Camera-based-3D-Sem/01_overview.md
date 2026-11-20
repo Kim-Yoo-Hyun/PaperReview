@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2023 / CVPR
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Yiming Li, Zhiding Yu, Christopher Choy, Chaowei Xiao, Jose M. Alvarez, Sanja Fidler, Chen Feng, Anima Anandkumar
 - Primary track: Robotics-enabling 3D perception
 - Tier: REFERENCE
 - Tags: semantic, alignment, 3D Vision

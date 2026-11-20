@@ -3,14 +3,15 @@
 > Evidence maturity: `ABSTRACT_CHECKED`. abstract 기반 — 본문 수동 확인 필요.
 > 자동 작성 노트는 실제 정독을 뜻하지 않는다. 사용자 reading status는 UNREAD로 시작한다.
 
-- Year/Venue: 2026 / CoRL
+- Year/Venue
+- Authors: Haru Kondoh, Kei Ota, Asako Kanezaki, Yueh-Hua Wu
 - Category: VLA and Generalist Robot Policies
 - Primary track: VLA and generalist robot policies
 - Tier: NEXT
-- Tags: VLA, action-interface, cross-embodiment
+- Tags: VLA, offline-RL, counterfactual, manipulation
 - Aliases:
-- Official paper: https://openreview.net/forum?id=AY4totylcx
-- Venue verification: https://openreview.net/forum?id=AY4totylcx
+- Official paper: https://arxiv.org/abs/2608.21740
+- Venue verification: https://www.corl.org/program/accepted-papers
 - Code/Project: not identified
 - Code: not_identified
 - Source audit: 2026-10-22 공식 abstract/arXiv abstract와 publication metadata 확인. 새 5개 note는 abstract 수준의 분석이며 상세 본문·코드 감사는 기존 buildup dossier의 명시 범위만 따른다. 공식 OpenReview 검색 API의 Conference venueid·CoRL 2026 Poster를 확인했다.

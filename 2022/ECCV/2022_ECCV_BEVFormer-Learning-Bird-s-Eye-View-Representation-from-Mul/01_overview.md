@@ -7,10 +7,10 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2022 / ECCV
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Zhiqi Li, Wenhai Wang, Hongyang Li, Enze Xie, Chonghao Sima, Tong Lu, Qiao Yu, Jifeng Dai
 - Primary track: Planning and control
 - Tier: REFERENCE
-- Tags: sensor fusion, 3D perception, Planning
+- Tags: sensor fusion, 3D perception, multi-view
 - Official paper: https://arxiv.org/abs/2203.17270
 - Full-text retrieval: https://arxiv.org/pdf/2203.17270
 - Code/Project: https://github.com/fundamentalvision/BEVFormer

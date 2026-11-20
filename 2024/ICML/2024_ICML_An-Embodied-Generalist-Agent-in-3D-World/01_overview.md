@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2024 / ICML
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Jiangyong Huang, Silong Yong, Xiaojian Ma, Xiongkun Linghu, Puhao Li, Yan Wang, Qing Li, Song-Chun Zhu, Baoxiong Jia, Siyuan Huang
 - Primary track: Planning and control
 - Tier: REFERENCE
 - Tags: LLM, 3D Vision, Planning, Robotics

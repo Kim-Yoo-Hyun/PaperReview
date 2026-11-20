@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2023 / NeurIPS
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Bo Liu, Yifeng Zhu, Chongkai Gao, Yihao Feng, Qiang Liu, Yuke Zhu, Peter Stone
 - Primary track: RL, IL, offline learning, and robot data
 - Tier: CORE
 - Tags: Robotics, Imitation Learning, Benchmark

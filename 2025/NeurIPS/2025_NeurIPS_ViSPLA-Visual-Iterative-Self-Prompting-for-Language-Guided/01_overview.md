@@ -7,11 +7,11 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / NeurIPS
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Hritam Basak, Zhaozheng Yin
 - Primary track: VLA and generalist robot policies
 - Tier: REFERENCE
 - Tags: Vision-Language Model, Robotics, 3D Vision
-- Official paper: https://openreview.net/forum?id=EyNzLH7BZK
+- Official paper: https://neurips.cc/virtual/2025/poster/119081
 - Full-text retrieval: https://papers.nips.cc/paper_files/paper/2025/file/5eee634cb9729b8bcc2ec9f2a46a74ae-Paper-Conference.pdf
 - Code/Project: not identified
 - Paper type: method

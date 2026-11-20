@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2024 / RA-L
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Daniel Honerkamp, Martin Büchner, Fabien Despinoy, Tim Welschehold, Abhinav Valada
 - Primary track: Locomotion, whole-body, mobile manipulation, and humanoids
 - Tier: NEXT
 - Tags: Robotics, Graph Reasoning

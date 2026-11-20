@@ -7,11 +7,11 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / NeurIPS
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Jingyi Tian, Le Wang, Sanping Zhou, Sen Wang, Gang Hua
 - Primary track: VLA and generalist robot policies
 - Tier: REFERENCE
 - Tags: Robotics, 3D Vision
-- Official paper: https://openreview.net/forum?id=r4dzaP61QH
+- Official paper: https://neurips.cc/virtual/2025/poster/115816
 - Full-text retrieval: https://arxiv.org/pdf/2510.24261
 - Code/Project: not identified
 - Paper type: method

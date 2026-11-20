@@ -7,11 +7,11 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2021 / IROS
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Jiaqi Xu, Bin Li, Bo Lu, Yun-Hui Liu, Qi Dou, Pheng-Ann Heng
 - Primary track: Manipulation, contact, tactile, and dexterity
 - Tier: REFERENCE
 - Tags: Robotics, surgical robotics, Reinforcement Learning, simulation, sim-to-real, dexterous manipulation
-- Official paper: https://ieeexplore.ieee.org/document/9635867
+- Official paper: https://arxiv.org/abs/2108.13035
 - Full-text retrieval: https://arxiv.org/pdf/2108.13035
 - Code/Project: https://github.com/med-air/SurRoL
 - Paper type: method

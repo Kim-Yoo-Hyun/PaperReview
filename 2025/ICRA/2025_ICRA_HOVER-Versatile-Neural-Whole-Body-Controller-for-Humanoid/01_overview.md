@@ -7,11 +7,11 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / ICRA
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Tairan He, Wenli Xiao, Toru Lin, Zhengyi Luo, Zhenjia Xu, Zhenyu Jiang, Jan Kautz, Changliu Liu, Guanya Shi, Xiaolong Wang, Linxi Jim Fan, Yuke Zhu
 - Primary track: Locomotion, whole-body, mobile manipulation, and humanoids
 - Tier: REFERENCE
 - Tags: Robotics, humanoid, whole-body control, Reinforcement Learning, NVIDIA
-- Official paper: https://research.nvidia.com/labs/lpr/publication/he2025hover/
+- Official paper: https://api.crossref.org/works/10.1109/icra55743.2025.11128549
 - Full-text retrieval: https://research.nvidia.com/labs/lpr/publication/he2025hover/
 - Code/Project: https://hover-versatile-humanoid.github.io/
 - Paper type: method

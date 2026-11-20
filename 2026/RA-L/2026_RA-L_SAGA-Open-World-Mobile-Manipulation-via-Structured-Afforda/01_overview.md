@@ -3,13 +3,14 @@
 > Evidence maturity: `ABSTRACT_CHECKED`. abstract 기반 — 본문 수동 확인 필요.
 > 자동 작성 노트는 실제 정독을 뜻하지 않는다. 사용자 reading status는 UNREAD로 시작한다.
 
-- Year/Venue: 2026 / RA-L
+- Year/Venue
+- Authors: Kuan Fang, Yuxin Chen, Xinghao Zhu, Farzad Niroui, Lingfeng Sun, Jiuguang Wang
 - Category: Locomotion, Whole-Body, and Mobile Manipulation
 - Primary track: Locomotion, whole-body, mobile manipulation, and humanoids
 - Tier: NEXT
 - Tags: mobile-manipulation, affordance, 3D-grounding, whole-body
 - Aliases: SAGA
-- Official paper: https://ieeexplore.ieee.org/document/11568510/
+- Official paper: https://robot-saga.github.io/
 - Venue verification: https://ieeexplore.ieee.org/document/11568510/
 - Code/Project: https://robot-saga.github.io/
 - Code: project_only

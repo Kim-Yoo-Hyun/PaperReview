@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2021 / ICCV
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Zaiwei Zhang, Rohit Girdhar, Armand Joulin, Ishan Misra
 - Primary track: Robotics-enabling 3D perception
 - Tier: REFERENCE
 - Tags: 3D Vision, point cloud, representation, self-supervised

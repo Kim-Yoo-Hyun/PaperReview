@@ -3,7 +3,8 @@
 > Evidence maturity: `ABSTRACT_CHECKED`.
 > Source audit: 2026-11-16: 공식 초록·ICLR 목록·repository 확인. abstract 기반 — 본문 수동 확인 필요. 사용자 상태 UNREAD 유지.
 
-- Year/Venue: 2026 / ICLR
+- Year/Venue
+- Authors: Ryan Hoque, Peide Huang, David Yoon, Mouli sivapurapu, Jian Zhang
 - Primary track: RL, IL, offline learning, and robot data
 - Tags: robot-data, human-video, dexterous-manipulation, Benchmark
 - Official paper: https://arxiv.org/abs/2505.11709

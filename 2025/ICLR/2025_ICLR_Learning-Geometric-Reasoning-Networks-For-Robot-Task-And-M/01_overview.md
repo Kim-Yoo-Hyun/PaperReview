@@ -7,12 +7,12 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / ICLR
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Smail Ait Bouhsain, Rachid Alami, Thierry Simeon
 - Primary track: VLA and generalist robot policies
 - Tier: REFERENCE
 - Tags: Robotics, Graph Reasoning
-- Official paper: https://openreview.net/forum?id=ajxAJ8GUX4
-- Full-text retrieval: https://chatpaper.com/api/v1/articles/download/112460
+- Official paper: https://proceedings.iclr.cc/paper_files/paper/2025/hash/561dd71d04695c85e1c0f6a0fbe0bd85-Abstract-Conference.html
+- Full-text retrieval: https://proceedings.iclr.cc/paper_files/paper/2025/file/561dd71d04695c85e1c0f6a0fbe0bd85-Paper-Conference.pdf
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (24 pages; PyMuPDF text; title-token overlap first two pages=1.0)

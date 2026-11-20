@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2020 / CVPR
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Shaoshuai Shi, Chaoxu Guo, Li Jiang, Zhe Wang, Jianping Shi, Xiaogang Wang, Hongsheng Li
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
 - Tags: point cloud, 3D Vision

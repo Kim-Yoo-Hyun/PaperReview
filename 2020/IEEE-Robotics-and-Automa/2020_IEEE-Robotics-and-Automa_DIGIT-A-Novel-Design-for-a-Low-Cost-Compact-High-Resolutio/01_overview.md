@@ -7,11 +7,11 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2020 / IEEE Robotics and Automation Letters
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Mike Lambeta, Po-Wei Chou, Stephen Tian, Brian Yang, Benjamin Maloon, Victoria Rose Most, Dave Stroud, Raymond Santos, Ahmad Byagowi, Gregg Kammerer, Dinesh Jayaraman, Roberto Calandra
 - Primary track: Manipulation, contact, tactile, and dexterity
 - Tier: NEXT
 - Tags: Robotics, tactile sensing, dexterous manipulation, contact
-- Official paper: https://doi.org/10.1109/LRA.2020.2977257
+- Official paper: https://api.crossref.org/works/10.1109/LRA.2020.2977257
 - Full-text retrieval: https://doi.org/10.1109/LRA.2020.2977257
 - Code/Project: https://digit.ml/
 - Paper type: method

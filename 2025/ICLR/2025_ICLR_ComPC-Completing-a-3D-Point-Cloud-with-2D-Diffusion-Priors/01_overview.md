@@ -7,12 +7,12 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / ICLR
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Tianxin Huang, Zhiwen Yan, Yuyang Zhao, Gim H Lee
 - Primary track: Planning and control
 - Tier: ARCHIVE
 - Tags: Diffusion, Generation, point cloud, 3D Vision
-- Official paper: https://openreview.net/forum?id=SoUwcVplq4
-- Full-text retrieval: https://chatpaper.com/api/v1/articles/download/114366
+- Official paper: https://proceedings.iclr.cc/paper_files/paper/2025/hash/804f1fac094d7b751410b50066da3a63-Abstract-Conference.html
+- Full-text retrieval: https://proceedings.iclr.cc/paper_files/paper/2025/file/804f1fac094d7b751410b50066da3a63-Paper-Conference.pdf
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (20 pages; PyMuPDF text; title-token overlap first two pages=1.0)

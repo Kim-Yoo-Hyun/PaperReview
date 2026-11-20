@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2020 / ECCV
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Dave Zhenyu Chen, Angel X. Chang, Matthias Nießner
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
 - Tags: 3D visual grounding, RGB-D, semantic

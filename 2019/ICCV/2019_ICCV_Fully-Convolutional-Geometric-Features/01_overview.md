@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2019 / ICCV
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Christopher Choy, Jaesik Park, Vladlen Koltun
 - Primary track: Robotics-enabling 3D perception
 - Tier: REFERENCE
 - Tags: 3D Vision, registration, 3D geometry, representation
@@ -19,7 +19,7 @@
 
 ## Why This Paper Is Here
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 Furthermore, current pipelines limit spatial context by focusing on patches with restricted spatial extent.를 문제로 두고, In this section, we propose metric learning losses for fully-convolutional feature learning.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+FCGF는 점군 전체에 3D 완전 합성곱을 적용해 정합에 사용할 조밀한 기하 특징을 계산한다.
 
 ## Problem and Motivation
 
@@ -53,16 +53,10 @@ Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 �
 
 ## Main Claims and Actual Contribution
 
-- **p. 3 / 4.2. Hardest-contrastive and Hardest-triplet Losses - extractive body cue:** In this section, we propose metric learning losses for fully-convolutional feature learning.
-- **p. 1 / 1. Introduction - extractive body cue:** Our approach is the most accurate and the fastest.
-- **p. 2 / 1. Introduction - extractive body cue:** Our approach does not require low-level preprocessing or 3D patches as input, and can rapidly generate high-resolution features with state-ofthe-art discriminative power.
-- **p. 2 / 1. Introduction - extractive body cue:** Our approach achieves state-of-the-art performance on the 3DMatch benchmark [36], while being nine times faster than the fastest learning-based method and 290 times faster than ...
-- **p. 8 / 6.7. Runtime - extractive body cue:** On average, our approach takes about 0.36 seconds to extract features for a single fragment on 3DMatch with 2.5cm voxel size.
-- **p. 4 / 6. Experiments - extractive body cue:** We show that FCGF outperform all state-of-the-art methods in both accuracy and speed, and analyze the proposed hardestcontrastive and hardest-triplet losses.
-- **p. 8 / Figure/Table caption - extractive body cue:** Table 6: Results on the KITTI dataset. Relative Trans- lation Error (RTE) and Relative Rotation Error (RRE) af- ter RANSAC on FCGF trained with the ...
-- **p. 5 / 6.2. Evaluation Metrics - extractive body cue:** As noted in several works [1, 7, 6, 17], recall is more important than precision since it is possible to improve precision with better pruning.
+- 개별 패치마다 네트워크를 따로 실행하는 계산을 줄인다.
+- 특징 대응을 이용하는 3D 정합에서 성능을 비교한다.
 
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+[저자 원문](https://openaccess.thecvf.com/content_ICCV_2019/html/Choy_Fully_Convolutional_Geometric_Features_ICCV_2019_paper.html)
 
 ## Evaluation Scope
 

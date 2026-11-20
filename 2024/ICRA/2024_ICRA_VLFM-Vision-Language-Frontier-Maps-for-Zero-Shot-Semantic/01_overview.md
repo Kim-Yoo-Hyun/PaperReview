@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2024 / ICRA
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Naoki Yokoyama, Sehoon Ha, Dhruv Batra, Jiuguang Wang, Bernadette Bucher
 - Primary track: Robotics-enabling 3D perception
 - Tier: CORE
 - Tags: Vision-Language Navigation, Robotics, Navigation, semantic

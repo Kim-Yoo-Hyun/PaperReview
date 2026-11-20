@@ -7,13 +7,13 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2026 / RSS
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Rutav Shah, Yisu Li, Femi Bello, Yuke Zhu, Roberto Martín-Martín
 - Primary track: World models, safety, uncertainty, and recovery
 - Tier: NEXT
 - Tags: Robotics, VLA, memory, long-horizon, partial observability, Imitation Learning, retrieval
-- Official paper: https://roboticsconference.org/program/papers/10/
+- Official paper: https://www.roboticsproceedings.org/rss22/p010.html
 - Full-text retrieval: https://roboticsconference.org/program/papers/10/
-- Code/Project: https://roboticsconference.org/program/papers/10/
+- Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 

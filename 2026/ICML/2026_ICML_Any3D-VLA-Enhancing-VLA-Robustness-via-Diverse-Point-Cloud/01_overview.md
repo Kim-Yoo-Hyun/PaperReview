@@ -7,12 +7,12 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2026 / ICML
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Xianzhe Fan, Shengliang Deng, Xiaoyang Wu, Yuxiang Lu, Zhuoling Li, Mi Yan, Yujia Zhang, Zhizheng Zhang, He Wang, Hengshuang Zhao
 - Primary track: VLA and generalist robot policies
 - Tier: NEXT
 - Tags: VLA, Vision-Language Model, 3D Vision
-- Official paper: https://openreview.net/forum?id=zyMvoKYWMZ
-- Full-text retrieval: https://openreview.net/pdf/01fd7931fc7be08bf369b6a34264822e6d1de9b9.pdf
+- Official paper: https://icml.cc/virtual/2026/poster/60472
+- Full-text retrieval: https://arxiv.org/pdf/2602.00807
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (21 pages; PyMuPDF text; title-token overlap first two pages=1.0)

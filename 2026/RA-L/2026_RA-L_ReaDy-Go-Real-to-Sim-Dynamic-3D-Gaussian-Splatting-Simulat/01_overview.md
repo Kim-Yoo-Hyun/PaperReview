@@ -7,13 +7,13 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2026 / RA-L
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Seungyeon Yoo, Youngseok Jang, Dabin Kim, Youngsoo Han, Seungwoo Jung, H. Jin Kim
 - Primary track: Robotics-enabling 3D perception
 - Tier: REFERENCE
 - Tags: 3D Vision, Navigation, Gaussian Splatting
 - Official paper: https://arxiv.org/abs/2602.11575
 - Full-text retrieval: https://arxiv.org/pdf/2602.11575
-- Code/Project: https://syeon-yoo.github.io/readygo/
+- Code/Project: https://syeon-yoo.github.io/ready-go-site/
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 

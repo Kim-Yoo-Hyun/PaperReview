@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2026 / IROS
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Hao Su, Yuehao Huang, Yukai Ma, Yong Liu, Jiajun Lv
 - Primary track: Planning and control
 - Tier: REFERENCE
 - Tags: Navigation, Graph Reasoning

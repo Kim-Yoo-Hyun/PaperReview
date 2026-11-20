@@ -3,13 +3,14 @@
 > Evidence maturity: `ABSTRACT_CHECKED`. abstract 기반 — 본문 수동 확인 필요.
 > 자동 작성 노트는 실제 정독을 뜻하지 않는다. 사용자 reading status는 UNREAD로 시작한다.
 
-- Year/Venue: 2026 / Entropy
+- Year/Venue
+- Authors: Zhiyin Yan, Gang Shen
 - Category: VLA and Generalist Robot Policies
 - Primary track: VLA and generalist robot policies
 - Tier: REFERENCE
 - Tags: VLA, proprioception, robustness
 - Aliases:
-- Official paper: https://www.mdpi.com/1099-4300/28/9/975
+- Official paper: https://api.crossref.org/works/10.3390/e28090975
 - Venue verification: https://www.mdpi.com/1099-4300/28/9/975
 - Code/Project: https://www.mdpi.com/1099-4300/28/9/975
 - Code: not_identified

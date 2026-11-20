@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2021 / ICLR
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Alexey Dosovitskiy, Lucas Beyer, Alexander Kolesnikov, Dirk Weissenborn, Xiaohua Zhai, Thomas Unterthiner, Mostafa Dehghani, Matthias Minderer, Georg Heigold, Sylvain Gelly, Jakob Uszkoreit, Neil Houlsby
 - Primary track: Foundations: Vision and Language Models
 - Tier: ARCHIVE
 - Tags: Vision Transformer, representation
@@ -19,7 +19,7 @@
 
 ## Why This Paper Is Here
 
-Foundations: Vision and Language Models의 upstream 문제를 이해하기 위해 읽는다. 본문은 Thanks to Transformers' computational efficiency and scalability, it has become possible to train models of unprecedented size, with over 100B parameters (Brown et al., 2020; Lepikhin et al., 2020).를 문제로 두고, The Transformer encoder (Vaswani et al., 2017) consists of alternating layers of multiheaded selfattention (MSA, see Appendix A) and MLP blocks (Eq.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+Vision Transformer는 이미지를 패치열로 바꿔 Transformer 인코더로 분류하고 대규모 사전학습 뒤 이미지 인식에 전이한다.
 
 ## Problem and Motivation
 
@@ -48,16 +48,10 @@ Foundations: Vision and Language Models의 upstream 문제를 이해하기 위�
 
 ## Main Claims and Actual Contribution
 
-- **p. 3 / 3 METHOD - extractive body cue:** The Transformer encoder (Vaswani et al., 2017) consists of alternating layers of multiheaded selfattention (MSA, see Appendix A) and MLP blocks (Eq.
-- **p. 7 / Figure/Table caption - extractive body cue:** Figure 5: Performance versus pre-training compute for different architectures: Vision Transformers, ResNets, and hybrids. Vision Transformers generally outperform ResNets with the same compu- tational budget. ...
-- **p. 6 / Figure/Table caption - extractive body cue:** Table 2: Comparison with state of the art on popular image classification benchmarks. We re- port mean and standard deviation of the accuracies, averaged over ...
-- **p. 5 / 4 EXPERIMENTS - extractive body cue:** The larger model, ViT-H/14, further improves the performance, especially on the more challenging datasets - ImageNet, CIFAR-100, and the VTAB suite.
-- **p. 6 / 4 EXPERIMENTS - extractive body cue:** This is because the resolution increase during fine-tuning improves the performance.
-- **p. 15 / Figure/Table caption - extractive body cue:** Table 5: Top1 accuracy (in %) of Vision Transformer on various datasets when pre-trained on Im- ageNet, ImageNet-21k or JFT300M. These values correspond to Figure ...
-- **p. 16 / Figure/Table caption - extractive body cue:** Figure 8: Scaling different model dimensions of the Vision Transformer. performance of two ResNets - 50x1 and 152x2 - pre-trained on JFT with SGD and ...
-- **p. 5 / 4 EXPERIMENTS - extractive body cue:** These modifications improve transfer (Kolesnikov et al., 2020), and we denote the modified model "ResNet (BiT)".
+- 패치 임베딩과 위치 정보를 입력 표현으로 사용한다.
+- 데이터 규모와 사전학습 조건에 따라 이미지 분류 전이 성능을 비교한다.
 
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+[저자 원문](https://arxiv.org/abs/2010.11929)
 
 ## Evaluation Scope
 

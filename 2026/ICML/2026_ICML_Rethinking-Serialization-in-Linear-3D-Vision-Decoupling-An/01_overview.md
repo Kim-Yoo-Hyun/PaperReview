@@ -7,11 +7,11 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2026 / ICML
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Yinyun Yan, Liping Zhang, Tingran Wang, Jiaxin Deng, Changshuo Wang, Limin Jiang, Shanwei Gao, Xin Ning
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
 - Tags: semantic, alignment, 3D Vision
-- Official paper: https://openreview.net/forum?id=MSVQM8Ub2y
+- Official paper: https://icml.cc/virtual/2026/poster/64540
 - Full-text retrieval: https://openreview.net/pdf/fa9e033b756ac063d19be2b3bb91daea759e1ae1.pdf
 - Code/Project: not identified
 - Paper type: method

@@ -7,10 +7,10 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / CVPR
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Dubing Chen, Huan Zheng, Jin Fang, Xingping Dong, Xianfei Li, Wenlong Liao, Tao He, Pai Peng, Jianbing Shen
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
-- Tags: sensor fusion, LiDAR, semantic, alignment, 3D Vision
+- Tags: semantic, alignment, 3D Vision, semantic occupancy
 - Official paper: https://openaccess.thecvf.com/content/CVPR2025/html/Chen_Rethinking_Temporal_Fusion_with_a_Unified_Gradient_Descent_View_for_CVPR_2025_paper.html
 - Full-text retrieval: https://openaccess.thecvf.com/content/CVPR2025/papers/Chen_Rethinking_Temporal_Fusion_with_a_Unified_Gradient_Descent_View_for_CVPR_2025_paper.pdf
 - Code/Project: not identified

@@ -3,13 +3,14 @@
 > Evidence maturity: `ABSTRACT_CHECKED`. abstract 기반 — 본문 수동 확인 필요.
 > 자동 작성 노트는 실제 정독을 뜻하지 않는다. 사용자 reading status는 UNREAD로 시작한다.
 
-- Year/Venue: 1999 / ICML
+- Year/Venue
+- Authors: Andrew Y. Ng, Daishi Harada, Stuart Russell
 - Category: Robot Learning and Data
 - Primary track: RL, IL, offline learning, and robot data
 - Tier: CORE
 - Tags: reinforcement-learning, reward-shaping, policy-invariance, potential-function
 - Aliases: Potential-Based Reward Shaping, PBRS
-- Official paper: https://people.eecs.berkeley.edu/~russell/papers/icml99-shaping.pdf
+- Official paper: https://people.eecs.berkeley.edu/~pabbeel/cs287-fa09/readings/NgHaradaRussell-shaping-ICML1999.pdf
 - Venue verification: https://people.eecs.berkeley.edu/~russell/publications
 - Code/Project:
 - Code: not_identified

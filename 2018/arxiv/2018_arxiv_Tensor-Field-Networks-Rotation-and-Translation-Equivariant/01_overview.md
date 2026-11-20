@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2018 / arXiv
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Nathaniel Thomas, Tess Smidt, Steven Kearnes, Lusann Yang, Li Li, Kai Kohlhoff, Patrick Riley
 - Primary track: Robotics-enabling 3D perception
 - Tier: REFERENCE
 - Tags: 3D Vision, equivariant, 3D geometry, point cloud
@@ -19,7 +19,7 @@
 
 ## Why This Paper Is Here
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 We introduce tensor field neural networks, which are locally equivariant to 3D rotations, translations, and permutations of points at every layer.를 문제로 두고, In this paper, we present a family of networks that enjoy richer equivariance: the symmetries of 3D Euclidean space.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+Tensor Field Networks는 점군의 회전·이동에 맞추어 특징이 정해진 방식으로 변환되는 신경망을 구성한다.
 
 ## Problem and Motivation
 
@@ -48,12 +48,10 @@ Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 �
 
 ## Main Claims and Actual Contribution
 
-- **p. 1 / Abstract - extractive body cue:** In this paper, we present a family of networks that enjoy richer equivariance: the symmetries of 3D Euclidean space.
-- **p. 1 / Abstract - extractive body cue:** We introduce tensor field neural networks, which are locally equivariant to 3D rotations, translations, and permutations of points at every layer.
-- **p. 1 / Abstract - extractive body cue:** This capability has contributed significantly to their widespread success.
-- **p. 9 / Figure/Table caption - extractive body cue:** Table 1: Performance on missing point task Atoms Number of predictions Accuracy (%) (≤0.5 Å and atom type) Distance
+- 공간 필터와 서로 다른 회전 차수의 특징을 결합한다.
+- 3차원 점 집합의 기하 대칭을 보존하는 예측을 평가한다.
 
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+[저자 원문](https://arxiv.org/abs/1802.08219)
 
 ## Evaluation Scope
 

@@ -7,11 +7,11 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2011 / ICML
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Marc Peter Deisenroth, Carl Edward Rasmussen
 - Primary track: RL, IL, offline learning, and robot data
 - Tier: REFERENCE
 - Tags: Robotics, Reinforcement Learning, model-based RL, Gaussian Process
-- Official paper: https://www.deisenroth.cc/publication/deisenroth-2011-c/
+- Official paper: https://icml.cc/2011/papers/323_icmlpaper.pdf
 - Full-text retrieval: https://www.deisenroth.cc/publication/deisenroth-2011-c/
 - Code/Project: not identified
 - Paper type: theory_or_foundation

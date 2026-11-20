@@ -7,12 +7,12 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / NeurIPS
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Yan Zhuang, Jiawei Ren, Xiaokang Ye, Jianzhi Shen, ruixuan zhang, Tianai Yue, Muhammad Faayez, Xuhong He, Xiyan Zhang, Ziqiao Ma, Lianhui Qin, Zhiting Hu, Tianmin Shu
 - Primary track: RL, IL, offline learning, and robot data
 - Tier: REFERENCE
 - Tags: Robotics, Navigation, Reinforcement Learning
-- Official paper: https://openreview.net/forum?id=EyOtIOmMUh
-- Full-text retrieval: https://arxiv.org/pdf/2512.10046
+- Official paper: https://papers.neurips.cc/paper_files/paper/2025/hash/4a81c1aad3064fb8243b8938a49ecca0-Abstract-Conference.html
+- Full-text retrieval: https://papers.neurips.cc/paper_files/paper/2025/file/4a81c1aad3064fb8243b8938a49ecca0-Paper-Conference.pdf
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (41 pages; PyMuPDF text; title-token overlap first two pages=1.0)

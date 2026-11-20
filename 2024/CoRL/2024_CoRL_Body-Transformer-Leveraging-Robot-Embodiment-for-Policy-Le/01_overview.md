@@ -7,11 +7,11 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2024 / CoRL
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Carmelo Sferrazza, Dun-Ming Huang, Fangchen Liu, Jongmin Lee, Pieter Abbeel
 - Primary track: RL, IL, offline learning, and robot data
 - Tier: REFERENCE
 - Tags: Robotics, embodiment, graph neural network, policy learning
-- Official paper: https://openreview.net/forum?id=Oce2215aJE
+- Official paper: https://proceedings.mlr.press/v270/sferrazza25a.html
 - Full-text retrieval: https://arxiv.org/pdf/2408.06316
 - Code/Project: https://sferrazza.cc/bot_site/
 - Paper type: method

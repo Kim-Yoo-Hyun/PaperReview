@@ -7,11 +7,11 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / NeurIPS
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Boce Hu, Dian Wang, David Klee, Heng Tian, Xupeng Zhu, Haojie Huang, Robert Platt, Robin Walters
 - Primary track: VLA and generalist robot policies
 - Tier: REFERENCE
 - Tags: Robotics, 3D Vision, equivariant
-- Official paper: https://openreview.net/forum?id=kXJd4JxF34
+- Official paper: https://neurips.cc/virtual/2025/poster/116373
 - Full-text retrieval: https://arxiv.org/pdf/2505.16969.pdf
 - Code/Project: not identified
 - Paper type: method

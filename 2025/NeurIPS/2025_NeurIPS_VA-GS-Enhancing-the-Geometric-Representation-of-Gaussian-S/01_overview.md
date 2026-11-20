@@ -7,11 +7,11 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / NeurIPS
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Qing Li, Huifang Feng, Xun Gong, Yu-Shen Liu
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
 - Tags: Gaussian Splatting, semantic, alignment, 3D Vision
-- Official paper: https://openreview.net/forum?id=ZnsR3waLUo
+- Official paper: https://neurips.cc/virtual/2025/poster/117322
 - Full-text retrieval: https://arxiv.org/pdf/2510.11473
 - Code/Project: not identified
 - Paper type: method

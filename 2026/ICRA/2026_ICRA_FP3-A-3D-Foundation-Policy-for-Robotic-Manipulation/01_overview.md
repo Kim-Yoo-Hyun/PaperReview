@@ -7,11 +7,11 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2026 / ICRA
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Rujia Yang, Geng Chen, Chuan Wen, Yang Gao
 - Primary track: VLA and generalist robot policies
 - Tier: REFERENCE
 - Tags: Robotics, 3D Vision
-- Official paper: https://2026.ieee-icra.org/awards/
+- Official paper: https://api.crossref.org/works/10.1109/icra57385.2026.11697164
 - Full-text retrieval: https://arxiv.org/pdf/2503.08950
 - Code/Project: not identified
 - Paper type: theory_or_foundation

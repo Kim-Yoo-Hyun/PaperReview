@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2024 / CVPR
-- Authors: not duplicated here when not verified in the registry source
+- Authors: David Charatan, Sizhe Lester Li, Andrea Tagliasacchi, Vincent Sitzmann
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
 - Tags: Gaussian Splatting, 3D reconstruction, 3D Vision
@@ -19,7 +19,7 @@
 
 ## Why This Paper Is Here
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 In contrast, in the generalizable case, we need to back-propagate gradients through the representation and thus cannot rely on non-differentiable operations.를 문제로 두고, Our method consists of a two-view image encoder and a pixel-aligned Gaussian prediction module.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+pixelSplat은 카메라 자세를 아는 두 영상으로부터 새 장면의 3D 가우시안을 예측한다.
 
 ## Problem and Motivation
 
@@ -53,16 +53,10 @@ Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 �
 
 ## Main Claims and Actual Contribution
 
-- **p. 3 / 4. Image-conditioned 3D Gaussian Inference - extractive body cue:** Our method consists of a two-view image encoder and a pixel-aligned Gaussian prediction module.
-- **p. 1 / 1. Introduction - extractive body cue:** We present pixelSplat, which brings the benefits of a primitive-based 3D representation-fast and memoryefficient rendering as well as interpretable 3D structureto generalizable view synthesis.
-- **p. 2 / 1. Introduction - extractive body cue:** We demonstrate the efficacy of our method by showcasing, for the first time, how a 3D Gaussian splatting representation can be predicted in a single ...
-- **p. 1 / Abstract - extractive body cue:** We benchmark our method on wide-baseline novel view synthesis on the real-world RealEstate10k and ACID datasets, where we outperform state-of-the-art light field transformers and accelerate ...
-- **p. 3 / 4. Image-conditioned 3D Gaussian Inference - extractive body cue:** We present pixelSplat, a Gaussian-based generalizable novel view synthesis model.
-- **p. 6 / 5.2. Results - extractive body cue:** Our method outperforms the baselines on all metrics, with especially significant improvements in perceptual distance (LPIPS).
-- **p. 8 / 5.3. Ablations and Analysis - extractive body cue:** Qualitatively, this produces ghosting and motion blur artifacts that are evidence of incorrect depth predictions; quantitatively, performance drops significantly.
-- **p. 6 / Figure/Table caption - extractive body cue:** Table 1. Quantitative comparisons. We outperform all baseline methods in terms PSNR, LPIPS, and SSIM for novel view synthesis on the real-world RealEstate10k and ACID ...
+- 두 시점의 특징에서 화소에 대응하는 가우시안을 구성한다.
+- 새 시점에서 렌더링한 영상으로 장면 일반화를 평가한다.
 
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+[저자 원문](https://openaccess.thecvf.com/content/CVPR2024/html/Charatan_pixelSplat_3D_Gaussian_Splats_from_Image_Pairs_for_Scalable_Generalizable_CVPR_2024_paper.html)
 
 ## Evaluation Scope
 

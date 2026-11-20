@@ -3,13 +3,14 @@
 > Evidence maturity: `ABSTRACT_CHECKED`. abstract 기반 — 본문 수동 확인 필요.
 > 자동 작성 노트는 실제 정독을 뜻하지 않는다. 사용자 reading status는 UNREAD로 시작한다.
 
-- Year/Venue: 2026 / IJRR
+- Year/Venue
+- Authors: Jun Yang, Wenjie Xue, Sahar Ghavidel, Steven L. Waslander
 - Category: Robotics-Enabling 3D Perception
 - Primary track: Robotics-enabling 3D perception
 - Tier: NEXT
 - Tags: active perception, 6D pose, RGB, next-best-view
 - Aliases: ActiveODPE
-- Official paper: https://journals.sagepub.com/doi/10.1177/02783649251411922
+- Official paper: https://api.crossref.org/works/10.1177/02783649251411922
 - Venue verification: https://journals.sagepub.com/doi/10.1177/02783649251411922
 - Code/Project: https://trailab.github.io/ActiveODPE/
 - Code: project_only

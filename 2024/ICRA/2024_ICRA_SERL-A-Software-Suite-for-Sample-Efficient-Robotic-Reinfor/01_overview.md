@@ -7,11 +7,11 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2024 / ICRA
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Jianlan Luo, Zheyuan Hu, Charles Xu, You Liang Tan, Jacob Berg, Archit Sharma, Stefan Schaal, Chelsea Finn, Abhishek Gupta, Sergey Levine
 - Primary track: RL, IL, offline learning, and robot data
 - Tier: CORE
 - Tags: Robotics, Reinforcement Learning, real-world RL, sample efficiency, human demonstrations, reset-free learning
-- Official paper: https://ieeexplore.ieee.org/document/10610040/
+- Official paper: https://api.crossref.org/works/10.1109/ICRA57147.2024.10610040
 - Full-text retrieval: https://arxiv.org/pdf/2401.16013
 - Code/Project: https://github.com/rail-berkeley/serl
 - Paper type: benchmark_or_dataset

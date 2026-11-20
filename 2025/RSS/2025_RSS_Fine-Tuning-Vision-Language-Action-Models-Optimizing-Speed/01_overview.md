@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / RSS
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Moo Jin Kim, Chelsea Finn, Percy Liang
 - Primary track: VLA and generalist robot policies
 - Tier: CORE
 - Tags: Robotics, VLA, OpenVLA, fine-tuning, action chunking, inference efficiency

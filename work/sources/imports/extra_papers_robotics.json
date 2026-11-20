@@ -100,13 +100,13 @@
   },
   {
     "title": "Learning Neural Network Policies with Guided Policy Search under Unknown Dynamics",
-    "year": 2016,
-    "venue": "JMLR",
+    "year": 2014,
+    "venue": "NeurIPS",
     "category": "Foundations: Robot Learning and Sim-to-Real",
     "tags": ["Robotics", "guided policy search", "policy learning", "manipulation"],
-    "pdf": "https://jmlr.org/papers/volume17/15-522/15-522.pdf",
-    "page": "https://jmlr.org/papers/v17/15-522.html",
-    "project": "not released"
+    "pdf": "https://proceedings.neurips.cc/paper_files/paper/2014/file/c7c9344b5a3c0533e29fa69ce807cf08-Paper.pdf",
+    "page": "https://proceedings.neurips.cc/paper_files/paper/2014/hash/c7c9344b5a3c0533e29fa69ce807cf08-Abstract.html",
+    "project": "https://rll.berkeley.edu/nips2014gps/"
   },
   {
     "title": "Domain Randomization for Transferring Deep Neural Networks from Simulation to the Real World",

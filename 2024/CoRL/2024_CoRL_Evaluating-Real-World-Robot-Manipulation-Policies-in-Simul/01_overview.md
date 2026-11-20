@@ -7,12 +7,12 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2024 / CoRL
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Xuanlin Li, Kyle Hsu, Jiayuan Gu, Oier Mees, Karl Pertsch, Homer Rich Walke, Chuyuan Fu, Ishikaa Lunawat, Isabel Sieh, Sean Kirmani, Sergey Levine, Jiajun Wu, Chelsea Finn, Hao Su, Quan Vuong, Ted Xiao
 - Primary track: RL, IL, offline learning, and robot data
 - Tier: NEXT
 - Tags: Robotics, Benchmark, simulation, real-to-sim, policy evaluation, generalist policy
-- Official paper: https://openreview.net/forum?id=LZh48DTg71
-- Full-text retrieval: https://openreview.net/pdf?id=LZh48DTg71
+- Official paper: https://proceedings.mlr.press/v270/li25c.html
+- Full-text retrieval: https://raw.githubusercontent.com/mlresearch/v270/main/assets/li25c/li25c.pdf
 - Code/Project: https://simpler-env.github.io/
 - Paper type: benchmark_or_dataset
 - Source audit: full-text PDF body checked on 2026-09-03 (22 pages; PyMuPDF text; title-token overlap first two pages=1.0)

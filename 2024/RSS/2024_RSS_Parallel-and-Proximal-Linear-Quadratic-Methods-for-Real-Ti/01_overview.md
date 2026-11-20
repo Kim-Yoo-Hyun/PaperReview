@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2024 / RSS
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Wilson Jallet, Ewen Dantec, Etienne Arlaud, Nicolas Mansard, Justin Carpentier
 - Primary track: Planning and control
 - Tier: NEXT
 - Tags: Robotics, MPC, optimal control, LQR, whole-body control, real-time

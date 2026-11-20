@@ -15,9 +15,11 @@ from collections import Counter, defaultdict
 from pathlib import Path
 
 try:
+    from render_source_audit import render as render_source_audit
     from registry_profiles import ARTIFACT_STATUSES, EVALUATION_SETTINGS, LINEAGE_STATUSES, PROTOCOL_STATUSES, REPRO_STATUSES
     from registry_schema import CURATION_ROLES, DATA_STATUSES, FACET_KEYS, PRIMARY_TRACKS, SCHEMA_VERSION, validate_record_shape, venue_id_for
 except ModuleNotFoundError:
+    from .render_source_audit import render as render_source_audit
     from .registry_profiles import ARTIFACT_STATUSES, EVALUATION_SETTINGS, LINEAGE_STATUSES, PROTOCOL_STATUSES, REPRO_STATUSES
     from .registry_schema import CURATION_ROLES, DATA_STATUSES, FACET_KEYS, PRIMARY_TRACKS, SCHEMA_VERSION, validate_record_shape, venue_id_for
 
@@ -792,6 +794,17 @@ def main() -> None:
         taxonomy_record_count = audit_taxonomy_batches(meta.get("taxonomy_batches", []), paper_ids, errors, warnings)
         audit_external_reviews(meta, paper_ids, errors, warnings)
         audit_gapfill_batches(meta.get("gapfill_batches", []), paper_ids, errors, warnings)
+        if source_audit := meta.get("source_audit"):
+            try:
+                evidence = (ROOT / source_audit["path"]).read_text(encoding="utf-8")
+                audited = [json.loads(line) for line in evidence.splitlines()]
+                if {row["id"] for row in audited} - set(paper_ids):
+                    errors.append("source audit contains unrecognized stable paper IDs")
+                report = (ROOT / source_audit["report"]).read_text(encoding="utf-8")
+                if report != render_source_audit(audited, source_audit):
+                    errors.append("source audit report differs from its dated evidence ledger")
+            except (OSError, ValueError, KeyError, TypeError) as exc:
+                errors.append(f"could not validate dated source audit: {exc}")
         if meta.get("schema_version") != SCHEMA_VERSION or meta.get("paper_count") != len(papers):
             errors.append("registry metadata schema/count mismatch")
         if meta.get("manifest_sha256") and meta.get("manifest_sha256") != file_sha256(MANIFEST):

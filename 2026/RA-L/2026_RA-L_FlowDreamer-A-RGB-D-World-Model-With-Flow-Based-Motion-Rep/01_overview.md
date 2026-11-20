@@ -7,14 +7,14 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2026 / RA-L
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Jun Guo, Xiaojian Ma, Yikai Wang, Min Yang, Huaping Liu, Qing Li
 - Primary track: World models, safety, uncertainty, and recovery
 - Tier: NEXT
 - Tags: Robotics, world model, RGB-D, 3D scene flow, robot manipulation, 4D reasoning
-- Official paper: https://doi.org/10.1109/LRA.2026.3653273
+- Official paper: https://api.crossref.org/works/10.1109/LRA.2026.3653273
 - Preprint: https://arxiv.org/abs/2505.10075
 - Full-text retrieval: https://arxiv.org/pdf/2505.10075
-- Code/Project: https://github.com/sharinka0715/FlowDreamer/ · https://sharinka0715.github.io/FlowDreamer/
+- Code/Project: https://sharinka0715.github.io/FlowDreamer/
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (15 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 

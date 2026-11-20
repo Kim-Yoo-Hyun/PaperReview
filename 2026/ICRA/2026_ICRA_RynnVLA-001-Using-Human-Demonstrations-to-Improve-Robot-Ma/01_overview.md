@@ -7,11 +7,11 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2026 / ICRA
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Yuming Jiang, Siteng Huang, Shengke Xue, Yaxi Zhao, Jun Cen, Sicong Leng, Kehan Li, Jiayan Guo, Kexiang Wang, Mingxiu Chen, Fan Wang, Deli Zhao, Xin Li
 - Primary track: VLA and generalist robot policies
 - Tier: REFERENCE
 - Tags: VLA, Robotics
-- Official paper: https://ras.papercept.net/conferences/conferences/ICRA26/program/ICRA26_ContentListWeb_3.html
+- Official paper: https://api.crossref.org/works/10.1109/icra57385.2026.11697407
 - Full-text retrieval: https://arxiv.org/pdf/2509.15212v1
 - Code/Project: not identified
 - Paper type: method
@@ -19,7 +19,7 @@
 
 ## Why This Paper Is Here
 
-VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다. 본문은 Another line of studies works on exploiting massive prior knowledge from pretrained generative models (Cheang et al., 2024; Hu et al., 2024) or VLMs (Zitkovich et al., 2023; Kim et al., 2024; ...를 문제로 두고, In this work, we propose RynnVLA-001, a VLA model enhanced by video generation pretraining.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+RynnVLA-001은 사람의 1인칭 비디오로 영상 생성을 사전학습한 뒤 로봇 조작을 학습한다.
 
 ## Problem and Motivation
 
@@ -53,16 +53,10 @@ VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다
 
 ## Main Claims and Actual Contribution
 
-- **p. 1 / 1 Introduction - extractive body cue:** In this work, we propose RynnVLA-001, a VLA model enhanced by video generation pretraining.
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** To ensure the smoothness and temporal coherence of predicted actions, we propose ActionVAE, a variational autoencoder that encodes action chunks into compact embeddings.
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** Our framework leverages three types of training data: (1) Ego-Centric Video Generative Pretraining uses millions of ego-centric human manipulation videos for future frame prediction.
-- **p. 4 / 3 METHODOLOGY - extractive body cue:** The training consists of three stages: (1) Ego-Centric Video Generative Pretraining trains a transformer-based Image-to-Video (I2V) model for future frame prediction.
-- **p. 5 / 3 METHODOLOGY - extractive body cue:** To provide the model with proprioceptive information, we introduce state embeddings (blue blocks in Fig.
-- **p. 9 / 5 EXPERIMENTS - extractive body cue:** In contrast, RynnVLA-001-Video achieves a significant performance improvement, indicating that priors learned from ego-centric videos are effective for VLA adaptation.
-- **p. 12 / 5 EXPERIMENTS - extractive body cue:** In contrast, our full RynnVLA-001 model, trained on our comprehensive dataset including distractors, achieves a 90% success rate (9/10) on this task.
-- **p. 9 / 5 EXPERIMENTS - extractive body cue:** For Pi0, when distractor objects appear on the desk, the success rates drop significantly, indicating its limited instruction-following capability.
+- 사람 활동에서 시각적 움직임을 예측하도록 모델을 학습한다.
+- 로봇 시연을 사용해 시각언어 표현을 행동 예측에 연결한다.
 
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+[저자 원문](https://arxiv.org/abs/2509.15212)
 
 ## Evaluation Scope
 

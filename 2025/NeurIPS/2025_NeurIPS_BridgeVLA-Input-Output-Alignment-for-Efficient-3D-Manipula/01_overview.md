@@ -7,11 +7,11 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / NeurIPS
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Peiyan Li, Yixiang Chen, Hongtao Wu, Xiao Ma, Xiangnan Wu, Yan Huang, Liang Wang, Tao Kong, Tieniu Tan
 - Primary track: VLA and generalist robot policies
 - Tier: REFERENCE
 - Tags: VLA, Vision-Language Model, Robotics, 3D Vision
-- Official paper: https://openreview.net/forum?id=ffBF6hYuQv
+- Official paper: https://neurips.cc/virtual/2025/poster/116823
 - Full-text retrieval: https://arxiv.org/pdf/2506.07961.pdf
 - Code/Project: not identified
 - Paper type: method

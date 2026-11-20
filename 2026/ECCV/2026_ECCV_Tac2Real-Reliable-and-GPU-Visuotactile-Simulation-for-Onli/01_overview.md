@@ -3,14 +3,15 @@
 > Evidence maturity: `ABSTRACT_CHECKED`. abstract 기반 — 본문 수동 확인 필요.
 > 자동 작성 노트는 실제 정독을 뜻하지 않는다. 사용자 reading status는 UNREAD로 시작한다.
 
-- Year/Venue: 2026 / ECCV
+- Year/Venue
+- Authors: Ningyu Yan, Shuai Wang, Xing Shen, Hui Wang, Hanqing Wang, Yang Xiang, Jiangmiao Pang
 - Category: Manipulation, Contact, and Dexterity
 - Primary track: Manipulation, contact, tactile, and dexterity
 - Tier: NEXT
 - Tags: visuotactile, contact-rich, sim-to-real
 - Aliases: Tac2Real
 - Official paper: https://arxiv.org/abs/2603.28475
-- Venue verification: https://eccv.ecva.net/Conferences/2026/AcceptedPapers
+- Venue verification: https://api.crossref.org/works/10.1007/978-3-032-37550-6_13
 - Code/Project: https://ningyurichard.github.io/tac2real-project-page/
 - Code: not_released
 - Source audit: 2026-10-19: 공식 paper abstract 및 저자 project/code README 확인; abstract 기반 — 본문 수동 확인 필요. ECCV 2026 accepted/video list의 공식 검색 색인과 저자 abstract 대조; proceedings page/DOI 미확인.

@@ -7,13 +7,13 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2022 / ICLR
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Xingyu Lin, Zhiao Huang, Yunzhu Li, Joshua B. Tenenbaum, David Held, Chuang Gan
 - Primary track: Manipulation, contact, tactile, and dexterity
 - Tier: NEXT
 - Tags: Robotics, deformable object, tool use, differentiable physics, skill abstraction, Planning
 - Official paper: https://arxiv.org/abs/2203.17275
 - Full-text retrieval: https://arxiv.org/pdf/2203.17275
-- Code/Project: https://diffskill.github.io/
+- Code/Project: https://xingyu-lin.github.io/diffskill/
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (14 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 

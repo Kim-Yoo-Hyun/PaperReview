@@ -7,11 +7,11 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / NeurIPS
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Weining Ren, Hongjun Wang, Xiao Tan, Kai Han
 - Primary track: Robotics-enabling 3D perception
 - Tier: REFERENCE
 - Tags: 3D reconstruction, depth, 3D Vision
-- Official paper: https://openreview.net/forum?id=pZIeK0Xvph
+- Official paper: https://neurips.cc/virtual/2025/poster/115951
 - Full-text retrieval: https://arxiv.org/pdf/2511.22429
 - Code/Project: not identified
 - Paper type: method

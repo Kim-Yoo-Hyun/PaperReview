@@ -7,12 +7,12 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2026 / ICLR
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Cunxin Fan, Xiaosong Jia, Yihang Sun, Yixiao Wang, Jianglan Wei, Ziyang Gong, Xiangyu Zhao, Masayoshi Tomizuka, Xue Yang, Junchi Yan, Mingyu Ding
 - Primary track: VLA and generalist robot policies
 - Tier: REFERENCE
 - Tags: VLA, Robotics, Reinforcement Learning
-- Official paper: https://openreview.net/forum?id=ULTWUuGhC3
-- Full-text retrieval: https://chatpaper.com/api/v1/articles/download/245105
+- Official paper: https://proceedings.iclr.cc/paper_files/paper/2026/hash/444876e32cba0408c63f5295481cfe20-Abstract-Conference.html
+- Full-text retrieval: https://proceedings.iclr.cc/paper_files/paper/2026/file/444876e32cba0408c63f5295481cfe20-Paper-Conference.pdf
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (31 pages; PyMuPDF text; title-token overlap first two pages=1.0)

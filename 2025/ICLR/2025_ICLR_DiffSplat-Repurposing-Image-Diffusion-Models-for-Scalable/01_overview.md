@@ -7,12 +7,12 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / ICLR
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Chenguo Lin, Panwang Pan, Bangbang Yang, Zeming Li, Yadong MU
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
 - Tags: Gaussian Splatting, Diffusion, Generation, 3D Vision
-- Official paper: https://openreview.net/forum?id=eajZpoQkGK
-- Full-text retrieval: https://chatpaper.com/api/v1/articles/download/114605
+- Official paper: https://proceedings.iclr.cc/paper_files/paper/2025/hash/6518f9339196e172fa0ceef48a85543a-Abstract-Conference.html
+- Full-text retrieval: https://proceedings.iclr.cc/paper_files/paper/2025/file/6518f9339196e172fa0ceef48a85543a-Paper-Conference.pdf
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (23 pages; PyMuPDF text; title-token overlap first two pages=1.0)

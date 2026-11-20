@@ -7,12 +7,12 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2026 / ICLR
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Xupeng Zhu, Yu Qi, Yizhe Zhu, Robin Walters, Robert Platt
 - Primary track: Manipulation, contact, tactile, and dexterity
 - Tier: NEXT
 - Tags: Robotics, 3D Vision, equivariant
-- Official paper: https://openreview.net/forum?id=d1wuA8oIH0
-- Full-text retrieval: https://openreview.net/pdf/7d1ac63392c225113c314e6263f1d18dfbff895e.pdf
+- Official paper: https://proceedings.iclr.cc/paper_files/paper/2026/hash/0dadf17389895a1d660a178d1140e07c-Abstract-Conference.html
+- Full-text retrieval: https://proceedings.iclr.cc/paper_files/paper/2026/file/0dadf17389895a1d660a178d1140e07c-Paper-Conference.pdf
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (18 pages; PyMuPDF text; title-token overlap first two pages=1.0)

@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2021 / ICCV
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Shuaifeng Zhi, Tristan Laidlow, Stefan Leutenegger, Andrew J. Davison
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
 - Tags: NeRF, semantic, 3D Vision, alignment

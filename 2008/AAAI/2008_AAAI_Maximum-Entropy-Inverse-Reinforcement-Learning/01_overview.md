@@ -7,11 +7,11 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2008 / AAAI
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Brian D. Ziebart, Andrew Maas, J. Andrew Bagnell, Anind K. Dey
 - Primary track: RL, IL, offline learning, and robot data
 - Tier: REFERENCE
 - Tags: Robotics, inverse reinforcement learning, maximum entropy, demonstrations
-- Official paper: https://www.cs.cmu.edu/~bziebart/publications/maximum-entropy-inverse-reinforcement-learning.html
+- Official paper: https://cdn.aaai.org/AAAI/2008/AAAI08-227.pdf
 - Full-text retrieval: https://cdn.aaai.org/AAAI/2008/AAAI08-227.pdf
 - Code/Project: not identified
 - Paper type: theory_or_foundation

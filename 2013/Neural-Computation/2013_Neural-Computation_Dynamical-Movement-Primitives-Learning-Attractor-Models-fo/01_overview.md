@@ -7,11 +7,11 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2013 / Neural Computation
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Auke Jan Ijspeert, Jun Nakanishi, Heiko Hoffmann, Peter Pastor, Stefan Schaal
 - Primary track: Planning and control
 - Tier: REFERENCE
 - Tags: Robotics, movement primitives, dynamical systems, motor control
-- Official paper: https://is.mpg.de/ics/publications/ijspeert_nc_2013
+- Official paper: https://api.crossref.org/works/10.1162/NECO_a_00393
 - Full-text retrieval: https://www.pure.ed.ac.uk/ws/portalfiles/portal/7874487/NECO_a_00393.pdf
 - Code/Project: not identified
 - Paper type: theory_or_foundation

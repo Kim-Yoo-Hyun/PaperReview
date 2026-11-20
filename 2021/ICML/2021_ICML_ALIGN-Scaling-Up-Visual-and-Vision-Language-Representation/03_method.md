@@ -1,4 +1,4 @@
-# Method - ALIGN: Scaling Up Visual and Vision-Language Representation Learning With Noisy Text Supervision
+# Method - Scaling Up Visual and Vision-Language Representation Learning With Noisy Text Supervision
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.

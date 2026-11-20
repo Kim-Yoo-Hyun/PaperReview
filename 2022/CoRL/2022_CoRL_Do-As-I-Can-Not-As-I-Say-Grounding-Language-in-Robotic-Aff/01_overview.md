@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2022 / CoRL
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Brian Ichter, Anthony Brohan, Yevgen Chebotar, Chelsea Finn, Karol Hausman, Alexander Herzog, Daniel Ho, Julian Ibarz, Alex Irpan, Eric Jang, Ryan Julian, Dmitry Kalashnikov, Sergey Levine, Yao Lu, Carolina Parada, Kanishka Rao, Pierre Sermanet, Alexander T Toshev, Vincent Vanhoucke, Fei Xia, Ted Xiao, Peng Xu, Mengyuan Yan, Noah Brown, Michael Ahn, Omar Cortes, Nicolas Sievers, Clayton Tan, Sichun Xu, Diego Reyes, Jarek Rettinghouse, Jornell Quiambao, Peter Pastor, Linda Luu, Kuang-Huei Lee, Yuheng Kuang, Sally Jesmonth, Nikhil J. Joshi, Kyle Jeffrey, Rosario Jauregui Ruano, Jasmine Hsu, Keerthana Gopalakrishnan, Byron David, Andy Zeng, Chuyuan Kelly Fu
 - Primary track: VLA and generalist robot policies
 - Tier: CORE
 - Tags: LLM, affordance, Planning, Robotics
@@ -19,7 +19,7 @@
 
 ## Why This Paper Is Here
 
-VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다. 본문은 With prompt engineering, a LLM may be capable of splitting the high-level instruction into sub-tasks, but it cannot do so without the context of what the robot is capable of given its ...를 문제로 두고, We evaluate our method on a number of real-world robotic tasks, where we show the need for real-world grounding and that this approach is capable of completing long-horizon, abstract, natural language instructions ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+SayCan은 언어 모델이 지시와 맞는다고 평가한 기술과 현재 로봇 상태에서 실행할 수 있는 기술을 함께 고려해 다음 행동을 고른다.
 
 ## Problem and Motivation
 
@@ -53,16 +53,10 @@ VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다
 
 ## Main Claims and Actual Contribution
 
-- **p. 1 / Abstract - extractive body cue:** We evaluate our method on a number of real-world robotic tasks, where we show the need for real-world grounding and that this approach is capable ...
-- **p. 2 / 1 Introduction - extractive body cue:** Our method, SayCan, extracts and leverages the knowledge within LLMs in physically-grounded tasks.
-- **p. 1 / Abstract - extractive body cue:** We propose to provide real-world grounding by means of pretrained skills, which are used to constrain the model to propose natural language actions that are ...
-- **p. 4 / 2 Preliminaries - extractive body cue:** With this approach, we are able to effectively extract knowledge from the language model, but it leaves a major issue: while the decoding of the ...
-- **p. 6 / 2 Preliminaries - extractive body cue:** We test our method in two environments: a real office kitchen and a mock environment mirroring the kitchen, which is also the environment in which ...
-- **p. 9 / Figure/Table caption - extractive body cue:** Table 2: Success rates of instructions by family. PaLM-SayCan achieves a planning success rate of 84% and execution success rate of 74% in the training ...
-- **p. 9 / Figure/Table caption - extractive body cue:** Table 3: Success rates of instructions by family. SayCan achieves a planning success rate of 84% and execution success rate of 74% with PaLM and ...
-- **p. 7 / 5.1 Results - extractive body cue:** In the mock kitchen, PaLMSayCan achieved a planning success rate of 84% and an execution rate of 74%.
+- 언어적 적합성과 학습한 기술의 실행 가능성을 결합한다.
+- 실제 이동 조작 로봇에서 여러 단계의 자연어 지시를 평가한다.
 
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+[저자 원문](https://proceedings.mlr.press/v205/ichter23a.html)
 
 ## Evaluation Scope
 

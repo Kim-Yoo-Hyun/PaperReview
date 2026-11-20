@@ -7,11 +7,11 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2026 / ICRA
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Ruiteng Zhao, Wenshuo Wang, Yicheng Ma, Xiaocong Li, Francis E.H. Tay, Marcelo H. Ang, Haiyue Zhu
 - Primary track: VLA and generalist robot policies
 - Tier: REFERENCE
 - Tags: VLA, Vision-Language Model, Robotics
-- Official paper: https://ras.papercept.net/conferences/conferences/ICRA26/program/ICRA26_ContentListWeb_5.html
+- Official paper: https://api.crossref.org/works/10.1109/icra57385.2026.11695889
 - Full-text retrieval: https://arxiv.org/pdf/2602.02142
 - Code/Project: not identified
 - Paper type: method

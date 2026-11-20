@@ -7,13 +7,13 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2026 / RA-L
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Ralf Römer, Yi Zhang, Yuming Li, Angela P. Schoellig
 - Primary track: VLA and generalist robot policies
 - Tier: REFERENCE
 - Tags: VLA, Vision-Language Model
 - Official paper: https://arxiv.org/abs/2601.09512
 - Full-text retrieval: https://arxiv.org/pdf/2601.09512
-- Code/Project: https://tum-lsy.github.io/CLARE/
+- Code/Project: https://tum-lsy.github.io/clare
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 

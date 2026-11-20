@@ -7,11 +7,11 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2024 / CoRL
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Zipeng Fu, Qingqing Zhao, Qi Wu, Gordon Wetzstein, Chelsea Finn
 - Primary track: Locomotion, whole-body, mobile manipulation, and humanoids
 - Tier: REFERENCE
 - Tags: Robotics, humanoid, human-to-humanoid, Imitation Learning, teleoperation
-- Official paper: https://openreview.net/forum?id=WnSl42M9Z4
+- Official paper: https://proceedings.mlr.press/v270/fu25a.html
 - Full-text retrieval: https://arxiv.org/pdf/2406.10454
 - Code/Project: https://humanoid-ai.github.io/
 - Paper type: method

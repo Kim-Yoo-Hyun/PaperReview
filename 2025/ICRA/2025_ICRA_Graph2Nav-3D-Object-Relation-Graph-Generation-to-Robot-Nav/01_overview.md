@@ -7,11 +7,11 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / ICRA
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Tixiao Shan, Abhinav Rajvanshi, Niluthpol Mithun, Han-Pang Chiu
 - Primary track: Robotics-enabling 3D perception
 - Tier: REFERENCE
 - Tags: Robotics, 3D Vision, Navigation, Graph Reasoning
-- Official paper: https://www.proceedings.com/content/081/081087webtoc.pdf
+- Official paper: https://arxiv.org/abs/2504.16782
 - Full-text retrieval: https://arxiv.org/pdf/2504.16782v1
 - Code/Project: not identified
 - Paper type: method

@@ -7,11 +7,11 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / NeurIPS
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Mark H. Huang, Lin Geng Foo, Christian Theobalt, Ying Sun, De Wen Soh
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
 - Tags: Gaussian Splatting, 3D reconstruction, geometry, 3D Vision
-- Official paper: https://openreview.net/forum?id=Y9AdTCCEgI
+- Official paper: https://neurips.cc/virtual/2025/poster/117447
 - Full-text retrieval: https://arxiv.org/pdf/2510.20605
 - Code/Project: not identified
 - Paper type: method

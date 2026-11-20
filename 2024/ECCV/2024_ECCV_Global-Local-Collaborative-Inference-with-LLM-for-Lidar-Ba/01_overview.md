@@ -7,13 +7,13 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2024 / ECCV
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Xingyu Peng, Yan Bai, Chen Gao, Lirong Yang, Fei Xia, Beipeng Mu, Xiaofei Wang, Si Liu
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
 - Tags: semantic
 - Official paper: https://www.ecva.net/papers/eccv_2024/papers_ECCV/html/5197_ECCV_2024_paper.php
 - Full-text retrieval: https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/05197.pdf
-- Code/Project: not identified
+- Code/Project: https://github.com/GradiusTwinbee/GLIS
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (19 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 

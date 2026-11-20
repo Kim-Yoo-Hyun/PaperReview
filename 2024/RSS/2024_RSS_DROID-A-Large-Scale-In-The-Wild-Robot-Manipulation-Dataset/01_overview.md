@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2024 / RSS
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Alexander Khazatsky, Karl Pertsch, Suraj Nair, Ashwin Balakrishna, Sudeep Dasari, Siddharth Karamcheti, Soroush Nasiriany, Mohan Kumar Srirama, Lawrence Yunliang Chen, Kirsty Ellis, Peter David Fagan, Joey Hejna, Masha Itkina, Marion Lepert, Yecheng Jason Ma, Patrick Tree Miller, Jimmy Wu, Suneel Belkhale, Shivin Dass, Huy Ha, Arhan Jain, Abraham Lee, Youngwoon Lee, Marius Memmel, Sungjae Park, Ilija Radosavovic, Kaiyuan Wang, Albert Zhan, Kevin Black, Cheng Chi, Kyle Beltran Hatch, Shan Lin, Jingpei Lu, Jean Mercat, Abdul Rehman, Pannag R Sanketi, Archit Sharma, Cody Simpson, Quan Vuong, Homer Rich Walke, Blake Wulfe, Ted Xiao, Jonathan Heewon Yang, Arefeh Yavary, Tony Z. Zhao, Christopher Agia, Rohan Baijal, Mateo Guaman Castro, Daphne Chen, Qiuyu Chen, Trinity Chung, Jaimyn Drake, Ethan Paul Foster, Jensen Gao, David Antonio Herrera, Minho Heo, Kyle Hsu, Jiaheng Hu, Donovon Jackson, Charlotte Le, Yunshuang Li, Roy Lin, Zehan Ma, Abhiram Maddukuri, Suvir Mirchandani, Daniel Morton, Tony Nguyen, Abigail O'Neill, Rosario Scalise, Derick Seale, Victor Son, Stephen Tian, Emi Tran, Andrew E. Wang, Yilin Wu, Annie Xie, Jingyun Yang, Patrick Yin, Yunchu Zhang, Osbert Bastani, Glen Berseth, Jeannette Bohg, Ken Goldberg, Abhinav Gupta, Abhishek Gupta, Dinesh Jayaraman, Joseph J Lim, Jitendra Malik, Roberto Martín-Martín, Subramanian Ramamoorthy, Dorsa Sadigh, Shuran Song, Jiajun Wu, Michael C. Yip, Yuke Zhu, Thomas Kollar, Sergey Levine, Chelsea Finn
 - Primary track: RL, IL, offline learning, and robot data
 - Tier: CORE
 - Tags: Robotics, Dataset, in-the-wild, robot manipulation, data diversity, generalist policy
@@ -21,7 +21,7 @@
 
 ## Why This Paper Is Here
 
-서로 다른 실제 환경에서 같은 로봇 플랫폼으로 수집한 조작 시연을 제공한다. 정책의 환경 일반화를 비교하거나, 시연자의 조작 요청과 기록된 로봇 행동이 어떤 과정을 거쳐 연결되는지 확인할 때 읽는다. [논문과 실험 개요](https://www.roboticsproceedings.org/rss20/p120.html)
+DROID는 여러 장소에서 공통 로봇 장비로 수집한 실물 조작 시연을 제공하고 데이터 다양성이 정책 일반화에 미치는 영향을 평가한다.
 
 ## Problem and Motivation
 
@@ -55,16 +55,10 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / I. INTRODUCTION - extractive body cue:** In this work, we introduce DROID (Distributed Robot Interaction Dataset), a robot manipulation dataset of unprecedented diversity (see Fig.
-- **p. 1 / 13 Institutions - extractive body cue:** 1: We introduce DROID (Distributed Robot Interaction Dataset), an "in-the-wild" robot manipulation dataset with 76k trajectories or 350 hours of interaction data, collected across 564 ...
-- **p. 3 / III. DROID DATA COLLECTION SETUP - extractive body cue:** In this section, we introduce our hardware setup and the data collection protocol.
-- **p. 4 / III. DROID DATA COLLECTION SETUP - extractive body cue:** The setup consists of a Franka Panda 7DoF robot arm, two adjustable Zed 2 stereo cameras, a wristmounted Zed Mini stereo camera, and an Oculus ...
-- **p. 3 / Dataset - extractive body cue:** Collecting such data "in-the-wild" is more common for robot navigation and autonomous driving [4, 18, 28, 48, 49, 55, 57, 64] and enables training of ...
-- **p. 9 / Figure/Table caption - extractive body cue:** Fig. 8: Does DROID Improve Policy Performance and Robustness? We find that across all our evaluation tasks, co-training with DROID significantly improves both in distribution ...
-- **p. 7 / V. EXPERIMENTS - extractive body cue:** Across the board, we find that DROID improves policy success rate while increasing robustness to scene changes like distractors or novel object instances.
-- **p. 8 / V. EXPERIMENTS - extractive body cue:** Across all tasks, we find that DROID substantially improves policy performance compared to the diffusion policy trained on in-domain data only.
+- 분산 수집을 위한 로봇 구성과 절차를 제시하고 장면·과제·수집자가 다양한 원시 자료를 공개한다.
+- DROID를 학습에 추가했을 때 여러 조작 정책의 성공과 새 조건에 대한 강건성이 어떻게 달라지는지 비교한다.
 
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+[저자 원문](https://www.roboticsproceedings.org/rss20/p120.pdf)
 
 ## Evaluation Scope
 

@@ -7,11 +7,11 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2024 / CoRL
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Jacob Levy, Tyler Westenbroek, David Fridovich-Keil
 - Primary track: Locomotion, whole-body, mobile manipulation, and humanoids
 - Tier: REFERENCE
 - Tags: Robotics, locomotion, model-based reinforcement learning, real-world learning
-- Official paper: https://openreview.net/forum?id=evCXwlCMIi
+- Official paper: https://proceedings.mlr.press/v270/levy25a.html
 - Full-text retrieval: https://arxiv.org/pdf/2410.09163
 - Code/Project: https://sites.google.com/utexas.edu/ssrl
 - Paper type: method

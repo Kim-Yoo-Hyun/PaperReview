@@ -2,13 +2,14 @@
 
 > Evidence maturity: `FULL_TEXT_CHECKED` — 지정 절만 확인한 기록이며 전체 정독·실험 재현을 뜻하지 않는다.
 
-- Year/Venue: 2018 / ICRA
+- Year/Venue
+- Authors: Ashvin Nair, Bob McGrew, Marcin Andrychowicz, Wojciech Zaremba, Pieter Abbeel
 - Category: Robot Learning and Data
 - Primary track: RL, IL, offline learning, and robot data
 - Tier: REFERENCE
 - Tags: reinforcement-learning, demonstrations, Q-filter, sparse-reward
 - Aliases: Q-filter
-- Official paper: https://doi.org/10.1109/ICRA.2018.8463162
+- Official paper: https://api.crossref.org/works/10.1109/ICRA.2018.8463162
 - Venue verification: https://api.crossref.org/works/10.1109/ICRA.2018.8463162
 - Code/Project: not identified
 - Code: not identified

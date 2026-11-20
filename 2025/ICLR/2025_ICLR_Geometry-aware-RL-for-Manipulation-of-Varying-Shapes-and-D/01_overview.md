@@ -7,11 +7,11 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / ICLR
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Tai Hoang, Huy Le, Philipp Becker, Vien A Ngo, Gerhard Neumann
 - Primary track: Manipulation, contact, tactile, and dexterity
 - Tier: REFERENCE
 - Tags: Robotics, Reinforcement Learning, SE(3) equivariance, deformable manipulation
-- Official paper: https://openreview.net/forum?id=7BLXhmWvwF
+- Official paper: https://proceedings.iclr.cc/paper_files/paper/2025/hash/7571c9d44179c7988178593c5b62a9b6-Abstract-Conference.html
 - Full-text retrieval: https://arxiv.org/pdf/2502.07005
 - Code/Project: https://thobotics.github.io/hepi
 - Paper type: method

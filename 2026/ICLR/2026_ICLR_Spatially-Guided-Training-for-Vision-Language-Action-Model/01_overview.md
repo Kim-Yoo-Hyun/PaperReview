@@ -7,12 +7,12 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2026 / ICLR
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Jinhui Ye, Fangjing Wang, Ning Gao, Junqiu Yu, Yangkun Zhu, Bin Wang, Jinyu Zhang, Weiyang Jin, Yanwei Fu, Feng Zheng, Yilun Chen, Jiangmiao Pang
 - Primary track: VLA and generalist robot policies
 - Tier: REFERENCE
 - Tags: VLA, Vision-Language Model, Robotics, 3D Vision
-- Official paper: https://openreview.net/forum?id=eKhOrQWAVJ
-- Full-text retrieval: https://chatpaper.com/api/v1/articles/download/247957
+- Official paper: https://proceedings.iclr.cc/paper_files/paper/2026/hash/37294f033582ac0064bf90fa557c2573-Abstract-Conference.html
+- Full-text retrieval: https://proceedings.iclr.cc/paper_files/paper/2026/file/37294f033582ac0064bf90fa557c2573-Paper-Conference.pdf
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (40 pages; PyMuPDF text; title-token overlap first two pages=1.0)

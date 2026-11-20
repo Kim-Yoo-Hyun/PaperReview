@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2022 / CVPR
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Zhenyu Jiang, Cheng-Chun Hsu, Yuke Zhu
 - Primary track: Robotics-enabling 3D perception
 - Tier: NEXT
 - Tags: Robotics, 3D Vision, digital twin, articulated objects, interaction, implicit representation
@@ -19,7 +19,7 @@
 
 ## Why This Paper Is Here
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 However, they infer part-level geometry on the point cloud which cannot be used for physical simulation, because physical simulation requires compact geometry of the object such as the mesh for collision computation.를 문제로 두고, Given visual observations before and after interaction, our method jointly reconstructs the part-level geometry and articulation model of the object.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+Ditto는 물체를 한 번 움직이기 전후의 관측으로 관절과 부분 형상을 함께 복원한다.
 
 ## Problem and Motivation
 
@@ -53,16 +53,10 @@ Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 �
 
 ## Main Claims and Actual Contribution
 
-- **p. 1 / 1. Introduction - extractive body cue:** Given visual observations before and after interaction, our method jointly reconstructs the part-level geometry and articulation model of the object.
-- **p. 2 / 1. Introduction - extractive body cue:** Furthermore, we apply our method to real-world articulated objects for recreating digital twins.
-- **p. 2 / 1. Introduction - extractive body cue:** We introduce Ditto (Digital twin of articulated objects), an implicit neural representation-based model that jointly predicts part-level geometry and kinematic articulation between the parts.
-- **p. 3 / 4. Method - extractive body cue:** Ditto consists of a two-stream encoder that fuses two input point clouds and multiple implicit decoders for geometry and articulation.
-- **p. 5 / 4.3. Training - extractive body cue:** Our method does not assume known joint types during inference.
-- **p. 8 / 5.5. Ablation Studies - extractive body cue:** 1, Ditto achieves superior or at least on-par performance on all metrics.
-- **p. 7 / 5.4. Articulated Object Reconstruction - extractive body cue:** On both datasets, Ditto gets significantly better results on all metrics compared with the baselines.
-- **p. 7 / 5.4. Articulated Object Reconstruction - extractive body cue:** In contrast, Ditto achieves precise part-level geometry reconstruction as well as accurate joint estimation.
+- 물체 부분의 3D 기하와 부분 사이의 운동 관계를 공동 추정한다.
+- 추론 시 관절 종류가 주어지지 않는 조건에서 관절 물체의 디지털 트윈을 구성한다.
 
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+[저자 원문](https://openaccess.thecvf.com/content/CVPR2022/html/Jiang_Ditto_Building_Digital_Twins_of_Articulated_Objects_From_Interaction_CVPR_2022_paper.html)
 
 ## Evaluation Scope
 

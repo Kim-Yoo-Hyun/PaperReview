@@ -7,10 +7,10 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 1988 / Machine Learning
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Richard S. Sutton
 - Primary track: RL, IL, offline learning, and robot data
 - Tier: CORE
-- Tags: Robotics, Reinforcement Learning, temporal difference, Value Learning
+- Tags: Reinforcement Learning, temporal difference, Value Learning
 - Official paper: https://doi.org/10.1007/BF00115009
 - Full-text retrieval: https://doi.org/10.1007/BF00115009
 - Code/Project: not identified
@@ -19,7 +19,7 @@
 
 ## Why This Paper Is Here
 
-RL, IL, offline learning, and robot data의 rl 문제를 이해하기 위해 읽는다. 본문은 Most pattern recognition problems, for examt)le, can be treated as prediction problems in which the classifier nmst predict the correct classifications.를 문제로 두고, S(!TTON In this article, we introduce and provide tilt first formal results in the theory of temporal-difference {TD) methods, a class of incremental learning procedures specialized for prediction problems.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+시간차 학습은 연속한 시점의 예측 사이의 차이를 이용해 미래 결과의 예측을 점진적으로 갱신한다.
 
 ## Problem and Motivation
 
@@ -53,16 +53,10 @@ RL, IL, offline learning, and robot data의 rl 문제를 이해하기 위해 읽
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** S(!TTON In this article, we introduce and provide tilt first formal results in the theory of temporal-difference {TD) methods, a class of incremental learning procedures ...
-- **p. 11 / 3.2 A random-walk example - extractive body cue:** In this paper, we propose that the only required characteristic is that the system predicted be a dynamical one, that it have a state which ...
-- **p. 2 / 1. Introduction - extractive body cue:** This simplification allows us to evaluate them in isolation and has enabled us to obtain formal results.
-- **p. 8 / 3. Examples of faster learning with TD methods - extractive body cue:** In this section, we develop two illustrative examples: a game-playing example to help develop intuitions, and a random-walk example as a simple demonstration with experimental ...
-- **p. 9 / 3.1 A game-playing example - extractive body cue:** What evaluation should the novel position receive as a result of this experience?
-- **p. 13 / 3.2 A random-walk example - extractive body cue:** Averaging over training sets, we found that performance improved rapidly as A was reduced below 1 (the supervised-learning method) and was best at ,~ = ...
-- **p. 29 / 6.1 Samuel's checker-playing program - extractive body cue:** Nevertheless, SamueFs learning procedure was overall very successful; it played an imt)ortant role in significantly improving the play of his checkerplaying program until it rivaled ...
-- **p. 30 / 6.3 Holland's bucket brigade - extractive body cue:** In principle, hmg chains of rule invocations can be learned in this way, with strength being passed back from rule to rule, thus tile name ...
+- 최종 결과가 주어지기 전에 후속 예측을 이용해 이전 상태의 예측을 수정하는 학습 규칙을 제시한다.
+- 일부 경우에 한해 수렴과 최적성을 분석하고 감독학습에 의한 예측과 비교한다.
 
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+[저자 원문](https://doi.org/10.1007/BF00115009)
 
 ## Evaluation Scope
 

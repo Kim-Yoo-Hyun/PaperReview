@@ -7,11 +7,11 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / ICRA
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Abraham George, Selam Gano, Pranav Katragadda, Amir Barati Farimani
 - Primary track: VLA and generalist robot policies
 - Tier: REFERENCE
 - Tags: Robotics
-- Official paper: https://www.proceedings.com/content/081/081087webtoc.pdf
+- Official paper: https://api.crossref.org/works/10.1109/icra55743.2025.11128336
 - Full-text retrieval: https://arxiv.org/pdf/2403.11898v2
 - Code/Project: not identified
 - Paper type: method

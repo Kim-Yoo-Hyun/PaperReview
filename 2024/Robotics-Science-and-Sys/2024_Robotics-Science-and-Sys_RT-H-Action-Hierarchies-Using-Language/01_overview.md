@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2024 / Robotics: Science and Systems
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Suneel Belkhale, Tianli Ding, Ted Xiao, Pierre Sermanet, Quan Vuong, Jonathan Tompson, Yevgen Chebotar, Debidatta Dwibedi, Dorsa Sadigh
 - Primary track: VLA and generalist robot policies
 - Tier: NEXT
 - Tags: Robotics, VLA, Action Hierarchy, language, Google DeepMind

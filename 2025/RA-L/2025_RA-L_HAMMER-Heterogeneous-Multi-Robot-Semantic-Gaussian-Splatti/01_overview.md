@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / RA-L
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Javier Yu, Timothy Chen, Mac Schwager
 - Primary track: Robotics-enabling 3D perception
 - Tier: NEXT
 - Tags: Robotics, Gaussian Splatting, semantic

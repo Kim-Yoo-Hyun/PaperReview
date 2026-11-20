@@ -3,13 +3,14 @@
 > Evidence maturity: `ABSTRACT_CHECKED`. abstract 기반 — 본문 수동 확인 필요.
 > 자동 작성 노트는 실제 정독을 뜻하지 않는다. 사용자 reading status는 UNREAD로 시작한다.
 
-- Year/Venue: 2026 / RA-L
+- Year/Venue
+- Authors: David Alvear, George Turkiyyah, Shinkyu Park
 - Category: Locomotion, Whole-Body, and Mobile Manipulation
 - Primary track: Locomotion, whole-body, mobile manipulation, and humanoids
 - Tier: REFERENCE
 - Tags: mobile-manipulation, motion-planning, grasping
 - Aliases:
-- Official paper: https://doi.org/10.1109/LRA.2026.3653338
+- Official paper: https://api.crossref.org/works/10.1109/LRA.2026.3653338
 - Venue verification: https://api.crossref.org/works/10.1109/LRA.2026.3653338
 - Code/Project: not identified
 - Code: not_identified

@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2024 / CVPR
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Huan Ling, Seung Wook Kim, Antonio Torralba, Sanja Fidler, Karsten Kreis
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
 - Tags: Gaussian Splatting, geometry, Diffusion, Generation, 3D Vision
@@ -19,7 +19,7 @@
 
 ## Why This Paper Is Here
 
-Robotics-enabling 3D perception의 generative 문제를 이해하기 위해 읽는다. 본문은 We also propose a new view-guidance method to generate consistent 3D scenes for initialization of the 4D stage, and we leverage the concurrent classifier score distillation method [102].를 문제로 두고, We propose Align Your Gaussians (AYG), a novel method for 4D content creation.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+Align Your Gaussians는 텍스트로 지정한 장면과 움직임을 동적 3D 가우시안으로 생성한다.
 
 ## Problem and Motivation
 
@@ -52,16 +52,10 @@ Robotics-enabling 3D perception의 generative 문제를 이해하기 위해 읽�
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** We propose Align Your Gaussians (AYG), a novel method for 4D content creation.
-- **p. 2 / 1. Introduction - extractive body cue:** (iii) To scale AYG, we introduce a novel regularization method and a new motion amplification technique.
-- **p. 1 / Abstract - extractive body cue:** Our method, called Align Your Gaussians (AYG), leverages dynamic 3D Gaussian Splatting with deformation fields as 4D representation.
-- **p. 4 / 3. Align Your Gaussians - extractive body cue:** 3.1, we present AYG's 4D representation, and in Sec.
-- **p. 4 / 3.1. AYG's 4D Representation - extractive body cue:** Specifically, each 4D scene consists of a set of N 3D Gaussians as in Sec.
-- **p. 8 / 4. Experiments - extractive body cue:** AYG outperforms MAV3D on all metrics, achieving state-of-the-art text-to-4D performance (we also evaluated R-Precision [32, 58] on a larger prompt set used by MAV3D [78, ...
-- **p. 8 / 4. Experiments - extractive body cue:** 7, we show autoregressively extended text-to-4D results with changing text prompts (also see Supp.
-- **p. 2 / Figure/Table caption - extractive body cue:** Figure 2. Text-to-4D synthesis with AYG. We generate dynamic 4D scenes via score distillation. We initialize the 4D sequence from a static 3D scene (gener- ...
+- 정적 가우시안과 변형장을 결합해 시간에 따라 변하는 장면을 표현한다.
+- 확산 생성 모델의 지도를 조합해 외형과 동작을 맞춘다.
 
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+[저자 원문](https://openaccess.thecvf.com/content/CVPR2024/html/Ling_Align_Your_Gaussians_Text-to-4D_with_Dynamic_3D_Gaussians_and_Composed_CVPR_2024_paper.html)
 
 ## Evaluation Scope
 

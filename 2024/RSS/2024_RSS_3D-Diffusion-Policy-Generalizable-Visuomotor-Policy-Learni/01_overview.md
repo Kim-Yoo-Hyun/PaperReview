@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2024 / RSS
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Yanjie Ze, Gu Zhang, Kangning Zhang, Chenyuan Hu, Muhan Wang, Huazhe Xu
 - Primary track: Manipulation, contact, tactile, and dexterity
 - Tier: CORE
 - Tags: Robotics, 3D representation, point cloud, diffusion policy, Imitation Learning, visuomotor control

@@ -3,11 +3,12 @@
 > Evidence maturity: `ABSTRACT_CHECKED`. abstract 기반 — 본문 수동 확인 필요.
 > 자동 작성 노트는 실제 정독을 뜻하지 않는다. 사용자 reading status는 UNREAD로 시작한다.
 
-- Year/Venue: 2026 / arXiv
+- Year/Venue
+- Authors: Gaoge Han, Zhengqing Gao, Ziwen Li, Jiaxin Huang, Shaoli Huang, Fakhri Karray, Mingming Gong, Tongliang Liu
 - Category: VLA and Generalist Robot Policies
 - Primary track: VLA and generalist robot policies
 - Tier: REFERENCE
-- Tags: VLA, action-interface, cross-embodiment
+- Tags: VLA, action representation, language grounding, manipulation
 - Aliases: ExecVLA, KineVLA
 - Official paper: https://arxiv.org/abs/2603.17524
 - Venue verification: https://arxiv.org/abs/2603.17524

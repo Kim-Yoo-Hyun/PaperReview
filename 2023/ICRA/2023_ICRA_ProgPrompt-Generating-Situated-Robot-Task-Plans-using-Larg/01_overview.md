@@ -7,11 +7,11 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2023 / ICRA
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Ishika Singh, Valts Blukis, Arsalan Mousavian, Ankit Goyal, Danfei Xu, Jonathan Tremblay, Dieter Fox, Jesse Thomason, Animesh Garg
 - Primary track: Planning and control
 - Tier: REFERENCE
 - Tags: Robotics, LLM planning, program synthesis, situated planning, long-horizon tasks
-- Official paper: https://ieeexplore.ieee.org/document/10161317
+- Official paper: https://arxiv.org/abs/2209.11302
 - Full-text retrieval: https://arxiv.org/pdf/2209.11302
 - Code/Project: https://progprompt.github.io/
 - Paper type: method
@@ -19,7 +19,7 @@
 
 ## Why This Paper Is Here
 
-Planning and control의 planning 문제를 이해하기 위해 읽는다. 본문은 We illustrate a scenario where an assertion succeeds or fails, and how the generated plan corrects the error before executing the next step.를 문제로 두고, We present a programmatic LLM prompt structure that enables plan generation functional across situated environments, robot capabilities, and tasks.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+ProgPrompt는 이용 가능한 로봇 행동과 환경 물체를 프로그램 형태의 프롬프트에 넣어 작업 계획을 생성한다.
 
 ## Problem and Motivation
 
@@ -51,16 +51,10 @@ Planning and control의 planning 문제를 이해하기 위해 읽는다. 본문
 
 ## Main Claims and Actual Contribution
 
-- **p. 1 / Abstract - extractive body cue:** We present a programmatic LLM prompt structure that enables plan generation functional across situated environments, robot capabilities, and tasks.
-- **p. 1 / I. INTRODUCTION - extractive body cue:** We introduce PROGPROMPT, a prompting scheme that goes beyond conditioning LLMs in natural language.
-- **p. 4 / IV. EXPERIMENTS - extractive body cue:** Evaluation Metrics We use three metrics to evaluate system performance: success rate (SR), goal conditions recall (GCR), and executability (Exec).
-- **p. 5 / V. RESULTS - extractive body cue:** We find that while this method achieves reasonable partial success through GCR, it does not match [2] for program executability Exec and does not generate ...
-- **p. 5 / V. RESULTS - extractive body cue:** First, we find that FEEDBACK mechanisms in the example programs, namely the assertions and recovery actions, improve performance (rows 3 versus 4 and 5 versus ...
-- **p. 4 / IV. EXPERIMENTS - extractive body cue:** SR is the fraction of executions that achieved all task-relevant goal-conditions.
-- **p. 6 / V. RESULTS - extractive body cue:** All results shown use PROGPROMPT with comments, but not feedback.
-- **p. 6 / V. RESULTS - extractive body cue:** Physical Robot Results The physical robot results are shown in Tab.
+- 자연어 계획을 실행 가능한 행동 목록과 연결한다.
+- 환경·로봇 능력이 다른 조건에서 생성한 계획을 평가한다.
 
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+[저자 원문](https://arxiv.org/abs/2209.11302)
 
 ## Evaluation Scope
 

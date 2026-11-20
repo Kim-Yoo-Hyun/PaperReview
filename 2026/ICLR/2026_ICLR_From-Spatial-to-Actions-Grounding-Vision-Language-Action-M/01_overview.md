@@ -7,12 +7,12 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2026 / ICLR
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Zhengshen Zhang, 昊 李, Yalun Dai, Zhengbang Zhu, Lei Zhou, Chenchen Liu, Dong Wang, Francis Tay, Sijin Chen, Ziwei Liu, Yuxiao Liu, Xinghang Li, Pan Zhou
 - Primary track: VLA and generalist robot policies
 - Tier: NEXT
 - Tags: VLA, Vision-Language Model, Robotics, 3D Vision
-- Official paper: https://openreview.net/forum?id=fzmittHfq3
-- Full-text retrieval: https://openreview.net/pdf/d6aae457099a5d9e50bba1a6bbc48d8756a15c91.pdf
+- Official paper: https://proceedings.iclr.cc/paper_files/paper/2026/hash/3cbe9fcdccb2399bcd6e6d01cbcae1fd-Abstract-Conference.html
+- Full-text retrieval: https://proceedings.iclr.cc/paper_files/paper/2026/file/3cbe9fcdccb2399bcd6e6d01cbcae1fd-Paper-Conference.pdf
 - Code/Project: not identified
 - Paper type: theory_or_foundation
 - Source audit: full-text PDF body checked on 2026-09-03 (27 pages; PyMuPDF text; title-token overlap first two pages=1.0)

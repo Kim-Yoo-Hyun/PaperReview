@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2016 / NeurIPS
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Jonathan Ho, Stefano Ermon
 - Primary track: RL, IL, offline learning, and robot data
 - Tier: REFERENCE
 - Tags: Robotics, Imitation Learning, Reinforcement Learning

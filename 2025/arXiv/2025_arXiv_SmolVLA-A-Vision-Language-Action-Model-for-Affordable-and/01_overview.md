@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / arXiv
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Mustafa Shukor, Dana Aubakirova, Francesco Capuano, Pepijn Kooijmans, Steven Palma, Adil Zouitine, Michel Aractingi, Caroline Pascal, Martino Russi, Andres Marafioti, Simon Alibert, Matthieu Cord, Thomas Wolf, Remi Cadene
 - Primary track: VLA and generalist robot policies
 - Tier: NEXT
 - Tags: VLA, Robotics, efficient deployment, action chunking, community data, real-world manipulation

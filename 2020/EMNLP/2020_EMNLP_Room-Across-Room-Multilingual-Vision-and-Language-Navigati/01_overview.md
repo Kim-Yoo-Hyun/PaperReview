@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2020 / EMNLP
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Alexander Ku, Peter Anderson, Roma Patel, Eugene Ie, Jason Baldridge
 - Primary track: Robotics-enabling 3D perception
 - Tier: REFERENCE
 - Tags: Vision-Language Navigation, Navigation, grounding, Benchmark

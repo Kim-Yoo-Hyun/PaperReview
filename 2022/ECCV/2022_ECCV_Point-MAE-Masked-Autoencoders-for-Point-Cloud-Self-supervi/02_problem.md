@@ -1,4 +1,4 @@
-# Problem - Point-MAE: Masked Autoencoders for Point Cloud Self-supervised Learning
+# Problem - Masked Autoencoders for Point Cloud Self-supervised Learning
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.

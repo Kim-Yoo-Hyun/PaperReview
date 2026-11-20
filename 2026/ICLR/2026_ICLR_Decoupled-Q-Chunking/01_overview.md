@@ -3,13 +3,14 @@
 > Evidence maturity: `ABSTRACT_CHECKED`. abstract 기반 — 본문 수동 확인 필요.
 > 자동 작성 노트는 실제 정독을 뜻하지 않는다. 사용자 reading status는 UNREAD로 시작한다.
 
-- Year/Venue: 2026 / ICLR
+- Year/Venue
+- Authors: Qiyang Li, Seohong Park, Sergey Levine
 - Category: Robot Learning and Data
 - Primary track: RL, IL, offline learning, and robot data
 - Tier: NEXT
 - Tags: chunked-critic, reactivity, long-horizon
 - Aliases: DQC
-- Official paper: https://openreview.net/pdf/bde79a617f6c016e2c51c7771416933c0646102c.pdf
+- Official paper: https://proceedings.iclr.cc/paper_files/paper/2026/hash/eafa5259d9eabb1b501592475dbc82dd-Abstract-Conference.html
 - Venue verification: https://openreview.net/pdf/bde79a617f6c016e2c51c7771416933c0646102c.pdf
 - Code/Project: https://github.com/ColinQiyangLi/dqc
 - Code: https://github.com/ColinQiyangLi/dqc

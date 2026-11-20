@@ -7,11 +7,11 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2026 / ICML
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Keming Zhang, Sixian Zhang, Xinhang Song, Hongyu Wang, Yiyao Wang, Yingjie Wang, Shuqiang Jiang
 - Primary track: Manipulation, contact, tactile, and dexterity
 - Tier: REFERENCE
 - Tags: Vision-Language Model, Robotics, 3D Vision, Navigation
-- Official paper: https://openreview.net/forum?id=oVB2xYWvpv
+- Official paper: https://icml.cc/virtual/2026/poster/61610
 - Full-text retrieval: https://openreview.net/pdf/fa35fc3f33ae33100b9b86126d95a99def1057d8.pdf
 - Code/Project: not identified
 - Paper type: method

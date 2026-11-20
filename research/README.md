@@ -4,6 +4,7 @@
 - [읽기 기록](./READING_STATUS.csv) · 사용자 상태와 분석. [기록 규칙](./READING_STATUS.md) · [이전 기록](./READING_STATUS_HISTORY.csv)
 - [논문 색인](./REGISTRY_INDEX.csv) · [전체 등급](./READING_TIERS.csv) · [통계](./REGISTRY_STATS.md)
 - [2026-11-19 진단](./REGISTRY_AUDIT.md) · 신규 등록 전 1,227편의 분포, 누락, 중복 의심, 태그, 링크, 최신성
+- [원문 전수 감사](./SOURCE_AUDIT.md) · 1,252편의 서지, 요약·기여, 공개 자료, 태그를 100편 단위로 대조한 결과와 교정 전후 판정
 - [논문 표본 감사](./SAMPLE_AUDIT.md) · CORE 30편·NEXT 20편의 원문 대조, 항목별 판정과 오류율
 - [외부 목록 대비 커버리지](./EXTERNAL_COVERAGE.md) · 서베이·학회·연구실·큐레이션 25개 목록과 누락 후보
 - [누락 논문 등록 심사](./GAPFILL.md) · 36편의 등록·보류·중복 판정, 능동 인식과 촉각 조작의 검색식 및 등록 전후 커버리지

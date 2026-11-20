@@ -7,11 +7,11 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / NeurIPS
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Xiaoshan Wu, Yifei Yu, Xiaoyang Lyu, Yihua Huang, Bo Wang, Baoheng Zhang, Zhongrui Wang, Xiaojuan Qi
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
 - Tags: 3D Vision
-- Official paper: https://openreview.net/forum?id=Lf0W2gmNBg
+- Official paper: https://neurips.cc/virtual/2025/poster/118540
 - Full-text retrieval: https://arxiv.org/pdf/2512.00771
 - Code/Project: not identified
 - Paper type: method

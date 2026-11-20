@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / arXiv
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Chenhao Li, Andreas Krause, Marco Hutter
 - Primary track: World models, safety, uncertainty, and recovery
 - Tier: REFERENCE
 - Tags: Robotics, world model, policy optimization, simulation, robustness
@@ -19,7 +19,7 @@
 
 ## Why This Paper Is Here
 
-World models, safety, uncertainty, and recovery의 simulation 문제를 이해하기 위해 읽는다. 본문은 A prevalent limitation in many approaches is the lack of adaptation and learning once the policy is deployed on the real system [5, 6, 7, 8].를 문제로 두고, Our contributions are summarized as follows: (i) We introduce a novel network architecture and training framework that enables the learning of reliable world models capable of long autoregressive rollouts, a critical property ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+Robotic World Model은 여러 스텝에 걸쳐 정확한 예측을 유지하는 로봇 동역학 모델로 정책을 최적화한다.
 
 ## Problem and Motivation
 
@@ -53,16 +53,10 @@ World models, safety, uncertainty, and recovery의 simulation 문제를 이해�
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1 Introduction - extractive body cue:** Our contributions are summarized as follows: (i) We introduce a novel network architecture and training framework that enables the learning of reliable world models capable ...
-- **p. 2 / 1 Introduction - extractive body cue:** In this work, we present a novel approach for learning world models that emphasizes robustness and accuracy over long-horizon predictions.
-- **p. 4 / 3 Approach - extractive body cue:** To address this gap, we propose Robotic World Model (RWM), a novel framework for learning robust world models in partially observable and dynamically complex environments.
-- **p. 4 / 3 Approach - extractive body cue:** The input to the world model consists of a sequence of observation-action pairs spanning M historical steps.
-- **p. 5 / 3 Approach - extractive body cue:** Our framework introduces a dualautoregressive mechanism: (i) Inner autoregression updates GRU hidden states autoregressively after each historical step within the context horizon M.
-- **p. 6 / 4 Experiments - extractive body cue:** A.4.1 reveals that, while extending both M and N improves accuracy, practical considerations of computational cost necessitate careful tuning of these hyperparameters to achieve optimal ...
-- **p. 8 / 4 Experiments - extractive body cue:** These results demonstrate that RWM, when combined with autoregressive training, achieves robust and generalizable performance across diverse robotic tasks.
-- **p. 7 / 4 Experiments - extractive body cue:** The comparison also reveals that RWM-AR significantly outperforms its teacherforcing counterpart (RWM-TF), underscoring the importance of autoregressive training in mitigating compounding prediction errors over long ...
+- 서로 다른 수준의 자기회귀 갱신으로 긴 시간의 예측을 구성한다.
+- 학습한 모델로 정책 최적화가 가능한지 평가한다.
 
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+[저자 원문](https://arxiv.org/abs/2501.10100)
 
 ## Evaluation Scope
 

@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2016 / ICML
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Taco S. Cohen, Max Welling
 - Primary track: Robotics-enabling 3D perception
 - Tier: REFERENCE
 - Tags: equivariant, representation, geometry

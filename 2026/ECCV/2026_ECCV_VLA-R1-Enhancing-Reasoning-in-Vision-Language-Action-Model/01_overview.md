@@ -3,14 +3,15 @@
 > Evidence maturity: `ABSTRACT_CHECKED`. abstract 기반 — 본문 수동 확인 필요.
 > 자동 작성 노트는 실제 정독을 뜻하지 않는다. 사용자 reading status는 UNREAD로 시작한다.
 
-- Year/Venue: 2026 / ECCV
+- Year/Venue
+- Authors: Angen Ye, Zeyu Zhang, Boyuan Wang, Xiaofeng Wang, Dapeng Zhang, Zheng Zhu
 - Category: VLA and Generalist Robot Policies
 - Primary track: VLA and generalist robot policies
 - Tier: NEXT
 - Tags: RLVR, GRPO, affordance, trajectory-reasoning
 - Aliases: VLA-R1, VLA-CoT-13K
 - Official paper: https://arxiv.org/abs/2510.01623
-- Venue verification: https://eccv.ecva.net/Conferences/2026/AcceptedPapers
+- Venue verification: https://api.crossref.org/works/10.1007/978-3-032-37383-0_20
 - Code/Project: https://gigaai-research.github.io/VLA-R1/
 - Code: https://github.com/GigaAI-research/VLA-R1
 - Source audit: 2026-11-07–08: official metadata/abstract 및 저자 project/repository 공개 범위 확인. Region/trajectory 출력 뒤 downstream control을 쓰므로 직접 motor-action RL과 동일시하지 않는다. 본문 전체 정독·코드 실행·독립 성능 검증 아님. 사용자 reading status UNREAD 유지.

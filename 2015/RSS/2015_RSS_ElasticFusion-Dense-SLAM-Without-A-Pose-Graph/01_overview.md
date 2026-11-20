@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2015 / RSS
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Thomas Whelan, Stefan Leutenegger, Renato Salas Moreno, Ben Glocker, Andrew Davison
 - Primary track: Robotics-enabling 3D perception
 - Tier: REFERENCE
 - Tags: 3D Vision, SLAM, RGB-D, 3D reconstruction

@@ -7,12 +7,12 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2026 / ICML
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Guoxin Lian, Shuo Wang, Yucheng Wang, Yongcai Wang, Maiyue Chen, Kaihui Wang, Bo Zhang, Zhizhong Su, Deying Li, Zhaoxin Fan
 - Primary track: Robotics-enabling 3D perception
 - Tier: REFERENCE
 - Tags: Vision-Language Model, Navigation
-- Official paper: https://openreview.net/forum?id=IkXFH6alZN
-- Full-text retrieval: https://openreview.net/pdf/6e898fbe18f2ef7449852473b4a8ab53fd0fda57.pdf
+- Official paper: https://icml.cc/virtual/2026/poster/64902
+- Full-text retrieval: https://arxiv.org/pdf/2602.00222.pdf
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; title-token overlap first two pages=1.0)

@@ -2,13 +2,14 @@
 
 > Evidence maturity: `FULL_TEXT_CHECKED` — 지정 절만 확인한 기록이며 전체 정독·실험 재현을 뜻하지 않는다.
 
-- Year/Venue: 2026 / ICLR
+- Year/Venue
+- Authors: Perry Dong, Qiyang Li, Dorsa Sadigh, Chelsea Finn
 - Category: Robot Learning and Data
 - Primary track: RL, IL, offline learning, and robot data
 - Tier: NEXT
 - Tags: reinforcement-learning, expressive-policy, residual-policy, value-selection
 - Aliases: EXPO
-- Official paper: https://proceedings.iclr.cc/paper_files/paper/2026/hash/d56a652ad743308b24b6c4d0e6411dd7-Abstract-Conference.html
+- Official paper: https://iclr.cc/virtual/2026/poster/10008723
 - Venue verification: https://proceedings.iclr.cc/paper_files/paper/2026/hash/d56a652ad743308b24b6c4d0e6411dd7-Abstract-Conference.html
 - Code/Project: https://github.com/pd-perry/EXPO
 - Code: https://github.com/pd-perry/EXPO

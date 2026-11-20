@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / RSS
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Yuhui Chen, Shuai Tian, Shugao Liu, Yingting Zhou, Haoran Li, Dongbin Zhao
 - Primary track: VLA and generalist robot policies
 - Tier: CORE
 - Tags: VLA, Reinforcement Learning, human interventions, consistency policy, real-world manipulation, fine-tuning

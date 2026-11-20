@@ -7,11 +7,11 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / ICLR
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Harsh Gupta, Yuchen Mo, Shengmiao Jin, Wenzhen Yuan
 - Primary track: Manipulation, contact, tactile, and dexterity
 - Tier: REFERENCE
 - Tags: Robotics, tactile sensing, sensor transfer, representation learning
-- Official paper: https://openreview.net/forum?id=RnJY9WcpA3
+- Official paper: https://proceedings.iclr.cc/paper_files/paper/2025/hash/f05a11e682bf9c57ab62f7cff08fbe5b-Abstract-Conference.html
 - Full-text retrieval: https://arxiv.org/pdf/2502.19638
 - Code/Project: not identified
 - Paper type: method
@@ -19,7 +19,7 @@
 
 ## Why This Paper Is Here
 
-Manipulation, contact, tactile, and dexterity의 tactile 문제를 이해하기 위해 읽는다. 본문은 However, many works that directly apply existing representation learning methods to the tactile modality ignore the significant domain gap seen between sensors.를 문제로 두고, In this section, we introduce our framework for training Sensor-Invariant Tactile Representation (SITR).를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+센서마다 다른 고해상도 촉각 영상을 공통 특징 공간으로 변환해 새 센서에도 표현을 전이한다.
 
 ## Problem and Motivation
 
@@ -53,16 +53,10 @@ Manipulation, contact, tactile, and dexterity의 tactile 문제를 이해하기 
 
 ## Main Claims and Actual Contribution
 
-- **p. 3 / 1 INTRODUCTION - extractive body cue:** In this section, we introduce our framework for training Sensor-Invariant Tactile Representation (SITR).
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** We introduce a novel framework for generating sensor-invariant feature representations from highresolution tactile readings, enabling zero-shot transfer to unseen sensors across multiple downstream tasks.
-- **p. 3 / 1 INTRODUCTION - extractive body cue:** Our framework introduces a novel combination of geometry-preserving supervision, supervised contrastive learning, and sensor-specific calibration images.
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** Our framework incorporates three core innovations: 1.
-- **p. 5 / 1 INTRODUCTION - extractive body cue:** We introduce random variability in the calibration positions to make the training more robust to the real-world setting.
-- **p. 8 / Figure/Table caption - extractive body cue:** Table 1: Results of object classification accuracy on 16 classes for model transfer and no-transfer performance. We report the mean and standard deviation of transfer ...
-- **p. 10 / Figure/Table caption - extractive body cue:** Figure 8: Ablation study examining the impact of SCL and varying contrastive temperature τ on SITR's performance. Subplots (i) and (ii) show classification accuracy in ...
-- **p. 7 / 5 EXPERIMENTS - extractive body cue:** As shown in Table 1, SITR outperforms all baselines by a large margin regarding classification accuracy when transferred across sensors.
+- 기하를 보존하는 감독과 대조학습을 결합한다.
+- 학습에 사용하지 않은 센서에서 촉각 특징의 하류 과제 전이를 평가한다.
 
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+[저자 원문](https://proceedings.iclr.cc/paper_files/paper/2025/hash/f05a11e682bf9c57ab62f7cff08fbe5b-Abstract-Conference.html)
 
 ## Evaluation Scope
 

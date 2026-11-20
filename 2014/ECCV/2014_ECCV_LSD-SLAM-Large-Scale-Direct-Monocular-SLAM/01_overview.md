@@ -7,11 +7,11 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2014 / ECCV
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Jakob Engel, Thomas Schöps, Daniel Cremers
 - Primary track: Robotics-enabling 3D perception
 - Tier: REFERENCE
 - Tags: 3D Vision, SLAM, monocular geometry, 3D reconstruction
-- Official paper: https://cvg.cit.tum.de/research/vslam/lsdslam
+- Official paper: https://api.crossref.org/works/10.1007/978-3-319-10605-2_54
 - Full-text retrieval: https://jakobengel.github.io/pdf/engel14eccv.pdf
 - Code/Project: https://github.com/tum-vision/lsd_slam
 - Paper type: method

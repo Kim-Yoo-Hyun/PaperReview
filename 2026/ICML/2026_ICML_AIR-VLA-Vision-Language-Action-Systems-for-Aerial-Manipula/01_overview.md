@@ -7,12 +7,12 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2026 / ICML
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Jianli Sun, Bin Tian, Qiyao Zhang, Chengxiang Li, Song Zihan, Zhiyong Cui, Yisheng Lv, Yonglin Tian
 - Primary track: VLA and generalist robot policies
 - Tier: REFERENCE
 - Tags: VLA, Vision-Language Model, Robotics, Benchmark
 - Official paper: https://proceedings.mlr.press/v306/sun26an.html
-- Full-text retrieval: https://openreview.net/pdf/fa8a077d4c454280e6633258b55a9ff0b4d204e5.pdf
+- Full-text retrieval: https://raw.githubusercontent.com/mlresearch/v306/main/assets/sun26an/sun26an.pdf
 - Code/Project: not identified
 - Paper type: benchmark_or_dataset
 - Source audit: full-text PDF body checked on 2026-09-03 (20 pages; PyMuPDF text; title-token overlap first two pages=1.0)

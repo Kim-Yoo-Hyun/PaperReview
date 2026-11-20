@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2021 / ICCV
-- Authors: not duplicated here when not verified in the registry source
+- Authors: René Ranftl, Alexey Bochkovskiy, Vladlen Koltun
 - Primary track: Robotics-enabling 3D perception
 - Tier: REFERENCE
 - Tags: 3D Vision, monocular depth, Vision Transformer, geometry
@@ -19,7 +19,7 @@
 
 ## Why This Paper Is Here
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 While these techniques can significantly improve prediction quality, the networks are still bottlenecked by their fundamental building block: the convolution.를 문제로 두고, In this work, we introduce the dense prediction transformer (DPT).를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+Dense Prediction Transformer는 시각 Transformer의 여러 층에서 얻은 특징을 모아 화소별 예측을 만든다.
 
 ## Problem and Motivation
 
@@ -53,16 +53,10 @@ Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 �
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** In this work, we introduce the dense prediction transformer (DPT).
-- **p. 1 / 1. Introduction - extractive body cue:** Downsampling enables a progressive increase of the receptive field, the grouping of low-level features into abstract highlevel features, and simultaneously ensures that memory and computational ...
-- **p. 3 / 3. Architecture - extractive body cue:** We propose a simple three-stage Reassemble operation to recover image-like representations from the output tokens of arbitrary layers of the transformer encoder: Reassemble ˆ D ...
-- **p. 2 / 1. Introduction - extractive body cue:** We show that these properties are especially advantageous for dense prediction tasks as they naturally lead to fine-grained and globally coherent predictions.
-- **p. 5 / Figure/Table caption - extractive body cue:** Table 3. Evaluation on KITTI (Eigen split). Zero-shot cross-dataset transfer. Table 1 shows the re- sults of zero-shot transfer to different datasets that were not ...
-- **p. 4 / 4. Experiments - extractive body cue:** For both tasks, we show that DPT can significantly improve accuracy when compared to convolutional networks with a similar capacity, especially if a large training ...
-- **p. 8 / 4.3. Ablations - extractive body cue:** ViT-Base has comparable performance to ResNext101WSL, while ViT-Hybrid and ViT-Large improve performance even though they have been pretrained on significantly less data.
-- **p. 6 / 4.1. Monocular Depth Estimation - extractive body cue:** Our architecture matches or improves state-of-the-art performance on both datasets in all metrics.
+- 토큰 특징을 여러 해상도의 영상 표현으로 재구성한다.
+- 밀집 예측 과제인 단안 깊이와 의미 분할에서 평가한다.
 
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+[저자 원문](https://openaccess.thecvf.com/content/ICCV2021/html/Ranftl_Vision_Transformers_for_Dense_Prediction_ICCV_2021_paper.html)
 
 ## Evaluation Scope
 

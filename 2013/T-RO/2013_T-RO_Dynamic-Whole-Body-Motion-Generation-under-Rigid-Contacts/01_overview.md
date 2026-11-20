@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2013 / T-RO
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Layale Saab, Oscar Efrain Ramos Ponce, François Keith, Nicolas Mansard, Philippe Souères, Jean-Yves Fourquet
 - Primary track: Planning and control
 - Tier: REFERENCE
 - Tags: Robotics, whole-body control, rigid contact, hierarchical control

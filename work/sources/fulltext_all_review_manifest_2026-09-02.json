@@ -1110,7 +1110,7 @@
     {
       "paper_id": "pr-0021",
       "title": "RT-1: Robotics Transformer for Real-World Control at Scale",
-      "folder": "2022/arXiv/2022_arxiv_RT-1-Robotics-Transformer-for-Real-World-Control-at-Scale",
+      "folder": "2023/RSS/2023_RSS_RT-1-Robotics-Transformer-for-Real-World-Control-at-Scale",
       "target": "tmp/pdfs/fulltext_all_2026-09-02/pr-0021.pdf",
       "candidate_urls": [
         "https://arxiv.org/pdf/2212.06817",
@@ -1160,7 +1160,11 @@
       },
       "note_basis": "full-text PDF body with page-aware extractive cues",
       "reviewed_on": "2026-09-03",
-      "note_files_written": 4
+      "note_files_written": 4,
+      "identity_at_review": {
+        "title": "RT-1: Robotics Transformer for Real-World Control at Scale",
+        "folder": "2022/arXiv/2022_arxiv_RT-1-Robotics-Transformer-for-Real-World-Control-at-Scale"
+      }
     },
     {
       "paper_id": "pr-0022",
@@ -1489,7 +1493,7 @@
     },
     {
       "paper_id": "pr-0028",
-      "title": "VLMaps: Visual-Language Maps for Robot Navigation",
+      "title": "Visual Language Maps for Robot Navigation",
       "folder": "2023/ICRA/2023_ICRA_VLMaps-Visual-Language-Maps-for-Robot-Navigation",
       "target": "tmp/pdfs/fulltext_all_2026-09-02/pr-0028.pdf",
       "candidate_urls": [
@@ -1540,7 +1544,11 @@
       },
       "note_basis": "full-text PDF body with page-aware extractive cues",
       "reviewed_on": "2026-09-03",
-      "note_files_written": 4
+      "note_files_written": 4,
+      "identity_at_review": {
+        "title": "VLMaps: Visual-Language Maps for Robot Navigation",
+        "folder": "2023/ICRA/2023_ICRA_VLMaps-Visual-Language-Maps-for-Robot-Navigation"
+      }
     },
     {
       "paper_id": "pr-0029",
@@ -1924,7 +1932,7 @@
     {
       "paper_id": "pr-0036",
       "title": "Perceiver-Actor: A Multi-Task Transformer for Robotic Manipulation",
-      "folder": "2023/CoRL/2023_CoRL_Perceiver-Actor-A-Multi-Task-Transformer-for-Robotic-Manip",
+      "folder": "2022/CoRL/2022_CoRL_Perceiver-Actor-A-Multi-Task-Transformer-for-Robotic-Manip",
       "target": "tmp/pdfs/fulltext_all_2026-09-02/pr-0036.pdf",
       "candidate_urls": [
         "https://arxiv.org/pdf/2209.05451",
@@ -1974,7 +1982,11 @@
       },
       "note_basis": "full-text PDF body with page-aware extractive cues",
       "reviewed_on": "2026-09-03",
-      "note_files_written": 4
+      "note_files_written": 4,
+      "identity_at_review": {
+        "title": "Perceiver-Actor: A Multi-Task Transformer for Robotic Manipulation",
+        "folder": "2023/CoRL/2023_CoRL_Perceiver-Actor-A-Multi-Task-Transformer-for-Robotic-Manip"
+      }
     },
     {
       "paper_id": "pr-0037",
@@ -2142,7 +2154,7 @@
     },
     {
       "paper_id": "pr-0040",
-      "title": "VIMA: General Robot Manipulation with Multimodal Prompts",
+      "title": "VIMA: Robot Manipulation with Multimodal Prompts",
       "folder": "2023/ICML/2023_ICML_VIMA-General-Robot-Manipulation-with-Multimodal-Prompts",
       "target": "tmp/pdfs/fulltext_all_2026-09-02/pr-0040.pdf",
       "candidate_urls": [
@@ -2193,7 +2205,11 @@
       },
       "note_basis": "full-text PDF body with page-aware extractive cues",
       "reviewed_on": "2026-09-03",
-      "note_files_written": 4
+      "note_files_written": 4,
+      "identity_at_review": {
+        "title": "VIMA: General Robot Manipulation with Multimodal Prompts",
+        "folder": "2023/ICML/2023_ICML_VIMA-General-Robot-Manipulation-with-Multimodal-Prompts"
+      }
     },
     {
       "paper_id": "pr-0041",
@@ -11773,7 +11789,7 @@
     },
     {
       "paper_id": "pr-0186",
-      "title": "Scalable Vision-Language-Action Model Pretraining for Robotic Dexterous Manipulation with Real-Life Human Activity Videos",
+      "title": "Scalable Vision-Language-Action Model Pretraining for Robotic Manipulation with Real-Life Human Activity Videos",
       "folder": "2026/ICRA/2026_ICRA_Scalable-Vision-Language-Action-Model-Pretraining-for-Robo",
       "target": "tmp/pdfs/fulltext_all_2026-09-02/pr-0186.pdf",
       "candidate_urls": [
@@ -11823,12 +11839,16 @@
       },
       "note_basis": "full-text PDF body with page-aware extractive cues",
       "reviewed_on": "2026-09-03",
-      "note_files_written": 4
+      "note_files_written": 4,
+      "identity_at_review": {
+        "title": "Scalable Vision-Language-Action Model Pretraining for Robotic Dexterous Manipulation with Real-Life Human Activity Videos",
+        "folder": "2026/ICRA/2026_ICRA_Scalable-Vision-Language-Action-Model-Pretraining-for-Robo"
+      }
     },
     {
       "paper_id": "pr-0187",
       "title": "GaussianVLM: Scene-Centric 3D Vision-Language Models Using Language-Aligned Gaussian Splats for Embodied Reasoning and Beyond",
-      "folder": "2026/ICRA/2026_ICRA_GaussianVLM-Scene-Centric-3D-Vision-Language-Models-Using",
+      "folder": "2025/RA-L/2025_RA-L_GaussianVLM-Scene-Centric-3D-Vision-Language-Models-Using",
       "target": "tmp/pdfs/fulltext_all_2026-09-02/pr-0187.pdf",
       "candidate_urls": [
         "https://arxiv.org/pdf/2507.00886",
@@ -11877,7 +11897,11 @@
       },
       "note_basis": "full-text PDF body with page-aware extractive cues",
       "reviewed_on": "2026-09-03",
-      "note_files_written": 4
+      "note_files_written": 4,
+      "identity_at_review": {
+        "title": "GaussianVLM: Scene-Centric 3D Vision-Language Models Using Language-Aligned Gaussian Splats for Embodied Reasoning and Beyond",
+        "folder": "2026/ICRA/2026_ICRA_GaussianVLM-Scene-Centric-3D-Vision-Language-Models-Using"
+      }
     },
     {
       "paper_id": "pr-0188",
@@ -12206,7 +12230,7 @@
     {
       "paper_id": "pr-0194",
       "title": "VISTA: Open-Vocabulary, Task-Relevant Robot Exploration with Online Semantic Gaussian Splatting",
-      "folder": "2026/ICRA/2026_ICRA_VISTA-Open-Vocabulary-Task-Relevant-Robot-Exploration-with",
+      "folder": "2026/RA-L/2026_RA-L_VISTA-Open-Vocabulary-Task-Relevant-Robot-Exploration-with",
       "target": "tmp/pdfs/fulltext_all_2026-09-02/pr-0194.pdf",
       "candidate_urls": [
         "https://arxiv.org/pdf/2507.01125",
@@ -12256,7 +12280,11 @@
       },
       "note_basis": "full-text PDF body with page-aware extractive cues",
       "reviewed_on": "2026-09-03",
-      "note_files_written": 4
+      "note_files_written": 4,
+      "identity_at_review": {
+        "title": "VISTA: Open-Vocabulary, Task-Relevant Robot Exploration with Online Semantic Gaussian Splatting",
+        "folder": "2026/ICRA/2026_ICRA_VISTA-Open-Vocabulary-Task-Relevant-Robot-Exploration-with"
+      }
     },
     {
       "paper_id": "pr-0195",
@@ -16149,7 +16177,7 @@
     },
     {
       "paper_id": "pr-0268",
-      "title": "TinyVLA: Towards Fast, Data-Efficient Vision-Language-Action Models for Robotic Manipulation",
+      "title": "TinyVLA: Toward Fast, Data-Efficient Vision-Language-Action Models for Robotic Manipulation",
       "folder": "2025/RA-L/2025_RA-L_TinyVLA-Towards-Fast-Data-Efficient-Vision-Language-Action",
       "target": "tmp/pdfs/fulltext_all_2026-09-02/pr-0268.pdf",
       "candidate_urls": [
@@ -16199,7 +16227,11 @@
       },
       "note_basis": "full-text PDF body with page-aware extractive cues",
       "reviewed_on": "2026-09-03",
-      "note_files_written": 4
+      "note_files_written": 4,
+      "identity_at_review": {
+        "title": "TinyVLA: Towards Fast, Data-Efficient Vision-Language-Action Models for Robotic Manipulation",
+        "folder": "2025/RA-L/2025_RA-L_TinyVLA-Towards-Fast-Data-Efficient-Vision-Language-Action"
+      }
     },
     {
       "paper_id": "pr-0269",
@@ -16423,7 +16455,7 @@
     {
       "paper_id": "pr-0273",
       "title": "LAMP: Implicit Language Map for Robot Navigation",
-      "folder": "2026/RA-L/2026_RA-L_LAMP-Implicit-Language-Map-for-Robot-Navigation",
+      "folder": "2025/RA-L/2025_RA-L_LAMP-Implicit-Language-Map-for-Robot-Navigation",
       "target": "tmp/pdfs/fulltext_all_2026-09-02/pr-0273.pdf",
       "candidate_urls": [
         "https://arxiv.org/pdf/2602.11862",
@@ -16472,7 +16504,11 @@
       },
       "note_basis": "full-text PDF body with page-aware extractive cues",
       "reviewed_on": "2026-09-03",
-      "note_files_written": 4
+      "note_files_written": 4,
+      "identity_at_review": {
+        "title": "LAMP: Implicit Language Map for Robot Navigation",
+        "folder": "2026/RA-L/2026_RA-L_LAMP-Implicit-Language-Map-for-Robot-Navigation"
+      }
     },
     {
       "paper_id": "pr-0274",
@@ -16910,7 +16946,7 @@
     {
       "paper_id": "pr-0282",
       "title": "LiV-GS: LiDAR-Vision Integration for 3D Gaussian Splatting SLAM in Outdoor Environments",
-      "folder": "2025/IROS/2025_IROS_LiV-GS-LiDAR-Vision-Integration-for-3D-Gaussian-Splatting",
+      "folder": "2025/RA-L/2025_RA-L_LiV-GS-LiDAR-Vision-Integration-for-3D-Gaussian-Splatting",
       "target": "tmp/pdfs/fulltext_all_2026-09-02/pr-0282.pdf",
       "candidate_urls": [
         "https://arxiv.org/pdf/2411.12185",
@@ -16959,12 +16995,16 @@
       },
       "note_basis": "full-text PDF body with page-aware extractive cues",
       "reviewed_on": "2026-09-03",
-      "note_files_written": 4
+      "note_files_written": 4,
+      "identity_at_review": {
+        "title": "LiV-GS: LiDAR-Vision Integration for 3D Gaussian Splatting SLAM in Outdoor Environments",
+        "folder": "2025/IROS/2025_IROS_LiV-GS-LiDAR-Vision-Integration-for-3D-Gaussian-Splatting"
+      }
     },
     {
       "paper_id": "pr-0283",
       "title": "MR-COGraphs: Communication-efficient Multi-Robot Open-vocabulary Mapping System via 3D Scene Graphs",
-      "folder": "2025/IROS/2025_IROS_MR-COGraphs-Communication-efficient-Multi-Robot-Open-vocab",
+      "folder": "2025/RA-L/2025_RA-L_MR-COGraphs-Communication-efficient-Multi-Robot-Open-vocab",
       "target": "tmp/pdfs/fulltext_all_2026-09-02/pr-0283.pdf",
       "candidate_urls": [
         "https://arxiv.org/pdf/2412.18381",
@@ -17013,7 +17053,11 @@
       },
       "note_basis": "full-text PDF body with page-aware extractive cues",
       "reviewed_on": "2026-09-03",
-      "note_files_written": 4
+      "note_files_written": 4,
+      "identity_at_review": {
+        "title": "MR-COGraphs: Communication-efficient Multi-Robot Open-vocabulary Mapping System via 3D Scene Graphs",
+        "folder": "2025/IROS/2025_IROS_MR-COGraphs-Communication-efficient-Multi-Robot-Open-vocab"
+      }
     },
     {
       "paper_id": "pr-0284",
@@ -17397,7 +17441,7 @@
     },
     {
       "paper_id": "pr-0291",
-      "title": "LIT-GS: LiDAR-Inertial-Thermal Gaussian Splatting for Illumination-Robust Mapping",
+      "title": "LIT-GS: LiDAR-Inertial-Thermal 3D Gaussian Splatting for Illumination-Robust Mapping",
       "folder": "2026/IROS/2026_IROS_LIT-GS-LiDAR-Inertial-Thermal-Gaussian-Splatting-for-Illum",
       "target": "tmp/pdfs/fulltext_all_2026-09-02/pr-0291.pdf",
       "candidate_urls": [
@@ -17447,7 +17491,11 @@
       },
       "note_basis": "full-text PDF body with page-aware extractive cues",
       "reviewed_on": "2026-09-03",
-      "note_files_written": 4
+      "note_files_written": 4,
+      "identity_at_review": {
+        "title": "LIT-GS: LiDAR-Inertial-Thermal Gaussian Splatting for Illumination-Robust Mapping",
+        "folder": "2026/IROS/2026_IROS_LIT-GS-LiDAR-Inertial-Thermal-Gaussian-Splatting-for-Illum"
+      }
     },
     {
       "paper_id": "pr-0292",
@@ -17775,7 +17823,7 @@
     },
     {
       "paper_id": "pr-0298",
-      "title": "CenterPoint: Center-based 3D Object Detection and Tracking",
+      "title": "Center-Based 3D Object Detection and Tracking",
       "folder": "2021/CVPR/2021_CVPR_CenterPoint-Center-based-3D-Object-Detection-and-Tracking",
       "target": "tmp/pdfs/fulltext_all_2026-09-02/pr-0298.pdf",
       "candidate_urls": [
@@ -17825,7 +17873,11 @@
       },
       "note_basis": "full-text PDF body with page-aware extractive cues",
       "reviewed_on": "2026-09-03",
-      "note_files_written": 4
+      "note_files_written": 4,
+      "identity_at_review": {
+        "title": "CenterPoint: Center-based 3D Object Detection and Tracking",
+        "folder": "2021/CVPR/2021_CVPR_CenterPoint-Center-based-3D-Object-Detection-and-Tracking"
+      }
     },
     {
       "paper_id": "pr-0299",
@@ -17883,7 +17935,7 @@
     },
     {
       "paper_id": "pr-0300",
-      "title": "Point-MAE: Masked Autoencoders for Point Cloud Self-supervised Learning",
+      "title": "Masked Autoencoders for Point Cloud Self-supervised Learning",
       "folder": "2022/ECCV/2022_ECCV_Point-MAE-Masked-Autoencoders-for-Point-Cloud-Self-supervi",
       "target": "tmp/pdfs/fulltext_all_2026-09-02/pr-0300.pdf",
       "candidate_urls": [
@@ -17933,7 +17985,11 @@
       },
       "note_basis": "full-text PDF body with page-aware extractive cues",
       "reviewed_on": "2026-09-03",
-      "note_files_written": 4
+      "note_files_written": 4,
+      "identity_at_review": {
+        "title": "Point-MAE: Masked Autoencoders for Point Cloud Self-supervised Learning",
+        "folder": "2022/ECCV/2022_ECCV_Point-MAE-Masked-Autoencoders-for-Point-Cloud-Self-supervi"
+      }
     },
     {
       "paper_id": "pr-0301",
@@ -18207,7 +18263,7 @@
     },
     {
       "paper_id": "pr-0306",
-      "title": "Marigold: Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation",
+      "title": "Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation",
       "folder": "2024/CVPR/2024_CVPR_Marigold-Repurposing-Diffusion-Based-Image-Generators-for",
       "target": "tmp/pdfs/fulltext_all_2026-09-02/pr-0306.pdf",
       "candidate_urls": [
@@ -18257,7 +18313,11 @@
       },
       "note_basis": "full-text PDF body with page-aware extractive cues",
       "reviewed_on": "2026-09-03",
-      "note_files_written": 4
+      "note_files_written": 4,
+      "identity_at_review": {
+        "title": "Marigold: Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation",
+        "folder": "2024/CVPR/2024_CVPR_Marigold-Repurposing-Diffusion-Based-Image-Generators-for"
+      }
     },
     {
       "paper_id": "pr-0307",
@@ -27689,7 +27749,7 @@
     },
     {
       "paper_id": "pr-0462",
-      "title": "EnerGS: Energy-Based Gaussian Splatting under Partial Geometric Priors",
+      "title": "EnerGS: Energy-Based Gaussian Splatting with Partial Geometric Priors",
       "folder": "2026/ICML/2026_ICML_EnerGS-Energy-Based-Gaussian-Splatting-under-Partial-Geome",
       "target": "tmp/pdfs/fulltext_all_2026-09-02/pr-0462.pdf",
       "candidate_urls": [
@@ -27740,7 +27800,11 @@
       },
       "note_basis": "full-text PDF body with page-aware extractive cues",
       "reviewed_on": "2026-09-03",
-      "note_files_written": 4
+      "note_files_written": 4,
+      "identity_at_review": {
+        "title": "EnerGS: Energy-Based Gaussian Splatting under Partial Geometric Priors",
+        "folder": "2026/ICML/2026_ICML_EnerGS-Energy-Based-Gaussian-Splatting-under-Partial-Geome"
+      }
     },
     {
       "paper_id": "pr-0463",
@@ -29907,7 +29971,7 @@
     {
       "paper_id": "pr-0503",
       "title": "Neural Descriptor Fields: SE(3)-Equivariant Object Representations for Manipulation",
-      "folder": "2021/CoRL/2021_CoRL_Neural-Descriptor-Fields-SE3-Equivariant-Object-Representa",
+      "folder": "2022/ICRA/2022_ICRA_Neural-Descriptor-Fields-SE3-Equivariant-Object-Representa",
       "target": "tmp/pdfs/fulltext_all_2026-09-02/pr-0503.pdf",
       "candidate_urls": [
         "https://arxiv.org/pdf/2112.05124",
@@ -29957,7 +30021,11 @@
       },
       "note_basis": "full-text PDF body with page-aware extractive cues",
       "reviewed_on": "2026-09-03",
-      "note_files_written": 4
+      "note_files_written": 4,
+      "identity_at_review": {
+        "title": "Neural Descriptor Fields: SE(3)-Equivariant Object Representations for Manipulation",
+        "folder": "2021/CoRL/2021_CoRL_Neural-Descriptor-Fields-SE3-Equivariant-Object-Representa"
+      }
     },
     {
       "paper_id": "pr-0504",
@@ -30393,7 +30461,7 @@
     },
     {
       "paper_id": "pr-0512",
-      "title": "SSCNet: Semantic Scene Completion from a Single Depth Image",
+      "title": "Semantic Scene Completion From a Single Depth Image",
       "folder": "2017/CVPR/2017_CVPR_SSCNet-Semantic-Scene-Completion-from-a-Single-Depth-Image",
       "target": "tmp/pdfs/fulltext_all_2026-09-02/pr-0512.pdf",
       "candidate_urls": [
@@ -30443,7 +30511,11 @@
       },
       "note_basis": "full-text PDF body with page-aware extractive cues",
       "reviewed_on": "2026-09-03",
-      "note_files_written": 4
+      "note_files_written": 4,
+      "identity_at_review": {
+        "title": "SSCNet: Semantic Scene Completion from a Single Depth Image",
+        "folder": "2017/CVPR/2017_CVPR_SSCNet-Semantic-Scene-Completion-from-a-Single-Depth-Image"
+      }
     },
     {
       "paper_id": "pr-0513",
@@ -30610,7 +30682,7 @@
     {
       "paper_id": "pr-0516",
       "title": "Classifier-Free Diffusion Guidance",
-      "folder": "2022/arXiv/2022_arxiv_Classifier-Free-Diffusion-Guidance",
+      "folder": "2021/NeurIPS-Workshop/2021_NeurIPS-Workshop_Classifier-Free-Diffusion-Guidance",
       "target": "tmp/pdfs/fulltext_all_2026-09-02/pr-0516.pdf",
       "candidate_urls": [
         "https://arxiv.org/pdf/2207.12598",
@@ -30659,7 +30731,11 @@
       },
       "note_basis": "full-text PDF body with page-aware extractive cues",
       "reviewed_on": "2026-09-03",
-      "note_files_written": 4
+      "note_files_written": 4,
+      "identity_at_review": {
+        "title": "Classifier-Free Diffusion Guidance",
+        "folder": "2022/arXiv/2022_arxiv_Classifier-Free-Diffusion-Guidance"
+      }
     },
     {
       "paper_id": "pr-0517",
@@ -31097,7 +31173,7 @@
     },
     {
       "paper_id": "pr-0525",
-      "title": "PTAM: Parallel Tracking and Mapping for Small AR Workspaces",
+      "title": "Parallel Tracking and Mapping for Small AR Workspaces",
       "folder": "2007/ISMAR/2007_ISMAR_PTAM-Parallel-Tracking-and-Mapping-for-Small-AR-Workspaces",
       "target": "tmp/pdfs/fulltext_all_2026-09-02/pr-0525.pdf",
       "candidate_urls": [
@@ -31146,7 +31222,11 @@
       },
       "note_basis": "full-text PDF body with page-aware extractive cues",
       "reviewed_on": "2026-09-03",
-      "note_files_written": 4
+      "note_files_written": 4,
+      "identity_at_review": {
+        "title": "PTAM: Parallel Tracking and Mapping for Small AR Workspaces",
+        "folder": "2007/ISMAR/2007_ISMAR_PTAM-Parallel-Tracking-and-Mapping-for-Small-AR-Workspaces"
+      }
     },
     {
       "paper_id": "pr-0526",
@@ -31526,7 +31606,7 @@
     },
     {
       "paper_id": "pr-0533",
-      "title": "ALIGN: Scaling Up Visual and Vision-Language Representation Learning With Noisy Text Supervision",
+      "title": "Scaling Up Visual and Vision-Language Representation Learning With Noisy Text Supervision",
       "folder": "2021/ICML/2021_ICML_ALIGN-Scaling-Up-Visual-and-Vision-Language-Representation",
       "target": "tmp/pdfs/fulltext_all_2026-09-02/pr-0533.pdf",
       "candidate_urls": [
@@ -31576,7 +31656,11 @@
       },
       "note_basis": "full-text PDF body with page-aware extractive cues",
       "reviewed_on": "2026-09-03",
-      "note_files_written": 4
+      "note_files_written": 4,
+      "identity_at_review": {
+        "title": "ALIGN: Scaling Up Visual and Vision-Language Representation Learning With Noisy Text Supervision",
+        "folder": "2021/ICML/2021_ICML_ALIGN-Scaling-Up-Visual-and-Vision-Language-Representation"
+      }
     },
     {
       "paper_id": "pr-0534",
@@ -31689,7 +31773,7 @@
     {
       "paper_id": "pr-0536",
       "title": "BC-Z: Zero-Shot Task Generalization with Robotic Imitation Learning",
-      "folder": "2022/CoRL/2022_CoRL_BC-Z-Zero-Shot-Task-Generalization-with-Robotic-Imitation",
+      "folder": "2021/CoRL/2021_CoRL_BC-Z-Zero-Shot-Task-Generalization-with-Robotic-Imitation",
       "target": "tmp/pdfs/fulltext_all_2026-09-02/pr-0536.pdf",
       "candidate_urls": [
         "https://arxiv.org/pdf/2202.02005",
@@ -31739,7 +31823,11 @@
       },
       "note_basis": "full-text PDF body with page-aware extractive cues",
       "reviewed_on": "2026-09-03",
-      "note_files_written": 4
+      "note_files_written": 4,
+      "identity_at_review": {
+        "title": "BC-Z: Zero-Shot Task Generalization with Robotic Imitation Learning",
+        "folder": "2022/CoRL/2022_CoRL_BC-Z-Zero-Shot-Task-Generalization-with-Robotic-Imitation"
+      }
     },
     {
       "paper_id": "pr-0537",
@@ -32121,7 +32209,7 @@
     },
     {
       "paper_id": "pr-0544",
-      "title": "OpenSeg: Scaling Open-Vocabulary Image Segmentation with Image-Level Labels",
+      "title": "Scaling Open-Vocabulary Image Segmentation with Image-Level Labels",
       "folder": "2022/ECCV/2022_ECCV_OpenSeg-Scaling-Open-Vocabulary-Image-Segmentation-with-Im",
       "target": "tmp/pdfs/fulltext_all_2026-09-02/pr-0544.pdf",
       "candidate_urls": [
@@ -32171,7 +32259,11 @@
       },
       "note_basis": "full-text PDF body with page-aware extractive cues",
       "reviewed_on": "2026-09-03",
-      "note_files_written": 4
+      "note_files_written": 4,
+      "identity_at_review": {
+        "title": "OpenSeg: Scaling Open-Vocabulary Image Segmentation with Image-Level Labels",
+        "folder": "2022/ECCV/2022_ECCV_OpenSeg-Scaling-Open-Vocabulary-Image-Segmentation-with-Im"
+      }
     },
     {
       "paper_id": "pr-0545",
@@ -32337,7 +32429,7 @@
     },
     {
       "paper_id": "pr-0548",
-      "title": "Waymo Open Dataset: An Autonomous Driving Dataset",
+      "title": "Scalability in Perception for Autonomous Driving: Waymo Open Dataset",
       "folder": "2020/CVPR/2020_CVPR_Waymo-Open-Dataset-An-Autonomous-Driving-Dataset",
       "target": "tmp/pdfs/fulltext_all_2026-09-02/pr-0548.pdf",
       "candidate_urls": [
@@ -32387,7 +32479,11 @@
       },
       "note_basis": "full-text PDF body with page-aware extractive cues",
       "reviewed_on": "2026-09-03",
-      "note_files_written": 4
+      "note_files_written": 4,
+      "identity_at_review": {
+        "title": "Waymo Open Dataset: An Autonomous Driving Dataset",
+        "folder": "2020/CVPR/2020_CVPR_Waymo-Open-Dataset-An-Autonomous-Driving-Dataset"
+      }
     },
     {
       "paper_id": "pr-0549",
@@ -32990,7 +33086,7 @@
     {
       "paper_id": "pr-0560",
       "title": "Learning Neural Network Policies with Guided Policy Search under Unknown Dynamics",
-      "folder": "2016/JMLR/2016_JMLR_Learning-Neural-Network-Policies-with-Guided-Policy-Search",
+      "folder": "2014/NeurIPS/2014_NeurIPS_Learning-Neural-Network-Policies-with-Guided-Policy-Search",
       "target": "tmp/pdfs/fulltext_all_2026-09-02/pr-0560.pdf",
       "candidate_urls": [
         "https://jmlr.org/papers/volume17/15-522/15-522.pdf",
@@ -33039,7 +33135,12 @@
       },
       "note_basis": "full-text PDF body with page-aware extractive cues",
       "reviewed_on": "2026-09-03",
-      "note_files_written": 4
+      "note_files_written": 4,
+      "identity_at_review": {
+        "title": "Learning Neural Network Policies with Guided Policy Search under Unknown Dynamics",
+        "folder": "2016/JMLR/2016_JMLR_Learning-Neural-Network-Policies-with-Guided-Policy-Search"
+      },
+      "source_review_superseded_by": "work/sources/batches/source_audit_2026_11.jsonl"
     },
     {
       "paper_id": "pr-0561",
@@ -33152,7 +33253,7 @@
     },
     {
       "paper_id": "pr-0563",
-      "title": "QT-Opt: Scalable Deep Reinforcement Learning for Vision-Based Robotic Manipulation",
+      "title": "Scalable Deep Reinforcement Learning for Vision-Based Robotic Manipulation",
       "folder": "2018/CoRL/2018_CoRL_QT-Opt-Scalable-Deep-Reinforcement-Learning-for-Vision-Bas",
       "target": "tmp/pdfs/fulltext_all_2026-09-02/pr-0563.pdf",
       "candidate_urls": [
@@ -33202,7 +33303,11 @@
       },
       "note_basis": "full-text PDF body with page-aware extractive cues",
       "reviewed_on": "2026-09-03",
-      "note_files_written": 4
+      "note_files_written": 4,
+      "identity_at_review": {
+        "title": "QT-Opt: Scalable Deep Reinforcement Learning for Vision-Based Robotic Manipulation",
+        "folder": "2018/CoRL/2018_CoRL_QT-Opt-Scalable-Deep-Reinforcement-Learning-for-Vision-Bas"
+      }
     },
     {
       "paper_id": "pr-0564",
@@ -36540,7 +36645,7 @@
     {
       "paper_id": "pr-0625",
       "title": "Q-Transformer: Scalable Offline Reinforcement Learning via Autoregressive Q-Functions",
-      "folder": "2024/CoRL/2024_CoRL_Q-Transformer-Scalable-Offline-Reinforcement-Learning-via",
+      "folder": "2023/CoRL/2023_CoRL_Q-Transformer-Scalable-Offline-Reinforcement-Learning-via",
       "target": "tmp/pdfs/fulltext_all_2026-09-02/pr-0625.pdf",
       "candidate_urls": [
         "https://arxiv.org/pdf/2309.10150",
@@ -36590,7 +36695,11 @@
       },
       "note_basis": "full-text PDF body with page-aware extractive cues",
       "reviewed_on": "2026-09-03",
-      "note_files_written": 4
+      "note_files_written": 4,
+      "identity_at_review": {
+        "title": "Q-Transformer: Scalable Offline Reinforcement Learning via Autoregressive Q-Functions",
+        "folder": "2024/CoRL/2024_CoRL_Q-Transformer-Scalable-Offline-Reinforcement-Learning-via"
+      }
     },
     {
       "paper_id": "pr-0626",
@@ -36912,7 +37021,8 @@
       },
       "note_basis": "full-text PDF body with page-aware extractive cues",
       "reviewed_on": "2026-09-03",
-      "note_files_written": 4
+      "note_files_written": 4,
+      "source_review_superseded_by": "work/sources/batches/source_audit_2026_11.jsonl"
     },
     {
       "paper_id": "pr-0632",
@@ -37026,7 +37136,7 @@
     {
       "paper_id": "pr-0634",
       "title": "Learning Latent Plans from Play",
-      "folder": "2020/CoRL/2020_CoRL_Learning-Latent-Plans-from-Play",
+      "folder": "2019/CoRL/2019_CoRL_Learning-Latent-Plans-from-Play",
       "target": "tmp/pdfs/fulltext_all_2026-09-02/pr-0634.pdf",
       "candidate_urls": [
         "https://arxiv.org/pdf/1903.01973",
@@ -37077,12 +37187,16 @@
       },
       "note_basis": "full-text PDF body with page-aware extractive cues",
       "reviewed_on": "2026-09-03",
-      "note_files_written": 4
+      "note_files_written": 4,
+      "identity_at_review": {
+        "title": "Learning Latent Plans from Play",
+        "folder": "2020/CoRL/2020_CoRL_Learning-Latent-Plans-from-Play"
+      }
     },
     {
       "paper_id": "pr-0635",
       "title": "Relay Policy Learning: Solving Long-Horizon Tasks via Imitation and Reinforcement Learning",
-      "folder": "2020/CoRL/2020_CoRL_Relay-Policy-Learning-Solving-Long-Horizon-Tasks-via-Imita",
+      "folder": "2019/CoRL/2019_CoRL_Relay-Policy-Learning-Solving-Long-Horizon-Tasks-via-Imita",
       "target": "tmp/pdfs/fulltext_all_2026-09-02/pr-0635.pdf",
       "candidate_urls": [
         "https://arxiv.org/pdf/1910.11956",
@@ -37133,12 +37247,16 @@
       },
       "note_basis": "full-text PDF body with page-aware extractive cues",
       "reviewed_on": "2026-09-03",
-      "note_files_written": 4
+      "note_files_written": 4,
+      "identity_at_review": {
+        "title": "Relay Policy Learning: Solving Long-Horizon Tasks via Imitation and Reinforcement Learning",
+        "folder": "2020/CoRL/2020_CoRL_Relay-Policy-Learning-Solving-Long-Horizon-Tasks-via-Imita"
+      }
     },
     {
       "paper_id": "pr-0636",
       "title": "Implicit Behavioral Cloning",
-      "folder": "2022/CoRL/2022_CoRL_Implicit-Behavioral-Cloning",
+      "folder": "2021/CoRL/2021_CoRL_Implicit-Behavioral-Cloning",
       "target": "tmp/pdfs/fulltext_all_2026-09-02/pr-0636.pdf",
       "candidate_urls": [
         "https://arxiv.org/pdf/2109.00137",
@@ -37189,7 +37307,11 @@
       },
       "note_basis": "full-text PDF body with page-aware extractive cues",
       "reviewed_on": "2026-09-03",
-      "note_files_written": 4
+      "note_files_written": 4,
+      "identity_at_review": {
+        "title": "Implicit Behavioral Cloning",
+        "folder": "2022/CoRL/2022_CoRL_Implicit-Behavioral-Cloning"
+      }
     },
     {
       "paper_id": "pr-0637",
@@ -37462,7 +37584,7 @@
     {
       "paper_id": "pr-0642",
       "title": "Contact-Invariant Optimization for Hand Manipulation",
-      "folder": "2014/SIGGRAPH/2014_SIGGRAPH_Contact-Invariant-Optimization-for-Hand-Manipulation",
+      "folder": "2012/SCA/2012_SCA_Contact-Invariant-Optimization-for-Hand-Manipulation",
       "target": "tmp/pdfs/fulltext_all_2026-09-02/pr-0642.pdf",
       "candidate_urls": [
         "https://homes.cs.washington.edu/~zoran/behavior-discovery.pdf",
@@ -37511,7 +37633,12 @@
       },
       "note_basis": "full-text PDF body with page-aware extractive cues",
       "reviewed_on": "2026-09-03",
-      "note_files_written": 4
+      "note_files_written": 4,
+      "identity_at_review": {
+        "title": "Contact-Invariant Optimization for Hand Manipulation",
+        "folder": "2014/SIGGRAPH/2014_SIGGRAPH_Contact-Invariant-Optimization-for-Hand-Manipulation"
+      },
+      "source_review_superseded_by": "work/sources/batches/source_audit_2026_11.jsonl"
     },
     {
       "paper_id": "pr-0643",
@@ -37570,7 +37697,7 @@
     {
       "paper_id": "pr-0644",
       "title": "In-Hand Manipulation via Motion Cones",
-      "folder": "2019/RSS/2019_RSS_In-Hand-Manipulation-via-Motion-Cones",
+      "folder": "2018/RSS/2018_RSS_In-Hand-Manipulation-via-Motion-Cones",
       "target": "tmp/pdfs/fulltext_all_2026-09-02/pr-0644.pdf",
       "candidate_urls": [
         "https://arxiv.org/pdf/1810.00219",
@@ -37620,7 +37747,11 @@
       },
       "note_basis": "full-text PDF body with page-aware extractive cues",
       "reviewed_on": "2026-09-03",
-      "note_files_written": 4
+      "note_files_written": 4,
+      "identity_at_review": {
+        "title": "In-Hand Manipulation via Motion Cones",
+        "folder": "2019/RSS/2019_RSS_In-Hand-Manipulation-via-Motion-Cones"
+      }
     },
     {
       "paper_id": "pr-0645",
@@ -37675,7 +37806,8 @@
       },
       "note_basis": "full-text PDF body with page-aware extractive cues",
       "reviewed_on": "2026-09-03",
-      "note_files_written": 4
+      "note_files_written": 4,
+      "source_review_superseded_by": "work/sources/batches/source_audit_2026_11.jsonl"
     },
     {
       "paper_id": "pr-0646",
@@ -39361,7 +39493,7 @@
     {
       "paper_id": "pr-0677",
       "title": "Recovery RL: Safe Reinforcement Learning with Learned Recovery Zones",
-      "folder": "2020/RA-L/2020_RA-L_Recovery-RL-Safe-Reinforcement-Learning-with-Learned-Recov",
+      "folder": "2021/RA-L/2021_RA-L_Recovery-RL-Safe-Reinforcement-Learning-with-Learned-Recov",
       "target": "tmp/pdfs/fulltext_all_2026-09-02/pr-0677.pdf",
       "candidate_urls": [
         "https://arxiv.org/pdf/2010.15920",
@@ -39411,12 +39543,16 @@
       },
       "note_basis": "full-text PDF body with page-aware extractive cues",
       "reviewed_on": "2026-09-03",
-      "note_files_written": 4
+      "note_files_written": 4,
+      "identity_at_review": {
+        "title": "Recovery RL: Safe Reinforcement Learning with Learned Recovery Zones",
+        "folder": "2020/RA-L/2020_RA-L_Recovery-RL-Safe-Reinforcement-Learning-with-Learned-Recov"
+      }
     },
     {
       "paper_id": "pr-0678",
-      "title": "World Models",
-      "folder": "2018/NeurIPS-Workshop/2018_NeurIPS-Workshop_World-Models",
+      "title": "Recurrent World Models Facilitate Policy Evolution",
+      "folder": "2018/NeurIPS/2018_NeurIPS_World-Models",
       "target": "tmp/pdfs/fulltext_all_2026-09-02/pr-0678.pdf",
       "candidate_urls": [
         "https://arxiv.org/pdf/1803.10122",
@@ -39466,7 +39602,11 @@
       },
       "note_basis": "full-text PDF body with page-aware extractive cues",
       "reviewed_on": "2026-09-03",
-      "note_files_written": 4
+      "note_files_written": 4,
+      "identity_at_review": {
+        "title": "World Models",
+        "folder": "2018/NeurIPS-Workshop/2018_NeurIPS-Workshop_World-Models"
+      }
     },
     {
       "paper_id": "pr-0679",
@@ -39581,7 +39721,7 @@
     {
       "paper_id": "pr-0681",
       "title": "Temporal Difference Learning for Model Predictive Control",
-      "folder": "2022/ICLR/2022_ICLR_Temporal-Difference-Learning-for-Model-Predictive-Control",
+      "folder": "2022/ICML/2022_ICML_Temporal-Difference-Learning-for-Model-Predictive-Control",
       "target": "tmp/pdfs/fulltext_all_2026-09-02/pr-0681.pdf",
       "candidate_urls": [
         "https://arxiv.org/pdf/2203.04955",
@@ -39630,7 +39770,11 @@
       },
       "note_basis": "full-text PDF body with page-aware extractive cues",
       "reviewed_on": "2026-09-03",
-      "note_files_written": 4
+      "note_files_written": 4,
+      "identity_at_review": {
+        "title": "Temporal Difference Learning for Model Predictive Control",
+        "folder": "2022/ICLR/2022_ICLR_Temporal-Difference-Learning-for-Model-Predictive-Control"
+      }
     },
     {
       "paper_id": "pr-0682",
@@ -39690,7 +39834,7 @@
     },
     {
       "paper_id": "pr-0683",
-      "title": "Mastering Diverse Domains through World Models",
+      "title": "Mastering diverse control tasks through world models",
       "folder": "2025/Nature/2025_Nature_Mastering-Diverse-Domains-through-World-Models",
       "target": "tmp/pdfs/fulltext_all_2026-09-02/pr-0683.pdf",
       "candidate_urls": [
@@ -39741,7 +39885,11 @@
       },
       "note_basis": "full-text PDF body with page-aware extractive cues",
       "reviewed_on": "2026-09-03",
-      "note_files_written": 4
+      "note_files_written": 4,
+      "identity_at_review": {
+        "title": "Mastering Diverse Domains through World Models",
+        "folder": "2025/Nature/2025_Nature_Mastering-Diverse-Domains-through-World-Models"
+      }
     },
     {
       "paper_id": "pr-0684",
@@ -40853,8 +41001,8 @@
     },
     {
       "paper_id": "pr-0704",
-      "title": "Strengthening Generative Robot Policies through Predictive World Modeling",
-      "folder": "2025/RA-L/2025_RA-L_Strengthening-Generative-Robot-Policies-through-Predictive",
+      "title": "Inference-Time Enhancement of Generative Robot Policies via Predictive World Modeling",
+      "folder": "2026/RA-L/2026_RA-L_Strengthening-Generative-Robot-Policies-through-Predictive",
       "target": "tmp/pdfs/fulltext_all_2026-09-02/pr-0704.pdf",
       "candidate_urls": [
         "https://arxiv.org/pdf/2502.00622",
@@ -40903,12 +41051,16 @@
       },
       "note_basis": "full-text PDF body with page-aware extractive cues",
       "reviewed_on": "2026-09-03",
-      "note_files_written": 4
+      "note_files_written": 4,
+      "identity_at_review": {
+        "title": "Strengthening Generative Robot Policies through Predictive World Modeling",
+        "folder": "2025/RA-L/2025_RA-L_Strengthening-Generative-Robot-Policies-through-Predictive"
+      }
     },
     {
       "paper_id": "pr-0705",
       "title": "World Action Models are Zero-shot Policies",
-      "folder": "2026/arXiv/2026_arXiv_World-Action-Models-are-Zero-shot-Policies",
+      "folder": "2026/CoRL/2026_CoRL_World-Action-Models-are-Zero-shot-Policies",
       "target": "tmp/pdfs/fulltext_all_2026-09-02/pr-0705.pdf",
       "candidate_urls": [
         "https://arxiv.org/pdf/2602.15922",
@@ -40957,7 +41109,11 @@
       },
       "note_basis": "full-text PDF body with page-aware extractive cues",
       "reviewed_on": "2026-09-03",
-      "note_files_written": 4
+      "note_files_written": 4,
+      "identity_at_review": {
+        "title": "World Action Models are Zero-shot Policies",
+        "folder": "2026/arXiv/2026_arXiv_World-Action-Models-are-Zero-shot-Policies"
+      }
     },
     {
       "paper_id": "pr-0706",
@@ -41507,7 +41663,7 @@
     },
     {
       "paper_id": "pr-0716",
-      "title": "UMPNet: Universal Manipulation Policy Network for Articulated Objects",
+      "title": "Universal Manipulation Policy Network for Articulated Objects",
       "folder": "2022/RA-L/2022_RA-L_UMPNet-Universal-Manipulation-Policy-Network-for-Articulat",
       "target": "tmp/pdfs/fulltext_all_2026-09-02/pr-0716.pdf",
       "candidate_urls": [
@@ -41558,7 +41714,11 @@
       },
       "note_basis": "full-text PDF body with page-aware extractive cues",
       "reviewed_on": "2026-09-03",
-      "note_files_written": 4
+      "note_files_written": 4,
+      "identity_at_review": {
+        "title": "UMPNet: Universal Manipulation Policy Network for Articulated Objects",
+        "folder": "2022/RA-L/2022_RA-L_UMPNet-Universal-Manipulation-Policy-Network-for-Articulat"
+      }
     },
     {
       "paper_id": "pr-0717",
@@ -41784,7 +41944,7 @@
     {
       "paper_id": "pr-0721",
       "title": "Text2Motion: From Natural Language Instructions to Feasible Plans",
-      "folder": "2023/ICRA/2023_ICRA_Text2Motion-From-Natural-Language-Instructions-to-Feasible",
+      "folder": "2023/Autonomous-Robots/2023_Autonomous-Robots_Text2Motion-From-Natural-Language-Instructions-to-Feasible",
       "target": "tmp/pdfs/fulltext_all_2026-09-02/pr-0721.pdf",
       "candidate_urls": [
         "https://arxiv.org/pdf/2303.12153",
@@ -41833,7 +41993,11 @@
       },
       "note_basis": "full-text PDF body with page-aware extractive cues",
       "reviewed_on": "2026-09-03",
-      "note_files_written": 4
+      "note_files_written": 4,
+      "identity_at_review": {
+        "title": "Text2Motion: From Natural Language Instructions to Feasible Plans",
+        "folder": "2023/ICRA/2023_ICRA_Text2Motion-From-Natural-Language-Instructions-to-Feasible"
+      }
     },
     {
       "paper_id": "pr-0722",
@@ -41892,7 +42056,7 @@
     {
       "paper_id": "pr-0723",
       "title": "RoboCat: A Self-Improving Generalist Agent for Robotic Manipulation",
-      "folder": "2023/arXiv/2023_arXiv_RoboCat-A-Self-Improving-Generalist-Agent-for-Robotic-Mani",
+      "folder": "2023/TMLR/2023_TMLR_RoboCat-A-Self-Improving-Generalist-Agent-for-Robotic-Mani",
       "target": "tmp/pdfs/fulltext_all_2026-09-02/pr-0723.pdf",
       "candidate_urls": [
         "https://arxiv.org/pdf/2306.11706",
@@ -41941,7 +42105,11 @@
       },
       "note_basis": "full-text PDF body with page-aware extractive cues",
       "reviewed_on": "2026-09-03",
-      "note_files_written": 4
+      "note_files_written": 4,
+      "identity_at_review": {
+        "title": "RoboCat: A Self-Improving Generalist Agent for Robotic Manipulation",
+        "folder": "2023/arXiv/2023_arXiv_RoboCat-A-Self-Improving-Generalist-Agent-for-Robotic-Mani"
+      }
     },
     {
       "paper_id": "pr-0724",
@@ -42166,7 +42334,7 @@
     {
       "paper_id": "pr-0728",
       "title": "RT-Trajectory: Robotic Task Generalization via Hindsight Trajectory Sketches",
-      "folder": "2023/arXiv/2023_arXiv_RT-Trajectory-Robotic-Task-Generalization-via-Hindsight-Tr",
+      "folder": "2024/ICLR/2024_ICLR_RT-Trajectory-Robotic-Task-Generalization-via-Hindsight-Tr",
       "target": "tmp/pdfs/fulltext_all_2026-09-02/pr-0728.pdf",
       "candidate_urls": [
         "https://arxiv.org/pdf/2311.01977",
@@ -42215,7 +42383,11 @@
       },
       "note_basis": "full-text PDF body with page-aware extractive cues",
       "reviewed_on": "2026-09-03",
-      "note_files_written": 4
+      "note_files_written": 4,
+      "identity_at_review": {
+        "title": "RT-Trajectory: Robotic Task Generalization via Hindsight Trajectory Sketches",
+        "folder": "2023/arXiv/2023_arXiv_RT-Trajectory-Robotic-Task-Generalization-via-Hindsight-Tr"
+      }
     },
     {
       "paper_id": "pr-0729",
@@ -42768,7 +42940,7 @@
     {
       "paper_id": "pr-0739",
       "title": "FlingBot: The Unreasonable Effectiveness of Dynamic Manipulation for Cloth Unfolding",
-      "folder": "2022/ICRA/2022_ICRA_FlingBot-The-Unreasonable-Effectiveness-of-Dynamic-Manipul",
+      "folder": "2021/CoRL/2021_CoRL_FlingBot-The-Unreasonable-Effectiveness-of-Dynamic-Manipul",
       "target": "tmp/pdfs/fulltext_all_2026-09-02/pr-0739.pdf",
       "candidate_urls": [
         "https://arxiv.org/pdf/2105.03655",
@@ -42817,7 +42989,11 @@
       },
       "note_basis": "full-text PDF body with page-aware extractive cues",
       "reviewed_on": "2026-09-03",
-      "note_files_written": 4
+      "note_files_written": 4,
+      "identity_at_review": {
+        "title": "FlingBot: The Unreasonable Effectiveness of Dynamic Manipulation for Cloth Unfolding",
+        "folder": "2022/ICRA/2022_ICRA_FlingBot-The-Unreasonable-Effectiveness-of-Dynamic-Manipul"
+      }
     },
     {
       "paper_id": "pr-0740",
@@ -47094,7 +47270,7 @@
     {
       "paper_id": "pr-0820",
       "title": "DexterityGen: Foundation Controller for Unprecedented Dexterity",
-      "folder": "2026/RSS/2026_RSS_DexterityGen-Foundation-Controller-for-Unprecedented-Dexte",
+      "folder": "2025/RSS/2025_RSS_DexterityGen-Foundation-Controller-for-Unprecedented-Dexte",
       "target": "tmp/pdfs/fulltext_all_2026-09-02/pr-0820.pdf",
       "candidate_urls": [
         "https://www.roboticsproceedings.org/rss21/p103.pdf"
@@ -47142,7 +47318,11 @@
       },
       "note_basis": "full-text PDF body with page-aware extractive cues",
       "reviewed_on": "2026-09-03",
-      "note_files_written": 4
+      "note_files_written": 4,
+      "identity_at_review": {
+        "title": "DexterityGen: Foundation Controller for Unprecedented Dexterity",
+        "folder": "2026/RSS/2026_RSS_DexterityGen-Foundation-Controller-for-Unprecedented-Dexte"
+      }
     },
     {
       "paper_id": "pr-0821",
@@ -48321,7 +48501,7 @@
     {
       "paper_id": "pr-0843",
       "title": "Where are we in the search for an Artificial Visual Cortex for Embodied Intelligence?",
-      "folder": "2023/arXiv/2023_arXiv_Where-are-we-in-the-search-for-an-Artificial-Visual-Cortex",
+      "folder": "2023/NeurIPS/2023_NeurIPS_Where-are-we-in-the-search-for-an-Artificial-Visual-Cortex",
       "target": "tmp/pdfs/fulltext_all_2026-09-02/pr-0843.pdf",
       "candidate_urls": [
         "https://arxiv.org/pdf/2303.18240.pdf"
@@ -48369,7 +48549,11 @@
       },
       "note_basis": "full-text PDF body with page-aware extractive cues",
       "reviewed_on": "2026-09-03",
-      "note_files_written": 4
+      "note_files_written": 4,
+      "identity_at_review": {
+        "title": "Where are we in the search for an Artificial Visual Cortex for Embodied Intelligence?",
+        "folder": "2023/arXiv/2023_arXiv_Where-are-we-in-the-search-for-an-Artificial-Visual-Cortex"
+      }
     },
     {
       "paper_id": "pr-0844",
@@ -49063,7 +49247,7 @@
     {
       "paper_id": "pr-0857",
       "title": "A Generalist Agent",
-      "folder": "2022/arXiv/2022_arXiv_A-Generalist-Agent",
+      "folder": "2022/TMLR/2022_TMLR_A-Generalist-Agent",
       "target": "tmp/pdfs/fulltext_all_2026-09-02/pr-0857.pdf",
       "candidate_urls": [
         "https://arxiv.org/pdf/2205.06175.pdf"
@@ -49111,7 +49295,11 @@
       },
       "note_basis": "full-text PDF body with page-aware extractive cues",
       "reviewed_on": "2026-09-03",
-      "note_files_written": 4
+      "note_files_written": 4,
+      "identity_at_review": {
+        "title": "A Generalist Agent",
+        "folder": "2022/arXiv/2022_arXiv_A-Generalist-Agent"
+      }
     },
     {
       "paper_id": "pr-0858",

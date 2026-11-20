@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2018 / CVPR
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Peter Anderson, Qi Wu, Damien Teney, Jake Bruce, Mark Johnson, Niko Sünderhauf, Ian Reid, Stephen Gould, Anton van den Hengel
 - Primary track: Robotics-enabling 3D perception
 - Tier: NEXT
 - Tags: Vision-Language Navigation, Robotics, Navigation, Benchmark

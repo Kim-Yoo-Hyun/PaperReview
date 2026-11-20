@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2026 / CVPR
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Haowen Liu, Shaoxiong Yao, Haonan Chen, Jiawei Gao, Jiayuan Mao, Jia-Bin Huang, Yilun Du
 - Primary track: VLA and generalist robot policies
 - Tier: NEXT
 - Tags: VLM, Planning, simulation
@@ -19,7 +19,7 @@
 
 ## Why This Paper Is Here
 
-VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다. 본문은 However, despite their remarkable commonsense and semantic reasoning capabilities, VLMs lack a grounded understanding of physical dynamics.를 문제로 두고, In summary, this paper makes the following contributions: • We introduce a test-time, zero-shot framework enabling VLMs to plan physics-aware embodied actions; • We present a pipeline for automatically generating multi-physics simulatio ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+SIMPACT는 시각언어 모델의 행동 계획을 물리 시뮬레이션으로 시험해 조작 계획을 선택한다.
 
 ## Problem and Motivation
 
@@ -53,16 +53,10 @@ VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** In summary, this paper makes the following contributions: • We introduce a test-time, zero-shot framework enabling VLMs to plan physics-aware embodied actions; • We present ...
-- **p. 2 / 1. Introduction - extractive body cue:** By augmenting VLMs with physical simulation, our framework enables them to anticipate action consequences, evaluate predicted outcomes, and iteratively adjust their decisions at test time, ...
-- **p. 3 / 3. Method - extractive body cue:** Our framework enables zero-shot robotic manipulation action generation from a single RGB-D image input I0 and natural language instruction `task and outputs robot action sequence ...
-- **p. 4 / 3.1. Simulation Construction - extractive body cue:** Our method first instantiates a physics simulator given the real-world scene.
-- **p. 3 / 3.1. Simulation Construction - extractive body cue:** Our approach employs a physics-based simulator to predict the consequences of actions for manipulation planning.
-- **p. 6 / 4.1. Experimental Setup - extractive body cue:** Our approach consistently achieves a substantially higher success rate than baselines, highlighting the effectiveness of simulation-enabled VLMs for action planning.
-- **p. 7 / 4.2. Results - extractive body cue:** VLM-based methods, VoxPoser and MOKA, leveraging VLM's strong sceneunderstanding and reasoning capabilities, achieve non-zero success rates on tasks such as bowl stacking, shape rope and ...
-- **p. 8 / 4.3. Ablation study - extractive body cue:** 1) affects performance, reporting success rates over 10 trials in Table 4: using only 3 samples degrades performance, as limited rollouts fail to provide sufficient ...
+- 실제 관측 장면에 대응하는 물리 시뮬레이터를 구성한다.
+- 후보 행동의 결과를 예측해 계획을 평가한다.
 
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+[저자 원문](https://openaccess.thecvf.com/content/CVPR2026/html/Liu_SIMPACT_Simulation-Enabled_Action_Planning_using_Vision-Language_Models_CVPR_2026_paper.html)
 
 ## Evaluation Scope
 

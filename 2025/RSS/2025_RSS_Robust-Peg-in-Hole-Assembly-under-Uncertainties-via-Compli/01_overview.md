@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / RSS
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Yiting Chen, Kenneth Kimble, Howard H. Qian, Podshara Chanrungmaneekul, Robert Seney, Kaiyu Hang
 - Primary track: Manipulation, contact, tactile, and dexterity
 - Tier: NEXT
 - Tags: Robotics, contact-rich manipulation, peg-in-hole, compliance, uncertainty, assembly

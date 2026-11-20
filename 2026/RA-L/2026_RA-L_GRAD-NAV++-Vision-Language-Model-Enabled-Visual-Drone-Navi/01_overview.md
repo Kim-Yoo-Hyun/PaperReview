@@ -3,14 +3,15 @@
 > Evidence maturity: `ABSTRACT_CHECKED`. abstract 기반 — 본문 수동 확인 필요.
 > 자동 작성 노트는 실제 정독을 뜻하지 않는다. 사용자 reading status는 UNREAD로 시작한다.
 
-- Year/Venue: 2026 / RA-L
+- Year/Venue
+- Authors: Qianzhong Chen, Naixiang Gao, Suning Huang, JunEn Low, Timothy Chen, Jiankai Sun, Mac Schwager
 - Category: VLA and Generalist Robot Policies
 - Primary track: VLA and generalist robot policies
 - Tier: NEXT
 - Tags: differentiable-RL, drone-navigation, Gaussian Splatting, VLA
 - Aliases: GRaD-Nav++, GRAD-NAV++, GRaD-Nav++: Vision-Language Model Enabled Visual Drone Navigation with Gaussian Radiance Fields and Differentiable Dynamics
-- Official paper: https://ieeexplore.ieee.org/document/11297793/
-- Venue verification: https://ieeexplore.ieee.org/document/11297793/
+- Official paper: https://arxiv.org/abs/2506.14009
+- Venue verification: https://api.crossref.org/works/10.1109/LRA.2025.3643290
 - Code/Project: https://qianzhong-chen.github.io/gradnavpp.github.io/
 - Code: https://github.com/Qianzhong-Chen/grad_nav
 - Source audit: 2026-11-07–08: official metadata/abstract 및 저자 project/repository 공개 범위 확인. RA-L 11(2), 1418–1425, February 2026; first online 2025-12-11. Canonical year follows journal issue, not online year. 본문 전체 정독·코드 실행·독립 성능 검증 아님. 사용자 reading status UNREAD 유지.

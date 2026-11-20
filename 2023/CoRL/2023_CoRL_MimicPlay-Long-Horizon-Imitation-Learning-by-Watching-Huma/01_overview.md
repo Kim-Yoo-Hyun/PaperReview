@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2023 / CoRL
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Chen Wang, Linxi Fan, Jiankai Sun, Ruohan Zhang, Li Fei-Fei, Danfei Xu, Yuke Zhu, Anima Anandkumar
 - Primary track: RL, IL, offline learning, and robot data
 - Tier: NEXT
 - Tags: Robotics, Imitation Learning, human video, cross-embodiment, hierarchical policy, long-horizon manipulation
@@ -19,7 +19,7 @@
 
 ## Why This Paper Is Here
 
-RL, IL, offline learning, and robot data의 il 문제를 이해하기 위해 읽는다. 본문은 Efficiently teaching robots to perform general-purpose manipulation tasks is a long-standing challenge.를 문제로 두고, To summarize, the main contributions of our work are as follows: • A novel paradigm for learning 3D-aware latent plans from cheap human play data. • A hierarchical framework that trains a ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+MimicPlay는 사람이 물체를 자유롭게 조작하는 영상에서 장기 계획을 배우고 원격조작 시연에서 로봇의 저수준 행동을 배운다.
 
 ## Problem and Motivation
 
@@ -50,16 +50,10 @@ RL, IL, offline learning, and robot data의 il 문제를 이해하기 위해 읽
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1 Introduction - extractive body cue:** To summarize, the main contributions of our work are as follows: • A novel paradigm for learning 3D-aware latent plans from cheap human play data. ...
-- **p. 2 / 1 Introduction - extractive body cue:** Moreover, MIMICPLAY integrates human motion and robotic skills into a joint latent plan space, which enables an interface that allows using human videos directly as ...
-- **p. 14 / A Implementation details - extractive body cue:** The robot policy model is a GPT-style transformer [52], which consists of four multi-head layers with four heads.
-- **p. 14 / A Implementation details - extractive body cue:** For a fair comparison with our method, the baseline approaches trained without human play data have five more demonstrations during training the latent planner P ...
-- **p. 7 / 5 Results - extractive body cue:** 2, although Ours (w/o KL) baseline outperforms most baselines in trained tasks, its success rate is 17% lower than Ours.
-- **p. 7 / 5 Results - extractive body cue:** A 10-minute of cheap and unlabelled human play data brings large improvements in the task success rate and sample efficiency.
-- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1: Human is able to complete a long-horizon task much faster than a teleoperated robot. This observation inspires us to develop MIMICPLAY, a hierarchical ...
-- **p. 15 / C Supplementary Experiment Results - extractive body cue:** For each method, we train with 5 random seeds and report the average success rate over 100 testing trials.
+- 사람의 놀이 영상에서 학습한 잠재 계획을 시각 기반 로봇 제어기에 전달한다.
+- 실물 장기 조작에서 사람의 놀이 영상이 성공률, 새로운 조건으로의 일반화, 교란에 대한 강건성에 미치는 영향을 비교한다.
 
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+[저자 원문](https://proceedings.mlr.press/v229/wang23a.html)
 
 ## Evaluation Scope
 

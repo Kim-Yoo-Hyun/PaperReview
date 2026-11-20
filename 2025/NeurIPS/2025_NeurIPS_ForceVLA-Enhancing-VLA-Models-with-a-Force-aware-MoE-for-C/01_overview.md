@@ -7,11 +7,11 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / NeurIPS
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Jiawen Yu, Hairuo Liu, Qiaojun Yu, Jieji Ren, Ce Hao, Haitong Ding, Guangyu Huang, Guofan Huang, Yan Song, Panpan Cai, Wenqiang Zhang, Cewu Lu
 - Primary track: VLA and generalist robot policies
 - Tier: REFERENCE
 - Tags: VLA, Robotics
-- Official paper: https://openreview.net/forum?id=2845H8Ua5D
+- Official paper: https://neurips.cc/virtual/2025/poster/120169
 - Full-text retrieval: https://arxiv.org/pdf/2505.22159
 - Code/Project: not identified
 - Paper type: method

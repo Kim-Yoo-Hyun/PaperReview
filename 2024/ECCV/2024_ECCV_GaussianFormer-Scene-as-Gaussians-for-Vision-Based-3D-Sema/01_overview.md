@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2024 / ECCV
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Yuanhui Huang, Wenzhao Zheng, Yunpeng Zhang, Jie Zhou, Jiwen Lu
 - Primary track: Robotics-enabling 3D perception
 - Tier: REFERENCE
 - Tags: 3D Vision, Gaussian Splatting, semantic
@@ -19,7 +19,7 @@
 
 ## Why This Paper Is Here
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 It is also more difficult to capture scene dynamics with grid-based representations since it is objects instead of grids that move in the 3D space [59].를 문제로 두고, We propose a GaussianFormer model to effectively obtain 3D semantic Gaussians from image inputs.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+GaussianFormer는 카메라 영상으로부터 3차원 의미 점유를 객체 중심 가우시안 집합으로 예측한다.
 
 ## Problem and Motivation
 
@@ -51,16 +51,10 @@ Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 �
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1 Introduction - extractive body cue:** We propose a GaussianFormer model to effectively obtain 3D semantic Gaussians from image inputs.
-- **p. 2 / 1 Introduction - extractive body cue:** In this paper, we propose the first object-centric representation for 3D semantic occupancy prediction.
-- **p. 1 / Body text (section not recovered) - extractive body cue:** We propose a GaussianFormer model consisting of sparse convolution and cross-attention to efficiently transform 2D images into 3D Gaussian representations.
-- **p. 1 / Body text (section not recovered) - extractive body cue:** To address this, we propose an object-centric representation to describe 3D scenes with sparse 3D semantic Gaussians where each Gaussian represents a flexible region of ...
-- **p. 10 / 4 Experiments - extractive body cue:** Our GaussianFormer achieves notable improvements over methods based on planar representations, such as BEVFormer [27] and TPVFormer [17].
-- **p. 14 / Figure/Table caption - extractive body cue:** Fig. 5: Visualization results for 3D semantic occupancy prediction on nuScenes. We visualize the 3D Gaussians by treating them as ellipsoids centered at the Gaussian ...
-- **p. 11 / 4 Experiments - extractive body cue:** Our method achieves comparable performance with state-of-the-art methods.
-- **p. 11 / 4 Experiments - extractive body cue:** Notably, GaussianFormer achieves comparable performance with state-of-the-art models, excelling at some smaller categories such as motorcycle and general categories such as othervehicle.
+- 각 가우시안에 공간과 의미 정보를 담는다.
+- 예측한 집합으로 장면의 의미 점유를 복원해 평가한다.
 
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+[저자 원문](https://www.ecva.net/papers/eccv_2024/papers_ECCV/html/3958_ECCV_2024_paper.php)
 
 ## Evaluation Scope
 

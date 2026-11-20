@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2017 / NeurIPS
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones, Aidan N. Gomez, Łukasz Kaiser, Illia Polosukhin
 - Primary track: Foundations: Vision and Language Models
 - Tier: REFERENCE
 - Tags: LLM, Transformer, representation
@@ -19,7 +19,7 @@
 
 ## Why This Paper Is Here
 
-Foundations: Vision and Language Models의 upstream 문제를 이해하기 위해 읽는다. 본문은 This makes it more difficult to learn dependencies between distant positions [12].를 문제로 두고, In this work we propose the Transformer, a model architecture eschewing recurrence and instead relying entirely on an attention mechanism to draw global dependencies between input and output.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+Transformer는 순환층 없이 어텐션을 사용해 입력 문장을 다른 언어의 문장으로 변환한다.
 
 ## Problem and Motivation
 
@@ -53,16 +53,10 @@ Foundations: Vision and Language Models의 upstream 문제를 이해하기 위�
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1 Introduction - extractive body cue:** In this work we propose the Transformer, a model architecture eschewing recurrence and instead relying entirely on an attention mechanism to draw global dependencies between ...
-- **p. 1 / Abstract - extractive body cue:** We propose a new simple network architecture, the Transformer, based solely on attention mechanisms, dispensing with recurrence and convolutions entirely.
-- **p. 4 / 2 Background - extractive body cue:** The input consists of queries and keys of dimension dk, and values of dimension dv.
-- **p. 4 / 2 Background - extractive body cue:** (right) Multi-Head Attention consists of several attention layers running in parallel. of the values, where the weight assigned to each value is computed by a ...
-- **p. 5 / 2 Background - extractive body cue:** This consists of two linear transformations with a ReLU activation in between.
-- **p. 8 / 6 Results - extractive body cue:** On the WMT 2014 English-to-French translation task, our big model achieves a BLEU score of 41.0, outperforming all of the previously published single models, at ...
-- **p. 8 / 6 Results - extractive body cue:** 6.1 Machine Translation On the WMT 2014 English-to-German translation task, the big transformer model (Transformer (big) in Table 2) outperforms the best previously reported models ...
-- **p. 9 / 6 Results - extractive body cue:** We present these results in Table 3.
+- 인코더와 디코더에 다중 헤드 어텐션과 위치 정보를 사용한다.
+- 두 기계번역 과제에서 품질과 학습 비용을 비교한다.
 
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+[저자 원문](https://proceedings.neurips.cc/paper/2017/hash/3f5ee243547dee91fbd053c1c4a845aa-Abstract.html)
 
 ## Evaluation Scope
 

@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2021 / ICML
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Vı́ctor Garcia Satorras, Emiel Hoogeboom, Max Welling
 - Primary track: Robotics-enabling 3D perception
 - Tier: REFERENCE
 - Tags: equivariant, Graph Reasoning, 3D geometry
@@ -19,7 +19,7 @@
 
 ## Why This Paper Is Here
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 Many problems exhibit 3D translation and rotation symmetries.를 문제로 두고, In this section we introduce the relevant materials on equivariance and graph neural networks which will later complement the definition of our method.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+EGNN은 그래프의 노드 특징과 좌표를 함께 갱신하면서 회전·이동·반사와 노드 순열에 대한 대칭성을 보존한다.
 
 ## Problem and Motivation
 
@@ -53,16 +53,10 @@ Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 �
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 2. Background - extractive body cue:** In this section we introduce the relevant materials on equivariance and graph neural networks which will later complement the definition of our method.
-- **p. 1 / 1. Introduction - extractive body cue:** In this work we present a new architecture that is translation, rotation and reflection equivariant (E(n)), and permutation equivariant with respect to an input set ...
-- **p. 2 / 1. Introduction - extractive body cue:** Our method reports the best or very competitive performance in all three experiments.
-- **p. 6 / 5.2. Graph Autoencoder - extractive body cue:** We will explain how Graph Autoencoders can benefit from equivariance and we will show how our method outperforms standard GNN autoencoders in the provided datasets.
-- **p. 8 / 5.2. Graph Autoencoder - extractive body cue:** Additionally this experiment also showed that our method can successfully perform in a E(n) equivariant task for higher dimensional spaces where n > 3.
-- **p. 5 / 5.1. Modelling a dynamical system - N-body system - extractive body cue:** Results As shown in Table 2 our model significantly outperforms the other equivariant and non-equivariant alternatives while still being efficient in terms of running time.
-- **p. 15 / Figure/Table caption - extractive body cue:** Table 4. Analysis of the % of wrong edges and F1 score for different n embedding sizes {2, 4, 8 } for the GNN, Noise-GNN ...
-- **p. 8 / Figure/Table caption - extractive body cue:** Table 3. Mean Absolute Error for the molecular property prediction benchmark in QM9 dataset. *DimeNet++ uses slightly different train/val/test partitions than the other papers listed ...
+- 좌표 차이와 거리로 등변 메시지 전달을 구성한다.
+- 분자·물리계 예측 등 대칭성이 중요한 문제에서 이 구조를 평가한다.
 
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+[저자 원문](https://proceedings.mlr.press/v139/satorras21a.html)
 
 ## Evaluation Scope
 

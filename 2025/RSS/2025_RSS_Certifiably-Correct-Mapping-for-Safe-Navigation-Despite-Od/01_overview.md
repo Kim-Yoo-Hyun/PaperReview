@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / RSS
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Devansh R. Agrawal, Rajiv Govindjee, Taekyung Kim, Trushant Adeshara, Jiangbo Yu, Anurekha Ravikumar, Dimitra Panagou
 - Primary track: World models, safety, uncertainty, and recovery
 - Tier: NEXT
 - Tags: Robotics, safe navigation, mapping, state estimation, uncertainty, formal guarantee

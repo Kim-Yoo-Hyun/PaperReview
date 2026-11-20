@@ -2,13 +2,14 @@
 
 > Evidence maturity: `FULL_TEXT_CHECKED` — 지정 절만 확인한 기록이며 전체 정독·실험 재현을 뜻하지 않는다.
 
-- Year/Venue: 2026 / RA-L
+- Year/Venue
+- Authors: Lakshita Dodeja, Karl Schmeckpeper, Shivam Vats, Thomas Weng, Mingxi Jia, George Konidaris, Stefanie Tellex
 - Category: Robot Learning and Data
 - Primary track: RL, IL, offline learning, and robot data
 - Tier: NEXT
 - Tags: residual-RL, uncertainty, exploration, manipulation
 - Aliases: Uncertainty-Aware Residual RL
-- Official paper: https://doi.org/10.1109/LRA.2025.3636808
+- Official paper: https://api.crossref.org/works/10.1109/LRA.2025.3636808
 - Venue verification: https://api.crossref.org/works/10.1109/LRA.2025.3636808
 - Code/Project: https://lakshitadodeja.github.io/uncertainty-aware-residual-rl/
 - Code: https://github.com/lakshitadodeja/uncertainty_aware_residual_rl

@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / ICCV
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Siyu Jiao, Haoye Dong, Yuyang Yin, Zequn Jie, Yinlong Qian, Yao Zhao, Humphrey Shi, Yunchao Wei
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
 - Tags: Vision-Language Model, 3D Vision, Gaussian Splatting
@@ -19,7 +19,7 @@
 
 ## Why This Paper Is Here
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 Therefore, enhancing 3D perception via 3DGS models has become an urgent challenge to address.를 문제로 두고, Overall, our contributions are summarized as follows: • We propose CLIP-GS, a simple yet effective framework for encoding 3DGS into features, leveraging a contrastive learning paradigm for multimodal per-taining. • We develop ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+CLIP-GS는 3D 가우시안을 토큰열로 변환해 영상·언어와 대응하는 물체 표현을 학습한다.
 
 ## Problem and Motivation
 
@@ -53,16 +53,10 @@ Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 �
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** Overall, our contributions are summarized as follows: • We propose CLIP-GS, a simple yet effective framework for encoding 3DGS into features, leveraging a contrastive learning ...
-- **p. 2 / 1. Introduction - extractive body cue:** In this work, we introduce a multimodal representation learning method leveraging 3DGS, termed CLIP-GS.
-- **p. 3 / 4. Methodology - extractive body cue:** We introduce the feature extraction process from 3DGS, detailed in Sec.
-- **p. 3 / 4. Methodology - extractive body cue:** We present CLIP-GS, a unified 3D pretraining framework for large-scale 3D representation learning by aligning 3DGS embeddings with the text-image aligned embeddings.
-- **p. 4 / 4.2. Multi-model Alignment - extractive body cue:** In response, we propose the image voting loss (Limg).
-- **p. 5 / 5.2. Zero-Shot 3D Classification - extractive body cue:** CLIP-GS demonstrates a comprehensive improvement over existing zero-shot 3D classification models, achieving a performance boost of + 0.8, + 0.5 on Objaverse-GS and ModelNet-GS, respectively.
-- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. (a) Comparison between point cloud reconstruction and 3D Gaussian Splatting (3DGS) reconstruction. (b) The 3DGS approach outperforms point cloud methods across multiple 3D ...
-- **p. 5 / 5.1. Multimodal Retrieval - extractive body cue:** Our CLIP-GS outperforms point cloudbased methods across all retrieval tasks by a large margin.
+- GS Tokenizer로 가우시안의 정보를 순서 있는 토큰으로 만든다.
+- 3D 표현을 시각언어 특징과 정렬한다.
 
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+[저자 원문](https://openaccess.thecvf.com/content/ICCV2025/html/Jiao_CLIP-GS_Unifying_Vision-Language_Representation_with_3D_Gaussian_Splatting_ICCV_2025_paper.html)
 
 ## Evaluation Scope
 

@@ -7,13 +7,13 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2022 / RSS
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Ben Eisner, Harry Zhang, David Held
 - Primary track: Robotics-enabling 3D perception
 - Tier: NEXT
 - Tags: Robotics, 3D Vision, scene flow, articulated objects, point cloud, manipulation
 - Official paper: https://arxiv.org/abs/2205.04382
 - Full-text retrieval: https://arxiv.org/pdf/2205.04382
-- Code/Project: https://flowbot3d.github.io/
+- Code/Project: https://sites.google.com/view/articulated-flowbot-3d
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (17 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 

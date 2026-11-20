@@ -7,12 +7,12 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / 3DV
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Huapeng Li, Wenxuan Song, Tianao Xu, Alexandre Elsig, Jonas Kulhanek
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
 - Tags: Gaussian Splatting, 3D reconstruction, 3D Vision
-- Official paper: https://3dvconf.github.io/2025/accepted-papers/
-- Full-text retrieval: https://openreview.net/attachment?id=Z9yn9YgNIz&name=pdf
+- Official paper: https://3dvconf.github.io/2025/schedule_updated2.csv
+- Full-text retrieval: https://arxiv.org/pdf/2408.08206.pdf
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; title-token overlap first two pages=1.0)

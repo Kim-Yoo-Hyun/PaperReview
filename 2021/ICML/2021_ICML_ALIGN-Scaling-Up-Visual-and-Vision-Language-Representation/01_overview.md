@@ -1,4 +1,4 @@
-# ALIGN: Scaling Up Visual and Vision-Language Representation Learning With Noisy Text Supervision
+# Scaling Up Visual and Vision-Language Representation Learning With Noisy Text Supervision
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
 > Analysis basis: full-text PDF body checked on 2026-09-03 (14 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://arxiv.org/abs/2102.05918.
@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2021 / ICML
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Chao Jia, Yinfei Yang, Ye Xia, Yi-Ting Chen, Zarana Parekh, Hieu Pham, Quoc Le, Yun-Hsuan Sung, Zhen Li, Tom Duerig
 - Primary track: Foundations: Vision and Language Models
 - Tier: REFERENCE
 - Tags: Vision-Language Model, alignment, representation

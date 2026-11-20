@@ -7,11 +7,11 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 1995 / ICRA
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Kevin M. Lynch, Matthew T. Mason
 - Primary track: Locomotion, whole-body, mobile manipulation, and humanoids
 - Tier: REFERENCE
 - Tags: Robotics, contact-rich manipulation, pushing, controllability
-- Official paper: https://www.cs.cmu.edu/afs/cs/Web/People/mlab/stable/papers.html
+- Official paper: https://publications.ri.cmu.edu/controllability-of-pushing
 - Full-text retrieval: https://www.ri.cmu.edu/pub_files/pub2/lynch_kevin_1995_1/lynch_kevin_1995_1.pdf
 - Code/Project: not identified
 - Paper type: theory_or_foundation

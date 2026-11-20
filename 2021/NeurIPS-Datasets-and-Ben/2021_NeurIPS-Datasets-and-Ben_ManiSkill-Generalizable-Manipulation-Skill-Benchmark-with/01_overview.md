@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2021 / NeurIPS Datasets and Benchmarks
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Tongzhou Mu, Zhan Ling, Fanbo Xiang, Derek Yang, Xuanlin Li, Xuanlin Li, Stone Tao, Zhiao Huang, Zhiwei Jia, Hao Su
 - Primary track: Manipulation, contact, tactile, and dexterity
 - Tier: REFERENCE
 - Tags: Robotics, Benchmark, Dataset, manipulation, simulation
@@ -19,7 +19,7 @@
 
 ## Why This Paper Is Here
 
-Manipulation, contact, tactile, and dexterity의 benchmark 문제를 이해하기 위해 읽는다. 본문은 However, 3D assets in existing benchmarks mostly lack the diversity of 3D shapes that align with real-world intra-class complexity in topology and geometry.를 문제로 두고, Here we propose SAPIEN Manipulation Skill Benchmark (ManiSkill) to benchmark manipulation skills over diverse objects in a full-physics simulator.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+ManiSkill은 물리 시뮬레이터에서 다양한 물체에 대한 조작 기술의 일반화를 평가한다.
 
 ## Problem and Motivation
 
@@ -53,16 +53,10 @@ Manipulation, contact, tactile, and dexterity의 benchmark 문제를 이해하�
 
 ## Main Claims and Actual Contribution
 
-- **p. 1 / Abstract - extractive body cue:** Here we propose SAPIEN Manipulation Skill Benchmark (ManiSkill) to benchmark manipulation skills over diverse objects in a full-physics simulator.
-- **p. 3 / Abstract - extractive body cue:** Here we introduce the key features of the benchmark.
-- **p. 3 / Abstract - extractive body cue:** Additionally, we present and evaluate 3D neural network-based policy learning baselines.
-- **p. 4 / Abstract - extractive body cue:** To summarize, here are the key contributions of ManiSkill Benchmark. • The topology and geometry variation of our data allow our benchmark to compare objectlevel ...
-- **p. 2 / Abstract - extractive body cue:** On the other hand, [10, 11, 12, 13, 14, 15, 16, 17] can propose novel grasp poses on novel objects based on visual inputs.
-- **p. 8 / Abstract - extractive body cue:** We adopted pointcloud observation mode and designed point cloud-based vision architectures as our feature extractor since previous work [46] has achieved significant performance improvements by ...
-- **p. 9 / Abstract - extractive body cue:** The results suggest that existing works on 3D deep learning and learning-from-demonstrations algorithms might have been insufficient yet to achieve good performance when trained for ...
-- **p. 8 / Figure/Table caption - extractive body cue:** Table 2: The average success rates of different agents on one single environment (fixed object instance) of OpenCabinetDrawer with different numbers of demonstration trajectories. The ...
+- 물체와 환경을 바꾸는 조작 벤치마크를 구성한다.
+- 기술 학습을 위한 시연과 일반화 평가 설정을 제공한다.
 
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+[저자 원문](https://datasets-benchmarks-proceedings.neurips.cc/paper_files/paper/2021/hash/eda80a3d5b344bc40f3bc04f65b7a357-Abstract-round2.html)
 
 ## Evaluation Scope
 

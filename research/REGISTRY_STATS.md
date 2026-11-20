@@ -7,15 +7,15 @@
 ## Snapshot
 
 - Papers: **1252**
-- Resources in the combined view: **692**
+- Resources in the combined view: **698**
 - Curated relation edges: **91**
 - Papers with outgoing relations: **69**
 - Papers participating in a relation: **109**
 - Structured evaluation profiles: **1252**
 - Reproducibility profiles: **1252**
 - Lineage coverage profiles: **1252**
-- Papers with explicit trial/seed cues: **247**
-- Papers without DOI/arXiv/OpenReview identifier: **371**
+- Papers with explicit trial/seed cues: **246**
+- Papers without DOI/arXiv/OpenReview identifier: **365**
 
 ## Tier
 
@@ -66,55 +66,56 @@
 
 | Value | Count |
 |---|---:|
-| conference | 1068 |
-| journal | 89 |
-| preprint | 88 |
+| conference | 1079 |
+| journal | 97 |
+| preprint | 70 |
 | technical_report | 4 |
 | workshop | 2 |
-| other | 1 |
 
 ## Identifier status
 
 | Value | Count |
 |---|---:|
-| identified | 881 |
-| source_only | 371 |
+| identified | 887 |
+| source_only | 365 |
 
 ## Primary source scope
 
 | Value | Count |
 |---|---:|
-| paper_specific | 1209 |
-| venue_index | 43 |
+| paper_specific | 1237 |
+| venue_index | 15 |
 
 ## Code status
 
 | Value | Count |
 |---|---:|
-| not_identified | 625 |
-| project_only | 296 |
-| released | 291 |
-| not_released | 40 |
+| not_identified | 640 |
+| released | 387 |
+| project_only | 211 |
+| not_released | 14 |
 
 ## Data status
 
 | Value | Count |
 |---|---:|
-| not_identified | 1052 |
-| not_applicable | 101 |
-| released | 96 |
-| not_released | 3 |
+| not_identified | 1013 |
+| released | 138 |
+| not_applicable | 100 |
+| not_released | 1 |
 
 ## Evaluation type
 
 | Value | Count |
 |---|---:|
-| EMPIRICAL / REAL-ROBOT OR HARDWARE | 447 |
+| EMPIRICAL / REAL-ROBOT OR HARDWARE | 445 |
 | not_recorded | 303 |
-| EMPIRICAL / SOURCE-REPORTED EVALUATION | 274 |
+| EMPIRICAL / SOURCE-REPORTED EVALUATION | 273 |
 | SYSTEM / EVALUATION SCOPE UNRESOLVED | 95 |
-| BENCHMARK / DATASET | 69 |
-| EMPIRICAL / SIMULATION | 64 |
+| BENCHMARK / DATASET | 68 |
+| EMPIRICAL / SIMULATION | 66 |
+| EMPIRICAL / REAL-ROBOT AND SIMULATION | 1 |
+| BENCHMARK / DATASET AND REAL-ROBOT COMPARISON | 1 |
 
 ## Evaluation setting
 
@@ -122,33 +123,33 @@
 |---|---:|
 | real_robot | 447 |
 | not_recorded | 303 |
-| source_reported | 274 |
+| source_reported | 273 |
 | scope_unresolved | 95 |
 | benchmark_or_dataset | 69 |
-| simulation | 64 |
+| simulation | 67 |
 
 ## Evaluation protocol status
 
 | Value | Count |
 |---|---:|
-| trials_or_seeds=not_recorded | 1005 |
-| dataset_or_benchmark=reported | 948 |
-| metrics=reported | 948 |
-| statistics=reported | 940 |
-| baselines=reported | 939 |
-| split_or_generalization=reported | 927 |
-| failure_cases=reported | 927 |
-| ablations=reported | 920 |
-| split_or_generalization=not_recorded | 325 |
-| failure_cases=not_recorded | 325 |
-| dataset_or_benchmark=not_recorded | 304 |
-| metrics=not_recorded | 303 |
-| baselines=not_recorded | 303 |
-| ablations=not_recorded | 303 |
-| statistics=not_recorded | 303 |
-| trials_or_seeds=reported | 247 |
+| trials_or_seeds=not_recorded | 1006 |
+| dataset_or_benchmark=reported | 944 |
+| metrics=reported | 944 |
+| baselines=reported | 936 |
+| statistics=reported | 936 |
+| split_or_generalization=reported | 923 |
+| failure_cases=reported | 923 |
+| ablations=reported | 916 |
+| split_or_generalization=not_recorded | 329 |
+| failure_cases=not_recorded | 329 |
+| dataset_or_benchmark=not_recorded | 308 |
+| metrics=not_recorded | 307 |
+| baselines=not_recorded | 307 |
+| ablations=not_recorded | 307 |
+| statistics=not_recorded | 307 |
+| trials_or_seeds=reported | 246 |
 | ablations=not_reported | 29 |
-| baselines=not_reported | 10 |
+| baselines=not_reported | 9 |
 | statistics=not_reported | 9 |
 | metrics=not_reported | 1 |
 
@@ -162,36 +163,36 @@
 
 | Value | Count |
 |---|---:|
-| not_recorded | 1220 |
-| reported | 32 |
+| not_recorded | 1168 |
+| reported | 84 |
 
 ## Configuration status
 
 | Value | Count |
 |---|---:|
-| reported | 949 |
-| not_recorded | 303 |
+| reported | 945 |
+| not_recorded | 307 |
 
 ## Environment status
 
 | Value | Count |
 |---|---:|
-| reported | 949 |
-| not_recorded | 303 |
+| reported | 945 |
+| not_recorded | 307 |
 
 ## Run-condition status
 
 | Value | Count |
 |---|---:|
-| reported | 940 |
-| not_recorded | 312 |
+| reported | 936 |
+| not_recorded | 316 |
 
 ## Lineage coverage status
 
 | Value | Count |
 |---|---:|
-| no_curated_edge_recorded | 886 |
-| candidate_only | 257 |
+| no_curated_edge_recorded | 888 |
+| candidate_only | 255 |
 | curated_edges | 109 |
 
 ## Relation type
@@ -228,7 +229,7 @@ The manifest is the source of truth; this table is a compact human-readable edge
 |---|---|---|---|---|
 | `pr-0011` 3D Gaussian Splatting for Real-Time Radiance Field Rendering | `builds_on` | `pr-0010` NeRF: Representing Scenes as Neural Radiance Fields for View Synthesis | `inferred` | `paper_body` |
 | `pr-0013` PointNet++: Deep Hierarchical Feature Learning on Point Sets in a Metric Space | `extends` | `pr-0012` PointNet: Deep Learning on Point Sets for 3D Classification and Segmentation | `verified` | `official_abstract` |
-| `pr-0016` ORB-SLAM: A Versatile and Accurate Monocular SLAM System | `builds_on` | `pr-0525` PTAM: Parallel Tracking and Mapping for Small AR Workspaces | `verified` | `paper_body` |
+| `pr-0016` ORB-SLAM: A Versatile and Accurate Monocular SLAM System | `builds_on` | `pr-0525` Parallel Tracking and Mapping for Small AR Workspaces | `verified` | `paper_body` |
 | `pr-0019` Diffusion Policy: Visuomotor Policy Learning via Action Diffusion | `baseline_for` | `pr-0051` OpenVLA: An Open-Source Vision-Language-Action Model | `verified` | `paper_body` |
 | `pr-0019` Diffusion Policy: Visuomotor Policy Learning via Action Diffusion | `baseline_for` | `pr-0577` Learning Robotic Manipulation Policies from Point Clouds with Conditional Flow Matching | `verified` | `paper_body` |
 | `pr-0019` Diffusion Policy: Visuomotor Policy Learning via Action Diffusion | `baseline_for` | `pr-0751` Reactive Diffusion Policy: Slow-Fast Visual-Tactile Policy Learning for Contact-Rich Manipulation | `verified` | `paper_body` |

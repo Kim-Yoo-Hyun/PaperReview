@@ -4405,7 +4405,7 @@
     },
     {
       "paper_id": "pr-0634",
-      "path": "2020/CoRL/2020_CoRL_Learning-Latent-Plans-from-Play/03_method.md",
+      "path": "2019/CoRL/2019_CoRL_Learning-Latent-Plans-from-Play/03_method.md",
       "original_target": true,
       "edits": [
         {
@@ -7600,7 +7600,7 @@
     },
     {
       "paper_id": "pr-0636",
-      "path": "2022/CoRL/2022_CoRL_Implicit-Behavioral-Cloning/01_overview.md",
+      "path": "2021/CoRL/2021_CoRL_Implicit-Behavioral-Cloning/01_overview.md",
       "sha256": "954c0bc552e396a58ba74a791af1311cd2312b462522a1e1c5d2a1ad39921145",
       "lines": [
         {
@@ -7616,7 +7616,7 @@
     },
     {
       "paper_id": "pr-0636",
-      "path": "2022/CoRL/2022_CoRL_Implicit-Behavioral-Cloning/04_evaluation.md",
+      "path": "2021/CoRL/2021_CoRL_Implicit-Behavioral-Cloning/04_evaluation.md",
       "sha256": "099dbf2c3d9e6b8d0ec1eac31bae69f4903b10fe05c079502dcd939d35cf3870",
       "lines": [
         {
@@ -7639,7 +7639,7 @@
     },
     {
       "paper_id": "pr-0636",
-      "path": "2022/CoRL/2022_CoRL_Implicit-Behavioral-Cloning/03_method.md",
+      "path": "2021/CoRL/2021_CoRL_Implicit-Behavioral-Cloning/03_method.md",
       "sha256": "3d604ae28fbea01cfbb0d5ff967c07ac0b0655c7121b903da62e5c7202f3f760",
       "lines": [
         {
@@ -7859,7 +7859,7 @@
     },
     {
       "paper_id": "pr-0723",
-      "path": "2023/arXiv/2023_arXiv_RoboCat-A-Self-Improving-Generalist-Agent-for-Robotic-Mani/03_method.md",
+      "path": "2023/TMLR/2023_TMLR_RoboCat-A-Self-Improving-Generalist-Agent-for-Robotic-Mani/03_method.md",
       "sha256": "6484d606fafb13ebf87a76236fe52b8bfc9aef19643aace324df631ab8faac07",
       "lines": [
         {
@@ -8158,7 +8158,7 @@
     },
     {
       "paper_id": "pr-0857",
-      "path": "2022/arXiv/2022_arXiv_A-Generalist-Agent/03_method.md",
+      "path": "2022/TMLR/2022_TMLR_A-Generalist-Agent/03_method.md",
       "sha256": "236e595e5ea19f0f029e49cea722700f76d7fc7d59a308fb41f923e873216a67",
       "lines": [
         {

@@ -7,7 +7,7 @@
 - Primary track: RL, IL, offline learning, and robot data
 - Tier: REFERENCE
 - Tags: Dataset, shared autonomy, assistive manipulation, teleoperation, multimodal sensing
-- Official paper: https://doi.org/10.1177/02783649211050677
+- Official paper: https://api.crossref.org/works/10.1177/02783649211050677
 - Code/Project: https://harplab.github.io/harmonic/
 
 ## 연구 질문과 기여

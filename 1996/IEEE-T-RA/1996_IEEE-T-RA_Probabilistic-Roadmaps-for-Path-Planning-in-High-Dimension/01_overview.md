@@ -7,11 +7,11 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 1996 / IEEE T-RA
-- Authors: not duplicated here when not verified in the registry source
+- Authors: L.E. Kavraki, P. Svestka, J.-C. Latombe, M.H. Overmars
 - Primary track: Planning and control
 - Tier: REFERENCE
 - Tags: Robotics, motion planning, PRM, configuration space
-- Official paper: https://kavrakilab.rice.edu/publications/kavraki-svestka1996probabilistic-roadmaps-for.html
+- Official paper: https://api.crossref.org/works/10.1109/70.508439
 - Full-text retrieval: https://kavrakilab.org/publications/kavraki-svestka1996probabilistic-roadmaps-for.pdf
 - Code/Project: not identified
 - Paper type: theory_or_foundation

@@ -7,11 +7,11 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / NeurIPS
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Junsheng Zhou, Xingyu Shi, Haichuan Song, Yi Fang, Yu-Shen Liu, Zhizhong Han
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
 - Tags: point cloud, 3D Vision
-- Official paper: https://openreview.net/forum?id=hVFtXE19Me
+- Official paper: https://neurips.cc/virtual/2025/poster/116646
 - Full-text retrieval: https://arxiv.org/pdf/2510.25210
 - Code/Project: not identified
 - Paper type: method

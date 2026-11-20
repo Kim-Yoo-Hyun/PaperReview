@@ -7,11 +7,11 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / NeurIPS
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Gaia Di Lorenzo, Federico Tombari, Marc Pollefeys, Daniel Barath
 - Primary track: Robotics-enabling 3D perception
 - Tier: REFERENCE
 - Tags: 3D Vision
-- Official paper: https://openreview.net/forum?id=nI7wKr4eop
+- Official paper: https://neurips.cc/virtual/2025/poster/116149
 - Full-text retrieval: https://arxiv.org/pdf/2506.04789
 - Code/Project: not identified
 - Paper type: method

@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2015 / T-RO
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Raul Mur-Artal, J. M. M. Montiel, Juan D. Tardos
 - Primary track: Robotics-enabling 3D perception
 - Tier: REFERENCE
 - Tags: SLAM, calibration, geometry
@@ -19,7 +19,7 @@
 
 ## Why This Paper Is Here
 
-Robotics-enabling 3D perception의 navigation 문제를 이해하기 위해 읽는다. 본문은 Unfortunately several factors severely limit its application: lack of loop closing and adequate handling of occlusions, low invariance to viewpoint of the relocalization and the need of human intervention for map bootstrapping.를 문제로 두고, In this work we build on the main ideas of PTAM, the place recognition work of G´alvez-L´opez and Tard´os [5], the scale-aware loop closing of Strasdat et. al [6] and the use ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+ORB-SLAM은 단안 영상에서 같은 ORB 특징을 이용해 카메라를 추적하고 지도를 만들며, 재지역화와 루프 폐쇄를 수행한다.
 
 ## Problem and Motivation
 
@@ -53,16 +53,10 @@ Robotics-enabling 3D perception의 navigation 문제를 이해하기 위해 읽�
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / B UNDLE ADJUSTMENT (BA) is known to provide ac - extractive body cue:** In this work we build on the main ideas of PTAM, the place recognition work of G´alvez-L´opez and Tard´os [5], the scale-aware loop closing of ...
-- **p. 2 / Abstract - extractive body cue:** We present an exhaustive evaluation in 27 sequences from the most popular datasets.
-- **p. 4 / III. SYSTEM OVERVIEW - extractive body cue:** This allows to match them from wide baselines, boosting the accuracy of BA.
-- **p. 5 / III. SYSTEM OVERVIEW - extractive body cue:** The novel procedure to create an initial map is presented in Section IV.
-- **p. 5 / III. SYSTEM OVERVIEW - extractive body cue:** The main novelty is that we perform the optimization over the Essential Graph, a sparser subgraph of the covisibility graph which is explained in Section ...
-- **p. 11 / VIII. EXPERIMENTS - extractive body cue:** In terms of accuracy ORB-SLAM and PTAM are similar in open trajectories, while ORB-SLAM achieves higher accuracy when detecting large loops as in the sequence ...
-- **p. 15 / VIII. EXPERIMENTS - extractive body cue:** Performing an additional BA after the pose graph optimization slightly improves the accuracy while increasing substantially the time.
-- **p. 15 / VIII. EXPERIMENTS - extractive body cue:** We have noticed that some iterations of full BA slightly improves the accuracy in the trajectories with loops but it has negligible effect in open ...
+- 실시간 추적·지역 지도 작성·루프 폐쇄를 결합한다.
+- 다양한 시퀀스에서 카메라 궤적의 정확성과 추적 강건성을 평가한다.
 
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+[저자 원문](https://arxiv.org/abs/1502.00956)
 
 ## Evaluation Scope
 

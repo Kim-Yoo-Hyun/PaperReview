@@ -7,11 +7,11 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2026 / ICML
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Mikołaj Zieliński, Krzysztof Byrski, Tomasz Szczepanik, Dominik Belter, Przemysław Spurek
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
 - Tags: NeRF, equivariant, 3D Vision
-- Official paper: https://openreview.net/forum?id=fAj3MJghc0
+- Official paper: https://icml.cc/virtual/2026/poster/62601
 - Full-text retrieval: https://openreview.net/pdf/048e4b5756022f2faa8898f0f2d379b85079ab58.pdf
 - Code/Project: not identified
 - Paper type: method

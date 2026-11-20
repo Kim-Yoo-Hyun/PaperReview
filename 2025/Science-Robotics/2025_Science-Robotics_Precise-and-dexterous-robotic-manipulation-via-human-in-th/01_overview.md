@@ -7,11 +7,11 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / Science Robotics
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Jianlan Luo, Charles Xu, Jeffrey Wu, Sergey Levine
 - Primary track: RL, IL, offline learning, and robot data
 - Tier: CORE
 - Tags: Robotics, Reinforcement Learning, human-in-the-loop, real-world RL, dexterous manipulation, recovery
-- Official paper: https://www.science.org/doi/10.1126/scirobotics.ads5033
+- Official paper: https://api.crossref.org/works/10.1126/scirobotics.ads5033
 - Full-text retrieval: https://arxiv.org/pdf/2410.21845
 - Code/Project: https://github.com/rail-berkeley/hil-serl
 - Paper type: method
@@ -22,7 +22,7 @@
 
 ## Why This Paper Is Here
 
-RL, IL, offline learning, and robot data의 robot_data 문제를 이해하기 위해 읽는다. 본문은 However, developing general-purpose vision-based methods that can efficiently acquire physically complex skills, with proficiency exceeding imitation learning and hand-designed controllers, has been comparatively difficult.를 문제로 두고, To assess the effectiveness of our system, we compare it against several state-of-the-art RL methods and conduct ablation studies to understand the contribution of each component.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+실물 로봇에서 시연과 사람의 개입을 시각 기반 강화학습에 결합해 정밀 조작 정책을 개선한다.
 
 ## Problem and Motivation
 
@@ -56,16 +56,10 @@ RL, IL, offline learning, and robot data의 robot_data 문제를 이해하기 �
 
 ## Main Claims and Actual Contribution
 
-- **p. 3 / 1. Introduction - extractive body cue:** To assess the effectiveness of our system, we compare it against several state-of-the-art RL methods and conduct ablation studies to understand the contribution of each ...
-- **p. 3 / 1. Introduction - extractive body cue:** In summary, our contributions demonstrate that with the appropriate system-level design choices, RL can effectively solve a wide range of dexterous and complex vision-based manipulation ...
-- **p. 1 / 1. Introduction - extractive body cue:** However, developing general-purpose vision-based methods that can efficiently acquire physically complex skills, with proficiency exceeding imitation learning and hand-designed controllers, has been comparatively difficult.
-- **p. 1 / 1. Introduction - extractive body cue:** This could result in performance that not only exceeds that of hand-designed controllers but also surpasses human teleoperation.
-- **p. 2 / 1. Introduction - extractive body cue:** A subset of tasks considered in this paper, they include whipping out a Jenga block from its tower, flipping an object in a pan, assembling ...
-- **p. 15 / 4.3. Experimental Results - extractive body cue:** This is a significant improvement over the HG-DAgger baseline, which achieved an average success rate of 49.7% across all tasks.
-- **p. 15 / 4.3. Experimental Results - extractive body cue:** 1, HIL-SERL achieved a success rate of 100% within 1 to 2.5 hours of real-world training on nearly all the tasks.
-- **p. 17 / 5. Result Analysis - extractive body cue:** We examine why the learned policies consistently achieve high success rates across diverse tasks, investigating the factors that contribute to their robustness.
+- 시연, 실행 중 교정, 표본 효율적인 강화학습과 실물 시스템 설계를 하나의 학습 절차로 통합한다.
+- 정밀 조립·동적 조작·양팔 협응에서 학습 시간, 작업 성공과 실행 속도를 기준 방법과 비교한다.
 
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+[저자 원문](https://arxiv.org/html/2410.21845)
 
 ## Evaluation Scope
 

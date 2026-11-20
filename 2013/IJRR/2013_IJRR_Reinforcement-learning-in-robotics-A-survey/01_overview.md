@@ -3,13 +3,14 @@
 > Evidence maturity: `ABSTRACT_CHECKED`. abstract 기반 — 본문 수동 확인 필요.
 > 자동 작성 노트는 실제 정독을 뜻하지 않는다. 사용자 reading status는 UNREAD로 시작한다.
 
-- Year/Venue: 2013 / IJRR
+- Year/Venue
+- Authors: Jens Kober, J. Andrew Bagnell, Jan Peters
 - Category: Robot Learning and Data
 - Primary track: RL, IL, offline learning, and robot data
 - Tier: REFERENCE
 - Tags: reinforcement-learning, Robotics, survey, sample-efficiency
 - Aliases: Kober robotics RL survey
-- Official paper: https://journals.sagepub.com/doi/abs/10.1177/0278364913495721
+- Official paper: https://api.crossref.org/works/10.1177/0278364913495721
 - Venue verification: https://journals.sagepub.com/doi/abs/10.1177/0278364913495721
 - Code/Project: https://www.ias.informatik.tu-darmstadt.de/Publications/BibTex?id=10613
 - Code: not_identified

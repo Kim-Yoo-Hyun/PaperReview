@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2024 / ICRA
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Ajay Sridhar, Dhruv Shah, Catherine Glossop, Sergey Levine
 - Primary track: Planning and control
 - Tier: CORE
 - Tags: Robotics, Navigation, diffusion policy, exploration
@@ -19,7 +19,7 @@
 
 ## Why This Paper Is Here
 
-Planning and control의 navigation 문제를 이해하기 위해 읽는다. 본문은 Prior works have often addressed this challenge by training a separate high-level policy or goal proposal system that generates suitable exploratory tasks, for example using high-level planning [1], hierarchical reinforcement learning [ ...를 문제로 두고, In this paper, we present a design for such a policy by combining a Transformer backbone for encoding the highdimensional stream of visual observations with diffusion models for modeling a sequence of ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+NoMaD는 목표 영상의 유무에 따라 하나의 확산 정책으로 목표를 향해 가거나 새로운 환경을 탐색한다.
 
 ## Problem and Motivation
 
@@ -52,16 +52,10 @@ Planning and control의 navigation 문제를 이해하기 위해 읽는다. 본�
 
 ## Main Claims and Actual Contribution
 
-- **p. 1 / I. INTRODUCTION - extractive body cue:** In this paper, we present a design for such a policy by combining a Transformer backbone for encoding the highdimensional stream of visual observations with ...
-- **p. 1 / I. INTRODUCTION - extractive body cue:** The main contribution of our work is Navigation with Goal Masked Diffusion, or NoMaD, a novel architecture for robotic navigation in previously unseen environments.
-- **p. 4 / IV. METHOD - extractive body cue:** The noise prediction network, ϵθ, consists of a 1D conditional U-Net [29, 31] with 15 convolutional layers.
-- **p. 4 / IV. METHOD - extractive body cue:** Note that we model the conditional (and not joint) action distribution, excluding ct from the output of the denoising process, which enables real-time control and ...
-- **p. 3 / IV. METHOD - extractive body cue:** Training a shared policy across both behaviors allows the model to learn a more expressive prior over actions at, which can be used for both ...
-- **p. 5 / V. EVALUATION - extractive body cue:** NoMaD consistently outperforms all baselines and results in smooth, reactive policies.
-- **p. 5 / V. EVALUATION - extractive body cue:** Success Masked ViNTm 15M 50% 1.0 30% VIB [17] 6M 30% 4.0 15% Autoregressivem 19M 90% 2.0 60% Random Subgoals [3] 30M 70% 2.7 90% ...
-- **p. 6 / V. EVALUATION - extractive body cue:** NoMaD outperforms both the ViT- and CNN-based architectures, successfully reaching the goal while avoiding collisions.
+- 목표 표현을 마스킹하는 학습과 확산 행동 디코더를 결합해 목표 조건부 이동과 목표 없는 탐색을 함께 학습한다.
+- 여러 지상 로봇의 주행 자료로 학습하고 실제 이동 로봇에서 새로운 환경의 목표 도달과 충돌을 평가한다.
 
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+[저자 원문](https://arxiv.org/abs/2310.07896)
 
 ## Evaluation Scope
 

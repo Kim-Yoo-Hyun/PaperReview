@@ -3,7 +3,8 @@
 > Evidence maturity: `ABSTRACT_CHECKED`. abstract 기반 — 본문 수동 확인 필요.
 > 자동 작성 노트는 실제 정독을 뜻하지 않는다. 사용자 reading status는 UNREAD로 시작한다.
 
-- Year/Venue: 2024 / RSS
+- Year/Venue
+- Authors: Jiazhao Zhang, Kunyu Wang, Rongtao Xu, Gengze Zhou, Yicong Hong, Xiaomeng Fang, Qi Wu, Zhizheng Zhang, He Wang
 - Category: VLA and Generalist Robot Policies
 - Primary track: VLA and generalist robot policies
 - Tier: NEXT
@@ -12,7 +13,7 @@
 - Official paper: https://roboticsproceedings.org/rss20/p079.html
 - Venue verification: https://roboticsproceedings.org/rss20/p079.html
 - Code/Project: https://pku-epic.github.io/NaVid/
-- Code: project_only
+- Code: https://github.com/jzhzhang/NaVid-VLN-CE
 - Source audit: 2026-10-19: 공식 paper abstract 및 저자 project/code README 확인; abstract 기반 — 본문 수동 확인 필요.
 
 ## Problem and Importance

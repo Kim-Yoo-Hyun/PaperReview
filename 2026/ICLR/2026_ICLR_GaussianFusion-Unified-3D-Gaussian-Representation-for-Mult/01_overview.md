@@ -7,12 +7,12 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2026 / ICLR
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Xiao Zhao, Chang Liu, Mingxu Zhu, Zheyuan Zhang, Linna Song, Qingliang Luo, Chufan Guo, Kuifeng Su
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
 - Tags: Gaussian Splatting, sensor fusion, LiDAR, 3D Vision
-- Official paper: https://openreview.net/forum?id=7jXxQ9bGoU
-- Full-text retrieval: https://chatpaper.com/api/v1/articles/download/246879
+- Official paper: https://proceedings.iclr.cc/paper_files/paper/2026/hash/b8932994f80e23f6dd535f0762ed3ef4-Abstract-Conference.html
+- Full-text retrieval: https://proceedings.iclr.cc/paper_files/paper/2026/file/b8932994f80e23f6dd535f0762ed3ef4-Paper-Conference.pdf
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (14 pages; PyMuPDF text; title-token overlap first two pages=1.0)

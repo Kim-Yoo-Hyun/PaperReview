@@ -7,11 +7,11 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 1981 / Journal of Dynamic Systems, Measurement, and Control
-- Authors: not duplicated here when not verified in the registry source
+- Authors: M. H. Raibert, J. J. Craig
 - Primary track: Planning and control
 - Tier: REFERENCE
 - Tags: Robotics, force control, contact, manipulation
-- Official paper: https://doi.org/10.1115/1.3139652
+- Official paper: https://api.crossref.org/works/10.1115/1.3139652
 - Full-text retrieval: https://fab.cba.mit.edu/classes/865.15/classes/measurement/hybrid-position-force.pdf
 - Code/Project: not identified
 - Paper type: theory_or_foundation

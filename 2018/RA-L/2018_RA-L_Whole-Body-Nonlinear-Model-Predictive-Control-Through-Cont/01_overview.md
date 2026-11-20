@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2018 / RA-L
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Michael Neunert, Markus Stauble, Markus Giftthaler, Carmine D. Bellicoso, Jan Carius, Christian Gehring, Marco Hutter, Jonas Buchli
 - Primary track: Planning and control
 - Tier: REFERENCE
 - Tags: Robotics, whole-body control, model predictive control, quadruped

@@ -7,11 +7,11 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2026 / ICML
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Dapeng Zhang, Zhenlong Yuan, Zhangquan Chen, Chih-Ting Liao, Yinda Chen, Fei Shen, Qingguo Zhou, Tat-Seng Chua
 - Primary track: VLA and generalist robot policies
 - Tier: REFERENCE
 - Tags: VLA, Vision-Language Model, Robotics, 3D Vision, Reinforcement Learning
-- Official paper: https://openreview.net/forum?id=c4iSIrb6Iv
+- Official paper: https://icml.cc/virtual/2026/poster/62900
 - Full-text retrieval: https://openreview.net/pdf/2958fe5249a1a673a414d689de7784b306b2a02a.pdf
 - Code/Project: not identified
 - Paper type: method

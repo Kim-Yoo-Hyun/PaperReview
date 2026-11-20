@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2019 / CVPR
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Christopher Choy, JunYoung Gwak, Silvio Savarese
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
 - Tags: 3D Vision

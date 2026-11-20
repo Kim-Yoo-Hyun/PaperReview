@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2023 / CVPR
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Songyou Peng, Kyle Genova, Chiyu “Max” Jiang, Andrea Tagliasacchi, Marc Pollefeys, Thomas Funkhouser
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
 - Tags: open-vocabulary, 3D semantic, CLIP

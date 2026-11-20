@@ -8,7 +8,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 1999 / NeurIPS
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Richard S. Sutton, David McAllester, Satinder Singh, Yishay Mansour
 - Primary track: RL, IL, offline learning, and robot data
 - Tier: CORE
 - Tags: Robotics, Reinforcement Learning, Policy Gradient, actor-critic

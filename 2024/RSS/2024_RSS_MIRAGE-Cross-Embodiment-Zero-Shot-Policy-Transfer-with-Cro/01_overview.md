@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2024 / RSS
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Lawrence Yunliang Chen, Karthik Dharmarajan, Kush Hari, Chenfeng Xu, Quan Vuong, Ken Goldberg
 - Primary track: VLA and generalist robot policies
 - Tier: NEXT
 - Tags: Robotics, cross-embodiment, zero-shot transfer, policy transfer, manipulation, domain adaptation

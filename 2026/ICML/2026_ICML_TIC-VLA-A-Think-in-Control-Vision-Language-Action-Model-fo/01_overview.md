@@ -7,12 +7,12 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2026 / ICML
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Zhiyu Huang, Yun Zhang, Johnson Liu, Rui Song, Chen Tang, Jiaqi Ma
 - Primary track: VLA and generalist robot policies
 - Tier: REFERENCE
 - Tags: VLA, Vision-Language Model, Robotics, Navigation, Reinforcement Learning
-- Official paper: https://openreview.net/forum?id=9wYjjPydfe
-- Full-text retrieval: https://openreview.net/pdf/111f8ac3ef90d847bb2191b2bd71a573458c6810.pdf
+- Official paper: https://icml.cc/virtual/2026/poster/65809
+- Full-text retrieval: https://arxiv.org/pdf/2602.02459.pdf
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (24 pages; PyMuPDF text; title-token overlap first two pages=1.0)

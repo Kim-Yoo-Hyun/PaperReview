@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2026 / CVPR
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Weiqi Zhang, Junsheng Zhou, Haotian Geng, Kanle Shi, Shenkun Xu, Yi Fang, Yu-Shen Liu
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
 - Tags: Gaussian Splatting, point cloud, 3D Vision
@@ -19,7 +19,7 @@
 
 ## Why This Paper Is Here
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 mains limited due to the lack of proper geometry priors.를 문제로 두고, Our contributions can be summarized as follows: • We propose GaussianGrow, a novel approach that generates 3D Gaussians by learning to grow them from easily accessible 3D point clouds with supervisions from ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+GaussianGrow는 점군 기하와 텍스트를 조건으로 3D 가우시안 장면을 생성한다.
 
 ## Problem and Motivation
 
@@ -53,16 +53,10 @@ Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 �
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** Our contributions can be summarized as follows: • We propose GaussianGrow, a novel approach that generates 3D Gaussians by learning to grow them from easily ...
-- **p. 2 / 1. Introduction - extractive body cue:** Bridging the gap between point cloud geometries and 3D Gaussian Splatting appearances, we introduce a novel perspective that rethinks Gaussian generation by growing 3D Gaussians ...
-- **p. 3 / 3. Method - extractive body cue:** We present GaussianGrow, a novel generative model for 3D Gaussian Splatting by learning to grow 3D Gaussians from 3D point cloud geometries.
-- **p. 4 / 3.2. Appearance Generation - extractive body cue:** Our method begins by identifying critical overlap regions where the inconsistencies are most pronounced.
-- **p. 4 / 3.2. Appearance Generation - extractive body cue:** A spatial Gaussian inpainting strategy is also used to diffuse appearance from optimized Gaussians to the hard-to-observe ones. we propose a dense-view generation framework that ...
-- **p. 7 / 4.2. Text-to-3D Generation - extractive body cue:** Moreover, applying the geometry of LGM to GaussianGrow also achieves significantly better performance by replacing the appearance of LGM with GaussianGrow.
-- **p. 7 / 4.2. Text-to-3D Generation - extractive body cue:** The results demonstrate that GaussianGrow significantly outperforms previous methods in terms of appearance generation, and a stronger geometric setting leads to better generation quality.
-- **p. 6 / 4. Experiments - extractive body cue:** In this section, we present a comprehensive evaluation of GaussianGrow's performance across multiple scenarios.
+- 입력 점의 기하를 가우시안 성장의 조건으로 사용한다.
+- 텍스트가 요구하는 외형을 기하 구조에 부여하는 결과를 평가한다.
 
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+[저자 원문](https://openaccess.thecvf.com/content/CVPR2026/html/Zhang_GaussianGrow_Geometry-aware_Gaussian_Growing_from_3D_Point_Clouds_with_Text_CVPR_2026_paper.html)
 
 ## Evaluation Scope
 

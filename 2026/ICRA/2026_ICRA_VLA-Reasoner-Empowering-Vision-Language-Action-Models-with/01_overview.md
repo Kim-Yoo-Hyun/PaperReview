@@ -7,11 +7,11 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2026 / ICRA
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Wenkai Guo, Guanxing Lu, Haoyuan Deng, Zhenyu Wu, Yansong Tang, Ziwei Wang
 - Primary track: VLA and generalist robot policies
 - Tier: REFERENCE
 - Tags: VLA, Vision-Language Model, Reinforcement Learning
-- Official paper: https://ras.papercept.net/conferences/conferences/ICRA26/program/ICRA26_ContentListWeb_3.html
+- Official paper: https://api.crossref.org/works/10.1109/icra57385.2026.11695971
 - Full-text retrieval: https://arxiv.org/pdf/2509.22643
 - Code/Project: not identified
 - Paper type: method
@@ -19,7 +19,7 @@
 
 ## Why This Paper Is Here
 
-VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다. 본문은 However, current VLAs also face critical limitations.를 문제로 두고, Our contributions are summarized as follows: • We propose a plug-in framework named VLA-Reasoner that empowers VLAs with structured reasoning to address their incremental deviations during deployment. • We adapt a modified ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+VLA-Reasoner는 기존 VLA가 낸 후보 행동의 미래를 월드 모델로 예측해 실행할 행동을 탐색한다.
 
 ## Problem and Motivation
 
@@ -53,16 +53,10 @@ VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / I. INTRODUCTION - extractive body cue:** Our contributions are summarized as follows: • We propose a plug-in framework named VLA-Reasoner that empowers VLAs with structured reasoning to address their incremental deviations ...
-- **p. 1 / I. INTRODUCTION - extractive body cue:** We introduce a KDE-based confidence distribution that samples candidates in MCTS from an expert-like prior, reducing redundant VLA queries while preserving exploration.
-- **p. 1 / I. INTRODUCTION - extractive body cue:** This raises a core question: "Can VLAs explore the longhorizon future influence of actions at test time, and decide the optimal action?" To this end, ...
-- **p. 2 / I. INTRODUCTION - extractive body cue:** Our method delivers consistent gains in both simulation and on real robots.
-- **p. 3 / III. METHOD - extractive body cue:** In this section, we first show the pipeline of our framework as Figure 2, and then present the formulation of our work (Section III-A).
-- **p. 5 / 3) Robustness. Can VLA-Reasoner adapt to varied set - extractive body cue:** As the success rate is the primary metric of evaluation in two benchmarks, our method improves the absolute task-set performance on OpenVLA-SFT by 5% on ...
-- **p. 6 / 3) Robustness. Can VLA-Reasoner adapt to varied set - extractive body cue:** It averages an improvement of OpenVLA with an absolute gain of 19%, a relative gain of 86.4%, as the baseline shows a poor performance of ...
-- **p. 2 / I. INTRODUCTION - extractive body cue:** In real-world deployments, our approach achieves higher success rates compared to popular VLAs fine-tuned with a few demonstrations, indicating stronger generalization and adaptivity at test ...
+- 실행 시점에 후보 궤적을 전개하고 트리 탐색으로 결과를 비교한다.
+- 후보 분포를 이용해 중복된 정책 호출을 줄이는 방식을 평가한다.
 
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+[저자 원문](https://arxiv.org/abs/2509.22643)
 
 ## Evaluation Scope
 

@@ -7,13 +7,13 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2017 / TAC
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Aaron D. Ames, Xiangru Xu, Jessy W. Grizzle, Paulo Tabuada
 - Primary track: World models, safety, uncertainty, and recovery
 - Tier: NEXT
 - Tags: Robotics, control barrier function, safety-critical control, quadratic programming
 - Official paper: https://arxiv.org/abs/1609.06408
 - Full-text retrieval: https://arxiv.org/pdf/1609.06408
-- Code/Project: https://coogan.ece.gatech.edu/papers/pdf/ames2017control.pdf
+- Code/Project: not identified
 - Paper type: system
 - Source audit: full-text PDF body checked on 2026-09-03 (17 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 

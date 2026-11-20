@@ -7,11 +7,11 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 1998 / Artificial Intelligence
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Leslie Pack Kaelbling, Michael L. Littman, Anthony R. Cassandra
 - Primary track: Planning and control
 - Tier: CORE
 - Tags: Robotics, Planning, POMDP, partial observability, uncertainty, decision making
-- Official paper: https://www.sciencedirect.com/science/article/pii/S000437029800023X
+- Official paper: https://api.crossref.org/works/10.1016/S0004-3702(98)00023-X
 - Full-text retrieval: https://www.cassandra.org/arc/papers/aij98.pdf
 - Code/Project: not identified
 - Paper type: theory_or_foundation
@@ -19,7 +19,7 @@
 
 ## Why This Paper Is Here
 
-Planning and control의 planning 문제를 이해하기 위해 읽는다. 본문은 Problems like the one described above can be modeled as partially observable Markov decision processes (POMDPs).를 문제로 두고, This paper is intended to make two contributions.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+부분적으로만 관측할 수 있는 확률적 환경에서 관측·행동 이력으로 상태에 대한 믿음을 갱신하고 행동을 계획한다.
 
 ## Problem and Motivation
 
@@ -53,16 +53,10 @@ Planning and control의 planning 문제를 이해하기 위해 읽는다. 본문
 
 ## Main Claims and Actual Contribution
 
-- **p. 3 / 1 Introduction - extractive body cue:** This paper is intended to make two contributions.
-- **p. 3 / 1 Introduction - extractive body cue:** The second is to describe a novel algorithmic approach for solving POMDPs exactly.
-- **p. 19 / 44 The Witness Algorithm - extractive body cue:** The code in Table 2 outlines our approach to solving PompPs.
-- **p. 18 / 44 The Witness Algorithm - extractive body cue:** ‘To improve the complexity of the valueiteration algorithm, we must avoid generating V;*; instead, we would like to generate the elements of V; direct] Ifwe ...
-- **p. 20 / 441 Witness inner loop - extractive body cue:** The tree p is built with subtrees 7» for each observation 0, We add the new policy tree to Uy to improve the approximation.
-- **p. 20 / 442 Identifying a witness - extractive body cue:** That is, if there is a belief state, b, for which Prey is an improvement over all the policy trees we have found so far, ...
-- **p. 21 / 44.3. Checking the witness condition - extractive body cue:** If the linear program finds that the biggest advantage is not positive, that is, that 5 <0, then Pyew is not an improvement over all ...
-- **p. 21 / 44.3. Checking the witness condition - extractive body cue:** The linear program in Table 3 solves exactly this problem, The variable d is the minimum amount of improvement of Pew Over any policy tree ...
+- POMDP에서 믿음 상태와 가치함수를 이용해 정책을 구성하는 방법을 설명한다.
+- 정확한 유한 구간 가치 반복에 필요한 가치 벡터를 찾아내는 witness 알고리즘과 계산 비용을 분석한다.
 
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+[저자 원문](https://people.smp.uq.edu.au/YoniNazarathy/Control4406_2014/resources/KaelblingLittmanCassandra1998.pdf)
 
 ## Evaluation Scope
 

@@ -75,6 +75,8 @@ VENUE_KIND_OVERRIDES = {
     "ijhr": "journal",
     "icaps": "conference",
     "ijcai": "conference",
+    "sca": "conference",
+    "autonomous robots": "journal",
 }
 
 VENUE_IDS = {

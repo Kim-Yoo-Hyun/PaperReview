@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2020 / NeurIPS
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Tom Brown, Benjamin Mann, Nick Ryder, Melanie Subbiah, Jared D Kaplan, Prafulla Dhariwal, Arvind Neelakantan, Pranav Shyam, Girish Sastry, Amanda Askell, Sandhini Agarwal, Ariel Herbert-Voss, Gretchen Krueger, Tom Henighan, Rewon Child, Aditya Ramesh, Daniel Ziegler, Jeffrey Wu, Clemens Winter, Chris Hesse, Mark Chen, Eric Sigler, Mateusz Litwin, Scott Gray, Benjamin Chess, Jack Clark, Christopher Berner, Sam McCandlish, Alec Radford, Ilya Sutskever, Dario Amodei
 - Primary track: Foundations: Vision and Language Models
 - Tier: REFERENCE
 - Tags: LLM, in-context learning
@@ -19,7 +19,7 @@
 
 ## Why This Paper Is Here
 
-Foundations: Vision and Language Models의 upstream 문제를 이해하기 위해 읽는다. 본문은 However, a major limitation to this approach is that while the architecture is task-agnostic, there is still a need for task-specific datasets and task-specific fine-tuning: to achieve strong performance on a desired ...를 문제로 두고, The panels above show four methods for performing a task with a language model - fine-tuning is the traditional method, whereas zero-, one-, and few-shot, which we study in this work, require ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+GPT-3는 자기회귀 언어 모델에 과제 설명과 소수의 예시를 문맥으로 주어, 가중치를 갱신하지 않고 여러 언어 과제를 수행한다.
 
 ## Problem and Motivation
 
@@ -53,16 +53,10 @@ Foundations: Vision and Language Models의 upstream 문제를 이해하기 위�
 
 ## Main Claims and Actual Contribution
 
-- **p. 7 / 2 Approach - extractive body cue:** The panels above show four methods for performing a task with a language model - fine-tuning is the traditional method, whereas zero-, one-, and few-shot, ...
-- **p. 5 / 1 Introduction - extractive body cue:** Specifically, we evaluate GPT-3 on over two dozen NLP datasets, as well as several novel tasks designed to test rapid adaptation to tasks unlikely to ...
-- **p. 5 / 1 Introduction - extractive body cue:** GPT-3 also displays one-shot and few-shot proficiency at tasks designed to test rapid adaption or on-the-fly reasoning, which include unscrambling words, performing arithmetic, and using ...
-- **p. 4 / 1 Introduction - extractive body cue:** We show in-context learning performance on a simple task requiring the model to remove random symbols from a word, both with and without a natural ...
-- **p. 6 / 1 Introduction - extractive body cue:** In Section 2, we describe our approach and methods for training GPT-3 and evaluating it.
-- **p. 12 / 3 Results - extractive body cue:** GPT-3 significantly improves SOTA on LAMBADA while achieving respectable performance on two difficult completion prediction datasets. a[Tur20] b[RWC+19] c[LDL19] d[LCH+20] Figure 3.2: On LAMBADA, the ...
-- **p. 16 / Figure/Table caption - extractive body cue:** Figure 3.5: Zero-, one-, and few-shot performance on the adversarial Winogrande dataset as model capacity scales. Scaling is relatively smooth with the gains to few-shot ...
-- **p. 11 / 3 Results - extractive body cue:** [BHT+20] reflect on the small 1.5% improvement achieved by a doubling of model size between two recent state of the art results ([SPP+19] 11
+- 같은 계열의 모델 크기를 바꾸며 문맥 학습 결과를 비교한다.
+- 예시를 주지 않거나 하나 또는 여러 개를 주는 조건을 구분해 평가한다.
 
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+[저자 원문](https://proceedings.neurips.cc/paper_files/paper/2020/hash/1457c0d6bfcb4967418bfb8ac142f64a-Abstract.html)
 
 ## Evaluation Scope
 

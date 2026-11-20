@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2020 / arXiv
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Yuke Zhu, Josiah Wong, Ajay Mandlekar, Roberto Martín-Martín, Abhishek Joshi, Kevin Lin, Abhiram Maddukuri, Soroush Nasiriany, Yifeng Zhu
 - Primary track: Manipulation, contact, tactile, and dexterity
 - Tier: REFERENCE
 - Tags: Robotics, Benchmark, simulation, manipulation
@@ -19,7 +19,7 @@
 
 ## Why This Paper Is Here
 
-Manipulation, contact, tactile, and dexterity의 benchmark 문제를 이해하기 위해 읽는다. 본문은 Nonetheless, the challenges of reproducibility and the limited accessibility of robot hardware have impaired research progress [5].를 문제로 두고, Our framework supports multiple sensing modalities, such as RGB-D cameras, force-torque measurements, and proprioceptive data, allowing multimodal solutions to be developed.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+robosuite는 조작 로봇·그리퍼·제어기·과제를 조합해 학습 정책을 비교하는 시뮬레이션 환경이다.
 
 ## Problem and Motivation
 
@@ -53,16 +53,10 @@ Manipulation, contact, tactile, and dexterity의 benchmark 문제를 이해하�
 
 ## Main Claims and Actual Contribution
 
-- **p. 4 / 1 Introduction - extractive body cue:** Our framework supports multiple sensing modalities, such as RGB-D cameras, force-torque measurements, and proprioceptive data, allowing multimodal solutions to be developed.
-- **p. 1 / 1 Introduction - extractive body cue:** We introduce robosuite, a modular simulation framework and benchmark for robot learning.
-- **p. 4 / 1 Introduction - extractive body cue:** The diagram above illustrates the key components in our framework and their relationships.
-- **p. 1 / 1 Introduction - extractive body cue:** In recent years, advances in physics-based simulations and ∗♣: founding members who initiate and lead this project †♢: core members who make significant contributions (in ...
-- **p. 9 / 1 Introduction - extractive body cue:** This design enables modularity when controlling robots that can be decomposed into multiple body parts.
-- **p. 8 / 1 Introduction - extractive body cue:** This newest model boasts an improved footprint and embedded force-torque sensor in its end effector.
-- **p. 9 / 1 Introduction - extractive body cue:** The controllers will translate the reference signals into corresponding joint torque values to try to achieve that desired configuration.
-- **p. 11 / 1 Introduction - extractive body cue:** For the OSC POSITION variants, the robot will hold the initial orientation while trying to achieve the position given in the action.
+- RGB-D, 힘·토크 및 고유수용감각 등 여러 관측을 지원한다.
+- 공통 인터페이스로 서로 다른 조작 환경을 구성한다.
 
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+[저자 원문](https://arxiv.org/abs/2009.12293)
 
 ## Evaluation Scope
 

@@ -7,11 +7,11 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / NeurIPS
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Changkun Liu, Bin Tan, Zeran Ke, Shangzhan Zhang, Jiachen Liu, Ming Qian, Nan Xue, Yujun Shen, Tristan Braud
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
 - Tags: Gaussian Splatting, 3D reconstruction, 3D Vision
-- Official paper: https://openreview.net/forum?id=YTwRZP8mNO
+- Official paper: https://arxiv.org/abs/2510.18714
 - Full-text retrieval: https://arxiv.org/pdf/2510.18714
 - Code/Project: not identified
 - Paper type: method

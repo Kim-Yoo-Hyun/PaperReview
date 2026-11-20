@@ -3,7 +3,8 @@
 > Evidence maturity: `ABSTRACT_CHECKED`. abstract 기반 — 본문 수동 확인 필요.
 > 자동 작성 노트는 실제 정독을 뜻하지 않는다. 사용자 reading status는 UNREAD로 시작한다.
 
-- Year/Venue: 2026 / RSS
+- Year/Venue
+- Authors: Haitao Lin, Hanyang Yu, Jingshun Huang, He Zhang, Yonggen Ling, Ping Tan, Xiangyang Xue, Yanwei Fu
 - Category: VLA and Generalist Robot Policies
 - Primary track: VLA and generalist robot policies
 - Tier: NEXT
@@ -12,7 +13,7 @@
 - Official paper: https://roboticsproceedings.org/rss22/p145.html
 - Venue verification: https://roboticsproceedings.org/rss22/p145.html
 - Code/Project: https://hetolin.github.io/PoseVLA/
-- Code: project_only
+- Code: https://github.com/hetolin/PoseVLA
 - Source audit: 2026-11-18: 공식 초록·bibliographic record와 연결된 저자 자료 확인. Abstract 기반 등록이며 본문 전체·실험 재현은 미확인.
 
 ## Problem and Importance

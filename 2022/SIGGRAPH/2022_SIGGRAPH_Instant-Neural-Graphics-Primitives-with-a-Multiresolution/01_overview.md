@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2022 / SIGGRAPH
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Thomas Müller, Alex Evans, Christoph Schied, Alexander Keller
 - Primary track: Robotics-enabling 3D perception
 - Tier: REFERENCE
 - Tags: NeRF, 3D Vision, representation, efficiency

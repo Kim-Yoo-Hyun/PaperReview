@@ -1,4 +1,4 @@
-# Problem - Marigold: Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation
+# Problem - Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.

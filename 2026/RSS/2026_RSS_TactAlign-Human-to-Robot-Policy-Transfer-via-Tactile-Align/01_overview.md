@@ -7,13 +7,13 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2026 / RSS
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Youngsun Wi, Jessica Yin, Elvis Xiang, Akash Sharma, Jitendra Malik, Mustafa Mukadam, Nima Fazeli, Tess Hellebrekers
 - Primary track: Manipulation, contact, tactile, and dexterity
 - Tier: NEXT
 - Tags: Robotics, tactile, cross-embodiment, human-to-robot transfer, contact-rich manipulation, dexterity, representation alignment
-- Official paper: https://roboticsconference.org/program/papers/6/
+- Official paper: https://www.roboticsproceedings.org/rss22/p006.html
 - Full-text retrieval: https://roboticsconference.org/program/papers/6/
-- Code/Project: https://roboticsconference.org/program/papers/6/
+- Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (16 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 

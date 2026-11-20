@@ -7,12 +7,12 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / ICML
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Sungjune Kim, Gyeongrok Oh, Heeju Ko, Daehyun Ji, Dongwook Lee, Byung-Jun Lee, Sujin Jang, Sangpil Kim
 - Primary track: RL, IL, offline learning, and robot data
 - Tier: NEXT
 - Tags: Vision-Language Model, Navigation, Reinforcement Learning
-- Official paper: https://openreview.net/forum?id=K4GaB4fdIq
-- Full-text retrieval: https://chatpaper.com/api/v1/articles/download/168050
+- Official paper: https://proceedings.mlr.press/v267/kim25ad.html
+- Full-text retrieval: https://raw.githubusercontent.com/mlresearch/v267/main/assets/kim25ad/kim25ad.pdf
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (18 pages; PyMuPDF text; title-token overlap first two pages=1.0)

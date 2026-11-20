@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2024 / Robotics: Science and Systems
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Yecheng Jason Ma, William Liang, Hung-Ju Wang, Yuke Zhu, Linxi Fan, Osbert Bastani, Dinesh Jayaraman
 - Primary track: RL, IL, offline learning, and robot data
 - Tier: NEXT
 - Tags: Robotics, sim-to-real, Reinforcement Learning, Large Language Model, NVIDIA

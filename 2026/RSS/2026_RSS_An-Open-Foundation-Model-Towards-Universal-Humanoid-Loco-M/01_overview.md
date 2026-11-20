@@ -3,7 +3,8 @@
 > Evidence maturity: `FULL_TEXT_CHECKED`.
 > Source audit: 2026-11-16: RSS metadata·공식 project/code 및 arXiv v1 §III–IV, Appendix IX–X의 지정 내용 확인. RSS 최종본문 전체 대조·사용자 정독·실험을 의미하지 않는다.
 
-- Year/Venue: 2026 / RSS
+- Year/Venue
+- Authors: Songlin Wei, Hongyi Jing, Boqian Li, Zhenyu Zhao, Jiageng Mao, Zhenhao Ni, Sicheng He, Sheng Zang, Xiawei Liu, Kaidi Kang, Jie Liu, Weiduo Yuan, Marco Pavone, Di Huang, Yue Wang
 - Primary track: VLA and generalist robot policies
 - Tags: VLA, humanoid, loco-manipulation, human-video, flow-matching, whole-body-control
 - Official paper: https://www.roboticsproceedings.org/rss22/p021.html

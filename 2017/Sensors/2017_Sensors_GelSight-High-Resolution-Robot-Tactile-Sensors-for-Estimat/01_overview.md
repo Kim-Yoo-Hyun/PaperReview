@@ -7,11 +7,11 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2017 / Sensors
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Wenzhen Yuan, Siyuan Dong, Edward Adelson
 - Primary track: Manipulation, contact, tactile, and dexterity
 - Tier: REFERENCE
 - Tags: Robotics, tactile sensing, Force, contact, manipulation
-- Official paper: https://publications.ri.cmu.edu/gelsight-high-resolution-robot-tactile-sensors-for-estimating-geometry-and-force/
+- Official paper: https://api.crossref.org/works/10.3390/s17122762
 - Full-text retrieval: https://publications.ri.cmu.edu/gelsight-high-resolution-robot-tactile-sensors-for-estimating-geometry-and-force/
 - Code/Project: not identified
 - Paper type: method

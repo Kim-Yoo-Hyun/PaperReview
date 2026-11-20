@@ -3316,7 +3316,7 @@
       data: not_identified
 - id: 2022-xu-umpnet
   registry_id: pr-0716
-  title: 'UMPNet: Universal Manipulation Policy Network for Articulated Objects'
+  title: "Universal Manipulation Policy Network for Articulated Objects"
   authors:
     - Zhenjia Xu
     - Zhanpeng He
@@ -3359,14 +3359,16 @@
   verification: 부분확인
   notes: 스스로 탐색해 관절 물체의 작용 방향을 학습한다. 자기지도 상호작용을 독립적인 방법론 값으로 표현할 수 없다.
   evidence:
-    verified_on: '2026-11-19'
+    verified_on: '2026-11-20'
     sources:
+      게재판 교정: https://api.crossref.org/works/10.1109/LRA.2022.3142397
       저자 서지: https://ump-net.cs.columbia.edu/
       등록 원문: https://arxiv.org/abs/2109.05668
       저장소: https://github.com/columbia-ai-robotics/umpnet
       저자 목록: https://arxiv.org/abs/2109.05668
       소속·내용 원문: https://arxiv.org/pdf/2109.05668
   changed_from:
+    source_audit_2026_11: {"title": "UMPNet: Universal Manipulation Policy Network for Articulated Objects"}
     id: pr-0716
     tier: NEXT
     tags:
@@ -4327,7 +4329,7 @@
     problem: 이진 성공 외의 풍부한 신호로 robot policy를 효율적으로 비교한다.
     method: Progress 등 bounded metric에 기반한 통계적 순차 비교를 제안한다.
     evaluation: Simulation과 실제 robot policy 비교를 보고한다.
-- id: 2025-xu-mobilityvla
+- id: 2024-xu-mobilityvla
   registry_id: pr-1063
   title: 'Mobility VLA: Multimodal Instruction Navigation with Long-Context VLMs and Topological Graphs'
   authors:
@@ -4355,7 +4357,7 @@
     - Jie Tan
   affiliations:
     - Google DeepMind
-  year: 2025
+  year: 2024
   venue: CoRL
   links:
     paper: https://proceedings.mlr.press/v270/xu25b.html
@@ -4406,14 +4408,16 @@
   verification: 부분확인
   notes: 학회는 CoRL 2024, 논문집 발행연도는 2025다. PMLR의 선두 저자는 Zhuo Xu이고 PDF 표제면은 Hao-Tien Lewis Chiang으로 시작한다. 로봇은 바퀴형 모바일 매니퓰레이터이며 이 논문의 과업은 내비게이션이다.
   evidence:
-    verified_on: '2026-11-19'
+    verified_on: '2026-11-20'
     sources:
+      게재판 교정: https://proceedings.mlr.press/v270/
       원문·서지: https://proceedings.mlr.press/v270/xu25b.html
       저자 원고: https://arxiv.org/abs/2407.07775
       저자 서지: https://deepmind.google/research/publications/84894/
       저자 목록: https://proceedings.mlr.press/v270/xu25b.html
       소속·내용 원문: https://raw.githubusercontent.com/mlresearch/v270/main/assets/xu25b/xu25b.pdf
   changed_from:
+    source_audit_2026_11: {"id": "2025-xu-mobilityvla", "year": 2025}
     id: pr-1063
     tier: NEXT
     tags:

@@ -7,12 +7,12 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2026 / ICML
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Sangoh Lee, Sangwoo Mo, Wook-Shin Han
 - Primary track: VLA and generalist robot policies
 - Tier: REFERENCE
 - Tags: VLA, Vision-Language Model, Robotics
-- Official paper: https://openreview.net/forum?id=fm6Z3wfTae
-- Full-text retrieval: https://openreview.net/pdf/68e389cf48e82eb16b32f886139baddd9122f43d.pdf
+- Official paper: https://icml.cc/virtual/2026/poster/62528
+- Full-text retrieval: https://arxiv.org/pdf/2512.20014.pdf
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (48 pages; PyMuPDF text; title-token overlap first two pages=1.0)

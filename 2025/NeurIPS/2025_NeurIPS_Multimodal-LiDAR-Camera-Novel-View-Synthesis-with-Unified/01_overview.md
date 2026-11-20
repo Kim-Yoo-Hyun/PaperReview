@@ -7,11 +7,11 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / NeurIPS
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Weiyi Xue, Fan Lu, Yunwei Zhu, Zehan Zheng, Sanqing Qu, Jiangtong Li, Ya Wu, Haiyun Wei, Guang Chen
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
 - Tags: geometry, sensor fusion, LiDAR, 3D Vision
-- Official paper: https://openreview.net/forum?id=GQHUET0V6f
+- Official paper: https://neurips.cc/virtual/2025/poster/118967
 - Full-text retrieval: https://papers.neurips.cc/paper_files/paper/2025/file/70915b08a205ea5522528690d93518f6-Paper-Conference.pdf
 - Code/Project: not identified
 - Paper type: method

@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2023 / CoRL
-- Authors: Brianna Zitkovich, Tianhe Yu, Sichun Xu 외. 전체 저자 순서는 CoRL 게재본과 원장에 기록했다.
+- Authors: Brianna Zitkovich, Tianhe Yu, Sichun Xu, Peng Xu, Ted Xiao, Fei Xia, Jialin Wu, Paul Wohlhart, Stefan Welker, Ayzaan Wahid, Quan Vuong, Vincent Vanhoucke, Huong Tran, Radu Soricut, Anikait Singh, Jaspiar Singh, Pierre Sermanet, Pannag R. Sanketi, Grecia Salazar, Michael S. Ryoo, Krista Reymann, Kanishka Rao, Karl Pertsch, Igor Mordatch, Henryk Michalewski, Yao Lu, Sergey Levine, Lisa Lee, Tsang-Wei Edward Lee, Isabel Leal, Yuheng Kuang, Dmitry Kalashnikov, Ryan Julian, Nikhil J. Joshi, Alex Irpan, Brian Ichter, Jasmine Hsu, Alexander Herzog, Karol Hausman, Keerthana Gopalakrishnan, Chuyuan Fu, Pete Florence, Chelsea Finn, Kumar Avinava Dubey, Danny Driess, Tianli Ding, Krzysztof Marcin Choromanski, Xi Chen, Yevgen Chebotar, Justice Carbajal, Noah Brown, Anthony Brohan, Montserrat Gonzalez Arenas, Kehang Han
 - Primary track: VLA and generalist robot policies
 - Tier: CORE
 - Tags: VLA, Vision-Language Model, Robotics
@@ -19,7 +19,7 @@
 
 ## Why This Paper Is Here
 
-VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다. 본문은 On the other hand, directly applying such models to robotic tasks is also difficult: such models reason about semantics, labels, and textual prompts, whereas robots require grounded low-level actions, such as Cartesian ...를 문제로 두고, Our main contribution is RT-2, a family of models derived from fine-tuning large vision-language models trained on web-scale data to directly act as generalizable and semantically aware robotic policies.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+RT-2는 웹 시각·언어 과제와 로봇 시연을 함께 미세조정해 영상과 지시에서 로봇 행동을 생성한다.
 
 ## Problem and Motivation
 
@@ -52,16 +52,10 @@ VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다
 
 ## Main Claims and Actual Contribution
 
-- **p. 3 / 1. Introduction - extractive body cue:** Our main contribution is RT-2, a family of models derived from fine-tuning large vision-language models trained on web-scale data to directly act as generalizable and ...
-- **p. 4 / 3. Vision-Language-Action Models - extractive body cue:** In this section, we present our model family and the design choices for enabling training VLMs to directly perform closed-loop robot control.
-- **p. 4 / 3. Vision-Language-Action Models - extractive body cue:** Then, we introduce the recipe and challenges of fine-tuning large VLMs that are pre-trained on web-scale data to directly output robot actions, becoming VLA models.
-- **p. 5 / 3.2. Robot-Action Fine-tuning - extractive body cue:** The action space consists of 6-DoF positional and rotational displacement of the robot end-effector, as well as the level of extension of the robot gripper ...
-- **p. 3 / 1. Introduction - extractive body cue:** Over the course of 6k robotic evaluations, we show that RT-2 enable significant improvements to generalization over objects, scenes, and instructions, and exhibit a breadth ...
-- **p. 9 / 4. Experiments - extractive body cue:** We observe that our VLA models significantly outperform the baselines across all categories, with our best RT-2-PaLI-X model achieving more than 3x average success rate ...
-- **p. 8 / 4. Experiments - extractive body cue:** The performance on seen tasks is similar between the RT-2 models and RT-1, with other baselines attaining a lower success rate.
-- **p. 8 / 4. Experiments - extractive body cue:** Here, on average, both instantiations of RT-2 perform similarly, resulting in ∼2x improvement over the next two baselines, RT-1 and MOO, and ∼6x better than ...
+- 행동을 텍스트와 같은 형식의 토큰으로 바꾸어 기존 시각·언어 모델의 출력으로 학습한다.
+- 로봇 시연에 없던 물체와 의미 지시를 포함한 실물 조작에서 일반화를 평가한다.
 
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+[저자 원문](https://proceedings.mlr.press/v229/zitkovich23a.html)
 
 ## Evaluation Scope
 

@@ -7,11 +7,11 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2011 / AISTATS
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Stephane Ross, Geoffrey Gordon, Drew Bagnell
 - Primary track: RL, IL, offline learning, and robot data
 - Tier: CORE
 - Tags: Robotics, Imitation Learning, policy learning
-- Official paper: https://www.ri.cmu.edu/publications/a-reduction-of-imitation-learning-and-structured-prediction-to-no-regret-online-learning/
+- Official paper: https://proceedings.mlr.press/v15/ross11a.html
 - Full-text retrieval: https://www.ri.cmu.edu/pub_files/2011/4/Ross-AISTATS11-NoRegret.pdf
 - Code/Project: not identified
 - Paper type: theory_or_foundation
@@ -19,7 +19,7 @@
 
 ## Why This Paper Is Here
 
-RL, IL, offline learning, and robot data의 il 문제를 이해하기 위해 읽는다. 본문은 The interaction between policy and the resulting distribution makes optimization difficult as it results in a non-convex objective even if the loss ℓ(s, ·) is convex in π for all states s.를 문제로 두고, We propose a new meta-algorithm for imitation learning which learns a stationary deterministic policy guaranteed to perform well under its induced distribution of states (number of mistakes/costs that grows linearly in T ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+DAgger는 학습 중인 정책이 스스로 방문한 상태에서 전문가 행동을 받아 시연 분포와 실행 분포의 차이를 줄인다.
 
 ## Problem and Motivation
 
@@ -53,16 +53,10 @@ RL, IL, offline learning, and robot data의 il 문제를 이해하기 위해 읽
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** We propose a new meta-algorithm for imitation learning which learns a stationary deterministic policy guaranteed to perform well under its induced distribution of states (number ...
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** We take a reduction-based approach (Beygelzimer et al., 2005) that enables reusing existing supervised learning algorithms.
-- **p. 1 / Abstract - extractive body cue:** In this paper, we propose a new iterative algorithm, which trains a stationary deterministic policy, that can be seen as a no regret algorithm in ...
-- **p. 1 / Abstract - extractive body cue:** We show that any such no regret algorithm, combined with additional reduction assumptions, must find a policy with good performance under the distribution of observations ...
-- **p. 4 / 2 PRELIMINARIES - extractive body cue:** We show below the only requirement is that {βi} be a sequence such that βN = 1 N PN i=1 βi →0 as N →∞.
-- **p. 6 / 5 EXPERIMENTS - extractive body cue:** Though even after 5 iterations, the policy we obtain almost never falls off the track and is significantly outperforming both SMILe and the baseline supervised ...
-- **p. 6 / 5 EXPERIMENTS - extractive body cue:** DAgger (βi = I(i=1)) SMILe (α = 0.1) Supervised Figure 2: Average falls/lap as a function of training data. supervised approach where training always occurs ...
-- **p. 8 / 5 EXPERIMENTS - extractive body cue:** The baseline result without structure achieves 82% character accuracy by just using an SVM that predicts each character independently.
+- 반복마다 수집한 상태·전문가 행동을 이전 자료에 합쳐 다음 정책을 학습한다.
+- 순차 예측을 후회가 작은 온라인 학습으로 환원하고 학습자가 유도한 상태 분포에서의 성능 조건을 제시한다.
 
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+[저자 원문](https://proceedings.mlr.press/v15/ross11a.html)
 
 ## Evaluation Scope
 

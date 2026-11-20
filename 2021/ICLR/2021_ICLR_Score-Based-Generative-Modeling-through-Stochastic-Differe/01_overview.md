@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2021 / ICLR
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Yang Song, Jascha Sohl-Dickstein, Diederik P. Kingma, Abhishek Kumar, Stefano Ermon, Ben Poole
 - Primary track: Foundations: Generative Models
 - Tier: REFERENCE
 - Tags: Diffusion, score model, Generation

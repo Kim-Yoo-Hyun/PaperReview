@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / IROS
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Yujie Tang, Meiling Wang, Yinan Deng, Zibo Zheng, Jiagui Zhong, Tiancheng Liu, Chenjie Zhao, Yufeng Yue
 - Primary track: Robotics-enabling 3D perception
 - Tier: REFERENCE
 - Tags: Navigation, Graph Reasoning, semantic

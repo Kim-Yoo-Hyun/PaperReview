@@ -1,4 +1,4 @@
-# QT-Opt: Scalable Deep Reinforcement Learning for Vision-Based Robotic Manipulation
+# Scalable Deep Reinforcement Learning for Vision-Based Robotic Manipulation
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
 > Analysis basis: full-text PDF body checked on 2026-09-03 (23 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://arxiv.org/abs/1806.10293.
@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2018 / CoRL
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Dmitry Kalashnikov, Alex Irpan, Peter Pastor, Julian Ibarz, Alexander Herzog, Eric Jang, Deirdre Quillen, Ethan Holly, Mrinal Kalakrishnan, Vincent Vanhoucke, Sergey Levine
 - Primary track: Manipulation, contact, tactile, and dexterity
 - Tier: REFERENCE
 - Tags: Robotics, Reinforcement Learning, Q-learning, manipulation

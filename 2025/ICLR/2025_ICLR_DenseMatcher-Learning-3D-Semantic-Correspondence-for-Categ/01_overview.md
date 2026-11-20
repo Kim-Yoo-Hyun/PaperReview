@@ -7,19 +7,19 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / ICLR
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Junzhe Zhu, Yuanchen Ju, Junyi Zhang, Muhan Wang, Zhecheng Yuan, Kaizhe Hu, Huazhe Xu
 - Primary track: Manipulation, contact, tactile, and dexterity
 - Tier: NEXT
 - Tags: Robotics, 3D Vision, semantic
-- Official paper: https://openreview.net/forum?id=8oFvUBvF1u
-- Full-text retrieval: https://openreview.net/pdf/be9894ba90b07c5ec0bd2deda17f1b1b8eeab2aa.pdf
+- Official paper: https://proceedings.iclr.cc/paper_files/paper/2025/hash/7ba6b5b03ae07151a9a353b51f943290-Abstract-Conference.html
+- Full-text retrieval: https://arxiv.org/pdf/2412.05268
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (22 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
-Manipulation, contact, tactile, and dexterity의 vla 문제를 이해하기 위해 읽는다. 본문은 In summary, we make the following contributions: (i) a novel 3d matching dataset that remedies the lack of texture information and categories in previous datasets, (ii) a 3D dense correspondence model framework ...를 문제로 두고, In summary, we make the following contributions: (i) a novel 3d matching dataset that remedies the lack of texture information and categories in previous datasets, (ii) a 3D dense correspondence model framework ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+DenseMatcher는 구조가 비슷한 물체 사이의 조밀한 3D 대응점을 찾아 범주 내 조작 전이에 사용한다.
 
 ## Problem and Motivation
 
@@ -52,16 +52,10 @@ Manipulation, contact, tactile, and dexterity의 vla 문제를 이해하기 위�
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** In summary, we make the following contributions: (i) a novel 3d matching dataset that remedies the lack of texture information and categories in previous datasets, ...
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** Our method achieves 43.5% improvement over previous shape-matching baselines.
-- **p. 3 / 1 INTRODUCTION - extractive body cue:** Our method addresses this by adding a 3D neural network, DiffusionNet (Sharp et al., 2022), to refine 2D features with 3D geometry, producing spatially consistent ...
-- **p. 5 / 1 INTRODUCTION - extractive body cue:** 4.3 LOSS FUNCTION Our loss function consists of two components: L = Lsemantic + Lpreservation.
-- **p. 6 / 1 INTRODUCTION - extractive body cue:** Our approach, however, handles a diverse array of daily objects such as fruits and jugs, which lack distinguishable local features.
-- **p. 10 / 6.1.2 RESULTS - extractive body cue:** As can be seen, the mapping obtained with our method significantly outperforms baselines in terms of accuracy and continuity.
-- **p. 7 / 6.1.2 RESULTS - extractive body cue:** Additionally, due to the generalization capability of pre-trained 2D backbones, we achieve much higher accuracy on out-of-distribution test categories listed in Tab.
-- **p. 9 / 6.1.2 RESULTS - extractive body cue:** For each task, we measure the task success rates over five trials.
+- 여러 시점의 영상 특징을 메시 꼭짓점에 투영하고 3D 네트워크로 정제한다.
+- 정제한 특징에서 함수 지도를 계산해 조밀 대응을 구한다.
 
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+[저자 원문](https://proceedings.iclr.cc/paper_files/paper/2025/hash/7ba6b5b03ae07151a9a353b51f943290-Abstract-Conference.html)
 
 ## Evaluation Scope
 

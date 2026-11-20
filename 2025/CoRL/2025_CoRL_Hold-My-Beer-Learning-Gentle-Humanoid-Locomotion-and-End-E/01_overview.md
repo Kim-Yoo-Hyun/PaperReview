@@ -7,11 +7,11 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / CoRL
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Yitang Li, Yuanhang Zhang, Wenli Xiao, Chaoyi Pan, Haoyang Weng, Guanqi He, Tairan He, Guanya Shi
 - Primary track: Locomotion, whole-body, mobile manipulation, and humanoids
 - Tier: REFERENCE
 - Tags: Robotics, humanoid, locomotion, end-effector stabilization, multi-rate control
-- Official paper: https://openreview.net/forum?id=Bl2VfU9NhF
+- Official paper: https://proceedings.mlr.press/v305/li25i.html
 - Full-text retrieval: https://arxiv.org/pdf/2505.24198
 - Code/Project: https://lecar-lab.github.io/SoFTA/
 - Paper type: method

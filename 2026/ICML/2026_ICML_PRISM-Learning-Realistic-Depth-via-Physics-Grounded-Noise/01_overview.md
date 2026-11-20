@@ -7,11 +7,11 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2026 / ICML
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Xiujian Liang, Jiacheng Liu, Mingyang Sun, Qichen He, Anda Cheng, Cewu Lu, Jianhua Sun
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
 - Tags: semantic, alignment, depth, 3D Vision
-- Official paper: https://openreview.net/forum?id=AnofTirXgv
+- Official paper: https://icml.cc/virtual/2026/poster/65722
 - Full-text retrieval: https://openreview.net/pdf/9655ce373e592ae3473dc14dddd5cc2be47a3b47.pdf
 - Code/Project: not identified
 - Paper type: method

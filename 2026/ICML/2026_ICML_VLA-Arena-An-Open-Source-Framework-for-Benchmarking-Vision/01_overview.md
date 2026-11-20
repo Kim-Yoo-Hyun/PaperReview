@@ -7,11 +7,11 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2026 / ICML
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Borong Zhang, Jiahao Li, Jiachen Shen, Yuhao Zhang, Yishuai Cai, Lu Liu, Hailu Ji, Yuanpei Chen, Juntao Dai, Jiaming Ji, Yaodong Yang
 - Primary track: VLA and generalist robot policies
 - Tier: NEXT
 - Tags: VLA, Benchmark, safety, distractor, extrapolation, long-horizon, manipulation
-- Official paper: https://vla-arena.github.io/
+- Official paper: https://icml.cc/virtual/2026/poster/61388
 - Full-text retrieval: https://arxiv.org/pdf/2512.22539
 - Code/Project: https://vla-arena.github.io/
 - Paper type: benchmark_or_dataset
@@ -19,7 +19,7 @@
 
 ## Why This Paper Is Here
 
-VLA and generalist robot policies의 benchmark 문제를 이해하기 위해 읽는다. 본문은 This lack of integration prevents understanding how models handle concurrent challenges across visual, linguistic, and structural dimensions of task.를 문제로 두고, We introduce VLA-Arena, the first benchmark to structurally evaluate the performance and safety of VLAs.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+VLA-Arena는 여러 VLA의 과제 수행과 안전성을 같은 환경에서 비교하는 평가 도구다.
 
 ## Problem and Motivation
 
@@ -53,16 +53,10 @@ VLA and generalist robot policies의 benchmark 문제를 이해하기 위해 읽
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** We introduce VLA-Arena, the first benchmark to structurally evaluate the performance and safety of VLAs.
-- **p. 2 / 1. Introduction - extractive body cue:** To address this challenge, we propose VLA-Arena, a comprehensive and accessible benchmark for evaluating VLA models.
-- **p. 3 / 2. Structured Task Design - extractive body cue:** To quantitatively measure the capability frontiers of VLA models, we propose a structured task design, as compared in Table 1.
-- **p. 3 / 2. Structured Task Design - extractive body cue:** Based on this classification, we propose the cumulative cost (CC) metric for a trajectory τ of length L: CC(τ) = L-1 X t=0 cinst(st, at) ...
-- **p. 1 / Abstract - extractive body cue:** This allows us to systematically design tasks with fine-grained difficulty levels, enabling a precise measurement of model capability frontiers.
-- **p. 7 / 4.2. Analysis of Performance and Failure Modes - extractive body cue:** Second, without explicit safety constraints, models prioritize task completion, often incurring high CC to achieve success.
-- **p. 7 / 4.1. Experimental Setup - extractive body cue:** To provide a comprehensive assessment, we employ success rate (SR) and cumulative cost (CC) as metrics.
-- **p. 8 / 4.3. Diagnosing Semantic and Visual Grounding - extractive body cue:** VLA-Arena: An Open-Source Framework for Benchmarking Vision-Language-Action Models VLA-Arena (Ours) LIBERO Benchmark 0.0 0.2 0.4 0.6 0.8 1.0 Success Rate -52% -28% -64% -28% w/ ...
+- 안전 관련 조건을 포함하는 조작 과제를 구조화한다.
+- 같은 평가 체계에서 모델들의 성능과 안전 행동을 비교한다.
 
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+[저자 원문](https://icml.cc/virtual/2026/poster/61388)
 
 ## Evaluation Scope
 

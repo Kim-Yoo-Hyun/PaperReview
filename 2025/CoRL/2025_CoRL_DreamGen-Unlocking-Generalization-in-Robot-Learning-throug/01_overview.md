@@ -7,11 +7,11 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / CoRL
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Joel Jang, Seonghyeon Ye, Zongyu Lin, Jiannan Xiang, Johan Bjorck, Yu Fang, Fengyuan Hu, Spencer Huang, Kaushil Kundalia, Yen-Chen Lin, Loïc Magne, Ajay Mandlekar, Avnish Narayan, You Liang Tan, Guanzhi Wang, Jing Wang, Qi Wang, Yinzhen Xu, Xiaohui Zeng, Kaiyuan Zheng, Ruijie Zheng, Ming-Yu Liu, Luke Zettlemoyer, Dieter Fox, Jan Kautz, Scott Reed, Yuke Zhu, Linxi Fan
 - Primary track: World models, safety, uncertainty, and recovery
 - Tier: NEXT
 - Tags: Robotics, world model, Video Generation, robot data, NVIDIA
-- Official paper: https://research.nvidia.com/labs/lpr/publication/jang2025neural/
+- Official paper: https://proceedings.mlr.press/v305/jang25a.html
 - Full-text retrieval: https://research.nvidia.com/labs/lpr/publication/jang2025neural/
 - Code/Project: https://research.nvidia.com/labs/gear/dreamgen/
 - Paper type: method

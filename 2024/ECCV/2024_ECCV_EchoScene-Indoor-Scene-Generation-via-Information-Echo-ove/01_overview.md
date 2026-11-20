@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2024 / ECCV
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Guangyao Zhai, Evin Pınar Örnek, Dave Zhenyu Chen, Ruotong Liao, Yan Di, Nassir Navab, Federico Tombari, Benjamin Busam
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
 - Tags: Graph Reasoning, Diffusion
@@ -19,7 +19,7 @@
 
 ## Why This Paper Is Here
 
-Robotics-enabling 3D perception의 navigation 문제를 이해하기 위해 읽는다. 본문은 Despite its significant progress so far, CSG with scene graph diffusion still suffers from two open challenges.를 문제로 두고, We introduce an information echo scheme inside each branch of EchoScene that allows multiple denoising processes to exchange their denoising status among each other at each time step, bringing global awareness to ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+EchoScene은 장면 그래프에서 물체의 배치와 개별 형상을 함께 생성한다.
 
 ## Problem and Motivation
 
@@ -53,16 +53,10 @@ Robotics-enabling 3D perception의 navigation 문제를 이해하기 위해 읽�
 
 ## Main Claims and Actual Contribution
 
-- **p. 3 / 1 Introduction - extractive body cue:** We introduce an information echo scheme inside each branch of EchoScene that allows multiple denoising processes to exchange their denoising status among each other at ...
-- **p. 3 / 1 Introduction - extractive body cue:** We present EchoScene, a scene generation method with a dual-branch diffusion model on dynamic scene graphs, to simultaneously generate layouts and shapes with more controllability.
-- **p. 5 / 4 Method - extractive body cue:** We present EchoScene, a method that accomplishes scene generation through layout and shape generation from scene graphs.
-- **p. 6 / 4 Method - extractive body cue:** After the encoding, node features evolve to VZ = {vz i / i = 1, . . . , N}, where vz i consists of ...
-- **p. 7 / 4 Method - extractive body cue:** Our pipeline consists of graph preprocessing and two collaborative branches Layout Branch and Shape Branch.
-- **p. 12 / Figure/Table caption - extractive body cue:** Fig. 4: Comparisons with other generative methods. Input scene graphs have more edges between two nodes than the ones visualized here. Red rectangles highlight the ...
-- **p. 10 / 5 Experiments - extractive body cue:** To measure the scene graph consistency, we follow the scene graph constraints [15], which measure the accuracy of a set of relations on a generated ...
-- **p. 11 / Figure/Table caption - extractive body cue:** Table 1: Scene generation realism as measured by FID, FIDCLIP and KID (⇥0.001) scores at 2562 pixels between the top-down rendering of generated and real ...
+- 배치 생성과 형상 생성을 두 확산 과정으로 구성한다.
+- 그래프를 통해 개별 물체와 장면 문맥 사이에 정보를 교환한다.
 
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+[저자 원문](https://www.ecva.net/papers/eccv_2024/papers_ECCV/html/3146_ECCV_2024_paper.php)
 
 ## Evaluation Scope
 

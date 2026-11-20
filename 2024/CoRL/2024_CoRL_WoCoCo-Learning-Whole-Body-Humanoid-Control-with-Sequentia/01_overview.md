@@ -7,13 +7,13 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2024 / CoRL
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Chong Zhang, Wenli Xiao, Tairan He, Guanya Shi
 - Primary track: Locomotion, whole-body, mobile manipulation, and humanoids
 - Tier: REFERENCE
 - Tags: Robotics, humanoid, whole-body control, sequential contacts, Reinforcement Learning
-- Official paper: https://openreview.net/forum?id=Czs2xH9114
+- Official paper: https://proceedings.mlr.press/v270/zhang25a.html
 - Full-text retrieval: https://arxiv.org/pdf/2406.06005
-- Code/Project: https://wococo-humanoid.github.io/
+- Code/Project: https://lecar-lab.github.io/wococo/
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (18 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 

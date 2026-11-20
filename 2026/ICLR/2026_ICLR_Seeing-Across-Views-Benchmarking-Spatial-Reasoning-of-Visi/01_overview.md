@@ -7,12 +7,12 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2026 / ICLR
-- Authors: not duplicated here when not verified in the registry source
+- Authors: ZhiYuan Feng, Zhaolu Kang, Qijie Wang, Zhiying Du, Jiongrui Yan, Shubin Shi, Chengbo Yuan, Huizhi Liang, Yu Deng, Qixiu Li, Rushuai Yang, Ruichuan An, Leqi Zheng, Weijie Wang, Shuang Chen, Sicheng Xu, Yaobo Liang, Jiaolong Yang, Baining Guo
 - Primary track: Robotics-enabling 3D perception
 - Tier: REFERENCE
 - Tags: Vision-Language Model, Robotics, 3D Vision, Benchmark
-- Official paper: https://openreview.net/forum?id=jXDZJAfRZB
-- Full-text retrieval: https://chatpaper.com/api/v1/articles/download/247464
+- Official paper: https://proceedings.iclr.cc/paper_files/paper/2026/hash/fb1b83b35e96998ddfc0ce1dab635445-Abstract-Conference.html
+- Full-text retrieval: https://proceedings.iclr.cc/paper_files/paper/2026/file/fb1b83b35e96998ddfc0ce1dab635445-Paper-Conference.pdf
 - Code/Project: not identified
 - Paper type: benchmark_or_dataset
 - Source audit: full-text PDF body checked on 2026-09-03 (50 pages; PyMuPDF text; title-token overlap first two pages=1.0)

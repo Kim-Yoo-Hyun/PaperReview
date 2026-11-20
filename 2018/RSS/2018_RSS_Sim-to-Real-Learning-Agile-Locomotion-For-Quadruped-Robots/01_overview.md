@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2018 / RSS
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Jie Tan, Tingnan Zhang, Erwin Coumans, Atil Iscen, Yunfei Bai, Danijar Hafner, Steven Bohez, Vincent Vanhoucke
 - Primary track: Locomotion, whole-body, mobile manipulation, and humanoids
 - Tier: REFERENCE
 - Tags: Robotics, quadruped locomotion, Reinforcement Learning, sim-to-real
@@ -19,7 +19,7 @@
 
 ## Why This Paper Is Here
 
-Locomotion, whole-body, mobile manipulation, and humanoids의 locomotion 문제를 이해하기 위해 읽는다. 본문은 Overcoming the reality gap is challenging.를 문제로 두고, The main contributions of this paper are: 1) We propose a complete learning system for agile locomotion.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+시뮬레이션에서 강화학습한 보행 정책을 실제 사족 로봇에 배포한다.
 
 ## Problem and Motivation
 
@@ -53,16 +53,10 @@ Locomotion, whole-body, mobile manipulation, and humanoids의 locomotion 문제�
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / I. INTRODUCTION - extractive body cue:** The main contributions of this paper are: 1) We propose a complete learning system for agile locomotion.
-- **p. 1 / I. INTRODUCTION - extractive body cue:** In this paper, we present a complete learning system for agile locomotion, in which control policies are learned in simulation and deployed on real robots.
-- **p. 2 / I. INTRODUCTION - extractive body cue:** We show that with deep RL, highly agile locomotion gaits can emerge automatically.
-- **p. 4 / IV. LEARNING LOCOMOTION CONTROLLERS - extractive body cue:** For this reason, we decouple the locomotion controller into two parts, an open loop component that allows a user to provide reference trajectories and a ...
-- **p. 6 / VI. EVALUATION AND DISCUSSION - extractive body cue:** After we improved the simulation (Section V-A), an agile galloping gait emerged automatically.
-- **p. 6 / VI. EVALUATION AND DISCUSSION - extractive body cue:** After training with the improved simulator and random perturbations, the Minitaur is able to trot stably in simulation.
-- **p. 7 / Figure/Table caption - extractive body cue:** Fig. 6: Controller performance in simulation (blue) and on the robot (red). From left to right, the controllers are trained using baseline simulation, using baseline ...
-- **p. 8 / Figure/Table caption - extractive body cue:** Fig. 9: Comparison of controllers trained with different obser- vation spaces and randomization. The blue and red bars are the performance in simulation and in ...
+- 시뮬레이터의 동작을 개선하고 정책이 환경 차이에 견디도록 훈련한다.
+- 다양한 보행 양식의 실제 실행을 평가한다.
 
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+[저자 원문](https://roboticsproceedings.org/rss14/p10.html)
 
 ## Evaluation Scope
 

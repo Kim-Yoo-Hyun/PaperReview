@@ -7,11 +7,11 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / ICRA
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Justin Yu, Kush Hari, Karim El-Refai, Arnav Dalal, Justin Kerr, Chung Min Kim, Richard Cheng, Muhammad Zubair Irshad, Ken Goldberg
 - Primary track: Manipulation, contact, tactile, and dexterity
 - Tier: NEXT
 - Tags: Robotics, Gaussian Splatting, Reinforcement Learning
-- Official paper: https://www.proceedings.com/content/081/081087webtoc.pdf
+- Official paper: https://api.crossref.org/works/10.1109/icra55743.2025.11127328
 - Full-text retrieval: https://arxiv.org/pdf/2503.05189v1
 - Code/Project: not identified
 - Paper type: method

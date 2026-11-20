@@ -7,13 +7,13 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2024 / ICML
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Siyuan Zhou, Yilun Du, Jiaben Chen, Yandong Li, Dit-Yan Yeung, Chuang Gan
 - Primary track: World models, safety, uncertainty, and recovery
 - Tier: NEXT
 - Tags: Robotics, world model, video prediction, language planning, compositional generalization
 - Official paper: https://proceedings.mlr.press/v235/zhou24f.html
 - Full-text retrieval: https://arxiv.org/pdf/2404.12377
-- Code/Project: https://robodreamer.github.io/
+- Code/Project: https://umass-embodied-agi.github.io/robodreamer/
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (12 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 

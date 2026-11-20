@@ -7,19 +7,19 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2022 / arXiv
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Tete Xiao, Ilija Radosavovic, Trevor Darrell, Jitendra Malik
 - Primary track: Planning and control
 - Tier: REFERENCE
 - Tags: Robotics, representation learning, Visual Pretraining, Imitation Learning
 - Official paper: https://arxiv.org/abs/2203.06173
 - Full-text retrieval: https://arxiv.org/abs/2203.06173
-- Code/Project: https://mvp-playground.github.io/
+- Code/Project: https://tetexiao.com/projects/mvp
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (12 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
-Planning and control의 il 문제를 이해하기 위해 읽는다. 본문은 Control inputs are high-dimensional and difficult to search (e.g., 23 DoF robot with a multi-finger hand).를 문제로 두고, We also compare our method to visual encoders trained by supervised learning on ImageNet (Deng et al., 2009), the choice of encoder in most vision tasks.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+영상의 일부를 가리는 사전학습으로 얻은 시각 특징을 로봇 운동 제어에 사용한다.
 
 ## Problem and Motivation
 
@@ -53,16 +53,10 @@ Planning and control의 il 문제를 이해하기 위해 읽는다. 본문은 Co
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** We also compare our method to visual encoders trained by supervised learning on ImageNet (Deng et al., 2009), the choice of encoder in most vision ...
-- **p. 4 / 3.1. Motivation - extractive body cue:** To this end, we introduce a new benchmark suite for Pixel Motor Control, which we call PixMC.
-- **p. 1 / 1. Introduction - extractive body cue:** We show that we are able to solve a range of motor control tasks with variations in robots, scenes, and objects.
-- **p. 1 / 1. Introduction - extractive body cue:** In this paper, we show that self-supervised visual pretraining on real-world images is effective for learning motor control tasks from pixels.
-- **p. 2 / 1. Introduction - extractive body cue:** We call our approach MVP (for Masked Visual Pre-training for Motor Control).
-- **p. 5 / Figure/Table caption - extractive body cue:** Figure 5. Sample complexity. We plot the success rate as a function of environment steps on the 8 PixMC tasks. Each task uses either the ...
-- **p. 7 / Figure/Table caption - extractive body cue:** Figure 10. Learning rate and seed stability. For each model, we train 15 instances of the model with 3 learning rates and 5 seeds. We ...
-- **p. 6 / 5.1. Sample Complexity - extractive body cue:** The supervised baseline is flat at zero success rate on the pick and move tasks with both robots; MVP rivals the oracle on the pick ...
+- 시각 입력으로 제어하는 여러 환경을 묶은 PixMC를 제안한다.
+- 로봇과 장면 조건이 다른 과제에서 사전학습 표현의 전이를 평가한다.
 
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+[저자 원문](https://arxiv.org/abs/2203.06173)
 
 ## Evaluation Scope
 

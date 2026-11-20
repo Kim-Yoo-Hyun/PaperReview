@@ -2,7 +2,8 @@
 
 > Evidence maturity: `FULL_TEXT_CHECKED`. 지정 본문 절만 확인; 전체 정독·재현 아님.
 
-- Year/Venue: 2026 / NeurIPS
+- Year/Venue
+- Authors: Zhaolu Kang, Tailong Luo, Lei Wei, Guangyuan Dong, Sihan Liu, Yingjie He, Siheng Wang, Shuaibo Li, Rongchao Zhang, Zhen Tian, Richeng Xuan, Zhichao Hu
 - Category: World Models, Safety, and Recovery
 - Primary track: World models, safety, uncertainty, and recovery
 - Tier: NEXT

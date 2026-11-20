@@ -7,13 +7,13 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2024 / CVPR
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Yaxu Xie, Alain Pagani, Didier Stricker
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
-- Tags: sensor fusion, LiDAR, semantic, alignment, 3D Vision
+- Tags: semantic, alignment, 3D Vision, point cloud
 - Official paper: https://openaccess.thecvf.com/content/CVPR2024/html/Xie_SG-PGM_Partial_Graph_Matching_Network_with_Semantic_Geometric_Fusion_for_CVPR_2024_paper.html
 - Full-text retrieval: https://openaccess.thecvf.com/content/CVPR2024/papers/Xie_SG-PGM_Partial_Graph_Matching_Network_with_Semantic_Geometric_Fusion_for_CVPR_2024_paper.pdf
-- Code/Project: not identified
+- Code/Project: https://github.com/dfki-av/sg-pgm
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 

@@ -7,19 +7,19 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2026 / ICML
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Haofei Xu, Rundi Wu, Philipp Henzler, Nikolai Kalischek, Michael Oechsle, Fabian Manhardt, Marc Pollefeys, Andreas Geiger, Federico Tombari, Michael Niemeyer
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
 - Tags: Diffusion, Generation, depth, point cloud, 3D Vision
-- Official paper: https://openreview.net/forum?id=hQWwTWGAyu
-- Full-text retrieval: https://openreview.net/pdf/859969c4505c940b506d06cb01ee1bce1e5d07d0.pdf
+- Official paper: https://icml.cc/virtual/2026/poster/62351
+- Full-text retrieval: https://arxiv.org/pdf/2607.02515.pdf
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (16 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
-Robotics-enabling 3D perception의 generative 문제를 이해하기 위해 읽는다. 본문은 Existing approaches to this challenge fall broadly into two categories.를 문제로 두고, Inspired by JiT (Li & He, 2026), we introduce a minimalist pixel-space diffusion framework that trains directly on the raw point map space.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+PointDiT는 단일 영상에 대응하는 3D 점 지도를 영상 공간의 확산 과정으로 예측한다.
 
 ## Problem and Motivation
 
@@ -53,16 +53,10 @@ Robotics-enabling 3D perception의 generative 문제를 이해하기 위해 읽�
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** Inspired by JiT (Li & He, 2026), we introduce a minimalist pixel-space diffusion framework that trains directly on the raw point map space.
-- **p. 3 / 3. Approach - extractive body cue:** Our method learns to transport a simple Gaussian noise distribution to the data distribution of point maps, conditioned on the input image.
-- **p. 3 / 3. Approach - extractive body cue:** To model the inherent ambiguities of this single-image setting, we propose a flow matching framework parameterized by a Vision Transformer (ViT) (Dosovitskiy, 2020; Peebles & ...
-- **p. 4 / 3.1. Point Map Generation with Flow Matching - extractive body cue:** This, in turn, enables stable joint training across heterogeneous indoor and outdoor datasets.
-- **p. 2 / 1. Introduction - extractive body cue:** In this work, we show that such architectural overhead and intricate loss formulations are unnecessary.
-- **p. 7 / Figure/Table caption - extractive body cue:** Figure 3. Different diffusion sampling steps. Our single-step diffusion already significantly outperforms prior works, and in- creasing the sampling steps further enhances reconstruction details (see ...
-- **p. 7 / 4.4. Evaluation Results - extractive body cue:** Our largest model, PointDiT-H, achieves the best depth accuracy (Reld and δd 1) and the best point map δp 1, while PointDiT achieves the highest ...
-- **p. 8 / 4.4. Evaluation Results - extractive body cue:** As shown in Table 1, more steps steadily improve the boundary metric BF1, while Rel and δ1 remain stable, since a single step already yields ...
+- 영상 조건에서 잡음 분포를 점 지도 분포로 변환하도록 학습한다.
+- 단안 영상에서 복원한 장면 기하를 평가한다.
 
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+[저자 원문](https://icml.cc/virtual/2026/poster/62351)
 
 ## Evaluation Scope
 

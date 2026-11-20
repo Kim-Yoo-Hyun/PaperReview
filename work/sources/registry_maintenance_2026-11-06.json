@@ -67,7 +67,7 @@
       "before": {
         "year": 2026,
         "venue": "arXiv",
-        "folder": "2026/arXiv/2026_arXiv_World-Action-Models-are-Zero-shot-Policies",
+        "folder": "2026/CoRL/2026_CoRL_World-Action-Models-are-Zero-shot-Policies",
         "identifiers": {
           "arxiv": "2602.15922"
         }
@@ -75,7 +75,7 @@
       "after": {
         "year": 2026,
         "venue": "arXiv",
-        "folder": "2026/arXiv/2026_arXiv_World-Action-Models-are-Zero-shot-Policies",
+        "folder": "2026/CoRL/2026_CoRL_World-Action-Models-are-Zero-shot-Policies",
         "identifiers": {
           "arxiv": "2602.15922"
         }

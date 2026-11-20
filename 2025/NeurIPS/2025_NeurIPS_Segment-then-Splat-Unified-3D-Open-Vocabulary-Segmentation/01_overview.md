@@ -7,11 +7,11 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / NeurIPS
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Yiren Lu, Yunlai Zhou, Yiran Qiao, Chaoda Song, Tuo Liang, Jing Ma, Huan Wang, Yu Yin
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
 - Tags: 3D Vision, Gaussian Splatting, semantic
-- Official paper: https://openreview.net/forum?id=ycPVp0577R
+- Official paper: https://neurips.cc/virtual/2025/poster/115127
 - Full-text retrieval: https://arxiv.org/pdf/2503.22204.pdf
 - Code/Project: not identified
 - Paper type: method

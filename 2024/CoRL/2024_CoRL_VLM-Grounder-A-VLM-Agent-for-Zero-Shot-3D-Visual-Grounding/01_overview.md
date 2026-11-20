@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2024 / CoRL
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Runsen Xu, Zhiwei Huang, Tai Wang, Yilun Chen, Jiangmiao Pang, Dahua Lin
 - Primary track: Robotics-enabling 3D perception
 - Tier: REFERENCE
 - Tags: 3D visual grounding, VLM, zero-shot

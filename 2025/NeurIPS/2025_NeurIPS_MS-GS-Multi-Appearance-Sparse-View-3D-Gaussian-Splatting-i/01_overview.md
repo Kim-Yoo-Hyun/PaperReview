@@ -7,11 +7,11 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / NeurIPS
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Deming Li, Kaiwen Jiang, Yutao Tang, Ravi Ramamoorthi, Rama Chellappa, Cheng Peng
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
 - Tags: Gaussian Splatting, 3D Vision
-- Official paper: https://openreview.net/forum?id=efDNv5XvVo
+- Official paper: https://neurips.cc/virtual/2025/poster/116898
 - Full-text retrieval: https://arxiv.org/pdf/2509.15548
 - Code/Project: not identified
 - Paper type: method

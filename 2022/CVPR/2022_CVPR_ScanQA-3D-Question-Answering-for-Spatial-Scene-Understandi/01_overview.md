@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2022 / CVPR
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Daichi Azuma, Taiki Miyanishi, Shuhei Kurita, Motoaki Kawanabe
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
 - Tags: 3D Vision, Vision-Language, grounding, 3D QA

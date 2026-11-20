@@ -7,11 +7,11 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / NeurIPS
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Chi-Pin Huang, Yueh-Hua Wu, Min-Hung Chen, Frank Wang, Fu-En Yang
 - Primary track: VLA and generalist robot policies
 - Tier: REFERENCE
 - Tags: VLA, Vision-Language Model
-- Official paper: https://openreview.net/forum?id=72UR53jN7T
+- Official paper: https://neurips.cc/virtual/2025/poster/119747
 - Full-text retrieval: https://arxiv.org/pdf/2507.16815
 - Code/Project: not identified
 - Paper type: method

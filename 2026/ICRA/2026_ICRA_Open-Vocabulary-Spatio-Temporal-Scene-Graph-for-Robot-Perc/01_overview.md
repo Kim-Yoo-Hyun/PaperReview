@@ -7,11 +7,11 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2026 / ICRA
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Yi Wang, Zeyu Xue, Mujie Liu, Tongqin Zhang, Yan Hu, Zhou Zhao, Chenguang Yang, Zhenyu Lu
 - Primary track: Planning and control
 - Tier: NEXT
 - Tags: Robotics, Graph Reasoning, semantic
-- Official paper: https://ras.papercept.net/conferences/conferences/ICRA26/program/ICRA26_ContentListWeb_5.html
+- Official paper: https://arxiv.org/abs/2509.23107
 - Full-text retrieval: https://arxiv.org/pdf/2509.23107
 - Code/Project: not identified
 - Paper type: method

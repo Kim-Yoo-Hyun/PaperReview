@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2024 / RSS
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Bruce Wingo, Ajay Suresha Sathya, Stéphane Caron, Seth Hutchinson, Justin Carpentier
 - Primary track: Planning and control
 - Tier: NEXT
 - Tags: Robotics, inverse kinematics, whole-body control, augmented Lagrangian, ADMM, real-time

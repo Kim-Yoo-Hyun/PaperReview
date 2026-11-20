@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2023 / NeurIPS
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Yining Hong, Haoyu Zhen, Peihao Chen, Shuhong Zheng, Yilun Du, Zhenfang Chen, Chuang Gan
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
 - Tags: LLM, 3D Vision, Vision-Language

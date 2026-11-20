@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2019 / CoRL
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Sudeep Dasari, Frederik Ebert, Stephen Tian, Suraj Nair, Bernadette Bucher, Karl Schmeckpeper, Siddharth Singh, Sergey Levine, Chelsea Finn
 - Primary track: Manipulation, contact, tactile, and dexterity
 - Tier: REFERENCE
 - Tags: Robotics, Dataset, multi-robot, manipulation
@@ -19,7 +19,7 @@
 
 ## Why This Paper Is Here
 
-Manipulation, contact, tactile, and dexterity의 robot_data 문제를 이해하기 위해 읽는다. 본문은 However, when trained in a single environment, robot learning algorithms, including visual foresight and inverse models, do not generalize to large domain variations, such as different robot arms, grippers, viewpoints, and backgrounds, ...를 문제로 두고, Our main contributions therefore consist of the RoboNet dataset, and an experimental evaluation that studies our framework for multi-robot, multi-domain model-based reinforcement learning based on extensions of the visual foresight algo ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+RoboNet은 서로 다른 실제 로봇에서 수집한 상호작용 영상과 행동을 함께 학습하는 자료다.
 
 ## Problem and Motivation
 
@@ -53,16 +53,10 @@ Manipulation, contact, tactile, and dexterity의 robot_data 문제를 이해하�
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1 Introduction - extractive body cue:** Our main contributions therefore consist of the RoboNet dataset, and an experimental evaluation that studies our framework for multi-robot, multi-domain model-based reinforcement learning based on ...
-- **p. 1 / 1 Introduction - extractive body cue:** Instead, we propose the opposite - using dramatically larger and more varied datasets collected in the real world.
-- **p. 1 / 1 Introduction - extractive body cue:** Inspired by the breadth of the ImageNet dataset [8], we introduce RoboNet, a dataset containing roughly 162,000 trajectories with video and action sequences recorded from ...
-- **p. 2 / 1 Introduction - extractive body cue:** We show that, when trained on RoboNet, we can acquire models that generalize in zero shot to novel objects, novel viewpoints, and novel table surfaces.
-- **p. 12 / C Database Implementation Details - extractive body cue:** We provide code infrastructure that allows a user to filter certain subsets of attributes for training and testing.
-- **p. 6 / Figure/Table caption - extractive body cue:** Table 5: Evaluation results for adaptation to an unseen Baxter robot. The model pre-trained on RoboNet's Sawyer data, achieves the best performance when fine- tuned ...
-- **p. 7 / Figure/Table caption - extractive body cue:** Figure 4: Example task of grasping and moving a thin plastic cup with the Franka robot, using visual foresight pre-trained on RoboNet w/o Franka and ...
-- **p. 7 / Figure/Table caption - extractive body cue:** Table 6: Inverse model results on 5 reaching tasks. The model is success- ful across multiple robot platforms and generalizes to a new viewpoint. To ...
+- 영상 예측 기반 계획과 지도학습한 역모델을 같은 데이터에 적용한다.
+- 새 물체·시점·기체 조건에서 모델의 전이를 평가한다.
 
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+[저자 원문](https://proceedings.mlr.press/v100/dasari20a.html)
 
 ## Evaluation Scope
 

@@ -7,19 +7,19 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2026 / CVPR
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Yunlong Zhao, Xiaoheng Deng, Yichao Cao, Yi Chen, Xiangjian He, Shan You, Shuo Yang, Lei Fan, Fei Wang, Xiu Su
 - Primary track: VLA and generalist robot policies
 - Tier: REFERENCE
 - Tags: VLA, 3D-2D alignment, Robotics
 - Official paper: https://openaccess.thecvf.com/content/CVPR2026/html/Zhao_Localizing_Structuring_and_Rendering_Bridging_3D_and_2D_Vision-Language-Action_Models_CVPR_2026_paper.html
 - Full-text retrieval: https://openaccess.thecvf.com/content/CVPR2026/papers/Zhao_Localizing_Structuring_and_Rendering_Bridging_3D_and_2D_Vision-Language-Action_Models_CVPR_2026_paper.pdf
-- Code/Project: not identified
+- Code/Project: https://github.com/zyl123456aB/DIFFVLA
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
-VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다. 본문은 The key difficulty lies in coupling geometric reasoning with semantic perception-robots must not only reason about 3D spatial structures but also interpret visual cues in an interpretable, image-centric manner.를 문제로 두고, Our main contributions are as follows: • We propose DiffRender-VLA, a unified framework that bridges 3D spatial reasoning and 2D visual perception to transfer geometric understanding into imageinterpretable action policies. • We ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+DiffRender-VLA는 미분 가능한 렌더링을 매개로 3D 장면 정보와 2D 시각언어행동 정책 사이에 학습 신호를 전달한다.
 
 ## Problem and Motivation
 
@@ -53,16 +53,10 @@ VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** Our main contributions are as follows: • We propose DiffRender-VLA, a unified framework that bridges 3D spatial reasoning and 2D visual perception to transfer geometric ...
-- **p. 3 / 3. Method - extractive body cue:** We present DiffRender-VLA, which, instead of choosing between image-based and 3D reasoning, enables gradient flow to transfer the 3D perception capabilities into 2D VLA models.
-- **p. 4 / 3.2. Structuring Differential Spatial Information - extractive body cue:** As shown in Figure 3, our method creates differentiable point clouds with key properties: hue indicates spatial direction aligned with world axes; intensity encodes relative ...
-- **p. 4 / 3.3. Rendering Adaptive Viewpoint - extractive body cue:** This enables joint reasoning about the target location and observation perspective as a coupling that is difficult to achieve through separate optimization.
-- **p. 5 / 3.4. Fine-Grained Action Prediction - extractive body cue:** The bidirectional fusion enables both components to co-adapt during training.
-- **p. 8 / Figure/Table caption - extractive body cue:** Figure 8. Beam parameters improvement for small objects. deployment confirm that color-encoded spatial beams and world-aligned cube markers generalize beyond synthetic environments. DiffRender-VLA substantially outperforms ...
-- **p. 7 / 4.1. Simulation Results - extractive body cue:** DiffRender-VLA significantly outperforms 2D visual prompting approaches: TraceVLA (63.9%, +16.6%) and VLA-adapter (60.6%, +19.9%).
-- **p. 7 / 4.1. Simulation Results - extractive body cue:** Task-specific improvements highlight spatial understanding capabilities: Occlusion Tasks: Average 91.7% success (+7.6% over GWM).
+- 3D와 2D 경로가 같은 렌더링 결과를 통해 연결되도록 구성한다.
+- 로봇 조작에서 위치 추정과 행동 생성에 대한 효과를 평가한다.
 
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+[저자 원문](https://openaccess.thecvf.com/content/CVPR2026/html/Zhao_Localizing_Structuring_and_Rendering_Bridging_3D_and_2D_Vision-Language-Action_Models_CVPR_2026_paper.html)
 
 ## Evaluation Scope
 

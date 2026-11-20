@@ -1,4 +1,4 @@
-# Mastering Diverse Domains through World Models
+# Mastering diverse control tasks through world models
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
 > Analysis basis: full-text PDF body checked on 2026-09-03 (40 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://arxiv.org/abs/2301.04104.
@@ -7,11 +7,12 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / Nature
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Danijar Hafner, Jurgis Pasukonis, Jimmy Ba, Timothy Lillicrap
 - Primary track: World models, safety, uncertainty, and recovery
 - Tier: NEXT
 - Tags: Robotics, world model, generalist reinforcement learning, latent imagination
 - Official paper: https://arxiv.org/abs/2301.04104
+- Venue verification: https://api.crossref.org/works/10.1038/s41586-025-08744-2
 - Full-text retrieval: https://arxiv.org/pdf/2301.04104
 - Code/Project: https://danijar.com/project/dreamerv3/
 - Paper type: method

@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2023 / ICML
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Danny Driess, Fei Xia, Mehdi S. M. Sajjadi, Corey Lynch, Aakanksha Chowdhery, Brian Ichter, Ayzaan Wahid, Jonathan Tompson, Quan Vuong, Tianhe Yu, Wenlong Huang, Yevgen Chebotar, Pierre Sermanet, Daniel Duckworth, Sergey Levine, Vincent Vanhoucke, Karol Hausman, Marc Toussaint, Klaus Greff, Andy Zeng, Igor Mordatch, Pete Florence
 - Primary track: VLA and generalist robot policies
 - Tier: NEXT
 - Tags: LLM, Vision-Language, Robotics
@@ -21,7 +21,7 @@
 
 ## Why This Paper Is Here
 
-VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다. 본문은 However, a limitation of such models for inference in the real world is the issue of grounding: while training LLMs on massive textual data may lead to representations that relate to our ...를 문제로 두고, In this paper we propose embodied language models, which 를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+PaLM-E는 영상·상태 등 연속 관측을 언어 모델 입력에 넣어 로봇 계획과 시각언어 과제에 쓸 텍스트를 생성한다.
 
 ## Problem and Motivation
 
@@ -55,16 +55,10 @@ VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다
 
 ## Main Claims and Actual Contribution
 
-- **p. 1 / 1. Introduction - extractive body cue:** In this paper we propose embodied language models, which ...
-- **p. 2 / 1. Introduction - extractive body cue:** To summarize our main contributions, we (1) propose and demonstrate that a generalist, transfer-learned, multiembodiment decision-making agent can be trained via mixing in embodied data ...
-- **p. 2 / 1. Introduction - extractive body cue:** We evaluate the approach in a variety of settings, comparing different input representations (e.g. standard vs. object-centric ViT encodings for visual input), freezing vs. finetuning ...
-- **p. 3 / 1. Introduction - extractive body cue:** Finally, in addition to our focus on PaLM-E as an embodied reasoner we (4) show that PaLM-E is also a quantitatively competent vision and language ...
-- **원문 대조:** 각 학습 예시는 연속 관측들, text sequence, prefix 경계 index로 구성된다. Multimodal prefix 뒤의 text target에 대해 non-prefix token cross-entropy를 평균하며, 연속 관측의 encoder 출력은 prefix의 지정 위치에 삽입한다. ([PDF p. 5](https://arxiv.org/pdf/2303.03378#page=5), §5 Training Recipes).
-- **p. 8 / Figure/Table caption - extractive body cue:** Table 1: Comparison of different input representations on TAMP environment (in terms of success rates), where data from TAMP constitutes only 1% (i.e., 320 samples ...
-- **p. 9 / 6.5. Performance on General Visual-Language Tasks - extractive body cue:** PaLM-E-562B model achieves the highest reported number on OK-VQA, including outperforming models finetuned specifically on OK-VQA.
-- **p. 6 / 6. Experiments - extractive body cue:** Here we show that a single model, trained on a mixture of many datasets, across diverse tasks, and across robot embodiments, can simultaneously achieve high ...
+- 연속 센서 표현을 언어 임베딩과 함께 처리한다.
+- 로봇 과제와 일반 시각언어 과제를 함께 학습했을 때의 전이를 평가한다.
 
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+[저자 원문](https://proceedings.mlr.press/v202/driess23a.html)
 
 ## Evaluation Scope
 

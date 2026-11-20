@@ -2,7 +2,8 @@
 
 > Evidence maturity: `ABSTRACT_CHECKED`. abstract 기반 — 본문 수동 확인 필요.
 
-- Year/Venue: 2025 / CoRL
+- Year/Venue
+- Authors: Chengyang He, Gadiel Mark Sznaier Camps, Xu Liu, Mac Schwager, Guillaume Adrien Sartoretti
 - Category: Robot Learning and Data
 - Primary track: RL, IL, offline learning, and robot data
 - Tier: NEXT

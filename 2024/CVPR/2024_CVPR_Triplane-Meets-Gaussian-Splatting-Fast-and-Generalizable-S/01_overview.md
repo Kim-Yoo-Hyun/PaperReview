@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2024 / CVPR
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Zi-Xin Zou, Zhipeng Yu, Yuan-Chen Guo, Yangguang Li, Ding Liang, Yan-Pei Cao, Song-Hai Zhang
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
 - Tags: Gaussian Splatting, 3D reconstruction, 3D Vision
@@ -19,7 +19,7 @@
 
 ## Why This Paper Is Here
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 However, the inherent ambiguity and lack of information in single images pose a substantial challenge in accurately recovering the complete, ∗Intern at VAST † Corresponding authors This CVPR paper is the Open ...를 문제로 두고, Our approach consists of two networks for reconstructing the point cloud and triplane from the input image, employing a fully transformer-based architecture for both.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+단일 영상에서 점군과 삼평면 특징을 예측해 3D 가우시안 장면을 재구성한다.
 
 ## Problem and Motivation
 
@@ -53,16 +53,10 @@ Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 �
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** Our approach consists of two networks for reconstructing the point cloud and triplane from the input image, employing a fully transformer-based architecture for both.
-- **p. 3 / 3. Method - extractive body cue:** In the subsequent sections, we present our approach for 3D object reconstruction from single-view images.
-- **p. 2 / 1. Introduction - extractive body cue:** Our method employs a hybrid explicit-and-implicit 3D representation, facilitating fast and high-quality 3D reconstruction and novel view synthesis.
-- **p. 3 / 3. Method - extractive body cue:** We introduce a new hybrid 3D representation that combines explicit point cloud geometry and implicit triplane features, allowing for efficient rendering without compromising on qual10326
-- **p. 4 / 3.1. Hybrid Triplane-Gaussian - extractive body cue:** In response, we introduce TriplaneGaussian, a new hybrid 3D representation that merges the benefits of both triplane and point cloud approaches for 3D Gaussian representation.
-- **p. 7 / 4.5. Runtime Efficiency - extractive body cue:** We can find that our method has achieved significant improvements in speed for both reconstruction and rendering processes compared to other baselines, benefiting from feed-forward ...
-- **p. 7 / 4.6. Ablation Study - extractive body cue:** Our TriplaneGaussian, leveraging the projection-aware condition with explicit geometry, excels in producing more detailed texture compared to Triplane-NeRF, as illustrated in the red box of ...
-- **p. 6 / 4.1. Implementation Details - extractive body cue:** Our approach achieves both quality and consistency across different novel views.
+- 명시적 점 위치와 암묵적 평면 특징을 함께 사용한다.
+- 재구성한 장면의 품질과 새 시점 렌더링을 평가한다.
 
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+[저자 원문](https://openaccess.thecvf.com/content/CVPR2024/html/Zou_Triplane_Meets_Gaussian_Splatting_Fast_and_Generalizable_Single-View_3D_Reconstruction_CVPR_2024_paper.html)
 
 ## Evaluation Scope
 

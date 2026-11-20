@@ -7,11 +7,11 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / NeurIPS
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Zibo Zhou, Yue Hu, Lingkai Zhang, Zonglin Li, Siheng Chen
 - Primary track: Robotics-enabling 3D perception
 - Tier: REFERENCE
 - Tags: 3D Vision, Navigation
-- Official paper: https://openreview.net/forum?id=7AMriz7I3K
+- Official paper: https://neurips.cc/virtual/2025/poster/119733
 - Full-text retrieval: https://arxiv.org/pdf/2506.06487.pdf
 - Code/Project: not identified
 - Paper type: method

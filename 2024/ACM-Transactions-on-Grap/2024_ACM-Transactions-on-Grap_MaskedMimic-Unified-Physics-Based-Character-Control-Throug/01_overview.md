@@ -7,11 +7,11 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2024 / ACM Transactions on Graphics
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Chen Tessler, Yunrong Guo, Ofir Nabati, Gal Chechik, Xue Bin Peng
 - Primary track: Locomotion, whole-body, mobile manipulation, and humanoids
 - Tier: REFERENCE
 - Tags: Robotics, humanoid, whole-body control, motion imitation, NVIDIA
-- Official paper: https://research.nvidia.com/labs/par/maskedmimic/
+- Official paper: https://arxiv.org/abs/2409.14393
 - Full-text retrieval: https://research.nvidia.com/labs/par/maskedmimic/
 - Code/Project: https://research.nvidia.com/labs/par/maskedmimic/
 - Paper type: method

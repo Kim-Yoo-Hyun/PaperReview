@@ -1,4 +1,4 @@
-# Evaluation - SSCNet: Semantic Scene Completion from a Single Depth Image
+# Evaluation - Semantic Scene Completion From a Single Depth Image
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.

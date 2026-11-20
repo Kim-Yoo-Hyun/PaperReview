@@ -1,4 +1,4 @@
-# PTAM: Parallel Tracking and Mapping for Small AR Workspaces
+# Parallel Tracking and Mapping for Small AR Workspaces
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
 > Analysis basis: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; title-token overlap first two pages=0.833); canonical paper source: https://www.robots.ox.ac.uk/~gk/PTAM/.
@@ -7,11 +7,11 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2007 / ISMAR
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Georg Klein, David Murray
 - Primary track: Robotics-enabling 3D perception
 - Tier: REFERENCE
 - Tags: 3D Vision, SLAM, geometry, camera pose
-- Official paper: https://www.robots.ox.ac.uk/~gk/PTAM/
+- Official paper: https://api.crossref.org/works/10.1109/ISMAR.2007.4538852
 - Full-text retrieval: https://www.robots.ox.ac.uk/~gk/publications/KleinMurray2007ISMAR.pdf
 - Code/Project: https://www.robots.ox.ac.uk/~gk/PTAM/
 - Paper type: method

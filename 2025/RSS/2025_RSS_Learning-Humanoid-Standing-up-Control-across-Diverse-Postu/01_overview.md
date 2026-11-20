@@ -7,13 +7,13 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / RSS
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Tao Huang, Junli Ren, Huayi Wang, Zirui Wang, Qingwei Ben, Muning Wen, Xiao Chen, Jianan Li, Jiangmiao Pang
 - Primary track: World models, safety, uncertainty, and recovery
 - Tier: REFERENCE
 - Tags: Robotics, humanoid, standing up, fall recovery, sim-to-real
 - Official paper: https://www.roboticsproceedings.org/rss21/p064.html
 - Full-text retrieval: https://www.roboticsproceedings.org/rss21/p064.pdf
-- Code/Project: https://taohuang13.github.io/humanoid-standingup.github.io/
+- Code/Project: https://github.com/InternRobotics/HoST
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (13 pages; tesseract OCR fallback; title-token overlap first two pages=1.0)
 

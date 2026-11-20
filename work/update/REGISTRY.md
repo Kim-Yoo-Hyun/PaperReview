@@ -2,6 +2,10 @@
 
 2026-11-20 기준 1,252편이다. [논문 목록](../../PAPER.md) · [현재 통계](../../research/REGISTRY_STATS.md)
 
+### 원문 전수 감사
+
+1,252편을 안정 ID 순서로 13개 배치로 나눠 검토했다. 논문별 판정표에서 교정 전 오류율, 확인한 태그 불일치와 남은 검증 범위를 확인할 수 있다. 잘못된 PDF에 기반한 논문 3편은 해당 게재본에서 문제·방법·실험을 다시 확인해 노트 5개씩을 교정했다. GraspNet도 CVPR 게재본을 기준으로 갱신했다. [전수 감사](../../research/SOURCE_AUDIT.md) · [논문별 교정 근거](../sources/batches/source_audit_2026_11.jsonl)
+
 ### 공유 제어 문헌과 공개 자료
 
 - HARMONIC (`pr-1251`, IJRR 2022)을 REFERENCE에 등록했다. 조이스틱에서 변환한 사용자 요청과 보조 후 적용 속도를 별도 스트림으로 제공한다. 2021년 온라인 선공개와 2022년 저널 권호를 구분했다. [논문 노트](../../2022/IJRR/2022_IJRR_HARMONIC-A-multimodal-dataset-of-assistive-humanrobot-coll/01_overview.md) · [IJRR](https://doi.org/10.1177/02783649211050677) · [공식 데이터](https://harplab.github.io/harmonic/)

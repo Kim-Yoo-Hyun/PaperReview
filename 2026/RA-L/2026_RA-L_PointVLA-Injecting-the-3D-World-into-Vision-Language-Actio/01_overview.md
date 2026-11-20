@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2026 / RA-L
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Chengmeng Li, Junjie Wen, Yaxin Peng, Yan Peng, Yichen Zhu
 - Primary track: Robotics-enabling 3D perception
 - Tier: NEXT
 - Tags: VLA, Vision-Language Model, 3D Vision, Reinforcement Learning

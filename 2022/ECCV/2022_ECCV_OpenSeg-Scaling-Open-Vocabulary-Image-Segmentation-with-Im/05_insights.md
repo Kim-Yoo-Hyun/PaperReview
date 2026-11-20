@@ -1,4 +1,4 @@
-# Insights — OpenSeg: Scaling Open-Vocabulary Image Segmentation with Image-Level Labels
+# Insights — Scaling Open-Vocabulary Image Segmentation with Image-Level Labels
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.

@@ -3,14 +3,15 @@
 > Evidence maturity: `ABSTRACT_CHECKED`. abstract 기반 — 본문 수동 확인 필요.
 > 자동 작성 노트는 실제 정독을 뜻하지 않는다. 사용자 reading status는 UNREAD로 시작한다.
 
-- Year/Venue: 2026 / ECCV
+- Year/Venue
+- Authors: Jacky Kwok, Xilun Zhang, Mengdi Xu, Yuejiang Liu, Azalia Mirhoseini, Chelsea Finn, Marco Pavone
 - Category: VLA and Generalist Robot Policies
 - Primary track: VLA and generalist robot policies
 - Tier: NEXT
 - Tags: test-time-scaling, verification, instruction-following
 - Aliases: CoVer, CoVer-VLA
 - Official paper: https://arxiv.org/abs/2602.12281
-- Venue verification: https://eccv.ecva.net/Conferences/2026/AcceptedPapers
+- Venue verification: https://api.crossref.org/works/10.1007/978-3-032-37016-7_3
 - Code/Project: https://cover-vla.github.io/
 - Code: https://github.com/cover-vla/cover-vla
 - Source audit: 2026-11-07–08: official metadata/abstract 및 저자 project/repository 공개 범위 확인.  본문 전체 정독·코드 실행·독립 성능 검증 아님. 사용자 reading status UNREAD 유지.

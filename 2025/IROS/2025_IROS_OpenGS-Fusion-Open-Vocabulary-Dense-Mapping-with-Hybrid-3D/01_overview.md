@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / IROS
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Dianyi Yang, Xihan Wang, Yu Gao, Shiyang Liu, Bohan Ren, Yufeng Yue, Yi Yang
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
 - Tags: 3D Vision, Gaussian Splatting, semantic
@@ -19,7 +19,7 @@
 
 ## Why This Paper Is Here
 
-Robotics-enabling 3D perception의 navigation 문제를 이해하기 위해 읽는다. 본문은 However, they lack the ability to synthesize novel views and struggle with high-fidelity reconstruction.를 문제로 두고, Our method enables versatile task-oriented interactions, such as 3D object extraction and editing in an interactive manner.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+OpenGS-Fusion은 기하와 의미 특징을 결합한 3D 지도에서 개방 어휘로 물체를 찾는다.
 
 ## Problem and Motivation
 
@@ -53,16 +53,10 @@ Robotics-enabling 3D perception의 navigation 문제를 이해하기 위해 읽�
 
 ## Main Claims and Actual Contribution
 
-- **p. 1 / I. INTRODUCTION - extractive body cue:** Our method enables versatile task-oriented interactions, such as 3D object extraction and editing in an interactive manner.
-- **p. 2 / 2) Limited 3D Object-Level Understanding. Most exist - extractive body cue:** In summary, our contributions are as follows. • We introduce OpenGS-Fusion, an innovative openvocabulary dense mapping framework that leverages a hybrid scene representation to concurrently ...
-- **p. 1 / I. INTRODUCTION - extractive body cue:** Compared to 3DGS-featurefield-based methods [12]-[15], our approach enables online modeling of scene appearance, geometry, and semantics while supporting 3D objectlevel queries.
-- **p. 4 / III. OPENGS-FUSION - extractive body cue:** This approach allows our method to obtain a relatively accurate geometric representation at the initialization stage, reducing the optimization cost.
-- **p. 3 / III. OPENGS-FUSION - extractive body cue:** Additionally, the proposed open-vocabulary query strategy enables precise localization of 3D objects without the need for explicit scene segmentation.
-- **p. 5 / IV. EXPERIMENT - extractive body cue:** Specifically, our method outperforms the state-of-the-art 3DGS-based approach, OpenGaussian, with improvements of 9.5% (Replica) and 12.2% (ScanNet) in terms of mIoU performance, while operating in ...
-- **p. 5 / IV. EXPERIMENT - extractive body cue:** Our method achieves the best performance in both open-vocabulary 3D object segmentation accuracy and training efficiency.
-- **p. 6 / IV. EXPERIMENT - extractive body cue:** Our method achieves state-of-the-art performance in PSNR, SSIM, LPIPS, and Depth L1.
+- 가우시안 장면 표현에 언어 질의가 가능한 의미 정보를 연결한다.
+- 3D 물체 분할과 지도를 이용한 물체 선택·편집을 확인한다.
 
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+[저자 원문](https://arxiv.org/abs/2508.01150)
 
 ## Evaluation Scope
 

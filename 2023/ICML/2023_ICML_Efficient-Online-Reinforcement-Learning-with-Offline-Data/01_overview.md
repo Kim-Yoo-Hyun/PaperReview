@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2023 / ICML
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Philip J. Ball, Laura Smith, Ilya Kostrikov, Sergey Levine
 - Primary track: RL, IL, offline learning, and robot data
 - Tier: CORE
 - Tags: Robotics, Reinforcement Learning, offline RL, online RL, robot data, sample efficiency
@@ -19,7 +19,7 @@
 
 ## Why This Paper Is Here
 
-RL, IL, offline learning, and robot data의 offline_rl 문제를 이해하기 위해 읽는다. 본문은 While the individual ingredients of RLPD are refreshingly simple modifications on existing RL components, we show that their combination delivers state-of-the-art performance on a number of popular online RL with offline data ...를 문제로 두고, First, we propose a simple mechanism for incorporating the prior data.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+RLPD는 기존 오프라인 데이터와 온라인 상호작용을 함께 사용해 연속 제어 정책을 학습한다.
 
 ## Problem and Motivation
 
@@ -53,16 +53,10 @@ RL, IL, offline learning, and robot data의 offline_rl 문제를 이해하기 �
 
 ## Main Claims and Actual Contribution
 
-- **p. 3 / 4. Online RL with Offline Data - extractive body cue:** First, we propose a simple mechanism for incorporating the prior data.
-- **p. 3 / 4. Online RL with Offline Data - extractive body cue:** To this end, we present an approach based on off-policy model-free RL, without pre-training or explicit constraints, which we call RLPD (Reinforcement Learning with Prior ...
-- **p. 1 / 1. Introduction - extractive body cue:** Here we show the difficult D4RL AntMaze domain (10 seeds, 1 std. shaded), averaged over all 6 tasks.
-- **p. 1 / 1. Introduction - extractive body cue:** Our approach, RLPD, extends standard off-policy RL and achieves reliable state-of-the-art online performance on a number of tasks using offline data.
-- **p. 2 / 1. Introduction - extractive body cue:** We show that online off-policy RL algorithms can be remarkably effective at learning with offline data.
-- **p. 7 / Figure/Table caption - extractive body cue:** Figure 7. LayerNorm is crucial for strong performance, particu- larly when data are limited or narrowly distributed. results in collapsed performance, with no progress made ...
-- **p. 15 / Figure/Table caption - extractive body cue:** Figure 18. D4RL Ablations. The impact of LayerNorm is not so clear cut in Figure 18; this is to be expected as online approaches already ...
-- **p. 3 / Figure/Table caption - extractive body cue:** Figure 2. Using SAC with our symmetric sampling method can result in instabilities due to diverging Q-values; with LayerNorm in the critic this disappears, improving ...
+- 표준 오프폴리시 학습에서 신뢰성 있는 데이터 재사용에 필요한 설계 요소를 분리한다.
+- 여러 과제와 절제 실험으로 각 요소가 온라인 학습 성능에 미치는 영향을 비교한다.
 
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+[저자 원문](https://proceedings.mlr.press/v202/ball23a.html)
 
 ## Evaluation Scope
 

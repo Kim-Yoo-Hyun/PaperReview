@@ -7,12 +7,12 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2026 / ICLR
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Yuecheng Liu, DaFeng Chi, Shiguang Wu, Zhanguang Zhang, Yuzheng Zhuang, Bowen Yang, He Zhu, Lingfeng Zhang, Pengwei Xie, David Gamaliel Arcos Bravo, Yingxue Zhang, Jianye Hao, Xingyue Quan
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
 - Tags: 3D Vision
-- Official paper: https://openreview.net/forum?id=tkEmIJv1tB
-- Full-text retrieval: https://chatpaper.com/api/v1/articles/download/247599
+- Official paper: https://proceedings.iclr.cc/paper_files/paper/2026/hash/7b122d0a0dcb1a86ffa25ccba154652b-Abstract-Conference.html
+- Full-text retrieval: https://proceedings.iclr.cc/paper_files/paper/2026/file/7b122d0a0dcb1a86ffa25ccba154652b-Paper-Conference.pdf
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (52 pages; PyMuPDF text; title-token overlap first two pages=1.0)

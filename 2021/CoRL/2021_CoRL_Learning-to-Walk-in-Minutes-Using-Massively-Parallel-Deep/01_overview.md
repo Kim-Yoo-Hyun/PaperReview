@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2021 / CoRL
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Nikita Rudin, David Hoeller, Philipp Reist, Marco Hutter
 - Primary track: Locomotion, whole-body, mobile manipulation, and humanoids
 - Tier: REFERENCE
 - Tags: Robotics, locomotion, Reinforcement Learning, massively parallel simulation

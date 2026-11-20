@@ -7,13 +7,13 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2023 / RSS
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Yuzhe Qin, Wei Yang, Binghao Huang, Karl Van Wyk, Hao Su, Xiaolong Wang, Yu-Wei Chao, Dieter Fox
 - Primary track: Manipulation, contact, tactile, and dexterity
 - Tier: REFERENCE
 - Tags: Robotics, teleoperation, cross-embodiment, dexterous manipulation, data collection
 - Official paper: https://www.roboticsproceedings.org/rss19/p015.html
 - Full-text retrieval: https://arxiv.org/pdf/2307.04577
-- Code/Project: https://yzqin.github.io/anyteleop/
+- Code/Project: not identified
 - Paper type: system
 - Source audit: full-text PDF body checked on 2026-09-03 (15 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 

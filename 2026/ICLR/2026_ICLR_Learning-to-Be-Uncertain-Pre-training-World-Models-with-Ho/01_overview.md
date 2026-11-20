@@ -7,12 +7,12 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2026 / ICLR
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Shenghua Wan, Le Gan, De-Chuan Zhan
 - Primary track: World models, safety, uncertainty, and recovery
 - Tier: REFERENCE
 - Tags: Robotics, world model, uncertainty, long-horizon prediction, model-based reinforcement learning
 - Official paper: https://iclr.cc/virtual/2026/poster/10007319
-- Full-text retrieval: https://chatpaper.com/api/v1/articles/download/245358
+- Full-text retrieval: https://proceedings.iclr.cc/paper_files/paper/2026/file/ad222e6e38e26e3f00d85829b9e02f43-Paper-Conference.pdf
 - Code/Project: https://iclr.cc/virtual/2026/poster/10007319
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (21 pages; PyMuPDF text; title-token overlap first two pages=1.0)

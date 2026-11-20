@@ -1003,7 +1003,7 @@
         },
         {
           "paper_id": "pr-0187",
-          "source": "2026/ICRA/2026_ICRA_GaussianVLM-Scene-Centric-3D-Vision-Language-Models-Using/04_evaluation.md",
+          "source": "2025/RA-L/2025_RA-L_GaussianVLM-Scene-Centric-3D-Vision-Language-Models-Using/04_evaluation.md",
           "evidence": "cue_only"
         },
         {
@@ -1301,7 +1301,7 @@
         },
         {
           "paper_id": "pr-0283",
-          "source": "2025/IROS/2025_IROS_MR-COGraphs-Communication-efficient-Multi-Robot-Open-vocab/04_evaluation.md",
+          "source": "2025/RA-L/2025_RA-L_MR-COGraphs-Communication-efficient-Multi-Robot-Open-vocab/04_evaluation.md",
           "evidence": "cue_only"
         },
         {
@@ -1784,7 +1784,7 @@
         },
         {
           "paper_id": "pr-0843",
-          "source": "2023/arXiv/2023_arXiv_Where-are-we-in-the-search-for-an-Artificial-Visual-Cortex/04_evaluation.md",
+          "source": "2023/NeurIPS/2023_NeurIPS_Where-are-we-in-the-search-for-an-Artificial-Visual-Cortex/04_evaluation.md",
           "evidence": "cue_only"
         },
         {
@@ -2078,7 +2078,7 @@
       "paper_references": [
         {
           "paper_id": "pr-0036",
-          "source": "2023/CoRL/2023_CoRL_Perceiver-Actor-A-Multi-Task-Transformer-for-Robotic-Manip/04_evaluation.md",
+          "source": "2022/CoRL/2022_CoRL_Perceiver-Actor-A-Multi-Task-Transformer-for-Robotic-Manip/04_evaluation.md",
           "evidence": "cue_only"
         },
         {
@@ -2720,7 +2720,7 @@
         },
         {
           "paper_id": "pr-0982",
-          "source": "2026/arXiv/2026_arXiv_CoRE-VLA-Towards-Scalable-and-Robust-Vision-Language-Actio/04_evaluation.md",
+          "source": "2026/CoRL/2026_CoRL_CoRE-VLA-Towards-Scalable-and-Robust-Vision-Language-Actio/04_evaluation.md",
           "evidence": "cue_only"
         },
         {
@@ -2755,7 +2755,7 @@
         },
         {
           "paper_id": "pr-1013",
-          "source": "2026/arXiv/2026_arXiv_SafeLoop-Risk-Aware-Rollback-for-Vision-Language-Action-Ma/04_evaluation.md",
+          "source": "2026/IROS/2026_IROS_SafeLoop-Risk-Aware-Rollback-for-Vision-Language-Action-Ma/04_evaluation.md",
           "evidence": "cue_only"
         },
         {
@@ -2875,7 +2875,7 @@
         },
         {
           "paper_id": "pr-1175",
-          "source": "2026/arXiv/2026_arXiv_When-Vision-Overrides-Language-Evaluating-and-Mitigating-C/04_evaluation.md",
+          "source": "2026/CoRL/2026_CoRL_When-Vision-Overrides-Language-Evaluating-and-Mitigating-C/04_evaluation.md",
           "evidence": "cue_only"
         },
         {
@@ -3024,7 +3024,7 @@
         },
         {
           "paper_id": "pr-0636",
-          "source": "2022/CoRL/2022_CoRL_Implicit-Behavioral-Cloning/04_evaluation.md",
+          "source": "2021/CoRL/2021_CoRL_Implicit-Behavioral-Cloning/04_evaluation.md",
           "evidence": "cue_only"
         },
         {
@@ -3278,7 +3278,7 @@
         },
         {
           "paper_id": "pr-1059",
-          "source": "2025/CoRL/2025_CoRL_ReMix-Optimizing-Data-Mixtures-for-Large-Scale-Imitation-L/04_evaluation.md",
+          "source": "2024/CoRL/2024_CoRL_ReMix-Optimizing-Data-Mixtures-for-Large-Scale-Imitation-L/04_evaluation.md",
           "evidence": "cue_only"
         }
       ],
@@ -3349,7 +3349,7 @@
         },
         {
           "paper_id": "pr-1222",
-          "source": "2025/arXiv/2025_arXiv_SOE-Sample-Efficient-Robot-Policy-Self-Improvement-via-On/04_evaluation.md",
+          "source": "2026/ICRA/2026_ICRA_SOE-Sample-Efficient-Robot-Policy-Self-Improvement-via-On/04_evaluation.md",
           "evidence": "cue_only"
         }
       ],
@@ -3472,7 +3472,7 @@
         },
         {
           "paper_id": "pr-0681",
-          "source": "2022/ICLR/2022_ICLR_Temporal-Difference-Learning-for-Model-Predictive-Control/04_evaluation.md",
+          "source": "2022/ICML/2022_ICML_Temporal-Difference-Learning-for-Model-Predictive-Control/04_evaluation.md",
           "evidence": "cue_only"
         },
         {
@@ -3502,7 +3502,7 @@
         },
         {
           "paper_id": "pr-0857",
-          "source": "2022/arXiv/2022_arXiv_A-Generalist-Agent/04_evaluation.md",
+          "source": "2022/TMLR/2022_TMLR_A-Generalist-Agent/04_evaluation.md",
           "evidence": "cue_only"
         },
         {
@@ -4242,7 +4242,7 @@
         },
         {
           "paper_id": "pr-0988",
-          "source": "2026/Unverified/2026_Unverified_DialogVLA-Bridging-Reasoning-Action-in-Bimanual-Manipulati/04_evaluation.md",
+          "source": "2026/IROS/2026_IROS_DialogVLA-Bridging-Reasoning-Action-in-Bimanual-Manipulati/04_evaluation.md",
           "evidence": "cue_only"
         },
         {
@@ -4485,12 +4485,12 @@
         },
         {
           "paper_id": "pr-0982",
-          "source": "2026/arXiv/2026_arXiv_CoRE-VLA-Towards-Scalable-and-Robust-Vision-Language-Actio/04_evaluation.md",
+          "source": "2026/CoRL/2026_CoRL_CoRE-VLA-Towards-Scalable-and-Robust-Vision-Language-Actio/04_evaluation.md",
           "evidence": "cue_only"
         },
         {
           "paper_id": "pr-0988",
-          "source": "2026/Unverified/2026_Unverified_DialogVLA-Bridging-Reasoning-Action-in-Bimanual-Manipulati/04_evaluation.md",
+          "source": "2026/IROS/2026_IROS_DialogVLA-Bridging-Reasoning-Action-in-Bimanual-Manipulati/04_evaluation.md",
           "evidence": "cue_only"
         },
         {
@@ -4775,7 +4775,7 @@
         },
         {
           "paper_id": "pr-0705",
-          "source": "2026/arXiv/2026_arXiv_World-Action-Models-are-Zero-shot-Policies/04_evaluation.md",
+          "source": "2026/CoRL/2026_CoRL_World-Action-Models-are-Zero-shot-Policies/04_evaluation.md",
           "evidence": "cue_only"
         },
         {
@@ -5218,7 +5218,7 @@
         },
         {
           "paper_id": "pr-0843",
-          "source": "2023/arXiv/2023_arXiv_Where-are-we-in-the-search-for-an-Artificial-Visual-Cortex/04_evaluation.md",
+          "source": "2023/NeurIPS/2023_NeurIPS_Where-are-we-in-the-search-for-an-Artificial-Visual-Cortex/04_evaluation.md",
           "evidence": "cue_only"
         }
       ],

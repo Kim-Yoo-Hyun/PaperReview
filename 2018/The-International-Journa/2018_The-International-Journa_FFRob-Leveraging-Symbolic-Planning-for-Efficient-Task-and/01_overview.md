@@ -7,11 +7,11 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2018 / The International Journal of Robotics Research
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Caelan Reed Garrett, Tomás Lozano-Pérez, Leslie Pack Kaelbling
 - Primary track: Planning and control
 - Tier: NEXT
 - Tags: Robotics, Planning, task and motion planning, manipulation
-- Official paper: https://journals.sagepub.com/doi/10.1177/0278364917739114
+- Official paper: https://api.crossref.org/works/10.1177/0278364917739114
 - Full-text retrieval: https://journals.sagepub.com/doi/10.1177/0278364917739114
 - Code/Project: not identified
 - Paper type: theory_or_foundation

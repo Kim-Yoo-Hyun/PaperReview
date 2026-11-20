@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2021 / CoRL
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Mohit Shridhar, Lucas Manuelli, Dieter Fox
 - Primary track: VLA and generalist robot policies
 - Tier: NEXT
 - Tags: Robotics, Vision-Language-Action, CLIP, manipulation
@@ -19,7 +19,7 @@
 
 ## Why This Paper Is Here
 
-VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다. 본문은 However, these models lack a fine-grained understanding on how to manipulate objects, i.e. physical affordances. †Work done partly while the author was a part-time intern at NVIDIA.를 문제로 두고, We propose 10 language-conditioned tasks with 1000s of unique instances per task that require both semantic and spatial reasoning (see Figure 1 a-j).를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+CLIPort는 언어 지시의 의미와 정밀한 공간 대응을 결합해 로봇의 집기·놓기 행동을 결정한다.
 
 ## Problem and Motivation
 
@@ -53,16 +53,10 @@ VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1 Introduction - extractive body cue:** We propose 10 language-conditioned tasks with 1000s of unique instances per task that require both semantic and spatial reasoning (see Figure 1 a-j).
-- **p. 2 / 1 Introduction - extractive body cue:** Specifically, we present CLIPORT, a languageconditioned imitation-learning agent that integrates the semantic understanding (what) of CLIP [1] with the spatial precision (where) of Transporter [2].
-- **p. 3 / 1 Introduction - extractive body cue:** In summary, our contributions are as follows: • An extended benchmark of language-grounding tasks for manipulation in Ravens [2]. • Two-stream architecture for using internet ...
-- **p. 1 / Abstract - extractive body cue:** To this end, we propose a framework that combines the best of both worlds: a two-stream architecture with semantic and spatial pathways for vision-based manipulation.
-- **p. 1 / Abstract - extractive body cue:** Experiments in simulated and real-world settings show that our approach is data efficient in few-shot settings and generalizes effectively to seen and unseen semantic concepts.
-- **p. 7 / Figure/Table caption - extractive body cue:** Table 1. Language-Conditioned Test Results. Task success scores (mean %) from 100 evaluation instances vs. # of training demonstrations (1, 10, 100, or 1000). The ...
-- **p. 22 / Figure/Table caption - extractive body cue:** Table 6. Demo-Conditioned Tasks. Validation task success scores (mean %) from 100 evaluation instances vs. # of demonstration episodes (1, 10, 100, or 1000) used ...
-- **p. 7 / 4 Results - extractive body cue:** Tasks that require generalizing to novel colors, shapes, and objects are more difficult and all our agents achieve relatively lower performance on these tasks, as ...
+- 시각언어 특징이 조작할 대상을 식별한다.
+- 공간 특징이 대상의 픽셀 위치와 놓을 변환을 추정한다.
 
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+[저자 원문](https://proceedings.mlr.press/v164/shridhar22a.html)
 
 ## Evaluation Scope
 

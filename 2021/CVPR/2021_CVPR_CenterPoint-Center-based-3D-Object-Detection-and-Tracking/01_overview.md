@@ -1,4 +1,4 @@
-# CenterPoint: Center-based 3D Object Detection and Tracking
+# Center-Based 3D Object Detection and Tracking
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
 > Analysis basis: full-text PDF body checked on 2026-09-03 (12 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://arxiv.org/abs/2006.11275.
@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2021 / CVPR
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Tianwei Yin, Xingyi Zhou, Philipp Krahenbuhl
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
 - Tags: point cloud, 3D Vision

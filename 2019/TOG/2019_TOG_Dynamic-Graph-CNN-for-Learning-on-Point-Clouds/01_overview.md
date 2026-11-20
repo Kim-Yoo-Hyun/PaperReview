@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2019 / TOG
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Yue Wang, Yongbin Sun, Ziwei Liu, Sanjay E. Sarma, Michael M. Bronstein, Justin M. Solomon
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
 - Tags: point cloud, 3D Vision
@@ -19,7 +19,7 @@
 
 ## Why This Paper Is Here
 
-Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 읽는다. 본문은 This independence, however, neglects the geometric relationships among points, presenting a fundamental limitation that cannot capture local features.를 문제로 두고, We summarize the key contributions of our work as follows: • We present a novel operation for learning from point clouds, EdgeConv, to better capture local geometric features of point clouds while ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+DGCNN은 점군의 이웃 관계를 특징 공간에서 다시 구성하면서 각 점의 특징을 학습한다.
 
 ## Problem and Motivation
 
@@ -52,16 +52,10 @@ Robotics-enabling 3D perception의 3d_perception 문제를 이해하기 위해 �
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** We summarize the key contributions of our work as follows: • We present a novel operation for learning from point clouds, EdgeConv, to better capture ...
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** To address these drawbacks, we propose a novel simple operation, called EdgeConv, which captures local geometric structure while maintaining permutation invariance.
-- **p. 1 / Body text (section not recovered) - extractive body cue:** To this end, we propose a new neural network module dubbed EdgeConv suitable for CNN-based high-level tasks on point clouds including classification and segmentation.
-- **p. 1 / Body text (section not recovered) - extractive body cue:** We show the performance of our model on standard benchmarks including ModelNet40, ShapeNetPart, and S3DIS.
-- **p. 7 / 4 EVALUATION - extractive body cue:** Our model achieves the best results on this dataset.
-- **p. 7 / 4 EVALUATION - extractive body cue:** Our baseline model using the fixed k-NN graph outperforms the previous state-of-the-art PointNet++ by 1.0% accuracy, at the same time being 7 times faster.
-- **p. 8 / 4 EVALUATION - extractive body cue:** Using more points further improves the overall accuracy by 0.6%.
-- **p. 8 / 4 EVALUATION - extractive body cue:** Explicitly centralizing each patch by using the concatenation of xi and xi -xj leads to about 0.5% improvement for overall accuracy.
+- EdgeConv가 이웃 점 사이의 상대 특징을 집계한다.
+- 물체 분류와 부분·실내 장면 분할에서 평가한다.
 
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+[저자 원문](https://api.crossref.org/works/10.1145/3326362)
 
 ## Evaluation Scope
 

@@ -3,7 +3,8 @@
 > Evidence maturity: `ABSTRACT_CHECKED`. abstract 기반 — 본문 수동 확인 필요.
 > 자동 작성 노트는 실제 정독을 뜻하지 않는다. 사용자 reading status는 UNREAD로 시작한다.
 
-- Year/Venue: 2026 / arXiv
+- Year/Venue
+- Authors: Ziheng Liu, Quantao Yang
 - Category: VLA and Generalist Robot Policies
 - Primary track: VLA and generalist robot policies
 - Tier: NEXT
@@ -11,8 +12,8 @@
 - Aliases: TEMPO-RL
 - Official paper: https://arxiv.org/abs/2608.07314
 - Venue verification: https://arxiv.org/abs/2608.07314
-- Code/Project: https://anonymous.4open.science/w/tempo-page/
-- Code: not_identified
+- Code/Project: not identified
+- Code: not identified
 - Source audit: 2026-11-12: 공식 abstract/metadata 확인; project URL은 링크 식별만 확인. v1 abstract 및 논문 내 project 링크 확인. 익명 code 링크는 기존 N1에서 발견했으나 내용 검증은 안 됨. 동명의 TEMPO: Learning Temporal Context for Dynamic Robot Manipulation과 다른 논문이다. 논문이 제공한 익명 project URL은 이번 도구에서 접근하지 못했으며 링크 식별만 확인했다. 새 5-note는 초록 수준이며 과거 N1/N2의 지정 본문/source 검토는 work/sources/vla_masters_gap_scout_2026-11-12.json을 따른다. 사용자 정독·코드 재현을 뜻하지 않는다.
 
 ## Problem and Importance

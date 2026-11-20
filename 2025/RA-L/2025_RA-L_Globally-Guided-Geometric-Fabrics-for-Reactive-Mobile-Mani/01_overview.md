@@ -3,16 +3,17 @@
 > Evidence maturity: `ABSTRACT_CHECKED`. abstract 기반 — 본문 수동 확인 필요.
 > 자동 작성 노트는 실제 정독을 뜻하지 않는다. 사용자 reading status는 UNREAD로 시작한다.
 
-- Year/Venue: 2025 / RA-L
+- Year/Venue
+- Authors: Tomas Merva, Saray Bakker, Max Spahn, Danning Zhao, Ivan Virgala, Javier Alonso-Mora
 - Category: Locomotion, Whole-Body, and Mobile Manipulation
 - Primary track: Locomotion, whole-body, mobile manipulation, and humanoids
 - Tier: REFERENCE
 - Tags: mobile-manipulation, motion-planning, grasping
 - Aliases: G3F
-- Official paper: https://doi.org/10.1109/LRA.2025.3562005
+- Official paper: https://api.crossref.org/works/10.1109/LRA.2025.3562005
 - Venue verification: https://api.crossref.org/works/10.1109/LRA.2025.3562005
 - Code/Project: https://autonomousrobots.nl/paper_websites/g3f
-- Code: project_only
+- Code: https://github.com/TomasMerva/g3f_planner
 - Source audit: 2026-10-22 공식 abstract/arXiv abstract와 publication metadata 확인. 새 5개 note는 abstract 수준의 분석이며 상세 본문·코드 감사는 기존 buildup dossier의 명시 범위만 따른다. IEEE DOI deposit와 저자 연구실 abstract를 함께 확인했다.
 
 ## Problem and Importance

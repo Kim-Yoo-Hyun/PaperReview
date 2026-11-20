@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / ICCV
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Heng Su, Mengying Xie, Nieqing Cao, Yan Ding, Beichen Shao, Xianlei Long, Fuqiang Gu, Chao Chen
 - Primary track: VLA and generalist robot policies
 - Tier: REFERENCE
 - Tags: Robotics, semantic
@@ -19,7 +19,7 @@
 
 ## Why This Paper Is Here
 
-VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다. 본문은 The first challenge is that current models mainly predict affordances for single objects [5, 6, 25, 36], relying on isolated 2D images or high-quality 3D point clouds that require precise scanning and ...를 문제로 두고, Here, we introduce our framework, OVA-Fields, which enables accurate affordance detection in 3D scenes based on natural language queries.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+OVA-Fields는 자연어 질의로 3D 장면에서 로봇이 상호작용할 수 있는 영역을 찾는다.
 
 ## Problem and Motivation
 
@@ -53,16 +53,10 @@ VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다
 
 ## Main Claims and Actual Contribution
 
-- **p. 3 / 3. Methods - extractive body cue:** Here, we introduce our framework, OVA-Fields, which enables accurate affordance detection in 3D scenes based on natural language queries.
-- **p. 2 / 1. Introduction - extractive body cue:** Our main contributions are summarized as follows: • We propose OVA-Fields, a novel framework for affordance detection in 3D real-world scenes.
-- **p. 1 / 1. Introduction - extractive body cue:** Our framework directly maps the user's open-vocabulary semantic queries to actionable affordance locations in the complex 3D scenes, allowing robots to identify and interact with ...
-- **p. 2 / 1. Introduction - extractive body cue:** To address these challenges, we introduce the OVA-Fields framework, a robot-centric affordance detection framework that operates robustly with sparse and noisy sensor inputs.
-- **p. 3 / 3.1. Multi-Modal Affordance Perception - extractive body cue:** 2a), our method first extracts pixel embeddings from each RGB image.
-- **p. 8 / 5. Real Robot Experiments - extractive body cue:** The case of "grab the cup" reveals that although affordance detection reaches 90% spatial accuracy, the current pipeline achieves a 20% success rate for containers ...
-- **p. 6 / 4.3. Ablation Study - extractive body cue:** The performance gap demonstrates that the hierarchical integration of semantic and visual features significantly improves affordance detection robustness in real-world environments.
-- **p. 6 / Figure/Table caption - extractive body cue:** Table 2. Performance comparison of various models on the Affordance detection task for different objects. From these two indicators, the OVA-Fields consistently outperforms the baselines, ...
+- 약한 감독으로 물체의 행동 가능 영역을 공간에 표현한다.
+- 사전에 고정한 범주를 넘어서는 질의에서 검출을 평가한다.
 
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+[저자 원문](https://openaccess.thecvf.com/content/ICCV2025/html/Su_OVA-Fields_Weakly_Supervised_Open-Vocabulary_Affordance_Fields_for_Robot_Operational_Part_ICCV_2025_paper.html)
 
 ## Evaluation Scope
 

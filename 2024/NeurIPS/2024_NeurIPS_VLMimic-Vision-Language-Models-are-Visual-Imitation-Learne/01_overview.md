@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2024 / NeurIPS
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Guangyan Chen, Meiling Wang, Te Cui, Yao Mu, Haoyang Lu, Tianxing Zhou, Zicai Peng, Mengxiao Hu, Haizhou Li, Li Yuan, Yi Yang, Yufeng Yue
 - Primary track: VLA and generalist robot policies
 - Tier: NEXT
 - Tags: Robotics, VLM, visual imitation, human video, fine-grained action, long-horizon manipulation

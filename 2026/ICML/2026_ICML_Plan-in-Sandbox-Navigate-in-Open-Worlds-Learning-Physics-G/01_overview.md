@@ -7,12 +7,12 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2026 / ICML
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Zhixuan Shen, Jiawei Du, Ziyu Guo, Han Luo, Lilan Peng, Joey Tianyi Zhou, Haonan Luo, Tianrui Li
 - Primary track: RL, IL, offline learning, and robot data
 - Tier: REFERENCE
 - Tags: Navigation, Reinforcement Learning
-- Official paper: https://openreview.net/forum?id=W5e8c9nwNo
-- Full-text retrieval: https://openreview.net/pdf/27299763732e881621b2b6f37e47e47722f2e575.pdf
+- Official paper: https://icml.cc/virtual/2026/poster/63554
+- Full-text retrieval: https://arxiv.org/pdf/2605.10118.pdf
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (28 pages; PyMuPDF text; title-token overlap first two pages=1.0)

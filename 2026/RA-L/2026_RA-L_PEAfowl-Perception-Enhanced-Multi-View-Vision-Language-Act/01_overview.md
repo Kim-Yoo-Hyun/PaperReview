@@ -3,13 +3,14 @@
 > Evidence maturity: `ABSTRACT_CHECKED`. abstract 기반 — 본문 수동 확인 필요.
 > 자동 작성 노트는 실제 정독을 뜻하지 않는다. 사용자 reading status는 UNREAD로 시작한다.
 
-- Year/Venue: 2026 / RA-L
+- Year/Venue
+- Authors: Qingyu Fan, Zhaoxiang Li, Jinrui Hu, Yi Lu, Wang Chen, Qiu Shen, Xiao-xiao Long, Yinghao Cai, Tao Lu, Shuo Wang, Xun Cao
 - Category: VLA and Generalist Robot Policies
 - Primary track: VLA and generalist robot policies
 - Tier: REFERENCE
 - Tags: multi-view, 3D-representation, bimanual, VLA
 - Aliases: PEAfowl
-- Official paper: https://ieeexplore.ieee.org/document/11661761/
+- Official paper: https://peafowlvla.github.io/
 - Venue verification: https://ieeexplore.ieee.org/document/11661761/
 - Code/Project: https://peafowlvla.github.io/
 - Code: https://github.com/Qingyu-Fan/PEAfowl

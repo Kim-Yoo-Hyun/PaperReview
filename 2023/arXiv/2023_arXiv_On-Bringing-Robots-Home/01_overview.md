@@ -7,13 +7,13 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2023 / arXiv
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Nur Muhammad Mahi Shafiullah, Anant Rai, Haritheja Etukuru, Yiqian Liu, Ishan Misra, Soumith Chintala, Lerrel Pinto
 - Primary track: Locomotion, whole-body, mobile manipulation, and humanoids
 - Tier: REFERENCE
 - Tags: Robotics, mobile manipulation, home robotics, whole-body autonomy
 - Official paper: https://arxiv.org/abs/2311.16098
 - Full-text retrieval: https://arxiv.org/pdf/2311.16098
-- Code/Project: https://robotathome.github.io/
+- Code/Project: https://dobb-e.com/
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (32 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 

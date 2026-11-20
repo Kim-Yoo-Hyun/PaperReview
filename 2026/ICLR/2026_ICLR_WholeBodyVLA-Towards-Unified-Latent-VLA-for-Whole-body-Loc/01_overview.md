@@ -3,7 +3,8 @@
 > Evidence maturity: `ABSTRACT_CHECKED`. abstract 기반 — 본문 수동 확인 필요.
 > 자동 작성 노트는 실제 정독을 뜻하지 않는다. 사용자 reading status는 UNREAD로 시작한다.
 
-- Year/Venue: 2026 / ICLR
+- Year/Venue
+- Authors: Haoran Jiang, Jin Chen, Qingwen Bu, Li Chen, Modi Shi, Yanjie Zhang, Delong Li, Chuanzhe Suo, wang chuang, zhihui peng, Hongyang Li
 - Category: Locomotion, Whole-Body, and Mobile Manipulation
 - Primary track: Locomotion, whole-body, mobile manipulation, and humanoids
 - Tier: NEXT
@@ -11,7 +12,7 @@
 - Aliases:
 - Official paper: https://proceedings.iclr.cc/paper_files/paper/2026/hash/ff7373914a96956f2a7cacbdf3b0b8d8-Abstract-Conference.html
 - Venue verification: https://proceedings.iclr.cc/paper_files/paper/2026/hash/ff7373914a96956f2a7cacbdf3b0b8d8-Abstract-Conference.html
-- Code/Project: https://opendrivelab.com/WholebodyVLA
+- Code/Project: https://wholebodyvla.github.io/
 - Code: https://github.com/OpenDriveLab/WholebodyVLA
 - Source audit: 2026-10-21: official abstract / author project 확인. 5개 note는 abstract 기반이며 사용자 정독을 의미하지 않는다.
 

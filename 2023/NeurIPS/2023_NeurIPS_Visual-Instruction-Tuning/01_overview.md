@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2023 / NeurIPS
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Haotian Liu, Chunyuan Li, Qingyang Wu, Yong Jae Lee
 - Primary track: Foundations: Vision and Language Models
 - Tier: REFERENCE
 - Tags: Vision-Language Model, LLM, instruction tuning

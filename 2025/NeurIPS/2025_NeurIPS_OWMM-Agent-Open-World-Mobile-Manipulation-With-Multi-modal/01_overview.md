@@ -7,11 +7,11 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / NeurIPS
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Junting Chen, Haotian Liang, Lingxiao Du, Weiyun Wang, Mengkang Hu, Yao Mu, Wenhai Wang, Jifeng Dai, Ping Luo, Wenqi Shao, Lin Shao
 - Primary track: VLA and generalist robot policies
 - Tier: REFERENCE
 - Tags: Vision-Language Model, Robotics, Reinforcement Learning
-- Official paper: https://openreview.net/forum?id=vSLzoUoJt6
+- Official paper: https://neurips.cc/virtual/2025/poster/115408
 - Full-text retrieval: https://arxiv.org/pdf/2506.04217
 - Code/Project: not identified
 - Paper type: method

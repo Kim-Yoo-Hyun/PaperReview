@@ -7,11 +7,11 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2009 / ICRA
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Nathan Ratliff, Matt Zucker, J. Andrew Bagnell, Siddhartha Srinivasa
 - Primary track: Planning and control
 - Tier: REFERENCE
 - Tags: Robotics, motion planning, trajectory optimization, manipulation
-- Official paper: https://www.ri.cmu.edu/publications/chomp-gradient-optimization-techniques-for-efficient-motion-planning/
+- Official paper: https://api.crossref.org/works/10.1109/ROBOT.2009.5152817
 - Full-text retrieval: https://www.ri.cmu.edu/pub_files/2009/5/icra09-chomp.pdf
 - Code/Project: https://moveit.github.io/moveit_tutorials/doc/chomp_planner/chomp_planner_tutorial.html
 - Paper type: theory_or_foundation

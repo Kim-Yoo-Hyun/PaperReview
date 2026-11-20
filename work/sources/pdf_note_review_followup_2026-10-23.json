@@ -1772,7 +1772,7 @@
       "prior_review_hash_matches": true,
       "title_token_overlap": 1.0,
       "mirror": false,
-      "overview_path": "2022/CoRL/2022_CoRL_Implicit-Behavioral-Cloning/01_overview.md",
+      "overview_path": "2021/CoRL/2021_CoRL_Implicit-Behavioral-Cloning/01_overview.md",
       "identity_check": "Prior source review PDF SHA256 exact match",
       "corrected_note_count": 3,
       "correction_pages": [
@@ -1933,7 +1933,7 @@
       "prior_review_hash_matches": true,
       "title_token_overlap": 1.0,
       "mirror": false,
-      "overview_path": "2023/arXiv/2023_arXiv_RoboCat-A-Self-Improving-Generalist-Agent-for-Robotic-Mani/01_overview.md",
+      "overview_path": "2023/TMLR/2023_TMLR_RoboCat-A-Self-Improving-Generalist-Agent-for-Robotic-Mani/01_overview.md",
       "identity_check": "Prior source review PDF SHA256 exact match",
       "corrected_note_count": 1,
       "correction_pages": [
@@ -2080,7 +2080,7 @@
       "prior_review_hash_matches": true,
       "title_token_overlap": 1.0,
       "mirror": false,
-      "overview_path": "2022/arXiv/2022_arXiv_A-Generalist-Agent/01_overview.md",
+      "overview_path": "2022/TMLR/2022_TMLR_A-Generalist-Agent/01_overview.md",
       "identity_check": "Prior source review PDF SHA256 exact match",
       "corrected_note_count": 1,
       "correction_pages": [
@@ -5879,7 +5879,7 @@
     },
     {
       "paper_id": "pr-0636",
-      "path": "2022/CoRL/2022_CoRL_Implicit-Behavioral-Cloning/01_overview.md",
+      "path": "2021/CoRL/2021_CoRL_Implicit-Behavioral-Cloning/01_overview.md",
       "sha256_before": "954c0bc552e396a58ba74a791af1311cd2312b462522a1e1c5d2a1ad39921145",
       "sha256_after": "b0428b46cc19e42d5f24384c1a354550ae8a466a32fe516aaa2ee3312b87a645",
       "pdf_pages": [
@@ -5901,7 +5901,7 @@
     },
     {
       "paper_id": "pr-0636",
-      "path": "2022/CoRL/2022_CoRL_Implicit-Behavioral-Cloning/03_method.md",
+      "path": "2021/CoRL/2021_CoRL_Implicit-Behavioral-Cloning/03_method.md",
       "sha256_before": "3d604ae28fbea01cfbb0d5ff967c07ac0b0655c7121b903da62e5c7202f3f760",
       "sha256_after": "a5b9e8f3d713b478c5bdfd56895ea486f644208c62850e19e7ce36e2b5b6bbd0",
       "pdf_pages": [
@@ -5923,7 +5923,7 @@
     },
     {
       "paper_id": "pr-0636",
-      "path": "2022/CoRL/2022_CoRL_Implicit-Behavioral-Cloning/04_evaluation.md",
+      "path": "2021/CoRL/2021_CoRL_Implicit-Behavioral-Cloning/04_evaluation.md",
       "sha256_before": "099dbf2c3d9e6b8d0ec1eac31bae69f4903b10fe05c079502dcd939d35cf3870",
       "sha256_after": "f56d8e9a12cde958960b42cada4cc0acd683e227471bc8172e9208074f8e7618",
       "pdf_pages": [
@@ -6247,7 +6247,7 @@
     },
     {
       "paper_id": "pr-0723",
-      "path": "2023/arXiv/2023_arXiv_RoboCat-A-Self-Improving-Generalist-Agent-for-Robotic-Mani/03_method.md",
+      "path": "2023/TMLR/2023_TMLR_RoboCat-A-Self-Improving-Generalist-Agent-for-Robotic-Mani/03_method.md",
       "sha256_before": "6484d606fafb13ebf87a76236fe52b8bfc9aef19643aace324df631ab8faac07",
       "sha256_after": "f87cf4a0a86325828deecbaa802486341b178e7245a6668a44693d04a3521eb3",
       "pdf_pages": [
@@ -6698,7 +6698,7 @@
     },
     {
       "paper_id": "pr-0857",
-      "path": "2022/arXiv/2022_arXiv_A-Generalist-Agent/03_method.md",
+      "path": "2022/TMLR/2022_TMLR_A-Generalist-Agent/03_method.md",
       "sha256_before": "236e595e5ea19f0f029e49cea722700f76d7fc7d59a308fb41f923e873216a67",
       "sha256_after": "eafd91c7b8c926f8e8dade1a6ab81aa015dba3470358caa165b4dd955899d397",
       "pdf_pages": [
