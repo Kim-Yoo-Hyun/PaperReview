@@ -1,4 +1,4 @@
-# TASK-GEOMETRY — 입력 개입·평가·Docker 실행 준비 명세
+# 조작용 3D 추정 재현
 
 Updated: 2026-11-18 KST. **N1 내부 비실험 검토·P0 코드 준비 완료 / PREPARED_UNEXECUTED.** [질문·판정](../내용/README.md#p0-preparation-result) · [원장 `task_geometry_n1` / `task_geometry_p0_preparation`](../../../sources/new_field_scout_2026-11-17.json). Docker recipe와 깊이 교체 probe를 작성했고 새 launcher는 daemon 연결 실패로 중단됐다. Image build·Docker 검사·native 호환은 미검증이다. 1번 주제의 모델 자료를 재사용하지만 실행 결과는 분리한다.
 

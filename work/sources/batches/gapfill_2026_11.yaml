@@ -1,0 +1,2818 @@
+# F·G · 등록 심사 원장. 등급 2는 NEXT이며 prior_work_relations는 본문에 근거한 해석이다.
+batch: gapfill-2026-11
+verified_on: '2026-11-19'
+groups:
+  A:
+  - id: 2024-yue-deervla
+    title: 'DeeR-VLA: Dynamic Inference of Multimodal Large Language Models for Efficient Robot Execution'
+    authors:
+    - Yang Yue
+    - Yulin Wang
+    - Bingyi Kang
+    - Yizeng Han
+    - Shenzhi Wang
+    - Shiji Song
+    - Jiashi Feng
+    - Gao Huang
+    affiliations:
+    - Tsinghua University
+    - ByteDance
+    year: 2024
+    venue: NeurIPS
+    publication_status: 공식 게재 목록
+    links:
+      paper: https://proceedings.neurips.cc/paper_files/paper/2024/hash/67b0e7c7c2a5780aeefe3b79caac106e-Abstract-Conference.html
+      project: unknown
+      code: https://github.com/yueyang130/DeeR-VLA
+    tier: 2
+    one_line_summary: 로봇 정책이 관측마다 다른 깊이에서 추론을 종료하도록 학습한다.
+    key_contributions:
+    - 여러 중간 층에서 행동을 출력한다.
+    - 평균 계산량과 순간 지연·메모리 요구에 맞춰 종료 조건을 조정한다.
+    method_tags:
+    - IL
+    task_tags:
+    - 조작
+    embodiment_tags:
+    - unknown
+    modality_tags:
+    - RGB
+    - 언어
+    data_source_tags:
+    - 시뮬
+    openness:
+      code: Y
+      weights: Y
+      data: unknown
+    datasets_benchmarks:
+    - CALVIN
+    limitations:
+      paper_reported: 언어 모델 계산량을 줄여도 시각 인코더 비용이 남으며, 평가는 시뮬레이션에 한정됐다.
+      subsequent_work: unknown
+    prior_work:
+    - pr-0935
+    verification: 부분확인
+    notes: 저자가 보고한 평가 범위와 공개 배포물에 대한 심사. 다운로드·정책 실행 미검증.
+    found_in:
+      surveyV: https://arxiv.org/html/2505.04769#bib.bib78
+      surveyM: https://arxiv.org/html/2405.14093#bib.bib104
+      neurips24: https://proceedings.neurips.cc/paper_files/paper/2024/hash/67b0e7c7c2a5780aeefe3b79caac106e-Abstract-Conference.html
+      awesome: https://arxiv.org/pdf/2411.02359
+    added_in: gapfill-2026-11
+    verified_on: '2026-11-19'
+    existence_source:
+      url: https://proceedings.neurips.cc/paper_files/paper/2024/hash/67b0e7c7c2a5780aeefe3b79caac106e-Abstract-Conference.html
+      title: 'DeeR-VLA: Dynamic Inference of Multimodal Large Language Models for Efficient Robot Execution'
+      authors:
+      - Yang Yue
+      - Yulin Wang
+      - Bingyi Kang
+      - Yizeng Han
+      - Shenzhi Wang
+      - Shiji Song
+      - Jiashi Feng
+      - Gao Huang
+      year: 2024
+      venue_source: https://proceedings.neurips.cc/paper_files/paper/2024/hash/67b0e7c7c2a5780aeefe3b79caac106e-Abstract-Conference.html
+    artifact_evidence:
+      code: https://github.com/yueyang130/DeeR-VLA
+      weights: https://huggingface.co/Yang130/DeeR-VLA
+    vla:
+      backbone:
+        name: OpenFlamingo
+        size: 3B (비교 구성)
+        source: https://proceedings.neurips.cc/paper_files/paper/2024/file/67b0e7c7c2a5780aeefe3b79caac106e-Paper-Conference.pdf#page=7
+      action_representation:
+      - unknown
+      architecture: 단일 모델
+      training:
+      - SFT
+      evaluation:
+        sim_benchmarks:
+        - CALVIN
+        real_robot_tasks: 0
+        source: https://proceedings.neurips.cc/paper_files/paper/2024/file/67b0e7c7c2a5780aeefe3b79caac106e-Paper-Conference.pdf#page=10
+    prior_work_relations:
+    - registry_id: pr-0935
+      type: 확장
+      basis: RoboFlamingo의 시각언어 정책에 중간 행동 출구와 계산 예산 기준을 추가한다. §3, [9].
+      source: https://proceedings.neurips.cc/paper_files/paper/2024/file/67b0e7c7c2a5780aeefe3b79caac106e-Paper-Conference.pdf#page=4
+    registry_id: pr-1228
+    decision: 등록
+    decision_reason: 계산 예산에 따라 같은 VLA의 실행 깊이를 바꾸는 비교 기준이다.
+    tier_reason: NEXT · 계산 예산에 따라 같은 VLA의 실행 깊이를 바꾸는 비교 기준이다.
+    evaluation_scope: CALVIN 장기 지시 조작에서 작업 성능, 연산량과 메모리를 함께 비교했다.
+    evidence:
+      evaluation: https://proceedings.neurips.cc/paper_files/paper/2024/file/67b0e7c7c2a5780aeefe3b79caac106e-Paper-Conference.pdf#page=8
+      method_and_relation: https://proceedings.neurips.cc/paper_files/paper/2024/file/67b0e7c7c2a5780aeefe3b79caac106e-Paper-Conference.pdf#page=4
+      limitations: https://proceedings.neurips.cc/paper_files/paper/2024/file/67b0e7c7c2a5780aeefe3b79caac106e-Paper-Conference.pdf#page=10
+  - id: 2025-guo-irevla
+    title: Improving Vision-Language-Action Model with Online Reinforcement Learning
+    authors:
+    - Yanjiang Guo
+    - Jianke Zhang
+    - Xiaoyu Chen
+    - Xiang Ji
+    - Yen-Jen Wang
+    - Yucheng Hu
+    - Jianyu Chen
+    affiliations: unknown
+    year: 2025
+    venue: ICRA
+    publication_status: 공식 게재 목록
+    links:
+      paper: https://arxiv.org/abs/2501.16664
+      project: unknown
+      code: unknown
+    tier: 2
+    one_line_summary: 로봇 상호작용에서 얻은 RL 개선을 감독학습과 교대로 VLA에 반영한다.
+    key_contributions:
+    - 탐색과 정책 갱신의 학습 절차를 분리한다.
+    - 시뮬레이션과 실제 조작에서 이 절차를 평가한다.
+    method_tags:
+    - IL
+    - RL
+    task_tags:
+    - 조작
+    embodiment_tags:
+    - 단팔
+    modality_tags:
+    - RGB
+    - 언어
+    data_source_tags:
+    - 혼합
+    openness:
+      code: unknown
+      weights: unknown
+      data: unknown
+    datasets_benchmarks:
+    - Meta-World
+    - FrankaKitchen
+    limitations:
+      paper_reported: unknown
+      subsequent_work: unknown
+    prior_work:
+    - pr-0524
+    verification: 부분확인
+    notes: 저자가 보고한 평가 범위와 공개 배포물에 대한 심사. 다운로드·정책 실행 미검증.
+    found_in:
+      surveyV: https://arxiv.org/html/2505.04769#bib.bib139
+      surveyM: https://arxiv.org/html/2405.14093#bib.bib605
+      icra25: https://doi.org/10.1109/icra55743.2025.11127299
+      awesome: https://arxiv.org/pdf/2501.16664
+    added_in: gapfill-2026-11
+    verified_on: '2026-11-19'
+    existence_source:
+      url: https://api.crossref.org/works/10.1109/icra55743.2025.11127299
+      title: Improving Vision-Language-Action Model with Online Reinforcement Learning
+      authors:
+      - Yanjiang Guo
+      - Jianke Zhang
+      - Xiaoyu Chen
+      - Xiang Ji
+      - Yen-Jen Wang
+      - Yucheng Hu
+      - Jianyu Chen
+      year: 2025
+      venue_source: https://api.crossref.org/works/10.1109/icra55743.2025.11127299
+    artifact_evidence: {}
+    vla:
+      backbone:
+        name: BLIP-2
+        size: 3B
+        source: https://arxiv.org/pdf/2501.16664#page=3
+      action_representation:
+      - unknown
+      architecture: 단일 모델
+      training:
+      - SFT
+      - RL 파인튜닝
+      evaluation:
+        sim_benchmarks:
+        - Meta-World
+        - FrankaKitchen
+        real_robot_tasks: unknown
+    prior_work_relations:
+    - registry_id: pr-0524
+      type: 대체
+      basis: 직접 PPO 미세조정 기준선을 RL 탐색과 감독 갱신을 교대로 하는 절차로 대체해 시험한다. §IV 및 비교 실험.
+      source: https://arxiv.org/pdf/2501.16664#page=4
+    registry_id: pr-1229
+    decision: 등록
+    decision_reason: 온라인 RL을 VLA에 직접 적용하는 방식과 RL·감독학습을 교대하는 방식을 대조할 기준이다.
+    tier_reason: NEXT · 온라인 RL을 VLA에 직접 적용하는 방식과 RL·감독학습을 교대하는 방식을 대조할 기준이다.
+    evaluation_scope: 시뮬레이션 조작과 실물 조작에서 직접 PPO 및 감독학습 조건을 비교했다.
+    evidence:
+      evaluation: https://arxiv.org/pdf/2501.16664#page=5
+      method_and_relation: https://arxiv.org/pdf/2501.16664#page=4
+  - id: 2025-zhao-more
+    title: 'MoRE: Unlocking Scalability in Reinforcement Learning for Quadruped Vision-Language-Action Models'
+    authors:
+    - Han Zhao
+    - Wenxuan Song
+    - Donglin Wang
+    - Xinyang Tong
+    - Pengxiang Ding
+    - Xuelian Cheng
+    - Zongyuan Ge
+    affiliations:
+    - Zhejiang University
+    - Westlake University
+    - Monash University
+    - Hong Kong University of Science and Technology (Guangzhou)
+    year: 2025
+    venue: ICRA
+    publication_status: 공식 게재 목록
+    links:
+      paper: https://arxiv.org/abs/2503.08007
+      project: unknown
+      code: unknown
+    tier: 2
+    one_line_summary: 사족 로봇 VLA에서 품질이 다른 경험으로 행동 가치를 학습한다.
+    key_contributions:
+    - 저랭크 전문가를 희소 활성화한다.
+    - Q 함수 학습을 여러 기술 및 실제 사족 로봇에서 검토한다.
+    method_tags:
+    - RL
+    task_tags:
+    - 이동
+    - 내비게이션
+    embodiment_tags:
+    - 사족보행
+    modality_tags:
+    - RGB
+    - 언어
+    data_source_tags:
+    - unknown
+    openness:
+      code: unknown
+      weights: unknown
+      data: unknown
+    datasets_benchmarks: unknown
+    limitations:
+      paper_reported: unknown
+      subsequent_work: unknown
+    prior_work:
+    - pr-0625
+    verification: 부분확인
+    notes: 저자가 보고한 평가 범위와 공개 배포물에 대한 심사. 다운로드·정책 실행 미검증.
+    found_in:
+      surveyV: https://arxiv.org/html/2505.04769#bib.bib73
+      surveyM: https://arxiv.org/html/2405.14093#bib.bib469
+      icra25: https://doi.org/10.1109/icra55743.2025.11128601
+      awesome: https://arxiv.org/pdf/2503.08007
+    added_in: gapfill-2026-11
+    verified_on: '2026-11-19'
+    existence_source:
+      url: https://api.crossref.org/works/10.1109/icra55743.2025.11128601
+      title: 'MoRE: Unlocking Scalability in Reinforcement Learning for Quadruped Vision-Language-Action Models'
+      authors:
+      - Han Zhao
+      - Wenxuan Song
+      - Donglin Wang
+      - Xinyang Tong
+      - Pengxiang Ding
+      - Xuelian Cheng
+      - Zongyuan Ge
+      year: 2025
+      venue_source: https://api.crossref.org/works/10.1109/icra55743.2025.11128601
+    artifact_evidence: {}
+    vla:
+      backbone:
+        name: Fuyu
+        size: 8B
+        source: https://arxiv.org/pdf/2503.08007#page=3
+      action_representation:
+      - 이산 토큰
+      architecture: 단일 모델
+      training:
+      - RL 파인튜닝
+      evaluation:
+        sim_benchmarks:
+        - unknown
+        real_robot_tasks: unknown
+    prior_work_relations:
+    - registry_id: pr-0625
+      type: 확장
+      basis: Q-Transformer [30]의 자기회귀 이산 Q 목적을 사족 VLA의 전문가 혼합 미세조정에 맞게 바꾼다. Training objective.
+      source: https://arxiv.org/pdf/2503.08007#page=4
+    registry_id: pr-1230
+    decision: 등록
+    decision_reason: 사족 로봇에서 VLA를 행동 가치 함수로 학습하는 경로를 대표한다.
+    tier_reason: NEXT · 사족 로봇에서 VLA를 행동 가치 함수로 학습하는 경로를 대표한다.
+    evaluation_scope: 여러 사족 기술과 분포 이동, 실물 전이를 평가했다.
+    evidence:
+      evaluation: https://arxiv.org/pdf/2503.08007#page=5
+      method_and_relation: https://arxiv.org/pdf/2503.08007#page=4
+      affiliations: https://arxiv.org/pdf/2503.08007#page=1
+  - id: 2026-torne-mem
+    title: 'MEM: Multi-Scale Embodied Memory for Vision Language Action Models'
+    authors:
+    - Marcel Torne
+    - Karl Pertsch
+    - Homer Walke
+    - Kyle Vedder
+    - Suraj Nair
+    - Brian Ichter
+    - Allen Z. Ren
+    - Haohuan Wang
+    - Jiaming Tang
+    - Kyle Stachowicz
+    - Karan Dhabalia
+    - Michael Equi
+    - Quan Vuong
+    - Jost Tobias Springenberg
+    - Sergey Levine
+    - Chelsea Finn
+    - Danny Driess
+    affiliations: unknown
+    year: 2026
+    venue: CoRL
+    publication_status: 공식 채택·발표 목록
+    links:
+      paper: https://arxiv.org/abs/2603.03596
+      project: https://pi.website/research/memory
+      code: unknown
+    tier: 2
+    one_line_summary: 짧은 시각 이력과 긴 의미 이력을 다른 형식으로 보존하는 로봇 정책이다.
+    key_contributions:
+    - 최근 관측 비디오는 압축하고 장기 이력은 텍스트로 표현한다.
+    - 실제 장시간 조작에서 이력에 따른 행동 적응을 평가한다.
+    method_tags:
+    - IL
+    task_tags:
+    - 조작
+    embodiment_tags:
+    - unknown
+    modality_tags:
+    - RGB
+    - 언어
+    data_source_tags:
+    - unknown
+    openness:
+      code: unknown
+      weights: unknown
+      data: unknown
+    datasets_benchmarks: unknown
+    limitations:
+      paper_reported: unknown
+      subsequent_work: unknown
+    prior_work:
+    - pr-0061
+    verification: 부분확인
+    notes: 저자가 보고한 평가 범위와 공개 배포물에 대한 심사. 다운로드·정책 실행 미검증.
+    found_in:
+      corl26: https://openreview.net/forum?id=5TiiTY1fK3
+      awesome: https://www.pi.website/download/Mem.pdf
+      pi: https://arxiv.org/abs/2603.03596
+    added_in: gapfill-2026-11
+    verified_on: '2026-11-19'
+    existence_source:
+      url: https://arxiv.org/abs/2603.03596
+      title: 'MEM: Multi-Scale Embodied Memory for Vision Language Action Models'
+      authors:
+      - Marcel Torne
+      - Karl Pertsch
+      - Homer Walke
+      - Kyle Vedder
+      - Suraj Nair
+      - Brian Ichter
+      - Allen Z. Ren
+      - Haohuan Wang
+      - Jiaming Tang
+      - Kyle Stachowicz
+      - Karan Dhabalia
+      - Michael Equi
+      - Quan Vuong
+      - Jost Tobias Springenberg
+      - Sergey Levine
+      - Chelsea Finn
+      - Danny Driess
+      year: 2026
+      venue_source: https://www.corl.org/program/accepted-papers
+    artifact_evidence: {}
+    vla:
+      backbone:
+        name: π0.6
+        size: unknown
+      action_representation:
+      - 연속(diffusion·flow matching)
+      architecture: 기타
+      training:
+      - SFT
+      evaluation:
+        sim_benchmarks:
+        - unknown
+        real_robot_tasks: unknown
+    prior_work_relations:
+    - registry_id: pr-0061
+      type: 결합
+      basis: 저자들은 π0.5 [36]를 따라 실패 뒤 사람이 수정한 시연을 수집한다. 실험의 기본 정책은 별도 모델인 π0.6 [35]이다. §IV, targeted human feedback.
+      source: https://arxiv.org/pdf/2603.03596#page=7
+    registry_id: pr-1231
+    decision: 등록
+    decision_reason: 단기 영상 이력과 장기 의미 이력이 서로 다른 행동 오류를 해결하는지 시험할 기준이다.
+    tier_reason: NEXT · 단기 영상 이력과 장기 의미 이력이 서로 다른 행동 오류를 해결하는지 시험할 기준이다.
+    evaluation_scope: 실제 다단계 조작에서 메모리 없는 정책과 단일 기억 표현을 비교했다.
+    evidence:
+      evaluation: https://arxiv.org/pdf/2603.03596#page=7
+      method_and_relation: https://arxiv.org/pdf/2603.03596#page=7
+  - id: 2025-kwok-robomonkey
+    title: 'RoboMonkey: Scaling Test-Time Sampling and Verification for Vision-Language-Action Models'
+    authors:
+    - Jacky Kwok
+    - Christopher Agia
+    - Rohan Sinha
+    - Matt Foutter
+    - Shulu Li
+    - Ion Stoica
+    - Azalia Mirhoseini
+    - Marco Pavone
+    affiliations:
+    - Stanford University
+    - University of California, Berkeley
+    - NVIDIA
+    year: 2025
+    venue: CoRL
+    publication_status: 공식 게재 목록
+    links:
+      paper: https://proceedings.mlr.press/v305/kwok25a.html
+      project: https://robomonkey-vla.github.io
+      code: https://github.com/robomonkey-vla/RoboMonkey
+    tier: 2
+    one_line_summary: VLA가 생성한 후보 행동을 검증해 실행할 행동을 선택한다.
+    key_contributions:
+    - 합성 데이터로 시각언어 행동 검증기를 학습한다.
+    - 후보 샘플링과 검증에 투입하는 추론 계산량의 효과를 평가한다.
+    method_tags:
+    - unknown
+    task_tags:
+    - 조작
+    embodiment_tags:
+    - 단팔
+    modality_tags:
+    - RGB
+    - 언어
+    data_source_tags:
+    - 합성
+    openness:
+      code: Y
+      weights: 부분
+      data: 부분
+    datasets_benchmarks:
+    - LIBERO
+    limitations:
+      paper_reported: unknown
+      subsequent_work: unknown
+    prior_work:
+    - pr-0051
+    verification: 부분확인
+    notes: 저자가 보고한 평가 범위와 공개 배포물에 대한 심사. 다운로드·정책 실행 미검증.
+    found_in:
+      surveyM: https://arxiv.org/html/2405.14093#bib.bib81
+      corl25: https://proceedings.mlr.press/v305/kwok25a.html
+      awesome: https://arxiv.org/pdf/2506.17811
+    added_in: gapfill-2026-11
+    verified_on: '2026-11-19'
+    existence_source:
+      url: https://proceedings.mlr.press/v305/kwok25a.html
+      title: 'RoboMonkey: Scaling Test-Time Sampling and Verification for Vision-Language-Action Models'
+      authors:
+      - Jacky Kwok
+      - Christopher Agia
+      - Rohan Sinha
+      - Matt Foutter
+      - Shulu Li
+      - Ion Stoica
+      - Azalia Mirhoseini
+      - Marco Pavone
+      year: 2025
+      venue_source: https://proceedings.mlr.press/v305/kwok25a.html
+    artifact_evidence:
+      code: https://github.com/robomonkey-vla/RoboMonkey
+      weights: https://huggingface.co/robomonkey-vla/monkey-verifier-7b
+      data: https://huggingface.co/datasets/robomonkey-vla/action_preference_bridge
+    vla:
+      backbone:
+        name: OpenVLA 행동 제안기와 별도 검증기
+        size: unknown
+      action_representation:
+      - 이산 토큰
+      architecture: 기타
+      training:
+      - 기타
+      evaluation:
+        sim_benchmarks:
+        - LIBERO
+        real_robot_tasks: unknown
+    prior_work_relations:
+    - registry_id: pr-0051
+      type: 결합
+      basis: OpenVLA를 고정된 행동 후보 생성기로 사용하고 후보 검증·선택을 추가한다. Experiments, base model.
+      source: https://raw.githubusercontent.com/mlresearch/v305/main/assets/kwok25a/kwok25a.pdf#page=6
+    registry_id: pr-1232
+    decision: 등록
+    decision_reason: 추가 학습 없이 행동 후보를 더 뽑는 효과와 학습한 검증기가 주는 이득을 분리할 기준이다.
+    tier_reason: NEXT · 추가 학습 없이 행동 후보를 더 뽑는 효과와 학습한 검증기가 주는 이득을 분리할 기준이다.
+    evaluation_scope: OpenVLA를 기본 정책으로 시뮬레이션과 실물 WidowX에서 표집 및 검증 방식을 비교했다.
+    evidence:
+      evaluation: https://raw.githubusercontent.com/mlresearch/v305/main/assets/kwok25a/kwok25a.pdf#page=7
+      method_and_relation: https://raw.githubusercontent.com/mlresearch/v305/main/assets/kwok25a/kwok25a.pdf#page=6
+  - id: 2026-niu-trex
+    title: 'T-Rex: Tactile-Reactive Dexterous Manipulation'
+    authors:
+    - Dantong Niu
+    - Zhuoyang Liu
+    - Zekai Wang
+    - Boning Shao
+    - Zhao-Heng Yin
+    - Anirudh Pai
+    - Yuvan Sharma
+    - Stefano Saravalle
+    - Ruijie Zheng
+    - Jing Wang
+    - Ryan Punamiya
+    - Mengda Xu
+    - Yuqi Xie
+    - Yunfan Jiang
+    - Letian Fu
+    - Konstantinos Kallidromitis
+    - Matteo Gioia
+    - Junyi Zhang
+    - Jiaxin Ge
+    - Haiwen Feng
+    - Fabio Galasso
+    - Wei Zhan
+    - David M. Chan
+    - Yutong Bai
+    - Roei Herzig
+    - Jiahui Lei
+    - Li Fei-Fei
+    - Ken Goldberg
+    - Jitendra Malik
+    - Pieter Abbeel
+    - Yuke Zhu
+    - Danfei Xu
+    - Linxi Fan
+    - Trevor Darrell
+    affiliations:
+    - University of California, Berkeley
+    - NVIDIA
+    - Stanford University
+    - Panasonic
+    - Sapienza University of Rome
+    - ItalAI
+    year: 2026
+    venue: CoRL
+    publication_status: 공식 채택·발표 목록
+    links:
+      paper: https://arxiv.org/abs/2606.17055
+      project: https://tactile-rex.github.io/
+      code: https://github.com/ZhuoyangLiu2005/T-Rex
+    tier: 2
+    one_line_summary: 촉각 시계열에 빠르게 반응하는 다지 조작 정책을 학습한다.
+    key_contributions:
+    - 기초 동작을 중심으로 촉각 데이터 수집 절차를 설계한다.
+    - 서로 다른 주기의 처리 구조와 시간 촉각 인코더를 평가한다.
+    method_tags:
+    - IL
+    task_tags:
+    - 조작
+    embodiment_tags:
+    - 기타
+    modality_tags:
+    - RGB
+    - 촉각
+    - 언어
+    data_source_tags:
+    - 혼합
+    openness:
+      code: Y
+      weights: 부분
+      data: Y
+    datasets_benchmarks: unknown
+    limitations:
+      paper_reported: unknown
+      subsequent_work: unknown
+    prior_work:
+    - pr-0061
+    verification: 부분확인
+    notes: 저자가 보고한 평가 범위와 공개 배포물에 대한 심사. 다운로드·정책 실행 미검증.
+    found_in:
+      corl26: https://openreview.net/forum?id=KdaClHHEUt
+      gear: https://arxiv.org/abs/2606.17055
+    added_in: gapfill-2026-11
+    verified_on: '2026-11-19'
+    existence_source:
+      url: https://arxiv.org/abs/2606.17055
+      title: 'T-Rex: Tactile-Reactive Dexterous Manipulation'
+      authors:
+      - Dantong Niu
+      - Zhuoyang Liu
+      - Zekai Wang
+      - Boning Shao
+      - Zhao-Heng Yin
+      - Anirudh Pai
+      - Yuvan Sharma
+      - Stefano Saravalle
+      - Ruijie Zheng
+      - Jing Wang
+      - Ryan Punamiya
+      - Mengda Xu
+      - Yuqi Xie
+      - Yunfan Jiang
+      - Letian Fu
+      - Konstantinos Kallidromitis
+      - Matteo Gioia
+      - Junyi Zhang
+      - Jiaxin Ge
+      - Haiwen Feng
+      - Fabio Galasso
+      - Wei Zhan
+      - David M. Chan
+      - Yutong Bai
+      - Roei Herzig
+      - Jiahui Lei
+      - Li Fei-Fei
+      - Ken Goldberg
+      - Jitendra Malik
+      - Pieter Abbeel
+      - Yuke Zhu
+      - Danfei Xu
+      - Linxi Fan
+      - Trevor Darrell
+      year: 2026
+      venue_source: https://www.corl.org/program/accepted-papers
+    artifact_evidence:
+      code: https://github.com/ZhuoyangLiu2005/T-Rex
+      data: https://huggingface.co/datasets/zekaiwang/trex_dataset
+      weights: https://huggingface.co/miniFranka/T-Rex_pretrain_mecka22k_epoch1
+    vla:
+      backbone:
+        name: 시각·언어, 행동, 촉각의 전문가 트랜스포머
+        size: unknown
+      action_representation:
+      - 연속(diffusion·flow matching)
+      architecture: 단일 모델
+      training:
+      - 기타
+      evaluation:
+        sim_benchmarks:
+        - unknown
+        real_robot_tasks: 12
+        source: https://arxiv.org/pdf/2606.17055#page=7
+    prior_work_relations:
+    - registry_id: pr-0061
+      type: 비판
+      basis: 기본 π0.5와 단순 촉각 추가 변형을 비교해 이 과제군에서 촉각 채널 추가만으로는 고속 접촉 반응을 얻기 어렵다고 보고한다. 실물 비교표.
+      source: https://arxiv.org/pdf/2606.17055#page=7
+    registry_id: pr-1233
+    decision: 등록
+    decision_reason: 접촉 중 빠른 촉각 반응을 학습할 시연 자료와 서로 다른 주기의 VLA 구조를 함께 제시한다.
+    tier_reason: NEXT · 접촉 중 빠른 촉각 반응을 학습할 시연 자료와 서로 다른 주기의 VLA 구조를 함께 제시한다.
+    evaluation_scope: 정밀 힘 제어 및 변형체 조작에서 기존 VLA와 촉각 추가 변형을 비교했다.
+    evidence:
+      evaluation: https://arxiv.org/pdf/2606.17055#page=7
+      method_and_relation: https://arxiv.org/pdf/2606.17055#page=7
+      affiliations: https://arxiv.org/pdf/2606.17055#page=1
+  - id: 2026-xu-contactgrounded
+    title: 'Contact-Grounded Policy: Dexterous Visuotactile Policy with Generative Contact Grounding'
+    authors:
+    - Zhengtong Xu
+    - Yeping Wang
+    - Ben Abbatematteo
+    - Jom Preechayasomboon
+    - Sonny Chan
+    - Nicholas Colonnese
+    - Amirhossein H. Memar
+    affiliations:
+    - Purdue University
+    - Meta Reality Labs Research
+    - University of Wisconsin–Madison
+    year: 2026
+    venue: RSS
+    publication_status: 공식 게재 목록
+    links:
+      paper: https://roboticsproceedings.org/rss22/p005.html
+      project: https://contact-grounded-policy.github.io/
+      code: unknown
+    tier: 2
+    one_line_summary: 접촉의 미래 상태를 예측해 다지 손의 순응 제어 목표를 만든다.
+    key_contributions:
+    - 확산 모델로 로봇 상태와 촉각 궤적을 함께 예측한다.
+    - 예측을 제어 목표에 대응시켜 실물·시뮬레이션 손에서 평가한다.
+    method_tags:
+    - IL
+    task_tags:
+    - 조작
+    embodiment_tags:
+    - 기타
+    modality_tags:
+    - RGB
+    - 촉각
+    - 고유수용감각
+    data_source_tags:
+    - unknown
+    openness:
+      code: unknown
+      weights: unknown
+      data: unknown
+    datasets_benchmarks: unknown
+    limitations:
+      paper_reported: unknown
+      subsequent_work: unknown
+    prior_work:
+    - pr-0019
+    verification: 부분확인
+    notes: 저자가 보고한 평가 범위와 공개 배포물에 대한 심사. 다운로드·정책 실행 미검증.
+    found_in:
+      rss26: https://roboticsproceedings.org/rss22/p005.html
+    added_in: gapfill-2026-11
+    verified_on: '2026-11-19'
+    existence_source:
+      url: https://roboticsproceedings.org/rss22/p005.html
+      title: 'Contact-Grounded Policy: Dexterous Visuotactile Policy with Generative Contact Grounding'
+      authors:
+      - Zhengtong Xu
+      - Yeping Wang
+      - Ben Abbatematteo
+      - Jom Preechayasomboon
+      - Sonny Chan
+      - Nicholas Colonnese
+      - Amirhossein H. Memar
+      year: 2026
+      venue_source: https://roboticsproceedings.org/rss22/p005.html
+    artifact_evidence: {}
+    prior_work_relations:
+    - registry_id: pr-0019
+      type: 확장
+      basis: Diffusion Policy [4]의 조건부 U-Net에 미래 로봇 상태와 촉각의 공동 예측을 적용한다. 구현 및 p.6 비교표.
+      source: https://roboticsproceedings.org/rss22/p005.pdf#page=5
+    registry_id: pr-1234
+    decision: 등록
+    decision_reason: 촉각을 정책의 추가 입력으로 쓰는 경우와 미래 접촉을 실행 제어 목표로 만드는 경우를 직접 비교한다.
+    tier_reason: NEXT · 촉각을 정책의 추가 입력으로 쓰는 경우와 미래 접촉을 실행 제어 목표로 만드는 경우를 직접 비교한다.
+    evaluation_scope: 물리 Allegro 손과 시뮬레이션 손에서 손안 조작·파지 과업을 비교했다.
+    evidence:
+      evaluation: https://roboticsproceedings.org/rss22/p005.pdf#page=6
+      method_and_relation: https://roboticsproceedings.org/rss22/p005.pdf#page=5
+      affiliations: https://roboticsproceedings.org/rss22/p005.pdf#page=1
+  - id: 2024-gu-dwl
+    title: 'Advancing Humanoid Locomotion: Mastering Challenging Terrains with Denoising World Model Learning'
+    authors:
+    - Xinyang Gu
+    - Yen-Jen Wang
+    - Xiang Zhu
+    - Chengming Shi
+    - Yanjiang Guo
+    - Yichen Liu
+    - Jianyu Chen
+    affiliations: unknown
+    year: 2024
+    venue: RSS
+    publication_status: 공식 게재 목록
+    links:
+      paper: https://roboticsproceedings.org/rss20/p058.html
+      project: unknown
+      code: unknown
+    tier: 2
+    one_line_summary: 잡음 제거 세계 모델을 이용해 험지 보행을 위한 휴머노이드 제어기를 학습한다.
+    key_contributions:
+    - 세계 모델 학습과 보행 강화학습을 결합한다.
+    - 다른 지형의 실제 보행에서 시뮬레이션 학습 정책의 전이를 평가한다.
+    method_tags:
+    - RL
+    task_tags:
+    - 이동
+    embodiment_tags:
+    - 휴머노이드
+    modality_tags:
+    - 고유수용감각
+    data_source_tags:
+    - 시뮬
+    openness:
+      code: unknown
+      weights: unknown
+      data: unknown
+    datasets_benchmarks: unknown
+    limitations:
+      paper_reported: unknown
+      subsequent_work: unknown
+    prior_work:
+    - pr-0524
+    verification: 부분확인
+    notes: 저자가 보고한 평가 범위와 공개 배포물에 대한 심사. 다운로드·정책 실행 미검증.
+    found_in:
+      surveyH: https://arxiv.org/html/2501.02116#bib.bib357
+      rss24: https://roboticsproceedings.org/rss20/p058.html
+    added_in: gapfill-2026-11
+    verified_on: '2026-11-19'
+    existence_source:
+      url: https://roboticsproceedings.org/rss20/p058.html
+      title: 'Advancing Humanoid Locomotion: Mastering Challenging Terrains with Denoising World Model Learning'
+      authors:
+      - Xinyang Gu
+      - Yen-Jen Wang
+      - Xiang Zhu
+      - Chengming Shi
+      - Yanjiang Guo
+      - Yichen Liu
+      - Jianyu Chen
+      year: 2024
+      venue_source: https://roboticsproceedings.org/rss20/p058.html
+    artifact_evidence: {}
+    humanoid:
+      control_scope:
+      - 로코모션
+      training:
+      - sim-to-real RL
+      hardware:
+      - unknown
+      hand_type:
+      - unknown
+      sim_to_real: 예
+    prior_work_relations:
+    - registry_id: pr-0524
+      type: 결합
+      basis: 세계 모델의 상태 표현과 PPO의 정책 최적화 [29]를 결합한다. Training losses, p.7 지형별 PPO 비교.
+      source: https://roboticsproceedings.org/rss20/p058.pdf#page=4
+    registry_id: pr-1235
+    decision: 등록
+    decision_reason: 잡음 제거 세계 모델과 보행 RL을 실제 불규칙 지형에 전이한 대표 제어 사례다.
+    tier_reason: NEXT · 잡음 제거 세계 모델과 보행 RL을 실제 불규칙 지형에 전이한 대표 제어 사례다.
+    evaluation_scope: 보행 제어를 계단·경사·불규칙 지형에서 비교하고 실물 휴머노이드에 배포했다.
+    evidence:
+      evaluation: https://roboticsproceedings.org/rss20/p058.pdf#page=7
+      method_and_relation: https://roboticsproceedings.org/rss20/p058.pdf#page=4
+  - id: 2025-li-clone
+    title: 'CLONE: Closed-Loop Whole-Body Humanoid Teleoperation for Long-Horizon Tasks'
+    authors:
+    - Yixuan Li
+    - Yutang Lin
+    - Jieming Cui
+    - Tengyu Liu
+    - Wei Liang
+    - Yixin Zhu
+    - Siyuan Huang
+    affiliations: unknown
+    year: 2025
+    venue: CoRL
+    publication_status: 공식 게재 목록
+    links:
+      paper: https://proceedings.mlr.press/v305/li25h.html
+      project: https://humanoid-clone.github.io/
+      code: https://github.com/humanoid-clone/CLONE
+    tier: 2
+    one_line_summary: 전신 원격조작에서 상·하체를 함께 제어하고 누적 위치 오차를 수정한다.
+    key_contributions:
+    - 전신 제어에 전문가 혼합 정책을 적용한다.
+    - LiDAR 주행거리 추정으로 장시간 조작의 드리프트를 보정한다.
+    method_tags:
+    - IL
+    - RL
+    task_tags:
+    - 전신제어
+    - 모바일매니퓰레이션
+    embodiment_tags:
+    - 휴머노이드
+    modality_tags:
+    - 고유수용감각
+    - 기타
+    data_source_tags:
+    - unknown
+    openness:
+      code: 부분
+      weights: unknown
+      data: unknown
+    datasets_benchmarks: unknown
+    limitations:
+      paper_reported: unknown
+      subsequent_work: unknown
+    prior_work:
+    - pr-0602
+    verification: 부분확인
+    notes: 저자가 보고한 평가 범위와 공개 배포물에 대한 심사. 다운로드·정책 실행 미검증.
+    found_in:
+      corl25: https://proceedings.mlr.press/v305/li25h.html
+    added_in: gapfill-2026-11
+    verified_on: '2026-11-19'
+    existence_source:
+      url: https://proceedings.mlr.press/v305/li25h.html
+      title: 'CLONE: Closed-Loop Whole-Body Humanoid Teleoperation for Long-Horizon Tasks'
+      authors:
+      - Yixuan Li
+      - Yutang Lin
+      - Jieming Cui
+      - Tengyu Liu
+      - Wei Liang
+      - Yixin Zhu
+      - Siyuan Huang
+      year: 2025
+      venue_source: https://proceedings.mlr.press/v305/li25h.html
+    artifact_evidence:
+      code: https://github.com/humanoid-clone/CLONE
+      scope: 확인한 공개 트리는 deploy와 resources다.
+    humanoid:
+      control_scope:
+      - 전신
+      training:
+      - 텔레오퍼레이션 모방
+      hardware:
+      - Unitree G1
+      hand_type:
+      - unknown
+      sim_to_real: 예
+    prior_work_relations:
+    - registry_id: pr-0602
+      type: 확장
+      basis: OmniH2O [18]의 보상·도메인 랜덤화를 바탕으로 폐루프 원격조작에 맞게 변경한다. Training 및 p.8 ablation.
+      source: https://raw.githubusercontent.com/mlresearch/v305/main/assets/li25h/li25h.pdf#page=5
+    registry_id: pr-1236
+    decision: 등록
+    decision_reason: 전신 시연을 수집할 때 제어기와 실제 위치의 차이를 폐루프로 보정하는 시스템 기준이다.
+    tier_reason: NEXT · 전신 시연을 수집할 때 제어기와 실제 위치의 차이를 폐루프로 보정하는 시스템 기준이다.
+    evaluation_scope: 실물 Unitree G1에서 장시간 원격조작과 이동 중 위치 드리프트를 비교했다.
+    evidence:
+      evaluation: https://raw.githubusercontent.com/mlresearch/v305/main/assets/li25h/li25h.pdf#page=8
+      method_and_relation: https://raw.githubusercontent.com/mlresearch/v305/main/assets/li25h/li25h.pdf#page=5
+  - id: 2025-xiong-via
+    title: 'Vision in Action: Learning Active Perception from Human Demonstrations'
+    authors:
+    - Haoyu Xiong
+    - Xiaomeng Xu
+    - Jimmy Wu
+    - Yifan Hou
+    - Jeannette Bohg
+    - Shuran Song
+    affiliations:
+    - Stanford University
+    year: 2025
+    venue: CoRL
+    publication_status: 공식 게재 목록
+    links:
+      paper: https://proceedings.mlr.press/v305/xiong25a.html
+      project: https://vision-in-action.github.io
+      code: https://github.com/haoyu-x/vision-in-action
+    tier: 2
+    one_line_summary: 사람의 시선 이동 시연으로 양팔 조작 중 카메라를 움직이는 정책을 학습한다.
+    key_contributions:
+    - 가동형 로봇 목과 공유 관측을 제공하는 원격조작 인터페이스를 설계한다.
+    - 가림이 발생하는 다단계 조작에서 능동 관측을 평가한다.
+    method_tags:
+    - IL
+    task_tags:
+    - 조작
+    embodiment_tags:
+    - 양팔
+    modality_tags:
+    - RGB
+    data_source_tags:
+    - 실제로봇
+    openness:
+      code: Y
+      weights: unknown
+      data: unknown
+    datasets_benchmarks: unknown
+    limitations:
+      paper_reported: unknown
+      subsequent_work: unknown
+    prior_work:
+    - pr-0019
+    verification: 부분확인
+    notes: 저자가 보고한 평가 범위와 공개 배포물에 대한 심사. 다운로드·정책 실행 미검증.
+    found_in:
+      corl25: https://proceedings.mlr.press/v305/xiong25a.html
+    added_in: gapfill-2026-11
+    verified_on: '2026-11-19'
+    existence_source:
+      url: https://proceedings.mlr.press/v305/xiong25a.html
+      title: 'Vision in Action: Learning Active Perception from Human Demonstrations'
+      authors:
+      - Haoyu Xiong
+      - Xiaomeng Xu
+      - Jimmy Wu
+      - Yifan Hou
+      - Jeannette Bohg
+      - Shuran Song
+      year: 2025
+      venue_source: https://proceedings.mlr.press/v305/xiong25a.html
+    artifact_evidence:
+      code: https://github.com/haoyu-x/vision-in-action
+    prior_work_relations:
+    - registry_id: pr-0019
+      type: 확장
+      basis: Diffusion Policy [12]로 능동 카메라와 양팔 동작을 시연에서 학습한다. Visuomotor policy.
+      source: https://raw.githubusercontent.com/mlresearch/v305/main/assets/xiong25a/xiong25a.pdf#page=5
+    registry_id: pr-1237
+    decision: 등록
+    decision_reason: 카메라 움직임을 학습한 양팔 정책과 고정 카메라 정책을 실물에서 비교한 능동 인식의 직접 선행이다.
+    tier_reason: NEXT · 카메라 움직임을 학습한 양팔 정책과 고정 카메라 정책을 실물에서 비교한 능동 인식의 직접 선행이다.
+    evaluation_scope: 가림이 있는 실물 양팔 다단계 조작에서 고정 시점, 시각 백본과 정책 변형을 비교했다.
+    evidence:
+      evaluation: https://raw.githubusercontent.com/mlresearch/v305/main/assets/xiong25a/xiong25a.pdf#page=7
+      method_and_relation: https://raw.githubusercontent.com/mlresearch/v305/main/assets/xiong25a/xiong25a.pdf#page=5
+  - id: 2026-shin-b2ff
+    title: 'Back to the Familiar Future: Failure Recovery for VLA Policies via Pre-Imagined Milestone Selection'
+    authors:
+    - Suyeon Shin
+    - Juwon Kim
+    - Hyeonbin Park
+    - Hyunseo Kim
+    - Hyundo Lee
+    - Hyung-Sin Kim
+    - Byoung-Tak Zhang
+    affiliations:
+    - Seoul National University
+    - Yonsei University
+    - Soongsil University
+    - Tommoro Robotics
+    year: 2026
+    venue: CoRL
+    publication_status: 공식 채택·발표 목록
+    links:
+      paper: https://arxiv.org/abs/2606.09258
+      project: unknown
+      code: unknown
+    tier: 2
+    one_line_summary: 실행 전 상상한 시각적 이정표에서 복구 목표를 선택해 VLA를 재조건화한다.
+    key_contributions:
+    - 예정 경로에서 벗어난 상태를 미래 시각 조건으로 되돌려 연결한다.
+    - 하위 행동 생성기의 추가 미세조정 없이 복구를 평가한다.
+    method_tags:
+    - unknown
+    task_tags:
+    - 조작
+    embodiment_tags:
+    - unknown
+    modality_tags:
+    - RGB
+    - 언어
+    data_source_tags:
+    - unknown
+    openness:
+      code: unknown
+      weights: unknown
+      data: unknown
+    datasets_benchmarks:
+    - LIBERO
+    limitations:
+      paper_reported: 의미를 잘못 이해했거나 되돌릴 수 없는 상태에 도달한 실패는 복구 범위 밖이다.
+      subsequent_work: unknown
+    prior_work:
+    - pr-0042
+    verification: 부분확인
+    notes: 저자가 보고한 평가 범위와 공개 배포물에 대한 심사. 다운로드·정책 실행 미검증.
+    found_in:
+      corl26: https://openreview.net/forum?id=JQvRoFU5aS
+    added_in: gapfill-2026-11
+    verified_on: '2026-11-19'
+    existence_source:
+      url: https://arxiv.org/abs/2606.09258
+      title: 'Back to the Familiar Future: Failure Recovery for VLA Policies via Pre-Imagined Milestone Selection'
+      authors:
+      - Suyeon Shin
+      - Juwon Kim
+      - Hyeonbin Park
+      - Hyunseo Kim
+      - Hyundo Lee
+      - Hyung-Sin Kim
+      - Byoung-Tak Zhang
+      year: 2026
+      venue_source: https://www.corl.org/program/accepted-papers
+    artifact_evidence: {}
+    vla:
+      backbone:
+        name: 미래 영상에 조건화한 동결 VLA
+        size: unknown
+      action_representation:
+      - unknown
+      architecture: 기타
+      training:
+      - 기타
+      evaluation:
+        sim_benchmarks:
+        - LIBERO
+        real_robot_tasks: unknown
+    prior_work_relations:
+    - registry_id: pr-0042
+      type: 확장
+      basis: 기본 LIBERO 평가에 실패를 주입하는 프로토콜을 추가한다. §4.1. 관계 대상은 평가 환경이다.
+      source: https://arxiv.org/pdf/2606.09258#page=5
+    registry_id: pr-1238
+    decision: 등록
+    decision_reason: 복구가 가능한 시점에서 미래 시각 목표만 바꾸는 대조군을 제공한다.
+    tier_reason: NEXT · 복구가 가능한 시점에서 미래 시각 목표만 바꾸는 대조군을 제공한다.
+    evaluation_scope: 기본 LIBERO와 실패 주입 LIBERO를 구분했다. 주입 시점에 맞춘 복구 수치는 독립적인 실패 감지 성능을 포함하지 않는다.
+    evidence:
+      evaluation: https://arxiv.org/pdf/2606.09258#page=6
+      method_and_relation: https://arxiv.org/pdf/2606.09258#page=5
+      affiliations: https://arxiv.org/pdf/2606.09258#page=1
+      limitations: https://arxiv.org/pdf/2606.09258#page=9
+  - id: 2026-seligmann-vlafail
+    title: 'VLA-FAIL: Efficient Task Failure Detection for Finetuned Vision-Language-Action Models'
+    authors:
+    - Florian Seligmann
+    - Emiliyan Gospodinov
+    - Enes Ulas Dincer
+    - Gerhard Neumann
+    affiliations:
+    - Karlsruhe Institute of Technology
+    - FZI Forschungszentrum Informatik
+    year: 2026
+    venue: CoRL
+    publication_status: 공식 채택·발표 목록
+    links:
+      paper: https://arxiv.org/abs/2606.21386
+      project: https://vla-fail.github.io/vla-fail-2026
+      code: unknown
+    tier: 2
+    one_line_summary: 미세조정한 VLA의 실행 실패를 가벼운 감지기로 추적한다.
+    key_contributions:
+    - 계산 비용이 큰 반복 행동 표집을 줄이는 실패 신호를 검토한다.
+    - 서로 다른 실패 양상을 포착하는 신호의 결합을 평가한다.
+    method_tags:
+    - unknown
+    task_tags:
+    - 조작
+    embodiment_tags:
+    - unknown
+    modality_tags:
+    - RGB
+    - 언어
+    data_source_tags:
+    - unknown
+    openness:
+      code: unknown
+      weights: unknown
+      data: unknown
+    datasets_benchmarks:
+    - LIBERO-Plus
+    limitations:
+      paper_reported: unknown
+      subsequent_work: unknown
+    prior_work:
+    - pr-0696
+    verification: 부분확인
+    notes: 저자가 보고한 평가 범위와 공개 배포물에 대한 심사. 다운로드·정책 실행 미검증.
+    found_in:
+      corl26: https://openreview.net/forum?id=mg7X6SFE75
+    added_in: gapfill-2026-11
+    verified_on: '2026-11-19'
+    existence_source:
+      url: https://arxiv.org/abs/2606.21386
+      title: 'VLA-FAIL: Efficient Task Failure Detection for Finetuned Vision-Language-Action Models'
+      authors:
+      - Florian Seligmann
+      - Emiliyan Gospodinov
+      - Enes Ulas Dincer
+      - Gerhard Neumann
+      year: 2026
+      venue_source: https://www.corl.org/program/accepted-papers
+    artifact_evidence: {}
+    vla:
+      backbone:
+        name: 분석 대상 π0.5와 X-VLA
+        size: unknown
+      action_representation:
+      - unknown
+      architecture: 기타
+      training:
+      - 기타
+      evaluation:
+        sim_benchmarks:
+        - LIBERO-Plus
+        real_robot_tasks: 6
+        source: https://arxiv.org/pdf/2606.21386#page=2
+    prior_work_relations:
+    - registry_id: pr-0696
+      type: 비판
+      basis: SAFE의 실패 궤적 의존성을 명시하고 실패 예시 없이 학습하는 감지기와 대조한다. §2 Related Work.
+      source: https://arxiv.org/pdf/2606.21386#page=2
+    registry_id: pr-1239
+    decision: 등록
+    decision_reason: 실패 감지의 정확도와 알림 시간을 함께 평가하는 지표와 VLA용 감지 기준을 제공한다.
+    tier_reason: NEXT · 실패 감지의 정확도와 알림 시간을 함께 평가하는 지표와 VLA용 감지 기준을 제공한다.
+    evaluation_scope: 실제 조작 및 LIBERO-Plus에서 정책 특징 거리·행동 청크 일관성·기존 감지기를 비교했다.
+    evidence:
+      evaluation: https://arxiv.org/pdf/2606.21386#page=6
+      method_and_relation: https://arxiv.org/pdf/2606.21386#page=2
+      affiliations: https://arxiv.org/pdf/2606.21386#page=1
+  - id: 2026-lin-humanoidmimicgen
+    title: 'HumanoidMimicGen: Data Generation for Loco-Manipulation via Whole-Body Planning'
+    authors:
+    - Kevin Lin
+    - Ajay Mandlekar
+    - Caelan Reed Garrett
+    - Nikita Chernyadev
+    - Yu Fang
+    - Runyu Ding
+    - Yuqi Xie
+    - Justin Tran
+    - Linxi Fan
+    - Yuke Zhu
+    affiliations:
+    - NVIDIA
+    - The University of Texas at Austin
+    year: 2026
+    venue: CoRL
+    publication_status: 공식 채택·발표 목록
+    links:
+      paper: https://arxiv.org/abs/2605.27724
+      project: https://humanoidmimicgen.github.io/
+      code: https://github.com/NVlabs/humanoidmimicgen
+    tier: 2
+    one_line_summary: 소수 시연과 전신 계획으로 휴머노이드 이동 조작 학습 데이터를 생성한다.
+    key_contributions:
+    - 물체 자세가 바뀐 장면으로 접촉 기술을 옮겨 전신 보행·조작 계획과 교차 실행한다.
+    - 시뮬레이션 벤치마크 및 생성 데이터 병용 학습을 평가한다.
+    method_tags:
+    - IL
+    - 모델기반
+    task_tags:
+    - 모바일매니퓰레이션
+    - 전신제어
+    embodiment_tags:
+    - 휴머노이드
+    modality_tags:
+    - RGB
+    data_source_tags:
+    - 혼합
+    openness:
+      code: Y
+      weights: unknown
+      data: unknown
+    datasets_benchmarks:
+    - HumanoidMimicGen benchmark
+    limitations:
+      paper_reported: unknown
+      subsequent_work: unknown
+    prior_work:
+    - pr-0637
+    verification: 부분확인
+    notes: 저자가 보고한 평가 범위와 공개 배포물에 대한 심사. 다운로드·정책 실행 미검증.
+    found_in:
+      corl26: https://openreview.net/forum?id=9kXz22fI7a
+      gear: https://arxiv.org/abs/2605.27724
+    added_in: gapfill-2026-11
+    verified_on: '2026-11-19'
+    existence_source:
+      url: https://arxiv.org/abs/2605.27724
+      title: 'HumanoidMimicGen: Data Generation for Loco-Manipulation via Whole-Body Planning'
+      authors:
+      - Kevin Lin
+      - Ajay Mandlekar
+      - Caelan Reed Garrett
+      - Nikita Chernyadev
+      - Yu Fang
+      - Runyu Ding
+      - Yuqi Xie
+      - Justin Tran
+      - Linxi Fan
+      - Yuke Zhu
+      year: 2026
+      venue_source: https://www.corl.org/program/accepted-papers
+    artifact_evidence:
+      code: https://github.com/NVlabs/humanoidmimicgen
+    humanoid:
+      control_scope:
+      - 전신
+      training:
+      - 모델기반
+      hardware:
+      - Unitree G1
+      hand_type:
+      - unknown
+      sim_to_real: 시뮬레이션 생성 자료와 실제 자료를 병용
+    prior_work_relations:
+    - registry_id: pr-0637
+      type: 확장
+      basis: MimicGen의 소수 시연 기반 데이터 생성을 이동 보행과 전신 계획에 확장한다. §2 및 p.7 Table 1.
+      source: https://arxiv.org/pdf/2605.27724#page=2
+    registry_id: pr-1240
+    decision: 등록
+    decision_reason: 전신 계획으로 이동 조작 시연을 만드는 기법과 휴머노이드용 시뮬레이션 벤치마크를 함께 제공한다.
+    tier_reason: NEXT · 전신 계획으로 이동 조작 시연을 만드는 기법과 휴머노이드용 시뮬레이션 벤치마크를 함께 제공한다.
+    evaluation_scope: 물체 배치가 바뀐 시뮬레이션 이동 조작과 실물 데이터 공동학습을 구별해 평가했다.
+    evidence:
+      evaluation: https://arxiv.org/pdf/2605.27724#page=7
+      method_and_relation: https://arxiv.org/pdf/2605.27724#page=2
+  - id: 2024-ma-ngf
+    title: Active Perception for Grasp Detection via Neural Graspness Field
+    authors:
+    - Haoxiang Ma
+    - Modi Shi
+    - Boyang Gao
+    - Di Huang
+    affiliations:
+    - Beihang University
+    - Geometry Robotics
+    year: 2024
+    venue: NeurIPS
+    publication_status: 공식 게재 목록
+    links:
+      paper: https://proceedings.neurips.cc/paper_files/paper/2024/hash/4364fef031fdf7bfd9d1c9c56b287084-Abstract-Conference.html
+      project: unknown
+      code: unknown
+    tier: 2
+    one_line_summary: 파지 가능성의 시점 간 불일치로 카메라를 움직여 파지 자세를 추정한다.
+    key_contributions:
+    - 여러 관측에서 신경 파지 가능성 필드를 구성한다.
+    - 불일치가 큰 방향을 선택해 새 관측을 실제 파지 검출에 반영한다.
+    method_tags:
+    - 모델기반
+    task_tags:
+    - 조작
+    embodiment_tags:
+    - 단팔
+    modality_tags:
+    - RGB
+    - depth
+    data_source_tags:
+    - unknown
+    openness:
+      code: unknown
+      weights: unknown
+      data: unknown
+    datasets_benchmarks:
+    - GraspNet-1Billion
+    limitations:
+      paper_reported: unknown
+      subsequent_work: unknown
+    prior_work:
+    - pr-0645
+    verification: 부분확인
+    notes: 저자가 보고한 평가 범위와 공개 배포물에 대한 심사. 다운로드·정책 실행 미검증.
+    found_in:
+      neurips24: https://proceedings.neurips.cc/paper_files/paper/2024/hash/4364fef031fdf7bfd9d1c9c56b287084-Abstract-Conference.html
+    added_in: gapfill-2026-11
+    verified_on: '2026-11-19'
+    existence_source:
+      url: https://proceedings.neurips.cc/paper_files/paper/2024/hash/4364fef031fdf7bfd9d1c9c56b287084-Abstract-Conference.html
+      title: Active Perception for Grasp Detection via Neural Graspness Field
+      authors:
+      - Haoxiang Ma
+      - Modi Shi
+      - Boyang Gao
+      - Di Huang
+      year: 2024
+      venue_source: https://proceedings.neurips.cc/paper_files/paper/2024/hash/4364fef031fdf7bfd9d1c9c56b287084-Abstract-Conference.html
+    artifact_evidence: {}
+    prior_work_relations:
+    - registry_id: pr-0645
+      type: 확장
+      basis: GraspNet-1Billion에서 시점 선택을 평가하는 능동 파지 벤치마크를 구성한다. 실험 설정 및 p.8 Table 1.
+      source: https://proceedings.neurips.cc/paper_files/paper/2024/file/4364fef031fdf7bfd9d1c9c56b287084-Paper-Conference.pdf#page=6
+    registry_id: pr-1241
+    decision: 등록
+    decision_reason: 재구성 품질 대신 파지 목표에 대한 불확실성으로 카메라 시점을 고르는 기준이다.
+    tier_reason: NEXT · 재구성 품질 대신 파지 목표에 대한 불확실성으로 카메라 시점을 고르는 기준이다.
+    evaluation_scope: GraspNet 기반 능동 파지 평가와 실물 파지에서 관측 시간과 성공의 교환관계를 측정했다.
+    evidence:
+      evaluation: https://proceedings.neurips.cc/paper_files/paper/2024/file/4364fef031fdf7bfd9d1c9c56b287084-Paper-Conference.pdf#page=8
+      method_and_relation: https://proceedings.neurips.cc/paper_files/paper/2024/file/4364fef031fdf7bfd9d1c9c56b287084-Paper-Conference.pdf#page=6
+      affiliations: https://proceedings.neurips.cc/paper_files/paper/2024/file/4364fef031fdf7bfd9d1c9c56b287084-Paper-Conference.pdf#page=1
+  - id: 2025-zhang-kinedex
+    title: 'KineDex: Learning Tactile-Informed Visuomotor Policies via Kinesthetic Teaching for Dexterous Manipulation'
+    authors:
+    - Di Zhang
+    - Chengbo Yuan
+    - Chuan Wen
+    - Hai Zhang
+    - Junqiao Zhao
+    - Yang Gao
+    affiliations: unknown
+    year: 2025
+    venue: CoRL
+    publication_status: 공식 게재 목록
+    links:
+      paper: https://proceedings.mlr.press/v305/zhang25l.html
+      project: https://dinomini00.github.io/KineDex/
+      code: https://github.com/DinoMini00/KineDex_code
+    tier: 2
+    one_line_summary: 촉각을 장착한 로봇 손에 직접 동작을 가르쳐 목표 자세와 힘을 함께 학습한다.
+    key_contributions:
+    - 직접 교시 중 시각·촉각·접촉력에 대응하는 행동을 수집한다.
+    - 확산 정책이 자세와 힘 명령을 예측해 접촉 조작을 실행한다.
+    method_tags:
+    - IL
+    task_tags:
+    - 조작
+    embodiment_tags:
+    - 기타
+    modality_tags:
+    - RGB
+    - 촉각
+    - 고유수용감각
+    data_source_tags:
+    - 실제로봇
+    openness:
+      code: Y
+      weights: unknown
+      data: unknown
+    datasets_benchmarks: unknown
+    limitations:
+      paper_reported: unknown
+      subsequent_work: unknown
+    prior_work:
+    - pr-0019
+    verification: 부분확인
+    notes: 저자가 보고한 평가 범위와 공개 배포물에 대한 심사. 다운로드·정책 실행 미검증.
+    found_in:
+      corl25: https://proceedings.mlr.press/v305/zhang25l.html
+    added_in: gapfill-2026-11
+    verified_on: '2026-11-19'
+    existence_source:
+      url: https://proceedings.mlr.press/v305/zhang25l.html
+      title: 'KineDex: Learning Tactile-Informed Visuomotor Policies via Kinesthetic Teaching for Dexterous Manipulation'
+      authors:
+      - Di Zhang
+      - Chengbo Yuan
+      - Chuan Wen
+      - Hai Zhang
+      - Junqiao Zhao
+      - Yang Gao
+      year: 2025
+      venue_source: https://proceedings.mlr.press/v305/zhang25l.html
+    artifact_evidence:
+      code: https://github.com/DinoMini00/KineDex_code
+    prior_work_relations:
+    - registry_id: pr-0019
+      type: 확장
+      basis: 촉각과 고유수용감각을 조건으로 하는 Diffusion Policy [44]가 힘을 포함한 목표 행동을 예측한다. Policy learning.
+      source: https://raw.githubusercontent.com/mlresearch/v305/main/assets/zhang25l/zhang25l.pdf#page=5
+    registry_id: pr-1242
+    decision: 등록
+    decision_reason: 접촉력 시연을 수집하고 힘을 제어하는 정책까지 연결하는 촉각 모방학습의 기준이다.
+    tier_reason: NEXT · 접촉력 시연을 수집하고 힘을 제어하는 정책까지 연결하는 촉각 모방학습의 기준이다.
+    evaluation_scope: 실물 손의 접촉 조작에서 힘 제어·촉각 관측 등 구성요소를 제거해 비교했다.
+    evidence:
+      evaluation: https://raw.githubusercontent.com/mlresearch/v305/main/assets/zhang25l/zhang25l.pdf#page=6
+      method_and_relation: https://raw.githubusercontent.com/mlresearch/v305/main/assets/zhang25l/zhang25l.pdf#page=5
+  - id: 2025-wu-unitac2pose
+    title: 'UniTac2Pose: A Unified Approach Learned in Simulation for Category-level Visuotactile In-hand Pose Estimation'
+    authors:
+    - Mingdong Wu
+    - Long Yang
+    - Jin Liu
+    - Weiyao Huang
+    - Lehong Wu
+    - Zelin Chen
+    - Daolin Ma
+    - Hao Dong
+    affiliations: unknown
+    year: 2025
+    venue: CoRL
+    publication_status: 공식 게재 목록
+    links:
+      paper: https://proceedings.mlr.press/v305/wu25d.html
+      project: https://unitac2pose-web.vercel.app/
+      code: unknown
+    tier: 2
+    one_line_summary: 시뮬레이션에서 학습한 시각식 촉각 모델로 손안 물체의 자세와 불확실성을 추정한다.
+    key_contributions:
+    - 렌더링과 실제 촉각 영상의 차이로 후보 자세의 에너지를 계산한다.
+    - 같은 모델로 자세 추정과 시간에 따른 추적을 수행한다.
+    method_tags:
+    - unknown
+    task_tags:
+    - 조작
+    embodiment_tags:
+    - 기타
+    modality_tags:
+    - 촉각
+    data_source_tags:
+    - 시뮬
+    openness:
+      code: unknown
+      weights: unknown
+      data: unknown
+    datasets_benchmarks: unknown
+    limitations:
+      paper_reported: 새 자세를 얻는 초기 추정에는 반복 디노이징이 필요해 추적보다 느리다.
+      subsequent_work: unknown
+    prior_work:
+    - pr-0484
+    verification: 부분확인
+    notes: 저자가 보고한 평가 범위와 공개 배포물에 대한 심사. 다운로드·정책 실행 미검증.
+    found_in:
+      corl25: https://proceedings.mlr.press/v305/wu25d.html
+    added_in: gapfill-2026-11
+    verified_on: '2026-11-19'
+    existence_source:
+      url: https://proceedings.mlr.press/v305/wu25d.html
+      title: 'UniTac2Pose: A Unified Approach Learned in Simulation for Category-level Visuotactile In-hand Pose Estimation'
+      authors:
+      - Mingdong Wu
+      - Long Yang
+      - Jin Liu
+      - Weiyao Huang
+      - Lehong Wu
+      - Zelin Chen
+      - Daolin Ma
+      - Hao Dong
+      year: 2025
+      venue_source: https://proceedings.mlr.press/v305/wu25d.html
+    artifact_evidence: {}
+    prior_work_relations:
+    - registry_id: pr-0484
+      type: 결합
+      basis: Song 등 [40]의 probability flow ODE를 촉각 기반 후보 자세 갱신에 사용한다. Eq. (6).
+      source: https://raw.githubusercontent.com/mlresearch/v305/main/assets/wu25d/wu25d.pdf#page=5
+    registry_id: pr-1243
+    decision: 등록
+    decision_reason: 새 물체의 손안 자세·추적·불확실성을 같은 촉각 추정기에서 평가하는 비교 기준이다.
+    tier_reason: NEXT · 새 물체의 손안 자세·추적·불확실성을 같은 촉각 추정기에서 평가하는 비교 기준이다.
+    evaluation_scope: 시뮬레이션 학습 후 실제 촉각 영상에서 물체 종류별 자세 오차와 추적을 평가했다.
+    evidence:
+      evaluation: https://raw.githubusercontent.com/mlresearch/v305/main/assets/wu25d/wu25d.pdf#page=7
+      method_and_relation: https://raw.githubusercontent.com/mlresearch/v305/main/assets/wu25d/wu25d.pdf#page=5
+      limitations: https://raw.githubusercontent.com/mlresearch/v305/main/assets/wu25d/wu25d.pdf#page=9
+  - id: 2025-lee-vitascope
+    title: 'ViTaSCOPE: Visuo-tactile Implicit Representation for In-hand Pose and Extrinsic Contact Estimation'
+    authors:
+    - Jayjun Lee
+    - Nima Fazeli
+    affiliations:
+    - University of Michigan
+    year: 2025
+    venue: RSS
+    publication_status: 공식 게재 목록
+    links:
+      paper: https://roboticsproceedings.org/rss21/p054.html
+      project: https://jayjunlee.github.io/vitascope
+      code: unknown
+    tier: 2
+    one_line_summary: 도구의 시각·촉각 관측으로 손안 자세와 외부 접촉 위치를 함께 추정한다.
+    key_contributions:
+    - 암묵적 형상 표현을 도구 표면과 접촉 위치에 공유한다.
+    - 센서의 전단 변형과 부분 관측을 이용해 자세와 외부 접촉을 복원한다.
+    method_tags:
+    - 모델기반
+    task_tags:
+    - 조작
+    embodiment_tags:
+    - 단팔
+    modality_tags:
+    - 촉각
+    - depth
+    data_source_tags:
+    - 시뮬
+    openness:
+      code: N
+      weights: unknown
+      data: unknown
+    datasets_benchmarks: unknown
+    limitations:
+      paper_reported: unknown
+      subsequent_work: unknown
+    prior_work:
+    - pr-0848
+    verification: 부분확인
+    notes: 저자가 보고한 평가 범위와 공개 배포물에 대한 심사. 다운로드·정책 실행 미검증.
+    found_in:
+      rss25: https://roboticsproceedings.org/rss21/p054.html
+    added_in: gapfill-2026-11
+    verified_on: '2026-11-19'
+    existence_source:
+      url: https://roboticsproceedings.org/rss21/p054.html
+      title: 'ViTaSCOPE: Visuo-tactile Implicit Representation for In-hand Pose and Extrinsic Contact Estimation'
+      authors:
+      - Jayjun Lee
+      - Nima Fazeli
+      year: 2025
+      venue_source: https://roboticsproceedings.org/rss21/p054.html
+    artifact_evidence:
+      code: https://jayjunlee.github.io/vitascope/
+    prior_work_relations:
+    - registry_id: pr-0848
+      type: 결합
+      basis: GelSight 계열 광학 촉각 센서를 실물 그리퍼의 도구 접촉 관측에 사용한다. 실기 설정 및 p.2 관련 연구. 센서 결합 관계다.
+      source: https://arxiv.org/pdf/2506.12239#page=6
+    registry_id: pr-1244
+    decision: 등록
+    decision_reason: 손안 물체의 자세와 물체가 환경에 닿는 위치를 함께 추정하는 접촉 상태 기준이다.
+    tier_reason: NEXT · 손안 물체의 자세와 물체가 환경에 닿는 위치를 함께 추정하는 접촉 상태 기준이다.
+    evaluation_scope: 도구로 환경을 접촉하는 실물 및 시뮬레이션 평가에서 자세 추정과 외부 접촉 추정을 분리했다.
+    evidence:
+      evaluation: https://arxiv.org/pdf/2506.12239#page=7
+      method_and_relation: https://arxiv.org/pdf/2506.12239#page=6
+      affiliations: https://arxiv.org/pdf/2506.12239#page=1
+  - id: 2025-liu-vtdexmanip
+    title: 'VTDexManip: A Dataset and Benchmark for Visual-tactile Pretraining and Dexterous Manipulation with Reinforcement Learning'
+    authors:
+    - Qingtao Liu
+    - Yu Cui
+    - Zhengnan Sun
+    - Gaofeng Li
+    - Jiming Chen
+    - Qi Ye
+    affiliations:
+    - Zhejiang University
+    year: 2025
+    venue: ICLR
+    publication_status: 공식 게재 목록
+    links:
+      paper: https://proceedings.iclr.cc/paper_files/paper/2025/hash/e19b6f65791e350347bcff8a3955cb5b-Abstract-Conference.html
+      project: https://lqts.github.io/VTDexManip/
+      code: https://github.com/LQTS/VTDexManip
+    tier: 2
+    one_line_summary: 정교 조작 RL에서 시각·촉각 사전학습을 비교하는 데이터셋과 벤치마크다.
+    key_contributions:
+    - 희소 이진 촉각과 시각을 함께 학습하는 조건을 제공한다.
+    - 과제·센서 잡음·시점 조건별로 모달리티의 기여를 평가한다.
+    method_tags:
+    - RL
+    task_tags:
+    - 조작
+    embodiment_tags:
+    - 기타
+    modality_tags:
+    - RGB
+    - 촉각
+    - 고유수용감각
+    data_source_tags:
+    - 시뮬
+    openness:
+      code: Y
+      weights: unknown
+      data: Y
+    datasets_benchmarks:
+    - VTDexManip
+    - SAPIEN
+    limitations:
+      paper_reported: unknown
+      subsequent_work: unknown
+    prior_work:
+    - pr-0524
+    verification: 부분확인
+    notes: 저자가 보고한 평가 범위와 공개 배포물에 대한 심사. 다운로드·정책 실행 미검증.
+    found_in:
+      iclr25: https://openreview.net/forum?id=jf7C7EGw21
+    added_in: gapfill-2026-11
+    verified_on: '2026-11-19'
+    existence_source:
+      url: https://proceedings.iclr.cc/paper_files/paper/2025/hash/e19b6f65791e350347bcff8a3955cb5b-Abstract-Conference.html
+      title: 'VTDexManip: A Dataset and Benchmark for Visual-tactile Pretraining and Dexterous Manipulation with Reinforcement Learning'
+      authors:
+      - Qingtao Liu
+      - Yu Cui
+      - Zhengnan Sun
+      - Gaofeng Li
+      - Jiming Chen
+      - Qi Ye
+      year: 2025
+      venue_source: https://proceedings.iclr.cc/paper_files/paper/2025/hash/e19b6f65791e350347bcff8a3955cb5b-Abstract-Conference.html
+    artifact_evidence:
+      code: https://github.com/LQTS/VTDexManip
+      data: https://github.com/LQTS/VTDexManipPretraining
+      data_landing: https://1drv.ms/f/c/9054151f0ba654c9/EslUpgsfFVQggJB7AQAAAAABSp31p8Fft1mtHyOwJNqmoA
+      scope: 저자가 제공한 데이터 배포 안내와 OneDrive 랜딩에 접근했다. 파일 내용은 미검증이다.
+    prior_work_relations:
+    - registry_id: pr-0524
+      type: 결합
+      basis: 시각·촉각 표현을 사용하는 조작 정책의 학습기로 PPO를 사용한다. Manipulation Policy Learning.
+      source: https://proceedings.iclr.cc/paper_files/paper/2025/file/e19b6f65791e350347bcff8a3955cb5b-Paper-Conference.pdf#page=6
+    registry_id: pr-1245
+    decision: 등록
+    decision_reason: 희소 이진 촉각의 기여를 같은 RL 과제에서 비교할 수 있는 데이터셋과 벤치마크다.
+    tier_reason: NEXT · 희소 이진 촉각의 기여를 같은 RL 과제에서 비교할 수 있는 데이터셋과 벤치마크다.
+    evaluation_scope: 관절 물체 조작 시뮬레이션에서 시각·촉각·공동 사전학습, 시점과 촉각 노이즈를 비교했다.
+    evidence:
+      evaluation: https://proceedings.iclr.cc/paper_files/paper/2025/file/e19b6f65791e350347bcff8a3955cb5b-Paper-Conference.pdf#page=6
+      method_and_relation: https://proceedings.iclr.cc/paper_files/paper/2025/file/e19b6f65791e350347bcff8a3955cb5b-Paper-Conference.pdf#page=6
+      affiliations: https://proceedings.iclr.cc/paper_files/paper/2025/file/e19b6f65791e350347bcff8a3955cb5b-Paper-Conference.pdf#page=1
+  - id: 2026-heng-vitacformer
+    title: 'ViTacFormer: Learning Cross-Modal Representation for Visuo-Tactile Dexterous Manipulation'
+    authors:
+    - Liang Heng
+    - Haoran Geng
+    - Kaifeng Zhang
+    - Pieter Abbeel
+    - Jitendra Malik
+    affiliations:
+    - University of California, Berkeley
+    - Peking University
+    - Sharpa
+    year: 2026
+    venue: RSS
+    publication_status: 공식 게재 목록
+    links:
+      paper: https://roboticsproceedings.org/rss22/p129.html
+      project: unknown
+      code: unknown
+    tier: 2
+    one_line_summary: 시각·촉각 간 표현과 미래 접촉 신호를 학습해 다지 손의 행동을 예측한다.
+    key_contributions:
+    - 상호 모달 주의와 미래 촉각 예측을 행동 모방에 결합한다.
+    - 쉬운 과제에서 어려운 과제로 진행하는 커리큘럼을 실물 장시간 조작에서 평가한다.
+    method_tags:
+    - IL
+    task_tags:
+    - 조작
+    embodiment_tags:
+    - 기타
+    modality_tags:
+    - RGB
+    - 촉각
+    data_source_tags:
+    - 실제로봇
+    openness:
+      code: unknown
+      weights: unknown
+      data: unknown
+    datasets_benchmarks: unknown
+    limitations:
+      paper_reported: unknown
+      subsequent_work: unknown
+    prior_work:
+    - pr-0566
+    verification: 부분확인
+    notes: 저자가 보고한 평가 범위와 공개 배포물에 대한 심사. 다운로드·정책 실행 미검증.
+    found_in:
+      rss26: https://roboticsproceedings.org/rss22/p129.html
+    added_in: gapfill-2026-11
+    verified_on: '2026-11-19'
+    existence_source:
+      url: https://roboticsproceedings.org/rss22/p129.html
+      title: 'ViTacFormer: Learning Cross-Modal Representation for Visuo-Tactile Dexterous Manipulation'
+      authors:
+      - Liang Heng
+      - Haoran Geng
+      - Kaifeng Zhang
+      - Pieter Abbeel
+      - Jitendra Malik
+      year: 2026
+      venue_source: https://roboticsproceedings.org/rss22/p129.html
+    artifact_evidence: {}
+    prior_work_relations:
+    - registry_id: pr-0566
+      type: 확장
+      basis: ACT [57]에 시각·촉각 표현과 미래 촉각 예측을 추가한다. Related work와 p.5 baseline.
+      source: https://roboticsproceedings.org/rss22/p129.pdf#page=2
+    registry_id: pr-1246
+    decision: 등록
+    decision_reason: 행동과 미래 촉각의 공동 예측을 장시간 실물 다지 조작에서 대조할 기준이다.
+    tier_reason: NEXT · 행동과 미래 촉각의 공동 예측을 장시간 실물 다지 조작에서 대조할 기준이다.
+    evaluation_scope: 실물 다지 손의 장시간 정밀 조작에서 ACT 등 모방 정책 및 센서 구성과 비교했다.
+    evidence:
+      evaluation: https://roboticsproceedings.org/rss22/p129.pdf#page=6
+      method_and_relation: https://roboticsproceedings.org/rss22/p129.pdf#page=2
+      affiliations: https://roboticsproceedings.org/rss22/p129.pdf#page=1
+    subsequent_baseline_use:
+      registry_id: pr-1233
+      source: https://arxiv.org/pdf/2606.17055#page=7
+      scope: T-Rex가 같은 촉각 반응 과제에서 ViTacFormer를 실기 기준선으로 비교한다.
+  - id: 2026-luo-blindgrasp
+    title: Blind Dexterous Grasping via Real2Sim2Real Tactile Policy Learning
+    authors:
+    - Shengcheng Luo
+    - Xiyan Huang
+    - Zhe Xu
+    - Wanlin Li
+    - Ziyuan Jiao
+    - Chenxi Xiao
+    affiliations: unknown
+    year: 2026
+    venue: CoRL
+    publication_status: 공식 채택·발표 목록
+    links:
+      paper: https://arxiv.org/abs/2606.11767
+      project: http://Dex-Blind-Grasp.github.io
+      code: unknown
+    tier: 2
+    one_line_summary: 시각 없이 촉각으로 파지하도록 시뮬레이터의 접촉 이벤트를 보정하고 RL 전문가를 증류한다.
+    key_contributions:
+    - 기하를 아는 시뮬레이션 전문가들의 성공 궤적을 수집한다.
+    - 실물에서는 촉각·로봇 상태를 관측하는 확산 정책을 배포한다.
+    method_tags:
+    - IL
+    - RL
+    task_tags:
+    - 조작
+    embodiment_tags:
+    - 기타
+    modality_tags:
+    - 촉각
+    - 고유수용감각
+    data_source_tags:
+    - 혼합
+    openness:
+      code: unknown
+      weights: unknown
+      data: unknown
+    datasets_benchmarks: unknown
+    limitations:
+      paper_reported: 여러 실제 물체에 대한 전체 파지 성공률이 낮아 저자들은 부록에서 실패 원인을 분석한다.
+      subsequent_work: unknown
+    prior_work:
+    - pr-0019
+    verification: 부분확인
+    notes: 저자가 보고한 평가 범위와 공개 배포물에 대한 심사. 다운로드·정책 실행 미검증.
+    found_in:
+      corl26: https://openreview.net/forum?id=TlWfBm8jtZ
+    added_in: gapfill-2026-11
+    verified_on: '2026-11-19'
+    existence_source:
+      url: https://arxiv.org/abs/2606.11767
+      title: Blind Dexterous Grasping via Real2Sim2Real Tactile Policy Learning
+      authors:
+      - Shengcheng Luo
+      - Xiyan Huang
+      - Zhe Xu
+      - Wanlin Li
+      - Ziyuan Jiao
+      - Chenxi Xiao
+      year: 2026
+      venue_source: https://www.corl.org/program/accepted-papers
+    artifact_evidence: {}
+    prior_work_relations:
+    - registry_id: pr-0019
+      type: 결합
+      basis: 다양한 RL 전문가의 성공 궤적을 촉각에 조건화한 Diffusion Policy [10]로 증류한다. Method overview.
+      source: https://arxiv.org/pdf/2606.11767#page=2
+    registry_id: pr-1247
+    decision: 등록
+    decision_reason: 시각이 없는 다지 파지에서 촉각 접촉 보정과 RL 전문가 증류를 검토할 기준이다.
+    tier_reason: NEXT · 시각이 없는 다지 파지에서 촉각 접촉 보정과 RL 전문가 증류를 검토할 기준이다.
+    evaluation_scope: 촉각을 장착한 실물 LEAP Hand에서 학습에 사용한 물체와 새 물체를 나눠 파지를 평가했다.
+    evidence:
+      evaluation: https://arxiv.org/pdf/2606.11767#page=6
+      method_and_relation: https://arxiv.org/pdf/2606.11767#page=2
+      limitations: https://arxiv.org/pdf/2606.11767#page=8
+  - id: 2026-chen-ptld
+    title: 'PTLD: Sim-to-real Privileged Tactile Latent Distillation for Dexterous Manipulation'
+    authors:
+    - Rosy Chen
+    - Mustafa Mukadam
+    - Michael Kaess
+    - Tingfan Wu
+    - Francois R Hogan
+    - Jitendra Malik
+    - Akash Sharma
+    affiliations: unknown
+    year: 2026
+    venue: CoRL
+    publication_status: 공식 채택·발표 목록
+    links:
+      paper: https://arxiv.org/abs/2603.04531
+      project: https://akashsharma02.github.io/ptld-website/
+      code: unknown
+    tier: 2
+    one_line_summary: 실제 로봇에서만 얻을 수 있는 특권 센서 신호로 촉각 상태 추정기를 증류한다.
+    key_contributions:
+    - 보조 관측이 가능한 교사와 촉각 학생의 학습·배포 입력을 분리한다.
+    - 시뮬레이션에서 학습한 손안 조작 정책을 실제 회전과 목표 자세 재정렬에서 시험한다.
+    method_tags:
+    - IL
+    - RL
+    task_tags:
+    - 조작
+    embodiment_tags:
+    - 기타
+    modality_tags:
+    - 촉각
+    - 고유수용감각
+    data_source_tags:
+    - 혼합
+    openness:
+      code: unknown
+      weights: unknown
+      data: unknown
+    datasets_benchmarks: unknown
+    limitations:
+      paper_reported: 특권 센서와 배포 시점의 촉각 관측이 공유하는 정보가 충분해야 교사를 증류할 수 있다.
+      subsequent_work: unknown
+    prior_work:
+    - pr-0522
+    verification: 부분확인
+    notes: 저자가 보고한 평가 범위와 공개 배포물에 대한 심사. 다운로드·정책 실행 미검증.
+    found_in:
+      corl26: https://openreview.net/forum?id=tJpI5D27wh
+    added_in: gapfill-2026-11
+    verified_on: '2026-11-19'
+    existence_source:
+      url: https://arxiv.org/abs/2603.04531
+      title: 'PTLD: Sim-to-real Privileged Tactile Latent Distillation for Dexterous Manipulation'
+      authors:
+      - Rosy Chen
+      - Mustafa Mukadam
+      - Michael Kaess
+      - Tingfan Wu
+      - Francois R Hogan
+      - Jitendra Malik
+      - Akash Sharma
+      year: 2026
+      venue_source: https://www.corl.org/program/accepted-papers
+    artifact_evidence: {}
+    prior_work_relations:
+    - registry_id: pr-0522
+      type: 결합
+      basis: DAgger [50]로 학생 정책의 상태 분포에서 자료를 다시 모아 촉각 추정기를 증류한다. Distillation.
+      source: https://arxiv.org/pdf/2603.04531#page=5
+    registry_id: pr-1248
+    decision: 등록
+    decision_reason: 실물의 특권 관측을 학습 때만 사용해 촉각 상태 추정기를 증류하는 전이 기준이다.
+    tier_reason: NEXT · 실물의 특권 관측을 학습 때만 사용해 촉각 상태 추정기를 증류하는 전이 기준이다.
+    evaluation_scope: 실제 손안 회전·자세 재정렬에서 고유수용감각만 사용하는 정책과 비교했다.
+    evidence:
+      evaluation: https://arxiv.org/pdf/2603.04531#page=6
+      method_and_relation: https://arxiv.org/pdf/2603.04531#page=5
+      limitations: https://arxiv.org/pdf/2603.04531#page=8
+  - id: 2026-peng-hug
+    title: 'HuG: Learning Humanoid Whole-Body Affordance-Aware Grasping with Active Perception'
+    authors:
+    - Xuanbin Peng
+    - Lai Wei
+    - Yuze Zhai
+    - Qingyuan Yu
+    - Keyi Wang
+    - Jianglong Ye
+    - Xiaolong Wang
+    affiliations: unknown
+    year: 2026
+    venue: CoRL
+    publication_status: 공식 채택·발표 목록
+    links:
+      paper: https://arxiv.org/abs/2611.01659
+      project: https://xuanbinpeng.com/hug
+      code: https://github.com/openrobokit/graspkit/tree/main/projects/hug
+    tier: 2
+    one_line_summary: 휴머노이드가 관측 위치와 파지를 선택할 때 실제 전신 제어기가 유지할 수 있는 자세를 학습한다.
+    key_contributions:
+    - 전신 동역학 검사로 기구학적으로 가능한 파지 후보를 다시 선별한다.
+    - 선반의 여러 높이에서 실물 파지, 분포 밖 높이에서 시뮬레이션 전이를 구분해 평가한다.
+    method_tags:
+    - IL
+    - RL
+    task_tags:
+    - 모바일매니퓰레이션
+    - 전신제어
+    embodiment_tags:
+    - 휴머노이드
+    modality_tags:
+    - depth
+    - 고유수용감각
+    data_source_tags:
+    - 시뮬
+    openness:
+      code: Y
+      weights: unknown
+      data: unknown
+    datasets_benchmarks:
+    - RoboCasa
+    - YCB
+    limitations:
+      paper_reported: 실제 배포에서는 양발 지지를 유지해 발을 떼지 않는다. 팔과 몸통 기울임으로 닿지 않는 목표는 위치 재조정이 필요하다.
+      subsequent_work: unknown
+    prior_work:
+    - pr-0872
+    verification: 부분확인
+    notes: 저자가 보고한 평가 범위와 공개 배포물에 대한 심사. 다운로드·정책 실행 미검증.
+    found_in:
+      corl26: https://openreview.net/forum?id=kpX1KOfNI5
+    added_in: gapfill-2026-11
+    verified_on: '2026-11-19'
+    existence_source:
+      url: https://arxiv.org/abs/2611.01659
+      title: 'HuG: Learning Humanoid Whole-Body Affordance-Aware Grasping with Active Perception'
+      authors:
+      - Xuanbin Peng
+      - Lai Wei
+      - Yuze Zhai
+      - Qingyuan Yu
+      - Keyi Wang
+      - Jianglong Ye
+      - Xiaolong Wang
+      year: 2026
+      venue_source: https://www.corl.org/program/accepted-papers
+    artifact_evidence:
+      code: https://github.com/openrobokit/graspkit/tree/main/projects/hug
+    humanoid:
+      control_scope:
+      - 전신
+      training:
+      - sim-to-real RL
+      hardware:
+      - Unitree G1
+      hand_type:
+      - unknown
+      sim_to_real: 예
+    prior_work_relations:
+    - registry_id: pr-0872
+      type: 결합
+      basis: 저수준 보행에 SONIC [38]을 사용해 상위에서 만든 하체 명령을 추종한다. Whole-body control.
+      source: https://arxiv.org/pdf/2611.01659#page=5
+    registry_id: pr-1249
+    decision: 등록
+    decision_reason: 카메라 탐색과 파지 가능성 판단에 전신 균형 제약을 결합한 실기 휴머노이드 기준이다.
+    tier_reason: NEXT · 카메라 탐색과 파지 가능성 판단에 전신 균형 제약을 결합한 실기 휴머노이드 기준이다.
+    evaluation_scope: 다단 선반의 실제 파지와 훈련 범위 밖 높이에 대한 시뮬레이션 결과를 구분한다.
+    evidence:
+      evaluation: https://arxiv.org/pdf/2611.01659#page=8
+      method_and_relation: https://arxiv.org/pdf/2611.01659#page=5
+      limitations: https://arxiv.org/pdf/2611.01659#page=11
+  - id: 2026-lin-activemimic
+    title: 'ActiveMimic: Egocentric Video Pretraining with Active Perception'
+    authors:
+    - Xingyao Lin
+    - Guojin Zhong
+    - Tianyi Lu
+    - Ziyi Ye
+    - Yichen Zhu
+    - Zuxuan Wu
+    - Yu-Gang Jiang
+    affiliations:
+    - Fudan University
+    - Shanghai Innovation Institute
+    - Current Robotics
+    - NeoteAI
+    year: 2026
+    venue: CoRL
+    publication_status: 공식 채택·발표 목록
+    links:
+      paper: https://arxiv.org/abs/2606.06194
+      project: https://activemimic.github.io/
+      code: https://github.com/leolin9248/activemimic-data
+    tier: 2
+    one_line_summary: 사람의 1인칭 영상에서 카메라와 손목 궤적을 복원해 관측과 조작을 함께 사전학습한다.
+    key_contributions:
+    - 움직이는 카메라의 궤적을 배울 행동으로 취급한다.
+    - 로봇에 적응한 후 능동 관측이 필요한 실제 조작 과제에서 비교한다.
+    method_tags:
+    - IL
+    task_tags:
+    - 조작
+    embodiment_tags:
+    - unknown
+    modality_tags:
+    - RGB
+    data_source_tags:
+    - 혼합
+    openness:
+      code: 부분
+      weights: unknown
+      data: unknown
+    datasets_benchmarks: unknown
+    limitations:
+      paper_reported: unknown
+      subsequent_work: unknown
+    prior_work:
+    - pr-0056
+    verification: 부분확인
+    notes: 저자가 보고한 평가 범위와 공개 배포물에 대한 심사. 다운로드·정책 실행 미검증.
+    found_in:
+      corl26: https://openreview.net/forum?id=J5RZyNKq8z
+    added_in: gapfill-2026-11
+    verified_on: '2026-11-19'
+    existence_source:
+      url: https://arxiv.org/abs/2606.06194
+      title: 'ActiveMimic: Egocentric Video Pretraining with Active Perception'
+      authors:
+      - Xingyao Lin
+      - Guojin Zhong
+      - Tianyi Lu
+      - Ziyi Ye
+      - Yichen Zhu
+      - Zuxuan Wu
+      - Yu-Gang Jiang
+      year: 2026
+      venue_source: https://www.corl.org/program/accepted-papers
+    artifact_evidence:
+      code: https://github.com/leolin9248/activemimic-data
+      scope: 공개된 저장소는 사람 영상 데이터 처리 도구다.
+    prior_work_relations:
+    - registry_id: pr-0056
+      type: 결합
+      basis: VGGT [40]에서 구한 카메라 경로를 손목 움직임과 정렬해 관측 행동 사전학습의 감독 신호로 사용한다. §3.1.
+      source: https://arxiv.org/pdf/2606.06194#page=4
+    registry_id: pr-1250
+    decision: 등록
+    decision_reason: 사람의 머리 움직임을 관측 행동으로 학습하고 실제 로봇으로 전이하는 직접 선행이다.
+    tier_reason: NEXT · 사람의 머리 움직임을 관측 행동으로 학습하고 실제 로봇으로 전이하는 직접 선행이다.
+    evaluation_scope: 실물 능동 조작에서 사람 영상과 로봇 시연을 사용하는 사전학습 기준선을 비교했다.
+    evidence:
+      evaluation: https://arxiv.org/pdf/2606.06194#page=7
+      method_and_relation: https://arxiv.org/pdf/2606.06194#page=4
+      affiliations: https://arxiv.org/pdf/2606.06194#page=1
+  B:
+  - id: 2025-hu-composablenav
+    title: 'ComposableNav: Instruction-Following Navigation in Dynamic Environments via Composable Diffusion'
+    authors:
+    - Zichao Hu
+    - Chen Tang
+    - Michael Joseph Munje
+    - Yifeng Zhu
+    - Alex Liu
+    - Shuijing Liu
+    - Garrett Warnell
+    - Peter Stone
+    - Joydeep Biswas
+    affiliations: unknown
+    year: 2025
+    venue: CoRL
+    publication_status: 공식 게재 목록
+    links:
+      paper: https://proceedings.mlr.press/v305/hu25c.html
+      project: unknown
+      code: unknown
+    tier: unknown
+    one_line_summary: 복합 지시를 구성하는 이동 조건별로 확산 모델을 학습한다.
+    key_contributions:
+    - 조건별 이동 요소를 분리해 학습한다.
+    - 배포 때 요소를 조합해 동적 환경의 지시 수행을 평가한다.
+    method_tags:
+    - RL
+    task_tags:
+    - 내비게이션
+    embodiment_tags:
+    - unknown
+    modality_tags:
+    - 언어
+    data_source_tags:
+    - unknown
+    openness:
+      code: unknown
+      weights: unknown
+      data: unknown
+    datasets_benchmarks: unknown
+    limitations:
+      paper_reported: unknown
+      subsequent_work: unknown
+    prior_work:
+    - pr-0524
+    verification: 부분확인
+    notes: 저자가 보고한 평가 범위와 공개 배포물에 대한 심사. 다운로드·정책 실행 미검증.
+    found_in:
+      corl25: https://proceedings.mlr.press/v305/hu25c.html
+    added_in: gapfill-2026-11
+    verified_on: '2026-11-19'
+    existence_source:
+      url: https://proceedings.mlr.press/v305/hu25c.html
+      title: 'ComposableNav: Instruction-Following Navigation in Dynamic Environments via Composable Diffusion'
+      authors:
+      - Zichao Hu
+      - Chen Tang
+      - Michael Joseph Munje
+      - Yifeng Zhu
+      - Alex Liu
+      - Shuijing Liu
+      - Garrett Warnell
+      - Peter Stone
+      - Joydeep Biswas
+      year: 2025
+      venue_source: https://proceedings.mlr.press/v305/hu25c.html
+    artifact_evidence: {}
+    prior_work_relations:
+    - registry_id: pr-0524
+      type: 결합
+      basis: 조건별 확산 모델의 RL 미세조정에서 PPO [43]로 모델을 업데이트한다.
+      source: https://raw.githubusercontent.com/mlresearch/v305/main/assets/hu25c/hu25c.pdf#page=6
+    decision: 보류
+    decision_reason: 동적 환경에서 복합 이동 지시를 조합하는 선행이다. 이번에 찾는 관측 행동·촉각 제어의 직접 비교군으로 쓰인 근거는 확인하지 못했다.
+    tier_reason: 미배정. 동적 환경에서 복합 이동 지시를 조합하는 선행이다. 이번에 찾는 관측 행동·촉각 제어의 직접 비교군으로 쓰인 근거는 확인하지 못했다.
+  - id: 2026-li-motionnbv
+    title: Motion-Uncertainty-Aware Next-Best-View Planning for Moving Object Reconstruction
+    authors:
+    - Karen Li
+    - Mattia Mantovani
+    - Robert Wood
+    - Lorenzo Sabattini
+    - Stephanie Gil
+    affiliations: unknown
+    year: 2026
+    venue: RSS
+    publication_status: 공식 게재 목록
+    links:
+      paper: https://roboticsproceedings.org/rss22/p176.html
+      project: unknown
+      code: https://github.com/Harvard-REACT/mua-nbv
+    tier: unknown
+    one_line_summary: 움직이는 물체의 표면을 재구성할 때 이동 지연과 운동 불확실성을 시점 선택에 반영한다.
+    key_contributions:
+    - 평면 이동 물체에 대한 위치 관측으로 다음 관측 시점을 계획한다.
+    - 물체 추적과 표면 관측 범위를 함께 고려한다.
+    method_tags:
+    - 모델기반
+    task_tags:
+    - unknown
+    embodiment_tags:
+    - unknown
+    modality_tags:
+    - 기타
+    data_source_tags:
+    - unknown
+    openness:
+      code: Y
+      weights: unknown
+      data: unknown
+    datasets_benchmarks: unknown
+    limitations:
+      paper_reported: unknown
+      subsequent_work: unknown
+    prior_work: []
+    verification: 부분확인
+    notes: 저자가 보고한 평가 범위와 공개 배포물에 대한 심사. 다운로드·정책 실행 미검증. 기존 ID와 직접 관계를 원문에서 확정하지 못한 항목은 prior_work를 비웠다.
+    found_in:
+      rss26: https://roboticsproceedings.org/rss22/p176.html
+    added_in: gapfill-2026-11
+    verified_on: '2026-11-19'
+    existence_source:
+      url: https://roboticsproceedings.org/rss22/p176.html
+      title: Motion-Uncertainty-Aware Next-Best-View Planning for Moving Object Reconstruction
+      authors:
+      - Karen Li
+      - Mattia Mantovani
+      - Robert Wood
+      - Lorenzo Sabattini
+      - Stephanie Gil
+      year: 2026
+      venue_source: https://roboticsproceedings.org/rss22/p176.html
+    artifact_evidence:
+      code: https://github.com/Harvard-REACT/mua-nbv
+    prior_work_relations: unknown
+    decision: 보류
+    decision_reason: 움직이는 물체의 다음 시점 계획은 직접 관련된다. 평면 병진하는 강체의 표면 재구성이 평가 목표로, 시점 선택이 로봇 조작을 개선하는지는 후속 검토 대상이다.
+    tier_reason: 미배정. 움직이는 물체의 다음 시점 계획은 직접 관련된다. 평면 병진하는 강체의 표면 재구성이 평가 목표로, 시점 선택이 로봇 조작을 개선하는지는 후속 검토 대상이다.
+    prior_work_status: 미확인
+  - id: 2025-sun-arch
+    title: 'ARCH: Hierarchical Hybrid Learning for Long-Horizon Contact-Rich Robotic Assembly'
+    authors:
+    - Jiankai Sun
+    - Aidan Curtis
+    - Yang You
+    - Yan Xu
+    - Michael Koehle
+    - Qianzhong Chen
+    - Suning Huang
+    - Leonidas Guibas
+    - Sachin Chitta
+    - Mac Schwager
+    - Hui Li
+    affiliations: unknown
+    year: 2025
+    venue: CoRL
+    publication_status: 공식 게재 목록
+    links:
+      paper: https://proceedings.mlr.press/v305/sun25b.html
+      project: unknown
+      code: unknown
+    tier: unknown
+    one_line_summary: 긴 조립 과업에서 상위 모방 정책이 하위 정밀 조립 기술과 매개변수를 선택한다.
+    key_contributions:
+    - 하위 기술에 강화학습과 모델 기반 제어를 사용한다.
+    - 새 물체를 포함한 실물 및 시뮬레이션 조립을 평가한다.
+    method_tags:
+    - IL
+    - RL
+    - 모델기반
+    task_tags:
+    - 조작
+    embodiment_tags:
+    - 단팔
+    modality_tags:
+    - 고유수용감각
+    - 기타
+    data_source_tags:
+    - 혼합
+    openness:
+      code: unknown
+      weights: unknown
+      data: unknown
+    datasets_benchmarks: unknown
+    limitations:
+      paper_reported: unknown
+      subsequent_work: unknown
+    prior_work:
+    - pr-0524
+    verification: 부분확인
+    notes: 저자가 보고한 평가 범위와 공개 배포물에 대한 심사. 다운로드·정책 실행 미검증.
+    found_in:
+      corl25: https://proceedings.mlr.press/v305/sun25b.html
+    added_in: gapfill-2026-11
+    verified_on: '2026-11-19'
+    existence_source:
+      url: https://proceedings.mlr.press/v305/sun25b.html
+      title: 'ARCH: Hierarchical Hybrid Learning for Long-Horizon Contact-Rich Robotic Assembly'
+      authors:
+      - Jiankai Sun
+      - Aidan Curtis
+      - Yang You
+      - Yan Xu
+      - Michael Koehle
+      - Qianzhong Chen
+      - Suning Huang
+      - Leonidas Guibas
+      - Sachin Chitta
+      - Mac Schwager
+      - Hui Li
+      year: 2025
+      venue_source: https://proceedings.mlr.press/v305/sun25b.html
+    artifact_evidence: {}
+    prior_work_relations:
+    - registry_id: pr-0524
+      type: 결합
+      basis: 하위 정밀 기술 학습의 PPO를 상위 모방 정책과 결합한다. Skills/experimental setup.
+      source: https://raw.githubusercontent.com/mlresearch/v305/main/assets/sun25b/sun25b.pdf#page=5
+    decision: 보류
+    decision_reason: 정밀 조립의 계층형 IL·RL 구성은 유용하다. 촉각이나 관측 행동을 바꾸는 실험의 기준으로 채택할 직접 근거는 약하다.
+    tier_reason: 미배정. 정밀 조립의 계층형 IL·RL 구성은 유용하다. 촉각이나 관측 행동을 바꾸는 실험의 기준으로 채택할 직접 근거는 약하다.
+  - id: 2024-zhao-conformalteleop
+    title: 'Conformalized Teleoperation: Confidently Mapping Human Inputs to High-Dimensional Robot Actions'
+    authors:
+    - Michelle D Zhao
+    - Reid Simmons
+    - Henny Admoni
+    - Andrea Bajcsy
+    affiliations:
+    - Carnegie Mellon University
+    year: 2024
+    venue: RSS
+    publication_status: 공식 게재 목록
+    links:
+      paper: https://roboticsproceedings.org/rss20/p008.html
+      project: unknown
+      code: unknown
+    tier: unknown
+    one_line_summary: 저차원 사용자 명령을 로봇 행동으로 변환할 때 예측 불확실성을 추정한다.
+    key_contributions:
+    - 행동의 조건부 분위수를 적응적 conformal prediction으로 보정한다.
+    - 높은 불확실성을 식별할 수 있는지 보조 이동·팔 조작에서 평가한다.
+    method_tags:
+    - unknown
+    task_tags:
+    - 조작
+    embodiment_tags:
+    - 단팔
+    modality_tags:
+    - 기타
+    data_source_tags:
+    - unknown
+    openness:
+      code: unknown
+      weights: unknown
+      data: unknown
+    datasets_benchmarks: unknown
+    limitations:
+      paper_reported: unknown
+      subsequent_work: unknown
+    prior_work: []
+    verification: 부분확인
+    notes: 저자가 보고한 평가 범위와 공개 배포물에 대한 심사. 다운로드·정책 실행 미검증. 기존 ID와 직접 관계를 원문에서 확정하지 못한 항목은 prior_work를 비웠다.
+    found_in:
+      rss24: https://roboticsproceedings.org/rss20/p008.html
+    added_in: gapfill-2026-11
+    verified_on: '2026-11-19'
+    existence_source:
+      url: https://roboticsproceedings.org/rss20/p008.html
+      title: 'Conformalized Teleoperation: Confidently Mapping Human Inputs to High-Dimensional Robot Actions'
+      authors:
+      - Michelle D Zhao
+      - Reid Simmons
+      - Henny Admoni
+      - Andrea Bajcsy
+      year: 2024
+      venue_source: https://roboticsproceedings.org/rss20/p008.html
+    artifact_evidence: {}
+    prior_work_relations: unknown
+    decision: 보류
+    decision_reason: 사용자 명령의 불확실성을 보정하는 원격조작 연구다. 물체 상태에 대한 로봇의 능동 관측과는 평가 변수가 다르다.
+    tier_reason: 미배정. 사용자 명령의 불확실성을 보정하는 원격조작 연구다. 물체 상태에 대한 로봇의 능동 관측과는 평가 변수가 다르다.
+    prior_work_status: 미확인
+  - id: 2025-li-actloc
+    title: 'ActLoc: Learning to Localize on the Move via Active Viewpoint Selection'
+    authors:
+    - Jiajie Li
+    - Boyang Sun
+    - Luca Di Giammarino
+    - Hermann Blum
+    - Marc Pollefeys
+    affiliations: unknown
+    year: 2025
+    venue: CoRL
+    publication_status: 공식 게재 목록
+    links:
+      paper: https://proceedings.mlr.press/v305/li25b.html
+      project: https://boysun045.github.io/ActLoc-Project/
+      code: https://github.com/cvg/ActLoc
+    tier: unknown
+    one_line_summary: 주행 중 위치 추정 정확도를 높이도록 카메라 방위를 계획한다.
+    key_contributions:
+    - 지도와 지도 작성 시점에서 예상 위치 추정 성능을 학습한다.
+    - 성능 분포를 이동 경로상의 시점 선택에 사용한다.
+    method_tags:
+    - unknown
+    task_tags:
+    - 내비게이션
+    embodiment_tags:
+    - unknown
+    modality_tags:
+    - 기타
+    data_source_tags:
+    - unknown
+    openness:
+      code: Y
+      weights: unknown
+      data: unknown
+    datasets_benchmarks: unknown
+    limitations:
+      paper_reported: unknown
+      subsequent_work: unknown
+    prior_work: []
+    verification: 부분확인
+    notes: 저자가 보고한 평가 범위와 공개 배포물에 대한 심사. 다운로드·정책 실행 미검증. 기존 ID와 직접 관계를 원문에서 확정하지 못한 항목은 prior_work를 비웠다.
+    found_in:
+      corl25: https://proceedings.mlr.press/v305/li25b.html
+    added_in: gapfill-2026-11
+    verified_on: '2026-11-19'
+    existence_source:
+      url: https://proceedings.mlr.press/v305/li25b.html
+      title: 'ActLoc: Learning to Localize on the Move via Active Viewpoint Selection'
+      authors:
+      - Jiajie Li
+      - Boyang Sun
+      - Luca Di Giammarino
+      - Hermann Blum
+      - Marc Pollefeys
+      year: 2025
+      venue_source: https://proceedings.mlr.press/v305/li25b.html
+    artifact_evidence:
+      code: https://github.com/cvg/ActLoc
+    prior_work_relations: unknown
+    decision: 보류
+    decision_reason: 카메라의 방위를 선택해 이동 중 위치 추정을 개선한다. 탐색 대상인 물체 상태 관측·손 조작과 평가 목적이 달라 내비게이션 후속 배치로 보류한다.
+    tier_reason: 미배정. 카메라의 방위를 선택해 이동 중 위치 추정을 개선한다. 탐색 대상인 물체 상태 관측·손 조작과 평가 목적이 달라 내비게이션 후속 배치로 보류한다.
+    prior_work_status: 미확인
+  - id: 2025-sharma-percepskin
+    title: Self-supervised perception for tactile skin covered dexterous hands
+    authors:
+    - Akash Sharma
+    - Carolina Higuera
+    - Chaithanya Krishna Bodduluri
+    - Zixi Liu
+    - Taosha Fan
+    - Tess Hellebrekers
+    - Mike Lambeta
+    - Byron Boots
+    - Michael Kaess
+    - Tingfan Wu
+    - Francois Robert Hogan
+    - Mustafa Mukadam
+    affiliations: unknown
+    year: 2025
+    venue: CoRL
+    publication_status: 공식 게재 목록
+    links:
+      paper: https://proceedings.mlr.press/v305/sharma25a.html
+      project: unknown
+      code: unknown
+    tier: unknown
+    one_line_summary: 로봇 손의 자기식 촉각 피부에서 레이블 없는 접촉 이력의 표현을 학습한다.
+    key_contributions:
+    - 손 운동과 촉각 이력에서 자기증류로 표현을 얻는다.
+    - 상태 추정과 정책 학습에 사전학습된 표현을 사용한다.
+    method_tags:
+    - unknown
+    task_tags:
+    - 조작
+    embodiment_tags:
+    - 기타
+    modality_tags:
+    - 촉각
+    - 고유수용감각
+    data_source_tags:
+    - 실제로봇
+    openness:
+      code: unknown
+      weights: unknown
+      data: unknown
+    datasets_benchmarks: unknown
+    limitations:
+      paper_reported: unknown
+      subsequent_work: unknown
+    prior_work: []
+    verification: 부분확인
+    notes: 저자가 보고한 평가 범위와 공개 배포물에 대한 심사. 다운로드·정책 실행 미검증. 기존 ID와 직접 관계를 원문에서 확정하지 못한 항목은 prior_work를 비웠다.
+    found_in:
+      corl25: https://proceedings.mlr.press/v305/sharma25a.html
+    added_in: gapfill-2026-11
+    verified_on: '2026-11-19'
+    existence_source:
+      url: https://proceedings.mlr.press/v305/sharma25a.html
+      title: Self-supervised perception for tactile skin covered dexterous hands
+      authors:
+      - Akash Sharma
+      - Carolina Higuera
+      - Chaithanya Krishna Bodduluri
+      - Zixi Liu
+      - Taosha Fan
+      - Tess Hellebrekers
+      - Mike Lambeta
+      - Byron Boots
+      - Michael Kaess
+      - Tingfan Wu
+      - Francois Robert Hogan
+      - Mustafa Mukadam
+      year: 2025
+      venue_source: https://proceedings.mlr.press/v305/sharma25a.html
+    artifact_evidence: {}
+    prior_work_relations: unknown
+    decision: 보류
+    decision_reason: 자기지도 촉각 피부 인코더는 관련성이 높다. 기존 Sparsh 계열과 센서·로봇 손을 맞춘 비교 가능 범위를 추가 확인한 후 읽기 우선순위를 판단한다.
+    tier_reason: 미배정. 자기지도 촉각 피부 인코더는 관련성이 높다. 기존 Sparsh 계열과 센서·로봇 손을 맞춘 비교 가능 범위를 추가 확인한 후 읽기 우선순위를 판단한다.
+    prior_work_status: 미확인
+  - id: 2025-field-text2touch
+    title: 'Text2Touch: Tactile In-Hand Manipulation with LLM-Designed Reward Functions'
+    authors:
+    - Harrison Field
+    - Max Yang
+    - Yijiong Lin
+    - Efi Psomopoulou
+    - David A.W. Barton
+    - Nathan F. Lepora
+    affiliations: unknown
+    year: 2025
+    venue: CoRL
+    publication_status: 공식 게재 목록
+    links:
+      paper: https://proceedings.mlr.press/v305/field25a.html
+      project: https://hpfield.github.io/text2touch-website/
+      code: https://github.com/hpfield/Text2Touch
+    tier: unknown
+    one_line_summary: 촉각 손안 회전을 위한 강화학습 보상을 언어 모델로 설계한다.
+    key_contributions:
+    - 사용 가능한 상태 변수와 과제 설명으로 보상 후보를 생성한다.
+    - 특권 정보를 이용한 증류를 거쳐 실제 촉각 손에서의 회전을 평가한다.
+    method_tags:
+    - RL
+    task_tags:
+    - 조작
+    embodiment_tags:
+    - 기타
+    modality_tags:
+    - 촉각
+    - 고유수용감각
+    data_source_tags:
+    - 시뮬
+    openness:
+      code: Y
+      weights: unknown
+      data: unknown
+    datasets_benchmarks: unknown
+    limitations:
+      paper_reported: unknown
+      subsequent_work: unknown
+    prior_work:
+    - pr-0864
+    verification: 부분확인
+    notes: 저자가 보고한 평가 범위와 공개 배포물에 대한 심사. 다운로드·정책 실행 미검증.
+    found_in:
+      corl25: https://proceedings.mlr.press/v305/field25a.html
+    added_in: gapfill-2026-11
+    verified_on: '2026-11-19'
+    existence_source:
+      url: https://proceedings.mlr.press/v305/field25a.html
+      title: 'Text2Touch: Tactile In-Hand Manipulation with LLM-Designed Reward Functions'
+      authors:
+      - Harrison Field
+      - Max Yang
+      - Yijiong Lin
+      - Efi Psomopoulou
+      - David A.W. Barton
+      - Nathan F. Lepora
+      year: 2025
+      venue_source: https://proceedings.mlr.press/v305/field25a.html
+    artifact_evidence:
+      code: https://github.com/hpfield/Text2Touch
+    prior_work_relations:
+    - registry_id: pr-0864
+      type: 확장
+      basis: Eureka [5]의 반복 보상 설계를 실제 촉각 손의 회전 과제에 맞춘다. §3.1.
+      source: https://raw.githubusercontent.com/mlresearch/v305/main/assets/field25a/field25a.pdf#page=4
+    decision: 보류
+    decision_reason: LLM으로 설계한 보상을 사용해 촉각 손안 회전을 실물에 전이한다. 같은 과제의 사람 설계 보상 대비 결과가 다른 정교 조작 과제로 이어지는 범위는 미확인이다.
+    tier_reason: 미배정. LLM으로 설계한 보상을 사용해 촉각 손안 회전을 실물에 전이한다. 같은 과제의 사람 설계 보상 대비 결과가 다른 정교 조작 과제로 이어지는 범위는 미확인이다.
+  - id: 2025-zhang-doglove
+    title: 'DOGlove: Dexterous Manipulation with a Low-Cost Open-Source Haptic Force Feedback Glove'
+    authors:
+    - Han Zhang
+    - Songbo Hu
+    - Zhecheng Yuan
+    - Huazhe Xu
+    affiliations: unknown
+    year: 2025
+    venue: RSS
+    publication_status: 공식 게재 목록
+    links:
+      paper: https://roboticsproceedings.org/rss21/p104.html
+      project: unknown
+      code: unknown
+    tier: unknown
+    one_line_summary: 원격조작자가 로봇 손의 접촉을 느끼도록 힘과 진동을 전달하는 장갑이다.
+    key_contributions:
+    - 손 관절 움직임의 측정과 힘 피드백을 한 장치에 결합한다.
+    - 시각 입력을 제한한 조작과 수집한 시연의 활용을 평가한다.
+    method_tags:
+    - IL
+    task_tags:
+    - 조작
+    embodiment_tags:
+    - 기타
+    modality_tags:
+    - 촉각
+    - 기타
+    data_source_tags:
+    - 실제로봇
+    openness:
+      code: unknown
+      weights: unknown
+      data: unknown
+    datasets_benchmarks: unknown
+    limitations:
+      paper_reported: unknown
+      subsequent_work: unknown
+    prior_work: []
+    verification: 부분확인
+    notes: 저자가 보고한 평가 범위와 공개 배포물에 대한 심사. 다운로드·정책 실행 미검증. 기존 ID와 직접 관계를 원문에서 확정하지 못한 항목은 prior_work를 비웠다.
+    found_in:
+      rss25: https://roboticsproceedings.org/rss21/p104.html
+    added_in: gapfill-2026-11
+    verified_on: '2026-11-19'
+    existence_source:
+      url: https://roboticsproceedings.org/rss21/p104.html
+      title: 'DOGlove: Dexterous Manipulation with a Low-Cost Open-Source Haptic Force Feedback Glove'
+      authors:
+      - Han Zhang
+      - Songbo Hu
+      - Zhecheng Yuan
+      - Huazhe Xu
+      year: 2025
+      venue_source: https://roboticsproceedings.org/rss21/p104.html
+    artifact_evidence: {}
+    prior_work_relations: unknown
+    decision: 보류
+    decision_reason: DOGlove는 원격조작자에게 힘·진동을 돌려주는 공개 장치다. 로봇 정책 입력으로 쓰는 촉각의 기여와 조작자가 느낀 피드백의 기여를 분리할 때 다시 검토한다.
+    tier_reason: 미배정. DOGlove는 원격조작자에게 힘·진동을 돌려주는 공개 장치다. 로봇 정책 입력으로 쓰는 촉각의 기여와 조작자가 느낀 피드백의 기여를 분리할 때 다시 검토한다.
+    prior_work_status: 미확인
+  - id: 2026-zhou-activezero
+    title: Learning Active Perception and Manipulation via Spatio-temporal Visual Memory
+    authors:
+    - Enshen Zhou
+    - Mengzhen Liu
+    - Yibo Li
+    - Yanjun Ding
+    - Yuheng Ji
+    - Pengwei Wang
+    - Zhongyuan Wang
+    - Lu Sheng
+    - Shanghang Zhang
+    affiliations: unknown
+    year: 2026
+    venue: NeurIPS
+    publication_status: 공식 채택·발표 목록
+    links:
+      paper: https://neurips.cc/virtual/2026/poster/151254
+      project: unknown
+      code: unknown
+    tier: unknown
+    one_line_summary: 시각 메모리를 유지·검색하면서 장기 과업에 필요한 정보를 수집하는 능동 조작 정책이다.
+    key_contributions:
+    - 카메라 행동을 담은 ActiveMem 데이터를 제시한다.
+    - 기억을 요구하는 지각과 시뮬레이션 조작의 ActiveBench를 제시한다.
+    method_tags:
+    - unknown
+    task_tags:
+    - 조작
+    embodiment_tags:
+    - unknown
+    modality_tags:
+    - RGB
+    data_source_tags:
+    - unknown
+    openness:
+      code: unknown
+      weights: unknown
+      data: unknown
+    datasets_benchmarks:
+    - ActiveBench
+    - ActiveMem
+    limitations:
+      paper_reported: unknown
+      subsequent_work: unknown
+    prior_work: []
+    verification: 부분확인
+    notes: 저자가 보고한 평가 범위와 공개 배포물에 대한 심사. 다운로드·정책 실행 미검증. 기존 ID와 직접 관계를 원문에서 확정하지 못한 항목은 prior_work를 비웠다.
+    found_in:
+      neurips26: https://openreview.net/forum?id=bkasRJF9pc
+    added_in: gapfill-2026-11
+    verified_on: '2026-11-19'
+    existence_source:
+      url: https://neurips.cc/virtual/2026/poster/151254
+      title: Learning Active Perception and Manipulation via Spatio-temporal Visual Memory
+      authors:
+      - Enshen Zhou
+      - Mengzhen Liu
+      - Yibo Li
+      - Yanjun Ding
+      - Yuheng Ji
+      - Pengwei Wang
+      - Zhongyuan Wang
+      - Lu Sheng
+      - Shanghang Zhang
+      year: 2026
+      venue_source: https://neurips.cc/virtual/2026/poster/151254
+    artifact_evidence: {}
+    prior_work_relations: unknown
+    decision: 보류
+    decision_reason: 공식 발표 페이지에서 ActiveMem·ActiveBench와 저자를 확인했다. 관련 연구 절과 기준선 표를 확보해 SaPaVe 등과 직접 관계를 판정한 뒤 등록한다.
+    tier_reason: 미배정. 공식 발표 페이지에서 ActiveMem·ActiveBench와 저자를 확인했다. 관련 연구 절과 기준선 표를 확보해 SaPaVe 등과 직접 관계를 판정한 뒤 등록한다.
+    prior_work_status: 미확인
+    follow_up_review:
+      verified_on: '2026-11-19'
+      decision: 보류
+      official_status: NeurIPS 2026 포스터 채택
+      evidence_scope: 공식 프로그램과 발표 초록
+      source: https://neurips.cc/virtual/2026/poster/151254
+      program: https://neurips.cc/static/virtual/data/neurips-2026-orals-posters.json
+      camera_actions: ActiveMem이 카메라 행동을 포함한다. 감독 신호의 생성 방식과 학습 손실은 미확인.
+      scene_split: 초록에 ActiveMem 400만 에피소드와 49개 장면이 나온다. ActiveBench 분할과 중복 여부는 미확인.
+      observation_budget: 기준선과 동일한 카메라 행동·프레임·실행시간 예산인지 미확인.
+      full_text_access: 공식 프로그램의 paper_pdf_url이 비어 있고 OpenReview PDF와 부록은 HTTP 403. 첫 저자 공개 목록에서도 원문을 식별하지 못했다.
+      document: research/GAPFILL.md#activezero-보류-재검토
+  C:
+  - title: 'JIGGLE: An Active Sensing Framework for Boundary Parameters Estimation in Deformable Surgical Environments'
+    existing_id: pr-1050
+    match_reason: 제목/별칭
+    identity_source:
+      url: https://roboticsproceedings.org/rss20/p007.html
+      title: 'JIGGLE: An Active Sensing Framework for Boundary Parameters Estimation in Deformable Surgical Environments'
+      authors:
+      - Nikhil Uday Shinde
+      - Xiao Liang
+      - Fei Liu
+      - Yutong Zhang
+      - Florian Richter
+      - Sylvia Lee Herbert
+      - Michael C. Yip
+      year: 2024
+      venue_source: https://roboticsproceedings.org/rss20/p007.html
+    found_in:
+      rss24: https://roboticsproceedings.org/rss20/p007.html
+    added_in: gapfill-2026-11
+    verified_on: '2026-11-19'
+  - title: Real-World Reinforcement Learning of Active Perception Behaviors
+    existing_id: pr-1217
+    match_reason: 제목/별칭
+    identity_source:
+      url: https://papers.nips.cc/paper_files/paper/2025/hash/aa1b1a959c80086cba61d0fd66de412f-Abstract-Conference.html
+      title: Real-World Reinforcement Learning of Active Perception Behaviors
+      authors:
+      - Edward Hu
+      - Jie Wang
+      - Xingfang Yuan
+      - Fiona Luo
+      - Muyao Li
+      - Gaspard Lambrechts
+      - Oleh Rybkin
+      - Dinesh Jayaraman
+      year: 2025
+      venue_source: https://papers.nips.cc/paper_files/paper/2025/hash/aa1b1a959c80086cba61d0fd66de412f-Abstract-Conference.html
+    found_in:
+      neurips25: https://openreview.net/forum?id=RkdTtznSAL
+    added_in: gapfill-2026-11
+    verified_on: '2026-11-19'
+  - title: 'GeoDEx: A Unified Geometric Framework for Tactile Dexterous and Extrinsic Manipulation under Force Uncertainty'
+    existing_id: pr-0894
+    match_reason: 제목/별칭
+    identity_source:
+      url: https://roboticsproceedings.org/rss21/p057.html
+      title: 'GeoDEx: A Unified Geometric Framework for Tactile Dexterous and Extrinsic Manipulation under Force Uncertainty'
+      authors:
+      - Sirui Chen
+      - Sergio Francisco Aguilera Marinovic
+      - Soshi Iba
+      - Rana Soltani Zarrin
+      year: 2025
+      venue_source: https://roboticsproceedings.org/rss21/p057.html
+    found_in:
+      rss25: https://roboticsproceedings.org/rss21/p057.html
+    added_in: gapfill-2026-11
+    verified_on: '2026-11-19'
+  - title: 'ActiveVLA: Injecting Active Perception into Vision-Language-Action Models for Precise 3D Robotic Manipulation'
+    existing_id: pr-0795
+    match_reason: 제목/별칭
+    identity_source:
+      url: https://openaccess.thecvf.com/content/CVPR2026/html/Liu_ActiveVLA_Injecting_Active_Perception_into_Vision-Language-Action_Models_for_Precise_3D_CVPR_2026_paper.html
+      title: 'ActiveVLA: Injecting Active Perception into Vision-Language-Action Models for Precise 3D Robotic Manipulation'
+      authors:
+      - Zhenyang Liu
+      - Yongchong Gu
+      - Yikai Wang
+      - Xiangyang Xue
+      - Yanwei Fu
+      year: 2026
+      venue_source: https://openaccess.thecvf.com/content/CVPR2026/html/Liu_ActiveVLA_Injecting_Active_Perception_into_Vision-Language-Action_Models_for_Precise_3D_CVPR_2026_paper.html
+    found_in:
+      cvpr_web: https://openaccess.thecvf.com/content/CVPR2026/html/Liu_ActiveVLA_Injecting_Active_Perception_into_Vision-Language-Action_Models_for_Precise_3D_CVPR_2026_paper.html
+    added_in: gapfill-2026-11
+    verified_on: '2026-11-19'
+  D: []

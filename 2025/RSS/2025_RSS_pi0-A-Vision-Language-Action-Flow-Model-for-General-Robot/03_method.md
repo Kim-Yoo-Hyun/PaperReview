@@ -1,12 +1,13 @@
 # Method - π0: A Vision-Language-Action Flow Model for General Robot Control
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
+> 2026-11-19 표본 감사에서 요약과 관련 본문 표현을 원문에 대조해 교정했다. [원문](https://arxiv.org/html/2410.24164)
 > Evidence maturity: `FULL_TEXT_CHECKED`.
 > Analysis basis: full-text PDF body checked on 2026-09-03 (17 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p010.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p010.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
-PDF body method statement (p. 5 (IV. THE x MODEL), p. 5 (IV. THE x MODEL), p. 4 (IV. THE x MODEL), p. 4 (IV. THE x MODEL), p. 7 (A. Evaluating the base model), p. 7 (A. Evaluating the base model)): Formally, we want to model the data distribution p(A,/o,), where Ar = [ar,r¢1,.rs 11-1] corresponds to an action chunk of future actions (we use H ~ 50 for our tasks), ...
+π₀는 사전학습한 시각언어 모델에 flow matching으로 학습하는 행동 모듈을 결합한다. 영상·언어 지시·로봇 상태를 조건으로 연속 행동 청크를 생성하며 여러 플랫폼의 조작 데이터로 정책을 학습한다. [원문](https://arxiv.org/html/2410.24164)
 
 ## Method Body Digest
 
@@ -21,8 +22,8 @@ PDF body method statement (p. 5 (IV. THE x MODEL), p. 5 (IV. THE x MODEL), p. 4 
 
 ## Design Rationale
 
-- **p. 4 / 1. INTRODUCTION - extractive body cue:** ‘of more complex and dexterous behaviors, such as tying shoelaces [58] or cooking shrimp [17], we show that our framework can leam very long tasks, ...
-- **p. 2 / 1. INTRODUCTION - extractive body cue:** In this paper, we present a prototype model and learning framework, which we call zo, that illustrates how each of these three bottlenecks could be ...
+- **p. 4 / 1. INTRODUCTION - source paraphrase:** π₀ combines a pretrained VLM with a flow-matching action expert and is evaluated on multistage tasks including laundry folding.
+- **p. 2 / 1. INTRODUCTION - source paraphrase:** In this paper, we present a prototype model and learning framework, which we call π₀, that illustrates how each of these three bottlenecks could be ...
 - **p. 3 / 1. INTRODUCTION - extractive body cue:** The contributions of our work consist of a novel generalist robot policy architecture based on VLM pre-training and flow matching, and an empirical investigation of ...
 
 ## Source Evidence Cues
@@ -52,7 +53,7 @@ PDF body method statement (p. 5 (IV. THE x MODEL), p. 5 (IV. THE x MODEL), p. 4 
 - **p. 5 / IV. THE x MODEL - extractive body cue:** During training, we supervise these action tokens using a conditional flow matching loss [28, 32],
 - **p. 7 / A. Evaluating the base model - extractive body cue:** Due to time constraints, we were unable 0 train OpenVLA and Octo for the same number of epochs as our full model.
 - **p. 5 / IV. THE x MODEL - extractive body cue:** Recent work in high-resolution image [4] and video [38] synthesis has shown that flow matching can achieve strong emPirical performance when combined with a simple ...
-- **p. 8 / A. Evaluating the base model - extractive body cue:** 7: Out-of-box evaluation results: We evaluate 7p trained for the full 700k steps, a version trained for 160k steps that ‘matches the number of updates ...
+- **p. 8 / A. Evaluating the base model - source paraphrase:** 7: Out-of-box evaluation results: We evaluate π₀ trained for the full 700k steps, a version trained for 160k steps that ‘matches the number of updates ...
 - **Formal bridge:** multimodal context o,l,p/history -> action, pose, option or chunk a -> policy/action modeling objective -> instruction-conditioned task success.
 - **Equation/algorithm anchors:** p. 4 (IV. THE x MODEL), p. 5 (IV. THE x MODEL), p. 7 (A. Evaluating the base model), p. 8 (A. Evaluating the base model).
 - Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
@@ -63,7 +64,7 @@ PDF body method statement (p. 5 (IV. THE x MODEL), p. 5 (IV. THE x MODEL), p. 4 
 |---|---|---|---|
 | Input/observation | Formally, want, model, data, distribution, where, corresponds, action, chunk, future, actions, tasks, observation, consists | image/video, language instruction, proprioception과 history | body cue; exact tensor/frame verify |
 | State/latent | Formally, want, model, data, distribution, where, corresponds, action, chunk, future | language-grounded task state와 action-policy context | body cue; notation verify |
-| Action/output | more, complex, dexterous, behaviors, tying, shoelaces, cooking, shrimp, framework, leam | continuous action, pose 또는 action chunk | body cue; unit/decoder verify |
+| Action/output | robot state, visual features, continuous action chunk | continuous action, pose 또는 action chunk | body cue; unit/decoder verify |
 | Objective/constraint | architecture, inspired, Transfusion, trains, single, transformer, multiple, objectives, tokens, corresponding | policy/action modeling objective | equation anchor required |
 
 ## Observation–State–Action Interface
@@ -94,7 +95,7 @@ PDF body method statement (p. 5 (IV. THE x MODEL), p. 5 (IV. THE x MODEL), p. 4 
 - **p. 7 / A. Evaluating the base model - extractive body cue:** In our first set of experiments, we evaluate the model after pre-training on our full mixture, without any post-training, to evaluate how well our base ...
 - **p. 5 / A. Prectraining and post-training - extractive body cue:** Since each training example corresponds to a timestep - i.e. a tuple (0, A), - we will quantify data in terms of timesteps in this ...
 - **p. 7 / VI. EXPERIMENTAL EVALUATION - extractive body cue:** 6: Out-of-box evaluation tasks: To evaluate our base ‘model, we run it after pre-training on five tasks: shirt folding, bussing easy, bussing hard, grocery bagging. ...
-- **p. 8 / A. Evaluating the base model - extractive body cue:** 7: Out-of-box evaluation results: We evaluate 7p trained for the full 700k steps, a version trained for 160k steps that ‘matches the number of updates ...
+- **p. 8 / A. Evaluating the base model - source paraphrase:** 7: Out-of-box evaluation results: We evaluate π₀ trained for the full 700k steps, a version trained for 160k steps that ‘matches the number of updates ...
 
 - Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
@@ -108,18 +109,18 @@ PDF body method statement (p. 5 (IV. THE x MODEL), p. 5 (IV. THE x MODEL), p. 4 
 
 | Method component | Evaluation evidence to inspect | PDF anchor |
 |---|---|---|
-| Multimodal task encoding | We study this question by directly evaluating 79, with comparisons to other robot foundation models. | p. 7 (VI. EXPERIMENTAL EVALUATION), p. 7 (VI. EXPERIMENTAL EVALUATION) |
-| Action / skill decoding | Fig. 7: Out-of-box evaluation results: We evaluate 7p trained for the full 700k steps, a version trained for 160k steps that ‘matches ... | p. 8 (Figure/Table caption), p. 7 (VI. EXPERIMENTAL EVALUATION) |
-| Receding execution / feedback | Fig. 9: Language evaluation. We compare "flat" versions of ‘our policies, -#1at, which receive only the overall task com- mand (e.g, "bag ... | p. 9 (Figure/Table caption), p. 8 (Figure/Table caption) |
+| Multimodal task encoding | We study this question by directly evaluating π₀, with comparisons to other robot foundation models. | p. 7 (VI. EXPERIMENTAL EVALUATION), p. 7 (VI. EXPERIMENTAL EVALUATION) |
+| Action / skill decoding | Fig. 7: Out-of-box evaluation results: We evaluate π₀ trained for the full 700k steps, a version trained for 160k steps that ‘matches ... | p. 8 (Figure/Table caption), p. 7 (VI. EXPERIMENTAL EVALUATION) |
+| Receding execution / feedback | Fig. 9: Language evaluation. We compare "flat" versions of our policies, -flat, which receive only the overall task command (e.g, "bag ... | p. 9 (Figure/Table caption), p. 8 (Figure/Table caption) |
 
 ## Failure and Ablation Link
 
 - **p. 7 / VI. EXPERIMENTAL EVALUATION - extractive body cue:** How well does xo follow language commands? ‘These experiments compare xo to xo-Small, a smaller version of our ‘model without VLM initialization, to evaluate its ...
-- **p. 9 / Figure/Table caption - extractive body cue:** Fig. 9: Language evaluation. We compare "flat" versions of ‘our policies, -#1at, which receive only the overall task com- mand (e.g, "bag the groceries") with ...
+- **p. 9 / Figure/Table caption - extractive body cue:** Fig. 9: Language evaluation. We compare "flat" versions of our policies, -flat, which receive only the overall task command (e.g, "bag the groceries") with ...
 - **p. 7 / VI. EXPERIMENTAL EVALUATION - extractive body cue:** In our final set of experiments, we fine-tune 9 to a set of particularly ‘complex tasks, including folding laundry and bussing a table.
 - **p. 9 / Figure/Table caption - extractive body cue:** Fig. 10: Fine-tuning evaluation tasks: We fine-tune our model to a variety of downstream tasks that are distinct from, the tasks seen in pre-training. Our ...
 - **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1: Our generalist robot policy uses a pre-trained vision-language model (VLM) backbone, as well as a diverse cross- ‘embodiment dataset with a variety of ...
-- **p. 2 / Figure/Table caption - extractive body cue:** Fig. 2: 79 controls a mobile manipulator to fold laundry. Our model is pre-trained on diverse data from 7 distinet robot configurations and 68 tasks, ...
+- **p. 2 / Figure/Table caption - source paraphrase:** Fig. 2: π₀ controls a mobile manipulator to fold laundry. Our model is pre-trained on diverse data from 7 distinet robot configurations and 68 tasks, ...
 - **p. 10 / Figure/Table caption - extractive body cue:** Fig. 11: Fine-tuning with varying amounts of data. =) can learn some easier tasks even with smaller amounts of data, and
 
 - Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.

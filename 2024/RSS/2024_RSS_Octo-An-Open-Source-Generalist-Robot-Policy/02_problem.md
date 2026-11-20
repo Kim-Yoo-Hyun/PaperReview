@@ -1,12 +1,13 @@
 # Problem - Octo: An Open-Source Generalist Robot Policy
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
+> 2026-11-19 표본 감사에서 요약과 관련 본문 표현을 원문에 대조해 교정했다. [원문](https://www.roboticsproceedings.org/rss20/p090.html)
 > Evidence maturity: `FULL_TEXT_CHECKED`.
 > Analysis basis: full-text PDF body checked on 2026-09-03 (17 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2405.12213; PDF retrieval source: https://arxiv.org/pdf/2405.12213. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Problem in One Sentence
 
-PDF body framing (p. 2 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 1 (I. INTRODUCTION)): Training a unified control policy in robotics presents unique challenges, requiring handling different robot embodiments, sensor setups, action spaces, task specifications, environments, and compute budgets.
+센서와 행동 공간이 다른 로봇의 시연을 한 정책의 사전학습과 전이에 어떻게 활용할지 다룬다. [원문](https://www.roboticsproceedings.org/rss20/p090.html)
 
 ## PDF Body Digest
 
@@ -33,7 +34,7 @@ PDF body framing (p. 2 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 1 (I. INTRO
 | Formulation field | PDF body-grounded record | Evidence anchor |
 |---|---|---|
 | State / observation variable | multimodal context o,l,p/history; body terms: supports, natural, language, instructions, goal, images, observation, histories, multi-modal, chunked | p. 3 (III. THE OCTO MODEL), p. 2 (I. INTRODUCTION), p. 4 (III. THE OCTO MODEL) |
-| Decision / output variable | action, pose, option or chunk a; body terms: principle, collected, Lead, authors, ordered, alphabetically, Section, list | p. 1 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 3 (III. THE OCTO MODEL) |
+| Decision / output variable | action, pose, option or chunk a; body terms: observation history, task tokens, readout tokens, action chunks | p. 1 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 3 (III. THE OCTO MODEL) |
 | Objective / loss / cost | policy/action modeling objective; cue terms: AdamW, optimizer, inverse, square, root, decay, learning, rate | p. 5 (III. THE OCTO MODEL), p. 3 (III. THE OCTO MODEL), p. 4 (III. THE OCTO MODEL), p. 5 (III. THE OCTO MODEL) |
 | Constraint / feasibility | paper-specific constraints are recorded only where the body states them; otherwise unresolved | p. 4 (III. THE OCTO MODEL), p. 3 (III. THE OCTO MODEL), p. 4 (III. THE OCTO MODEL) |
 | Success / guarantee | instruction-conditioned task success | p. 8 (Figure/Table caption), p. 6 (1) Can Octo control multiple robot embodiments and solve), p. 7 (1) Can Octo control multiple robot embodiments and solve) |
@@ -47,7 +48,7 @@ PDF body framing (p. 2 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 1 (I. INTRO
 
 ## What the Paper Changes
 
-PDF body contribution framing (p. 1 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 3 (III. THE OCTO MODEL), p. 4 (III. THE OCTO MODEL), p. 5 (III. THE OCTO MODEL)): In principle, collected ∗Lead authors, ordered alphabetically, see Section A for list of contributions.
+PDF body contribution framing (p. 1 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 3 (III. THE OCTO MODEL), p. 4 (III. THE OCTO MODEL), p. 5 (III. THE OCTO MODEL)): Octo predicts continuous robot actions from observation histories and language or goal images.
 
 - **p. 2 / I. INTRODUCTION - extractive body cue:** Our primary contribution is Octo, a transformer-based policy pretrained on the largest robot manipulation dataset to date: 800k robot demonstrations from the Open X-Embodiment dataset ...
 - **p. 3 / III. THE OCTO MODEL - extractive body cue:** It consists of three key parts: input tokenizers that transform
@@ -81,6 +82,6 @@ vla writing domain maps to observation -> state/world model -> task and motion d
 > Cross-checked on 2026-09-03 against the validated PDF body (17 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
 
 - **Target problem:** Training a unified control policy in robotics presents unique challenges, requiring handling different robot embodiments, sensor setups, action spaces, task specifications, environments, and compute budgets. (p. 2, I. INTRODUCTION).
-- **Formulation-changing contribution:** In principle, collected ∗Lead authors, ordered alphabetically, see Section A for list of contributions. (p. 1, I. INTRODUCTION).
+- **Formulation-changing contribution:** Octo predicts continuous robot actions from observation histories and language or goal images. (p. 1, I. INTRODUCTION).
 - **Assumption/failure evidence:** Although these models represent significant steps toward a true "general-purpose robot model," they have been limited in multiple important aspects: they typically constrain downstream users to a pre-defined and often ... (p. 2, I. INTRODUCTION).
 - **Interpretation rule:** no state, transition, constraint, guarantee, or downstream claim is inferred when the PDF body does not state it.

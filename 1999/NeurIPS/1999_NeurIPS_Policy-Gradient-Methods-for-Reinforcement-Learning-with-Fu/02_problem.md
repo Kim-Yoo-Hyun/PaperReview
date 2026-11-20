@@ -1,12 +1,13 @@
 # Problem - Policy Gradient Methods for Reinforcement Learning with Function Approximation
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
+> 2026-11-19 표본 감사에서 요약과 관련 본문 표현을 원문에 대조해 교정했다. [원문](https://proceedings.neurips.cc/paper/1999/hash/464d828b85b0bed98e80ade0a5c43b0f-Abstract.html)
 > Evidence maturity: `FULL_TEXT_CHECKED`.
 > Analysis basis: full-text PDF body checked on 2026-09-03 (7 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://proceedings.neurips.cc/paper/1999/hash/464d828b85b0bed98e80ade0a5c43b0f-Abstract.html; PDF retrieval source: https://proceedings.neurips.cc/paper/1999/hash/464d828b85b0bed98e80ade0a5c43b0f-Abstract.html. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Problem in One Sentence
 
-PDF body framing (p. 1 (Abstract), p. 1 (Abstract), p. 2 (Abstract)): The value-function approach has worked well in many applications, but has several limitations.
+parameterized stochastic policy의 average performance gradient를 value approximation과 함께 계산한다. [원문](https://proceedings.neurips.cc/paper/1999/hash/464d828b85b0bed98e80ade0a5c43b0f-Abstract.html)
 
 ## PDF Body Digest
 
@@ -33,7 +34,7 @@ PDF body framing (p. 1 (Abstract), p. 1 (Abstract), p. 2 (Abstract)): The value-
 | Formulation field | PDF body-grounded record | Evidence anchor |
 |---|---|---|
 | State / observation variable | s_t/o_t; body terms: example, policy, might, represented, neural, network, whose, input, representation, state | p. 2 (Abstract), p. 1 (Abstract), p. 3 (Abstract) |
-| Decision / output variable | a_t sampled or selected by πθ; body terms: Konda, Tsitsiklis, prep, independently, developed, very, simialr, result | p. 2 (Abstract) |
+| Decision / output variable | a_t sampled or selected by πθ; body terms: policy parameters, score function, compatible critic, action value | p. 2 (Abstract) |
 | Objective / loss / cost | expected return / constrained return; cue terms: explore, alternative, policy, explicitly, represented, function, approximator, independent | p. 3 (Abstract), p. 1 (Abstract), p. 2 (Abstract), p. 2 (Abstract), p. 1 (Body text (section boundary not confidently recovered)), p. 3 (Abstract) |
 | Constraint / feasibility | paper-specific constraints are recorded only where the body states them; otherwise unresolved | p. 2 (Abstract), p. 3 (Abstract), p. 1 (Abstract) |
 | Success / guarantee | task return, success and safe execution | p. 2 (Abstract), p. 2 (Abstract), p. 3 (Abstract) |
@@ -47,7 +48,7 @@ PDF body framing (p. 1 (Abstract), p. 1 (Abstract), p. 2 (Abstract)): The value-
 
 ## What the Paper Changes
 
-PDF body contribution framing (p. 2 (Abstract)): Konda and Tsitsiklis (in prep.) independently developed a very simialr result to ours.
+PDF body contribution framing (p. 2 (Abstract)): The policy gradient theorem relates the performance gradient to the action-value function; compatible approximation preserves the gradient under the stated conditions.
 
 - additional contribution PDF body cue not selected; no claim inferred
 

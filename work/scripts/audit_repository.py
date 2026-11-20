@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import csv
+import gzip
 import hashlib
 import json
 import re
@@ -99,13 +100,13 @@ MINIMUM_EVIDENCE_BY_STATUS = {
     "REPRODUCED": "EXPERIMENT_CHECKED",
 }
 SYNTHESIS_BY_TRACK = {
-    "Planning and control": "01_planning_control.md",
-    "RL, IL, offline learning, and robot data": "02_rl_il_offline.md",
-    "Manipulation, contact, tactile, and dexterity": "03_manipulation_contact.md",
-    "VLA and generalist robot policies": "04_vla_generalist.md",
-    "World models, safety, uncertainty, and recovery": "05_world_models_safety.md",
-    "Locomotion, whole-body, mobile manipulation, and humanoids": "06_locomotion_whole_body.md",
-    "Robotics-enabling 3D perception": "07_robotics_3d_perception.md",
+    "Planning and control": "01_control.md",
+    "RL, IL, offline learning, and robot data": "02_learning.md",
+    "Manipulation, contact, tactile, and dexterity": "03_manipulation.md",
+    "VLA and generalist robot policies": "04_vla.md",
+    "World models, safety, uncertainty, and recovery": "05_safety.md",
+    "Locomotion, whole-body, mobile manipulation, and humanoids": "06_mobility.md",
+    "Robotics-enabling 3D perception": "07_perception.md",
 }
 CATALOGS = {
     "benchmark": ROOT / "work" / "sources" / "benchmark_catalog.json",
@@ -590,6 +591,188 @@ def audit_markdown_documents(errors: list[str]) -> dict[str, int]:
     return {"files": len(paths), "links": checked}
 
 
+TEMPLATE4_AXES = {
+    "method_tags": {"IL", "RL", "모델기반", "고전제어", "하이브리드"},
+    "task_tags": {"조작", "이동", "내비게이션", "전신제어", "모바일매니퓰레이션"},
+    "embodiment_tags": {"단팔", "양팔", "모바일매니퓰레이터", "휴머노이드", "사족보행", "기타"},
+    "modality_tags": {"RGB", "depth", "촉각", "언어", "고유수용감각", "기타"},
+    "data_source_tags": {"실제로봇", "시뮬", "인간영상", "합성", "혼합"},
+}
+
+
+def valid_tag_list(values, allowed):
+    return isinstance(values, list) and bool(values) and (
+        values == ["unknown"] or all(isinstance(v, str) and v in allowed for v in values)
+        and len(set(values)) == len(values)
+    )
+
+
+def audit_taxonomy_batches(batches, registry_ids, errors, warnings):
+    """Validate foreign keys and Appendix IDs across the registered YAML batches."""
+    batch_ids = set()
+    matched_registry_ids = set()
+    citations = set()
+    for batch in batches:
+        relative = batch["path"]
+        if not path_has_exact_case(relative):
+            errors.append(f"missing taxonomy batch: {relative}")
+            continue
+        try:
+            import yaml
+        except ImportError:
+            warnings.append(f"PyYAML unavailable, YAML contents unchecked: {relative}")
+            continue
+        try:
+            records = yaml.safe_load((ROOT / relative).read_text(encoding="utf-8"))
+        except yaml.YAMLError as exc:
+            errors.append(f"invalid taxonomy YAML: {relative}: {exc}")
+            continue
+        if not isinstance(records, list) or len(records) != batch["record_count"]:
+            errors.append(f"taxonomy batch count mismatch: {relative}")
+            continue
+        for record in records:
+            if not isinstance(record, dict):
+                errors.append(f"invalid taxonomy record: {relative}")
+                continue
+            paper_id = record.get(batch["registry_key"])
+            appendix_id = record.get("id", "")
+            if paper_id not in registry_ids or paper_id in matched_registry_ids:
+                errors.append(f"invalid or repeated taxonomy registry_id: {paper_id}")
+            if not isinstance(appendix_id, str) or not re.fullmatch(r"[0-9]{4}-[a-z0-9-]+-[a-z0-9-]+", appendix_id):
+                errors.append(f"invalid Appendix ID: {appendix_id}")
+                continue
+            if appendix_id in batch_ids:
+                errors.append(f"invalid or repeated Appendix ID: {appendix_id}")
+            for field, allowed in TEMPLATE4_AXES.items():
+                if not valid_tag_list(record.get(field), allowed):
+                    errors.append(f"invalid {field}: {appendix_id}")
+            openness = record.get("openness")
+            if not isinstance(openness, dict) or set(openness) != {"code", "weights", "data"} or any(
+                value not in ("Y", "N", "부분", "unknown") for value in openness.values()
+            ):
+                errors.append(f"invalid openness: {appendix_id}")
+            if record.get("changed_from", {}).get("id") != paper_id:
+                errors.append(f"missing previous registry identity: {appendix_id}")
+            if "vla" in record:
+                vla = record["vla"]
+                evaluation = vla.get("evaluation", {})
+                if (not valid_tag_list(vla.get("action_representation"), {"이산 토큰", "연속(diffusion·flow matching)", "하이브리드"})
+                    or not valid_tag_list(vla.get("training"), {"SFT", "RL 파인튜닝", "co-training(웹데이터 병행)", "기타"})
+                    or vla.get("architecture") not in {"단일 모델", "이중 시스템(고수준 추론 + 저수준 제어)", "기타", "unknown"}
+                    or not all(vla.get("backbone", {}).get(key) for key in ("name", "size"))
+                    or not evaluation.get("sim_benchmarks")
+                    or not (evaluation.get("real_robot_tasks") == "unknown" or type(evaluation.get("real_robot_tasks")) is int and evaluation["real_robot_tasks"] >= 0)):
+                    errors.append(f"invalid VLA taxonomy: {appendix_id}")
+            if "humanoid" in record:
+                humanoid = record["humanoid"]
+                if (not valid_tag_list(humanoid.get("control_scope"), {"로코모션", "상체 조작", "전신", "손 정밀조작"})
+                    or not valid_tag_list(humanoid.get("training"), {"sim-to-real RL", "모션 리타게팅", "텔레오퍼레이션 모방", "모델기반"})
+                    or not valid_tag_list(humanoid.get("hand_type"), {"그리퍼", "다지 손", "없음"})
+                    or not humanoid.get("hardware")):
+                    errors.append(f"invalid humanoid taxonomy: {appendix_id}")
+            matched_registry_ids.add(paper_id)
+            batch_ids.add(appendix_id)
+            citations.update(record.get("prior_work", []))
+    for target in sorted(citations - batch_ids - registry_ids - {"unknown"}):
+        errors.append(f"unresolved taxonomy prior_work: {target}")
+    return len(matched_registry_ids)
+
+
+def audit_external_reviews(meta, registry_ids, errors, warnings):
+    """Check the dated evidence snapshots independently of subsequent admissions or tier changes."""
+    coverage = meta.get("external_coverage")
+    deep = meta.get("tier1_deep_review")
+    if not coverage or not deep:
+        return
+    try:
+        import yaml
+    except ImportError:
+        warnings.append("PyYAML unavailable, external review snapshots unchecked")
+        return
+    try:
+        with gzip.open(ROOT / coverage["titles"], "rt", encoding="utf-8") as stream:
+            header = json.loads(next(stream))
+            lists = set(header["source_lists"])
+            if len(lists) != coverage["source_count"]:
+                errors.append("external coverage source count mismatch")
+            keys = set()
+            unmatched_links = set()
+            for line in stream:
+                row = json.loads(line)
+                if row["key"] in keys or not row["found_in"] or set(row["found_in"]) - lists:
+                    errors.append(f"invalid external title/source: {row['title']}")
+                keys.add(row["key"])
+                status = row["status"]
+                if status in {"exact", "alias"} and row["registry_id"] not in registry_ids:
+                    errors.append(f"unresolved external match: {row['title']}")
+                if status in {"possible", "unmatched"} and row["registry_id"] is not None:
+                    errors.append(f"unexpected registry ID on unmatched title: {row['title']}")
+                if status == "unmatched":
+                    unmatched_links.add(frozenset(row["found_in"].items()))
+        candidates = yaml.safe_load((ROOT / coverage["candidates"]).read_text())
+        if len({r["id"] for r in candidates}) != len(candidates) or len(candidates) != coverage["candidate_count"]:
+            errors.append("external candidate count or identity mismatch")
+        for row in candidates:
+            if frozenset(row["found_in"].items()) not in unmatched_links or not row["content_source"]:
+                errors.append(f"missing candidate evidence: {row['id']}")
+        batch = yaml.safe_load((ROOT / deep["path"]).read_text())
+        included = {r["registry_id"] for r in batch["records"]}
+        excluded = set(batch["cohort"]["screened_out"])
+        if (len(batch["records"]) != len(included) or len(included) != deep["included"]
+            or len(included | excluded) != deep["screened"] or included & excluded
+            or (included | excluded) - registry_ids):
+            errors.append("Tier 1 review cohort mismatch")
+        for r in batch["records"]:
+            if r["tier"] != 1 or not (r.get("vla") or r.get("humanoid")):
+                errors.append(f"invalid Tier 1 review: {r['registry_id']}")
+            for edge in r["prior_work"] if isinstance(r["prior_work"], list) else []:
+                if edge["registry_id"] not in registry_ids or edge["type"] not in {"확장", "대체", "비판", "결합"}:
+                    errors.append(f"invalid direct predecessor: {r['registry_id']}")
+            for scope in r.get("vla", {}).get("real_robot_tasks", {}).get("reported_scopes", []):
+                if "#page=" not in scope["source"] or not scope["location"] or not scope["scope"]:
+                    errors.append(f"unlocated real-robot task count: {r['registry_id']}")
+    except (OSError, ValueError, KeyError, TypeError, StopIteration, yaml.YAMLError) as exc:
+        errors.append(f"external review snapshot unreadable: {exc}")
+
+
+def audit_gapfill_batches(batches, registry_ids, errors, warnings):
+    """Keep admission decisions and source-located predecessor IDs resolvable."""
+    if not batches:
+        return
+    try:
+        import yaml
+    except ImportError:
+        warnings.append("PyYAML unavailable, gapfill batches unchecked")
+        return
+    for descriptor in batches:
+        try:
+            batch = yaml.safe_load((ROOT / descriptor["path"]).read_text(encoding="utf-8"))
+            groups = batch["groups"]
+            counts = {name: len(rows) for name, rows in groups.items()}
+            if counts != descriptor["groups"] or batch["batch"] != descriptor["batch"]:
+                errors.append(f"gapfill batch metadata mismatch: {descriptor['path']}")
+            seen = set()
+            for row in groups["A"]:
+                paper_id = row["registry_id"]
+                if (paper_id not in registry_ids or paper_id in seen or not row["found_in"]
+                    or row["added_in"] != batch["batch"] or not row["existence_source"]["url"]):
+                    errors.append(f"invalid gapfill admission: {paper_id}")
+                seen.add(paper_id)
+                relations = row["prior_work_relations"]
+                if set(row["prior_work"]) != {r["registry_id"] for r in relations}:
+                    errors.append(f"gapfill predecessor list mismatch: {paper_id}")
+                for edge in relations:
+                    if (edge["registry_id"] not in registry_ids or edge["registry_id"] == paper_id
+                        or edge["type"] not in {"확장", "대체", "비판", "결합"}
+                        or not edge["basis"] or not edge["source"]):
+                        errors.append(f"invalid gapfill predecessor: {paper_id}")
+            for row in groups["C"]:
+                if row["existing_id"] not in registry_ids or row["existing_id"] in seen:
+                    errors.append(f"invalid gapfill duplicate: {row['existing_id']}")
+        except (OSError, ValueError, KeyError, TypeError, yaml.YAMLError) as exc:
+            errors.append(f"gapfill batch unreadable: {exc}")
+
+
 def main() -> None:
     errors: list[str] = []
     warnings: list[str] = []
@@ -601,10 +784,14 @@ def main() -> None:
     if len(paper_ids) != len(papers) or None in paper_ids:
         errors.append("paper_id is missing or duplicated")
     meta_path = ROOT / "work" / "sources" / "registry_meta.json"
+    taxonomy_record_count = 0
     if not meta_path.exists():
         errors.append("missing registry_meta.json")
     else:
         meta = json.loads(meta_path.read_text(encoding="utf-8"))
+        taxonomy_record_count = audit_taxonomy_batches(meta.get("taxonomy_batches", []), paper_ids, errors, warnings)
+        audit_external_reviews(meta, paper_ids, errors, warnings)
+        audit_gapfill_batches(meta.get("gapfill_batches", []), paper_ids, errors, warnings)
         if meta.get("schema_version") != SCHEMA_VERSION or meta.get("paper_count") != len(papers):
             errors.append("registry metadata schema/count mismatch")
         if meta.get("manifest_sha256") and meta.get("manifest_sha256") != file_sha256(MANIFEST):
@@ -1006,6 +1193,7 @@ def main() -> None:
         "catalog_entries": catalog_counts,
         "combined_resources": resource_count,
         "registry_index_rows": index_count,
+        "normalized_taxonomy_records": taxonomy_record_count,
         "markdown_files_checked": markdown_audit["files"],
         "markdown_links_checked": markdown_audit["links"],
         "comparison_matrix_rows": matrix_count,

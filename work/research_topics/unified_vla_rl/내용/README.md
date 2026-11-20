@@ -1,4 +1,4 @@
-# 단일 VLA 정책의 강화학습과 가치 표현 공동 학습
+# 단일 VLA 강화학습
 
 **현행 투자 판단 — 2026-11-17:** [유지 후보](../../README.md#candidate-priority)다. 우선 유지하는 질문은 **RL 후학습의 지시별 행동 보존(LANGRET)**이며, 일반 actor–critic 공유나 단일 모델 형태 자체를 새 기여로 삼지 않는다. U1은 같은 주제 안의 과거 분석 대안으로 보존한다. Native 효과는 미확인이고 실행 자료는 그대로다. 현재 선택한 비실험 작업은 [TODO](../../../../TODO.md)를 따른다.
 
@@ -74,7 +74,7 @@
 <a id="nonexperimental-completion"></a>
 ## U1의 비실험 검토 결론과 비교 설계
 
-**내부 설계 검토는 여기서 종료한다.** [7단계 buildup 과정](../../../../research/IDEA_BUILDUP_GUIDE.md)에 맞춰 다음 관측이 판단을 바꿀 수 있을 만큼 구체화했다. 아래 P1 이후는 **미실행 연구 설계**이며 P0 실행 계약을 확대하지 않는다. 환경·checkpoint·hash·P0 한도는 [재현 방법](../재현%20방법/README.md)의 기존 계약을 따른다.
+**내부 설계 검토는 여기서 종료한다.** [7단계 buildup 과정](../../../../research/RESEARCH_GUIDE.md)에 맞춰 다음 관측이 판단을 바꿀 수 있을 만큼 구체화했다. 아래 P1 이후는 **미실행 연구 설계**이며 P0 실행 계약을 확대하지 않는다. 환경·checkpoint·hash·P0 한도는 [재현 방법](../재현%20방법/README.md)의 기존 계약을 따른다.
 
 | 항목 | 현재 정한 비교 |
 |---|---|
@@ -174,7 +174,7 @@
 ## LANGRET-N1 — 지시별 행동 보존의 직접 선행·공개 비교 심사
 
 - 검토일: 2026-11-12 / **N1 문헌·정적 source 심사 완료, 좁은 탐색 유지**. 독립 방법 GO나 전체 비실험 buildup 완료는 아니다.
-- [탐색 당시 세 후보 비교](../../../update/VLA_MASTERS_GAP_SCOUT_2026-11-12.md), [공통 원장의 `n1_review`](../../../sources/vla_masters_gap_scout_2026-11-12.json), [목표쌍·입출력 확인 범위](../재현%20방법/README.md#langret-source-review)를 연결한다.
+- [탐색 당시 세 후보 비교](https://github.com/Kim-Yoo-Hyun/PaperReview/blob/cb650415f47a2a45ad883dabe5bd20c382b5c183/work/update/VLA_MASTERS_GAP_SCOUT_2026-11-12.md), [공통 원장의 `n1_review`](../../../sources/vla_masters_gap_scout_2026-11-12.json), [목표쌍·입출력 확인 범위](../재현%20방법/README.md#langret-source-review)를 연결한다.
 
 ### 판정: 독립 방법 후보로 분리하지 않고 후속 분석으로 통합
 

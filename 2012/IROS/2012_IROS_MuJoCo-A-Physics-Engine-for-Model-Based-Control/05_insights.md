@@ -51,7 +51,7 @@
 ### Dependency and evolution
 
 - **Registry position:** `CORE` in `Planning and control`; tags: `Robotics, simulation, Physics Engine, Control`.
-- **Reading predecessor in the generated track queue:** TrajOpt: A Sequential Convex Optimization Algorithm for Robot Motion Planning (queue adjacency, not a confirmed citation).
+- **Reading predecessor in the generated track queue:** Motion Planning with Sequential Convex Optimization and Convex Collision Checking (queue adjacency, not a confirmed citation).
 - **Reading successor in the generated track queue:** Information Theoretic MPC for Model-Based Reinforcement Learning (queue adjacency, not a confirmed citation).
 - Direct citation predecessor/successor is not asserted automatically; verify the paper's reference section before recording lineage as fact.
 - **Body-defined next pressure:** 1) Compute the Cartesian positions and orientations of all rigid bodies (i.e. the forward kinematics), detect potential collisions (with some safety margin), and construct the Jacobians .; this is the most direct route from the paper's reported scope to a falsifiable extension.

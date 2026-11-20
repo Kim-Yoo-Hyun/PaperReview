@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_on": "2026-11-18",
+  "generated_on": "2026-11-20",
   "catalog_type": "metric",
   "evidence_policy": "Generated references are cue_only. Do not treat a token match as verified evaluation evidence; consult the paper's 04_evaluation.md and source location.",
   "entries": [
@@ -1298,7 +1298,7 @@
       "paper_references": [
         {
           "paper_id": "pr-0006",
-          "source": "2023/TMLR/2023_TMLR_DINOv2-Learning-Robust-Visual-Features-without-Supervision/04_evaluation.md",
+          "source": "2024/TMLR/2024_TMLR_DINOv2-Learning-Robust-Visual-Features-without-Supervision/04_evaluation.md",
           "evidence": "cue_only"
         },
         {
@@ -3188,7 +3188,7 @@
         },
         {
           "paper_id": "pr-0558",
-          "source": "2013/IROS/2013_IROS_TrajOpt-A-Sequential-Convex-Optimization-Algorithm-for-Rob/04_evaluation.md",
+          "source": "2014/IJRR/2014_IJRR_Motion-Planning-with-Sequential-Convex-Optimization-and-Co/04_evaluation.md",
           "evidence": "cue_only"
         },
         {
@@ -4596,7 +4596,7 @@
         },
         {
           "paper_id": "pr-0558",
-          "source": "2013/IROS/2013_IROS_TrajOpt-A-Sequential-Convex-Optimization-Algorithm-for-Rob/04_evaluation.md",
+          "source": "2014/IJRR/2014_IJRR_Motion-Planning-with-Sequential-Convex-Optimization-and-Co/04_evaluation.md",
           "evidence": "cue_only"
         },
         {

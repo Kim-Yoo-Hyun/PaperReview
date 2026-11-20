@@ -1,12 +1,13 @@
 # Evaluation - Policy Gradient Methods for Reinforcement Learning with Function Approximation
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
+> 2026-11-19 표본 감사에서 요약과 관련 본문 표현을 원문에 대조해 교정했다. [원문](https://proceedings.neurips.cc/paper/1999/hash/464d828b85b0bed98e80ade0a5c43b0f-Abstract.html)
 > Evidence maturity: `FULL_TEXT_CHECKED`.
 > Analysis basis: full-text PDF body checked on 2026-09-03 (7 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://proceedings.neurips.cc/paper/1999/hash/464d828b85b0bed98e80ade0a5c43b0f-Abstract.html; PDF retrieval source: https://proceedings.neurips.cc/paper/1999/hash/464d828b85b0bed98e80ade0a5c43b0f-Abstract.html. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
-PDF body evaluation/result cue (p. 2 (Abstract), p. 4 (Abstract), p. 2 (Abstract), p. 3 (Abstract), p. 3 (Abstract), p. 5 (Abstract)): If the above can be achieved, then 0 can usually be assured to converge to a locally optimal policy in the performance measure p.
+핵심 근거는 정책 경사 정리와 호환 근사에 대한 증명이다. 논문이 다루는 조건을 확인해야 해당 업데이트를 다른 정책과 근사기에 적용할 수 있다. [원문](https://proceedings.neurips.cc/paper/1999/hash/464d828b85b0bed98e80ade0a5c43b0f-Abstract.html)
 
 ## Evaluation Body Digest
 
@@ -100,7 +101,7 @@ PDF body evaluation/result cue (p. 2 (Abstract), p. 4 (Abstract), p. 2 (Abstract
 
 | Claim or target | Result/condition cue | Evidence strength | Anchor |
 |---|---|---|---|
-| Konda and Tsitsiklis (in prep.) independently developed a very simialr result to ours. | If the above can be achieved, then 0 can usually be assured to converge to a locally optimal policy in the performance measure p. | PDF body cue; verify exact table/figure and matched conditions | p. 2 (Abstract), p. 4 (Abstract), p. 2 (Abstract), p. 3 (Abstract), p. 3 (Abstract), p. 5 (Abstract) |
+| The policy gradient theorem relates the performance gradient to the action-value function; compatible approximation preserves the gradient under the stated conditions. | If the above can be achieved, then 0 can usually be assured to converge to a locally optimal policy in the performance measure p. | PDF body cue; verify exact table/figure and matched conditions | p. 2 (Abstract), p. 4 (Abstract), p. 2 (Abstract), p. 3 (Abstract), p. 3 (Abstract), p. 5 (Abstract) |
 | Primary metric/result | For example, Jaakkola, Singh, and Jordan (1995) proved that for the special case of function approximation arising in a tabular POMDP one could assure ... | numeric claim only at cited anchor | p. 4 (Abstract) |
 
 - Numeric sentences retained from the body:

@@ -1,12 +1,13 @@
 # Problem - FAST: Efficient Action Tokenization for Vision-Language-Action Models
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
+> 2026-11-19 표본 감사에서 요약과 관련 본문 표현을 원문에 대조해 교정했다. [원문](https://arxiv.org/html/2501.09747)
 > Evidence maturity: `FULL_TEXT_CHECKED`.
 > Analysis basis: full-text PDF body checked on 2026-09-03 (19 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p012.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p012.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Problem in One Sentence
 
-PDF body framing (p. 4 (1. INTRODUCTION), p. 4 (1. INTRODUCTION), p. 1 (1. INTRODUCTION), p. 3 (1. INTRODUCTION), p. 1 (1. INTRODUCTION)): ‘To illustrate the challenge of training autoregressive poli cies with current action tokenization approaches, we star With a simple didactic example.
+고주파 행동 궤적을 시간·차원별로 개별 이산화하면 인접 시점 간 중복으로 자기회귀 정책의 학습이 어려워진다. [원문](https://arxiv.org/html/2501.09747)
 
 ## PDF Body Digest
 
@@ -15,15 +16,15 @@ PDF body framing (p. 4 (1. INTRODUCTION), p. 4 (1. INTRODUCTION), p. 1 (1. INTRO
 - **p. 1 / Abstract - extractive body cue:** We find that current approaches for robot action tokenization, based on simple per-dimension, per-timestep binning schemes, typically perform poorly when learning dexterous skills from. high-frequency ...
 - **p. 1 / Abstract - extractive body cue:** Our tokenization approach, Frequency space Action Sequence Tokenization (FAST), enables tus to train autoregressive VLAs for highly dexterous and high-frequency tasks where standard discretization methods ...
 - **p. 1 / Abstract - extractive body cue:** Based on FAST, we release FAST, a universal robot action tokenizer, trained on IM real robot action trajectories.
-- **p. 4 / 1. INTRODUCTION - extractive body cue:** ‘To illustrate the challenge of training autoregressive poli cies with current action tokenization approaches, we star With a simple didactic example.
+- **p. 4 / 1. INTRODUCTION - source paraphrase:** The authors illustrate redundancy in high-frequency action token sequences with a spline prediction task.
 - **p. 4 / 1. INTRODUCTION - extractive body cue:** This greatly slows down the rate of convergence during training and can make it challenging to fit complex, high-frequency datasets Indeed, such challenges have been ...
 
 ## System and Scope
 
 | Dimension | PDF body evidence | Registry/robotics interpretation | Boundary |
 |---|---|---|---|
-| Target problem | ‘To illustrate the challenge of training autoregressive poli cies with current action tokenization approaches, we star With a simple didactic example. | language-conditioned robot task와 embodiment | body wording is the source claim |
-| Observation / input | An alternative approach directly trains VLAS to output ow-level robot control commands given image and language instruction inputs. | image/video, language instruction, proprioception과 history | exact sensor/frame/preprocessing from PDF body |
+| Target problem | The authors illustrate redundancy in high-frequency action token sequences with a spline prediction task. | language-conditioned robot task와 embodiment | body wording is the source claim |
+| Observation / input | An alternative approach directly trains VLAs to output low-level robot control commands given image and language instruction inputs. | image/video, language instruction, proprioception과 history | exact sensor/frame/preprocessing from PDF body |
 | State / latent | alternative, directly, trains, VLAS, output, ow-level, robot, control, commands, given | language-grounded task state와 action-policy context | notation and tensor shape require body check |
 | Output / action | developed, FAST, universal, action, tokenizer, serve, strong, default | continuous action, pose 또는 action chunk | exact unit/frame/decoder require body check |
 | Target outcome | instruction-conditioned task success | instruction following, task success, generalization과 latency | metric/denominator are in 04 evidence |
@@ -33,7 +34,7 @@ PDF body framing (p. 4 (1. INTRODUCTION), p. 4 (1. INTRODUCTION), p. 1 (1. INTRO
 | Formulation field | PDF body-grounded record | Evidence anchor |
 |---|---|---|
 | State / observation variable | multimodal context o,l,p/history; body terms: alternative, directly, trains, VLAS, output, ow-level, robot, control, commands, given | p. 3 (1. INTRODUCTION), p. 1 (1. INTRODUCTION), p. 10 (C. Universal Action Tokenizer) |
-| Decision / output variable | action, pose, option or chunk a; body terms: FAS, nple, effective, tokenization, robot, action, trajectories, time-series | p. 1 (1. INTRODUCTION), p. 3 (1. INTRODUCTION), p. 3 (1. INTRODUCTION) |
+| Decision / output variable | action, pose, option or chunk a; body terms: FAST, action chunks, DCT coefficients, BPE tokens | p. 1 (1. INTRODUCTION), p. 3 (1. INTRODUCTION), p. 3 (1. INTRODUCTION) |
 | Objective / loss / cost | policy/action modeling objective; cue terms: After, data, normalized, apply, discrete, cosine, transform, action | p. 4 (B. The FAST Tokenization Algorithm), p. 5 (B. The FAST Tokenization Algorithm), p. 5 (B. The FAST Tokenization Algorithm), p. 7 (B. Comparing Action Tokenizers for VLA Training) |
 | Constraint / feasibility | paper-specific constraints are recorded only where the body states them; otherwise unresolved | p. 5 (B. The FAST Tokenization Algorithm), p. 7 (B. Comparing Action Tokenizers for VLA Training), p. 8 (B. Comparing Action Tokenizers for VLA Training) |
 | Success / guarantee | instruction-conditioned task success | p. 7 (A. Experimental Setup), p. 6 (A. Experimental Setup), p. 6 (A. Experimental Setup) |
@@ -49,7 +50,7 @@ PDF body framing (p. 4 (1. INTRODUCTION), p. 4 (1. INTRODUCTION), p. 1 (1. INTRO
 
 ## What the Paper Changes
 
-PDF body contribution framing (p. 1 (1. INTRODUCTION), p. 3 (1. INTRODUCTION), p. 3 (1. INTRODUCTION), p. 2 (1. INTRODUCTION), p. 2 (1. INTRODUCTION)): 1: We propose FAS nple yet effective approach for tokenization of robot action trajectories via time-series compression, FAST enables training of autoregressive VLAs that solve complex dexterous manipulation tasks and ...
+PDF body contribution framing (p. 1 (1. INTRODUCTION), p. 3 (1. INTRODUCTION), p. 3 (1. INTRODUCTION), p. 2 (1. INTRODUCTION), p. 2 (1. INTRODUCTION)): FAST encodes continuous action chunks as discrete tokens using time-series compression.
 
 - **p. 3 / 1. INTRODUCTION - extractive body cue:** We introduce a new action tokenization approach that allows us to train the first autoregressive VLAs ‘on dexterous and high-frequency robot data
 - **p. 3 / 1. INTRODUCTION - extractive body cue:** We find that this scheme struggles to scale to high-frequency robot control tasks, We propose a new tokenization scheme for robot actions, based on time-series ...
@@ -84,6 +85,6 @@ vla writing domain maps to observation -> state/world model -> task and motion d
 > Cross-checked on 2026-09-03 against the validated PDF body (19 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
 
 - **Target problem:** We observe that correlations between time steps are a major challenge for naive tokenization strategies when predicting sequences of (p. 1, 1. INTRODUCTION).
-- **Formulation-changing contribution:** 1: We propose FAS nple yet effective approach for tokenization of robot action trajectories via time-series compression, FAST enables training of autoregressive VLAs that solve complex dexterous manipulation tasks and ... (p. 1, 1. INTRODUCTION).
+- **Formulation-changing contribution:** FAST encodes continuous action chunks as discrete tokens using time-series compression. (p. 1, 1. INTRODUCTION).
 - **Assumption/failure evidence:** We do ‘not measure success rates during these evaluations, but provide ‘numerous qualitative videos of successes and failures to help readers get a sense of the policy's capabilities (p. 18, B. Discussion of Alternative Compression Approaches).
 - **Interpretation rule:** no state, transition, constraint, guarantee, or downstream claim is inferred when the PDF body does not state it.

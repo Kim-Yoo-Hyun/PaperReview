@@ -348,7 +348,7 @@ def build_stats(papers: list[dict], resources: dict, rows: list[dict[str, str]])
             protocol = {}
         trial_cue_count += int(protocol.get("trials_or_seeds") == "reported")
     lines = [
-        "# Registry Statistics",
+        "# 레지스트리 통계",
         "",
         f"- Generated: {date.today()} KST",
         "- Source: [papers.json](../work/sources/papers.json)",

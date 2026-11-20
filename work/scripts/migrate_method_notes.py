@@ -370,7 +370,7 @@ SPECIAL_FORMAL: dict[str, str] = {
         "A random q_rand selects q_near and a steer operation produces q_new; a collision-free edge is appended to the tree until the goal region is reached.",
     "CHOMP: Gradient Optimization Techniques for Efficient Motion Planning":
         "Trajectory ξ is optimized by a smoothness/obstacle cost gradient, with a covariant preconditioner turning functional cost variation into a trajectory update.",
-    "TrajOpt: A Sequential Convex Optimization Algorithm for Robot Motion Planning":
+    "Motion Planning with Sequential Convex Optimization and Convex Collision Checking":
         "A nonlinear trajectory problem is repeatedly approximated by a local convex subproblem and solved under signed-distance/collision and kinematic constraints.",
     "Control-Limited Differential Dynamic Programming":
         "Local dynamic-programming expansions use derivatives of the dynamics/cost while explicitly enforcing bounded control through a constrained backward/forward pass.",

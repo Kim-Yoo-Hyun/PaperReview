@@ -17,9 +17,11 @@
 - Paper type: benchmark_or_dataset
 - Source audit: full-text PDF body checked on 2026-09-03 (26 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
+2026-11-20에 RSS 게재본과 저자의 수집 코드·원시 데이터 배포를 확인했다. 원시 궤적의 제어 명령과 영상에 접근하는 방법은 공식 데이터 문서에서 확인할 수 있다. [RSS 게재본](https://www.roboticsproceedings.org/rss20/p120.html) · [수집 코드](https://github.com/droid-dataset/droid) · [데이터 배포 안내](https://github.com/droid-dataset/droid/blob/33ae6a67274f36d2e29525b86f23a56616ef43a7/docs/the-droid-dataset.md)
+
 ## Why This Paper Is Here
 
-RL, IL, offline learning, and robot data의 robot_data 문제를 이해하기 위해 읽는다. 본문은 However, creating such datasets is challenging: in contrast to vision or language data, training manipulation policies typically requires robot manipulation data with recorded observations and actions, which cannot be easily scraped fro ...를 문제로 두고, In this work, we introduce DROID (Distributed Robot Interaction Dataset), a robot manipulation dataset of unprecedented diversity (see Fig.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+서로 다른 실제 환경에서 같은 로봇 플랫폼으로 수집한 조작 시연을 제공한다. 정책의 환경 일반화를 비교하거나, 시연자의 조작 요청과 기록된 로봇 행동이 어떤 과정을 거쳐 연결되는지 확인할 때 읽는다. [논문과 실험 개요](https://www.roboticsproceedings.org/rss20/p120.html)
 
 ## Problem and Motivation
 

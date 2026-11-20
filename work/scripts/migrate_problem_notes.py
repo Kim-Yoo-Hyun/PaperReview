@@ -254,7 +254,7 @@ add_many(
             domain="planning",
         ),
         profile(
-            "TrajOpt: A Sequential Convex Optimization Algorithm for Robot Motion Planning",
+            "Motion Planning with Sequential Convex Optimization and Convex Collision Checking",
             problem="nonconvex collision·kinematic constraints를 가진 robot trajectory를 naive initialization에서 빠르게 locally collision-free path로 개선한다.",
             model="waypoint trajectory ξ를 두고 nonlinear cost/constraint를 현재 iterate 주변에서 convex/quadratic subproblem으로 근사하며 trust region 안에서 반복한다.",
             objective="smoothness/path cost와 collision hinge penalty를 최소화하고, outer loop에서 penalty를 높여 continuous-time collision violation을 줄인다.",

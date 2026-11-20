@@ -51,7 +51,7 @@ CORE_GROUPS = OrderedDict(
                 "=Precise and dexterous robotic manipulation via human-in-the-loop reinforcement learning",
                 "=RLDG: Robotic Generalist Policy Distillation via Reinforcement Learning",
                 "=DROID: A Large-Scale In-The-Wild Robot Manipulation Dataset",
-                "=Benchmarking Knowledge Transfer for Lifelong Robot Learning",
+                "=LIBERO: Benchmarking Knowledge Transfer for Lifelong Robot Learning",
                 "=Habitat: A Platform for Embodied AI Research",
             ],
         ),
@@ -1336,52 +1336,148 @@ FOCUS_SOURCE_CHECKS.update({
 })
 FOCUS_REVIEW_DATES.update(dict.fromkeys(['pr-1225', 'pr-1226', 'pr-1227'], '2026-11-18'))
 
+# Gapfill admission, reviewed 2026-11-19.
+NEXT_GROUPS['VLA, cross-embodiment, and long-horizon planning'].extend([
+    '=DeeR-VLA: Dynamic Inference of Multimodal Large Language Models for Efficient Robot Execution',
+    '=Improving Vision-Language-Action Model with Online Reinforcement Learning',
+    '=MoRE: Unlocking Scalability in Reinforcement Learning for Quadruped Vision-Language-Action Models',
+    '=MEM: Multi-Scale Embodied Memory for Vision Language Action Models',
+    '=RoboMonkey: Scaling Test-Time Sampling and Verification for Vision-Language-Action Models',
+])
+NEXT_GROUPS['Contact-rich, deformable, force, and dexterous manipulation'].extend([
+    '=T-Rex: Tactile-Reactive Dexterous Manipulation',
+    '=Contact-Grounded Policy: Dexterous Visuotactile Policy with Generative Contact Grounding',
+    '=KineDex: Learning Tactile-Informed Visuomotor Policies via Kinesthetic Teaching for Dexterous Manipulation',
+    '=VTDexManip: A Dataset and Benchmark for Visual-tactile Pretraining and Dexterous Manipulation with Reinforcement Learning',
+    '=ViTacFormer: Learning Cross-Modal Representation for Visuo-Tactile Dexterous Manipulation',
+    '=Blind Dexterous Grasping via Real2Sim2Real Tactile Policy Learning',
+    '=PTLD: Sim-to-real Privileged Tactile Latent Distillation for Dexterous Manipulation',
+])
+NEXT_GROUPS['Locomotion, whole-body control, mobile manipulation, and humanoids'].extend([
+    '=Advancing Humanoid Locomotion: Mastering Challenging Terrains with Denoising World Model Learning',
+    '=CLONE: Closed-Loop Whole-Body Humanoid Teleoperation for Long-Horizon Tasks',
+    '=HumanoidMimicGen: Data Generation for Loco-Manipulation via Whole-Body Planning',
+    '=HuG: Learning Humanoid Whole-Body Affordance-Aware Grasping with Active Perception',
+])
+NEXT_GROUPS['Active and embodied 3D Vision'].extend([
+    '=Vision in Action: Learning Active Perception from Human Demonstrations',
+    '=Active Perception for Grasp Detection via Neural Graspness Field',
+    '=UniTac2Pose: A Unified Approach Learned in Simulation for Category-level Visuotactile In-hand Pose Estimation',
+    '=ViTaSCOPE: Visuo-tactile Implicit Representation for In-hand Pose and Extrinsic Contact Estimation',
+    '=ActiveMimic: Egocentric Video Pretraining with Active Perception',
+])
+NEXT_GROUPS['World models, uncertainty, failure detection, and recovery'].extend([
+    '=Back to the Familiar Future: Failure Recovery for VLA Policies via Pre-Imagined Milestone Selection',
+    '=VLA-FAIL: Efficient Task Failure Detection for Finetuned Vision-Language-Action Models',
+])
+FOCUS_PRIORITY_RATIONALES.update({
+    'pr-1228': '계산 예산에 따라 같은 VLA의 실행 깊이를 바꾸는 비교 기준이다.',
+    'pr-1229': '온라인 RL을 VLA에 직접 적용하는 방식과 RL·감독학습을 교대하는 방식을 대조할 기준이다.',
+    'pr-1230': '사족 로봇에서 VLA를 행동 가치 함수로 학습하는 경로를 대표한다.',
+    'pr-1231': '단기 영상 이력과 장기 의미 이력이 서로 다른 행동 오류를 해결하는지 시험할 기준이다.',
+    'pr-1232': '추가 학습 없이 행동 후보를 더 뽑는 효과와 학습한 검증기가 주는 이득을 분리할 기준이다.',
+    'pr-1233': '접촉 중 빠른 촉각 반응을 학습할 시연 자료와 서로 다른 주기의 VLA 구조를 함께 제시한다.',
+    'pr-1234': '촉각을 정책의 추가 입력으로 쓰는 경우와 미래 접촉을 실행 제어 목표로 만드는 경우를 직접 비교한다.',
+    'pr-1235': '잡음 제거 세계 모델과 보행 RL을 실제 불규칙 지형에 전이한 대표 제어 사례다.',
+    'pr-1236': '전신 시연을 수집할 때 제어기와 실제 위치의 차이를 폐루프로 보정하는 시스템 기준이다.',
+    'pr-1237': '카메라 움직임을 학습한 양팔 정책과 고정 카메라 정책을 실물에서 비교한 능동 인식의 직접 선행이다.',
+    'pr-1238': '복구가 가능한 시점에서 미래 시각 목표만 바꾸는 대조군을 제공한다.',
+    'pr-1239': '실패 감지의 정확도와 알림 시간을 함께 평가하는 지표와 VLA용 감지 기준을 제공한다.',
+    'pr-1240': '전신 계획으로 이동 조작 시연을 만드는 기법과 휴머노이드용 시뮬레이션 벤치마크를 함께 제공한다.',
+    'pr-1241': '재구성 품질 대신 파지 목표에 대한 불확실성으로 카메라 시점을 고르는 기준이다.',
+    'pr-1242': '접촉력 시연을 수집하고 힘을 제어하는 정책까지 연결하는 촉각 모방학습의 기준이다.',
+    'pr-1243': '새 물체의 손안 자세·추적·불확실성을 같은 촉각 추정기에서 평가하는 비교 기준이다.',
+    'pr-1244': '손안 물체의 자세와 물체가 환경에 닿는 위치를 함께 추정하는 접촉 상태 기준이다.',
+    'pr-1245': '희소 이진 촉각의 기여를 같은 RL 과제에서 비교할 수 있는 데이터셋과 벤치마크다.',
+    'pr-1246': '행동과 미래 촉각의 공동 예측을 장시간 실물 다지 조작에서 대조할 기준이다.',
+    'pr-1247': '시각이 없는 다지 파지에서 촉각 접촉 보정과 RL 전문가 증류를 검토할 기준이다.',
+    'pr-1248': '실물의 특권 관측을 학습 때만 사용해 촉각 상태 추정기를 증류하는 전이 기준이다.',
+    'pr-1249': '카메라 탐색과 파지 가능성 판단에 전신 균형 제약을 결합한 실기 휴머노이드 기준이다.',
+    'pr-1250': '사람의 머리 움직임을 관측 행동으로 학습하고 실제 로봇으로 전이하는 직접 선행이다.',
+})
+FOCUS_SOURCE_CHECKS.update({
+    'pr-1228': 'https://proceedings.neurips.cc/paper_files/paper/2024/hash/67b0e7c7c2a5780aeefe3b79caac106e-Abstract-Conference.html',
+    'pr-1229': 'https://api.crossref.org/works/10.1109/icra55743.2025.11127299',
+    'pr-1230': 'https://api.crossref.org/works/10.1109/icra55743.2025.11128601',
+    'pr-1231': 'https://arxiv.org/abs/2603.03596',
+    'pr-1232': 'https://proceedings.mlr.press/v305/kwok25a.html',
+    'pr-1233': 'https://arxiv.org/abs/2606.17055',
+    'pr-1234': 'https://roboticsproceedings.org/rss22/p005.html',
+    'pr-1235': 'https://roboticsproceedings.org/rss20/p058.html',
+    'pr-1236': 'https://proceedings.mlr.press/v305/li25h.html',
+    'pr-1237': 'https://proceedings.mlr.press/v305/xiong25a.html',
+    'pr-1238': 'https://arxiv.org/abs/2606.09258',
+    'pr-1239': 'https://arxiv.org/abs/2606.21386',
+    'pr-1240': 'https://arxiv.org/abs/2605.27724',
+    'pr-1241': 'https://proceedings.neurips.cc/paper_files/paper/2024/hash/4364fef031fdf7bfd9d1c9c56b287084-Abstract-Conference.html',
+    'pr-1242': 'https://proceedings.mlr.press/v305/zhang25l.html',
+    'pr-1243': 'https://proceedings.mlr.press/v305/wu25d.html',
+    'pr-1244': 'https://roboticsproceedings.org/rss21/p054.html',
+    'pr-1245': 'https://proceedings.iclr.cc/paper_files/paper/2025/hash/e19b6f65791e350347bcff8a3955cb5b-Abstract-Conference.html',
+    'pr-1246': 'https://roboticsproceedings.org/rss22/p129.html',
+    'pr-1247': 'https://arxiv.org/abs/2606.11767',
+    'pr-1248': 'https://arxiv.org/abs/2603.04531',
+    'pr-1249': 'https://arxiv.org/abs/2611.01659',
+    'pr-1250': 'https://arxiv.org/abs/2606.06194',
+})
+FOCUS_REVIEW_DATES.update(dict.fromkeys((f"pr-{n:04d}" for n in range(1228, 1251)), "2026-11-19"))
+
+FOCUS_REFERENCE_RATIONALES.update({
+    "pr-1251": "시연자 요청과 적용 명령을 시각별로 분리할 수 있는 실제 공유 제어 데이터셋이다. 시연 재수집의 필요성과 원격조작 로그의 정보 손실을 판별할 때 조회한다.",
+    "pr-1252": "사람과 RL 잔차 정책이 함께 모은 시연을 직접 원격조작과 비교한 실물 조립 기준선이다. 공유 제어 시연의 학습 가치와 재수집 비용을 평가할 때 조회한다.",
+})
+FOCUS_SOURCE_CHECKS.update({
+    "pr-1251": "https://journals.sagepub.com/doi/10.1177/02783649211050677",
+    "pr-1252": "https://www.corl.org/program/accepted-papers",
+})
+FOCUS_REVIEW_DATES.update(dict.fromkeys(("pr-1251", "pr-1252"), "2026-11-20"))
+
 SYNTHESIS_FILES = OrderedDict(
     [
         (
-            "01_planning_control.md",
+            "01_control.md",
             [
                 "Planning, control, and whole-body foundations",
                 "Planning, control, simulation, and TAMP extensions",
             ],
         ),
         (
-            "02_rl_il_offline.md",
+            "02_learning.md",
             [
                 "RL, IL, and policy learning foundations",
                 "RL, IL, offline learning, and robot data",
             ],
         ),
         (
-            "03_manipulation_contact.md",
+            "03_manipulation.md",
             [
                 "Manipulation, contact, tactile, and dexterity",
                 "Contact-rich, deformable, force, and dexterous manipulation",
             ],
         ),
         (
-            "04_vla_generalist.md",
+            "04_vla.md",
             [
                 "VLA and generalist robot policies",
                 "VLA, cross-embodiment, and long-horizon planning",
             ],
         ),
         (
-            "05_world_models_safety.md",
+            "05_safety.md",
             [
                 "Safety and robot world models",
                 "World models, uncertainty, failure detection, and recovery",
             ],
         ),
         (
-            "06_locomotion_whole_body.md",
+            "06_mobility.md",
             [
                 "Locomotion, mobile manipulation, and humanoid systems",
                 "Locomotion, whole-body control, mobile manipulation, and humanoids",
             ],
         ),
         (
-            "07_robotics_3d_perception.md",
+            "07_perception.md",
             [
                 "Robotics-enabling 3D perception",
                 "Active and embodied 3D Vision",
@@ -1707,7 +1803,7 @@ def write_plan(
         for tier in ("CORE", "NEXT", "REFERENCE", "ARCHIVE")
     }
     lines = [
-        "# VLA Reading Plan for Manipulation and Navigation",
+        "# 읽기 계획",
         "",
         f"- Updated: {datetime.now(ZoneInfo('Asia/Seoul')).date().isoformat()} KST",
         "- Source registry: [PAPER.md](../PAPER.md)",
@@ -1716,7 +1812,7 @@ def write_plan(
         "- Inactive reading history: [READING_STATUS_HISTORY.csv](./READING_STATUS_HISTORY.csv)",
         f"- Intensive-reading set: **{counts['CORE'] + counts['NEXT']} papers** "
         f"(CORE {counts['CORE']} + NEXT {counts['NEXT']})",
-        f"- Base tier review: {FOCUS_REVIEW_DATE}; 최근 등록·게재 갱신은 [유지보수 이력](../work/update/README.md)을 따른다. 개별 membership은 이 생성기의 CORE/NEXT group으로 관리하고 사용자 읽기 이력은 보존한다. Registry는 VLA 기반 manipulation·navigation과 action-relevant 3D를 다루며, 현재 새 주제 탐색은 사용자 요청에 따라 VLA + RL을 우선한다.",
+        f"- Base tier review: {FOCUS_REVIEW_DATE}. 최근 등록·게재 갱신은 [레지스트리 변경](../work/update/REGISTRY.md)을 따른다. 개별 membership은 이 생성기의 CORE/NEXT group으로 관리하고 사용자 읽기 이력은 보존한다.",
         "",
         "## Research Scope and Reading Policy",
         "",
@@ -1725,7 +1821,7 @@ def write_plan(
         "3D vision은 policy state, spatial memory, affordance, localization, collision/contact reasoning이 실제 행동을 바꾸는 경우 우선한다.",
         "",
         "읽기 결과는 [7개 synthesis와 교차 질문 분류](../synthesis/README.md)에 연결한다. 행동 표현·시간/feedback·상태/기억·접촉/실행 가능성·적응/평가 신뢰도를 구분해 비교한다. "
-        "현재 후보는 [주제 index](../work/research_topics/README.md), 과거 판정은 [16개 주제 요약](../work/research_candidates/summaries/README.md), 활성 작업은 [TODO](../TODO.md)에서 관리한다. 후보 HOLD/NO-GO와 GPU 확보는 아래 tier membership이나 실제 읽기 상태를 자동으로 바꾸지 않는다.",
+        "현재 후보는 [연구 후보](../work/research_topics/README.md), 이전 판단은 [종료·보류 결과](../work/research_topics/RESULTS.md), 다음 실행은 [TODO](../TODO.md)에서 관리한다. 연구 후보의 판단과 논문 읽기 상태는 별도로 갱신한다.",
         "",
         "`observation/history → state/belief/3D memory → language/task/skill decision → VLA/policy/control → contact/failure feedback → adaptation/recovery (RL optional)`",
         "",

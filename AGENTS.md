@@ -1,26 +1,15 @@
-# PaperReview Agent Operating Guide
+# 운영 규칙
 
-- Updated: 2026-11-18 KST
+- Updated: 2026-11-20 KST
 
 이 파일은 자신이 위치한 저장소 루트와 모든 하위 디렉토리에 적용된다. 이 저장소에서 논문을 조사·추가·분류·요약·합성하는 에이전트는 아래 규칙을 기본 계약으로 따른다.
 
-## 1. Mission and Research Stance
+## 1. 연구 방향
 
-**2026-11-17 최신 후속 지시:** 다음 TODO는 기존 질문의 연장이 아니라 새로운 검색 분야의 연구 후보 탐색이다. 기존 신뢰성 선호를 탐색 범위의 제한으로 해석하지 않는다. 이어진 사용자 요청에 따라 참신성과 명확한 main contribution을 우선하며, 문제 원인·변경할 학습 변수·행동상 예측·직접 선행 대비 차이를 함께 제시한다. [새 분야 비교](./work/update/NEW_FIELD_SCOUT_2026-11-17.md)의 초기 질문과 기존 4개 보존 후보를 구분하며, 실제 다음 행동은 TODO를 따른다. 과거 후보 폐기 판단·Docker 조건·결과 증거 기준은 유지한다.
-
-**2026-11-17 사용자 지시:** 연구 탐색의 큰 줄기는 **VLA + RL + Computer Vision + Robotics**이며 **신뢰성·불확실성·실패 탐지/원인/복구를 우선**한다. 동적 장면·물체 상태·3D/4D·기억·보상·접촉도 실제 행동과 연결해 탐색한다. [분야별 검색 지도](./research/IDEA_BUILDUP_GUIDE.md#search-map-2026-11-17)를 사용하되 키워드 조합을 공백의 증거로 취급하지 않는다. 사용자가 약한 기존 후보의 삭제·폐기를 요청하여 [현행 후보](./work/research_topics/README.md)를 **유지 3개·예비 1개**로 줄였다. [폐기 7개](./work/research_topics/retired/README.md)는 자동 재개하지 않는다. 아래의 기존 residual/파이프라인 후보 보존 지시보다 이번 명시적 폐기가 우선하며, 해당 분야 전체를 향후 탐색에서 금지하는 것은 아니다. 작은 탐색의 진입 기준과 결과 주장의 증거 기준은 구분한다.
-
-**2026-11-06 사용자 선호:** 새 VLA+RL 공백은 계층형 controller 연결 외에 **단일 VLA 정책 내부의 RL 학습**을 우선 탐색한다. 공유 표현/가치 공동 학습은 그중 한 후보이며 유일한 방향으로 제한하지 않는다. 기존 residual·파이프라인 후보는 보존한다. 통합 architecture·배포 시 단일 정책·동일 가중치의 공동 갱신을 구별하고, 이미 있는 end-to-end RL을 새 기여로 주장하지 않는다. 현재 질문과 근거는 [주제 index](./work/research_topics/README.md)가 연결한다.
-
-이 저장소는 Robotics를 중심으로 foundation·최신 문헌을 비교하여 검증 가능한 연구 질문으로 연결하는 literature system이다. **2026-11-03 최신 사용자 요청에 따라 새 연구 공백 탐색은 VLA + RL을 중심**으로 하며, 다양한 로봇 manipulation·navigation의 성능 개선·데이터 학습·통합 파이프라인까지 열어 둔다. 기존 RL 선택형 후보와 넓은 registry 범위를 삭제하거나 일괄 재분류하지 않는다. 3D는 state estimation·spatial memory·affordance 등 행동에 필요한 표현을 지원한다. 같은 플랫폼의 fleet와 서로 다른 embodiment를 구분하며, 논문의 연령·PDF 보유 여부로 중요도를 정하지 않는다.
-
-**2026-11-03 사용자 목표 명확화:** 석사 과정 중 현재 VLA·Robotics 방향과 연결되는 top-tier conference/journal 논문을 쓰는 것이 주목적이다. 연구 후보는 선행 대비 기여의 명확성·중요성, 실제 로봇 행동과의 연결, 석사 기간 내 구현·검증 부담을 함께 비교한다. 연구 주제의 매력과 현재 실행 준비도를 구별하고, 단순 미보고 조합이나 문서 완결만으로 출판 가능성을 주장하지 않는다. 새 알고리즘뿐 아니라 중요한 원인 분석·평가·시스템 기여도 검토하며, 탐색 진입 기준을 낮추고 결과 주장의 증거 기준은 유지한다. 현행 후보의 투자 우선순위·초기 탐색 판정은 [통합 index](./work/research_topics/README.md), 선택한 다음 행동은 TODO가 소유한다. 초기 후보와 비실험 검토를 마친 후보의 성숙도를 구분하며 후보 순위를 논문 reading tier와 혼동하지 않는다.
-
-연구 후보별 실제 결과·한계·GPU 후속·재개 조건은 [16개 단일 요약](./work/research_candidates/summaries/README.md), 활성 작업은 [TODO](./TODO.md), 단계별 역사와 source는 각 dossier 및 [과거 작업 인계](./work/update/TASK_HISTORY_2026-10-22.md)를 따른다. 이 운영 규칙에 작업 일지를 계속 복제하지 않는다.
-
-현재 E2는 일반 방법 NO-GO·진단 REVISE/HOLD, E1·D3는 재개 gate NOT_MET, D1·D2는 방법 NO-GO·진단 HOLD다. C1–C6의 기존 판단과 초기 RL 전이·RP-2/RP-3 RETIRED를 유지한다. GPU 확보·같은 metadata 재집계·문서 완료만으로 자동 재개하지 않는다. 새 비교 packet·차별적 예측·단순 대안 이후 남은 gap을 먼저 심사한다. Native 정책 효과와 실제 외부 연구자 피드백은 미검증이다.
-
-2026-10-23 사용자 요청에 따라 다른 컴퓨터로 clone한 뒤의 Docker 재개 경로를 추가했다. [Portable replay](./work/experiments/portable/README.md)는 C3 저장 logits만 재분석한다. 한 checkpoint·16개 관측의 head score 진단을 학습/정책 성능 개선이나 광범위한 VLA 결론으로 확대하지 않는다. 과거 runtime manifest는 실행 당시 증거이며 현재 실행 계획으로 자동 재사용하지 않는다.
+- 목표는 석사 과정에서 top-tier 학회·저널에 기여할 로보틱스 연구다. 문제의 중요성, 가장 가까운 선행 대비 차이, 로봇 행동 변화와 구현·평가 부담을 같이 본다. 방법·원인 분석·평가·시스템 기여를 모두 검토한다.
+- 주제 탐색은 VLA·RL·컴퓨터 비전·로보틱스를 중심으로 한다. 신뢰성·실패 원인·복구를 우선하되 새 분야도 탐색한다. VLA와 RL을 결합할 때 단일 정책 내부 학습에 관심을 둔다. 목적함수·공유 표현·배포 구조를 구별한다.
+- 후보를 제안할 때 문제 원인, 바꿀 변수, 행동상 예측, 직접 선행과의 차이를 적는다. 작은 탐색은 낮은 비용으로 시작하고 결과에 요구하는 증거 수준을 유지한다. [검색 지도](./research/RESEARCH_GUIDE.md#search-map-2026-11-17)
+- 폭넓은 분야 조사는 [로보틱스 동향](./work/update/ROBOTICS_TRENDS.md), 현행 투자 판단은 [연구 후보](./work/research_topics/README.md), 다음 실행은 [TODO](./TODO.md), 이전 판정과 결과는 [종료·보류 결과](./work/research_topics/RESULTS.md)를 따른다. 같은 자료의 재집계와 자원 확보만으로 보류·폐기를 해제하지 않는다.
 
 연구축의 우선관계는 다음과 같다.
 
@@ -34,9 +23,7 @@
 
 Humanoid는 별도 taxonomy로 만들지 않는다. Locomotion, whole-body control, imitation, mobile/loco-manipulation 안에 포함한다.
 
-## 2. Non-Negotiable Rules
-
-- **2026-10-22 D3-R1 최신 인계:** [공개 근거 심사](./work/research_candidates/2026-10-22_d3_buildup/R1_REVIEW.md)는 DONE이나 재개 gate는 NOT_MET다. Raw/annotation stem 200/200의 identity 연결은 실제 Cooked–RGB pair가 아니다. P2 skill 평가에는 hotdog가 없고 turn-off 0/3은 burner 대상이다. 별도 P4의 pre-cooking placement 보고도 continuation witness로 승격하지 않는다. 연구 REVISE·full-task 실험/학습 HOLD 유지. 다음 [TODO](./TODO.md)의 D3-R2는 [동일 instance event/관측·필요 행동 능력·matched 비교 증거](./work/research_candidates/2026-10-22_d3_buildup/R1_EVIDENCE_REQUIREMENTS.json)가 새로 확보될 때 심사한다. 같은 metadata 조사·adapter 구현·D4 전환을 자동 반복하지 않는다. 실험·payload 저장·신규 registry 등록·reading status 변경은 없었다. 위 B1/L1의 다음 단계 문구보다 이 인계가 우선한다.
+## 2. 기본 규칙
 
 - PDF 보유 여부는 중요도, tier, 읽기 순서, 완료 여부의 기준이 아니다.
 - PDF가 없다는 이유로 논문을 제외하거나 낮은 tier로 내리지 않는다.
@@ -49,9 +36,9 @@ Humanoid는 별도 taxonomy로 만들지 않는다. Locomotion, whole-body contr
 - 불확실한 정보는 추측해서 채우지 말고 `확인 필요`, `abstract 기반`, `본문 수동 확인 필요`처럼 provenance를 표시한다.
 - 기존 dirty worktree와 사용자 변경을 보존한다. 관련 없는 파일을 되돌리거나 정리하지 않는다.
 
-### Update Direction
+### 문서 관리
 
-- **연구 주제 파일 구성 — 2026-11-03 사용자 지시:** 현재 진행·대기·탐색 주제는 [work/research_topics](./work/research_topics/README.md)에서 주제별 `내용/`과 `재현 방법/` 두 폴더로 관리한다. `내용/README.md`에 질문·문헌·결과·한계·추가 buildup을 통합하고, `재현 방법/README.md`에 환경·명령·실제 실행/미구현 범위를 통합한다. Source는 주제별 단일 JSON 또는 기존 공통 원장을 참조하고, 실행에 필요한 코드·계약·원시 결과는 재현 폴더에 보존한다. 유사 brief·날짜별 주제 보고서를 별도로 늘리지 않는다. 공통 유지보수/다주제 비교 이력은 기존 위치에 남긴다. 과거 보류·종료 주제의 전체 이관과 paper별 5-note 구조 변경은 이번 범위가 아니다.
+- **연구 주제 파일 구성 — 2026-11-03 사용자 지시:** 현재 진행·대기·탐색 주제는 [work/research_topics](./work/research_topics/README.md)에서 주제별 `내용/`과 `재현 방법/` 두 폴더로 관리한다. `내용/README.md`에 질문·문헌·결과·한계·추가 buildup을 통합하고, `재현 방법/README.md`에 환경·명령·실제 실행/미구현 범위를 통합한다. Source는 주제별 단일 JSON 또는 기존 공통 원장을 참조하고, 실행에 필요한 코드·계약·원시 결과는 재현 폴더에 보존한다. 유사 brief·날짜별 주제 보고서를 별도로 늘리지 않는다. 반복되는 작업 일지와 종료 가설은 Git 이력에 두고, 실제 결과와 한계는 공통 문서에 합친다.
 - 새 논문은 실제 paper folder와 5개 표준 note file로 등록한다. `paper.pdf`는 선택 사항이다.
 - `PAPER.md`는 전체 registry와 topic navigation에 집중한다.
 - 읽기 우선순위, tier, 장기 순서, 연구 관점은 `READING_PLAN.md` 하나에 통합한다.
@@ -63,16 +50,16 @@ Humanoid는 별도 taxonomy로 만들지 않는다. Locomotion, whole-body contr
 | Artifact | Role | Editing rule |
 |---|---|---|
 | [TODO.md](./TODO.md) | 활성 작업·직전 완료·다음 행동·의존성 인계 | 시작/완료 시 결과 링크와 다음 항목을 갱신한다. 문서 작업 완료를 연구 가설 입증으로 표시하지 않으며 읽기 priority source로 쓰지 않는다. |
-| [PAPER.md](./PAPER.md) | 전체 1,227편 registry와 topic navigation | 구조를 유지한다. 논문 추가 시 row와 실제 folder가 일치해야 한다. |
+| [PAPER.md](./PAPER.md) | 전체 논문 목록과 주제별 탐색 | 구조를 유지한다. 논문 추가 시 row와 실제 folder가 일치해야 한다. |
 | [READING_PLAN.md](./research/READING_PLAN.md) | 우선순위 기준, 연구 관점, 읽기 순서, CORE/NEXT 장기 정독 목록 | `build_reading_tiers.py`가 생성한다. 직접 수정하지 않는다. |
 | [READING_TIERS.csv](./research/READING_TIERS.csv) | 전체 registry의 단일 tier assignment | 생성 파일. 직접 수정하지 않는다. |
-| [READING_STATUS.csv](./research/READING_STATUS.csv) | 477편 정독 진행 상태와 사용자 분석 | 상태·분석 필드는 직접 편집 가능. 생성기는 기존 입력을 보존해야 한다. |
+| [READING_STATUS.csv](./research/READING_STATUS.csv) | 500편 정독 진행 상태와 사용자 분석 | 상태·분석 필드는 직접 편집 가능. 생성기는 기존 입력을 보존해야 한다. |
 | [READING_STATUS_HISTORY.csv](./research/READING_STATUS_HISTORY.csv) | 집중 읽기에서 빠진 47편의 기존 상태·분석 보존 | 생성기는 active tracker와 함께 읽고 재승격 시 사용자 입력을 복원한다. 우선순위 source가 아니다. |
 | [READING_STATUS.md](./research/READING_STATUS.md) | 상태값과 완료 규칙 | 상태 정의 변경 시 tracker와 synthesis 규칙도 함께 점검한다. |
 | [synthesis/](./synthesis/) | 7개 트랙의 cross-paper comparison과 paper lineage | queue marker 내부는 자동 생성, 나머지는 수동 합성 영역이다. |
 | 각 [synthesis](./synthesis/README.md)의 Open Questions와 paper별 `05_insights.md` | 근거에 연결된 research gap, 해석과 최소 실험 | 삭제된 `RESEARCH_GAPS.md`·`RESEARCH_IDEAS.md`를 복원하거나 새 priority source로 만들지 않는다. |
-| [research/projects/](./research/projects/) | 폐기된 project overlay의 역사적 보존본 | `RETIRED` 문서는 활성 계획이 아니다. 재개 요청 전에는 과거 가설·실험 계획을 현재 결과로 갱신하지 않는다. |
-| [work/update/WORKSPACE_UPGRADE_2026-10-23.md](./work/update/WORKSPACE_UPGRADE_2026-10-23.md) | 문서 합성·work 정리·Docker 이동성 검증. 직전 registry 등록은 2026-10-22 rollup 참조 | 날짜별 audit log로 유지하고 canonical plan 내용을 중복 관리하지 않는다. 앞으로의 update log도 `work/update/`에 작성한다. |
+| [종료·보류 결과](./work/research_topics/RESULTS.md) | 과거 연구의 결과·판정 | 새 근거에 따라 판단이 달라질 때 갱신한다. 실행에 쓰는 자료는 각 재현 경로에 둔다. |
+| [레지스트리 변경](./work/update/REGISTRY.md) | 최근 등록과 품질 보완 | 관련 원장과 근거에 연결하고 날짜별 중복 일지를 만들지 않는다. |
 | [work/scripts/build_reading_tiers.py](./work/scripts/build_reading_tiers.py) | tier·plan·tracker·synthesis queue 생성 규칙 | CORE/NEXT membership의 canonical source다. |
 | [work/sources/papers.json](./work/sources/papers.json) | 전체 registry identity/publication/source/taxonomy/provenance의 canonical manifest | 신규 등록은 `register_papers.py`를 사용한다. `paper_id`가 내부 stable identity다. |
 | [work/sources/registry.schema.json](./work/sources/registry.schema.json) | manifest 구조와 허용 enum의 JSON Schema | schema 변경 시 migration, audit와 generator를 함께 갱신한다. |
@@ -82,7 +69,7 @@ Humanoid는 별도 taxonomy로 만들지 않는다. Locomotion, whole-body contr
 | [research/REGISTRY_INDEX.csv](./research/REGISTRY_INDEX.csv) / [REGISTRY_STATS.md](./research/REGISTRY_STATS.md) | 전체 paper를 filter/search하고 registry 품질을 점검하는 생성 view | 직접 수정하지 않는다. manifest·tier·tracker에서 재생성한다. |
 | [work/scripts/audit_repository.py](./work/scripts/audit_repository.py) | registry·tier·tracker·queue·note·taxonomy 무결성 검사 | read-only이며 주요 변경 전후에 실행한다. |
 
-[2026-11-05 통합 검토](./work/update/INTEGRATED_GAP_REVIEW_2026-11-05.md)에서 기존·신규 후보를 함께 대조하고 직접 선행 12편을 추가했다. 11/06 [UNIFIED-N1](./work/research_topics/unified_vla_rl/내용/README.md#n1-review)에서 직접 선행 2편을 추가했다. 11/12 [REG-R14](./work/update/REGISTRY_MAINTENANCE_2026-11-12.md)에서 최근 공백 조사에 인용한 미등록8편을 추가했다. 이어서 [REG-R15](./work/update/FOUNDATION_FRONTIER_SUPPLEMENT_2026-11-12.md)에서 기반·핵심 비교12편과 최근12편을 추가했다. 11/16 [REG-R16](./work/update/REGISTRY_ACCURACY_PSI0_2026-11-16.md)에서 Ψ₀와 데이터 전제2편을 등록하고 AMO/SONIC의 설명·공개 자료를 교정했다. 11/18 [REG-R17](./work/update/REGISTRY_MAINTENANCE_2026-11-18.md)에서 직접 선행18편을 추가하고 SaPaVe·ActiveAlign을 NEXT로 조정했다. 같은 날 [REG-R18](./work/update/REGISTRY_MAINTENANCE_2026-11-18.md#reg-r18)에서 geometry 후보의 직접 선행3편을 추가했다. 현재 snapshot은 CORE 50편, NEXT 427편, REFERENCE 508편, ARCHIVE 242편이다. 등록·병합의 과거 수량과 근거는 [update index](./work/update/README.md)에 보존하며 기존 연구 판단은 유지한다. 이 숫자는 결과이지 목표 quota가 아니다. 논문 중요성 때문에 필요하면 CORE/NEXT를 늘릴 수 있으며, 장기 정독 규모 100–150편은 운영상 가이드일 뿐 hard cap이 아니다.
+등급 규모는 가이드이며 중요도에 따라 CORE/NEXT를 조정한다. 현재 수량은 [통계](./research/REGISTRY_STATS.md)가 관리한다.
 
 ## 4. Canonical Robotics Taxonomy
 
@@ -126,7 +113,7 @@ NEXT는 CORE를 전제로 읽는 전문화·확장·frontier다.
 
 ### REFERENCE
 
-- 중요한 foundation, baseline, dataset, benchmark, survey이지만 현재 477편 정독 흐름의 prerequisite는 아니다.
+- 중요한 foundation, baseline, dataset, benchmark, survey이지만 현재 500편 정독 흐름의 prerequisite는 아니다.
 - 특정 실험이나 아이디어를 설계할 때 찾아 읽는다.
 - `READING_PLAN.md`의 CORE/NEXT와 비교해 중요한 논문이 REFERENCE에 남아 있지 않은지 정기적으로 승격 감사한다.
 
@@ -229,6 +216,13 @@ Tier 결정에서 PDF, 로컬 노트 개수, 다운로드 성공 여부는 절�
 05_insights.md
 paper.pdf            # optional, non-canonical
 ```
+
+### 작업 문서와 후보 명칭
+
+- Markdown 첫 제목은 역할이나 주제를 드러내는 짧은 명사구로 쓴다. `연구 후보`, `접촉 적응`, `접촉 적응 재현`처럼 같은 주제에 같은 표현을 쓴다. 날짜, 작업 ID, 상태는 필요한 경우 본문에 둔다.
+- 공통 문서는 `REGISTRY_AUDIT.md`처럼 짧은 `UPPER_SNAKE_CASE.md`, 분야별 비교는 `04_vla.md`처럼 `NN_<short_topic>.md`를 사용한다. 기존 생성 파일의 경로는 생성기와 참조를 함께 갱신할 수 있을 때만 변경한다.
+- 현행 후보는 `work/research_topics/<short_topic>/`의 영문 `lower_snake_case` 디렉토리를 사용한다. 각 주제는 `내용/README.md`와 `재현 방법/README.md`를 진입점으로 삼는다.
+- 종료·보류 후보에서 재사용할 수 있는 측정, 판단의 근거, 재개에 필요한 새 증거는 [결과](./work/research_topics/RESULTS.md)에 합친다. 구형 dossier와 중복 로그는 핵심 내용을 합치거나 Git 이력에서 복원할 수 있는지 확인한 뒤 작업본에서 제거한다. 재현에 쓰는 코드·원시 입력은 해당 실행 경로에 둔다.
 
 ## 9. Per-Paper Note Standard
 
@@ -392,10 +386,9 @@ PDF column은 compatibility를 위해 남아 있을 수 있지만 curation decis
 - 필요한 패키지·weights·simulator assets를 host에 설치하지 않는다. 준비 artifact와 실행 결과를 구별하고, 미구현 adapter·미검증 image/manifest·미측정 효과를 완료로 표시하지 않는다. 자원 미충족은 연구 가설의 반증이 아니며 기존 NO-GO/HOLD 후보의 과학적 재개 조건도 자동 해제하지 않는다.
 - 실패가 확정된 조건에서 무관한 대용 실험·대규모 다운로드를 반복하지 않는다. 이번 작업이 생성한 불필요한 container/image는 식별하여 정리하고, 기존 사용자 자산이나 다른 작업의 자산은 보존한다. TODO에는 **준비 완료 범위 / 실제 실행 확인 범위 / 남은 자원·구현 조건**을 각각 남긴다.
 
-### 이전 실험의 판단 보존
+### 재현과 이전 결과
 
-- 현재 [C1 후속 검토](./work/research_candidates/2026-10-20_vla_rl/C1_REVIEW.md)는 문헌·bounded native probe 결과를 보존한 보류 상태다. Base competence는 미확인이고 learned selector·RL 학습·G1 이후 branch 비교는 미실행이다. 전용 실행 자원은 정리했다. 이전 작업은 [핵심 결과](./work/experiments/vla_rl_cross_embodiment/RESULTS.md)로 통합했다. Design freeze와 runtime 검증·연구 효과 입증을 구별한다.
-- [C2 1차 결과](./work/experiments/vla_rl_c2_first_pass/RESULTS.md)는 실제 데이터 감사·경유 판정·의존성 probe를 수행한 기록이다. [분할 초안](./work/research_candidates/2026-10-20_vla_rl/C2_SPLIT_DRAFT.json)은 여전히 executable=false이며 정책 비교는 미실행이다. G0·G1 미충족으로 현재 설계를 종료했고, [재개 조건](./work/research_candidates/2026-10-20_vla_rl/C2_BUILDUP_RESULT.md) 없이 큰 학습 sweep이나 환경 이식을 시작하지 않는다.
+[Docker 재현 안내](./work/experiments/README.md)에 재실행이 가능한 작업을 모은다. C3는 한 checkpoint에서 얻은 16개 관측의 저장 logits 재분석이다. 모델 추론·정책 학습·실기 효과와 구별한다. 과거 runtime manifest는 실행 당시 조건을 보존한다. [종료·보류 판정](./work/research_topics/RESULTS.md)
 
 ### Tier or registry update
 
@@ -426,7 +419,7 @@ python3 work/scripts/build_reading_tiers.py
 - `build_lit_survey.py`는 인자 없이 read-only다. metadata refresh, PDF download, note overwrite, registry/manifest write는 각각 명시적 flag 없이는 실행되지 않아야 한다.
 - `build_lit_survey.py`의 일반 CLI는 현재 canonical manifest 전체를 사용한다. 과거 discovery의 `build_papers()` 결과로 registry를 대체하지 않는다. `write_registry()`는 기존 stable ID 누락을 쓰기 전에 차단한다. 게재에 따른 경로 변경 시 stable ID·읽기 입력을 보존하고 review manifest의 원 identity는 `identity_at_review`에 남긴다.
 - `--overwrite-notes`는 기존 수동 분석을 덮어쓰므로 사용자의 명시적 전체 재생성 요청 없이는 사용하지 않는다.
-- 폐기된 one-off script와 사용하지 않는 발견용 dump는 2026-10-23 제거했다. [정리 기록](./work/update/WORKSPACE_UPGRADE_2026-10-23.md)과 [통합 과거 report](./work/sources/legacy_maintenance_reports.json)는 역사 자료이며 현재 source of truth가 아니다. `sources/candidates/cvf_candidates.json`은 현행 discovery script 입력이므로 보존한다.
+- `sources/candidates/cvf_candidates.json`은 공용 discovery script의 입력이다. 단발성 검색 결과와 작업 로그는 실제 재사용 여부를 확인한 뒤 정리한다.
 
 ### File editing
 
@@ -470,7 +463,7 @@ git diff --check
 - 모든 registry paper가 정확히 하나의 `CORE/NEXT/REFERENCE/ARCHIVE` tier에 속하는가
 - CORE/NEXT 사이에 중복이 없는가
 - CORE/NEXT 모든 paper가 `READING_PLAN.md`와 `READING_STATUS.csv`에 나타나는가
-- 477편이 7개 synthesis queue에 정확히 한 번씩 배정되는가
+- 500편이 7개 synthesis queue에 정확히 한 번씩 배정되는가
 - Tier 판단에 PDF 상태가 들어가지 않았는가
 
 ### Tracker integrity
@@ -520,8 +513,8 @@ git diff --check
 
 질문의 기준을 먼저 분리한다.
 
-- Registry composition: 전체 1,227편 기준
-- Intensive reading: CORE+NEXT 기준 (현재 477편)
+- 전체 논문 분포는 [현재 통계](./research/REGISTRY_STATS.md)의 원장 편수를 분모로 사용한다.
+- Intensive reading: CORE+NEXT 기준 (현재 500편)
 - Reading progress: `READING_STATUS.csv` 기준
 - Priority, reading order, detailed robotics coverage: `READING_PLAN.md` 기준
 

@@ -1,28 +1,28 @@
-# Registry Statistics
+# 레지스트리 통계
 
-- Generated: 2026-11-18 KST
+- Generated: 2026-11-20 KST
 - Source: [papers.json](../work/sources/papers.json)
 - This is a generated diagnostic view; edit the manifest, tracker, or tier generator instead.
 
 ## Snapshot
 
-- Papers: **1227**
-- Resources in the combined view: **671**
-- Curated relation edges: **50**
-- Papers with outgoing relations: **41**
-- Papers participating in a relation: **62**
-- Structured evaluation profiles: **1227**
-- Reproducibility profiles: **1227**
-- Lineage coverage profiles: **1227**
+- Papers: **1252**
+- Resources in the combined view: **692**
+- Curated relation edges: **91**
+- Papers with outgoing relations: **69**
+- Papers participating in a relation: **109**
+- Structured evaluation profiles: **1252**
+- Reproducibility profiles: **1252**
+- Lineage coverage profiles: **1252**
 - Papers with explicit trial/seed cues: **247**
-- Papers without DOI/arXiv/OpenReview identifier: **366**
+- Papers without DOI/arXiv/OpenReview identifier: **371**
 
 ## Tier
 
 | Value | Count |
 |---|---:|
-| REFERENCE | 508 |
-| NEXT | 427 |
+| REFERENCE | 510 |
+| NEXT | 450 |
 | ARCHIVE | 242 |
 | CORE | 50 |
 
@@ -30,14 +30,14 @@
 
 | Value | Count |
 |---|---:|
-| FULL_TEXT_CHECKED | 968 |
+| FULL_TEXT_CHECKED | 993 |
 | ABSTRACT_CHECKED | 259 |
 
 ## Reading status (intensive set)
 
 | Value | Count |
 |---|---:|
-| UNREAD | 476 |
+| UNREAD | 499 |
 | READ | 1 |
 
 ## Reading status (inactive history; excluded from intensive denominator)
@@ -51,24 +51,24 @@
 
 | Value | Count |
 |---|---:|
-| recorded | 1227 |
+| recorded | 1252 |
 
 ## Curation roles
 
 | Value | Count |
 |---|---:|
-| method | 966 |
+| method | 984 |
 | foundation | 124 |
-| benchmark_or_dataset | 99 |
-| system | 40 |
+| benchmark_or_dataset | 103 |
+| system | 43 |
 
 ## Publication kind
 
 | Value | Count |
 |---|---:|
-| conference | 1045 |
+| conference | 1068 |
+| journal | 89 |
 | preprint | 88 |
-| journal | 87 |
 | technical_report | 4 |
 | workshop | 2 |
 | other | 1 |
@@ -77,40 +77,40 @@
 
 | Value | Count |
 |---|---:|
-| identified | 861 |
-| source_only | 366 |
+| identified | 881 |
+| source_only | 371 |
 
 ## Primary source scope
 
 | Value | Count |
 |---|---:|
-| paper_specific | 1184 |
+| paper_specific | 1209 |
 | venue_index | 43 |
 
 ## Code status
 
 | Value | Count |
 |---|---:|
-| not_identified | 623 |
-| project_only | 314 |
-| released | 251 |
-| not_released | 39 |
+| not_identified | 625 |
+| project_only | 296 |
+| released | 291 |
+| not_released | 40 |
 
 ## Data status
 
 | Value | Count |
 |---|---:|
-| not_identified | 1053 |
-| not_applicable | 103 |
-| released | 69 |
-| not_released | 2 |
+| not_identified | 1052 |
+| not_applicable | 101 |
+| released | 96 |
+| not_released | 3 |
 
 ## Evaluation type
 
 | Value | Count |
 |---|---:|
 | EMPIRICAL / REAL-ROBOT OR HARDWARE | 447 |
-| not_recorded | 278 |
+| not_recorded | 303 |
 | EMPIRICAL / SOURCE-REPORTED EVALUATION | 274 |
 | SYSTEM / EVALUATION SCOPE UNRESOLVED | 95 |
 | BENCHMARK / DATASET | 69 |
@@ -121,7 +121,7 @@
 | Value | Count |
 |---|---:|
 | real_robot | 447 |
-| not_recorded | 278 |
+| not_recorded | 303 |
 | source_reported | 274 |
 | scope_unresolved | 95 |
 | benchmark_or_dataset | 69 |
@@ -131,7 +131,7 @@
 
 | Value | Count |
 |---|---:|
-| trials_or_seeds=not_recorded | 980 |
+| trials_or_seeds=not_recorded | 1005 |
 | dataset_or_benchmark=reported | 948 |
 | metrics=reported | 948 |
 | statistics=reported | 940 |
@@ -139,13 +139,13 @@
 | split_or_generalization=reported | 927 |
 | failure_cases=reported | 927 |
 | ablations=reported | 920 |
-| split_or_generalization=not_recorded | 300 |
-| failure_cases=not_recorded | 300 |
-| dataset_or_benchmark=not_recorded | 279 |
-| metrics=not_recorded | 278 |
-| baselines=not_recorded | 278 |
-| ablations=not_recorded | 278 |
-| statistics=not_recorded | 278 |
+| split_or_generalization=not_recorded | 325 |
+| failure_cases=not_recorded | 325 |
+| dataset_or_benchmark=not_recorded | 304 |
+| metrics=not_recorded | 303 |
+| baselines=not_recorded | 303 |
+| ablations=not_recorded | 303 |
+| statistics=not_recorded | 303 |
 | trials_or_seeds=reported | 247 |
 | ablations=not_reported | 29 |
 | baselines=not_reported | 10 |
@@ -156,66 +156,66 @@
 
 | Value | Count |
 |---|---:|
-| metadata_audited | 1227 |
+| metadata_audited | 1252 |
 
 ## Checkpoint status
 
 | Value | Count |
 |---|---:|
-| not_recorded | 1217 |
-| reported | 10 |
+| not_recorded | 1220 |
+| reported | 32 |
 
 ## Configuration status
 
 | Value | Count |
 |---|---:|
 | reported | 949 |
-| not_recorded | 278 |
+| not_recorded | 303 |
 
 ## Environment status
 
 | Value | Count |
 |---|---:|
 | reported | 949 |
-| not_recorded | 278 |
+| not_recorded | 303 |
 
 ## Run-condition status
 
 | Value | Count |
 |---|---:|
 | reported | 940 |
-| not_recorded | 287 |
+| not_recorded | 312 |
 
 ## Lineage coverage status
 
 | Value | Count |
 |---|---:|
-| no_curated_edge_recorded | 896 |
-| candidate_only | 269 |
-| curated_edges | 62 |
+| no_curated_edge_recorded | 886 |
+| candidate_only | 257 |
+| curated_edges | 109 |
 
 ## Relation type
 
 | Value | Count |
 |---|---:|
-| extends | 27 |
-| builds_on | 13 |
-| baseline_for | 6 |
+| extends | 40 |
+| builds_on | 29 |
+| baseline_for | 18 |
 | uses_dataset | 4 |
 
 ## Relation confidence
 
 | Value | Count |
 |---|---:|
-| verified | 26 |
+| verified | 43 |
+| manual | 30 |
 | inferred | 18 |
-| manual | 6 |
 
 ## Relation evidence scope
 
 | Value | Count |
 |---|---:|
-| paper_body | 28 |
+| paper_body | 69 |
 | title_lineage | 16 |
 | official_project | 4 |
 | official_abstract | 2 |
@@ -236,19 +236,36 @@ The manifest is the source of truth; this table is a compact human-readable edge
 | `pr-0019` Diffusion Policy: Visuomotor Policy Learning via Action Diffusion | `baseline_for` | `pr-0924` FlowPolicy: Enabling Fast and Robust 3D Flow-Based Policy via Consistency Flow Matching for Robot Manipulation | `verified` | `paper_body` |
 | `pr-0019` Diffusion Policy: Visuomotor Policy Learning via Action Diffusion | `builds_on` | `pr-0008` Denoising Diffusion Probabilistic Models | `verified` | `paper_body` |
 | `pr-0022` RT-2: Vision-Language-Action Models Transfer Web Knowledge to Robotic Control | `extends` | `pr-0021` RT-1: Robotics Transformer for Real-World Control at Scale | `inferred` | `title_lineage` |
+| `pr-0051` OpenVLA: An Open-Source Vision-Language-Action Model | `baseline_for` | `pr-0085` MemoryVLA: Perceptual-Cognitive Memory in Vision-Language-Action Models for Robotic Manipulation | `verified` | `paper_body` |
+| `pr-0051` OpenVLA: An Open-Source Vision-Language-Action Model | `baseline_for` | `pr-0278` PD-VLA: Accelerating Vision-Language-Action Model Integrated with Action Chunking via Parallel Decoding | `verified` | `paper_body` |
+| `pr-0051` OpenVLA: An Open-Source Vision-Language-Action Model | `baseline_for` | `pr-0746` π0: A Vision-Language-Action Flow Model for General Robot Control | `verified` | `paper_body` |
+| `pr-0051` OpenVLA: An Open-Source Vision-Language-Action Model | `baseline_for` | `pr-0773` CoT-VLA: Visual Chain-of-Thought Reasoning for Vision-Language-Action Models | `verified` | `paper_body` |
+| `pr-0051` OpenVLA: An Open-Source Vision-Language-Action Model | `baseline_for` | `pr-0804` ACoT-VLA: Action Chain-of-Thought for Vision-Language-Action Models | `verified` | `paper_body` |
+| `pr-0051` OpenVLA: An Open-Source Vision-Language-Action Model | `baseline_for` | `pr-0880` SpatialVLA: Exploring Spatial Representations for Visual-Language-Action Models | `verified` | `paper_body` |
+| `pr-0051` OpenVLA: An Open-Source Vision-Language-Action Model | `baseline_for` | `pr-0915` SmolVLA: A Vision-Language-Action Model for Affordable and Efficient Robotics | `verified` | `paper_body` |
+| `pr-0051` OpenVLA: An Open-Source Vision-Language-Action Model | `baseline_for` | `pr-0957` SimpleVLA-RL: Scaling VLA Training via Reinforcement Learning | `verified` | `paper_body` |
+| `pr-0051` OpenVLA: An Open-Source Vision-Language-Action Model | `builds_on` | `pr-0006` DINOv2: Learning Robust Visual Features without Supervision | `verified` | `paper_body` |
+| `pr-0051` OpenVLA: An Open-Source Vision-Language-Action Model | `builds_on` | `pr-0022` RT-2: Vision-Language-Action Models Transfer Web Knowledge to Robotic Control | `verified` | `paper_body` |
 | `pr-0051` OpenVLA: An Open-Source Vision-Language-Action Model | `uses_dataset` | `pr-0024` Open X-Embodiment: Robotic Learning Datasets and RT-X Models | `manual` | `paper_body` |
 | `pr-0051` OpenVLA: An Open-Source Vision-Language-Action Model | `uses_dataset` | `pr-0732` DROID: A Large-Scale In-The-Wild Robot Manipulation Dataset | `verified` | `paper_body` |
+| `pr-0052` Octo: An Open-Source Generalist Robot Policy | `baseline_for` | `pr-0051` OpenVLA: An Open-Source Vision-Language-Action Model | `verified` | `paper_body` |
 | `pr-0052` Octo: An Open-Source Generalist Robot Policy | `uses_dataset` | `pr-0024` Open X-Embodiment: Robotic Learning Datasets and RT-X Models | `manual` | `paper_body` |
+| `pr-0061` π0.5: a Vision-Language-Action Model with Open-World Generalization | `baseline_for` | `pr-1233` T-Rex: Tactile-Reactive Dexterous Manipulation | `manual` | `paper_body` |
 | `pr-0061` π0.5: a Vision-Language-Action Model with Open-World Generalization | `extends` | `pr-0746` π0: A Vision-Language-Action Flow Model for General Robot Control | `manual` | `title_lineage` |
+| `pr-0075` TraceVLA: Visual Trace Prompting Enhances Spatial-Temporal Awareness for Generalist Robotic Policies | `extends` | `pr-0051` OpenVLA: An Open-Source Vision-Language-Action Model | `verified` | `paper_body` |
 | `pr-0084` ET-SEED: EFFICIENT TRAJECTORY-LEVEL SE(3) EQUIVARIANT DIFFUSION POLICY | `extends` | `pr-0019` Diffusion Policy: Visuomotor Policy Learning via Action Diffusion | `verified` | `paper_body` |
 | `pr-0137` SE(3)-Equivariant Diffusion Policy in Spherical Fourier Space | `extends` | `pr-0019` Diffusion Policy: Visuomotor Policy Learning via Action Diffusion | `verified` | `paper_body` |
+| `pr-0524` Proximal Policy Optimization Algorithms | `baseline_for` | `pr-1229` Improving Vision-Language-Action Model with Online Reinforcement Learning | `manual` | `paper_body` |
 | `pr-0524` Proximal Policy Optimization Algorithms | `extends` | `pr-0615` Trust Region Policy Optimization | `verified` | `official_abstract` |
 | `pr-0577` Learning Robotic Manipulation Policies from Point Clouds with Conditional Flow Matching | `builds_on` | `pr-0745` Flow Matching for Generative Modeling | `verified` | `paper_body` |
 | `pr-0615` Trust Region Policy Optimization | `builds_on` | `pr-0838` Policy Gradient Methods for Reinforcement Learning with Function Approximation | `inferred` | `paper_body` |
 | `pr-0618` Constrained Policy Optimization | `extends` | `pr-0615` Trust Region Policy Optimization | `verified` | `paper_body` |
+| `pr-0696` SAFE: Multitask Failure Detection for Vision-Language-Action Models | `baseline_for` | `pr-1239` VLA-FAIL: Efficient Task Failure Detection for Finetuned Vision-Language-Action Models | `manual` | `paper_body` |
 | `pr-0746` π0: A Vision-Language-Action Flow Model for General Robot Control | `builds_on` | `pr-0745` Flow Matching for Generative Modeling | `verified` | `paper_body` |
 | `pr-0746` π0: A Vision-Language-Action Flow Model for General Robot Control | `uses_dataset` | `pr-0024` Open X-Embodiment: Robotic Learning Datasets and RT-X Models | `verified` | `paper_body` |
 | `pr-0748` PDDLStream: Integrating Symbolic Planners and Blackbox Samplers via Optimistic Adaptive Planning | `extends` | `pr-0834` FFRob: Leveraging Symbolic Planning for Efficient Task and Motion Planning | `inferred` | `title_lineage` |
+| `pr-0749` FAST: Efficient Action Tokenization for Vision-Language-Action Models | `builds_on` | `pr-0051` OpenVLA: An Open-Source Vision-Language-Action Model | `verified` | `paper_body` |
+| `pr-0750` Fine-Tuning Vision-Language-Action Models: Optimizing Speed and Success | `extends` | `pr-0051` OpenVLA: An Open-Source Vision-Language-Action Model | `verified` | `paper_body` |
 | `pr-0751` Reactive Diffusion Policy: Slow-Fast Visual-Tactile Policy Learning for Contact-Rich Manipulation | `extends` | `pr-0019` Diffusion Policy: Visuomotor Policy Learning via Action Diffusion | `verified` | `paper_body` |
 | `pr-0762` Hierarchical Diffusion Policy for Kinematics-Aware Multi-Task Robotic Manipulation | `extends` | `pr-0019` Diffusion Policy: Visuomotor Policy Learning via Action Diffusion | `inferred` | `paper_body` |
 | `pr-0838` Policy Gradient Methods for Reinforcement Learning with Function Approximation | `builds_on` | `pr-0837` Simple Statistical Gradient-Following Algorithms for Connectionist Reinforcement Learning | `verified` | `paper_body` |
@@ -275,7 +292,31 @@ The manifest is the source of truth; this table is a compact human-readable edge
 | `pr-0931` Diffusion Meets DAgger: Supercharging Eye-in-hand Imitation Learning | `extends` | `pr-0522` A Reduction of Imitation Learning and Structured Prediction to No-Regret Online Learning | `verified` | `paper_body` |
 | `pr-0948` Habitat 2.0: Training Home Assistants to Rearrange their Habitat | `extends` | `pr-0500` Habitat: A Platform for Embodied AI Research | `inferred` | `title_lineage` |
 | `pr-0949` Habitat 3.0: A Co-Habitat for Humans, Avatars, and Robots | `extends` | `pr-0948` Habitat 2.0: Training Home Assistants to Rearrange their Habitat | `inferred` | `title_lineage` |
+| `pr-0957` SimpleVLA-RL: Scaling VLA Training via Reinforcement Learning | `builds_on` | `pr-0750` Fine-Tuning Vision-Language-Action Models: Optimizing Speed and Success | `verified` | `paper_body` |
+| `pr-1143` Steering Your Generalists: Improving Robotic Foundation Models via Value Guidance | `builds_on` | `pr-0051` OpenVLA: An Open-Source Vision-Language-Action Model | `verified` | `paper_body` |
 | `pr-1161` GRAD-NAV++: Vision-Language Model Enabled Visual Drone Navigation With Gaussian Radiance Fields and Differentiable Dynamics | `extends` | `pr-0290` GRaD-Nav: Efficiently Learning Visual Drone Navigation with Gaussian Radiance Fields and Differentiable Dynamics | `manual` | `official_project` |
+| `pr-1203` STARE-VLA: Progressive Stage-Aware Reinforcement for Fine-Tuning Vision-Language-Action Models | `extends` | `pr-0051` OpenVLA: An Open-Source Vision-Language-Action Model | `verified` | `paper_body` |
+| `pr-1228` DeeR-VLA: Dynamic Inference of Multimodal Large Language Models for Efficient Robot Execution | `extends` | `pr-0935` Vision-Language Foundation Models as Effective Robot Imitators | `manual` | `paper_body` |
+| `pr-1230` MoRE: Unlocking Scalability in Reinforcement Learning for Quadruped Vision-Language-Action Models | `extends` | `pr-0625` Q-Transformer: Scalable Offline Reinforcement Learning via Autoregressive Q-Functions | `manual` | `paper_body` |
+| `pr-1231` MEM: Multi-Scale Embodied Memory for Vision Language Action Models | `builds_on` | `pr-0061` π0.5: a Vision-Language-Action Model with Open-World Generalization | `manual` | `paper_body` |
+| `pr-1232` RoboMonkey: Scaling Test-Time Sampling and Verification for Vision-Language-Action Models | `builds_on` | `pr-0051` OpenVLA: An Open-Source Vision-Language-Action Model | `manual` | `paper_body` |
+| `pr-1234` Contact-Grounded Policy: Dexterous Visuotactile Policy with Generative Contact Grounding | `extends` | `pr-0019` Diffusion Policy: Visuomotor Policy Learning via Action Diffusion | `manual` | `paper_body` |
+| `pr-1235` Advancing Humanoid Locomotion: Mastering Challenging Terrains with Denoising World Model Learning | `builds_on` | `pr-0524` Proximal Policy Optimization Algorithms | `manual` | `paper_body` |
+| `pr-1236` CLONE: Closed-Loop Whole-Body Humanoid Teleoperation for Long-Horizon Tasks | `extends` | `pr-0602` OmniH2O: Universal and Dexterous Human-to-Humanoid Whole-Body Teleoperation and Learning | `manual` | `paper_body` |
+| `pr-1237` Vision in Action: Learning Active Perception from Human Demonstrations | `extends` | `pr-0019` Diffusion Policy: Visuomotor Policy Learning via Action Diffusion | `manual` | `paper_body` |
+| `pr-1238` Back to the Familiar Future: Failure Recovery for VLA Policies via Pre-Imagined Milestone Selection | `extends` | `pr-0042` LIBERO: Benchmarking Knowledge Transfer for Lifelong Robot Learning | `manual` | `paper_body` |
+| `pr-1240` HumanoidMimicGen: Data Generation for Loco-Manipulation via Whole-Body Planning | `extends` | `pr-0637` MimicGen: A Data Generation System for Scalable Robot Learning using Human Demonstrations | `manual` | `paper_body` |
+| `pr-1241` Active Perception for Grasp Detection via Neural Graspness Field | `extends` | `pr-0645` GraspNet-1Billion: A Large-Scale Benchmark for General Object Grasping | `manual` | `paper_body` |
+| `pr-1242` KineDex: Learning Tactile-Informed Visuomotor Policies via Kinesthetic Teaching for Dexterous Manipulation | `extends` | `pr-0019` Diffusion Policy: Visuomotor Policy Learning via Action Diffusion | `manual` | `paper_body` |
+| `pr-1243` UniTac2Pose: A Unified Approach Learned in Simulation for Category-level Visuotactile In-hand Pose Estimation | `builds_on` | `pr-0484` Score-Based Generative Modeling through Stochastic Differential Equations | `manual` | `paper_body` |
+| `pr-1244` ViTaSCOPE: Visuo-tactile Implicit Representation for In-hand Pose and Extrinsic Contact Estimation | `builds_on` | `pr-0848` GelSight: High-Resolution Robot Tactile Sensors for Estimating Geometry and Force | `manual` | `paper_body` |
+| `pr-1245` VTDexManip: A Dataset and Benchmark for Visual-tactile Pretraining and Dexterous Manipulation with Reinforcement Learning | `builds_on` | `pr-0524` Proximal Policy Optimization Algorithms | `manual` | `paper_body` |
+| `pr-1246` ViTacFormer: Learning Cross-Modal Representation for Visuo-Tactile Dexterous Manipulation | `extends` | `pr-0566` Learning Fine-Grained Bimanual Manipulation with Low-Cost Hardware | `manual` | `paper_body` |
+| `pr-1247` Blind Dexterous Grasping via Real2Sim2Real Tactile Policy Learning | `builds_on` | `pr-0019` Diffusion Policy: Visuomotor Policy Learning via Action Diffusion | `manual` | `paper_body` |
+| `pr-1248` PTLD: Sim-to-real Privileged Tactile Latent Distillation for Dexterous Manipulation | `builds_on` | `pr-0522` A Reduction of Imitation Learning and Structured Prediction to No-Regret Online Learning | `manual` | `paper_body` |
+| `pr-1249` HuG: Learning Humanoid Whole-Body Affordance-Aware Grasping with Active Perception | `builds_on` | `pr-0872` SONIC: Supersizing Motion Tracking for Natural Humanoid Whole-Body Control | `manual` | `paper_body` |
+| `pr-1250` ActiveMimic: Egocentric Video Pretraining with Active Perception | `builds_on` | `pr-0056` VGGT: Visual Geometry Grounded Transformer | `manual` | `paper_body` |
+| `pr-1252` Efficient and Reliable Teleoperation through Real-to-Sim-to-Real Shared Autonomy | `builds_on` | `pr-0019` Diffusion Policy: Visuomotor Policy Learning via Action Diffusion | `manual` | `paper_body` |
 
 ## Note evidence gaps
 

@@ -209,7 +209,7 @@
     {
       "paper_id": "pr-0006",
       "title": "DINOv2: Learning Robust Visual Features without Supervision",
-      "folder": "2023/TMLR/2023_TMLR_DINOv2-Learning-Robust-Visual-Features-without-Supervision",
+      "folder": "2024/TMLR/2024_TMLR_DINOv2-Learning-Robust-Visual-Features-without-Supervision",
       "target": "tmp/pdfs/fulltext_remaining_2026-09-01/pr-0006.pdf",
       "candidate_urls": [
         "https://arxiv.org/pdf/2304.07193",
@@ -254,7 +254,11 @@
         "captions": 29
       },
       "note_basis": "full-text PDF body with page-aware extractive cues",
-      "reviewed_on": "2026-09-01"
+      "reviewed_on": "2026-09-01",
+      "identity_at_review": {
+        "title": "DINOv2: Learning Robust Visual Features without Supervision",
+        "folder": "2023/TMLR/2023_TMLR_DINOv2-Learning-Robust-Visual-Features-without-Supervision"
+      }
     },
     {
       "paper_id": "pr-0007",

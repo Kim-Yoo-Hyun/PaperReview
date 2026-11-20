@@ -15,13 +15,13 @@ try:
     import build_lit_survey as survey
     from normalize_taxonomy import registry
     from registry_profiles import enrich_profiles
-    from registry_schema import enrich_record, extract_identifiers, next_paper_id
+    from registry_schema import enrich_record, extract_identifiers, next_paper_id, validate_record_shape
     from taxonomy import canonicalize
 except ModuleNotFoundError:
     from . import build_lit_survey as survey
     from .normalize_taxonomy import registry
     from .registry_profiles import enrich_profiles
-    from .registry_schema import enrich_record, extract_identifiers, next_paper_id
+    from .registry_schema import enrich_record, extract_identifiers, next_paper_id, validate_record_shape
     from .taxonomy import canonicalize
 
 
@@ -254,7 +254,47 @@ Exact assumptions·negative results·transfer limits는 본문 확인 필요. �
     }
 
 
+def reviewed_section_notes(item: dict) -> dict[str, str]:
+    """Register a paper whose method and evaluation were checked at specific source locations."""
+    title = item["title"]
+    boundary = f"> Evidence maturity: `FULL_TEXT_CHECKED`. {item['source_audit']}"
+    source = item["section_source"]
+    citations = "\n".join(
+        f"- {edge['basis']} [{edge['paper_id']} · 원문]({edge['source']})"
+        for edge in item["reviewed_predecessors"]
+    )
+    if citations:
+        citations = f"\n\n{citations}"
+    scope = f"[원문 및 평가 절]({source})"
+    evaluation = f"## 평가 조건\n\n{item['evaluation']} {scope}\n\n## 해석할 때 확인할 조건\n\n{item['question']}"
+    limitation = item.get("paper_reported_limitation")
+    if limitation:
+        evaluation += f"\n\n## 저자가 밝힌 한계\n\n{limitation['text']} [원문]({limitation['source']})"
+    overview = (
+        f"# {title}\n\n{boundary}\n\n"
+        f"- Year/Venue: {item['year']} / {item['venue']}\n- Authors: {', '.join(item['authors'])}\n"
+        f"- Primary track: {item['primary_track']}\n- Tier: PENDING\n- Tags: {', '.join(item['tags'])}\n"
+        f"- Official paper: {item['page']}\n- Code/Project: {item['project']}\n\n"
+        f"## 연구 질문과 기여\n\n{item['problem']}\n\n{item['method']}\n\n"
+        f"## 평가 범위\n\n{item['evaluation']} {scope}\n\n"
+        f"## 선정 근거\n\n{item['role']}\n"
+    )
+    header = f"> Canonical metadata: [01_overview.md](./01_overview.md).\n{boundary}"
+    sections = {
+        "02_problem.md": ("Problem", f"## 문제와 검증 범위\n\n{item['problem']}\n\n{item['evaluation']} {scope}"),
+        "03_method.md": ("Method", f"## 관측과 출력\n\n{item['interface']}\n\n## 학습·실행 방법\n\n{item['method']}{citations}"),
+        "04_evaluation.md": ("Evaluation", evaluation),
+        "05_insights.md": ("Insights", f"## Paper-supported conclusion\n\n{item['method']} {scope}\n\n## Researcher interpretation\n\n{item['role']}{citations}\n\n## 최소 비교 실험\n\n{item['minimal_experiment']}"),
+    }
+    return {"01_overview.md": overview, **{
+        filename: f"# {label} — {title}\n\n{header}\n\n{body}\n"
+        for filename, (label, body) in sections.items()
+    }}
+
+
 def notes(item: dict) -> dict[str, str]:
+    if item.get("note_format") == "reviewed_sections_v1":
+        return reviewed_section_notes(item)
     if item.get("note_format") == "abstract_analysis_v1":
         return abstract_analysis_notes(item)
     aliases = item.get("aliases") or []
@@ -619,6 +659,9 @@ def main() -> None:
         if collisions:
             skipped_identifiers.append({"title": item["title"], "matches": collisions})
             continue
+        errors = validate_record_shape(item)
+        if errors:
+            raise SystemExit(f"{item['title']}: {', '.join(errors)}")
         accepted.append(item)
         available_items.append(item)
         titles.add(title_key(item["title"]))
@@ -630,6 +673,8 @@ def main() -> None:
             print(f"+ {item['title']} -> {item['folder']}")
         for collision in skipped_identifiers:
             print(f"! {collision['title']} -> identifier collision: {collision['matches']}")
+        return
+    if not accepted:
         return
     for item in accepted:
         folder = ROOT / item["folder"]
@@ -646,9 +691,8 @@ def main() -> None:
             name: item["provenance"]["content_evidence"] for name in NOTE_NAMES
         }
     merged = existing + accepted
-    # Registration is incremental: preserve the existing papers' manually
-    # reviewed profiles and evidence dates; only initialize new entries.
-    enrich_profiles(accepted, ROOT, reviewed_on=str(date.today()))
+    # Initialize new profiles and update existing targets of their citations.
+    enrich_profiles(accepted, ROOT, reviewed_on=str(date.today()), registry=merged)
     for item in accepted:
         if item.get("note_format") == "abstract_analysis_v1":
             item["evaluation_profile"]["basis"] = (

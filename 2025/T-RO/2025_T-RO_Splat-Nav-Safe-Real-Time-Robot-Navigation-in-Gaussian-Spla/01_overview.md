@@ -19,7 +19,7 @@
 - Conference presentation: IROS 2025, reported by the [author laboratory](https://sites.temple.edu/trail/publications/) separately from T-RO publication. Its linked [conference program](https://ras.papercept.net/conferences/conferences/IROS25/program/IROS25_ContentListWeb_3.html) could not be retrieved in this pass; oral/poster format remains unverified.
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (20 pages; PyMuPDF text; title-token overlap first two pages=1.0)
-- Metadata audit: 2026-10-23, publisher-deposited [Crossref DOI metadata](https://api.crossref.org/works/10.1109/TRO.2025.3552348), author laboratory, arXiv and linked project/code checked. DOI resolves to IEEE; its page requires a browser verification challenge. This correction preserves the earlier arXiv full-text analysis and user reading status; it is not a new journal-body review. [Correction record](../../../work/update/SPLAT_NAV_METADATA_2026-10-23.md).
+- Metadata audit: 2026-10-23, publisher-deposited [Crossref DOI metadata](https://api.crossref.org/works/10.1109/TRO.2025.3552348), author laboratory, arXiv and linked project/code checked. DOI resolves to IEEE; its page requires a browser verification challenge. This correction preserves the earlier arXiv full-text analysis and user reading status; it is not a new journal-body review. [Correction record](https://github.com/Kim-Yoo-Hyun/PaperReview/blob/cb650415f47a2a45ad883dabe5bd20c382b5c183/work/update/SPLAT_NAV_METADATA_2026-10-23.md).
 
 ## Why This Paper Is Here
 

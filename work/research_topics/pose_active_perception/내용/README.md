@@ -1,6 +1,6 @@
-# 작업에 필요한 물체 자세의 모호성을 해소하는 능동 관측 VLA
+# 능동 자세 추정
 
-2026-11-18: 직접 선행의 정식 paper-note와 publication 경계는 [REG-R17 등록](../../../update/REGISTRY_MAINTENANCE_2026-11-18.md)으로 연결했다. 아래 연구 판단·실행 준비 상태는 유지한다.
+2026-11-18: 직접 선행의 정식 paper-note와 publication 경계는 [REG-R17 등록](../../../update/REGISTRY.md#reg-r18)으로 연결했다. 아래 연구 판단·실행 준비 상태는 유지한다.
 
 Updated: 2026-11-17 KST. **N1/N2·P0 준비 완료 / native 검증 대기 / 좁은 탐색 CONTINUE / CURATION-HYPOTHESIS.** 물체의 6D pose를 다룬다. 직접 선행·네 사례·공개 source와 비교 계약을 확인했으며 독립 신규성·효과·native 실행은 미확립이다. [재현 준비 범위](../재현%20방법/README.md#p0-preparation) · [공통 근거 원장: pose_active_n1 / pose_active_n2 / pose_active_p0_preparation](../../../sources/new_field_scout_2026-11-17.json) · [현재 선택](../../../../TODO.md).
 
@@ -104,4 +104,4 @@ Updated: 2026-11-17 KST. **N1/N2·P0 준비 완료 / native 검증 대기 / 좁�
 
 **N2에서 위 명세를 완료했다.** 새 배치 task와 고정 view 순서의 ACT/LOOK 비교를 선택했으며 learned NBV는 최초 범위에서 제외했다. P0-PREP에서 custom evaluator/camera/좌표 검증과 pinned VLA candidate IO 코드를 작성했다. 실제 통과 여부는 다음 native P0에서 확인한다. 정상화·기본 행동 능력이 없으면 VLA 명령을 보내지 않고 원인을 기록한다. 성공 label dataset과 방법 학습은 이 초기 검증 이후 별도 pilot이다. Oracle 표만 있고 native 행동 후보를 확보하지 못하면 VLA 방법 효과 주장은 보류하되 최소 사례 구축 자체를 반증으로 취급하지 않는다.
 
-과거 [C1](../../../research_candidates/2026-10-20_vla_rl/C1_REVIEW.md)의 observation shift·이동 비용·기억 부재, [D3-R1](../../../research_candidates/2026-10-22_d3_buildup/R1_REVIEW.md)의 instance/관측/행동 능력 연결 원칙을 반영했다. C1/D3를 재개하거나 기존 HOLD를 해제한 것이 아니다. 실험·학습·외부 연구자 피드백은 미실행이며 N2 완료는 문헌/source 기반 비교 명세 완료만 뜻한다.
+과거 [C1](https://github.com/Kim-Yoo-Hyun/PaperReview/blob/cb650415f47a2a45ad883dabe5bd20c382b5c183/work/research_candidates/2026-10-20_vla_rl/C1_REVIEW.md)의 observation shift·이동 비용·기억 부재, [D3-R1](https://github.com/Kim-Yoo-Hyun/PaperReview/blob/cb650415f47a2a45ad883dabe5bd20c382b5c183/work/research_candidates/2026-10-22_d3_buildup/R1_REVIEW.md)의 instance/관측/행동 능력 연결 원칙을 반영했다. C1/D3를 재개하거나 기존 HOLD를 해제한 것이 아니다. 실험·학습·외부 연구자 피드백은 미실행이며 N2 완료는 문헌/source 기반 비교 명세 완료만 뜻한다.

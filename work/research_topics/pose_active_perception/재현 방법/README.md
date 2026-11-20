@@ -1,4 +1,4 @@
-# POSE-ACTIVE — 공개 자원과 재현 준비 범위
+# 능동 자세 추정 재현
 
 Updated: 2026-11-17 KST. **N1/N2 내부 비실험 검토 완료, P0 준비 코드 작성 / PREPARED_UNEXECUTED.** [질문·선행·네 사례](../내용/README.md) · [공통 source ledger의 pose_active_n1 / pose_active_n2 / pose_active_p0_preparation](../../../sources/new_field_scout_2026-11-17.json). 현재 launcher는 로컬 daemon 연결 실패로 중단됐다. Docker recipe와 제한된 scene/IO probe는 작성했지만 image build·Docker 검사·native 호환은 미검증이다. 아래 N1/N2는 당시 설계 이력이며 최신 구현 범위는 [P0 준비](#p0-preparation)가 소유한다. 파일별 source/hash·확인 범위는 원장에 남기고 읽기용 임시 사본은 제거한다.
 

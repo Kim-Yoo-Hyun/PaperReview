@@ -79,12 +79,13 @@
     "project": "https://ompl.kavrakilab.org/"
   },
   {
-    "title": "TrajOpt: A Sequential Convex Optimization Algorithm for Robot Motion Planning",
-    "year": 2013,
-    "venue": "IROS",
+    "title": "Motion Planning with Sequential Convex Optimization and Convex Collision Checking",
+    "year": 2014,
+    "venue": "IJRR",
     "category": "Foundations: Robot Motion Planning and Control",
     "tags": ["Robotics", "motion planning", "trajectory optimization", "collision avoidance"],
-    "arxiv": "1310.7730",
+    "page": "https://doi.org/10.1177/0278364914528132",
+    "pdf": "https://rll.berkeley.edu/trajopt/ijrr/2013-IJRR-TRAJOPT.pdf",
     "project": "https://rll.berkeley.edu/trajopt/"
   },
   {

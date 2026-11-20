@@ -51,7 +51,7 @@
 
 - **Registry position:** `NEXT` in `RL, IL, offline learning, and robot data`; tags: `Robotics, Benchmark, simulation, real-to-sim, policy evaluation, generalist policy`.
 - **Reading predecessor in the generated track queue:** Any-point Trajectory Modeling for Policy Learning (queue adjacency, not a confirmed citation).
-- **Reading successor in the generated track queue:** Benchmarking Knowledge Transfer for Lifelong Robot Learning (queue adjacency, not a confirmed citation).
+- **Reading successor in the generated track queue:** LIBERO: Benchmarking Knowledge Transfer for Lifelong Robot Learning (queue adjacency, not a confirmed citation).
 - Direct citation predecessor/successor is not asserted automatically; verify the paper's reference section before recording lineage as fact.
 - **Body-defined next pressure:** Fig. 3: Illustration of Mean Maximum Rank Violation (MMRV, range [0, 1], lower is better) and Pearson correlation coefficient (Pearson r, range [-1, 1], higher is better) for assessing the correlation between ...; this is the most direct route from the paper's reported scope to a falsifiable extension.
 

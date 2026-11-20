@@ -1,13 +1,65 @@
-# 현재 연구 후보 — 유지 3개·예비 1개와 추가 탐색
+# 연구 후보
 
-Updated: 2026-11-18 KST. 큰 줄기는 **VLA + RL + Computer Vision + Robotics**다. 최신 사용자 지정의 **pose estimation·active perception / 3D reconstruction·estimation**을 [추가 탐색](../update/NEW_FIELD_SCOUT_2026-11-17.md#pose-reconstruction)했다. 새 두 후보 중 POSE-ACTIVE-N1/N2·P0 코드 준비를 완료했고 현재 local daemon 실패로 제한된 native 검증을 대기한다. 앞선 **접촉 관계 기반 RL 탐색**은 N1/N2·P0 코드 작성 후 native 검증 대기를 유지한다. 아래 보존 후보·실행 준비·초기 질문의 성숙도를 구별한다. 기존 7개 [폐기 판정](./retired/README.md)은 유지한다. [11/18 registry 보강](../update/REGISTRY_MAINTENANCE_2026-11-18.md)으로 전체1,224편과 직접 선행의 읽기 우선순위를 갱신했으며 연구 후보 성숙도는 바꾸지 않았다.
-
-아래는 석사 연구에 투자할 상대적 판단이다. 유지가 신규성·성능·출판 가능성의 입증은 아니며, 폐기도 실험적 반증은 아니다. GPU 부재로 탈락시키지 않았다. 선행 대비 남는 기여, 실제 로봇 행동과의 연결, 강한 단순 대안, 구현·검증 부담을 함께 비교했다. 작은 탐색에 완성된 결과를 요구하지 않는다.
+석사 연구 후보를 선행 대비 기여, 로봇 행동과의 연결, 구현·검증 부담으로 비교한다. 재개 순서는 [다음 작업](../../TODO.md), 이전 판단은 [종료·보류 결과](./RESULTS.md)에서 확인한다.
 
 <a id="candidate-priority"></a>
 <a id="masters-publication-comparison"></a>
 
-## 현재 투자 판단
+<a id="robotics-gap-candidates"></a>
+
+## 로보틱스 석사 주제 후보
+
+2026-11-20 기준. 학교에서 **RTX 5090, 시뮬레이션, 로봇팔, Unitree G1**을 쓸 수 있고 기간은 **6개월~1년**이다. 다음 검토 대상은 **걸쇠를 당기던 G1의 저항 해제 후 균형**이다. 시연 재수집은 공개 기록에서 원래 입력을 되찾는 경우가 확인돼 적용처 확보까지 보류한다. 조립 복구와 문 리셋에서도 단순 기준선 뒤에 남는 효과가 작았다. 번호는 처음 제안한 주제를 추적하기 위한 것이다. [기존 제안의 재판정·원장 집계](../update/ROBOTICS_TRENDS.md#lab-gap-screen)
+
+| 후보 | 검증할 질문 | 기여 유형 | 자원 적합도 | 선점 위험 | 투자 판단 |
+|---:|---|---|---|---|---|
+| 4 | 걸쇠가 풀려 당기던 힘이 갑자기 사라질 때 G1은 어떻게 작업과 균형을 함께 유지하는가? | 전신 제어 | 중 | 높음 | **시뮬레이션 우선.** 해제 전 당김을 맞춘 조건에서 단순 순응·힘 상한으로 충분한지 검토 |
+| 3 | 제약에 잘려 같은 동작으로 기록된 시연은 어디서 어떤 조건으로 다시 받아야 하는가? | 모방학습·데이터 수집 방법 | 중 | 높음 | **공개 표본에서 보류.** 원래 입력의 복원 불가와 같은 작업에서의 방향 변경을 함께 확인한 사례가 없음 |
+| 2 | 삽입이 막혔을 때 부품을 다시 잡을지, 구멍 위치를 다시 찾을지 어떤 관측으로 정하는가? | 방법·실물 평가 | 상¹ | 높음 | **현 모형 보류.** 오차 범위에 맞춘 고정 절차가 두 이득·두 방향에서 48/48개 복구. 주 조건에서 1회·8회 보정 선택은 모두 0/8세트 통과 |
+| 5 | 로봇팔에서 측정한 용기 내부 진동 특성이 G1의 운반 보정 횟수를 줄이는가? | 동역학 식별·기종 간 전이 분석 | 중하 | 높음 | 단순 입력 성형 기준선을 넘어설 근거가 생길 때 재평가 |
+| 1 | 같은 위치로 리셋했는데 직전 정책이 다음 정책의 평가 점수를 바꾸는가? | 평가·원인 분석 | 상 | 중상 | **보류.** 공개 학습 정책도 문짝만 닫거나 독립 복원하면 동률. 각도만 순간 정렬한 처치에서만 한 건 실패 |
+
+¹ 로봇팔에서 제한된 접촉 동작을 수행하고, 손·부품·치구의 상대 운동을 독립적으로 측정할 수 있다는 조건이다. 팔 기종, 힘/토크 센서, G1 세부 모델·저수준 제어 권한, 실험실의 연속 사용 시간은 미확인이다. 5090 한 장으로 소규모 정책·시뮬레이션을 계획할 수 있다. 1·2번에서는 계측 신뢰도와 반복 시행 시간이 먼저 결과를 좌우한다.
+
+### 1. 실물 정책 평가에서 직전 시행이 남기는 영향
+
+**시뮬레이션 판정.** 서랍의 시작 저항은 평균 0.266 N 달랐고 96쌍 모두 성공했다. 공개 Panda 정책 두 개도 네 장면에서 모두 문을 열었다. 문짝만 닫고 손잡이 상태를 이어받으면 두 정책이 동률이었다. 0.6초 뒤 손잡이 각도만 맞춘 처치에서 한 건 실패했고, 각속도까지 맞추거나 3초를 기다리면 차이가 사라졌다. 이 기구에서 독립적인 정책 평가 방법으로 확대할 근거는 약하다. 실물 확대를 보류하고 실제 닫기 동작 뒤에도 차이가 반복되는 독립 근거가 생길 때 재검토한다. [연구 질문·선행·결과](./reset_carryover/내용/README.md) · [실행 방법·원자료](./reset_carryover/재현%20방법/README.md)
+
+<a id="assembly-recovery"></a>
+
+### 2. 조립 실패의 원인에 맞는 복구 행동
+
+손목의 서보 응답이 달라지면 정상 핀 측정으로 판별 오류를 줄일 수 있었다. 기존 ±12 mm에서는 고정 절차가 42/48개 성공했다. 모든 절차에 같은 최대 오차 정보를 주고 ±9 mm로 줄이자, 고정 절차가 48/48개를 평균 1.355초에 복구했다. 진단 왕복 후 고를 수 있는 세 행동의 결과를 미리 알아도 48개 성공에 1.479초가 필요했다. 실제 공정에서 두 원인이 서로 다른 행동을 요구한다는 독립 증거가 생길 때 재검토한다. [탐색 범위·연구 판정](./assembly_recovery/내용/README.md#scan-results) · [서보 응답과 보정](./assembly_recovery/내용/README.md#servo-results)
+
+<a id="demonstration-collection"></a>
+
+### 3. 실행 명령만 남은 시연의 선택적 재수집
+
+**공개 자료 판정.** DROID와 두 공유 제어 자료에서 보조 전 조작 요청을 확인했다. Residual Copilot의 기어 조립 학습본에서는 원래 입력 열이 빠졌지만 온라인 수집 코드는 두 명령을 함께 기록한다. 독립적으로 방향을 바꿀 수 있는 실제 가이드에서 기존 시연의 요청을 복원할 수 없고 직접 재시연 비용도 클 때 다시 검토한다. [연구 질문·가까운 선행·보류 근거](./demonstration_recollection/내용/README.md) · [시행별 재검산](./demonstration_recollection/재현%20방법/README.md)
+
+<a id="g1-load-release"></a>
+
+### 4. 휴머노이드가 당기던 손의 저항이 사라질 때의 균형
+
+**연구 질문.** 당겨서 걸쇠를 여는 작업에서, 풀리기 전에는 힘을 내면서 해제 직후의 과도한 몸통 운동을 줄일 수 있는가? 지속 저항과 갑작스러운 해제 조건에서 해제 전 당김 거리·힘을 맞춰 비교한다. 전신 접촉 제어의 출발점은 `pr-0603` WoCoCo와 `pr-0666` Dynamic Whole-Body Motion Generation이다. [WoCoCo](https://openreview.net/forum?id=Czs2xH9114) · [전신 접촉 제어](https://hal.science/lirmm-00831097)
+
+**가까운 선행과 차이.** ① *Brace Yourself*는 G1의 반대쪽 손 지지로 힘 추종을 개선했다. ② Ctrl-F는 줄의 장력과 충격을 포함한 상호작용력을 명령한다. ③ *A System for Fast, Resilient, and Adaptable Loco-Manipulation*은 실물에서 걸쇠를 풀고 문을 당겨 통과하는 전체 과제를 수행했다. 이미 구현된 문 열기에서 남는 질문은 같은 당김 작업량·시간에서 **해제 자체가 만든 초기 균형 손실**과 이를 줄이는 제어의 일반화다. [Brace Yourself §IV–VI](https://arxiv.org/html/2609.25486#S4) · [Ctrl-F §4–5](https://arxiv.org/html/2611.05507#S4) · [문 열기 실기 §IV](https://arxiv.org/html/2609.01518#S4)
+
+**1~2주 파일럿.** 먼저 시뮬레이션에서 스스로 걸쇠가 풀리는 경량 손잡이와 저항이 지속되는 짝을 만들고, 기존 균형 제어, 수동 순응·힘 상한, 해제 전 자세·순응을 조절하는 제어를 비교한다. 작업 성공·시간과 해제 후 첫 300 ms의 몸통 각속도·회복 보폭을 기록한다. 해제 전에 관측될 차이가 없으면 해제 시점 예측을 포기하고 두 조건 모두에 견디는 자세를 시험한다. 시뮬레이션과 G1 제어 모드·지지 설비·동기화된 힘/변위 계측을 확인한 뒤 실물로 옮긴다. 같은 작업 속도에서 단순 순응 제어로 충분하면 중단한다. 최대 위험은 특정 걸쇠의 신호만 학습하는 것이다.
+
+### 5. 로봇팔에서 식별한 내부 하중 특성의 보행 운반 전이
+
+**연구 질문.** 외형·정적 질량·정지 무게중심이 같아도 내부 질량이 고정된 용기와 흔들리는 용기는 다르게 반응한다. 팔에서 측정한 고유진동수·감쇠가 보행 때도 유효하여, 새 용기를 G1으로 직접 보정하는 데 필요한 시행을 줄이는가? 원장의 AdaptiGraph `pr-1051`과 RMA `pr-0564`는 각각 물체 동역학 및 이동 중 적응의 근거다. [AdaptiGraph, RSS](https://roboticsproceedings.org/rss20/p010.html) · [RMA, RSS](https://arxiv.org/abs/2107.04034)
+
+**가까운 선행과 차이.** ① *Rapid sloshing-free transport*는 임의 형상 용기의 액체 모드 식별과 입력 성형을 다룬다. ② *SteadyTray*는 G1에서 잔차 RL로 쟁반 위 물체를 안정화했다. ③ FLAP은 사족 로봇에서 동적 적재물에 선제 대응한다. 2026년 10월에는 불투명 용기의 내부 하중을 시각·촉각으로 추정해 들어 올리고 비우는 연구도 발표됐다. 여기서 검증할 차이는 **팔에서 얻은 식별값 하나가 보행에서 새로 해야 할 보정을 얼마나 절약하는지**다. [유체 운반·식별](https://link.springer.com/article/10.1007/s00707-024-04068-w) · [SteadyTray, 실기 §V](https://steadytray.github.io/static/docs/SteadyTray.pdf#page=5) · [FLAP](https://hcrlab.gitlab.io/project/flap/) · [내부 하중 조작, 2026-10-23](https://link.springer.com/article/10.1007/s44443-026-01376-0)
+
+**1~2주 파일럿.** 1주차에 고정·진자형 내부 추를 단 가벼운 시험 용기와 독립 변위 정답을 마련하고 팔에서 짧은 주파수 응답을 측정한다. 2주차에는 다른 용기의 보행 주파수대 움직임을 재생해 식별값이 잔류 진동을 예측하는지 본다. 후속 G1 비교에서는 운반 속도·이동 거리·현장 보정 횟수를 맞춘 뒤 범용 저역통과, 고전 입력 성형, G1에서 직접 동일 예산으로 식별하는 방법과 비교한다. 팔에 고정한 상태와 보행 중 파지 상태의 차이가 내부 모드 효과보다 크거나 범용 필터가 동등하면 중단한다. 가장 큰 부담은 두 장비를 같은 기준으로 계측하는 비용이다.
+
+### 투자 순서와 일정
+
+후보 4는 시뮬레이션에서 저항 해제 전후의 힘과 균형 지표가 유효한지부터 본다. 해제 직전 당기는 힘과 거리를 맞출 수 있어야 느리게 움직여 흔들림을 줄이는 경우를 구별할 수 있다. 같은 작업 시간에 단순 순응 제어가 충분하면 추가 제어기와 실물 검증 투자를 보류한다. [다음 작업](../../TODO.md)
+
+## 유지와 예비
 
 | 역할 | 질문과 남기는 이유 | 가장 큰 위험·다음 유효 증거 | 내용 / 재현 방법 |
 |---|---|---|---|
@@ -18,7 +70,7 @@ Updated: 2026-11-18 KST. 큰 줄기는 **VLA + RL + Computer Vision + Robotics**
 
 세 유지 후보 모두 native 정책 효과는 미확인이다. 과거 Docker 제어 검사는 실행 준비의 일부일 뿐이다. LANGRET·CONTACT·FEEDBACK의 기존 실행 상한과 미구현 항목은 각 재현 문서가 소유한다. U1은 UNIFIED 안의 과거 대안으로 보존하며 다섯 번째 활성 후보로 세지 않는다. 새 질문에 기존 FEEDBACK adapter를 그대로 쓸 수 있다고 가정하지 않는다.
 
-## 새로운 분야의 초기 후보 — 기존 실행 대기와 별도
+## 준비한 최소 검증
 
 | 현재 선택 | 기여 가설·가장 큰 불확실성 | 근거와 다음 행동 |
 |---|---|---|
@@ -26,32 +78,4 @@ Updated: 2026-11-18 KST. 큰 줄기는 **VLA + RL + Computer Vision + Robotics**
 | **P0 코드 준비·자원 대기: 조작 허용 오차를 반영하는 3D 추정(2번)** | EDI·geometry 영향 분석과의 충돌을 반영해 동일 state의 입력 오류 개입으로 질문 축소. ROI/보정/행동 일치 이후 잔여 task 영향을 비교. 독립 방법 기여 미확립 | [내용·준비 판정](./task_geometry_estimation/내용/README.md#p0-preparation-result) / [clone 재개](./task_geometry_estimation/재현%20방법/README.md#resume). N1·depth override/scene/strict loader·Docker P0 코드 작성. 새 launcher daemon 실패(exit3), Docker 검사/native0. 다음 bounded P0; 기본 능력·task evaluator·학습은 미완료 |
 | **P0 코드 준비·탐색 계속: 접촉 관계 기반 탐색 분포** | VLA feature와 실제 관절 상태에서 양팔 상대 운동의 결합 weight를 학습. Lattice와 RL-SCT phase 전환 이후 차이를 보기 위해 큰 relation graph를 축소. Generic covariance·수작업 rule 대비 효과 미확인 | [내용·기여·비교](./relation_exploration/내용/README.md) / [source·재현 조건](./relation_exploration/재현%20방법/README.md). N2 계약·portable P0 코드 작성. 다음 P0: native loader/IO/FK/contact/선택적 gradient; launcher는 daemon 연결 실패(exit3), native 미실행 |
 
-모두 **CURATION-HYPOTHESIS**다. POSE-ACTIVE는 N1/N2 내부 문헌·source·비교 명세를 마쳤고, TASK-GEOMETRY도 11/18 N1과 작은 P0 코드 준비를 마쳐 native 입력 검증을 기다린다. 소규모 탐색을 시작할 여지는 있지만 신규성이나 top-tier 출판 가능성을 확정하지 않았다. POSE-ACTIVE의 우선순위는 질문 구체화 순서다. 구현이 더 쉽거나 연구 잠재력·효과가 더 높다고 입증한 순위는 아니다. 관계 기반 탐색과 POSE-ACTIVE는 현재 범위의 N1/N2·제한된 P0 코드 작성을 마쳤고, 각 checkpoint/image/native 호환·효과는 미확인이다. 상세 내용은 주제별 두 폴더, 출처는 기존 공통 JSON을 사용한다. R1의 [카메라 장착 적응](../update/NEW_FIELD_SCOUT_2026-11-17.md#camera)·[환경별 RL 병합](../update/NEW_FIELD_SCOUT_2026-11-17.md#merge)은 현재 선택에서 제외한 판단을 유지한다. 새 object pose 질문을 과거 손목 장착 적응이나 C1/D3의 자동 재개로 해석하지 않는다. 다음 행동은 [TODO](../../TODO.md)가 소유한다.
-
-## 폐기한 7개
-
-| 기존 주제 | 이번 폐기 판단 |
-|---|---|
-| [행동 토큰화](./retired/README.md#action_tokenization) | 실제 결과가 제한된 복원 진단이며 로봇 정책·방법 선택을 바꾸는 기여가 약함 |
-| [시연 검색](./retired/README.md#context_retrieval) | 선행 이후 차이가 좁고 시연 provenance·native 입력 확보 부담이 큼 |
-| [집합·수량 지시](./retired/README.md#object_set) | 반복·counter 이후 차이가 미확인이고 benchmark/evaluator 구축 비중이 큼 |
-| [모바일 정책 교체](./retired/README.md#mobile_policy_transfer) | 좁은 전이 질문에 비해 mobile stack·상태 분기·일반화 검증 부담이 큼 |
-| [과제 배분](./retired/README.md#task_allocation) | 일반 RL sampling/weighting 문제에 가까우며 현 설계의 로봇·비전 기여가 약함 |
-| [Hindsight 목표 선택](./retired/README.md#hindsight_transfer) | LfH 이후 남는 차이에 비해 목표 유효성·전이·학습 비교 부담이 큼 |
-| [Residual 재사용](./retired/README.md#vla_residual_update) | A에서 보정 학습 후 B 적응까지 필요하며 warm-start·gain·모방 대비 기여가 불확실 |
-
-이 분야들을 영구 금지하는 판단은 아니다. 같은 설계에 GPU만 추가해 자동 재개하지 않고, 다른 중요한 로봇 문제나 판단을 바꾸는 근거가 생기면 새 후보로 비교한다. 실제 결과·계약 7파일은 폐기 요약 아래 보존했고 실행 코드·dependency recipe·중복 문서는 제거했다. 원래 상세 기록은 요약의 고정 Git commit 링크로 추적할 수 있다.
-
-## 파일 운영
-
-유지·예비 주제는 `내용/README.md`와 `재현 방법/README.md`에 통합한다. Source는 기존 단일 원장을 사용하고 필요한 코드·계약·원시 결과는 재현 폴더에 둔다. 새 brief·날짜별 주제 문서를 늘리지 않는다. `retired/`는 다섯 번째 연구 후보가 아니라 7개 폐기 판단과 핵심 증거의 보관 위치다.
-
-[검색 용어·검색식](../../research/IDEA_BUILDUP_GUIDE.md#search-map-2026-11-17), [7개 synthesis](../../synthesis/README.md), [이전 16개 후보 요약](../research_candidates/summaries/README.md), [원래 이관 기록](./ORGANIZATION.json)을 함께 사용한다. 이전 C/D/E의 HOLD/NO-GO는 이번 정리로 바뀌지 않는다.
-
-<a id="nonexperimental-process-audit"></a>
-<a id="additional-gaps-2026-11-09"></a>
-<a id="hindsight-exploration"></a>
-
-## 과거 비교의 위치
-
-11/04의 [6개 비실험 감사](../update/SIX_CANDIDATE_BUILDUP_STATE_2026-11-04.md), 11/09의 [추가 공백 조사](../update/VLA_RL_ADDITIONAL_GAPS_2026-11-09.md)는 당시 기록이다. 11/07의 8개 순위와 HINDSIGHT·ALLOC의 실행 대기를 현재 계획으로 사용하지 않는다. 중복된 현황 표는 이 문서에서 제거했고 [폐기 전 index](https://github.com/Kim-Yoo-Hyun/PaperReview/blob/5bec2cfa8a31758ca8e5be9c19c39dc4c23bb096/work/research_topics/README.md)에 보존되어 있다.
+세 후보의 native 호환성과 정책 효과는 미확인이다. 각 검증의 상한과 대조 조건은 재현 문서에 둔다.

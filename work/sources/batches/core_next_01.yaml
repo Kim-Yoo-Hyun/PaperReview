@@ -1,0 +1,4836 @@
+# 부록 A · 템플릿 4 | CORE 30편 · NEXT 20편 | 2026-11-19
+# 매핑·검증 범위는 work/update/REGISTRY.md의 첫 배치 태그 매핑을 따른다.
+- id: 2021-radford-clip
+  registry_id: pr-0005
+  title: Learning Transferable Visual Models From Natural Language Supervision
+  authors:
+    - Alec Radford
+    - Jong Wook Kim
+    - Chris Hallacy
+    - Aditya Ramesh
+    - Gabriel Goh
+    - Sandhini Agarwal
+    - Girish Sastry
+    - Amanda Askell
+    - Pamela Mishkin
+    - Jack Clark
+    - Gretchen Krueger
+    - Ilya Sutskever
+  affiliations:
+    - OpenAI
+  year: 2021
+  venue: ICML
+  links:
+    paper: https://proceedings.mlr.press/v139/radford21a.html
+    project: https://openai.com/index/clip/
+    code: https://github.com/openai/CLIP
+  tier: 1
+  one_line_summary: 인터넷 이미지와 캡션으로 학습한 시각 표현을 자연어로 지정한 분류 과제에 전이한다.
+  key_contributions:
+    - 배치 안에서 대응하는 이미지와 문장을 식별하는 대조 목적함수를 사용한다.
+    - 프롬프트로 분류기를 구성해 레이블별로 다시 학습하지 않고 여러 데이터셋에서 평가한다.
+  method_tags:
+    - unknown
+  task_tags:
+    - unknown
+  embodiment_tags:
+    - unknown
+  modality_tags:
+    - RGB
+    - 언어
+  data_source_tags:
+    - unknown
+  openness:
+    code: 'Y'
+    weights: 'Y'
+    data: 'N'
+  datasets_benchmarks:
+    - WIT
+    - ImageNet
+  limitations:
+    paper_reported: Limitations. 여러 평가에서 zero-shot CLIP은 ResNet-50 특징의 선형 분류기와 비슷한 수준이다.
+    subsequent_work: unknown
+  prior_work:
+    - unknown
+  verification: 부분확인
+  notes: WIT 원 학습 데이터의 N은 모델 카드 Data 절에 명시되어 있다. 웹 이미지·텍스트는 현재 출처 열거값으로 표현할 수 없다.
+  evidence:
+    verified_on: '2026-11-19'
+    sources:
+      원문·서지: https://proceedings.mlr.press/v139/radford21a.html
+      프로젝트: https://github.com/openai/CLIP
+      모델 카드: https://github.com/openai/CLIP/blob/main/model-card.md#data
+      저자 목록: https://proceedings.mlr.press/v139/radford21a.html
+      소속·내용 원문: https://proceedings.mlr.press/v139/radford21a/radford21a.pdf
+  changed_from:
+    id: pr-0005
+    tier: CORE
+    tags:
+      - CLIP
+      - Vision-Language Model
+      - alignment
+    facets:
+      learning: []
+      control_level: []
+      setting: []
+      embodiment: []
+      interaction: []
+      modality:
+        - language
+        - rgb
+    venue: ICML
+    links:
+      page: https://arxiv.org/abs/2103.00020
+      project: https://github.com/openai/CLIP
+      code: https://github.com/openai/CLIP
+    openness:
+      code: released
+      weights: not_recorded
+      data: not_released
+    problem: 고정된 클래스 레이블로 학습한 분류기는 새로운 시각 개념에 적응하려면 추가 주석이 필요하다.
+    method: CLIP은 웹에서 수집한 이미지·텍스트 4억 쌍으로 두 인코더를 대조학습한다. 추론 시 이미지와 클래스 설명의 임베딩 유사도를 비교해 별도 분류기 학습 없이 클래스를 예측한다.
+- id: 2020-ho-ddpm
+  registry_id: pr-0008
+  title: Denoising Diffusion Probabilistic Models
+  authors:
+    - Jonathan Ho
+    - Ajay Jain
+    - Pieter Abbeel
+  affiliations:
+    - UC Berkeley
+  year: 2020
+  venue: NeurIPS
+  links:
+    paper: https://proceedings.neurips.cc/paper/2020/hash/4c5bcfec8584af0d967f1ab10179ca4b-Abstract.html
+    project: unknown
+    code: https://github.com/hojonathanho/diffusion
+  tier: 1
+  one_line_summary: 점진적으로 잡음을 추가하는 과정의 역과정을 학습해 이미지를 생성한다.
+  key_contributions:
+    - 가중 변분 목적함수와 denoising score matching의 관계를 제시한다.
+    - 잡음 예측기로 무조건부 이미지 합성을 평가하고 점진적 복원 과정을 분석한다.
+  method_tags:
+    - unknown
+  task_tags:
+    - unknown
+  embodiment_tags:
+    - unknown
+  modality_tags:
+    - RGB
+  data_source_tags:
+    - unknown
+  openness:
+    code: 'Y'
+    weights: unknown
+    data: unknown
+  datasets_benchmarks:
+    - CIFAR-10
+    - LSUN
+  limitations:
+    paper_reported: unknown
+    subsequent_work: unknown
+  prior_work:
+    - unknown
+  verification: 부분확인
+  notes: 가중치 링크의 오류로 현재 파일을 확인할 수 없다. 이미지 생성이므로 로봇 태스크와 VLA 행동 표현은 해당하지 않는다.
+  evidence:
+    verified_on: '2026-11-19'
+    sources:
+      원문·서지: https://proceedings.neurips.cc/paper/2020/hash/4c5bcfec8584af0d967f1ab10179ca4b-Abstract.html
+      본문: https://arxiv.org/html/2006.11239
+      프로젝트: https://github.com/hojonathanho/diffusion
+      가중치: https://www.dropbox.com/sh/pm6tn31da21yrx4/AABWKZnBzIROmDjGxpB6vn6Ja
+      저자 목록: https://proceedings.neurips.cc/paper/2020/hash/4c5bcfec8584af0d967f1ab10179ca4b-Abstract.html
+      소속·내용 원문: https://arxiv.org/html/2006.11239
+  changed_from:
+    id: pr-0008
+    tier: CORE
+    tags:
+      - Diffusion
+      - Generation
+    facets:
+      learning:
+        - diffusion
+      control_level: []
+      setting: []
+      embodiment: []
+      interaction: []
+      modality: []
+    venue: NeurIPS
+    links:
+      page: https://arxiv.org/abs/2006.11239
+      project: https://github.com/hojonathanho/diffusion
+      code: https://github.com/hojonathanho/diffusion
+    openness:
+      code: released
+      weights: not_recorded
+      data: not_applicable
+    problem: 복잡한 이미지 분포에서 고품질 표본을 생성할 수 있도록 역확산 과정을 학습한다.
+    method: DDPM은 이미지에 단계별로 가우시안 잡음을 더하고, 시점별 잡음을 신경망으로 예측하도록 학습한다. 생성 시에는 잡음에서 시작해 역과정을 반복하여 이미지를 얻는다.
+- id: 2022-ichter-saycan
+  registry_id: pr-0020
+  title: 'Do As I Can, Not As I Say: Grounding Language in Robotic Affordances'
+  authors:
+    - Brian Ichter
+    - Anthony Brohan
+    - Yevgen Chebotar
+    - Chelsea Finn
+    - Karol Hausman
+    - Alexander Herzog
+    - Daniel Ho
+    - Julian Ibarz
+    - Alex Irpan
+    - Eric Jang
+    - Ryan Julian
+    - Dmitry Kalashnikov
+    - Sergey Levine
+    - Yao Lu
+    - Carolina Parada
+    - Kanishka Rao
+    - Pierre Sermanet
+    - Alexander T Toshev
+    - Vincent Vanhoucke
+    - Fei Xia
+    - Ted Xiao
+    - Peng Xu
+    - Mengyuan Yan
+    - Noah Brown
+    - Michael Ahn
+    - Omar Cortes
+    - Nicolas Sievers
+    - Clayton Tan
+    - Sichun Xu
+    - Diego Reyes
+    - Jarek Rettinghouse
+    - Jornell Quiambao
+    - Peter Pastor
+    - Linda Luu
+    - Kuang-Huei Lee
+    - Yuheng Kuang
+    - Sally Jesmonth
+    - Nikhil J. Joshi
+    - Kyle Jeffrey
+    - Rosario Jauregui Ruano
+    - Jasmine Hsu
+    - Keerthana Gopalakrishnan
+    - Byron David
+    - Andy Zeng
+    - Chuyuan Kelly Fu
+  affiliations:
+    - Robotics at Google
+    - Everyday Robots
+  year: 2022
+  venue: CoRL
+  links:
+    paper: https://proceedings.mlr.press/v205/ichter23a.html
+    project: https://say-can.github.io/
+    code: https://github.com/google-research/google-research/tree/master/saycan
+  tier: 1
+  one_line_summary: 언어 모델이 제안한 기술을 로봇이 실제로 수행할 가능성에 따라 선택한다.
+  key_contributions:
+    - 언어적 적절성과 학습한 기술별 가치 점수를 결합해 다음 기술을 고른다.
+    - 모바일 로봇의 주방 작업에서 계획의 타당성과 실제 수행 성공을 구분해 평가한다.
+  method_tags:
+    - IL
+    - RL
+  task_tags:
+    - 모바일매니퓰레이션
+  embodiment_tags:
+    - 모바일매니퓰레이터
+  modality_tags:
+    - RGB
+    - 언어
+  data_source_tags:
+    - 혼합
+  openness:
+    code: 부분
+    weights: unknown
+    data: 부분
+  datasets_benchmarks:
+    - unknown
+  limitations:
+    paper_reported: Conclusions and Limitations. 계획을 로봇에 연결하려면 사용 가능한 기술과 기술별 affordance 추정이 필요하다.
+    subsequent_work: unknown
+  prior_work:
+    - unknown
+  verification: 부분확인
+  notes: PMLR 서지의 선두 저자는 Brian Ichter이고 PDF 표제면은 Michael Ahn으로 시작한다. 학회 2022, 논문집 2023. 코드·자료는 모의 탁상 구현과 지시–해법 매핑에 한정된다. 상위 언어 모델은 사전 정의한 기술을 선택한다.
+  evidence:
+    verified_on: '2026-11-19'
+    sources:
+      원문·서지: https://proceedings.mlr.press/v205/ichter23a.html
+      저장소: https://github.com/google-research/google-research/tree/master/saycan
+      자료: https://github.com/say-can/say-can.github.io/tree/main/data
+      저자 목록: https://proceedings.mlr.press/v205/ichter23a.html
+      소속·내용 원문: https://proceedings.mlr.press/v205/ichter23a/ichter23a.pdf
+  changed_from:
+    id: pr-0020
+    tier: CORE
+    tags:
+      - LLM
+      - affordance
+      - Planning
+      - Robotics
+    facets:
+      learning:
+        - optimization_or_planning
+        - vla
+      control_level:
+        - policy
+      setting: []
+      embodiment: []
+      interaction: []
+      modality:
+        - language
+    venue: CoRL
+    links:
+      page: https://arxiv.org/abs/2204.01691
+      project: https://say-can.github.io/
+      code: null
+    openness:
+      code: project_only
+      weights: not_recorded
+      data: not_identified
+- id: 2023-jatavallabhula-conceptfusion
+  registry_id: pr-0030
+  title: 'ConceptFusion: Open-set Multimodal 3D Mapping'
+  authors:
+    - Krishna Murthy Jatavallabhula
+    - Alihusein Kuwajerwala
+    - Qiao Gu
+    - Mohd Omama
+    - Ganesh Iyer
+    - Soroush Saryazdi
+    - Tao Chen
+    - Alaa Maalouf
+    - Shuang Li
+    - Nikhil Varma Keetha
+    - Ayush Tewari
+    - Joshua Tenenbaum
+    - Celso de Melo
+    - Madhava Krishna
+    - Liam Paull
+    - Florian Shkurti
+    - Antonio Torralba
+  affiliations:
+    - MIT
+    - Université de Montréal
+    - University of Toronto
+    - IIIT Hyderabad
+    - Carnegie Mellon University
+    - DEVCOM Army Research Laboratory
+    - Amazon
+    - Concordia University
+  year: 2023
+  venue: RSS
+  links:
+    paper: https://www.roboticsproceedings.org/rss19/p066.html
+    project: https://concept-fusion.github.io/
+    code: https://github.com/concept-fusion/concept-fusion
+  tier: 1
+  one_line_summary: RGB-D 관측에 정렬한 개방어휘 특징을 3차원 지도에 누적해 다양한 질의로 물체를 찾는다.
+  key_contributions:
+    - 픽셀의 국소·전역 특징을 결합하고 관측 시점 사이에서 같은 지도 점에 융합한다.
+    - UnCoCo 데이터와 탁상 재배치 사례를 통해 개념 검색과 행동 연결을 평가한다.
+  method_tags:
+    - unknown
+  task_tags:
+    - 조작
+  embodiment_tags:
+    - unknown
+  modality_tags:
+    - RGB
+    - depth
+    - 언어
+    - 기타
+  data_source_tags:
+    - unknown
+  openness:
+    code: 'Y'
+    weights: unknown
+    data: unknown
+  datasets_benchmarks:
+    - UnCoCo
+  limitations:
+    paper_reported: Limitations. 조밀한 지도의 각 3D 점에 고차원 임베딩을 저장하므로 큰 장면에서 메모리 부담이 크다.
+    subsequent_work: unknown
+  prior_work:
+    - 2021-radford-clip
+  verification: 부분확인
+  notes: UnCoCo는 저자 저장소의 TODO 항목이다. 조작은 지도를 이용한 하위 응용이고 오디오 질의는 기타 입력이다.
+  evidence:
+    verified_on: '2026-11-19'
+    sources:
+      원문·서지: https://www.roboticsproceedings.org/rss19/p066.html
+      저장소: https://github.com/concept-fusion/concept-fusion
+      저자 목록: https://www.roboticsproceedings.org/rss19/p066.html
+      소속·내용 원문: https://www.roboticsproceedings.org/rss19/p066.pdf
+  changed_from:
+    id: pr-0030
+    tier: CORE
+    tags:
+      - sensor fusion
+      - open-vocabulary
+      - SLAM
+      - Robotics
+    facets:
+      learning: []
+      control_level:
+        - state_estimation
+      setting: []
+      embodiment:
+        - mobile
+      interaction:
+        - navigation
+      modality: []
+    venue: RSS
+    links:
+      page: https://arxiv.org/abs/2302.07241
+      project: https://concept-fusion.github.io/
+      code: null
+    openness:
+      code: project_only
+      weights: not_recorded
+      data: not_identified
+- id: 2023-goyal-rvt
+  registry_id: pr-0037
+  title: 'RVT: Robotic View Transformer for 3D Object Manipulation'
+  authors:
+    - Ankit Goyal
+    - Jie Xu
+    - Yijie Guo
+    - Valts Blukis
+    - Yu-Wei Chao
+    - Dieter Fox
+  affiliations:
+    - NVIDIA
+  year: 2023
+  venue: CoRL
+  links:
+    paper: https://proceedings.mlr.press/v229/goyal23a.html
+    project: https://robotic-view-transformer.github.io/
+    code: https://github.com/NVlabs/RVT
+  tier: 1
+  one_line_summary: 로봇 작업 공간을 가상 시점에 투영하고 시점 간 정보를 결합해 언어 지시에 맞는 조작 자세를 예측한다.
+  key_contributions:
+    - 명시적인 3D 복셀 연산 대신 여러 뷰의 토큰에 attention을 적용한다.
+    - 동일한 다중 태스크 정책을 RLBench와 실물 조작에서 평가한다.
+  method_tags:
+    - IL
+  task_tags:
+    - 조작
+  embodiment_tags:
+    - 단팔
+  modality_tags:
+    - RGB
+    - depth
+    - 언어
+  data_source_tags:
+    - 혼합
+  openness:
+    code: 'Y'
+    weights: 'Y'
+    data: 'Y'
+  datasets_benchmarks:
+    - RLBench
+  limitations:
+    paper_reported: §5. 여러 시점의 입력을 쓰려면 로봇 베이스에 대한 카메라 외부 파라미터 보정이 필요하다.
+    subsequent_work: unknown
+  prior_work:
+    - pr-0036
+  verification: 부분확인
+  notes: 단일 팔에서 평가했다. 재배포한 태스크 replay와 RVT 체크포인트의 공개 범위는 저자 배포 트리를 따른다. 언어 조건부 3D 조작 모델이다.
+  evidence:
+    verified_on: '2026-11-19'
+    sources:
+      원문·서지: https://proceedings.mlr.press/v229/goyal23a.html
+      저장소: https://github.com/NVlabs/RVT
+      가중치: https://huggingface.co/ankgoyal/rvt/tree/main/rvt
+      자료: https://huggingface.co/datasets/ankgoyal/rvt/tree/main/replay
+      저자 목록: https://proceedings.mlr.press/v229/goyal23a.html
+      소속·내용 원문: https://proceedings.mlr.press/v229/goyal23a/goyal23a.pdf
+  changed_from:
+    id: pr-0037
+    tier: CORE
+    tags:
+      - Robotics
+      - 3D manipulation
+      - Transformer
+    facets:
+      learning:
+        - vla
+      control_level:
+        - policy
+      setting: []
+      embodiment:
+        - arm
+      interaction:
+        - grasping
+      modality:
+        - language
+    venue: CoRL
+    links:
+      page: https://arxiv.org/abs/2306.14896
+      project: https://robotic-view-transformer.github.io/
+      code: null
+    openness:
+      code: project_only
+      weights: not_recorded
+      data: not_identified
+- id: 2023-liu-libero
+  registry_id: pr-0042
+  title: 'LIBERO: Benchmarking Knowledge Transfer for Lifelong Robot Learning'
+  authors:
+    - Bo Liu
+    - Yifeng Zhu
+    - Chongkai Gao
+    - Yihao Feng
+    - Qiang Liu
+    - Yuke Zhu
+    - Peter Stone
+  affiliations:
+    - University of Texas at Austin
+    - Sony AI
+    - Tsinghua University
+  year: 2023
+  venue: NeurIPS
+  links:
+    paper: https://proceedings.neurips.cc/paper_files/paper/2023/hash/8c3c666820ea055a77726d66fc7d447f-Abstract-Datasets_and_Benchmarks.html
+    project: https://libero-project.github.io/main.html
+    code: https://github.com/Lifelong-Robot-Learning/LIBERO
+  tier: 1
+  one_line_summary: 조작 과업을 순차적으로 배울 때 과거 지식의 전이와 망각을 측정하는 벤치마크다.
+  key_contributions:
+    - 물체·공간 배치·목표 등을 달리한 태스크 묶음과 시연을 구축한다.
+    - 동일한 태스크 순서에서 평생학습 알고리즘과 정책 구조를 비교한다.
+  method_tags:
+    - IL
+  task_tags:
+    - 조작
+  embodiment_tags:
+    - 단팔
+  modality_tags:
+    - RGB
+    - 언어
+    - 고유수용감각
+  data_source_tags:
+    - 시뮬
+  openness:
+    code: 'Y'
+    weights: unknown
+    data: 'Y'
+  datasets_benchmarks:
+    - LIBERO
+  limitations:
+    paper_reported: §7. 실험은 표준화한 시뮬레이션 과업을 사용하며, 저자는 순방향 전이를 높이는 학습법을 후속 과제로 든다.
+    subsequent_work: unknown
+  prior_work:
+    - unknown
+  verification: 부분확인
+  notes: IL은 벤치마크에서 실제 비교한 시연 학습 설정이다. 벤치마크 자체에는 VLA 백본을 부여할 수 없다.
+  evidence:
+    verified_on: '2026-11-19'
+    sources:
+      원문·서지: https://proceedings.neurips.cc/paper_files/paper/2023/hash/8c3c666820ea055a77726d66fc7d447f-Abstract-Datasets_and_Benchmarks.html
+      저장소: https://github.com/Lifelong-Robot-Learning/LIBERO
+      저자 목록: https://proceedings.neurips.cc/paper_files/paper/2023/hash/8c3c666820ea055a77726d66fc7d447f-Abstract-Datasets_and_Benchmarks.html
+      소속·내용 원문: https://proceedings.neurips.cc/paper_files/paper/2023/file/8c3c666820ea055a77726d66fc7d447f-Paper-Datasets_and_Benchmarks.pdf
+  changed_from:
+    id: pr-0042
+    tier: CORE
+    tags:
+      - Robotics
+      - Imitation Learning
+      - Benchmark
+    facets:
+      learning:
+        - imitation_learning
+      control_level:
+        - policy
+      setting:
+        - long_horizon
+      embodiment: []
+      interaction: []
+      modality: []
+    venue: NeurIPS
+    links:
+      page: https://arxiv.org/abs/2306.03310
+      project: https://libero-project.github.io/main.html
+      code: null
+    openness:
+      code: project_only
+      weights: not_recorded
+      data: not_identified
+- id: 2024-ghosh-octo
+  registry_id: pr-0052
+  title: 'Octo: An Open-Source Generalist Robot Policy'
+  authors:
+    - Dibya Ghosh
+    - Homer Rich Walke
+    - Karl Pertsch
+    - Kevin Black
+    - Oier Mees
+    - Sudeep Dasari
+    - Joey Hejna
+    - Tobias Kreiman
+    - Charles Xu
+    - Jianlan Luo
+    - You Liang Tan
+    - Lawrence Yunliang Chen
+    - Quan Vuong
+    - Ted Xiao
+    - Pannag R Sanketi
+    - Dorsa Sadigh
+    - Chelsea Finn
+    - Sergey Levine
+  affiliations:
+    - UC Berkeley
+    - Stanford University
+    - Carnegie Mellon University
+    - Google DeepMind
+  year: 2024
+  venue: RSS
+  links:
+    paper: https://www.roboticsproceedings.org/rss20/p090.html
+    project: https://octo-models.github.io/
+    code: https://github.com/octo-models/octo
+  tier: 1
+  one_line_summary: 여러 로봇의 시연으로 한 정책을 사전학습하고 새로운 관측·행동 공간에 적응시킨다.
+  key_contributions:
+    - 언어 지시와 목표 이미지를 처리하는 모듈식 트랜스포머 정책을 제시한다.
+    - 서로 다른 로봇에서 직접 실행과 소규모 후속 미세조정을 평가한다.
+  method_tags:
+    - IL
+  task_tags:
+    - 조작
+  embodiment_tags:
+    - 단팔
+    - 양팔
+  modality_tags:
+    - RGB
+    - 언어
+    - 고유수용감각
+  data_source_tags:
+    - 실제로봇
+  openness:
+    code: 'Y'
+    weights: 'Y'
+    data: unknown
+  datasets_benchmarks:
+    - Open X-Embodiment
+  vla:
+    backbone:
+      name: unknown
+      size: unknown
+    action_representation:
+      - 연속(diffusion·flow matching)
+    architecture: 단일 모델
+    training:
+      - 기타
+      - SFT
+    evaluation:
+      sim_benchmarks:
+        - unknown
+      real_robot_tasks: unknown
+      scope: 서로 다른 로봇의 직접 실행·미세조정 프로토콜이 있다. 전체 고유 태스크 합계는 미확정이다.
+  limitations:
+    paper_reported: Training objective와 데이터 구성 분석. 저자는 다로봇 사전학습에서 데이터 혼합물의 품질을 더 체계적으로 비교할 필요가 있다고 명시한다.
+    subsequent_work: unknown
+  prior_work:
+    - pr-0024
+  verification: 부분확인
+  notes: RSS의 개별 저자 순서를 사용했다. 표제면은 Octo Model Team도 병기한다. T5-base는 텍스트 인코더이고 27M·93M은 Octo 트랜스포머 크기다. Open X-Embodiment는 재사용 코퍼스다.
+  evidence:
+    verified_on: '2026-11-19'
+    sources:
+      원문·서지: https://www.roboticsproceedings.org/rss20/p090.html
+      저장소: https://github.com/octo-models/octo
+      모델: https://huggingface.co/rail-berkeley/octo-base-1.5
+      저자 목록: https://www.roboticsproceedings.org/rss20/p090.html
+      소속·내용 원문: https://www.roboticsproceedings.org/rss20/p090.pdf
+  changed_from:
+    id: pr-0052
+    tier: CORE
+    tags:
+      - Robotics
+      - generalist policy
+      - Imitation Learning
+    facets:
+      learning:
+        - imitation_learning
+        - vla
+      control_level:
+        - policy
+      setting: []
+      embodiment: []
+      interaction: []
+      modality:
+        - language
+    venue: RSS
+    links:
+      page: https://arxiv.org/abs/2405.12213
+      project: https://octo-models.github.io/
+      code: null
+    openness:
+      code: project_only
+      weights: not_recorded
+      data: not_identified
+    problem: 센서와 행동 공간이 다른 로봇의 시연을 한 정책의 사전학습과 전이에 어떻게 활용할지 다룬다.
+    method: Octo는 Open X-Embodiment의 로봇 궤적 약 80만 개로 사전학습한 Transformer 정책이다. 언어 지시나 목표 이미지를 조건으로 연속 행동 청크를 생성하며, 새 센서와 행동 공간에 맞춰 미세조정할 수 있다.
+- id: 2019-savva-habitat
+  registry_id: pr-0500
+  title: 'Habitat: A Platform for Embodied AI Research'
+  authors:
+    - Manolis Savva
+    - Abhishek Kadian
+    - Oleksandr Maksymets
+    - Yili Zhao
+    - Erik Wijmans
+    - Bhavana Jain
+    - Julian Straub
+    - Jia Liu
+    - Vladlen Koltun
+    - Jitendra Malik
+    - Devi Parikh
+    - Dhruv Batra
+  affiliations:
+    - Facebook AI Research
+    - Facebook Reality Labs
+    - Georgia Institute of Technology
+    - Simon Fraser University
+    - Intel Labs
+    - UC Berkeley
+  year: 2019
+  venue: ICCV
+  links:
+    paper: https://openaccess.thecvf.com/content_ICCV_2019/html/Savva_Habitat_A_Platform_for_Embodied_AI_Research_ICCV_2019_paper.html
+    project: https://aihabitat.org/
+    code: https://github.com/facebookresearch/habitat-lab
+  tier: 1
+  one_line_summary: 스캔된 실내 장면에서 내비게이션 에이전트를 훈련하고 비교할 플랫폼을 제시한다.
+  key_contributions:
+    - 센서·장면 설정이 가능한 렌더링 시뮬레이터와 학습용 API를 제공한다.
+    - PointNav에서 입력 센서와 학습량을 바꾸어 학습 정책과 고전적 경로 탐색을 비교한다.
+  method_tags:
+    - RL
+  task_tags:
+    - 내비게이션
+  embodiment_tags:
+    - 기타
+  modality_tags:
+    - RGB
+    - depth
+    - 기타
+  data_source_tags:
+    - 시뮬
+  openness:
+    code: 'Y'
+    weights: unknown
+    data: 'Y'
+  datasets_benchmarks:
+    - PointNav
+    - Matterport3D
+    - Gibson
+  limitations:
+    paper_reported: unknown
+    subsequent_work: Habitat 2.0이 초기 이동 중심 평가를 관절 물체와 상호작용할 수 있는 물리 기반 재배치로 확장한다.
+  prior_work:
+    - pr-0499
+  verification: 부분확인
+  notes: 기타 형태는 시뮬레이터의 가상 에이전트다. 공개 에피소드와 원본 장면의 이용 조건은 다르다.
+  evidence:
+    verified_on: '2026-11-19'
+    sources:
+      원문·서지: https://openaccess.thecvf.com/content_ICCV_2019/html/Savva_Habitat_A_Platform_for_Embodied_AI_Research_ICCV_2019_paper.html
+      저장소: https://github.com/facebookresearch/habitat-lab
+      자료: https://github.com/facebookresearch/habitat-lab/blob/main/DATASETS.md
+      저자 목록: https://openaccess.thecvf.com/content_ICCV_2019/html/Savva_Habitat_A_Platform_for_Embodied_AI_Research_ICCV_2019_paper.html
+      소속·내용 원문: https://openaccess.thecvf.com/content_ICCV_2019/papers/Savva_Habitat_A_Platform_for_Embodied_AI_Research_ICCV_2019_paper.pdf
+      후속 연구: https://proceedings.neurips.cc/paper_files/paper/2021/file/021bbc7ee20b71134d53e20206bd6feb-Paper.pdf
+  changed_from:
+    id: pr-0500
+    tier: CORE
+    tags:
+      - Robotics
+      - Navigation
+      - Embodied AI
+      - Benchmark
+    facets:
+      learning: []
+      control_level: []
+      setting:
+        - simulation
+      embodiment:
+        - mobile
+      interaction:
+        - navigation
+      modality: []
+    venue: ICCV
+    links:
+      page: https://arxiv.org/abs/1904.01201
+      project: https://aihabitat.org/
+      code: null
+    openness:
+      code: project_only
+      weights: not_recorded
+      data: not_identified
+- id: 2017-schulman-ppo
+  registry_id: pr-0524
+  title: Proximal Policy Optimization Algorithms
+  authors:
+    - John Schulman
+    - Filip Wolski
+    - Prafulla Dhariwal
+    - Alec Radford
+    - Oleg Klimov
+  affiliations:
+    - OpenAI
+  year: 2017
+  venue: arXiv preprint
+  links:
+    paper: https://arxiv.org/abs/1707.06347
+    project: unknown
+    code: https://github.com/openai/baselines
+  tier: 1
+  one_line_summary: 수집한 정책 롤아웃을 여러 번 재사용해 근접 정책 갱신을 수행한다.
+  key_contributions:
+    - 정책 확률비의 변화에 제한을 두는 clipped surrogate를 제안한다.
+    - 시뮬레이션 보행과 Atari에서 정책 경사 계열 알고리즘을 비교한다.
+  method_tags:
+    - RL
+  task_tags:
+    - 이동
+  embodiment_tags:
+    - 휴머노이드
+  modality_tags:
+    - 고유수용감각
+  data_source_tags:
+    - 시뮬
+  openness:
+    code: 'Y'
+    weights: unknown
+    data: unknown
+  datasets_benchmarks:
+    - MuJoCo
+    - Atari
+    - Roboschool
+  humanoid:
+    control_scope:
+      - 로코모션
+    training:
+      - unknown
+    hardware:
+      - unknown
+    hand_type:
+      - unknown
+    role: 시뮬레이션 모델에서 평가. 실물 기종과 sim-to-real 학습은 확인 대상 밖이다.
+  limitations:
+    paper_reported: unknown
+    subsequent_work: unknown
+  prior_work:
+    - pr-0615
+  verification: 부분확인
+  notes: 휴머노이드 실험은 Roboschool의 보행·방향 전환 과제다. 실물 하드웨어 모델명은 해당하지 않는다.
+  evidence:
+    verified_on: '2026-11-19'
+    sources:
+      원문·서지: https://arxiv.org/abs/1707.06347
+      프로젝트: https://github.com/openai/baselines
+      저자 목록: https://arxiv.org/abs/1707.06347
+      소속·내용 원문: https://arxiv.org/pdf/1707.06347
+  changed_from:
+    id: pr-0524
+    tier: CORE
+    tags:
+      - Reinforcement Learning
+      - policy learning
+      - Robotics
+    facets:
+      learning:
+        - optimization_or_planning
+        - reinforcement_learning
+      control_level:
+        - policy
+      setting: []
+      embodiment: []
+      interaction:
+        - contact_rich
+      modality:
+        - force_torque
+    venue: arXiv
+    links:
+      page: https://arxiv.org/abs/1707.06347
+      project: https://github.com/openai/baselines
+      code: https://github.com/openai/baselines
+    openness:
+      code: released
+      weights: not_recorded
+      data: not_applicable
+- id: 2024-yokoyama-vlfm
+  registry_id: pr-0540
+  title: 'VLFM: Vision-Language Frontier Maps for Zero-Shot Semantic Navigation'
+  authors:
+    - Naoki Yokoyama
+    - Sehoon Ha
+    - Dhruv Batra
+    - Jiuguang Wang
+    - Bernadette Bucher
+  affiliations:
+    - Boston Dynamics AI Institute
+    - Georgia Institute of Technology
+  year: 2024
+  venue: ICRA
+  links:
+    paper: https://arxiv.org/abs/2312.03275
+    project: unknown
+    code: https://github.com/bdaiinstitute/vlfm
+  tier: 1
+  one_line_summary: 영상과 목표 범주의 의미적 관련도를 지도로 누적해 다음 탐색 경계를 선택한다.
+  key_contributions:
+    - 점유 지도의 frontier에 시각언어 가치 지도의 점수를 결합한다.
+    - 실내 ObjectNav와 Spot 로봇 배치에서 미지 공간의 물체 탐색을 평가한다.
+  method_tags:
+    - 하이브리드
+  task_tags:
+    - 내비게이션
+  embodiment_tags:
+    - 사족보행
+  modality_tags:
+    - RGB
+    - depth
+    - 언어
+  data_source_tags:
+    - 시뮬
+  openness:
+    code: 'Y'
+    weights: 부분
+    data: unknown
+  datasets_benchmarks:
+    - Gibson
+    - HM3D
+    - Matterport3D
+  limitations:
+    paper_reported: 결론. 기본 카메라 높이에서 목표 물체가 잘 보일 것을 가정한다.
+    subsequent_work: unknown
+  prior_work:
+    - unknown
+  verification: 부분확인
+  notes: Spot에서 실행한 과업은 ObjectNav다. 공개 가중치는 하위 PointNav 제어기에 해당한다.
+  evidence:
+    verified_on: '2026-11-19'
+    sources:
+      원문·서지: https://api.crossref.org/works/10.1109/ICRA57147.2024.10610712
+      프로젝트: https://github.com/bdaiinstitute/vlfm
+      가중치: https://api.github.com/repos/rai-opensource/vlfm/git/trees/main?recursive=1
+      저자 목록: https://api.crossref.org/works/10.1109/ICRA57147.2024.10610712
+      소속·내용 원문: https://arxiv.org/pdf/2312.03275
+  changed_from:
+    id: pr-0540
+    tier: CORE
+    tags:
+      - Vision-Language Navigation
+      - Robotics
+      - Navigation
+      - semantic
+    facets:
+      learning: []
+      control_level:
+        - state_estimation
+      setting: []
+      embodiment:
+        - mobile
+      interaction:
+        - navigation
+      modality:
+        - language
+        - rgb
+    venue: ICRA
+    links:
+      page: https://arxiv.org/abs/2312.03275
+      project: https://github.com/bdaiinstitute/vlfm
+      code: https://github.com/bdaiinstitute/vlfm
+    openness:
+      code: released
+      weights: not_recorded
+      data: not_identified
+- id: 2020-krantz-vlnce
+  registry_id: pr-0541
+  title: 'Beyond the Nav-Graph: Vision-and-Language Navigation in Continuous Environments'
+  authors:
+    - Jacob Krantz
+    - Erik Wijmans
+    - Arjun Majumdar
+    - Dhruv Batra
+    - Stefan Lee
+  affiliations:
+    - Oregon State University
+    - Georgia Institute of Technology
+    - Facebook AI Research
+  year: 2020
+  venue: ECCV
+  links:
+    paper: https://arxiv.org/abs/2004.02857
+    project: https://jacobkrantz.github.io/vlnce/
+    code: https://github.com/jacobkrantz/VLN-CE
+  tier: 1
+  one_line_summary: 언어 경로 지시를 따라가는 문제를 미리 정한 내비게이션 그래프에서 연속 공간으로 옮긴다.
+  key_contributions:
+    - R2R 경로를 시뮬레이터의 저수준 행동으로 변환한 에피소드를 구축한다.
+    - 단일 모달리티와 교차 모달 attention 기반 정책을 비교해 연속 공간에서의 성능 차이를 측정한다.
+  method_tags:
+    - IL
+  task_tags:
+    - 내비게이션
+  embodiment_tags:
+    - 기타
+  modality_tags:
+    - RGB
+    - depth
+    - 언어
+  data_source_tags:
+    - 시뮬
+  openness:
+    code: 'Y'
+    weights: 'Y'
+    data: 'Y'
+  datasets_benchmarks:
+    - R2R-VLNCE
+    - Habitat
+  limitations:
+    paper_reported: Caveats. 기존 VLN 경로의 약 20%는 연속 환경에서 이동할 수 없어 제외됐고 두 환경을 직접 비교하는 데 한계가 있다.
+    subsequent_work: unknown
+  prior_work:
+    - 2018-anderson-r2r
+    - 2019-savva-habitat
+  verification: 부분확인
+  notes: 원 논문의 가상 로봇은 원통형 에이전트다. 공개 데이터의 경로·지시는 R2R에서 변환했다.
+  evidence:
+    verified_on: '2026-11-19'
+    sources:
+      원문·서지: https://api.crossref.org/works/10.1007/978-3-030-58604-1_7
+      저장소: https://github.com/jacobkrantz/VLN-CE
+      프로젝트: https://jacobkrantz.github.io/vlnce/
+      저자 목록: https://arxiv.org/abs/2004.02857
+      소속·내용 원문: https://arxiv.org/pdf/2004.02857
+  changed_from:
+    id: pr-0541
+    tier: CORE
+    tags:
+      - Vision-Language Navigation
+      - Robotics
+      - Navigation
+      - Benchmark
+    facets:
+      learning: []
+      control_level:
+        - state_estimation
+      setting: []
+      embodiment:
+        - mobile
+      interaction:
+        - navigation
+      modality:
+        - language
+        - rgb
+    venue: ECCV
+    links:
+      page: https://arxiv.org/abs/2004.02857
+      project: https://jacobkrantz.github.io/vlnce/
+      code: null
+    openness:
+      code: project_only
+      weights: not_recorded
+      data: not_identified
+- id: 2023-zhao-act
+  registry_id: pr-0566
+  title: Learning Fine-Grained Bimanual Manipulation with Low-Cost Hardware
+  authors:
+    - Tony Z. Zhao
+    - Vikash Kumar
+    - Sergey Levine
+    - Chelsea Finn
+  affiliations:
+    - Stanford University
+    - UC Berkeley
+    - Meta
+  year: 2023
+  venue: RSS
+  links:
+    paper: https://www.roboticsproceedings.org/rss19/p016.html
+    project: https://tonyzhaozh.github.io/aloha/
+    code: https://github.com/tonyzhaozh/act
+  tier: 1
+  one_line_summary: 저비용 양팔 원격조작 장치로 모은 시연을 사용해 정밀 조작용 행동 청크를 학습한다.
+  key_contributions:
+    - ALOHA에서 리더·팔로워 관절을 대응시켜 양손 시연을 수집한다.
+    - ACT가 관절 목표의 시퀀스를 예측하고 겹치는 예측을 시간적으로 결합한다.
+  method_tags:
+    - IL
+  task_tags:
+    - 조작
+  embodiment_tags:
+    - 양팔
+  modality_tags:
+    - RGB
+    - 고유수용감각
+  data_source_tags:
+    - 혼합
+  openness:
+    code: 'Y'
+    weights: unknown
+    data: 부분
+  datasets_benchmarks:
+    - unknown
+  limitations:
+    paper_reported: 실험·하드웨어 설명. 빠르거나 힘이 많이 드는 동작에서 지연과 모터의 토크 한계로 추종 오차가 커진다.
+    subsequent_work: unknown
+  prior_work:
+    - unknown
+  verification: 부분확인
+  notes: 저자 배포에서 확인한 데이터는 시뮬레이션 시연이다. 전체 실기 시연의 배포 여부는 미확정이다.
+  evidence:
+    verified_on: '2026-11-19'
+    sources:
+      원문·서지: https://www.roboticsproceedings.org/rss19/p016.html
+      저장소: https://github.com/tonyzhaozh/act
+      시연 폴더: https://drive.google.com/drive/folders/1gPR03v05S1xiInoVJn7G7VJ9pDCnxq9O?usp=share_link
+      저자 목록: https://www.roboticsproceedings.org/rss19/p016.html
+      소속·내용 원문: https://www.roboticsproceedings.org/rss19/p016.pdf
+  changed_from:
+    id: pr-0566
+    tier: CORE
+    tags:
+      - Robotics
+      - bimanual manipulation
+      - Imitation Learning
+      - action chunking
+    facets:
+      learning:
+        - imitation_learning
+      control_level:
+        - policy
+      setting:
+        - real_robot
+      embodiment:
+        - arm
+        - bimanual
+      interaction:
+        - grasping
+      modality: []
+    venue: RSS
+    links:
+      page: https://arxiv.org/abs/2304.13705
+      project: https://tonyzhaozh.github.io/aloha/
+      code: https://github.com/tonyzhaozh/act
+    openness:
+      code: released
+      weights: not_recorded
+      data: released
+- id: 2018-haarnoja-sac
+  registry_id: pr-0620
+  title: 'Soft Actor-Critic: Off-Policy Maximum Entropy Deep Reinforcement Learning with a Stochastic Actor'
+  authors:
+    - Tuomas Haarnoja
+    - Aurick Zhou
+    - Pieter Abbeel
+    - Sergey Levine
+  affiliations:
+    - UC Berkeley
+  year: 2018
+  venue: ICML
+  links:
+    paper: https://proceedings.mlr.press/v80/haarnoja18b.html
+    project: unknown
+    code: https://github.com/haarnoja/sac
+  tier: 1
+  one_line_summary: 확률 정책의 기대 보상과 엔트로피를 함께 최적화하는 오프폴리시 actor–critic을 제시한다.
+  key_contributions:
+    - soft policy iteration에서 연속 행동용 actor·critic 갱신식을 도출한다.
+    - 시뮬레이션 연속 제어에서 학습 안정성과 샘플 효율을 비교한다.
+  method_tags:
+    - RL
+  task_tags:
+    - 이동
+  embodiment_tags:
+    - 휴머노이드
+  modality_tags:
+    - 고유수용감각
+  data_source_tags:
+    - 시뮬
+  openness:
+    code: 'Y'
+    weights: unknown
+    data: unknown
+  datasets_benchmarks:
+    - Humanoid-v1
+    - Humanoid (rllab)
+  humanoid:
+    control_scope:
+      - 로코모션
+    training:
+      - unknown
+    hardware:
+      - unknown
+    hand_type:
+      - unknown
+    role: 시뮬레이션 모델에서 평가. 실물 기종과 sim-to-real 학습은 확인 대상 밖이다.
+  limitations:
+    paper_reported: unknown
+    subsequent_work: unknown
+  prior_work:
+    - unknown
+  verification: 부분확인
+  notes: 휴머노이드는 시뮬레이션의 Humanoid-v1과 rllab 변형이다.
+  evidence:
+    verified_on: '2026-11-19'
+    sources:
+      원문·서지: https://proceedings.mlr.press/v80/haarnoja18b.html
+      프로젝트: https://github.com/haarnoja/sac
+      저자 목록: https://proceedings.mlr.press/v80/haarnoja18b.html
+      소속·내용 원문: https://proceedings.mlr.press/v80/haarnoja18b/haarnoja18b.pdf
+  changed_from:
+    id: pr-0620
+    tier: CORE
+    tags:
+      - Robotics
+      - Reinforcement Learning
+      - continuous control
+      - maximum entropy
+    facets:
+      learning:
+        - reinforcement_learning
+      control_level:
+        - feedback_control
+        - policy
+      setting: []
+      embodiment: []
+      interaction:
+        - contact_rich
+      modality:
+        - force_torque
+    venue: ICML
+    links:
+      page: https://proceedings.mlr.press/v80/haarnoja18b.html
+      project: https://github.com/haarnoja/sac
+      code: https://github.com/haarnoja/sac
+    openness:
+      code: released
+      weights: not_recorded
+      data: not_applicable
+- id: 2022-kostrikov-iql
+  registry_id: pr-0624
+  title: Offline Reinforcement Learning with Implicit Q-Learning
+  authors:
+    - Ilya Kostrikov
+    - Ashvin Nair
+    - Sergey Levine
+  affiliations:
+    - UC Berkeley
+  year: 2022
+  venue: ICLR
+  links:
+    paper: https://iclr.cc/virtual/2022/poster/5941
+    project: unknown
+    code: https://github.com/ikostrikov/implicit_q_learning
+  tier: 1
+  one_line_summary: 오프라인 데이터에 없는 행동의 Q 값을 직접 조회하지 않고 정책을 개선한다.
+  key_contributions:
+    - 가치함수에 비대칭 expectile 회귀를 사용한다.
+    - 학습한 advantage로 데이터 속 행동의 모방 손실에 가중치를 주어 정책을 추출한다.
+  method_tags:
+    - RL
+  task_tags:
+    - 이동
+    - 조작
+    - 내비게이션
+  embodiment_tags:
+    - unknown
+  modality_tags:
+    - unknown
+  data_source_tags:
+    - 시뮬
+  openness:
+    code: 'Y'
+    weights: unknown
+    data: unknown
+  datasets_benchmarks:
+    - D4RL
+  limitations:
+    paper_reported: unknown
+    subsequent_work: unknown
+  prior_work:
+    - pr-1189
+  verification: 부분확인
+  notes: D4RL은 재사용한 데이터다. 자체 데이터 배포 여부는 미확정이다.
+  evidence:
+    verified_on: '2026-11-19'
+    sources:
+      원문·서지: https://iclr.cc/virtual/2022/poster/5941
+      저자 원고: https://arxiv.org/abs/2110.06169
+      프로젝트: https://github.com/ikostrikov/implicit_q_learning
+      저자 목록: https://arxiv.org/abs/2110.06169
+      소속·내용 원문: https://arxiv.org/pdf/2110.06169
+  changed_from:
+    id: pr-0624
+    tier: CORE
+    tags:
+      - Robotics
+      - offline reinforcement learning
+      - implicit Q-learning
+      - continuous control
+    facets:
+      learning:
+        - offline_rl
+        - reinforcement_learning
+      control_level:
+        - feedback_control
+        - policy
+      setting: []
+      embodiment: []
+      interaction:
+        - contact_rich
+      modality:
+        - force_torque
+    venue: ICLR
+    links:
+      page: https://openreview.net/forum?id=68n2s9ZJWF8
+      project: https://github.com/ikostrikov/implicit_q_learning
+      code: https://github.com/ikostrikov/implicit_q_learning
+    openness:
+      code: released
+      weights: not_recorded
+      data: not_identified
+- id: 2024-hansen-tdmpc2
+  registry_id: pr-0684
+  title: 'TD-MPC2: Scalable, Robust World Models for Continuous Control'
+  authors:
+    - Nicklas Hansen
+    - Hao Su
+    - Xiaolong Wang
+  affiliations:
+    - University of California San Diego
+  year: 2024
+  venue: ICLR
+  links:
+    paper: https://proceedings.iclr.cc/paper_files/paper/2024/hash/cf73d57b6dcda32b293df7c2d5341f49-Abstract-Conference.html
+    project: https://www.nicklashansen.com/td-mpc2/
+    code: https://github.com/nicklashansen/tdmpc2
+  tier: 1
+  one_line_summary: 공유 잠재 동역학 모델로 여러 연속 제어 과제를 학습하고 실행 시 행동 시퀀스를 계획한다.
+  key_contributions:
+    - 명시적인 관측 복원 없이 잠재 상태 전이·보상·가치를 학습한다.
+    - 서로 다른 태스크와 모델 크기에서 단일·다중 태스크 학습을 함께 평가한다.
+  method_tags:
+    - 모델기반
+    - RL
+  task_tags:
+    - 이동
+    - 조작
+  embodiment_tags:
+    - 휴머노이드
+    - 사족보행
+    - 단팔
+  modality_tags:
+    - RGB
+    - 고유수용감각
+  data_source_tags:
+    - 시뮬
+  openness:
+    code: 'Y'
+    weights: 'Y'
+    data: 'Y'
+  datasets_benchmarks:
+    - DMControl
+    - Meta-World
+    - ManiSkill2
+    - MyoSuite
+  humanoid:
+    control_scope:
+      - 로코모션
+    training:
+      - unknown
+    hardware:
+      - unknown
+    hand_type:
+      - unknown
+    role: 시뮬레이션 모델에서 평가. 실물 기종과 sim-to-real 학습은 확인 대상 밖이다.
+  limitations:
+    paper_reported: unknown
+    subsequent_work: unknown
+  prior_work:
+    - unknown
+  verification: 부분확인
+  notes: Humanoid·Dog는 DMControl의 시뮬레이션 모델이다. 저자 저장소에 모델과 30·80태스크 데이터 배포 안내가 있다.
+  evidence:
+    verified_on: '2026-11-19'
+    sources:
+      원문·서지: https://proceedings.iclr.cc/paper_files/paper/2024/hash/cf73d57b6dcda32b293df7c2d5341f49-Abstract-Conference.html
+      저장소: https://github.com/nicklashansen/tdmpc2
+      저자 목록: https://proceedings.iclr.cc/paper_files/paper/2024/file/cf73d57b6dcda32b293df7c2d5341f49-Paper-Conference.pdf
+      소속·내용 원문: https://proceedings.iclr.cc/paper_files/paper/2024/file/cf73d57b6dcda32b293df7c2d5341f49-Paper-Conference.pdf
+  changed_from:
+    id: pr-0684
+    tier: CORE
+    tags:
+      - Robotics
+      - world model
+      - continuous control
+      - model predictive control
+    facets:
+      learning:
+        - optimization_or_planning
+        - world_model
+      control_level:
+        - feedback_control
+        - safety_or_recovery
+      setting: []
+      embodiment: []
+      interaction: []
+      modality: []
+    venue: ICLR
+    links:
+      page: https://arxiv.org/abs/2310.16828
+      project: https://www.nicklashansen.com/td-mpc2/
+      code: null
+    openness:
+      code: project_only
+      weights: not_recorded
+      data: not_identified
+- id: 2025-black-pi0
+  registry_id: pr-0746
+  title: 'π0: A Vision-Language-Action Flow Model for General Robot Control'
+  authors:
+    - Kevin Black
+    - Noah Brown
+    - Danny Driess
+    - Adnan Esmail
+    - Michael Robert Equi
+    - Chelsea Finn
+    - Niccolo Fusai
+    - Lachy Groom
+    - Karol Hausman
+    - Brian Ichter
+    - Szymon Jakubczak
+    - Tim Jones
+    - Liyiming Ke
+    - Sergey Levine
+    - Adrian Li-Bell
+    - Mohith Mothukuri
+    - Suraj Nair
+    - Karl Pertsch
+    - Lucy Xiaoyang Shi
+    - Laura Smith
+    - James Tanner
+    - Quan Vuong
+    - Anna Walling
+    - Haohuan Wang
+    - Ury Zhilinsky
+  affiliations:
+    - Physical Intelligence
+  year: 2025
+  venue: RSS
+  links:
+    paper: https://www.roboticsproceedings.org/rss21/p010.html
+    project: https://www.pi.website/research/pi0
+    code: https://github.com/Physical-Intelligence/openpi
+  tier: 1
+  one_line_summary: 사전학습 VLM에 flow matching 행동 전문가를 결합해 서로 다른 로봇의 연속 행동 청크를 생성한다.
+  key_contributions:
+    - 시각·언어·로봇 상태를 조건으로 잡음에서 행동 시퀀스에 이르는 흐름을 학습한다.
+    - 여러 기구에서 직접 실행과 세탁물 접기 등 복잡한 기술의 후속 학습을 평가한다.
+  method_tags:
+    - IL
+  task_tags:
+    - 조작
+    - 모바일매니퓰레이션
+  embodiment_tags:
+    - 단팔
+    - 양팔
+    - 모바일매니퓰레이터
+  modality_tags:
+    - RGB
+    - 언어
+    - 고유수용감각
+  data_source_tags:
+    - 실제로봇
+  openness:
+    code: 'Y'
+    weights: 'Y'
+    data: unknown
+  datasets_benchmarks:
+    - Open X-Embodiment
+  vla:
+    backbone:
+      name: PaliGemma
+      size: 3B
+    action_representation:
+      - 연속(diffusion·flow matching)
+    architecture: 단일 모델
+    training:
+      - SFT
+    evaluation:
+      sim_benchmarks:
+        - unknown
+      real_robot_tasks: unknown
+      scope: 직접 실행과 후학습 평가를 합친 고유 실기 과제 수는 미확정이다.
+  limitations:
+    paper_reported: 결론. 보유한 데이터를 함께 학습해 사전학습 데이터의 최적 구성은 밝히지 못했다.
+    subsequent_work: unknown
+  prior_work:
+    - pr-0745
+    - pr-0024
+  verification: 부분확인
+  notes: 3B는 PaliGemma, 3.3B는 행동 전문가를 포함한 전체 정책이다. 68개는 저자 수집 학습 과업 수이며 전체 실기 평가 태스크 수와 다르다.
+  evidence:
+    verified_on: '2026-11-19'
+    sources:
+      원문·서지: https://www.roboticsproceedings.org/rss21/p010.html
+      본문: https://arxiv.org/html/2410.24164
+      저장소: https://github.com/Physical-Intelligence/openpi
+      저자 목록: https://www.roboticsproceedings.org/rss21/p010.html
+      소속·내용 원문: https://arxiv.org/html/2410.24164
+  changed_from:
+    id: pr-0746
+    tier: CORE
+    tags:
+      - Robotics
+      - VLA
+      - Flow Matching
+      - generalist policy
+      - cross-embodiment
+      - dexterous manipulation
+    facets:
+      learning:
+        - flow_matching
+        - vla
+      control_level:
+        - feedback_control
+        - policy
+      setting: []
+      embodiment:
+        - arm
+        - dexterous_hand
+      interaction:
+        - grasping
+      modality:
+        - language
+        - rgb
+    venue: RSS
+    links:
+      page: https://www.roboticsproceedings.org/rss21/p010.html
+      project: https://www.pi.website/research/pi0
+      code: null
+    openness:
+      code: project_only
+      weights: not_recorded
+      data: released
+    problem: 다양한 로봇의 시각·언어 입력을 정교한 조작에 필요한 고주파 연속 제어로 변환한다.
+    method: π₀는 사전학습한 시각언어 모델에 flow matching으로 학습하는 행동 모듈을 결합한다. 영상·언어 지시·로봇 상태를 조건으로 연속 행동 청크를 생성하며 여러 플랫폼의 조작 데이터로 정책을 학습한다.
+- id: 2021-mandlekar-robomimic
+  registry_id: pr-0747
+  title: What Matters in Learning from Offline Human Demonstrations for Robot Manipulation
+  authors:
+    - Ajay Mandlekar
+    - Danfei Xu
+    - Josiah Wong
+    - Soroush Nasiriany
+    - Chen Wang
+    - Rohun Kulkarni
+    - Li Fei-Fei
+    - Silvio Savarese
+    - Yuke Zhu
+    - Roberto Martín-Martín
+  affiliations:
+    - Stanford University
+    - University of Texas at Austin
+  year: 2021
+  venue: CoRL
+  links:
+    paper: https://proceedings.mlr.press/v164/mandlekar22a.html
+    project: https://robomimic.github.io/
+    code: https://github.com/ARISE-Initiative/robomimic
+  tier: 1
+  one_line_summary: 사람 시연에서 조작 정책을 학습할 때 알고리즘과 데이터 품질의 영향을 통제 비교한다.
+  key_contributions:
+    - 시뮬레이션·실기 과업과 숙련도가 다른 작업자의 시연 데이터를 구축한다.
+    - 오프라인 학습 알고리즘, 시계열 정책과 관측 설계가 성능에 주는 영향을 분석한다.
+  method_tags:
+    - IL
+    - RL
+  task_tags:
+    - 조작
+  embodiment_tags:
+    - 단팔
+    - 양팔
+  modality_tags:
+    - RGB
+    - 고유수용감각
+  data_source_tags:
+    - 혼합
+  openness:
+    code: 'Y'
+    weights: 'Y'
+    data: 'Y'
+  datasets_benchmarks:
+    - robomimic
+  limitations:
+    paper_reported: unknown
+    subsequent_work: unknown
+  prior_work:
+    - unknown
+  verification: 부분확인
+  notes: CoRL 2021 개최, PMLR 2022 출판. 공개 상태는 원 연구용 v0.1 모델과 시연을 기준으로 한다.
+  evidence:
+    verified_on: '2026-11-19'
+    sources:
+      원문·서지: https://proceedings.mlr.press/v164/mandlekar22a.html
+      저장소: https://github.com/ARISE-Initiative/robomimic
+      가중치: https://robomimic.github.io/docs/model_zoo/robomimic_v0.1.html
+      저자 목록: https://proceedings.mlr.press/v164/mandlekar22a.html
+      소속·내용 원문: https://proceedings.mlr.press/v164/mandlekar22a/mandlekar22a.pdf
+  changed_from:
+    id: pr-0747
+    tier: CORE
+    tags:
+      - Robotics
+      - Imitation Learning
+      - offline learning
+      - robot dataset
+      - Benchmark
+      - robomimic
+    facets:
+      learning:
+        - imitation_learning
+      control_level:
+        - policy
+      setting: []
+      embodiment:
+        - arm
+      interaction:
+        - grasping
+      modality: []
+    venue: CoRL
+    links:
+      page: https://proceedings.mlr.press/v164/mandlekar22a.html
+      project: https://robomimic.github.io/
+      code: null
+    openness:
+      code: project_only
+      weights: not_recorded
+      data: not_identified
+- id: 2025-pertsch-fast
+  registry_id: pr-0749
+  title: 'FAST: Efficient Action Tokenization for Vision-Language-Action Models'
+  authors:
+    - Karl Pertsch
+    - Kyle Stachowicz
+    - Brian Ichter
+    - Danny Driess
+    - Suraj Nair
+    - Quan Vuong
+    - Oier Mees
+    - Chelsea Finn
+    - Sergey Levine
+  affiliations:
+    - Physical Intelligence
+    - UC Berkeley
+    - Stanford University
+  year: 2025
+  venue: RSS
+  links:
+    paper: https://www.roboticsproceedings.org/rss21/p012.html
+    project: https://www.pi.website/research/fast
+    code: https://github.com/Physical-Intelligence/openpi
+  tier: 1
+  one_line_summary: 연속 행동 청크를 주파수 영역에서 압축해 자기회귀 VLA가 고주파 로봇 행동을 학습하게 한다.
+  key_contributions:
+    - DCT·양자화·바이트쌍 인코딩을 조합한 FAST 행동 토크나이저를 제시한다.
+    - 범용 토크나이저 FAST+와 이를 사용하는 정책의 학습 속도·실행 성능을 평가한다.
+  method_tags:
+    - IL
+  task_tags:
+    - 조작
+  embodiment_tags:
+    - 단팔
+    - 양팔
+    - 휴머노이드
+  modality_tags:
+    - RGB
+    - 언어
+    - 고유수용감각
+  data_source_tags:
+    - 혼합
+  openness:
+    code: 'Y'
+    weights: 'Y'
+    data: unknown
+  datasets_benchmarks:
+    - LIBERO
+    - DROID
+  vla:
+    backbone:
+      name: PaliGemma (π₀-FAST)
+      size: 3B
+    action_representation:
+      - 이산 토큰
+    architecture: 단일 모델
+    training:
+      - SFT
+    evaluation:
+      sim_benchmarks:
+        - LIBERO
+      real_robot_tasks: 6
+      scope: 주 토크나이저 비교의 실기 과제 수다. DROID 일반화 실험은 별도다.
+  humanoid:
+    control_scope:
+      - unknown
+    training:
+      - unknown
+    hardware:
+      - Unitree H1
+    hand_type:
+      - unknown
+    role: HumanPlus 행동 데이터의 토큰화 예시. 실기 휴머노이드 정책 제어 범위는 미확인이다.
+  limitations:
+    paper_reported: 결론. 휴머노이드 등의 행동은 토큰화로 분석했고 해당 플랫폼에서의 실제 정책 성능은 후속 과제로 남았다.
+    subsequent_work: unknown
+  prior_work:
+    - 2025-black-pi0
+    - pr-0051
+  verification: 부분확인
+  notes: 실기 태스크 6은 토큰화 비교 프로토콜 기준이다. 별도의 DROID 일반화 평가 16과 합산하지 않았다. Unitree H1 등은 행동 토크나이저 데이터의 예이며 휴머노이드에서 정책 실행은 미검증이다.
+  evidence:
+    verified_on: '2026-11-19'
+    sources:
+      원문·서지: https://www.roboticsproceedings.org/rss21/p012.html
+      본문: https://arxiv.org/html/2501.09747
+      저장소: https://github.com/Physical-Intelligence/openpi
+      모델: https://huggingface.co/physical-intelligence/fast
+      저자 목록: https://www.roboticsproceedings.org/rss21/p012.html
+      소속·내용 원문: https://arxiv.org/html/2501.09747
+  changed_from:
+    id: pr-0749
+    tier: CORE
+    tags:
+      - Robotics
+      - VLA
+      - action tokenization
+      - high-frequency control
+      - cross-embodiment
+      - efficiency
+    facets:
+      learning:
+        - vla
+      control_level:
+        - feedback_control
+        - policy
+      setting: []
+      embodiment: []
+      interaction: []
+      modality:
+        - language
+        - rgb
+    venue: RSS
+    links:
+      page: https://www.roboticsproceedings.org/rss21/p012.html
+      project: https://www.pi.website/research/fast
+      code: null
+    openness:
+      code: project_only
+      weights: not_recorded
+      data: not_identified
+    problem: 고주파 행동 궤적을 시간·차원별로 개별 이산화하면 인접 시점 간 중복으로 자기회귀 정책의 학습이 어려워진다.
+    method: FAST는 정규화한 연속 행동 청크에 차원별 이산 코사인 변환(DCT)을 적용한다. 변환 계수를 양자화한 뒤 byte-pair encoding으로 압축해 자기회귀 VLA가 예측할 토큰열을 만든다.
+- id: 2025-kim-openvlaoft
+  registry_id: pr-0750
+  title: 'Fine-Tuning Vision-Language-Action Models: Optimizing Speed and Success'
+  authors:
+    - Moo Jin Kim
+    - Chelsea Finn
+    - Percy Liang
+  affiliations:
+    - Stanford University
+  year: 2025
+  venue: RSS
+  links:
+    paper: https://www.roboticsproceedings.org/rss21/p017.html
+    project: https://openvla-oft.github.io/
+    code: https://github.com/moojink/openvla-oft
+  tier: 1
+  one_line_summary: OpenVLA의 행동 표현·디코딩·목적함수를 비교해 빠른 연속 행동 예측용 미세조정법을 구성한다.
+  key_contributions:
+    - 병렬 디코딩·행동 청킹·L1 행동 회귀를 결합한다.
+    - LIBERO와 ALOHA 양팔 과업에서 속도·성공률과 지시 조건화의 영향을 분석한다.
+  method_tags:
+    - IL
+  task_tags:
+    - 조작
+  embodiment_tags:
+    - 단팔
+    - 양팔
+  modality_tags:
+    - RGB
+    - 언어
+    - 고유수용감각
+  data_source_tags:
+    - 혼합
+  openness:
+    code: 'Y'
+    weights: 부분
+    data: unknown
+  datasets_benchmarks:
+    - LIBERO
+  vla:
+    backbone:
+      name: Prismatic VLM / OpenVLA
+      size: 7B (OpenVLA)
+    action_representation:
+      - unknown
+    architecture: 단일 모델
+    training:
+      - SFT
+    evaluation:
+      sim_benchmarks:
+        - LIBERO
+      real_robot_tasks: 4
+  limitations:
+    paper_reported: Limitations. L1 회귀를 평가한 시연에서는 과제마다 일관된 전략을 사용해 여러 정답 행동 모드에서의 성능은 열려 있다.
+    subsequent_work: unknown
+  prior_work:
+    - pr-0051
+    - 2023-liu-libero
+  verification: 부분확인
+  notes: 주요 정책은 L1 연속 회귀다. 기존 enum에 직접 회귀가 없다. 확인한 배포는 LIBERO 모델이며 ALOHA의 전체 체크포인트·학습 시연은 미확정이다.
+  evidence:
+    verified_on: '2026-11-19'
+    sources:
+      원문·서지: https://www.roboticsproceedings.org/rss21/p017.html
+      본문: https://arxiv.org/html/2502.19645
+      저장소: https://github.com/moojink/openvla-oft
+      모델: https://huggingface.co/moojink/openvla-7b-oft-finetuned-libero-spatial
+      실기 자료 안내: https://github.com/moojink/openvla-oft/blob/main/ALOHA.md
+      저자 목록: https://www.roboticsproceedings.org/rss21/p017.html
+      소속·내용 원문: https://arxiv.org/html/2502.19645
+  changed_from:
+    id: pr-0750
+    tier: CORE
+    tags:
+      - Robotics
+      - VLA
+      - OpenVLA
+      - fine-tuning
+      - action chunking
+      - inference efficiency
+    facets:
+      learning:
+        - vla
+      control_level:
+        - policy
+      setting: []
+      embodiment: []
+      interaction: []
+      modality:
+        - language
+        - rgb
+    venue: RSS
+    links:
+      page: https://www.roboticsproceedings.org/rss21/p017.html
+      project: https://openvla-oft.github.io/
+      code: null
+    openness:
+      code: project_only
+      weights: not_recorded
+      data: not_identified
+- id: 1985-hogan-impedance
+  registry_id: pr-0825
+  title: 'Impedance Control: An Approach to Manipulation: Part I—Theory'
+  authors:
+    - Neville Hogan
+  affiliations:
+    - Massachusetts Institute of Technology
+  year: 1985
+  venue: Journal of Dynamic Systems, Measurement, and Control
+  links:
+    paper: https://bpb-us-e1.wpmucdn.com/sites.mit.edu/dist/5/1384/files/2025/02/1985-impedance-control-an-approach-to-manipulation-part-I-theory.pdf
+    project: unknown
+    code: unknown
+  tier: 1
+  one_line_summary: 접촉 중인 조작기와 환경 사이에서 제어해야 할 운동–힘의 동적 관계를 정식화한다.
+  key_contributions:
+    - 관성 물체와 상호작용할 때 임피던스와 어드미턴스의 차이를 유도한다.
+    - 비선형 조작기의 상호작용을 나타내기 위한 일반화된 등가 표현을 제시한다.
+  method_tags:
+    - 고전제어
+  task_tags:
+    - 조작
+  embodiment_tags:
+    - unknown
+  modality_tags:
+    - unknown
+  data_source_tags:
+    - unknown
+  openness:
+    code: unknown
+    weights: unknown
+    data: unknown
+  datasets_benchmarks:
+    - unknown
+  limitations:
+    paper_reported: unknown
+    subsequent_work: unknown
+  prior_work:
+    - unknown
+  verification: 부분확인
+  notes: Part I의 이론 결과다. 저자 소장 원문과 ASME DOI를 사용했다.
+  evidence:
+    verified_on: '2026-11-19'
+    sources:
+      원문·서지: https://bpb-us-e1.wpmucdn.com/sites.mit.edu/dist/5/1384/files/2025/02/1985-impedance-control-an-approach-to-manipulation-part-I-theory.pdf
+      DOI 기록: https://api.crossref.org/works/10.1115/1.3140702
+      저자 목록: https://api.crossref.org/works/10.1115/1.3140702
+      소속·내용 원문: https://bpb-us-e1.wpmucdn.com/sites.mit.edu/dist/5/1384/files/2025/02/1985-impedance-control-an-approach-to-manipulation-part-I-theory.pdf
+  changed_from:
+    id: pr-0825
+    tier: CORE
+    tags:
+      - Robotics
+      - Impedance Control
+      - contact
+      - manipulation
+    facets:
+      learning: []
+      control_level:
+        - feedback_control
+        - whole_body
+      setting: []
+      embodiment:
+        - arm
+      interaction:
+        - contact_rich
+        - grasping
+        - whole_body
+      modality:
+        - force_torque
+    venue: Journal of Dynamic Systems, Measurement, and Control
+    links:
+      page: https://doi.org/10.1115/1.3140702
+      project: not identified
+      code: null
+    openness:
+      code: not_identified
+      weights: not_recorded
+      data: not_applicable
+    problem: uncertain environment와 접촉할 때 motion 또는 force 하나만 직접 추종해서는 robust interaction을 만들기 어렵다는 문제를 다룬다.
+    method: motion과 interaction force 사이의 목표 동적 관계를 inertia-damping-stiffness 형태로 설계한다.
+    evaluation: Part I은 이론 정립이 중심이며 구현·하드웨어 범위는 후속 part와 함께 확인해야 한다.
+- id: 1999-sutton-policygradient
+  registry_id: pr-0838
+  title: Policy Gradient Methods for Reinforcement Learning with Function Approximation
+  authors:
+    - Richard S. Sutton
+    - David McAllester
+    - Satinder Singh
+    - Yishay Mansour
+  affiliations:
+    - AT&T Labs Research
+  year: 1999
+  venue: NeurIPS
+  links:
+    paper: https://proceedings.neurips.cc/paper/1999/hash/464d828b85b0bed98e80ade0a5c43b0f-Abstract.html
+    project: unknown
+    code: unknown
+  tier: 1
+  one_line_summary: 함수 근사를 쓰는 정책의 기대 보상 기울기를 경험으로 추정할 수 있는 형태로 표현한다.
+  key_contributions:
+    - 정책 경사 정리를 유도한다.
+    - 어떤 호환 조건에서 근사 행동 가치함수를 사용해도 올바른 정책 개선 방향을 얻는지 보인다.
+  method_tags:
+    - RL
+  task_tags:
+    - unknown
+  embodiment_tags:
+    - unknown
+  modality_tags:
+    - unknown
+  data_source_tags:
+    - unknown
+  openness:
+    code: unknown
+    weights: unknown
+    data: unknown
+  datasets_benchmarks:
+    - unknown
+  limitations:
+    paper_reported: unknown
+    subsequent_work: unknown
+  prior_work:
+    - pr-0837
+  verification: 부분확인
+  notes: 정책 경사 정리와 호환 함수 근사를 다루는 이론 논문이다.
+  evidence:
+    verified_on: '2026-11-19'
+    sources:
+      원문·서지: https://proceedings.neurips.cc/paper/1999/hash/464d828b85b0bed98e80ade0a5c43b0f-Abstract.html
+      저자 목록: https://proceedings.neurips.cc/paper/1999/hash/464d828b85b0bed98e80ade0a5c43b0f-Abstract.html
+      소속·내용 원문: https://proceedings.neurips.cc/paper_files/paper/1999/file/464d828b85b0bed98e80ade0a5c43b0f-Paper.pdf
+  changed_from:
+    id: pr-0838
+    tier: CORE
+    tags:
+      - Robotics
+      - Reinforcement Learning
+      - Policy Gradient
+      - actor-critic
+    facets:
+      learning:
+        - reinforcement_learning
+      control_level:
+        - policy
+      setting: []
+      embodiment: []
+      interaction:
+        - contact_rich
+      modality:
+        - force_torque
+    venue: NeurIPS
+    links:
+      page: https://proceedings.neurips.cc/paper/1999/hash/464d828b85b0bed98e80ade0a5c43b0f-Abstract.html
+      project: not identified
+      code: null
+    openness:
+      code: not_identified
+      weights: not_recorded
+      data: not_applicable
+    problem: parameterized stochastic policy의 average performance gradient를 value approximation과 함께 계산한다.
+    method: policy-gradient theorem과 compatible function approximation 조건을 제시하고 actor-critic update를 연결한다.
+    evaluation: 이론과 소규모 실험이 중심이며 robot manipulation/locomotion 평가는 후속 연구에서 이루어진다.
+- id: 2024-luo-serl
+  registry_id: pr-0874
+  title: 'SERL: A Software Suite for Sample-Efficient Robotic Reinforcement Learning'
+  authors:
+    - Jianlan Luo
+    - Zheyuan Hu
+    - Charles Xu
+    - You Liang Tan
+    - Jacob Berg
+    - Archit Sharma
+    - Stefan Schaal
+    - Chelsea Finn
+    - Abhishek Gupta
+    - Sergey Levine
+  affiliations:
+    - UC Berkeley
+    - University of Washington
+    - Stanford University
+    - Intrinsic Innovation LLC
+  year: 2024
+  venue: ICRA
+  links:
+    paper: https://arxiv.org/abs/2401.16013
+    project: unknown
+    code: https://github.com/rail-berkeley/serl
+  tier: 1
+  one_line_summary: 실제 로봇에서 시각적 보상과 오프폴리시 학습을 결합해 조작 기술을 훈련할 수 있는 도구를 제공한다.
+  key_contributions:
+    - 실기 제어와 데이터 수집·정책 갱신을 연결하는 소프트웨어 구성요소를 제공한다.
+    - 삽입·케이블 배치·물체 재배치 과제에서 학습한 정책과 리셋 절차를 평가한다.
+  method_tags:
+    - RL
+  task_tags:
+    - 조작
+  embodiment_tags:
+    - 단팔
+  modality_tags:
+    - RGB
+    - 고유수용감각
+  data_source_tags:
+    - 실제로봇
+  openness:
+    code: 'Y'
+    weights: unknown
+    data: unknown
+  datasets_benchmarks:
+    - unknown
+  limitations:
+    paper_reported: unknown
+    subsequent_work: unknown
+  prior_work:
+    - unknown
+  verification: 부분확인
+  notes: 로봇별 직접 데이터 수집 안내는 자체 데이터 배포의 근거가 되지 않는다.
+  evidence:
+    verified_on: '2026-11-19'
+    sources:
+      원문·서지: https://arxiv.org/abs/2401.16013
+      프로젝트: https://github.com/rail-berkeley/serl
+      DOI 기록: https://api.crossref.org/works/10.1109/ICRA57147.2024.10610040
+      저자 목록: https://arxiv.org/abs/2401.16013
+      소속·내용 원문: https://arxiv.org/pdf/2401.16013
+  changed_from:
+    id: pr-0874
+    tier: CORE
+    tags:
+      - Robotics
+      - Reinforcement Learning
+      - real-world RL
+      - sample efficiency
+      - human demonstrations
+      - reset-free learning
+    facets:
+      learning:
+        - imitation_learning
+        - reinforcement_learning
+      control_level:
+        - policy
+      setting:
+        - real_robot
+      embodiment: []
+      interaction:
+        - contact_rich
+      modality:
+        - force_torque
+    venue: ICRA
+    links:
+      page: https://ieeexplore.ieee.org/document/10610040/
+      project: https://github.com/rail-berkeley/serl
+      code: https://github.com/rail-berkeley/serl
+    openness:
+      code: released
+      weights: not_recorded
+      data: not_identified
+    problem: Real-robot reinforcement learning is bottlenecked by sample cost, reward design, resets, and fragile deployment tooling.
+    method: SERL packages sample-efficient off-policy algorithms with practical reward, reset, controller, and data-collection components for real
+      manipulation.
+    evaluation: The official project and ICRA record report real-robot cable, PCB, and object manipulation tasks with substantially reduced interaction
+      cost.
+- id: 2025-cheng-navila
+  registry_id: pr-0884
+  title: 'NaVILA: Legged Robot Vision-Language-Action Model for Navigation'
+  authors:
+    - An-Chieh Cheng
+    - Yandong Ji
+    - Zhaojing Yang
+    - Zaitian Gongye
+    - Xueyan Zou
+    - Jan Kautz
+    - Erdem Biyik
+    - Hongxu Yin
+    - Sifei Liu
+    - Xiaolong Wang
+  affiliations:
+    - UC San Diego
+    - University of Southern California
+    - NVIDIA
+  year: 2025
+  venue: RSS
+  links:
+    paper: https://www.roboticsproceedings.org/rss21/p018.html
+    project: https://navila-bot.github.io/
+    code: https://github.com/AnjieCheng/NaVILA
+  tier: 1
+  one_line_summary: 영상·지시에서 중간 수준 이동 명령을 생성하고 시각 보행 제어기가 이를 실행한다.
+  key_contributions:
+    - 언어 경로 데이터와 영상 예제로 상위 내비게이션 모델을 학습한다.
+    - 강화학습한 이동 정책과 결합해 사족 및 이족 플랫폼의 탐색을 평가한다.
+  method_tags:
+    - IL
+    - RL
+  task_tags:
+    - 내비게이션
+    - 이동
+  embodiment_tags:
+    - 사족보행
+    - 휴머노이드
+  modality_tags:
+    - RGB
+    - 언어
+    - 고유수용감각
+  data_source_tags:
+    - 혼합
+  openness:
+    code: 'Y'
+    weights: 'Y'
+    data: 부분
+  datasets_benchmarks:
+    - R2R-CE
+    - RxR-CE
+  vla:
+    backbone:
+      name: VILA / Llama 3
+      size: 8B
+    action_representation:
+      - 이산 토큰
+    architecture: 이중 시스템(고수준 추론 + 저수준 제어)
+    training:
+      - SFT
+    evaluation:
+      sim_benchmarks:
+        - R2R-CE
+        - RxR-CE
+      real_robot_tasks: unknown
+      scope: 상위 모델의 공간 명령을 텍스트로 디코딩한다. 하위 보행 정책은 별도로 RL 학습한다.
+  humanoid:
+    control_scope:
+      - 로코모션
+    training:
+      - sim-to-real RL
+    hardware:
+      - Unitree H1
+      - Booster T1
+    hand_type:
+      - unknown
+    role: H1 시뮬레이션과 Booster T1 실기 내비게이션을 구분한다.
+  limitations:
+    paper_reported: unknown
+    subsequent_work: unknown
+  prior_work:
+    - 2020-krantz-vlnce
+  verification: 부분확인
+  notes: 상위 명령은 자연어 토큰이다. 저수준 관절 제어와 구분한다. Unitree H1은 시뮬레이션 비교에도 쓰이고, 실기 보행 플랫폼으로 Go2와 Booster T1을 명시한다. 배포 데이터 일부는 영상 ID와 주석이다.
+  evidence:
+    verified_on: '2026-11-19'
+    sources:
+      원문·서지: https://www.roboticsproceedings.org/rss21/p018.html
+      본문: https://arxiv.org/html/2412.04453
+      프로젝트: https://github.com/AnjieCheng/NaVILA
+      가중치: https://huggingface.co/a8cheng/navila-llama3-8b-8f
+      자료: https://huggingface.co/datasets/a8cheng/NaVILA-Dataset
+      백본 설정: https://huggingface.co/a8cheng/navila-llama3-8b-8f/blob/main/config.json
+      저자 목록: https://www.roboticsproceedings.org/rss21/p018.html
+      소속·내용 원문: https://arxiv.org/html/2412.04453
+  changed_from:
+    id: pr-0884
+    tier: CORE
+    tags:
+      - VLA
+      - locomotion
+      - Navigation
+      - legged robot
+      - hierarchical policy
+      - language grounding
+    facets:
+      learning:
+        - vla
+      control_level:
+        - policy
+      setting: []
+      embodiment:
+        - legged
+        - mobile
+      interaction:
+        - locomotion
+        - navigation
+      modality:
+        - language
+        - rgb
+    venue: RSS
+    links:
+      page: https://www.roboticsproceedings.org/rss21/p018.html
+      project: https://github.com/AnjieCheng/NaVILA
+      code: https://github.com/AnjieCheng/NaVILA
+    openness:
+      code: released
+      weights: not_recorded
+      data: not_identified
+    problem: End-to-end language-to-torque navigation is difficult because high-level semantic reasoning and fast locomotion operate at different temporal
+      and action scales.
+    method: A VLA produces mid-level spatial-language actions while a visual locomotion RL policy executes them on a legged robot.
+    evaluation: The RSS abstract reports IsaacLab benchmarks and real legged-robot navigation experiments.
+- id: 2025-chen-conrft
+  registry_id: pr-0885
+  title: 'ConRFT: A Reinforced Fine-tuning Method for VLA Models via Consistency Policy'
+  authors:
+    - Yuhui Chen
+    - Shuai Tian
+    - Shugao Liu
+    - Yingting Zhou
+    - Haoran Li
+    - Dongbin Zhao
+  affiliations:
+    - Institute of Automation Chinese Academy of Sciences
+    - University of Chinese Academy of Sciences
+  year: 2025
+  venue: RSS
+  links:
+    paper: https://www.roboticsproceedings.org/rss21/p019.html
+    project: https://cccedric.github.io/conrft/
+    code: https://github.com/cccedric/conrft
+  tier: 1
+  one_line_summary: 시연을 사용한 오프라인 초기화와 사람이 개입하는 온라인 RL로 VLA의 행동 헤드를 개선한다.
+  key_contributions:
+    - 일관성 정책의 행동 생성과 Q 학습·행동 복제 목적을 결합한다.
+    - 실제 Franka의 여덟 조작 과제에서 미세조정 전후 정책을 비교한다.
+  method_tags:
+    - IL
+    - RL
+  task_tags:
+    - 조작
+  embodiment_tags:
+    - 단팔
+  modality_tags:
+    - RGB
+    - 언어
+    - 고유수용감각
+  data_source_tags:
+    - 실제로봇
+  openness:
+    code: 'Y'
+    weights: unknown
+    data: unknown
+  datasets_benchmarks:
+    - unknown
+  vla:
+    backbone:
+      name: Octo-small 및 추가 실험의 PaliGemma
+      size: 27M (Octo-small 정책), 3B (PaliGemma)
+    action_representation:
+      - 연속(diffusion·flow matching)
+    architecture: 단일 모델
+    training:
+      - RL 파인튜닝
+    evaluation:
+      sim_benchmarks:
+        - unknown
+      real_robot_tasks: 8
+  limitations:
+    paper_reported: Discussion. 실시간 상호작용과 학습을 병행하는 구현은 백본을 동결하고 행동 헤드만 갱신한다.
+    subsequent_work: unknown
+  prior_work:
+    - 2024-ghosh-octo
+  verification: 부분확인
+  notes: 동결한 백본의 행동 헤드를 미세조정한다. 주 실험은 Octo-small에 기반하며 PaliGemma 3B 추가 실험이 있다. 저자는 일관성 정책을 diffusion 계열로 설명한다.
+  evidence:
+    verified_on: '2026-11-19'
+    sources:
+      원문·서지: https://www.roboticsproceedings.org/rss21/p019.html
+      본문: https://arxiv.org/html/2502.05450
+      저장소: https://github.com/cccedric/conrft
+      저자 목록: https://www.roboticsproceedings.org/rss21/p019.html
+      소속·내용 원문: https://arxiv.org/html/2502.05450
+  changed_from:
+    id: pr-0885
+    tier: CORE
+    tags:
+      - VLA
+      - Reinforcement Learning
+      - human interventions
+      - consistency policy
+      - real-world manipulation
+      - fine-tuning
+    facets:
+      learning:
+        - reinforcement_learning
+        - vla
+      control_level:
+        - policy
+      setting:
+        - real_robot
+      embodiment:
+        - arm
+      interaction:
+        - contact_rich
+        - grasping
+      modality:
+        - force_torque
+        - language
+    venue: RSS
+    links:
+      page: https://www.roboticsproceedings.org/rss21/p019.html
+      project: https://cccedric.github.io/conrft/
+      code: null
+    openness:
+      code: project_only
+      weights: not_recorded
+      data: not_identified
+    problem: A pretrained VLA can be broadly capable yet inefficient or brittle when adapted to a new real-robot task.
+    method: ConRFT combines offline behavior cloning and Q-learning with an online consistency policy that incorporates human interventions.
+    evaluation: The RSS abstract reports eight real manipulation tasks and rapid improvement under short intervention and interaction budgets.
+- id: 2025-xu-rldg
+  registry_id: pr-0886
+  title: 'RLDG: Robotic Generalist Policy Distillation via Reinforcement Learning'
+  authors:
+    - Charles Xu
+    - Qiyang Li
+    - Jianlan Luo
+    - Sergey Levine
+  affiliations:
+    - UC Berkeley
+  year: 2025
+  venue: RSS
+  links:
+    paper: https://www.roboticsproceedings.org/rss21/p028.html
+    project: https://generalist-distillation.github.io/
+    code: https://github.com/generalist-distillation/RLDG
+  tier: 1
+  one_line_summary: 실기 RL 전문가가 생성한 성공 궤적을 범용 정책의 감독 데이터로 사용한다.
+  key_contributions:
+    - 과업별 전문가를 먼저 학습한 뒤 여러 전문가의 롤아웃을 하나의 학생 학습 자료로 통합한다.
+    - 같은 조작 과제에서 사람 시연과 전문가 데이터를 사용한 범용 정책을 비교한다.
+  method_tags:
+    - IL
+    - RL
+  task_tags:
+    - 조작
+  embodiment_tags:
+    - 단팔
+  modality_tags:
+    - RGB
+    - 언어
+  data_source_tags:
+    - 실제로봇
+  openness:
+    code: 부분
+    weights: unknown
+    data: 'Y'
+  datasets_benchmarks:
+    - RLDG
+  vla:
+    backbone:
+      name: OpenVLA / Octo
+      size: 7B (OpenVLA), unknown (사용한 Octo 크기)
+    action_representation:
+      - 이산 토큰
+      - 연속(diffusion·flow matching)
+    architecture: 단일 모델
+    training:
+      - SFT
+    evaluation:
+      sim_benchmarks:
+        - unknown
+      real_robot_tasks: 4
+      scope: 학생 정책 각각을 따로 평가한다. 표현 목록의 순서는 OpenVLA, Octo다.
+  limitations:
+    paper_reported: §6. 미세조정할 과제의 보상 함수가 필요해 보상 명세가 어려운 과제에는 부담이 있다.
+    subsequent_work: unknown
+  prior_work:
+    - pr-0051
+    - 2024-ghosh-octo
+  verification: 부분확인
+  notes: RL은 교사 정책에 적용한다. 학생 OpenVLA와 Octo는 각각 토큰·확산 헤드로 감독학습한다. 두 학생을 하나의 하이브리드 헤드로 분류하지 않았다. 공개 코드는 커넥터 삽입용 HIL-SERL 설정과 롤아웃 스크립트다. 학생 미세조정 절차는 공개
+    예고 상태다.
+  evidence:
+    verified_on: '2026-11-19'
+    sources:
+      원문·서지: https://www.roboticsproceedings.org/rss21/p028.html
+      본문: https://arxiv.org/html/2412.09858
+      자료: https://huggingface.co/datasets/charlesxu0124/RLDG
+      배포 안내: https://generalist-distillation.github.io/RLDG/
+      배포 파일 목록: https://api.github.com/repos/generalist-distillation/RLDG/git/trees/main?recursive=1
+      하위 구현: https://github.com/rail-berkeley/hil-serl
+      저자 목록: https://www.roboticsproceedings.org/rss21/p028.html
+      소속·내용 원문: https://arxiv.org/html/2412.09858
+  changed_from:
+    id: pr-0886
+    tier: CORE
+    tags:
+      - Robotics
+      - Reinforcement Learning
+      - generalist policy
+      - policy distillation
+      - robot data
+      - real-world manipulation
+    facets:
+      learning:
+        - reinforcement_learning
+      control_level:
+        - policy
+      setting:
+        - real_robot
+      embodiment:
+        - arm
+      interaction:
+        - contact_rich
+        - grasping
+      modality:
+        - force_torque
+    venue: RSS
+    links:
+      page: https://www.roboticsproceedings.org/rss21/p028.html
+      project: https://generalist-distillation.github.io/
+      code: null
+    openness:
+      code: project_only
+      weights: not_recorded
+      data: not_identified
+    problem: Generalist policies need broad behaviors, while specialist RL policies are often better at solving individual contact-rich tasks.
+    method: RLDG uses specialist RL rollouts as supervision for distilling a generalist policy across tasks.
+    evaluation: The RSS abstract reports connector insertion and assembly experiments with improved success over the compared generalist policy.
+- id: 2024-ze-dp3
+  registry_id: pr-0926
+  title: '3D Diffusion Policy: Generalizable Visuomotor Policy Learning via Simple 3D Representations'
+  authors:
+    - Yanjie Ze
+    - Gu Zhang
+    - Kangning Zhang
+    - Chenyuan Hu
+    - Muhan Wang
+    - Huazhe Xu
+  affiliations:
+    - Shanghai Qi Zhi Institute
+    - Shanghai Jiao Tong University
+    - Tsinghua University
+    - Shanghai AI Laboratory
+  year: 2024
+  venue: RSS
+  links:
+    paper: https://www.roboticsproceedings.org/rss20/p067.html
+    project: https://3d-diffusion-policy.github.io/
+    code: https://github.com/YanjieZe/3D-Diffusion-Policy
+  tier: 1
+  one_line_summary: 희소한 점군 표현을 조건으로 확산 정책이 조작 행동을 생성하도록 학습한다.
+  key_contributions:
+    - 경량 점군 인코더와 행동 디노이징을 결합한다.
+    - 다양한 시뮬레이션·실물 조작 과제에서 2D 시각 정책 대비 일반화를 평가한다.
+  method_tags:
+    - IL
+  task_tags:
+    - 조작
+  embodiment_tags:
+    - 단팔
+    - 기타
+  modality_tags:
+    - depth
+    - 고유수용감각
+    - 기타
+  data_source_tags:
+    - 혼합
+  openness:
+    code: 'Y'
+    weights: unknown
+    data: 'Y'
+  datasets_benchmarks:
+    - Meta-World
+    - Adroit
+  limitations:
+    paper_reported: unknown
+    subsequent_work: unknown
+  prior_work:
+    - pr-0019
+  verification: 부분확인
+  notes: 기타 형태에는 손 조작 과제가 포함된다. RL 전문가용 가중치와 학습된 DP3 정책 가중치는 구분했다.
+  evidence:
+    verified_on: '2026-11-19'
+    sources:
+      원문·서지: https://www.roboticsproceedings.org/rss20/p067.html
+      저장소: https://github.com/YanjieZe/3D-Diffusion-Policy
+      프로젝트: https://3d-diffusion-policy.github.io/
+      저자 목록: https://www.roboticsproceedings.org/rss20/p067.html
+      소속·내용 원문: https://www.roboticsproceedings.org/rss20/p067.pdf
+  changed_from:
+    id: pr-0926
+    tier: CORE
+    tags:
+      - Robotics
+      - 3D representation
+      - point cloud
+      - diffusion policy
+      - Imitation Learning
+      - visuomotor control
+    facets:
+      learning:
+        - diffusion
+        - imitation_learning
+      control_level:
+        - feedback_control
+        - policy
+      setting: []
+      embodiment:
+        - arm
+      interaction:
+        - contact_rich
+        - grasping
+      modality:
+        - point_cloud
+    venue: RSS
+    links:
+      page: https://www.roboticsproceedings.org/rss20/p067.html
+      project: https://3d-diffusion-policy.github.io/
+      code: null
+    openness:
+      code: project_only
+      weights: not_recorded
+      data: not_identified
+    problem: 시각 imitation policy가 viewpoint·appearance·instance 변화에 취약하고 demonstration을 많이 요구하는 문제를 다룬다.
+    method: sparse point cloud를 compact point encoder로 표현하고 diffusion action policy와 결합해 visuomotor action을 생성한다.
+    evaluation: 72개 simulation task와 4개 real-robot task에서 적은 demonstration, 공간·시점·외관·instance generalization을 diffusion policy baseline과 비교한다.
+- id: 2025-ren-dppo
+  registry_id: pr-0951
+  title: Diffusion Policy Policy Optimization
+  authors:
+    - Allen Z. Ren
+    - Justin Lidard
+    - Lars L. Ankile
+    - Anthony Simeonov
+    - Pulkit Agrawal
+    - Anirudha Majumdar
+    - Benjamin Burchfiel
+    - Hongkai Dai
+    - Max Simchowitz
+  affiliations:
+    - Princeton University
+    - Harvard University
+    - MIT
+    - Toyota Research Institute
+    - Carnegie Mellon University
+  year: 2025
+  venue: ICLR
+  links:
+    paper: https://proceedings.iclr.cc/paper_files/paper/2025/hash/c0749c39aaff9e9e4c91f7118bf21b1e-Abstract-Conference.html
+    project: https://diffusion-ppo.github.io/
+    code: https://github.com/irom-lab/dppo
+  tier: 1
+  one_line_summary: 시연으로 초기화한 확산 정책의 디노이징 과정을 정책 경사로 미세조정한다.
+  key_contributions:
+    - 환경 단계와 디노이징 단계를 포괄하는 정책 경사 최적화를 구성한다.
+    - 연속 제어와 조작에서 탐색의 구조 및 시뮬레이션에서 학습한 정책의 실기 전이를 분석한다.
+  method_tags:
+    - IL
+    - RL
+  task_tags:
+    - 이동
+    - 조작
+  embodiment_tags:
+    - unknown
+  modality_tags:
+    - RGB
+    - 고유수용감각
+  data_source_tags:
+    - 시뮬
+  openness:
+    code: 'Y'
+    weights: 'Y'
+    data: 'Y'
+  datasets_benchmarks:
+    - robomimic
+    - Furniture-Bench
+    - D4RL
+  limitations:
+    paper_reported: unknown
+    subsequent_work: unknown
+  prior_work:
+    - pr-0019
+    - 2017-schulman-ppo
+  verification: 부분확인
+  notes: 시뮬레이션 미세조정과 실기 전이 평가가 있다. 공개 데이터는 저자가 배포하는 전처리본을 포함한다.
+  evidence:
+    verified_on: '2026-11-19'
+    sources:
+      원문·서지: https://proceedings.iclr.cc/paper_files/paper/2025/hash/c0749c39aaff9e9e4c91f7118bf21b1e-Abstract-Conference.html
+      저장소: https://github.com/irom-lab/dppo
+      저자 목록: https://proceedings.iclr.cc/paper_files/paper/2025/file/c0749c39aaff9e9e4c91f7118bf21b1e-Paper-Conference.pdf
+      소속·내용 원문: https://proceedings.iclr.cc/paper_files/paper/2025/file/c0749c39aaff9e9e4c91f7118bf21b1e-Paper-Conference.pdf
+  changed_from:
+    id: pr-0951
+    tier: CORE
+    tags:
+      - Diffusion
+      - policy-gradient
+      - sim-to-real
+    facets: null
+    venue: ICLR
+    links:
+      page: https://proceedings.iclr.cc/paper_files/paper/2025/hash/c0749c39aaff9e9e4c91f7118bf21b1e-Abstract-Conference.html
+      project: https://diffusion-ppo.github.io/
+      code: https://github.com/irom-princeton/dppo
+    openness:
+      code: released
+      weights: not_recorded
+      data: not_identified
+    problem: BC로 학습한 diffusion action policy를 sparse reward 환경에서 안정적으로 RL fine-tuning하는 문제다.
+    method: Denoising 과정을 policy-gradient 최적화에 포함하고 diffusion policy에 맞춘 학습 설계를 제안한다.
+    evaluation: Continuous-control/robotic simulation, pixel/state 입력 및 Furniture-Bench sim-to-real assembly 평가를 project에서 확인했다.
+- id: 2025-park-fql
+  registry_id: pr-0952
+  title: Flow Q-Learning
+  authors:
+    - Seohong Park
+    - Qiyang Li
+    - Sergey Levine
+  affiliations:
+    - UC Berkeley
+  year: 2025
+  venue: ICML
+  links:
+    paper: https://proceedings.mlr.press/v267/park25f.html
+    project: https://seohong.me/projects/fql/
+    code: https://github.com/seohongpark/fql
+  tier: 1
+  one_line_summary: 오프라인 행동 분포를 flow 모델로 학습한 뒤 한 단계 actor를 가치 최대화에 사용한다.
+  key_contributions:
+    - 반복적인 flow 생성기에 대한 역전파 없이 행동 생성과 가치 최적화를 연결한다.
+    - 오프라인 및 오프라인→온라인 조건에서 상태·픽셀 관측 과제를 비교한다.
+  method_tags:
+    - RL
+  task_tags:
+    - 조작
+    - 이동
+    - 내비게이션
+  embodiment_tags:
+    - 휴머노이드
+  modality_tags:
+    - RGB
+    - 기타
+  data_source_tags:
+    - 시뮬
+  openness:
+    code: 'Y'
+    weights: unknown
+    data: unknown
+  datasets_benchmarks:
+    - OGBench
+    - D4RL
+  humanoid:
+    control_scope:
+      - 로코모션
+    training:
+      - unknown
+    hardware:
+      - unknown
+    hand_type:
+      - unknown
+    role: 시뮬레이션 모델에서 평가. 실물 기종과 sim-to-real 학습은 확인 대상 밖이다.
+  limitations:
+    paper_reported: unknown
+    subsequent_work: unknown
+  prior_work:
+    - pr-1189
+  verification: 부분확인
+  notes: 기타 입력은 저차원 상태다. OGBench humanoidmaze는 시뮬레이션 내비게이션 과제다.
+  evidence:
+    verified_on: '2026-11-19'
+    sources:
+      원문·서지: https://proceedings.mlr.press/v267/park25f.html
+      저장소: https://github.com/seohongpark/fql
+      저자 목록: https://proceedings.mlr.press/v267/park25f.html
+      소속·내용 원문: https://raw.githubusercontent.com/mlresearch/v267/main/assets/park25f/park25f.pdf
+  changed_from:
+    id: pr-0952
+    tier: CORE
+    tags:
+      - flow-matching
+      - offline-RL
+      - offline-to-online
+    facets: null
+    venue: ICML
+    links:
+      page: https://proceedings.mlr.press/v267/park25f.html
+      project: https://seohong.me/projects/fql/
+      code: https://github.com/seohongpark/fql
+    openness:
+      code: released
+      weights: not_recorded
+      data: not_identified
+    problem: 복잡한 multimodal action 분포를 갖는 flow policy에 offline Q-learning을 적용할 때 효율적인 actor 최적화가 필요하다.
+    method: Flow-matching behavior model과 distilled one-step actor를 결합하여 value maximization과 expressive behavior regularization을 연결한다.
+    evaluation: 공식 abstract는 OGBench와 D4RL의 state/pixel offline 및 offline-to-online task 평가를 보고한다.
+- id: 2016-schulman-gae
+  registry_id: pr-1180
+  title: High-Dimensional Continuous Control Using Generalized Advantage Estimation
+  authors:
+    - John Schulman
+    - Philipp Moritz
+    - Sergey Levine
+    - Michael Jordan
+    - Pieter Abbeel
+  affiliations:
+    - UC Berkeley
+  year: 2016
+  venue: ICLR
+  links:
+    paper: https://arxiv.org/abs/1506.02438
+    project: unknown
+    code: https://github.com/joschu/modular_rl
+  tier: 1
+  one_line_summary: 시간차 잔차를 지수적으로 가중해 정책 경사 추정의 편향과 분산을 조절한다.
+  key_contributions:
+    - 일반화 advantage 추정량을 유도하고 가치 추정 오차와의 관계를 설명한다.
+    - 신뢰영역 정책 최적화와 결합해 고차원 시뮬레이션 보행을 학습한다.
+  method_tags:
+    - RL
+  task_tags:
+    - 이동
+  embodiment_tags:
+    - 휴머노이드
+    - 사족보행
+  modality_tags:
+    - 고유수용감각
+  data_source_tags:
+    - 시뮬
+  openness:
+    code: 'Y'
+    weights: unknown
+    data: unknown
+  datasets_benchmarks:
+    - MuJoCo
+  humanoid:
+    control_scope:
+      - 로코모션
+    training:
+      - unknown
+    hardware:
+      - unknown
+    hand_type:
+      - unknown
+    role: 시뮬레이션 모델에서 평가. 실물 기종과 sim-to-real 학습은 확인 대상 밖이다.
+  limitations:
+    paper_reported: unknown
+    subsequent_work: unknown
+  prior_work:
+    - pr-0615
+  verification: 부분확인
+  notes: 휴머노이드 보행은 시뮬레이션 실험이다. ICLR 2016 학회와 2015 arXiv 판본을 구분했다.
+  evidence:
+    verified_on: '2026-11-19'
+    sources:
+      원문·서지: https://www.iclr.cc/archive/www/2016.html
+      등록 원문: https://arxiv.org/abs/1506.02438
+      저장소: https://github.com/joschu/modular_rl
+      저자 목록: https://arxiv.org/abs/1506.02438
+      소속·내용 원문: https://arxiv.org/pdf/1506.02438
+  changed_from:
+    id: pr-1180
+    tier: CORE
+    tags:
+      - reinforcement-learning
+      - policy-gradient
+      - advantage-estimation
+      - variance-reduction
+    facets: null
+    venue: ICLR
+    links:
+      page: https://arxiv.org/abs/1506.02438
+      project: ''
+      code: null
+    openness:
+      code: not_identified
+      weights: not_recorded
+      data: not_identified
+    problem: 정책 gradient의 높은 분산과 비정상 데이터로 인한 불안정을 다룬다.
+    method: 가치함수를 이용한 지수 가중 advantage 추정으로 bias–variance를 조절하고 trust-region 정책·가치 갱신을 결합한다.
+    evaluation: 시뮬레이션의 이족·사족 보행과 기립 과제를 평가한다. 실제 로봇 검증으로 확대하지 않는다.
+- id: 1999-ng-rewardshaping
+  registry_id: pr-1181
+  title: 'Policy invariance under reward transformations: Theory and application to reward shaping'
+  authors:
+    - Andrew Y. Ng
+    - Daishi Harada
+    - Stuart Russell
+  affiliations:
+    - UC Berkeley
+  year: 1999
+  venue: ICML
+  links:
+    paper: https://people.eecs.berkeley.edu/~russell/papers/icml99-shaping.pdf
+    project: unknown
+    code: unknown
+  tier: 1
+  one_line_summary: MDP에서 어떤 보상 변환이 최적 정책을 보존하는지 분석한다.
+  key_contributions:
+    - 할인된 다음 상태와 현재 상태의 잠재함수 차이를 보상에 더하는 충분조건을 제시한다.
+    - MDP에 추가 가정이 없을 때 정책 불변성을 보장하는 데 해당 형태가 필요한 이유를 보인다.
+  method_tags:
+    - RL
+  task_tags:
+    - unknown
+  embodiment_tags:
+    - unknown
+  modality_tags:
+    - unknown
+  data_source_tags:
+    - unknown
+  openness:
+    code: unknown
+    weights: unknown
+    data: unknown
+  datasets_benchmarks:
+    - unknown
+  limitations:
+    paper_reported: unknown
+    subsequent_work: unknown
+  prior_work:
+    - unknown
+  verification: 부분확인
+  notes: 저자 소장 원본 표제면에서 세 저자를 확인했다. 방법론은 보상 변환 이론을 기준으로 했다.
+  evidence:
+    verified_on: '2026-11-19'
+    sources:
+      원문·서지: https://people.eecs.berkeley.edu/~russell/papers/icml99-shaping.pdf
+      게재 근거: https://people.eecs.berkeley.edu/~russell/publications
+      저자 목록: https://people.eecs.berkeley.edu/~russell/papers/icml99-shaping.pdf
+      소속·내용 원문: https://people.eecs.berkeley.edu/~russell/papers/icml99-shaping.pdf
+  changed_from:
+    id: pr-1181
+    tier: CORE
+    tags:
+      - reinforcement-learning
+      - reward-shaping
+      - policy-invariance
+      - potential-function
+    facets: null
+    venue: ICML
+    links:
+      page: https://people.eecs.berkeley.edu/~russell/papers/icml99-shaping.pdf
+      project: ''
+      code: null
+    openness:
+      code: not_identified
+      weights: not_recorded
+      data: not_identified
+    problem: 학습을 돕는 보상 변경이 원래 최적 정책을 바꾸는 조건을 묻는다.
+    method: 상태 potential의 차이로 구성하는 보상 변환의 정책 보존 조건과 그 필요성을 분석한다.
+    evaluation: 정책 불변성 분석과 거리·부분 목표 potential의 학습 예제를 제시한다. VLA 평가 논문은 아니다.
+- id: 2021-teed-droidslam
+  registry_id: pr-0017
+  title: 'DROID-SLAM: Deep Visual SLAM for Monocular, Stereo, and RGB-D Cameras'
+  authors:
+    - Zachary Teed
+    - Jia Deng
+  affiliations:
+    - Princeton University
+  year: 2021
+  venue: NeurIPS
+  links:
+    paper: https://proceedings.neurips.cc/paper_files/paper/2021/hash/89fcd07f20b6785b92134bd6c1d0fa42-Abstract.html
+    project: unknown
+    code: https://github.com/princeton-vl/DROID-SLAM
+  tier: 2
+  one_line_summary: 카메라 자세와 픽셀 깊이를 반복적으로 함께 갱신하는 학습형 SLAM을 제시한다.
+  key_contributions:
+    - 학습한 대응 관계와 dense bundle adjustment를 미분 가능한 반복 갱신에 결합한다.
+    - 단안 영상으로 학습한 시스템을 스테레오·RGB-D 입력에도 적용한다.
+  method_tags:
+    - unknown
+  task_tags:
+    - unknown
+  embodiment_tags:
+    - unknown
+  modality_tags:
+    - RGB
+    - depth
+  data_source_tags:
+    - 합성
+  openness:
+    code: 'Y'
+    weights: 'Y'
+    data: unknown
+  datasets_benchmarks:
+    - TartanAir
+    - EuRoC
+    - TUM RGB-D
+  limitations:
+    paper_reported: 실험·메모리 분석. 긴 영상의 자세 최적화는 GPU 메모리 요구량이 커지며 저자는 이를 주된 제약으로 꼽는다.
+    subsequent_work: unknown
+  prior_work:
+    - unknown
+  verification: 부분확인
+  notes: 단안 영상으로 학습하고 스테레오·RGB-D로도 평가했다. 자세 추정과 맵 구축에는 별도 태스크 값이 없다.
+  evidence:
+    verified_on: '2026-11-19'
+    sources:
+      원문·서지: https://proceedings.neurips.cc/paper_files/paper/2021/hash/89fcd07f20b6785b92134bd6c1d0fa42-Abstract.html
+      저장소: https://github.com/princeton-vl/DROID-SLAM
+      저자 목록: https://proceedings.neurips.cc/paper_files/paper/2021/hash/89fcd07f20b6785b92134bd6c1d0fa42-Abstract.html
+      소속·내용 원문: https://proceedings.neurips.cc/paper_files/paper/2021/file/89fcd07f20b6785b92134bd6c1d0fa42-Paper.pdf
+  changed_from:
+    id: pr-0017
+    tier: NEXT
+    tags:
+      - SLAM
+      - RGB-D
+      - geometry
+    facets:
+      learning: []
+      control_level:
+        - state_estimation
+      setting: []
+      embodiment: []
+      interaction:
+        - navigation
+      modality:
+        - depth
+        - point_cloud
+        - rgb
+    venue: NeurIPS
+    links:
+      page: https://arxiv.org/abs/2108.10869
+      project: https://github.com/princeton-vl/DROID-SLAM
+      code: https://github.com/princeton-vl/DROID-SLAM
+    openness:
+      code: released
+      weights: not_recorded
+      data: not_identified
+- id: 2024-lu-manigaussian
+  registry_id: pr-0208
+  title: 'ManiGaussian: Dynamic Gaussian Splatting for Multi-task Robotic Manipulation'
+  authors:
+    - Guanxing Lu
+    - Shiyi Zhang
+    - Ziwei Wang
+    - Changliu Liu
+    - Jiwen Lu
+    - Yansong Tang
+  affiliations:
+    - Tsinghua University
+    - Nanyang Technological University
+    - Carnegie Mellon University
+  year: 2024
+  venue: ECCV
+  links:
+    paper: https://www.ecva.net/papers/eccv_2024/papers_ECCV/html/5194_ECCV_2024_paper.php
+    project: https://guanxinglu.github.io/ManiGaussian/
+    code: https://github.com/GuanxingLu/ManiGaussian
+  tier: 2
+  one_line_summary: 행동 조건부 미래 장면을 예측하는 3D Gaussian 표현을 시연 기반 조작 정책과 함께 학습한다.
+  key_contributions:
+    - 여러 카메라에서 보이는 장면에 대해 동적 Gaussian 표현을 최적화한다.
+    - 미래 장면 재구성 보조 목적이 다중 태스크 행동 예측에 주는 효과를 비교한다.
+  method_tags:
+    - IL
+  task_tags:
+    - 조작
+  embodiment_tags:
+    - 단팔
+  modality_tags:
+    - RGB
+    - depth
+    - 언어
+    - 고유수용감각
+  data_source_tags:
+    - 시뮬
+  openness:
+    code: 'Y'
+    weights: unknown
+    data: unknown
+  datasets_benchmarks:
+    - RLBench
+  limitations:
+    paper_reported: 결론. Gaussian Splatting의 다중 시점 감독에 보정된 카메라가 필요하다.
+    subsequent_work: unknown
+  prior_work:
+    - pr-0011
+  verification: 부분확인
+  notes: 카메라 보정이 필요한 다중 시점 조작 정책이다. 제공된 체크포인트 링크에서 파일을 확인할 수 없었다.
+  evidence:
+    verified_on: '2026-11-19'
+    sources:
+      원문·서지: https://www.ecva.net/papers/eccv_2024/papers_ECCV/html/5194_ECCV_2024_paper.php
+      저장소: https://github.com/GuanxingLu/ManiGaussian
+      가중치: https://cloud.tsinghua.edu.cn/d/b09de0a8d23f41b9b4ee/
+      저자 목록: https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/05194.pdf
+      소속·내용 원문: https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/05194.pdf
+  changed_from:
+    id: pr-0208
+    tier: NEXT
+    tags:
+      - Robotics
+      - Gaussian Splatting
+    facets:
+      learning: []
+      control_level: []
+      setting: []
+      embodiment:
+        - arm
+      interaction:
+        - grasping
+      modality:
+        - language
+        - point_cloud
+    venue: ECCV
+    links:
+      page: https://www.ecva.net/papers/eccv_2024/papers_ECCV/html/5194_ECCV_2024_paper.php
+      project: not identified
+      code: null
+    openness:
+      code: not_identified
+      weights: not_recorded
+      data: not_identified
+- id: 2018-anderson-r2r
+  registry_id: pr-0539
+  title: 'Vision-and-Language Navigation: Interpreting Visually-Grounded Navigation Instructions in Real Environments'
+  authors:
+    - Peter Anderson
+    - Qi Wu
+    - Damien Teney
+    - Jake Bruce
+    - Mark Johnson
+    - Niko Sünderhauf
+    - Ian Reid
+    - Stephen Gould
+    - Anton van den Hengel
+  affiliations:
+    - Australian National University
+    - University of Adelaide
+    - Queensland University of Technology
+    - Macquarie University
+  year: 2018
+  venue: CVPR
+  links:
+    paper: https://openaccess.thecvf.com/content_cvpr_2018/html/Anderson_Vision-and-Language_Navigation_Interpreting_CVPR_2018_paper.html
+    project: https://bringmeaspoon.org/
+    code: https://github.com/peteanderson80/Matterport3DSimulator
+  tier: 2
+  one_line_summary: 실내 스캔의 경로와 사람이 작성한 지시를 대응시켜 언어 지시 내비게이션 과제를 정의한다.
+  key_contributions:
+    - Matterport3D의 파노라마 연결 그래프에서 이동하는 시뮬레이터와 R2R 데이터를 구축한다.
+    - 시각·언어 시퀀스 정책의 익숙한 건물과 새로운 건물에서의 경로 추종을 비교한다.
+  method_tags:
+    - IL
+  task_tags:
+    - 내비게이션
+  embodiment_tags:
+    - 기타
+  modality_tags:
+    - RGB
+    - 언어
+  data_source_tags:
+    - 시뮬
+  openness:
+    code: 'Y'
+    weights: unknown
+    data: 'Y'
+  datasets_benchmarks:
+    - Room-to-Room
+    - Matterport3D
+  limitations:
+    paper_reported: unknown
+    subsequent_work: VLN-CE가 R2R 그래프 평가의 알려진 위상, 단거리 이동 오라클, 완벽한 위치 추정 가정을 명시한다.
+  prior_work:
+    - pr-0499
+  verification: 부분확인
+  notes: 데이터 출처는 시뮬레이터의 경로 에피소드 기준이다. 시각 장면은 실제 건물을 스캔했고 사람이 지시문을 작성했다.
+  evidence:
+    verified_on: '2026-11-19'
+    sources:
+      원문·서지: https://openaccess.thecvf.com/content_cvpr_2018/html/Anderson_Vision-and-Language_Navigation_Interpreting_CVPR_2018_paper.html
+      저장소: https://github.com/peteanderson80/Matterport3DSimulator
+      프로젝트: https://bringmeaspoon.org/
+      저자 목록: https://openaccess.thecvf.com/content_cvpr_2018/html/Anderson_Vision-and-Language_Navigation_Interpreting_CVPR_2018_paper.html
+      소속·내용 원문: https://openaccess.thecvf.com/content_cvpr_2018/papers/Anderson_Vision-and-Language_Navigation_Interpreting_CVPR_2018_paper.pdf
+      후속 연구: https://arxiv.org/pdf/2004.02857
+  changed_from:
+    id: pr-0539
+    tier: NEXT
+    tags:
+      - Vision-Language Navigation
+      - Robotics
+      - Navigation
+      - Benchmark
+    facets:
+      learning: []
+      control_level:
+        - state_estimation
+      setting: []
+      embodiment:
+        - mobile
+      interaction:
+        - navigation
+      modality:
+        - language
+        - rgb
+    venue: CVPR
+    links:
+      page: https://arxiv.org/abs/1711.07280
+      project: https://bringmeaspoon.org/
+      code: null
+    openness:
+      code: project_only
+      weights: not_recorded
+      data: not_identified
+- id: 2025-yang-physicsgen
+  registry_id: pr-0651
+  title: Physics-Driven Data Generation for Contact-Rich Manipulation via Trajectory Optimization
+  authors:
+    - Lujie Yang
+    - H.j. Terry Suh
+    - Tong Zhao
+    - Bernhard Paus Graesdal
+    - Tarik Kelestemur
+    - Jiuguang Wang
+    - Tao Pang
+    - Russ Tedrake
+  affiliations:
+    - Massachusetts Institute of Technology
+    - Robotics and AI Institute
+  year: 2025
+  venue: RSS
+  links:
+    paper: https://www.roboticsproceedings.org/rss21/p053.html
+    project: https://lujieyang.github.io/physicsgen/
+    code: unknown
+  tier: 2
+  one_line_summary: 접촉 제약을 만족하는 궤적 최적화로 소수의 사람 시연을 여러 로봇의 학습 궤적으로 확장한다.
+  key_contributions:
+    - 가상 환경의 시연을 기구학적으로 재표적화하고 물리적으로 가능한 접촉 궤적으로 보정한다.
+    - 다른 기구·물리 파라미터에서 생성한 데이터로 모방 정책을 학습해 평가한다.
+  method_tags:
+    - 모델기반
+    - IL
+  task_tags:
+    - 조작
+  embodiment_tags:
+    - 양팔
+    - 기타
+  modality_tags:
+    - 고유수용감각
+    - 기타
+  data_source_tags:
+    - 시뮬
+  openness:
+    code: 'N'
+    weights: unknown
+    data: unknown
+  datasets_benchmarks:
+    - unknown
+  limitations:
+    paper_reported: Limitations and Future Work. 사람 손 시연은 연속 관절 회전 등 대상 로봇 고유의 기구학적 능력을 충분히 활용하지 못할 수 있다.
+    subsequent_work: unknown
+  prior_work:
+    - unknown
+  verification: 부분확인
+  notes: Allegro Hand와 양팔 로봇으로 시뮬레이션 궤적을 생성한다. 저자 사이트가 코드를 Coming Soon으로 표시한다.
+  evidence:
+    verified_on: '2026-11-19'
+    sources:
+      원문·서지: https://www.roboticsproceedings.org/rss21/p053.html
+      본문: https://arxiv.org/html/2502.20382
+      저자 사이트: https://lujieyang.github.io/physicsgen/
+      저자 목록: https://www.roboticsproceedings.org/rss21/p053.html
+      소속·내용 원문: https://arxiv.org/html/2502.20382
+  changed_from:
+    id: pr-0651
+    tier: NEXT
+    tags:
+      - Robotics
+      - contact-rich manipulation
+      - trajectory optimization
+      - synthetic data
+    facets:
+      learning:
+        - optimization_or_planning
+      control_level:
+        - motion_planning
+      setting: []
+      embodiment:
+        - arm
+      interaction:
+        - contact_rich
+        - grasping
+      modality: []
+    venue: RSS
+    links:
+      page: https://www.roboticsproceedings.org/rss21/p053.html
+      project: https://lujieyang.github.io/physicsgen/
+      code: null
+    openness:
+      code: project_only
+      weights: not_recorded
+      data: not_identified
+- id: 2026-guo-ctrlworld
+  registry_id: pr-0687
+  title: 'Ctrl-World: A Controllable Generative World Model for Robot Manipulation'
+  authors:
+    - Yanjiang Guo
+    - Lucy Xiaoyang Shi
+    - Jianyu Chen
+    - Chelsea Finn
+  affiliations:
+    - Stanford University
+    - Tsinghua University
+  year: 2026
+  venue: ICLR
+  links:
+    paper: https://arxiv.org/abs/2510.10125
+    project: https://ctrl-world.github.io/
+    code: https://github.com/Robert-gyj/Ctrl-World
+  tier: 2
+  one_line_summary: 로봇 행동에 조건화한 다중 시점 영상 세계 모델을 사용해 정책을 가상으로 실행한다.
+  key_contributions:
+    - 시간 이력과 여러 시점의 관측을 결합해 연속적인 행동 조건부 영상을 생성한다.
+    - 가상 롤아웃을 정책 평가와 지시 수행 개선을 위한 데이터 생성에 적용한다.
+  method_tags:
+    - 모델기반
+  task_tags:
+    - 조작
+  embodiment_tags:
+    - 단팔
+  modality_tags:
+    - RGB
+    - 기타
+  data_source_tags:
+    - 실제로봇
+  openness:
+    code: 'Y'
+    weights: 'Y'
+    data: 부분
+  datasets_benchmarks:
+    - DROID
+  limitations:
+    paper_reported: Discussion. 가상 롤아웃을 이용한 개선 실험은 지시 수행 개선에 집중한다.
+    subsequent_work: unknown
+  prior_work:
+    - unknown
+  verification: 부분확인
+  notes: 모델은 제어 행동을 입력으로 받아 영상을 예측한다. DROID 실기 데이터로 학습하고 일반 정책의 가상 롤아웃에 사용한다.
+  revisions:
+    - field: openness.data
+      changed_from: unknown
+      reviewed_on: '2026-11-19'
+      reason: 저자가 새 DROID 환경에서 얻은 예제 영상과 주석을 배포한다. 원 DROID 전체는 별도 연구의 데이터다.
+      source: https://github.com/Robert-gyj/Ctrl-World/tree/main/dataset_example/droid_new_setup
+  evidence:
+    verified_on: '2026-11-19'
+    sources:
+      원문·서지: https://iclr.cc/virtual/2026/poster/10011332
+      저장소: https://github.com/Robert-gyj/Ctrl-World
+      모델: https://huggingface.co/yjguo/Ctrl-World
+      저자 목록: https://arxiv.org/abs/2510.10125
+      소속·내용 원문: https://arxiv.org/pdf/2510.10125
+  changed_from:
+    id: pr-0687
+    tier: NEXT
+    tags:
+      - Robotics
+      - world model
+      - robot manipulation
+      - controllable generation
+    facets:
+      learning:
+        - world_model
+      control_level:
+        - feedback_control
+        - safety_or_recovery
+      setting: []
+      embodiment:
+        - arm
+      interaction:
+        - grasping
+      modality: []
+    venue: ICLR
+    links:
+      page: https://iclr.cc/virtual/2026/poster/10011332
+      project: https://ctrl-world.github.io/
+      code: null
+    openness:
+      code: project_only
+      weights: not_recorded
+      data: not_identified
+- id: 2022-xu-umpnet
+  registry_id: pr-0716
+  title: 'UMPNet: Universal Manipulation Policy Network for Articulated Objects'
+  authors:
+    - Zhenjia Xu
+    - Zhanpeng He
+    - Shuran Song
+  affiliations:
+    - Columbia University
+  year: 2022
+  venue: RA-L
+  links:
+    paper: https://arxiv.org/abs/2109.05668
+    project: https://ump-net.cs.columbia.edu/
+    code: https://github.com/columbia-ai-robotics/umpnet
+  tier: 2
+  one_line_summary: RGB-D로 관절 물체의 작용점과 이동 방향을 예측해 닫힌루프에서 조작한다.
+  key_contributions:
+    - 자기주도 탐색으로 사람 시연 없이 상호작용 정책을 학습한다.
+    - Arrow-of-Time으로 과거 상태를 향하는 행동과 새로운 상태를 향하는 행동을 구분한다.
+  method_tags:
+    - unknown
+  task_tags:
+    - 조작
+  embodiment_tags:
+    - 단팔
+  modality_tags:
+    - RGB
+    - depth
+  data_source_tags:
+    - 시뮬
+  openness:
+    code: 'Y'
+    weights: 'Y'
+    data: 'Y'
+  datasets_benchmarks:
+    - PartNet-Mobility
+  limitations:
+    paper_reported: Limitations and failure cases. 시간을 거슬러 행동을 되짚는 조작은 궤적이 양방향으로 유효하다는 가정을 둔다.
+    subsequent_work: unknown
+  prior_work:
+    - pr-0712
+  verification: 부분확인
+  notes: 스스로 탐색해 관절 물체의 작용 방향을 학습한다. 자기지도 상호작용을 독립적인 방법론 값으로 표현할 수 없다.
+  evidence:
+    verified_on: '2026-11-19'
+    sources:
+      저자 서지: https://ump-net.cs.columbia.edu/
+      등록 원문: https://arxiv.org/abs/2109.05668
+      저장소: https://github.com/columbia-ai-robotics/umpnet
+      저자 목록: https://arxiv.org/abs/2109.05668
+      소속·내용 원문: https://arxiv.org/pdf/2109.05668
+  changed_from:
+    id: pr-0716
+    tier: NEXT
+    tags:
+      - Robotics
+      - 3D Vision
+      - active perception
+      - articulated objects
+      - manipulation policy
+    facets:
+      learning: []
+      control_level:
+        - policy
+        - state_estimation
+      setting: []
+      embodiment:
+        - arm
+      interaction:
+        - grasping
+      modality:
+        - rgb
+    venue: RA-L
+    links:
+      page: https://arxiv.org/abs/2109.05668
+      project: https://ump-net.cs.columbia.edu/
+      code: null
+    openness:
+      code: project_only
+      weights: not_recorded
+      data: not_identified
+- id: 2023-rana-sayplan
+  registry_id: pr-0720
+  title: 'SayPlan: Grounding Large Language Models using 3D Scene Graphs for Scalable Robot Task Planning'
+  authors:
+    - Krishan Rana
+    - Jesse Haviland
+    - Sourav Garg
+    - Jad Abou-Chakra
+    - Ian Reid
+    - Niko Suenderhauf
+  affiliations:
+    - Queensland University of Technology
+    - CSIRO Data61
+    - University of Adelaide
+  year: 2023
+  venue: CoRL
+  links:
+    paper: https://proceedings.mlr.press/v229/rana23a.html
+    project: https://sayplan.github.io/
+    code: unknown
+  tier: 2
+  one_line_summary: 계층적 3D 장면 그래프에서 지시에 필요한 부분을 선택해 대규모 공간의 로봇 계획을 생성한다.
+  key_contributions:
+    - 언어 모델이 그래프를 펼치거나 접어 과제 관련 부분만 문맥에 유지한다.
+    - 시뮬레이터 피드백으로 실행 불가능한 단계의 원인을 받아 재계획한다.
+  method_tags:
+    - 모델기반
+  task_tags:
+    - 모바일매니퓰레이션
+  embodiment_tags:
+    - 모바일매니퓰레이터
+  modality_tags:
+    - 언어
+    - 기타
+  data_source_tags:
+    - unknown
+  openness:
+    code: unknown
+    weights: unknown
+    data: unknown
+  datasets_benchmarks:
+    - unknown
+  limitations:
+    paper_reported: 결론. 미리 구축한 3D 장면 그래프가 필요하며 지도 작성 뒤 물체가 움직이지 않는다고 가정한다.
+    subsequent_work: unknown
+  prior_work:
+    - unknown
+  verification: 부분확인
+  notes: 계획기 입력은 지시와 3D 장면 그래프다. 저자 사이트에서 논문과 영상을 확인했다.
+  evidence:
+    verified_on: '2026-11-19'
+    sources:
+      원문·서지: https://proceedings.mlr.press/v229/rana23a.html
+      프로젝트: https://sayplan.github.io/
+      저자 목록: https://proceedings.mlr.press/v229/rana23a.html
+      소속·내용 원문: https://proceedings.mlr.press/v229/rana23a/rana23a.pdf
+  changed_from:
+    id: pr-0720
+    tier: NEXT
+    tags:
+      - Robotics
+      - 3D Vision
+      - LLM planning
+      - 3D Scene Graph
+      - replanning
+      - mobile manipulation
+    facets:
+      learning:
+        - optimization_or_planning
+      control_level:
+        - task_planning
+      setting:
+        - long_horizon
+      embodiment:
+        - arm
+        - mobile
+      interaction:
+        - grasping
+      modality:
+        - language
+        - rgb
+    venue: CoRL
+    links:
+      page: https://proceedings.mlr.press/v229/rana23a.html
+      project: https://sayplan.github.io/
+      code: null
+    openness:
+      code: project_only
+      weights: not_recorded
+      data: not_identified
+- id: 2022-narang-factory
+  registry_id: pr-0736
+  title: 'Factory: Fast Contact for Robotic Assembly'
+  authors:
+    - Yashraj Narang
+    - Kier Storey
+    - Iretiayo Akinola
+    - Miles Macklin
+    - Philipp Reist
+    - Lukasz Wawrzyniak
+    - Yunrong Guo
+    - Adam Moravanszky
+    - Gavriel State
+    - Michelle Lu
+    - Ankur Handa
+    - Dieter Fox
+  affiliations:
+    - NVIDIA
+    - University of Washington
+  year: 2022
+  venue: RSS
+  links:
+    paper: https://www.roboticsproceedings.org/rss18/p035.html
+    project: unknown
+    code: https://github.com/NVIDIA-Omniverse/IsaacGymEnvs
+  tier: 2
+  one_line_summary: 조립 부품의 다수 접촉을 빠르게 계산하는 시뮬레이션과 학습용 조립 과업을 제시한다.
+  key_contributions:
+    - 접촉 생성과 축소·해결을 결합해 다수 조립 환경을 병렬 시뮬레이션한다.
+    - 가상 조립 작업에서 강화학습 정책을 훈련하고 접촉력의 물리적 타당성을 점검한다.
+  method_tags:
+    - 모델기반
+    - RL
+  task_tags:
+    - 조작
+  embodiment_tags:
+    - 단팔
+  modality_tags:
+    - 고유수용감각
+    - 기타
+  data_source_tags:
+    - 시뮬
+  openness:
+    code: 'Y'
+    weights: unknown
+    data: 'Y'
+  datasets_benchmarks:
+    - Factory
+  limitations:
+    paper_reported: unknown
+    subsequent_work: unknown
+  prior_work:
+    - unknown
+  verification: 부분확인
+  notes: 조립 시뮬레이션의 접촉력과 문헌 측정값을 비교한다. 학습 데이터 출처는 시뮬이다. 공개 자산에 CAD·URDF가 포함된다.
+  evidence:
+    verified_on: '2026-11-19'
+    sources:
+      원문·서지: https://www.roboticsproceedings.org/rss18/p035.html
+      저장소: https://github.com/NVIDIA-Omniverse/IsaacGymEnvs
+      자산 목록: https://api.github.com/repos/isaac-sim/IsaacGymEnvs/contents/assets/factory
+      저자 목록: https://www.roboticsproceedings.org/rss18/p035.html
+      소속·내용 원문: https://www.roboticsproceedings.org/rss18/p035.pdf
+  changed_from:
+    id: pr-0736
+    tier: NEXT
+    tags:
+      - Robotics
+      - assembly
+      - contact-rich manipulation
+      - simulation
+      - Reinforcement Learning
+      - sim-to-real
+    facets:
+      learning:
+        - reinforcement_learning
+      control_level: []
+      setting:
+        - sim_to_real
+        - simulation
+      embodiment:
+        - arm
+      interaction:
+        - assembly
+        - contact_rich
+        - grasping
+      modality:
+        - force_torque
+    venue: RSS
+    links:
+      page: https://arxiv.org/abs/2205.03532
+      project: https://github.com/NVIDIA-Omniverse/IsaacGymEnvs
+      code: https://github.com/NVIDIA-Omniverse/IsaacGymEnvs
+    openness:
+      code: released
+      weights: not_recorded
+      data: not_identified
+- id: 2026-francis-meretzki-tdqc
+  registry_id: pr-0816
+  title: 'Temporal Difference Calibration in Sequential Tasks: Application to Vision-Language-Action Models'
+  authors:
+    - Shelly Francis-Meretzki
+    - Mirco Mutti
+    - Yaniv Romano
+    - Aviv Tamar
+  affiliations:
+    - Technion – Israel Institute of Technology
+  year: 2026
+  venue: ICML
+  links:
+    paper: https://proceedings.mlr.press/v306/francis-meretzki26a.html
+    project: https://shellytechnion.github.io/TDQC.github.io/
+    code: https://github.com/shellytechnion/TDQC
+  tier: 2
+  one_line_summary: 에피소드 종료 시에만 판정되는 성공 여부를 바탕으로 중간 시점의 성공 확률을 보정한다.
+  key_contributions:
+    - 순차적 Brier 위험의 최적 예측과 정책 가치함수의 관계를 유도한다.
+    - 시간차 학습을 이용해 부분 궤적으로부터 신뢰도를 보정하는 방법을 평가한다.
+  method_tags:
+    - unknown
+  task_tags:
+    - 조작
+  embodiment_tags:
+    - unknown
+  modality_tags:
+    - 기타
+  data_source_tags:
+    - unknown
+  openness:
+    code: 'Y'
+    weights: unknown
+    data: unknown
+  datasets_benchmarks:
+    - SAFE
+  limitations:
+    paper_reported: 행동 선택 응용. 실제 환경에서 학습된 세계 모델로 후보 행동을 평가하는 확장은 후속 연구로 남긴다.
+    subsequent_work: unknown
+  prior_work:
+    - unknown
+  verification: 부분확인
+  notes: 입력은 평가 대상 정책에서 얻은 궤적·중간 신뢰도다. 평가 대상 VLA의 백본이나 행동 헤드는 보정 방법의 속성으로 기입하지 않았다.
+  evidence:
+    verified_on: '2026-11-19'
+    sources:
+      원문·서지: https://proceedings.mlr.press/v306/francis-meretzki26a.html
+      저자 사이트: https://shellytechnion.github.io/TDQC.github.io/
+      저장소: https://github.com/shellytechnion/TDQC
+      저자 목록: https://proceedings.mlr.press/v306/francis-meretzki26a.html
+      소속·내용 원문: https://raw.githubusercontent.com/mlresearch/v306/main/assets/francis-meretzki26a/francis-meretzki26a.pdf
+  changed_from:
+    id: pr-0816
+    tier: NEXT
+    tags:
+      - Robotics
+      - VLA
+      - uncertainty
+      - calibration
+      - temporal difference
+      - failure detection
+      - LIBERO
+    facets:
+      learning:
+        - vla
+        - world_model
+      control_level:
+        - policy
+        - safety_or_recovery
+      setting: []
+      embodiment: []
+      interaction: []
+      modality:
+        - language
+        - rgb
+    venue: ICML
+    links:
+      page: https://arxiv.org/abs/2604.20472
+      project: https://shellytechnion.github.io/TDQC.github.io/
+      code: https://github.com/shellytechnion/TDQC
+    openness:
+      code: released
+      weights: not_recorded
+      data: not_identified
+- id: 2026-gao-dreamdojo
+  registry_id: pr-0871
+  title: 'DreamDojo: A Generalist Robot World Model from Large-Scale Human Videos'
+  authors:
+    - Shenyuan Gao
+    - William Liang
+    - Kaiyuan Zheng
+    - Ayaan Naveed Malik
+    - Seonghyeon Ye
+    - Sihyun Yu
+    - Wei-Cheng Tseng
+    - Yuzhu Dong
+    - Kaichun Mo
+    - Chen-Hsuan Lin
+    - Jiannan Xiang
+    - Yuqi Xie
+    - Ruijie Zheng
+    - Dantong Niu
+    - Pooya Jannaty
+    - Jinwei Gu
+    - Jun Zhang
+    - Jitendra Malik
+    - Pieter Abbeel
+    - Ming-Yu Liu
+    - Yuke Zhu
+    - Joel Jang
+    - Linxi Fan
+  affiliations:
+    - NVIDIA
+    - HKUST
+    - UC Berkeley
+    - University of Washington
+    - Stanford University
+    - KAIST
+    - University of Toronto
+    - UC San Diego
+    - UT Austin
+  year: 2026
+  venue: ICML
+  links:
+    paper: https://proceedings.mlr.press/v306/gao26q.html
+    project: https://dreamdojo-world.github.io/
+    code: https://github.com/NVIDIA/DreamDojo
+  tier: 2
+  one_line_summary: 사람의 1인칭 영상에서 상호작용 동역학을 사전학습한 뒤 로봇 행동에 조건화해 미래 영상을 생성한다.
+  key_contributions:
+    - 행동 레이블이 없는 사람 영상에 잠재 행동을 사용하고 로봇 데이터로 후속 학습한다.
+    - 여러 로봇의 행동 조건과 미관측 장면에서 영상 예측을 평가하고 추론용 증류를 수행한다.
+  method_tags:
+    - 모델기반
+  task_tags:
+    - 조작
+  embodiment_tags:
+    - 휴머노이드
+    - 양팔
+  modality_tags:
+    - RGB
+    - 기타
+  data_source_tags:
+    - 혼합
+  openness:
+    code: 'Y'
+    weights: 'Y'
+    data: 부분
+  datasets_benchmarks:
+    - DreamDojo-HV
+  humanoid:
+    control_scope:
+      - unknown
+    training:
+      - unknown
+    hardware:
+      - Fourier GR-1
+      - Unitree G1
+    hand_type:
+      - unknown
+    role: 행동을 입력받는 세계 모델의 데이터·평가 기종. 제어 정책 학습 속성은 미확정이다.
+  limitations:
+    paper_reported: unknown
+    subsequent_work: unknown
+  prior_work:
+    - unknown
+  verification: 부분확인
+  notes: GR-1 등은 행동 조건부 영상 예측·평가 대상이다. 저자 배포의 GR-1 자료를 확인했으며 전체 44,000시간 사전학습 코퍼스의 배포 여부는 미확정이다.
+  evidence:
+    verified_on: '2026-11-19'
+    sources:
+      원문·서지: https://proceedings.mlr.press/v306/gao26q.html
+      저장소: https://github.com/NVIDIA/DreamDojo
+      모델: https://huggingface.co/nvidia/DreamDojo
+      프로젝트: https://dreamdojo-world.github.io/
+      저자 목록: https://proceedings.mlr.press/v306/gao26q.html
+      소속·내용 원문: https://raw.githubusercontent.com/mlresearch/v306/main/assets/gao26q/gao26q.pdf
+  changed_from:
+    id: pr-0871
+    tier: NEXT
+    tags:
+      - Robotics
+      - world model
+      - human video
+      - generalist policy
+      - NVIDIA
+    facets:
+      learning:
+        - world_model
+      control_level:
+        - policy
+        - safety_or_recovery
+      setting: []
+      embodiment: []
+      interaction: []
+      modality:
+        - video
+    venue: ICML
+    links:
+      page: https://arxiv.org/abs/2602.06949
+      project: https://research.nvidia.com/labs/gear/
+      code: null
+    openness:
+      code: project_only
+      weights: not_recorded
+      data: not_identified
+    problem: robot interaction data 부족을 human video의 broad physical experience로 보완하면서 robot-controllable dynamics를 학습한다.
+    method: large-scale human video pretraining과 robot data adaptation/conditioning을 결합한 generative robot world model을 제시한다.
+    evaluation: 다양한 robot tasks/embodiments의 prediction과 policy utility가 보고되며 exact protocols는 정독 후 확정한다.
+- id: 2024-chi-umi
+  registry_id: pr-0873
+  title: 'Universal Manipulation Interface: In-The-Wild Robot Teaching Without In-The-Wild Robots'
+  authors:
+    - Cheng Chi
+    - Zhenjia Xu
+    - Chuer Pan
+    - Eric Cousineau
+    - Benjamin Burchfiel
+    - Siyuan Feng
+    - Russ Tedrake
+    - Shuran Song
+  affiliations:
+    - Stanford University
+    - Columbia University
+    - Toyota Research Institute
+  year: 2024
+  venue: RSS
+  links:
+    paper: https://www.roboticsproceedings.org/rss20/p045.html
+    project: https://umi-gripper.github.io
+    code: https://github.com/real-stanford/universal_manipulation_interface
+  tier: 2
+  one_line_summary: 휴대형 그리퍼로 일상 환경에서 수집한 사람 시연을 로봇 조작 정책으로 옮긴다.
+  key_contributions:
+    - 손목 카메라·그리퍼 개방 폭·시각 추정 자세를 정렬해 행동 시퀀스를 복원한다.
+    - 상대 행동 표현과 시간 지연 보상을 적용해 단팔·양팔 로봇에서 시연의 전이를 평가한다.
+  method_tags:
+    - IL
+  task_tags:
+    - 조작
+  embodiment_tags:
+    - 단팔
+    - 양팔
+  modality_tags:
+    - RGB
+    - 고유수용감각
+  data_source_tags:
+    - unknown
+  openness:
+    code: 'Y'
+    weights: 부분
+    data: 'Y'
+  datasets_benchmarks:
+    - UMI
+  limitations:
+    paper_reported: Limitations and Future Works. 수집 시점에 배포 로봇의 기구학적 한계를 알 수 없어 데이터를 필터링해야 한다.
+    subsequent_work: unknown
+  prior_work:
+    - pr-0019
+  verification: 부분확인
+  notes: 사람이 휴대하는 그리퍼의 시연은 RGB 영상, 상대 자세, 개방 폭을 함께 포함한다. 정책을 실행한 로봇과 데이터를 수집한 장치를 구분했다. 공개 모델은 cup 정책이다.
+  evidence:
+    verified_on: '2026-11-19'
+    sources:
+      원문·서지: https://www.roboticsproceedings.org/rss20/p045.html
+      저장소: https://github.com/real-stanford/universal_manipulation_interface
+      가중치: https://real.stanford.edu/umi/data/pretrained_models/
+      자료: https://real.stanford.edu/umi/data/zarr_datasets/
+      저자 목록: https://www.roboticsproceedings.org/rss20/p045.html
+      소속·내용 원문: https://www.roboticsproceedings.org/rss20/p045.pdf
+  changed_from:
+    id: pr-0873
+    tier: NEXT
+    tags:
+      - Robotics
+      - Imitation Learning
+      - human video
+      - cross-embodiment
+      - action representation
+      - bimanual
+    facets:
+      learning:
+        - imitation_learning
+      control_level:
+        - policy
+      setting: []
+      embodiment:
+        - arm
+        - bimanual
+      interaction:
+        - grasping
+      modality:
+        - video
+    venue: RSS
+    links:
+      page: https://www.roboticsproceedings.org/rss20/p045.html
+      project: https://umi-gripper.github.io
+      code: null
+    openness:
+      code: project_only
+      weights: not_recorded
+      data: not_identified
+    problem: Expert robot demonstrations are expensive and hardware-specific, limiting diverse dynamic and bimanual manipulation data.
+    method: A handheld gripper and wrist camera collect portable demonstrations; latency matching and relative-trajectory actions make policies retargetable
+      across robot platforms.
+    evaluation: The official paper reports real-world dynamic, bimanual, precise, and long-horizon manipulation together with zero-shot transfer to
+      novel environments and objects.
+- id: 2025-shukor-smolvla
+  registry_id: pr-0915
+  title: 'SmolVLA: A Vision-Language-Action Model for Affordable and Efficient Robotics'
+  authors:
+    - Mustafa Shukor
+    - Dana Aubakirova
+    - Francesco Capuano
+    - Pepijn Kooijmans
+    - Steven Palma
+    - Adil Zouitine
+    - Michel Aractingi
+    - Caroline Pascal
+    - Martino Russi
+    - Andres Marafioti
+    - Simon Alibert
+    - Matthieu Cord
+    - Thomas Wolf
+    - Remi Cadene
+  affiliations:
+    - Hugging Face
+    - Sorbonne University
+    - valeo.ai
+    - École Normale Supérieure Paris-Saclay
+  year: 2025
+  venue: arXiv preprint
+  links:
+    paper: https://arxiv.org/abs/2506.01844
+    project: https://huggingface.co/blog/smolvla
+    code: https://github.com/huggingface/lerobot
+  tier: 2
+  one_line_summary: 소형 VLM과 flow 행동 전문가를 결합해 저비용 로봇에서 지시 조건부 조작을 수행한다.
+  key_contributions:
+    - 커뮤니티 시연으로 사전학습한 경량 정책을 시뮬레이션과 실제 로봇에서 미세조정한다.
+    - 관측 송신과 행동 예측을 비동기화해 로봇이 추론 결과를 기다리는 시간을 줄인다.
+  method_tags:
+    - IL
+  task_tags:
+    - 조작
+  embodiment_tags:
+    - 단팔
+  modality_tags:
+    - RGB
+    - 언어
+    - 고유수용감각
+  data_source_tags:
+    - 혼합
+  openness:
+    code: 'Y'
+    weights: 'Y'
+    data: 부분
+  datasets_benchmarks:
+    - LIBERO
+    - Meta-World
+  vla:
+    backbone:
+      name: SmolVLM2-500M-Video-Instruct
+      size: 500M
+    action_representation:
+      - 연속(diffusion·flow matching)
+    architecture: 단일 모델
+    training:
+      - SFT
+    evaluation:
+      sim_benchmarks:
+        - LIBERO
+        - Meta-World
+      real_robot_tasks: 4
+  limitations:
+    paper_reported: Limitations. 사전학습에 사용한 커뮤니티 시연은 SO100 한 종류의 로봇에 집중되어 있다.
+    subsequent_work: unknown
+  prior_work:
+    - unknown
+  verification: 부분확인
+  notes: 500M은 공개 설정의 SmolVLM2 백본 모델 이름 기준이다. 공개 데이터는 SO100 stacking 등 저자 배포분에 해당한다.
+  evidence:
+    verified_on: '2026-11-19'
+    sources:
+      원문·서지: https://arxiv.org/abs/2506.01844
+      모델: https://huggingface.co/lerobot/smolvla_base
+      자료: https://huggingface.co/datasets/lerobot/svla_so100_stacking
+      저자 사이트: https://huggingface.co/blog/smolvla
+      백본 설정: https://huggingface.co/lerobot/smolvla_base/blob/main/config.json
+      저자 목록: https://arxiv.org/abs/2506.01844
+      소속·내용 원문: https://arxiv.org/pdf/2506.01844
+  changed_from:
+    id: pr-0915
+    tier: NEXT
+    tags:
+      - VLA
+      - Robotics
+      - efficient deployment
+      - action chunking
+      - community data
+      - real-world manipulation
+    facets:
+      learning:
+        - vla
+      control_level:
+        - policy
+      setting:
+        - real_robot
+      embodiment:
+        - arm
+      interaction:
+        - grasping
+      modality:
+        - language
+        - rgb
+    venue: arXiv
+    links:
+      page: https://arxiv.org/abs/2506.01844
+      project: https://github.com/huggingface/lerobot
+      code: https://github.com/huggingface/lerobot
+    openness:
+      code: released
+      weights: not_recorded
+      data: not_identified
+    problem: Large VLAs are costly to train and deploy, limiting reproducibility and community robot-learning access.
+    method: SmolVLA builds a compact VLA around efficient inference, chunked actions, and an open training/data ecosystem.
+    evaluation: The arXiv abstract reports single-GPU training and consumer hardware/CPU deployment in simulation and real-robot settings.
+- id: 2024-zhen-3dvla
+  registry_id: pr-0939
+  title: '3D-VLA: A 3D Vision-Language-Action Generative World Model'
+  authors:
+    - Haoyu Zhen
+    - Xiaowen Qiu
+    - Peihao Chen
+    - Jincheng Yang
+    - Xin Yan
+    - Yilun Du
+    - Yining Hong
+    - Chuang Gan
+  affiliations:
+    - University of Massachusetts Amherst
+    - Shanghai Jiao Tong University
+    - South China University of Technology
+    - Wuhan University
+    - MIT
+    - University of California Los Angeles
+    - MIT-IBM Watson AI Lab
+  year: 2024
+  venue: ICML
+  links:
+    paper: https://icml.cc/virtual/2024/poster/34575
+    project: unknown
+    code: https://github.com/UMass-Embodied-AGI/3D-VLA
+  tier: 2
+  one_line_summary: 3차원 장면·언어·행동 토큰을 연결하고 목표 관측을 생성해 조작 행동을 예측한다.
+  key_contributions:
+    - 3D 언어 모델에 물체·장면·행동 상호작용 토큰을 도입한다.
+    - 영상과 점군 목표 생성기를 훈련하고 시뮬레이션에서 행동 예측과 장기 수행을 평가한다.
+  method_tags:
+    - IL
+  task_tags:
+    - 조작
+  embodiment_tags:
+    - 단팔
+  modality_tags:
+    - RGB
+    - depth
+    - 언어
+    - 기타
+  data_source_tags:
+    - 혼합
+  openness:
+    code: 'Y'
+    weights: 부분
+    data: unknown
+  datasets_benchmarks:
+    - RLBench
+    - CALVIN
+  vla:
+    backbone:
+      name: 3D-LLM / BLIP2-FlanT5 XL
+      size: unknown
+    action_representation:
+      - 이산 토큰
+    architecture: 기타
+    training:
+      - SFT
+    evaluation:
+      sim_benchmarks:
+        - RLBench
+        - CALVIN
+      real_robot_tasks: unknown
+  limitations:
+    paper_reported: unknown
+    subsequent_work: unknown
+  prior_work:
+    - pr-0034
+  verification: 부분확인
+  notes: 행동은 이산 토큰이며 목표 영상·점군을 만드는 diffusion과 별개다. 확인한 공개 가중치는 목표 생성기들이다. 저자 저장소에 적힌 프로젝트 주소에는 이번 점검에서 연결하지 못했다.
+  evidence:
+    verified_on: '2026-11-19'
+    sources:
+      원문·서지: https://icml.cc/virtual/2024/poster/34575
+      본문: https://arxiv.org/html/2403.09631
+      저장소: https://github.com/UMass-Embodied-AGI/3D-VLA
+      모델 카드: https://github.com/UMass-Embodied-AGI/3D-VLA/blob/main/docs/model_card.md
+      프로젝트: https://vis-www.cs.umass.edu/3dvla/
+      저자 목록: https://arxiv.org/abs/2403.09631
+      소속·내용 원문: https://arxiv.org/html/2403.09631
+  changed_from:
+    id: pr-0939
+    tier: NEXT
+    tags:
+      - Robotics
+      - VLA
+      - 3D reasoning
+      - world model
+      - action tokens
+      - Planning
+    facets:
+      learning:
+        - optimization_or_planning
+        - vla
+        - world_model
+      control_level:
+        - policy
+      setting: []
+      embodiment: []
+      interaction: []
+      modality:
+        - language
+        - rgb
+    venue: ICML
+    links:
+      page: https://icml.cc/virtual/2024/poster/34575
+      project: not identified
+      code: null
+    openness:
+      code: not_identified
+      weights: not_recorded
+      data: not_identified
+    problem: 2D VLA가 physical 3D world와 dynamics를 충분히 표현하지 못하고 perception-to-action direct mapping에 머무는 문제를 다룬다.
+    method: 3D-based LLM에 action token을 넣고 embodied diffusion model을 정렬해 goal image와 point cloud를 생성한다.
+    evaluation: held-in embodied dataset에서 3D reasoning·multimodal generation·planning capability를 평가한다.
+- id: 2021-szot-habitat2
+  registry_id: pr-0948
+  title: 'Habitat 2.0: Training Home Assistants to Rearrange their Habitat'
+  authors:
+    - Andrew Szot
+    - Alexander Clegg
+    - Eric Undersander
+    - Erik Wijmans
+    - Yili Zhao
+    - John Turner
+    - Noah Maestre
+    - Mustafa Mukadam
+    - Devendra Singh Chaplot
+    - Oleksandr Maksymets
+    - Aaron Gokaslan
+    - Vladimír Vondruš
+    - Sameer Dharur
+    - Franziska Meier
+    - Wojciech Galuba
+    - Angel Chang
+    - Zsolt Kira
+    - Vladlen Koltun
+    - Jitendra Malik
+    - Manolis Savva
+    - Dhruv Batra
+  affiliations:
+    - Facebook AI Research
+    - Georgia Institute of Technology
+    - Intel Research
+    - Simon Fraser University
+    - UC Berkeley
+  year: 2021
+  venue: NeurIPS
+  links:
+    paper: https://proceedings.neurips.cc/paper_files/paper/2021/hash/021bbc7ee20b71134d53e20206bd6feb-Abstract.html
+    project: https://aihabitat.org/
+    code: https://github.com/facebookresearch/habitat-lab
+  tier: 2
+  one_line_summary: 관절 물체와 물리를 갖춘 실내 장면에서 모바일 로봇의 물체 재배치를 평가한다.
+  key_contributions:
+    - 재구성 가능한 주거 장면 데이터 ReplicaCAD와 빠른 상호작용 시뮬레이터를 구축한다.
+    - 열기·집기·이동 등 기술을 긴 재배치 과업으로 구성해 학습 및 계획 방법을 비교한다.
+  method_tags:
+    - RL
+  task_tags:
+    - 조작
+    - 모바일매니퓰레이션
+  embodiment_tags:
+    - 모바일매니퓰레이터
+  modality_tags:
+    - RGB
+    - depth
+    - 고유수용감각
+  data_source_tags:
+    - 시뮬
+  openness:
+    code: 'Y'
+    weights: unknown
+    data: 부분
+  datasets_benchmarks:
+    - ReplicaCAD
+    - Habitat 2.0
+  limitations:
+    paper_reported: unknown
+    subsequent_work: unknown
+  prior_work:
+    - 2019-savva-habitat
+  verification: 부분확인
+  notes: ReplicaCAD 장면 105개 중 84개를 배포했고 21개는 평가용으로 유보했다.
+  evidence:
+    verified_on: '2026-11-19'
+    sources:
+      원문·서지: https://proceedings.neurips.cc/paper_files/paper/2021/hash/021bbc7ee20b71134d53e20206bd6feb-Abstract.html
+      저장소: https://github.com/facebookresearch/habitat-lab
+      자료: https://aihabitat.org/datasets/replica_cad/
+      저자 목록: https://proceedings.neurips.cc/paper_files/paper/2021/hash/021bbc7ee20b71134d53e20206bd6feb-Abstract.html
+      소속·내용 원문: https://proceedings.neurips.cc/paper_files/paper/2021/file/021bbc7ee20b71134d53e20206bd6feb-Paper.pdf
+  changed_from:
+    id: pr-0948
+    tier: NEXT
+    tags:
+      - Robotics
+      - simulation
+      - mobile manipulation
+      - Benchmark
+      - physics
+      - long-horizon tasks
+    facets:
+      learning: []
+      control_level: []
+      setting:
+        - long_horizon
+        - simulation
+      embodiment:
+        - arm
+        - mobile
+      interaction:
+        - grasping
+      modality: []
+    venue: NeurIPS
+    links:
+      page: https://proceedings.neurips.cc/paper_files/paper/2021/hash/021bbc7ee20b71134d53e20206bd6feb-Abstract.html
+      project: https://aihabitat.org/
+      code: null
+    openness:
+      code: project_only
+      weights: not_recorded
+      data: not_identified
+    problem: 집안 장기 task에서 RL과 classical sense-plan-act pipeline을 비교할 수 있는 physics-enabled environment와 benchmark가 부족한 문제를 다룬다.
+    method: ReplicaCAD articulated apartment dataset, physics-enabled H2.0 simulator, Home Assistant Benchmark를 함께 제공한다.
+    evaluation: 새 object·receptacle·layout generalization에서 flat/hierarchical RL과 classical SPA pipeline을 비교한다.
+- id: 2026-snyder-nscore
+  registry_id: pr-1028
+  title: 'Beyond Binary Success: Sample-Efficient and Statistically Rigorous Robot Policy Comparison'
+  authors:
+    - David Snyder
+    - Apurva Badithela
+    - Nikolai Matni
+    - George J. Pappas
+    - Anirudha Majumdar
+    - Masha Itkina
+    - Haruki Nishimura
+  affiliations:
+    - University of Pennsylvania
+    - Toyota Research Institute
+    - Princeton University
+  year: 2026
+  venue: RSS
+  links:
+    paper: https://roboticsproceedings.org/rss22/p076.html
+    project: unknown
+    code: https://github.com/dasnyder5/nscore
+  tier: 2
+  one_line_summary: 정책 간 성능 차이를 검정하는 데 필요한 로봇 평가 횟수를 순차적으로 결정한다.
+  key_contributions:
+    - N-SCORE로 이진 성공과 부분 진척 등 여러 점수에 대해 중간 결과를 보고 평가를 중단할 수 있게 한다.
+    - 통계적 오류 제어를 분석하고 합성 및 실기 평가 데이터에서 필요한 표본 수를 비교한다.
+  method_tags:
+    - unknown
+  task_tags:
+    - 조작
+  embodiment_tags:
+    - 휴머노이드
+  modality_tags:
+    - 기타
+  data_source_tags:
+    - 혼합
+  openness:
+    code: 'Y'
+    weights: unknown
+    data: 'Y'
+  datasets_benchmarks:
+    - RoboArena
+    - MuJoCo
+  humanoid:
+    control_scope:
+      - 로코모션
+    training:
+      - unknown
+    hardware:
+      - unknown
+    hand_type:
+      - unknown
+    role: 시뮬레이션 모델에서 평가. 실물 기종과 sim-to-real 학습은 확인 대상 밖이다.
+  limitations:
+    paper_reported: Limitations and Future Work. 순차 추론의 제1종 오류 통제가 보수적이어서 사용할 수 있는 오류 예산 일부가 남는다.
+    subsequent_work: unknown
+  prior_work:
+    - unknown
+  verification: 부분확인
+  notes: 기타 입력은 정책 평가 점수다. 배포 자료는 수치 배열이다. Humanoid-v4는 통계 절차의 시뮬레이션 평가 대상이다.
+  evidence:
+    verified_on: '2026-11-19'
+    sources:
+      원문·서지: https://roboticsproceedings.org/rss22/p076.html
+      저장소: https://github.com/dasnyder5/nscore
+      배포 파일: https://api.github.com/repos/dasnyder5/nscore/git/trees/main?recursive=1
+      저자 목록: https://roboticsproceedings.org/rss22/p076.html
+      소속·내용 원문: https://www.roboticsproceedings.org/rss22/p076.pdf
+  changed_from:
+    id: pr-1028
+    tier: NEXT
+    tags:
+      - robot-evaluation
+      - Benchmark
+      - policy-comparison
+    facets: null
+    venue: RSS
+    links:
+      page: https://roboticsproceedings.org/rss22/p076.html
+      project: not identified
+      code: null
+    openness:
+      code: not_identified
+      weights: not_recorded
+      data: not_identified
+    problem: 이진 성공 외의 풍부한 신호로 robot policy를 효율적으로 비교한다.
+    method: Progress 등 bounded metric에 기반한 통계적 순차 비교를 제안한다.
+    evaluation: Simulation과 실제 robot policy 비교를 보고한다.
+- id: 2025-xu-mobilityvla
+  registry_id: pr-1063
+  title: 'Mobility VLA: Multimodal Instruction Navigation with Long-Context VLMs and Topological Graphs'
+  authors:
+    - Zhuo Xu
+    - Hao-Tien Lewis Chiang
+    - Zipeng Fu
+    - Mithun George Jacob
+    - Tingnan Zhang
+    - Tsang-Wei Edward Lee
+    - Wenhao Yu
+    - Connor Schenck
+    - David Rendleman
+    - Dhruv Shah
+    - Fei Xia
+    - Jasmine Hsu
+    - Jonathan Hoech
+    - Pete Florence
+    - Sean Kirmani
+    - Sumeet Singh
+    - Vikas Sindhwani
+    - Carolina Parada
+    - Chelsea Finn
+    - Peng Xu
+    - Sergey Levine
+    - Jie Tan
+  affiliations:
+    - Google DeepMind
+  year: 2025
+  venue: CoRL
+  links:
+    paper: https://proceedings.mlr.press/v270/xu25b.html
+    project: unknown
+    code: unknown
+  tier: 2
+  one_line_summary: 환경을 촬영한 투어 영상에서 목표 프레임을 골라 위상 그래프로 실제 로봇을 안내한다.
+  key_contributions:
+    - 멀티모달 지시와 긴 투어 영상을 입력받는 상위 모델로 목적지를 식별한다.
+    - 목표 이미지와 위상 그래프를 이용해 이동을 실행하고 실제 건물에서 평가한다.
+  method_tags:
+    - 하이브리드
+  task_tags:
+    - 내비게이션
+  embodiment_tags:
+    - 모바일매니퓰레이터
+  modality_tags:
+    - RGB
+    - 언어
+    - 기타
+  data_source_tags:
+    - 실제로봇
+  openness:
+    code: unknown
+    weights: unknown
+    data: unknown
+  datasets_benchmarks:
+    - MINT
+  vla:
+    backbone:
+      name: Gemini 1.5 Pro
+      size: unknown
+    action_representation:
+      - unknown
+    architecture: 이중 시스템(고수준 추론 + 저수준 제어)
+    training:
+      - 기타
+    evaluation:
+      sim_benchmarks:
+        - unknown
+      real_robot_tasks: unknown
+      scope: 목표 프레임을 선택하고 그래프 경유점을 MPC로 추종한다. 고정 VLM에 투어를 문맥으로 제공한다.
+  limitations:
+    paper_reported: unknown
+    subsequent_work: unknown
+  prior_work:
+    - unknown
+  verification: 부분확인
+  notes: 학회는 CoRL 2024, 논문집 발행연도는 2025다. PMLR의 선두 저자는 Zhuo Xu이고 PDF 표제면은 Hao-Tien Lewis Chiang으로 시작한다. 로봇은 바퀴형 모바일 매니퓰레이터이며 이 논문의 과업은 내비게이션이다.
+  evidence:
+    verified_on: '2026-11-19'
+    sources:
+      원문·서지: https://proceedings.mlr.press/v270/xu25b.html
+      저자 원고: https://arxiv.org/abs/2407.07775
+      저자 서지: https://deepmind.google/research/publications/84894/
+      저자 목록: https://proceedings.mlr.press/v270/xu25b.html
+      소속·내용 원문: https://raw.githubusercontent.com/mlresearch/v270/main/assets/xu25b/xu25b.pdf
+  changed_from:
+    id: pr-1063
+    tier: NEXT
+    tags:
+      - Robotics
+      - Navigation
+      - Vision-Language-Action
+      - topological-map
+      - long-context
+    facets: null
+    venue: CoRL
+    links:
+      page: https://proceedings.mlr.press/v270/xu25b.html
+      project: not identified
+      code: null
+    openness:
+      code: not_identified
+      weights: not_recorded
+      data: not_identified
+    problem: 언어·이미지 지시를 이전 tour 영상과 연결해 실제 장소로 이동해야 한다.
+    method: 장문맥 VLM의 goal-frame 선택과 topological graph 기반 하위 navigation을 결합한다.
+    evaluation: 기록된 tour를 제공한 실환경의 multimodal instruction navigation을 평가한다.
+- id: 2026-liu-legato
+  registry_id: pr-1086
+  title: Learning Native Continuation for Action Chunking Flow Policies
+  authors:
+    - Yufeng Liu
+    - Hang Yu
+    - Juntu Zhao
+    - Bocheng Li
+    - Di Zhang
+    - Mingzhu Li
+    - Wenxuan Wu
+    - Yingdong Hu
+    - Junyuan Xie
+    - Junliang Guo
+    - Dequan Wang
+    - Yang Gao
+  affiliations:
+    - Shanghai Jiao Tong University
+    - Spirit AI
+    - Tsinghua University
+    - Tongji University
+    - University of Science and Technology of China
+  year: 2026
+  venue: RSS
+  links:
+    paper: https://roboticsproceedings.org/rss22/p058.html
+    project: https://lyfeng001.github.io/Legato/
+    code: https://github.com/lyfeng001/Legato-kinetix
+  tier: 2
+  one_line_summary: 새 행동 청크가 이전 청크의 미실행 부분을 이어받도록 flow 정책의 학습 절차를 바꾼다.
+  key_contributions:
+    - 알려진 행동과 잡음을 스케줄에 따라 섞고 학습과 추론의 흐름을 정렬한다.
+    - 추론 지연을 바꾸며 청크 경계의 매끄러움과 실제 조작 소요 시간을 비교한다.
+  method_tags:
+    - IL
+  task_tags:
+    - 조작
+  embodiment_tags:
+    - 양팔
+  modality_tags:
+    - RGB
+    - 언어
+  data_source_tags:
+    - 혼합
+  openness:
+    code: 부분
+    weights: unknown
+    data: unknown
+  datasets_benchmarks:
+    - Kinetix
+  vla:
+    backbone:
+      name: π0.5 (주 정책)
+      size: unknown
+    action_representation:
+      - 연속(diffusion·flow matching)
+    architecture: 단일 모델
+    training:
+      - SFT
+    evaluation:
+      sim_benchmarks:
+        - Kinetix
+      real_robot_tasks: 5
+      scope: Kinetix는 별도 UNet flow 정책 실험이다. π0.5 정책 결과는 실제 양팔 로봇에서 측정했다.
+  limitations:
+    paper_reported: 결론. 디노이징 단계를 훈련 때 정하므로 추론 때 자유롭게 조절하기 어렵다.
+    subsequent_work: unknown
+  prior_work:
+    - pr-1002
+  verification: 부분확인
+  notes: 주 결과는 π0.5 기반 양팔 정책이다. Kinetix 공개 코드는 시뮬레이션 절차이며 기존 RTC 자료가 최종 실기 정책의 배포를 입증하지는 않는다.
+  evidence:
+    verified_on: '2026-11-19'
+    sources:
+      원문·서지: https://roboticsproceedings.org/rss22/p058.html
+      저장소: https://github.com/lyfeng001/Legato-kinetix
+      자산 목록: https://storage.googleapis.com/storage/v1/b/rtc-assets/o?prefix=bc%2F&maxResults=5
+      저자 목록: https://roboticsproceedings.org/rss22/p058.html
+      소속·내용 원문: https://www.roboticsproceedings.org/rss22/p058.pdf
+  changed_from:
+    id: pr-1086
+    tier: NEXT
+    tags:
+      - VLA
+      - action-chunking
+      - flow-policy
+      - real-time-control
+    facets: null
+    venue: RSS
+    links:
+      page: https://roboticsproceedings.org/rss22/p058.html
+      project: https://lyfeng001.github.io/Legato/
+      code: https://github.com/lyfeng001/Legato-kinetix
+    openness:
+      code: released
+      weights: not_recorded
+      data: not_identified
+    problem: Action chunk 경계의 불연속과 multimodal switching이 로봇 동작을 지연시키는 문제를 다룬다.
+    method: 알려진 action과 noise를 섞는 schedule 및 flow 학습을 통해 chunk continuation을 정책 자체가 익히게 한다.
+    evaluation: 다섯 실제 조작 과제에서 RTC와 비교해 동작 smoothness와 완료 시간을 평가한다. 공개 코드 링크는 Kinetix simulation 범위이며 전체 실기 경로 공개를 뜻하지 않는다.
+- id: 2026-luo-jala
+  registry_id: pr-1134
+  title: 'Joint-Aligned Latent Action: Towards Scalable VLA Pretraining in the Wild'
+  authors:
+    - Hao Luo
+    - Ye Wang
+    - Wanpeng Zhang
+    - Haoqi Yuan
+    - Yicheng Feng
+    - Haiweng Xu
+    - Sipeng Zheng
+    - Zongqing Lu
+  affiliations:
+    - Peking University
+    - Renmin University of China
+    - BeingBeyond
+  year: 2026
+  venue: CVPR
+  links:
+    paper: https://openaccess.thecvf.com/content/CVPR2026/html/Luo_Joint-Aligned_Latent_Action_Towards_Scalable_VLA_Pretraining_in_the_Wild_CVPR_2026_paper.html
+    project: https://research.beingbeyond.com/jala
+    code: unknown
+  tier: 2
+  one_line_summary: 사람 영상의 잠재 행동을 역동역학 및 레이블이 있는 실제 행동과 정렬해 VLA를 사전학습한다.
+  key_contributions:
+    - 이종 사람 영상에서 관측 가능한 움직임과 실제 행동을 함께 반영하는 잠재 코드를 학습한다.
+    - 로봇 행동용 flow 헤드로 적응시켜 시뮬레이션과 실기 조작에서 전이를 검증한다.
+  method_tags:
+    - IL
+  task_tags:
+    - 조작
+  embodiment_tags:
+    - 단팔
+  modality_tags:
+    - RGB
+    - 언어
+  data_source_tags:
+    - 혼합
+  openness:
+    code: unknown
+    weights: unknown
+    data: unknown
+  datasets_benchmarks:
+    - UniHand-Mix
+    - LIBERO
+    - RoboCasa
+  vla:
+    backbone:
+      name: InternVL3-2B (DINOv3 또는 V-JEPA2 시각 인코더)
+      size: 2B
+    action_representation:
+      - 연속(diffusion·flow matching)
+    architecture: 단일 모델
+    training:
+      - 기타
+      - SFT
+    evaluation:
+      sim_benchmarks:
+        - LIBERO
+        - RoboCasa
+      real_robot_tasks: 3
+  limitations:
+    paper_reported: unknown
+    subsequent_work: unknown
+  prior_work:
+    - 2023-liu-libero
+  verification: 부분확인
+  notes: 토큰은 사전학습에, flow 헤드는 로봇의 연속 행동 예측에 쓰인다. 저자 저장소의 공개 트리에는 설명 문서와 이미지만 있다.
+  revisions:
+    - field: openness.code
+      changed_from: 'N'
+      reviewed_on: '2026-11-19'
+      reason: 공식 트리의 README·사이트만으로 별도 경로의 미배포를 확정할 수 없다.
+      source: https://api.github.com/repos/BeingBeyond/JALA/git/trees/main?recursive=1
+  evidence:
+    verified_on: '2026-11-19'
+    sources:
+      원문·서지: https://openaccess.thecvf.com/content/CVPR2026/html/Luo_Joint-Aligned_Latent_Action_Towards_Scalable_VLA_Pretraining_in_the_Wild_CVPR_2026_paper.html
+      저장소: https://github.com/BeingBeyond/JALA
+      파일 목록: https://api.github.com/repos/BeingBeyond/JALA/git/trees/main?recursive=1
+      저자 목록: https://openaccess.thecvf.com/content/CVPR2026/html/Luo_Joint-Aligned_Latent_Action_Towards_Scalable_VLA_Pretraining_in_the_Wild_CVPR_2026_paper.html
+      소속·내용 원문: https://openaccess.thecvf.com/content/CVPR2026/papers/Luo_Joint-Aligned_Latent_Action_Towards_Scalable_VLA_Pretraining_in_the_Wild_CVPR_2026_paper.pdf
+  changed_from:
+    id: pr-1134
+    tier: NEXT
+    tags:
+      - VLA
+      - latent-action
+      - human-video
+      - pretraining
+    facets: null
+    venue: CVPR
+    links:
+      page: https://openaccess.thecvf.com/content/CVPR2026/html/Luo_Joint-Aligned_Latent_Action_Towards_Scalable_VLA_Pretraining_in_the_Wild_CVPR_2026_paper.html
+      project: https://research.beingbeyond.com/jala
+      code: https://github.com/BeingBeyond/JALA
+    openness:
+      code: not_released
+      weights: not_recorded
+      data: not_identified
+    problem: 비정형 사람 영상에서 정확한 robot action supervision을 확보하기 어렵다.
+    method: 역동역학과 실제 행동에 함께 정렬한 latent action을 학습한다.
+    evaluation: 사람 동작 및 simulation·실제 robot manipulation 전이를 평가한다.
+- id: 2026-wei-psi0
+  registry_id: pr-1204
+  title: 'Ψ₀: An Open Foundation Model Towards Universal Humanoid Loco-Manipulation'
+  authors:
+    - Songlin Wei
+    - Hongyi Jing
+    - Boqian Li
+    - Zhenyu Zhao
+    - Jiageng Mao
+    - Zhenhao Ni
+    - Sicheng He
+    - Sheng Zang
+    - Xiawei Liu
+    - Kaidi Kang
+    - Jie Liu
+    - Weiduo Yuan
+    - Marco Pavone
+    - Di Huang
+    - Yue Wang
+  affiliations:
+    - USC Physical Superintelligence Lab
+    - NVIDIA
+    - WorldEngine
+  year: 2026
+  venue: RSS
+  links:
+    paper: https://www.roboticsproceedings.org/rss22/p021.html
+    project: https://psi-lab.ai/Psi0/
+    code: https://github.com/physical-superintelligence-lab/Psi0
+  tier: 2
+  one_line_summary: 사람 손 영상으로 VLM을 사전학습한 뒤 휴머노이드 시연으로 행동 전문가를 학습시켜 이동 조작을 수행한다.
+  key_contributions:
+    - 사람과 로봇의 동작 차이를 고려해 과제 공간의 시각 사전학습과 관절 공간의 행동 학습을 나눈다.
+    - flow 행동 전문가와 하체 제어기를 결합해 실제 휴머노이드의 여덟 과제를 평가한다.
+  method_tags:
+    - IL
+    - RL
+  task_tags:
+    - 조작
+    - 이동
+    - 전신제어
+    - 모바일매니퓰레이션
+  embodiment_tags:
+    - 휴머노이드
+  modality_tags:
+    - RGB
+    - 언어
+    - 고유수용감각
+  data_source_tags:
+    - 혼합
+  openness:
+    code: 'Y'
+    weights: 'Y'
+    data: 'Y'
+  datasets_benchmarks:
+    - psi-data
+  vla:
+    backbone:
+      name: Qwen3-VL-2B-Instruct
+      size: 2B
+    action_representation:
+      - 연속(diffusion·flow matching)
+    architecture: 기타
+    training:
+      - 기타
+      - SFT
+    evaluation:
+      sim_benchmarks:
+        - unknown
+      real_robot_tasks: 8
+  humanoid:
+    control_scope:
+      - 전신
+    training:
+      - 텔레오퍼레이션 모방
+    hardware:
+      - Unitree G1
+    hand_type:
+      - 다지 손
+    role: Dex3-1 양손과 기존 AMO 기반 하체 추종기를 사용하는 실기 이동 조작이다.
+  limitations:
+    paper_reported: 결론. 실험 하드웨어의 가반하중이 수행할 수 있는 조작의 범위를 제한한다.
+    subsequent_work: unknown
+  prior_work:
+    - pr-0604
+  verification: 부분확인
+  notes: Qwen3-VL과 행동 전문가, 기존 AMO 하체 추종기의 3단 구조다. 전체 시스템의 RL은 AMO 구성요소를 가리키며 VLA에 대한 RL 미세조정을 뜻하지 않는다.
+  evidence:
+    verified_on: '2026-11-19'
+    sources:
+      원문·서지: https://www.roboticsproceedings.org/rss22/p021.html
+      저장소: https://github.com/physical-superintelligence-lab/Psi0
+      모델: https://huggingface.co/usc-psi-lab/psi-model
+      자료: https://huggingface.co/datasets/usc-psi-lab/psi-data
+      저자 목록: https://www.roboticsproceedings.org/rss22/p021.html
+      소속·내용 원문: https://www.roboticsproceedings.org/rss22/p021.pdf
+  changed_from:
+    id: pr-1204
+    tier: NEXT
+    tags:
+      - VLA
+      - humanoid
+      - loco-manipulation
+      - human-video
+      - flow-matching
+      - whole-body-control
+    facets: null
+    venue: RSS
+    links:
+      page: https://www.roboticsproceedings.org/rss22/p021.html
+      project: https://psi-lab.ai/Psi0/
+      code: https://github.com/physical-superintelligence-lab/Psi0
+    openness:
+      code: released
+      weights: reported
+      data: released
+    problem: 사람 영상의 action 표현과 휴머노이드 관절 제어의 차이를 고려해 적은 로봇 시연으로 장시간 이동 조작을 학습한다.
+    method: FAST next-action VLM 사전학습 후 VLM을 고정하고 flow action expert를 robot joint space에서 학습·task 적응한다. 하위 제어는 별도 AMO RL controller다.
+    evaluation: arXiv v1 §IV-B의 Unitree G1 실물8과제, 과제당 시연80개와 모델당 평가10회. 보조 subtask 개입과 전체 성공률을 구분한다.
+- id: 2025-ouyang-rfmpose
+  registry_id: pr-1211
+  title: 'RFMPose: Generative Category-level Object Pose Estimation via Riemannian Flow Matching'
+  authors:
+    - Wenzhe Ouyang
+    - Jinghua Wang
+    - Zenglin Xu
+    - Jiming Chen
+    - Qi Ye
+  affiliations:
+    - Zhejiang University
+    - Harbin Institute of Technology Shenzhen
+    - Fudan University
+    - Shanghai Academy of AI for Science
+  year: 2025
+  venue: NeurIPS
+  links:
+    paper: https://proceedings.neurips.cc/paper_files/paper/2025/hash/618c0a236e7aace748d09bc8fbed3e4d-Abstract-Conference.html
+    project: unknown
+    code: https://github.com/shabiouyang/RMFPose
+  tier: 2
+  one_line_summary: 리만 다양체 위의 flow matching으로 대칭성이 있는 물체의 가능한 6D 자세 분포를 추정한다.
+  key_contributions:
+    - 측지선 보간과 리만 최적수송으로 여러 가능한 자세에 확률 질량을 배분한다.
+    - 자세 가설의 우도를 추정하고 카테고리 수준 자세 벤치마크에서 평가한다.
+  method_tags:
+    - unknown
+  task_tags:
+    - unknown
+  embodiment_tags:
+    - unknown
+  modality_tags:
+    - RGB
+    - 기타
+  data_source_tags:
+    - 합성
+  openness:
+    code: 'Y'
+    weights: unknown
+    data: unknown
+  datasets_benchmarks:
+    - Omni6DPose
+  limitations:
+    paper_reported: §4.1의 평가 범위. 모델은 합성 자료로만 학습하고 실제·합성 관측에서 평가한다.
+    subsequent_work: unknown
+  prior_work:
+    - unknown
+  verification: 부분확인
+  notes: 입력은 잘라낸 RGB 영상과 부분 점군이다. 출력은 자세 분포다. 학습에는 합성 영상만 쓰고 실제·합성 영상에서 평가한다. Omni6DPose는 재사용한 데이터다.
+  evidence:
+    verified_on: '2026-11-19'
+    sources:
+      원문·서지: https://proceedings.neurips.cc/paper_files/paper/2025/hash/618c0a236e7aace748d09bc8fbed3e4d-Abstract-Conference.html
+      저장소: https://github.com/shabiouyang/RMFPose
+      저자 목록: https://proceedings.neurips.cc/paper_files/paper/2025/file/618c0a236e7aace748d09bc8fbed3e4d-Paper-Conference.pdf
+      소속·내용 원문: https://proceedings.neurips.cc/paper_files/paper/2025/file/618c0a236e7aace748d09bc8fbed3e4d-Paper-Conference.pdf
+  changed_from:
+    id: pr-1211
+    tier: NEXT
+    tags:
+      - 6D pose
+      - Flow Matching
+      - multi-hypothesis
+      - symmetry
+    facets: null
+    venue: NeurIPS
+    links:
+      page: https://proceedings.neurips.cc/paper_files/paper/2025/hash/618c0a236e7aace748d09bc8fbed3e4d-Abstract-Conference.html
+      project: https://github.com/shabiouyang/RMFPose
+      code: https://github.com/shabiouyang/RMFPose
+    openness:
+      code: released
+      weights: not_recorded
+      data: not_identified
+    problem: Category-level pose의 대칭과 다중 가능한 해를 한 점 추정만으로 표현하기 어렵다.
+    method: Riemannian flow와 geodesic 경로·optimal transport를 사용하며 likelihood 추정 경로를 제안한다.
+    evaluation: Omni6DPose의 pose metric과 sim-to-real/추적 확장을 보고한다. 이번 등록에서는 정책 제어 trial을 추정하지 않는다.

@@ -14,6 +14,7 @@
 - Official paper: https://arxiv.org/abs/2304.13705
 - Full-text retrieval: https://arxiv.org/pdf/2304.13705
 - Code/Project: https://tonyzhaozh.github.io/aloha/
+- Code: https://github.com/tonyzhaozh/act
 - Paper type: theory_or_foundation
 - Source audit: full-text PDF body checked on 2026-09-03 (18 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 

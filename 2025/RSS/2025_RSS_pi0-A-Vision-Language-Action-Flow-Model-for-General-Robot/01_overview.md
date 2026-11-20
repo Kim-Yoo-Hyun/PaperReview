@@ -1,6 +1,7 @@
 # π0: A Vision-Language-Action Flow Model for General Robot Control
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
+> 2026-11-19 표본 감사에서 요약과 관련 본문 표현을 원문에 대조해 교정했다. [원문](https://arxiv.org/html/2410.24164)
 > Analysis basis: full-text PDF body checked on 2026-09-03 (17 pages; tesseract OCR fallback; title-token overlap first two pages=1.0); canonical paper source: https://www.roboticsproceedings.org/rss21/p010.html.
 > PDF retrieval source: https://www.roboticsproceedings.org/rss21/p010.pdf. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
@@ -19,7 +20,7 @@
 
 ## Why This Paper Is Here
 
-VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다. 본문은 However, developing such generalist robot policies - ie., robot foundation models - involves a number of major challenges.를 문제로 두고, ‘of more complex and dexterous behaviors, such as tying shoelaces [58] or cooking shrimp [17], we show that our framework can leam very long tasks, sometimes tens of, minutes in length, for ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+π₀는 시각·언어 사전학습에서 얻은 표현으로 여러 로봇의 연속 행동을 생성한다. 논문은 기본 정책과 태스크별 미세조정 정책의 조작 성능을 각각 평가한다. [원문](https://arxiv.org/html/2410.24164)
 
 ## Problem and Motivation
 
@@ -33,14 +34,7 @@ VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다
 
 ## Core Idea
 
-- **p. 4 / 1. INTRODUCTION - extractive body cue:** ‘of more complex and dexterous behaviors, such as tying shoelaces [58] or cooking shrimp [17], we show that our framework can leam very long tasks, ...
-- **p. 2 / 1. INTRODUCTION - extractive body cue:** In this paper, we present a prototype model and learning framework, which we call zo, that illustrates how each of these three bottlenecks could be ...
-- **p. 3 / 1. INTRODUCTION - extractive body cue:** The contributions of our work consist of a novel generalist robot policy architecture based on VLM pre-training and flow matching, and an empirical investigation of ...
-- **p. 3 / 1. INTRODUCTION - extractive body cue:** This enables our model to control robots at frequencies of up to 50 Hz for dexterous tasks such as laundry folding (see Figure 1), To ...
-- **p. 4 / 1. INTRODUCTION - extractive body cue:** Note that we use PaliGemma for convenience and because of its comparatively small size (which is useful for real-time control), but our framework is compatible ...
-- **p. 5 / IV. THE x MODEL - extractive body cue:** Formally, we want to model the data distribution p(A,/o,), where Ar = [ar,r¢1,.rs 11-1] corresponds to an action chunk of future actions (we use H ...
-- **p. 5 / IV. THE x MODEL - extractive body cue:** In practice, the network is trained by sampling random noise « ~ \'(0, 1), computing the "noisy actions" Aj = rAy + (1 -r)e, and ...
-- **p. 4 / IV. THE x MODEL - extractive body cue:** Our architecture is inspired by Transfusion [59], which trains a single transformer using multiple objectives, with tokens! corresponding to continuous outputs supervised via a flow ...
+π₀는 사전학습한 시각언어 모델에 flow matching으로 학습하는 행동 모듈을 결합한다. 영상·언어 지시·로봇 상태를 조건으로 연속 행동 청크를 생성하며 여러 플랫폼의 조작 데이터로 정책을 학습한다. [원문](https://arxiv.org/html/2410.24164)
 
 ## Observation, State, and Output Interface
 
@@ -53,26 +47,17 @@ VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다
 
 ## Main Claims and Actual Contribution
 
-- **p. 4 / 1. INTRODUCTION - extractive body cue:** ‘of more complex and dexterous behaviors, such as tying shoelaces [58] or cooking shrimp [17], we show that our framework can leam very long tasks, ...
-- **p. 2 / 1. INTRODUCTION - extractive body cue:** In this paper, we present a prototype model and learning framework, which we call zo, that illustrates how each of these three bottlenecks could be ...
-- **p. 3 / 1. INTRODUCTION - extractive body cue:** The contributions of our work consist of a novel generalist robot policy architecture based on VLM pre-training and flow matching, and an empirical investigation of ...
-- **p. 3 / 1. INTRODUCTION - extractive body cue:** This enables our model to control robots at frequencies of up to 50 Hz for dexterous tasks such as laundry folding (see Figure 1), To ...
-- **p. 4 / 1. INTRODUCTION - extractive body cue:** Note that we use PaliGemma for convenience and because of its comparatively small size (which is useful for real-time control), but our framework is compatible ...
-- **p. 9 / Figure/Table caption - extractive body cue:** Fig. 9: Language evaluation. We compare "flat" versions of ‘our policies, -#1at, which receive only the overall task com- mand (e.g, "bag the groceries") with ...
-- **p. 8 / Figure/Table caption - extractive body cue:** Fig. 7: Out-of-box evaluation results: We evaluate 7p trained for the full 700k steps, a version trained for 160k steps that ‘matches the number of ...
-- **p. 7 / VI. EXPERIMENTAL EVALUATION - extractive body cue:** How well does xo follow language commands? ‘These experiments compare xo to xo-Small, a smaller version of our ‘model without VLM initialization, to evaluate its ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+다양한 로봇에서 학습한 기본 정책을 직접 평가하고 고품질 시연으로 미세조정했다. 세탁물 접기는 평가 과제이며, 서론의 신발끈 묶기와 새우 요리는 선행 연구의 예시다. [원문](https://arxiv.org/html/2410.24164)
 
 ## Evaluation Scope
 
 | Dimension | Body-grounded record | Boundary | Anchor |
 |---|---|---|---|
 | Evaluation type | EMPIRICAL / SOURCE-REPORTED EVALUATION | do not infer unreported downstream behavior | p. 9 (Figure/Table caption), p. 8 (Figure/Table caption) |
-| Embodiment/environment | We study this question by directly evaluating 79, with comparisons to other robot foundation models. | hardware/simulator version and reset protocol | p. 7 (VI. EXPERIMENTAL EVALUATION), p. 7 (VI. EXPERIMENTAL EVALUATION) |
-| Dataset/benchmark | We study this question by directly evaluating 79, with comparisons to other robot foundation models. | role, split, size and leakage | p. 7 (VI. EXPERIMENTAL EVALUATION), p. 7 (VI. EXPERIMENTAL EVALUATION) |
-| Metric | Fig. 9: Language evaluation. We compare "flat" versions of ‘our policies, -#1at, which receive only the overall task com- mand (e.g, "bag the groceries") with a method that receives intermediate commands from ... | definition, denominator, direction and uncertainty | p. 9 (Figure/Table caption), p. 7 (VI. EXPERIMENTAL EVALUATION), p. 1 (Figure/Table caption) |
-| Baseline/ablation | Fig. 7: Out-of-box evaluation results: We evaluate 7p trained for the full 700k steps, a version trained for 160k steps that ‘matches the number of updates for baseline models, x-small, and three ... | fair input/data/compute/action matching | p. 8 (Figure/Table caption), p. 7 (VI. EXPERIMENTAL EVALUATION), p. 7 (VI. EXPERIMENTAL EVALUATION) |
+| Embodiment/environment | We study this question by directly evaluating π₀, with comparisons to other robot foundation models. | hardware/simulator version and reset protocol | p. 7 (VI. EXPERIMENTAL EVALUATION), p. 7 (VI. EXPERIMENTAL EVALUATION) |
+| Dataset/benchmark | We study this question by directly evaluating π₀, with comparisons to other robot foundation models. | role, split, size and leakage | p. 7 (VI. EXPERIMENTAL EVALUATION), p. 7 (VI. EXPERIMENTAL EVALUATION) |
+| Metric | Fig. 9: Language evaluation. We compare "flat" versions of our policies, -flat, which receive only the overall task command (e.g, "bag the groceries") with a method that receives intermediate commands from ... | definition, denominator, direction and uncertainty | p. 9 (Figure/Table caption), p. 7 (VI. EXPERIMENTAL EVALUATION), p. 1 (Figure/Table caption) |
+| Baseline/ablation | Fig. 7: Out-of-box evaluation results: We evaluate π₀ trained for the full 700k steps, a version trained for 160k steps that ‘matches the number of updates for baseline models, x-small, and three ... | fair input/data/compute/action matching | p. 8 (Figure/Table caption), p. 7 (VI. EXPERIMENTAL EVALUATION), p. 7 (VI. EXPERIMENTAL EVALUATION) |
 
 ## Explicit Limitations and Failure Boundary
 
@@ -81,13 +66,13 @@ VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다
 
 ## Why Read It
 
-VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다. 본문은 However, developing such generalist robot policies - ie., robot foundation models - involves a number of major challenges.를 문제로 두고, ‘of more complex and dexterous behaviors, such as tying shoelaces [58] or cooking shrimp [17], we show that our framework can leam very long tasks, sometimes tens of, minutes in length, for ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (1. INTRODUCTION), p. 2 (1. INTRODUCTION), p. 3 (1. INTRODUCTION), p. 3 (1. INTRODUCTION), p. 4 (1. INTRODUCTION), p. 5 (IV. THE x MODEL) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+기본 정책에 지시를 주어 수행한 실험과 태스크별 시연으로 미세조정한 실험을 나누어 보면 복잡한 조작 성능의 조건을 비교할 수 있다.
 
 ## Semantic QA — PDF body cross-check
 
 > Cross-checked on 2026-09-03 against the validated PDF body (17 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
 
 - **Problem/bottleneck:** However, developing such generalist robot policies - ie., robot foundation models - involves a number of major challenges. (p. 2, 1. INTRODUCTION).
-- **Actual contribution:** The contributions of our work consist of a novel generalist robot policy architecture based on VLM pre-training and flow matching, and an empirical investigation of pre-training/posttraining recipes for such robot ... (p. 3, 1. INTRODUCTION).
-- **Evaluation boundary:** Fig. 7: Out-of-box evaluation results: We evaluate 7p trained for the full 700k steps, a version trained for 160k steps that ‘matches the number of updates for baseline models, x-small, ... (p. 8, Figure/Table caption).
+- **Actual contribution:** π₀는 사전학습한 시각언어 모델에 flow matching으로 학습하는 행동 모듈을 결합한다. 영상·언어 지시·로봇 상태를 조건으로 연속 행동 청크를 생성하며 여러 플랫폼의 조작 데이터로 정책을 학습한다. [원문](https://arxiv.org/html/2410.24164)
+- **Evaluation boundary:** Fig. 7: Out-of-box evaluation results: We evaluate π₀ trained for the full 700k steps, a version trained for 160k steps that ‘matches the number of updates for baseline models, x-small, ... (p. 8, Figure/Table caption).
 - **Explicit failure boundary:** OpenVLA struggles on these tasks because its autoregressive diseretization architecture does not support action chunks. (p. 7, A. Evaluating the base model).

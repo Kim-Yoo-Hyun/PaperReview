@@ -1,4 +1,4 @@
-# 접촉 적응 후보 — 공개 구현과 재현 준비 범위
+# 접촉 적응 재현
 
 Updated: 2026-11-09 KST. **GAP-CONTACT-RL-P0-PREP 실행 자료 작성 완료 / NVIDIA native 검증 대기.** [연구 내용](../내용/README.md#n2-contract), [source·검증 원장 `contact_n1`·`contact_n2`·`contact_p0_prep`](../../../sources/vla_rl_additional_gaps_2026-11-09.json), [TODO](../../../../TODO.md)를 따른다. Docker recipe·제한된 sensor/controller probe·launcher를 작성하고 Docker stdlib16검사를 통과했다. Native image build·physics/RGB·정책 효과는 미검증이다. 아래 N2 `proposed` 값은 학습 비교의 설계값이며 P0 실행 결과가 아니다.
 

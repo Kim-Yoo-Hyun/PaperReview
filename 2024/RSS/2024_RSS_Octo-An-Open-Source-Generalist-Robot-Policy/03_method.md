@@ -1,12 +1,13 @@
 # Method - Octo: An Open-Source Generalist Robot Policy
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
+> 2026-11-19 표본 감사에서 요약과 관련 본문 표현을 원문에 대조해 교정했다. [원문](https://www.roboticsproceedings.org/rss20/p090.html)
 > Evidence maturity: `FULL_TEXT_CHECKED`.
 > Analysis basis: full-text PDF body checked on 2026-09-03 (17 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2405.12213; PDF retrieval source: https://arxiv.org/pdf/2405.12213. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
-PDF body method statement (p. 4 (III. THE OCTO MODEL), p. 5 (III. THE OCTO MODEL), p. 5 (III. THE OCTO MODEL), p. 4 (III. THE OCTO MODEL), p. 3 (III. THE OCTO MODEL), p. 3 (III. THE OCTO MODEL)): We use the t5-base (111M) model [74]. • Image observations and goals are passed through a shallow convolution stack, then split into a sequence of flattened patches [22].
+Octo는 Open X-Embodiment의 로봇 궤적 약 80만 개로 사전학습한 Transformer 정책이다. 언어 지시나 목표 이미지를 조건으로 연속 행동 청크를 생성하며, 새 센서와 행동 공간에 맞춰 미세조정할 수 있다. [원문](https://www.roboticsproceedings.org/rss20/p090.html)
 
 ## Method Body Digest
 
@@ -21,7 +22,7 @@ PDF body method statement (p. 4 (III. THE OCTO MODEL), p. 5 (III. THE OCTO MODEL
 
 ## Design Rationale
 
-- **p. 1 / I. INTRODUCTION - extractive body cue:** In principle, collected ∗Lead authors, ordered alphabetically, see Section A for list of contributions.
+- **p. 1 / I. INTRODUCTION - source paraphrase:** Octo predicts continuous robot actions from observation histories and language or goal images.
 - **p. 2 / I. INTRODUCTION - extractive body cue:** Our primary contribution is Octo, a transformer-based policy pretrained on the largest robot manipulation dataset to date: 800k robot demonstrations from the Open X-Embodiment dataset ...
 - **p. 3 / III. THE OCTO MODEL - extractive body cue:** It consists of three key parts: input tokenizers that transform
 
@@ -63,7 +64,7 @@ PDF body method statement (p. 4 (III. THE OCTO MODEL), p. 5 (III. THE OCTO MODEL
 |---|---|---|---|
 | Input/observation | supports, natural, language, instructions, goal, images, observation, histories, multi-modal, chunked, action, prediction, diffusion, decoding | image/video, language instruction, proprioception과 history | body cue; exact tensor/frame verify |
 | State/latent | supports, natural, language, instructions, goal, images, observation, histories, multi-modal, chunked | language-grounded task state와 action-policy context | body cue; notation verify |
-| Action/output | principle, collected, Lead, authors, ordered, alphabetically, Section, list, contributions, primary | continuous action, pose 또는 action chunk | body cue; unit/decoder verify |
+| Action/output | observation history, task tokens, readout tokens, action chunks | continuous action, pose 또는 action chunk | body cue; unit/decoder verify |
 | Objective/constraint | AdamW, optimizer, inverse, square, root, decay, learning, rate, schedule, weight | policy/action modeling objective | equation anchor required |
 
 ## Observation–State–Action Interface

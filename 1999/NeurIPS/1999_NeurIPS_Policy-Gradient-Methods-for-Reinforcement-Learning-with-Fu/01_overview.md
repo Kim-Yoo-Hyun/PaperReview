@@ -1,6 +1,7 @@
 # Policy Gradient Methods for Reinforcement Learning with Function Approximation
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
+> 2026-11-19 표본 감사에서 요약과 관련 본문 표현을 원문에 대조해 교정했다. [원문](https://proceedings.neurips.cc/paper/1999/hash/464d828b85b0bed98e80ade0a5c43b0f-Abstract.html)
 > Analysis basis: full-text PDF body checked on 2026-09-03 (7 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://proceedings.neurips.cc/paper/1999/hash/464d828b85b0bed98e80ade0a5c43b0f-Abstract.html.
 > PDF retrieval source: https://proceedings.neurips.cc/paper/1999/hash/464d828b85b0bed98e80ade0a5c43b0f-Abstract.html. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
@@ -19,7 +20,7 @@
 
 ## Why This Paper Is Here
 
-RL, IL, offline learning, and robot data의 rl 문제를 이해하기 위해 읽는다. 본문은 The value-function approach has worked well in many applications, but has several limitations.를 문제로 두고, Konda and Tsitsiklis (in prep.) independently developed a very simialr result to ours.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+Sutton 등은 정책 경사를 행동가치로 표현하고, 그 자리에 함수 근사기를 사용해도 같은 경사를 얻는 조건을 증명했다. [원문](https://proceedings.neurips.cc/paper/1999/hash/464d828b85b0bed98e80ade0a5c43b0f-Abstract.html)
 
 ## Problem and Motivation
 
@@ -33,36 +34,15 @@ RL, IL, offline learning, and robot data의 rl 문제를 이해하기 위해 읽
 
 ## Core Idea
 
-- **p. 2 / Abstract - extractive body cue:** Konda and Tsitsiklis (in prep.) independently developed a very simialr result to ours.
-- **p. 2 / Abstract - extractive body cue:** For example, the policy might be represented by a neural network whose input is a representation of the state, whose output is action selection probabilities, ...
-- **p. 1 / Abstract - extractive body cue:** First, it is oriented toward finding deterministic policies, whereas the optimal policy is often stochastic, selecting different actions with specific probabilities (e.g., see Singh, Jaakkola, ...
-- **p. 1 / Abstract - extractive body cue:** The dominant approach for the last decade has been the value-function approach, in which all function approximation effort goes into estimating a value function, with ...
-- **p. 2 / Abstract - extractive body cue:** Our result also suggests a way of proving the convergence of a wide variety of algorithms based on "actor-critic" or policy-iteration architectures (e.g., Barto, Sutton, ...
-- **p. 3 / Abstract - extractive body cue:** This leads to Williams's episodic REINFORCE algorithm, t::..Ot oc a1r~~,at2 Rt (1 ) (the ~a 7r St,at 7r\St,Ut) corrects for the oversampling of actions preferred ...
-- **p. 3 / Abstract - extractive body cue:** In the average reward formulation, the value of a state-action pair given a policy is defined as 00 Q1r(s,a) = LE {rt - p(1I") I ...
-- **p. 4 / Abstract - extractive body cue:** If fw satisfies (3) and is compatible with the policy parameterization in the sense thatl 8fw(s, a) 81r(s, a) 1 = 8w 80 1r(s, a) ...
+Sutton 등은 정책 성능의 경사를 정책의 미분과 행동가치의 기댓값으로 표현하는 정책 경사 정리를 제시한다. 정책과 호환되는 특징을 쓰고 논문의 적합 조건을 만족하는 가치 근사기는 경사 계산에서 실제 행동가치를 대체할 수 있다. [원문](https://proceedings.neurips.cc/paper/1999/hash/464d828b85b0bed98e80ade0a5c43b0f-Abstract.html)
 
 ## Observation, State, and Output Interface
 
-| Role | PDF body evidence | Robotics interpretation | Anchor |
-|---|---|---|---|
-| Observation/input | For example, the policy might be represented by a neural network whose input is a representation of the state, whose output is action selection probabilities, and whose weights are the policy parameters. | state 또는 observation, action, reward와 transition history | p. 2 (Abstract), p. 1 (Abstract) |
-| State/latent | example, policy, might, represented, neural, network, whose, input, representation, state, output, action | policy/value state와 action-selection variable | p. 2 (Abstract), p. 1 (Abstract), p. 3 (Abstract) |
-| Output/action | The dominant approach for the last decade has been the value-function approach, in which all function approximation effort goes into estimating a value function, with the action-selection policy represented implicitly as the ... | action policy와 induced trajectory | p. 1 (Abstract), p. 3 (Abstract), p. 1 (Abstract) |
-| Objective/outcome | In this paper we explore an alternative approach in which the policy is explicitly represented by its own function approximator, independent of the value function, and is updated according to the gradient ... | expected return, task success, stability와 sample efficiency | p. 1 (Abstract), p. 3 (Abstract), p. 2 (Abstract) |
+상태에서 확률적 정책이 행동을 샘플링한다. 정리는 그 정책의 행동가치와 정책 미분을 기대 성능의 파라미터 경사에 연결한다. [원문](https://proceedings.neurips.cc/paper/1999/hash/464d828b85b0bed98e80ade0a5c43b0f-Abstract.html)
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / Abstract - extractive body cue:** Konda and Tsitsiklis (in prep.) independently developed a very simialr result to ours.
-- **p. 2 / Abstract - extractive body cue:** If the above can be achieved, then 0 can usually be assured to converge to a locally optimal policy in the performance measure p.
-- **p. 4 / Abstract - extractive body cue:** For example, Jaakkola, Singh, and Jordan (1995) proved that for the special case of function approximation arising in a tabular POMDP one could assure positive ...
-- **p. 2 / Abstract - extractive body cue:** However, VAPS methods do not climb the gradient of performance (expected long-term reward), but of a measure combining performance and valuefunction accuracy.
-- **p. 3 / Abstract - extractive body cue:** We extend their results to the start-state formulation and provide simpler and more direct proofs.
-- **p. 3 / Abstract - extractive body cue:** Our first result concerns the gradient of the performance metric with respect to the policy parameter: Theorem 1 (Policy Gradient).
-- **p. 5 / Abstract - extractive body cue:** Our results establish that that approximation process can proceed without affecting the expected evolution of fw and 1r.
-- **p. 5 / Abstract - extractive body cue:** Our results can be viewed as a justification for the special status of advantages as the target for value function approximation in RL.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+평균 보상 및 할인 보상 설정에서 정책 경사를 표현하는 정리와 호환 함수 근사의 충분조건을 제시했다. 이론의 적용에는 논문이 명시한 특징과 근사기 적합 조건이 필요하다. [원문](https://proceedings.neurips.cc/paper/1999/hash/464d828b85b0bed98e80ade0a5c43b0f-Abstract.html)
 
 ## Evaluation Scope
 
@@ -83,13 +63,13 @@ RL, IL, offline learning, and robot data의 rl 문제를 이해하기 위해 읽
 
 ## Why Read It
 
-RL, IL, offline learning, and robot data의 rl 문제를 이해하기 위해 읽는다. 본문은 The value-function approach has worked well in many applications, but has several limitations.를 문제로 두고, Konda and Tsitsiklis (in prep.) independently developed a very simialr result to ours.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 1 (Abstract), p. 1 (Abstract), p. 2 (Abstract), p. 2 (Abstract), p. 1 (Abstract), p. 1 (Abstract) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+actor–critic 방법에서 critic 근사 오차가 actor의 갱신에 미치는 영향을 해석하는 이론적 기준이다.
 
 ## Semantic QA — PDF body cross-check
 
 > Cross-checked on 2026-09-03 against the validated PDF body (7 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
 
 - **Problem/bottleneck:** The value-function approach has worked well in many applications, but has several limitations. (p. 1, Abstract).
-- **Actual contribution:** Williams's REINFORCE method and actor-critic methods are examples of this approach. (p. 1, Abstract).
+- **Actual contribution:** Sutton 등은 정책 성능의 경사를 정책의 미분과 행동가치의 기댓값으로 표현하는 정책 경사 정리를 제시한다. 정책과 호환되는 특징을 쓰고 논문의 적합 조건을 만족하는 가치 근사기는 경사 계산에서 실제 행동가치를 대체할 수 있다. [원문](https://proceedings.neurips.cc/paper/1999/hash/464d828b85b0bed98e80ade0a5c43b0f-Abstract.html)
 - **Evaluation boundary:** However, VAPS methods do not climb the gradient of performance (expected long-term reward), but of a measure combining performance and valuefunction accuracy. (p. 2, Abstract).
 - **Explicit failure boundary:** The value-function approach has worked well in many applications, but has several limitations. (p. 1, Abstract).

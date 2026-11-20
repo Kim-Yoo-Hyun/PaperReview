@@ -1,4 +1,4 @@
-# 시각 피드백 활용 진단 — Docker 최소 입출력 검증
+# 시각 피드백 재현
 
 - Updated: 2026-11-06 KST
 - [연구 내용](../내용/README.md) · [고정 실행 설정·검증 상태](./RESUME_PLAN.json) · [launcher](./resume.py) · [native adapter](./probe.py)

@@ -1,12 +1,13 @@
 # Evaluation - Learning Transferable Visual Models From Natural Language Supervision
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
+> 2026-11-19 표본 감사에서 요약과 관련 본문 표현을 원문에 대조해 교정했다. [원문](https://proceedings.mlr.press/v139/radford21a.html)
 > Evidence maturity: `FULL_TEXT_CHECKED`.
 > Analysis basis: full-text PDF body checked on 2026-09-03 (48 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2103.00020; PDF retrieval source: https://arxiv.org/pdf/2103.00020. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
-PDF body evaluation/result cue (p. 8 (3.1.4. PROMPT ENGINEERING AND ENSEMBLING), p. 6 (3.1.3. INITIAL COMPARISON TO VISUAL N-GRAMS), p. 13 (3.3. Robustness to Natural Distribution Shift), p. 14 (3.3. Robustness to Natural Distribution Shift), p. 8 (3.1.5. ANALYSIS OF ZERO-SHOT CLIP PERFORMANCE), p. 6 (3.1.1. MOTIVATION)): Learning Transferable Visual Models From Natural Language Supervision 8 Similar to the "prompt engineering" discussion around GPT3 (Brown et al., 2020; Gao et al., 2020), we have also observed that ...
+ImageNet을 포함한 이미지 분류 데이터셋에서 zero-shot 전이와 학습된 표현의 성능을 비교한다. [원문](https://proceedings.mlr.press/v139/radford21a.html)
 
 ## Evaluation Body Digest
 
@@ -22,10 +23,10 @@ PDF body evaluation/result cue (p. 8 (3.1.4. PROMPT ENGINEERING AND ENSEMBLING),
 ## Evaluation Type and Scope
 
 - **Evaluation type:** `SYSTEM / EVALUATION SCOPE UNRESOLVED`.
-- **Target system/task:** 논문이 정의한 robot/embodied environment.
+- **Target system/task:** 자연 이미지와 설명 텍스트.
 - **Input boundary:** 논문이 명시한 observation과 task input.
-- **Output/decision under evaluation:** paper-specific output/action.
-- **Primary target:** primary task objective와 closed-loop behavior.
+- **Output/decision under evaluation:** 이미지–텍스트 유사도와 클래스별 예측.
+- **Primary target:** zero-shot 시각 전이 성능.
 - **Detected evaluation headings:** 2.2. Creating a Sufficiently Large Dataset (p. 3); 3. Experiments (p. 6); 39 Dataset (p. 39).
 
 ## Experimental Matrix
@@ -39,6 +40,8 @@ PDF body evaluation/result cue (p. 8 (3.1.4. PROMPT ENGINEERING AND ENSEMBLING),
 | 3.1.5. ANALYSIS OF ZERO-SHOT CLIP PERFORMANCE | SYSTEM / EVALUATION SCOPE UNRESOLVED | Zeroshot CLIP significantly outperforms a ResNet-50 on two datasets measuring action recognition in videos. | p. 8 (3.1.5. ANALYSIS OF ZERO-SHOT CLIP PERFORMANCE) |
 
 ## Dataset / Benchmark Role
+
+학습에는 웹 이미지·텍스트 4억 쌍으로 구성한 WIT를 사용했다. 저자는 모델 카드에 이 데이터셋을 배포하지 않는다고 명시했다. [저자 모델 카드의 Data 절](https://github.com/openai/CLIP/blob/main/model-card.md#data)
 
 - **p. 9 / 3.1.5. ANALYSIS OF ZERO-SHOT CLIP PERFORMANCE - extractive body cue:** The 20 datasets with at least 16 examples per class were used in this analysis. we see that zero-shot CLIP is quite weak on several ...
 - **p. 6 / 3.1.1. MOTIVATION - extractive body cue:** However, many popular computer vision datasets were created by the research community primarily as benchmarks to guide the development of generic image classification methods rather ...
@@ -69,7 +72,7 @@ PDF body evaluation/result cue (p. 8 (3.1.4. PROMPT ENGINEERING AND ENSEMBLING),
 | Robot/hardware/simulator | The 20 datasets with at least 16 examples per class were used in this analysis. we see that zero-shot CLIP is quite weak on ... | embodiment, simulator version and control stack | p. 9 (3.1.5. ANALYSIS OF ZERO-SHOT CLIP PERFORMANCE), p. 6 (3.1.1. MOTIVATION) |
 | Task/environment | However, many popular computer vision datasets were created by the research community primarily as benchmarks to guide the development of generic image classification methods ... | reset, timeout, object/scene variation | p. 6 (3.1.1. MOTIVATION), p. 11 (3.2. Representation Learning) |
 | Observation/sensor | 논문이 명시한 observation과 task input | calibration, preprocessing, privileged input | p. 1 (1. Introduction and Motivating Work), p. 2 (1. Introduction and Motivating Work) |
-| Output/decision | paper-specific output/action | action frame, controller and termination | p. 3 (2.1. Natural Language Supervision), p. 4 (2.3. Selecting an Efficient Pre-Training Method) |
+| Output/decision | 이미지–텍스트 유사도와 클래스별 예측 | 클래스 설명 프롬프트와 평가 데이터셋 | p. 3 (2.1. Natural Language Supervision), p. 4 (2.3. Selecting an Efficient Pre-Training Method) |
 
 ## Metrics and Success Definition
 

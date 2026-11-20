@@ -1,0 +1,44 @@
+<mujoco model="Cartesian insertion with in-hand translation">
+  <compiler angle="radian" autolimits="true"/>
+  <option timestep="0.001" gravity="0 0 0" integrator="implicitfast" solver="Newton" iterations="60" tolerance="1e-10"/>
+  <default>
+    <joint type="slide" damping="1"/>
+    <geom type="box" condim="3" friction="0.15 0.001 0.0001" solref="0.004 1" margin="0"/>
+    <default class="wall"><geom contype="2" conaffinity="1"/></default>
+    <default class="jaw"><geom contype="4" conaffinity="1" size="0.001 0.006 0.004" mass="0.014"/></default>
+  </default>
+  <worldbody>
+    <body name="socket">
+      <geom name="left_wall" class="wall" pos="-0.024 0 -0.009" size="0.019 0.025 0.009"/>
+      <geom name="right_wall" class="wall" pos="0.024 0 -0.009" size="0.019 0.025 0.009"/>
+      <geom name="front_wall" class="wall" pos="0 -0.015 -0.009" size="0.005 0.010 0.009"/>
+      <geom name="back_wall" class="wall" pos="0 0.015 -0.009" size="0.005 0.010 0.009"/>
+      <geom name="bottom" class="wall" pos="0 0 -0.019" size="0.042 0.025 0.001"/>
+    </body>
+    <body name="wrist">
+      <inertial pos="0 0 0.03" mass="0.35" diaginertia="0.001 0.001 0.001"/>
+      <joint name="x" axis="1 0 0" damping="2"/>
+      <joint name="z" axis="0 0 1" damping="2"/>
+      <body name="part">
+        <joint name="inhand" axis="1 0 0" range="-0.018 0.018" damping="16" frictionloss="0.90"
+               solimpfriction="0.9999 0.9999 0.001 0.5 2" solreffriction="0.004 1"/>
+        <geom name="pin" pos="0 0 0.012" size="0.004 0.004 0.012" mass="0.04" contype="1" conaffinity="6"/>
+        <site name="tip" pos="0 0 0" size="0.0004"/>
+      </body>
+      <body name="left_finger" pos="-0.024 0 0.018">
+        <joint name="left_closure" axis="1 0 0" range="0 0.020" damping="0.5"/>
+        <geom name="left_pad" class="jaw"/>
+      </body>
+      <body name="right_finger" pos="0.024 0 0.018">
+        <joint name="right_closure" axis="-1 0 0" range="0 0.020" damping="0.5"/>
+        <geom name="right_pad" class="jaw"/>
+      </body>
+    </body>
+  </worldbody>
+  <actuator>
+    <position name="wrist_x" joint="x" kp="2400" kv="28" forcerange="-6 6"/>
+    <position name="wrist_z" joint="z" kp="1000" kv="19" forcerange="-2.8 2.8"/>
+    <position name="close_left" joint="left_closure" kp="1200" kv="5" forcerange="-2 2"/>
+    <position name="close_right" joint="right_closure" kp="1200" kv="5" forcerange="-2 2"/>
+  </actuator>
+</mujoco>

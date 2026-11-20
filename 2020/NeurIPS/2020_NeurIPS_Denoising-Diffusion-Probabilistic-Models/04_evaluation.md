@@ -1,12 +1,13 @@
 # Evaluation - Denoising Diffusion Probabilistic Models
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
+> 2026-11-19 표본 감사에서 요약과 관련 본문 표현을 원문에 대조해 교정했다. [원문](https://arxiv.org/html/2006.11239)
 > Evidence maturity: `FULL_TEXT_CHECKED`.
 > Analysis basis: full-text PDF body checked on 2026-09-03 (25 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2006.11239; PDF retrieval source: https://arxiv.org/pdf/2006.11239. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
-PDF body evaluation/result cue (p. 5 (4 Experiments), p. 5 (4 Experiments), p. 6 (4 Experiments), p. 8 (4 Experiments), p. 13 (Figure/Table caption)): With our FID score of 3.17, our unconditional model achieves better sample quality than most models in the literature, including class conditional models.
+CIFAR-10에서 생성 이미지의 FID 및 Inception Score를 측정하고, 변분 목적과 단순화한 잡음 예측 목적의 결과를 비교한다. [원문](https://arxiv.org/html/2006.11239)
 
 ## Evaluation Body Digest
 
@@ -22,9 +23,9 @@ PDF body evaluation/result cue (p. 5 (4 Experiments), p. 5 (4 Experiments), p. 6
 ## Evaluation Type and Scope
 
 - **Evaluation type:** `EMPIRICAL / SOURCE-REPORTED EVALUATION`.
-- **Target system/task:** high-dimensional data 또는 robot action-trajectory distribution.
-- **Input boundary:** conditioning observation와 noisy/intermediate sample.
-- **Output/decision under evaluation:** generated sample, action chunk 또는 trajectory.
+- **Target system/task:** 학습 이미지의 분포.
+- **Input boundary:** 잡음이 더해진 이미지와 확산 시점.
+- **Output/decision under evaluation:** 역확산으로 생성한 이미지.
 - **Primary target:** distribution fit, multimodality, sample quality와 latency.
 - **Detected evaluation headings:** 4 Experiments (p. 5); B Experimental details (p. 14).
 
@@ -65,8 +66,8 @@ PDF body evaluation/result cue (p. 5 (4 Experiments), p. 5 (4 Experiments), p. 6
 |---|---|---|---|
 | Robot/hardware/simulator | Our FID score is computed with respect to the training set, as is standard practice; when we compute it with respect to the test ... | embodiment, simulator version and control stack | p. 5 (4 Experiments), p. 7 (4 Experiments) |
 | Task/environment | (A stochastic reconstruction x0 ∼pθ(x0/xt) is also valid, but we do not consider it here because it makes distortion more difficult to evaluate.) Figure ... | reset, timeout, object/scene variation | p. 7 (4 Experiments), p. 7 (4 Experiments) |
-| Observation/sensor | conditioning observation와 noisy/intermediate sample | calibration, preprocessing, privileged input | p. 1 (Abstract), p. 4 (2 Background) |
-| Output/decision | generated sample, action chunk 또는 trajectory | action frame, controller and termination | p. 4 (2 Background), p. 1 (Abstract) |
+| Observation/sensor | 잡음이 더해진 이미지와 확산 시점 | calibration, preprocessing, privileged input | p. 1 (Abstract), p. 4 (2 Background) |
+| Output/decision | 역확산으로 생성한 이미지 | 이미지 공간과 역확산 종료 시점 | p. 4 (2 Background), p. 1 (Abstract) |
 
 ## Metrics and Success Definition
 

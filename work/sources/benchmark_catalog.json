@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_on": "2026-11-18",
+  "generated_on": "2026-11-20",
   "catalog_type": "benchmark",
   "evidence_policy": "Generated references are cue_only. Do not treat a token match as verified evaluation evidence; consult the paper's 04_evaluation.md and source location.",
   "entries": [
@@ -2371,6 +2371,11 @@
           "paper_id": "pr-1202",
           "source": "2026/arXiv/2026_arXiv_RoboAlign-Learning-Test-Time-Reasoning-for-Language-Action/04_evaluation.md",
           "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-1228",
+          "source": "2024/NeurIPS/2024_NeurIPS_DeeR-VLA-Dynamic-Inference-of-Multimodal-Large-Language-Mo/04_evaluation.md",
+          "evidence": "cue_only"
         }
       ],
       "reference_basis": "04_evaluation.md token cue; dataset/metric role, split, aggregation, and primary-vs-auxiliary status remain paper-specific.",
@@ -2901,6 +2906,16 @@
         {
           "paper_id": "pr-1214",
           "source": "2026/CVPR/2026_CVPR_GeoPredict-Leveraging-Predictive-Kinematics-and-3D-Gaussia/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-1238",
+          "source": "2026/CoRL/2026_CoRL_Back-to-the-Familiar-Future-Failure-Recovery-for-VLA-Polic/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-1239",
+          "source": "2026/CoRL/2026_CoRL_VLA-FAIL-Efficient-Task-Failure-Detection-for-Finetuned-Vi/04_evaluation.md",
           "evidence": "cue_only"
         }
       ],

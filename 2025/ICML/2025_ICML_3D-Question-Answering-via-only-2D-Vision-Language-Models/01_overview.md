@@ -17,7 +17,7 @@
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (16 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
-> DOC-QA3 (2026-10-23): [cdViews / 3D QA의 지정 수식·공개 구현 대조](./03_method.md). Commit `e1df64c5490c75d117f0ece5c334a6d818cf5d83`의 정적 검토이며 paper-run 버전·실행 결과는 미확인. [결과와 경계](../../../work/update/PAPER_CODE_FORMULA_REVIEW_2026-10-23.md).
+> DOC-QA3 (2026-10-23): [cdViews / 3D QA의 지정 수식·공개 구현 대조](./03_method.md). Commit `e1df64c5490c75d117f0ece5c334a6d818cf5d83`의 정적 검토이며 paper-run 버전·실행 결과는 미확인. [결과와 경계](https://github.com/Kim-Yoo-Hyun/PaperReview/blob/cb650415f47a2a45ad883dabe5bd20c382b5c183/work/update/PAPER_CODE_FORMULA_REVIEW_2026-10-23.md).
 
 ## Why This Paper Is Here
 

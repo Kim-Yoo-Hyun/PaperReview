@@ -1,6 +1,7 @@
 # Insights — Policy Gradient Methods for Reinforcement Learning with Function Approximation
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
+> 2026-11-19 표본 감사에서 요약과 관련 본문 표현을 원문에 대조해 교정했다. [원문](https://proceedings.neurips.cc/paper/1999/hash/464d828b85b0bed98e80ade0a5c43b0f-Abstract.html)
 > Evidence maturity: `FULL_TEXT_CHECKED`.
 > Analysis basis: full-text PDF body checked on 2026-09-02 (7 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://proceedings.neurips.cc/paper/1999/hash/464d828b85b0bed98e80ade0a5c43b0f-Abstract.html; PDF retrieval source: https://proceedings.neurips.cc/paper/1999/hash/464d828b85b0bed98e80ade0a5c43b0f-Abstract.html. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
 
@@ -10,7 +11,7 @@
 
 ### What was actually new
 
-- **p. 2 / Abstract - extractive body cue:** Konda and Tsitsiklis (in prep.) independently developed a very simialr result to ours.
+- **p. 2 / Abstract - source paraphrase:** The policy gradient theorem relates the performance gradient to the action-value function; compatible approximation preserves the gradient under the stated conditions.
 - **p. 2 / Abstract - extractive body cue:** For example, the policy might be represented by a neural network whose input is a representation of the state, whose output is action selection probabilities, ...
 - **p. 1 / Abstract - extractive body cue:** First, it is oriented toward finding deterministic policies, whereas the optimal policy is often stochastic, selecting different actions with specific probabilities (e.g., see Singh, Jaakkola, ...
 - **p. 1 / Abstract - extractive body cue:** The dominant approach for the last decade has been the value-function approach, in which all function approximation effort goes into estimating a value function, with ...
@@ -34,7 +35,7 @@
 
 | Claim target | Body evidence | Anchor |
 |---|---|---|
-| Mechanism/contribution | Konda and Tsitsiklis (in prep.) independently developed a very simialr result to ours. | p. 2 (Abstract), p. 2 (Abstract) |
+| Mechanism/contribution | The policy gradient theorem relates the performance gradient to the action-value function; compatible approximation preserves the gradient under the stated conditions. | p. 2 (Abstract), p. 2 (Abstract) |
 | Reported outcome | If the above can be achieved, then 0 can usually be assured to converge to a locally optimal policy in the performance measure p. | p. 2 (Abstract), p. 4 (Abstract) |
 | Failure/limitation | Similarly, Gordon's (1995) fitted value iteration is also convergent and value-based, but does not find a locally optimal policy. | p. 2 (Abstract), p. 2 (Abstract) |
 

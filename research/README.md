@@ -1,26 +1,16 @@
-# Research — 읽기와 아이디어 검증
+# 논문 읽기
 
-- Updated: 2026-11-18 KST
+- [읽기 계획](./READING_PLAN.md) · CORE/NEXT의 선정 이유와 순서
+- [읽기 기록](./READING_STATUS.csv) · 사용자 상태와 분석. [기록 규칙](./READING_STATUS.md) · [이전 기록](./READING_STATUS_HISTORY.csv)
+- [논문 색인](./REGISTRY_INDEX.csv) · [전체 등급](./READING_TIERS.csv) · [통계](./REGISTRY_STATS.md)
+- [2026-11-19 진단](./REGISTRY_AUDIT.md) · 신규 등록 전 1,227편의 분포, 누락, 중복 의심, 태그, 링크, 최신성
+- [논문 표본 감사](./SAMPLE_AUDIT.md) · CORE 30편·NEXT 20편의 원문 대조, 항목별 판정과 오류율
+- [외부 목록 대비 커버리지](./EXTERNAL_COVERAGE.md) · 서베이·학회·연구실·큐레이션 25개 목록과 누락 후보
+- [누락 논문 등록 심사](./GAPFILL.md) · 36편의 등록·보류·중복 판정, 능동 인식과 촉각 조작의 검색식 및 등록 전후 커버리지
+- [OpenVLA 인용 계보](./OPENVLA_LINEAGE.md) · 선행 8편과 후속 15편의 원문 근거, 공통 한계와 후속 검증이 드문 조건
+- [CORE 심화 감사](../work/sources/batches/tier1_vla_humanoid.yaml) · VLA 정책의 실기 과제 수, 휴머노이드 제어의 검증 환경, 한계와 직접 선행
+- [다축 태그 YAML](../work/sources/batches/core_next_01.yaml) · 같은 50편의 소속·방법·로봇·공개 자료와 VLA·휴머노이드 전용 항목. [매핑 및 적용 기준](../work/update/REGISTRY.md#첫-배치-태그-매핑)
+- [연구 설계](./RESEARCH_GUIDE.md) · 공백 탐색, 가까운 선행 비교, 검증 단계
+- [로보틱스 공백 분석](../work/update/ROBOTICS_TRENDS.md#verified-gap-analysis) · 검증 원장의 태그 교집합과 반복된 한계. [직접 선행·최근 3개월 검색](../work/update/ROBOTICS_TRENDS.md#lab-gap-screen) · [로봇팔·G1 기준 석사 후보 5개](../work/research_topics/README.md#robotics-gap-candidates)
 
-이 디렉토리는 논문 읽기와 연구 판단의 운영 기준을 관리한다. 최신 [REG-R18](../work/update/REGISTRY_MAINTENANCE_2026-11-18.md#reg-r18)에서 geometry 추정과 VLA의 직접 선행3편을 추가했다. 연구 후보의 현재 상태는 [통합 index](../work/research_topics/README.md), 실제 다음 행동은 [TODO](../TODO.md), 내용·실행 준비·근거는 주제별 두 폴더가 소유한다. 이 안내에는 완료 이력을 반복하지 않는다.
-
-| 필요한 작업 | 문서 | 수정 주체 |
-|---|---|---|
-| 유지·예비 및 추가 탐색 주제의 가능성·재현 방법 | [주제별 통합 index](../work/research_topics/README.md) | 현행 투자 판단·폐기 사유는 index, 개별 근거는 주제 README, 다음 행동은 TODO; paper tier와 별개 |
-| 논문 찾기·전체 범위 확인 | [전체 registry](../PAPER.md), [필터 index](./REGISTRY_INDEX.csv), [통계](./REGISTRY_STATS.md) | Manifest에서 생성 |
-| 무엇을 어떤 순서로 읽을지 | [READING_PLAN](./READING_PLAN.md), [전체 tier](./READING_TIERS.csv) | `build_reading_tiers.py`의 group/rationale 수정 후 생성 |
-| 실제 읽은 내용 기록 | [상태 규칙](./READING_STATUS.md), [active tracker](./READING_STATUS.csv), [inactive history](./READING_STATUS_HISTORY.csv) | 사용자 상태·분석 보존; 자동 필드만 생성 |
-| 논문 사이의 차이·미해결 질문 | [7개 synthesis와 교차 질문 분류](../synthesis/README.md) | Source에 연결한 수동 합성; queue만 자동 생성 |
-| 공백 탐색·아이디어 가치 검토 | [단계 0 + 8단계 buildup guide](./IDEA_BUILDUP_GUIDE.md), [현재 질문과 비교 근거](../synthesis/README.md) | 분야의 열린 문제와 새 논문의 기여를 분리; 알려진 답 → 조건부 질문·대안·최소 검증 |
-| 후보별 결과·GPU 후속·한계 | [16개 주제 요약](../work/research_candidates/summaries/README.md) | 상세 dossier/측정 결과를 요약 |
-| 지금 할 일·실험 재개 | [TODO](../TODO.md), [실험/재개 index](../work/experiments/README.md) | 연구 gate·자원 gate·실제 artifact를 별도 확인 |
-
-## 현재 근거의 해석
-
-현재 규모·tier·읽기 진행 집계는 생성된 [REGISTRY_STATS](./REGISTRY_STATS.md), 최신 등록·교정·정리는 [11/18 유지보수](../work/update/REGISTRY_MAINTENANCE_2026-11-18.md#reg-r18)를 따른다. 논문 노트의 source evidence와 사용자 reading status는 별개다.
-
-유지 3개·예비 1개 주제의 기여 판단과 준비·실행 수준은 [주제 index](../work/research_topics/README.md)에 통합한다. 비실험 설계, Docker 제어 검사, 실제 정책 실행과 연구 효과는 서로 다른 증거다. 날짜별 과거 준비 묶음을 현재 실행 가능한 주제 수로 세지 않는다.
-
-[비실험 절차](./IDEA_BUILDUP_GUIDE.md#nonexperimental-workflow)는 탐색 진입 기준을 낮추고 결과 주장의 증거 기준을 유지한다. [11/04 기존 6개 감사](../work/research_topics/README.md#nonexperimental-process-audit)는 당시 범위로 보존하며 FEEDBACK의 단계별 상태는 자체 내용 문서를 따른다. 실제 독립 연구자 피드백은 아직 수신하지 않았다.
-
-과거 NO-GO/HOLD와 재개 조건은 [16개 주제 요약](../work/research_candidates/summaries/README.md), 후보 투자 순위는 주제 index, 선택한 다음 행동은 [TODO](../TODO.md)가 관리한다. `projects/`의 RETIRED 문서나 GPU 확보를 자동 재개 승인으로 해석하지 않는다.
+논문 확보·출처 확인·사용자의 정독은 별도 상태로 기록한다. 교차 비교와 닫힌루프 질문은 [분야별 합성](../synthesis/README.md), 실행을 검토 중인 질문은 [연구 후보](../work/research_topics/README.md)에서 확인한다.

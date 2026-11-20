@@ -1,8 +1,8 @@
-# GAP-P4 결과 — 경로 변경 뒤 보정 실패 가설의 bounded 검증
+# 주행 비교 결과
 
 - Completed: 2026-10-24 KST
 - **결론: 현재 pilot에서 주 가설을 지지하지 못했다. 상태 기반 진단은 HOLD, 일반 adaptive safety 방법 NO-GO·native VLA HOLD를 유지한다.** 이 결과로 navigation 분야의 모든 연구 공백을 기각하지 않는다.
-- Canonical question: [GAP-PLAN](../../../synthesis/01_planning_control.md#gap-plan-2026). [실행/재분석 안내](./README.md) · [동결 protocol](./PROTOCOL.json) · [기계 판정과 전체 수치](./results/verified/analysis.json).
+- Canonical question: [GAP-PLAN](../../../synthesis/01_control.md#gap-plan-2026). [실행/재분석 안내](./README.md) · [동결 protocol](./PROTOCOL.json) · [기계 판정과 전체 수치](./results/verified/analysis.json).
 
 ## 1. 무엇을 실행했는가
 
@@ -46,9 +46,7 @@ Shadow는 **M0가 실제 실행한 동일 관측열**에서 네 보정기만 비
 - 저장된384 branch에서 연속 tick/terminal 관측, 위험·진행 재집계, coverage 분모,192쌍의 동일 prefix/hash, M0/M3 shadow equality PASS. 이는 저장 clearance의 재집계이며 모든 기하 계산을 별도 물리 엔진으로 재검증했다는 뜻은 아니다.
 - H5 성숙 label은 pre30,720개/post30,216개. 각 branch 끝의 미래 target40개씩 총15,360 prediction은 우측 검열로 따로 기록했다. Coverage는 종료 시점에 따라 선택되는 관측 label의 진단치이며 미관측 미래 안전을 보장하지 않는다.
 - Development·calibration·held-out을 순서대로 한 번씩 실행했다. Test 결과를 본 뒤 parameter·scene·metric·기각 기준을 변경하거나 재시도하지 않았다. [동결 hash](./results/verified/TEST_FREEZE.json)와 [실행 기록](./results/verified/execution.json)을 보존한다.
-- 저장 결과를 로컬 Docker에서 재분석해 원본 analysis JSON과 byte 일치를 확인했다. [재분석 증거](./results/replay_verification.json). Registry audit 오류/경고0, canonical manifest·tier·읽기 입력5개 hash와 기존 P3 artifact18개 보존을 확인했다. [유지보수/cleanup 검증](./results/maintenance_validation.json).
+- 저장 결과를 로컬 Docker에서 재분석해 원본 analysis JSON과 byte 일치를 확인했다. [재분석 증거](./results/replay_verification.json).
 - 실제 human burden은 no-ego reference가 없어 **NOT_MEASURED**. 이미지·언어·학습 정책·현실 센서·다른 반응 모델은 이번 실행에 없다. 사용자 reading status와 registry tier는 변경하지 않는다.
 
 **현재 설계의 추가 rollout/학습은 종료한다.** 이번 실패를 뒤집도록 각도나 threshold를 검색하지 않는다. 재개하려면 별도 문헌/독립 근거에서 route change 뒤 절대 위험 증가와 보정 악화가 함께 예측되는 조건을 제시하고, 진행/geometry·단순 대안과 갈리는 비교를 새 protocol로 검토해야 한다. GPU 확보만으로 재개하지 않는다.
-
-다음 문헌 TODO는 아직 직접 충돌 심화가 남은 [GAP-DEFORM](../../../synthesis/03_manipulation_contact.md#gap-deform-2026)의 **task에 필요한 물성/고정 조건 식별**이다. JIGGLE·PGND 후속의 joint estimation/active probing과 고전 feedback·반복 보정 대안을 먼저 대조한다. VLA instruction이 probe/행동 선택을 실제 바꾸는 경우만 VLA 연결로 남기며 새 실험은 시작하지 않는다.

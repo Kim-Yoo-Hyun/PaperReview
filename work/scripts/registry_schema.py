@@ -37,6 +37,7 @@ PUBLICATION_KINDS = {
     "other",
 }
 PUBLICATION_STATUSES = {"peer_reviewed", "preprint", "technical_report", "unverified"}
+SOURCE_SCOPES = {"paper_specific", "venue_index", "project_landing", "publisher_landing"}
 CODE_STATUSES = {"released", "project_only", "not_released", "not_identified"}
 DATA_STATUSES = {"released", "not_released", "not_identified", "not_recorded", "not_applicable"}
 
@@ -437,6 +438,9 @@ def enrich_record(
         "code",
         _source(project, "code") if artifact_code_status(project) == "released" else None,
     )
+    code = sources["code"]
+    if isinstance(code, dict) and code.get("scope") == "code_repository":
+        sources["code"] = {**code, "scope": "project_landing"}
     item["sources"] = sources
 
     artifacts = dict(item.get("artifacts") or {})
@@ -517,6 +521,25 @@ def validate_record_shape(item: dict[str, Any], *, intensive: bool = False) -> l
         errors.append("invalid publication.status")
     if publication.get("presentation") not in PRESENTATIONS:
         errors.append("invalid publication.presentation")
+    sources = item.get("sources")
+    if isinstance(sources, dict):
+        for key in ("primary", "preprint", "paper_pdf", "project", "code"):
+            if key not in sources:
+                errors.append(f"missing sources.{key}")
+                continue
+            source = sources[key]
+            if source is None:
+                continue
+            if not isinstance(source, dict) or not all(
+                isinstance(source.get(field), str) and source[field] for field in ("url", "kind")
+            ):
+                errors.append(f"invalid sources.{key}")
+            elif "scope" in source and (
+                not isinstance(source["scope"], str) or source["scope"] not in SOURCE_SCOPES
+            ):
+                errors.append(f"invalid sources.{key}.scope")
+    else:
+        errors.append("invalid sources")
     artifacts = item.get("artifacts") if isinstance(item.get("artifacts"), dict) else {}
     if artifacts.get("code_status") not in CODE_STATUSES:
         errors.append("invalid artifacts.code_status")

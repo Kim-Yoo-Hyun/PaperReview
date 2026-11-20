@@ -1,4 +1,4 @@
-# Benchmarking Knowledge Transfer for Lifelong Robot Learning
+# LIBERO: Benchmarking Knowledge Transfer for Lifelong Robot Learning
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
 > Analysis basis: full-text PDF body checked on 2026-09-03 (44 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://arxiv.org/abs/2306.03310.
@@ -12,6 +12,7 @@
 - Tier: CORE
 - Tags: Robotics, Imitation Learning, Benchmark
 - Official paper: https://arxiv.org/abs/2306.03310
+- Venue verification: https://proceedings.neurips.cc/paper_files/paper/2023/hash/8c3c666820ea055a77726d66fc7d447f-Abstract-Datasets_and_Benchmarks.html
 - Full-text retrieval: https://arxiv.org/pdf/2306.03310
 - Code/Project: https://libero-project.github.io/main.html
 - Paper type: benchmark_or_dataset

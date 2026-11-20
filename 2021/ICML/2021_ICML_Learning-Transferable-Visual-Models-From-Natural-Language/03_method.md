@@ -1,12 +1,13 @@
 # Method - Learning Transferable Visual Models From Natural Language Supervision
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
+> 2026-11-19 표본 감사에서 요약과 관련 본문 표현을 원문에 대조해 교정했다. [원문](https://proceedings.mlr.press/v139/radford21a.html)
 > Evidence maturity: `FULL_TEXT_CHECKED`.
 > Analysis basis: full-text PDF body checked on 2026-09-03 (48 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2103.00020; PDF retrieval source: https://arxiv.org/pdf/2103.00020. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
-PDF body method statement (p. 5 (2.4. Choosing and Scaling a Model), p. 4 (2.4. Choosing and Scaling a Model), p. 4 (2.3. Selecting an Efficient Pre-Training Method), p. 5 (2.4. Choosing and Scaling a Model), p. 3 (2.1. Natural Language Supervision), p. 3 (2.1. Natural Language Supervision)): Learning Transferable Visual Models From Natural Language Supervision 5 # image_encoder - ResNet or Vision Transformer # text_encoder - CBOW or Text Transformer # I[n, h, w, c] - minibatch ...
+CLIP은 웹에서 수집한 이미지·텍스트 4억 쌍으로 두 인코더를 대조학습한다. 추론 시 이미지와 클래스 설명의 임베딩 유사도를 비교해 별도 분류기 학습 없이 클래스를 예측한다. [원문](https://proceedings.mlr.press/v139/radford21a.html)
 
 ## Method Body Digest
 
@@ -62,7 +63,7 @@ PDF body method statement (p. 5 (2.4. Choosing and Scaling a Model), p. 4 (2.4. 
 |---|---|---|---|
 | Input/observation | development, text-to-text, standardized, input-output, interface, McCann, Radford, Raffel, enabled, taskagnostic, architectures, zero-shot, transfer, downstream | 논문이 명시한 observation과 task input | body cue; exact tensor/frame verify |
 | State/latent | development, text-to-text, standardized, input-output, interface, McCann, Radford, Raffel, enabled, taskagnostic | task state 또는 decision variable | body cue; notation verify |
-| Action/output | Learning, natural, language, important, advantage, over, most, unsupervised, self-supervised, approaches | paper-specific output/action | body cue; unit/decoder verify |
+| Action/output | Learning, natural, language, important, advantage, over, most, unsupervised, self-supervised, approaches | 이미지–텍스트 유사도와 클래스별 예측 | body cue; unit/decoder verify |
 | Objective/constraint | knowledge, batch, construction, technique, objective, first, introduced, area, deep, metric | paper-specific objective | equation anchor required |
 
 ## Observation–State–Action Interface
@@ -74,7 +75,7 @@ PDF body method statement (p. 5 (2.4. Choosing and Scaling a Model), p. 4 (2.4. 
 - **p. 3 / 2.2. Creating a Sufficiently Large Dataset - extractive body cue:** After filtering to keep only images with natural language titles and/or descriptions in English, the dataset shrunk by a factor of 6 to only 15 ...
 - **p. 4 / 2.2. Creating a Sufficiently Large Dataset - extractive body cue:** Learning Transferable Visual Models From Natural Language Supervision 4 balance the results by including up to 20,000 (image, text) pairs per query.
 - **p. 5 / 2.4. Choosing and Scaling a Model - extractive body cue:** While previous computer vision research has often scaled models by increasing the width (Mahajan et al., 2018) or depth (He et al., 2016a) in isolation, ...
-- **Normalized interface:** observation=논문이 명시한 observation과 task input; state=task state 또는 decision variable; output/action=paper-specific output/action.
+- **Normalized interface:** observation=논문이 명시한 observation과 task input; state=task state 또는 decision variable; output/action=이미지–텍스트 유사도와 클래스별 예측.
 - Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract

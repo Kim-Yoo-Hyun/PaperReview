@@ -13,7 +13,8 @@
 - Tags: Robotics, VLA, uncertainty, calibration, temporal difference, failure detection, LIBERO
 - Official paper: https://arxiv.org/abs/2604.20472
 - Full-text retrieval: https://arxiv.org/pdf/2604.20472
-- Code/Project: https://shellytechnion.github.io/
+- Code/Project: https://shellytechnion.github.io/TDQC.github.io/
+- Code: https://github.com/shellytechnion/TDQC
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (31 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 

@@ -13,7 +13,7 @@
 - Tags: Robotics, contact-rich manipulation, trajectory optimization, synthetic data
 - Official paper: https://www.roboticsproceedings.org/rss21/p053.html
 - Full-text retrieval: https://www.roboticsproceedings.org/rss21/p053.pdf
-- Code/Project: https://www.roboticsproceedings.org/rss21/p053.html
+- Code/Project: https://lujieyang.github.io/physicsgen/
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (14 pages; tesseract OCR fallback; title-token overlap first two pages=1.0)
 

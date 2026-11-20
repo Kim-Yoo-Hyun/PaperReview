@@ -1,12 +1,13 @@
 # Problem - Learning Transferable Visual Models From Natural Language Supervision
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
+> 2026-11-19 표본 감사에서 요약과 관련 본문 표현을 원문에 대조해 교정했다. [원문](https://proceedings.mlr.press/v139/radford21a.html)
 > Evidence maturity: `FULL_TEXT_CHECKED`.
 > Analysis basis: full-text PDF body checked on 2026-09-03 (48 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2103.00020; PDF retrieval source: https://arxiv.org/pdf/2103.00020. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Problem in One Sentence
 
-PDF body framing (p. 2 (1. Introduction and Motivating Work), p. 2 (1. Introduction and Motivating Work), p. 3 (1. Introduction and Motivating Work), p. 6 (3.1.1. MOTIVATION), p. 6 (3.1.1. MOTIVATION)): Both approaches also use static softmax classifiers to perform prediction and lack a mechanism for dynamic outputs.
+고정된 클래스 레이블로 학습한 분류기는 새로운 시각 개념에 적응하려면 추가 주석이 필요하다. [원문](https://proceedings.mlr.press/v139/radford21a.html)
 
 ## PDF Body Digest
 
@@ -22,11 +23,11 @@ PDF body framing (p. 2 (1. Introduction and Motivating Work), p. 2 (1. Introduct
 
 | Dimension | PDF body evidence | Registry/robotics interpretation | Boundary |
 |---|---|---|---|
-| Target problem | Both approaches also use static softmax classifiers to perform prediction and lack a mechanism for dynamic outputs. | 논문이 정의한 robot/embodied environment | body wording is the source claim |
+| Target problem | Both approaches also use static softmax classifiers to perform prediction and lack a mechanism for dynamic outputs. | 자연 이미지와 설명 텍스트 | body wording is the source claim |
 | Observation / input | The development of "text-to-text" as a standardized input-output interface (McCann et al., 2018; Radford et al., 2019; Raffel et al., 2019) has ... | 논문이 명시한 observation과 task input | exact sensor/frame/preprocessing from PDF body |
 | State / latent | development, text-to-text, standardized, input-output, interface, McCann, Radford, Raffel, enabled, taskagnostic | task state 또는 decision variable | notation and tensor shape require body check |
-| Output / action | discussed, introduction, idea, however, terminology, describe, space, varied | paper-specific output/action | exact unit/frame/decoder require body check |
-| Target outcome | source task metric; robot link not established | primary task objective와 closed-loop behavior | metric/denominator are in 04 evidence |
+| Output / action | discussed, introduction, idea, however, terminology, describe, space, varied | 이미지–텍스트 유사도와 클래스별 예측 | exact unit/frame/decoder require body check |
+| Target outcome | source task metric; robot link not established | zero-shot 시각 전이 성능 | metric/denominator are in 04 evidence |
 
 ## Formal Problem Formulation
 
@@ -69,7 +70,7 @@ PDF body contribution framing (p. 3 (2.1. Natural Language Supervision), p. 3 (2
 
 ## Position in the Robotics Loop
 
-upstream writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 1 (1. Introduction and Motivating Work), p. 2 (1. Introduction and Motivating Work), p. 3 (2.1. Natural Language Supervision), p. 4 (2.3. Selecting an Efficient Pre-Training Method). The downstream handoff is claimed only when the body describes it.
+후속 로봇 시스템에서는 이미지와 지시의 의미를 비교하는 지각 단계에 CLIP 표현을 활용할 수 있다. 원 논문의 출력은 이미지–텍스트 유사도이며 직접 측정한 성능은 시각 인식 지표다. [원문](https://proceedings.mlr.press/v139/radford21a.html)
 
 ## Verification Questions
 

@@ -1,12 +1,13 @@
 # Problem - π0: A Vision-Language-Action Flow Model for General Robot Control
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
+> 2026-11-19 표본 감사에서 요약과 관련 본문 표현을 원문에 대조해 교정했다. [원문](https://arxiv.org/html/2410.24164)
 > Evidence maturity: `FULL_TEXT_CHECKED`.
 > Analysis basis: full-text PDF body checked on 2026-09-03 (17 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p010.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p010.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Problem in One Sentence
 
-PDF body framing (p. 2 (1. INTRODUCTION), p. 2 (1. INTRODUCTION), p. 3 (1. INTRODUCTION), p. 3 (1. INTRODUCTION), p. 4 (1. INTRODUCTION)): However, developing such generalist robot policies - ie., robot foundation models - involves a number of major challenges.
+다양한 로봇의 시각·언어 입력을 정교한 조작에 필요한 고주파 연속 제어로 변환한다. [원문](https://arxiv.org/html/2410.24164)
 
 ## PDF Body Digest
 
@@ -33,7 +34,7 @@ PDF body framing (p. 2 (1. INTRODUCTION), p. 2 (1. INTRODUCTION), p. 3 (1. INTRO
 | Formulation field | PDF body-grounded record | Evidence anchor |
 |---|---|---|
 | State / observation variable | multimodal context o,l,p/history; body terms: Formally, want, model, data, distribution, where, corresponds, action, chunk, future | p. 5 (IV. THE x MODEL), p. 4 (IV. THE x MODEL), p. 3 (1. INTRODUCTION) |
-| Decision / output variable | action, pose, option or chunk a; body terms: more, complex, dexterous, behaviors, tying, shoelaces, cooking, shrimp | p. 4 (1. INTRODUCTION), p. 2 (1. INTRODUCTION), p. 3 (1. INTRODUCTION) |
+| Decision / output variable | action, pose, option or chunk a; body terms: robot state, visual features, continuous action chunk | p. 4 (1. INTRODUCTION), p. 2 (1. INTRODUCTION), p. 3 (1. INTRODUCTION) |
 | Objective / loss / cost | policy/action modeling objective; cue terms: architecture, inspired, Transfusion, trains, single, transformer, multiple, objectives | p. 4 (IV. THE x MODEL), p. 5 (IV. THE x MODEL), p. 7 (A. Evaluating the base model), p. 8 (A. Evaluating the base model) |
 | Constraint / feasibility | paper-specific constraints are recorded only where the body states them; otherwise unresolved | p. 7 (A. Evaluating the base model), p. 5 (IV. THE x MODEL), p. 8 (A. Evaluating the base model) |
 | Success / guarantee | instruction-conditioned task success | p. 9 (Figure/Table caption), p. 7 (VI. EXPERIMENTAL EVALUATION), p. 1 (Figure/Table caption) |
@@ -49,9 +50,9 @@ PDF body framing (p. 2 (1. INTRODUCTION), p. 2 (1. INTRODUCTION), p. 3 (1. INTRO
 
 ## What the Paper Changes
 
-PDF body contribution framing (p. 4 (1. INTRODUCTION), p. 2 (1. INTRODUCTION), p. 3 (1. INTRODUCTION), p. 3 (1. INTRODUCTION), p. 4 (1. INTRODUCTION)): ‘of more complex and dexterous behaviors, such as tying shoelaces [58] or cooking shrimp [17], we show that our framework can leam very long tasks, sometimes tens of, minutes in ...
+PDF body contribution framing (p. 4 (1. INTRODUCTION), p. 2 (1. INTRODUCTION), p. 3 (1. INTRODUCTION), p. 3 (1. INTRODUCTION), p. 4 (1. INTRODUCTION)): π₀ combines a pretrained VLM with a flow-matching action expert and is evaluated on multistage tasks including laundry folding.
 
-- **p. 2 / 1. INTRODUCTION - extractive body cue:** In this paper, we present a prototype model and learning framework, which we call zo, that illustrates how each of these three bottlenecks could be ...
+- **p. 2 / 1. INTRODUCTION - source paraphrase:** In this paper, we present a prototype model and learning framework, which we call π₀, that illustrates how each of these three bottlenecks could be ...
 - **p. 3 / 1. INTRODUCTION - extractive body cue:** The contributions of our work consist of a novel generalist robot policy architecture based on VLM pre-training and flow matching, and an empirical investigation of ...
 - **p. 3 / 1. INTRODUCTION - extractive body cue:** This enables our model to control robots at frequencies of up to 50 Hz for dexterous tasks such as laundry folding (see Figure 1), To ...
 - **p. 4 / 1. INTRODUCTION - extractive body cue:** Note that we use PaliGemma for convenience and because of its comparatively small size (which is useful for real-time control), but our framework is compatible ...

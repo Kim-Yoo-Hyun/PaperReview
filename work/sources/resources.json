@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_on": "2026-11-18",
+  "generated_on": "2026-11-20",
   "source_of_truth": "work/sources/papers.json plus benchmark_catalog.json and metric_catalog.json",
   "evidence_policy": "benchmark/metric references remain cue_only; code_or_project entries record linked manifest URLs and do not prove reproducibility.",
   "entries": [
@@ -294,6 +294,11 @@
         {
           "paper_id": "pr-1202",
           "source": "2026/arXiv/2026_arXiv_RoboAlign-Learning-Test-Time-Reasoning-for-Language-Action/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-1228",
+          "source": "2024/NeurIPS/2024_NeurIPS_DeeR-VLA-Dynamic-Inference-of-Multimodal-Large-Language-Mo/04_evaluation.md",
           "evidence": "cue_only"
         }
       ],
@@ -1888,6 +1893,16 @@
         {
           "paper_id": "pr-1214",
           "source": "2026/CVPR/2026_CVPR_GeoPredict-Leveraging-Predictive-Kinematics-and-3D-Gaussia/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-1238",
+          "source": "2026/CoRL/2026_CoRL_Back-to-the-Familiar-Future-Failure-Recovery-for-VLA-Polic/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-1239",
+          "source": "2026/CoRL/2026_CoRL_VLA-FAIL-Efficient-Task-Failure-Detection-for-Finetuned-Vi/04_evaluation.md",
           "evidence": "cue_only"
         }
       ],
@@ -5566,6 +5581,18 @@
       "verified_on": "2026-07-02"
     },
     {
+      "resource_id": "code:03564b311453",
+      "resource_type": "code_or_project",
+      "name": "Matterport3DSimulator",
+      "url": "https://github.com/peteanderson80/Matterport3DSimulator",
+      "paper_ids": [
+        "pr-0539"
+      ],
+      "evidence": "manifest_link",
+      "availability": "released",
+      "verified_on": "2026-07-02"
+    },
+    {
       "resource_id": "code:035f79712bf6",
       "resource_type": "code_or_project",
       "name": "NeuS",
@@ -5576,6 +5603,18 @@
       "evidence": "manifest_link",
       "availability": "project_only",
       "verified_on": "2026-07-02"
+    },
+    {
+      "resource_id": "code:036bd5df45f1",
+      "resource_type": "code_or_project",
+      "name": "CLONE",
+      "url": "https://github.com/humanoid-clone/CLONE",
+      "paper_ids": [
+        "pr-1236"
+      ],
+      "evidence": "manifest_link",
+      "availability": "released",
+      "verified_on": "2026-11-19"
     },
     {
       "resource_id": "code:046b3eb6e3c0",
@@ -5758,6 +5797,18 @@
       "verified_on": "2026-08-11"
     },
     {
+      "resource_id": "code:0bfe92a94b96",
+      "resource_type": "code_or_project",
+      "name": "contact-grounded-policy.github.io",
+      "url": "https://contact-grounded-policy.github.io/",
+      "paper_ids": [
+        "pr-1234"
+      ],
+      "evidence": "manifest_link",
+      "availability": "project_only",
+      "verified_on": "2026-11-19"
+    },
+    {
       "resource_id": "code:0c0a55f2a645",
       "resource_type": "code_or_project",
       "name": "gr1-manipulation.github.io",
@@ -5775,6 +5826,7 @@
       "name": "Ctrl-World",
       "url": "https://github.com/Robert-gyj/Ctrl-World",
       "paper_ids": [
+        "pr-0687",
         "pr-0960"
       ],
       "evidence": "manifest_link",
@@ -5830,6 +5882,18 @@
       "verified_on": "2026-08-11"
     },
     {
+      "resource_id": "code:0f50313d38f0",
+      "resource_type": "code_or_project",
+      "name": "tdmpc2",
+      "url": "https://github.com/nicklashansen/tdmpc2",
+      "paper_ids": [
+        "pr-0684"
+      ],
+      "evidence": "manifest_link",
+      "availability": "released",
+      "verified_on": "2026-08-11"
+    },
+    {
       "resource_id": "code:0f6c30476355",
       "resource_type": "code_or_project",
       "name": "memory-clock",
@@ -5878,16 +5942,16 @@
       "verified_on": "2026-07-02"
     },
     {
-      "resource_id": "code:10f3d223b817",
+      "resource_id": "code:11a45deb06a0",
       "resource_type": "code_or_project",
-      "name": "droid-dataset.github.io",
-      "url": "https://droid-dataset.github.io/",
+      "name": "VLN-CE",
+      "url": "https://github.com/jacobkrantz/VLN-CE",
       "paper_ids": [
-        "pr-0732"
+        "pr-0541"
       ],
       "evidence": "manifest_link",
-      "availability": "project_only",
-      "verified_on": "2026-08-11"
+      "availability": "released",
+      "verified_on": "2026-07-02"
     },
     {
       "resource_id": "code:1201ff7fa887",
@@ -5900,6 +5964,18 @@
       "evidence": "manifest_link",
       "availability": "released",
       "verified_on": "2026-07-02"
+    },
+    {
+      "resource_id": "code:1252fa449e3d",
+      "resource_type": "code_or_project",
+      "name": "hug",
+      "url": "https://github.com/openrobokit/graspkit/tree/main/projects/hug",
+      "paper_ids": [
+        "pr-1249"
+      ],
+      "evidence": "manifest_link",
+      "availability": "released",
+      "verified_on": "2026-11-19"
     },
     {
       "resource_id": "code:12682a6713ec",
@@ -5948,30 +6024,6 @@
       "evidence": "manifest_link",
       "availability": "project_only",
       "verified_on": "2026-07-02"
-    },
-    {
-      "resource_id": "code:13ccc06d5667",
-      "resource_type": "code_or_project",
-      "name": "gear",
-      "url": "https://research.nvidia.com/labs/gear/",
-      "paper_ids": [
-        "pr-0871"
-      ],
-      "evidence": "manifest_link",
-      "availability": "project_only",
-      "verified_on": null
-    },
-    {
-      "resource_id": "code:13ee8d2ae685",
-      "resource_type": "code_or_project",
-      "name": "fast",
-      "url": "https://www.pi.website/research/fast",
-      "paper_ids": [
-        "pr-0749"
-      ],
-      "evidence": "manifest_link",
-      "availability": "project_only",
-      "verified_on": "2026-08-12"
     },
     {
       "resource_id": "code:1495a5943741",
@@ -6058,18 +6110,6 @@
       "verified_on": "2026-08-11"
     },
     {
-      "resource_id": "code:177be5b5e1ba",
-      "resource_type": "code_or_project",
-      "name": "openvla-oft.github.io",
-      "url": "https://openvla-oft.github.io/",
-      "paper_ids": [
-        "pr-0750"
-      ],
-      "evidence": "manifest_link",
-      "availability": "project_only",
-      "verified_on": "2026-08-12"
-    },
-    {
       "resource_id": "code:185cae47dcc3",
       "resource_type": "code_or_project",
       "name": "capg",
@@ -6128,6 +6168,18 @@
       "evidence": "manifest_link",
       "availability": "released",
       "verified_on": "2026-10-19"
+    },
+    {
+      "resource_id": "code:1a39dff9ffec",
+      "resource_type": "code_or_project",
+      "name": "openvla-oft",
+      "url": "https://github.com/moojink/openvla-oft",
+      "paper_ids": [
+        "pr-0750"
+      ],
+      "evidence": "manifest_link",
+      "availability": "released",
+      "verified_on": "2026-08-12"
     },
     {
       "resource_id": "code:1ac16079bbca",
@@ -6430,18 +6482,6 @@
       "verified_on": "2026-11-02"
     },
     {
-      "resource_id": "code:248707966616",
-      "resource_type": "code_or_project",
-      "name": "vlnce",
-      "url": "https://jacobkrantz.github.io/vlnce/",
-      "paper_ids": [
-        "pr-0541"
-      ],
-      "evidence": "manifest_link",
-      "availability": "project_only",
-      "verified_on": "2026-07-02"
-    },
-    {
       "resource_id": "code:24c51479ab82",
       "resource_type": "code_or_project",
       "name": "2026-stability-action-chunking",
@@ -6526,16 +6566,16 @@
       "verified_on": "2026-08-11"
     },
     {
-      "resource_id": "code:2814a4559a7c",
+      "resource_id": "code:278815b653f0",
       "resource_type": "code_or_project",
-      "name": "octo-models.github.io",
-      "url": "https://octo-models.github.io/",
+      "name": "conrft",
+      "url": "https://github.com/cccedric/conrft",
       "paper_ids": [
-        "pr-0052"
+        "pr-0885"
       ],
       "evidence": "manifest_link",
-      "availability": "project_only",
-      "verified_on": "2026-07-02"
+      "availability": "released",
+      "verified_on": "2026-09-01"
     },
     {
       "resource_id": "code:28800627d2c1",
@@ -6560,6 +6600,19 @@
       "evidence": "manifest_link",
       "availability": "project_only",
       "verified_on": "2026-08-11"
+    },
+    {
+      "resource_id": "code:28fadbeb7acd",
+      "resource_type": "code_or_project",
+      "name": "habitat-lab",
+      "url": "https://github.com/facebookresearch/habitat-lab",
+      "paper_ids": [
+        "pr-0500",
+        "pr-0948"
+      ],
+      "evidence": "manifest_link",
+      "availability": "released",
+      "verified_on": "2026-07-02"
     },
     {
       "resource_id": "code:290b5bab8ddb",
@@ -6730,6 +6783,18 @@
       "verified_on": "2026-11-07"
     },
     {
+      "resource_id": "code:3161aab3ba53",
+      "resource_type": "code_or_project",
+      "name": "3D-VLA",
+      "url": "https://github.com/UMass-Embodied-AGI/3D-VLA",
+      "paper_ids": [
+        "pr-0939"
+      ],
+      "evidence": "manifest_link",
+      "availability": "released",
+      "verified_on": null
+    },
+    {
       "resource_id": "code:31b585e0facf",
       "resource_type": "code_or_project",
       "name": "CAST",
@@ -6838,6 +6903,30 @@
       "verified_on": "2026-10-25"
     },
     {
+      "resource_id": "code:35513a720bd6",
+      "resource_type": "code_or_project",
+      "name": "harmonic_playback",
+      "url": "https://github.com/HARPLab/harmonic_playback",
+      "paper_ids": [
+        "pr-1251"
+      ],
+      "evidence": "manifest_link",
+      "availability": "released",
+      "verified_on": "2026-11-20"
+    },
+    {
+      "resource_id": "code:35a0c389cf3c",
+      "resource_type": "code_or_project",
+      "name": "LIBERO",
+      "url": "https://github.com/Lifelong-Robot-Learning/LIBERO",
+      "paper_ids": [
+        "pr-0042"
+      ],
+      "evidence": "manifest_link",
+      "availability": "released",
+      "verified_on": "2026-11-19"
+    },
+    {
       "resource_id": "code:35cb271c9c4b",
       "resource_type": "code_or_project",
       "name": "compliantvla",
@@ -6884,6 +6973,18 @@
       "evidence": "manifest_link",
       "availability": "released",
       "verified_on": "2026-10-19"
+    },
+    {
+      "resource_id": "code:36024b27a519",
+      "resource_type": "code_or_project",
+      "name": "DeeR-VLA",
+      "url": "https://github.com/yueyang130/DeeR-VLA",
+      "paper_ids": [
+        "pr-1228"
+      ],
+      "evidence": "manifest_link",
+      "availability": "released",
+      "verified_on": "2026-11-19"
     },
     {
       "resource_id": "code:3720677cb566",
@@ -6934,16 +7035,16 @@
       "verified_on": "2026-08-11"
     },
     {
-      "resource_id": "code:38a3a2e9a9bd",
+      "resource_id": "code:38511e07b40c",
       "resource_type": "code_or_project",
-      "name": "ctrl-world.github.io",
-      "url": "https://ctrl-world.github.io/",
+      "name": "ptld-website",
+      "url": "https://akashsharma02.github.io/ptld-website/",
       "paper_ids": [
-        "pr-0687"
+        "pr-1248"
       ],
       "evidence": "manifest_link",
       "availability": "project_only",
-      "verified_on": "2026-08-11"
+      "verified_on": "2026-11-19"
     },
     {
       "resource_id": "code:3959f7f7b601",
@@ -7019,6 +7120,18 @@
       "verified_on": "2026-08-11"
     },
     {
+      "resource_id": "code:3ac2991c5333",
+      "resource_type": "code_or_project",
+      "name": "vision-in-action",
+      "url": "https://github.com/haoyu-x/vision-in-action",
+      "paper_ids": [
+        "pr-1237"
+      ],
+      "evidence": "manifest_link",
+      "availability": "released",
+      "verified_on": "2026-11-19"
+    },
+    {
       "resource_id": "code:3ae423e5142e",
       "resource_type": "code_or_project",
       "name": "omnireset.github.io",
@@ -7029,6 +7142,18 @@
       "evidence": "manifest_link",
       "availability": "project_only",
       "verified_on": "2026-11-07"
+    },
+    {
+      "resource_id": "code:3b051723974a",
+      "resource_type": "code_or_project",
+      "name": "vla-fail-2026",
+      "url": "https://vla-fail.github.io/vla-fail-2026",
+      "paper_ids": [
+        "pr-1239"
+      ],
+      "evidence": "manifest_link",
+      "availability": "project_only",
+      "verified_on": "2026-11-19"
     },
     {
       "resource_id": "code:3c8ecc53377f",
@@ -7073,18 +7198,6 @@
       "url": "https://robotics-transformer1.github.io/",
       "paper_ids": [
         "pr-0021"
-      ],
-      "evidence": "manifest_link",
-      "availability": "project_only",
-      "verified_on": "2026-07-02"
-    },
-    {
-      "resource_id": "code:3e8dcf8a35ea",
-      "resource_type": "code_or_project",
-      "name": "concept-fusion.github.io",
-      "url": "https://concept-fusion.github.io/",
-      "paper_ids": [
-        "pr-0030"
       ],
       "evidence": "manifest_link",
       "availability": "project_only",
@@ -7523,15 +7636,15 @@
       "verified_on": "2026-08-11"
     },
     {
-      "resource_id": "code:4bf8b60a8c54",
+      "resource_id": "code:4e096b475414",
       "resource_type": "code_or_project",
-      "name": "shellytechnion.github.io",
-      "url": "https://shellytechnion.github.io/",
+      "name": "3D-Diffusion-Policy",
+      "url": "https://github.com/YanjieZe/3D-Diffusion-Policy",
       "paper_ids": [
-        "pr-0816"
+        "pr-0926"
       ],
       "evidence": "manifest_link",
-      "availability": "project_only",
+      "availability": "released",
       "verified_on": null
     },
     {
@@ -7847,6 +7960,18 @@
       "verified_on": "2026-07-02"
     },
     {
+      "resource_id": "code:5889a5b157df",
+      "resource_type": "code_or_project",
+      "name": "physicsgen",
+      "url": "https://lujieyang.github.io/physicsgen/",
+      "paper_ids": [
+        "pr-0651"
+      ],
+      "evidence": "manifest_link",
+      "availability": "not_released",
+      "verified_on": "2026-11-19"
+    },
+    {
       "resource_id": "code:58eafa2b76d7",
       "resource_type": "code_or_project",
       "name": "GaussianGrasper",
@@ -7869,18 +7994,6 @@
       "evidence": "manifest_link",
       "availability": "project_only",
       "verified_on": "2026-07-02"
-    },
-    {
-      "resource_id": "code:591d3e6a9ae2",
-      "resource_type": "code_or_project",
-      "name": "generalist-distillation.github.io",
-      "url": "https://generalist-distillation.github.io/",
-      "paper_ids": [
-        "pr-0886"
-      ],
-      "evidence": "manifest_link",
-      "availability": "project_only",
-      "verified_on": "2026-09-01"
     },
     {
       "resource_id": "code:59d520b02a7a",
@@ -8012,7 +8125,7 @@
       ],
       "evidence": "manifest_link",
       "availability": "project_only",
-      "verified_on": "2026-08-11"
+      "verified_on": "2026-11-19"
     },
     {
       "resource_id": "code:5e7f986d27cd",
@@ -8025,6 +8138,18 @@
       "evidence": "manifest_link",
       "availability": "project_only",
       "verified_on": "2026-09-01"
+    },
+    {
+      "resource_id": "code:5e883989fa69",
+      "resource_type": "code_or_project",
+      "name": "modular_rl",
+      "url": "https://github.com/joschu/modular_rl",
+      "paper_ids": [
+        "pr-1180"
+      ],
+      "evidence": "manifest_link",
+      "availability": "released",
+      "verified_on": "2026-11-12"
     },
     {
       "resource_id": "code:5f09e64c4a9c",
@@ -8087,18 +8212,6 @@
       "verified_on": "2026-10-22"
     },
     {
-      "resource_id": "code:60b08a305e77",
-      "resource_type": "code_or_project",
-      "name": "3d-diffusion-policy.github.io",
-      "url": "https://3d-diffusion-policy.github.io/",
-      "paper_ids": [
-        "pr-0926"
-      ],
-      "evidence": "manifest_link",
-      "availability": "project_only",
-      "verified_on": null
-    },
-    {
       "resource_id": "code:61367686ec02",
       "resource_type": "code_or_project",
       "name": "LAMP",
@@ -8157,6 +8270,18 @@
       "evidence": "manifest_link",
       "availability": "released",
       "verified_on": "2026-08-11"
+    },
+    {
+      "resource_id": "code:6413c74c4585",
+      "resource_type": "code_or_project",
+      "name": "concept-fusion",
+      "url": "https://github.com/concept-fusion/concept-fusion",
+      "paper_ids": [
+        "pr-0030"
+      ],
+      "evidence": "manifest_link",
+      "availability": "released",
+      "verified_on": "2026-07-02"
     },
     {
       "resource_id": "code:64250bc83bcb",
@@ -8219,18 +8344,6 @@
       "verified_on": "2026-11-12"
     },
     {
-      "resource_id": "code:667fe9598225",
-      "resource_type": "code_or_project",
-      "name": "main.html",
-      "url": "https://libero-project.github.io/main.html",
-      "paper_ids": [
-        "pr-0042"
-      ],
-      "evidence": "manifest_link",
-      "availability": "project_only",
-      "verified_on": "2026-07-02"
-    },
-    {
       "resource_id": "code:67708e097776",
       "resource_type": "code_or_project",
       "name": "PRIMT",
@@ -8243,18 +8356,6 @@
       "verified_on": "2026-11-07"
     },
     {
-      "resource_id": "code:679a06a8622a",
-      "resource_type": "code_or_project",
-      "name": "td-mpc2",
-      "url": "https://www.nicklashansen.com/td-mpc2/",
-      "paper_ids": [
-        "pr-0684"
-      ],
-      "evidence": "manifest_link",
-      "availability": "project_only",
-      "verified_on": "2026-08-11"
-    },
-    {
       "resource_id": "code:67ccf3b10060",
       "resource_type": "code_or_project",
       "name": "mujoco.org",
@@ -8265,6 +8366,30 @@
       "evidence": "manifest_link",
       "availability": "project_only",
       "verified_on": null
+    },
+    {
+      "resource_id": "code:67ce4af66d8f",
+      "resource_type": "code_or_project",
+      "name": "umpnet",
+      "url": "https://github.com/columbia-ai-robotics/umpnet",
+      "paper_ids": [
+        "pr-0716"
+      ],
+      "evidence": "manifest_link",
+      "availability": "released",
+      "verified_on": "2026-08-11"
+    },
+    {
+      "resource_id": "code:67f5721730d0",
+      "resource_type": "code_or_project",
+      "name": "act",
+      "url": "https://github.com/tonyzhaozh/act",
+      "paper_ids": [
+        "pr-0566"
+      ],
+      "evidence": "manifest_link",
+      "availability": "released",
+      "verified_on": "2026-11-19"
     },
     {
       "resource_id": "code:68a7b8d25e6d",
@@ -8339,6 +8464,18 @@
       "verified_on": "2026-11-01"
     },
     {
+      "resource_id": "code:6b7e3a6805cf",
+      "resource_type": "code_or_project",
+      "name": "unitac2pose-web.vercel.app",
+      "url": "https://unitac2pose-web.vercel.app/",
+      "paper_ids": [
+        "pr-1243"
+      ],
+      "evidence": "manifest_link",
+      "availability": "project_only",
+      "verified_on": "2026-11-19"
+    },
+    {
       "resource_id": "code:6c575906f856",
       "resource_type": "code_or_project",
       "name": "diffusion_policy",
@@ -8349,6 +8486,19 @@
       "evidence": "manifest_link",
       "availability": "released",
       "verified_on": "2026-07-02"
+    },
+    {
+      "resource_id": "code:6c83cc8c2adc",
+      "resource_type": "code_or_project",
+      "name": "openpi",
+      "url": "https://github.com/Physical-Intelligence/openpi",
+      "paper_ids": [
+        "pr-0746",
+        "pr-0749"
+      ],
+      "evidence": "manifest_link",
+      "availability": "released",
+      "verified_on": "2026-08-12"
     },
     {
       "resource_id": "code:6d01641cc964",
@@ -8484,18 +8634,6 @@
       "verified_on": "2026-09-01"
     },
     {
-      "resource_id": "code:74e8412da702",
-      "resource_type": "code_or_project",
-      "name": "umi-gripper.github.io",
-      "url": "https://umi-gripper.github.io",
-      "paper_ids": [
-        "pr-0873"
-      ],
-      "evidence": "manifest_link",
-      "availability": "project_only",
-      "verified_on": "2026-09-01"
-    },
-    {
       "resource_id": "code:757a50bc5969",
       "resource_type": "code_or_project",
       "name": "ogbench",
@@ -8554,6 +8692,18 @@
       "evidence": "manifest_link",
       "availability": "released",
       "verified_on": "2026-11-06"
+    },
+    {
+      "resource_id": "code:783bfa4177b5",
+      "resource_type": "code_or_project",
+      "name": "TDQC",
+      "url": "https://github.com/shellytechnion/TDQC",
+      "paper_ids": [
+        "pr-0816"
+      ],
+      "evidence": "manifest_link",
+      "availability": "released",
+      "verified_on": "2026-11-19"
     },
     {
       "resource_id": "code:78ca51d4e3c2",
@@ -8686,6 +8836,18 @@
       "evidence": "manifest_link",
       "availability": "released",
       "verified_on": "2026-07-02"
+    },
+    {
+      "resource_id": "code:7cca7c9fb7d5",
+      "resource_type": "code_or_project",
+      "name": "robomimic",
+      "url": "https://github.com/ARISE-Initiative/robomimic",
+      "paper_ids": [
+        "pr-0747"
+      ],
+      "evidence": "manifest_link",
+      "availability": "released",
+      "verified_on": "2026-08-12"
     },
     {
       "resource_id": "code:7e85d1c32840",
@@ -9036,18 +9198,6 @@
       "verified_on": "2026-08-11"
     },
     {
-      "resource_id": "code:89265d6f7568",
-      "resource_type": "code_or_project",
-      "name": "robotic-view-transformer.github.io",
-      "url": "https://robotic-view-transformer.github.io/",
-      "paper_ids": [
-        "pr-0037"
-      ],
-      "evidence": "manifest_link",
-      "availability": "project_only",
-      "verified_on": "2026-07-02"
-    },
-    {
       "resource_id": "code:895f6070aa82",
       "resource_type": "code_or_project",
       "name": "UA-Pose",
@@ -9192,6 +9342,18 @@
       "verified_on": "2026-08-11"
     },
     {
+      "resource_id": "code:8d2a6904f66b",
+      "resource_type": "code_or_project",
+      "name": "RVT",
+      "url": "https://github.com/NVlabs/RVT",
+      "paper_ids": [
+        "pr-0037"
+      ],
+      "evidence": "manifest_link",
+      "availability": "released",
+      "verified_on": "2026-07-02"
+    },
+    {
       "resource_id": "code:8deb32d452d6",
       "resource_type": "code_or_project",
       "name": "flingbot.cs.columbia.edu",
@@ -9286,6 +9448,18 @@
       "evidence": "manifest_link",
       "availability": "released",
       "verified_on": "2026-11-07"
+    },
+    {
+      "resource_id": "code:92361c0b1bb7",
+      "resource_type": "code_or_project",
+      "name": "humanoidmimicgen",
+      "url": "https://github.com/NVlabs/humanoidmimicgen",
+      "paper_ids": [
+        "pr-1240"
+      ],
+      "evidence": "manifest_link",
+      "availability": "released",
+      "verified_on": "2026-11-19"
     },
     {
       "resource_id": "code:925afc4002ae",
@@ -9516,18 +9690,6 @@
       "verified_on": "2026-08-11"
     },
     {
-      "resource_id": "code:9a47701fc15c",
-      "resource_type": "code_or_project",
-      "name": "robomimic.github.io",
-      "url": "https://robomimic.github.io/",
-      "paper_ids": [
-        "pr-0747"
-      ],
-      "evidence": "manifest_link",
-      "availability": "project_only",
-      "verified_on": "2026-08-12"
-    },
-    {
       "resource_id": "code:9a4c97a6127e",
       "resource_type": "code_or_project",
       "name": "darp",
@@ -9612,6 +9774,18 @@
       "verified_on": "2026-11-07"
     },
     {
+      "resource_id": "code:9d97d368e36c",
+      "resource_type": "code_or_project",
+      "name": "RoboMonkey",
+      "url": "https://github.com/robomonkey-vla/RoboMonkey",
+      "paper_ids": [
+        "pr-1232"
+      ],
+      "evidence": "manifest_link",
+      "availability": "released",
+      "verified_on": "2026-11-19"
+    },
+    {
       "resource_id": "code:9dd26372f06a",
       "resource_type": "code_or_project",
       "name": "ReViP",
@@ -9648,6 +9822,18 @@
       "verified_on": "2026-07-02"
     },
     {
+      "resource_id": "code:9eb81ad97bb6",
+      "resource_type": "code_or_project",
+      "name": "nscore",
+      "url": "https://github.com/dasnyder5/nscore",
+      "paper_ids": [
+        "pr-1028"
+      ],
+      "evidence": "manifest_link",
+      "availability": "released",
+      "verified_on": "2026-10-22"
+    },
+    {
       "resource_id": "code:9f1fca85b0bf",
       "resource_type": "code_or_project",
       "name": "RLinf",
@@ -9674,6 +9860,18 @@
       "verified_on": "2026-08-11"
     },
     {
+      "resource_id": "code:9f856f622a4c",
+      "resource_type": "code_or_project",
+      "name": "dppo",
+      "url": "https://github.com/irom-lab/dppo",
+      "paper_ids": [
+        "pr-0951"
+      ],
+      "evidence": "manifest_link",
+      "availability": "released",
+      "verified_on": "2026-10-19"
+    },
+    {
       "resource_id": "code:9fb17c5a8b34",
       "resource_type": "code_or_project",
       "name": "SAGE-3D_Official",
@@ -9684,6 +9882,18 @@
       "evidence": "manifest_link",
       "availability": "released",
       "verified_on": "2026-07-02"
+    },
+    {
+      "resource_id": "code:a0423c9fb4fa",
+      "resource_type": "code_or_project",
+      "name": "activemimic-data",
+      "url": "https://github.com/leolin9248/activemimic-data",
+      "paper_ids": [
+        "pr-1250"
+      ],
+      "evidence": "manifest_link",
+      "availability": "released",
+      "verified_on": "2026-11-19"
     },
     {
       "resource_id": "code:a05c5f1acb36",
@@ -9959,7 +10169,7 @@
       ],
       "evidence": "manifest_link",
       "availability": "released",
-      "verified_on": "2026-07-02"
+      "verified_on": "2026-11-19"
     },
     {
       "resource_id": "code:ab1bbff3200c",
@@ -10131,18 +10341,6 @@
       "verified_on": "2026-10-22"
     },
     {
-      "resource_id": "code:aefa798498bf",
-      "resource_type": "code_or_project",
-      "name": "aloha",
-      "url": "https://tonyzhaozh.github.io/aloha/",
-      "paper_ids": [
-        "pr-0566"
-      ],
-      "evidence": "manifest_link",
-      "availability": "project_only",
-      "verified_on": "2026-08-11"
-    },
-    {
       "resource_id": "code:afd94ebb3a9d",
       "resource_type": "code_or_project",
       "name": "LLaVA",
@@ -10201,6 +10399,18 @@
       "evidence": "manifest_link",
       "availability": "project_only",
       "verified_on": "2026-10-22"
+    },
+    {
+      "resource_id": "code:b15ffc43e410",
+      "resource_type": "code_or_project",
+      "name": "Residual_Copilot_Deployment",
+      "url": "https://github.com/shuosha/Residual_Copilot_Deployment",
+      "paper_ids": [
+        "pr-1252"
+      ],
+      "evidence": "manifest_link",
+      "availability": "released",
+      "verified_on": "2026-11-20"
     },
     {
       "resource_id": "code:b209078e195b",
@@ -10404,7 +10614,7 @@
         "pr-1134"
       ],
       "evidence": "manifest_link",
-      "availability": "not_released",
+      "availability": "project_only",
       "verified_on": "2026-11-07"
     },
     {
@@ -10454,18 +10664,6 @@
       "evidence": "manifest_link",
       "availability": "project_only",
       "verified_on": "2026-08-11"
-    },
-    {
-      "resource_id": "code:ba781d98d0e9",
-      "resource_type": "code_or_project",
-      "name": "pi0",
-      "url": "https://www.pi.website/research/pi0",
-      "paper_ids": [
-        "pr-0746"
-      ],
-      "evidence": "manifest_link",
-      "availability": "project_only",
-      "verified_on": "2026-08-12"
     },
     {
       "resource_id": "code:bac4badc7110",
@@ -10588,6 +10786,18 @@
       "verified_on": "2026-07-02"
     },
     {
+      "resource_id": "code:bd5ed8b8948b",
+      "resource_type": "code_or_project",
+      "name": "octo",
+      "url": "https://github.com/octo-models/octo",
+      "paper_ids": [
+        "pr-0052"
+      ],
+      "evidence": "manifest_link",
+      "availability": "released",
+      "verified_on": "2026-07-02"
+    },
+    {
       "resource_id": "code:befd48e32d3f",
       "resource_type": "code_or_project",
       "name": "ames2017control.pdf",
@@ -10634,6 +10844,18 @@
       "evidence": "manifest_link",
       "availability": "not_released",
       "verified_on": "2026-11-05"
+    },
+    {
+      "resource_id": "code:c01b5f5c6313",
+      "resource_type": "code_or_project",
+      "name": "RLDG",
+      "url": "https://github.com/generalist-distillation/RLDG",
+      "paper_ids": [
+        "pr-0886"
+      ],
+      "evidence": "manifest_link",
+      "availability": "released",
+      "verified_on": "2026-09-01"
     },
     {
       "resource_id": "code:c0bb92175c15",
@@ -10924,6 +11146,18 @@
       "verified_on": "2026-07-02"
     },
     {
+      "resource_id": "code:cdbb828d436e",
+      "resource_type": "code_or_project",
+      "name": "ManiGaussian",
+      "url": "https://github.com/GuanxingLu/ManiGaussian",
+      "paper_ids": [
+        "pr-0208"
+      ],
+      "evidence": "manifest_link",
+      "availability": "released",
+      "verified_on": "2026-07-02"
+    },
+    {
       "resource_id": "code:cdd43b2bf2ed",
       "resource_type": "code_or_project",
       "name": "agility.csail.mit.edu",
@@ -11069,6 +11303,18 @@
       "verified_on": "2026-11-05"
     },
     {
+      "resource_id": "code:d3e2ec2aa8be",
+      "resource_type": "code_or_project",
+      "name": "Dex-Blind-Grasp.github.io",
+      "url": "http://Dex-Blind-Grasp.github.io",
+      "paper_ids": [
+        "pr-1247"
+      ],
+      "evidence": "manifest_link",
+      "availability": "project_only",
+      "verified_on": "2026-11-19"
+    },
+    {
       "resource_id": "code:d4711c63c05f",
       "resource_type": "code_or_project",
       "name": "humanoid-standingup.github.io",
@@ -11079,18 +11325,6 @@
       "evidence": "manifest_link",
       "availability": "project_only",
       "verified_on": "2026-08-11"
-    },
-    {
-      "resource_id": "code:d4e03af939db",
-      "resource_type": "code_or_project",
-      "name": "conrft",
-      "url": "https://cccedric.github.io/conrft/",
-      "paper_ids": [
-        "pr-0885"
-      ],
-      "evidence": "manifest_link",
-      "availability": "project_only",
-      "verified_on": "2026-09-01"
     },
     {
       "resource_id": "code:d59e0e6dd709",
@@ -11177,6 +11411,18 @@
       "verified_on": "2026-10-31"
     },
     {
+      "resource_id": "code:d64f7dd989cd",
+      "resource_type": "code_or_project",
+      "name": "vitascope",
+      "url": "https://jayjunlee.github.io/vitascope",
+      "paper_ids": [
+        "pr-1244"
+      ],
+      "evidence": "manifest_link",
+      "availability": "not_released",
+      "verified_on": "2026-11-19"
+    },
+    {
       "resource_id": "code:d67f922daddf",
       "resource_type": "code_or_project",
       "name": "rt-trajectory.github.io",
@@ -11211,18 +11457,6 @@
       "evidence": "manifest_link",
       "availability": "released",
       "verified_on": "2026-08-11"
-    },
-    {
-      "resource_id": "code:d6c457978a16",
-      "resource_type": "code_or_project",
-      "name": "dppo",
-      "url": "https://github.com/irom-princeton/dppo",
-      "paper_ids": [
-        "pr-0951"
-      ],
-      "evidence": "manifest_link",
-      "availability": "released",
-      "verified_on": "2026-10-19"
     },
     {
       "resource_id": "code:d6e4e62aec81",
@@ -11331,6 +11565,18 @@
       "evidence": "manifest_link",
       "availability": "project_only",
       "verified_on": "2026-07-02"
+    },
+    {
+      "resource_id": "code:d9c9f58055c0",
+      "resource_type": "code_or_project",
+      "name": "VTDexManip",
+      "url": "https://github.com/LQTS/VTDexManip",
+      "paper_ids": [
+        "pr-1245"
+      ],
+      "evidence": "manifest_link",
+      "availability": "released",
+      "verified_on": "2026-11-19"
     },
     {
       "resource_id": "code:da1b1f81c2a8",
@@ -11489,29 +11735,16 @@
       "verified_on": "2026-10-19"
     },
     {
-      "resource_id": "code:df7800637b37",
+      "resource_id": "code:dead8677220a",
       "resource_type": "code_or_project",
-      "name": "say-can.github.io",
-      "url": "https://say-can.github.io/",
+      "name": "DreamDojo",
+      "url": "https://github.com/NVIDIA/DreamDojo",
       "paper_ids": [
-        "pr-0020"
+        "pr-0871"
       ],
       "evidence": "manifest_link",
-      "availability": "project_only",
-      "verified_on": "2026-07-02"
-    },
-    {
-      "resource_id": "code:dff0004823eb",
-      "resource_type": "code_or_project",
-      "name": "aihabitat.org",
-      "url": "https://aihabitat.org/",
-      "paper_ids": [
-        "pr-0500",
-        "pr-0948"
-      ],
-      "evidence": "manifest_link",
-      "availability": "project_only",
-      "verified_on": "2026-07-02"
+      "availability": "released",
+      "verified_on": null
     },
     {
       "resource_id": "code:e00975fe1503",
@@ -11524,6 +11757,18 @@
       "evidence": "manifest_link",
       "availability": "released",
       "verified_on": "2026-07-02"
+    },
+    {
+      "resource_id": "code:e062a5e437c1",
+      "resource_type": "code_or_project",
+      "name": "memory",
+      "url": "https://pi.website/research/memory",
+      "paper_ids": [
+        "pr-1231"
+      ],
+      "evidence": "manifest_link",
+      "availability": "project_only",
+      "verified_on": "2026-11-19"
     },
     {
       "resource_id": "code:e15c0f88ad15",
@@ -11682,18 +11927,6 @@
       "verified_on": "2026-08-11"
     },
     {
-      "resource_id": "code:e3efdfc93ca0",
-      "resource_type": "code_or_project",
-      "name": "ump-net.cs.columbia.edu",
-      "url": "https://ump-net.cs.columbia.edu/",
-      "paper_ids": [
-        "pr-0716"
-      ],
-      "evidence": "manifest_link",
-      "availability": "project_only",
-      "verified_on": "2026-08-11"
-    },
-    {
       "resource_id": "code:e4093f55521c",
       "resource_type": "code_or_project",
       "name": "LongNav-R1",
@@ -11740,18 +11973,6 @@
       "evidence": "manifest_link",
       "availability": "released",
       "verified_on": "2026-11-07"
-    },
-    {
-      "resource_id": "code:e65724bf0fba",
-      "resource_type": "code_or_project",
-      "name": "bringmeaspoon.org",
-      "url": "https://bringmeaspoon.org/",
-      "paper_ids": [
-        "pr-0539"
-      ],
-      "evidence": "manifest_link",
-      "availability": "project_only",
-      "verified_on": "2026-07-02"
     },
     {
       "resource_id": "code:e68549c9704f",
@@ -11919,7 +12140,7 @@
       ],
       "evidence": "manifest_link",
       "availability": "project_only",
-      "verified_on": "2026-07-02"
+      "verified_on": "2026-11-19"
     },
     {
       "resource_id": "code:eb4974863ecd",
@@ -12018,6 +12239,18 @@
       "verified_on": "2026-07-02"
     },
     {
+      "resource_id": "code:edf2fe0ec88a",
+      "resource_type": "code_or_project",
+      "name": "universal_manipulation_interface",
+      "url": "https://github.com/real-stanford/universal_manipulation_interface",
+      "paper_ids": [
+        "pr-0873"
+      ],
+      "evidence": "manifest_link",
+      "availability": "released",
+      "verified_on": "2026-09-01"
+    },
+    {
       "resource_id": "code:edf62461d6dc",
       "resource_type": "code_or_project",
       "name": "index.html",
@@ -12028,6 +12261,18 @@
       "evidence": "manifest_link",
       "availability": "project_only",
       "verified_on": null
+    },
+    {
+      "resource_id": "code:ee7296e0d797",
+      "resource_type": "code_or_project",
+      "name": "T-Rex",
+      "url": "https://github.com/ZhuoyangLiu2005/T-Rex",
+      "paper_ids": [
+        "pr-1233"
+      ],
+      "evidence": "manifest_link",
+      "availability": "released",
+      "verified_on": "2026-11-19"
     },
     {
       "resource_id": "code:eee2086bea57",
@@ -12174,6 +12419,18 @@
       "verified_on": "2026-08-11"
     },
     {
+      "resource_id": "code:f2bc7f472b4d",
+      "resource_type": "code_or_project",
+      "name": "saycan",
+      "url": "https://github.com/google-research/google-research/tree/master/saycan",
+      "paper_ids": [
+        "pr-0020"
+      ],
+      "evidence": "manifest_link",
+      "availability": "released",
+      "verified_on": "2026-07-02"
+    },
+    {
       "resource_id": "code:f2e11feb9cd7",
       "resource_type": "code_or_project",
       "name": "uwm",
@@ -12196,6 +12453,18 @@
       "evidence": "manifest_link",
       "availability": "released",
       "verified_on": "2026-10-25"
+    },
+    {
+      "resource_id": "code:f34082b4dbc7",
+      "resource_type": "code_or_project",
+      "name": "droid",
+      "url": "https://github.com/droid-dataset/droid",
+      "paper_ids": [
+        "pr-0732"
+      ],
+      "evidence": "manifest_link",
+      "availability": "released",
+      "verified_on": "2026-08-11"
     },
     {
       "resource_id": "code:f3cbc1ea4152",
@@ -12328,6 +12597,18 @@
       "evidence": "manifest_link",
       "availability": "released",
       "verified_on": "2026-07-02"
+    },
+    {
+      "resource_id": "code:f8baef8df222",
+      "resource_type": "code_or_project",
+      "name": "KineDex_code",
+      "url": "https://github.com/DinoMini00/KineDex_code",
+      "paper_ids": [
+        "pr-1242"
+      ],
+      "evidence": "manifest_link",
+      "availability": "released",
+      "verified_on": "2026-11-19"
     },
     {
       "resource_id": "code:f8ccc5b4b419",
@@ -12504,18 +12785,6 @@
       "url": "https://www.roboticsproceedings.org/rss21/p156.html",
       "paper_ids": [
         "pr-0674"
-      ],
-      "evidence": "manifest_link",
-      "availability": "project_only",
-      "verified_on": "2026-08-11"
-    },
-    {
-      "resource_id": "code:ffff4131852a",
-      "resource_type": "code_or_project",
-      "name": "p053.html",
-      "url": "https://www.roboticsproceedings.org/rss21/p053.html",
-      "paper_ids": [
-        "pr-0651"
       ],
       "evidence": "manifest_link",
       "availability": "project_only",
@@ -14990,7 +15259,7 @@
       "paper_references": [
         {
           "paper_id": "pr-0006",
-          "source": "2023/TMLR/2023_TMLR_DINOv2-Learning-Robust-Visual-Features-without-Supervision/04_evaluation.md",
+          "source": "2024/TMLR/2024_TMLR_DINOv2-Learning-Robust-Visual-Features-without-Supervision/04_evaluation.md",
           "evidence": "cue_only"
         },
         {
@@ -16880,7 +17149,7 @@
         },
         {
           "paper_id": "pr-0558",
-          "source": "2013/IROS/2013_IROS_TrajOpt-A-Sequential-Convex-Optimization-Algorithm-for-Rob/04_evaluation.md",
+          "source": "2014/IJRR/2014_IJRR_Motion-Planning-with-Sequential-Convex-Optimization-and-Co/04_evaluation.md",
           "evidence": "cue_only"
         },
         {
@@ -20829,7 +21098,7 @@
         },
         {
           "paper_id": "pr-0558",
-          "source": "2013/IROS/2013_IROS_TrajOpt-A-Sequential-Convex-Optimization-Algorithm-for-Rob/04_evaluation.md",
+          "source": "2014/IJRR/2014_IJRR_Motion-Planning-with-Sequential-Convex-Optimization-and-Co/04_evaluation.md",
           "evidence": "cue_only"
         },
         {

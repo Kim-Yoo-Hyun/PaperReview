@@ -10,6 +10,7 @@ from __future__ import annotations
 
 import argparse
 import csv
+import hashlib
 import json
 from pathlib import Path
 
@@ -108,7 +109,11 @@ def main() -> None:
     if not args.apply:
         return
     MANIFEST.write_text(json.dumps(migrated, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    META.write_text(json.dumps(build_meta(len(migrated)), ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    meta = json.loads(META.read_text(encoding="utf-8")) if META.exists() else {}
+    meta.update(build_meta(len(migrated)))
+    if "manifest_sha256" in meta:
+        meta["manifest_sha256"] = hashlib.sha256(MANIFEST.read_bytes()).hexdigest()
+    META.write_text(json.dumps(meta, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     if not args.no_registry:
         REGISTRY.write_text(registry(migrated), encoding="utf-8")
 

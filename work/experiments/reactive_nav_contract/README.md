@@ -1,4 +1,4 @@
-# GAP-P3 — 반응형 navigation 계약 검사
+# 반응형 주행 계약
 
 - Updated: 2026-10-23 KST
 - **상태:** 로컬 Linux ARM64 Docker CPU에서 13/13 검사·3개 smoke scene 통과. [결과](./RESULTS.md).
@@ -34,6 +34,6 @@ bash run.sh check
 
 고정 margin은 `[0.1,0.2,0.3,0.4,0.5]` m의 **수작업 fixture**다. 데이터에서 calibration한 baseline으로 부르지 않는다. Smoke는 M1·reactive·0.5 s actuator delay·10 s route switch 한 구성이다. 이 P3 smoke의 범위에는 전체 factorial·방법 성능 비교가 없다. 후속 [P4 pilot](../reactive_nav_pilot/RESULTS.md)에서 384 branch 비교를 완료했으며 주 가설 joint gate는 실패했다. 유일한 scene/seed 세 개를 train/test split으로 취급하지 않는다.
 
-Native VLA·실제 human 효과는 HOLD다. P4 이후 현재 판단은 [GAP-PLAN](../../../synthesis/01_planning_control.md#gap-plan-2026)의 진단 HOLD이며 추가 pilot은 자동 재개하지 않는다. Fixture PASS만으로 연구 가설의 evidence maturity를 올리지 않는다.
+Native VLA·실제 human 효과는 HOLD다. P4 이후 현재 판단은 [GAP-PLAN](../../../synthesis/01_control.md#gap-plan-2026)의 진단 HOLD이며 추가 pilot은 자동 재개하지 않는다. Fixture PASS만으로 연구 가설의 evidence maturity를 올리지 않는다.
 
 현재 재사용할 image `paper-gap-p3:rvo-c2c46ba`는 보존한다. 필요가 없어지면 이 **전용 tag만** `docker image rm paper-gap-p3:rvo-c2c46ba`로 제거할 수 있다. Containers는 `--rm`으로 삭제된다. 다른 image·volume·cache를 일괄 정리하지 않는다.

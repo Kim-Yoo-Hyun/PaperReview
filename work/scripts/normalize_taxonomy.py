@@ -64,7 +64,7 @@ def registry(papers: list[dict]) -> str:
     for item in papers:
         groups.setdefault(item["category"], []).append(item)
     lines = [
-        "# PAPER Registry", "",
+        "# 논문 목록", "",
         f"- Generated: {datetime.now(ZoneInfo('Asia/Seoul')).date().isoformat()} KST",
         f"- Total papers with folders: {len(papers)}",
         "- Long-term reading tiers: [READING_PLAN.md](./research/READING_PLAN.md) and [READING_TIERS.csv](./research/READING_TIERS.csv)",
@@ -82,9 +82,12 @@ def registry(papers: list[dict]) -> str:
             folder = urllib.parse.quote(item["folder"])
             pdf = f"[paper.pdf](./{folder}/paper.pdf)" if (ROOT / item["folder"] / "paper.pdf").exists() else "missing"
             project = item.get("project") or "not identified"
-            project_source = (item.get("sources") or {}).get("project")
-            if isinstance(project_source, dict) and project_source.get("url"):
-                project = project_source["url"]
+            sources = item.get("sources") or {}
+            for kind in ("project", "code"):
+                source = sources.get(kind) or {}
+                if source.get("url"):
+                    project = source["url"]
+                    break
             project = f"[link]({project})" if project.startswith("http") else project
             lines.append(f"| {item['year']} | {venue_label(item.get('venue_canonical', item['venue']))} | [{item['title']}](./{folder}/01_overview.md) | {', '.join(item['tags'])} | {pdf} | {project} |")
         lines.append("")

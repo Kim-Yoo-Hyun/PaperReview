@@ -1,4 +1,4 @@
-# Reading Status Guide
+# 읽기 상태
 
 - Updated: 2026-11-05 KST
 

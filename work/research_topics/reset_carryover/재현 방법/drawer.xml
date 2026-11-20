@@ -1,0 +1,44 @@
+<mujoco model="planar arm and compliant drawer">
+  <compiler angle="degree" autolimits="true"/>
+  <option timestep="0.002" integrator="implicitfast" solver="Newton" tolerance="1e-10"/>
+  <default>
+    <geom contype="0" conaffinity="0"/>
+    <equality solref="0.006 1" solimp="0.99 0.99 0.001"/>
+  </default>
+  <worldbody>
+    <body name="upper_arm" euler="0 0 60">
+      <joint name="shoulder" type="hinge" axis="0 0 1" damping="0.015"/>
+      <geom type="capsule" fromto="0 0 0 0.16 0 0" size="0.012" mass="0.28"/>
+      <body name="forearm" pos="0.16 0 0" euler="0 0 -120">
+        <joint name="elbow" type="hinge" axis="0 0 1" damping="0.01"/>
+        <geom type="capsule" fromto="0 0 0 0.16 0 0" size="0.010" mass="0.20"/>
+        <site name="hand" pos="0.16 0 0" size="0.004"/>
+      </body>
+    </body>
+    <body name="drawer_body" pos="0.16 0 0">
+      <joint name="drawer" type="slide" axis="1 0 0" range="-0.04 0.10"
+             damping="0.8" frictionloss="0.9"/>
+      <geom type="box" size="0.03 0.04 0.015" mass="0.4"/>
+      <site name="handle" size="0.004"/>
+    </body>
+    <body name="shoe_body" pos="0.16 0 -0.04">
+      <joint name="shoe" type="slide" axis="1 0 0" damping="0.4" frictionloss="2"/>
+      <geom type="box" size="0.012 0.012 0.004" mass="0.06"/>
+    </body>
+  </worldbody>
+  <tendon>
+    <fixed name="coupling" stiffness="160" springlength="0">
+      <joint joint="drawer" coef="1"/>
+      <joint joint="shoe" coef="-1"/>
+    </fixed>
+  </tendon>
+  <equality>
+    <connect site1="hand" site2="handle"/>
+    <joint name="center_drawer" joint1="drawer" polycoef="0 0 0 0 0" active="false"/>
+    <joint name="center_shoe" joint1="shoe" polycoef="0 0 0 0 0" active="false"/>
+  </equality>
+  <actuator>
+    <motor name="shoulder_motor" joint="shoulder" ctrlrange="-3 3"/>
+    <motor name="elbow_motor" joint="elbow" ctrlrange="-3 3"/>
+  </actuator>
+</mujoco>

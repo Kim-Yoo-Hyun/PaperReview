@@ -40,6 +40,8 @@ PDF body evaluation/result cue (p. 9 (V. EXPERIMENTS), p. 10 (Figure/Table capti
 
 ## Dataset / Benchmark Role
 
+저자는 시뮬레이션 태스크의 스크립트 시연과 사람 시연을 배포했다. 이 공개 판정의 범위는 시뮬레이션 시연이다. [ACT 저장소](https://github.com/tonyzhaozh/act) · [시연 폴더](https://drive.google.com/drive/folders/1gPR03v05S1xiInoVJn7G7VJ9pDCnxq9O?usp=share_link)
+
 - **p. 6 / V. EXPERIMENTS - extractive body cue:** For all 8 tasks, the initial placement of the objects is either varied randomly along the 15cm white reference line (real-world tasks), or uniformly in ...
 - **p. 8 / V. EXPERIMENTS - extractive body cue:** Data Collection For all 6 real-world tasks, we collect demonstrations using ALOHA teleoperation.
 - **p. 8 / V. EXPERIMENTS - extractive body cue:** To teleoperate in simulation, we use the "leader robots" of ALOHA to control the simulated robot, with the operator looking at the real-time renderings of ...

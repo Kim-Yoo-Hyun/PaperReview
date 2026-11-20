@@ -290,7 +290,7 @@
     {
       "paper_id": "pr-0006",
       "title": "DINOv2: Learning Robust Visual Features without Supervision",
-      "folder": "2023/TMLR/2023_TMLR_DINOv2-Learning-Robust-Visual-Features-without-Supervision",
+      "folder": "2024/TMLR/2024_TMLR_DINOv2-Learning-Robust-Visual-Features-without-Supervision",
       "target": "tmp/pdfs/fulltext_all_2026-09-02/pr-0006.pdf",
       "candidate_urls": [
         "https://arxiv.org/pdf/2304.07193",
@@ -339,7 +339,11 @@
       },
       "note_basis": "full-text PDF body with page-aware extractive cues",
       "reviewed_on": "2026-09-03",
-      "note_files_written": 4
+      "note_files_written": 4,
+      "identity_at_review": {
+        "title": "DINOv2: Learning Robust Visual Features without Supervision",
+        "folder": "2023/TMLR/2023_TMLR_DINOv2-Learning-Robust-Visual-Features-without-Supervision"
+      }
     },
     {
       "paper_id": "pr-0007",
@@ -32872,8 +32876,8 @@
     },
     {
       "paper_id": "pr-0558",
-      "title": "TrajOpt: A Sequential Convex Optimization Algorithm for Robot Motion Planning",
-      "folder": "2013/IROS/2013_IROS_TrajOpt-A-Sequential-Convex-Optimization-Algorithm-for-Rob",
+      "title": "Motion Planning with Sequential Convex Optimization and Convex Collision Checking",
+      "folder": "2014/IJRR/2014_IJRR_Motion-Planning-with-Sequential-Convex-Optimization-and-Co",
       "target": "tmp/pdfs/fulltext_all_2026-09-02/pr-0558.pdf",
       "candidate_urls": [
         "https://web.archive.org/web/20240419050012id_/http://rll.berkeley.edu/trajopt/ijrr/2013-IJRR-TRAJOPT.pdf",
@@ -32924,7 +32928,11 @@
       },
       "note_basis": "full-text PDF body with page-aware extractive cues",
       "reviewed_on": "2026-09-03",
-      "note_files_written": 4
+      "note_files_written": 4,
+      "identity_at_review": {
+        "title": "TrajOpt: A Sequential Convex Optimization Algorithm for Robot Motion Planning",
+        "folder": "2013/IROS/2013_IROS_TrajOpt-A-Sequential-Convex-Optimization-Algorithm-for-Rob"
+      }
     },
     {
       "paper_id": "pr-0559",

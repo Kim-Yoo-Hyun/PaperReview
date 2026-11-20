@@ -1,4 +1,4 @@
-# GAP-P4 — 반응형 navigation bounded pilot
+# 반응형 주행 비교
 
 - Updated: 2026-10-24 KST
 - **완료:** 개발12·calibration24·held-out12 scene, 384개 branch 비교. 판정은 **주 가설 미지지 / 현재 진단 HOLD / 일반 방법 NO-GO / native VLA HOLD**다. [결과와 한계](./RESULTS.md).

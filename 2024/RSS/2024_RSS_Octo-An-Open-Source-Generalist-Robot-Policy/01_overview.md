@@ -1,6 +1,7 @@
 # Octo: An Open-Source Generalist Robot Policy
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
+> 2026-11-19 표본 감사에서 요약과 관련 본문 표현을 원문에 대조해 교정했다. [원문](https://www.roboticsproceedings.org/rss20/p090.html)
 > Analysis basis: full-text PDF body checked on 2026-09-03 (17 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://arxiv.org/abs/2405.12213.
 > PDF retrieval source: https://arxiv.org/pdf/2405.12213. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
@@ -19,7 +20,7 @@
 
 ## Why This Paper Is Here
 
-VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다. 본문은 Training a unified control policy in robotics presents unique challenges, requiring handling different robot embodiments, sensor setups, action spaces, task specifications, environments, and compute budgets.를 문제로 두고, In principle, collected ∗Lead authors, ordered alphabetically, see Section A for list of contributions.를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+Octo는 다양한 로봇에서 수집한 시연으로 하나의 범용 조작 정책을 사전학습하고, 익숙하지 않은 로봇의 센서와 행동 공간에 적응시키는 방법을 다룬다. [원문](https://www.roboticsproceedings.org/rss20/p090.html)
 
 ## Problem and Motivation
 
@@ -33,14 +34,7 @@ VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다
 
 ## Core Idea
 
-- **p. 1 / I. INTRODUCTION - extractive body cue:** In principle, collected ∗Lead authors, ordered alphabetically, see Section A for list of contributions.
-- **p. 2 / I. INTRODUCTION - extractive body cue:** Our primary contribution is Octo, a transformer-based policy pretrained on the largest robot manipulation dataset to date: 800k robot demonstrations from the Open X-Embodiment dataset ...
-- **p. 3 / III. THE OCTO MODEL - extractive body cue:** It consists of three key parts: input tokenizers that transform
-- **p. 4 / III. THE OCTO MODEL - extractive body cue:** This modular design enables us to add and remove observations or tasks during finetuning (see below).
-- **p. 5 / III. THE OCTO MODEL - extractive body cue:** This enables our model to learn control mostly from self-supervised visual observations and reduces the burden on language annotation, similar to prior work on multi-context ...
-- **p. 4 / III. THE OCTO MODEL - extractive body cue:** We use the t5-base (111M) model [74]. • Image observations and goals are passed through a shallow convolution stack, then split into a sequence of ...
-- **p. 5 / III. THE OCTO MODEL - extractive body cue:** Training objective We use a conditional diffusion decoding head to predict continuous, multi-modal action distributions [34, 17].
-- **p. 5 / III. THE OCTO MODEL - extractive body cue:** We use the same diffusion training objective during finetuning and update the full model, a recipe which outperformed those that freeze subsets of the pretrained ...
+Octo는 Open X-Embodiment의 로봇 궤적 약 80만 개로 사전학습한 Transformer 정책이다. 언어 지시나 목표 이미지를 조건으로 연속 행동 청크를 생성하며, 새 센서와 행동 공간에 맞춰 미세조정할 수 있다. [원문](https://www.roboticsproceedings.org/rss20/p090.html)
 
 ## Observation, State, and Output Interface
 
@@ -53,16 +47,7 @@ VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다
 
 ## Main Claims and Actual Contribution
 
-- **p. 1 / I. INTRODUCTION - extractive body cue:** In principle, collected ∗Lead authors, ordered alphabetically, see Section A for list of contributions.
-- **p. 2 / I. INTRODUCTION - extractive body cue:** Our primary contribution is Octo, a transformer-based policy pretrained on the largest robot manipulation dataset to date: 800k robot demonstrations from the Open X-Embodiment dataset ...
-- **p. 3 / III. THE OCTO MODEL - extractive body cue:** It consists of three key parts: input tokenizers that transform
-- **p. 4 / III. THE OCTO MODEL - extractive body cue:** This modular design enables us to add and remove observations or tasks during finetuning (see below).
-- **p. 5 / III. THE OCTO MODEL - extractive body cue:** This enables our model to learn control mostly from self-supervised visual observations and reduces the burden on language annotation, similar to prior work on multi-context ...
-- **p. 8 / Figure/Table caption - extractive body cue:** Fig. 6: Model Scaling. The performance of Octo improves with larger model sizes on both UR5 and WidowX tasks. Success rates are averaged over 10 ...
-- **p. 7 / 1) Can Octo control multiple robot embodiments and solve - extractive body cue:** We evaluated our model on the WidowX tasks using goal image conditioning and found that it achieved a 25% higher success rate than when evaluated ...
-- **p. 7 / 1) Can Octo control multiple robot embodiments and solve - extractive body cue:** While the Octo model achieves high success on novel objects, zero-shot performance slightly degrades in a new scene, and high degradation for novel behaviors like ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+같은 사전학습 모델을 여러 로봇에서 평가하고 새로운 관측·행동 공간에 미세조정했다. 언어 지시와 목표 이미지 조건에서의 조작 성능을 각각 보고했다. [원문](https://www.roboticsproceedings.org/rss20/p090.html)
 
 ## Evaluation Scope
 
@@ -82,13 +67,13 @@ VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다
 
 ## Why Read It
 
-VLA and generalist robot policies의 vla 문제를 이해하기 위해 읽는다. 본문은 Training a unified control policy in robotics presents unique challenges, requiring handling different robot embodiments, sensor setups, action spaces, task specifications, environments, and compute budgets.를 문제로 두고, In principle, collected ∗Lead authors, ordered alphabetically, see Section A for list of contributions.를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 2 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 4 (III. THE OCTO MODEL), p. 5 (III. THE OCTO MODEL), p. 5 (III. THE OCTO MODEL) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+여러 로봇에서 사전학습한 정책을 다른 플랫폼에 옮길 때 어떤 입력부와 행동 출력부를 조정하는지 비교할 기준을 제공한다.
 
 ## Semantic QA — PDF body cross-check
 
 > Cross-checked on 2026-09-03 against the validated PDF body (17 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
 
 - **Problem/bottleneck:** Training a unified control policy in robotics presents unique challenges, requiring handling different robot embodiments, sensor setups, action spaces, task specifications, environments, and compute budgets. (p. 2, I. INTRODUCTION).
-- **Actual contribution:** In principle, collected ∗Lead authors, ordered alphabetically, see Section A for list of contributions. (p. 1, I. INTRODUCTION).
+- **Actual contribution:** Octo는 Open X-Embodiment의 로봇 궤적 약 80만 개로 사전학습한 Transformer 정책이다. 언어 지시나 목표 이미지를 조건으로 연속 행동 청크를 생성하며, 새 센서와 행동 공간에 맞춰 미세조정할 수 있다. [원문](https://www.roboticsproceedings.org/rss20/p090.html)
 - **Evaluation boundary:** Fig. 6: Model Scaling. The performance of Octo improves with larger model sizes on both UR5 and WidowX tasks. Success rates are averaged over 10 trials on one language-conditioned task ... (p. 8, Figure/Table caption).
 - **Explicit failure boundary:** Although these models represent significant steps toward a true "general-purpose robot model," they have been limited in multiple important aspects: they typically constrain downstream users to a pre-defined and often ... (p. 2, I. INTRODUCTION).

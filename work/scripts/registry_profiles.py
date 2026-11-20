@@ -302,10 +302,13 @@ def enrich_profiles(
     root: Path,
     *,
     reviewed_on: str | None = None,
+    registry: list[dict] | None = None,
 ) -> dict[str, int]:
-    """Attach complete profiles to every paper and return coverage counters."""
+    """Refresh the selected papers and keep incoming citations consistent across the registry."""
 
     reviewed_on = reviewed_on or str(date.today())
+    all_papers = papers if registry is None else registry
+    selected_ids = {paper["paper_id"] for paper in papers}
     benchmark_by_paper = _cue_resources(
         root / "work" / "sources" / "benchmark_catalog.json",
         "benchmark",
@@ -316,10 +319,10 @@ def enrich_profiles(
         "metric",
         "metric_id",
     )
-    title_to_id = {paper.get("title", "").casefold(): paper.get("paper_id") for paper in papers}
+    title_to_id = {paper.get("title", "").casefold(): paper.get("paper_id") for paper in all_papers}
 
     incoming: dict[str, list[str]] = defaultdict(list)
-    for paper in papers:
+    for paper in all_papers:
         for relation in paper.get("relations", []):
             target_id = relation.get("paper_id")
             if target_id:
@@ -457,21 +460,35 @@ def enrich_profiles(
                 "of reproducible execution unless an explicit source or experiment check exists."
             ),
         }
+        # A note-based rebuild cannot re-verify an author's release statement.
+        previous = paper.get("reproducibility") or {}
+        for field in ("code", "data", "checkpoint"):
+            reviewed = previous.get(field) or {}
+            if not reviewed.get("source") or not (
+                reviewed.get("verified_on") or reviewed.get("evidence") not in (None, "", "manifest_link", "not_identified")
+            ):
+                continue
+            # The verification URL can point to a release file rather than the project homepage.
+            # Code/data have a canonical artifact status. Checkpoint text here is only a note cue.
+            if field == "checkpoint" or reviewed.get("status") == reproducibility[field]["status"]:
+                reproducibility[field] = dict(reviewed)
         paper["reproducibility"] = reproducibility
         counters["reproducibility_profiles"] += 1
         counters[f"data_{data_status}"] = counters.get(f"data_{data_status}", 0) + 1
 
-    for paper in papers:
+    for paper in all_papers:
         paper_id = paper.get("paper_id")
-        outgoing = [relation.get("paper_id") for relation in paper.get("relations", []) if relation.get("paper_id")]
         incoming_ids = sorted(set(incoming.get(paper_id, [])))
+        if paper_id not in selected_ids and (paper.get("lineage_profile") or {}).get("incoming_paper_ids") == incoming_ids:
+            continue
+        outgoing = [relation.get("paper_id") for relation in paper.get("relations", []) if relation.get("paper_id")]
         queue_ids = _queue_adjacency(
             (root / paper["folder"] / "05_insights.md").read_text(encoding="utf-8", errors="ignore")
             if (root / paper["folder"] / "05_insights.md").exists()
             else "",
             title_to_id,
         )
-        summary_candidates = _legacy_summary_candidates(paper.get("lineage"), papers)
+        summary_candidates = _legacy_summary_candidates(paper.get("lineage"), all_papers)
         if outgoing or incoming_ids:
             status = "curated_edges"
             counters["curated_lineage_papers"] += 1

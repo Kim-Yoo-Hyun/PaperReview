@@ -11,8 +11,8 @@
 - Aliases: GAE
 - Official paper: https://arxiv.org/abs/1506.02438
 - Venue verification: https://www.iclr.cc/archive/www/2016.html
-- Code/Project:
-- Code: not_identified
+- Code/Project: https://github.com/joschu/modular_rl
+- Code: released (저자의 modular_rl에 포함된 GAE 구현)
 - Source audit: 2026-11-12: 공식 publication/초록 또는 저자 source 확인. ICLR 2016 공식 accepted conference list로 게재 확인. 2015 최초 preprint와 2018 v6를 별도 논문으로 만들지 않는다. 초록·지정 project 범위이며 전체 정독·코드 실행·사용자 reading 완료를 뜻하지 않는다.
 
 ## Problem and Importance

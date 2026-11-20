@@ -1,4 +1,4 @@
-# 조작 허용 오차를 반영하는 3D 추정과 VLA 학습
+# 조작용 3D 추정
 
 Updated: 2026-11-18 KST. **N1 내부 비실험 검토·P0 코드 준비 완료 / 작은 진단 탐색 CONTINUE.** 독립 방법의 신규성·성능 이득은 미확립이다. 11/17 초안을 직접 충돌 문헌과 실제 입력 경로에 맞게 축소했고 [P0 준비 결과](#p0-preparation-result)를 추가했다. [재현 명세](../재현%20방법/README.md) · [공통 원장](../../../sources/new_field_scout_2026-11-17.json) · [TODO](../../../../TODO.md).
 
@@ -17,7 +17,7 @@ Updated: 2026-11-18 KST. **N1 내부 비실험 검토·P0 코드 준비 완료 /
 <a id="n1-literature"></a>
 ## 직접 선행 대조
 
-2024–2026 검색과 registry 대조 후 가까운 formulation·source에 집중했다. 아래는 지정 절/공식 초록 확인이며 전면 정독·코드 재현이 아니다. [REG-R17](../../../update/REGISTRY_MAINTENANCE_2026-11-18.md)의 기존 등록과 이번 외부 출처를 구별하며 reading tracker는 유지한다.
+2024–2026 검색과 registry 대조 후 가까운 formulation·source에 집중했다. 아래는 지정 절/공식 초록 확인이며 전면 정독·코드 재현이 아니다. [REG-R17](../../../update/REGISTRY.md#reg-r18)의 기존 등록과 이번 외부 출처를 구별하며 reading tracker는 유지한다.
 
 | 선행·확인 범위 | 이미 있는 기여 | 필요한 구분 |
 |---|---|---|

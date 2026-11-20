@@ -1,4 +1,4 @@
-# 접촉 관계 기반 탐색 — 공개 구현 감사와 재개 조건
+# 접촉 관계 탐색 재현
 
 Updated: 2026-11-17 KST. **P0-PREP 코드·재개 문서 작성 완료, native 검증 전.** [내용·방법·비교 설계](../내용/README.md) · [공통 원장](../../../sources/new_field_scout_2026-11-17.json)의 `relation_n1`(선행/자산), `relation_n2`(계약), `relation_p0_preparation`(현재 준비/확인 범위). Portable launcher·Dockerfile·bounded adapter를 작성했다. 현재 launcher check는 **BLOCKED_DAEMON / exit3**이며 native image build·Docker 제어 검사·정책 실행·학습은 모두 미실행이다. 학습용 rollout/PPO trainer와 전체 task event evaluator는 구현 범위에 없다.
 

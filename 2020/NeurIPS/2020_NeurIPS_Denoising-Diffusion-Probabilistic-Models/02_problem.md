@@ -1,12 +1,13 @@
 # Problem - Denoising Diffusion Probabilistic Models
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
+> 2026-11-19 표본 감사에서 요약과 관련 본문 표현을 원문에 대조해 교정했다. [원문](https://arxiv.org/html/2006.11239)
 > Evidence maturity: `FULL_TEXT_CHECKED`.
 > Analysis basis: full-text PDF body checked on 2026-09-03 (25 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2006.11239; PDF retrieval source: https://arxiv.org/pdf/2006.11239. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Problem in One Sentence
 
-PDF body framing (p. 3 (2 Background), p. 5 (2 Background), p. 2 (1 Introduction), p. 4 (2 Background)): (5) are comparisons between Gaussians, so they can be calculated in a Rao-Blackwellized fashion with closed form expressions instead of high variance Monte Carlo estimates.
+복잡한 이미지 분포에서 고품질 표본을 생성할 수 있도록 역확산 과정을 학습한다. [원문](https://arxiv.org/html/2006.11239)
 
 ## PDF Body Digest
 
@@ -22,10 +23,10 @@ PDF body framing (p. 3 (2 Background), p. 5 (2 Background), p. 2 (1 Introduction
 
 | Dimension | PDF body evidence | Registry/robotics interpretation | Boundary |
 |---|---|---|---|
-| Target problem | (5) are comparisons between Gaussians, so they can be calculated in a Rao-Blackwellized fashion with closed form expressions instead of high variance ... | high-dimensional data 또는 robot action-trajectory distribution | body wording is the source claim |
-| Observation / input | On the unconditional CIFAR10 dataset, we obtain an Inception score of 9.46 and a state-of-the-art FID score of 3.17. | conditioning observation와 noisy/intermediate sample | exact sensor/frame/preprocessing from PDF body |
+| Target problem | (5) are comparisons between Gaussians, so they can be calculated in a Rao-Blackwellized fashion with closed form expressions instead of high variance ... | 학습 이미지의 분포 | body wording is the source claim |
+| Observation / input | On the unconditional CIFAR10 dataset, we obtain an Inception score of 9.46 and a state-of-the-art FID score of 3.17. | 잡음이 더해진 이미지와 확산 시점 | exact sensor/frame/preprocessing from PDF body |
 | State / latent | unconditional, CIFAR10, dataset, obtain, Inception, score, state-of-the-art, FID, ensures, neural | latent/noise variable와 conditional distribution | notation and tensor shape require body check |
-| Output / action | Since, available, input, model, choose, parameterization, where, function | generated sample, action chunk 또는 trajectory | exact unit/frame/decoder require body check |
+| Output / action | Since, available, input, model, choose, parameterization, where, function | 역확산으로 생성한 이미지 | exact unit/frame/decoder require body check |
 | Target outcome | sample quality, diversity and latency | distribution fit, multimodality, sample quality와 latency | metric/denominator are in 04 evidence |
 
 ## Formal Problem Formulation
@@ -68,7 +69,7 @@ PDF body contribution framing (p. 2 (1 Introduction), p. 2 (1 Introduction), p. 
 
 ## Position in the Robotics Loop
 
-generative writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 1 (Abstract), p. 4 (2 Background), p. 4 (2 Background), p. 1 (Abstract). The downstream handoff is claimed only when the body describes it.
+후속 로봇 정책에서는 역확산의 생성 대상을 이미지에서 행동 청크로 바꿀 수 있다. 원 DDPM이 학습하고 평가한 대상은 이미지 분포다. [원문](https://arxiv.org/html/2006.11239)
 
 ## Verification Questions
 

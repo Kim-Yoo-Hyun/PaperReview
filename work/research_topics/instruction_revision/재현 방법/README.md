@@ -1,6 +1,6 @@
-# 부분 지시 수정 — 재현 방법
+# 부분 지시 수정 재현
 
-2026-11-03 폴더 정리: 과거 실행 JSON의 명령·hash는 당시 기록을 유지한다. 현재 실행은 이 문서의 명령을 사용하고, 이전 경로는 [이동·병합 대응표](../../ORGANIZATION.json)에서 찾는다.
+2026-11-03 폴더 정리: 과거 실행 JSON의 명령·hash는 당시 기록을 유지한다. 현재 실행은 이 문서의 명령을 사용하고, 이전 경로는 [이동·병합 대응표](https://github.com/Kim-Yoo-Hyun/PaperReview/blob/cb650415f47a2a45ad883dabe5bd20c382b5c183/work/research_topics/ORGANIZATION.json)에서 찾는다.
 
 환경·명령·미구현 항목을 관리하는 단일 안내다. 아래 날짜별 점검은 당시 결과이며 현재 GPU 또는 정책 성공의 증거가 아니다. 실행 범위와 설정은 RESUME_PLAN.json을 따른다.
 
@@ -14,7 +14,7 @@
 - Updated: 2026-10-31 KST
 - 범위: [지시 일부 수정 사례집](../내용/README.md#cases)의 **R8 기본 전환 1건**. 활성 작업은 [TODO](../../../../TODO.md).
 - 상태: **준비 artifact 작성·정적 검사 완료 / 이미지 빌드·native 실행 미확인 / 현재 자원 NOT_MET**. 실행 성공이나 연구 효과를 보고하는 문서가 아니다.
-- 후속 연구 설계는 [GPU 전 보완](../../../update/PRE_GPU_BUILDUP_REVIEW_2026-10-31.md#instruction-revision)을 따른다. 의미 갱신/평가 계약의 보완이며 이 폴더의 R8 단일 IO 예산·실행 코드는 변경하지 않았다.
+- 후속 연구 설계는 [GPU 전 보완](https://github.com/Kim-Yoo-Hyun/PaperReview/blob/cb650415f47a2a45ad883dabe5bd20c382b5c183/work/update/PRE_GPU_BUILDUP_REVIEW_2026-10-31.md#instruction-revision)을 따른다. 의미 갱신/평가 계약의 보완이며 이 폴더의 R8 단일 IO 예산·실행 코드는 변경하지 않았다.
 
 <a id="execution-현재-확인한-것"></a>
 ### 현재 확인한 것

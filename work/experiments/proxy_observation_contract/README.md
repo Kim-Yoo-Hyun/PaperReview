@@ -1,10 +1,10 @@
-# GAP-N3 수정 packet과 Docker 계약 검사
+# 관측 정보 계약
 
 - Updated: 2026-10-25 KST.
 - **N3-A source/계약 artifact 완료, 전체 GAP-N3 재개 gate는 NOT_MET.** Docker 계약 검사 17/17 PASS. Native RoboMME·VLA inference·학습·수집은 0이다.
-- [연구 판단과 남은 조건](../../update/PROXY_OBSERVATION_REPAIR_REVIEW_2026-10-25.md) · [동결 범위](./PROTOCOL.json) · [원본 revision/hash](./sources.lock.json).
+- [연구 판단과 남은 조건](https://github.com/Kim-Yoo-Hyun/PaperReview/blob/cb650415f47a2a45ad883dabe5bd20c382b5c183/work/update/PROXY_OBSERVATION_REPAIR_REVIEW_2026-10-25.md) · [동결 범위](./PROTOCOL.json) · [원본 revision/hash](./sources.lock.json).
 - N3-B의 [환경 구성과 재개 절차](./ENVIRONMENT.md) · [구조화 설정·source 근거](./ENVIRONMENT_PROFILE.json). 설정 문서화는 완료했으며 native image build·reset/render 검증은 미완료다.
-- 후속 [N4 비실험 심사](../../update/PROXY_SELECTION_IDENTIFIABILITY_REVIEW_2026-10-26.md)는 연구 비교식·selector/target 입력·baseline/통계 단위의 해석을 보정한다. 이 packet의 동결 protocol·코드·실행 결과는 그대로이며, source 계약 PASS가 연구 효과를 뜻하지 않는다.
+- 후속 [N4 비실험 심사](https://github.com/Kim-Yoo-Hyun/PaperReview/blob/cb650415f47a2a45ad883dabe5bd20c382b5c183/work/update/PROXY_SELECTION_IDENTIFIABILITY_REVIEW_2026-10-26.md)는 연구 비교식·selector/target 입력·baseline/통계 단위의 해석을 보정한다. 이 packet의 동결 protocol·코드·실행 결과는 그대로이며, source 계약 PASS가 연구 효과를 뜻하지 않는다.
 
 ## 실제 만든 것
 

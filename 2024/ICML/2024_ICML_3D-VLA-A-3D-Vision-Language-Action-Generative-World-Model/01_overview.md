@@ -13,7 +13,7 @@
 - Tags: Robotics, VLA, 3D reasoning, world model, action tokens, Planning
 - Official paper: https://icml.cc/virtual/2024/poster/34575
 - Full-text retrieval: https://icml.cc/virtual/2024/poster/34575
-- Code/Project: not identified
+- Code/Project: https://github.com/UMass-Embodied-AGI/3D-VLA
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (15 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 

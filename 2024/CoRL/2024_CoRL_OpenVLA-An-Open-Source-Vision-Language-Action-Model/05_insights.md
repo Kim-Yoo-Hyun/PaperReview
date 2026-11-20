@@ -10,6 +10,8 @@
 
 ### What was actually new
 
+[직접 인용 계보](../../../research/OPENVLA_LINEAGE.md)에서 원본 가중치의 계승, OFT를 거친 후학습, 원본 성적의 재인용을 구별했다. 원본의 행동 생성과 후보 선택을 비교할 때는 V-GPS의 SIMPLER 표와 RoboMonkey의 LIBERO-Long 표처럼 평가 환경과 선택기 유무가 명시된 결과를 사용한다.
+
 - **p. 2 / 1 Introduction - extractive body cue:** To this end, we introduce OpenVLA, a 7B-parameter open-source VLA that establishes a new state of the art for generalist robot manipulation policies.
 - **p. 2 / 1 Introduction - extractive body cue:** OpenVLA consists of a pretrained visuallyconditioned language model backbone that captures visual features at multiple granularities, fine-tuned on a large, diverse dataset of 970k robot ...
 - **p. 3 / 1 Introduction - extractive body cue:** As a final contribution, we open-source all models, deployment and fine-tuning notebooks, and the OpenVLA codebase for training VLAs at scale, with the hope that ...

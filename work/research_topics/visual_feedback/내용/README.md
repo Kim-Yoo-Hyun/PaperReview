@@ -1,10 +1,10 @@
-# 강화학습 후학습과 시각 피드백 활용
+# 시각 피드백
 
 **현행 투자 판단 — 2026-11-17:** [유지 3개·예비 1개](../../README.md#candidate-priority) 중 **신뢰성·실패 원인의 문헌 탐색을 우선**한다. 기존 관측 지연 진단은 보존하되 새 monitor/복구 방법이 구현된 것으로 바꾸지 않는다. 공개 RL/SFT 차이는 학습 목적함수의 인과효과가 아니다. 추가한 [직접 선행·탐색 범위](#reliability-scout-2026)와 기존 P0의 수행 범위를 구분한다.
 
 - Updated: 2026-11-06 KST
 - 상태: **비교 진단 후보 유지; 최소 입출력 검증 준비, native 실행 미확인**. 내부 작업 ID는 FEEDBACK이다. 새 방법의 기여나 RL 효과가 입증된 상태가 아니다.
-- [재현 방법](../재현%20방법/README.md) · [공통 선행·학습 계보·비교 계약](../../../update/INTEGRATED_GAP_REVIEW_2026-11-05.md#integrated-n2) · [공통 source 원장의 integrated_n2_review](../../../sources/vla_rl_new_gap_scan_2026-11-05.json)
+- [재현 방법](../재현%20방법/README.md) · [공통 선행·학습 계보·비교 계약](https://github.com/Kim-Yoo-Hyun/PaperReview/blob/cb650415f47a2a45ad883dabe5bd20c382b5c183/work/update/INTEGRATED_GAP_REVIEW_2026-11-05.md#integrated-n2) · [공통 source 원장의 integrated_n2_review](../../../sources/vla_rl_new_gap_scan_2026-11-05.json)
 
 ## 연구 질문과 기여 후보
 
@@ -36,7 +36,7 @@ Checkpoint `m`의 고정 deadline 성공률을 `Y_m(p,v)`로 둔다. `p`는 물�
 
 ## 비실험 buildup 상태
 
-기준은 [7단계 비실험 절차](../../../../research/IDEA_BUILDUP_GUIDE.md#nonexperimental-workflow)다.
+기준은 [7단계 비실험 절차](../../../../research/RESEARCH_GUIDE.md#nonexperimental-workflow)다.
 
 | 단계 | 현재 확보한 내용 | 남은 증거 |
 |---|---|---|
@@ -81,7 +81,7 @@ VRL을 주 탐색으로 두었던 11/05 권고는 당시 이력이며 현행 선
 | [AHEAD, arXiv 2026 §6.1](https://arxiv.org/html/2606.02486v1), 지정 한계 절 | Optical-flow 조건의 미래 latent로 동적 조작을 보완 | 단일 motion 추정의 불확실성 전파·명시적 깊이·충돌 후 운동이 한계로 제시됨. 3D/uncertainty/RL 조합 전체의 부재를 뜻하지 않음 |
 | [B2FF, arXiv 2026 §5](https://arxiv.org/html/2606.09258v1), 지정 한계 절 | 미리 생성한 milestone을 선택하는 VLA 실패 복구 | 관측·도달 가능하고 기본 skill이 있는 회복 가능한 이탈 범위. 잘못된 grounding·심한 지각 실패·사라진 물체·비가역 변화까지 해결한 것으로 일반화하지 않음 |
 
-2026 preprint들의 본 학회 게재는 이번 확인 범위에서 검증하지 못했다. SFF의 workshop 표기를 CoRL 본 학회로 승격하지 않는다. [No Free Checker](https://arxiv.org/abs/2609.09250)는 verifier의 판단 비용·시점·신뢰도 용어를 정리하는 survey로만 사용하며 공백의 부재/존재를 입증하는 근거로 쓰지 않는다. 확인 범위와 이전 dossier 근거의 구별은 [원장](../../../sources/candidate_triage_2026-11-17.json)이 소유한다.
+2026 preprint들의 본 학회 게재는 이번 확인 범위에서 검증하지 못했다. SFF의 workshop 표기를 CoRL 본 학회로 승격하지 않는다. [No Free Checker](https://arxiv.org/abs/2609.09250)는 verifier의 판단 비용·시점·신뢰도 용어를 정리하는 survey로만 사용하며 공백의 부재/존재를 입증하는 근거로 쓰지 않는다. 확인 범위와 이전 dossier 근거의 구별은 [원장](https://github.com/Kim-Yoo-Hyun/PaperReview/blob/cb650415f47a2a45ad883dabe5bd20c382b5c183/work/sources/candidate_triage_2026-11-17.json)이 소유한다.
 
 ### 먼저 확인할 연구 질문
 

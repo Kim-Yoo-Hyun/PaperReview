@@ -13,7 +13,7 @@
 - Tags: Robotics, Gaussian Splatting
 - Official paper: https://www.ecva.net/papers/eccv_2024/papers_ECCV/html/5194_ECCV_2024_paper.php
 - Full-text retrieval: https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/05194.pdf
-- Code/Project: not identified
+- Code/Project: https://github.com/GuanxingLu/ManiGaussian
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (19 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 

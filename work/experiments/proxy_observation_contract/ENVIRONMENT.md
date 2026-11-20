@@ -1,4 +1,4 @@
-# GAP-N3-B 환경 구성과 재개 조건
+# 관측 검증 환경
 
 - 확인: 2026-10-25 KST. **환경 조사·설정 문서화 완료, native 실행 미완료.** 현재 상태는 `WAITING_RESOURCE`, 전체 N3는 `PARTIAL`이다.
 - 목적: 수정한 VideoUnmask의 고정 장면 1개×색 permutation 3개를 실제 simulator에서 확인한다. VLA inference·학습·72 episode 수집은 이번 환경 구성 범위가 아니다.

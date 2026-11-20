@@ -49,7 +49,7 @@
 ### Dependency and evolution
 
 - **Registry position:** `NEXT` in `RL, IL, offline learning, and robot data`; tags: `Robotics, Imitation Learning, human video, cross-embodiment, hierarchical policy, long-horizon manipulation`.
-- **Reading predecessor in the generated track queue:** Benchmarking Knowledge Transfer for Lifelong Robot Learning (queue adjacency, not a confirmed citation).
+- **Reading predecessor in the generated track queue:** LIBERO: Benchmarking Knowledge Transfer for Lifelong Robot Learning (queue adjacency, not a confirmed citation).
 - **Reading successor in the generated track queue:** end of this track queue (queue adjacency, not a confirmed citation).
 - Direct citation predecessor/successor is not asserted automatically; verify the paper's reference section before recording lineage as fact.
 - **Body-defined next pressure:** Ours (w/o GMM) even fails to match the performance of Ours (0% human) in the generalization task settings.; this is the most direct route from the paper's reported scope to a falsifiable extension.

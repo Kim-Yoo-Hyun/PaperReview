@@ -1,18 +1,19 @@
 # Evaluation - FAST: Efficient Action Tokenization for Vision-Language-Action Models
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
+> 2026-11-19 표본 감사에서 요약과 관련 본문 표현을 원문에 대조해 교정했다. [원문](https://arxiv.org/html/2501.09747)
 > Evidence maturity: `FULL_TEXT_CHECKED`.
 > Analysis basis: full-text PDF body checked on 2026-09-03 (19 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p012.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p012.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
-PDF body evaluation/result cue (p. 7 (A. Experimental Setup), p. 2 (Figure/Table caption), p. 10 (Figure/Table caption), p. 6 (A. Experimental Setup), p. 6 (A. Experimental Setup), p. 7 (A. Experimental Setup)): We report success rate on individual clothing items.
+자기회귀 VLA에서 토큰화 방식에 따른 학습과 조작 성공을 비교하며, 별도로 π₀-FAST와 flow matching 모델 π₀를 비교한다. [원문](https://arxiv.org/html/2501.09747)
 
 ## Evaluation Body Digest
 
 - **p. 7 / A. Experimental Setup - extractive body cue:** fon a large dataset of IM action sequences trained the universal tokenizer on the most diverse real robot dataset we could assemble, which includes data ...
 - **p. 6 / A. Experimental Setup - extractive body cue:** We test FAST across 7 evaluation environments: 6 real-robot tasks and / simulation environment.
-- **p. 6 / VI. EXPERIMENTS - extractive body cue:** We then compare 7 models trained with FAST tokenization to the state-of-the-art 79 flow-matching (diffusion) VLA, and test the scaling of autoregressive VLA training with ...
+- **p. 6 / VI. EXPERIMENTS - source paraphrase:** We then compare π₀ models trained with FAST tokenization to the state-of-the-art π₀ flow-matching (diffusion) VLA, and test the scaling of autoregressive VLA training with ...
 - **p. 7 / A. Experimental Setup - extractive body cue:** + Zero-shot DROID tabletop manipulation [9] (15 Hz): wwe test a policy trained on the full DROID dataset across various table-top manipulation tasks like picking ...
 - **p. 7 / A. Experimental Setup - extractive body cue:** We report success rate on individual clothing items.
 - **p. 6 / A. Experimental Setup - extractive body cue:** We develop a suite of 7 evaluation tasks 6 real robot, 1 simulated; see Figure 5), designed to test VLA performance on both, highly dexterous ...
@@ -34,7 +35,7 @@ PDF body evaluation/result cue (p. 7 (A. Experimental Setup), p. 2 (Figure/Table
 |---|---|---|---|
 | A. Experimental Setup | EMPIRICAL / REAL-ROBOT OR HARDWARE | We report success rate on individual clothing items. | p. 7 (A. Experimental Setup) |
 | Figure/Table caption | EMPIRICAL / REAL-ROBOT OR HARDWARE | Fig. 2: Left: FAST tokenization enables training of autoregres- sive Transformers for dexterous robot control via simple next token prediction. Right: FAST outperforms popular ... | p. 2 (Figure/Table caption) |
-| Figure/Table caption | EMPIRICAL / REAL-ROBOT OR HARDWARE | Fig. 11: Comparison of x)-FAST and diffusion x [7] generalist policies. zp-FAST matches the performance of Aiffusion 7p while requiring significantly less compute for ... | p. 10 (Figure/Table caption) |
+| Figure/Table caption | EMPIRICAL / REAL-ROBOT OR HARDWARE | Fig. 11: Comparison of π₀-FAST and diffusion π₀ [7] generalist policies. π₀-FAST matches the performance of diffusion π₀ while requiring significantly less compute for ... | p. 10 (Figure/Table caption) |
 | A. Experimental Setup | EMPIRICAL / REAL-ROBOT OR HARDWARE | We develop a suite of 7 evaluation tasks 6 real robot, 1 simulated; see Figure 5), designed to test VLA performance on both, highly ... | p. 6 (A. Experimental Setup) |
 | A. Experimental Setup | EMPIRICAL / REAL-ROBOT OR HARDWARE | The tasks are designed to test VLA performance on highly dexterous tasks, like folding cloths from a laundry basket ("Laundry Folding"), and generalization, e.g, ... | p. 6 (A. Experimental Setup) |
 
@@ -42,14 +43,14 @@ PDF body evaluation/result cue (p. 7 (A. Experimental Setup), p. 2 (Figure/Table
 
 - **p. 7 / A. Experimental Setup - extractive body cue:** fon a large dataset of IM action sequences trained the universal tokenizer on the most diverse real robot dataset we could assemble, which includes data ...
 - **p. 6 / A. Experimental Setup - extractive body cue:** We test FAST across 7 evaluation environments: 6 real-robot tasks and / simulation environment.
-- **p. 6 / VI. EXPERIMENTS - extractive body cue:** We then compare 7 models trained with FAST tokenization to the state-of-the-art 79 flow-matching (diffusion) VLA, and test the scaling of autoregressive VLA training with ...
+- **p. 6 / VI. EXPERIMENTS - source paraphrase:** We then compare π₀ models trained with FAST tokenization to the state-of-the-art π₀ flow-matching (diffusion) VLA, and test the scaling of autoregressive VLA training with ...
 - **p. 7 / A. Experimental Setup - extractive body cue:** + Zero-shot DROID tabletop manipulation [9] (15 Hz): wwe test a policy trained on the full DROID dataset across various table-top manipulation tasks like picking ...
 
 - Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
 
 ## Figures / Tables as Body Evidence
 
-- **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1: We propose FAS nple yet effective approach for tokenization of robot action trajectories via time-series compression, FAST enables training of autoregressive VLAs that ...
+- **p. 1 / Figure/Table caption - source paraphrase:** FAST encodes continuous action chunks as discrete tokens using time-series compression.
 - **p. 2 / Figure/Table caption - extractive body cue:** Fig. 2: Left: FAST tokenization enables training of autoregres- sive Transformers for dexterous robot control via simple next token prediction. Right: FAST outperforms popular binning ...
 - **p. 3 / Figure/Table caption - extractive body cue:** Fig. 3: Effect of sampling rate on prediction performance. We train a small autoregressive transformer model on a didactic interpolation task, in which the network ...
 - **p. 5 / Figure/Table caption - extractive body cue:** Fig. 4: Overview of the FAST action tokenization pipeline. Given a normalized chunk of actions, we apply discrete cosine transform (DCT) to convert the signal ...
@@ -76,7 +77,7 @@ PDF body evaluation/result cue (p. 7 (A. Experimental Setup), p. 2 (Figure/Table
 | The tasks are designed to test VLA performance on highly dexterous tasks, like folding cloths from a laundry basket ("Laundry Folding"), and generalization, e.g, ... | definition/direction/unit from same section | p. 6 (A. Experimental Setup) |
 | We measure average performance across LiberoSpatial, Libero-Object, Libero-Goal, and Libero-10. | definition/direction/unit from same section | p. 7 (A. Experimental Setup) |
 | Fig. 3: Effect of sampling rate on prediction performance. We train a small autoregressive transformer model on a didactic interpolation task, in which the ... | definition/direction/unit from same section | p. 3 (Figure/Table caption) |
-| Fig. 1: We propose FAS nple yet effective approach for tokenization of robot action trajectories via time-series compression, FAST enables training of autoregressive VLAs ... | definition/direction/unit from same section | p. 1 (Figure/Table caption) |
+| FAST encodes continuous action chunks as discrete tokens using time-series compression. | definition/direction/unit from same section | p. 1 (Figure/Table caption) |
 | Fig. 2: Left: FAST tokenization enables training of autoregres- sive Transformers for dexterous robot control via simple next token prediction. Right: FAST outperforms popular ... | definition/direction/unit from same section | p. 2 (Figure/Table caption) |
 | Fig. 8: Universal tokenizer, We test the compression rate | definition/direction/unit from same section | p. 8 (Figure/Table caption) |
 
@@ -86,8 +87,8 @@ PDF body evaluation/result cue (p. 7 (A. Experimental Setup), p. 2 (Figure/Table
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
 |---|---|---|
-| We then compare 7 models trained with FAST tokenization to the state-of-the-art 79 flow-matching (diffusion) VLA, and test the scaling of autoregressive VLA training ... | comparison identity and matched condition | p. 6 (VI. EXPERIMENTS) |
-| Fig. 1: We propose FAS nple yet effective approach for tokenization of robot action trajectories via time-series compression, FAST enables training of autoregressive VLAs ... | comparison identity and matched condition | p. 1 (Figure/Table caption) |
+| We then compare π₀ models trained with FAST tokenization to the state-of-the-art π₀ flow-matching (diffusion) VLA, and test the scaling of autoregressive VLA training ... | comparison identity and matched condition | p. 6 (VI. EXPERIMENTS) |
+| FAST encodes continuous action chunks as discrete tokens using time-series compression. | comparison identity and matched condition | p. 1 (Figure/Table caption) |
 | Fig. 2: Left: FAST tokenization enables training of autoregres- sive Transformers for dexterous robot control via simple next token prediction. Right: FAST outperforms popular ... | comparison identity and matched condition | p. 2 (Figure/Table caption) |
 | We fine-tune the VLA models for robot action prediction, without weight freezing. | comparison identity and matched condition | p. 6 (A. Experimental Setup) |
 | To our knowledge, this is the first "zero-shot" evaluation of DROID policies, in a completely unseen environment, without co-training or fine-tuning, simply by prompting ... | comparison identity and matched condition | p. 7 (A. Experimental Setup) |
@@ -113,7 +114,7 @@ PDF body evaluation/result cue (p. 7 (A. Experimental Setup), p. 2 (Figure/Table
 
 | Claim or target | Result/condition cue | Evidence strength | Anchor |
 |---|---|---|---|
-| 1: We propose FAS nple yet effective approach for tokenization of robot action trajectories via time-series compression, FAST enables training of autoregressive VLAs that ... | We report success rate on individual clothing items. | PDF body cue; verify exact table/figure and matched conditions | p. 7 (A. Experimental Setup), p. 2 (Figure/Table caption), p. 10 (Figure/Table caption), p. 6 (A. Experimental Setup), p. 6 (A. Experimental Setup), p. 7 (A. Experimental Setup) |
+| FAST encodes continuous action chunks as discrete tokens using time-series compression. | We report success rate on individual clothing items. | PDF body cue; verify exact table/figure and matched conditions | p. 7 (A. Experimental Setup), p. 2 (Figure/Table caption), p. 10 (Figure/Table caption), p. 6 (A. Experimental Setup), p. 6 (A. Experimental Setup), p. 7 (A. Experimental Setup) |
 | Primary metric/result | Fig. 2: Left: FAST tokenization enables training of autoregres- sive Transformers for dexterous robot control via simple next token prediction. Right: FAST outperforms popular ... | numeric claim only at cited anchor | p. 2 (Figure/Table caption) |
 
 - Numeric sentences retained from the body:
@@ -145,7 +146,7 @@ PDF body evaluation/result cue (p. 7 (A. Experimental Setup), p. 2 (Figure/Table
 | We find that the same policy checkpoint generalizes robustly, and performs various simple table-top tasks zero-shor across three test buildings. | p. 8 (B. Comparing Action Tokenizers for VLA Training) |
 | Even unsuccessful trials show sensible behavior, like approaching the handles of microwave and dish washer doors, even if ultimately failing to open them, We ... | p. 8 (B. Comparing Action Tokenizers for VLA Training) |
 | For state-of-the-art VLA training runs, which can often use thousands of GPU hours, a Sx reduction in required compute is significant. | p. 10 (C. Universal Action Tokenizer) |
-| We include a full comparison across all tasks for a compute-matched 79 checkpoint in Appendix, Figure 15 and find that the same conclusions hold: ... | p. 10 (C. Universal Action Tokenizer) |
+| We include a full comparison across all tasks for a compute-matched π₀ checkpoint in Appendix, Figure 15 and find that the same conclusions hold: ... | p. 10 (C. Universal Action Tokenizer) |
 | We detail the steps from raw robot actions to action tokens in Figure 4. | p. 4 (B. The FAST Tokenization Algorithm) |
 | After the data is normalized, we apply the discrete cosine transform to each action dimension separately. ‘To compress the DCT-converted signal we can simply ... | p. 4 (B. The FAST Tokenization Algorithm) |
 

@@ -1,4 +1,4 @@
-# GAP-P3 — Docker 계약 검사 결과
+# 주행 계약 결과
 
 - 실행·검토: 2026-10-23 KST
 - **작업 DONE / 계약 13개 PASS / 연구 가설 REVISE·미검증 / native VLA HOLD**.
@@ -63,5 +63,3 @@ P2의 full research manifest는 여전히 실행 준비 완료가 아니다. P3�
 ## 5. 보존과 정리
 
 재실행 안내는 [README](./README.md)를 따른다. 검사 container는 모두 자동 삭제됐고, 불필요한 이번 base-image tag는 제거했다. 재개에 쓰는 전용 runtime image는 보존했다. 최초 cache 필터 요청은 0 B였으나, 이후 이번 build의 정확한 ID 세 개를 각각 지정해 **약461.5 MB**를 회수하고 해당 ID가 사라졌음을 확인했다. 다른 작업의 cache·image·volume은 건드리지 않았다. [정리 기록](./results/cleanup.json).
-
-Registry·tier·사용자 읽기 상태는 변경하지 않는다. 필수 generator/audit/diff 검사, 기존 dirty 파일 보존, 산출물 hash와 임시 snapshot 정리 결과는 [유지보수 검증](./results/maintenance_validation.json)에 기록한다. Git commit/push는 이번 작업에 포함하지 않는다.

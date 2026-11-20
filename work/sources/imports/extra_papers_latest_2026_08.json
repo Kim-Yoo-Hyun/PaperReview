@@ -51,7 +51,7 @@
     "tags": ["Robotics", "VLA", "uncertainty", "calibration", "temporal difference", "failure detection", "LIBERO"],
     "pdf": "https://arxiv.org/pdf/2604.20472",
     "page": "https://arxiv.org/abs/2604.20472",
-    "project": "https://shellytechnion.github.io/",
+    "project": "https://shellytechnion.github.io/TDQC.github.io/",
     "role": "순차 task-success confidence를 TD/value estimation으로 calibration하는 최신 방법. Alert 시점과 recovery selector를 분리하는 G-02의 calibration counter-evidence."
   },
   {

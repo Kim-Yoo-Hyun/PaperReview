@@ -1,4 +1,4 @@
-# Insights — Benchmarking Knowledge Transfer for Lifelong Robot Learning
+# Insights — LIBERO: Benchmarking Knowledge Transfer for Lifelong Robot Learning
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.

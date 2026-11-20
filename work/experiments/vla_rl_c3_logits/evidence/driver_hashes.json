@@ -1,7 +1,0 @@
-{
-  "fetch_assets.py": "881d8a3d4d8d5a27f24556cd1a7b58b767d04fff2bae6b3820eadacaafc7475f",
-  "prepare_observations.py": "e2cc238223afea171f46878c39014d6202a3da62a343685f358c6ca3caf17089",
-  "native_forward.py": "2276c3169f09c8a37225d70a57d93bdf600887553b53440896f43aa91ebdeb3b",
-  "analyze_logits.py": "37a2bee19199b4e581f103dcf7dfa777f6f9bdf1443e098d0211f7e8b1e2f6b6",
-  "audit_tail.py": "c53ce89491649c085a94a252f535ee86e99ad87415a71e60fe7ee171523c0b60"
-}

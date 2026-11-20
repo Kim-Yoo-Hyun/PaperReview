@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_on": "2026-10-29",
+  "updated_on": "2026-11-18",
   "scope": "Docker-only on user-selected local clone; no native policy resume authorized by resource availability alone",
   "inputs_for_c3_replay": [
     {
@@ -21,80 +21,14 @@
   ],
   "tasks": [
     {
-      "id": "HANDOFF_P0_NATIVE",
-      "status": "WAITING_RESOURCE_AND_IMPLEMENTATION",
-      "research_summary_from_repository_root": "synthesis/06_locomotion_whole_body.md",
-      "executable": false,
-      "command": null,
-      "preflight_only_command": "sh work/experiments/vla_handoff_p0/resume.sh check",
-      "resume_plan_from_repository_root": "work/experiments/vla_handoff_p0/RESUME_PLAN.json",
-      "boundary": "Preflight is available; native sim/server images, transport, handoff adapter and runtime manifest remain incomplete. Existing resource record is historical; inspect the current local Docker before resuming."
-    },
-    {
       "id": "C3_SAVED_LOGITS",
       "status": "READY_REPLAY",
-      "research_summary_from_repository_root": "work/research_candidates/summaries/C3_ACTION_EQUIVALENCE.md",
+      "research_summary_from_repository_root": "work/research_topics/RESULTS.md",
       "executable": true,
       "command": "sh work/experiments/portable/run.sh replay-c3"
-    },
-    {
-      "id": "C1_NATIVE",
-      "status": "HOLD_RESEARCH",
-      "research_summary_from_repository_root": "work/research_candidates/summaries/C1_SELECTIVE_OBSERVATION.md",
-      "executable": false,
-      "command": null
-    },
-    {
-      "id": "C2_NATIVE",
-      "status": "NO_GO_CURRENT_DESIGN",
-      "research_summary_from_repository_root": "work/research_candidates/summaries/C2_EXECUTION_CONSTRAINTS.md",
-      "executable": false,
-      "command": null
-    },
-    {
-      "id": "C3_NEW_CHECKPOINT",
-      "status": "HOLD_RESEARCH",
-      "research_summary_from_repository_root": "work/research_candidates/summaries/C3_ACTION_EQUIVALENCE.md",
-      "executable": false,
-      "command": null
-    },
-    {
-      "id": "D1_NATIVE",
-      "status": "HOLD_RESEARCH_AND_RESOURCE",
-      "research_summary_from_repository_root": "work/research_candidates/summaries/D1_OBSERVATION_CORRECTION.md",
-      "executable": false,
-      "command": null
-    },
-    {
-      "id": "D2_NATIVE",
-      "status": "HOLD_RESEARCH",
-      "research_summary_from_repository_root": "work/research_candidates/summaries/D2_GRASP_TRANSPORT.md",
-      "executable": false,
-      "command": null
-    },
-    {
-      "id": "D3_NATIVE",
-      "status": "WAITING_EVIDENCE",
-      "research_summary_from_repository_root": "work/research_candidates/summaries/D3_IRREVERSIBLE_SWITCHING.md",
-      "executable": false,
-      "command": null
-    },
-    {
-      "id": "E1_NATIVE",
-      "status": "WAITING_EVIDENCE",
-      "research_summary_from_repository_root": "work/research_candidates/summaries/E1_ACTION_CONFLICT_REPLAY.md",
-      "executable": false,
-      "command": null
-    },
-    {
-      "id": "E2_NATIVE",
-      "status": "WAITING_EVIDENCE",
-      "research_summary_from_repository_root": "work/research_candidates/summaries/E2_TEMPORAL_FEEDBACK.md",
-      "executable": false,
-      "command": null
     }
   ],
-  "other_candidates": "work/research_candidates/summaries/README.md",
+  "other_candidates": "TODO.md",
   "historical_manifests_are_not_current_plans": true,
   "remote_execution": false
 }

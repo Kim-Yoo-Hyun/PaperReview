@@ -1,6 +1,7 @@
 # Insights — π0: A Vision-Language-Action Flow Model for General Robot Control
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
+> 2026-11-19 표본 감사에서 요약과 관련 본문 표현을 원문에 대조해 교정했다. [원문](https://arxiv.org/html/2410.24164)
 > Evidence maturity: `FULL_TEXT_CHECKED`.
 > Analysis basis: full-text PDF body checked on 2026-09-02 (17 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p010.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p010.pdf. The note is an evidence-anchored body analysis; exact tables/equations remain at the cited page anchors. Reading tracker status/evidence was not changed.
 
@@ -10,8 +11,8 @@
 
 ### What was actually new
 
-- **p. 4 / 1. INTRODUCTION - extractive body cue:** ‘of more complex and dexterous behaviors, such as tying shoelaces [58] or cooking shrimp [17], we show that our framework can leam very long tasks, ...
-- **p. 2 / 1. INTRODUCTION - extractive body cue:** In this paper, we present a prototype model and learning framework, which we call zo, that illustrates how each of these three bottlenecks could be ...
+- **p. 4 / 1. INTRODUCTION - source paraphrase:** π₀ combines a pretrained VLM with a flow-matching action expert and is evaluated on multistage tasks including laundry folding.
+- **p. 2 / 1. INTRODUCTION - source paraphrase:** In this paper, we present a prototype model and learning framework, which we call π₀, that illustrates how each of these three bottlenecks could be ...
 - **p. 3 / 1. INTRODUCTION - extractive body cue:** The contributions of our work consist of a novel generalist robot policy architecture based on VLM pre-training and flow matching, and an empirical investigation of ...
 - **p. 3 / 1. INTRODUCTION - extractive body cue:** This enables our model to control robots at frequencies of up to 50 Hz for dexterous tasks such as laundry folding (see Figure 1), To ...
 - **p. 4 / 1. INTRODUCTION - extractive body cue:** Note that we use PaliGemma for convenience and because of its comparatively small size (which is useful for real-time control), but our framework is compatible ...
@@ -34,8 +35,8 @@
 
 | Claim target | Body evidence | Anchor |
 |---|---|---|
-| Mechanism/contribution | ‘of more complex and dexterous behaviors, such as tying shoelaces [58] or cooking shrimp [17], we show that our framework can leam very long tasks, sometimes tens of, minutes in length, for ... | p. 4 (1. INTRODUCTION), p. 2 (1. INTRODUCTION) |
-| Reported outcome | Fig. 9: Language evaluation. We compare "flat" versions of ‘our policies, -#1at, which receive only the overall task com- mand (e.g, "bag the groceries") with a method that receives intermediate commands from ... | p. 9 (Figure/Table caption), p. 8 (Figure/Table caption) |
+| Mechanism/contribution | π₀ combines a pretrained VLM with a flow-matching action expert and is evaluated on multistage tasks including laundry folding. | p. 4 (1. INTRODUCTION), p. 2 (1. INTRODUCTION) |
+| Reported outcome | Fig. 9: Language evaluation. We compare "flat" versions of our policies, -flat, which receive only the overall task command (e.g, "bag the groceries") with a method that receives intermediate commands from ... | p. 9 (Figure/Table caption), p. 8 (Figure/Table caption) |
 | Failure/limitation | DISCUSSION, LIMITATIONS, AND FUTURE WORK | p. 11 (C. Learning new dexterous tasks), p. 10 (C. Learning new dexterous tasks) |
 
 ## Researcher interpretation
@@ -44,7 +45,7 @@
 
 - **Paper-specific interface:** Formally, we want to model the data distribution p(A,/o,), where Ar = [ar,r¢1,.rs 11-1] corresponds to an action chunk of future actions (we use H ~ 50 for our tasks), ... (p. 5, IV. THE x MODEL).
 - **Paper-specific mechanism:** The contributions of our work consist of a novel generalist robot policy architecture based on VLM pre-training and flow matching, and an empirical investigation of pre-training/posttraining recipes for such robot ... (p. 3, 1. INTRODUCTION).
-- **Evidence boundary:** the reported outcome is Fig. 7: Out-of-box evaluation results: We evaluate 7p trained for the full 700k steps, a version trained for 160k steps that ‘matches the number of updates for baseline models, x-small, ... (p. 8, Figure/Table caption); the relevant task/metric cue is How well does xo follow language commands? ‘These experiments compare xo to xo-Small, a smaller version of our ‘model without VLM initialization, to evaluate its performance ‘on following language commands. (p. 7, VI. EXPERIMENTAL EVALUATION). The PDF does not establish downstream robotics benefit beyond those conditions.
+- **Evidence boundary:** the reported outcome is Fig. 7: Out-of-box evaluation results: We evaluate π₀ trained for the full 700k steps, a version trained for 160k steps that ‘matches the number of updates for baseline models, x-small, ... (p. 8, Figure/Table caption); the relevant task/metric cue is How well does xo follow language commands? ‘These experiments compare xo to xo-Small, a smaller version of our ‘model without VLM initialization, to evaluate its performance ‘on following language commands. (p. 7, VI. EXPERIMENTAL EVALUATION). The PDF does not establish downstream robotics benefit beyond those conditions.
 - **Failure implication:** OpenVLA struggles on these tasks because its autoregressive diseretization architecture does not support action chunks. (p. 7, A. Evaluating the base model).
 - Preserve the paper's observation/action/data/control boundary before attributing any gain to a new downstream module.
 
@@ -60,7 +61,7 @@
 
 1. Reconstruct the PDF-described interface and mechanism: Formally, we want to model the data distribution p(A,/o,), where Ar = [ar,r¢1,.rs 11-1] corresponds to an action chunk of future actions (we use H ~ 50 for our tasks), ... (p. 5, IV. THE x MODEL); preserve the objective/update rule: Our architecture is inspired by Transfusion [59], which trains a single transformer using multiple objectives, with tokens! corresponding to continuous outputs supervised via a flow matching loss and tokens corresponding ... (p. 4, IV. THE x MODEL).
 2. Use the paper-reported task/data/environment cue: These tasks take between 5 and 20 minutes to complete. (p. 7, VI. EXPERIMENTAL EVALUATION).
-3. Compare against the reported or matched baseline: We study this question by directly evaluating 79, with comparisons to other robot foundation models. (p. 7, VI. EXPERIMENTAL EVALUATION).
+3. Compare against the reported or matched baseline: We study this question by directly evaluating π₀, with comparisons to other robot foundation models. (p. 7, VI. EXPERIMENTAL EVALUATION).
 4. Report the body metric with its denominator and aggregation: How well does xo follow language commands? ‘These experiments compare xo to xo-Small, a smaller version of our ‘model without VLM initialization, to evaluate its performance ‘on following language commands. (p. 7, VI. EXPERIMENTAL EVALUATION).
 5. Re-run the reported ablation or stress/failure condition: How well does xo follow language commands? ‘These experiments compare xo to xo-Small, a smaller version of our ‘model without VLM initialization, to evaluate its performance ‘on following language commands. (p. 7, VI. EXPERIMENTAL EVALUATION); if none is reported, design one around: OpenVLA struggles on these tasks because its autoregressive diseretization architecture does not support action chunks. (p. 7, A. Evaluating the base model).
 6. Keep observation, action, data, compute, horizon and controller fixed when isolating the mechanism.
@@ -80,6 +81,6 @@ Under the paper's stated interface (Formally, we want to model the data distribu
 > Cross-checked on 2026-09-03 against the validated PDF body (17 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
 
 - **Paper-supported mechanism:** The contributions of our work consist of a novel generalist robot policy architecture based on VLM pre-training and flow matching, and an empirical investigation of pre-training/posttraining recipes for such robot ... (p. 3, 1. INTRODUCTION).
-- **Paper-supported outcome:** Fig. 7: Out-of-box evaluation results: We evaluate 7p trained for the full 700k steps, a version trained for 160k steps that ‘matches the number of updates for baseline models, x-small, ... (p. 8, Figure/Table caption).
+- **Paper-supported outcome:** Fig. 7: Out-of-box evaluation results: We evaluate π₀ trained for the full 700k steps, a version trained for 160k steps that ‘matches the number of updates for baseline models, x-small, ... (p. 8, Figure/Table caption).
 - **Strongest explicit boundary:** OpenVLA struggles on these tasks because its autoregressive diseretization architecture does not support action chunks. (p. 7, A. Evaluating the base model).
 - **Researcher interpretation rule:** the falsifiable question below tests the mechanism under a matched protocol; it does not upgrade a queue neighbor into a citation lineage.

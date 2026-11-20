@@ -1,12 +1,13 @@
 # Method - Policy Gradient Methods for Reinforcement Learning with Function Approximation
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
+> 2026-11-19 표본 감사에서 요약과 관련 본문 표현을 원문에 대조해 교정했다. [원문](https://proceedings.neurips.cc/paper/1999/hash/464d828b85b0bed98e80ade0a5c43b0f-Abstract.html)
 > Evidence maturity: `FULL_TEXT_CHECKED`.
 > Analysis basis: full-text PDF body checked on 2026-09-03 (7 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://proceedings.neurips.cc/paper/1999/hash/464d828b85b0bed98e80ade0a5c43b0f-Abstract.html; PDF retrieval source: https://proceedings.neurips.cc/paper/1999/hash/464d828b85b0bed98e80ade0a5c43b0f-Abstract.html. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
-PDF body method statement (p. 2 (Abstract), p. 1 (Abstract), p. 1 (Abstract), p. 2 (Abstract), p. 3 (Abstract), p. 3 (Abstract)): For example, the policy might be represented by a neural network whose input is a representation of the state, whose output is action selection probabilities, and whose weights are the ...
+policy-gradient theorem과 compatible function approximation 조건을 제시하고 actor-critic update를 연결한다. [원문](https://proceedings.neurips.cc/paper/1999/hash/464d828b85b0bed98e80ade0a5c43b0f-Abstract.html)
 
 ## Method Body Digest
 
@@ -21,7 +22,7 @@ PDF body method statement (p. 2 (Abstract), p. 1 (Abstract), p. 1 (Abstract), p.
 
 ## Design Rationale
 
-- **p. 2 / Abstract - extractive body cue:** Konda and Tsitsiklis (in prep.) independently developed a very simialr result to ours.
+- **p. 2 / Abstract - source paraphrase:** The policy gradient theorem relates the performance gradient to the action-value function; compatible approximation preserves the gradient under the stated conditions.
 
 ## Source Evidence Cues
 
@@ -62,7 +63,7 @@ PDF body method statement (p. 2 (Abstract), p. 1 (Abstract), p. 1 (Abstract), p.
 |---|---|---|---|
 | Input/observation | example, policy, might, represented, neural, network, whose, input, representation, state, output, action, selection, probabilities | state 또는 observation, action, reward와 transition history | body cue; exact tensor/frame verify |
 | State/latent | example, policy, might, represented, neural, network, whose, input, representation, state | policy/value state와 action-selection variable | body cue; notation verify |
-| Action/output | Konda, Tsitsiklis, prep, independently, developed, very, simialr, result, ours, example | action policy와 induced trajectory | body cue; unit/decoder verify |
+| Action/output | policy parameters, score function, compatible critic, action value | action policy와 induced trajectory | body cue; unit/decoder verify |
 | Objective/constraint | explore, alternative, policy, explicitly, represented, function, approximator, independent, value, updated | expected return / constrained return | equation anchor required |
 
 ## Observation–State–Action Interface

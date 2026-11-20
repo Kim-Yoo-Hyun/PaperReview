@@ -1,12 +1,13 @@
 # Method - FAST: Efficient Action Tokenization for Vision-Language-Action Models
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
+> 2026-11-19 표본 감사에서 요약과 관련 본문 표현을 원문에 대조해 교정했다. [원문](https://arxiv.org/html/2501.09747)
 > Evidence maturity: `FULL_TEXT_CHECKED`.
 > Analysis basis: full-text PDF body checked on 2026-09-03 (19 pages; tesseract OCR fallback; extraction quality: high); canonical paper source: https://www.roboticsproceedings.org/rss21/p012.html; PDF retrieval source: https://www.roboticsproceedings.org/rss21/p012.pdf. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Method in One Sentence
 
-PDF body method statement (p. 4 (B. The FAST Tokenization Algorithm), p. 5 (B. The FAST Tokenization Algorithm), p. 4 (B. The FAST Tokenization Algorithm), p. 9 (C. Universal Action Tokenizer), p. 5 (B. The FAST Tokenization Algorithm), p. 8 (B. Comparing Action Tokenizers for VLA Training)): We first normalize the input actions, such that the Ist and 99th quantile of values in the training dataset for each action dimension maps to the range [-1,...,1]- This initial ...
+FAST는 정규화한 연속 행동 청크에 차원별 이산 코사인 변환(DCT)을 적용한다. 변환 계수를 양자화한 뒤 byte-pair encoding으로 압축해 자기회귀 VLA가 예측할 토큰열을 만든다. [원문](https://arxiv.org/html/2501.09747)
 
 ## Method Body Digest
 
@@ -21,7 +22,7 @@ PDF body method statement (p. 4 (B. The FAST Tokenization Algorithm), p. 5 (B. T
 
 ## Design Rationale
 
-- **p. 1 / 1. INTRODUCTION - extractive body cue:** 1: We propose FAS nple yet effective approach for tokenization of robot action trajectories via time-series compression, FAST enables training of autoregressive VLAs that solve ...
+- **p. 1 / 1. INTRODUCTION - source paraphrase:** FAST encodes continuous action chunks as discrete tokens using time-series compression.
 - **p. 3 / 1. INTRODUCTION - extractive body cue:** We introduce a new action tokenization approach that allows us to train the first autoregressive VLAs ‘on dexterous and high-frequency robot data
 - **p. 3 / 1. INTRODUCTION - extractive body cue:** We find that this scheme struggles to scale to high-frequency robot control tasks, We propose a new tokenization scheme for robot actions, based on time-series ...
 
@@ -63,13 +64,13 @@ PDF body method statement (p. 4 (B. The FAST Tokenization Algorithm), p. 5 (B. T
 |---|---|---|---|
 | Input/observation | alternative, directly, trains, VLAS, output, ow-level, robot, control, commands, given, image, language, instruction, inputs | image/video, language instruction, proprioception과 history | body cue; exact tensor/frame verify |
 | State/latent | alternative, directly, trains, VLAS, output, ow-level, robot, control, commands, given | language-grounded task state와 action-policy context | body cue; notation verify |
-| Action/output | FAS, nple, effective, tokenization, robot, action, trajectories, time-series, compression, FAST | continuous action, pose 또는 action chunk | body cue; unit/decoder verify |
+| Action/output | FAST, action chunks, DCT coefficients, BPE tokens | continuous action, pose 또는 action chunk | body cue; unit/decoder verify |
 | Objective/constraint | After, data, normalized, apply, discrete, cosine, transform, action, dimension, separately | policy/action modeling objective | equation anchor required |
 
 ## Observation–State–Action Interface
 
-- **p. 3 / 1. INTRODUCTION - extractive body cue:** An alternative approach directly trains VLAS to output ow-level robot control commands given image and language instruction inputs.
-- **p. 1 / 1. INTRODUCTION - extractive body cue:** 1: We propose FAS nple yet effective approach for tokenization of robot action trajectories via time-series compression, FAST enables training of autoregressive VLAs that solve ...
+- **p. 3 / 1. INTRODUCTION - source paraphrase:** An alternative approach directly trains VLAs to output low-level robot control commands given image and language instruction inputs.
+- **p. 1 / 1. INTRODUCTION - source paraphrase:** FAST encodes continuous action chunks as discrete tokens using time-series compression.
 - **p. 10 / C. Universal Action Tokenizer - extractive body cue:** We also developed FAST, a universal action tokenizer, that can serve as a strong default tokenizer for any robot action sequence, and used it to ...
 - **p. 2 / 1. INTRODUCTION - extractive body cue:** approach: input images can be represented as "soft token: produced by a pre-trained vision encoder [46], and full autoregressive image input-output can be achieved with ...
 - **p. 9 / C. Universal Action Tokenizer - extractive body cue:** To comply with the tak setup, we modify the OpenVLA model code to accept multiple input images and predict I-second action chunks.
@@ -109,7 +110,7 @@ PDF body method statement (p. 4 (B. The FAST Tokenization Algorithm), p. 5 (B. T
 | Method component | Evaluation evidence to inspect | PDF anchor |
 |---|---|---|
 | Multimodal task encoding | fon a large dataset of IM action sequences trained the universal tokenizer on the most diverse real robot dataset we could assemble, ... | p. 7 (A. Experimental Setup), p. 6 (A. Experimental Setup) |
-| Action / skill decoding | We then compare 7 models trained with FAST tokenization to the state-of-the-art 79 flow-matching (diffusion) VLA, and test the scaling of autoregressive ... | p. 6 (VI. EXPERIMENTS), p. 1 (Figure/Table caption) |
+| Action / skill decoding | We then compare π₀ models trained with FAST tokenization to the state-of-the-art π₀ flow-matching (diffusion) VLA, and test the scaling of autoregressive ... | p. 6 (VI. EXPERIMENTS), p. 1 (Figure/Table caption) |
 | Receding execution / feedback | We report success rate on individual clothing items. | p. 7 (A. Experimental Setup), p. 2 (Figure/Table caption) |
 
 ## Failure and Ablation Link

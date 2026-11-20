@@ -12,9 +12,61 @@ import audit_repository as audit
 import build_registry_views as views
 import audit_note_artifacts as artifacts
 import build_lit_survey as survey
+import registry_profiles as profiles
+from registry_schema import enrich_record, validate_record_shape
 
 
 class DocumentMaintenanceTest(unittest.TestCase):
+    def test_legacy_code_scope_normalizes_and_unrecognized_scopes_fail(self):
+        code = {"kind": "official_code", "url": "https://example.org/repository",
+                "scope": "code_repository", "verified_on": "2026-11-18"}
+        record = enrich_record({"title": "Paper", "year": 2025, "venue": "RSS",
+                                "category": "Robotics", "tags": [], "folder": "2025/RSS/Paper",
+                                "page": "https://example.org/paper", "sources": {"code": code}},
+                               paper_id="pr-0001")
+        self.assertEqual(record["sources"]["code"], {**code, "scope": "project_landing"})
+        self.assertEqual(validate_record_shape(record), [])
+        record["sources"]["code"]["scope"] = "undefined_scope"
+        self.assertIn("invalid sources.code.scope", validate_record_shape(record))
+
+    def test_admitting_a_citing_paper_updates_only_relevant_lineage(self):
+        baseline = {"paper_id": "baseline", "folder": "baseline", "title": "Baseline"}
+        unrelated = {"paper_id": "other", "folder": "other", "title": "Other"}
+        new = {"paper_id": "new", "folder": "new", "title": "New",
+               "relations": [{"paper_id": "baseline"}]}
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            profiles.enrich_profiles([baseline, unrelated], root, reviewed_on="2026-11-19")
+            profiles.enrich_profiles([new], root, registry=[baseline, unrelated, new],
+                                    reviewed_on="2026-11-20")
+        self.assertEqual(new["lineage_profile"]["outgoing_paper_ids"], ["baseline"])
+        self.assertEqual(baseline["lineage_profile"]["incoming_paper_ids"], ["new"])
+        self.assertEqual(baseline["evaluation_profile"]["reviewed_on"], "2026-11-19")
+        self.assertEqual(baseline["reproducibility"]["reviewed_on"], "2026-11-19")
+        self.assertEqual(unrelated["lineage_profile"]["audited_on"], "2026-11-19")
+
+    def test_reviewed_release_sources_survive_profile_refresh_until_status_changes(self):
+        code = {"status": "released", "source": "https://example.org/tree/release",
+                "evidence": "author release tree checked"}
+        data = {"status": "released", "source": "https://example.org/data",
+                "evidence": "download manifest", "verified_on": "2026-11-19"}
+        checkpoint = {"status": "released", "source": "https://example.org/weights",
+                      "evidence": "author checkpoint"}
+        paper = {"paper_id": "paper", "folder": "paper", "title": "Paper",
+                 "artifacts": {"code_status": "released", "data_status": "released"},
+                 "sources": {"project": {"url": "https://example.org"}},
+                 "reproducibility": {"code": code, "data": data, "checkpoint": checkpoint}}
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            profiles.enrich_profiles([paper], root)
+            self.assertEqual(paper["reproducibility"]["code"], code)
+            self.assertEqual(paper["reproducibility"]["data"], data)
+            self.assertEqual(paper["reproducibility"]["checkpoint"], checkpoint)
+            paper["artifacts"]["data_status"] = "not_released"
+            profiles.enrich_profiles([paper], root)
+        self.assertEqual(paper["reproducibility"]["data"]["status"], "not_released")
+        self.assertIsNone(paper["reproducibility"]["data"]["source"])
+
     def test_registry_cli_uses_manifest_not_incomplete_discovery(self):
         with tempfile.TemporaryDirectory() as directory:
             manifest = Path(directory) / "papers.json"

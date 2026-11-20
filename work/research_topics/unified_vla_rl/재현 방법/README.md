@@ -1,4 +1,4 @@
-# 단일 VLA actor–critic 비교의 재현 계약
+# 단일 VLA 강화학습 재현
 
 - Updated: 2026-11-12 KST / 기존 실행 확인: **11/07 GAP-UNIFIED-P0-R1**, 새 문헌/정적 검토: **LANGRET-N1/N2**
 - [질문·판정](../내용/README.md#n1-review) · [단일 source·pin·설계 원장](../내용/sources.json)

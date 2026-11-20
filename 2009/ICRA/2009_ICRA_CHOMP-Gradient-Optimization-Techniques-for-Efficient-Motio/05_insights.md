@@ -52,7 +52,7 @@
 
 - **Registry position:** `CORE` in `Planning and control`; tags: `Robotics, motion planning, trajectory optimization, manipulation`.
 - **Reading predecessor in the generated track queue:** Rapidly-Exploring Random Trees: A New Tool for Path Planning (queue adjacency, not a confirmed citation).
-- **Reading successor in the generated track queue:** TrajOpt: A Sequential Convex Optimization Algorithm for Robot Motion Planning (queue adjacency, not a confirmed citation).
+- **Reading successor in the generated track queue:** Motion Planning with Sequential Convex Optimization and Convex Collision Checking (queue adjacency, not a confirmed citation).
 - Direct citation predecessor/successor is not asserted automatically; verify the paper's reference section before recording lineage as fact.
 - **Body-defined next pressure:** Fig. 1. Experimental robotic platforms: Boston Dynamics's LittleDog (left), and Barrett Technology's WAM arm (right). collision free. As a result, CHOMP can often transform a na¨ıve initial guess into a trajectory suitable ...; this is the most direct route from the paper's reported scope to a falsifiable extension.
 

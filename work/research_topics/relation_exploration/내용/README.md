@@ -1,8 +1,8 @@
-# 접촉 관계에 조건화된 VLA의 강화학습 탐색
+# 접촉 관계 탐색
 
-2026-11-18: 직접 선행의 정식 paper-note와 publication 경계는 [REG-R17 등록](../../../update/REGISTRY_MAINTENANCE_2026-11-18.md)으로 연결했다. 아래 연구 판단·실행 준비 상태는 유지한다.
+2026-11-18: 직접 선행의 정식 paper-note와 publication 경계는 [REG-R17 등록](../../../update/REGISTRY.md#reg-r18)으로 연결했다. 아래 연구 판단·실행 준비 상태는 유지한다.
 
-Updated: 2026-11-17 KST. **N1/N2·P0 실행 준비 완료 / 좁은 탐색 CONTINUE, native 검증 대기.** 근거 성숙도는 `CURATION-HYPOTHESIS`다. 독립 신규성·정책 효과·실제 외부 피드백은 미확인이다. [재현 방법·공개 source 검사](../재현%20방법/README.md) · [단일 근거 원장](../../../sources/new_field_scout_2026-11-17.json)의 `relation_n1`/`relation_n2`/`relation_p0_preparation` · [선정 이력](../../../update/NEW_FIELD_SCOUT_2026-11-17.md#relation-exploration) · [TODO](../../../../TODO.md).
+Updated: 2026-11-17 KST. **N1/N2·P0 실행 준비 완료 / 좁은 탐색 CONTINUE, native 검증 대기.** 근거 성숙도는 `CURATION-HYPOTHESIS`다. 독립 신규성·정책 효과·실제 외부 피드백은 미확인이다. [재현 방법·공개 source 검사](../재현%20방법/README.md) · [단일 근거 원장](../../../sources/new_field_scout_2026-11-17.json)의 `relation_n1`/`relation_n2`/`relation_p0_preparation` · [선정 이력](https://github.com/Kim-Yoo-Hyun/PaperReview/blob/cb650415f47a2a45ad883dabe5bd20c382b5c183/work/update/NEW_FIELD_SCOUT_2026-11-17.md#relation-exploration) · [TODO](../../../../TODO.md).
 
 ## 지금의 판단
 

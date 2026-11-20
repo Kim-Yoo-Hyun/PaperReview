@@ -1,6 +1,7 @@
 # Denoising Diffusion Probabilistic Models
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
+> 2026-11-19 표본 감사에서 요약과 관련 본문 표현을 원문에 대조해 교정했다. [원문](https://arxiv.org/html/2006.11239)
 > Analysis basis: full-text PDF body checked on 2026-09-03 (25 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://arxiv.org/abs/2006.11239.
 > PDF retrieval source: https://arxiv.org/pdf/2006.11239. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
@@ -19,7 +20,7 @@
 
 ## Why This Paper Is Here
 
-RL, IL, offline learning, and robot data의 generative 문제를 이해하기 위해 읽는다. 본문은 (5) are comparisons between Gaussians, so they can be calculated in a Rao-Blackwellized fashion with closed form expressions instead of high variance Monte Carlo estimates.를 문제로 두고, We present a more refined analysis of this phenomenon in the language of lossy compression, and we show that the sampling procedure of diffusion models is a type of progressive decoding that ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다.
+DDPM은 잡음에서 자연 이미지를 복원하는 역확산 모델이다. 이 논문의 평가는 생성한 이미지의 품질과 분포에 초점을 둔다. [원문](https://arxiv.org/html/2006.11239)
 
 ## Problem and Motivation
 
@@ -33,36 +34,15 @@ RL, IL, offline learning, and robot data의 generative 문제를 이해하기 �
 
 ## Core Idea
 
-- **p. 2 / 1 Introduction - extractive body cue:** We present a more refined analysis of this phenomenon in the language of lossy compression, and we show that the sampling procedure of diffusion models ...
-- **p. 2 / 1 Introduction - extractive body cue:** When the diffusion consists of small amounts of Gaussian noise, it is sufficient to set the sampling chain transitions to conditional Gaussians too, allowing for ...
-- **p. 1 / Abstract - extractive body cue:** We present high quality image synthesis results using diffusion probabilistic models, a class of latent variable models inspired by considerations from nonequilibrium thermodynamics.
-- **p. 3 / 2 Background - extractive body cue:** Second, to represent the mean µθ(xt, t), we propose a specific parameterization motivated by the following analysis of Lt.
-- **p. 4 / 2 Background - extractive body cue:** 3.3 Data scaling, reverse process decoder, and L0 We assume that image data consists of integers in {0, 1, . . . , 255} scaled ...
-- **p. 1 / Abstract - extractive body cue:** Our best results are obtained by training on a weighted variational bound designed according to a novel connection between diffusion probabilistic models and denoising score ...
-- **p. 5 / 2 Background - extractive body cue:** Model IS FID NLL Test (Train) Conditional EBM [11] 8.30 37.9 JEM [17] 8.76 38.4 BigGAN [3] 9.22 14.73 StyleGAN2 + ADA (v1) [29] 10.06 ...
-- **p. 2 / 1 Introduction - extractive body cue:** In addition, we show that a certain parameterization of diffusion models reveals an equivalence with denoising score matching over multiple noise levels during training and ...
+DDPM은 이미지에 단계별로 가우시안 잡음을 더하고, 시점별 잡음을 신경망으로 예측하도록 학습한다. 생성 시에는 잡음에서 시작해 역과정을 반복하여 이미지를 얻는다. [원문](https://arxiv.org/html/2006.11239)
 
 ## Observation, State, and Output Interface
 
-| Role | PDF body evidence | Robotics interpretation | Anchor |
-|---|---|---|---|
-| Observation/input | On the unconditional CIFAR10 dataset, we obtain an Inception score of 9.46 and a state-of-the-art FID score of 3.17. | conditioning observation와 noisy/intermediate sample | p. 1 (Abstract), p. 4 (2 Background) |
-| State/latent | unconditional, CIFAR10, dataset, obtain, Inception, score, state-of-the-art, FID, ensures, neural, network, reverse | latent/noise variable와 conditional distribution | p. 1 (Abstract), p. 4 (2 Background), p. 4 (2 Background) |
-| Output/action | This ensures that the neural network reverse process operates on consistently scaled inputs starting from the standard normal prior p(xT ). | generated sample, action chunk 또는 trajectory | p. 4 (2 Background), p. 4 (2 Background), p. 1 (Abstract) |
-| Objective/outcome | In particular, our diffusion process setup in Section 4 causes the simplified objective to down-weight loss terms corresponding to small t. | distribution fit, multimodality, sample quality와 latency | p. 5 (2 Background), p. 1 (Abstract), p. 2 (1 Introduction) |
+학습 입력은 잡음을 더한 이미지와 확산 시점이며 신경망은 부가된 잡음을 예측한다. 역확산 체인의 최종 출력은 이미지다. [원문](https://arxiv.org/html/2006.11239)
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1 Introduction - extractive body cue:** We present a more refined analysis of this phenomenon in the language of lossy compression, and we show that the sampling procedure of diffusion models ...
-- **p. 2 / 1 Introduction - extractive body cue:** When the diffusion consists of small amounts of Gaussian noise, it is sufficient to set the sampling chain transitions to conditional Gaussians too, allowing for ...
-- **p. 1 / Abstract - extractive body cue:** We present high quality image synthesis results using diffusion probabilistic models, a class of latent variable models inspired by considerations from nonequilibrium thermodynamics.
-- **p. 3 / 2 Background - extractive body cue:** Second, to represent the mean µθ(xt, t), we propose a specific parameterization motivated by the following analysis of Lt.
-- **p. 4 / 2 Background - extractive body cue:** 3.3 Data scaling, reverse process decoder, and L0 We assume that image data consists of integers in {0, 1, . . . , 255} scaled ...
-- **p. 5 / 4 Experiments - extractive body cue:** With our FID score of 3.17, our unconditional model achieves better sample quality than most models in the literature, including class conditional models.
-- **p. 5 / 4 Experiments - extractive body cue:** 4.1 Sample quality Table 1 shows Inception scores, FID scores, and negative log likelihoods (lossless codelengths) on CIFAR10.
-- **p. 6 / 4 Experiments - extractive body cue:** Still, while our lossless codelengths are better than the large estimates reported for energy based models and score matching using annealed importance sampling [11], they ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+저자들은 확산 모델의 학습을 여러 잡음 수준에서의 denoising과 연결하고, CIFAR-10 등에서 생성한 이미지의 품질을 평가했다. [원문](https://arxiv.org/html/2006.11239)
 
 ## Evaluation Scope
 
@@ -86,13 +66,13 @@ RL, IL, offline learning, and robot data의 generative 문제를 이해하기 �
 
 ## Why Read It
 
-RL, IL, offline learning, and robot data의 generative 문제를 이해하기 위해 읽는다. 본문은 (5) are comparisons between Gaussians, so they can be calculated in a Rao-Blackwellized fashion with closed form expressions instead of high variance Monte Carlo estimates.를 문제로 두고, We present a more refined analysis of this phenomenon in the language of lossy compression, and we show that the sampling procedure of diffusion models is a type of progressive decoding that ...를 통해 observation-to-action closed loop의 한 지점을 바꾼다. Revisit p. 3 (2 Background), p. 5 (2 Background), p. 2 (1 Introduction), p. 4 (2 Background), p. 1 (Abstract), p. 5 (2 Background) to check whether the claimed mechanism survives the failure regime and evaluation boundary recorded above.
+후속 로봇 확산 정책을 읽을 때 원 DDPM의 이미지 생성 목적과 로봇 관측에 조건화한 행동 생성 목적을 구분하는 기준이다.
 
 ## Semantic QA — PDF body cross-check
 
 > Cross-checked on 2026-09-03 against the validated PDF body (25 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
 
 - **Problem/bottleneck:** (5) are comparisons between Gaussians, so they can be calculated in a Rao-Blackwellized fashion with closed form expressions instead of high variance Monte Carlo estimates. (p. 3, 2 Background).
-- **Actual contribution:** We present a more refined analysis of this phenomenon in the language of lossy compression, and we show that the sampling procedure of diffusion models is a type of progressive ... (p. 2, 1 Introduction).
+- **Actual contribution:** DDPM은 이미지에 단계별로 가우시안 잡음을 더하고, 시점별 잡음을 신경망으로 예측하도록 학습한다. 생성 시에는 잡음에서 시작해 역과정을 반복하여 이미지를 얻는다. [원문](https://arxiv.org/html/2006.11239)
 - **Evaluation boundary:** 4.1 Sample quality Table 1 shows Inception scores, FID scores, and negative log likelihoods (lossless codelengths) on CIFAR10. (p. 5, 4 Experiments).
 - **Explicit failure boundary:** We fixed the noise for different values of λ so xt and x′ t remain the same. (p. 8, 4 Experiments).

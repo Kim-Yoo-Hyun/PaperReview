@@ -1,6 +1,7 @@
 # Method - Denoising Diffusion Probabilistic Models
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
+> 2026-11-19 표본 감사에서 요약과 관련 본문 표현을 원문에 대조해 교정했다. [원문](https://arxiv.org/html/2006.11239)
 > Evidence maturity: `FULL_TEXT_CHECKED`.
 > Analysis basis: full-text PDF body checked on 2026-09-03 (25 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2006.11239; PDF retrieval source: https://arxiv.org/pdf/2006.11239. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
@@ -8,7 +9,7 @@
 
 ## Method in One Sentence
 
-PDF body method statement (p. 1 (Abstract), p. 5 (2 Background), p. 2 (1 Introduction), p. 1 (Abstract), p. 2 (1 Introduction), p. 4 (2 Background)): Our best results are obtained by training on a weighted variational bound designed according to a novel connection between diffusion probabilistic models and denoising score matching with Langevin dynamics, and ...
+DDPM은 이미지에 단계별로 가우시안 잡음을 더하고, 시점별 잡음을 신경망으로 예측하도록 학습한다. 생성 시에는 잡음에서 시작해 역과정을 반복하여 이미지를 얻는다. [원문](https://arxiv.org/html/2006.11239)
 
 ## Method Body Digest
 
@@ -64,9 +65,9 @@ PDF body method statement (p. 1 (Abstract), p. 5 (2 Background), p. 2 (1 Introdu
 
 | Role | PDF-derived terms | Normalized robotics interpretation | Status |
 |---|---|---|---|
-| Input/observation | unconditional, CIFAR10, dataset, obtain, Inception, score, state-of-the-art, FID, ensures, neural, network, reverse, process, operates | conditioning observation와 noisy/intermediate sample | body cue; exact tensor/frame verify |
+| Input/observation | unconditional, CIFAR10, dataset, obtain, Inception, score, state-of-the-art, FID, ensures, neural, network, reverse, process, operates | 잡음이 더해진 이미지와 확산 시점 | body cue; exact tensor/frame verify |
 | State/latent | unconditional, CIFAR10, dataset, obtain, Inception, score, state-of-the-art, FID, ensures, neural | latent/noise variable와 conditional distribution | body cue; notation verify |
-| Action/output | present, more, refined, analysis, phenomenon, language, lossy, compression, sampling, procedure | generated sample, action chunk 또는 trajectory | body cue; unit/decoder verify |
+| Action/output | present, more, refined, analysis, phenomenon, language, lossy, compression, sampling, procedure | 역확산으로 생성한 이미지 | body cue; unit/decoder verify |
 | Objective/constraint | particular, diffusion, process, setup, Section, causes, simplified, objective, down-weight, loss | distribution/denoising/flow objective | equation anchor required |
 
 ## Observation–State–Action Interface
@@ -78,7 +79,7 @@ PDF body method statement (p. 1 (Abstract), p. 5 (2 Background), p. 2 (1 Introdu
 - **p. 2 / 1 Introduction - extractive body cue:** We find that the majority of our models' lossless codelengths are consumed to describe imperceptible image details (Section 4.3).
 - **p. 2 / 1 Introduction - extractive body cue:** We present a more refined analysis of this phenomenon in the language of lossy compression, and we show that the sampling procedure of diffusion models ...
 - **p. 3 / 2 Background - extractive body cue:** Second, to represent the mean µθ(xt, t), we propose a specific parameterization motivated by the following analysis of Lt.
-- **Normalized interface:** observation=conditioning observation와 noisy/intermediate sample; state=latent/noise variable와 conditional distribution; output/action=generated sample, action chunk 또는 trajectory.
+- **Normalized interface:** observation=잡음이 더해진 이미지와 확산 시점; state=latent/noise variable와 conditional distribution; output/action=역확산으로 생성한 이미지.
 - Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract

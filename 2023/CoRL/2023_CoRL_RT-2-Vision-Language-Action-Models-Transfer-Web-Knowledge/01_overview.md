@@ -7,11 +7,11 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2023 / CoRL
-- Authors: not duplicated here when not verified in the registry source
+- Authors: Brianna Zitkovich, Tianhe Yu, Sichun Xu 외. 전체 저자 순서는 CoRL 게재본과 원장에 기록했다.
 - Primary track: VLA and generalist robot policies
 - Tier: CORE
 - Tags: VLA, Vision-Language Model, Robotics
-- Official paper: https://arxiv.org/abs/2307.15818
+- Official paper: https://proceedings.mlr.press/v229/zitkovich23a.html
 - Full-text retrieval: https://arxiv.org/pdf/2307.15818
 - Code/Project: https://robotics-transformer2.github.io/
 - Paper type: method

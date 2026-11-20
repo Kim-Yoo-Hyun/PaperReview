@@ -1,0 +1,793 @@
+reviewed_on: '2026-11-19'
+cohort:
+  tier: 1
+  registry_tier: CORE
+  screened: 50
+  included: 17
+  scope: 시각·언어로 조건화한 범용 로봇 행동 정책의 학습·직접 변형 또는 휴머노이드 행동·보행 정책의 명시적 평가. FAST의 휴머노이드 부분은 토크나이저 평가에만 해당한다. 학습기반 범용 정책·실물·시뮬레이션·오프라인 궤적 범위를 각 행에 명시한다.
+  screened_out:
+    pr-0835: Learning to Predict by the Methods of Temporal Differences
+    pr-1181: 'Policy invariance under reward transformations: Theory and application to reward shaping'
+    pr-1182: Universal Value Function Approximators
+    pr-0838: Policy Gradient Methods for Reinforcement Learning with Function Approximation
+    pr-0624: Offline Reinforcement Learning with Implicit Q-Learning
+    pr-0622: Conservative Q-Learning for Offline Reinforcement Learning
+    pr-0522: A Reduction of Imitation Learning and Structured Prediction to No-Regret Online Learning
+    pr-0747: What Matters in Learning from Offline Human Demonstrations for Robot Manipulation
+    pr-0008: Denoising Diffusion Probabilistic Models
+    pr-0745: Flow Matching for Generative Modeling
+    pr-0019: 'Diffusion Policy: Visuomotor Policy Learning via Action Diffusion'
+    pr-0951: Diffusion Policy Policy Optimization
+    pr-0874: 'SERL: A Software Suite for Sample-Efficient Robotic Reinforcement Learning'
+    pr-0914: Precise and dexterous robotic manipulation via human-in-the-loop reinforcement learning
+    pr-0732: 'DROID: A Large-Scale In-The-Wild Robot Manipulation Dataset'
+    pr-0042: 'LIBERO: Benchmarking Knowledge Transfer for Lifelong Robot Learning'
+    pr-0500: 'Habitat: A Platform for Embodied AI Research'
+    pr-0005: Learning Transferable Visual Models From Natural Language Supervision
+    pr-0020: 'Do As I Can, Not As I Say: Grounding Language in Robotic Affordances'
+    pr-0041: 'CALVIN: A Benchmark for Language-Conditioned Policy Learning for Long-Horizon Robot Manipulation Tasks'
+    pr-0566: Learning Fine-Grained Bimanual Manipulation with Low-Cost Hardware
+    pr-0926: '3D Diffusion Policy: Generalizable Visuomotor Policy Learning via Simple 3D Representations'
+    pr-0821: Planning and Acting in Partially Observable Stochastic Domains
+    pr-0825: 'Impedance Control: An Approach to Manipulation: Part I—Theory'
+    pr-0831: 'MuJoCo: A Physics Engine for Model-Based Control'
+    pr-0568: 'NoMaD: Goal Masked Diffusion Policies for Navigation and Exploration'
+    pr-0030: 'ConceptFusion: Open-set Multimodal 3D Mapping'
+    pr-0037: 'RVT: Robotic View Transformer for 3D Object Manipulation'
+    pr-0540: 'VLFM: Vision-Language Frontier Maps for Zero-Shot Semantic Navigation'
+    pr-0541: 'Beyond the Nav-Graph: Vision-and-Language Navigation in Continuous Environments'
+    pr-0927: 'ViNT: A Foundation Model for Visual Navigation'
+    pr-0574: 'Mobile ALOHA: Learning Bimanual Mobile Manipulation using Low-Cost Whole-Body Teleoperation'
+    pr-0677: 'Recovery RL: Safe Reinforcement Learning with Learned Recovery Zones'
+  exclusion_rule: 전용 벤치마크·시뮬레이터의 구축, 지각/지도, 개별 조건부 정책·플래너, 범용 이론 자체만으로는 심화 배치에 포함하지 않았다. 예컨대 CALVIN/LIBERO는 벤치마크 기여, RVT는 언어 조건 다중 과제 조작, SayCan은 언어 계획·스킬 선택, MuJoCo는
+    물리 엔진이다.
+conventions:
+  source: 링크된 PDF의 첫 장을 1쪽으로 세었다. 위치는 필드별로 표시한다. 숫자가 들어가는 모델·환경 고유명은 논문 표기를 따른다.
+  real_robot_tasks: unique_count는 해당 논문 실기 평가의 고유 과제 수를 확정한 경우에만 정수다. 부분집합·하한·로봇당 수는 reported_scopes로 보존한다.
+  prior_work: 등록 ID가 있는 직접 선행을 포함한다. 관계 유형 및 중요도는 연구자 해석이다. 선행이나 후속 한계의 미확인은 해당 문헌이 없다는 뜻이 아니다.
+  missing: 미확인. 적용되지 않는 VLA 또는 humanoid 블록은 생략한다.
+records:
+- registry_id: pr-0022
+  title: 'RT-2: Vision-Language-Action Models Transfer Web Knowledge to Robotic Control'
+  tier: 1
+  limitations:
+    paper_reported:
+      value: 로봇 데이터에서 시연하지 않은 새 운동 기술을 웹 데이터만으로 획득하는 데 한계가 있다.
+      source: https://arxiv.org/pdf/2307.15818#page=11
+      location: §5 Limitations
+    subsequent_work:
+      registry_id: pr-0024
+      value: 더 다양한 로봇 데이터에서는 공동 미세조정과 로봇 전용 미세조정 간 차이가 작았다. RT-2의 결과가 데이터 조성에 의존할 수 있다.
+      source: https://arxiv.org/pdf/2310.08864#page=6
+      location: RT-2-X ablation 행 (4), (7) 및 본문
+  prior_work:
+  - registry_id: pr-0023
+    type: 확장
+    interpretation: PaLM-E를 로봇 행동 토큰을 출력하도록 미세조정한 변형을 제시한다.
+    source: https://arxiv.org/pdf/2307.15818#page=5
+    location: 선행 방법을 설명하거나 채택한 본문
+  importance:
+    level: 핵심
+    interpretation: 웹 지식을 로봇 행동으로 옮기는 효과와 새 운동 기술 습득을 구분할 출발점이다.
+  vla:
+    backbone:
+      value: PaLI-X 또는 PaLM-E. 변형별 규모는 실험 설정에 따른다.
+      source: https://arxiv.org/pdf/2307.15818#page=5
+      location: §3 Model
+      size_evidence:
+        value: 최대 RT-2-PaLI-X 55B
+        source: https://arxiv.org/pdf/2307.15818#page=6
+        location: §3 real-time inference
+    action_representation:
+      value: 양자화한 로봇 행동을 이산 언어 토큰으로 출력한다.
+      source: https://arxiv.org/pdf/2307.15818#page=5
+      location: §3
+    architecture:
+      value: 시각·언어 입력과 행동 출력을 한 VLM에서 처리한다.
+      source: https://arxiv.org/pdf/2307.15818#page=5
+      location: §3, Fig. 2
+    training:
+      value: 웹 시각언어 과제와 로봇 시연을 공동 미세조정한다.
+      source: https://arxiv.org/pdf/2307.15818#page=6
+      location: §3 Training
+    evaluation:
+      value: 실물 팔에서 학습 분포, 새 물체·환경, 발현 능력을 별도 평가한다.
+      source: https://arxiv.org/pdf/2307.15818#page=7
+      location: §4.1 및 §4.2
+    real_robot_tasks:
+      unique_count: 미확인
+      reported_scopes:
+      - value: '>200'
+        scope: 학습 분포에서 평가한 과제
+        source: https://arxiv.org/pdf/2307.15818#page=7
+        location: §4.1 In-distribution
+      - value: '>280'
+        scope: 일반화 평가 과제. 앞 집합과의 중복 미확인
+        source: https://arxiv.org/pdf/2307.15818#page=8
+        location: §4.1 Generalization
+- registry_id: pr-0024
+  title: 'Open X-Embodiment: Robotic Learning Datasets and RT-X Models'
+  tier: 1
+  limitations:
+    paper_reported:
+      value: 평가에 등장한 기종 사이 전이를 시험했다. 새로운 로봇에 대한 일반화와 양의 전이 발생 조건은 열린 문제로 남겼다.
+      source: https://arxiv.org/pdf/2310.08864#page=7
+      location: §VI, pp.6–7
+    subsequent_work:
+      registry_id: pr-0051
+      value: WidowX의 기본 정책 비교에서 RT-2-X가 의미 일반화에 강했지만 여러 시각 변화와 물체 지정 과제에서는 OpenVLA가 더 높은 성공률을 보고했다. 비교 조건은 Fig. 3에 한정된다.
+      source: https://arxiv.org/pdf/2406.09246#page=7
+      location: §5 및 Fig. 3, BridgeData V2 WidowX
+  prior_work:
+  - registry_id: pr-0021
+    type: 확장
+    interpretation: RT-1을 여러 기종의 데이터로 학습한다.
+    source: https://arxiv.org/pdf/2310.08864#page=4
+    location: 선행 방법을 설명하거나 채택한 본문
+  - registry_id: pr-0022
+    type: 확장
+    interpretation: RT-2의 PaLI-X 변형을 여러 기종의 데이터로 학습한다.
+    source: https://arxiv.org/pdf/2310.08864#page=4
+    location: 선행 방법을 설명하거나 채택한 본문
+  importance:
+    level: 핵심
+    interpretation: 기종 간 양의 전이를 주장할 때 필요한 데이터 구성과 비교 정책을 보여준다.
+  vla:
+    backbone:
+      value: RT-2-X는 PaLI-X, 별도 비교 모델 RT-1-X는 RT-1 기반이다.
+      source: https://arxiv.org/pdf/2310.08864#page=4
+      location: §IV, Fig. 3
+      size_evidence:
+        value: RT-2-X ablation의 55B 및 5B 구성
+        source: https://arxiv.org/pdf/2310.08864#page=6
+        location: ablation table의 Size 열
+    action_representation:
+      value: 두 계열 모두 이산화된 행동을 예측한다.
+      source: https://arxiv.org/pdf/2310.08864#page=4
+      location: §IV, Fig. 3
+    architecture:
+      value: 입출력 규약을 공유하는 별개 정책을 비교한다.
+      source: https://arxiv.org/pdf/2310.08864#page=4
+      location: §IV
+    training:
+      value: 여러 기종의 시연을 혼합하며 RT-2-X에서는 웹 데이터 공동학습을 비교한다.
+      source: https://arxiv.org/pdf/2310.08864#page=6
+      location: ablation, 행 (4), (7)
+    evaluation:
+      value: 실물 기종 간 성능 전이, 새 기술과 일반화를 평가한다. 원문에서 데이터셋의 과제 수와 평가 시행 수를 구별한다.
+      source: https://arxiv.org/pdf/2310.08864#page=5
+      location: §V 및 Table I
+    real_robot_tasks:
+      unique_count: 미확인
+- registry_id: pr-0052
+  title: 'Octo: An Open-Source Generalist Robot Policy'
+  tier: 1
+  limitations:
+    paper_reported:
+      value: 사전학습 데이터 선별과 혼합 비율을 체계화하는 문제를 후속 과제로 둔다.
+      source: https://arxiv.org/pdf/2405.12213#page=8
+      location: Data mixture ablation
+    subsequent_work:
+      registry_id: pr-0886
+      value: 정밀 실물 조작에서 Octo를 사람 시연으로만 미세조정한 조건과 RL 전문가 시연을 사용한 조건의 차이를 보고했다. 사용한 학생과 과제에 한정한 비교다.
+      source: https://arxiv.org/pdf/2412.09858#page=6
+      location: §5, task success by policy and data source
+  prior_work:
+  - registry_id: pr-0024
+    type: 결합
+    interpretation: Open X-Embodiment 시연으로 범용 정책을 사전학습한다.
+    source: https://arxiv.org/pdf/2405.12213#page=2
+    location: 선행 방법을 설명하거나 채택한 본문
+  - registry_id: pr-0019
+    type: 결합
+    interpretation: Diffusion Policy의 확산 목적함수를 행동 헤드에 쓴다.
+    source: https://arxiv.org/pdf/2405.12213#page=5
+    location: 선행 방법을 설명하거나 채택한 본문
+  importance:
+    level: 핵심
+    interpretation: 공개된 범용 정책의 행동 생성부를 RL로 바꾸는 연구에 비교점을 제공한다.
+  vla:
+    backbone:
+      value: 자체 트랜스포머와 T5-base 텍스트 인코더. 인코더 111M은 전체 정책 크기와 다르다.
+      source: https://arxiv.org/pdf/2405.12213#page=4
+      location: §III, Task tokens
+      size_evidence:
+        value: 공개 Octo 정책 크기 27M·93M. 언어 인코더 크기와 별도.
+        source: https://arxiv.org/pdf/2405.12213#page=2
+        location: Introduction, released checkpoints
+    action_representation:
+      value: 연속 행동 청크를 확산 헤드에서 생성한다.
+      source: https://arxiv.org/pdf/2405.12213#page=5
+      location: §III-C
+    architecture:
+      value: 언어 또는 목표 영상 토큰을 조건으로 하는 단일 정책이다.
+      source: https://arxiv.org/pdf/2405.12213#page=4
+      location: §III
+    training:
+      value: 여러 로봇의 시연으로 사전학습한 뒤 센서와 행동 공간을 바꿔 미세조정한다.
+      source: https://arxiv.org/pdf/2405.12213#page=5
+      location: §III Training
+    evaluation:
+      value: 실물 영점 전이와 다운스트림 미세조정은 다른 평가 묶음이다.
+      source: https://arxiv.org/pdf/2405.12213#page=7
+      location: §IV, 실물 평가 및 비교표
+    real_robot_tasks:
+      unique_count: 미확인
+      reported_scopes:
+      - value: 2
+        scope: 해당 비교에서 로봇당 선택한 언어 과제. 전체 고유 과제 수 미확인
+        source: https://arxiv.org/pdf/2405.12213#page=7
+        location: §IV, in-distribution language
+- registry_id: pr-0051
+  title: 'OpenVLA: An Open-Source Vision-Language-Action Model'
+  tier: 1
+  limitations:
+    paper_reported:
+      value: 단일 영상 관측만 지원해 다양한 센서와 여러 시점을 직접 처리하기 어렵다.
+      source: https://arxiv.org/pdf/2406.09246#page=11
+      location: §6 Discussion and Limitations
+    subsequent_work:
+      registry_id: pr-0750
+      value: 기본 OpenVLA 미세조정의 추론 속도와 고주파 정밀 과업의 신뢰도 한계를 지적하고 행동 청킹과 병렬 디코딩을 시험했다.
+      source: https://arxiv.org/pdf/2502.19645#page=3
+      location: 기본 모델 미세조정의 두 가지 한계
+  prior_work:
+  - registry_id: pr-0022
+    type: 확장
+    interpretation: RT-2가 사용한 행동 토큰화 접근을 공개 VLM 학습에 적용한다.
+    source: https://arxiv.org/pdf/2406.09246#page=5
+    location: 선행 방법을 설명하거나 채택한 본문
+  importance:
+    level: 핵심
+    interpretation: VLA에서 행동 표현과 미세조정 방식만 바꾼 효과를 검토하기 좋은 공개 비교군이다.
+  vla:
+    backbone:
+      value: Prismatic-7B. DINOv2·SigLIP 영상 특징과 Llama 계열 언어 백본을 사용한다.
+      source: https://arxiv.org/pdf/2406.09246#page=4
+      location: §3.1–3.2
+    action_representation:
+      value: 연속 제어값을 양자화한 이산 토큰을 자기회귀적으로 출력한다.
+      source: https://arxiv.org/pdf/2406.09246#page=5
+      location: §3.2
+    architecture:
+      value: 결합한 시각 특징과 지시를 받아 행동을 예측하는 단일 정책이다.
+      source: https://arxiv.org/pdf/2406.09246#page=5
+      location: §3.2 및 Fig. 2
+    training:
+      value: 사전학습 VLM을 로봇 시연의 다음 행동 토큰으로 지도 미세조정한다.
+      source: https://arxiv.org/pdf/2406.09246#page=5
+      location: §3.2
+    evaluation:
+      value: WidowX 및 Google 로봇의 기본 정책 비교와 별도로 새 로봇 적응을 평가한다.
+      source: https://arxiv.org/pdf/2406.09246#page=7
+      location: §5 및 Fig. 3; 전체 기본 비교 범위는 p.1 초록
+    real_robot_tasks:
+      unique_count: 미확인
+      reported_scopes:
+      - value: 29
+        scope: 여러 기종에 걸친 대표 기본 모델 비교. 별도 적응 평가를 합산하지 않음
+        source: https://arxiv.org/pdf/2406.09246#page=1
+        location: Abstract; 실험 구성 §5, pp.7–9
+- registry_id: pr-0746
+  title: 'π0: A Vision-Language-Action Flow Model for General Robot Control'
+  tier: 1
+  limitations:
+    paper_reported:
+      value: 복잡한 과제는 고품질 후학습에 의존하고, 고품질 데이터만으로 학습한 정책은 오류에서 안정적으로 복구하지 못했다.
+      source: https://arxiv.org/pdf/2410.24164#page=12
+      location: Discussion
+    subsequent_work:
+      registry_id: pr-0061
+      value: 새 가정 환경으로의 일반화를 별도 문제로 제기하고 기존 π0와 비교했다.
+      source: https://arxiv.org/pdf/2504.16054#page=2
+      location: Introduction, unknown homes and generalization
+  prior_work:
+  - registry_id: pr-0745
+    type: 결합
+    interpretation: 시각언어 모델과 flow matching 행동 생성을 결합한다.
+    source: https://arxiv.org/pdf/2410.24164#page=3
+    location: 선행 방법을 설명하거나 채택한 본문
+  importance:
+    level: 핵심
+    interpretation: 연속 행동 생성부를 가진 VLA에 RL을 적용할 때의 기본 정책이다.
+  vla:
+    backbone:
+      value: PaliGemma 3B와 별도 행동 전문가 모듈.
+      source: https://arxiv.org/pdf/2410.24164#page=5
+      location: §IV, Model architecture
+      size_evidence:
+        value: PaliGemma 3B, 행동 전문가 포함 정책 전체 3.3B
+        source: https://arxiv.org/pdf/2410.24164#page=5
+        location: Model architecture
+    action_representation:
+      value: 연속 행동 청크를 flow matching으로 생성한다.
+      source: https://arxiv.org/pdf/2410.24164#page=4
+      location: 모델 개요
+    architecture:
+      value: 공유 관측에 조건화한 하나의 정책 안에서 VLM과 행동 전문가가 상호작용한다.
+      source: https://arxiv.org/pdf/2410.24164#page=5
+      location: §IV
+    training:
+      value: 다양한 기종의 데이터로 사전학습하고 과제별 시연으로 후학습한다.
+      source: https://arxiv.org/pdf/2410.24164#page=7
+      location: Experiments
+    evaluation:
+      value: 실물 기본 정책 평가와 섬세한 조작의 후학습 평가를 나눴다.
+      source: https://arxiv.org/pdf/2410.24164#page=7
+      location: Experiments 및 p.11 discussion
+    real_robot_tasks:
+      unique_count: 미확인
+      reported_scopes:
+      - value: 5
+        scope: 기본 정책을 평가한 명명 과제
+        source: https://arxiv.org/pdf/2410.24164#page=7
+        location: base policy evaluation
+      - value: '>20'
+        scope: 미세조정 평가 묶음. 두 집합의 중복 미확인
+        source: https://arxiv.org/pdf/2410.24164#page=11
+        location: fine-tuning experiments
+- registry_id: pr-0749
+  title: 'FAST: Efficient Action Tokenization for Vision-Language-Action Models'
+  tier: 1
+  limitations:
+    paper_reported:
+      value: 자기회귀 디코딩이 연속 흐름 모델보다 추론을 늦출 수 있다.
+      source: https://arxiv.org/pdf/2501.09747#page=9
+      location: Inference speed discussion
+    subsequent_work: 미확인
+  prior_work:
+  - registry_id: pr-0746
+    type: 대체
+    interpretation: π0 백본 실험에서 기존 연속 헤드 대신 토큰을 자기회귀 예측한다.
+    source: https://arxiv.org/pdf/2501.09747#page=6
+    location: 선행 방법을 설명하거나 채택한 본문
+  - registry_id: pr-0051
+    type: 대체
+    interpretation: OpenVLA의 기존 행동 토큰화를 FAST로 교체해 평가한다.
+    source: https://arxiv.org/pdf/2501.09747#page=9
+    location: 선행 방법을 설명하거나 채택한 본문
+  importance:
+    level: 핵심
+    interpretation: 토큰화 오차, 행동 주기, 추론 지연을 각각 평가할 수 있다.
+  vla:
+    backbone:
+      value: 주 평가 π0 계열의 PaliGemma-3B, 추가 실험 OpenVLA의 Prismatic 7B.
+      source: https://arxiv.org/pdf/2501.09747#page=6
+      location: VLA implementation
+    action_representation:
+      value: 행동 시퀀스를 DCT·양자화·BPE로 이산화한다.
+      source: https://arxiv.org/pdf/2501.09747#page=4
+      location: Tokenizer design
+    architecture:
+      value: FAST는 토크나이저이며 행동을 생성하는 모델은 해당 토큰을 예측하는 VLA다.
+      source: https://arxiv.org/pdf/2501.09747#page=6
+      location: VLA implementation
+    training:
+      value: 로봇 시연의 압축 행동 토큰을 지도학습한다.
+      source: https://arxiv.org/pdf/2501.09747#page=6
+      location: VLA implementation
+    evaluation:
+      value: 실기 과제와 시뮬레이터를 평가하며 재구성 오차는 별도로 본다.
+      source: https://arxiv.org/pdf/2501.09747#page=6
+      location: Fig. 5; Appendix Table III
+    real_robot_tasks:
+      unique_count: 미확인
+      reported_scopes:
+      - value: 6
+        scope: 해당 그림의 실기 과제. 시뮬레이션 환경 제외
+        source: https://arxiv.org/pdf/2501.09747#page=6
+        location: Fig. 5 Evaluation environments
+  humanoid:
+    control_scope: 전신 조작 기록에 대한 행동 토크나이저 평가
+    training: HumanPlus·TeleVision 궤적으로 토크나이저의 복원 성능 평가
+    hardware: Unitree H1 및 목 관절 추가형 데이터
+    hand_type: 미확인
+    sim_to_real: 미확인
+    source: https://arxiv.org/pdf/2501.09747#page=19
+    location: Table III Universal Tokenizer Evaluation Datasets. 실물 휴머노이드 폐루프 배포 여부와 구별한다.
+- registry_id: pr-0061
+  title: 'π0.5: a Vision-Language-Action Model with Open-World Generalization'
+  tier: 1
+  limitations:
+    paper_reported:
+      value: 낯선 서랍 손잡이와 열기 어려운 수납장에서 오류가 지속된다.
+      source: https://arxiv.org/pdf/2504.16054#page=11
+      location: Discussion
+    subsequent_work: 미확인
+  prior_work:
+  - registry_id: pr-0746
+    type: 확장
+    interpretation: π0의 VLM 및 행동 전문가 구조를 이어받는다.
+    source: https://arxiv.org/pdf/2504.16054#page=19
+    location: 선행 방법을 설명하거나 채택한 본문
+  - registry_id: pr-0749
+    type: 결합
+    interpretation: 행동 토큰 지도와 연속 행동 전문가를 함께 사용한다.
+    source: https://arxiv.org/pdf/2504.16054#page=19
+    location: 선행 방법을 설명하거나 채택한 본문
+  importance:
+    level: 핵심
+    interpretation: 같은 정책 안에서 추상적인 하위 목표 예측과 저수준 제어를 나눌 수 있는 사례다.
+  vla:
+    backbone:
+      value: PaliGemma VLM 및 행동 전문가.
+      source: https://arxiv.org/pdf/2504.16054#page=19
+      location: Appendix E Model technical details
+      size: 미확인
+    action_representation:
+      value: 학습 중 이산 행동 토큰과 연속 흐름 목표를 사용하고 연속 전문가로 행동을 생성한다.
+      source: https://arxiv.org/pdf/2504.16054#page=19
+      location: Appendix E
+    architecture:
+      value: 단일 VLA가 고수준 하위 과제와 저수준 동작을 서로 다른 출력으로 낸다.
+      source: https://arxiv.org/pdf/2504.16054#page=2
+      location: Introduction; Appendix E
+    training:
+      value: 웹·로봇·언어 과제를 공동학습하고 실물 동작 데이터를 사용한다.
+      source: https://arxiv.org/pdf/2504.16054#page=2
+      location: Introduction and contributions
+    evaluation:
+      value: 새 가정에서 지시 수행과 장시간 모바일 조작을 검토한다.
+      source: https://arxiv.org/pdf/2504.16054#page=11
+      location: Evaluation and discussion
+    real_robot_tasks:
+      unique_count: 미확인
+- registry_id: pr-0750
+  title: 'Fine-Tuning Vision-Language-Action Models: Optimizing Speed and Success'
+  tier: 1
+  limitations:
+    paper_reported:
+      value: 시연 전략이 일정한 데이터로 평가해 여러 전략이 섞일 때 L1 회귀의 작동은 불확실하다.
+      source: https://arxiv.org/pdf/2502.19645#page=10
+      location: §VIII Limitations
+    subsequent_work: 미확인
+  prior_work:
+  - registry_id: pr-0051
+    type: 확장
+    interpretation: OpenVLA의 디코딩과 미세조정 목적을 변경한다.
+    source: https://arxiv.org/pdf/2502.19645#page=2
+    location: 선행 방법을 설명하거나 채택한 본문
+  importance:
+    level: 핵심
+    interpretation: RL의 성능 이득이 강한 감독 미세조정만으로 설명되는지 검증할 기준이다.
+  vla:
+    backbone:
+      value: OpenVLA 기반 Prismatic 정책.
+      source: https://arxiv.org/pdf/2502.19645#page=2
+      location: Fig. 2; 원모델 §3
+      size_evidence:
+        value: 기본 OpenVLA 7B
+        source: https://arxiv.org/pdf/2502.19645#page=3
+        location: Preliminaries, OpenVLA
+    action_representation:
+      value: 연속 행동 청크를 직접 회귀한다. L1 손실을 사용한다.
+      source: https://arxiv.org/pdf/2502.19645#page=8
+      location: ALOHA 비교, Fig. 및 methods
+    architecture:
+      value: 단일 정책에서 청크의 여러 행동을 병렬 디코딩한다.
+      source: https://arxiv.org/pdf/2502.19645#page=2
+      location: Fig. 2
+    training:
+      value: 시연을 이용한 지도 미세조정. 실물 모델에 언어 조건화를 강화한다.
+      source: https://arxiv.org/pdf/2502.19645#page=8
+      location: ALOHA methods
+    evaluation:
+      value: LIBERO 및 실물 양팔 ALOHA를 평가한다.
+      source: https://arxiv.org/pdf/2502.19645#page=8
+      location: ALOHA comparison; LIBERO results 앞 절
+    real_robot_tasks:
+      unique_count: 4
+      reported_scopes:
+      - value: 4
+        scope: 논문의 실물 ALOHA 평가 과제
+        source: https://arxiv.org/pdf/2502.19645#page=8
+        location: ALOHA manipulation tasks; Appendix Tables X–XIII
+- registry_id: pr-0884
+  title: 'NaVILA: Legged Robot Vision-Language-Action Model for Navigation'
+  tier: 1
+  limitations:
+    paper_reported:
+      value: 실제 공간에서 일부 명령 수행이 실패하며, 일반화와 센서 조건에 제약이 있다.
+      source: https://arxiv.org/pdf/2412.04453#page=9
+      location: §V Conclusion and Limitations; Appendix E
+    subsequent_work: 미확인
+  prior_work: 미확인
+  importance:
+    level: 중요
+    interpretation: 이동 VLA에서 의미 판단과 실제 관절 제어의 실패를 분리해 볼 수 있다.
+  vla:
+    backbone:
+      value: VILA를 계승한 8B 시각언어 모델.
+      source: https://arxiv.org/pdf/2412.04453#page=16
+      location: Appendix, training each stage
+    action_representation:
+      value: 중간 행동은 자연어 이동 명령, 저수준 출력은 관절 제어다.
+      source: https://arxiv.org/pdf/2412.04453#page=3
+      location: Fig. 2
+    architecture:
+      value: 상위 시각언어 정책과 하위 보행 정책으로 이루어진 이중 시스템이다.
+      source: https://arxiv.org/pdf/2412.04453#page=3
+      location: Fig. 2
+    training:
+      value: 상위 모델은 시각 지시 튜닝, 하위 제어기는 시뮬레이션 RL로 학습한다.
+      source: https://arxiv.org/pdf/2412.04453#page=3
+      location: Fig. 2 및 방법 절
+    evaluation:
+      value: R2R-CE·RxR-CE와 실물 실내외 주행을 별도로 평가한다.
+      source: https://arxiv.org/pdf/2412.04453#page=6
+      location: Val-Unseen 결과; p.8 Table VI
+    real_robot_tasks:
+      unique_count: 미확인
+  humanoid:
+    control_scope: 로코모션·내비게이션
+    training: 저수준 보행 정책은 시뮬레이션 RL, 상위 지시는 VLA
+    hardware: 실물 휴머노이드 Booster T1. Unitree H1은 시뮬레이션 실험에 등장한다.
+    hand_type: 미확인
+    sim_to_real: 예. 실제 Booster T1 주행을 보고한다.
+    source: https://arxiv.org/pdf/2412.04453#page=8
+    location: Table VI 및 p.7 simulated robot evaluation
+- registry_id: pr-0885
+  title: 'ConRFT: A Reinforced Fine-tuning Method for VLA Models via Consistency Policy'
+  tier: 1
+  limitations:
+    paper_reported:
+      value: 보상이 과제별 분류기에 의존하고, 인코더·백본 동결은 새로운 시각 조건에 대한 적응을 제한한다.
+      source: https://arxiv.org/pdf/2502.05450#page=9
+      location: §VI-A/B
+    subsequent_work: 미확인
+  prior_work:
+  - registry_id: pr-0052
+    type: 확장
+    interpretation: Octo-small에 consistency 행동 헤드를 적용하고 RL로 후학습한다.
+    source: https://arxiv.org/pdf/2502.05450#page=5
+    location: 선행 방법을 설명하거나 채택한 본문
+  importance:
+    level: 핵심
+    interpretation: 저자들이 RL로 실제 갱신한 정책 부분과 동결한 부분을 구별해 주는 직접 선행이다.
+  vla:
+    backbone:
+      value: 주 설정 Octo-small, 추가 비교 PaliGemma.
+      source: https://arxiv.org/pdf/2502.05450#page=5
+      location: §V; PaliGemma 비교 p.8 Table IV
+      size_evidence:
+        value: 추가 백본 PaliGemma 3B
+        source: https://arxiv.org/pdf/2502.05450#page=8
+        location: Table IV, backbone ablation
+    action_representation:
+      value: consistency 정책이 연속 행동을 생성한다.
+      source: https://arxiv.org/pdf/2502.05450#page=3
+      location: Method overview
+    architecture:
+      value: 동결한 지각·트랜스포머 백본과 학습하는 행동 헤드가 한 행동 정책을 구성한다.
+      source: https://arxiv.org/pdf/2502.05450#page=9
+      location: §VI-B
+    training:
+      value: 오프라인 시연 학습 후 실제 상호작용 및 사람 개입을 이용해 행동 헤드를 RL 미세조정한다.
+      source: https://arxiv.org/pdf/2502.05450#page=5
+      location: Training and experimental setup
+    evaluation:
+      value: 실물 조작에서 성공률과 학습 효율을 비교한다.
+      source: https://arxiv.org/pdf/2502.05450#page=5
+      location: §V Experimental evaluation
+    real_robot_tasks:
+      unique_count: 8
+      reported_scopes:
+      - value: 8
+        scope: 실물 조작 실험 전체
+        source: https://arxiv.org/pdf/2502.05450#page=2
+        location: Introduction, real-world manipulation tasks; §V
+- registry_id: pr-0886
+  title: 'RLDG: Robotic Generalist Policy Distillation via Reinforcement Learning'
+  tier: 1
+  limitations:
+    paper_reported:
+      value: 과제마다 보상 함수를 구할 수 있어야 해 보상을 명시하기 어려운 과제에 제약이 있다.
+      source: https://arxiv.org/pdf/2412.09858#page=10
+      location: §6 Discussion and Limitations
+    subsequent_work: 미확인
+  prior_work:
+  - registry_id: pr-0051
+    type: 확장
+    interpretation: OpenVLA를 전문가 데이터로 미세조정하는 학생 정책으로 사용한다.
+    source: https://arxiv.org/pdf/2412.09858#page=4
+    location: 선행 방법을 설명하거나 채택한 본문
+  - registry_id: pr-0052
+    type: 확장
+    interpretation: Octo를 연속 행동 학생 정책으로 사용한다.
+    source: https://arxiv.org/pdf/2412.09858#page=4
+    location: 선행 방법을 설명하거나 채택한 본문
+  importance:
+    level: 핵심
+    interpretation: RL로 만든 성공 경험을 모방하는 효과와 학생 VLA에 직접 적용한 RL의 이득을 분리할 기준이다.
+  vla:
+    backbone:
+      value: Octo 또는 OpenVLA. 학생마다 원래 백본을 유지한다.
+      source: https://arxiv.org/pdf/2412.09858#page=4
+      location: Generalist model fine-tuning
+      size_evidence:
+        value: OpenVLA 7B. 이 논문이 사용한 Octo 변형의 크기는 미확인.
+        source: https://arxiv.org/pdf/2406.09246#page=4
+        location: 원 OpenVLA §3.1–3.2
+    action_representation:
+      value: Octo는 연속 확산, OpenVLA는 이산 토큰을 예측한다.
+      source: https://arxiv.org/pdf/2412.09858#page=2
+      location: Fig. 1
+    architecture:
+      value: 훈련 시에는 별도 RL 전문가와 학생 VLA가 있으며 배포에는 미세조정한 학생을 쓴다.
+      source: https://arxiv.org/pdf/2412.09858#page=2
+      location: Fig. 1
+    training:
+      value: 과제별 전문가를 RL로 학습한 뒤 전문가 궤적으로 학생을 감독 미세조정한다.
+      source: https://arxiv.org/pdf/2412.09858#page=4
+      location: Method
+    evaluation:
+      value: 정밀 실물 조작에서 사람 시연으로 학습한 학생과 비교한다.
+      source: https://arxiv.org/pdf/2412.09858#page=5
+      location: §5 Evaluation
+    real_robot_tasks:
+      unique_count: 4
+      reported_scopes:
+      - value: 4
+        scope: 실물 조작 실험 전체
+        source: https://arxiv.org/pdf/2412.09858#page=5
+        location: §5 real-world manipulation tasks
+- registry_id: pr-1180
+  title: High-Dimensional Continuous Control Using Generalized Advantage Estimation
+  tier: 1
+  limitations:
+    paper_reported:
+      value: 계산 부담으로 일부 제어 과제의 매개변수 비교 범위를 제한했다.
+      source: https://arxiv.org/pdf/1506.02438#page=10
+      location: Locomotion comparison
+    subsequent_work: 미확인
+  prior_work:
+  - registry_id: pr-0615
+    type: 결합
+    interpretation: 정책 업데이트에 TRPO를 쓰고 advantage 추정기를 교체한다.
+    source: https://arxiv.org/pdf/1506.02438#page=8
+    location: 선행 방법을 설명하거나 채택한 본문
+  importance:
+    level: 중요
+    interpretation: 휴머노이드 제어에서 advantage 추정의 편향·분산을 비교한 선행이다.
+  humanoid:
+    control_scope: 기립·보행
+    training: GAE로 이점을 추정해 신뢰영역 정책을 업데이트한다.
+    hardware: 시뮬레이션 모델 MuJoCo biped
+    hand_type: 미확인
+    sim_to_real: 해당 평가에 실물 전이 실험 없음
+    source: https://arxiv.org/pdf/1506.02438#page=9
+    location: Simulated robot tasks
+- registry_id: pr-0524
+  title: Proximal Policy Optimization Algorithms
+  tier: 1
+  limitations:
+    paper_reported:
+      value: Atari에서 학습 전 구간의 평균과 마지막 구간 평균 중 무엇을 기준으로 삼느냐에 따라 PPO와 ACER의 승리 순서가 바뀐다. 휴머노이드에 대한 결론은 이 표에서 얻을 수 없다.
+      source: https://arxiv.org/pdf/1707.06347#page=8
+      location: §6.4, Table 2 및 지표 정의
+    subsequent_work: 미확인
+  prior_work:
+  - registry_id: pr-0615
+    type: 대체
+    interpretation: 신뢰영역 정책 업데이트의 간단한 대안을 설계한다.
+    source: https://arxiv.org/pdf/1707.06347#page=2
+    location: 선행 방법을 설명하거나 채택한 본문
+  - registry_id: pr-1180
+    type: 결합
+    interpretation: 유한 길이 GAE를 정책 업데이트에 사용한다.
+    source: https://arxiv.org/pdf/1707.06347#page=5
+    location: 선행 방법을 설명하거나 채택한 본문
+  importance:
+    level: 중요
+    interpretation: 향후 휴머노이드 실험의 on-policy RL 비교 기준이며 시뮬레이션 대조군의 범위를 정한다.
+  humanoid:
+    control_scope: 로코모션
+    training: PPO 정책 경사 갱신
+    hardware: 시뮬레이션 모델 Roboschool Humanoid 및 HumanoidFlagrun
+    hand_type: 미확인
+    sim_to_real: 해당 평가에 실물 전이 실험 없음
+    source: https://arxiv.org/pdf/1707.06347#page=7
+    location: §6.3 Roboschool
+- registry_id: pr-0620
+  title: 'Soft Actor-Critic: Off-Policy Maximum Entropy Deep Reinforcement Learning with a Stochastic Actor'
+  tier: 1
+  limitations:
+    paper_reported:
+      value: 초기 SAC의 정책 엔트로피는 보상 배율에 민감하며 최적 배율이 과제에 따라 달라진다.
+      source: https://arxiv.org/pdf/1801.01290#page=7
+      location: Reward scale; Fig. 3 on p.8
+    subsequent_work:
+      registry_id: pr-0925
+      value: 단순히 SAC에 오프라인 데이터를 추가한 비교군에서 학습이 불안정해질 수 있음을 보고했다.
+      source: https://proceedings.mlr.press/v202/ball23a/ball23a.pdf#page=2
+      location: Fig. 1 및 offline data discussion
+  prior_work: 미확인
+  importance:
+    level: 중요
+    interpretation: 행동 엔트로피와 오프폴리시 가치 학습의 휴머노이드 비교 기준이다.
+  humanoid:
+    control_scope: 로코모션
+    training: 최대 엔트로피 확률적 actor–critic
+    hardware: 시뮬레이션 모델 Humanoid-v1 및 rllab Humanoid
+    hand_type: 미확인
+    sim_to_real: 해당 평가에 실물 전이 실험 없음
+    source: https://arxiv.org/pdf/1801.01290#page=6
+    location: Fig. 1(e,f)
+- registry_id: pr-0684
+  title: 'TD-MPC2: Scalable, Robust World Models for Continuous Control'
+  tier: 1
+  limitations:
+    paper_reported:
+      value: 과제 학습에 보상 신호가 필요하다.
+      source: https://arxiv.org/pdf/2310.16828#page=9
+      location: Discussion
+    subsequent_work: 미확인
+  prior_work:
+  - registry_id: pr-0681
+    type: 확장
+    interpretation: TD-MPC의 잠재 모델과 국소 계획을 다중 과제에 확장한다.
+    source: https://arxiv.org/pdf/2310.16828#page=2
+    location: 선행 방법을 설명하거나 채택한 본문
+  importance:
+    level: 중요
+    interpretation: 휴머노이드에서도 모델 기반 계획의 전이 주장을 검토할 수 있다.
+  humanoid:
+    control_scope: 로코모션
+    training: 잠재 동역학과 가치를 학습해 국소 궤적 최적화를 수행한다.
+    hardware: 시뮬레이션 모델 DMControl Humanoid
+    hand_type: 미확인
+    sim_to_real: 해당 평가에 실물 전이 실험 없음
+    source: https://arxiv.org/pdf/2310.16828#page=5
+    location: DMControl continuous control evaluation
+- registry_id: pr-0925
+  title: Efficient Online Reinforcement Learning with Offline Data
+  tier: 1
+  limitations:
+    paper_reported:
+      value: 오프라인 데이터로 재생 버퍼를 초기화하는 대안은 중간 품질 보행 데이터에서 초반 이득 후 정체됐다. 저자가 균형 표집과 비교한 조건에 해당한다.
+      source: https://proceedings.mlr.press/v202/ball23a/ball23a.pdf#page=8
+      location: Buffer initialization; Fig. 11
+    subsequent_work: 미확인
+  prior_work:
+  - registry_id: pr-0620
+    type: 확장
+    interpretation: SAC와 오프라인 데이터를 함께 사용하는 방식에서 시작해 설계 요소를 비교한다.
+    source: https://proceedings.mlr.press/v202/ball23a/ball23a.pdf#page=2
+    location: 선행 방법을 설명하거나 채택한 본문
+  importance:
+    level: 중요
+    interpretation: 사전 수집 데이터로 실시간 상호작용을 줄이려는 RL 접근의 비교군이다.
+  humanoid:
+    control_scope: 로코모션
+    training: 기존 데이터와 온라인 데이터를 섞는 오프폴리시 RL과 critic 정규화
+    hardware: 시뮬레이션 모델 DMControl Humanoid Walk
+    hand_type: 미확인
+    sim_to_real: 해당 평가에 실물 전이 실험 없음
+    source: https://proceedings.mlr.press/v202/ball23a/ball23a.pdf#page=7
+    location: Pixel-based tasks, Humanoid Walk
+- registry_id: pr-0952
+  title: Flow Q-Learning
+  tier: 1
+  limitations:
+    paper_reported:
+      value: 훈련 때 증류 손실을 구하려면 ODE를 수치적으로 풀어야 한다.
+      source: https://arxiv.org/pdf/2502.02538#page=14
+      location: Appendix A Limitations
+    subsequent_work: 미확인
+  prior_work:
+  - registry_id: pr-0745
+    type: 결합
+    interpretation: flow matching으로 행동 분포를 학습해 Q 최적화와 결합한다.
+    source: https://arxiv.org/pdf/2502.02538#page=1
+    location: 선행 방법을 설명하거나 채택한 본문
+  importance:
+    level: 참고
+    interpretation: 연속 생성 정책의 오프라인 RL을 휴머노이드 시뮬레이션에서 비교할 수 있다.
+  humanoid:
+    control_scope: 로코모션·미로 내비게이션
+    training: flow 행동 모방 정책과 Q를 최적화하는 단일 단계 정책 증류
+    hardware: 시뮬레이션 모델 OGBench humanoidmaze
+    hand_type: 미확인
+    sim_to_real: 해당 평가에 실물 전이 실험 없음
+    source: https://arxiv.org/pdf/2502.02538#page=7
+    location: OGBench task results; Appendix p.17

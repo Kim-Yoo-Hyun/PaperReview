@@ -1,12 +1,12 @@
-# 접촉 조작에서 VLA 강화학습과 가변 임피던스 제어
+# 접촉 적응
 
 **현행 투자 판단 — 2026-11-17:** [유지 후보](../../README.md#candidate-priority)다. 동작과 관절 강성 배율의 RL을 접촉 실패와 연결하는 좁은 비교를 남긴다. 조합 자체의 신규성은 제외하며 고정 gain·force-rule·동작만 학습하는 기준선과 비교해야 한다. 아래 설계와 실행 준비를 유지하되 연구 효과는 미확인이다.
 
-Updated: 2026-11-09 KST. **N2 내부 설계·P0 실행 자료 작성 완료 / native 검증 대기 / 좁은 탐색 유지·독립 방법 기여 미확립.** 이 문서는 [Robotics 중심 공백 탐색](../../../update/VLA_RL_ADDITIONAL_GAPS_2026-11-09.md#robotics-reorientation)의 접촉 후보를 구체화한다. [입출력·제어·환경 계약](../재현%20방법/README.md#n2-interface), [단일 source 원장 `contact_n1`·`contact_n2`](../../../sources/vla_rl_additional_gaps_2026-11-09.json), [다음 TODO](../../../../TODO.md)를 함께 본다. 계약의 수치는 앞으로 검증할 설계값이며 실행 결과가 아니다.
+Updated: 2026-11-09 KST. **N2 내부 설계·P0 실행 자료 작성 완료 / native 검증 대기 / 좁은 탐색 유지·독립 방법 기여 미확립.** 이 문서는 [Robotics 중심 공백 탐색](https://github.com/Kim-Yoo-Hyun/PaperReview/blob/cb650415f47a2a45ad883dabe5bd20c382b5c183/work/update/VLA_RL_ADDITIONAL_GAPS_2026-11-09.md#robotics-reorientation)의 접촉 후보를 구체화한다. [입출력·제어·환경 계약](../재현%20방법/README.md#n2-interface), [단일 source 원장 `contact_n1`·`contact_n2`](../../../sources/vla_rl_additional_gaps_2026-11-09.json), [다음 TODO](../../../../TODO.md)를 함께 본다. 계약의 수치는 앞으로 검증할 설계값이며 실행 결과가 아니다.
 
 <a id="registry-sync"></a>
 
-**11/09 registry 연결:** 직접 선행 10편을 [REG-R13 등록 표](../../../update/REGISTRY_MAINTENANCE_2026-11-09.md#admissions)에 연결했다. 새 paper별 5-note는 ABSTRACT_CHECKED이고, 아래 지정 절·버전의 본문 대조를 대신하지 않는다. 특히 [CompVLA v2](https://arxiv.org/abs/2609.23614v2)와 [TORL-VLA v3](https://arxiv.org/abs/2606.09337v3)의 최신 초록을 확인했지만 N1 표는 v1 본문 근거다. P1/신규성 주장 전 버전 간 방법·평가 변경을 확인한다. FORGE는 같은 preprint의 RA-L 2025판으로 등록했고 TacCoRL/CompVLA의 저자 CoRL 표기는 공식 채택으로 승격하지 않았다.
+**11/09 registry 연결:** 직접 선행 10편을 [REG-R13 등록 표](https://github.com/Kim-Yoo-Hyun/PaperReview/blob/cb650415f47a2a45ad883dabe5bd20c382b5c183/work/update/REGISTRY_MAINTENANCE_2026-11-09.md#admissions)에 연결했다. 새 paper별 5-note는 ABSTRACT_CHECKED이고, 아래 지정 절·버전의 본문 대조를 대신하지 않는다. 특히 [CompVLA v2](https://arxiv.org/abs/2609.23614v2)와 [TORL-VLA v3](https://arxiv.org/abs/2606.09337v3)의 최신 초록을 확인했지만 N1 표는 v1 본문 근거다. P1/신규성 주장 전 버전 간 방법·평가 변경을 확인한다. FORGE는 같은 preprint의 RA-L 2025판으로 등록했고 TacCoRL/CompVLA의 저자 CoRL 표기는 공식 채택으로 승격하지 않았다.
 
 ## 현재 판단
 
@@ -14,7 +14,7 @@ Updated: 2026-11-09 KST. **N2 내부 설계·P0 실행 자료 작성 완료 / na
 
 작은 비교를 시작할 가치는 남는다. **같은 RGB·로봇 상태·손가락 접촉력 이력에서, 단일 π₀의 동작과 관절 강성 배율을 함께 RL로 학습하면 동작만 학습하는 경우보다 삽입 저항 변화에 잘 대응하는가?** N2에서는 공개 제어 경로에 맞춰 **관절 구동 강성의 한 개 배율**로 한정했다. Cartesian 방향별 impedance·6D wrist wrench를 사용하는 실험으로 표현하지 않는다. 유용한 차이가 있으면 언어·물체·작업 간 공유로 확장한다. 이는 **연구자 가설(CURATION-HYPOTHESIS)**이며 선행이 답하지 못한 것으로 확정한 공백이나 출판 가능성 보장이 아니다.
 
-선택한 범위는 하나의 학습된 VLA 행동 정책이다. 고정 servo·좌표 변환·안전 제한은 실행 계층으로 허용한다. 별도 학습된 planner/skill/residual 연결은 강한 비교군이며 제안의 필수 구조로 삼지 않는다. 기존 [GAP-CONTACT 센서 필요성 진단 HOLD](../../../../synthesis/03_manipulation_contact.md#gap-contact-2026)를 재개하지 않는다.
+선택한 범위는 하나의 학습된 VLA 행동 정책이다. 고정 servo·좌표 변환·안전 제한은 실행 계층으로 허용한다. 별도 학습된 planner/skill/residual 연결은 강한 비교군이며 제안의 필수 구조로 삼지 않는다. 기존 [GAP-CONTACT 센서 필요성 진단 HOLD](../../../../synthesis/03_manipulation.md#gap-contact-2026)를 재개하지 않는다.
 
 <a id="prior-comparison"></a>
 ## 직접 선행 비교
@@ -117,7 +117,7 @@ Actor/critic은 RGB 한 뷰, 고정 언어 지시, 실제 robot q/qd, 두 손가
 <a id="buildup-status"></a>
 ## 비실험 buildup 상태와 다음 행동
 
-[저장소 7단계 절차](../../../../research/IDEA_BUILDUP_GUIDE.md#nonexperimental-workflow)를 적용했다. N2는 내부의 문제·문헌·비교·실행 요구를 구체화한 단계다. 실제 외부 피드백과 native feasibility·연구 효과는 미확인이다.
+[저장소 7단계 절차](../../../../research/RESEARCH_GUIDE.md#nonexperimental-workflow)를 적용했다. N2는 내부의 문제·문헌·비교·실행 요구를 구체화한 단계다. 실제 외부 피드백과 native feasibility·연구 효과는 미확인이다.
 
 | 단계 | 이번 완료 범위 | 남은 것 |
 |---|---|---|

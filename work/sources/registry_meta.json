@@ -1,21 +1,57 @@
 {
   "schema_version": "1.0",
   "manifest": "work/sources/papers.json",
+  "taxonomy_batches": [
+    {
+      "path": "work/sources/batches/core_next_01.yaml",
+      "schema": "appendix-a-template-4",
+      "registry_key": "registry_id",
+      "record_count": 50,
+      "verified_on": "2026-11-19"
+    }
+  ],
   "schema": "work/sources/registry.schema.json",
-  "generated_on": "2026-11-18",
-  "paper_count": 1227,
+  "generated_on": "2026-11-20",
+  "paper_count": 1252,
   "identity_policy": "paper_id is the stable internal identity; DOI/arXiv/OpenReview identifiers are optional public identifiers.",
   "version_policy": "Use relations with type=version_of or same_work_as when a preprint and publication must remain separate.",
   "evidence_policy": "Manifest provenance records source scope; note evidence and reading status are not inferred from local PDF presence.",
-  "manifest_sha256": "b3eb05c7ffeea5d2b8ce9a45c2ba4b3a2428b566832b845fea6ec3e19610d625",
+  "manifest_sha256": "273cc4940c2f268b41c7a80ca9351113d1efce138120d7ddd0a052665acb7eeb",
   "last_reconciled_on": "2026-09-04",
   "reconciliation_policy": "review manifest evidence is paper-level; per-note evidence is retained under provenance.note_evidence; note-scoped review manifests are retained under provenance.note_review without changing paper-level review precedence; tracker status remains user-controlled.",
-  "relation_count": 50,
+  "relation_count": 91,
   "relation_policy": "Directed curated edges in papers.json are not a full citation graph; each managed edge records type, target paper_id, confidence, basis, source, evidence_scope, and reviewed_on.",
   "metadata_profile_version": "1.0",
-  "metadata_profile_reviewed_on": "2026-11-18",
-  "evaluation_profile_count": 1227,
-  "reproducibility_profile_count": 1227,
-  "lineage_profile_count": 1227,
-  "priority_reviewed_on": "2026-11-18"
+  "metadata_profile_reviewed_on": "2026-11-20",
+  "evaluation_profile_count": 1252,
+  "reproducibility_profile_count": 1252,
+  "lineage_profile_count": 1252,
+  "priority_reviewed_on": "2026-11-20",
+  "external_coverage": {
+    "as_of": "2026-11-19",
+    "report": "research/EXTERNAL_COVERAGE.md",
+    "titles": "work/sources/coverage_titles.jsonl.gz",
+    "candidates": "work/sources/batches/missing_candidates_2026.yaml",
+    "source_count": 25,
+    "candidate_count": 17
+  },
+  "tier1_deep_review": {
+    "as_of": "2026-11-19",
+    "path": "work/sources/batches/tier1_vla_humanoid.yaml",
+    "screened": 50,
+    "included": 17
+  },
+  "gapfill_batches": [
+    {
+      "batch": "gapfill-2026-11",
+      "path": "work/sources/batches/gapfill_2026_11.yaml",
+      "report": "research/GAPFILL.md",
+      "groups": {
+        "A": 23,
+        "B": 9,
+        "C": 4,
+        "D": 0
+      }
+    }
+  ]
 }

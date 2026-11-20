@@ -1,12 +1,13 @@
 # Evaluation - Octo: An Open-Source Generalist Robot Policy
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
+> 2026-11-19 표본 감사에서 요약과 관련 본문 표현을 원문에 대조해 교정했다. [원문](https://www.roboticsproceedings.org/rss20/p090.html)
 > Evidence maturity: `FULL_TEXT_CHECKED`.
 > Analysis basis: full-text PDF body checked on 2026-09-03 (17 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2405.12213; PDF retrieval source: https://arxiv.org/pdf/2405.12213. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 ## Evaluation in One Sentence
 
-PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 7 (1) Can Octo control multiple robot embodiments and solve), p. 7 (1) Can Octo control multiple robot embodiments and solve), p. 6 (1) Can Octo control multiple robot embodiments and solve), p. 5 (III. THE OCTO MODEL), p. 5 (III. THE OCTO MODEL)): Fig. 6: Model Scaling. The performance of Octo improves with larger model sizes on both UR5 and WidowX tasks. Success rates are averaged over 10 trials on one language-conditioned task ...
+여러 로봇에서 언어 지시 또는 목표 이미지로 조건화한 정책을 평가하고, 새로운 센서와 행동 공간에 미세조정한 결과를 비교한다. [원문](https://www.roboticsproceedings.org/rss20/p090.html)
 
 ## Evaluation Body Digest
 
@@ -116,7 +117,7 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 7 (1) Can Octo c
 
 | Claim or target | Result/condition cue | Evidence strength | Anchor |
 |---|---|---|---|
-| In principle, collected ∗Lead authors, ordered alphabetically, see Section A for list of contributions. | Fig. 6: Model Scaling. The performance of Octo improves with larger model sizes on both UR5 and WidowX tasks. Success rates are averaged over ... | PDF body cue; verify exact table/figure and matched conditions | p. 8 (Figure/Table caption), p. 7 (1) Can Octo control multiple robot embodiments and solve), p. 7 (1) Can Octo control multiple robot embodiments and solve), p. 6 (1) Can Octo control multiple robot embodiments and solve), p. 5 (III. THE OCTO MODEL), p. 5 (III. THE OCTO MODEL) |
+| Octo predicts continuous robot actions from observation histories and language or goal images. | Fig. 6: Model Scaling. The performance of Octo improves with larger model sizes on both UR5 and WidowX tasks. Success rates are averaged over ... | PDF body cue; verify exact table/figure and matched conditions | p. 8 (Figure/Table caption), p. 7 (1) Can Octo control multiple robot embodiments and solve), p. 7 (1) Can Octo control multiple robot embodiments and solve), p. 6 (1) Can Octo control multiple robot embodiments and solve), p. 5 (III. THE OCTO MODEL), p. 5 (III. THE OCTO MODEL) |
 | Primary metric/result | We evaluated our model on the WidowX tasks using goal image conditioning and found that it achieved a 25% higher success rate than when ... | numeric claim only at cited anchor | p. 7 (1) Can Octo control multiple robot embodiments and solve) |
 
 - Numeric sentences retained from the body:
