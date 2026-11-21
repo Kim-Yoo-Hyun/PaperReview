@@ -19,9 +19,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Despite the promises of world models, learning accurate world models for the real world is a big open challenge.
-
-방법 관련 발췌 — Dreamer consists of two neural network components.
+DayDreamer는 실물에서 모은 경험으로 세계 모델을 갱신하고 그 안에서 정책을 개선해 여러 로봇 행동을 학습한다. [PDF 1쪽](https://proceedings.mlr.press/v205/wu23c/wu23c.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -54,16 +52,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 3 / 1 Introduction - extractive body cue:** Dreamer consists of two neural network components.
-- **p. 3 / 2 Approach - extractive body cue:** The world model is based on the Recurrent State-Space Model (RSSM; Hafner et al., 2018), which consists of four components: Encoder Network: encθ(st / st-1, ...
-- **p. 4 / 2 Approach - extractive body cue:** The actor critic algorithm consists of two neural networks: Actor Network: π(at / st) Critic Network: v(st) (2) The role of the actor network is ...
-- **p. 2 / 1 Introduction - extractive body cue:** Deep reinforcement learning (RL) offers a popular approach to robot learning that enables robots to improve their behavior over time through trial and error.
-- **p. 2 / 1 Introduction - extractive body cue:** The key contributions of this paper are summarized as follows: • Dreamer on Robots We apply Dreamer to 4 robots, demonstrating successful learning directly in ...
-- **p. 7 / 3 Experiments - extractive body cue:** We find that DrQv2, a model-free algorithm specifically designed to continuous control from pixels, achieves similar performance.
-- **p. 7 / 3 Experiments - extractive body cue:** Dreamer learns a policy that enables the XArm to achieve an average pick rate of 3.1 objects per minute in 10 hours of time, which ...
-- **p. 5 / 3 Experiments - extractive body cue:** We choose Rainbow (Hessel et al., 2018) as a powerful representative of this category, an algorithm that combines many improvements of DQN.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 실제 상호작용에서 얻은 짧은 경험을 재사용해 잠재 동역학과 행동 정책을 함께 개선한다. [PDF 3쪽](https://proceedings.mlr.press/v205/wu23c/wu23c.pdf#page=3) · [PDF 4쪽](https://proceedings.mlr.press/v205/wu23c/wu23c.pdf#page=4)
+- 사족 로봇에서 일어서기·보행과 외란 적응을 시험하고 로봇 팔과 바퀴형 로봇 등 다른 하드웨어에도 같은 접근을 적용했다. [PDF 5쪽](https://proceedings.mlr.press/v205/wu23c/wu23c.pdf#page=5) · [PDF 6쪽](https://proceedings.mlr.press/v205/wu23c/wu23c.pdf#page=6)
 
 ## Evaluation Scope
 

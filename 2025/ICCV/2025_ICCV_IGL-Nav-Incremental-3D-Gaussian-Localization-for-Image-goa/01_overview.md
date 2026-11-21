@@ -19,9 +19,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — To address these limitations, RNRMap [14] introduces a renderable neural radiance map representation.
-
-방법 관련 발췌 — To this end, we propose IGL-Nav, an Incremental 3D Gaussian Localization framework that (1) progressively constructs 3DGS through feed-forward prediction, eliminating offline optimization; and (2) enables efficient hierarchical goal sea ...
+IGL-Nav는 탐색 중 갱신하는 3차원 가우시안 지도에서 목표 사진이 촬영된 위치를 찾아 이동한다. [PDF 1쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Guo_IGL-Nav_Incremental_3D_Gaussian_Localization_for_Image-goal_Navigation_ICCV_2025_paper.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** To this end, we propose IGL-Nav, an Incremental 3D Gaussian Localization framework that (1) progressively constructs 3DGS through feed-forward prediction, eliminating offline optimization; and (2) ...
-- **p. 2 / 1. Introduction - extractive body cue:** In this paper, we propose to leverage 3D Gaussian Splatting (3DGS) [10] as the scene representation for imagegoal navigation.
-- **p. 3 / 3.1. Problem Statement - extractive body cue:** A is the set of actions, which consists of move forward, turn left, turn right and stop.
-- **p. 3 / 3.2. Incremental Scene Representation - extractive body cue:** To accommodate streaming video input while effectively leveraging camera pose and depth priors, we present the first feedforward 3DGS reconstruction model for monocular RGB-D sequences, ...
-- **p. 4 / 3.3.1. Coarse Target Localization - extractive body cue:** To solve this problem, we propose to further discretize the 3D embeddings Et and Eg.
-- **p. 7 / 4.3. Analysis of IGL-Nav - extractive body cue:** It is shown that using a 3-level subdivision achieves best performance, because a finer discretization will reduce quantization error and improve the accuracy of coarse ...
-- **p. 6 / 4.2. Comparison with State-of-the-art - extractive body cue:** IGL-Nav establishes new state-of-the-art performance and outperforms previous methods by a large margin on all metrics, which validates the effectiveness of 3D gaussian representation and ...
-- **p. 7 / 4.2. Comparison with State-of-the-art - extractive body cue:** SR: Success Rate, SPL: Success weighted by Path Length.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 새 단안 영상으로 지도를 증분 갱신하고, 이산 공간에서 기하 정보를 대조해 목표 카메라의 초기 자세를 추정한다. [PDF 3쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Guo_IGL-Nav_Incremental_3D_Gaussian_Localization_for_Image-goal_Navigation_ICCV_2025_paper.pdf#page=3) · [PDF 4쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Guo_IGL-Nav_Incremental_3D_Gaussian_Localization_for_Image-goal_Navigation_ICCV_2025_paper.pdf#page=4)
+- 거친 추정치를 정제해 목표 시점과 관측 시점이 다른 이미지 목표 내비게이션에서 평가했다. [PDF 5쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Guo_IGL-Nav_Incremental_3D_Gaussian_Localization_for_Image-goal_Navigation_ICCV_2025_paper.pdf#page=5) · [PDF 6쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Guo_IGL-Nav_Incremental_3D_Gaussian_Localization_for_Image-goal_Navigation_ICCV_2025_paper.pdf#page=6)
 
 ## Evaluation Scope
 

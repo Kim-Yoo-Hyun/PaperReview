@@ -20,9 +20,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — We show this yields significant speed improvements with respect to our prior work [2, 3].
-
-방법 관련 발췌 — We present three main contributions: • Mechanics of motion cones for planar tasks in the gravity plane.
+이 연구는 손안의 물체를 외부 지지면으로 밀 때 가능한 평면 운동의 범위를 모션 콘으로 표현한다. [PDF 1쪽](https://www.roboticsproceedings.org/rss14/p58.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,15 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 1 / I. INTRODUCTION - extractive body cue:** We present three main contributions: • Mechanics of motion cones for planar tasks in the gravity plane.
-- **p. 1 / I. INTRODUCTION - extractive body cue:** We propose a polyhedral approximation to the motion cone for efficient computation. • Experimental validation of the stick/slip condition of motion cones in a prehensile ...
-- **p. 6 / VI. PLANNING IN-HAND MANIPULATIONS VIA - extractive body cue:** In [3], we present a planning framework where at the highlevel, a T-RRT∗-based architecture samples different object poses in the grasp [4, 16].
-- **p. 7 / VI. PLANNING IN-HAND MANIPULATIONS VIA - extractive body cue:** The use of motion cones for fast low-level unit-step propagation of the system and T-RRT∗-based framework for highlevel planning allows us to explore the configuration ...
-- **p. 8 / VII. REGRASP EXAMPLES AND EXPERIMENTAL RESULTS - extractive body cue:** Similar to [3], our planner finds a strategy to achieve the regrasp using only one pusher.
-- **p. 7 / VII. REGRASP EXAMPLES AND EXPERIMENTAL RESULTS - extractive body cue:** We compare the performance in terms of planning time and the quality of the solutions.
-- **p. 7 / VII. REGRASP EXAMPLES AND EXPERIMENTAL RESULTS - extractive body cue:** We evaluate the performance of our planner with examples of a parallel-jaw gripper manipulating a variety of objects.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 중력과 그리퍼·푸셔 마찰을 포함한 기하학적 구성을 제안하고 곡면 경계를 다면체 콘으로 근사한다. [PDF 5쪽](https://www.roboticsproceedings.org/rss14/p58.pdf#page=5) · [PDF 6쪽](https://www.roboticsproceedings.org/rss14/p58.pdf#page=6)
+- 실측한 밀기 운동으로 근사를 검증한 뒤, 가능한 운동을 표본 기반 손안 자세 변경 계획에 사용했다. [PDF 7쪽](https://www.roboticsproceedings.org/rss14/p58.pdf#page=7) · [PDF 8쪽](https://www.roboticsproceedings.org/rss14/p58.pdf#page=8)
 
 ## Evaluation Scope
 

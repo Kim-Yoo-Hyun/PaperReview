@@ -16,6 +16,10 @@
 - Code: https://github.com/irom-lab/dppo
 - Source audit: 2026-10-19: 공식 paper abstract 및 저자 project/code README 확인; abstract 기반 — 본문 수동 확인 필요.
 
+## 공개 자료
+
+- **가중치** HalfCheetah-medium-v2 확산 정책의 사전학습 체크포인트 state_1000.pt를 확인했다. 강화학습 후 전체 정책의 공개 여부는 별도다. [배포 파일](https://drive.google.com/file/d/1WUKMp61DencZBvMU086fxdn34UGibuC_/view)
+
 ## Problem and Importance
 
 BC로 학습한 diffusion action policy를 sparse reward 환경에서 안정적으로 RL fine-tuning하는 문제다.

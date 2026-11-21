@@ -19,9 +19,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — While conventionally these challenges have been approached from the perspective of planning (e.g., TAMP [1]) or hierarchical learning (e.g., HRL [2]), effective high-level reasoning about complex tasks also requires semantic knowledge a ...
-
-방법 관련 발췌 — Inspired by the human thought process, we propose that such an inner monologue is a natural framework for incorporating feedback for LLMs.
+Inner Monologue는 로봇이 기술을 실행한 뒤 얻은 결과를 언어로 되돌려 다음 기술 선택을 갱신한다. [PDF 1쪽](https://proceedings.mlr.press/v205/huang23c/huang23c.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 1 / 1 Introduction - extractive body cue:** Inspired by the human thought process, we propose that such an inner monologue is a natural framework for incorporating feedback for LLMs.
-- **p. 2 / 1 Introduction - extractive body cue:** Robot Success Detector Scene Descriptor (b) (c) (a) Human Figure 1: Inner Monologue enables grounded closed-loop feedback for robot planning with large language models by ...
-- **p. 17 / A.2 Inner Monologue for Real-World Tabletop Rearrangement - extractive body cue:** The input to the model consists of: (1) o0, the initial image observation, (2) of, the final image observation after the policy chose to terminate ...
-- **p. 2 / 1 Introduction - extractive body cue:** Notably, we show that it can efficiently retry under observed stochastic failure, replan under systematic infeasibility, or request human feedback for ambiguous queries, resulting in ...
-- **p. 1 / 1 Introduction - extractive body cue:** We observe that similarly to recent work [19], natural language provides a universal and interpretable interface for such grounding of model communication and allows them ...
-- **p. 6 / Figure/Table caption - extractive body cue:** Table 2: Inner Monologue (with object recognition and success detection feedback) on a real pick and place robot exceeds the performance of baseline alternatives, as ...
-- **p. 7 / Figure/Table caption - extractive body cue:** Figure 4: Failure causes on 120 evaluations. When disturbances are added (red), only the Inner Mono- logue variants consistently complete the instructions. Analysis. The results ...
-- **p. 6 / Figure/Table caption - extractive body cue:** Table 1: Success rates for various methods, averaged across 50 episodes in Ravens-based environment with test-time disturbances. CLIPort + oracle indicates that CLIPort was provided ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 성공 판정, 장면 설명, 사람 응답 등의 피드백을 언어 모델의 계획 문맥에 추가한다. [PDF 2쪽](https://proceedings.mlr.press/v205/huang23c/huang23c.pdf#page=2) · [PDF 4쪽](https://proceedings.mlr.press/v205/huang23c/huang23c.pdf#page=4)
+- 탁상 재배치와 실물 주방 이동 조작에서 실패 또는 환경 변화 뒤 남은 행동 계획을 수정하는 과정을 평가했다. [PDF 5쪽](https://proceedings.mlr.press/v205/huang23c/huang23c.pdf#page=5) · [PDF 6쪽](https://proceedings.mlr.press/v205/huang23c/huang23c.pdf#page=6)
 
 ## Evaluation Scope
 

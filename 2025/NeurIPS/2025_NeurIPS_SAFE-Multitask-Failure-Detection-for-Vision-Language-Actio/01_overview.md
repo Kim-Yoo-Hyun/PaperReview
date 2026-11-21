@@ -19,9 +19,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, when VLAs are directly deployed on unseen tasks without collecting additional demonstrations and finetuning the model, they still suffer from limited success rates and a wide range of failure modes.
-
-방법 관련 발췌 — The contributions of our paper can be summarized as follows: • We analyze the VLA feature space and show that, across different task instructions and environments, the internal features of the VLA ...
+SAFE는 VLA 내부 특징에서 과제 실패 가능성을 예측하고, 본 적 없는 조작에서도 어느 시점에 경보를 낼지 평가한다. [PDF 1쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/392d0d05e2f514063e6ce6f8b370834c-Paper-Conference.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -54,16 +52,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1 Introduction - extractive body cue:** The contributions of our paper can be summarized as follows: • We analyze the VLA feature space and show that, across different task instructions and ...
-- **p. 2 / 1 Introduction - extractive body cue:** Based on this insight, we introduce SAFE, a ScAlable Failure Estimation method that scales across diverse tasks for generalist policies like VLAs.
-- **p. 1 / 1 Introduction - extractive body cue:** VLAs are designed to accomplish diverse tasks and may frequently encounter novel task instructions and unseen environments during deployment.
-- **p. 1 / 1 Introduction - extractive body cue:** Recently, scaling up robot manipulation datasets has enabled the development of large visionlanguage-action (VLA) models, which are generalist manipulation policies that can follow language instructions ...
-- **p. 10 / 6 Results - extractive body cue:** 75.54 53.93 82.37 70.00 Euclid. k-NN 80.35 60.27 72.01 53.64 Cosine k-NN 80.23 59.51 74.76 65.88 PCA-KMeans 49.98 51.03 75.62 47.22 RND 62.00 45.83 66.68 ...
-- **p. 10 / Figure/Table caption - extractive body cue:** Figure 6: SAFE-MLP achieves the best failure detection performance in real-world experiments with both π0-FAST Franka and OpenVLA WidowX. Plot (a) presents quantitative results, while ...
-- **p. 9 / 6 Results - extractive body cue:** With a higher ROC-AUC metric, a failure detector achieves higher accuracy averaged over all possible thresholds.
-- **p. 9 / 6 Results - extractive body cue:** Averaged across simulation benchmarks, SAFE-MLP and SAFE-LSTM have similar performance, both outperforming the best baseline by 4-5% on unseen tasks, while still achieving the best ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 성공 및 실패 롤아웃으로 여러 과제에 공통인 실패 점수를 학습한다. [PDF 4쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/392d0d05e2f514063e6ce6f8b370834c-Paper-Conference.pdf#page=4) · [PDF 5쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/392d0d05e2f514063e6ce6f8b370834c-Paper-Conference.pdf#page=5)
+- 여러 VLA와 시뮬레이션·실물 작업에서 컨포멀 예측을 적용해 탐지 시점과 정확도 사이의 절충을 비교했다. [PDF 6쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/392d0d05e2f514063e6ce6f8b370834c-Paper-Conference.pdf#page=6) · [PDF 7쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/392d0d05e2f514063e6ce6f8b370834c-Paper-Conference.pdf#page=7)
 
 ## Evaluation Scope
 

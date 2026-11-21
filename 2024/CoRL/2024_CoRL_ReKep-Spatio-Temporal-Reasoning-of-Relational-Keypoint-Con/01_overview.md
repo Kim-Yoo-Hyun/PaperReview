@@ -19,9 +19,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, manual annotation is required per task, thus lacking scalability in open-world settings, which we aim to address in this work.
-
-방법 관련 발췌 — Our contributions are summarized as follows: 1) We formulate manipulation tasks as a hierarchical optimization problem with Relational Keypoint Constraints; 2) We devise a pipeline to automatically specify keypoints and constraints usin ...
+ReKep은 조작 목표와 중간에 지켜야 할 관계를 3차원 키포인트에 대한 비용 함수로 표현한다. [PDF 1쪽](https://raw.githubusercontent.com/mlresearch/v270/main/assets/huang25g/huang25g.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1 Introduction - extractive body cue:** Our contributions are summarized as follows: 1) We formulate manipulation tasks as a hierarchical optimization problem with Relational Keypoint Constraints; 2) We devise a pipeline ...
-- **p. 2 / 1 Introduction - extractive body cue:** In this work, we propose Relational Keypoint Constraints (ReKep).
-- **p. 4 / 3 Method - extractive body cue:** 2, which consists of three stages: grasp, align, and pour.
-- **p. 6 / 3 Method - extractive body cue:** This enables VLM to reason about 3D rotations with arithmetic operations in 3D Cartesian space, effectively circumventing the need for dealing with alternative 3D rotation ...
-- **p. 6 / 3 Method - extractive body cue:** Seven tasks are designed to validate different aspects of our system, including in-the-wild specification with commonsense knowledge, multi-stage tasks with spatio-temporal dependencies, bimanual coordination with ...
-- **p. 7 / 4 Experiments - extractive body cue:** Folding 0/10 4/10 7/10 Total (%) 10.0% 44.3% 68.6% Table 1: Success rate on wheeled singlearm and stationary bimanual platforms.
-- **p. 7 / 4 Experiments - extractive body cue:** Folding 0/10 3/10 5/10 Total (%) 6.7% 26.7% 46.7% Table 2: Success rate under external disturbances across both robot platforms.
-- **p. 8 / 4 Experiments - extractive body cue:** Garment ReKep sweater shirt hoodie vest dress pants shorts scarf sweater shirt hoodie vest dress pants shorts scarf Total Strategy Success 6/10 4/10 4/10 6/10 ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 시각 기초 모델에서 키포인트 후보를 얻고 시각·언어 모델이 지시와 영상에 맞는 단계별 제약 함수를 작성한다. [PDF 3쪽](https://raw.githubusercontent.com/mlresearch/v270/main/assets/huang25g/huang25g.pdf#page=3) · [PDF 4쪽](https://raw.githubusercontent.com/mlresearch/v270/main/assets/huang25g/huang25g.pdf#page=4)
+- 추적한 키포인트에 대해 하위 목표와 경로를 수치적으로 최적화하여 환경이 변해도 로봇의 움직임을 갱신한다. [PDF 5쪽](https://raw.githubusercontent.com/mlresearch/v270/main/assets/huang25g/huang25g.pdf#page=5) · [PDF 7쪽](https://raw.githubusercontent.com/mlresearch/v270/main/assets/huang25g/huang25g.pdf#page=7)
 
 ## Evaluation Scope
 

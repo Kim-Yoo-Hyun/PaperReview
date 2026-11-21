@@ -19,9 +19,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Other methods [8], [9], [10], [11], [12], [13] that use 3D backbone to extract features and are supervised by 3D annotation or manipulation feedback can effectively make robots explicitly understand 3D scenes ...
-
-방법 관련 발췌 — In summary, the contributions of this paper are as follows: • We introduce GaussianGrasper, a robot manipulation system implemented by a 3D Gaussian field endowed with open-vocabulary semantics and accurate geometry that ...
+GaussianGrasper는 언어 지시로 물체를 선택하고 여러 RGB-D 시점으로 복원한 형상에서 파지 자세를 고른다. [PDF 1쪽](https://arxiv.org/pdf/2403.09637#page=1)
 
 ## Problem and Motivation
 
@@ -53,16 +51,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / I. INTRODUCTION - extractive body cue:** In summary, the contributions of this paper are as follows: • We introduce GaussianGrasper, a robot manipulation system implemented by a 3D Gaussian field endowed ...
-- **p. 1 / I. INTRODUCTION - extractive body cue:** We present a comparison between our method, 2D feature fusion, and LERF.
-- **p. 2 / I. INTRODUCTION - extractive body cue:** More specifically, our method enables language-guided manipulation via the following steps: (1) Initialization: we scan RGB-D images of a few viewpoints to initialize the 3DGS, ...
-- **p. 1 / I. INTRODUCTION - extractive body cue:** In contrast, our method reconstructs a consistent feature field and achieves more precise 3D localization. to afford language-guided manipulation.
-- **p. 6 / IV. EXPERIMENT - extractive body cue:** The results of segmentation and localization are shown in Table I where our method significantly outperforms other approaches.
-- **p. 7 / IV. EXPERIMENT - extractive body cue:** Leveraging the normal filter significantly increases the success rate by 7.7%, further demonstrating the effectiveness of our proposed normal-guided grasp.
-- **p. 7 / IV. EXPERIMENT - extractive body cue:** Besides, we report the quantitative results of the grasping success rate with and without the normal filter, as shown in Table II.
-- **p. 6 / IV. EXPERIMENT - extractive body cue:** It can be seen that our method achieves an approximate 180 × speedup over LERF.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 기초 모델의 언어 특징을 가우시안 장면에 증류해 질의에 해당하는 3차원 영역을 찾는다. [PDF 3쪽](https://arxiv.org/pdf/2403.09637#page=3) · [PDF 4쪽](https://arxiv.org/pdf/2403.09637#page=4)
+- 학습된 파지 모델의 후보를 기하와 표면 법선으로 선별하고 실물에서 언어 기반 물체 선택과 파지를 평가했다. [PDF 5쪽](https://arxiv.org/pdf/2403.09637#page=5) · [PDF 7쪽](https://arxiv.org/pdf/2403.09637#page=7)
 
 ## Evaluation Scope
 

@@ -17,6 +17,11 @@
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (24 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
+## 공개 자료
+
+- **코드** openpi에서 pi05 설정을 선택하면 상태 표현과 모델 구성이 달라지는 구현 파일을 확인했다. [배포 파일](https://raw.githubusercontent.com/Physical-Intelligence/openpi/215abfb217dbac7d5f1273282331b9b1866c0479/src/openpi/models/pi0_config.py)
+- **가중치** 기반 모델 π0.5의 Orbax 파라미터 조각이다. 논문에 나오는 모든 미세조정 정책의 공개 범위는 별도로 남는다. [배포 파일](https://storage.googleapis.com/storage/v1/b/openpi-assets/o/checkpoints%2Fpi05_base%2Fparams%2Focdbt.process_0%2Fd%2F8c5d7070ea57bdce2f0a19f95b8a21b4?generation=1757354310234847)
+
 ## Why This Paper Is Here
 
 π0.5는 여러 로봇의 행동, 웹 데이터, 의미 단위 하위 작업을 함께 학습해 새로운 장소에서 조작하는 능력을 평가한다.

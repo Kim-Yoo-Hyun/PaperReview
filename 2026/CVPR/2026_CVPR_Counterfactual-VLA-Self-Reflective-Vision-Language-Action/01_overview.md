@@ -19,9 +19,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, the reasoning in current VLAs is largely descriptive rather than self-reflective.
-
-방법 관련 발췌 — Second, standard training pipelines rarely teach models to answer counterfactual questions such as: "Given the plan I just proposed, what will happen, and how should I change it?" In this paper, we ...
+CF-VLA는 자율주행에서 먼저 예측한 운전 의도를 시각 문맥에서 재검토해 실행할 차량 궤적을 수정한다. [PDF 1쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Peng_Counterfactual_VLA_Self-Reflective_Vision-Language-Action_Model_with_Adaptive_Reasoning_CVPR_2026_paper.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** Second, standard training pipelines rarely teach models to answer counterfactual questions such as: "Given the plan I just proposed, what will happen, and how should ...
-- **p. 3 / 3.1. Self-Reflective Counterfactual Reasoning - extractive body cue:** To prepare data to fine-tune the model, we develop a rolloutfilter-label pipeline (Sec.
-- **p. 3 / 3.1. Self-Reflective Counterfactual Reasoning - extractive body cue:** Adaptive reasoning allows a model to decide dynamically when to conduct reasoning and when to respond directly.
-- **p. 4 / 3.2. Meta-Actions - extractive body cue:** This temporal format allows the model to reason compositionally about action transitions and to capture temporal intent and directly align language reasoning with the structure ...
-- **p. 5 / 3.4. Implementation Details - extractive body cue:** This allows us to further exploit the dataset and generate different reasoning traces with different meta-actions.
-- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Counterfactual Vision-Language-Action (CF-VLA) Model. Top: CF-VLA conducts reasoning adaptively. The model engages in reasoning more frequently and achieves more signifi- cant task performance ...
-- **p. 6 / 4.2. Main Experiments - extractive body cue:** We evaluate whether counterfactual reasoning improves trajectory accuracy, safety characteristics, and reasoning quality.
-- **p. 6 / 4.2. Main Experiments - extractive body cue:** Compared with lang-meta-act, which reasons for every sample, CF-VLA (w/ route, round1) already achieves better performance with a think rate below 0.25.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 시간 구간별 상위 행동의 결과를 반사실적으로 추론해 위험한 행동을 고친 뒤 최종 궤적을 생성한다. [PDF 3쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Peng_Counterfactual_VLA_Self-Reflective_Vision-Language-Action_Model_with_Adaptive_Reasoning_CVPR_2026_paper.pdf#page=3) · [PDF 4쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Peng_Counterfactual_VLA_Self-Reflective_Vision-Language-Action_Model_with_Adaptive_Reasoning_CVPR_2026_paper.pdf#page=4)
+- 기본 모델의 롤아웃에서 재검토할 장면을 골라 추론 사례를 학습하고 상황별로 추론을 켜는 방식을 평가했다. [PDF 6쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Peng_Counterfactual_VLA_Self-Reflective_Vision-Language-Action_Model_with_Adaptive_Reasoning_CVPR_2026_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Peng_Counterfactual_VLA_Self-Reflective_Vision-Language-Action_Model_with_Adaptive_Reasoning_CVPR_2026_paper.pdf#page=7)
 
 ## Evaluation Scope
 

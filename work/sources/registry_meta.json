@@ -11,18 +11,18 @@
     }
   ],
   "schema": "work/sources/registry.schema.json",
-  "generated_on": "2026-11-20",
+  "generated_on": "2026-11-22",
   "paper_count": 1252,
   "identity_policy": "paper_id is the stable internal identity; DOI/arXiv/OpenReview identifiers are optional public identifiers.",
   "version_policy": "Use relations with type=version_of or same_work_as when a preprint and publication must remain separate.",
   "evidence_policy": "Manifest provenance records source scope; note evidence and reading status are not inferred from local PDF presence.",
-  "manifest_sha256": "ac7a6f67bb43c14180f6a3659c6ee168f0bc08a7a3ea3ad82f5b750574fd232f",
+  "manifest_sha256": "b1cb1b30221cf73739beaa9e86c3a6f97ea18b709eecf2a0fc8f62cf741cba4e",
   "last_reconciled_on": "2026-09-04",
   "reconciliation_policy": "review manifest evidence is paper-level; per-note evidence is retained under provenance.note_evidence; note-scoped review manifests are retained under provenance.note_review without changing paper-level review precedence; tracker status remains user-controlled.",
   "relation_count": 91,
   "relation_policy": "Directed curated edges in papers.json are not a full citation graph; each managed edge records type, target paper_id, confidence, basis, source, evidence_scope, and reviewed_on.",
   "metadata_profile_version": "1.0",
-  "metadata_profile_reviewed_on": "2026-11-20",
+  "metadata_profile_reviewed_on": "2026-11-22",
   "evaluation_profile_count": 1252,
   "reproducibility_profile_count": 1252,
   "lineage_profile_count": 1252,
@@ -55,7 +55,7 @@
     }
   ],
   "source_audit": {
-    "verified_on": "2026-11-20",
+    "verified_on": "2026-11-22",
     "path": "work/sources/batches/source_audit_2026_11.jsonl",
     "report": "research/SOURCE_AUDIT.md",
     "paper_count": 1252,
@@ -68,6 +68,23 @@
       "seed": 20261120,
       "sample_size": 100,
       "manifest_sha256": "ac7a6f67bb43c14180f6a3659c6ee168f0bc08a7a3ea3ad82f5b750574fd232f"
-    }
+    },
+    "summary_batches": [
+      {
+        "batch": "next-summary-01",
+        "tier": "NEXT",
+        "verified_on": "2026-11-22",
+        "count": 100,
+        "baseline_commit": "f3806160de5ecd1a08dd7b18364fd63d0dac5745"
+      }
+    ],
+    "artifact_review": {
+      "verified_on": "2026-11-22",
+      "tier": "CORE",
+      "count": 43,
+      "baseline_commit": "f3806160de5ecd1a08dd7b18364fd63d0dac5745"
+    },
+    "manifest_sha256": "b1cb1b30221cf73739beaa9e86c3a6f97ea18b709eecf2a0fc8f62cf741cba4e",
+    "initial_verified_on": "2026-11-20"
   }
 }

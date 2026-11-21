@@ -20,9 +20,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — The RL algorithm is often bottlenecked by the credit assignment problem, which makes it hard for traditional RL algorithms to learn millions of weights of a large model, hence in practice, smaller ...
-
-방법 관련 발췌 — We use similar terminology and notation as On Learning to Think: Algorithmic Information Theory for Novel Combinations of RL Controllers and RNN World Models (Schmidhuber, 2015a) when describing our methodology and experiments.
+이 연구는 환경 영상을 압축한 잠재 상태와 순환 동역학 모델을 사용해 작은 제어 정책을 진화 탐색으로 학습한다. [PDF 1쪽](https://papers.nips.cc/paper_files/paper/2018/file/2de5d16682c3c35007e4e92982f1a2ba-Paper.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -56,16 +54,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** We use similar terminology and notation as On Learning to Think: Algorithmic Information Theory for Novel Combinations of RL Controllers and RNN World Models (Schmidhuber, ...
-- **p. 2 / 1. Introduction - extractive body cue:** In this article, we present a simplified framework that we can use to experimentally demonstrate some of the key concepts from these papers, and also ...
-- **p. 6 / V MODEL WITH HIDDEN LAYER - extractive body cue:** To our knowledge, our method is the first reported solution to solve this task.
-- **p. 1 / 1. Introduction - extractive body cue:** Humans develop a mental model of the world based on what they are able to perceive with their limited senses.
-- **p. 3 / 2.2. MDN-RNN (M) Model - extractive body cue:** In our approach, we approximate p(z) as a mixture of Gaussian distribution, and train the RNN to output the probability distribution of the next latent ...
-- **p. 5 / Figure/Table caption - extractive body cue:** Figure 11. Limiting our controller to see only zt, but not ht results in wobbly and unstable driving behaviours. Although the agent is still able ...
-- **p. 4 / 3.1. World Model for Feature Extraction - extractive body cue:** 3In principle, we can train both models together in an end-toend manner, although we found that training each separately is more practical, and also achieves ...
-- **p. 6 / Figure/Table caption - extractive body cue:** Table 1. CarRacing-v0 scores achieved using various methods. Our agent is able to achieve a score of 906 ± 21 over 100 random trials, effectively ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 시각 인코더와 다음 잠재 상태의 분포를 예측하는 순환 모델을 관측 자료에서 학습하고 그 특징을 제어기에 입력한다. [PDF 2쪽](https://papers.nips.cc/paper_files/paper/2018/file/2de5d16682c3c35007e4e92982f1a2ba-Paper.pdf#page=2) · [PDF 3쪽](https://papers.nips.cc/paper_files/paper/2018/file/2de5d16682c3c35007e4e92982f1a2ba-Paper.pdf#page=3)
+- 자동차 경주와 Doom 환경을 평가하며, Doom에서는 학습한 환경 안에서만 최적화한 정책을 원래 게임으로 옮겨 시험했다. [PDF 4쪽](https://papers.nips.cc/paper_files/paper/2018/file/2de5d16682c3c35007e4e92982f1a2ba-Paper.pdf#page=4) · [PDF 5쪽](https://papers.nips.cc/paper_files/paper/2018/file/2de5d16682c3c35007e4e92982f1a2ba-Paper.pdf#page=5)
 
 ## Evaluation Scope
 

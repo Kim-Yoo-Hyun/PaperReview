@@ -23,9 +23,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — NeRFs generate photorealistic scene reconstructions, addressing the fundamental limitations of explicit representations; however, NeRFs require running inference on a deep neural network to render the scene, making them impractical for ...
-
-방법 관련 발췌 — The key contributions of this paper are as follows: • We develop a fast polytope corridor generation algorithm to enable provably safe planning for drone navigation in GSplat maps. • We develop ...
+Splat-Nav는 사전에 만든 가우시안 지도에서 충돌 제약을 만족하는 경로를 계획하고 영상으로 로봇 자세를 갱신한다. [PDF 1쪽](https://arxiv.org/pdf/2403.02751#page=1)
 
 ## Problem and Motivation
 
@@ -59,16 +57,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / I. INTRODUCTION - extractive body cue:** The key contributions of this paper are as follows: • We develop a fast polytope corridor generation algorithm to enable provably safe planning for drone ...
-- **p. 1 / I. INTRODUCTION - extractive body cue:** In this paper, we introduce Splat-Nav, a pipeline for drone navigation in GSplat maps with a monocular camera.
-- **p. 2 / I. INTRODUCTION - extractive body cue:** 1: Splat-Nav, consists of a safe planning module, Splat-Plan, and robust localization module, Splat-Loc, both operating on a Gaussian Splatting environment representation.
-- **p. 1 / I. INTRODUCTION - extractive body cue:** Additionally, the proposed system enables both open-loop trajectory generation and closed-loop re-planning.
-- **p. 4 / IV. PLANNING WITH SAFE POLYTOPES - extractive body cue:** Now, we present Splat-Plan, our planner for GSplat maps.
-- **p. 11 / VI. EXPERIMENTS - extractive body cue:** However, Splat-Loc-SIFT achieves a lower success rate, compared to Splat-Loc-Glue, which achieves a perfect success rate.
-- **p. 13 / VI. EXPERIMENTS - extractive body cue:** 6) Splat-Loc Evaluations: We validate the performance of Splat-Loc in hardware experiments in the Maze scene, showing that Splat-Loc achieves relatively the same level of ...
-- **p. 11 / VI. EXPERIMENTS - extractive body cue:** The GS-Loc algorithm achieves the lowest accuracy and requires the greatest computation time, unlike Colored-ICP, Splat-Loc-SIFT, and Splat-Loc-Glue, which achieve much-higher accuracy with a rotation ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- Splat-Plan은 안전한 다면체 통로를 구성하고 그 안에서 베지어 궤적을 계산한다. [PDF 6쪽](https://arxiv.org/pdf/2403.02751#page=6) · [PDF 7쪽](https://arxiv.org/pdf/2403.02751#page=7)
+- Splat-Loc은 탑재 RGB 영상과 지도 형상을 대조해 자세를 순차 추정하고 재계획에 사용한다. [PDF 9쪽](https://arxiv.org/pdf/2403.02751#page=9) · [PDF 11쪽](https://arxiv.org/pdf/2403.02751#page=11)
 
 ## Evaluation Scope
 

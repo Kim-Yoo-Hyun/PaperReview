@@ -19,9 +19,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Recently introduced Gaussian Splats [1] efficiently model object geometry, but lack persistent state estimation for taskoriented manipulation.
-
-방법 관련 발췌 — This paper makes the following contributions: • Persistent Object Gaussian Splat (POGS), a novel feature field representation for tracking and manipulating previously unseen irregularly shaped objects. • A robot system for creating ...
+POGS는 초기에 여러 시점에서 관측한 물체의 자세를 이후 스테레오 관측으로 갱신해 조작 중에도 추적을 유지한다. [PDF 1쪽](https://arxiv.org/pdf/2503.05189v1#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / Abstract - extractive body cue:** This paper makes the following contributions: • Persistent Object Gaussian Splat (POGS), a novel feature field representation for tracking and manipulating previously unseen irregularly shaped ...
-- **p. 1 / Abstract - extractive body cue:** To enable online state estimation, tracking, and manipulation of unseen objects in dynamic environments, we present Persistent Object Gaussian Splat (POGS), an editable objectcentric feature ...
-- **p. 1 / Abstract - extractive body cue:** (Bottom) A POGS unified representation enables language querying, grasp sampling, and continuous tracking of irregular objects as they move.
-- **p. 4 / 3) Persistent Object Tracking phase for online tracking - extractive body cue:** The drill handle is fully occluded by the motor body, yet our POGS unified representation enables handle grasping based on previously observed geometry.
-- **p. 2 / Abstract - extractive body cue:** Our approach aims to achieve robust online object tracking and scene updating with
-- **p. 6 / 3) Persistent Object Tracking phase for online tracking - extractive body cue:** Tier 1 Tier 2 Perturbations Success Rate Time (s) Success Rate Time (s) Clockwise 24/25 6.30 20/25 12.26 CCW 24/25 5.72 20/25 13.06 Follow Target ...
-- **p. 5 / 3) Persistent Object Tracking phase for online tracking - extractive body cue:** Similar performance trends were observed in the other tasks, where POGS consistently outperformed ablations that either had depth perception turned off or were optimized with ...
-- **p. 5 / 3) Persistent Object Tracking phase for online tracking - extractive body cue:** For example, in the "Clothes Iron to Shelf" task under Tier 1, POGS achieved a maximum of 12 consecutive successful object resets, with a successful ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 가우시안에 의미·시각·그룹 특징을 저장하고 한 대의 스테레오 카메라가 제공하는 깊이와 특징으로 물체 자세를 맞춘다. [PDF 3쪽](https://arxiv.org/pdf/2503.05189v1#page=3) · [PDF 4쪽](https://arxiv.org/pdf/2503.05189v1#page=4)
+- 사람이 옮긴 물체를 원위치에 놓거나 파지 중 어긋난 도구 자세를 복구하는 실물 과제로 추적을 검증했다. [PDF 5쪽](https://arxiv.org/pdf/2503.05189v1#page=5) · [PDF 6쪽](https://arxiv.org/pdf/2503.05189v1#page=6)
 
 ## Evaluation Scope
 

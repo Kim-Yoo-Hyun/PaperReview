@@ -20,9 +20,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Prior work in robot exploration broadly uses traditional 3D scene representations, such as occupancy grids and voxel grids.
-
-방법 관련 발췌 — We present VISTA, an algorithm for Viewpoint-based Image Selection with Semantic Task Awareness.
+VISTA는 언어로 지정한 대상을 찾는 동안 과제에 유용한 영역의 3차원 지도가 잘 관측되도록 비행 경로를 선택한다. [PDF 1쪽](https://arxiv.org/pdf/2507.01125#page=1)
 
 ## Problem and Motivation
 
@@ -54,16 +52,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 1 / I. INTRODUCTION - extractive body cue:** We present VISTA, an algorithm for Viewpoint-based Image Selection with Semantic Task Awareness.
-- **p. 2 / I. INTRODUCTION - extractive body cue:** We introduce: 1) an efficient information metric that combines view angle diversity and semantic task relevance stored on a voxel grid that can be recursively ...
-- **p. 2 / I. INTRODUCTION - extractive body cue:** Through an experimental campaign with a total of 36 hardware executions, we show that VISTA outperforms state-of-the-art baselines, achieving 6x better success rates in environments ...
-- **p. 3 / III. PROBLEM FORMULATION - extractive body cue:** This explicit representation not only enables Gaussian Splatting to avoid unnecessary computation involving empty space, but it also enables the utilization of fast tile-based rasterization.
-- **p. 6 / V. RESULTS - extractive body cue:** On the more challenging map domain, we find that our method has a significant improvement over the baseline methods, where our method has a 100% ...
-- **p. 6 / V. RESULTS - extractive body cue:** Our geometric information gain metric significantly outperforms baselines FisherRF and Bayes Rays in the next best view selection task for about 50K iterations in three ...
-- **p. 5 / V. RESULTS - extractive body cue:** We find that VISTA achieves the highest PSNR and SSIM scores and the lowest LPIPS score across all scenes.
-- **p. 5 / V. RESULTS - extractive body cue:** For example, the best-competing method, FisherRF, requires almost twice as many training iterations to achieve the same photometric scores as VISTA, in the Poster
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 온라인 의미 가우시안 지도에서 목표와의 의미 유사도와 새 시점의 기하학적 관측 범위를 함께 계산한다. [PDF 3쪽](https://arxiv.org/pdf/2507.01125#page=3) · [PDF 4쪽](https://arxiv.org/pdf/2507.01125#page=4)
+- 정적 데이터에서 시점 선택을 비교하고 실제 쿼드로터에서 대상 탐색을 평가했다. [PDF 5쪽](https://arxiv.org/pdf/2507.01125#page=5) · [PDF 6쪽](https://arxiv.org/pdf/2507.01125#page=6)
 
 ## Evaluation Scope
 

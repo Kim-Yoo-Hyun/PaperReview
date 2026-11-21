@@ -17,6 +17,10 @@
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (7 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
+## 공개 자료
+
+- **가중치** VLFM이 배포한 PointNav 하위 정책 가중치다. 객체 인식기는 외부 모델을 사용한다. [배포 파일](https://api.github.com/repos/rai-opensource/vlfm/contents/data/pointnav_weights.pth?ref=584ed56008754fde7997d904983607def8328322)
+
 ## Why This Paper Is Here
 
 영상과 목표 범주의 의미적 관련도를 지도로 누적해 다음 탐색 경계를 선택한다.

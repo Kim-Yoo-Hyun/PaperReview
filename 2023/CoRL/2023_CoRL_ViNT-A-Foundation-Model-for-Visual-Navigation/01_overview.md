@@ -17,6 +17,12 @@
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (25 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
+## 공개 자료
+
+- **코드** 공유 시각 내비게이션 저장소의 ViNT 모델 구현을 확인했다. [배포 파일](https://raw.githubusercontent.com/PrieureDeSion/visualnav-transformer/dca79815b704e5aa9c6bdc3082351f9e3b2848c2/train/vint_train/models/vint/vint.py)
+- **가중치** ViNT의 배포 가중치 vint.pth 파일과 모델별 배포 목록을 대조했다. [배포 파일](https://drive.google.com/file/d/1ckrceGb5m_uUtq3pD8KHwnqtJgPl6kF5/view)
+- **데이터** 공유 저자 저장소가 훈련에 사용했다고 명시한 자료 중 수정 GoStanford2의 go_stanford.zip을 확인했다. 전체 훈련 혼합에서 공개된 부분이다. [배포 파일](https://drive.google.com/file/d/1BVGA46WbvOZFyuzkzV2n_yZqcQsdIJy7/view)
+
 ## Why This Paper Is Here
 
 ViNT는 여러 이동 로봇의 주행 자료에서 목표에 도달하는 정책을 사전학습해 새 플랫폼과 환경의 시각 내비게이션에 활용한다.

@@ -20,9 +20,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Thus, this work attempts to address this gap by integrating both levels for comprehensive spatial referring.
-
-방법 관련 발췌 — Our contributions are summarized as follows: (1) We propose RoboRefer, a 3D-aware reasoning VLM trained using a sequential SFT-RFT strategy with metric-sensitive process reward functions to achieve spatial referring.
+RoboRefer는 공간 관계가 여러 번 등장하는 지시에서 로봇이 가리켜야 할 영상 위치를 예측한다. [PDF 1쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/29416b66c2149872b9d1415a3fd2c5e0-Paper-Conference.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -56,16 +54,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 3 / 1 Introduction - extractive body cue:** Our contributions are summarized as follows: (1) We propose RoboRefer, a 3D-aware reasoning VLM trained using a sequential SFT-RFT strategy with metric-sensitive process reward functions ...
-- **p. 2 / 1 Introduction - extractive body cue:** To advance spatial referring, we introduce RefSpatial, a large-scale dataset of 2.5M high-quality examples with 20M QA pairs (2× prior [3]).
-- **p. 2 / 1 Introduction - extractive body cue:** In this work, we propose RoboRefer, a 3D-aware VLM that not only acquires precise spatial understanding via SFT but also exhibits generalized strong reasoning capabilities ...
-- **p. 3 / 1 Introduction - extractive body cue:** To address the lack of multi-step spatial referring benchmarks, we introduce RefSpatial-Bench, comprising 200 real-world images with manually annotated tasks for object location and placement.
-- **p. 4 / 3 Method - extractive body cue:** To address this, we propose a simple yet effective approach: a dedicated depth encoder and projector, initialized from their RGB counterparts.
-- **p. 9 / 4 Experiments - extractive body cue:** By using a single target point predicted by RoboRefer, the system can generate more accurate masks and corresponding grasp poses than those from 2D boxes ...
-- **p. 8 / Figure/Table caption - extractive body cue:** Figure 4: RefSpatial-Bench results. G.P., M.M., and R.P. donate Gemini-2.5-Pro [9], Molmo- 72B [15], and RoboPoint [5]. RoboRefer-RFT excels in unseen and multi-step cases. SFT ...
-- **p. 9 / 4 Experiments - extractive body cue:** Our model achieves comparable or slightly superior results, corroborating insights from SpatialVLM [6] and SpatialRGPT [1].
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 깊이 전용 인코더를 지도학습하고, 공간 오차에 민감한 과정 보상으로 여러 단계의 위치 추론을 미세조정한다. [PDF 3쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/29416b66c2149872b9d1415a3fd2c5e0-Paper-Conference.pdf#page=3) · [PDF 5쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/29416b66c2149872b9d1415a3fd2c5e0-Paper-Conference.pdf#page=5)
+- RefSpatial 데이터와 RefSpatial-Bench를 구축해 지시 위치의 정확도를 평가하고, 예측 위치를 별도 제어 정책에 전달하는 로봇 예를 보였다. [PDF 7쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/29416b66c2149872b9d1415a3fd2c5e0-Paper-Conference.pdf#page=7) · [PDF 10쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/29416b66c2149872b9d1415a3fd2c5e0-Paper-Conference.pdf#page=10)
 
 ## Evaluation Scope
 

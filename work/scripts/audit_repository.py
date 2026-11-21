@@ -803,7 +803,8 @@ def main() -> None:
                 report = (ROOT / source_audit["report"]).read_text(encoding="utf-8")
                 if report != render_source_audit(audited, source_audit):
                     errors.append("source audit report differs from its dated evidence ledger")
-                if source_audit.get("postcheck", {}).get("manifest_sha256") == file_sha256(MANIFEST):
+                reviewed_manifest = source_audit.get("manifest_sha256") or source_audit.get("postcheck", {}).get("manifest_sha256")
+                if reviewed_manifest == file_sha256(MANIFEST):
                     check_applied(audited, papers, ROOT)
             except (OSError, ValueError, KeyError, TypeError) as exc:
                 errors.append(f"could not validate dated source audit: {exc}")

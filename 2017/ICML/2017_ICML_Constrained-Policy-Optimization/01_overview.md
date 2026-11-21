@@ -19,9 +19,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Although optimal policies for finite CMDPs with known models can be obtained by linear programming, methods for high-dimensional control are lacking.
-
-방법 관련 발췌 — In this work, we propose the first such algorithm, allowing applications to constrained deep RL.
+CPO는 기대 보상을 높이면서 누적 비용의 기댓값이 제한 안에 머물도록 정책을 갱신한다. [PDF 1쪽](https://arxiv.org/pdf/1705.10528#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 1 / 1. Introduction - extractive body cue:** In this work, we propose the first such algorithm, allowing applications to constrained deep RL.
-- **p. 5 / 5.3. Trust Region Optimization for Constrained MDPs - extractive body cue:** Then, because the theoretically guaranteed update will take toosmall steps in practice, we propose CPO as a practical approximation based on trust region methods.
-- **p. 5 / 5.3. Trust Region Optimization for Constrained MDPs - extractive body cue:** Inspired by trust region methods, we propose CPO, which uses a trust region instead of penalties on policy divergence to enable larger step sizes: πk+1 ...
-- **p. 1 / 1. Introduction - extractive body cue:** Driving our approach is a new theoretical result that bounds the difference between the rewards or costs of two different policies.
-- **p. 2 / 1. Introduction - extractive body cue:** In our experiments, we show that CPO can train neural network policies with thousands of parameters on highdimensional simulated robot locomotion tasks to maximize rewards ...
-- **p. 8 / 8.1. Evaluating CPO and Comparison Analysis - extractive body cue:** We find that CPO generally outperforms PDO on enforcing constraints, without compromising performance with respect to return.
-- **p. 8 / 8.1. Evaluating CPO and Comparison Analysis - extractive body cue:** Using cost shaping (CS) in the constraint while optimizing generally improves the agent's adherence to the true constraint on C-return. environment and makes sense when ...
-- **p. 7 / 8.1. Evaluating CPO and Comparison Analysis - extractive body cue:** We find that CPO is successful at approximately enforcing constraints in all environments.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 정책 사이의 거리로 기대 성능과 비용 변화를 제한하는 결과에서 신뢰 영역을 이용한 제약 정책 탐색을 유도한다. [PDF 3쪽](https://arxiv.org/pdf/1705.10528#page=3) · [PDF 5쪽](https://arxiv.org/pdf/1705.10528#page=5)
+- 모의 연속 제어에서 보상과 제약 비용을 함께 평가했다. 이론이 다루는 제약은 정책의 기대 비용에 대한 것이다. [PDF 7쪽](https://arxiv.org/pdf/1705.10528#page=7) · [PDF 8쪽](https://arxiv.org/pdf/1705.10528#page=8)
 
 ## Evaluation Scope
 

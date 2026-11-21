@@ -19,9 +19,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — To address these challenges, we propose grounding LLMs in dynamically built scene graphs.
-
-방법 관련 발췌 — To address these challenges, we propose grounding LLMs in dynamically built scene graphs.
+MoMa-LLM은 가구를 열거나 위치를 바꾸어야 찾을 수 있는 물체를 모바일 매니퓰레이터가 탐색하도록 계획한다. [PDF 1쪽](https://arxiv.org/pdf/2403.08605#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 1 / I. INTRODUCTION - extractive body cue:** To address these challenges, we propose grounding LLMs in dynamically built scene graphs.
-- **p. 1 / 2 Toyota Motor Europe (TME) - extractive body cue:** Furthermore, we introduce a novel evaluation paradigm for object search tasks, employing full efficiency curves to remove the dependency on arbitrary time budgets inherent in ...
-- **p. 3 / IV. MOMA-LLM - extractive body cue:** To address the challenges of interactive open-vocabulary household tasks, we propose MoMa-LLM, which intertwines high-level reasoning with scalable dynamic scene representations.
-- **p. 4 / IV. MOMA-LLM - extractive body cue:** It consists of the path on the Voronoi graph GV, and the Euclidean distances d from the Voronoi nodes no and nvp to the object ...
-- **p. 4 / IV. MOMA-LLM - extractive body cue:** It consists of the following high-level actions: navigate(room_name, object_name): Navigation to an object in a room via an A∗planner in the explored BEV-map Bt, inflated ...
-- **p. 7 / V. EXPERIMENTS - extractive body cue:** Similarly, while HIMOS achieves a high success rate, it is unable to explore efficiently.
-- **p. 7 / V. EXPERIMENTS - extractive body cue:** In contrast, MoMa-LLM achieves similar success rates as HIMOS with a much higher search efficiency, both in terms of SPL and AUC-E.
-- **p. 6 / V. EXPERIMENTS - extractive body cue:** This results in an efficiency curve, in which the best policies are located in the top left corner, enabling the comparison of success rates for ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 탐색 중 바뀌는 개방 어휘 장면 그래프와 물체 단위 행동을 언어 모델에 함께 제공한다. [PDF 3쪽](https://arxiv.org/pdf/2403.08605#page=3) · [PDF 4쪽](https://arxiv.org/pdf/2403.08605#page=4)
+- 시뮬레이션과 실내 실물 장면에서 가려진 목표를 찾는 의미적 상호작용 탐색을 평가했다. [PDF 6쪽](https://arxiv.org/pdf/2403.08605#page=6) · [PDF 7쪽](https://arxiv.org/pdf/2403.08605#page=7)
 
 ## Evaluation Scope
 

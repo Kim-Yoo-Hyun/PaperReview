@@ -19,9 +19,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, most existing VLA frameworks are tailored for short-horizon tasks, leaving the challenge of long-horizon task execution largely unresolved.
-
-방법 관련 발췌 — To this end, we propose Long-VLA, the first end-to-end VLA model specifically designed for longhorizon robotic manipulation.
+Long-VLA는 이동과 실제 상호작용에 필요한 관측이 다르다는 점을 이용해 연속된 조작 하위 작업을 잇는다. [PDF 1쪽](https://raw.githubusercontent.com/mlresearch/v305/main/assets/fan25a/fan25a.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1 Introduction - extractive body cue:** To this end, we propose Long-VLA, the first end-to-end VLA model specifically designed for longhorizon robotic manipulation.
-- **p. 2 / 1 Introduction - extractive body cue:** Finally, we present L-CALVIN and show that Long-VLA outperforms state-of-the-art methods on simulated and real-world robotic tasks, with robust performance on diverse long-horizon tasks.
-- **p. 3 / 3 Method - extractive body cue:** To address this limitation, we propose Long-VLA, a unified end-to-end VLA model that leverages phase-specific data more effectively.
-- **p. 3 / 3 Method - extractive body cue:** 3.1 Revisiting Decomposition Strategy Before introducing our method, we first investigate whether decomposition is essential for VLA models.
-- **p. 4 / 3 Method - extractive body cue:** Based on these observations, we propose an input-level adaptation strategy that dynamically adjusts visual inputs according to the current task phase.
-- **p. 6 / 4 Experiment - extractive body cue:** As shown in Figure 4, our model achieves performance improvements in the D→D and ABCD→D of the L-CALVIN benchmark.
-- **p. 6 / 4 Experiment - extractive body cue:** As shown in Figure 5, while the success rate of the base policy drops to zero after the seventh task, our approach is still able ...
-- **p. 7 / 4 Experiment - extractive body cue:** As shown in Figure 6, our model achieves significant improvements over the base policy across all time horizons.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 하위 작업을 이동 단계와 상호작용 단계로 나누고 단계에 맞는 감각 단서를 남기도록 입력을 마스킹한다. [PDF 3쪽](https://raw.githubusercontent.com/mlresearch/v305/main/assets/fan25a/fan25a.pdf#page=3) · [PDF 4쪽](https://raw.githubusercontent.com/mlresearch/v305/main/assets/fan25a/fan25a.pdf#page=4)
+- 긴 작업열에서 앞 단계의 결과가 다음 단계 수행에 미치는 영향을 평가할 수 있도록 L-CALVIN 벤치마크를 구성했다. [PDF 6쪽](https://raw.githubusercontent.com/mlresearch/v305/main/assets/fan25a/fan25a.pdf#page=6) · [PDF 7쪽](https://raw.githubusercontent.com/mlresearch/v305/main/assets/fan25a/fan25a.pdf#page=7)
 
 ## Evaluation Scope
 

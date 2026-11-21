@@ -19,9 +19,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — (III) Fewer hyperparameters: the proposed model has fewer parameters, making it easy to tune, and it also supports model auto-tuning using any learning framework ‘The goal of the new contact model is ...
-
-방법 관련 발췌 — Our method consistently achieves state-of-the ) a 96.5% average success rate across all objects
+이 연구는 여러 접촉점의 상보성 조건을 직접 풀지 않고도 손 안의 물체 운동을 예측해 조작을 계획하는 모델을 제안한다. [PDF 1쪽](https://www.roboticsproceedings.org/rss21/p111.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 1 / Abstract - extractive body cue:** Our method consistently achieves state-of-the ) a 96.5% average success rate across all objects
-- **p. 1 / Body text (section boundary not confidently recovered) - extractive body cue:** 1: We propose a complementarty-free multi-contact model that a various challenging dexterous manipulation tasks, including fingertip in-air manipulation (cols.
-- **p. 2 / Abstract - extractive body cue:** Our method sets a new benchmark for model-based contact-rich dexterous manipulation: « Highly versatile dexterity: 96.5% average success rate across all objects and environments « ...
-- **p. 5 / B. New Complementarty-Free Multi-Contact Model - extractive body cue:** To circumvent the dual complementarity in (13), we propose ‘new contact model based on Lemma 1.
-- **p. 2 / A. Rigid Body Multi-contact Models - extractive body cue:** (62, 33] developed penalty-based contact models.
-- **p. 10 / B. MPC Setting and Results - extractive body cue:** (1) The proposed complementarity-free MPC consistently outperforms Implicit MPC (ie., MPC with complementarity model) across various manipulation tasks in terms of success
-- **p. 10 / B. MPC Setting and Results - extractive body cue:** to the very low success rate of Implicit MPC for this task type,
-- **p. 12 / Figure/Table caption - extractive body cue:** Fig. 12: Results of the TiiFinger in-hand manipulation for various objects. For each object on the x-axis, the upper panel shows the success rate across ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 접촉 최적화의 쌍대성에서 미분 가능한 닫힌 형태의 시간 전진식을 유도하고 쿨롱 마찰을 모델에 포함한다. [PDF 4쪽](https://www.roboticsproceedings.org/rss21/p111.pdf#page=4) · [PDF 5쪽](https://www.roboticsproceedings.org/rss21/p111.pdf#page=5)
+- TriFinger·Allegro 손 등의 다접촉 과제에서 모델 예측 제어의 자세 오차, 성공률, 계산 속도를 평가했다. [PDF 9쪽](https://www.roboticsproceedings.org/rss21/p111.pdf#page=9) · [PDF 10쪽](https://www.roboticsproceedings.org/rss21/p111.pdf#page=10)
 
 ## Evaluation Scope
 

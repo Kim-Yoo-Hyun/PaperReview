@@ -17,6 +17,10 @@
 - Paper type: benchmark_or_dataset
 - Source audit: full-text PDF body checked on 2026-09-03 (12 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
+## 공개 자료
+
+- **가중치** 저자가 지정한 RT-1-X JAX 체크포인트 파일이다. RT-2-X 가중치의 공개 범위는 별도로 남는다. [배포 파일](https://storage.googleapis.com/storage/v1/b/gdm-robotics-open-x-embodiment/o/open_x_embodiment_and_rt_x_oss%2Frt_1_x_jax%2Fcheckpoint?generation=1708008454924131)
+
 ## Why This Paper Is Here
 
 Open X-Embodiment는 여러 로봇에서 수집한 시연을 공통 형식으로 제공하고, 이 자료로 학습한 RT-X 정책의 전이를 평가한다.

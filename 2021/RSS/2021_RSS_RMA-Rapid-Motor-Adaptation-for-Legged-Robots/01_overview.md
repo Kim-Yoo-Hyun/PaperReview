@@ -19,9 +19,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — This transfer has proven quite challenging, because the sim-to-real gap itself is the result of multiple factors: (a) the physical robot and its model in the simulator differ significantly; (b) realworld terrains ...
-
-방법 관련 발췌 — The combination of these components enables the robot to adapt to novel situations in fractions of a second.
+RMA는 사족 로봇이 최근 움직임으로 지면과 하중 조건을 추정해 보행을 바꾸도록 학습한다. [PDF 1쪽](https://arxiv.org/pdf/2107.04034#page=1)
 
 ## Problem and Motivation
 
@@ -54,16 +52,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 1 / Abstract - extractive body cue:** The combination of these components enables the robot to adapt to novel situations in fractions of a second.
-- **p. 1 / Abstract - extractive body cue:** RMA consists of two components: a base policy and an adaptation module.
-- **p. 2 / 10 Hz - extractive body cue:** If we introduce the quadruped onto a rocky surface with no prior experience, the robot policy would fail often, causing serious damage to the robot.
-- **p. 3 / 10 Hz - extractive body cue:** But the truly novel contribution of this paper is the adaptation module, trained in simulation, which makes RMA possible.
-- **p. 3 / 10 Hz - extractive body cue:** Our novel aspects are the use of a varied terrain generator and "natural" reward functions motivated by bioenergetics which allows us to learn walking policies ...
-- **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1: We demonstrate the performance of RMA on several challenging environments. The robot is successfully able to walk on sand, mud, hiking trails, tall ...
-- **p. 6 / IV. EXPERIMENTAL SETUP - extractive body cue:** We find that RMA steps down a height of 15cm with 80% success rate and walks over unseen deformable surfaces, such as a memory foam ...
-- **p. 6 / IV. EXPERIMENTAL SETUP - extractive body cue:** It is also able to successfully climb inclines and steps.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 시뮬레이터의 환경 변수를 압축한 표현을 받는 기본 정책과 실제 배포 시 관측·행동 이력에서 그 표현을 추정하는 적응 모듈을 학습한다. [PDF 3쪽](https://arxiv.org/pdf/2107.04034#page=3) · [PDF 4쪽](https://arxiv.org/pdf/2107.04034#page=4)
+- 시뮬레이션에서 학습한 제어기를 A1에 배포하고 지형과 외부 조건이 바뀌었을 때의 보행을 시험했다. [PDF 5쪽](https://arxiv.org/pdf/2107.04034#page=5) · [PDF 6쪽](https://arxiv.org/pdf/2107.04034#page=6)
 
 ## Evaluation Scope
 

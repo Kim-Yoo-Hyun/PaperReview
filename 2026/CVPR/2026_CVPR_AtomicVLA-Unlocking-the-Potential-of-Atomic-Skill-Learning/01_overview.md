@@ -19,9 +19,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, recent studies [23, 52, 53] suggest that modular decoupling leads to a lack of mutual awareness between the planner and controller, causing suboptimal task coordination.
-
-방법 관련 발췌 — Overall, our contributions are as follows: • We introduce AtomicVLA, an end-to-end framework that unifies task planning and action execution for longhorizon tasks and continual skill expansion. • We propose a Skill-Guided ...
+AtomicVLA는 긴 조작 지시를 원자 기술로 계획하고 기술별 행동 전문가를 선택해 세부 동작을 생성한다. [PDF 1쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Zhang_AtomicVLA_Unlocking_the_Potential_of_Atomic_Skill_Learning_in_Robots_CVPR_2026_paper.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** Overall, our contributions are as follows: • We introduce AtomicVLA, an end-to-end framework that unifies task planning and action execution for longhorizon tasks and continual ...
-- **p. 2 / 1. Introduction - extractive body cue:** To this end, we propose AtomicVLA, as illustrated in Fig.
-- **p. 3 / 3.1. Overview - extractive body cue:** To further ensure the generation of high-quality task planning data, we introduce an embodiment data generation pipeline (Sec.
-- **p. 4 / 3.2. Unified Task Planning and Action Execution - extractive body cue:** To enable seamless switching between the two output modalities, we introduce two special output tokens: [think] and [act].
-- **p. 4 / 3.3. Skill-guided Mixture of Experts Architecture - extractive body cue:** 2(b), our skill library consists of three key components: (1) a skill router, (2) a shared expert that maintains the pre-trained action generation capabilities of ...
-- **p. 8 / 4.4. Ablation Study - extractive body cue:** 5, AtomicVLA achieves a success rate of 95.2%, outperforming the MoE baseline by 6.6% and the timestep-conditioned MoDE variant by 5.7%.
-- **p. 6 / Figure/Table caption - extractive body cue:** Figure 4. Error Recovery Capability Demonstration. When encountering a skill execution failure, AtomicVLA automatically assesses the progress and re-executes the current skill. suites, outperforming the ...
-- **p. 6 / 4.2. Results on Simulation - extractive body cue:** 1, AtomicVLA achieves an average success rate of 96.6% across the four Calvin LIBERO Figure 4.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 기술에 따라 전문가를 선택하는 혼합 구조로 여러 기술의 계획과 행동을 하나의 체계에서 학습한다. [PDF 3쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Zhang_AtomicVLA_Unlocking_the_Potential_of_Atomic_Skill_Learning_in_Robots_CVPR_2026_paper.pdf#page=3) · [PDF 4쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Zhang_AtomicVLA_Unlocking_the_Potential_of_Atomic_Skill_Learning_in_Robots_CVPR_2026_paper.pdf#page=4)
+- 새 기술에 전문가를 배정하는 라우터를 사용하고 시뮬레이션과 실제 조작에서 장기 수행과 순차 기술 학습을 평가했다. [PDF 7쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Zhang_AtomicVLA_Unlocking_the_Potential_of_Atomic_Skill_Learning_in_Robots_CVPR_2026_paper.pdf#page=7) · [PDF 8쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Zhang_AtomicVLA_Unlocking_the_Potential_of_Atomic_Skill_Learning_in_Robots_CVPR_2026_paper.pdf#page=8)
 
 ## Evaluation Scope
 

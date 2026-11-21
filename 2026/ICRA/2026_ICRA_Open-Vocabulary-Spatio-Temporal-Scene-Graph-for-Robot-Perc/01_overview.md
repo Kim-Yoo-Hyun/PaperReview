@@ -19,9 +19,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Taken together, these challenges reveal a fundamental gap: latency distorts the temporal alignment between operator intent and robot execution, while static representations fail to capture evolving events or filter redundant information.
-
-방법 관련 발췌 — The main contributions of this work can be summarized as follows: 1) We propose ST-OVSG, a novel spatio-temporal openvocabulary scene graph, which explicitly models both the spatial structure and temporal dynamics of ...
+ST-OVSG는 물체 관계가 시간에 따라 바뀌는 장면을 기록해 지연된 원격 조작 명령을 해당 관측 시점에 맞춘다. [PDF 1쪽](https://arxiv.org/pdf/2509.23107#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / I. INTRODUCTION - extractive body cue:** The main contributions of this work can be summarized as follows: 1) We propose ST-OVSG, a novel spatio-temporal openvocabulary scene graph, which explicitly models both ...
-- **p. 2 / I. INTRODUCTION - extractive body cue:** To address this, we propose Spatio-Temporal OpenVocabulary Scene Graph (ST-OVSG), an open-vocabulary spatio-temporal scene graph designed for teleoperation.
-- **p. 3 / III. METHODOLOGY - extractive body cue:** To address this, we propose ST-OVSG that integrates object nodes, spatial relations, and temporal correspondences.
-- **p. 3 / III. METHODOLOGY - extractive body cue:** Formally, the challenge is to maintain a representation that allows the system to (i) recover the scene as it existed at the command-issue time, (ii) ...
-- **p. 4 / III. METHODOLOGY - extractive body cue:** This allows the planner to interpret userissued commands with respect to the scene state observed by the operator.
-- **p. 5 / IV. EXPERIMENTS - extractive body cue:** Our method achieved a node accuracy of 74%, outperforming ConceptGraphs [7], while edge accuracy reached 67%, slightly lower than 1Edge precision corresponds to spatial edges ...
-- **p. 6 / IV. EXPERIMENTS - extractive body cue:** Across 17 trials, ST-OVSG achieved a success rate of 70.5%.
-- **p. 6 / IV. EXPERIMENTS - extractive body cue:** While the absolute improvement is small, this result reflects a consistent trend: adding structured scene information via ST-OVSG does not degrade planning quality, and in ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 연속 관측의 물체를 헝가리안 할당으로 연결해 개방 어휘 3차원 장면 그래프에 시간 정보를 부여한다. [PDF 3쪽](https://arxiv.org/pdf/2509.23107#page=3) · [PDF 4쪽](https://arxiv.org/pdf/2509.23107#page=4)
+- 과거 장면을 조회하고 현재 과제에 해당하는 부분 그래프를 추려 원격 계획기에 전달하는 절차를 평가했다. [PDF 5쪽](https://arxiv.org/pdf/2509.23107#page=5) · [PDF 6쪽](https://arxiv.org/pdf/2509.23107#page=6)
 
 ## Evaluation Scope
 

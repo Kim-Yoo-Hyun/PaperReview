@@ -19,9 +19,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — The benchmark includes 100 completely unique, hand-designed tasks ranging in difficulty (shown in Figure 1), which share a common Franka Emika Panda robot arm, featuring a range of sensor modalities, including joint ...
-
-방법 관련 발췌 — To that end, we present RLBench, which is an ambitious large-scale benchmark and learning environment designed to facilitate research in a number of both classical and deep-learning based robot manipulation areas.
+RLBench는 다양한 로봇 팔 작업에서 시각·고유수용감각 관측과 전문가 궤적을 같은 인터페이스로 제공하는 시뮬레이터 기반 벤치마크다. [PDF 1쪽](https://arxiv.org/pdf/1909.12271#page=1)
 
 ## Problem and Motivation
 
@@ -55,14 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 1 / I. INTRODUCTION - extractive body cue:** To that end, we present RLBench, which is an ambitious large-scale benchmark and learning environment designed to facilitate research in a number of both classical ...
-- **p. 1 / Abstract - extractive body cue:** With the benchmark's breadth of tasks and demonstrations, we propose the first large-scale fewshot challenge in robotics.
-- **p. 4 / IV. RLBENCH - extractive body cue:** Each task consists of one or more variations, and from each variation, an infinite number of episodes can be drawn.
-- **p. 4 / IV. RLBENCH - extractive body cue:** Moreover, given the way the task building tools are designed (discussed in Section IV-E), the variation concept allows a convenient way of getting as much ...
-- **p. 3 / III. BENCHMARK PROPERTIES - extractive body cue:** Moving to simulation solves this, but at the risk of developing solutions that may not run as well in the real-world.
-- **p. 5 / Figure/Table caption - extractive body cue:** Fig. 6: An example of a task python file. When using the task building tool, users are able to simultaneously edit the V-REP scene whilst ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 작업 설계 시 지정한 웨이포인트를 모션 플래너로 연결해 새로운 장면 초기값에서도 시연을 생성한다. [PDF 3쪽](https://arxiv.org/pdf/1909.12271#page=3) · [PDF 5쪽](https://arxiv.org/pdf/1909.12271#page=5)
+- 도달·관절 물체 열기·여러 단계 조작으로 구성된 과제와 RGB·깊이·분할 등 관측을 제공해 학습 방법을 비교할 수 있게 했다. [PDF 2쪽](https://arxiv.org/pdf/1909.12271#page=2) · [PDF 6쪽](https://arxiv.org/pdf/1909.12271#page=6)
 
 ## Evaluation Scope
 

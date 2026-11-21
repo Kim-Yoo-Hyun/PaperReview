@@ -17,6 +17,10 @@
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (35 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
+## 공개 자료
+
+- **데이터** OpenVLA 저자가 공개한 LIBERO 재처리 자료에서 비동작 구간을 제거한 시연의 TFRecord 조각을 확인했다. 전체 사전학습 혼합은 이 판정의 범위 밖이다. [배포 파일](https://huggingface.co/api/datasets/openvla/modified_libero_rlds/tree/6ce6aaaaabdbe590b1eef5cd29c0d33f14a08551/libero_10_no_noops/1.0.0)
+
 ## Why This Paper Is Here
 
 OpenVLA는 서로 다른 로봇의 시연을 이용해 영상·언어 입력에서 행동을 예측하는 공개 조작 정책이다.

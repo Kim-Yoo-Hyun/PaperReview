@@ -19,9 +19,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — First, our model directly predicts robust multi-level semantic features for future candidate locations, avoiding the difficulty of pixel-level image reconstruction in unseen environments as used in existing methods like RNR-Map [24, 35] ...
-
-방법 관련 발췌 — In this work, our main contributions include: • We propose a hierarchical neural radiance representation model to produce multi-level semantic representations for future environments with better quality and efficiency. • Utilizing predi ...
+이 연구는 연속 공간의 언어 내비게이션에서 후보 위치로 이동하기 전에 그곳에서 볼 의미 특징을 예측해 경로를 선택한다. [PDF 1쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Wang_Lookahead_Exploration_with_Neural_Radiance_Representation_for_Continuous_Vision-Language_Navigation_CVPR_2024_paper.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** In this work, our main contributions include: • We propose a hierarchical neural radiance representation model to produce multi-level semantic representations for future environments with ...
-- **p. 2 / 1. Introduction - extractive body cue:** The advantages of our method over previous methods for future environment prediction are three-fold.
-- **p. 3 / 3.2. Hierarchical Neural Radiance Representation - extractive body cue:** Through the downsized depth images {dt,i ∈RH×W }12 i=1, each grid feature gt,j ∈RD is mapped to its 3D world position Pt,j = [px, py, ...
-- **p. 5 / 3.2. Hierarchical Neural Radiance Representation - extractive body cue:** The view encoder consists of four-layer transformers.
-- **p. 5 / 3.3. Architecture of the Lookahead VLN model - extractive body cue:** Each transformer layer consists of a cross-attention layer and a graph-aware self-attention layer (GASA).
-- **p. 6 / 4.2. Comparison to State-of-the-Art Methods - extractive body cue:** Compared with DREAMWALKER [39] in Table 1, which adopts a similar idea of lookahead exploration, our HNR model achieves performance improvement of about 10% on ...
-- **p. 6 / 4.2. Comparison to State-of-the-Art Methods - extractive body cue:** Meanwhile, as illustrated in Table 2, the proposed method also achieves the improvement of 2% in the majority of metrics on the RxR-CE dataset.
-- **p. 8 / 4.3. Ablation Study - extractive body cue:** Row 2 doesn't use the lookahead node scores to evaluate the future paths and gain marginal performance improvement, confirming the necessity of the lookahead node ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 계층적 신경 방사 표현으로 후보 시점의 여러 수준 특징을 생성해 RGB 영상을 직접 합성하는 비용을 줄인다. [PDF 3쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Wang_Lookahead_Exploration_with_Neural_Radiance_Representation_for_Continuous_Vision-Language_Navigation_CVPR_2024_paper.pdf#page=3) · [PDF 4쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Wang_Lookahead_Exploration_with_Neural_Radiance_Representation_for_Continuous_Vision-Language_Navigation_CVPR_2024_paper.pdf#page=4)
+- 예측 특징으로 앞으로 가능한 경로 트리를 만들어 병렬 평가하고 VLN-CE 데이터에서 길 찾기를 비교했다. [PDF 6쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Wang_Lookahead_Exploration_with_Neural_Radiance_Representation_for_Continuous_Vision-Language_Navigation_CVPR_2024_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Wang_Lookahead_Exploration_with_Neural_Radiance_Representation_for_Continuous_Vision-Language_Navigation_CVPR_2024_paper.pdf#page=7)
 
 ## Evaluation Scope
 

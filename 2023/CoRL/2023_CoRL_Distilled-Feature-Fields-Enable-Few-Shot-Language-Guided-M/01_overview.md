@@ -19,9 +19,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — What form of scene representation would facilitate open-set generalization for robotic manipulation systems?
-
-방법 관련 발췌 — 3 Feature Fields for Robotic Manipulation (F3RM) We present Feature Fields for Robotic Manipulation (F3RM), our approach for distilling pre-trained representations from vision and vision-language models into 3D feature fields for open-e ...
+F3RM은 2차원 기초 모델의 특징을 3차원 장면에 증류해 소수 시연으로 언어가 지정한 물체를 잡거나 놓는다. [PDF 1쪽](https://proceedings.mlr.press/v229/shen23a/shen23a.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 3 / 3. Language-Guided Manipulation - extractive body cue:** 3 Feature Fields for Robotic Manipulation (F3RM) We present Feature Fields for Robotic Manipulation (F3RM), our approach for distilling pre-trained representations from vision and vision-language ...
-- **p. 1 / Abstract - extractive body cue:** Using features distilled from a vision-language model, CLIP, we present a way to designate novel objects for manipulation via free-text natural language, and demonstrate its ...
-- **p. 1 / 1 Introduction - extractive body cue:** The main contribution of this work is to study the use of DFFs instead for robotic manipulation.
-- **p. 2 / 3. Language-Guided Manipulation - extractive body cue:** During learning, each demonstration D consists of the tuple ⟨{I}, T∗⟩, where {I}N i=1 are N RGB camera views of the scene and T∗is a ...
-- **p. 2 / 3. Language-Guided Manipulation - extractive body cue:** We present few-shot learning experiments on grasping and placing tasks, where our robot is able to handle open-set generalization to objects that differ significantly in ...
-- **p. 7 / 4 Results - extractive body cue:** Although this success rate is far from practical for industrial use, our overall strategy of using 2D visual priors for 3D scene understanding can leverage ...
-- **p. 6 / 4 Results - extractive body cue:** While the baselines using density, RGB color values, or intermediate features from NeRF achieve respectable performance, they struggle to identify the semantic category of the ...
-- **p. 6 / 4 Results - extractive body cue:** We present the success rates in Table 1 and examples of robot executions in Figure 5.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 여러 시점에서 얻은 특징과 기하를 같은 연속 공간에 담고 시연 때의 그리퍼 주변 특징에 맞는 6자유도 자세를 찾는다. [PDF 3쪽](https://proceedings.mlr.press/v229/shen23a/shen23a.pdf#page=3) · [PDF 4쪽](https://proceedings.mlr.press/v229/shen23a/shen23a.pdf#page=4)
+- CLIP 특징으로 자유로운 텍스트 질의를 접지해 학습 중 보지 않은 표현과 물체 범주에서 조작을 시험했다. [PDF 6쪽](https://proceedings.mlr.press/v229/shen23a/shen23a.pdf#page=6) · [PDF 7쪽](https://proceedings.mlr.press/v229/shen23a/shen23a.pdf#page=7)
 
 ## Evaluation Scope
 

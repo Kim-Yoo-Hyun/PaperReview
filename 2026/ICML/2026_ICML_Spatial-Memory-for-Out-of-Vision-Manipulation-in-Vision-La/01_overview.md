@@ -19,9 +19,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Without a mechanism to maintain a persistent spatial representation of the scene, the perception-action loop becomes strictly viewdependent: when a target object is not observed, the model lacks the necessary context to ...
-
-방법 관련 발췌 — Based on these insights, we introduce SOMA, a VLA framework for out-of-vision manipulation that equips the robot with persistent spatial memory for reasoning and action.
+SOMA는 카메라 시야를 벗어난 물체의 공간 정보를 저장해 VLA가 해당 물체를 대상으로 조작을 계속하게 한다. [PDF 1쪽](https://arxiv.org/pdf/2605.22283#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** Based on these insights, we introduce SOMA, a VLA framework for out-of-vision manipulation that equips the robot with persistent spatial memory for reasoning and action.
-- **p. 2 / 1. Introduction - extractive body cue:** In particular, integrating angular-wise observations into a coherent spatial-semantic memory enables globally consistent reasoning and effective manipulation even when task-relevant objects are temporarily out of ...
-- **p. 3 / 3. Method - extractive body cue:** By maintaining a globally consistent spatial memory, SOMA enables robust reasoning and manipulation even when task-relevant objects lie outside the current field of view.
-- **p. 1 / 1. Introduction - extractive body cue:** However, most existing VLAs are developed under fixedview tabletop manipulation setups, typically relying on a single static camera or a third-person viewpoint.
-- **p. 1 / 1. Introduction - extractive body cue:** The development of VLAs have become a central direction in robotic action modeling research (Zhao et al., 2025; Chen et al., 2025c; Kim et al., ...
-- **p. 7 / 4.3. Real World Results - extractive body cue:** In Figure 4, SOMA achieves the highest success rates across all five real-world out-of-vision (OOV) manipulation tasks.
-- **p. 7 / 4.3. Real World Results - extractive body cue:** It demonstrates that SOMA's advantages go beyond improved success rates and manifest as qualitatively different execution behavior.
-- **p. 8 / 4.4. Simulation Results - extractive body cue:** Overall, SOMA achieves the highest average performance of 52.0% with 300 demos and maintains competitive results across all data regimes, surpassing strong baselines such as ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 움직이는 머리 카메라의 여러 방향 관측을 공통 공간 기억에 모으고 새 관측으로 기억을 갱신한다. [PDF 3쪽](https://arxiv.org/pdf/2605.22283#page=3) · [PDF 4쪽](https://arxiv.org/pdf/2605.22283#page=4)
+- 조작 중에는 언어 지시에 맞는 기억을 조회하며, 현재 화면에 목표가 없는 실물 과제에서 이 구성을 평가했다. [PDF 6쪽](https://arxiv.org/pdf/2605.22283#page=6) · [PDF 7쪽](https://arxiv.org/pdf/2605.22283#page=7)
 
 ## Evaluation Scope
 

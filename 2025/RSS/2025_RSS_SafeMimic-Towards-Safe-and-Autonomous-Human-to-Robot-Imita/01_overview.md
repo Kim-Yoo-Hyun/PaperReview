@@ -19,9 +19,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — These works address the requirement of autonomy, but generally sidestep the question of safety - ‘critical challenge when learning mobile manipulation in the real world, Further, these methods require extensive trial-anderror learning ...
-
-방법 관련 발췌 — environments with different human teachers, and observe experimentally that our framework enables the robot to suc cessfully acquire the desired behaviors safely and more efficiently than direct sim-to-real imitation learning approaches ...
+SafeMimic은 한 편의 사람 시연 영상에서 이동 조작 단계를 추출하고 로봇의 기구와 안전 조건에 맞게 실행 방법을 조정한다. [PDF 1쪽](https://www.roboticsproceedings.org/rss21/p128.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / I. INrRopucTION - extractive body cue:** environments with different human teachers, and observe experimentally that our framework enables the robot to suc cessfully acquire the desired behaviors safely and more efficiently ...
-- **p. 1 / Abstract - extractive body cue:** Our experiments show that our method allows robots to safely fand efficiently learn multistep mobile manipulation behaviors from a single human demonstration, from different users, ...
-- **p. 2 / I. INrRopucTION - extractive body cue:** In summary, SAFEMIMIC introduces several novel contributions:
-- **p. 1 / Abstract - extractive body cue:** We present SAFEMIMIC, a framework to learn new mobile manipulation skills safely and autonomously from a single third-person human video, Given an initial human ideo ...
-- **p. 4 / B. Safe and Autonomous Real-World Adaptation - extractive body cue:** The state representation consists of simulated pointclouds and robot proprioceptive information (for details of the network architecture, see Appendix A).
-- **p. 7 / C. Learning from Previous Successful Exploration - extractive body cue:** We observe that SAFEMIMIC achieves a minimum of 40% final suc- ‘cess rate over the seven tasks, significantly outperforming all baselines.
-- **p. 7 / C. Learning from Previous Successful Exploration - extractive body cue:** The Direct Execution baseline achieves 0% final success rate on all the seven tasks, demonstrating the need for exploration in order to effectively adapt the ...
-- **p. 6 / C. Learning from Previous Successful Exploration - extractive body cue:** Note as well hat some lines overlap at the Same ly outperforms all baselines and achieves upto 100% sucess ia exploratory adaptation, indcaling © superior
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 제삼자 시점의 영상에서 상태 변화와 사람 움직임을 식별하고 로봇 시점에서 실행할 행동 후보를 생성한다. [PDF 2쪽](https://www.roboticsproceedings.org/rss21/p128.pdf#page=2) · [PDF 4쪽](https://www.roboticsproceedings.org/rss21/p128.pdf#page=4)
+- 시뮬레이션에서 학습한 안전 Q 함수 앙상블로 후보를 검사하며 앞으로 진행할 후보가 없을 때는 이전 상태로 돌아가 다른 순서를 시도한다. [PDF 5쪽](https://www.roboticsproceedings.org/rss21/p128.pdf#page=5) · [PDF 9쪽](https://www.roboticsproceedings.org/rss21/p128.pdf#page=9)
 
 ## Evaluation Scope
 

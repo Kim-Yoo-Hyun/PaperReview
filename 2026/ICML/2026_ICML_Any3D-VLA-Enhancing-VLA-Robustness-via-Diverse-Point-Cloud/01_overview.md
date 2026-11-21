@@ -19,9 +19,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — (2) To address the scaling bottlenecks of 3D VLA training and the cross-environment domain gap, we introduce a hybrid point-cloud training strategy and construct a large-scale RGBD dataset for VLA tasks.
-
-방법 관련 발췌 — The contributions of this paper are summarized as follows: (1) We propose ANY3D-VLA.
+Any3D-VLA는 출처가 다른 점군을 같은 학습 과정에서 사용해 VLA의 깊이와 장면 변화에 대한 민감도를 줄인다. [PDF 1쪽](https://arxiv.org/pdf/2602.00807#page=1)
 
 ## Problem and Motivation
 
@@ -53,16 +51,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** The contributions of this paper are summarized as follows: (1) We propose ANY3D-VLA.
-- **p. 2 / 1. Introduction - extractive body cue:** We propose ANY3D-VLA, a plug-in pipeline for existing VLA backbones (Figure 1).
-- **p. 7 / 6.1.2. ZERO-SHOT COMPARISONS IN THE REAL WORLD - extractive body cue:** In particular, the overall average success rate for (Setting 2, DA3) reaches 62.5%, representing a 29.2% improvement over the strongest baseline SpatialVLA, which achieves 33.3%.
-- **p. 8 / 6.5. LIBERO and CALVIN Benchmarks - extractive body cue:** ANY3D-VLA achieves good results: it improves over GraspVLA by 13.9% on LIBERO; on CALVIN, it increases the average length by 0.71 compared to GraspVLA; and ...
-- **p. 7 / 6.1.2. ZERO-SHOT COMPARISONS IN THE REAL WORLD - extractive body cue:** When the point-cloud source at inference is held fixed, hybrid point cloud training (Setting 2) typically achieves higher average success rates than training with simulator-only ...
-- **p. 21 / Figure/Table caption - extractive body cue:** Table 12. Performance improvements when introducing the 3D branch into the backbone π0.5 on the LIBERO and CALVIN benchmarks. LIBERO Benchmark (Success Rate %)
-- **p. 4 / 3. Dataset and Benchmark - extractive body cue:** Method Single-Trial Test Grasp SR (%) SR (%) SR (%) 2D-only 45.3 72.6 80.0 Implicit-depth RGB 55.8 78.9 85.3 Implicit-3D RGB 46.3 78.9 87.4 RGBD ...
-- **p. 8 / 6.3. Diverse Point-Cloud Inputs as Data Augmentation - extractive body cue:** These results suggest that exposing the model to diverse pointcloud inputs serves as an effective form of data augmentation, helping mitigate the sim-to-real gap and ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 시뮬레이터·깊이 센서·영상 기반 깊이 추정기에서 얻은 점군을 다양화해 출처에 덜 의존하는 3차원 특징을 학습한다. [PDF 3쪽](https://arxiv.org/pdf/2602.00807#page=3) · [PDF 4쪽](https://arxiv.org/pdf/2602.00807#page=4)
+- 점군 특징과 대응하는 2차원 특징을 결합하고, 시뮬레이션과 실물에서 관측 표현과 깊이 편차의 영향을 비교했다. [PDF 6쪽](https://arxiv.org/pdf/2602.00807#page=6) · [PDF 7쪽](https://arxiv.org/pdf/2602.00807#page=7)
 
 ## Evaluation Scope
 

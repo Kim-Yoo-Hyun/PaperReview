@@ -21,9 +21,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, existing scene graphs suffer from notable limitations.
-
-방법 관련 발췌 — In summary, our work makes the following key contributions: • We propose MomaGraph, the first scene graph representation that jointly models spatial and functional relationships while incorporating part-level interactive nodes, providin ...
+MomaGraph는 장면의 공간·기능 관계, 물체 상태와 조작 가능한 부품을 한 그래프에 표현해 이동 조작을 계획한다. [PDF 1쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/9baf31febefde7bd76023c2d2f13cbd7-Paper-Conference.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -57,16 +55,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** In summary, our work makes the following key contributions: • We propose MomaGraph, the first scene graph representation that jointly models spatial and functional relationships ...
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** To achieve this goal, we present MomaGraph, a novel scene representation specifically designed for embodied agents.
-- **p. 6 / 4 METHOD - extractive body cue:** To address these limitations, we introduce MomaGraph-Scenes, the first dataset designed to provide a more comprehensive and task-relevant scene representation.
-- **p. 3 / 1 INTRODUCTION - extractive body cue:** Unlike prior graph-then-plan methods (Dai et al., 2024; Ekpo et al., 2024) that either assume reliable scene graphs or treat graph construction and planning as ...
-- **p. 3 / 1 INTRODUCTION - extractive body cue:** To overcome this gap, we propose the Graph-then-Plan strategy, which first generates task-specific scene graphs as an intermediate structured representation before high-level planning.
-- **p. 11 / 6 EXPERIMENTS - extractive body cue:** As shown in Figure 6, our system achieves an 80% success rate in graph generation, 87.5% success rate in planning (conditioned on correct graphs), and ...
-- **p. 22 / Figure/Table caption - extractive body cue:** Table 5: Comparison of our RL-based training with SFT and ICL baselines. Our method achieves substantially better performance on both benchmarks. As shown in Table ...
-- **p. 11 / 6 EXPERIMENTS - extractive body cue:** These results demonstrate that MomaGraph remains robust across multiple reasoning and execution stages, achieving a 70% overall success rate on a complex multi-step task.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 작업에 필요한 관계를 주석한 MomaGraph-Scenes와 계획·장면 이해를 함께 평가하는 MomaGraph-Bench를 구성했다. [PDF 2쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/9baf31febefde7bd76023c2d2f13cbd7-Paper-Conference.pdf#page=2) · [PDF 3쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/9baf31febefde7bd76023c2d2f13cbd7-Paper-Conference.pdf#page=3)
+- MomaGraph-R1은 강화학습으로 작업별 그래프를 예측하고, 그 그래프를 조건으로 행동 계획을 생성한다. [PDF 4쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/9baf31febefde7bd76023c2d2f13cbd7-Paper-Conference.pdf#page=4) · [PDF 8쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/9baf31febefde7bd76023c2d2f13cbd7-Paper-Conference.pdf#page=8)
 
 ## Evaluation Scope
 

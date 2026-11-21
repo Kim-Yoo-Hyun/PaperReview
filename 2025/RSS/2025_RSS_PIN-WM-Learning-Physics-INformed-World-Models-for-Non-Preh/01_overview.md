@@ -19,9 +19,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, significant challenges arise from the difficulty of fully dictating. the motion and pose of the object being pushed.
-
-방법 관련 발췌 — We introduce PIN-WM, a Physies-INformed World Mode! that allows end-to-end identification of a 3D rigid body ‘dynamical system from visual observations.
+PIN-WM은 물체를 쥐지 않고 밀거나 치는 행동의 결과를 소수의 실제 상호작용 영상으로부터 식별한 물리 모델로 예측한다. [PDF 1쪽](https://www.roboticsproceedings.org/rss21/p153.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 2 Wuhan Universi - extractive body cue:** We introduce PIN-WM, a Physies-INformed World Mode! that allows end-to-end identification of a 3D rigid body ‘dynamical system from visual observations.
-- **p. 2 / 2 Wuhan Universi - extractive body cue:** + We conduct real robot implementation to demonstrate that our approach enables learning control policies with minimal task-agnostic interaction data and attains high performance Real2Sim2Real ...
-- **p. 3 / C. Domain Randomization - extractive body cue:** We provide an overview of our framework in Figure 2
-- **p. 1 / Body text (section boundary not confidently recovered) - extractive body cue:** *Shenzhen University ".
-- **p. 3 / B. World Models for Policy Learning - extractive body cue:** In contrast, PIN-WM enables end-to-end identification of 3D rigid-body dynamics from visual observations using few-shot, task-agnostic interaction data, which facilitates the training of vision-based manipulation ...
-- **p. 7 / A. Evaluations in Simulation - extractive body cue:** All policies are trained until no significant success rate performance can be gained and are then deployed directly to the target domain for evaluation, We ...
-- **p. 8 / A. Evaluations in Simulation - extractive body cue:** Without PADC, our method still outperforms others, although with a performance decrease.
-- **p. 8 / A. Evaluations in Simulation - extractive body cue:** Our method achieves the best performance for both non-prehensile manipulation tasks, thanks to the accurate system identification of PIN-WM and the meaningful digital cousins of ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 미분 가능한 시뮬레이션으로 강체 동역학을 추정하고 물리·렌더링 파라미터를 교란해 여러 환경 변형을 만든다. [PDF 4쪽](https://www.roboticsproceedings.org/rss21/p153.pdf#page=4) · [PDF 5쪽](https://www.roboticsproceedings.org/rss21/p153.pdf#page=5)
+- 변형된 환경에서 비파지 조작 정책을 학습하고 시뮬레이션 및 실물에서 전이 성능을 비교했다. [PDF 8쪽](https://www.roboticsproceedings.org/rss21/p153.pdf#page=8) · [PDF 9쪽](https://www.roboticsproceedings.org/rss21/p153.pdf#page=9)
 
 ## Evaluation Scope
 

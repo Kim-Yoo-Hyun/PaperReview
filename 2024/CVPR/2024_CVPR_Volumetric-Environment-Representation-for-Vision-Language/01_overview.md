@@ -21,9 +21,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Thus, they encounter challenges in capturing 3D geometry and semantics in complex scenes.
-
-방법 관련 발췌 — In this article, we propose a Volumetric Environment Representation (VER) that quantizes the physical world into structured 3D cells (Fig.
+VER는 여러 시점의 영상을 3차원 복셀 상태로 통합해 언어 지시에 따른 다음 이동을 결정하는 표현이다. [PDF 1쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Liu_Volumetric_Environment_Representation_for_Vision-Language_Navigation_CVPR_2024_paper.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -57,16 +55,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** In this article, we propose a Volumetric Environment Representation (VER) that quantizes the physical world into structured 3D cells (Fig.
-- **p. 2 / 1. Introduction - extractive body cue:** As a response, we propose a coarse-to-fine VER extraction architecture, which uses learnable up-sampling operations to construct the representations progressively.
-- **p. 3 / 3. Approach - extractive body cue:** For brevity, we present the technical description in the context of R2R [3].
-- **p. 3 / 3. Approach - extractive body cue:** To achieve comprehensive scene understanding, we introduce VER, which voxelizes the 3D world into structured 3D cells (Fig.
-- **p. 4 / 3.2. Volume State Estimation - extractive body cue:** MLT consists of stacked selfattention blocks.
-- **p. 7 / Figure/Table caption - extractive body cue:** Table 3. Quantitative results on R4R [39] (more details in §4.1). (RGS), and Remote Grounding Success weighted by Path Length (RGSPL) are also employed for ...
-- **p. 7 / 4.2. Diagnostic Experiment - extractive body cue:** After using Episodic Memory, a higher score (i.e., 31.36% →33.71% on RGS) is achieved.
-- **p. 8 / 4.3. Analysis on 3D Representation Learning - extractive body cue:** Our approach improves the performance by solid margins (e.g., 11.03%→ 12.93% for 3D occupancy, 75.14% →75.80% on SR of R2R).
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 다시점 2차원 특징을 공간 셀에 모으고 점유·방 구조·물체 경계 상자를 함께 예측하도록 학습한다. [PDF 3쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Liu_Volumetric_Environment_Representation_for_Vision-Language_Navigation_CVPR_2024_paper.pdf#page=3) · [PDF 5쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Liu_Volumetric_Environment_Representation_for_Vision-Language_Navigation_CVPR_2024_paper.pdf#page=5)
+- 이동하면서 구축한 표현의 현재 상태와 에피소드 기억을 함께 사용해 다음 행동을 선택하고 내비게이션에서 평가했다. [PDF 6쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Liu_Volumetric_Environment_Representation_for_Vision-Language_Navigation_CVPR_2024_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Liu_Volumetric_Environment_Representation_for_Vision-Language_Navigation_CVPR_2024_paper.pdf#page=7)
 
 ## Evaluation Scope
 

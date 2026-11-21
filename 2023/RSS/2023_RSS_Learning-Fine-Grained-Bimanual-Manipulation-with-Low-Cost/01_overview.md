@@ -18,6 +18,10 @@
 - Paper type: theory_or_foundation
 - Source audit: full-text PDF body checked on 2026-09-03 (18 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
+## 공개 자료
+
+- **데이터** ACT 시뮬레이션의 사람 시연 sim_insertion_human/episode_0.hdf5를 확인했다. 실물 시연 전체의 배포 판정은 별도다. [배포 파일](https://drive.google.com/file/d/1KrEtCH-63ULZ8DDmndUyltoZlbKIrc6f/view)
+
 ## Why This Paper Is Here
 
 저비용 양팔 원격조작 장치로 모은 시연을 사용해 정밀 조작용 행동 청크를 학습한다.

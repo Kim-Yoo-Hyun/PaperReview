@@ -18,6 +18,11 @@
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (15 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
+## 공개 자료
+
+- **코드** Recovery RL의 안전 가치 함수와 복구 정책 구현을 저자 저장소에서 확인했다. [배포 파일](https://raw.githubusercontent.com/abalakrishna123/recovery-rl/084c968538850e82776564e07b9dcdffca369936/recovery_rl/qrisk.py)
+- **데이터** 저자 설치 스크립트가 안내하는 shelf·maze 오프라인 복구 시연 압축 파일 recovery_rl_demos.zip의 배포를 확인했다. [배포 파일](https://drive.google.com/file/d/10M7pzsvKP4DcDDqxctDzx_opGfoV6rVt/view)
+
 ## Why This Paper Is Here
 
 Recovery RL은 과제 보상을 높이는 정책과 제약 위반이 예상될 때 개입하는 복구 정책을 분리한다.

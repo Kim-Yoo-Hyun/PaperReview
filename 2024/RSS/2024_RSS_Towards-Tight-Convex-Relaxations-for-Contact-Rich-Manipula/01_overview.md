@@ -19,9 +19,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — The optimality gap δopt can then be overestimated as δopt = Cround -Copt Copt ≤Cround -Crelax Crelax = δrelax (2) Finally, we note that the original problem description in [1], [52] has ...
-
-방법 관련 발췌 — Our method approximates these bilinearities using a tight Semidefinite Programming (SDP) relaxation for each contact mode.
+이 연구는 평면 밀기에서 접촉 순서와 물체 궤적을 함께 구하는 전역 계획 문제에 볼록 완화를 적용한다. [PDF 1쪽](https://www.roboticsproceedings.org/rss20/p132.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 1 / I. INTRODUCTION - extractive body cue:** Our method approximates these bilinearities using a tight Semidefinite Programming (SDP) relaxation for each contact mode.
-- **p. 1 / I. INTRODUCTION - extractive body cue:** As a first application for evaluating our method, this work explores the task of planar pushing, first studied by Mason in [2].
-- **p. 2 / I. INTRODUCTION - extractive body cue:** of planar pushing, the technique we introduce generalizes naturally to more complex multi-contact problems.
-- **p. 3 / IV. HIGH-LEVEL APPROACH - extractive body cue:** The second step in our method is to formulate the global motion planning problem as an SPP in a GCS [1].
-- **p. 2 / III. PROBLEM STATEMENT - extractive body cue:** As a first application of our method, we explore planar pushing, a non-prehensile manipulation task where the robot uses a cylindrical finger to manipulate the ...
-- **p. 9 / VIII. EXPERIMENTS - extractive body cue:** For both slider geometries, we achieve a success rate of 100%, that is, the rounding step is able to retrieve a feasible solution for all ...
-- **p. 9 / VIII. EXPERIMENTS - extractive body cue:** As our method is capable of global reasoning and does not rely on an initial guess, it has a much higher success rate compared to ...
-- **p. 8 / VIII. EXPERIMENTS - extractive body cue:** Planner performance We evaluate the global optimality of the motion planner by generating 100 motion plans for the two slider geometries, with random initial and ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 접촉 모드를 볼록 집합의 그래프로 나타내고 각 모드의 준정적 동역학을 준정부호 계획으로 완화한다. [PDF 4쪽](https://www.roboticsproceedings.org/rss20/p132.pdf#page=4) · [PDF 5쪽](https://www.roboticsproceedings.org/rss20/p132.pdf#page=5)
+- 완화해에서 실행 가능한 궤적을 복원해 평면 밀기의 최적 비용 하한과 비교하고 실제 로봇에서 계획을 시험했다. [PDF 8쪽](https://www.roboticsproceedings.org/rss20/p132.pdf#page=8) · [PDF 9쪽](https://www.roboticsproceedings.org/rss20/p132.pdf#page=9)
 
 ## Evaluation Scope
 

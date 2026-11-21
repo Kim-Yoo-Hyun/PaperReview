@@ -19,9 +19,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Since pretrained open-source manipulation datasets rarely include tactile information, researchers [4, 21, 43] often address this limitation by incorporating these modalities during downstream tasks finetuning.
-
-방법 관련 발췌 — Our main contributions are as follows: 1) We propose Adaptive Tactile Injection, making the first attempt to balance pretrained knowledge with the learning of newly introduced tactile representations.
+AT-VLA는 조작 중 촉각이 필요한 때와 모델 안에서 사용할 위치를 선택해 접촉 변화에 빠르게 반응한다. [PDF 1쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Li_AT-VLA_Adaptive_Tactile_Injection_for_Enhanced_Feedback_Reaction_in_Vision-Language-Action_CVPR_2026_paper.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** Our main contributions are as follows: 1) We propose Adaptive Tactile Injection, making the first attempt to balance pretrained knowledge with the learning of newly ...
-- **p. 4 / 3.2. Adaptive Tactile Injection - extractive body cue:** Therefore, to address these issues, we propose the Adaptive Tactile Injection module, which dynamically controls when and where tactile feedback is injected and enables the ...
-- **p. 5 / 3.3. Effective Tactile Reaction Dual-Stream - extractive body cue:** Concretely, we propose a Tactile Generation strategy, which enables the model to forecast both the 3D normal and tangential forces for the next time step.
-- **p. 2 / 1. Introduction - extractive body cue:** Specifically, a learnable Tactile Gate is designed to automatically modulate the contribution of each modality across different manipulation phases, determining whether tactile features should be ...
-- **p. 4 / 3.1. Framework of AT-VLA - extractive body cue:** To enable the model to handle contact-rich tasks, we introduce an additional tactile encoder.
-- **p. 5 / 4.2. Contact-rich Task Evaluation - extractive body cue:** It can reflect how much improvement our method achieves.
-- **p. 6 / 4.2. Contact-rich Task Evaluation - extractive body cue:** During the contact-rich stage, AT-VLA achieves an improvement over them, clearly demonstrating the necessity of tactile signals for complex manipulation tasks.
-- **p. 6 / 4.2. Contact-rich Task Evaluation - extractive body cue:** Furthermore, when compared with policies that incorporate tactile feedback like VTLA and RDP, our model still achieves superior performance in contact-rich phase manipulation, validating the ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 적응형 주입 모듈이 기존 시각·언어 표현에 촉각 정보를 어느 시점과 층에서 결합할지 결정한다. [PDF 3쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Li_AT-VLA_Adaptive_Tactile_Injection_for_Enhanced_Feedback_Reaction_in_Vision-Language-Action_CVPR_2026_paper.pdf#page=3) · [PDF 4쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Li_AT-VLA_Adaptive_Tactile_Injection_for_Enhanced_Feedback_Reaction_in_Vision-Language-Action_CVPR_2026_paper.pdf#page=4)
+- 느린 시각·언어 처리와 빠른 촉각 제어를 나누고 실물 접촉 조작에서 반응과 과제 수행을 평가했다. [PDF 6쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Li_AT-VLA_Adaptive_Tactile_Injection_for_Enhanced_Feedback_Reaction_in_Vision-Language-Action_CVPR_2026_paper.pdf#page=6) · [PDF 8쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Li_AT-VLA_Adaptive_Tactile_Injection_for_Enhanced_Feedback_Reaction_in_Vision-Language-Action_CVPR_2026_paper.pdf#page=8)
 
 ## Evaluation Scope
 

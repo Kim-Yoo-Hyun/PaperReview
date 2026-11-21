@@ -21,9 +21,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — To fill in this gap, EquAct proposes 18 RLBench with SE(3) initialization to mimic physical world settings.
-
-방법 관련 발췌 — We propose a continuous SE(3)-equivariant keyframe policy that includes a novel equivariant U-net architecture, a novel invariant FiLM layer, and a novel equivariant field network.
+EquAct는 장면의 회전·이동에 맞춰 조작 자세 예측도 변하도록 언어 조건부 3차원 정책을 설계했다. [PDF 1쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/0dadf17389895a1d660a178d1140e07c-Paper-Conference.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -57,16 +55,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1 Introduction - extractive body cue:** We propose a continuous SE(3)-equivariant keyframe policy that includes a novel equivariant U-net architecture, a novel invariant FiLM layer, and a novel equivariant field network.
-- **p. 6 / 4 Method - extractive body cue:** To extend this operation to the spherical Fourier domain, we propose a novel spherical Fourier upsampling method (Figure 3 (b) right).
-- **p. 2 / 1 Introduction - extractive body cue:** While achieving state-of-the-art performance on 18 RLBench SE(2) and SE(3) benchmarks, our method leverages a spherical Fourier representation to achieve computational efficiency during both training ...
-- **p. 6 / 4 Method - extractive body cue:** 4.3 Invariant Feature-wise Linear Modulation Layers (iFiLM) We propose invariant Feature-wise Linear Modulation (iFiLM) layers (Figure 3 (b) left) to enforce the geometric invariance of ...
-- **p. 3 / 2 Background - extractive body cue:** The first class consists of multi-viewbased methods [14, 15, 66, 73, 8], where the 3D scene is projected into three orthogonal image planes.
-- **p. 8 / 5 Experiments - extractive body cue:** On average, EquAct outperforms all the baselines on all 3 settings. avg. success rate ↑ open drawer slide block sweep dust. meat off grill Method ...
-- **p. 9 / 5 Experiments - extractive body cue:** Finally, aug. →no aug. indicates using data augmentation can further improve performance, we hypothesize that data augmentation reduces numerical error in the equivariant neural networks.
-- **p. 7 / 5 Experiments - extractive body cue:** We report the task success rate over 25 evaluation episodes per task, with a maximum of 25 steps per episode.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 구면 푸리에 특징을 쓰는 점군 U-Net과 변환에 불변인 언어 조건화 층 iFiLM을 결합한다. [PDF 4쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/0dadf17389895a1d660a178d1140e07c-Paper-Conference.pdf#page=4) · [PDF 6쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/0dadf17389895a1d660a178d1140e07c-Paper-Conference.pdf#page=6)
+- 변환한 RLBench 장면과 실물 조작에서 물체의 자세가 훈련 분포와 달라질 때의 일반화를 시험했다. [PDF 8쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/0dadf17389895a1d660a178d1140e07c-Paper-Conference.pdf#page=8) · [PDF 9쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/0dadf17389895a1d660a178d1140e07c-Paper-Conference.pdf#page=9)
 
 ## Evaluation Scope
 

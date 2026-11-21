@@ -19,9 +19,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — This represents a crucial limitation because humans perceive and interact with the world in three dimensions.
-
-방법 관련 발췌 — In this paper, we introduce PointVLA, a novel framework that integrates point clouds into pre-trained visionlanguage-action models.
+PointVLA는 기존 VLA의 동작 예측기에 점군 정보를 더해 관측된 3차원 형상을 조작에 이용한다. [PDF 1쪽](https://arxiv.org/pdf/2503.07511#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** In this paper, we introduce PointVLA, a novel framework that integrates point clouds into pre-trained visionlanguage-action models.
-- **p. 2 / 1. Introduction - extractive body cue:** To address this, we propose a 3D modular block that injects point cloud information directly into the action expert.
-- **p. 4 / 3.2. Injecting Point Cloud into VLA - extractive body cue:** To circumvent these issues, we propose a paradigm that treats 3D point cloud data as a complementary conditioning signal rather than a primary input modality.
-- **p. 3 / 3. Methodology - extractive body cue:** This training enables effective alignment of image and text representations within a shared embedding space.
-- **p. 4 / 3.2. Injecting Point Cloud into VLA - extractive body cue:** However, as this is not the core novelty of our approach, we leave it for future discussion.
-- **p. 8 / 4.6. Experimental Results on Simulation Bench - extractive body cue:** Notably, across all tasks and diverse settings, our proposed PointVLA achieves the highest average success rate, regardless of whether it is trained on 20 or ...
-- **p. 8 / 4.6. Experimental Results on Simulation Bench - extractive body cue:** The mean and standard deviation of these success rates were computed to obtain the experimental results presented below.
-- **p. 7 / 4.2. Few-Shot Multi-Tasking - extractive body cue:** We show experimental results on the bottom table. sented in Table 6, where our method outperforms all baselines in this scenario.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 기존 행동 전문가를 고정하고, 일부 블록을 건너뛰었을 때의 변화를 분석해 점군 특징을 넣을 위치를 고른다. [PDF 3쪽](https://arxiv.org/pdf/2503.07511#page=3) · [PDF 5쪽](https://arxiv.org/pdf/2503.07511#page=5)
+- 가벼운 추가 모듈을 학습한 정책을 시뮬레이션과 실물에서 2차원 관측 기반 조작 정책과 비교했다. [PDF 6쪽](https://arxiv.org/pdf/2503.07511#page=6) · [PDF 7쪽](https://arxiv.org/pdf/2503.07511#page=7)
 
 ## Evaluation Scope
 

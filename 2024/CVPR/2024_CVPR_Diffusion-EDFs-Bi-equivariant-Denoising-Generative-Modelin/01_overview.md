@@ -19,9 +19,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, these methods require numerous demonstrations and do not generalize well on novel task configurations that are not provided during training.
-
-방법 관련 발췌 — This enables our method to be trained end-to-end from only 5∼10 human demonstrations without requiring any pre-training and object segmentation, yet are highly generalizable to out-of-distribution object configurations.
+Diffusion-EDFs는 장면과 조작 대상 좌표계의 변환을 모두 반영하도록 SE(3) 위에서 조작 자세를 확산 생성한다. [PDF 1쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Ryu_Diffusion-EDFs_Bi-equivariant_Denoising_Generative_Modeling_on_SE3_for_Visual_Robotic_CVPR_2024_paper.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 1 / 1. Introduction - extractive body cue:** This enables our method to be trained end-to-end from only 5∼10 human demonstrations without requiring any pre-training and object segmentation, yet are highly generalizable to ...
-- **p. 1 / 1. Introduction - extractive body cue:** A) and locality of robotic manipulation tasks in our method design.
-- **p. 4 / 3.5. Bi-equivariant Score Model - extractive body cue:** (12), we propose the following models: sν;t(g/Os, Oe) = Z R3d3x ρν;t(x/Oe) esν;t(g, x/Os, Oe) (24) sω;t(g/Os, Oe) = Z R3d3x ρω;t(x/Oe) esω;t(g, x/Os, Oe) ...
-- **p. 4 / 3.5. Bi-equivariant Score Model - extractive body cue:** (28)) of the score field, we propose using the following model with two EDFs: es□;t(g, x/Os, Oe) = ψ□;t(x/Oe) ⊗(→1) □;t D(R-1) φ□;t(g x/Os) (29) ...
-- **p. 5 / 4.2. Architecture of Equivariant Descriptor Fields - extractive body cue:** This increased receptive field enables Diffusion-EDFs to understand scene-level context.
-- **p. 6 / 5. Experiments and Results - extractive body cue:** Without object segmentation, R-NDFs achieve zero success rates due to the lack of locality in their method design [15, 37, 61].
-- **p. 6 / 5. Experiments and Results - extractive body cue:** In particular, we measure the pick-andplace success rate for two different object categories: mugs and bottles (see Fig.
-- **p. 7 / 5. Experiments and Results - extractive body cue:** Pick-and-place success rates in various out-of-distribution settings in simulated environment.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 두 좌표계에 대해 등변인 점수 함수를 학습해 회전과 병진을 포함한 파지·배치 자세를 샘플링한다. [PDF 3쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Ryu_Diffusion-EDFs_Bi-equivariant_Denoising_Generative_Modeling_on_SE3_for_Visual_Robotic_CVPR_2024_paper.pdf#page=3) · [PDF 4쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Ryu_Diffusion-EDFs_Bi-equivariant_Denoising_Generative_Modeling_on_SE3_for_Visual_Robotic_CVPR_2024_paper.pdf#page=4)
+- 소수의 사람 시연으로 학습한 뒤 물체 자세가 바뀌는 조건에서 일반화와 실물 조작 성능을 평가했다. [PDF 6쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Ryu_Diffusion-EDFs_Bi-equivariant_Denoising_Generative_Modeling_on_SE3_for_Visual_Robotic_CVPR_2024_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Ryu_Diffusion-EDFs_Bi-equivariant_Denoising_Generative_Modeling_on_SE3_for_Visual_Robotic_CVPR_2024_paper.pdf#page=7)
 
 ## Evaluation Scope
 

@@ -19,9 +19,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — These differentiable simulators have facilitated gradient-based trajectory optimizers to find a motion trajectory with much fewer samples, compared with black box optimizers such as CEM or reinforcement learning algorithms (Huang et al. ...
-
-방법 관련 발췌 — Our method consists of three components, (1) a trajectory optimizer that acts as an expert that applies gradient-based optimization on the differentiable simulator to obtain demonstration trajectories, which requires the full state ...
+DiffSkill은 미분 가능한 물리 시뮬레이터에서 찾은 짧은 도구 사용 기술을 조합해 긴 변형 물체 조작을 해결한다. [PDF 1쪽](https://arxiv.org/pdf/2203.17275#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** Our method consists of three components, (1) a trajectory optimizer that acts as an expert that applies gradient-based optimization on the differentiable simulator to obtain ...
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** To extend the use of differentiable physics models to these long-horizon tasks and enable the agent to directly consume visual observations, we propose DiffSkill: a ...
-- **p. 4 / 2 METHOD - extractive body cue:** As such, we propose to learn a neural skill abstractor that learns skills from the demonstration videos of a trajectory optimizer; we will then leverage ...
-- **p. 4 / 2 METHOD - extractive body cue:** Our neural skill abstraction consists of a goal-conditioned policy that takes a sensory observation (RGB-D images in our case) as input, a feasibility and reward ...
-- **p. 1 / 1 INTRODUCTION - extractive body cue:** The recent development of differentiable physics simulators for deformable objects has shown promising results for solving soft-body control problems (Hu et al., 2019b; Murthy et ...
-- **p. 7 / 3 EXPERIMENTS - extractive body cue:** Each entry shows the normalized improvement / success rate.
-- **p. 7 / 3 EXPERIMENTS - extractive body cue:** Method Task (H) LiftSpread (2) GatherTransport (2) CutRearrange (3) Tool A only Trajectory Opt (Oracle) 0.755 / 0% 0.386 / 0% 0.033 / 0% Behavior ...
-- **p. 8 / 3 EXPERIMENTS - extractive body cue:** Method Task LiftSpread GatherTransport CutRearrange No Discrete Planning 0.758 / 20% 0.312 / 0% 0.118 / 0% Direct Execution (Random) 0.593 / 15% 0.369 / ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 시뮬레이터 전체 상태로 도구별 궤적을 최적화하고 그 시연으로 RGB-D에서 사용할 신경망 기술 모델을 학습한다. [PDF 3쪽](https://arxiv.org/pdf/2203.17275#page=3) · [PDF 4쪽](https://arxiv.org/pdf/2203.17275#page=4)
+- 중간 목표와 기술 순서를 계획해 단일 기술로 끝낼 수 없는 장기 도구 사용 과제에서 평가했다. [PDF 5쪽](https://arxiv.org/pdf/2203.17275#page=5) · [PDF 8쪽](https://arxiv.org/pdf/2203.17275#page=8)
 
 ## Evaluation Scope
 

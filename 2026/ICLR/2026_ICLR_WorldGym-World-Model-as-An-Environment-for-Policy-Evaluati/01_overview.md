@@ -19,9 +19,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — As a result, the sim-to-real gap has hindered progress in robotics (Zhao et al., 2020; Salvato et al., 2021; Dulac-Arnold et al., 2019).
-
-방법 관련 발췌 — Key contributions of this paper include: • We propose to use video world model to evaluate robot policies across different robot morphologies, and perform a comprehensive set of studies to understand its ...
+WorldGym은 실제 초기 영상에서 출발해 정책을 영상 세계 모델 안에서 실행하고 그 결과로 실물 정책 성능을 가늠한다. [PDF 1쪽](https://arxiv.org/pdf/2506.00613#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** Key contributions of this paper include: • We propose to use video world model to evaluate robot policies across different robot morphologies, and perform a ...
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** Inspired by this observation, we propose a world-model-based policy evaluation environment (WorldGym), as shown in Figure 1.
-- **p. 3 / 1 INTRODUCTION - extractive body cue:** To ensure the world model is fully controllable by robot actions, we propose to randomly drop out actions for entire video clips, and use classifier-free ...
-- **p. 4 / 1 INTRODUCTION - extractive body cue:** We propose setting the horizon equal to the policy's action chunk size, /apred/.
-- **p. 5 / 1 INTRODUCTION - extractive body cue:** Specifically, the OpenVLA Bridge evaluation consists of 17 challenging tasks which are not present in the Bridge V2 (Walke et al., 2023) dataset.
-- **p. 17 / Figure/Table caption - extractive body cue:** Table 3: Performance of VLM as reward (mean and standard error across 4 runs) on videos from RT-1 (Brohan et al., 2022) using ground truth ...
-- **p. 6 / Figure/Table caption - extractive body cue:** Figure 6: Success Rates of different model versions in WorldGym. We evaluate different generations of Octo and OpenVLA in the world model, showing that WorldGym ...
-- **p. 23 / Figure/Table caption - extractive body cue:** Table 5: Detailed Bridge Evaluation Results comparing RT-1-X (O'Neill et al., 2023), Octo (Octo Model Team et al., 2024), and OpenVLA (Kim et al.) on ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 행동 조건부 자기회귀 영상 모델에서 여러 롤아웃을 생성한 뒤 시각·언어 모델로 과제 보상을 추정한다. [PDF 3쪽](https://arxiv.org/pdf/2506.00613#page=3) · [PDF 4쪽](https://arxiv.org/pdf/2506.00613#page=4)
+- 시험한 정책 버전·규모·체크포인트에서 예측한 성공률과 순위를 실제 로봇 측정치와 대조했다. [PDF 6쪽](https://arxiv.org/pdf/2506.00613#page=6) · [PDF 7쪽](https://arxiv.org/pdf/2506.00613#page=7)
 
 ## Evaluation Scope
 

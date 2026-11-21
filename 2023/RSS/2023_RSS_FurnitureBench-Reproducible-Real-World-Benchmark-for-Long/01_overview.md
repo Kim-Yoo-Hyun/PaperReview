@@ -19,9 +19,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Furniture assembly is a proper task suite to benchmark a difficult, long-horizon manipulation task through which many challenges in robotic manipulation must be addressed to solve.
-
-방법 관련 발췌 — The main contributions of this paper are as follows: • We introduce FurnitureBench, a real-world furniture assembly benchmark, which allows robotics researchers to investigate RL, IL, and TAMP algorithms on a realistic ...
+FurnitureBench는 실물 가구 조립에서 긴 행동열과 정밀한 부품 결합을 반복 가능한 조건으로 시험하는 벤치마크다. [PDF 1쪽](https://arxiv.org/pdf/2305.12821#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / I. INTRODUCTION - extractive body cue:** The main contributions of this paper are as follows: • We introduce FurnitureBench, a real-world furniture assembly benchmark, which allows robotics researchers to investigate RL, ...
-- **p. 2 / I. INTRODUCTION - extractive body cue:** To this end, we propose to focus on furniture assembly as the next milestone for complex, long-horizon robotic manipulation, and present FurnitureBench, a reproducible real-world ...
-- **p. 1 / Abstract - extractive body cue:** To enable more complex, long-horizon behaviors of an autonomous robot, we propose to focus on real-world furniture assembly, a complex, longhorizon robot manipulation task that ...
-- **p. 1 / Abstract - extractive body cue:** We present FurnitureBench, a reproducible real-world furniture assembly benchmark aimed at providing a low barrier for entry and being easily reproducible, so that researchers across ...
-- **p. 7 / VI. BENCHMARKING RESULTS - extractive body cue:** The "pushing" skill in drawer achieves 30% success rate, which is slightly worse than that of the "grasping" skill (60%), with BC.
-- **p. 7 / VI. BENCHMARKING RESULTS - extractive body cue:** However, in lamp and round_table, where the round-shaped parts need to be screwed, IQL struggles and achieves only 10% and 0% success rates, respectively.
-- **p. 8 / VI. BENCHMARKING RESULTS - extractive body cue:** Figures 8 and 10 show that IQL-R3M achieves 4 phases on average and 40% success rate on the low randomness level.
-- **p. 6 / Figure/Table caption - extractive body cue:** Fig. 8: Correlation between FurnitureBench and Furni- tureSim. We compare the performance of IL and offline RL methods with respect to the dataset size between ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 재현 가능한 조립 부품·초기화 절차·환경 설치법과 사람 시연을 제공한다. [PDF 3쪽](https://arxiv.org/pdf/2305.12821#page=3) · [PDF 5쪽](https://arxiv.org/pdf/2305.12821#page=5)
+- 실물에 대응하는 FurnitureSim을 구성하고 시연 학습 등 기준 방법의 성능을 가구와 조립 단계에 따라 비교했다. [PDF 6쪽](https://arxiv.org/pdf/2305.12821#page=6) · [PDF 9쪽](https://arxiv.org/pdf/2305.12821#page=9)
 
 ## Evaluation Scope
 

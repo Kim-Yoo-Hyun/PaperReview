@@ -21,9 +21,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — training high-capacity models such as Transformers using RL algorithms has proven more difficult to instantiate effectively at large scale.
-
-방법 관련 발췌 — We propose a specific regularizer that minimizes values of every action that was not taken in the dataset and show that our method can learn from both narrow demonstration-like data and broader ...
+Q-Transformer는 고차원 로봇 행동을 차원별 이산 선택으로 풀어 여러 조작 작업의 Q 함수를 학습한다. [PDF 1쪽](https://proceedings.mlr.press/v229/chebotar23a/chebotar23a.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -57,16 +55,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1 Introduction - extractive body cue:** We propose a specific regularizer that minimizes values of every action that was not taken in the dataset and show that our method can learn ...
-- **p. 4 / 3 Background - extractive body cue:** Next, we introduce a particular conservative Q-function regularizer that enables learning from offline datasets.
-- **p. 1 / 1 Introduction - extractive body cue:** Human demonstrations Autonomous data Conservative regularization Autoregressive Q-learning Monte-Carlo returns Mixed quality data environment step action dimension … … Q-values per action dimension Q-Transformer Figure ...
-- **p. 2 / 1 Introduction - extractive body cue:** In summary, our main contribution is the Q-Transformer, a Transformer-based architecture for robotic offline reinforcement learning that makes use of per-dimension tokenization of Q-values and ...
-- **p. 1 / Abstract - extractive body cue:** Our method uses a Transformer to provide a scalable representation for Q-functions trained via offline temporal difference backups.
-- **p. 7 / 5 Experiments - extractive body cue:** Q-Transformer has the highest success rate and outperforms both the behavior cloning baseline (RT-1) and offline RL baselines (Decision Transformer, IQL), exceeding the average performance ...
-- **p. 8 / Figure/Table caption - extractive body cue:** Figure 6: Left: Ablations: changing to softmax conservatism decreases performance. Removing MC returns or conservatism completely collapse performance. Top Right: The n-step return ver- sion ...
-- **p. 7 / 5 Experiments - extractive body cue:** 5.2 Benchmarking in simulation Training steps Success rate QT-Opt CQL AW-Opt IQL Q-Transformer (ours) Decision Transformer RT-1 BC Figure 5: Performance comparison on a simulated ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 앞선 행동 차원의 선택을 조건으로 다음 차원의 Q 값을 트랜스포머로 나타내고 오프라인 시간차 학습을 적용한다. [PDF 3쪽](https://proceedings.mlr.press/v229/chebotar23a/chebotar23a.pdf#page=3) · [PDF 4쪽](https://proceedings.mlr.press/v229/chebotar23a/chebotar23a.pdf#page=4)
+- 사람 시연과 로봇이 자율 수집한 자료를 함께 사용해 실제 조작 과제에서 모방학습·오프라인 강화학습 기준선과 비교했다. [PDF 6쪽](https://proceedings.mlr.press/v229/chebotar23a/chebotar23a.pdf#page=6) · [PDF 7쪽](https://proceedings.mlr.press/v229/chebotar23a/chebotar23a.pdf#page=7)
 
 ## Evaluation Scope
 

@@ -19,6 +19,10 @@
 
 > DOC-QA2 targeted source review: 2026-10-23; PDF pp. 2. 손상 구간·직접 연결된 표 분류만 원문 이미지와 대조했다. 전체 주장 정독·실험 검증·reading status 승격을 뜻하지 않는다. [URL·PDF hash·수정 기록](../../../work/sources/pdf_note_review_followup_2026-10-23.json).
 
+## 공개 자료
+
+- **코드** D4RL 실험에 쓰는 보수적 Q 손실과 정책 갱신 구현을 확인했다. [배포 파일](https://raw.githubusercontent.com/aviralkumar2907/CQL/d67dbe9cf5d2b96e3b462b6146f249b3d6569796/d4rl/rlkit/torch/sac/cql.py)
+
 ## Why This Paper Is Here
 
 CQL은 고정된 오프라인 자료로 정책을 학습할 때 자료 밖 행동의 가치가 과대평가되는 문제를 다룬다.

@@ -19,9 +19,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Recent progress in open-source large-scale data collection [14, 75] has made this path possible, but the heterogeneity (such as varying robot hardware and different environments) present in large-scale robotic data has posed ...
-
-방법 관련 발췌 — We introduce Heterogeneous Pre-trained Transformers (HPT), a family of architecture designed to scalably learn from data across heterogeneous embodiments.
+HPT는 다른 로봇의 시각과 고유수용감각을 공통 토큰으로 바꿔 공유 트랜스포머를 사전학습한다. [PDF 1쪽](https://arxiv.org/pdf/2409.20537#page=1)
 
 ## Problem and Motivation
 
@@ -54,16 +52,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1 Introduction - extractive body cue:** We introduce Heterogeneous Pre-trained Transformers (HPT), a family of architecture designed to scalably learn from data across heterogeneous embodiments.
-- **p. 2 / 1 Introduction - extractive body cue:** In this work, we propose to address this issue by aligning the proprioception and vision information from different embodiments to a shared "language" of policies ...
-- **p. 5 / 1 Introduction - extractive body cue:** This is used as the input sequence to the trunk that we introduce below.
-- **p. 4 / 1 Introduction - extractive body cue:** These tokenizers map heterogeneous inputs from different embodiments to a fixed number of tokens with fixed dimensions, which enables the trunk to treat them in ...
-- **p. 5 / 1 Introduction - extractive body cue:** We show illustrations of dataset mixtures (each color is a distinct embodiment) from different domains including real robot teleop [14], deployed robots [38], simulations, and ...
-- **p. 22 / Figure/Table caption - extractive body cue:** Figure 17: Simulation Task Performance compared with Single-Task Policy in LeRobot Implementation. We do evaluation in a different implementation in unseen simulation benchmarks. Left) we ...
-- **p. 9 / Figure/Table caption - extractive body cue:** Figure 10: Success Rates in Simulation Experiments. (a) We evaluate transfer learning performance of models from HPT-B to HPT-XL on tasks across 4 different simulator ...
-- **p. 10 / Figure/Table caption - extractive body cue:** Figure 12: Transfer Learning in the Real World. We evaluate the pre-trained HPTs on four tasks / two embodiments. The average success rate with standard ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 로봇에 맞춘 입력부와 행동 출력부 사이에 공통 몸통을 두어 관측·행동 규격이 다른 데이터셋을 함께 쓴다. [PDF 3쪽](https://arxiv.org/pdf/2409.20537#page=3) · [PDF 4쪽](https://arxiv.org/pdf/2409.20537#page=4)
+- 사전학습에 참여한 자료와 모델 규모에 따른 변화를 조사하고 새 시뮬레이션·실물 과제에서 미세조정 성능을 비교했다. [PDF 6쪽](https://arxiv.org/pdf/2409.20537#page=6) · [PDF 8쪽](https://arxiv.org/pdf/2409.20537#page=8)
 
 ## Evaluation Scope
 

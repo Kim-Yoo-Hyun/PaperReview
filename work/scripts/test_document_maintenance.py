@@ -55,6 +55,15 @@ class DocumentMaintenanceTest(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, r"pr-0001 sources\.code"):
             check_applied(rows, [paper], Path("."))
 
+    def test_later_review_keeps_original_sample_and_unchecked_fields_intact(self):
+        row = {"checks": {"link": {"status": PASS, "endpoints": {"primary": {"state": "opened"}}},
+                          "summary": {"status": OPEN}, "weights": {"status": OPEN}, "data": {"status": OPEN}},
+               "summary_review": {"status": PASS},
+               "artifact_review": {"fields": {"weights": {"status": PASS}, "data": {"status": OPEN}}}}
+        self.assertEqual(current_checks(row, include_reviews=False),
+                         {"link": PASS, "summary": OPEN, "weights": OPEN, "data": OPEN})
+        self.assertEqual(current_checks(row), {"link": PASS, "summary": PASS, "weights": PASS, "data": OPEN})
+
     def test_legacy_code_scope_normalizes_and_unrecognized_scopes_fail(self):
         code = {"kind": "official_code", "url": "https://example.org/repository",
                 "scope": "code_repository", "verified_on": "2026-11-18"}

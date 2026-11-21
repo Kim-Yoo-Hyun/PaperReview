@@ -23,9 +23,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — The failures of the Nearest-Neighbor baseline, with only 0-4% success rate, show that generalization is required for this task.
-
-방법 관련 발췌 — In this work, we propose to reformulate BC using implicit models - specifically, the composition of argmin with a continuous energy function Eθ (see Sec.
+IBC는 관측에서 단일 동작을 직접 회귀하는 대신 관측과 후보 행동의 적합도를 에너지 함수로 학습한다. [PDF 1쪽](https://proceedings.mlr.press/v164/florence22a/florence22a.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -59,16 +57,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 1 / 1 Introduction - extractive body cue:** In this work, we propose to reformulate BC using implicit models - specifically, the composition of argmin with a continuous energy function Eθ (see Sec.
-- **p. 2 / 1 Introduction - extractive body cue:** 2), to build intuition on the nature of implicit models, we present their empirical properties (Sec.
-- **p. 2 / 1 Introduction - extractive body cue:** Given a dataset of samples {xi,yi}, and regression bounds ymin,ymax ∈Rm, training consists of generating a set of negative counter-examples {˜yj i}Nneg. j=1 for each ...
-- **p. 5 / 1 Introduction - extractive body cue:** Simulated Pushing consists of a simulated 6DoF robot xArm6 in PyBullet [29] equipped with a small cylindrical end effector.
-- **p. 5 / 1 Introduction - extractive body cue:** Planar Sweeping [32] is a 2D environment that consists of an agent (in the form of a blue stick) where the task is to push ...
-- **p. 5 / Figure/Table caption - extractive body cue:** Table 2. Baseline comparisons on D4RL [17] tasks with human-expert data. Results shown are the average of 3 random seeds, 100 evaluations each, with ± ...
-- **p. 6 / Figure/Table caption - extractive body cue:** Table 6. Real-world robot results, success % shown is mean +/- std.dev (20 rollouts per seed, 3 seeds = 60 trials per method per task). ...
-- **p. 7 / Figure/Table caption - extractive body cue:** Figure 9. Results using our hardware configuration (a, see Appendix for full description) on real-world visual manipulation tasks, including (b) multi-modal targeted block pushing, (c) ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 전문가 행동과 비교용 행동 표본을 구분하도록 학습한 뒤 추론 시 에너지가 낮은 행동을 탐색한다. [PDF 2쪽](https://proceedings.mlr.press/v164/florence22a/florence22a.pdf#page=2) · [PDF 3쪽](https://proceedings.mlr.press/v164/florence22a/florence22a.pdf#page=3)
+- 명시적 행동 복제와 비교하고 D4RL 전문가 데이터 및 실물 조작에서 다중 해와 불연속적인 동작 선택을 평가했다. [PDF 5쪽](https://proceedings.mlr.press/v164/florence22a/florence22a.pdf#page=5) · [PDF 7쪽](https://proceedings.mlr.press/v164/florence22a/florence22a.pdf#page=7)
 
 ## Evaluation Scope
 

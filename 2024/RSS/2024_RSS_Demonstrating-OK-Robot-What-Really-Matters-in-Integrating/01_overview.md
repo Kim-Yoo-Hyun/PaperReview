@@ -19,9 +19,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — We also find that using heuristics to counteract the robot's physical limitations can lead to a better success rate in the real world (see Section II-D.) • Several challenges still remain: While, ...
-
-방법 관련 발췌 — We present OK-Robot, an Open Knowledge Robot that integrates state-of-the-art VLMs with powerful robotics primitives for navigation and grasping to enable pick-and-drop.
+OK-Robot은 공개 인식·파지 모델과 이동 계획을 결합해 이전에 보지 못한 집에서 언어로 지시한 물체를 옮긴다. [PDF 1쪽](https://www.roboticsproceedings.org/rss20/p091.pdf#page=1) · [PDF 2쪽](https://www.roboticsproceedings.org/rss20/p091.pdf#page=2)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / I. INTRODUCTION - extractive body cue:** We present OK-Robot, an Open Knowledge Robot that integrates state-of-the-art VLMs with powerful robotics primitives for navigation and grasping to enable pick-and-drop.
-- **p. 3 / II. TECHNICAL COMPONENTS AND METHOD - extractive body cue:** The system we introduce is a combination of three primary subsystems combined on a Hello Robot: Stretch.
-- **p. 3 / II. TECHNICAL COMPONENTS AND METHOD - extractive body cue:** This manual scan simply consists of taking a video of the home using the Record3D app on the iPhone, which results in a sequence of ...
-- **p. 4 / II. TECHNICAL COMPONENTS AND METHOD - extractive body cue:** If -→p is the grasp point and -→a is the approach vector given by the grasping model, our robot gripper follows the following trajectory: ⟨-→p ...
-- **p. 2 / I. INTRODUCTION - extractive body cue:** However, this success rate is largely dependant on the "naturalness" of the environment, as we show that with improving the queries, decluttering the space, and ...
-- **p. 6 / III. EXPERIMENTS - extractive body cue:** Results of home experiments Over the 10 home environment, OK-Robot achieved a 58.5% success rates in completing full pick-and-drops.
-- **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1: OK-Robot is an Open Knowledge robotic system, which integrates a variety of learned models trained on publicly available data, to pick and drop ...
-- **p. 7 / III. EXPERIMENTS - extractive body cue:** Similarly, as we clean up clutters from the environment, we find that the manipulation accuracy also improves and the error rates decrease from 25% to ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 공간에 등록한 물체 특징을 질의해 이동 목표를 정하고 현장 RGB-D 관측으로 파지와 내려놓기를 실행한다. [PDF 3쪽](https://www.roboticsproceedings.org/rss20/p091.pdf#page=3) · [PDF 4쪽](https://www.roboticsproceedings.org/rss20/p091.pdf#page=4)
+- 여러 실제 가정에서 장면 혼잡도와 개별 구성 요소의 실패가 전체 작업의 성공에 미치는 영향을 분석했다. [PDF 6쪽](https://www.roboticsproceedings.org/rss20/p091.pdf#page=6) · [PDF 7쪽](https://www.roboticsproceedings.org/rss20/p091.pdf#page=7)
 
 ## Evaluation Scope
 

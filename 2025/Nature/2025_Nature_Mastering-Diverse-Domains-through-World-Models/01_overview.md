@@ -20,9 +20,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — The actor and critic predict actions at and values vt and learn from trajectories of abstract representations predicted by the world model. problem without human data has been widely recognized as a ...
-
-방법 관련 발췌 — We present DreamerV3, a general algorithm that outperforms specialized methods across over 150 diverse tasks, with a single configuration.
+DreamerV3는 서로 다른 보상 규모와 관측 조건의 제어 과제에서 같은 설정으로 세계 모델과 정책을 학습한다. [PDF 1쪽](https://www.nature.com/articles/s41586-025-08744-2.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -56,16 +54,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 1 / Abstract - extractive body cue:** We present DreamerV3, a general algorithm that outperforms specialized methods across over 150 diverse tasks, with a single configuration.
-- **p. 2 / Abstract - extractive body cue:** We present Dreamer, a general algorithm that outperforms specialized expert algorithms across a wide range of domains while using fixed hyperparameters, making reinforcement learning readily ...
-- **p. 3 / Abstract - extractive body cue:** Learning algorithm We present the third generation of the Dreamer algorithm21,22.
-- **p. 3 / Abstract - extractive body cue:** The algorithm consists of three neural networks: the world model predicts the outcomes of potential actions, the critic judges the value of each outcome, and ...
-- **p. 1 / Abstract - extractive body cue:** Our work allows solving challenging control problems without extensive experimentation, making reinforcement learning broadly applicable.
-- **p. 24 / Figure/Table caption - extractive body cue:** Figure 9: Item success rates as a percentage of episodes. Dreamer obtains items at substantially higher rates than the baselines and continues to improve until ...
-- **p. 2 / Abstract - extractive body cue:** Notably, larger model sizes not only achieve higher scores but also require less interaction to solve a task.
-- **p. 2 / Abstract - extractive body cue:** Although intuitively appealing, robustly learning and leveraging world models to achieve strong task performance has been an open problem17.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 예측 대상과 수익의 규모를 다루는 학습 기법을 도입하고, 잠재 공간에서 생성한 경험으로 행동과 가치를 학습한다. [PDF 1쪽](https://www.nature.com/articles/s41586-025-08744-2.pdf#page=1) · [PDF 2쪽](https://www.nature.com/articles/s41586-025-08744-2.pdf#page=2)
+- 여러 연속·이산 제어 영역과 Minecraft에서 평가하고 구성 요소를 제거해 훈련 안정성과 과제 수행에 미치는 영향을 분석했다. [PDF 4쪽](https://www.nature.com/articles/s41586-025-08744-2.pdf#page=4) · [PDF 6쪽](https://www.nature.com/articles/s41586-025-08744-2.pdf#page=6)
 
 ## Evaluation Scope
 

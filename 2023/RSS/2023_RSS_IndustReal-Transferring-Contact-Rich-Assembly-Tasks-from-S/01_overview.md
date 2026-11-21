@@ -19,9 +19,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Given modeling limitations and finite compute, simulation will always differ from reality; this reality gap has been notoriously large for robotics.
-
-방법 관련 발췌 — Our secondary contributions are the following: • Hardware: We present IndustRealKit, which contains CAD models for all parts designed for our setup, as well as a list of all purchased parts.
+IndustReal은 시뮬레이션에서 학습한 접촉 조립 정책을 실제 로봇의 정밀 삽입에 전이한다. [PDF 1쪽](https://arxiv.org/pdf/2305.17110#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / I. INTRODUCTION - extractive body cue:** Our secondary contributions are the following: • Hardware: We present IndustRealKit, which contains CAD models for all parts designed for our setup, as well as ...
-- **p. 1 / I. INTRODUCTION - extractive body cue:** Specifically, our primary contributions are the following: • Algorithms: For simulation, we propose three methods to allow RL agents to solve contact-rich tasks in a ...
-- **p. 2 / I. INTRODUCTION - extractive body cue:** IndustRealKit allows the research community to easily replicate our experimental hardware and benchmark their performance. • Software: We present IndustRealLib, a lightweight Python library that ...
-- **p. 1 / I. INTRODUCTION - extractive body cue:** We present IndustReal, a set of algorithms, systems, and tools for solving contact-rich assembly tasks in simulation and transferring behaviors to reality (Figure 1).
-- **p. 4 / IV. POLICY LEARNING IN SIMULATION - extractive body cue:** In addition, for the Insert policies, we introduced observation noise.
-- **p. 4 / Figure/Table caption - extractive body cue:** Fig. 3: Evaluation of Simulation-Aware Policy Update. Success rates are computed for episodes where the maximum interpenetration distance was less than the specified value at ...
-- **p. 8 / VI. REAL-WORLD EXPERIMENTS - extractive body cue:** Key Results: The system demonstrated extremely high success rates (98.8%) across all pegs (Table III).
-- **p. 8 / VI. REAL-WORLD EXPERIMENTS - extractive body cue:** Key Results: The system demonstrated even higher success rates than during the Insert experiment: 80% and 88.3% success/engagement rates for peg insertion, 97.5% and 100% ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 시뮬레이션 오류를 고려한 정책 갱신, 부호 거리장 보상, 시작 조건을 바꾸는 커리큘럼으로 조립 정책을 학습한다. [PDF 3쪽](https://arxiv.org/pdf/2305.17110#page=3) · [PDF 4쪽](https://arxiv.org/pdf/2305.17110#page=4)
+- 배포 시 동작 적분기로 잔류 위치 오차를 줄이고 실물 부품의 파지·배치·삽입에서 정책을 평가했다. [PDF 6쪽](https://arxiv.org/pdf/2305.17110#page=6) · [PDF 7쪽](https://arxiv.org/pdf/2305.17110#page=7)
 
 ## Evaluation Scope
 

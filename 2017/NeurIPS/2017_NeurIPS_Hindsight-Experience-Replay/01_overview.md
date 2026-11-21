@@ -19,9 +19,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — These results are indicative of the practical challenges with reward shaping, and that shaped rewards would often constitute a compromise on the metric we truly care about (such as binary success/failure).
-
-방법 관련 발췌 — In this paper we introduce a technique called Hindsight Experience Replay (HER) which allows the algorithm to perform exactly this kind of reasoning and can be combined with any off-policy RL algorithm.
+HER는 원래 목표에 실패한 에피소드도 실제로 도달한 상태를 새 목표로 지정해 학습에 재사용한다. [PDF 1쪽](https://arxiv.org/pdf/1707.01495#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1 Introduction - extractive body cue:** In this paper we introduce a technique called Hindsight Experience Replay (HER) which allows the algorithm to perform exactly this kind of reasoning and can ...
-- **p. 1 / Abstract - extractive body cue:** We present a novel technique called Hindsight Experience Replay which allows sample-efficient learning from rewards which are sparse and binary and therefore avoid the need ...
-- **p. 4 / 2 Background - extractive body cue:** In order to solve this problem we introduce the technique of Hindsight Experience Replay which is the crux of our approach.
-- **p. 2 / 2 Background - extractive body cue:** In this section we introduce reinforcement learning formalism used in the paper as well as RL algorithms we use in our experiments.
-- **p. 3 / 2 Background - extractive body cue:** Instead of shaping the reward we propose a different solution which does not require any domain knowledge.
-- **p. 5 / 4 Experiments - extractive body cue:** 4.3 we check if HER improves performance in the single-goal setup.
-- **p. 7 / 4 Experiments - extractive body cue:** In order to verify if HER improves performance we evaluate DDPG with and without HER on all 3 tasks.
-- **p. 8 / 4 Experiments - extractive body cue:** 4.3 Does HER improve performance even if there is only one goal we care about?
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 경험 재생 시 대체 목표에 맞춰 보상을 다시 계산해 오프폴리시 목표 조건부 강화학습과 결합한다. [PDF 3쪽](https://arxiv.org/pdf/1707.01495#page=3) · [PDF 4쪽](https://arxiv.org/pdf/1707.01495#page=4)
+- 밀기·미끄러뜨리기·집어 놓기에서 이진 보상만 사용할 때의 학습을 비교하고 시뮬레이션 정책의 실물 전이를 시연했다. [PDF 7쪽](https://arxiv.org/pdf/1707.01495#page=7) · [PDF 8쪽](https://arxiv.org/pdf/1707.01495#page=8)
 
 ## Evaluation Scope
 

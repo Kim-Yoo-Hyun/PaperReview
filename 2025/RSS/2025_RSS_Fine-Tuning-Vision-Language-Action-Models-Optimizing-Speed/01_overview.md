@@ -17,6 +17,11 @@
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (24 pages; tesseract OCR fallback; title-token overlap first two pages=1.0)
 
+## 공개 자료
+
+- **코드** 저자 미세조정 스크립트의 행동 청크 예측 및 연속 행동 헤드 학습 경로를 확인했다. [배포 파일](https://raw.githubusercontent.com/moojink/openvla-oft/e4287e94541f459edc4feabc4e181f537cd569a8/vla-scripts/finetune.py)
+- **데이터** OFT 저자가 실험에 재사용했다고 명시한 OpenVLA의 수정 LIBERO 자료에서 TFRecord 조각을 확인했다. OFT가 새로 수집한 데이터로 계산하지 않는다. [배포 파일](https://huggingface.co/api/datasets/openvla/modified_libero_rlds/tree/6ce6aaaaabdbe590b1eef5cd29c0d33f14a08551/libero_10_no_noops/1.0.0)
+
 ## Why This Paper Is Here
 
 OpenVLA의 행동 표현·디코딩·목적함수를 비교해 빠른 연속 행동 예측용 미세조정법을 구성한다.

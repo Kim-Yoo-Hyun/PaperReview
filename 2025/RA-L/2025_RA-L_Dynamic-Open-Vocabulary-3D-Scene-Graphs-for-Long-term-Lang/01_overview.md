@@ -19,9 +19,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — This limitation restricts their applicability in real-world scenarios where adaptability is crucial.
-
-방법 관련 발췌 — Our contributions are as follows: • We propose a novel robotic framework that integrates dynamic open-vocabulary 3D scene graphs with languageguided task planning, enabling accurate long-term task execution in dynamic and interactive ...
+DovSG는 사람이 물체를 옮기거나 로봇이 조작한 뒤에도 장면 그래프를 국소 갱신해 다음 이동 조작을 계획한다. [PDF 1쪽](https://arxiv.org/pdf/2410.11989#page=1)
 
 ## Problem and Motivation
 
@@ -54,16 +52,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / I. INTRODUCTION - extractive body cue:** Our contributions are as follows: • We propose a novel robotic framework that integrates dynamic open-vocabulary 3D scene graphs with languageguided task planning, enabling accurate ...
-- **p. 4 / III. METHOD - extractive body cue:** We propose an efficient method that leverages new RGB-D observations to update the volumetric representation accordingly.
-- **p. 2 / III. METHOD - extractive body cue:** DovSG enables mobile robots to perform long-term tasks in indoor environments by constructing dynamic 3D scene graphs and using large language models for task planning.
-- **p. 1 / I. INTRODUCTION - extractive body cue:** In this work, we enhance robotic capabilities by introducing a novel and practical robotic framework, the DovSG system.
-- **p. 4 / III. METHOD - extractive body cue:** To address this issue, we have designed a simple memory update module that can quickly perform local updates to the memory based on new RGB-D ...
-- **p. 7 / IV. EXPERIMENTS - extractive body cue:** This makes it highly likely for the robot to navigate near the target, resulting in a significantly higher success rate compared to "Appearance" and "Positional ...
-- **p. 7 / IV. EXPERIMENTS - extractive body cue:** Additionally, in "Appearance" and "Positional Shift" scenarios, DovSG achieves a scene change recognition success rate approximately 28% higher than the GPT-4o.
-- **p. 6 / IV. EXPERIMENTS - extractive body cue:** In this section, We evaluate DovSG's performance in dynamic, real-world environments to answer two key questions: (1) How well does our system adapt to changes ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- RGB-D 관측에서 개방 어휘 물체와 공간 관계를 추출해 3차원 그래프에 표현한다. [PDF 3쪽](https://arxiv.org/pdf/2410.11989#page=3) · [PDF 4쪽](https://arxiv.org/pdf/2410.11989#page=4)
+- 변화가 생긴 부분을 갱신하고, 사람이 환경을 서로 다른 정도로 바꾼 실물 장면에서 장기 과제 수행을 시험했다. [PDF 5쪽](https://arxiv.org/pdf/2410.11989#page=5) · [PDF 6쪽](https://arxiv.org/pdf/2410.11989#page=6)
 
 ## Evaluation Scope
 

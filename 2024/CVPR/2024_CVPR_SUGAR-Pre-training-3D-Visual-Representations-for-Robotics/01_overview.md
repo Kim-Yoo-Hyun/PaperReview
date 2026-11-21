@@ -19,9 +19,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Pretraining in existing work, however, is typically limited to single objects and complete point clouds, hence, ignoring This CVPR paper is the Open Access version, provided by the Computer Vision Foundation.
-
-방법 관련 발췌 — In summary, the contributions of our work are three-fold: • We present SUGAR - a framework with versatile transformer architecture for 3D point cloud representation learning on cluttered scenes. • We pre-train ...
+SUGAR는 복잡한 장면의 의미·기하·파지 가능성을 함께 표현하도록 로보틱스용 3차원 시각 특징을 사전학습한다. [PDF 1쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Chen_SUGAR_Pre-training_3D_Visual_Representations_for_Robotics_CVPR_2024_paper.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** In summary, the contributions of our work are three-fold: • We present SUGAR - a framework with versatile transformer architecture for 3D point cloud representation ...
-- **p. 2 / 1. Introduction - extractive body cue:** To enhance the capability of 3D representation in robotics, we propose SUGAR - a novel pre-training framework that learns semantics, geometry and affordance properties of ...
-- **p. 1 / 1. Introduction - extractive body cue:** We introduce SUGAR , a pre-training framework for robotic-related tasks, which learns semantic, geometry and affordance on both single- and multi-object scenes. robotics.
-- **p. 1 / Abstract - extractive body cue:** To address these limitations, we introduce a novel 3D pre-training framework for robotics named SUGAR that captures semantic, geometric and affordance properties of objects through ...
-- **p. 6 / 4.2. Referring Expression Grounding - extractive body cue:** OCID-Ref is collected in clean lab environments and consists of 58 object categories, 2,298 RGB-D images and 259,839 referring expressions for training.
-- **p. 8 / Figure/Table caption - extractive body cue:** Figure 5. Performance of training with 10 demonstrations. (Ens m) significantly boosts the performance of the model trained from scratch with over 30% improvement. We ...
-- **p. 8 / Figure/Table caption - extractive body cue:** Table 4. Success rates of multi-task policies on 10 tasks of RLBench simulator.
-- **p. 6 / Figure/Table caption - extractive body cue:** Table 1. Zero-shot object recognition performance on three benchmarks. The Top1 accuracy is reported if not specified otherwise. The blue colored results in brackets on ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 다른 모달리티의 지식 증류, 가린 점 예측, 파지 자세 생성, 개체 분할, 지시 표현 접지를 한 모델에서 학습한다. [PDF 3쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Chen_SUGAR_Pre-training_3D_Visual_Representations_for_Robotics_CVPR_2024_paper.pdf#page=3) · [PDF 4쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Chen_SUGAR_Pre-training_3D_Visual_Representations_for_Robotics_CVPR_2024_paper.pdf#page=4)
+- 단일 물체와 다중 물체 장면을 사용해 학습한 표현이 로봇 관련 하위 과제로 얼마나 전이되는지 평가했다. [PDF 6쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Chen_SUGAR_Pre-training_3D_Visual_Representations_for_Robotics_CVPR_2024_paper.pdf#page=6) · [PDF 8쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Chen_SUGAR_Pre-training_3D_Visual_Representations_for_Robotics_CVPR_2024_paper.pdf#page=8)
 
 ## Evaluation Scope
 

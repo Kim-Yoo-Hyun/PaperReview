@@ -4,6 +4,7 @@ import argparse
 import hashlib
 import json
 import random
+import re
 from collections import Counter
 from pathlib import Path
 
@@ -34,7 +35,7 @@ def bibliography_digest(paper, fields):
     return hashlib.sha256(json.dumps(values, ensure_ascii=False, sort_keys=True).encode()).hexdigest()
 
 
-def current_checks(row):
+def current_checks(row, *, include_reviews=True):
     states = {field: final(check) for field, check in row["checks"].items()}
     post = row.get("postcheck", {})
     follow = {**row.get("followup", {}), **post.get("resources", {})}
@@ -56,7 +57,19 @@ def current_checks(row):
         states[qualification["field"]] = qualification["status"]
     for field, check in post.get("edits", {}).items():
         states[field] = check["status"]
+    if include_reviews:
+        if review := row.get("summary_review"):
+            states["summary"] = review["status"]
+        if review := row.get("byline_review"):
+            states["authors"] = review["status"]
+        for field, check in row.get("artifact_review", {}).get("fields", {}).items():
+            states[field] = check["status"]
     return states
+
+
+def cited_statement(claim, pages, source):
+    citations = " · ".join(f"[PDF {page}쪽]({source}#page={page})" for page in pages)
+    return f"{claim} {citations}"
 
 
 def check_applied(rows, papers, root):
@@ -70,6 +83,8 @@ def check_applied(rows, papers, root):
         post = row.get("postcheck", {})
         follow = {**row.get("followup", {}), **post.get("resources", {})}
         edits = post.get("edits", {})
+        artifacts = row.get("artifact_review", {}).get("fields", {})
+        verified_artifacts = {k: v for k, v in artifacts.items() if v["status"] == PASS}
 
         def expect(field, value, target):
             if value != target:
@@ -85,6 +100,7 @@ def check_applied(rows, papers, root):
 
         def check_artifact(field, target):
             key = "checkpoint" if field == "weights" else field
+            target = verified_artifacts.get(field, {}).get("value", target)
             expect(f"reproducibility.{key}", paper["reproducibility"][key]["status"], target)
             if field != "weights":
                 expect(f"artifacts.{key}_status", paper["artifacts"][key + "_status"], target)
@@ -121,7 +137,7 @@ def check_applied(rows, papers, root):
             elif field in ("code", "weights", "data"):
                 check_artifact(field, item["corrected"])
                 profile = paper["reproducibility"]["checkpoint" if field == "weights" else field]
-                expect(field + " evidence", profile.get("source"), item["source"])
+                expect(field + " evidence", profile.get("source"), verified_artifacts.get(field, item)["source"])
             elif field == "title":
                 expect(field, paper[field], item["corrected"])
             elif field == "authors":
@@ -135,10 +151,11 @@ def check_applied(rows, papers, root):
             expect("bibliographic values", bibliography_digest(paper, post["bibliography"]), post["bibliography_sha256"])
             positive = {field for field, key in (("code", "code"), ("weights", "checkpoint"), ("data", "data"))
                         if paper["reproducibility"][key]["status"] in ("released", "reported")}
-            expect("release endpoint coverage", set(post.get("availability", {})), positive)
+            expect("release endpoint coverage", set(post.get("availability", {})) | set(verified_artifacts), positive)
             for field, probe in post.get("availability", {}).items():
                 key = "checkpoint" if field == "weights" else field
-                expect(field + " release source", paper["reproducibility"][key].get("source"), probe["url"])
+                source = verified_artifacts.get(field, {}).get("source", probe["url"])
+                expect(field + " release source", paper["reproducibility"][key].get("source"), source)
             if TEMPLATE_CLAIM in overview:
                 errors.append(f"{pid} blanket robot-action claim reappeared")
             for axis, cue in post.get("removed_search_cues", {}).items():
@@ -155,6 +172,27 @@ def check_applied(rows, papers, root):
                     header = "Authors" if field == "authors" else "Tags"
                     if f"- {header}: " + ", ".join(value) not in overview.splitlines():
                         errors.append(f"{pid} reviewed {field} missing from overview")
+        if review := row.get("summary_review"):
+            overview = (root / paper["folder"] / "01_overview.md").read_text()
+            for header, claims in (("Why This Paper Is Here", [review["summary"]]),
+                                   ("Main Claims and Actual Contribution", review["contributions"])):
+                section = overview.partition("## " + header + "\n")[2].partition("\n## ")[0]
+                for claim in claims:
+                    line = cited_statement(claim["text"], claim["pages"], review["source"])
+                    if line not in section:
+                        errors.append(f"{pid} source-checked statement or page link missing from {header}")
+        for field, item in verified_artifacts.items():
+            check_artifact(field, item["value"])
+            key = "checkpoint" if field == "weights" else field
+            profile = paper["reproducibility"][key]
+            expect(field + " file source", profile.get("source"), item["source"])
+            expect(field + " file evidence", profile.get("evidence"), item["basis"])
+            expect(field + " review date", profile.get("verified_on"), row["artifact_review"]["verified_on"])
+            if field == "code":
+                check_source("code", item["repository"])
+            overview = (root / paper["folder"] / "01_overview.md").read_text()
+            if item["basis"] + f" [배포 파일]({item['source']})" not in overview:
+                errors.append(f"{pid} {field} release scope or file link missing from overview")
     if errors:
         raise ValueError("\n".join(errors))
     return original, later
@@ -198,6 +236,53 @@ def validate(rows, meta):
                 or not change.get("source", "").startswith("https://")
                 or not {"before", "corrected"}.issubset(change)):
                 raise ValueError(f"Incomplete follow-up for {row['id']} {name}")
+    pending = {r["id"] for r in rows if current_checks(r, include_reviews=False)["summary"] == OPEN}
+    reviewed = set()
+    for batch in meta.get("summary_batches", []):
+        eligible = [r["id"] for r in rows if r["tier_at_audit"] == batch["tier"] and r["id"] in pending]
+        members = [r for r in rows if r.get("summary_review", {}).get("batch") == batch["batch"]]
+        ids = [r["id"] for r in members]
+        if (not ids or len(ids) != batch["count"] or ids != eligible[:len(ids)] or reviewed.intersection(ids)
+            or not re.fullmatch(r"[0-9a-f]{40}", batch["baseline_commit"])):
+            raise ValueError("Summary review is not the declared next batch of unresolved stable IDs")
+        for row in members:
+            review = row["summary_review"]
+            if (review["status"] != PASS or not review["source"].startswith("https://")
+                or not re.fullmatch(r"[0-9a-f]{64}", review["pdf_sha256"])
+                or not re.fullmatch(r"[0-9a-f]{64}", review["before_sha256"])
+                or review["verified_on"] != batch["verified_on"] or len(review["contributions"]) != 2):
+                raise ValueError(f"Incomplete summary review for {row['id']}")
+            for claim in [review["summary"], *review["contributions"]]:
+                pages = claim["pages"]
+                if (not claim["text"].strip() or not pages or pages != sorted(set(pages))
+                    or any(not isinstance(page, int) or not 1 <= page <= review["pdf_page_count"] for page in pages)):
+                    raise ValueError(f"Invalid PDF locator for {row['id']}")
+        reviewed.update(ids)
+        pending.difference_update(ids)
+    if reviewed != {r["id"] for r in rows if "summary_review" in r}:
+        raise ValueError("Unregistered summary review batch")
+    if campaign := meta.get("artifact_review"):
+        if campaign["count"] != sum("artifact_review" in row for row in rows):
+            raise ValueError("Incorrect artifact review cohort size")
+        for row in rows:
+            baseline = current_checks(row, include_reviews=False)
+            expected = {k for k in ("code", "weights", "data") if baseline[k] == OPEN and row["tier_at_audit"] == campaign["tier"]}
+            review = row.get("artifact_review", {})
+            if set(review.get("fields", {})) != expected or (expected and review["verified_on"] != campaign["verified_on"]):
+                raise ValueError(f"Artifact review coverage differs for {row['id']}")
+            for field, check in review.get("fields", {}).items():
+                if (check["status"] not in (OPEN, PASS) or not check["basis"].strip()
+                    or not check["source"].startswith("https://")):
+                    raise ValueError(f"Missing artifact evidence for {row['id']} {field}")
+                if check["status"] == PASS and (not check.get("file") or not check.get("release_reference", "").startswith("https://")
+                    or check.get("value") != ("reported" if field == "weights" else "released")
+                    or (field == "code" and not check.get("repository"))):
+                    raise ValueError(f"Incomplete file-level release evidence for {row['id']} {field}")
+    for row in rows:
+        if review := row.get("byline_review"):
+            if (review["status"] != OPEN or review["publisher"]["count"] == review["program"]["count"]
+                or not all(review[key]["source"].startswith("https://") for key in ("publisher", "program", "author_version", "final_copy"))):
+                raise ValueError(f"Incomplete conflicting byline evidence for {row['id']}")
 
 
 def render(rows, meta):
@@ -261,24 +346,71 @@ def render(rows, meta):
     old_scope = sum(r["checks"]["summary"].get("scope") is not None for r in rows)
     historic = "https://github.com/Kim-Yoo-Hyun/PaperReview/blob/" + post["baseline_commit"]
     ledger = "../work/sources/batches/source_audit_2026_11.jsonl"
+    batches = meta.get("summary_batches", [])
+    latest_date = max([post["verified_on"], *(b["verified_on"] for b in batches),
+                       meta.get("artifact_review", {}).get("verified_on", "")])
     lines = [
         "# 원문 감사", "",
-        f"{post['verified_on']} KST 기준. 직전 교정본 {n:,}편에서 **추가 오류 {changed}편({pct(changed, n)}), {sum(found.values())}개 필드**를 확인해 고쳤다. "
-        f"갱신한 원장을 다시 대조한 결과 **확인된 잔여 오류는 {failed}/{n:,}편({pct(failed, n)})**, "
+        f"{latest_date} KST 기준. 등록된 {n:,}편에서 **확인된 잔여 오류는 {failed}/{n:,}편({pct(failed, n)})**, "
         f"10개 필드에 근거가 갖춰진 논문은 **{passed}편**, 한 필드 이상 미확인인 논문은 **{unknown:,}편**이다. "
-        f"[조사 시작 판본]({historic}/work/sources/papers.json) · [논문별 판정과 직접 근거]({ledger})", "",
+        f"[논문별 판정과 직접 근거]({ledger})", "",
+    ]
+    if batches:
+        lines += ["## 요약·기여 원문 대조", "",
+                  "| 확인일 | 등급 | 대상 | 원문 대조 통과 | 같은 등급에서 남은 요약 |",
+                  "|---|---|---|---:|---:|"]
+        remaining = Counter(r["tier_at_audit"] for r in rows if current_checks(r, include_reviews=False)["summary"] == OPEN)
+        for batch in batches:
+            ids = [r["id"] for r in rows if r.get("summary_review", {}).get("batch") == batch["batch"]]
+            tier = batch["tier"]
+            remaining[tier] -= len(ids)
+            baseline = "https://github.com/Kim-Yoo-Hyun/PaperReview/tree/" + batch["baseline_commit"]
+            lines.append(f"| {batch['verified_on']} | {tier} | [{ids[0]}–{ids[-1]} 중 당시 미확인 논문]({baseline}) "
+                         f"| {len(ids)} | {remaining[tier]} |")
+        lines += ["", "안정 ID 순서로 미확인 논문을 뽑아 각 overview의 한 줄 요약과 핵심 기여 두 개를 원문 PDF에 대조했다. "
+                  "각 문장의 링크는 실제 열어 본 판본의 PDF 쪽수로 이동한다. 원장에 판본의 SHA-256과 교정 전 노트의 해시를 보존했다. "
+                  "이 배치는 요약 검증 진척을 나타낸다. 전체 오류율을 추정하는 무작위 표본으로 사용할 수 없다.", ""]
+        repairs = [r for r in rows if r.get("summary_review", {}).get("transcription_fix")]
+        if repairs:
+            refs = " · ".join(f"[{r['id']} 원문]({r['summary_review']['source']})" for r in repairs)
+            lines += [f"기존 노트에서 확인한 문자 전사 교정은 {len(repairs)}편이다. 원장에 해당 문구와 근거를 기록했다. {refs}", ""]
+    artifacts = [fields for r in rows if (fields := r.get("artifact_review", {}).get("fields"))]
+    if artifacts:
+        lines += ["## CORE 공개 자료", "",
+                  f"공개 자료가 한 종류 이상 미확인이었던 CORE {len(artifacts)}편에서 저자 배포처·논문별 근거를 확인했다. "
+                  "파일의 역할이 식별된 경우에만 공개 판정을 갱신했다. 일부 자료만 확인한 경우 원장에 그 범위를 적었다.", "",
+                  "| 자료 | 점검한 미확인 항목 | 파일 근거 확보 | 남은 미확인 |", "|---|---:|---:|---:|"]
+        for field in ("code", "weights", "data"):
+            group = [f[field] for f in artifacts if field in f]
+            resolved = sum(v["status"] == PASS for v in group)
+            lines.append(f"| {FIELDS[field]} | {len(group)} | {resolved} | {len(group)-resolved} |")
+        lines.append("")
+        for row in rows:
+            for field, item in row.get("artifact_review", {}).get("fields", {}).items():
+                if item.get("before", {}).get("status") == "not_applicable" and item["status"] == PASS:
+                    lines += [f"{row['title'].split(':')[0]}(`{row['id']}`)의 {FIELDS[field]}는 기존에 "
+                              f"`not_applicable`로 분류되어 있었다. {item['basis']} "
+                              f"[저자 설명]({item['release_reference']}) · [배포 파일]({item['source']})", ""]
+    for row in rows:
+        if review := row.get("byline_review"):
+            lines += [f"**{row['title'].split(':')[0]} 저자 명단.** 출판사 서지에는 {review['publisher']['count']}명, "
+                      f"학회 목차와 저자판에는 {review['program']['count']}명이 적혀 있다. "
+                      f"{review['target']}은 출판사 인증 화면으로 연결되어 미확인으로 유지한다. "
+                      f"[출판사 서지]({review['publisher']['source']}) · [학회 목차]({review['program']['source']}) · "
+                      f"[저자판]({review['author_version']['source']})", ""]
+    lines += [
         "## 오류율과 검증 범위", "",
         "| 측정 | 분자 / 분모 | 의미 |", "|---|---:|---|",
-        f"| 직전 교정본의 추가 확인 오류 | {changed} / {n:,} ({pct(changed,n)}) | 이번 점검에서 사실 오류가 입증된 논문. 같은 논문은 한 번만 센다. |",
+        f"| 11월 20일 교정 전 추가 확인 오류 | {changed} / {n:,} ({pct(changed,n)}) | 당시 점검에서 사실 오류가 입증된 논문. 같은 논문은 한 번만 센다. |",
         f"| 이번 반영 후 확인 오류 | {failed} / {n:,} ({pct(failed,n)}) | 10개 필드의 최신 판정 중 ‘수정 필요’가 남은 논문 |",
         f"| 현재 전 항목 통과 | {passed} / {n:,} ({pct(passed,n)}) | 서지·링크, 기여·태그, 공개 자료 세 종류가 모두 통과 |",
         f"| 현재 미확인 필드 보유 | {unknown:,} / {n:,} ({pct(unknown,n)}) | 미확인은 오류로 확정하거나 통과 처리하지 않았다. |", "",
-        f"논문 기록과 자동 검색 분류를 함께 보면, 이번에 오류를 고친 논문은 중복을 제외해 {affected}/{n:,}편({pct(affected,n)})이다. "
+        f"11월 20일 논문 기록과 자동 검색 분류에서 오류를 고친 논문은 중복을 제외해 {affected}/{n:,}편({pct(affected,n)})이다. "
         f"자동 분류에서 잘못 붙은 검색 단서와 논문 내용 자체의 오류는 위 표에서 구별했다.", "",
         f"**[해석]** 미확인 필드에서 추가 오류가 나올 수 있어 전체의 실제 잔여 오류율은 점으로 추정할 수 없다. "
         f"기존 통과 판정을 전제로, 미확인만 해소될 때 가능한 논문 단위 범위는 {pct(failed,n)}–{pct(failed+unknown,n)}다. "
         "이는 표본 신뢰구간이 아니다. 연구 비교에 쓸 요약과 공개 자료부터 미확인 필드를 계속 대조할 필요가 있다.", "",
-        "## 교정 재검증", "",
+        "## 교정 재검증", "", f"{post['verified_on']}에 수행한 전수 점검 기록이다. [당시 조사 시작 판본]({historic}/work/sources/papers.json)", "",
         f"- 전 {n:,}편에서 대표 URL과 논문별 서지 출처에 다시 접근했다. 독립적으로 표제를 식별한 논문은 {biblios['title']:,}편, "
         f"대표 URL 자체에서 표제를 확인한 논문은 {biblios['primary']:,}편이다. "
         f"새 서지에서 순서가 일치하는 저자열 {biblios['authors']:,}편, 해당 판본의 등록 연도 {biblios['year']:,}편, 게재 근거 {biblios['venue']:,}편을 대조했다. "
@@ -306,7 +438,7 @@ def render(rows, meta):
         "[3DVG-Transformer 게재본](https://openaccess.thecvf.com/content/ICCV2021/html/Zhao_3DVG-Transformer_Relation_Modeling_for_Visual_Grounding_on_Point_Clouds_ICCV_2021_paper.html) · "
         "[Masked Autoencoders 게재본](https://openaccess.thecvf.com/content/CVPR2022/html/He_Masked_Autoencoders_Are_Scalable_Vision_Learners_CVPR_2022_paper.html)", "",
         "## 항목별 결과", "",
-        "| 항목 | 이번 재점검에서 확인한 오류 | 현재 통과 | 존재 불확실 | 수정 필요 |",
+        "| 항목 | 11월 20일에 확인한 오류 | 현재 통과 | 존재 불확실 | 수정 필요 |",
         "|---|---:|---:|---:|---:|",
     ]
     for field, label in FIELDS.items():
@@ -315,7 +447,6 @@ def render(rows, meta):
     lines += ["", "링크는 대표 원문과 기재한 부가 주소별로 판정한다. 원문만 열리더라도 다른 링크의 판정은 유지한다. "
               "잘못된 주소를 걷어낸 뒤 대체 주소가 확인되지 않은 경우에는 그 역할이 미확인이다. "
               "저자의 공개 표명이나 배포 파일로 코드·가중치·데이터를 각각 판단한다. 배포 근거를 찾지 못한 상태는 ‘존재 불확실’이다. "
-              "DeXtreme은 저자판과 출판사 등록 서지의 저자 수가 달라 최종 게재본 저자열을 미확인으로 남겼다. "
               f"기존 요약 판정에는 overview 대신 검증한 정규화 배치의 요약·기여를 대상으로 명시한 {old_scope}편이 포함된다. "
               "논문별 근거의 `scope`에서 대상 텍스트를 확인할 수 있다.", "",
               "## 읽기 등급별 확인 범위", "", "| 등급 | 논문 | 전 항목 통과 | 요약·기여 미확인 | 태그 미확인 | 공개 여부 중 한 가지 이상 미확인 |",
@@ -370,6 +501,9 @@ def main():
         additions = sum(c.get("kind") == "보완" for r in rows for c in r["checks"].values())
         newest = sum(len(r["postcheck"].get(k, {})) for r in rows for k in ("edits", "resources"))
         print(f"Matched {original} original errors, {additions} additions, {later} follow-up fields and {newest} post-correction fields")
+        summaries = sum("summary_review" in r for r in rows)
+        artifact_fields = sum(len(r.get("artifact_review", {}).get("fields", {})) for r in rows)
+        print(f"Matched {summaries} PDF-checked summaries and reviewed {artifact_fields} artifact fields")
     text = render(rows, meta)
     if args.write:
         REPORT.write_text(text)

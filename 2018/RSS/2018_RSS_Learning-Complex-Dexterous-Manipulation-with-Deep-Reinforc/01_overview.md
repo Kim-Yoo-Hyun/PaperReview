@@ -19,9 +19,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, these methods typically rely on accurate dynamics models and state estimates, which are often difficult to obtain for contact rich manipulation tasks, especially in the real world.
-
-방법 관련 발췌 — To overcome this challenge, we propose to augment the policy search process with a small number of human demonstrations collected in virtual reality (VR).
+DAPG는 소수의 사람 시연을 정책 그래디언트 학습에 사용해 다지 손 조작에 필요한 시뮬레이션 경험을 줄인다. [PDF 1쪽](https://arxiv.org/pdf/1709.10087#page=1)
 
 ## Problem and Motivation
 
@@ -54,16 +52,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / I. INTRODUCTION - extractive body cue:** To overcome this challenge, we propose to augment the policy search process with a small number of human demonstrations collected in virtual reality (VR).
-- **p. 2 / I. INTRODUCTION - extractive body cue:** We attribute this to human priors in the demonstrations which bias the learning towards more robust strategies. • We propose a set of dexterous hand ...
-- **p. 1 / I. INTRODUCTION - extractive body cue:** Indeed, model-free methods have been used for acquiring manipulation skills [52], [13], but so far have been limited to simpler behaviors with 2-3 finger hands ...
-- **p. 1 / I. INTRODUCTION - extractive body cue:** Thus, before we can develop DRL methods suitable for dexterous manipulation with robotic hands, we must set up a suite of manipulation tasks that exercise ...
-- **p. 5 / IV. DEMO AUGMENTED POLICY GRADIENT (DAPG) - extractive body cue:** A number of pre-conditioned policy gradient methods have been developed in literature [19], [4], [35], [34], [43], [40], [44] and in principle any of them ...
-- **p. 8 / Figure/Table caption - extractive body cue:** Figure 10: Performance of RL with demonstrations methods - DAPG(ours) and DDPGfD. DAPG significantly outperforms DDPGfD. For DAPG, we plot the performance of the stochastic ...
-- **p. 6 / 2) Do the resulting policies exhibit desirable properties like - extractive body cue:** With the shaped rewards, we find that NPG is indeed able to achieve high success percentage on these tasks (Figure 7), while DDPG was unable ...
-- **p. 6 / 2) Do the resulting policies exhibit desirable properties like - extractive body cue:** We score the different methods based on the percentage of successful trajectories the trained policies can generate, using a sample size of 100 trajectories.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 시연으로 정책을 초기화하고 정책 그래디언트 갱신에도 시연 행동에 대한 항을 추가한다. [PDF 3쪽](https://arxiv.org/pdf/1709.10087#page=3) · [PDF 4쪽](https://arxiv.org/pdf/1709.10087#page=4)
+- 모의 다지 손에서 물체 재배치·도구 사용 등 접촉 과제를 비교하고 시연 사용 여부에 따른 표본 효율과 행동을 평가했다. [PDF 5쪽](https://arxiv.org/pdf/1709.10087#page=5) · [PDF 7쪽](https://arxiv.org/pdf/1709.10087#page=7)
 
 ## Evaluation Scope
 

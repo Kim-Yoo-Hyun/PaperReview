@@ -19,9 +19,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, unlike vision and language modalities, action data is absent from existing Internet datasets, demanding a new paradigm for data collection.
-
-방법 관련 발췌 — In summary, our contributions are as follows: a) we introduce a novel pretraining paradigm that relies entirely on synthetic action data, significantly reducing the real world action data acquisition burden, b) we ...
+GraspVLA는 시뮬레이터에서 생성한 파지 행동과 웹의 의미 정보를 함께 학습해 언어로 지정한 물체를 잡는다. [PDF 1쪽](https://raw.githubusercontent.com/mlresearch/v305/main/assets/deng25a/deng25a.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1 Introduction - extractive body cue:** In summary, our contributions are as follows: a) we introduce a novel pretraining paradigm that relies entirely on synthetic action data, significantly reducing the real ...
-- **p. 3 / 1 Introduction - extractive body cue:** scale globally, c) we propose Progressive Action Generation to co-train synthetic actions with Internet data, extending GraspVLA's skills to novel object categories, and d) extensive ...
-- **p. 2 / 1 Introduction - extractive body cue:** To efficiently learn from this dataset, we propose GraspVLA, an end-to-end network that integrates autoregressive perception tasks and flow-matching-based action generation into a unified Chainof-Thought ...
-- **p. 1 / Body text (section boundary not confidently recovered) - extractive body cue:** Building on this, we present GraspVLA, a VLA model pretrained on large-scale synthetic action data as a foundational model for grasping tasks.
-- **p. 8 / 5 Hz - extractive body cue:** GraspVLA shows superior adaptability to novel tasks, surpassing the model without pretraining and all baselines.
-- **p. 24 / Figure/Table caption - extractive body cue:** Table 14: Impact of number of input views. Comparison of GraspVLA with different numbers of input views. The results demonstrate that while multiple views significantly ...
-- **p. 6 / 5 Experiments - extractive body cue:** As illustrated in Table 1, GraspVLA achieves around 90% on all test sets and significantly outperforms all baselines, demonstrating strong zero-shot generalizability.
-- **p. 6 / 5 Experiments - extractive body cue:** Our approach achieves the highest grasping success rate on items from both synthetic and web categories using short trajectories.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 다양한 장면을 렌더링해 SynGrasp-1B를 만들고, 자기회귀 지각 예측과 플로 매칭 행동 생성을 같은 모델에서 학습한다. [PDF 3쪽](https://raw.githubusercontent.com/mlresearch/v305/main/assets/deng25a/deng25a.pdf#page=3) · [PDF 4쪽](https://raw.githubusercontent.com/mlresearch/v305/main/assets/deng25a/deng25a.pdf#page=4)
+- 시뮬레이션과 실물에서 처음 보는 대상의 파지를 평가하고 소수 예시로 특정 파지 선호에 적응하는 실험을 수행했다. [PDF 7쪽](https://raw.githubusercontent.com/mlresearch/v305/main/assets/deng25a/deng25a.pdf#page=7) · [PDF 8쪽](https://raw.githubusercontent.com/mlresearch/v305/main/assets/deng25a/deng25a.pdf#page=8)
 
 ## Evaluation Scope
 

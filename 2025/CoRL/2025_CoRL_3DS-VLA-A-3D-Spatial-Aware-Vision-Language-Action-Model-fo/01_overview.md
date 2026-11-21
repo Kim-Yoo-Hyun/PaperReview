@@ -19,9 +19,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — All these limitations lead us to consider: "How can we build a robust VLA model that incorporates comprehensive 3D spatial awareness?" To address the above challenges, as shown in Fig.
-
-방법 관련 발췌 — Our contributions are as follows: 1) We propose 3DS-VLA, equipping pretrained 2D VLMs with comprehensive 3D awareness for robust end-effector pose prediction.
+3DS-VLA는 2차원 시각·언어 모델에 공간 정보를 더해 다중 조작 작업의 말단장치 자세를 예측한다. [PDF 1쪽](https://raw.githubusercontent.com/mlresearch/v305/main/assets/li25g/li25g.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1 Introduction - extractive body cue:** Our contributions are as follows: 1) We propose 3DS-VLA, equipping pretrained 2D VLMs with comprehensive 3D awareness for robust end-effector pose prediction.
-- **p. 4 / 3 Method - extractive body cue:** Therefore, we propose a 2D-to-3D positional alignment mechanism that allows the original 2D PEs, which are interpretable to pretrained models, to encode semantically aligned 2D ...
-- **p. 2 / 1 Introduction - extractive body cue:** 1 (left), we propose 3DS-VLA, which equips pretrained 2D vision-language models (2D VLMs) with 3D spatial awareness for robust action generation.
-- **p. 3 / 3 Method - extractive body cue:** 3.1 Task Formulation and Model Architecture Given a dataset D = {τ1, . . . , τN} of N expert demonstrations, each demonstration τ is ...
-- **p. 4 / 3 Method - extractive body cue:** The model π consists of a 2D visual encoder, LLM (LLaMA) [63], a cross-modality projection module [62], and LoRA adapters [64].
-- **p. 7 / 4 Experiment - extractive body cue:** Both Ours and Ours-s achieve the same average success rate of 0.66 on single-arm tasks, demonstrating that our model can effectively handle different embodiments within ...
-- **p. 8 / 4 Experiment - extractive body cue:** Remarkably, the model achieves similar accuracy as it does in clean background settings.
-- **p. 6 / 4 Experiment - extractive body cue:** 1, in the single-arm setting, our method surpasses all baselines by at least 4% average success rate.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 영상 위치와 3차원 좌표를 정렬해 같은 시각 인코더가 두 관측을 함께 표현하게 한다. [PDF 3쪽](https://raw.githubusercontent.com/mlresearch/v305/main/assets/li25g/li25g.pdf#page=3) · [PDF 4쪽](https://raw.githubusercontent.com/mlresearch/v305/main/assets/li25g/li25g.pdf#page=4)
+- 행동에 관련된 물체와 로봇 동작 사이의 순차적 공간 제약을 학습시키고 시뮬레이션과 실제 조작에서 평가했다. [PDF 5쪽](https://raw.githubusercontent.com/mlresearch/v305/main/assets/li25g/li25g.pdf#page=5) · [PDF 8쪽](https://raw.githubusercontent.com/mlresearch/v305/main/assets/li25g/li25g.pdf#page=8)
 
 ## Evaluation Scope
 

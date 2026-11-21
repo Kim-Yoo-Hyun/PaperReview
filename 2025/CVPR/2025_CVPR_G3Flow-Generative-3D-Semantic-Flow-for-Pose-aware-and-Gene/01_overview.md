@@ -19,9 +19,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, these geometrycentric methods, despite their advantages, often lack the crucial semantic understanding, necessary for sophisticated manipulation tasks.
-
-방법 관련 발췌 — Our framework consists of (top) an initialization phase that generates comprehensive 3D representation (surface normals, wireframe, and geometry) through object-centric exploration and digital twin generation, which enables rich semanti ...
+G3Flow는 조작 대상의 자세가 바뀌어도 같은 부위의 의미 특징을 따라갈 수 있도록 물체 중심 3차원 표현을 만든다. [PDF 1쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Chen_G3Flow_Generative_3D_Semantic_Flow_for_Pose-aware_and_Generalizable_Object_CVPR_2025_paper.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 4 / 3.2. Initial Semantic Flow Construction - extractive body cue:** Our framework consists of (top) an initialization phase that generates comprehensive 3D representation (surface normals, wireframe, and geometry) through object-centric exploration and digital twin generation, ...
-- **p. 2 / 1. Introduction - extractive body cue:** Our key contributions can be summarized as follows: (1) We propose a novel foundation model-driven approach for constructing semantic flow, a dynamic and complete semantic ...
-- **p. 2 / 1. Introduction - extractive body cue:** We propose G3Flow, a foundation model-driven framework that constructs real-time 3D semantic flow-an object-centric, occlusion-robust semantic representation using only a single-view camera without manual annotations.
-- **p. 3 / 3.1. Overview - extractive body cue:** Our system, G3Flow, consists of five key modules detailed in the following sections: a) Object-centric Exploration for active multi-view observation collection; b) Object 3D Model ...
-- **p. 3 / 3.1. Overview - extractive body cue:** Our framework operates in two phases: (1) Initial semantic flow construction through object-centric exploration and digital twin generation, where a robot actively gathers multi-view observations ...
-- **p. 7 / 34.04 Hz - extractive body cue:** G3Flow achieved a success rate of 70.7% on previously unseen tool categories, which is 13.4% higher than the best baseline.
-- **p. 7 / 4.4. Ablation Study - extractive body cue:** As shown in Table 4, our approach improves success rates by 22.6% and 41.2% over scenelevel features, and by 9.3% and 3.7% over D3Fields.
-- **p. 8 / Figure/Table caption - extractive body cue:** Table 5. Ablation on VFMs. Success rates of G3Flow imple- mented with different VFMs (our method uses DINOv2) on the Shoe Place (T) task. We ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 생성한 3차원 물체 모델에 시각 특징을 입히고, 추적한 물체 자세로 그 특징의 위치를 시간에 따라 갱신한다. [PDF 3쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Chen_G3Flow_Generative_3D_Semantic_Flow_for_Pose-aware_and_Generalizable_Object_CVPR_2025_paper.pdf#page=3) · [PDF 4쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Chen_G3Flow_Generative_3D_Semantic_Flow_for_Pose-aware_and_Generalizable_Object_CVPR_2025_paper.pdf#page=4)
+- 이 표현을 확산 정책의 관측으로 사용해 시뮬레이션에서 최종 자세 제약이 있는 조작과 새 물체로의 일반화를 시험했다. [PDF 6쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Chen_G3Flow_Generative_3D_Semantic_Flow_for_Pose-aware_and_Generalizable_Object_CVPR_2025_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Chen_G3Flow_Generative_3D_Semantic_Flow_for_Pose-aware_and_Generalizable_Object_CVPR_2025_paper.pdf#page=7)
 
 ## Evaluation Scope
 

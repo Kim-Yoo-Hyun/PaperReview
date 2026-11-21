@@ -19,9 +19,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — We approach this limitation by predicting both actions and state values.
-
-방법 관련 발췌 — We present Dreamer, an agent that learns long-horizon behaviors from images purely by latent imagination.
+Dreamer는 학습한 세계 모델의 잠재 공간에서 상상한 궤적으로 장기 행동 정책을 학습한다. [PDF 1쪽](https://arxiv.org/pdf/1912.01603#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 1 / 1 INTRODUCTION - extractive body cue:** We present Dreamer, an agent that learns long-horizon behaviors from images purely by latent imagination.
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** Latent dynamics Dreamer uses a latent dynamics model that consists of three components.
-- **p. 1 / 1 INTRODUCTION - extractive body cue:** Compared to predictions in image space, latent states have a small memory footprint that enables imagining thousands of trajectories in parallel.
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** The key contributions of this paper are summarized as follows: • Learning long-horizon behaviors by latent imagination Model-based agents can be shortsighted if they use ...
-- **p. 3 / 1 INTRODUCTION - extractive body cue:** This section describes the main contribution of our paper.
-- **p. 8 / 6 EXPERIMENTS - extractive body cue:** Baseline methods The highest reported performance on the continuous tasks is achieved by D4PG (Barth-Maron et al., 2018), an improved variant of DDPG (Lillicrap et ...
-- **p. 9 / 6 EXPERIMENTS - extractive body cue:** With an average score of 823 across tasks after 5 × 106 environment steps, Dreamer exceeds the performance of the strong model-free D4PG agent that ...
-- **p. 9 / 6 EXPERIMENTS - extractive body cue:** This suggests that future improvements in representation learning are likely to translate to higher task performance with Dreamer.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 관측을 설명하고 보상을 예측하는 잠재 동역학을 환경 경험으로 학습한다. [PDF 3쪽](https://arxiv.org/pdf/1912.01603#page=3) · [PDF 4쪽](https://arxiv.org/pdf/1912.01603#page=4)
+- 잠재 궤적에서 추정한 미래 가치의 그래디언트를 행동 모델에 전달하고 영상 기반 연속 제어 과제에서 평가했다. [PDF 6쪽](https://arxiv.org/pdf/1912.01603#page=6) · [PDF 9쪽](https://arxiv.org/pdf/1912.01603#page=9)
 
 ## Evaluation Scope
 

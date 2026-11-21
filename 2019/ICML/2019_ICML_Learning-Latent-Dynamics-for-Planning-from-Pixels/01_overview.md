@@ -19,9 +19,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Key difficulties include model inaccuracies, accumulating errors of multi-step predictions, failure to capture multiple possible futures, and overconfident predictions outside of the training distribution.
-
-방법 관련 발췌 — In this paper, we propose the Deep Planning Network (PlaNet), a model-based agent that learns the environment dynamics from pixels and chooses actions through online planning in a compact latent space.
+PlaNet은 영상에서 잠재 동역학과 보상을 학습하고 매 시점 후보 행동열을 잠재 공간에서 평가해 첫 행동을 실행한다. [PDF 1쪽](https://arxiv.org/pdf/1811.04551#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 1 / 1. Introduction - extractive body cue:** In this paper, we propose the Deep Planning Network (PlaNet), a model-based agent that learns the environment dynamics from pixels and chooses actions through online ...
-- **p. 1 / 1. Introduction - extractive body cue:** Key contributions of this work are summarized as follows: • Planning in latent spaces We solve a variety of tasks from the DeepMind control suite, ...
-- **p. 2 / 2. Latent Space Planning - extractive body cue:** In this section, we introduce notation for the environment and describe the general implementation of our model-based agent.
-- **p. 3 / 2 Initialize model parameters θ randomly - extractive body cue:** Because the reward is modeled as a function of the latent state, the planner can operate purely in latent space without generating images, which allows ...
-- **p. 6 / 5. Experiments - extractive body cue:** Within less than one hundredth the episodes, PlaNet outperforms A3C (Mnih et al., 2016) and achieves similar performance to the top model-free algorithm D4PG (Barth-Maron ...
-- **p. 6 / 5. Experiments - extractive body cue:** Iterative search for action sequences using CEM improves performance on all tasks.
-- **p. 20 / Figure/Table caption - extractive body cue:** Figure 12: Planning performance on the cheetah running task with the true simulator using different planner settings. Performance ranges from 132 (blue) to 837 (yellow). ...
-- **p. 7 / Figure/Table caption - extractive body cue:** Table 1: Comparison of PlaNet to the model-free algorithms A3C and D4PG reported by Tassa et al. (2018). The training curves for these are shown ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 결정론적 기억과 확률적 상태를 결합하고 여러 단계 앞의 예측을 학습하는 잠재 오버슈팅 목적을 제안한다. [PDF 4쪽](https://arxiv.org/pdf/1811.04551#page=4) · [PDF 5쪽](https://arxiv.org/pdf/1811.04551#page=5)
+- 시각 관측을 받는 연속 제어 과제에서 잠재 공간 계획의 표본 효율과 구성 요소의 효과를 평가했다. [PDF 6쪽](https://arxiv.org/pdf/1811.04551#page=6) · [PDF 7쪽](https://arxiv.org/pdf/1811.04551#page=7)
 
 ## Evaluation Scope
 

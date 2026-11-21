@@ -19,9 +19,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Detecting failures in robotic manipulation tasks poses several challenges.
-
-방법 관련 발췌 — Aside from being performant, our method enables faster inference than prior work [1], which requires sampling, ‘multiple robot actions during inference.
+FAIL-Detect는 성공 시연만으로 정상 범위를 학습해 조작 정책의 실행 중 실패를 감지한다. [PDF 1쪽](https://www.roboticsproceedings.org/rss21/p073.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -54,16 +52,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 1 / 1. INTRODUCTION - extractive body cue:** Aside from being performant, our method enables faster inference than prior work [1], which requires sampling, ‘multiple robot actions during inference.
-- **p. 2 / 1. INTRODUCTION - extractive body cue:** ur contributions are as follows, We present FAIL-Detect, ‘4 modular two stage uncertainty-aware runtime failure detec~ tion framework for generative imitation learning-based robotic ‘manipulation, First, ...
-- **p. 1 / 1. INTRODUCTION - extractive body cue:** A key novelty of our method is the ability to learn failure detection signals without access 10 failure data.
-- **p. 3 / 1. INTRODUCTION - extractive body cue:** STAC does not require failure data, consists ofa score ‘computed post-hoc from a batch of predicted actions and a cconstant-time CP threshold to flag failures, ...
-- **p. 2 / 1. INTRODUCTION - extractive body cue:** We show that FAIL-Detect identifies failures accurately and quickly on diverse robotic manipulation tasks, both in simulation and on robot hardware, outperforming SOTA failure detection ...
-- **p. 7 / Figure/Table caption - extractive body cue:** Fig. 5: Quantitative results for the robot hardware experiments across two tasks with policies trained using FM and DP. We consider two different ways to ...
-- **p. 6 / Figure/Table caption - extractive body cue:** Fig. 4: Quantitative failure detection results for simulation tasks on FM policy (best, second) third); results with TPR and TNR are in Fig. 11 ‘and ...
-- **p. 7 / V. EXPERIMENTS - extractive body cue:** We omit comparison against ensembles [31], a popular OOD detection technique, die to RND having shown improved performance ‘over ensembles in prior work {13} and ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 정책 입출력에서 불확실성과 관련된 스칼라 신호를 얻고 컨포멀 예측으로 순차적 분포 이탈 여부를 판정한다. [PDF 2쪽](https://www.roboticsproceedings.org/rss21/p073.pdf#page=2) · [PDF 3쪽](https://www.roboticsproceedings.org/rss21/p073.pdf#page=3)
+- 플로 기반 밀도 추정기를 포함한 여러 신호를 비교하고 실제 실패 롤아웃에서 탐지 정확도와 탐지 시간을 측정했다. [PDF 6쪽](https://www.roboticsproceedings.org/rss21/p073.pdf#page=6) · [PDF 8쪽](https://www.roboticsproceedings.org/rss21/p073.pdf#page=8)
 
 ## Evaluation Scope
 

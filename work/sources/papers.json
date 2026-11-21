@@ -5729,8 +5729,10 @@
         "verified_on": "2026-11-20"
       },
       "checkpoint": {
-        "status": "not_recorded",
-        "evidence": "no explicit checkpoint availability cue"
+        "status": "reported",
+        "source": "https://storage.googleapis.com/storage/v1/b/gdm-robotics-open-x-embodiment/o/open_x_embodiment_and_rt_x_oss%2Frt_1_x_jax%2Fcheckpoint?generation=1708008454924131",
+        "evidence": "저자가 지정한 RT-1-X JAX 체크포인트 파일이다. RT-2-X 가중치의 공개 범위는 별도로 남는다.",
+        "verified_on": "2026-11-22"
       },
       "configuration": {
         "status": "reported",
@@ -5744,7 +5746,7 @@
         "status": "reported",
         "evidence": "04_evaluation.md trial/statistics cue"
       },
-      "reviewed_on": "2026-09-04",
+      "reviewed_on": "2026-11-22",
       "source_note": "2024/ICRA/2024_ICRA_Open-X-Embodiment-Robotic-Learning-Datasets-and-RT-X-Model/04_evaluation.md",
       "basis": "manifest artifact links plus full-text evaluation/method note cues; availability is not a claim of reproducible execution unless an explicit source or experiment check exists."
     },
@@ -12304,7 +12306,7 @@
     },
     "artifacts": {
       "code_status": "released",
-      "data_status": "not_identified",
+      "data_status": "released",
       "local_pdf_cache": false
     },
     "primary_track": "VLA and generalist robot policies",
@@ -12590,10 +12592,10 @@
         "verified_on": "2026-11-20"
       },
       "data": {
-        "status": "not_identified",
-        "source": "https://raw.githubusercontent.com/openvla/openvla/main/README.md",
-        "verified_on": "2026-11-20",
-        "evidence": "OpenVLA 저자는 OXE 학습 혼합과 혼합 정의 파일을 공개한다. 이전 원장의 공개 단정에는 이 논문에서 새로 수집·배포한 별도 데이터 파일의 근거가 없었다."
+        "status": "released",
+        "source": "https://huggingface.co/api/datasets/openvla/modified_libero_rlds/tree/6ce6aaaaabdbe590b1eef5cd29c0d33f14a08551/libero_10_no_noops/1.0.0",
+        "evidence": "OpenVLA 저자가 공개한 LIBERO 재처리 자료에서 비동작 구간을 제거한 시연의 TFRecord 조각을 확인했다. 전체 사전학습 혼합은 이 판정의 범위 밖이다.",
+        "verified_on": "2026-11-22"
       },
       "checkpoint": {
         "status": "reported",
@@ -12613,7 +12615,7 @@
         "status": "reported",
         "evidence": "04_evaluation.md trial/statistics cue"
       },
-      "reviewed_on": "2026-11-20",
+      "reviewed_on": "2026-11-22",
       "source_note": "2024/CoRL/2024_CoRL_OpenVLA-An-Open-Source-Vision-Language-Action-Model/04_evaluation.md",
       "basis": "manifest artifact links plus full-text evaluation/method note cues; availability is not a claim of reproducible execution unless an explicit source or experiment check exists."
     },
@@ -14894,7 +14896,12 @@
         "url": "https://www.physicalintelligence.company/blog/pi05",
         "kind": "publisher_or_project"
       },
-      "code": null,
+      "code": {
+        "url": "https://github.com/Physical-Intelligence/openpi",
+        "kind": "official_code",
+        "scope": "project_landing",
+        "verified_on": "2026-11-22"
+      },
       "venue_verification": {
         "url": "https://proceedings.mlr.press/v305/black25a.html",
         "kind": "publisher_record",
@@ -14903,7 +14910,7 @@
       }
     },
     "artifacts": {
-      "code_status": "project_only",
+      "code_status": "released",
       "data_status": "not_identified",
       "local_pdf_cache": false
     },
@@ -15037,9 +15044,10 @@
       "profile_version": "1.0",
       "status": "metadata_audited",
       "code": {
-        "status": "project_only",
-        "source": "https://www.physicalintelligence.company/blog/pi05",
-        "evidence": "manifest_link"
+        "status": "released",
+        "source": "https://raw.githubusercontent.com/Physical-Intelligence/openpi/215abfb217dbac7d5f1273282331b9b1866c0479/src/openpi/models/pi0_config.py",
+        "evidence": "openpi에서 pi05 설정을 선택하면 상태 표현과 모델 구성이 달라지는 구현 파일을 확인했다.",
+        "verified_on": "2026-11-22"
       },
       "data": {
         "status": "not_identified",
@@ -15047,8 +15055,10 @@
         "evidence": "existing manifest artifact status preserved"
       },
       "checkpoint": {
-        "status": "not_recorded",
-        "evidence": "no explicit checkpoint availability cue"
+        "status": "reported",
+        "source": "https://storage.googleapis.com/storage/v1/b/openpi-assets/o/checkpoints%2Fpi05_base%2Fparams%2Focdbt.process_0%2Fd%2F8c5d7070ea57bdce2f0a19f95b8a21b4?generation=1757354310234847",
+        "evidence": "기반 모델 π0.5의 Orbax 파라미터 조각이다. 논문에 나오는 모든 미세조정 정책의 공개 범위는 별도로 남는다.",
+        "verified_on": "2026-11-22"
       },
       "configuration": {
         "status": "reported",
@@ -15062,7 +15072,7 @@
         "status": "reported",
         "evidence": "04_evaluation.md trial/statistics cue"
       },
-      "reviewed_on": "2026-09-04",
+      "reviewed_on": "2026-11-22",
       "source_note": "2025/CoRL/2025_CoRL_pi0.5-a-Vision-Language-Action-Model-with-Open-World-Gener/04_evaluation.md",
       "basis": "manifest artifact links plus full-text evaluation/method note cues; availability is not a claim of reproducible execution unless an explicit source or experiment check exists."
     },
@@ -126191,8 +126201,9 @@
       },
       "checkpoint": {
         "status": "reported",
-        "source": "https://api.github.com/repos/rai-opensource/vlfm/git/trees/main?recursive=1",
-        "evidence": "core_next_01.yaml pr-0540 openness.weights=부분. 일부 배포만 확인. 배치 notes 및 evidence에 범위를 기록했다."
+        "source": "https://api.github.com/repos/rai-opensource/vlfm/contents/data/pointnav_weights.pth?ref=584ed56008754fde7997d904983607def8328322",
+        "evidence": "VLFM이 배포한 PointNav 하위 정책 가중치다. 객체 인식기는 외부 모델을 사용한다.",
+        "verified_on": "2026-11-22"
       },
       "configuration": {
         "status": "reported",
@@ -126206,7 +126217,7 @@
         "status": "reported",
         "evidence": "04_evaluation.md trial/statistics cue"
       },
-      "reviewed_on": "2026-11-19",
+      "reviewed_on": "2026-11-22",
       "source_note": "2024/ICRA/2024_ICRA_VLFM-Vision-Language-Frontier-Maps-for-Zero-Shot-Semantic/04_evaluation.md",
       "basis": "manifest artifact links plus full-text evaluation/method note cues; availability is not a claim of reproducible execution unless an explicit source or experiment check exists."
     },
@@ -126442,8 +126453,9 @@
       },
       "checkpoint": {
         "status": "reported",
-        "source": "https://github.com/jacobkrantz/VLN-CE",
-        "evidence": "core_next_01.yaml pr-0541 openness.weights=Y. 저자 원문·배포처 감사."
+        "source": "https://drive.google.com/file/d/1o9PgBT38BH9pw_7V1QB3XUkY8auJqGKw/view",
+        "evidence": "ECCV 2020 실험의 CMA_PM_DA_Aug.pth를 해당 설정의 저자 배포 목록과 대조했다. 같은 배포처의 Seq2Seq_DA.pth도 확인했다.",
+        "verified_on": "2026-11-22"
       },
       "configuration": {
         "status": "reported",
@@ -126457,7 +126469,7 @@
         "status": "reported",
         "evidence": "04_evaluation.md trial/statistics cue"
       },
-      "reviewed_on": "2026-11-19",
+      "reviewed_on": "2026-11-22",
       "source_note": "2020/ECCV/2020_ECCV_Beyond-the-Nav-Graph-Vision-and-Language-Navigation-in-Con/04_evaluation.md",
       "basis": "manifest artifact links plus full-text evaluation/method note cues; availability is not a claim of reproducible execution unless an explicit source or experiment check exists."
     },
@@ -132201,8 +132213,9 @@
       },
       "data": {
         "status": "released",
-        "source": "https://drive.google.com/drive/folders/1gPR03v05S1xiInoVJn7G7VJ9pDCnxq9O?usp=share_link",
-        "evidence": "core_next_01.yaml pr-0566 openness.data=부분. 일부 배포만 확인. 배치 notes 및 evidence에 범위를 기록했다."
+        "source": "https://drive.google.com/file/d/1KrEtCH-63ULZ8DDmndUyltoZlbKIrc6f/view",
+        "evidence": "ACT 시뮬레이션의 사람 시연 sim_insertion_human/episode_0.hdf5를 확인했다. 실물 시연 전체의 배포 판정은 별도다.",
+        "verified_on": "2026-11-22"
       },
       "checkpoint": {
         "status": "not_recorded",
@@ -132220,7 +132233,7 @@
         "status": "reported",
         "evidence": "04_evaluation.md trial/statistics cue"
       },
-      "reviewed_on": "2026-11-19",
+      "reviewed_on": "2026-11-22",
       "source_note": "2023/RSS/2023_RSS_Learning-Fine-Grained-Bimanual-Manipulation-with-Low-Cost/04_evaluation.md",
       "basis": "manifest artifact links plus full-text evaluation/method note cues; availability is not a claim of reproducible execution unless an explicit source or experiment check exists."
     },
@@ -132556,11 +132569,16 @@
         "url": "https://general-navigation-models.github.io/nomad/",
         "kind": "publisher_or_project"
       },
-      "code": null
+      "code": {
+        "url": "https://github.com/robodhruv/visualnav-transformer",
+        "kind": "official_code",
+        "scope": "project_landing",
+        "verified_on": "2026-11-22"
+      }
     },
     "artifacts": {
-      "code_status": "project_only",
-      "data_status": "not_applicable",
+      "code_status": "released",
+      "data_status": "released",
       "local_pdf_cache": false
     },
     "primary_track": "Planning and control",
@@ -132678,18 +132696,22 @@
       "profile_version": "1.0",
       "status": "metadata_audited",
       "code": {
-        "status": "project_only",
-        "source": "https://general-navigation-models.github.io/nomad/",
-        "evidence": "manifest_link"
+        "status": "released",
+        "source": "https://raw.githubusercontent.com/PrieureDeSion/visualnav-transformer/dca79815b704e5aa9c6bdc3082351f9e3b2848c2/train/vint_train/models/nomad/nomad.py",
+        "evidence": "공유 시각 내비게이션 저장소의 NoMaD 모델 구현을 확인했다.",
+        "verified_on": "2026-11-22"
       },
       "data": {
-        "status": "not_applicable",
-        "source": null,
-        "evidence": "existing manifest artifact status preserved"
+        "status": "released",
+        "source": "https://drive.google.com/file/d/1BVGA46WbvOZFyuzkzV2n_yZqcQsdIJy7/view",
+        "evidence": "공유 저자 저장소가 훈련에 사용했다고 명시한 자료 중 수정 GoStanford2의 go_stanford.zip을 확인했다. 전체 훈련 혼합에서 공개된 부분이다.",
+        "verified_on": "2026-11-22"
       },
       "checkpoint": {
-        "status": "not_recorded",
-        "evidence": "no explicit checkpoint availability cue"
+        "status": "reported",
+        "source": "https://drive.google.com/file/d/1YJhkkMJAYOiKNyCaelbS_alpUpAJsOUb/view",
+        "evidence": "NoMaD의 배포 가중치 nomad.pth 파일과 모델별 배포 목록을 대조했다.",
+        "verified_on": "2026-11-22"
       },
       "configuration": {
         "status": "reported",
@@ -132703,7 +132725,7 @@
         "status": "reported",
         "evidence": "04_evaluation.md trial/statistics cue"
       },
-      "reviewed_on": "2026-09-04",
+      "reviewed_on": "2026-11-22",
       "source_note": "2024/ICRA/2024_ICRA_NoMaD-Goal-Masked-Diffusion-Policies-for-Navigation-and-Ex/04_evaluation.md",
       "basis": "manifest artifact links plus full-text evaluation/method note cues; availability is not a claim of reproducible execution unless an explicit source or experiment check exists."
     },
@@ -133953,7 +133975,7 @@
     },
     "artifacts": {
       "code_status": "released",
-      "data_status": "not_identified",
+      "data_status": "released",
       "local_pdf_cache": false
     },
     "primary_track": "Locomotion, whole-body, mobile manipulation, and humanoids",
@@ -134108,9 +134130,10 @@
         "verified_on": "2026-11-20"
       },
       "data": {
-        "status": "not_identified",
-        "source": null,
-        "evidence": "existing manifest artifact status preserved"
+        "status": "released",
+        "source": "https://drive.google.com/file/d/1_SOJkgfP5yZyVjMhTt3nwhvyUjcnlI51/view",
+        "evidence": "실물 Mobile ALOHA의 캐비닛 작업 시연 aloha_mobile_cabinet/episode_0.hdf5를 확인했다.",
+        "verified_on": "2026-11-22"
       },
       "checkpoint": {
         "status": "not_recorded",
@@ -134128,7 +134151,7 @@
         "status": "reported",
         "evidence": "04_evaluation.md trial/statistics cue"
       },
-      "reviewed_on": "2026-09-04",
+      "reviewed_on": "2026-11-22",
       "source_note": "2024/CoRL/2024_CoRL_Mobile-ALOHA-Learning-Bimanual-Mobile-Manipulation-using-L/04_evaluation.md",
       "basis": "manifest artifact links plus full-text evaluation/method note cues; availability is not a claim of reproducible execution unless an explicit source or experiment check exists."
     },
@@ -145469,8 +145492,9 @@
       "status": "metadata_audited",
       "code": {
         "status": "released",
-        "source": "https://github.com/aviralkumar2907/CQL",
-        "evidence": "manifest_link"
+        "source": "https://raw.githubusercontent.com/aviralkumar2907/CQL/d67dbe9cf5d2b96e3b462b6146f249b3d6569796/d4rl/rlkit/torch/sac/cql.py",
+        "evidence": "D4RL 실험에 쓰는 보수적 Q 손실과 정책 갱신 구현을 확인했다.",
+        "verified_on": "2026-11-22"
       },
       "data": {
         "status": "not_identified",
@@ -145493,7 +145517,7 @@
         "status": "reported",
         "evidence": "04_evaluation.md trial/statistics cue"
       },
-      "reviewed_on": "2026-09-04",
+      "reviewed_on": "2026-11-22",
       "source_note": "2020/NeurIPS/2020_NeurIPS_Conservative-Q-Learning-for-Offline-Reinforcement-Learning/04_evaluation.md",
       "basis": "manifest artifact links plus full-text evaluation/method note cues; availability is not a claim of reproducible execution unless an explicit source or experiment check exists."
     },
@@ -157943,7 +157967,12 @@
         "url": "https://sites.google.com/berkeley.edu/recovery-rl/",
         "kind": "publisher_or_project"
       },
-      "code": null,
+      "code": {
+        "url": "https://github.com/abalakrishna123/recovery-rl",
+        "kind": "official_code",
+        "scope": "project_landing",
+        "verified_on": "2026-11-22"
+      },
       "venue_verification": {
         "url": "https://api.crossref.org/works/10.1109/lra.2021.3070252",
         "kind": "publisher_record",
@@ -157952,8 +157981,8 @@
       }
     },
     "artifacts": {
-      "code_status": "project_only",
-      "data_status": "not_identified",
+      "code_status": "released",
+      "data_status": "released",
       "local_pdf_cache": false
     },
     "primary_track": "World models, safety, uncertainty, and recovery",
@@ -158079,14 +158108,16 @@
       "profile_version": "1.0",
       "status": "metadata_audited",
       "code": {
-        "status": "project_only",
-        "source": "https://sites.google.com/berkeley.edu/recovery-rl/",
-        "evidence": "manifest_link"
+        "status": "released",
+        "source": "https://raw.githubusercontent.com/abalakrishna123/recovery-rl/084c968538850e82776564e07b9dcdffca369936/recovery_rl/qrisk.py",
+        "evidence": "Recovery RL의 안전 가치 함수와 복구 정책 구현을 저자 저장소에서 확인했다.",
+        "verified_on": "2026-11-22"
       },
       "data": {
-        "status": "not_identified",
-        "source": null,
-        "evidence": "existing manifest artifact status preserved"
+        "status": "released",
+        "source": "https://drive.google.com/file/d/10M7pzsvKP4DcDDqxctDzx_opGfoV6rVt/view",
+        "evidence": "저자 설치 스크립트가 안내하는 shelf·maze 오프라인 복구 시연 압축 파일 recovery_rl_demos.zip의 배포를 확인했다.",
+        "verified_on": "2026-11-22"
       },
       "checkpoint": {
         "status": "not_recorded",
@@ -158104,7 +158135,7 @@
         "status": "reported",
         "evidence": "04_evaluation.md trial/statistics cue"
       },
-      "reviewed_on": "2026-09-04",
+      "reviewed_on": "2026-11-22",
       "source_note": "2021/RA-L/2021_RA-L_Recovery-RL-Safe-Reinforcement-Learning-with-Learned-Recov/04_evaluation.md",
       "basis": "manifest artifact links plus full-text evaluation/method note cues; availability is not a claim of reproducible execution unless an explicit source or experiment check exists."
     },
@@ -175456,7 +175487,7 @@
     },
     "artifacts": {
       "code_status": "released",
-      "data_status": "not_identified",
+      "data_status": "released",
       "local_pdf_cache": false
     },
     "primary_track": "VLA and generalist robot policies",
@@ -175591,13 +175622,15 @@
       "status": "metadata_audited",
       "code": {
         "status": "released",
-        "source": "https://github.com/moojink/openvla-oft",
-        "evidence": "core_next_01.yaml pr-0750 openness.code=Y. 저자 원문·배포처 감사."
+        "source": "https://raw.githubusercontent.com/moojink/openvla-oft/e4287e94541f459edc4feabc4e181f537cd569a8/vla-scripts/finetune.py",
+        "evidence": "저자 미세조정 스크립트의 행동 청크 예측 및 연속 행동 헤드 학습 경로를 확인했다.",
+        "verified_on": "2026-11-22"
       },
       "data": {
-        "status": "not_identified",
-        "source": null,
-        "evidence": "existing manifest artifact status preserved"
+        "status": "released",
+        "source": "https://huggingface.co/api/datasets/openvla/modified_libero_rlds/tree/6ce6aaaaabdbe590b1eef5cd29c0d33f14a08551/libero_10_no_noops/1.0.0",
+        "evidence": "OFT 저자가 실험에 재사용했다고 명시한 OpenVLA의 수정 LIBERO 자료에서 TFRecord 조각을 확인했다. OFT가 새로 수집한 데이터로 계산하지 않는다.",
+        "verified_on": "2026-11-22"
       },
       "checkpoint": {
         "status": "reported",
@@ -175617,7 +175650,7 @@
         "status": "reported",
         "evidence": "04_evaluation.md trial/statistics cue"
       },
-      "reviewed_on": "2026-11-19",
+      "reviewed_on": "2026-11-22",
       "source_note": "2025/RSS/2025_RSS_Fine-Tuning-Vision-Language-Action-Models-Optimizing-Speed/04_evaluation.md",
       "basis": "manifest artifact links plus full-text evaluation/method note cues; availability is not a claim of reproducible execution unless an explicit source or experiment check exists."
     },
@@ -217275,7 +217308,12 @@
         "url": "https://general-navigation-models.github.io/vint/index.html",
         "kind": "publisher_or_project"
       },
-      "code": null,
+      "code": {
+        "url": "https://github.com/robodhruv/visualnav-transformer",
+        "kind": "official_code",
+        "scope": "project_landing",
+        "verified_on": "2026-11-22"
+      },
       "venue_verification": {
         "url": "https://proceedings.mlr.press/v229/shah23a.html",
         "kind": "publisher_record",
@@ -217284,8 +217322,8 @@
       }
     },
     "artifacts": {
-      "code_status": "project_only",
-      "data_status": "not_identified",
+      "code_status": "released",
+      "data_status": "released",
       "local_pdf_cache": false
     },
     "relations": [],
@@ -217390,18 +217428,22 @@
       "profile_version": "1.0",
       "status": "metadata_audited",
       "code": {
-        "status": "project_only",
-        "source": "https://general-navigation-models.github.io/vint/index.html",
-        "evidence": "manifest_link"
+        "status": "released",
+        "source": "https://raw.githubusercontent.com/PrieureDeSion/visualnav-transformer/dca79815b704e5aa9c6bdc3082351f9e3b2848c2/train/vint_train/models/vint/vint.py",
+        "evidence": "공유 시각 내비게이션 저장소의 ViNT 모델 구현을 확인했다.",
+        "verified_on": "2026-11-22"
       },
       "data": {
-        "status": "not_identified",
-        "source": null,
-        "evidence": "existing manifest artifact status preserved"
+        "status": "released",
+        "source": "https://drive.google.com/file/d/1BVGA46WbvOZFyuzkzV2n_yZqcQsdIJy7/view",
+        "evidence": "공유 저자 저장소가 훈련에 사용했다고 명시한 자료 중 수정 GoStanford2의 go_stanford.zip을 확인했다. 전체 훈련 혼합에서 공개된 부분이다.",
+        "verified_on": "2026-11-22"
       },
       "checkpoint": {
-        "status": "not_recorded",
-        "evidence": "no explicit checkpoint availability cue"
+        "status": "reported",
+        "source": "https://drive.google.com/file/d/1ckrceGb5m_uUtq3pD8KHwnqtJgPl6kF5/view",
+        "evidence": "ViNT의 배포 가중치 vint.pth 파일과 모델별 배포 목록을 대조했다.",
+        "verified_on": "2026-11-22"
       },
       "configuration": {
         "status": "reported",
@@ -217415,7 +217457,7 @@
         "status": "reported",
         "evidence": "04_evaluation.md trial/statistics cue"
       },
-      "reviewed_on": "2026-09-04",
+      "reviewed_on": "2026-11-22",
       "source_note": "2023/CoRL/2023_CoRL_ViNT-A-Foundation-Model-for-Visual-Navigation/04_evaluation.md",
       "basis": "manifest artifact links plus full-text evaluation/method note cues; availability is not a claim of reproducible execution unless an explicit source or experiment check exists."
     },
@@ -222859,8 +222901,9 @@
       },
       "checkpoint": {
         "status": "reported",
-        "source": "https://github.com/irom-lab/dppo",
-        "evidence": "core_next_01.yaml pr-0951 openness.weights=Y. 저자 원문·배포처 감사."
+        "source": "https://drive.google.com/file/d/1WUKMp61DencZBvMU086fxdn34UGibuC_/view",
+        "evidence": "HalfCheetah-medium-v2 확산 정책의 사전학습 체크포인트 state_1000.pt를 확인했다. 강화학습 후 전체 정책의 공개 여부는 별도다.",
+        "verified_on": "2026-11-22"
       },
       "configuration": {
         "status": "not_recorded",
@@ -222874,7 +222917,7 @@
         "status": "not_recorded",
         "evidence": "04_evaluation.md trial/statistics cue"
       },
-      "reviewed_on": "2026-11-19",
+      "reviewed_on": "2026-11-22",
       "source_note": "2025/ICLR/2025_ICLR_Diffusion-Policy-Policy-Optimization/04_evaluation.md",
       "basis": "Manifest artifact links and abstract/project-only note cues; full-text protocol and reproducible execution have not been checked."
     },

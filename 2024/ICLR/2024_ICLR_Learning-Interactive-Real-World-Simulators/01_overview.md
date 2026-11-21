@@ -19,9 +19,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — We illustrate that the observation prediction model can be rolled out autoregressively to obtain consistent and long-horizon videos. • We illustrate how the simulator can enable both high-level language policies, low-level control ...
-
-방법 관련 발췌 — In this work, we propose to combine a wealth of data in a conditional video generation framework to instantiate a universal simulator (UniSim)1.
+UniSim은 텍스트 명령이나 저수준 행동을 주면 뒤따를 시각 관측을 생성하는 상호작용 시뮬레이터다. [PDF 1쪽](https://arxiv.org/pdf/2310.06114#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 1 / 1 INTRODUCTION - extractive body cue:** In this work, we propose to combine a wealth of data in a conditional video generation framework to instantiate a universal simulator (UniSim)1.
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** Nevertheless, we propose specific strategies for processing each type of data to unify the action space and align videos of variable lengths to actions in ...
-- **p. 1 / 1 INTRODUCTION - extractive body cue:** Under a unified action-in-video-out interface, the simulator enables rich interaction through fine-grained motion control of otherwise static scenes and objects.
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** We first show how the simulator enables a vision-language policy to perform long-horizon goal-conditioned tasks through hindsight relabeling of simulated experience (Andrychowicz et al., 2017).
-- **p. 22 / Figure/Table caption - extractive body cue:** Table 8: Ablations of datasets using FVD and CLIP score on the held-out test split. Including internet data and diverse human activity and robot data ...
-- **p. 7 / Figure/Table caption - extractive body cue:** Table 3: Evaluation of RL policy. Percentage of successful simulated rollouts (out of 48 tasks) using the VLA policy with and without RL finetuning on ...
-- **p. 6 / Figure/Table caption - extractive body cue:** Figure 5: Diverse and stochastic simulations. On the left, we use text to specify the object being revealed by suffixing "uncovering" with the object name. ...
-- **p. 8 / 1. Put cup 2. Pen 3. Apple - extractive body cue:** Purely finetuning on generated data drastically improves the captioning performance from no finetuning at all on ActivityNet (15.2 to 46.23), while achieving 84% performance of ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 서로 다른 장면·물체·행동을 담은 데이터셋을 함께 학습해 고수준 지시와 저수준 제어 입력 모두의 시각적 결과를 생성한다. [PDF 3쪽](https://arxiv.org/pdf/2310.06114#page=3) · [PDF 4쪽](https://arxiv.org/pdf/2310.06114#page=4)
+- 생성한 경험으로 고수준 시각·언어 정책과 저수준 강화학습 정책을 학습하고 실물로 전이하는 예를 평가했다. [PDF 6쪽](https://arxiv.org/pdf/2310.06114#page=6) · [PDF 7쪽](https://arxiv.org/pdf/2310.06114#page=7)
 
 ## Evaluation Scope
 

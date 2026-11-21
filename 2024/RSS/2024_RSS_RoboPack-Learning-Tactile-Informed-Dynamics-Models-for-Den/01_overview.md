@@ -19,9 +19,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — At the same time, tasks such as dense packing present significant challenges due to severe occlusions among objects, creating partially observable scenarios where vision alone is insufficient to determine the properties of ...
-
-방법 관련 발췌 — To tackle these challenges, in this work, we propose to 1) learn dynamics directly from real physical interaction data using powerful deep function approximators, 2) equip our robotic system with a compliant ...
+RoboPack은 시각·촉각 이력으로 물체의 운동과 물성을 추정해 좁은 공간에 물체를 밀어 넣을 행동을 계획한다. [PDF 1쪽](https://www.roboticsproceedings.org/rss20/p130.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / I. INTRODUCTION - extractive body cue:** To tackle these challenges, in this work, we propose to 1) learn dynamics directly from real physical interaction data using powerful deep function approximators, 2) ...
-- **p. 2 / I. INTRODUCTION - extractive body cue:** We find that our method can successfully leverage histories of visuo-tactile information to improve prediction, with models trained on just 30 minutes of real-world interaction ...
-- **p. 4 / III. METHOD - extractive body cue:** For multi-object packing settings with significant occlusion, we introduce an objective that constrains tracked points to be near the corresponding object masks, providing more consistent ...
-- **p. 5 / III. METHOD - extractive body cue:** In the following paragraphs, we describe how our method performs state estimation using history information and future prediction.
-- **p. 7 / V. EXPERIMENTS - extractive body cue:** Does integrating tactile sensing information from prior interactions improve future prediction accuracy? ii.
-- **p. 9 / V. EXPERIMENTS - extractive body cue:** A trial is labeled as a success if it achieves an error lower than 0.02 for point-wise MSE within 10 pushes. histories than a certain ...
-- **p. 9 / V. EXPERIMENTS - extractive body cue:** While the physics-based simulator achieves the strongest performance of the baselines, it is not able to achieve as precise control as our method, taking more ...
-- **p. 10 / V. EXPERIMENTS - extractive body cue:** Method Seen Objects Unseen Objects RoboPack 12/15 10/15 RoboPack (no tactile) 6/15 5/15 TABLE III: Success rates on the dense packing task.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 순환 그래프 신경망이 입자 상태와 물체별 잠재 물성을 추정하고 후보 행동이 만들 미래 상태를 예측한다. [PDF 4쪽](https://www.roboticsproceedings.org/rss20/p130.pdf#page=4) · [PDF 5쪽](https://www.roboticsproceedings.org/rss20/p130.pdf#page=5)
+- 실물 상호작용 자료로 동역학을 학습해 Soft-Bubble 촉각 센서를 장착한 로봇의 비파지 밀기와 밀집 포장을 모델 예측 제어로 수행했다. [PDF 7쪽](https://www.roboticsproceedings.org/rss20/p130.pdf#page=7) · [PDF 10쪽](https://www.roboticsproceedings.org/rss20/p130.pdf#page=10)
 
 ## Evaluation Scope
 

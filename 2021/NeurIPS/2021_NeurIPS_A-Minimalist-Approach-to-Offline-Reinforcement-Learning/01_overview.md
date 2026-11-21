@@ -19,9 +19,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — One challenge for offline RL is the problem of extrapolation error [Fujimoto et al., 2019b], which is generalization error in the approximate value function, induced by selecting actions not contained in the ...
-
-방법 관련 발췌 — Consequently, offline RL enables the use of previously logged data or leveraging an expert, such as a human operator, without any of the risk associated with an untrained RL agent.
+TD3+BC는 고정된 데이터에서 TD3를 학습할 때 정책 갱신에 행동 복제 항을 더하는 오프라인 강화학습 기준선이다. [PDF 1쪽](https://arxiv.org/pdf/2106.06860#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 1 / 1 Introduction - extractive body cue:** Consequently, offline RL enables the use of previously logged data or leveraging an expert, such as a human operator, without any of the risk associated ...
-- **p. 2 / 1 Introduction - extractive body cue:** The surprising effectiveness of our minimalist approach suggests that in the context of offline RL, simpler approaches have been left underexplored in favor of more ...
-- **p. 3 / 3 Background - extractive body cue:** We believe these challenges highlight the importance of minimalist approaches, where performance can be easily attributed to algorithmic contributions, rather than entangled with the specifics ...
-- **p. 4 / 3 Background - extractive body cue:** If additional changes are necessary, then it suggests the algorithmic contributions alone are insufficient.
-- **p. 6 / 3 Background - extractive body cue:** As discussed in Section 4 a minimalist approach has a variety of benefits, such as reducing the number of hyperparameters to tune, increasing scalability by ...
-- **p. 8 / Figure/Table caption - extractive body cue:** Table 3: Run time comparison of training each offline RL algorithm (does not include evaluation costs). (Left) Breakdown of the cost of the added implementation ...
-- **p. 7 / Figure/Table caption - extractive body cue:** Table 2: Average normalized score over the final 10 evaluations and 5 seeds. The highest performing scores are highlighted. CQL and Fisher-BRC are re-run using ...
-- **p. 18 / Figure/Table caption - extractive body cue:** Table 9: Average normalized score using the D4RL -v2 datasets. The highest performing scores are highlighted. ± captures the standard deviation over seeds. Total (DT) ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 데이터 상태를 정규화하고 동작이 시연에서 지나치게 멀어지지 않도록 가치 최대화와 행동 모방을 결합한다. [PDF 2쪽](https://arxiv.org/pdf/2106.06860#page=2) · [PDF 3쪽](https://arxiv.org/pdf/2106.06860#page=3)
+- 오프라인 연속 제어 데이터에서 더 복잡한 알고리즘과 정책 성능 및 학습 시간을 비교했다. [PDF 4쪽](https://arxiv.org/pdf/2106.06860#page=4) · [PDF 7쪽](https://arxiv.org/pdf/2106.06860#page=7)
 
 ## Evaluation Scope
 

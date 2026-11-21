@@ -1,6 +1,6 @@
 # 논문 목록
 
-- Generated: 2026-11-20 KST
+- Generated: 2026-11-22 KST
 - Total papers with folders: 1252
 - Long-term reading tiers: [READING_PLAN.md](./research/READING_PLAN.md) and [READING_TIERS.csv](./research/READING_TIERS.csv)
 - Reading progress and synthesis: [READING_STATUS.csv](./research/READING_STATUS.csv), [READING_STATUS.md](./research/READING_STATUS.md), [synthesis/README.md](./synthesis/README.md)

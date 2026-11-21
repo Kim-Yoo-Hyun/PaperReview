@@ -19,9 +19,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Passive part segmentation algorithms require detailed annotation and cannot generalize to new categories.
-
-방법 관련 발췌 — To address these challenges, we introduce Act the Part
+Act the Part는 물체 부품의 경계를 알아내기 위해 로봇이 어디를 잡고 어디를 움직여 볼지 선택하는 방법이다. [PDF 1쪽](https://arxiv.org/pdf/2105.01047#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 1 / 1. Introduction - extractive body cue:** To address these challenges, we introduce Act the Part.
-- **p. 2 / 1. Introduction - extractive body cue:** (2) Our method generalizes to unseen object instances and categories with different numbers of parts and joints.
-- **p. 4 / 3.4. History Aggregation - extractive body cue:** We introduce a history aggregation algorithm to updated part memory V , based on predicted Mt and Mt+1.
-- **p. 2 / 3. Approach - extractive body cue:** We then explain the three components of our approach: an interaction network (Sec.
-- **p. 1 / 1. Introduction - extractive body cue:** Our task and approach novelty are highlighted in Fig.
-- **p. 5 / 4.2. Benchmark Results - extractive body cue:** While other algorithms' performance saturate quickly with one or two interactions, [Ours-Touch] and [Ours-NoTouch] are able to improve with more interactions.
-- **p. 7 / 4.2. Benchmark Results - extractive body cue:** Furthermore, this result suggests more complex perceptual modules are necessary to get push-only policies to achieve competitive performance at this task.
-- **p. 7 / 4.2. Benchmark Results - extractive body cue:** 2, we see that [Ours-Touch] outperforms [Ours-NoTouch] in most categories.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 행동 선택과 움직임 분할을 결합해 의미 범주 주석 없이 독립적으로 움직이는 부품을 발견한다. [PDF 3쪽](https://arxiv.org/pdf/2105.01047#page=3) · [PDF 4쪽](https://arxiv.org/pdf/2105.01047#page=4)
+- 시뮬레이션에서 배운 상호작용 전략을 새로운 물체 범주와 실제 관측 자료에서 평가했다. [PDF 7쪽](https://arxiv.org/pdf/2105.01047#page=7) · [PDF 8쪽](https://arxiv.org/pdf/2105.01047#page=8)
 
 ## Evaluation Scope
 

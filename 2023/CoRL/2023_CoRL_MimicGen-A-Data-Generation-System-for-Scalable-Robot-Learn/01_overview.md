@@ -19,9 +19,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — For example, [3] showed that a dataset of over 20,000 trajectories enables generalization to tasks with modest changes in objects and goals.
-
-방법 관련 발췌 — We make the following contributions: • We introduce MimicGen, a system for generating large diverse datasets from a small number of human demonstrations by adapting the human demonstrations to novel settings. • ...
+MimicGen은 소수의 사람 시연을 물체 중심 하위 동작으로 나눠 새로운 장면에서 실행 가능한 로봇 시연을 생성한다. [PDF 1쪽](https://proceedings.mlr.press/v229/mandlekar23a/mandlekar23a.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1 Introduction - extractive body cue:** We make the following contributions: • We introduce MimicGen, a system for generating large diverse datasets from a small number of human demonstrations by adapting ...
-- **p. 2 / 1 Introduction - extractive body cue:** In this paper, we introduce a novel data collection system that uses a small set of human demonstrations to automatically generate large datasets across diverse ...
-- **p. 4 / 4 Method - extractive body cue:** In our experiments, we designed task variants for each robot manipulation task where we vary either the initial state distribution (D), an object in the ...
-- **p. 3 / 4 Method - extractive body cue:** 4.1 Parsing the Source Dataset into Object-Centric Segments Each task consists of a sequence of object-centric subtasks (Assumption 2, Sec.
-- **p. 4 / 4 Method - extractive body cue:** 2 (right), this consists of three key steps for each subtask: (1) choosing a reference subtask segment in the source dataset, (2) transforming the subtask ...
-- **p. 6 / Figure/Table caption - extractive body cue:** Figure 4: (left) Agent Performance on Source and Generated Datasets. Success rates (3 seeds) of image- based agents trained with BC on the 10 source ...
-- **p. 5 / 6 Experiments - extractive body cue:** MimicGen data vastly improves agent performance on the source task.
-- **p. 6 / 6 Experiments - extractive body cue:** Assembly 1.3 ± 0.9 82.0 ± 1.6 62.7 ± 2.5 13.3 ± 3.8 Hammer Cleanup 59.3 ± 5.7 100.0 ± 0.0 62.7 ± 4.7 - ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 시연의 부분 궤적을 새 물체 자세에 맞게 변환해 연결하고 실제 시뮬레이션 실행에서 성공한 궤적을 모은다. [PDF 3쪽](https://proceedings.mlr.press/v229/mandlekar23a/mandlekar23a.pdf#page=3) · [PDF 4쪽](https://proceedings.mlr.press/v229/mandlekar23a/mandlekar23a.pdf#page=4)
+- 물체의 시작 배치·개체·로봇 팔이 달라진 조건에서 생성 자료로 행동 복제 정책을 학습해 평가했다. [PDF 7쪽](https://proceedings.mlr.press/v229/mandlekar23a/mandlekar23a.pdf#page=7) · [PDF 8쪽](https://proceedings.mlr.press/v229/mandlekar23a/mandlekar23a.pdf#page=8)
 
 ## Evaluation Scope
 

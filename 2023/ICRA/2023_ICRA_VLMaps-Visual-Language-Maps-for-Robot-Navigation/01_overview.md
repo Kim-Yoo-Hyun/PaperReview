@@ -19,9 +19,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — A key aspect of VLMaps is that they are spatial, which enables them to: • Localize spatial goals beyond object-centric ones, e.g., "in between the TV and sofa" or "to the right ...
-
-방법 관련 발췌 — We propose VLMaps as one such representation, which can be constructed using off-the-shelf visual-language models (VLMs) and standard 3D reconstruction libraries.
+VLMaps는 언어로 지칭한 물체와 물체 사이의 위치를 3차원 지도에 놓아 내비게이션 목표로 삼는다. [PDF 1쪽](https://arxiv.org/pdf/2210.05714#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / III. METHOD - extractive body cue:** We propose VLMaps as one such representation, which can be constructed using off-the-shelf visual-language models (VLMs) and standard 3D reconstruction libraries.
-- **p. 1 / I. INTRODUCTION - extractive body cue:** Extensive experiments show that using VLMaps enables more effective long-horizon multi-object goal navigation than baseline alternatives, e.g., CoW [12] and LM-Nav [13], and, in particular, ...
-- **p. 1 / I. INTRODUCTION - extractive body cue:** A key aspect of VLMaps is that they are spatial, which enables them to: • Localize spatial goals beyond object-centric ones, e.g., "in between the ...
-- **p. 2 / I. INTRODUCTION - extractive body cue:** 2: VLMaps enables a robot to perform complex zero-shot spatial goal navigation tasks given natural language commands, without additional data collection or model finetuning.
-- **p. 3 / III. METHOD - extractive body cue:** Generating Open-Vocabulary Obstacle Maps Building a VLMap enables us to generate obstacle maps that inherit the open-vocabulary nature of the VLMs used (LSeg and CLIP).
-- **p. 5 / IV. EXPERIMENTS - extractive body cue:** Subgoals in a Row 1 2 3 4 LM-Nav [13] 5 5 0 0 CoW [12] 33 5 0 0 CLIP Map 19 0 0 ...
-- **p. 6 / IV. EXPERIMENTS - extractive body cue:** This improves object navigation efficiency (Success [%] weighted by Path Length, SPL).
-- **p. 6 / IV. EXPERIMENTS - extractive body cue:** Overall, these results demonstrate the ability of VLMaps to index landmarks with natural language in the real world and, more importantly, its applicability to achieve ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 여러 시점의 영상에 매긴 시각·언어 특징을 재구성한 공간에 투영해, 새 범주를 질의할 때도 같은 지도를 쓴다. [PDF 3쪽](https://arxiv.org/pdf/2210.05714#page=3) · [PDF 4쪽](https://arxiv.org/pdf/2210.05714#page=4)
+- 로봇마다 통과할 수 없는 물체 범주를 지정해 장애물 지도를 만들고, 여러 목표를 차례로 방문하는 명령을 평가했다. [PDF 5쪽](https://arxiv.org/pdf/2210.05714#page=5) · [PDF 6쪽](https://arxiv.org/pdf/2210.05714#page=6)
 
 ## Evaluation Scope
 

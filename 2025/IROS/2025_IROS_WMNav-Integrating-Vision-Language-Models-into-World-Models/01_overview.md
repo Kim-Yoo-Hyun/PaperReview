@@ -19,9 +19,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, due to the limited field of view of egocentric images, capturing environmental information outside the immediate perspective remains a significant challenge.
-
-방법 관련 발췌 — Our contributions can be summarized as follows: • We introduce a new direction for object goal navigation in a complex, unknown environment using a world model consisting of VLMs and novel modules. ...
+WMNav는 목표 물체를 찾을 때 시각·언어 모델이 후보 이동의 결과를 예측하고 탐색 기억을 다음 결정에 활용하게 한다. [PDF 1쪽](https://arxiv.org/pdf/2503.02247#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / I. INTRODUCTION - extractive body cue:** Our contributions can be summarized as follows: • We introduce a new direction for object goal navigation in a complex, unknown environment using a world ...
-- **p. 3 / III. WMNAV APPROACH - extractive body cue:** In our framework, the world model consists of PredictVLM and the memory constructed by curiosity value map and cost.
-- **p. 2 / I. INTRODUCTION - extractive body cue:** Building on the key insight that VLMs inherently encode comprehensive knowledge about indoor layout and spatial relationships of objects, we propose WMNav as shown in ...
-- **p. 3 / III. WMNAV APPROACH - extractive body cue:** To guide the VLM to make reasonable predictions about the indoor scene, we design a novel prompting strategy as illustrated in Figure 3 (a).
-- **p. 6 / IV. EXPERIMENTS - extractive body cue:** Metrics We adopt Success Rate (SR) and Success Rate Weighted by Inverse Path Length (SPL) as the evaluation metrics.
-- **p. 6 / IV. EXPERIMENTS - extractive body cue:** SPL quantifies the agent's navigation efficiency by calculating the inverse ratio of the actual path length traversed to the optimal path length weighted by success ...
-- **p. 3 / Figure/Table caption - extractive body cue:** Fig. 2: The WMNav framework. After acquiring the RGB-D panoramic image and pose information at step t, the PredictVLM first predicts the state of the ...
-- **p. 4 / Figure/Table caption - extractive body cue:** Fig. 3: Predict the Likelihood. (a) The world model predicts the Curiosity Value for each direction in the panoramic image based on the likelihood of ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 예측한 환경 상태를 호기심 가치 지도에 누적하고 이미 본 영역과 새 탐색 방향을 구분한다. [PDF 3쪽](https://arxiv.org/pdf/2503.02247#page=3) · [PDF 4쪽](https://arxiv.org/pdf/2503.02247#page=4)
+- 물체 목표 내비게이션에서 지도의 기억과 정책에 전달하는 피드백이 탐색에 미치는 영향을 평가했다. [PDF 6쪽](https://arxiv.org/pdf/2503.02247#page=6) · [PDF 7쪽](https://arxiv.org/pdf/2503.02247#page=7)
 
 ## Evaluation Scope
 

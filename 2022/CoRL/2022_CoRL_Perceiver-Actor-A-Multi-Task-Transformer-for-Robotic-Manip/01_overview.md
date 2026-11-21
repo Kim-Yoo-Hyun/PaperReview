@@ -21,9 +21,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Can we still bring the power of Transformers to 6-DoF manipulation with the right problem formulation?
-
-방법 관련 발췌 — In summary, our contributions are as follows: • A novel problem formulation for perceiving, acting, and specifying goals with Transformers. • An efficient action-centric framework for grounding language in 6-DoF actions. • ...
+PerAct는 언어 지시와 RGB-D 복셀 관측에서 다음 그리퍼 동작을 예측하는 다중 작업 모방 정책이다. [PDF 1쪽](https://proceedings.mlr.press/v205/shridhar23a/shridhar23a.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -56,16 +54,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1 Introduction - extractive body cue:** In summary, our contributions are as follows: • A novel problem formulation for perceiving, acting, and specifying goals with Transformers. • An efficient action-centric framework ...
-- **p. 1 / 1 Introduction - extractive body cue:** To this end, we present PERACT (short for PERCEIVER-ACTOR), a language-conditioned BC agent that can learn to imitate a wide variety of 6-DoF manipulation tasks ...
-- **p. 2 / 1 Introduction - extractive body cue:** We also demonstrate our approach with a Franka Panda on 7 real-world tasks (k-o; only 5 shown) with a multi-task agent trained with just 53 ...
-- **p. 7 / Figure/Table caption - extractive body cue:** Table 1. Multi-Task Test Results. Success rates (mean %) of various multi-task agents tasks trained with either 10 or 100 demonstrations per task and evaluated ...
-- **p. 24 / Figure/Table caption - extractive body cue:** Table 5. Success rates (mean %) of multi-task and single-task PERACT agents trained with 100 demos and evaluated on 25 episodes. In Table 1, PERACT ...
-- **p. 8 / 4 Results - extractive body cue:** Similar to the simulation results, we find that PERACT is able to achieve > 65% success on simple short-horizon tasks like pressing hand-sanitizers from just ...
-- **p. 27 / Figure/Table caption - extractive body cue:** Figure 11. Perturbation Tests. Results from a multi-task PERACT agent trained on a single drawer and evaluated on several instances perturbed drawers. Each perturbation consists ...
-- **p. 6 / 4 Results - extractive body cue:** [14] that has achieved state-of-the-art results on RLBench tasks.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- Perceiver가 관측을 압축한 뒤 다음 동작의 병진 위치를 복셀에서 찾고 회전과 그리퍼 상태를 이산적으로 예측한다. [PDF 3쪽](https://proceedings.mlr.press/v205/shridhar23a/shridhar23a.pdf#page=3) · [PDF 4쪽](https://proceedings.mlr.press/v205/shridhar23a/shridhar23a.pdf#page=4)
+- RLBench와 실제 탁상 조작에서 같은 정책을 여러 작업에 학습시켜 영상 기반 정책 및 3D 합성곱 기준선과 비교했다. [PDF 6쪽](https://proceedings.mlr.press/v205/shridhar23a/shridhar23a.pdf#page=6) · [PDF 8쪽](https://proceedings.mlr.press/v205/shridhar23a/shridhar23a.pdf#page=8)
 
 ## Evaluation Scope
 

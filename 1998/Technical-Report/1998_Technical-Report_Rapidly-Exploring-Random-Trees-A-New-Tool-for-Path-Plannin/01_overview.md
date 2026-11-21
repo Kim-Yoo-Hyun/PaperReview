@@ -19,9 +19,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — The primary difficulty with existing techniques is that, although powerful for standard path planning, they do not naturally extend to general nonholonomic planning problems.
-
-방법 관련 발췌 — Tn this paper, we introduce a randomized data structure for path planning that is designed for problems that, have nonholonomic constraints.
+RRT는 상태 공간에서 무작위로 뽑은 점 쪽으로 도달 가능한 상태를 하나씩 더해 경로 탐색 트리를 키운다. [PDF 1쪽](https://lavalle.pl/papers/Lav98c.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -35,12 +33,9 @@
 
 ## Core Idea
 
-- **p. 1 / 1 Introduction - extractive body cue:** Tn this paper, we introduce a randomized data structure for path planning that is designed for problems that, have nonholonomic constraints.
-- **p. 1 / 1 Introduction - extractive body cue:** Both are designed with as few heutisties and arbitrary
 - **p. 2 / 3. Nice Properties of RRTs - extractive body cue:** The key advantages of RRTs are: 1) the expansion of an RRT is heavily biased. toward unexplored portions of the state space; 2) the dis ...
 - **p. 2 / 2. Rapidly-Exploring Random Trees - extractive body cue:** Path planning will generally be viewed as a search in a metric space, X, foF a continuous path from an initial state, nie to A ...
 - **p. 1 / 1 Introduction - extractive body cue:** Using state-space representations, this class of problems includes kinodynamic planning [3], which is an extremely general and important area in robotics, virtual prototyping, and many ...
-- **p. 3 / 3. Nice Properties of RRTs - extractive body cue:** For these reasons and out preliminary observations from. experimentation, it appears that an RRT-based planner may generally yield better performance than a probabilistic roadmap-based planner; ...
 - **p. 3 / 3. Nice Properties of RRTs - extractive body cue:** This leads to a ptobabilistically complete [4] holonomic planner.
 
 ## Observation, State, and Output Interface
@@ -54,16 +49,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 1 / 1 Introduction - extractive body cue:** Tn this paper, we introduce a randomized data structure for path planning that is designed for problems that, have nonholonomic constraints.
-- **p. 1 / 1 Introduction - extractive body cue:** Both are designed with as few heutisties and arbitrary
-- **p. 2 / 2. Rapidly-Exploring Random Trees - extractive body cue:** For holonomie planning, one can define (ru) = and /lull <1, which implies that any bounded velocity can be achieved.
-- **p. 1 / Abstract - extractive body cue:** To date, we have successfully applied RRTs to holonomic, nonholonomic, and kinodynamic planning problems of up to twelve degrees of freedom.
-- **p. 1 / 1 Introduction - extractive body cue:** Given these successes, and the fact that there is little hope of ever obtaining an efficient, general path planning algorithm, it is natural to ask: ...
-- **p. 2 / 1 Introduction - extractive body cue:** parameters as possible, This tends to lead to better performance analysis and consistency of behavior.
-- **p. 3 / 3. Nice Properties of RRTs - extractive body cue:** A. probabilistic roadmap often suffers in performance because many extra edges are generated in attempts to form a connected roadmap.
-- **p. 3 / 3. Nice Properties of RRTs - extractive body cue:** For these reasons and out preliminary observations from. experimentation, it appears that an RRT-based planner may generally yield better performance than a probabilistic roadmap-based planner; ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 가까운 기존 노드를 골라 짧게 제어 입력을 적용한다. 두 표본 사이를 정확히 잇는 국소 해법 없이도 트리를 확장할 수 있다. [PDF 2쪽](https://lavalle.pl/papers/Lav98c.pdf#page=2)
+- 논문은 기본 알고리즘과 탐색 성질을 설명하고 홀로노믹·비홀로노믹·동역학 제약이 있는 계획 문제에 적용했다고 보고한다. [PDF 1쪽](https://lavalle.pl/papers/Lav98c.pdf#page=1) · [PDF 3쪽](https://lavalle.pl/papers/Lav98c.pdf#page=3)
 
 ## Evaluation Scope
 
@@ -91,6 +78,4 @@
 > Cross-checked on 2026-09-03 against the validated PDF body (4 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
 
 - **Problem/bottleneck:** For planning of holonomic systems or steerable nonholonomic systems (see [6] and references therein), the local planning step might be efficient; however, in general, the connection problem can be as ... (p. 1, 1 Introduction).
-- **Actual contribution:** Tn this paper, we introduce a randomized data structure for path planning that is designed for problems that, have nonholonomic constraints. (p. 1, 1 Introduction).
-- **Evaluation boundary:** For these reasons and out preliminary observations from. experimentation, it appears that an RRT-based planner may generally yield better performance than a probabilistic roadmap-based planner; however, itis difficult to make ... (p. 3, 3. Nice Properties of RRTs).
 - **Explicit failure boundary:** The primary difficulty with existing techniques is that, although powerful for standard path planning, they do not naturally extend to general nonholonomic planning problems. (p. 1, 1 Introduction).

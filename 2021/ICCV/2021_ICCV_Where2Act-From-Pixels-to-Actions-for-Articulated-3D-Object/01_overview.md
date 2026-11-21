@@ -19,9 +19,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — We therefore limit our work to considering the plausible short-term interactions that an agent can perform given the current state of the object.
-
-방법 관련 발췌 — In summary, our contributions are: • we formulate the task of inferring affordances for manipulating 3D articulated objects by predicting per-pixel action likelihoods and proposals; • we propose an approach that can ...
+Where2Act는 관절 물체의 어느 지점을 어떤 방향으로 밀거나 당기면 그 부품이 움직일지 예측한다. [PDF 1쪽](https://arxiv.org/pdf/2101.02692#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** In summary, our contributions are: • we formulate the task of inferring affordances for manipulating 3D articulated objects by predicting per-pixel action likelihoods and proposals; ...
-- **p. 2 / 1. Introduction - extractive body cue:** We empirically show that our method successfully learns to predict possible actions for novel objects, and does so even for previously unseen categories.
-- **p. 3 / 4. Method - extractive body cue:** We propose a learning-from-interaction approach to tackle this task.
-- **p. 3 / 4.1. Network Modules - extractive body cue:** To decode the per-pixel actionable information, we propose three decoding heads: (c) an actionability scoring module Da that predicts a score ap ∈[0,1]; (d) an ...
-- **p. 4 / 4.2. Collecting Training Data - extractive body cue:** Instead, we propose to let the agent learn by interacting with objects in simulation.
-- **p. 7 / 5.2. Metrics and Baselines - extractive body cue:** We observe that 3D-ours achieves the best performance. validates that our network learns geometric features more than local normals and curvatures.
-- **p. 7 / 5.2. Metrics and Baselines - extractive body cue:** An ablated version Ours w/o OS further proves the improvement provided by the proposed online adaptive data sampling (OS) strategy.
-- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. The Proposed Where2Act Task. Given as input an ar- ticulated 3D object, we learn to propose the actionable information for different robotic manipulation ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 관측 지점별 동작 가능성과 상호작용 자세 후보, 후보별 성공 가능성을 학습한다. [PDF 3쪽](https://arxiv.org/pdf/2101.02692#page=3) · [PDF 4쪽](https://arxiv.org/pdf/2101.02692#page=4)
+- SAPIEN에서 상호작용 결과로 학습 자료를 온라인 선택하고 처음 보는 물체 범주에서 행동 제안을 평가했다. [PDF 5쪽](https://arxiv.org/pdf/2101.02692#page=5) · [PDF 6쪽](https://arxiv.org/pdf/2101.02692#page=6)
 
 ## Evaluation Scope
 

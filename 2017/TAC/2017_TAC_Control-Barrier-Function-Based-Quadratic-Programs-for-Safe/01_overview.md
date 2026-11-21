@@ -19,9 +19,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — One of the difficulties in designing cyber-physical systems is the need to meet a large and diverse set of objectives by properly designing controllers.
-
-방법 관련 발췌 — Importantly, under mild conditions on C, it is demonstrated that the conditions we propose are also necessary and sufficient for forward invariance, and result in the relationships shown in Fig.
+이 논문은 안전 집합을 보존하는 조건과 성능 목표를 같은 이차 계획 문제에 넣어 실시간 제어 입력을 구한다. [PDF 1쪽](https://arxiv.org/pdf/1609.06408#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / B. Contributions - extractive body cue:** Importantly, under mild conditions on C, it is demonstrated that the conditions we propose are also necessary and sufficient for forward invariance, and result in ...
-- **p. 2 / B. Contributions - extractive body cue:** The first contribution of this paper is to formulate conditions on the derivative of a (reciprocal or zeroing) barrier function that are minimally restrictive on ...
-- **p. 1 / I. INTRODUCTION - extractive body cue:** More recently, barrier functions were used in the paper [4] to develop an interior penalty method for converting constrained optimal control methods into unconstrained ones1.
-- **p. 1 / I. INTRODUCTION - extractive body cue:** In contrast, the approach developed here will pose a feedback design problem that mediates the safety and stabilization requirements, in the sense that safety is ...
-- **p. 3 / C. Organization and Notation - extractive body cue:** The theory developed in the paper is illustrated on the adaptive cruise control and lane keeping problems in Sect.
-- **p. 13 / VI. SIMULATION RESULTS - extractive body cue:** A video of the results is available on YouTube [57].
-- **p. 13 / VI. SIMULATION RESULTS - extractive body cue:** Simulation results for ACC Various problem formulations are compared here.
-- **p. 14 / 0.1 N - extractive body cue:** Simulation results for lane keeping are shown in Fig.6.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 두 종류의 장벽 함수에서 전방 불변성을 확보하는 조건을 도출하고 제어 리아푸노프 함수의 안정화 목표와 결합한다. [PDF 3쪽](https://arxiv.org/pdf/1609.06408#page=3) · [PDF 7쪽](https://arxiv.org/pdf/1609.06408#page=7)
+- 적응형 순항 제어와 차선 유지 예제로 안전 제약이 성능 목표와 함께 작동하는 조건을 분석한다. [PDF 9쪽](https://arxiv.org/pdf/1609.06408#page=9) · [PDF 11쪽](https://arxiv.org/pdf/1609.06408#page=11)
 
 ## Evaluation Scope
 

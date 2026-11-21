@@ -19,9 +19,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Though in principle domain randomization could be applied to any component of the reality gap, we focus on the challenge of transferring from low-fidelity simulated camera images.
-
-방법 관련 발췌 — Our method avoids calibration and precise placement of the camera in the real world by randomizing characteristics of the cameras used to render images in training.
+이 연구는 시뮬레이터의 외관을 무작위화해 합성 영상만으로 학습한 물체 위치 추정기를 실제 로봇에 옮겼다. [PDF 1쪽](https://arxiv.org/pdf/1703.06907#page=1)
 
 ## Problem and Motivation
 
@@ -53,14 +51,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 4 / III. METHOD - extractive body cue:** Our method avoids calibration and precise placement of the camera in the real world by randomizing characteristics of the cameras used to render images in ...
-- **p. 3 / III. METHOD - extractive body cue:** Our approach is to train a deep neural network in simulation using domain randomization.
-- **p. 5 / IV. EXPERIMENTS - extractive body cue:** However, using a pre-trained model can significantly improve performance when less training data is used.
-- **p. 4 / IV. EXPERIMENTS - extractive body cue:** 1Categories for which the best final performance was achieved for detector trained from scratch.
-- **p. 5 / IV. EXPERIMENTS - extractive body cue:** Therefore no validation on real data can be done during training. few as 5, 000 training samples, but performance improves up to around 50, 000 ...
-- **p. 4 / IV. EXPERIMENTS - extractive body cue:** We report the performance of the best network.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 카메라·조명·텍스처·물체 배치를 바꾸어 학습 영상을 만들고 무작위화 요소가 실물 위치 추정에 주는 영향을 조사했다. [PDF 3쪽](https://arxiv.org/pdf/1703.06907#page=3) · [PDF 4쪽](https://arxiv.org/pdf/1703.06907#page=4)
+- 실제 영상으로 추가 학습하지 않은 추정기의 위치 출력을 사용해 주변 물체가 있는 장면에서 로봇 파지를 시연했다. [PDF 5쪽](https://arxiv.org/pdf/1703.06907#page=5) · [PDF 6쪽](https://arxiv.org/pdf/1703.06907#page=6)
 
 ## Evaluation Scope
 

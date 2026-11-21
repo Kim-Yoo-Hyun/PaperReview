@@ -19,9 +19,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — We evaluate across 6 benchmarks in simulation ranging from easy, medium, and hard difficulty, and two real-world environments with a similar level of clutter as the hard environments in simulation and also ...
-
-방법 관련 발췌 — We find that our method outperforms classical methods and baselines which do not use active vision.
+SPIN은 이동 중 어디를 볼지와 베이스·팔을 어떻게 움직일지를 함께 선택하는 이동 조작 정책이다. [PDF 1쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Uppal_SPIN_Simultaneous_Perception_Interaction_and_Navigation_CVPR_2024_paper.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** We find that our method outperforms classical methods and baselines which do not use active vision.
-- **p. 3 / 2. Method - extractive body cue:** We propose two methods: (1) Coupled Visuomotor Optimization (CVO) learns robot and camera actions at the same time.
-- **p. 4 / 2. Method - extractive body cue:** We present two approaches to tackle this problem.
-- **p. 2 / 1. Introduction - extractive body cue:** We now discuss our approach in detail.
-- **p. 4 / 2. Method - extractive body cue:** The agent learns to develop whole-body coordination such as the robot's arm movement in the last two frames, in order to reactively adapt and navigate ...
-- **p. 7 / 4.3. Simulation results - extractive body cue:** Ours achieves ≈ 68% higher success rate than the FixCam baseline with the 18139
-- **p. 7 / 4.3. Simulation results - extractive body cue:** Our method achieves ≈33% higher success rate than the NoPointNet baseline since permutation invariant scandots latent makes the optimization problem easier and also generalizes better ...
-- **p. 8 / 4.3. Simulation results - extractive body cue:** Finally, we compare between the decoupled (DVO) and coupled (CVO) variants of our method and find that they achieve similar performance.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 로봇 자신의 시점에서 얻은 관측으로 능동 카메라와 전신을 제어해, 별도 환경 지도를 만들지 않고 목표에 대응한다. [PDF 3쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Uppal_SPIN_Simultaneous_Perception_Interaction_and_Navigation_CVPR_2024_paper.pdf#page=3) · [PDF 4쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Uppal_SPIN_Simultaneous_Perception_Interaction_and_Navigation_CVPR_2024_paper.pdf#page=4)
+- 장애물이 있는 환경에서 능동 시각과 몸 전체의 협응이 이동·상호작용에 주는 효과를 평가했다. [PDF 6쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Uppal_SPIN_Simultaneous_Perception_Interaction_and_Navigation_CVPR_2024_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Uppal_SPIN_Simultaneous_Perception_Interaction_and_Navigation_CVPR_2024_paper.pdf#page=7)
 
 ## Evaluation Scope
 

@@ -21,9 +21,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — This presents a challenge for conventional methods-if a slight variation of a skill is needed, e.g. opening a drawer by grasping the handle from the top down rather than bottom up, an ...
-
-방법 관련 발췌 — In this work, we propose an alternative means of obtaining task-agnostic control-self-supervising on top of unlabeled teleoperated play data: continuous logs of low-level observations and actions collected while a human teleoperates the ...
+Play-LMP는 작업 경계나 행동 이름이 붙지 않은 원격조작 놀이 기록에서 목표 상태에 이르는 잠재 계획을 학습한다. [PDF 1쪽](https://proceedings.mlr.press/v100/lynch20a/lynch20a.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -57,16 +55,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1 Introduction - extractive body cue:** In this work, we propose an alternative means of obtaining task-agnostic control-self-supervising on top of unlabeled teleoperated play data: continuous logs of low-level observations and ...
-- **p. 3 / 1 Introduction - extractive body cue:** 3, we propose two self-supervised methods for learning task-agnostic control from play: Play-GCBC and Play-LMP.
-- **p. 12 / A.2 Architecture Details - extractive body cue:** Action space Our 8-DOF agent's action space state consists of: 3 cartesian coordinates for the position of its end effector, 3 Euler angles representing its ...
-- **p. 1 / 1 Introduction - extractive body cue:** Unfortunately, designing reward functions for robotic skills is very challenging, especially when learning from raw observations, typically requiring manually-designed perception systems.
-- **p. 12 / A.2 Architecture Details - extractive body cue:** 9 we show the layers with their sizes and depths of different sub-networks used in the model: the vision network, plan recognition network, plan proposal ...
-- **p. 7 / 4 Experiments - extractive body cue:** 3) Does decoupling latent plan inference and plan decoding into independent problems, as is done in Play-LMP, improve performance over goal-conditioned Behavioral Cloning (Play-GCBC), (which ...
-- **p. 7 / 4 Experiments - extractive body cue:** 10 5 0 5 10 15 20 25 Improvement of Play-LMP over Play-GCBC (absolute accuracy % points) rotate left close sliding grasp upright sweep right ...
-- **p. 8 / 4 Experiments - extractive body cue:** Additionally, we find that the decoupling happening in Play-LMP compared to Play-GCBC is beneficial and yields systematic improvements in performance.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 기록에서 시작·목표 상태와 중간 궤적을 뽑아 계획 인식기, 계획 제안기와 행동 디코더를 함께 학습한다. [PDF 4쪽](https://proceedings.mlr.press/v100/lynch20a/lynch20a.pdf#page=4) · [PDF 5쪽](https://proceedings.mlr.press/v100/lynch20a/lynch20a.pdf#page=5)
+- 테스트에서는 현재 관측과 목표로 계획을 제안해 행동을 생성하며, 놀이 자료로 익힌 기술을 목표별 시연으로 학습한 정책과 비교했다. [PDF 6쪽](https://proceedings.mlr.press/v100/lynch20a/lynch20a.pdf#page=6) · [PDF 7쪽](https://proceedings.mlr.press/v100/lynch20a/lynch20a.pdf#page=7)
 
 ## Evaluation Scope
 

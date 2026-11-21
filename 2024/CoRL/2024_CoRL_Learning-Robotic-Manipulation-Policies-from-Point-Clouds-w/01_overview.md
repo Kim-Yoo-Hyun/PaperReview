@@ -19,9 +19,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — To overcome these limitations, Conditional Flow Matching (CFM) has been proposed as an efficient generalization of diffusion models [12, 13, 11].
-
-방법 관련 발췌 — Inspired by recent flow-based generative models, we propose PointFlowMatch, a novel imitation learning algorithm for robotic manipulation.
+PointFlowMatch는 점군 관측을 조건으로 시연의 말단장치 궤적 분포를 조건부 플로 매칭으로 학습한다. [PDF 1쪽](https://arxiv.org/pdf/2409.07343#page=1)
 
 ## Problem and Motivation
 
@@ -54,16 +52,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1 Introduction - extractive body cue:** Inspired by recent flow-based generative models, we propose PointFlowMatch, a novel imitation learning algorithm for robotic manipulation.
-- **p. 1 / 1 Introduction - extractive body cue:** In recent years, imitation learning has gained popularity in the robot learning community, as leveraging the prior knowledge of the expert demonstrator allows training complex ...
-- **p. 2 / 1 Introduction - extractive body cue:** As CFM is able to model arbitrary probability paths, it also allows formulating the regression on the R3 × SO(3) manifold.
-- **p. 1 / Abstract - extractive body cue:** We show that CFM gives the best performance when combined with point cloud input observations.
-- **p. 1 / Abstract - extractive body cue:** We perform extensive experiments on RLBench which demonstrate that our proposed PointFlowMatch approach achieves a state-of-the-art average success rate of 67.8% over eight tasks, double ...
-- **p. 6 / Figure/Table caption - extractive body cue:** Table 1: Performance comparison of PointFlowMatch with different baseline methods on the RLBench set of tasks. We report the success rate (SR) (↑) as well ...
-- **p. 7 / Figure/Table caption - extractive body cue:** Table 2: Ablation of observation type (images vs point clouds), vector field formulation (R6 vs SO(3)), and training objective (DDIM vs CFM) for our method, ...
-- **p. 7 / Figure/Table caption - extractive body cue:** Figure 3: Comparison of CFM and DDIM for varying values of the number of inference steps k. We compare the inference time (↓) measured in ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 점군과 영상 입력, 학습 목적과 회전 표현의 조합을 비교하고 SO(3) 위에서의 플로 매칭은 별도 단순 예제로 점검한다. [PDF 3쪽](https://arxiv.org/pdf/2409.07343#page=3) · [PDF 4쪽](https://arxiv.org/pdf/2409.07343#page=4)
+- RLBench 조작 과제에서 입력 표현과 행동 생성 방식을 바꾸어 성공률을 비교했다. [PDF 5쪽](https://arxiv.org/pdf/2409.07343#page=5) · [PDF 6쪽](https://arxiv.org/pdf/2409.07343#page=6)
 
 ## Evaluation Scope
 

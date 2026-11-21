@@ -19,9 +19,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, due to limitations in the accuracy, inference speed, and difficulty in handling occlusions of pose estimation, such approaches cannot guarantee rapid and accurate pose acquisition.
-
-방법 관련 발췌 — We introduce the training settings and three key techniques of our framework in this section
+HOMIE는 사람이 휴머노이드의 보행과 높이를 조절하면서 양팔·손의 접촉 조작을 시연할 수 있게 한 원격조작 장치다. [PDF 1쪽](https://www.roboticsproceedings.org/rss21/p070.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 4 / B. Humanoid Whole-body Control - extractive body cue:** We introduce the training settings and three key techniques of our framework in this section
-- **p. 2 / Abstract - extractive body cue:** Unlike previous whole-body contro! methods that depend on motion priors derived from MoCap data [12], our framework eliminates this dependency, resulting in a more cfficient ...
-- **p. 2 / Abstract - extractive body cue:** In responce, we introduce HOMIE, a semi-autonomous humanoid teleoperation system that integrates a RL policy for body control mapped to a pedal, an isomorphic exoskeleton ...
-- **p. 4 / A. System Overview - extractive body cue:** 2, HOMIE consists of low-level policy Toco and an exoskeleton-based hardware system.
-- **p. 3 / A. Teleoperation Systems - extractive body cue:** HOMIE is designed to combine all the advantages mentioned above, integrating isomorphic exoskeleton arms with a pair of novel motionsensing gloves.
-- **p. 8 / A. Humanoid Whole-body Control - extractive body cue:** In summary, symmetry data augmentation significantly improves training efficiency, while the use of symmetry loss effectively prevents the policy from sacrificing symmetry to complete tasks ...
-- **p. 10 / C. Teleoperation System - extractive body cue:** The results, shown in Fig. /, indicate that our system achieves task completion times nearly half of those of the VRbased method.
-- **p. 7 / C. Hardware System Design - extractive body cue:** To achieve this, we use three small pedals to control these commands.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 페달이 강화학습 전신 제어기를 지시하고 로봇 팔과 기구학적으로 대응하는 외골격 및 센서 장갑이 팔과 손을 제어한다. [PDF 2쪽](https://www.roboticsproceedings.org/rss21/p070.pdf#page=2) · [PDF 3쪽](https://www.roboticsproceedings.org/rss21/p070.pdf#page=3)
+- 상체 자세를 바꾸면서도 걷거나 쪼그릴 수 있도록 학습하고, 실물에서 높이와 도달 자세가 다른 이동 조작 작업을 수행했다. [PDF 8쪽](https://www.roboticsproceedings.org/rss21/p070.pdf#page=8) · [PDF 10쪽](https://www.roboticsproceedings.org/rss21/p070.pdf#page=10)
 
 ## Evaluation Scope
 

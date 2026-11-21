@@ -19,9 +19,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — In addition, existing VLAs lack mechanisms for continuously estimating progress within a subtask.
-
-방법 관련 발췌 — Our contributions are as follows: • We introduce PALM, a unified VLA framework that integrates structured affordance reasoning and progress-aware policy generation to enable reliable execution across longhorizon, contact-rich manipulati ...
+PALM은 긴 조작 중에 어디와 어떻게 상호작용할지와 현재 하위 작업이 얼마나 진행됐는지를 함께 추정한다. [PDF 1쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Liu_PALM_Progress-Aware_Policy_Learning_via_Affordance_Reasoning_for_Long-Horizon_Robotic_CVPR_2026_paper.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** Our contributions are as follows: • We introduce PALM, a unified VLA framework that integrates structured affordance reasoning and progress-aware policy generation to enable reliable ...
-- **p. 2 / 1. Introduction - extractive body cue:** To address these gaps, we introduce PALM, a novel end-to-end framework for learning scalable, long-horizon manipulation.
-- **p. 3 / 3.1. Problem Formulation - extractive body cue:** At time t, given observations ot "O, and task specification ⌧"T , and conditioned on the predicted affordance latent, the policy jointly decodes an action ...
-- **p. 5 / 3.4. Progress-aware Policy via Inverse Dynamics - extractive body cue:** In addition to predicting where to act via affordances, we introduce a progress-aware prediction task that estimates how far execution has advanced within the current ...
-- **p. 6 / 4.1. Simulation Experiments - extractive body cue:** Moreover, as shown in Table 2, across all four LIBERO suites, PALM achieves state-of-the-art performance with an average success rate of 94.5%.
-- **p. 7 / Figure/Table caption - extractive body cue:** Table 2. LIBERO experimental results. For each task suite (Spatial, Object, Goal, Long), we report the average success rate and standard error across 3 seeds ...
-- **p. 6 / Figure/Table caption - extractive body cue:** Table 1. CALVIN ABC→D experimental results. We group the baselines into four types and report the average success rate of the top three checkpoints, computed ...
-- **p. 8 / 4.3. Real-World Experiments - extractive body cue:** We report the success rate (SR) and average length for each task over 20 real-world rollouts.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 물체의 관련성, 접촉 형상, 배치, 움직임에 대한 어포던스 특징을 증류해 행동 생성의 단서로 쓴다. [PDF 3쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Liu_PALM_Progress-Aware_Policy_Learning_via_Affordance_Reasoning_for_Long-Horizon_Robotic_CVPR_2026_paper.pdf#page=3) · [PDF 4쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Liu_PALM_Progress-Aware_Policy_Learning_via_Affordance_Reasoning_for_Long-Horizon_Robotic_CVPR_2026_paper.pdf#page=4)
+- 하위 작업 내부의 연속 진행도를 예측해 전환 시점을 정하고 LIBERO-LONG·CALVIN 및 실물 장기 조작에서 평가했다. [PDF 6쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Liu_PALM_Progress-Aware_Policy_Learning_via_Affordance_Reasoning_for_Long-Horizon_Robotic_CVPR_2026_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Liu_PALM_Progress-Aware_Policy_Learning_via_Affordance_Reasoning_for_Long-Horizon_Robotic_CVPR_2026_paper.pdf#page=7)
 
 ## Evaluation Scope
 

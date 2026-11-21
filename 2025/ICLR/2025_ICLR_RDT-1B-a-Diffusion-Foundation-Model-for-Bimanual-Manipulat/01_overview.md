@@ -19,9 +19,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Developing bimanual manipulation foundation models confronts the dual challenges of data scarcity and architectural limitations.
-
-방법 관련 발췌 — In this paper, we introduce the Robotics Diffusion Transformer (RDT), the largest bimanual manipulation foundation model with strong generalizability.
+RDT는 여러 로봇의 데이터를 사전학습한 확산 트랜스포머를 양팔 조작에 미세조정한다. [PDF 1쪽](https://arxiv.org/pdf/2410.07864#page=1)
 
 ## Problem and Motivation
 
@@ -54,16 +52,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** In this paper, we introduce the Robotics Diffusion Transformer (RDT), the largest bimanual manipulation foundation model with strong generalizability.
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** To further enable training RDT on heterogeneous data, we propose the Physically Interpretable Unified Action Space, a unified action format for various robots with gripper ...
-- **p. 1 / 1 INTRODUCTION - extractive body cue:** Developing bimanual manipulation foundation models confronts the dual challenges of data scarcity and architectural limitations.
-- **p. 1 / 1 INTRODUCTION - extractive body cue:** Following the success in natural language processing (Achiam et al., 2023; Touvron et al., 2023) and computer vision (Radford et al., 2021; Kirillov et al., ...
-- **p. 9 / 5 EXPERIMENTS - extractive body cue:** In Wash Cup and Pour Water, RDT can still achieve a high success rate on unseen scenarios, and its performance is not much different from ...
-- **p. 10 / Figure/Table caption - extractive body cue:** Table 3: Quantitative results. We report success rates (%) of ACT, OpenVLA, RDT (from scratch, no pre-trained), and RDT (ours, pre-trained) for 7 tasks. Sub-columns ...
-- **p. 9 / 5 EXPERIMENTS - extractive body cue:** Besides, the large number of parameters after large-scale pre-training provides a lot of prior knowledge, which significantly improves the generalizability.
-- **p. 10 / 5 EXPERIMENTS - extractive body cue:** In Handover and Fold Shorts, RDT has learned new and complex skills of handover and folding through few-shot learning, whose action patterns are very different ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 관절·말단장치 등 제어량의 물리적 의미를 보존하는 공통 행동 공간을 정의해 기구가 다른 로봇의 기록을 학습에 사용한다. [PDF 4쪽](https://arxiv.org/pdf/2410.07864#page=4) · [PDF 5쪽](https://arxiv.org/pdf/2410.07864#page=5)
+- 양팔 시연으로 미세조정한 뒤 실제 로봇에서 지시 수행과 새로운 물체·장면으로의 일반화를 평가했다. [PDF 7쪽](https://arxiv.org/pdf/2410.07864#page=7) · [PDF 9쪽](https://arxiv.org/pdf/2410.07864#page=9)
 
 ## Evaluation Scope
 

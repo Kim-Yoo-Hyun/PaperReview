@@ -21,9 +21,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Tetris is a classic benchmark problem for approximate dynamic programming (ADP) methods, stochastic optimization methods are difficult to beat on this task (Gabillon et al., 2013).
-
-방법 관련 발췌 — Instead, we introduce the following local approximation to η: Lπ(˜π) = η(π) + X s ρπ(s) X a ˜π(a/s)Aπ(s, a).
+TRPO는 정책을 한 번에 너무 크게 바꿔 성능이 무너지는 문제를 다루는 정책 최적화 방법이다. [PDF 1쪽](https://arxiv.org/pdf/1502.05477#page=1)
 
 ## Problem and Motivation
 
@@ -57,16 +55,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 2 Preliminaries - extractive body cue:** Instead, we introduce the following local approximation to η: Lπ(˜π) = η(π) + X s ρπ(s) X a ˜π(a/s)Aπ(s, a).
-- **p. 3 / 2 Preliminaries - extractive body cue:** Trust region policy optimization, which we propose in the following section, is an approximation to Algorithm 1, which uses a constraint on the KL divergence ...
-- **p. 5 / 2 Preliminaries - extractive body cue:** 6 Practical Algorithm Here we present two practical policy optimization algorithm based on the ideas above, which use either the single path or vine sampling ...
-- **p. 1 / 1 Introduction - extractive body cue:** In our experiments, we show that the same TRPO methods can learn complex policies for swimming, hopping, and walking, as well as playing Atari games ...
-- **PDF p. 4, §5 sampling / Eq. (14) (DOC-QA2 원문 대조):** 단일 state의 action expectation은 q에서 sampling한 π_θ(a given s)/q(a given s) importance weight로 추정한다. Q-value surrogate를 최대화하면서 old-to-new policy의 평균 KL divergence≤δ 조건을 둔다. Sampling distribution의 support 조건을 보존해야 한다.
-- **p. 6 / 3. Approximately solve this constrained optimization - extractive body cue:** Though this difference might seem subtle, our experiments demonstrate that it significantly improves the algorithm's performance on larger problems.
-- **p. 5 / 3. Approximately solve this constrained optimization - extractive body cue:** The rate of improvement in the policy is similar to the empirical FIM, as shown in the experiments.
-- **p. 5 / 3. Approximately solve this constrained optimization - extractive body cue:** 7 Connections with Prior Work As mentioned in Section 4, our derivation results in a policy update that is related to several prior methods, providing ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 정책 성능의 하한을 바탕으로 개선 조건을 유도하고 KL 발산으로 갱신 폭을 제한하는 계산 가능한 근사를 제시한다. [PDF 3쪽](https://arxiv.org/pdf/1502.05477#page=3) · [PDF 5쪽](https://arxiv.org/pdf/1502.05477#page=5)
+- 이론적 단조 개선과 실제 근사 알고리즘을 구분하고, 시뮬레이션 연속 제어 및 Atari에서 후자의 학습 성능을 비교했다. [PDF 7쪽](https://arxiv.org/pdf/1502.05477#page=7) · [PDF 8쪽](https://arxiv.org/pdf/1502.05477#page=8)
 
 ## Evaluation Scope
 

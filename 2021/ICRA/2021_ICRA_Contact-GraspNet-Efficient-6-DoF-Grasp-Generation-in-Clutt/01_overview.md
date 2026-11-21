@@ -19,9 +19,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — To address the limitations of planar grasping, there has been a recent interest in tackling the problem of 6-DoF grasping of unknown objects [10, 11, 12, 13, 14].
-
-방법 관련 발췌 — Our method is closely related to the work of Murali et al.
+Contact-GraspNet은 복잡한 장면의 깊이 관측 하나에서 평행 그리퍼의 6자유도 파지 자세와 폭을 생성한다. [PDF 1쪽](https://arxiv.org/pdf/2103.14127#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 1 / I. INTRODUCTION - extractive body cue:** Our method is closely related to the work of Murali et al.
-- **p. 2 / I. INTRODUCTION - extractive body cue:** To address these issues, our method instead directly processes a full scene point cloud or a local region around a target object.
-- **p. 3 / III. METHOD - extractive body cue:** We used the ACRONYM dataset [32], which consists of 8872 meshes from the Shapenet dataset [35] and 17.7 million
-- **p. 4 / III. METHOD - extractive body cue:** Instead of supervising all network heads in isolation, we propose to combine the predictions to the 6-DoF grasp pose ˆg ∈G given in Eq.
-- **p. 2 / I. INTRODUCTION - extractive body cue:** Thus, our main contributions are the following: • A new end-to-end method for 6-DoF grasping of unknown objects in cluttered real world scenes where we ...
-- **p. 6 / IV. EXPERIMENTAL EVALUATION - extractive body cue:** We observe a significantly higher grasp success rate of our method compared to [11] and [12] which themselves outperform other learning-based methods and analytic/heuristic baselines.
-- **p. 6 / IV. EXPERIMENTAL EVALUATION - extractive body cue:** The average distance loss ladd-s improves the success rate of high confidence contacts which is important because most grasps that we execute lie in the ...
-- **p. 5 / Figure/Table caption - extractive body cue:** Fig. 6. Data Ablations: Training with Gaussian noise has similar perfor- mance in simulation but helps generalization to noisy sensor data. Predicting grasps directly on ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 관측된 점을 접촉 후보로 고정해 학습할 파지 변수의 차원을 줄이고 장면 점군에서 여러 후보를 한 번에 예측한다. [PDF 3쪽](https://arxiv.org/pdf/2103.14127#page=3) · [PDF 4쪽](https://arxiv.org/pdf/2103.14127#page=4)
+- 시뮬레이션 파지 기록으로 학습한 모델을 실제 깊이 센서에 적용해, 처음 보는 물체들이 섞인 장면에서 파지를 평가했다. [PDF 5쪽](https://arxiv.org/pdf/2103.14127#page=5) · [PDF 6쪽](https://arxiv.org/pdf/2103.14127#page=6)
 
 ## Evaluation Scope
 

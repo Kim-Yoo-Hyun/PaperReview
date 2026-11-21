@@ -17,6 +17,10 @@
 - Paper type: benchmark_or_dataset
 - Source audit: full-text PDF body checked on 2026-09-03 (18 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
+## 공개 자료
+
+- **가중치** ECCV 2020 실험의 CMA_PM_DA_Aug.pth를 해당 설정의 저자 배포 목록과 대조했다. 같은 배포처의 Seq2Seq_DA.pth도 확인했다. [배포 파일](https://drive.google.com/file/d/1o9PgBT38BH9pw_7V1QB3XUkY8auJqGKw/view)
+
 ## Why This Paper Is Here
 
 언어 경로 지시를 따라가는 문제를 미리 정한 내비게이션 그래프에서 연속 공간으로 옮긴다.

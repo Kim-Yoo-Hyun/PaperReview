@@ -22,6 +22,8 @@
 
 ## Why This Paper Is Here
 
+FlowDreamer는 과거 RGB-D와 로봇 행동으로 장면의 3차원 움직임을 먼저 예측하고 다음 RGB-D 관측을 생성한다. [PDF 1쪽](https://arxiv.org/pdf/2505.10075#page=1)
+
 RGB-D 예측에서 명시적 3D 운동 표현의 역할을 비교하는 world-model 선행이다. 로봇 행동에 조건화한 scene flow와 다음 영상의 예측이 visual planning의 성공으로 이어지는지 구분해 읽는다.
 
 ## Problem and Motivation
@@ -56,16 +58,8 @@ RGB-D 예측에서 명시적 3D 운동 표현의 역할을 비교하는 world-mo
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** We validate the effectiveness of our method on multiple benchmarks commonly used in robotic manipulation.
-- **p. 2 / 1. Introduction - extractive body cue:** To this end, we propose FlowDreamer, a RGB-D world model that explicitly models dynamics prediction to enhance the predictive capability of world models.
-- **p. 7 / 4.2. Visual Planning - extractive body cue:** For our method, we show the predicted RGB images and scene flows. boDesk [41] tasks.
-- **p. 7 / 4.2. Visual Planning - extractive body cue:** Following iVideoGPT [87], we report the minimum, maximum, and average success rate of our method between different random seeds.
-- **p. 1 / 1. Introduction - extractive body cue:** We study developing better visual world models for robot manipulation tasks.
-- **p. 7 / Figure/Table caption - extractive body cue:** Figure 4. Visual planning results on the VP2 benchmark. We report the mean and the min/max performance of different methods over multiple runs with different ...
-- **p. 6 / Figure/Table caption - extractive body cue:** Figure 3. Qualitative results on the SimplerEnv RT-1 and Language Table benchmark. We show the predicted frames and the scene flows except for Vanilla, where ...
-- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Proposed RGB-D world model with flow-based mo- tion representations. FlowDreamer adopts a two-stage prediction framework, which explicitly predict scene flow as motion repre- ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- U-Net이 예측한 장면 흐름을 확산 모델에 전달해 물체 운동 예측과 다음 프레임 렌더링을 분리해 학습한다. [PDF 3쪽](https://arxiv.org/pdf/2505.10075#page=3) · [PDF 4쪽](https://arxiv.org/pdf/2505.10075#page=4)
+- 로봇 조작에서 미래 영상의 예측 품질과 그 모델을 이용한 시각적 계획의 성공을 각각 평가했다. [PDF 6쪽](https://arxiv.org/pdf/2505.10075#page=6) · [PDF 7쪽](https://arxiv.org/pdf/2505.10075#page=7)
 
 ## Evaluation Scope
 

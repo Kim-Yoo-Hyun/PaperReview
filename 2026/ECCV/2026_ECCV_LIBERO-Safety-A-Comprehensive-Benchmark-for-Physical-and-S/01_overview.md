@@ -19,9 +19,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, these benchmarks suffer from two critical limitations.
-
-방법 관련 발췌 — In summary, we establish this evaluation framework through four core technical and empirical contributions: - Parametric Safety Benchmark and Taxonomy: We introduce the Unified Behavior Domain Definition Language (UBDDL) to enable the ...
+LIBERO-Safety는 조작 과제의 성공과 주위 물체·금지 조건에 대한 안전성을 따로 측정하는 시뮬레이션 벤치마크다. [PDF 1쪽](https://arxiv.org/pdf/2606.23686#page=1) · [PDF 2쪽](https://arxiv.org/pdf/2606.23686#page=2)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 3 / 1 INTRODUCTION - extractive body cue:** In summary, we establish this evaluation framework through four core technical and empirical contributions: - Parametric Safety Benchmark and Taxonomy: We introduce the Unified Behavior ...
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** In contrast, our framework holistically assesses semantic reasoning to refuse malicious instructions, general human-robot interaction (HRI) safety for collaborative co-habitation, and uniquely introduces proximal avoidance ...
-- **p. 1 / 462 Hand-Object Pairs - extractive body cue:** To systematically evaluate these challenges, we introduce a comprehensive VLA safety benchmark and develop an efficient (b) Data Generation Pipeline to synthesize 19.7K strictly collision-free ...
-- **p. 3 / 1 INTRODUCTION - extractive body cue:** Unlike existing benchmarks, our framework systematically evaluates the physical and semantic safety boundaries of VLA models through parameterized task specifications and multi-dimensional hazard scenarios.
-- **p. 5 / 462 Hand-Object Pairs - extractive body cue:** Our benchmark consists of four core components: a parametric environment definition framework (Sec.
-- **p. 11 / 4 Experiment - extractive body cue:** Among the evaluated standard VLAs, π0.5 achieves the highest overall success rate across all suites and difficulty levels.
-- **p. 10 / 4 Experiment - extractive body cue:** Notably, the foundational OpenVLA model fails to achieve meaningful success
-- **p. 12 / 4 Experiment - extractive body cue:** While RoboBrain2.0 achieves a high RR (80%) at L0, its performance drops precipitously on more complex and deceptive prompts (L1 and L2).
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 장면의 위험 조건을 절차적으로 바꾸고 키포즈 기반 생성기로 충돌을 피하는 조작 시연을 수집한다. [PDF 5쪽](https://arxiv.org/pdf/2606.23686#page=5) · [PDF 8쪽](https://arxiv.org/pdf/2606.23686#page=8)
+- 물리적 위험과 의미적 제약이 있는 장면에서 여러 VLA를 시험해 작업을 끝내더라도 위반이 생기는 사례를 분석했다. [PDF 11쪽](https://arxiv.org/pdf/2606.23686#page=11) · [PDF 14쪽](https://arxiv.org/pdf/2606.23686#page=14)
 
 ## Evaluation Scope
 

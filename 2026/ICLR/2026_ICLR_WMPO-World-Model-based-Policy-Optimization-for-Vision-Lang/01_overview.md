@@ -19,9 +19,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Nevertheless, integrating these models with existing VLAs remains a challenge.
-
-방법 관련 발췌 — To this end, we propose World Model-based Policy Optimization (WMPO), as illustrated in Fig.
+WMPO는 행동 조건부 영상 세계 모델에서 현재 VLA의 롤아웃을 생성하고 그 경험으로 같은 정책을 강화학습한다. [PDF 1쪽](https://arxiv.org/pdf/2511.09515#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1 Introduction - extractive body cue:** To this end, we propose World Model-based Policy Optimization (WMPO), as illustrated in Fig.
-- **p. 2 / 1 Introduction - extractive body cue:** First, to mitigate the state-distribution mismatch between expert demonstrations and policy rollouts, we introduce policy behavior alignment, finetuning the world model with behavioral data collected ...
-- **p. 1 / Abstract - extractive body cue:** We introduce World-Model-based Policy Optimization (WMPO), a principled framework for onpolicy VLA RL without interacting with the real environment.
-- **p. 4 / 1. Imagined Trajectory Generation - extractive body cue:** The overall training procedure consists of three components: (1) Imagined Trajectory Generation, where policy model πθold and world model pϕ interact alternately to generate a ...
-- **p. 5 / 1. Imagined Trajectory Generation - extractive body cue:** To mitigate this issue, we introduce a noisy-frame conditioning technique: during training, conditional frames Ii-m:i are perturbed with diffusion noise at 50/1000 steps rather than ...
-- **p. 6 / 4 Experiments - extractive body cue:** We conduct extensive experiments to evaluate the effectiveness of WMPO, focusing on the following questions: (1) can WMPO outperform online and offline RL in simulation ...
-- **p. 10 / 4 Experiments - extractive body cue:** The results show that the base policy, DPO, and WMPO achieve success rates of 53%, 60%, and 70%, respectively, demonstrating the effectiveness of WMPO on ...
-- **p. 9 / 4 Experiments - extractive body cue:** DPO attains modest improvements in the in-distribution setting compared to the base policy, but its performance degrades significantly under background and texture changes, suggesting reliance ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 픽셀 공간의 다음 관측을 생성하며, 정책이 방문하는 상태에 맞춰 세계 모델을 조정해 시연 분포와의 차이를 줄인다. [PDF 2쪽](https://arxiv.org/pdf/2511.09515#page=2) · [PDF 3쪽](https://arxiv.org/pdf/2511.09515#page=3)
+- 생성한 롤아웃으로 온폴리시 GRPO를 수행하고 시뮬레이션 및 실물에서 갱신한 정책의 조작 수행을 비교했다. [PDF 6쪽](https://arxiv.org/pdf/2511.09515#page=6) · [PDF 7쪽](https://arxiv.org/pdf/2511.09515#page=7)
 
 ## Evaluation Scope
 

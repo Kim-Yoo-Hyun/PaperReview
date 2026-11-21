@@ -21,9 +21,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — To enable a single agent with all these capabilities, we make three key contributions in this work: 1) a novel multimodal prompting formulation that converts a wide spectrum of robot manipulation tasks ...
-
-방법 관련 발췌 — To enable a single agent with all these capabilities, we make three key contributions in this work: 1) a novel multimodal prompting formulation that converts a wide spectrum of robot manipulation tasks ...
+VIMA는 물체 그림·목표 장면·문장을 섞은 프롬프트로 여러 탁상 조작 작업을 한 정책에 지시한다. [PDF 1쪽](https://proceedings.mlr.press/v202/jiang23b/jiang23b.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -57,16 +55,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 1 / 1. Introduction - extractive body cue:** To enable a single agent with all these capabilities, we make three key contributions in this work: 1) a novel multimodal prompting formulation that converts ...
-- **p. 2 / 1. Introduction - extractive body cue:** To this end, we introduce the VisuoMotor Attention agent (VIMA) to learn robot manipulation from multimodal prompts.
-- **p. 2 / 1. Introduction - extractive body cue:** We introduce VIMA, an embodied agent capable of processing mulitimodal prompts (left) and controlling a robot arm to solve the task (right). procedures (Aceituno et ...
-- **p. 1 / Abstract - extractive body cue:** Accordingly, we develop a new simulation benchmark that consists of thousands of procedurally-generated tabletop tasks with multimodal prompts, 600K+ expert trajectories for imitation learning, and ...
-- **p. 3 / 6. Visual reasoning - extractive body cue:** (2020), which consists of primitive motor skills like "pick and place" and "wipe".
-- **p. 6 / 5.2. Evaluation Results - extractive body cue:** Although models like VIMA-Gato and VIMA-Flamingo show improved performance with bigger model sizes, VIMA consistently achieves superior performance over all model sizes.
-- **p. 6 / 5.2. Evaluation Results - extractive body cue:** We note that this can only be achieved with both cross-attention and object token sequence representations - altering any component will significantly degrade the performance, ...
-- **p. 5 / Figure/Table caption - extractive body cue:** Figure 4: Scaling model and data. Top: We compare performance of different methods with model sizes ranging from 2M to 200M parameters. Across all model ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 물체 단위 시각 토큰과 텍스트 토큰을 부호화하고, 동작 이력이 프롬프트를 참조해 다음 동작을 생성하도록 학습한다. [PDF 4쪽](https://proceedings.mlr.press/v202/jiang23b/jiang23b.pdf#page=4) · [PDF 5쪽](https://proceedings.mlr.press/v202/jiang23b/jiang23b.pdf#page=5)
+- 절차적으로 생성한 시뮬레이션 작업에서 물체 배치부터 처음 보는 작업까지 일반화 수준을 나눠 정책을 비교했다. [PDF 6쪽](https://proceedings.mlr.press/v202/jiang23b/jiang23b.pdf#page=6) · [PDF 7쪽](https://proceedings.mlr.press/v202/jiang23b/jiang23b.pdf#page=7)
 
 ## Evaluation Scope
 

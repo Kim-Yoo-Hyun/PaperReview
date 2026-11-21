@@ -19,9 +19,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, to enable physical interactions with the environment, existing approaches typically rely on a repertoire of pre-defined motion primitives (i.e., skills) that may be invoked by an LLM or a planner, and ...
-
-방법 관련 발췌 — We represent τ r i as a sequence of dense end-effector waypoints to be executed by an Operational Space Controller [117], where each waypoint consists of a desired 6-DoF end-effector pose, end-effector ...
+VoxPoser는 언어 지시에서 조작에 필요한 공간 제약을 만들고 그 제약을 따르는 말단장치 궤적을 계획한다. [PDF 1쪽](https://proceedings.mlr.press/v229/huang23b/huang23b.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 4 / 3 Method - extractive body cue:** We represent τ r i as a sequence of dense end-effector waypoints to be executed by an Operational Space Controller [117], where each waypoint consists ...
-- **p. 2 / 1 Introduction - extractive body cue:** Rather than relying on robotic data that are often of limited amount or variability, the method leverages LLMs for open-world reasoning and VLMs for generalizable ...
-- **p. 3 / 3 Method - extractive body cue:** The central problem 2Note that the decomposition and sequencing of these sub-tasks are also done by LLMs in this work, though we do not investigate ...
-- **p. 6 / 3 Method - extractive body cue:** We further demonstrate how VoxPoser enables efficient learning of more challenging tasks (Sec.
-- **p. 3 / 1 Introduction - extractive body cue:** Despite the promising signs, hand-designed motion primitives are still required, and while LLMs are shown to be capable of composing sequential policy logic, it remains ...
-- **p. 7 / 3 Method - extractive body cue:** VoxPoser outperforms both baselines across 13 tasks from two categories on both seen and unseen tasks and maintains similar success rates. smoother trajectories but takes ...
-- **p. 22 / A.5.2 Full Results on Simulated Environments - extractive body cue:** Each entry represents success rate averaged across 20 episodes.
-- **p. 7 / 3 Method - extractive body cue:** We find that VoxPoser can effectively synthesize robot trajectories for everyday manipulation tasks with a high average success rate.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 언어 모델이 생성한 코드가 시각·언어 모델의 물체 접지 결과를 결합해 3차원 가치 지도를 만든다. [PDF 4쪽](https://proceedings.mlr.press/v229/huang23b/huang23b.pdf#page=4) · [PDF 5쪽](https://proceedings.mlr.press/v229/huang23b/huang23b.pdf#page=5)
+- 환경 관측을 갱신하며 궤적을 다시 계획하고, 접촉으로 물체가 움직이는 일부 작업에서는 온라인 경험으로 동역학을 추정했다. [PDF 7쪽](https://proceedings.mlr.press/v229/huang23b/huang23b.pdf#page=7) · [PDF 8쪽](https://proceedings.mlr.press/v229/huang23b/huang23b.pdf#page=8)
 
 ## Evaluation Scope
 

@@ -19,9 +19,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Streams allow a planner to reason about conditions on the inputs and outputs of a conditional generator while treating its implementation as a black box.
-
-방법 관련 발췌 — We propose PDDLStream, a planning language that introduces streams as an interface for incorporating sam- ∗We gratefully acknowledge support from NSF grants 1523767 and 1723381; from AFOSR grant FA9550-17-1-0165; from ONR grant ...
+PDDLStream은 기호 행동 계획 중에 역기구학·충돌 검사처럼 연속값을 생성하는 외부 절차를 호출할 수 있게 한다. [PDF 1쪽](https://ojs.aaai.org/index.php/ICAPS/article/download/6739/6593#page=1)
 
 ## Problem and Motivation
 
@@ -51,12 +49,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 1 / 1 Introduction - extractive body cue:** We propose PDDLStream, a planning language that introduces streams as an interface for incorporating sam- ∗We gratefully acknowledge support from NSF grants 1523767 and 1723381; ...
-- **p. 1 / Abstract - extractive body cue:** This enables the algorithm to greedily search the space of parameter bindings to more quickly solve tightly-constrained problems as well as locally optimize to produce ...
-- **p. 8 / 9 Experiments - extractive body cue:** Adaptive outperforms Incremental, Focused, and Binding due to its ability to aggressively search over many bindings of a single stream plan.
-- **p. 8 / 9 Experiments - extractive body cue:** Focused, Binding, and Adaptive all outperform Incremental and perform about equivalently due to the less geometrically constrained nature of the domain.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 블랙박스 샘플러를 선언적으로 기술하고 원래 문제를 유한한 PDDL 계획 문제의 연속으로 바꾸는 알고리즘을 제시한다. [PDF 2쪽](https://ojs.aaai.org/index.php/ICAPS/article/download/6739/6593#page=2) · [PDF 3쪽](https://ojs.aaai.org/index.php/ICAPS/article/download/6739/6593#page=3)
+- 새 후보 계획 탐색과 기존 계획의 연속 파라미터 탐색을 조절하는 방법을 시뮬레이션 및 실물 계획 과제에서 평가했다. [PDF 7쪽](https://ojs.aaai.org/index.php/ICAPS/article/download/6739/6593#page=7) · [PDF 8쪽](https://ojs.aaai.org/index.php/ICAPS/article/download/6739/6593#page=8)
 
 ## Evaluation Scope
 

@@ -19,9 +19,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — These approaches, however, leave to the user the difficult task of tuning suitable thresholds to control the number of segments that are extracted from the scene as well as the threshold used ...
-
-방법 관련 발췌 — We propose Clio, a novel approach for building task-driven 3D scene graphs in real-time with embedded open-set semantics.
+Clio는 자연어로 주어진 작업에 필요한 물체와 공간만 충분한 세분도로 남기는 온라인 3차원 장면 그래프를 만든다. [PDF 2쪽](https://arxiv.org/pdf/2404.13696#page=2)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / I. INTRODUCTION - extractive body cue:** We propose Clio, a novel approach for building task-driven 3D scene graphs in real-time with embedded open-set semantics.
-- **p. 2 / Abstract - extractive body cue:** Our final contribution is an extensive experimental campaign showing that Clio not only allows real-time construction of compact open-set 3D scene graphs, but also improves ...
-- **p. 3 / I. INTRODUCTION - extractive body cue:** Our third contribution (Section V) is to include the proposed task-driven clustering algorithm into a real-time system, named Clio (Fig.
-- **p. 3 / I. INTRODUCTION - extractive body cue:** Our second contribution (Section IV) is to apply the Agglomerative IB algorithm from [14] to the problem of taskdriven 3D scene understanding.
-- **p. 4 / IV. TASK-DRIVEN CLUSTERING - extractive body cue:** Towards this goal, we propose an incremental version of the algorithm that can be executed online as the robot explores
-- **p. 8 / VI. EXPERIMENTS - extractive body cue:** Overall, we achieve a 57% success rate for the grasps and a 71% success rate if we disregard the cases where Spot failed to actually ...
-- **p. 7 / VI. EXPERIMENTS - extractive body cue:** First and second-best results are bolded and underlined, respectively. ∗Total time for Clio-batch normalized by number of images; clustering step for batch run once on ...
-- **p. 6 / VI. EXPERIMENTS - extractive body cue:** Firstly, we observe that task-informed approaches (shaded blue rows in Table I) lead to improved open-set precision and retain a much smaller amount of objects ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 정보 병목 원리를 적용해 작업 구분에 필요한 정보를 보존하면서 물체 조각들을 묶는다. [PDF 4쪽](https://arxiv.org/pdf/2404.13696#page=4) · [PDF 5쪽](https://arxiv.org/pdf/2404.13696#page=5)
+- 센서 관측을 받으며 계층 그래프를 갱신하고, 실제 장면과 로봇에서 그래프 크기·작업 관련성·구축 비용을 평가했다. [PDF 7쪽](https://arxiv.org/pdf/2404.13696#page=7) · [PDF 8쪽](https://arxiv.org/pdf/2404.13696#page=8)
 
 ## Evaluation Scope
 

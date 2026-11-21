@@ -19,9 +19,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Multi-robot mapping is useful for rapidly exploring new environments, but when combined with traditional 3D reconstruction methods, can be difficult to scale efficiently, especially for teams of heterogeneous robots that have a ...
-
-방법 관련 발췌 — A server-based architecture allows our method to be used with existing robot and edge device hardware without highpowered GPUs, while leveraging typical communication infrastructure (e.g.
+HAMMER는 서로 다른 로봇에서 비동기적으로 전송되는 관측을 서버에서 하나의 의미 가우시안 지도로 통합한다. [PDF 1쪽](https://arxiv.org/pdf/2501.14147#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / I. INTRODUCTION - extractive body cue:** A server-based architecture allows our method to be used with existing robot and edge device hardware without highpowered GPUs, while leveraging typical communication infrastructure (e.g.
-- **p. 1 / I. INTRODUCTION - extractive body cue:** In this work, we propose HAMMER, Heterogeneous Asynchronous Multi-robot Mapping of Environmental Radiance.
-- **p. 1 / I. INTRODUCTION - extractive body cue:** HAMMER enables a server communicating with a team of robots to construct a joint 3DGS map of an unknown environment.
-- **p. 2 / I. INTRODUCTION - extractive body cue:** A shared map enables these robots to have comprehensive spatial awareness compared to their own local maps.
-- **p. 6 / IV. EXPERIMENTS - extractive body cue:** HAMMER dramatically outperforms Di-NeRF* which fails to converge to accurate inter-robot alignments.
-- **p. 6 / IV. EXPERIMENTS - extractive body cue:** HAMMER outperforms both baselines on all averaged metrics, and does so at least 25× faster than CPSLAM and 16× faster than MAGiC-SLAM.
-- **p. 7 / Figure/Table caption - extractive body cue:** Fig. 5: Map quality over time for HAMMER and baselines in two scenes. HAMMER outperforms Di-NeRF*, demonstrating the necessity of accurate robot alignment. It also ...
-- **p. 5 / IV. EXPERIMENTS - extractive body cue:** First, we compare HAMMER to state-of-the-art baselines [13], [14] by assessing their reconstruction accuracy on the ReplicaMultiAgent dataset [14], [15].
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 각 로봇의 국소 SLAM 좌표계를 초기 상대 자세 없이 공통 좌표계로 정렬한다. [PDF 2쪽](https://arxiv.org/pdf/2501.14147#page=2) · [PDF 3쪽](https://arxiv.org/pdf/2501.14147#page=3)
+- ROS로 들어오는 여러 장치의 영상·자세를 사용해 지도 학습을 계속하고 서로 다른 센서 구성을 평가했다. [PDF 4쪽](https://arxiv.org/pdf/2501.14147#page=4) · [PDF 5쪽](https://arxiv.org/pdf/2501.14147#page=5)
 
 ## Evaluation Scope
 

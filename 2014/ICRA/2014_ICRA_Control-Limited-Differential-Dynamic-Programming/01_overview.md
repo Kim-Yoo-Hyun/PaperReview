@@ -19,9 +19,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Ad-hoc task trajectories can be learned [9], which enlarge the convergence basin with a-priori knowledge and provide a consistent way to define complex task trajectories, but this is difficult to generalize to ...
-
-방법 관련 발췌 — Finally, Section IV describes the results, illustrating the usefulness of our approach.
+이 논문은 제어 입력의 상하한을 DDP 궤적 최적화 안에서 직접 처리한다. [PDF 1쪽](https://roboti.us/lab/papers/TassaICRA14.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,12 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / I. INTRODUCTION - extractive body cue:** Finally, Section IV describes the results, illustrating the usefulness of our approach.
-- **p. 2 / I. INTRODUCTION - extractive body cue:** We show experimentally in simulation that simplistic ways of handling them are inefficient and detrimental to convergence.
-- **p. 6 / IV. RESULTS - extractive body cue:** However, despite some recent work in this direction [34], direct feed-forward current control is not yet a functional option, while the lack of joint torque ...
-- **p. 5 / IV. RESULTS - extractive body cue:** 3 compares the results obtained with the two solvers.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 역방향 계산에서 박스 제약이 있는 국소 이차 문제를 풀어 제어를 갱신하고 단순 클리핑·벌점 방식과 비교한다. [PDF 3쪽](https://roboti.us/lab/papers/TassaICRA14.pdf#page=3) · [PDF 4쪽](https://roboti.us/lab/papers/TassaICRA14.pdf#page=4)
+- HRP-2 휴머노이드가 포함된 시뮬레이션 예제에서 제약을 지키면서 궤적 최적화가 수렴하는 양상을 조사했다. [PDF 6쪽](https://roboti.us/lab/papers/TassaICRA14.pdf#page=6) · [PDF 7쪽](https://roboti.us/lab/papers/TassaICRA14.pdf#page=7)
 
 ## Evaluation Scope
 

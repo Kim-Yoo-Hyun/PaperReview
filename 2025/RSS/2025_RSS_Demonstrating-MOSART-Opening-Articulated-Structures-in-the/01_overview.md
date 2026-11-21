@@ -19,9 +19,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Finally, we also consluct experiments to understand a) how MOSART compares to an end-to-end leaming approach, ) how sensitive MOSART is to the performance of each individual submodule, c) whether MOSART can ...
-
-방법 관련 발췌 — We considered two broad ways of putting together such a system: a modular approach and an end-to-end learning approach, bat ultimately favored a modular approach, Our approach, called MOSART for a MOdular ...
+MOSART는 처음 보는 문·서랍 등이 시야 안에 있는 위치에서 출발해 모바일 매니퓰레이터가 접근하고 여는 전 과정을 평가한다. [PDF 1쪽](https://www.roboticsproceedings.org/rss21/p033.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -53,16 +51,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Iyrropucrion - extractive body cue:** We considered two broad ways of putting together such a system: a modular approach and an end-to-end learning approach, bat ultimately favored a modular approach, ...
-- **p. 4 / B. Generating Motion Plans - extractive body cue:** In contrast to these approaches, we develop a system that operates on novel object instances in novel environments in a zero-shot manner without requiring any ...
-- **p. 1 / Body text (section boundary not confidently recovered) - extractive body cue:** g novel cabinets, drawers, and ovens
-- **p. 1 / Body text (section boundary not confidently recovered) - extractive body cue:** Specifically, we develop MOSART, a MOdular System for opening ARTiculated structures, and conduct extensive testing
-- **p. 2 / Abstract - extractive body cue:** ‘models developed in isolation struggle when faced with robot ‘centric viewpoints.
-- **p. 7 / IV. EXPERIMENTS - extractive body cue:** Overall, our system achieves a 61% success rate across 31 unseen cabinets and drawers in unseen real world environments.
-- **p. 3 / Figure/Table caption - extractive body cue:** Fig. 2: MOSART Design. The perception module outputs 3D articulation parameters in the robot frame using RGB-D images. The robot then navigates to the target ...
-- **p. 6 / IV. EXPERIMENTS - extractive body cue:** We first present ‘our end-to-end system test results, evaluating MOSART on 31 novel drawers and cupboards across 10 buildings (Section IV-A), To see how a ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 관절 구조를 여는 과제를 대상으로 접근부터 개방까지 실행하는 실물 시스템을 구성했다. [PDF 3쪽](https://www.roboticsproceedings.org/rss21/p033.pdf#page=3) · [PDF 4쪽](https://www.roboticsproceedings.org/rss21/p033.pdf#page=4)
+- 여러 실제 장소의 새로운 구조물에서 부분 단계와 종단 성공을 조사해 시스템 성능을 제한하는 단계를 분석했다. [PDF 8쪽](https://www.roboticsproceedings.org/rss21/p033.pdf#page=8) · [PDF 9쪽](https://www.roboticsproceedings.org/rss21/p033.pdf#page=9)
 
 ## Evaluation Scope
 

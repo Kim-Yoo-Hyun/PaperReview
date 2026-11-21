@@ -19,9 +19,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, programming a robot to perform these tasks has long been a challenge in robotics due to the high dimensional state representation and complex dynamics [1, 2, 3].
-
-방법 관련 발췌 — In this paper, we present SoftGym, a set of open-source simulated benchmarks for manipulating deformable objects, with a standard OpenAI Gym API and Python interface for creating new environments.
+SoftGym은 변형 물체 조작에서 관측 방식과 제어 알고리즘의 영향을 비교하는 시뮬레이션 벤치마크다. [PDF 1쪽](https://proceedings.mlr.press/v155/lin21a/lin21a.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1 Introduction - extractive body cue:** In this paper, we present SoftGym, a set of open-source simulated benchmarks for manipulating deformable objects, with a standard OpenAI Gym API and Python interface ...
-- **p. 3 / 1 Introduction - extractive body cue:** SoftGym consists of three parts: SoftGym-Medium, SoftGym-Hard and SoftGym-Robot, visualized in Figure 1.
-- **p. 3 / 1 Introduction - extractive body cue:** 4 SoftGym To advance research in reinforcement learning in complex environments with an inherently high dimensional state, we propose SoftGym.
-- **p. 2 / 1 Introduction - extractive body cue:** As such, we believe that SoftGym would be a unique and valuable contribution to the reinforcement learning and robotics communities, by enabling new methods to ...
-- **p. 4 / 1 Introduction - extractive body cue:** This action space is designed to enable the user to focus on the challenges of high-level planning and to abstract away the low-level manipulation.
-- **p. 7 / 6 Experiments - extractive body cue:** While it outperforms the rest of the baselines due to the use of the segmentation map and a better action space for exploration, the result ...
-- **p. 7 / 6 Experiments - extractive body cue:** This is especially true for StraightenRope, SpreadCloth, and FoldCloth, and the learning curves for these tasks seem to imply that even with more training time, ...
-- **p. 8 / 6 Experiments - extractive body cue:** This demonstration suggests that the simulation environment can reflect the complex dynamics in the real world and that algorithmic improvements of methods developed in SoftGym ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 천·밧줄·유체 등의 상이한 동역학을 가진 과제를 공통 Gym 인터페이스로 제공한다. [PDF 3쪽](https://proceedings.mlr.press/v155/lin21a/lin21a.pdf#page=3) · [PDF 4쪽](https://proceedings.mlr.press/v155/lin21a/lin21a.pdf#page=4)
+- 완전 상태와 부분 관측 등 조건을 나눠 여러 강화학습 방법을 평가하고 고차원 상태에서 남는 어려움을 분석했다. [PDF 5쪽](https://proceedings.mlr.press/v155/lin21a/lin21a.pdf#page=5) · [PDF 7쪽](https://proceedings.mlr.press/v155/lin21a/lin21a.pdf#page=7)
 
 ## Evaluation Scope
 

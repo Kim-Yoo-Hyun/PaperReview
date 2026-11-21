@@ -19,9 +19,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — This discrepancy results in a critical gap: current VLAs lack reliable 3D spatial understanding, leading to persistent challenges in generalization and adaptability.
-
-방법 관련 발췌 — We propose FALCON (From Spatial to Action), a novel paradigm that integrates richer and more representative 3D spatial tokens into VLAs through an improved injection scheme.
+FALCON은 RGB로 추정한 3차원 구조를 행동 헤드에 제공해 VLA 정책이 공간 변화에 대응하게 한다. [PDF 1쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/3cbe9fcdccb2399bcd6e6d01cbcae1fd-Paper-Conference.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1 Introduction - extractive body cue:** We propose FALCON (From Spatial to Action), a novel paradigm that integrates richer and more representative 3D spatial tokens into VLAs through an improved injection ...
-- **p. 2 / 1 Introduction - extractive body cue:** Overall Benchmark Bridge Calvin (Zero-shot) Google Robot Calvin Real-World Real-World (Few-Shot) Figure 1 We propose FALCON, a vision-language-action model that achieves robust 3D spatial understanding ...
-- **p. 3 / 1 Introduction - extractive body cue:** For limitation (2) of poor modality transferability, we introduce an Embodied Spatial Model that can optionally integrate extra 3D modalities (e.g., depth, poses).
-- **p. 4 / 3 Methodology - extractive body cue:** We introduce a lightweight fusion mechanism that aligns and combines these complementary representations (see Sec.
-- **p. 4 / 3 Methodology - extractive body cue:** To this end, we propose FALCON, a generalist robot policy that overcomes limitations of prior VLAs by integrating rich geometric priors from spatial foundation models ...
-- **p. 8 / 4 Experiments - extractive body cue:** 3, FALCON achieves the highest average success rate of 70.0% across all nine task suites, outperforming the advanced method SpatialVLA [31] (44.4%) by 25.6%.
-- **p. 7 / 4 Experiments - extractive body cue:** Our method achieves SOTA performance in both the ABC→D and ABCD→D settings, significantly outperforming all 7
-- **p. 9 / 4 Experiments - extractive body cue:** 4, FALCON achieves the highest performance across all settings, significantly outperforming the second-best model by 27.5% in Simple and 27% in Unseen Average.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 공간 기초 모델에서 얻은 토큰을 행동 헤드에 주입하며, 깊이 또는 자세가 주어지면 같은 모델에 추가할 수 있다. [PDF 4쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/3cbe9fcdccb2399bcd6e6d01cbcae1fd-Paper-Conference.pdf#page=4) · [PDF 5쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/3cbe9fcdccb2399bcd6e6d01cbcae1fd-Paper-Conference.pdf#page=5)
+- 시뮬레이션과 실물 조작에서 물체 크기·높이와 장면 혼잡도를 바꿔 공간 단서가 행동에 주는 효과를 비교했다. [PDF 7쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/3cbe9fcdccb2399bcd6e6d01cbcae1fd-Paper-Conference.pdf#page=7) · [PDF 8쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/3cbe9fcdccb2399bcd6e6d01cbcae1fd-Paper-Conference.pdf#page=8)
 
 ## Evaluation Scope
 

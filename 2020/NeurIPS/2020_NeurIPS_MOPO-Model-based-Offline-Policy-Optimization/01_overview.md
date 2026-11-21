@@ -19,9 +19,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Our results suggest that MOPO substantially outperforms these prior methods on the offline RL benchmark D4RL [18] as well as on offline RL problems where the agent must generalize to out-of-distribution states ...
-
-방법 관련 발췌 — The primary contribution of this work is an offline model-based RL algorithm that optimizes a policy in an uncertainty-penalized MDP, where the reward function is penalized by an estimate of the model's ...
+MOPO는 오프라인 데이터로 학습한 동역학에서 정책을 개선할 때 예측이 불확실한 구간의 보상을 낮춘다. [PDF 1쪽](https://arxiv.org/pdf/2005.13239#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1 Introduction - extractive body cue:** The primary contribution of this work is an offline model-based RL algorithm that optimizes a policy in an uncertainty-penalized MDP, where the reward function is ...
-- **p. 1 / Abstract - extractive body cue:** Instead, we propose to modify the existing model-based RL methods by applying them with rewards artificially penalized by the uncertainty of the dynamics.
-- **p. 5 / 3 Preliminaries - extractive body cue:** We will analyze our framework under the assumption that we have access to an oracle uncertainty quantification module that provides an upper bound on the ...
-- **p. 2 / 1 Introduction - extractive body cue:** Although neither method is designed for the batch setting, we find that the model-based method and its variant without ensembles show surprisingly large gains.
-- **p. 1 / Abstract - extractive body cue:** However, standard model-based RL methods, designed for the online setting, do not provide an explicit mechanism to avoid the offline setting's distributional shift issue.
-- **p. 9 / Figure/Table caption - extractive body cue:** Table 2: Average returns halfcheetah-jump and ant-angle that require out-of-distribution policy. The MOPO results are averaged over 6 random seeds, ± standard deviation, while the ...
-- **p. 18 / Figure/Table caption - extractive body cue:** Table 2. We observe that different reward penalties can all lead to substantial improvement of the performance and reward penalty based on learned variance is ...
-- **p. 8 / 5 Experiments - extractive body cue:** In Table 2, we show that MOPO significantly outperforms the state-of-the-art model-free approaches.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 모델 오차에서 오는 위험을 보상 벌점으로 표현하고 논문이 정한 오차 가정 아래 실제 정책 수익의 하한과 연결한다. [PDF 4쪽](https://arxiv.org/pdf/2005.13239#page=4) · [PDF 5쪽](https://arxiv.org/pdf/2005.13239#page=5)
+- 오프라인 연속 제어에서 모델로 생성한 전이와 벌점을 사용한 정책을 기존 오프라인 학습 방식과 비교했다. [PDF 6쪽](https://arxiv.org/pdf/2005.13239#page=6) · [PDF 7쪽](https://arxiv.org/pdf/2005.13239#page=7)
 
 ## Evaluation Scope
 

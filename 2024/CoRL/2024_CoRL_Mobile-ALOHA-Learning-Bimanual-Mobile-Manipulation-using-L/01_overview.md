@@ -19,6 +19,10 @@
 
 > DOC-QA2 targeted source review: 2026-10-23; PDF pp. 5. 손상 구간·직접 연결된 표 분류만 원문 이미지와 대조했다. 전체 주장 정독·실험 검증·reading status 승격을 뜻하지 않는다. [URL·PDF hash·수정 기록](../../../work/sources/pdf_note_review_followup_2026-10-23.json).
 
+## 공개 자료
+
+- **데이터** 실물 Mobile ALOHA의 캐비닛 작업 시연 aloha_mobile_cabinet/episode_0.hdf5를 확인했다. [배포 파일](https://drive.google.com/file/d/1_SOJkgfP5yZyVjMhTt3nwhvyUjcnlI51/view)
+
 ## Why This Paper Is Here
 
 Mobile ALOHA는 이동 베이스와 두 팔을 함께 원격조작해 모은 시연으로 이동 조작 정책을 학습한다.

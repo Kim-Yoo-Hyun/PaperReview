@@ -19,9 +19,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — An emerging line of work has addressed the challenges of learning from other low-resource modalities, like sound, point clouds, and depth, by aligning examples with pretrained vision-language embeddings [35, 64, 109].
-
-방법 관련 발췌 — First, we present our contrastive visuo-tactile pretraining, inspired by [35], that can emerge interconnections of touch and other modalities.
+UniTouch는 구조가 다른 광학식 촉각 센서의 관측을 기존 시각·언어·소리 표현과 연결한다. [PDF 1쪽](https://arxiv.org/pdf/2401.18084#page=1)
 
 ## Problem and Motivation
 
@@ -52,16 +50,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 3 / 3. Method - extractive body cue:** First, we present our contrastive visuo-tactile pretraining, inspired by [35], that can emerge interconnections of touch and other modalities.
-- **p. 2 / 1. Introduction - extractive body cue:** In this paper, we show that this approach can be adapted to tactile sensing.
-- **p. 3 / 3. Method - extractive body cue:** Finally, we show how our learned representation can be applied to various downstream tasks.
-- **p. 7 / 4.3. Cross-modal retrieval with touch - extractive body cue:** UniTouch achieves state-of-the-art performance on all three modalities and outperforms those supervised methods that are trained with paired modalities by a large Method LLM Eval ...
-- **p. 9 / Figure/Table caption - extractive body cue:** Table 8. Ablation study. We ablate the effectiveness of each of our proposed contributions via the zero-shot material classification. can significantly improve the performance, indicating ...
-- **p. 6 / 4.1. UniTouch representation - extractive body cue:** Our performance consistently outperforms existing baselines by a large margin.
-- **p. 8 / 4.7. Ablation study - extractive body cue:** We improve the performance by 17% by adding the sensor-specific tokens to it.
-- **p. 8 / 4.6. X-to-touch generation - extractive body cue:** Our model achieves 55.3% consistency, illustrating the reliability of the generated results.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 촉각 임베딩을 사전학습된 이미지 임베딩에 정렬하고 센서별 학습 토큰으로 장치 간 차이를 처리한다. [PDF 3쪽](https://arxiv.org/pdf/2401.18084#page=3) · [PDF 4쪽](https://arxiv.org/pdf/2401.18084#page=4)
+- 파지 결과 예측과 촉각 질의응답 등에서 접촉 표현의 제로샷 전이를 평가했다. [PDF 5쪽](https://arxiv.org/pdf/2401.18084#page=5) · [PDF 7쪽](https://arxiv.org/pdf/2401.18084#page=7)
 
 ## Evaluation Scope
 

@@ -19,9 +19,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — The challenge of easy-to-use teleoperation devices is more apparent in dexterous manipulation problems [24, 47, 3, 4], owing to the high dimensional action space.
-
-방법 관련 발췌 — The contributions of this work is summarized as follows: 1) We present OPEN TEACH, an open-source system for plug-and-play teleoperation framework suitable for collecting demonstrations across different robot morphologies in both simula ...
+Open Teach는 VR 헤드셋으로 여러 로봇 팔과 손을 조종하고 조작 시연을 수집하는 원격조작 시스템이다. [PDF 2쪽](https://arxiv.org/pdf/2403.07870#page=2)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / I. INTRODUCTION - extractive body cue:** The contributions of this work is summarized as follows: 1) We present OPEN TEACH, an open-source system for plug-and-play teleoperation framework suitable for collecting demonstrations ...
-- **p. 2 / I. INTRODUCTION - extractive body cue:** In this work, we present OPEN TEACH, an open-source framework for robot teleoperation that supports a variety of robots, including bimanual and multi-finger manipulation, all ...
-- **p. 1 / Body text (section boundary not confidently recovered) - extractive body cue:** 1: We present OPEN TEACH, a unified robot teleoperation framework that supports multiple arms and hands, allows mobile manipulation, is calibration-free, and works across both ...
-- **p. 4 / IV. OPEN TEACH - extractive body cue:** In this section, we provide details about the VR-based teleoperation setup and the system design that enables data collection using this framework.
-- **p. 4 / IV. OPEN TEACH - extractive body cue:** We observe that OPEN TEACH is the only framework that enables controlling multiple arms, hands, and mobile manipulators, is calibration-free, and is completely open-source.
-- **p. 6 / 4) How intuitive is the system for new users? - extractive body cue:** Overall, the learned policies achieve an average success rate of 86% across all tasks and robot morphologies.
-- **p. 6 / 4) How intuitive is the system for new users? - extractive body cue:** Similar to prior work [20, 22], these policies were learned within 20 minutes and achieved an average success rate of 82%, validating the high quality ...
-- **p. 8 / 4) How intuitive is the system for new users? - extractive body cue:** On these tasks, OPEN TEACH demonstrates a higher success rate along with significantly reduced median time to complete tasks compared to the other baselines.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 사람 손의 움직임을 로봇별 제어로 변환하고 빠른 시각 피드백을 제공해 사용자가 실행 중에 동작을 교정할 수 있다. [PDF 2쪽](https://arxiv.org/pdf/2403.07870#page=2) · [PDF 4쪽](https://arxiv.org/pdf/2403.07870#page=4)
+- 고정 팔·다지 손·이동 조작을 포함해 시뮬레이션과 실제 하드웨어에서 여러 단계의 작업을 시연했다. [PDF 5쪽](https://arxiv.org/pdf/2403.07870#page=5) · [PDF 6쪽](https://arxiv.org/pdf/2403.07870#page=6)
 
 ## Evaluation Scope
 

@@ -20,9 +20,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — This enables imitation from few demonstrations, but current approaches-which operate in 2D-suffer several key limitations.
-
-방법 관련 발췌 — We present a novel representation that models dense correspondence across object instances at the level of points and local coordinate frames.
+Neural Descriptor Fields는 시연에서 본 그리퍼와 물체의 상대 자세를 같은 범주의 새로운 물체에 옮긴다. [PDF 1쪽](https://arxiv.org/pdf/2112.05124#page=1)
 
 ## Problem and Motivation
 
@@ -56,16 +54,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / II. METHOD - extractive body cue:** We present a novel representation that models dense correspondence across object instances at the level of points and local coordinate frames.
-- **p. 2 / I. INTRODUCTION - extractive body cue:** Using this novel formulation, we propose a system that can imitate pick-and-place tasks for a category of objects from only a small handful of demonstrations.
-- **p. 5 / II. METHOD - extractive body cue:** 4), this encoding enables us to transfer a local frame with a reference pose ˆT when provided with a new point cloud by finding the ...
-- **p. 3 / II. METHOD - extractive body cue:** We propose to parameterize f via a neural network.
-- **p. 3 / II. METHOD - extractive body cue:** As we will see, this continuous, differentiable formulation enables us to find correspondence across object instances via simple first-order optimization.
-- **p. 6 / II. METHOD - extractive body cue:** For objects in arbitrary poses (bottom row), DON's performance suffers, while NDFs maintains higher success rates due to their equivariance to SE(3) transformations. to achieve ...
-- **p. 6 / II. METHOD - extractive body cue:** For objects in upright poses (top row), NDFs perform on par with DON on grasp success rate, but outperforms DON on overall pick-and-place success rate.
-- **p. 7 / II. METHOD - extractive body cue:** We find that while the performance of NDFs decreases significantly in the singledemonstration case, it still significantly outperforms DON, and more demonstrations yield significant performance ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 3차원 형상을 자기지도학습해 SE(3) 등변 특징장을 만들고, 시연의 특징과 일치하도록 새 파지·배치 자세를 최적화한다. [PDF 3쪽](https://arxiv.org/pdf/2112.05124#page=3) · [PDF 4쪽](https://arxiv.org/pdf/2112.05124#page=4)
+- 적은 수의 시연으로 학습한 뒤 물체 개체와 배치 자세를 바꿔 시뮬레이션 및 실제 로봇에서 평가했다. [PDF 6쪽](https://arxiv.org/pdf/2112.05124#page=6) · [PDF 7쪽](https://arxiv.org/pdf/2112.05124#page=7)
 
 ## Evaluation Scope
 

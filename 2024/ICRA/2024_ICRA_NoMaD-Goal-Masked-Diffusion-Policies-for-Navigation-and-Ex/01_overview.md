@@ -17,6 +17,12 @@
 - Paper type: theory_or_foundation
 - Source audit: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
+## 공개 자료
+
+- **코드** 공유 시각 내비게이션 저장소의 NoMaD 모델 구현을 확인했다. [배포 파일](https://raw.githubusercontent.com/PrieureDeSion/visualnav-transformer/dca79815b704e5aa9c6bdc3082351f9e3b2848c2/train/vint_train/models/nomad/nomad.py)
+- **가중치** NoMaD의 배포 가중치 nomad.pth 파일과 모델별 배포 목록을 대조했다. [배포 파일](https://drive.google.com/file/d/1YJhkkMJAYOiKNyCaelbS_alpUpAJsOUb/view)
+- **데이터** 공유 저자 저장소가 훈련에 사용했다고 명시한 자료 중 수정 GoStanford2의 go_stanford.zip을 확인했다. 전체 훈련 혼합에서 공개된 부분이다. [배포 파일](https://drive.google.com/file/d/1BVGA46WbvOZFyuzkzV2n_yZqcQsdIJy7/view)
+
 ## Why This Paper Is Here
 
 NoMaD는 목표 영상의 유무에 따라 하나의 확산 정책으로 목표를 향해 가거나 새로운 환경을 탐색한다.

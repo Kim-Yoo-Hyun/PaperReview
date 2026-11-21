@@ -19,9 +19,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, each camera requires an adapter cable that converts the camera board's JST connector to a USB-A port, and the ‘cameras cannot be daisy-chained.
-
-방법 관련 발췌 — In summary, our primary contribution is the RoboPanoptes system, demonstrating novel whole-body dexterity capabilities through whole-body vision.
+RoboPanoptes는 로봇 몸체 여러 곳의 카메라와 접촉면을 사용해 말단장치만으로 수행하기 힘든 조작을 학습한다. [PDF 1쪽](https://www.roboticsproceedings.org/rss21/p042.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -54,16 +52,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Ivrropuction - extractive body cue:** In summary, our primary contribution is the RoboPanoptes system, demonstrating novel whole-body dexterity capabilities through whole-body vision.
-- **p. 1 / Abstract - extractive body cue:** We present RoboPanoptes!, a capable yet practical robot system that achieves whole-body dexterity through wholebody vision.
-- **p. 3 / IV. MODULAR HARDWARE DESIGN - extractive body cue:** RoboPanoptes' hardware consists of nine modular body units and one head unit.
-- **p. 1 / 21 Cameras - extractive body cue:** design enables new robot capabilities such asa) simultaneously sweeping multiple sx
-- **p. 2 / 1. Ivrropuction - extractive body cue:** This hyper-redundancy enables them to emulate their biological role models ~ such as snakes, vines [6, /] and elephant trunks [46] ~ to perform tasks ...
-- **p. 9 / B. Sweeping Task - extractive body cue:** RoboPanoptes achieves a 96.6% success rate, outperforming all baselines.
-- **p. 9 / C. Stowing Task - extractive body cue:** RoboPanoptes achieves an overall success rate of 83.3%, compared to 27.8% for the w/o Camexa Pose policy and 0% for the Top-down Camera policy (Fig.
-- **p. 6 / 21 Whole - extractive body cue:** Consistent with observations in previous work [34], this simple strategy significantly improves the robustness of the policy, enabling it to succeed even when some cameras ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 분산 카메라 관측을 하나의 시각운동 정책에 모으고 사람이 시연한 전신 동작을 학습한다. [PDF 2쪽](https://www.roboticsproceedings.org/rss21/p042.pdf#page=2) · [PDF 5쪽](https://www.roboticsproceedings.org/rss21/p042.pdf#page=5)
+- 좁은 곳에서 상자를 열거나 여러 물체를 쓸어 옮기는 과제와 일부 카메라가 작동하지 않는 조건을 시험했다. [PDF 8쪽](https://www.roboticsproceedings.org/rss21/p042.pdf#page=8) · [PDF 9쪽](https://www.roboticsproceedings.org/rss21/p042.pdf#page=9)
 
 ## Evaluation Scope
 

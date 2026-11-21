@@ -19,9 +19,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — This is crucially important in robotics, where there is a lack of systematic data covering all possible actions in an environment and a need to be able to generalize to new unseen ...
-
-방법 관련 발췌 — Our contributions are three-fold. • We introduce RoboDreamer, a compositional world model capable of factorizing the video generation process by leveraging the inherent compositionality of natural language. • We illustrate how RoboDream ...
+RoboDreamer는 언어 지시를 구성 요소로 나눠 훈련에서 보지 못한 물체와 동작의 조합에 대한 로봇 영상을 생성한다. [PDF 1쪽](https://arxiv.org/pdf/2404.12377#page=1)
 
 ## Problem and Motivation
 
@@ -54,16 +52,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** Our contributions are three-fold. • We introduce RoboDreamer, a compositional world model capable of factorizing the video generation process by leveraging the inherent compositionality of ...
-- **p. 2 / 1. Introduction - extractive body cue:** This enables our approach to generalize to both new combinations of language and multimodal input. process by leveraging the inherent compositionality of natural language.
-- **p. 1 / 1. Introduction - extractive body cue:** In response, we introduce RoboDreamer, a compositional world model capable of factorizing the video generation 1.
-- **p. 3 / 2.1. Planning with Text-Conditioned Video Generation - extractive body cue:** This enables us to convert planning directly into a text-to-video generation problem.
-- **p. 1 / 1. Introduction - extractive body cue:** Such models have recently been applied in robotics, demonstrating significant potential in the development of policies, dynamic models, and planners (Du et al., 2023b; Ajay ...
-- **p. 7 / 4.2. Evaluation on Robotic Planning - extractive body cue:** According to the results presented in Table 3, RoboDreamer achieves superior task success rates compared to baseline models even if RoboDreamer is only given observation ...
-- **p. 8 / 4.2. Evaluation on Robotic Planning - extractive body cue:** On the other hand, RoboDreamer achieves a success rate of 15% with the help of predicted future observations.
-- **p. 7 / 4.1. Evaluation on Video Generation - extractive body cue:** RoboDreamer (t+s) and RoboDreamer (t+i) achieve strong performance on human evaluation and good video quality.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 지시에서 분리한 하위 표현을 조건으로 하는 생성 모델들을 합성해 비디오 계획을 만든다. [PDF 3쪽](https://arxiv.org/pdf/2404.12377#page=3) · [PDF 4쪽](https://arxiv.org/pdf/2404.12377#page=4)
+- 새롭게 조합한 지시에서 생성한 영상의 지시 일치도와 이 영상 계획을 이용한 조작을 평가했다. [PDF 6쪽](https://arxiv.org/pdf/2404.12377#page=6) · [PDF 7쪽](https://arxiv.org/pdf/2404.12377#page=7)
 
 ## Evaluation Scope
 

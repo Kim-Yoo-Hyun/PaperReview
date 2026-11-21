@@ -1,6 +1,6 @@
 # 레지스트리 변경
 
-논문별 등록 근거와 분류 기준을 관리한다. 전체 규모는 [통계](../../research/REGISTRY_STATS.md), 교정 후 오류율과 과거 감사는 [원문 감사](../../research/SOURCE_AUDIT.md)에 있다.
+논문별 등록 근거와 분류 기준을 관리한다. 전체 규모와 교정 후 감사 결과는 해당 원장에서 확인할 수 있다. 공개 자료를 실험에 재사용할 때는 논문별 overview에서 파일의 역할을 확인한다. 기반 모델·하위 정책·최종 정책은 공개 범위가 다를 수 있다. [통계](../../research/REGISTRY_STATS.md) · [공개 파일 대조](../../research/SOURCE_AUDIT.md#core-공개-자료) · [원문 감사](../../research/SOURCE_AUDIT.md)
 
 ## 공유 제어 문헌과 공개 자료
 

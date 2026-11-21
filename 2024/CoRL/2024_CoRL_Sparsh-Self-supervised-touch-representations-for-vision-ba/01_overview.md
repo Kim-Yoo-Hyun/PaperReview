@@ -19,9 +19,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Curation of new & existing datasets, unlabeled for SSL and labeled for benchmarking.
-
-방법 관련 발췌 — In this work, we introduce a family of touch representations for vision-based tactile sensors trained with SSL.
+Sparsh는 광학식 촉각 센서의 영상에서 레이블 없이 학습한 표현을 여러 접촉 인식 과제에 재사용한다. [PDF 1쪽](https://arxiv.org/pdf/2410.24090#page=1)
 
 ## Problem and Motivation
 
@@ -54,16 +52,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1 Introduction - extractive body cue:** In this work, we introduce a family of touch representations for vision-based tactile sensors trained with SSL.
-- **p. 2 / 1 Introduction - extractive body cue:** Our contributions are as follows: 1.
-- **p. 1 / Abstract - extractive body cue:** We present Sparsh, a family of SSL models that can support various vision-based tactile sensors, alleviating the need for custom labels through pre-training on 460k+ ...
-- **p. 8 / 8 Discussion - extractive body cue:** We evaluated five SSL approaches (see Figure 2) comparing their performance against task and sensor specific models through TacBench, a benchmark of six touch-centric tasks ...
-- **p. 7 / Figure/Table caption - extractive body cue:** Figure 4: Summary of results comparing Sparsh and E2E on [T1]-[T6] tasks in TacBench across varying amounts of labeled data. Pre-training with SSL yields general ...
-- **p. 8 / 8 Discussion - extractive body cue:** On average, Sparsh achieves a 95.1% improvement compared to an end-to-end approach when all models have access to only 33% -50% of the labeled dataset ...
-- **p. 8 / 8 Discussion - extractive body cue:** In contrast, partial fine-tuning offers minor improvements, aligning closely with the performance of frozen models.
-- **p. 26 / Figure/Table caption - extractive body cue:** Figure 14: Confusion matrix on test data for ∆Tx, ∆Ty, ∆Yaw for E2E, Sparsh (DINO) and Sparsh (IJEPA) trained on 33% of the available labeled ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 다른 센서에서 수집한 촉각 영상에 마스킹과 자기증류 등 자기지도학습 기법을 적용해 표현을 비교한다. [PDF 3쪽](https://arxiv.org/pdf/2410.24090#page=3) · [PDF 4쪽](https://arxiv.org/pdf/2410.24090#page=4)
+- TacBench를 구축해 힘·미끄러짐 등 지각과 조작 관련 하위 과제에 대한 센서별 전이 성능을 평가했다. [PDF 5쪽](https://arxiv.org/pdf/2410.24090#page=5) · [PDF 8쪽](https://arxiv.org/pdf/2410.24090#page=8)
 
 ## Evaluation Scope
 

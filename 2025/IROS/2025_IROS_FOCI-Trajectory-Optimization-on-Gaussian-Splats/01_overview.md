@@ -21,9 +21,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — To overcome these challenges, we propose FOCI, a trajectory optimization algorithm that leverages the overlap integral - the spatial integral over the multiplication of two functions - as a proxy measure for ...
-
-방법 관련 발췌 — In this paper, we propose an algorithm that enables a robot to perform trajectory optimization directly on the 3D Gaussians.
+FOCI는 로봇과 환경을 모두 가우시안으로 표현해 좁은 공간에서 몸체 방향까지 고려한 궤적을 최적화한다. [PDF 1쪽](https://arxiv.org/pdf/2505.08510#page=1)
 
 ## Problem and Motivation
 
@@ -57,13 +55,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 1 / I. INTRODUCTION - extractive body cue:** In this paper, we propose an algorithm that enables a robot to perform trajectory optimization directly on the 3D Gaussians.
-- **p. 2 / I. INTRODUCTION - extractive body cue:** The contributions of this work are therefore summarized as follows: • A novel collision measure between Gaussian Splats based on the overlap integral between Gaussians. ...
-- **p. 1 / I. INTRODUCTION - extractive body cue:** To overcome these challenges, we propose FOCI, a trajectory optimization algorithm that leverages the overlap integral - the spatial integral over the multiplication of two ...
-- **p. 3 / III. METHOD - extractive body cue:** Our methodology can be split into three parts: 1) trajectory representation to create an initial spline, 2) collision measure and 3) optimization loop.
-- **p. 6 / Method - extractive body cue:** Runtime We evaluate the performance of our method by comparing the runtimes of the Casadi optimization on a single CPU core, multiple CPU cores, and ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 두 가우시안 사이의 겹침 적분을 충돌 비용으로 사용한다. [PDF 3쪽](https://arxiv.org/pdf/2505.08510#page=3) · [PDF 4쪽](https://arxiv.org/pdf/2505.08510#page=4)
+- 합성 장면과 실제 장면에서 복원한 지도에서 ANYmal 형상의 경로를 계산해 좁은 통로의 통과 가능성을 평가했다. [PDF 5쪽](https://arxiv.org/pdf/2505.08510#page=5) · [PDF 6쪽](https://arxiv.org/pdf/2505.08510#page=6)
 
 ## Evaluation Scope
 

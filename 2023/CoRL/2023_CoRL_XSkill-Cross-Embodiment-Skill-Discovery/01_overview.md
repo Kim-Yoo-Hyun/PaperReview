@@ -19,9 +19,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — With the proposed skill alignment transformer, the algorithm can robustly align skills in the human video to the robot visual observation, despite the embodiment difference and unexpected execution failures.
-
-방법 관련 발췌 — Together with the new cross-embodiment dataset in simulation and the real world, we hope to inspire future exploration in this area. • Introducing the first attempt toward this task XSkill that consists ...
+XSkill은 사람과 로봇의 시연 영상에서 공통 기술을 발견하고, 새로운 사람 시연에 맞춰 로봇이 그 기술들을 조합하게 한다. [PDF 1쪽](https://proceedings.mlr.press/v229/xu23a/xu23a.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1 Introduction - extractive body cue:** Together with the new cross-embodiment dataset in simulation and the real world, we hope to inspire future exploration in this area. • Introducing the first ...
-- **p. 1 / 1 Introduction - extractive body cue:** We refer to the task as "Cross-Embodiment Skill Discovery" and introduce our method 7th Conference on Robot Learning (CoRL 2023), Atlanta, USA.
-- **p. 2 / 1 Introduction - extractive body cue:** To encourage across-embodiment alignment, we introduce a set of learnable skill prototypes through feature clustering.
-- **p. 3 / 3 Approach - extractive body cue:** The XSkill framework consists of three phases: Discover §3.1, Transfer §3.2, and Compose §3.3 that uses three different data sources.
-- **p. 1 / 1 Introduction - extractive body cue:** 3) Compose, performing novel compositions of the learned skills to accomplish new tasks.
-- **p. 7 / 4 Evaluation - extractive body cue:** [XSkill] achieves 70.2% and 60% success (Tab.
-- **p. 7 / 4 Evaluation - extractive body cue:** 1 & 2) on unseen tasks with cross-embodiment prompts in simulated and real-world environments, which outperforms all baselines.
-- **p. 5 / Figure/Table caption - extractive body cue:** Figure 3: Transfer & Composition: During inference, a human demonstration of a new task is given, XSkill first extracts a sequence of skills, which can ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 양쪽 영상에서 레이블 없이 기술 원형을 학습하고 그 표현을 조건으로 로봇의 확산 행동 정책을 학습한다. [PDF 3쪽](https://proceedings.mlr.press/v229/xu23a/xu23a.pdf#page=3) · [PDF 4쪽](https://proceedings.mlr.press/v229/xu23a/xu23a.pdf#page=4)
+- 처음 보는 과제의 사람 영상을 지시로 주고 시뮬레이션 및 실물에서 기술 전이와 조합을 시험했다. [PDF 6쪽](https://proceedings.mlr.press/v229/xu23a/xu23a.pdf#page=6) · [PDF 8쪽](https://proceedings.mlr.press/v229/xu23a/xu23a.pdf#page=8)
 
 ## Evaluation Scope
 

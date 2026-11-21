@@ -21,9 +21,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, textual descriptions are inherently imprecise, as they cannot accurately specify human actions such as hand configurations, fine-grained temporal control, both of which are crucial for modeling realistic human manipulations.
-
-방법 관련 발췌 — Our main contributions can be summarized as follows: (1) We introduce Dexterous World Models (DWM), a new formulation of world modeling via scene-action-conditioned video diffusion.
+Dexterous World Models는 3차원 장면과 일인칭 사람 손 움직임을 조건으로 손이 물체와 상호작용할 때의 영상을 생성한다. [PDF 1쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Kim_Dexterous_World_Models_CVPR_2026_paper.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -57,16 +55,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** Our main contributions can be summarized as follows: (1) We introduce Dexterous World Models (DWM), a new formulation of world modeling via scene-action-conditioned video diffusion.
-- **p. 2 / 1. Introduction - extractive body cue:** (2) We propose a conditioning scheme that leverages static scene videos and egocentric hand motions to model interaction-induced residual dynamics.
-- **p. 4 / 3.2. Scene-Action-Conditioned Video Diffusion - extractive body cue:** 2 for the overview of our framework.
-- **p. 4 / 3.2. Scene-Action-Conditioned Video Diffusion - extractive body cue:** (3), we instantiate our framework as an egocentric, scene-action-conditioned video diffusion model.
-- **p. 1 / 1. Introduction - extractive body cue:** Modeling dynamic consequences and causal relationships is central to world modeling, which enables the prediction of environmental changes This CVPR paper is the Open Access ...
-- **p. 8 / 4.2. Qualitative Results - extractive body cue:** Including real-world data for training significantly improves both perceptual and pixel-level metrics across synthetic and real-world test sets, demonstrating that static-camera real-world interactions enhance generalization.
-- **p. 6 / 4.1. Comparison - extractive body cue:** 1, where our method achieves superior performance across all metrics.
-- **p. 8 / 4.3. Ablation Study - extractive body cue:** 2, incorporating real-world data consistently improves performance on most metrics, not only on synthetic test sequences but also on Aria-captured real-world data, which includes both ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 지정된 카메라 경로에서 렌더링한 정적 장면과 손 메시 영상을 분리된 조건으로 비디오 확산 모델에 제공한다. [PDF 3쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Kim_Dexterous_World_Models_CVPR_2026_paper.pdf#page=3) · [PDF 5쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Kim_Dexterous_World_Models_CVPR_2026_paper.pdf#page=5)
+- 장면과 손 동작에 맞춰 생성한 영상의 시간적·시각적 일관성을 평가하고, 각 조건을 제거했을 때 생성 결과가 어떻게 달라지는지 비교했다. [PDF 6쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Kim_Dexterous_World_Models_CVPR_2026_paper.pdf#page=6) · [PDF 8쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Kim_Dexterous_World_Models_CVPR_2026_paper.pdf#page=8)
 
 ## Evaluation Scope
 

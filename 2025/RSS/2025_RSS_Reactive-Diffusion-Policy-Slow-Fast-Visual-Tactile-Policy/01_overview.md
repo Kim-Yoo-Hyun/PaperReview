@@ -19,23 +19,21 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — In order to compensate for the limitations of purely visual input, numerous approaches [40 27, 45, 64, 31] have explored the integration of tactile input into imitation learning policies However, most of ...
-
-방법 관련 발췌 — To address these challenges, we introduce TactAR, 4 low-cost tleoperation system that provides real-time tactile feedback through Augmented Reality (AR), along with Reactive Diffusion Policy (RDP), a novel slow-fast visuale {actile imit ...
+Reactive Diffusion Policy는 장기 동작을 느리게 예측하면서도 실행 중 들어오는 촉각에 맞춰 접촉 행동을 빠르게 바꾼다. [PDF 1쪽](https://www.roboticsproceedings.org/rss21/p052.pdf#page=1)
 
 ## Problem and Motivation
 
 - **p. 1 / Abstract - extractive body cue:** Humans can accomplish complex contact-rich tasks using vision and touch, with highly rea r fast response (o external changes and adaptive control of contact forces: ...
 - **p. 1 / Abstract - extractive body cue:** Ex ‘visual imitation learning (IL) approaches rly on aetion chunking ‘model complex behaviors, which lacks the ability to respond instantly to real-time tactile feedback during ...
 - **p. 1 / Abstract - extractive body cue:** Furthermore, most teleoperation systems. sirugsle to provide fine-grained tactile / force feedback, which limits the range of tasks that can be performed.
-- **p. 1 / Abstract - extractive body cue:** To address these challenges, we introduce TactAR, 4 low-cost tleoperation system that provides real-time tactile feedback through Augmented Reality (AR), along with Reactive Diffusion Policy ...
+- **p. 1 / Abstract - extractive body cue:** To address these challenges, we introduce TactAR, a low-cost teleoperation system that provides real-time tactile feedback through Augmented Reality (AR), along with Reactive Diffusion Policy ...
 - **p. 1 / Abstract - extractive body cue:** RDP employs a two-level hierarchy: (1) a slow latent diffusion policy for predicting high-level ation chunks in latent space at low frequency, (2) a fast ...
 - **p. 2 / I. Ivrropucrion - extractive body cue:** In order to compensate for the limitations of purely visual input, numerous approaches [40 27, 45, 64, 31] have explored the integration of tactile input ...
 - **p. 3 / B. Robot Data Collection System - extractive body cue:** By integrating both tactile and visual modalities, our approach overcomes the limitations of prior works and achieves greater versatility in robotic manipulation,
 
 ## Core Idea
 
-- **p. 1 / Abstract - extractive body cue:** To address these challenges, we introduce TactAR, 4 low-cost tleoperation system that provides real-time tactile feedback through Augmented Reality (AR), along with Reactive Diffusion Policy ...
+- **p. 1 / Abstract - extractive body cue:** To address these challenges, we introduce TactAR, a low-cost teleoperation system that provides real-time tactile feedback through Augmented Reality (AR), along with Reactive Diffusion Policy ...
 - **p. 2 / I. Ivrropucrion - extractive body cue:** In this work, we propose two critical components to solve the above issues of visual-tactile imitation learning:
 - **p. 2 / I. Ivrropucrion - extractive body cue:** To leverage the high-quality visual tactile data collected by the TactAR system, we propose an imitation learning algorithm called Reactive Diffusion Policy (RDP) (Fig. / ...
 - **p. 3 / B. Robot Data Collection System - extractive body cue:** ‘In contrast, our method combines normal force, shear force, and visual RGB inputs into a unified visual-tactile policy, enabling deployment across a broader range of ...
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 1 / Abstract - extractive body cue:** To address these challenges, we introduce TactAR, 4 low-cost tleoperation system that provides real-time tactile feedback through Augmented Reality (AR), along with Reactive Diffusion Policy ...
-- **p. 2 / I. Ivrropucrion - extractive body cue:** In this work, we propose two critical components to solve the above issues of visual-tactile imitation learning:
-- **p. 2 / I. Ivrropucrion - extractive body cue:** To leverage the high-quality visual tactile data collected by the TactAR system, we propose an imitation learning algorithm called Reactive Diffusion Policy (RDP) (Fig. / ...
-- **p. 3 / B. Robot Data Collection System - extractive body cue:** ‘In contrast, our method combines normal force, shear force, and visual RGB inputs into a unified visual-tactile policy, enabling deployment across a broader range of ...
-- **p. 3 / B. Robot Data Collection System - extractive body cue:** Our method ‘combines the advantages of low-cost VR controller and tactile sensing, getting tactile feedback via Augmented Reality, while preserving the accuracy needed for precise ...
-- **p. 7 / V. EXPERIMENTS - extractive body cue:** + Ql: Does tactile signals improve policy performance in contact-rich tasks?
-- **p. 7 / V. EXPERIMENTS - extractive body cue:** We have improved the original design of MCTac [4], including increasing the size of the marker, reducing the
-- **p. 16 / B. Implementation Details of TactR - extractive body cue:** 16: The example image of our improved MCTae optical tactile sensor.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 잠재 확산 정책이 저주파 행동 묶음을 만들고 빠른 비대칭 토크나이저가 현재 촉각을 사용해 세부 동작을 복원한다. [PDF 5쪽](https://www.roboticsproceedings.org/rss21/p052.pdf#page=5) · [PDF 6쪽](https://www.roboticsproceedings.org/rss21/p052.pdf#page=6)
+- 작업자에게 촉각을 시각적으로 돌려주는 TactAR로 시연을 수집하고 여러 실물 접촉 과제와 센서에서 정책을 평가했다. [PDF 4쪽](https://www.roboticsproceedings.org/rss21/p052.pdf#page=4) · [PDF 8쪽](https://www.roboticsproceedings.org/rss21/p052.pdf#page=8) · [PDF 9쪽](https://www.roboticsproceedings.org/rss21/p052.pdf#page=9)
 
 ## Evaluation Scope
 
@@ -94,6 +84,6 @@
 > Cross-checked on 2026-09-03 against the validated PDF body (18 pages; tesseract OCR fallback; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
 
 - **Problem/bottleneck:** In order to compensate for the limitations of purely visual input, numerous approaches [40 27, 45, 64, 31] have explored the integration of tactile input into imitation learning policies However, ... (p. 2, I. Ivrropucrion).
-- **Actual contribution:** To address these challenges, we introduce TactAR, 4 low-cost tleoperation system that provides real-time tactile feedback through Augmented Reality (AR), along with Reactive Diffusion Policy (RDP), a novel slow-fast visuale ... (p. 1, Abstract).
+- **Actual contribution:** To address these challenges, we introduce TactAR, a low-cost teleoperation system that provides real-time tactile feedback through Augmented Reality (AR), along with Reactive Diffusion Policy (RDP), a novel slow-fast visuale ... (p. 1, Abstract).
 - **Evaluation boundary:** All devices are connected to a workstation with an Intel Core i9-14900K CPU and an NVIDIA RTX 4090 GPU for both data collection and evaluation 2) Baselines: We use the ... (p. 7, V. EXPERIMENTS).
 - **Explicit failure boundary:** We ‘observe that DP with pure visual input frequently predicts inaccurate trajectories and results in large contact forces (e.g. failure case 2 in Fig. (p. 9, B. Results).

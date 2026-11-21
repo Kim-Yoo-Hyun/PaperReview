@@ -19,9 +19,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, it is not yet clear how the ability of these world models to capture temporal dynamics can be brought to bear on improving the robustness and generalization of robotic controllers synthesized ...
-
-방법 관련 발췌 — We show that this learning framework leads to improved policies compared to standard imitation learning since, (1) the unified architecture enables feature sharing between actions and pixels, resulting in additional supervision from ...
+Unified World Models는 행동과 미래 영상의 확산을 한 트랜스포머에 넣어 시연과 행동 라벨 없는 영상을 함께 활용한다. [PDF 1쪽](https://arxiv.org/pdf/2504.02792#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / I. INTRODUCTION - extractive body cue:** We show that this learning framework leads to improved policies compared to standard imitation learning since, (1) the unified architecture enables feature sharing between actions ...
-- **p. 1 / I. INTRODUCTION - extractive body cue:** Concretely, a UWM consists of a coupled score model that predicts action scores and future image scores, conditioned on the current image and separate diffusion ...
-- **p. 1 / I. INTRODUCTION - extractive body cue:** In this work, we propose a new diffusion-based learning framework that unifies imitation learning and world modeling, incorporating knowledge of temporal dynamics gleaned from large ...
-- **p. 3 / III. METHOD - extractive body cue:** In this section, we introduce Unified World Models as a way to incorporate temporal dynamics into diffusion-based action prediction models, proving a bridge between the ...
-- **p. 2 / I. INTRODUCTION - extractive body cue:** During inference, UWM enables flexible sampling from various distributions by manipulating the diffusion timesteps independently.
-- **p. 7 / Figure/Table caption - extractive body cue:** Fig. 6. Average success rates across all real robot tasks and in-distribution and out-of-distribution settings. UWM exhibits strong performance and can further improve by co-training ...
-- **p. 9 / IV. EXPERIMENTS - extractive body cue:** We find that given the same time limit as the trajectory length, the inverse dynamics model achieves a higher success rate than the policy.
-- **p. 7 / IV. EXPERIMENTS - extractive body cue:** PAD achieves the lowest success across the board.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 행동과 영상에 독립적인 확산 시간 단계를 주어 같은 모델에서 정책, 순방향 동역학, 역동역학 등 다른 조건부 예측을 수행한다. [PDF 4쪽](https://arxiv.org/pdf/2504.02792#page=4) · [PDF 5쪽](https://arxiv.org/pdf/2504.02792#page=5)
+- 로봇 조작 자료에서 정책 학습을 평가하고 영상 자료 및 결합 학습이 행동 예측에 주는 효과를 조사했다. [PDF 7쪽](https://arxiv.org/pdf/2504.02792#page=7) · [PDF 9쪽](https://arxiv.org/pdf/2504.02792#page=9)
 
 ## Evaluation Scope
 

@@ -19,9 +19,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — For example, when the initial navigation fails, entropy minimization intensifies the probabilities of the actions that lead to failure in repeated episodes.
-
-방법 관련 발췌 — In summary, the contributions of this work are as follows. • We introduce FEEDTTA, a novel TTA framework for online VLN utilizing feedback-based RL.
+FeedTTA는 내비게이션 에피소드가 끝날 때 얻는 성공·실패 신호로 배포 중 언어 내비게이션 정책을 갱신한다. [PDF 1쪽](https://raw.githubusercontent.com/mlresearch/v267/main/assets/kim25ad/kim25ad.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** In summary, the contributions of this work are as follows. • We introduce FEEDTTA, a novel TTA framework for online VLN utilizing feedback-based RL.
-- **p. 2 / 1. Introduction - extractive body cue:** Based on this analysis, we introduce FEEDTTA, a novel TTA framework for online VLN using feedback-based reinforcement learning (RL).
-- **p. 3 / 3.1. Task Description - extractive body cue:** Each element Xn consists of a natural language instruction In, and an initial visual state s0 n, which is a 360◦panoramic view of the surrounding ...
-- **p. 4 / 3.3. Stochastic Gradient Reversion - extractive body cue:** Therefore, we propose Stochastic Gradient Reversion (SGR), a gradient regularization method for FEEDTTA to maintain plasticity and stability during adaptation.
-- **p. 5 / 3.3. Stochastic Gradient Reversion - extractive body cue:** This mechanism allows for a more flexible and dynamic adaptation, taking both possible outcomes into consideration rather than limiting updates to a single extreme.
-- **p. 9 / 5.4. Effects of Stochastic Gradient Reversion - extractive body cue:** Furthermore, while GD and GS exhibit catastrophic forgetting, the proposed SGR rather brings substantial improvements in the success rates, strengthening the policy's generalizability as well ...
-- **p. 5 / 4.2. Evaluation Metrics - extractive body cue:** In addition to these metrics, we propose the ‘Adapted Success Rate (ASR)' metric to accurately measure sample-wise transition of results before and after adaptation.
-- **p. 7 / 5.2. Quality and Quantity of Feedback - extractive body cue:** The performance improves further in proportion to the increase in the percentage of episodes receiving feedback.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 이진 피드백을 누적 보상으로 사용해 새로운 환경에서 들어오는 에피소드로 강화학습한다. [PDF 2쪽](https://raw.githubusercontent.com/mlresearch/v267/main/assets/kim25ad/kim25ad.pdf#page=2) · [PDF 3쪽](https://raw.githubusercontent.com/mlresearch/v267/main/assets/kim25ad/kim25ad.pdf#page=3)
+- 동일한 피드백을 활용한 그래디언트 정규화로 기존 능력을 유지하는 구성과 온라인 적응 성능을 비교했다. [PDF 4쪽](https://raw.githubusercontent.com/mlresearch/v267/main/assets/kim25ad/kim25ad.pdf#page=4) · [PDF 8쪽](https://raw.githubusercontent.com/mlresearch/v267/main/assets/kim25ad/kim25ad.pdf#page=8)
 
 ## Evaluation Scope
 
