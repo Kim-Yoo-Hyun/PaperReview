@@ -1,9 +1,9 @@
 # Steering Your Diffusion Policy with Latent Space Reinforcement Learning
 
-> Evidence maturity: `ABSTRACT_CHECKED`. abstract 기반 — 본문 수동 확인 필요.
+> Evidence maturity: `ABSTRACT_CHECKED`. 개요 전반은 초록 수준이며, 아래 요약과 두 기여에는 확인한 본문 위치를 표시했다.
 > 자동 작성 노트는 실제 정독을 뜻하지 않는다. 사용자 reading status는 UNREAD로 시작한다.
 
-- Year/Venue
+- Year/Venue: 2025 / CoRL
 - Authors: Andrew Wagenmaker, Yunchu Zhang, Mitsuhiko Nakamoto, Seohong Park, Waleed Yagoub, Anusha Nagabandi, Abhishek Gupta, Sergey Levine
 - Category: Robot Learning and Data
 - Primary track: RL, IL, offline learning, and robot data
@@ -14,15 +14,16 @@
 - Venue verification: https://proceedings.mlr.press/v305/wagenmaker25a.html
 - Code/Project: https://github.com/ajwagen/dsrl
 - Code: https://github.com/ajwagen/dsrl
-- Source audit: 2026-10-19: 공식 paper abstract 및 저자 project/code README 확인; abstract 기반 — 본문 수동 확인 필요.
+- Source audit: 2026-11-23 요약과 핵심 기여 두 개를 원문 본문에 대조했다. 나머지 세부 분석은 기존 초록·공식 자료에 근거한다.
 
 ## Problem and Importance
 
-좋은 demonstration policy가 새로운 환경에서 충분한 성능을 내지 못할 때 추가 demonstration 없이 적응시키는 문제다.
+DSRL은 시연으로 배운 확산 정책의 파라미터를 고정하고 입력 노이즈를 고르는 정책을 강화학습해 행동을 조정한다. [PDF 1쪽](https://arxiv.org/pdf/2506.15799v2#page=1)
 
 ## Core Idea and Contribution
 
-Base diffusion policy의 weight를 고정하고 latent-noise space에서 RL을 수행하는 DSRL을 제안한다.
+- 기존 확산 정책을 블랙박스로 호출하면서 그 잠재 노이즈를 새 강화학습 문제의 행동으로 다룬다. [PDF 4쪽](https://arxiv.org/pdf/2506.15799v2#page=4) · [PDF 5쪽](https://arxiv.org/pdf/2506.15799v2#page=5)
+- 시뮬레이션과 실물 단일 작업 및 사전학습한 범용 정책의 적응을 평가해 온라인 상호작용으로 얻는 개선을 측정했다. [PDF 1쪽](https://arxiv.org/pdf/2506.15799v2#page=1) · [PDF 8쪽](https://arxiv.org/pdf/2506.15799v2#page=8)
 
 ## Observation–State–Action Interface
 
@@ -32,7 +33,7 @@ Observation → RL latent-noise policy → frozen BC diffusion policy → robot 
 
 공식 CoRL abstract는 simulated benchmark, real-world robot task 및 pretrained generalist policy adaptation 평가를 명시한다.
 
-근거: [공식 paper/abstract](https://proceedings.mlr.press/v305/wagenmaker25a.html) · [저자 project/code](https://github.com/ajwagen/dsrl). 정확한 수치·baseline fairness·failure 범위는 본문 확인 전까지 확정하지 않는다.
+근거: [공식 paper/abstract](https://proceedings.mlr.press/v305/wagenmaker25a.html) · [저자 project/code](https://github.com/ajwagen/dsrl). 그 밖의 수치, 기준선의 비교 조건, 실패 범위는 별도 대조가 필요하다.
 
 ## Why This Paper Is Here — Researcher Interpretation
 

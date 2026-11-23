@@ -19,9 +19,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — This strict pairing can be prohibitively difficult to maintain during contact-rich interactions involving sliding contact or dynamic object motion necessary for general manipulation.
-
-방법 관련 발췌 — Our method consists of two stages: self-supervised representation learning and cross-embodiment alignment via pseudo-pairs.
+TactAlign은 센서와 손 구조가 다른 사람과 로봇의 촉각을 공통 표현으로 옮겨 접촉 조작 시연을 재사용한다. [PDF 1쪽](https://arxiv.org/pdf/2602.13579v1#page=1)
 
 ## Problem and Motivation
 
@@ -55,15 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 3 / III. METHODOLOGY - extractive body cue:** Our method consists of two stages: self-supervised representation learning and cross-embodiment alignment via pseudo-pairs.
-- **p. 2 / I. INTRODUCTION - extractive body cue:** The core contributions of our work are: • We propose TactAlign, a method for aligning crosssensor tactile data from unpaired demonstrations of the same task.
-- **p. 2 / I. INTRODUCTION - extractive body cue:** TactAlign leverages rectified flow with noisy pseudo-pairs to learn a latent mapping that enables H2R policy transfer between humans and robots equipped with heterogeneous tactile ...
-- **p. 4 / III. METHODOLOGY - extractive body cue:** Second: We propose incorporating pseudo-pairs into rectified flow to guide the velocity field toward desired correspondences between the source and target distributions.
-- **p. 1 / I. INTRODUCTION - extractive body cue:** In contrast, our proposed method enables tactile transfer from unpaired datasets of the same task without requiring such pairing assumptions.
-- **p. 7 / Figure/Table caption - extractive body cue:** Fig. 8: Lid Closing Task. With randomized grasps, the policy uses touch to perform search, alignment, and closing between the lid and the bottle. We ...
-- **p. 5 / IV. EXPERIMENTS AND RESULTS - extractive body cue:** Successful execution therefore depends on detecting contact onset and reasoning about contact throughout the task as in Fig.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 손과 물체의 상호작용에서 만든 유사 쌍으로 rectified flow를 학습해 사람·로봇의 동시 기록 없이 촉각 표현을 정렬한다. [PDF 2쪽](https://arxiv.org/pdf/2602.13579v1#page=2) · [PDF 3쪽](https://arxiv.org/pdf/2602.13579v1#page=3)
+- 회전·삽입·뚜껑 닫기에서 전이 성능을 비교하고 로봇의 해당 작업 시연이 없는 전구 돌려 끼우기도 평가했다. [PDF 4쪽](https://arxiv.org/pdf/2602.13579v1#page=4) · [PDF 8쪽](https://arxiv.org/pdf/2602.13579v1#page=8)
 
 ## Evaluation Scope
 

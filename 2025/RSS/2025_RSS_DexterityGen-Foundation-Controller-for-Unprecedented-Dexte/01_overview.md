@@ -20,9 +20,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — This limitation makes it difficult to prompt existing models to generate more detailed, finger-level interaction behaviors, such as using a syringe or screwdriver.
-
-방법 관련 발췌 — "Motivated by these observations, in this paper, we propose
+DexGen은 시뮬레이션에서 배운 손안 조작을 바탕으로 사람이 준 거친 동작 명령을 실제 다지 손의 안정적인 움직임으로 바꾼다. [PDF 1쪽](https://www.roboticsproceedings.org/rss21/p103.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -56,16 +54,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. INTRODUCTION - extractive body cue:** "Motivated by these observations, in this paper, we propose
-- **p. 4 / III. THE DEXGEN CONTROLLER - extractive body cue:** We propose to pretrain a generative behavior model po(o/0) ‘on the simulation dataset to model prior action distribution so that it can generate stable and ...
-- **p. 6 / C. DexGen Model Architecture - extractive body cue:** The above function encourages the generated future fingertip position to closely match the commanded fingertip position Since the action of the robot hand has a ...
-- **p. 3 / 1. INTRODUCTION - extractive body cue:** Our approach effectively decouples high-level semantic motion generation from finegrained low-level control, serving as a foundational low-level dexterity controller.
-- **p. 3 / 1. INTRODUCTION - extractive body cue:** novel training framework called DexterityGen (DexGen) to address the challenges of teaching dexterous in-hand manipulation skills.
-- **p. 8 / B. Simulated Experiments - extractive body cue:** 4) Evaluation Protocol: We evaluate the performance of 1 teleoperation system by measuring the success rate a human user can achieve when using it to ...
-- **p. 8 / B. Simulated Experiments - extractive body cue:** This explains why the user can achieve a much higher success rate in these dexterous tasks.
-- **p. 7 / IV. EXPERIMENTS - extractive body cue:** figure, DexGen can successfully improve the performance of these polici
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 강화학습으로 물체를 손안에서 회전·이동하는 궤적을 모아 여러 명령을 처리하는 공통 제어기를 학습한다. [PDF 1쪽](https://www.roboticsproceedings.org/rss21/p103.pdf#page=1) · [PDF 5쪽](https://www.roboticsproceedings.org/rss21/p103.pdf#page=5)
+- Allegro Hand에서 물체를 유지하는 시간과 주사기·드라이버 등 도구 사용의 단계별 성공을 평가했다. [PDF 6쪽](https://www.roboticsproceedings.org/rss21/p103.pdf#page=6) · [PDF 8쪽](https://www.roboticsproceedings.org/rss21/p103.pdf#page=8)
 
 ## Evaluation Scope
 

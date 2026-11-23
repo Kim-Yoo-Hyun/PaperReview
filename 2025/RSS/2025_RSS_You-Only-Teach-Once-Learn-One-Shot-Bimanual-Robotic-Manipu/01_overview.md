@@ -19,9 +19,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Next, we present how to obtain sufficient training demonstrations proliferated from only a single-shot human teaching and how to improve existing diffusion-based imitation policies for addressing the bimanual manipulation problem.
-
-방법 관련 발췌 — As an altemative, we propose to project all 3D points {f!"°}/_, onto the 2D image, nd then lft these points to 3D by applying the stereo matching algorithm {92}.
+YOTO는 사람의 양손 시연을 한 번 스테레오로 관찰해 얻은 동작을 여러 변형 시연으로 확장하고 양팔 정책을 학습한다. [PDF 1쪽](https://www.roboticsproceedings.org/rss21/p149.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -54,16 +52,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 4 / B. Hand Motion Extraction and Injection - extractive body cue:** As an altemative, we propose to project all 3D points {f!"°}/_, onto the 2D image, nd then lft these points to 3D by applying the ...
-- **p. 4 / A. Problem Formulation - extractive body cue:** Next, we present how to obtain sufficient training demonstrations proliferated from only a single-shot human teaching and how to improve existing diffusion-based imitation policies for ...
-- **p. 17 / A. Implementation Details of Our BiDP - extractive body cue:** 1) Spaces of observation and action: We adopt a 13 ‘dimensional proprioception vector and a 7-dimensional action, space for each robot arm, respectively. ‘The proprioception ...
-- **p. 5 / B. Hand Motion Extraction and Injection - extractive body cue:** In the following, we show that the extracted fine-grained keyframes-based motion actions A along with the corresponding motion mask C will continue to play a ...
-- **p. 17 / A. Implementation Details of Our BiDP - extractive body cue:** This core design relies on the stil rapidly developing capabilities of vision foundation models (VEMs).
-- **p. 10 / B. Results Comparison - extractive body cue:** ong-horizon bimanual manipulation tasks, the existing stateof-the-art methods still have a lot of room for improvement, such as the gradually decaying effect over multiple substeps ...
-- **p. 9 / B. Results Comparison - extractive body cue:** Next, we replaced the input with point clouds containing only manipulated objects (id-2) or predicted simplified sparse keyposes (id-3), and the success rate and average ...
-- **p. 9 / B. Results Comparison - extractive body cue:** These results suggest that reducing unnecessary distractions in the input and learning fewer simplified actions are the right direction ‘When both are used together (id-4), ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 양손 궤적의 핵심 프레임을 추출한 뒤 물체와 배치를 바꾼 시연을 생성해 양팔 확산 정책의 학습 자료로 사용한다. [PDF 4쪽](https://www.roboticsproceedings.org/rss21/p149.pdf#page=4) · [PDF 6쪽](https://www.roboticsproceedings.org/rss21/p149.pdf#page=6)
+- 다단계 양팔 조작 다섯 개에서 성공률을 측정하고 시각·공간 조건 변화와 설계 요소의 효과를 비교했다. [PDF 8쪽](https://www.roboticsproceedings.org/rss21/p149.pdf#page=8) · [PDF 9쪽](https://www.roboticsproceedings.org/rss21/p149.pdf#page=9)
 
 ## Evaluation Scope
 

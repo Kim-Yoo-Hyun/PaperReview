@@ -19,9 +19,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, most existing avoidance logics require special sensors and information to provide RAS.
-
-방법 관련 발췌 — There are variants of this algorithm for different agent types in different airspaces (ACAS Xa, Xu), etc. ‘The key factor driving the development of ACAS algorithms is the availability of extended surveillance ...
+ViSafe는 카메라 관측으로 공중 이동체 사이의 안전거리를 유지하는 충돌 회피 시스템이다. [PDF 1쪽](https://www.roboticsproceedings.org/rss21/p002.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,13 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 4) First-of-its-kind real-world flight tests demonstrating that - extractive body cue:** There are variants of this algorithm for different agent types in different airspaces (ACAS Xa, Xu), etc. ‘The key factor driving the development of ACAS ...
-- **p. 1 / Abstract - extractive body cue:** Assured safe-separation is essential for achi y operatloa of alrborve vehicles in a shared ip resource-constrained aerial systems with this fty-critical capability, we present ViSafe, ...
-- **p. 2 / I. INTRopI - extractive body cue:** We present ViSafe, a vision-only airborne collision avoidance system to impart see-and-avoid capabilities to sUAS.
-- **p. 3 / B. Control Barrier Functions for Aerial Collision Avoidance - extractive body cue:** The control input w < R? consists of the rate of change of speed and heading, ic., Yown and Zoun Additionally, we also consider control ...
-- **p. 6 / C. Supervisory Safety Controller - extractive body cue:** Inspired by [32], we propose the following CBF:
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 다중 카메라의 관측량을 제어 장벽 함수의 안전 조건에 연결했다. [PDF 4쪽](https://www.roboticsproceedings.org/rss21/p002.pdf#page=4) · [PDF 6쪽](https://www.roboticsproceedings.org/rss21/p002.pdf#page=6)
+- 디지털 트윈과 실제 비행에서 접근 속도와 상대 기하가 달라질 때 두 기체의 분리 거리와 회피 결과를 평가했다. [PDF 7쪽](https://www.roboticsproceedings.org/rss21/p002.pdf#page=7) · [PDF 9쪽](https://www.roboticsproceedings.org/rss21/p002.pdf#page=9)
 
 ## Evaluation Scope
 

@@ -19,9 +19,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — This implicitly requires the model to reconstruct or reason about consistent 3D actions from limited 2D observationsa fundamentally ill-posed challenge when only single- or dual-view inputs are available.
-
-방법 관련 발췌 — To address these issues, we propose a novel paradigm that decouples the end-effector action from the robot base coordinate system and instead predicts actions directly in the third-person camera coordinate system, named ...
+OC-VLA는 로봇 베이스 기준의 행동 목표를 카메라 좌표계로 옮겨 관측 시점과 행동 표현을 정렬한다. [PDF 1쪽](https://ojs.aaai.org/index.php/AAAI/article/download/38947/42909#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 1 / I. INTRODUCTION - extractive body cue:** To address these issues, we propose a novel paradigm that decouples the end-effector action from the robot base coordinate system and instead predicts actions directly ...
-- **p. 1 / I. INTRODUCTION - extractive body cue:** Notably, our method exhibits markedly improved adaptability to previously unseen camera view.
-- **p. 2 / I. INTRODUCTION - extractive body cue:** We introduce the Observation-Centric VLA (OC-VLA) framework.
-- **p. 3 / III. METHOD - extractive body cue:** Different from previous end-effector action prediction, the predicted action in our method is in the camera space.
-- **p. 3 / III. METHOD - extractive body cue:** Based on the baseline architecture, we implement a variant specifically designed for discrete action prediction or continuous action prediction.
-- **p. 6 / IV. EXPERIMENTS - extractive body cue:** However, when the prediction target is switched from robot-base coordinate actions to camera-base coordinate actions, the model achieves a further 10% improvement in the metric ...
-- **p. 5 / IV. EXPERIMENTS - extractive body cue:** The results demonstrate that, regardless of the type of action space used, employing robot actions defined in the third-person camera coordinate frame as prediction targets ...
-- **p. 5 / IV. EXPERIMENTS - extractive body cue:** This improvement is particularly pronounced in models utilizing a discrete action space, where we observe an increase in success rate of about 14%.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 외부 보정 행렬로 말단 자세의 표현을 변환해 기존 VLA 구조를 크게 바꾸지 않고 카메라 기준 목표를 학습한다. [PDF 3쪽](https://ojs.aaai.org/index.php/AAAI/article/download/38947/42909#page=3) · [PDF 4쪽](https://ojs.aaai.org/index.php/AAAI/article/download/38947/42909#page=4)
+- 시뮬레이션과 실제 조작에서 시점이 달라질 때 성공률과 일반화가 어떻게 달라지는지 평가했다. [PDF 1쪽](https://ojs.aaai.org/index.php/AAAI/article/download/38947/42909#page=1) · [PDF 7쪽](https://ojs.aaai.org/index.php/AAAI/article/download/38947/42909#page=7)
 
 ## Evaluation Scope
 

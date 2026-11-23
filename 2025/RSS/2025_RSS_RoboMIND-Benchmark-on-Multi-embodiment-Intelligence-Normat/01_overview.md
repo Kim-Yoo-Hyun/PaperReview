@@ -19,9 +19,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — In contrast 0 the acquisition of vision or language data, which can often be sourced through web-based collection methods (32, 55], collecting robotic data is difficult because such data cannot be easily ...
-
-방법 관련 발췌 — demonstrate that RoboMIND can be effectively utilized by various single-task imitation learning algorithms and suecessfully adapted t0 VLA large models. ‘The high-quality information provided by our dataset enables successful task execu ...
+RoboMIND는 네 가지 로봇 형태에서 공통 수집 규약으로 기록한 실제 원격조작 시연과 원인이 표시된 실패 사례를 제공한다. [PDF 1쪽](https://www.roboticsproceedings.org/rss21/p152.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 3 / I. INTRODUCTION - extractive body cue:** demonstrate that RoboMIND can be effectively utilized by various single-task imitation learning algorithms and suecessfully adapted t0 VLA large models. ‘The high-quality information provided by ...
-- **p. 12 / C. Vision-Language-Action Large Models - extractive body cue:** The first category consists of tasks similar to those performed by the single-arm Franka robot, which are intended to evaluate the model's performance across different ...
-- **p. 4 / I. INTRODUCTION - extractive body cue:** To support the development of such a large-scale dataset, we develop an intelligent data platform designed to collect, filter, and process the dataset efficiently. ‘This ...
-- **p. 2 / I. INTRODUCTION - extractive body cue:** One of the aspirations of any professional in the field of robotics is to develop a versatile, general-purpose robotic ‘model capable of performing a broad ...
-- **p. 4 / I. INTRODUCTION - extractive body cue:** General-purpose simulators (19, 52, 67, 76] replicate the physical world and provide virtual ‘environments for training policy models, significantly reducing the costs and time associated ...
-- **p. 11 / Figure/Table caption - extractive body cue:** Fig. 12: Success rates of ACT, Diffusion Policy, and BAKU on RoboMIND.
-- **p. 15 / Figure/Table caption - extractive body cue:** Fig. 17: Success rates of models trained with different ratios of real-world and simulation data,
-- **p. 7 / A. Quantitative Analysis - extractive body cue:** A manipulation dataset with different robotic embodiment types improves generalization to various actions and joint DoFs in downstream tasks.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 여러 시점의 영상, 로봇 상태, 작업 설명을 공통 플랫폼에서 수집해 로봇별 시연을 같은 방식으로 다루도록 했다. [PDF 4쪽](https://www.roboticsproceedings.org/rss21/p152.pdf#page=4) · [PDF 5쪽](https://www.roboticsproceedings.org/rss21/p152.pdf#page=5)
+- 전체 시연의 과제·물체 구성을 분석하고 성공 시연에 더해 실패 원인이 붙은 실제 사례를 포함했다. [PDF 1쪽](https://www.roboticsproceedings.org/rss21/p152.pdf#page=1) · [PDF 7쪽](https://www.roboticsproceedings.org/rss21/p152.pdf#page=7)
 
 ## Evaluation Scope
 

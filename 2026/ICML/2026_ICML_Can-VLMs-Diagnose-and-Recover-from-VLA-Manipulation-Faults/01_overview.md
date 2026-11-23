@@ -19,9 +19,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, due to current technical limitations, existing VLA models fre
-
-방법 관련 발췌 — To address these challenges, we introduce VLA-FixBench, a benchmark for VLM-assisted VLA fault diagnosis and recovery, with over 6,000 annotated failure cases across perception, planning, and control.
+VLA-FixBench와 FaultEval은 조작 실패를 말로 진단하는 능력부터 실제 로봇을 복구하는 능력까지 단계별로 측정한다. [PDF 1쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/yan26r/yan26r.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -30,7 +28,7 @@
 - **p. 1 / Abstract - extractive body cue:** To address this, we introduce VLA-FixBench, a fault evaluation dataset that spans perception, planning, and control failures, and provides annotations for task stages, fault types, ...
 - **p. 1 / Abstract - extractive body cue:** We further propose FaultEval, a static-to-dynamicto-real evaluation framework that benchmarks
 - **p. 1 / 1. Introduction - extractive body cue:** With the rapid advancement of embodied intelligence, Vision-Language-Action (VLA) models have demonstrated increasing advantages in scenarios such as industrial assembly, logistics sorting, and household services.
-- **p. 1 / 1. Introduction - extractive body cue:** However, due to current technical limitations, existing VLA models fre
+- **p. 1 / 1. Introduction - 원문 대조 요지:** 기존 VLA는 로봇 조작 중 자주 실패하며 원인 진단에는 전문가 지식과 수작업이 필요하다.
 - **p. 1 / 1. Introduction - extractive body cue:** As a result, existing methods face key limitations: insufficient focus on VLM-VLA collaboration with no standardized interfaces (Yang et al., 2025b; Chen et al., 2024), ...
 
 ## Core Idea
@@ -54,16 +52,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 1 / 1. Introduction - extractive body cue:** To address these challenges, we introduce VLA-FixBench, a benchmark for VLM-assisted VLA fault diagnosis and recovery, with over 6,000 annotated failure cases across perception, planning, ...
-- **p. 1 / 1. Introduction - extractive body cue:** Based on VLA-FixBench, we propose FaultEval, a unified static-to-dynamic-to-real evaluation framework that assesses VLM performance in fault identification, severity estimation, temporal localization, spatial correction, and ...
-- **p. 2 / 1. Introduction - extractive body cue:** We further construct a VLM-VLA collaboration mechanism that enables fault detection, rollback, and action repair during VLA execution.
-- **p. 2 / 1. Introduction - extractive body cue:** Our main contributions are summarized as follows: • VLA-FixBench, a robotic manipulation fault evaluation dataset comprising 6k failure cases covering perception, control, and cognition errors, ...
-- **p. 4 / 3. Construction of VLA-FixBench - extractive body cue:** Multi-dimensional Annotation We develop a fine-grained annotation framework to construct a high-resolution failure map across three integrated dimensions: temporal, spatial, and semantic.
-- **p. 5 / 4.2. Dynamic Evaluation - extractive body cue:** Experimental results validate this choice: even with this minimal interface, human-in-theloop corrections yield 13% improvement in simulation and 35% on real robots, and precise rollback ...
-- **p. 9 / 5.6. Ablation Study - extractive body cue:** Effectiveness of Self-Correction Across all evaluated tasks, human-in-the-loop correction consistently yields substantial performance gains over open-loop execution, improving average success rates by 13% points in ...
-- **p. 6 / 4.2. Dynamic Evaluation - extractive body cue:** Simulation Results on Dynamic Evaluation Metrics: Geometric Correction Accuracy (GCA), Temporal Localization Accuracy (TLA), and Simulation Success Rate (SSR).
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 실패 사례에 작업 단계·오류 유형·시간 및 공간상 수정 정보를 붙여 진단과 복구를 같은 사례에서 평가한다. [PDF 3쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/yan26r/yan26r.pdf#page=3) · [PDF 4쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/yan26r/yan26r.pdf#page=4)
+- 실행을 되돌려 수정하는 방식의 시뮬레이션·실물 결과를 비교하고, 사람 전문가가 개입했을 때의 성공률을 상한으로 구별했다. [PDF 2쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/yan26r/yan26r.pdf#page=2) · [PDF 8쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/yan26r/yan26r.pdf#page=8)
 
 ## Evaluation Scope
 
@@ -93,7 +83,7 @@
 
 > Cross-checked on 2026-09-03 against the validated PDF body (17 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
 
-- **Problem/bottleneck:** However, due to current technical limitations, existing VLA models fre (p. 1, 1. Introduction).
+- **Problem/bottleneck:** 기존 VLA는 로봇 조작 중 자주 실패하며 원인 진단에는 전문가 지식과 수작업이 필요하다. (p. 1, 1. Introduction).
 - **Actual contribution:** Our main contributions are summarized as follows: • VLA-FixBench, a robotic manipulation fault evaluation dataset comprising 6k failure cases covering perception, control, and cognition errors, with fine-grained annotations of sub-task ... (p. 2, 1. Introduction).
 - **Evaluation boundary:** Experimental results validate this choice: even with this minimal interface, human-in-theloop corrections yield 13% improvement in simulation and 35% on real robots, and precise rollback outperforms coarse task restarts, demonstrating ... (p. 5, 4.2. Dynamic Evaluation).
 - **Explicit failure boundary:** GPT-5-2 achieves the highest sensitivity (Recall: 0.8571, F2-Score: 0.7143), but its high FPR (0.7568) causes task failure (SR: 0), indicating that oversensitive diagnosis can disrupt nominal executions. (p. 8, 5.4. Real-Time Evaluation Results).

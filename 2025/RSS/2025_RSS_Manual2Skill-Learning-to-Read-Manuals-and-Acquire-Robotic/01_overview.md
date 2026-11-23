@@ -19,9 +19,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — For robots, however, this capability remains a substantial challenge, as they cannot interpret abstract instructions and translate them into executable actions.
-
-방법 관련 발췌 — In this paper, we present Manual2Skill, a novel framework that enables robots to perform complex assembly tasks guided by highleyel manual instructions.
+Manual2Skill은 가구 설명서 그림에서 조립 순서와 부품의 상대 자세를 추론해 로봇이 실행할 조립 동작을 계획한다. [PDF 1쪽](https://www.roboticsproceedings.org/rss21/p150.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 1 / Abstract - extractive body cue:** In this paper, we present Manual2Skill, a novel framework that enables robots to perform complex assembly tasks guided by highleyel manual instructions.
-- **p. 2 / I. INrRopuction - extractive body cue:** In this paper, we propose Manual2Skill, a novel robot learn
-- **p. 2 / I. INrRopuction - extractive body cue:** + We propose Manual2Skill, a novel framework that leverages VLM to learn robotic skills from manuals, enabling 4 generalizable assembly pipeline for IKEA furniture
-- **p. 1 / Body text (section boundary not confidently recovered) - extractive body cue:** We propose Manual2 ‘enabling robots to understand and execute complex manipulation tasks in mi the input of our pipeline: the pictures of the assembly manual ...
-- **p. 3 / A. VLM Guided Hierarchical Assembly Graph Generation - extractive body cue:** Every VLM prompt consists of two components:
-- **p. 9 / C. Overall Performance Evaluation - extractive body cue:** We present the results in Table IV, showing that our method outperforms the baseline and achieves a high success rate in real-world assembly tasks.
-- **p. 8 / C. Overall Performance Evaluation - extractive body cue:** Our framework achieves a success rate of $8%, demonstrating the effectiveness of our proposed framework.
-- **p. 16 / B. Pose Estimation Implementation - extractive body cue:** As shown in Table X (Ours (w/o Segmentation)), this method significantly impair VLM performance in generating assembly graphs, leading to more than double accuracy drops ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 시각언어모델로 부품·하위 조립체의 계층 그래프를 만들고 단계별 상대 6D 자세를 운동 계획에 넘긴다. [PDF 3쪽](https://www.roboticsproceedings.org/rss21/p150.pdf#page=3) · [PDF 4쪽](https://www.roboticsproceedings.org/rss21/p150.pdf#page=4)
+- 부품 자세 추정과 실제 IKEA 가구 조립의 성공을 분리해 평가했다. [PDF 8쪽](https://www.roboticsproceedings.org/rss21/p150.pdf#page=8) · [PDF 9쪽](https://www.roboticsproceedings.org/rss21/p150.pdf#page=9)
 
 ## Evaluation Scope
 

@@ -19,9 +19,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Estimating geometry through contact-rich interactions is not a trivial problem.
-
-방법 관련 발췌 — Fusing vision and contact rich physics, our method recovers the occluded geometry through object interactions with the robot and environment, The robot end effector in yellow shows the robot-object interaction,
+Vysics는 가려진 물체의 운동을 설명하는 접촉 기하를 RGB-D 영상의 가시 표면과 결합해 물체의 형상을 복원한다. [PDF 1쪽](https://www.roboticsproceedings.org/rss21/p034.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 1 / 1. INTRODUCTION - extractive body cue:** Fusing vision and contact rich physics, our method recovers the occluded geometry through object interactions with the robot and environment, The robot end effector in ...
-- **p. 4 / IV. APPROACH - extractive body cue:** Beyond the insights that led to this systems integration, our main contribution lies in how Vysies incorporates these two powerful tools together such that they ...
-- **p. 4 / IV. APPROACH - extractive body cue:** ‘The basis of our contribution is in how we unify the visible and "physible" geometry measurements together. §IV-A di cusses how vision helps in the ...
-- **p. 8 / A. Geometry Reconstruction - extractive body cue:** We first compare the geometry reconstruction of our method with that of shape completion models and single-view 3D generation models.
-- **p. 8 / 200.0 BundlesDF - extractive body cue:** Our method recovers the occluded geometry through physics-based reasoning over the observed trajectories, substantially and consistently improving the geometric accuracy in both metrics.
-- **p. 8 / Figure/Table caption - extractive body cue:** Fig. 8: The quantitative comparison of the geometric recon- struction accuracy. Each dot is one session. The results of the
-- **p. 8 / Figure/Table caption - extractive body cue:** Fig. 9: The quantitative comparison of the dynamics prediction accuracy in pose error. Trajectories are predicted by replaying the robot interaction with the estimated geometry ...
-- **p. 9 / Figure/Table caption - extractive body cue:** Fig. 10: ‘The dynamics prediction accuracy evaluated by the duration of the simulated trajectory under small pose error.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- BundleSDF의 자세·가시 형상과 접촉 동역학이 궤적에서 추정한 형상을 하나의 부호 거리 함수에 반영한다. [PDF 3쪽](https://www.roboticsproceedings.org/rss21/p034.pdf#page=3) · [PDF 4쪽](https://www.roboticsproceedings.org/rss21/p034.pdf#page=4)
+- 가림이 큰 상호작용에서 시각만 사용한 복원과 형상 오차·동역학 예측을 비교했다. [PDF 7쪽](https://www.roboticsproceedings.org/rss21/p034.pdf#page=7) · [PDF 8쪽](https://www.roboticsproceedings.org/rss21/p034.pdf#page=8)
 
 ## Evaluation Scope
 

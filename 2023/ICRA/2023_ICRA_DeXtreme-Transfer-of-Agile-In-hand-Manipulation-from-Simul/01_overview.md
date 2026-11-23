@@ -16,12 +16,11 @@
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (28 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 대조 판본: 요약과 기여는 저자판 v2에서 확인했다. ICRA 게재본의 저자 명단은 별도 대조 항목이다. [원문](https://arxiv.org/pdf/2210.13702v2)
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, due to the complexity of their training architecture, and the sui generis nature of their work on sim-to-real transfer, reproducing and building upon their success has proven to be a challenge ...
-
-방법 관련 발췌 — 2.1 Task We propose a method for performing object reorientation on an anthropomorphic hand.
+DeXtreme은 시뮬레이션에서 손안 재배향 정책과 시각 자세 추정기를 학습해 실제 Allegro Hand로 큐브를 연속 회전시켰다. [PDF 1쪽](https://arxiv.org/pdf/2210.13702v2#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +54,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 3 / 2 Method - extractive body cue:** 2.1 Task We propose a method for performing object reorientation on an anthropomorphic hand.
-- **p. 4 / 2 Method - extractive body cue:** 2.2 Hardware Our hardware setup (see Fig 2) consists of an Allegro Hand rigidly mounted at the wrist.
-- **p. 7 / 2 Method - extractive body cue:** To help overcome this, we introduce various kinds of randomisations [15] into the simulated environment as listed in Table 3.
-- **p. 2 / 1 Introduction - extractive body cue:** Multi-fingered robotic hands offer an exciting platform to develop and enable human-level dexterity.
-- **p. 3 / 1 Introduction - extractive body cue:** We seek to provide a much broader segment of the research community with access to a novel state-of-the-art in-hand manipulation system in hopes of catalyzing ...
-- **p. 14 / 3 Results - extractive body cue:** We demonstrate performance which significantly improves upon the best vision policies 8Although [8] focused on the Rubik's cube, they also trained for block reorientation (pp.
-- **p. 14 / 3 Results - extractive body cue:** We note that due to differences in physics engines and hand morphology, our simulation average consecutive successes are not directly comparable, but we achieve performance ...
-- **p. 13 / 3 Results - extractive body cue:** In the following section, we present the results we achieved in object reorientation in the simulations and then real world using the methods described in ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 물리 조건을 무작위화해 정책을 학습하고 합성 영상으로 학습한 큐브 자세 추정값을 실제 제어에 사용했다. [PDF 7쪽](https://arxiv.org/pdf/2210.13702v2#page=7) · [PDF 12쪽](https://arxiv.org/pdf/2210.13702v2#page=12)
+- 실물에서 큐브의 목표 방향을 연속해서 달성한 횟수를 측정해 시각 기반 상태 추정과 다른 관측·학습 조건을 비교했다. [PDF 14쪽](https://arxiv.org/pdf/2210.13702v2#page=14) · [PDF 16쪽](https://arxiv.org/pdf/2210.13702v2#page=16)
 
 ## Evaluation Scope
 

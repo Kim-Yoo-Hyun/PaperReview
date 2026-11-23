@@ -19,9 +19,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, they involve considerable cost, time, and scalability challenges, and it remains unclear whether simply scaling real-world data collection alone is sufficient to train generalist robot models.
-
-방법 관련 발췌 — We define these parameters in more detail and quantify them in Section IV, when we introduce the domains and tasks, and we study how important it is to align each factor between ...
+이 연구는 시뮬레이션과 실제 시연을 함께 학습할 때 시각 기반 조작 정책이 실물에서 얻는 이득을 실험적으로 분석했다. [PDF 1쪽](https://www.roboticsproceedings.org/rss21/p109.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 3 / B. Data Composition Factors - extractive body cue:** We define these parameters in more detail and quantify them in Section IV, when we introduce the domains and tasks, and we study how important ...
-- **p. 4 / C. Automated Synthetic Data Generation - extractive body cue:** Our workflow consists of three components: (1) We start with a real-world target task in mind and some prior simulation data: (2) Given real-world tasks ...
-- **p. 8 / C. Effectiveness of Co-Training in Data-Rich Settings - extractive body cue:** In this section, we present systematic studies that help identify key elements for successful co-training.
-- **p. 2 / 1. IyrRopucTION - extractive body cue:** We summarize our contributions as follows:
-- **p. 1 / 1. IyrRopucTION - extractive body cue:** 1: Sim-and-Real Co-Training We show how co-training policies on real-world and simulation data can attain superior per formance in the real-robot deployment, compared to training ...
-- **p. 7 / V. EXPERIMENTS - extractive body cue:** This on novel objects, whereas the co-tained policy significantly finding highlights the potential of leveraging readily available outperforms it with success rates of 50% and ...
-- **p. 7 / V. EXPERIMENTS - extractive body cue:** As shown in the task, we evaluate on eight new object categories (carrot, ladle, third row of Table I policies trained on Rea? and Prior ...
-- **p. 8 / datasets - extractive body cue:** As shown in Tuble Il policies co-trained with DC achieve a twice higher success rate ‘compared with the policies trained solely on Real for both ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 로봇팔과 휴머노이드에서 실물 데이터만 쓰는 조건과 시뮬레이션 시연을 섞는 조건을 비교했다. [PDF 4쪽](https://www.roboticsproceedings.org/rss21/p109.pdf#page=4) · [PDF 6쪽](https://www.roboticsproceedings.org/rss21/p109.pdf#page=6)
+- 두 데이터의 차이가 남아 있는 조건에서도 공동 학습의 이득을 관찰하고, 실물 일반화가 달라지는 조건을 분석했다. [PDF 1쪽](https://www.roboticsproceedings.org/rss21/p109.pdf#page=1) · [PDF 8쪽](https://www.roboticsproceedings.org/rss21/p109.pdf#page=8)
 
 ## Evaluation Scope
 

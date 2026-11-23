@@ -19,9 +19,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Next, we aim to address the challenge of grasping thin, deformable paper-like objects from flat surfaces.
-
-방법 관련 발췌 — To address this, we propose a visionindependent tactile-based approach. ‘The core idea leverages tactile feedback to maintain contact conditions (as defined in Section IV), facilitating the creation of a buckling region for ...
+PP-Tac은 종이처럼 얇고 휘는 물체를 다지 손으로 집을 때 손끝의 전방향 촉각으로 미끄러짐을 감지하고 힘을 조절한다. [PDF 1쪽](https://www.roboticsproceedings.org/rss21/p056.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 5 / V. POLICY LEARNING FOR PAPER-PICKING - extractive body cue:** To address this, we propose a visionindependent tactile-based approach. ‘The core idea leverages tactile feedback to maintain contact conditions (as defined in Section IV), facilitating ...
-- **p. 6 / A. Implementation Details - extractive body cue:** Thus, the entire inference process consists of 10 steps.
-- **p. 5 / IV. PROBLEM STATEMENT - extractive body cue:** In practice, our approach solved this problem by adopting a Iearing-based policy rather than a model-based optimization paradigm.
-- **p. 8 / B. Depth Reconstruction of VBTS - extractive body cue:** These evaluations showcase the robustness and adaptability of our approach,
-- **p. 4 / IV. PROBLEM STATEMENT - extractive body cue:** This research introduces a novel approach to tackle the paper picking problem that was previously unexplored.
-- **p. 9 / Figure/Table caption - extractive body cue:** Fig. 9: Experiment results. Evaluations were conducted to quantify the success rate of grasping four different flat objects (paper. plastic bag, ‘loth, and paper bag) ...
-- **p. 6 / VI. EXPERIMENTS - extractive body cue:** Next, we show the quantitative and qualitative results of the depth reconstruction of our VBTS (Section VI-B).
-- **p. 4 / Figure/Table caption - extractive body cue:** Fig. 4: Force analysis during grasping flat objects. The grasping process relies on three key forces: 1) The contact normal force exerted by the sensor ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 반구형 R-Tac 센서와 미끄럼 피드백을 사용하고, 합성 핀치 궤적으로 손과 손가락을 함께 제어하는 확산 정책을 학습했다. [PDF 1쪽](https://www.roboticsproceedings.org/rss21/p056.pdf#page=1) · [PDF 5쪽](https://www.roboticsproceedings.org/rss21/p056.pdf#page=5)
+- 재료·두께·강성이 서로 다른 얇은 물체를 실제 손으로 집는 성공률을 측정했다. [PDF 1쪽](https://www.roboticsproceedings.org/rss21/p056.pdf#page=1) · [PDF 6쪽](https://www.roboticsproceedings.org/rss21/p056.pdf#page=6)
 
 ## Evaluation Scope
 

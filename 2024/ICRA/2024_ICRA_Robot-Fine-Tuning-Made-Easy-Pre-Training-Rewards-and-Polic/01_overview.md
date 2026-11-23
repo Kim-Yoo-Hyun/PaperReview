@@ -19,9 +19,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, numerous challenges arise when using this recipe in practice.
-
-방법 관련 발췌 — Our method assumes access to a prior dataset Dprior = ∪N j=1Dj = ∪N j=1{(sj i, aj i, s′j i )}K i=1, which consists of demonstrations of N different tasks τ1, . ...
+RoboFuME는 기존 조작 자료에서 시작해 실제 로봇이 사람이 매번 보상을 주거나 환경을 초기화할 필요 없이 목표 과제에 적응하도록 한다. [PDF 1쪽](https://arxiv.org/pdf/2310.15145v1#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 3 / III. PRELIMINARIES - extractive body cue:** Our method assumes access to a prior dataset Dprior = ∪N j=1Dj = ∪N j=1{(sj i, aj i, s′j i )}K i=1, which consists of ...
-- **p. 1 / Body text (section boundary not confidently recovered) - extractive body cue:** 1: We propose a system that enables autonomous and efficient real-world robot learning.
-- **p. 1 / Abstract - extractive body cue:** In a diverse set of five real robot manipulation tasks, we show that our method can incorporate data from an existing robot dataset collected at ...
-- **p. 2 / I. INTRODUCTION - extractive body cue:** We evaluate our framework by pre-training it on the Bridge dataset [19] and testing it on a diverse set of real-world downstream tasks: cloth folding, ...
-- **p. 2 / I. INTRODUCTION - extractive body cue:** We perform more quantitative experiments in a simulation setup, where we illustrate that our method outperforms imitation learning and offline RL methods that either do ...
-- **p. 5 / V. EXPERIMENTS - extractive body cue:** After 30k steps of autonomous online interaction, our method shows relative improvement of 51% upon the pre-trained performance, and outperforms BC by 58% on an ...
-- **p. 5 / V. EXPERIMENTS - extractive body cue:** In all simulation tasks, our method ROBOFUME consistently outperforms prior methods, achieving success rates at least 20% higher than all baselines within 200k steps of ...
-- **p. 6 / Figure/Table caption - extractive body cue:** Fig. 3: Performance of our method on three simulated environments. We report the success rate over the course of training, averaged over three seeds. Our ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 오프라인 강화학습의 가치 추정 교정과 시각언어모델 기반 성공 분류기를 결합해 온라인 학습을 진행했다. [PDF 3쪽](https://arxiv.org/pdf/2310.15145v1#page=3) · [PDF 4쪽](https://arxiv.org/pdf/2310.15145v1#page=4)
+- 다섯 실물 조작에서 적응 결과를 비교하고 온라인 학습에 쓰인 보상 분류기의 정확도도 측정했다. [PDF 5쪽](https://arxiv.org/pdf/2310.15145v1#page=5) · [PDF 6쪽](https://arxiv.org/pdf/2310.15145v1#page=6)
 
 ## Evaluation Scope
 

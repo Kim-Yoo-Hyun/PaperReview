@@ -19,9 +19,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Our contributions are threefold: • We propose the novel AVA-VLA framework to solve the critical limitation of lacking historical context in MDPbased VLA models.
-
-방법 관련 발췌 — Our contributions are threefold: • We propose the novel AVA-VLA framework to solve the critical limitation of lacking historical context in MDPbased VLA models.
+AVA-VLA는 과거 관측을 축약한 순환 상태를 이용해 현재 영상에서 행동 결정에 필요한 시각 토큰을 강조한다. [PDF 1쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Xiao_AVA-VLA_Improving_Vision-Language-Action_models_with_Active_Visual_Attention_CVPR_2026_paper.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** Our contributions are threefold: • We propose the novel AVA-VLA framework to solve the critical limitation of lacking historical context in MDPbased VLA models.
-- **p. 2 / 1. Introduction - extractive body cue:** To our knowledge, it is the first VLA framework to explicitly address this limitation via a POMDP-inspired approach. • We introduce an Active Visual Attention ...
-- **p. 3 / 3. Methods - extractive body cue:** In this section, we present our proposed VLA method.
-- **p. 3 / 3.1. Preliminaries - extractive body cue:** A typical VLA model Pθ, parameterized by θ, consists of four main components: a Large-Language-Model (LLM) backbone M, a vision encoder E, a language tokenizer ...
-- **p. 4 / 3.2. AVA-VLA Framework - extractive body cue:** For simplicity, our framework is built upon the OpenVLA-OFT foundation model.
-- **p. 7 / 4.3. Ablation Studies - extractive body cue:** Each component alone improves over OpenVLA-OFT, and their combination achieves the best overall performance.
-- **p. 7 / 4.2. Evaluation Results - extractive body cue:** Results demonstrate that the proposed AVA-VLA framework achieves state-of-the-art overall performance in both singletask and multi-task settings.
-- **p. 6 / 4.1. Experimental Setup - extractive body cue:** The results are reported in terms of success rates (%) and average length.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 작업 이력과 언어 지시로 현재 관측의 토큰 가중치를 정하고 그 결과를 행동 생성에 사용한다. [PDF 3쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Xiao_AVA-VLA_Improving_Vision-Language-Action_models_with_Active_Visual_Attention_CVPR_2026_paper.pdf#page=3) · [PDF 4쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Xiao_AVA-VLA_Improving_Vision-Language-Action_models_with_Active_Visual_Attention_CVPR_2026_paper.pdf#page=4)
+- LIBERO와 CALVIN에서 순차 조작 성능을 비교하고 실제 양팔 조작으로 옮겨 실행했다. [PDF 5쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Xiao_AVA-VLA_Improving_Vision-Language-Action_models_with_Active_Visual_Attention_CVPR_2026_paper.pdf#page=5) · [PDF 6쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Xiao_AVA-VLA_Improving_Vision-Language-Action_models_with_Active_Visual_Attention_CVPR_2026_paper.pdf#page=6)
 
 ## Evaluation Scope
 

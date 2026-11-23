@@ -19,9 +19,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Language is the engine of human reasoning, empowering us to break complex concepts into simpler ones, to correct our misunderstandings, and to generalize concepts in new settings.
-
-방법 관련 발췌 — Motivated by the benefits of language motions, we propose an end-to-end framework, RT-H (Robot Transformer with Action Hierarchies), for learning these action hierarchies: at each step, RT-H conditions on the observation and ...
+RT-H는 고수준 지시와 로봇 제어 사이에 짧은 동작 언어를 두어 과제 간 움직임을 공유하고 실행 중 사람이 개입할 수 있게 한다. [PDF 1쪽](https://roboticsproceedings.org/rss20/p049.pdf#page=1) · [PDF 3쪽](https://roboticsproceedings.org/rss20/p049.pdf#page=3)
 
 ## Problem and Motivation
 
@@ -53,16 +51,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / I. INTRODUCTION - extractive body cue:** Motivated by the benefits of language motions, we propose an end-to-end framework, RT-H (Robot Transformer with Action Hierarchies), for learning these action hierarchies: at each ...
-- **p. 2 / I. INTRODUCTION - extractive body cue:** Creating such an action hierarchy leads to several benefits: (1) It enables much better data sharing between different tasks at the level of language motions, ...
-- **p. 1 / Abstract - extractive body cue:** Our method RT-H builds an action hierarchy using language motions: it first learns to predict language motions, and conditioned on this along with the high-level ...
-- **p. 1 / Abstract - extractive body cue:** This enables a new paradigm for flexible policies that can learn from human intervention in language.
-- **p. 6 / Figure/Table caption - extractive body cue:** Fig. 3: Results on Diverse+Kitchen multi-task dataset, consisting of eight challenging evaluation tasks. 95% Wilson Score confidence intervals [54] are shown on the average success ...
-- **p. 9 / Figure/Table caption - extractive body cue:** Fig. 6: Results for Corrections on models trained on the Diverse+Kitchen multi-task dataset, for the same eight evaluation tasks as in Fig. 3. 95% Wilson ...
-- **p. 9 / V. EXPERIMENTS - extractive body cue:** RT-H-InterveneAction also improves upon RT-H, outperforming it by 9% on average.
-- **p. 5 / V. EXPERIMENTS - extractive body cue:** To comprehensively evaluate the performance of RT-H, we study four key experimental questions: • Q1 (Performance): Do action hierarchies with language improve policy performance on ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 동일한 시각 관측 아래 동작 언어를 먼저 예측하고 이를 조건으로 저수준 행동을 생성한다. [PDF 3쪽](https://roboticsproceedings.org/rss20/p049.pdf#page=3) · [PDF 4쪽](https://roboticsproceedings.org/rss20/p049.pdf#page=4)
+- 사람이 중간 동작 지시를 바꿔 진행 중인 행동을 교정하는 방식을 제시하고 실제 조작 사례에서 그 효과를 평가했다. [PDF 5쪽](https://roboticsproceedings.org/rss20/p049.pdf#page=5) · [PDF 8쪽](https://roboticsproceedings.org/rss20/p049.pdf#page=8)
 
 ## Evaluation Scope
 

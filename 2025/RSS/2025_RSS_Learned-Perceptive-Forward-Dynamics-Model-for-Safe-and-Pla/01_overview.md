@@ -19,9 +19,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, open challenges remain to incorporate 3) perception to target rough environments and the transfer from simulation to the real system.
-
-방법 관련 발췌 — To overcome these issues, we propose a novel learned perceptive
+주변 지형과 고유수용감각 이력으로 로봇의 미래 상태와 실패 가능성을 예측해 거친 지형에서 경로를 선택한다. [PDF 1쪽](https://www.roboticsproceedings.org/rss21/p001.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 1 / Body text (section boundary not confidently recovered) - extractive body cue:** To overcome these issues, we propose a novel learned perceptive
-- **p. 3 / B. Planning - extractive body cue:** Our method addresses domain discrepancies by incorporating real-world data into the ‘dynamics model while maintaining platform awareness through earning from past experiences.
-- **p. 5 / B. Model Architecture - extractive body cue:** The Forward Dynamics Model loss £ consists of supervised terms for network outputs.
-- **p. 2 / 1. Inrropucrion - extractive body cue:** The main contributions of this work are as follows:
-- **p. 2 / 1. Inrropucrion - extractive body cue:** by reducing the need for extensive parameter tuning and providing a flexible solution for non-task-specific planning. ‘This enables zero-shot adaptation to new environments without requiring ...
-- **p. 9 / C. Platform-aware Predictions - extractive body cue:** Il, our approach achieves the highest success rate across both environments.
-- **p. 10 / C. Platform-aware Predictions - extractive body cue:** Moreover, our FDM integrated into an MPPI planner with simplified rewards achieves on average 81% goal success rate in complex environments.
-- **p. 6 / B. Model Architecture - extractive body cue:** The simulation results are achieved by building upon the NVIDIA IsaacLab framework [44] with terain details and data augmentations provided in Appendix E.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 시뮬레이션과 실물 주행으로 학습한 전방 동역학 모델을 표본 기반 MPPI 계획에 넣어 지형과 플랫폼의 반응을 함께 고려한다. [PDF 1쪽](https://www.roboticsproceedings.org/rss21/p001.pdf#page=1) · [PDF 5쪽](https://www.roboticsproceedings.org/rss21/p001.pdf#page=5)
+- ANYmal 등에서 예측과 주행 결과를 비교하고 시뮬레이션의 험지 성공률과 실제 환경 전이의 범위를 구별해 평가했다. [PDF 1쪽](https://www.roboticsproceedings.org/rss21/p001.pdf#page=1) · [PDF 8쪽](https://www.roboticsproceedings.org/rss21/p001.pdf#page=8)
 
 ## Evaluation Scope
 

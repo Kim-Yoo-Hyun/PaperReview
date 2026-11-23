@@ -19,9 +19,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, democratizing such an expensive framework for all robotics practitioners proves difficult as it utilizes private models and necessitates †
-
-방법 관련 발췌 — To this end, we introduce RoboFlamingo, a novel vision-language manipulation framework that leverages publicly accessible pre-trained VLMs to effectively construct manipulation policies for robotics.
+RoboFlamingo는 OpenFlamingo로 현재 영상과 지시를 해석하고 별도 정책 헤드로 이력을 처리해 언어 조건부 조작을 모방학습한다. [PDF 1쪽](https://proceedings.iclr.cc/paper_files/paper/2024/file/71639c317fb0bf398835627b4418693e-Paper-Conference.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** To this end, we introduce RoboFlamingo, a novel vision-language manipulation framework that leverages publicly accessible pre-trained VLMs to effectively construct manipulation policies for robotics.
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** Consequently, there is an urgent need for robot communities to have a low-cost alternative solution that effectively enables a robot manipulation policy with VLMs.
-- **p. 4 / 3 BACKGROUND - extractive body cue:** It consists of a backbone based on Flamingo fθ and a policy head pθ.
-- **p. 5 / 3 BACKGROUND - extractive body cue:** Specifically, the decoder consists of L layers, each of which involves a transformer decoder layer and a cross-attention layer.
-- **p. 5 / 3 BACKGROUND - extractive body cue:** 4.2.1 VISION ENCODER The vision encoder consists of a vision transformer (ViT) (Yuan et al., 2021) and a perceiver resampler (Alayrac et al., 2022).
-- **p. 7 / 5 EXPERIMENTS - extractive body cue:** Among all methods, RoboFlamingo achieves the highest success rate over the latter tasks.
-- **p. 8 / Figure/Table caption - extractive body cue:** Figure 3: Ablation studies on the ABCD →D setting. Note that the success rate of RoboFlamingo on subsequent tasks dropped more than HULC does. This ...
-- **p. 7 / 5 EXPERIMENTS - extractive body cue:** Our method significantly outperforms baselines in this vision generalization scenario (ABC →D), as shown in Tab.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 시각언어 백본과 순차 행동 헤드를 분리해 현재 관측의 표현을 과거 상태와 결합한다. [PDF 4쪽](https://proceedings.iclr.cc/paper_files/paper/2024/file/71639c317fb0bf398835627b4418693e-Paper-Conference.pdf#page=4) · [PDF 6쪽](https://proceedings.iclr.cc/paper_files/paper/2024/file/71639c317fb0bf398835627b4418693e-Paper-Conference.pdf#page=6)
+- CALVIN에서 사전학습 백본과 행동 헤드의 선택이 장기 조작 수행에 미치는 영향을 비교했다. [PDF 6쪽](https://proceedings.iclr.cc/paper_files/paper/2024/file/71639c317fb0bf398835627b4418693e-Paper-Conference.pdf#page=6) · [PDF 8쪽](https://proceedings.iclr.cc/paper_files/paper/2024/file/71639c317fb0bf398835627b4418693e-Paper-Conference.pdf#page=8)
 
 ## Evaluation Scope
 

@@ -7,6 +7,7 @@ import random
 import re
 from collections import Counter
 from pathlib import Path
+from urllib.parse import quote
 
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -67,9 +68,24 @@ def current_checks(row, *, include_reviews=True):
     return states
 
 
-def cited_statement(claim, pages, source):
-    citations = " · ".join(f"[PDF {page}쪽]({source}#page={page})" for page in pages)
-    return f"{claim} {citations}"
+def cited_statement(claim, review):
+    source = review["source"]
+    if review.get("source_format") == "html":
+        heading = claim["section"]
+        citation = f"[{heading}]({source}#:~:text={quote(heading, safe='')})"
+    else:
+        citation = " · ".join(f"[PDF {page}쪽]({source}#page={page})" for page in claim["pages"])
+    return f"{claim['text']} {citation}"
+
+
+def summary_headings(overview):
+    headings = re.findall(r"^## (.+)$", overview, re.M)
+    layouts = [("Why This Paper Is Here", "Main Claims and Actual Contribution"),
+               ("Problem and Importance", "Core Idea and Contribution")]
+    matches = [pair for pair in layouts if all(headings.count(title) == 1 for title in pair)]
+    if len(matches) != 1:
+        raise ValueError("Expected one pair of summary and contribution headings")
+    return matches[0]
 
 
 def check_applied(rows, papers, root):
@@ -174,13 +190,15 @@ def check_applied(rows, papers, root):
                         errors.append(f"{pid} reviewed {field} missing from overview")
         if review := row.get("summary_review"):
             overview = (root / paper["folder"] / "01_overview.md").read_text()
-            for header, claims in (("Why This Paper Is Here", [review["summary"]]),
-                                   ("Main Claims and Actual Contribution", review["contributions"])):
+            if review.get("source_format") == "html":
+                expect("official web report", review["source"], paper["page"])
+            summary_header, claims_header = summary_headings(overview)
+            for header, claims in ((summary_header, [review["summary"]]), (claims_header, review["contributions"])):
                 section = overview.partition("## " + header + "\n")[2].partition("\n## ")[0]
                 for claim in claims:
-                    line = cited_statement(claim["text"], claim["pages"], review["source"])
+                    line = cited_statement(claim, review)
                     if line not in section:
-                        errors.append(f"{pid} source-checked statement or page link missing from {header}")
+                        errors.append(f"{pid} source-checked statement or citation missing from {header}")
         for field, item in verified_artifacts.items():
             check_artifact(field, item["value"])
             key = "checkpoint" if field == "weights" else field
@@ -247,15 +265,23 @@ def validate(rows, meta):
             raise ValueError("Summary review is not the declared next batch of unresolved stable IDs")
         for row in members:
             review = row["summary_review"]
+            source_format = review.get("source_format", "pdf")
             if (review["status"] != PASS or not review["source"].startswith("https://")
-                or not re.fullmatch(r"[0-9a-f]{64}", review["pdf_sha256"])
+                or "#" in review["source"] or source_format not in ("pdf", "html")
+                or not re.fullmatch(r"[0-9a-f]{64}", review.get(f"{source_format}_sha256", ""))
                 or not re.fullmatch(r"[0-9a-f]{64}", review["before_sha256"])
                 or review["verified_on"] != batch["verified_on"] or len(review["contributions"]) != 2):
                 raise ValueError(f"Incomplete summary review for {row['id']}")
             for claim in [review["summary"], *review["contributions"]]:
-                pages = claim["pages"]
-                if (not claim["text"].strip() or not pages or pages != sorted(set(pages))
-                    or any(not isinstance(page, int) or not 1 <= page <= review["pdf_page_count"] for page in pages)):
+                if not claim["text"].strip():
+                    raise ValueError(f"Empty statement for {row['id']}")
+                if source_format == "html":
+                    if not claim.get("section", "").strip() or "pages" in claim or "pdf_page_count" in review:
+                        raise ValueError(f"Invalid HTML section for {row['id']}")
+                    continue
+                pages = claim.get("pages", [])
+                if ("section" in claim or not pages or pages != sorted(set(pages))
+                    or any(type(page) is not int or not 1 <= page <= review["pdf_page_count"] for page in pages)):
                     raise ValueError(f"Invalid PDF locator for {row['id']}")
         reviewed.update(ids)
         pending.difference_update(ids)
@@ -357,19 +383,21 @@ def render(rows, meta):
     ]
     if batches:
         lines += ["## 요약·기여 원문 대조", "",
-                  "| 확인일 | 등급 | 대상 | 원문 대조 통과 | 같은 등급에서 남은 요약 |",
-                  "|---|---|---|---:|---:|"]
+                  "| 확인일 | 등급 | 대상 | PDF | 공식 웹 원문 | 같은 등급에서 남은 요약 |",
+                  "|---|---|---|---:|---:|---:|"]
         remaining = Counter(r["tier_at_audit"] for r in rows if current_checks(r, include_reviews=False)["summary"] == OPEN)
         for batch in batches:
-            ids = [r["id"] for r in rows if r.get("summary_review", {}).get("batch") == batch["batch"]]
+            members = [r for r in rows if r.get("summary_review", {}).get("batch") == batch["batch"]]
+            ids = [r["id"] for r in members]
+            web_count = sum(r["summary_review"].get("source_format") == "html" for r in members)
             tier = batch["tier"]
             remaining[tier] -= len(ids)
             baseline = "https://github.com/Kim-Yoo-Hyun/PaperReview/tree/" + batch["baseline_commit"]
             lines.append(f"| {batch['verified_on']} | {tier} | [{ids[0]}–{ids[-1]} 중 당시 미확인 논문]({baseline}) "
-                         f"| {len(ids)} | {remaining[tier]} |")
-        lines += ["", "안정 ID 순서로 미확인 논문을 뽑아 각 overview의 한 줄 요약과 핵심 기여 두 개를 원문 PDF에 대조했다. "
-                  "각 문장의 링크는 실제 열어 본 판본의 PDF 쪽수로 이동한다. 원장에 판본의 SHA-256과 교정 전 노트의 해시를 보존했다. "
-                  "이 배치는 요약 검증 진척을 나타낸다. 전체 오류율을 추정하는 무작위 표본으로 사용할 수 없다.", ""]
+                         f"| {len(ids) - web_count} | {web_count} | {remaining[tier]} |")
+        lines += ["", "안정 ID 순서로 미확인 논문을 골라 각 overview의 한 줄 요약과 핵심 기여 두 개를 원문에 대조했다. "
+                  "문장마다 실제 확인한 PDF 쪽수 또는 공식 웹 보고서의 절을 연결했다. 원장에는 판본과 교정 전 노트의 SHA-256을 기록했다. "
+                  "이 순차 배치에서 집계하는 값은 검증 진척이다.", ""]
         repairs = [r for r in rows if r.get("summary_review", {}).get("transcription_fix")]
         if repairs:
             refs = " · ".join(f"[{r['id']} 원문]({r['summary_review']['source']})" for r in repairs)
@@ -503,7 +531,7 @@ def main():
         print(f"Matched {original} original errors, {additions} additions, {later} follow-up fields and {newest} post-correction fields")
         summaries = sum("summary_review" in r for r in rows)
         artifact_fields = sum(len(r.get("artifact_review", {}).get("fields", {})) for r in rows)
-        print(f"Matched {summaries} PDF-checked summaries and reviewed {artifact_fields} artifact fields")
+        print(f"Matched {summaries} source-checked summaries and reviewed {artifact_fields} artifact fields")
     text = render(rows, meta)
     if args.write:
         REPORT.write_text(text)

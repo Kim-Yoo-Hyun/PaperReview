@@ -13,7 +13,7 @@ PDF body framing (p. 2 (1. Introduction), p. 2 (1. Introduction), p. 3 (1. Intro
 - **p. 1 / Abstract - extractive body cue:** Recent advances in robot manipulation have leveraged pretrained vision-language models (VLMs) and explored integrating 3D spatial signals into these models for effective action prediction, giving ...
 - **p. 1 / Abstract - extractive body cue:** However, most existing approaches overlook the importance of active perception: they typically rely on static, wrist-mounted cameras that provide an end-effector-centric viewpoint.
 - **p. 1 / Abstract - extractive body cue:** As a result, these models are unable to adaptively select optimal viewpoints or resolutions during task execution, which significantly limits their performance in long-horizon tasks ...
-- **p. 1 / Abstract - extractive body cue:** To address these limThis CVPR paper is the Open Access version, provided by the Computer Vision Foundation.
+- **p. 1–2 / Abstract - 원문 대조 요지:** ActiveVLA는 정밀 조작에 필요한 영역을 찾아 관측 시점과 공간 해상도를 조절한다.
 - **p. 1 / Abstract - extractive body cue:** Except for this watermark, it is identical to the accepted version; the final published version of the proceedings is available on IEEE Xplore.
 - **p. 2 / 1. Introduction - extractive body cue:** However, most current VLA approaches primarily process 2D visual inputs, requiring massive datasets to bridge the gap between perception and action.
 - **p. 2 / 1. Introduction - extractive body cue:** Addressing this limitation is crucial for developing embodied agents capable of adaptive and reliable interaction in complex, real-world environments.

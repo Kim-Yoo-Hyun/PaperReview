@@ -1,16 +1,17 @@
 # 원문 감사
 
-2026-11-22 KST 기준. 등록된 1,252편에서 **확인된 잔여 오류는 0/1,252편(0.00%)**, 10개 필드에 근거가 갖춰진 논문은 **19편**, 한 필드 이상 미확인인 논문은 **1,233편**이다. [논문별 판정과 직접 근거](../work/sources/batches/source_audit_2026_11.jsonl)
+2026-11-23 KST 기준. 등록된 1,252편에서 **확인된 잔여 오류는 0/1,252편(0.00%)**, 10개 필드에 근거가 갖춰진 논문은 **19편**, 한 필드 이상 미확인인 논문은 **1,233편**이다. [논문별 판정과 직접 근거](../work/sources/batches/source_audit_2026_11.jsonl)
 
 ## 요약·기여 원문 대조
 
-| 확인일 | 등급 | 대상 | 원문 대조 통과 | 같은 등급에서 남은 요약 |
-|---|---|---|---:|---:|
-| 2026-11-22 | NEXT | [pr-0028–pr-0768 중 당시 미확인 논문](https://github.com/Kim-Yoo-Hyun/PaperReview/tree/f3806160de5ecd1a08dd7b18364fd63d0dac5745) | 100 | 261 |
+| 확인일 | 등급 | 대상 | PDF | 공식 웹 원문 | 같은 등급에서 남은 요약 |
+|---|---|---|---:|---:|---:|
+| 2026-11-22 | NEXT | [pr-0028–pr-0768 중 당시 미확인 논문](https://github.com/Kim-Yoo-Hyun/PaperReview/tree/f3806160de5ecd1a08dd7b18364fd63d0dac5745) | 100 | 0 | 261 |
+| 2026-11-23 | NEXT | [pr-0772–pr-0966 중 당시 미확인 논문](https://github.com/Kim-Yoo-Hyun/PaperReview/tree/a519b5f2684571e98d2b30458c3c5b3fce66674d) | 98 | 2 | 161 |
 
-안정 ID 순서로 미확인 논문을 뽑아 각 overview의 한 줄 요약과 핵심 기여 두 개를 원문 PDF에 대조했다. 각 문장의 링크는 실제 열어 본 판본의 PDF 쪽수로 이동한다. 원장에 판본의 SHA-256과 교정 전 노트의 해시를 보존했다. 이 배치는 요약 검증 진척을 나타낸다. 전체 오류율을 추정하는 무작위 표본으로 사용할 수 없다.
+안정 ID 순서로 미확인 논문을 골라 각 overview의 한 줄 요약과 핵심 기여 두 개를 원문에 대조했다. 문장마다 실제 확인한 PDF 쪽수 또는 공식 웹 보고서의 절을 연결했다. 원장에는 판본과 교정 전 노트의 SHA-256을 기록했다. 이 순차 배치에서 집계하는 값은 검증 진척이다.
 
-기존 노트에서 확인한 문자 전사 교정은 2편이다. 원장에 해당 문구와 근거를 기록했다. [pr-0552 원문](https://lavalle.pl/papers/Lav98c.pdf) · [pr-0751 원문](https://www.roboticsproceedings.org/rss21/p052.pdf)
+기존 노트에서 확인한 문자 전사 교정은 6편이다. 원장에 해당 문구와 근거를 기록했다. [pr-0552 원문](https://lavalle.pl/papers/Lav98c.pdf) · [pr-0751 원문](https://www.roboticsproceedings.org/rss21/p052.pdf) · [pr-0772 원문](https://openaccess.thecvf.com/content/CVPR2025/papers/Song_RoboSpatial_Teaching_Spatial_Understanding_to_2D_and_3D_Vision-Language_Models_CVPR_2025_paper.pdf) · [pr-0795 원문](https://openaccess.thecvf.com/content/CVPR2026/papers/Liu_ActiveVLA_Injecting_Active_Perception_into_Vision-Language-Action_Models_for_Precise_3D_CVPR_2026_paper.pdf) · [pr-0805 원문](https://openaccess.thecvf.com/content/CVPR2026/papers/Liu_SaPaVe_Towards_Active_Perception_and_Manipulation_in_Vision-Language_Action_Models_CVPR_2026_paper.pdf) · [pr-0813 원문](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/yan26r/yan26r.pdf)
 
 ## CORE 공개 자료
 
@@ -59,7 +60,7 @@ NoMaD(`pr-0568`)의 데이터는 기존에 `not_applicable`로 분류되어 있�
 | 저자 | 6 | 1,251 | 1 | 0 |
 | 연도 | 0 | 1,252 | 0 | 0 |
 | 발표처·게재 | 0 | 1,182 | 70 | 0 |
-| 요약·기여 | 30 | 353 | 899 | 0 |
+| 요약·기여 | 30 | 453 | 799 | 0 |
 | 코드 | 0 | 383 | 869 | 0 |
 | 가중치 | 0 | 84 | 1,168 | 0 |
 | 데이터 | 0 | 101 | 1,151 | 0 |
@@ -72,7 +73,7 @@ NoMaD(`pr-0568`)의 데이터는 기존에 `not_applicable`로 분류되어 있�
 | 등급 | 논문 | 전 항목 통과 | 요약·기여 미확인 | 태그 미확인 | 공개 여부 중 한 가지 이상 미확인 |
 |---|---:|---:|---:|---:|---:|
 | CORE | 50 | 13 | 0 | 0 | 36 |
-| NEXT | 450 | 6 | 261 | 360 | 433 |
+| NEXT | 450 | 6 | 161 | 360 | 433 |
 | REFERENCE | 510 | 0 | 440 | 366 | 504 |
 | ARCHIVE | 242 | 0 | 198 | 131 | 242 |
 

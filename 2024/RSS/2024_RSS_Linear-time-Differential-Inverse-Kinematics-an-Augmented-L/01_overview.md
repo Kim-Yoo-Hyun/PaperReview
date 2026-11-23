@@ -19,9 +19,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — The weighted approach addresses these conflicts by defining slack variables on equality constraints, and relaxing the problem into a weighted quadratic penalization over these slack variables.
-
-방법 관련 발췌 — 2) Inequality constraints: We propose an ADMM-based strategy dealing with inequality constraints, where each ADMM iteration is made efficient by using the aforementioned inner solver.
+증강 라그랑주 방법을 이용해 로봇의 미분 역기구학 문제에서 관절 수에 선형으로 증가하는 구조적 계산을 제시했다. [PDF 1쪽](https://www.roboticsproceedings.org/rss20/p110.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 1 / I. INTRODUCTION - extractive body cue:** 2) Inequality constraints: We propose an ADMM-based strategy dealing with inequality constraints, where each ADMM iteration is made efficient by using the aforementioned inner solver.
-- **p. 1 / I. INTRODUCTION - extractive body cue:** Therefore, our contributions can significantly accelerate these downstream computationally expensive downstream tasks.
-- **p. 2 / III. LOW-COMPLEXITY DIFFERENTIAL INVERSE - extractive body cue:** Constrained inverse kinematics ADMM formulation In the most general sense, first order constrained differential inverse kinematics can be formulated as a constrained QP problem: min ...
-- **p. 2 / II. BACKGROUND - extractive body cue:** This idea has been first used to develop linear complexity forward dynamics algorithms by Vereshchagin [46], resulting in an algorithm practically identical to Featherstone's articulated ...
-- **p. 3 / III. LOW-COMPLEXITY DIFFERENTIAL INVERSE - extractive body cue:** But more importantly, this mixed-coordinate formulation allows one to fully exploit the sparsity pattern induced by the robot's kinematic tree.
-- **p. 10 / V. EXPERIMENTAL VALIDATION AND BENCHMARKS - extractive body cue:** Supporting closed-loops is a relevant future research direction since several recent robots include them to improve some mechanical properties.
-- **p. 8 / V. EXPERIMENTAL VALIDATION AND BENCHMARKS - extractive body cue:** We evaluate the performance of differential IK solvers in a benchmark of inverse kinematics scenarios, which we plan to release as open source software after ...
-- **p. 9 / V. EXPERIMENTAL VALIDATION AND BENCHMARKS - extractive body cue:** We observe in these results that, while LOIK is 1.5-2× faster than QP-based approaches on single-task arm scenarios, it scales more favorably when moving on ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 강체 계통의 재귀로 등식 제약 부분문제를 풀고 ADMM을 결합해 부등식이 있는 미분 역기구학도 다룬다. [PDF 2쪽](https://www.roboticsproceedings.org/rss20/p110.pdf#page=2) · [PDF 5쪽](https://www.roboticsproceedings.org/rss20/p110.pdf#page=5)
+- 로봇팔과 휴머노이드 보행의 역기구학 벤치마크에서 C++ 구현의 계산 시간을 기존 QP 풀이기와 비교했다. [PDF 8쪽](https://www.roboticsproceedings.org/rss20/p110.pdf#page=8) · [PDF 10쪽](https://www.roboticsproceedings.org/rss20/p110.pdf#page=10)
 
 ## Evaluation Scope
 

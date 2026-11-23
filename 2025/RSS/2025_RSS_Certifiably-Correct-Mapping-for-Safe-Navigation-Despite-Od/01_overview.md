@@ -19,9 +19,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Without quantified error bounds, guaranteeing the safety of a closed-loop robotic system remains a challenge.
-
-방법 관련 발췌 — In Section IV and V we introduce the deflation mechanism for both map representations, In Section VI we propose methods to use the certified maps to acheive safe navigation, Finally in Section ...
+시각 주행거리계의 오차가 누적되어도 현재 로봇 주변의 빈 공간을 보수적으로 인증하는 장애물 지도를 제안했다. [PDF 1쪽](https://www.roboticsproceedings.org/rss21/p007.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -54,16 +52,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. INTRODUCTION - extractive body cue:** In Section IV and V we introduce the deflation mechanism for both map representations, In Section VI we propose methods to use the certified maps ...
-- **p. 2 / 1. INTRODUCTION - extractive body cue:** In contrast to [27], this paper assumes that the incremental pose estimate is bounded in a Lie-algebraic sense, which allows ‘our methods to be applied ...
-- **p. 1 / 1. INTRODUCTION - extractive body cue:** Our main contributions are as follows:
-- **p. 1 / Abstract - extractive body cue:** Simulations using the Replica dataset highlight the efficacy of our methods compared to state of-the-art techniques.
-- **p. 1 / 1. INTRODUCTION - extractive body cue:** Although recent advances have achieved significant accuracy improvements (11, 12, 13, 14, 15}, formal error analysis is often lacking.
-- **p. 2 / 1. INTRODUCTION - extractive body cue:** The primary goals of these advancements have been to enhance localization and mapping accuracy, improve robustness under diverse environmental conditions, and develop algorithms with lower ...
-- **p. 2 / 1. INTRODUCTION - extractive body cue:** Perception methods have seen significant advancements lover the past few decades, driven by improvements in algorithms, sensors, and computational capabilities (17, 18].
-- **p. 12 / Figure/Table caption - extractive body cue:** Fig. 6. Rover Experimental Results. (,b) shows snapshots of the reconstructed obstacle map and de estimated rover pose with (a) the baseline method and (©) ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 증분 자세 오차의 상한만큼 안전 영역을 축소하는 방식으로 안전 비행 회랑과 부호 거리장 각각에 대한 성질을 증명했다. [PDF 4쪽](https://www.roboticsproceedings.org/rss21/p007.pdf#page=4) · [PDF 6쪽](https://www.roboticsproceedings.org/rss21/p007.pdf#page=6)
+- Replica 시뮬레이션과 실물 로버에서 이미 관측한 장애물에 다시 접근할 때 보수적으로 만든 지도가 정지를 유도하는지 평가했다. [PDF 1쪽](https://www.roboticsproceedings.org/rss21/p007.pdf#page=1) · [PDF 10쪽](https://www.roboticsproceedings.org/rss21/p007.pdf#page=10)
 
 ## Evaluation Scope
 

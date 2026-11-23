@@ -19,9 +19,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — As a result, CordViP not only effectively addresses occlusion challenges during dexterous manipulation but also significantly improves the model's ability to comprehend spatial interactions and collaborative dynamics.
-
-방법 관련 발췌 — To this end, we propose the interaction-aware generation of 3D point clouds, enabling the reconstruction of crucial spatial information,
+CordViP는 물체의 6D 자세와 손의 고유수용감각으로 손·물체 대응 관계를 만들어 다지 손 조작 정책을 학습한다. [PDF 1쪽](https://www.roboticsproceedings.org/rss21/p110.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 3 / B. Interaction-aware Generation of 3D Point Clouds - extractive body cue:** To this end, we propose the interaction-aware generation of 3D point clouds, enabling the reconstruction of crucial spatial information,
-- **p. 14 / B. Implementation Details - extractive body cue:** The PointNet consists of three fully connected layers, each followed by LayerNorm for normalization and ReLU activation
-- **p. 15 / B. Implementation Details - extractive body cue:** For our method, we use only RGB and depth data to track the ‘object's pose.
-- **p. 5 / C. Comact and Coordination-Enhanced Feature Extraction - extractive body cue:** This pre-training approach enables the encoder to learn the interactions and relationships within the environment.
-- **p. 15 / B. Implementation Details - extractive body cue:** We collect both the robot's state and actions using joint angles in radians, including the 6-DOF joints of the robotic the 16-DOF joints of the ...
-- **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1: We propose CordViP, a correspondence-based visuomotor policy for dexterous manipulation in the real world. (a) Left: We present the interaction-aware point clouds, which ...
-- **p. 5 / IV. EXPERIMENTS - extractive body cue:** ‘+ What role does each of the system components play enhancing its overall performance (Section IV-E, IV-F)?
-- **p. 8 / Figure/Table caption - extractive body cue:** Fig. 7: Experimental results of efficiency. We train ACT, DP, DP3, and CordViP on the PickPlace and FlipCup tasks wi an increasing number of demonstrations.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 상호작용 점군과 물체 중심 접촉 지도, 손·팔 협응 정보를 사용해 가림이 있는 단일 시점 관측을 보완한다. [PDF 1쪽](https://www.roboticsproceedings.org/rss21/p110.pdf#page=1) · [PDF 4쪽](https://www.roboticsproceedings.org/rss21/p110.pdf#page=4)
+- 여섯 실제 조작 과제와 새로운 물체·조명·시점에서 동작 성공을 비교했다. [PDF 7쪽](https://www.roboticsproceedings.org/rss21/p110.pdf#page=7) · [PDF 8쪽](https://www.roboticsproceedings.org/rss21/p110.pdf#page=8) · [PDF 9쪽](https://www.roboticsproceedings.org/rss21/p110.pdf#page=9)
 
 ## Evaluation Scope
 

@@ -19,9 +19,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — We do not assume access to task-specific training data, in-context ‘examples, or hard-coded motion primitives as used in prior work (20, 27, 13, 25].
-
-방법 관련 발췌 — To validate the effectiveness of our framework, in this section, we design eight real-world manipulation tasks that require 6 DoF control, semantic understanding, and diverse ‘manipulation skills, We compare our approach against ...
+PWTF는 손으로 촬영한 영상에서 만든 디지털 트윈으로 행동 후보를 미리 실행하고 렌더링한 결과를 시각언어모델이 평가하게 한다. [PDF 1쪽](https://www.roboticsproceedings.org/rss21/p145.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -54,16 +52,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 5 / C. Motion Planning via Simulation-Informed Prompting - extractive body cue:** To validate the effectiveness of our framework, in this section, we design eight real-world manipulation tasks that require 6 DoF control, semantic understanding, and diverse ...
-- **p. 3 / III. PROBLEM FORMULATION - extractive body cue:** Central o our framework is a pre-trained vision-language model (VLM). ‘The model processes an ordered sequence of interleaved text and RGB images and returns a ...
-- **p. 3 / A. Construction of Interactive Digital Twins - extractive body cue:** Unlike prior work, which often focuses solely on static reconstruction [40, 24), our method produces dynamic, actionconditioned digital twins by combining mesh-based physical modeling with ...
-- **p. 4 / A. Construction of Interactive Digital Twins - extractive body cue:** Given a free-form instrition, our framework first performs high-level planning by generating structured subtasks from multi-view observations.
-- **p. 4 / A. Construction of Interactive Digital Twins - extractive body cue:** ‘Through this construction pipeline, we obtain an interactive digital twin where the mesh representation provides physical structure, the Gaussian splatting enables efficient and realistic rendering, ...
-- **p. 6 / B. Quantitative results - extractive body cue:** As shown in Table Ill, while performance varies across df= ferent tasks due to their diverse requirements, our full method achieves the best results in ...
-- **p. 8 / B. Quantitative results - extractive body cue:** Lastly, the CEM process significantly improves sampling efficiency, producing action distributions that better align with the goal, which in general contributes the most to our ...
-- **p. 6 / B. Quantitative results - extractive body cue:** PWTF better leverages the reasoning ability of VLM and improves the performance ‘on most of the tasks.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 물리 시뮬레이션으로 미래 장면을 만들고 결과가 잘 드러나는 시점을 골라 언어 목표와의 일치도를 비교한다. [PDF 3쪽](https://www.roboticsproceedings.org/rss21/p145.pdf#page=3) · [PDF 4쪽](https://www.roboticsproceedings.org/rss21/p145.pdf#page=4)
+- 접촉·물체 재배향·혼잡 해소를 포함한 실제 조작 여덟 개에서 다른 시각언어 제어 방식과 성공률을 비교했다. [PDF 1쪽](https://www.roboticsproceedings.org/rss21/p145.pdf#page=1) · [PDF 5쪽](https://www.roboticsproceedings.org/rss21/p145.pdf#page=5)
 
 ## Evaluation Scope
 

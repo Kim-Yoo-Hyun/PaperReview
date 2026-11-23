@@ -1,9 +1,9 @@
 # SocialNav: Training Human-Inspired Foundation Model for Socially-Aware Embodied Navigation
 
-> Evidence maturity: `ABSTRACT_CHECKED`. abstract 기반 — 본문 수동 확인 필요.
+> Evidence maturity: `ABSTRACT_CHECKED`. 개요 전반은 초록 수준이며, 아래 요약과 두 기여에는 확인한 본문 위치를 표시했다.
 > 자동 작성 노트는 실제 정독을 뜻하지 않는다. 사용자 reading status는 UNREAD로 시작한다.
 
-- Year/Venue
+- Year/Venue: 2026 / CVPR
 - Authors: Ziyi Chen, Yingnan Guo, Zedong Chu, Minghua Luo, Yanfen Shen, Mingchao Sun, Junjun Hu, Shichao Xie, Yang Kuan, Pei Shi, Zhining Gu, Lu Liu, Honglin Han, Xiaolong Wu, Mu Xu, Yu Zhang
 - Category: VLA and Generalist Robot Policies
 - Primary track: VLA and generalist robot policies
@@ -14,15 +14,16 @@
 - Venue verification: https://openaccess.thecvf.com/content/CVPR2026/html/Chen_SocialNav_Training_Human-Inspired_Foundation_Model_for_Socially-Aware_Embodied_Navigation_CVPR_2026_paper.html
 - Code/Project: https://amap-eai.github.io/SocialNav/
 - Code: https://github.com/AMAP-EAI/SocialNav
-- Source audit: 2026-10-19: 공식 paper abstract 및 저자 project/code README 확인; abstract 기반 — 본문 수동 확인 필요.
+- Source audit: 2026-11-23 요약과 핵심 기여 두 개를 원문 본문에 대조했다. 나머지 세부 분석은 기존 초록·공식 자료에 근거한다.
 
 ## Problem and Importance
 
-짧은 경로와 collision avoidance만으로는 사회적 규범을 준수하는 embodied navigation을 충분히 설명하지 못한다.
+SocialNav는 보행자 주변에서 사회적 규범을 추론하는 상위 모델과 실제 주행 궤적을 만드는 하위 모델을 함께 학습한다. [PDF 1쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Chen_SocialNav_Training_Human-Inspired_Foundation_Model_for_Socially-Aware_Embodied_Navigation_CVPR_2026_paper.pdf#page=1)
 
 ## Core Idea and Contribution
 
-VLM brain과 trajectory action module을 결합하고 imitation 이후 socially-aware flow-exploration GRPO로 정책을 개선한다.
+- 사회적 판단 예시와 전문가 궤적으로 모방학습한 뒤 사회 규범 준수에 보상을 주는 SAFE-GRPO로 흐름 기반 정책을 개선한다. [PDF 4쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Chen_SocialNav_Training_Human-Inspired_Foundation_Model_for_Socially-Aware_Embodied_Navigation_CVPR_2026_paper.pdf#page=4) · [PDF 5쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Chen_SocialNav_Training_Human-Inspired_Foundation_Model_for_Socially-Aware_Embodied_Navigation_CVPR_2026_paper.pdf#page=5)
+- 전용 SocNav 벤치마크와 실제 로봇에서 목표 도달과 사회적 규범 준수를 나누어 평가했다. [PDF 7쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Chen_SocialNav_Training_Human-Inspired_Foundation_Model_for_Socially-Aware_Embodied_Navigation_CVPR_2026_paper.pdf#page=7) · [PDF 8쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Chen_SocialNav_Training_Human-Inspired_Foundation_Model_for_Socially-Aware_Embodied_Navigation_CVPR_2026_paper.pdf#page=8)
 
 ## Observation–State–Action Interface
 
@@ -32,7 +33,7 @@ Visual/semantic context → social reasoning/traversability → flow trajectory 
 
 CVF abstract는 SocNav dataset, navigation success와 social compliance 평가를 보고한다. 정확한 metric 정의와 실제 robot trial은 확인 필요.
 
-근거: [공식 paper/abstract](https://openaccess.thecvf.com/content/CVPR2026/html/Chen_SocialNav_Training_Human-Inspired_Foundation_Model_for_Socially-Aware_Embodied_Navigation_CVPR_2026_paper.html) · [저자 project/code](https://amap-eai.github.io/SocialNav/). 정확한 수치·baseline fairness·failure 범위는 본문 확인 전까지 확정하지 않는다.
+근거: [공식 paper/abstract](https://openaccess.thecvf.com/content/CVPR2026/html/Chen_SocialNav_Training_Human-Inspired_Foundation_Model_for_Socially-Aware_Embodied_Navigation_CVPR_2026_paper.html) · [저자 project/code](https://amap-eai.github.io/SocialNav/). 그 밖의 수치, 기준선의 비교 조건, 실패 범위는 별도 대조가 필요하다.
 
 ## Why This Paper Is Here — Researcher Interpretation
 

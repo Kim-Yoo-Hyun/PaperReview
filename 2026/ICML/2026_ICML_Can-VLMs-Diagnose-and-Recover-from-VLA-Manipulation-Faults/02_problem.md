@@ -6,7 +6,7 @@
 
 ## Problem in One Sentence
 
-PDF body framing (p. 1 (1. Introduction), p. 1 (1. Introduction), p. 2 (1. Introduction), p. 2 (1. Introduction)): However, due to current technical limitations, existing VLA models fre
+PDF body framing (p. 1 (1. Introduction), p. 1 (1. Introduction), p. 2 (1. Introduction), p. 2 (1. Introduction)): 기존 VLA는 로봇 조작 중 자주 실패하며 원인 진단에는 전문가 지식과 수작업이 필요하다.
 
 ## PDF Body Digest
 
@@ -15,14 +15,14 @@ PDF body framing (p. 1 (1. Introduction), p. 1 (1. Introduction), p. 2 (1. Intro
 - **p. 1 / Abstract - extractive body cue:** To address this, we introduce VLA-FixBench, a fault evaluation dataset that spans perception, planning, and control failures, and provides annotations for task stages, fault types, ...
 - **p. 1 / Abstract - extractive body cue:** We further propose FaultEval, a static-to-dynamicto-real evaluation framework that benchmarks
 - **p. 1 / 1. Introduction - extractive body cue:** With the rapid advancement of embodied intelligence, Vision-Language-Action (VLA) models have demonstrated increasing advantages in scenarios such as industrial assembly, logistics sorting, and household services.
-- **p. 1 / 1. Introduction - extractive body cue:** However, due to current technical limitations, existing VLA models fre
+- **p. 1 / 1. Introduction - 원문 대조 요지:** 기존 VLA는 로봇 조작 중 자주 실패하며 원인 진단에는 전문가 지식과 수작업이 필요하다.
 - **p. 1 / 1. Introduction - extractive body cue:** As a result, existing methods face key limitations: insufficient focus on VLM-VLA collaboration with no standardized interfaces (Yang et al., 2025b; Chen et al., 2024), ...
 
 ## System and Scope
 
 | Dimension | PDF body evidence | Registry/robotics interpretation | Boundary |
 |---|---|---|---|
-| Target problem | However, due to current technical limitations, existing VLA models fre | defined robot simulator/hardware task suite | body wording is the source claim |
+| Target problem | 기존 VLA는 로봇 조작 중 자주 실패하며 원인 진단에는 전문가 지식과 수작업이 필요하다. | defined robot simulator/hardware task suite | body wording is the source claim |
 | Observation / input | The bottom axis indicates the trade-off between evaluation convenience and physical accuracy. proaches employ supervised classifiers or temporal models to predict failure ... | standardized observation, action, task state와 evaluation split | exact sensor/frame/preprocessing from PDF body |
 | State / latent | bottom, axis, indicates, trade-off, between, evaluation, convenience, physical, accuracy, proaches | benchmark state/goal와 method decision | notation and tensor shape require body check |
 | Output / action | Moreover, current, VLM-VLA, interactions, largely, instruction-based, lack, unified | policy/controller trajectory 또는 measured result | exact unit/frame/decoder require body check |
@@ -82,7 +82,7 @@ benchmark writing domain maps to observation -> state/world model -> task and mo
 
 > Cross-checked on 2026-09-03 against the validated PDF body (17 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
 
-- **Target problem:** However, due to current technical limitations, existing VLA models fre (p. 1, 1. Introduction).
+- **Target problem:** 기존 VLA는 로봇 조작 중 자주 실패하며 원인 진단에는 전문가 지식과 수작업이 필요하다. (p. 1, 1. Introduction).
 - **Formulation-changing contribution:** Our main contributions are summarized as follows: • VLA-FixBench, a robotic manipulation fault evaluation dataset comprising 6k failure cases covering perception, control, and cognition errors, with fine-grained annotations of sub-task ... (p. 2, 1. Introduction).
 - **Assumption/failure evidence:** GPT-5-2 achieves the highest sensitivity (Recall: 0.8571, F2-Score: 0.7143), but its high FPR (0.7568) causes task failure (SR: 0), indicating that oversensitive diagnosis can disrupt nominal executions. (p. 8, 5.4. Real-Time Evaluation Results).
 - **Interpretation rule:** no state, transition, constraint, guarantee, or downstream claim is inferred when the PDF body does not state it.

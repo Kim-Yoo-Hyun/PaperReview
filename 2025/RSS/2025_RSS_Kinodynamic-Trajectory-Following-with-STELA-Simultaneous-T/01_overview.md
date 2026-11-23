@@ -19,9 +19,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — They can sinnultaneously solve trajectory estimation and control or planning challenges as a unified problem [22, 29]. ‘These solutions
-
-방법 관련 발췌 — The sliding, window mechanism allows the factor graph to be dynamically updated at high frequency by operating over a limited past history and forward horizon of the planned trajectory. ‘The ‘combination of ...
+STELA는 잡음이 있는 관측으로 과거 궤적을 추정하는 동시에 동역학적으로 가능한 기준 경로를 따르도록 앞으로의 제어를 수정한다. [PDF 1쪽](https://www.roboticsproceedings.org/rss21/p008.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -53,16 +51,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 3 / 1. INTRODUCTION - extractive body cue:** The sliding, window mechanism allows the factor graph to be dynamically updated at high frequency by operating over a limited past history and forward horizon ...
-- **p. 3 / 1. INTRODUCTION - extractive body cue:** Motion planning consists of finding a plan for a robot to ‘move in an environment from a stating state to a desired goal region without ...
-- **p. 2 / 1. INTRODUCTION - extractive body cue:** Proposed Method and Contribution: ‘The proposed 'STELA framework first calls an asymptotically optimal SEXP for kinodynamic systems (23, 27] in order to acquire a feasible, ...
-- **p. 2 / 1. INTRODUCTION - extractive body cue:** This allows the optimizer to stretch or contract edges depending oon the estimated state of the system.
-- **p. 11 / Figure/Table caption - extractive body cue:** Fig. 11: STL results for MuSHR (sim). Three normalized metrics reported, Time to collision isthe rate of a trajectory traversed before a collision (no data ...
-- **p. 12 / A. Experimemal setup - extractive body cue:** The low= cost trajectories returned from the SBMP are likely, however, to be in close proximity to obstacles, which makes following them susceptible to collisions ...
-- **p. 11 / A. Experimemal setup - extractive body cue:** Simulation Results , / eee ‘Tables Ill, and Ill show the success rate of each algoPed rithm per environment for the LTV-SDE system in simulation ...
-- **p. 12 / A. Experimemal setup - extractive body cue:** It also significantly outperforms alternatives in simulated evaluations as noise increases, while achieving desirable high-frequency control update rates,
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 상태·제어와 이산 상태 사이의 경과 시간을 요인 그래프에 포함해 추정과 국소 궤적 적응을 함께 최적화한다. [PDF 5쪽](https://www.roboticsproceedings.org/rss21/p008.pdf#page=5) · [PDF 6쪽](https://www.roboticsproceedings.org/rss21/p008.pdf#page=6)
+- 장애물·숲·오목한 막다른 공간 등의 환경에서 추정과 추종을 결합했을 때 주행 과제의 성공을 비교했다. [PDF 8쪽](https://www.roboticsproceedings.org/rss21/p008.pdf#page=8) · [PDF 10쪽](https://www.roboticsproceedings.org/rss21/p008.pdf#page=10)
 
 ## Evaluation Scope
 

@@ -16,12 +16,11 @@
 - Code/Project: https://roboverseorg.github.io/
 - Paper type: benchmark_or_dataset
 - Source audit: full-text PDF body checked on 2026-09-03 (18 pages; tesseract OCR fallback; title-token overlap first two pages=1.0)
+- 대조 판본: RSS 목차에는 “A Unified Platform, Benchmark and Dataset”, 연결된 논문 표제면에는 “Towards a Unified Platform, Dataset and Benchmark”로 실려 있다. [원문](https://www.roboticsproceedings.org/rss21/p022.pdf)
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, replicating these successes in robotics remains challenging due to the difficulty of collecting high-quality, diverse data and the lack of widely recognized evaluation protocols.
-
-방법 관련 발췌 — Additionally, we propose unified benchmarks for imitation learning and reinforcement ‘data is resource-intensive learning, enabling consistent evaluation across different levels of ‘real-world scenarios generalization.
+RoboVerse는 여러 시뮬레이터와 로봇을 한 플랫폼에 연결하고 합성 궤적과 공통 평가 과제를 제공한다. [PDF 1쪽](https://www.roboticsproceedings.org/rss21/p022.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +54,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 1 / Abstract - extractive body cue:** Additionally, we propose unified benchmarks for imitation learning and reinforcement ‘data is resource-intensive learning, enabling consistent evaluation across different levels of ‘real-world scenarios generalization.
-- **p. 1 / Abstract - extractive body cue:** To address environments into a simulator-ag1 these challenges, we introduce ROBOVERSE, a comprehensive well as an API aligning different Framework comprising a simulation plaform, a ...
-- **p. 2 / 1. IyrRopucTION - extractive body cue:** Additionally, we introduce a standardized benchmarking protocol 10 assess varying levels of generalization and sim-to-real transferability.
-- **p. 2 / 1. IyrRopucTION - extractive body cue:** To fully harness the potential of simulation in robotics, we introduce ROBOVERSE, a scalable simulation platform that unifies existing simulators under a standardized format and ...
-- **p. 3 / A. METASIM Overview - extractive body cue:** We present METASIM, a high-level interface above specific simulation environment implementations.
-- **p. 11 / C. Results on the Reinforcement Learning Benchmark - extractive body cue:** 10 demonstrate a consistent improvement in model performance as the number of generated data increases, highlighting both the effectiveness and scalability of the trajectory augmentation ...
-- **p. 10 / B. Results on the Imitation Learning Benchmark - extractive body cue:** The reported success rates are computed as the averages over three random seeds.
-- **p. 11 / C. Results on the Reinforcement Learning Benchmark - extractive body cue:** Success rates of policy trained with augmented dataset and source
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- MetaSim 인터페이스를 사용해 환경·로봇 사이의 전환을 지원하고 기존 데이터 이관, 정책 실행, 운동 계획으로 시연을 만든다. [PDF 3쪽](https://www.roboticsproceedings.org/rss21/p022.pdf#page=3) · [PDF 4쪽](https://www.roboticsproceedings.org/rss21/p022.pdf#page=4)
+- 모방학습과 강화학습의 학습·평가 조건을 통일해 여러 기준선을 같은 과제에서 비교할 수 있게 했다. [PDF 7쪽](https://www.roboticsproceedings.org/rss21/p022.pdf#page=7) · [PDF 8쪽](https://www.roboticsproceedings.org/rss21/p022.pdf#page=8)
 
 ## Evaluation Scope
 

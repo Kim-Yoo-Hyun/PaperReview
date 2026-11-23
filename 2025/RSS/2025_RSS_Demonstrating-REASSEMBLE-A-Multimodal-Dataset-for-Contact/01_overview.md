@@ -19,9 +19,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — ‘To bridge the gap between these pressing challenges, we introduce REASSEMBLE, a comprehensive dataset tailored to long-horizon and contact-rich manipulation tasks.
-
-방법 관련 발췌 — To. bridge this gap, we present REASSEMBLE (Robotic assEmbly disASSEMBLy datasEt), a 1 new dataset designed specifically for contact-rich manipalation
+REASSEMBLE은 NIST 조립 보드에서 부품을 집고 끼우고 빼고 놓는 접촉 조작을 기록한 다중 센서 시연 데이터셋이다. [PDF 1쪽](https://www.roboticsproceedings.org/rss21/p059.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 1 / Abstract - extractive body cue:** To. bridge this gap, we present REASSEMBLE (Robotic assEmbly disASSEMBLy datasEt), a 1 new dataset designed specifically for contact-rich manipalation
-- **p. 2 / Abstract - extractive body cue:** By offering a rich, multi modal dataset, REASSEMBLE fosters the development of adaptive and versatile robotic systems capable of tackling the challenges of long-horizon, contact-rich ...
-- **p. 2 / Abstract - extractive body cue:** ‘To bridge the gap between these pressing challenges, we introduce REASSEMBLE, a comprehensive dataset tailored to long-horizon and contact-rich manipulation tasks.
-- **p. 11 / B. Motion Policy Learning - extractive body cue:** ‘The primary objective of this study is to introduce a novel robot manipulation dataset specifically designed for contactrich manipulation tasks, rather than t0 develop a ...
-- **p. 3 / 2) A dataset with multi-task labels to support algorithm - extractive body cue:** Numerous datasets have been developed to support temporal action segmentation [20], (27), [28].
-- **p. 11 / V. BENCHMARKS - extractive body cue:** Preliminary results demonstrate improved performance through the integration of visual, auditory, force-torque (wrench), gripper, and pose information. ‘These findings are promising, and we plan 10 ...
-- **p. 11 / V. BENCHMARKS - extractive body cue:** We hypothesize that the lower performance of DiffAct on the REASSEMBLE dataset is due to the increased challenges it presents, Firstly, the REASSEMBLE dataset contains ...
-- **p. 3 / 2) A dataset with multi-task labels to support algorithm - extractive body cue:** For instance, force-torque sensing plays a pivotal role in assembly tasks involving a NIST assembly board, where precise measurements are essential to detect and respond ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 다시점 RGB·이벤트 카메라, 손목 힘·토크와 마이크를 이용해 시각만으로 구분하기 어려운 접촉 과정을 함께 기록했다. [PDF 5쪽](https://www.roboticsproceedings.org/rss21/p059.pdf#page=5) · [PDF 6쪽](https://www.roboticsproceedings.org/rss21/p059.pdf#page=6)
+- 17개 물체에 대한 4,551회 시연 중 4,035회가 성공했으며 성공·실패와 행동 분포를 구분해 제시했다. [PDF 1쪽](https://www.roboticsproceedings.org/rss21/p059.pdf#page=1) · [PDF 7쪽](https://www.roboticsproceedings.org/rss21/p059.pdf#page=7)
 
 ## Evaluation Scope
 

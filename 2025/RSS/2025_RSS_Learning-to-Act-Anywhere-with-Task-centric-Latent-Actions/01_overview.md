@@ -19,9 +19,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, they typically rely on groundtruth action labels for supervision, which limits their scalability in utilizing internet-scale data from diverse environments.
-
-방법 관련 발췌 — In summary, our main contributions are three-folds: • We propose UniVLA, a recipe towards generalist policy by planning in a unified, embodiment-agnostic action space, enabling scalable and efficient decision-making by learning from ...
+UniVLA는 다양한 환경과 신체의 영상에서 과제와 관련된 잠재 행동을 배워 로봇별 행동으로 해독한다. [PDF 1쪽](https://www.roboticsproceedings.org/rss21/p014.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / I. INTRODUCTION - extractive body cue:** In summary, our main contributions are three-folds: • We propose UniVLA, a recipe towards generalist policy by planning in a unified, embodiment-agnostic action space, enabling ...
-- **p. 1 / I. INTRODUCTION - extractive body cue:** To address these challenges, we propose UniVLA, a generalist policy learning framework that enables scalable and efficient planning across various embodiments and environments.
-- **p. 1 / I. INTRODUCTION - extractive body cue:** Our recipe for generalist policy consists of three key stages: 1) Task-centric Latent Action Learning, where we extract task-relevant action representations from massive cross-embodiment videos ...
-- **p. 3 / III. METHODOLOGY - extractive body cue:** Inspired by joint-embedding predictive architectures (JEPA) [5, 6, 96], we propose using DINOv2 [62] spatial patch features as semantically rich representations.
-- **p. 3 / III. METHODOLOGY - extractive body cue:** III-C) To facilitate efficient adaptation to various robotic control systems, we introduce specialized policy heads that decode latent actions into executable control signals.
-- **p. 7 / Figure/Table caption - extractive body cue:** Fig. 6: Oracle success rate on R2R in VLN-CE. With only a single-frame RGB input, UniVLA demonstrates performance on par with NaVid, a navigation model ...
-- **p. 7 / 2) Navigation Benchmark on Room2Room - extractive body cue:** UniVLA significantly outperforms Seq2Seq and CMA, increasing the oracle success rate from 8.10% to 47.1%.
-- **p. 10 / Figure/Table caption - extractive body cue:** Fig. 10: Data efficiency. We present the success rate of UniVLA across varying dataset proportions (10%, 20%, 50%, and the full dataset). Our policy can ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 언어 지시를 조건으로 DINO 특징 공간의 변화를 모델링해 과제와 무관한 영상 움직임의 영향을 줄인다. [PDF 1쪽](https://www.roboticsproceedings.org/rss21/p014.pdf#page=1) · [PDF 3쪽](https://www.roboticsproceedings.org/rss21/p014.pdf#page=3)
+- 조작·내비게이션과 실물 전이를 평가하고 LIBERO에서 잠재 행동 표현과 디코더 설계가 성능에 주는 영향을 비교했다. [PDF 5쪽](https://www.roboticsproceedings.org/rss21/p014.pdf#page=5) · [PDF 10쪽](https://www.roboticsproceedings.org/rss21/p014.pdf#page=10)
 
 ## Evaluation Scope
 

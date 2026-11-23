@@ -19,9 +19,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Large pre-trained robotics models have made significant progress in recent years towards improving robotic generalization capabilities by leveraging large-scale pre-training datasets, However, these models still face challenges in adapt ...
-
-방법 관련 발췌 — We show that while different mid-level representations excel at different tasks, our method can leverage these task-specitfic benefits to achieve consistently higher performance on a wide range of environments.
+이 연구는 물체·자세·깊이 등 공간 정보를 명시한 중간 표현이 실제 양팔 조작 정책의 일반화에 주는 영향을 비교했다. [PDF 1쪽](https://www.roboticsproceedings.org/rss21/p155.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Ivrropuction - extractive body cue:** We show that while different mid-level representations excel at different tasks, our method can leverage these task-specitfic benefits to achieve consistently higher performance on a ...
-- **p. 6 / B. Training - extractive body cue:** Similarly, our approach integrates mid-level expert outputs as implicit guidance in scenarios where no explicit reward signal is available, Instead of an advantage function, we ...
-- **p. 1 / Abstract - extractive body cue:** We propose a novel mixture-of-experts policy architecture that can combine multiple specialized expert models, each trained on a distinct ‘mid-level representation, to improve the generalization ...
-- **p. 2 / 1. Ivrropuction - extractive body cue:** We find that reliance on structured signals presents a trade-off: policies that depend heavily on these representations can become more susceptible to overfiting and reduced ...
-- **p. 3 / 1. Ivrropuction - extractive body cue:** While one can hope to learn these relationships directly from end-to-end data, current large-scale robot policies that try to scale up imitation learning still struggle ...
-- **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1: Bimanual, dexterous manipulation requires task-specifie grounding, The left depicts various axes for spatial gr ‘qualitative categorizations of different mid-level representations. Different representations lead ...
-- **p. 6 / Figure/Table caption - extractive body cue:** Fig. 5: Self-Consistency. On the left image, the robot's achieved trajectory doesn't match it's mid-level representation, which leads to a lower weight. In the right, ...
-- **p. 8 / Figure/Table caption - extractive body cue:** Fig. 8: Real-World Results. There are clear differences in the benefits that different representations provide for tasks in the real world.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 서로 다른 중간 표현에 특화된 인코더와 전문가 정책을 결합해 확산 정책이 과제에 유용한 정보를 선택하게 한다. [PDF 4쪽](https://www.roboticsproceedings.org/rss21/p155.pdf#page=4) · [PDF 5쪽](https://www.roboticsproceedings.org/rss21/p155.pdf#page=5)
+- 표현별 정책과 전문가 혼합을 비교하고 입력 표현을 행동이 얼마나 잘 따르는지로 모방학습의 가중치를 정하는 방법을 평가했다. [PDF 8쪽](https://www.roboticsproceedings.org/rss21/p155.pdf#page=8) · [PDF 9쪽](https://www.roboticsproceedings.org/rss21/p155.pdf#page=9)
 
 ## Evaluation Scope
 

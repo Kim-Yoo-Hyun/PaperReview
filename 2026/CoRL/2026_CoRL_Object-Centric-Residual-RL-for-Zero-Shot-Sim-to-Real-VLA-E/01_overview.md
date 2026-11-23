@@ -2,7 +2,7 @@
 
 > Evidence maturity: `FULL_TEXT_CHECKED` — 지정 절만 확인한 기록이며 전체 정독·실험 재현을 뜻하지 않는다.
 
-- Year/Venue
+- Year/Venue: 2026 / CoRL
 - Authors: Kinam Kim, Namiko Saito, Heecheol Kim, Katsushi Ikeuchi, Jaegul Choo, Yasuyuki Matsushita
 - Category: VLA and Generalist Robot Policies
 - Primary track: VLA and generalist robot policies

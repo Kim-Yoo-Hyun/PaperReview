@@ -19,9 +19,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — The observation: or includes both the point cloud data and the proprioceptive feedback from the robot: 0 = (of, of", of), where of?" and 0} reflect the current state of the end-effector, ...
-
-방법 관련 발췌 — The action a, consists of the robot arm and robot hhand commands, represented as a - (a""a!!™), where a7" © AP" is the target SE(3) end-effector pose inthe world frame, and a®™ ...
+DemoGen은 작업당 한 번의 시연에서 행동 궤적과 3D 관측을 함께 변형해 새로운 물체 배치에 맞는 조작 데이터를 만든다. [PDF 1쪽](https://www.roboticsproceedings.org/rss21/p157.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -53,16 +51,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 4 / A. Problem Formulation - extractive body cue:** The action a, consists of the robot arm and robot hhand commands, represented as a - (a""a!!™), where a7" © AP" is the target SE(3) ...
-- **p. 4 / B. Benchmarking Spatial Generalization Capability - extractive body cue:** We report the relationship between the agent's performance Jn success rates and the number of demonstrations used for traning ‘when different visuomotor policies and object ...
-- **p. 18 / Figure/Table caption - extractive body cue:** Fig. 20: Visualization of the policy performance trained on human-collected datasets. (Upper row) The demonstrated configurations. (Bottom row) The spatial heatmaps with success rates averaged ...
-- **p. 4 / B. Benchmarking Spatial Generalization Capability - extractive body cue:** On the other hand, both 3D representations and pre-trained 2D visual encoders contribute to improved spatial generalization capabilities.
-- **p. 3 / Figure/Table caption - extractive body cue:** Fig. 2: Qualitative visualization of the spatial effective range. The grid maps display discretized tabletop workspaces from a bird's-eye view under different demonstration configurations. Dark ...
-- **p. 7 / Figure/Table caption - extractive body cue:** Fig. 9: Performance Saturation. We report the policy performance boost wart. the increase of synthetic demonstrations over 3 seeds.
-- **p. 17 / A. Policy Training and Implementation Details - extractive body cue:** These encoders are widely used in previous works [9, 31] to enhance policy performance.
-- **p. 17 / A. Policy Training and Implementation Details - extractive body cue:** We compare its performance against 2D Diffusion Policy (DP) [8] in the empirical study in Sec.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 원래 행동을 새 물체 위치에 맞추고 점군 속 해당 물체를 재배치해 관측과 행동의 대응을 유지한다. [PDF 4쪽](https://www.roboticsproceedings.org/rss21/p157.pdf#page=4) · [PDF 5쪽](https://www.roboticsproceedings.org/rss21/p157.pdf#page=5)
+- 실물 과제의 공간 일반화와 변형 물체·양팔 조작을 평가하고 외란 대응과 장애물 회피로의 확장 사례를 제시했다. [PDF 1쪽](https://www.roboticsproceedings.org/rss21/p157.pdf#page=1) · [PDF 8쪽](https://www.roboticsproceedings.org/rss21/p157.pdf#page=8)
 
 ## Evaluation Scope
 

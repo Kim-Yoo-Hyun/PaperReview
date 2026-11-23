@@ -19,9 +19,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — While solving the LQR is often a bottleneck in recent efficient optimal control solvers [21, 36, 22], most of them rely on sequential implementation without exploiting the parallelization capabilities of modern processing ...
-
-방법 관련 발췌 — We present this as a secondary contribution of this paper, which we have implemented and evaluated in the experimental section.
+이 연구는 제약이 있는 비선형 MPC에서 반복적으로 풀어야 하는 선형·이차 부분문제를 시간 구간별로 나눠 병렬로 계산한다. [PDF 1쪽](https://www.roboticsproceedings.org/rss20/p002.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -54,16 +52,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 4 / III. RICCATI EQUATIONS FOR THE PROXIMAL LQ PROBLEM - extractive body cue:** We present this as a secondary contribution of this paper, which we have implemented and evaluated in the experimental section.
-- **p. 1 / I. INTRODUCTION - extractive body cue:** In this paper, we introduce a parallel algorithm to enhance the efficiency of model-predictive control (MPC) solvers [49, 16].
-- **p. 1 / I. INTRODUCTION - extractive body cue:** In this paper, we propose a general direct solver for LQ problems with implicit dynamics and additional equality constraints, leveraging parameterization to formulate a parallel ...
-- **p. 3 / III. RICCATI EQUATIONS FOR THE PROXIMAL LQ PROBLEM - extractive body cue:** We introduce the primal-dual feedforward (resp. feedback) gains (k1,ζ1,ω2,a1) (resp.
-- **p. 4 / IV. EXTENSION TO PARAMETRIC LQ PROBLEMS - extractive body cue:** In this subsection, we extend the block-sparse approach we presented in section III-C to parametric problems.
-- **p. 9 / VIII. EXPERIMENTS - extractive body cue:** It is the authors' aim to improve its efficiency in the future.
-- **p. 9 / VIII. EXPERIMENTS - extractive body cue:** Synthetic benchmark To assess the speedups our implementation of the parallel algorithm could achieve, we implemented a synthetic benchmark of problems with different horizons ranging ...
-- **p. 10 / VIII. EXPERIMENTS - extractive body cue:** 2) Constrained NMPC on TALOS: In this subsection, we leverage our proximal solver to perform whole-body nonlinear MPC on the humanoid robot TALOS in simulation, ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 등식 제약과 쌍대 정규화를 포함한 Riccati 재귀를 블록 소거로 정리하고 매개변수화한 부분문제를 병렬로 결합한다. [PDF 3쪽](https://www.roboticsproceedings.org/rss20/p002.pdf#page=3) · [PDF 7쪽](https://www.roboticsproceedings.org/rss20/p002.pdf#page=7)
+- ALIGATOR에 구현한 풀이기의 시간을 직렬 방식과 비교하고 실제 사족 로봇의 MPC에 적용했다. [PDF 9쪽](https://www.roboticsproceedings.org/rss20/p002.pdf#page=9) · [PDF 10쪽](https://www.roboticsproceedings.org/rss20/p002.pdf#page=10)
 
 ## Evaluation Scope
 

@@ -19,9 +19,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — 1: Both Diffusion and Consistency Policy work by sampling random actions and denoising them into predictions of actions. xt denotes the current action distribution at a time t ∈[0, T], where larger ...
-
-방법 관련 발췌 — Overall, we demonstrate that inference speed of our approach is on average about an order of magnitude faster than the fastest baseline (see Table I) and maintains similar or higher success rates ...
+Consistency Policy는 사전학습한 확산 정책을 소수 단계로 실행하는 시각운동 정책으로 증류해 추론 지연을 줄인다. [PDF 1쪽](https://www.roboticsproceedings.org/rss20/p071.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -53,16 +51,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / I. INTRODUCTION - extractive body cue:** Overall, we demonstrate that inference speed of our approach is on average about an order of magnitude faster than the fastest baseline (see Table I) ...
-- **p. 6 / IV. EXPERIMENTS - extractive body cue:** This divergence can be explained by stochasticity on an easy task: if the first CP generation is already earning .98 success rate, subsequent chaining steps ...
-- **p. 7 / IV. EXPERIMENTS - extractive body cue:** Results: Table IV shows how the baseline DDiM-variant of Diffusion Policy achieves similar average success rates as our method on the Rubbish Clean Up and ...
-- **p. 6 / IV. EXPERIMENTS - extractive body cue:** On Robomimic Can, single-step CP actually outperforms 3-step CP and registers a marginal improvement over DDPM.
-- **p. 8 / IV. EXPERIMENTS - extractive body cue:** Trash Clean Up Plug Insertion Microwave Success Inference Success Inference Success Rate Rate Time (ms) Rate Time (ms) DDiM 0.8 ± .13 192 0.6 ± ...
-- **p. 8 / IV. EXPERIMENTS - extractive body cue:** We suggest that any user wishing to improve performance on a difficult task begin by trying subdivided discretized time and only attempt further hyperparameter tuning ...
-- **p. 5 / IV. EXPERIMENTS - extractive body cue:** Doing so allows us to directly compare the generation speed and success rates of the baselines versus our own.
-- **p. 7 / IV. EXPERIMENTS - extractive body cue:** For success rates, we average over 10 trials for the first and third tasks while we average over 20 trials for the second task.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 교사 정책의 같은 확산 궤적 위에서 예측이 일치하도록 학습하고 초기 표본의 분산과 추론 단계를 조절한다. [PDF 3쪽](https://www.roboticsproceedings.org/rss20/p071.pdf#page=3) · [PDF 4쪽](https://www.roboticsproceedings.org/rss20/p071.pdf#page=4)
+- 시뮬레이션 여섯 과제와 실물 세 과제에서 계산 시간과 성공률을 비교하고 노트북 GPU에서 실물 정책 추론을 실행했다. [PDF 1쪽](https://www.roboticsproceedings.org/rss20/p071.pdf#page=1) · [PDF 6쪽](https://www.roboticsproceedings.org/rss20/p071.pdf#page=6)
 
 ## Evaluation Scope
 

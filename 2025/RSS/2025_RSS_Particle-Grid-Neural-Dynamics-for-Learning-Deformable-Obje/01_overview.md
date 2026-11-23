@@ -19,9 +19,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — For example, physics-based simulators [12, 31] often struggle to generalize to the real world due to the inherent simto-real gap and the difficulties of system identification and state estimation, Meanwhile, video-based predictive ...
-
-방법 관련 발췌 — The model updates particle positions X,...+ with the predicted velocities Vs>.s¢ to perform iterative rollouts (b) Our framework enables 3D action-conditioned video prediction by reconstructing objects with 3D Gaussian Splatting and int ...
+입자와 공간 격자를 결합한 신경 동역학 모델은 소수 시점 RGB-D 영상에서 변형 물체가 로봇 동작에 어떻게 반응하는지 학습한다. [PDF 1쪽](https://www.roboticsproceedings.org/rss21/p036.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 3 / B. Learning-Based Deformable Modeling - extractive body cue:** The model updates particle positions X,...+ with the predicted velocities Vs>.s¢ to perform iterative rollouts (b) Our framework enables 3D action-conditioned video prediction by reconstructing ...
-- **p. 2 / I. INTRODUCTION - extractive body cue:** To address these limitations, we introduce a novel class of/ dynamic models called particle-grid neural dynamics.
-- **p. 2 / I. INTRODUCTION - extractive body cue:** By combining object particles with spatial grids, our framework parameterizes dynamics in both Lagrangian and Eulerian coordinates, drawing an analogy to physics-based deformable object simulation ...
-- **p. 1 / I. INTRODUCTION - extractive body cue:** In deformable object manipulation, an accurate predictive object dynamics model enables model-based planning, policy evaluation, and real-to-sim asset generation.
-- **p. 3 / B. Learning-Based Deformable Modeling - extractive body cue:** The application of this model within a Model Predictive Control (MPC) framework is covered in Section IILE, An overview of our method is also provided ...
-- **p. 5 / IV. EXPERIMENTS - extractive body cue:** Our results demonstrate that it outperforms previous state-of-the-art approaches in dynamics prediction accuracy while remaining robust to incomplete camera views.
-- **p. 9 / Figure/Table caption - extractive body cue:** Fig. 8: Quantitative Comparisons on Planning. For four manipulation tasks-cloth lifting, box closing, rope manipulation, and plush toy relocating -we present the error curve and ...
-- **p. 5 / IV. EXPERIMENTS - extractive body cue:** ‘+ Can the model improve the performance of 3D actionconditioned video prediction and model-based planning?
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 입자로 물체 형상을 표현하고 격자에서 운동을 전달하며 Gaussian Splatting으로 행동에 따른 관측 영상을 렌더링한다. [PDF 1쪽](https://www.roboticsproceedings.org/rss21/p036.pdf#page=1) · [PDF 5쪽](https://www.roboticsproceedings.org/rss21/p036.pdf#page=5)
+- 로프·천 등에서 미관측 물체로의 동역학 일반화를 평가하고 학습한 모델로 목표 형상에 맞는 조작 행동을 계획했다. [PDF 1쪽](https://www.roboticsproceedings.org/rss21/p036.pdf#page=1) · [PDF 5쪽](https://www.roboticsproceedings.org/rss21/p036.pdf#page=5)
 
 ## Evaluation Scope
 

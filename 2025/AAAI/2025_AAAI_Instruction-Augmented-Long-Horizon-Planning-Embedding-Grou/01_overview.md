@@ -19,9 +19,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Planning failures occur when the planner fails to generate the correct action sequence.
-
-방법 관련 발췌 — This library consists of four promptable predicates that can be addressed through prompt engineering based on the reasoning ability of state-of-the-art LLMs, such as holding and on, and six predicates determined by ...
+IALP는 모바일 조작의 자연어 지시를 관측에 근거한 PDDL 문제로 바꾸고 실행 중 센서 피드백으로 계획을 갱신한다. [PDF 1쪽](https://ojs.aaai.org/index.php/AAAI/article/download/33610/35765#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 3 / Problem Formulation - extractive body cue:** This library consists of four promptable predicates that can be addressed through prompt engineering based on the reasoning ability of state-of-the-art LLMs, such as holding ...
-- **p. 3 / Problem Formulation - extractive body cue:** 2, we propose the InstructionAugmented Long-Horizon Planning (IALP) system to inPromptable on, in, holding, opened Grounding Mechanism at, find, graspable, placeable, detected, reachable Table 1: ...
-- **p. 5 / Problem Formulation - extractive body cue:** We introduce six feasibility predicates, comprising two navigation predicates and four manipulation predicates, to maximize the feasibility score Sfb thereby increasing the likelihood that the ...
-- **p. 7 / Problem Formulation - extractive body cue:** These results demonstrate that our method can accomplish these tasks within a reasonable time.
-- **p. 7 / Problem Formulation - extractive body cue:** Conclusion We propose IALP, a framework that leverages promptable and grounding mechanism-based predicates to construct an informative PDDL problem to represent task-relevant information of the ...
-- **p. 7 / Problem Formulation - extractive body cue:** The results indicate that IALP achieves a success rate of over 80% in all long-term tasks.
-- **p. 7 / Problem Formulation - extractive body cue:** As a result, the success rate is substantially lower than that of other configurations.
-- **p. 3 / Problem Formulation - extractive body cue:** The Planning Objective The objective is to find a sequence of actions {a1, · · · , aH}, denoted as a1:H, that can achieve the ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 언어모델의 지시 해석과 센서 기반 술어 판정을 결합해 행동 전제조건과 효과를 계획에 반영한다. [PDF 3쪽](https://ojs.aaai.org/index.php/AAAI/article/download/33610/35765#page=3) · [PDF 4쪽](https://ojs.aaai.org/index.php/AAAI/article/download/33610/35765#page=4)
+- 실제 환경의 장기 작업 다섯 개에서 여러 조작 기술을 연결해 실행하고 성공률과 소요 시간을 분석했다. [PDF 6쪽](https://ojs.aaai.org/index.php/AAAI/article/download/33610/35765#page=6) · [PDF 7쪽](https://ojs.aaai.org/index.php/AAAI/article/download/33610/35765#page=7)
 
 ## Evaluation Scope
 

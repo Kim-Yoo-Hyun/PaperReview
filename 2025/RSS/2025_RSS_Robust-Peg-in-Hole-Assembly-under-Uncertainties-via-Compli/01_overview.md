@@ -19,9 +19,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Fig, 2: (a) The peg-in-hole problem is considered as inserting peg into its matching hole on a planar board (a randomly generated peg is adopted as the example).
-
-방법 관련 발췌 — (b) A paired comer on the peg and hole: this local geometry enables the downstream iterative insertion process.
+이 연구는 순응 제어로 접촉을 의도적으로 만들고 그 제약을 활용해 구멍 위치가 불확실한 정밀 삽입을 수행한다. [PDF 1쪽](https://www.roboticsproceedings.org/rss21/p060.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -52,13 +50,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 5 / A. Task Mechanics and Interaction Primitives - extractive body cue:** (b) A paired comer on the peg and hole: this local geometry enables the downstream iterative insertion process.
-- **p. 5 / A. Task Mechanics and Interaction Primitives - extractive body cue:** Interaction with inclined states is designed to identify and exploit its environmental contact constraints.
-- **p. 6 / B. Perception Manipulation Funnet - extractive body cue:** Additionally, a maximum entropy-based method is introduced to improve convergence efficiency.
-- **p. 8 / 2 Sample grid points G - Area - extractive body cue:** Successful insertion motions are formulated as a sequence of interactions $ = [e},¢¥, ..¢?] that connect the initial inclined state to the target peg-inhole configuration.
-- **p. 11 / Figure/Table caption - extractive body cue:** Fig. 7: (a) Overview of the System Setup; (b) Ablation study on the perception manipulation funnel; (c) Ablation study on the physical manipulation funnel; (d) ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 탐색 접촉으로 구멍을 국소화하는 과정과 삽입 오차를 줄이는 과정을 서로 다른 상태 공간의 퍼널로 구성했다. [PDF 4쪽](https://www.roboticsproceedings.org/rss21/p060.pdf#page=4) · [PDF 6쪽](https://www.roboticsproceedings.org/rss21/p060.pdf#page=6)
+- NIST 조립 보드와 추가 부품에서 치수·형상·재료가 달라질 때 별도의 정책 학습 없이 삽입을 검증했다. [PDF 1쪽](https://www.roboticsproceedings.org/rss21/p060.pdf#page=1) · [PDF 10쪽](https://www.roboticsproceedings.org/rss21/p060.pdf#page=10)
 
 ## Evaluation Scope
 

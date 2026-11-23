@@ -19,9 +19,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — (i) Domain generalization: Compared to visual-only baselines, visuo-tactile approaches struggle to generalize, hindered by insufficient data diversity and model scalability.
-
-방법 관련 발췌 — First, we introduce a novel unified haptic representation that facilitates cross-embodiment learning.
+V-HOP은 시각과 손의 접촉 관측을 결합해 조작 중인 물체의 6D 자세를 시간에 걸쳐 추적한다. [PDF 1쪽](https://www.roboticsproceedings.org/rss21/p037.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -53,16 +51,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 1 / 1. INTRODUCTION - extractive body cue:** First, we introduce a novel unified haptic representation that facilitates cross-embodiment learning.
-- **p. 1 / 1. INTRODUCTION - extractive body cue:** To address these challenges, we propose V-HOP (Fig.
-- **p. 2 / 1. INTRODUCTION - extractive body cue:** Second, we propose 4 transformer-based object pose tracker to fuse visual and haptic features.
-- **p. 2 / 1. INTRODUCTION - extractive body cue:** Our method demonstrates remarkable robustness and significantly outperforms FoundationPose, which could lose object tracks entirely (Fig.
-- **p. 3 / III. MeTHODOLOGY - extractive body cue:** Later, we introduce our visuo-haptic model and how it is trained.
-- **p. 7 / experiment - extractive body cue:** Our results show that \V-HOP consistently outperforms FoundationPose in both ADD and ADD-S metrics under different levels of occlusion. ‘These results underscore the importance of ...
-- **p. 7 / experiment - extractive body cue:** V-HOP achieves 1 32% lower ADD-S error compared to NeuralFeels and has a similar ADD-S-0.1d score.
-- **p. 8 / B. Bimanual Handover Experiment - extractive body cue:** ‘TABLE VI: Success rate on bimanual handover task:
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 손과 센서 배치가 달라도 사용할 수 있는 촉각 표현을 만들고 트랜스포머 추적기에서 영상 특징과 통합한다. [PDF 1쪽](https://www.roboticsproceedings.org/rss21/p037.pdf#page=1) · [PDF 3쪽](https://www.roboticsproceedings.org/rss21/p037.pdf#page=3)
+- FeelSight의 추적 정확도와 실제 로봇의 양손 인계·컵 안에 캔 넣기에서 추적 결과를 사용하는 효과를 평가했다. [PDF 7쪽](https://www.roboticsproceedings.org/rss21/p037.pdf#page=7) · [PDF 9쪽](https://www.roboticsproceedings.org/rss21/p037.pdf#page=9)
 
 ## Evaluation Scope
 

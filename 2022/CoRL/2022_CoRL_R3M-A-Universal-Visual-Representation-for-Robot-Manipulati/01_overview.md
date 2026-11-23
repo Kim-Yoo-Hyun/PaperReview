@@ -19,9 +19,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — This lack of diversity and scale makes it difficult to learn representations that are broadly applicable.
-
-방법 관련 발췌 — We hypothesize that a good representation for vision-based robotic manipulation consists of three components.
+R3M은 사람의 1인칭 영상에서 학습한 시각 표현을 고정한 채 적은 조작 시연으로 로봇 정책을 학습한다. [PDF 1쪽](https://proceedings.mlr.press/v205/nair23a/nair23a.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -51,16 +49,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1 Introduction - extractive body cue:** We hypothesize that a good representation for vision-based robotic manipulation consists of three components.
-- **p. 2 / 1 Introduction - extractive body cue:** Our core contribution is an artifact - the pre-trained vision model - that can be used readily in other work.
-- **p. 17 / Figure/Table caption - extractive body cue:** Figure 8: Performance over different views/dataset sizes. We report the success rate of R3M and baseline across each view (left) and dataset size (right). We ...
-- **p. 7 / Figure/Table caption - extractive body cue:** Figure 4: Data Efficient Imitation Learning in Unseen Environments/Tasks. We report the success rates of downstream imitation learning with standard error bars. We observe that ...
-- **p. 8 / Figure/Table caption - extractive body cue:** Table 3: Real World Success Rates. R3M outperforms CLIP on the challenging real world manipulation tasks. In Table 3, we report the success rates comparing ...
-- **p. 8 / Figure/Table caption - extractive body cue:** Figure 5: Real World Robot Learning with R3M. With R3M we are able to learn challenging tasks like putting lettuce in the pan, pushing the ...
-- **p. 7 / Figure/Table caption - extractive body cue:** Table 1: Ablating Components of R3M. We see report success rate of downstream imitation learning on variants of R3M. We observe that on average, removing ...
-- **p. 18 / Figure/Table caption - extractive body cue:** Figure 9: Per task Success Rate. We observe that R3M is the highest performing method on 11/12 tasks. 18
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- Ego4D 영상에 시간 대조 학습, 영상·언어 정렬과 표현의 희소성 항을 함께 적용했다. [PDF 1쪽](https://proceedings.mlr.press/v205/nair23a/nair23a.pdf#page=1) · [PDF 4쪽](https://proceedings.mlr.press/v205/nair23a/nair23a.pdf#page=4)
+- 시뮬레이션뿐 아니라 실제 아파트의 Franka Panda 조작에서 소수 시연으로 학습한 정책을 다른 시각 표현과 비교했다. [PDF 7쪽](https://proceedings.mlr.press/v205/nair23a/nair23a.pdf#page=7) · [PDF 8쪽](https://proceedings.mlr.press/v205/nair23a/nair23a.pdf#page=8)
 
 ## Evaluation Scope
 

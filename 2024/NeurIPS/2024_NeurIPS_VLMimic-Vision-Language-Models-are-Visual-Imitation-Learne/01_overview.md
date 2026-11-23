@@ -19,9 +19,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — This reliance on individual skill acquisition is often considered a major bottleneck of the system due to the lack of large-scale robotic data.
-
-방법 관련 발췌 — Our main contributions can be summarized as follows: (I) We propose VLMimic, a novel visual imitation learning framework empowered by VLMs, to learn generalizable robotic skills from 2
+VLMimic은 소수의 사람 영상에서 물체 기준 움직임과 계층적 제약을 추출해 세밀한 로봇 조작 기술을 만든다. [PDF 1쪽](https://proceedings.neurips.cc/paper_files/paper/2024/file/8e6f3d53b2bef98fce17e699557f5f11-Paper-Conference.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -52,16 +50,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1 Introduction - extractive body cue:** Our main contributions can be summarized as follows: (I) We propose VLMimic, a novel visual imitation learning framework empowered by VLMs, to learn generalizable robotic ...
-- **p. 2 / 1 Introduction - extractive body cue:** Based on the above analysis, we present VLMimic, an approach that employs VLMs to directly learn even fine-grained action levels from a limited number of ...
-- **p. 3 / 1 Introduction - extractive body cue:** (III) Our method outperforms other methods by over 27% on the RLBench.
-- **p. 9 / 4 Experiments - extractive body cue:** Results indicate that our method attains high success rates on complex tasks with a single human video demonstration, and increasing the number of videos yields ...
-- **p. 7 / 4 Experiments - extractive body cue:** Quantitative results, presented in Table 2, demonstrate that VLMimic clearly outperforms other methods across all tasks, particularly in the "unseen" environment (UE).
-- **p. 7 / 4 Experiments - extractive body cue:** Our method, learned with only 5 human videos, obviously outperforms R3M-DP and DP by over 61% in overall performance, despite both being trained on 100 ...
-- **p. 8 / 4 Experiments - extractive body cue:** Experimental results, as depicted in Table 3, obviously exhibit a substantial enhancement achieved by our method over baseline methods.
-- **p. 9 / 4 Experiments - extractive body cue:** Variants compare constraints exclusively utilizing either visualized interactions or keypoints exhibit decreased success rates.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 시연 간 비교로 기술을 나타내는 제약을 정제하고 새로운 장면에 맞춰 해당 표현을 갱신한다. [PDF 4쪽](https://proceedings.neurips.cc/paper_files/paper/2024/file/8e6f3d53b2bef98fce17e699557f5f11-Paper-Conference.pdf#page=4) · [PDF 5쪽](https://proceedings.neurips.cc/paper_files/paper/2024/file/8e6f3d53b2bef98fce17e699557f5f11-Paper-Conference.pdf#page=5)
+- 사람 영상 다섯 개를 사용한 조건에서 RLBench와 실물 조작을 평가하고 긴 작업의 성공률도 비교했다. [PDF 1쪽](https://proceedings.neurips.cc/paper_files/paper/2024/file/8e6f3d53b2bef98fce17e699557f5f11-Paper-Conference.pdf#page=1) · [PDF 7쪽](https://proceedings.neurips.cc/paper_files/paper/2024/file/8e6f3d53b2bef98fce17e699557f5f11-Paper-Conference.pdf#page=7)
 
 ## Evaluation Scope
 

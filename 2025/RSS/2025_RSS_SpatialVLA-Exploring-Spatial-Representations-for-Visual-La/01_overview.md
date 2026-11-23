@@ -19,9 +19,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, developing such generalist robot policies with 3D spatial intelligence encounters two primary challenges in the aspects of robot observation and action.
-
-방법 관련 발췌 — In summary, the contributions of this work consist of a novel generalist robot policy that explores spatial representations for robot foundation models, sophisticated designs on Ego3D Posi tion Encoding and Adaptive Action ...
+SpatialVLA는 관측에 3D 위치를 부여하고 로봇 움직임을 적응형 격자로 이산화해 서로 다른 로봇의 조작 자료로 정책을 학습한다. [PDF 1쪽](https://www.roboticsproceedings.org/rss21/p011.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / I. INTRODUCTION - extractive body cue:** In summary, the contributions of this work consist of a novel generalist robot policy that explores spatial representations for robot foundation models, sophisticated designs on ...
-- **p. 2 / I. INTRODUCTION - extractive body cue:** OpenVLA [30] adopts a similar action discretization approach and fine-tune Prismatic VLM [28] only on the OXE dataset [13], which consists of robot data from ...
-- **p. 4 / B. The Pre-training and Post-training Scheme - extractive body cue:** ‘To obtain a generalist robot policy model, the training procedure of SpatialVLA consists of pre-training stage and posttraining stage.
-- **p. 4 / A. The SpatialVLA Model Architecture - extractive body cue:** space consists Of Myax = Mg *Mo ~M,. diserete spatial stids Ons = {2,...a%}, Similarly, there are Myr = Meat » Myick *Myaw 3D discrete ...
-- **p. 3 / A. The SpatialVLA Model Architecture - extractive body cue:** 2, SpatialVLA is developed based on a vision-language model to inherit the general world knowledge.
-- **p. 7 / 10 Ablations on Design - extractive body cue:** Spatial VLA achieves the highest average success rate, outperforming all generalist manipulation policies.
-- **p. 9 / B. Adapting to New Robot Setups - extractive body cue:** Compared to 1026-resolution action grids (#ly.s:#4), where Maes = Muss = 512, Myip = 2, Spatial VLA with 8194resolution action grids (Mines = Mrans = ...
-- **p. 7 / 10 Ablations on Design - extractive body cue:** Overall, SpatialVLA achieves a higher average success rate, showcasing robust and generalizable operation capabilities in unseen scenarios, objects, language grounding, and dynamic motions.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 자기중심 3D 위치 인코딩을 시각 입력에 넣고 데이터의 움직임 분포에 맞춰 행동 구간을 정한다. [PDF 3쪽](https://www.roboticsproceedings.org/rss21/p011.pdf#page=3) · [PDF 4쪽](https://www.roboticsproceedings.org/rss21/p011.pdf#page=4)
+- 사전학습 정책을 시뮬레이션과 실제 로봇에서 평가하고 새로운 로봇 설정에 맞게 행동 격자를 다시 나누는 적응 방식을 제시했다. [PDF 1쪽](https://www.roboticsproceedings.org/rss21/p011.pdf#page=1) · [PDF 6쪽](https://www.roboticsproceedings.org/rss21/p011.pdf#page=6)
 
 ## Evaluation Scope
 

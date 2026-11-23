@@ -21,9 +21,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — The bottleneck for achieving these goals, however, is the need for large amounts of robotic experience in the real world - much larger than robot datasets collected in lab settings with well-defined ...
-
-방법 관련 발췌 — In this paper, we propose AutoRT, a system that leverages existing foundation models to scale up the deployment of operational robots in completely unseen scenarios with minimal human supervision.
+AutoRT는 장면을 읽는 시각언어모델과 작업을 제안하는 언어모델을 이용해 여러 건물의 로봇이 다양한 조작 데이터를 수집하게 한다. [PDF 1쪽](https://arxiv.org/pdf/2401.12963v2#page=1)
 
 ## Problem and Motivation
 
@@ -57,16 +55,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 1 / ABSTRACT - extractive body cue:** In this paper, we propose AutoRT, a system that leverages existing foundation models to scale up the deployment of operational robots in completely unseen scenarios ...
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** We show that AutoRT scales robot deployment by allowing 1 human to supervise 3-5 mobile manipulators.
-- **p. 1 / ABSTRACT - extractive body cue:** Guiding data collection by tapping into the knowledge of foundation models enables AutoRT to effectively reason about autonomy tradeoffs and safety while significantly scaling up ...
-- **p. 4 / 3. Place the napkin onto - extractive body cue:** Green sections are contributions of this work.
-- **p. 4 / 3. Place the napkin onto - extractive body cue:** No part of this requires advance knowledge of the layout of the environment or objects it contains, making it easy to run on a fleet ...
-- **p. 7 / Figure/Table caption - extractive body cue:** Table 1: AutoRT data, split by collect policy used. Scripted policy was used most frequently, while teleoperation had the highest success rate. Collect Method Average ...
-- **p. 9 / 3. Place the napkin onto - extractive body cue:** These increases are modest, but we note that the focus of AutoRT was on collecting diverse data, not on achieving high success rates.
-- **p. 10 / 3. Place the napkin onto - extractive body cue:** If these policies only handle simpler tasks or have lower success rates in unseen settings, it lowers the throughput of successful episodes.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 관측 장면과 로봇의 능력·안전 규칙을 사용해 실행할 지시를 생성하고 선별한다. [PDF 3쪽](https://arxiv.org/pdf/2401.12963v2#page=3) · [PDF 4쪽](https://arxiv.org/pdf/2401.12963v2#page=4)
+- 원격조작과 자율 실행으로 수집한 에피소드의 지시 다양성을 분석하고 안전 규칙을 제시했을 때 작업 제안이 어떻게 변하는지 평가했다. [PDF 7쪽](https://arxiv.org/pdf/2401.12963v2#page=7) · [PDF 9쪽](https://arxiv.org/pdf/2401.12963v2#page=9)
 
 ## Evaluation Scope
 

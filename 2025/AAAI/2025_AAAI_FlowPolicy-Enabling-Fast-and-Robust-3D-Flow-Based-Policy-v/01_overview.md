@@ -21,9 +21,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, lack of a prior knowledge about u and pt, conditional flow matching (Lipman et al.
-
-방법 관련 발췌 — In summary, our main contributions are threefold: • We first propose a 3D flow-based policy generation framework that conditions the 3D visual representation and can generate robust robotic actions with few demonstrations, ...
+FlowPolicy는 관측 점군에 조건화된 흐름의 속도 일관성을 학습해 한 번의 추론으로 조작 행동을 생성한다. [PDF 1쪽](https://ojs.aaai.org/index.php/AAAI/article/download/33617/35772#page=1)
 
 ## Problem and Motivation
 
@@ -57,16 +55,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / Abstract - extractive body cue:** In summary, our main contributions are threefold: • We first propose a 3D flow-based policy generation framework that conditions the 3D visual representation and can ...
-- **p. 3 / Abstract - extractive body cue:** To address this issue, we propose FlowPolicy, a real-time 3D policy generation framework based on consistency flow matching.
-- **p. 3 / Abstract - extractive body cue:** Method Our method expects a limited number of expert demonstrations to teach an agent to learn a policy π : O =⇒A, i.e., mapping from ...
-- **p. 2 / Abstract - extractive body cue:** By avoiding estimating noise and instead matching a path from the noise to the target, FM enables faster inference, which is crucial in real-time robot ...
-- **p. 4 / Abstract - extractive body cue:** Learning straight-line flows enables faster inference efficiency.
-- **p. 7 / Abstract - extractive body cue:** Both generally improve the accuracy with more demonstrations, but FlowPolicy typically has a higher success rate and avoids the performance bottleneck as presented in DP3.
-- **p. 7 / Abstract - extractive body cue:** For hard-level tasks (i.e., ‘Pick-Place'), the success rate of the task can be significantly improved by increasing the number of expert presentations, as shown in ...
-- **p. 6 / Figure/Table caption - extractive body cue:** Figure 4: Illustrations of the learning curves. Compared to Simple DP3 and DP3, FlowPolicy demonstrates higher sta- bility, learning efficiency, and success rates. all success ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 노이즈에서 행동으로 향하는 직선 흐름의 서로 다른 시점에서 속도가 일치하도록 학습한다. [PDF 3쪽](https://ojs.aaai.org/index.php/AAAI/article/download/33617/35772#page=3) · [PDF 4쪽](https://ojs.aaai.org/index.php/AAAI/article/download/33617/35772#page=4)
+- Adroit와 Meta-World에서 작업 성공률과 추론 시간을 함께 비교해 단일 단계 생성의 속도와 성능을 평가했다. [PDF 5쪽](https://ojs.aaai.org/index.php/AAAI/article/download/33617/35772#page=5) · [PDF 6쪽](https://ojs.aaai.org/index.php/AAAI/article/download/33617/35772#page=6)
 
 ## Evaluation Scope
 

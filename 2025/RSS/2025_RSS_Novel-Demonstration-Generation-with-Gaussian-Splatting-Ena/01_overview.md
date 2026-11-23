@@ -19,9 +19,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, the Sim-to-Real gap presents
-
-방법 관련 발췌 — Our method enables autonomous editing of the reconstructed scene to generate diverse demonstrations with various configurations.
+RoboSplat은 한 번의 실제 시연을 3D 가우시안 장면으로 재구성하고 이를 편집해 새로운 관측과 조작 시연을 합성한다. [PDF 1쪽](https://www.roboticsproceedings.org/rss21/p146.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 3 / C. Gaussian planting in Roboties - extractive body cue:** Our method enables autonomous editing of the reconstructed scene to generate diverse demonstrations with various configurations.
-- **p. 3 / IV. METHODOLOGY - extractive body cue:** To generate high-fidelity and diverse data from a single expert trajectory, we present RoboSplat, a novel demonstration generation approach based on 3DGS.
-- **p. 2 / 1. INrRopucTION - extractive body cue:** Thanks t0 its explicit representation of the scene, 3DGS enables interpretable editing ofthe reconstructed scene, which paves the way for generating novel manipulation configurations, Furthermore, ...
-- **p. 2 / 1. INrRopucTION - extractive body cue:** Based on that, we propose RoboSplat, a novel and efficacious approach to demonstration generation with Gaussian ‘Splatting.
-- **p. 1 / Body text (section boundary not confidently recovered) - extractive body cue:** Novel Demonstration Generation with Gaussian Splatting Enables Robust One-Shot Manipulation
-- **p. 10 / Figure/Table caption - extractive body cue:** Fig. 11: Performance on cross embodiment experiments. We evaluate the learned policy directly on the URSe robot and achieve a nearly 100% success rate that ...
-- **p. 7 / A. Experimental Setup - extractive body cue:** Success rate (SR) is chosen as the evaluation metric in all experiments.
-- **p. 8 / Figure/Table caption - extractive body cue:** Fig. 7: Main results. Top left: We present the average success rate across five tasks. Our method shows promising scalability as the number of demonstration ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 물체·장면·로봇 형상 교체, 자세 변환과 새 시점 렌더링을 이용해 시연의 공간·시각 조건을 바꾼다. [PDF 3쪽](https://www.roboticsproceedings.org/rss21/p146.pdf#page=3) · [PDF 4쪽](https://www.roboticsproceedings.org/rss21/p146.pdf#page=4)
+- 여섯 종류의 변화가 가해진 실제 조작에서 단일 시연 기반 학습을 다수 시연 및 2D 증강 기준선과 비교했다. [PDF 1쪽](https://www.roboticsproceedings.org/rss21/p146.pdf#page=1) · [PDF 6쪽](https://www.roboticsproceedings.org/rss21/p146.pdf#page=6)
 
 ## Evaluation Scope
 

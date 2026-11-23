@@ -19,9 +19,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, these prior works typically restrict their investigations to sets of similar embodiments - e.g., arms with parallel jaw grippers.
-
-방법 관련 발췌 — While the particular training methodology and model architecture are based on prior techniques, the empirical findings are a novel contribution of our work, demonstrating for the first time that navigation data can ...
+이 연구는 조작과 이동을 공통의 목표 도달 과제로 표현해 로봇팔과 이동 플랫폼의 데이터가 언제 서로 도움이 되는지 조사했다. [PDF 1쪽](https://www.roboticsproceedings.org/rss20/p093.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / I. INTRODUCTION - extractive body cue:** While the particular training methodology and model architecture are based on prior techniques, the empirical findings are a novel contribution of our work, demonstrating for ...
-- **p. 2 / I. INTRODUCTION - extractive body cue:** We present, to our knowledge, the first results demonstrating a large-scale policy trained jointly on navigation and manipulation data from many different robots, showing that ...
-- **p. 3 / III. PRELIMINARIES - extractive body cue:** Each trajectory τ ∈Dem consists of a sequence of observations (images) and actions.
-- **p. 3 / IV. HETEROGENEOUS CROSS-EMBODIMENT LEARNING - extractive body cue:** While we could simply train a single policy across all of the navigation and manipulation datasets to output action labels that match each specific dataset ...
-- **p. 1 / I. INTRODUCTION - extractive body cue:** The advent of large-scale foundation models in machine learning has enabled harnessing diverse datasets to enhance sample efficiency, improve generalization, and facilitate transfer to novel ...
-- **p. 8 / Figure/Table caption - extractive body cue:** Fig. 6: Does manipulation help navigation? Across three different robots in challenging indoor and outdoor environments, adding manipulation datasets leads to 5 -7% improvement in ...
-- **p. 9 / VI. ANALYSIS - extractive body cue:** Despite the fact that neither the table nor the egg was seen in the training data of the policy, the robot achieves a 50% success ...
-- **p. 7 / Figure/Table caption - extractive body cue:** Fig. 5: Does navigation help manipulation? By aligning action coordinate frames, training on navigation and driving datasets results in a 20% improvement across five challenging ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 로봇팔·사족 로봇·쿼드로터·이동 베이스의 데이터를 공통 목표 조건부 정책으로 학습해 조작에서의 전이를 평가했다. [PDF 3쪽](https://www.roboticsproceedings.org/rss20/p093.pdf#page=3) · [PDF 5쪽](https://www.roboticsproceedings.org/rss20/p093.pdf#page=5)
+- 이동 전용 데이터와 고정 팔의 조작 데이터로 학습한 정책을 새 모바일 매니퓰레이터에 추가 학습 없이 적용했다. [PDF 1쪽](https://www.roboticsproceedings.org/rss20/p093.pdf#page=1) · [PDF 9쪽](https://www.roboticsproceedings.org/rss20/p093.pdf#page=9)
 
 ## Evaluation Scope
 

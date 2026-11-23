@@ -21,7 +21,7 @@
 
 ### Strongest assumption and failure boundary
 
-- **p. 1 / 1. Introduction - extractive body cue:** However, due to current technical limitations, existing VLA models fre
+- **p. 1 / 1. Introduction - 원문 대조 요지:** 기존 VLA는 로봇 조작 중 자주 실패하며 원인 진단에는 전문가 지식과 수작업이 필요하다.
 - **p. 1 / 1. Introduction - extractive body cue:** As a result, existing methods face key limitations: insufficient focus on VLM-VLA collaboration with no standardized interfaces (Yang et al., 2025b; Chen et al., 2024), ...
 - **p. 2 / 1. Introduction - extractive body cue:** Spatial Deviation Understanding Task: Unplug the connector and insert it into the black socket.
 - **p. 2 / 1. Introduction - extractive body cue:** Overview of VLA-FixBench, Center: Hierarchical failure types in Perception, Planning, and Control.

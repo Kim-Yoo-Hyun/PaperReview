@@ -19,16 +19,14 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, most current VLA approaches primarily process 2D visual inputs, requiring massive datasets to bridge the gap between perception and action.
-
-방법 관련 발췌 — The contributions of this paper are summarized: • Active Perception for Vision-Language-Action Models: We propose ActiveVLA, a novel vision-language-action 8142
+ActiveVLA는 조작에 중요한 3D 영역을 먼저 찾고 그 영역의 관측 방향과 해상도를 조절해 행동을 예측한다. [PDF 1쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Liu_ActiveVLA_Injecting_Active_Perception_into_Vision-Language-Action_Models_for_Precise_3D_CVPR_2026_paper.pdf#page=1) · [PDF 2쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Liu_ActiveVLA_Injecting_Active_Perception_into_Vision-Language-Action_Models_for_Precise_3D_CVPR_2026_paper.pdf#page=2)
 
 ## Problem and Motivation
 
 - **p. 1 / Abstract - extractive body cue:** Recent advances in robot manipulation have leveraged pretrained vision-language models (VLMs) and explored integrating 3D spatial signals into these models for effective action prediction, giving ...
 - **p. 1 / Abstract - extractive body cue:** However, most existing approaches overlook the importance of active perception: they typically rely on static, wrist-mounted cameras that provide an end-effector-centric viewpoint.
 - **p. 1 / Abstract - extractive body cue:** As a result, these models are unable to adaptively select optimal viewpoints or resolutions during task execution, which significantly limits their performance in long-horizon tasks ...
-- **p. 1 / Abstract - extractive body cue:** To address these limThis CVPR paper is the Open Access version, provided by the Computer Vision Foundation.
+- **p. 1–2 / Abstract - 원문 대조 요지:** ActiveVLA는 정밀 조작에 필요한 영역을 찾아 관측 시점과 공간 해상도를 조절한다.
 - **p. 1 / Abstract - extractive body cue:** Except for this watermark, it is identical to the accepted version; the final published version of the proceedings is available on IEEE Xplore.
 - **p. 2 / 1. Introduction - extractive body cue:** However, most current VLA approaches primarily process 2D visual inputs, requiring massive datasets to bridge the gap between perception and action.
 - **p. 2 / 1. Introduction - extractive body cue:** Addressing this limitation is crucial for developing embodied agents capable of adaptive and reliable interaction in complex, real-world environments.
@@ -54,16 +52,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** The contributions of this paper are summarized: • Active Perception for Vision-Language-Action Models: We propose ActiveVLA, a novel vision-language-action 8142
-- **p. 2 / 1. Introduction - extractive body cue:** To address this limitation, we propose ActiveVLA, a novel vision-language-action framework that explicitly integrates active perception into robotic manipulation.
-- **p. 3 / 1. Introduction - extractive body cue:** framework that equips robots with active perception capabilities, enabling adaptive viewpoint selection and zoomin mechanisms for precise, fine-grained manipulation. • A Novel ActiveVLA Framework: ActiveVLA ...
-- **p. 6 / 3.3. 3D Action Prediction - extractive body cue:** This global-local fusion allows the model to combine overall scene understanding with fine spatial precision, enabling accurate and safe manipulation in complex environments.
-- **p. 7 / 4.1. Experimental Results - extractive body cue:** Results in Table 2 show that ActiveVLA achieves a new state of the art on COLOSSEUM, with an average success rate of 65.9% and an ...
-- **p. 7 / 4.1. Experimental Results - extractive body cue:** As shown in Table 3, ActiveVLA achieves the best performance across core levels L1-L3, with success rates of 92.4%, 66.3%, and 45.1%, surpassing 8147
-- **p. 8 / 4.2. Ablation Study - extractive body cue:** As shown in Figure 5, increasing the number of views improves the success rate from 82.2% (one view) to 91.8% (three views), confirming that multi-view ...
-- **p. 8 / 4.2. Ablation Study - extractive body cue:** Component Performance A-VS A-3Z RLBench COLOSSEUM GemBench 87.6/0.26 63.6/0.33 48.9/0.21 " 89.4/0.45 64.5/0.51 49.4/0.48 " " 91.8/0.53 65.9/0.62 51.3/0.59 1 2 3 4 5 6 ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 여러 투영 영상에서 중요한 영역을 찾은 뒤 가림과 시점의 다양성을 고려해 관측을 고르고 국소 3D 영역을 확대한다. [PDF 3쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Liu_ActiveVLA_Injecting_Active_Perception_into_Vision-Language-Action_Models_for_Precise_3D_CVPR_2026_paper.pdf#page=3) · [PDF 4쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Liu_ActiveVLA_Injecting_Active_Perception_into_Vision-Language-Action_Models_for_Precise_3D_CVPR_2026_paper.pdf#page=4)
+- GemBench의 일반화 과제와 구성 요소 제거 실험으로 시점 선택과 국소 확대가 조작 성공에 미치는 영향을 평가했다. [PDF 7쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Liu_ActiveVLA_Injecting_Active_Perception_into_Vision-Language-Action_Models_for_Precise_3D_CVPR_2026_paper.pdf#page=7) · [PDF 8쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Liu_ActiveVLA_Injecting_Active_Perception_into_Vision-Language-Action_Models_for_Precise_3D_CVPR_2026_paper.pdf#page=8)
 
 ## Evaluation Scope
 

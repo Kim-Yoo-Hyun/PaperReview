@@ -19,9 +19,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Despite all of the progress on both model-based and model-free RL methods, generalization remains a primary challenge.
-
-방법 관련 발췌 — This is a significant step forward because it enables a purely data-driven approach to model learning within the MPPI framework.
+정보이론적 MPC는 비선형 동역학 모델에서 표본 궤적의 비용으로 제어 입력을 갱신하며 학습한 신경망 동역학도 사용할 수 있다. [PDF 1쪽](https://homes.cs.washington.edu/~bboots/files/InformationTheoreticMPC.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -52,16 +50,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 1 / I. INTRODUCTION - extractive body cue:** This is a significant step forward because it enables a purely data-driven approach to model learning within the MPPI framework.
-- **p. 1 / I. INTRODUCTION - extractive body cue:** This limits the method's ability to discover novel optimal control behaviors.
-- **p. 2 / II. MODEL PREDICTIVE CONTROL - extractive body cue:** The information theoretic MPC algorithm that we develop is originally based on path integral control theory.
-- **p. 5 / V. SIMULATED RESULTS - extractive body cue:** After one iteration, the algorithm achieves the same level of performance regardless of which network is being used.
-- **p. 6 / V. SIMULATED RESULTS - extractive body cue:** The final performance margins for both the cart-pole and quadrotor are within 10% of what can be achieved with perfect model knowledge, which indicates that, ...
-- **p. 7 / VI. EXPERIMENTAL RESULTS - extractive body cue:** 5 11.11 10.84 7.49 22.62 training set and re-training the neural network model did not noticeably improve the performance of the algorithm.
-- **p. 6 / V. SIMULATED RESULTS - extractive body cue:** None of the networks for the quadrotor dynamics perform significantly better or worse in multi-step error, which is reflected in the near identical performance of ...
-- **p. 7 / VI. EXPERIMENTAL RESULTS - extractive body cue:** Results With training settings of 9 m/s and 0.275 radians, the controller successfully maneuvered the vehicle around the track using only the initial system identification ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 정보이론적 목적에서 표본 기반 제어 갱신을 도출하고 실제 시스템 자료로 학습한 동역학을 예측에 결합했다. [PDF 2쪽](https://homes.cs.washington.edu/~bboots/files/InformationTheoreticMPC.pdf#page=2) · [PDF 4쪽](https://homes.cs.washington.edu/~bboots/files/InformationTheoreticMPC.pdf#page=4)
+- 카트폴·쿼드로터는 시뮬레이션에서, 고속 주행은 실제 차량에서 평가해 학습한 모델을 쓰는 제어기의 동작을 확인했다. [PDF 5쪽](https://homes.cs.washington.edu/~bboots/files/InformationTheoreticMPC.pdf#page=5) · [PDF 6쪽](https://homes.cs.washington.edu/~bboots/files/InformationTheoreticMPC.pdf#page=6)
 
 ## Evaluation Scope
 

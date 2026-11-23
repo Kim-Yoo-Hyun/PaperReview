@@ -19,9 +19,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — In deployment scenarios such as homes and warehouses, mobile robots are expected to autonomously navigate for extended periods, seamlessly executing tasks articulated in terms that are intuitively understandable by human operators.
-
-방법 관련 발췌 — This enables GOAT to distinguish between different instances of the same category to enable navigation to targets specified by images and fine-grained language descriptions.
+GOAT는 물체 범주·이미지·자연어로 지정한 목표를 찾을 때 이전 탐색에서 쌓은 물체별 의미 기억을 재사용한다. [PDF 1쪽](https://www.roboticsproceedings.org/rss20/p073.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -50,13 +48,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 1 / I. INTRODUCTION - extractive body cue:** This enables GOAT to distinguish between different instances of the same category to enable navigation to targets specified by images and fine-grained language descriptions.
-- **p. 5 / V. RESULTS - extractive body cue:** GOAT w/o memory achieves 61% success rate with an SPL of only 0.19 compared to the 0.64 of GOAT.
-- **p. 5 / V. RESULTS - extractive body cue:** GOAT achieves 83% average success rate (94% for object categories, 86% for image goals, and 68% for language goals).
-- **p. 8 / Figure/Table caption - extractive body cue:** Fig. 6. Navigation performance based on sequential goal count. GOAT performance improves with experience in the environment: from a 60% success rate (0.2 SPL) at ...
-- **p. 4 / Figure/Table caption - extractive body cue:** Fig. 3. Perception and memory update. The perception system processes RGB-D input to infill depth, segment object instances, project them into a top-down semantic map, ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 서로 다른 시점에서 본 개별 물체의 모양과 위치를 저장해 같은 범주의 여러 물체도 구분한다. [PDF 3쪽](https://www.roboticsproceedings.org/rss20/p073.pdf#page=3) · [PDF 4쪽](https://www.roboticsproceedings.org/rss20/p073.pdf#page=4)
+- 실제 주거 환경에서 목표를 연이어 탐색하게 해 전체 성공률과 같은 환경에서 경험이 늘 때의 변화를 측정했다. [PDF 1쪽](https://www.roboticsproceedings.org/rss20/p073.pdf#page=1) · [PDF 5쪽](https://www.roboticsproceedings.org/rss20/p073.pdf#page=5)
 
 ## Evaluation Scope
 

@@ -19,9 +19,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — These assembly challenges are pervasive in daily life, as in scenarios like constructing LEGO models Chung et al.
-
-방법 관련 발췌 — For this novel task, we propose an end-to-end neural network, dubbed as Neural Assembler.
+Neural Assembler는 완성된 조립체의 여러 시점 영상을 보고 로봇팔이 따를 부품·자세·조립 순서를 생성한다. [PDF 1쪽](https://ojs.aaai.org/index.php/AAAI/article/download/33613/35768#page=1)
 
 ## Problem and Motivation
 
@@ -53,16 +51,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1 Introduction - extractive body cue:** For this novel task, we propose an end-to-end neural network, dubbed as Neural Assembler.
-- **p. 2 / 1 Introduction - extractive body cue:** We present two datasets for the proposed image-guided assembly task, namely the CLEVR-Assembly dataset and LEGO-Assembly dataset.
-- **p. 9 / 4 Experiments - extractive body cue:** As indicated in Table 3, the Neural Assembler achieves performance in real-world experiments close to the results obtained in simulated environments, demonstrating its robust applicability.
-- **p. 7 / 4 Experiments - extractive body cue:** As shown in Tables 1 and 2, the result shows that more perspectives as input can improve the performance.
-- **p. 7 / 4 Experiments - extractive body cue:** Neural Assembler outperforms baseline models in all metrics considered.
-- **p. 6 / 4 Experiments - extractive body cue:** This comparison is pivotal in underscoring the adaptability and accuracy of our model in 3D pose estimation, a crucial aspect in varied application domains.
-- **p. 8 / 4 Experiments - extractive body cue:** For instance, the more compact assembly of LEGO bricks results in increased occlusion.
-- **p. 8 / 4 Experiments - extractive body cue:** The results in Table 1 and Table 2 shows that Neural Assembler can yield more accurate results than other baselines.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 각 부품을 노드로, 부품 사이의 연결을 간선으로 추정한 그래프에서 조립 순서를 구한다. [PDF 1쪽](https://ojs.aaai.org/index.php/AAAI/article/download/33613/35768#page=1) · [PDF 3쪽](https://ojs.aaai.org/index.php/AAAI/article/download/33613/35768#page=3)
+- 조립 지시 생성 벤치마크를 만들고 장면 전체의 복원과 조립 단계별 예측을 따로 평가했다. [PDF 5쪽](https://ojs.aaai.org/index.php/AAAI/article/download/33613/35768#page=5) · [PDF 7쪽](https://ojs.aaai.org/index.php/AAAI/article/download/33613/35768#page=7)
 
 ## Evaluation Scope
 

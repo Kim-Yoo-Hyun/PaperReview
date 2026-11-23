@@ -20,9 +20,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — They demonstrate the effectiveness of training generalist models on web-scale data to enable strong generalization and fast adaptation to downstream tasks.
-
-방법 관련 발췌 — We introduce GR00T N1, an open foundation model for generalist humanoid robots.
+GR00T N1은 시각·언어 해석과 연속 행동 생성을 함께 학습하는 휴머노이드 정책으로, 실제 GR-1 양팔 조작까지 평가했다. [PDF 1쪽](https://arxiv.org/pdf/2503.14734v2#page=1)
 
 ## Problem and Motivation
 
@@ -56,16 +54,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** We introduce GR00T N1, an open foundation model for generalist humanoid robots.
-- **p. 2 / 1. Introduction - extractive body cue:** By unifying all data sources across the data pyramid, we construct a consistent dataset where the input consists of the robot state, visual observations, and ...
-- **p. 3 / 2. GR00T N1 Foundation Model - extractive body cue:** 1) for generalization and robustness; • We train a massively multi-task, language-conditioned policy that supports a wide range of robot embodiments and enables rapid adaptation ...
-- **p. 6 / 2.2. Training Data Generation - extractive body cue:** This enables generating training data that captures many more counterfactual scenarios in the real world without actually collecting teleoperation data for each of these cases ...
-- **p. 1 / 1. Introduction - extractive body cue:** Recent progress in robotic hardware, artificial intelligence, and accelerated computing has collectively paved the ground for developing general-purpose robot autonomy.
-- **p. 15 / 4.4. Quantitative Results - extractive body cue:** GR00T-N1-2B, achieves a significantly higher success rate across all tasks, outperforming Diffusion Policy by 32.4% in the 10% Data setting and by 30.4% in the ...
-- **p. 15 / 4.4. Quantitative Results - extractive body cue:** GR00T-N1-2B achieves a success rate of 76.6% (11.5/15) in the first coordinated setting and 73.3% (11/15) in the second setting involving novel object manipulation.
-- **p. 14 / 4.3. Experiment Setup - extractive body cue:** Evaluation Protocol For simulated benchmark evaluation, we report the average success rate over 100 trials, taking the maximum score of the last 5 checkpoints, where ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 시각언어모델의 표현을 확산 트랜스포머의 행동 생성에 연결하고 실제 로봇·합성 궤적·사람 영상으로 학습한다. [PDF 3쪽](https://arxiv.org/pdf/2503.14734v2#page=3) · [PDF 5쪽](https://arxiv.org/pdf/2503.14734v2#page=5)
+- 여러 로봇 형태의 시뮬레이션과 GR-1 언어 지시 조작을 별도로 평가해 실물에서는 작업 단계의 부분 점수도 측정했다. [PDF 1쪽](https://arxiv.org/pdf/2503.14734v2#page=1) · [PDF 14쪽](https://arxiv.org/pdf/2503.14734v2#page=14)
 
 ## Evaluation Scope
 

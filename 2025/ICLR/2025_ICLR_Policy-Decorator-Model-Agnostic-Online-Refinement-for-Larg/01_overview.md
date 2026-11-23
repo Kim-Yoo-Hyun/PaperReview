@@ -2,7 +2,7 @@
 
 > Evidence maturity: `FULL_TEXT_CHECKED` — 지정 절만 확인한 기록이며 전체 정독·실험 재현을 뜻하지 않는다.
 
-- Year/Venue
+- Year/Venue: 2025 / ICLR
 - Authors: Xiu Yuan, Tongzhou Mu, Stone Tao, Yunhao Fang, Zhang Zhang, Hao Su
 - Category: Robot Learning and Data
 - Primary track: RL, IL, offline learning, and robot data

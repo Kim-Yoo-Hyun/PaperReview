@@ -19,9 +19,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Our approach bridges online exploration with dynamically spatial memory updates for lifelong grounding. ries presents significant challenges, and methods for effectively leveraging such data remain an open problem.
-
-방법 관련 발췌 — Our main contributions can be summarized as follows: • We present MTU3D, bridging visual grounding and exploration for efficient and versatile embodied navigation. • We propose a unified objective that jointly optimizes ...
+MTU3D는 RGB-D 관측에서 목표 물체와 다음 탐색 지점을 함께 추정하는 언어 조건부 내비게이션 모델이다. [PDF 1쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Zhu_Move_to_Understand_a_3D_Scene_Bridging_Visual_Grounding_and_ICCV_2025_paper.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -53,16 +51,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 3 / Method - extractive body cue:** Our main contributions can be summarized as follows: • We present MTU3D, bridging visual grounding and exploration for efficient and versatile embodied navigation. • We ...
-- **p. 2 / 1. Introduction - extractive body cue:** To address these challenges, we propose Move to Understand (MTU3D), a unified framework that bridges visual grounding and exploration for versatile embodied navigation as shown ...
-- **p. 2 / 1. Introduction - extractive body cue:** Our approach introduces three key innovations:
-- **p. 3 / Method - extractive body cue:** When combined with a large vision-language model, serving as its trajectory generator, our approach improves the embodied question answering for LM-SR by 2.4% and LLM-SPL ...
-- **p. 6 / 4.2. Quantitative Results - extractive body cue:** While MTU3D significantly outperforms Embodied Video Agent [21] and SenseAct-NN Monolithic [37, 87], overall success rates remain lower than in GOAT-Bench and HM3D-OVON, highlighting SG3D's ...
-- **p. 6 / Figure/Table caption - extractive body cue:** Table 4. Sequential task navigation results on SG3D-Nav [87]. Multi-modal Lifelong Navigation. The results in Tab. 5 highlight the significant performance improvement of our MTU3D ...
-- **p. 7 / 4.3. Discussions - extractive body cue:** 4a show that VisionLanguage Exploration (VLE) Pre-training significantly improves navigation performance, as indicated by the SR across all datasets.
-- **p. 7 / 4.3. Discussions - extractive body cue:** 4b show that memory significantly improves SR across all goal types.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 누적된 물체 질의와 미탐색 경계의 질의를 같은 표현에 두어 목표가 보일 때와 보이지 않을 때의 결정을 함께 학습한다. [PDF 4쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Zhu_Move_to_Understand_a_3D_Scene_Bridging_Visual_Grounding_and_ICCV_2025_paper.pdf#page=4) · [PDF 5쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Zhu_Move_to_Understand_a_3D_Scene_Bridging_Visual_Grounding_and_ICCV_2025_paper.pdf#page=5)
+- 물체·언어·참조 이미지로 지정한 목표 탐색과 환경에 관한 질의응답을 여러 벤치마크에서 비교했다. [PDF 6쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Zhu_Move_to_Understand_a_3D_Scene_Bridging_Visual_Grounding_and_ICCV_2025_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Zhu_Move_to_Understand_a_3D_Scene_Bridging_Visual_Grounding_and_ICCV_2025_paper.pdf#page=7)
 
 ## Evaluation Scope
 

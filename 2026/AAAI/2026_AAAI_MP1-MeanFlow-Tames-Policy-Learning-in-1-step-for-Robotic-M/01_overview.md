@@ -19,9 +19,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, diffusion still faces challenges related to inference time.
-
-방법 관련 발췌 — Our contributions are as follows: • We introduce MP1, the first MeanFlow-based robot learning framework.
+MP1은 3D 점군에서 조건화한 평균 흐름을 학습해 신경망을 한 번 호출해 로봇 행동 궤적을 생성한다. [PDF 1쪽](https://ojs.aaai.org/index.php/AAAI/article/download/38919/42881#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / Abstract - extractive body cue:** Our contributions are as follows: • We introduce MP1, the first MeanFlow-based robot learning framework.
-- **p. 1 / Abstract - extractive body cue:** We validate our method on the Adroit and Meta-World benchmarks, as well as in real-world scenarios.
-- **p. 1 / Abstract - extractive body cue:** To address these limitations, we introduce MP1, which pairs 3D point-cloud inputs with the MeanFlow paradigm to generate action trajectories in one network function evaluation ...
-- **p. 2 / Abstract - extractive body cue:** We present the first adaptation of the MeanFlow (Geng et al.
-- **p. 3 / Abstract - extractive body cue:** To address these challenges, we propose the MP1 (Fig.
-- **p. 5 / Figure/Table caption - extractive body cue:** Table 1: Performance of different methods on 37 Tasks. We evaluate the performance of our method on 3 Adroit and 34 Meta- World tasks with ...
-- **p. 6 / Abstract - extractive body cue:** On the 21 "Easy" tasks in Meta-World, the proposed approach achieves a success rate of 88.2%, representing a 3.4% improvement over the FlowPolicy.
-- **p. 6 / Abstract - extractive body cue:** As the number of training steps increases, all methods demonstrate improved success rates; however, MP1 achieves faster convergence and higher final success rates across all ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- MeanFlow의 구간 평균 속도를 직접 학습하고 비슷한 장면의 상태 표현을 구분하는 보조 손실을 추가한다. [PDF 1쪽](https://ojs.aaai.org/index.php/AAAI/article/download/38919/42881#page=1) · [PDF 3쪽](https://ojs.aaai.org/index.php/AAAI/article/download/38919/42881#page=3)
+- Adroit·Meta-World와 실제 조작에서 성공률과 실행 시간을 측정해 여러 단계가 필요한 생성 정책과 비교했다. [PDF 6쪽](https://ojs.aaai.org/index.php/AAAI/article/download/38919/42881#page=6) · [PDF 7쪽](https://ojs.aaai.org/index.php/AAAI/article/download/38919/42881#page=7)
 
 ## Evaluation Scope
 

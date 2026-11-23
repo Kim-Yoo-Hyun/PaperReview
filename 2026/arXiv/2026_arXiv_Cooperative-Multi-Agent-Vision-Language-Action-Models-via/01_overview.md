@@ -2,7 +2,7 @@
 
 > Evidence maturity: `FULL_TEXT_CHECKED`. 지정 본문 절만 확인; 전체 정독·재현 아님.
 
-- Year/Venue
+- Year/Venue: 2026 / arXiv
 - Authors: Ruixiao Xu, Wong Lik Hang Kenny, Zhiqian Liu, Jianing Guo, Hanxiao Li, Kejian Shi, Shuning Zhang, Pu Feng, Yongjia Ma, Yuqing Ma, Kai Chen, Qi Dou, Yaodong Yang, Xianglong Liu, Simin Li
 - Category: VLA and Generalist Robot Policies
 - Primary track: VLA and generalist robot policies

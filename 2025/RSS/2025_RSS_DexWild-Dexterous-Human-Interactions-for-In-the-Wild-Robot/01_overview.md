@@ -19,9 +19,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — This lack of robustness remains a key limitation of current systems.
-
-방법 관련 발췌 — In this paper, we present DexWild, a system that enables effective learning of robust dexterous manipulation policies through co-training on human and robot demonstrations.
+DexWild는 사람이 직접 손으로 수행한 다양한 조작과 로봇 시연을 공동 학습해 새로운 환경에서 다지 손 정책의 일반화를 높인다. [PDF 1쪽](https://www.roboticsproceedings.org/rss21/p075.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. IyrRopuction - extractive body cue:** In this paper, we present DexWild, a system that enables effective learning of robust dexterous manipulation policies through co-training on human and robot demonstrations.
-- **p. 2 / 1. IyrRopuction - extractive body cue:** 1) Scalable Data Collection System: A novel humanembodiment DexWild-System that enables untrained operators fo quickly collect 9,290 demonstrations across 93 diverse environments, achieving 4.6% speedup ...
-- **p. 3 / C. Human Action Tracking Systems - extractive body cue:** We introduce DexWild-System, a user-friendly, high-fidelity platform for efficiently gathering natural human hhand demonstrations across diverse real-world settings.
-- **p. 3 / A. Data Collection System - extractive body cue:** As shown in Figure 2, DexWild-System consists of only three components: a single tracking camera for wrist pose estimation, a battery-powered mini-PC for onboard data ...
-- **p. 4 / A. Data Collection System - extractive body cue:** Although DexWildSystem consists of only a few portable components, we make ‘no compromises on data fidelity.
-- **p. 6 / V. ANALYSIS AND RI - extractive body cue:** In our evaluations, we seek to investigate the following key questions: 1) How effectively does DexWild leverage human data to achieve strong in-the-wild performance?
-- **p. 8 / Figure/Table caption - extractive body cue:** Fig. 7: Left: Cross-Task Performance - Evaluating DexWild on the Cross-Embodiment Performance ~ Testing DexWild policy on the Orig = Demonstrating improved DexWild performance as ...
-- **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1: DexWild enables dexterous policies to generalize to new objects, scenes, and embodiments. This is achieved by leveraging large-scale, real-world human embodiment data collected ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 현장에서 사람이 착용할 수 있는 이동식 수집 장치를 만들고 사람·로봇 시연을 함께 학습하는 절차를 제시했다. [PDF 1쪽](https://www.roboticsproceedings.org/rss21/p075.pdf#page=1) · [PDF 3쪽](https://www.roboticsproceedings.org/rss21/p075.pdf#page=3)
+- 처음 보는 환경과 다른 로봇 형태에서 평가하고 사람·로봇 자료를 함께 쓸 때와 한 자료만 쓸 때를 비교했다. [PDF 6쪽](https://www.roboticsproceedings.org/rss21/p075.pdf#page=6) · [PDF 8쪽](https://www.roboticsproceedings.org/rss21/p075.pdf#page=8)
 
 ## Evaluation Scope
 

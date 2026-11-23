@@ -19,9 +19,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, due to the limited rendering quality and diversity of simulators, these approaches often encounter the "sim-to-teal" gap and suffer from poor generalization across diverse navigation tasks (27, 5, 38].
-
-방법 관련 발췌 — However, our goal is to train and ‘evaluate our method on mainstream datasets to clearly justify the performance of our approach.
+Uni-NaVid는 언어 지시와 RGB 영상 스트림을 받아 서로 다른 내비게이션 과제를 하나의 시각언어행동 모델로 수행한다. [PDF 1쪽](https://www.roboticsproceedings.org/rss21/p013.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -54,16 +52,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 3 / 1. Ivrropuction - extractive body cue:** However, our goal is to train and ‘evaluate our method on mainstream datasets to clearly justify the performance of our approach.
-- **p. 2 / 1. Ivrropuction - extractive body cue:** ‘We conduct extensive experiments on benchmarks across the aforementioned four navigation tasks and compared our method with strong baselines specifically designed for each task.
-- **p. 1 / Abstract - extractive body cue:** To efficiently process extensive RGB video streams, we propose an online token merge strategy that spatially and {temporally consolidates similar visual information which improves the ...
-- **p. 1 / Abstract - extractive body cue:** To this end, we present Uni 2 video-based vision-language-action (VLA) ‘model to unify different paradigms of navigation tasks and improve navigation performance by encouraging the ...
-- **p. 2 / 1. Ivrropuction - extractive body cue:** To this end, we propose an online token merging mechanism to compress near historical frames with a relatively low ratio while compressing far
-- **p. 8 / B. Individual Task Results - extractive body cue:** The results in Table V demonstrate that our method achieves significant improvement over the zero-shot method (VLFM [93] and even outperforms the fine-tuned method (DAgRL+0D ...
-- **p. 8 / B. Individual Task Results - extractive body cue:** significant improvements, with a +25.7% increase in Success Rate (SR) on R2R.
-- **p. 11 / C. Qualitative Results in Real-World - extractive body cue:** The results demonstrate the synergistic benefits of multi-task learning, which yields consistent performance improvements across all navigation tasks, Notably, VLN, ObjectNav, and EQA exhibit more ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 공간·시간상 유사한 시각 토큰을 온라인에서 병합해 긴 관측 이력을 처리한다. [PDF 4쪽](https://www.roboticsproceedings.org/rss21/p013.pdf#page=4) · [PDF 5쪽](https://www.roboticsproceedings.org/rss21/p013.pdf#page=5)
+- 언어 경로 추종, 목표 물체 탐색, 체화 질의응답, 사람 따라가기를 과제별 벤치마크에서 평가했다. [PDF 8쪽](https://www.roboticsproceedings.org/rss21/p013.pdf#page=8) · [PDF 9쪽](https://www.roboticsproceedings.org/rss21/p013.pdf#page=9)
 
 ## Evaluation Scope
 

@@ -19,9 +19,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, some bottlenecks were still not addressed in the work - simulation was on GPU but physics state was copied back to CPU.
-
-방법 관련 발췌 — To address these bottlenecks, we present Isaac Gym - an end-to-end high performance robotics simulation platform.
+Isaac Gym은 물리 시뮬레이션과 정책 학습을 한 GPU에 배치해 다수의 로봇 환경을 병렬로 실행한다. [PDF 1쪽](https://datasets-benchmarks-proceedings.neurips.cc/paper/2021/file/28dd2c7955ce926456240b2ff0100bde-Paper-round2.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -53,16 +51,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 5 / 1 Introduction - extractive body cue:** To address these bottlenecks, we present Isaac Gym - an end-to-end high performance robotics simulation platform.
-- **p. 9 / 2 Background - extractive body cue:** Rigid body state consists of position, orientation (quaternion), linear velocity, and angular velocity.
-- **p. 5 / 1 Introduction - extractive body cue:** It runs an end-to-end GPU accelerated training pipeline, which allows researchers to overcome the aforementioned limitations and achieves 2-3 orders of magnitude of training speed-up ...
-- **p. 9 / 2 Background - extractive body cue:** In the code snippet below we show how to access them through the API. # Acquire tensor descriptors # - Raw storage buffer independent of ...
-- **p. 6 / 2 Background - extractive body cue:** Isaac Gym was developed to maximize the throughput of physics-based machine learning algorithms with particular emphasis on simulations that require large numbers of environment instances ...
-- **p. 31 / A.4.2 OpenAI Observations - extractive body cue:** LSTMs Using sequence networks like LSTMs improve the performance and we find that we are able to achieve 37 consecutive successful cube rotations after training ...
-- **p. 15 / Figure/Table caption - extractive body cue:** Figure 9: Locomotion environments and the corresponding reward curves. improvements continue to happen as more experience is collected. Additionally, we find that the horizon length ...
-- **p. 7 / Figure/Table caption - extractive body cue:** Figure 3: (a) Traditional RL experience collection pipelines often use CPU based physics engines which quickly become the bottleneck. (b) In contrast, Isaac Gym not ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 시뮬레이터 물리 버퍼를 PyTorch 텐서에 직접 연결해 관측·행동을 매번 CPU로 복사하는 비용을 줄인다. [PDF 1쪽](https://datasets-benchmarks-proceedings.neurips.cc/paper/2021/file/28dd2c7955ce926456240b2ff0100bde-Paper-round2.pdf#page=1) · [PDF 2쪽](https://datasets-benchmarks-proceedings.neurips.cc/paper/2021/file/28dd2c7955ce926456240b2ff0100bde-Paper-round2.pdf#page=2)
+- 시뮬레이션 환경 수와 학습 시간을 측정하고 Shadow Hand와 Allegro Hand 등에서 손안 물체 회전 정책을 학습했다. [PDF 5쪽](https://datasets-benchmarks-proceedings.neurips.cc/paper/2021/file/28dd2c7955ce926456240b2ff0100bde-Paper-round2.pdf#page=5) · [PDF 8쪽](https://datasets-benchmarks-proceedings.neurips.cc/paper/2021/file/28dd2c7955ce926456240b2ff0100bde-Paper-round2.pdf#page=8)
 
 ## Evaluation Scope
 

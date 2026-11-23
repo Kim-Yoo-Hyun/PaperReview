@@ -20,9 +20,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Our findings reveal a challenge and opportunity for the community - the search for a PVR that is universally dominant (or "foundational") for EAI calls for innovations in architecture, learning paradigm, data ...
-
-방법 관련 발췌 — The visual cortex is a region of an organism's brain, which together with the motor cortex, enables sight to be converted into movement.
+CortexBench는 사전학습 시각 표현의 성능이 로봇 과제에 따라 달라지는지 비교하고 공통 시각 모델 VC-1의 적용 범위를 측정한다. [PDF 1쪽](https://proceedings.neurips.cc/paper_files/paper/2023/file/022ca1bed6b574b962c48a2856eb207b-Paper-Conference.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -56,16 +54,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 1 / 1 Introduction - extractive body cue:** The visual cortex is a region of an organism's brain, which together with the motor cortex, enables sight to be converted into movement.
-- **p. 1 / 1 Introduction - extractive body cue:** In this work, we ask the same question that Fukushima [1, 2] asked nearly 50 years ago - how do we design an artificial visual ...
-- **p. 2 / 1 Introduction - extractive body cue:** The exhaustiveness of this study enables us to draw conclusions with unprecedented scope and confidence.
-- **p. 17 / A.2 Overview of Downstream Policy Learning in CORTEXBENCH - extractive body cue:** We present an evaluation of object navigation (ObjectNav) using the HM3D-SEM dataset [61].
-- **p. 17 / A.2 Overview of Downstream Policy Learning in CORTEXBENCH - extractive body cue:** The dataset was collected using Habitat-Web [61, 71] and Amazon Mechanical Turk, and consists of 77k demonstrations for 80 scenes from the HM3D-SEM dataset [69].
-- **p. 2 / Figure/Table caption - extractive body cue:** Figure 1: An artificial visual cortex for embodied in- telligence must support a diverse range of sensorimotor skills, environments, and embodiments; we curate COR- TEXBENCH ...
-- **p. 8 / Results - extractive body cue:** Specifically, we see an improvement in ObjectNav success rate (SR) of +7.4 (60.3 →67.7), ImageNav SR of +11.3 (70.3 →81.6), and Mobile Pick SR of ...
-- **p. 8 / Results - extractive body cue:** In domains that involve large-scale IL or RL (ObjectNav, ImageNav, and Mobile Pick), the strategy proposed in [5] of adapting VC-1 with E2E fine-tuning significantly ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 이동·내비게이션·정교한 조작·모바일 조작을 포함한 평가 묶음을 만들고 사전학습 데이터 규모와 구성의 효과를 비교했다. [PDF 4쪽](https://proceedings.neurips.cc/paper_files/paper/2023/file/022ca1bed6b574b962c48a2856eb207b-Paper-Conference.pdf#page=4) · [PDF 6쪽](https://proceedings.neurips.cc/paper_files/paper/2023/file/022ca1bed6b574b962c48a2856eb207b-Paper-Conference.pdf#page=6)
+- VC-1은 비교 대상 중 평균 성능이 높았지만 모든 과제에서 우세하지 않았고 과제별 적응을 거치면 성능이 개선됐다. [PDF 1쪽](https://proceedings.neurips.cc/paper_files/paper/2023/file/022ca1bed6b574b962c48a2856eb207b-Paper-Conference.pdf#page=1)
 
 ## Evaluation Scope
 

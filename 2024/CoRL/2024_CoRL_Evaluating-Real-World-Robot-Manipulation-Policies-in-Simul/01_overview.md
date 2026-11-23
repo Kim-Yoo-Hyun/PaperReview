@@ -19,9 +19,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, performing simulated evaluations for robotic manipulation poses additional challenges due to the diverse interactions between agent and environment.
-
-방법 관련 발췌 — In summary, our contributions are as follows: • We introduce SIMPLER, a suite of simulated evaluation environments for commonly-used real robot manipulation setups. • We address the challenges inherent in simulated manipulation ...
+SIMPLER는 로봇 정책의 시뮬레이션 평가가 실물 성능과 순위를 어느 조건에서 반영하는지 실제 시행과 짝지어 검증한다. [PDF 1쪽](https://raw.githubusercontent.com/mlresearch/v270/d9fe509ba390176a5fd650178a381a0a7b2d4f64/assets/li25c/li25c.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -54,16 +52,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / I. INTRODUCTION - extractive body cue:** In summary, our contributions are as follows: • We introduce SIMPLER, a suite of simulated evaluation environments for commonly-used real robot manipulation setups. • We ...
-- **p. 1 / I. INTRODUCTION - extractive body cue:** In this work, we propose simulated evaluation as a possible answer, in which manipulation policies trained on real data are evaluated in purpose-built simulated environments ...
-- **p. 2 / I. INTRODUCTION - extractive body cue:** 2: We introduce SIMPLER, a suite of open-source simulated evaluation environments for common real robot manipulation setups, namely the Google Robot evaluations from the RT-series ...
-- **p. 1 / Body text (section boundary not confidently recovered) - extractive body cue:** Our approach yields a strong correlation between real-world and simulated performance (right) for various open-source robot policies [6, 11, 50] across two commonly used robot ...
-- **p. 10 / 2) Can simulated evaluations not only capture the perfor - extractive body cue:** Thus, the approaches we introduced in Section IV-B for narrowing the visual gap between simulated and real scene can significantly improve real-andsim evaluation performance correlation, ...
-- **p. 7 / 2) Can simulated evaluations not only capture the perfor - extractive body cue:** For Octo simulated evaluations, since the model involves a non-deterministic diffusion head, we average its success rates across three different random seeds to produce a ...
-- **p. 7 / 2) Can simulated evaluations not only capture the perfor - extractive body cue:** We observe a strong correlation between the relative performances in simulation and in the real world across most policy checkpoints 0.0 0.2 0.4 0.6 0.8 ...
-- **p. 8 / 2) Can simulated evaluations not only capture the perfor - extractive body cue:** For simulated results and realworld results, we report the difference in success rate with and without each distribution shift: ∆Success(shift) = 1 2 2 X ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 제어 차이를 줄이고, 실물의 외형을 맞추거나 여러 시각 변형을 집계하는 방법을 비교했다. [PDF 4쪽](https://raw.githubusercontent.com/mlresearch/v270/d9fe509ba390176a5fd650178a381a0a7b2d4f64/assets/li25c/li25c.pdf#page=4) · [PDF 6쪽](https://raw.githubusercontent.com/mlresearch/v270/d9fe509ba390176a5fd650178a381a0a7b2d4f64/assets/li25c/li25c.pdf#page=6)
+- 두 가지 로봇 형태와 여덟 과제군에서 실물·시뮬레이션 결과를 대조해 정책 성능의 상관과 분포 변화에 대한 민감성을 측정했다. [PDF 1쪽](https://raw.githubusercontent.com/mlresearch/v270/d9fe509ba390176a5fd650178a381a0a7b2d4f64/assets/li25c/li25c.pdf#page=1) · [PDF 7쪽](https://raw.githubusercontent.com/mlresearch/v270/d9fe509ba390176a5fd650178a381a0a7b2d4f64/assets/li25c/li25c.pdf#page=7)
 
 ## Evaluation Scope
 

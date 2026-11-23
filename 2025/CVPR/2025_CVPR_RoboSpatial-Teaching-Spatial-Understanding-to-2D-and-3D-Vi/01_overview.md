@@ -19,9 +19,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — These limitations highlight an ongoing challenge: bridging the gap between surface-level scene description and the deeper spatial comprehension necessary for intuitive interThis CVPR paper is the Open Access version, provided by the ...
-
-방법 관련 발췌 — The output is a spatial reasoning dataset D, where each entry di = hIi, qi, ai, lii consists of an image Ii, a question qi, an answer ai, and a reference frame ...
+RoboSpatial은 실제 실내·탁상 장면의 3D 스캔과 2D 영상을 짝지어 로봇이 서로 다른 기준 좌표계에서 공간 관계를 학습하게 한다. [PDF 1쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Song_RoboSpatial_Teaching_Spatial_Understanding_to_2D_and_3D_Vision-Language_Models_CVPR_2025_paper.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -30,7 +28,7 @@
 - **p. 1 / Abstract - extractive body cue:** However, these models face significant challenges in spatial reasoning tasks, as their training data are based on general-purpose image datasets that often lack sophisticated spatial ...
 - **p. 1 / Abstract - extractive body cue:** For example, datasets frequently do not capture reference frame comprehension, yet effective spatial reasoning requires understanding whether to reason from ego-, world- , or object-centric ...
 - **p. 1 / Abstract - extractive body cue:** To address this issue, we introduce ROBOSPATIAL, a large-scale dataset for spatial understanding in robotics.
-- **p. 1 / 1. Introduction - extractive body cue:** These limitations highlight an ongoing challenge: bridging the gap between surface-level scene description and the deeper spatial comprehension necessary for intuitive interThis CVPR paper is ...
+- **p. 1–2 / 1. Introduction - 원문 대조 요지:** 장면에 보이는 것을 설명하는 능력만으로는 실제 상호작용에 필요한 공간 관계를 판단하기 어렵다.
 - **p. 1 / 1. Introduction - extractive body cue:** Furthermore, a critical limitation of existing VLM training datasets is their inability to capture reference frame understanding (ref. frame) - the way we interpret spatial ...
 
 ## Core Idea
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 4 / 3.2. Dataset Generation - extractive body cue:** The output is a spatial reasoning dataset D, where each entry di = hIi, qi, ai, lii consists of an image Ii, a question qi, ...
-- **p. 1 / 1. Introduction - extractive body cue:** This illustration demonstrates how a model trained on ROBOSPATIAL enables human-aligned spatial reasoning within the correct reference frame, supporting task grounding, planning, and detection for ...
-- **p. 4 / 3.1. Spatial Relationships - extractive body cue:** Configuration enables robots to understand and interpret the relative positioning of objects, which is crucial for directing navigation, manipulation, and interaction within complex environments.
-- **p. 5 / 3.2. Dataset Generation - extractive body cue:** The simulation allows for translation and in-plane rotation of the object.
-- **p. 2 / Dataset - extractive body cue:** Results demonstrate that models trained on ROBOSPATIAL exhibit significantly improved spatial reasoning capabilities, consistently outperforming baseline methods on the evaluation benchmark ROBOSPATIAL-Val, a held-out validation ...
-- **p. 8 / 4.3. Real Robot Experiments - extractive body cue:** Experiments show that LLaVA-NeXT fine-tuned on ROBOSPATIAL achieves the highest success rate across all models.
-- **p. 6 / 4.1.3. Cross-Dataset Generalization Evaluation - extractive body cue:** Despite differing object distributions and scene layouts, we observe a positive synergy between indoor and tabletop environments: training on one environment type improves spatial reasoning ...
-- **p. 8 / 4.2. Results - extractive body cue:** 3 suggest that 3D VLMs tend to outperform 2D counterparts in spatial reasoning tasks, likely due to their ability to directly utilize depth information.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 카메라·세계·물체 기준의 위치 관계를 구분해 같은 장면에서 공간 질의와 정답을 생성했다. [PDF 4쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Song_RoboSpatial_Teaching_Spatial_Understanding_to_2D_and_3D_Vision-Language_Models_CVPR_2025_paper.pdf#page=4) · [PDF 5쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Song_RoboSpatial_Teaching_Spatial_Understanding_to_2D_and_3D_Vision-Language_Models_CVPR_2025_paper.pdf#page=5)
+- 공간 관계·물체 배치 가능성 예측을 비교하고, 실제 로봇에서 공간 지시에 맞춰 물체를 놓는 과제를 평가했다. [PDF 7쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Song_RoboSpatial_Teaching_Spatial_Understanding_to_2D_and_3D_Vision-Language_Models_CVPR_2025_paper.pdf#page=7) · [PDF 8쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Song_RoboSpatial_Teaching_Spatial_Understanding_to_2D_and_3D_Vision-Language_Models_CVPR_2025_paper.pdf#page=8)
 
 ## Evaluation Scope
 
@@ -94,7 +84,7 @@
 
 > Cross-checked on 2026-09-03 against the validated PDF body (13 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
 
-- **Problem/bottleneck:** These limitations highlight an ongoing challenge: bridging the gap between surface-level scene description and the deeper spatial comprehension necessary for intuitive interThis CVPR paper is the Open Access version, provided ... (p. 1, 1. Introduction).
+- **Problem/bottleneck:** 장면에 보이는 것을 설명하는 능력만으로는 실제 상호작용에 필요한 공간 관계를 판단하기 어렵다. (PDF 1–2쪽).
 - **Actual contribution:** This illustration demonstrates how a model trained on ROBOSPATIAL enables human-aligned spatial reasoning within the correct reference frame, supporting task grounding, planning, and detection for manipulation tasks. (p. 1, 1. Introduction).
 - **Evaluation boundary:** Results demonstrate that models trained on ROBOSPATIAL exhibit significantly improved spatial reasoning capabilities, consistently outperforming baseline methods on the evaluation benchmark ROBOSPATIAL-Val, a held-out validation subset ... (p. 2, Dataset).
 - **Explicit failure boundary:** To mitigate failure cases arising from poor object grounding, we also include an auxiliary grounding dataset during training, which provides additional supervision for object reference resolution. (p. 5, 4.1. Setup).

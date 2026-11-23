@@ -19,9 +19,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Existing GPU simulators have limitations that hinder the generalization and scalability of previous. work These simulators lack support for heterogeneous simulation, Where each parallel environment contains different scenes Additionally ...
-
-방법 관련 발췌 — We propose ManiSkill3 to address past imitations and open source the framework under the Apache-2.0 license, building upon past work in ManiSkill 1 and 2 (38, 19}.
+ManiSkill3는 접촉이 많은 로봇 과제를 위해 물리 시뮬레이션과 시각 렌더링을 GPU에서 병렬 실행하는 플랫폼이다. [PDF 1쪽](https://www.roboticsproceedings.org/rss21/p021.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 1 / 1. INTRODUCTION - extractive body cue:** We propose ManiSkill3 to address past imitations and open source the framework under the Apache-2.0 license, building upon past work in ManiSkill 1 and 2 ...
-- **p. 1 / 1. INTRODUCTION - extractive body cue:** The core contributions of ManiSkillS that set it apart from existing simulators are as follows:
-- **p. 2 / 1. INTRODUCTION - extractive body cue:** Importantly, extensive documentation/tutorials are provided to teach users on how to add new environments/robots, as well as how to make opensource contributions to expand the ...
-- **p. 3 / 5) Scalable Dataset Generation Pipeline from Few - extractive body cue:** ‘The design of ManiSkill3 enables support for many different kinds of task categories via a flexible task-building API.
-- **p. 3 / B. GPU Parallelized Simulation and Rendering - extractive body cue:** In particular, with 128 parallel environments for the benchmarked task, ManiSkill3 uses just 3.5GB of GPU memory whereas Isic Lab uses 14.1GB. ‘The memory efficiency ...
-- **p. 18 / Figure/Table caption - extractive body cue:** Fig. 25: Evaluated success rates of generalist robotics models like Octo and RT-IX on 4 different tasks. The correlation and MMRV metrics are close to ...
-- **p. 8 / Figure/Table caption - extractive body cue:** Fig. 11: Wall-clock training time of PPO on GPU/CPU sim- ulation showing the average success rate over time across 5 seeds. Shaded areas correspond to ...
-- **p. 9 / Figure/Table caption - extractive body cue:** Fig. 13: Koch pick-cube sim and real success rates on the grasp cube subtask as well as the full success consisting of grasping, lifting, and ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 서로 다른 장면의 병렬 실행과 RGB·점군 등 여러 관측 방식을 지원해 시각 정책의 데이터 수집과 학습에 쓸 수 있다. [PDF 1쪽](https://www.roboticsproceedings.org/rss21/p021.pdf#page=1) · [PDF 3쪽](https://www.roboticsproceedings.org/rss21/p021.pdf#page=3)
+- 다양한 로봇 환경에서 시뮬레이션 속도·메모리와 강화학습·시연 학습 기준선의 성능을 보고했다. [PDF 1쪽](https://www.roboticsproceedings.org/rss21/p021.pdf#page=1) · [PDF 7쪽](https://www.roboticsproceedings.org/rss21/p021.pdf#page=7)
 
 ## Evaluation Scope
 

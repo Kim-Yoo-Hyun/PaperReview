@@ -19,9 +19,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — At a coarse level the task of identifying individual objects to manipulate can be solved by instance segmentation, as demonstrated in the Amazon Robotics Challenge (ARC) [4, 5] or [6].
-
-방법 관련 발췌 — We believe our largest contribution is that we introduce dense descriptors as a representation useful for robotic manipulation.
+Dense Object Nets는 여러 시점에서 같은 물체 지점에 대응하는 픽셀 표현을 자기지도 방식으로 학습해 지정한 점을 잡는다. [PDF 1쪽](https://proceedings.mlr.press/v87/florence18a/florence18a.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1 Introduction - extractive body cue:** We believe our largest contribution is that we introduce dense descriptors as a representation useful for robotic manipulation.
-- **p. 1 / 1 Introduction - extractive body cue:** In this paper, we propose and demonstrate using dense visual description as a representation for robotic manipulation.
-- **p. 4 / 3 Methodology - extractive body cue:** To achieve distinctness, we introduce three strategies: i.
-- **p. 1 / 1 Introduction - extractive body cue:** Towards this goal, we also provide practical contributions to dense visual descriptor learning with general computer Code, data, and video available: github.com/RobotLocomotion/pytorch-dense-correspondence 2nd Conference on ...
-- **p. 4 / 3 Methodology - extractive body cue:** We want to emphasize that automatic object masking enables many other techniques in this paper, including: background domain randomization, cross-object loss, and synthetic multi-object scenes.
-- **p. 7 / 5 Results - extractive body cue:** For the most part, 3dimensional descriptor spaces were sufficient to achieve saturated (did not improve with higher-dimension) correspondence precision for single objects, yet this is ...
-- **p. 6 / 5 Results - extractive body cue:** Our new standard single-object training procedure (standard-SO) performs significantly better than our implementation of prior work's training procedures (Schmidt), and we isolate and measure significant ...
-- **p. 7 / 5 Results - extractive body cue:** Given that we can separate objects in descriptor space, we next investigate: does the introduction of object distinctness significantly limit the ability of the models ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 3D 관측에서 얻은 픽셀 대응을 대조 손실에 사용하고 여러 물체의 표현을 구분하거나 공유하도록 학습 조건을 바꾼다. [PDF 3쪽](https://proceedings.mlr.press/v87/florence18a/florence18a.pdf#page=3) · [PDF 4쪽](https://proceedings.mlr.press/v87/florence18a/florence18a.pdf#page=4)
+- 물체의 자세와 변형이 달라진 장면에서 사용자가 지정한 지점을 다시 찾아 로봇으로 잡는 실험을 했다. [PDF 7쪽](https://proceedings.mlr.press/v87/florence18a/florence18a.pdf#page=7) · [PDF 8쪽](https://proceedings.mlr.press/v87/florence18a/florence18a.pdf#page=8)
 
 ## Evaluation Scope
 

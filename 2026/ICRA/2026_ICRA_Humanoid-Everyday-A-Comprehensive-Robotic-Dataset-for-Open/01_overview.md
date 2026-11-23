@@ -3,7 +3,7 @@
 > Evidence maturity: `ABSTRACT_CHECKED`.
 > Source audit: 2026-11-16: arXiv abstract·공식 project/repository 확인. abstract 기반 — 본문 수동 확인 필요. ICRA 게재는 공식 근거 확인 대기.
 
-- Year/Venue
+- Year/Venue: 2026 / ICRA
 - Authors: Zhenyu Zhao, Hongyi Jing, Xiawei Liu, Jiageng Mao, Abha Jha, Hanwen Yang, Rong Xue, Sergey Zakharov, Vitor Guizilini, Yue Wang
 - Primary track: RL, IL, offline learning, and robot data
 - Tags: robot-data, humanoid, loco-manipulation, multimodal, Benchmark

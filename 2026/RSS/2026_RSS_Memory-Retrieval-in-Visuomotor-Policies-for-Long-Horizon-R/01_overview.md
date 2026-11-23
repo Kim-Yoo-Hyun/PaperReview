@@ -19,9 +19,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, directly applying attention-based memory retrieval to long-horizon robotic imitation learning via offline data exposes two fundamental challenges.
-
-방법 관련 발췌 — To address these challenges, we propose HALO: HistoryAware visuomotor policy for LOng-horizon robotic imitation learning.
+HALO는 긴 조작 중 과거 정보가 필요한 시점에 시연 이력에서 관련 장면을 찾아 행동을 결정한다. [PDF 1쪽](https://www.roboticsproceedings.org/rss22/p010.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / I. INTRODUCTION - extractive body cue:** To address these challenges, we propose HALO: HistoryAware visuomotor policy for LOng-horizon robotic imitation learning.
-- **p. 2 / I. INTRODUCTION - extractive body cue:** Across these settings, we show that VQA-induced task priors provide a general solution, improving absolute task success by 7% on average across diverse tasks and ...
-- **p. 1 / Abstract - extractive body cue:** To address both challenges, we introduce HALO, a visuomotor policy with an attention-based memory retrieval mechanism for long-horizon control.
-- **p. 1 / I. INTRODUCTION - extractive body cue:** This motivates the development of a general memory retrieval mechanism that can be learned end-to-end, rather than tailored to individual tasks or modalities [6]-[9].
-- **p. 8 / IV. EXPERIMENTS - extractive body cue:** Cotraining VQA and action prediction achieves 64% success, outperforming pretrain-then-finetune (44%) and no-VQA training (42%) by 20 and 22 points, respectively.
-- **p. 7 / IV. EXPERIMENTS - extractive body cue:** Compared to hand-designed features, HALO achieves an absolute improvement of 12%.
-- **p. 8 / IV. EXPERIMENTS - extractive body cue:** A moderate value (k = 8) achieves the best performance (52% success).
-- **p. 7 / IV. EXPERIMENTS - extractive body cue:** Compared to SAM2Act++, HALO improves average task success by 21% points.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 시연에서 기억 의존형 영상 질문과 정답을 만들어 정책의 행동 학습과 공동 학습한다. [PDF 4쪽](https://www.roboticsproceedings.org/rss22/p010.pdf#page=4) · [PDF 5쪽](https://www.roboticsproceedings.org/rss22/p010.pdf#page=5)
+- 현재 결정에 관련된 일부 과거 토큰만 읽는 희소 어텐션을 사용해 실행 오차가 기억을 따라 누적되는 문제를 다뤘다. [PDF 4쪽](https://www.roboticsproceedings.org/rss22/p010.pdf#page=4) · [PDF 5쪽](https://www.roboticsproceedings.org/rss22/p010.pdf#page=5)
 
 ## Evaluation Scope
 

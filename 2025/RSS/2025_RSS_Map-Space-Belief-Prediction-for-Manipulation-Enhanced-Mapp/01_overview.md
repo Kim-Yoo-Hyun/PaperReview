@@ -19,9 +19,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, their approach relies on a fixed camera, lacks a ong-term map, and rebuilds environmental knowledge from seratch with each observation.
-
-방법 관련 발췌 — Therefore, we propose Calibrated Neural-Accelerated Belief Updates (CNABUs) to learn a belief propagation model that generalizes to novel scenarios and provides confidence: calibrated predictions for unknown areas.
+선반의 가려진 물체를 찾기 위해 관측 시점 변경과 물체 이동이 의미 지도에 가져올 정보 이득을 예측한다. [PDF 1쪽](https://www.roboticsproceedings.org/rss21/p039.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 1 / Abstract - extractive body cue:** Therefore, we propose Calibrated Neural-Accelerated Belief Updates (CNABUs) to learn a belief propagation model that generalizes to novel scenarios and provides confidence: calibrated predictions for ...
-- **p. 2 / 2. The proticted elit map is visualized - extractive body cue:** An implementation of our method can be found on Github!.
-- **p. 2 / A. Next Best Viewpoint Planning - extractive body cue:** Generally, NBV consists of two steps: First sampling view candidates, then evaluating which candidate is the best.
-- **p. 3 / A. Overview - extractive body cue:** ‘These models are trained using simulated ground truth to approximate occlusion reasoning and interaction dynamics, ie., Dyn, Object sizes, classes, occlusion levels, and manipulation effects ...
-- **p. 4 / B. Neural Map Belief Dynamics - extractive body cue:** We propose to solve the map-space POMDP by using a A-step receding horizon greedy planner, as shown in Fig.
-- **p. 14 / B. CNABU Implementation Details - extractive body cue:** The mfoU serves as a measure of the correctness of the predicitons, while the mECE measures the confidence calibration of these predictions, i.e., how well ...
-- **p. 8 / B. Simulation Experiments - extractive body cue:** Our method uses pushing to achieve significantly higher mloUs.
-- **p. 6 / V. EXPERIMENTS - extractive body cue:** We perform four core experiments to evaluate our approach, First, we test in simulation to highlight our pipeline's improvements in map completeness and accuracy compared ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- CNABU는 격자 지도의 믿음 상태를 갱신하면서 미관측 영역의 불확실성을 교정해 다음 행동의 가치를 계산한다. [PDF 3쪽](https://www.roboticsproceedings.org/rss21/p039.pdf#page=3) · [PDF 4쪽](https://www.roboticsproceedings.org/rss21/p039.pdf#page=4)
+- 시뮬레이션에서 지도의 완전성과 정확도를 비교하고 실제로 어지럽혀진 선반에서 추가 학습 없이 계획을 실행했다. [PDF 1쪽](https://www.roboticsproceedings.org/rss21/p039.pdf#page=1) · [PDF 6쪽](https://www.roboticsproceedings.org/rss21/p039.pdf#page=6)
 
 ## Evaluation Scope
 

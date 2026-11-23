@@ -19,9 +19,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, this discretization hinders fine-grained camera control and manipulation, as it fails to connect high-level semantics with the continuous camera pose space.
-
-방법 관련 발췌 — In summary, our contributions are threefold: • We propose SaPaVe, a novel end-to-end framework that first achieves active manipulation with a bottom-up learning strategy in a data-efficient way. • We introduce ActiveViewPose-200K, ...
+SaPaVe는 카메라 이동과 로봇팔 동작을 별도 출력으로 학습해 지시에 맞는 시점을 확보하면서 물체를 조작한다. [PDF 1쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Liu_SaPaVe_Towards_Active_Perception_and_Manipulation_in_Vision-Language_Action_Models_CVPR_2026_paper.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -29,7 +27,7 @@
 - **p. 1 / Abstract - extractive body cue:** Existing methods struggle to unify semantic-driven perception actively with robust, viewpoint-invariant execution accordingly.
 - **p. 1 / Abstract - extractive body cue:** To this end, we propose SaPaVe, an end-to-end framework that jointly learns these capabilities in a data-efficient manner.
 - **p. 1 / Abstract - extractive body cue:** Central to our approach is a decoupling of camera and manipulation actions, contrary to shared-action-space, and learning in a bottom-up strategy: we first train semantic ...
-- **p. 1 / Abstract - extractive body cue:** To support this, we introduce ActiveViewPose-200K, comprising † Corresponding author ‡ Project leader 200k image-language-camera movement pairs for semantic camera movement learning, and a 3D ...
+- **p. 1 / Abstract - 원문 대조 요지:** ActiveViewPose-200K는 영상·언어와 카메라 움직임을 짝지은 20만 개의 예시를 제공한다.
 - **p. 2 / 1. Introduction - extractive body cue:** However, this discretization hinders fine-grained camera control and manipulation, as it fails to connect high-level semantics with the continuous camera pose space.
 - **p. 2 / 1. Introduction - extractive body cue:** To address the limitations of fixed-viewpoint manipulation evaluation, we introduce the first simulated active manipulation benchmark, featuring 12 richly annotated tasks across 100 objects and ...
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** In summary, our contributions are threefold: • We propose SaPaVe, a novel end-to-end framework that first achieves active manipulation with a bottom-up learning strategy in ...
-- **p. 2 / 1. Introduction - extractive body cue:** To address the limitations of fixed-viewpoint manipulation evaluation, we introduce the first simulated active manipulation benchmark, featuring 12 richly annotated tasks across 100 objects and ...
-- **p. 4 / Model - extractive body cue:** To bridge this gap, we propose Universal Spatial Knowledge Injection, which efficiently leverages as much 3D information as possible to directly optimize the action output.
-- **p. 4 / Model - extractive body cue:** Therefore, we propose Decoupled Action Heads and Camera Adapter to enable our model to acquire rich semantic active perception priors and retain general manipulation knowledge ...
-- **p. 5 / 3.3. Two-Stage Training Strategy - extractive body cue:** To fill this gap, we propose a large-scale, high-quality dataset, ActiveViewPose-200K, comprising 200k image-language and camera movement pairs (see Sec.
-- **p. 7 / Figure/Table caption - extractive body cue:** Table 3. Performance on active manipulation in real-world set- tings. We report the success rate (%) compared to the existing VLA models. Our approach achieves ...
-- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. We propose SaPaVe, an end-to-end active manipulation framework that jointly integrates semantic active perception and active- view execution; the former selectively shifting viewpoints ...
-- **p. 7 / 4.2. Semantic Active Perception Evaluation - extractive body cue:** As shown in Table 1, our model significantly outperforms powerful VLMs across all test splits, especially on test2, where semantic understanding is paramount.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- ActiveViewPose-200K로 의미 기반 카메라 제어를 먼저 학습하고 두 종류의 행동을 혼합 데이터로 함께 학습한다. [PDF 4쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Liu_SaPaVe_Towards_Active_Perception_and_Manipulation_in_Vision-Language_Action_Models_CVPR_2026_paper.pdf#page=4) · [PDF 5쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Liu_SaPaVe_Towards_Active_Perception_and_Manipulation_in_Vision-Language_Action_Models_CVPR_2026_paper.pdf#page=5)
+- ActiveManip-Bench를 구성하고, 실제 로봇에서는 카메라 조건을 바꿔 능동 조작의 성공률을 비교했다. [PDF 5쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Liu_SaPaVe_Towards_Active_Perception_and_Manipulation_in_Vision-Language_Action_Models_CVPR_2026_paper.pdf#page=5) · [PDF 7쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Liu_SaPaVe_Towards_Active_Perception_and_Manipulation_in_Vision-Language_Action_Models_CVPR_2026_paper.pdf#page=7)
 
 ## Evaluation Scope
 

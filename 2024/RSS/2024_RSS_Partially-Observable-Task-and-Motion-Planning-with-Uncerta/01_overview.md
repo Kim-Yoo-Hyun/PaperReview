@@ -19,9 +19,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, computing 1A reference for all notation introduced henceforth is provided in Table IV in the appendix. the belief updates exactly is intractable in many problems.
-
-방법 관련 발췌 — To mitigate this, we introduce the concept of a belief-space controller, which takes the current belief as input and executes in closedloop fashion over extended time horizons.
+TAMPURA는 처음 상태와 행동 결과가 불확실한 작업·운동 계획에서 정보 수집과 되돌리기 어려운 행동의 위험을 함께 고려한다. [PDF 1쪽](https://www.roboticsproceedings.org/rss20/p118.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,15 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 3 / III. BACKGROUND - extractive body cue:** To mitigate this, we introduce the concept of a belief-space controller, which takes the current belief as input and executes in closedloop fashion over extended ...
-- **p. 5 / IV. PLANNING WITH AN ABSTRACT BELIEF-STATE MDP - extractive body cue:** We introduce an extension to PDDL for specifying schemata for controllers with uncertain effects.
-- **p. 1 / I. INTRODUCTION - extractive body cue:** Our approach, TAMPURA, is to exploit a coarse model of each controller's preconditions and effects to rapidly solve deterministic, symbolic planning problems that guide the ...
-- **p. 2 / I. INTRODUCTION - extractive body cue:** We show that in tasks requiring risk sensitivity, information gathering, and robustness to uncertainty, TAMPURA significantly outperforms reinforcement learning, Monte Carlo tree search, and determinized ...
-- **p. 1 / I. INTRODUCTION - extractive body cue:** Advances in techniques like behavior cloning (BC) [1, 2], reinforcement learning (RL) [3, 4], and model-based control [5, 6] have made it possible to develop ...
-- **p. 7 / Figure/Table caption - extractive body cue:** Fig. 4: Comparisons of model-learning strategies on a simplified grid-world environment in which an agent must navigate from the blue cell to the green cell. ...
-- **p. 9 / VII. REAL-WORLD IMPLEMENTATION - extractive body cue:** See the supplementary material for videos of successful completions under various initializations of these tasks.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 폐루프 제어기의 전제조건과 가능한 결과로 추상적인 믿음 상태의 전이 모델을 만들고 현재 계획을 연속 행동으로 구체화한다. [PDF 4쪽](https://www.roboticsproceedings.org/rss20/p118.pdf#page=4) · [PDF 5쪽](https://www.roboticsproceedings.org/rss20/p118.pdf#page=5)
+- 불확실성이 있는 시뮬레이션에서 결정론적 계획 등과 비교하고 실제 로봇 문제 두 개에 적용했다. [PDF 7쪽](https://www.roboticsproceedings.org/rss20/p118.pdf#page=7) · [PDF 9쪽](https://www.roboticsproceedings.org/rss20/p118.pdf#page=9)
 
 ## Evaluation Scope
 

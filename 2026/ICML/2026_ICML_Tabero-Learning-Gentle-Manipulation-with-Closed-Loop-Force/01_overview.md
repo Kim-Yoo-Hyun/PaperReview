@@ -19,9 +19,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Training such models, however, faces two major challenges.
-
-방법 관련 발췌 — In summary, our work makes the following contributions: The Tabero benchmark, which enables scalable visiontactile-language data generation by replaying open-source trajectories in a high-fidelity tactile simulator and establishes the f ...
+Tabero는 촉각과 언어 지시로 조작 힘을 조절하는 정책을 평가하기 위해 작업 성공과 접촉 품질을 함께 측정한다. [PDF 1쪽](https://arxiv.org/pdf/2605.27886v1#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** In summary, our work makes the following contributions: The Tabero benchmark, which enables scalable visiontactile-language data generation by replaying open-source trajectories in a high-fidelity tactile ...
-- **p. 4 / 3.4. Tabero-VTLA - extractive body cue:** Building on the Pi0 infrastructure and leveraging flow matching, our approach enables continuous prediction of both pose and force.
-- **p. 1 / 1. Introduction - extractive body cue:** To enable language-conditioned gentle manipulation, we introduce Tabero (Fig.
-- **p. 2 / 1. Introduction - extractive body cue:** Tabero: We present a high-fidelity multimodal simulation platform integrating Isaac Lab with advanced tactile simulation.
-- **p. 4 / 3.4. Tabero-VTLA - extractive body cue:** To integrate this tactile signal into the VLA foundation model, we introduce a tactile tokenizer that maps tactile inputs into conditional tokens.
-- **p. 8 / 4.4. Ablation and Comparison of VTLA - extractive body cue:** Adding explicit force supervision enables precise force prediction and substantially improves performance under gentle conditions.
-- **p. 8 / 4.4. Ablation and Comparison of VTLA - extractive body cue:** When tactile tokens such as images or force fields are provided, the policy gains basic force modulation ability and achieves nontrivial success.
-- **p. 6 / 4.1. Cross-Platform Data Validation - extractive body cue:** Cross-platform data validation: Task success rates across four LIBERO subtasks.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 기존 조작 궤적을 재활용해 시각·촉각·언어 자료를 만들고, 정책의 힘·위치 명령을 고정된 하이브리드 제어기로 실행한다. [PDF 3쪽](https://arxiv.org/pdf/2605.27886v1#page=3) · [PDF 5쪽](https://arxiv.org/pdf/2605.27886v1#page=5)
+- 부드럽게 잡으라는 지시에서 평균 파지력을 낮추면서 작업을 수행하는지 평가하고 촉각 입력의 영향을 비교했다. [PDF 7쪽](https://arxiv.org/pdf/2605.27886v1#page=7) · [PDF 8쪽](https://arxiv.org/pdf/2605.27886v1#page=8)
 
 ## Evaluation Scope
 

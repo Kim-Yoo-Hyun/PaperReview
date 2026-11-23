@@ -1,9 +1,9 @@
 # Performant robotic manipulation with real-world reinforcement learning
 
-> Evidence maturity: `ABSTRACT_CHECKED`. abstract 기반 — 본문 수동 확인 필요.
+> Evidence maturity: `ABSTRACT_CHECKED`. 개요 전반은 초록 수준이며, 아래 요약과 두 기여에는 확인한 본문 위치를 표시했다.
 > 자동 작성 노트는 실제 정독을 뜻하지 않는다. 사용자 reading status는 UNREAD로 시작한다.
 
-- Year/Venue
+- Year/Venue: 2026 / Science Robotics
 - Authors: Kun Lei, Huanyu Li, Dongjie Yu, Zhenyu Wei, Lingxiao Guo, Zhennan Jiang, Ziyu Wang, Shiyu Liang, Huazhe Xu
 - Category: Robot Learning and Data
 - Primary track: RL, IL, offline learning, and robot data
@@ -14,15 +14,17 @@
 - Venue verification: https://lei-kun.github.io/
 - Code/Project: https://github.com/Lei-Kun/RL-100
 - Code: https://github.com/Lei-Kun/RL-100
-- Source audit: 2026-10-19: 공식 paper abstract 및 저자 project/code README 확인; abstract 기반 — 본문 수동 확인 필요. Science Robotics 2026 status는 저자 공식 발표/code로 확인; publisher 직접 열기 실패.
+- Source audit: 2026-11-23 요약과 핵심 기여 두 개를 원문 본문에 대조했다. 나머지 세부 분석은 기존 초록·공식 자료에 근거한다.
+- 대조 판본: Science Robotics 게재 논문의 요약·기여는 저자 원고 RL-100 v4의 쪽수를 따른다. [원문](https://arxiv.org/pdf/2510.14830v4)
 
 ## Problem and Importance
 
-실제 manipulation에서 imitation policy의 성공률·속도·강건성을 실용적인 RL 학습으로 개선하는 문제다.
+RL-100은 확산 기반 조작 정책에 오프라인·온라인 강화학습과 단일 단계 증류를 적용하고 실제 로봇의 성공률과 완료 시간을 평가했다. [PDF 1쪽](https://arxiv.org/pdf/2510.14830v4#page=1)
 
 ## Core Idea and Contribution
 
-Diffusion visuomotor policy의 imitation-to-RL 학습과 빠른 controller 실행을 연결하는 real-world RL framework를 제안한다.
+- 디노이징 단계에 같은 clipped PPO 목적을 적용해 정책을 갱신하고 일관성 증류로 여러 번의 추론을 한 단계로 줄였다. [PDF 18쪽](https://arxiv.org/pdf/2510.14830v4#page=18) · [PDF 20쪽](https://arxiv.org/pdf/2510.14830v4#page=20)
+- 정해진 여덟 실물 과제의 평가 시행에서 1,000회 중 1,000회 성공을 기록했다. 환경이나 동역학을 바꾼 검증은 따로 보고했다. [PDF 1쪽](https://arxiv.org/pdf/2510.14830v4#page=1) · [PDF 14쪽](https://arxiv.org/pdf/2510.14830v4#page=14)
 
 ## Observation–State–Action Interface
 
@@ -32,7 +34,7 @@ Visual observation → diffusion/flow visuomotor policy → robot action; offlin
 
 저자 공식 repository와 저널 abstract는 pushing, pouring, cloth/long-horizon manipulation 등을 포함한 실제 robot 평가를 설명한다. 프로토콜별 수치는 본문 확인 필요.
 
-근거: [공식 paper/abstract](https://doi.org/10.1126/scirobotics.aed6267) · [저자 project/code](https://github.com/Lei-Kun/RL-100). 정확한 수치·baseline fairness·failure 범위는 본문 확인 전까지 확정하지 않는다.
+근거: [공식 paper/abstract](https://doi.org/10.1126/scirobotics.aed6267) · [저자 project/code](https://github.com/Lei-Kun/RL-100). 그 밖의 수치, 기준선의 비교 조건, 실패 범위는 별도 대조가 필요하다.
 
 ## Why This Paper Is Here — Researcher Interpretation
 

@@ -19,9 +19,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Planning for mobile manipulation problems involving cluttered environments and multiple manipulation primitives still presents substantial challenges.
-
-방법 관련 발췌 — We introduce Extended Action Specification (EAS), a new symbolic planing representation that supports complex conditions.
+FFRob은 기호 계획의 휴리스틱에 물체 배치와 로봇의 도달 가능성을 넣어 여러 물체를 취급하는 작업·운동 계획을 탐색한다. [PDF 1쪽](https://arxiv.org/pdf/1608.01335v2#page=1)
 
 ## Problem and Motivation
 
@@ -52,16 +50,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1.1 Approach - extractive body cue:** We introduce Extended Action Specification (EAS), a new symbolic planing representation that supports complex conditions.
-- **p. 2 / 1.1 Approach - extractive body cue:** The primary contribution of this paper is FFROB, an efficient and probabilistically complete algorithm for fully integrated task and motion planning.
-- **p. 1 / 1 Introduction - extractive body cue:** A long-standing goal in robotics is to develop robots that can operate autonomously in unstructured human environments.
-- **p. 30 / 11.4 Results - extractive body cue:** HF F Rob, HA gave the best performance in both success rate and runtime.
-- **p. 30 / 11.4 Results - extractive body cue:** Helpful actions improved the performance of HF F Rob, HA over HF F Rob.
-- **p. 31 / 11.4 Results - extractive body cue:** Experiment results over 50 trials. informative heuristic estimate.
-- **p. 31 / 11.4 Results - extractive body cue:** All but 1 of our algorithms were able to solve it with an above 95 percent success ratio in less than 40 seconds.
-- **p. 32 / Figure/Table caption - extractive body cue:** Figure 27. Best-first search extract and process procedures. A.2 Deferred Best-First Search Deferred best-first search (also called lazy greedy search) is a variant of standard ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 조작 원시 동작을 표본화하고 배치에 따른 도달 가능성을 재사용해 삭제 완화 휴리스틱에 기하 제약을 반영한다. [PDF 1쪽](https://arxiv.org/pdf/1608.01335v2#page=1) · [PDF 10쪽](https://arxiv.org/pdf/1608.01335v2#page=10)
+- 논문에서 정한 실현 가능성 및 표본화 가정 아래 확률적 완전성과 유한한 기대 실행 시간을 분석했다. [PDF 1쪽](https://arxiv.org/pdf/1608.01335v2#page=1) · [PDF 24쪽](https://arxiv.org/pdf/1608.01335v2#page=24)
 
 ## Evaluation Scope
 

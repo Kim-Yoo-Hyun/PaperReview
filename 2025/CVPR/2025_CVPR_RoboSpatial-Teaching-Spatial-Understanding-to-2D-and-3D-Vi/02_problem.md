@@ -6,7 +6,7 @@
 
 ## Problem in One Sentence
 
-PDF body framing (p. 1 (1. Introduction), p. 1 (1. Introduction)): These limitations highlight an ongoing challenge: bridging the gap between surface-level scene description and the deeper spatial comprehension necessary for intuitive interThis CVPR paper is the Open Access version, provided ...
+PDF body framing (p. 1 (1. Introduction), p. 1 (1. Introduction)): 장면에 보이는 것을 설명하는 능력만으로는 실제 상호작용에 필요한 공간 관계를 판단하기 어렵다.
 
 ## PDF Body Digest
 
@@ -15,14 +15,14 @@ PDF body framing (p. 1 (1. Introduction), p. 1 (1. Introduction)): These limitat
 - **p. 1 / Abstract - extractive body cue:** However, these models face significant challenges in spatial reasoning tasks, as their training data are based on general-purpose image datasets that often lack sophisticated spatial ...
 - **p. 1 / Abstract - extractive body cue:** For example, datasets frequently do not capture reference frame comprehension, yet effective spatial reasoning requires understanding whether to reason from ego-, world- , or object-centric ...
 - **p. 1 / Abstract - extractive body cue:** To address this issue, we introduce ROBOSPATIAL, a large-scale dataset for spatial understanding in robotics.
-- **p. 1 / 1. Introduction - extractive body cue:** These limitations highlight an ongoing challenge: bridging the gap between surface-level scene description and the deeper spatial comprehension necessary for intuitive interThis CVPR paper is ...
+- **p. 1–2 / 1. Introduction - 원문 대조 요지:** 장면에 보이는 것을 설명하는 능력만으로는 실제 상호작용에 필요한 공간 관계를 판단하기 어렵다.
 - **p. 1 / 1. Introduction - extractive body cue:** Furthermore, a critical limitation of existing VLM training datasets is their inability to capture reference frame understanding (ref. frame) - the way we interpret spatial ...
 
 ## System and Scope
 
 | Dimension | PDF body evidence | Registry/robotics interpretation | Boundary |
 |---|---|---|---|
-| Target problem | These limitations highlight an ongoing challenge: bridging the gap between surface-level scene description and the deeper spatial comprehension necessary for intuitive interThis ... | 3D scene/object와 robot coordinate frame | body wording is the source claim |
+| Target problem | 장면에 보이는 것을 설명하는 능력만으로는 실제 상호작용에 필요한 공간 관계를 판단하기 어렵다. | 3D scene/object와 robot coordinate frame | body wording is the source claim |
 | Observation / input | The pipeline takes as input a scene dataset Ds that contains RGB images, camera poses (both extrinsic and intrinsic parameters), and oriented ... | RGB-D, image set, point cloud, depth와 camera pose | exact sensor/frame/preprocessing from PDF body |
 | State / latent | pipeline, takes, input, scene, dataset, contains, RGB, images, camera, poses | geometry, map, object/relationship state | notation and tensor shape require body check |
 | Output / action | Furthermore, critical, limitation, existing, VLM, training, datasets, inability | point map, pose, scene graph, affordance 또는 query result | exact unit/frame/decoder require body check |
@@ -79,7 +79,7 @@ PDF body contribution framing (p. 4 (3.2. Dataset Generation), p. 1 (1. Introduc
 
 > Cross-checked on 2026-09-03 against the validated PDF body (13 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
 
-- **Target problem:** These limitations highlight an ongoing challenge: bridging the gap between surface-level scene description and the deeper spatial comprehension necessary for intuitive interThis CVPR paper is the Open Access version, provided ... (p. 1, 1. Introduction).
+- **Target problem:** 장면에 보이는 것을 설명하는 능력만으로는 실제 상호작용에 필요한 공간 관계를 판단하기 어렵다. (PDF 1–2쪽).
 - **Formulation-changing contribution:** This illustration demonstrates how a model trained on ROBOSPATIAL enables human-aligned spatial reasoning within the correct reference frame, supporting task grounding, planning, and detection for manipulation tasks. (p. 1, 1. Introduction).
 - **Assumption/failure evidence:** To mitigate failure cases arising from poor object grounding, we also include an auxiliary grounding dataset during training, which provides additional supervision for object reference resolution. (p. 5, 4.1. Setup).
 - **Interpretation rule:** no state, transition, constraint, guarantee, or downstream claim is inferred when the PDF body does not state it.

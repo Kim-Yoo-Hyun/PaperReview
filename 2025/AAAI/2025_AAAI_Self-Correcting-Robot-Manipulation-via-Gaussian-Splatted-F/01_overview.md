@@ -19,9 +19,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Foresight-driven self-correction When action execution fails, existing methods often lack the capability for self-correction to complete the task and may even enter ‘untrained states', which poses significant destructive results.
-
-방법 관련 발췌 — In this paper, we propose a novel approach to ascertain the necessity of replanning by predicting the environmental structural information of future keyframes, thereby assessing the attainment of objectives for subsequent keyframes.
+이 방법은 계획한 행동 뒤의 장면을 3D 가우시안으로 예측하고 실제 관측이 크게 다르면 이전 행동으로 되돌아가 조작을 복구한다. [PDF 1쪽](https://ojs.aaai.org/index.php/AAAI/article/download/34866/37021#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 3 / 2. By incorporating the proposed self-correction scheme - extractive body cue:** In this paper, we propose a novel approach to ascertain the necessity of replanning by predicting the environmental structural information of future keyframes, thereby assessing ...
-- **p. 1 / Abstract - extractive body cue:** To address this challenge, we propose a foresight-driven failure detection and self-correction module for robot manipulation.
-- **p. 1 / Abstract - extractive body cue:** Addressing the challenge of execution-level failure detection and self-correction, in this paper, we present a foresightdriven self-correction scheme for robot manipulation.
-- **p. 2 / 2. By incorporating the proposed self-correction scheme - extractive body cue:** An evaluation through extensive experiments involving 10 tasks with 166 variations demonstrates that our method surpasses the state-of-theart by achieving a 12.0% higher success rate.
-- **p. 2 / 1. We develop a self-correcting scheme for robot manipu - extractive body cue:** By incorporating the inconsistency estimation and roll-back operation, we propose a self-correction scheme that can be applied to other existing languageconditioned robot manipulation methods.
-- **p. 7 / 2. By incorporating the proposed self-correction scheme - extractive body cue:** Comprehensive experiments across ten tasks with 166 variations demonstrate that our method significantly outperforms stateof-the-art techniques, achieving a 12.0% higher success rate.
-- **p. 6 / 2. By incorporating the proposed self-correction scheme - extractive body cue:** As presented in table 2, our method achieves the highest success rate in 5 out of 6 tasks and the average success rate across these ...
-- **p. 6 / 2. By incorporating the proposed self-correction scheme - extractive body cue:** The mean and standard value of the success rates are reported as (mean ± std), and the highest average performance is also reported.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 행동 조건부 가우시안 장면 예측과 실패 검출·되돌리기를 PerAct 정책에 결합했다. [PDF 1쪽](https://ojs.aaai.org/index.php/AAAI/article/download/34866/37021#page=1) · [PDF 3쪽](https://ojs.aaai.org/index.php/AAAI/article/download/34866/37021#page=3)
+- RLBench 과제에서 성공률을 측정하고 환경 변화와 예측·관측 차이 임곗값에 대한 민감도를 비교했다. [PDF 1쪽](https://ojs.aaai.org/index.php/AAAI/article/download/34866/37021#page=1) · [PDF 7쪽](https://ojs.aaai.org/index.php/AAAI/article/download/34866/37021#page=7)
 
 ## Evaluation Scope
 

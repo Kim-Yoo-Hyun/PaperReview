@@ -1,6 +1,6 @@
 # 읽기 계획
 
-- Updated: 2026-11-22 KST
+- Updated: 2026-11-23 KST
 - Source registry: [PAPER.md](../PAPER.md)
 - Full tier index: [READING_TIERS.csv](./READING_TIERS.csv)
 - Reading tracker: [READING_STATUS.csv](./READING_STATUS.csv)

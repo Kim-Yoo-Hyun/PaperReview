@@ -19,9 +19,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Directly synthesizing robot policies from LLMs is difficult because it does not explicitly reason through the physics of the environment, however, when a simulator is available, we can combine the impressive world ...
-
-방법 관련 발췌 — In this work, we propose DrEureka (Domain Randomization Eureka), a novel algorithm that leverages LLMs to automate reward design and domain randomization parameter configuration simultaneously for sim-to-real transfer.
+DrEureka는 강화학습 보상과 시뮬레이션 물성의 무작위화 범위를 언어모델로 설계해 실제 로봇으로 정책을 전이한다. [PDF 1쪽](https://www.roboticsproceedings.org/rss20/p094.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 1 / I. INTRODUCTION - extractive body cue:** In this work, we propose DrEureka (Domain Randomization Eureka), a novel algorithm that leverages LLMs to automate reward design and domain randomization parameter configuration simultaneously ...
-- **p. 4 / IV. METHOD - extractive body cue:** Instead, we propose to directly exploit the strong instructionfollowing capability of instruction-tuned LLMs [62] and prompt the LLM to explicitly consider including safety terms for ...
-- **p. 1 / I. INTRODUCTION - extractive body cue:** We evaluate DrEureka on quadruped and dexterous manipulator platforms, demonstrating that our method is general
-- **p. 3 / IV. METHOD - extractive body cue:** In this section, we introduce DrEureka, which uses LLMs to automate two important bottlenecks in sim-to-real design: reward design and domain randomization.
-- **p. 4 / IV. METHOD - extractive body cue:** We introduce a simple reward aware physics prior (RAPP) mechanism to restrict the base ranges for the LLM.
-- **p. 5 / V. EXPERIMENTAL SETUP - extractive body cue:** The task of forward locomotion is to walk forward at 2 meters-per-second on flat terrains; while it is possible for the robot to walk forward ...
-- **p. 6 / V. EXPERIMENTAL SETUP - extractive body cue:** DrEureka's average and best policies outperform Human-Designed and a prior reward-design baseline.
-- **p. 6 / V. EXPERIMENTAL SETUP - extractive body cue:** Additionally, we consider two classes of DrEureka ablations that probe (1) whether some fixed DR configuration can generally outperform DrEureka samples, and (2) the importance ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 보상 조건을 만족하는 물성 범위를 추정하고 그 정보를 바탕으로 실제 전이에 사용할 도메인 무작위화 분포를 제안한다. [PDF 3쪽](https://www.roboticsproceedings.org/rss20/p094.pdf#page=3) · [PDF 5쪽](https://www.roboticsproceedings.org/rss20/p094.pdf#page=5)
+- 사족보행과 손안 큐브 회전의 전이를 비교하고 실제 사족 로봇이 공 위에서 균형을 유지하며 걷는 과제를 시험했다. [PDF 6쪽](https://www.roboticsproceedings.org/rss20/p094.pdf#page=6) · [PDF 8쪽](https://www.roboticsproceedings.org/rss20/p094.pdf#page=8)
 
 ## Evaluation Scope
 

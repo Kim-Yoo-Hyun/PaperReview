@@ -1,10 +1,7 @@
 # GR00T N1.5: An Improved Open Foundation Model for Generalist Humanoid Robots
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-03 (3 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://research.nvidia.com/labs/gear/gr00t-n1_5/. PDF provenance note: official NVIDIA technical page rendered to a task-scoped PDF snapshot; no author-supplied publication PDF identified.
-> PDF retrieval source: https://research.nvidia.com/labs/gear/gr00t-n1_5/. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
-
-> Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
+> 요약과 기여의 링크는 NVIDIA가 공개한 N1.5 보고서의 해당 절로 이동한다. 본문의 기존 쪽수는 같은 보고서를 2026-09-03에 인쇄한 3쪽짜리 사본의 위치다.
 
 - Year/Venue: 2025 / Technical Report
 - Authors: Johan Bjorck, Valts Blukis, Fernando Castañeda, Nikita Cherniadev, Xingye Da, Runyu Ding, Linxi "Jim" Fan, Yu Fang, Dieter Fox, Fengyuan Hu, Spencer Huang, Joel Jang, Xiaowei Jiang, Kaushil Kundalia, Jan Kautz, Zhiqi Li, Kevin Lin, Zongyu Lin, Loic Magne, Yunze Man, Ajay Mandlekar, Avnish Narayan, Soroush Nasiriany, Scott Reed, You Liang Tan, Guanzhi Wang, Jing Wang, Qi Wang, Shihao Wang, Jiannan Xiang, Yuqi Xie, Yinzhen Xu, Seonghyeon Ye, Zhiding Yu, Yizhou Zhao, Zhe Zhang, Ruijie Zheng, Yuke Zhu
@@ -15,13 +12,11 @@
 - Full-text retrieval: https://research.nvidia.com/labs/gear/gr00t-n1_5/
 - Code/Project: https://github.com/NVIDIA/Isaac-GR00T
 - Paper type: theory_or_foundation
-- Source audit: full-text PDF body checked on 2026-09-03 (3 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: 2026-11-23 NVIDIA 공식 웹 기술보고서 본문 대조.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — We expect users of N1.5 should observe better performance compared to N1, in particular improved generalization and better language following ability.
-
-방법 관련 발췌 — We introduce GR00T N1.5, an upgraded version of the GR00T N1 foundation model for humanoid robots.
+GR00T N1.5는 기존 N1의 시각언어 표현과 정책 학습을 바꾼 버전으로, 언어 지시가 있는 시뮬레이션과 실제 GR-1에서 평가했다. [Introduction](https://research.nvidia.com/labs/gear/gr00t-n1_5/#:~:text=Introduction)
 
 ## Problem and Motivation
 
@@ -55,16 +50,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 1 / Introduction - extractive body cue:** We introduce GR00T N1.5, an upgraded version of the GR00T N1 foundation model for humanoid robots.
-- **p. 2 / Learning to manipulate novel objects from human ego videos - extractive body cue:** Novel Objects As shown in the FLARE project, future latent representation alignment enables learning directly from human ego videos.
-- **p. 2 / Learning to manipulate novel objects from human ego videos - extractive body cue:** This allows learning to manipulate novel objects from human videos and minimal robot demonstrations.
-- **p. 3 / Post-training on Unitree G1 - extractive body cue:** Model / GR00T N1, 1K Demos / GR00T N1.5, 1K Demos / GR00T N1.5, 1K Demos Task / Place 1 of 2 fruits onto plate; ...
-- **p. 3 / Discussion - extractive body cue:** It achieves higher success rate, can use more diverse data sources, and has significantly improved language following capabilities.
-- **p. 2 / Architecture validation - extractive body cue:** We find that the N1.5 architecture achieves significantly higher success rates on both benchmarks, indicating stronger language-conditioned control ability.
-- **p. 2 / Real GR-1 language following - extractive body cue:** Setting / GR00T N1 / GR00T N1.5 Language following rate / 46.6% / 93.3% Overall success rate / 43.3% / 83.0% We find that N1.5 ...
-- **p. 3 / Generalization to novel behaviors using Neural Trajectories - extractive body cue:** We find that GR00T N1.5 achieved a 38.3% success rate across 12 DreamGen tasks, versus 13.1% for GR00T N1.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 행동의 flow matching 손실에 미래 영상의 잠재 표현을 맞추는 FLARE 목적을 추가해 사람 영상도 학습에 활용했다. [Joint Policy Learning and World Modeling Objective](https://research.nvidia.com/labs/gear/gr00t-n1_5/#:~:text=Joint%20Policy%20Learning%20and%20World%20Modeling%20Objective)
+- 실물 GR-1 앞에 두 과일을 놓고 목표 과일의 위치를 바꿔, 지시한 과일을 접시에 옮기는지를 N1과 비교했다. [Real GR-1 language following](https://research.nvidia.com/labs/gear/gr00t-n1_5/#:~:text=Real%20GR-1%20language%20following)
 
 ## Evaluation Scope
 

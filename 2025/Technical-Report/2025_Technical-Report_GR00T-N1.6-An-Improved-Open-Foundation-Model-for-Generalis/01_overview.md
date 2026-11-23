@@ -1,10 +1,7 @@
 # GR00T N1.6: An Improved Open Foundation Model for Generalist Humanoid Robots
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-03 (2 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://research.nvidia.com/labs/gear/gr00t-n1_6/. PDF provenance note: official NVIDIA technical page rendered to a task-scoped PDF snapshot; no author-supplied publication PDF identified.
-> PDF retrieval source: https://research.nvidia.com/labs/gear/gr00t-n1_6/. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
-
-> Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
+> 요약과 기여의 링크는 NVIDIA가 공개한 N1.6 보고서의 해당 절로 이동한다. 본문의 기존 쪽수는 같은 보고서를 2026-09-03에 인쇄한 2쪽짜리 사본의 위치다.
 
 - Year/Venue: 2025 / Technical Report
 - Authors: GEAR Team, Allison Azzolini, Johan Bjorck, Valts Blukis, Fernando Castañeda, Rahul Chand, Yan Chang, Danyi Chen, Nikita Cherniadev, Xingye Da, Runyu Ding, Shunjia Ding, Hassan Eslami, Linxi "Jim" Fan, Yu Fang, Max Fu, Shenyuan Gao, Yunhao Ge, Fengyuan Hu, Spencer Huang, Joel Jang, Xiaowei Jiang, Yunfan Jiang, Ryan Julian, Kaushil Kundalia, Jan Kautz, Zhiqi Li, Kevin Lin, Wei Liu, Runyu Lu, Zhengyi Luo, Loic Magne, Yunze Man, Ajay Mandlekar, Abhishek Mishra, Avnish Narayan, Connor Pederson, Nadun Ranawaka, Scott Reed, Sunil Srinivasa, You Liang Tan, Guanzhi Wang, Jing Wang, Qi Wang, Shihao Wang, Jimmy Wu, Yubo Wu, Yuqi Xie, Tianyi Xiong, Mengda Xu, Yinzhen Xu, Fu-En Yang, Seonghyeon Ye, Zhiding Yu, K.R. Zentner, Zhe Zhang, Kaiyuan Zheng, Ruijie Zheng, Yuke Zhu
@@ -15,13 +12,11 @@
 - Full-text retrieval: https://research.nvidia.com/labs/gear/gr00t-n1_6/
 - Code/Project: https://github.com/NVIDIA/Isaac-GR00T
 - Paper type: theory_or_foundation
-- Source audit: full-text PDF body checked on 2026-09-03 (2 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: 2026-11-23 NVIDIA 공식 웹 기술보고서 본문 대조.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Multi-task language following and out-of-distribution task generalization continue to be challenging for current VLA models.
-
-방법 관련 발췌 — We introduce GR00T N1.6, an improved version of the GR00T N1.5 foundation model for humanoid robots.
+GR00T N1.6은 N1.5의 시각언어 백본과 행동 생성기를 바꾸고 실제 양팔·휴머노이드 데이터를 확대한 후속 버전이다. [Introduction](https://research.nvidia.com/labs/gear/gr00t-n1_6/#:~:text=Introduction)
 
 ## Problem and Motivation
 
@@ -48,13 +43,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 1 / Introduction - extractive body cue:** We introduce GR00T N1.6, an improved version of the GR00T N1.5 foundation model for humanoid robots.
-- **p. 1 / Discussion - extractive body cue:** When scaling up real-world experiments, we incorporate various lessons learned from the robot learning community to improve model success rates during rollouts.
-- **p. 1 / Introduction - extractive body cue:** With several architecture, data and modeling improvements, we find that N1.6 outperforms N1.5 on both simulated manipulation benchmarks and on real bimanual YAM, Agibot Genie-1 ...
-- **p. 2 / Discussion - extractive body cue:** We expect users to benefit from improved performance in bimanual manipulation and locomanipulation tasks.
-- **p. 2 / Discussion - extractive body cue:** Overall, GR00T N1.6 represents an improvement over GR00T N1.5 across diverse embodiments.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- Cosmos-2B 계열 백본과 확장한 확산 트랜스포머를 사용하고 대부분의 로봇에서 현재 상태에 상대적인 행동 묶음을 예측한다. [Model and Data Improvements](https://research.nvidia.com/labs/gear/gr00t-n1_6/#:~:text=Model%20and%20Data%20Improvements)
+- 상대 행동이 움직임을 매끄럽게 하는 경우와 소량 데이터에서 오차가 누적되는 경우를 구분하고 G1·양팔 YAM에서 비동기 실행을 다뤘다. [Discussion](https://research.nvidia.com/labs/gear/gr00t-n1_6/#:~:text=Discussion)
 
 ## Evaluation Scope
 

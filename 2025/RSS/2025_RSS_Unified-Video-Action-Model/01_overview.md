@@ -19,9 +19,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — PAD [19] jointly trains video generation and action prediction; however, it cannot predict future actions independently of future image generation, resulting in slower inference.
-
-방법 관련 발췌 — ‘To address these limitations, we propose UVA, « Unified Video and Action Mode! designed to simultaneously model videos and actions - capturing the underlying interactions between visuals and actions to enhance task ...
+UVA는 비디오와 로봇 행동을 공동 예측하되 실행 시에는 영상을 생성하는 계산을 건너뛰고 행동만 출력할 수 있다. [PDF 1쪽](https://www.roboticsproceedings.org/rss21/p074.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 1 / 1. Iyrropucrion - extractive body cue:** ‘To address these limitations, we propose UVA, « Unified Video and Action Mode! designed to simultaneously model videos and actions - capturing the underlying interactions ...
-- **p. 2 / 1. Iyrropucrion - extractive body cue:** At inference, this decoupling allows the system to bypass video generation entirely, directly utilizing the latent representation for fast action prediction, This design enables real-time ...
-- **p. 1 / 1. Iyrropucrion - extractive body cue:** We propose the following three design choices to achieve this:
-- **p. 2 / 1. Iyrropucrion - extractive body cue:** In this work, we propose a unified video and action model, showcasing its ability to address both policy leaning and dynamics modeling within a single ...
-- **p. 3 / 1. Iyrropucrion - extractive body cue:** Ae © R/*"" consists of L actions, and each action has m dimensions.
-- **p. 8 / B. Real-world Benchmarks - extractive body cue:** For example, with changes in goal color, UniPi achieves a success rate of 40%, UVA achieves 64%, while OpenVLA only reaches 32%.
-- **p. 8 / B. Real-world Benchmarks - extractive body cue:** All tests are unseen during training, and even with more challenging distractor objects and backgrounds, UVA achieves higher success rates than DP-UML To more rigorously ...
-- **p. 7 / B. Real-world Benchmarks - extractive body cue:** We found that the UVA Attention module in the Transformer accounts for half of the inference time, making UVA slightly slower than DP-UML With future ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 공동 비디오·행동 잠재 표현에 두 개의 경량 확산 디코더를 붙이고 입력 마스킹으로 사용할 예측 방향을 바꾼다. [PDF 3쪽](https://www.roboticsproceedings.org/rss21/p074.pdf#page=3) · [PDF 4쪽](https://www.roboticsproceedings.org/rss21/p074.pdf#page=4)
+- 실물 UMI 정책과 비디오 생성, 역동역학을 별도 과제로 평가해 한 모델의 여러 사용 방식을 비교했다. [PDF 6쪽](https://www.roboticsproceedings.org/rss21/p074.pdf#page=6) · [PDF 10쪽](https://www.roboticsproceedings.org/rss21/p074.pdf#page=10)
 
 ## Evaluation Scope
 

@@ -19,9 +19,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — For instance, in the packing battery task illustrated in Figure 2, specifying the mug or branch instance, the probability of each battery-slot pair is 1/18, imposing an additional axis of multi-modality in ...
-
-방법 관련 발췌 — In contrast, our framework is capable of understanding potentially ambiguous natural language instructions by using visual-semantic reasoning capabilities of VLM and generated code as an intermediate representation.
+CodeDiffuser는 모호한 언어 지시를 실행 가능한 지각 코드로 바꾸고 그 결과로 저수준 확산 정책이 볼 영역을 지정한다. [PDF 1쪽](https://www.roboticsproceedings.org/rss21/p072.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 3 / B. Foundational Vision Model for Roboties - extractive body cue:** In contrast, our framework is capable of understanding potentially ambiguous natural language instructions by using visual-semantic reasoning capabilities of VLM and generated code as an ...
-- **p. 4 / A. Problem Statement - extractive body cue:** CodeDitfuser consists of three primary components: code generation, 3D attention map computation, and low level policy.
-- **p. 7 / B. Analysis of Existing Imitation Learning Algorithm - extractive body cue:** We frst evaluate our method by varying the number of demonstrations on the Pack Bat.tezy task in simulation, as shown in Figure 7 (a).
-- **p. 7 / B. Analysis of Existing Imitation Learning Algorithm - extractive body cue:** Our method effectively, leverages the powerful visualsemantic understanding capabilities of VLMs and benefits from explicit spatial relation reasoning using 3D representations.
-- **p. 8 / B. Analysis of Existing Imitation Learning Algorithm - extractive body cue:** For the simulation experiments, we compare our method against the following baselines:
-- **p. 7 / B. Analysis of Existing Imitation Learning Algorithm - extractive body cue:** While the performance of ACT and DP initially improves, they generally show diminishing returns while success rate is still low, and in some cases plateaus ...
-- **p. 9 / B. Analysis of Existing Imitation Learning Algorithm - extractive body cue:** In ‘contrast to Lang-DP (RGB), our method, which incorporates 2 similar pipeline from language instructions to 2D attention, achieves a performance improvement from 12% to ...
-- **p. 6 / IV. EXPERIMENTS - extractive body cue:** For simple tasks with no ambiguity (Lop-left entry), the high success rate confirms the validity of the baseline methods.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 시각언어모델이 생성한 코드를 시각 기반 모델과 연결해 과제 관련 물체·위치의 3D 어텐션 지도를 만든다. [PDF 3쪽](https://www.roboticsproceedings.org/rss21/p072.pdf#page=3) · [PDF 4쪽](https://www.roboticsproceedings.org/rss21/p072.pdf#page=4)
+- 여러 물체 또는 여러 행동이 가능한 조작을 시뮬레이션과 실제 환경에서 평가하고 어텐션이 과제와 맞는지도 측정했다. [PDF 5쪽](https://www.roboticsproceedings.org/rss21/p072.pdf#page=5) · [PDF 7쪽](https://www.roboticsproceedings.org/rss21/p072.pdf#page=7)
 
 ## Evaluation Scope
 

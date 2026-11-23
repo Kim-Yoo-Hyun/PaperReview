@@ -19,9 +19,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — This poses several challenges, as outlined in prior work [108], stemming from variations in kinematic configuration, control scheme, camera viewpoint, and end-effector morphology.
-
-방법 관련 발췌 — To summarize, our key contributions are:
+Mirage는 작업 공간과 그리퍼가 유사한 로봇팔 사이에서 대상 로봇의 외형을 학습 때 본 로봇의 외형으로 바꿔 정책을 전이한다. [PDF 1쪽](https://www.roboticsproceedings.org/rss20/p069.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / I. INTRODUCTION - extractive body cue:** To summarize, our key contributions are:
-- **p. 1 / Abstract - extractive body cue:** To address robot visual disparities for vision-based policies, we introduce Mirage, which uses "cross-painting"-masking out the unseen target robot and inpainting the seen source robot-during ...
-- **p. 2 / I. INTRODUCTION - extractive body cue:** Through extensive experiments on 9 manipulation tasks in both simulation and real across 6 different robot and gripper setups, we show that Mirage, despite its ...
-- **p. 3 / 1) We assume knowledge of the two robots' coordinate - extractive body cue:** This allows us to render robots in a camera pose that is within the distribution of the training image poses.
-- **p. 3 / 1) We assume knowledge of the two robots' coordinate - extractive body cue:** This allows us to transfer between robots with different numbers of joints and compensate for alternate gripper shapes across embodiments.
-- **p. 5 / IV. STATE-BASED TRANSFER EXPERIMENTS - extractive body cue:** Study Results Table I shows that when the target robots have the same gripper as the source robot, most unseen target robots achieve very high ...
-- **p. 9 / Figure/Table caption - extractive body cue:** Fig. 5: Mirage applied to first-person wrist camera images and third- person front camera images. For each view, the top row shows the actual observations ...
-- **p. 2 / 3) Physical experiments with Franka and UR5 demonstrating - extractive body cue:** that Mirage successfully transfers between robots and grippers on 4 manipulation tasks, suffering only minimal performance degradation from the source policy and significantly outperforming a ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 직교좌표 제어와 로봇 동역학 차이를 고려하고 실행 영상에서는 대상 팔을 가린 자리에 원본 팔을 합성한다. [PDF 4쪽](https://www.roboticsproceedings.org/rss20/p069.pdf#page=4) · [PDF 5쪽](https://www.roboticsproceedings.org/rss20/p069.pdf#page=5)
+- 시뮬레이션과 실제 팔의 집기·쌓기·조립에서 추가 학습 없는 전이를 평가하고 영상 변환 구성 요소의 민감도를 분석했다. [PDF 6쪽](https://www.roboticsproceedings.org/rss20/p069.pdf#page=6) · [PDF 9쪽](https://www.roboticsproceedings.org/rss20/p069.pdf#page=9)
 
 ## Evaluation Scope
 

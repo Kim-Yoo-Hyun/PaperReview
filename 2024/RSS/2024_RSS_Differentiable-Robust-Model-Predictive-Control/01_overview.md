@@ -19,9 +19,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, when applied to autonomous systems acting in the real-world, deterministic MPC is often unable to respond to large disturbances that occur due to environmental factors, model uncertainty, etc.
-
-방법 관련 발췌 — The main contribution of this work is the development of a novel differentiable tube-based MPC (DT-MPC) framework for safe, robust control.
+이 연구는 강인한 MPC의 파라미터가 제어 결과에 주는 영향을 미분해 외란이 있을 때 제어기를 자동으로 조정한다. [PDF 1쪽](https://www.roboticsproceedings.org/rss20/p003.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / I. INTRODUCTION - extractive body cue:** The main contribution of this work is the development of a novel differentiable tube-based MPC (DT-MPC) framework for safe, robust control.
-- **p. 2 / I. INTRODUCTION - extractive body cue:** In summary, the main contributions of this work include: 1) the derivation of a general differentiable optimal control framework enabled through a novel application of ...
-- **p. 1 / Abstract - extractive body cue:** Drawing parallels with differential dynamic programming, the IFT enables the derivation of an efficient differentiable optimal control framework.
-- **p. 1 / I. INTRODUCTION - extractive body cue:** This motivates the development of control algorithms that explicitly account for unknown disturbances in the dynamics and guarantee robustness.
-- **p. 4 / II. MATHEMATICAL BACKGROUND - extractive body cue:** From the safe MPC via barrier methods perspective, the proposed work provides a novel expansion of the works [3], [14] and [19] to a tube-based ...
-- **p. 10 / V. EXPERIMENTS - extractive body cue:** On the other hand, the proposed DT-MPC bounds the true system within a safer tube around the nominal trajectory by tuning the ancillary MPC in ...
-- **p. 11 / V. EXPERIMENTS - extractive body cue:** Overall, DT-MPC remains safe while increasing the task success rate by over 200% (20% success rate for NT-MPC vs.
-- **p. 11 / V. EXPERIMENTS - extractive body cue:** The JAX-based Python implementation of our method runs at over 50 Hz on the Robotarium - we expect further speedups can be achieved through a ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 암묵함수정리로 최적제어 해의 미분을 계산하고 이를 튜브 기반 MPC의 파라미터 조정에 사용한다. [PDF 4쪽](https://www.roboticsproceedings.org/rss20/p003.pdf#page=4) · [PDF 7쪽](https://www.roboticsproceedings.org/rss20/p003.pdf#page=7)
+- MuJoCo의 비선형 시스템 두 개와 실제 Robotarium 장비에서 외란이 있는 제어 문제를 평가했다. [PDF 1쪽](https://www.roboticsproceedings.org/rss20/p003.pdf#page=1) · [PDF 9쪽](https://www.roboticsproceedings.org/rss20/p003.pdf#page=9)
 
 ## Evaluation Scope
 

@@ -19,9 +19,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Initially, it may be tempting use the VLM directly as a black-box solver of Eq.1 (ie. t0 solve the overarching behavior generation problem) by simply passing it the Ix action plan options, ...
-
-방법 관련 발췌 — In Figure 4, we present examples of runtime policy steering using our approach for the Fork task and additional examples for Cup and Bag tasks are included in Appendix B2.
+FOREWARN은 생성 정책이 제안한 행동들의 결과를 잠재 세계 모델로 예측한 뒤 시각언어모델의 판단으로 실행할 행동을 고른다. [PDF 1쪽](https://www.roboticsproceedings.org/rss21/p076.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,15 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 8 / B. Policy Steering for Open-World Alignment - extractive body cue:** In Figure 4, we present examples of runtime policy steering using our approach for the Fork task and additional examples for Cup and Bag tasks ...
-- **p. 4 / 1. InTRopucTION - extractive body cue:** The training data consists of both successful and failed rollouts from the base policy (a / 0) and additional demonstration data, This allows the world ...
-- **p. 2 / 1. InTRopucTION - extractive body cue:** Ultimately, this alignment step enables ‘our "VLM-in-the-loop" policy steering approach to interpret, action plans as behavior narrations and select high-quality plans by reasoning over those ...
-- **p. 1 / Body text (section boundary not confidently recovered) - extractive body cue:** 1: We present FOREWARN, an VLM-in-the-loop policy steering algorithm for multi-modal generative robot policies.
-- **p. 1 / Abstract - extractive body cue:** We validate our framework across diverse robotic manipulation tasks, demonstrating its ability to bridge representational gaps and provide robust, generalizable policy steering.
-- **p. 5 / V. EXPERIMENTS - extractive body cue:** V-A).Then we evaluate the closed: loop policy steering performance as well as our method' robustness to novel task descriptions, £ (Sec.
-- **p. 6 / V. EXPERIMENTS - extractive body cue:** We collected 250 real-world trajectories per task, including both successful and failed rollouts from the base policy, along with additional 100 demonstrations used in base ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 계획별 미래 잠재 상태를 언어 표현에 정렬해 행동의 결과를 서술하고 과제 기준으로 평가할 수 있게 한다. [PDF 3쪽](https://www.roboticsproceedings.org/rss21/p076.pdf#page=3) · [PDF 4쪽](https://www.roboticsproceedings.org/rss21/p076.pdf#page=4)
+- 예측한 행동 설명과 실제 결과의 일치도, 그리고 계획 선택이 최종 조작 성공률에 주는 영향을 구분해 측정했다. [PDF 6쪽](https://www.roboticsproceedings.org/rss21/p076.pdf#page=6) · [PDF 8쪽](https://www.roboticsproceedings.org/rss21/p076.pdf#page=8)
 
 ## Evaluation Scope
 

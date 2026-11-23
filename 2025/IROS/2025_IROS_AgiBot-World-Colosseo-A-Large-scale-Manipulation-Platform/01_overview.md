@@ -20,9 +20,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — While significant progress has been made in general-purpose foundational models for natural language processing [1] and computer vision [2], robotics lags behind due to the difficulty of (high-quality) data collection.
-
-방법 관련 발췌 — Following our dataset, to address the limitations of previous robot foundation models that heavily rely on indomain robot datasets, we present Genie Operator-1 (GO1), a novel generalist policy that utilizes latent action ...
+AgiBot World Colosseo는 실제 조작 데이터의 규모를 늘리는 수집 플랫폼과 이를 사용하는 범용 정책 GO-1을 제시한다. [PDF 1쪽](https://arxiv.org/pdf/2503.06669v5#page=1)
 
 ## Problem and Motivation
 
@@ -54,16 +52,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / I. INTRODUCTION - extractive body cue:** Following our dataset, to address the limitations of previous robot foundation models that heavily rely on indomain robot datasets, we present Genie Operator-1 (GO1), a ...
-- **p. 2 / I. INTRODUCTION - extractive body cue:** 2) We propose GO-1, a robot foundation policy using latent action representations to unlock web-scale pre-training on web data.
-- **p. 7 / Figure/Table caption - extractive body cue:** Fig. 7: Further analysis on: a) how model performance scales with data size, and b) the impact of filtering undesir- able data through manual review ...
-- **p. 7 / Figure/Table caption - extractive body cue:** Fig. 5: Is GO-1 a more powerful robot generalist policy? We evaluate GO-1 against previous generalist policy RDT-1B and our baseline without the latent planner, ...
-- **p. 8 / 2) Implementation Details - extractive body cue:** 7(b), being larger in quantity does not necessarily translate to improved performance, while a smaller set of human-verified data yields a 0.18 boost in the ...
-- **p. 6 / 1) Evaluation Tasks - extractive body cue:** Each episode scores 1.0 for full success, with fractional scores for partial success, enabling a nuanced performance assessment.
-- **p. 3 / Dataset - extractive body cue:** The deployment results are adopted as feedback to improve the collection protocol. suffers from significant variability in embodiments, observation perspectives, and inconsistent data quality, limiting ...
-- **p. 4 / Dataset - extractive body cue:** This feedback-driven methodology ensures continuous improvement in data quality.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 사람이 검수하는 표준화된 수집 절차와 잠재 행동 표현을 이용하는 정책 학습 방법을 함께 설계했다. [PDF 3쪽](https://arxiv.org/pdf/2503.06669v5#page=3) · [PDF 5쪽](https://arxiv.org/pdf/2503.06669v5#page=5)
+- 사전학습 데이터 구성에 따른 실물 조작 결과를 비교하고 정교한 작업과 장기 과제에서 GO-1을 평가했다. [PDF 1쪽](https://arxiv.org/pdf/2503.06669v5#page=1) · [PDF 6쪽](https://arxiv.org/pdf/2503.06669v5#page=6)
 
 ## Evaluation Scope
 

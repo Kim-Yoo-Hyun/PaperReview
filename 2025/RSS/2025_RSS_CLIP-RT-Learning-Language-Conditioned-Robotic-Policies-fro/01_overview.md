@@ -19,9 +19,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — To ‘maintain consistency with the pretraining setup of the VLMs, existing VLA models (7, 29, 3] typically use a single-image observation v, rather than utilizing the full observations v1. ‘At test time, ...
-
-방법 관련 발췌 — Sec- ‘ond, we propose a data collection framework that enables non-experts to collect robot data only through natural language and augment the human-collected demonstration data, Third, experiments demonstrate that CLIP-RT outperforms O ...
+CLIP-RT는 사람이 말로 지정한 기본 동작을 시연 수집과 정책 학습에 함께 사용하는 시각언어행동 모델이다. [PDF 1쪽](https://www.roboticsproceedings.org/rss21/p016.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -54,16 +52,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / Abstract - extractive body cue:** Sec- ‘ond, we propose a data collection framework that enables non-experts to collect robot data only through natural language and augment the human-collected demonstration data, ...
-- **p. 1 / Abstract - extractive body cue:** We thus explore a method for training robotic skills through natural language. ‘To this tend, we propose a data collection framework that enables non-experts to ...
-- **p. 1 / Abstract - extractive body cue:** It consists of two steps: Ianguage-based teleoperation and stochastic trajectory augmentation (STA).
-- **p. 2 / A. Preliminaries - extractive body cue:** A robot dataset D = {(rafn)}Xa consists of a demonstration trajectory + paired with language instruction f.
-- **p. 9 / B. Adapting CLIP-RT to the LIBERO Benchmark - extractive body cue:** As shown in Table I, the recent state-of-the-art VLA model, OpenVLA-OFT [30], achieves the highest average success rate of 95.3%.
-- **p. 9 / B. Adapting CLIP-RT to the LIBERO Benchmark - extractive body cue:** [30], we measure the throughput and latency on an NVIDIA A100 GPU, As shown in Table I, CLIP-RT+ achieves 39% improved throughput (4.2Hz~>163.8H7) compared with ...
-- **p. 5 / Figure/Table caption - extractive body cue:** Fig. 4: Suecess rates on 9 Common tasks (top) and 9 Novel tasks (bottom). We conduct experiments using all compared ‘methods on Common tasks and ...
-- **p. 6 / Figure/Table caption - extractive body cue:** Fig. 6: Results on few-shot learning. We report the perfor- mance of CLIP-RT, CLIP-RT-Action, and OpenVLA with 1, 5, and 10 demonstrations (from left to ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 영상·과제 지시와 동작 문구를 대조적으로 정렬해 수행할 동작을 선택하고 수집한 시연을 확장한다. [PDF 1쪽](https://www.roboticsproceedings.org/rss21/p016.pdf#page=1) · [PDF 3쪽](https://www.roboticsproceedings.org/rss21/p016.pdf#page=3)
+- 실물에서 새 조작 기술의 습득을 평가하고 LIBERO에서는 성공률과 추론 처리량을 측정했다. [PDF 5쪽](https://www.roboticsproceedings.org/rss21/p016.pdf#page=5) · [PDF 8쪽](https://www.roboticsproceedings.org/rss21/p016.pdf#page=8)
 
 ## Evaluation Scope
 

@@ -14,11 +14,30 @@ import audit_note_artifacts as artifacts
 import build_lit_survey as survey
 import registry_profiles as profiles
 from reconcile_registry import build_facets
-from render_source_audit import OPEN, PASS, check_applied, current_checks
+from render_source_audit import OPEN, PASS, check_applied, cited_statement, current_checks, summary_headings
 from registry_schema import enrich_record, validate_record_shape
 
 
 class DocumentMaintenanceTest(unittest.TestCase):
+    def test_publication_header_requires_one_complete_canonical_value(self):
+        matches = audit.overview_publication_matches
+        self.assertTrue(matches("- Year/Venue: 2025 / T-RO (journal article)", 2025, "T-RO"))
+        self.assertFalse(matches("- Year/Venue\n\n## Claims\n- Year/Venue: 2025 / T-RO", 2025, "T-RO"))
+        self.assertFalse(matches("- Year/Venue: 2024 / T-RO", 2025, "T-RO"))
+        self.assertFalse(matches("- Year/Venue\n- Year/Venue: 2025 / T-RO", 2025, "T-RO"))
+
+    def test_web_report_uses_its_section_and_preserves_the_overview_layout(self):
+        overview = "## Problem and Importance\n\n## Core Idea and Contribution\n\n## Why This Paper Is Here — Researcher Interpretation\n"
+        self.assertEqual(summary_headings(overview), ("Problem and Importance", "Core Idea and Contribution"))
+        with self.assertRaises(ValueError):
+            summary_headings(overview + "## Why This Paper Is Here\n## Main Claims and Actual Contribution\n")
+        source = "https://example.org/report"
+        self.assertEqual(cited_statement({"text": "Claim.", "section": "Model and Data"},
+                                         {"source": source, "source_format": "html"}),
+                         "Claim. [Model and Data](https://example.org/report#:~:text=Model%20and%20Data)")
+        self.assertEqual(cited_statement({"text": "Claim.", "pages": [2]}, {"source": source}),
+                         "Claim. [PDF 2쪽](https://example.org/report#page=2)")
+
     def test_reinforcement_is_not_a_contact_or_force_sensor_cue(self):
         paper = {"title": "Reinforcement learning", "tags": []}
         facets = build_facets(paper)

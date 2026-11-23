@@ -19,9 +19,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — [12], [13], [14], [15], the main bottleneck for wide adoption of touch sensing in robotic manipulation is the lack of sensors that fulfill at the same time all the requirements of being ...
-
-방법 관련 발췌 — To better fulfill these requirements, in this paper, we present the design of a novel tactile sensor.
+DIGIT은 다지 손끝에 장착하는 소형 영상식 촉각 센서로 접촉 영상을 이용한 손안 조작을 실증했다. [PDF 1쪽](https://arxiv.org/pdf/2005.14679v1#page=1)
 
 ## Problem and Motivation
 
@@ -52,15 +50,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 1 / I. INTRODUCTION - extractive body cue:** To better fulfill these requirements, in this paper, we present the design of a novel tactile sensor.
-- **p. 1 / I. INTRODUCTION - extractive body cue:** First, we present the design and manufacturing process of DIGIT, and analyze the properties of the resulting sensor.
-- **p. 2 / I. INTRODUCTION - extractive body cue:** To scale up tactile-MPC, we propose new approaches for dynamics model learning and task specification that dramatically reduce the computational cost.
-- **p. 7 / V. EXPERIMENTAL RESULTS - extractive body cue:** This result is in agreement with previous results in [17], where learned models outperform simple handtuned controllers.
-- **p. 7 / V. EXPERIMENTAL RESULTS - extractive body cue:** We hypothesize that improving the low level controller and collecting more data for improving the learned model will help in decreasing the number of marbles ...
-- **p. 6 / V. EXPERIMENTAL RESULTS - extractive body cue:** These results are shown in Table III.
-- **p. 6 / V. EXPERIMENTAL RESULTS - extractive body cue:** In both datasets, we use 64 × 64 images and compare prediction performance with CDNA [35] used for tactile servoing in [17] in terms of ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 반복 제작과 부품 교체를 고려해 광학·기계 구조를 설계하고 접촉면 재료의 내구성을 비교했다. [PDF 2쪽](https://arxiv.org/pdf/2005.14679v1#page=2) · [PDF 4쪽](https://arxiv.org/pdf/2005.14679v1#page=4)
+- 촉각 영상으로 학습한 동역학 모델과 제어기를 이용해 손가락 사이의 유리 구슬을 움직이는 실험을 했다. [PDF 4쪽](https://arxiv.org/pdf/2005.14679v1#page=4) · [PDF 6쪽](https://arxiv.org/pdf/2005.14679v1#page=6)
 
 ## Evaluation Scope
 

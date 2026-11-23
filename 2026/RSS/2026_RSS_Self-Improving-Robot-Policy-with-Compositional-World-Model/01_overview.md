@@ -1,9 +1,9 @@
 # Self-Improving Robot Policy with Compositional World Model
 
-> Evidence maturity: `ABSTRACT_CHECKED`. abstract 기반 — 본문 수동 확인 필요.
+> Evidence maturity: `ABSTRACT_CHECKED`. 개요 전반은 초록 수준이며, 아래 요약과 두 기여에는 확인한 본문 위치를 표시했다.
 > 자동 작성 노트는 실제 정독을 뜻하지 않는다. 사용자 reading status는 UNREAD로 시작한다.
 
-- Year/Venue
+- Year/Venue: 2026 / RSS
 - Authors: Jiazhi Yang, Kunyang Lin, Wencong Zhang, Jinwei Li, Tianwei Lin, Longyan Wu, Ya-Qin Zhang, Hao Zhao, Ping Luo, Zhizhong Su, Hongyang Li, Xiangyu Yue, Li Chen
 - Category: World Models, Safety, and Recovery
 - Primary track: World models, safety, uncertainty, and recovery
@@ -14,15 +14,16 @@
 - Venue verification: https://roboticsproceedings.org/rss22/p012.html
 - Code/Project: https://github.com/OpenDriveLab/RISE
 - Code: https://github.com/OpenDriveLab/RISE
-- Source audit: 2026-10-19: 공식 paper abstract 및 저자 project/code README 확인; abstract 기반 — 본문 수동 확인 필요.
+- Source audit: 2026-11-23 요약과 핵심 기여 두 개를 원문 본문에 대조했다. 나머지 세부 분석은 기존 초록·공식 자료에 근거한다.
 
 ## Problem and Importance
 
-Contact-rich/dynamic task에서 VLA의 작은 실행 오차가 누적되지만 실제 환경 on-policy RL은 reset·hardware 비용이 높다.
+RISE는 조작의 다중 시점 미래를 예측하는 동역학 모델과 작업 진행도를 평가하는 가치 모델을 결합해 상상 궤적으로 정책을 개선한다. [PDF 1쪽](https://roboticsproceedings.org/rss22/p012.pdf#page=1)
 
 ## Core Idea and Contribution
 
-Multi-view controllable dynamics와 progress value model을 분리하여 imagined rollout에서 advantage를 만들고 policy를 개선한다.
+- 두 모델을 서로 다른 목표로 학습하고 예측한 경로의 진행도에서 정책 갱신에 사용할 어드밴티지를 구한다. [PDF 3쪽](https://roboticsproceedings.org/rss22/p012.pdf#page=3) · [PDF 4쪽](https://roboticsproceedings.org/rss22/p012.pdf#page=4)
+- 움직이는 블록 분류·배낭에 넣기·상자 닫기의 실물 결과와 학습에 쓰인 경험 구성의 효과를 비교했다. [PDF 6쪽](https://roboticsproceedings.org/rss22/p012.pdf#page=6) · [PDF 7쪽](https://roboticsproceedings.org/rss22/p012.pdf#page=7)
 
 ## Observation–State–Action Interface
 
@@ -32,7 +33,7 @@ Observation/action → imagined multi-view future → progress value/advantage �
 
 RSS abstract는 dynamic brick sorting, backpack packing, box closing의 세 real-world task 평가를 보고한다.
 
-근거: [공식 paper/abstract](https://roboticsproceedings.org/rss22/p012.html) · [저자 project/code](https://github.com/OpenDriveLab/RISE). 정확한 수치·baseline fairness·failure 범위는 본문 확인 전까지 확정하지 않는다.
+근거: [공식 paper/abstract](https://roboticsproceedings.org/rss22/p012.html) · [저자 project/code](https://github.com/OpenDriveLab/RISE). 그 밖의 수치, 기준선의 비교 조건, 실패 범위는 별도 대조가 필요하다.
 
 ## Why This Paper Is Here — Researcher Interpretation
 

@@ -19,9 +19,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — To address these challenges, we propose DREAMGEN, a new synthetic data pipeline that leverages video world models to create realistic training data at scale with minimal manual labor or engineering.
-
-방법 관련 발췌 — Lastly, we introduce DreamGen Bench (Section 4), a new video generation benchmark designed to evaluate how well different video world models adapt to novel robot embodiments.
+DreamGen은 비디오 세계 모델이 만든 로봇 영상에서 의사 행동을 복원해 새 행동과 환경을 위한 정책 학습 자료를 만든다. [PDF 1쪽](https://arxiv.org/pdf/2505.12705v2#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 3 / 1 Introduction - extractive body cue:** Lastly, we introduce DreamGen Bench (Section 4), a new video generation benchmark designed to evaluate how well different video world models adapt to novel robot ...
-- **p. 2 / 1 Introduction - extractive body cue:** To address these challenges, we propose DREAMGEN, a new synthetic data pipeline that leverages video world models to create realistic training data at scale with ...
-- **p. 3 / 1 Introduction - extractive body cue:** These represent true zero-to-one improvements - GR00T N1 trained on pick-and-place alone achieves 0% success rates on most novel behavior and environment experiments, while DREAMGEN ...
-- **p. 4 / 1 Introduction - extractive body cue:** We propose two scenarios of training with neural trajectories: co-training with real-world trajectories, and solely training on the neural trajectories labeled with IDM actions.
-- **p. 1 / Abstract - extractive body cue:** To evaluate the pipeline systematically, we introduce DreamGen Bench, a video generation benchmark that shows a strong correlation between benchmark performance and downstream policy success.
-- **p. 5 / 3 Experiments - extractive body cue:** Lastly, we show that solely training on neural trajectories with IDM actions enables us to reach a non-trivial performance (20.6% average success rate across 24 ...
-- **p. 6 / 3 Experiments - extractive body cue:** As shown in Figure 5, neural trajectories consistently improve performance for different visuomotor policies (Diffusion Policy, π0, and GR00T N1) across all robot embodiments for ...
-- **p. 7 / 3 Experiments - extractive body cue:** Lastly, the baseline model trained only on pick-and-place in a single environment shows 0% Success Rate, since it does not have the ability to generalize ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 대상 로봇에 영상 생성기를 맞춘 뒤 잠재 행동 모델이나 역동역학 모델로 생성 영상에 행동을 붙인다. [PDF 1쪽](https://arxiv.org/pdf/2505.12705v2#page=1)
+- 실제 휴머노이드의 새 행동을 평가하고 생성 영상의 질과 후속 정책 성공의 관계를 보는 DreamGen Bench를 제시했다. [PDF 1쪽](https://arxiv.org/pdf/2505.12705v2#page=1) · [PDF 7쪽](https://arxiv.org/pdf/2505.12705v2#page=7)
 
 ## Evaluation Scope
 

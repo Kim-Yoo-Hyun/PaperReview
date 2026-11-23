@@ -19,9 +19,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Kine-grained robot manipulation, such as lifting and rotating a bottle to display the label on the cap, requires robust reasoning about object parts and their relationships with intended tasks.
-
-방법 관련 발췌 — Specifically, the bi-level planner consists of two modules: (1) a high-level task planner and (2) a low-level action policy.
+PartInstruct는 지시가 가리키는 물체 부품과 그 부품에 가할 동작을 연결해 정밀 조작 능력을 평가하는 벤치마크다. [PDF 1쪽](https://www.roboticsproceedings.org/rss21/p148.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -53,15 +51,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 7 / B. Bi-level Planning - extractive body cue:** Specifically, the bi-level planner consists of two modules: (1) a high-level task planner and (2) a low-level action policy.
-- **p. 4 / A. Problem Setup - extractive body cue:** ‘To develop an embodied agent capable of executing tasks defined by g, we hypothesize that it would be beneficial to star, With a set of ...
-- **p. 6 / A. End-to-End Policy Learning - extractive body cue:** Diffusion Policy (DP) [5] represents a visuomotor policy as a conditional denoising diffusion process in the action space, which allows it to effectively handle multimodal ...
-- **p. 7 / Figure/Table caption - extractive body cue:** Figure 8: Success Rates of all baselines. The left group represents end-to-end learning policies, while the right group corresponds to bi-level planning models. Error bars ...
-- **p. 6 / C. Dataset - extractive body cue:** 11, 13, 5, 49) and (2) bi level planning that first generates high-level plans (typically subgoals), then compute and execute the low-level action plans to ...
-- **p. 6 / C. Dataset - extractive body cue:** To achieve general-purpose robot manipulation, there have been two common types of approaches: (1) end-to-end policy learning that directly maps observation and instruction 10 actions ...
-- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1: An example fine-grained robot manipulation task in Partlnstruet, To successfully perform the task described in the instruction
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 시뮬레이터에서 생성한 시연을 과제 지시, 부품별 기본 기술의 연쇄, 해당 부품의 3D 정보와 짝지었다. [PDF 3쪽](https://www.roboticsproceedings.org/rss21/p148.pdf#page=3) · [PDF 4쪽](https://www.roboticsproceedings.org/rss21/p148.pdf#page=4)
+- 새 상태·물체·과제로 나눠 평가하고 상위 계획과 하위 행동 예측 중 어디에서 성능이 떨어지는지 비교했다. [PDF 6쪽](https://www.roboticsproceedings.org/rss21/p148.pdf#page=6) · [PDF 9쪽](https://www.roboticsproceedings.org/rss21/p148.pdf#page=9)
 
 ## Evaluation Scope
 

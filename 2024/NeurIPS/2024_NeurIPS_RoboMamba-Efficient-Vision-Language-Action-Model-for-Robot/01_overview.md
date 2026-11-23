@@ -19,9 +19,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — While existing MLLM-based policies can handle a range of basic tasks, they still face challenges in two aspects.
-
-방법 관련 발췌 — In summary, our contributions are as follows: • We introduce RoboMamba, an efficient VLA model that integrates a vision encoder with the linear-complexity Mamba LLM, which possesses visual common sense and robotic-related ...
+RoboMamba는 시각 인코더와 상태 공간 언어모델을 정렬하고 소형 행동 헤드를 학습해 조작에 필요한 6D 자세를 예측한다. [PDF 1쪽](https://proceedings.neurips.cc/paper_files/paper/2024/file/46a126492ea6fb87410e55a58df2e189-Paper-Conference.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -54,16 +52,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 3 / 1.1 Hz - extractive body cue:** In summary, our contributions are as follows: • We introduce RoboMamba, an efficient VLA model that integrates a vision encoder with the linear-complexity Mamba LLM, ...
-- **p. 2 / 1.1 Hz - extractive body cue:** Drawing inspiration from this, we raise a question: "Can we develop an efficient robotic VLA model that possesses strong reasoning capabilities while also acquiring robot ...
-- **p. 2 / 1.1 Hz - extractive body cue:** Subsequently, we introduce an efficient fine-tuning strategy to equip RoboMamba with pose prediction abilities, requiring a few dozen minutes to fine-tune a simple policy head ...
-- **p. 1 / Abstract - extractive body cue:** Inspired by this, we introduce RoboMamba, an end-to-end robotic VLA model that leverages Mamba to deliver both robotic reasoning and action capabilities, while maintaining efficient ...
-- **p. 8 / 4 Experiment - extractive body cue:** As shown in Table 2, our RoboMamba achieves a 7.0% improvement on seen tasks and a 2.0% improvement on unseen tasks compared to the previous ...
-- **p. 9 / 4 Experiment - extractive body cue:** Compared with RWKV-3B [24], Mamba-2.7B achieves significant improvements on both common sense and robotic-related reasoning benchmarks.
-- **p. 8 / 4 Experiment - extractive body cue:** The results demonstrate that leveraging the strong generalization abilities of MLLMs can effectively improve the policy's generalization ability while enhancing accuracy on unseen objects.
-- **p. 7 / 4 Experiment - extractive body cue:** To measure the model's performance, we use the classical manipulation success rate, defined as the ratio of successfully manipulated samples to the total test samples.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 시각·언어 공동 학습으로 추론 표현을 얻은 뒤 소수의 정책 파라미터를 조정해 자세 예측에 사용한다. [PDF 1쪽](https://proceedings.neurips.cc/paper_files/paper/2024/file/46a126492ea6fb87410e55a58df2e189-Paper-Conference.pdf#page=1) · [PDF 5쪽](https://proceedings.neurips.cc/paper_files/paper/2024/file/46a126492ea6fb87410e55a58df2e189-Paper-Conference.pdf#page=5)
+- 일반·로봇 추론 벤치마크와 시뮬레이션·실물의 자세 예측을 평가하고 추론 속도도 비교했다. [PDF 1쪽](https://proceedings.neurips.cc/paper_files/paper/2024/file/46a126492ea6fb87410e55a58df2e189-Paper-Conference.pdf#page=1) · [PDF 7쪽](https://proceedings.neurips.cc/paper_files/paper/2024/file/46a126492ea6fb87410e55a58df2e189-Paper-Conference.pdf#page=7)
 
 ## Evaluation Scope
 

@@ -327,6 +327,13 @@ def note_evidence_for(path: Path) -> str:
     return value if value in EVIDENCE else "MISSING"
 
 
+def overview_publication_matches(content: str, year, venue: str) -> bool:
+    header = content.partition("\n## ")[0]
+    lines = re.findall(r"^- Year/Venue\b.*$", header, re.M)
+    expected = re.escape(f"- Year/Venue: {year} / {venue}")
+    return len(lines) == 1 and re.fullmatch(expected + r"(?: \([^()\n]+\))?", lines[0]) is not None
+
+
 def audit_registry_profiles(
     item: dict,
     paper_ids: set[str],
@@ -1088,6 +1095,8 @@ def main() -> None:
                 if cited and cited.group(1).rstrip(".") != item["page"].rstrip("."):
                     errors.append(f"note cites a stale canonical source: {item['paper_id']} {name}")
                 if name == "01_overview.md":
+                    if not overview_publication_matches(content, item["year"], item["venue"]):
+                        errors.append(f"overview Year/Venue missing or mismatched: {item['paper_id']}")
                     for label, expected in (("Official paper", item["page"]),
                                             ("Authors", ", ".join(item.get("authors") or []))):
                         header = re.search(rf"(?m)^- {label}: (.+)$", content)

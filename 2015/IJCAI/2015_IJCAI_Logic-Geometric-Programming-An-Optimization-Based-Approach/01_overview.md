@@ -19,9 +19,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Most existing TAMP approaches, however, require a well-defined task planning problem including a symbolic goal description.
-
-방법 관련 발췌 — Besides the novel formulation of manipulation planning as an LGP, we think of the concept of the effective end space and its optimization as a search heuristic as the core contributions of ...
+Logic-Geometric Programming은 기호적 행동 순서가 연속 궤적의 제약을 정하도록 해 작업 선택과 운동 계획을 함께 푼다. [PDF 1쪽](https://ijcai.org/proceedings/2015/0274.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -53,14 +51,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1 Introduction - extractive body cue:** Besides the novel formulation of manipulation planning as an LGP, we think of the concept of the effective end space and its optimization as a ...
-- **p. 1 / 1 Introduction - extractive body cue:** The specific methods we propose in this paper are (yet!) in many respects less efficient than existing TAMP approaches; in particular we cannot scale to ...
-- **p. 2 / 1 Introduction - extractive body cue:** In this paper we propose three levels on which geometric reasoning (that is, optimization over geometric configurations and paths) may inform symbolic search towards a ...
-- **p. 1 / Abstract - extractive body cue:** We propose to formulate the problem holistically as a 1storder logic extension of a mathematical program: a non-linear constrained program over the full world trajectory ...
-- **p. 5 / 5 Experiments - extractive body cue:** For brevity, we provide a detailed definition of ψ(x(T)) and quantitative results on achieved scores in an appendix on the author webpage.
-- **p. 6 / 5 Experiments - extractive body cue:** The example demonstrates success on our construction problems, leading to (locally, approximately) optimal full manipulation paths across up to 50 manipulations.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 끝 상태의 기구학, 상호작용의 핵심 자세, 전체 궤적을 차례로 최적화해 기호 탐색에 기하학적 정보를 제공한다. [PDF 4쪽](https://ijcai.org/proceedings/2015/0274.pdf#page=4) · [PDF 5쪽](https://ijcai.org/proceedings/2015/0274.pdf#page=5)
+- 서로 다른 부품으로 안정적인 구조물을 높이 쌓는 문제에서 이 근사 단계들의 계산 비용과 계획 결과를 비교했다. [PDF 5쪽](https://ijcai.org/proceedings/2015/0274.pdf#page=5) · [PDF 6쪽](https://ijcai.org/proceedings/2015/0274.pdf#page=6)
 
 ## Evaluation Scope
 

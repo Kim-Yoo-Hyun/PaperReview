@@ -19,9 +19,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — To address these challenges, prior research has delved into diverse pre-training methods, aiming to enhance the learning capabilities of robots (Nair et al., 2022; Radosavovic et al., 2022; Seo et al., 2023; ...
-
-방법 관련 발췌 — Key contributions of the paper includes: • We show that large-scale video generative pre-training is able to effectively benefit visual robot manipulation learning. • We present a flexible GPT-style transformer model, GR-1, ...
+GR-1은 대규모 영상 생성 사전학습 뒤 언어 지시·관측·로봇 상태로 미래 영상과 조작 행동을 함께 예측한다. [PDF 1쪽](https://proceedings.iclr.cc/paper_files/paper/2024/file/2c37c5bcef24b9541550261dcd63261b-Paper-Conference.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** Key contributions of the paper includes: • We show that large-scale video generative pre-training is able to effectively benefit visual robot manipulation learning. • We ...
-- **p. 1 / 1 INTRODUCTION - extractive body cue:** Large-scale pre-training allows these models to learn general patterns from large datasets and thus enables them to easily generalize to related finetuning tasks with inherited ...
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** To this end, we propose to leverage large-scale video generative pre-training for efficient and effective learning of multi-task visual robot manipulation.
-- **p. 4 / 3 METHOD - extractive body cue:** Each trajectory consists of a language instruction and a sequence of observation images, robot states, and actions: τ = {l, o1, s1, a1, o2, s2, ...
-- **p. 7 / 4 EXPERIMENT - extractive body cue:** GR-1 significantly outperforms all the comparing baseline methods, achieving a success rate of 77.8% and an average length of 2.00.
-- **p. 7 / 4 EXPERIMENT - extractive body cue:** GR-1 substantially improves the performance in terms of success rate and average length.
-- **p. 8 / 4 EXPERIMENT - extractive body cue:** GR-1 achieves a high success rate in the setting of seen objects.
-- **p. 9 / Figure/Table caption - extractive body cue:** Figure 6: Video Prediction Results. The images in green boxes are ground-truth images; the images in blue boxes are predicted images. results are shown in ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 영상만 있는 데이터의 미래 프레임 예측을 사전학습에 사용하고 로봇 데이터로 행동 예측을 함께 미세조정한다. [PDF 1쪽](https://proceedings.iclr.cc/paper_files/paper/2024/file/2c37c5bcef24b9541550261dcd63261b-Paper-Conference.pdf#page=1) · [PDF 3쪽](https://proceedings.iclr.cc/paper_files/paper/2024/file/2c37c5bcef24b9541550261dcd63261b-Paper-Conference.pdf#page=3)
+- CALVIN의 미관측 장면과 실제 로봇의 새 물체·장면에서 기준선 대비 조작 성능을 평가했다. [PDF 6쪽](https://proceedings.iclr.cc/paper_files/paper/2024/file/2c37c5bcef24b9541550261dcd63261b-Paper-Conference.pdf#page=6) · [PDF 8쪽](https://proceedings.iclr.cc/paper_files/paper/2024/file/2c37c5bcef24b9541550261dcd63261b-Paper-Conference.pdf#page=8)
 
 ## Evaluation Scope
 

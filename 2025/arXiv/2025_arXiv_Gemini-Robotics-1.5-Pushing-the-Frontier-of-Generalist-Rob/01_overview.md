@@ -19,9 +19,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — This allows the model to convert visual observations into language-based thoughts, simplify complex instructions, detect task success or failure, propose recovery behaviors, and make the robot's actions more interpretable to human users.
-
-방법 관련 발췌 — This multi-embodiment pre-training allows GR 1.5 to control multiple robots, including the ALOHA, Bi-arm Franka, and Apollo humanoid robots, without any robot-specific post-training, and it also enables zero-shot skill transfer from one ...
+Gemini Robotics 1.5 보고서는 다기종 로봇의 행동을 생성하는 VLA와 공간 이해·계획·진행 추정을 담당하는 ER 모델을 각각 평가한다. [PDF 1쪽](https://arxiv.org/pdf/2510.03342v3#page=1)
 
 ## Problem and Motivation
 
@@ -55,15 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 1 / 1. Introduction - extractive body cue:** This multi-embodiment pre-training allows GR 1.5 to control multiple robots, including the ALOHA, Bi-arm Franka, and Apollo humanoid robots, without any robot-specific post-training, and it ...
-- **p. 2 / 1. Introduction - extractive body cue:** ER thinking traces Gemini Robotics 1.5 Gemini Robotics-ER 1.5 Actions Text Figure 1 / The Gemini Robotics 1.5 family of models consists of Gemini Robotics ...
-- **p. 3 / 2.1. Model & Architecture - extractive body cue:** The full agentic system consists of an orchestrator and an action model that are implemented by the VLM and the VLA, respectively: • Orchestrator: The ...
-- **p. 4 / 2.2. Robot Data - extractive body cue:** The robot data consists of thousands of diverse tasks across these platforms covering a broad range of manipulation skills across a multitude of scenes.
-- **p. 1 / 1. Introduction - extractive body cue:** Secondly, GR 1.5 is a Thinking VLA 1See Contributions and Acknowledgments section for full author list.
-- **p. 4 / 2.3. Evaluation - extractive body cue:** To improve research iteration speed, we have developed methods for evaluation without real robots in the loop.
-- **p. 4 / 2.3. Evaluation - extractive body cue:** This has allowed us to massively scale up the breadth of our evaluations to new objects, scenes, and environments, and to rapidly iterate on architectural ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- Motion Transfer로 서로 다른 로봇의 동작 데이터를 함께 학습하고 로봇 형태를 가로지르는 기술 전이를 평가했다. [PDF 3쪽](https://arxiv.org/pdf/2510.03342v3#page=3) · [PDF 8쪽](https://arxiv.org/pdf/2510.03342v3#page=8)
+- 자연어 추론을 행동과 번갈아 생성하는 방식을 제시하고 여러 단계로 된 과제에서 실행 전 추론이 주는 효과를 분석했다. [PDF 1쪽](https://arxiv.org/pdf/2510.03342v3#page=1) · [PDF 9쪽](https://arxiv.org/pdf/2510.03342v3#page=9)
 
 ## Evaluation Scope
 

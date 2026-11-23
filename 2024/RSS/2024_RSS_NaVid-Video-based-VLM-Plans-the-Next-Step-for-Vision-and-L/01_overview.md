@@ -1,9 +1,9 @@
 # NaVid: Video-based VLM Plans the Next Step for Vision-and-Language Navigation
 
-> Evidence maturity: `ABSTRACT_CHECKED`. abstract 기반 — 본문 수동 확인 필요.
+> Evidence maturity: `ABSTRACT_CHECKED`. 개요 전반은 초록 수준이며, 아래 요약과 두 기여에는 확인한 본문 위치를 표시했다.
 > 자동 작성 노트는 실제 정독을 뜻하지 않는다. 사용자 reading status는 UNREAD로 시작한다.
 
-- Year/Venue
+- Year/Venue: 2024 / RSS
 - Authors: Jiazhao Zhang, Kunyu Wang, Rongtao Xu, Gengze Zhou, Yicong Hong, Xiaomeng Fang, Qi Wu, Zhizheng Zhang, He Wang
 - Category: VLA and Generalist Robot Policies
 - Primary track: VLA and generalist robot policies
@@ -14,15 +14,16 @@
 - Venue verification: https://roboticsproceedings.org/rss20/p079.html
 - Code/Project: https://pku-epic.github.io/NaVid/
 - Code: https://github.com/jzhzhang/NaVid-VLN-CE
-- Source audit: 2026-10-19: 공식 paper abstract 및 저자 project/code README 확인; abstract 기반 — 본문 수동 확인 필요.
+- Source audit: 2026-11-23 요약과 핵심 기여 두 개를 원문 본문에 대조했다. 나머지 세부 분석은 기존 초록·공식 자료에 근거한다.
 
 ## Problem and Importance
 
-Language instruction을 따라 unseen environment를 이동할 때 scene generalization과 sim-to-real gap을 줄이는 문제다.
+NaVid는 언어 지시와 로봇의 단안 RGB 영상 이력으로 다음 이동 행동을 결정하는 비디오 기반 내비게이션 모델이다. [PDF 1쪽](https://roboticsproceedings.org/rss20/p079.pdf#page=1)
 
 ## Core Idea and Contribution
 
-Monocular RGB video history를 VLM context로 처리하여 다음 navigation action을 출력한다.
+- 과거와 현재 영상을 시공간 문맥으로 인코딩하고 연속 환경에서 수집한 행동 계획·지시 추론 예제와 웹 데이터를 함께 사용한다. [PDF 4쪽](https://roboticsproceedings.org/rss20/p079.pdf#page=4) · [PDF 5쪽](https://roboticsproceedings.org/rss20/p079.pdf#page=5)
+- 처음 보는 R2R 환경, 다른 데이터셋, 실제 로봇에서 결과를 비교해 지도·깊이 입력 없이 가능한 전이를 평가했다. [PDF 7쪽](https://roboticsproceedings.org/rss20/p079.pdf#page=7) · [PDF 8쪽](https://roboticsproceedings.org/rss20/p079.pdf#page=8)
 
 ## Observation–State–Action Interface
 
@@ -32,7 +33,7 @@ Language instruction + 누적 RGB video → next-step navigation action; map·od
 
 RSS abstract는 continuous navigation simulation과 실제 환경의 cross-dataset/sim-to-real 평가를 명시한다.
 
-근거: [공식 paper/abstract](https://roboticsproceedings.org/rss20/p079.html) · [저자 project/code](https://pku-epic.github.io/NaVid/). 정확한 수치·baseline fairness·failure 범위는 본문 확인 전까지 확정하지 않는다.
+근거: [공식 paper/abstract](https://roboticsproceedings.org/rss20/p079.html) · [저자 project/code](https://pku-epic.github.io/NaVid/). 그 밖의 수치, 기준선의 비교 조건, 실패 범위는 별도 대조가 필요하다.
 
 ## Why This Paper Is Here — Researcher Interpretation
 

@@ -19,9 +19,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, the lack of action labels makes utilization of video data in policy learning difficult.
-
-방법 관련 발췌 — We summarize our main contributions below: 1) We propose an Any-point Trajectory Model, a simple and novel framework that bridges video pre-training to policy learning, leveraging the structured representation of particle trajectories.
+ATM은 행동 라벨이 없는 영상에서 임의의 영상 지점이 움직일 미래 경로를 학습해 적은 로봇 시연으로 정책을 학습한다. [PDF 1쪽](https://www.roboticsproceedings.org/rss20/p092.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / I. INTRODUCTION - extractive body cue:** We summarize our main contributions below: 1) We propose an Any-point Trajectory Model, a simple and novel framework that bridges video pre-training to policy learning, ...
-- **p. 2 / I. INTRODUCTION - extractive body cue:** Additionally, we demonstrate that our method facilitates effective transfer learning from human videos and videos of a robot with a different morphology.
-- **p. 3 / IV. METHOD - extractive body cue:** To model the tracks, we propose a track transformer and illustrate the architecture in Figure 2 (a). a) Self-supervised Track Annotation.: Initially, we generate point ...
-- **p. 4 / IV. METHOD - extractive body cue:** Guidance from the predicted track enables us to learn robust policies from only a few action-labeled demonstrations. most of the points that are sampled randomly ...
-- **p. 7 / Figure/Table caption - extractive body cue:** Fig. 6: We implement ATM Diffusion Policy by adding the predicted future trajectories as additional conditioning and show consistent improvement over the base diffusion policies ...
-- **p. 9 / Figure/Table caption - extractive body cue:** Fig. 10: We plot the success rates of the policies learned with predicted trajectories of different lengths. Generally, longer trajectory length improves the performance, but ...
-- **p. 2 / 2) Through extensive experiments on simulated bench - extractive body cue:** marks and in the real world, we demonstrate that our method can effectively utilize video data in pre-training and significantly outperform various video pre-training baselines ...
-- **p. 9 / Figure/Table caption - extractive body cue:** Fig. 9: Success rate of our policy trained with 4%, 10% and 20% action-labeled demos. Our policy trained with only 4% demos performs comparably to ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 언어 지시와 관측에서 점들의 미래 궤적을 예측하고 이를 시각운동 정책이 참조할 제어 단서로 제공한다. [PDF 3쪽](https://www.roboticsproceedings.org/rss20/p092.pdf#page=3) · [PDF 4쪽](https://www.roboticsproceedings.org/rss20/p092.pdf#page=4)
+- 시뮬레이션·실물의 언어 조건부 조작과 함께 사람 또는 다른 로봇의 영상으로부터 기술이 전이되는지를 평가했다. [PDF 5쪽](https://www.roboticsproceedings.org/rss20/p092.pdf#page=5) · [PDF 7쪽](https://www.roboticsproceedings.org/rss20/p092.pdf#page=7)
 
 ## Evaluation Scope
 

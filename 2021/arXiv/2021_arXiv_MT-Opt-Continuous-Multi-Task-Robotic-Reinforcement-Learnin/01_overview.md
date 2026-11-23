@@ -19,9 +19,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, to realize these benefits for a real-world robotic learning system, we need to overcome a number of major challenges [64, 32, 11, 86], which have so far made it difficult to ...
-
-방법 관련 발췌 — We further make the following contributions: • We address the challenge of providing rewards by creating a scalable and intuitive success-classifier-based approach that allows to quickly define new tasks and their rewards. ...
+MT-Opt는 여러 실제 로봇과 과제의 경험을 공유해 조작 기술을 함께 학습하고 새로운 과제의 강화학습을 시작한다. [PDF 1쪽](https://arxiv.org/pdf/2104.08212v2#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / I. INTRODUCTION - extractive body cue:** We further make the following contributions: • We address the challenge of providing rewards by creating a scalable and intuitive success-classifier-based approach that allows to ...
-- **p. 1 / I. INTRODUCTION - extractive body cue:** D) Sample of behaviorally and visually distinct tasks such as covering, chasing, alignment, which we show our method can adapt to.
-- **p. 2 / I. INTRODUCTION - extractive body cue:** We present our multi-task system as well as examples of some of the tasks that it is capable of performing in Fig.
-- **p. 4 / III. SYSTEM OVERVIEW - extractive body cue:** First, we discuss two base choices for the impersonation function fI, then we introduce a more principled solution.
-- **p. 4 / III. SYSTEM OVERVIEW - extractive body cue:** While this basic multi-task Q-learning system can in principle acquire diverse tasks, with each task learning from the data corresponding to that task, this approach ...
-- **p. 7 / VII. EXPERIMENTS - extractive body cue:** Looking at the average performance across all task, we observe that MT-Opt significantly outperforms the baselines, in some cases with ≈3× average improvement.
-- **p. 7 / VII. EXPERIMENTS - extractive body cue:** The 12-task policy outperforms the 2task policy even on the two tasks that the 2-task policy is trained on, suggesting that training multiple tasks not ...
-- **p. 8 / VII. EXPERIMENTS - extractive body cue:** MT-Opt, which uses impersonated successes and failures, achieves 39% success for the same task, a ≈10× improvement.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 성공 상태 예시로 과제를 정의하고 수집한 궤적에 여러 과제의 성공 판정과 보상을 적용했다. [PDF 3쪽](https://arxiv.org/pdf/2104.08212v2#page=3) · [PDF 5쪽](https://arxiv.org/pdf/2104.08212v2#page=5)
+- 여러 로봇에서 모은 경험으로 실제 조작 12개를 평가하고 과제 사이의 경험·정책 공유 효과를 비교했다. [PDF 7쪽](https://arxiv.org/pdf/2104.08212v2#page=7) · [PDF 8쪽](https://arxiv.org/pdf/2104.08212v2#page=8)
 
 ## Evaluation Scope
 

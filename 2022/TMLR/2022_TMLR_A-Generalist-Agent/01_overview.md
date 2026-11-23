@@ -20,9 +20,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — There are two challenges in this benchmark: Skill Mastery (where the agent is provided data from the 5 test object triplets it is later tested on) and Skill Generalization (where data can ...
-
-방법 관련 발췌 — During evaluation, the agent can be prompted using a successful demonstration of the desired task, which we do by default in all control results that we present here.
+Gato는 영상·텍스트·행동을 일련의 토큰으로 표현해 동일한 가중치로 게임, 언어 과제와 로봇팔 조작을 수행한다. [PDF 1쪽](https://arxiv.org/pdf/2205.06175v3#page=1)
 
 ## Problem and Motivation
 
@@ -56,16 +54,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 4 / 1 Introduction - extractive body cue:** During evaluation, the agent can be prompted using a successful demonstration of the desired task, which we do by default in all control results that ...
-- **p. 6 / 1 Introduction - extractive body cue:** ALIGN (Jia et al., 2021) consists of 1.8B images and their alternative text (alt-text) annotations.
-- **p. 6 / 1 Introduction - extractive body cue:** LTIP (Long Text & Image Pairs), consists of 312 million images with captions (Alayrac et al., 2022).
-- **p. 7 / 1 Introduction - extractive body cue:** The environment consists of a Sawyer robot arm with 3-DoF cartesian velocity control, an additional DoF for velocity, and a discrete gripper action.
-- **p. 8 / 1 Introduction - extractive body cue:** While the single-task online RL agents which generated the data still outperform Gato, this may be overcome by adding capacity or using offline RL training ...
-- **p. 14 / 1 Introduction - extractive body cue:** The specialist Atari agent outperforms our generalist agent Gato, which achieved super-human performance on 23 games.
-- **p. 14 / 1 Introduction - extractive body cue:** This experience is then combined, or distilled, into a single agent, which achieves 96.6% success rate averaged over all 50 tasks.
-- **p. 12 / Figure/Table caption - extractive body cue:** Figure 10: Robotics fine-tuning results. Left: Comparison of real robot Skill Generalization success rate averaged across test triplets for Gato, expert, and CRR trained on ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 관측과 행동 양식마다 정한 토큰화를 거쳐 하나의 시퀀스 모델이 문맥에 맞는 출력을 생성하도록 학습한다. [PDF 3쪽](https://arxiv.org/pdf/2205.06175v3#page=3) · [PDF 4쪽](https://arxiv.org/pdf/2205.06175v3#page=4)
+- 실물 로봇팔의 RGB Stacking에서 물체 묶음별 쌓기 성능을 측정해 다중 과제 학습이 실제 조작으로 이어지는 범위를 평가했다. [PDF 7쪽](https://arxiv.org/pdf/2205.06175v3#page=7) · [PDF 10쪽](https://arxiv.org/pdf/2205.06175v3#page=10)
 
 ## Evaluation Scope
 

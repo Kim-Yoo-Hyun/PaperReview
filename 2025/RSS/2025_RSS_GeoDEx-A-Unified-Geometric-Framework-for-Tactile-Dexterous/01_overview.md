@@ -19,9 +19,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — While force sensors can provide accurate force readings, physical limitations associated with ‘embedding the sensors into the robotic hands, as well as lack of high-resolution tactile information limit the use of these ...
-
-방법 관련 발췌 — Through various experimental results, we show that while relying on direct inaccurate and noisy force readings from tactile sensors results in unstable or failed manipulation, our method enables successful grasping and extrinsic ...
+GeoDEx는 촉각 센서의 힘 측정에 오차가 있을 때 접촉 기하를 이용해 파지를 계획하고 환경을 이용한 조작을 제어한다. [PDF 1쪽](https://www.roboticsproceedings.org/rss21/p057.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 1 / Abstract - extractive body cue:** Through various experimental results, we show that while relying on direct inaccurate and noisy force readings from tactile sensors results in unstable or failed manipulation, ...
-- **p. 2 / B. Utilizing Tactile Readings - extractive body cue:** Our framework consists of three major components as shown in Fig.1: a force planner that generates robust plans for
-- **p. 1 / Abstract - extractive body cue:** In this paper, we introduce GeoDEx, a unified estimation, planning, and control framework using geometric primitives such a plane, cone and ellipsoid, which enables dexterous ...
-- **p. 2 / B. Utilizing Tactile Readings - extractive body cue:** We will end by describing the control architecture of our framework.
-- **p. 3 / B. Force Estimation - extractive body cue:** Our projection allows changes to normal force magnitude and practically gives similar results as we will show in the experimental section,
-- **p. 7 / B. Simulation Results - extractive body cue:** According to the results, we can see an improvement
-- **p. 8 / C. Hardware Results - extractive body cue:** We hold the grasp for 20s to show that force ‘equilibrium is achieved and the object pose remains static. ‘Then, the object is lifted successfully ...
-- **p. 8 / C. Hardware Results - extractive body cue:** ‘TABLE IMI: Success rate for wrench and cylinder grasp experiments with the mean and sid of the force error of the grasps when it was ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 평면·원뿔·타원체 등 기하 표현으로 힘 추정과 계획을 구성해 불확실한 접촉 측정을 처리한다. [PDF 2쪽](https://www.roboticsproceedings.org/rss21/p057.pdf#page=2) · [PDF 3쪽](https://www.roboticsproceedings.org/rss21/p057.pdf#page=3)
+- 힘 측정값을 그대로 쓰는 조건과 파지·외부 접촉 조작을 비교하고 원뿔 최적화를 직접 푸는 방식과 계산 시간도 비교했다. [PDF 1쪽](https://www.roboticsproceedings.org/rss21/p057.pdf#page=1) · [PDF 5쪽](https://www.roboticsproceedings.org/rss21/p057.pdf#page=5)
 
 ## Evaluation Scope
 

@@ -19,9 +19,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — While these methods help generate demonstrations at a certain scale, they each have limitations: human annotation is costly and imprecise, optimization-based methods are slow and sensitive to initialization, and RL-based techniques lack ...
-
-방법 관련 발췌 — ‘To address the feasibility issue, we propose incorporating geometric constraints into the generative model, which significantly improves its performance, We also integrate opti mization techniques with generative models, leveraging the ...
+Dex1B는 다지 손의 파지와 관절 물체 조작을 위한 10억 개의 생성 시연을 구축했다. [PDF 1쪽](https://www.roboticsproceedings.org/rss21/p106.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. INrRopucTION - extractive body cue:** ‘To address the feasibility issue, we propose incorporating geometric constraints into the generative model, which significantly improves its performance, We also integrate opti mization techniques ...
-- **p. 2 / 7 S65 69K- Graplt - extractive body cue:** + We introduce novel iterative data generation pipeline that combines optimization and generative models to gen~ erate large-scale dexterous demonstrations for grasping and articulation tasks.
-- **p. 1 / Body text (section boundary not confidently recovered) - extractive body cue:** 1: The Dex1B benchmark consists of 1B generated high-quality demonstrations for grasping and articulation tasks.
-- **p. 1 / Abstract - extractive body cue:** In this paper, we introduce DexIB, a largeseale, diverse, and high-quality demonstration dataset produced with generative models.
-- **p. 3 / 7 S65 69K- Graplt - extractive body cue:** We presents the differences of several representative manipulation datasets in Tab.
-- **p. 8 / B. Dataset Analysis - extractive body cue:** Although LD slightly increases the penetration value, it significantly contributes to an improved success rate and Qi score, highlighting its importance in achieving reliable grasps.
-- **p. 6 / A. Grasping Synthesis Evaluation - extractive body cue:** In terms of quality, DexSimple ¢with post-optimization) achieves the highest success rate (86.0%), the highest Qi soe (0.125), andthe lowest penetration (0.1)
-- **p. 6 / A. Grasping Synthesis Evaluation - extractive body cue:** It is worth noting, the success rate of DexSimple without post-optimization and filtering is slightly lower than that of DDG [22]; this is expected as ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 생성 모델에 기하 제약을 넣어 실현 가능성을 높이고 생성 조건을 바꿔 다양한 손동작을 얻었다. [PDF 4쪽](https://www.roboticsproceedings.org/rss21/p106.pdf#page=4) · [PDF 5쪽](https://www.roboticsproceedings.org/rss21/p106.pdf#page=5)
+- 기존·신규 시뮬레이션 벤치마크에서 생성 결과를 평가하고 실제 로봇 실험과 기하 손실 제거 비교도 진행했다. [PDF 6쪽](https://www.roboticsproceedings.org/rss21/p106.pdf#page=6) · [PDF 8쪽](https://www.roboticsproceedings.org/rss21/p106.pdf#page=8)
 
 ## Evaluation Scope
 

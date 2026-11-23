@@ -19,9 +19,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — 4: FACTR allows our policy to beter integrate force information without overfittng to visual information, resulting in better generalization
-
-방법 관련 발췌 — For the decoder, we introduce & action tokens, A ¢ R**¢.
+FACTR는 힘 피드백이 있는 원격조작과 시각 정보의 오염 정도를 조절하는 학습 과정을 이용해 접촉 조작에서 힘 감각의 활용도를 높인다. [PDF 1쪽](https://www.roboticsproceedings.org/rss21/p079.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -52,16 +50,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 5 / A. Problem Statement and Base Model - extractive body cue:** For the decoder, we introduce & action tokens, A ¢ R**¢.
-- **p. 5 / A. Problem Statement and Base Model - extractive body cue:** 4: FACTR allows our policy to beter integrate force information without overfittng to visual information, resulting in better generalization
-- **p. 8 / C. Policy Evaluation - extractive body cue:** For the test objects, the vision-only policy achieves a success rate of 21.3% on average, which is significantly worse than policies incorporating force.
-- **p. 8 / C. Policy Evaluation - extractive body cue:** Without a curriculum, policies naively incorporating force achieve a success rate of 61.2%, ‘hile FACTR achieves a success rate of 87.5%, which shows that FACTR ...
-- **p. 7 / C. Policy Evaluation - extractive body cue:** We present the average success rate for truining and testing objects, respectively.
-- **p. 7 / B. Teleoperation Evaluation - extractive body cue:** Our experiments show that our system allows users to ‘complete tasks with 64.7% higher task completion rate, 37.4% reduced completion time, and 83.3% improvement in ...
-- **p. 6 / A. Experimental Setup - extractive body cue:** We describe the tasks details and the success erteria below
-- **p. 9 / C. Policy Evaluation - extractive body cue:** The results are presented in TABLE I
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 추종 팔의 외력을 조작자 쪽 팔로 전달하고 학습 초기에는 영상을 강하게 손상시킨 뒤 점차 복원한다. [PDF 1쪽](https://www.roboticsproceedings.org/rss21/p079.pdf#page=1) · [PDF 4쪽](https://www.roboticsproceedings.org/rss21/p079.pdf#page=4)
+- 상자 들어 올리기 중 복구 행동과 미관측 물체로의 일반화를 측정하고 시각 손상 교육과정의 효과를 비교했다. [PDF 8쪽](https://www.roboticsproceedings.org/rss21/p079.pdf#page=8) · [PDF 9쪽](https://www.roboticsproceedings.org/rss21/p079.pdf#page=9)
 
 ## Evaluation Scope
 
