@@ -1,6 +1,6 @@
 # Offline Policy Evaluation for Manipulation Policies via Discounted Liveness Formulation
 
-> Evidence maturity: `ABSTRACT_CHECKED`. abstract 기반 — 본문 수동 확인 필요.
+> Evidence maturity: `ABSTRACT_CHECKED`. 요약과 핵심 기여 두 개는 아래에 표시한 원문 쪽수에서 확인했다. 나머지 분석은 각 절에 적힌 근거 범위를 따른다.
 > 자동 작성 노트는 실제 정독을 뜻하지 않는다. 사용자 reading status는 UNREAD로 시작한다.
 
 - Year/Venue: 2026 / RSS
@@ -14,15 +14,16 @@
 - Venue verification: https://www.roboticsproceedings.org/rss22/p154.html
 - Code/Project:
 - Code: not_identified
-- Source audit: 2026-11-12: 공식 publication/초록 또는 저자 source 확인. RSS official abstract의 두 simulation 과제를 기록한다. arXiv 초록의 추가 cloth demonstration은 venue 본문에서 동일성을 확인하기 전 평가 범위에 합치지 않았다. 초록·지정 project 범위이며 전체 정독·코드 실행·사용자 reading 완료를 뜻하지 않는다.
+- Source audit: 2026-11-12: 공식 publication/초록 또는 저자 source 확인. RSS official abstract의 두 simulation 과제를 기록한다. arXiv 초록의 추가 cloth demonstration은 venue 본문에서 동일성을 확인하기 전 평가 범위에 합치지 않았다. 초록·지정 project 범위이며 전체 정독·코드 실행·사용자 reading 완료를 뜻하지 않는다. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.
 
 ## Problem and Importance
 
-희소 보상·복구 행동·유한 rollout에서 정책 진척을 평가할 때 truncation bias가 발생한다.
+이 연구는 실패와 시간 종료가 뒤섞인 유한 길이 조작 궤적으로부터 정책의 목표 달성 가능성을 오프라인에서 추정한다. [PDF 1쪽](https://www.roboticsproceedings.org/rss22/p154.pdf#page=1)
 
 ## Core Idea and Contribution
 
-Task completion으로 평가를 정식화한 liveness Bellman operator와 conservative fixed point를 제안한다.
+- 과제 완료 가능성을 나타내는 할인된 벨만 연산자를 정의하고 보수적인 고정점과 수축 성질을 분석해 시간 제한에 의한 편향을 다룬다. [PDF 3쪽](https://www.roboticsproceedings.org/rss22/p154.pdf#page=3) · [PDF 4쪽](https://www.roboticsproceedings.org/rss22/p154.pdf#page=4) · [PDF 5쪽](https://www.roboticsproceedings.org/rss22/p154.pdf#page=5)
+- VLA·확산 정책의 시뮬레이션 조작과 실제 로봇을 조종한 사람의 천 접기 시연에서 TD 및 몬테카를로 추정과 과제 진행·중단 편향을 비교했다. [PDF 5쪽](https://www.roboticsproceedings.org/rss22/p154.pdf#page=5) · [PDF 7쪽](https://www.roboticsproceedings.org/rss22/p154.pdf#page=7) · [PDF 8쪽](https://www.roboticsproceedings.org/rss22/p154.pdf#page=8)
 
 ## Observation–State–Action Interface
 
@@ -32,7 +33,7 @@ Task completion으로 평가를 정식화한 liveness Bellman operator와 conser
 
 RSS abstract는 VLA·diffusion policy를 이용한 두 simulation 조작 과제를 명시한다.
 
-근거: [공식 paper/abstract](https://www.roboticsproceedings.org/rss22/p154.html). 정확한 수치·baseline fairness·failure 범위는 본문 확인 전까지 확정하지 않는다.
+근거: [공식 paper/abstract](https://www.roboticsproceedings.org/rss22/p154.html). 인용한 결과 외의 수치, 기준선의 비교 조건과 실패 범위는 추가 확인이 필요하다.
 
 ## Why This Paper Is Here — Researcher Interpretation
 

@@ -14,7 +14,7 @@ import audit_note_artifacts as artifacts
 import build_lit_survey as survey
 import registry_profiles as profiles
 from reconcile_registry import build_facets
-from render_source_audit import OPEN, PASS, check_applied, cited_statement, current_checks, summary_headings
+from render_source_audit import OPEN, PASS, bibliography_digest, check_applied, cited_statement, current_checks, summary_headings
 from registry_schema import enrich_record, validate_record_shape
 
 
@@ -48,6 +48,29 @@ class DocumentMaintenanceTest(unittest.TestCase):
         facets = build_facets(paper)
         self.assertIn("force_torque", facets["modality"])
         self.assertIn("contact_rich", facets["interaction"])
+
+    def test_final_byline_correction_preserves_the_earlier_bibliographic_digest(self):
+        old, new = ["Ada Doe"], ["Ada M. Doe"]
+        source = "https://example.org/final.pdf#page=1"
+        day = "2026-11-23"
+        fields = {"authors": "https://example.org/abstract"}
+        row = {"id": "pr-0001", "checks": {"authors": {"kind": "보완", "corrected": old}},
+               "postcheck": {"bibliography": fields, "bibliography_sha256": bibliography_digest({"authors": old}, fields)},
+               "byline_correction": {"before": old, "corrected": new, "source": source, "verified_on": day}}
+        paper = {"paper_id": row["id"], "folder": ".", "authors": new,
+                 "provenance": {"authors_verification": {"source": source, "verified_on": day}},
+                 "reproducibility": {key: {"status": "unknown"} for key in ("code", "data", "checkpoint")}}
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            overview = root / "01_overview.md"
+            overview.write_text("- Authors: Ada M. Doe\n")
+            check_applied([row], [paper], root)
+            overview.write_text("- Authors: Ada Doe\n")
+            with self.assertRaisesRegex(ValueError, "corrected byline missing"):
+                check_applied([row], [paper], root)
+            paper["authors"] = old
+            with self.assertRaisesRegex(ValueError, "final byline differs"):
+                check_applied([row], [paper], root)
 
     def test_source_recheck_updates_each_endpoint_and_release_independently(self):
         row = {"checks": {"link": {"status": OPEN, "endpoints": {

@@ -1,6 +1,6 @@
 # RL's Razor: Why Online Reinforcement Learning Forgets Less
 
-> Evidence maturity: `ABSTRACT_CHECKED`. abstract 기반 — 본문 수동 확인 필요.
+> Evidence maturity: `ABSTRACT_CHECKED`. 요약과 핵심 기여 두 개는 아래에 표시한 원문 쪽수에서 확인했다. 나머지 분석은 각 절에 적힌 근거 범위를 따른다.
 > 자동 작성 노트는 실제 정독을 뜻하지 않는다. 사용자 reading status는 UNREAD로 시작한다.
 
 - Year/Venue: 2026 / ICLR
@@ -14,15 +14,16 @@
 - Venue verification: https://proceedings.iclr.cc/paper_files/paper/2026/hash/618c95f4557c15b253fb0e6f548ea0c0-Abstract-Conference.html
 - Code/Project: https://jyopari.github.io/posts/rl_razor
 - Code: not_identified
-- Source audit: 2026-11-12: 공식 abstract/metadata·명시한 project 확인. ICLR 최종 제목의 Online과 저자 페이지의 On-Policy는 같은 arXiv identity다. 로봇 공식 코드는 확인하지 못했다. 이전 N1 지정 본문 대조와 이번 초록 노트를 구별한다. 새 5-note는 초록 수준이며 과거 N1/N2의 지정 본문/source 검토는 work/sources/vla_masters_gap_scout_2026-11-12.json을 따른다. 사용자 정독·코드 재현을 뜻하지 않는다.
+- Source audit: 2026-11-12: 공식 abstract/metadata·명시한 project 확인. ICLR 최종 제목의 Online과 저자 페이지의 On-Policy는 같은 arXiv identity다. 로봇 공식 코드는 확인하지 못했다. 이전 N1 지정 본문 대조와 이번 초록 노트를 구별한다. 새 5-note는 초록 수준이며 과거 N1/N2의 지정 본문/source 검토는 work/sources/vla_masters_gap_scout_2026-11-12.json을 따른다. 사용자 정독·코드 재현을 뜻하지 않는다. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.
 
 ## Problem and Importance
 
-새 과제를 학습할 때 기존 정책의 능력이 보존되는 조건을 묻는다.
+이 연구는 새 과제의 성능이 비슷한 정책들에서 온라인 강화학습과 지도 미세조정이 기존 기술을 얼마나 보존하는지 비교한다. [PDF 1쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/618c95f4557c15b253fb0e6f548ea0c0-Paper-Conference.pdf#page=1)
 
 ## Core Idea and Contribution
 
-같은 신규 과제 성능에서 RL과 SFT의 망각·정책 KL을 비교하고 on-policy RL의 작은 분포 변화 편향을 분석한다.
+- 새 과제에서 측정한 사전학습 정책과의 KL 발산이 이전 능력의 손실과 어떤 관계인지 언어 모델과 로봇 시뮬레이션에서 조사했다. [PDF 4쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/618c95f4557c15b253fb0e6f548ea0c0-Paper-Conference.pdf#page=4) · [PDF 5쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/618c95f4557c15b253fb0e6f548ea0c0-Paper-Conference.pdf#page=5) · [PDF 6쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/618c95f4557c15b253fb0e6f548ea0c0-Paper-Conference.pdf#page=6)
+- 온폴리시 갱신이 기본 정책에서 적게 벗어나는 해를 선호하는 조건을 분석하고, 이 경향이 주어진 시연을 모방하는 학습과 달라지는 이유를 설명했다. [PDF 7쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/618c95f4557c15b253fb0e6f548ea0c0-Paper-Conference.pdf#page=7) · [PDF 8쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/618c95f4557c15b253fb0e6f548ea0c0-Paper-Conference.pdf#page=8)
 
 ## Observation–State–Action Interface
 
@@ -32,7 +33,7 @@
 
 언어 모델과 로봇 foundation model에서 적응 성능과 기존 능력 보존을 평가한다.
 
-근거: [공식 paper/abstract](https://proceedings.iclr.cc/paper_files/paper/2026/hash/618c95f4557c15b253fb0e6f548ea0c0-Abstract-Conference.html) · [저자 project/code](https://jyopari.github.io/posts/rl_razor). 정확한 수치·baseline fairness·failure 범위는 본문 확인 전까지 확정하지 않는다.
+근거: [공식 paper/abstract](https://proceedings.iclr.cc/paper_files/paper/2026/hash/618c95f4557c15b253fb0e6f548ea0c0-Abstract-Conference.html) · [저자 project/code](https://jyopari.github.io/posts/rl_razor). 인용한 결과 외의 수치, 기준선의 비교 조건과 실패 범위는 추가 확인이 필요하다.
 
 ## Why This Paper Is Here — Researcher Interpretation
 

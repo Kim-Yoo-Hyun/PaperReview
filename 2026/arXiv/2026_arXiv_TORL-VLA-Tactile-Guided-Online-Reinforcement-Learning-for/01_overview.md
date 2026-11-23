@@ -1,6 +1,6 @@
 # TORL-VLA: Tactile Guided Online Reinforcement Learning for Contact-Rich Manipulation
 
-> Evidence maturity: `ABSTRACT_CHECKED`. abstract 기반 — 본문 수동 확인 필요.
+> Evidence maturity: `ABSTRACT_CHECKED`. 요약과 핵심 기여 두 개는 아래에 표시한 원문 쪽수에서 확인했다. 나머지 분석은 각 절에 적힌 근거 범위를 따른다.
 > 자동 작성 노트는 실제 정독을 뜻하지 않는다. 사용자 reading status는 UNREAD로 시작한다.
 
 - Year/Venue: 2026 / arXiv
@@ -14,15 +14,16 @@
 - Venue verification: https://arxiv.org/abs/2606.09337
 - Code/Project: https://torl-vla.github.io/
 - Code: not identified
-- Source audit: 2026-11-09: official abstract/project 및 metadata 확인. 최신 v3 abstract 확인; N1 본문 대조는 v1이다. Project는 TORL code Coming Soon이며 연결된 RLT 재현 코드는 TORL 구현으로 간주하지 않는다. 새 5-note는 abstract 기반이며 전체 본문/실행/사용자 정독을 뜻하지 않는다.
+- Source audit: 2026-11-09: official abstract/project 및 metadata 확인. 최신 v3 abstract 확인; N1 본문 대조는 v1이다. Project는 TORL code Coming Soon이며 연결된 RLT 재현 코드는 TORL 구현으로 간주하지 않는다. 새 5-note는 abstract 기반이며 전체 본문/실행/사용자 정독을 뜻하지 않는다. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.
 
 ## Problem and Importance
 
-접촉 조건이 변하면 offline tactile VLA가 적응하지 못하는 문제를 다룬다.
+TORL-VLA는 촉각에서 추정한 힘·토크로 VLA의 기준 동작을 만들고 온라인 강화학습을 통해 실제 접촉 상태에 맞춰 동작을 수정한다. [PDF 1쪽](https://arxiv.org/pdf/2606.09337v3#page=1)
 
 ## Core Idea and Contribution
 
-Wrench-aware VLA의 reference를 online RL 모듈로 보정하고 human intervention 경계를 critic 학습에 반영한다.
+- 기준 모형이 행동과 미래 힘·토크를 예측하고, 사람의 개입 이후 발생한 성공을 직전 정책 행동의 공적으로 돌리지 않도록 비평가를 학습한다. [PDF 4쪽](https://arxiv.org/pdf/2606.09337v3#page=4) · [PDF 5쪽](https://arxiv.org/pdf/2606.09337v3#page=5)
+- 실제 걸쇠 조작·컵 배치·달걀 다루기에서 하위 과제와 전체 과제 성공을 구분해 측정하고 힘 정보와 개입 처리가 성능에 미치는 영향을 비교했다. [PDF 7쪽](https://arxiv.org/pdf/2606.09337v3#page=7) · [PDF 8쪽](https://arxiv.org/pdf/2606.09337v3#page=8)
 
 ## Observation–State–Action Interface
 
@@ -32,7 +33,7 @@ Wrench-aware VLA의 reference를 online RL 모듈로 보정하고 human interven
 
 실제 latch·컵·달걀 조작의 부분/전체 과제와 시간 제한 효율을 평가한다.
 
-근거: [공식 paper/abstract](https://arxiv.org/abs/2606.09337) · [저자 project/code](https://torl-vla.github.io/). 정확한 수치·baseline fairness·failure 범위는 본문 확인 전까지 확정하지 않는다.
+근거: [공식 paper/abstract](https://arxiv.org/abs/2606.09337) · [저자 project/code](https://torl-vla.github.io/). 인용한 결과 외의 수치, 기준선의 비교 조건과 실패 범위는 추가 확인이 필요하다.
 
 ## Why This Paper Is Here — Researcher Interpretation
 

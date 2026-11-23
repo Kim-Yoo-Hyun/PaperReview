@@ -1,6 +1,6 @@
 # ActivePose: Active 6D Object Pose Estimation and Tracking for Robotic Manipulation
 
-> Evidence maturity: `ABSTRACT_CHECKED`. abstract 기반 — 본문 수동 확인 필요.
+> Evidence maturity: `ABSTRACT_CHECKED`. 요약과 핵심 기여 두 개는 아래에 표시한 원문 쪽수에서 확인했다. 나머지 분석은 각 절에 적힌 근거 범위를 따른다.
 > 자동 작성 노트는 실제 정독을 뜻하지 않는다. 사용자 reading status는 UNREAD로 시작한다.
 
 - Year/Venue: 2025 / arXiv
@@ -14,15 +14,16 @@
 - Venue verification: https://arxiv.org/abs/2509.11364
 - Code/Project: not identified
 - Code: not_identified
-- Source audit: 2026-11-18: 공식 초록·bibliographic record와 연결된 저자 자료 확인. Abstract 기반 등록이며 본문 전체·실험 재현은 미확인. 현재 abstract는 2026-03-07 v2; 최초 공개 연도 2025 유지. 이전 N1의 v1 지정 절 검토와 같은 본문으로 취급하지 않는다. 공식 conference/journal acceptance 확인을 확보하지 못해 preprint 유지.
+- Source audit: 2026-11-18: 공식 초록·bibliographic record와 연결된 저자 자료 확인. Abstract 기반 등록이며 본문 전체·실험 재현은 미확인. 현재 abstract는 2026-03-07 v2; 최초 공개 연도 2025 유지. 이전 N1의 v1 지정 절 검토와 같은 본문으로 취급하지 않는다. 공식 conference/journal acceptance 확인을 확보하지 못해 preprint 유지. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.
 
 ## Problem and Importance
 
-고정 카메라와 pose ambiguity가 물체 이동·가림 상황의 추정과 추적을 불안정하게 한다.
+ActivePose는 새 물체 자세가 모호할 때 카메라를 능동적으로 옮기고, 조작 도중에는 물체가 보이도록 시점을 제어해 자세 추적을 유지한다. [PDF 1쪽](https://arxiv.org/pdf/2509.11364v2#page=1)
 
 ## Core Idea and Contribution
 
-CAD virtual view와 FoundationPose 기반 정보로 VLM이 모호성을 평가하고 다음 camera view를 선택한다.
+- CAD 렌더링과 FoundationPose 자세 가설의 엔트로피로 시점 예시를 구성하고, 시각언어 모델의 모호성 점수와 결합해 도달 가능한 다음 시점을 선택한다. [PDF 3쪽](https://arxiv.org/pdf/2509.11364v2#page=3) · [PDF 4쪽](https://arxiv.org/pdf/2509.11364v2#page=4)
+- 카메라 궤적을 출력하는 확산 정책을 시연으로 학습하고, 실제 물체 이동·가림에서의 추적 및 핀 삽입 결과를 초기 자세 추정과 구분해 평가했다. [PDF 5쪽](https://arxiv.org/pdf/2509.11364v2#page=5) · [PDF 6쪽](https://arxiv.org/pdf/2509.11364v2#page=6) · [PDF 7쪽](https://arxiv.org/pdf/2509.11364v2#page=7)
 
 ## Observation–State–Action Interface
 
@@ -32,7 +33,7 @@ RGB 관측·CAD 기반 가상 시점 → ambiguity score·NBV·pose tracking으�
 
 공식 초록은 로봇 조작을 위한 active pose estimation/tracking을 다룬다. Task별 성공률과 camera 이동 비용은 본문 확인 필요다.
 
-근거: [공식 paper/abstract](https://arxiv.org/abs/2509.11364). 정확한 수치·baseline fairness·failure 범위는 본문 확인 전까지 확정하지 않는다.
+근거: [공식 paper/abstract](https://arxiv.org/abs/2509.11364). 인용한 결과 외의 수치, 기준선의 비교 조건과 실패 범위는 추가 확인이 필요하다.
 
 ## Why This Paper Is Here — Researcher Interpretation
 

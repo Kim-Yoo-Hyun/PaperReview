@@ -1,7 +1,7 @@
 # Humanoid Everyday: A Comprehensive Robotic Dataset for Open-World Humanoid Manipulation
 
 > Evidence maturity: `ABSTRACT_CHECKED`.
-> Source audit: 2026-11-16: arXiv abstract·공식 project/repository 확인. abstract 기반 — 본문 수동 확인 필요. ICRA 게재는 공식 근거 확인 대기.
+> Source audit: 2025년 arXiv 공개 후 ICRA 2026에 게재됐다. 다른 분석의 근거 범위는 각 절에 표시했다. [IEEE DOI 서지](https://doi.org/10.1109/ICRA57385.2026.11696267)
 > Canonical metadata: [01_overview.md](./01_overview.md).
 
 ## Target Problem

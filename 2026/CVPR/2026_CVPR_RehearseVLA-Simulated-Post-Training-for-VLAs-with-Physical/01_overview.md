@@ -1,6 +1,6 @@
 # RehearseVLA: Simulated Post-Training for VLAs with Physically-Consistent World Model
 
-> Evidence maturity: `ABSTRACT_CHECKED`. abstract 기반 — 본문 수동 확인 필요.
+> Evidence maturity: `ABSTRACT_CHECKED`. 요약과 핵심 기여 두 개는 아래에 표시한 원문 쪽수에서 확인했다. 나머지 분석은 각 절에 적힌 근거 범위를 따른다.
 > 자동 작성 노트는 실제 정독을 뜻하지 않는다. 사용자 reading status는 UNREAD로 시작한다.
 
 - Year/Venue: 2026 / CVPR
@@ -14,15 +14,16 @@
 - Venue verification: https://openaccess.thecvf.com/content/CVPR2026/html/Xiao_RehearseVLA_Simulated_Post-Training_for_VLAs_with_Physically-Consistent_World_Model_CVPR_2026_paper.html
 - Code/Project: https://github.com/iSEE-Laboratory/RehearseVLA
 - Code: https://github.com/iSEE-Laboratory/RehearseVLA
-- Source audit: 2026-11-07–08: official metadata/abstract 및 저자 project/repository 공개 범위 확인.  본문 전체 정독·코드 실행·독립 성능 검증 아님. 사용자 reading status UNREAD 유지.
+- Source audit: 2026-11-07–08: official metadata/abstract 및 저자 project/repository 공개 범위 확인.  본문 전체 정독·코드 실행·독립 성능 검증 아님. 사용자 reading status UNREAD 유지. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.
 
 ## Problem and Importance
 
-현실 reset 비용과 부족한 시연이 VLA online 후학습을 제한한다.
+RehearseVLA는 로봇이 실제 장면을 매번 초기화하지 않고도 후학습할 수 있도록 세계 모델 안에서 VLA의 후보 행동을 실행하고 평가한다. [PDF 1쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Xiao_RehearseVLA_Simulated_Post-Training_for_VLAs_with_Physically-Consistent_World_Model_CVPR_2026_paper.pdf#page=1)
 
 ## Core Idea and Contribution
 
-물리 일관성을 지향한 world simulator와 보상·종료를 판단하는 VLM reflector를 구성한다.
+- 행동에 따른 후속 관측을 생성하는 시뮬레이터와 시각언어 모델 기반 평가기를 결합해 단계별 보상과 동작 종료 신호를 산출한다. [PDF 4쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Xiao_RehearseVLA_Simulated_Post-Training_for_VLAs_with_Physically-Consistent_World_Model_CVPR_2026_paper.pdf#page=4) · [PDF 5쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Xiao_RehearseVLA_Simulated_Post-Training_for_VLAs_with_Physically-Consistent_World_Model_CVPR_2026_paper.pdf#page=5)
+- LIBERO와 실물 조작에서 소수 시연으로 시작한 정책의 후학습 효과를 측정하고 실물에서는 종료 판정 전략에 따른 과제 성공도 비교했다. [PDF 6쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Xiao_RehearseVLA_Simulated_Post-Training_for_VLAs_with_Physically-Consistent_World_Model_CVPR_2026_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Xiao_RehearseVLA_Simulated_Post-Training_for_VLAs_with_Physically-Consistent_World_Model_CVPR_2026_paper.pdf#page=7) · [PDF 8쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Xiao_RehearseVLA_Simulated_Post-Training_for_VLAs_with_Physically-Consistent_World_Model_CVPR_2026_paper.pdf#page=8)
 
 ## Observation–State–Action Interface
 
@@ -32,7 +33,7 @@
 
 소수 시연 조건의 복잡한 로봇 조작 개선을 보고한다.
 
-근거: [공식 paper/abstract](https://openaccess.thecvf.com/content/CVPR2026/html/Xiao_RehearseVLA_Simulated_Post-Training_for_VLAs_with_Physically-Consistent_World_Model_CVPR_2026_paper.html) · [저자 project/code](https://github.com/iSEE-Laboratory/RehearseVLA). 정확한 수치·baseline fairness·failure 범위는 본문 확인 전까지 확정하지 않는다.
+근거: [공식 paper/abstract](https://openaccess.thecvf.com/content/CVPR2026/html/Xiao_RehearseVLA_Simulated_Post-Training_for_VLAs_with_Physically-Consistent_World_Model_CVPR_2026_paper.html) · [저자 project/code](https://github.com/iSEE-Laboratory/RehearseVLA). 인용한 결과 외의 수치, 기준선의 비교 조건과 실패 범위는 추가 확인이 필요하다.
 
 ## Why This Paper Is Here — Researcher Interpretation
 

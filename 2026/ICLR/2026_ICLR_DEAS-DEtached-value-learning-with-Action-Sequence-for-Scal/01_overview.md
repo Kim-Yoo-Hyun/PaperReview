@@ -1,6 +1,6 @@
 # DEAS: DEtached value learning with Action Sequence for Scalable Offline RL
 
-> Evidence maturity: `ABSTRACT_CHECKED`. abstract 기반 — 본문 수동 확인 필요.
+> Evidence maturity: `ABSTRACT_CHECKED`. 요약과 핵심 기여 두 개는 아래에 표시한 원문 쪽수에서 확인했다. 나머지 분석은 각 절에 적힌 근거 범위를 따른다.
 > 자동 작성 노트는 실제 정독을 뜻하지 않는다. 사용자 reading status는 UNREAD로 시작한다.
 
 - Year/Venue: 2026 / ICLR
@@ -14,15 +14,16 @@
 - Venue verification: https://proceedings.iclr.cc/paper_files/paper/2026/hash/68b7f71467c83d5d32275c5acbf6b588-Abstract-Conference.html
 - Code/Project: https://changyeon.site/deas/
 - Code: https://github.com/csmile-1006/DEAS-Isaac-GR00T
-- Source audit: 2026-11-07–08: official metadata/abstract 및 저자 project/repository 공개 범위 확인.  본문 전체 정독·코드 실행·독립 성능 검증 아님. 사용자 reading status UNREAD 유지.
+- Source audit: 2026-11-07–08: official metadata/abstract 및 저자 project/repository 공개 범위 확인.  본문 전체 정독·코드 실행·독립 성능 검증 아님. 사용자 reading status UNREAD 유지. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.
 
 ## Problem and Importance
 
-Action sequence를 critic에 쓰면 장기 문제의 horizon을 줄이면서도 가치 과대추정이 커질 수 있다.
+DEAS는 긴 과제에서 여러 행동을 하나의 묶음으로 평가하면서 오프라인 자료 바깥 행동의 가치를 과대평가하는 문제를 줄인다. [PDF 1쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/68b7f71467c83d5d32275c5acbf6b588-Paper-Conference.pdf#page=1)
 
 ## Core Idea and Contribution
 
-행동 sequence 기반 가치 학습에 detached value learning을 적용하여 데이터 안의 고수익 행동으로 추정을 유도한다.
+- 행위자와 가치 학습을 분리해 데이터에 기록된 행동 묶음의 할인 수익과 후속 상태 가치로 비평가를 갱신한다. [PDF 4쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/68b7f71467c83d5d32275c5acbf6b588-Paper-Conference.pdf#page=4) · [PDF 5쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/68b7f71467c83d5d32275c5acbf6b588-Paper-Conference.pdf#page=5)
+- OGBench의 장기 과제와 RoboCasa·실물 조작에서 행동 묶음을 쓰는 오프라인 학습과 VLA 미세조정의 성능을 평가했다. [PDF 7쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/68b7f71467c83d5d32275c5acbf6b588-Paper-Conference.pdf#page=7) · [PDF 8쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/68b7f71467c83d5d32275c5acbf6b588-Paper-Conference.pdf#page=8) · [PDF 9쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/68b7f71467c83d5d32275c5acbf6b588-Paper-Conference.pdf#page=9)
 
 ## Observation–State–Action Interface
 
@@ -32,7 +33,7 @@ Offline observation/action sequence → value estimation → sequence policy; VL
 
 OGBench, RoboCasa Kitchen과 실세계 조작의 VLA 확장을 보고한다.
 
-근거: [공식 paper/abstract](https://proceedings.iclr.cc/paper_files/paper/2026/hash/68b7f71467c83d5d32275c5acbf6b588-Abstract-Conference.html) · [저자 project/code](https://changyeon.site/deas/) · [공식 code](https://github.com/csmile-1006/DEAS-Isaac-GR00T). 정확한 수치·baseline fairness·failure 범위는 본문 확인 전까지 확정하지 않는다.
+근거: [공식 paper/abstract](https://proceedings.iclr.cc/paper_files/paper/2026/hash/68b7f71467c83d5d32275c5acbf6b588-Abstract-Conference.html) · [저자 project/code](https://changyeon.site/deas/) · [공식 code](https://github.com/csmile-1006/DEAS-Isaac-GR00T). 인용한 결과 외의 수치, 기준선의 비교 조건과 실패 범위는 추가 확인이 필요하다.
 
 ## Why This Paper Is Here — Researcher Interpretation
 

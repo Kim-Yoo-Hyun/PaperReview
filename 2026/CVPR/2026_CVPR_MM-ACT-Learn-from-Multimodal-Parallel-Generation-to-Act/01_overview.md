@@ -1,6 +1,6 @@
 # MM-ACT: Learn from Multimodal Parallel Generation to Act
 
-> Evidence maturity: `ABSTRACT_CHECKED`. abstract 기반 — 본문 수동 확인 필요.
+> Evidence maturity: `ABSTRACT_CHECKED`. 요약과 핵심 기여 두 개는 아래에 표시한 원문 쪽수에서 확인했다. 나머지 분석은 각 절에 적힌 근거 범위를 따른다.
 > 자동 작성 노트는 실제 정독을 뜻하지 않는다. 사용자 reading status는 UNREAD로 시작한다.
 
 - Year/Venue: 2026 / CVPR
@@ -14,15 +14,16 @@
 - Venue verification: https://openaccess.thecvf.com/content/CVPR2026/html/Liang_MM-ACT_Learn_from_Multimodal_Parallel_Generation_to_Act_CVPR_2026_paper.html
 - Code/Project: https://github.com/HHYHRHY/MM-ACT
 - Code: https://github.com/HHYHRHY/MM-ACT
-- Source audit: 2026-11-07–08: official metadata/abstract 및 저자 project/repository 공개 범위 확인.  본문 전체 정독·코드 실행·독립 성능 검증 아님. 사용자 reading status UNREAD 유지.
+- Source audit: 2026-11-07–08: official metadata/abstract 및 저자 project/repository 공개 범위 확인.  본문 전체 정독·코드 실행·독립 성능 검증 아님. 사용자 reading status UNREAD 유지. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.
 
 ## Problem and Importance
 
-의미 이해와 예측을 행동 생성에 함께 활용하는 generalist policy 학습이 필요하다.
+MM-ACT는 텍스트·영상·행동을 공통 토큰 공간에서 생성하며, 같은 관측으로 받는 여러 감독 신호가 조작 정책에 미치는 영향을 평가한다. [PDF 1쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Liang_MM-ACT_Learn_from_Multimodal_Parallel_Generation_to_Act_CVPR_2026_paper.pdf#page=1)
 
 ## Core Idea and Contribution
 
-텍스트·영상·행동을 공유 token 공간과 context로 학습하고 modality별 병렬 decoding을 사용한다.
+- 텍스트와 영상에는 일부 토큰을 다시 가려 생성하는 병렬 복호화를, 행동에는 한 번의 병렬 복호화를 사용한다. [PDF 4쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Liang_MM-ACT_Learn_from_Multimodal_Parallel_Generation_to_Act_CVPR_2026_paper.pdf#page=4) · [PDF 5쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Liang_MM-ACT_Learn_from_Multimodal_Parallel_Generation_to_Act_CVPR_2026_paper.pdf#page=5)
+- LIBERO, RoboTwin 2.0, 실제 Franka 조작에서 정책을 평가하고 영상·언어 생성과 행동 생성을 함께 학습할 때의 변화를 비교했다. [PDF 6쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Liang_MM-ACT_Learn_from_Multimodal_Parallel_Generation_to_Act_CVPR_2026_paper.pdf#page=6) · [PDF 8쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Liang_MM-ACT_Learn_from_Multimodal_Parallel_Generation_to_Act_CVPR_2026_paper.pdf#page=8)
 
 ## Observation–State–Action Interface
 
@@ -32,7 +33,7 @@
 
 LIBERO, 실제 Franka, RoboTwin2.0의 in-domain·out-of-domain 조작을 평가한다.
 
-근거: [공식 paper/abstract](https://openaccess.thecvf.com/content/CVPR2026/html/Liang_MM-ACT_Learn_from_Multimodal_Parallel_Generation_to_Act_CVPR_2026_paper.html) · [저자 project/code](https://github.com/HHYHRHY/MM-ACT). 정확한 수치·baseline fairness·failure 범위는 본문 확인 전까지 확정하지 않는다.
+근거: [공식 paper/abstract](https://openaccess.thecvf.com/content/CVPR2026/html/Liang_MM-ACT_Learn_from_Multimodal_Parallel_Generation_to_Act_CVPR_2026_paper.html) · [저자 project/code](https://github.com/HHYHRHY/MM-ACT). 인용한 결과 외의 수치, 기준선의 비교 조건과 실패 범위는 추가 확인이 필요하다.
 
 ## Why This Paper Is Here — Researcher Interpretation
 

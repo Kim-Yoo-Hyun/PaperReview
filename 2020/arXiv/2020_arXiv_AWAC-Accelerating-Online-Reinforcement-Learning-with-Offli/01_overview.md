@@ -1,6 +1,6 @@
 # AWAC: Accelerating Online Reinforcement Learning with Offline Datasets
 
-> Evidence maturity: `ABSTRACT_CHECKED`. abstract 기반 — 본문 수동 확인 필요.
+> Evidence maturity: `ABSTRACT_CHECKED`. 요약과 핵심 기여 두 개는 아래에 표시한 원문 쪽수에서 확인했다. 나머지 분석은 각 절에 적힌 근거 범위를 따른다.
 > 자동 작성 노트는 실제 정독을 뜻하지 않는다. 사용자 reading status는 UNREAD로 시작한다.
 
 - Year/Venue: 2020 / arXiv
@@ -14,15 +14,16 @@
 - Venue verification: https://arxiv.org/abs/2006.09359
 - Code/Project: https://awacrl.github.io/
 - Code: https://github.com/vitchyr/rlkit/tree/master/examples/awac
-- Source audit: 2026-11-12: 공식 publication/초록 또는 저자 source 확인. 저자 project·arXiv v6 확인. OpenReview forum은 browser challenge로 본문 접근 실패했고 공식 acceptance를 확인하지 못해 arXiv 2020으로 등록한다. Project의 code 링크는 식별했으나 해당 경로 직접 fetch는 실패했다. 초록·지정 project 범위이며 전체 정독·코드 실행·사용자 reading 완료를 뜻하지 않는다.
+- Source audit: 2026-11-12: 공식 publication/초록 또는 저자 source 확인. 저자 project·arXiv v6 확인. OpenReview forum은 browser challenge로 본문 접근 실패했고 공식 acceptance를 확인하지 못해 arXiv 2020으로 등록한다. Project의 code 링크는 식별했으나 해당 경로 직접 fetch는 실패했다. 초록·지정 project 범위이며 전체 정독·코드 실행·사용자 reading 완료를 뜻하지 않는다. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.
 
 ## Problem and Importance
 
-기존 시연·비최적 데이터에서 초기화한 정책을 적은 online 상호작용으로 개선한다.
+AWAC는 이미 수집된 최적·비최적 궤적으로 로봇 정책을 초기화하고 새 환경 상호작용을 같은 학습에 더해 성능을 개선한다. [PDF 1쪽](https://arxiv.org/pdf/2006.09359v6#page=1)
 
 ## Core Idea and Contribution
 
-Dynamic programming과 advantage 기반 가중 최대우도 정책 갱신을 결합한다.
+- 오프폴리시 비평가가 추정한 어드밴티지로 자료 속 행동의 우도에 가중치를 주어 별도 행동 정책 밀도 모델 없이 행위자를 갱신한다. [PDF 4쪽](https://arxiv.org/pdf/2006.09359v6#page=4) · [PDF 5쪽](https://arxiv.org/pdf/2006.09359v6#page=5)
+- 실물 서랍 열기, 밸브 회전, 다지 손 조작에서 기존 자료와 온라인 경험을 함께 썼을 때의 학습 곡선을 비교했다. [PDF 7쪽](https://arxiv.org/pdf/2006.09359v6#page=7) · [PDF 8쪽](https://arxiv.org/pdf/2006.09359v6#page=8)
 
 ## Observation–State–Action Interface
 
@@ -32,7 +33,7 @@ Offline transition·online replay → critic → 가중 행동 모방 → 실제
 
 시뮬레이션과 실제 다지 손·서랍 열기·밸브 조작을 평가한다.
 
-근거: [공식 paper/abstract](https://arxiv.org/abs/2006.09359) · [저자 project/code](https://awacrl.github.io/) · [공식 code](https://github.com/vitchyr/rlkit/tree/master/examples/awac). 정확한 수치·baseline fairness·failure 범위는 본문 확인 전까지 확정하지 않는다.
+근거: [공식 paper/abstract](https://arxiv.org/abs/2006.09359) · [저자 project/code](https://awacrl.github.io/) · [공식 code](https://github.com/vitchyr/rlkit/tree/master/examples/awac). 인용한 결과 외의 수치, 기준선의 비교 조건과 실패 범위는 추가 확인이 필요하다.
 
 ## Why This Paper Is Here — Researcher Interpretation
 

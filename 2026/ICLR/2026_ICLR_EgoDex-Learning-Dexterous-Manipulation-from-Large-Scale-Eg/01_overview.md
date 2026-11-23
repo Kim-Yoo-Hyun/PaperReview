@@ -1,10 +1,10 @@
 # EgoDex: Learning Dexterous Manipulation from Large-Scale Egocentric Video
 
-> Evidence maturity: `ABSTRACT_CHECKED`.
-> Source audit: 2026-11-16: 공식 초록·ICLR 목록·repository 확인. abstract 기반 — 본문 수동 확인 필요. 사용자 상태 UNREAD 유지.
+> Evidence maturity: `ABSTRACT_CHECKED`. 요약과 핵심 기여 두 개는 아래에 표시한 원문 쪽수에서 확인했다. 나머지 분석은 각 절에 적힌 근거 범위를 따른다.
+> Source audit: ICLR 2026 게재본 표제면에서 저자 표기를 확인했다. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.
 
 - Year/Venue: 2026 / ICLR
-- Authors: Ryan Hoque, Peide Huang, David Yoon, Mouli sivapurapu, Jian Zhang
+- Authors: Ryan Hoque, Peide Huang, David J. Yoon, Mouli Sivapurapu, Jian Zhang
 - Primary track: RL, IL, offline learning, and robot data
 - Tags: robot-data, human-video, dexterous-manipulation, Benchmark
 - Official paper: https://arxiv.org/abs/2505.11709
@@ -12,14 +12,19 @@
 - Code: https://github.com/apple-aiml-research/ml-egodex
 - Public identifiers: {"arxiv": "2505.11709", "openreview": "FFxkFMU89E"}
 
-## Why This Paper Is Here
+## Problem and Importance
 
-Ψ₀의 핵심 인간 데이터 출처이며 robot data 사전학습을 이해할 NEXT다. [ICLR 2026 공식 목록](https://iclr.cc/Downloads/2026)과 [OpenReview](https://openreview.net/forum?id=FFxkFMU89E)로 게재를 확인했다. 최초 preprint는2025년이지만 registry는 게재연도2026을 사용한다.
+EgoDex는 사람이 조작할 때의 1인칭 영상과 양손 손가락의 3차원 궤적을 동기화해 손재주가 필요한 동작을 학습하고 평가할 자료를 제공한다. [PDF 1쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/07fcc6e2b89439d3ee5ab60939aaa6a0-Paper-Conference.pdf#page=1)
 
-## Problem, Contribution, and Interface
+## Core Idea and Contribution
 
-대규모 1인칭 영상과 정밀3D 손 추적을 결합해 dexterous manipulation 학습 자료를 제공한다. 입력 영상/언어에서 인간 손 궤적을 다루며 robot joint command를 직접 제공하는 정책과 구분한다. [초록](https://arxiv.org/abs/2505.11709).
+- Apple Vision Pro로 탁상 조작 194개 과제에서 829시간을 기록하고 영상 프레임을 손 관절 추적과 연결했다. [PDF 3쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/07fcc6e2b89439d3ee5ab60939aaa6a0-Paper-Conference.pdf#page=3) · [PDF 4쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/07fcc6e2b89439d3ee5ab60939aaa6a0-Paper-Conference.pdf#page=4)
+- 영상과 과거 손 자세에서 미래 사람 손 궤적을 예측하는 과제와 오차 지표를 정의하고 여러 모방학습 모델을 같은 조건에서 비교했다. [PDF 6쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/07fcc6e2b89439d3ee5ab60939aaa6a0-Paper-Conference.pdf#page=6) · [PDF 7쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/07fcc6e2b89439d3ee5ab60939aaa6a0-Paper-Conference.pdf#page=7) · [PDF 8쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/07fcc6e2b89439d3ee5ab60939aaa6a0-Paper-Conference.pdf#page=8)
 
 ## Scope and Limits
 
-829시간·194과제. Human trajectory benchmark와 로봇 closed-loop 성공은 서로 다른 증거다. 자동 언어 label과 retargeting의 신뢰도는 downstream 연구에서 별도로 점검한다.
+평가 대상은 사람의 손 궤적 예측이다. 로봇의 폐루프 작업 성공률과 로봇 손으로 옮길 때의 오차는 후속 검증 항목이다. 최초 공개는 2025년, 학회 게재는 2026년이다. [저자판](https://arxiv.org/abs/2505.11709) · [ICLR 게재본](https://proceedings.iclr.cc/paper_files/paper/2026/file/07fcc6e2b89439d3ee5ab60939aaa6a0-Paper-Conference.pdf)
+
+## Why This Paper Is Here — Researcher Interpretation
+
+Ψ₀가 사용한 인간 시연의 출처다. 사람 손 궤적을 로봇 사전학습에 활용하는 방법을 비교할 때 읽는다.

@@ -63,6 +63,8 @@ def current_checks(row, *, include_reviews=True):
             states["summary"] = review["status"]
         if review := row.get("byline_review"):
             states["authors"] = review["status"]
+        if review := row.get("byline_correction"):
+            states["authors"] = review["status"]
         for field, check in row.get("artifact_review", {}).get("fields", {}).items():
             states[field] = check["status"]
     return states
@@ -105,6 +107,18 @@ def check_applied(rows, papers, root):
         def expect(field, value, target):
             if value != target:
                 errors.append(f"{pid} {field} differs from the reviewed correction")
+
+        final_authors = paper.get("authors", [])
+        if correction := row.get("byline_correction"):
+            expect("final byline", final_authors, correction["corrected"])
+            verification = paper["provenance"]["authors_verification"]
+            expect("final byline source", verification["source"], correction["source"])
+            expect("final byline date", verification["verified_on"], correction["verified_on"])
+            overview = (root / paper["folder"] / "01_overview.md").read_text()
+            if "- Authors: " + ", ".join(final_authors) not in overview.splitlines():
+                errors.append(f"{pid} corrected byline missing from overview")
+            # Earlier corrections and their frozen digest refer to the then-current byline.
+            paper = {**paper, "authors": correction["before"]}
 
         def check_source(field, target):
             source_key = {"pdf": "paper_pdf", "code_url": "code"}.get(field, field)
@@ -160,7 +174,7 @@ def check_applied(rows, papers, root):
                 effective = edits.get(field, item)["corrected"]
                 expect(field, paper[field], effective)
                 overview = (root / paper["folder"] / "01_overview.md").read_text()
-                if "- Authors: " + ", ".join(effective) not in overview.splitlines():
+                if "- Authors: " + ", ".join(final_authors) not in overview.splitlines():
                     errors.append(f"{pid} reviewed author byline missing from overview")
         if post:
             overview = (root / paper["folder"] / "01_overview.md").read_text()
@@ -186,7 +200,8 @@ def check_applied(rows, papers, root):
                 else:
                     expect(field, paper[field], value)
                     header = "Authors" if field == "authors" else "Tags"
-                    if f"- {header}: " + ", ".join(value) not in overview.splitlines():
+                    header_values = final_authors if field == "authors" else value
+                    if f"- {header}: " + ", ".join(header_values) not in overview.splitlines():
                         errors.append(f"{pid} reviewed {field} missing from overview")
         if review := row.get("summary_review"):
             overview = (root / paper["folder"] / "01_overview.md").read_text()
@@ -305,6 +320,12 @@ def validate(rows, meta):
                     or (field == "code" and not check.get("repository"))):
                     raise ValueError(f"Incomplete file-level release evidence for {row['id']} {field}")
     for row in rows:
+        if change := row.get("byline_correction"):
+            if (change["status"] != PASS or not change["before"] or not change["corrected"]
+                or change["before"] == change["corrected"] or not change["basis"].strip()
+                or not re.fullmatch(r"\d{4}-\d{2}-\d{2}", change["verified_on"])
+                or not change["source"].startswith("https://")):
+                raise ValueError(f"Incomplete byline correction for {row['id']}")
         if review := row.get("byline_review"):
             if (review["status"] != OPEN or review["publisher"]["count"] == review["program"]["count"]
                 or not all(review[key]["source"].startswith("https://") for key in ("publisher", "program", "author_version", "final_copy"))):
@@ -374,6 +395,7 @@ def render(rows, meta):
     ledger = "../work/sources/batches/source_audit_2026_11.jsonl"
     batches = meta.get("summary_batches", [])
     latest_date = max([post["verified_on"], *(b["verified_on"] for b in batches),
+                       *(r["byline_correction"]["verified_on"] for r in rows if "byline_correction" in r),
                        meta.get("artifact_review", {}).get("verified_on", "")])
     lines = [
         "# 원문 감사", "",
@@ -402,6 +424,11 @@ def render(rows, meta):
         if repairs:
             refs = " · ".join(f"[{r['id']} 원문]({r['summary_review']['source']})" for r in repairs)
             lines += [f"기존 노트에서 확인한 문자 전사 교정은 {len(repairs)}편이다. 원장에 해당 문구와 근거를 기록했다. {refs}", ""]
+    for row in rows:
+        if change := row.get("byline_correction"):
+            short_title = row["title"].split(":")[0]
+            lines += [f"**{short_title} 저자 표기.** {change['verified_on']}에 {change['basis']} "
+                      f"[게재본 표제면]({change['source']})", ""]
     artifacts = [fields for r in rows if (fields := r.get("artifact_review", {}).get("fields"))]
     if artifacts:
         lines += ["## CORE 공개 자료", "",

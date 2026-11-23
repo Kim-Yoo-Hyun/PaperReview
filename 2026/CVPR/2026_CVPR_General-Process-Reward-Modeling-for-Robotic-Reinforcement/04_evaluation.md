@@ -1,16 +1,16 @@
 # General Process Reward Modeling for Robotic Reinforcement Learning
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
-> Evidence maturity: `ABSTRACT_CHECKED`. abstract 기반 — 본문 수동 확인 필요.
-> Source audit: 공식 abstract/project 수준; 실제 정독 및 코드 실행은 미확인.
+> Evidence maturity: `ABSTRACT_CHECKED`. 평가표에서 직접 대조한 항목에 해당 쪽수를 표시했다.
+> Source audit: 2026-11-23 원문의 실물 평가표에서 성공률과 시행 수를 대조했다.
 
 ## Evaluation in One Sentence
 
-Simulation·실제 조작에서 reward 평가와 policy 학습을 보고한다.
+시뮬레이션 열 과제와 실물 여덟 과제에서 최종 성공률과 표본 효율을 비교했다. [표 3](https://openaccess.thecvf.com/content/CVPR2026/papers/Tan_General_Process_Reward_Modeling_for_Robotic_Reinforcement_Learning_CVPR_2026_paper.pdf#page=8)
 
 ## Evaluation Type and Scope
 
-Abstract/project에 명시된 평가 범위만 기록한다. 아래의 확인 필요 항목과 연구자가 제안한 실험을 paper-reported result로 합치지 않는다.
+시뮬레이션과 실물에서 보고한 결과 중 아래에 명시한 평가표의 항목을 확인했다.
 
 ## Dataset / Benchmark Role
 
@@ -20,11 +20,11 @@ Resource 이름은 위 source가 evaluation 용도로 명시한 경우만 사용
 
 ## Metrics and Success Definition
 
-not recorded — 이번 abstract/project 조사에서 확인하지 못한 항목이며, 논문 자체의 미보고를 뜻하지 않는다.
+실물 여덟 과제에서 Dopamine-RL의 최종 평균 성공률은 95.2%였다. 표 3의 150회는 각 방법이 자기 최종 성공률의 80%에 도달할 때까지의 에피소드 수다. 같은 표에서 희소 보상 RL은 최종 68.0%, 183회를 기록했다. [표 3 및 지표 정의](https://openaccess.thecvf.com/content/CVPR2026/papers/Tan_General_Process_Reward_Modeling_for_Robotic_Reinforcement_Learning_CVPR_2026_paper.pdf#page=8)
 
 ## Baselines and Fairness
 
-not recorded — 이번 abstract/project 조사에서 확인하지 못한 항목이며, 논문 자체의 미보고를 뜻하지 않는다. Baseline identity, 같은 observation/action, demonstration/interaction, reward access와 compute 조건을 본문에서 대조한다.
+표 3의 기준선은 시연 50개를 쓴 행동 복제와 희소 보상 RL이다. 각 방법의 보상 접근 조건과 총 학습 비용을 맞췄는지는 별도 확인이 필요하다. [표 3](https://openaccess.thecvf.com/content/CVPR2026/papers/Tan_General_Process_Reward_Modeling_for_Robotic_Reinforcement_Learning_CVPR_2026_paper.pdf#page=8)
 
 ## Ablations and Sensitivity
 
@@ -36,7 +36,7 @@ not recorded — 이번 abstract/project 조사에서 확인하지 못한 항목
 
 ## Statistics, Efficiency, and Reproducibility
 
-Trials/seeds, confidence interval, checkpoint/commit, reset/timeout, hardware와 control latency는 not recorded — 이번 abstract/project 조사에서 확인하지 못한 항목이며, 논문 자체의 미보고를 뜻하지 않는다.
+표 4는 Insert Square, Circuit, Cap Pen 세 과제에서 각 정책·조건별 20회 중 성공 횟수를 보고한다. 독립 학습 시드 수와 성공률의 신뢰구간은 추가 확인이 필요하다. [표 4](https://openaccess.thecvf.com/content/CVPR2026/papers/Tan_General_Process_Reward_Modeling_for_Robotic_Reinforcement_Learning_CVPR_2026_paper.pdf#page=8)
 
 ## Proposed Evaluation — Researcher Interpretation
 
@@ -46,4 +46,4 @@ Trials/seeds, confidence interval, checkpoint/commit, reset/timeout, hardware와
 
 ## Evidence Anchor
 
-[공식 paper/abstract](https://openaccess.thecvf.com/content/CVPR2026/html/Tan_General_Process_Reward_Modeling_for_Robotic_Reinforcement_Learning_CVPR_2026_paper.html) · [저자 project/code](https://robo-dopamine.github.io/) · [공식 code](https://github.com/FlagOpen/Robo-Dopamine). Main table·appendix·negative result는 본문 수동 확인 필요.
+[공식 paper/abstract](https://openaccess.thecvf.com/content/CVPR2026/html/Tan_General_Process_Reward_Modeling_for_Robotic_Reinforcement_Learning_CVPR_2026_paper.html) · [저자 project/code](https://robo-dopamine.github.io/) · [공식 code](https://github.com/FlagOpen/Robo-Dopamine). 그 밖의 표와 부록의 실패 사례는 추가 확인이 필요하다.

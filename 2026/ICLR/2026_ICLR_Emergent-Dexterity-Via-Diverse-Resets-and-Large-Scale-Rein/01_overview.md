@@ -1,6 +1,6 @@
 # Emergent Dexterity Via Diverse Resets and Large-Scale Reinforcement Learning
 
-> Evidence maturity: `ABSTRACT_CHECKED`. abstract 기반 — 본문 수동 확인 필요.
+> Evidence maturity: `ABSTRACT_CHECKED`. 요약과 핵심 기여 두 개는 아래에 표시한 원문 쪽수에서 확인했다. 나머지 분석은 각 절에 적힌 근거 범위를 따른다.
 > 자동 작성 노트는 실제 정독을 뜻하지 않는다. 사용자 reading status는 UNREAD로 시작한다.
 
 - Year/Venue: 2026 / ICLR
@@ -14,15 +14,16 @@
 - Venue verification: https://proceedings.iclr.cc/paper_files/paper/2026/hash/8e3e3488623d64c493a7f11cf1f2e49f-Abstract-Conference.html
 - Code/Project: https://omnireset.github.io/
 - Code: project_only
-- Source audit: 2026-11-07–08: official metadata/abstract 및 저자 project/repository 공개 범위 확인.  본문 전체 정독·코드 실행·독립 성능 검증 아님. 사용자 reading status UNREAD 유지.
+- Source audit: 2026-11-07–08: official metadata/abstract 및 저자 project/repository 공개 범위 확인.  본문 전체 정독·코드 실행·독립 성능 검증 아님. 사용자 reading status UNREAD 유지. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.
 
 ## Problem and Importance
 
-접촉 조작 RL이 좁은 상태 영역만 반복하면 계산량을 늘려도 장기 탐색이 정체된다.
+OmniReset은 시뮬레이션에서 조작을 시작하는 상태를 다양하게 만들어 긴 접촉 과제의 여러 단계에서 강화학습 정책이 경험을 얻도록 한다. [PDF 1쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/8e3e3488623d64c493a7f11cf1f2e49f-Paper-Conference.pdf#page=1) · [PDF 2쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/8e3e3488623d64c493a7f11cf1f2e49f-Paper-Conference.pdf#page=2)
 
 ## Core Idea and Contribution
 
-다양한 robot-object 상호작용 reset을 프로그램으로 생성하고 공통 보상으로 RL을 학습한 뒤 visuomotor 정책으로 증류한다.
+- 물체에 접근하기 전, 이미 파지한 상태, 목표에 가까운 상태 등 물리적으로 가능한 시작 조건을 생성해 단일 보상으로 훈련한다. [PDF 4쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/8e3e3488623d64c493a7f11cf1f2e49f-Paper-Conference.pdf#page=4) · [PDF 5쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/8e3e3488623d64c493a7f11cf1f2e49f-Paper-Conference.pdf#page=5) · [PDF 6쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/8e3e3488623d64c493a7f11cf1f2e49f-Paper-Conference.pdf#page=6)
+- 시뮬레이션에서 배운 정책을 영상 기반 정책으로 증류한 뒤 실제 핀 삽입에서 추가 실물 학습 없이 성공률과 재시도 행동을 평가했다. [PDF 9쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/8e3e3488623d64c493a7f11cf1f2e49f-Paper-Conference.pdf#page=9) · [PDF 10쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/8e3e3488623d64c493a7f11cf1f2e49f-Paper-Conference.pdf#page=10)
 
 ## Observation–State–Action Interface
 
@@ -32,7 +33,7 @@
 
 장기 dexterous manipulation과 넓은 초기 조건, zero-shot 실로봇 전이를 보고한다.
 
-근거: [공식 paper/abstract](https://proceedings.iclr.cc/paper_files/paper/2026/hash/8e3e3488623d64c493a7f11cf1f2e49f-Abstract-Conference.html) · [저자 project/code](https://omnireset.github.io/). 정확한 수치·baseline fairness·failure 범위는 본문 확인 전까지 확정하지 않는다.
+근거: [공식 paper/abstract](https://proceedings.iclr.cc/paper_files/paper/2026/hash/8e3e3488623d64c493a7f11cf1f2e49f-Abstract-Conference.html) · [저자 project/code](https://omnireset.github.io/). 인용한 결과 외의 수치, 기준선의 비교 조건과 실패 범위는 추가 확인이 필요하다.
 
 ## Why This Paper Is Here — Researcher Interpretation
 

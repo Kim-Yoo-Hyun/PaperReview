@@ -1,12 +1,12 @@
 # Humanoid Everyday: A Comprehensive Robotic Dataset for Open-World Humanoid Manipulation
 
 > Evidence maturity: `ABSTRACT_CHECKED`.
-> Source audit: 2026-11-16: arXiv abstract·공식 project/repository 확인. abstract 기반 — 본문 수동 확인 필요. ICRA 게재는 공식 근거 확인 대기.
+> Source audit: 2025년 arXiv 공개 후 ICRA 2026에 게재됐다. 다른 분석의 근거 범위는 각 절에 표시했다. [IEEE DOI 서지](https://doi.org/10.1109/ICRA57385.2026.11696267)
 > Canonical metadata: [01_overview.md](./01_overview.md).
 
 ## Evaluation Type and Scope
 
-DATASET / BENCHMARK. [공식 project](https://humanoideveryday.github.io/)의10.3k trajectories·3M+ frames·260tasks/7categories는 수집 규모다. 평가 trial 수나 성공률 분모로 옮기지 않는다.
+G1과 H1에서 원격조작으로 수집한 시연은 약 1만 300개 궤적, 300만 프레임 이상이며 7개 범주의 260개 작업을 포함한다. [전체 규모](https://arxiv.org/pdf/2510.08807v3#page=1) · [작업별 수집](https://arxiv.org/pdf/2510.08807v3#page=5)
 
 ## Dataset / Benchmark Role
 
@@ -14,7 +14,7 @@ Unitree G1/H1의 open-world 조작 학습 자료. Ψ₀에서 쓰는 subset과 �
 
 ## Metrics and Success Definition
 
-not recorded — 이번 초록/project 검토만으로 정확한 학습/평가 split·trial·metric 정의를 확정하지 않는다.
+표 II는 일곱 조작 과제에서 정책별·과제별로 열 번 수행한 시도의 성공률을 보고한다. 과제별 시작 상태의 구성과 학습·평가 장면의 중복 여부는 추가 확인이 필요하다. [실물 평가, 표 II](https://arxiv.org/pdf/2510.08807v3#page=6)
 
 ## Baselines and Fairness
 

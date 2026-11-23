@@ -1,6 +1,6 @@
 # Horizon Reduction Makes RL Scalable
 
-> Evidence maturity: `ABSTRACT_CHECKED`. abstract 기반 — 본문 수동 확인 필요.
+> Evidence maturity: `ABSTRACT_CHECKED`. 요약과 핵심 기여 두 개는 아래에 표시한 원문 쪽수에서 확인했다. 나머지 분석은 각 절에 적힌 근거 범위를 따른다.
 > 자동 작성 노트는 실제 정독을 뜻하지 않는다. 사용자 reading status는 UNREAD로 시작한다.
 
 - Year/Venue: 2025 / NeurIPS
@@ -14,15 +14,16 @@
 - Venue verification: https://proceedings.neurips.cc/paper_files/paper/2025/hash/0c66099070429b9b49ad8bb19c740c22-Abstract-Conference.html
 - Code/Project: https://github.com/seohongpark/horizon-reduction
 - Code: https://github.com/seohongpark/horizon-reduction
-- Source audit: 2026-11-12: 공식 publication/초록 또는 저자 source 확인. 공식 초록과 metadata 수준의 정리다. 구체적 실험 조건·수치·본문 한계는 추가 확인이 필요하다. 초록·지정 project 범위이며 전체 정독·코드 실행·사용자 reading 완료를 뜻하지 않는다.
+- Source audit: 2026-11-12: 공식 publication/초록 또는 저자 source 확인. 공식 초록과 metadata 수준의 정리다. 구체적 실험 조건·수치·본문 한계는 추가 확인이 필요하다. 초록·지정 project 범위이며 전체 정독·코드 실행·사용자 reading 완료를 뜻하지 않는다. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.
 
 ## Problem and Importance
 
-데이터·모델을 늘려도 긴 horizon의 offline RL 성능이 포화되는 이유를 분석한다.
+이 연구는 오프라인 강화학습에서 데이터와 계산을 늘려도 긴 의사결정 구간 때문에 성능 향상이 정체되는 조건을 분석한다. [PDF 1쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/0c66099070429b9b49ad8bb19c740c22-Paper-Conference.pdf#page=1)
 
 ## Core Idea and Contribution
 
-Horizon 감소 기법을 비교하고 짧은 유효 결정 길이를 활용하는 SHARSA를 제안한다.
+- 가치 추정에서 보상을 거슬러 전달해야 하는 길이와 정책이 최종 목표까지 행동을 선택해야 하는 길이를 나눠 각각의 영향을 시험했다. [PDF 5쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/0c66099070429b9b49ad8bb19c740c22-Paper-Conference.pdf#page=5) · [PDF 7쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/0c66099070429b9b49ad8bb19c740c22-Paper-Conference.pdf#page=7)
+- SHARSA는 다단계 가치 학습으로 평가한 중간 목표를 선택해 낮은 수준의 정책에 전달하며, 데이터 규모별 비교에서 두 구간을 줄인 효과를 측정했다. [PDF 8쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/0c66099070429b9b49ad8bb19c740c22-Paper-Conference.pdf#page=8) · [PDF 9쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/0c66099070429b9b49ad8bb19c740c22-Paper-Conference.pdf#page=9) · [PDF 10쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/0c66099070429b9b49ad8bb19c740c22-Paper-Conference.pdf#page=10)
 
 ## Observation–State–Action Interface
 
@@ -32,7 +33,7 @@ Horizon 감소 기법을 비교하고 짧은 유효 결정 길이를 활용하�
 
 다양한 긴 목표 과제의 scaling을 비교한다. 모든 online VLA RL의 원인으로 일반화하지 않는다.
 
-근거: [공식 paper/abstract](https://proceedings.neurips.cc/paper_files/paper/2025/hash/0c66099070429b9b49ad8bb19c740c22-Abstract-Conference.html) · [저자 project/code](https://github.com/seohongpark/horizon-reduction). 정확한 수치·baseline fairness·failure 범위는 본문 확인 전까지 확정하지 않는다.
+근거: [공식 paper/abstract](https://proceedings.neurips.cc/paper_files/paper/2025/hash/0c66099070429b9b49ad8bb19c740c22-Abstract-Conference.html) · [저자 project/code](https://github.com/seohongpark/horizon-reduction). 인용한 결과 외의 수치, 기준선의 비교 조건과 실패 범위는 추가 확인이 필요하다.
 
 ## Why This Paper Is Here — Researcher Interpretation
 

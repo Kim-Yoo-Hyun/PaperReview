@@ -1,6 +1,6 @@
 # Robo3R: Enhancing Robotic Manipulation with Accurate Feed-Forward 3D Reconstruction
 
-> Evidence maturity: `ABSTRACT_CHECKED`. abstract 기반 — 본문 수동 확인 필요.
+> Evidence maturity: `ABSTRACT_CHECKED`. 요약과 핵심 기여 두 개는 아래에 표시한 원문 쪽수에서 확인했다. 나머지 분석은 각 절에 적힌 근거 범위를 따른다.
 > 자동 작성 노트는 실제 정독을 뜻하지 않는다. 사용자 reading status는 UNREAD로 시작한다.
 
 - Year/Venue: 2026 / RSS
@@ -14,15 +14,16 @@
 - Venue verification: https://roboticsproceedings.org/rss22/p056.html
 - Code/Project: https://yangsizhe.github.io/robo3r/
 - Code: https://github.com/InternRobotics/Robo3R
-- Source audit: 2026-11-18: 공식 초록·bibliographic record와 연결된 저자 자료 확인. Abstract 기반 등록이며 본문 전체·실험 재현은 미확인.
+- Source audit: 2026-11-18: 공식 초록·bibliographic record와 연결된 저자 자료 확인. Abstract 기반 등록이며 본문 전체·실험 재현은 미확인. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.
 
 ## Problem and Importance
 
-깊이 센서와 기존 재구성의 scale/정밀도 오차가 로봇 물리 상호작용을 방해한다.
+Robo3R은 RGB 영상과 로봇 상태에서 로봇 기준 좌표계의 실제 척도 3차원 장면을 순전파로 복원해 조작에 사용한다. [PDF 1쪽](https://roboticsproceedings.org/rss22/p056.pdf#page=1)
 
 ## Core Idea and Contribution
 
-RGB와 robot state에서 local geometry·camera pose를 추정하고 robot frame의 metric geometry로 정렬한다.
+- 시점별 기하와 상대 카메라 자세를 전역 유사 변환으로 정렬하고, 마스크 기반 점 예측과 키포인트 PnP로 물체 경계와 카메라 정합을 개선한다. [PDF 3쪽](https://roboticsproceedings.org/rss22/p056.pdf#page=3) · [PDF 4쪽](https://roboticsproceedings.org/rss22/p056.pdf#page=4)
+- 복원 오차와 함께 모방학습·실물 전이·파지 생성·충돌 회피 계획을 평가해 추정한 기하가 후속 로봇 행동에 미치는 영향을 비교했다. [PDF 6쪽](https://roboticsproceedings.org/rss22/p056.pdf#page=6) · [PDF 8쪽](https://roboticsproceedings.org/rss22/p056.pdf#page=8)
 
 ## Observation–State–Action Interface
 
@@ -32,7 +33,7 @@ RGB/로봇 상태 → point map·camera pose·robot-frame scene geometry; 별도
 
 Robo3R-4M 합성 데이터로 학습하고 imitation·sim-to-real·grasp synthesis·collision-free planning의 downstream 효과를 평가한다.
 
-근거: [공식 paper/abstract](https://roboticsproceedings.org/rss22/p056.html) · [저자 project/code](https://yangsizhe.github.io/robo3r/). 정확한 수치·baseline fairness·failure 범위는 본문 확인 전까지 확정하지 않는다.
+근거: [공식 paper/abstract](https://roboticsproceedings.org/rss22/p056.html) · [저자 project/code](https://yangsizhe.github.io/robo3r/). 인용한 결과 외의 수치, 기준선의 비교 조건과 실패 범위는 추가 확인이 필요하다.
 
 ## Why This Paper Is Here — Researcher Interpretation
 

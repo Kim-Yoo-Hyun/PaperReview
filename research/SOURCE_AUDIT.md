@@ -9,10 +9,13 @@
 | 2026-11-22 | NEXT | [pr-0028–pr-0768 중 당시 미확인 논문](https://github.com/Kim-Yoo-Hyun/PaperReview/tree/f3806160de5ecd1a08dd7b18364fd63d0dac5745) | 100 | 0 | 261 |
 | 2026-11-23 | NEXT | [pr-0772–pr-0966 중 당시 미확인 논문](https://github.com/Kim-Yoo-Hyun/PaperReview/tree/a519b5f2684571e98d2b30458c3c5b3fce66674d) | 98 | 2 | 161 |
 | 2026-11-23 | NEXT | [pr-0967–pr-1135 중 당시 미확인 논문](https://github.com/Kim-Yoo-Hyun/PaperReview/tree/a7724b50a080b0c95ceab4dae27710898c78b7da) | 100 | 0 | 61 |
+| 2026-11-23 | NEXT | [pr-1136–pr-1227 중 당시 미확인 논문](https://github.com/Kim-Yoo-Hyun/PaperReview/tree/9339824126e387e43b48219f75d4a813bb50fa77) | 61 | 0 | 0 |
 
 안정 ID 순서로 미확인 논문을 골라 각 overview의 한 줄 요약과 핵심 기여 두 개를 원문에 대조했다. 문장마다 실제 확인한 PDF 쪽수 또는 공식 웹 보고서의 절을 연결했다. 원장에는 판본과 교정 전 노트의 SHA-256을 기록했다. 이 순차 배치에서 집계하는 값은 검증 진척이다.
 
 기존 노트에서 확인한 문자 전사 교정은 6편이다. 원장에 해당 문구와 근거를 기록했다. [pr-0552 원문](https://lavalle.pl/papers/Lav98c.pdf) · [pr-0751 원문](https://www.roboticsproceedings.org/rss21/p052.pdf) · [pr-0772 원문](https://openaccess.thecvf.com/content/CVPR2025/papers/Song_RoboSpatial_Teaching_Spatial_Understanding_to_2D_and_3D_Vision-Language_Models_CVPR_2025_paper.pdf) · [pr-0795 원문](https://openaccess.thecvf.com/content/CVPR2026/papers/Liu_ActiveVLA_Injecting_Active_Perception_into_Vision-Language-Action_Models_for_Precise_3D_CVPR_2026_paper.pdf) · [pr-0805 원문](https://openaccess.thecvf.com/content/CVPR2026/papers/Liu_SaPaVe_Towards_Active_Perception_and_Manipulation_in_Vision-Language_Action_Models_CVPR_2026_paper.pdf) · [pr-0813 원문](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/yan26r/yan26r.pdf)
+
+**EgoDex 저자 표기.** 2026-11-23에 ICLR 게재본 표제면에 따라 세 번째 저자를 David J. Yoon, 네 번째 저자를 Mouli Sivapurapu로 교정했다. [게재본 표제면](https://proceedings.iclr.cc/paper_files/paper/2026/file/07fcc6e2b89439d3ee5ab60939aaa6a0-Paper-Conference.pdf#page=1)
 
 ## CORE 공개 자료
 
@@ -61,7 +64,7 @@ NoMaD(`pr-0568`)의 데이터는 기존에 `not_applicable`로 분류되어 있�
 | 저자 | 6 | 1,251 | 1 | 0 |
 | 연도 | 0 | 1,252 | 0 | 0 |
 | 발표처·게재 | 0 | 1,182 | 70 | 0 |
-| 요약·기여 | 30 | 553 | 699 | 0 |
+| 요약·기여 | 30 | 614 | 638 | 0 |
 | 코드 | 0 | 383 | 869 | 0 |
 | 가중치 | 0 | 84 | 1,168 | 0 |
 | 데이터 | 0 | 101 | 1,151 | 0 |
@@ -74,7 +77,7 @@ NoMaD(`pr-0568`)의 데이터는 기존에 `not_applicable`로 분류되어 있�
 | 등급 | 논문 | 전 항목 통과 | 요약·기여 미확인 | 태그 미확인 | 공개 여부 중 한 가지 이상 미확인 |
 |---|---:|---:|---:|---:|---:|
 | CORE | 50 | 13 | 0 | 0 | 36 |
-| NEXT | 450 | 6 | 61 | 360 | 433 |
+| NEXT | 450 | 6 | 0 | 360 | 433 |
 | REFERENCE | 510 | 0 | 440 | 366 | 504 |
 | ARCHIVE | 242 | 0 | 198 | 131 | 242 |
 

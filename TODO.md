@@ -2,7 +2,7 @@
 
 ## 재개 순서
 
-**다음 원장 감사.** NEXT에서 요약·기여가 미확인인 마지막 61편을 대조한다. General Process Reward Modeling for Robotic Reinforcement Learning(`pr-1136`)부터 PRISM(`pr-1227`)까지 안정 ID 순으로 진행한다. 각 요약 한 줄과 핵심 기여 두 개에 확인한 판본의 PDF 쪽수 또는 공식 웹 보고서의 절을 연결한다. [진척과 선정 기준](./research/SOURCE_AUDIT.md#요약기여-원문-대조)
+**다음 원장 감사.** REFERENCE에서 요약·기여가 미확인인 440편 중 첫 100편을 대조한다. CLIP-Fields(`pr-0029`)부터 Audio-VLA(`pr-0181`)까지 미확인 논문만 안정 ID 순으로 고른다. 한 줄 요약과 핵심 기여 두 개에 확인한 판본의 PDF 쪽수 또는 공식 웹 보고서의 절을 연결한다. 이후 REFERENCE 340편과 ARCHIVE 198편이 남는다. [진척과 선정 기준](./research/SOURCE_AUDIT.md#요약기여-원문-대조)
 
 CORE 36편에는 공개 자료 68개 항목이 남아 있다. 원장에는 이미 확인한 배포처와 빠진 증거를 기록했다. DeXtreme은 ICRA 게재본 인쇄 5977쪽을 확보하면 최종 저자열을 대조한다. [공개 자료와 저자 판본](./research/SOURCE_AUDIT.md#core-공개-자료)
 
@@ -26,6 +26,6 @@ CORE 36편에는 공개 자료 68개 항목이 남아 있다. 원장에는 이�
 
 ## 직전 완료
 
-- **11월 23일 원문 대조.** LoGoPlanner부터 CoMo까지 NEXT 100편의 요약 100개와 기여 200개를 PDF 쪽수에 연결했다. BAS-VLA의 목표 변경 실험은 시뮬레이션에서 옛 목표를 실행한 비율과 실물에서 새 목표를 달성한 비율을 각각 해당 표에서 확인할 수 있다. [원문 감사](./research/SOURCE_AUDIT.md#요약기여-원문-대조) · [BAS-VLA 평가 노트](./2026/NeurIPS/2026_NeurIPS_Beyond-Appearance-Shifts-Task-Semantic-Action-Calibration/04_evaluation.md)
+- **11월 23일 원문 대조.** Dopamine-RL부터 PRISM까지 마지막 NEXT 61편의 요약 61개와 기여 122개를 PDF 쪽수에 연결했다. 이로써 CORE·NEXT 500편의 요약 검증을 마쳤다. Dopamine-RL 실물 실험의 최종 성공률과 표본 효율을 구분해 기록했고, EgoDex 저자 표기와 Humanoid Everyday의 게재 이력을 교정했다. [원문 감사](./research/SOURCE_AUDIT.md#요약기여-원문-대조) · [Dopamine-RL 표 3](./2026/CVPR/2026_CVPR_General-Process-Reward-Modeling-for-Robotic-Reinforcement/04_evaluation.md) · [Humanoid Everyday](./2026/ICRA/2026_ICRA_Humanoid-Everyday-A-Comprehensive-Robotic-Dataset-for-Open/01_overview.md)
 - **시연의 선택적 재수집.** 네 원격조작 자료를 대조했다. 원래 요청을 복원할 수 없으면서 같은 작업에서 가이드 방향만 바꿔 재시연할 수 있는 표본이 확보될 때까지 파일럿을 보류한다. [결과](./work/research_topics/demonstration_recollection/내용/README.md) · [공개 표본 재검산](./work/research_topics/demonstration_recollection/재현%20방법/README.md)
 - **레지스트리.** 공유 제어 원문 2편을 등록하고 DROID 공개 자료를 교정했다. 기존 23편의 등록 판정과 이전 실험의 수치·재개 조건은 각 결과 문서에서 확인할 수 있다. [등록과 교정](./work/update/REGISTRY.md) · [누락 심사](./research/GAPFILL.md) · [종료·보류 결과](./work/research_topics/RESULTS.md)

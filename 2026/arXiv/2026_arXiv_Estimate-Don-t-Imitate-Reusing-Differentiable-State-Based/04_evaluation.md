@@ -1,26 +1,24 @@
 # Estimate, Don't Imitate: Reusing Differentiable State-Based Policies for Visuomotor Control
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
-> Evidence maturity: `ABSTRACT_CHECKED`. abstract 기반 — 본문 수동 확인 필요.
-> Source audit: 공식 abstract/project 수준; 실제 정독 및 코드 실행은 미확인.
+> Evidence maturity: `ABSTRACT_CHECKED`. 평가표에서 직접 대조한 항목에 해당 쪽수를 표시했다.
+> Source audit: 2026-11-23 원문의 실물 평가표에서 성공률과 시행 수를 대조했다.
 
 ## Evaluation in One Sentence
 
-초록은 goal-conditioned 조작 5개와 실제 Panda의 sim-to-real 평가를 보고한다. Trial 구성·각 조건별 성공 수·시연 분할은 이번 등록에서 확인하지 않았다.
+시뮬레이션 조작 다섯 과제와 실제 Panda의 큐브 과제로 시각 상태 추정과 상태 기반 전문가의 조합을 평가했다. [과제와 실물 전이](https://arxiv.org/pdf/2609.34018v1#page=1) · [표 IV](https://arxiv.org/pdf/2609.34018v1#page=8)
 
 ## Evaluation Type and Scope
 
-Abstract/project에 명시된 평가 범위만 기록한다. 아래의 확인 필요 항목과 연구자가 제안한 실험을 paper-reported result로 합치지 않는다.
+시뮬레이션과 실물에서 보고한 결과 중 아래에 명시한 평가표의 항목을 확인했다.
 
 ## Dataset / Benchmark Role
 
-초록은 goal-conditioned 조작 5개와 실제 Panda의 sim-to-real 평가를 보고한다. Trial 구성·각 조건별 성공 수·시연 분할은 이번 등록에서 확인하지 않았다.
-
-Resource 이름은 위 source가 evaluation 용도로 명시한 경우만 사용한다. 정확한 training/evaluation role, split, size와 데이터 중복은 not recorded — 이번 abstract/project 조사에서 확인하지 못한 항목이며, 논문 자체의 미보고를 뜻하지 않는다.
+표 IV의 시뮬레이션 평가는 학습에 쓰지 않은 배경을 포함해 1,000개 에피소드로 수행했다. 실물 전이는 같은 표에서 별도로 보고한다. [표 IV와 주석](https://arxiv.org/pdf/2609.34018v1#page=8)
 
 ## Metrics and Success Definition
 
-not recorded — 이번 abstract/project 조사에서 확인하지 못한 항목이며, 논문 자체의 미보고를 뜻하지 않는다.
+실제 Panda에서 완료한 에피소드 25회 중 19회 성공해 76.0%였다. 관절 한계 때문에 중단하고 재시작한 두 시도까지 포함하면 전체 27회 중 19회, 70.4%다. 에피소드당 제한은 40초(제어 200스텝)였다. [표 IV와 주석](https://arxiv.org/pdf/2609.34018v1#page=8)
 
 ## Baselines and Fairness
 
@@ -32,11 +30,11 @@ not recorded — 이번 abstract/project 조사에서 확인하지 못한 항목
 
 ## Generalization and Failure Cases
 
-not recorded — 이번 abstract/project 조사에서 확인하지 못한 항목이며, 논문 자체의 미보고를 뜻하지 않는다. 특히 Expert의 미분 가능성·state/goal 정의·loss schedule·occlusion·held-out split·실제 로봇 trial 및 코드 release을 점검한다.
+실물에서 확인된 중단 사유는 제어기의 관절 한계 검사다. 가림, 물체 종류, 시작 자세에 따른 실패율은 추가 확인이 필요하다. [표 IV 주석](https://arxiv.org/pdf/2609.34018v1#page=8)
 
 ## Statistics, Efficiency, and Reproducibility
 
-Trials/seeds, confidence interval, checkpoint/commit, reset/timeout, hardware와 control latency는 not recorded — 이번 abstract/project 조사에서 확인하지 못한 항목이며, 논문 자체의 미보고를 뜻하지 않는다.
+표 IV의 평균 제어 스텝 수와 표준편차는 성공 에피소드에서 계산했다. 독립 학습 시드에 따른 편차와 실물 제어 지연은 추가 확인이 필요하다. [표 IV 주석](https://arxiv.org/pdf/2609.34018v1#page=8)
 
 ## Proposed Evaluation — Researcher Interpretation
 
@@ -46,4 +44,4 @@ Trials/seeds, confidence interval, checkpoint/commit, reset/timeout, hardware와
 
 ## Evidence Anchor
 
-[공식 paper/abstract](https://arxiv.org/abs/2609.34018). Main table·appendix·negative result는 본문 수동 확인 필요.
+[공식 paper/abstract](https://arxiv.org/abs/2609.34018). 그 밖의 표와 부록의 실패 사례는 추가 확인이 필요하다.
