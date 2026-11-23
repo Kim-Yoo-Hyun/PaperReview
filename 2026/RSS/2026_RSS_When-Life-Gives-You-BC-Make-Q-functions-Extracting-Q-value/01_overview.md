@@ -1,6 +1,6 @@
 # When Life Gives You BC, Make Q-functions: Extracting Q-values from Behavior Cloning for On-Robot Reinforcement Learning
 
-> Evidence maturity: `ABSTRACT_CHECKED`. abstract 기반 — 본문 수동 확인 필요.
+> Evidence maturity: `ABSTRACT_CHECKED`. 요약과 핵심 기여 두 개는 아래에 표시한 원문 쪽수에서 확인했다. 나머지 분석은 각 절에 적힌 근거 범위를 따른다.
 > 자동 작성 노트는 실제 정독을 뜻하지 않는다. 사용자 reading status는 UNREAD로 시작한다.
 
 - Year/Venue: 2026 / RSS
@@ -14,15 +14,16 @@
 - Venue verification: https://roboticsproceedings.org/rss22/p153.html
 - Code/Project: https://pages.rai-inst.com/q2rl_website/
 - Code: https://github.com/rai-opensource/q2rl
-- Source audit: 2026-11-07–08: official metadata/abstract 및 저자 project/repository 공개 범위 확인.  본문 전체 정독·코드 실행·독립 성능 검증 아님. 사용자 reading status UNREAD 유지.
+- Source audit: 2026-11-07–08: official metadata/abstract 및 저자 project/repository 공개 범위 확인.  본문 전체 정독·코드 실행·독립 성능 검증 아님. 사용자 reading status UNREAD 유지. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.
 
 ## Problem and Importance
 
-BC에서 online RL로 전환할 때 기존의 좋은 행동을 잃을 수 있다.
+Q2RL은 행동 복제 정책으로부터 소량의 환경 상호작용을 통해 가치 함수를 추정하고 이를 이용해 온라인 학습 중 실행할 행동을 고른다. [PDF 1쪽](https://roboticsproceedings.org/rss22/p153.pdf#page=1)
 
 ## Core Idea and Contribution
 
-BC로부터 Q를 추정하고 BC·RL 행동을 가치에 따라 선택하며 online 학습한다.
+- 행동 복제와 강화학습 정책이 각각 제안한 행동을 Q값으로 비교해 자료 수집에서 기존 정책의 유용한 행동을 유지한다. [PDF 3쪽](https://roboticsproceedings.org/rss22/p153.pdf#page=3) · [PDF 4쪽](https://roboticsproceedings.org/rss22/p153.pdf#page=4)
+- 시뮬레이션과 실제 파이프 조립·부품 배치에서 기본 행동 복제 및 오프라인-온라인 학습 기준선과 성공률·학습 시간을 비교했다. [PDF 6쪽](https://roboticsproceedings.org/rss22/p153.pdf#page=6) · [PDF 7쪽](https://roboticsproceedings.org/rss22/p153.pdf#page=7) · [PDF 8쪽](https://roboticsproceedings.org/rss22/p153.pdf#page=8)
 
 ## Observation–State–Action Interface
 
@@ -32,7 +33,7 @@ BC 정책·학습 정책 → Q-Gating → 실제 상호작용·RL 갱신.
 
 D4RL·robomimic과 실제 pipe assembly·kitting을 평가한다.
 
-근거: [공식 paper/abstract](https://roboticsproceedings.org/rss22/p153.html) · [저자 project/code](https://pages.rai-inst.com/q2rl_website/) · [공식 code](https://github.com/rai-opensource/q2rl). 정확한 수치·baseline fairness·failure 범위는 본문 확인 전까지 확정하지 않는다.
+근거: [공식 paper/abstract](https://roboticsproceedings.org/rss22/p153.html) · [저자 project/code](https://pages.rai-inst.com/q2rl_website/) · [공식 code](https://github.com/rai-opensource/q2rl). 문장에 인용한 결과 외의 수치, 기준선의 비교 조건과 실패 범위는 추가 확인이 필요하다.
 
 ## Why This Paper Is Here — Researcher Interpretation
 

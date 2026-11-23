@@ -1,6 +1,6 @@
 # SAIL: Faster-than-Demonstration Execution of Imitation Learning Policies
 
-> Evidence maturity: `ABSTRACT_CHECKED`. abstract 기반 — 본문 수동 확인 필요.
+> Evidence maturity: `ABSTRACT_CHECKED`. 요약과 핵심 기여 두 개는 아래에 표시한 원문 쪽수에서 확인했다. 나머지 분석은 각 절에 적힌 근거 범위를 따른다.
 > 자동 작성 노트는 실제 정독을 뜻하지 않는다. 사용자 reading status는 UNREAD로 시작한다.
 
 - Year/Venue: 2025 / CoRL
@@ -14,15 +14,16 @@
 - Venue verification: https://proceedings.mlr.press/v305/arachchige25a.html
 - Code/Project: https://nadunranawaka1.github.io/sail-policy
 - Code: https://github.com/nadunRanawaka1/SAIL
-- Source audit: 2026-10-22 공식 abstract/arXiv abstract와 publication metadata 확인. 새 5개 note는 abstract 수준의 분석이며 상세 본문·코드 감사는 기존 buildup dossier의 명시 범위만 따른다.
+- Source audit: 2026-10-22 공식 abstract/arXiv abstract와 publication metadata 확인. 새 5개 note는 abstract 수준의 분석이며 상세 본문·코드 감사는 기존 buildup dossier의 명시 범위만 따른다. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.
 
 ## Problem and Importance
 
-Imitation policy를 시연 속도보다 빠르게 실행하면서 성능을 유지한다.
+SAIL은 시연보다 빠르게 모방 정책을 실행할 때 로봇 동역학과 상태 분포의 변화 때문에 생기는 추종 오차를 줄인다. [PDF 1쪽](https://raw.githubusercontent.com/mlresearch/v305/d42e9e994b3821cca9121500c717f9a87c7cb4f6/assets/arachchige25a/arachchige25a.pdf#page=1)
 
 ## Core Idea and Contribution
 
-일관성·tracking·speed modulation·latency scheduling을 결합한다.
+- 움직임 복잡도에 따라 속도를 바꾸고 일관성 있는 행동 추론·궤적 추종·지연을 고려한 스케줄링을 결합한다. [PDF 3쪽](https://raw.githubusercontent.com/mlresearch/v305/d42e9e994b3821cca9121500c717f9a87c7cb4f6/assets/arachchige25a/arachchige25a.pdf#page=3) · [PDF 4쪽](https://raw.githubusercontent.com/mlresearch/v305/d42e9e994b3821cca9121500c717f9a87c7cb4f6/assets/arachchige25a/arachchige25a.pdf#page=4)
+- 시뮬레이션과 서로 다른 실물 플랫폼 두 대에서 작업 성공을 유지하며 시연 대비 어느 정도까지 속도를 높일 수 있는지 평가했다. [PDF 1쪽](https://raw.githubusercontent.com/mlresearch/v305/d42e9e994b3821cca9121500c717f9a87c7cb4f6/assets/arachchige25a/arachchige25a.pdf#page=1) · [PDF 7쪽](https://raw.githubusercontent.com/mlresearch/v305/d42e9e994b3821cca9121500c717f9a87c7cb4f6/assets/arachchige25a/arachchige25a.pdf#page=7)
 
 ## Observation–State–Action Interface
 
@@ -32,7 +33,7 @@ Imitation policy를 시연 속도보다 빠르게 실행하면서 성능을 유�
 
 Simulation task와 실제 robot 플랫폼의 빠른 실행을 보고한다.
 
-근거: [공식 paper/abstract](https://proceedings.mlr.press/v305/arachchige25a.html) · [저자 project/code](https://nadunranawaka1.github.io/sail-policy). 정확한 수치·baseline fairness·failure 범위는 본문 확인 전까지 확정하지 않는다.
+근거: [공식 paper/abstract](https://proceedings.mlr.press/v305/arachchige25a.html) · [저자 project/code](https://nadunranawaka1.github.io/sail-policy). 문장에 인용한 결과 외의 수치, 기준선의 비교 조건과 실패 범위는 추가 확인이 필요하다.
 
 ## Why This Paper Is Here — Researcher Interpretation
 

@@ -1,6 +1,6 @@
 # A Systematic Study of Data Modalities and Strategies for Co-training Large Behavior Models for Robot Manipulation
 
-> Evidence maturity: `ABSTRACT_CHECKED`. abstract 기반 — 본문 수동 확인 필요.
+> Evidence maturity: `ABSTRACT_CHECKED`. 요약과 핵심 기여 두 개는 아래에 표시한 원문 쪽수에서 확인했다. 나머지 분석은 각 절에 적힌 근거 범위를 따른다.
 > 자동 작성 노트는 실제 정독을 뜻하지 않는다. 사용자 reading status는 UNREAD로 시작한다.
 
 - Year/Venue: 2026 / RSS
@@ -14,15 +14,16 @@
 - Venue verification: https://roboticsproceedings.org/rss22/p007.html
 - Code/Project: https://co-training-lbm.github.io/
 - Code: project_only
-- Source audit: 2026-11-02 공식 proceedings/publisher의 서지·abstract와 저자 project/code 소개를 확인했다. 노트는 abstract/project 기반이며 본문 정독·native 실행을 뜻하지 않는다. 사용자 읽기 상태는 UNREAD 유지.
+- Source audit: 2026-11-02 공식 proceedings/publisher의 서지·abstract와 저자 project/code 소개를 확인했다. 노트는 abstract/project 기반이며 본문 정독·native 실행을 뜻하지 않는다. 사용자 읽기 상태는 UNREAD 유지. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.
 
 ## Problem and Importance
 
-이종 데이터의 종류와 섞는 학습 단계가 로봇 일반화에 어떤 차이를 만드는지 체계적으로 검토한다.
+이 연구는 대규모 조작 정책에서 로봇 행동 이외의 감독 신호를 함께 학습할 때 어떤 데이터가 실제 성능에 기여하는지 비교한다. [PDF 1쪽](https://roboticsproceedings.org/rss22/p007.pdf#page=1)
 
 ## Core Idea and Contribution
 
-vision-language 자료·robot 언어 annotation·다른 embodiment 데이터·human video·이산 action token을 여러 co-training 전략으로 비교한다.
+- 일반 시각언어 자료, 로봇 영상의 세밀한 문장, 다른 로봇의 궤적, 사람 영상, 이산화한 행동을 통제된 공동학습 설정에서 대조했다. [PDF 2쪽](https://roboticsproceedings.org/rss22/p007.pdf#page=2) · [PDF 3쪽](https://roboticsproceedings.org/rss22/p007.pdf#page=3) · [PDF 4쪽](https://roboticsproceedings.org/rss22/p007.pdf#page=4)
+- 실물·시뮬레이션 비교에서 시각언어·다른 로봇 자료의 이득을 보고했고, 시험한 설정에서 이산 행동 공동학습의 유의한 이득은 확인하지 못했다. [PDF 6쪽](https://roboticsproceedings.org/rss22/p007.pdf#page=6) · [PDF 7쪽](https://roboticsproceedings.org/rss22/p007.pdf#page=7) · [PDF 8쪽](https://roboticsproceedings.org/rss22/p007.pdf#page=8) · [PDF 9쪽](https://roboticsproceedings.org/rss22/p007.pdf#page=9)
 
 ## Observation–State–Action Interface
 

@@ -1,6 +1,6 @@
 # DyGRO-VLA: Cross-Task Scaling of Vision–Language–Action Models via Dynamic Grouped Residual Optimization
 
-> Evidence maturity: `ABSTRACT_CHECKED`. abstract 기반 — 본문 수동 확인 필요.
+> Evidence maturity: `ABSTRACT_CHECKED`. 요약과 핵심 기여 두 개는 아래에 표시한 원문 쪽수에서 확인했다. 나머지 분석은 각 절에 적힌 근거 범위를 따른다.
 > 자동 작성 노트는 실제 정독을 뜻하지 않는다. 사용자 reading status는 UNREAD로 시작한다.
 
 - Year/Venue: 2026 / ICML
@@ -14,15 +14,16 @@
 - Venue verification: https://proceedings.mlr.press/v306/lin26af.html
 - Code/Project: https://github.com/EDEM-AI/DyGRO-VLA
 - Code: project_only
-- Source audit: 2026-10-19: 공식 paper abstract 및 저자 project/code README 확인; abstract 기반 — 본문 수동 확인 필요.
+- Source audit: 2026-10-19: 공식 paper abstract 및 저자 project/code README 확인; abstract 기반 — 본문 수동 확인 필요. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.
 
 ## Problem and Importance
 
-Task별 RL fine-tuning이 pretrained VLA를 좁은 task에 과적합시켜 cross-task 일반성을 훼손하는 문제다.
+DyGRO-VLA는 여러 과제에 공통인 표현을 먼저 학습하고 강화학습 단계에서 과제별 보정을 선택해 공동 학습의 간섭을 줄인다. [PDF 1쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/lin26af/lin26af.pdf#page=1)
 
 ## Core Idea and Contribution
 
-Cross-task latent representation과 mixture-of-RL-residuals를 이용한 두 단계 grouped residual optimization을 제안한다.
+- 정보이론적 기준으로 오프라인 표현을 학습한 뒤 여러 잔차 모듈을 조합해 온라인 정책을 갱신한다. [PDF 4쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/lin26af/lin26af.pdf#page=4) · [PDF 5쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/lin26af/lin26af.pdf#page=5)
+- LIBERO·RoboTwin과 실제 조작에서 다중 과제 학습을 평가하고 전문가 수와 온라인 학습 설정을 바꿔 비교했다. [PDF 6쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/lin26af/lin26af.pdf#page=6) · [PDF 8쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/lin26af/lin26af.pdf#page=8)
 
 ## Observation–State–Action Interface
 
@@ -32,7 +33,7 @@ VLA observation/language → cross-task latent features 및 residual policy upda
 
 ICML abstract는 LIBERO, RoboTwin2와 real-world 평가 및 multitask/distribution-shift 조건을 명시한다.
 
-근거: [공식 paper/abstract](https://proceedings.mlr.press/v306/lin26af.html) · [저자 project/code](https://github.com/EDEM-AI/DyGRO-VLA). 정확한 수치·baseline fairness·failure 범위는 본문 확인 전까지 확정하지 않는다.
+근거: [공식 paper/abstract](https://proceedings.mlr.press/v306/lin26af.html) · [저자 project/code](https://github.com/EDEM-AI/DyGRO-VLA). 문장에 인용한 결과 외의 수치, 기준선의 비교 조건과 실패 범위는 추가 확인이 필요하다.
 
 ## Why This Paper Is Here — Researcher Interpretation
 

@@ -1,6 +1,6 @@
 # RoboMME: Benchmarking and Understanding Memory for Robotic Generalist Policies
 
-> Evidence maturity: `ABSTRACT_CHECKED`. abstract 기반 — 본문 수동 확인 필요.
+> Evidence maturity: `ABSTRACT_CHECKED`. 요약과 핵심 기여 두 개는 아래에 표시한 원문 쪽수에서 확인했다. 나머지 분석은 각 절에 적힌 근거 범위를 따른다.
 > 자동 작성 노트는 실제 정독을 뜻하지 않는다. 사용자 reading status는 UNREAD로 시작한다.
 
 - Year/Venue: 2026 / ICML
@@ -14,15 +14,16 @@
 - Venue verification: https://proceedings.mlr.press/v306/dai26c.html
 - Code/Project: https://robomme.github.io/
 - Code: https://github.com/RoboMME/robomme_benchmark
-- Source audit: 2026-10-25 공식 abstract와 publication metadata 및 명시된 project/code 공개 링크 확인. 본문 정독·코드 실행·payload 검증은 이번 등록 범위 밖이다.
+- Source audit: 2026-10-25 공식 abstract와 publication metadata 및 명시된 project/code 공개 링크 확인. 본문 정독·코드 실행·payload 검증은 이번 등록 범위 밖이다. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.
 
 ## Problem and Importance
 
-History-dependent manipulation의 memory 설계를 공통 조건에서 비교하기 어렵다.
+RoboMME는 현재 영상만으로 결정하기 어려운 조작 과제에서 범용 로봇 정책이 과거의 어떤 정보를 써야 하는지 평가한다. [PDF 1쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/dai26c/dai26c.pdf#page=1)
 
 ## Core Idea and Contribution
 
-Temporal·spatial·object·procedural memory task와 여러 memory-augmented VLA를 비교한다.
+- 시간 순서, 공간, 물체, 절차를 기억해야 하는 조건을 구분해 16개 과제를 설계했다. [PDF 3쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/dai26c/dai26c.pdf#page=3) · [PDF 4쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/dai26c/dai26c.pdf#page=4)
+- π0.5에 여러 기억 표현과 결합 방식을 적용하고 어떤 조합이 유리한지가 필요한 기억의 종류에 따라 달라짐을 비교했다. [PDF 5쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/dai26c/dai26c.pdf#page=5) · [PDF 7쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/dai26c/dai26c.pdf#page=7) · [PDF 9쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/dai26c/dai26c.pdf#page=9)
 
 ## Observation–State–Action Interface
 
@@ -32,7 +33,7 @@ Temporal·spatial·object·procedural memory task와 여러 memory-augmented VLA
 
 16 manipulation task와 14 memory variant를 보고하며 memory 효용은 task에 의존한다.
 
-근거: [공식 paper/abstract](https://proceedings.mlr.press/v306/dai26c.html) · [저자 project/code](https://robomme.github.io/) · [공식 code](https://github.com/RoboMME/robomme_benchmark). 정확한 수치·baseline fairness·failure 범위는 본문 확인 전까지 확정하지 않는다.
+근거: [공식 paper/abstract](https://proceedings.mlr.press/v306/dai26c.html) · [저자 project/code](https://robomme.github.io/) · [공식 code](https://github.com/RoboMME/robomme_benchmark). 문장에 인용한 결과 외의 수치, 기준선의 비교 조건과 실패 범위는 추가 확인이 필요하다.
 
 ## Why This Paper Is Here — Researcher Interpretation
 

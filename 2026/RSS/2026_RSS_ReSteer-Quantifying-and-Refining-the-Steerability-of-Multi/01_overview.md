@@ -1,6 +1,6 @@
 # ReSteer: Quantifying and Refining the Steerability of Multitask Robot Policies
 
-> Evidence maturity: `ABSTRACT_CHECKED`. abstract 기반 — 본문 수동 확인 필요.
+> Evidence maturity: `ABSTRACT_CHECKED`. 요약과 핵심 기여 두 개는 아래에 표시한 원문 쪽수에서 확인했다. 나머지 분석은 각 절에 적힌 근거 범위를 따른다.
 > 자동 작성 노트는 실제 정독을 뜻하지 않는다. 사용자 reading status는 UNREAD로 시작한다.
 
 - Year/Venue: 2026 / RSS
@@ -14,15 +14,16 @@
 - Venue verification: https://roboticsproceedings.org/rss22/p143.html
 - Code/Project: https://resteer-vla.github.io/
 - Code: https://github.com/ChenZhenY/ReSteer
-- Source audit: 2026-10-31 공식 서지/abstract·공개 project/code 소개를 재확인했다. 신규 노트는 abstract 기반이며 기존 연구 검토의 지정 본문/code 확인은 work/sources/instruction_revision_review_2026-10-31.json 및 pre_gpu_buildup_review_2026-10-31.json의 별도 범위다. 사용자 정독·native 실행을 뜻하지 않는다.
+- Source audit: 2026-10-31 공식 서지/abstract·공개 project/code 소개를 재확인했다. 신규 노트는 abstract 기반이며 기존 연구 검토의 지정 본문/code 확인은 work/sources/instruction_revision_review_2026-10-31.json 및 pre_gpu_buildup_review_2026-10-31.json의 별도 범위다. 사용자 정독·native 실행을 뜻하지 않는다. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.
 
 ## Problem and Importance
 
-표준 초기 상태에서는 각각 가능한 작업도 실행 중 지시를 바꾸면 전환되지 않을 수 있다.
+ReSteer는 로봇이 작업을 수행하는 도중 지시가 바뀌면 이미 진행한 상태에서 새 목표로 전환하도록 정책을 학습한다. [PDF 1쪽](https://roboticsproceedings.org/rss22/p143.pdf#page=1)
 
 ## Core Idea and Contribution
 
-상태별 task steerability를 측정하고, 전환이 어려운 상태의 추정·전환 구간 데이터 생성·정책 self-refinement를 연결한다.
+- 두 지시의 훈련 궤적이 겹치는 정도와 전환 가능성의 관계를 조사하고 가능한 전환 동작을 생성·개선하는 학습 절차를 제안했다. [PDF 4쪽](https://roboticsproceedings.org/rss22/p143.pdf#page=4) · [PDF 6쪽](https://roboticsproceedings.org/rss22/p143.pdf#page=6)
+- LIBERO와 실물 조작에서 지시 변경 뒤 새 목표에 도달하는지를 평가하고 전환 자료가 없는 정책과 비교했다. [PDF 6쪽](https://roboticsproceedings.org/rss22/p143.pdf#page=6) · [PDF 8쪽](https://roboticsproceedings.org/rss22/p143.pdf#page=8)
 
 ## Observation–State–Action Interface
 
@@ -32,7 +33,7 @@
 
 LIBERO와 실제 로봇의 지시 전환을 평가한다. 공개 repository는 LIBERO 평가·데이터 생성 경로를 제공하지만 로컬 native 실행은 아직 확인하지 않았다.
 
-근거: [공식 paper/abstract](https://roboticsproceedings.org/rss22/p143.html) · [저자 project/code](https://resteer-vla.github.io/) · [공식 code](https://github.com/ChenZhenY/ReSteer). 정확한 수치·baseline fairness·failure 범위는 본문 확인 전까지 확정하지 않는다.
+근거: [공식 paper/abstract](https://roboticsproceedings.org/rss22/p143.html) · [저자 project/code](https://resteer-vla.github.io/) · [공식 code](https://github.com/ChenZhenY/ReSteer). 문장에 인용한 결과 외의 수치, 기준선의 비교 조건과 실패 범위는 추가 확인이 필요하다.
 
 ## Why This Paper Is Here — Researcher Interpretation
 

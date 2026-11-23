@@ -1,6 +1,6 @@
 # Diagnosing Compositional Generalization in Sequential Robot Tasks
 
-> Evidence maturity: `ABSTRACT_CHECKED`. abstract 기반 — 본문 수동 확인 필요.
+> Evidence maturity: `ABSTRACT_CHECKED`. 요약과 핵심 기여 두 개는 아래에 표시한 원문 쪽수에서 확인했다. 나머지 분석은 각 절에 적힌 근거 범위를 따른다.
 > 자동 작성 노트는 실제 정독을 뜻하지 않는다. 사용자 reading status는 UNREAD로 시작한다.
 
 - Year/Venue: 2026 / CoRL
@@ -14,15 +14,16 @@
 - Venue verification: https://www.corl.org/program/accepted-papers
 - Code/Project: https://yixiaowang7.github.io/Diagnosing_Compositional_Generalization_Robot_Page/
 - Code: https://github.com/YixiaoWang7/Diagnosing_Compositional_Generalization_Robot
-- Source audit: 2026-11-03 CoRL 공식 accepted list의 exact title와 OpenReview gQFYIM5dJy 연결을 확인해 기존 entry를 갱신했다. Spotlight는 별도로 승격하지 않는다. 분석은 11/01 확인한 arXiv v2(2026-10-15)·abstract/project 범위를 유지하며 conference final-text 동등성·정독·native 실행은 미확인이다. 기존 SET의 지정 본문/code 감사는 별도 source ledger를 따른다.
+- Source audit: 2026-11-03 CoRL 공식 accepted list의 exact title와 OpenReview gQFYIM5dJy 연결을 확인해 기존 entry를 갱신했다. Spotlight는 별도로 승격하지 않는다. 분석은 11/01 확인한 arXiv v2(2026-10-15)·abstract/project 범위를 유지하며 conference final-text 동등성·정독·native 실행은 미확인이다. 기존 SET의 지정 본문/code 감사는 별도 source ledger를 따른다. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.
 
 ## Problem and Importance
 
-순차 조작의 모든 지시 조합을 수집하기 어려울 때 어떤 training coverage가 새로운 조합에 필요한지 묻는다.
+이 연구는 순차 로봇 과제의 일반화 실패가 새로운 지시 조합, 개별 지시의 분포, 상태와 행동의 관계 중 어디서 오는지 구분한다. [PDF 1쪽](https://arxiv.org/pdf/2607.29687v2#page=1)
 
 ## Core Idea and Contribution
 
-지시 marginal·지시 조합·context–action 변화를 분리하고, 데이터 coverage와 단계별 정책을 비교한다.
+- 훈련에서 바뀌는 지시의 빈도와 조합, 특정 상황에서 선택한 행동의 관계를 나누는 통제 실험을 설계했다. [PDF 3쪽](https://arxiv.org/pdf/2607.29687v2#page=3) · [PDF 4쪽](https://arxiv.org/pdf/2607.29687v2#page=4)
+- 조합을 모두 보여주지 않아도 과제 구조를 이용할 수 있는 경우와 드문 상황에서 이미 배운 기술을 잘못 선택하는 경우를 구별했다. [PDF 5쪽](https://arxiv.org/pdf/2607.29687v2#page=5) · [PDF 6쪽](https://arxiv.org/pdf/2607.29687v2#page=6) · [PDF 7쪽](https://arxiv.org/pdf/2607.29687v2#page=7)
 
 ## Observation–State–Action Interface
 
@@ -32,7 +33,7 @@
 
 Pick-and-place, 후속 버튼 조작, 의존적인 두 단계 조작에서 coverage와 분해를 비교한다. 저자 공개 code는 개선된 pipeline이라 release 결과와 논문 결과가 다를 수 있다고 명시한다.
 
-근거: [공식 paper/abstract](https://arxiv.org/abs/2607.29687) · [저자 project/code](https://yixiaowang7.github.io/Diagnosing_Compositional_Generalization_Robot_Page/) · [공식 code](https://github.com/YixiaoWang7/Diagnosing_Compositional_Generalization_Robot). 정확한 수치·baseline fairness·failure 범위는 본문 확인 전까지 확정하지 않는다.
+근거: [공식 paper/abstract](https://arxiv.org/abs/2607.29687) · [저자 project/code](https://yixiaowang7.github.io/Diagnosing_Compositional_Generalization_Robot_Page/) · [공식 code](https://github.com/YixiaoWang7/Diagnosing_Compositional_Generalization_Robot). 문장에 인용한 결과 외의 수치, 기준선의 비교 조건과 실패 범위는 추가 확인이 필요하다.
 
 ## Why This Paper Is Here — Researcher Interpretation
 

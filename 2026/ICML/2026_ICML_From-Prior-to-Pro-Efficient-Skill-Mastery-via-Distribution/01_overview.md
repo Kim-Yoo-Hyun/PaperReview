@@ -13,15 +13,16 @@
 - Venue verification: https://proceedings.mlr.press/v306/sun26al.html
 - Code/Project: https://zhanyisun.github.io/dice.rl.2026/
 - Code: https://github.com/zhanyisun/dice-rl
-- Source audit: 2026-11-03 공식 venue/서지 재확인; 기존 GAP-VRL 검토의 지정 본문 v2 §4; model/rl/distill_residual_rl_img.py selected filter/loss paths를 반영. 선택 절 검토이며 전체 논문 정독·native 실행은 아님. ICML 공식 metadata와 arXiv v2의 지정 절/code를 확인했다. 현재 deterministic TD3·Q-filter 계획을 DICE-RL 전체 재현으로 부르지 않는다. 사용자 읽기 상태는 UNREAD 유지.
+- Source audit: 2026-11-03 공식 venue/서지 재확인; 기존 GAP-VRL 검토의 지정 본문 v2 §4; model/rl/distill_residual_rl_img.py selected filter/loss paths를 반영. 선택 절 검토이며 전체 논문 정독·native 실행은 아님. ICML 공식 metadata와 arXiv v2의 지정 절/code를 확인했다. 현재 deterministic TD3·Q-filter 계획을 DICE-RL 전체 재현으로 부르지 않는다. 사용자 읽기 상태는 UNREAD 유지. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.
 
 ## Problem and Importance
 
-사전학습 행동 prior를 유지하면서 online RL로 skill을 개선하는 과정의 비효율과 불안정을 줄인다.
+DICE-RL은 시연으로 훈련한 확산 또는 흐름 정책으로 행동 후보를 만들고 잔차 강화학습을 통해 긴 조작 과제를 개선한다. [PDF 1쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/sun26al/sun26al.pdf#page=1)
 
 ## Core Idea and Contribution
 
-Prior를 동결하고 chunk residual을 학습한다. 선택적 regularization과 value 기반 선택을 사용하며 공개 구현에서 Q/Monte-Carlo filtering을 확인했다.
+- 잔차 정책에 선택적 행동 복제 정규화를 적용하고 여러 잠재 표본에서 얻은 행동 후보를 가치 함수로 평가해 실행할 행동을 고른다. [PDF 3쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/sun26al/sun26al.pdf#page=3) · [PDF 4쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/sun26al/sun26al.pdf#page=4)
+- 고차원 시각 입력과 긴 과제에서의 성능을 비교하고 실물 조작 및 구성 요소 제거 실험으로 보정과 행동 선택의 영향을 조사했다. [PDF 8쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/sun26al/sun26al.pdf#page=8) · [PDF 9쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/sun26al/sun26al.pdf#page=9)
 
 ## Observation–State–Action Interface
 

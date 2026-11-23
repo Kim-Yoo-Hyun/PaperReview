@@ -1,6 +1,6 @@
 # Emergence of Human to Robot Transfer in Vision-Language-Action Models
 
-> Evidence maturity: `ABSTRACT_CHECKED`. abstract 기반 — 본문 수동 확인 필요.
+> Evidence maturity: `ABSTRACT_CHECKED`. 요약과 핵심 기여 두 개는 아래에 표시한 원문 쪽수에서 확인했다. 나머지 분석은 각 절에 적힌 근거 범위를 따른다.
 > 자동 작성 노트는 실제 정독을 뜻하지 않는다. 사용자 reading status는 UNREAD로 시작한다.
 
 - Year/Venue: 2026 / RSS
@@ -14,15 +14,16 @@
 - Venue verification: https://roboticsproceedings.org/rss22/p072.html
 - Code/Project: not identified
 - Code: not_identified
-- Source audit: 2026-11-02 공식 proceedings/publisher의 서지·abstract와 저자 project/code 소개를 확인했다. 노트는 abstract/project 기반이며 본문 정독·native 실행을 뜻하지 않는다. 사용자 읽기 상태는 UNREAD 유지.
+- Source audit: 2026-11-02 공식 proceedings/publisher의 서지·abstract와 저자 project/code 소개를 확인했다. 노트는 abstract/project 기반이며 본문 정독·native 실행을 뜻하지 않는다. 사용자 읽기 상태는 UNREAD 유지. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.
 
 ## Problem and Importance
 
-사람 영상의 지식이 로봇 행동으로 전이되려면 어떤 사전학습 조건이 필요한지 묻는다.
+이 연구는 사람의 영상에서 본 동작이 로봇으로 전이되는 정도가 기존 로봇 학습 자료의 다양성에 따라 어떻게 달라지는지 조사한다. [PDF 1쪽](https://roboticsproceedings.org/rss22/p072.pdf#page=1)
 
 ## Core Idea and Contribution
 
-Human video와 robot data를 함께 학습하며 robot 사전학습의 scene·task·embodiment 다양성과 전이의 관계를 조사한다.
+- 사람 영상에만 등장하는 조건을 평가에 두고 로봇 사전학습 자료의 과제·장면·기종 다양성을 바꿔 사람 영상의 추가 효과를 비교했다. [PDF 5쪽](https://roboticsproceedings.org/rss22/p072.pdf#page=5) · [PDF 6쪽](https://roboticsproceedings.org/rss22/p072.pdf#page=6)
+- 더 다양한 로봇 자료로 사전학습한 정책에서 사람 영상의 전이가 두드러짐을 보이고 표현 공간의 변화와 그 관계를 분석했다. [PDF 6쪽](https://roboticsproceedings.org/rss22/p072.pdf#page=6) · [PDF 7쪽](https://roboticsproceedings.org/rss22/p072.pdf#page=7)
 
 ## Observation–State–Action Interface
 

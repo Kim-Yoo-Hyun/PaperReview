@@ -1,6 +1,6 @@
 # Learning from Hindsight for VLA Reinforcement Learning
 
-> Evidence maturity: `ABSTRACT_CHECKED`. abstract 기반 — 본문 수동 확인 필요.
+> Evidence maturity: `ABSTRACT_CHECKED`. 요약과 핵심 기여 두 개는 아래에 표시한 원문 쪽수에서 확인했다. 나머지 분석은 각 절에 적힌 근거 범위를 따른다.
 > 자동 작성 노트는 실제 정독을 뜻하지 않는다. 사용자 reading status는 UNREAD로 시작한다.
 
 - Year/Venue: 2026 / arXiv
@@ -14,15 +14,16 @@
 - Venue verification: https://arxiv.org/abs/2607.09042
 - Code/Project: https://iamxjy.github.io/lfh-website/
 - Code: project_only
-- Source audit: 2026-11-07: 공식 metadata/abstract·저자 project/README 확인. arXiv v2(2026-10-05) 제목·저자·abstract 기준. Project는 과거 제목과 Code placeholder를 유지한다. Main-conference 채택/실행 code는 미확인. Dossier의 지정 본문 검토를 이 5개 노트의 전체 정독으로 승격하지 않는다. 사용자 reading status UNREAD 유지.
+- Source audit: 2026-11-07: 공식 metadata/abstract·저자 project/README 확인. arXiv v2(2026-10-05) 제목·저자·abstract 기준. Project는 과거 제목과 Code placeholder를 유지한다. Main-conference 채택/실행 code는 미확인. Dossier의 지정 본문 검토를 이 5개 노트의 전체 정독으로 승격하지 않는다. 사용자 reading status UNREAD 유지. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.
 
 ## Problem and Importance
 
-원 지시 실패에만 보상 0을 주면 실제 수행한 유용한 행동도 VLA 강화학습에 활용하지 못한다.
+LfH는 VLA가 원래 지시를 달성하지 못한 실행에서도 실제 이룬 보조 목표를 찾아 강화학습 신호로 활용한다. [PDF 1쪽](https://arxiv.org/pdf/2607.09042v2#page=1)
 
 ## Core Idea and Contribution
 
-VLM으로 실패에서 달성한 행동을 보조 언어 목표로 붙이고 원 과제와 함께 정책을 학습한다.
+- 사전학습 시각언어 모델이 실패 궤적을 달성한 행동으로 다시 기술하고 정책을 원래 과제와 재명명한 보조 과제에 함께 학습시킨다. [PDF 4쪽](https://arxiv.org/pdf/2607.09042v2#page=4) · [PDF 5쪽](https://arxiv.org/pdf/2607.09042v2#page=5)
+- 실제 Franka FR3에서 녹색 용기를 그릇에 넣는 과제를 160회 훈련한 뒤 성공률은 재명명을 적용한 GRPO가 56%, 기준 GRPO가 22%였다. [PDF 8쪽](https://arxiv.org/pdf/2607.09042v2#page=8)
 
 ## Observation–State–Action Interface
 
@@ -32,7 +33,7 @@ VLM으로 실패에서 달성한 행동을 보조 언어 목표로 붙이고 원
 
 v2 abstract는 LIBERO-PRO의 분포 이동 조작과 실제 Franka 학습을 보고한다. 샘플 효율 개선은 해당 비교 조건의 저자 주장이다.
 
-근거: [공식 paper/abstract](https://arxiv.org/abs/2607.09042) · [저자 project/code](https://iamxjy.github.io/lfh-website/). 정확한 수치·baseline fairness·failure 범위는 본문 확인 전까지 확정하지 않는다.
+근거: [공식 paper/abstract](https://arxiv.org/abs/2607.09042) · [저자 project/code](https://iamxjy.github.io/lfh-website/). 문장에 인용한 결과 외의 수치, 기준선의 비교 조건과 실패 범위는 추가 확인이 필요하다.
 
 ## Why This Paper Is Here — Researcher Interpretation
 

@@ -1,6 +1,6 @@
 # RA-VLA: Retrieval-Augmented VLA for Test-Time Adaptation
 
-> Evidence maturity: `ABSTRACT_CHECKED`. abstract 기반 — 본문 수동 확인 필요.
+> Evidence maturity: `ABSTRACT_CHECKED`. 요약과 핵심 기여 두 개는 아래에 표시한 원문 쪽수에서 확인했다. 나머지 분석은 각 절에 적힌 근거 범위를 따른다.
 
 - Year/Venue: 2026 / ICML
 - Authors: Sanghwan Jang, Minjin Jeon, Minsoo Kim, Seong Jin Choi, Dongha Kim, Hwanjo Yu
@@ -12,17 +12,20 @@
 - Venue verification: https://proceedings.mlr.press/v306/jang26c.html
 - Code/Project: not identified
 - Code: not_identified
-- Source audit: 2026-11-05: 공식 proceedings abstract; arXiv identity. abstract 기반 — 본문 수동 확인 필요. Venue와 읽은 preprint version을 구별. Native 실행 0; 사용자 읽기 UNREAD.
+- Source audit: 2026-11-05: 공식 proceedings abstract; arXiv identity. abstract 기반 — 본문 수동 확인 필요. Venue와 읽은 preprint version을 구별. Native 실행 0; 사용자 읽기 UNREAD. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.
 
-## Problem and Contribution
+## Problem and Importance
 
-시연 context가 있어도 retrieval 및 pretrained 행동 관성 때문에 새 task에 적응하지 못하는 문제.
+RA-VLA는 새로운 조작 지시를 받을 때 비슷한 장면의 시연 중 행동에도 관련 있는 예시를 찾아 VLA의 실행을 유도한다. [PDF 1쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/jang26c/jang26c.pdf#page=1)
 
-Behavior-aligned context retrieval과 grounded execution pipeline을 결합한다.
+## Core Idea and Contribution
+
+- 행동 정보를 반영하는 검색기를 훈련하고 검색한 시연의 동작 단서에 조건부로 행동을 생성하는 방식을 구성했다. [PDF 3쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/jang26c/jang26c.pdf#page=3) · [PDF 4쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/jang26c/jang26c.pdf#page=4)
+- LIBERO와 실제 UR5e에서 새로운 작업 적응을 평가하고 검색한 문맥을 바꿨을 때 행동이 얼마나 달라지는지 조사했다. [PDF 5쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/jang26c/jang26c.pdf#page=5) · [PDF 6쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/jang26c/jang26c.pdf#page=6) · [PDF 7쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/jang26c/jang26c.pdf#page=7)
 
 ## Scope and Limitation
 
-Abstract 기반 — 본문 확인 필요. Test-time 무학습과 전체 사전 학습 비용 0은 다르다. 전체 bank 확장 실험은 abstract만으로 확정 불가.
+검색기와 행동 생성 방식에는 사전 학습이 필요하다. 저자는 표 4에서 시연 버퍼 크기와 검색 개수를 바꿔 성공률을 비교했다. [표 4](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/jang26c/jang26c.pdf#page=8)
 
 ## Why This Paper Is Here — Researcher Interpretation
 

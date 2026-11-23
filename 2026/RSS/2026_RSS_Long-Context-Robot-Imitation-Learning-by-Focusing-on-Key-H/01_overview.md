@@ -1,6 +1,6 @@
 # Long-Context Robot Imitation Learning by Focusing on Key History Frames
 
-> Evidence maturity: `ABSTRACT_CHECKED`. abstract 기반 — 본문 수동 확인 필요.
+> Evidence maturity: `ABSTRACT_CHECKED`. 요약과 핵심 기여 두 개는 아래에 표시한 원문 쪽수에서 확인했다. 나머지 분석은 각 절에 적힌 근거 범위를 따른다.
 > 자동 작성 노트는 실제 정독을 뜻하지 않는다. 사용자 reading status는 UNREAD로 시작한다.
 
 - Year/Venue: 2026 / RSS
@@ -14,15 +14,16 @@
 - Venue verification: https://roboticsproceedings.org/rss22/p201.html
 - Code/Project: not identified
 - Code: not_identified
-- Source audit: 2026-11-07–08: official metadata/abstract 및 저자 project/repository 공개 범위 확인.  본문 전체 정독·코드 실행·독립 성능 검증 아님. 사용자 reading status UNREAD 유지.
+- Source audit: 2026-11-07–08: official metadata/abstract 및 저자 project/repository 공개 범위 확인.  본문 전체 정독·코드 실행·독립 성능 검증 아님. 사용자 reading status UNREAD 유지. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.
 
 ## Problem and Importance
 
-긴 관측 이력은 학습에 없던 history에서 잘못된 상관에 의존할 수 있다.
+Big Picture Policies는 전체 관측 이력에 우연히 나타난 단서에 모방 정책이 의존하는 문제를 줄이기 위해 중요한 사건의 프레임만 기억한다. [PDF 1쪽](https://roboticsproceedings.org/rss22/p201.pdf#page=1)
 
 ## Core Idea and Contribution
 
-VLM이 선택한 소수의 의미 있는 keyframe으로 정책 history를 압축한다.
+- 시각언어 모델이 과제 진행과 관련된 핵심 프레임을 탐지해 서로 다른 관측 이력을 간결한 사건 표현으로 바꾼다. [PDF 4쪽](https://roboticsproceedings.org/rss22/p201.pdf#page=4) · [PDF 5쪽](https://roboticsproceedings.org/rss22/p201.pdf#page=5) · [PDF 6쪽](https://roboticsproceedings.org/rss22/p201.pdf#page=6)
+- 과거 관측이 필요한 실제 네 과제와 시뮬레이션 세 과제에서 전체 이력·제한된 이력·핵심 프레임 조건의 일반화를 비교했다. [PDF 5쪽](https://roboticsproceedings.org/rss22/p201.pdf#page=5) · [PDF 7쪽](https://roboticsproceedings.org/rss22/p201.pdf#page=7) · [PDF 8쪽](https://roboticsproceedings.org/rss22/p201.pdf#page=8)
 
 ## Observation–State–Action Interface
 
@@ -32,7 +33,7 @@ VLM이 선택한 소수의 의미 있는 keyframe으로 정책 history를 압축
 
 기억이 필요한 실제 조작과 simulation 과제를 평가한다.
 
-근거: [공식 paper/abstract](https://roboticsproceedings.org/rss22/p201.html). 정확한 수치·baseline fairness·failure 범위는 본문 확인 전까지 확정하지 않는다.
+근거: [공식 paper/abstract](https://roboticsproceedings.org/rss22/p201.html). 문장에 인용한 결과 외의 수치, 기준선의 비교 조건과 실패 범위는 추가 확인이 필요하다.
 
 ## Why This Paper Is Here — Researcher Interpretation
 

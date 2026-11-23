@@ -12,13 +12,16 @@
 - Venue verification: https://neurips.cc/Downloads/2026
 - Code/Project: not identified
 - Code: not_identified
-- Source audit: 2026-11-05: §3, §5.5, §6 limitations. 지정 본문 절만 확인; 전체 정독·수식 검증 아님. Venue와 읽은 preprint version을 구별. Native 실행 0; 사용자 읽기 UNREAD.
+- Source audit: 2026-11-05: §3, §5.5, §6 limitations. 지정 본문 절만 확인; 전체 정독·수식 검증 아님. Venue와 읽은 preprint version을 구별. Native 실행 0; 사용자 읽기 UNREAD. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.
 
-## Problem and Contribution
+## Problem and Importance
 
-World model의 pixel 예측 품질과 그 안에서 학습한 정책의 return이 일치하지 않는 문제.
+DRILL은 세계 모델에서 얻은 가상 경험이 VLA를 얼마나 개선하는지에 맞춰 세계 모델 자체의 학습 목표를 조정한다. [PDF 1쪽](https://arxiv.org/pdf/2610.30814v1#page=1)
 
-Imagined rollout의 GRPO update 이후 return을 목표로 world model을 학습하는 bilevel 구성. VWI 가중 surrogate와 IMG meta-gradient 두 형태를 제안한다.
+## Core Idea and Contribution
+
+- 정책의 방문 빈도·상대 어드밴티지·모델의 확신도로 예측 오차에 가중치를 주는 방식과 가상 GRPO 갱신을 통해 정책 수익률을 미분하는 방식을 비교한다. [PDF 4쪽](https://arxiv.org/pdf/2610.30814v1#page=4) · [PDF 5쪽](https://arxiv.org/pdf/2610.30814v1#page=5)
+- 다섯 조작 시뮬레이터와 두 VLA에서 예측 정확도 중심의 세계 모델 및 모델 기반 기준선과 비교해 이후 정책 학습의 효과를 평가했다. [PDF 6쪽](https://arxiv.org/pdf/2610.30814v1#page=6) · [PDF 7쪽](https://arxiv.org/pdf/2610.30814v1#page=7)
 
 ## Scope and Limitation
 

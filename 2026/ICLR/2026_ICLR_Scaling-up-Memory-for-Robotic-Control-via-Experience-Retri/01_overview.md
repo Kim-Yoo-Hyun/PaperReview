@@ -1,6 +1,6 @@
 # Scaling up Memory for Robotic Control via Experience Retrieval
 
-> Evidence maturity: `ABSTRACT_CHECKED`. abstract 기반 — 본문 수동 확인 필요.
+> Evidence maturity: `ABSTRACT_CHECKED`. 요약과 핵심 기여 두 개는 아래에 표시한 원문 쪽수에서 확인했다. 나머지 분석은 각 절에 적힌 근거 범위를 따른다.
 > 자동 작성 노트는 실제 정독을 뜻하지 않는다. 사용자 reading status는 UNREAD로 시작한다.
 
 - Year/Venue: 2026 / ICLR
@@ -14,15 +14,16 @@
 - Venue verification: https://proceedings.iclr.cc/paper_files/paper/2026/hash/9da515b1ad19d032a7398f00f5ff9b0c-Abstract-Conference.html
 - Code/Project: https://jen-pan.github.io/memer/
 - Code: https://github.com/memer-policy/memer
-- Source audit: 2026-11-02 공식 proceedings/publisher의 서지·abstract와 저자 project/code 소개를 확인했다. 노트는 abstract/project 기반이며 본문 정독·native 실행을 뜻하지 않는다. 사용자 읽기 상태는 UNREAD 유지.
+- Source audit: 2026-11-02 공식 proceedings/publisher의 서지·abstract와 저자 project/code 소개를 확인했다. 노트는 abstract/project 기반이며 본문 정독·native 실행을 뜻하지 않는다. 사용자 읽기 상태는 UNREAD 유지. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.
 
 ## Problem and Importance
 
-긴 관측 이력을 모두 처리하는 비용과 무차별 subsampling의 정보 손실을 함께 다룬다.
+MemER는 수분에 걸친 조작에서 현재 지시 수행에 필요한 과거 장면을 찾고 최근 장면과 함께 다음 행동을 정한다. [PDF 1쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/9da515b1ad19d032a7398f00f5ff9b0c-Paper-Conference.pdf#page=1)
 
 ## Core Idea and Contribution
 
-상위 정책이 과거의 중요한 keyframe을 선택·추적하고 최근 관측과 함께 하위 정책용 지시를 만든다.
+- 상위 정책이 핵심 프레임을 골라 과거의 중요한 장면을 보존하고, 최근 관측과 함께 해석해 하위 조작 정책에 지시를 전달한다. [PDF 3쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/9da515b1ad19d032a7398f00f5ff9b0c-Paper-Conference.pdf#page=3) · [PDF 4쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/9da515b1ad19d032a7398f00f5ff9b0c-Paper-Conference.pdf#page=4)
+- 세 가지 실제 장시간 과제에서 핵심 장면 검색과 최근 관측의 역할을 평가하고 기억을 제거한 조건과 비교했다. [PDF 6쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/9da515b1ad19d032a7398f00f5ff9b0c-Paper-Conference.pdf#page=6) · [PDF 8쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/9da515b1ad19d032a7398f00f5ff9b0c-Paper-Conference.pdf#page=8)
 
 ## Observation–State–Action Interface
 

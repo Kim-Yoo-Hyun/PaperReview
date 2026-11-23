@@ -1,6 +1,6 @@
 # LIBERO-X: Robustness Litmus for Vision-Language-Action Models
 
-> Evidence maturity: `ABSTRACT_CHECKED`. abstract 기반 — 본문 수동 확인 필요.
+> Evidence maturity: `ABSTRACT_CHECKED`. 요약과 핵심 기여 두 개는 아래에 표시한 원문 쪽수에서 확인했다. 나머지 분석은 각 절에 적힌 근거 범위를 따른다.
 > 자동 작성 노트는 실제 정독을 뜻하지 않는다. 사용자 reading status는 UNREAD로 시작한다.
 
 - Year/Venue: 2026 / RSS
@@ -14,15 +14,16 @@
 - Venue verification: https://roboticsproceedings.org/rss22/p097.html
 - Code/Project: https://meituan.github.io/LIBERO-X/
 - Code: https://github.com/meituan/LIBERO-X
-- Source audit: 2026-11-02 공식 proceedings/publisher의 서지·abstract와 저자 project/code 소개를 확인했다. 노트는 abstract/project 기반이며 본문 정독·native 실행을 뜻하지 않는다. 사용자 읽기 상태는 UNREAD 유지.
+- Source audit: 2026-11-02 공식 proceedings/publisher의 서지·abstract와 저자 project/code 소개를 확인했다. 노트는 abstract/project 기반이며 본문 정독·native 실행을 뜻하지 않는다. 사용자 읽기 상태는 UNREAD 유지. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.
 
 ## Problem and Importance
 
-단일 교란이나 균질한 장면만으로 평가하면 VLA의 공간·물체·지시 일반화 한계를 가릴 수 있다.
+LIBERO-X는 같은 환경에서 여러 목표를 수행하게 해 VLA가 공간 관계·물체 개념·복합 지시를 얼마나 일반화하는지 측정한다. [PDF 1쪽](https://roboticsproceedings.org/rss22/p097.pdf#page=1)
 
 ## Core Idea and Contribution
 
-난이도별 복합 교란 평가와 장면당 여러 조작 목표를 포함하는 teleoperation 데이터를 결합한 benchmark를 제시한다.
+- 서로 다른 목표에 대한 사람의 원격조작 시연과 단계별 평가 과제를 구성해 같은 장면에 하나의 행동만 대응하는 편향을 줄였다. [PDF 3쪽](https://roboticsproceedings.org/rss22/p097.pdf#page=3) · [PDF 4쪽](https://roboticsproceedings.org/rss22/p097.pdf#page=4) · [PDF 5쪽](https://roboticsproceedings.org/rss22/p097.pdf#page=5)
+- 시각 교란과 의미적 난도를 조절해 표준 조건과 누적 변화 조건에서 로봇 정책의 성공률을 비교했다. [PDF 7쪽](https://roboticsproceedings.org/rss22/p097.pdf#page=7) · [PDF 8쪽](https://roboticsproceedings.org/rss22/p097.pdf#page=8)
 
 ## Observation–State–Action Interface
 

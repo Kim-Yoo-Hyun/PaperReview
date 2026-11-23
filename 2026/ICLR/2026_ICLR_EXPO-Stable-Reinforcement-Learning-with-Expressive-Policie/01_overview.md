@@ -13,15 +13,16 @@
 - Venue verification: https://proceedings.iclr.cc/paper_files/paper/2026/hash/d56a652ad743308b24b6c4d0e6411dd7-Abstract-Conference.html
 - Code/Project: https://github.com/pd-perry/EXPO
 - Code: https://github.com/pd-perry/EXPO
-- Source audit: 2026-11-03 공식 venue/서지 재확인; 기존 GAP-VRL 검토의 지정 본문 §4 / Algorithm 1; expo_learner.py selected update paths를 반영. 선택 절 검토이며 전체 논문 정독·native 실행은 아님. 공개 code를 읽었지만 실행하지 않았다. Co-adaptation 결과를 독립 base release 교체 후 동결 editor의 전이 근거로 확대하지 않는다. 사용자 읽기 상태는 UNREAD 유지.
+- Source audit: 2026-11-03 공식 venue/서지 재확인; 기존 GAP-VRL 검토의 지정 본문 §4 / Algorithm 1; expo_learner.py selected update paths를 반영. 선택 절 검토이며 전체 논문 정독·native 실행은 아님. 공개 code를 읽었지만 실행하지 않았다. Co-adaptation 결과를 독립 base release 교체 후 동결 editor의 전이 근거로 확대하지 않는다. 사용자 읽기 상태는 UNREAD 유지. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.
 
 ## Problem and Importance
 
-표현력이 큰 imitation 정책을 online RL로 개선할 때 안정적인 최적화와 탐색을 확보하는 문제다.
+EXPO는 모방학습 정책이 제시한 행동을 작은 확률적 정책이 수정하고 두 후보의 가치를 비교해 온라인 강화학습을 수행한다. [PDF 1쪽](https://arxiv.org/pdf/2507.07986v3#page=1)
 
 ## Core Idea and Contribution
 
-Expressive base의 imitation 업데이트와 Gaussian edit 정책의 Q 기반 업데이트를 결합하고, base/edit 행동을 value로 선택한다.
+- 편집 정책을 기본 정책과 별도로 두고 원래 행동과 편집한 행동 중 더 높은 가치를 내는 것을 실행과 가치 학습에 활용한다. [PDF 3쪽](https://arxiv.org/pdf/2507.07986v3#page=3) · [PDF 4쪽](https://arxiv.org/pdf/2507.07986v3#page=4) · [PDF 5쪽](https://arxiv.org/pdf/2507.07986v3#page=5)
+- 시연 자료로 초기화한 뒤 환경에서 개선하는 설정에서 여러 행동 분포를 표현하는 정책을 강화학습 기준선과 비교했다. [PDF 6쪽](https://arxiv.org/pdf/2507.07986v3#page=6) · [PDF 7쪽](https://arxiv.org/pdf/2507.07986v3#page=7) · [PDF 8쪽](https://arxiv.org/pdf/2507.07986v3#page=8)
 
 ## Observation–State–Action Interface
 

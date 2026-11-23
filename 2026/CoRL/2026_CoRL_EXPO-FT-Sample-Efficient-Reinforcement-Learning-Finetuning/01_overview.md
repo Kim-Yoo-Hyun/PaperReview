@@ -13,15 +13,16 @@
 - Venue verification: https://www.corl.org/program/accepted-papers
 - Code/Project: https://pd-perry.github.io/expo-ft/
 - Code: https://github.com/pd-perry/expo-ft
-- Source audit: 2026-11-03 공식 venue/서지 재확인; 기존 GAP-VRL 검토의 지정 본문 §4.2–4.3 / Appendix C; expo_ft.py update_actor/_update_jit를 반영. 선택 절 검토이며 전체 논문 정독·native 실행은 아님. CoRL accepted list와 arXiv v1/code를 별도로 확인했다. 최종본 동일성·native 실행·독립 release 교체 효과는 미검증이다. 사용자 읽기 상태는 UNREAD 유지.
+- Source audit: 2026-11-03 공식 venue/서지 재확인; 기존 GAP-VRL 검토의 지정 본문 §4.2–4.3 / Appendix C; expo_ft.py update_actor/_update_jit를 반영. 선택 절 검토이며 전체 논문 정독·native 실행은 아님. CoRL accepted list와 arXiv v1/code를 별도로 확인했다. 최종본 동일성·native 실행·독립 release 교체 효과는 미검증이다. 사용자 읽기 상태는 UNREAD 유지. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.
 
 ## Problem and Importance
 
-대규모 VLA를 적은 online 상호작용으로 적응시키면서 chunk 행동의 표현력을 활용하는 문제다.
+EXPO-FT는 사전학습 VLA가 만든 행동 묶음을 편집하고 가치로 선별해 실제 로봇 상호작용으로 조작 정책을 개선한다. [PDF 1쪽](https://arxiv.org/pdf/2605.25477v2#page=1) · [PDF 3쪽](https://arxiv.org/pdf/2605.25477v2#page=3)
 
 ## Core Idea and Contribution
 
-EXPO 계열의 editor와 VLA를 함께 갱신하는 chunk 수준 후학습을 사용한다. 공개 update_actor는 actor.train_step을 호출한다.
+- 가벼운 편집 정책과 행동 묶음 가치 함수를 함께 학습하고 온라인 자료를 사용해 기본 정책도 갱신한다. [PDF 3쪽](https://arxiv.org/pdf/2605.25477v2#page=3) · [PDF 4쪽](https://arxiv.org/pdf/2605.25477v2#page=4)
+- 줄 조명 배선·당구·꽃 꽂기 등을 포함한 실물 과제 여덟 개에서 각각 30회 중 30회 성공했으며, 과제당 온라인 로봇 자료는 평균 19.1분이었다. [PDF 9쪽](https://arxiv.org/pdf/2605.25477v2#page=9)
 
 ## Observation–State–Action Interface
 

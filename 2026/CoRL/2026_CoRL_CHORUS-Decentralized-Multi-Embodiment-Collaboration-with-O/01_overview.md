@@ -12,13 +12,16 @@
 - Venue verification: https://www.corl.org/program/accepted-papers
 - Code/Project: https://chorus-model.github.io/
 - Code: project_only
-- Source audit: 2026-11-05: §3.1–3.3, §4.2, §5 limitations. 지정 본문 절만 확인; 전체 정독·수식 검증 아님. Venue와 읽은 preprint version을 구별. Native 실행 0; 사용자 읽기 UNREAD.
+- Source audit: 2026-11-05: §3.1–3.3, §4.2, §5 limitations. 지정 본문 절만 확인; 전체 정독·수식 검증 아님. Venue와 읽은 preprint version을 구별. Native 실행 0; 사용자 읽기 UNREAD. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.
 
-## Problem and Contribution
+## Problem and Importance
 
-서로 다른 로봇이 공유 관측·통신 없이 함께 조작하는 문제.
+CHORUS는 여러 로봇이 같은 VLA의 복사본을 각자 실행하며 자신이 관측한 정보로 협동 작업을 수행하도록 학습한다. [PDF 1쪽](https://arxiv.org/pdf/2606.12352v1#page=1)
 
-하나의 π0.5를 다중 로봇 시연으로 학습하고 로봇 식별 prompt와 padded action으로 embodiment를 구분한다.
+## Core Idea and Contribution
+
+- 로봇 식별 지시와 각 로봇의 관측을 같은 정책에 제공해 실행 중 로봇 간 통신 없이 서로의 행동에 대응하게 한다. [PDF 3쪽](https://arxiv.org/pdf/2606.12352v1#page=3) · [PDF 4쪽](https://arxiv.org/pdf/2606.12352v1#page=4)
+- 줄자 사용·책 전달·세탁 바구니 들어 올리기 등 실제 협업과 상대 동작 교란에서 공동 작업의 성공과 반응을 평가했다. [PDF 6쪽](https://arxiv.org/pdf/2606.12352v1#page=6) · [PDF 7쪽](https://arxiv.org/pdf/2606.12352v1#page=7) · [PDF 8쪽](https://arxiv.org/pdf/2606.12352v1#page=8)
 
 ## Scope and Limitation
 

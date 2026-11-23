@@ -1,6 +1,6 @@
 # Stable Language Guidance for Vision–Language–Action Models
 
-> Evidence maturity: `ABSTRACT_CHECKED`. abstract 기반 — 본문 수동 확인 필요.
+> Evidence maturity: `ABSTRACT_CHECKED`. 요약과 핵심 기여 두 개는 아래에 표시한 원문 쪽수에서 확인했다. 나머지 분석은 각 절에 적힌 근거 범위를 따른다.
 > 자동 작성 노트는 실제 정독을 뜻하지 않는다. 사용자 reading status는 UNREAD로 시작한다.
 
 - Year/Venue: 2026 / ACL
@@ -14,15 +14,16 @@
 - Venue verification: https://aclanthology.org/2026.acl-long.190/
 - Code/Project: https://github.com/Doo-mon/RSS
 - Code: https://github.com/Doo-mon/RSS
-- Source audit: 2026-11-02 공식 proceedings/publisher의 서지·abstract와 저자 project/code 소개를 확인했다. 노트는 abstract/project 기반이며 본문 정독·native 실행을 뜻하지 않는다. 사용자 읽기 상태는 UNREAD 유지.
+- Source audit: 2026-11-02 공식 proceedings/publisher의 서지·abstract와 저자 project/code 소개를 확인했다. 노트는 abstract/project 기반이며 본문 정독·native 실행을 뜻하지 않는다. 사용자 읽기 상태는 UNREAD 유지. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.
 
 ## Problem and Importance
 
-시각 prior가 언어의 의도를 압도하고 표현 변화에 정책이 민감해지는 문제를 다룬다.
+이 연구는 같은 뜻의 지시를 바꿔 쓰면 VLA 행동이 달라지는 문제를 줄이기 위해 언어 학습 예시를 늘리고 행동 생성 시 시각 단서의 영향을 보정한다. [PDF 1쪽](https://aclanthology.org/2026.acl-long.190.pdf#page=1) · [PDF 3쪽](https://aclanthology.org/2026.acl-long.190.pdf#page=3)
 
 ## Core Idea and Contribution
 
-Paraphrase에 대한 Monte Carlo 통합과 visual affordance prior를 분리하는 residual semantic steering을 결합한다.
+- 언어 모델에서 지시의 여러 표현을 표집하고 시각 장면이 유도하는 행동 경향을 기준으로 언어에 해당하는 잔차 방향을 추정한다. [PDF 3쪽](https://aclanthology.org/2026.acl-long.190.pdf#page=3) · [PDF 4쪽](https://aclanthology.org/2026.acl-long.190.pdf#page=4)
+- 지시 표현을 바꾼 조건과 물체 개념을 새로운 조합으로 지시한 조건에서 정책의 작업 성공률을 비교했다. [PDF 5쪽](https://aclanthology.org/2026.acl-long.190.pdf#page=5) · [PDF 6쪽](https://aclanthology.org/2026.acl-long.190.pdf#page=6)
 
 ## Observation–State–Action Interface
 

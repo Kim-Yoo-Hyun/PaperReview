@@ -5,9 +5,9 @@
 
 ## Paper-supported conclusion
 
-외관만 변할 때의 안정성과 실제 목표가 바뀔 때의 행동 전환을 구분한다.에 대한 접근은 [method](./03_method.md), 지지하는 실험 범위는 [evaluation](./04_evaluation.md)에서 확인한다. 지정 절의 결과를 읽었으며 재현하거나 일반적인 우월성을 검증한 것은 아니다.
+네 가지 쉬운 목표 교체에서 보정 정책은 800회 중 옛 목표를 한 번도 실행하지 않았지만, 그중 252회는 새 목표에도 도달하지 못했다. 지시 변경을 평가하려면 새 목표 달성, 옛 목표 실행, 기타 실패를 따로 집계할 필요가 있다. [저자판 v2 표 7](https://arxiv.org/pdf/2609.23650v2#page=10) · [실물 비교와 어려운 조건](./04_evaluation.md)
 
-근거: [확인한 원문](https://arxiv.org/html/2609.23650v1), §3–4, §5.1–5.3, Tables 6–7, Appendix A.2.1.
+행동 보정 방식과 처음 검토한 절은 방법 노트에 정리했다. [방법](./03_method.md)
 
 ## Researcher interpretation
 

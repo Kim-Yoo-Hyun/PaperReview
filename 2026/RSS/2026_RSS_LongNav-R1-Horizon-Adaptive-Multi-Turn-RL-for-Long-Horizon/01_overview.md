@@ -1,6 +1,6 @@
 # LongNav-R1: Horizon-Adaptive Multi-Turn RL for Long-Horizon VLA Navigation
 
-> Evidence maturity: `ABSTRACT_CHECKED`. abstract 기반 — 본문 수동 확인 필요.
+> Evidence maturity: `ABSTRACT_CHECKED`. 요약과 핵심 기여 두 개는 아래에 표시한 원문 쪽수에서 확인했다. 나머지 분석은 각 절에 적힌 근거 범위를 따른다.
 > 자동 작성 노트는 실제 정독을 뜻하지 않는다. 사용자 reading status는 UNREAD로 시작한다.
 
 - Year/Venue: 2026 / RSS
@@ -14,15 +14,16 @@
 - Venue verification: https://roboticsproceedings.org/rss22/p068.html
 - Code/Project: https://github.com/UMich-CURLY/LongNav-R1
 - Code: https://github.com/UMich-CURLY/LongNav-R1
-- Source audit: 2026-11-07–08: official metadata/abstract 및 저자 project/repository 공개 범위 확인.  본문 전체 정독·코드 실행·독립 성능 검증 아님. 사용자 reading status UNREAD 유지.
+- Source audit: 2026-11-07–08: official metadata/abstract 및 저자 project/repository 공개 범위 확인.  본문 전체 정독·코드 실행·독립 성능 검증 아님. 사용자 reading status UNREAD 유지. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.
 
 ## Problem and Importance
 
-긴 항법 episode에서 단일 턴 학습은 시간적 credit assignment를 충분히 다루기 어렵다.
+LongNav-R1은 긴 물체 탐색을 로봇과 환경의 연속적인 상호작용으로 학습하며 궤적 길이에 따라 행동의 기여도를 추정한다. [PDF 1쪽](https://roboticsproceedings.org/rss22/p068.pdf#page=1)
 
 ## Core Idea and Contribution
 
-환경과의 multi-turn 상호작용 및 horizon을 반영한 advantage 추정으로 VLA를 학습한다.
+- 여러 차례의 관측·행동을 유지하는 온라인 강화학습에서 길이가 다른 탐색 궤적에 맞춘 어드밴티지 추정 방식을 제안했다. [PDF 4쪽](https://roboticsproceedings.org/rss22/p068.pdf#page=4) · [PDF 5쪽](https://roboticsproceedings.org/rss22/p068.pdf#page=5)
+- 객체 목표 내비게이션에서 4천 개 실행 궤적으로 Qwen3-VL-2B의 성공률이 64.3%에서 73.0%로 변했음을 보고하고 길이 보정의 영향을 분석했다. [PDF 1쪽](https://roboticsproceedings.org/rss22/p068.pdf#page=1) · [PDF 7쪽](https://roboticsproceedings.org/rss22/p068.pdf#page=7) · [PDF 8쪽](https://roboticsproceedings.org/rss22/p068.pdf#page=8)
 
 ## Observation–State–Action Interface
 
@@ -32,7 +33,7 @@
 
 Object navigation과 실제 장기 항법의 zero-shot 평가를 보고한다.
 
-근거: [공식 paper/abstract](https://roboticsproceedings.org/rss22/p068.html) · [저자 project/code](https://github.com/UMich-CURLY/LongNav-R1). 정확한 수치·baseline fairness·failure 범위는 본문 확인 전까지 확정하지 않는다.
+근거: [공식 paper/abstract](https://roboticsproceedings.org/rss22/p068.html) · [저자 project/code](https://github.com/UMich-CURLY/LongNav-R1). 문장에 인용한 결과 외의 수치, 기준선의 비교 조건과 실패 범위는 추가 확인이 필요하다.
 
 ## Why This Paper Is Here — Researcher Interpretation
 

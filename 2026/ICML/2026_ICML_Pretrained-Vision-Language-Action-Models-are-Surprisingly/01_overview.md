@@ -1,6 +1,6 @@
 # Pretrained Vision-Language-Action Models are Surprisingly Resistant to Forgetting in Continual Learning
 
-> Evidence maturity: `ABSTRACT_CHECKED`. abstract 기반 — 본문 수동 확인 필요.
+> Evidence maturity: `ABSTRACT_CHECKED`. 요약과 핵심 기여 두 개는 아래에 표시한 원문 쪽수에서 확인했다. 나머지 분석은 각 절에 적힌 근거 범위를 따른다.
 > 자동 작성 노트는 실제 정독을 뜻하지 않는다. 사용자 reading status는 UNREAD로 시작한다.
 
 - Year/Venue: 2026 / ICML
@@ -14,15 +14,16 @@
 - Venue verification: https://proceedings.mlr.press/v306/liu26bu.html
 - Code/Project: https://continual-vlas.github.io/forget-me-not/
 - Code: project_only
-- Source audit: 2026-10-22 공식 abstract/arXiv abstract와 publication metadata 확인. 새 5개 note는 abstract 수준의 분석이며 상세 본문·코드 감사는 기존 buildup dossier의 명시 범위만 따른다.
+- Source audit: 2026-10-22 공식 abstract/arXiv abstract와 publication metadata 확인. 새 5개 note는 abstract 수준의 분석이며 상세 본문·코드 감사는 기존 buildup dossier의 명시 범위만 따른다. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.
 
 ## Problem and Importance
 
-VLA 순차 학습에서 기존 능력이 얼마나 보존되는가.
+이 연구는 기존 과제의 소량 경험을 재생할 때 사전학습된 VLA가 순차적으로 새 조작을 배우면서 얼마나 덜 망각하는지 측정했다. [PDF 1쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/liu26bu/liu26bu.pdf#page=1)
 
 ## Core Idea and Contribution
 
-사전학습과 소량 experience replay의 망각 억제 효과를 분석한다.
+- 사전학습 모델과 처음부터 학습한 정책을 비교하고, 과거 경험을 재생했을 때 시뮬레이션과 실제 로봇에서 나타나는 차이를 평가했다. [PDF 4쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/liu26bu/liu26bu.pdf#page=4) · [PDF 5쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/liu26bu/liu26bu.pdf#page=5)
+- 기존 과제의 성공률이 낮아진 뒤 그 기술을 다시 미세조정해 회복에 필요한 학습량을 측정했다. [PDF 7쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/liu26bu/liu26bu.pdf#page=7) · [PDF 8쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/liu26bu/liu26bu.pdf#page=8)
 
 ## Observation–State–Action Interface
 
@@ -32,7 +33,7 @@ VLA 순차 학습에서 기존 능력이 얼마나 보존되는가.
 
 순차 robot task의 학습·망각 비교를 보고한다.
 
-근거: [공식 paper/abstract](https://proceedings.mlr.press/v306/liu26bu.html) · [저자 project/code](https://continual-vlas.github.io/forget-me-not/). 정확한 수치·baseline fairness·failure 범위는 본문 확인 전까지 확정하지 않는다.
+근거: [공식 paper/abstract](https://proceedings.mlr.press/v306/liu26bu.html) · [저자 project/code](https://continual-vlas.github.io/forget-me-not/). 문장에 인용한 결과 외의 수치, 기준선의 비교 조건과 실패 범위는 추가 확인이 필요하다.
 
 ## Why This Paper Is Here — Researcher Interpretation
 

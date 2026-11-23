@@ -12,17 +12,20 @@
 - Venue verification: https://neurips.cc/Downloads/2026
 - Code/Project: https://nebulis-lab.com/BAS-VLA/
 - Code: https://github.com/NEBULIS-Lab/BAS-VLA
-- Source audit: 2026-11-05: §3–4, §5.1–5.3, Tables 6–7, Appendix A.2.1. 지정 본문 절만 확인; 전체 정독·수식 검증 아님. Venue와 읽은 preprint version을 구별. Native 실행 0; 사용자 읽기 UNREAD.
+- Source audit: 2026-11-05: §3–4, §5.1–5.3, Tables 6–7, Appendix A.2.1. 지정 본문 절만 확인; 전체 정독·수식 검증 아님. Venue와 읽은 preprint version을 구별. Native 실행 0; 사용자 읽기 UNREAD. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.
 
-## Problem and Contribution
+## Problem and Importance
 
-외관만 변할 때의 안정성과 실제 목표가 바뀔 때의 행동 전환을 구분한다.
+BAS-VLA는 목표와 무관한 외형 변화에서는 기본 행동을 유지하고 과제의 의미가 바뀌면 새 목표에 맞춰 고정 VLA의 행동을 수정한다. [PDF 2쪽](https://arxiv.org/pdf/2609.23650v2#page=2)
 
-동결 VLA 행동에 instruction-conditioned residual을 더한다. Clean/control 모방·일관성과 semantic-break margin을 함께 학습하고 preserving 보조 경로는 evidence gate로 제한한다.
+## Core Idea and Contribution
+
+- 원래 지시·의미를 유지한 지시·의미가 바뀐 지시로 행동 잔차를 학습하고, 시각적 방해와 의미 보존의 증거가 있을 때 선택적으로 보조 경로를 작동시킨다. [PDF 5쪽](https://arxiv.org/pdf/2609.23650v2#page=5) · [PDF 6쪽](https://arxiv.org/pdf/2609.23650v2#page=6)
+- 시뮬레이션의 네 목표 교체 과제에서 새 목표 성공률은 기본 정책 2.3%와 보정 정책 68.5%였고, 옛 목표 실행 및 그 밖의 실패를 별도로 집계했다. [PDF 9쪽](https://arxiv.org/pdf/2609.23650v2#page=9) · [PDF 10쪽](https://arxiv.org/pdf/2609.23650v2#page=10)
 
 ## Scope and Limitation
 
-Break 열은 옛 목표 성공률이므로 낮다고 새 목표 성공이 아니다. Margin 분리만으로 물리적 성공이 보장되지 않는다. 최종 proceedings와 읽은 v1의 동일성·공개 구현은 미확인.
+저자판 v2 표 5의 Break는 옛 목표 성공률이다. 새 목표 달성 여부는 실물 표 6과 시뮬레이션 표 7에서 확인할 수 있다. 네 가지 쉬운 교체 과제와 어려운 교체 과제의 결과도 구분해 읽어야 한다. [실물 표 6](https://arxiv.org/pdf/2609.23650v2#page=9) · [시뮬레이션 표 7](https://arxiv.org/pdf/2609.23650v2#page=10)
 
 ## Why This Paper Is Here — Researcher Interpretation
 

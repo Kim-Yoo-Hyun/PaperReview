@@ -1,6 +1,6 @@
 # PolaRiS: Scalable Real-to-Sim Evaluations for Generalist Robot Policies
 
-> Evidence maturity: `ABSTRACT_CHECKED`. abstract 기반 — 본문 수동 확인 필요.
+> Evidence maturity: `ABSTRACT_CHECKED`. 요약과 핵심 기여 두 개는 아래에 표시한 원문 쪽수에서 확인했다. 나머지 분석은 각 절에 적힌 근거 범위를 따른다.
 > 자동 작성 노트는 실제 정독을 뜻하지 않는다. 사용자 reading status는 UNREAD로 시작한다.
 
 - Year/Venue: 2026 / RSS
@@ -14,15 +14,16 @@
 - Venue verification: https://roboticsproceedings.org/rss22/p062.html
 - Code/Project: https://polaris-evals.github.io/
 - Code: https://github.com/arhanjain/PolaRiS
-- Source audit: 2026-11-07–08: official metadata/abstract 및 저자 project/repository 공개 범위 확인.  본문 전체 정독·코드 실행·독립 성능 검증 아님. 사용자 reading status UNREAD 유지.
+- Source audit: 2026-11-07–08: official metadata/abstract 및 저자 project/repository 공개 범위 확인.  본문 전체 정독·코드 실행·독립 성능 검증 아님. 사용자 reading status UNREAD 유지. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.
 
 ## Problem and Importance
 
-시뮬레이션의 정책 순위가 실제 로봇 성능을 충분히 반영하지 못한다.
+PolaRiS는 실제 장면을 찍은 짧은 영상으로 시뮬레이션을 만들고 그곳에서 얻은 정책 순위가 같은 실물 조건에서의 순위와 일치하는지 검증한다. [PDF 1쪽](https://roboticsproceedings.org/rss22/p062.pdf#page=1)
 
 ## Core Idea and Contribution
 
-짧은 실환경 스캔으로 시뮬레이터를 만들고 simulation co-training으로 잔여 차이를 줄인다.
+- 신경 장면 재구성으로 상호작용 가능한 장면을 만들고 정책이 시뮬레이션 자료를 함께 학습하도록 해 실물에서 훈련된 정책의 상대 성능을 예측한다. [PDF 4쪽](https://roboticsproceedings.org/rss22/p062.pdf#page=4) · [PDF 5쪽](https://roboticsproceedings.org/rss22/p062.pdf#page=5)
+- 여러 정책의 실물·시뮬레이션 실행을 짝지어 비교하고 재구성한 환경의 순위 예측력을 기존 시뮬레이션 벤치마크와 대조했다. [PDF 6쪽](https://roboticsproceedings.org/rss22/p062.pdf#page=6) · [PDF 7쪽](https://roboticsproceedings.org/rss22/p062.pdf#page=7) · [PDF 8쪽](https://roboticsproceedings.org/rss22/p062.pdf#page=8)
 
 ## Observation–State–Action Interface
 
@@ -32,7 +33,7 @@
 
 실제·시뮬레이션의 짝지은 rollout으로 정책 순위 상관을 평가한다.
 
-근거: [공식 paper/abstract](https://roboticsproceedings.org/rss22/p062.html) · [저자 project/code](https://polaris-evals.github.io/) · [공식 code](https://github.com/arhanjain/PolaRiS). 정확한 수치·baseline fairness·failure 범위는 본문 확인 전까지 확정하지 않는다.
+근거: [공식 paper/abstract](https://roboticsproceedings.org/rss22/p062.html) · [저자 project/code](https://polaris-evals.github.io/) · [공식 code](https://github.com/arhanjain/PolaRiS). 문장에 인용한 결과 외의 수치, 기준선의 비교 조건과 실패 범위는 추가 확인이 필요하다.
 
 ## Why This Paper Is Here — Researcher Interpretation
 

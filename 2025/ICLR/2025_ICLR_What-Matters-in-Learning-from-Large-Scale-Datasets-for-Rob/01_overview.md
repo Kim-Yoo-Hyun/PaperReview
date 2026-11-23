@@ -1,6 +1,6 @@
 # What Matters in Learning from Large-Scale Datasets for Robot Manipulation
 
-> Evidence maturity: `ABSTRACT_CHECKED`. abstract 기반 — 본문 수동 확인 필요.
+> Evidence maturity: `ABSTRACT_CHECKED`. 요약과 핵심 기여 두 개는 아래에 표시한 원문 쪽수에서 확인했다. 나머지 분석은 각 절에 적힌 근거 범위를 따른다.
 > 자동 작성 노트는 실제 정독을 뜻하지 않는다. 사용자 reading status는 UNREAD로 시작한다.
 
 - Year/Venue: 2025 / ICLR
@@ -14,15 +14,16 @@
 - Venue verification: https://proceedings.iclr.cc/paper_files/paper/2025/hash/16466b6c95c5924784486ac5a3feeb65-Abstract-Conference.html
 - Code/Project: not identified
 - Code: not_identified
-- Source audit: 2026-10-25 공식 abstract와 publication metadata 및 명시된 project/code 공개 링크 확인. 본문 정독·코드 실행·payload 검증은 이번 등록 범위 밖이다.
+- Source audit: 2026-10-25 공식 abstract와 publication metadata 및 명시된 project/code 공개 링크 확인. 본문 정독·코드 실행·payload 검증은 이번 등록 범위 밖이다. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.
 
 ## Problem and Importance
 
-다양한 robot demonstration을 늘릴 때 어떤 다양성을 수집하고 어떤 데이터를 조회해야 하는지 불명확하다.
+이 연구는 대규모 조작 시연의 어떤 다양성을 수집하고 어떤 시연을 검색해야 목표 과제의 모방 정책에 도움이 되는지 조사했다. [PDF 1쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/16466b6c95c5924784486ac5a3feeb65-Paper-Conference.pdf#page=1)
 
 ## Core Idea and Contribution
 
-통제 가능한 데이터 생성으로 카메라·물체·배치 다양성과 retrieval 정렬을 비교한다.
+- MimicLabs에서 카메라 자세와 물체 배치 등을 조절해 데이터의 양과 구성을 분리한 비교를 만들었다. [PDF 3쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/16466b6c95c5924784486ac5a3feeb65-Paper-Conference.pdf#page=3) · [PDF 4쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/16466b6c95c5924784486ac5a3feeb65-Paper-Conference.pdf#page=4)
+- 시점과 공간 배치가 수집·검색 성능에 주는 영향을 분석하고 실제 DROID 자료에서 목표에 맞는 시연을 골라 학습한 정책을 평가했다. [PDF 1쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/16466b6c95c5924784486ac5a3feeb65-Paper-Conference.pdf#page=1) · [PDF 8쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/16466b6c95c5924784486ac5a3feeb65-Paper-Conference.pdf#page=8)
 
 ## Observation–State–Action Interface
 
@@ -32,7 +33,7 @@
 
 시뮬레이션 구성 실험과 DROID를 이용한 실로봇 학습을 보고한다.
 
-근거: [공식 paper/abstract](https://proceedings.iclr.cc/paper_files/paper/2025/hash/16466b6c95c5924784486ac5a3feeb65-Abstract-Conference.html). 정확한 수치·baseline fairness·failure 범위는 본문 확인 전까지 확정하지 않는다.
+근거: [공식 paper/abstract](https://proceedings.iclr.cc/paper_files/paper/2025/hash/16466b6c95c5924784486ac5a3feeb65-Abstract-Conference.html). 문장에 인용한 결과 외의 수치, 기준선의 비교 조건과 실패 범위는 추가 확인이 필요하다.
 
 ## Why This Paper Is Here — Researcher Interpretation
 

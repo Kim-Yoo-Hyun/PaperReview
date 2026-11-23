@@ -1,6 +1,6 @@
 # DexMimicGen: Automated Data Generation for Bimanual Dexterous Manipulation via Imitation Learning
 
-> Evidence maturity: `ABSTRACT_CHECKED`. abstract 기반 — 본문 수동 확인 필요.
+> Evidence maturity: `ABSTRACT_CHECKED`. 요약과 핵심 기여 두 개는 아래에 표시한 원문 쪽수에서 확인했다. 나머지 분석은 각 절에 적힌 근거 범위를 따른다.
 > 자동 작성 노트는 실제 정독을 뜻하지 않는다. 사용자 reading status는 UNREAD로 시작한다.
 
 - Year/Venue: 2025 / ICRA
@@ -14,15 +14,16 @@
 - Venue verification: https://api.crossref.org/works/10.1109/ICRA55743.2025.11127809
 - Code/Project: https://dexmimicgen.github.io/
 - Code: https://github.com/NVlabs/dexmimicgen
-- Source audit: 2026-10-25 공식 abstract/서지정보 및 명시된 저자 링크 확인. 이번 노트는 abstract 기반이며 본문 전체·코드 실행·payload는 미검증이다. ICRA 2025 저자 project 표기와 IEEE-deposited Crossref metadata 대조. IEEE 직접 페이지는 browser challenge; abstract/project 범위만 확인.
+- Source audit: 2026-10-25 공식 abstract/서지정보 및 명시된 저자 링크 확인. 이번 노트는 abstract 기반이며 본문 전체·코드 실행·payload는 미검증이다. ICRA 2025 저자 project 표기와 IEEE-deposited Crossref metadata 대조. IEEE 직접 페이지는 browser challenge; abstract/project 범위만 확인. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.
 
 ## Problem and Importance
 
-양팔·다지 손의 동시 조작 시연 수집 비용이 크다.
+DexMimicGen은 소수의 양손 시연에서 두 손의 협응을 유지하는 새로운 조작 궤적을 만들어 모방학습 자료를 확장한다. [PDF 1쪽](https://arxiv.org/pdf/2410.24185v2#page=1)
 
 ## Core Idea and Contribution
 
-소수 인간 시연을 재사용해 시뮬레이션의 양팔 dexterous trajectory를 생성한다.
+- 각 손의 하위 동작을 물체에 맞게 변환하고 동시 실행이나 순서가 필요한 두 손의 구간을 조율해 시연을 재생성한다. [PDF 3쪽](https://arxiv.org/pdf/2410.24185v2#page=3) · [PDF 4쪽](https://arxiv.org/pdf/2410.24185v2#page=4)
+- 60개 시연에서 2만 1천 개의 시뮬레이션 시연을 생성했으며 휴머노이드의 캔 분류로 실물 시연에서 합성 자료를 거쳐 실물 정책으로 이어지는 절차를 시험했다. [PDF 1쪽](https://arxiv.org/pdf/2410.24185v2#page=1) · [PDF 6쪽](https://arxiv.org/pdf/2410.24185v2#page=6) · [PDF 7쪽](https://arxiv.org/pdf/2410.24185v2#page=7)
 
 ## Observation–State–Action Interface
 
@@ -32,7 +33,7 @@ source demonstration·새 초기 상태 → 합성 trajectory → imitation poli
 
 양팔 조작 simulation과 real2sim2real 사례를 제시한다.
 
-근거: [공식 paper/abstract](https://arxiv.org/abs/2410.24185) · [저자 project/code](https://dexmimicgen.github.io/) · [공식 code](https://github.com/NVlabs/dexmimicgen). 정확한 수치·baseline fairness·failure 범위는 본문 확인 전까지 확정하지 않는다.
+근거: [공식 paper/abstract](https://arxiv.org/abs/2410.24185) · [저자 project/code](https://dexmimicgen.github.io/) · [공식 code](https://github.com/NVlabs/dexmimicgen). 문장에 인용한 결과 외의 수치, 기준선의 비교 조건과 실패 범위는 추가 확인이 필요하다.
 
 ## Why This Paper Is Here — Researcher Interpretation
 

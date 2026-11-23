@@ -13,15 +13,16 @@
 - Venue verification: https://proceedings.iclr.cc/paper_files/paper/2025/hash/45c361d4117d598d4bb6568b407e9ac9-Abstract-Conference.html
 - Code/Project: https://policydecorator.github.io/
 - Code: https://github.com/tongzhoumu/policy_decorator
-- Source audit: 2026-11-03 공식 venue/서지 재확인; 기존 GAP-VRL 검토의 지정 본문 final paper §4.1–4.3, selected Appendix B.5; project/code README를 반영. 선택 절 검토이며 전체 논문 정독·native 실행은 아님. Final paper의 지정 절만 검토했고 전체 36쪽 정독은 아니다. 공식 code 링크/README 확인과 실행 검증을 구분한다. 사용자 읽기 상태는 UNREAD 유지.
+- Source audit: 2026-11-03 공식 venue/서지 재확인; 기존 GAP-VRL 검토의 지정 본문 final paper §4.1–4.3, selected Appendix B.5; project/code README를 반영. 선택 절 검토이며 전체 논문 정독·native 실행은 아님. Final paper의 지정 절만 검토했고 전체 36쪽 정독은 아니다. 공식 code 링크/README 확인과 실행 검증을 구분한다. 사용자 읽기 상태는 UNREAD 유지. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.
 
 ## Problem and Importance
 
-Offline imitation 정책의 조작 오차를 online RL로 보완하면서 초반 탐색으로 기존 행동을 훼손하는 문제를 줄인다.
+Policy Decorator는 사전학습 정책의 출력에 작은 보정을 더하는 강화학습으로 서로 다른 종류의 조작 정책을 개선한다. [PDF 1쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/45c361d4117d598d4bb6568b407e9ac9-Paper-Conference.pdf#page=1)
 
 ## Core Idea and Contribution
 
-동결 base 위에 SAC residual을 학습하고 residual 범위와 탐색 진행을 제어한다.
+- 잔차 행동의 범위를 제한하고 학습 초기 탐색을 제약해 기본 정책의 유용한 동작을 보존하며 보정을 학습한다. [PDF 3쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/45c361d4117d598d4bb6568b407e9ac9-Paper-Conference.pdf#page=3) · [PDF 4쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/45c361d4117d598d4bb6568b407e9ac9-Paper-Conference.pdf#page=4)
+- ManiSkill과 Adroit 시뮬레이션에서 Behavior Transformer와 Diffusion Policy 등을 기본 정책으로 사용해 조작 성공과 표본 효율을 비교했다. [PDF 5쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/45c361d4117d598d4bb6568b407e9ac9-Paper-Conference.pdf#page=5) · [PDF 6쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/45c361d4117d598d4bb6568b407e9ac9-Paper-Conference.pdf#page=6) · [PDF 7쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/45c361d4117d598d4bb6568b407e9ac9-Paper-Conference.pdf#page=7)
 
 ## Observation–State–Action Interface
 

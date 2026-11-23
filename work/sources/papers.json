@@ -226166,7 +226166,7 @@
       "content_evidence": "ABSTRACT_CHECKED",
       "source_audit_status": "recorded",
       "metadata_checked_on": "2026-11-20",
-      "source_audit_note": "공식 paper abstract 및 저자 project/code README 확인; abstract 기반 — 본문 수동 확인 필요. ICRA 2026 status는 저자 공식 자료 확인; IEEE proceedings 직접 검증 미완료.",
+      "source_audit_note": "공식 paper abstract 및 저자 project/code README 확인; abstract 기반 — 본문 수동 확인 필요. ICRA 2026 status는 저자 공식 자료 확인; IEEE proceedings 직접 검증 미완료. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "ABSTRACT_CHECKED",
         "02_problem.md": "ABSTRACT_CHECKED",
@@ -226372,7 +226372,7 @@
       "content_evidence": "ABSTRACT_CHECKED",
       "source_audit_status": "recorded",
       "metadata_checked_on": "2026-11-20",
-      "source_audit_note": "공식 paper abstract 및 저자 project/code README 확인; abstract 기반 — 본문 수동 확인 필요.",
+      "source_audit_note": "공식 paper abstract 및 저자 project/code README 확인; abstract 기반 — 본문 수동 확인 필요. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "ABSTRACT_CHECKED",
         "02_problem.md": "ABSTRACT_CHECKED",
@@ -226568,7 +226568,7 @@
       "content_evidence": "ABSTRACT_CHECKED",
       "source_audit_status": "recorded",
       "metadata_checked_on": "2026-11-20",
-      "source_audit_note": "공식 paper abstract 및 저자 project/code README 확인; abstract 기반 — 본문 수동 확인 필요.",
+      "source_audit_note": "공식 paper abstract 및 저자 project/code README 확인; abstract 기반 — 본문 수동 확인 필요. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "ABSTRACT_CHECKED",
         "02_problem.md": "ABSTRACT_CHECKED",
@@ -226761,7 +226761,7 @@
       "content_evidence": "ABSTRACT_CHECKED",
       "source_audit_status": "recorded",
       "metadata_checked_on": "2026-11-20",
-      "source_audit_note": "공식 paper abstract 및 저자 project/code README 확인; abstract 기반 — 본문 수동 확인 필요.",
+      "source_audit_note": "공식 paper abstract 및 저자 project/code README 확인; abstract 기반 — 본문 수동 확인 필요. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "ABSTRACT_CHECKED",
         "02_problem.md": "ABSTRACT_CHECKED",
@@ -226970,7 +226970,7 @@
       "content_evidence": "ABSTRACT_CHECKED",
       "source_audit_status": "recorded",
       "metadata_checked_on": "2026-11-20",
-      "source_audit_note": "공식 paper abstract 및 저자 project/code README 확인; abstract 기반 — 본문 수동 확인 필요.",
+      "source_audit_note": "공식 paper abstract 및 저자 project/code README 확인; abstract 기반 — 본문 수동 확인 필요. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "ABSTRACT_CHECKED",
         "02_problem.md": "ABSTRACT_CHECKED",
@@ -227175,7 +227175,7 @@
       "content_evidence": "ABSTRACT_CHECKED",
       "source_audit_status": "recorded",
       "metadata_checked_on": "2026-11-20",
-      "source_audit_note": "공식 paper abstract 및 저자 project/code README 확인; abstract 기반 — 본문 수동 확인 필요.",
+      "source_audit_note": "공식 paper abstract 및 저자 project/code README 확인; abstract 기반 — 본문 수동 확인 필요. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "ABSTRACT_CHECKED",
         "02_problem.md": "ABSTRACT_CHECKED",
@@ -227384,7 +227384,7 @@
       "content_evidence": "ABSTRACT_CHECKED",
       "source_audit_status": "recorded",
       "metadata_checked_on": "2026-11-20",
-      "source_audit_note": "공식 paper abstract 및 저자 project/code README 확인; abstract 기반 — 본문 수동 확인 필요. ECCV 2026 accepted/video list의 공식 검색 색인과 저자 abstract 대조; proceedings page/DOI 미확인.",
+      "source_audit_note": "공식 paper abstract 및 저자 project/code README 확인; abstract 기반 — 본문 수동 확인 필요. ECCV 2026 accepted/video list의 공식 검색 색인과 저자 abstract 대조; proceedings page/DOI 미확인. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "ABSTRACT_CHECKED",
         "02_problem.md": "ABSTRACT_CHECKED",
@@ -227831,7 +227831,7 @@
       "content_evidence": "ABSTRACT_CHECKED",
       "source_audit_status": "recorded",
       "metadata_checked_on": "2026-11-20",
-      "source_audit_note": "Abstract/project-based registry notes; selected full-text comparison is separately scoped in D1 buildup.",
+      "source_audit_note": "Abstract/project-based registry notes; selected full-text comparison is separately scoped in D1 buildup. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "ABSTRACT_CHECKED",
         "02_problem.md": "ABSTRACT_CHECKED",
@@ -228210,7 +228210,7 @@
       "content_evidence": "ABSTRACT_CHECKED",
       "source_audit_status": "recorded",
       "metadata_checked_on": "2026-11-20",
-      "source_audit_note": "Abstract/project-based registry notes; selected full-text comparison is separately scoped in D1 buildup.",
+      "source_audit_note": "Abstract/project-based registry notes; selected full-text comparison is separately scoped in D1 buildup. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "ABSTRACT_CHECKED",
         "02_problem.md": "ABSTRACT_CHECKED",
@@ -228401,7 +228401,7 @@
       "content_evidence": "ABSTRACT_CHECKED",
       "source_audit_status": "recorded",
       "metadata_checked_on": "2026-11-20",
-      "source_audit_note": "Abstract/project-based registry notes; selected full-text comparison is separately scoped in D1 buildup.",
+      "source_audit_note": "Abstract/project-based registry notes; selected full-text comparison is separately scoped in D1 buildup. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "ABSTRACT_CHECKED",
         "02_problem.md": "ABSTRACT_CHECKED",
@@ -228595,7 +228595,7 @@
       "content_evidence": "ABSTRACT_CHECKED",
       "source_audit_status": "recorded",
       "metadata_checked_on": "2026-11-20",
-      "source_audit_note": "Abstract/project-based registry notes; selected full-text comparison is separately scoped in D1 buildup.",
+      "source_audit_note": "Abstract/project-based registry notes; selected full-text comparison is separately scoped in D1 buildup. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "ABSTRACT_CHECKED",
         "02_problem.md": "ABSTRACT_CHECKED",
@@ -228782,7 +228782,7 @@
       "content_evidence": "ABSTRACT_CHECKED",
       "source_audit_status": "recorded",
       "metadata_checked_on": "2026-11-20",
-      "source_audit_note": "Abstract/project-based registry notes; selected full-text comparison is separately scoped in D1 buildup.",
+      "source_audit_note": "Abstract/project-based registry notes; selected full-text comparison is separately scoped in D1 buildup. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "ABSTRACT_CHECKED",
         "02_problem.md": "ABSTRACT_CHECKED",
@@ -228968,7 +228968,7 @@
       "content_evidence": "ABSTRACT_CHECKED",
       "source_audit_status": "recorded",
       "metadata_checked_on": "2026-11-20",
-      "source_audit_note": "Abstract/project-based registry notes; selected full-text comparison is separately scoped in D1 buildup.",
+      "source_audit_note": "Abstract/project-based registry notes; selected full-text comparison is separately scoped in D1 buildup. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "ABSTRACT_CHECKED",
         "02_problem.md": "ABSTRACT_CHECKED",
@@ -229159,7 +229159,7 @@
       "content_evidence": "ABSTRACT_CHECKED",
       "source_audit_status": "recorded",
       "metadata_checked_on": "2026-11-20",
-      "source_audit_note": "Abstract/project-based registry notes; selected full-text comparison is separately scoped in D1 buildup.",
+      "source_audit_note": "Abstract/project-based registry notes; selected full-text comparison is separately scoped in D1 buildup. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "ABSTRACT_CHECKED",
         "02_problem.md": "ABSTRACT_CHECKED",
@@ -229341,7 +229341,7 @@
       "content_evidence": "ABSTRACT_CHECKED",
       "source_audit_status": "recorded",
       "metadata_checked_on": "2026-11-20",
-      "source_audit_note": "Abstract/project-based registry notes; selected full-text comparison is separately scoped in D1 buildup.",
+      "source_audit_note": "Abstract/project-based registry notes; selected full-text comparison is separately scoped in D1 buildup. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "ABSTRACT_CHECKED",
         "02_problem.md": "ABSTRACT_CHECKED",
@@ -229522,7 +229522,7 @@
       "content_evidence": "ABSTRACT_CHECKED",
       "source_audit_status": "recorded",
       "metadata_checked_on": "2026-11-20",
-      "source_audit_note": "Abstract/project-based registry notes; selected full-text comparison is separately scoped in D1 buildup.",
+      "source_audit_note": "Abstract/project-based registry notes; selected full-text comparison is separately scoped in D1 buildup. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "ABSTRACT_CHECKED",
         "02_problem.md": "ABSTRACT_CHECKED",
@@ -230109,7 +230109,7 @@
       "content_evidence": "ABSTRACT_CHECKED",
       "source_audit_status": "recorded",
       "metadata_checked_on": "2026-11-20",
-      "source_audit_note": "Abstract/project-based registry notes; selected full-text comparison is separately scoped in D1 buildup.",
+      "source_audit_note": "Abstract/project-based registry notes; selected full-text comparison is separately scoped in D1 buildup. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "ABSTRACT_CHECKED",
         "02_problem.md": "ABSTRACT_CHECKED",
@@ -230863,7 +230863,7 @@
       "content_evidence": "ABSTRACT_CHECKED",
       "source_audit_status": "recorded",
       "metadata_checked_on": "2026-11-20",
-      "source_audit_note": "2026-10-22 공식 abstract/arXiv abstract와 publication metadata 확인. 새 5개 note는 abstract 수준의 분석이며 상세 본문·코드 감사는 기존 buildup dossier의 명시 범위만 따른다.",
+      "source_audit_note": "2026-10-22 공식 abstract/arXiv abstract와 publication metadata 확인. 새 5개 note는 abstract 수준의 분석이며 상세 본문·코드 감사는 기존 buildup dossier의 명시 범위만 따른다. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "ABSTRACT_CHECKED",
         "02_problem.md": "ABSTRACT_CHECKED",
@@ -231051,7 +231051,7 @@
       "content_evidence": "ABSTRACT_CHECKED",
       "source_audit_status": "recorded",
       "metadata_checked_on": "2026-11-20",
-      "source_audit_note": "2026-10-22 공식 abstract/arXiv abstract와 publication metadata 확인. 새 5개 note는 abstract 수준의 분석이며 상세 본문·코드 감사는 기존 buildup dossier의 명시 범위만 따른다.",
+      "source_audit_note": "2026-10-22 공식 abstract/arXiv abstract와 publication metadata 확인. 새 5개 note는 abstract 수준의 분석이며 상세 본문·코드 감사는 기존 buildup dossier의 명시 범위만 따른다. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "ABSTRACT_CHECKED",
         "02_problem.md": "ABSTRACT_CHECKED",
@@ -231237,7 +231237,7 @@
       "content_evidence": "ABSTRACT_CHECKED",
       "source_audit_status": "recorded",
       "metadata_checked_on": "2026-11-20",
-      "source_audit_note": "2026-10-22 공식 abstract/arXiv abstract와 publication metadata 확인. 새 5개 note는 abstract 수준의 분석이며 상세 본문·코드 감사는 기존 buildup dossier의 명시 범위만 따른다.",
+      "source_audit_note": "2026-10-22 공식 abstract/arXiv abstract와 publication metadata 확인. 새 5개 note는 abstract 수준의 분석이며 상세 본문·코드 감사는 기존 buildup dossier의 명시 범위만 따른다. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "ABSTRACT_CHECKED",
         "02_problem.md": "ABSTRACT_CHECKED",
@@ -231441,7 +231441,7 @@
       "content_evidence": "ABSTRACT_CHECKED",
       "source_audit_status": "recorded",
       "metadata_checked_on": "2026-11-20",
-      "source_audit_note": "2026-10-22 공식 abstract/arXiv abstract와 publication metadata 확인. 새 5개 note는 abstract 수준의 분석이며 상세 본문·코드 감사는 기존 buildup dossier의 명시 범위만 따른다.",
+      "source_audit_note": "2026-10-22 공식 abstract/arXiv abstract와 publication metadata 확인. 새 5개 note는 abstract 수준의 분석이며 상세 본문·코드 감사는 기존 buildup dossier의 명시 범위만 따른다. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "ABSTRACT_CHECKED",
         "02_problem.md": "ABSTRACT_CHECKED",
@@ -231651,7 +231651,7 @@
       "content_evidence": "ABSTRACT_CHECKED",
       "source_audit_status": "recorded",
       "metadata_checked_on": "2026-11-20",
-      "source_audit_note": "2026-10-22 공식 abstract/arXiv abstract와 publication metadata 확인. 새 5개 note는 abstract 수준의 분석이며 상세 본문·코드 감사는 기존 buildup dossier의 명시 범위만 따른다. 공식 OpenReview 검색 API의 Conference venueid·CoRL 2026 Poster를 확인했다.",
+      "source_audit_note": "2026-10-22 공식 abstract/arXiv abstract와 publication metadata 확인. 새 5개 note는 abstract 수준의 분석이며 상세 본문·코드 감사는 기존 buildup dossier의 명시 범위만 따른다. 공식 OpenReview 검색 API의 Conference venueid·CoRL 2026 Poster를 확인했다. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "ABSTRACT_CHECKED",
         "02_problem.md": "ABSTRACT_CHECKED",
@@ -231842,7 +231842,7 @@
       "content_evidence": "ABSTRACT_CHECKED",
       "source_audit_status": "recorded",
       "metadata_checked_on": "2026-11-20",
-      "source_audit_note": "2026-10-22 공식 abstract/arXiv abstract와 publication metadata 확인. 새 5개 note는 abstract 수준의 분석이며 상세 본문·코드 감사는 기존 buildup dossier의 명시 범위만 따른다.",
+      "source_audit_note": "2026-10-22 공식 abstract/arXiv abstract와 publication metadata 확인. 새 5개 note는 abstract 수준의 분석이며 상세 본문·코드 감사는 기존 buildup dossier의 명시 범위만 따른다. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "ABSTRACT_CHECKED",
         "02_problem.md": "ABSTRACT_CHECKED",
@@ -232039,7 +232039,7 @@
       "content_evidence": "ABSTRACT_CHECKED",
       "source_audit_status": "recorded",
       "metadata_checked_on": "2026-11-20",
-      "source_audit_note": "2026-10-22 공식 abstract/arXiv abstract와 publication metadata 확인. 새 5개 note는 abstract 수준의 분석이며 상세 본문·코드 감사는 기존 buildup dossier의 명시 범위만 따른다. arXiv v3를 확인했다.",
+      "source_audit_note": "2026-10-22 공식 abstract/arXiv abstract와 publication metadata 확인. 새 5개 note는 abstract 수준의 분석이며 상세 본문·코드 감사는 기존 buildup dossier의 명시 범위만 따른다. arXiv v3를 확인했다. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "ABSTRACT_CHECKED",
         "02_problem.md": "ABSTRACT_CHECKED",
@@ -233039,7 +233039,7 @@
       "content_evidence": "ABSTRACT_CHECKED",
       "source_audit_status": "recorded",
       "metadata_checked_on": "2026-11-20",
-      "source_audit_note": "2026-10-22 공식 abstract/arXiv abstract와 publication metadata 확인. 새 5개 note는 abstract 수준의 분석이며 상세 본문·코드 감사는 기존 buildup dossier의 명시 범위만 따른다.",
+      "source_audit_note": "2026-10-22 공식 abstract/arXiv abstract와 publication metadata 확인. 새 5개 note는 abstract 수준의 분석이며 상세 본문·코드 감사는 기존 buildup dossier의 명시 범위만 따른다. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "ABSTRACT_CHECKED",
         "02_problem.md": "ABSTRACT_CHECKED",
@@ -233240,7 +233240,7 @@
       "content_evidence": "ABSTRACT_CHECKED",
       "source_audit_status": "recorded",
       "metadata_checked_on": "2026-11-20",
-      "source_audit_note": "2026-10-22 공식 abstract/arXiv abstract와 publication metadata 확인. 새 5개 note는 abstract 수준의 분석이며 상세 본문·코드 감사는 기존 buildup dossier의 명시 범위만 따른다.",
+      "source_audit_note": "2026-10-22 공식 abstract/arXiv abstract와 publication metadata 확인. 새 5개 note는 abstract 수준의 분석이며 상세 본문·코드 감사는 기존 buildup dossier의 명시 범위만 따른다. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "ABSTRACT_CHECKED",
         "02_problem.md": "ABSTRACT_CHECKED",
@@ -233453,7 +233453,7 @@
       "content_evidence": "ABSTRACT_CHECKED",
       "source_audit_status": "recorded",
       "metadata_checked_on": "2026-11-20",
-      "source_audit_note": "2026-10-22 공식 abstract/arXiv abstract와 publication metadata 확인. 새 5개 note는 abstract 수준의 분석이며 상세 본문·코드 감사는 기존 buildup dossier의 명시 범위만 따른다.",
+      "source_audit_note": "2026-10-22 공식 abstract/arXiv abstract와 publication metadata 확인. 새 5개 note는 abstract 수준의 분석이며 상세 본문·코드 감사는 기존 buildup dossier의 명시 범위만 따른다. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "ABSTRACT_CHECKED",
         "02_problem.md": "ABSTRACT_CHECKED",
@@ -237055,7 +237055,7 @@
       "content_evidence": "ABSTRACT_CHECKED",
       "source_audit_status": "recorded",
       "metadata_checked_on": "2026-11-20",
-      "source_audit_note": "2026-10-22 공식 abstract/arXiv abstract와 publication metadata 확인. 새 5개 note는 abstract 수준의 분석이며 상세 본문·코드 감사는 기존 buildup dossier의 명시 범위만 따른다.",
+      "source_audit_note": "2026-10-22 공식 abstract/arXiv abstract와 publication metadata 확인. 새 5개 note는 abstract 수준의 분석이며 상세 본문·코드 감사는 기존 buildup dossier의 명시 범위만 따른다. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "ABSTRACT_CHECKED",
         "02_problem.md": "ABSTRACT_CHECKED",
@@ -237651,7 +237651,7 @@
       "content_evidence": "ABSTRACT_CHECKED",
       "source_audit_status": "recorded",
       "metadata_checked_on": "2026-11-20",
-      "source_audit_note": "2026-10-22 공식 abstract/arXiv abstract와 publication metadata 확인. 새 5개 note는 abstract 수준의 분석이며 상세 본문·코드 감사는 기존 buildup dossier의 명시 범위만 따른다.",
+      "source_audit_note": "2026-10-22 공식 abstract/arXiv abstract와 publication metadata 확인. 새 5개 note는 abstract 수준의 분석이며 상세 본문·코드 감사는 기존 buildup dossier의 명시 범위만 따른다. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "ABSTRACT_CHECKED",
         "02_problem.md": "ABSTRACT_CHECKED",
@@ -238037,7 +238037,7 @@
       "content_evidence": "ABSTRACT_CHECKED",
       "source_audit_status": "recorded",
       "metadata_checked_on": "2026-11-20",
-      "source_audit_note": "2026-10-22 공식 abstract/arXiv abstract와 publication metadata 확인. 새 5개 note는 abstract 수준의 분석이며 상세 본문·코드 감사는 기존 buildup dossier의 명시 범위만 따른다.",
+      "source_audit_note": "2026-10-22 공식 abstract/arXiv abstract와 publication metadata 확인. 새 5개 note는 abstract 수준의 분석이며 상세 본문·코드 감사는 기존 buildup dossier의 명시 범위만 따른다. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "ABSTRACT_CHECKED",
         "02_problem.md": "ABSTRACT_CHECKED",
@@ -239489,7 +239489,7 @@
       "content_evidence": "ABSTRACT_CHECKED",
       "source_audit_status": "recorded",
       "metadata_checked_on": "2026-11-20",
-      "source_audit_note": "2026-10-22 공식 abstract/arXiv abstract와 publication metadata 확인. 새 5개 note는 abstract 수준의 분석이며 상세 본문·코드 감사는 기존 buildup dossier의 명시 범위만 따른다. 공식 OpenReview 검색 API의 Conference venueid·CoRL 2026 Poster를 확인했다.",
+      "source_audit_note": "2026-10-22 공식 abstract/arXiv abstract와 publication metadata 확인. 새 5개 note는 abstract 수준의 분석이며 상세 본문·코드 감사는 기존 buildup dossier의 명시 범위만 따른다. 공식 OpenReview 검색 API의 Conference venueid·CoRL 2026 Poster를 확인했다. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "ABSTRACT_CHECKED",
         "02_problem.md": "ABSTRACT_CHECKED",
@@ -240315,7 +240315,7 @@
       "content_evidence": "ABSTRACT_CHECKED",
       "source_audit_status": "recorded",
       "metadata_checked_on": "2026-11-20",
-      "source_audit_note": "2026-10-25 공식 abstract와 publication metadata 및 명시된 project/code 공개 링크 확인. 본문 정독·코드 실행·payload 검증은 이번 등록 범위 밖이다.",
+      "source_audit_note": "2026-10-25 공식 abstract와 publication metadata 및 명시된 project/code 공개 링크 확인. 본문 정독·코드 실행·payload 검증은 이번 등록 범위 밖이다. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-10-25",
       "note_evidence": {
@@ -240521,7 +240521,7 @@
       "content_evidence": "ABSTRACT_CHECKED",
       "source_audit_status": "recorded",
       "metadata_checked_on": "2026-11-20",
-      "source_audit_note": "2026-10-25 공식 abstract와 publication metadata 및 명시된 project/code 공개 링크 확인. 본문 정독·코드 실행·payload 검증은 이번 등록 범위 밖이다.",
+      "source_audit_note": "2026-10-25 공식 abstract와 publication metadata 및 명시된 project/code 공개 링크 확인. 본문 정독·코드 실행·payload 검증은 이번 등록 범위 밖이다. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-10-25",
       "note_evidence": {
@@ -241312,7 +241312,7 @@
       "content_evidence": "ABSTRACT_CHECKED",
       "source_audit_status": "recorded",
       "metadata_checked_on": "2026-11-20",
-      "source_audit_note": "2026-10-25 공식 abstract와 publication metadata 및 명시된 project/code 공개 링크 확인. 본문 정독·코드 실행·payload 검증은 이번 등록 범위 밖이다.",
+      "source_audit_note": "2026-10-25 공식 abstract와 publication metadata 및 명시된 project/code 공개 링크 확인. 본문 정독·코드 실행·payload 검증은 이번 등록 범위 밖이다. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-10-25",
       "note_evidence": {
@@ -241508,7 +241508,7 @@
       "content_evidence": "ABSTRACT_CHECKED",
       "source_audit_status": "recorded",
       "metadata_checked_on": "2026-11-20",
-      "source_audit_note": "2026-10-25 공식 abstract와 publication metadata 및 명시된 project/code 공개 링크 확인. 본문 정독·코드 실행·payload 검증은 이번 등록 범위 밖이다. CoRL 개최 2024, PMLR 출판 2025를 분리한다.",
+      "source_audit_note": "2026-10-25 공식 abstract와 publication metadata 및 명시된 project/code 공개 링크 확인. 본문 정독·코드 실행·payload 검증은 이번 등록 범위 밖이다. CoRL 개최 2024, PMLR 출판 2025를 분리한다. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-10-25",
       "note_evidence": {
@@ -241713,7 +241713,7 @@
       "content_evidence": "ABSTRACT_CHECKED",
       "source_audit_status": "recorded",
       "metadata_checked_on": "2026-11-20",
-      "source_audit_note": "2026-10-25 공식 abstract와 publication metadata 및 명시된 project/code 공개 링크 확인. 본문 정독·코드 실행·payload 검증은 이번 등록 범위 밖이다.",
+      "source_audit_note": "2026-10-25 공식 abstract와 publication metadata 및 명시된 project/code 공개 링크 확인. 본문 정독·코드 실행·payload 검증은 이번 등록 범위 밖이다. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-10-25",
       "note_evidence": {
@@ -241928,7 +241928,7 @@
       "content_evidence": "ABSTRACT_CHECKED",
       "source_audit_status": "recorded",
       "metadata_checked_on": "2026-11-20",
-      "source_audit_note": "2026-10-25 공식 abstract와 publication metadata 및 명시된 project/code 공개 링크 확인. 본문 정독·코드 실행·payload 검증은 이번 등록 범위 밖이다.",
+      "source_audit_note": "2026-10-25 공식 abstract와 publication metadata 및 명시된 project/code 공개 링크 확인. 본문 정독·코드 실행·payload 검증은 이번 등록 범위 밖이다. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-10-25",
       "note_evidence": {
@@ -242134,7 +242134,7 @@
       "content_evidence": "ABSTRACT_CHECKED",
       "source_audit_status": "recorded",
       "metadata_checked_on": "2026-11-20",
-      "source_audit_note": "2026-10-25 공식 abstract와 publication metadata 및 명시된 project/code 공개 링크 확인. 본문 정독·코드 실행·payload 검증은 이번 등록 범위 밖이다.",
+      "source_audit_note": "2026-10-25 공식 abstract와 publication metadata 및 명시된 project/code 공개 링크 확인. 본문 정독·코드 실행·payload 검증은 이번 등록 범위 밖이다. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-10-25",
       "note_evidence": {
@@ -242340,7 +242340,7 @@
       "content_evidence": "ABSTRACT_CHECKED",
       "source_audit_status": "recorded",
       "metadata_checked_on": "2026-11-20",
-      "source_audit_note": "2026-10-25 공식 abstract와 publication metadata 및 명시된 project/code 공개 링크 확인. 본문 정독·코드 실행·payload 검증은 이번 등록 범위 밖이다. 공식 final title과 preprint/project title을 alias로 통합했으며 본문 동등성은 미검증이다.",
+      "source_audit_note": "2026-10-25 공식 abstract와 publication metadata 및 명시된 project/code 공개 링크 확인. 본문 정독·코드 실행·payload 검증은 이번 등록 범위 밖이다. 공식 final title과 preprint/project title을 alias로 통합했으며 본문 동등성은 미검증이다. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-10-25",
       "note_evidence": {
@@ -242528,7 +242528,7 @@
       "content_evidence": "ABSTRACT_CHECKED",
       "source_audit_status": "recorded",
       "metadata_checked_on": "2026-11-20",
-      "source_audit_note": "2026-10-25 공식 abstract와 publication metadata 및 명시된 project/code 공개 링크 확인. 본문 정독·코드 실행·payload 검증은 이번 등록 범위 밖이다.",
+      "source_audit_note": "2026-10-25 공식 abstract와 publication metadata 및 명시된 project/code 공개 링크 확인. 본문 정독·코드 실행·payload 검증은 이번 등록 범위 밖이다. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-10-25",
       "note_evidence": {
@@ -243336,7 +243336,7 @@
       "content_evidence": "ABSTRACT_CHECKED",
       "source_audit_status": "recorded",
       "metadata_checked_on": "2026-11-20",
-      "source_audit_note": "2026-10-25 공식 abstract와 publication metadata 및 명시된 project/code 공개 링크 확인. 본문 정독·코드 실행·payload 검증은 이번 등록 범위 밖이다. IEEE 페이지 challenge; IEEE가 기탁한 Crossref DOI metadata로 ICRA 2025를 확인했다.",
+      "source_audit_note": "2026-10-25 공식 abstract와 publication metadata 및 명시된 project/code 공개 링크 확인. 본문 정독·코드 실행·payload 검증은 이번 등록 범위 밖이다. IEEE 페이지 challenge; IEEE가 기탁한 Crossref DOI metadata로 ICRA 2025를 확인했다. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-10-25",
       "note_evidence": {
@@ -243947,7 +243947,7 @@
       "content_evidence": "ABSTRACT_CHECKED",
       "source_audit_status": "recorded",
       "metadata_checked_on": "2026-11-20",
-      "source_audit_note": "2026-10-25 공식 abstract/서지정보 및 명시된 저자 링크 확인. 이번 노트는 abstract 기반이며 본문 전체·코드 실행·payload는 미검증이다.",
+      "source_audit_note": "2026-10-25 공식 abstract/서지정보 및 명시된 저자 링크 확인. 이번 노트는 abstract 기반이며 본문 전체·코드 실행·payload는 미검증이다. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-10-25",
       "note_evidence": {
@@ -244171,7 +244171,7 @@
       "content_evidence": "ABSTRACT_CHECKED",
       "source_audit_status": "recorded",
       "metadata_checked_on": "2026-11-20",
-      "source_audit_note": "2026-10-25 공식 abstract/서지정보 및 명시된 저자 링크 확인. 이번 노트는 abstract 기반이며 본문 전체·코드 실행·payload는 미검증이다. IEEE 페이지 접근 제한으로 publisher-deposited Crossref metadata와 저자 project·arXiv의 RA-L 표기를 대조했다. 본문은 정독하지 않았다.",
+      "source_audit_note": "2026-10-25 공식 abstract/서지정보 및 명시된 저자 링크 확인. 이번 노트는 abstract 기반이며 본문 전체·코드 실행·payload는 미검증이다. IEEE 페이지 접근 제한으로 publisher-deposited Crossref metadata와 저자 project·arXiv의 RA-L 표기를 대조했다. 본문은 정독하지 않았다. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-10-25",
       "note_evidence": {
@@ -244386,7 +244386,7 @@
       "content_evidence": "ABSTRACT_CHECKED",
       "source_audit_status": "recorded",
       "metadata_checked_on": "2026-11-20",
-      "source_audit_note": "2026-10-25 공식 abstract/서지정보 및 명시된 저자 링크 확인. 이번 노트는 abstract 기반이며 본문 전체·코드 실행·payload는 미검증이다. 공식 journal abstract와 서지정보·저자 project 확인. Online-first 2024-09-22, 권호 출판 2025를 구분해 registry year는 2025다.",
+      "source_audit_note": "2026-10-25 공식 abstract/서지정보 및 명시된 저자 링크 확인. 이번 노트는 abstract 기반이며 본문 전체·코드 실행·payload는 미검증이다. 공식 journal abstract와 서지정보·저자 project 확인. Online-first 2024-09-22, 권호 출판 2025를 구분해 registry year는 2025다. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-10-25",
       "note_evidence": {
@@ -244598,7 +244598,7 @@
       "content_evidence": "ABSTRACT_CHECKED",
       "source_audit_status": "recorded",
       "metadata_checked_on": "2026-11-20",
-      "source_audit_note": "2026-10-25 공식 abstract/서지정보 및 명시된 저자 링크 확인. 이번 노트는 abstract 기반이며 본문 전체·코드 실행·payload는 미검증이다. CoRL 개최 2024, PMLR 출판 2025.",
+      "source_audit_note": "2026-10-25 공식 abstract/서지정보 및 명시된 저자 링크 확인. 이번 노트는 abstract 기반이며 본문 전체·코드 실행·payload는 미검증이다. CoRL 개최 2024, PMLR 출판 2025. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-10-25",
       "note_evidence": {
@@ -244807,7 +244807,7 @@
       "content_evidence": "ABSTRACT_CHECKED",
       "source_audit_status": "recorded",
       "metadata_checked_on": "2026-11-20",
-      "source_audit_note": "2026-10-25 공식 abstract/서지정보 및 명시된 저자 링크 확인. 이번 노트는 abstract 기반이며 본문 전체·코드 실행·payload는 미검증이다. ICRA 2025 저자 project 표기와 IEEE-deposited Crossref metadata 대조. IEEE 직접 페이지는 browser challenge; abstract/project 범위만 확인.",
+      "source_audit_note": "2026-10-25 공식 abstract/서지정보 및 명시된 저자 링크 확인. 이번 노트는 abstract 기반이며 본문 전체·코드 실행·payload는 미검증이다. ICRA 2025 저자 project 표기와 IEEE-deposited Crossref metadata 대조. IEEE 직접 페이지는 browser challenge; abstract/project 범위만 확인. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-10-25",
       "note_evidence": {
@@ -245230,7 +245230,7 @@
       "content_evidence": "ABSTRACT_CHECKED",
       "source_audit_status": "recorded",
       "metadata_checked_on": "2026-11-20",
-      "source_audit_note": "2026-10-25 공식 abstract/서지정보 및 명시된 저자 링크 확인. 이번 노트는 abstract 기반이며 본문 전체·코드 실행·payload는 미검증이다.",
+      "source_audit_note": "2026-10-25 공식 abstract/서지정보 및 명시된 저자 링크 확인. 이번 노트는 abstract 기반이며 본문 전체·코드 실행·payload는 미검증이다. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-10-25",
       "note_evidence": {
@@ -245665,7 +245665,7 @@
       "content_evidence": "ABSTRACT_CHECKED",
       "source_audit_status": "recorded",
       "metadata_checked_on": "2026-11-20",
-      "source_audit_note": "2026-10-25 공식 abstract/서지정보 및 명시된 저자 링크 확인. 이번 노트는 abstract 기반이며 본문 전체·코드 실행·payload는 미검증이다. CoRL 개최 2024, PMLR 출판 2025.",
+      "source_audit_note": "2026-10-25 공식 abstract/서지정보 및 명시된 저자 링크 확인. 이번 노트는 abstract 기반이며 본문 전체·코드 실행·payload는 미검증이다. CoRL 개최 2024, PMLR 출판 2025. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-10-25",
       "note_evidence": {
@@ -245877,7 +245877,7 @@
       "content_evidence": "ABSTRACT_CHECKED",
       "source_audit_status": "recorded",
       "metadata_checked_on": "2026-11-20",
-      "source_audit_note": "2026-10-25 공식 abstract/서지정보 및 명시된 저자 링크 확인. 이번 노트는 abstract 기반이며 본문 전체·코드 실행·payload는 미검증이다.",
+      "source_audit_note": "2026-10-25 공식 abstract/서지정보 및 명시된 저자 링크 확인. 이번 노트는 abstract 기반이며 본문 전체·코드 실행·payload는 미검증이다. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-10-25",
       "note_evidence": {
@@ -246485,7 +246485,7 @@
       "content_evidence": "ABSTRACT_CHECKED",
       "source_audit_status": "recorded",
       "metadata_checked_on": "2026-11-20",
-      "source_audit_note": "2026-10-25 공식 abstract/서지정보 및 명시된 저자 링크 확인. 이번 노트는 abstract 기반이며 본문 전체·코드 실행·payload는 미검증이다. CoRL 개최 2024, PMLR 출판 2025.",
+      "source_audit_note": "2026-10-25 공식 abstract/서지정보 및 명시된 저자 링크 확인. 이번 노트는 abstract 기반이며 본문 전체·코드 실행·payload는 미검증이다. CoRL 개최 2024, PMLR 출판 2025. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-10-25",
       "note_evidence": {
@@ -247455,7 +247455,7 @@
       "content_evidence": "ABSTRACT_CHECKED",
       "source_audit_status": "recorded",
       "metadata_checked_on": "2026-11-20",
-      "source_audit_note": "2026-10-28 공식 서지/abstract·저자 project/code 소개 확인. 신규 표준 노트는 abstract 기반이다. 기존 HANDOFF 지정 구간 검토는 별도 source ledger에 있으며 전체 정독·payload·실행 검증을 뜻하지 않는다.",
+      "source_audit_note": "2026-10-28 공식 서지/abstract·저자 project/code 소개 확인. 신규 표준 노트는 abstract 기반이다. 기존 HANDOFF 지정 구간 검토는 별도 source ledger에 있으며 전체 정독·payload·실행 검증을 뜻하지 않는다. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-10-28",
       "note_evidence": {
@@ -247658,7 +247658,7 @@
       "content_evidence": "ABSTRACT_CHECKED",
       "source_audit_status": "recorded",
       "metadata_checked_on": "2026-11-20",
-      "source_audit_note": "2026-10-28 공식 서지/abstract·저자 project/code 소개 확인. 신규 표준 노트는 abstract 기반이다. 기존 HANDOFF 지정 구간 검토는 별도 source ledger에 있으며 전체 정독·payload·실행 검증을 뜻하지 않는다.",
+      "source_audit_note": "2026-10-28 공식 서지/abstract·저자 project/code 소개 확인. 신규 표준 노트는 abstract 기반이다. 기존 HANDOFF 지정 구간 검토는 별도 source ledger에 있으며 전체 정독·payload·실행 검증을 뜻하지 않는다. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-10-28",
       "note_evidence": {
@@ -247871,7 +247871,7 @@
       "content_evidence": "ABSTRACT_CHECKED",
       "source_audit_status": "recorded",
       "metadata_checked_on": "2026-11-20",
-      "source_audit_note": "2026-10-31 공식 서지/abstract·공개 project/code 소개를 재확인했다. 신규 노트는 abstract 기반이며 기존 연구 검토의 지정 본문/code 확인은 work/sources/instruction_revision_review_2026-10-31.json 및 pre_gpu_buildup_review_2026-10-31.json의 별도 범위다. 사용자 정독·native 실행을 뜻하지 않는다.",
+      "source_audit_note": "2026-10-31 공식 서지/abstract·공개 project/code 소개를 재확인했다. 신규 노트는 abstract 기반이며 기존 연구 검토의 지정 본문/code 확인은 work/sources/instruction_revision_review_2026-10-31.json 및 pre_gpu_buildup_review_2026-10-31.json의 별도 범위다. 사용자 정독·native 실행을 뜻하지 않는다. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-10-31",
       "note_evidence": {
@@ -248066,7 +248066,7 @@
       "content_evidence": "ABSTRACT_CHECKED",
       "source_audit_status": "recorded",
       "metadata_checked_on": "2026-11-20",
-      "source_audit_note": "2026-10-31 공식 서지/abstract·공개 project/code 소개를 재확인했다. 신규 노트는 abstract 기반이며 기존 연구 검토의 지정 본문/code 확인은 work/sources/instruction_revision_review_2026-10-31.json 및 pre_gpu_buildup_review_2026-10-31.json의 별도 범위다. 사용자 정독·native 실행을 뜻하지 않는다.",
+      "source_audit_note": "2026-10-31 공식 서지/abstract·공개 project/code 소개를 재확인했다. 신규 노트는 abstract 기반이며 기존 연구 검토의 지정 본문/code 확인은 work/sources/instruction_revision_review_2026-10-31.json 및 pre_gpu_buildup_review_2026-10-31.json의 별도 범위다. 사용자 정독·native 실행을 뜻하지 않는다. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-10-31",
       "note_evidence": {
@@ -248269,7 +248269,7 @@
       "content_evidence": "ABSTRACT_CHECKED",
       "source_audit_status": "recorded",
       "metadata_checked_on": "2026-11-20",
-      "source_audit_note": "2026-10-31 공식 서지/abstract·공개 project/code 소개를 재확인했다. 신규 노트는 abstract 기반이며 기존 연구 검토의 지정 본문/code 확인은 work/sources/instruction_revision_review_2026-10-31.json 및 pre_gpu_buildup_review_2026-10-31.json의 별도 범위다. 사용자 정독·native 실행을 뜻하지 않는다.",
+      "source_audit_note": "2026-10-31 공식 서지/abstract·공개 project/code 소개를 재확인했다. 신규 노트는 abstract 기반이며 기존 연구 검토의 지정 본문/code 확인은 work/sources/instruction_revision_review_2026-10-31.json 및 pre_gpu_buildup_review_2026-10-31.json의 별도 범위다. 사용자 정독·native 실행을 뜻하지 않는다. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-10-31",
       "note_evidence": {
@@ -248476,7 +248476,7 @@
       "content_evidence": "ABSTRACT_CHECKED",
       "source_audit_status": "recorded",
       "metadata_checked_on": "2026-11-20",
-      "source_audit_note": "2026-11-01 공식 서지/abstract·project/code 소개 확인. NeurIPS 2024 Datasets and Benchmarks 공식 proceedings 확인. 신규 노트는 보수적으로 abstract/project 범위이며, 기존 SET의 지정 본문/code 감사는 별도 source ledger를 따른다. 정독·native 실행을 뜻하지 않는다.",
+      "source_audit_note": "2026-11-01 공식 서지/abstract·project/code 소개 확인. NeurIPS 2024 Datasets and Benchmarks 공식 proceedings 확인. 신규 노트는 보수적으로 abstract/project 범위이며, 기존 SET의 지정 본문/code 감사는 별도 source ledger를 따른다. 정독·native 실행을 뜻하지 않는다. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-11-01",
       "note_evidence": {
@@ -248673,7 +248673,7 @@
       "content_evidence": "ABSTRACT_CHECKED",
       "source_audit_status": "recorded",
       "metadata_checked_on": "2026-11-20",
-      "source_audit_note": "2026-11-01 공식 서지/abstract·project/code 소개 확인. arXiv v1 및 저자 project 확인. Robotics 논문이며 동명 ICLR 2025 smartphone-agent benchmark와 다르다. 학회 채택은 확인되지 않아 arXiv로 등록. 신규 노트는 보수적으로 abstract/project 범위이며, 기존 SET의 지정 본문/code 감사는 별도 source ledger를 따른다. 정독·native 실행을 뜻하지 않는다.",
+      "source_audit_note": "2026-11-01 공식 서지/abstract·project/code 소개 확인. arXiv v1 및 저자 project 확인. Robotics 논문이며 동명 ICLR 2025 smartphone-agent benchmark와 다르다. 학회 채택은 확인되지 않아 arXiv로 등록. 신규 노트는 보수적으로 abstract/project 범위이며, 기존 SET의 지정 본문/code 감사는 별도 source ledger를 따른다. 정독·native 실행을 뜻하지 않는다. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-11-01",
       "note_evidence": {
@@ -248882,7 +248882,7 @@
       "content_evidence": "ABSTRACT_CHECKED",
       "source_audit_status": "recorded",
       "metadata_checked_on": "2026-11-20",
-      "source_audit_note": "2026-11-03 CoRL 공식 accepted list의 exact title와 OpenReview gQFYIM5dJy 연결을 확인해 기존 entry를 갱신했다. Spotlight는 별도로 승격하지 않는다. 분석은 11/01 확인한 arXiv v2(2026-10-15)·abstract/project 범위를 유지하며 conference final-text 동등성·정독·native 실행은 미확인이다. 기존 SET의 지정 본문/code 감사는 별도 source ledger를 따른다.",
+      "source_audit_note": "2026-11-03 CoRL 공식 accepted list의 exact title와 OpenReview gQFYIM5dJy 연결을 확인해 기존 entry를 갱신했다. Spotlight는 별도로 승격하지 않는다. 분석은 11/01 확인한 arXiv v2(2026-10-15)·abstract/project 범위를 유지하며 conference final-text 동등성·정독·native 실행은 미확인이다. 기존 SET의 지정 본문/code 감사는 별도 source ledger를 따른다. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-11-01",
       "note_evidence": {
@@ -249301,7 +249301,7 @@
       "content_evidence": "ABSTRACT_CHECKED",
       "source_audit_status": "recorded",
       "metadata_checked_on": "2026-11-20",
-      "source_audit_note": "2026-11-02 공식 proceedings/publisher의 서지·abstract와 저자 project/code 소개를 확인했다. 노트는 abstract/project 기반이며 본문 정독·native 실행을 뜻하지 않는다. 사용자 읽기 상태는 UNREAD 유지.",
+      "source_audit_note": "2026-11-02 공식 proceedings/publisher의 서지·abstract와 저자 project/code 소개를 확인했다. 노트는 abstract/project 기반이며 본문 정독·native 실행을 뜻하지 않는다. 사용자 읽기 상태는 UNREAD 유지. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-11-02",
       "note_evidence": {
@@ -249510,7 +249510,7 @@
       "content_evidence": "ABSTRACT_CHECKED",
       "source_audit_status": "recorded",
       "metadata_checked_on": "2026-11-20",
-      "source_audit_note": "2026-11-02 공식 proceedings/publisher의 서지·abstract와 저자 project/code 소개를 확인했다. 노트는 abstract/project 기반이며 본문 정독·native 실행을 뜻하지 않는다. 사용자 읽기 상태는 UNREAD 유지.",
+      "source_audit_note": "2026-11-02 공식 proceedings/publisher의 서지·abstract와 저자 project/code 소개를 확인했다. 노트는 abstract/project 기반이며 본문 정독·native 실행을 뜻하지 않는다. 사용자 읽기 상태는 UNREAD 유지. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-11-02",
       "note_evidence": {
@@ -249714,7 +249714,7 @@
       "content_evidence": "ABSTRACT_CHECKED",
       "source_audit_status": "recorded",
       "metadata_checked_on": "2026-11-20",
-      "source_audit_note": "2026-11-02 공식 proceedings/publisher의 서지·abstract와 저자 project/code 소개를 확인했다. 노트는 abstract/project 기반이며 본문 정독·native 실행을 뜻하지 않는다. 사용자 읽기 상태는 UNREAD 유지.",
+      "source_audit_note": "2026-11-02 공식 proceedings/publisher의 서지·abstract와 저자 project/code 소개를 확인했다. 노트는 abstract/project 기반이며 본문 정독·native 실행을 뜻하지 않는다. 사용자 읽기 상태는 UNREAD 유지. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-11-02",
       "note_evidence": {
@@ -249916,7 +249916,7 @@
       "content_evidence": "ABSTRACT_CHECKED",
       "source_audit_status": "recorded",
       "metadata_checked_on": "2026-11-20",
-      "source_audit_note": "2026-11-02 공식 proceedings/publisher의 서지·abstract와 저자 project/code 소개를 확인했다. 노트는 abstract/project 기반이며 본문 정독·native 실행을 뜻하지 않는다. 사용자 읽기 상태는 UNREAD 유지.",
+      "source_audit_note": "2026-11-02 공식 proceedings/publisher의 서지·abstract와 저자 project/code 소개를 확인했다. 노트는 abstract/project 기반이며 본문 정독·native 실행을 뜻하지 않는다. 사용자 읽기 상태는 UNREAD 유지. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-11-02",
       "note_evidence": {
@@ -250335,7 +250335,7 @@
       "content_evidence": "ABSTRACT_CHECKED",
       "source_audit_status": "recorded",
       "metadata_checked_on": "2026-11-20",
-      "source_audit_note": "2026-11-02 공식 proceedings/publisher의 서지·abstract와 저자 project/code 소개를 확인했다. 노트는 abstract/project 기반이며 본문 정독·native 실행을 뜻하지 않는다. 사용자 읽기 상태는 UNREAD 유지.",
+      "source_audit_note": "2026-11-02 공식 proceedings/publisher의 서지·abstract와 저자 project/code 소개를 확인했다. 노트는 abstract/project 기반이며 본문 정독·native 실행을 뜻하지 않는다. 사용자 읽기 상태는 UNREAD 유지. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-11-02",
       "note_evidence": {
@@ -250555,7 +250555,7 @@
       "content_evidence": "ABSTRACT_CHECKED",
       "source_audit_status": "recorded",
       "metadata_checked_on": "2026-11-20",
-      "source_audit_note": "2026-11-02 공식 proceedings/publisher의 서지·abstract와 저자 project/code 소개를 확인했다. IEEE indexed publisher 내용으로 게재를 확인했고 직접 본문 접근은 제한적이었다. 노트는 abstract/project 기반이며 본문 정독·native 실행을 뜻하지 않는다. 사용자 읽기 상태는 UNREAD 유지.",
+      "source_audit_note": "2026-11-02 공식 proceedings/publisher의 서지·abstract와 저자 project/code 소개를 확인했다. IEEE indexed publisher 내용으로 게재를 확인했고 직접 본문 접근은 제한적이었다. 노트는 abstract/project 기반이며 본문 정독·native 실행을 뜻하지 않는다. 사용자 읽기 상태는 UNREAD 유지. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-11-02",
       "note_evidence": {
@@ -250763,7 +250763,7 @@
       "content_evidence": "ABSTRACT_CHECKED",
       "source_audit_status": "recorded",
       "metadata_checked_on": "2026-11-20",
-      "source_audit_note": "2026-11-02 공식 proceedings/publisher의 서지·abstract와 저자 project/code 소개를 확인했다. 노트는 abstract/project 기반이며 본문 정독·native 실행을 뜻하지 않는다. 사용자 읽기 상태는 UNREAD 유지.",
+      "source_audit_note": "2026-11-02 공식 proceedings/publisher의 서지·abstract와 저자 project/code 소개를 확인했다. 노트는 abstract/project 기반이며 본문 정독·native 실행을 뜻하지 않는다. 사용자 읽기 상태는 UNREAD 유지. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-11-02",
       "note_evidence": {
@@ -251404,7 +251404,7 @@
       "content_evidence": "FULL_TEXT_CHECKED",
       "source_audit_status": "recorded",
       "metadata_checked_on": "2026-11-20",
-      "source_audit_note": "2026-11-03 공식 venue/서지 재확인; 기존 GAP-VRL 검토의 지정 본문 §3.1–3.4/5.1–5.4/7, Appendix A를 반영. 선택 절 검토이며 전체 논문 정독·native 실행은 아님. CoRL 공식 accepted list에서 exact title/forum을 확인했다. 읽은 것은 arXiv v1이며 final paper 동등성과 공식 학습 code 공개는 미확인이다. 사용자 읽기 상태는 UNREAD 유지.",
+      "source_audit_note": "2026-11-03 공식 venue/서지 재확인; 기존 GAP-VRL 검토의 지정 본문 §3.1–3.4/5.1–5.4/7, Appendix A를 반영. 선택 절 검토이며 전체 논문 정독·native 실행은 아님. CoRL 공식 accepted list에서 exact title/forum을 확인했다. 읽은 것은 arXiv v1이며 final paper 동등성과 공식 학습 code 공개는 미확인이다. 사용자 읽기 상태는 UNREAD 유지. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-11-03",
       "note_evidence": {
@@ -251624,7 +251624,7 @@
       "content_evidence": "FULL_TEXT_CHECKED",
       "source_audit_status": "recorded",
       "metadata_checked_on": "2026-11-20",
-      "source_audit_note": "2026-11-03 공식 venue/서지 재확인; 기존 GAP-VRL 검토의 지정 본문 §4 / Algorithm 1; expo_learner.py selected update paths를 반영. 선택 절 검토이며 전체 논문 정독·native 실행은 아님. 공개 code를 읽었지만 실행하지 않았다. Co-adaptation 결과를 독립 base release 교체 후 동결 editor의 전이 근거로 확대하지 않는다. 사용자 읽기 상태는 UNREAD 유지.",
+      "source_audit_note": "2026-11-03 공식 venue/서지 재확인; 기존 GAP-VRL 검토의 지정 본문 §4 / Algorithm 1; expo_learner.py selected update paths를 반영. 선택 절 검토이며 전체 논문 정독·native 실행은 아님. 공개 code를 읽었지만 실행하지 않았다. Co-adaptation 결과를 독립 base release 교체 후 동결 editor의 전이 근거로 확대하지 않는다. 사용자 읽기 상태는 UNREAD 유지. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-11-03",
       "note_evidence": {
@@ -251844,7 +251844,7 @@
       "content_evidence": "FULL_TEXT_CHECKED",
       "source_audit_status": "recorded",
       "metadata_checked_on": "2026-11-20",
-      "source_audit_note": "2026-11-03 공식 venue/서지 재확인; 기존 GAP-VRL 검토의 지정 본문 §4.2–4.3 / Appendix C; expo_ft.py update_actor/_update_jit를 반영. 선택 절 검토이며 전체 논문 정독·native 실행은 아님. CoRL accepted list와 arXiv v1/code를 별도로 확인했다. 최종본 동일성·native 실행·독립 release 교체 효과는 미검증이다. 사용자 읽기 상태는 UNREAD 유지.",
+      "source_audit_note": "2026-11-03 공식 venue/서지 재확인; 기존 GAP-VRL 검토의 지정 본문 §4.2–4.3 / Appendix C; expo_ft.py update_actor/_update_jit를 반영. 선택 절 검토이며 전체 논문 정독·native 실행은 아님. CoRL accepted list와 arXiv v1/code를 별도로 확인했다. 최종본 동일성·native 실행·독립 release 교체 효과는 미검증이다. 사용자 읽기 상태는 UNREAD 유지. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-11-03",
       "note_evidence": {
@@ -252057,7 +252057,7 @@
       "content_evidence": "FULL_TEXT_CHECKED",
       "source_audit_status": "recorded",
       "metadata_checked_on": "2026-11-20",
-      "source_audit_note": "2026-11-03 공식 venue/서지 재확인; 기존 GAP-VRL 검토의 지정 본문 final paper §4.1–4.3, selected Appendix B.5; project/code README를 반영. 선택 절 검토이며 전체 논문 정독·native 실행은 아님. Final paper의 지정 절만 검토했고 전체 36쪽 정독은 아니다. 공식 code 링크/README 확인과 실행 검증을 구분한다. 사용자 읽기 상태는 UNREAD 유지.",
+      "source_audit_note": "2026-11-03 공식 venue/서지 재확인; 기존 GAP-VRL 검토의 지정 본문 final paper §4.1–4.3, selected Appendix B.5; project/code README를 반영. 선택 절 검토이며 전체 논문 정독·native 실행은 아님. Final paper의 지정 절만 검토했고 전체 36쪽 정독은 아니다. 공식 code 링크/README 확인과 실행 검증을 구분한다. 사용자 읽기 상태는 UNREAD 유지. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-11-03",
       "note_evidence": {
@@ -252279,7 +252279,7 @@
       "content_evidence": "FULL_TEXT_CHECKED",
       "source_audit_status": "recorded",
       "metadata_checked_on": "2026-11-20",
-      "source_audit_note": "2026-11-03 공식 venue/서지 재확인; 기존 GAP-VRL 검토의 지정 본문 v2 IV-B / V-D; assymetric_sac.py critic_loss_fn/actor complete-action path를 반영. 선택 절 검토이며 전체 논문 정독·native 실행은 아님. IEEE 직접 페이지는 접근 제약이 있어 publisher-deposited Crossref와 저자 accepted 표기로 RA-L 11(1), 2026을 확인했다. 2025 DOI/채택일을 issue 연도와 혼동하지 않는다. 사용자 읽기 상태는 UNREAD 유지.",
+      "source_audit_note": "2026-11-03 공식 venue/서지 재확인; 기존 GAP-VRL 검토의 지정 본문 v2 IV-B / V-D; assymetric_sac.py critic_loss_fn/actor complete-action path를 반영. 선택 절 검토이며 전체 논문 정독·native 실행은 아님. IEEE 직접 페이지는 접근 제약이 있어 publisher-deposited Crossref와 저자 accepted 표기로 RA-L 11(1), 2026을 확인했다. 2025 DOI/채택일을 issue 연도와 혼동하지 않는다. 사용자 읽기 상태는 UNREAD 유지. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-11-03",
       "note_evidence": {
@@ -252704,7 +252704,7 @@
       "content_evidence": "FULL_TEXT_CHECKED",
       "source_audit_status": "recorded",
       "metadata_checked_on": "2026-11-20",
-      "source_audit_note": "2026-11-03 공식 venue/서지 재확인; 기존 GAP-VRL 검토의 지정 본문 v2 §4; model/rl/distill_residual_rl_img.py selected filter/loss paths를 반영. 선택 절 검토이며 전체 논문 정독·native 실행은 아님. ICML 공식 metadata와 arXiv v2의 지정 절/code를 확인했다. 현재 deterministic TD3·Q-filter 계획을 DICE-RL 전체 재현으로 부르지 않는다. 사용자 읽기 상태는 UNREAD 유지.",
+      "source_audit_note": "2026-11-03 공식 venue/서지 재확인; 기존 GAP-VRL 검토의 지정 본문 v2 §4; model/rl/distill_residual_rl_img.py selected filter/loss paths를 반영. 선택 절 검토이며 전체 논문 정독·native 실행은 아님. ICML 공식 metadata와 arXiv v2의 지정 절/code를 확인했다. 현재 deterministic TD3·Q-filter 계획을 DICE-RL 전체 재현으로 부르지 않는다. 사용자 읽기 상태는 UNREAD 유지. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-11-03",
       "note_evidence": {
@@ -252913,7 +252913,7 @@
       "content_evidence": "FULL_TEXT_CHECKED",
       "source_audit_status": "recorded",
       "metadata_checked_on": "2026-11-20",
-      "source_audit_note": "2026-11-05: §3–4, §5.1–5.3, Tables 6–7, Appendix A.2.1. 지정 본문 절만 확인; 전체 정독·수식 검증 아님. Venue와 읽은 preprint version을 구별. Native 실행 0; 사용자 읽기 UNREAD.",
+      "source_audit_note": "2026-11-05: §3–4, §5.1–5.3, Tables 6–7, Appendix A.2.1. 지정 본문 절만 확인; 전체 정독·수식 검증 아님. Venue와 읽은 preprint version을 구별. Native 실행 0; 사용자 읽기 UNREAD. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-11-05",
       "note_evidence": {
@@ -253138,7 +253138,7 @@
       "content_evidence": "FULL_TEXT_CHECKED",
       "source_audit_status": "recorded",
       "metadata_checked_on": "2026-11-20",
-      "source_audit_note": "2026-11-05: v6 (2026-11-02), §4.7–4.8, Appendix B. 지정 본문 절만 확인; 전체 정독·수식 검증 아님. Venue와 읽은 preprint version을 구별. Native 실행 0; 사용자 읽기 UNREAD.",
+      "source_audit_note": "2026-11-05: v6 (2026-11-02), §4.7–4.8, Appendix B. 지정 본문 절만 확인; 전체 정독·수식 검증 아님. Venue와 읽은 preprint version을 구별. Native 실행 0; 사용자 읽기 UNREAD. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-11-05",
       "note_evidence": {
@@ -253539,7 +253539,7 @@
       "content_evidence": "FULL_TEXT_CHECKED",
       "source_audit_status": "recorded",
       "metadata_checked_on": "2026-11-20",
-      "source_audit_note": "2026-11-05: v2 §4.2–4.3, Algorithm 1; §5 범위. 지정 본문 절만 확인; 전체 정독·수식 검증 아님. Venue와 읽은 preprint version을 구별. Native 실행 0; 사용자 읽기 UNREAD.",
+      "source_audit_note": "2026-11-05: v2 §4.2–4.3, Algorithm 1; §5 범위. 지정 본문 절만 확인; 전체 정독·수식 검증 아님. Venue와 읽은 preprint version을 구별. Native 실행 0; 사용자 읽기 UNREAD. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-11-05",
       "note_evidence": {
@@ -253751,7 +253751,7 @@
       "content_evidence": "ABSTRACT_CHECKED",
       "source_audit_status": "recorded",
       "metadata_checked_on": "2026-11-20",
-      "source_audit_note": "2026-11-05: 공식 proceedings abstract. abstract 기반 — 본문 수동 확인 필요. Venue와 읽은 preprint version을 구별. Native 실행 0; 사용자 읽기 UNREAD.",
+      "source_audit_note": "2026-11-05: 공식 proceedings abstract. abstract 기반 — 본문 수동 확인 필요. Venue와 읽은 preprint version을 구별. Native 실행 0; 사용자 읽기 UNREAD. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-11-05",
       "note_evidence": {
@@ -253959,7 +253959,7 @@
       "content_evidence": "FULL_TEXT_CHECKED",
       "source_audit_status": "recorded",
       "metadata_checked_on": "2026-11-20",
-      "source_audit_note": "2026-11-05: §3.1–3.3, §4.2, §5 limitations. 지정 본문 절만 확인; 전체 정독·수식 검증 아님. Venue와 읽은 preprint version을 구별. Native 실행 0; 사용자 읽기 UNREAD.",
+      "source_audit_note": "2026-11-05: §3.1–3.3, §4.2, §5 limitations. 지정 본문 절만 확인; 전체 정독·수식 검증 아님. Venue와 읽은 preprint version을 구별. Native 실행 0; 사용자 읽기 UNREAD. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-11-05",
       "note_evidence": {
@@ -254158,7 +254158,7 @@
       "content_evidence": "FULL_TEXT_CHECKED",
       "source_audit_status": "recorded",
       "metadata_checked_on": "2026-11-20",
-      "source_audit_note": "2026-11-05: §4.2–4.3, §5, Appendix C.1. 지정 본문 절만 확인; 전체 정독·수식 검증 아님. Venue와 읽은 preprint version을 구별. Native 실행 0; 사용자 읽기 UNREAD.",
+      "source_audit_note": "2026-11-05: §4.2–4.3, §5, Appendix C.1. 지정 본문 절만 확인; 전체 정독·수식 검증 아님. Venue와 읽은 preprint version을 구별. Native 실행 0; 사용자 읽기 UNREAD. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-11-05",
       "note_evidence": {
@@ -254376,7 +254376,7 @@
       "content_evidence": "FULL_TEXT_CHECKED",
       "source_audit_status": "recorded",
       "metadata_checked_on": "2026-11-20",
-      "source_audit_note": "2026-11-05: §3, §5.5, §6 limitations. 지정 본문 절만 확인; 전체 정독·수식 검증 아님. Venue와 읽은 preprint version을 구별. Native 실행 0; 사용자 읽기 UNREAD.",
+      "source_audit_note": "2026-11-05: §3, §5.5, §6 limitations. 지정 본문 절만 확인; 전체 정독·수식 검증 아님. Venue와 읽은 preprint version을 구별. Native 실행 0; 사용자 읽기 UNREAD. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-11-05",
       "note_evidence": {
@@ -254584,7 +254584,7 @@
       "content_evidence": "ABSTRACT_CHECKED",
       "source_audit_status": "recorded",
       "metadata_checked_on": "2026-11-20",
-      "source_audit_note": "2026-11-05: 공식 proceedings abstract; arXiv identity. abstract 기반 — 본문 수동 확인 필요. Venue와 읽은 preprint version을 구별. Native 실행 0; 사용자 읽기 UNREAD.",
+      "source_audit_note": "2026-11-05: 공식 proceedings abstract; arXiv identity. abstract 기반 — 본문 수동 확인 필요. Venue와 읽은 preprint version을 구별. Native 실행 0; 사용자 읽기 UNREAD. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-11-05",
       "note_evidence": {
@@ -254786,7 +254786,7 @@
       "content_evidence": "FULL_TEXT_CHECKED",
       "source_audit_status": "recorded",
       "metadata_checked_on": "2026-11-20",
-      "source_audit_note": "2026-11-05: §2–3, Appendix D–E. 지정 본문 절만 확인; 전체 정독·수식 검증 아님. Venue와 읽은 preprint version을 구별. Native 실행 0; 사용자 읽기 UNREAD.",
+      "source_audit_note": "2026-11-05: §2–3, Appendix D–E. 지정 본문 절만 확인; 전체 정독·수식 검증 아님. Venue와 읽은 preprint version을 구별. Native 실행 0; 사용자 읽기 UNREAD. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-11-05",
       "note_evidence": {
@@ -254993,7 +254993,7 @@
       "content_evidence": "FULL_TEXT_CHECKED",
       "source_audit_status": "recorded",
       "metadata_checked_on": "2026-11-20",
-      "source_audit_note": "2026-11-05: §1, §4, §6, Appendix B.2/C.3. 지정 본문 절만 확인; 전체 정독·수식 검증 아님. Venue와 읽은 preprint version을 구별. Native 실행 0; 사용자 읽기 UNREAD.",
+      "source_audit_note": "2026-11-05: §1, §4, §6, Appendix B.2/C.3. 지정 본문 절만 확인; 전체 정독·수식 검증 아님. Venue와 읽은 preprint version을 구별. Native 실행 0; 사용자 읽기 UNREAD. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-11-05",
       "note_evidence": {
@@ -255633,7 +255633,7 @@
       "content_evidence": "ABSTRACT_CHECKED",
       "source_audit_status": "recorded",
       "metadata_checked_on": "2026-11-20",
-      "source_audit_note": "2026-11-06: 공식 proceedings metadata·abstract 확인. 이 5개 노트는 abstract 범위이며 최종 본문 정독/실행 완료가 아니다. 주제 dossier의 지정 preprint/code 읽기와 구별한다.",
+      "source_audit_note": "2026-11-06: 공식 proceedings metadata·abstract 확인. 이 5개 노트는 abstract 범위이며 최종 본문 정독/실행 완료가 아니다. 주제 dossier의 지정 preprint/code 읽기와 구별한다. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-11-06",
       "note_evidence": {
@@ -255834,7 +255834,7 @@
       "content_evidence": "ABSTRACT_CHECKED",
       "source_audit_status": "recorded",
       "metadata_checked_on": "2026-11-20",
-      "source_audit_note": "2026-11-07: 공식 metadata/abstract·저자 project/README 확인. arXiv v2(2026-10-05) 제목·저자·abstract 기준. Project는 과거 제목과 Code placeholder를 유지한다. Main-conference 채택/실행 code는 미확인. Dossier의 지정 본문 검토를 이 5개 노트의 전체 정독으로 승격하지 않는다. 사용자 reading status UNREAD 유지.",
+      "source_audit_note": "2026-11-07: 공식 metadata/abstract·저자 project/README 확인. arXiv v2(2026-10-05) 제목·저자·abstract 기준. Project는 과거 제목과 Code placeholder를 유지한다. Main-conference 채택/실행 code는 미확인. Dossier의 지정 본문 검토를 이 5개 노트의 전체 정독으로 승격하지 않는다. 사용자 reading status UNREAD 유지. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-11-07",
       "note_evidence": {
@@ -256044,7 +256044,7 @@
       "content_evidence": "ABSTRACT_CHECKED",
       "source_audit_status": "recorded",
       "metadata_checked_on": "2026-11-20",
-      "source_audit_note": "2026-11-07: 공식 metadata/abstract·저자 project/README 확인. IEEE-deposited Crossref metadata로 ICRA 2024 title/DOI 확인; arXiv abstract·저자 README 검토. 저장소 heading의 Semantic은 alias로만 보존한다. 사용자 reading status UNREAD 유지.",
+      "source_audit_note": "2026-11-07: 공식 metadata/abstract·저자 project/README 확인. IEEE-deposited Crossref metadata로 ICRA 2024 title/DOI 확인; arXiv abstract·저자 README 검토. 저장소 heading의 Semantic은 alias로만 보존한다. 사용자 reading status UNREAD 유지. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-11-07",
       "note_evidence": {
@@ -256248,7 +256248,7 @@
       "content_evidence": "ABSTRACT_CHECKED",
       "source_audit_status": "recorded",
       "metadata_checked_on": "2026-11-20",
-      "source_audit_note": "2026-11-07: 공식 metadata/abstract·저자 project/README 확인. CoRL 행사 연도 2024, PMLR270 발행 연도 2025를 구분. 공식 proceedings와 저자 project/code 확인; OpenReview forum은 challenge로 본문 접근 실패. Project의 Data Coming Soon과 abstract의 공개 주장을 구분하여 data_status는 미확인으로 둔다. 사용자 reading status UNREAD 유지.",
+      "source_audit_note": "2026-11-07: 공식 metadata/abstract·저자 project/README 확인. CoRL 행사 연도 2024, PMLR270 발행 연도 2025를 구분. 공식 proceedings와 저자 project/code 확인; OpenReview forum은 challenge로 본문 접근 실패. Project의 Data Coming Soon과 abstract의 공개 주장을 구분하여 data_status는 미확인으로 둔다. 사용자 reading status UNREAD 유지. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-11-07",
       "note_evidence": {
@@ -256454,7 +256454,7 @@
       "content_evidence": "ABSTRACT_CHECKED",
       "source_audit_status": "recorded",
       "metadata_checked_on": "2026-11-20",
-      "source_audit_note": "2026-11-07: 공식 metadata/abstract·저자 project/README 확인. NeurIPS2025 공식 proceedings metadata/abstract와 저자 project/README 확인. 본문 전체·공개 구현 실행은 미확인. 사용자 reading status UNREAD 유지.",
+      "source_audit_note": "2026-11-07: 공식 metadata/abstract·저자 project/README 확인. NeurIPS2025 공식 proceedings metadata/abstract와 저자 project/README 확인. 본문 전체·공개 구현 실행은 미확인. 사용자 reading status UNREAD 유지. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-11-07",
       "note_evidence": {
@@ -256660,7 +256660,7 @@
       "content_evidence": "ABSTRACT_CHECKED",
       "source_audit_status": "recorded",
       "metadata_checked_on": "2026-11-20",
-      "source_audit_note": "2026-11-07: 공식 metadata/abstract·저자 project/README 확인. 최초 preprint2025, 최신 v2는2026-06-08. 공식 project/저자 code 확인; 이번 확인으로 main-conference 채택을 확정하지 않는다. 사용자 reading status UNREAD 유지.",
+      "source_audit_note": "2026-11-07: 공식 metadata/abstract·저자 project/README 확인. 최초 preprint2025, 최신 v2는2026-06-08. 공식 project/저자 code 확인; 이번 확인으로 main-conference 채택을 확정하지 않는다. 사용자 reading status UNREAD 유지. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-11-07",
       "note_evidence": {
@@ -256868,7 +256868,7 @@
       "content_evidence": "ABSTRACT_CHECKED",
       "source_audit_status": "recorded",
       "metadata_checked_on": "2026-11-20",
-      "source_audit_note": "2026-11-07–08: official metadata/abstract 및 저자 project/repository 공개 범위 확인.  본문 전체 정독·코드 실행·독립 성능 검증 아님. 사용자 reading status UNREAD 유지.",
+      "source_audit_note": "2026-11-07–08: official metadata/abstract 및 저자 project/repository 공개 범위 확인.  본문 전체 정독·코드 실행·독립 성능 검증 아님. 사용자 reading status UNREAD 유지. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-11-08",
       "note_evidence": {
@@ -257085,7 +257085,7 @@
       "content_evidence": "ABSTRACT_CHECKED",
       "source_audit_status": "recorded",
       "metadata_checked_on": "2026-11-20",
-      "source_audit_note": "2026-11-07–08: official metadata/abstract 및 저자 project/repository 공개 범위 확인.  본문 전체 정독·코드 실행·독립 성능 검증 아님. 사용자 reading status UNREAD 유지.",
+      "source_audit_note": "2026-11-07–08: official metadata/abstract 및 저자 project/repository 공개 범위 확인.  본문 전체 정독·코드 실행·독립 성능 검증 아님. 사용자 reading status UNREAD 유지. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-11-08",
       "note_evidence": {
@@ -257285,7 +257285,7 @@
       "content_evidence": "ABSTRACT_CHECKED",
       "source_audit_status": "recorded",
       "metadata_checked_on": "2026-11-20",
-      "source_audit_note": "2026-11-07–08: official metadata/abstract 및 저자 project/repository 공개 범위 확인.  본문 전체 정독·코드 실행·독립 성능 검증 아님. 사용자 reading status UNREAD 유지.",
+      "source_audit_note": "2026-11-07–08: official metadata/abstract 및 저자 project/repository 공개 범위 확인.  본문 전체 정독·코드 실행·독립 성능 검증 아님. 사용자 reading status UNREAD 유지. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-11-08",
       "note_evidence": {
@@ -257705,7 +257705,7 @@
       "content_evidence": "ABSTRACT_CHECKED",
       "source_audit_status": "recorded",
       "metadata_checked_on": "2026-11-20",
-      "source_audit_note": "2026-11-07–08: official metadata/abstract 및 저자 project/repository 공개 범위 확인. RSS title와 arXiv의 navigation/manipulation 순서가 다르지만 같은 연구다. Simulator-agnostic assets와 모든 backend의 실행 지원을 구분한다. 본문 전체 정독·코드 실행·독립 성능 검증 아님. 사용자 reading status UNREAD 유지.",
+      "source_audit_note": "2026-11-07–08: official metadata/abstract 및 저자 project/repository 공개 범위 확인. RSS title와 arXiv의 navigation/manipulation 순서가 다르지만 같은 연구다. Simulator-agnostic assets와 모든 backend의 실행 지원을 구분한다. 본문 전체 정독·코드 실행·독립 성능 검증 아님. 사용자 reading status UNREAD 유지. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-11-08",
       "note_evidence": {
@@ -258151,7 +258151,7 @@
       "content_evidence": "ABSTRACT_CHECKED",
       "source_audit_status": "recorded",
       "metadata_checked_on": "2026-11-20",
-      "source_audit_note": "2026-11-07–08: official metadata/abstract 및 저자 project/repository 공개 범위 확인. Force Policy 원 논문만 등록하며 FP2 후속 extension의 평가를 합치지 않는다. 본문 전체 정독·코드 실행·독립 성능 검증 아님. 사용자 reading status UNREAD 유지.",
+      "source_audit_note": "2026-11-07–08: official metadata/abstract 및 저자 project/repository 공개 범위 확인. Force Policy 원 논문만 등록하며 FP2 후속 extension의 평가를 합치지 않는다. 본문 전체 정독·코드 실행·독립 성능 검증 아님. 사용자 reading status UNREAD 유지. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-11-08",
       "note_evidence": {
@@ -258366,7 +258366,7 @@
       "content_evidence": "ABSTRACT_CHECKED",
       "source_audit_status": "recorded",
       "metadata_checked_on": "2026-11-20",
-      "source_audit_note": "2026-11-07–08: official metadata/abstract 및 저자 project/repository 공개 범위 확인.  본문 전체 정독·코드 실행·독립 성능 검증 아님. 사용자 reading status UNREAD 유지.",
+      "source_audit_note": "2026-11-07–08: official metadata/abstract 및 저자 project/repository 공개 범위 확인.  본문 전체 정독·코드 실행·독립 성능 검증 아님. 사용자 reading status UNREAD 유지. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-11-08",
       "note_evidence": {
@@ -258577,7 +258577,7 @@
       "content_evidence": "ABSTRACT_CHECKED",
       "source_audit_status": "recorded",
       "metadata_checked_on": "2026-11-20",
-      "source_audit_note": "2026-11-07–08: official metadata/abstract 및 저자 project/repository 공개 범위 확인. RSS와 최신 arXiv의 baseline 수가 다르므로 원 논문·후속 버전을 구별한다. 본문 전체 정독·코드 실행·독립 성능 검증 아님. 사용자 reading status UNREAD 유지.",
+      "source_audit_note": "2026-11-07–08: official metadata/abstract 및 저자 project/repository 공개 범위 확인. RSS와 최신 arXiv의 baseline 수가 다르므로 원 논문·후속 버전을 구별한다. 본문 전체 정독·코드 실행·독립 성능 검증 아님. 사용자 reading status UNREAD 유지. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-11-08",
       "note_evidence": {
@@ -258784,7 +258784,7 @@
       "content_evidence": "ABSTRACT_CHECKED",
       "source_audit_status": "recorded",
       "metadata_checked_on": "2026-11-20",
-      "source_audit_note": "2026-11-07–08: official metadata/abstract 및 저자 project/repository 공개 범위 확인.  본문 전체 정독·코드 실행·독립 성능 검증 아님. 사용자 reading status UNREAD 유지.",
+      "source_audit_note": "2026-11-07–08: official metadata/abstract 및 저자 project/repository 공개 범위 확인.  본문 전체 정독·코드 실행·독립 성능 검증 아님. 사용자 reading status UNREAD 유지. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-11-08",
       "note_evidence": {
@@ -258993,7 +258993,7 @@
       "content_evidence": "ABSTRACT_CHECKED",
       "source_audit_status": "recorded",
       "metadata_checked_on": "2026-11-20",
-      "source_audit_note": "2026-11-07–08: official metadata/abstract 및 저자 project/repository 공개 범위 확인.  본문 전체 정독·코드 실행·독립 성능 검증 아님. 사용자 reading status UNREAD 유지.",
+      "source_audit_note": "2026-11-07–08: official metadata/abstract 및 저자 project/repository 공개 범위 확인.  본문 전체 정독·코드 실행·독립 성능 검증 아님. 사용자 reading status UNREAD 유지. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-11-08",
       "note_evidence": {
@@ -259200,7 +259200,7 @@
       "content_evidence": "ABSTRACT_CHECKED",
       "source_audit_status": "recorded",
       "metadata_checked_on": "2026-11-20",
-      "source_audit_note": "2026-11-07–08: official metadata/abstract 및 저자 project/repository 공개 범위 확인.  본문 전체 정독·코드 실행·독립 성능 검증 아님. 사용자 reading status UNREAD 유지.",
+      "source_audit_note": "2026-11-07–08: official metadata/abstract 및 저자 project/repository 공개 범위 확인.  본문 전체 정독·코드 실행·독립 성능 검증 아님. 사용자 reading status UNREAD 유지. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-11-08",
       "note_evidence": {
@@ -259426,7 +259426,7 @@
       "content_evidence": "ABSTRACT_CHECKED",
       "source_audit_status": "recorded",
       "metadata_checked_on": "2026-11-20",
-      "source_audit_note": "2026-11-07–08: official metadata/abstract 및 저자 project/repository 공개 범위 확인. 새 과제별 추가 시연이 없다는 주장과 사전학습에 사용한 Open-X 및 초기 시연을 구별한다. 본문 전체 정독·코드 실행·독립 성능 검증 아님. 사용자 reading status UNREAD 유지.",
+      "source_audit_note": "2026-11-07–08: official metadata/abstract 및 저자 project/repository 공개 범위 확인. 새 과제별 추가 시연이 없다는 주장과 사전학습에 사용한 Open-X 및 초기 시연을 구별한다. 본문 전체 정독·코드 실행·독립 성능 검증 아님. 사용자 reading status UNREAD 유지. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-11-08",
       "note_evidence": {
@@ -260043,7 +260043,7 @@
       "content_evidence": "ABSTRACT_CHECKED",
       "source_audit_status": "recorded",
       "metadata_checked_on": "2026-11-20",
-      "source_audit_note": "2026-11-07–08: official metadata/abstract 및 저자 project/repository 공개 범위 확인.  본문 전체 정독·코드 실행·독립 성능 검증 아님. 사용자 reading status UNREAD 유지.",
+      "source_audit_note": "2026-11-07–08: official metadata/abstract 및 저자 project/repository 공개 범위 확인.  본문 전체 정독·코드 실행·독립 성능 검증 아님. 사용자 reading status UNREAD 유지. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-11-08",
       "note_evidence": {
@@ -260465,7 +260465,7 @@
       "content_evidence": "ABSTRACT_CHECKED",
       "source_audit_status": "recorded",
       "metadata_checked_on": "2026-11-20",
-      "source_audit_note": "2026-11-07–08: official metadata/abstract 및 저자 project/repository 공개 범위 확인.  본문 전체 정독·코드 실행·독립 성능 검증 아님. 사용자 reading status UNREAD 유지.",
+      "source_audit_note": "2026-11-07–08: official metadata/abstract 및 저자 project/repository 공개 범위 확인.  본문 전체 정독·코드 실행·독립 성능 검증 아님. 사용자 reading status UNREAD 유지. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-11-08",
       "note_evidence": {

@@ -1,6 +1,6 @@
 # Force Policy: Learning Hybrid Force-Position Control Policy under Interaction Frame for Contact-Rich Manipulation
 
-> Evidence maturity: `ABSTRACT_CHECKED`. abstract 기반 — 본문 수동 확인 필요.
+> Evidence maturity: `ABSTRACT_CHECKED`. 요약과 핵심 기여 두 개는 아래에 표시한 원문 쪽수에서 확인했다. 나머지 분석은 각 절에 적힌 근거 범위를 따른다.
 > 자동 작성 노트는 실제 정독을 뜻하지 않는다. 사용자 reading status는 UNREAD로 시작한다.
 
 - Year/Venue: 2026 / RSS
@@ -14,15 +14,16 @@
 - Venue verification: https://roboticsproceedings.org/rss22/p128.html
 - Code/Project: https://force-policy.github.io/
 - Code: https://github.com/force-policy/ForcePolicy
-- Source audit: 2026-11-07–08: official metadata/abstract 및 저자 project/repository 공개 범위 확인. Force Policy 원 논문만 등록하며 FP2 후속 extension의 평가를 합치지 않는다. 본문 전체 정독·코드 실행·독립 성능 검증 아님. 사용자 reading status UNREAD 유지.
+- Source audit: 2026-11-07–08: official metadata/abstract 및 저자 project/repository 공개 범위 확인. Force Policy 원 논문만 등록하며 FP2 후속 extension의 평가를 합치지 않는다. 본문 전체 정독·코드 실행·독립 성능 검증 아님. 사용자 reading status UNREAD 유지. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.
 
 ## Problem and Importance
 
-전역 시각 행동 결정과 접촉 안정화에는 서로 다른 피드백과 시간척도가 필요하다.
+Force Policy는 접촉 중 힘을 조절할 방향과 위치를 제어할 방향을 나누는 좌표계를 시연에서 복원해 접촉 조작에 사용한다. [PDF 1쪽](https://roboticsproceedings.org/rss22/p128.pdf#page=1)
 
 ## Core Idea and Contribution
 
-시연에서 interaction frame을 복원해 전역 시각 정책과 국소 hybrid force-position 제어를 구성한다.
+- 비접촉 구간의 움직임은 전역 시각 정책이 정하고 접촉 중에는 고주파 힘 피드백을 쓰는 국소 정책이 좌표계를 추정해 힘·위치를 함께 제어한다. [PDF 3쪽](https://roboticsproceedings.org/rss22/p128.pdf#page=3) · [PDF 4쪽](https://roboticsproceedings.org/rss22/p128.pdf#page=4) · [PDF 5쪽](https://roboticsproceedings.org/rss22/p128.pdf#page=5)
+- 실제 로봇의 접촉 과제에서 물체 형상과 물성이 달라질 때 작업 성공뿐 아니라 목표 힘의 추종 정도와 접촉 안정성도 평가했다. [PDF 6쪽](https://roboticsproceedings.org/rss22/p128.pdf#page=6) · [PDF 7쪽](https://roboticsproceedings.org/rss22/p128.pdf#page=7) · [PDF 8쪽](https://roboticsproceedings.org/rss22/p128.pdf#page=8)
 
 ## Observation–State–Action Interface
 
@@ -32,7 +33,7 @@ vision으로 접근하고 접촉 시 힘 피드백·interaction frame으로 제�
 
 실제 contact-rich 조작과 새로운 형상·물성 객체를 평가한다.
 
-근거: [공식 paper/abstract](https://roboticsproceedings.org/rss22/p128.html) · [저자 project/code](https://force-policy.github.io/) · [공식 code](https://github.com/force-policy/ForcePolicy). 정확한 수치·baseline fairness·failure 범위는 본문 확인 전까지 확정하지 않는다.
+근거: [공식 paper/abstract](https://roboticsproceedings.org/rss22/p128.html) · [저자 project/code](https://force-policy.github.io/) · [공식 code](https://github.com/force-policy/ForcePolicy). 문장에 인용한 결과 외의 수치, 기준선의 비교 조건과 실패 범위는 추가 확인이 필요하다.
 
 ## Why This Paper Is Here — Researcher Interpretation
 

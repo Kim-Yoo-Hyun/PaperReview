@@ -1,6 +1,6 @@
 # CoRe-VLA: Preserving Cross-View Coordination in VLAs under Camera Shifts
 
-> Evidence maturity: `ABSTRACT_CHECKED`. abstract 기반 — 본문 수동 확인 필요.
+> Evidence maturity: `ABSTRACT_CHECKED`. 요약과 핵심 기여 두 개는 아래에 표시한 원문 쪽수에서 확인했다. 나머지 분석은 각 절에 적힌 근거 범위를 따른다.
 > 자동 작성 노트는 실제 정독을 뜻하지 않는다. 사용자 reading status는 UNREAD로 시작한다.
 
 - Year/Venue: 2026 / arXiv
@@ -14,15 +14,16 @@
 - Venue verification: https://arxiv.org/abs/2609.37150
 - Code/Project: not identified
 - Code: not_identified
-- Source audit: 2026-10-21: official abstract / author project 확인. 5개 note는 abstract 기반이며 사용자 정독을 의미하지 않는다.
+- Source audit: 2026-10-21: official abstract / author project 확인. 5개 note는 abstract 기반이며 사용자 정독을 의미하지 않는다. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.
 
 ## Problem and Importance
 
-외부 카메라 이동으로 VLA의 global/wrist-view 협력이 깨지는 문제다.
+카메라 이동을 다루는 CoRe-VLA는 장면을 정책이 학습한 시점으로 다시 렌더링해 외부 카메라와 손목 카메라 사이의 협응을 복원한다. [PDF 1쪽](https://arxiv.org/pdf/2609.37150v1#page=1)
 
 ## Core Idea and Contribution
 
-Point-cloud reprojection과 render 복원, execution alignment로 training view를 복구한다.
+- RGB-D 점군을 다시 투영한 영상의 결함을 복원하고, 이미 실행한 궤적에 맞춰 비동기 행동 출력을 정렬한다. [PDF 5쪽](https://arxiv.org/pdf/2609.37150v1#page=5) · [PDF 6쪽](https://arxiv.org/pdf/2609.37150v1#page=6)
+- 카메라 위치를 바꾼 실물 조작과 LIBERO 계열 과제에서 기존 VLA를 미세조정하지 않고 얻는 성공률 변화를 비교했다. [PDF 7쪽](https://arxiv.org/pdf/2609.37150v1#page=7) · [PDF 8쪽](https://arxiv.org/pdf/2609.37150v1#page=8)
 
 ## Observation–State–Action Interface
 
@@ -32,7 +33,7 @@ RGB-D·카메라 관계 → 복원 영상 → frozen VLA action.
 
 5 real-robot task, LIBERO-100와 LIBERO-Plus를 보고한다.
 
-근거: [공식 paper/abstract](https://arxiv.org/abs/2609.37150) · 저자 프로젝트·코드 주소 미확인. 정확한 수치·baseline fairness·failure 범위는 본문 확인 전까지 확정하지 않는다.
+근거: [공식 paper/abstract](https://arxiv.org/abs/2609.37150) · 저자 프로젝트·코드 주소 미확인. 문장에 인용한 결과 외의 수치, 기준선의 비교 조건과 실패 범위는 추가 확인이 필요하다.
 
 ## Why This Paper Is Here — Researcher Interpretation
 

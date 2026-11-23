@@ -12,13 +12,16 @@
 - Venue verification: main-conference acceptance unverified; preprint으로 등록
 - Code/Project: https://anonymous.4open.science/r/mavla_rft-2BC0/
 - Code: https://anonymous.4open.science/r/mavla_rft-2BC0/
-- Source audit: 2026-11-05: §4.2–4.3, §5, Appendix C.1. 지정 본문 절만 확인; 전체 정독·수식 검증 아님. Venue와 읽은 preprint version을 구별. Native 실행 0; 사용자 읽기 UNREAD.
+- Source audit: 2026-11-05: §4.2–4.3, §5, Appendix C.1. 지정 본문 절만 확인; 전체 정독·수식 검증 아님. Venue와 읽은 preprint version을 구별. Native 실행 0; 사용자 읽기 UNREAD. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.
 
-## Problem and Contribution
+## Problem and Importance
 
-단일 로봇 사전학습 VLA에 협력 기술을 부여하고 시연 이상의 성능으로 개선한다.
+이 연구는 협동 VLA가 반복해서 실패하는 초기 조건에서 시연을 수집하고 각 로봇의 행동을 구분해 강화학습으로 정책을 개선한다. [PDF 1쪽](https://arxiv.org/pdf/2609.36588v1#page=1)
 
-실패 초기조건 중심 데이터 수집, agent별 positive-advantage filtering, 동결 VLA의 latent-noise RL을 순차 적용한다.
+## Core Idea and Contribution
+
+- 오프라인 자료에서 각 에이전트의 양의 어드밴티지를 이용하고 이후 고정 VLA의 잠재 잡음 선택을 강화학습으로 갱신한다. [PDF 4쪽](https://arxiv.org/pdf/2609.36588v1#page=4) · [PDF 5쪽](https://arxiv.org/pdf/2609.36588v1#page=5)
+- 협동 시뮬레이션 과제와 두 대의 실제 Franka를 이용해 시연만으로 학습한 정책 및 다른 강화학습 방식과 비교했다. [PDF 6쪽](https://arxiv.org/pdf/2609.36588v1#page=6) · [PDF 7쪽](https://arxiv.org/pdf/2609.36588v1#page=7) · [PDF 8쪽](https://arxiv.org/pdf/2609.36588v1#page=8)
 
 ## Scope and Limitation
 

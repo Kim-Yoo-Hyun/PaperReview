@@ -1,6 +1,6 @@
 # Towards Generalizable Safety in Crowd Navigation via Conformal Uncertainty Handling
 
-> Evidence maturity: `ABSTRACT_CHECKED`. abstract 기반 — 본문 수동 확인 필요.
+> Evidence maturity: `ABSTRACT_CHECKED`. 요약과 핵심 기여 두 개는 아래에 표시한 원문 쪽수에서 확인했다. 나머지 분석은 각 절에 적힌 근거 범위를 따른다.
 > 자동 작성 노트는 실제 정독을 뜻하지 않는다. 사용자 reading status는 UNREAD로 시작한다.
 
 - Year/Venue: 2025 / CoRL
@@ -14,15 +14,16 @@
 - Venue verification: https://proceedings.mlr.press/v305/yao25a.html
 - Code/Project: not identified
 - Code: not_identified
-- Source audit: 2026-10-25 공식 abstract와 publication metadata 및 명시된 project/code 공개 링크 확인. 본문 정독·코드 실행·payload 검증은 이번 등록 범위 밖이다.
+- Source audit: 2026-10-25 공식 abstract와 publication metadata 및 명시된 project/code 공개 링크 확인. 본문 정독·코드 실행·payload 검증은 이번 등록 범위 밖이다. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.
 
 ## Problem and Importance
 
-군중 행동 분포가 바뀌면 학습된 navigation policy 안전성이 저하될 수 있다.
+이 연구는 보행자 이동 예측의 불확실성을 반영해 낯선 군중에서도 충돌을 줄이는 로봇 내비게이션 정책을 학습한다. [PDF 1쪽](https://raw.githubusercontent.com/mlresearch/v305/d42e9e994b3821cca9121500c717f9a87c7cb4f6/assets/yao25a/yao25a.pdf#page=1)
 
 ## Core Idea and Contribution
 
-Adaptive conformal prediction의 불확실성을 관측에 넣고 constrained RL로 행동을 조절한다.
+- 적응형 컨포멀 예측으로 보행자 궤적의 예측 구간을 갱신하고 이를 제약 강화학습 정책의 관측에 넣는다. [PDF 3쪽](https://raw.githubusercontent.com/mlresearch/v305/d42e9e994b3821cca9121500c717f9a87c7cb4f6/assets/yao25a/yao25a.pdf#page=3) · [PDF 4쪽](https://raw.githubusercontent.com/mlresearch/v305/d42e9e994b3821cca9121500c717f9a87c7cb4f6/assets/yao25a/yao25a.pdf#page=4)
+- 보행자의 속도·방식·집단 이동을 바꾼 시뮬레이션과 실제 군중 환경에서 충돌 회피와 목표 도달을 평가했다. [PDF 6쪽](https://raw.githubusercontent.com/mlresearch/v305/d42e9e994b3821cca9121500c717f9a87c7cb4f6/assets/yao25a/yao25a.pdf#page=6) · [PDF 7쪽](https://raw.githubusercontent.com/mlresearch/v305/d42e9e994b3821cca9121500c717f9a87c7cb4f6/assets/yao25a/yao25a.pdf#page=7)
 
 ## Observation–State–Action Interface
 
@@ -32,7 +33,7 @@ Pedestrian 예측·uncertainty → navigation policy → 이동 행동.
 
 속도·행동 정책·집단 변화 및 실로봇 군중 navigation을 보고한다.
 
-근거: [공식 paper/abstract](https://proceedings.mlr.press/v305/yao25a.html). 정확한 수치·baseline fairness·failure 범위는 본문 확인 전까지 확정하지 않는다.
+근거: [공식 paper/abstract](https://proceedings.mlr.press/v305/yao25a.html). 문장에 인용한 결과 외의 수치, 기준선의 비교 조건과 실패 범위는 추가 확인이 필요하다.
 
 ## Why This Paper Is Here — Researcher Interpretation
 

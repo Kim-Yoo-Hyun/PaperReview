@@ -12,13 +12,16 @@
 - Venue verification: main-conference acceptance unverified; preprint으로 등록
 - Code/Project: not identified
 - Code: not_identified
-- Source audit: 2026-11-05: §2–3, Appendix D–E. 지정 본문 절만 확인; 전체 정독·수식 검증 아님. Venue와 읽은 preprint version을 구별. Native 실행 0; 사용자 읽기 UNREAD.
+- Source audit: 2026-11-05: §2–3, Appendix D–E. 지정 본문 절만 확인; 전체 정독·수식 검증 아님. Venue와 읽은 preprint version을 구별. Native 실행 0; 사용자 읽기 UNREAD. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.
 
-## Problem and Contribution
+## Problem and Importance
 
-검색 representation의 품질이 downstream robot success에 어떻게 연결되는지 조사한다.
+이 연구는 RICL 기반 VLA에 제공할 시연을 고르는 검색 방식이 지표상 검색 품질과 실제 조작 성공에 미치는 영향을 비교한다. [PDF 1쪽](https://arxiv.org/pdf/2610.05492v1#page=1)
 
-같은 RICL 계열 정책에서 image, image+state, VLA feature, random retrieval을 비교한다.
+## Core Idea and Contribution
+
+- 영상 유사도·로봇 상태를 추가한 검색·VLA 백본 특징·무작위 검색을 같은 적응 설정에서 비교했다. [PDF 2쪽](https://arxiv.org/pdf/2610.05492v1#page=2) · [PDF 3쪽](https://arxiv.org/pdf/2610.05492v1#page=3)
+- 항상 우세한 검색 방식은 없었고 통상적인 검색 품질 지표와 작업 성공이 일치하지 않거나 유사한 다른 과제의 시연이 도움이 되는 사례를 보고했다. [PDF 3쪽](https://arxiv.org/pdf/2610.05492v1#page=3) · [PDF 4쪽](https://arxiv.org/pdf/2610.05492v1#page=4)
 
 ## Scope and Limitation
 

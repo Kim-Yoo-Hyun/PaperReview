@@ -1,6 +1,6 @@
 # Tac2Real: Reliable and GPU Visuotactile Simulation for Online Reinforcement Learning and Zero-Shot Real-World Deployment
 
-> Evidence maturity: `ABSTRACT_CHECKED`. abstract 기반 — 본문 수동 확인 필요.
+> Evidence maturity: `ABSTRACT_CHECKED`. 요약과 핵심 기여 두 개는 아래에 표시한 원문 쪽수에서 확인했다. 나머지 분석은 각 절에 적힌 근거 범위를 따른다.
 > 자동 작성 노트는 실제 정독을 뜻하지 않는다. 사용자 reading status는 UNREAD로 시작한다.
 
 - Year/Venue: 2026 / ECCV
@@ -14,15 +14,16 @@
 - Venue verification: https://api.crossref.org/works/10.1007/978-3-032-37550-6_13
 - Code/Project: https://ningyurichard.github.io/tac2real-project-page/
 - Code: not_released
-- Source audit: 2026-10-19: 공식 paper abstract 및 저자 project/code README 확인; abstract 기반 — 본문 수동 확인 필요. ECCV 2026 accepted/video list의 공식 검색 색인과 저자 abstract 대조; proceedings page/DOI 미확인.
+- Source audit: 2026-10-19: 공식 paper abstract 및 저자 project/code README 확인; abstract 기반 — 본문 수동 확인 필요. ECCV 2026 accepted/video list의 공식 검색 색인과 저자 abstract 대조; proceedings page/DOI 미확인. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.
 
 ## Problem and Importance
 
-Visuotactile online RL simulation에서 contact physics fidelity와 GPU throughput을 동시에 확보하는 문제다.
+Tac2Real은 촉각 센서의 변형을 GPU로 모사해 접촉 조작 정책을 시뮬레이션에서 강화학습하고 실물에 전이한다. [PDF 1쪽](https://arxiv.org/pdf/2603.28475v1#page=1)
 
 ## Core Idea and Contribution
 
-PNCG-IPC 기반 tactile simulation, multi-GPU 병렬화 및 TacAlign sim-to-real alignment를 결합한다.
+- 접촉 시뮬레이션으로 촉각 마커의 변위를 계산하고 TacAlign으로 시뮬레이션의 제어·센서 특성을 실물에 맞춘다. [PDF 4쪽](https://arxiv.org/pdf/2603.28475v1#page=4) · [PDF 7쪽](https://arxiv.org/pdf/2603.28475v1#page=7)
+- 초기 방향이 달라지는 실제 핀 삽입에서 추가 실물 학습 없이 정책을 시험하고 보정 단계에 따른 차이를 측정했다. [PDF 12쪽](https://arxiv.org/pdf/2603.28475v1#page=12) · [PDF 13쪽](https://arxiv.org/pdf/2603.28475v1#page=13)
 
 ## Observation–State–Action Interface
 
@@ -32,7 +33,7 @@ Contact dynamics → tactile marker displacement/visual signal → RL policy →
 
 공식 abstract/project는 contact-rich peg insertion의 zero-shot real-world transfer 평가를 보고한다.
 
-근거: [공식 paper/abstract](https://arxiv.org/abs/2603.28475) · [저자 project/code](https://ningyurichard.github.io/tac2real-project-page/). 정확한 수치·baseline fairness·failure 범위는 본문 확인 전까지 확정하지 않는다.
+근거: [공식 paper/abstract](https://arxiv.org/abs/2603.28475) · [저자 project/code](https://ningyurichard.github.io/tac2real-project-page/). 문장에 인용한 결과 외의 수치, 기준선의 비교 조건과 실패 범위는 추가 확인이 필요하다.
 
 ## Why This Paper Is Here — Researcher Interpretation
 

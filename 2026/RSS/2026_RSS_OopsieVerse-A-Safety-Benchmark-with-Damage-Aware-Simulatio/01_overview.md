@@ -1,6 +1,6 @@
 # OopsieVerse: A Safety Benchmark with Damage-Aware Simulation for Robot Manipulation
 
-> Evidence maturity: `ABSTRACT_CHECKED`. abstract 기반 — 본문 수동 확인 필요.
+> Evidence maturity: `ABSTRACT_CHECKED`. 요약과 핵심 기여 두 개는 아래에 표시한 원문 쪽수에서 확인했다. 나머지 분석은 각 절에 적힌 근거 범위를 따른다.
 > 자동 작성 노트는 실제 정독을 뜻하지 않는다. 사용자 reading status는 UNREAD로 시작한다.
 
 - Year/Venue: 2026 / RSS
@@ -14,15 +14,16 @@
 - Venue verification: https://www.roboticsproceedings.org/rss22/p098.html
 - Code/Project: https://robin-lab.cs.utexas.edu/oopsieverse/
 - Code: https://github.com/UT-Austin-RobIn/oopsieverse
-- Source audit: 2026-10-19: 공식 paper abstract 및 저자 project/code README 확인; abstract 기반 — 본문 수동 확인 필요.
+- Source audit: 2026-10-19: 공식 paper abstract 및 저자 project/code README 확인; abstract 기반 — 본문 수동 확인 필요. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.
 
 ## Problem and Importance
 
-Household manipulation의 task success만으로는 robot·물체·환경의 손상을 평가할 수 없다.
+OopsieVerse는 가사 로봇이 일을 끝냈는지와 그 과정에서 물체나 환경에 손상을 일으켰는지를 분리해 측정한다. [PDF 1쪽](https://www.roboticsproceedings.org/rss22/p098.pdf#page=1)
 
 ## Core Idea and Contribution
 
-Contact/thermal/fluid signal을 damage로 변환하는 DamageSim과 damage-aware household task benchmark를 제공한다.
+- DamageSim은 접촉력·온도 변화·액체 상호작용을 손상 신호로 바꾸고 이를 보상이나 종료 조건에 반영한다. [PDF 2쪽](https://www.roboticsproceedings.org/rss22/p098.pdf#page=2) · [PDF 3쪽](https://www.roboticsproceedings.org/rss22/p098.pdf#page=3)
+- 서로 다른 물리 엔진의 가사 환경에 손상 측정을 적용해 시연 수집, 정책 학습, VLA의 안전한 작업 완료를 평가했다. [PDF 5쪽](https://www.roboticsproceedings.org/rss22/p098.pdf#page=5) · [PDF 8쪽](https://www.roboticsproceedings.org/rss22/p098.pdf#page=8)
 
 ## Observation–State–Action Interface
 
@@ -32,7 +33,7 @@ Physical simulator state/signal → damage observation/reward/termination → IL
 
 RSS abstract는 OmniGibson과 RoboCasa 구현, safer demonstration, damage-conditioned IL/RL, VLA safety 및 sim-to-real use case를 설명한다.
 
-근거: [공식 paper/abstract](https://www.roboticsproceedings.org/rss22/p098.html) · [저자 project/code](https://robin-lab.cs.utexas.edu/oopsieverse/). 정확한 수치·baseline fairness·failure 범위는 본문 확인 전까지 확정하지 않는다.
+근거: [공식 paper/abstract](https://www.roboticsproceedings.org/rss22/p098.html) · [저자 project/code](https://robin-lab.cs.utexas.edu/oopsieverse/). 문장에 인용한 결과 외의 수치, 기준선의 비교 조건과 실패 범위는 추가 확인이 필요하다.
 
 ## Why This Paper Is Here — Researcher Interpretation
 

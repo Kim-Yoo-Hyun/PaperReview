@@ -1,6 +1,6 @@
 # Contact-Anchored Policies: Contact Conditioning Creates Strong Robot Utility Models
 
-> Evidence maturity: `ABSTRACT_CHECKED`. abstract 기반 — 본문 수동 확인 필요.
+> Evidence maturity: `ABSTRACT_CHECKED`. 요약과 핵심 기여 두 개는 아래에 표시한 원문 쪽수에서 확인했다. 나머지 분석은 각 절에 적힌 근거 범위를 따른다.
 > 자동 작성 노트는 실제 정독을 뜻하지 않는다. 사용자 reading status는 UNREAD로 시작한다.
 
 - Year/Venue: 2026 / RSS
@@ -15,15 +15,16 @@
 - Code/Project: https://cap-policy.github.io/
 - Code availability: CAP 저자 저장소의 모방학습 손실 구현. imitation-in-homes/loss_fns/diffusion_policy_loss_fn.py [근거](https://raw.githubusercontent.com/jeffacce/cap-policy/8ab11176ecb61a5e88f290958877ab17a6f3e8e2/imitation-in-homes/loss_fns/diffusion_policy_loss_fn.py)
 - Code: https://github.com/jeffacce/cap-policy
-- Source audit: 2026-10-21: official abstract / author project 확인. 5개 note는 abstract 기반이며 사용자 정독을 의미하지 않는다.
+- Source audit: 2026-10-21: official abstract / author project 확인. 5개 note는 abstract 기반이며 사용자 정독을 의미하지 않는다. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.
 
 ## Problem and Importance
 
-추상 언어만으로 구체적 접촉 목표를 전달하기 어려운 문제를 다룬다.
+Contact-Anchored Policies는 실행 시 접촉할 공간 지점을 지정해 여러 환경과 로봇에서 기본 조작 기술을 수행한다. [PDF 1쪽](https://www.roboticsproceedings.org/rss22/p141.pdf#page=1)
 
 ## Core Idea and Contribution
 
-Contact point로 조건화한 modular utility policies와 EgoGym 반복 평가를 제안한다.
+- 기술별 정책을 접촉점으로 조건화하고 EgoGym 시뮬레이션에서 실패를 찾아 정책과 학습 데이터를 수정한다. [PDF 3쪽](https://www.roboticsproceedings.org/rss22/p141.pdf#page=3) · [PDF 4쪽](https://www.roboticsproceedings.org/rss22/p141.pdf#page=4)
+- 기본 조작 세 가지에서 새로운 환경·로봇으로의 추가 학습 없는 전이를 비교했다. [PDF 1쪽](https://www.roboticsproceedings.org/rss22/p141.pdf#page=1) · [PDF 5쪽](https://www.roboticsproceedings.org/rss22/p141.pdf#page=5)
 
 ## Observation–State–Action Interface
 
@@ -33,7 +34,7 @@ Contact point로 조건화한 modular utility policies와 EgoGym 반복 평가�
 
 Pick/Open/Close와 새 환경·embodiment 평가를 보고한다.
 
-근거: [공식 paper/abstract](https://www.roboticsproceedings.org/rss22/p141.html) · [저자 project/code](https://cap-policy.github.io/). 정확한 수치·baseline fairness·failure 범위는 본문 확인 전까지 확정하지 않는다.
+근거: [공식 paper/abstract](https://www.roboticsproceedings.org/rss22/p141.html) · [저자 project/code](https://cap-policy.github.io/). 문장에 인용한 결과 외의 수치, 기준선의 비교 조건과 실패 범위는 추가 확인이 필요하다.
 
 ## Why This Paper Is Here — Researcher Interpretation
 

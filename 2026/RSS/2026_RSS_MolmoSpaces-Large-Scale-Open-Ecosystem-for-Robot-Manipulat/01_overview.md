@@ -1,6 +1,6 @@
 # MolmoSpaces: Large-Scale Open Ecosystem for Robot Manipulation and Navigation
 
-> Evidence maturity: `ABSTRACT_CHECKED`. abstract 기반 — 본문 수동 확인 필요.
+> Evidence maturity: `ABSTRACT_CHECKED`. 요약과 핵심 기여 두 개는 아래에 표시한 원문 쪽수에서 확인했다. 나머지 분석은 각 절에 적힌 근거 범위를 따른다.
 > 자동 작성 노트는 실제 정독을 뜻하지 않는다. 사용자 reading status는 UNREAD로 시작한다.
 
 - Year/Venue: 2026 / RSS
@@ -14,15 +14,16 @@
 - Venue verification: https://roboticsproceedings.org/rss22/p091.html
 - Code/Project: https://github.com/allenai/molmospaces
 - Code: https://github.com/allenai/molmospaces
-- Source audit: 2026-11-07–08: official metadata/abstract 및 저자 project/repository 공개 범위 확인. RSS title와 arXiv의 navigation/manipulation 순서가 다르지만 같은 연구다. Simulator-agnostic assets와 모든 backend의 실행 지원을 구분한다. 본문 전체 정독·코드 실행·독립 성능 검증 아님. 사용자 reading status UNREAD 유지.
+- Source audit: 2026-11-07–08: official metadata/abstract 및 저자 project/repository 공개 범위 확인. RSS title와 arXiv의 navigation/manipulation 순서가 다르지만 같은 연구다. Simulator-agnostic assets와 모든 backend의 실행 지원을 구분한다. 본문 전체 정독·코드 실행·독립 성능 검증 아님. 사용자 reading status UNREAD 유지. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.
 
 ## Problem and Importance
 
-실험실의 제한된 장면으로 generalist 정책의 생활환경 변이를 측정하기 어렵다.
+MolmoSpaces는 실내 이동·고정형 및 이동 조작 정책을 다양한 장면과 물체에 걸쳐 평가할 수 있는 시뮬레이션 환경과 벤치마크를 제공한다. [PDF 1쪽](https://roboticsproceedings.org/rss22/p091.pdf#page=1)
 
 ## Core Idea and Contribution
 
-다양한 실내 환경·상호작용 객체·grasp 자산과 통합 benchmark를 제공한다.
+- 절차 생성 실내 공간과 물체·파지 주석을 여러 물리 엔진에서 이용할 수 있는 공통 자원으로 구성했다. [PDF 3쪽](https://roboticsproceedings.org/rss22/p091.pdf#page=3) · [PDF 4쪽](https://roboticsproceedings.org/rss22/p091.pdf#page=4) · [PDF 5쪽](https://roboticsproceedings.org/rss22/p091.pdf#page=5)
+- MolmoSpaces-Bench에서 시뮬레이션과 실물의 정책 순위를 비교하고 지시 표현·초기 관절 자세·카메라 가림에 따른 민감도를 측정했다. [PDF 6쪽](https://roboticsproceedings.org/rss22/p091.pdf#page=6) · [PDF 7쪽](https://roboticsproceedings.org/rss22/p091.pdf#page=7) · [PDF 8쪽](https://roboticsproceedings.org/rss22/p091.pdf#page=8)
 
 ## Observation–State–Action Interface
 
@@ -32,7 +33,7 @@
 
 조작·항법을 포함한 8개 benchmark task와 sim-to-real 상관을 보고한다.
 
-근거: [공식 paper/abstract](https://roboticsproceedings.org/rss22/p091.html) · [저자 project/code](https://github.com/allenai/molmospaces). 정확한 수치·baseline fairness·failure 범위는 본문 확인 전까지 확정하지 않는다.
+근거: [공식 paper/abstract](https://roboticsproceedings.org/rss22/p091.html) · [저자 project/code](https://github.com/allenai/molmospaces). 문장에 인용한 결과 외의 수치, 기준선의 비교 조건과 실패 범위는 추가 확인이 필요하다.
 
 ## Why This Paper Is Here — Researcher Interpretation
 

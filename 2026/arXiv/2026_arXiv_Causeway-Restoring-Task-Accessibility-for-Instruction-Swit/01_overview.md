@@ -1,6 +1,6 @@
 # Causeway: Restoring Task Accessibility for Instruction Switching in VLA Policies
 
-> Evidence maturity: `ABSTRACT_CHECKED`. abstract 기반 — 본문 수동 확인 필요.
+> Evidence maturity: `ABSTRACT_CHECKED`. 요약과 핵심 기여 두 개는 아래에 표시한 원문 쪽수에서 확인했다. 나머지 분석은 각 절에 적힌 근거 범위를 따른다.
 > 자동 작성 노트는 실제 정독을 뜻하지 않는다. 사용자 reading status는 UNREAD로 시작한다.
 
 - Year/Venue: 2026 / arXiv
@@ -14,15 +14,16 @@
 - Venue verification: https://arxiv.org/abs/2609.30913
 - Code/Project: not identified
 - Code: not_identified
-- Source audit: 2026-10-31 공식 서지/abstract·공개 project/code 소개를 재확인했다. 신규 노트는 abstract 기반이며 기존 연구 검토의 지정 본문/code 확인은 work/sources/instruction_revision_review_2026-10-31.json 및 pre_gpu_buildup_review_2026-10-31.json의 별도 범위다. 사용자 정독·native 실행을 뜻하지 않는다.
+- Source audit: 2026-10-31 공식 서지/abstract·공개 project/code 소개를 재확인했다. 신규 노트는 abstract 기반이며 기존 연구 검토의 지정 본문/code 확인은 work/sources/instruction_revision_review_2026-10-31.json 및 pre_gpu_buildup_review_2026-10-31.json의 별도 범위다. 사용자 정독·native 실행을 뜻하지 않는다. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.
 
 ## Problem and Importance
 
-앞선 작업이 바꾼 물리 상태 때문에 새 목표 작업의 기존 능력에 접근하지 못할 수 있다.
+Causeway는 수행 중 지시가 바뀌었을 때 새 과제의 학습 상태로 로봇을 되돌려 보내는 동작을 생성한다. [PDF 1쪽](https://arxiv.org/pdf/2609.30913v1#page=1)
 
 ## Core Idea and Contribution
 
-목표 작업의 re-entry pose를 조건으로 frozen decoder를 통한 gradient를 이용해 action-stream 표현을 수정하고, 정책 자체가 복귀 행동을 생성하는 inference-time 개입을 제안한다.
+- 새 과제의 시연에서 재진입 자세를 미리 구하고 고정 정책의 행동 생성 과정을 역전파해 로봇을 그 자세로 유도한다. [PDF 4쪽](https://arxiv.org/pdf/2609.30913v1#page=4) · [PDF 5쪽](https://arxiv.org/pdf/2609.30913v1#page=5)
+- LIBERO-Goal의 과제 전환 쌍과 실제 xArm에서 새 지시의 성공을 평가하고 재진입 자세가 중요한 사례를 분석했다. [PDF 6쪽](https://arxiv.org/pdf/2609.30913v1#page=6) · [PDF 7쪽](https://arxiv.org/pdf/2609.30913v1#page=7)
 
 ## Observation–State–Action Interface
 
@@ -32,7 +33,7 @@
 
 LIBERO-Goal, LIBERO-Object와 실제 xArm에서 instruction switching과 복구를 보고한다. 정확한 비교 수치·시행 수·특권 정보 조건은 신규 노트에서 본문 정독 완료로 표시하지 않는다.
 
-근거: [공식 paper/abstract](https://arxiv.org/abs/2609.30913). 정확한 수치·baseline fairness·failure 범위는 본문 확인 전까지 확정하지 않는다.
+근거: [공식 paper/abstract](https://arxiv.org/abs/2609.30913). 문장에 인용한 결과 외의 수치, 기준선의 비교 조건과 실패 범위는 추가 확인이 필요하다.
 
 ## Why This Paper Is Here — Researcher Interpretation
 

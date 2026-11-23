@@ -13,15 +13,16 @@
 - Venue verification: https://www.corl.org/program/accepted-papers
 - Code/Project: https://www.microsoft.com/en-us/research/articles/object-centric-residual-rl/
 - Code: not identified
-- Source audit: 2026-11-03 공식 venue/서지 재확인; 기존 GAP-VRL 검토의 지정 본문 §3.1–3.4/5.1–5.4/7, Appendix A를 반영. 선택 절 검토이며 전체 논문 정독·native 실행은 아님. CoRL 공식 accepted list에서 exact title/forum을 확인했다. 읽은 것은 arXiv v1이며 final paper 동등성과 공식 학습 code 공개는 미확인이다. 사용자 읽기 상태는 UNREAD 유지.
+- Source audit: 2026-11-03 공식 venue/서지 재확인; 기존 GAP-VRL 검토의 지정 본문 §3.1–3.4/5.1–5.4/7, Appendix A를 반영. 선택 절 검토이며 전체 논문 정독·native 실행은 아님. CoRL 공식 accepted list에서 exact title/forum을 확인했다. 읽은 것은 arXiv v1이며 final paper 동등성과 공식 학습 code 공개는 미확인이다. 사용자 읽기 상태는 UNREAD 유지. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.
 
 ## Problem and Importance
 
-시뮬레이션에서 학습한 residual로 실제 VLA 조작을 개선할 때 시각·행동 도메인 차이를 줄이는 문제다.
+이 연구는 고정한 영상 기반 VLA의 행동을 물체 자세를 관측하는 작은 잔차 강화학습 정책으로 보정한다. [PDF 1쪽](https://arxiv.org/pdf/2606.18953v1#page=1)
 
 ## Core Idea and Contribution
 
-Object pose·proprioception·base action을 residual 입력으로 사용하며, paired teleoperation을 통한 정렬과 simulation 학습을 결합한다.
+- 실물 원격조작을 시뮬레이션에서 재생해 대응 과제를 만들고 자세 추정 오차와 관측 누락을 고려해 잔차를 학습한다. [PDF 3쪽](https://arxiv.org/pdf/2606.18953v1#page=3) · [PDF 4쪽](https://arxiv.org/pdf/2606.18953v1#page=4) · [PDF 5쪽](https://arxiv.org/pdf/2606.18953v1#page=5)
+- 실제 Franka FR3의 다섯 작업에서 시뮬레이션으로 학습한 잔차를 적용한 결과 기본 정책의 평균 성공률이 42%에서 76%로 높아졌다. [PDF 6쪽](https://arxiv.org/pdf/2606.18953v1#page=6) · [PDF 7쪽](https://arxiv.org/pdf/2606.18953v1#page=7)
 
 ## Observation–State–Action Interface
 

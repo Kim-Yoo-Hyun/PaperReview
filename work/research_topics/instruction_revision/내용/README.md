@@ -1,10 +1,10 @@
 # 부분 지시 수정
 
-**현행 투자 판단 — 2026-11-17:** [예비 후보](../../README.md#candidate-priority)로 둔다. 남는 제약·철회의 공동 이행과 의미/행동 오류 분해는 비교적 선명하지만 H/R·정답 지시 대조 이후 남는 기여는 미검증이다. RL은 현재 필수가 아니므로 새 신뢰성·VLA RL 탐색보다 뒤에 두고 실행 자료를 보존한다. [ReSteer, RSS 2026](https://roboticsproceedings.org/rss22/p143.html)의 상태별 steerability도 직접 비교해야 한다. 아래 11/05의 우선 후보 표기는 당시 판단이다.
+**현행 투자 판단은 예비 후보다.** 지시 수정 후 제약 준수와 행동 실패를 구분할 수 있지만, 전체 이력을 다시 읽는 방식이나 규칙 기반 갱신과 비교했을 때 얻는 이득은 미검증이다. ReSteer가 측정한 상태별 지시 전환 가능성도 직접 비교해야 한다. [후보 우선순위](../../README.md#candidate-priority) · [ReSteer, RSS 2026](https://roboticsproceedings.org/rss22/p143.html)
 
 현행 비실험 상태 검토: **2026-11-05** · [7단계 상태·기여 가설·판단 분기](#buildup-status). 기존 문헌/계약/결과를 대조한 보강이며 새 효과 관측은 없다.
 
-**11/05 통합 판단:** VLA 단독 대안의 우선 후보로 유지한다. 새 직접 선행 BAS-VLA가 목표뿐 아니라 관계·순서 변경도 평가하므로 일반 instruction switching으로 차별화하지 않는다. 남는 질문은 여러 수정에서 유지할 제약과 철회할 제약의 공동 이행이다. H 전체 이력 재작성·R 규칙·O 정답 완전 지시·A atomic 능력을 대조한다. O부터 실패하면 semantic updater의 가치로 해석하지 않는다. RL은 추가 필요성이 확인될 때만 고려한다.
+**직접 선행과 남은 질문.** BAS-VLA는 물체·공간 관계를 바꾼 실물 실험에서 새 목표 성공을 측정했고, 시뮬레이션에서 하위 목표 순서 변경도 평가했다. 이 후보가 추가로 검증할 대상은 지시를 여러 번 수정할 때 새 목표를 달성하면서, 유효한 동안에는 제약을 지키고 철회된 뒤에는 필요한 행동을 재개하는지다. 전체 이력 재작성, 규칙 기반 갱신, 정답 지시, 개별 행동 수행 능력을 같은 조건에서 대조한다. [BAS-VLA 실물 표 6](https://arxiv.org/pdf/2609.23650v2#page=9) · [순서 변경 표 13](https://arxiv.org/pdf/2609.23650v2#page=15)
 
 근거·전체 상대 비교: [기존 6개+새 2개 공백 검토](https://github.com/Kim-Yoo-Hyun/PaperReview/blob/cb650415f47a2a45ad883dabe5bd20c382b5c183/work/update/INTEGRATED_GAP_REVIEW_2026-11-05.md). 신규 paper별 확인 절과 status는 [등록 원장](../../../sources/registry_admissions_2026-11-05.json)에 통합한다. 기존 실행 계약·원시 결과·과거 source 날짜는 보존한다.
 

@@ -1,6 +1,6 @@
 # Is Your Imitation Learning Policy Better than Mine? Policy Comparison with Near-Optimal Stopping
 
-> Evidence maturity: `ABSTRACT_CHECKED`. abstract 기반 — 본문 수동 확인 필요.
+> Evidence maturity: `ABSTRACT_CHECKED`. 요약과 핵심 기여 두 개는 아래에 표시한 원문 쪽수에서 확인했다. 나머지 분석은 각 절에 적힌 근거 범위를 따른다.
 > 자동 작성 노트는 실제 정독을 뜻하지 않는다. 사용자 reading status는 UNREAD로 시작한다.
 
 - Year/Venue: 2025 / RSS
@@ -14,15 +14,16 @@
 - Venue verification: https://roboticsproceedings.org/rss21/p077.html
 - Code/Project: not identified
 - Code: not_identified
-- Source audit: 2026-10-22 공식 abstract/arXiv abstract와 publication metadata 확인. 새 5개 note는 abstract 수준의 분석이며 상세 본문·코드 감사는 기존 buildup dossier의 명시 범위만 따른다.
+- Source audit: 2026-10-22 공식 abstract/arXiv abstract와 publication metadata 확인. 새 5개 note는 abstract 수준의 분석이며 상세 본문·코드 감사는 기존 buildup dossier의 명시 범위만 따른다. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.
 
 ## Problem and Importance
 
-적은 robot trial로 두 imitation policy를 신뢰성 있게 비교한다.
+이 연구는 로봇 조작 정책 두 개를 비교할 때 중간 결과를 보고 시행을 종료해도 통계적 오류를 통제할 수 있는 순차 검정을 제안한다. [PDF 1쪽](https://roboticsproceedings.org/rss21/p077.pdf#page=1)
 
 ## Core Idea and Contribution
 
-순차 검정으로 비교를 멈출 시점을 결정한다.
+- 두 정책 사이의 구별 난이도에 맞춰 비교에 필요한 시행 수를 조절하는 정지 기준을 구성했다. [PDF 3쪽](https://roboticsproceedings.org/rss21/p077.pdf#page=3) · [PDF 4쪽](https://roboticsproceedings.org/rss21/p077.pdf#page=4)
+- 수치 시뮬레이션과 실제 조작에서 비교 결론의 정확도와 검정력을 유지하면서 요구되는 시행 수를 기존 방법과 비교했다. [PDF 6쪽](https://roboticsproceedings.org/rss21/p077.pdf#page=6) · [PDF 8쪽](https://roboticsproceedings.org/rss21/p077.pdf#page=8)
 
 ## Observation–State–Action Interface
 
@@ -32,7 +33,7 @@ Policy별 binary success trial → sequential evidence → 중단/선택.
 
 Simulation 및 실제 policy 비교를 보고한다.
 
-근거: [공식 paper/abstract](https://roboticsproceedings.org/rss21/p077.html). 정확한 수치·baseline fairness·failure 범위는 본문 확인 전까지 확정하지 않는다.
+근거: [공식 paper/abstract](https://roboticsproceedings.org/rss21/p077.html). 문장에 인용한 결과 외의 수치, 기준선의 비교 조건과 실패 범위는 추가 확인이 필요하다.
 
 ## Why This Paper Is Here — Researcher Interpretation
 

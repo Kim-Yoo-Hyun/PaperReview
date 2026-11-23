@@ -13,15 +13,16 @@
 - Venue verification: https://api.crossref.org/works/10.1109/LRA.2025.3636808
 - Code/Project: https://lakshitadodeja.github.io/uncertainty-aware-residual-rl/
 - Code: https://github.com/lakshitadodeja/uncertainty_aware_residual_rl
-- Source audit: 2026-11-03 공식 venue/서지 재확인; 기존 GAP-VRL 검토의 지정 본문 v2 IV-B / V-D; assymetric_sac.py critic_loss_fn/actor complete-action path를 반영. 선택 절 검토이며 전체 논문 정독·native 실행은 아님. IEEE 직접 페이지는 접근 제약이 있어 publisher-deposited Crossref와 저자 accepted 표기로 RA-L 11(1), 2026을 확인했다. 2025 DOI/채택일을 issue 연도와 혼동하지 않는다. 사용자 읽기 상태는 UNREAD 유지.
+- Source audit: 2026-11-03 공식 venue/서지 재확인; 기존 GAP-VRL 검토의 지정 본문 v2 IV-B / V-D; assymetric_sac.py critic_loss_fn/actor complete-action path를 반영. 선택 절 검토이며 전체 논문 정독·native 실행은 아님. IEEE 직접 페이지는 접근 제약이 있어 publisher-deposited Crossref와 저자 accepted 표기로 RA-L 11(1), 2026을 확인했다. 2025 DOI/채택일을 issue 연도와 혼동하지 않는다. 사용자 읽기 상태는 UNREAD 유지. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.
 
 ## Problem and Importance
 
-Residual RL의 탐색을 base 정책의 불확실성에 맞춰 조절해 상호작용 효율을 개선하는 문제다.
+이 연구는 사전학습 행동 정책의 불확실성에 맞춰 잔차 강화학습의 탐색 범위를 조절한다. [PDF 1쪽](https://arxiv.org/pdf/2506.17564v2#page=1)
 
 ## Core Idea and Contribution
 
-불확실성 기반 탐색 제어를 사용한다. 확인한 critic 구현은 base와 residual이 합쳐진 최종 행동을 평가한다.
+- 기본 정책에서 뽑은 행동을 잔차 학습의 조건으로 제공하고 불확실성이 큰 선택지에서 추가 탐색을 허용한다. [PDF 3쪽](https://arxiv.org/pdf/2506.17564v2#page=3) · [PDF 4쪽](https://arxiv.org/pdf/2506.17564v2#page=4)
+- 가우시안 및 확산 기본 정책을 대상으로 시뮬레이션 조작·제어 과제에서 불확실성 기반 탐색과 고정된 탐색을 비교했다. [PDF 5쪽](https://arxiv.org/pdf/2506.17564v2#page=5) · [PDF 6쪽](https://arxiv.org/pdf/2506.17564v2#page=6) · [PDF 7쪽](https://arxiv.org/pdf/2506.17564v2#page=7)
 
 ## Observation–State–Action Interface
 
