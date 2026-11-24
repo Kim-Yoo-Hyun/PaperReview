@@ -16,12 +16,11 @@
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 원문 해당 쪽과 대조했다. [본문](https://openaccess.thecvf.com/content/CVPR2024/papers/Lyu_Total-Decom_Decomposed_3D_Scene_Reconstruction_with_Minimal_Interaction_CVPR_2024_paper.pdf)
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Moreover, even with ground-truth instance labels, the existing state-of-the-art method [37] still fails to produce satisfactory results, with multiple objects missing, as shown by the second row of Fig.
-
-방법 관련 발췌 — In sum, our main contributions are as follows: • We introduce a novel pipeline that seamlessly integrates the segment anything model with hybrid implicit-explicit neural surface representations for 3D decomposed reconstruction from ...
+Total-Decom은 실내 장면에서 사용자가 소수의 점을 선택하면 그 물체의 3D 형상을 배경과 분리하고 가려졌던 배경을 복원한다. [PDF 1쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Lyu_Total-Decom_Decomposed_3D_Scene_Reconstruction_with_Minimal_Interaction_CVPR_2024_paper.pdf#page=1) · [PDF 3쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Lyu_Total-Decom_Decomposed_3D_Scene_Reconstruction_with_Minimal_Interaction_CVPR_2024_paper.pdf#page=3)
 
 ## Problem and Motivation
 
@@ -55,16 +54,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** In sum, our main contributions are as follows: • We introduce a novel pipeline that seamlessly integrates the segment anything model with hybrid implicit-explicit neural ...
-- **p. 2 / 1. Introduction - extractive body cue:** In this paper, we introduce Total-Decom, a novel method designed for decomposed 3D reconstruction with minimal human interaction.
-- **p. 3 / 3. Empirical Study on General Visual Features - extractive body cue:** Consequently, we propose a novel approach that leverages SAM features and a mesh-based region-growing method to decompose a 3D scene with minimal human an20862
-- **p. 4 / 4. Overview - extractive body cue:** To achieve this, we propose a novel pipeline that integrates SAM into a hybrid implicit-explicit surface representation, combined with a mesh-based region-growing method to effectively ...
-- **p. 1 / Abstract - extractive body cue:** We extensively evaluate our method on benchmark datasets and demonstrate its potential for downstream applications, such as animation and scene editing.
-- **p. 7 / 7.2. Results - extractive body cue:** Our reconstructed results also outperform ObjSDF++ qualitatively.
-- **p. 7 / 7.1. Experiment Setup - extractive body cue:** The reconstruction results are mainly evaluated by Chamfer-L1 and F-Score.
-- **p. 8 / 7.2. Results - extractive body cue:** We present the reconstruction results for the background, foreground and decomposed objects on Replica [31], ScanNet [6], NICE-SLAM [44] and our self-captured billiard room.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 장면 표현에 2D 분할 모델의 특징을 학습시켜 사용자가 찍은 점과 같은 물체의 표면을 찾고 메시를 분리한다. [PDF 3쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Lyu_Total-Decom_Decomposed_3D_Scene_Reconstruction_with_Minimal_Interaction_CVPR_2024_paper.pdf#page=3) · [PDF 4쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Lyu_Total-Decom_Decomposed_3D_Scene_Reconstruction_with_Minimal_Interaction_CVPR_2024_paper.pdf#page=4) · [PDF 5쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Lyu_Total-Decom_Decomposed_3D_Scene_Reconstruction_with_Minimal_Interaction_CVPR_2024_paper.pdf#page=5)
+- 객체 제거로 드러나는 배경을 완성하고 분해한 물체를 옮기거나 제거하는 장면 편집과 기하 복원을 평가했다. [PDF 5쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Lyu_Total-Decom_Decomposed_3D_Scene_Reconstruction_with_Minimal_Interaction_CVPR_2024_paper.pdf#page=5) · [PDF 6쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Lyu_Total-Decom_Decomposed_3D_Scene_Reconstruction_with_Minimal_Interaction_CVPR_2024_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Lyu_Total-Decom_Decomposed_3D_Scene_Reconstruction_with_Minimal_Interaction_CVPR_2024_paper.pdf#page=7) · [PDF 8쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Lyu_Total-Decom_Decomposed_3D_Scene_Reconstruction_with_Minimal_Interaction_CVPR_2024_paper.pdf#page=8)
 
 ## Evaluation Scope
 

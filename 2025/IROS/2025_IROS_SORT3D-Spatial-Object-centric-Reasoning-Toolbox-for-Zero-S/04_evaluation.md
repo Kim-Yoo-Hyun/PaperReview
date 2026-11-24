@@ -6,7 +6,7 @@
 
 ## Evaluation in One Sentence
 
-PDF body evaluation/result cue (p. 6 (V. RESULTS AND DISCUSSION), p. 5 (V. RESULTS AND DISCUSSION), p. 5 (V. RESULTS AND DISCUSSION), p. 6 (V. RESULTS AND DISCUSSION), p. 7 (Figure/Table caption), p. 7 (Figure/Table caption)): On Sr3D, SORT3D surpasses SOTA supervised training methods and achieves close overall performance to Transcrib3D while surpassing it in view-dependent accuracy.
+실물 시연에서는 로봇이 먼저 환경을 주행해 지도를 만든 뒤 물체 지시를 받았다. 벤치마크의 지시 대상 식별 정확도와 두 이동 플랫폼의 내비게이션 시연은 별도 평가다. [PDF 6쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11246145#page=6) · [PDF 7쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11246145#page=7)
 
 ## Evaluation Body Digest
 
@@ -21,7 +21,7 @@ PDF body evaluation/result cue (p. 6 (V. RESULTS AND DISCUSSION), p. 5 (V. RESUL
 
 ## Evaluation Type and Scope
 
-- **Evaluation type:** `EMPIRICAL / SOURCE-REPORTED EVALUATION`.
+- **Evaluation type:** `EMPIRICAL / BENCHMARK / REAL-ROBOT OR HARDWARE`.
 - **Target system/task:** 3D scene/object와 robot coordinate frame.
 - **Input boundary:** RGB-D, image set, point cloud, depth와 camera pose.
 - **Output/decision under evaluation:** point map, pose, scene graph, affordance 또는 query result.

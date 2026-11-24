@@ -182,7 +182,17 @@ def check_applied(rows, papers, root):
             expect("bibliographic values", bibliography_digest(paper, post["bibliography"]), post["bibliography_sha256"])
             positive = {field for field, key in (("code", "code"), ("weights", "checkpoint"), ("data", "data"))
                         if paper["reproducibility"][key]["status"] in ("released", "reported")}
-            expect("release endpoint coverage", set(post.get("availability", {})) | set(verified_artifacts), positive)
+            later_releases = {field for field, item in follow.items() if item.get("release_file")}
+            for field in later_releases:
+                item = follow[field]
+                if (field != "code" or item["status"] != PASS or item["corrected"] != "released"
+                    or not item["source"].endswith("/" + item["release_file"])
+                    or not item.get("release_reference", "").startswith("https://")):
+                    errors.append(f"{pid} incomplete later code release evidence")
+                if item["source"] not in overview or item["release_reference"] not in overview:
+                    errors.append(f"{pid} later code file or release reference missing from overview")
+            expect("release endpoint coverage",
+                   set(post.get("availability", {})) | set(verified_artifacts) | later_releases, positive)
             for field, probe in post.get("availability", {}).items():
                 key = "checkpoint" if field == "weights" else field
                 source = verified_artifacts.get(field, {}).get("source", probe["url"])
@@ -215,6 +225,15 @@ def check_applied(rows, papers, root):
                 check_source("pdf", review["source"])
                 if replacement["before"] == review["source"] or "- Full-text retrieval: " + review["source"] not in overview.splitlines():
                     errors.append(f"{pid} replacement PDF missing from overview or unchanged")
+            if correction := review.get("source_identity_correction"):
+                provenance = paper["provenance"]
+                expect("current reviewed PDF", provenance["review"].get("url"), review["source"])
+                expect("current reviewed PDF digest", provenance["review"].get("sha256"), review["pdf_sha256"])
+                for key, value in correction.get("retracted_identifiers", {}).items():
+                    if paper["identifiers"].get(key) == value:
+                        errors.append(f"{pid} retracted {key} identifier reappeared")
+                if correction.get("retracted_preprint") and (paper["sources"].get("preprint") or {}).get("url") == correction["retracted_preprint"]:
+                    errors.append(f"{pid} retracted preprint reappeared")
             if variant := review.get("title_variant"):
                 catalog_sources = {paper["page"], (paper["sources"].get("venue_verification") or {}).get("url")}
                 if not variant.get("catalog_title_source") or variant["catalog_title_source"] not in catalog_sources:
@@ -451,6 +470,16 @@ def render(rows, meta):
         if repairs:
             refs = " · ".join(f"[{r['id']} 원문]({r['summary_review']['source']})" for r in repairs)
             lines += [f"기존 노트에서 확인한 문자 전사 교정은 {len(repairs)}편이다. 원장에 해당 문구와 근거를 기록했다. {refs}", ""]
+    source_changes = [r for r in rows if r.get("summary_review", {}).get("source_identity_correction")]
+    if source_changes:
+        lines += ["### 원문과 판본 교정", "", "| 논문 | 게재본과 대조한 결과 |", "|---|---|"]
+        for row in source_changes:
+            review = row["summary_review"]
+            correction = review["source_identity_correction"]
+            title = row["title"].split(":")[0]
+            lines.append(f"| {title} | {correction['basis']} "
+                         f"[기존에 연결된 PDF]({correction['before_source']}) · [게재본]({review['source']}) |")
+        lines.append("")
     for row in rows:
         if change := row.get("byline_correction"):
             short_title = row["title"].split(":")[0]

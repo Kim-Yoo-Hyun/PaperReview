@@ -16,14 +16,13 @@
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 원문 해당 쪽과 대조했다. [본문](https://openaccess.thecvf.com/content/CVPR2024/papers/Xu_Bayesian_Diffusion_Models_for_3D_Shape_Reconstruction_CVPR_2024_paper.pdf)
 
 > DOC-QA1 (2026-10-23): 제어문자·깨진 추출 구간과 직접 연결된 표 항목을 PDF 페이지 이미지와 대조했다. 확인 범위·원문 URL·페이지·수정 이력은 [대조 기록](../../../work/sources/pdf_note_review_2026-10-23.json)에 있다. 노트 전체의 정독이나 모든 기존 주장에 대한 재검증을 뜻하지 않으며 reading status는 유지한다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Our BDM brings rich prior knowledge into the shape reconstruction process, fixing the incorrect predictions by the baseline (top row).
-
-방법 관련 발췌 — The contribution of our paper is summarized as follows: • We present Bayesian Diffusion Models (BDM), a new statistical inference algorithm that couples diffusionbased bottom-up and top-down processes in a joint framework.
+Bayesian Diffusion Models는 단일 영상의 증거와 학습한 3D 형상 사전분포를 결합해 한 뷰에서 결정하기 어려운 물체의 점군을 복원한다. [PDF 1쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Xu_Bayesian_Diffusion_Models_for_3D_Shape_Reconstruction_CVPR_2024_paper.pdf#page=1) · [PDF 3쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Xu_Bayesian_Diffusion_Models_for_3D_Shape_Reconstruction_CVPR_2024_paper.pdf#page=3)
 
 ## Problem and Motivation
 
@@ -57,16 +56,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** The contribution of our paper is summarized as follows: • We present Bayesian Diffusion Models (BDM), a new statistical inference algorithm that couples diffusionbased bottom-up ...
-- **p. 3 / 3.1. Bayesian Inference with Stochastic Gradient - extractive body cue:** For the 3D shape reconstruction task, the output y consists of a set of 3D points.
-- **p. 3 / 3. Method - extractive body cue:** In the following section, we introduce the Bayesian Diffusion Models, the framework of which is illustrated in Fig.
-- **p. 4 / 3.4. Point Cloud Prior Integration - extractive body cue:** As below we introduce two fusion methods: BDM-M (Merging) and BDM-B (Blending).
-- **p. 4 / 3.2. Denoising Diffusion Probabilistic Models - extractive body cue:** We present the standard Bayesian formulation and the one using stochastic gradient Langevin on the top part, while our proposed BDM on the bottom. q(yt-1/yt, ...
-- **p. 6 / 4.1. Quantitative Results - extractive body cue:** It can be seen that our method effectively improves the performance and achieves state-ofthe-art.
-- **p. 6 / 4.1. Quantitative Results - extractive body cue:** The results indicate improvement in both CD and F1 across all three categories.
-- **p. 7 / 4.4. Ablation Study - extractive body cue:** 4 reveals that integrating priors in the late stage alone yields significant improvement on model performance, reducing CD to 80.22 and increasing F1 to 0.436.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 영상 조건부 상향식 모델과 형상 사전분포를 학습한 하향식 모델의 역확산 과정을 결합하는 방법을 제시했다. [PDF 3쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Xu_Bayesian_Diffusion_Models_for_3D_Shape_Reconstruction_CVPR_2024_paper.pdf#page=3) · [PDF 4쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Xu_Bayesian_Diffusion_Models_for_3D_Shape_Reconstruction_CVPR_2024_paper.pdf#page=4) · [PDF 5쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Xu_Bayesian_Diffusion_Models_for_3D_Shape_Reconstruction_CVPR_2024_paper.pdf#page=5)
+- 합성 및 실제 물체 영상에서 형상 오차를 비교하고 훈련 자료의 양이 달라질 때 점군 거리와 F-score의 변화를 분석했다. [PDF 6쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Xu_Bayesian_Diffusion_Models_for_3D_Shape_Reconstruction_CVPR_2024_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Xu_Bayesian_Diffusion_Models_for_3D_Shape_Reconstruction_CVPR_2024_paper.pdf#page=7) · [PDF 8쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Xu_Bayesian_Diffusion_Models_for_3D_Shape_Reconstruction_CVPR_2024_paper.pdf#page=8)
 
 ## Evaluation Scope
 

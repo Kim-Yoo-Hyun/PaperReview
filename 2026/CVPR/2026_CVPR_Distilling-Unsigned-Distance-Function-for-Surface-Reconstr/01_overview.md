@@ -16,12 +16,11 @@
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 원문 해당 쪽과 대조했다. [본문](https://openaccess.thecvf.com/content/CVPR2026/papers/Li_Distilling_Unsigned_Distance_Function_for_Surface_Reconstruction_from_3D_Gaussian_CVPR_2026_paper.pdf)
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — To tackle these challenges, we distill a patch-based UDF predictor, trained on synthetic ground-truth surfaces, into a student UDF module that is optimized jointly with the Gaussian splatting pipeline.
-
-방법 관련 발췌 — The main contributions are as follows: • We propose a novel framework that learns UDF over Gaussian primitives by distilling a patch-based UDF predictor into a lightweight student network. • Our method ...
+가우시안 스플래팅으로부터 열린 표면과 날카로운 세부 형상을 복원하기 위해 부호 없는 거리장을 국소 표면 주변에 증류한다. [PDF 1쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Li_Distilling_Unsigned_Distance_Function_for_Surface_Reconstruction_from_3D_Gaussian_CVPR_2026_paper.pdf#page=1) · [PDF 3쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Li_Distilling_Unsigned_Distance_Function_for_Surface_Reconstruction_from_3D_Gaussian_CVPR_2026_paper.pdf#page=3)
 
 ## Problem and Motivation
 
@@ -55,16 +54,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** The main contributions are as follows: • We propose a novel framework that learns UDF over Gaussian primitives by distilling a patch-based UDF predictor into ...
-- **p. 2 / 1. Introduction - extractive body cue:** In addition, we introduce a visibility- and geometry-aware confidence weighting, together with a joint optimization scheme, to further steer the student toward accurate surfaces from ...
-- **p. 3 / 3. Method - extractive body cue:** Our framework integrates Gaussian Splatting with UDF learning via a band-limited distillation scheme: a frozen local-shape UDF teacher ut provides supervision in a narrow nearsurface ...
-- **p. 3 / 3. Method - extractive body cue:** Rendering proceeds by projecting each Gaussian onto the image plane and compositing its contribution in frontto-back order.
-- **p. 5 / 3.3. Band-limited Knowledge Distillation - extractive body cue:** Furthermore, the overall distillation formulation offers several advantages: it simplifies the learning task by limiting the geometric complexity within each patch, enables effective reuse of ...
-- **p. 7 / 4.2. DF3D Dataset - extractive body cue:** Among UDF-based approaches, our model further achieves competitive runtime 4897
-- **p. 8 / 4.2. DF3D Dataset - extractive body cue:** GaussianUDF [29], which couples a global UDF with 3D Gaussian Splatting, improves surface completeness over appearance-only methods but tends to oversmooth the geometry and loses ...
-- **p. 8 / 4.3. DTU Dataset - extractive body cue:** As shown in Table 2, our approach achieves the best average Chamfer Distance among all compared methods, including classical NeRF-style SDF baselines (NeuS [48]), Gaussian-based ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 거리 정답을 계산할 수 있는 합성 대수적 표면으로 국소 기하 교사 모델을 학습하고 가시성과 기하 신뢰도로 학생의 증류 손실을 조절한다. [PDF 3쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Li_Distilling_Unsigned_Distance_Function_for_Surface_Reconstruction_from_3D_Gaussian_CVPR_2026_paper.pdf#page=3) · [PDF 4쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Li_Distilling_Unsigned_Distance_Function_for_Surface_Reconstruction_from_3D_Gaussian_CVPR_2026_paper.pdf#page=4) · [PDF 5쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Li_Distilling_Unsigned_Distance_Function_for_Surface_Reconstruction_from_3D_Gaussian_CVPR_2026_paper.pdf#page=5)
+- 표면 인접 영역의 거리 감독을 가우시안 최적화와 결합하고 추출한 표면의 기하 오차와 세부 구조를 비교했다. [PDF 5쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Li_Distilling_Unsigned_Distance_Function_for_Surface_Reconstruction_from_3D_Gaussian_CVPR_2026_paper.pdf#page=5) · [PDF 6쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Li_Distilling_Unsigned_Distance_Function_for_Surface_Reconstruction_from_3D_Gaussian_CVPR_2026_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Li_Distilling_Unsigned_Distance_Function_for_Surface_Reconstruction_from_3D_Gaussian_CVPR_2026_paper.pdf#page=7) · [PDF 8쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Li_Distilling_Unsigned_Distance_Function_for_Surface_Reconstruction_from_3D_Gaussian_CVPR_2026_paper.pdf#page=8)
 
 ## Evaluation Scope
 

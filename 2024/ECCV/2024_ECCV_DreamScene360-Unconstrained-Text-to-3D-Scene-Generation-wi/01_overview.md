@@ -16,12 +16,11 @@
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (19 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 원문 해당 쪽과 대조했다. [본문](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/00996.pdf)
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — This absence of parallax - critical for depth perception through binocular disparity - along with the lack of multiple observational cues typically provided by a baseline, poses substantial challenges in accurately determining ...
-
-방법 관련 발췌 — Collectively, our framework, DreamScene360, enables the creation of immersive and realistic 3D environments from a simple user command, offering a novel solution to the pressing demand for high-quality 3D scenes (see the ...
+DreamScene360은 텍스트에서 생성한 파노라마를 초기 관측으로 사용해 자유롭게 둘러볼 수 있는 360도 가우시안 장면을 만든다. [PDF 1쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/00996.pdf#page=1) · [PDF 5쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/00996.pdf#page=5)
 
 ## Problem and Motivation
 
@@ -55,16 +54,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 3 / 1 Introduction - extractive body cue:** Collectively, our framework, DreamScene360, enables the creation of immersive and realistic 3D environments from a simple user command, offering a novel solution to the pressing ...
-- **p. 9 / 1 Introduction - extractive body cue:** To mitigate this, we introduce a geometric regularization strategy designed to penalize discontinuities between pixels that exhibit inaccurate depth relationships.
-- **p. 3 / 1 Introduction - extractive body cue:** DreamScene360 3 To address the above challenges in creating a holistic 360◦text-to-3D scene generation pipeline, we introduce DreamScene360.
-- **p. 4 / 1 Introduction - extractive body cue:** In this work, we propose a method for text to 360◦3D scene generation, by using panorama images as an intermediate representation.
-- **p. 4 / 1 Introduction - extractive body cue:** Our work requires a text prompt input; however, unlike prior work, we propose using panoramic images as an intermediate input for globally consistent scenes.
-- **p. 13 / 4 Experiments - extractive body cue:** These functionalities are otherwise hard to achieve in previous baselines that do not have global 2D representations, and as a result, our results provide a ...
-- **p. 11 / 4 Experiments - extractive body cue:** However, the works utilizing a bounded NeRF representation using score distillation do not work very well in this case.
-- **p. 12 / 4 Experiments - extractive body cue:** 4.2 Main Results 360◦Scene Generation.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 프롬프트를 다듬어 파노라마를 생성하고 여러 영역에서 예측한 단안 깊이를 정렬해 가우시안의 초기 점군을 구성한다. [PDF 4쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/00996.pdf#page=4) · [PDF 5쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/00996.pdf#page=5) · [PDF 6쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/00996.pdf#page=6)
+- 보이지 않은 영역을 합성할 때 의미·기하 제약을 더하고 생성 장면의 품질과 프롬프트 정제의 효과를 평가했다. [PDF 7쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/00996.pdf#page=7) · [PDF 10쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/00996.pdf#page=10) · [PDF 11쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/00996.pdf#page=11) · [PDF 12쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/00996.pdf#page=12)
 
 ## Evaluation Scope
 

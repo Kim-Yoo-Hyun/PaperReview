@@ -16,12 +16,11 @@
 - Code/Project: https://github.com/dfki-av/sg-pgm
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 원문 해당 쪽과 대조했다. [본문](https://openaccess.thecvf.com/content/CVPR2024/papers/Xie_SG-PGM_Partial_Graph_Matching_Network_with_Semantic_Geometric_Fusion_for_CVPR_2024_paper.pdf)
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — SGAligner [34] is the first work specifically focusing on this problem.
-
-방법 관련 발췌 — It consists of a finite set of object nodes V = {v1, v2, ..., vM}, an adjacency matrix A ∈{0, 1}M×M, a node feature matrix X ∈RM×· and a edge feature matrix ...
+SG-PGM은 서로 일부만 겹치는 3D 장면 그래프의 같은 물체를 찾기 위해 노드의 의미 특징과 점군 기하를 함께 사용한다. [PDF 1쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Xie_SG-PGM_Partial_Graph_Matching_Network_with_Semantic_Geometric_Fusion_for_CVPR_2024_paper.pdf#page=1) · [PDF 3쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Xie_SG-PGM_Partial_Graph_Matching_Network_with_Semantic_Geometric_Fusion_for_CVPR_2024_paper.pdf#page=3)
 
 ## Problem and Motivation
 
@@ -55,16 +54,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 3 / 3.1. Scene Graph Matching Network - extractive body cue:** It consists of a finite set of object nodes V = {v1, v2, ..., vM}, an adjacency matrix A ∈{0, 1}M×M, a node feature matrix ...
-- **p. 4 / 3.2. Point to Scene Graph Feature Fusion - extractive body cue:** In that case, the subgraph that only consists of these nodes is automorphism.
-- **p. 4 / 3.3. Super-point Matching Rescoring - extractive body cue:** We propose the Super-point Matching Rescoring method that uses the semantic similarity learned by our scene graph 28404
-- **p. 5 / 3.3. Super-point Matching Rescoring - extractive body cue:** Therefore, our method can be easily adapted to most feature-based registration methods, bot point-level matching [13] and super-point matching [16, 31, 50].
-- **p. 5 / 3.3. Super-point Matching Rescoring - extractive body cue:** Because our rescoring method does not introduce any learnable parameters, we do not need to train our method with the point cloud registration method jointly.
-- **p. 6 / 4.1. Scene Graph Alignment and Overlap Checking - extractive body cue:** As shown in Table 1, adding the proposed P2SG Fusion to the baseline significantly improves the node alignment accuracy and is already higher than SGAligner.
-- **p. 7 / 4.2. Point Cloud Registration and Mosaicking - extractive body cue:** It explains the accuracy improvement from the B+P variant to the B+P+K variant of our method.
-- **p. 6 / 4.1. Scene Graph Alignment and Overlap Checking - extractive body cue:** Even though retrained with augmentation, SGAligner still shows a significant accuracy drop compared to results in Table 1, while the overall performance of our method ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 그래프와 점군 간에 특징을 교환하고 학습된 대응 수를 이용해 양쪽 그래프에서 부분적으로 일치하는 노드 쌍을 선택한다. [PDF 3쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Xie_SG-PGM_Partial_Graph_Matching_Network_with_Semantic_Geometric_Fusion_for_CVPR_2024_paper.pdf#page=3) · [PDF 4쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Xie_SG-PGM_Partial_Graph_Matching_Network_with_Semantic_Geometric_Fusion_for_CVPR_2024_paper.pdf#page=4) · [PDF 5쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Xie_SG-PGM_Partial_Graph_Matching_Network_with_Semantic_Geometric_Fusion_for_CVPR_2024_paper.pdf#page=5)
+- 물체 대응을 점 대응의 재채점에 사용해 그래프 매칭, 장면 중첩 인식과 점군 정합을 평가했다. [PDF 5쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Xie_SG-PGM_Partial_Graph_Matching_Network_with_Semantic_Geometric_Fusion_for_CVPR_2024_paper.pdf#page=5) · [PDF 6쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Xie_SG-PGM_Partial_Graph_Matching_Network_with_Semantic_Geometric_Fusion_for_CVPR_2024_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Xie_SG-PGM_Partial_Graph_Matching_Network_with_Semantic_Geometric_Fusion_for_CVPR_2024_paper.pdf#page=7)
 
 ## Evaluation Scope
 

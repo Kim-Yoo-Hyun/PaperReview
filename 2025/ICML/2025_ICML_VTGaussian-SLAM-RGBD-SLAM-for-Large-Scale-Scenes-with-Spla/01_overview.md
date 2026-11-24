@@ -16,12 +16,11 @@
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (24 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 원문 해당 쪽과 대조했다. [본문](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/hu25h/hu25h.pdf)
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — This obstacle makes 3DGS still hard to scale up to extremely large scenes in SLAM, remaining the challenge of improving the rendering quality, tracking accuracy, and scalability of 3DGS in tracking cameras ...
-
-방법 관련 발췌 — Our main contributions are listed below. • We propose view-tied Gaussian splatting that significantly reduces storage but improves rendering quality with 3DGS in SLAM. • We introduce a novel RGBD SLAM algorithm ...
+VTGaussian-SLAM은 RGB-D 키프레임의 깊이 픽셀에 가우시안을 묶어 큰 장면의 카메라 자세와 지도를 제한된 GPU 메모리에서 갱신한다. [PDF 1쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/hu25h/hu25h.pdf#page=1) · [PDF 3쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/hu25h/hu25h.pdf#page=3)
 
 ## Problem and Motivation
 
@@ -55,16 +54,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** Our main contributions are listed below. • We propose view-tied Gaussian splatting that significantly reduces storage but improves rendering quality with 3DGS in SLAM. • ...
-- **p. 1 / 1. Introduction - extractive body cue:** Our method introduces a novel point-based volume representation, dubbed view-tied 3D Gaussians, to represent the color and 1
-- **p. 1 / 1. Introduction - extractive body cue:** To overcome this challenge, we propose an RGBD SLAM system with splatting view-tied 3D Gaussians.
-- **p. 3 / 3.2. View-tied Gaussians - extractive body cue:** Our view-tied Gaussians aim to achieve memory efficiency in SLAM, which enables us to improve the rendering quality by using many more Gaussians to represent ...
-- **p. 3 / 3.2. View-tied Gaussians - extractive body cue:** This not only enables us to use more Gaussians to represent local details, but also removes the need to maintain the appearance and geometry consistency ...
-- **p. 7 / 4.1. Comparisons - extractive body cue:** Based on the camera poses, our method also significantly improves the rendering quality on ScanNet, as shown in Fig.
-- **p. 8 / 4.2. Ablation Studies and Analysis - extractive body cue:** The comparisons show that our viewtied Gaussians not only significantly reduce the size of each Gaussian (number of parameters) but also achieve good rendering quality ...
-- **p. 9 / 4.2. Ablation Studies and Analysis - extractive body cue:** 8 show that our selection strategy achieves the best performance.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 가우시안의 위치·회전·축별 분산을 전부 독립 변수로 저장하는 비용을 줄이고 현재 뷰와 겹치는 영역을 추적·매핑에 사용한다. [PDF 3쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/hu25h/hu25h.pdf#page=3) · [PDF 4쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/hu25h/hu25h.pdf#page=4) · [PDF 5쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/hu25h/hu25h.pdf#page=5)
+- 카메라 궤적 오차와 재구성 깊이·렌더링 품질을 구분해 평가하고 큰 장면에서 지도 표현 및 갱신 방식의 영향을 비교했다. [PDF 6쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/hu25h/hu25h.pdf#page=6) · [PDF 7쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/hu25h/hu25h.pdf#page=7) · [PDF 8쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/hu25h/hu25h.pdf#page=8)
 
 ## Evaluation Scope
 

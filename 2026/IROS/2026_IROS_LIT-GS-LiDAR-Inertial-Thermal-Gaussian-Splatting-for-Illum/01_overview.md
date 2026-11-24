@@ -16,12 +16,13 @@
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 원문 해당 쪽과 대조했다. [본문](https://arxiv.org/pdf/2606.20424v1)
+
+- 저자판 표제: LIT-GS: LiDAR-Inertial-Thermal Gaussian Splatting for Illumination-Robust Mapping. 저자판의 6인 명단과 게재 프로그램의 7인 명단(Man He 포함)을 구별한다. [저자판 표제면](https://arxiv.org/pdf/2606.20424v1#page=1) · [IROS 프로그램](https://2026.ieee-iros.org/program/paper-index/)
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Reliance on visible imagery poses a fundamental limitation.
-
-방법 관련 발췌 — 1) Frame-wise anchor-aware geometric weighting.: To improve robustness under motion, we introduce frame-wise anchor-non-anchor geometric weighting.
+LIT-GS는 열화상 대비가 약한 환경에서 LiDAR 평면 제약과 관성·열화상 관측을 결합해 카메라 자세와 가우시안 지도를 추정한다. [PDF 1쪽](https://arxiv.org/pdf/2606.20424v1#page=1) · [PDF 3쪽](https://arxiv.org/pdf/2606.20424v1#page=3)
 
 ## Problem and Motivation
 
@@ -50,10 +51,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 3 / III. METHODOLOGY - extractive body cue:** 1) Frame-wise anchor-aware geometric weighting.: To improve robustness under motion, we introduce frame-wise anchor-non-anchor geometric weighting.
-- **p. 3 / III. METHODOLOGY - extractive body cue:** Hardware synchronization is achieved via PPS triggers from a microcontroller, ensuring consistent timestamp alignment among the LiDAR, IMU, and thermal camera (Fig.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 신뢰도를 반영한 센서 간 대응점과 LiDAR 점-평면 잔차를 번들 조정에 사용하고 평면에서 벗어나는 렌더링 점에 제약을 준다. [PDF 3쪽](https://arxiv.org/pdf/2606.20424v1#page=3) · [PDF 4쪽](https://arxiv.org/pdf/2606.20424v1#page=4) · [PDF 5쪽](https://arxiv.org/pdf/2606.20424v1#page=5)
+- 자체 수집 시퀀스와 공개 데이터에서 기준 방법과 기하 정확도 및 영상 렌더링 품질을 비교했다. [PDF 5쪽](https://arxiv.org/pdf/2606.20424v1#page=5) · [PDF 6쪽](https://arxiv.org/pdf/2606.20424v1#page=6) · [PDF 7쪽](https://arxiv.org/pdf/2606.20424v1#page=7)
 
 ## Evaluation Scope
 

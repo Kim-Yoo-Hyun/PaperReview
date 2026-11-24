@@ -16,14 +16,13 @@
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 원문 해당 쪽과 대조했다. [본문](https://openaccess.thecvf.com/content/CVPR2026/papers/Liu_L3DR_3D-aware_LiDAR_Diffusion_and_Rectification_CVPR_2026_paper.pdf)
 
 > DOC-QA1 (2026-10-23): 제어문자·깨진 추출 구간과 직접 연결된 표 항목을 PDF 페이지 이미지와 대조했다. 확인 범위·원문 URL·페이지·수정 이력은 [대조 기록](../../../work/sources/pdf_note_review_2026-10-23.json)에 있다. 노트 전체의 정독이나 모든 기존 주장에 대한 재검증을 뜻하지 않으며 reading status는 유지한다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — L3DR works by tackling two challenges.
-
-방법 관련 발췌 — The contributions of this work can be summarized in three major aspects: • We propose a 3D-aware LiDAR Diffusion and Rectification framework that rectifies RV geometry artifacts with a 3D residual regression ...
+L3DR은 거리 영상에서 생성한 LiDAR 스캔을 3D 점군으로 되돌린 뒤 점의 위치를 보정해 거리 영상 표현의 기하 왜곡을 줄인다. [PDF 1쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Liu_L3DR_3D-aware_LiDAR_Diffusion_and_Rectification_CVPR_2026_paper.pdf#page=1) · [PDF 3쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Liu_L3DR_3D-aware_LiDAR_Diffusion_and_Rectification_CVPR_2026_paper.pdf#page=3)
 
 ## Problem and Motivation
 
@@ -56,16 +55,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** The contributions of this work can be summarized in three major aspects: • We propose a 3D-aware LiDAR Diffusion and Rectification framework that rectifies RV ...
-- **p. 5 / 4.3. Residual Regression Training - extractive body cue:** After obtaining the model output and GT, we propose Welsch Loss to remove the effect of erratic high-bias areas in training data to focus on ...
-- **p. 5 / 4.2. LiDAR Diffusion Training - extractive body cue:** However, we also highlight that our framework is general and not restricted to LiDM, given that an alternative LiDAR diffusion method can generate such closely ...
-- **p. 2 / 1. Introduction - extractive body cue:** However, although RV enables DM-based point cloud generation by projecting 3D point clouds to 2D images, it hinders accurate discernment of sparsity and selfocclusion in ...
-- **p. 6 / 4.4. Diffusion-agnostic Inference - extractive body cue:** Specifically, during inference, we generate novel x′ gen with arbitrary LiDAR diffusion model, project RV into a point cloud P ′ gen = RRVP(x′ gen), ...
-- **p. 7 / 5.2. Experiment Setup - extractive body cue:** We conclude that L3DR significantly improves conditional generation capability compared to the baselines.
-- **p. 7 / 5.2. Experiment Setup - extractive body cue:** Meanwhile, L3DR with semantic-map input improves generation quality consistently, providing further 10.2% average performance boost on all metrics upon raw L3DR.
-- **p. 8 / 5.3. Other Results - extractive body cue:** Red regions highlight the the improvements from the diffusiongenerated (i.e., denoised) data to our rectified data.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 거리 영상 확산 모델 뒤에 점 오프셋 회귀기를 두고, Welsch 손실로 큰 편향이 있는 관측이 보정 학습에 미치는 영향을 제한한다. [PDF 3쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Liu_L3DR_3D-aware_LiDAR_Diffusion_and_Rectification_CVPR_2026_paper.pdf#page=3) · [PDF 4쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Liu_L3DR_3D-aware_LiDAR_Diffusion_and_Rectification_CVPR_2026_paper.pdf#page=4) · [PDF 5쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Liu_L3DR_3D-aware_LiDAR_Diffusion_and_Rectification_CVPR_2026_paper.pdf#page=5)
+- KITTI-360 등에서 생성 스캔의 분포 및 3D 기하를 평가하고 보정 전후의 점 배열과 품질을 비교했다. [PDF 5쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Liu_L3DR_3D-aware_LiDAR_Diffusion_and_Rectification_CVPR_2026_paper.pdf#page=5) · [PDF 6쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Liu_L3DR_3D-aware_LiDAR_Diffusion_and_Rectification_CVPR_2026_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Liu_L3DR_3D-aware_LiDAR_Diffusion_and_Rectification_CVPR_2026_paper.pdf#page=7)
 
 ## Evaluation Scope
 

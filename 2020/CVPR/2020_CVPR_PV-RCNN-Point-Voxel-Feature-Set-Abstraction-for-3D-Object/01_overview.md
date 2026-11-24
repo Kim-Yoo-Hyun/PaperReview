@@ -16,12 +16,11 @@
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 원문 해당 쪽과 대조했다. [본문](https://openaccess.thecvf.com/content_CVPR_2020/papers/Shi_PV-RCNN_Point-Voxel_Feature_Set_Abstraction_for_3D_Object_Detection_CVPR_2020_paper.pdf)
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, we show that a unified framework could integrate the best of the two types of methods, and surpass the prior stateof-the-art 3D detection methods with remarkable margins.
-
-방법 관련 발췌 — We propose a novel 3D object detection framework, PVRCNN (Illustrated in Fig.
+PV-RCNN은 희소 복셀 합성곱과 점 기반 특징 집계를 연결해 LiDAR 점군의 3D 물체 후보 상자를 정제한다. [PDF 1쪽](https://openaccess.thecvf.com/content_CVPR_2020/papers/Shi_PV-RCNN_Point-Voxel_Feature_Set_Abstraction_for_3D_Object_Detection_CVPR_2020_paper.pdf#page=1) · [PDF 3쪽](https://openaccess.thecvf.com/content_CVPR_2020/papers/Shi_PV-RCNN_Point-Voxel_Feature_Set_Abstraction_for_3D_Object_Detection_CVPR_2020_paper.pdf#page=3)
 
 ## Problem and Motivation
 
@@ -55,16 +54,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 1 / 1. Introduction - extractive body cue:** We propose a novel 3D object detection framework, PVRCNN (Illustrated in Fig.
-- **p. 2 / 1. Introduction - extractive body cue:** (2) We propose the voxelto-keypoint scene encoding scheme, which encodes multiscale voxel features of the whole scene to a small set of keypoints by the ...
-- **p. 2 / 1. Introduction - extractive body cue:** Therefore, to better integrate these two types of point cloud feature learning networks, we propose a two-step strategy with the first voxel-to-keypoint scene encoding step ...
-- **p. 7 / 4.2. 3D Detection on the KITTI Dataset - extractive body cue:** Similarly, as shown in Table 2, our method outperforms previous stateof-the-art methods with large margins.
-- **p. 7 / 4.2. 3D Detection on the KITTI Dataset - extractive body cue:** For the bird-view detection of the car class, our method also achieves new state-of-theart performance on the easy and moderate difficulty levels while dropping slightly ...
-- **p. 8 / 4.3. 3D Detection on the Waymo Open Dataset - extractive body cue:** The results show that our method achieves remarkably better mAP on all distance ranges of interest, where the maximum gain is 9.19% for the 3D ...
-- **p. 7 / 4.2. 3D Detection on the KITTI Dataset - extractive body cue:** For 3D detection and bird-view detection of cyclist, our methods outperforms previous LiDAR-only methods with large margins on the moderate and hard difficulty levels while ...
-- **p. 8 / 4.3. 3D Detection on the Waymo Open Dataset - extractive body cue:** As shown in Table 5, our method also achieves superior performance in terms of mAPH, which demonstrates that our model predicted accurate heading direction for ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 여러 해상도의 복셀 특징을 대표 키포인트에 모아 물체 주변의 점 기하와 넓은 문맥을 함께 보존한다. [PDF 3쪽](https://openaccess.thecvf.com/content_CVPR_2020/papers/Shi_PV-RCNN_Point-Voxel_Feature_Set_Abstraction_for_3D_Object_Detection_CVPR_2020_paper.pdf#page=3) · [PDF 4쪽](https://openaccess.thecvf.com/content_CVPR_2020/papers/Shi_PV-RCNN_Point-Voxel_Feature_Set_Abstraction_for_3D_Object_Detection_CVPR_2020_paper.pdf#page=4)
+- 후보 상자 내부 격자점에서 주변 키포인트 특징을 집계하는 RoI-grid pooling을 설계하고 KITTI와 Waymo의 검출 과제로 평가했다. [PDF 4쪽](https://openaccess.thecvf.com/content_CVPR_2020/papers/Shi_PV-RCNN_Point-Voxel_Feature_Set_Abstraction_for_3D_Object_Detection_CVPR_2020_paper.pdf#page=4) · [PDF 5쪽](https://openaccess.thecvf.com/content_CVPR_2020/papers/Shi_PV-RCNN_Point-Voxel_Feature_Set_Abstraction_for_3D_Object_Detection_CVPR_2020_paper.pdf#page=5) · [PDF 6쪽](https://openaccess.thecvf.com/content_CVPR_2020/papers/Shi_PV-RCNN_Point-Voxel_Feature_Set_Abstraction_for_3D_Object_Detection_CVPR_2020_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content_CVPR_2020/papers/Shi_PV-RCNN_Point-Voxel_Feature_Set_Abstraction_for_3D_Object_Detection_CVPR_2020_paper.pdf#page=7)
 
 ## Evaluation Scope
 

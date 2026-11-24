@@ -16,12 +16,11 @@
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (17 pages; PyMuPDF text; title-token overlap first two pages=0.9)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 원문 해당 쪽과 대조했다. [본문](https://proceedings.iclr.cc/paper_files/paper/2025/file/d274ea8b3c7f526f79ac9ce75ee3c8df-Paper-Conference.pdf)
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — One major challenge lies in how embodied agents perceive their environment, as they typically rely on ego-centric observations from multiple views while moving around, lacking a holistic, scene-level perception.
-
-방법 관련 발췌 — As shown in Figure 2, our method consists of three key components: Hierarchical Scene Semantic Enhancer (Sec.
+DenseGrounding은 1인칭 3D 장면에서 발화가 지칭하는 물체를 찾기 위해 점군과 여러 영상에서 보존한 세부 시각 특징을 언어와 정렬한다. [PDF 1쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/d274ea8b3c7f526f79ac9ce75ee3c8df-Paper-Conference.pdf#page=1) · [PDF 5쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/d274ea8b3c7f526f79ac9ce75ee3c8df-Paper-Conference.pdf#page=5)
 
 ## Problem and Motivation
 
@@ -55,16 +54,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 5 / 4 METHOD - extractive body cue:** As shown in Figure 2, our method consists of three key components: Hierarchical Scene Semantic Enhancer (Sec.
-- **p. 3 / 1 INTRODUCTION - extractive body cue:** HSSE enables interaction between textual and visual features, ensuring the model captures both global context and detailed object semantics from ego-centric inputs. • Our method ...
-- **p. 3 / 1 INTRODUCTION - extractive body cue:** By leveraging an LLM grounded in a scene information database, our approach enriches the diversity and contextual clarity of the textual features. • We introduce ...
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** In response to these challenges, we propose DenseGrounding, a novel method for multi-view 3D visual grounding that alleviates the sparsity in both visual and textual ...
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** Specifically, to address the loss of finegrained visual semantics, we introduce the Hierarchical Scene Semantic Enhancer (HSSE), which enriches visual representations with global scene-level semantics.
-- **p. 9 / 5 EXPERIMENTS - extractive body cue:** The results demonstrate that "LLM+DB(R+L)" achieves the notable over all improvement of 2.45% against naive baseline, confirming the effectiveness of incorporating both object relationships and ...
-- **p. 8 / 5 EXPERIMENTS - extractive body cue:** On the full training set, DenseGrounding achieves a significant improvement of 5.81% over the previous strongest baseline, EmbodiedScan.
-- **p. 10 / 5 EXPERIMENTS - extractive body cue:** 5.4 LIMITATIONS While the DenseGrounding significantly improves the ego-centric 3D visual grounding task performance, it has limitations.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 계층적 장면 인코더에서 영상·점군 특징을 결합하고, 언어 모델로 확장한 표현을 학습에 사용해 짧은 지시의 맥락을 보충한다. [PDF 4쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/d274ea8b3c7f526f79ac9ce75ee3c8df-Paper-Conference.pdf#page=4) · [PDF 5쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/d274ea8b3c7f526f79ac9ce75ee3c8df-Paper-Conference.pdf#page=5) · [PDF 6쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/d274ea8b3c7f526f79ac9ce75ee3c8df-Paper-Conference.pdf#page=6)
+- 전체 학습 자료와 축소 자료에서 위치 추정 정확도를 각각 측정하고, 언어 확장과 시각 특징 결합의 효과를 분리해 비교했다. [PDF 7쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/d274ea8b3c7f526f79ac9ce75ee3c8df-Paper-Conference.pdf#page=7) · [PDF 8쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/d274ea8b3c7f526f79ac9ce75ee3c8df-Paper-Conference.pdf#page=8) · [PDF 9쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/d274ea8b3c7f526f79ac9ce75ee3c8df-Paper-Conference.pdf#page=9)
 
 ## Evaluation Scope
 

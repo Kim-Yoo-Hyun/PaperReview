@@ -6,7 +6,7 @@
 
 ## Evaluation in One Sentence
 
-PDF body evaluation/result cue (p. 6 (5.1. Main Results), p. 6 (5.1. Main Results), p. 12 (Figure/Table caption), p. 7 (5.2. Ablation studies), p. 7 (5.2. Ablation studies), p. 5 (5.1. Main Results)): More importantly, our model significantly outperforms all other submissions under the neural planar metric (PKL), a hidden metric evaluated by the organizers after our leaderboard submission.
+nuScenes에서 65.5 NDS는 3D 검출 점수이고 63.8 AMOTA는 여러 재현율에서 집계한 추적 정확도다. 두 값은 서로 다른 과제의 지표다. [PDF 1쪽](https://openaccess.thecvf.com/content/CVPR2021/papers/Yin_Center-Based_3D_Object_Detection_and_Tracking_CVPR_2021_paper.pdf#page=1) · [PDF 5쪽](https://openaccess.thecvf.com/content/CVPR2021/papers/Yin_Center-Based_3D_Object_Detection_and_Tracking_CVPR_2021_paper.pdf#page=5) · [PDF 6쪽](https://openaccess.thecvf.com/content/CVPR2021/papers/Yin_Center-Based_3D_Object_Detection_and_Tracking_CVPR_2021_paper.pdf#page=6)
 
 ## Evaluation Body Digest
 
@@ -21,7 +21,7 @@ PDF body evaluation/result cue (p. 6 (5.1. Main Results), p. 6 (5.1. Main Result
 
 ## Evaluation Type and Scope
 
-- **Evaluation type:** `EMPIRICAL / SOURCE-REPORTED EVALUATION`.
+- **Evaluation type:** `EMPIRICAL / BENCHMARK OR DATASET`.
 - **Target system/task:** 3D scene/object와 robot coordinate frame.
 - **Input boundary:** RGB-D, image set, point cloud, depth와 camera pose.
 - **Output/decision under evaluation:** point map, pose, scene graph, affordance 또는 query result.

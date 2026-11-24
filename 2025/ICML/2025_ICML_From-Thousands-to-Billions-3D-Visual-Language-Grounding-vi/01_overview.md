@@ -16,12 +16,11 @@
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (17 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 원문 해당 쪽과 대조했다. [본문](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/cao25a/cao25a.pdf)
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — This six-order-of-magnitude gap in data availability severely limits the capabilities of current 3D grounding systems, creating one of the most significant challenges in embodied AI.
-
-방법 관련 발췌 — We show how differentiable rendering enables training 3D models with 2D losses, eliminating dependence on scarce 3D annotations. • Demonstrating a pseudo-labeling strategy for distilling 2D foundation models into 3D.
+LIFT-GS는 점군에서 예측한 언어 조건부 3D 마스크를 영상에 렌더링하고 2D 기반 모델의 출력으로 감독해 수작업 3D 라벨 의존도를 낮춘다. [PDF 1쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/cao25a/cao25a.pdf#page=1) · [PDF 3쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/cao25a/cao25a.pdf#page=3)
 
 ## Problem and Motivation
 
@@ -54,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** We show how differentiable rendering enables training 3D models with 2D losses, eliminating dependence on scarce 3D annotations. • Demonstrating a pseudo-labeling strategy for distilling ...
-- **p. 2 / 1. Introduction - extractive body cue:** We introduce Language-Indexed Field Transfer with Gaussian Splatting (LIFT-GS), which implements this idea as a practical training pipeline.
-- **p. 1 / Abstract - extractive body cue:** We introduce LIFT-GS, a practical distillation technique that overcomes this limitation by using differentiable rendering to bridge 3D and 2D supervision.
-- **p. 1 / Abstract - extractive body cue:** This rendersupervised formulation enables end-to-end training of complete encoder-decoder architectures and is inherently model-agnostic.
-- **p. 15 / Figure/Table caption - extractive body cue:** Table 8: Comparison to 3D pseudolabels. A mask decoder trained on top of frozen LIFT-GS features matches and even outperforms a decoder trained on top ...
-- **p. 8 / Figure/Table caption - extractive body cue:** Table 4: Loss Ablation. We show the impact of different pretrain- ing losses on 3D referential grounding task. Lground significantly improves results, particularly at high ...
-- **p. 7 / Figure/Table caption - extractive body cue:** Table 1. It significantly outperforms its counterpart trained from scratch (LIFT-GS-Scratch mAP +3.2%).
-- **p. 1 / Abstract - extractive body cue:** LIFT-GS achieves state-of-the-art results with 25.7% mAP on open-vocabulary instance segmentation (vs.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- SAM·CLIP의 영상 마스크와 언어 특징 등을 이용해 2D 의사 표적을 구성하고, 미분 가능한 가우시안 렌더링을 통해 3D 예측기를 학습한다. [PDF 4쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/cao25a/cao25a.pdf#page=4) · [PDF 5쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/cao25a/cao25a.pdf#page=5) · [PDF 6쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/cao25a/cao25a.pdf#page=6)
+- 개방 어휘 인스턴스 분할과 지시 표현에 의한 위치 추정에서 사전학습 유무 및 미세조정 데이터 규모의 효과를 비교했다. [PDF 7쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/cao25a/cao25a.pdf#page=7) · [PDF 8쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/cao25a/cao25a.pdf#page=8) · [PDF 9쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/cao25a/cao25a.pdf#page=9)
 
 ## Evaluation Scope
 

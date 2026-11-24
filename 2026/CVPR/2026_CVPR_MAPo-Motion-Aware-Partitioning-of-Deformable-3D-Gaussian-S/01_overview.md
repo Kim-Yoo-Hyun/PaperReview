@@ -16,12 +16,11 @@
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 원문 해당 쪽과 대조했다. [본문](https://openaccess.thecvf.com/content/CVPR2026/papers/Jiao_MAPo_Motion-Aware_Partitioning_of_Deformable_3D_Gaussian_Splatting_for_High-Fidelity_CVPR_2026_paper.pdf)
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Despite promising results, these methods suffer from two critical limitations inherent in their deformation framework: • Bottleneck in Motion Modeling Capacity: As shown in Fig.
-
-방법 관련 발췌 — Our key contributions are summarized as follows: • We propose MAPo, a novel framework for high-fidelity dynamic scene reconstruction based on a dynamic scorebased partitioning strategy.
+MAPo는 동적 장면을 복원할 때 가우시안의 움직임 크기에 따라 변형 모델이 담당할 시간 구간을 다르게 배정한다. [PDF 1쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Jiao_MAPo_Motion-Aware_Partitioning_of_Deformable_3D_Gaussian_Splatting_for_High-Fidelity_CVPR_2026_paper.pdf#page=1) · [PDF 3쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Jiao_MAPo_Motion-Aware_Partitioning_of_Deformable_3D_Gaussian_Splatting_for_High-Fidelity_CVPR_2026_paper.pdf#page=3)
 
 ## Problem and Motivation
 
@@ -55,16 +54,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** Our key contributions are summarized as follows: • We propose MAPo, a novel framework for high-fidelity dynamic scene reconstruction based on a dynamic scorebased partitioning ...
-- **p. 5 / 4.2. Cross-Frame Consistency Loss - extractive body cue:** To ensure temporal smoothness, we introduce the cross-frame consistency loss Lcross, which consists of two components: Lcurrent and Lgt.
-- **p. 4 / 4. Method - extractive body cue:** Our approach consists of two main components: a dynamic score-based partitioning strategy and a cross-frame consistency loss.
-- **p. 2 / 1. Introduction - extractive body cue:** To tackle these issues, we introduce MAPo, a novel framework for high-fidelity dynamic scene reconstruction.
-- **p. 4 / 4. Method - extractive body cue:** The overview of our method is shown in Fig.
-- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Overview. (a-b) Deformation-based methods often blur details in regions with complex or rapid motion. (c) Our MAPo significantly improves rendering quality in these ...
-- **p. 7 / 5.3.1. Quantitative Comparisons - extractive body cue:** 2, our method consistently achieves SOTA rendering quality across both datasets while avoiding prohibitive computational overhead, thus offering a compelling balance between high fidelity and ...
-- **p. 8 / Figure/Table caption - extractive body cue:** Figure 9. Ablation study on the Lcross. We visualize how Lcross improves temporal consistency and rendering quality across a par- tition boundary (frames 74-75). The ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 느리게 변하는 가우시안은 정적으로 취급하고 빠르게 움직이는 가우시안은 시간 구간을 재귀적으로 나눠 별도의 변형망으로 학습한다. [PDF 3쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Jiao_MAPo_Motion-Aware_Partitioning_of_Deformable_3D_Gaussian_Splatting_for_High-Fidelity_CVPR_2026_paper.pdf#page=3) · [PDF 4쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Jiao_MAPo_Motion-Aware_Partitioning_of_Deformable_3D_Gaussian_Splatting_for_High-Fidelity_CVPR_2026_paper.pdf#page=4) · [PDF 5쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Jiao_MAPo_Motion-Aware_Partitioning_of_Deformable_3D_Gaussian_Splatting_for_High-Fidelity_CVPR_2026_paper.pdf#page=5)
+- 구간 경계에서 같은 프레임의 렌더링을 일치시키는 손실을 추가하고 시간 분할의 효과와 움직임이 큰 영역의 새 시점 품질을 평가했다. [PDF 5쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Jiao_MAPo_Motion-Aware_Partitioning_of_Deformable_3D_Gaussian_Splatting_for_High-Fidelity_CVPR_2026_paper.pdf#page=5) · [PDF 6쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Jiao_MAPo_Motion-Aware_Partitioning_of_Deformable_3D_Gaussian_Splatting_for_High-Fidelity_CVPR_2026_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Jiao_MAPo_Motion-Aware_Partitioning_of_Deformable_3D_Gaussian_Splatting_for_High-Fidelity_CVPR_2026_paper.pdf#page=7)
 
 ## Evaluation Scope
 

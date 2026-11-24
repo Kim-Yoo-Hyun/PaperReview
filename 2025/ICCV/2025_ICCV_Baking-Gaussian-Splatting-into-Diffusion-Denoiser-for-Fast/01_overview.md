@@ -16,12 +16,11 @@
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 원문 해당 쪽과 대조했다. [본문](https://openaccess.thecvf.com/content/ICCV2025/papers/Cai_Baking_Gaussian_Splatting_into_Diffusion_Denoiser_for_Fast_and_Scalable_ICCV_2025_paper.pdf)
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Without 3D model in the diffusion, these methods cannot enforce view consistency and easily collapse when the prompt view direction changes.
-
-방법 관련 발췌 — Our contributions can be summarized as follows: • We propose a novel framework, DiffusionGS, for 3D object generation and scene reconstruction from single view. • We design a scene-object mixed training strategy ...
+DiffusionGS는 단일 이미지에서 물체나 장면을 생성할 때 각 확산 단계에서 3D 가우시안을 직접 예측해 여러 뷰가 같은 3D 표현을 공유하게 한다. [PDF 1쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Cai_Baking_Gaussian_Splatting_into_Diffusion_Denoiser_for_Fast_and_Scalable_ICCV_2025_paper.pdf#page=1) · [PDF 4쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Cai_Baking_Gaussian_Splatting_into_Diffusion_Denoiser_for_Fast_and_Scalable_ICCV_2025_paper.pdf#page=4)
 
 ## Problem and Motivation
 
@@ -55,16 +54,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 3 / 1. Introduction - extractive body cue:** Our contributions can be summarized as follows: • We propose a novel framework, DiffusionGS, for 3D object generation and scene reconstruction from single view. • ...
-- **p. 2 / 1. Introduction - extractive body cue:** To address these issues, we propose a novel single-stage 3D Gaussian Splatting (3DGS) [27] based diffusion model, DiffusionGS, for 3D object generation and scene reconstruction ...
-- **p. 2 / 1. Introduction - extractive body cue:** Thus, our method can better perceive the geometry to reconstruct the scene without using depth estimator.
-- **p. 3 / 3. Method - extractive body cue:** 4 depicts the pipeline of our method.
-- **p. 4 / 3.1. DiffusionGS - extractive body cue:** 4 (b), the input images concatenated with the viewpoint conditions are patchified, linearly projected, and then concatenated with a positional embedding to derive the input ...
-- **p. 7 / Figure/Table caption - extractive body cue:** Table 2. Ablation study. Results on the GSO [13] dataset are listed. the highest score while enjoying over 5× and 10× infer- ence speed compared ...
-- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Single-view object generation (upper) and scene reconstruction (lower) results of our method. For single-view object generation, the prompt views are shown in the ...
-- **p. 2 / Figure/Table caption - extractive body cue:** Figure 2. Single-view object generation results of our method on GSO [13], wild images, and text-to-images prompted by stable diffusion or FLUX. Our DiffusionGS can ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 카메라 시점을 조건으로 하는 3D 가우시안을 직접 출력하는 단일 생성 구조를 설계하고 물체와 장면 자료를 섞어 학습한다. [PDF 3쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Cai_Baking_Gaussian_Splatting_into_Diffusion_Denoiser_for_Fast_and_Scalable_ICCV_2025_paper.pdf#page=3) · [PDF 4쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Cai_Baking_Gaussian_Splatting_into_Diffusion_Denoiser_for_Fast_and_Scalable_ICCV_2025_paper.pdf#page=4) · [PDF 5쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Cai_Baking_Gaussian_Splatting_into_Diffusion_Denoiser_for_Fast_and_Scalable_ICCV_2025_paper.pdf#page=5)
+- 단일 입력 물체 생성과 장면 재구성을 구분해 렌더링 품질과 추론 시간을 평가하고 입력 시점이 달라질 때의 결과를 비교했다. [PDF 6쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Cai_Baking_Gaussian_Splatting_into_Diffusion_Denoiser_for_Fast_and_Scalable_ICCV_2025_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Cai_Baking_Gaussian_Splatting_into_Diffusion_Denoiser_for_Fast_and_Scalable_ICCV_2025_paper.pdf#page=7) · [PDF 8쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Cai_Baking_Gaussian_Splatting_into_Diffusion_Denoiser_for_Fast_and_Scalable_ICCV_2025_paper.pdf#page=8)
 
 ## Evaluation Scope
 

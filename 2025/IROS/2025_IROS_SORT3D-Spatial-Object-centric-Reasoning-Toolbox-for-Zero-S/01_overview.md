@@ -16,12 +16,11 @@
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 원문 해당 쪽과 대조했다. [본문](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11246145)
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Resolving natural language expressions referring to specific objects using semantic object attributes and inter-object spatial relations-the core challenge of 3D referential grounding-remains difficult despite being an intuitive task fo ...
-
-방법 관련 발췌 — To this end, we propose SORT3D, a Spatial Object-centric Reasoning Toolbox for 3D Grounding Using LLMs, shown
+SORT3D는 시점과 물체 속성이 포함된 자연어 지시를 공간 검색 함수로 풀어 미리 관측한 3D 장면에서 목표 물체를 선택한다. [PDF 1쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11246145#page=1) · [PDF 4쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11246145#page=4)
 
 ## Problem and Motivation
 
@@ -55,26 +54,12 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 1 / I. INTRODUCTION - extractive body cue:** To this end, we propose SORT3D, a Spatial Object-centric Reasoning Toolbox for 3D Grounding Using LLMs, shown.
-- **p. 2 / I. INTRODUCTION - extractive body cue:** As a result, our method only requires a single in-context example of the toolbox usage and no other training data.
-- **p. 2 / I. INTRODUCTION - extractive body cue:** We evaluate our method on standard 3D object referential grounding benchmarks, ReferIt3D [1] and IRef-VLA [17], and demonstrate performance competitive with SOTA on complex view-dependent ...
-- **p. 3 / III. METHODOLOGY - extractive body cue:** This component is the only pipeine change required for our method to be deployed in the real-world.
-- **p. 3 / III. METHODOLOGY - extractive body cue:** The input to the grounding pipeline consists of perception information from the scene and a free-form referring expression in natural language.
-- **p. 6 / V. RESULTS AND DISCUSSION - extractive body cue:** On Sr3D, SORT3D surpasses SOTA supervised training methods and achieves close overall performance to Transcrib3D while surpassing it in view-dependent accuracy.
-- **p. 5 / V. RESULTS AND DISCUSSION - extractive body cue:** Similarly, while Transcrib3D reports higher accuracies, it relies on guiding principles [6] that are tailored to the language used in Nr3D and Sr3D, which improve ...
-- **p. 5 / V. RESULTS AND DISCUSSION - extractive body cue:** We see that our method achieves higher accuracy with GPT4o as the LLM backend and is on par with SOTA methods on View-Dependent statements in ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 여러 뷰의 물체 설명을 지도에 모으고, 언어 모델이 거리·방향·시점 관계에 맞는 검색 함수를 순차적으로 호출하게 한다. [PDF 3쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11246145#page=3) · [PDF 4쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11246145#page=4) · [PDF 5쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11246145#page=5)
+- 3D 지시 대상 식별 벤치마크의 정확도를 평가하고 두 실제 이동 플랫폼에서 구축한 지도를 이용해 목표 물체로 이동하는 예를 제시했다. [PDF 6쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11246145#page=6) · [PDF 7쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11246145#page=7) · [PDF 8쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11246145#page=8)
 
 ## Evaluation Scope
 
-| Dimension | Body-grounded record | Boundary | Anchor |
-|---|---|---|---|
-| Evaluation type | EMPIRICAL / SOURCE-REPORTED EVALUATION | do not infer unreported downstream behavior | p. 6 (V. RESULTS AND DISCUSSION), p. 5 (V. RESULTS AND DISCUSSION) |
-| Embodiment/environment | Referential Grounding on Benchmark Datasets We test our model on both ReferIt3D subsets and the subset of IRef-VLA using ScanNet scenes and compare to SOTA baselines. | hardware/simulator version and reset protocol | p. 5 (IV. EXPERIMENTAL SETUP), p. 6 (V. RESULTS AND DISCUSSION) |
-| Dataset/benchmark | Both datasets consist of utterances describing a target object in a ScanNet [13] scene using spatial relations. | role, split, size and leakage | p. 5 (IV. EXPERIMENTAL SETUP), p. 6 (V. RESULTS AND DISCUSSION), p. 5 (IV. EXPERIMENTAL SETUP), p. 6 (V. RESULTS AND DISCUSSION) |
-| Metric | For our methods, we conduct multiple trials on each data split to measure variance in LLMs, reported with standard deviation values on the grounding accuracy, which we note that other LLM-based methods ... | definition, denominator, direction and uncertainty | p. 5 (IV. EXPERIMENTAL SETUP), p. 5 (V. RESULTS AND DISCUSSION), p. 6 (V. RESULTS AND DISCUSSION) |
-| Baseline/ablation | Referential Grounding on Benchmark Datasets We test our model on both ReferIt3D subsets and the subset of IRef-VLA using ScanNet scenes and compare to SOTA baselines. | fair input/data/compute/action matching | p. 5 (IV. EXPERIMENTAL SETUP), p. 5 (V. RESULTS AND DISCUSSION), p. 6 (V. RESULTS AND DISCUSSION) |
+실물 시연에서는 로봇이 먼저 환경을 주행해 지도를 만든 뒤 물체 지시를 받았다. 벤치마크의 지시 대상 식별 정확도와 두 이동 플랫폼의 내비게이션 시연은 별도 평가다. [PDF 6쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11246145#page=6) · [PDF 7쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11246145#page=7)
 
 ## Explicit Limitations and Failure Boundary
 

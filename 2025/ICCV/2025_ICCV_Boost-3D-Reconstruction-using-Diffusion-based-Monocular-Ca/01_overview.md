@@ -16,12 +16,11 @@
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (7 pages; PyMuPDF text; title-token overlap first two pages=0.833)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 원문 해당 쪽과 대조했다. [본문](https://openaccess.thecvf.com/content/ICCV2025/papers/Deng_Boost_3D_Reconstruction_using_Diffusion-based_Monocular_Camera_Calibration_ICCV_2025_paper.pdf)
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — While it shows some limitations in focal estimation, this leads to slightly less accurate visualizations.
-
-방법 관련 발췌 — In contrast, our method is specifically designed to recover camera intrinsics.
+DM-Calib은 단일 영상에서 카메라 내부 파라미터를 나타내는 조밀한 영상을 확산 모델로 추정해 카메라 보정과 3D 복원에 쓴다. [PDF 1쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Deng_Boost_3D_Reconstruction_using_Diffusion-based_Monocular_Camera_Calibration_ICCV_2025_paper.pdf#page=1) · [PDF 3쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Deng_Boost_3D_Reconstruction_using_Diffusion-based_Monocular_Camera_Calibration_ICCV_2025_paper.pdf#page=3)
 
 ## Problem and Motivation
 
@@ -55,16 +54,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 6.3. More implementation details and discussions - extractive body cue:** In contrast, our method is specifically designed to recover camera intrinsics.
-- **p. 2 / 7.5. Mesh Reconstruction - extractive body cue:** We present the reconstruction result of Pisa tower in Fig.
-- **p. 3 / 7.6. Single view 3D reconstuction - extractive body cue:** We present the predicted metric depth in both outdoor and indoor scenes.
-- **p. 3 / 7.6. Single view 3D reconstuction - extractive body cue:** Our method provides more detailed results and recovers accurate metric depths. camera intrinsics and metric depth map.
-- **p. 4 / 7.7. The Importance of Principal Point Evaluation - extractive body cue:** And our method is inherently capable of solving for both fx and fy and we take this into account to Table 11.
-- **p. 4 / 7.7. The Importance of Principal Point Evaluation - extractive body cue:** Despite targeting metric depth, we achieve performance comparable to SoTA affine-invariant depth methods.
-- **p. 5 / 7.8. The Importance of camera image in metric - extractive body cue:** With intrinsic cues, our method achieves more accurate and better-aligned reconstructions. results on three additional datasets in Tab.12, complementing the findings in Tab.5.
-- **p. 2 / 6.3. More implementation details and discussions - extractive body cue:** The results demonstrate that Dust3r achieves more accurate reconstruction when equipped with our estimated intrinsics.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 내부 파라미터를 픽셀별 카메라 방향 정보로 나타내고 예측값에 강인 추정을 적용해 전역 카메라 파라미터를 복원한다. [PDF 3쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Deng_Boost_3D_Reconstruction_using_Diffusion-based_Monocular_Camera_Calibration_ICCV_2025_paper.pdf#page=3) · [PDF 4쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Deng_Boost_3D_Reconstruction_using_Diffusion-based_Monocular_Camera_Calibration_ICCV_2025_paper.pdf#page=4) · [PDF 5쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Deng_Boost_3D_Reconstruction_using_Diffusion-based_Monocular_Camera_Calibration_ICCV_2025_paper.pdf#page=5)
+- 학습 밖 영상에서 보정 오차를 평가하고 추정한 내부 파라미터가 미터 단위 깊이와 3D 복원에 주는 영향을 비교했다. [PDF 6쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Deng_Boost_3D_Reconstruction_using_Diffusion-based_Monocular_Camera_Calibration_ICCV_2025_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Deng_Boost_3D_Reconstruction_using_Diffusion-based_Monocular_Camera_Calibration_ICCV_2025_paper.pdf#page=7) · [PDF 8쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Deng_Boost_3D_Reconstruction_using_Diffusion-based_Monocular_Camera_Calibration_ICCV_2025_paper.pdf#page=8)
 
 ## Evaluation Scope
 

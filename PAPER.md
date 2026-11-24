@@ -1,6 +1,6 @@
 # 논문 목록
 
-- Generated: 2026-11-22 KST
+- Generated: 2026-11-24 KST
 - Total papers with folders: 1252
 - Long-term reading tiers: [READING_PLAN.md](./research/READING_PLAN.md) and [READING_TIERS.csv](./research/READING_TIERS.csv)
 - Reading progress and synthesis: [READING_STATUS.csv](./research/READING_STATUS.csv), [READING_STATUS.md](./research/READING_STATUS.md), [synthesis/README.md](./synthesis/README.md)
@@ -187,7 +187,7 @@
 | 2025 | ICML | [3D Question Answering via only 2D Vision-Language Models](./2025/ICML/2025_ICML_3D-Question-Answering-via-only-2D-Vision-Language-Models/01_overview.md) | Vision-Language Model, 3D Vision | missing | [link](https://github.com/fereenwong/cdViews) |
 | 2025 | ICCV | [3DGraphLLM: Combining Semantic Graphs and Large Language Models for 3D Scene Understanding](./2025/ICCV/2025_ICCV_3DGraphLLM-Combining-Semantic-Graphs-and-Large-Language-Mo/01_overview.md) | 3D Scene Graph, LLM, Graph Reasoning | missing | not identified from primary page |
 | 2025 | ICCV | [Boost 3D Reconstruction using Diffusion-based Monocular Camera Calibration](./2025/ICCV/2025_ICCV_Boost-3D-Reconstruction-using-Diffusion-based-Monocular-Ca/01_overview.md) | 3D Vision, Diffusion | missing | not identified |
-| 2025 | ICRA | [Context Graph-based Visual-Language Place Recognition](./2025/ICRA/2025_ICRA_Context-Graph-based-Visual-Language-Place-Recognition/01_overview.md) | Graph Reasoning | missing | not identified from venue audit |
+| 2025 | ICRA | [Context Graph-based Visual-Language Place Recognition](./2025/ICRA/2025_ICRA_Context-Graph-based-Visual-Language-Place-Recognition/01_overview.md) | Graph Reasoning | missing | [link](https://github.com/woo-soojin/context-based-vlpr) |
 | 2025 | ICLR | [DenseGrounding: Improving Dense Language-Vision Semantics for Ego-centric 3D Visual Grounding](./2025/ICLR/2025_ICLR_DenseGrounding-Improving-Dense-Language-Vision-Semantics-f/01_overview.md) | 3D Vision, semantic | missing | not identified from OpenReview |
 | 2025 | WACV | [DepthSSC: Monocular 3D Semantic Scene Completion via Depth-Spatial Alignment and Voxel Adaptation](./2025/WACV/2025_WACV_DepthSSC-Monocular-3D-Semantic-Scene-Completion-via-Depth/01_overview.md) | semantic, alignment, depth, 3D Vision | missing | not identified |
 | 2025 | ICCV | [Details Matter for Indoor Open-vocabulary 3D Instance Segmentation](./2025/ICCV/2025_ICCV_Details-Matter-for-Indoor-Open-vocabulary-3D-Instance-Segm/01_overview.md) | 3D Vision, semantic | missing | not identified |
@@ -2342,6 +2342,7 @@
 - **ChatVLA-2: Vision-Language-Action Model with Open-World Reasoning**: [ChatVLA-2-Vision-Languag](./2025/NeurIPS/2025_NeurIPS_ChatVLA-2-Vision-Language-Action-Model-with-Open-World-Rea/01_overview.md)
 - **CHORUS**: [CHORUS-Decentralized-Mul](./2026/CoRL/2026_CoRL_CHORUS-Decentralized-Multi-Embodiment-Collaboration-with-O/01_overview.md)
 - **ClevrSkills**: [ClevrSkills-Compositiona](./2024/NeurIPS/2024_NeurIPS_ClevrSkills-Compositional-Language-And-Visual-Reasoning-in/01_overview.md)
+- **CoA-VLA: Improving Vision-Language-Action Models via Visual-Textual Chain-of-Affordance**: [CoA-VLA-Improving-Vision](./2025/ICCV/2025_ICCV_CoA-VLA-Improving-Vision-Language-Action-Models-via-Visual/01_overview.md)
 - **Colored Noise PPO**: [Colored-Noise-in-PPO-Imp](./2024/AAAI/2024_AAAI_Colored-Noise-in-PPO-Improved-Exploration-and-Performance/01_overview.md)
 - **Colosseum V2: Benchmarking Generalization for Vision Language Action Models**: [Colosseum-V2-Benchmarkin](./2026/RA-L/2026_RA-L_Colosseum-V2-Benchmarking-Generalization-for-Vision-Langua/01_overview.md)
 - **CoMo**: [CoMo-Learning-Continuous](./2026/CVPR/2026_CVPR_CoMo-Learning-Continuous-Latent-Motion-from-Internet-Video/01_overview.md)
@@ -2349,6 +2350,7 @@
 - **CompVLA**: [CompVLA-A-Variable-Compl](./2026/CoRL/2026_CoRL_CompVLA-A-Variable-Compliance-Vision-Language-Action-Model/01_overview.md)
 - **Consistency Policy**: [Consistency-Policy-Accel](./2024/RSS/2024_RSS_Consistency-Policy-Accelerated-Visuomotor-Policies-via-Con/01_overview.md)
 - **ContactBench 1.0**: [ContactBench-1-0-A-Bench](./2026/arXiv/2026_arXiv_ContactBench-1.0-A-Benchmark-for-Everyday-Contact-Rich-Rob/01_overview.md)
+- **Context-Based Visual-Language Place Recognition**: [Context-Graph-based-Visu](./2025/ICRA/2025_ICRA_Context-Graph-based-Visual-Language-Place-Recognition/01_overview.md)
 - **ContextFlow**: [ContextFlow-In-Context-F](./2026/ECCV/2026_ECCV_ContextFlow-In-Context-Flow-Matching-for-Robot-Manipulatio/01_overview.md)
 - **Contrast Sets**: [Contrast-Sets-for-Evalua](./2024/CoRL/2024_CoRL_Contrast-Sets-for-Evaluating-Language-Guided-Robot-Policie/01_overview.md)
 - **ControlVLA**: [ControlVLA-Few-shot-Obje](./2025/CoRL/2025_CoRL_ControlVLA-Few-shot-Object-centric-Adaptation-for-Pre-trai/01_overview.md)
@@ -2448,10 +2450,12 @@
 - **IDRL**: [Information-Directed-Rew](./2021/NeurIPS/2021_NeurIPS_Information-Directed-Reward-Learning-for-Reinforcement-Lea/01_overview.md)
 - **IGAR**: [Restoring-Linguistic-Gro](./2026/ECCV/2026_ECCV_Restoring-Linguistic-Grounding-in-VLA-Models-via-Train-Fre/01_overview.md)
 - **Instruction-Guided Attention Recalibration**: [Restoring-Linguistic-Gro](./2026/ECCV/2026_ECCV_Restoring-Linguistic-Grounding-in-VLA-Models-via-Train-Fre/01_overview.md)
+- **Interleave-VLA: Enhancing Robot Manipulation with Interleaved Image-Text Instructions**: [Interleave-VLA-Enhancing](./2026/ICLR/2026_ICLR_Interleave-VLA-Enhancing-Robot-Manipulation-with-Image-Tex/01_overview.md)
 - **JALA**: [Joint-Aligned-Latent-Act](./2026/CVPR/2026_CVPR_Joint-Aligned-Latent-Action-Towards-Scalable-VLA-Pretraini/01_overview.md)
 - **KinDER**: [KinDER-A-Physical-Reason](./2026/RSS/2026_RSS_KinDER-A-Physical-Reasoning-Benchmark-for-Robot-Learning-a/01_overview.md)
 - **KineVLA**: [ExecVLA-Following-Fine-G](./2026/arXiv/2026_arXiv_ExecVLA-Following-Fine-Grained-Execution-Constraints-in-Vi/01_overview.md)
 - **Kober robotics RL survey**: [Reinforcement-learning-i](./2013/IJRR/2013_IJRR_Reinforcement-learning-in-robotics-A-survey/01_overview.md)
+- **LangOcc: Self-Supervised Open Vocabulary Occupancy Estimation via Volume Rendering**: [LangOcc-Open-Vocabulary-](./2025/3DV/2025_3DV_LangOcc-Open-Vocabulary-Occupancy-Estimation-via-Volume-Re/01_overview.md)
 - **LAPA**: [Latent-Action-Pretrainin](./2025/ICLR/2025_ICLR_Latent-Action-Pretraining-from-Videos/01_overview.md)
 - **Latent Action Pretraining**: [Latent-Action-Pretrainin](./2025/ICLR/2025_ICLR_Latent-Action-Pretraining-from-Videos/01_overview.md)
 - **LatentToM**: [Latent-Theory-of-Mind-A-](./2025/CoRL/2025_CoRL_Latent-Theory-of-Mind-A-Decentralized-Diffusion-Architectu/01_overview.md)
@@ -2597,6 +2601,8 @@
 - **SAGA**: [SAGA-Open-World-Mobile-M](./2026/RA-L/2026_RA-L_SAGA-Open-World-Mobile-Manipulation-via-Structured-Afforda/01_overview.md)
 - **SAPIEN**: [SAPIEN-A-SimulAted-Part-](./2020/CVPR/2020_CVPR_SAPIEN-A-SimulAted-Part-Based-Interactive-ENvironment/01_overview.md)
 - **Scalable Vision-Language-Action Model Pretraining for Robotic Dexterous Manipulation with Real-Life Human Activity Videos**: [Scalable-Vision-Language](./2026/ICRA/2026_ICRA_Scalable-Vision-Language-Action-Model-Pretraining-for-Robo/01_overview.md)
+- **Semantic Consistent Language Gaussian Splatting for Point-Level Open-vocabulary Querying**: [Semantically-Consistent-](./2026/ICRA/2026_ICRA_Semantically-Consistent-Language-Gaussian-Splatting-for-3D/01_overview.md)
+- **Semantic-Contact Fields for Category-Level Generalizable Tactile Tool Manipulation**: [Semantic-Contact-Fields-](./2026/RSS/2026_RSS_Semantic-Contact-Fields-for-Category-Level-Generalizable-T/01_overview.md)
 - **SHARSA**: [Horizon-Reduction-Makes-](./2025/NeurIPS/2025_NeurIPS_Horizon-Reduction-Makes-RL-Scalable/01_overview.md)
 - **SIMPLER**: [Evaluating-Real-World-Ro](./2024/CoRL/2024_CoRL_Evaluating-Real-World-Robot-Manipulation-Policies-in-Simul/01_overview.md)
 - **SIMPLER-IN**: [Do-VLAs-Really-Follow-In](./2026/arXiv/2026_arXiv_Do-VLAs-Really-Follow-Instructions-Diagnosing-How-Level-In/01_overview.md)
@@ -2606,6 +2612,7 @@
 - **SOE**: [SOE-Sample-Efficient-Rob](./2026/ICRA/2026_ICRA_SOE-Sample-Efficient-Robot-Policy-Self-Improvement-via-On/01_overview.md)
 - **Spa-Bench (robotics)**: [Spa-Bench-A-Real-Robot-B](./2026/arXiv/2026_arXiv_Spa-Bench-A-Real-Robot-Benchmark-for-Spatial-Grounding-in/01_overview.md)
 - **SPIRE**: [SPIRE-Synergistic-Planni](./2024/CoRL/2024_CoRL_SPIRE-Synergistic-Planning-Imitation-and-Reinforcement-Lea/01_overview.md)
+- **SPIRE: Synergistic Planning, Imitation, and Reinforcement for Long-Horizon Manipulation**: [SPIRE-Synergistic-Planni](./2024/CoRL/2024_CoRL_SPIRE-Synergistic-Planning-Imitation-and-Reinforcement-Lea/01_overview.md)
 - **SPRINT**: [SPRINT-Scalable-Policy-P](./2024/ICRA/2024_ICRA_SPRINT-Scalable-Policy-Pre-Training-via-Language-Instructi/01_overview.md)
 - **SPRINT: Scalable Semantic Policy Pre-training via Language Instruction Relabeling**: [SPRINT-Scalable-Policy-P](./2024/ICRA/2024_ICRA_SPRINT-Scalable-Policy-Pre-Training-via-Language-Instructi/01_overview.md)
 - **SRPO**: [SRPO-Self-Referential-Po](./2026/CVPR/2026_CVPR_SRPO-Self-Referential-Policy-Optimization-for-Vision-Langu/01_overview.md)

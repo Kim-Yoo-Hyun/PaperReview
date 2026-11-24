@@ -16,12 +16,11 @@
 - Code/Project: https://vis-www.cs.umass.edu/3dllm/
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (19 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 원문 해당 쪽과 대조했다. [본문](https://proceedings.neurips.cc/paper_files/paper/2023/file/413885e70482b95dcbeeddc1daf39177-Paper-Conference.pdf)
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Large language models (LLMs) and Vision-Language Models (VLMs) have been proven to excel at multiple tasks, such as commonsense reasoning.
-
-방법 관련 발췌 — To sum up, our paper has the following contributions: • We introduce a new family of 3D-based Large Language models (3D-LLMs) that can take 3D points with features and language prompts as ...
+3D-LLM은 여러 뷰에서 추출한 특징을 3차원 공간에 모아 기존 2D 시각·언어 모델이 장면에 관한 질문과 지시를 처리하도록 학습한다. [PDF 1쪽](https://proceedings.neurips.cc/paper_files/paper/2023/file/413885e70482b95dcbeeddc1daf39177-Paper-Conference.pdf#page=1) · [PDF 5쪽](https://proceedings.neurips.cc/paper_files/paper/2023/file/413885e70482b95dcbeeddc1daf39177-Paper-Conference.pdf#page=5)
 
 ## Problem and Motivation
 
@@ -53,16 +52,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 3 / 5. Facing the mirror and dress - extractive body cue:** To sum up, our paper has the following contributions: • We introduce a new family of 3D-based Large Language models (3D-LLMs) that can take 3D ...
-- **p. 1 / Abstract - extractive body cue:** In this work, we propose to inject the 3D world into large language models and introduce a whole new family of 3D-LLMs.
-- **p. 2 / 5. Facing the mirror and dress - extractive body cue:** To address this, we propose a set of unique data generation pipelines that could generate large-scale 3D data paired with language.
-- **p. 3 / 5. Facing the mirror and dress - extractive body cue:** We introduce a 3D localization mechanism for training the 3D-LLMs to better capture 3D spatial information. • Experiments on held-out evaluation dataset, ScanQA, outperform state-of-the-art ...
-- **p. 2 / 5. Facing the mirror and dress - extractive body cue:** Unlike the vast amount of paired 2D-images-and-text data on the Internet, the scarcity of 3D data hinders the development of 3D-based foundation models.
-- **p. 8 / 5 Experiments - extractive body cue:** Our model outperforms all baseline models for most of the evaluation metrics. they have much lower performances compared to 3D-LLMs, probably because features of multi-view ...
-- **p. 14 / Figure/Table caption - extractive body cue:** Table 4: Experimental results on 3DMV-VQA dataset. * denotes using explicit object representations and neuro-symbolic reasoning. Result Analysis Table 4 shows the performances on 3DMV-VQA. ...
-- **p. 7 / 5 Experiments - extractive body cue:** For example, for BLEU-1, our model outperforms the state-of-the-art ScanQA model by ∼9% for validation set and ∼7% for test set.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 세 가지 프롬프트 생성 절차로 설명·질의응답·과제 분해 등을 포함하는 100만 건 이상의 3D-언어 자료를 구축했다. [PDF 3쪽](https://proceedings.neurips.cc/paper_files/paper/2023/file/413885e70482b95dcbeeddc1daf39177-Paper-Conference.pdf#page=3) · [PDF 4쪽](https://proceedings.neurips.cc/paper_files/paper/2023/file/413885e70482b95dcbeeddc1daf39177-Paper-Conference.pdf#page=4)
+- 공간 위치를 나타내는 특징과 위치 토큰을 모델에 추가하고 ScanQA, SQA3D, 3DMV-VQA에서 응답 성능을 비교했다. [PDF 5쪽](https://proceedings.neurips.cc/paper_files/paper/2023/file/413885e70482b95dcbeeddc1daf39177-Paper-Conference.pdf#page=5) · [PDF 8쪽](https://proceedings.neurips.cc/paper_files/paper/2023/file/413885e70482b95dcbeeddc1daf39177-Paper-Conference.pdf#page=8) · [PDF 9쪽](https://proceedings.neurips.cc/paper_files/paper/2023/file/413885e70482b95dcbeeddc1daf39177-Paper-Conference.pdf#page=9)
 
 ## Evaluation Scope
 

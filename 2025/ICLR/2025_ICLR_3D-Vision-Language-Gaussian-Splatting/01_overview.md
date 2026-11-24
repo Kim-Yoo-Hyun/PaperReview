@@ -16,12 +16,11 @@
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (24 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 원문 해당 쪽과 대조했다. [본문](https://proceedings.iclr.cc/paper_files/paper/2025/file/98ed250b203d1ac6b24bbcf263e3d4a7-Paper-Conference.pdf)
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Moreover, vision-language models like CLIP (Radford et al., 2021) and LSeg (Li et al., 2022) have been bridging the gap between color images and semantic features in 2D space.
-
-방법 관련 발췌 — Besides, we introduce a language-specific parameter that enables the meaningful blending of language features from different Gaussians.
+3D Vision-Language Gaussian Splatting은 장면을 렌더링할 때 색의 투명도와 의미 특징이 서로 다를 수 있다는 점을 반영해 가우시안의 언어 표현을 학습한다. [PDF 1쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/98ed250b203d1ac6b24bbcf263e3d4a7-Paper-Conference.pdf#page=1) · [PDF 4쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/98ed250b203d1ac6b24bbcf263e3d4a7-Paper-Conference.pdf#page=4)
 
 ## Problem and Motivation
 
@@ -55,16 +54,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** Besides, we introduce a language-specific parameter that enables the meaningful blending of language features from different Gaussians.
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** All in all, our 3D vision-language Gaussian splatting can be summarized into the following contributions: • We propose a cross-modal rasterizer that places greater emphasis ...
-- **p. 5 / 3 METHODOLOGY - extractive body cue:** To address this problem, we propose a novel α-blending strategy specifically designed for exploring semantic information.
-- **p. 4 / 3 METHODOLOGY - extractive body cue:** To address this gap, we propose a novel crossmodal rasterizer that emphasizes semantic-specific design, as illustrated in Fig.
-- **p. 4 / 3 METHODOLOGY - extractive body cue:** A) We propose a novel multi-modal Gaussian splatting model; B) we enrich the input images and poses for the model to better fit the semantic ...
-- **p. 8 / 4.2 RESULTS - extractive body cue:** Our proposed method achieves state-of-the-art performance across all scenes, notably outperforming the second best method LangSplat (Qin et al., 2024) by 10.6 in mIoU on ...
-- **p. 14 / A.2.2 QUALITATIVE RESULTS - extractive body cue:** The results demonstrate that our proposed method significantly outperforms the competing approaches.
-- **p. 8 / 4.2 RESULTS - extractive body cue:** The results indicate that both Slerp-based rotation blending and Lerp-based translation blending contribute to performance improvements.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 색과 의미 신호를 결합하는 래스터라이저에 평활화한 의미 지표를 도입하고, 훈련 뷰를 혼합해 새 시점에서의 의미 일관성을 학습한다. [PDF 4쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/98ed250b203d1ac6b24bbcf263e3d4a7-Paper-Conference.pdf#page=4) · [PDF 5쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/98ed250b203d1ac6b24bbcf263e3d4a7-Paper-Conference.pdf#page=5) · [PDF 6쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/98ed250b203d1ac6b24bbcf263e3d4a7-Paper-Conference.pdf#page=6)
+- LERF 장면에서 텍스트로 지정한 물체의 분할과 위치 추정을 평가하고 래스터화 및 뷰 혼합 구성의 기여를 비교했다. [PDF 8쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/98ed250b203d1ac6b24bbcf263e3d4a7-Paper-Conference.pdf#page=8) · [PDF 9쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/98ed250b203d1ac6b24bbcf263e3d4a7-Paper-Conference.pdf#page=9) · [PDF 10쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/98ed250b203d1ac6b24bbcf263e3d4a7-Paper-Conference.pdf#page=10)
 
 ## Evaluation Scope
 

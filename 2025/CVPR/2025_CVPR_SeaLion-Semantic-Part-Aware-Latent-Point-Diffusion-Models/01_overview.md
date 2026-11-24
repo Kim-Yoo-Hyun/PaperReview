@@ -16,12 +16,11 @@
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 원문 해당 쪽과 대조했다. [본문](https://openaccess.thecvf.com/content/CVPR2025/papers/Zhu_SeaLion_Semantic_Part-Aware_Latent_Point_Diffusion_Models_for_3D_Generation_CVPR_2025_paper.pdf)
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, they still lack the ability to generate semantic labels.
-
-방법 관련 발췌 — In summary, the contributions of this work are: • We propose a novel generative model named SeaLion, capable of generating high-quality and diverse point clouds with accurate semantic segmentation labels. • We ...
+SeaLion은 의미 부품 라벨이 있는 점군의 형상과 부품 구조를 함께 생성하는 잠재 확산 모델이다. [PDF 1쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Zhu_SeaLion_Semantic_Part-Aware_Latent_Point_Diffusion_Models_for_3D_Generation_CVPR_2025_paper.pdf#page=1) · [PDF 3쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Zhu_SeaLion_Semantic_Part-Aware_Latent_Point_Diffusion_Models_for_3D_Generation_CVPR_2025_paper.pdf#page=3)
 
 ## Problem and Motivation
 
@@ -55,16 +54,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** In summary, the contributions of this work are: • We propose a novel generative model named SeaLion, capable of generating high-quality and diverse point clouds ...
-- **p. 2 / 1. Introduction - extractive body cue:** We propose a novel evaluation metric named part-aware Chamfer distance (p-CD) to address these limitations and to quantify the pairwise distance between two segmentation-labeled point ...
-- **p. 4 / 3.2. Model Architecture of SeaLion - extractive body cue:** Based on the semantic part-aware latent point diffusion technique, we introduce a novel point cloud generative model named SeaLion.
-- **p. 3 / 3. Methodology - extractive body cue:** Next, we introduce the architecture of SeaLion, and illustrate its usage as a part-aware 3D edition tool.
-- **p. 3 / 3.1. Semantic Part-Aware Latent Point Diffusion - extractive body cue:** Inspired by the insight that DDPMs can serve as powerful representation learners for discriminative tasks like segmentation [2], we propose semantic part-aware latent point diffusion ...
-- **p. 7 / 4.2. Experimental Results - extractive body cue:** The results show that SeaLion outperforms DiffFacto on the primary metric 1-NNA-P and achieves competitive performance on the other metrics.
-- **p. 8 / 4.3. Experimental Analysis - extractive body cue:** The experimental results presented in Table 4 demonstrate that SeaLion outperforms DiffFacto when trained with 10% labeled data, and its performance further improves after incorporating ...
-- **p. 7 / 4.2. Experimental Results - extractive body cue:** The prediction accuracy improves as t decreases from T to 0. lamp categories, SeaLion outperforms DiffFacto by an average of 13.33% on 1-NNA (p-CD), 11.61% ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 부품 정보를 반영하는 점군 표현과 조건부 디코딩을 학습하고 같은 부품끼리 대응시키는 거리 손실로 훈련한다. [PDF 3쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Zhu_SeaLion_Semantic_Part-Aware_Latent_Point_Diffusion_Models_for_3D_Generation_CVPR_2025_paper.pdf#page=3) · [PDF 4쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Zhu_SeaLion_Semantic_Part-Aware_Latent_Point_Diffusion_Models_for_3D_Generation_CVPR_2025_paper.pdf#page=4) · [PDF 5쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Zhu_SeaLion_Semantic_Part-Aware_Latent_Point_Diffusion_Models_for_3D_Generation_CVPR_2025_paper.pdf#page=5)
+- ShapeNet과 IntrA에서 생성 품질을 비교하고 부분적으로만 라벨을 쓸 때의 성능, 부품 편집과 분할 학습용 증강을 검토했다. [PDF 6쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Zhu_SeaLion_Semantic_Part-Aware_Latent_Point_Diffusion_Models_for_3D_Generation_CVPR_2025_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Zhu_SeaLion_Semantic_Part-Aware_Latent_Point_Diffusion_Models_for_3D_Generation_CVPR_2025_paper.pdf#page=7) · [PDF 8쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Zhu_SeaLion_Semantic_Part-Aware_Latent_Point_Diffusion_Models_for_3D_Generation_CVPR_2025_paper.pdf#page=8)
 
 ## Evaluation Scope
 

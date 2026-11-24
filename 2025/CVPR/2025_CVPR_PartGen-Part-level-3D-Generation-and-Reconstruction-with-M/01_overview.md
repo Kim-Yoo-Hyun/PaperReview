@@ -16,12 +16,11 @@
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (12 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 원문 해당 쪽과 대조했다. [본문](https://openaccess.thecvf.com/content/CVPR2025/papers/Chen_PartGen_Part-level_3D_Generation_and_Reconstruction_with_Multi-view_Diffusion_Models_CVPR_2025_paper.pdf)
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — This has the benefit of removing most of the ambiguity in the reconstruction task, which is important because the 3D reconstructor network is deterministic and cannot handle ambiguity well.
-
-방법 관련 발췌 — We assess our method empirically on a large collection of 3D assets produced by 3D artists or scanned, both quantitatively and qualitatively.
+PartGen은 물체를 여러 뷰에서 부품별로 분해하고, 다른 부품에 가려졌던 각 부품의 표면까지 완성해 개별 3D 자산을 만든다. [PDF 1쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Chen_PartGen_Part-level_3D_Generation_and_Reconstruction_with_Multi-view_Diffusion_Models_CVPR_2025_paper.pdf#page=1) · [PDF 3쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Chen_PartGen_Part-level_3D_Generation_and_Reconstruction_with_Multi-view_Diffusion_Models_CVPR_2025_paper.pdf#page=3)
 
 ## Problem and Motivation
 
@@ -55,16 +54,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** We assess our method empirically on a large collection of 3D assets produced by 3D artists or scanned, both quantitatively and qualitatively.
-- **p. 2 / 1. Introduction - extractive body cue:** Inspired by these requirements, we introduce PartGen, a method to upgrade existing 3D generation pipelines from producing unstructured 3D objects to generating compositions of meaningful ...
-- **p. 3 / 3. Method - extractive body cue:** This section introduces PartGen, our framework for generating 3D objects composed of several 3D parts.
-- **p. 3 / 3. Method - extractive body cue:** 3.1, we introduce the necessary background on multiview diffusion and briefly describe how PartGen can be applied to text, image, or 3D model inputs.
-- **p. 4 / 3.1. Background on 3D generation - extractive body cue:** Our method begins with text, single images, or existing 3D objects to obtain an initial grid view of the object.
-- **p. 7 / 4.1. Part Segmentation - extractive body cue:** We first evaluate view part completion by computing scores w.r.t. the ground-truth multi-view part image J.
-- **p. 7 / 4.1. Part Segmentation - extractive body cue:** As shown in the table, mAP results for our method are much higher than others, including SAM2 fine-tuned on our data.
-- **p. 8 / 4.2. Part completion and reconstruction - extractive body cue:** We further provide qualitative results in Fig.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 다중 뷰 분할로 동일 부품을 찾아낸 뒤 전체 물체 맥락을 조건으로 보이지 않는 부품 영역을 생성해 3D로 재구성한다. [PDF 3쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Chen_PartGen_Part-level_3D_Generation_and_Reconstruction_with_Multi-view_Diffusion_Models_CVPR_2025_paper.pdf#page=3) · [PDF 4쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Chen_PartGen_Part-level_3D_Generation_and_Reconstruction_with_Multi-view_Diffusion_Models_CVPR_2025_paper.pdf#page=4) · [PDF 5쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Chen_PartGen_Part-level_3D_Generation_and_Reconstruction_with_Multi-view_Diffusion_Models_CVPR_2025_paper.pdf#page=5)
+- 부품별 분할·복원을 평가하고 복원한 부품의 교체와 재배치 등 기존 물체의 부분 편집을 시연했다. [PDF 5쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Chen_PartGen_Part-level_3D_Generation_and_Reconstruction_with_Multi-view_Diffusion_Models_CVPR_2025_paper.pdf#page=5) · [PDF 6쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Chen_PartGen_Part-level_3D_Generation_and_Reconstruction_with_Multi-view_Diffusion_Models_CVPR_2025_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Chen_PartGen_Part-level_3D_Generation_and_Reconstruction_with_Multi-view_Diffusion_Models_CVPR_2025_paper.pdf#page=7) · [PDF 8쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Chen_PartGen_Part-level_3D_Generation_and_Reconstruction_with_Multi-view_Diffusion_Models_CVPR_2025_paper.pdf#page=8)
 
 ## Evaluation Scope
 

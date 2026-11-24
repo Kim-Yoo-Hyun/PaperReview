@@ -16,14 +16,13 @@
 - Code/Project: https://github.com/fereenwong/cdViews
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (16 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 원문 해당 쪽과 대조했다. [본문](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/wang25ef/wang25ef.pdf)
 
 > DOC-QA3 (2026-10-23): [cdViews / 3D QA의 지정 수식·공개 구현 대조](./03_method.md). Commit `e1df64c5490c75d117f0ece5c334a6d818cf5d83`의 정적 검토이며 paper-run 버전·실행 결과는 미확인. [결과와 경계](https://github.com/Kim-Yoo-Hyun/PaperReview/blob/cb650415f47a2a45ad883dabe5bd20c382b5c183/work/update/PAPER_CODE_FORMULA_REVIEW_2026-10-23.md).
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, both approaches have significant limitations, either being inefficient or failing to capture critical views.
-
-방법 관련 발췌 — We propose cdViews, a novel approach to automatically selecting critical and diverse Views for 3D-QA. cdViews consists of two key components: viewSelector prioritizing critical views based on their potential to provide answer-specific ...
+cdViews는 3D 장면 질의응답을 위해 점군에서 질문에 도움이 될 여러 2D 뷰를 골라 기존 시각·언어 모델에 입력한다. [PDF 1쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/wang25ef/wang25ef.pdf#page=1) · [PDF 4쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/wang25ef/wang25ef.pdf#page=4)
 
 ## Problem and Motivation
 
@@ -57,16 +56,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 1 / Abstract - extractive body cue:** We propose cdViews, a novel approach to automatically selecting critical and diverse Views for 3D-QA. cdViews consists of two key components: viewSelector prioritizing critical views ...
-- **p. 1 / 1. Introduction - extractive body cue:** All of these methods require computationally intensive 3D-language alignment using point cloud data for spatial reasoning. a4 is our method that leverages pre-trained LVLMs operating ...
-- **p. 2 / 1. Introduction - extractive body cue:** (2) We introduce cdViews that integrates a viewSelector with a viewNMS to capture critical and diverse views.
-- **p. 2 / 1. Introduction - extractive body cue:** To tackle the challenges, we introduce a new framework cdViews to select critical and diverse Views <Question>: What is the black couch facing? <Answer>: Coffee ...
-- **p. 3 / 3. Preliminaries - extractive body cue:** Since 2D LVLMs are fundamentally designed to process 2D images as input, we propose cdViews to efficiently select the most informative 2D views of 3D ...
-- **p. 5 / Figure/Table caption - extractive body cue:** Figure 5: Our viewAnnotator module operates in two steps: Caption Generation and View Matching (illustrated by light green boxes indicating outputs at each step). In ...
-- **p. 4 / Figure/Table caption - extractive body cue:** Figure 4: Performance comparison of view selection methods on the validation set of ScanQA (Azuma et al., 2022). It can be observed that: 1) performance ...
-- **p. 7 / Figure/Table caption - extractive body cue:** Table 1: Performance comparisons with the state-of-the-art methods on the test set of ScanQA (Azuma et al., 2022) and SQA (Ma et al., 2022). For ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 질문과 관련된 뷰에 점수를 주고 공간적 겹침에 기반한 억제로 비슷한 뷰가 반복 선택되는 것을 줄인다. [PDF 4쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/wang25ef/wang25ef.pdf#page=4) · [PDF 5쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/wang25ef/wang25ef.pdf#page=5)
+- ScanQA와 SQA 계열의 질의응답에서 2D 모델을 미세조정하지 않고 뷰 선택과 다양성 제약을 바꿔 비교했다. [PDF 7쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/wang25ef/wang25ef.pdf#page=7) · [PDF 8쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/wang25ef/wang25ef.pdf#page=8) · [PDF 9쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/wang25ef/wang25ef.pdf#page=9)
 
 ## Evaluation Scope
 

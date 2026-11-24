@@ -16,12 +16,11 @@
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (12 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 원문 해당 쪽과 대조했다. [본문](https://openaccess.thecvf.com/content/CVPR2021/papers/Yin_Center-Based_3D_Object_Detection_and_Tracking_CVPR_2021_paper.pdf)
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, during a safety-critical left turn (bottom), anchor-based methods have difficulty fitting axisaligned bounding boxes to rotated objects.
-
-방법 관련 발췌 — These marked differences between 2D and 3D detection made a transfer of ideas bea) Anchor-based t=1 c) Anchor-based t=2 b) Center-based t=1 d) Center-based t=2 Figure 1: We present a center-based framework ...
+CenterPoint는 LiDAR 점군에서 3D 물체 중심을 검출한 뒤 크기·방향·속도를 회귀하고 중심의 이동을 이용해 물체를 추적한다. [PDF 1쪽](https://openaccess.thecvf.com/content/CVPR2021/papers/Yin_Center-Based_3D_Object_Detection_and_Tracking_CVPR_2021_paper.pdf#page=1) · [PDF 3쪽](https://openaccess.thecvf.com/content/CVPR2021/papers/Yin_Center-Based_3D_Object_Detection_and_Tracking_CVPR_2021_paper.pdf#page=3)
 
 ## Problem and Motivation
 
@@ -55,26 +54,12 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 1 / 1. Introduction - extractive body cue:** These marked differences between 2D and 3D detection made a transfer of ideas bea) Anchor-based t=1 c) Anchor-based t=2 b) Center-based t=1 d) Center-based t=2 ...
-- **p. 3 / 3. Preliminaries - extractive body cue:** We introduce a novel center-based detection head but rely on existing 3D backbones (VoxelNet or PointPillars).
-- **p. 2 / 1. Introduction - extractive body cue:** Thirdly, point-based feature extraction enables us to design an effective two-stage refinement module that is much faster than previous approaches [44-46].
-- **p. 1 / Abstract - extractive body cue:** Our framework, CenterPoint, first detects centers of objects using a keypoint detector and regresses to other attributes, including 3D size, 3D orientation, and velocity.
-- **p. 3 / 3. Preliminaries - extractive body cue:** Each bounding box b = (u, v, d, w, l, h, α) consists of a center location (u, v, d), relative to the objects ground ...
-- **p. 6 / 5.1. Main Results - extractive body cue:** More importantly, our model significantly outperforms all other submissions under the neural planar metric (PKL), a hidden metric evaluated by the organizers after our leaderboard ...
-- **p. 6 / 5.1. Main Results - extractive body cue:** Our velocity-based closest distance matching described in Section 4 significantly outperforms the official tracking baseline in the Waymo paper [48], which uses a Kalman-filter based ...
-- **p. 12 / Figure/Table caption - extractive body cue:** Table 14: Ablation studies for 3D detection on nuScenes validation. entries in the NeurIPS 2020 nuScenes detection challenge. In this section, we describe the details ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 조감도 특징의 중심 히트맵과 물체 속성을 예측하고, 선택적 2단계 검출기는 예측 상자의 표면에서 특징을 다시 모아 상자를 정제한다. [PDF 3쪽](https://openaccess.thecvf.com/content/CVPR2021/papers/Yin_Center-Based_3D_Object_Detection_and_Tracking_CVPR_2021_paper.pdf#page=3) · [PDF 4쪽](https://openaccess.thecvf.com/content/CVPR2021/papers/Yin_Center-Based_3D_Object_Detection_and_Tracking_CVPR_2021_paper.pdf#page=4)
+- nuScenes와 Waymo에서 3D 검출과 추적을 평가하고 중심 및 속도에 기반한 단순 프레임 간 연결의 성능을 보고했다. [PDF 5쪽](https://openaccess.thecvf.com/content/CVPR2021/papers/Yin_Center-Based_3D_Object_Detection_and_Tracking_CVPR_2021_paper.pdf#page=5) · [PDF 6쪽](https://openaccess.thecvf.com/content/CVPR2021/papers/Yin_Center-Based_3D_Object_Detection_and_Tracking_CVPR_2021_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content/CVPR2021/papers/Yin_Center-Based_3D_Object_Detection_and_Tracking_CVPR_2021_paper.pdf#page=7)
 
 ## Evaluation Scope
 
-| Dimension | Body-grounded record | Boundary | Anchor |
-|---|---|---|---|
-| Evaluation type | EMPIRICAL / SOURCE-REPORTED EVALUATION | do not infer unreported downstream behavior | p. 6 (5.1. Main Results), p. 6 (5.1. Main Results) |
-| Embodiment/environment | CenterPoint-Voxel uses a (0.1m, 0.1m, 0.15m) voxel size following PV-RCNN [44] while CenterPoint-Pillar uses a grid size of (0.32m, 0.32m). nuScenes Dataset. nuScenes [6] contains 1000 driving sequences, with 700, 150, 150 ... | hardware/simulator version and reset protocol | p. 5 (5. Experiments), p. 5 (5. Experiments) |
-| Dataset/benchmark | We think the reason is that the nuScenes dataset uses 32 lanes Lidar, which produces about 30k Lidar points per frame, about 1 6 of the number of points in the Waymo ... | role, split, size and leakage | p. 5 (5. Experiments), p. 5 (5. Experiments), p. 7 (5.2. Ablation studies), p. 7 (5.2. Ablation studies) |
-| Metric | Figure 2: Overview of our CenterPoint framework. We rely on a standard 3D backbone that extracts map-view feature representation from Lidar point-clouds. Then, a 2D CNN architecture detection head finds object centers ... | definition, denominator, direction and uncertainty | p. 4 (Figure/Table caption), p. 5 (5. Experiments), p. 5 (5. Experiments) |
-| Baseline/ablation | Our velocity-based closest distance matching described in Section 4 significantly outperforms the official tracking baseline in the Waymo paper [48], which uses a Kalman-filter based tracker [53]. | fair input/data/compute/action matching | p. 6 (5.1. Main Results), p. 6 (5.1. Main Results), p. 8 (5.2. Ablation studies) |
+nuScenes에서 65.5 NDS는 3D 검출 점수이고 63.8 AMOTA는 여러 재현율에서 집계한 추적 정확도다. 두 값은 서로 다른 과제의 지표다. [PDF 1쪽](https://openaccess.thecvf.com/content/CVPR2021/papers/Yin_Center-Based_3D_Object_Detection_and_Tracking_CVPR_2021_paper.pdf#page=1) · [PDF 5쪽](https://openaccess.thecvf.com/content/CVPR2021/papers/Yin_Center-Based_3D_Object_Detection_and_Tracking_CVPR_2021_paper.pdf#page=5) · [PDF 6쪽](https://openaccess.thecvf.com/content/CVPR2021/papers/Yin_Center-Based_3D_Object_Detection_and_Tracking_CVPR_2021_paper.pdf#page=6)
 
 ## Explicit Limitations and Failure Boundary
 

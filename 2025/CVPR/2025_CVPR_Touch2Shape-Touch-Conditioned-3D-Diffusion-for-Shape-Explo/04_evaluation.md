@@ -6,7 +6,7 @@
 
 ## Evaluation in One Sentence
 
-PDF body evaluation/result cue (p. 7 (4.4. Ablation Study), p. 6 (4.2. Evaluation on Reconstruction Performance), p. 7 (4.4. Ablation Study), p. 8 (4.4. Ablation Study), p. 6 (4.2. Evaluation on Reconstruction Performance), p. 8 (4.4. Ablation Study)): The evaluation results in different modes validate that our method can effectively integrate visual and tactile information to achieve a better reconstruction performance.
+ABC 기반 표 3에서 접촉 영상은 시뮬레이터로 생성했다. 촉각만 썼을 때 파지 동작 5회 후 Chamfer 거리의 초기값 대비 비율은 RL 선택 6.63%, 무작위 선택 8.14%다. 낮을수록 복원 오차가 더 많이 줄었다. [PDF 5쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Wang_Touch2Shape_Touch-Conditioned_3D_Diffusion_for_Shape_Exploration_and_Reconstruction_CVPR_2025_paper.pdf#page=5) · [PDF 7쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Wang_Touch2Shape_Touch-Conditioned_3D_Diffusion_for_Shape_Exploration_and_Reconstruction_CVPR_2025_paper.pdf#page=7)
 
 ## Evaluation Body Digest
 
@@ -21,7 +21,7 @@ PDF body evaluation/result cue (p. 7 (4.4. Ablation Study), p. 6 (4.2. Evaluatio
 
 ## Evaluation Type and Scope
 
-- **Evaluation type:** `EMPIRICAL / SOURCE-REPORTED EVALUATION`.
+- **Evaluation type:** `EMPIRICAL / SIMULATION`.
 - **Target system/task:** contact-rich manipulation scene.
 - **Input boundary:** tactile image/force, vision과 proprioceptive history.
 - **Output/decision under evaluation:** grasp/contact action, force command 또는 object motion.

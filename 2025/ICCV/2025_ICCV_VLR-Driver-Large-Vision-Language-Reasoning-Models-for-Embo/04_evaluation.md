@@ -8,7 +8,7 @@
 
 ## Evaluation in One Sentence
 
-PDF body evaluation/result cue (p. 7 (5.2. Metrics), p. 8 (5.3. Comparisons with Existing Methods), p. 7 (Figure/Table caption), p. 8 (5.3. Comparisons with Existing Methods), p. 6 (4.1. Data Collection)): We employ four core metrics to evaluate AD performance: driving score (DS), route completion (RC), infraction score (IS), and success rate (SR).
+CARLA 기반 Bench2Drive 표 1에서 VLR-Driver의 주행 점수는 75.01, 경로 완주 지표는 86.09, 성공률은 50.00%다. 각 수치는 카메라와 텍스트를 쓰는 동일 행의 서로 다른 열이다. [PDF 6쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Kong_VLR-Driver_Large_Vision-Language-Reasoning_Models_for_Embodied_Autonomous_Driving_ICCV_2025_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Kong_VLR-Driver_Large_Vision-Language-Reasoning_Models_for_Embodied_Autonomous_Driving_ICCV_2025_paper.pdf#page=7)
 
 ## Evaluation Body Digest
 

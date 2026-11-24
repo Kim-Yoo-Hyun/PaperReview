@@ -16,12 +16,11 @@
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 원문 해당 쪽과 대조했다. [본문](https://openaccess.thecvf.com/content/CVPR2025/papers/Zhong_Taming_Video_Diffusion_Prior_with_Scene-Grounding_Guidance_for_3D_Gaussian_CVPR_2025_paper.pdf)
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — To fully leverage the learned prior from video diffusion models for sparse-input 3DGS, we further explore addressing the challenges of inconsistencies within the generated sequences.
-
-방법 관련 발췌 — Our contributions are summarized as: • This paper is the first to explicitly address the challenges of extrapolation and occlusion in 3DGS modeling from sparse inputs. • We propose a novel reconstruction ...
+희소한 입력 뷰에서 벗어난 시점의 영상을 생성할 때 현재 3D 가우시안 장면이 제공하는 구조로 비디오 확산 모델을 조건화한다. [PDF 1쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Zhong_Taming_Video_Diffusion_Prior_with_Scene-Grounding_Guidance_for_3D_Gaussian_CVPR_2025_paper.pdf#page=1) · [PDF 3쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Zhong_Taming_Video_Diffusion_Prior_with_Scene-Grounding_Guidance_for_3D_Gaussian_CVPR_2025_paper.pdf#page=3)
 
 ## Problem and Motivation
 
@@ -55,16 +54,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** Our contributions are summarized as: • This paper is the first to explicitly address the challenges of extrapolation and occlusion in 3DGS modeling from sparse ...
-- **p. 2 / 1. Introduction - extractive body cue:** Inspired by training-free guidance methods for diffusion models [1, 38, 53, 56] that enable controllable generation through external guidance, we introduce a novel strategy called ...
-- **p. 4 / 3. The Proposed Method - extractive body cue:** of our method is illustrated in Fig.
-- **p. 4 / 3. The Proposed Method - extractive body cue:** 2, which consists of three proposed components: a scene-grounding guidance (Sec.
-- **p. 6 / 3.4. 3DGS Optimization with Generation - extractive body cue:** To address this issue, we propose using perceptual loss [15].
-- **p. 6 / 4.2. Comparisons - extractive body cue:** 1, our method achieves the highest performance on the Replica dataset, outperforming DNGaussian [18] and FSGS [64] by a significant margin of over 3.0 dB ...
-- **p. 8 / Figure/Table caption - extractive body cue:** Table 3. Comparisons with inpainting methods on the Replica dataset. ∗indicates the usage of our trajectory initialization. Trajectory Initialization Strategy. Tab. 2 (a) further demonstrates ...
-- **p. 7 / 4.3. Ablation Studies - extractive body cue:** 2 (a), while the full image metrics are enhanced due to slightly improved modeling at occluded regions, the visual quality degrades, as indicated by PSNR ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 초기 장면 렌더링으로 생성 과정을 유도하고 가려진 영역이 있는 뷰를 포함하는 카메라 궤적을 정해 추가 관측을 합성한다. [PDF 3쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Zhong_Taming_Video_Diffusion_Prior_with_Scene-Grounding_Guidance_for_3D_Gaussian_CVPR_2025_paper.pdf#page=3) · [PDF 4쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Zhong_Taming_Video_Diffusion_Prior_with_Scene-Grounding_Guidance_for_3D_Gaussian_CVPR_2025_paper.pdf#page=4) · [PDF 5쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Zhong_Taming_Video_Diffusion_Prior_with_Scene-Grounding_Guidance_for_3D_Gaussian_CVPR_2025_paper.pdf#page=5)
+- 생성한 시퀀스를 3D 가우시안 최적화에 다시 넣고 새 시점 화질과 장면 조건·궤적 선택의 영향을 비교했다. [PDF 5쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Zhong_Taming_Video_Diffusion_Prior_with_Scene-Grounding_Guidance_for_3D_Gaussian_CVPR_2025_paper.pdf#page=5) · [PDF 6쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Zhong_Taming_Video_Diffusion_Prior_with_Scene-Grounding_Guidance_for_3D_Gaussian_CVPR_2025_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Zhong_Taming_Video_Diffusion_Prior_with_Scene-Grounding_Guidance_for_3D_Gaussian_CVPR_2025_paper.pdf#page=7) · [PDF 8쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Zhong_Taming_Video_Diffusion_Prior_with_Scene-Grounding_Guidance_for_3D_Gaussian_CVPR_2025_paper.pdf#page=8)
 
 ## Evaluation Scope
 

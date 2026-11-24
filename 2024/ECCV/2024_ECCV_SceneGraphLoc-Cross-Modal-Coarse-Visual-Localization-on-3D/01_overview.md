@@ -16,12 +16,11 @@
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (23 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 원문 해당 쪽과 대조했다. [본문](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/01255.pdf)
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — The challenge with current state-of-the-art image-based coarse localization methods, such as AnyLoc [55], is their dependency on extensive image databases, which are not only storage-heavy but also slow to query, despite optimizations ...
-
-방법 관련 발췌 — This method enables the creation of small, efficient databases and significantly accelerates the coarse localization process.
+SceneGraphLoc은 질의 이미지가 어느 장면에 속하는지 찾기 위해 이미지의 국소 영역과 여러 3D 장면 그래프의 물체 노드를 대응시킨다. [PDF 1쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/01255.pdf#page=1) · [PDF 2쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/01255.pdf#page=2)
 
 ## Problem and Motivation
 
@@ -55,16 +54,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1 Introduction - extractive body cue:** This method enables the creation of small, efficient databases and significantly accelerates the coarse localization process.
-- **p. 3 / 1 Introduction - extractive body cue:** The primary contributions of this paper are as follows: 1.
-- **p. 1 / Body text (section not recovered) - extractive body cue:** We introduce the task of localizing an input image within a multi-modal reference map represented by a collection of 3D scene graphs.
-- **p. 2 / 1 Introduction - extractive body cue:** This paper addresses the novel challenge of localizing a query image within a database that is represented not by conventional images but by the 3D ...
-- **p. 3 / 1 Introduction - extractive body cue:** Introducing a novel problem: cross-modal localization of a query image within 3D scene graphs incorporating a mixture of modalities.
-- **p. 12 / 4 Experiments - extractive body cue:** SceneGraphLoc, even when excluding the image modality (I), outperforms other cross-modal strategies significantly.
-- **p. 13 / 4 Experiments - extractive body cue:** LidarCLIP shows a small improvement in accuracy.
-- **p. 12 / 4 Experiments - extractive body cue:** Incorporating images significantly enhances its performance, positioning it close to that of image-based approaches but with three orders of magnitude smaller storage requirements.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 물체의 점군·속성·관계와 선택적 영상 정보를 노드별 고정 길이 표현으로 만들어 영상 영역과 같은 공간에서 비교한다. [PDF 5쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/01255.pdf#page=5) · [PDF 6쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/01255.pdf#page=6) · [PDF 7쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/01255.pdf#page=7)
+- 후보 장면 중 올바른 방을 검색하는 재현율과 지도 저장량을 측정하고, 그래프에 영상 특징을 포함했을 때의 차이를 보고했다. [PDF 10쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/01255.pdf#page=10) · [PDF 11쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/01255.pdf#page=11) · [PDF 12쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/01255.pdf#page=12)
 
 ## Evaluation Scope
 

@@ -16,12 +16,11 @@
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 원문 해당 쪽과 대조했다. [본문](https://openaccess.thecvf.com/content/CVPR2026/papers/Liu_HAD_Hallucination-Aware_Diffusion_Priors_for_3D_Reconstruction_CVPR_2026_paper.pdf)
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — We then summarize our contributions as below: • We identify a critical limitation where diffusion priors, while alleviating data sparsity in 3D reconstruction, introduce hallucination issues that compromise fidelity to input views ...
-
-방법 관련 발췌 — To the best of our knowledge, this is the first work to study hallucination score modeling in this context. • We introduce a multi-sampling strategy into HAD that generates and fuses multiple ...
+HAD는 희소 뷰에서 확산 모델이 합성한 영상 중 입력 장면과 어긋나는 픽셀을 찾아 3D 복원에 쓰는 감독의 신뢰도를 조절한다. [PDF 1쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Liu_HAD_Hallucination-Aware_Diffusion_Priors_for_3D_Reconstruction_CVPR_2026_paper.pdf#page=1) · [PDF 3쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Liu_HAD_Hallucination-Aware_Diffusion_Priors_for_3D_Reconstruction_CVPR_2026_paper.pdf#page=3)
 
 ## Problem and Motivation
 
@@ -55,16 +54,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** To the best of our knowledge, this is the first work to study hallucination score modeling in this context. • We introduce a multi-sampling strategy ...
-- **p. 2 / 1. Introduction - extractive body cue:** We then summarize our contributions as below: • We identify a critical limitation where diffusion priors, while alleviating data sparsity in 3D reconstruction, introduce hallucination ...
-- **p. 5 / 4.2.3. Multi-Sampling Strategy - extractive body cue:** To further enhance HAD, we propose a multi-sampling strategy that creates multiple versions of augmented views and fuses them to produce higher-quality novel views for ...
-- **p. 5 / 4.2. Hallucination-Aware Diffusion Prior - extractive body cue:** To enhance novel view synthesis quality, we propose the hallucination-aware diffusion prior (HAD) to augment images rendered at novel views and optimize the 3DGS model ...
-- **p. 1 / 1. Introduction - extractive body cue:** One approach to address data sparsity is to leverage generative diffusion priors to augment novel-view data by removing artifacts from rendered images through denoising conditioned ...
-- **p. 8 / 5.4. Ablation studies - extractive body cue:** We select 3 views to achieve a trade-off between marginal improvement and computational overhead.
-- **p. 8 / 5.4. Ablation studies - extractive body cue:** We demonstrate that our hallucination score network, with the pretrained multiview encoder, achieves the best performance.
-- **p. 7 / 5.3. Cross-domain evaluation - extractive body cue:** 2, similar to the in-domain evaluation, our method achieves state-of-the-art performance.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 여러 관측으로부터 생성한 뷰를 이용해 픽셀별 환각 마스크를 추정하고 서로 다른 조건에서 얻은 생성 결과를 융합한다. [PDF 3쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Liu_HAD_Hallucination-Aware_Diffusion_Priors_for_3D_Reconstruction_CVPR_2026_paper.pdf#page=3) · [PDF 4쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Liu_HAD_Hallucination-Aware_Diffusion_Priors_for_3D_Reconstruction_CVPR_2026_paper.pdf#page=4) · [PDF 5쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Liu_HAD_Hallucination-Aware_Diffusion_Priors_for_3D_Reconstruction_CVPR_2026_paper.pdf#page=5)
+- 생성 영상을 이용한 가우시안 장면 학습에서 새 시점 품질을 비교하고 마스크와 다중 뷰 융합의 효과를 분석했다. [PDF 5쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Liu_HAD_Hallucination-Aware_Diffusion_Priors_for_3D_Reconstruction_CVPR_2026_paper.pdf#page=5) · [PDF 6쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Liu_HAD_Hallucination-Aware_Diffusion_Priors_for_3D_Reconstruction_CVPR_2026_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Liu_HAD_Hallucination-Aware_Diffusion_Priors_for_3D_Reconstruction_CVPR_2026_paper.pdf#page=7) · [PDF 8쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Liu_HAD_Hallucination-Aware_Diffusion_Priors_for_3D_Reconstruction_CVPR_2026_paper.pdf#page=8)
 
 ## Evaluation Scope
 

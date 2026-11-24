@@ -16,12 +16,11 @@
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (17 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 원문 해당 쪽과 대조했다. [본문](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/05642.pdf)
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, these methods are only possible due to the vast amounts of paired image-text data available, making it difficult to train similar models for 3D data.
-
-방법 관련 발췌 — Our contributions are summarized as follows: - We present the first approach for 3D open-vocabulary panoptic segmentation in autonomous driving. - We propose two novel loss functions, object-level distillation loss and voxellevel ...
+개방 어휘 3D 파놉틱 분할을 위해 라이다 특징과 동결한 CLIP의 영상 특징을 결합해 기존 범주와 새로운 범주를 하나의 헤드로 분류한다. [PDF 1쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/05642.pdf#page=1) · [PDF 4쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/05642.pdf#page=4)
 
 ## Problem and Motivation
 
@@ -55,16 +54,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 3 / 1 Introduction - extractive body cue:** Our contributions are summarized as follows: - We present the first approach for 3D open-vocabulary panoptic segmentation in autonomous driving. - We propose two novel ...
-- **p. 6 / 3 Method - extractive body cue:** To take advantage of the benefits of separating things queries and stuff queries, we propose to predict the base stuff classes with a fixed set ...
-- **p. 8 / 3 Method - extractive body cue:** Combining LO with LV enables segmenting novel things and novel stuff objects simultaneously.
-- **p. 4 / 3 Method - extractive body cue:** The overview of our method is presented in Fig.
-- **p. 5 / 3 Method - extractive body cue:** The architecture of our method is shown in Fig.
-- **p. 11 / 4 Experiments - extractive body cue:** We show that this is due to lack of supervision of the whole scene as P3Former achieves similar performance when only trained on base categories.
-- **p. 13 / Figure/Table caption - extractive body cue:** Table 5: Performance on a different split. We compare the performance with a split with 5 novel classes (B11/N5). The novel things classes are bicycle, ...
-- **p. 12 / Figure/Table caption - extractive body cue:** Table 4: Impact of each component. We evaluate the impact of each component using the base/novel split in Tab. 1. We observe that each component ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 물체 단위와 복셀 단위의 증류 손실을 따로 두어 영상 모델의 의미 정보를 3D 마스크에 전달한다. [PDF 4쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/05642.pdf#page=4) · [PDF 6쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/05642.pdf#page=6) · [PDF 7쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/05642.pdf#page=7)
+- nuScenes와 SemanticKITTI에서 새 물체 및 배경 범주별 성능을 측정하고 두 증류 손실의 역할을 분석했다. [PDF 10쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/05642.pdf#page=10) · [PDF 11쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/05642.pdf#page=11) · [PDF 12쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/05642.pdf#page=12)
 
 ## Evaluation Scope
 

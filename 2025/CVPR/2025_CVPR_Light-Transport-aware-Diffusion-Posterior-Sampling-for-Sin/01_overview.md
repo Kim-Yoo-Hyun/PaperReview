@@ -16,12 +16,11 @@
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (12 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 원문 해당 쪽과 대조했다. [본문](https://openaccess.thecvf.com/content/CVPR2025/papers/Leonard_Light_Transport-aware_Diffusion_Posterior_Sampling_for_Single-View_Reconstruction_of_3D_CVPR_2025_paper.pdf)
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — This limitation can only be alleviated by incorporating prior information during reconstruction.
-
-방법 관련 발췌 — We introduce our novel monoplanar latent representation to effectively compress the cloud database (see Section 4.2), and we demonstrate how to prevent overfitting by refining this latent representation through analog transformations in ...
+구름처럼 빛이 여러 번 산란하는 물체의 밀도장을 영상 한 장에서 복원하기 위해 체적 확산 사전분포와 광수송 모델을 결합한다. [PDF 1쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Leonard_Light_Transport-aware_Diffusion_Posterior_Sampling_for_Single-View_Reconstruction_of_3D_CVPR_2025_paper.pdf#page=1) · [PDF 3쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Leonard_Light_Transport-aware_Diffusion_Posterior_Sampling_for_Single-View_Reconstruction_of_3D_CVPR_2025_paper.pdf#page=3)
 
 ## Problem and Motivation
 
@@ -55,16 +54,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 4 / 4. Method - extractive body cue:** We introduce our novel monoplanar latent representation to effectively compress the cloud database (see Section 4.2), and we demonstrate how to prevent overfitting by refining ...
-- **p. 2 / 1. Introduction - extractive body cue:** Our key contributions are as follows: • A large database of 3D cumulus cloud-like density fields, generated using numerical fluid simulation. • A 3D cloud ...
-- **p. 3 / 4. Method - extractive body cue:** To address the problem formulated in Section 3, we propose a diffusion posterior sampling scheme in combination with a differentiable volume renderer to simultaneously consider ...
-- **p. 4 / 4.2. Volume Latent Encoding - extractive body cue:** We introduce an implicit neural representation for a volume V defined on the cube [-1, 1]3, based on a single projection, which we refer to ...
-- **p. 1 / 1. Introduction - extractive body cue:** DR enables backpropagation of gradients of a loss in image space to the scene parameters, including position, texture, lighting, shape, and other attributes.
-- **p. 8 / 5.6. Recovering Light Conditions - extractive body cue:** Experimental results demonstrate that our approach provides robust generalization and achieves quality and performance that significantly exceed existing methods.
-- **p. 7 / 5.5. Comparative Evaluation - extractive body cue:** Since both DRT and SPS require multiple views to achieve accurate results, we tested with one and three images for the reconstructions.
-- **p. 6 / 5.2. Monoplanar Representation - extractive body cue:** To assess the quality that is achieved with the proposed monoplanar latent representation, we perform a series of experiments with the monoplanar, triplanar and dense ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 합성 체적 밀도장 1,000개로 단일 평면 잠재 표현의 무조건부 확산 모델을 학습한다. [PDF 3쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Leonard_Light_Transport-aware_Diffusion_Posterior_Sampling_for_Single-View_Reconstruction_of_3D_CVPR_2025_paper.pdf#page=3) · [PDF 4쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Leonard_Light_Transport-aware_Diffusion_Posterior_Sampling_for_Single-View_Reconstruction_of_3D_CVPR_2025_paper.pdf#page=4) · [PDF 5쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Leonard_Light_Transport-aware_Diffusion_Posterior_Sampling_for_Single-View_Reconstruction_of_3D_CVPR_2025_paper.pdf#page=5)
+- 다중 산란을 고려한 미분 가능 렌더링으로 입력과 일치하도록 사후분포를 샘플링하고 밀도와 다른 뷰의 외관을 비교했다. [PDF 4쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Leonard_Light_Transport-aware_Diffusion_Posterior_Sampling_for_Single-View_Reconstruction_of_3D_CVPR_2025_paper.pdf#page=4) · [PDF 5쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Leonard_Light_Transport-aware_Diffusion_Posterior_Sampling_for_Single-View_Reconstruction_of_3D_CVPR_2025_paper.pdf#page=5) · [PDF 6쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Leonard_Light_Transport-aware_Diffusion_Posterior_Sampling_for_Single-View_Reconstruction_of_3D_CVPR_2025_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Leonard_Light_Transport-aware_Diffusion_Posterior_Sampling_for_Single-View_Reconstruction_of_3D_CVPR_2025_paper.pdf#page=7)
 
 ## Evaluation Scope
 

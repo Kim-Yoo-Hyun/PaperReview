@@ -16,12 +16,11 @@
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (16 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 원문 해당 쪽과 대조했다. [본문](https://proceedings.neurips.cc/paper_files/paper/2025/file/f2644105c6680950b0adbfa0a2cfb177-Paper-Conference.pdf)
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, these approaches require a predefined number of objects for clustering [13] or are limited to foreground segmentation [14], and also cannot be directly applied to dynamic scenes.
-
-방법 관련 발췌 — In summary, our key contributions include: • We propose Segment then Splat, a novel paradigm that segments Gaussians into object sets before reconstruction.
+Segment then Splat은 다중 뷰의 물체를 먼저 분리해 물체별 가우시안 집합을 만든 뒤 정적·동적 장면을 재구성한다. [PDF 1쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/f2644105c6680950b0adbfa0a2cfb177-Paper-Conference.pdf#page=1) · [PDF 4쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/f2644105c6680950b0adbfa0a2cfb177-Paper-Conference.pdf#page=4)
 
 ## Problem and Motivation
 
@@ -55,16 +54,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1 Introduction - extractive body cue:** In summary, our key contributions include: • We propose Segment then Splat, a novel paradigm that segments Gaussians into object sets before reconstruction.
-- **p. 2 / 1 Introduction - extractive body cue:** This enables unified static/dynamic open-vocabulary segmentation, eliminates auxiliary language fields, and significantly reduces training complexity. • Our framework features a robust object tracking module that ...
-- **p. 4 / 3 Method - extractive body cue:** We introduce Segment then Splat, a unified approach for 3D open-vocabulary segmentation based on Gaussian Splatting, as illustrated in Fig.
-- **p. 5 / 3 Method - extractive body cue:** Specifically, we introduce an additional object-level loss term, 5
-- **p. 5 / 3 Method - extractive body cue:** To capture newly appearing objects, we introduce a detection mechanism at fixed intervals of ∆t.
-- **p. 8 / 4 Experiments - extractive body cue:** Similar to the 3DOVS dataset, 2D pixel-based methods produce less precise object boundaries, while our method demonstrates significantly improved results.
-- **p. 9 / 4 Experiments - extractive body cue:** In addition, our method achieves nearly a ten-fold improvement in optimization speed compared to DGD, as learning a dynamic language field is computationally intensive.
-- **p. 9 / Figure/Table caption - extractive body cue:** Figure 6: Qualitative comparison on dynamic scenes. As our method enforce object-Gaussian correspondence, it applies directly to dynamic scenes and performs well, whereas DGD and ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 물체 구분을 유지한 채 가우시안을 최적화하고 재구성 뒤 물체마다 CLIP 임베딩을 부여해 텍스트로 질의한다. [PDF 4쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/f2644105c6680950b0adbfa0a2cfb177-Paper-Conference.pdf#page=4) · [PDF 5쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/f2644105c6680950b0adbfa0a2cfb177-Paper-Conference.pdf#page=5) · [PDF 6쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/f2644105c6680950b0adbfa0a2cfb177-Paper-Conference.pdf#page=6)
+- 정적 LERF-OVS·3DOVS와 동적 HyperNeRF·Neu3D에서 분할을 평가해 장면 움직임과 평가 방식별 결과를 나누어 보고했다. [PDF 7쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/f2644105c6680950b0adbfa0a2cfb177-Paper-Conference.pdf#page=7) · [PDF 8쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/f2644105c6680950b0adbfa0a2cfb177-Paper-Conference.pdf#page=8) · [PDF 9쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/f2644105c6680950b0adbfa0a2cfb177-Paper-Conference.pdf#page=9)
 
 ## Evaluation Scope
 

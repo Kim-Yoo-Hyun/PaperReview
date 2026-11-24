@@ -16,12 +16,12 @@
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (9 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 원문 해당 쪽과 대조했다. [본문](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11697173)
+- 저자판 표제: Semantic Consistent Language Gaussian Splatting for Point-Level Open-vocabulary Querying. 게재본에서는 첫 단어가 Semantically로 바뀌고 Point-Level 앞에 3D가 추가됐다. [저자판 v2](https://arxiv.org/abs/2503.21767v2) · [게재 서지](https://api.crossref.org/works/10.1109/icra57385.2026.11697173)
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — To mitigate this difficulty, we propose a novel Ground-Truth Anchored (GT-Anchored) querying method, which computes the threshold relative to, "anchored", ground-truth (GT) used in the distillation process instead of directly with the ...
-
-방법 관련 발췌 — Our contributions are as follows: • We introduce tracking for generating semantic and 3
+이 연구는 여러 뷰에 나타난 동일 물체의 마스크를 추적해 언어 특징을 가우시안에 증류하고, 텍스트로 개별 3D 점을 검색한다. [PDF 1쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11697173#page=1) · [PDF 3쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11697173#page=3)
 
 ## Problem and Motivation
 
@@ -55,16 +55,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 1 / I. INTRODUCTION - extractive body cue:** Our contributions are as follows: • We introduce tracking for generating semantic and 3D.
-- **p. 2 / I. INTRODUCTION - extractive body cue:** We observe that it does not have a consistent optimal threshold for all queries. consistent ground-truth to train language-aware Gaussians, which improves the distillation quality. ...
-- **p. 1 / I. INTRODUCTION - extractive body cue:** To mitigate this difficulty, we propose a novel Ground-Truth Anchored (GT-Anchored) querying method, which computes the threshold relative to, "anchored", ground-truth (GT) used in the ...
-- **p. 4 / IV. METHOD - extractive body cue:** Differently, we propose a novel method for constructing ground-truths that are more semantically consistent and robust across various 3D viewpoints (Sec.
-- **p. 4 / IV. METHOD - extractive body cue:** Furthermore, the weighting scheme helps to suppress the contribution of small regions that often contain noisier language embeddings, i.e., we consider the reliability of individual ...
-- **p. 6 / V. EXPERIMENTS - extractive body cue:** We observe that Ours consistently outperforms LangSplat-m and, on average, is better than OpenGaussian, achieving an improvement of +4.14 in mIoU and +10.66 in mAcc.
-- **p. 7 / V. EXPERIMENTS - extractive body cue:** Acc, significantly outperforming baseline methods.
-- **p. 7 / V. EXPERIMENTS - extractive body cue:** We also see that our proposed GT-anchored query significantly outperforms the canonical query.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 마스크 추적으로 만든 참조 임베딩에 먼저 질의한 뒤 대응하는 가우시안을 찾아 뷰마다 달라지는 2D 감독 신호의 영향을 줄인다. [PDF 3쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11697173#page=3) · [PDF 4쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11697173#page=4)
+- LERF, 3D-OVS, Replica에서 개방 어휘 분할을 평가하고 참조 임베딩을 경유하는 검색을 직접 질의 방식과 비교했다. [PDF 5쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11697173#page=5) · [PDF 6쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11697173#page=6) · [PDF 7쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11697173#page=7)
 
 ## Evaluation Scope
 

@@ -16,12 +16,11 @@
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 원문 해당 쪽과 대조했다. [본문](https://openaccess.thecvf.com/content/CVPR2026/papers/Zhu_GaussFusion_Improving_3D_Reconstruction_in_the_Wild_with_A_Geometry-Informed_CVPR_2026_paper.pdf)
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — To address these limitations, several methods [3, 32, 34, 41, 46, 49, 56, 66, 70] have explored leveraging generative priors to enhance 3D reconstruction by generating dense novel-view images.
-
-방법 관련 발췌 — Our main contributions are as follows: • A geometry-informed video-to-video generation model, GaussFusion, conditioned on 3DGS geometric renders, effective for artifact removal across diverse reconstruction pipelines. • A comprehensive ...
+GaussFusion은 기존 가우시안 복원이 낯선 시점에서 만드는 오류를 그 장면의 기하를 입력받는 비디오 생성 모델로 보완한다. [PDF 1쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Zhu_GaussFusion_Improving_3D_Reconstruction_in_the_Wild_with_A_Geometry-Informed_CVPR_2026_paper.pdf#page=1) · [PDF 3쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Zhu_GaussFusion_Improving_3D_Reconstruction_in_the_Wild_with_A_Geometry-Informed_CVPR_2026_paper.pdf#page=3)
 
 ## Problem and Motivation
 
@@ -54,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** Our main contributions are as follows: • A geometry-informed video-to-video generation model, GaussFusion, conditioned on 3DGS geometric renders, effective for artifact removal across diverse reconstruction ...
-- **p. 2 / 1. Introduction - extractive body cue:** We present GaussFusion, a video-to-video generative model for robust 3D reconstruction that features as key component the GP-Buffer, a pixel-aligned video representation that encodes multi-modal ...
-- **p. 3 / 3.1. Preliminaries - extractive body cue:** The contribution γi is the product of the learned opacity αi and the 2D Gaussian function evaluated at the pixel center u with projected mean ...
-- **p. 1 / 1. Introduction - extractive body cue:** Photorealistic 3D reconstruction and novel-view synthesis are fundamental problems in computer vision, with applications in virtual reality, autonomous driving, and robotics.
-- **p. 1 / 1. Introduction - extractive body cue:** However, despite these advances, current methods still suffer from artifacts in sparseview and under-captured scenarios, and degrade significantly at novel views far from training views ...
-- **p. 6 / 15.11 FPS - extractive body cue:** The joint training variant achieves the best overall fidelity and perceptual quality (highest PSNR/SSIM, lowest LPIPS/FID), while the distilled model attains comparable performance with significantly ...
-- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. GaussFusion Overview. Given multi-view images as input, we first obtain an initial 3D Gaussian splatting (3DGS) [23] reconstruction using either per-scene optimization or ...
-- **p. 8 / Figure/Table caption - extractive body cue:** Figure 4. Qualitative Comparison on 3D Reconstruction. We show the novel-view renderings from the improved 3D reconstruc- tion refined using enhanced views from different methods. ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 렌더링 깊이·법선·불투명도 등 가우시안에서 얻은 구조 정보를 조건으로 사용하고 합성 열화를 이용해 복원 오류 수정을 학습한다. [PDF 3쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Zhu_GaussFusion_Improving_3D_Reconstruction_in_the_Wild_with_A_Geometry-Informed_CVPR_2026_paper.pdf#page=3) · [PDF 4쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Zhu_GaussFusion_Improving_3D_Reconstruction_in_the_Wild_with_A_Geometry-Informed_CVPR_2026_paper.pdf#page=4) · [PDF 5쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Zhu_GaussFusion_Improving_3D_Reconstruction_in_the_Wild_with_A_Geometry-Informed_CVPR_2026_paper.pdf#page=5)
+- 순전파 기반 및 장면별 최적화 기반 가우시안 복원에 적용해 새 시점 영상 품질과 기하 입력에 따른 차이를 비교했다. [PDF 5쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Zhu_GaussFusion_Improving_3D_Reconstruction_in_the_Wild_with_A_Geometry-Informed_CVPR_2026_paper.pdf#page=5) · [PDF 6쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Zhu_GaussFusion_Improving_3D_Reconstruction_in_the_Wild_with_A_Geometry-Informed_CVPR_2026_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Zhu_GaussFusion_Improving_3D_Reconstruction_in_the_Wild_with_A_Geometry-Informed_CVPR_2026_paper.pdf#page=7)
 
 ## Evaluation Scope
 

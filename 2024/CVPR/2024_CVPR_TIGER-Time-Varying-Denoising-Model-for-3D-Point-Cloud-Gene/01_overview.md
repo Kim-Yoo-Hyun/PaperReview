@@ -16,12 +16,11 @@
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 원문 해당 쪽과 대조했다. [본문](https://openaccess.thecvf.com/content/CVPR2024/papers/Ren_TIGER_Time-Varying_Denoising_Model_for_3D_Point_Cloud_Generation_with_CVPR_2024_paper.pdf)
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, we observed that these PVCNNbased denoising models require a considerable number of timesteps to establish a rough shape since the limited receptive field cannot capture the global distribution of noise.
-
-방법 관련 발췌 — Our main contributions include: • We propose a novel two-stream denoising model, which uses timestep to optimally reweigh the global feature from Transformer and the local feature from shallow CNN. • We ...
+TIGER는 3D 점군 생성의 확산 단계에 따라 필요한 이웃 구조와 전역 관계가 다르다는 점을 이용해 잡음 제거기의 동작을 바꾼다. [PDF 1쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Ren_TIGER_Time-Varying_Denoising_Model_for_3D_Point_Cloud_Generation_with_CVPR_2024_paper.pdf#page=1) · [PDF 3쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Ren_TIGER_Time-Varying_Denoising_Model_for_3D_Point_Cloud_Generation_with_CVPR_2024_paper.pdf#page=3)
 
 ## Problem and Motivation
 
@@ -55,16 +54,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** Our main contributions include: • We propose a novel two-stream denoising model, which uses timestep to optimally reweigh the global feature from Transformer and the ...
-- **p. 1 / 1. Introduction - extractive body cue:** We propose to merge these two properties across different timesteps in the diffusion process. plore and develop efficient and effective model architectures for 3D point ...
-- **p. 4 / 3.3. Latent Point Cloud Transformer - extractive body cue:** We propose two novel 3D space continuous position encoding methods: Phase Shift Position Encoding (PSPE) and Baseλ Position Encoding (BλPE).
-- **p. 2 / 1. Introduction - extractive body cue:** To answer this question, we propose a Time-varying denoising model for 3D point cloud generation (TIGER), a two-stream architecture combining a shallow CNN branch and ...
-- **p. 1 / 1. Introduction - extractive body cue:** However, these methods commonly utilize UNet-like convolutional networks that are originally designed for image processing.
-- **p. 7 / 4.3. Ablation and Analysis - extractive body cue:** Furthermore, our proposed position encoding methods, PSPE and BλPE, significantly improve performance compared to no position encoding or learnable position encoding.
-- **p. 6 / 4.2. Comparison with SoTA methods - extractive body cue:** 1, we outperform LION in four out of six metrics.
-- **p. 6 / 4.2. Comparison with SoTA methods - extractive body cue:** Compared to other methods, our performance is significantly better.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 지역 점 합성곱과 전역 attention 연산을 구성하고 확산 시간에 따라 적용할 연산과 가중치를 학습한다. [PDF 3쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Ren_TIGER_Time-Varying_Denoising_Model_for_3D_Point_Cloud_Generation_with_CVPR_2024_paper.pdf#page=3) · [PDF 4쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Ren_TIGER_Time-Varying_Denoising_Model_for_3D_Point_Cloud_Generation_with_CVPR_2024_paper.pdf#page=4) · [PDF 5쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Ren_TIGER_Time-Varying_Denoising_Model_for_3D_Point_Cloud_Generation_with_CVPR_2024_paper.pdf#page=5)
+- 점군 생성 품질과 계산량을 비교하고 단계별로 달라지는 연산 선택이 단일 잡음 제거기와 어떤 차이를 만드는지 분석했다. [PDF 5쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Ren_TIGER_Time-Varying_Denoising_Model_for_3D_Point_Cloud_Generation_with_CVPR_2024_paper.pdf#page=5) · [PDF 6쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Ren_TIGER_Time-Varying_Denoising_Model_for_3D_Point_Cloud_Generation_with_CVPR_2024_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Ren_TIGER_Time-Varying_Denoising_Model_for_3D_Point_Cloud_Generation_with_CVPR_2024_paper.pdf#page=7) · [PDF 8쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Ren_TIGER_Time-Varying_Denoising_Model_for_3D_Point_Cloud_Generation_with_CVPR_2024_paper.pdf#page=8)
 
 ## Evaluation Scope
 

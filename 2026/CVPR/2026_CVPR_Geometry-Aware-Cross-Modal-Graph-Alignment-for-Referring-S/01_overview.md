@@ -16,12 +16,11 @@
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 원문 해당 쪽과 대조했다. [본문](https://openaccess.thecvf.com/content/CVPR2026/papers/Tao_Geometry-Aware_Cross-Modal_Graph_Alignment_for_Referring_Segmentation_in_3D_Gaussian_CVPR_2026_paper.pdf)
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — First, the language encoder inherently lacks explicit positional encoding, which limits its ability to represent spatial prepositions and relational geometry.
-
-방법 관련 발췌 — Our contributions are: • We introduce a geometry-aware perspective for language grounding that embeds explicit spatial structure into linguistic features, enabling more accurate reasoning. • We propose a cross-modal relational alignment ...
+GeoCGA는 지시문의 물체·공간 관계와 3D 장면의 기하 관계를 그래프로 정렬해 텍스트가 가리키는 가우시안 영역을 분할한다. [PDF 1쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Tao_Geometry-Aware_Cross-Modal_Graph_Alignment_for_Referring_Segmentation_in_3D_Gaussian_CVPR_2026_paper.pdf#page=1) · [PDF 3쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Tao_Geometry-Aware_Cross-Modal_Graph_Alignment_for_Referring_Segmentation_in_3D_Gaussian_CVPR_2026_paper.pdf#page=3)
 
 ## Problem and Motivation
 
@@ -53,16 +52,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** Our contributions are: • We introduce a geometry-aware perspective for language grounding that embeds explicit spatial structure into linguistic features, enabling more accurate reasoning. • ...
-- **p. 2 / 1. Introduction - extractive body cue:** Guided by these findings, we propose GeoCGA (see Fig.
-- **p. 3 / 3. Problem Statement and Notations - extractive body cue:** Spatial awareness deficiency leads to incorrect localization in ReferSplat [13], while our method correctly grounds the target despite challenging spatial cues. ri for each Gaussian ...
-- **p. 3 / 3. Problem Statement and Notations - extractive body cue:** While this framework enables basic language-to-geometry grounding, its spatial reasoning capability remains limited, as analyzed in Sec.
-- **p. 7 / 6.2. Comparisons with State-of-the-Arts - extractive body cue:** 3), where scenes are relatively clean and objects are easier to localize, GeoCGA still achieves the best performance across all categories and improves the overall ...
-- **p. 7 / 6.2. Comparisons with State-of-the-Arts - extractive body cue:** 2), GeoCGA continues to outperform prior methods with an average improvement of +5.7%.
-- **p. 8 / 6.3. Ablation Study - extractive body cue:** (10)) further improves grounding accuracy ( +1.0 and +0.6 ) over relationimplicit matching, showing that aligning linguistic and geometric relations is essential for reliable cross-modal ...
-- **p. 8 / 6.3. Ablation Study - extractive body cue:** First, incorporating edge-aware message passing improves performance over the Semantic GNN baseline ( +0.6 on Ramen and +1.2 on Kitchen ), indicating that explicitly modeling ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 언어의 위치 표현과 가우시안 사이의 공간 구조를 각각 그래프로 표현하고 기하 정보를 반영한 교차 모달 정렬을 학습한다. [PDF 3쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Tao_Geometry-Aware_Cross-Modal_Graph_Alignment_for_Referring_Segmentation_in_3D_Gaussian_CVPR_2026_paper.pdf#page=3) · [PDF 4쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Tao_Geometry-Aware_Cross-Modal_Graph_Alignment_for_Referring_Segmentation_in_3D_Gaussian_CVPR_2026_paper.pdf#page=4) · [PDF 5쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Tao_Geometry-Aware_Cross-Modal_Graph_Alignment_for_Referring_Segmentation_in_3D_Gaussian_CVPR_2026_paper.pdf#page=5) · [PDF 6쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Tao_Geometry-Aware_Cross-Modal_Graph_Alignment_for_Referring_Segmentation_in_3D_Gaussian_CVPR_2026_paper.pdf#page=6)
+- Ref-LERF와 3D-OVS에서 지시 대상 분할을 평가하고 공간 관계와 기하 감독을 제거했을 때의 차이를 보고했다. [PDF 6쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Tao_Geometry-Aware_Cross-Modal_Graph_Alignment_for_Referring_Segmentation_in_3D_Gaussian_CVPR_2026_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Tao_Geometry-Aware_Cross-Modal_Graph_Alignment_for_Referring_Segmentation_in_3D_Gaussian_CVPR_2026_paper.pdf#page=7) · [PDF 8쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Tao_Geometry-Aware_Cross-Modal_Graph_Alignment_for_Referring_Segmentation_in_3D_Gaussian_CVPR_2026_paper.pdf#page=8)
 
 ## Evaluation Scope
 

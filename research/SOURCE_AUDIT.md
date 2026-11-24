@@ -15,12 +15,22 @@
 | 2026-11-24 | REFERENCE | [pr-0510–pr-0674 중 당시 미확인 논문](https://github.com/Kim-Yoo-Hyun/PaperReview/tree/7f49e6ff2c9f9cab212c65418f9121c5f2dd4922) | 100 | 0 | 140 |
 | 2026-11-24 | REFERENCE | [pr-0676–pr-1023 중 당시 미확인 논문](https://github.com/Kim-Yoo-Hyun/PaperReview/tree/8f99ff9bf6765c7aefba27ec29cdc39d5b854e23) | 100 | 0 | 40 |
 | 2026-11-24 | REFERENCE | [pr-1024–pr-1210 중 당시 미확인 논문](https://github.com/Kim-Yoo-Hyun/PaperReview/tree/c99713fa4c274a23d4bff686fe2c59cd539659e8) | 40 | 0 | 0 |
+| 2026-11-24 | ARCHIVE | [pr-0025–pr-0366 중 당시 미확인 논문](https://github.com/Kim-Yoo-Hyun/PaperReview/tree/8800657041ca30b7ac60eacf3f0888fe439e543d) | 100 | 0 | 98 |
 
 안정 ID 순서로 미확인 논문을 골라 각 overview의 한 줄 요약과 핵심 기여 두 개를 원문에 대조했다. 문장마다 실제 확인한 PDF 쪽수 또는 공식 웹 보고서의 절을 연결했다. 원장에는 판본과 교정 전 노트의 SHA-256을 기록했다. 이 순차 배치에서 집계하는 값은 검증 진척이다.
 
 기존 노트에서 확인한 문자 전사 교정은 18편이다. 원장에 해당 문구와 근거를 기록했다. [pr-0174 원문](https://arxiv.org/pdf/2409.10350v1) · [pr-0181 원문](https://arxiv.org/pdf/2511.09958v1) · [pr-0248 원문](https://openaccess.thecvf.com/content/ICCV2025/papers/Wang_VQ-VLA_Improving_Vision-Language-Action_Models_via_Scaling_Vector-Quantized_Action_Tokenizers_ICCV_2025_paper.pdf) · [pr-0260 원문](https://arxiv.org/pdf/2602.21445v2) · [pr-0278 원문](https://arxiv.org/pdf/2503.02310v2) · [pr-0354 원문](https://openaccess.thecvf.com/content/CVPR2026/papers/Ma_BA-GS_Bayesian_Adaptive_Gaussian_Splatting_for_SFM-Free_3D_Reconstruction_CVPR_2026_paper.pdf) · [pr-0552 원문](https://lavalle.pl/papers/Lav98c.pdf) · [pr-0555 원문](https://www.ri.cmu.edu/pub_files/2009/5/icra09-chomp.pdf) · [pr-0567 원문](https://arxiv.org/pdf/2312.01990v1) · [pr-0597 원문](https://www.roboticsproceedings.org/rss16/p031.pdf) · [pr-0751 원문](https://www.roboticsproceedings.org/rss21/p052.pdf) · [pr-0772 원문](https://openaccess.thecvf.com/content/CVPR2025/papers/Song_RoboSpatial_Teaching_Spatial_Understanding_to_2D_and_3D_Vision-Language_Models_CVPR_2025_paper.pdf) · [pr-0795 원문](https://openaccess.thecvf.com/content/CVPR2026/papers/Liu_ActiveVLA_Injecting_Active_Perception_into_Vision-Language-Action_Models_for_Precise_3D_CVPR_2026_paper.pdf) · [pr-0798 원문](https://openaccess.thecvf.com/content/CVPR2026/papers/Hu_G2VLM_Geometry_Grounded_Vision_Language_Model_with_Unified_3D_Reconstruction_CVPR_2026_paper.pdf) · [pr-0799 원문](https://openaccess.thecvf.com/content/CVPR2026/papers/Huang_MSGNav_Unleashing_the_Power_of_Multi-modal_3D_Scene_Graph_for_CVPR_2026_paper.pdf) · [pr-0805 원문](https://openaccess.thecvf.com/content/CVPR2026/papers/Liu_SaPaVe_Towards_Active_Perception_and_Manipulation_in_Vision-Language_Action_Models_CVPR_2026_paper.pdf) · [pr-0813 원문](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/yan26r/yan26r.pdf) · [pr-0945 원문](https://arxiv.org/pdf/1708.03852v1)
 
+### 원문과 판본 교정
+
+| 논문 | 게재본과 대조한 결과 |
+|---|---|
+| LE-Object | 기존 arXiv 식별자는 Deng 등의 OpenObj로 연결된다. LE-Object 게재본 표 I과 참고문헌 [31]은 이 연구를 독립 비교법으로 명시한다. [기존에 연결된 PDF](https://arxiv.org/pdf/2406.08009v1) · [게재본](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11128304) |
+| Context Graph-based Visual-Language Place Recognition | ICRA 게재본의 III-C절과 그림 4가 문맥 그래프의 계산·결합을 명시한다. 기존 PDF는 같은 저자의 2024년 저자판이며 게재본과 표제 및 평가 내용이 다르다. [기존에 연결된 PDF](https://arxiv.org/pdf/2410.19341v1) · [게재본](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11127699) |
+
 **CLIP-Fields 저자 표기.** 2026-11-24에 RSS 게재본 표제면에 따라 첫 저자의 이름과 성 사이 공백을 복원해 Nur Muhammad (Mahi) Shafiullah로 교정했다. [게재본 표제면](https://www.roboticsproceedings.org/rss19/p074.pdf#page=1)
+
+**ReconFusion 저자 표기.** 2026-11-24에 CVPR 게재본 표제면에 인쇄된 마지막 저자 Aleksander Hołyński의 ł와 ń를 복원했다. [게재본 표제면](https://openaccess.thecvf.com/content/CVPR2024/papers/Wu_ReconFusion_3D_Reconstruction_with_Diffusion_Priors_CVPR_2024_paper.pdf#page=1)
 
 **Online Continual Learning with Maximal Interfered Retrieval 저자 표기.** 2026-11-24에 NeurIPS 게재 PDF 표제면의 일곱 저자를 인쇄 순서대로 반영했다. 학회 웹 서지는 Lucas Page-Caccia를 일곱 번째로, 게재 PDF는 Lucas Caccia를 두 번째로 표기한다. [게재본 표제면](https://proceedings.neurips.cc/paper/2019/file/15825aee15eb335cc13f9b559f166ee8-Paper.pdf#page=1)
 
@@ -38,18 +48,30 @@
 
 | 논문 | 원문에서 확인한 범위 |
 |---|---|
+| ScanRefer | 51,583개는 지시 표현의 수이고 11,046개는 지시된 물체의 수다. 표 4는 예측 상자가 정답 상자와 IoU 0.25 또는 0.5 기준을 넘긴 질의의 비율을 같은 범주 물체가 하나인 장면과 여럿인 장면으로 나누어 보고한다. [PDF 3쪽](https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123650205.pdf#page=3) · [PDF 5쪽](https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123650205.pdf#page=5) · [PDF 11쪽](https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123650205.pdf#page=11) |
 | TraceVLA | 초록의 실물 네 과제와 본문 그림 6의 전체 여덟 과제를 구분했다. 그림 6(a)는 기본 비교 네 과제, 6(b)는 추가 일반화 네 과제다. [PDF 1쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/8667f264f88c7938a73a53ab01eb1327-Paper-Conference.pdf#page=1) · [PDF 7쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/8667f264f88c7938a73a53ab01eb1327-Paper-Conference.pdf#page=7) |
+| OmniEVA | 표 5의 OmniEVA-ER 성공률은 시뮬레이션에서 팔 길이가 학습에 등장한 조건 85.08%, 새로운 길이 80.52%다. 표 6의 실제 이동 로봇 두 대(팔 길이 75 cm와 70 cm)에서 측정한 결과는 별도로 보고했다. [PDF 7쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/7b122d0a0dcb1a86ffa25ccba154652b-Paper-Conference.pdf#page=7) · [PDF 9쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/7b122d0a0dcb1a86ffa25ccba154652b-Paper-Conference.pdf#page=9) · [PDF 10쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/7b122d0a0dcb1a86ffa25ccba154652b-Paper-Conference.pdf#page=10) |
 | AIR-VLA | 표 1의 시뮬레이션 조작 실행과 표 3의 VLM 계획 평가에는 서로 다른 지표가 쓰인다. [PDF 7쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/sun26an/sun26an.pdf#page=7) · [PDF 8쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/sun26an/sun26an.pdf#page=8) |
 | Plan in Sandbox, Navigate in Open Worlds | A-EQA의 53.21%는 식 (14)의 LLM 답변 일치 점수다. 평가 모델이 답에 매긴 1~5점을 0~1로 정규화한 후 평균한다. [PDF 1쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/shen26e/shen26e.pdf#page=1) · [PDF 6쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/shen26e/shen26e.pdf#page=6) · [PDF 7쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/shen26e/shen26e.pdf#page=7) |
 | SpikeVLA | 내비게이션 성능과 함께 보고한 Eng(J)는 연산 횟수와 45 nm 공정의 연산당 에너지 가정으로 산출한 이론값이다. [PDF 7쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/song26r/song26r.pdf#page=7) · [PDF 12쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/song26r/song26r.pdf#page=12) · [PDF 13쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/song26r/song26r.pdf#page=13) |
+| LE-Object | Replica 실내 장면 8개의 표 I에서 LE-Object의 평균 mIoU는 38.79, 별도 비교법 OpenObj는 24.64다. 표 II에서 물체 표면 완전성 비율은 예측 마스크 사용 시 84.59%, 정답 분할을 쓴 LE-Object⋆에서 96.75%다. [PDF 5쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11128304#page=5) · [PDF 6쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11128304#page=6) |
 | VITaL Pretraining | 케이블 삽입의 20%→85%는 실행 시 촉각이 없는 ACT의 사전학습 전후 비교다. 같은 조건의 확산 정책은 45%→75%였다. [PDF 5쪽](https://arxiv.org/pdf/2403.11898v2#page=5) · [PDF 6쪽](https://arxiv.org/pdf/2403.11898v2#page=6) |
+| Context Graph-based Visual-Language Place Recognition | 표 II의 KITTI 00에서 제안법과 NetVLAD의 Recall@1은 각각 0.14와 0.18, Recall@20은 0.85와 0.51이다. 정답 여부는 상위 N개 후보에 실제 위치 25 m 이내의 영상이 있는지로 정한다. [PDF 5쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11127699#page=5) · [PDF 6쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11127699#page=6) |
 | Audio-VLA | 표 II에서 이진 성공률과 연속 작업 진행 지표 TCR을 따로 보고한다. 식 (13)은 달성한 진행량을 과제별 목표량으로 정규화한다. [PDF 6쪽](https://arxiv.org/pdf/2511.09958v1#page=6) · [PDF 7쪽](https://arxiv.org/pdf/2511.09958v1#page=7) |
 | OmniVLA: Physically-Grounded Multimodal VLA with Unified Multi-Sensor Perception for Robotic Manipulation | 조작용 OmniVLA의 표 I에서 열·레이더·소리 과제의 평균 성공률은 84%, RGB 단독은 25%, 원시 센서 입력은 56%다. 표에 표시된 평균의 차이는 각각 59·28퍼센트포인트다. [PDF 6쪽](https://arxiv.org/pdf/2511.01210v3#page=6) |
 | OmniVLA: An Omni-Modal Vision-Language-Action Model for Robot Navigation | 이동용 OmniVLA의 표 II는 언어·2차원 자세·목표 영상으로 지정한 목적지 도달을 평가한다. 성공률(SR)과 목표를 향한 부분 진행도(Prog.)를 별도 열에 보고한다. [PDF 5쪽](https://arxiv.org/pdf/2509.19480v1#page=5) |
 | EveryDayVLA | 알고리즘 1은 이산·연속 행동 예측의 평균 절대 차이로 실행 길이를 결정한다. 실험에서 기본적으로 실행하는 명령은 이산 예측이다. [PDF 3쪽](https://arxiv.org/pdf/2511.05397v1#page=3) · [PDF 4쪽](https://arxiv.org/pdf/2511.05397v1#page=4) |
+| ORION | Bench2Drive 폐루프에서 ORION이 기록한 77.74는 주행 점수이고 54.62%는 성공률이다. 표의 두 열은 같은 시뮬레이션에서 서로 다른 결과를 측정한다. [PDF 6쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Fu_ORION_A_Holistic_End-to-End_Autonomous_Driving_Framework_by_Vision-Language_Instructed_ICCV_2025_paper.pdf#page=6) |
+| VLR-Driver | CARLA 기반 Bench2Drive 표 1에서 VLR-Driver의 주행 점수는 75.01, 경로 완주 지표는 86.09, 성공률은 50.00%다. 각 수치는 카메라와 텍스트를 쓰는 동일 행의 서로 다른 열이다. [PDF 6쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Kong_VLR-Driver_Large_Vision-Language-Reasoning_Models_for_Embodied_Autonomous_Driving_ICCV_2025_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Kong_VLR-Driver_Large_Vision-Language-Reasoning_Models_for_Embodied_Autonomous_Driving_ICCV_2025_paper.pdf#page=7) |
+| PlaceIt3D | 평가의 입력은 장면 메시, 물체 자산과 지시문이고 출력은 3D 이동과 수직축 회전이다. 성능은 예측 배치가 지정된 공간 제약을 충족하는 비율로 집계한다. [PDF 4쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Abdelreheem_PlaceIt3D_Language-Guided_Object_Placement_in_Real_3D_Scenes_ICCV_2025_paper.pdf#page=4) · [PDF 7쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Abdelreheem_PlaceIt3D_Language-Guided_Object_Placement_in_Real_3D_Scenes_ICCV_2025_paper.pdf#page=7) |
+| ActiveGS | 실내 무인기 시연은 OptiTrack으로 자세를 측정했다. 데스크톱에서 RGB-D와 자세를 받아 지도를 갱신하고 충돌 없는 웨이포인트를 기체로 전송했다. [PDF 7쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=10938898#page=7) |
 | LAMP | 표 IV의 실물 실험에서 LAMP와 명시적 지도 기준선의 성공률은 모두 90%였다. 목표까지의 거리는 각각 1.89 m와 5.19 m, 질의당 계획 시간은 3.84초와 1.82초였다. [PDF 7쪽](https://arxiv.org/pdf/2602.11862v1#page=7) |
+| SORT3D | 실물 시연에서는 로봇이 먼저 환경을 주행해 지도를 만든 뒤 물체 지시를 받았다. 벤치마크의 지시 대상 식별 정확도와 두 이동 플랫폼의 내비게이션 시연은 별도 평가다. [PDF 6쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11246145#page=6) · [PDF 7쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11246145#page=7) |
 | GSplatVNM | 중간 시점 합성으로 개선된 시각 내비게이션 결과는 광실사 시뮬레이터에서 측정했다. 저자들은 실제 로봇 주행 검증을 후속 과제로 명시했다. [PDF 4쪽](https://arxiv.org/pdf/2503.05152v3#page=4) · [PDF 5쪽](https://arxiv.org/pdf/2503.05152v3#page=5) · [PDF 7쪽](https://arxiv.org/pdf/2503.05152v3#page=7) |
+| Center-Based 3D Object Detection and Tracking | nuScenes에서 65.5 NDS는 3D 검출 점수이고 63.8 AMOTA는 여러 재현율에서 집계한 추적 정확도다. 두 값은 서로 다른 과제의 지표다. [PDF 1쪽](https://openaccess.thecvf.com/content/CVPR2021/papers/Yin_Center-Based_3D_Object_Detection_and_Tracking_CVPR_2021_paper.pdf#page=1) · [PDF 5쪽](https://openaccess.thecvf.com/content/CVPR2021/papers/Yin_Center-Based_3D_Object_Detection_and_Tracking_CVPR_2021_paper.pdf#page=5) · [PDF 6쪽](https://openaccess.thecvf.com/content/CVPR2021/papers/Yin_Center-Based_3D_Object_Detection_and_Tracking_CVPR_2021_paper.pdf#page=6) |
 | Depth Anything | 표 2는 여러 데이터셋의 상대 깊이 제로샷 전이를 평가한다. 표 3은 NYUv2에서 미터 단위 정답으로 미세조정한 결과다. KITTI의 미세조정 결과는 표 4에 따로 실렸다. [PDF 5쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Yang_Depth_Anything_Unleashing_the_Power_of_Large-Scale_Unlabeled_Data_CVPR_2024_paper.pdf#page=5) · [PDF 6쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Yang_Depth_Anything_Unleashing_the_Power_of_Large-Scale_Unlabeled_Data_CVPR_2024_paper.pdf#page=6) |
+| Touch2Shape | ABC 기반 표 3에서 접촉 영상은 시뮬레이터로 생성했다. 촉각만 썼을 때 파지 동작 5회 후 Chamfer 거리의 초기값 대비 비율은 RL 선택 6.63%, 무작위 선택 8.14%다. 낮을수록 복원 오차가 더 많이 줄었다. [PDF 5쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Wang_Touch2Shape_Touch-Conditioned_3D_Diffusion_for_Shape_Exploration_and_Reconstruction_CVPR_2025_paper.pdf#page=5) · [PDF 7쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Wang_Touch2Shape_Touch-Conditioned_3D_Diffusion_for_Shape_Exploration_and_Reconstruction_CVPR_2025_paper.pdf#page=7) |
+| SDGS | 표 1의 스테레오 Tianmouc 시퀀스에서 SDGS의 궤적 오차 RMSE는 slow 4.21 cm, fast 5.89 cm, extreme 3.91 cm다. 표 2는 별도 TUM RGB-D 자료에서 측정한 궤적 오차다. 저자가 보고한 약 2배의 속도 향상은 자세 최적화 반복 1회 기준이다. [PDF 1쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Tian_SDGS_Spatial_Difference_Guided_Gaussian_Splatting_for_Simultaneous_Localization_and_CVPR_2026_paper.pdf#page=1) · [PDF 7쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Tian_SDGS_Spatial_Difference_Guided_Gaussian_Splatting_for_Simultaneous_Localization_and_CVPR_2026_paper.pdf#page=7) |
 | ShapeNet | 2015년 보고서 당시 색인된 모델은 300만 개 이상이고 그중 22만 개를 WordNet 범주 3,135개로 분류했다. 표 2가 제시한 ShapeNetCore 하위 집합의 합계는 57,386개다. [PDF 1쪽](https://arxiv.org/pdf/1512.03012v1#page=1) · [PDF 8쪽](https://arxiv.org/pdf/1512.03012v1#page=8) |
 | Dex-Net 2.0 | 새 생활용품 40개에서 보고한 전체 파지 성공률은 94%다. 99%는 모델이 안정적이라고 판정한 69회 중 성공한 68회의 정밀도다. 학습 때 본 까다로운 형상 8개의 성공률은 93%였다. [PDF 7쪽](https://www.roboticsproceedings.org/rss13/p58.pdf#page=7) · [PDF 8쪽](https://www.roboticsproceedings.org/rss13/p58.pdf#page=8) |
 | Learning to Walk in Minutes Using Massively Parallel Deep Reinforcement Learning | 평지 정책의 4분 미만과 험지 정책의 약 20분은 시뮬레이션 학습의 벽시계 시간이다. 험지 실험은 RTX A6000 한 장에서 정책을 1,500회 갱신했다. [PDF 1쪽](https://proceedings.mlr.press/v164/rudin22a/rudin22a.pdf#page=1) · [PDF 7쪽](https://proceedings.mlr.press/v164/rudin22a/rudin22a.pdf#page=7) |
@@ -131,8 +153,8 @@ NoMaD(`pr-0568`)의 데이터는 기존에 `not_applicable`로 분류되어 있�
 | 저자 | 6 | 1,251 | 1 | 0 |
 | 연도 | 0 | 1,252 | 0 | 0 |
 | 발표처·게재 | 0 | 1,182 | 70 | 0 |
-| 요약·기여 | 30 | 1,054 | 198 | 0 |
-| 코드 | 0 | 383 | 869 | 0 |
+| 요약·기여 | 30 | 1,154 | 98 | 0 |
+| 코드 | 0 | 384 | 868 | 0 |
 | 가중치 | 0 | 84 | 1,168 | 0 |
 | 데이터 | 0 | 101 | 1,151 | 0 |
 | 태그 | 1 | 395 | 857 | 0 |
@@ -146,7 +168,7 @@ NoMaD(`pr-0568`)의 데이터는 기존에 `not_applicable`로 분류되어 있�
 | CORE | 50 | 13 | 0 | 0 | 36 |
 | NEXT | 450 | 6 | 0 | 360 | 433 |
 | REFERENCE | 510 | 0 | 0 | 366 | 504 |
-| ARCHIVE | 242 | 0 | 198 | 131 | 242 |
+| ARCHIVE | 242 | 0 | 98 | 131 | 242 |
 
 ## 배치별 결과
 
@@ -170,7 +192,7 @@ NoMaD(`pr-0568`)의 데이터는 기존에 `not_applicable`로 분류되어 있�
 
 - 11월 19일의 파일 진단은 당시 1,227편의 태그 표기, 중복 의심, 발표일 해상도를 점검했다. 비슷한 제목으로 잡힌 GR00T N1.5와 N1.6은 별도 판본으로 유지했다. 정식 발표일이 연도 단위인 항목에서 최근 6개월 비중을 확정할 수 없다. [당시 분모·검사 기준](https://github.com/Kim-Yoo-Hyun/PaperReview/blob/92d86a2ebcd2c2b99e32ff79424a5f2cd2eee747/research/REGISTRY_AUDIT.md) · [현행 통계](./REGISTRY_STATS.md)
 - 같은 날 집중 읽기 477편 중 CORE 30편·NEXT 20편의 층화표본에서는 10/50편에서 11개 오류를 고쳤다. 당시 두 등급 모집단의 가중 추정은 11.7%였다. [50편의 원문·추출법·판정](https://github.com/Kim-Yoo-Hyun/PaperReview/blob/92d86a2ebcd2c2b99e32ff79424a5f2cd2eee747/research/SAMPLE_AUDIT.md)
-- 11월 20일 첫 전수 감사의 **교정 전** 발견률은 109/1,252편(8.71%), 132개 필드였다. 그 뒤 272편에서 380개 필드의 증거를 보강하며 42편의 오류 44건을 교정했다. 각 시점의 오류는 같은 논문에서 겹칠 수 있다. [당시 13개 배치와 논문별 표](https://github.com/Kim-Yoo-Hyun/PaperReview/blob/92d86a2ebcd2c2b99e32ff79424a5f2cd2eee747/research/SOURCE_AUDIT.md)
+- 11월 20일 첫 전수 감사의 **교정 전** 발견률은 109/1,252편(8.71%), 132개 필드였다. 그 뒤 272편에서 382개 필드의 증거를 보강하며 42편의 오류 44건을 교정했다. 각 시점의 오류는 같은 논문에서 겹칠 수 있다. [당시 13개 배치와 논문별 표](https://github.com/Kim-Yoo-Hyun/PaperReview/blob/92d86a2ebcd2c2b99e32ff79424a5f2cd2eee747/research/SOURCE_AUDIT.md)
 
 ## 논문별 조회
 

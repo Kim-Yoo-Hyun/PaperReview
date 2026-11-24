@@ -16,12 +16,11 @@
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 원문 해당 쪽과 대조했다. [본문](https://openaccess.thecvf.com/content/ICCV2025/papers/Zhang_Egocentric_Action-aware_Inertial_Localization_in_Point_Clouds_with_Vision-Language_Guidance_ICCV_2025_paper.pdf)
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — The other challenge lies in the complexity of human actions.
-
-방법 관련 발췌 — In summary, our main contributions are as follows: • We introduce EAIL, a novel inertial localization framework that leverages egocentric action cues from headmounted IMU signals to localize target individuals within a ...
+EAIL은 머리에 부착한 IMU에서 읽은 행동 단서를 기존 3D 점군 지도의 국소 구조와 연결해 사람의 실내 위치를 추정한다. [PDF 1쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Zhang_Egocentric_Action-aware_Inertial_Localization_in_Point_Clouds_with_Vision-Language_Guidance_ICCV_2025_paper.pdf#page=1) · [PDF 3쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Zhang_Egocentric_Action-aware_Inertial_Localization_in_Point_Clouds_with_Vision-Language_Guidance_ICCV_2025_paper.pdf#page=3)
 
 ## Problem and Motivation
 
@@ -53,16 +52,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** In summary, our main contributions are as follows: • We introduce EAIL, a novel inertial localization framework that leverages egocentric action cues from headmounted IMU ...
-- **p. 2 / 1. Introduction - extractive body cue:** In this work, we present a novel framework named Egocentric Action-aware Inertial Localization (EAIL; see also Fig.
-- **p. 1 / 1. Introduction - extractive body cue:** Compared to vision-based localization methods [28, 39], inertial localization enables user tracking in an energy-efficient and privacy-preserving manner.
-- **p. 3 / 3. Problem Setting - extractive body cue:** In contrast, our approach incorporates the 3D point cloud P, enabling localization without requiring environment-specific training.
-- **p. 6 / Figure/Table caption - extractive body cue:** Table 1. Inertial Localization Results. We evaluate the accuracy using two metrics: the localization success rate (%) at various error distance thresholds and the Relative ...
-- **p. 8 / 5.4. Ablation Studies - extractive body cue:** 4, using only IMU signals, we achieve results comparable to IMU2CLIP [41].
-- **p. 8 / 5.4. Ablation Studies - extractive body cue:** In contrast, integrating point cloud features with predicted location attention with IMU features provides a clear performance improvement.
-- **p. 5 / 5.1. Experimental Setup - extractive body cue:** Evaluation Metrics For the localization task, we report the success rate (%) at error distance thresholds of 0.2 m, 0.4 m, and 0.6 m following ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 동시에 수집한 영상·언어 신호로 짧은 IMU 구간과 가능한 위치 표현을 정렬하고 연속 동작의 시간적 단서로 궤적을 추정한다. [PDF 3쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Zhang_Egocentric_Action-aware_Inertial_Localization_in_Point_Clouds_with_Vision-Language_Guidance_ICCV_2025_paper.pdf#page=3) · [PDF 4쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Zhang_Egocentric_Action-aware_Inertial_Localization_in_Point_Clouds_with_Vision-Language_Guidance_ICCV_2025_paper.pdf#page=4) · [PDF 5쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Zhang_Egocentric_Action-aware_Inertial_Localization_in_Point_Clouds_with_Vision-Language_Guidance_ICCV_2025_paper.pdf#page=5)
+- 기록된 사람의 움직임에서 위치 오차와 시간에 따른 드리프트를 관성 항법 기준선과 비교하고 모달리티별 영향을 측정했다. [PDF 6쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Zhang_Egocentric_Action-aware_Inertial_Localization_in_Point_Clouds_with_Vision-Language_Guidance_ICCV_2025_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Zhang_Egocentric_Action-aware_Inertial_Localization_in_Point_Clouds_with_Vision-Language_Guidance_ICCV_2025_paper.pdf#page=7)
 
 ## Evaluation Scope
 

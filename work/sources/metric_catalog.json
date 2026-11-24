@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_on": "2026-11-20",
+  "generated_on": "2026-11-24",
   "catalog_type": "metric",
   "evidence_policy": "Generated references are cue_only. Do not treat a token match as verified evaluation evidence; consult the paper's 04_evaluation.md and source location.",
   "entries": [
@@ -640,11 +640,6 @@
         {
           "paper_id": "pr-0174",
           "source": "2025/ICRA/2025_ICRA_Point2Graph-An-End-To-End-Point-Cloud-Based-3D-Open-Vocabu/04_evaluation.md",
-          "evidence": "cue_only"
-        },
-        {
-          "paper_id": "pr-0175",
-          "source": "2025/ICRA/2025_ICRA_LE-Object-Language-Embedded-Object-Level-Neural-Radiance-F/04_evaluation.md",
           "evidence": "cue_only"
         },
         {
@@ -1687,11 +1682,6 @@
           "evidence": "cue_only"
         },
         {
-          "paper_id": "pr-0175",
-          "source": "2025/ICRA/2025_ICRA_LE-Object-Language-Embedded-Object-Level-Neural-Radiance-F/04_evaluation.md",
-          "evidence": "cue_only"
-        },
-        {
           "paper_id": "pr-0176",
           "source": "2025/ICRA/2025_ICRA_Gaussian-Splatting-Visual-MPC-for-Granular-Media-Manipulat/04_evaluation.md",
           "evidence": "cue_only"
@@ -1704,11 +1694,6 @@
         {
           "paper_id": "pr-0178",
           "source": "2025/ICRA/2025_ICRA_VITaL-Pretraining-Visuo-Tactile-Pretraining-for-Tactile-an/04_evaluation.md",
-          "evidence": "cue_only"
-        },
-        {
-          "paper_id": "pr-0179",
-          "source": "2025/ICRA/2025_ICRA_Context-Graph-based-Visual-Language-Place-Recognition/04_evaluation.md",
           "evidence": "cue_only"
         },
         {

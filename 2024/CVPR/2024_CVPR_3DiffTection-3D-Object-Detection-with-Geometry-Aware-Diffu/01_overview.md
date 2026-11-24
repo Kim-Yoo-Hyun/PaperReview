@@ -16,12 +16,11 @@
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 원문 해당 쪽과 대조했다. [본문](https://openaccess.thecvf.com/content/CVPR2024/papers/Xu_3DiffTection_3D_Object_Detection_with_Geometry-Aware_Diffusion_Features_CVPR_2024_paper.pdf)
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, these models often lack 3D awareness and exhibit a domain gap in 3D applications.
-
-방법 관련 발췌 — Our primary contributions are as follows: (1) We introduce a scalable technique for enhancing pretrained 2D diffusion models with 3D awareness through a novel geometric ControlNet, enhanced with an epipolar warp operator; ...
+3DiffTection은 단일 RGB 영상의 3D 물체 검출에 맞도록 2D 확산 모델의 특징에 시점 간 기하 정보를 학습시킨다. [PDF 1쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Xu_3DiffTection_3D_Object_Detection_with_Geometry-Aware_Diffusion_Features_CVPR_2024_paper.pdf#page=1) · [PDF 3쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Xu_3DiffTection_3D_Object_Detection_with_Geometry-Aware_Diffusion_Features_CVPR_2024_paper.pdf#page=3)
 
 ## Problem and Motivation
 
@@ -52,16 +51,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** Our primary contributions are as follows: (1) We introduce a scalable technique for enhancing pretrained 2D diffusion models with 3D awareness through a novel geometric ...
-- **p. 2 / 1. Introduction - extractive body cue:** Utilizing image pairs from videos, which are abundant and do not require manual annotation, our approach is scalable and efficient.
-- **p. 1 / 1. Introduction - extractive body cue:** Efforts in novel view synthesis using diffusion models have shown promise [7, 58].
-- **p. 6 / 4. Experiments - extractive body cue:** 3DiffTection significantly outperforms baselines, including CubeRCNN-DLA-Aug, which is trained with 6x more supervision data. a novel-view synthesis task, we only take two views, one as ...
-- **p. 6 / 4.1. 3D Object Detection on Omni3D-ARKitscenes - extractive body cue:** Notably, 3DiffTection significantly outperforms CubeRCNNDLA [5], a prior art in single-view 3D detection on the Omni3D-ARKitScenes dataset, achieving a margin of 7.4% at a resolution ...
-- **p. 4 / Figure/Table caption - extractive body cue:** Figure 3. Architecture of Geometric ControlNet. Left: Original Stable Diffusion UNet encoder block. Right: We train novel view image synthesis by adding a geometric ControlNet ...
-- **p. 7 / 4.2. Cross-dataset Generalization - extractive body cue:** We observe that if we have ground truth 2D bounding boxes, 3DiffTection with semantic-ControlNet can even achieve the best performance.
-- **p. 7 / 4.3. Label Efficiency - extractive body cue:** Notably, even with 50% of the labels, our proposed 3DiffTection achieves
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 에피폴라 기하를 이용하는 뷰 합성 과제로 특징을 조정하고, 물체 검출에 필요한 의미 정보와 결합한다. [PDF 3쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Xu_3DiffTection_3D_Object_Detection_with_Geometry-Aware_Diffusion_Features_CVPR_2024_paper.pdf#page=3) · [PDF 4쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Xu_3DiffTection_3D_Object_Detection_with_Geometry-Aware_Diffusion_Features_CVPR_2024_paper.pdf#page=4) · [PDF 5쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Xu_3DiffTection_3D_Object_Detection_with_Geometry-Aware_Diffusion_Features_CVPR_2024_paper.pdf#page=5)
+- Omni3D의 ARKitScenes 자료 등에서 3D 상자 검출을 평가하고 기하 학습과 의미 학습의 효과를 나누어 비교했다. [PDF 6쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Xu_3DiffTection_3D_Object_Detection_with_Geometry-Aware_Diffusion_Features_CVPR_2024_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Xu_3DiffTection_3D_Object_Detection_with_Geometry-Aware_Diffusion_Features_CVPR_2024_paper.pdf#page=7) · [PDF 8쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Xu_3DiffTection_3D_Object_Detection_with_Geometry-Aware_Diffusion_Features_CVPR_2024_paper.pdf#page=8)
 
 ## Evaluation Scope
 

@@ -16,12 +16,11 @@
 - Code/Project: https://github.com/zzy-2021/AERGS-SLAM
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 원문 해당 쪽과 대조했다. [본문](https://openaccess.thecvf.com/content/CVPR2026/papers/Zhou_AERGS-SLAM_Auto-Exposure-Robust_Stereo_3D_Gaussian_Splatting_SLAM_CVPR_2026_paper.pdf)
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, such methods suffer from a key limitation: This CVPR paper is the Open Access version, provided by the Computer Vision Foundation.
-
-방법 관련 발췌 — To summarize, the main contributions of this work are as follows: • We propose a camera exposure network that recovers the camera's CRF to map per-image radiance maps to RGB images, enabling ...
+AERGS-SLAM은 자동 노출이 바뀌는 스테레오 영상에서 자세 추정과 가우시안 지도 렌더링이 안정적으로 동작하도록 노출 변화를 모델링한다. [PDF 1쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Zhou_AERGS-SLAM_Auto-Exposure-Robust_Stereo_3D_Gaussian_Splatting_SLAM_CVPR_2026_paper.pdf#page=1) · [PDF 3쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Zhou_AERGS-SLAM_Auto-Exposure-Robust_Stereo_3D_Gaussian_Splatting_SLAM_CVPR_2026_paper.pdf#page=3)
 
 ## Problem and Motivation
 
@@ -55,16 +54,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** To summarize, the main contributions of this work are as follows: • We propose a camera exposure network that recovers the camera's CRF to map ...
-- **p. 2 / 1. Introduction - extractive body cue:** To address these problems, we propose a stereo decoupled auto-exposure-robust Gaussian splatting SLAM (AERGS-SLAM).
-- **p. 6 / Method - extractive body cue:** Then, we evaluate on our self-collected dataset, which consists of six sequences captured using a ZED 2i stereo camera.
-- **p. 6 / Method - extractive body cue:** Given its demonstrated superior performance in handling complex real-world scenarios and stereo setups in recent literature [14, 37], DROID-SLAM provides a reliable benchmark for assessing ...
-- **p. 5 / 3.3.2. Coarse-To-Fine Optimization - extractive body cue:** To mitigate this limitation, we propose a time-aware sliding window coarse-to-fine strategy.
-- **p. 7 / 4.3. Results and Evaluation - extractive body cue:** Secondly, on the self-collected dataset, AERGS-SLAM achieves significantly higher localization accuracy than all baselines, confirming its generalization to real-world scenarios.
-- **p. 7 / 4.3. Results and Evaluation - extractive body cue:** On the processed EuRoC dataset [1], AERGS-SLAM achieves the best localization performance against 3DGS-based baselines.
-- **p. 8 / 4.4. Ablation Studies - extractive body cue:** Firstly, as shown in the rows (3) and (5) of Table 3, the employment of the CEN module significantly enhances the quality of photometric mapping ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 노출 변화에 견디는 영상 특징으로 추적과 번들 조정을 수행하고 카메라 노출 모델로 키프레임마다 달라지는 외관을 보정한다. [PDF 3쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Zhou_AERGS-SLAM_Auto-Exposure-Robust_Stereo_3D_Gaussian_Splatting_SLAM_CVPR_2026_paper.pdf#page=3) · [PDF 4쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Zhou_AERGS-SLAM_Auto-Exposure-Robust_Stereo_3D_Gaussian_Splatting_SLAM_CVPR_2026_paper.pdf#page=4) · [PDF 5쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Zhou_AERGS-SLAM_Auto-Exposure-Robust_Stereo_3D_Gaussian_Splatting_SLAM_CVPR_2026_paper.pdf#page=5)
+- 노출이 달라지는 시퀀스에서 궤적 오차와 렌더링 품질을 따로 비교하고 추적·매핑 모듈의 효과를 분석했다. [PDF 5쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Zhou_AERGS-SLAM_Auto-Exposure-Robust_Stereo_3D_Gaussian_Splatting_SLAM_CVPR_2026_paper.pdf#page=5) · [PDF 6쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Zhou_AERGS-SLAM_Auto-Exposure-Robust_Stereo_3D_Gaussian_Splatting_SLAM_CVPR_2026_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Zhou_AERGS-SLAM_Auto-Exposure-Robust_Stereo_3D_Gaussian_Splatting_SLAM_CVPR_2026_paper.pdf#page=7) · [PDF 8쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Zhou_AERGS-SLAM_Auto-Exposure-Robust_Stereo_3D_Gaussian_Splatting_SLAM_CVPR_2026_paper.pdf#page=8)
 
 ## Evaluation Scope
 

@@ -1,10 +1,6 @@
 # Context Graph-based Visual-Language Place Recognition
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-03 (7 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://api.crossref.org/works/10.1109/icra55743.2025.11127699.
-> PDF retrieval source: https://arxiv.org/pdf/2410.19341v1. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
-
-> Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / ICRA
 - Authors: Soojin Woo, Seong-Woo Kim
@@ -12,76 +8,34 @@
 - Tier: ARCHIVE
 - Tags: Graph Reasoning
 - Official paper: https://api.crossref.org/works/10.1109/icra55743.2025.11127699
-- Full-text retrieval: https://arxiv.org/pdf/2410.19341v1
-- Code/Project: not identified
+- Full-text retrieval: https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11127699
+- Code/Project: https://github.com/woo-soojin/context-based-vlpr
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (7 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: 2026-11-24 IEEE ICRA 게재본의 표제면·방법·평가를 대조했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Additionally, a significant limitation is the need for labor-intensive dataset labeling for training.
-
-방법 관련 발췌 — The main contributions of this paper are as follows: • Visual-language vocabulary-based place recognition system: We introduce the concept of Visual-Language Vocabulary to generate a vocabulary using pixel-level semantic descriptors ext ...
-
-## Problem and Motivation
-
-- **p. 1 / Abstract - extractive body cue:** In vision-based robot localization and SLAM, Visual Place Recognition (VPR) is essential.
-- **p. 1 / Abstract - extractive body cue:** This paper addresses the problem of VPR, which involves accurately recognizing the location corresponding to a given query image.
-- **p. 1 / Abstract - extractive body cue:** A popular approach to vision-based place recognition relies on low-level visual features.
-- **p. 1 / Abstract - extractive body cue:** Despite significant progress in recent years, place recognition based on low-level visual features is challenging when there are changes in scene appearance.
-- **p. 1 / Abstract - extractive body cue:** To address this, end-to-end training approaches have been proposed to overcome the limitations of hand-crafted features.
-- **p. 1 / I. INTRODUCTION - extractive body cue:** Additionally, a significant limitation is the need for labor-intensive dataset labeling for training.
-- **p. 1 / I. INTRODUCTION - extractive body cue:** This limitation degrades the performance of loop closure detection (LCD), leading to distorted trajectory estimation and inaccurate map generation [7].
-
-## Core Idea
-
-- **p. 2 / I. INTRODUCTION - extractive body cue:** The main contributions of this paper are as follows: • Visual-language vocabulary-based place recognition system: We introduce the concept of Visual-Language Vocabulary to generate a ...
-- **p. 1 / I. INTRODUCTION - extractive body cue:** In this paper, we propose a novel VPR method that operates robustly in dynamic scenes, based on a zero-shot, language-driven semantic segmentation approach [8].
-- **p. 4 / III. METHODS - extractive body cue:** Additionally, our method uses fewer features compared to ORB, demonstrating an advantage in terms of computing efficiency. of codewords from the generated vocabulary allows for ...
-- **p. 2 / I. INTRODUCTION - extractive body cue:** This vocabulary is then used to recognize the revisited locations. • Context graph: We propose the Context Graph concept, which helps understand the context within ...
-- **p. 3 / III. METHODS - extractive body cue:** To this end, we propose a methodology that incorporates pixel-level semantic information while also considering the relationships between objects to understand the context of the ...
-- **p. 3 / III. METHODS - extractive body cue:** Visual-Language Embedding We use the visual-language model LSeg [8] to obtain pixel-level embedding information from image frames captured by the robot's camera.
-- **p. 3 / III. METHODS - extractive body cue:** Subsequently, a transformerbased image encoder calculates dense per-pixel embeddings, resulting in an output embedding I ∈R ˜ H× ˜ W ×D.
-- **p. 4 / III. METHODS - extractive body cue:** In addition, very few features are extracted from the right side of the image, leading to uneven feature extraction across the entire image.
-
-## Observation, State, and Output Interface
-
-| Role | PDF body evidence | Robotics interpretation | Anchor |
-|---|---|---|---|
-| Observation/input | The size of an input image is assumed to be H × W, while the output is downsampled to an image of size H s × W s using a downsampling factor ... | RGB-D, image set, point cloud, depth와 camera pose | p. 3 (III. METHODS), p. 4 (III. METHODS) |
-| State/latent | size, input, image, assumed, while, output, downsampled, downsampling, factor, result, visuallanguage, vocabulary | geometry, map, object/relationship state | p. 3 (III. METHODS), p. 4 (III. METHODS), p. 3 (III. METHODS) |
-| Output/action | 2 shows the result of the visuallanguage vocabulary of the input image. | point map, pose, scene graph, affordance 또는 query result | p. 4 (III. METHODS), p. 3 (III. METHODS), p. 4 (III. METHODS) |
-| Objective/outcome | There have been several approaches to remove potentially dynamic objects, such as parked cars, in the map building and update process [30]-[32] for autonomous navigation [33]. | geometric accuracy, semantic consistency와 planning/manipulation utility | p. 4 (III. METHODS), p. 4 (III. METHODS) |
+시점이나 장면 외관이 달라졌을 때 같은 장소를 검색하기 위해 영상의 시각·언어 특징 히스토그램과 의미 영역 사이의 관계 그래프를 결합한다. [PDF 1쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11127699#page=1) · [PDF 4쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11127699#page=4)
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / I. INTRODUCTION - extractive body cue:** The main contributions of this paper are as follows: • Visual-language vocabulary-based place recognition system: We introduce the concept of Visual-Language Vocabulary to generate a ...
-- **p. 1 / I. INTRODUCTION - extractive body cue:** In this paper, we propose a novel VPR method that operates robustly in dynamic scenes, based on a zero-shot, language-driven semantic segmentation approach [8].
-- **p. 4 / III. METHODS - extractive body cue:** Additionally, our method uses fewer features compared to ORB, demonstrating an advantage in terms of computing efficiency. of codewords from the generated vocabulary allows for ...
-- **p. 2 / I. INTRODUCTION - extractive body cue:** This vocabulary is then used to recognize the revisited locations. • Context graph: We propose the Context Graph concept, which helps understand the context within ...
-- **p. 3 / III. METHODS - extractive body cue:** To this end, we propose a methodology that incorporates pixel-level semantic information while also considering the relationships between objects to understand the context of the ...
-- **p. 6 / Figure/Table caption - extractive body cue:** Fig. 5. Correspondence Matching. The results of correspondence matching are visualized as follows: (a) matching results based on ORB features and (b) matching results based ...
-- **p. 5 / IV. EXPERIMENTS - extractive body cue:** IVB, the quantitative results in Sec.
-- **p. 5 / IV. EXPERIMENTS - extractive body cue:** IV-C.1 and the qualitative results in Sec.
+- LSeg의 픽셀 임베딩에서 동적 물체에 해당하는 영역을 걸러내고, 남은 영역의 특징 분포와 영역 간 문맥을 각각 벡터로 표현한다. [PDF 3쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11127699#page=3) · [PDF 4쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11127699#page=4) · [PDF 5쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11127699#page=5)
+- Pittsburgh와 KITTI의 실제 거리 영상에서 질의와 위치가 가까운 참조 영상을 되찾는 비율을 측정하고 NetVLAD와 후보 수에 따른 차이를 비교했다. [PDF 5쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11127699#page=5) · [PDF 6쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11127699#page=6)
 
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+## Observation, State, and Output Interface
+
+질의와 참조 RGB 영상 → LSeg 특징과 문맥 그래프 → 참조 영상의 검색 순위. [PDF 4쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11127699#page=4)
 
 ## Evaluation Scope
 
-| Dimension | Body-grounded record | Boundary | Anchor |
-|---|---|---|---|
-| Evaluation type | EMPIRICAL / REAL-ROBOT OR HARDWARE | do not infer unreported downstream behavior | p. 6 (Figure/Table caption), p. 5 (IV. EXPERIMENTS) |
-| Embodiment/environment | The dataset was acquired using a stereo camera mounted on a moving vehicle and includes real-world image data captured from urban, rural, and motorway scenes. | hardware/simulator version and reset protocol | p. 5 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS) |
-| Dataset/benchmark | The dataset was acquired using a stereo camera mounted on a moving vehicle and includes real-world image data captured from urban, rural, and motorway scenes. | role, split, size and leakage | p. 5 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS) |
-| Metric | A query image is considered accurately localized when at least one of the top N database images returned by the proposed method is within d = 25 meters of the query's ground ... | definition, denominator, direction and uncertainty | p. 5 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 3 (Figure/Table caption) |
-| Baseline/ablation | 1) Quantitative evaluation: We compared our method with the state-of-the-art appearance-based localization approach, NetVLAD [2]. | fair input/data/compute/action matching | p. 5 (IV. EXPERIMENTS), p. 4 (Figure/Table caption), p. 6 (Figure/Table caption) |
+표 II의 KITTI 00에서 제안법과 NetVLAD의 Recall@1은 각각 0.14와 0.18, Recall@20은 0.85와 0.51이다. 정답 여부는 상위 N개 후보에 실제 위치 25 m 이내의 영상이 있는지로 정한다. [PDF 5쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11127699#page=5) · [PDF 6쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11127699#page=6)
 
 ## Explicit Limitations and Failure Boundary
 
-- **p. 4 / III. METHODS - extractive body cue:** Using the segmentation results, we can filter out dynamic objects that could potentially degrade VPR performance by predefining such categories.
-- **p. 5 / IV. EXPERIMENTS - extractive body cue:** They were chosen to demonstrate the robustness of our approach in dynamic environments.
-- **p. 5 / III. METHODS - extractive body cue:** 4 illustrates the difference between the prior approach and ours, where our approach filters out dynamic objects, such as cars, that can degrade the performance ...
+두 도심 데이터셋에서 후보 수에 따라 방법 간 순위가 달라진다. [PDF 6쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11127699#page=6)
 
-## Why Read It
+## 판본과 코드
 
-방법과 평가 범위를 대조할 원문 구간은 p. 1 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 3 (III. METHODS)이다.
+2024년 저자판의 표제는 *Context-Based Visual-Language Place Recognition*이다. 저자 저장소는 ICRA 2025 게재를 명시하고, 게재본 그림 4와 III-C절은 문맥 그래프의 구성과 결합을 설명한다. [저자판](https://arxiv.org/abs/2410.19341) · [PDF 4쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11127699#page=4) · [PDF 5쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11127699#page=5)
+
+저자 저장소에 픽셀 군집 중심, 문맥 그래프와 그래프 임베딩을 만드는 함수가 공개되어 있다. [구현 파일](https://raw.githubusercontent.com/woo-soojin/context-based-vlpr/3556108a08c7c637256e4bb7337d51915a5dd5fa/utils/context_graph.py) · [저자 저장소 안내](https://raw.githubusercontent.com/woo-soojin/context-based-vlpr/3556108a08c7c637256e4bb7337d51915a5dd5fa/README.md)

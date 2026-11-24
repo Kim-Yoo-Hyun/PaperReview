@@ -16,12 +16,11 @@
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (18 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 원문 해당 쪽과 대조했다. [본문](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/09223.pdf)
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Therefore, how to design a network that achieves good performance despite the lack of 2D anno
-
-방법 관련 발췌 — In summary, the main contributions of this paper are as follows: - We propose a weakly supervised method 3DSS-VLG for 3D WSSS, which takes 2D images as a bridge, and leverages natural ...
+3DSS-VLG는 점별 정답 라벨을 구하는 부담을 줄이기 위해 2D 시각·언어 모델과 장면 단위 범주 라벨로 3D 의미 분할을 학습한다. [PDF 1쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/09223.pdf#page=1) · [PDF 4쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/09223.pdf#page=4)
 
 ## Problem and Motivation
 
@@ -54,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 4 / X. Xu et al - extractive body cue:** In summary, the main contributions of this paper are as follows: - We propose a weakly supervised method 3DSS-VLG for 3D WSSS, which takes 2D ...
-- **p. 1 / Body text (section not recovered) - extractive body cue:** Moreover, we introduce the Embeddings Specialization Stage to purify the feature representation with the help of a given scene-level label, specifying a better feature supervised ...
-- **p. 1 / Body text (section not recovered) - extractive body cue:** Specifically, our method exploits the superior generalization ability of the 2D visionlanguage models and proposes the Embeddings Soft-Guidance Stage to utilize it to implicitly align ...
-- **p. 3 / X. Xu et al - extractive body cue:** Therefore, we propose to alleviate this problem by three stages.
-- **p. 3 / X. Xu et al - extractive body cue:** 3 (a), we propose the Embeddings Specialization Stage, which transfers the 2D-projected embeddings with an adapter module to obtain adapted 3D embeddings, and the
-- **p. 10 / Figure/Table caption - extractive body cue:** Table 1: Performance comparison on the S3DIS dataset. "Sup." indicates the type of supervision. "100%" represents full annotation. "scene." denotes scene-level annotation.
-- **p. 12 / Figure/Table caption - extractive body cue:** Table 4: Performance comparisons of the generalization capability. Domain mIoU mAcc S3DIS ->ScanNet 13.4 23.0 ScanNet ->S3DIS 33.3 50.9 labels to supervised 3D model. Meanwhile, ...
-- **p. 13 / Figure/Table caption - extractive body cue:** Table 5: Performance comparisons with different 3D backbones and ESS module back- bones on the S3DIS dataset. Module Backbone mIoU 3D MinkowskiNet14A 44.5 MinkowskiNet18A 45.3
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 동결한 영상 모델의 특징을 점군에 역투영해 텍스트 표현과 정렬하고 해당 장면에 존재하는 범주 정보로 감독 신호를 정제한다. [PDF 5쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/09223.pdf#page=5) · [PDF 6쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/09223.pdf#page=6) · [PDF 7쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/09223.pdf#page=7)
+- S3DIS와 ScanNet에서 약지도 분할을 비교하고 영상 특징과 텍스트 범주를 이용하는 각 학습 단계의 영향을 평가했다. [PDF 10쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/09223.pdf#page=10) · [PDF 11쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/09223.pdf#page=11) · [PDF 13쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/09223.pdf#page=13)
 
 ## Evaluation Scope
 

@@ -16,12 +16,11 @@
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 원문 해당 쪽과 대조했다. [본문](https://openaccess.thecvf.com/content/CVPR2025/papers/Lee_DiET-GS_Diffusion_Prior_and_Event_Stream-Assisted_Motion_Deblurring_3D_Gaussian_CVPR_2025_paper.pdf)
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Earlier works [1, 11, 42] focus on utilizing solely event-based data, lacking the capacity to preserve color information.
-
-방법 관련 발췌 — Once optimized, our method is capable of recovering well-defined details with accurate color from the input blurry images. • Qualitative and quantitative results show that our framework significantly surpasses the existing baselines, ...
+DiET-GS는 카메라 움직임으로 흐려진 영상에서 선명한 3D 가우시안 장면을 복원하기 위해 노출 중 이벤트와 확산 사전분포를 이용한다. [PDF 1쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Lee_DiET-GS_Diffusion_Prior_and_Event_Stream-Assisted_Motion_Deblurring_3D_Gaussian_CVPR_2025_paper.pdf#page=1) · [PDF 3쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Lee_DiET-GS_Diffusion_Prior_and_Event_Stream-Assisted_Motion_Deblurring_3D_Gaussian_CVPR_2025_paper.pdf#page=3)
 
 ## Problem and Motivation
 
@@ -55,16 +54,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** Once optimized, our method is capable of recovering well-defined details with accurate color from the input blurry images. • Qualitative and quantitative results show that ...
-- **p. 1 / 1. Introduction - extractive body cue:** Given a set of blurry images and corresponding event streams, we propose a novel framework to construct deblurring 3DGS by jointly leveraging the EDI [33] ...
-- **p. 2 / 1. Introduction - extractive body cue:** To restore both accurate color and well-defined details, we introduce a novel framework that uses the EDI prior to achieve 1) fine-grained details, 2) accurate ...
-- **p. 4 / 4. Our Method - extractive body cue:** To this end, we propose a novel optimization problem that leverages EDI prior to further constrain the 3DGS in terms of 1) fine-grained details, 2) ...
-- **p. 1 / 1. Introduction - extractive body cue:** Our DiET-GS++ enables highquality novel-view synthesis by recovering precise color and welldefined details from the blurry multi-view images. tured and free from any artifact.
-- **p. 7 / 5.4. Quantitative Comparisons - extractive body cue:** Furthermore, our DiET-GS++ shows significant improvement in MUSIQ and CLIP-IQA metrics, achieving the best results but showing a slight drop in PSNR and SSIM metrics.
-- **p. 7 / 5.4. Quantitative Comparisons - extractive body cue:** Nonetheless, DiET-GS++ still substantially improves the visual quality as shown in NR-IQA metrics.
-- **p. 8 / Figure/Table caption - extractive body cue:** Figure 6. Ablation on Ledi simul (1st row) and Lrsd (S1) (2nd row). adding EDI simulation Ledi simul further aids fine-grained deblurring as shown in ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 노출 시간 동안의 밝기 변화에 이벤트 관측을 연결하고 확산 모델이 제공하는 가장자리 정보를 최적화에 반영한다. [PDF 3쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Lee_DiET-GS_Diffusion_Prior_and_Event_Stream-Assisted_Motion_Deblurring_3D_Gaussian_CVPR_2025_paper.pdf#page=3) · [PDF 4쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Lee_DiET-GS_Diffusion_Prior_and_Event_Stream-Assisted_Motion_Deblurring_3D_Gaussian_CVPR_2025_paper.pdf#page=4) · [PDF 5쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Lee_DiET-GS_Diffusion_Prior_and_Event_Stream-Assisted_Motion_Deblurring_3D_Gaussian_CVPR_2025_paper.pdf#page=5)
+- 합성 및 실제 장면에서 흐림 제거와 새 시점 렌더링을 평가하고 이벤트·확산 단서를 각각 제거해 비교했다. [PDF 5쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Lee_DiET-GS_Diffusion_Prior_and_Event_Stream-Assisted_Motion_Deblurring_3D_Gaussian_CVPR_2025_paper.pdf#page=5) · [PDF 6쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Lee_DiET-GS_Diffusion_Prior_and_Event_Stream-Assisted_Motion_Deblurring_3D_Gaussian_CVPR_2025_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Lee_DiET-GS_Diffusion_Prior_and_Event_Stream-Assisted_Motion_Deblurring_3D_Gaussian_CVPR_2025_paper.pdf#page=7) · [PDF 8쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Lee_DiET-GS_Diffusion_Prior_and_Event_Stream-Assisted_Motion_Deblurring_3D_Gaussian_CVPR_2025_paper.pdf#page=8)
 
 ## Evaluation Scope
 

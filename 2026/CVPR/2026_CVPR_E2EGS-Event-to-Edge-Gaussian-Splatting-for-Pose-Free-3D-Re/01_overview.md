@@ -16,12 +16,11 @@
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 원문 해당 쪽과 대조했다. [본문](https://openaccess.thecvf.com/content/CVPR2026/papers/Kim_E2EGS_Event-to-Edge_Gaussian_Splatting_for_Pose-Free_3D_Reconstruction_CVPR_2026_paper.pdf)
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — This fundamental gap introduces several limitations on the robustness and accuracy of current pose-free approaches.
-
-방법 관련 발췌 — To overcome these limitations, we propose event-toedge Gaussian splatting (E2EGS), a pose-free framework that leverages edge information derived solely from event streams.
+E2EGS는 카메라 자세가 주어지지 않은 이벤트 스트림의 반복적인 윤곽 반응을 이용해 카메라 궤적과 3D 장면의 경계 표현을 복원한다. [PDF 1쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Kim_E2EGS_Event-to-Edge_Gaussian_Splatting_for_Pose-Free_3D_Reconstruction_CVPR_2026_paper.pdf#page=1) · [PDF 3쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Kim_E2EGS_Event-to-Edge_Gaussian_Splatting_for_Pose-Free_3D_Reconstruction_CVPR_2026_paper.pdf#page=3)
 
 ## Problem and Motivation
 
@@ -55,16 +54,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** To overcome these limitations, we propose event-toedge Gaussian splatting (E2EGS), a pose-free framework that leverages edge information derived solely from event streams.
-- **p. 2 / 1. Introduction - extractive body cue:** By initializing Gaussians along detected edges and applying edge-weighted losses throughout optimization, our framework prioritizes geometric constraints over texture matching, enabling accurate pose estimation and ...
-- **p. 5 / 3.4. Edge-guided 3D reconstruction - extractive body cue:** To leverage detected edges during reconstruction, we introduce an edge-guided loss that spatially weights the reconstruction error based on edge confidence.
-- **p. 5 / 3.3. Edge-guided Gaussian initialization - extractive body cue:** Our method achieves superior reconstruction quality solely using event data. † denotes no depth supervision and ∗denotes that the method uses camera poses obtained through ...
-- **p. 1 / 1. Introduction - extractive body cue:** The high temporal resolution of event cameras enables precise capture of rapid scene dynamics, motivating numerous studies in trajectory estimation [10, 16, 20] and event-based ...
-- **p. 8 / Figure/Table caption - extractive body cue:** Figure 6. Effect of edge ratio on reconstruction quality. Red boxes highlight comparison regions. (a) Ground truth. (b) Without edge guidance, fine details such as ...
-- **p. 6 / 4.2. Quantitative evaluations - extractive body cue:** On synthetic Replica scenes, our edge-guided approach achieves sub-millimeter accuracy across all scenes.
-- **p. 7 / 4.4. Ablation study - extractive body cue:** 3 shows the progressive improvement when adding our components to IncEventGS†.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 인접 시간 구간에서 일관된 이벤트를 찾아 3D 윤곽 가우시안을 초기화하고, 이 표현으로 카메라 추적과 번들 조정을 수행한다. [PDF 3쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Kim_E2EGS_Event-to-Edge_Gaussian_Splatting_for_Pose-Free_3D_Reconstruction_CVPR_2026_paper.pdf#page=3) · [PDF 4쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Kim_E2EGS_Event-to-Edge_Gaussian_Splatting_for_Pose-Free_3D_Reconstruction_CVPR_2026_paper.pdf#page=4) · [PDF 5쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Kim_E2EGS_Event-to-Edge_Gaussian_Splatting_for_Pose-Free_3D_Reconstruction_CVPR_2026_paper.pdf#page=5)
+- 합성·실제 이벤트 시퀀스에서 자세 추정과 새 시점 윤곽 렌더링을 비교하고 시간 일관성 및 초기화의 영향을 평가했다. [PDF 5쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Kim_E2EGS_Event-to-Edge_Gaussian_Splatting_for_Pose-Free_3D_Reconstruction_CVPR_2026_paper.pdf#page=5) · [PDF 6쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Kim_E2EGS_Event-to-Edge_Gaussian_Splatting_for_Pose-Free_3D_Reconstruction_CVPR_2026_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Kim_E2EGS_Event-to-Edge_Gaussian_Splatting_for_Pose-Free_3D_Reconstruction_CVPR_2026_paper.pdf#page=7)
 
 ## Evaluation Scope
 

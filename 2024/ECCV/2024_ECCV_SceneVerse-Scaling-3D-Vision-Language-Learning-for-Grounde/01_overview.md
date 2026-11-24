@@ -16,12 +16,11 @@
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (22 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 원문 해당 쪽과 대조했다. [본문](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/01407.pdf)
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, applying this experience directly from 2D to 3D is fraught with challenges.
-
-방법 관련 발췌 — To confront these challenges, we propose SceneVerse, the first millionscale dataset aimed at advancing 3D vision-language (3D-VL) learning for grounded scene understanding.
+SceneVerse는 실제 및 합성 실내 장면에 자연어를 연결해 3D 장면 이해 모델을 대규모로 사전학습하고 평가할 수 있게 한다. [PDF 1쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/01407.pdf#page=1) · [PDF 4쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/01407.pdf#page=4)
 
 ## Problem and Motivation
 
@@ -55,16 +54,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1 Introduction - extractive body cue:** To confront these challenges, we propose SceneVerse, the first millionscale dataset aimed at advancing 3D vision-language (3D-VL) learning for grounded scene understanding.
-- **p. 3 / 1 Introduction - extractive body cue:** We introduce SceneVerse, the first million-scale 3D-VL dataset for grounded scene understanding.
-- **p. 3 / 1 Introduction - extractive body cue:** We propose GPS, a transformer-based model trained with multi-level scenetext alignment that achieves state-of-the-art results on existing 3D-VL grounding and question-answering benchmarks by pre-training on ...
-- **p. 1 / 1 Introduction - extractive body cue:** The foundation of human cognitive development lies in the grounding of language within the physical world [53,81,108].
-- **p. 2 / 1 Introduction - extractive body cue:** A bar is standing on the floor, with … The room is also designed …" OBJECT CAPTION "This is a big cotton sofa against the ...
-- **p. 10 / 5 Experiments - extractive body cue:** However, when presented with extensive training data in SceneVerse, the results of our model without additional fine-tuning, i.e., Ours (pre-train), significantly improves and already achieves ...
-- **p. 12 / 5 Experiments - extractive body cue:** 5, our model achieves state-of-the-art results on both benchmarks, outperforming recent strong pre-training-based baselines like 3D-VisTA and 3D-LLM.
-- **p. 11 / 5 Experiments - extractive body cue:** This contributes significantly to the substantial improvement over the zero-shot performance.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 사람이 쓴 표현과 장면 그래프로 생성한 표현을 결합해 약 6만 8천 장면과 250만 개의 시각·언어 쌍을 구성했다. [PDF 2쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/01407.pdf#page=2) · [PDF 4쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/01407.pdf#page=4) · [PDF 6쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/01407.pdf#page=6)
+- GPS 사전학습 모델로 언어와 장면의 대응을 학습하고 지칭 물체 식별과 장면 질의응답으로 전이되는 성능을 비교했다. [PDF 8쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/01407.pdf#page=8) · [PDF 9쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/01407.pdf#page=9) · [PDF 10쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/01407.pdf#page=10)
 
 ## Evaluation Scope
 

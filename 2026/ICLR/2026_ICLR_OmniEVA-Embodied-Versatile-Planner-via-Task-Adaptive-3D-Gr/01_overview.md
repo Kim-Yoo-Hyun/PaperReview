@@ -16,12 +16,11 @@
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (52 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 원문 해당 쪽과 대조했다. [본문](https://proceedings.iclr.cc/paper_files/paper/2026/file/7b122d0a0dcb1a86ffa25ccba154652b-Paper-Conference.pdf)
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — In particular, neglecting object affordances, workspace limitations, and kinematic feasibility leads to action sequences that cannot be executed on physical platforms.
-
-방법 관련 발췌 — To address these limitations, we introduce OmniEVA (Embodied Versatile Planner), a novel architecture that pioneers Task-Adaptive 3D Grounding and Embodiment-aware Reasoning.
+OmniEVA는 과제에 따라 3D 정보를 얼마나 쓸지 조절하고 팔의 도달 범위 같은 물리적 조건을 반영해 실행할 계획을 생성한다. [PDF 1쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/7b122d0a0dcb1a86ffa25ccba154652b-Paper-Conference.pdf#page=1) · [PDF 4쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/7b122d0a0dcb1a86ffa25ccba154652b-Paper-Conference.pdf#page=4)
 
 ## Problem and Motivation
 
@@ -55,26 +54,12 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** To address these limitations, we introduce OmniEVA (Embodied Versatile Planner), a novel architecture that pioneers Task-Adaptive 3D Grounding and Embodiment-aware Reasoning.
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** OmniEVA is the first framework to dynamically integrate 2D and 3D inputs via taskconditioned feature selection, enabling versatile and executable embodied reasoning through two key ...
-- **p. 3 / 3 METHODOLOGY - extractive body cue:** Dynamic 3D Injection via Gated Routing Rather than applying 3D positional encoding uniformly for all tasks, we propose a Task-Adaptive Gated Router (TAGR) that selectively ...
-- **p. 18 / A.2.2 TEXTUAL AND COORDINATE-BASED OUTPUTS - extractive body cue:** This format enables precise object localization and descriptive annotation within a single image frame.
-- **p. 4 / 3 METHODOLOGY - extractive body cue:** Left: The overall architecture of OmniEVA, featuring a novel task-adaptive gated router that dynamically incorporates 3D positional embeddings.
-- **p. 9 / Figure/Table caption - extractive body cue:** Figure 5: Ablation Results of the proposed TE-GRPO Method on Local Mobile-Manipulation Tasks As shown in Figure 5, OmniEVA-ER-jointly optimized with rtask and rembod -demonstrates ...
-- **p. 10 / Figure/Table caption - extractive body cue:** Table 5: Results of Different Embodiment Execution Success Rate. Models / Embodiments Average (SR) Seen Arm Length (cm) Unseen Arm Length (cm) 75 88 110
-- **p. 30 / C.2 GATE ACTIVATION ANALYSIS BY SEMANTIC CLUSTERING - extractive body cue:** The evaluation involves navigating to target poses, followed by assessing trajectory planning for safe mug placement on the table, with success rates calculated based on ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 게이트로 3D 특징을 선택적으로 주입하고, 기구 조건에서 계획이 실행 가능한지 평가하는 보상을 후학습에 사용한다. [PDF 4쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/7b122d0a0dcb1a86ffa25ccba154652b-Paper-Conference.pdf#page=4) · [PDF 5쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/7b122d0a0dcb1a86ffa25ccba154652b-Paper-Conference.pdf#page=5) · [PDF 6쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/7b122d0a0dcb1a86ffa25ccba154652b-Paper-Conference.pdf#page=6)
+- 일반 2D 및 3D 추론 과제와 별개로, 학습에서 본 팔 길이와 새로운 팔 길이의 시뮬레이션 조건에서 계획 실행 성공률을 측정했다. [PDF 7쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/7b122d0a0dcb1a86ffa25ccba154652b-Paper-Conference.pdf#page=7) · [PDF 9쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/7b122d0a0dcb1a86ffa25ccba154652b-Paper-Conference.pdf#page=9) · [PDF 10쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/7b122d0a0dcb1a86ffa25ccba154652b-Paper-Conference.pdf#page=10)
 
 ## Evaluation Scope
 
-| Dimension | Body-grounded record | Boundary | Anchor |
-|---|---|---|---|
-| Evaluation type | EMPIRICAL / REAL-ROBOT OR HARDWARE | do not infer unreported downstream behavior | p. 9 (Figure/Table caption), p. 10 (Figure/Table caption) |
-| Embodiment/environment | For example: RT-1 (Brohan et al., 2022) dataset comprises over 130,000 real-world robotic demonstrations (episodes), covering more than 700 different tasks. | hardware/simulator version and reset protocol | p. 27 (C.2 GATE ACTIVATION ANALYSIS BY SEMANTIC CLUSTERING), p. 30 (C.2 GATE ACTIVATION ANALYSIS BY SEMANTIC CLUSTERING) |
-| Dataset/benchmark | E.3 EXAMPLES OF THE IN-HOUSE PRIMITIVE EMBODIED BENCHMARKS E.3.1 WHERE2GO The Where2Go benchmark is constructed using the validation splits of the HM3D (Chang et al., 2017) and MP3D (Chang et al., 2017) ... | role, split, size and leakage | p. 27 (C.2 GATE ACTIVATION ANALYSIS BY SEMANTIC CLUSTERING), p. 30 (C.2 GATE ACTIVATION ANALYSIS BY SEMANTIC CLUSTERING), p. 30 (C.2 GATE ACTIVATION ANALYSIS BY SEMANTIC CLUSTERING), p. 27 (C.2 GATE ACTIVATION ANALYSIS BY SEMANTIC CLUSTERING) |
-| Metric | Figure 5: Ablation Results of the proposed TE-GRPO Method on Local Mobile-Manipulation Tasks As shown in Figure 5, OmniEVA-ER-jointly optimized with rtask and rembod -demonstrates sub- stantial performance gains over OmniEVA-Base and ... | definition, denominator, direction and uncertainty | p. 9 (Figure/Table caption), p. 30 (C.2 GATE ACTIVATION ANALYSIS BY SEMANTIC CLUSTERING), p. 30 (C.2 GATE ACTIVATION ANALYSIS BY SEMANTIC CLUSTERING) |
-| Baseline/ablation | Figure 9: Case study illustrating OmniEVA's reasoning process under embodiment-aware constraints. C ABLATION STUDY IMPLEMENTATION DETAILS C.1 IMPLEMENTATION OF CROSS-ATTENTION BASED 3D FUSION To rigorously evaluate the necessity of our ... | fair input/data/compute/action matching | p. 23 (Figure/Table caption), p. 24 (C.1 IMPLEMENTATION OF CROSS-ATTENTION BASED 3D FUSION), p. 24 (Figure/Table caption) |
+표 5의 OmniEVA-ER 성공률은 시뮬레이션에서 팔 길이가 학습에 등장한 조건 85.08%, 새로운 길이 80.52%다. 표 6의 실제 이동 로봇 두 대(팔 길이 75 cm와 70 cm)에서 측정한 결과는 별도로 보고했다. [PDF 7쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/7b122d0a0dcb1a86ffa25ccba154652b-Paper-Conference.pdf#page=7) · [PDF 9쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/7b122d0a0dcb1a86ffa25ccba154652b-Paper-Conference.pdf#page=9) · [PDF 10쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/7b122d0a0dcb1a86ffa25ccba154652b-Paper-Conference.pdf#page=10)
 
 ## Explicit Limitations and Failure Boundary
 

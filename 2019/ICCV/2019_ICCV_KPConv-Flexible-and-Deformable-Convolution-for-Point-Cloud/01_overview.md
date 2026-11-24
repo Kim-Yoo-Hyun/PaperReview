@@ -16,12 +16,11 @@
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (15 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 원문 해당 쪽과 대조했다. [본문](https://openaccess.thecvf.com/content_ICCV_2019/papers/Thomas_KPConv_Flexible_and_Deformable_Convolution_for_Point_Clouds_ICCV_2019_paper.pdf)
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Input points with a constant scalar feature (in grey) are convolved through a KPConv that is defined by a set of kernel points (in black) with filter weights on each point.
-
-방법 관련 발췌 — Furthermore, we propose a deformable version of our convolution [7], which consists of learning local shifts applied to the kernel points (see Figure 3).
+KPConv는 불규칙한 점군의 각 이웃이 커널 점에서 얼마나 떨어졌는지에 따라 가중치를 배분해 점 좌표에 직접 합성곱을 적용한다. [PDF 1쪽](https://openaccess.thecvf.com/content_ICCV_2019/papers/Thomas_KPConv_Flexible_and_Deformable_Convolution_for_Point_Clouds_ICCV_2019_paper.pdf#page=1) · [PDF 3쪽](https://openaccess.thecvf.com/content_ICCV_2019/papers/Thomas_KPConv_Flexible_and_Deformable_Convolution_for_Point_Clouds_ICCV_2019_paper.pdf#page=3)
 
 ## Problem and Motivation
 
@@ -54,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** Furthermore, we propose a deformable version of our convolution [7], which consists of learning local shifts applied to the kernel points (see Figure 3).
-- **p. 2 / 1. Introduction - extractive body cue:** KPConv also consists of a set of local 3D filters, but overcomes previous point convolution limitations as shown in related work.
-- **p. 1 / 1. Introduction - extractive body cue:** Various approaches have been proposed to handle such data, and can be grouped into different categories that we will develop in the related work section.
-- **p. 5 / 3.4. Kernel Point Network Architectures - extractive body cue:** Combining analogy with successful image networks and empirical studies, we designed two network architectures for the classification and the segmentation tasks.
-- **p. 5 / 3.4. Kernel Point Network Architectures - extractive body cue:** Our convolutional blocks are designed like bottleneck ResNet blocks [12] with a KPConv replacing the image convolution, batch normalization and leaky ReLu activation.
-- **p. 6 / 4.2. 3D Scene Segmentation - extractive body cue:** Among these 4 datasets, KPConv deformable kernels improved the results on Paris-Lille-3D and S3DIS while the rigid version was better on Scannet and Semantic3D.
-- **p. 8 / 4.4. Learned Features and Effective Receptive Field - extractive body cue:** This adaptive behavior shows that deformable KPConv improves the network ability to adapt to the geometry of the scene objects, and explains the better performances ...
-- **p. 5 / 4.1. 3D Shape Classification and Segmentation - extractive body cue:** As shown on Table 1, our networks outperform other state-of-the-art methods using only points (we do not take into account methods using normals as additional ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 연속 공간에 둔 커널 점의 위치를 고정하는 방식과 입력에 따라 이동시키는 방식을 제시하고, 변형 커널이 입력 표면을 따르도록 정규화한다. [PDF 3쪽](https://openaccess.thecvf.com/content_ICCV_2019/papers/Thomas_KPConv_Flexible_and_Deformable_Convolution_for_Point_Clouds_ICCV_2019_paper.pdf#page=3) · [PDF 4쪽](https://openaccess.thecvf.com/content_ICCV_2019/papers/Thomas_KPConv_Flexible_and_Deformable_Convolution_for_Point_Clouds_ICCV_2019_paper.pdf#page=4)
+- 물체 분류와 실내·실외 장면 분할에서 점군 합성곱을 평가하고 커널 변형에 따른 차이를 분석했다. [PDF 5쪽](https://openaccess.thecvf.com/content_ICCV_2019/papers/Thomas_KPConv_Flexible_and_Deformable_Convolution_for_Point_Clouds_ICCV_2019_paper.pdf#page=5) · [PDF 6쪽](https://openaccess.thecvf.com/content_ICCV_2019/papers/Thomas_KPConv_Flexible_and_Deformable_Convolution_for_Point_Clouds_ICCV_2019_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content_ICCV_2019/papers/Thomas_KPConv_Flexible_and_Deformable_Convolution_for_Point_Clouds_ICCV_2019_paper.pdf#page=7)
 
 ## Evaluation Scope
 

@@ -16,12 +16,11 @@
 - Code/Project: https://github.com/dmar-bonn/active-gs
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (9 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 원문 해당 쪽과 대조했다. [본문](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=10938898)
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, this is difficult without ground truth information at novel viewpoints.
-
-방법 관련 발췌 — We introduce ActiveGS, a novel framework for active scene reconstruction using GS for autonomous robotic tasks.
+ActiveGS는 RGB-D 카메라가 미탐색 공간과 충분히 복원되지 않은 표면을 찾아 다음 관측 위치를 고르도록 가우시안 지도와 복셀 지도를 결합한다. [PDF 1쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=10938898#page=1) · [PDF 3쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=10938898#page=3)
 
 ## Problem and Motivation
 
@@ -55,26 +54,12 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 3 / III. OUR APPROACH - extractive body cue:** We introduce ActiveGS, a novel framework for active scene reconstruction using GS for autonomous robotic tasks.
-- **p. 3 / III. OUR APPROACH - extractive body cue:** An overview of our framework is shown in Fig.
-- **p. 4 / III. OUR APPROACH - extractive body cue:** A candidate viewpoint pc i ∈R5 is defined by its 3D position, yaw, and pitch angles in our framework.
-- **p. 4 / III. OUR APPROACH - extractive body cue:** To address this, we introduce additional candidate viewpoints based on regions of interest (ROI) defined in the voxel map.
-- **p. 1 / Body text (section not recovered) - extractive body cue:** By integrating confidence modelling into the Gaussian splatting pipeline, our approach enables targeted view planning to build a high-fidelity Gaussian splatting map.
-- **p. 6 / IV. EXPERIMENTAL EVALUATION - extractive body cue:** Our approach achieves the best performance in both rendering and mesh quality across all test scenes, supporting our first claim that it outperforms state-of-the-art NeRF ...
-- **p. 5 / IV. EXPERIMENTAL EVALUATION - extractive body cue:** Our experimental results support our three claims: (i) we show that our ActiveGS framework outperforms state-of-theart NeRF-based and GS-based active scene reconstruction methods; (ii) we ...
-- **p. 5 / IV. EXPERIMENTAL EVALUATION - extractive body cue:** We consider ROI-based sampling to achieve targeted candidate viewpoint generation as described in Sec.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 가우시안별 관측 신뢰도로 표면을 다시 볼 가치를 추정하고, 복셀 지도로 알려지지 않은 공간과 충돌 없는 이동 경로를 계산한다. [PDF 3쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=10938898#page=3) · [PDF 4쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=10938898#page=4) · [PDF 5쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=10938898#page=5)
+- 시뮬레이션에서 탐색에 따른 지도 품질을 비교하고 실내 무인기의 RGB-D·외부 자세 측정값으로 온라인 지도 갱신과 시점 계획을 시연했다. [PDF 5쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=10938898#page=5) · [PDF 6쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=10938898#page=6) · [PDF 7쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=10938898#page=7)
 
 ## Evaluation Scope
 
-| Dimension | Body-grounded record | Boundary | Anchor |
-|---|---|---|---|
-| Evaluation type | EMPIRICAL / REAL-ROBOT OR HARDWARE | do not infer unreported downstream behavior | p. 6 (IV. EXPERIMENTAL EVALUATION), p. 5 (IV. EXPERIMENTAL EVALUATION) |
-| Embodiment/environment | Our experimental results support our three claims: (i) we show that our ActiveGS framework outperforms state-of-theart NeRF-based and GS-based active scene reconstruction methods; (ii) we show that our confidence modelling of Gaussian ... | hardware/simulator version and reset protocol | p. 5 (IV. EXPERIMENTAL EVALUATION), p. 7 (IV. EXPERIMENTAL EVALUATION) |
-| Dataset/benchmark | We conduct our simulation experiments using the Habitat simulator [29] and the Replica dataset [33]. | role, split, size and leakage | p. 5 (IV. EXPERIMENTAL EVALUATION), p. 7 (IV. EXPERIMENTAL EVALUATION), p. 5 (IV. EXPERIMENTAL EVALUATION), p. 7 (IV. EXPERIMENTAL EVALUATION) |
-| Metric | The ablation study comparing Ours and Ours (w/o ROI) demonstrates the benefits of ROI-based sampling for targeted inspection, reflected by higher means and smaller standard deviations in both evaluation metrics. | definition, denominator, direction and uncertainty | p. 7 (IV. EXPERIMENTAL EVALUATION), p. 5 (IV. EXPERIMENTAL EVALUATION), p. 5 (IV. EXPERIMENTAL EVALUATION) |
-| Baseline/ablation | Our ActiveGS outperforms baselines in all test scenes. | fair input/data/compute/action matching | p. 6 (IV. EXPERIMENTAL EVALUATION), p. 6 (IV. EXPERIMENTAL EVALUATION), p. 5 (IV. EXPERIMENTAL EVALUATION) |
+실내 무인기 시연은 OptiTrack으로 자세를 측정했다. 데스크톱에서 RGB-D와 자세를 받아 지도를 갱신하고 충돌 없는 웨이포인트를 기체로 전송했다. [PDF 7쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=10938898#page=7)
 
 ## Explicit Limitations and Failure Boundary
 

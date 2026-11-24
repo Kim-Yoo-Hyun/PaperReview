@@ -584,7 +584,13 @@
       ],
       "visually_inspected_pages": [
         5
-      ]
+      ],
+      "superseded_by": {
+        "ledger": "work/sources/batches/source_audit_2026_11.jsonl",
+        "paper_id": "pr-0175",
+        "verified_on": "2026-11-24",
+        "basis": "이전 8쪽 입력은 OpenObj였다. 아래 페이지·글꼴 검사는 그 파일에 대한 과거 기록이다. LE-Object 게재본의 현행 근거는 원장에 있다."
+      }
     },
     {
       "paper_id": "pr-0236",

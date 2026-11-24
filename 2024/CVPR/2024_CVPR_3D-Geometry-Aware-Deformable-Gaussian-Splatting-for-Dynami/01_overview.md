@@ -16,12 +16,11 @@
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 원문 해당 쪽과 대조했다. [본문](https://openaccess.thecvf.com/content/CVPR2024/papers/Lu_3D_Geometry-Aware_Deformable_Gaussian_Splatting_for_Dynamic_View_Synthesis_CVPR_2024_paper.pdf)
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — In addressing the above challenges, one common strategy is to represent the dynamic scenes as a combination of a static canonical field and a deformation model [11, 16, 17, 27, 33, 34, ...
-
-방법 관련 발췌 — Our main contributions are summarized as: • We propose a geometry-aware feature extraction network based on 3D Gaussian distribution to better utilize local geometric information. • We propose to use continuous 6D ...
+시간에 따라 변하는 장면의 새 뷰를 렌더링하기 위해 3D 가우시안의 기하 정보를 이용해 개별 가우시안의 변형을 추정한다. [PDF 1쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Lu_3D_Geometry-Aware_Deformable_Gaussian_Splatting_for_Dynamic_View_Synthesis_CVPR_2024_paper.pdf#page=1) · [PDF 3쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Lu_3D_Geometry-Aware_Deformable_Gaussian_Splatting_for_Dynamic_View_Synthesis_CVPR_2024_paper.pdf#page=3)
 
 ## Problem and Motivation
 
@@ -55,16 +54,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** Our main contributions are summarized as: • We propose a geometry-aware feature extraction network based on 3D Gaussian distribution to better utilize local geometric information. ...
-- **p. 3 / 3. Method - extractive body cue:** Our method mainly consists of two core components: the Gaussian canonical field is used to learn the reconstruction of static scenes, while the deformation field ...
-- **p. 4 / 3.2. Gaussian Canonical Field - extractive body cue:** Then, we propose a geometric branch, which enables geometry feature learning of the 3D Gaussian distributions for the subsequent deformation field.
-- **p. 1 / 1. Introduction - extractive body cue:** Geometric information exploited by different methods. a) Early dynamic NeRF methods such as DNeRF[37] directly encode the coordinate p of the sample point as input ...
-- **p. 2 / 1. Introduction - extractive body cue:** The Gaussian canonical field consists of 3D Gaussian distributions and a geometry-aware feature learning network.
-- **p. 8 / 4.5. Ablation Study - extractive body cue:** Compared with the results (dubbed as "PointNet feat." and "Plane feat.") in Table 4, it can be observed that our method achieves significant performance gains.
-- **p. 7 / 4.3. Quantitative Results - extractive body cue:** On average, our method significantly improves PSNR compared with static Gaussian, 3D-GS.
-- **p. 7 / 4.3. Quantitative Results - extractive body cue:** It can be observed that our method achieves good performance compared with other state-of-the-art methods.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 가우시안의 위치와 기하 특징을 시간 조건과 결합하고 중심의 이동과 회전을 예측해 프레임별 표현을 구성한다. [PDF 3쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Lu_3D_Geometry-Aware_Deformable_Gaussian_Splatting_for_Dynamic_View_Synthesis_CVPR_2024_paper.pdf#page=3) · [PDF 4쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Lu_3D_Geometry-Aware_Deformable_Gaussian_Splatting_for_Dynamic_View_Synthesis_CVPR_2024_paper.pdf#page=4) · [PDF 5쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Lu_3D_Geometry-Aware_Deformable_Gaussian_Splatting_for_Dynamic_View_Synthesis_CVPR_2024_paper.pdf#page=5)
+- 합성 및 실제 동적 장면에서 새 시점 렌더링을 비교하고 변형 예측에 쓰이는 기하 특징의 영향을 분석했다. [PDF 6쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Lu_3D_Geometry-Aware_Deformable_Gaussian_Splatting_for_Dynamic_View_Synthesis_CVPR_2024_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Lu_3D_Geometry-Aware_Deformable_Gaussian_Splatting_for_Dynamic_View_Synthesis_CVPR_2024_paper.pdf#page=7) · [PDF 8쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Lu_3D_Geometry-Aware_Deformable_Gaussian_Splatting_for_Dynamic_View_Synthesis_CVPR_2024_paper.pdf#page=8)
 
 ## Evaluation Scope
 

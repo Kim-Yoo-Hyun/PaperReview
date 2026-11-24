@@ -6,7 +6,7 @@
 
 ## Evaluation in One Sentence
 
-PDF body evaluation/result cue (p. 7 (4.5. Ablation Study), p. 6 (25.00 71.11 78.33 30.00 69.15 54.72(+16.12)), p. 6 (25.00 71.11 78.33 30.00 69.15 54.72(+16.12)), p. 8 (4.5. Ablation Study), p. 7 (Figure/Table caption), p. 5 (4.1. Dataset and Evaluation Metrics)): By leveraging explicit traffic state supervision (ID-2), ORION achieves 74.65 DS and 49.31% SR, which already outperforms DriveAdapter [22] and DriveTRansformer [25] by a large margin and makes an improvement ...
+Bench2Drive 폐루프에서 ORION이 기록한 77.74는 주행 점수이고 54.62%는 성공률이다. 표의 두 열은 같은 시뮬레이션에서 서로 다른 결과를 측정한다. [PDF 6쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Fu_ORION_A_Holistic_End-to-End_Autonomous_Driving_Framework_by_Vision-Language_Instructed_ICCV_2025_paper.pdf#page=6)
 
 ## Evaluation Body Digest
 
@@ -21,7 +21,7 @@ PDF body evaluation/result cue (p. 7 (4.5. Ablation Study), p. 6 (25.00 71.11 78
 
 ## Evaluation Type and Scope
 
-- **Evaluation type:** `EMPIRICAL / SOURCE-REPORTED EVALUATION`.
+- **Evaluation type:** `EMPIRICAL / SIMULATION`.
 - **Target system/task:** 3D scene/object와 robot coordinate frame.
 - **Input boundary:** RGB-D, image set, point cloud, depth와 camera pose.
 - **Output/decision under evaluation:** point map, pose, scene graph, affordance 또는 query result.

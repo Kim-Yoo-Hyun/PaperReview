@@ -16,12 +16,11 @@
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (19 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 원문 해당 쪽과 대조했다. [본문](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/06043.pdf)
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Recent advancements in embodied artificial intelligence have emphasized the importance of connecting 3D scene understanding with natural language [16,27, 29, 44, 71].
-
-방법 관련 발췌 — In this section, we present PQ3D, which consists of three main modules: Task Prompt Encoding, 3D Scene Encoding, and Prompt-guided Query Learning, as depicted in Fig.
+PQ3D는 점군·복셀·다중 뷰 영상의 특징을 같은 3D 구역에 대응시켜 서로 다른 프롬프트로 장면을 질의한다. [PDF 1쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/06043.pdf#page=1) · [PDF 6쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/06043.pdf#page=6)
 
 ## Problem and Motivation
 
@@ -52,16 +51,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 5 / 3 Method - extractive body cue:** In this section, we present PQ3D, which consists of three main modules: Task Prompt Encoding, 3D Scene Encoding, and Prompt-guided Query Learning, as depicted in ...
-- **p. 7 / 3 Method - extractive body cue:** 3.3 Prompt-guided Query Learning We propose a novel Transformer-like decoder to instruct the instance queries to assimilate scene and prompt information.
-- **p. 6 / 3 Method - extractive body cue:** With such unification, we do not distinguish different prompt formats anymore and this design enables the model to transfer knowledge between different prompts.
-- **p. 6 / 3 Method - extractive body cue:** Finally, each updated instance query is fed into three output heads to predict an instance mask, a task-relevance score, and a sentence. model [49], which ...
-- **p. 10 / 4 Experiments - extractive body cue:** Furthermore, on the Multi3DRefer benchmark, our model outperforms others in the ST (single target) and MT (multiple targets) categories and achieves the highest average score ...
-- **p. 11 / 4 Experiments - extractive body cue:** The proposed PQ3D provides global 3D features to the navigation agent that can improve the baseline VC-1 by a significant margin, achieving a 22.9% increase ...
-- **p. 13 / 4 Experiments - extractive body cue:** When both image and point features are absent, the PQ3D outperforms the specific-tuned model, demonstrating the improved generalization ability through training with multiple representations.
-- **p. 12 / 4 Experiments - extractive body cue:** The results suggest that a 4-layer decoder outperforms both 2-layer and 6-layer ones on all tasks.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 장면 구역별 특징을 공유 좌표에 모으고 프롬프트를 받은 질의 디코더와 공통 출력 헤드로 여러 과제를 함께 학습한다. [PDF 5쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/06043.pdf#page=5) · [PDF 6쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/06043.pdf#page=6) · [PDF 7쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/06043.pdf#page=7)
+- 인스턴스 분할, 지시 표현에 의한 위치 추정, 설명 생성과 질의응답을 서로 다른 데이터셋·지표에서 평가했다. [PDF 9쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/06043.pdf#page=9) · [PDF 10쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/06043.pdf#page=10) · [PDF 11쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/06043.pdf#page=11) · [PDF 12쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/06043.pdf#page=12)
 
 ## Evaluation Scope
 

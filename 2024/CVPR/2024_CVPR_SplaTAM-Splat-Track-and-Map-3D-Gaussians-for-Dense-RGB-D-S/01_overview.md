@@ -16,12 +16,11 @@
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 원문 해당 쪽과 대조했다. [본문](https://openaccess.thecvf.com/content/CVPR2024/papers/Keetha_SplaTAM_Splat_Track__Map_3D_Gaussians_for_Dense_RGB-D_CVPR_2024_paper.pdf)
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, this is difficult for implicit map representations, as the network is subject to global changes during gradient-based optimization for the unmapped space. • Explicit map: We can arbitrarily increase the map ...
-
-방법 관련 발췌 — We show across all our experiments on simulated and real data that our approach, SplaTAM, achieves state-of-the-art results compared to all previous approaches for camera pose estimation, map estimation, and novel-view synthesis.
+SplaTAM은 카메라 자세를 모르는 RGB-D 스트림에서 가우시안 지도를 미분 가능하게 렌더링해 카메라 추적과 조밀한 지도 갱신을 수행한다. [PDF 1쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Keetha_SplaTAM_Splat_Track__Map_3D_Gaussians_for_Dense_RGB-D_CVPR_2024_paper.pdf#page=1) · [PDF 3쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Keetha_SplaTAM_Splat_Track__Map_3D_Gaussians_for_Dense_RGB-D_CVPR_2024_paper.pdf#page=3)
 
 ## Problem and Motivation
 
@@ -55,16 +54,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** We show across all our experiments on simulated and real data that our approach, SplaTAM, achieves state-of-the-art results compared to all previous approaches for camera ...
-- **p. 2 / 1. Introduction - extractive body cue:** We introduce several simple modifications that make splatting even faster for SLAM, including the removal of view-dependent appearance and the use of isotropic Gaussians.
-- **p. 4 / 3. Method - extractive body cue:** We propose to similarly differentiably render depth: D( \ m a thb f {p}) = \ s um _{i = 1}^{n} d_i f_i(\mathbf {p}) \prod ...
-- **p. 3 / 3. Method - extractive body cue:** The core of our approach is the ability to render high-fidelity color, depth, and silhouette images from our underlying Gaussian Map 21359
-- **p. 4 / 3. Method - extractive body cue:** This differentiable rendering allows us to directly calculate the gradients in the underlying scene representation (Gaussians) and camera parameters with respect to the error between ...
-- **p. 6 / 5. Results & Discussion - extractive body cue:** Compared to prior methods in this category [30, 54], SplaTAM still significantly outperforms, decreasing the trajectory error of the prior SOTA in this category [30] ...
-- **p. 6 / 5. Results & Discussion - extractive body cue:** Our approach achieves much better results than the other baselines Vox-Fusion [46] and NICESLAM [54], improving over both by around 10dB in PSNR.
-- **p. 7 / 5. Results & Discussion - extractive body cue:** Both the RGB and depth work together to achieve excellent results.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 이미 설명된 픽셀은 실루엣으로 골라 자세를 최적화하고, 기존 지도가 설명하지 못하는 픽셀에는 새 가우시안을 추가한다. [PDF 3쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Keetha_SplaTAM_Splat_Track__Map_3D_Gaussians_for_Dense_RGB-D_CVPR_2024_paper.pdf#page=3) · [PDF 4쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Keetha_SplaTAM_Splat_Track__Map_3D_Gaussians_for_Dense_RGB-D_CVPR_2024_paper.pdf#page=4) · [PDF 5쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Keetha_SplaTAM_Splat_Track__Map_3D_Gaussians_for_Dense_RGB-D_CVPR_2024_paper.pdf#page=5)
+- 실내 RGB-D 시퀀스에서 카메라 궤적 오차, 깊이 복원과 관측·새 시점 렌더링을 비교했다. [PDF 5쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Keetha_SplaTAM_Splat_Track__Map_3D_Gaussians_for_Dense_RGB-D_CVPR_2024_paper.pdf#page=5) · [PDF 6쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Keetha_SplaTAM_Splat_Track__Map_3D_Gaussians_for_Dense_RGB-D_CVPR_2024_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Keetha_SplaTAM_Splat_Track__Map_3D_Gaussians_for_Dense_RGB-D_CVPR_2024_paper.pdf#page=7) · [PDF 8쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Keetha_SplaTAM_Splat_Track__Map_3D_Gaussians_for_Dense_RGB-D_CVPR_2024_paper.pdf#page=8)
 
 ## Evaluation Scope
 

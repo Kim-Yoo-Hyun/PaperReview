@@ -16,12 +16,11 @@
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (23 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 원문 해당 쪽과 대조했다. [본문](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/jain25b/jain25b.pdf)
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Given these challenges, is scaling 3D training data the only viable path to bridging this gap, or are there alternative strategies for making 3D models more effective?
-
-방법 관련 발췌 — In summary, our contributions are: • Unified 2D-3D Visual Grounding: We propose a model that can consume and benefit from both 2D and 3D vision-language data. • State-of-the-Art Performance: UniVLG achieves state-of-the-art ...
+UniVLG는 동일한 언어 조건부 마스크 디코더로 2D RGB 영상과 3D RGB-D 관측에서 지칭된 물체를 찾는다. [PDF 1쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/jain25b/jain25b.pdf#page=1) · [PDF 3쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/jain25b/jain25b.pdf#page=3)
 
 ## Problem and Motivation
 
@@ -55,16 +54,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** In summary, our contributions are: • Unified 2D-3D Visual Grounding: We propose a model that can consume and benefit from both 2D and 3D vision-language ...
-- **p. 1 / 1. Introduction - extractive body cue:** In this paper, we introduce UniVLG, a unified 2D-3D visionlanguage model designed to improve 3D understanding by leveraging large-scale 2D data and pre-trained 2D models.
-- **p. 5 / 3.1. Supervision Objective - extractive body cue:** To address this, we introduce a novel box loss.
-- **p. 3 / 3. Method - extractive body cue:** The output consists of segmentation masks for each object mentioned in the sentence, a corresponding text span that refers to each segmented object, and optionally, ...
-- **p. 4 / 3. Method - extractive body cue:** Open-vocabulary mask decoders, such as those in ODIN (Jain et al., 2024) and X-Decoder (Zou et al., 2023), which extend Mask2Former's decoder to accept language ...
-- **p. 8 / 1. Lifting 2D datasets to 3D improves 3D performance - extractive body cue:** We observe that incorporating 2D data improves performance in both scenarios, but our approach of lifting 2D images to 3D achieves the best results.
-- **p. 7 / 4.1. Evaluation on 3D Referential Grounding - extractive body cue:** In the GT setup as well, UniVLG significantly outperforms 3D-VisTA and closely matches the performance of the recent work of PQ3D in the setup where ...
-- **p. 2 / Figure/Table caption - extractive body cue:** Figure 1. (A) UniVLG achieves state-of-the-art performance performance across a range of referential grounding, question answering, and instance segmentation benchmarks. (B) UniVLG is a unified ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 사전학습 2D 모델의 가중치를 활용하고 2D 특징을 3차원으로 올려 두 종류의 지도 신호로 함께 학습한다. [PDF 3쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/jain25b/jain25b.pdf#page=3) · [PDF 4쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/jain25b/jain25b.pdf#page=4) · [PDF 5쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/jain25b/jain25b.pdf#page=5)
+- 3D 지시 표현의 장면 간 전이와 2D 지시 분할을 각각 평가하고 2D·3D 공동학습 및 마스크 출력의 영향을 비교했다. [PDF 6쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/jain25b/jain25b.pdf#page=6) · [PDF 7쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/jain25b/jain25b.pdf#page=7) · [PDF 8쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/jain25b/jain25b.pdf#page=8)
 
 ## Evaluation Scope
 

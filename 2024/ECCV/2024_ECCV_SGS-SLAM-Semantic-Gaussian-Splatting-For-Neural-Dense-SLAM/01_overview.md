@@ -16,12 +16,11 @@
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (17 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 원문 해당 쪽과 대조했다. [본문](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/04516.pdf)
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — This challenge also brings difficulties in disentangling the representation of objects, making it non-trivial to segment, edit, and manipulate objects within the scene.
-
-방법 관련 발췌 — Overall, our work presents several key contributions, summarized as follows: - We introduce SGS-SLAM, the first semantic RGB-D SLAM system grounded in 3D Gaussians.
+SGS-SLAM은 가우시안 지도에 색·깊이·의미 정보를 함께 저장해 카메라 자세와 물체 수준 장면 기하를 추정한다. [PDF 1쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/04516.pdf#page=1) · [PDF 2쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/04516.pdf#page=2)
 
 ## Problem and Motivation
 
@@ -55,16 +54,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 3 / 1 Introduction - extractive body cue:** Overall, our work presents several key contributions, summarized as follows: - We introduce SGS-SLAM, the first semantic RGB-D SLAM system grounded in 3D Gaussians.
-- **p. 3 / 1 Introduction - extractive body cue:** Leveraging these benefits, our method enables precise editing and manipulation of specific scene elements while preserving the high fidelity of the overall rendering.
-- **p. 4 / 3 Method - extractive body cue:** Like previous SLAM techniques, our method can be split into two processes: tracking and mapping.
-- **p. 6 / 3 Method - extractive body cue:** Furthermore, the integration of semantic features within our method significantly advances optimal scene interpretation and precise object-level geometry, effectively mitigating the oversmoothing issues prevalent in ...
-- **p. 8 / 3 Method - extractive body cue:** This enables the joint optimization of parameters across different channels, remarkably enhancing the efficiency and effectiveness of both mapping and segmentation processes.
-- **p. 13 / 4 Experiment - extractive body cue:** The results reveal that our optimization strategy can significantly improve the localization and mapping performance.
-- **p. 11 / 4 Experiment - extractive body cue:** Our method significantly outperforms the NeRF-based approaches, achieving SOTA mIoU scores over 90%.
-- **p. 11 / 4 Experiment - extractive body cue:** In comparison to these previous methods, SGS-SLAM demonstrates state-of-the-art performance, outperforming the initial baseline by more than 10%.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 의미 특징 손실을 영상·깊이 손실에 더하고 현재 뷰와 의미·기하가 맞는 키프레임을 선택해 지도를 갱신한다. [PDF 5쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/04516.pdf#page=5) · [PDF 6쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/04516.pdf#page=6) · [PDF 7쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/04516.pdf#page=7)
+- 카메라 궤적, 장면 재구성, 의미 분할과 새 시점 렌더링의 결과를 별도 지표로 비교했다. [PDF 9쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/04516.pdf#page=9) · [PDF 10쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/04516.pdf#page=10) · [PDF 11쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/04516.pdf#page=11) · [PDF 12쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/04516.pdf#page=12)
 
 ## Evaluation Scope
 

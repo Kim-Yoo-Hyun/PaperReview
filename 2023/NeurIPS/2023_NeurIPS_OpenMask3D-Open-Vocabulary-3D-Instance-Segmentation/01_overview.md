@@ -16,12 +16,11 @@
 - Code/Project: https://openmask3d.github.io/
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (24 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 원문 해당 쪽과 대조했다. [본문](https://proceedings.neurips.cc/paper_files/paper/2023/file/d77b5482e38339a8068791d939126be2-Paper-Conference.pdf)
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Hence, the second key problem with closed-vocabulary approaches is their inherent limitation to recognize only object classes that are predefined at training time.
-
-방법 관련 발췌 — Our contributions are three-fold: • We introduce the open-vocabulary 3D instance segmentation task in which the object instances that are similar to a given text-query are identified. • We propose OpenMask3D, which ...
+OpenMask3D는 어휘에 없는 물체도 자연어로 검색할 수 있도록 장면의 개별 3D 인스턴스 마스크마다 언어와 비교할 수 있는 특징을 만든다. [PDF 1쪽](https://proceedings.neurips.cc/paper_files/paper/2023/file/d77b5482e38339a8068791d939126be2-Paper-Conference.pdf#page=1) · [PDF 4쪽](https://proceedings.neurips.cc/paper_files/paper/2023/file/d77b5482e38339a8068791d939126be2-Paper-Conference.pdf#page=4)
 
 ## Problem and Motivation
 
@@ -55,16 +54,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1 Introduction - extractive body cue:** Our contributions are three-fold: • We introduce the open-vocabulary 3D instance segmentation task in which the object instances that are similar to a given text-query ...
-- **p. 2 / 1 Introduction - extractive body cue:** Our approach is intrinsically different from the existing 3D open-vocabulary scene understanding approaches [24, 32, 52] as we propose an instance-based feature computation approach instead ...
-- **p. 4 / 3 Method - extractive body cue:** Our pipeline consists of four subsequent steps: 1⃝Our approach takes as input posed RGB-D images of a 3D indoor scene along with its reconstructed point ...
-- **p. 3 / 3 Method - extractive body cue:** The key novelty of our method is that it follows an instance-mask oriented approach, contrary to existing 3D open-vocabulary scene understanding models which typically compute ...
-- **p. 4 / 3 Method - extractive body cue:** 3, the mask-feature computation module consists of several steps.
-- **p. 18 / Figure/Table caption - extractive body cue:** Figure 10: Output of SAM, using only 5 randomly sampled points of the mask as input. Here the sampled points (the green points visualized in ...
-- **p. 7 / Figure/Table caption - extractive body cue:** Table 1: 3D instance segmentation results on the ScanNet200 validation set. Metrics are respectively: AP averaged over an overlap range, and AP evaluated at 50% ...
-- **p. 8 / Figure/Table caption - extractive body cue:** Table 2: 3D instance segmentation results on the Replica [61] dataset. To assess how well our model generalizes to other datasets, we use instance masks ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 범주를 지정하지 않고 예측한 3D 마스크를 여러 뷰에 투영하고, 잘 보이는 이미지 영역의 CLIP 특징을 마스크 단위로 모은다. [PDF 4쪽](https://proceedings.neurips.cc/paper_files/paper/2023/file/d77b5482e38339a8068791d939126be2-Paper-Conference.pdf#page=4) · [PDF 5쪽](https://proceedings.neurips.cc/paper_files/paper/2023/file/d77b5482e38339a8068791d939126be2-Paper-Conference.pdf#page=5)
+- ScanNet200과 Replica에서 인스턴스 분할을 평가하고 드문 범주, 마스크 품질, 여러 시점의 특징 집계가 결과에 미치는 영향을 비교했다. [PDF 7쪽](https://proceedings.neurips.cc/paper_files/paper/2023/file/d77b5482e38339a8068791d939126be2-Paper-Conference.pdf#page=7) · [PDF 8쪽](https://proceedings.neurips.cc/paper_files/paper/2023/file/d77b5482e38339a8068791d939126be2-Paper-Conference.pdf#page=8) · [PDF 9쪽](https://proceedings.neurips.cc/paper_files/paper/2023/file/d77b5482e38339a8068791d939126be2-Paper-Conference.pdf#page=9)
 
 ## Evaluation Scope
 

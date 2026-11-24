@@ -16,12 +16,11 @@
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 원문 해당 쪽과 대조했다. [본문](https://openaccess.thecvf.com/content/CVPR2026/papers/Tian_SDGS_Spatial_Difference_Guided_Gaussian_Splatting_for_Simultaneous_Localization_and_CVPR_2026_paper.pdf)
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — This is fundamentally due to the inherent limitations of traditional imaging mechanisms of vision sensors and their dense descriptors.
-
-방법 관련 발췌 — Our main contributions are summarized as follows: • We introduce a sparse edge descriptor using Gaussian ellipsoids as 3D representation, providing clear geometric cues while remaining computationally efficient. • We develop an ...
+SDGS는 하이브리드 픽셀 센서의 공간 차분으로 카메라 자세를 추적하고 영상 강도로 조밀한 가우시안 장면을 복원한다. [PDF 1쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Tian_SDGS_Spatial_Difference_Guided_Gaussian_Splatting_for_Simultaneous_Localization_and_CVPR_2026_paper.pdf#page=1) · [PDF 3쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Tian_SDGS_Spatial_Difference_Guided_Gaussian_Splatting_for_Simultaneous_Localization_and_CVPR_2026_paper.pdf#page=3)
 
 ## Problem and Motivation
 
@@ -55,26 +54,12 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** Our main contributions are summarized as follows: • We introduce a sparse edge descriptor using Gaussian ellipsoids as 3D representation, providing clear geometric cues while ...
-- **p. 2 / 1. Introduction - extractive body cue:** Moreover, our method substantially reduces the resource overhead required for representing key geometries relative to fully dense approaches.
-- **p. 5 / 3.2.2. Tracking - extractive body cue:** A Gaussian is marked as visible in the current view if its center falls within the observed depth range and has a non-negligible opacity contribution.
-- **p. 5 / 3.3.1. SD Keyframe - extractive body cue:** With a regular opacity reset strategy, Gaussians that have never been marked as active will receive no supervision after reset and are pruned from the ...
-- **p. 4 / 3.1.2. Edge-aligned 3D Gaussian Representation - extractive body cue:** SDGS overview: our approach uses high-frame-rate SD inputs to optimize a sparse Gaussian map and performs camera pose estimation via edge alignment.
-- **p. 7 / 4.2.1. Tracking Accuracy - extractive body cue:** 2, across three complex scenarios, while our method exhibits marginally lower overall tracking accuracy compared to the baseline approaches, it achieves a substantial improvement in ...
-- **p. 8 / 4.3. Ablation Study - extractive body cue:** We can see that a pyramid strategy can significantly improve system's tracking accuracy under long sequences like fr3/office.
-- **p. 7 / 4.2.1. Tracking Accuracy - extractive body cue:** 1, under low-speed motion, our method achieves tracking accuracy comparable to the baselines.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 윤곽을 나타내는 희소 가우시안과 외관을 표현하는 조밀한 가우시안을 구분하고 두 종류의 관측을 추적·매핑에 각각 배분한다. [PDF 3쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Tian_SDGS_Spatial_Difference_Guided_Gaussian_Splatting_for_Simultaneous_Localization_and_CVPR_2026_paper.pdf#page=3) · [PDF 4쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Tian_SDGS_Spatial_Difference_Guided_Gaussian_Splatting_for_Simultaneous_Localization_and_CVPR_2026_paper.pdf#page=4) · [PDF 5쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Tian_SDGS_Spatial_Difference_Guided_Gaussian_Splatting_for_Simultaneous_Localization_and_CVPR_2026_paper.pdf#page=5) · [PDF 6쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Tian_SDGS_Spatial_Difference_Guided_Gaussian_Splatting_for_Simultaneous_Localization_and_CVPR_2026_paper.pdf#page=6)
+- 빠른 카메라 운동에서 궤적 정확도와 추적 비용을 비교하고, 노출 중 흐림이 포함된 영상의 복원 품질을 별도로 평가했다. [PDF 6쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Tian_SDGS_Spatial_Difference_Guided_Gaussian_Splatting_for_Simultaneous_Localization_and_CVPR_2026_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Tian_SDGS_Spatial_Difference_Guided_Gaussian_Splatting_for_Simultaneous_Localization_and_CVPR_2026_paper.pdf#page=7) · [PDF 8쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Tian_SDGS_Spatial_Difference_Guided_Gaussian_Splatting_for_Simultaneous_Localization_and_CVPR_2026_paper.pdf#page=8)
 
 ## Evaluation Scope
 
-| Dimension | Body-grounded record | Boundary | Anchor |
-|---|---|---|---|
-| Evaluation type | EMPIRICAL / SIMULATION | do not infer unreported downstream behavior | p. 7 (4.2.1. Tracking Accuracy), p. 8 (4.3. Ablation Study) |
-| Embodiment/environment | To analyze our method under controllable settings, we construct a SD-Replica dataset by simulating the hybrid pixel camera's sampling process on the Replica [15] scenes. | hardware/simulator version and reset protocol | p. 6 (4.1.2. Datasets), p. 6 (4.1.3. Evaluation Metrics) |
-| Dataset/benchmark | And a semi-isotropic loss can help tracking accuracy for scenes with sharp edges like fr1/desk and fr2/xyz, however it slightly reduces tracking accuracy in fr3/office where spatially smooth spherical objects frequently appear, ... | role, split, size and leakage | p. 6 (4.1.2. Datasets), p. 6 (4.1.3. Evaluation Metrics), p. 8 (4.3. Ablation Study), p. 7 (4.2.2. Deblurring Metrics) |
-| Metric | For tracking accuracy, we adopt the Root Mean Square Error (RMSE) of Absolute Trajectory Error (ATE), following standard camera 6-DoF pose estimation benchmarks. | definition, denominator, direction and uncertainty | p. 6 (4.1.3. Evaluation Metrics), p. 7 (4.2.1. Tracking Accuracy), p. 7 (4.2.1. Tracking Accuracy) |
-| Baseline/ablation | 3, on SD-Replica room0, we consistently outperform the baseline MonoGS-RGBD in terms of PSNR, SSIM, and LPIPS. | fair input/data/compute/action matching | p. 7 (4.2.2. Deblurring Metrics), p. 7 (4.2.1. Tracking Accuracy), p. 8 (4.2.3. Performance Analysis) |
+표 1의 스테레오 Tianmouc 시퀀스에서 SDGS의 궤적 오차 RMSE는 slow 4.21 cm, fast 5.89 cm, extreme 3.91 cm다. 표 2는 별도 TUM RGB-D 자료에서 측정한 궤적 오차다. 저자가 보고한 약 2배의 속도 향상은 자세 최적화 반복 1회 기준이다. [PDF 1쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Tian_SDGS_Spatial_Difference_Guided_Gaussian_Splatting_for_Simultaneous_Localization_and_CVPR_2026_paper.pdf#page=1) · [PDF 7쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Tian_SDGS_Spatial_Difference_Guided_Gaussian_Splatting_for_Simultaneous_Localization_and_CVPR_2026_paper.pdf#page=7)
 
 ## Explicit Limitations and Failure Boundary
 

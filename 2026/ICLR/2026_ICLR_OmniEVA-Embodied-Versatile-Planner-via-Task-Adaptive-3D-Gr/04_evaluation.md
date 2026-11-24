@@ -6,7 +6,7 @@
 
 ## Evaluation in One Sentence
 
-PDF body evaluation/result cue (p. 9 (Figure/Table caption), p. 10 (Figure/Table caption), p. 30 (C.2 GATE ACTIVATION ANALYSIS BY SEMANTIC CLUSTERING), p. 36 (C.2 GATE ACTIVATION ANALYSIS BY SEMANTIC CLUSTERING), p. 30 (C.2 GATE ACTIVATION ANALYSIS BY SEMANTIC CLUSTERING), p. 36 (C.2 GATE ACTIVATION ANALYSIS BY SEMANTIC CLUSTERING)): Figure 5: Ablation Results of the proposed TE-GRPO Method on Local Mobile-Manipulation Tasks As shown in Figure 5, OmniEVA-ER-jointly optimized with rtask and rembod -demonstrates sub- stantial performance gains over ...
+표 5의 OmniEVA-ER 성공률은 시뮬레이션에서 팔 길이가 학습에 등장한 조건 85.08%, 새로운 길이 80.52%다. 표 6의 실제 이동 로봇 두 대(팔 길이 75 cm와 70 cm)에서 측정한 결과는 별도로 보고했다. [PDF 7쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/7b122d0a0dcb1a86ffa25ccba154652b-Paper-Conference.pdf#page=7) · [PDF 9쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/7b122d0a0dcb1a86ffa25ccba154652b-Paper-Conference.pdf#page=9) · [PDF 10쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/7b122d0a0dcb1a86ffa25ccba154652b-Paper-Conference.pdf#page=10)
 
 ## Evaluation Body Digest
 
@@ -21,7 +21,7 @@ PDF body evaluation/result cue (p. 9 (Figure/Table caption), p. 10 (Figure/Table
 
 ## Evaluation Type and Scope
 
-- **Evaluation type:** `EMPIRICAL / REAL-ROBOT OR HARDWARE`.
+- **Evaluation type:** `EMPIRICAL / SIMULATION / REAL-ROBOT OR HARDWARE / BENCHMARK`.
 - **Target system/task:** 3D scene/object와 robot coordinate frame.
 - **Input boundary:** RGB-D, image set, point cloud, depth와 camera pose.
 - **Output/decision under evaluation:** point map, pose, scene graph, affordance 또는 query result.

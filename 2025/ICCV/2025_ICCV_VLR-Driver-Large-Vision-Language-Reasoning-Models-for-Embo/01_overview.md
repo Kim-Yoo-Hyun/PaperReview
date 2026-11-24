@@ -16,14 +16,13 @@
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; title-token overlap first two pages=0.9)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 원문 해당 쪽과 대조했다. [본문](https://openaccess.thecvf.com/content/ICCV2025/papers/Kong_VLR-Driver_Large_Vision-Language-Reasoning_Models_for_Embodied_Autonomous_Driving_ICCV_2025_paper.pdf)
 
 > DOC-QA2 targeted source review: 2026-10-23; PDF pp. 4, 6. 손상 구간·직접 연결된 표 분류만 원문 이미지와 대조했다. 전체 주장 정독·실험 검증·reading status 승격을 뜻하지 않는다. [URL·PDF hash·수정 기록](../../../work/sources/pdf_note_review_followup_2026-10-23.json).
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, existing CoT-based methods typically rely on openended language generation for reasoning, which lacks structural constraints.
-
-방법 관련 발췌 — Our method enables VLR model to describe the current driving scenario, construct real-time spatial layout and dynamic changes of the environment, and achieve long-term planning for driving decisions.
+VLR-Driver는 도로 장면의 시공간 단서를 단계별로 해석한 뒤 그 판단을 주행 계획에 반영하는 시각·언어 모델이다. [PDF 1쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Kong_VLR-Driver_Large_Vision-Language-Reasoning_Models_for_Embodied_Autonomous_Driving_ICCV_2025_paper.pdf#page=1) · [PDF 3쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Kong_VLR-Driver_Large_Vision-Language-Reasoning_Models_for_Embodied_Autonomous_Driving_ICCV_2025_paper.pdf#page=3)
 
 ## Problem and Motivation
 
@@ -57,26 +56,12 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 4 / 3.2.1. Perception Level CoT - extractive body cue:** Our method enables VLR model to describe the current driving scenario, construct real-time spatial layout and dynamic changes of the environment, and achieve long-term planning ...
-- **p. 2 / Body text (section not recovered) - extractive body cue:** We introduce VLR-Driver, a visual-language-reasoning model developed for embodied AD.
-- **p. 4 / 3. Method - extractive body cue:** We present the motivation and design details of our VLRDriver framework.
-- **p. 5 / 3.2.1. Perception Level CoT - extractive body cue:** To address this limitation, we introduce consecutive frames I = {If, Ifr, Ifl, Ib, Ibl, Ibr}Tnow t=Tnow-T into the model, allowing it to track temporal ...
-- **p. 5 / 3.2.1. Perception Level CoT - extractive body cue:** In this scenario, where some vehicles are illegally parked ahead and blocking the lane, our method can conduct hierarchical patiotemporal reasoning analysis and make a ...
-- **p. 7 / 5.2. Metrics - extractive body cue:** We employ four core metrics to evaluate AD performance: driving score (DS), route completion (RC), infraction score (IS), and success rate (SR).
-- **p. 8 / 5.3. Comparisons with Existing Methods - extractive body cue:** Our method achieved the best results in all abilities, thanks to the deep reflection and reasoning ability of our VLR model, which has stronger traffic ...
-- **p. 7 / Figure/Table caption - extractive body cue:** Table 1. The comparison of core metrics and subdivision infraction scores with state-of-the-art E2E/VLM models on the Bench2Drive benchmark. C, L and T indicate camera, ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 장면 묘사와 시간에 따른 위험 판단을 주행 의사결정에 연결하는 추론 절차를 설계하고, 이를 학습할 다중 모달 추론·결정 자료를 구축했다. [PDF 3쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Kong_VLR-Driver_Large_Vision-Language-Reasoning_Models_for_Embodied_Autonomous_Driving_ICCV_2025_paper.pdf#page=3) · [PDF 4쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Kong_VLR-Driver_Large_Vision-Language-Reasoning_Models_for_Embodied_Autonomous_Driving_ICCV_2025_paper.pdf#page=4) · [PDF 5쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Kong_VLR-Driver_Large_Vision-Language-Reasoning_Models_for_Embodied_Autonomous_Driving_ICCV_2025_paper.pdf#page=5) · [PDF 6쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Kong_VLR-Driver_Large_Vision-Language-Reasoning_Models_for_Embodied_Autonomous_Driving_ICCV_2025_paper.pdf#page=6)
+- CARLA의 Bench2Drive 폐루프에서 주행 점수, 경로 완주, 위반, 성공률을 측정하고 추론 구성에 따른 변화를 비교했다. [PDF 6쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Kong_VLR-Driver_Large_Vision-Language-Reasoning_Models_for_Embodied_Autonomous_Driving_ICCV_2025_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Kong_VLR-Driver_Large_Vision-Language-Reasoning_Models_for_Embodied_Autonomous_Driving_ICCV_2025_paper.pdf#page=7) · [PDF 8쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Kong_VLR-Driver_Large_Vision-Language-Reasoning_Models_for_Embodied_Autonomous_Driving_ICCV_2025_paper.pdf#page=8)
 
 ## Evaluation Scope
 
-| Dimension | Body-grounded record | Boundary | Anchor |
-|---|---|---|---|
-| Evaluation type | EMPIRICAL / SIMULATION | do not infer unreported downstream behavior | p. 7 (5.2. Metrics), p. 8 (5.3. Comparisons with Existing Methods) |
-| Embodiment/environment | The dataset includes 20,000 sets of multi-frame, multi-angle image data collected from various road conditions such as urban, rural, and highways in the CARLA simulator, covering over 30 specific complex traffic scenarios ... | hardware/simulator version and reset protocol | p. 6 (4. VLR-Driver Dataset), p. 6 (4.1. Data Collection) |
-| Dataset/benchmark | We conducted comprehensive experiments with the SOTA methods including E2E and VLM in the CARLA simulator across 44 routes from the Bench2Drive benchmark. | role, split, size and leakage | p. 6 (4. VLR-Driver Dataset), p. 6 (4.1. Data Collection), p. 8 (5.3. Comparisons with Existing Methods), p. 7 (5.1. Experimental Setup) |
-| Metric | We employ four core metrics to evaluate AD performance: driving score (DS), route completion (RC), infraction score (IS), and success rate (SR). | definition, denominator, direction and uncertainty | p. 7 (5.2. Metrics), p. 7 (Figure/Table caption), p. 8 (5.2. Metrics) |
-| Baseline/ablation | It can be seen that our method outperforms other methods in key metrics such as DS, RC, and SR, achieving first place and effectively improving DS by 17.5%, mean advanced driving ability ... | fair input/data/compute/action matching | p. 8 (5.3. Comparisons with Existing Methods), p. 7 (4.1. Data Collection), p. 7 (4.1. Data Collection) |
+CARLA 기반 Bench2Drive 표 1에서 VLR-Driver의 주행 점수는 75.01, 경로 완주 지표는 86.09, 성공률은 50.00%다. 각 수치는 카메라와 텍스트를 쓰는 동일 행의 서로 다른 열이다. [PDF 6쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Kong_VLR-Driver_Large_Vision-Language-Reasoning_Models_for_Embodied_Autonomous_Driving_ICCV_2025_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Kong_VLR-Driver_Large_Vision-Language-Reasoning_Models_for_Embodied_Autonomous_Driving_ICCV_2025_paper.pdf#page=7)
 
 ## Explicit Limitations and Failure Boundary
 

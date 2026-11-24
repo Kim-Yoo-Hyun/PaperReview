@@ -16,12 +16,11 @@
 - Code/Project: https://github.com/referit3d/referit3d
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (19 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 원문 해당 쪽과 대조했다. [본문](https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123460409.pdf)
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Solving such a reference problem directly in 3D space - i.e., without a camera view dependency - can benefit many downstream robotics applications, including embodied question answering [21], visual- and language-based navigation ...
-
-방법 관련 발췌 — For Sr3D we propose a simple but effective methodology for building template-based and spatially-oriented object referential language in 3D scenes.
+ReferIt3D는 한 장면에 같은 세부 범주의 물체가 여럿 있을 때 언어 설명이 가리키는 인스턴스를 골라내는 문제를 다룬다. [PDF 1쪽](https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123460409.pdf#page=1) · [PDF 2쪽](https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123460409.pdf#page=2)
 
 ## Problem and Motivation
 
@@ -55,16 +54,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 3 / 1 Introduction - extractive body cue:** For Sr3D we propose a simple but effective methodology for building template-based and spatially-oriented object referential language in 3D scenes.
-- **p. 3 / 1 Introduction - extractive body cue:** Fine-Grained ReferIt3D task: We introduce the task of language-based identification of specific 3D object instances, where fine-grained object-centric and multi-object understanding is necessary for its ...
-- **p. 2 / 1 Introduction - extractive body cue:** This flexibility enables us also to bypass camera view dependency (e.g., having access to parts of a scene occluded by a fixed camera) when we ...
-- **p. 1 / body section not recovered - extractive body cue:** Our key technical contribution is designing an approach for combining linguistic and geometric information (in the form of 3D point clouds) and creating multi-modal (3D) ...
-- **p. 1 / 1 Introduction - extractive body cue:** However, most of these works focus on developing better models that connect vision to language in images, which express after all only a 2D view ...
-- **p. 12 / Figure/Table caption - extractive body cue:** Table 2. ReferIt3DNet performance on Nr3D with/out Sr3D. The first row contains the achieved accuracy on the Nr3D testing data for a listener trained solely ...
-- **p. 12 / VI SD - extractive body cue:** We observe the following main trends5: i) using the visual and linguistic auxiliary classification losses improves performance; ii) Simplified language (Sr3D) makes identification easier; iii) ...
-- **p. 13 / Figure/Table caption - extractive body cue:** Table 4. ScanRefer performance with/out Sr3D. MeanIoU improvements when combining Sr3D data with ScanRefer's data during training.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 공간 관계 템플릿으로 만든 Sr3D와 두 사람이 물체를 설명하고 맞히는 게임으로 수집한 Nr3D를 제공하고 사람의 식별 정확도를 측정했다. [PDF 5쪽](https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123460409.pdf#page=5) · [PDF 7쪽](https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123460409.pdf#page=7) · [PDF 8쪽](https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123460409.pdf#page=8)
+- 점군에서 각 물체를 인코딩하고 물체 사이의 관계를 언어와 결합하는 모델로 방해 물체의 수와 시점 의존성이 식별에 미치는 영향을 평가했다. [PDF 10쪽](https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123460409.pdf#page=10) · [PDF 11쪽](https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123460409.pdf#page=11) · [PDF 12쪽](https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123460409.pdf#page=12)
 
 ## Evaluation Scope
 

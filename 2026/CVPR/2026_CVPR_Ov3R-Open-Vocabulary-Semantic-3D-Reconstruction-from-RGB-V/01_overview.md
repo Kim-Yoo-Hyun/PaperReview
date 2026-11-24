@@ -16,12 +16,11 @@
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 원문 해당 쪽과 대조했다. [본문](https://openaccess.thecvf.com/content/CVPR2026/papers/Gong_Ov3R_Open-Vocabulary_Semantic_3D_Reconstruction_from_RGB_Videos_CVPR_2026_paper.pdf)
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — As a result, a significant gap between existing SLAM methods and envisioned Spatial AI systems still persists.
-
-방법 관련 발췌 — Our main contributions are as follows: • We present Ov3R, a novel framework that unifies 3R models and open-vocabulary 3D semantic segmentation. • We design CLIP3R, a CLIP-informed 3D reconstruction model that ...
+Ov3R은 RGB 영상 시퀀스에서 열린 어휘로 물체를 질의할 수 있는 조밀한 3D 장면을 복원한다. [PDF 1쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Gong_Ov3R_Open-Vocabulary_Semantic_3D_Reconstruction_from_RGB_Videos_CVPR_2026_paper.pdf#page=1) · [PDF 3쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Gong_Ov3R_Open-Vocabulary_Semantic_3D_Reconstruction_from_RGB_Videos_CVPR_2026_paper.pdf#page=3)
 
 ## Problem and Motivation
 
@@ -55,16 +54,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** Our main contributions are as follows: • We present Ov3R, a novel framework that unifies 3R models and open-vocabulary 3D semantic segmentation. • We design ...
-- **p. 3 / 3.1. CLIP3R - extractive body cue:** We introduce CLIP3R, a CLIP-informed 3D reconstruction model that integrates the rich semantic understanding embedded in CLIP features and enables open-vocabulary semantic segmentation as a ...
-- **p. 2 / 1. Introduction - extractive body cue:** In this paper, we introduce Ov3R, an open-vocabulary semantic 3D reconstruction framework that processes RGBonly video streams.
-- **p. 3 / 3. Method - extractive body cue:** It consists of two main components, highlighted in yellow and blue: (i) a CLIP-informed 3Rbased model (CLIP3R) and (ii) a 2D-3D OVS module.
-- **p. 5 / 3.2. 2D-3D OVS - extractive body cue:** To address this limitation, we introduce 2D-3D fused descriptors, obtained as follows.
-- **p. 7 / Figure/Table caption - extractive body cue:** Table 4. Open-vocabulary 3D semantic segmentation results on ScanNetv2. On top: methods running on ground truth 3D re- constructions. At the bottom: methods running on ...
-- **p. 8 / Figure/Table caption - extractive body cue:** Table 7. Efficiency of each component in Ov3R. Measurements taken on a 2000-frame sequence. Total refers to the full framework running sequentially (SAM2 + CLIP3R ...
-- **p. 6 / 4. Experiments - extractive body cue:** We evaluate 3D reconstruction performance on Replica [48] and 7Scenes [46].
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- CLIP3R로 겹치는 영상 클립의 3D 점과 인스턴스 의미 특징을 예측하고 공간·기하·의미 단서로 클립 사이의 인스턴스를 연결한다. [PDF 3쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Gong_Ov3R_Open-Vocabulary_Semantic_3D_Reconstruction_from_RGB_Videos_CVPR_2026_paper.pdf#page=3) · [PDF 4쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Gong_Ov3R_Open-Vocabulary_Semantic_3D_Reconstruction_from_RGB_Videos_CVPR_2026_paper.pdf#page=4) · [PDF 5쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Gong_Ov3R_Open-Vocabulary_Semantic_3D_Reconstruction_from_RGB_Videos_CVPR_2026_paper.pdf#page=5)
+- 복원한 장면에서 열린 어휘 분할을 평가하고 2D와 3D 특징 결합 및 클립 간 연결에 따른 차이를 비교했다. [PDF 5쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Gong_Ov3R_Open-Vocabulary_Semantic_3D_Reconstruction_from_RGB_Videos_CVPR_2026_paper.pdf#page=5) · [PDF 6쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Gong_Ov3R_Open-Vocabulary_Semantic_3D_Reconstruction_from_RGB_Videos_CVPR_2026_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Gong_Ov3R_Open-Vocabulary_Semantic_3D_Reconstruction_from_RGB_Videos_CVPR_2026_paper.pdf#page=7) · [PDF 8쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Gong_Ov3R_Open-Vocabulary_Semantic_3D_Reconstruction_from_RGB_Videos_CVPR_2026_paper.pdf#page=8)
 
 ## Evaluation Scope
 

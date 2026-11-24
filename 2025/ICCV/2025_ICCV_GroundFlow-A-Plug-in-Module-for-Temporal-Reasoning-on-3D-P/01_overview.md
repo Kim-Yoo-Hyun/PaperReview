@@ -16,12 +16,11 @@
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 원문 해당 쪽과 대조했다. [본문](https://openaccess.thecvf.com/content/ICCV2025/papers/Lin_GroundFlow_A_Plug-in_Module_for_Temporal_Reasoning_on_3D_Point_ICCV_2025_paper.pdf)
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — While 3D LLMs achieve state-of-the-art results in various 3D tasks, they still face significant difficulty adapting to the complex SG3D problem [52].
-
-방법 관련 발췌 — In summary, we make the following contributions: • We propose the GroundFlow module with a recurrent framework, which can be integrated into previous 3DVG baselines and introduce important temporal reasoning capabilities to ...
+GroundFlow는 여러 단계의 작업 설명에서 대명사나 이전 대상 지시를 해석해 3D 점군의 물체를 순서대로 찾는 모듈이다. [PDF 1쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Lin_GroundFlow_A_Plug-in_Module_for_Temporal_Reasoning_on_3D_Point_ICCV_2025_paper.pdf#page=1) · [PDF 3쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Lin_GroundFlow_A_Plug-in_Module_for_Temporal_Reasoning_on_3D_Point_ICCV_2025_paper.pdf#page=3)
 
 ## Problem and Motivation
 
@@ -52,16 +51,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** In summary, we make the following contributions: • We propose the GroundFlow module with a recurrent framework, which can be integrated into previous 3DVG baselines ...
-- **p. 2 / 1. Introduction - extractive body cue:** In addition, we propose GroundFlow module, which can be built on top of the existing 3DVG methods to perform temporal fusion with previous step embeddings, ...
-- **p. 5 / 3.3. Training Objective - extractive body cue:** Detailed illustration of Memory component in GroundFlow, which enables the module to extract relevant information of both short-term ( ˆJt-1) and long-term ( ˆJm) effectively.
-- **p. 6 / 4.3. Comparison on SG3D Benchmark - extractive body cue:** On the other hand, significant performance improvements can be observed when these models are integrated with GroundFlow, as shown in the rows highlighted in orange.
-- **p. 6 / 4.3. Comparison on SG3D Benchmark - extractive body cue:** However, the 3DVG methods combined with our proposed GroundFlow module outperform LEO across all five datasets, setting new state-of-the-art performance on SG3D benchmark.
-- **p. 7 / 4.4. Ablation Study - extractive body cue:** To investigate whether GroundFlow can consistently improve task accuracy of the 3DVG methods in more challenging scenarios with a high number of steps, we create ...
-- **p. 7 / 4.4. Ablation Study - extractive body cue:** Improvements after GroundFlow module is integrated in terms of task accuracy of 3D-VisTA and PQ3D across different step count subsets. various settings of short-term and ...
-- **p. 5 / 4.1. Dataset and Evaluation Metrics - extractive body cue:** As defined in SG3D benchmark [52], all models' grounding performances is evaluated based on two key metrics: step accuracy (s-acc) and task accuracy (tacc).
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 과거 단계의 장·단기 기억 중 현재 문장에 관련된 정보를 선택해 기존 3D 위치 추정기의 질의를 갱신한다. [PDF 3쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Lin_GroundFlow_A_Plug-in_Module_for_Temporal_Reasoning_on_3D_Point_ICCV_2025_paper.pdf#page=3) · [PDF 4쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Lin_GroundFlow_A_Plug-in_Module_for_Temporal_Reasoning_on_3D_Point_ICCV_2025_paper.pdf#page=4) · [PDF 5쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Lin_GroundFlow_A_Plug-in_Module_for_Temporal_Reasoning_on_3D_Point_ICCV_2025_paper.pdf#page=5)
+- SG3D에서 기존 위치 추정기에 모듈을 추가하기 전후와 서로 다른 기억 결합 방법을 비교해 단계별·작업별 식별 성능을 측정했다. [PDF 6쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Lin_GroundFlow_A_Plug-in_Module_for_Temporal_Reasoning_on_3D_Point_ICCV_2025_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Lin_GroundFlow_A_Plug-in_Module_for_Temporal_Reasoning_on_3D_Point_ICCV_2025_paper.pdf#page=7)
 
 ## Evaluation Scope
 

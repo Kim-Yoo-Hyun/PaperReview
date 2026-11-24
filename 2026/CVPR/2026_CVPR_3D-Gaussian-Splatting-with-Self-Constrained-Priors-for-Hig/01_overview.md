@@ -16,12 +16,11 @@
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 원문 해당 쪽과 대조했다. [본문](https://openaccess.thecvf.com/content/CVPR2026/papers/Noda_3D_Gaussian_Splatting_with_Self-Constrained_Priors_for_High_Fidelity_Surface_CVPR_2026_paper.pdf)
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Along with the prior, we further introduce a coarse-to-fine strategy to progressively refine the prior with the most current depth rendering that turns out to be more accurate.
-
-방법 관련 발췌 — Our contributions are listed below, • We propose a self-constrained prior to impose constraints on the learning of 3D Gaussians in a geometry-aware manner.
+가우시안 장면이 스스로 렌더링한 깊이를 거리장으로 융합해, 외부 학습 모델 없이 복원 중인 표면이 가우시안의 위치와 불투명도를 제약하게 한다. [PDF 1쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Noda_3D_Gaussian_Splatting_with_Self-Constrained_Priors_for_High_Fidelity_Surface_CVPR_2026_paper.pdf#page=1) · [PDF 3쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Noda_3D_Gaussian_Splatting_with_Self-Constrained_Priors_for_High_Fidelity_Surface_CVPR_2026_paper.pdf#page=3)
 
 ## Problem and Motivation
 
@@ -55,16 +54,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 1 / 1. Introduction - extractive body cue:** Our contributions are listed below, • We propose a self-constrained prior to impose constraints on the learning of 3D Gaussians in a geometry-aware manner.
-- **p. 2 / 1. Introduction - extractive body cue:** We also apply Gaussian geometric constraints (GC) that are related to interpolated distance s, centers µ and gradients ∇f t for high fidelity surface reconstruction. ...
-- **p. 3 / 3. Method - extractive body cue:** The key of our method is a self-constrained prior which constrains the learning of 3D Gaussians without data-driven priors for more accurate depth rendering.
-- **p. 4 / 3.3. Loss Functions - extractive body cue:** To align Gaussians with actual surface, we introduce a normal regularization for accurate geometry approximation.
-- **p. 3 / 3.1. Learning Self-Constrained Priors - extractive body cue:** We show the updated fields f t with different truncation distances threshold σt in Fig.
-- **p. 5 / 4.2. Results and Evaluation - extractive body cue:** 2, our method achieves the best results across scenes.
-- **p. 6 / 4.2. Results and Evaluation - extractive body cue:** 3 shows that our method achieves the best reconstruction performance among all baselines.
-- **p. 6 / 4.2. Results and Evaluation - extractive body cue:** GOF [60] combines Gaussians with opacity fields to improve performance, but constrained by complex opacity modeling.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 렌더링한 깊이를 TSDF로 갱신하고 각 가우시안이 추정 표면에서 벗어난 정도에 따라 이동·불투명도·이상치 처리를 조절한다. [PDF 3쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Noda_3D_Gaussian_Splatting_with_Self-Constrained_Priors_for_High_Fidelity_Surface_CVPR_2026_paper.pdf#page=3) · [PDF 4쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Noda_3D_Gaussian_Splatting_with_Self-Constrained_Priors_for_High_Fidelity_Surface_CVPR_2026_paper.pdf#page=4)
+- DTU 등에서 추출한 메시의 표면 거리와 렌더링 품질을 평가하고 자체 생성한 제약의 효과를 비교했다. [PDF 5쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Noda_3D_Gaussian_Splatting_with_Self-Constrained_Priors_for_High_Fidelity_Surface_CVPR_2026_paper.pdf#page=5) · [PDF 6쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Noda_3D_Gaussian_Splatting_with_Self-Constrained_Priors_for_High_Fidelity_Surface_CVPR_2026_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Noda_3D_Gaussian_Splatting_with_Self-Constrained_Priors_for_High_Fidelity_Surface_CVPR_2026_paper.pdf#page=7) · [PDF 8쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Noda_3D_Gaussian_Splatting_with_Self-Constrained_Priors_for_High_Fidelity_Surface_CVPR_2026_paper.pdf#page=8)
 
 ## Evaluation Scope
 

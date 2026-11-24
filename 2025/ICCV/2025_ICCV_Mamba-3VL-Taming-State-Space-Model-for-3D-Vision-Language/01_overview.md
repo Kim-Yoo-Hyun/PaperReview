@@ -16,12 +16,11 @@
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 원문 해당 쪽과 대조했다. [본문](https://openaccess.thecvf.com/content/ICCV2025/papers/Wang_Mamba-3VL_Taming_State_Space_Model_for_3D_Vision_Language_Learning_ICCV_2025_paper.pdf)
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, the unmodified utilization of mamba does not yield satisfactory performance on 3D-VL tasks due to the following challenges: (1) 3D point clouds are sparse, unordered and encode rich spatial information.
-
-방법 관련 발췌 — To capture spatial relationships of 3D object sequences while enhancing fine-grained interactions of 3D-VL interaction, we develop a Mamba Mixer module, which consists of a relation-prioritized spatial scanning and a channel twisting.
+Mamba-3VL은 물체 점군과 텍스트의 상호작용을 상태공간 모델로 학습해 장면 내 공간 관계에 관한 지시와 질문을 처리한다. [PDF 1쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Wang_Mamba-3VL_Taming_State_Space_Model_for_3D_Vision_Language_Learning_ICCV_2025_paper.pdf#page=1) · [PDF 3쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Wang_Mamba-3VL_Taming_State_Space_Model_for_3D_Vision_Language_Learning_ICCV_2025_paper.pdf#page=3)
 
 ## Problem and Motivation
 
@@ -55,16 +54,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** To capture spatial relationships of 3D object sequences while enhancing fine-grained interactions of 3D-VL interaction, we develop a Mamba Mixer module, which consists of a ...
-- **p. 2 / 1. Introduction - extractive body cue:** Motivated by this, we propose an Instance-aware Dynamic Position Adapter (IDPA) with intercalated EdgeConv [56-58] and Language-modulated InStance Adapter (LISA) layers.
-- **p. 4 / 3.2. Multi-Modal Mamba Mixer Block - extractive body cue:** To better adapt mamba to 3D-VL tasks, we introduce Mamba Mixer, which interprets spatial relationships of 3D objects and achieves holistic inter-modality and intra-modality interactions.
-- **p. 4 / 3.3. Instance-aware Dynamic Position Adapter - extractive body cue:** Inspired by this, we introduce an Instance-aware Dynamic Position Adapter (IDPA) to provide fine-grained, instance-specific positional embeddings for Mamba Mixer with enhanced spatial relation modeling.
-- **p. 3 / 2.2. State Space Models and Visual Applications - extractive body cue:** We propose Mamba3VL with designs like relation-prioritized scanning, which paves the road to spearhead new avenues in 3D-VL research.
-- **p. 6 / 4.2. Results on 3D Vision-Language Tasks - extractive body cue:** The model achieves landmark accuracies of 79.9% (Unique) and 48.9% (Multiple) on the ScanRefer [6], outperforming PQ3D [74] by 1.7% and 2.7%, respectively.
-- **p. 8 / Figure/Table caption - extractive body cue:** Figure 6. Visualization results of the scene-aware task planning and embodied conversation on the 3RPlan [21] and 3RDialog [21] datasets. petitors on challenging unseen tasks, ...
-- **p. 6 / 4.2. Results on 3D Vision-Language Tasks - extractive body cue:** On Multi3DRefer [67], Mamba3VL attains 69.5%, 45.7%, and 43.5% scores, showing a substantial improvement in different object referencing levels.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 채널을 섞고 관계가 가까운 물체를 우선하는 스캔 순서를 사용하며, 물체별로 위치 임베딩을 조절한다. [PDF 3쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Wang_Mamba-3VL_Taming_State_Space_Model_for_3D_Vision_Language_Learning_ICCV_2025_paper.pdf#page=3) · [PDF 4쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Wang_Mamba-3VL_Taming_State_Space_Model_for_3D_Vision_Language_Learning_ICCV_2025_paper.pdf#page=4) · [PDF 5쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Wang_Mamba-3VL_Taming_State_Space_Model_for_3D_Vision_Language_Learning_ICCV_2025_paper.pdf#page=5)
+- 3D 지시 대상 식별·질의응답 등에서 정확도와 연산 비용을 비교하고 스캔 방식과 위치 어댑터를 분리해 평가했다. [PDF 5쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Wang_Mamba-3VL_Taming_State_Space_Model_for_3D_Vision_Language_Learning_ICCV_2025_paper.pdf#page=5) · [PDF 6쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Wang_Mamba-3VL_Taming_State_Space_Model_for_3D_Vision_Language_Learning_ICCV_2025_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Wang_Mamba-3VL_Taming_State_Space_Model_for_3D_Vision_Language_Learning_ICCV_2025_paper.pdf#page=7)
 
 ## Evaluation Scope
 

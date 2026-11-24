@@ -16,12 +16,11 @@
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 원문 해당 쪽과 대조했다. [본문](https://openaccess.thecvf.com/content/CVPR2026/papers/Liu_GenSplat_Bridging_the_Generalization_Gap_in_3DGS_Language_Comprehension_CVPR_2026_paper.pdf)
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Although large-scale training enables the generalization of SceneSplat [40] across scenes, its formulation remains restricted to a predefined vocabulary and thus fails to handle free-form language queries.
-
-방법 관련 발췌 — In summary, our key contributions are: • We introduce GenSplat, the first generalizable 3DGS framework that enables open-vocabulary language understanding and spatial reasoning, through a tailored structured learning process to systemat ...
+GenSplat은 새로운 3D 가우시안 장면에서도 자유 형식의 지시가 가리키는 물체를 찾기 위해 언어와 가우시안 표현을 단계적으로 정렬한다. [PDF 1쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Liu_GenSplat_Bridging_the_Generalization_Gap_in_3DGS_Language_Comprehension_CVPR_2026_paper.pdf#page=1) · [PDF 3쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Liu_GenSplat_Bridging_the_Generalization_Gap_in_3DGS_Language_Comprehension_CVPR_2026_paper.pdf#page=3)
 
 ## Problem and Motivation
 
@@ -55,16 +54,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** In summary, our key contributions are: • We introduce GenSplat, the first generalizable 3DGS framework that enables open-vocabulary language understanding and spatial reasoning, through a ...
-- **p. 1 / 1. Introduction - extractive body cue:** First, we propose a multi-stage training strategy, Progressive Language Grounding Curriculum, to gradually guide the model from learning semantic-level representations to fine-grained instance-level concepts, and ...
-- **p. 2 / 1. Introduction - extractive body cue:** We propose GenSplat, the first approach to achieve generalizable language-guided understanding in 3DGS.
-- **p. 3 / 3. The GenSplat Method - extractive body cue:** 2, GenSplat consists of three main components: the Gaussian Encoder, the Instance Decoder, and the MLLMguided Referring Decoder.
-- **p. 3 / 3.1. Progressive Language Grounding Curriculum - extractive body cue:** To address this limitation, we propose the Progressive Language Grounding Curriculum, which aligns 3D Gaussian primitives with multi-level linguistic concepts hierarchically: grounding fundamental spatial and ...
-- **p. 7 / 4.3. Comparison with State-of-the-Art Models - extractive body cue:** Our GenSplat achieves consistently better results over the expert model SplatTalk [61] (e.g., a +26.8% CIDEr (C) improvement on ScanQA [2]), as well as the ...
-- **p. 7 / 4.3. Comparison with State-of-the-Art Models - extractive body cue:** Results in Table 2 show that our GenSplat method significantly outperforms other methods without requiring per-scene optimization, showcasing its robust generalization capabilities.
-- **p. 6 / 4.3. Comparison with State-of-the-Art Models - extractive body cue:** We report comparison results on the ScanRefer [5] (featuring single referred object) and Multi3DRefer [76] (featuring varying numbers of referred objects) datasets, as shown in ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 의미 범주에서 개별 인스턴스와 자유 표현으로 학습 범위를 넓히고, 기하와 영상 단서를 활용해 모델에 보여 줄 뷰를 고른다. [PDF 3쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Liu_GenSplat_Bridging_the_Generalization_Gap_in_3DGS_Language_Comprehension_CVPR_2026_paper.pdf#page=3) · [PDF 4쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Liu_GenSplat_Bridging_the_Generalization_Gap_in_3DGS_Language_Comprehension_CVPR_2026_paper.pdf#page=4)
+- 멀티모달 언어 모델의 의미·공간 정보를 위치 추정에 결합하고 지시 분할, 시각적 위치 추정, 장면 질의응답에서 전이를 평가했다. [PDF 5쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Liu_GenSplat_Bridging_the_Generalization_Gap_in_3DGS_Language_Comprehension_CVPR_2026_paper.pdf#page=5) · [PDF 6쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Liu_GenSplat_Bridging_the_Generalization_Gap_in_3DGS_Language_Comprehension_CVPR_2026_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Liu_GenSplat_Bridging_the_Generalization_Gap_in_3DGS_Language_Comprehension_CVPR_2026_paper.pdf#page=7)
 
 ## Evaluation Scope
 

@@ -16,12 +16,11 @@
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (21 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 원문 해당 쪽과 대조했다. [본문](https://openaccess.thecvf.com/content_CVPR_2019/papers/Choy_4D_Spatio-Temporal_ConvNets_Minkowski_Convolutional_Neural_Networks_CVPR_2019_paper.pdf)
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — To resolve most, if not all, of the challenges in the highdimensional perception, we adopt a sparse tensor [8, 9] for our problem and propose the generalized sparse convolutions.
-
-방법 관련 발췌 — To overcome this challenge, we propose custom kernels with non-(hyper)-cubic shapes using the generalized sparse convolution.
+Minkowski ConvNet은 공간과 시간을 포함하는 고차원 희소 격자 위에 합성곱을 정의해 점군 시퀀스의 의미 분할을 학습한다. [PDF 1쪽](https://openaccess.thecvf.com/content_CVPR_2019/papers/Choy_4D_Spatio-Temporal_ConvNets_Minkowski_Convolutional_Neural_Networks_CVPR_2019_paper.pdf#page=1) · [PDF 3쪽](https://openaccess.thecvf.com/content_CVPR_2019/papers/Choy_4D_Spatio-Temporal_ConvNets_Minkowski_Convolutional_Neural_Networks_CVPR_2019_paper.pdf#page=3)
 
 ## Problem and Motivation
 
@@ -55,16 +54,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** To overcome this challenge, we propose custom kernels with non-(hyper)-cubic shapes using the generalized sparse convolution.
-- **p. 2 / 1. Introduction - extractive body cue:** To enforce consistency, we propose high-dimensional conditional random fields defined in a 7D trilateral space (space-time-color) with a stationary pairwise consistency function.
-- **p. 1 / Abstract - extractive body cue:** In this work, we propose 4-dimensional convolutional neural networks for spatio-temporal perception that can directly process such 3D-videos using high-dimensional convolutions.
-- **p. 1 / Abstract - extractive body cue:** To overcome challenges in the high-dimensional 4D space, we propose the hybrid kernel, a special case of the generalized sparse convolution, and the trilateral-stationary conditional ...
-- **p. 3 / 4. Minkowski Engine - extractive body cue:** In this section, we propose an open-source autodifferentiation library for sparse tensors and the generalized sparse convolution (Sec.
-- **p. 7 / 7.4. Results and Analysis - extractive body cue:** We trained the same network for 60k iterations with 2cm voxel and achieved 72.1% mIoU on ScanNet after the deadline.
-- **p. 7 / 7.4. Results and Analysis - extractive body cue:** We were able to achieve +19% mIOU on ScanNet, and +7% on Stanford compared with the bestpublished works by the CVPR deadline.
-- **p. 8 / 7.4. Results and Analysis - extractive body cue:** 4D analysis The RueMongue dataset is a small dataset that ranges one section of a street, so with the smallest network, we were able to ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 활성 좌표에서만 동작하는 일반화 희소 합성곱을 정의하고 4차원 시공간 데이터를 위한 하이브리드 커널을 구성했다. [PDF 3쪽](https://openaccess.thecvf.com/content_CVPR_2019/papers/Choy_4D_Spatio-Temporal_ConvNets_Minkowski_Convolutional_Neural_Networks_CVPR_2019_paper.pdf#page=3) · [PDF 4쪽](https://openaccess.thecvf.com/content_CVPR_2019/papers/Choy_4D_Spatio-Temporal_ConvNets_Minkowski_Convolutional_Neural_Networks_CVPR_2019_paper.pdf#page=4) · [PDF 5쪽](https://openaccess.thecvf.com/content_CVPR_2019/papers/Choy_4D_Spatio-Temporal_ConvNets_Minkowski_Convolutional_Neural_Networks_CVPR_2019_paper.pdf#page=5)
+- 3D 공간 모델과 시간을 포함한 4D 모델을 비교해 연속 관측의 시간 정보가 의미 분할에 주는 영향을 측정했다. [PDF 6쪽](https://openaccess.thecvf.com/content_CVPR_2019/papers/Choy_4D_Spatio-Temporal_ConvNets_Minkowski_Convolutional_Neural_Networks_CVPR_2019_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content_CVPR_2019/papers/Choy_4D_Spatio-Temporal_ConvNets_Minkowski_Convolutional_Neural_Networks_CVPR_2019_paper.pdf#page=7) · [PDF 8쪽](https://openaccess.thecvf.com/content_CVPR_2019/papers/Choy_4D_Spatio-Temporal_ConvNets_Minkowski_Convolutional_Neural_Networks_CVPR_2019_paper.pdf#page=8)
 
 ## Evaluation Scope
 

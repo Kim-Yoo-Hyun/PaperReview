@@ -16,12 +16,11 @@
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (12 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 원문 해당 쪽과 대조했다. [본문](https://openaccess.thecvf.com/content/CVPR2025/papers/Shen_High-fidelity_3D_Object_Generation_from_Single_Image_with_RGBN-Volume_Gaussian_CVPR_2025_paper.pdf)
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, the persisting challenge arises due to the inherent geometric ambiguity and limited information provided in single-view images.
-
-방법 관련 발췌 — In summary, our contributions are as follows: • We propose a novel RGBN-volume Gaussian reconstruction model, called GS-RGBN, to generate high-quality 3D assets from single-view images in just a few seconds. • ...
+GS-RGBN은 한 장의 물체 영상으로부터 여러 시점의 색과 표면 법선을 결합해 가우시안으로 표현한 3D 물체를 생성한다. [PDF 1쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Shen_High-fidelity_3D_Object_Generation_from_Single_Image_with_RGBN-Volume_Gaussian_CVPR_2025_paper.pdf#page=1) · [PDF 3쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Shen_High-fidelity_3D_Object_Generation_from_Single_Image_with_RGBN-Volume_Gaussian_CVPR_2025_paper.pdf#page=3)
 
 ## Problem and Motivation
 
@@ -55,16 +54,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** In summary, our contributions are as follows: • We propose a novel RGBN-volume Gaussian reconstruction model, called GS-RGBN, to generate high-quality 3D assets from single-view ...
-- **p. 2 / 1. Introduction - extractive body cue:** GS-RGBN implements two key insights: first, unlike traditional methods that employ 2D convolutions to encode image features and decode corresponding per-pixel 3D Gaussian attributes in ...
-- **p. 3 / 3. Method - extractive body cue:** Then, we propose a simple but effective feature-level crossvolume fusion module that fuses the RGB and normal volumes to reproduce a fine-grained RGBN volume, aligning ...
-- **p. 3 / 3. Method - extractive body cue:** Next, we describe how to decode the RGBN volume to generate high-quality 2D Gaussians for novel view rendering and high-quality shape reconstruction (Sec.
-- **p. 5 / 4.2. Novel View Synthesis - extractive body cue:** Our method significantly outperforms all recent methods by a large margin 21562
-- **p. 8 / Figure/Table caption - extractive body cue:** Figure 6. Ablation study of different training models. Our full model achieves the best 3D object reconstruction with consistent details. Gaussian-based methods due to varying ...
-- **p. 7 / 4.4. Runtime Efficiency - extractive body cue:** Given the superior performance achieved, it is deemed acceptable for our method to allocate additional time towards establishing a structured 3D voxel grid and aggregating ...
-- **p. 6 / 4.2. Novel View Synthesis - extractive body cue:** The PSNR, SSIM, and LPIPS metrics for novel view synthesis on the GSO dataset are improved by 5.59dB, 0.063, and 0.064, respectively, compared to the ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 다중 뷰 RGB·법선 특징을 공통 3D 복셀 공간에 모으고 이 체적 특징에서 가우시안의 위치와 외관을 예측한다. [PDF 3쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Shen_High-fidelity_3D_Object_Generation_from_Single_Image_with_RGBN-Volume_Gaussian_CVPR_2025_paper.pdf#page=3) · [PDF 4쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Shen_High-fidelity_3D_Object_Generation_from_Single_Image_with_RGBN-Volume_Gaussian_CVPR_2025_paper.pdf#page=4) · [PDF 5쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Shen_High-fidelity_3D_Object_Generation_from_Single_Image_with_RGBN-Volume_Gaussian_CVPR_2025_paper.pdf#page=5)
+- 새 시점의 외관과 복원 형상 품질을 평가하고 RGB에 법선 특징을 더했을 때 달라지는 결과를 비교했다. [PDF 6쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Shen_High-fidelity_3D_Object_Generation_from_Single_Image_with_RGBN-Volume_Gaussian_CVPR_2025_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Shen_High-fidelity_3D_Object_Generation_from_Single_Image_with_RGBN-Volume_Gaussian_CVPR_2025_paper.pdf#page=7) · [PDF 8쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Shen_High-fidelity_3D_Object_Generation_from_Single_Image_with_RGBN-Volume_Gaussian_CVPR_2025_paper.pdf#page=8)
 
 ## Evaluation Scope
 

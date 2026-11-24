@@ -7,7 +7,7 @@
 ## Snapshot
 
 - Papers: **1252**
-- Resources in the combined view: **683**
+- Resources in the combined view: **684**
 - Curated relation edges: **91**
 - Papers with outgoing relations: **69**
 - Papers participating in a relation: **109**
@@ -112,8 +112,8 @@
 
 | Value | Count |
 |---|---:|
-| not_identified | 653 |
-| released | 399 |
+| not_identified | 652 |
+| released | 400 |
 | project_only | 187 |
 | not_released | 13 |
 
@@ -130,27 +130,31 @@
 
 | Value | Count |
 |---|---:|
-| EMPIRICAL / REAL-ROBOT OR HARDWARE | 444 |
+| EMPIRICAL / REAL-ROBOT OR HARDWARE | 441 |
 | not_recorded | 286 |
-| EMPIRICAL / SOURCE-REPORTED EVALUATION | 273 |
+| EMPIRICAL / SOURCE-REPORTED EVALUATION | 266 |
 | SYSTEM / EVALUATION SCOPE UNRESOLVED | 94 |
-| EMPIRICAL / SIMULATION | 73 |
+| EMPIRICAL / SIMULATION | 74 |
 | BENCHMARK / DATASET | 65 |
 | EMPIRICAL / REAL-ROBOT AND SIMULATION | 8 |
+| EMPIRICAL / BENCHMARK OR DATASET | 5 |
 | BENCHMARK / DATASET AND REAL-ROBOT COMPARISON | 4 |
 | BENCHMARK / SIMULATION | 3 |
 | BENCHMARK / DATASET WITH SIMULATION AND REAL-ROBOT COMPARISON | 2 |
+| EMPIRICAL / SIMULATION / REAL-ROBOT OR HARDWARE | 2 |
+| EMPIRICAL / BENCHMARK / REAL-ROBOT OR HARDWARE | 1 |
+| EMPIRICAL / SIMULATION / REAL-ROBOT OR HARDWARE / BENCHMARK | 1 |
 
 ## Evaluation setting
 
 | Value | Count |
 |---|---:|
-| real_robot | 458 |
+| real_robot | 459 |
 | not_recorded | 286 |
-| source_reported | 273 |
+| source_reported | 266 |
 | scope_unresolved | 94 |
-| simulation | 86 |
-| benchmark_or_dataset | 74 |
+| simulation | 90 |
+| benchmark_or_dataset | 81 |
 
 ## Evaluation protocol status
 
@@ -160,19 +164,19 @@
 | dataset_or_benchmark=reported | 961 |
 | metrics=reported | 958 |
 | baselines=reported | 949 |
-| statistics=reported | 947 |
-| split_or_generalization=reported | 926 |
-| failure_cases=reported | 926 |
+| statistics=reported | 945 |
+| split_or_generalization=reported | 925 |
+| failure_cases=reported | 925 |
 | ablations=reported | 920 |
-| split_or_generalization=not_recorded | 326 |
-| failure_cases=not_recorded | 326 |
-| ablations=not_recorded | 303 |
-| statistics=not_recorded | 296 |
+| split_or_generalization=not_recorded | 327 |
+| failure_cases=not_recorded | 327 |
+| ablations=not_recorded | 304 |
+| statistics=not_recorded | 298 |
 | baselines=not_recorded | 294 |
 | metrics=not_recorded | 293 |
 | dataset_or_benchmark=not_recorded | 291 |
 | trials_or_seeds=reported | 260 |
-| ablations=not_reported | 29 |
+| ablations=not_reported | 28 |
 | baselines=not_reported | 9 |
 | statistics=not_reported | 9 |
 | metrics=not_reported | 1 |
@@ -194,22 +198,22 @@
 
 | Value | Count |
 |---|---:|
-| reported | 945 |
-| not_recorded | 307 |
+| reported | 943 |
+| not_recorded | 309 |
 
 ## Environment status
 
 | Value | Count |
 |---|---:|
-| reported | 945 |
-| not_recorded | 307 |
+| reported | 943 |
+| not_recorded | 309 |
 
 ## Run-condition status
 
 | Value | Count |
 |---|---:|
-| reported | 936 |
-| not_recorded | 316 |
+| reported | 934 |
+| not_recorded | 318 |
 
 ## Lineage coverage status
 

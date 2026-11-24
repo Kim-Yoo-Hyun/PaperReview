@@ -16,12 +16,11 @@
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 원문 해당 쪽과 대조했다. [본문](https://openaccess.thecvf.com/content/CVPR2024/papers/Wu_IPoD_Implicit_Field_Learning_with_Point_Diffusion_for_Generalizable_3D_CVPR_2024_paper.pdf)
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — To tackle this problem, the state-of-the-art methods MCC [61] and NU-MCC [28] develop Transformer-based networks to learn an implicit field for reconstruction.
-
-방법 관련 발췌 — In summary, our key contributions are as follows: • We propose IPoD that conducts implicit field learning with point diffusion for generalizable 3D object reconstruction from single RGB-D images, where the diffusion ...
+IPoD는 한 RGB-D 뷰에서 보이는 단서를 받아 점 확산과 암시적 거리장 학습을 결합해 가려진 부분을 포함한 물체 형상을 추정한다. [PDF 1쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Wu_IPoD_Implicit_Field_Learning_with_Point_Diffusion_for_Generalizable_3D_CVPR_2024_paper.pdf#page=1) · [PDF 3쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Wu_IPoD_Implicit_Field_Learning_with_Point_Diffusion_for_Generalizable_3D_CVPR_2024_paper.pdf#page=3)
 
 ## Problem and Motivation
 
@@ -55,16 +54,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** In summary, our key contributions are as follows: • We propose IPoD that conducts implicit field learning with point diffusion for generalizable 3D object reconstruction ...
-- **p. 2 / 1. Introduction - extractive body cue:** Further, we propose a novel self-conditioning mechanism [4], which leverages the predicted implicit values to reversely assist the diffusion learning and thus forges a cooperative ...
-- **p. 5 / 3.3. Self-conditioning - extractive body cue:** We propose a novel self-conditioning method by taking the predicted implicit value ν′ as the self-condition.
-- **p. 3 / 3. Method - extractive body cue:** Finally, we introduce the design of our self-conditioning mechanism.
-- **p. 4 / 3.2. Implicit Field Learning with Point Diffusion - extractive body cue:** Note that our method is independent to this operation.
-- **p. 6 / 4. Experiments - extractive body cue:** With PVCNN, our method improves the performance of the baseline PC2-depth by 19.2% on Chamfer distance and 7.8% on F-score.
-- **p. 6 / 4. Experiments - extractive body cue:** Based on Transformer, our method achieves SOTA performance, which surpasses the previously best algorithm NU-MCC overall metrics, specifically by 28.6% on Chamfer distance (0.266→0.190) and ...
-- **p. 7 / 4.3. Ablation Study - extractive body cue:** Adding diffusion learning only into NU-MCC can bring an obvious improvement by absolute 4.9% on F-score (80.9%→85.8%), and further adding selfconditioning also makes a positive ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 노이즈가 섞인 질의점에서 표면까지의 거리와 점 갱신을 함께 학습하고 앞 단계 예측을 다음 단계의 조건으로 제공한다. [PDF 3쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Wu_IPoD_Implicit_Field_Learning_with_Point_Diffusion_for_Generalizable_3D_CVPR_2024_paper.pdf#page=3) · [PDF 4쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Wu_IPoD_Implicit_Field_Learning_with_Point_Diffusion_for_Generalizable_3D_CVPR_2024_paper.pdf#page=4) · [PDF 5쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Wu_IPoD_Implicit_Field_Learning_with_Point_Diffusion_for_Generalizable_3D_CVPR_2024_paper.pdf#page=5)
+- CO3D-v2의 단일 뷰 복원에서 점군 거리와 F-score를 비교하고 자기 조건화 및 암시적 거리 학습을 각각 검토했다. [PDF 6쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Wu_IPoD_Implicit_Field_Learning_with_Point_Diffusion_for_Generalizable_3D_CVPR_2024_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Wu_IPoD_Implicit_Field_Learning_with_Point_Diffusion_for_Generalizable_3D_CVPR_2024_paper.pdf#page=7) · [PDF 8쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Wu_IPoD_Implicit_Field_Learning_with_Point_Diffusion_for_Generalizable_3D_CVPR_2024_paper.pdf#page=8)
 
 ## Evaluation Scope
 

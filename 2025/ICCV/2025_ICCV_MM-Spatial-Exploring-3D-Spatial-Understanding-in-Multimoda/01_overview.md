@@ -16,12 +16,11 @@
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (14 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 원문 해당 쪽과 대조했다. [본문](https://openaccess.thecvf.com/content/ICCV2025/papers/Daxberger_MM-Spatial_Exploring_3D_Spatial_Understanding_in_Multimodal_LLMs_ICCV_2025_paper.pdf)
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Multimodal large language models (MLLMs) excel at 2D visual understanding but remain limited in their ability to reason about 3D space.
-
-방법 관련 발췌 — We use the MM1.5 architecture [85, 128] (focusing on the mobile-friendly 3B variant), comprising of a DFN-CLIP [34, 89] image encoder and a decoder-only LLM backbone, which are bridged via a C-Abstractor ...
+MM-Spatial은 실내 3D 장면에서 만든 공간 질의응답으로 멀티모달 언어 모델이 물체 사이의 관계, 실제 크기와 거리를 추정하도록 학습한다. [PDF 1쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Daxberger_MM-Spatial_Exploring_3D_Spatial_Understanding_in_Multimodal_LLMs_ICCV_2025_paper.pdf#page=1) · [PDF 3쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Daxberger_MM-Spatial_Exploring_3D_Spatial_Understanding_in_Multimodal_LLMs_ICCV_2025_paper.pdf#page=3)
 
 ## Problem and Motivation
 
@@ -52,15 +51,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 6 / Figure/Table caption - extractive body cue:** Table 3. CA-VQA Results. MM-Spatial-3B significantly outperforms (much larger) top open-source and commercial models across all tasks, demonstrating its strong spatial understanding ability. Model performance ...
-- **p. 5 / 5.2. Overview of Benchmark Category Results - extractive body cue:** MM-Spatial significantly improves on the Spatial category while maintaining performance competitive with MM1.5 across the other categories, suggesting that spatial reasoning can be improved without ...
-- **p. 7 / 5.4. CV-Bench Results - extractive body cue:** 4 demonstrate that MMSpatial-3B 10 significantly outperforms the much larger SOTA Cambrian-1-34B 8 , highlighting the effectiveness of SFT on similar data.
-- **p. 2 / 3. We run extensive experiments illustrating the benefits - extractive body cue:** We show that 1) we can train MM-Spatial, a generalist MLLM achieving SOTA on spatial understanding benchmarks (CV-Bench, SpatialRGPT-Bench, CA-VQA), while retaining performance on other ...
-- **p. 5 / 5.1. Model Variants - extractive body cue:** Benchmark Category Results MM-Spatial is a generalist MLLM that improves strongly on the Spatial category while rivaling the MM1.5 baseline across the other task categories. ...
-- **p. 7 / 5.4. CV-Bench Results - extractive body cue:** Notably, MM-Spatial (Blind eval) 13 achieves the best accuracy among all models on the 2D Object Count task, revealing a substantial bias in this benchmark.
-- **p. 8 / Figure/Table caption - extractive body cue:** Table 6. SpatialRGPT-Bench Results. MM-Spatial-3B achieves SOTA with both image-only input and tool-use monocular depth, out- performing SpatialRGPT-VILA-1.5-8B (which fully encodes depth). Training on a ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- CA-VQA는 열린 범주의 3D 주석을 단일·다중 시점 질문과 미터 단위 거리·크기 정답으로 변환하고 학습 자료와 평가 자료를 제공한다. [PDF 3쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Daxberger_MM-Spatial_Exploring_3D_Spatial_Understanding_in_Multimodal_LLMs_ICCV_2025_paper.pdf#page=3) · [PDF 4쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Daxberger_MM-Spatial_Exploring_3D_Spatial_Understanding_in_Multimodal_LLMs_ICCV_2025_paper.pdf#page=4)
+- 외부 공간 이해 벤치마크와 CA-VQA에서 성능을 비교하고, 추가 시점과 미터 단위 깊이가 각 과제의 응답에 주는 영향을 분석했다. [PDF 5쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Daxberger_MM-Spatial_Exploring_3D_Spatial_Understanding_in_Multimodal_LLMs_ICCV_2025_paper.pdf#page=5) · [PDF 6쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Daxberger_MM-Spatial_Exploring_3D_Spatial_Understanding_in_Multimodal_LLMs_ICCV_2025_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Daxberger_MM-Spatial_Exploring_3D_Spatial_Understanding_in_Multimodal_LLMs_ICCV_2025_paper.pdf#page=7) · [PDF 8쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Daxberger_MM-Spatial_Exploring_3D_Spatial_Understanding_in_Multimodal_LLMs_ICCV_2025_paper.pdf#page=8)
 
 ## Evaluation Scope
 

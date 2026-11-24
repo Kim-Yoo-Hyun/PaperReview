@@ -16,12 +16,11 @@
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 원문 해당 쪽과 대조했다. [본문](https://openaccess.thecvf.com/content/CVPR2026/papers/Sun_Uni3R_Unified_3D_Reconstruction_and_Semantic_Understanding_via_Generalizable_Gaussian_CVPR_2026_paper.pdf)
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Recent efforts, including LangSplat [28] and Feature-3DGS [45], have incorporated semantic fields into 3D Gaussian Splatting, yet remain constrained by scene-specific optimization and lack scalability in real-world, zero-shot applications.
-
-방법 관련 발췌 — Our contributions are summarized as follows: • We introduce Uni3R, a novel feed-forward architecture that unifies 3D reconstruction and semantic understanding.
+Uni3R은 카메라 자세가 주어지지 않은 여러 영상을 받아 장면의 가우시안 기하·외관과 열린 어휘 의미 특징을 함께 예측한다. [PDF 1쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Sun_Uni3R_Unified_3D_Reconstruction_and_Semantic_Understanding_via_Generalizable_Gaussian_CVPR_2026_paper.pdf#page=1) · [PDF 3쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Sun_Uni3R_Unified_3D_Reconstruction_and_Semantic_Understanding_via_Generalizable_Gaussian_CVPR_2026_paper.pdf#page=3)
 
 ## Problem and Motivation
 
@@ -55,16 +54,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** Our contributions are summarized as follows: • We introduce Uni3R, a novel feed-forward architecture that unifies 3D reconstruction and semantic understanding.
-- **p. 2 / 1. Introduction - extractive body cue:** To address these limitations, we propose Uni3R, a novel, generalizable framework that synthesizes a unified 3D representation from arbitrary multi-view images for both highfidelity rendering ...
-- **p. 3 / 3. Method - extractive body cue:** This section details our methodology, beginning with the Feed-Forward 3D Gaussian Model in Sec.
-- **p. 4 / 3.1.2. Cross-View Transformer Encoder - extractive body cue:** The Cross-View Transformer Encoder consists of a series of Transformer blocks that alternate between intra-frame and cross-frame attention.
-- **p. 5 / 3.3. Training Objectives - extractive body cue:** Given that the predictions from VGGT are not uniformly reliable, especially in challenging regions such as reflective surfaces or areas with heavy occlusion, we introduce ...
-- **p. 6 / 4.2. Experiment Results - extractive body cue:** Notably, it achieves superior performance in both novel view synthesis and open-vocabulary segmentation, offering a substantial speed advantage over traditional per-scene optimization methods.
-- **p. 6 / 4.2. Experiment Results - extractive body cue:** While Uni3R is supervised by LSeg, it outperforms by resolving 2D view-dependent ambiguities through 3D spatial fusion.
-- **p. 7 / 0.724 17.28 13.31 ≈60min - extractive body cue:** Uni3R consistently outperforms all baselines under both 4-view and 8-view settings.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 시점 간 특징을 결합하는 모델에서 가우시안 장면과 의미 특징을 함께 복원해 새 시점 렌더링과 언어 기반 인식을 지원한다. [PDF 3쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Sun_Uni3R_Unified_3D_Reconstruction_and_Semantic_Understanding_via_Generalizable_Gaussian_CVPR_2026_paper.pdf#page=3) · [PDF 4쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Sun_Uni3R_Unified_3D_Reconstruction_and_Semantic_Understanding_via_Generalizable_Gaussian_CVPR_2026_paper.pdf#page=4) · [PDF 5쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Sun_Uni3R_Unified_3D_Reconstruction_and_Semantic_Understanding_via_Generalizable_Gaussian_CVPR_2026_paper.pdf#page=5)
+- 실내 장면과 다양한 뷰 합성 자료에서 영상 재구성과 의미 이해를 평가하고 두 목적을 함께 학습했을 때의 영향을 비교했다. [PDF 5쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Sun_Uni3R_Unified_3D_Reconstruction_and_Semantic_Understanding_via_Generalizable_Gaussian_CVPR_2026_paper.pdf#page=5) · [PDF 6쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Sun_Uni3R_Unified_3D_Reconstruction_and_Semantic_Understanding_via_Generalizable_Gaussian_CVPR_2026_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Sun_Uni3R_Unified_3D_Reconstruction_and_Semantic_Understanding_via_Generalizable_Gaussian_CVPR_2026_paper.pdf#page=7)
 
 ## Evaluation Scope
 

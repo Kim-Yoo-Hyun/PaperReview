@@ -16,12 +16,11 @@
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (9 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 원문 해당 쪽과 대조했다. [본문](https://arxiv.org/pdf/2206.10092v2)
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — LiDAR and camera are the two main sensors used by the current autonomous systems to detect 3D objects and perceive the environment.
-
-방법 관련 발췌 — Therefore, in this work, we introduce BEVDepth, a new multi-view 3D detector that leverages depth supervision derives from point clouds to guide depth learning.
+BEVDepth는 카메라 영상으로 조감도 특징을 만들 때 픽셀별 깊이를 명시적으로 감독해 멀티뷰 3D 물체 검출을 개선한다. [PDF 1쪽](https://arxiv.org/pdf/2206.10092v2#page=1) · [PDF 3쪽](https://arxiv.org/pdf/2206.10092v2#page=3)
 
 ## Problem and Motivation
 
@@ -51,16 +50,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 1 / 1 Introduction - extractive body cue:** Therefore, in this work, we introduce BEVDepth, a new multi-view 3D detector that leverages depth supervision derives from point clouds to guide depth learning.
-- **p. 1 / 1 Introduction - extractive body cue:** The BEV representation is non-trivial since it not only enables an end-to-end training scheme of a multiple input cameras system but also provides a unified ...
-- **p. 6 / 5 Experiment - extractive body cue:** In the end, Depth Refinement Module improves 0.8% mAP.
-- **p. 6 / 5 Experiment - extractive body cue:** 5.2 Ablation Study Component Analysis As shown in Table 4, our vanilla BEVDepth achieves 28.2% mAP and 32.7% NDS.
-- **p. 4 / Figure/Table caption - extractive body cue:** Figure 2: Testing detectors' robustness to image sizes. We use 256 × 704 for training. mAP on nuScenes are reported. best-predicted pixel for each object. ...
-- **p. 7 / Figure/Table caption - extractive body cue:** Table 8: Comparison on the nuScenes test set. L denotes LiDAR and C denotes camera. BEVDepth uses pretrained VovNet as backbone. the resolution of the ...
-- **p. 2 / Figure/Table caption - extractive body cue:** Figure 1: Depth estimation results in Lift-splat detector and BEVDepth. Dashed boxes highlight the regions that Lift-splat detector makes "relatively" accurate depth predictions in, usually ...
-- **p. 3 / Figure/Table caption - extractive body cue:** Table 2: Evaluation of depth prediction on the nuScenes val set. DL denotes Depth Loss. All foreground points are taken for evaluation. 3.2 Making Lift-splat ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 학습 시 LiDAR를 영상에 투영한 깊이 정답을 쓰고, 카메라 파라미터를 반영하는 깊이망과 특징 정제를 통해 2D 특징을 3D로 옮긴다. [PDF 3쪽](https://arxiv.org/pdf/2206.10092v2#page=3) · [PDF 4쪽](https://arxiv.org/pdf/2206.10092v2#page=4) · [PDF 5쪽](https://arxiv.org/pdf/2206.10092v2#page=5)
+- nuScenes에서 카메라 기반 추론을 평가하고 깊이 감독과 여러 시점의 시간적 결합이 검출·깊이 성능에 미치는 영향을 분리했다. [PDF 5쪽](https://arxiv.org/pdf/2206.10092v2#page=5) · [PDF 6쪽](https://arxiv.org/pdf/2206.10092v2#page=6) · [PDF 7쪽](https://arxiv.org/pdf/2206.10092v2#page=7)
 
 ## Evaluation Scope
 

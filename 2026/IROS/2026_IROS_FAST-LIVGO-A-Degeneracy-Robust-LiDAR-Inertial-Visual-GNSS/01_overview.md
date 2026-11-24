@@ -16,12 +16,11 @@
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 원문 해당 쪽과 대조했다. [본문](https://arxiv.org/pdf/2606.19190v2)
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, in large-scale field missions or high-speed Unmanned Aerial Vehicle (UAV) flights, pure LIVO systems still face critical limitations.
-
-방법 관련 발췌 — To address these issues, we propose a tightly-coupled multi-sensor fusion system formulated within an Error-State Iterated Kalman Filter (ESIKF), aiming at globally consistent mapping in highly dynamic scenarios and robust operation in ...
+FAST-LIVGO는 LiDAR·관성·영상·GNSS를 오차 상태 필터에 결합해 일부 센서 관측의 기하 정보가 약한 구간에서도 궤적을 추정한다. [PDF 1쪽](https://arxiv.org/pdf/2606.19190v2#page=1) · [PDF 3쪽](https://arxiv.org/pdf/2606.19190v2#page=3)
 
 ## Problem and Motivation
 
@@ -53,15 +52,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 1 / I. INTRODUCTION - extractive body cue:** To address these issues, we propose a tightly-coupled multi-sensor fusion system formulated within an Error-State Iterated Kalman Filter (ESIKF), aiming at globally consistent mapping in ...
-- **p. 2 / III. METHODOLOGY - extractive body cue:** The processing pipeline consists of two main modules: LIVO Update: Adopting the FAST-LIVO2 strategy, this module sequentially updates the state using camera photometric residuals and ...
-- **p. 1 / I. INTRODUCTION - extractive body cue:** The main contributions are summarized as follows: • A tightly-coupled LiDAR-Inertial-Visual-GNSS fusion framework based on ESIKF.
-- **p. 6 / V. EXPERIMENTAL RESULTS - extractive body cue:** By sacrificing negligible accuracy in denied environments, our system gains significant global accuracy improvements in open areas and successfully prevents tightly-coupled system crashes, achieving optimal ...
-- **p. 6 / V. EXPERIMENTAL RESULTS - extractive body cue:** Notably, although the ablation version (Ours w/o Rejection) outperforms pure FAST-LIVO2 due to GNSS integration, it remains slightly inferior to our complete version.
-- **p. 7 / Figure/Table caption - extractive body cue:** Fig. 6. Trajectory evaluation in the large-scale flight. (a) and (b) show ENU position estimates across different phases. Our method (green) tightly aligns with the ...
-- **p. 7 / Figure/Table caption - extractive body cue:** Fig. 5. Qualitative comparison of global point cloud maps. (a1, b1) Our method; (a2, b2) FAST-LIVO2. To further validate this improvement, Fig. 6 evaluates the ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 동적 시간 정합으로 센서 정보를 맞추고 도플러와 고정 기준점의 시간 차분 반송파 위상을 관측식으로 사용한다. [PDF 3쪽](https://arxiv.org/pdf/2606.19190v2#page=3) · [PDF 4쪽](https://arxiv.org/pdf/2606.19190v2#page=4) · [PDF 5쪽](https://arxiv.org/pdf/2606.19190v2#page=5)
+- LiDAR·관성·시각 추정의 퇴화 정도에 따라 이상치 제거 방식을 바꾸고, M3DGR과 자체 고정익 무인기 비행에서 궤적을 비교했다. [PDF 5쪽](https://arxiv.org/pdf/2606.19190v2#page=5) · [PDF 6쪽](https://arxiv.org/pdf/2606.19190v2#page=6) · [PDF 7쪽](https://arxiv.org/pdf/2606.19190v2#page=7)
 
 ## Evaluation Scope
 

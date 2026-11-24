@@ -16,12 +16,11 @@
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 원문 해당 쪽과 대조했다. [본문](https://openaccess.thecvf.com/content/CVPR2026/papers/Song_PointGS_Semantic-Consistent_Unsupervised_3D_Point_Cloud_Segmentation_with_3D_Gaussian_CVPR_2026_paper.pdf)
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Its dual core properties directly resolve the limitation above.
-
-방법 관련 발췌 — In summary, our contributions are as follows: • We leverage Gaussian Splatting as a unified intermediate representation for unsupervised point cloud segmentation, effectively bridging the discrete-continuous domain gap between 3D points ...
+PointGS는 여러 뷰의 2D 분할 신호를 가우시안 장면에 모아 3D 점별 수동 라벨 없이 점군의 의미 분할을 학습한다. [PDF 1쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Song_PointGS_Semantic-Consistent_Unsupervised_3D_Point_Cloud_Segmentation_with_3D_Gaussian_CVPR_2026_paper.pdf#page=1) · [PDF 3쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Song_PointGS_Semantic-Consistent_Unsupervised_3D_Point_Cloud_Segmentation_with_3D_Gaussian_CVPR_2026_paper.pdf#page=3)
 
 ## Problem and Motivation
 
@@ -55,16 +54,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** In summary, our contributions are as follows: • We leverage Gaussian Splatting as a unified intermediate representation for unsupervised point cloud segmentation, effectively bridging the ...
-- **p. 4 / 3.3. Points to 3D Gaussians Reconstruction - extractive body cue:** In addition, we introduce a Multi-View Consistency Check inspired by SuGaR [9].
-- **p. 3 / 3.2. Preliminary - extractive body cue:** Critical to our work, 3D-GS rendering is differentiable and supports backpropagation: differentiability enables gradient propagation from 2D pixels to 3D Gaussians, while the explicit Gaussian ...
-- **p. 3 / 3. Method - extractive body cue:** Our approach combines 2D segmentation priors with 3D Gaussian splatting to address the shortcomings of current 2D prior-guided point cloud segmentation methods.
-- **p. 2 / 1. Introduction - extractive body cue:** Fortunately, the 2D vision domain has accumulated massive labeled data and developed generalizable pre-trained large models (e.g., DINOv2 [22], SAM [18]), which can provide rich ...
-- **p. 6 / 4.2. 3D Unsupervised Semantic Segmentation - extractive body cue:** Relative to the state-of-theart LogoSP, we achieve a 0.9% improvement in mIoU.
-- **p. 8 / 4.4. Parameter Sensitivity Experiment - extractive body cue:** Although it can improve the segmentation accuracy of smaller items, it sacrifices the semantic consistency of larger items.
-- **p. 6 / 4.2. 3D Unsupervised Semantic Segmentation - extractive body cue:** In the absence of any human annotations or pre-training on point cloud data, our method outperforms the majority of these baselines.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 다중 뷰에서 얻은 마스크의 의미 정보를 조밀한 가우시안에 증류하고, 이를 원래의 희소 점군에 대응시켜 분할 특징을 얻는다. [PDF 3쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Song_PointGS_Semantic-Consistent_Unsupervised_3D_Point_Cloud_Segmentation_with_3D_Gaussian_CVPR_2026_paper.pdf#page=3) · [PDF 4쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Song_PointGS_Semantic-Consistent_Unsupervised_3D_Point_Cloud_Segmentation_with_3D_Gaussian_CVPR_2026_paper.pdf#page=4) · [PDF 5쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Song_PointGS_Semantic-Consistent_Unsupervised_3D_Point_Cloud_Segmentation_with_3D_Gaussian_CVPR_2026_paper.pdf#page=5)
+- ScanNet과 S3DIS 실내 점군에서 비지도 분할 성능을 평가하고 2D 의미 단서와 가우시안 표현의 기여를 분리했다. [PDF 6쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Song_PointGS_Semantic-Consistent_Unsupervised_3D_Point_Cloud_Segmentation_with_3D_Gaussian_CVPR_2026_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Song_PointGS_Semantic-Consistent_Unsupervised_3D_Point_Cloud_Segmentation_with_3D_Gaussian_CVPR_2026_paper.pdf#page=7) · [PDF 8쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Song_PointGS_Semantic-Consistent_Unsupervised_3D_Point_Cloud_Segmentation_with_3D_Gaussian_CVPR_2026_paper.pdf#page=8)
 
 ## Evaluation Scope
 

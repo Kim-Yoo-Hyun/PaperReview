@@ -16,14 +16,13 @@
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 원문 해당 쪽과 대조했다. [본문](https://openaccess.thecvf.com/content/CVPR2026/papers/He_NG-GS_NeRF-guided_3D_Gaussian_Splatting_Segmentation_CVPR_2026_paper.pdf)
 
 > DOC-QA1 (2026-10-23): 제어문자·깨진 추출 구간과 직접 연결된 표 항목을 PDF 페이지 이미지와 대조했다. 확인 범위·원문 URL·페이지·수정 이력은 [대조 기록](../../../work/sources/pdf_note_review_2026-10-23.json)에 있다. 노트 전체의 정독이나 모든 기존 주장에 대한 재검증을 뜻하지 않으며 reading status는 유지한다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — To overcome these challenges, we propose a novel NeRF-Guided 3DGS (NG-GS) segmentation framework, aiming to achieve model continuity at object boundaries.
-
-방법 관련 발췌 — With the proposed NG-GS framework, we make the following main contributions: • we develop a continuous feature field construction module that combines RBF interpolation with MRHE to generate spatially smooth and multi-scale ...
+NG-GS는 3D 가우시안으로 표현한 장면에서 물체 경계가 계단처럼 끊기는 문제를 연속 특징장으로 보완해 분할한다. [PDF 1쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/He_NG-GS_NeRF-guided_3D_Gaussian_Splatting_Segmentation_CVPR_2026_paper.pdf#page=1) · [PDF 3쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/He_NG-GS_NeRF-guided_3D_Gaussian_Splatting_Segmentation_CVPR_2026_paper.pdf#page=3)
 
 ## Problem and Motivation
 
@@ -57,16 +56,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** With the proposed NG-GS framework, we make the following main contributions: • we develop a continuous feature field construction module that combines RBF interpolation with ...
-- **p. 1 / 1. Introduction - extractive body cue:** To overcome these challenges, we propose a novel NeRF-Guided 3DGS (NG-GS) segmentation framework, aiming to achieve model continuity at object boundaries.
-- **p. 1 / 1. Introduction - extractive body cue:** (a) Mask (b) Mutated (c) Continuation (d) Our method Figure 1.
-- **p. 2 / 1. Introduction - extractive body cue:** Experimental results reveal that our method consistently outperforms all compared baselines across all metrics on three benchmarks.
-- **p. 4 / 4.1. Edge Gaussian Continuity - extractive body cue:** By this way, we construct a query set Pquery = {qi,k}, which consists of Nrow·Ncol·K query points.
-- **p. 7 / 5.3. Qualitative Results - extractive body cue:** Red bounding boxes highlight key areas where our method has achieved significant improvements in boundary segmentation and spatial continuity.
-- **p. 7 / 5.4. Computational Efficiency Analysis - extractive body cue:** Our method achieves similar computational efficiency to COB-GS and outperforms other maskbased methods in both training and inference efficiency.
-- **p. 6 / 5.2. Quantitative Results - extractive body cue:** The quantitative results (Table 1-Table 3) show that our method outperforms all baselines across all metrics on the NVOS, LERF-OVS, and ScanNet datasets.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 시점별 마스크의 분산으로 모호한 경계 가우시안을 찾고 방사 기저 함수 보간과 해시 인코딩으로 주변 특징을 연속화한다. [PDF 3쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/He_NG-GS_NeRF-guided_3D_Gaussian_Splatting_Segmentation_CVPR_2026_paper.pdf#page=3) · [PDF 4쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/He_NG-GS_NeRF-guided_3D_Gaussian_Splatting_Segmentation_CVPR_2026_paper.pdf#page=4) · [PDF 5쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/He_NG-GS_NeRF-guided_3D_Gaussian_Splatting_Segmentation_CVPR_2026_paper.pdf#page=5)
+- 가벼운 NeRF와 가우시안 특징을 공동 최적화하고 NVOS, LERF-OVS와 ScanNet에서 전체 영역과 물체 경계의 분할 품질을 평가했다. [PDF 5쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/He_NG-GS_NeRF-guided_3D_Gaussian_Splatting_Segmentation_CVPR_2026_paper.pdf#page=5) · [PDF 6쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/He_NG-GS_NeRF-guided_3D_Gaussian_Splatting_Segmentation_CVPR_2026_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/He_NG-GS_NeRF-guided_3D_Gaussian_Splatting_Segmentation_CVPR_2026_paper.pdf#page=7) · [PDF 8쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/He_NG-GS_NeRF-guided_3D_Gaussian_Splatting_Segmentation_CVPR_2026_paper.pdf#page=8)
 
 ## Evaluation Scope
 

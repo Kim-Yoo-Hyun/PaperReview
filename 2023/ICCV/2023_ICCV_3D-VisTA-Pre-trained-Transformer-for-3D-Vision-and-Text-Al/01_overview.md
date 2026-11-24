@@ -16,14 +16,13 @@
 - Code/Project: https://3d-vista.github.io/
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (14 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 원문 해당 쪽과 대조했다. [본문](https://openaccess.thecvf.com/content/ICCV2023/papers/Zhu_3D-VisTA_Pre-trained_Transformer_for_3D_Vision_and_Text_Alignment_ICCV_2023_paper.pdf)
 
 > DOC-QA1 (2026-10-23): 제어문자·깨진 추출 구간과 직접 연결된 표 항목을 PDF 페이지 이미지와 대조했다. 확인 범위·원문 URL·페이지·수정 이력은 [대조 기록](../../../work/sources/pdf_note_review_2026-10-23.json)에 있다. 노트 전체의 정독이나 모든 기존 주장에 대한 재검증을 뜻하지 않으며 reading status는 유지한다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — The lack of a simple and unified approach creates a significant gap in developing a general-purpose 3D-VL model.
-
-방법 관련 발췌 — Our main contributions can be summarized as follows: • We propose 3D-VisTA, a simple and unified Transformer for aligning 3D vision and text.
+3D-VisTA는 점군의 물체 토큰과 텍스트를 하나의 트랜스포머 구조로 정렬해 여러 3D 시각·언어 과제로 전이한다. [PDF 1쪽](https://openaccess.thecvf.com/content/ICCV2023/papers/Zhu_3D-VisTA_Pre-trained_Transformer_for_3D_Vision_and_Text_Alignment_ICCV_2023_paper.pdf#page=1) · [PDF 4쪽](https://openaccess.thecvf.com/content/ICCV2023/papers/Zhu_3D-VisTA_Pre-trained_Transformer_for_3D_Vision_and_Text_Alignment_ICCV_2023_paper.pdf#page=4)
 
 ## Problem and Motivation
 
@@ -55,16 +54,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** Our main contributions can be summarized as follows: • We propose 3D-VisTA, a simple and unified Transformer for aligning 3D vision and text.
-- **p. 1 / 1. Introduction - extractive body cue:** To fill such gap, we introduce 3D-VisTA, a Transformerbased model for 3D Vision and Text Alignment that can be easily adapted to various downstream tasks.
-- **p. 2 / 1. Introduction - extractive body cue:** Inspired by the success of large-scale pre-training in NLP [15, 41, 42, 6, 52, 31], CV [22, 17, 21, 25, 38], and 2D-VL [30, 2, ...
-- **원문 대조:** 기존 3D vision-language 모델은 한두 downstream task와 task-specific 설계에 집중하는 경향이 있다고 설명한다. 왼쪽 column 끝 문장이 오른쪽 column으로 이어지며, 사이에 끼어든 인턴·교신저자 각주는 연구 내용에서 제외했다. ([PDF p. 1](https://arxiv.org/pdf/2308.04352#page=1), §1 Introduction, two-column continuation).
-- **p. 6 / Figure/Table caption - extractive body cue:** Table 4: Grounding accuracy (%) on Nr3D and Sr3D with ground-truth object proposals. ∆denotes the performance difference between 3D-VisTA and 3D-VisTA (scratch). 3D-VisTA achieves competitive ...
-- **p. 6 / 5.1. Experimental Settings - extractive body cue:** Mask3D significantly improves the grounding accuracy by providing more accurate object proposals.
-- **p. 7 / 5.2. Downstream Task Results - extractive body cue:** Pre-training on ScanScribe significantly improves the performance of 3D-VisTA.
-- **p. 7 / 5.2. Downstream Task Results - extractive body cue:** Pretraining improves the results of most question types.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- ScanNet과 3RScan에서 구축한 ScanScribe의 장면 설명을 이용해 가려진 단어·물체 예측과 장면·텍스트 대응을 사전학습한다. [PDF 4쪽](https://openaccess.thecvf.com/content/ICCV2023/papers/Zhu_3D-VisTA_Pre-trained_Transformer_for_3D_Vision_and_Text_Alignment_ICCV_2023_paper.pdf#page=4) · [PDF 5쪽](https://openaccess.thecvf.com/content/ICCV2023/papers/Zhu_3D-VisTA_Pre-trained_Transformer_for_3D_Vision_and_Text_Alignment_ICCV_2023_paper.pdf#page=5)
+- 같은 표현을 언어 기반 물체 식별, 설명 생성, 장면 질의응답에 적용하고 사전학습과 사용한 데이터 양의 효과를 비교했다. [PDF 6쪽](https://openaccess.thecvf.com/content/ICCV2023/papers/Zhu_3D-VisTA_Pre-trained_Transformer_for_3D_Vision_and_Text_Alignment_ICCV_2023_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content/ICCV2023/papers/Zhu_3D-VisTA_Pre-trained_Transformer_for_3D_Vision_and_Text_Alignment_ICCV_2023_paper.pdf#page=7)
 
 ## Evaluation Scope
 

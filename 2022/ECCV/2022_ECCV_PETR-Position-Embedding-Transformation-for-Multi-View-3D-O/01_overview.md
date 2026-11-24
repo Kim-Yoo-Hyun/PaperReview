@@ -16,12 +16,11 @@
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (18 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 원문 해당 쪽과 대조했다. [본문](https://www.ecva.net/papers/eccv_2022/papers_ECCV/papers/136870523.pdf)
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, such 2D-to-3D transformation in DETR3D [51] may introduce several problems.
-
-방법 관련 발췌 — To summarize, our contributions are: - We propose a simple and elegant framework, termed PETR, for multi-view 3D object detection.
+PETR는 여러 카메라의 2D 특징에 카메라 기하로 계산한 3D 위치 정보를 넣어 물체 질의가 3D 경계 상자를 직접 예측하게 한다. [PDF 1쪽](https://www.ecva.net/papers/eccv_2022/papers_ECCV/papers/136870523.pdf#page=1) · [PDF 5쪽](https://www.ecva.net/papers/eccv_2022/papers_ECCV/papers/136870523.pdf#page=5)
 
 ## Problem and Motivation
 
@@ -55,16 +54,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1 Introduction - extractive body cue:** To summarize, our contributions are: - We propose a simple and elegant framework, termed PETR, for multi-view 3D object detection.
-- **p. 1 / 1 Introduction - extractive body cue:** Recently, DETR [4] has gained remarkable attention due to its contribution on end-to-end object detection.
-- **p. 2 / 1 Introduction - extractive body cue:** In this paper, we aim to develop a simple and elegant framework based on DETR [4] for 3D object detection.
-- **p. 9 / 4 Experiments - extractive body cue:** Our method also achieves the best performance on both NDS and mAP.
-- **p. 9 / 4 Experiments - extractive body cue:** It shows that PETR achieves the best performance on both NDS and mAP metrics.
-- **p. 10 / 4 Experiments - extractive body cue:** PETR converges relatively slower than DETR3D [51] within the first 12 epochs and finally achieves much better detection performance.
-- **p. 11 / 4 Experiments - extractive body cue:** In addition, the performance can be improved when we combine the 3D PE with both 2D PE and multi-view prior.
-- **p. 12 / 4 Experiments - extractive body cue:** The concatenation operation achieves similar performance compared to addition while surpassing the multiply fusion.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 영상 특징 격자의 각 광선을 깊이 방향으로 이산화하고 3D 좌표를 위치 임베딩으로 바꿔 멀티뷰 특징에 결합한다. [PDF 5쪽](https://www.ecva.net/papers/eccv_2022/papers_ECCV/papers/136870523.pdf#page=5) · [PDF 6쪽](https://www.ecva.net/papers/eccv_2022/papers_ECCV/papers/136870523.pdf#page=6) · [PDF 7쪽](https://www.ecva.net/papers/eccv_2022/papers_ECCV/papers/136870523.pdf#page=7)
+- nuScenes의 카메라 기반 3D 검출에서 검출 지표를 비교하고 3D 위치 임베딩과 멀티뷰 특징의 효과를 분석했다. [PDF 9쪽](https://www.ecva.net/papers/eccv_2022/papers_ECCV/papers/136870523.pdf#page=9) · [PDF 10쪽](https://www.ecva.net/papers/eccv_2022/papers_ECCV/papers/136870523.pdf#page=10) · [PDF 11쪽](https://www.ecva.net/papers/eccv_2022/papers_ECCV/papers/136870523.pdf#page=11)
 
 ## Evaluation Scope
 

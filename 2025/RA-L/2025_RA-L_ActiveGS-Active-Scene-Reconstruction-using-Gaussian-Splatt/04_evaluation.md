@@ -6,7 +6,7 @@
 
 ## Evaluation in One Sentence
 
-PDF body evaluation/result cue (p. 6 (IV. EXPERIMENTAL EVALUATION), p. 5 (IV. EXPERIMENTAL EVALUATION), p. 5 (IV. EXPERIMENTAL EVALUATION), p. 6 (IV. EXPERIMENTAL EVALUATION), p. 7 (IV. EXPERIMENTAL EVALUATION), p. 7 (IV. EXPERIMENTAL EVALUATION)): Our approach achieves the best performance in both rendering and mesh quality across all test scenes, supporting our first claim that it outperforms state-of-the-art NeRF and GSbased methods.
+실내 무인기 시연은 OptiTrack으로 자세를 측정했다. 데스크톱에서 RGB-D와 자세를 받아 지도를 갱신하고 충돌 없는 웨이포인트를 기체로 전송했다. [PDF 7쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=10938898#page=7)
 
 ## Evaluation Body Digest
 
@@ -21,7 +21,7 @@ PDF body evaluation/result cue (p. 6 (IV. EXPERIMENTAL EVALUATION), p. 5 (IV. EX
 
 ## Evaluation Type and Scope
 
-- **Evaluation type:** `EMPIRICAL / REAL-ROBOT OR HARDWARE`.
+- **Evaluation type:** `EMPIRICAL / SIMULATION / REAL-ROBOT OR HARDWARE`.
 - **Target system/task:** 3D scene/object와 robot coordinate frame.
 - **Input boundary:** RGB-D, image set, point cloud, depth와 camera pose.
 - **Output/decision under evaluation:** point map, pose, scene graph, affordance 또는 query result.

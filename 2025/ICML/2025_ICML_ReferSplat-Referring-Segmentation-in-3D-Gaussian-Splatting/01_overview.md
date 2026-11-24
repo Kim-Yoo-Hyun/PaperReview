@@ -16,12 +16,11 @@
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (12 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 원문 해당 쪽과 대조했다. [본문](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/he25h/he25h.pdf)
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, these methods face significant limitations when applied to R3DGS.
-
-방법 관련 발췌 — To bridge this gap, we introduce a new task: Referring 3D Gaussian Splatting Segmentation (R3DGS), which focuses on segmenting objects in a 3D Gaussian scene based on natural language expressions that typically ...
+ReferSplat은 속성이나 다른 물체와의 공간 관계를 묘사한 문장으로 3D 가우시안 장면 안의 목표 물체를 분할한다. [PDF 1쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/he25h/he25h.pdf#page=1) · [PDF 3쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/he25h/he25h.pdf#page=3)
 
 ## Problem and Motivation
 
@@ -55,16 +54,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 1 / 1. Introduction - extractive body cue:** To bridge this gap, we introduce a new task: Referring 3D Gaussian Splatting Segmentation (R3DGS), which focuses on segmenting objects in a 3D Gaussian scene ...
-- **p. 2 / 1. Introduction - extractive body cue:** To enhance spatial reasoning, we introduce a Position-aware Cross-Modal Interaction module that extracts position features for both Gaussians and language descriptions.
-- **p. 2 / 1. Introduction - extractive body cue:** In this work, we propose ReferSplat, an end-to-end framework that models 3D Gaussian points with natural language expressions in a spatially aware paradigm for Referring ...
-- **p. 3 / 3.2. Problem Statement and Method Overview - extractive body cue:** To infuse languageawareness into the 3D Gaussians, we introduce a new property called referring features.
-- **p. 4 / 3.3. 3D Gaussian Referring Fields - extractive body cue:** 2, our method surpasses existing approaches, establishing a superior referring segmentation framework in 3D Gaussian scenes.
-- **p. 8 / 4.6. Analysis of Computation Costs - extractive body cue:** Results show that ReferSplat achieves significantly lower computational complexity and faster inference speed than LangSplat (Qin et al., 2024).
-- **p. 7 / 4.3. Ablation Study - extractive body cue:** 2 show that our method significantly outperforms all baselines, demonstrating that the proposed 3D Referring Feature Fields effectively models the relationship between 3D Gaussians and ...
-- **p. 7 / 4.3. Ablation Study - extractive body cue:** When integrating all components (index 3), referred to as ReferSplat, we achieve a substantial performance gain, reaching a new state-of-the-art.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 가우시안의 위치와 언어 특징을 교차 모달 상호작용에 결합해 새 뷰에서 직접 보이지 않는 대상도 장면 안에서 식별하도록 한다. [PDF 3쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/he25h/he25h.pdf#page=3) · [PDF 4쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/he25h/he25h.pdf#page=4) · [PDF 5쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/he25h/he25h.pdf#page=5)
+- 자유 지시 표현과 목표 마스크를 갖는 Ref-LERF를 구축하고 지시 분할과 기존 개방 어휘 분할에서 공간 정보의 영향을 평가했다. [PDF 6쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/he25h/he25h.pdf#page=6) · [PDF 7쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/he25h/he25h.pdf#page=7) · [PDF 8쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/he25h/he25h.pdf#page=8)
 
 ## Evaluation Scope
 

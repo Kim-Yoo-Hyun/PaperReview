@@ -16,12 +16,11 @@
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 원문 해당 쪽과 대조했다. [본문](https://openaccess.thecvf.com/content/CVPR2025/papers/Wang_Touch2Shape_Touch-Conditioned_3D_Diffusion_for_Shape_Exploration_and_Reconstruction_CVPR_2025_paper.pdf)
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — This limitation presents challenges on two fronts.
-
-방법 관련 발췌 — The main contributions of this article are as follows: • We propose Touch2Shape, a touch-conditioned 3D diffusion model for shape exploration and reconstruction, utilizing the latent vector to guide the touch location ...
+Touch2Shape는 손끝에 닿은 작은 표면의 정보로 물체 전체 형상을 복원하고 다음에 어느 위치를 만질지 고른다. [PDF 1쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Wang_Touch2Shape_Touch-Conditioned_3D_Diffusion_for_Shape_Exploration_and_Reconstruction_CVPR_2025_paper.pdf#page=1) · [PDF 3쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Wang_Touch2Shape_Touch-Conditioned_3D_Diffusion_for_Shape_Exploration_and_Reconstruction_CVPR_2025_paper.pdf#page=3)
 
 ## Problem and Motivation
 
@@ -55,26 +54,12 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** The main contributions of this article are as follows: • We propose Touch2Shape, a touch-conditioned 3D diffusion model for shape exploration and reconstruction, utilizing the ...
-- **p. 2 / 1. Introduction - extractive body cue:** Extensive experiments validate the effectiveness of our method, demonstrating significant improvements in both reconstruction performance and the ability to improve reconstruction quality through touch exploration.
-- **p. 4 / 3.2. Touch Shape Fusion - extractive body cue:** The touch shape fusion module is designed with two goals.
-- **p. 7 / 4.4. Ablation Study - extractive body cue:** The evaluation results in different modes validate that our method can effectively integrate visual and tactile information to achieve a better reconstruction performance.
-- **p. 6 / 4.2. Evaluation on Reconstruction Performance - extractive body cue:** The latter method (we called ActiveVT here) proposes an active touch sensing for 3D reconstruction method to improve the reconstruction performance.
-- **p. 7 / 4.4. Ablation Study - extractive body cue:** As shown in Table 4, we add our proposed modules one by one to validate that each sub-module succeeds to improve the performance.
-- **p. 8 / 4.4. Ablation Study - extractive body cue:** Initially, limited information makes determining the overall global shape challenging, but with more grasp actions, our method effectively improves the reconstruction quality.
-- **p. 6 / 4.2. Evaluation on Reconstruction Performance - extractive body cue:** The quantitative results are reported in Table 2.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 촉각 관측을 조건으로 전역 형상을 생성하는 잠재 확산 모델에 접촉한 국소 표면 정보를 융합한다. [PDF 3쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Wang_Touch2Shape_Touch-Conditioned_3D_Diffusion_for_Shape_Exploration_and_Reconstruction_CVPR_2025_paper.pdf#page=3) · [PDF 4쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Wang_Touch2Shape_Touch-Conditioned_3D_Diffusion_for_Shape_Exploration_and_Reconstruction_CVPR_2025_paper.pdf#page=4) · [PDF 5쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Wang_Touch2Shape_Touch-Conditioned_3D_Diffusion_for_Shape_Exploration_and_Reconstruction_CVPR_2025_paper.pdf#page=5)
+- 형상 복원을 개선하도록 접촉 선택 정책을 학습하고 무작위·균등·오라클 선택을 같은 관측 횟수에서 비교했다. [PDF 4쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Wang_Touch2Shape_Touch-Conditioned_3D_Diffusion_for_Shape_Exploration_and_Reconstruction_CVPR_2025_paper.pdf#page=4) · [PDF 5쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Wang_Touch2Shape_Touch-Conditioned_3D_Diffusion_for_Shape_Exploration_and_Reconstruction_CVPR_2025_paper.pdf#page=5) · [PDF 6쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Wang_Touch2Shape_Touch-Conditioned_3D_Diffusion_for_Shape_Exploration_and_Reconstruction_CVPR_2025_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Wang_Touch2Shape_Touch-Conditioned_3D_Diffusion_for_Shape_Exploration_and_Reconstruction_CVPR_2025_paper.pdf#page=7)
 
 ## Evaluation Scope
 
-| Dimension | Body-grounded record | Boundary | Anchor |
-|---|---|---|---|
-| Evaluation type | EMPIRICAL / SOURCE-REPORTED EVALUATION | do not infer unreported downstream behavior | p. 7 (4.4. Ablation Study), p. 6 (4.2. Evaluation on Reconstruction Performance) |
-| Embodiment/environment | The dataset is devided into three subsets: 1,100 objects for training, 200 for validation and 350 for testing. | hardware/simulator version and reset protocol | p. 6 (4.2. Evaluation on Reconstruction Performance), p. 5 (4.1. Experimental Settings) |
-| Dataset/benchmark | The second dataset employed originates from [7], encompassing 1650 ShapeNet [3] objects that span six categories: bowls, bottles, cameras, jars, guitars, and mugs. | role, split, size and leakage | p. 6 (4.2. Evaluation on Reconstruction Performance), p. 5 (4.1. Experimental Settings), p. 5 (4.1. Experimental Settings), p. 6 (4.1. Experimental Settings) |
-| Metric | Especially on the visual-tactile 3D reconstruction task, we obtain a very low CD error, which validates the multi-modal fusion ability of our model. | definition, denominator, direction and uncertainty | p. 6 (4.2. Evaluation on Reconstruction Performance), p. 7 (4.2. Evaluation on Reconstruction Performance), p. 7 (4.4. Ablation Study) |
-| Baseline/ablation | Furthermore, the Oracle policy is used to select the action which resulted in the best improvement, which is viewed as an upper-bound point of comparison as the true optimal policy cannot be ... | fair input/data/compute/action matching | p. 7 (4.3. Evaluation on Policy), p. 7 (4.3. Evaluation on Policy), p. 1 (Figure/Table caption) |
+ABC 기반 표 3에서 접촉 영상은 시뮬레이터로 생성했다. 촉각만 썼을 때 파지 동작 5회 후 Chamfer 거리의 초기값 대비 비율은 RL 선택 6.63%, 무작위 선택 8.14%다. 낮을수록 복원 오차가 더 많이 줄었다. [PDF 5쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Wang_Touch2Shape_Touch-Conditioned_3D_Diffusion_for_Shape_Exploration_and_Reconstruction_CVPR_2025_paper.pdf#page=5) · [PDF 7쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Wang_Touch2Shape_Touch-Conditioned_3D_Diffusion_for_Shape_Exploration_and_Reconstruction_CVPR_2025_paper.pdf#page=7)
 
 ## Explicit Limitations and Failure Boundary
 

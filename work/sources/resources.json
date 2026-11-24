@@ -4034,11 +4034,6 @@
           "evidence": "cue_only"
         },
         {
-          "paper_id": "pr-0175",
-          "source": "2025/ICRA/2025_ICRA_LE-Object-Language-Embedded-Object-Level-Neural-Radiance-F/04_evaluation.md",
-          "evidence": "cue_only"
-        },
-        {
           "paper_id": "pr-0201",
           "source": "2024/ECCV/2024_ECCV_Uni3DL-A-Unified-Model-for-3D-Vision-Language-Understandin/04_evaluation.md",
           "evidence": "cue_only"
@@ -11955,6 +11950,18 @@
       "verified_on": "2026-11-20"
     },
     {
+      "resource_id": "code:e8ad4fd21b29",
+      "resource_type": "code_or_project",
+      "name": "context-based-vlpr",
+      "url": "https://github.com/woo-soojin/context-based-vlpr",
+      "paper_ids": [
+        "pr-0179"
+      ],
+      "evidence": "manifest_link",
+      "availability": "released",
+      "verified_on": "2026-11-20"
+    },
+    {
       "resource_id": "code:e8ada7413c15",
       "resource_type": "code_or_project",
       "name": "visualnav-transformer",
@@ -14302,11 +14309,6 @@
           "evidence": "cue_only"
         },
         {
-          "paper_id": "pr-0175",
-          "source": "2025/ICRA/2025_ICRA_LE-Object-Language-Embedded-Object-Level-Neural-Radiance-F/04_evaluation.md",
-          "evidence": "cue_only"
-        },
-        {
           "paper_id": "pr-0196",
           "source": "2026/ICRA/2026_ICRA_Semantically-Consistent-Language-Gaussian-Splatting-for-3D/04_evaluation.md",
           "evidence": "cue_only"
@@ -15545,11 +15547,6 @@
           "evidence": "cue_only"
         },
         {
-          "paper_id": "pr-0175",
-          "source": "2025/ICRA/2025_ICRA_LE-Object-Language-Embedded-Object-Level-Neural-Radiance-F/04_evaluation.md",
-          "evidence": "cue_only"
-        },
-        {
           "paper_id": "pr-0176",
           "source": "2025/ICRA/2025_ICRA_Gaussian-Splatting-Visual-MPC-for-Granular-Media-Manipulat/04_evaluation.md",
           "evidence": "cue_only"
@@ -15562,11 +15559,6 @@
         {
           "paper_id": "pr-0178",
           "source": "2025/ICRA/2025_ICRA_VITaL-Pretraining-Visuo-Tactile-Pretraining-for-Tactile-an/04_evaluation.md",
-          "evidence": "cue_only"
-        },
-        {
-          "paper_id": "pr-0179",
-          "source": "2025/ICRA/2025_ICRA_Context-Graph-based-Visual-Language-Place-Recognition/04_evaluation.md",
           "evidence": "cue_only"
         },
         {

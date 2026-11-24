@@ -16,12 +16,11 @@
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (19 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 원문 해당 쪽과 대조했다. [본문](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/03330.pdf)
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — This difficulty primarily stems from the substantial architectural differences between 2D and 3D models, along with the limited availability of extensive 3D datasets for pre-training purposes.
-
-방법 관련 발췌 — Our contributions are summarized as: - We present Uni3DL, a unified model tailored for 3D vision and language comprehension.
+Uni3DL은 점군을 직접 인코딩한 뒤 분할·검출·언어 기반 위치 추정과 설명 생성을 한 모델에서 처리한다. [PDF 1쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/03330.pdf#page=1) · [PDF 6쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/03330.pdf#page=6)
 
 ## Problem and Motivation
 
@@ -55,16 +54,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 3 / 1 Introduction - extractive body cue:** Our contributions are summarized as: - We present Uni3DL, a unified model tailored for 3D vision and language comprehension.
-- **p. 3 / 1 Introduction - extractive body cue:** Uni3DL starts with a 3D encoder to extract point features and a text encoder to extract text features, followed by a carefully designed query transformer ...
-- **p. 11 / 11 Method - extractive body cue:** On the BLEU-1 [44] and ROUGE-L [36] scores, our method beats precious STOA methods by a large margin (more than 20%).
-- **p. 13 / 11 Method - extractive body cue:** We show results of the baseline method trained from scratch and our finetuned model.
-- **p. 2 / 1 Introduction - extractive body cue:** Nevertheless, these methods are mainly designed for 3D object classification.
-- **p. 10 / 4.1 Dataset - extractive body cue:** Our method achieves significantly better performance than TGNN method as indicated by instance-average IoU, and accuracy at the IoU thresholds of 0.25 and 0.5.
-- **p. 11 / Figure/Table caption - extractive body cue:** Table 3: Performance of our Uni3DL on different segmentation and VL tasks. Uni3DL achieves the best performance on 14 out of 17 metrics. ‘SN' denotes ...
-- **p. 10 / 4.1 Dataset - extractive body cue:** From the table, our Uni3DL method achieves better or comparable performance on general segmentation and detection tasks on S3DIS and ScanNet (v2)datasets.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 질의 트랜스포머가 공통 의미 특징과 마스크를 계산하고 태스크 라우터가 각 과제에 필요한 출력 헤드를 선택한다. [PDF 6쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/03330.pdf#page=6) · [PDF 7쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/03330.pdf#page=7) · [PDF 8쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/03330.pdf#page=8)
+- 의미·인스턴스 분할, 물체 검출, 시각·언어 과제에서 공통 모델을 과제별 모델과 비교했다. [PDF 10쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/03330.pdf#page=10) · [PDF 11쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/03330.pdf#page=11) · [PDF 12쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/03330.pdf#page=12)
 
 ## Evaluation Scope
 

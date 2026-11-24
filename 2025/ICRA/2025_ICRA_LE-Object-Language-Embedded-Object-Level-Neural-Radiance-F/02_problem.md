@@ -2,76 +2,14 @@
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
 > Evidence maturity: `FULL_TEXT_CHECKED`.
-> Analysis basis: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://api.crossref.org/works/10.1109/icra55743.2025.11128304; PDF retrieval source: https://arxiv.org/pdf/2406.08009v1. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+> 2026-11-24 IEEE 게재본의 해당 절을 대조했다. [원문](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11128304)
 
-## Problem in One Sentence
+## 문제와 가정
 
-PDF body framing (p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 2 (I. INTRODUCTION)): To address this limitation, some works [11], [12] have proposed instance-oriented open-vocabulary mapping methods.
+연속 RGB-D 영상에서 화면의 일부만 차지하는 물체를 여러 프레임에 걸쳐 동일 개체로 식별해야 한다. 인접 물체가 합쳐지거나 한 물체가 갈라지면 언어 질의가 맞더라도 복원할 표면에 다른 물체가 들어간다. [PDF 1쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11128304#page=1)
 
-## PDF Body Digest
+입력은 장면의 RGB-D 관측과 카메라 자세다. 각 프레임에서 물체 마스크를 구하고 관측 좌표를 공통 3D 공간에 놓을 수 있어야 한다. [PDF 3쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11128304#page=3)
 
-- **p. 1 / Abstract - extractive body cue:** In recent years, there has been a surge of interest in open-vocabulary 3D scene reconstruction facilitated by visual language models (VLMs), which showcase remarkable capabilities ...
-- **p. 1 / Abstract - extractive body cue:** However, existing methods face some limitations: they either focus on learning point-wise features, resulting in blurry semantic understanding, or solely tackle object-level reconstruction, thereby overlooking ...
-- **p. 1 / Abstract - extractive body cue:** To address these challenges, we introduce OpenObj, an innovative approach to build openvocabulary object-level Neural Radiance Fields (NeRF) with fine-grained understanding.
-- **p. 1 / Abstract - extractive body cue:** In essence, OpenObj establishes a robust framework for efficient and watertight scene modeling and comprehension at the object-level.
-- **p. 1 / Abstract - extractive body cue:** Moreover, we incorporate part-level features into the neural fields, enabling a nuanced representation of object interiors.
-- **p. 1 / I. INTRODUCTION - extractive body cue:** To address this limitation, some works [11], [12] have proposed instance-oriented open-vocabulary mapping methods.
-- **p. 1 / I. INTRODUCTION - extractive body cue:** However, these semantics are limited to a closed-set of labels predefined during the training phase [3], making it challenging to generalize to new scenes or ...
+## 로보틱스에서의 위치
 
-## System and Scope
-
-| Dimension | PDF body evidence | Registry/robotics interpretation | Boundary |
-|---|---|---|---|
-| Target problem | To address this limitation, some works [11], [12] have proposed instance-oriented open-vocabulary mapping methods. | 3D scene/object와 robot coordinate frame | body wording is the source claim |
-| Observation / input | Based on this, we can render the occupancy, depth, color, and feature as: ˆO(r[u,v]) = X m Tm, ˆD(r[u,v]) = X m ... | RGB-D, image set, point cloud, depth와 camera pose | exact sensor/frame/preprocessing from PDF body |
-| State / latent | render, occupancy, depth, color, feature, Tmdm, Tmcm, Tmfm, Loss, Function | geometry, map, object/relationship state | notation and tensor shape require body check |
-| Output / action | Finally, NeRF, Rendering, Training, module, vectorizes, NeRFs, objects | point map, pose, scene graph, affordance 또는 query result | exact unit/frame/decoder require body check |
-| Target outcome | spatial accuracy and downstream robot utility | geometric accuracy, semantic consistency와 planning/manipulation utility | metric/denominator are in 04 evidence |
-
-## Formal Problem Formulation
-
-| Formulation field | PDF body-grounded record | Evidence anchor |
-|---|---|---|
-| State / observation variable | image/point input I/P and pose; body terms: render, occupancy, depth, color, feature, Tmdm, Tmcm, Tmfm, Loss, Function | p. 5 (III. OPENOBJ), p. 3 (III. OPENOBJ), p. 3 (III. OPENOBJ) |
-| Decision / output variable | geometry/map/query r; body terms: summary, contributions, summarized, follows, present, OpenObj, open-vocabulary, object-level | p. 2 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 1 (Abstract) |
-| Objective / loss / cost | geometric/semantic reconstruction or matching loss; cue terms: overall, loss, function, obtained, summing, losses, objects, depth | p. 5 (III. OPENOBJ), p. 5 (III. OPENOBJ) |
-| Constraint / feasibility | paper-specific constraints are recorded only where the body states them; otherwise unresolved | p. 5 (III. OPENOBJ), p. 3 (III. OPENOBJ), p. 3 (III. OPENOBJ) |
-| Success / guarantee | spatial accuracy and downstream robot utility | p. 6 (2) Are OpenObj's open-vocabulary object-level and part), p. 4 (III. OPENOBJ), p. 3 (Figure/Table caption) |
-
-- **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF body anchors.
-
-## Bottleneck in Prior Work
-
-- **p. 1 / I. INTRODUCTION - extractive body cue:** However, these semantics are limited to a closed-set of labels predefined during the training phase [3], making it challenging to generalize to new scenes or ...
-- **p. 2 / I. INTRODUCTION - extractive body cue:** In addressing this challenge, we are inspired by how humans cognitively process their environment.
-
-## What the Paper Changes
-
-PDF body contribution framing (p. 2 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 1 (Abstract), p. 4 (III. OPENOBJ)): In summary, Our contributions are summarized as follows: • We present OpenObj, the open-vocabulary object-level neural radiance fields with fine-grained understanding, supporting downstream tasks at multiple scales. • We propose ...
-
-- **p. 2 / I. INTRODUCTION - extractive body cue:** Following this inspiration, we proposed OpenObj, an innovative approach to build open-vocabulary objectlevel neural radiance fields with fine-grained understanding.
-- **p. 1 / Abstract - extractive body cue:** To address these challenges, we introduce OpenObj, an innovative approach to build openvocabulary object-level Neural Radiance Fields (NeRF) with fine-grained understanding.
-- **p. 4 / III. OPENOBJ - extractive body cue:** To address this problem, we propose considering all frames together and devising a two-stage approach as shown in Fig.
-
-## Assumptions and Failure Boundary
-
-| Body anchor | Observed limitation/failure cue | Interpretation boundary |
-|---|---|---|
-| body cue at p. 5 | This approach helps to mitigate the effects of outliers caused by poor observation viewpoints or model failures. | reported limitation/failure wording; scope must be verified |
-| body cue at p. 1 | Fig. 1: We introduce OpenObj, a framework of open-vocabulary object-level neural radiance fields with fine-grained understanding. OpenObj facilitates ... | reported limitation/failure wording; scope must be verified |
-| body cue at p. 3 | Additionally, we apply another method to compensate for the limitations of VLM features f clip t,i in semantic ... | reported limitation/failure wording; scope must be verified |
-| body cue at p. 4 | Since this method does not distinguish between the sources of the masks, it can effectively correlate masks across ... | reported limitation/failure wording; scope must be verified |
-
-- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
-
-## Position in the Robotics Loop
-
-3d_perception writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 5 (III. OPENOBJ), p. 3 (III. OPENOBJ), p. 3 (III. OPENOBJ), p. 4 (III. OPENOBJ). The downstream handoff is claimed only when the body describes it.
-
-## Verification Questions
-
-- **Evidence anchors reviewed:** problem p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), interface p. 5 (III. OPENOBJ), p. 3 (III. OPENOBJ), p. 3 (III. OPENOBJ), p. 4 (III. OPENOBJ), objective p. 5 (III. OPENOBJ), p. 5 (III. OPENOBJ).
-- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
-- What are the observation frame, state memory, output/action frame, horizon and termination rule?
-- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
-- Does the evaluation measure the stated target, or only an upstream proxy?
+이 논문에서 측정한 출력은 의미 영역과 물체 표면이다. 계획기가 쓸 수 있는 지도 표현의 품질은 Replica의 분할·복원 지표에서 확인할 수 있다. [PDF 5쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11128304#page=5)

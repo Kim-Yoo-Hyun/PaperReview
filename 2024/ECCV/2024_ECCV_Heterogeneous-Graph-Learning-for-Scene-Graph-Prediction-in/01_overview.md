@@ -16,12 +16,11 @@
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (17 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 원문 해당 쪽과 대조했다. [본문](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/03785.pdf)
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Although these methods achieve promising performance, they still cannot obtain satisfactory results with fine-grained classification of multiple and long-tailed relationships due to the message passing process: (1) The traditional messa ...
-
-방법 관련 발췌 — Specifically, our method consists of two stages: a heterogeneous graph structure learning (HGSL) stage and a heterogeneous graph reasoning (HGR) stage.
+3D-HetSGP는 3D 점군에서 물체와 물체 사이의 관계를 예측할 때 관계의 성격에 따라 메시지를 주고받는 그래프를 학습한다. [PDF 1쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/03785.pdf#page=1) · [PDF 6쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/03785.pdf#page=6)
 
 ## Problem and Motivation
 
@@ -55,16 +54,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 1 / body section not recovered - extractive body cue:** Specifically, our method consists of two stages: a heterogeneous graph structure learning (HGSL) stage and a heterogeneous graph reasoning (HGR) stage.
-- **p. 3 / 1 Introduction - extractive body cue:** (2) We propose a heterogeneous graph structure learning method to construct the heterogeneous graph by learning the type edges among objects.
-- **p. 3 / 1 Introduction - extractive body cue:** Motivated by this, we propose a 3D heterogeneous scene graph prediction (3D-HetSGP) framework based on the heterogeneous graph neural network.
-- **p. 1 / body section not recovered - extractive body cue:** Extensive experiments show that our method achieves comparable or superior performance to existing methods on 3DSSG dataset.
-- **p. 11 / 4 Experiments - extractive body cue:** Compared to the baseline model KISGP [41], our method achieves a significant performance improvement.
-- **p. 12 / 4 Experiments - extractive body cue:** Compared to KISGP, our 3DHetSGP achieves significant improvements on the proximity and comparative types of predicates.
-- **p. 13 / 4 Experiments - extractive body cue:** 4, our method outperforms KISGP on many predicates, especially on body and tail predicates, including same as, same symmetry as, lying in, and cover.
-- **p. 14 / 4 Experiments - extractive body cue:** As shown in Table 6, our model is iteratively updated to achieve optimal scene graph predictions step-by-step.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 먼저 방향 간선의 유형을 예측해 그래프 구조를 정하고, 이어서 그 구조 위에서 노드와 관계 특징을 갱신한다. [PDF 5쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/03785.pdf#page=5) · [PDF 6쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/03785.pdf#page=6) · [PDF 7쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/03785.pdf#page=7)
+- 3DSSG에서 관계 예측을 비교하고 그래프 구조 및 추론 구성을 바꿔 각각의 효과를 평가했다. [PDF 11쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/03785.pdf#page=11) · [PDF 12쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/03785.pdf#page=12) · [PDF 13쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/03785.pdf#page=13)
 
 ## Evaluation Scope
 

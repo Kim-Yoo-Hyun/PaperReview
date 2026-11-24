@@ -16,12 +16,11 @@
 - Code/Project: https://github.com/GradiusTwinbee/GLIS
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (19 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 원문 해당 쪽과 대조했다. [본문](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/05197.pdf)
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — In this way, the detection model fails to detect objects not belonging to the training object classes.
-
-방법 관련 발췌 — In summary, our contributions are as follows. - We propose a lidar-based open-vocabulary detection method, GLIS, which is the first work to explore the interactions of the global scene-level information and local ...
+GLIS는 실내 점군에서 개별 물체 후보와 장면 전체의 단서를 언어 모델에 함께 제공해 학습 범주 밖의 3D 물체를 검출한다. [PDF 1쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/05197.pdf#page=1) · [PDF 5쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/05197.pdf#page=5)
 
 ## Problem and Motivation
 
@@ -54,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 3 / X. Peng et al - extractive body cue:** In summary, our contributions are as follows. - We propose a lidar-based open-vocabulary detection method, GLIS, which is the first work to explore the interactions ...
-- **p. 1 / body section not recovered - extractive body cue:** Extensive experiments on ScanNetV2 and SUN RGB-D demonstrate the superiority of our methods.
-- **p. 1 / body section not recovered - extractive body cue:** In this paper, we propose a Global-Local Collaborative Scheme (GLIS) for the lidar-based OVD task, which contains a local branch to generate object-level detection result ...
-- **p. 2 / X. Peng et al - extractive body cue:** (b) In contrast, we propose a Global-Local Collaborative Inference Scheme (GLIS) for 3D OVD, considering both the scene-level/global information and the object-level/local information.
-- **p. 3 / X. Peng et al - extractive body cue:** Superior performance on ScanNetV2 [7] and SUN RGB-D [38] demonstrates the effectiveness of our methods.
-- **p. 13 / Figure/Table caption - extractive body cue:** Fig. 4: Visualizations of GLIS. The score of each proposal is the confidence that the proposal is truly a foreground object. These proposals, as well ...
-- **p. 11 / 4 Experiments - extractive body cue:** Our methods also significantly improve the detection precision of many classes, e.g., chair is improved by 10.79%, toilet is improved by 5.81%, and table is ...
-- **p. 11 / 4 Experiments - extractive body cue:** 1, our proposed GLIS greatly improves the open-vocabulary detection performance on ScanNetV2.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 의사 라벨을 정제하고 배경을 고려해 물체 후보를 좁힌 뒤 지역 후보와 전역 장면 정보를 결합해 검출 결과를 재검토한다. [PDF 6쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/05197.pdf#page=6) · [PDF 7쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/05197.pdf#page=7) · [PDF 9쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/05197.pdf#page=9)
+- ScanNetV2와 SUN RGB-D의 개방 어휘 검출에서 지역·전역 추론과 후보 선별을 바꿔 새로운 범주에 대한 성능을 비교했다. [PDF 10쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/05197.pdf#page=10) · [PDF 11쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/05197.pdf#page=11) · [PDF 12쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/05197.pdf#page=12)
 
 ## Evaluation Scope
 

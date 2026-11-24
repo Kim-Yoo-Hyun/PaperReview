@@ -16,12 +16,11 @@
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 원문 해당 쪽과 대조했다. [본문](https://openaccess.thecvf.com/content/CVPR2025/papers/Li_CraftsMan3D_High-fidelity_Mesh_Generation_with_3D_Native_Diffusion_and_Interactive_CVPR_2025_paper.pdf)
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, none of these methods can generate high-fidelity geometric details and limitations in mesh-to-SDF conversions still result in training difficulty.
-
-방법 관련 발췌 — Built on the 3D data, we present a two-stage generative 3D native generation system, coined CraftsMan, which takes as input single images as reference or text prompts and generates high-fidelity 3D geometries ...
+CraftsMan3D는 초기 메시 생성과 국소 기하 정제를 나눠 영상으로부터 물체 형상을 만들고 사용자가 세부 형상을 수정할 수 있게 한다. [PDF 1쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Li_CraftsMan3D_High-fidelity_Mesh_Generation_with_3D_Native_Diffusion_and_Interactive_CVPR_2025_paper.pdf#page=1) · [PDF 3쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Li_CraftsMan3D_High-fidelity_Mesh_Generation_with_3D_Native_Diffusion_and_Interactive_CVPR_2025_paper.pdf#page=3)
 
 ## Problem and Motivation
 
@@ -55,16 +54,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** Built on the 3D data, we present a two-stage generative 3D native generation system, coined CraftsMan, which takes as input single images as reference or ...
-- **p. 3 / 3. Method - extractive body cue:** Finally, our framework features a normal map-based geometry refinement scheme (Sec.3.3).
-- **p. 3 / 3.1. Data Preprocessing - extractive body cue:** Therefore, we propose an efficient and effective method for converting mesh into a watertight one.
-- **p. 5 / 3.3. Normal-based Geometry Refinement - extractive body cue:** To further enhance the coarse mesh, we propose to improve the initial mesh using normal maps as an intermediate representation.
-- **p. 2 / 1. Introduction - extractive body cue:** In summary, our main contribution lies in three aspects: • A robust and efficient data pre-processing pipeline that integrates visibility checks enhanced by the winding ...
-- **p. 8 / 4.4. Ablation Study - extractive body cue:** As shown in Table 4, our approach achieved the best performance.
-- **p. 8 / 4.3. Evaluation of Mesh Refinement - extractive body cue:** The visual results presented in Figure 9 demonstrate that our mesh refinement technique outperforms previous methods, producing not only clear and coherent outcomes but also ...
-- **p. 7 / 4.2. Evaluation of Mesh Generation - extractive body cue:** Compared with Direct3D, our method achieves better consistency between the input image and the generated mesh.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 가시성과 감김수로 훈련용 메시의 내부·외부 판정을 보완하고 3D 잠재 표현에서 확산 트랜스포머로 초기 형상을 생성한다. [PDF 3쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Li_CraftsMan3D_High-fidelity_Mesh_Generation_with_3D_Native_Diffusion_and_Interactive_CVPR_2025_paper.pdf#page=3) · [PDF 4쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Li_CraftsMan3D_High-fidelity_Mesh_Generation_with_3D_Native_Diffusion_and_Interactive_CVPR_2025_paper.pdf#page=4) · [PDF 5쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Li_CraftsMan3D_High-fidelity_Mesh_Generation_with_3D_Native_Diffusion_and_Interactive_CVPR_2025_paper.pdf#page=5)
+- 여러 시점의 표면 법선을 이용해 메시의 기하를 정제하고 초기 결과와의 차이 및 사용자 편집 예를 제시했다. [PDF 5쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Li_CraftsMan3D_High-fidelity_Mesh_Generation_with_3D_Native_Diffusion_and_Interactive_CVPR_2025_paper.pdf#page=5) · [PDF 6쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Li_CraftsMan3D_High-fidelity_Mesh_Generation_with_3D_Native_Diffusion_and_Interactive_CVPR_2025_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Li_CraftsMan3D_High-fidelity_Mesh_Generation_with_3D_Native_Diffusion_and_Interactive_CVPR_2025_paper.pdf#page=7) · [PDF 8쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Li_CraftsMan3D_High-fidelity_Mesh_Generation_with_3D_Native_Diffusion_and_Interactive_CVPR_2025_paper.pdf#page=8)
 
 ## Evaluation Scope
 

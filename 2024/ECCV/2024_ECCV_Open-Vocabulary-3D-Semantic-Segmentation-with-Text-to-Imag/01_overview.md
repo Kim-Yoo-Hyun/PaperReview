@@ -16,12 +16,11 @@
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (19 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 원문 해당 쪽과 대조했다. [본문](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/04252.pdf)
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Several existing methods have been proposed to solve the lack of data issue in a zero-shot fashion by leveraging the CLIP model pre-trained on large-scale text-image data [37,62,79].
-
-방법 관련 발췌 — In summary, we make the following contributions: - To the best of our knowledge, we are the first to leverage text-image diffusion to perform open-vocabulary 3D semantic segmentation. - We propose a ...
+Diff2Scene은 사전학습된 텍스트-이미지 확산 모델의 특징으로, 범주별 3D 라벨 없이 점군을 분할하고 언어 표현에 해당하는 영역을 찾는다. [PDF 1쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/04252.pdf#page=1) · [PDF 6쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/04252.pdf#page=6)
 
 ## Problem and Motivation
 
@@ -55,16 +54,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 3 / 1 Introduction - extractive body cue:** In summary, we make the following contributions: - To the best of our knowledge, we are the first to leverage text-image diffusion to perform open-vocabulary ...
-- **p. 3 / 1 Introduction - extractive body cue:** To mitigate these issues, we propose a novel mask distillation method tailored to distill knowledge from the Mask2Former style 2D branch [10, 87] to the ...
-- **p. 1 / 4 HKUST - extractive body cue:** We propose Diff2Scene, a 3D model that performs open-vocabulary semantic segmentation and visual grounding tasks given novel text prompts, without relying on any annotated 3D ...
-- **p. 1 / 4 HKUST - extractive body cue:** We propose a novel method, namely Diff2Scene, which leverages frozen representations from text-image generative models, along with salient-aware and geometric-aware masks, for open-vocabulary 3D semantic ...
-- **p. 2 / 1 Introduction - extractive body cue:** Despite these achievements, contrastively trained CLIP-based models exhibit limitations in handling fine-grained classes [66] and novel compositional text queries [58], restricting their performance in open-vocabulary ...
-- **p. 12 / Figure/Table caption - extractive body cue:** Table 3: Performance of different model ablations. We observe that each com- ponent of our model gains consistent improvements.
-- **p. 9 / 4 Experiment - extractive body cue:** We train our 3D branch using the images in the training splits and report the results on test split.
-- **p. 9 / 4 Experiment - extractive body cue:** This enables us to evaluate the performance of our method on the long-tail distribution, making ScanNet200 a natural choice as an evaluation dataset.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 영상에서 두드러진 영역과 점군의 기하에 맞는 마스크를 구성한 뒤 마스크 단위 증류로 두 표현을 결합한다. [PDF 5쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/04252.pdf#page=5) · [PDF 6쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/04252.pdf#page=6) · [PDF 7쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/04252.pdf#page=7)
+- 3D 장면의 개방 어휘 분할과 언어 기반 위치 추정을 평가해, 질의 대상의 범주나 외양이 달라지는 조건에서 기준 방법과 비교했다. [PDF 9쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/04252.pdf#page=9) · [PDF 10쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/04252.pdf#page=10) · [PDF 11쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/04252.pdf#page=11)
 
 ## Evaluation Scope
 

@@ -1770,15 +1770,15 @@
     "title": "LE-Object: Language Embedded Object-Level Neural Radiance Fields for Open-Vocabulary Scene",
     "year": 2025,
     "venue": "ICRA 2025",
-    "arxiv": "2406.08009v1",
-    "page": "https://www.proceedings.com/content/081/081087webtoc.pdf",
-    "abstract": "In recent years, there has been a surge of interest in open-vocabulary 3D scene reconstruction facilitated by visual language models (VLMs), which showcase remarkable capabilities in open-set retrieval. However, existing methods face some limitations: they either focus on learning point-wise features, resulting in blurry semantic understanding, or solely tackle object-level reconstruction, thereby overlooking the intricate details of the object's interior. To address these challenges, we introduce OpenObj, an innovative approach to build open-vocabulary object-level Neural Radiance Fields (NeRF) with fine-grained understanding. In essence, OpenObj establishes a robust framework for efficient and watertight scene modeling and comprehension at the object-level. Moreover, we incorporate part-level features into the neural fields, enabling a nuanced representation of object interiors. This approach captures object-level instances while maintaining a fine-grained understanding. The results on multiple datasets demonstrate that OpenObj achieves superior performance in zero-shot semantic segmentation and retrieval tasks. Additionally, OpenObj supports real-world robotics tasks at multiple scales, including global movement and local manipulation.",
-    "authors": "Yinan Deng, Jiahui Wang, Jingyu Zhao, Jianyu Dou, Yi Yang, Yufeng Yue",
+    "page": "https://api.crossref.org/works/10.1109/icra55743.2025.11128304",
+    "abstract": "LE-Object associates object observations across RGB-D frames using spatial and visual information. It reconstructs object-level radiance fields and an open-vocabulary scene representation. Evaluation uses eight indoor Replica scenes.",
+    "authors": "Mengting Wang, Yunzhou Zhang, Xingshuo Wang, Zhiyao Zhang, Zhiteng Li",
     "category": "Language-Embedded NeRF and Gaussian Fields",
     "tags": [
       "semantic"
     ],
-    "project": "not identified from venue audit"
+    "project": "not identified from venue audit",
+    "pdf": "https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11128304"
   },
   {
     "title": "Gaussian Splatting Visual MPC for Granular Media Manipulation",
@@ -1830,14 +1830,15 @@
     "year": 2025,
     "venue": "ICRA 2025",
     "arxiv": "2410.19341v1",
-    "page": "https://www.proceedings.com/content/081/081087webtoc.pdf",
+    "page": "https://api.crossref.org/works/10.1109/icra55743.2025.11127699",
     "abstract": "In vision-based robot localization and SLAM, Visual Place Recognition (VPR) is essential. This paper addresses the problem of VPR, which involves accurately recognizing the location corresponding to a given query image. A popular approach to vision-based place recognition relies on low-level visual features. Despite significant progress in recent years, place recognition based on low-level visual features is challenging when there are changes in scene appearance. To address this, end-to-end training approaches have been proposed to overcome the limitations of hand-crafted features. However, these approaches still fail under drastic changes and require large amounts of labeled data to train models, presenting a significant limitation. Methods that leverage high-level semantic information, such as objects or categories, have been proposed to handle variations in appearance. In this paper, we introduce a novel VPR approach that remains robust to scene changes and does not require additional training. Our method constructs semantic image descriptors by extracting pixel-level embeddings using a zero-shot, language-driven semantic segmentation model. We validate our approach in challenging place recognition scenarios using real-world public dataset. The experiments demonstrate that our method outperforms non-learned image representation techniques and off-the-shelf convolutional neural network (CNN) descriptors. Our code is available at https: //github.com/woo-soojin/context-based-vlpr.",
     "authors": "Soojin Woo, Seong-Woo Kim",
     "category": "3D Large Multimodal Models",
     "tags": [
       "Graph Reasoning"
     ],
-    "project": "not identified from venue audit"
+    "project": "https://github.com/woo-soojin/context-based-vlpr",
+    "pdf": "https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11127699"
   },
   {
     "title": "RynnVLA-001: Using Human Demonstrations to Improve Robot Manipulation",

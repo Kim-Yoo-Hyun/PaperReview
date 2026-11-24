@@ -16,12 +16,11 @@
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (17 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 원문 해당 쪽과 대조했다. [본문](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/pan25c/pan25c.pdf)
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, LiDAR inherently faces limitations in detecting small or distant objects due to its radial emission pattern, which results in sparse returns along each laser ray (Li et al., 2022b).
-
-방법 관련 발췌 — Our contributions can be summarized as: 1) We present IAL, a novel transformer-based multi-modal framework for multimodal 3D panoptic segmentation, eliminating the cumbersome post-processing steps required by previous methods.
+IAL은 카메라 영상과 라이다 점군을 결합해 3D 장면을 물체 인스턴스와 배경 의미 범주로 함께 분할한다. [PDF 1쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/pan25c/pan25c.pdf#page=1) · [PDF 3쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/pan25c/pan25c.pdf#page=3)
 
 ## Problem and Motivation
 
@@ -55,16 +54,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** Our contributions can be summarized as: 1) We present IAL, a novel transformer-based multi-modal framework for multimodal 3D panoptic segmentation, eliminating the cumbersome post-processing steps ...
-- **p. 3 / 3. Methodology - extractive body cue:** In this paper, we introduce ImageAssist-LiDAR (IAL), a novel transformer-based framework for multi-modal 3D panoptic segmentation, as illustrated in Fig.
-- **p. 1 / 1. Introduction - extractive body cue:** To address the first limitation, we propose a modality1
-- **p. 2 / 1. Introduction - extractive body cue:** To overcome these challenges, we introduce a Geometric-guided Token Fusion (GTF) module and a Prior-based Query Generation (PQG) module.
-- **p. 4 / 3.1. Modality-Synchronized Augmentation - extractive body cue:** To mitigate modality misalignment and enhance diversity during data augmentation, we propose PieAug.
-- **p. 8 / 4.2. Benchmark Results - extractive body cue:** As shown in Table 4, despite these constraints, our IAL achieves a 4.1% improvement in PQ over the state-of-the-art multi-modal baseline LCPS, demonstrating the robustness ...
-- **p. 8 / 4.2. Benchmark Results - extractive body cue:** Compared to the LiDAR-only baseline (using the same augmentation strategies as P3Former adopts), IAL achieves a 5.3% improvement, primarily due to a 7.5% increase from ...
-- **p. 7 / 4.2. Benchmark Results - extractive body cue:** Notably, our method IAL achieves the best performance across all metrics on the validation set and ranks first or second on most metrics 7
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 영상·라이다 증강을 동기화하고 기하에 맞춘 토큰 융합과 두 센서의 단서를 사용한 질의 초기화를 설계했다. [PDF 3쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/pan25c/pan25c.pdf#page=3) · [PDF 4쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/pan25c/pan25c.pdf#page=4) · [PDF 5쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/pan25c/pan25c.pdf#page=5)
+- nuScenes와 SemanticKITTI에서 파놉틱 분할을 측정하고 영상·라이다 결합 모듈이 인스턴스 분리에 미치는 영향을 비교했다. [PDF 6쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/pan25c/pan25c.pdf#page=6) · [PDF 7쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/pan25c/pan25c.pdf#page=7) · [PDF 8쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/pan25c/pan25c.pdf#page=8)
 
 ## Evaluation Scope
 

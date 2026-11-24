@@ -6,7 +6,7 @@
 
 ## Evaluation in One Sentence
 
-PDF body evaluation/result cue (p. 8 (5.1.1. Ablations), p. 8 (Figure/Table caption), p. 7 (5.1. Quantitative results), p. 7 (Figure/Table caption), p. 4 (3.2.2. Benchmark metrics), p. 4 (3.2.2. Benchmark metrics)): The inclusion of the anchor prediction head as an auxiliary sub-task also improves performance (row E vs row D).
+평가의 입력은 장면 메시, 물체 자산과 지시문이고 출력은 3D 이동과 수직축 회전이다. 성능은 예측 배치가 지정된 공간 제약을 충족하는 비율로 집계한다. [PDF 4쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Abdelreheem_PlaceIt3D_Language-Guided_Object_Placement_in_Real_3D_Scenes_ICCV_2025_paper.pdf#page=4) · [PDF 7쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Abdelreheem_PlaceIt3D_Language-Guided_Object_Placement_in_Real_3D_Scenes_ICCV_2025_paper.pdf#page=7)
 
 ## Evaluation Body Digest
 
@@ -21,7 +21,7 @@ PDF body evaluation/result cue (p. 8 (5.1.1. Ablations), p. 8 (Figure/Table capt
 
 ## Evaluation Type and Scope
 
-- **Evaluation type:** `EMPIRICAL / SOURCE-REPORTED EVALUATION`.
+- **Evaluation type:** `EMPIRICAL / BENCHMARK OR DATASET`.
 - **Target system/task:** 3D scene/object와 robot coordinate frame.
 - **Input boundary:** RGB-D, image set, point cloud, depth와 camera pose.
 - **Output/decision under evaluation:** point map, pose, scene graph, affordance 또는 query result.

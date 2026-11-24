@@ -16,12 +16,11 @@
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 원문 해당 쪽과 대조했다. [본문](https://openaccess.thecvf.com/content/ICCV2025/papers/Abdelreheem_PlaceIt3D_Language-Guided_Object_Placement_in_Real_3D_Scenes_ICCV_2025_paper.pdf)
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — We study language-guided 3D asset placement in reconstructed scenes, a problem closest to grounding and to synthetic scene generation, yet distinct in that it requires addressing all of the following challenges simultaneously: ...
-
-방법 관련 발췌 — To advance research in this area, we make three key contributions, summarized here: • We introduce PLACEIT3D-benchmark for languageguided placement with 3,500 evaluation examples, each consisting of a real ScanNet scene [15], ...
+PlaceIt3D는 스캔한 실내 장면과 3D 물체 자산, 자연어 지시를 받아 물체를 놓을 위치를 찾는 과제와 평가 자료를 제시한다. [PDF 1쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Abdelreheem_PlaceIt3D_Language-Guided_Object_Placement_in_Real_3D_Scenes_ICCV_2025_paper.pdf#page=1) · [PDF 3쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Abdelreheem_PlaceIt3D_Language-Guided_Object_Placement_in_Real_3D_Scenes_ICCV_2025_paper.pdf#page=3)
 
 ## Problem and Motivation
 
@@ -52,26 +51,12 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** To advance research in this area, we make three key contributions, summarized here: • We introduce PLACEIT3D-benchmark for languageguided placement with 3,500 evaluation examples, each ...
-- **p. 2 / 1. Introduction - extractive body cue:** Like the benchmark, it uses ScanNet scenes and PartObjaverse-Tiny assets. • We propose PLACEWIZARD, a proto-method for this task built on recent 3D LLMs [25].
-- **p. 1 / 1. Introduction - extractive body cue:** In this paper, we focus on the novel task of languageguided 3D object placement in a reconstructed real 3D scene.
-- **p. 8 / 5.1.1. Ablations - extractive body cue:** The inclusion of the anchor prediction head as an auxiliary sub-task also improves performance (row E vs row D).
-- **p. 8 / Figure/Table caption - extractive body cue:** Figure 4. Qualitative benchmark results. Colored highlights indicate anchors referenced in the textual prompts (predictions are generated entirely from point clouds, with anchor information provided ...
-- **p. 7 / 5.1. Quantitative results - extractive body cue:** Our method, row G, consistently outperforms both baselines across all overall evaluation metrics.
-- **p. 7 / Figure/Table caption - extractive body cue:** Table 2. Quantitative results: We compare our full method with variations where some components are removed. The results validate our design choices, and they show ...
-- **p. 4 / 3.2.2. Benchmark metrics - extractive body cue:** To evaluate placement performance, we compute metrics that capture constraint validity overall and by subgroup: • Global Constraint Accuracy: The percentage of all constraints (across ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 물리적으로 가능한 위치와 장면 그래프로 지시가 허용하는 배치 영역을 만들고, 후보 위치가 언어 조건과 공간 제약을 만족하는지 평가하는 기준을 정의했다. [PDF 3쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Abdelreheem_PlaceIt3D_Language-Guided_Object_Placement_in_Real_3D_Scenes_ICCV_2025_paper.pdf#page=3) · [PDF 4쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Abdelreheem_PlaceIt3D_Language-Guided_Object_Placement_in_Real_3D_Scenes_ICCV_2025_paper.pdf#page=4) · [PDF 5쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Abdelreheem_PlaceIt3D_Language-Guided_Object_Placement_in_Real_3D_Scenes_ICCV_2025_paper.pdf#page=5)
+- PlaceWizard는 장면 점군·자산·언어 특징을 결합해 가능한 위치를 예측하며, 규칙 기반 및 언어 모델 기반 배치와 비교했다. [PDF 5쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Abdelreheem_PlaceIt3D_Language-Guided_Object_Placement_in_Real_3D_Scenes_ICCV_2025_paper.pdf#page=5) · [PDF 6쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Abdelreheem_PlaceIt3D_Language-Guided_Object_Placement_in_Real_3D_Scenes_ICCV_2025_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Abdelreheem_PlaceIt3D_Language-Guided_Object_Placement_in_Real_3D_Scenes_ICCV_2025_paper.pdf#page=7)
 
 ## Evaluation Scope
 
-| Dimension | Body-grounded record | Boundary | Anchor |
-|---|---|---|---|
-| Evaluation type | EMPIRICAL / SOURCE-REPORTED EVALUATION | do not infer unreported downstream behavior | p. 8 (5.1.1. Ablations), p. 8 (Figure/Table caption) |
-| Embodiment/environment | PLACEIT3D-dataset-full has ∼4M examples: the 565 scenes x 140 objects x 50 prompts. | hardware/simulator version and reset protocol | p. 5 (3.2.3. Benchmark statistics), p. 4 (3.2.3. Benchmark statistics) |
-| Dataset/benchmark | The dataset consists of 100,505 training examples, sourced from 565 distinct ScanNet scenes and 20 unique assets. | role, split, size and leakage | p. 5 (3.2.3. Benchmark statistics), p. 4 (3.2.3. Benchmark statistics), p. 5 (3.2.3. Benchmark statistics), p. 7 (5. Experiments) |
-| Metric | To evaluate placement performance, we compute metrics that capture constraint validity overall and by subgroup: • Global Constraint Accuracy: The percentage of all constraints (across all groups) that are correctly satisfied over ... | definition, denominator, direction and uncertainty | p. 4 (3.2.2. Benchmark metrics), p. 7 (5.1. Quantitative results), p. 7 (5.1. Quantitative results) |
-| Baseline/ablation | Our method, row G, consistently outperforms both baselines across all overall evaluation metrics. | fair input/data/compute/action matching | p. 7 (5.1. Quantitative results), p. 7 (5.1. Quantitative results), p. 7 (5.1.1. Ablations) |
+평가의 입력은 장면 메시, 물체 자산과 지시문이고 출력은 3D 이동과 수직축 회전이다. 성능은 예측 배치가 지정된 공간 제약을 충족하는 비율로 집계한다. [PDF 4쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Abdelreheem_PlaceIt3D_Language-Guided_Object_Placement_in_Real_3D_Scenes_ICCV_2025_paper.pdf#page=4) · [PDF 7쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Abdelreheem_PlaceIt3D_Language-Guided_Object_Placement_in_Real_3D_Scenes_ICCV_2025_paper.pdf#page=7)
 
 ## Explicit Limitations and Failure Boundary
 

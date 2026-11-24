@@ -16,14 +16,13 @@
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 원문 해당 쪽과 대조했다. [본문](https://openaccess.thecvf.com/content/CVPR2026/papers/Wang_DualSplat_Robust_3D_Gaussian_Splatting_via_Pseudo-Mask_Bootstrapping_from_Reconstruction_CVPR_2026_paper.pdf)
 
 > DOC-QA2 targeted source review: 2026-10-23; PDF pp. 5. 손상 구간·직접 연결된 표 분류만 원문 이미지와 대조했다. 전체 주장 정독·실험 검증·reading status 승격을 뜻하지 않는다. [URL·PDF hash·수정 기록](../../../work/sources/pdf_note_review_followup_2026-10-23.json).
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — We address this problem by introducing a novel Failureto-Prior paradigm.
-
-방법 관련 발췌 — Our method is built on a Failure-to-Prior principle: reconstruction failures caused by view-inconsistent transients are not merely artifacts to suppress, but signals that can be mined into priors.
+DualSplat은 여러 뷰에 잠시 나타난 사람이나 물체를 정적 장면에서 분리하기 위해 첫 복원의 오류로 마스크를 만들고 두 번째 복원에 사용한다. [PDF 1쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Wang_DualSplat_Robust_3D_Gaussian_Splatting_via_Pseudo-Mask_Bootstrapping_from_Reconstruction_CVPR_2026_paper.pdf#page=1) · [PDF 3쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Wang_DualSplat_Robust_3D_Gaussian_Splatting_via_Pseudo-Mask_Bootstrapping_from_Reconstruction_CVPR_2026_paper.pdf#page=3)
 
 ## Problem and Motivation
 
@@ -57,16 +56,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 3 / 3.2. Overview - extractive body cue:** Our method is built on a Failure-to-Prior principle: reconstruction failures caused by view-inconsistent transients are not merely artifacts to suppress, but signals that can be ...
-- **p. 2 / 1. Introduction - extractive body cue:** In summary, our contributions are as follows:
-- **p. 2 / 1. Introduction - extractive body cue:** We address this problem by introducing a novel Failureto-Prior paradigm.
-- **p. 6 / 4.2. Distractor-free 3D Reconstruction - extractive body cue:** DualSplat achieves the best overall average performance.
-- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Transient objects in the training images introduce noticeable artifacts in the reconstruction results. Compared with other methods, our approach achieves higher fidelity and ...
-- **p. 7 / 4.2. Distractor-free 3D Reconstruction - extractive body cue:** Although the margins are modest and some individual scenes are still led by competing methods, our method remains consistently competitive across all five scenes and ...
-- **p. 2 / 4. We conduct comprehensive experiments on Robust - extractive body cue:** NeRF and NeRF On-the-go, showing superior performance and robustness in transient-heavy scenes.
-- **p. 6 / 4.1. Setups - extractive body cue:** Qualitative results on Spot and Mountain from the NeRF On-the-go dataset.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 첫 가우시안 장면의 렌더링 잔차와 특징, SAM2 마스크를 결합해 일시적 물체의 의사 마스크를 생성한다. [PDF 3쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Wang_DualSplat_Robust_3D_Gaussian_Splatting_via_Pseudo-Mask_Bootstrapping_from_Reconstruction_CVPR_2026_paper.pdf#page=3) · [PDF 4쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Wang_DualSplat_Robust_3D_Gaussian_Splatting_via_Pseudo-Mask_Bootstrapping_from_Reconstruction_CVPR_2026_paper.pdf#page=4) · [PDF 5쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Wang_DualSplat_Robust_3D_Gaussian_Splatting_via_Pseudo-Mask_Bootstrapping_from_Reconstruction_CVPR_2026_paper.pdf#page=5)
+- 두 번째 학습에서 가벼운 마스크 예측망으로 경계를 보완하고 RobustNeRF 및 NeRF On-the-go 장면의 새 시점 품질을 평가했다. [PDF 5쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Wang_DualSplat_Robust_3D_Gaussian_Splatting_via_Pseudo-Mask_Bootstrapping_from_Reconstruction_CVPR_2026_paper.pdf#page=5) · [PDF 6쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Wang_DualSplat_Robust_3D_Gaussian_Splatting_via_Pseudo-Mask_Bootstrapping_from_Reconstruction_CVPR_2026_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Wang_DualSplat_Robust_3D_Gaussian_Splatting_via_Pseudo-Mask_Bootstrapping_from_Reconstruction_CVPR_2026_paper.pdf#page=7)
 
 ## Evaluation Scope
 

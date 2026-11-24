@@ -6,7 +6,7 @@
 
 ## Evaluation in One Sentence
 
-PDF body evaluation/result cue (p. 14 (6 Experiments), p. 14 (6 Experiments), p. 11 (Figure/Table caption), p. 13 (6 Experiments), p. 13 (6 Experiments), p. 10 (6 Experiments)): The additional 3D information improves performance.
+51,583개는 지시 표현의 수이고 11,046개는 지시된 물체의 수다. 표 4는 예측 상자가 정답 상자와 IoU 0.25 또는 0.5 기준을 넘긴 질의의 비율을 같은 범주 물체가 하나인 장면과 여럿인 장면으로 나누어 보고한다. [PDF 3쪽](https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123650205.pdf#page=3) · [PDF 5쪽](https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123650205.pdf#page=5) · [PDF 11쪽](https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123650205.pdf#page=11)
 
 ## Evaluation Body Digest
 
@@ -21,7 +21,7 @@ PDF body evaluation/result cue (p. 14 (6 Experiments), p. 14 (6 Experiments), p.
 
 ## Evaluation Type and Scope
 
-- **Evaluation type:** `EMPIRICAL / SOURCE-REPORTED EVALUATION`.
+- **Evaluation type:** `EMPIRICAL / BENCHMARK OR DATASET`.
 - **Target system/task:** 3D scene/object와 robot coordinate frame.
 - **Input boundary:** RGB-D, image set, point cloud, depth와 camera pose.
 - **Output/decision under evaluation:** point map, pose, scene graph, affordance 또는 query result.

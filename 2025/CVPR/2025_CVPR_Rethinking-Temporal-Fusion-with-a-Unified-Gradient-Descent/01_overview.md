@@ -16,12 +16,11 @@
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 원문 해당 쪽과 대조했다. [본문](https://openaccess.thecvf.com/content/CVPR2025/papers/Chen_Rethinking_Temporal_Fusion_with_a_Unified_Gradient_Descent_View_for_CVPR_2025_paper.pdf)
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, vanilla RNNs struggle to embed temporal priors (scenelevel information) into network parameters.
-
-방법 관련 발췌 — This allows the RNN to operate on a wide array of diverse representation forms. iii) Through this reinterpretation, we propose a unified RNN-style temporal fusion framework that efficiently integrates each type of ...
+GDFusion은 연속 카메라 관측으로 3D 의미 점유를 추정할 때 과거 상태를 갱신하는 과정을 경사 하강 관점에서 설계한다. [PDF 1쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Chen_Rethinking_Temporal_Fusion_with_a_Unified_Gradient_Descent_View_for_CVPR_2025_paper.pdf#page=1) · [PDF 3쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Chen_Rethinking_Temporal_Fusion_with_a_Unified_Gradient_Descent_View_for_CVPR_2025_paper.pdf#page=3)
 
 ## Problem and Motivation
 
@@ -55,16 +54,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** This allows the RNN to operate on a wide array of diverse representation forms. iii) Through this reinterpretation, we propose a unified RNN-style temporal fusion ...
-- **p. 2 / 1. Introduction - extractive body cue:** To integrate temporal information from heterogeneous representations, we propose a unified fusion framework, GDFusion.
-- **p. 8 / 5.4. Wall-Clock Time - extractive body cue:** 5, our method outperforms the multi-frame stacking method SOLOFusion in total time consumption.
-- **p. 3 / 3.2. Temporal Cue Analysis and Formulation - extractive body cue:** Inspired by testtime adaptation [6, 39, 40], we introduce additional sceneadaptive network parameters St (Sec.
-- **p. 3 / 3.2. Temporal Cue Analysis and Formulation - extractive body cue:** Within the VisionOcc pipeline, we propose three distinct types of temporal information, each serving a unique role, as illustrated in Fig.
-- **p. 8 / Figure/Table caption - extractive body cue:** Table 4. Ablations on different temporal cues. B, G, V, S, and M represent baseline, temporal geometry fusion, voxel-level fusion, scene-level fusion, and temporal motion ...
-- **p. 6 / Figure/Table caption - extractive body cue:** Figure 4. Comparison of our GDFusion and SOLOFusion w.r.t. memory consumption. SOLOFusion boosts performance with longer sequences but increases inference memory, while GDFu- sion achieves ...
-- **p. 7 / Figure/Table caption - extractive body cue:** Table 1. Comparison of 3D semantic occupancy prediction performance on the Occ3D dataset, evaluated with mIoUD, mIoU, and IoU metrics. Relative improvements are highlighted with ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 장면·복셀 수준의 시간 문맥과 물체 운동·기하에 서로 다른 목적함수와 갱신식을 부여해 현재 특징에 융합한다. [PDF 3쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Chen_Rethinking_Temporal_Fusion_with_a_Unified_Gradient_Descent_View_for_CVPR_2025_paper.pdf#page=3) · [PDF 4쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Chen_Rethinking_Temporal_Fusion_with_a_Unified_Gradient_Descent_View_for_CVPR_2025_paper.pdf#page=4) · [PDF 5쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Chen_Rethinking_Temporal_Fusion_with_a_Unified_Gradient_Descent_View_for_CVPR_2025_paper.pdf#page=5) · [PDF 6쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Chen_Rethinking_Temporal_Fusion_with_a_Unified_Gradient_Descent_View_for_CVPR_2025_paper.pdf#page=6)
+- nuScenes의 의미 점유 평가에서 정확도와 메모리 사용을 비교하고 각 종류의 시간 정보가 예측에 주는 영향을 분리했다. [PDF 6쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Chen_Rethinking_Temporal_Fusion_with_a_Unified_Gradient_Descent_View_for_CVPR_2025_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Chen_Rethinking_Temporal_Fusion_with_a_Unified_Gradient_Descent_View_for_CVPR_2025_paper.pdf#page=7) · [PDF 8쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Chen_Rethinking_Temporal_Fusion_with_a_Unified_Gradient_Descent_View_for_CVPR_2025_paper.pdf#page=8)
 
 ## Evaluation Scope
 

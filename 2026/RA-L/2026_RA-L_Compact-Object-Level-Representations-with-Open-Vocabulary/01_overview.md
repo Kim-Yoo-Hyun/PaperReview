@@ -16,12 +16,11 @@
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 원문 해당 쪽과 대조했다. [본문](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11578335)
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — A dedicated pose optimization strategy tailored to the object-level paradigm is still lacking.
-
-방법 관련 발췌 — Overall, our contributions can be summarized as follows: • We introduce a multi-modal landmark association module that combines open-vocabulary object descriptors with a global scene graph, enabling robust class-agnostic object matching ...
+OpenReLoc은 장면의 물체를 중심으로 표현한 열린 어휘 지도에 질의 관측을 대응시켜 카메라의 3D 자세를 복구한다. [PDF 1쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11578335#page=1) · [PDF 3쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11578335#page=3)
 
 ## Problem and Motivation
 
@@ -55,16 +54,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / I. INTRODUCTION - extractive body cue:** Overall, our contributions can be summarized as follows: • We introduce a multi-modal landmark association module that combines open-vocabulary object descriptors with a global scene ...
-- **p. 1 / I. INTRODUCTION - extractive body cue:** We construct an objectoriented map suite that consists of a global scene graph, openvocabulary object descriptors, object geometry, and reference frames.
-- **p. 1 / I. INTRODUCTION - extractive body cue:** In response to these challenges, we propose OpenReLoc, a semantic-aware, memory-efficient, and scalable camera relocalization framework based on object-level representations with open-vocabulary understanding.
-- **p. 2 / I. INTRODUCTION - extractive body cue:** Third, to improve object-level pose optimization accuracy, we propose a dual-path 2D ICP (Iterative Closest Pixel) loss to align observed and actually projected pixel areas ...
-- **p. 3 / III. METHOD - extractive body cue:** In this section, we introduce an object-oriented mapping workflow and the principles behind each module.
-- **p. 6 / IV. EXPERIMENTS - extractive body cue:** V, it can be seen that our method can still outperform GoReloc in both success rate and accuracy.
-- **p. 7 / Figure/Table caption - extractive body cue:** Fig. 6: Open-vocabulary Object Matching. Open-vocabulary object-level mapping allows us to recognize diverse objects. methods achieve comparable efficiency. The relocalization module typically serves as an ...
-- **p. 5 / IV. EXPERIMENTS - extractive body cue:** In this section, we describe our experimental setup and validate that our system can achieve significant improvements in relocalization performance.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 물체 간 기하 배치를 고려해 대응 후보를 만들고 서로 다른 두 정합 경로를 사용해 자세 후보를 정제한다. [PDF 3쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11578335#page=3) · [PDF 4쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11578335#page=4) · [PDF 5쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11578335#page=5)
+- 여러 장면에서 위치·회전 오차 허용 범위에 든 질의의 비율을 비교하고 물체 대응과 자세 정제의 영향을 평가했다. [PDF 5쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11578335#page=5) · [PDF 6쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11578335#page=6) · [PDF 7쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11578335#page=7)
 
 ## Evaluation Scope
 

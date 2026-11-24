@@ -16,12 +16,11 @@
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (3 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 원문 해당 쪽과 대조했다. [본문](https://openaccess.thecvf.com/content/ICCV2025/papers/Fang_MeshLLM_Empowering_Large_Language_Models_to_Progressively_Understand_and_Generate_ICCV_2025_paper.pdf)
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — The evaluation of the generation of 3D mesh can be challenging due to the lack of direct correspondence with ground truth data.
-
-방법 관련 발췌 — In MeshLLM, we introduce a progressive training strategy that begins with KNN-based Primitive-Mesh samples, followed by Semantic-based Primitive-Mesh samples, and concludes with training on specific mesh generation and understanding tasks.
+MeshLLM은 3D 메시를 더 작은 기하 단위로 분해해 언어 모델이 꼭짓점과 면을 단계적으로 생성하고 다시 조립하게 한다. [PDF 1쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Fang_MeshLLM_Empowering_Large_Language_Models_to_Progressively_Understand_and_Generate_ICCV_2025_paper.pdf#page=1) · [PDF 3쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Fang_MeshLLM_Empowering_Large_Language_Models_to_Progressively_Understand_and_Generate_ICCV_2025_paper.pdf#page=3)
 
 ## Problem and Motivation
 
@@ -50,14 +49,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 2.2. Training Strategy Analysis - extractive body cue:** In MeshLLM, we introduce a progressive training strategy that begins with KNN-based Primitive-Mesh samples, followed by Semantic-based Primitive-Mesh samples, and concludes with training on specific ...
-- **p. 1 / 1.1. Construction of Primitive-Mesh - extractive body cue:** SamPart3D is pretrained on Objaverse [2] with a 3D backbone network designed to extract visual features.
-- **p. 3 / Figure/Table caption - extractive body cue:** Table 1. Effect of the training order. MeshLLMR refers to the reversed training order, where the Semantic-based Primitive-Mesh is trained first, followed by the KNN-based ...
-- **p. 1 / 1.1. Construction of Primitive-Mesh - extractive body cue:** By integrating these segments with their corresponding textual labels, our proposed MeshLLM significantly enhances performance.
-- **p. 2 / 2.2. Training Strategy Analysis - extractive body cue:** As shown in Table 1, training on semantic Primitive-Mesh samples later yields better results.
-- **p. 1 / 1.1. Construction of Primitive-Mesh - extractive body cue:** This strategy is highly efficient, requiring only 0.2 seconds to segment a 3D mesh, enabling the rapid generation of large-scale results.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 원시 메시 단위로 기하 구조를 표현하고, 꼭짓점을 예측한 뒤 그 꼭짓점 사이의 면 연결을 복원하는 절차를 구성했다. [PDF 3쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Fang_MeshLLM_Empowering_Large_Language_Models_to_Progressively_Understand_and_Generate_ICCV_2025_paper.pdf#page=3) · [PDF 4쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Fang_MeshLLM_Empowering_Large_Language_Models_to_Progressively_Understand_and_Generate_ICCV_2025_paper.pdf#page=4) · [PDF 5쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Fang_MeshLLM_Empowering_Large_Language_Models_to_Progressively_Understand_and_Generate_ICCV_2025_paper.pdf#page=5)
+- 생성 메시의 형상 품질과 구조를 기존 언어 모델 기반 메시 생성법과 비교하고 분해·점진적 생성의 기여를 측정했다. [PDF 5쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Fang_MeshLLM_Empowering_Large_Language_Models_to_Progressively_Understand_and_Generate_ICCV_2025_paper.pdf#page=5) · [PDF 6쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Fang_MeshLLM_Empowering_Large_Language_Models_to_Progressively_Understand_and_Generate_ICCV_2025_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Fang_MeshLLM_Empowering_Large_Language_Models_to_Progressively_Understand_and_Generate_ICCV_2025_paper.pdf#page=7)
 
 ## Evaluation Scope
 

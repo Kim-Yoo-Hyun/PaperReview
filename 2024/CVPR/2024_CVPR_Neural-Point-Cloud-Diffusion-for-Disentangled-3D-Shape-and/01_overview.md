@@ -16,12 +16,11 @@
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 원문 해당 쪽과 대조했다. [본문](https://openaccess.thecvf.com/content/CVPR2024/papers/Schroppel_Neural_Point_Cloud_Diffusion_for_Disentangled_3D_Shape_and_Appearance_CVPR_2024_paper.pdf)
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Thus, one of these factors cannot be changed independently.
-
-방법 관련 발췌 — In contrast, we propose a method that enables individual generation of shape and appearance by introducing a hybrid approach that consists of a neural point cloud hosting a continuous radiance field.
+Neural Point Cloud Diffusion은 점 위치와 점별 외관 특징으로 3D 물체를 표현해 형상과 외관을 서로 구별해 생성한다. [PDF 1쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Schroppel_Neural_Point_Cloud_Diffusion_for_Disentangled_3D_Shape_and_Appearance_CVPR_2024_paper.pdf#page=1) · [PDF 3쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Schroppel_Neural_Point_Cloud_Diffusion_for_Disentangled_3D_Shape_and_Appearance_CVPR_2024_paper.pdf#page=3)
 
 ## Problem and Motivation
 
@@ -55,16 +54,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** In contrast, we propose a method that enables individual generation of shape and appearance by introducing a hybrid approach that consists of a neural point ...
-- **p. 2 / 1. Introduction - extractive body cue:** We propose the first approach for object generation that leverages a hybrid approach consisting of a neural point cloud combined with a neural renderer and ...
-- **p. 3 / 3.1. Category-Level Point-NeRF Autodecoder - extractive body cue:** Each object Oj consists of a neural point cloud Pj = (Pj, Fj) and K views Vj1, ..., VjK.
-- **p. 3 / 3. Method - extractive body cue:** At the center of our method is an autodecoder with a neural point representation for the latent codes, which is further described in Sec.
-- **p. 4 / 3.1. Category-Level Point-NeRF Autodecoder - extractive body cue:** Vjk = (Ijk, vjk) consists of a ground truth image Ijk and corresponding camera parameters vjk.
-- **p. 7 / 4.4. 3D diffusion comparison - extractive body cue:** Our NPCD model achieves better scores than DiffRF and Functa.
-- **p. 7 / 4.3. Disentangled generation - extractive body cue:** The numbers show that we clearly outperform previous generative models that allow disentangled generation.
-- **p. 8 / Figure/Table caption - extractive body cue:** Table 4. Auto-decoded feature similarity. We compute per-point mean cosine similarities between optimized neural point features of 10 training examples for 100 different seeds. Zero ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 점의 위치·특징에서 밀도와 방사값을 복원하는 디코더를 학습하고 그 신경 점군 표현에 확산 모델을 적합한다. [PDF 3쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Schroppel_Neural_Point_Cloud_Diffusion_for_Disentangled_3D_Shape_and_Appearance_CVPR_2024_paper.pdf#page=3) · [PDF 4쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Schroppel_Neural_Point_Cloud_Diffusion_for_Disentangled_3D_Shape_and_Appearance_CVPR_2024_paper.pdf#page=4) · [PDF 5쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Schroppel_Neural_Point_Cloud_Diffusion_for_Disentangled_3D_Shape_and_Appearance_CVPR_2024_paper.pdf#page=5)
+- 생성 영상을 평가하고 한 물체의 형상을 유지하면서 외관을 바꾸거나 다른 물체의 특성과 조합하는 실험을 제시했다. [PDF 6쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Schroppel_Neural_Point_Cloud_Diffusion_for_Disentangled_3D_Shape_and_Appearance_CVPR_2024_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Schroppel_Neural_Point_Cloud_Diffusion_for_Disentangled_3D_Shape_and_Appearance_CVPR_2024_paper.pdf#page=7) · [PDF 8쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Schroppel_Neural_Point_Cloud_Diffusion_for_Disentangled_3D_Shape_and_Appearance_CVPR_2024_paper.pdf#page=8)
 
 ## Evaluation Scope
 

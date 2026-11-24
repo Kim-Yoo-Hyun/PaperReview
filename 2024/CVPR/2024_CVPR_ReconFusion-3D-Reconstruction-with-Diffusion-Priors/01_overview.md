@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2024 / CVPR
-- Authors: Rundi Wu, Ben Mildenhall, Philipp Henzler, Keunhong Park, Ruiqi Gao, Daniel Watson, Pratul P. Srinivasan, Dor Verbin, Jonathan T. Barron, Ben Poole, Aleksander Ho?y?ski
+- Authors: Rundi Wu, Ben Mildenhall, Philipp Henzler, Keunhong Park, Ruiqi Gao, Daniel Watson, Pratul P. Srinivasan, Dor Verbin, Jonathan T. Barron, Ben Poole, Aleksander Hołyński
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
 - Tags: 3D reconstruction, Diffusion, Generation, 3D Vision
@@ -16,14 +16,13 @@
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 원문 해당 쪽과 대조했다. [본문](https://openaccess.thecvf.com/content/CVPR2024/papers/Wu_ReconFusion_3D_Reconstruction_with_Diffusion_Priors_CVPR_2024_paper.pdf)
 
 > DOC-QA2 targeted source review: 2026-10-23; PDF pp. 4. 손상 구간·직접 연결된 표 분류만 원문 이미지와 대조했다. 전체 주장 정독·실험 검증·reading status 승격을 뜻하지 않는다. [URL·PDF hash·수정 기록](../../../work/sources/pdf_note_review_followup_2026-10-23.json).
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — NeRF's dense capture requirement poses a major challenge, necessitating tens to hundreds of images for even simple objects to ensure a clean reconstruction (Fig.
-
-방법 관련 발췌 — This enables our models to scale to large numbers of input images while selecting inputs that are most useful for the sampled novel view.
+ReconFusion은 적은 수의 실제 뷰로 방사장을 최적화할 때 새로운 뷰의 외관을 사전학습된 확산 모델로 제약한다. [PDF 1쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Wu_ReconFusion_3D_Reconstruction_with_Diffusion_Priors_CVPR_2024_paper.pdf#page=1) · [PDF 3쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Wu_ReconFusion_3D_Reconstruction_with_Diffusion_Priors_CVPR_2024_paper.pdf#page=3)
 
 ## Problem and Motivation
 
@@ -57,16 +56,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 5 / 3.3. Implementation Details - extractive body cue:** This enables our models to scale to large numbers of input images while selecting inputs that are most useful for the sampled novel view.
-- **p. 2 / 1. Introduction - extractive body cue:** Our approach outperforms existing baselines on several datasets of both forward-facing and unbounded 360◦ scenes.
-- **p. 2 / 1. Introduction - extractive body cue:** Furthermore, we show that our diffusion prior is an effective drop-in regularizer for NeRFs across a range of capture settings.
-- **p. 4 / 3.1. Diffusion Model for Novel View Synthesis - extractive body cue:** This enables the model to be trained and evaluated with a variable number of observed posed images.
-- **p. 1 / 1. Introduction - extractive body cue:** Advances in 3D reconstruction have enabled the transformation of images of real-world scenes into 3D models which produce photorealistic renderings from novel viewpoints [26, 32].
-- **p. 7 / Figure/Table caption - extractive body cue:** Table 1. Quantitative evaluation of few-view 3D reconstruction methods. Datasets are ordered in terms of sparsity from easier (novel views are close to observed views) ...
-- **p. 8 / Figure/Table caption - extractive body cue:** Figure 6. Our learned diffusion prior improves performance over the Zip-NeRF baseline up to as many as 81 input views on the kitchenlego scene from ...
-- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Methods for reconstructing a 3D scene from images, such as Neural Radiance Fields (NeRF), often exhibit artifacts when trained with few input views. ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 입력 영상으로 조건화한 다중 뷰 확산 사전분포를 학습하고, 관측하지 않은 카메라에서 렌더링한 영상에도 최적화 신호를 제공한다. [PDF 3쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Wu_ReconFusion_3D_Reconstruction_with_Diffusion_Priors_CVPR_2024_paper.pdf#page=3) · [PDF 4쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Wu_ReconFusion_3D_Reconstruction_with_Diffusion_Priors_CVPR_2024_paper.pdf#page=4) · [PDF 5쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Wu_ReconFusion_3D_Reconstruction_with_Diffusion_Priors_CVPR_2024_paper.pdf#page=5)
+- 전방 장면과 물체·장면을 둘러본 촬영 자료에서 입력 뷰 수를 바꿔 가며 새로운 시점의 재구성 품질을 비교했다. [PDF 6쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Wu_ReconFusion_3D_Reconstruction_with_Diffusion_Priors_CVPR_2024_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Wu_ReconFusion_3D_Reconstruction_with_Diffusion_Priors_CVPR_2024_paper.pdf#page=7) · [PDF 8쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Wu_ReconFusion_3D_Reconstruction_with_Diffusion_Priors_CVPR_2024_paper.pdf#page=8)
 
 ## Evaluation Scope
 

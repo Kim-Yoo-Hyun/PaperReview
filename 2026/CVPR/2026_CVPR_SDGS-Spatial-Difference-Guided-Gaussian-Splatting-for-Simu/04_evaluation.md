@@ -6,7 +6,7 @@
 
 ## Evaluation in One Sentence
 
-PDF body evaluation/result cue (p. 7 (4.2.1. Tracking Accuracy), p. 8 (4.3. Ablation Study), p. 7 (4.2.1. Tracking Accuracy), p. 8 (4.2.3. Performance Analysis), p. 6 (4.1.3. Evaluation Metrics), p. 6 (4.1. Experiment Setup)): 2, across three complex scenarios, while our method exhibits marginally lower overall tracking accuracy compared to the baseline approaches, it achieves a substantial improvement in computational efficiency.
+표 1의 스테레오 Tianmouc 시퀀스에서 SDGS의 궤적 오차 RMSE는 slow 4.21 cm, fast 5.89 cm, extreme 3.91 cm다. 표 2는 별도 TUM RGB-D 자료에서 측정한 궤적 오차다. 저자가 보고한 약 2배의 속도 향상은 자세 최적화 반복 1회 기준이다. [PDF 1쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Tian_SDGS_Spatial_Difference_Guided_Gaussian_Splatting_for_Simultaneous_Localization_and_CVPR_2026_paper.pdf#page=1) · [PDF 7쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Tian_SDGS_Spatial_Difference_Guided_Gaussian_Splatting_for_Simultaneous_Localization_and_CVPR_2026_paper.pdf#page=7)
 
 ## Evaluation Body Digest
 
@@ -21,7 +21,7 @@ PDF body evaluation/result cue (p. 7 (4.2.1. Tracking Accuracy), p. 8 (4.3. Abla
 
 ## Evaluation Type and Scope
 
-- **Evaluation type:** `EMPIRICAL / SIMULATION`.
+- **Evaluation type:** `EMPIRICAL / SIMULATION / REAL-ROBOT OR HARDWARE`.
 - **Target system/task:** 3D scene/object와 robot coordinate frame.
 - **Input boundary:** RGB-D, image set, point cloud, depth와 camera pose.
 - **Output/decision under evaluation:** point map, pose, scene graph, affordance 또는 query result.

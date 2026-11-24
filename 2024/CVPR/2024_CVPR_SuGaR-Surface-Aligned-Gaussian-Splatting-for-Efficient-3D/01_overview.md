@@ -16,12 +16,11 @@
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 원문 해당 쪽과 대조했다. [본문](https://openaccess.thecvf.com/content/CVPR2024/papers/Guedon_SuGaR_Surface-Aligned_Gaussian_Splatting_for_Efficient_3D_Mesh_Reconstruction_and_CVPR_2024_paper.pdf)
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — The challenge is in efficiently identifying points lying on the level set.
-
-방법 관련 발췌 — We present our SuGaR in this section: • First, we detail our loss term that enforces the alignment of the 3D Gaussians with the surface of the scene during the optimization of ...
+SuGaR는 렌더링용 3D 가우시안을 장면 표면을 따라 정렬해 고품질 메시를 추출하고 메시 위에서 뷰 합성을 정제한다. [PDF 1쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Guedon_SuGaR_Surface-Aligned_Gaussian_Splatting_for_Efficient_3D_Mesh_Reconstruction_and_CVPR_2024_paper.pdf#page=1) · [PDF 4쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Guedon_SuGaR_Surface-Aligned_Gaussian_Splatting_for_Efficient_3D_Mesh_Reconstruction_and_CVPR_2024_paper.pdf#page=4)
 
 ## Problem and Motivation
 
@@ -55,16 +54,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 4 / 4. Method - extractive body cue:** We present our SuGaR in this section: • First, we detail our loss term that enforces the alignment of the 3D Gaussians with the surface ...
-- **p. 2 / 1. Introduction - extractive body cue:** To summarize, our contributions are: • a regularization term that makes the Gaussians capture accurately the geometry of the scene; • an efficient algorithm that ...
-- **p. 2 / 1. Introduction - extractive body cue:** In fact, since we introduce a density function to evaluate our regularization term, a natural approach would be to extract level sets of this density ...
-- **p. 4 / 4.1. Aligning the Gaussians with the Surface - extractive body cue:** As discussed in the introduction, to facilitate the creation of a mesh from the Gaussians, we introduce a regularization term into the Gaussian Splatting optimization ...
-- **p. 5 / 4.1. Aligning the Gaussians with the Surface - extractive body cue:** To do so, we propose to use the depth maps of the Gaussians from the viewpoints used for training-these depth maps can be rendered efficiently ...
-- **p. 7 / 5.2. Real-Time Rendering of Real Scenes - extractive body cue:** Even though SuGaR focuses on aligning 3D Gaussians for reconstructing a high quality mesh during the first stage of its optimization, it significantly outperforms the ...
-- **p. 7 / 5.2. Real-Time Rendering of Real Scenes - extractive body cue:** This performance is remarkable as SuGaR is able to extract a mesh significantly faster than other methods.
-- **p. 8 / 5.4. Mesh Rendering Ablation - extractive body cue:** Using 3D Gaussians bound to the mesh greatly improves rendering quality, even though it contains less parameters than the UV texture.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 가우시안이 얇은 표면을 따르도록 정규화하고, 밀도 표면에서 점과 법선을 샘플링해 푸아송 표면 복원을 적용한다. [PDF 4쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Guedon_SuGaR_Surface-Aligned_Gaussian_Splatting_for_Efficient_3D_Mesh_Reconstruction_and_CVPR_2024_paper.pdf#page=4) · [PDF 5쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Guedon_SuGaR_Surface-Aligned_Gaussian_Splatting_for_Efficient_3D_Mesh_Reconstruction_and_CVPR_2024_paper.pdf#page=5) · [PDF 6쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Guedon_SuGaR_Surface-Aligned_Gaussian_Splatting_for_Efficient_3D_Mesh_Reconstruction_and_CVPR_2024_paper.pdf#page=6)
+- 추출한 삼각형에 가우시안을 묶어 메시와 외관을 함께 정제하고 메시 기반 렌더링의 품질을 비교했다. [PDF 6쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Guedon_SuGaR_Surface-Aligned_Gaussian_Splatting_for_Efficient_3D_Mesh_Reconstruction_and_CVPR_2024_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Guedon_SuGaR_Surface-Aligned_Gaussian_Splatting_for_Efficient_3D_Mesh_Reconstruction_and_CVPR_2024_paper.pdf#page=7) · [PDF 8쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Guedon_SuGaR_Surface-Aligned_Gaussian_Splatting_for_Efficient_3D_Mesh_Reconstruction_and_CVPR_2024_paper.pdf#page=8)
 
 ## Evaluation Scope
 

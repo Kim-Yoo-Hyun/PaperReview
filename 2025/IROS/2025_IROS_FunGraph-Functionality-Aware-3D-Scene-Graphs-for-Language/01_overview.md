@@ -16,12 +16,11 @@
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 원문 해당 쪽과 대조했다. [본문](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11247555)
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — One of the key challenges in modeling intra-object relationships is accurately perceiving functional object parts.
-
-방법 관련 발췌 — 3 provides an overview of our method.
+FunGraph는 실내 장면 그래프에서 물체 노드를 기능적 부품까지 세분해 지시한 행동에 맞는 손잡이 등 상호작용 부위를 찾는다. [PDF 1쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11247555#page=1) · [PDF 3쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11247555#page=3)
 
 ## Problem and Motivation
 
@@ -55,16 +54,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 3 / III. METHOD - extractive body cue:** 3 provides an overview of our method.
-- **p. 3 / III. METHOD - extractive body cue:** The input to the proposed method consists of a series of RGB-D observations, I = {I1, I2, . . . , IN}, and corresponding camera ...
-- **p. 4 / III. METHOD - extractive body cue:** Overview of our functionality-aware 3D scene graph generation pipeline, which consists of three stages: (1) Detection, where instance segmentation and feature extraction are performed to ...
-- **p. 1 / I. INTRODUCTION - extractive body cue:** Specifically, our contributions are: • A method to detect functional interactive elements from images, predict their affordances, and assign contextualized descriptions. • A framework, FunGraph, ...
-- **p. 1 / I. INTRODUCTION - extractive body cue:** Therefore, our approach involves generating 2D data for detector fine-tuning and analyzing its impact in 3D.
-- **p. 6 / IV. EXPERIMENTS - extractive body cue:** Given that the measured performance on the different splits of the same datasets are in a similar range, we carefully conclude that our proposed method ...
-- **p. 7 / IV. EXPERIMENTS - extractive body cue:** The results, however, show that the return of ConceptGraphs is still less accurate, indicating that the inclusion of functional elements and object-part relations in the ...
-- **p. 6 / IV. EXPERIMENTS - extractive body cue:** To achieve this, we convert our 3D scene graph representation into a JSON format, retaining information about each node's ID, 3D center of mass, 3D ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 주석이 있는 3D 자원을 여러 시점으로 렌더링해 2D 부품 검출기를 학습하고 검출 결과를 물체·부품 관계가 있는 3D 그래프에 통합한다. [PDF 3쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11247555#page=3) · [PDF 4쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11247555#page=4) · [PDF 5쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11247555#page=5)
+- 기능 부위의 분할과 언어 지시로 해당 부위를 고르는 정확도를 따로 평가해 물체 수준 그래프와 비교했다. [PDF 5쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11247555#page=5) · [PDF 6쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11247555#page=6) · [PDF 7쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11247555#page=7)
 
 ## Evaluation Scope
 

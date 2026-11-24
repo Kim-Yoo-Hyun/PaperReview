@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_on": "2026-11-20",
+  "generated_on": "2026-11-24",
   "catalog_type": "benchmark",
   "evidence_policy": "Generated references are cue_only. Do not treat a token match as verified evaluation evidence; consult the paper's 04_evaluation.md and source location.",
   "entries": [
@@ -104,11 +104,6 @@
         {
           "paper_id": "pr-0147",
           "source": "2025/ICML/2025_ICML_LOCATE-3D-Real-World-Object-Localization-via-Self-Supervis/04_evaluation.md",
-          "evidence": "cue_only"
-        },
-        {
-          "paper_id": "pr-0175",
-          "source": "2025/ICRA/2025_ICRA_LE-Object-Language-Embedded-Object-Level-Neural-Radiance-F/04_evaluation.md",
           "evidence": "cue_only"
         },
         {

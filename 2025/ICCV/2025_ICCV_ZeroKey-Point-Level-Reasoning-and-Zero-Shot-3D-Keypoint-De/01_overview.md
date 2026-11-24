@@ -16,12 +16,11 @@
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 원문 해당 쪽과 대조했다. [본문](https://openaccess.thecvf.com/content/ICCV2025/papers/Gong_ZeroKey_Point-Level_Reasoning_and_Zero-Shot_3D_Keypoint_Detection_from_Large_ICCV_2025_paper.pdf)
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — In general, we can observe an increased level of difficulty when going from complete objects to object parts and, finally, to specific points or small regions.
-
-방법 관련 발췌 — Inspired by these recent developments, we propose investigating MLLMs endowed with point-level reasoning in the context of 3D shape understanding and specifically for zero-shot keypoint detection.
+ZeroKey는 3D 키포인트 주석 없이 형상을 여러 방향에서 렌더링하고 멀티모달 언어 모델이 표시한 2D 위치를 모아 3D 키포인트를 찾는다. [PDF 1쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Gong_ZeroKey_Point-Level_Reasoning_and_Zero-Shot_3D_Keypoint_Detection_from_Large_ICCV_2025_paper.pdf#page=1) · [PDF 3쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Gong_ZeroKey_Point-Level_Reasoning_and_Zero-Shot_3D_Keypoint_Detection_from_Large_ICCV_2025_paper.pdf#page=3)
 
 ## Problem and Motivation
 
@@ -55,16 +54,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** Inspired by these recent developments, we propose investigating MLLMs endowed with point-level reasoning in the context of 3D shape understanding and specifically for zero-shot keypoint ...
-- **p. 2 / 1. Introduction - extractive body cue:** Furthermore, we analyze the 3D understanding encoded in Molmo through our method by leveraging Schelling Points and evaluating the describability of keypoints.
-- **p. 4 / 4.2. Prompting Molmo to Detect 2D Keypoints - extractive body cue:** The prompt to Molmo consists of the image Vj and the instruction to localize the keypoint ki.
-- **p. 7 / Method - extractive body cue:** We then lift these 2D keypoints to 3D using the same backprojection technique described in our method.
-- **p. 7 / Method - extractive body cue:** We lift the prediction of this method to 3D using the same lifting procedure used in our method to compare 3D Zero-shot keypoint detection.
-- **p. 8 / Figure/Table caption - extractive body cue:** Figure 7. Comparison of the performance across different config- urations: (blue) our original method; (red) results with a Global Text prompt; (orange, purple, brown) results ...
-- **p. 7 / 6.3. Quantitative and Qualitative Analysis - extractive body cue:** Our KeypointNet evaluation shows (see Table.1) that our Zero-Shot method significantly outperforms MLLM-based baselines (PaliGemma 2[45], GPT-4o, CLIP-DINOiser [50]) across all distance thresholds.
-- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Zero-shot 3D Keypoint Detection. Without any ground truth labels or supervised training, our method leverages the point-level reasoning embedded within MLLMs to extract ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- Molmo가 각 뷰에서 제시한 점을 표면으로 되투영하고 시점 간 지지를 모아 반복적으로 검출되는 위치를 선택한다. [PDF 3쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Gong_ZeroKey_Point-Level_Reasoning_and_Zero-Shot_3D_Keypoint_Detection_from_Large_ICCV_2025_paper.pdf#page=3) · [PDF 4쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Gong_ZeroKey_Point-Level_Reasoning_and_Zero-Shot_3D_Keypoint_Detection_from_Large_ICCV_2025_paper.pdf#page=4) · [PDF 5쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Gong_ZeroKey_Point-Level_Reasoning_and_Zero-Shot_3D_Keypoint_Detection_from_Large_ICCV_2025_paper.pdf#page=5)
+- 예측 키포인트의 위치를 주석과 비교하고, 뷰 수에 따른 변화와 검출 지점에 자연어 이름을 붙이는 예를 제시했다. [PDF 5쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Gong_ZeroKey_Point-Level_Reasoning_and_Zero-Shot_3D_Keypoint_Detection_from_Large_ICCV_2025_paper.pdf#page=5) · [PDF 6쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Gong_ZeroKey_Point-Level_Reasoning_and_Zero-Shot_3D_Keypoint_Detection_from_Large_ICCV_2025_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Gong_ZeroKey_Point-Level_Reasoning_and_Zero-Shot_3D_Keypoint_Detection_from_Large_ICCV_2025_paper.pdf#page=7) · [PDF 8쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Gong_ZeroKey_Point-Level_Reasoning_and_Zero-Shot_3D_Keypoint_Detection_from_Large_ICCV_2025_paper.pdf#page=8)
 
 ## Evaluation Scope
 

@@ -16,12 +16,11 @@
 - Code/Project: https://daveredrum.github.io/ScanRefer/
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (35 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 원문 해당 쪽과 대조했다. [본문](https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123650205.pdf)
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, these methods and datasets are restricted to 2D images, where object localization fails to capture the true 3D extent of an object (see Fig.
-
-방법 관련 발췌 — Our architecture consists of two main modules: 1) detection & encoding; 2) fusion & localization (Fig.
+ScanRefer는 RGB-D로 스캔한 장면의 점군과 자연어 설명을 입력받아 설명에 해당하는 물체의 3차원 경계 상자를 예측한다. [PDF 1쪽](https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123650205.pdf#page=1) · [PDF 4쪽](https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123650205.pdf#page=4)
 
 ## Problem and Motivation
 
@@ -53,26 +52,12 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 6 / 5 Method - extractive body cue:** Our architecture consists of two main modules: 1) detection & encoding; 2) fusion & localization (Fig.
-- **p. 7 / 5 Method - extractive body cue:** 5.2 Network Architecture Our method takes as input the preprocessed point cloud P′ and the word embedding sequence W representing the input description and outputs ...
-- **p. 8 / 5 Method - extractive body cue:** Conceptually, our localization pipeline consists of the following four stages: detection, encoding, fusion and localization.
-- **p. 8 / 5 Method - extractive body cue:** Next, the proposal module takes in the point clusters and processes those clusters to predict the objectness mask Dobjn ∈RM×1 and the axis-aligned bounding boxes ...
-- **p. 2 / 1 Introduction - extractive body cue:** Flickr30K Entities [47] have enabled the development of various methods for visual grounding in 2D [23, 22, 39].
-- **p. 14 / 6 Experiments - extractive body cue:** The additional 3D information improves performance.
-- **p. 14 / 6 Experiments - extractive body cue:** Our architecture trained with geometry, multi-view features, and normals (xyz+multiview+ normals+lobjcls) achieves the best performance among all ablations.
-- **p. 11 / Figure/Table caption - extractive body cue:** Table 4: Comparison of localization results obtained by our ScanRefer and base- line models. We measure percentage of predictions whose IoU with the ground truth ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- ScanNet 장면 800개에 있는 물체 11,046개에 대해 사람이 작성한 지시 표현 51,583개를 수집했다. [PDF 3쪽](https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123650205.pdf#page=3) · [PDF 5쪽](https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123650205.pdf#page=5)
+- 점군의 물체 후보 특징과 문장 임베딩을 결합해 후보별 대응 점수를 학습하고, 예측 상자와 정답 상자의 겹침으로 위치 추정을 평가했다. [PDF 7쪽](https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123650205.pdf#page=7) · [PDF 8쪽](https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123650205.pdf#page=8) · [PDF 11쪽](https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123650205.pdf#page=11)
 
 ## Evaluation Scope
 
-| Dimension | Body-grounded record | Boundary | Anchor |
-|---|---|---|---|
-| Evaluation type | EMPIRICAL / SOURCE-REPORTED EVALUATION | do not infer unreported downstream behavior | p. 14 (6 Experiments), p. 14 (6 Experiments) |
-| Embodiment/environment | 4: Description lengths Number of descriptions 51,583 Number of scenes 800 Number of objects 11,046 Number of objects per scene 13.81 Number of descriptions per scene 64.48 Number of descriptions per object ... | hardware/simulator version and reset protocol | p. 5 (4 Dataset), p. 9 (6 Experiments) |
-| Dataset/benchmark | 4.2 Dataset Statistics We collected 51,583 descriptions for 800 ScanNet scenes2. | role, split, size and leakage | p. 5 (4 Dataset), p. 9 (6 Experiments), p. 6 (4 Dataset), p. 4 (3 dataset) |
-| Metric | To evaluate the performance of our method, we measure the thresholded accuracy where the positive predictions have higher intersection over union (IoU) with the ground truths than the thresholds. | definition, denominator, direction and uncertainty | p. 10 (6 Experiments), p. 12 (Figure/Table caption), p. 10 (6 Experiments) |
-| Baseline/ablation | We outperform all baselines by a significant margin. | fair input/data/compute/action matching | p. 11 (6 Experiments), p. 11 (6 Experiments), p. 12 (Figure/Table caption) |
+51,583개는 지시 표현의 수이고 11,046개는 지시된 물체의 수다. 표 4는 예측 상자가 정답 상자와 IoU 0.25 또는 0.5 기준을 넘긴 질의의 비율을 같은 범주 물체가 하나인 장면과 여럿인 장면으로 나누어 보고한다. [PDF 3쪽](https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123650205.pdf#page=3) · [PDF 5쪽](https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123650205.pdf#page=5) · [PDF 11쪽](https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123650205.pdf#page=11)
 
 ## Explicit Limitations and Failure Boundary
 

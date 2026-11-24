@@ -16,12 +16,11 @@
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 원문 해당 쪽과 대조했다. [본문](https://openaccess.thecvf.com/content/ICCV2025/papers/Min_Vision-Language_Interactive_Relation_Mining_for_Open-Vocabulary_Scene_Graph_Generation_ICCV_2025_paper.pdf)
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Since existing pre-trained VLMs lack relation-aware knowledge [5], directly building a VLM for OV-SGG is challenging.
-
-방법 관련 발췌 — To mitigate the overfitting of VLM to the base dataset from the semantical level, we propose to construct a semantic-unbiased VLM.
+VL-IRM은 2D 영상에서 물체 쌍을 연결하는 관계를 학습해 훈련 시 관계 라벨이 없던 술어도 장면 그래프로 예측한다. [PDF 1쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Min_Vision-Language_Interactive_Relation_Mining_for_Open-Vocabulary_Scene_Graph_Generation_ICCV_2025_paper.pdf#page=1) · [PDF 3쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Min_Vision-Language_Interactive_Relation_Mining_for_Open-Vocabulary_Scene_Graph_Generation_ICCV_2025_paper.pdf#page=3)
 
 ## Problem and Motivation
 
@@ -55,16 +54,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 4 / 3.3. Hierarchical Relation Extension - extractive body cue:** To mitigate the overfitting of VLM to the base dataset from the semantical level, we propose to construct a semantic-unbiased VLM.
-- **p. 4 / 3.2. Generative Relation Recognition - extractive body cue:** We propose directly linking the relation predictor with a language model, and activating both the image encoder and the language model as trainable components, as ...
-- **p. 6 / Method - extractive body cue:** Our method achieves comparable performance to prior models, without requiring access to various instruction prompts or additional pretraining.
-- **p. 6 / Method - extractive body cue:** Since the task evaluation of OV-SGG requires the score of relation triplets based on the relation logits for ranking [5, 43], to assess the effectiveness ...
-- **p. 2 / 1. Introduction - extractive body cue:** The contributions can be summarized as follows, • We consider a new perspective for OV-SGG, i.e., optimizing the structure of the VLM.
-- **p. 8 / Figure/Table caption - extractive body cue:** Figure 9. Comparison of qualitative results on VG test set. namic fitting module could alleviate the model's semantic bias towards the common predicates. By dynamically ...
-- **p. 7 / Figure/Table caption - extractive body cue:** Figure 5. Effect of the learning weight of the generative relation language model. of text-image modalities, VLM can directly generate open- vocabulary relations for OV-SGG ...
-- **p. 8 / 4.4. Qualitative Results - extractive body cue:** These results demonstrate that our model has a more general relation recognition ability.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 물체 쌍과 장면 문맥을 이용해 관계 텍스트를 생성하고 시각 단서로 관계 표현을 보완해 열린 술어 후보와 대응시킨다. [PDF 3쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Min_Vision-Language_Interactive_Relation_Mining_for_Open-Vocabulary_Scene_Graph_Generation_ICCV_2025_paper.pdf#page=3) · [PDF 4쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Min_Vision-Language_Interactive_Relation_Mining_for_Open-Vocabulary_Scene_Graph_Generation_ICCV_2025_paper.pdf#page=4) · [PDF 5쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Min_Vision-Language_Interactive_Relation_Mining_for_Open-Vocabulary_Scene_Graph_Generation_ICCV_2025_paper.pdf#page=5)
+- VG150 기반 열린 어휘 평가에서 기존 술어와 새로운 술어의 관계 예측을 비교하고 문맥 프롬프트의 효과를 분석했다. [PDF 5쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Min_Vision-Language_Interactive_Relation_Mining_for_Open-Vocabulary_Scene_Graph_Generation_ICCV_2025_paper.pdf#page=5) · [PDF 6쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Min_Vision-Language_Interactive_Relation_Mining_for_Open-Vocabulary_Scene_Graph_Generation_ICCV_2025_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Min_Vision-Language_Interactive_Relation_Mining_for_Open-Vocabulary_Scene_Graph_Generation_ICCV_2025_paper.pdf#page=7)
 
 ## Evaluation Scope
 

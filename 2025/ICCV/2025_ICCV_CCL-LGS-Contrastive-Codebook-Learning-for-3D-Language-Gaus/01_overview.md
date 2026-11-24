@@ -16,12 +16,11 @@
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 원문 해당 쪽과 대조했다. [본문](https://openaccess.thecvf.com/content/ICCV2025/papers/Tian_CCL-LGS_Contrastive_Codebook_Learning_for_3D_Language_Gaussian_Splatting_ICCV_2025_paper.pdf)
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, their reliance on exhaustive multi-scale rendering leads to inefficiency, and patch-based feature extraction often fails to capture precise object boundaries, resulting in scale misalignment and performance degradation.
-
-방법 관련 발췌 — The main contributions of our work can be summarized as follows: • We propose a novel framework, CCL-LGS, which integrates view-consistent semantic supervision to enable the reconstruction of 3D Gaussian semantic fields. ...
+CCL-LGS는 여러 영상에서 동일한 물체에 붙는 의미가 달라지는 문제를 줄이기 위해 시점 간 마스크 추적과 대조 학습으로 가우시안 언어 장을 학습한다. [PDF 1쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Tian_CCL-LGS_Contrastive_Codebook_Learning_for_3D_Language_Gaussian_Splatting_ICCV_2025_paper.pdf#page=1) · [PDF 4쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Tian_CCL-LGS_Contrastive_Codebook_Learning_for_3D_Language_Gaussian_Splatting_ICCV_2025_paper.pdf#page=4)
 
 ## Problem and Motivation
 
@@ -55,16 +54,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** The main contributions of our work can be summarized as follows: • We propose a novel framework, CCL-LGS, which integrates view-consistent semantic supervision to enable ...
-- **p. 2 / 1. Introduction - extractive body cue:** Owing to its proficiency in 3D open-vocabulary scene understanding, our method could benefit a variety of downstream applications.
-- **p. 3 / 3. Method - extractive body cue:** In this section, we present our proposed framework, CCLLGS, for view-consistent 3D semantic reconstruction.
-- **p. 4 / 3.2. Two-Level Semantic Feature Extraction - extractive body cue:** In our method, a uniform 32×32 point prompt is provided to SAM to generate three types of masks corresponding to the semantic scales of subparts, ...
-- **p. 5 / 3.3. Contrastive Codebook Learning - extractive body cue:** To mitigate the limitations of directly using features derived from imperfect masks, we introduce a codebookbased contrastive learning approach.
-- **p. 6 / 4.1. Experiments on LERF - extractive body cue:** We observed that our method achieved an IoU result of 65.6 in 3D semantic segmentation, ranking either first or second across all four scenes, outperforming ...
-- **p. 7 / 4.1. Experiments on LERF - extractive body cue:** Our method achieves consistent multi-view segmentation and accurately captures challenging objects like the cabinet, outperforming prior approaches. glass of water kamaboko RGB GT Ours w/ ...
-- **p. 8 / 4.2. Experiments on 3D-OVS - extractive body cue:** While our approach achieves comparable performance, it underperforms 3D VL-GS.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- SAM 마스크를 뷰 사이에서 추적해 CLIP 의미 특징을 모으고 코드북에서 같은 범주는 모이고 다른 범주는 구분되도록 학습한다. [PDF 3쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Tian_CCL-LGS_Contrastive_Codebook_Learning_for_3D_Language_Gaussian_Splatting_ICCV_2025_paper.pdf#page=3) · [PDF 4쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Tian_CCL-LGS_Contrastive_Codebook_Learning_for_3D_Language_Gaussian_Splatting_ICCV_2025_paper.pdf#page=4) · [PDF 5쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Tian_CCL-LGS_Contrastive_Codebook_Learning_for_3D_Language_Gaussian_Splatting_ICCV_2025_paper.pdf#page=5)
+- LERF·3D-OVS 장면에서 언어 질의 분할을 평가하고 다중 뷰 감독 및 대조 학습 구성의 영향을 비교했다. [PDF 6쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Tian_CCL-LGS_Contrastive_Codebook_Learning_for_3D_Language_Gaussian_Splatting_ICCV_2025_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Tian_CCL-LGS_Contrastive_Codebook_Learning_for_3D_Language_Gaussian_Splatting_ICCV_2025_paper.pdf#page=7) · [PDF 8쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Tian_CCL-LGS_Contrastive_Codebook_Learning_for_3D_Language_Gaussian_Splatting_ICCV_2025_paper.pdf#page=8)
 
 ## Evaluation Scope
 
