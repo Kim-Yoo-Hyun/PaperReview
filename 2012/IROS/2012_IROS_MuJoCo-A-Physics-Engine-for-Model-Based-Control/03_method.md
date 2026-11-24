@@ -12,8 +12,8 @@ PDF body method statement (p. 7 (III. MODELING), p. 2 (II. ALGORITHMIC FOUNDATIO
 
 - **p. 7 / III. MODELING - extractive body cue:** The tendon path is the shortest path that passes through a sequence of specified sites or wraps around specified geoms. h) Actuator: Actuators have control ...
 - **p. 2 / II. ALGORITHMIC FOUNDATIONS - extractive body cue:** We start with notation and smooth dynamics which are fairly standard, then explain the contact simulation algorithms in more detail, followed by computational complexity and ...
-- **p. 2 / II. ALGORITHMIC FOUNDATIONS - extractive body cue:** Equations of motion and smooth dynamics We will use the following notation: q position in generalized coordinates v velocity in generalized coordinates  inertia matrix ...
-- **p. 6 / III. MODELING - extractive body cue:** A MuJoCo model consists of one or several kinematic trees, which can have f1oating bases including isolated objects.
+- $q$와 $v$는 일반화 좌표의 위치와 속도, $M$은 관성 행렬이다. $b$는 코리올리·원심·중력·스프링 항을 포함하는 편향력이다. [§II-A 운동 방정식 · PDF 2쪽](https://roboti.us/lab/papers/TodorovIROS12.pdf#page=2)
+- 하나의 MuJoCo 모델은 하나 이상의 운동학적 트리로 구성된다. 각 트리의 기저는 공간에서 자유롭게 움직일 수 있어 독립된 물체도 표현할 수 있다. [§III-B 강체 모델 · PDF 6쪽](https://roboti.us/lab/papers/TodorovIROS12.pdf#page=6)
 - **p. 6 / III. MODELING - extractive body cue:** A full explanation of the modeling convention is beyond the scope of this paper, but one important feature is the ability to specify body inertial ...
 - **p. 7 / III. MODELING - extractive body cue:** However they can also be used during model construction to specify the inertial properties of the body to which they belong.
 - **p. 2 / II. ALGORITHMIC FOUNDATIONS - extractive body cue:** The procedure for solving the above equations of motion consists of the following steps:
@@ -23,14 +23,14 @@ PDF body method statement (p. 7 (III. MODELING), p. 2 (II. ALGORITHMIC FOUNDATIO
 
 - **p. 2 / I. INTRODUCTION - extractive body cue:** This is useful for approximating derivatives via finite differencing, which in turn enables numerical optimization. • Inverse dynamics can always be computed, even in the ...
 - **p. 2 / II. ALGORITHMIC FOUNDATIONS - extractive body cue:** The procedure for solving the above equations of motion consists of the following steps:
-- **p. 6 / III. MODELING - extractive body cue:** A MuJoCo model consists of one or several kinematic trees, which can have f1oating bases including isolated objects.
+- 하나의 MuJoCo 모델은 하나 이상의 운동학적 트리로 구성된다. 각 트리의 기저는 공간에서 자유롭게 움직일 수 있어 독립된 물체도 표현할 수 있다. [§III-B 강체 모델 · PDF 6쪽](https://roboti.us/lab/papers/TodorovIROS12.pdf#page=6)
 
 ## Source Evidence Cues
 
 - **p. 7 / III. MODELING - extractive body cue:** The tendon path is the shortest path that passes through a sequence of specified sites or wraps around specified geoms. h) Actuator: Actuators have control ...
 - **p. 2 / II. ALGORITHMIC FOUNDATIONS - extractive body cue:** We start with notation and smooth dynamics which are fairly standard, then explain the contact simulation algorithms in more detail, followed by computational complexity and ...
-- **p. 2 / II. ALGORITHMIC FOUNDATIONS - extractive body cue:** Equations of motion and smooth dynamics We will use the following notation: q position in generalized coordinates v velocity in generalized coordinates  inertia matrix ...
-- **p. 6 / III. MODELING - extractive body cue:** A MuJoCo model consists of one or several kinematic trees, which can have f1oating bases including isolated objects.
+- 위치 $q$와 속도 $v$를 일반화 좌표로 표현하고, 관성 행렬 $M$과 편향력 $b$로 운동 방정식을 구성한다. [§II-A 운동 방정식 · PDF 2쪽](https://roboti.us/lab/papers/TodorovIROS12.pdf#page=2)
+- 하나의 MuJoCo 모델은 하나 이상의 운동학적 트리로 구성된다. 각 트리의 기저는 공간에서 자유롭게 움직일 수 있어 독립된 물체도 표현할 수 있다. [§III-B 강체 모델 · PDF 6쪽](https://roboti.us/lab/papers/TodorovIROS12.pdf#page=6)
 - **p. 6 / III. MODELING - extractive body cue:** A full explanation of the modeling convention is beyond the scope of this paper, but one important feature is the ability to specify body inertial ...
 - **p. 7 / III. MODELING - extractive body cue:** However they can also be used during model construction to specify the inertial properties of the body to which they belong.
 - **Detected method headings:** II. ALGORITHMIC FOUNDATIONS (p. 2); III. MODELING (p. 6)
@@ -47,7 +47,7 @@ PDF body method statement (p. 7 (III. MODELING), p. 2 (II. ALGORITHMIC FOUNDATIO
 
 ## Objective / Update Rule
 
-- **p. 2 / II. ALGORITHMIC FOUNDATIONS - extractive body cue:** Equations of motion and smooth dynamics We will use the following notation: q position in generalized coordinates v velocity in generalized coordinates  inertia matrix ...
+- 등식 제약을 처리한 뒤, 접촉 충격량 $\mathbf f_C$에서 속도 $\mathbf v=PJ_C^\top\mathbf f_C+\mathbf r$를 구한다. [§II-A 식 2 · PDF 3쪽](https://roboti.us/lab/papers/TodorovIROS12.pdf#page=3)
 - **p. 2 / II. ALGORITHMIC FOUNDATIONS - extractive body cue:** The procedure for solving the above equations of motion consists of the following steps:
 - **p. 7 / III. MODELING - extractive body cue:** They are used in the engine to route tendons and apply certain types of forces, but can also be used by the user's program to ...
 - **p. 7 / III. MODELING - extractive body cue:** MuJoCo has several predefined types of constraints: 3D position constraint forcing two points on two bodies to coincide (effectively creating another ball joint), joint angle ...
@@ -87,7 +87,7 @@ PDF body method statement (p. 7 (III. MODELING), p. 2 (II. ALGORITHMIC FOUNDATIO
 
 ## Training vs Inference
 
-- **p. 2 / II. ALGORITHMIC FOUNDATIONS - extractive body cue:** Equations of motion and smooth dynamics We will use the following notation: q position in generalized coordinates v velocity in generalized coordinates  inertia matrix ...
+- 한 스텝에서 일반화 속도를 먼저 갱신하고 그 속도로 위치를 적분한다. [§II-A 식 2 · PDF 3쪽](https://roboti.us/lab/papers/TodorovIROS12.pdf#page=3)
 - **p. 4 / 5) Integrate numerically to obtain the next state - extractive body cue:** Convex solver A favorable trade-off between speed and accuracy is obtained by replacing the nonlinear complementarity constraints (4, 5) with a convex optimization problem, whose ...
 
 - Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
@@ -95,8 +95,7 @@ PDF body method statement (p. 7 (III. MODELING), p. 2 (II. ALGORITHMIC FOUNDATIO
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** tendon, path, shortest, passes, through, sequence, specified, sites, wraps, around, geoms, Actuator, Actuators, have, control, inputs, optional, activation, states, model.
-- **Relevant PDF headings:** II. ALGORITHMIC FOUNDATIONS (p. 2); III. MODELING (p. 6).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
+- 식 2는 일반화 속도를 접촉 충격량의 함수로 나타낸다. [§II-A 식 2 · PDF 3쪽](https://roboti.us/lab/papers/TodorovIROS12.pdf#page=3)
 
 ## Evaluation Link
 
@@ -108,12 +107,12 @@ PDF body method statement (p. 7 (III. MODELING), p. 2 (II. ALGORITHMIC FOUNDATIO
 
 ## Failure and Ablation Link
 
-- **p. 4 / 5) Integrate numerically to obtain the next state - extractive body cue:** It is needed for three reasons: is often singular; without the inverse cannot be defined (see below); one can enable contact interactions from a distance ...
+- 볼록 접촉 해법은 특이할 수 있는 $A$에 대각 정규화 행렬 $R$을 더한다. 접촉 거리와 함께 $R$을 키우면 떨어진 물체 사이에도 약한 접촉력을 모델링할 수 있다. [§II-D 식 6 · PDF 4쪽](https://roboti.us/lab/papers/TodorovIROS12.pdf#page=4)
 - **p. 6 / 5) Integrate numerically to obtain the next state - extractive body cue:** When there are no equality constraints and the contact solver has an exact inverse, the inverse dynamics can be computed without resorting to posthoc mode.
 - **p. 6 / III. MODELING - extractive body cue:** A unique feature of MuJoCo is that the primitive joint types can be composed into more complex joints, without having to define intermediate dummy bodies. ...
-- **p. 3 / 5) Integrate numerically to obtain the next state - extractive body cue:** Focusing for the moment on a single contact, let the contact impulse fbe partitioned as £ N; f F¤ where N is the normal component ...
+- 단일 접촉의 충격량 $\mathbf f_C$를 법선 성분 $f^{\mathcal N}$과 접선 평면의 두 성분 $\mathbf f^{\mathcal F}\in\mathbb R^2$로 나눈다. [§II-B 접촉 충격량 · PDF 3쪽](https://roboti.us/lab/papers/TodorovIROS12.pdf#page=3)
 - **p. 4 / 5) Integrate numerically to obtain the next state - extractive body cue:** In the normal direction for example, if the corresponding component of x is positive it encodes force (in which case the velocity is 0), otherwise ...
-- **p. 5 / 5) Integrate numerically to obtain the next state - extractive body cue:** This is done by computing the components of findependently for each contact (the diagonal solver ignores contact interactions by definition) and enforcing the friction-cone constraints, ...
+- $\operatorname{diag}(A)\mathbf f_C=\mathbf v_C^\ast-\mathbf v_0$를 근사적으로 풀고 각 접촉의 충격량을 마찰원뿔에 투영한다. 이 근사에서는 접촉점 사이의 결합을 생략한다. [§II-E 대각 해법 · PDF 5쪽](https://roboti.us/lab/papers/TodorovIROS12.pdf#page=5)
 - **p. 3 / II. ALGORITHMIC FOUNDATIONS - extractive body cue:** 1) Compute the Cartesian positions and orientations of all rigid bodies (i.e. the forward kinematics), detect potential collisions (with some safety margin), and construct the ...
 
 - Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
@@ -139,6 +138,6 @@ PDF body method statement (p. 7 (III. MODELING), p. 2 (II. ALGORITHMIC FOUNDATIO
 > Cross-checked on 2026-09-03 against the validated PDF body (8 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
 
 - **Paper-specific method/interface:** The tendon path is the shortest path that passes through a sequence of specified sites or wraps around specified geoms. h) Actuator: Actuators have control inputs, optional activation states (used ... (p. 7, III. MODELING).
-- **Objective/update evidence:** Equations of motion and smooth dynamics We will use the following notation: q position in generalized coordinates v velocity in generalized coordinates  inertia matrix in generalized coordinates b "bias" ... (p. 2, II. ALGORITHMIC FOUNDATIONS).
+- **속도 갱신.** 등식 제약을 처리한 뒤, 접촉 충격량 $\mathbf f_C$에서 속도 $\mathbf v=PJ_C^\top\mathbf f_C+\mathbf r$를 구한다. [§II-A 식 2 · PDF 3쪽](https://roboti.us/lab/papers/TodorovIROS12.pdf#page=3)
 - **Temporal/runtime evidence:** The procedure for solving the above equations of motion consists of the following steps: (p. 2, II. ALGORITHMIC FOUNDATIONS).
 - **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

@@ -82,6 +82,11 @@ CORE 50편에서 직접 관련된 17편을 심화 검토했다. VLA 정책 11편
 
 ## 노트 품질
 
+2026-11-24에 표준 노트 6,260개를 검색해 10편의 31개 노트에 남아 있던 글꼴 전용 문자 258개를 찾았다. 91개 줄을 해당 PDF의 인쇄된 수식·그림과 대조해 고쳤고, 같은 범위를 다시 검색해 글꼴 전용 문자와 대체 문자(U+FFFD)가 0개임을 확인했다. 논문별 기록에는 판본 해시와 교정 전 커밋·줄 번호가 있다. [감사 원장과 집계](../../research/SOURCE_AUDIT.md#노트의-수식과-도식)
+
+- MuJoCo에서 법선 충격량과 접선 충격량, 마찰계수의 부등호를 복원했다. 표 1의 단위는 접촉이 없는 동역학의 초당 평가 횟수다. ManiGaussian 그림 1의 녹색 체크는 블록을 쌓은 예시 시행에 붙은 성공 표시다. [MuJoCo 식 4·5](https://roboti.us/lab/papers/TodorovIROS12.pdf#page=3) · [MuJoCo 표 1](https://roboti.us/lab/papers/TodorovIROS12.pdf#page=7) · [ManiGaussian 그림 1](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/05194.pdf#page=2)
+- TD-MPC2는 잠재 상태·보상·가치를 학습한 뒤 행동열의 수익을 평가해 첫 행동을 실행한다. 문제 정의와 평가 노트 2개에도 이 설명을 반영했다. SERL과 HIL-SERL의 문제 정의에서는 말단장치 명령의 예가 각각 목표 자세와 목표 트위스트로 다르다. [TD-MPC2 식 3·6](https://arxiv.org/pdf/2310.16828v2#page=4) · [SERL §3](https://arxiv.org/pdf/2401.16013v4#page=3) · [HIL-SERL §3.1](https://arxiv.org/pdf/2410.21845v3#page=4)
+
 논문 개요 278편에 연도·발표처의 항목명만 남아 있었다. 2026-11-23에 원장의 값으로 해당 표시를 복원했다. 무결성 검사는 1,252편 모두에서 개요 상단의 연도·발표처가 한 번 표시되고 원장과 일치하는지도 확인한다. [원장](../sources/papers.json) · [검사 코드](../scripts/audit_repository.py)
 
 - GSrec의 ECVA 서지는 제목에 *for*를, 인쇄본은 *from*을 쓴다. Li 등의 *UrbanGS*에서도 ICLR 웹 서지와 표제면의 어순이 다르다. 두 논문 모두 인쇄 제목으로도 검색할 수 있게 했다. Wang 등의 CVPR *Urban-GS*는 항공·지상 영상 결합을 다룬 별도 연구다. [GSrec 게재본](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/00274.pdf#page=1) · [UrbanGS 게재본](https://proceedings.iclr.cc/paper_files/paper/2026/file/108030643e640ac050e0ed5e6aace48f-Paper-Conference.pdf#page=1) · [Urban-GS 게재본](https://openaccess.thecvf.com/content/CVPR2026/papers/Wang_Urban-GS_A_Unified_3D_Gaussian_Splatting_Framework_for_Compact_and_CVPR_2026_paper.pdf#page=1)

@@ -58,7 +58,7 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the PDF-described interface and mechanism: Tasks include high-dimensional state and action spaces (up to A ∈R39), image observations, sparse rewards, multi-object manipulation, physiologically accurate musculoskeletal motor control, complex locomotion (e.g. (p. 2, 1 INTRODUCTION); preserve the objective/update rule: The h, d, R, Q components are jointly optimized to minimize the objective L (θ) .= E (s,a,r,s′)0:H∼B   H X t=0 λt   ∥z′ t -sg(h(s′ t))∥2 ... (p. 4, 2 BACKGROUND).
+1. 식 3의 세 손실과 시간 가중치를 보존한 상태에서 잠재 동역학 전개 길이를 바꾸고, 제어 수익과 잠재 예측 오차를 함께 측정한다. [§3.1 식 3 · PDF 4쪽](https://arxiv.org/pdf/2310.16828v2#page=4)
 2. Use the paper-reported task/data/environment cue: Episode return as a function of environment steps on 10 image-based DMControl tasks. (p. 8, 4.1 RESULTS).
 3. Compare against the reported or matched baseline: TD-MPC2 outperforms baselines by a large margin on these tasks, despite using the same hyperparameters across all tasks. (p. 6, 4.1 RESULTS).
 4. Report the body metric with its denominator and aggregation: To summarize agent performance with a single metric, we produce a normalized score that is an average of all individual task success rates (Meta-World) and episode returns normalized to the ... (p. 7, 4.1 RESULTS).

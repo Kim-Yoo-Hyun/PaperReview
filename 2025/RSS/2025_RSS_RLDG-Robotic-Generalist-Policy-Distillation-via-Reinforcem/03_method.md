@@ -12,7 +12,7 @@ PDF body method statement (p. 5 (3.3. Generalist Policy Finetuning), p. 4 (3.1. 
 
 - **p. 5 / 3.3. Generalist Policy Finetuning - extractive body cue:** To predict an action, the transformer backbone takes in the tokenized observation and goal, then outputs a readout embedding 𝑒, which is used to condition ...
 - **p. 4 / 3.1. Online RL Training - extractive body cue:** We can formulate each robotic task as a Markov Decision Process (MDP), where the state 𝑠𝑡consists of RGB images and proprioceptive information, and actions 𝑎𝑡represent ...
-- **p. 4 / 3.3. Generalist Policy Finetuning - extractive body cue:** Specifically, suppose we have a pre-trained policy 𝜋0, we fine-tune it with taskspecific dataset 𝐷(𝑠𝑡,𝑎𝑡) with the following supervised learning objective: (𝜃) = -𝔼(𝑠𝑡,𝑎𝑡)∼[log 𝜋𝜃(𝑎𝑡/𝑠𝑡)] ...
+- RL로 훈련한 전문가가 데이터를 생성하고 일반화 정책이 그 행동 분포를 모방한다. [§3.3 식 2 · PDF 4쪽](https://arxiv.org/pdf/2412.09858v1#page=4)
 - **p. 5 / 3.3. Generalist Policy Finetuning - extractive body cue:** To fine-tune the model on our RL-generated dataset, we use the public model weights pre-trained on 970 thousand Open X-Embodiment dataset (Collaboration et al., 2024) ...
 - **p. 4 / 3.1. Online RL Training - extractive body cue:** The policy objective 𝜋(𝑎𝑡/𝑠𝑡) is to maximize the expected discounted return: 𝐽(𝜋) = 𝔼 𝑠0∼𝜌0 𝑎𝑡∼𝜋(𝑎𝑡/𝑠𝑡) 𝑠𝑡+1∼𝑃(𝑠𝑡+1/𝑠𝑡,𝑎𝑡) [ 𝑇 ∑ 𝑡=0 𝛾𝑡𝑅(𝑠𝑡, 𝑎𝑡)] (1) where ...
 - **p. 4 / 3.1. Online RL Training - extractive body cue:** It incorporates human interventions with RLPD (Ball et al., 2023) to efficiently learn visuomotor policies that consistently achieve 100% success rate by maximizing (1).
@@ -22,14 +22,14 @@ PDF body method statement (p. 5 (3.3. Generalist Policy Finetuning), p. 4 (3.1. 
 ## Design Rationale
 
 - **p. 1 / 1. Introduction - extractive body cue:** To tackle this challenge, we propose Reinforcement Learning Distilled Generalist (RLDG), a simple yet effective method that leverages reinforcement learning to generate high-quality training data ...
-- **p. 4 / 3.3. Generalist Policy Finetuning - extractive body cue:** Specifically, suppose we have a pre-trained policy 𝜋0, we fine-tune it with taskspecific dataset 𝐷(𝑠𝑡,𝑎𝑡) with the following supervised learning objective: (𝜃) = -𝔼(𝑠𝑡,𝑎𝑡)∼[log 𝜋𝜃(𝑎𝑡/𝑠𝑡)] ...
+- 과제별 RL 전문가가 수집한 상태·행동 쌍으로 사전학습 정책 $\pi_0$를 미세조정한다. 일반화 정책의 지도학습 손실은 $\mathcal L(\theta)=-\mathbb E_{(s_t,a_t)\sim D}[\log\pi_\theta(a_t\mid s_t)]$다. [§3.3 식 2 · PDF 4쪽](https://arxiv.org/pdf/2412.09858v1#page=4)
 - **p. 4 / 3.1. Online RL Training - extractive body cue:** We can formulate each robotic task as a Markov Decision Process (MDP), where the state 𝑠𝑡consists of RGB images and proprioceptive information, and actions 𝑎𝑡represent ...
 
 ## Source Evidence Cues
 
 - **p. 5 / 3.3. Generalist Policy Finetuning - extractive body cue:** To predict an action, the transformer backbone takes in the tokenized observation and goal, then outputs a readout embedding 𝑒, which is used to condition ...
 - **p. 4 / 3.1. Online RL Training - extractive body cue:** We can formulate each robotic task as a Markov Decision Process (MDP), where the state 𝑠𝑡consists of RGB images and proprioceptive information, and actions 𝑎𝑡represent ...
-- **p. 4 / 3.3. Generalist Policy Finetuning - extractive body cue:** Specifically, suppose we have a pre-trained policy 𝜋0, we fine-tune it with taskspecific dataset 𝐷(𝑠𝑡,𝑎𝑡) with the following supervised learning objective: (𝜃) = -𝔼(𝑠𝑡,𝑎𝑡)∼[log 𝜋𝜃(𝑎𝑡/𝑠𝑡)] ...
+- 데이터셋 $D$의 상태 $s_t$에서 전문가 행동 $a_t$가 높은 확률을 갖도록 일반화 정책을 갱신한다. [§3.3 식 2 · PDF 4쪽](https://arxiv.org/pdf/2412.09858v1#page=4)
 - **p. 5 / 3.3. Generalist Policy Finetuning - extractive body cue:** To fine-tune the model on our RL-generated dataset, we use the public model weights pre-trained on 970 thousand Open X-Embodiment dataset (Collaboration et al., 2024) ...
 - **Detected method headings:** 1. RL Policy Training (p. 2); 3.3. Generalist Policy Finetuning (p. 4)
 
@@ -39,7 +39,7 @@ PDF body method statement (p. 5 (3.3. Generalist Policy Finetuning), p. 4 (3.1. 
 |---|---|---|---|---|---|---|
 | Data schema / normalization | heterogeneous robot trajectory를 공통 sample로 만든다 | observation, action, task와 embodiment metadata | sensor/action schema alignment, filtering, normalization을 수행 | shared dataset representation | To predict an action, the transformer backbone takes in the tokenized observation and goal, then outputs a readout embedding 𝑒, which is ... | p. 5 (3.3. Generalist Policy Finetuning), p. 4 (3.1. Online RL Training) |
 | Coverage / augmentation | task·embodiment·failure variation을 확장한다 | dataset과 metadata | retargeting, relabeling, synthetic/teleoperation augmentation 또는 sampling을 적용 | expanded data support | We can formulate each robotic task as a Markov Decision Process (MDP), where the state 𝑠𝑡consists of RGB images and proprioceptive information, ... | p. 4 (3.1. Online RL Training), p. 4 (3.3. Generalist Policy Finetuning) |
-| Downstream learning interface | 정규화된 data를 policy/representation이 사용한다 | shared observations/actions | pretraining, BC, action-token 또는 representation learning을 수행 | checkpoint/policy action | Specifically, suppose we have a pre-trained policy 𝜋0, we fine-tune it with taskspecific dataset 𝐷(𝑠𝑡,𝑎𝑡) with the following supervised learning objective: (𝜃) ... | p. 4 (3.3. Generalist Policy Finetuning), p. 5 (3.3. Generalist Policy Finetuning) |
+| 일반화 정책 미세조정 | RL 전문가의 행동을 일반화 정책에 증류 | 과제별 상태·행동 데이터 | 일반화 정책의 음의 조건부 로그우도를 최소화 | 미세조정한 정책 | 과제별 RL 전문가가 수집한 상태·행동 쌍으로 사전학습 정책 $\pi_0$를 미세조정한다. 일반화 정책의 지도학습 손실은 $\mathcal L(\theta)=-\mathbb E_{(s_t,a_t)\sim D}[\log\pi_\theta(a_t\mid s_t)]$다. | [§3.3 식 2 · PDF 4쪽](https://arxiv.org/pdf/2412.09858v1#page=4) |
 
 - Pipeline rows are domain labels; the paper-specific operations are the extractive cues and section anchors in the same row.
 
@@ -86,7 +86,7 @@ PDF body method statement (p. 5 (3.3. Generalist Policy Finetuning), p. 4 (3.1. 
 ## Training vs Inference
 
 - **p. 5 / 3.3. Generalist Policy Finetuning - extractive body cue:** To predict an action, the transformer backbone takes in the tokenized observation and goal, then outputs a readout embedding 𝑒, which is used to condition ...
-- **p. 4 / 3.3. Generalist Policy Finetuning - extractive body cue:** Specifically, suppose we have a pre-trained policy 𝜋0, we fine-tune it with taskspecific dataset 𝐷(𝑠𝑡,𝑎𝑡) with the following supervised learning objective: (𝜃) = -𝔼(𝑠𝑡,𝑎𝑡)∼[log 𝜋𝜃(𝑎𝑡/𝑠𝑡)] ...
+- 배포할 일반화 정책을 미세조정하는 단계에서 학습 입력은 전문가의 상태·행동 쌍이다. [§3.3 식 2 · PDF 4쪽](https://arxiv.org/pdf/2412.09858v1#page=4)
 - **p. 5 / 3.3. Generalist Policy Finetuning - extractive body cue:** To fine-tune the model on our RL-generated dataset, we use the public model weights pre-trained on 970 thousand Open X-Embodiment dataset (Collaboration et al., 2024) ...
 
 - Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
@@ -94,8 +94,7 @@ PDF body method statement (p. 5 (3.3. Generalist Policy Finetuning), p. 4 (3.1. 
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** predict, action, transformer, backbone, takes, tokenized, observation, goal, then, outputs, readout, embedding, condition, denoising, process, trained, standard, DDPM, objective, formulate.
-- **Relevant PDF headings:** 1. RL Policy Training (p. 2); 3.3. Generalist Policy Finetuning (p. 4).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
+- §3.3 식 2는 일반화 정책을 전문가의 행동으로 미세조정하는 단계에 적용한다. [§3.3 식 2 · PDF 4쪽](https://arxiv.org/pdf/2412.09858v1#page=4)
 
 ## Evaluation Link
 

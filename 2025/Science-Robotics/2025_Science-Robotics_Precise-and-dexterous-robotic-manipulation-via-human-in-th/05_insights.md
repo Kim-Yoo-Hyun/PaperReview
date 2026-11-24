@@ -45,7 +45,7 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Paper-specific interface:** Robotic reinforcement learning tasks can be defined via an MDP = {, , 𝜌, , 𝑟, 𝛾}, where 𝐬∈is the state observation (e.g., an image in combination with the robot's ... (p. 4, 3.1. Preliminaries and Problem Statement).
+- **정책 입출력.** 영상과 고유수용감각을 보고 말단장치의 목표 선속도·각속도를 낼 수 있다. [§3.1 MDP 정의 · PDF 4쪽](https://arxiv.org/pdf/2410.21845v3#page=4)
 - **Paper-specific mechanism:** In summary, our contributions demonstrate that with the appropriate system-level design choices, RL can effectively solve a wide range of dexterous and complex vision-based manipulation tasks in the real world. (p. 3, 1. Introduction).
 - **Evidence boundary:** the reported outcome is Table 1: Experiment results. (a) HIL-SERL against imitation learning baselines. (b) HIL-SERL against various other baselines. In this subsection, we present the experimental results for all the tasks mentioned above. ... (p. 13, Figure/Table caption); the relevant task/metric cue is One key aspect of HIL-SERL's performance is its high reliability, achieving a 100% success rate across all tasks. (p. 18, 5.1. Reliability of the Learned Policies). The PDF does not establish downstream robotics benefit beyond those conditions.
 - **Failure implication:** For all tasks, unless otherwise noted, we trained a binary classifier as reward detector, it takes images from wrist and/or side cameras as inputs, and predicts whether the current state ... (p. 9, 4.1. Overview of Experiments).
@@ -61,7 +61,7 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the PDF-described interface and mechanism: Robotic reinforcement learning tasks can be defined via an MDP = {, , 𝜌, , 𝑟, 𝛾}, where 𝐬∈is the state observation (e.g., an image in combination with the robot's ... (p. 4, 3.1. Preliminaries and Problem Statement); preserve the objective/update rule: Additionally, we may collect extra data to address any false negative and false positive issues with the reward classifier. (p. 8, 3.5. Training Process).
+1. 영상·고유수용감각을 입력하고 목표 트위스트를 출력하도록 설정한다. 성공 분류기의 오탐·미탐을 별도로 기록해 보상 오차와 행동 오차를 비교한다. [§3.1 MDP 정의 · PDF 4쪽](https://arxiv.org/pdf/2410.21845v3#page=4) · [§3.1 관측·행동 공간 · PDF 5쪽](https://arxiv.org/pdf/2410.21845v3#page=5)
 2. Use the paper-reported task/data/environment cue: Each task also uses either a scripted robot motion or manually human reset to randomize the initial state of the task. (p. 9, 4.1. Overview of Experiments).
 3. Compare against the reported or matched baseline: In the remainder of this section, we will first describe each task in detail, and present relevant results as well as comparisons to other state-of-the-art methods. (p. 9, 4.1. Overview of Experiments).
 4. Report the body metric with its denominator and aggregation: One key aspect of HIL-SERL's performance is its high reliability, achieving a 100% success rate across all tasks. (p. 18, 5.1. Reliability of the Learned Policies).
@@ -74,7 +74,7 @@
 
 ## Falsifiable research question
 
-Under the paper's stated interface (Robotic reinforcement learning tasks can be defined via an MDP = {, , 𝜌, , 𝑟, 𝛾}, where 𝐬∈is the state observation ...), does the paper-specific mechanism (In summary, our contributions demonstrate that with the appropriate system-level design choices, RL can effectively solve a wide range of dexterous and ...) retain the reported evaluation outcome (One key aspect of HIL-SERL's performance is its high reliability, achieving a 100% success rate across all tasks.) when tested against the paper's strongest explicit boundary (For all tasks, unless otherwise noted, we trained a binary classifier as reward detector, it takes images from ...)?
+같은 영상·고유수용감각과 목표 트위스트를 사용하고 성공 여부를 독립적으로 판정할 때, 사람의 개입 유무에 따라 과제별 성공률과 개입 횟수가 어떻게 달라지는가? [§3.1 MDP 정의 · PDF 4쪽](https://arxiv.org/pdf/2410.21845v3#page=4)
 
 **Reject the hypothesis if** Reject the hypothesis if the body-reported metric (One key aspect of HIL-SERL's performance is its high reliability, achieving a 100% success rate across all tasks.) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
 

@@ -12,10 +12,10 @@
 - Tier: CORE
 - Tags: Robotics, simulation, Physics Engine, Control
 - Official paper: https://api.crossref.org/works/10.1109/IROS.2012.6386109
-- Full-text retrieval: https://doi.org/10.1109/IROS.2012.6386109
+- Full-text retrieval: https://roboti.us/lab/papers/TodorovIROS12.pdf
 - Code/Project: https://mujoco.org/
 - Paper type: benchmark_or_dataset
-- Source audit: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; title-token overlap first two pages=1.0). 2026-11-24 저자판 PDF에서 §II의 접촉 계산과 §IV 표 1을 육안 대조했다.
 
 ## Why This Paper Is Here
 
@@ -35,12 +35,12 @@ MuJoCo는 접촉이 있는 다관절 동역학을 모델 기반 제어에 필요
 
 - **p. 2 / I. INTRODUCTION - extractive body cue:** This is useful for approximating derivatives via finite differencing, which in turn enables numerical optimization. • Inverse dynamics can always be computed, even in the ...
 - **p. 2 / II. ALGORITHMIC FOUNDATIONS - extractive body cue:** The procedure for solving the above equations of motion consists of the following steps:
-- **p. 6 / III. MODELING - extractive body cue:** A MuJoCo model consists of one or several kinematic trees, which can have f1oating bases including isolated objects.
+- 하나의 MuJoCo 모델은 하나 이상의 운동학적 트리로 구성된다. 각 트리의 기저는 공간에서 자유롭게 움직일 수 있어 독립된 물체도 표현할 수 있다. [§III-B 강체 모델 · PDF 6쪽](https://roboti.us/lab/papers/TodorovIROS12.pdf#page=6)
 - **p. 1 / I. INTRODUCTION - extractive body cue:** Existing physics engines can be used to test controllers that are already designed.
 - **p. 1 / I. INTRODUCTION - extractive body cue:** As Sims [7] pointed out, if the physics engine allows cheating the optimization algorithm will find a way to exploit it - and produce a ...
 - **p. 7 / III. MODELING - extractive body cue:** The tendon path is the shortest path that passes through a sequence of specified sites or wraps around specified geoms. h) Actuator: Actuators have control ...
 - **p. 2 / II. ALGORITHMIC FOUNDATIONS - extractive body cue:** We start with notation and smooth dynamics which are fairly standard, then explain the contact simulation algorithms in more detail, followed by computational complexity and ...
-- **p. 2 / II. ALGORITHMIC FOUNDATIONS - extractive body cue:** Equations of motion and smooth dynamics We will use the following notation: q position in generalized coordinates v velocity in generalized coordinates  inertia matrix ...
+- $q$와 $v$는 일반화 좌표의 위치와 속도, $M$은 관성 행렬이다. $b$는 코리올리·원심·중력·스프링 항을 포함하는 편향력이다. [§II-A 운동 방정식 · PDF 2쪽](https://roboti.us/lab/papers/TodorovIROS12.pdf#page=2)
 
 ## Observation, State, and Output Interface
 
@@ -49,7 +49,7 @@ MuJoCo는 접촉이 있는 다관절 동역학을 모델 기반 제어에 필요
 | Observation/input | The tendon path is the shortest path that passes through a sequence of specified sites or wraps around specified geoms. h) Actuator: Actuators have control inputs, optional activation states (used to model ... | simulated state, geometry, contact와 control input | p. 7 (III. MODELING), p. 2 (I. INTRODUCTION) |
 | State/latent | tendon, path, shortest, passes, through, sequence, specified, sites, wraps, around, geoms, Actuator | dynamics/contact state 또는 learned simulator representation | p. 7 (III. MODELING), p. 2 (I. INTRODUCTION), p. 2 (I. INTRODUCTION) |
 | Output/action | These observations indicated that we need a new engine, representing the state in joint coordinates and simulating contacts in ways that are related to LCP but better. | simulation step, trajectory 또는 environment query | p. 2 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 7 (III. MODELING) |
-| Objective/outcome | Equations of motion and smooth dynamics We will use the following notation: q position in generalized coordinates v velocity in generalized coordinates  inertia matrix in generalized coordinates b "bias" forces: Coriolis, ... | physical plausibility, speed, reproducibility와 task utility | p. 2 (II. ALGORITHMIC FOUNDATIONS), p. 2 (II. ALGORITHMIC FOUNDATIONS), p. 7 (III. MODELING) |
+| Dynamics variables | $q$와 $v$는 일반화 좌표의 위치와 속도, $M$은 관성 행렬이다. $b$는 코리올리·원심·중력·스프링 항을 포함하는 편향력이다. | 관성 및 편향력과 접촉 충격량은 별도의 항이다. | [§II-A 운동 방정식 · PDF 2쪽](https://roboti.us/lab/papers/TodorovIROS12.pdf#page=2) |
 
 ## Main Claims and Actual Contribution
 
@@ -71,10 +71,10 @@ MuJoCo는 접촉이 있는 다관절 동역학을 모델 기반 제어에 필요
 ## Explicit Limitations and Failure Boundary
 
 - **p. 3 / II. ALGORITHMIC FOUNDATIONS - extractive body cue:** 1) Compute the Cartesian positions and orientations of all rigid bodies (i.e. the forward kinematics), detect potential collisions (with some safety margin), and construct the ...
-- **p. 3 / 5) Integrate numerically to obtain the next state - extractive body cue:** In the tangent plane we have vF parallel to fF ­ vFfF® ≤0 (5) °°fF°° ≤N The first line means that if there is slip ...
+- 접선 속도와 마찰 충격량은 평행하고 $\langle\mathbf v^{\mathcal F},\mathbf f^{\mathcal F}\rangle\le0$이다. 마찰원뿔의 경계는 $\lVert\mathbf f^{\mathcal F}\rVert\le\mu f^{\mathcal N}$이며 $\mu$는 마찰계수다. [§II-B 식 5 · PDF 3쪽](https://roboti.us/lab/papers/TodorovIROS12.pdf#page=3)
 - **p. 4 / 5) Integrate numerically to obtain the next state - extractive body cue:** Since the underlying problem is NP-hard, the algorithm cannot always find the exact solution (which has 0 residual).
-- **p. 4 / 5) Integrate numerically to obtain the next state - extractive body cue:** It is needed for three reasons: is often singular; without the inverse cannot be defined (see below); one can enable contact interactions from a distance ...
-- **p. 5 / 5) Integrate numerically to obtain the next state - extractive body cue:** Instead it computes the desired next-state velocity v∗ which would result if penetrations decayed like criticallydamped springs (similar to equality-constraint violations) and there was no ...
+- 볼록 접촉 해법은 특이할 수 있는 $A$에 대각 정규화 행렬 $R$을 더한다. 접촉 거리와 함께 $R$을 키우면 떨어진 물체 사이에도 약한 접촉력을 모델링할 수 있다. [§II-D 식 6 · PDF 4쪽](https://roboti.us/lab/papers/TodorovIROS12.pdf#page=4)
+- 대각 해법은 관입이 임계 감쇠 스프링처럼 줄고 미끄러짐이 없을 때의 다음 접촉 속도 $\mathbf v_C^\ast$를 목표로 둔다. [§II-E 대각 해법 · PDF 5쪽](https://roboti.us/lab/papers/TodorovIROS12.pdf#page=5)
 - **p. 7 / III. MODELING - extractive body cue:** Their primary use in the engine is collision detection as well as tendon wrapping.
 - **p. 7 / III. MODELING - extractive body cue:** Collision detection uses dedicated pair-wise functions when possible, and otherwise defaults to a general-purpose convex collider (implemented by libccd).
 

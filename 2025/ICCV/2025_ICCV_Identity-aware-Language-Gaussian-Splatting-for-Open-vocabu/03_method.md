@@ -12,7 +12,7 @@ PDF body method statement (p. 5 (3.4. Loss Function), p. 4 (3.4. Loss Function),
 
 - **p. 5 / 3.4. Loss Function - extractive body cue:** For stable optimization, we do not apply Lcons during the first 15,000 iterations, allowing the model to focus on learning by Lclip.
 - **p. 4 / 3.4. Loss Function - extractive body cue:** The color reconstruction loss consists of L1 and D-SSIM terms, which measure the similarity of colors and structures between the rendered image ˆI and the ...
-- **p. 4 / 3.3. Progressive Mask Expanding - extractive body cue:** We then Novel view Identity-aware language 3D Gaussian field Seed segment Final segment Progressive mask expanding Highest cosine similarity Text query Gundam Language feature map ...
+- “Text query → Gundam”에서 Gundam은 검색할 대상이다. 질의와 영상 영역 간 평균 코사인 유사도가 가장 높은 영역을 고른 뒤 점수가 유사한 이웃으로 확장해 최종 분할 마스크를 얻는다. [§3.3 그림 3 · PDF 4쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Jang_Identity-aware_Language_Gaussian_Splatting_for_Open-vocabulary_3D_Semantic_Segmentation_ICCV_2025_paper.pdf#page=4)
 - **p. 3 / 3.2. Identity-aware Semantic Consistency Learning - extractive body cue:** During training, we randomly select a subset of Gaussians and compute the identity-aware semantic consistency loss Lcons, which is defined as follows: Lcons = Lsame ...
 - **p. 5 / 3.4. Loss Function - extractive body cue:** The CLIP loss Lclip is computed by using the L1 norm between rasterized language feature maps and CLIP feature maps by following the approach in ...
 - **p. 3 / 3.1. Preliminaries - extractive body cue:** The covariance Σi is decomposed into a rotation matrix R and a scaling matrix S as Σi = RSS⊤R⊤, which improves numerical stability during optimization.
@@ -29,7 +29,7 @@ PDF body method statement (p. 5 (3.4. Loss Function), p. 4 (3.4. Loss Function),
 
 - **p. 5 / 3.4. Loss Function - extractive body cue:** For stable optimization, we do not apply Lcons during the first 15,000 iterations, allowing the model to focus on learning by Lclip.
 - **p. 4 / 3.4. Loss Function - extractive body cue:** The color reconstruction loss consists of L1 and D-SSIM terms, which measure the similarity of colors and structures between the rendered image ˆI and the ...
-- **p. 4 / 3.3. Progressive Mask Expanding - extractive body cue:** We then Novel view Identity-aware language 3D Gaussian field Seed segment Final segment Progressive mask expanding Highest cosine similarity Text query Gundam Language feature map ...
+- 초기 영역의 선택 단위는 개별 픽셀이 아니라 분할 영역이다. 각 영역 내 코사인 유사도의 평균이 가장 높은 영역에서 확장을 시작한다. [§3.3 그림 3 · PDF 4쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Jang_Identity-aware_Language_Gaussian_Splatting_for_Open-vocabulary_3D_Semantic_Segmentation_ICCV_2025_paper.pdf#page=4)
 - **p. 3 / 3.2. Identity-aware Semantic Consistency Learning - extractive body cue:** During training, we randomly select a subset of Gaussians and compute the identity-aware semantic consistency loss Lcons, which is defined as follows: Lcons = Lsame ...
 - **p. 5 / 3.4. Loss Function - extractive body cue:** The CLIP loss Lclip is computed by using the L1 norm between rasterized language feature maps and CLIP feature maps by following the approach in ...
 - **p. 3 / 3.1. Preliminaries - extractive body cue:** The covariance Σi is decomposed into a rotation matrix R and a scaling matrix S as Σi = RSS⊤R⊤, which improves numerical stability during optimization.
@@ -41,7 +41,7 @@ PDF body method statement (p. 5 (3.4. Loss Function), p. 4 (3.4. Loss Function),
 |---|---|---|---|---|---|---|
 | Geometry / pose extraction | image·depth·point input에서 spatial state를 만든다 | RGB/RGB-D, point cloud, camera pose 또는 multi-view input | depth, pose, correspondence, point, mesh, Gaussian 또는 feature representation을 추정 | geometry/map/pose | For stable optimization, we do not apply Lcons during the first 15,000 iterations, allowing the model to focus on learning by Lclip. | p. 5 (3.4. Loss Function), p. 4 (3.4. Loss Function) |
 | Semantic / temporal fusion | geometry에 semantics와 history를 정렬한다 | geometry, visual/language feature와 temporal context | feature lifting, scene graph, map update, tracking 또는 temporal fusion을 수행 | queryable 3D state | The color reconstruction loss consists of L1 and D-SSIM terms, which measure the similarity of colors and structures between the rendered image ... | p. 4 (3.4. Loss Function), p. 4 (3.3. Progressive Mask Expanding) |
-| Robot query / planning handoff | 3D state를 task decision에 전달한다 | map/feature와 task query | target grounding, affordance, collision/free-space 또는 action cue를 생성 | goal, pose, path 또는 policy input | We then Novel view Identity-aware language 3D Gaussian field Seed segment Final segment Progressive mask expanding Highest cosine similarity Text query Gundam ... | p. 4 (3.3. Progressive Mask Expanding), p. 3 (3.2. Identity-aware Semantic Consistency Learning) |
+| 개방어휘 분할 | 질의 대상의 영역을 찾는다 | 렌더링한 언어·개체 특징과 텍스트 질의 | 영역별 점수를 비교하고 선택 영역을 확장한다 | 분할 마스크 | “Text query → Gundam”에서 Gundam은 검색할 대상이다. 질의와 영상 영역 간 평균 코사인 유사도가 가장 높은 영역을 고른 뒤 점수가 유사한 이웃으로 확장해 최종 분할 마스크를 얻는다. | [§3.3 그림 3 · PDF 4쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Jang_Identity-aware_Language_Gaussian_Splatting_for_Open-vocabulary_3D_Semantic_Segmentation_ICCV_2025_paper.pdf#page=4) |
 
 - Pipeline rows are domain labels; the paper-specific operations are the extractive cues and section anchors in the same row.
 
@@ -97,8 +97,7 @@ PDF body method statement (p. 5 (3.4. Loss Function), p. 4 (3.4. Loss Function),
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** stable, optimization, apply, Lcons, during, first, iterations, allowing, model, focus, learning, Lclip, color, reconstruction, loss, consists, D-SSIM, terms, measure, similarity.
-- **Relevant PDF headings:** 3. Proposed Method (p. 3).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
+- 그림 3은 질의에서 초기 영역과 최종 마스크를 얻는 과정을 보여준다. [§3.3 그림 3 · PDF 4쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Jang_Identity-aware_Language_Gaussian_Splatting_for_Open-vocabulary_3D_Semantic_Segmentation_ICCV_2025_paper.pdf#page=4)
 
 ## Evaluation Link
 
@@ -106,7 +105,7 @@ PDF body method statement (p. 5 (3.4. Loss Function), p. 4 (3.4. Loss Function),
 |---|---|---|
 | Geometry / pose extraction | The LERF dataset consists of 3D scenes in the wild, which are captured by using the Polycam application on the iPhone. | p. 5 (4.2. Datasets and Evaluation Metrics), p. 5 (4.2. Datasets and Evaluation Metrics) |
 | Semantic / temporal fusion | Performance comparisons of novel view rendering on the LERF [10] dataset (the best results are shown in bold). can see that the ... | p. 7 (4.3. Performance Evaluation), p. 6 (4.3. Performance Evaluation) |
-| Robot query / planning handoff | Specifically, the proposed method achieves 80.5 mIoU and 76.0 mBIoU on the LERF dataset, which outperforms the stateof-the-art methods by a considerable ... | p. 5 (4.3. Performance Evaluation), p. 5 (4.3. Performance Evaluation) |
+| 개방어휘 분할 | Specifically, the proposed method achieves 80.5 mIoU and 76.0 mBIoU on the LERF dataset, which outperforms the stateof-the-art methods by a considerable ... | p. 5 (4.3. Performance Evaluation), p. 5 (4.3. Performance Evaluation) |
 
 ## Failure and Ablation Link
 

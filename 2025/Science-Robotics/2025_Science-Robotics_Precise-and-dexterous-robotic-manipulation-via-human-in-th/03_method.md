@@ -20,7 +20,7 @@ PDF body method statement (p. 9 (3.5. Training Process), p. 9 (3.5. Training Pro
 - **p. 8 / 3.5. Training Process - extractive body cue:** Additionally, we may collect extra data to address any false negative and false positive issues with the reward classifier.
 - **p. 8 / 3.5. Training Process - extractive body cue:** Next, we collect data to train the reward classifier, which is a crucial step in defining the reward function that guides the learning process.
 - **p. 9 / 3.5. Training Process - extractive body cue:** HIL-SERL: Precise and Dexterous Robotic Manipulation via Human-in-the-Loop Reinforcement Learning trained reward classifier generally achieves an accuracy of greater than 95% in the evaluation data ...
-- **p. 4 / 3.1. Preliminaries and Problem Statement - extractive body cue:** Robotic reinforcement learning tasks can be defined via an MDP = {, , 𝜌, , 𝑟, 𝛾}, where 𝐬∈is the state observation (e.g., an image ...
+- $\mathcal M=\{\mathcal S,\mathcal A,\rho,\mathcal P,r,\gamma\}$에서 관측 $s\in\mathcal S$의 예는 영상과 로봇의 고유수용감각이다. 행동 $a\in\mathcal A$의 예는 말단장치의 목표 트위스트(선속도·각속도)다. [§3.1 MDP 정의 · PDF 4쪽](https://arxiv.org/pdf/2410.21845v3#page=4)
 
 ## Design Rationale
 
@@ -67,8 +67,8 @@ PDF body method statement (p. 9 (3.5. Training Process), p. 9 (3.5. Training Pro
 
 ## Observation–State–Action Interface
 
-- **p. 4 / 3.1. Preliminaries and Problem Statement - extractive body cue:** Robotic reinforcement learning tasks can be defined via an MDP = {, , 𝜌, , 𝑟, 𝛾}, where 𝐬∈is the state observation (e.g., an image ...
-- **p. 5 / 3.1. Preliminaries and Problem Statement - extractive body cue:** To implement reinforcement learning algorithms for robotic tasks, we must carefully select appropriate state observation spaces and action spaces .
+- **정책 입출력.** 영상과 고유수용감각을 보고 말단장치의 목표 선속도·각속도를 낼 수 있다. [§3.1 MDP 정의 · PDF 4쪽](https://arxiv.org/pdf/2410.21845v3#page=4)
+- 카메라 영상과 로봇 고유수용감각으로 관측 공간 $\mathcal S$를 정한다. 행동 공간 $\mathcal A$와 저수준 제어기의 선택은 정책의 명령이 실제 로봇에 어떻게 적용되는지를 결정한다. [§3.1 관측·행동 공간 · PDF 5쪽](https://arxiv.org/pdf/2410.21845v3#page=5)
 - **p. 5 / 3.1. Preliminaries and Problem Statement - extractive body cue:** HIL-SERL: Precise and Dexterous Robotic Manipulation via Human-in-the-Loop Reinforcement Learning state distribution, transition probabilities, and policy 𝜋.
 - **p. 2 / 1. Introduction - extractive body cue:** These tasks present significant challenges in terms of complex and intricate dynamics, high-dimensional state and action spaces, long horizons, or combinations thereof.
 - **p. 4 / 3.1. Preliminaries and Problem Statement - extractive body cue:** An optimal policy 𝜋is one that maximizes the cumulative expected value of the reward, i.e., 𝐸[∑𝐻 𝑡=0 𝛾𝑡𝑟(𝐬𝑡, 𝐚𝑡)], where the expectation is taken with ...
@@ -100,8 +100,7 @@ PDF body method statement (p. 9 (3.5. Training Process), p. 9 (3.5. Training Pro
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Finally, start, policy, training, process, intervention, strategy, will, cause, overestimation, value, function, particularly, early, stages, result, unstable, dynamics, approximately, equivalent.
-- **Relevant PDF headings:** 5.2. Reactive Policy and Predictive Policy (p. 19).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
+- §3.1에서 정책이 받는 관측과 말단장치에 내리는 행동의 예를 확인할 수 있다. [§3.1 MDP 정의 · PDF 4쪽](https://arxiv.org/pdf/2410.21845v3#page=4)
 
 ## Evaluation Link
 
@@ -143,7 +142,7 @@ PDF body method statement (p. 9 (3.5. Training Process), p. 9 (3.5. Training Pro
 
 > Cross-checked on 2026-09-03 against the validated PDF body (54 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
 
-- **Paper-specific method/interface:** Robotic reinforcement learning tasks can be defined via an MDP = {, , 𝜌, , 𝑟, 𝛾}, where 𝐬∈is the state observation (e.g., an image in combination with the robot's ... (p. 4, 3.1. Preliminaries and Problem Statement).
+- **정책 입출력.** 영상과 고유수용감각을 보고 말단장치의 목표 선속도·각속도를 낼 수 있다. [§3.1 MDP 정의 · PDF 4쪽](https://arxiv.org/pdf/2410.21845v3#page=4)
 - **Objective/update evidence:** Additionally, we may collect extra data to address any false negative and false positive issues with the reward classifier. (p. 8, 3.5. Training Process).
 - **Temporal/runtime evidence:** Specifically, we report the intervention rate, for which we calculate the ratio of intervened timesteps to total timesteps within an episode and report a running average over 20 episodes. (p. 15, 4.3. Experimental Results).
 - **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

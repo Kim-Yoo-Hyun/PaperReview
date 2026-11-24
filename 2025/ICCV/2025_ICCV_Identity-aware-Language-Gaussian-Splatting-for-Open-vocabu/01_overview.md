@@ -40,7 +40,7 @@
 - **p. 4 / 3.3. Progressive Mask Expanding - extractive body cue:** To resolve this problem, we propose a progressive mask expanding scheme.
 - **p. 5 / 3.4. Loss Function - extractive body cue:** For stable optimization, we do not apply Lcons during the first 15,000 iterations, allowing the model to focus on learning by Lclip.
 - **p. 4 / 3.4. Loss Function - extractive body cue:** The color reconstruction loss consists of L1 and D-SSIM terms, which measure the similarity of colors and structures between the rendered image ˆI and the ...
-- **p. 4 / 3.3. Progressive Mask Expanding - extractive body cue:** We then Novel view Identity-aware language 3D Gaussian field Seed segment Final segment Progressive mask expanding Highest cosine similarity Text query Gundam Language feature map ...
+- “Text query → Gundam”에서 Gundam은 검색할 대상이다. 질의와 영상 영역 간 평균 코사인 유사도가 가장 높은 영역을 고른 뒤 점수가 유사한 이웃으로 확장해 최종 분할 마스크를 얻는다. [§3.3 그림 3 · PDF 4쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Jang_Identity-aware_Language_Gaussian_Splatting_for_Open-vocabulary_3D_Semantic_Segmentation_ICCV_2025_paper.pdf#page=4)
 
 ## Observation, State, and Output Interface
 

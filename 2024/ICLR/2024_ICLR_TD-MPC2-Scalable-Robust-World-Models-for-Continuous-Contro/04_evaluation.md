@@ -22,10 +22,10 @@ PDF body evaluation/result cue (p. 22 (Figure/Table caption), p. 23 (Figure/Tabl
 ## Evaluation Type and Scope
 
 - **Evaluation type:** `EMPIRICAL / SOURCE-REPORTED EVALUATION`.
-- **Target system/task:** uncertain robot state와 safe/unsafe operating region.
-- **Input boundary:** observation, uncertainty/risk estimate와 task command.
-- **Output/decision under evaluation:** shielded, recovery 또는 safe action.
-- **Primary target:** task return과 violation/failure probability.
+- **평가 대상.** 네 시뮬레이션 환경의 연속 제어 과제. [그림 4·§4 · PDF 5쪽](https://arxiv.org/pdf/2310.16828v2#page=5)
+- **입력.** 과제별 관측을 사용하며 DMControl에는 시각 관측 과제도 포함한다. [그림 4·§4 · PDF 5쪽](https://arxiv.org/pdf/2310.16828v2#page=5)
+- **실행 행동.** 잠재 모델에서 계획한 행동열의 첫 행동을 환경에 적용한다. [§3.2 식 6의 실행 절차 · PDF 5쪽](https://arxiv.org/pdf/2310.16828v2#page=5)
+- **주 지표.** 단일 과제에서는 DMControl의 에피소드 수익 또는 다른 세 환경의 성공률을 보고한다. [그림 4·§4 · PDF 5쪽](https://arxiv.org/pdf/2310.16828v2#page=5)
 - **Detected evaluation headings:** 4 EXPERIMENTS (p. 5); 4.1 RESULTS (p. 6).
 
 ## Experimental Matrix
@@ -68,8 +68,8 @@ PDF body evaluation/result cue (p. 22 (Figure/Table caption), p. 23 (Figure/Tabl
 |---|---|---|---|
 | Robot/hardware/simulator | However, TD-MPC2 can be readily applied to tasks with other input 120k environment steps corresponds to 20 episodes in DMControl and 100 episodes in ... | embodiment, simulator version and control stack | p. 8 (4.1 RESULTS), p. 6 (4 EXPERIMENTS) |
 | Task/environment | Pick YCB considers manipulation of all 74 objects from the YCB (Calli et al., 2015) dataset. | reset, timeout, object/scene variation | p. 6 (4 EXPERIMENTS), p. 7 (4.1 RESULTS) |
-| Observation/sensor | observation, uncertainty/risk estimate와 task command | calibration, preprocessing, privileged input | p. 3 (2 BACKGROUND), p. 5 (2 BACKGROUND) |
-| Output/decision | shielded, recovery 또는 safe action | action frame, controller and termination | p. 2 (1 INTRODUCTION), p. 2 (2 BACKGROUND) |
+| Observation/sensor | 과제 상태 또는 시각 관측 | 상태 입력과 영상 입력 결과의 평가 조건 | [그림 4·§4 · PDF 5쪽](https://arxiv.org/pdf/2310.16828v2#page=5) |
+| Output/decision | 계획한 행동열에서 선택한 첫 연속 행동 | 과제별 유효한 행동 차원 | [§3.2 식 6의 실행 절차 · PDF 5쪽](https://arxiv.org/pdf/2310.16828v2#page=5) |
 
 ## Metrics and Success Definition
 

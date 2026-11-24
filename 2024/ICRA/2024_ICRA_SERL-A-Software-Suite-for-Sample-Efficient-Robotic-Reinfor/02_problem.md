@@ -23,7 +23,7 @@ PDF body framing (p. 2 (1. Introduction), p. 2 (1. Introduction), p. 1 (1. Intro
 | Dimension | PDF body evidence | Registry/robotics interpretation | Boundary |
 |---|---|---|---|
 | Target problem | SERL: A Software Suite for Sample-Efficient Robotic Reinforcement Learning challenge of navigating this design space, rather than limitations of algorithms per se, ... | demonstration으로 정의된 robot task distribution | body wording is the source claim |
-| Observation / input | Robotic reinforcement learning tasks can be defined via an MDP = {, , 𝜌, , 𝑟, 𝛾}, where 𝐬∈is the state observation ... | observation history와 expert trajectory/action | exact sensor/frame/preprocessing from PDF body |
+| Observation / input | $\mathcal M=\{\mathcal S,\mathcal A,\rho,\mathcal P,r,\gamma\}$에서 $\rho$는 초기 상태 분포, $\mathcal P$는 전이 분포다. 관측 $s\in\mathcal S$의 예는 영상과 현재 말단장치 위치이고, 행동 $a\in\mathcal A$의 예는 말단장치의 목표 자세다. | 관측과 목표 자세 명령을 구분 | [§3 MDP 정의 · PDF 3쪽](https://arxiv.org/pdf/2401.16013v4#page=3) |
 | State / latent | Robotic, reinforcement, learning, tasks, defined, MDP, where, state, observation, image | behavior policy와 temporal action context | notation and tensor shape require body check |
 | Output / action | One, might, wonder, should, directly, clip, action, output | predicted action 또는 action chunk | exact unit/frame/decoder require body check |
 | Target outcome | closed-loop task success and robustness | imitation error, task success, robustness와 compounding error | metric/denominator are in 04 evidence |

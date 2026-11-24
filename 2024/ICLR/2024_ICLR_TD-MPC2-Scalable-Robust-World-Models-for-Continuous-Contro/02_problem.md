@@ -22,21 +22,21 @@ PDF body framing (p. 3 (2 BACKGROUND), p. 5 (2 BACKGROUND), p. 5 (2 BACKGROUND),
 
 | Dimension | PDF body evidence | Registry/robotics interpretation | Boundary |
 |---|---|---|---|
-| Target problem | However, accurately predicting raw future observations (e.g., images or proprioceptive features) over long time horizons is a difficult problem, and does not ... | uncertain robot state와 safe/unsafe operating region | body wording is the source claim |
-| Observation / input | The TD-MPC2 architecture is shown in Figure 3 and consists of five components: Encoder z = h(s, e) ▷Maps observations to their ... | observation, uncertainty/risk estimate와 task command | exact sensor/frame/preprocessing from PDF body |
-| State / latent | TD-MPC2, architecture, Figure, consists, five, components, Encoder, Maps, observations, latent | safe set, recovery state 또는 constraint margin | notation and tensor shape require body check |
-| Output / action | Tasks, include, high-dimensional, state, action, spaces, R39, image | shielded, recovery 또는 safe action | exact unit/frame/decoder require body check |
-| Target outcome | low violation/failure probability with useful intervention | task return과 violation/failure probability | metric/denominator are in 04 evidence |
+| Target problem | 관측 자체를 장기 예측하지 않고도 연속 행동열의 수익을 추정한다. | 제어에 필요한 결과를 예측하는 세계 모델 | [§3.1 그림 3·식 2 · PDF 3쪽](https://arxiv.org/pdf/2310.16828v2#page=3) |
+| Observation / input | 상태 또는 영상 관측 $s$, 다중 과제의 작업 임베딩 $e$ | 인코더 입력 | [§3.1 그림 3·식 2 · PDF 3쪽](https://arxiv.org/pdf/2310.16828v2#page=3) |
+| State / latent | 정규화한 잠재 상태 $z$ | 후보 행동으로 잠재 공간에서 전개 | [§3.1 그림 3·식 2 · PDF 3쪽](https://arxiv.org/pdf/2310.16828v2#page=3) |
+| Output / action | 유한 길이 행동열에서 샘플링한 첫 연속 행동 | 현재 스텝에 적용 | [§3.2 식 6의 실행 절차 · PDF 5쪽](https://arxiv.org/pdf/2310.16828v2#page=5) |
+| Target outcome | 환경과의 상호작용 횟수에 따른 과제 성능 | DMControl 수익과 타 도메인 성공률 | [그림 4·§4 · PDF 5쪽](https://arxiv.org/pdf/2310.16828v2#page=5) |
 
 ## Formal Problem Formulation
 
 | Formulation field | PDF body-grounded record | Evidence anchor |
 |---|---|---|
-| State / observation variable | state/history and risk h(s); body terms: TD-MPC2, architecture, Figure, consists, five, components, Encoder, Maps, observations, latent | p. 3 (2 BACKGROUND), p. 5 (2 BACKGROUND), p. 2 (1 INTRODUCTION) |
-| Decision / output variable | filtered/recovery action u_safe; body terms: present, TDMPC2, significant, step, towards, achieving, goal, algorithmic | p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 1 (ABSTRACT) |
-| Objective / loss / cost | task utility subject to safety constraint; cue terms: components, jointly, optimized, minimize, objective, Joint-embedding, prediction, Reward | p. 4 (2 BACKGROUND), p. 4 (2 BACKGROUND), p. 5 (2 BACKGROUND), p. 3 (2 BACKGROUND), p. 3 (2 BACKGROUND), p. 5 (2 BACKGROUND) |
-| Constraint / feasibility | paper-specific constraints are recorded only where the body states them; otherwise unresolved | p. 3 (2 BACKGROUND), p. 4 (2 BACKGROUND), p. 5 (2 BACKGROUND) |
-| Success / guarantee | low violation/failure probability with useful intervention | p. 7 (4.1 RESULTS), p. 5 (Figure/Table caption), p. 6 (4 EXPERIMENTS) |
+| State / observation variable | $s$를 인코딩한 $z=h(s,e)$ | [§3.1 그림 3·식 2 · PDF 3쪽](https://arxiv.org/pdf/2310.16828v2#page=3) |
+| Decision / output variable | 보상과 종단 가치로 평가한 후보 행동열의 첫 행동 | [§3.2 식 6의 실행 절차 · PDF 5쪽](https://arxiv.org/pdf/2310.16828v2#page=5) |
+| Objective / loss / cost | 시간 가중 잠재 예측·보상·가치 손실로 세계 모델을 학습하고, 계획에서는 기대 수익을 최대화한다. | [§3.1 식 3 · PDF 4쪽](https://arxiv.org/pdf/2310.16828v2#page=4) · [§3.2 식 6의 실행 절차 · PDF 5쪽](https://arxiv.org/pdf/2310.16828v2#page=5) |
+| Constraint / feasibility | 다중 과제에서는 유효한 행동 차원만 샘플링한다. | [§3.3 행동 마스킹 · PDF 5쪽](https://arxiv.org/pdf/2310.16828v2#page=5) |
+| Success / guarantee | 과제별 수익 또는 성공률을 실험으로 비교한다. | [그림 4·§4 · PDF 5쪽](https://arxiv.org/pdf/2310.16828v2#page=5) |
 
 - **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF body anchors.
 
@@ -69,7 +69,7 @@ PDF body contribution framing (p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 
 
 ## Position in the Robotics Loop
 
-safety writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 3 (2 BACKGROUND), p. 5 (2 BACKGROUND), p. 2 (1 INTRODUCTION), p. 2 (2 BACKGROUND). The downstream handoff is claimed only when the body describes it.
+관측을 인코딩하고 잠재 동역학으로 후보 행동열을 평가한다. 선택한 첫 행동을 적용한 뒤 새로운 관측에서 다시 계획한다. [§3.1 그림 3·식 2 · PDF 3쪽](https://arxiv.org/pdf/2310.16828v2#page=3) · [§3.2 식 6의 실행 절차 · PDF 5쪽](https://arxiv.org/pdf/2310.16828v2#page=5)
 
 ## Verification Questions
 

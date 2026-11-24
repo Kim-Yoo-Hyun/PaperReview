@@ -48,7 +48,7 @@ PDF body framing (p. 1 (1. Introduction), p. 1 (1. Introduction)): While directl
 
 PDF body contribution framing (p. 1 (1. Introduction), p. 4 (3.3. Generalist Policy Finetuning), p. 4 (3.1. Online RL Training), p. 5 (3.3. Generalist Policy Finetuning)): To tackle this challenge, we propose Reinforcement Learning Distilled Generalist (RLDG), a simple yet effective method that leverages reinforcement learning to generate high-quality training data for robotic foundation models.
 
-- **p. 4 / 3.3. Generalist Policy Finetuning - extractive body cue:** Specifically, suppose we have a pre-trained policy 𝜋0, we fine-tune it with taskspecific dataset 𝐷(𝑠𝑡,𝑎𝑡) with the following supervised learning objective: (𝜃) = -𝔼(𝑠𝑡,𝑎𝑡)∼[log 𝜋𝜃(𝑎𝑡/𝑠𝑡)] ...
+- 과제별 전문가의 상태·행동 표본을 일반화 정책이 학습할 수 있는 지도 신호로 사용한다. [§3.3 식 2 · PDF 4쪽](https://arxiv.org/pdf/2412.09858v1#page=4)
 - **p. 4 / 3.1. Online RL Training - extractive body cue:** We can formulate each robotic task as a Markov Decision Process (MDP), where the state 𝑠𝑡consists of RGB images and proprioceptive information, and actions 𝑎𝑡represent ...
 - **p. 5 / 3.3. Generalist Policy Finetuning - extractive body cue:** Octo is another open-source generalist robotic policy, designed to adapt to diverse sensory inputs and action spaces efficiently.
 

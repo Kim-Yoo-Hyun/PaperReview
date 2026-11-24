@@ -26,7 +26,7 @@ PDF body framing (p. 1 (1. Introduction), p. 1 (1. Introduction), p. 2 (1. Intro
 | Dimension | PDF body evidence | Registry/robotics interpretation | Boundary |
 |---|---|---|---|
 | Target problem | However, developing general-purpose vision-based methods that can efficiently acquire physically complex skills, with proficiency exceeding imitation learning and hand-designed controllers, has been ... | multi-robot demonstration/dataset ecosystem | body wording is the source claim |
-| Observation / input | Robotic reinforcement learning tasks can be defined via an MDP = {, , 𝜌, , 𝑟, 𝛾}, where 𝐬∈is the state observation ... | multi-view observation, language/task label과 action trajectory | exact sensor/frame/preprocessing from PDF body |
+| Observation / input | $\mathcal M=\{\mathcal S,\mathcal A,\rho,\mathcal P,r,\gamma\}$에서 관측 $s\in\mathcal S$의 예는 영상과 로봇의 고유수용감각이다. 행동 $a\in\mathcal A$의 예는 말단장치의 목표 트위스트(선속도·각속도)다. | 영상과 고유수용감각 | [§3.1 MDP 정의 · PDF 4쪽](https://arxiv.org/pdf/2410.21845v3#page=4) |
 | State / latent | Robotic, reinforcement, learning, tasks, defined, MDP, where, state, observation, image | shared representation, embodiment/task identity와 data distribution | notation and tensor shape require body check |
 | Output / action | HIL-SERL, Precise, Dexterous, Robotic, Manipulation, Human-in-the-Loop, Reinforcement, Learning | dataset sample 또는 learned policy action | exact unit/frame/decoder require body check |
 | Target outcome | cross-domain transfer and task performance | coverage, cross-embodiment transfer, data efficiency와 task success | metric/denominator are in 04 evidence |

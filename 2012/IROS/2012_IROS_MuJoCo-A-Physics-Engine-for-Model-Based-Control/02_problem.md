@@ -51,7 +51,7 @@ PDF body framing (p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 2 (I. INTRO
 PDF body contribution framing (p. 2 (I. INTRODUCTION), p. 2 (II. ALGORITHMIC FOUNDATIONS), p. 6 (III. MODELING), p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION)): This is useful for approximating derivatives via finite differencing, which in turn enables numerical optimization. • Inverse dynamics can always be computed, even in the presence of contacts and equality ...
 
 - **p. 2 / II. ALGORITHMIC FOUNDATIONS - extractive body cue:** The procedure for solving the above equations of motion consists of the following steps:
-- **p. 6 / III. MODELING - extractive body cue:** A MuJoCo model consists of one or several kinematic trees, which can have f1oating bases including isolated objects.
+- 하나의 MuJoCo 모델은 하나 이상의 운동학적 트리로 구성된다. 각 트리의 기저는 공간에서 자유롭게 움직일 수 있어 독립된 물체도 표현할 수 있다. [§III-B 강체 모델 · PDF 6쪽](https://roboti.us/lab/papers/TodorovIROS12.pdf#page=6)
 - **p. 1 / I. INTRODUCTION - extractive body cue:** Existing physics engines can be used to test controllers that are already designed.
 - **p. 1 / I. INTRODUCTION - extractive body cue:** As Sims [7] pointed out, if the physics engine allows cheating the optimization algorithm will find a way to exploit it - and produce a ...
 
@@ -60,9 +60,9 @@ PDF body contribution framing (p. 2 (I. INTRODUCTION), p. 2 (II. ALGORITHMIC FOU
 | Body anchor | Observed limitation/failure cue | Interpretation boundary |
 |---|---|---|
 | body cue at p. 3 | 1) Compute the Cartesian positions and orientations of all rigid bodies (i.e. the forward kinematics), detect potential collisions ... | reported limitation/failure wording; scope must be verified |
-| body cue at p. 3 | In the tangent plane we have vF parallel to fF ­ vFfF® ≤0 (5) °°fF°° ≤N The first ... | reported limitation/failure wording; scope must be verified |
+| [§II-B 식 5 · PDF 3쪽](https://roboti.us/lab/papers/TodorovIROS12.pdf#page=3) | 접선 속도와 마찰 충격량은 평행하고 $\langle\mathbf v^{\mathcal F},\mathbf f^{\mathcal F}\rangle\le0$이다. 마찰원뿔의 경계는 $\lVert\mathbf f^{\mathcal F}\rVert\le\mu f^{\mathcal N}$이며 $\mu$는 마찰계수다. | 쿨롱 마찰의 모델 조건 |
 | body cue at p. 4 | Since the underlying problem is NP-hard, the algorithm cannot always find the exact solution (which has 0 residual). | reported limitation/failure wording; scope must be verified |
-| body cue at p. 4 | It is needed for three reasons: is often singular; without the inverse cannot be defined (see below); one ... | reported limitation/failure wording; scope must be verified |
+| [§II-D 식 6 · PDF 4쪽](https://roboti.us/lab/papers/TodorovIROS12.pdf#page=4) | 볼록 접촉 해법은 특이할 수 있는 $A$에 대각 정규화 행렬 $R$을 더한다. 접촉 거리와 함께 $R$을 키우면 떨어진 물체 사이에도 약한 접촉력을 모델링할 수 있다. | 접촉 행렬의 특이성과 정규화 |
 
 - Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
 

@@ -195208,7 +195208,7 @@
     "page": "https://api.crossref.org/works/10.1109/IROS.2012.6386109",
     "project": "https://mujoco.org/",
     "evidence": "ABSTRACT_CHECKED",
-    "source_audit": "publisher metadata, official project page, and abstract checked; solver details remain UNVERIFIED.",
+    "source_audit": "Publisher metadata, project and abstract checked; contact solver equations and timing Table 1 compared with the author PDF on 2026-11-24.",
     "role": "continuous contact dynamics와 efficient simulation을 제공해 modern robot RL/control benchmark의 공통 인프라가 된 foundation system이다.",
     "problem": "model-based control과 optimization에 필요한 빠르고 정확한 articulated rigid-body/contact simulation을 제공한다.",
     "method": "generalized-coordinate dynamics와 contact/constraint 처리를 결합한 physics engine을 설계한다.",
@@ -195217,7 +195217,7 @@
     "limitations": "simulator fidelity, contact parameterization과 sim-to-real gap은 별도 검증이 필요하다.",
     "lineage": "MuJoCo → Gym/DM Control/robosuite/Meta-World → large-scale robot-learning benchmark로 이어진다.",
     "folder": "2012/IROS/2012_IROS_MuJoCo-A-Physics-Engine-for-Model-Based-Control",
-    "pdf": "",
+    "pdf": "https://roboti.us/lab/papers/TodorovIROS12.pdf",
     "venue_as_recorded": "IROS",
     "venue_canonical": "IROS",
     "identifiers": {
@@ -195240,7 +195240,12 @@
         "verified_on": "2026-11-20"
       },
       "preprint": null,
-      "paper_pdf": null,
+      "paper_pdf": {
+        "url": "https://roboti.us/lab/papers/TodorovIROS12.pdf",
+        "kind": "author_pdf",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-24"
+      },
       "project": {
         "url": "https://mujoco.org/",
         "kind": "publisher_or_project"
@@ -195279,7 +195284,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "publisher metadata, official project page, and abstract checked; solver details remain UNVERIFIED.",
+      "source_audit_note": "Publisher metadata, project and abstract checked; contact solver equations and timing Table 1 compared with the author PDF on 2026-11-24.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",

@@ -41,7 +41,7 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Paper-specific interface:** Robotic reinforcement learning tasks can be defined via an MDP = {, , 𝜌, , 𝑟, 𝛾}, where 𝐬∈is the state observation (e.g., an image in combination with the current ... (p. 3, 3. Preliminaries and Problem Statement).
+- **정책 입출력.** 관측 예시는 영상과 현재 말단장치 위치이며, 정책 행동의 예시는 목표 자세다. [§3 MDP 정의 · PDF 3쪽](https://arxiv.org/pdf/2401.16013v4#page=3)
 - **Paper-specific mechanism:** However, in the process of evaluating our framework, we also make a scientifically interesting empirical observation: when implemented properly in a carefully engineered software package, current sample-efficient robotic RL methods ... (p. 2, 1. Introduction).
 - **Evidence boundary:** the reported outcome is Table 1: Comparison to results reported on similar tasks in prior work. The overall success rates for our method are generally higher, and the training times are generally lower, as ... (p. 7, Figure/Table caption); the relevant task/metric cue is SERL: A Software Suite for Sample-Efficient Robotic Reinforcement Learning Figure 8: Peg Insertion Task at University of Washington these prior works generally have either lower success rates or longer training ... (p. 9, 5. Experiments). The PDF does not establish downstream robotics benefit beyond those conditions.
 - **Failure implication:** Our framework does have a number of limitations. (p. 9, 6. Discussion).
@@ -57,7 +57,7 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the PDF-described interface and mechanism: Robotic reinforcement learning tasks can be defined via an MDP = {, , 𝜌, , 𝑟, 𝛾}, where 𝐬∈is the state observation (e.g., an image in combination with the current ... (p. 3, 3. Preliminaries and Problem Statement); preserve the objective/update rule: A typical impedance control objective for this controller is 𝐹= 𝑘𝑝⋅𝑒+ 𝑘𝑑⋅̇ 𝑒+ 𝐹𝑓𝑓+ 𝐹𝑐𝑜𝑟, where 𝑒= 𝑝-𝑝𝑟𝑒𝑓, 𝑝is the measured pose, and 𝑝𝑟𝑒𝑓is the target pose computed by the ... (p. 5, 4.5. Impedance Controller for Contact-Rich).
+1. 영상·말단장치 위치에서 목표 자세를 내는 경로를 구성하고, 저수준 제어기의 오차 부호를 확인한다. 원문은 $e=p-p_{\mathrm{ref}}$로 두고 임피던스 제어 항을 $F=k_p e+k_d\dot e+F_{\mathrm{ff}}+F_{\mathrm{cor}}$로 적는다. [§3 MDP 정의 · PDF 3쪽](https://arxiv.org/pdf/2401.16013v4#page=3) · [§4.5 임피던스 제어 · PDF 5쪽](https://arxiv.org/pdf/2401.16013v4#page=5)
 2. Use the paper-reported task/data/environment cue: This task requires the robot to perceive the cable and carefully manipulate it so that it fits into the clip while holding it at another location. (p. 7, 5. Experiments).
 3. Compare against the reported or matched baseline: For the cable routing task and PCB insertion task, our policies outperform BC baselines by a large margin, despite training with 5x fewer demonstrations than BC, suggesting that demos alone ... (p. 8, 5. Experiments).
 4. Report the body metric with its denominator and aggregation: SERL: A Software Suite for Sample-Efficient Robotic Reinforcement Learning Figure 8: Peg Insertion Task at University of Washington these prior works generally have either lower success rates or longer training ... (p. 9, 5. Experiments).
@@ -70,7 +70,7 @@
 
 ## Falsifiable research question
 
-Under the paper's stated interface (Robotic reinforcement learning tasks can be defined via an MDP = {, , 𝜌, , 𝑟, 𝛾}, where 𝐬∈is the state observation ...), does the paper-specific mechanism (However, in the process of evaluating our framework, we also make a scientifically interesting empirical observation: when implemented properly in a carefully ...) retain the reported evaluation outcome (SERL: A Software Suite for Sample-Efficient Robotic Reinforcement Learning Figure 8: Peg Insertion Task at University of Washington ...) when tested against the paper's strongest explicit boundary (Our framework does have a number of limitations.)?
+같은 삽입 작업에서 영상·현재 말단장치 위치와 목표 자세 명령을 고정하고, 동일한 상호작용 예산에서 시연 표본의 비율을 바꾸면 성공률이 어떻게 달라지는가? [§3 MDP 정의 · PDF 3쪽](https://arxiv.org/pdf/2401.16013v4#page=3)
 
 **Reject the hypothesis if** Reject the hypothesis if the body-reported metric (SERL: A Software Suite for Sample-Efficient Robotic Reinforcement Learning Figure 8: Peg Insertion Task at University of Washington ...) does not improve at matched observation, action, data and compute, or if the added mechanism changes the reported failure/latency/data boundary without a measured compensating gain.
 

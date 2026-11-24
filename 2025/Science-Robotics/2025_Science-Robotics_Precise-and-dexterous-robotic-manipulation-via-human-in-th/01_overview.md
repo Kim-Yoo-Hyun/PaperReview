@@ -49,9 +49,9 @@
 
 | Role | PDF body evidence | Robotics interpretation | Anchor |
 |---|---|---|---|
-| Observation/input | Robotic reinforcement learning tasks can be defined via an MDP = {, , 𝜌, , 𝑟, 𝛾}, where 𝐬∈is the state observation (e.g., an image in combination with the robot's proprioceptive state ... | multi-view observation, language/task label과 action trajectory | p. 4 (3.1. Preliminaries and Problem Statement), p. 5 (3.1. Preliminaries and Problem Statement) |
+| Observation/input | $\mathcal M=\{\mathcal S,\mathcal A,\rho,\mathcal P,r,\gamma\}$에서 관측 $s\in\mathcal S$의 예는 영상과 로봇의 고유수용감각이다. 행동 $a\in\mathcal A$의 예는 말단장치의 목표 트위스트(선속도·각속도)다. | 영상과 고유수용감각 | [§3.1 MDP 정의 · PDF 4쪽](https://arxiv.org/pdf/2410.21845v3#page=4) |
 | State/latent | Robotic, reinforcement, learning, tasks, defined, MDP, where, state, observation, image, combination, robot | shared representation, embodiment/task identity와 data distribution | p. 4 (3.1. Preliminaries and Problem Statement), p. 5 (3.1. Preliminaries and Problem Statement), p. 5 (3.1. Preliminaries and Problem Statement) |
-| Output/action | To implement reinforcement learning algorithms for robotic tasks, we must carefully select appropriate state observation spaces and action spaces . | dataset sample 또는 learned policy action | p. 5 (3.1. Preliminaries and Problem Statement), p. 5 (3.1. Preliminaries and Problem Statement), p. 2 (1. Introduction) |
+| Output/action | 카메라 영상과 로봇 고유수용감각으로 관측 공간 $\mathcal S$를 정한다. 행동 공간 $\mathcal A$와 저수준 제어기의 선택은 정책의 명령이 실제 로봇에 어떻게 적용되는지를 결정한다. | 말단장치 목표 트위스트 | [§3.1 관측·행동 공간 · PDF 5쪽](https://arxiv.org/pdf/2410.21845v3#page=5) |
 | Objective/outcome | Additionally, we may collect extra data to address any false negative and false positive issues with the reward classifier. | coverage, cross-embodiment transfer, data efficiency와 task success | p. 8 (3.5. Training Process), p. 8 (3.5. Training Process), p. 9 (3.5. Training Process) |
 
 ## Main Claims and Actual Contribution

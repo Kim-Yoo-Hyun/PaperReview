@@ -12,7 +12,7 @@ PDF body method statement (p. 6 (IV. BASELINE MODELS), p. 6 (IV. BASELINE MODELS
 
 - **p. 6 / IV. BASELINE MODELS - extractive body cue:** The decoder is a policy trained to reconstruct input actions, conditioned on state xt, goal xg, and an inferred plan z for how to get ...
 - **p. 6 / IV. BASELINE MODELS - extractive body cue:** The encoder for the gripper camera takes an image of 84 × 84 as input and consists of 3 convolutional layers with 32, 64, and ...
-- **p. 6 / IV. BASELINE MODELS - extractive body cue:** These short horizon goal image conditioned demonstrations can be fed to a simple maximum likelihood goal conditioned imitation objective: LLfP = E(τ,xg)∼Dplay   /τ/ ...
+- LfP 기준선은 놀이 궤적의 관측과 목표 영상을 조건으로 시연 행동의 우도를 높인다. [§IV 식 1 · PDF 6쪽](https://arxiv.org/pdf/2112.03227v4#page=6)
 - **p. 6 / IV. BASELINE MODELS - extractive body cue:** We set the weight controlling the influence of the KL divergence to the total loss to β = 0.001.
 - **p. 3 / III. CALVIN - extractive body cue:** 2: Observation and action spaces supported by CALVIN. only allow feasible sequences that can be achieved from a predefined initial environment state.
 - **p. 3 / 3) CALVIN Challenge - extractive body cue:** 1) Observation and Action Space: Unlike prior work which relies on RGB images from an egocentric camera to perceive its surroundings [1], [6], CALVIN offers ...
@@ -43,7 +43,7 @@ PDF body method statement (p. 6 (IV. BASELINE MODELS), p. 6 (IV. BASELINE MODELS
 
 ## Objective / Update Rule
 
-- **p. 6 / IV. BASELINE MODELS - extractive body cue:** These short horizon goal image conditioned demonstrations can be fed to a simple maximum likelihood goal conditioned imitation objective: LLfP = E(τ,xg)∼Dplay   /τ/ ...
+- 놀이 데이터에서 목표 영상 $x_g$와 짧은 궤적 $\tau$를 뽑고, 행동의 조건부 로그우도 $\mathcal L_{\mathrm{LfP}}=\mathbb E_{(\tau,x_g)\sim D_{\mathrm{play}}}\!\left[\sum_{t=0}^{\lvert\tau\rvert}\log\pi_\theta(a_t\mid x_t,x_g)\right]$를 최대화한다. [§IV 식 1 · PDF 6쪽](https://arxiv.org/pdf/2112.03227v4#page=6)
 - **p. 6 / IV. BASELINE MODELS - extractive body cue:** We set the weight controlling the influence of the KL divergence to the total loss to β = 0.001.
 - **Formal bridge:** standardized episode e and interface -> method trajectory/action -> benchmark score and failure cost -> comparable score and protocol validity.
 - **Equation/algorithm anchors:** p. 6 (IV. BASELINE MODELS), p. 6 (IV. BASELINE MODELS).
@@ -90,8 +90,7 @@ PDF body method statement (p. 6 (IV. BASELINE MODELS), p. 6 (IV. BASELINE MODELS
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** decoder, policy, trained, reconstruct, input, actions, conditioned, state, goal, inferred, plan, encoder, gripper, camera, takes, image, consists, convolutional, layers, channels.
-- **Relevant PDF headings:** IV. BASELINE MODELS (p. 6).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
+- 식 1에서 시연 행동은 현재 관측과 목표 영상에 조건부다. [§IV 식 1 · PDF 6쪽](https://arxiv.org/pdf/2112.03227v4#page=6)
 
 ## Evaluation Link
 

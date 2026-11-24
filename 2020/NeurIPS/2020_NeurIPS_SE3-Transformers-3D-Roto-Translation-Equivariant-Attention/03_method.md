@@ -6,11 +6,11 @@
 
 ## Method in One Sentence
 
-PDF body method statement (p. 6 (3 Method), p. 6 (3 Method), p. 5 (3 Method), p. 5 (3 Method), p. 7 (3 Method)): These weights are SE(3)-invariant due to the invariance of inner products of features, transforming under the same representation. wℓℓ i,c′c = MLP  M c,c′ fℓ⊤ in,i,c′fℓ in,i,c   ...
+자기 상호작용은 같은 노드 안에서 동일 차수의 채널들을 혼합한다. 내적을 연결한 값을 MLP에 넣어 불변 가중치를 얻는다. [§3 식 13 · PDF 6쪽](https://arxiv.org/pdf/2006.10503v3#page=6)
 
 ## Method Body Digest
 
-- **p. 6 / 3 Method - extractive body cue:** These weights are SE(3)-invariant due to the invariance of inner products of features, transforming under the same representation. wℓℓ i,c′c = MLP  M c,c′ ...
+- 같은 노드에서 같은 차수 $\ell$의 채널 쌍마다 내적을 계산하고 이어 붙인다. 자기 상호작용의 가중치 $w^{\ell\ell}_{i,c'c}=\mathrm{MLP}\!\left(\bigoplus_{c,c'}(\mathbf f^\ell_{\mathrm{in},i,c'})^\top\mathbf f^\ell_{\mathrm{in},i,c}\right)$는 이 내적들이 회전에 불변이므로 불변인 스칼라다. [§3 식 13 · PDF 6쪽](https://arxiv.org/pdf/2006.10503v3#page=6)
 - **p. 6 / 3 Method - extractive body cue:** Channels, Self-interaction Layers, and Non-Linearities Analogous to conventional neural networks, the SE(3)-Transformer can straightforwardly be extended to multiple channels per representation degree ℓ, so far ...
 - **p. 5 / 3 Method - extractive body cue:** 3.2 The SE(3)-Transformer The SE(3)-Transformer itself consists of three components.
 - **p. 5 / 3 Method - extractive body cue:** If we remove the attention weights then we have a tensor field convolution, and if we instead remove the dependence of WV on (xj -xi), ...
@@ -27,7 +27,7 @@ PDF body method statement (p. 6 (3 Method), p. 6 (3 Method), p. 5 (3 Method), p.
 
 ## Source Evidence Cues
 
-- **p. 6 / 3 Method - extractive body cue:** These weights are SE(3)-invariant due to the invariance of inner products of features, transforming under the same representation. wℓℓ i,c′c = MLP  M c,c′ ...
+- 자기 상호작용의 MLP 입력은 같은 노드에 속한 채널 쌍들의 내적을 이어 붙인 벡터다. [§3 식 13 · PDF 6쪽](https://arxiv.org/pdf/2006.10503v3#page=6)
 - **p. 6 / 3 Method - extractive body cue:** Channels, Self-interaction Layers, and Non-Linearities Analogous to conventional neural networks, the SE(3)-Transformer can straightforwardly be extended to multiple channels per representation degree ℓ, so far ...
 - **p. 5 / 3 Method - extractive body cue:** 3.2 The SE(3)-Transformer The SE(3)-Transformer itself consists of three components.
 - **p. 5 / 3 Method - extractive body cue:** If we remove the attention weights then we have a tensor field convolution, and if we instead remove the dependence of WV on (xj -xi), ...
@@ -64,7 +64,7 @@ PDF body method statement (p. 6 (3 Method), p. 6 (3 Method), p. 5 (3 Method), p.
 
 - **p. 1 / 1 Introduction - extractive body cue:** Furthermore, an important property is that these structures should be invariant to global changes in overall input pose; that is, 3D translations and rotations of ...
 - **p. 6 / 3 Method - extractive body cue:** [25], output channels are a learned linear combination of input channels using one set of weights wℓℓ i,c′c = wℓℓ c′c per representation degree, shared ...
-- **p. 6 / 3 Method - extractive body cue:** These weights are SE(3)-invariant due to the invariance of inner products of features, transforming under the same representation. wℓℓ i,c′c = MLP  M c,c′ ...
+- 채널을 섞는 스칼라 $w^{\ell\ell}_{i,c^\prime c}$는 입력 특징을 함께 회전해도 변하지 않는다. [§3 식 13 · PDF 6쪽](https://arxiv.org/pdf/2006.10503v3#page=6)
 - **p. 5 / 3 Method - extractive body cue:** (7), and 3) a linear/attentive self-interaction layer.
 - **p. 5 / 3 Method - extractive body cue:** Attention is performed on a per-neighbourhood basis as follows: fℓ out,i = Wℓℓ V fℓ in,i / {z } 3 ⃝self-interaction + X k≥0 X ...
 - **p. 1 / 1 Introduction - extractive body cue:** Finding neural structures which can adapt to the varying number of points in an input, while respecting the irregular sampling of point positions, is challenging.
@@ -90,8 +90,7 @@ PDF body method statement (p. 6 (3 Method), p. 6 (3 Method), p. 5 (3 Method), p.
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** weights, invariant, invariance, inner, products, features, transforming, under, same, representation, MLP, Node, Edge, Point, cloud, data, often, information, attached, points.
-- **Relevant PDF headings:** 3 Method (p. 5).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
+- 자기 상호작용의 채널 가중치와 채널 내적의 관계는 식 13에 정의된다. [§3 식 13 · PDF 6쪽](https://arxiv.org/pdf/2006.10503v3#page=6)
 
 ## Evaluation Link
 

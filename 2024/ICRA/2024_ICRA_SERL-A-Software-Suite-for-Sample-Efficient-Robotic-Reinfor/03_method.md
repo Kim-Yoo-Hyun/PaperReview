@@ -66,7 +66,7 @@ PDF body method statement (p. 6 (4.5. Impedance Controller for Contact-Rich), p.
 
 ## Observation–State–Action Interface
 
-- **p. 3 / 3. Preliminaries and Problem Statement - extractive body cue:** Robotic reinforcement learning tasks can be defined via an MDP = {, , 𝜌, , 𝑟, 𝛾}, where 𝐬∈is the state observation (e.g., an image ...
+- $\mathcal M=\{\mathcal S,\mathcal A,\rho,\mathcal P,r,\gamma\}$에서 $\rho$는 초기 상태 분포, $\mathcal P$는 전이 분포다. 관측 $s\in\mathcal S$의 예는 영상과 현재 말단장치 위치이고, 행동 $a\in\mathcal A$의 예는 말단장치의 목표 자세다. [§3 MDP 정의 · PDF 3쪽](https://arxiv.org/pdf/2401.16013v4#page=3)
 - **p. 7 / 4.6. Relative Observation and Action Frame - extractive body cue:** The robot's proprioceptive information is expressed with respect to frame of the end-effector's initial pose; the action output from the policy (6D twist) is relative ...
 - **p. 6 / 4.5. Impedance Controller for Contact-Rich - extractive body cue:** One might wonder if we should directly clip the action output by the RL policy.
 - **p. 6 / 4.5. Impedance Controller for Contact-Rich - extractive body cue:** The output from the RL policy is tracked within a block of time by the downstream controller. this objective will then be converted into joint ...
@@ -99,8 +99,7 @@ PDF body method statement (p. 6 (4.5. Impedance Controller for Contact-Rich), p.
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** output, policy, tracked, within, block, time, downstream, controller, objective, will, then, converted, joint, space, torques, multiplying, Jacobian, transpose, offset, nullspace.
-- **Relevant PDF headings:** 4.5. Impedance Controller for Contact-Rich (p. 5).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
+- §3은 상태와 행동을 정의하고 §4.5는 목표 자세에 대한 임피던스 제어를 설명한다. [§3 MDP 정의 · PDF 3쪽](https://arxiv.org/pdf/2401.16013v4#page=3)
 
 ## Evaluation Link
 
@@ -138,7 +137,7 @@ PDF body method statement (p. 6 (4.5. Impedance Controller for Contact-Rich), p.
 
 > Cross-checked on 2026-09-03 against the validated PDF body (14 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
 
-- **Paper-specific method/interface:** Robotic reinforcement learning tasks can be defined via an MDP = {, , 𝜌, , 𝑟, 𝛾}, where 𝐬∈is the state observation (e.g., an image in combination with the current ... (p. 3, 3. Preliminaries and Problem Statement).
+- **정책 입출력.** 관측 예시는 영상과 현재 말단장치 위치이며, 정책 행동의 예시는 목표 자세다. [§3 MDP 정의 · PDF 3쪽](https://arxiv.org/pdf/2401.16013v4#page=3)
 - **Objective/update evidence:** A typical impedance control objective for this controller is 𝐹= 𝑘𝑝⋅𝑒+ 𝑘𝑑⋅̇ 𝑒+ 𝐹𝑓𝑓+ 𝐹𝑐𝑜𝑟, where 𝑒= 𝑝-𝑝𝑟𝑒𝑓, 𝑝is the measured pose, and 𝑝𝑟𝑒𝑓is the target pose computed by the ... (p. 5, 4.5. Impedance Controller for Contact-Rich).
 - **Temporal/runtime evidence:** tion Frame Let the robot's base frame be {𝑠}; for the 𝑖-th episode of rolling out the policy, we denote {𝑏(𝑖) 𝑡} as the endeffector frame expressed w.r.t. {𝑠} at ... (p. 9, 7.1. Details on Relative Observation and Ac).
 - **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

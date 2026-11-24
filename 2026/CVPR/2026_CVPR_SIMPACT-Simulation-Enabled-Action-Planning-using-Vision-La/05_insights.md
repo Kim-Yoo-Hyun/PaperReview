@@ -42,7 +42,7 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Paper-specific interface:** Our framework enables zero-shot robotic manipulation action generation from a single RGB-D image input I0 and natural language instruction `task and outputs robot action sequence a = {at}1tT , where ... (p. 3, 3. Method).
+- **정책 입출력.** 단일 RGB-D 영상과 지시가 입력이다. 시점 $1\le t\le T$마다 출력하는 행동에는 말단장치 자세와 그리퍼 벌림 폭이 들어간다. [§3 행동 정의 · PDF 3쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Liu_SIMPACT_Simulation-Enabled_Action_Planning_using_Vision-Language_Models_CVPR_2026_paper.pdf#page=3)
 - **Paper-specific mechanism:** In summary, this paper makes the following contributions: • We introduce a test-time, zero-shot framework enabling VLMs to plan physics-aware embodied actions; • We present a pipeline for automatically generating ... (p. 2, 1. Introduction).
 - **Evidence boundary:** the reported outcome is Table 3. Ablation. Success rates (%) over 10 trials for each task after removing each component of our method. Results demonstrate the importance of VLM-conditioned sampling and the VLM's simulation-enabled ... (p. 7, Figure/Table caption); the relevant task/metric cue is Success rates (%) over 10 trials varying numbers of in-context examples for tasks non-toppling push, bowl stacking, shape rope. #Samples Non-toppling push Bowl stacking Shape rope 3 samples 50% 50% ... (p. 8, 4.3. Ablation study). The PDF does not establish downstream robotics benefit beyond those conditions.
 - **Failure implication:** However, they struggle with tasks that require precise action planning, where small errors, such as pushing the wrong part of an object (in non-toppling push) or squeezing an incorrect region ... (p. 7, 4.2. Results).
@@ -58,7 +58,7 @@
 
 ### Minimal reproduction
 
-1. Reconstruct the PDF-described interface and mechanism: Our framework enables zero-shot robotic manipulation action generation from a single RGB-D image input I0 and natural language instruction `task and outputs robot action sequence a = {at}1tT , where ... (p. 3, 3. Method); preserve the objective/update rule: From these proposals, the VLM optimizer reasons a non-trivial action update that pushes the bottle for the correct distance without toppling in both simulation and real-world execution. (p. 5, 3.2. Action Planning via Simulation-enabled VLM).
+1. 동일한 초기 영상과 병 밀기 지시를 주고 생성된 자세·벌림 폭 열을 기록한다. 시뮬레이션 피드백 전후에 병의 최종 위치와 전도 여부를 비교한다. [§3 행동 정의 · PDF 3쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Liu_SIMPACT_Simulation-Enabled_Action_Planning_using_Vision-Language_Models_CVPR_2026_paper.pdf#page=3) · [§3.2 그림 4 · PDF 5쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Liu_SIMPACT_Simulation-Enabled_Action_Planning_using_Vision-Language_Models_CVPR_2026_paper.pdf#page=5)
 2. Use the paper-reported task/data/environment cue: 5 shows simulation and real-world rollouts of six of our seven tasks. (p. 7, 4.2. Results).
 3. Compare against the reported or matched baseline: Qualitative comparison with baseline methods. (p. 7, 4.1. Experimental Setup).
 4. Report the body metric with its denominator and aggregation: Success rates (%) over 10 trials varying numbers of in-context examples for tasks non-toppling push, bowl stacking, shape rope. #Samples Non-toppling push Bowl stacking Shape rope 3 samples 50% 50% ... (p. 8, 4.3. Ablation study).

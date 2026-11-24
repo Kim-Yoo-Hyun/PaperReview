@@ -25,6 +25,7 @@ FOLLOWUP_FIELDS = {"primary": "대표 서지", "arxiv": "arXiv 식별자", "doi"
                    "title": "제목", "authors": "저자", "code": "코드", "weights": "가중치", "data": "데이터"}
 TEMPLATE_CLAIM = "observation-to-action closed loop의 한 지점을 바꾼다."
 PROBE = ("문구 없음", "행동 근거 확인", "적용 범위 오류", "판정 유보")
+STANDARD_NOTES = {"01_overview.md", "02_problem.md", "03_method.md", "04_evaluation.md", "05_insights.md"}
 
 
 def final(check):
@@ -108,6 +109,22 @@ def check_applied(rows, papers, root):
         def expect(field, value, target):
             if value != target:
                 errors.append(f"{pid} {field} differs from the reviewed correction")
+
+        if transcription := row.get("note_transcription_review"):
+            source = transcription["source"]
+            reviewed_text = []
+            for name in [*transcription["notes"], *transcription.get("related_notes", [])]:
+                if name not in STANDARD_NOTES:
+                    raise ValueError(f"{pid} invalid transcription note {name}")
+                note = (root / paper["folder"] / name).read_text()
+                if source + "#page=" not in note:
+                    errors.append(f"{pid} {name} missing its transcription source")
+                reviewed_text.append(note)
+            combined = "\n".join(reviewed_text)
+            for loc in transcription["locations"]:
+                anchor = f"[{loc['label']} · PDF {loc['page']}쪽]({source}#page={loc['page']})"
+                if anchor not in combined:
+                    errors.append(f"{pid} missing reviewed passage {anchor}")
 
         final_authors = paper.get("authors", [])
         if correction := row.get("byline_correction"):
@@ -440,7 +457,9 @@ def render(rows, meta):
     historic = "https://github.com/Kim-Yoo-Hyun/PaperReview/blob/" + post["baseline_commit"]
     ledger = "../work/sources/batches/source_audit_2026_11.jsonl"
     batches = meta.get("summary_batches", [])
+    transcriptions = [r["note_transcription_review"] for r in rows if "note_transcription_review" in r]
     latest_date = max([post["verified_on"], *(b["verified_on"] for b in batches),
+                       *(r["verified_on"] for r in transcriptions),
                        *(r["byline_correction"]["verified_on"] for r in rows if "byline_correction" in r),
                        meta.get("artifact_review", {}).get("verified_on", "")])
     lines = [
@@ -472,7 +491,16 @@ def render(rows, meta):
         repairs = [r for r in rows if r.get("summary_review", {}).get("transcription_fix")]
         if repairs:
             refs = " · ".join(f"[{r['id']} 원문]({r['summary_review']['source']})" for r in repairs)
-            lines += [f"기존 노트에서 확인한 문자 전사 교정은 {len(repairs)}편이다. 원장에 해당 문구와 근거를 기록했다. {refs}", ""]
+            lines += [f"요약·기여를 대조하며 {len(repairs)}편의 문자 전사도 바로잡았다. {refs}", ""]
+    if transcriptions:
+        notes = [note for record in transcriptions for note in record["notes"].values()]
+        n_lines = sum(len(note["lines_before"]) for note in notes)
+        n_glyphs = sum(note["glyphs_before"] for note in notes)
+        lines += ["### 노트의 수식과 도식", "",
+                  f"{len(transcriptions)}편의 표준 노트 {len(notes)}개에서 {n_lines}줄의 글꼴 전용 문자 "
+                  f"{n_glyphs}개를 인쇄된 수식·그림과 대조해 복원했다. 원장에는 대조한 PDF의 SHA-256, "
+                  f"근거 쪽과 절, 교정 전 노트의 줄 번호를 기록했다. [논문별 근거]({ledger}) · "
+                  "[교정 내용](../work/update/REGISTRY.md#note-review)", ""]
     source_changes = [r for r in rows if r.get("summary_review", {}).get("source_identity_correction")]
     if source_changes:
         lines += ["### 원문과 판본 교정", "", "| 논문 | 게재본과 대조한 결과 |", "|---|---|"]

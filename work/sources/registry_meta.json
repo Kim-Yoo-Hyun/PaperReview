@@ -16,7 +16,7 @@
   "identity_policy": "paper_id is the stable internal identity; DOI/arXiv/OpenReview identifiers are optional public identifiers.",
   "version_policy": "Use relations with type=version_of or same_work_as when a preprint and publication must remain separate.",
   "evidence_policy": "Manifest provenance records source scope; note evidence and reading status are not inferred from local PDF presence.",
-  "manifest_sha256": "2302f78c2e7d4f2347c41b97c45acc0a13255ac71158e0a4880f5016875f0f1d",
+  "manifest_sha256": "cdde221a780644fd07b0e33be31d30ccfc3e68c90068ee19f1aa121e58d65585",
   "last_reconciled_on": "2026-09-04",
   "reconciliation_policy": "review manifest evidence is paper-level; per-note evidence is retained under provenance.note_evidence; note-scoped review manifests are retained under provenance.note_review without changing paper-level review precedence; tracker status remains user-controlled.",
   "relation_count": 91,
@@ -154,7 +154,7 @@
       "count": 43,
       "baseline_commit": "f3806160de5ecd1a08dd7b18364fd63d0dac5745"
     },
-    "manifest_sha256": "2302f78c2e7d4f2347c41b97c45acc0a13255ac71158e0a4880f5016875f0f1d",
+    "manifest_sha256": "cdde221a780644fd07b0e33be31d30ccfc3e68c90068ee19f1aa121e58d65585",
     "initial_verified_on": "2026-11-20"
   }
 }

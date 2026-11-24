@@ -14,7 +14,7 @@
 - **p. 5 / 3 Method - extractive body cue:** Here, we present the SE(3)-Transformer.
 - **p. 5 / 3 Method - extractive body cue:** This mechanism consists of a normalised inner product between a query vector qi 5
 - **p. 6 / 3 Method - extractive body cue:** Attentive: We propose an extension of linear self-interaction, attentive self-interaction, combining self-interaction and nonlinearity.
-- **p. 6 / 3 Method - extractive body cue:** These weights are SE(3)-invariant due to the invariance of inner products of features, transforming under the same representation. wℓℓ i,c′c = MLP  M c,c′ ...
+- 같은 차수의 두 채널 내적에서 만든 가중치가 회전에 불변이라는 점이 자기 상호작용의 근거다. [§3 식 13 · PDF 6쪽](https://arxiv.org/pdf/2006.10503v3#page=6)
 - **p. 6 / 3 Method - extractive body cue:** Channels, Self-interaction Layers, and Non-Linearities Analogous to conventional neural networks, the SE(3)-Transformer can straightforwardly be extended to multiple channels per representation degree ℓ, so far ...
 - **p. 5 / 3 Method - extractive body cue:** 3.2 The SE(3)-Transformer The SE(3)-Transformer itself consists of three components.
 - **Contribution anchor:** p. 1 (1 Introduction), p. 5 (3 Method), p. 5 (3 Method), p. 6 (3 Method), p. 6 (3 Method), p. 6 (3 Method)

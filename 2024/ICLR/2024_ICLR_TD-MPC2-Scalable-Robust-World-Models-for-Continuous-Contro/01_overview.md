@@ -38,18 +38,18 @@
 - **p. 1 / ABSTRACT - extractive body cue:** In this work, we present TD-MPC2: a series of improvements upon the TD-MPC algorithm.
 - **p. 3 / 2 BACKGROUND - extractive body cue:** We introduce the TD-MPC2 algorithm in the following, and provide a full list of algorithmic improvements in Appendix A.
 - **p. 3 / 2 BACKGROUND - extractive body cue:** Specifically, we propose a series of improvements to the TD-MPC algorithm, which have been key to achieving strong algorithmic robustness (can use the same hyperparameters ...
-- **p. 3 / 2 BACKGROUND - extractive body cue:** The TD-MPC2 architecture is shown in Figure 3 and consists of five components: Encoder z = h(s, e) ▷Maps observations to their latent representations Latent ...
+- **p. 3 / §3.1 - extractive body cue:** The TD-MPC2 architecture is shown in Figure 3 and consists of five components: Encoder z = h(s, e) ▷Maps observations to their latent representations Latent ...
 - **p. 1 / ABSTRACT - extractive body cue:** TD-MPC is a model-based reinforcement learning (RL) algorithm that performs local trajectory optimization in the latent space of a learned implicit (decoderfree) world model.
-- **p. 5 / 2 BACKGROUND - extractive body cue:** To do so, we zero-pad all model inputs and outputs to their largest respective dimensions, and mask out invalid action dimensions in predictions made by ...
+- **p. 5 / §3.3 - extractive body cue:** To do so, we zero-pad all model inputs and outputs to their largest respective dimensions, and mask out invalid action dimensions in predictions made by ...
 
 ## Observation, State, and Output Interface
 
 | Role | PDF body evidence | Robotics interpretation | Anchor |
 |---|---|---|---|
-| Observation/input | The TD-MPC2 architecture is shown in Figure 3 and consists of five components: Encoder z = h(s, e) ▷Maps observations to their latent representations Latent dynamics z′ = d(z, a, e) ▷Models ... | observation, uncertainty/risk estimate와 task command | p. 3 (2 BACKGROUND), p. 5 (2 BACKGROUND) |
-| State/latent | TD-MPC2, architecture, Figure, consists, five, components, Encoder, Maps, observations, latent, representations, dynamics | safe set, recovery state 또는 constraint margin | p. 3 (2 BACKGROUND), p. 5 (2 BACKGROUND), p. 2 (1 INTRODUCTION) |
-| Output/action | To do so, we zero-pad all model inputs and outputs to their largest respective dimensions, and mask out invalid action dimensions in predictions made by the policy prior p during both training ... | shielded, recovery 또는 safe action | p. 5 (2 BACKGROUND), p. 2 (1 INTRODUCTION), p. 2 (2 BACKGROUND) |
-| Objective/outcome | The h, d, R, Q components are jointly optimized to minimize the objective L (θ) .= E (s,a,r,s′)0:H∼B   H X t=0 λt   ∥z′ t -sg(h(s′ t))∥2 2 / ... | task return과 violation/failure probability | p. 4 (2 BACKGROUND), p. 3 (2 BACKGROUND), p. 5 (2 BACKGROUND) |
+| Observation/input | 관측 $s$와 여러 작업에서 학습한 작업 임베딩 $e$ | 상태 또는 영상에서 잠재 상태를 계산 | [§3.1 그림 3·식 2 · PDF 3쪽](https://arxiv.org/pdf/2310.16828v2#page=3) |
+| State/latent | $z=h(s,e)$이고 후보 행동에 따라 $z^\prime=d(z,a,e)$를 예측한다. | 보상과 종단 가치 예측에 사용하는 상태 | [§3.1 그림 3·식 2 · PDF 3쪽](https://arxiv.org/pdf/2310.16828v2#page=3) |
+| Output/action | 계획한 연속 행동열의 첫 행동을 실행한다. | 환경의 다음 관측에서 재계획 | [§3.2 식 6의 실행 절차 · PDF 5쪽](https://arxiv.org/pdf/2310.16828v2#page=5) |
+| Objective/outcome | 리플레이에서 뽑은 연속 전이에 대해 인코더 $h$, 잠재 동역학 $d$, 보상 $R$, 종단 가치 $Q$를 함께 학습한다. 시점별 손실은 $\lambda^t\!\left(\lVert z'_t-\operatorname{sg}(h(s'_t))\rVert_2^2+\operatorname{CE}(\hat r_t,r_t)+\operatorname{CE}(\hat q_t,q_t)\right)$이며 $t=0,\ldots,H$에 대해 합산해 기댓값을 최소화한다. $\operatorname{sg}$는 목표 임베딩에서 기울기 전파를 멈춘다. | 잠재 상태·보상·가치 예측 학습 | [§3.1 식 3 · PDF 4쪽](https://arxiv.org/pdf/2310.16828v2#page=4) |
 
 ## Main Claims and Actual Contribution
 

@@ -48,7 +48,7 @@ CALVIN은 언어 지시에 따라 여러 조작 기술을 잇달아 수행하는
 | Observation/input | The decoder is a policy trained to reconstruct input actions, conditioned on state xt, goal xg, and an inferred plan z for how to get from xt to xg. | standardized observation, action, task state와 evaluation split | p. 6 (IV. BASELINE MODELS), p. 3 (III. CALVIN) |
 | State/latent | decoder, policy, trained, reconstruct, input, actions, conditioned, state, goal, inferred, plan, Observation | benchmark state/goal와 method decision | p. 6 (IV. BASELINE MODELS), p. 3 (III. CALVIN), p. 3 (3) CALVIN Challenge) |
 | Output/action | 2: Observation and action spaces supported by CALVIN. only allow feasible sequences that can be achieved from a predefined initial environment state. | policy/controller trajectory 또는 measured result | p. 3 (III. CALVIN), p. 3 (3) CALVIN Challenge), p. 6 (IV. BASELINE MODELS) |
-| Objective/outcome | These short horizon goal image conditioned demonstrations can be fed to a simple maximum likelihood goal conditioned imitation objective: LLfP = E(τ,xg)∼Dplay   /τ/ X t=0 log πθ(at / xt, xg) ... | success metric, robustness, generalization과 reproducibility | p. 6 (IV. BASELINE MODELS), p. 6 (IV. BASELINE MODELS) |
+| Objective/outcome | 놀이 데이터에서 목표 영상 $x_g$와 짧은 궤적 $\tau$를 뽑고, 행동의 조건부 로그우도 $\mathcal L_{\mathrm{LfP}}=\mathbb E_{(\tau,x_g)\sim D_{\mathrm{play}}}\!\left[\sum_{t=0}^{\lvert\tau\rvert}\log\pi_\theta(a_t\mid x_t,x_g)\right]$를 최대화한다. | 목표 영상 조건부 행동 모방 | [§IV 식 1 · PDF 6쪽](https://arxiv.org/pdf/2112.03227v4#page=6) |
 
 ## Main Claims and Actual Contribution
 
