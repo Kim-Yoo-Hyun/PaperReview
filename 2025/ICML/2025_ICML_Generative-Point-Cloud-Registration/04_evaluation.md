@@ -6,7 +6,7 @@
 
 ## Evaluation in One Sentence
 
-PDF body evaluation/result cue (p. 7 (4.3. Ablation Studies and Analysis), p. 7 (4.3. Ablation Studies and Analysis), p. 8 (4.3. Ablation Studies and Analysis), p. 8 (4.3. Ablation Studies and Analysis), p. 6 (4.1. Experimental Setting), p. 5 (Figure/Table caption)): Moreover, because the finetuned Match-ControlNet benefits from task-specific training, it consistently achieves higher registration accuracy than the zero-shot version.
+생성된 색상 특징을 기하 특징과 결합하고 3DMatch와 ScanNet에서 기존 정합기에 추가했을 때의 대응 및 정합 성능을 비교했다. [PDF 6쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/jiang25k/jiang25k.pdf#page=6) · [PDF 7쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/jiang25k/jiang25k.pdf#page=7)
 
 ## Evaluation Body Digest
 
@@ -21,22 +21,18 @@ PDF body evaluation/result cue (p. 7 (4.3. Ablation Studies and Analysis), p. 7 
 
 ## Evaluation Type and Scope
 
-- **Evaluation type:** `EMPIRICAL / REAL-ROBOT OR HARDWARE`.
-- **Target system/task:** 3D scene/object와 robot coordinate frame.
-- **Input boundary:** RGB-D, image set, point cloud, depth와 camera pose.
-- **Output/decision under evaluation:** point map, pose, scene graph, affordance 또는 query result.
-- **Primary target:** geometric accuracy, semantic consistency와 planning/manipulation utility.
+- **Evaluation type:** `BENCHMARK / DATASET`.
 - **Detected evaluation headings:** 4. Experiments (p. 5); 4.1. Experimental Setting (p. 5).
 
 ## Experimental Matrix
 
 | Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
-| 4.3. Ablation Studies and Analysis | EMPIRICAL / REAL-ROBOT OR HARDWARE | Moreover, because the finetuned Match-ControlNet benefits from task-specific training, it consistently achieves higher registration accuracy than the zero-shot version. | p. 7 (4.3. Ablation Studies and Analysis) |
-| 4.3. Ablation Studies and Analysis | EMPIRICAL / REAL-ROBOT OR HARDWARE | Increasing the number of finetuning samples (e.g., to 3K or 5K) provides additional improvements; however, models trained on 3K or 5K samples show comparable ... | p. 7 (4.3. Ablation Studies and Analysis) |
-| 4.3. Ablation Studies and Analysis | EMPIRICAL / REAL-ROBOT OR HARDWARE | By contrast, a balanced weight (e.g., ω = 0.50) achieves higher performance. | p. 8 (4.3. Ablation Studies and Analysis) |
-| 4.3. Ablation Studies and Analysis | EMPIRICAL / REAL-ROBOT OR HARDWARE | The third block in Table 3 demonstrates that, on the 3DMatch dataset, Generative ColorPCR with the synthesized color even outperforms the original ColorPCR with ... | p. 8 (4.3. Ablation Studies and Analysis) |
-| 4.1. Experimental Setting | EMPIRICAL / REAL-ROBOT OR HARDWARE | Following (El Banani et al., 2021; Yuan et al., 2023), we use rotation error, translation error, and Chamfer error, including the accuracy across varying ... | p. 6 (4.1. Experimental Setting) |
+| 4.3. Ablation Studies and Analysis | BENCHMARK / DATASET | Moreover, because the finetuned Match-ControlNet benefits from task-specific training, it consistently achieves higher registration accuracy than the zero-shot version. | p. 7 (4.3. Ablation Studies and Analysis) |
+| 4.3. Ablation Studies and Analysis | BENCHMARK / DATASET | Increasing the number of finetuning samples (e.g., to 3K or 5K) provides additional improvements; however, models trained on 3K or 5K samples show comparable ... | p. 7 (4.3. Ablation Studies and Analysis) |
+| 4.3. Ablation Studies and Analysis | BENCHMARK / DATASET | By contrast, a balanced weight (e.g., ω = 0.50) achieves higher performance. | p. 8 (4.3. Ablation Studies and Analysis) |
+| 4.3. Ablation Studies and Analysis | BENCHMARK / DATASET | The third block in Table 3 demonstrates that, on the 3DMatch dataset, Generative ColorPCR with the synthesized color even outperforms the original ColorPCR with ... | p. 8 (4.3. Ablation Studies and Analysis) |
+| 4.1. Experimental Setting | BENCHMARK / DATASET | Following (El Banani et al., 2021; Yuan et al., 2023), we use rotation error, translation error, and Chamfer error, including the accuracy across varying ... | p. 6 (4.1. Experimental Setting) |
 
 ## Dataset / Benchmark Role
 

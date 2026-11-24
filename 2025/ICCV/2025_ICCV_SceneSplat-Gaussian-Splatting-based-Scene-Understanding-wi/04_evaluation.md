@@ -6,7 +6,7 @@
 
 ## Evaluation in One Sentence
 
-PDF body evaluation/result cue (p. 6 (5.2. Label-free 3DGS Pretraining), p. 7 (Figure/Table caption), p. 6 (5.1. Vision-Language Pretraining), p. 3 (Figure/Table caption), p. 7 (5.3. Further Statistical Evaluation), p. 8 (5.3. Further Statistical Evaluation)): Our method achieves a +0.1% improvement over supervised-only baselines on ScanNet20 and +0.5% on ScanNet200, while observing a performance drop on ScanNet++ primarily due to pretraining dataset quality variations 4966
+SceneSplat-7K의 7,916개 장면은 일곱 기존 실내 자료에서 구축한 가우시안 표현이다. 주석이 없는 장면을 자기지도 학습에 활용하며, 평가 단위는 장면의 의미 예측이다. [PDF 1쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Li_SceneSplat_Gaussian_Splatting-based_Scene_Understanding_with_Vision-Language_Pretraining_ICCV_2025_paper.pdf#page=1) · [PDF 3쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Li_SceneSplat_Gaussian_Splatting-based_Scene_Understanding_with_Vision-Language_Pretraining_ICCV_2025_paper.pdf#page=3) · [PDF 4쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Li_SceneSplat_Gaussian_Splatting-based_Scene_Understanding_with_Vision-Language_Pretraining_ICCV_2025_paper.pdf#page=4)
 
 ## Evaluation Body Digest
 
@@ -21,22 +21,19 @@ PDF body evaluation/result cue (p. 6 (5.2. Label-free 3DGS Pretraining), p. 7 (F
 
 ## Evaluation Type and Scope
 
-- **Evaluation type:** `EMPIRICAL / REAL-ROBOT OR HARDWARE`.
-- **Target system/task:** 3D scene/object와 robot coordinate frame.
-- **Input boundary:** RGB-D, image set, point cloud, depth와 camera pose.
-- **Output/decision under evaluation:** point map, pose, scene graph, affordance 또는 query result.
-- **Primary target:** geometric accuracy, semantic consistency와 planning/manipulation utility.
+- **Evaluation type:** `BENCHMARK / DATASET`.
+- **평가 대상:** 가우시안 공간의 의미 분할과 개방 어휘 장면 이해를 비교하고 사전학습과 입력 표현의 영향을 확인했다. [PDF 6쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Li_SceneSplat_Gaussian_Splatting-based_Scene_Understanding_with_Vision-Language_Pretraining_ICCV_2025_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Li_SceneSplat_Gaussian_Splatting-based_Scene_Understanding_with_Vision-Language_Pretraining_ICCV_2025_paper.pdf#page=7) · [PDF 8쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Li_SceneSplat_Gaussian_Splatting-based_Scene_Understanding_with_Vision-Language_Pretraining_ICCV_2025_paper.pdf#page=8)
 - **Detected evaluation headings:** 3. SceneSplat Dataset (p. 3); 5. Experiments (p. 6); 5.3. Further Statistical Evaluation (p. 7).
 
 ## Experimental Matrix
 
 | Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
-| 5.2. Label-free 3DGS Pretraining | EMPIRICAL / REAL-ROBOT OR HARDWARE | Our method achieves a +0.1% improvement over supervised-only baselines on ScanNet20 and +0.5% on ScanNet200, while observing a performance drop on ScanNet++ primarily due ... | p. 6 (5.2. Label-free 3DGS Pretraining) |
-| Figure/Table caption | EMPIRICAL / REAL-ROBOT OR HARDWARE | Table 2. Zero-Shot 3D Semantic Segmentation on the Fine-Grained ScanNet++ (100 classes) [57], Matterport3D (160 classes) [2] and ScanNet200 (200 classes) [5] Benchmarks. We ... | p. 7 (Figure/Table caption) |
-| 5.1. Vision-Language Pretraining | EMPIRICAL / REAL-ROBOT OR HARDWARE | Notably, [21] uses 8.32× training scenes to achieve its best results, Zero-Shot Prediction Ground Truth Figure 3. | p. 6 (5.1. Vision-Language Pretraining) |
-| Figure/Table caption | EMPIRICAL / REAL-ROBOT OR HARDWARE | Table 1. Dataset Statistics. The proposed SceneSplat-7K dataset includes various 3D Gaussian Splatting datasets generated from ScanNet [5], ScanNet++ [57], ScanNet++ v2, Replica[46], Hypersim[43], ... | p. 3 (Figure/Table caption) |
-| 5.3. Further Statistical Evaluation | EMPIRICAL / REAL-ROBOT OR HARDWARE | This encourages the careful curation of the collected 3DGS scene dataset. outperforms the labels with a 4.2% increase in f-mIoU. | p. 7 (5.3. Further Statistical Evaluation) |
+| 5.2. Label-free 3DGS Pretraining | BENCHMARK / DATASET | Our method achieves a +0.1% improvement over supervised-only baselines on ScanNet20 and +0.5% on ScanNet200, while observing a performance drop on ScanNet++ primarily due ... | p. 6 (5.2. Label-free 3DGS Pretraining) |
+| Figure/Table caption | BENCHMARK / DATASET | Table 2. Zero-Shot 3D Semantic Segmentation on the Fine-Grained ScanNet++ (100 classes) [57], Matterport3D (160 classes) [2] and ScanNet200 (200 classes) [5] Benchmarks. We ... | p. 7 (Figure/Table caption) |
+| 5.1. Vision-Language Pretraining | BENCHMARK / DATASET | Notably, [21] uses 8.32× training scenes to achieve its best results, Zero-Shot Prediction Ground Truth Figure 3. | p. 6 (5.1. Vision-Language Pretraining) |
+| Figure/Table caption | BENCHMARK / DATASET | Table 1. Dataset Statistics. The proposed SceneSplat-7K dataset includes various 3D Gaussian Splatting datasets generated from ScanNet [5], ScanNet++ [57], ScanNet++ v2, Replica[46], Hypersim[43], ... | p. 3 (Figure/Table caption) |
+| 5.3. Further Statistical Evaluation | BENCHMARK / DATASET | This encourages the careful curation of the collected 3DGS scene dataset. outperforms the labels with a 4.2% increase in f-mIoU. | p. 7 (5.3. Further Statistical Evaluation) |
 
 ## Dataset / Benchmark Role
 

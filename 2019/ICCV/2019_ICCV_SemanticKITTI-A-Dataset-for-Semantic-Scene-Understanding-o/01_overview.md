@@ -7,7 +7,8 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2019 / ICCV
-- Authors: Jens Behley, Martin Garbade, Andres Milioto, Jan Quenzel, Sven Behnke, Cyrill Stachniss, Jurgen Gall
+- Authors: Jens Behley, Martin Garbade, Andres Milioto, Jan Quenzel, Sven Behnke, Cyrill Stachniss, Juergen Gall
+- 저자 판본: ICCV 게재본에서 마지막 저자가 Juergen Gall로 인쇄된 것을 확인했다. CVF 웹 서지는 Jurgen Gall로 표기한다. [표제면](https://openaccess.thecvf.com/content_ICCV_2019/papers/Behley_SemanticKITTI_A_Dataset_for_Semantic_Scene_Understanding_of_LiDAR_Sequences_ICCV_2019_paper.pdf#page=1) · [학회 서지](https://openaccess.thecvf.com/content_ICCV_2019/html/Behley_SemanticKITTI_A_Dataset_for_Semantic_Scene_Understanding_of_LiDAR_Sequences_ICCV_2019_paper.html)
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
 - Tags: 3D Vision, LiDAR, semantic, Dataset
@@ -16,14 +17,13 @@
 - Code/Project: http://semantic-kitti.org/
 - Paper type: benchmark_or_dataset
 - Source audit: full-text PDF body checked on 2026-09-03 (17 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다. [본문](https://openaccess.thecvf.com/content_ICCV_2019/papers/Behley_SemanticKITTI_A_Dataset_for_Semantic_Scene_Understanding_of_LiDAR_Sequences_ICCV_2019_paper.pdf)
 
 > DOC-QA2 targeted source review: 2026-10-23; PDF pp. 6. 손상 구간·직접 연결된 표 분류만 원문 이미지와 대조했다. 전체 주장 정독·실험 검증·reading status 승격을 뜻하지 않는다. [URL·PDF hash·수정 기록](../../../work/sources/pdf_note_review_followup_2026-10-23.json).
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Complementary sensor modalities enable to cope with deficits or failures of particular sensors.
-
-방법 관련 발췌 — In summary, our main contributions are: • We present a point-wise annotated dataset of point cloud sequences with an unprecedented number of classes and unseen level-of-detail for each scan. • We furthermore ...
+SemanticKITTI는 KITTI 주행 시퀀스의 360도 LiDAR 스캔에 점별 의미를 부여해 시간적 장면 이해를 평가한다. [PDF 1쪽](https://openaccess.thecvf.com/content_ICCV_2019/papers/Behley_SemanticKITTI_A_Dataset_for_Semantic_Scene_Understanding_of_LiDAR_Sequences_ICCV_2019_paper.pdf#page=1) · [PDF 2쪽](https://openaccess.thecvf.com/content_ICCV_2019/papers/Behley_SemanticKITTI_A_Dataset_for_Semantic_Scene_Understanding_of_LiDAR_Sequences_ICCV_2019_paper.pdf#page=2)
 
 ## Problem and Motivation
 
@@ -54,26 +54,12 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** In summary, our main contributions are: • We present a point-wise annotated dataset of point cloud sequences with an unprecedented number of classes and unseen ...
-- **p. 2 / 1. Introduction - extractive body cue:** To close this gap we propose SemanticKITTI, a large dataset showing unprecedented detail in point-wise annotation with 28 classes, which is suited for various tasks.
-- **p. 1 / 1. Introduction - extractive body cue:** They mainly fulfill three purposes: (i) they provide a basis to measure progress, since they allow to provide results that are reproducible and comparable, (ii) ...
-- **p. 6 / 4.2. Multiple Scan Experiments - extractive body cue:** In this task, we allow methods to exploit information from a sequence of multiple past scans to improve the segmentation of the current scan.
-- **p. 8 / 5. Evaluation of Semantic Scene Completion - extractive body cue:** This has minimal impact on the performance, but significantly speeds up the training time due to faster preprocessing [18].
-- **p. 8 / 5. Evaluation of Semantic Scene Completion - extractive body cue:** However, the usage of the best semantic segmentation directly working on the point cloud slightly outperforms SSCNet on semantic scene completion (TS3D + DarkNet53Seg).
-- **p. 4 / 3.1. Labeling Process - extractive body cue:** We provided regular feedback to the annotators to improve the quality and accuracy of labels.
-- **p. 4 / 4.1. Single Scan Experiments - extractive body cue:** To assess the labeling performance, we rely on the commonly applied mean Jaccard Index or mean intersectionover-union (mIoU) metric [15] over all classes, given by ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 전체 주행 시퀀스의 점군에 의미와 물체 운동 상태를 주석하고 범주별 빈도와 가시성의 차이를 정리했다. [PDF 2쪽](https://openaccess.thecvf.com/content_ICCV_2019/papers/Behley_SemanticKITTI_A_Dataset_for_Semantic_Scene_Understanding_of_LiDAR_Sequences_ICCV_2019_paper.pdf#page=2) · [PDF 3쪽](https://openaccess.thecvf.com/content_ICCV_2019/papers/Behley_SemanticKITTI_A_Dataset_for_Semantic_Scene_Understanding_of_LiDAR_Sequences_ICCV_2019_paper.pdf#page=3) · [PDF 4쪽](https://openaccess.thecvf.com/content_ICCV_2019/papers/Behley_SemanticKITTI_A_Dataset_for_Semantic_Scene_Understanding_of_LiDAR_Sequences_ICCV_2019_paper.pdf#page=4)
+- 단일 스캔 분할, 여러 과거 스캔을 이용한 분할과 의미 장면 완성을 서로 다른 과제로 정의하고 기준선을 제공했다. [PDF 5쪽](https://openaccess.thecvf.com/content_ICCV_2019/papers/Behley_SemanticKITTI_A_Dataset_for_Semantic_Scene_Understanding_of_LiDAR_Sequences_ICCV_2019_paper.pdf#page=5) · [PDF 6쪽](https://openaccess.thecvf.com/content_ICCV_2019/papers/Behley_SemanticKITTI_A_Dataset_for_Semantic_Scene_Understanding_of_LiDAR_Sequences_ICCV_2019_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content_ICCV_2019/papers/Behley_SemanticKITTI_A_Dataset_for_Semantic_Scene_Understanding_of_LiDAR_Sequences_ICCV_2019_paper.pdf#page=7)
 
 ## Evaluation Scope
 
-| Dimension | Body-grounded record | Boundary | Anchor |
-|---|---|---|---|
-| Evaluation type | BENCHMARK / DATASET | do not infer unreported downstream behavior | p. 6 (4.2. Multiple Scan Experiments), p. 8 (5. Evaluation of Semantic Scene Completion) |
-| Embodiment/environment | The dataset is publicly available through a benchmark website and we provide only the training set with ground truth labels and perform the test set evaluation online. | hardware/simulator version and reset protocol | p. 3 (3. The SemanticKITTI Dataset), p. 3 (3. The SemanticKITTI Dataset) |
-| Dataset/benchmark | However, a dataset combining the scale of a synthetic dataset and usage of real-world data is still missing. | role, split, size and leakage | p. 3 (3. The SemanticKITTI Dataset), p. 3 (3. The SemanticKITTI Dataset), p. 7 (5. Evaluation of Semantic Scene Completion), p. 7 (5. Evaluation of Semantic Scene Completion) |
-| Metric | [49] and compute the IoU for the task of scene completion, which only classifies a voxel as being occupied or empty, i.e., ignoring the semantic label, as well as mIoU (1) for ... | definition, denominator, direction and uncertainty | p. 7 (5. Evaluation of Semantic Scene Completion), p. 8 (5. Evaluation of Semantic Scene Completion), p. 6 (Figure/Table caption) |
-| Baseline/ablation | However, the usage of the best semantic segmentation directly working on the point cloud slightly outperforms SSCNet on semantic scene completion (TS3D + DarkNet53Seg). | fair input/data/compute/action matching | p. 8 (5. Evaluation of Semantic Scene Completion), p. 8 (5. Evaluation of Semantic Scene Completion), p. 4 (3.1. Labeling Process) |
+SemanticKITTI는 28개 범주에 주석을 붙였다. 표 2의 단일 스캔 분할은 19개 평가 범주를 사용하고 00~10번 가운데 08번을 검증에, 11~21번을 시험에 쓴다. [PDF 2쪽](https://openaccess.thecvf.com/content_ICCV_2019/papers/Behley_SemanticKITTI_A_Dataset_for_Semantic_Scene_Understanding_of_LiDAR_Sequences_ICCV_2019_paper.pdf#page=2) · [PDF 5쪽](https://openaccess.thecvf.com/content_ICCV_2019/papers/Behley_SemanticKITTI_A_Dataset_for_Semantic_Scene_Understanding_of_LiDAR_Sequences_ICCV_2019_paper.pdf#page=5) · [PDF 6쪽](https://openaccess.thecvf.com/content_ICCV_2019/papers/Behley_SemanticKITTI_A_Dataset_for_Semantic_Scene_Understanding_of_LiDAR_Sequences_ICCV_2019_paper.pdf#page=6)
 
 ## Explicit Limitations and Failure Boundary
 

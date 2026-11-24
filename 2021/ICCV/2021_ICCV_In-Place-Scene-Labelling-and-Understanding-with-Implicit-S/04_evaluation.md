@@ -6,7 +6,7 @@
 
 ## Evaluation in One Sentence
 
-PDF body evaluation/result cue (p. 8 (4.4. Semantic Fusion), p. 4 (4.2. Semantic Neural Radiance Fields), p. 7 (4.4. Semantic Fusion), p. 8 (4.4. Semantic Fusion), p. 5 (4.4. Semantic Fusion), p. 5 (4.4. Semantic Fusion)): Our method achieves the highest improvement across all metrics, showing the effectiveness of our joint representation in label fusion.
+희소하거나 잡음이 있는 주석, 저해상도 라벨 등의 조건에서 의미 정보의 전파와 복원 품질을 실험했다. [PDF 5쪽](https://openaccess.thecvf.com/content/ICCV2021/papers/Zhi_In-Place_Scene_Labelling_and_Understanding_With_Implicit_Scene_Representation_ICCV_2021_paper.pdf#page=5) · [PDF 6쪽](https://openaccess.thecvf.com/content/ICCV2021/papers/Zhi_In-Place_Scene_Labelling_and_Understanding_With_Implicit_Scene_Representation_ICCV_2021_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content/ICCV2021/papers/Zhi_In-Place_Scene_Labelling_and_Understanding_With_Implicit_Scene_Representation_ICCV_2021_paper.pdf#page=7)
 
 ## Evaluation Body Digest
 
@@ -21,22 +21,18 @@ PDF body evaluation/result cue (p. 8 (4.4. Semantic Fusion), p. 4 (4.2. Semantic
 
 ## Evaluation Type and Scope
 
-- **Evaluation type:** `EMPIRICAL / REAL-ROBOT OR HARDWARE`.
-- **Target system/task:** 3D scene/object와 robot coordinate frame.
-- **Input boundary:** RGB-D, image set, point cloud, depth와 camera pose.
-- **Output/decision under evaluation:** point map, pose, scene graph, affordance 또는 query result.
-- **Primary target:** geometric accuracy, semantic consistency와 planning/manipulation utility.
+- **Evaluation type:** `BENCHMARK / DATASET`.
 - **Detected evaluation headings:** 3.4. Implementation (p. 3); 4. Experiments and Applications (p. 4); 4.1. Indoor Scene Datasets and Data Preparation (p. 4).
 
 ## Experimental Matrix
 
 | Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
-| 4.4. Semantic Fusion | EMPIRICAL / REAL-ROBOT OR HARDWARE | Our method achieves the highest improvement across all metrics, showing the effectiveness of our joint representation in label fusion. | p. 8 (4.4. Semantic Fusion) |
-| 4.2. Semantic Neural Radiance Fields | EMPIRICAL / REAL-ROBOT OR HARDWARE | Note that we might expect that significant high quality semantic labelling information could feasibly improve reconstruction quality, but in this paper we are focused ... | p. 4 (4.2. Semantic Neural Radiance Fields) |
-| 4.4. Semantic Fusion | EMPIRICAL / REAL-ROBOT OR HARDWARE | Object boundaries are gradually refined when more supervision is available and the incremental improvements from more labels tend to saturate. | p. 7 (4.4. Semantic Fusion) |
-| 4.4. Semantic Fusion | EMPIRICAL / REAL-ROBOT OR HARDWARE | Accurate labels can be achieved even from single-clicks, which are zoomed-in 9 times for visualisation purposes. | p. 8 (4.4. Semantic Fusion) |
-| 4.4. Semantic Fusion | EMPIRICAL / REAL-ROBOT OR HARDWARE | Results with only two labelled key-frames (⋆) show remarkably competitive performance. we re-render the semantic labels from the learned representation back to input training ... | p. 5 (4.4. Semantic Fusion) |
+| 4.4. Semantic Fusion | BENCHMARK / DATASET | Our method achieves the highest improvement across all metrics, showing the effectiveness of our joint representation in label fusion. | p. 8 (4.4. Semantic Fusion) |
+| 4.2. Semantic Neural Radiance Fields | BENCHMARK / DATASET | Note that we might expect that significant high quality semantic labelling information could feasibly improve reconstruction quality, but in this paper we are focused ... | p. 4 (4.2. Semantic Neural Radiance Fields) |
+| 4.4. Semantic Fusion | BENCHMARK / DATASET | Object boundaries are gradually refined when more supervision is available and the incremental improvements from more labels tend to saturate. | p. 7 (4.4. Semantic Fusion) |
+| 4.4. Semantic Fusion | BENCHMARK / DATASET | Accurate labels can be achieved even from single-clicks, which are zoomed-in 9 times for visualisation purposes. | p. 8 (4.4. Semantic Fusion) |
+| 4.4. Semantic Fusion | BENCHMARK / DATASET | Results with only two labelled key-frames (⋆) show remarkably competitive performance. we re-render the semantic labels from the learned representation back to input training ... | p. 5 (4.4. Semantic Fusion) |
 
 ## Dataset / Benchmark Role
 

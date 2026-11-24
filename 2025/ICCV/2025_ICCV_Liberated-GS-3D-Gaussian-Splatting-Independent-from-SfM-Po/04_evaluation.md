@@ -6,7 +6,7 @@
 
 ## Evaluation in One Sentence
 
-PDF body evaluation/result cue (p. 6 (4.2. Comparison), p. 7 (4.2. Comparison), p. 6 (4.2. Comparison), p. 8 (4.3. Ablation Study), p. 8 (4.3. Ablation Study), p. 4 (Figure/Table caption)): Our method demonstrates substantial improvements across all three metrics compared to all other methods, even outperforming 3DGS initialized with SfM point clouds.
+Mip-NeRF360과 Tanks and Temples 등에서 SfM 점을 쓴 초기화와 새 시점 화질을 비교하고 깊이 정렬의 효과를 평가했다. [PDF 6쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Pan_Liberated-GS_3D_Gaussian_Splatting_Independent_from_SfM_Point_Clouds_ICCV_2025_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Pan_Liberated-GS_3D_Gaussian_Splatting_Independent_from_SfM_Point_Clouds_ICCV_2025_paper.pdf#page=7) · [PDF 8쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Pan_Liberated-GS_3D_Gaussian_Splatting_Independent_from_SfM_Point_Clouds_ICCV_2025_paper.pdf#page=8)
 
 ## Evaluation Body Digest
 
@@ -21,22 +21,18 @@ PDF body evaluation/result cue (p. 6 (4.2. Comparison), p. 7 (4.2. Comparison), 
 
 ## Evaluation Type and Scope
 
-- **Evaluation type:** `EMPIRICAL / REAL-ROBOT OR HARDWARE`.
-- **Target system/task:** 3D scene/object와 robot coordinate frame.
-- **Input boundary:** RGB-D, image set, point cloud, depth와 camera pose.
-- **Output/decision under evaluation:** point map, pose, scene graph, affordance 또는 query result.
-- **Primary target:** geometric accuracy, semantic consistency와 planning/manipulation utility.
+- **Evaluation type:** `BENCHMARK / DATASET`.
 - **Detected evaluation headings:** 4. Experiments (p. 6); 4.1. Experimental Setup (p. 6).
 
 ## Experimental Matrix
 
 | Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
-| 4.2. Comparison | EMPIRICAL / REAL-ROBOT OR HARDWARE | Our method demonstrates substantial improvements across all three metrics compared to all other methods, even outperforming 3DGS initialized with SfM point clouds. | p. 6 (4.2. Comparison) |
-| 4.2. Comparison | EMPIRICAL / REAL-ROBOT OR HARDWARE | Our method significantly outperforms other methods, producing visually reliable results with sharper details. | p. 7 (4.2. Comparison) |
-| 4.2. Comparison | EMPIRICAL / REAL-ROBOT OR HARDWARE | This quantitatively validates that our approach achieves superior rendering and geometry results even without additional high-quality point clouds. | p. 6 (4.2. Comparison) |
-| 4.3. Ablation Study | EMPIRICAL / REAL-ROBOT OR HARDWARE | The results demonstrate that separate affine transformation provides a depth prior that is more consistent with the scene scale, while the ensembled depth yields ... | p. 8 (4.3. Ablation Study) |
-| 4.3. Ablation Study | EMPIRICAL / REAL-ROBOT OR HARDWARE | As shown in the second row, depth alignment enhances scene geometry and visual details by leveraging a more accurate depth prior, resulting in a ... | p. 8 (4.3. Ablation Study) |
+| 4.2. Comparison | BENCHMARK / DATASET | Our method demonstrates substantial improvements across all three metrics compared to all other methods, even outperforming 3DGS initialized with SfM point clouds. | p. 6 (4.2. Comparison) |
+| 4.2. Comparison | BENCHMARK / DATASET | Our method significantly outperforms other methods, producing visually reliable results with sharper details. | p. 7 (4.2. Comparison) |
+| 4.2. Comparison | BENCHMARK / DATASET | This quantitatively validates that our approach achieves superior rendering and geometry results even without additional high-quality point clouds. | p. 6 (4.2. Comparison) |
+| 4.3. Ablation Study | BENCHMARK / DATASET | The results demonstrate that separate affine transformation provides a depth prior that is more consistent with the scene scale, while the ensembled depth yields ... | p. 8 (4.3. Ablation Study) |
+| 4.3. Ablation Study | BENCHMARK / DATASET | As shown in the second row, depth alignment enhances scene geometry and visual details by leveraging a more accurate depth prior, resulting in a ... | p. 8 (4.3. Ablation Study) |
 
 ## Dataset / Benchmark Role
 

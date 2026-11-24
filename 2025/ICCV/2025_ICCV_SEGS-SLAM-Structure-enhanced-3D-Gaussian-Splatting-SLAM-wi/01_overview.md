@@ -16,12 +16,11 @@
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다. [본문](https://openaccess.thecvf.com/content/ICCV2025/papers/Wen_SEGS-SLAM_Structure-enhanced_3D_Gaussian_Splatting_SLAM_with_Appearance_Embedding_ICCV_2025_paper.pdf)
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, AE has a notable limitation: its training involves each ground-truth image from the test set.
-
-방법 관련 발췌 — Second, we propose Appearancefrom-Motion embedding (AfME), which takes poses as input and eliminates the need for training on the left half of each ground-truth image in the test set.
+SEGS-SLAM은 구조화한 점군으로 초기 가우시안 지도를 만들고, 카메라 자세에 따른 외관 변화를 모델링해 SLAM 지도의 렌더링을 개선한다. [PDF 1쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Wen_SEGS-SLAM_Structure-enhanced_3D_Gaussian_Splatting_SLAM_with_Appearance_Embedding_ICCV_2025_paper.pdf#page=1) · [PDF 4쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Wen_SEGS-SLAM_Structure-enhanced_3D_Gaussian_Splatting_SLAM_with_Appearance_Embedding_ICCV_2025_paper.pdf#page=4)
 
 ## Problem and Motivation
 
@@ -55,16 +54,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** Second, we propose Appearancefrom-Motion embedding (AfME), which takes poses as input and eliminates the need for training on the left half of each ground-truth image ...
-- **p. 2 / 1. Introduction - extractive body cue:** Motivated by this, we propose a structure-enhanced photorealistic mapping (SEPM) framework, which initializes anchor points using ORB-SLAM3 [3] point cloud, significantly enhancing the utilization of ...
-- **p. 1 / Abstract - extractive body cue:** To address these problems, we propose SEGS-SLAM, a structure-enhanced 3D Gaussian Splatting SLAM, which achieves high-quality photorealistic mapping.
-- **p. 1 / Abstract - extractive body cue:** Second, we propose Appearance-from-Motion embedding (AfME), enabling 3D Gaussians to better model image appearance variations across different camera poses.
-- **p. 4 / 4. SEGS-SLAM - extractive body cue:** Visualization of the Photo-SLAM's 3D Gaussians and of our method's anchor points using only SEPM after 30k iterations.
-- **p. 7 / 5.2. Results Analysis - extractive body cue:** The best results are marked as best score , second best score and third best score . '-' denotes that the system does not provide ...
-- **p. 6 / 5.2. Results Analysis - extractive body cue:** 1, where SEGS-SLAM significantly outperforms comparison methods, achieving the highest average rendering quality on both TUM RGB-D and Replica datasets.
-- **p. 7 / 5.2. Results Analysis - extractive body cue:** Notably, SEGS-SLAM continues to significantly outperform comparison methods on the TUM RGB-D dataset.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 구조가 있는 점으로 가우시안을 초기화하고, 움직임에서 얻은 외관 임베딩으로 같은 기하에서도 뷰에 따라 달라지는 색을 표현한다. [PDF 4쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Wen_SEGS-SLAM_Structure-enhanced_3D_Gaussian_Splatting_SLAM_with_Appearance_Embedding_ICCV_2025_paper.pdf#page=4) · [PDF 5쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Wen_SEGS-SLAM_Structure-enhanced_3D_Gaussian_Splatting_SLAM_with_Appearance_Embedding_ICCV_2025_paper.pdf#page=5)
+- 단안·스테레오·RGB-D 설정에서 렌더링을 비교하고 지도 초기화와 외관 임베딩의 기여를 나눠 평가했다. [PDF 6쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Wen_SEGS-SLAM_Structure-enhanced_3D_Gaussian_Splatting_SLAM_with_Appearance_Embedding_ICCV_2025_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Wen_SEGS-SLAM_Structure-enhanced_3D_Gaussian_Splatting_SLAM_with_Appearance_Embedding_ICCV_2025_paper.pdf#page=7) · [PDF 8쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Wen_SEGS-SLAM_Structure-enhanced_3D_Gaussian_Splatting_SLAM_with_Appearance_Embedding_ICCV_2025_paper.pdf#page=8)
 
 ## Evaluation Scope
 

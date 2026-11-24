@@ -6,7 +6,7 @@
 
 ## Evaluation in One Sentence
 
-PDF body evaluation/result cue (p. 7 (4.4. Ablation study), p. 5 (4.3. Comparison to Prior Works), p. 5 (4.3. Comparison to Prior Works), p. 6 (4.4. Ablation study), p. 7 (4.4. Ablation study), p. 8 (4.4. Ablation study)): This mechanism achieves improvements of 4.5% on Nr3D and 1.8% on Sr3D.
+표 2·3에서 자체 점검을 포함한 방법의 정답 물체 식별 정확도는 Nr3D 60.8%, Sr3D 91.4%다. 두 값의 단위는 지시 표현에서 맞는 물체를 선택한 비율이다. [PDF 5쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Shi_Chain_of_Semantics_Programming_in_3D_Gaussian_Splatting_Representation_for_CVPR_2025_paper.pdf#page=5) · [PDF 6쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Shi_Chain_of_Semantics_Programming_in_3D_Gaussian_Splatting_Representation_for_CVPR_2025_paper.pdf#page=6)
 
 ## Evaluation Body Digest
 
@@ -22,10 +22,7 @@ PDF body evaluation/result cue (p. 7 (4.4. Ablation study), p. 5 (4.3. Compariso
 ## Evaluation Type and Scope
 
 - **Evaluation type:** `EMPIRICAL / SOURCE-REPORTED EVALUATION`.
-- **Target system/task:** 3D scene/object와 robot coordinate frame.
-- **Input boundary:** RGB-D, image set, point cloud, depth와 camera pose.
-- **Output/decision under evaluation:** point map, pose, scene graph, affordance 또는 query result.
-- **Primary target:** geometric accuracy, semantic consistency와 planning/manipulation utility.
+- **평가 대상:** Nr3D와 Sr3D에서 주석된 지시 대상의 식별 정확도를 비교하고 학습을 추가하지 않는 조건에서 공간 추론을 평가했다. [PDF 5쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Shi_Chain_of_Semantics_Programming_in_3D_Gaussian_Splatting_Representation_for_CVPR_2025_paper.pdf#page=5) · [PDF 6쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Shi_Chain_of_Semantics_Programming_in_3D_Gaussian_Splatting_Representation_for_CVPR_2025_paper.pdf#page=6)
 - **Detected evaluation headings:** 4. Experiments (p. 5); 4.1. Datasets (p. 5); 4.2. Evaluation Configuration (p. 5); 4.5. Qualitative results (p. 8).
 
 ## Experimental Matrix

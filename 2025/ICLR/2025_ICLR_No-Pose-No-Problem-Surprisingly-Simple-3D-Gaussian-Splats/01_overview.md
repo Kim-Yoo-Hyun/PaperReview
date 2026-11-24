@@ -16,12 +16,11 @@
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (25 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다. [본문](https://proceedings.iclr.cc/paper_files/paper/2025/file/857b34d81f0a8bfe3e18879dee3b5086-Paper-Conference.pdf)
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — The performance gap stems from their sequential process of alternating between pose estimation and scene reconstruction.
-
-방법 관련 발췌 — The main contributions of this work are: • We propose NoPoSplat, a feed-forward network that reconstructs 3D scenes parameterized by 3D Gaussians from unposed sparse-view inputs, and demonstrate that it can be ...
+NoPoSplat은 상대 자세를 모르는 소수 영상에서 한 입력 카메라를 기준 좌표계로 삼아 3D 가우시안을 직접 복원한다. [PDF 1쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/857b34d81f0a8bfe3e18879dee3b5086-Paper-Conference.pdf#page=1) · [PDF 4쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/857b34d81f0a8bfe3e18879dee3b5086-Paper-Conference.pdf#page=4)
 
 ## Problem and Motivation
 
@@ -55,16 +54,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 3 / 1 INTRODUCTION - extractive body cue:** The main contributions of this work are: • We propose NoPoSplat, a feed-forward network that reconstructs 3D scenes parameterized by 3D Gaussians from unposed sparse-view ...
-- **p. 3 / 1 INTRODUCTION - extractive body cue:** Since our method does not require camera poses for input images, it can be applied to user-provided images to reconstruct the underlying 3D scene and ...
-- **p. 4 / 3 METHOD - extractive body cue:** By training on large-scale datasets, our method can generalize to novel scenes without any optimization.
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** For pose estimation, we introduce a two-stage pipeline: first, we obtain an initial pose estimate by applying the PnP algorithm (Hartley & Zisserman, 2003) to ...
-- **p. 4 / 3 METHOD - extractive body cue:** 3.2 PIPELINE Our method, illustrated in Fig.
-- **p. 7 / 4 EXPERIMENTS - extractive body cue:** On the other hand, we achieve competitive performance over SOTA pose-required methods (Charatan et al., 2024; Chen et al., 2024), and even outperform them when ...
-- **p. 10 / 4 EXPERIMENTS - extractive body cue:** 13, the performance significantly improves with the inclusion of the additional view.
-- **p. 7 / 4 EXPERIMENTS - extractive body cue:** 4, NoPoSplat significantly outperforms all SOTA pose-free approaches.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 카메라 내부 파라미터를 토큰으로 넣고 각 뷰의 가우시안을 기준 카메라 좌표계에서 예측하도록 광도 오차로 학습한다. [PDF 4쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/857b34d81f0a8bfe3e18879dee3b5086-Paper-Conference.pdf#page=4) · [PDF 5쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/857b34d81f0a8bfe3e18879dee3b5086-Paper-Conference.pdf#page=5)
+- 예측한 장면을 이용한 새 시점 렌더링과 두 단계의 자세 추정을 별도로 평가하고 입력 영상 간 겹침에 따른 성능을 비교했다. [PDF 6쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/857b34d81f0a8bfe3e18879dee3b5086-Paper-Conference.pdf#page=6) · [PDF 7쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/857b34d81f0a8bfe3e18879dee3b5086-Paper-Conference.pdf#page=7) · [PDF 9쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/857b34d81f0a8bfe3e18879dee3b5086-Paper-Conference.pdf#page=9)
 
 ## Evaluation Scope
 

@@ -6,7 +6,7 @@
 
 ## Evaluation in One Sentence
 
-PDF body evaluation/result cue (p. 7 (5.1. 3D Object Classification), p. 20 (Figure/Table caption), p. 2 (Dataset), p. 3 (3.1. RGB-D Scanning), p. 7 (5.1. 3D Object Classification), p. 8 (5.2. Semantic Voxel Labeling)): On the other hand, training on ScanNet translates well to testing on SceneNN; as a result, the test results on SceneNN are significantly improved by using the training data from ...
+원 논문에 보고된 규모는 서로 다른 실내 공간 707곳, RGB-D 스캔 1,513회, 영상 약 250만 장이다. 표 3의 물체 분류·복셀 라벨링 분할은 전체 수집 규모와 구분한다. [PDF 1쪽](https://openaccess.thecvf.com/content_cvpr_2017/papers/Dai_ScanNet_Richly-Annotated_3D_CVPR_2017_paper.pdf#page=1) · [PDF 2쪽](https://openaccess.thecvf.com/content_cvpr_2017/papers/Dai_ScanNet_Richly-Annotated_3D_CVPR_2017_paper.pdf#page=2) · [PDF 6쪽](https://openaccess.thecvf.com/content_cvpr_2017/papers/Dai_ScanNet_Richly-Annotated_3D_CVPR_2017_paper.pdf#page=6)
 
 ## Evaluation Body Digest
 
@@ -22,10 +22,7 @@ PDF body evaluation/result cue (p. 7 (5.1. 3D Object Classification), p. 20 (Fig
 ## Evaluation Type and Scope
 
 - **Evaluation type:** `BENCHMARK / DATASET`.
-- **Target system/task:** defined robot simulator/hardware task suite.
-- **Input boundary:** standardized observation, action, task state와 evaluation split.
-- **Output/decision under evaluation:** policy/controller trajectory 또는 measured result.
-- **Primary target:** success metric, robustness, generalization과 reproducibility.
+- **평가 대상:** 같은 자료에서 3차원 물체 분류, 복셀 의미 라벨링과 CAD 검색의 과제 및 기준선 결과를 제시했다. [PDF 6쪽](https://openaccess.thecvf.com/content_cvpr_2017/papers/Dai_ScanNet_Richly-Annotated_3D_CVPR_2017_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content_cvpr_2017/papers/Dai_ScanNet_Richly-Annotated_3D_CVPR_2017_paper.pdf#page=7) · [PDF 8쪽](https://openaccess.thecvf.com/content_cvpr_2017/papers/Dai_ScanNet_Richly-Annotated_3D_CVPR_2017_paper.pdf#page=8)
 - **Detected evaluation headings:** Dataset (p. 2); 3. Dataset Acquisition Framework (p. 3); 4. ScanNet Dataset (p. 5); 5. Tasks and Benchmarks (p. 6).
 
 ## Experimental Matrix

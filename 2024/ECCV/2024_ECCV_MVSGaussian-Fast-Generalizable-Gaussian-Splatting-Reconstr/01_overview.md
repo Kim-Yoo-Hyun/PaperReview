@@ -16,12 +16,11 @@
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (17 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다. [본문](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/02662.pdf)
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Due to the inefficiency of existing methods and their limitation to objectcentric reconstruction, in this paper, we aim to develop an efficient generalizable Gaussian Splatting framework for novel view synthesis in unseen ...
-
-방법 관련 발췌 — Liu et al. - We present MVSGaussian, a generalizable Gaussian Splatting method derived from Multi-View Stereo and a pixel-aligned Gaussian representation. - We further propose an efficient hybrid Gaussian rendering approach to ...
+MVSGaussian은 다중 뷰 스테레오로 얻은 기하 특징에서 가우시안을 예측해 새 장면을 렌더링하고 장면별 추가 최적화도 지원한다. [PDF 1쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/02662.pdf#page=1) · [PDF 6쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/02662.pdf#page=6)
 
 ## Problem and Motivation
 
@@ -55,16 +54,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 4 / 1 Introduction - extractive body cue:** Liu et al. - We present MVSGaussian, a generalizable Gaussian Splatting method derived from Multi-View Stereo and a pixel-aligned Gaussian representation. - We further propose ...
-- **p. 2 / 1 Introduction - extractive body cue:** Our method achieves optimal performance in just 45 seconds.
-- **p. 2 / 1 Introduction - extractive body cue:** (a) We present the generalizable results on the Real Forward-facing dataset [28].
-- **p. 1 / body section not recovered - extractive body cue:** 2) To further enhance performance, we propose a hybrid Gaussian rendering that integrates an efficient volume rendering design for novel view synthesis.
-- **p. 3 / 1 Introduction - extractive body cue:** Therefore, we introduce a strategy to aggregate point clouds by preserving multi-view geometric consistency.
-- **p. 13 / Figure/Table caption - extractive body cue:** Fig. 5: Qualitative comparison of rendering quality with state-of-the-art methods [6, 19, 22] after per-scene optimization. by the generalizable model and the effective aggregation strategy, ...
-- **p. 12 / 5 Experiments - extractive body cue:** When optimizing the entire pipeline, our method can achieve better performance with faster inference speeds compared to previous generalizable NeRF methods, and results comparable to ...
-- **p. 12 / 5 Experiments - extractive body cue:** In contrast, optimizing only the Gaussians can significantly improve optimization and rendering speed because it eliminates the time-consuming feed-forward neural network.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 스테레오 특징에서 가우시안 파라미터를 복원하고 볼륨 렌더링과 가우시안 렌더링을 결합한다. [PDF 5쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/02662.pdf#page=5) · [PDF 6쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/02662.pdf#page=6) · [PDF 7쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/02662.pdf#page=7)
+- 여러 뷰에서 기하가 일치하는 예측 점을 모아 장면별 미세조정을 초기화하고, 학습 밖 장면의 순전파 결과와 추가 최적화 결과를 비교했다. [PDF 8쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/02662.pdf#page=8) · [PDF 10쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/02662.pdf#page=10) · [PDF 14쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/02662.pdf#page=14)
 
 ## Evaluation Scope
 

@@ -6,7 +6,7 @@
 
 ## Evaluation in One Sentence
 
-PDF body evaluation/result cue (p. 6 (4.1. Evaluation on 3D Gaussians), p. 6 (4.1. Evaluation on 3D Gaussians), p. 5 (4. Experiments), p. 5 (4.1. Evaluation on 3D Gaussians), p. 7 (4.4. Ablations), p. 7 (4.4. Ablations)): From the results, we can see that: • When training/testing on ARKitScenes, ScanNet/ ScanNet++ datasets in domain, our method achieves the best accuracy, outperforming the second best method RayDF by ...
+점군과 가우시안을 입력으로 한 복원을 따로 평가하고 학습에 없었던 데이터셋에서 별도 장면 최적화 없이 표면을 추출했다. [PDF 5쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Wei_RayletDF_Raylet_Distance_Fields_for_Generalizable_3D_Surface_Reconstruction_from_ICCV_2025_paper.pdf#page=5) · [PDF 6쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Wei_RayletDF_Raylet_Distance_Fields_for_Generalizable_3D_Surface_Reconstruction_from_ICCV_2025_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Wei_RayletDF_Raylet_Distance_Fields_for_Generalizable_3D_Surface_Reconstruction_from_ICCV_2025_paper.pdf#page=7)
 
 ## Evaluation Body Digest
 
@@ -21,22 +21,18 @@ PDF body evaluation/result cue (p. 6 (4.1. Evaluation on 3D Gaussians), p. 6 (4.
 
 ## Evaluation Type and Scope
 
-- **Evaluation type:** `EMPIRICAL / REAL-ROBOT OR HARDWARE`.
-- **Target system/task:** 3D scene/object와 robot coordinate frame.
-- **Input boundary:** RGB-D, image set, point cloud, depth와 camera pose.
-- **Output/decision under evaluation:** point map, pose, scene graph, affordance 또는 query result.
-- **Primary target:** geometric accuracy, semantic consistency와 planning/manipulation utility.
+- **Evaluation type:** `BENCHMARK / DATASET`.
 - **Detected evaluation headings:** 4. Experiments (p. 5); 4.1. Evaluation on 3D Gaussians (p. 5); 4.2. Evaluation on Point Clouds (p. 6); 4.3. Evaluation on Raylet Sampling in Testing (p. 6).
 
 ## Experimental Matrix
 
 | Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
-| 4.1. Evaluation on 3D Gaussians | EMPIRICAL / REAL-ROBOT OR HARDWARE | From the results, we can see that: • When training/testing on ARKitScenes, ScanNet/ ScanNet++ datasets in domain, our method achieves the best accuracy, outperforming ... | p. 6 (4.1. Evaluation on 3D Gaussians) |
-| 4.1. Evaluation on 3D Gaussians | EMPIRICAL / REAL-ROBOT OR HARDWARE | Essentially, this is because our learned raylet distance representations capture the local surface geometric patterns which tend to be generalizable at various scenes. • ... | p. 6 (4.1. Evaluation on 3D Gaussians) |
-| 4. Experiments | EMPIRICAL / REAL-ROBOT OR HARDWARE | In addition, we also evaluate the reconstructed 3D meshes, reporting Accuracy, Completion, Precision, Recall, Chamfer-L1 distance, Normal Consistency, and F-scores with a threshold of ... | p. 5 (4. Experiments) |
-| 4.1. Evaluation on 3D Gaussians | EMPIRICAL / REAL-ROBOT OR HARDWARE | Results & Analysis: Table 1 compares the quantitative results of all methods for estimating distance values of all query rays from test views. | p. 5 (4.1. Evaluation on 3D Gaussians) |
-| 4.4. Ablations | EMPIRICAL / REAL-ROBOT OR HARDWARE | Results of all ablated models on ScanNet/ScanNet++. | p. 7 (4.4. Ablations) |
+| 4.1. Evaluation on 3D Gaussians | BENCHMARK / DATASET | From the results, we can see that: • When training/testing on ARKitScenes, ScanNet/ ScanNet++ datasets in domain, our method achieves the best accuracy, outperforming ... | p. 6 (4.1. Evaluation on 3D Gaussians) |
+| 4.1. Evaluation on 3D Gaussians | BENCHMARK / DATASET | Essentially, this is because our learned raylet distance representations capture the local surface geometric patterns which tend to be generalizable at various scenes. • ... | p. 6 (4.1. Evaluation on 3D Gaussians) |
+| 4. Experiments | BENCHMARK / DATASET | In addition, we also evaluate the reconstructed 3D meshes, reporting Accuracy, Completion, Precision, Recall, Chamfer-L1 distance, Normal Consistency, and F-scores with a threshold of ... | p. 5 (4. Experiments) |
+| 4.1. Evaluation on 3D Gaussians | BENCHMARK / DATASET | Results & Analysis: Table 1 compares the quantitative results of all methods for estimating distance values of all query rays from test views. | p. 5 (4.1. Evaluation on 3D Gaussians) |
+| 4.4. Ablations | BENCHMARK / DATASET | Results of all ablated models on ScanNet/ScanNet++. | p. 7 (4.4. Ablations) |
 
 ## Dataset / Benchmark Role
 

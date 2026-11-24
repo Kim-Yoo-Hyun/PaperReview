@@ -6,7 +6,7 @@
 
 ## Evaluation in One Sentence
 
-PDF body evaluation/result cue (p. 6 (4.2. Results), p. 8 (4.3. Ablation Studies), p. 8 (4.3. Ablation Studies), p. 6 (4.2. Results), p. 5 (4.1. Experimental Setup), p. 7 (4.2. Results)): Nevertheless, as the number of input views increases (8/14/32), S2GS consistently improves and achieves strong performance in both reconstruction quality and temporal semantic/instance consistency, highlighting its effectiveness in prac ...
+스트리밍 효율 비교는 현재 뷰를 처리해 누적 상태를 갱신하는 프레임당 지연과 최대 GPU 메모리를 입력 길이별로 측정했다. 재구성·분할·인스턴스 추적의 정확도는 별도 지표로 평가했다. [PDF 6쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/zhang26fn/zhang26fn.pdf#page=6) · [PDF 7쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/zhang26fn/zhang26fn.pdf#page=7) · [PDF 8쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/zhang26fn/zhang26fn.pdf#page=8)
 
 ## Evaluation Body Digest
 
@@ -22,10 +22,7 @@ PDF body evaluation/result cue (p. 6 (4.2. Results), p. 8 (4.3. Ablation Studies
 ## Evaluation Type and Scope
 
 - **Evaluation type:** `EMPIRICAL / SOURCE-REPORTED EVALUATION`.
-- **Target system/task:** 3D scene/object와 robot coordinate frame.
-- **Input boundary:** RGB-D, image set, point cloud, depth와 camera pose.
-- **Output/decision under evaluation:** point map, pose, scene graph, affordance 또는 query result.
-- **Primary target:** geometric accuracy, semantic consistency와 planning/manipulation utility.
+- **평가 대상:** 복원과 분할을 함께 평가하고 입력 길이에 따른 메모리 사용량과 처리 시간을 오프라인 일괄 처리 모델과 비교했다. [PDF 6쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/zhang26fn/zhang26fn.pdf#page=6) · [PDF 7쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/zhang26fn/zhang26fn.pdf#page=7) · [PDF 8쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/zhang26fn/zhang26fn.pdf#page=8)
 - **Detected evaluation headings:** 4. Experiments (p. 5); 4.1. Experimental Setup (p. 5); 4.2. Results (p. 6).
 
 ## Experimental Matrix

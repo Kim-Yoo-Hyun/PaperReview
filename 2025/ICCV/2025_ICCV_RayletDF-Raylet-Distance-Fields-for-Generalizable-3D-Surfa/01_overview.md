@@ -16,12 +16,11 @@
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다. [본문](https://openaccess.thecvf.com/content/ICCV2025/papers/Wei_RayletDF_Raylet_Distance_Fields_for_Generalizable_3D_Surface_Reconstruction_from_ICCV_2025_paper.pdf)
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Nevertheless, due to the limitation of existing ray parametrizations such as Plucker and spherical coordinates, they are often limited to recovering object-level surfaces and require per-scene training, lacking the desired generalizabil ...
-
-방법 관련 발췌 — Our contributions are: • We propose a generic pipeline for explicit 3D surface reconstruction from either point clouds or 3D Gaussians. • We introduce a new raylet distance field followed by a ...
+RayletDF는 원시 점군이나 영상에서 얻은 3D 가우시안에 짧은 질의 광선을 놓고 광선과 물체 표면이 만나는 점을 예측한다. [PDF 1쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Wei_RayletDF_Raylet_Distance_Fields_for_Generalizable_3D_Surface_Reconstruction_from_ICCV_2025_paper.pdf#page=1) · [PDF 3쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Wei_RayletDF_Raylet_Distance_Fields_for_Generalizable_3D_Surface_Reconstruction_from_ICCV_2025_paper.pdf#page=3)
 
 ## Problem and Motivation
 
@@ -52,22 +51,14 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** Our contributions are: • We propose a generic pipeline for explicit 3D surface reconstruction from either point clouds or 3D Gaussians. • We introduce a ...
-- **p. 1 / 1. Introduction - extractive body cue:** In this paper, we present a generalizable 3D surface representation pipeline to accurately recover 3D geometry.
-- **p. 4 / 3.5. Sampling Raylets for Training and Test - extractive body cue:** If the input 3D scene P is a set of 3D Gaussians recovered by 3DGS [30] from RGBs, we follow the technique [31, 74] to ...
-- **p. 6 / 4.1. Evaluation on 3D Gaussians - extractive body cue:** From the results, we can see that: • When training/testing on ARKitScenes, ScanNet/ ScanNet++ datasets in domain, our method achieves the best accuracy, outperforming the ...
-- **p. 6 / 4.1. Evaluation on 3D Gaussians - extractive body cue:** Essentially, this is because our learned raylet distance representations capture the local surface geometric patterns which tend to be generalizable at various scenes. • The ...
-- **p. 5 / 4. Experiments - extractive body cue:** In addition, we also evaluate the reconstructed 3D meshes, reporting Accuracy, Completion, Precision, Recall, Chamfer-L1 distance, Normal Consistency, and F-scores with a threshold of 5cm.
-- **p. 5 / 4.1. Evaluation on 3D Gaussians - extractive body cue:** Results & Analysis: Table 1 compares the quantitative results of all methods for estimating distance values of all query rays from test views.
-- **p. 7 / 4.4. Ablations - extractive body cue:** Results of all ablated models on ScanNet/ScanNet++.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 광선 주변의 특징으로 표면까지의 거리를 회귀하고 여러 광선의 예측을 결합해 국소 표면을 복원한다. [PDF 3쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Wei_RayletDF_Raylet_Distance_Fields_for_Generalizable_3D_Surface_Reconstruction_from_ICCV_2025_paper.pdf#page=3) · [PDF 4쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Wei_RayletDF_Raylet_Distance_Fields_for_Generalizable_3D_Surface_Reconstruction_from_ICCV_2025_paper.pdf#page=4) · [PDF 5쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Wei_RayletDF_Raylet_Distance_Fields_for_Generalizable_3D_Surface_Reconstruction_from_ICCV_2025_paper.pdf#page=5)
+- 점군과 가우시안을 입력으로 한 복원을 따로 평가하고 학습에 없었던 데이터셋에서 별도 장면 최적화 없이 표면을 추출했다. [PDF 5쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Wei_RayletDF_Raylet_Distance_Fields_for_Generalizable_3D_Surface_Reconstruction_from_ICCV_2025_paper.pdf#page=5) · [PDF 6쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Wei_RayletDF_Raylet_Distance_Fields_for_Generalizable_3D_Surface_Reconstruction_from_ICCV_2025_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Wei_RayletDF_Raylet_Distance_Fields_for_Generalizable_3D_Surface_Reconstruction_from_ICCV_2025_paper.pdf#page=7)
 
 ## Evaluation Scope
 
 | Dimension | Body-grounded record | Boundary | Anchor |
 |---|---|---|---|
-| Evaluation type | EMPIRICAL / REAL-ROBOT OR HARDWARE | do not infer unreported downstream behavior | p. 6 (4.1. Evaluation on 3D Gaussians), p. 6 (4.1. Evaluation on 3D Gaussians) |
+| Evaluation type | BENCHMARK / DATASET | do not infer unreported downstream behavior | p. 6 (4.1. Evaluation on 3D Gaussians), p. 6 (4.1. Evaluation on 3D Gaussians) |
 | Embodiment/environment | Datasets: Our method is evaluated on four real-world datasets based on the available train/test splits: 1) ScanNet [16] consisting of 1201 and 100 scenes for training and test; 2) ScanNet++ [71] comprising ... | hardware/simulator version and reset protocol | p. 5 (4. Experiments), p. 6 (4.3. Evaluation on Raylet Sampling in Testing) |
 | Dataset/benchmark | For example, when trained on ARKitScenes or ScanNet/ScanNet++, our method achieves {0.067, 0.130} meters in ADE on the novel MultiScan dataset respectively, while the baselines often have more than 0.20 meters errors. | role, split, size and leakage | p. 5 (4. Experiments), p. 6 (4.3. Evaluation on Raylet Sampling in Testing), p. 6 (4.2. Evaluation on Point Clouds), p. 7 (4.3. Evaluation on Raylet Sampling in Testing) |
 | Metric | In addition, we also evaluate the reconstructed 3D meshes, reporting Accuracy, Completion, Precision, Recall, Chamfer-L1 distance, Normal Consistency, and F-scores with a threshold of 5cm. | definition, denominator, direction and uncertainty | p. 5 (4. Experiments), p. 5 (4. Experiments), p. 6 (4.1. Evaluation on 3D Gaussians) |

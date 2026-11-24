@@ -16,12 +16,11 @@
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다. [본문](https://openaccess.thecvf.com/content/ICCV2025/papers/Pan_Liberated-GS_3D_Gaussian_Splatting_Independent_from_SfM_Point_Clouds_ICCV_2025_paper.pdf)
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, the rendering performance of this method is also not competitive, suffering from poor detail recovery and floaters due to the lack of prior geometric constraints.
-
-방법 관련 발췌 — The contributions of our method are as follows. • We propose Librated-GS, a novel initialization approach to eliminate the reliance on SfM points of 3D Gaussian Splatting. • We align monocular depths ...
+Liberated-GS는 조밀한 영상 시퀀스에서 단안 깊이와 초기 가우시안의 렌더링 깊이를 결합해 SfM 점군 없이 3D 가우시안을 초기화한다. [PDF 1쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Pan_Liberated-GS_3D_Gaussian_Splatting_Independent_from_SfM_Point_Clouds_ICCV_2025_paper.pdf#page=1) · [PDF 3쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Pan_Liberated-GS_3D_Gaussian_Splatting_Independent_from_SfM_Point_Clouds_ICCV_2025_paper.pdf#page=3)
 
 ## Problem and Motivation
 
@@ -55,22 +54,14 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** The contributions of our method are as follows. • We propose Librated-GS, a novel initialization approach to eliminate the reliance on SfM points of 3D ...
-- **p. 2 / 3. Method - extractive body cue:** 3.3, we present a progressive segmented initialization with importance resampling.
-- **p. 3 / 3. Method - extractive body cue:** To address this, we propose an unbiased depth rendering method detailed in Sec.
-- **p. 3 / 3. Method - extractive body cue:** First, we propose an effective depth alignment method to establish high-quality geometry priors, as described in Sec.
-- **p. 4 / 3.2. Effective Depth Alignment - extractive body cue:** Maximum Alpha Current Ray i-th Gaussian depth in alpha-blending i-th Gaussian depth in our method Figure 4.
-- **p. 6 / 4.2. Comparison - extractive body cue:** Our method demonstrates substantial improvements across all three metrics compared to all other methods, even outperforming 3DGS initialized with SfM point clouds.
-- **p. 7 / 4.2. Comparison - extractive body cue:** Our method significantly outperforms other methods, producing visually reliable results with sharper details.
-- **p. 6 / 4.2. Comparison - extractive body cue:** This quantitatively validates that our approach achieves superior rendering and geometry results even without additional high-quality point clouds.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 초기 가우시안 모델의 깊이에 단안 추정치를 정렬해 융합하고, 긴 시퀀스는 구간을 나누어 초기 점을 순차적으로 만든다. [PDF 3쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Pan_Liberated-GS_3D_Gaussian_Splatting_Independent_from_SfM_Point_Clouds_ICCV_2025_paper.pdf#page=3) · [PDF 4쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Pan_Liberated-GS_3D_Gaussian_Splatting_Independent_from_SfM_Point_Clouds_ICCV_2025_paper.pdf#page=4) · [PDF 5쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Pan_Liberated-GS_3D_Gaussian_Splatting_Independent_from_SfM_Point_Clouds_ICCV_2025_paper.pdf#page=5)
+- Mip-NeRF360과 Tanks and Temples 등에서 SfM 점을 쓴 초기화와 새 시점 화질을 비교하고 깊이 정렬의 효과를 평가했다. [PDF 6쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Pan_Liberated-GS_3D_Gaussian_Splatting_Independent_from_SfM_Point_Clouds_ICCV_2025_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Pan_Liberated-GS_3D_Gaussian_Splatting_Independent_from_SfM_Point_Clouds_ICCV_2025_paper.pdf#page=7) · [PDF 8쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Pan_Liberated-GS_3D_Gaussian_Splatting_Independent_from_SfM_Point_Clouds_ICCV_2025_paper.pdf#page=8)
 
 ## Evaluation Scope
 
 | Dimension | Body-grounded record | Boundary | Anchor |
 |---|---|---|---|
-| Evaluation type | EMPIRICAL / REAL-ROBOT OR HARDWARE | do not infer unreported downstream behavior | p. 6 (4.2. Comparison), p. 7 (4.2. Comparison) |
+| Evaluation type | BENCHMARK / DATASET | do not infer unreported downstream behavior | p. 6 (4.2. Comparison), p. 7 (4.2. Comparison) |
 | Embodiment/environment | To validate the effectiveness of our method, extensive qualitative and quantitative comparison experiments are conducted on three real-world datasets, including two benchmark datasets (Mip-NeRF360 [5] and Tanks and Temples [22]) and an ... | hardware/simulator version and reset protocol | p. 6 (4.1. Experimental Setup), p. 6 (4.1. Experimental Setup) |
 | Dataset/benchmark | Comparison of runtime between our pipeline and COLMAP on Scene03 (300 images, 1237×658 resolution) from OMMO [25] dataset. | role, split, size and leakage | p. 6 (4.1. Experimental Setup), p. 6 (4.1. Experimental Setup), p. 8 (4.3. Ablation Study), p. 7 (4.2. Comparison) |
 | Metric | Similarly, RAIN-GS [18], despite its new initialization strategy, struggles to address detail loss from insufficient initial points and produces lower geometric quality compared to SfM-initialized 3DGS (e.g., the lower part of the ... | definition, denominator, direction and uncertainty | p. 6 (4.2. Comparison), p. 8 (4.2. Comparison), p. 6 (4.2. Comparison) |

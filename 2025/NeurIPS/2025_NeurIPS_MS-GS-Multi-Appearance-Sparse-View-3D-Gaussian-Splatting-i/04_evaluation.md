@@ -6,7 +6,7 @@
 
 ## Evaluation in One Sentence
 
-PDF body evaluation/result cue (p. 9 (4 Experiments), p. 8 (4 Experiments), p. 8 (4 Experiments), p. 16 (Figure/Table caption), p. 18 (Figure/Table caption), p. 7 (4 Experiments)): On the sparse unbounded-drone dataset, our approach significantly outperforms the SoTA methods with improvements of 2.54 dB in PSNR, 0.089 in SSIM, and cuts LPIPS and DSIM by 33.8% and ...
+외관이 다른 희소 뷰 조건의 자료와 평가 설정을 구성하고 장면 렌더링 및 각 기하 제약의 효과를 비교했다. [PDF 6쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/58d451ce195db5729b0386a35c74405a-Paper-Conference.pdf#page=6) · [PDF 7쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/58d451ce195db5729b0386a35c74405a-Paper-Conference.pdf#page=7) · [PDF 8쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/58d451ce195db5729b0386a35c74405a-Paper-Conference.pdf#page=8)
 
 ## Evaluation Body Digest
 
@@ -21,22 +21,18 @@ PDF body evaluation/result cue (p. 9 (4 Experiments), p. 8 (4 Experiments), p. 8
 
 ## Evaluation Type and Scope
 
-- **Evaluation type:** `EMPIRICAL / REAL-ROBOT OR HARDWARE`.
-- **Target system/task:** 3D scene/object와 robot coordinate frame.
-- **Input boundary:** RGB-D, image set, point cloud, depth와 camera pose.
-- **Output/decision under evaluation:** point map, pose, scene graph, affordance 또는 query result.
-- **Primary target:** geometric accuracy, semantic consistency와 planning/manipulation utility.
+- **Evaluation type:** `BENCHMARK / DATASET`.
 - **Detected evaluation headings:** 4 Experiments (p. 7); A.1 Sparse unbounded drone dataset (p. 15); A.1.2 Comparison with prior benchmark (p. 15); A.2 Experiments and visualizations (p. 15); A.3 Implementation details (p. 17); A.6 In-the-wild evaluation (p. 19); A.6.2 Evaluation metrics (p. 20).
 
 ## Experimental Matrix
 
 | Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
-| 4 Experiments | EMPIRICAL / REAL-ROBOT OR HARDWARE | On the sparse unbounded-drone dataset, our approach significantly outperforms the SoTA methods with improvements of 2.54 dB in PSNR, 0.089 in SSIM, and cuts ... | p. 9 (4 Experiments) |
-| 4 Experiments | EMPIRICAL / REAL-ROBOT OR HARDWARE | We identify that incorporating our semantic depth alignment initialization significantly improved the metrics with 0.8 dB in PSNR, 0.046 in SSIM, -0.031 in LPIPS, ... | p. 8 (4 Experiments) |
-| 4 Experiments | EMPIRICAL / REAL-ROBOT OR HARDWARE | All proposed components are complementary, and the best results are achieved when combined. | p. 8 (4 Experiments) |
-| Figure/Table caption | EMPIRICAL / REAL-ROBOT OR HARDWARE | Figure 8: Visualizations of rendering with different point cloud initializations. dense point cloud, usually millions of points. To utilize DUSt3R points, we align them ... | p. 16 (Figure/Table caption) |
-| Figure/Table caption | EMPIRICAL / REAL-ROBOT OR HARDWARE | Table 7: Experiments in 12-view setting, where each appearance has 3 images. MS-GS continues to outperform other methods. The metrics are reported as the ... | p. 18 (Figure/Table caption) |
+| 4 Experiments | BENCHMARK / DATASET | On the sparse unbounded-drone dataset, our approach significantly outperforms the SoTA methods with improvements of 2.54 dB in PSNR, 0.089 in SSIM, and cuts ... | p. 9 (4 Experiments) |
+| 4 Experiments | BENCHMARK / DATASET | We identify that incorporating our semantic depth alignment initialization significantly improved the metrics with 0.8 dB in PSNR, 0.046 in SSIM, -0.031 in LPIPS, ... | p. 8 (4 Experiments) |
+| 4 Experiments | BENCHMARK / DATASET | All proposed components are complementary, and the best results are achieved when combined. | p. 8 (4 Experiments) |
+| Figure/Table caption | BENCHMARK / DATASET | Figure 8: Visualizations of rendering with different point cloud initializations. dense point cloud, usually millions of points. To utilize DUSt3R points, we align them ... | p. 16 (Figure/Table caption) |
+| Figure/Table caption | BENCHMARK / DATASET | Table 7: Experiments in 12-view setting, where each appearance has 3 images. MS-GS continues to outperform other methods. The metrics are reported as the ... | p. 18 (Figure/Table caption) |
 
 ## Dataset / Benchmark Role
 

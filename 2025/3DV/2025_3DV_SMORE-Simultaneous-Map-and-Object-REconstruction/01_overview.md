@@ -17,12 +17,11 @@
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (13 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다. [본문](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11125658)
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, investment in autonomous driving has created a new mode of depth capture - spinning LiDAR sensors atop moving vehicles - which is largely unaddressed by the existing research.
-
-방법 관련 발췌 — An example of the depth maps produced by our method is shown in Fig.
+SMORE는 주행 LiDAR의 정적 배경과 움직이는 강체 물체를 분리해 지도, 차량 궤적과 물체 운동을 공동 추정한다. [PDF 1쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11125658#page=1) · [PDF 3쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11125658#page=3)
 
 ## Problem and Motivation
 
@@ -56,16 +55,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** An example of the depth maps produced by our method is shown in Fig.
-- **p. 2 / 1. Introduction - extractive body cue:** We introduce a global optimization that refines both ego and object poses so as to minimize a scan-to-surface reconstruction error, dramatically improving results (right).
-- **p. 4 / 4.1. Decomposition - extractive body cue:** Our approach consists of applying coordinate descent to Equation (2): alternating between fixing the poses to optimize surfaces and then fixing the surfaces to optimize ...
-- **p. 4 / 4. Objective - extractive body cue:** Our method aims to find the surfaces and object motions that best explain the LiDAR measurements.
-- **p. 1 / 1. Introduction - extractive body cue:** In contrast, recent novel view synthesis methods have modeled AV scenes with a composition of rigid models [24, 33, 34, 43].
-- **p. 2 / Figure/Table caption - extractive body cue:** Figure 2. Dynamic object reconstructions using human-annotated bounding-box annotations (top left) tend to be noisy. Optimizing over object pose (top right) improves accuracy, while de-skewing ...
-- **p. 8 / 6. Qualitative Results - extractive body cue:** 2, we show how accounting for this distortion can significantly improve the reconstructions.
-- **p. 6 / 5.1. Lidar Novel View Synthesis - extractive body cue:** We follow [49] and let each method use the test pose that achieves the lowest error.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 차량과 물체의 자세 및 신경 표면을 점과 표면 사이의 잔차로 정렬하고 스캔 도중의 운동을 연속 시간으로 처리한다. [PDF 3쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11125658#page=3) · [PDF 4쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11125658#page=4) · [PDF 5쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11125658#page=5)
+- 정적 장면 및 이동 물체의 복원과 궤적 추정을 따로 평가해 함께 최적화할 때의 효과를 비교했다. [PDF 6쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11125658#page=6) · [PDF 7쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11125658#page=7)
 
 ## Evaluation Scope
 

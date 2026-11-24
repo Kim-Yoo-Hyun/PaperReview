@@ -16,12 +16,11 @@
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다. [본문](https://openaccess.thecvf.com/content/CVPR2026/papers/Zhai_OnlinePG_Online_Open-Vocabulary_Panoptic_Mapping_with_3D_Gaussian_Splatting_CVPR_2026_paper.pdf)
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, these approaches are predominantly offline and lack support for online instance-level panoptic perception, hindering their applications in embodied tasks.
-
-방법 관련 발췌 — Overall, the technical contributions of our approach are summarized as follows: • We propose an online open-vocabulary panoptic mapping framework that unifies geometric reconstruction and semantic understanding in a local-to-global para ...
+OnlinePG는 RGB-D 시퀀스로부터 기하·의미·인스턴스를 온라인으로 누적해 자연어로 질의할 수 있는 가우시안 지도를 만든다. [PDF 1쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Zhai_OnlinePG_Online_Open-Vocabulary_Panoptic_Mapping_with_3D_Gaussian_Splatting_CVPR_2026_paper.pdf#page=1) · [PDF 3쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Zhai_OnlinePG_Online_Open-Vocabulary_Panoptic_Mapping_with_3D_Gaussian_Splatting_CVPR_2026_paper.pdf#page=3)
 
 ## Problem and Motivation
 
@@ -55,16 +54,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** Overall, the technical contributions of our approach are summarized as follows: • We propose an online open-vocabulary panoptic mapping framework that unifies geometric reconstruction and ...
-- **p. 2 / 1. Introduction - extractive body cue:** To this end, we present OnlinePG, an efficient online open-vocabulary panoptic mapping system based on 3D Gaussian Splatting that integrates geometric reconstruction with semantic understanding.
-- **p. 3 / 3. Method - extractive body cue:** To mitigate the inconsistencies of 2D segmentation results, we propose an effective segment clustering algorithm that synergistically leverages geometric and semantic cues to obtain consistent ...
-- **p. 7 / 4.3. Ablation Studies - extractive body cue:** Compared to single-cue clustering, multi-cue clustering achieves 8 to 18 PRQ improvement with only ∼40 33275
-- **p. 6 / 4.2. Main Experiments - extractive body cue:** 1, our method achieves the best 3D semantic segmentation results among online approaches on the mIoU and mAcc metrics of two datasets.
-- **p. 6 / 4.2. Main Experiments - extractive body cue:** Compared to O2V-Mapping [42] and OnlineAnySeg [41], by maintaining and updating voxellevel spatial language feature grid F, we can achieve more fine-grained 3D scene understanding ...
-- **p. 7 / 4.2. Main Experiments - extractive body cue:** Our method can achieve more consistent segmentation results among online approaches.
-- **p. 8 / 4.3. Ablation Studies - extractive body cue:** Comparing #2 and #3, we can know that our spatial attribute module can improve the open-vocabulary scene understanding performance of our system.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 슬라이딩 윈도 안의 분할을 기하·의미 그래프로 모으고 양방향 이분 매칭으로 지역 인스턴스를 전역 지도에 연결한다. [PDF 3쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Zhai_OnlinePG_Online_Open-Vocabulary_Panoptic_Mapping_with_3D_Gaussian_Splatting_CVPR_2026_paper.pdf#page=3) · [PDF 4쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Zhai_OnlinePG_Online_Open-Vocabulary_Panoptic_Mapping_with_3D_Gaussian_Splatting_CVPR_2026_paper.pdf#page=4) · [PDF 5쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Zhai_OnlinePG_Online_Open-Vocabulary_Panoptic_Mapping_with_3D_Gaussian_Splatting_CVPR_2026_paper.pdf#page=5)
+- 격자에 합친 시각언어 특징으로 개방 어휘 의미와 인스턴스를 평가하고 온라인 지도 작성의 처리 시간을 비교했다. [PDF 5쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Zhai_OnlinePG_Online_Open-Vocabulary_Panoptic_Mapping_with_3D_Gaussian_Splatting_CVPR_2026_paper.pdf#page=5) · [PDF 6쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Zhai_OnlinePG_Online_Open-Vocabulary_Panoptic_Mapping_with_3D_Gaussian_Splatting_CVPR_2026_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Zhai_OnlinePG_Online_Open-Vocabulary_Panoptic_Mapping_with_3D_Gaussian_Splatting_CVPR_2026_paper.pdf#page=7)
 
 ## Evaluation Scope
 

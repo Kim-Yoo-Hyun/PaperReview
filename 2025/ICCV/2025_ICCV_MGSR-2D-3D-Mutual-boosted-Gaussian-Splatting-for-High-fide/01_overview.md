@@ -16,12 +16,11 @@
 - Code/Project: https://github.com/TsingyuanChou/MGSR
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다. [본문](https://openaccess.thecvf.com/content/ICCV2025/papers/Zhou_MGSR_2D3D_Mutual-boosted_Gaussian_Splatting_for_High-fidelity_Surface_Reconstruction_under_ICCV_2025_paper.pdf)
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, 2DGS still cannot effectively model surfaces when ambient lighting changes.
-
-방법 관련 발췌 — To solve these contradictions, we propose MGSR, a 2D/3D Mutual-boosted Gaussian splatting for Surface Reconstruction that enhances both rendering quality and 3D reconstruction accuracy (Figure 1c).
+MGSR은 조명 조건이 다른 영상에서 2D 가우시안의 표면 추정과 3D 가우시안의 외관 추정을 교대로 개선한다. [PDF 1쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Zhou_MGSR_2D3D_Mutual-boosted_Gaussian_Splatting_for_High-fidelity_Surface_Reconstruction_under_ICCV_2025_paper.pdf#page=1) · [PDF 3쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Zhou_MGSR_2D3D_Mutual-boosted_Gaussian_Splatting_for_High-fidelity_Surface_Reconstruction_under_ICCV_2025_paper.pdf#page=3)
 
 ## Problem and Motivation
 
@@ -55,22 +54,14 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 1 / 1. Introduction - extractive body cue:** To solve these contradictions, we propose MGSR, a 2D/3D Mutual-boosted Gaussian splatting for Surface Reconstruction that enhances both rendering quality and 3D reconstruction accuracy (Figure ...
-- **p. 2 / 1. Introduction - extractive body cue:** The input consists of multi-view images captured from various camera positions and angles, under significantly varying light conditions.
-- **p. 3 / 3.1. Overview - extractive body cue:** MGSR is a 2D/3D mutual-boosted framework that consists of two branches: improved 3DGS branch (Section 3.2) and 2DGS branch (Section 3.3).
-- **p. 3 / 3.1. Overview - extractive body cue:** To address this limitation, we introduce a geometry-guided illumination decomposition module, which leverages depth information from the 2DGS branch to enhance rendering performance under diverse ...
-- **p. 5 / 3.3. Surface reconstruction with 2DGS - extractive body cue:** The overall loss of the 2DGS branch consists of a weighted combination: L2D = Lrender + λ3(γLn + λ4Ln-TV) + λ5Ld-TV, (11) where λ3, λ4, ...
-- **p. 8 / 4.2. Results - extractive body cue:** MGSR, supported by an auto-stop warm-up strategy, outperforms GOF and achieves a comparable speed with 2DGS.
-- **p. 7 / 4.2. Results - extractive body cue:** MGSR visually outperforms all baselines, resulting in the best NC, with smooth surfaces and accurate color modeling.
-- **p. 6 / Figure/Table caption - extractive body cue:** Figure 5. Visual comparisons on the Shiny Blender dataset [21]. other hand, a depth loss between 2DGS and 3DGS branches is introduced to improve the ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 3D 분기에서 구한 조명 분해 결과를 2D 분기의 감독에 사용하고, 2D 분기에서 추정한 깊이를 3D 분기에 전달한다. [PDF 3쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Zhou_MGSR_2D3D_Mutual-boosted_Gaussian_Splatting_for_High-fidelity_Surface_Reconstruction_under_ICCV_2025_paper.pdf#page=3) · [PDF 4쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Zhou_MGSR_2D3D_Mutual-boosted_Gaussian_Splatting_for_High-fidelity_Surface_Reconstruction_under_ICCV_2025_paper.pdf#page=4) · [PDF 5쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Zhou_MGSR_2D3D_Mutual-boosted_Gaussian_Splatting_for_High-fidelity_Surface_Reconstruction_under_ICCV_2025_paper.pdf#page=5)
+- 합성 및 실측 장면에서 표면 복원과 렌더링을 각각 측정하고 두 분기의 교대 학습 효과를 비교했다. [PDF 6쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Zhou_MGSR_2D3D_Mutual-boosted_Gaussian_Splatting_for_High-fidelity_Surface_Reconstruction_under_ICCV_2025_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Zhou_MGSR_2D3D_Mutual-boosted_Gaussian_Splatting_for_High-fidelity_Surface_Reconstruction_under_ICCV_2025_paper.pdf#page=7) · [PDF 8쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Zhou_MGSR_2D3D_Mutual-boosted_Gaussian_Splatting_for_High-fidelity_Surface_Reconstruction_under_ICCV_2025_paper.pdf#page=8)
 
 ## Evaluation Scope
 
 | Dimension | Body-grounded record | Boundary | Anchor |
 |---|---|---|---|
-| Evaluation type | EMPIRICAL / REAL-ROBOT OR HARDWARE | do not infer unreported downstream behavior | p. 2 (Figure/Table caption), p. 8 (4.2. Results) |
+| Evaluation type | BENCHMARK / DATASET | do not infer unreported downstream behavior | p. 2 (Figure/Table caption), p. 8 (4.2. Results) |
 | Embodiment/environment | DTU [7] is a large MVS dataset, where some scenes feature unfavorable light conditions for surface reconstruction, such as overexposure, underexposure, and metallic reflections. | hardware/simulator version and reset protocol | p. 6 (4.1. Datasets and evaluation metrics), p. 7 (4.1. Datasets and evaluation metrics) |
 | Dataset/benchmark | Ablations of loss weights (Models A-F), iterations of mutual-boosted optimization (Models G-J), bidrectional BP and auto-stop warm-up strategy (Models K-L) on OmniObject3D dataset. | role, split, size and leakage | p. 6 (4.1. Datasets and evaluation metrics), p. 7 (4.1. Datasets and evaluation metrics), p. 8 (4.2. Results), p. 6 (4.1. Datasets and evaluation metrics) |
 | Metric | We utilize SSIM and PSNR to evaluate the rendering quality, while reconstruction accuracy is validated by 10K sampled points with Normal Consistency (NC) and Chamfer Distance (CD) measurements. | definition, denominator, direction and uncertainty | p. 6 (4.1. Datasets and evaluation metrics), p. 8 (4.2. Results), p. 7 (4.2. Results) |

@@ -16,12 +16,11 @@
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다. [본문](https://openaccess.thecvf.com/content/CVPR2024/papers/Chen_CLIP-Driven_Open-Vocabulary_3D_Scene_Graph_Generation_via_Cross-Modality_Contrastive_Learning_CVPR_2024_paper.pdf)
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, current 3DSGG methods struggle with two main challenges.
-
-방법 관련 발췌 — The primary contributions are summarized as: • We propose the new and practical tasks of OV 3DSGG.
+CCL-3DSGG는 점군 장면 그래프의 물체와 관계를 이미지·텍스트 특징에 정렬해 학습 시 보지 못한 범주를 인식한다. [PDF 1쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Chen_CLIP-Driven_Open-Vocabulary_3D_Scene_Graph_Generation_via_Cross-Modality_Contrastive_Learning_CVPR_2024_paper.pdf#page=1) · [PDF 3쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Chen_CLIP-Driven_Open-Vocabulary_3D_Scene_Graph_Generation_via_Cross-Modality_Contrastive_Learning_CVPR_2024_paper.pdf#page=3)
 
 ## Problem and Motivation
 
@@ -55,16 +54,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1) Visual contextual - extractive body cue:** The primary contributions are summarized as: • We propose the new and practical tasks of OV 3DSGG.
-- **p. 1 / Abstract - extractive body cue:** Specifically, we propose a novel Cross-Modality Contrastive Learning 3DSGG (CCL-3DSGG) method.
-- **p. 3 / 3. Methods - extractive body cue:** Our framework is depicted in Figure 2.
-- **p. 3 / 3.1. Cross-modality Features Extraction - extractive body cue:** To enhance the discriminative power of text features and ensure precise cross-modality feature alignment, we propose segmenting text based on grammatical analysis [43, 50].
-- **p. 4 / 3.2. Cross-Modality Contrastive Losses - extractive body cue:** The purpose of cross-modality contrastive losses is to align image and text to 3DSG, which consists of Multi-view Image-3DSG Contrastive (I3D) Loss and Text3DSG Contrastive ...
-- **p. 6 / 4.3. Comparisons with SOTA Methods on Close-Set - extractive body cue:** Despite introducing additional information, our model achieves a significant performance boost without a substantial increase in time (24 to 30).
-- **p. 6 / 4.3. Comparisons with SOTA Methods on Close-Set - extractive body cue:** Head-tail and Unseen Triple with Supervised: As evidenced in Table 2, our approach achieves SOTA performance when benchmarked against SGFN and VL-SAT for the infrequent ...
-- **p. 8 / 4.5. Ablation Study - extractive body cue:** In EXP 11, fine-tuning the prediction head in VL-SAT with a limited dataset enhanced the performance, making them comparable to those achieved with supervised methods.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 서술의 단어와 시점별 영상에서 대조 대상을 구성해 3차원 장면 그래프 특징을 CLIP의 표현에 정렬한다. [PDF 3쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Chen_CLIP-Driven_Open-Vocabulary_3D_Scene_Graph_Generation_via_Cross-Modality_Contrastive_Learning_CVPR_2024_paper.pdf#page=3) · [PDF 4쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Chen_CLIP-Driven_Open-Vocabulary_3D_Scene_Graph_Generation_via_Cross-Modality_Contrastive_Learning_CVPR_2024_paper.pdf#page=4) · [PDF 5쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Chen_CLIP-Driven_Open-Vocabulary_3D_Scene_Graph_Generation_via_Cross-Modality_Contrastive_Learning_CVPR_2024_paper.pdf#page=5)
+- 그래프 특징과 텍스트 프롬프트의 유사도로 새 물체와 술어를 예측하고 개방 어휘 조건의 성능을 비교했다. [PDF 5쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Chen_CLIP-Driven_Open-Vocabulary_3D_Scene_Graph_Generation_via_Cross-Modality_Contrastive_Learning_CVPR_2024_paper.pdf#page=5) · [PDF 6쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Chen_CLIP-Driven_Open-Vocabulary_3D_Scene_Graph_Generation_via_Cross-Modality_Contrastive_Learning_CVPR_2024_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Chen_CLIP-Driven_Open-Vocabulary_3D_Scene_Graph_Generation_via_Cross-Modality_Contrastive_Learning_CVPR_2024_paper.pdf#page=7)
 
 ## Evaluation Scope
 

@@ -16,12 +16,11 @@
 - Code/Project: https://github.com/hamidreza-dastmalchi/3DD-TTA
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다. [본문](https://openaccess.thecvf.com/content/WACV2025/papers/Dastmalchi_Test-Time_Adaptation_of_3D_Point_Clouds_via_Denoising_Diffusion_Models_WACV_2025_paper.pdf)
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — While this approach has proven effective for 2D images [9,26,39,43], applying it to 3D point clouds presents a far greater challenge due to the unstructured nature of point clouds and the inherent ...
-
-방법 관련 발췌 — To this end, we introduce a novel, training-free test-time adaptation method called 3D Denoising Diffusion TestTime Adaptation (3DD-TTA).
+3DD-TTA는 훼손된 시험 점군을 확산 모델로 원래 학습 분포에 가깝게 바꿔 기존 인식 모델에 입력한다. [PDF 1쪽](https://openaccess.thecvf.com/content/WACV2025/papers/Dastmalchi_Test-Time_Adaptation_of_3D_Point_Clouds_via_Denoising_Diffusion_Models_WACV_2025_paper.pdf#page=1) · [PDF 4쪽](https://openaccess.thecvf.com/content/WACV2025/papers/Dastmalchi_Test-Time_Adaptation_of_3D_Point_Clouds_via_Denoising_Diffusion_Models_WACV_2025_paper.pdf#page=4)
 
 ## Problem and Motivation
 
@@ -55,22 +54,14 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** To this end, we introduce a novel, training-free test-time adaptation method called 3D Denoising Diffusion TestTime Adaptation (3DD-TTA).
-- **p. 2 / 1. Introduction - extractive body cue:** (3) We introduced a modified Chamfer distance, named Selective Chamfer Distance (SCD), to increase the fidelity during the reverse diffusion process.
-- **p. 5 / 3.3. Denoising Diffusion-based Adaption Method - extractive body cue:** We introduce and employ the gradient of the Selective Chamfer distance (SCD) denoted as lλ cd, with respect to htw-1 as the regularization term: R ...
-- **p. 5 / 3.3. Denoising Diffusion-based Adaption Method - extractive body cue:** Additionally, given that the initial shape latent z0, obtained from the input point cloud, potentially leads to inaccurate guidance for the denoising network, we propose ...
-- **p. 6 / 4.3. Results - extractive body cue:** In addition, our 3DD-TTA outperforms other TTA frameworks on density-based corruptions such as cut-out and density increase.
-- **p. 6 / 4.3. Results - extractive body cue:** The table clearly shows that the 3DD-TTA method outperforms the other methods by a significant margin in most corruption types.
-- **p. 7 / 4.3. Results - extractive body cue:** 3DD-TTA boosts Point-MAE (source) in most corruption types, showing improved robustness across different corruptions.
-- **p. 7 / 4.3. Results - extractive body cue:** Similarly, the model outperforms other methods in addressing densityrelated corruptions but is less effective for transformationbased corruptions, ranking second or third for these deformations.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 변분 오토인코더가 형상 잠재 변수와 점별 잠재 변수를 만들고, 시험 입력과의 일치도를 유지하면서 두 변수를 잡음 제거 과정에서 갱신한다. [PDF 4쪽](https://openaccess.thecvf.com/content/WACV2025/papers/Dastmalchi_Test-Time_Adaptation_of_3D_Point_Clouds_via_Denoising_Diffusion_Models_WACV_2025_paper.pdf#page=4) · [PDF 5쪽](https://openaccess.thecvf.com/content/WACV2025/papers/Dastmalchi_Test-Time_Adaptation_of_3D_Point_Clouds_via_Denoising_Diffusion_Models_WACV_2025_paper.pdf#page=5)
+- ShapeNet, ModelNet40, ScanObjectNN을 이용해 점군 훼손에 대한 적응을 평가하고 인식 모델의 가중치는 고정했다. [PDF 6쪽](https://openaccess.thecvf.com/content/WACV2025/papers/Dastmalchi_Test-Time_Adaptation_of_3D_Point_Clouds_via_Denoising_Diffusion_Models_WACV_2025_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content/WACV2025/papers/Dastmalchi_Test-Time_Adaptation_of_3D_Point_Clouds_via_Denoising_Diffusion_Models_WACV_2025_paper.pdf#page=7)
 
 ## Evaluation Scope
 
 | Dimension | Body-grounded record | Boundary | Anchor |
 |---|---|---|---|
-| Evaluation type | EMPIRICAL / REAL-ROBOT OR HARDWARE | do not infer unreported downstream behavior | p. 6 (4.3. Results), p. 6 (4.3. Results) |
+| Evaluation type | BENCHMARK / DATASET | do not infer unreported downstream behavior | p. 6 (4.3. Results), p. 6 (4.3. Results) |
 | Embodiment/environment | ScanObjectNN-c: ScanObjectNN [44], a real-world point cloud dataset with 15 categories, is corrupted using the same open-source code as ModelNet40-c [40], introducing 15 corruptions into the test set. | hardware/simulator version and reset protocol | p. 6 (4.1. Datasets and Corruption Methods), p. 7 (4.3. Results) |
 | Dataset/benchmark | We refer to this dataset as ScanObjectNN-c. | role, split, size and leakage | p. 6 (4.1. Datasets and Corruption Methods), p. 7 (4.3. Results), p. 6 (4.1. Datasets and Corruption Methods), p. 7 (4.3. Results) |
 | Metric | Notably, 3DD-TTA dramatically boosts the source classifier's performance on background noise, raising accuracy from 15.0% to 77.6%. | definition, denominator, direction and uncertainty | p. 6 (4.3. Results), p. 7 (4.3. Results), p. 8 (4.4. Ablation Study) |

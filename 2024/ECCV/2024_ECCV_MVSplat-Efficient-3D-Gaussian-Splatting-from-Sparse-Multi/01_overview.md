@@ -16,12 +16,11 @@
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (17 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다. [본문](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/03187.pdf)
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, reconstructing a 3D scene from a single image is inherently ill-posed and ambiguous, posing a significant challenge when applied to a more general and larger scene, which is the key focus ...
-
-방법 관련 발췌 — In this paper, we present MVSplat, a Gaussian-based feed-forward model for novel view synthesis.
+MVSplat은 자세를 아는 소수의 영상 사이의 대응 비용으로 깊이를 추정해, 한 번의 순전파로 장면의 3D 가우시안을 예측한다. [PDF 1쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/03187.pdf#page=1) · [PDF 4쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/03187.pdf#page=4)
 
 ## Problem and Motivation
 
@@ -55,16 +54,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 5 / 3 Method - extractive body cue:** In this paper, we present MVSplat, a Gaussian-based feed-forward model for novel view synthesis.
-- **p. 2 / 1 Introduction - extractive body cue:** This enables the rendering of novel view images using the predicted 3D Gaussians with the differentiable splatting operation [18].
-- **p. 2 / 1 Introduction - extractive body cue:** Such a formulation reduces the task's learning difficulty, enabling our method to achieve state-of-the-art performance with lightweight model size and fast speed.
-- **p. 5 / 3 Method - extractive body cue:** Unlike pixelSplat [1] that predicts probabilistic depth, we develop an efficient and high-performance multi-view depth estimation model that enables unprojecting predicted depth maps as the ...
-- **p. 6 / 3 Method - extractive body cue:** (4) can be ambiguous for texture-less regions, we propose to further refine it with an additional lightweight 2D U-Net [27, 28].
-- **p. 12 / 4 Experiments - extractive body cue:** Note that the MVSplat significantly outperforms pixelSplat in terms of LPIPS, and the gain is larger when the domain gap between source and target datasets ...
-- **p. 9 / 4 Experiments - extractive body cue:** MVSplat achieves the highest quality on novel view results even under challenging conditions, such as these regions with repeated patterns ("window frames" in 1st row), ...
-- **p. 10 / 4 Experiments - extractive body cue:** 4. pixelSplat requires an extra 50,000 steps to fine-tune the Gaussians with an additional depth regularization to achieve reasonable geometry reconstruction results.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 여러 깊이 평면에 특징을 투영해 비용 볼륨을 만들고 가우시안 중심과 다른 속성을 영상 재구성 감독으로 함께 학습한다. [PDF 4쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/03187.pdf#page=4) · [PDF 5쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/03187.pdf#page=5) · [PDF 6쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/03187.pdf#page=6)
+- 새 시점 화질과 추정 기하를 비교하고 RealEstate10K에서 비용 볼륨 등 각 구성 요소를 제거해 효과를 평가했다. [PDF 8쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/03187.pdf#page=8) · [PDF 10쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/03187.pdf#page=10) · [PDF 12쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/03187.pdf#page=12)
 
 ## Evaluation Scope
 

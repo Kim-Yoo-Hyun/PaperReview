@@ -6,7 +6,7 @@
 
 ## Evaluation in One Sentence
 
-PDF body evaluation/result cue (p. 7 (5.2. Quantitative Analysis), p. 7 (5.2. Quantitative Analysis), p. 8 (Figure/Table caption), p. 13 (Figure/Table caption), p. 13 (Figure/Table caption), p. 15 (Figure/Table caption)): The results indicated that our ScanQA method significantly outperformed all baselines across all data splits over all evaluation metrics.
+ScanQA 표 2의 질문은 총 41,363개로, 고유한 질문 문구는 32,337개이며 장면은 ScanNet 800개다. 답변의 일치도와 근거 물체의 3차원 위치를 따로 평가한다. [PDF 3쪽](https://openaccess.thecvf.com/content/CVPR2022/papers/Azuma_ScanQA_3D_Question_Answering_for_Spatial_Scene_Understanding_CVPR_2022_paper.pdf#page=3) · [PDF 5쪽](https://openaccess.thecvf.com/content/CVPR2022/papers/Azuma_ScanQA_3D_Question_Answering_for_Spatial_Scene_Understanding_CVPR_2022_paper.pdf#page=5) · [PDF 6쪽](https://openaccess.thecvf.com/content/CVPR2022/papers/Azuma_ScanQA_3D_Question_Answering_for_Spatial_Scene_Understanding_CVPR_2022_paper.pdf#page=6)
 
 ## Evaluation Body Digest
 
@@ -21,22 +21,19 @@ PDF body evaluation/result cue (p. 7 (5.2. Quantitative Analysis), p. 7 (5.2. Qu
 
 ## Evaluation Type and Scope
 
-- **Evaluation type:** `EMPIRICAL / REAL-ROBOT OR HARDWARE`.
-- **Target system/task:** 3D scene/object와 robot coordinate frame.
-- **Input boundary:** RGB-D, image set, point cloud, depth와 camera pose.
-- **Output/decision under evaluation:** point map, pose, scene graph, affordance 또는 query result.
-- **Primary target:** geometric accuracy, semantic consistency와 planning/manipulation utility.
+- **Evaluation type:** `BENCHMARK / DATASET`.
+- **평가 대상:** 질문 임베딩과 3차원 물체 제안 특징을 융합하는 기준선을 만들고 답변과 물체 위치 성능을 분리해 평가했다. [PDF 4쪽](https://openaccess.thecvf.com/content/CVPR2022/papers/Azuma_ScanQA_3D_Question_Answering_for_Spatial_Scene_Understanding_CVPR_2022_paper.pdf#page=4) · [PDF 5쪽](https://openaccess.thecvf.com/content/CVPR2022/papers/Azuma_ScanQA_3D_Question_Answering_for_Spatial_Scene_Understanding_CVPR_2022_paper.pdf#page=5) · [PDF 6쪽](https://openaccess.thecvf.com/content/CVPR2022/papers/Azuma_ScanQA_3D_Question_Answering_for_Spatial_Scene_Understanding_CVPR_2022_paper.pdf#page=6)
 - **Detected evaluation headings:** 3. ScanQA Dataset (p. 2); 3.3. Dataset Statistics (p. 3); 5. Experiments (p. 5); 5.1. Experimental Setup (p. 5).
 
 ## Experimental Matrix
 
 | Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
-| 5.2. Quantitative Analysis | EMPIRICAL / REAL-ROBOT OR HARDWARE | The results indicated that our ScanQA method significantly outperformed all baselines across all data splits over all evaluation metrics. | p. 7 (5.2. Quantitative Analysis) |
-| 5.2. Quantitative Analysis | EMPIRICAL / REAL-ROBOT OR HARDWARE | Interestingly, VoteNet+MCAN, ScanRefer+MCAN (end-to-end), and ScanQA significantly outperformed ScanRefer+MCAN (pipeline), which detects target objects related to a question using a pretrained ScanRefer and then ... | p. 7 (5.2. Quantitative Analysis) |
-| Figure/Table caption | EMPIRICAL / REAL-ROBOT OR HARDWARE | Figure 5. Qualitative results. Predicted answers are described below each figure. Predicted boxes are marked blue and the ground truth is marked green. We ... | p. 8 (Figure/Table caption) |
-| Figure/Table caption | EMPIRICAL / REAL-ROBOT OR HARDWARE | Table 6. Object localization performance on the ScanQA dataset experiments. The results in Table 6 show that the shared and end-to-end learning of QA, ... | p. 13 (Figure/Table caption) |
-| Figure/Table caption | EMPIRICAL / REAL-ROBOT OR HARDWARE | Table 7. Feature ablation results on ScanQA (multiple) calization scores with the ground true boxes and consider positive predictions for the box with the ... | p. 13 (Figure/Table caption) |
+| 5.2. Quantitative Analysis | BENCHMARK / DATASET | The results indicated that our ScanQA method significantly outperformed all baselines across all data splits over all evaluation metrics. | p. 7 (5.2. Quantitative Analysis) |
+| 5.2. Quantitative Analysis | BENCHMARK / DATASET | Interestingly, VoteNet+MCAN, ScanRefer+MCAN (end-to-end), and ScanQA significantly outperformed ScanRefer+MCAN (pipeline), which detects target objects related to a question using a pretrained ScanRefer and then ... | p. 7 (5.2. Quantitative Analysis) |
+| Figure/Table caption | BENCHMARK / DATASET | Figure 5. Qualitative results. Predicted answers are described below each figure. Predicted boxes are marked blue and the ground truth is marked green. We ... | p. 8 (Figure/Table caption) |
+| Figure/Table caption | BENCHMARK / DATASET | Table 6. Object localization performance on the ScanQA dataset experiments. The results in Table 6 show that the shared and end-to-end learning of QA, ... | p. 13 (Figure/Table caption) |
+| Figure/Table caption | BENCHMARK / DATASET | Table 7. Feature ablation results on ScanQA (multiple) calization scores with the ground true boxes and consider positive predictions for the box with the ... | p. 13 (Figure/Table caption) |
 
 ## Dataset / Benchmark Role
 

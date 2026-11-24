@@ -8,7 +8,7 @@
 
 ## Evaluation in One Sentence
 
-PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 5 (4. Experiments), p. 6 (4.1. Experimental Settings), p. 6 (4.1. Experimental Settings), p. 7 (Figure/Table caption), p. 8 (Figure/Table caption)): Table 5. Ablation Study on Model Architecture. The results are evaluated on the GSO dataset with FreeSplatter-O. uate pose estimation performance using both rotation and translation metrics: relative rotation error ...
+물체 중심 복원과 장면 복원에 맞춘 모델을 각각 학습하고, 새 시점 렌더링과 카메라 자세 정확도를 따로 측정했다. [PDF 5쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Xu_FreeSplatter_Pose-free_Gaussian_Splatting_for_Sparse-view_3D_Reconstruction_ICCV_2025_paper.pdf#page=5) · [PDF 6쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Xu_FreeSplatter_Pose-free_Gaussian_Splatting_for_Sparse-view_3D_Reconstruction_ICCV_2025_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Xu_FreeSplatter_Pose-free_Gaussian_Splatting_for_Sparse-view_3D_Reconstruction_ICCV_2025_paper.pdf#page=7)
 
 ## Evaluation Body Digest
 
@@ -23,22 +23,18 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 5 (4. Experiment
 
 ## Evaluation Type and Scope
 
-- **Evaluation type:** `EMPIRICAL / REAL-ROBOT OR HARDWARE`.
-- **Target system/task:** 3D scene/object와 robot coordinate frame.
-- **Input boundary:** RGB-D, image set, point cloud, depth와 camera pose.
-- **Output/decision under evaluation:** point map, pose, scene graph, affordance 또는 query result.
-- **Primary target:** geometric accuracy, semantic consistency와 planning/manipulation utility.
+- **Evaluation type:** `BENCHMARK / DATASET`.
 - **Detected evaluation headings:** 4. Experiments (p. 5); 4.1. Experimental Settings (p. 5).
 
 ## Experimental Matrix
 
 | Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
-| Figure/Table caption | EMPIRICAL / REAL-ROBOT OR HARDWARE | Table 5. Ablation Study on Model Architecture. The results are evaluated on the GSO dataset with FreeSplatter-O. uate pose estimation performance using both rotation ... | p. 8 (Figure/Table caption) |
-| 4. Experiments | EMPIRICAL / REAL-ROBOT OR HARDWARE | Please refer to the supplementary material for additional implementation details and experimental results. | p. 5 (4. Experiments) |
-| 4.1. Experimental Settings | EMPIRICAL / REAL-ROBOT OR HARDWARE | Scene-level performance is assessed on the test splits of ScanNet++[62] and CO3Dv2 [37]. | p. 6 (4.1. Experimental Settings) |
-| 4.1. Experimental Settings | EMPIRICAL / REAL-ROBOT OR HARDWARE | Sparse-view Reconstruction on ScanNet++ (top) and CO3Dv2 (bottom). * indicates that ground truth camera poses are used as input. ference results. | p. 6 (4.1. Experimental Settings) |
-| Figure/Table caption | EMPIRICAL / REAL-ROBOT OR HARDWARE | Table 4. Camera Pose Estimation on Object-centric and Scene- level Datasets. To be noted, Re10K is outside the training dataset. methods (pixelSplat, MVSplat) on ... | p. 7 (Figure/Table caption) |
+| Figure/Table caption | BENCHMARK / DATASET | Table 5. Ablation Study on Model Architecture. The results are evaluated on the GSO dataset with FreeSplatter-O. uate pose estimation performance using both rotation ... | p. 8 (Figure/Table caption) |
+| 4. Experiments | BENCHMARK / DATASET | Please refer to the supplementary material for additional implementation details and experimental results. | p. 5 (4. Experiments) |
+| 4.1. Experimental Settings | BENCHMARK / DATASET | Scene-level performance is assessed on the test splits of ScanNet++[62] and CO3Dv2 [37]. | p. 6 (4.1. Experimental Settings) |
+| 4.1. Experimental Settings | BENCHMARK / DATASET | Sparse-view Reconstruction on ScanNet++ (top) and CO3Dv2 (bottom). * indicates that ground truth camera poses are used as input. ference results. | p. 6 (4.1. Experimental Settings) |
+| Figure/Table caption | BENCHMARK / DATASET | Table 4. Camera Pose Estimation on Object-centric and Scene- level Datasets. To be noted, Re10K is outside the training dataset. methods (pixelSplat, MVSplat) on ... | p. 7 (Figure/Table caption) |
 
 ## Dataset / Benchmark Role
 

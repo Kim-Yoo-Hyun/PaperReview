@@ -6,7 +6,7 @@
 
 ## Evaluation in One Sentence
 
-PDF body evaluation/result cue (p. 6 (4.2. Scene Reconstruction), p. 8 (4.3.2. Occlusion detection in novel views), p. 6 (4.2. Scene Reconstruction), p. 7 (4.3.1. Conditioning of the VCM), p. 7 (4.3.1. Conditioning of the VCM), p. 8 (4.4. Distillation into a Feed-Forward Model)): We contend that, despite being slightly outperformed in quantitative metrics by the directly synthesized geometry, the distilled model is more reliable and significantly faster.
+KITTI-360과 Waymo에서 장면 기하를 평가하고 가상 시점 선택과 가려짐 판정에 따른 차이를 비교했다. [PDF 6쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Wulff_Dream-to-Recon_Monocular_3D_Reconstruction_with_Diffusion-Depth_Distillation_from_Single_Images_ICCV_2025_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Wulff_Dream-to-Recon_Monocular_3D_Reconstruction_with_Diffusion-Depth_Distillation_from_Single_Images_ICCV_2025_paper.pdf#page=7) · [PDF 8쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Wulff_Dream-to-Recon_Monocular_3D_Reconstruction_with_Diffusion-Depth_Distillation_from_Single_Images_ICCV_2025_paper.pdf#page=8)
 
 ## Evaluation Body Digest
 
@@ -21,22 +21,18 @@ PDF body evaluation/result cue (p. 6 (4.2. Scene Reconstruction), p. 8 (4.3.2. O
 
 ## Evaluation Type and Scope
 
-- **Evaluation type:** `SYSTEM / EVALUATION SCOPE UNRESOLVED`.
-- **Target system/task:** high-dimensional data 또는 robot action-trajectory distribution.
-- **Input boundary:** conditioning observation와 noisy/intermediate sample.
-- **Output/decision under evaluation:** generated sample, action chunk 또는 trajectory.
-- **Primary target:** distribution fit, multimodality, sample quality와 latency.
+- **Evaluation type:** `BENCHMARK / DATASET`.
 - **Detected evaluation headings:** 4. Experiments (p. 5).
 
 ## Experimental Matrix
 
 | Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
-| 4.2. Scene Reconstruction | SYSTEM / EVALUATION SCOPE UNRESOLVED | We contend that, despite being slightly outperformed in quantitative metrics by the directly synthesized geometry, the distilled model is more reliable and significantly faster. | p. 6 (4.2. Scene Reconstruction) |
-| 4.3.2. Occlusion detection in novel views | SYSTEM / EVALUATION SCOPE UNRESOLVED | A camera rig with eight predefined poses and random rotations achieves the best performance. leverages two-way optical flow between the input and novel views ... | p. 8 (4.3.2. Occlusion detection in novel views) |
-| 4.2. Scene Reconstruction | SYSTEM / EVALUATION SCOPE UNRESOLVED | We hypothesize that this lack of improvement stems from the strong depth cues already inherent in multi-view data. | p. 6 (4.2. Scene Reconstruction) |
-| 4.3.1. Conditioning of the VCM | SYSTEM / EVALUATION SCOPE UNRESOLVED | Despite being trained on single images only, our method achieves accurate reconstructions overall. | p. 7 (4.3.1. Conditioning of the VCM) |
-| 4.3.1. Conditioning of the VCM | SYSTEM / EVALUATION SCOPE UNRESOLVED | 2, the full model consistently outperforms the baseline in both color and depth reconstruction metrics on KITTI-360. | p. 7 (4.3.1. Conditioning of the VCM) |
+| 4.2. Scene Reconstruction | BENCHMARK / DATASET | We contend that, despite being slightly outperformed in quantitative metrics by the directly synthesized geometry, the distilled model is more reliable and significantly faster. | p. 6 (4.2. Scene Reconstruction) |
+| 4.3.2. Occlusion detection in novel views | BENCHMARK / DATASET | A camera rig with eight predefined poses and random rotations achieves the best performance. leverages two-way optical flow between the input and novel views ... | p. 8 (4.3.2. Occlusion detection in novel views) |
+| 4.2. Scene Reconstruction | BENCHMARK / DATASET | We hypothesize that this lack of improvement stems from the strong depth cues already inherent in multi-view data. | p. 6 (4.2. Scene Reconstruction) |
+| 4.3.1. Conditioning of the VCM | BENCHMARK / DATASET | Despite being trained on single images only, our method achieves accurate reconstructions overall. | p. 7 (4.3.1. Conditioning of the VCM) |
+| 4.3.1. Conditioning of the VCM | BENCHMARK / DATASET | 2, the full model consistently outperforms the baseline in both color and depth reconstruction metrics on KITTI-360. | p. 7 (4.3.1. Conditioning of the VCM) |
 
 ## Dataset / Benchmark Role
 

@@ -6,7 +6,7 @@
 
 ## Evaluation in One Sentence
 
-PDF body evaluation/result cue (p. 7 (4.2. HOLODECK on Diverse Scenes), p. 7 (4.3. Ablation Study on Layout Design), p. 8 (4.3. Ablation Study on Layout Design), p. 6 (4.2. HOLODECK on Diverse Scenes), p. 6 (4.1. Comparative Analysis on Residential Scenes), p. 8 (4.3. Ablation Study on Layout Design)): Compared to PROCTHOR's performance in residential scenes, HOLODECK achieves higher human preference scores over half of (28 out of 52) the diverse scenes.
+사람의 선호와 에이전트 성능은 별도 실험이다. NOVELTYTHOR 시뮬레이션의 ObjectNav 표 2에서 ProcTHOR 사전학습 후 Holodeck으로 미세조정한 모델의 평균 성공률은 20.40%, SPL은 0.127이다. [PDF 7쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Yang_Holodeck_Language_Guided_Generation_of_3D_Embodied_AI_Environments_CVPR_2024_paper.pdf#page=7) · [PDF 8쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Yang_Holodeck_Language_Guided_Generation_of_3D_Embodied_AI_Environments_CVPR_2024_paper.pdf#page=8)
 
 ## Evaluation Body Digest
 
@@ -21,22 +21,19 @@ PDF body evaluation/result cue (p. 7 (4.2. HOLODECK on Diverse Scenes), p. 7 (4.
 
 ## Evaluation Type and Scope
 
-- **Evaluation type:** `SYSTEM / EVALUATION SCOPE UNRESOLVED`.
-- **Target system/task:** mapped 3D environment과 mobile robot.
-- **Input boundary:** camera/depth stream, pose, map와 language goal.
-- **Output/decision under evaluation:** collision-free trajectory 또는 velocity command.
-- **Primary target:** goal reach, safety, localization error와 replanning latency.
+- **Evaluation type:** `EMPIRICAL / SIMULATION`.
+- **평가 대상:** 사람의 장면 선호 평가와 생성한 장면을 사용한 물체 목표 내비게이션의 시뮬레이션 일반화를 각각 측정했다. [PDF 6쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Yang_Holodeck_Language_Guided_Generation_of_3D_Embodied_AI_Environments_CVPR_2024_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Yang_Holodeck_Language_Guided_Generation_of_3D_Embodied_AI_Environments_CVPR_2024_paper.pdf#page=7) · [PDF 8쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Yang_Holodeck_Language_Guided_Generation_of_3D_Embodied_AI_Environments_CVPR_2024_paper.pdf#page=8)
 - **Detected evaluation headings:** 4. Human Evaluation (p. 6).
 
 ## Experimental Matrix
 
 | Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
-| 4.2. HOLODECK on Diverse Scenes | SYSTEM / EVALUATION SCOPE UNRESOLVED | Compared to PROCTHOR's performance in residential scenes, HOLODECK achieves higher human preference scores over half of (28 out of 52) the diverse scenes. | p. 7 (4.2. HOLODECK on Diverse Scenes) |
-| 4.3. Ablation Study on Layout Design | SYSTEM / EVALUATION SCOPE UNRESOLVED | HOLODECK's constraint-based approach outperforms the other methods significantly on bathroom, bedroom and living room. | p. 7 (4.3. Ablation Study on Layout Design) |
-| 4.3. Ablation Study on Layout Design | SYSTEM / EVALUATION SCOPE UNRESOLVED | Given a novel scene type, e.g., Music Room, HOLODECK can synthesize new scenes for fine-tuning to improve the performance of pretrained agents in expert-designed ... | p. 8 (4.3. Ablation Study on Layout Design) |
-| 4.2. HOLODECK on Diverse Scenes | SYSTEM / EVALUATION SCOPE UNRESOLVED | We use cosine similarity times 100 as the CLIP Score. | p. 6 (4.2. HOLODECK on Diverse Scenes) |
-| 4.1. Comparative Analysis on Residential Scenes | SYSTEM / EVALUATION SCOPE UNRESOLVED | The CLIP Score experiment agrees with our human evaluation. | p. 6 (4.1. Comparative Analysis on Residential Scenes) |
+| 4.2. HOLODECK on Diverse Scenes | EMPIRICAL / SIMULATION | Compared to PROCTHOR's performance in residential scenes, HOLODECK achieves higher human preference scores over half of (28 out of 52) the diverse scenes. | p. 7 (4.2. HOLODECK on Diverse Scenes) |
+| 4.3. Ablation Study on Layout Design | EMPIRICAL / SIMULATION | HOLODECK's constraint-based approach outperforms the other methods significantly on bathroom, bedroom and living room. | p. 7 (4.3. Ablation Study on Layout Design) |
+| 4.3. Ablation Study on Layout Design | EMPIRICAL / SIMULATION | Given a novel scene type, e.g., Music Room, HOLODECK can synthesize new scenes for fine-tuning to improve the performance of pretrained agents in expert-designed ... | p. 8 (4.3. Ablation Study on Layout Design) |
+| 4.2. HOLODECK on Diverse Scenes | EMPIRICAL / SIMULATION | We use cosine similarity times 100 as the CLIP Score. | p. 6 (4.2. HOLODECK on Diverse Scenes) |
+| 4.1. Comparative Analysis on Residential Scenes | EMPIRICAL / SIMULATION | The CLIP Score experiment agrees with our human evaluation. | p. 6 (4.1. Comparative Analysis on Residential Scenes) |
 
 ## Dataset / Benchmark Role
 

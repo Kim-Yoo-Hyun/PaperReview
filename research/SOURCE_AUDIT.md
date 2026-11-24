@@ -4,6 +4,8 @@
 
 ## 요약·기여 원문 대조
 
+전체 1,252편 중 1,252편(100.00%)의 요약·기여를 원문에서 확인했다. 판정 대상 문장은 논문별 원장에 기록했다. 아래 표는 순차 배치의 대조 이력이다.
+
 | 확인일 | 등급 | 대상 | PDF | 공식 웹 원문 | 같은 등급에서 남은 요약 |
 |---|---|---|---:|---:|---:|
 | 2026-11-22 | NEXT | [pr-0028–pr-0768 중 당시 미확인 논문](https://github.com/Kim-Yoo-Hyun/PaperReview/tree/f3806160de5ecd1a08dd7b18364fd63d0dac5745) | 100 | 0 | 261 |
@@ -16,6 +18,7 @@
 | 2026-11-24 | REFERENCE | [pr-0676–pr-1023 중 당시 미확인 논문](https://github.com/Kim-Yoo-Hyun/PaperReview/tree/8f99ff9bf6765c7aefba27ec29cdc39d5b854e23) | 100 | 0 | 40 |
 | 2026-11-24 | REFERENCE | [pr-1024–pr-1210 중 당시 미확인 논문](https://github.com/Kim-Yoo-Hyun/PaperReview/tree/c99713fa4c274a23d4bff686fe2c59cd539659e8) | 40 | 0 | 0 |
 | 2026-11-24 | ARCHIVE | [pr-0025–pr-0366 중 당시 미확인 논문](https://github.com/Kim-Yoo-Hyun/PaperReview/tree/8800657041ca30b7ac60eacf3f0888fe439e543d) | 100 | 0 | 98 |
+| 2026-11-24 | ARCHIVE | [pr-0367–pr-0808 중 당시 미확인 논문](https://github.com/Kim-Yoo-Hyun/PaperReview/tree/b55be442da7b032e37acdca2bca7239a159ca4f8) | 98 | 0 | 0 |
 
 안정 ID 순서로 미확인 논문을 골라 각 overview의 한 줄 요약과 핵심 기여 두 개를 원문에 대조했다. 문장마다 실제 확인한 PDF 쪽수 또는 공식 웹 보고서의 절을 연결했다. 원장에는 판본과 교정 전 노트의 SHA-256을 기록했다. 이 순차 배치에서 집계하는 값은 검증 진척이다.
 
@@ -31,6 +34,30 @@
 **CLIP-Fields 저자 표기.** 2026-11-24에 RSS 게재본 표제면에 따라 첫 저자의 이름과 성 사이 공백을 복원해 Nur Muhammad (Mahi) Shafiullah로 교정했다. [게재본 표제면](https://www.roboticsproceedings.org/rss19/p074.pdf#page=1)
 
 **ReconFusion 저자 표기.** 2026-11-24에 CVPR 게재본 표제면에 인쇄된 마지막 저자 Aleksander Hołyński의 ł와 ń를 복원했다. [게재본 표제면](https://openaccess.thecvf.com/content/CVPR2024/papers/Wu_ReconFusion_3D_Reconstruction_with_Diffusion_Priors_CVPR_2024_paper.pdf#page=1)
+
+**Distilling Diffusion Models to Efficient 3D LiDAR Scene Completion 저자 표기.** 2026-11-24에 ICCV 게재본의 아홉 번째 저자 표기는 Perry Pengyun GU다. [게재본 표제면](https://openaccess.thecvf.com/content/ICCV2025/papers/Zhang_Distilling_Diffusion_Models_to_Efficient_3D_LiDAR_Scene_Completion_ICCV_2025_paper.pdf#page=1)
+
+**ComPC 저자 표기.** 2026-11-24에 ICLR 게재본과 대조해 마지막 저자의 이름을 Gim Hee Lee로 풀어 썼다. [게재본 표제면](https://proceedings.iclr.cc/paper_files/paper/2025/file/804f1fac094d7b751410b50066da3a63-Paper-Conference.pdf#page=1)
+
+**DiffSplat 저자 표기.** 2026-11-24에 ICLR 게재본 표제면에 인쇄된 마지막 저자 Yadong Mu의 대소문자를 반영했다. [게재본 표제면](https://proceedings.iclr.cc/paper_files/paper/2025/file/6518f9339196e172fa0ceef48a85543a-Paper-Conference.pdf#page=1)
+
+**ThermalGaussian 저자 표기.** 2026-11-24에 ICLR 게재본 표제면에 따라 Le Zhang과 Anke Xue의 대소문자를 고쳤다. [게재본 표제면](https://proceedings.iclr.cc/paper_files/paper/2025/file/03bdba50e3741ac5e3eaa0e55423587e-Paper-Conference.pdf#page=1)
+
+**Segment Any 3D Object with Language 저자 표기.** 2026-11-24에 ICLR 게재본에서 마지막 저자의 이름 Gim Hee Lee를 확인했다. [게재본 표제면](https://proceedings.iclr.cc/paper_files/paper/2025/file/f53437debdd397c42929d929614bc705-Paper-Conference.pdf#page=1)
+
+**SurfSplat 저자 표기.** 2026-11-24에 ICLR 게재본은 Gang Chen을 네 번째, Ning Cao를 다섯 번째 저자로 싣는다. 학회 웹 서지에는 두 이름의 순서가 뒤바뀌어 있다. [게재본 표제면](https://proceedings.iclr.cc/paper_files/paper/2026/file/3a10c46572628d58cb44fb705f25cbbf-Paper-Conference.pdf#page=1)
+
+**WorldSplat 저자 표기.** 2026-11-24에 ICLR 게재본 표제면의 마지막 저자 표기 Jian Yang을 반영했다. [게재본 표제면](https://proceedings.iclr.cc/paper_files/paper/2026/file/6fa4a1def9d60b5bf6078e13c900c45c-Paper-Conference.pdf#page=1)
+
+**IGGT 저자 표기.** 2026-11-24에 ICLR 게재본의 첫 번째·네 번째·일곱 번째 저자를 각각 Hao Li, Xuanyang Zhang, Yushi Lan으로 대조했다. [게재본 표제면](https://proceedings.iclr.cc/paper_files/paper/2026/file/e1f20114b5233d395486f9cf5b3e0535-Paper-Conference.pdf#page=1)
+
+**Multimodal LiDAR-Camera Novel View Synthesis with Unified Pose-free Neural Fields 저자 표기.** 2026-11-24에 NeurIPS 게재본은 Haiyun Wei를 다섯 번째 저자로 싣는다. 학회 웹 서지에는 여덟 번째로 올라 있다. [게재본 표제면](https://papers.neurips.cc/paper_files/paper/2025/file/70915b08a205ea5522528690d93518f6-Paper-Conference.pdf#page=1)
+
+**Towards Learning to Complete Anything in Lidar 저자 표기.** 2026-11-24에 ICML 게재본에 인쇄된 다섯 번째 저자 Riccardo de Lutio의 성 표기를 반영했다. [게재본 표제면](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/takmaz25a/takmaz25a.pdf#page=1)
+
+**SemanticKITTI 저자 표기.** 2026-11-24에 ICCV 게재본에서 마지막 저자가 Juergen Gall로 인쇄된 것을 확인했다. CVF 웹 서지는 Jurgen Gall로 표기한다. [게재본 표제면](https://openaccess.thecvf.com/content_ICCV_2019/papers/Behley_SemanticKITTI_A_Dataset_for_Semantic_Scene_Understanding_of_LiDAR_Sequences_ICCV_2019_paper.pdf#page=1)
+
+**Holodeck 저자 표기.** 2026-11-24에 CVPR 게재본 표제면의 네 번째 저자 Eli Vanderbilt 표기를 반영했다. [게재본 표제면](https://openaccess.thecvf.com/content/CVPR2024/papers/Yang_Holodeck_Language_Guided_Generation_of_3D_Embodied_AI_Environments_CVPR_2024_paper.pdf#page=1)
 
 **Online Continual Learning with Maximal Interfered Retrieval 저자 표기.** 2026-11-24에 NeurIPS 게재 PDF 표제면의 일곱 저자를 인쇄 순서대로 반영했다. 학회 웹 서지는 Lucas Page-Caccia를 일곱 번째로, 게재 PDF는 Lucas Caccia를 두 번째로 표기한다. [게재본 표제면](https://proceedings.neurips.cc/paper/2019/file/15825aee15eb335cc13f9b559f166ee8-Paper.pdf#page=1)
 
@@ -72,7 +99,19 @@
 | Depth Anything | 표 2는 여러 데이터셋의 상대 깊이 제로샷 전이를 평가한다. 표 3은 NYUv2에서 미터 단위 정답으로 미세조정한 결과다. KITTI의 미세조정 결과는 표 4에 따로 실렸다. [PDF 5쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Yang_Depth_Anything_Unleashing_the_Power_of_Large-Scale_Unlabeled_Data_CVPR_2024_paper.pdf#page=5) · [PDF 6쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Yang_Depth_Anything_Unleashing_the_Power_of_Large-Scale_Unlabeled_Data_CVPR_2024_paper.pdf#page=6) |
 | Touch2Shape | ABC 기반 표 3에서 접촉 영상은 시뮬레이터로 생성했다. 촉각만 썼을 때 파지 동작 5회 후 Chamfer 거리의 초기값 대비 비율은 RL 선택 6.63%, 무작위 선택 8.14%다. 낮을수록 복원 오차가 더 많이 줄었다. [PDF 5쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Wang_Touch2Shape_Touch-Conditioned_3D_Diffusion_for_Shape_Exploration_and_Reconstruction_CVPR_2025_paper.pdf#page=5) · [PDF 7쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Wang_Touch2Shape_Touch-Conditioned_3D_Diffusion_for_Shape_Exploration_and_Reconstruction_CVPR_2025_paper.pdf#page=7) |
 | SDGS | 표 1의 스테레오 Tianmouc 시퀀스에서 SDGS의 궤적 오차 RMSE는 slow 4.21 cm, fast 5.89 cm, extreme 3.91 cm다. 표 2는 별도 TUM RGB-D 자료에서 측정한 궤적 오차다. 저자가 보고한 약 2배의 속도 향상은 자세 최적화 반복 1회 기준이다. [PDF 1쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Tian_SDGS_Spatial_Difference_Guided_Gaussian_Splatting_for_Simultaneous_Localization_and_CVPR_2026_paper.pdf#page=1) · [PDF 7쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Tian_SDGS_Spatial_Difference_Guided_Gaussian_Splatting_for_Simultaneous_Localization_and_CVPR_2026_paper.pdf#page=7) |
+| SR3R | 4배 초해상도는 RE10K와 ACID의 새 시점에서 평가했다(표 1). 표 2는 RE10K에서 학습한 모델을 물체 중심 DTU에 추가 학습 없이 적용한 별도 전이 실험이다. [PDF 6쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Feng_SR3R_Rethinking_Super-Resolution_3D_Reconstruction_With_Feed-Forward_Gaussian_Splatting_CVPR_2026_paper.pdf#page=6) · [PDF 8쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Feng_SR3R_Rethinking_Super-Resolution_3D_Reconstruction_With_Feed-Forward_Gaussian_Splatting_CVPR_2026_paper.pdf#page=8) |
+| Distilling Diffusion Models to Efficient 3D LiDAR Scene Completion | SemanticKITTI 표 1에서 정제 단계를 포함한 프레임당 샘플링 시간은 LiDiff 30.55초, ScoreLiDAR 5.37초다. 같은 행에서 Chamfer 거리와 JSD는 낮아졌고 EMD는 23.16에서 23.26으로 높아졌다. [PDF 6쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Zhang_Distilling_Diffusion_Models_to_Efficient_3D_LiDAR_Scene_Completion_ICCV_2025_paper.pdf#page=6) |
+| GS-LRM | 약 0.23초는 카메라 자세를 아는 2~4개 입력 뷰에서 A100 한 장으로 가우시안을 예측하는 추론 시간이다. 물체 복원과 장면 복원은 별도로 학습한 모델로 비교했다. [PDF 1쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/03212.pdf#page=1) · [PDF 7쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/03212.pdf#page=7) · [PDF 14쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/03212.pdf#page=14) |
+| PRISM | Franka Research 3와 Realman RM75에서 여섯 조작 과제를 평가했다. 표 3은 RISE의 과제별 20회 시행 성공 횟수를 세 시드로 집계하고, 표 4는 여섯 과제에서 DP3 91.1%, PPT 92.8%, RISE 92.5%의 평균 성공률을 각각 보고한다. [PDF 7쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/liang26n/liang26n.pdf#page=7) · [PDF 8쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/liang26n/liang26n.pdf#page=8) |
+| S2GS | 스트리밍 효율 비교는 현재 뷰를 처리해 누적 상태를 갱신하는 프레임당 지연과 최대 GPU 메모리를 입력 길이별로 측정했다. 재구성·분할·인스턴스 추적의 정확도는 별도 지표로 평가했다. [PDF 6쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/zhang26fn/zhang26fn.pdf#page=6) · [PDF 7쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/zhang26fn/zhang26fn.pdf#page=7) · [PDF 8쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/zhang26fn/zhang26fn.pdf#page=8) |
+| EnerGS | 저자들은 가림이 복잡한 KITTI와 Waymo 시퀀스를 골라 동적 물체를 평가에서 제외했다. 보고된 새 시점 품질과 기하 정확도는 정적 장면에 해당한다. [PDF 6쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/song26b/song26b.pdf#page=6) · [PDF 7쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/song26b/song26b.pdf#page=7) |
+| Weakly Supervised Cross-Modal Learning for 4D Radar Scene Flow Estimation | View-of-Delft의 검증 분할에서 레이더 장면 흐름 오차를 전체·이동·정적 점으로 나누었다(표 1). 저자들은 자료에 완성된 흐름 정답이 없어 평가용 라벨을 전처리로 생성했다. [PDF 5쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/fu26r/fu26r.pdf#page=5) · [PDF 6쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/fu26r/fu26r.pdf#page=6) |
+| ScanNet | 원 논문에 보고된 규모는 서로 다른 실내 공간 707곳, RGB-D 스캔 1,513회, 영상 약 250만 장이다. 표 3의 물체 분류·복셀 라벨링 분할은 전체 수집 규모와 구분한다. [PDF 1쪽](https://openaccess.thecvf.com/content_cvpr_2017/papers/Dai_ScanNet_Richly-Annotated_3D_CVPR_2017_paper.pdf#page=1) · [PDF 2쪽](https://openaccess.thecvf.com/content_cvpr_2017/papers/Dai_ScanNet_Richly-Annotated_3D_CVPR_2017_paper.pdf#page=2) · [PDF 6쪽](https://openaccess.thecvf.com/content_cvpr_2017/papers/Dai_ScanNet_Richly-Annotated_3D_CVPR_2017_paper.pdf#page=6) |
+| SemanticKITTI | SemanticKITTI는 28개 범주에 주석을 붙였다. 표 2의 단일 스캔 분할은 19개 평가 범주를 사용하고 00~10번 가운데 08번을 검증에, 11~21번을 시험에 쓴다. [PDF 2쪽](https://openaccess.thecvf.com/content_ICCV_2019/papers/Behley_SemanticKITTI_A_Dataset_for_Semantic_Scene_Understanding_of_LiDAR_Sequences_ICCV_2019_paper.pdf#page=2) · [PDF 5쪽](https://openaccess.thecvf.com/content_ICCV_2019/papers/Behley_SemanticKITTI_A_Dataset_for_Semantic_Scene_Understanding_of_LiDAR_Sequences_ICCV_2019_paper.pdf#page=5) · [PDF 6쪽](https://openaccess.thecvf.com/content_ICCV_2019/papers/Behley_SemanticKITTI_A_Dataset_for_Semantic_Scene_Understanding_of_LiDAR_Sequences_ICCV_2019_paper.pdf#page=6) |
+| ScanQA | ScanQA 표 2의 질문은 총 41,363개로, 고유한 질문 문구는 32,337개이며 장면은 ScanNet 800개다. 답변의 일치도와 근거 물체의 3차원 위치를 따로 평가한다. [PDF 3쪽](https://openaccess.thecvf.com/content/CVPR2022/papers/Azuma_ScanQA_3D_Question_Answering_for_Spatial_Scene_Understanding_CVPR_2022_paper.pdf#page=3) · [PDF 5쪽](https://openaccess.thecvf.com/content/CVPR2022/papers/Azuma_ScanQA_3D_Question_Answering_for_Spatial_Scene_Understanding_CVPR_2022_paper.pdf#page=5) · [PDF 6쪽](https://openaccess.thecvf.com/content/CVPR2022/papers/Azuma_ScanQA_3D_Question_Answering_for_Spatial_Scene_Understanding_CVPR_2022_paper.pdf#page=6) |
 | ShapeNet | 2015년 보고서 당시 색인된 모델은 300만 개 이상이고 그중 22만 개를 WordNet 범주 3,135개로 분류했다. 표 2가 제시한 ShapeNetCore 하위 집합의 합계는 57,386개다. [PDF 1쪽](https://arxiv.org/pdf/1512.03012v1#page=1) · [PDF 8쪽](https://arxiv.org/pdf/1512.03012v1#page=8) |
+| nuScenes | 원 논문은 약 20초 길이의 주행 장면 1,000개를 수집했다. 23개 주석 범주 중 10개가 3차원 검출 평가 대상이며, AP의 매칭 기준은 지면에 투영한 두 상자 중심 사이의 거리다. [PDF 1쪽](https://openaccess.thecvf.com/content_CVPR_2020/papers/Caesar_nuScenes_A_Multimodal_Dataset_for_Autonomous_Driving_CVPR_2020_paper.pdf#page=1) · [PDF 4쪽](https://openaccess.thecvf.com/content_CVPR_2020/papers/Caesar_nuScenes_A_Multimodal_Dataset_for_Autonomous_Driving_CVPR_2020_paper.pdf#page=4) · [PDF 5쪽](https://openaccess.thecvf.com/content_CVPR_2020/papers/Caesar_nuScenes_A_Multimodal_Dataset_for_Autonomous_Driving_CVPR_2020_paper.pdf#page=5) |
+| Scalability in Perception for Autonomous Driving | CVPR 2020 논문의 자료는 20초짜리 주행 장면 1,150개다. 표 1은 차량당 LiDAR 5개·카메라 5개와 별도로 주석한 2차원·3차원 상자 수를 제시한다. [PDF 1쪽](https://openaccess.thecvf.com/content_CVPR_2020/papers/Sun_Scalability_in_Perception_for_Autonomous_Driving_Waymo_Open_Dataset_CVPR_2020_paper.pdf#page=1) · [PDF 2쪽](https://openaccess.thecvf.com/content_CVPR_2020/papers/Sun_Scalability_in_Perception_for_Autonomous_Driving_Waymo_Open_Dataset_CVPR_2020_paper.pdf#page=2) |
 | Dex-Net 2.0 | 새 생활용품 40개에서 보고한 전체 파지 성공률은 94%다. 99%는 모델이 안정적이라고 판정한 69회 중 성공한 68회의 정밀도다. 학습 때 본 까다로운 형상 8개의 성공률은 93%였다. [PDF 7쪽](https://www.roboticsproceedings.org/rss13/p58.pdf#page=7) · [PDF 8쪽](https://www.roboticsproceedings.org/rss13/p58.pdf#page=8) |
 | Learning to Walk in Minutes Using Massively Parallel Deep Reinforcement Learning | 평지 정책의 4분 미만과 험지 정책의 약 20분은 시뮬레이션 학습의 벽시계 시간이다. 험지 실험은 RTX A6000 한 장에서 정책을 1,500회 갱신했다. [PDF 1쪽](https://proceedings.mlr.press/v164/rudin22a/rudin22a.pdf#page=1) · [PDF 7쪽](https://proceedings.mlr.press/v164/rudin22a/rudin22a.pdf#page=7) |
 | Learning to Walk from Three Minutes of Real-World Data with Semi-structured Dynamics Models | 3분은 Go1에서 수집한 실제 상호작용 데이터의 길이다. 각 지면에서 3분의 자료를 쓴 뒤 평균 전진 속도는 단단한 바닥 0.98 m/s, 메모리폼 0.53 m/s였다. [PDF 6쪽](https://raw.githubusercontent.com/mlresearch/v270/d9fe509ba390176a5fd650178a381a0a7b2d4f64/assets/levy25a/levy25a.pdf#page=6) · [PDF 7쪽](https://raw.githubusercontent.com/mlresearch/v270/d9fe509ba390176a5fd650178a381a0a7b2d4f64/assets/levy25a/levy25a.pdf#page=7) |
@@ -86,6 +125,11 @@
 | BridgeData V2 | 24개 환경의 60,096개 궤적은 사람 시연 50,365개와 무작위화한 집기·놓기 스크립트로 얻은 9,731개로 구성된다. [PDF 1쪽](https://proceedings.mlr.press/v229/walke23a/walke23a.pdf#page=1) · [PDF 2쪽](https://proceedings.mlr.press/v229/walke23a/walke23a.pdf#page=2) · [PDF 4쪽](https://proceedings.mlr.press/v229/walke23a/walke23a.pdf#page=4) · [PDF 5쪽](https://proceedings.mlr.press/v229/walke23a/walke23a.pdf#page=5) |
 | RH20T | 표 IV는 새 환경에서 ACT를 시연 10·40·75개로 미세조정하고 설정별 20회 시행에서 도달·파지·배치 성공률을 따로 보고한다. 단일 시연 적응은 논문이 제시한 장기 목표다. [PDF 5쪽](https://arxiv.org/pdf/2307.00595v2#page=5) · [PDF 6쪽](https://arxiv.org/pdf/2307.00595v2#page=6) |
 | Learning to Rearrange Deformable Cables, Fabrics, and Bags with Goal-Conditioned Transporter Networks | ICRA 2021에 제출한 최종판은 케이블·천·가방을 PyBullet에서 평가했다. 2023년 저자 개정판 v4가 Franka Panda로 구슬 사슬 케이블을 재배치하는 실물 실험을 추가했다. [PDF 5쪽](https://arxiv.org/pdf/2012.03385v4#page=5) · [PDF 6쪽](https://arxiv.org/pdf/2012.03385v4#page=6) · [PDF 7쪽](https://arxiv.org/pdf/2012.03385v4#page=7) · [PDF 10쪽](https://arxiv.org/pdf/2012.03385v4#page=10) |
+| Holodeck | 사람의 선호와 에이전트 성능은 별도 실험이다. NOVELTYTHOR 시뮬레이션의 ObjectNav 표 2에서 ProcTHOR 사전학습 후 Holodeck으로 미세조정한 모델의 평균 성공률은 20.40%, SPL은 0.127이다. [PDF 7쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Yang_Holodeck_Language_Guided_Generation_of_3D_Embodied_AI_Environments_CVPR_2024_paper.pdf#page=7) · [PDF 8쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Yang_Holodeck_Language_Guided_Generation_of_3D_Embodied_AI_Environments_CVPR_2024_paper.pdf#page=8) |
+| MultiPLY | Multisensory Universe는 실내 스캔에 배치한 물체와 시뮬레이션 상호작용을 사용한다. 촉각 표식의 변위는 DiffTactile로 생성하고 각 물체의 온도 값은 온도 라벨을 조건으로 언어 모델에 질의해 부여했다. [PDF 3쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Hong_MultiPLY_A_Multisensory_Object-Centric_Embodied_Large_Language_Model_in_3D_CVPR_2024_paper.pdf#page=3) · [PDF 4쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Hong_MultiPLY_A_Multisensory_Object-Centric_Embodied_Large_Language_Model_in_3D_CVPR_2024_paper.pdf#page=4) |
+| Chain of Semantics Programming in 3D Gaussian Splatting Representation for 3D Vision Grounding | 표 2·3에서 자체 점검을 포함한 방법의 정답 물체 식별 정확도는 Nr3D 60.8%, Sr3D 91.4%다. 두 값의 단위는 지시 표현에서 맞는 물체를 선택한 비율이다. [PDF 5쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Shi_Chain_of_Semantics_Programming_in_3D_Gaussian_Splatting_Representation_for_CVPR_2025_paper.pdf#page=5) · [PDF 6쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Shi_Chain_of_Semantics_Programming_in_3D_Gaussian_Splatting_Representation_for_CVPR_2025_paper.pdf#page=6) |
+| SceneSplat | SceneSplat-7K의 7,916개 장면은 일곱 기존 실내 자료에서 구축한 가우시안 표현이다. 주석이 없는 장면을 자기지도 학습에 활용하며, 평가 단위는 장면의 의미 예측이다. [PDF 1쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Li_SceneSplat_Gaussian_Splatting-based_Scene_Understanding_with_Vision-Language_Pretraining_ICCV_2025_paper.pdf#page=1) · [PDF 3쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Li_SceneSplat_Gaussian_Splatting-based_Scene_Understanding_with_Vision-Language_Pretraining_ICCV_2025_paper.pdf#page=3) · [PDF 4쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Li_SceneSplat_Gaussian_Splatting-based_Scene_Understanding_with_Vision-Language_Pretraining_ICCV_2025_paper.pdf#page=4) |
+| LightSplat | LERF-OVS 표 1의 4.2초는 특징 증류 시간이다. 입력은 여러 뷰의 마스크와 CLIP 특징이며, 저자들이 따로 보고한 텍스트 질의 처리량은 미리 계산한 클러스터 특징을 조회할 때의 수치다. [PDF 3쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Bang_LightSplat_Fast_and_Memory-Efficient_Open-Vocabulary_3D_Scene_Understanding_in_Five_CVPR_2026_paper.pdf#page=3) · [PDF 6쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Bang_LightSplat_Fast_and_Memory-Efficient_Open-Vocabulary_3D_Scene_Understanding_in_Five_CVPR_2026_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Bang_LightSplat_Fast_and_Memory-Efficient_Open-Vocabulary_3D_Scene_Understanding_in_Five_CVPR_2026_paper.pdf#page=7) |
 | RealVLG-R1 | RealVLG-11B의 약 110억은 실제 장면 영상에 연결한 파지 예시의 수다. 표 1·2는 영상 수, 물체 수, 파지 주석 수를 각각 집계한다. [PDF 3쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Li_RealVLG-R1_A_Large-Scale_Real-World_Visual-Language_Grounding_Benchmark_for_Robotic_Perception_CVPR_2026_paper.pdf#page=3) · [PDF 4쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Li_RealVLG-R1_A_Large-Scale_Real-World_Visual-Language_Grounding_Benchmark_for_Robotic_Perception_CVPR_2026_paper.pdf#page=4) · [PDF 5쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Li_RealVLG-R1_A_Large-Scale_Real-World_Visual-Language_Grounding_Benchmark_for_Robotic_Perception_CVPR_2026_paper.pdf#page=5) |
 | Human-level control through deep reinforcement learning | 그림 3은 무작위 에이전트를 0%, 전문 플레이어를 100%로 두고 게임별 점수를 정규화한다. 49개 중 29개 게임에서 DQN이 사람 기준 점수의 75% 이상에 도달했다. [PDF 2쪽](https://www.nature.com/articles/nature14236.pdf#page=2) · [PDF 3쪽](https://www.nature.com/articles/nature14236.pdf#page=3) |
 | Restoring the Right Stream | 1,120개 새 인스턴스에서 상태 입력 보정 후 초기 자세 교란의 성공률은 23.8%에서 28.7%로 변했다(Holm 보정 p=0.287). 보정이 활성화되는 별도의 600개 확인 표본에서는 26.3%에서 32.2%로 변했다. [PDF 10쪽](https://mdpi-res.com/d_attachment/entropy/entropy-28-00975/article_deploy/entropy-28-00975.pdf#page=10) · [PDF 12쪽](https://mdpi-res.com/d_attachment/entropy/entropy-28-00975/article_deploy/entropy-28-00975.pdf#page=12) |
@@ -131,7 +175,7 @@ NoMaD(`pr-0568`)의 데이터는 기존에 `not_applicable`로 분류되어 있�
 
 11월 20일 논문 기록과 자동 검색 분류에서 오류를 고친 논문은 중복을 제외해 141/1,252편(11.26%)이다. 자동 분류에서 잘못 붙은 검색 단서와 논문 내용 자체의 오류는 위 표에서 구별했다.
 
-**[해석]** 미확인 필드에서 추가 오류가 나올 수 있어 전체의 실제 잔여 오류율은 점으로 추정할 수 없다. 기존 통과 판정을 전제로, 미확인만 해소될 때 가능한 논문 단위 범위는 0.00%–98.48%다. 이는 표본 신뢰구간이 아니다. 연구 비교에 쓸 요약과 공개 자료부터 미확인 필드를 계속 대조할 필요가 있다.
+**[해석]** 미확인 필드에서 추가 오류가 나올 수 있어 전체의 실제 잔여 오류율은 점으로 추정할 수 없다. 기존 통과 판정을 전제로, 미확인만 해소될 때 가능한 논문 단위 범위는 0.00%–98.48%다. 필드별 미확인 건수와 당시 무작위 표본의 결과는 아래에 따로 제시했다.
 
 ## 교정 재검증
 
@@ -153,7 +197,7 @@ NoMaD(`pr-0568`)의 데이터는 기존에 `not_applicable`로 분류되어 있�
 | 저자 | 6 | 1,251 | 1 | 0 |
 | 연도 | 0 | 1,252 | 0 | 0 |
 | 발표처·게재 | 0 | 1,182 | 70 | 0 |
-| 요약·기여 | 30 | 1,154 | 98 | 0 |
+| 요약·기여 | 30 | 1,252 | 0 | 0 |
 | 코드 | 0 | 384 | 868 | 0 |
 | 가중치 | 0 | 84 | 1,168 | 0 |
 | 데이터 | 0 | 101 | 1,151 | 0 |
@@ -168,7 +212,7 @@ NoMaD(`pr-0568`)의 데이터는 기존에 `not_applicable`로 분류되어 있�
 | CORE | 50 | 13 | 0 | 0 | 36 |
 | NEXT | 450 | 6 | 0 | 360 | 433 |
 | REFERENCE | 510 | 0 | 0 | 366 | 504 |
-| ARCHIVE | 242 | 0 | 98 | 131 | 242 |
+| ARCHIVE | 242 | 0 | 0 | 131 | 242 |
 
 ## 배치별 결과
 

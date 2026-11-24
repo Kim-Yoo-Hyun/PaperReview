@@ -6,7 +6,7 @@
 
 ## Evaluation in One Sentence
 
-PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 8 (4.4. Ablation Study), p. 7 (4.3. Zero-Shot Generalization), p. 7 (4.1. Experimental Setup), p. 6 (Figure/Table caption), p. 6 (4.1. Experimental Setup)): Table 3. Component-wise ablation on RE10K (4× 3DSR). Modules are added cumulatively to the NoPoSplat baseline. Each component improves performance, and Gaussian Offset Learning yields the largest gain with fewer ...
+4배 초해상도는 RE10K와 ACID의 새 시점에서 평가했다(표 1). 표 2는 RE10K에서 학습한 모델을 물체 중심 DTU에 추가 학습 없이 적용한 별도 전이 실험이다. [PDF 6쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Feng_SR3R_Rethinking_Super-Resolution_3D_Reconstruction_With_Feed-Forward_Gaussian_Splatting_CVPR_2026_paper.pdf#page=6) · [PDF 8쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Feng_SR3R_Rethinking_Super-Resolution_3D_Reconstruction_With_Feed-Forward_Gaussian_Splatting_CVPR_2026_paper.pdf#page=8)
 
 ## Evaluation Body Digest
 
@@ -22,10 +22,7 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 8 (4.4. Ablation
 ## Evaluation Type and Scope
 
 - **Evaluation type:** `EMPIRICAL / SOURCE-REPORTED EVALUATION`.
-- **Target system/task:** 3D scene/object와 robot coordinate frame.
-- **Input boundary:** RGB-D, image set, point cloud, depth와 camera pose.
-- **Output/decision under evaluation:** point map, pose, scene graph, affordance 또는 query result.
-- **Primary target:** geometric accuracy, semantic consistency와 planning/manipulation utility.
+- **평가 대상:** 입력에 없던 시점의 고해상도 렌더링을 평가하고, 학습에 포함되지 않은 장면에서 장면별 최적화 방법과 비교했다. [PDF 6쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Feng_SR3R_Rethinking_Super-Resolution_3D_Reconstruction_With_Feed-Forward_Gaussian_Splatting_CVPR_2026_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Feng_SR3R_Rethinking_Super-Resolution_3D_Reconstruction_With_Feed-Forward_Gaussian_Splatting_CVPR_2026_paper.pdf#page=7) · [PDF 8쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Feng_SR3R_Rethinking_Super-Resolution_3D_Reconstruction_With_Feed-Forward_Gaussian_Splatting_CVPR_2026_paper.pdf#page=8)
 - **Detected evaluation headings:** 4. Experimental Results (p. 6); 4.1. Experimental Setup (p. 6).
 
 ## Experimental Matrix

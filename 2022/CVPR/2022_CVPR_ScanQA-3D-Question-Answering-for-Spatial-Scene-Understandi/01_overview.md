@@ -17,12 +17,11 @@
 - Data availability: 공식 문항·응답 주석. 원본 ScanNet 스캔의 라이선스와 분리. · ScanQA_v1.0_train.json, ScanQA_v1.0_val.json [근거](https://drive.google.com/drive/folders/1-21A3TBE0QuofEwDg5oDz2z0HEdbVgL2?usp=sharing)
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (20 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다. [본문](https://openaccess.thecvf.com/content/CVPR2022/papers/Azuma_ScanQA_3D_Question_Answering_for_Spatial_Scene_Understanding_CVPR_2022_paper.pdf)
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — For example, 2D images lack an accurate sense of the relative directions and distances in the 3D scenes, i.e., the stereoscopic attribute-perception problem.
-
-방법 관련 발췌 — We introduce the new task of question answering for 3D modeling.
+ScanQA는 실내 3차원 스캔에 대해 자연어로 묻고 답하며 답의 근거 물체를 장면에서 찾는 과제와 자료를 제시한다. [PDF 1쪽](https://openaccess.thecvf.com/content/CVPR2022/papers/Azuma_ScanQA_3D_Question_Answering_for_Spatial_Scene_Understanding_CVPR_2022_paper.pdf#page=1) · [PDF 3쪽](https://openaccess.thecvf.com/content/CVPR2022/papers/Azuma_ScanQA_3D_Question_Answering_for_Spatial_Scene_Understanding_CVPR_2022_paper.pdf#page=3)
 
 ## Problem and Motivation
 
@@ -56,26 +55,12 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 1 / 1. Introduction - extractive body cue:** We introduce the new task of question answering for 3D modeling.
-- **p. 2 / 1. Introduction - extractive body cue:** We present the overview of the task in Fig.
-- **p. 2 / 1. Introduction - extractive body cue:** In this paper, we propose a 3D question answering (3DQA) task that uses 3D spatial information instead of 2D images to comprehend real-world information through ...
-- **p. 4 / 4. ScanQA Model - extractive body cue:** We introduce the baseline model of ScanQA for the 3DQA task.
-- **p. 5 / 4. ScanQA Model - extractive body cue:** This layer consists of object localization, object classification, and answer classification modules.
-- **p. 7 / 5.2. Quantitative Analysis - extractive body cue:** The results indicated that our ScanQA method significantly outperformed all baselines across all data splits over all evaluation metrics.
-- **p. 7 / 5.2. Quantitative Analysis - extractive body cue:** Interestingly, VoteNet+MCAN, ScanRefer+MCAN (end-to-end), and ScanQA significantly outperformed ScanRefer+MCAN (pipeline), which detects target objects related to a question using a pretrained ScanRefer and then applies ...
-- **p. 8 / Figure/Table caption - extractive body cue:** Figure 5. Qualitative results. Predicted answers are described below each figure. Predicted boxes are marked blue and the ground truth is marked green. We show ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- ScanNet 실내 장면을 바탕으로 질문·답 쌍을 수집하고 지시하는 물체를 3차원 상자에 연결했다. [PDF 3쪽](https://openaccess.thecvf.com/content/CVPR2022/papers/Azuma_ScanQA_3D_Question_Answering_for_Spatial_Scene_Understanding_CVPR_2022_paper.pdf#page=3) · [PDF 4쪽](https://openaccess.thecvf.com/content/CVPR2022/papers/Azuma_ScanQA_3D_Question_Answering_for_Spatial_Scene_Understanding_CVPR_2022_paper.pdf#page=4)
+- 질문 임베딩과 3차원 물체 제안 특징을 융합하는 기준선을 만들고 답변과 물체 위치 성능을 분리해 평가했다. [PDF 4쪽](https://openaccess.thecvf.com/content/CVPR2022/papers/Azuma_ScanQA_3D_Question_Answering_for_Spatial_Scene_Understanding_CVPR_2022_paper.pdf#page=4) · [PDF 5쪽](https://openaccess.thecvf.com/content/CVPR2022/papers/Azuma_ScanQA_3D_Question_Answering_for_Spatial_Scene_Understanding_CVPR_2022_paper.pdf#page=5) · [PDF 6쪽](https://openaccess.thecvf.com/content/CVPR2022/papers/Azuma_ScanQA_3D_Question_Answering_for_Spatial_Scene_Understanding_CVPR_2022_paper.pdf#page=6)
 
 ## Evaluation Scope
 
-| Dimension | Body-grounded record | Boundary | Anchor |
-|---|---|---|---|
-| Evaluation type | EMPIRICAL / REAL-ROBOT OR HARDWARE | do not infer unreported downstream behavior | p. 7 (5.2. Quantitative Analysis), p. 7 (5.2. Quantitative Analysis) |
-| Embodiment/environment | However, as the object IDs for the test set of ScanRefer are not publicly available, we further split the validation set of ScanRefer into two-holds as the validation set and test set ... | hardware/simulator version and reset protocol | p. 4 (3.3. Dataset Statistics), p. 3 (3.2. Question-Answer Collection) |
-| Dataset/benchmark | Considering that our dataset contains not only question-answer pairs but also 3D object localization annotations, we assume that this is the largest dataset to specify the nature of objects in 3D scenes ... | role, split, size and leakage | p. 4 (3.3. Dataset Statistics), p. 3 (3.2. Question-Answer Collection), p. 3 (3.3. Dataset Statistics), p. 4 (3.3. Dataset Statistics) |
-| Metric | Table 7. Feature ablation results on ScanQA (multiple) calization scores with the ground true boxes and consider positive predictions for the box with the highest IoU.) We observed that RGB values were ... | definition, denominator, direction and uncertainty | p. 13 (Figure/Table caption), p. 8 (5.4. Qualitative Analysis), p. 1 (Figure/Table caption) |
-| Baseline/ablation | We compared our ScanQA model with competitive baselines VoteNet+MCAN, ScanRefer+MCAN (pipeline), and ScanRefer+MCAN (end-to-end). | fair input/data/compute/action matching | p. 7 (5.2. Quantitative Analysis), p. 7 (5.2. Quantitative Analysis), p. 6 (Figure/Table caption) |
+ScanQA 표 2의 질문은 총 41,363개로, 고유한 질문 문구는 32,337개이며 장면은 ScanNet 800개다. 답변의 일치도와 근거 물체의 3차원 위치를 따로 평가한다. [PDF 3쪽](https://openaccess.thecvf.com/content/CVPR2022/papers/Azuma_ScanQA_3D_Question_Answering_for_Spatial_Scene_Understanding_CVPR_2022_paper.pdf#page=3) · [PDF 5쪽](https://openaccess.thecvf.com/content/CVPR2022/papers/Azuma_ScanQA_3D_Question_Answering_for_Spatial_Scene_Understanding_CVPR_2022_paper.pdf#page=5) · [PDF 6쪽](https://openaccess.thecvf.com/content/CVPR2022/papers/Azuma_ScanQA_3D_Question_Answering_for_Spatial_Scene_Understanding_CVPR_2022_paper.pdf#page=6)
 
 ## Explicit Limitations and Failure Boundary
 

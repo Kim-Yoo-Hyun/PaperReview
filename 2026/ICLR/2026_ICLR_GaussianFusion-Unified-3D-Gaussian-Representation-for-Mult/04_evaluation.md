@@ -6,7 +6,7 @@
 
 ## Evaluation in One Sentence
 
-PDF body evaluation/result cue (p. 8 (4.1 DATASET), p. 9 (4.1 DATASET), p. 10 (4.1 DATASET), p. 9 (4.1 DATASET), p. 7 (4.1 DATASET), p. 7 (4.1 DATASET)): Experimental results show that, compared to BEVFusion4D (Liu et al., 2023b), our temporal variant GaussianFusion-T achieves significant improvements.
+nuScenes와 Waymo에서 3D 물체 검출을 비교하고, 검출 지표와 별도로 복셀 점유 및 의미 예측을 평가했다. [PDF 8쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/b8932994f80e23f6dd535f0762ed3ef4-Paper-Conference.pdf#page=8) · [PDF 9쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/b8932994f80e23f6dd535f0762ed3ef4-Paper-Conference.pdf#page=9) · [PDF 10쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/b8932994f80e23f6dd535f0762ed3ef4-Paper-Conference.pdf#page=10)
 
 ## Evaluation Body Digest
 
@@ -21,22 +21,18 @@ PDF body evaluation/result cue (p. 8 (4.1 DATASET), p. 9 (4.1 DATASET), p. 10 (4
 
 ## Evaluation Type and Scope
 
-- **Evaluation type:** `SYSTEM / EVALUATION SCOPE UNRESOLVED`.
-- **Target system/task:** 3D scene/object와 robot coordinate frame.
-- **Input boundary:** RGB-D, image set, point cloud, depth와 camera pose.
-- **Output/decision under evaluation:** point map, pose, scene graph, affordance 또는 query result.
-- **Primary target:** geometric accuracy, semantic consistency와 planning/manipulation utility.
+- **Evaluation type:** `BENCHMARK / DATASET`.
 - **Detected evaluation headings:** 4 EXPERIMENTS (p. 7); 4.1 DATASET (p. 7).
 
 ## Experimental Matrix
 
 | Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
-| 4.1 DATASET | SYSTEM / EVALUATION SCOPE UNRESOLVED | Experimental results show that, compared to BEVFusion4D (Liu et al., 2023b), our temporal variant GaussianFusion-T achieves significant improvements. | p. 8 (4.1 DATASET) |
-| 4.1 DATASET | SYSTEM / EVALUATION SCOPE UNRESOLVED | More importantly, benefiting from our proposed Gaussian initialization strategy and iterative update mechanism, GaussianFusion-C achieves a 1.55 mIoU improvement and nearly 4.5! computational efficiency ... | p. 9 (4.1 DATASET) |
-| 4.1 DATASET | SYSTEM / EVALUATION SCOPE UNRESOLVED | Results show that deformable attention with Gaussian priors outperforms the vanilla variant by +0.4 NDS, demonstrating that the shape prior encoded by Gaussians facilitates ... | p. 10 (4.1 DATASET) |
-| 4.1 DATASET | SYSTEM / EVALUATION SCOPE UNRESOLVED | GaussianFusion outperforms the multi-modal SOTA method OccFusion (Ming et al., 2024), which is based on multi-scale voxel fusion, by +1.11 mIoU and significantly surpasses ... | p. 9 (4.1 DATASET) |
-| 4.1 DATASET | SYSTEM / EVALUATION SCOPE UNRESOLVED | In addition, compared with recent SOTA fusion works, such as UniTR (Wang et al., 2023a), EA-LSS (Hu et al., 2023b), and FusionFormer-S (Hu et ... | p. 7 (4.1 DATASET) |
+| 4.1 DATASET | BENCHMARK / DATASET | Experimental results show that, compared to BEVFusion4D (Liu et al., 2023b), our temporal variant GaussianFusion-T achieves significant improvements. | p. 8 (4.1 DATASET) |
+| 4.1 DATASET | BENCHMARK / DATASET | More importantly, benefiting from our proposed Gaussian initialization strategy and iterative update mechanism, GaussianFusion-C achieves a 1.55 mIoU improvement and nearly 4.5! computational efficiency ... | p. 9 (4.1 DATASET) |
+| 4.1 DATASET | BENCHMARK / DATASET | Results show that deformable attention with Gaussian priors outperforms the vanilla variant by +0.4 NDS, demonstrating that the shape prior encoded by Gaussians facilitates ... | p. 10 (4.1 DATASET) |
+| 4.1 DATASET | BENCHMARK / DATASET | GaussianFusion outperforms the multi-modal SOTA method OccFusion (Ming et al., 2024), which is based on multi-scale voxel fusion, by +1.11 mIoU and significantly surpasses ... | p. 9 (4.1 DATASET) |
+| 4.1 DATASET | BENCHMARK / DATASET | In addition, compared with recent SOTA fusion works, such as UniTR (Wang et al., 2023a), EA-LSS (Hu et al., 2023b), and FusionFormer-S (Hu et ... | p. 7 (4.1 DATASET) |
 
 ## Dataset / Benchmark Role
 

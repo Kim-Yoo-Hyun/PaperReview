@@ -16,12 +16,11 @@
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다. [본문](https://openaccess.thecvf.com/content/WACV2025/papers/Yao_DepthSSC_Monocular_3D_Semantic_Scene_Completion_via_Depth-Spatial_Alignment_and_WACV_2025_paper.pdf)
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — The limitations of these cameras, such as the lack of stereoscopic depth perception and restricted field of view, often lead to spatial distortions and deformations.
-
-방법 관련 발췌 — test set), surpassing the latest approaches. • We introduce the Spatially-Transformed Graph Fusion module, which facilitates the spatial transformation and feature fusion from voxels to graph structures, ensuring precise alignment of sp ...
+DepthSSC는 단안 도로 영상의 깊이와 공간 특징을 정렬해 관측되지 않은 공간까지 포함한 3D 복셀의 점유와 의미 범주를 예측한다. [PDF 1쪽](https://openaccess.thecvf.com/content/WACV2025/papers/Yao_DepthSSC_Monocular_3D_Semantic_Scene_Completion_via_Depth-Spatial_Alignment_and_WACV_2025_paper.pdf#page=1) · [PDF 3쪽](https://openaccess.thecvf.com/content/WACV2025/papers/Yao_DepthSSC_Monocular_3D_Semantic_Scene_Completion_via_Depth-Spatial_Alignment_and_WACV_2025_paper.pdf#page=3)
 
 ## Problem and Motivation
 
@@ -55,16 +54,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 44.89 IoU on the SemanticKITTI benchmark (hidden - extractive body cue:** test set), surpassing the latest approaches. • We introduce the Spatially-Transformed Graph Fusion module, which facilitates the spatial transformation and feature fusion from voxels to ...
-- **p. 2 / 1. Introduction - extractive body cue:** Our key contributions are: • We propose DepthSSC, a new method that integrates spatial transformation with geometric awareness to address the issues of inaccurate depth ...
-- **p. 4 / 3.2. Spatially-Transformed Graph Fusion - extractive body cue:** To address these spatial alignment issues, we propose the Spatially-Transformed Graph Fusion (ST-GF) module, as shown in Figure 3.
-- **p. 4 / 3.2. Spatially-Transformed Graph Fusion - extractive body cue:** ASAN is a neural network that predicts this affine transformation matrix Θijk, which consists of rotation, scaling, and translation components.
-- **p. 1 / 1. Introduction - extractive body cue:** S3cnet [4] and Scpnet [27], which leverage LiDAR-generated point clouds, are examples among various approaches that have been developed for 3D semantic scene completion.
-- **p. 8 / 4.4. Robustness experiment - extractive body cue:** The addition of the dynamic resolution in GAV also contributes significantly to the final performance. ing intensities into the depth input, defined as N(0, σ2), ...
-- **p. 3 / Figure/Table caption - extractive body cue:** Figure 2. Pipeline of the DepthSSC. The process begins with a backbone extracting 2D features from input images, followed by the projection of these 2D ...
-- **p. 8 / 4.4. Robustness experiment - extractive body cue:** The best performance is highlighted in bold.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 공간 변환 그래프에서 특징을 융합하고 기하 복잡도에 따라 복셀 표현을 조정해 경계와 깊이를 맞춘다. [PDF 3쪽](https://openaccess.thecvf.com/content/WACV2025/papers/Yao_DepthSSC_Monocular_3D_Semantic_Scene_Completion_via_Depth-Spatial_Alignment_and_WACV_2025_paper.pdf#page=3) · [PDF 4쪽](https://openaccess.thecvf.com/content/WACV2025/papers/Yao_DepthSSC_Monocular_3D_Semantic_Scene_Completion_via_Depth-Spatial_Alignment_and_WACV_2025_paper.pdf#page=4) · [PDF 5쪽](https://openaccess.thecvf.com/content/WACV2025/papers/Yao_DepthSSC_Monocular_3D_Semantic_Scene_Completion_via_Depth-Spatial_Alignment_and_WACV_2025_paper.pdf#page=5)
+- SemanticKITTI와 SSCBench-KITTI-360에서 장면 완성을 평가하고 깊이 정렬과 복셀 적응의 효과를 비교했다. [PDF 6쪽](https://openaccess.thecvf.com/content/WACV2025/papers/Yao_DepthSSC_Monocular_3D_Semantic_Scene_Completion_via_Depth-Spatial_Alignment_and_WACV_2025_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content/WACV2025/papers/Yao_DepthSSC_Monocular_3D_Semantic_Scene_Completion_via_Depth-Spatial_Alignment_and_WACV_2025_paper.pdf#page=7) · [PDF 8쪽](https://openaccess.thecvf.com/content/WACV2025/papers/Yao_DepthSSC_Monocular_3D_Semantic_Scene_Completion_via_Depth-Spatial_Alignment_and_WACV_2025_paper.pdf#page=8)
 
 ## Evaluation Scope
 

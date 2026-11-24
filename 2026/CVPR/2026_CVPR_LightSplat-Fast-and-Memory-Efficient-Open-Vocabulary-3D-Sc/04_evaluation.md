@@ -6,7 +6,7 @@
 
 ## Evaluation in One Sentence
 
-PDF body evaluation/result cue (p. 7 (4.3. 3D Semantic Segmentation), p. 1 (Figure/Table caption), p. 5 (4.2. 3D Object Selection), p. 5 (4.2. 3D Object Selection), p. 6 (4.3. 3D Semantic Segmentation), p. 6 (4.2. 3D Object Selection)): With context-aware 3D clustering, our method achieves detailed object boundaries while offering significantly faster performance than other methods.
+LERF-OVS 표 1의 4.2초는 특징 증류 시간이다. 입력은 여러 뷰의 마스크와 CLIP 특징이며, 저자들이 따로 보고한 텍스트 질의 처리량은 미리 계산한 클러스터 특징을 조회할 때의 수치다. [PDF 3쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Bang_LightSplat_Fast_and_Memory-Efficient_Open-Vocabulary_3D_Scene_Understanding_in_Five_CVPR_2026_paper.pdf#page=3) · [PDF 6쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Bang_LightSplat_Fast_and_Memory-Efficient_Open-Vocabulary_3D_Scene_Understanding_in_Five_CVPR_2026_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Bang_LightSplat_Fast_and_Memory-Efficient_Open-Vocabulary_3D_Scene_Understanding_in_Five_CVPR_2026_paper.pdf#page=7)
 
 ## Evaluation Body Digest
 
@@ -21,22 +21,19 @@ PDF body evaluation/result cue (p. 7 (4.3. 3D Semantic Segmentation), p. 1 (Figu
 
 ## Evaluation Type and Scope
 
-- **Evaluation type:** `EMPIRICAL / REAL-ROBOT OR HARDWARE`.
-- **Target system/task:** 3D scene/object와 robot coordinate frame.
-- **Input boundary:** RGB-D, image set, point cloud, depth와 camera pose.
-- **Output/decision under evaluation:** point map, pose, scene graph, affordance 또는 query result.
-- **Primary target:** geometric accuracy, semantic consistency와 planning/manipulation utility.
+- **Evaluation type:** `BENCHMARK / DATASET`.
+- **평가 대상:** LERF-OVS·DL3DV-OVS의 물체 선택과 ScanNet의 의미 분할을 평가하고 특징 증류 시간과 저장 비용을 비교했다. [PDF 6쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Bang_LightSplat_Fast_and_Memory-Efficient_Open-Vocabulary_3D_Scene_Understanding_in_Five_CVPR_2026_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Bang_LightSplat_Fast_and_Memory-Efficient_Open-Vocabulary_3D_Scene_Understanding_in_Five_CVPR_2026_paper.pdf#page=7) · [PDF 8쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Bang_LightSplat_Fast_and_Memory-Efficient_Open-Vocabulary_3D_Scene_Understanding_in_Five_CVPR_2026_paper.pdf#page=8)
 - **Detected evaluation headings:** 4. Experiments (p. 5); 4.1. Experimental Setup (p. 5).
 
 ## Experimental Matrix
 
 | Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
-| 4.3. 3D Semantic Segmentation | EMPIRICAL / REAL-ROBOT OR HARDWARE | With context-aware 3D clustering, our method achieves detailed object boundaries while offering significantly faster performance than other methods. | p. 7 (4.3. 3D Semantic Segmentation) |
-| Figure/Table caption | EMPIRICAL / REAL-ROBOT OR HARDWARE | Figure 1. Comprehensive comparison of speed, performance, and memory overhead. We evaluate recent open-vocabulary 3D scene understanding models in terms of distillation time (x-axis), ... | p. 1 (Figure/Table caption) |
-| 4.2. 3D Object Selection | EMPIRICAL / REAL-ROBOT OR HARDWARE | As shown in Table 2, our approach also achieves strong performance on DL3DV-OVS, a dataset with large and 19816 | p. 5 (4.2. 3D Object Selection) |
-| 4.2. 3D Object Selection | EMPIRICAL / REAL-ROBOT OR HARDWARE | Even without training, our method achieves SOTA performance on LERF-OVS, with a 50× speedup over recent models, as shown in Table 1. | p. 5 (4.2. 3D Object Selection) |
-| 4.3. 3D Semantic Segmentation | EMPIRICAL / REAL-ROBOT OR HARDWARE | Our method achieves the best performance across all settings. | p. 6 (4.3. 3D Semantic Segmentation) |
+| 4.3. 3D Semantic Segmentation | BENCHMARK / DATASET | With context-aware 3D clustering, our method achieves detailed object boundaries while offering significantly faster performance than other methods. | p. 7 (4.3. 3D Semantic Segmentation) |
+| Figure/Table caption | BENCHMARK / DATASET | Figure 1. Comprehensive comparison of speed, performance, and memory overhead. We evaluate recent open-vocabulary 3D scene understanding models in terms of distillation time (x-axis), ... | p. 1 (Figure/Table caption) |
+| 4.2. 3D Object Selection | BENCHMARK / DATASET | As shown in Table 2, our approach also achieves strong performance on DL3DV-OVS, a dataset with large and 19816 | p. 5 (4.2. 3D Object Selection) |
+| 4.2. 3D Object Selection | BENCHMARK / DATASET | Even without training, our method achieves SOTA performance on LERF-OVS, with a 50× speedup over recent models, as shown in Table 1. | p. 5 (4.2. 3D Object Selection) |
+| 4.3. 3D Semantic Segmentation | BENCHMARK / DATASET | Our method achieves the best performance across all settings. | p. 6 (4.3. 3D Semantic Segmentation) |
 
 ## Dataset / Benchmark Role
 

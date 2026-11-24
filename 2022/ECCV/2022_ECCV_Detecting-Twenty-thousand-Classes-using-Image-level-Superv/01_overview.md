@@ -16,12 +16,11 @@
 - Code/Project: https://github.com/facebookresearch/Detic
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (27 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다. [본문](https://www.ecva.net/papers/eccv_2022/papers_ECCV/papers/136690344.pdf)
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — In our experiments, the proposal network and the bounding box regressors are not the current performance bottleneck, as modern detectors use an over-sufficient number of proposals in testing (1K proposals for < ...
-
-방법 관련 발췌 — This also enables our method to learn detectors for new classes which would have been impossible to predict and assign.
+Detic은 상자 주석이 있는 검출 자료와 영상 전체의 범주만 아는 자료를 함께 사용해 검출기의 분류 어휘를 확장한다. [PDF 1쪽](https://www.ecva.net/papers/eccv_2022/papers_ECCV/papers/136690344.pdf#page=1) · [PDF 5쪽](https://www.ecva.net/papers/eccv_2022/papers_ECCV/papers/136690344.pdf#page=5)
 
 ## Problem and Motivation
 
@@ -55,16 +54,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / X. Zhou et al - extractive body cue:** This also enables our method to learn detectors for new classes which would have been impossible to predict and assign.
-- **p. 1 / 1 Introduction - extractive body cue:** Object detection consists of two sub-problems - finding the object (localization) and naming it (classification).
-- **p. 1 / 1 Introduction - extractive body cue:** In this paper, we propose Detector with image classes (Detic) that uses image-level supervision in addition to detection supervision.
-- **p. 2 / X. Zhou et al - extractive body cue:** Experiments on the open-vocabulary LVIS [17, 18] and the open-vocabulary COCO [2] benchmarks show that our method can significantly improve over a strong box-supervised baseline, ...
-- **p. 3 / X. Zhou et al - extractive body cue:** Our contributions are summarized below: - We identify issues and propose a simpler alternative to existing weaklysupervised detection techniques in the open-vocabulary setting. - Our ...
-- **p. 13 / Figure/Table caption - extractive body cue:** Table 5: Detic with different classifiers. We vary the classifier used with Detic and observe that it works well with different choices. While CLIP embeddings ...
-- **p. 26 / Figure/Table caption - extractive body cue:** Table 15: Detic applied to Deformable-DETR [79]. We report Box mAP on full LVIS. Our method improves Deformable-DETR. outperforms MosaicOS [73] in mAP and mAPr, ...
-- **p. 7 / 5 Experiments - extractive body cue:** We first establish a strong baseline on LVIS to demonstrate that our improvements are orthogonal to recent advances in object detection.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 영상 수준 라벨의 분류 손실을 가장 큰 제안 영역에 적용해 상자 주석이 없는 범주의 분류기를 학습한다. [PDF 5쪽](https://www.ecva.net/papers/eccv_2022/papers_ECCV/papers/136690344.pdf#page=5) · [PDF 6쪽](https://www.ecva.net/papers/eccv_2022/papers_ECCV/papers/136690344.pdf#page=6)
+- ImageNet 계열의 영상 수준 감독을 추가한 뒤 LVIS 등에서 새로운 범주 검출과 다른 자료로의 전이를 평가했다. [PDF 9쪽](https://www.ecva.net/papers/eccv_2022/papers_ECCV/papers/136690344.pdf#page=9) · [PDF 10쪽](https://www.ecva.net/papers/eccv_2022/papers_ECCV/papers/136690344.pdf#page=10) · [PDF 11쪽](https://www.ecva.net/papers/eccv_2022/papers_ECCV/papers/136690344.pdf#page=11)
 
 ## Evaluation Scope
 

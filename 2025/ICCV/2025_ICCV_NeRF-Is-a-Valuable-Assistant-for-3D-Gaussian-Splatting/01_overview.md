@@ -16,12 +16,11 @@
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다. [본문](https://openaccess.thecvf.com/content/ICCV2025/papers/Fang_NeRF_Is_a_Valuable_Assistant_for_3D_Gaussian_Splatting_ICCV_2025_paper.pdf)
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Moreover, the weak correlation between discrete Gaussians results in a lack of smooth spatial transitions [7, 8, 40], which negatively affects the visual quality of the rendered outputs.
-
-방법 관련 발췌 — To this end, we propose NeRF-GS, a novel framework that integrates the NeRF network into the training of the 3DGS model, leveraging specific NeRF properties to address 3DGS inherent limitations.
+NeRF-GS는 한 장면에서 신경 방사장과 3D 가우시안이 공간 정보를 공유하면서 각 표현 고유의 오차를 보정하게 한다. [PDF 1쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Fang_NeRF_Is_a_Valuable_Assistant_for_3D_Gaussian_Splatting_ICCV_2025_paper.pdf#page=1) · [PDF 3쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Fang_NeRF_Is_a_Valuable_Assistant_for_3D_Gaussian_Splatting_ICCV_2025_paper.pdf#page=3)
 
 ## Problem and Motivation
 
@@ -53,22 +52,14 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** To this end, we propose NeRF-GS, a novel framework that integrates the NeRF network into the training of the 3DGS model, leveraging specific NeRF properties ...
-- **p. 2 / 1. Introduction - extractive body cue:** To address this, we propose explicitly modeling their discrepancies by optimizing residual vectors for both features and positions to personalize and enhance 3DGS performance.
-- **p. 4 / 4.3. Joint Optimization in Dual-branch - extractive body cue:** To synchronize optimization, we propose rendering NeRF using only partial rays in each iteration.
-- **p. 5 / 5.2. Comparison - extractive body cue:** Notably, compared to other methods that incorporate NeRF-like concepts, such as VDGS and Hash-GS, NeRF-GS achieves even more substantial improvements.
-- **p. 5 / 5.2. Comparison - extractive body cue:** Comparative results are shown in Table 1, where our approach significantly outperforms the vanilla 3DGS model and other state-of-the-art methods across PSNR, SSIM, and LPIPS ...
-- **p. 8 / 5.4. Ablation Studies - extractive body cue:** The ablation results in Table 4 indicate that our proposed initialization significantly outperforms the alternatives.
-- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. NeRF-GS establishes a bridge of communication be- tween NeRF and 3DGS, leveraging information sharing, modeling of distinct characteristics, and joint optimization to enable ...
-- **p. 6 / 5.2. Comparison - extractive body cue:** Remarkably, NeRF-GS achieves performance comparable to or even surpassing the SplatField method, which is specifically designed for sparse-view set26235
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 두 분기의 공간 특징을 정렬하고 암시적 특징과 가우시안 위치에 별도의 잔차를 학습시켜 각 표현을 조정한다. [PDF 3쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Fang_NeRF_Is_a_Valuable_Assistant_for_3D_Gaussian_Splatting_ICCV_2025_paper.pdf#page=3) · [PDF 4쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Fang_NeRF_Is_a_Valuable_Assistant_for_3D_Gaussian_Splatting_ICCV_2025_paper.pdf#page=4) · [PDF 5쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Fang_NeRF_Is_a_Valuable_Assistant_for_3D_Gaussian_Splatting_ICCV_2025_paper.pdf#page=5)
+- 실제 장면의 새 시점 렌더링에서 기존 방법과 비교하고 특징 공유와 잔차를 제거했을 때 달라지는 결과를 평가했다. [PDF 5쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Fang_NeRF_Is_a_Valuable_Assistant_for_3D_Gaussian_Splatting_ICCV_2025_paper.pdf#page=5) · [PDF 6쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Fang_NeRF_Is_a_Valuable_Assistant_for_3D_Gaussian_Splatting_ICCV_2025_paper.pdf#page=6) · [PDF 8쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Fang_NeRF_Is_a_Valuable_Assistant_for_3D_Gaussian_Splatting_ICCV_2025_paper.pdf#page=8)
 
 ## Evaluation Scope
 
 | Dimension | Body-grounded record | Boundary | Anchor |
 |---|---|---|---|
-| Evaluation type | EMPIRICAL / REAL-ROBOT OR HARDWARE | do not infer unreported downstream behavior | p. 5 (5.2. Comparison), p. 5 (5.2. Comparison) |
+| Evaluation type | BENCHMARK / DATASET | do not infer unreported downstream behavior | p. 5 (5.2. Comparison), p. 5 (5.2. Comparison) |
 | Embodiment/environment | We report experimental results on real-world datasets, including Mip-NeRF360 (all 9 scenes) [5], Tanks&Temples [29] DeepBlending [23], and the Blender dataset [41]. | hardware/simulator version and reset protocol | p. 5 (5.1. Implementation Details), p. 5 (5.1. Implementation Details) |
 | Dataset/benchmark | Qualitative comparison on real-world datasets. | role, split, size and leakage | p. 5 (5.1. Implementation Details), p. 5 (5.1. Implementation Details), p. 6 (5.2. Comparison), p. 6 (5.2. Comparison) |
 | Metric | Errors introduced during NeRF pre-training and inherent disparities between NeRF and 3DGS can impede the GS branch's ability to effectively model a 3D scene from NeRF-shared information. | definition, denominator, direction and uncertainty | p. 7 (5.3. Qualitative Analysis of NeRF-GS), p. 8 (5.4. Ablation Studies), p. 5 (5.1. Implementation Details) |

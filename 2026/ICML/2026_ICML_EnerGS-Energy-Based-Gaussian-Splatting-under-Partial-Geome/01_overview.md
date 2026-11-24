@@ -17,12 +17,11 @@
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (19 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다. [본문](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/song26b/song26b.pdf)
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, in large-scale outdoor scenes, such priors are often spatially incomplete.
-
-방법 관련 발췌 — Our contributions are summarized as follows: • We introduce an energy field that unifies uncertainaware occupancy attraction (via a Welsch M-estimator) and free space exclusion (via a Boltzmann barrier) into a differentiable ...
+EnerGS는 부분적으로 알려진 장면의 표면과 빈 공간을 연속 에너지장으로 표현해 희소 관측에서 가우시안 복원을 제약한다. [PDF 1쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/song26b/song26b.pdf#page=1) · [PDF 3쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/song26b/song26b.pdf#page=3)
 
 ## Problem and Motivation
 
@@ -56,26 +55,12 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** Our contributions are summarized as follows: • We introduce an energy field that unifies uncertainaware occupancy attraction (via a Welsch M-estimator) and free space exclusion ...
-- **p. 2 / 1. Introduction - extractive body cue:** We propose Energy-Based Gaussian Splatting (EnerGS), a framework that reformulates 3DGS optimization as inference within a geometric energy field, as shown in Fig.
-- **p. 3 / 3. Methodology - extractive body cue:** We present EnerGS, a framework that regularizes volumetric reconstruction by enforcing geometric priors derived from partially observed geometry information.
-- **p. 4 / 3.3. Optimization via Gradient Decoupling - extractive body cue:** We propose a decoupled update rule.
-- **p. 1 / 1. Introduction - extractive body cue:** The field of novel view synthesis has witnessed a paradigm shift with the advent of 3D Gaussian Splatting (3DGS) [24, 17, 45, 4, 18, 48, ...
-- **p. 6 / 5.2. Quantitative Analysis - extractive body cue:** On KITTI, it attains the highest PSNR and OccCov together with the lowest Leak score, indicating improved alignment with occupied regions and fewer free space ...
-- **p. 6 / 5.1. Experimental Setup - extractive body cue:** Beyond improvements in standard evaluation metrics, our primary objective is to validate that our proposed energy formulation successfully resolves the ill-posedness inherent in sparse LiDAR ...
-- **p. 8 / 5.5. Training Generalization Comparison - extractive body cue:** Our EnerGS consistently maintains a smaller train-test gap throughout training, indicating that our method encourages the model to learn multi-view consistent geometry rather than viewpoint ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 표면 쪽으로 끌어당기는 항과 자유 공간에 가우시안이 들어갈 때 비용을 주는 볼츠만 장벽을 구성한다. [PDF 3쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/song26b/song26b.pdf#page=3) · [PDF 4쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/song26b/song26b.pdf#page=4) · [PDF 5쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/song26b/song26b.pdf#page=5)
+- KITTI와 Waymo 주행 장면에서 기하 사전 정보와 입력 시점 조건에 따른 렌더링과 표면 복원을 비교했다. [PDF 6쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/song26b/song26b.pdf#page=6) · [PDF 7쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/song26b/song26b.pdf#page=7) · [PDF 8쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/song26b/song26b.pdf#page=8)
 
 ## Evaluation Scope
 
-| Dimension | Body-grounded record | Boundary | Anchor |
-|---|---|---|---|
-| Evaluation type | EMPIRICAL / SOURCE-REPORTED EVALUATION | do not infer unreported downstream behavior | p. 6 (5.2. Quantitative Analysis), p. 6 (5.1. Experimental Setup) |
-| Embodiment/environment | Our study focuses exclusively on static scenes, and consequently, the evaluation excludes all dynamic objects. | hardware/simulator version and reset protocol | p. 6 (5.1. Experimental Setup), p. 6 (5.3. Qualitative Results) |
-| Dataset/benchmark | Visual Comparison on KITTI and Waymo Open Dataset. | role, split, size and leakage | p. 6 (5.1. Experimental Setup), p. 6 (5.3. Qualitative Results), p. 7 (5.3. Qualitative Results), p. 7 (5.3. Qualitative Results) |
-| Metric | On KITTI, it attains the highest PSNR and OccCov together with the lowest Leak score, indicating improved alignment with occupied regions and fewer free space violations. | definition, denominator, direction and uncertainty | p. 6 (5.2. Quantitative Analysis), p. 6 (5.2. Quantitative Analysis), p. 7 (5.3. Qualitative Results) |
-| Baseline/ablation | Our method renders significantly finer details in these areas compared to baselines, aligning with our theoretical expectation that the adaptive energy field facilitates robust reconstruction in sensor blind spots. tion in unobserved ... | fair input/data/compute/action matching | p. 7 (5.3. Qualitative Results), p. 8 (5.3. Qualitative Results), p. 6 (5.3. Qualitative Results) |
+저자들은 가림이 복잡한 KITTI와 Waymo 시퀀스를 골라 동적 물체를 평가에서 제외했다. 보고된 새 시점 품질과 기하 정확도는 정적 장면에 해당한다. [PDF 6쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/song26b/song26b.pdf#page=6) · [PDF 7쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/song26b/song26b.pdf#page=7)
 
 ## Explicit Limitations and Failure Boundary
 

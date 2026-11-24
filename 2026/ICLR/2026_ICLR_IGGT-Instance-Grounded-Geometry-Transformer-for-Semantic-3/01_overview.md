@@ -7,7 +7,8 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2026 / ICLR
-- Authors: 昊 李, Zhengyu Zou, Fangfu Liu, zhang xuanyang, Fangzhou Hong, Yukang Cao, Yushi LAN, Manyuan Zhang, Gang Yu, Dingwen Zhang, Ziwei Liu
+- Authors: Hao Li, Zhengyu Zou, Fangfu Liu, Xuanyang Zhang, Fangzhou Hong, Yukang Cao, Yushi Lan, Manyuan Zhang, Gang Yu, Dingwen Zhang, Ziwei Liu
+- 저자 판본: ICLR 게재본의 첫 번째·네 번째·일곱 번째 저자를 각각 Hao Li, Xuanyang Zhang, Yushi Lan으로 대조했다. [표제면](https://proceedings.iclr.cc/paper_files/paper/2026/file/e1f20114b5233d395486f9cf5b3e0535-Paper-Conference.pdf#page=1) · [학회 서지](https://proceedings.iclr.cc/paper_files/paper/2026/hash/e1f20114b5233d395486f9cf5b3e0535-Abstract-Conference.html)
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
 - Tags: 3D reconstruction, semantic, alignment, 3D Vision
@@ -16,12 +17,11 @@
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (26 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다. [본문](https://proceedings.iclr.cc/paper_files/paper/2026/file/e1f20114b5233d395486f9cf5b3e0535-Paper-Conference.pdf)
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, these approaches suffer from three critical limitations.
-
-방법 관련 발췌 — 3.1 OVERVIEW Our method consists of two main phases.
+IGGT는 여러 RGB 영상에서 3D 기하와 시점 간 일관된 물체 인스턴스를 함께 복원하는 트랜스포머다. [PDF 1쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/e1f20114b5233d395486f9cf5b3e0535-Paper-Conference.pdf#page=1) · [PDF 5쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/e1f20114b5233d395486f9cf5b3e0535-Paper-Conference.pdf#page=5)
 
 ## Problem and Motivation
 
@@ -55,16 +55,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 4 / 3 METHODOLOGY - extractive body cue:** 3.1 OVERVIEW Our method consists of two main phases.
-- **p. 7 / 3 METHODOLOGY - extractive body cue:** We present two example scenes from ScanNet (Dai et al., 2017) and ScanNet++ (Yeshwanth et al., 2023), and compare our method with SAM2* and SpaTracker+SAM.
-- **p. 6 / 3 METHODOLOGY - extractive body cue:** 1, our method is the only one that simultaneously enables multi-view instance matching, image-to-3D reconstruction, and scene understanding, while achieving state-of-the-art performance across all tasks.
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** To address this, we propose Instance-Grounded Geometry Transformer (IGGT), a novel end-to-end framework that unifies the representation for spatial reconstruction and contextual understanding.
-- **p. 3 / 1 INTRODUCTION - extractive body cue:** Moreover, regarding real-world scenarios, we propose a novel data curation pipeline that includes multi-view mask anVanilla GT Our Refined RGB Image (c) RGBD-Scan Scene Gen.
-- **p. 20 / A.8 CLASS-AGNOSTIC SEGMENTATION EXPERIMENTS - extractive body cue:** Our method significantly outperforms graph-based grouping approaches such as VGGT+Graph Cut across all metrics, achieving an 8.83 improvement in AP.
-- **p. 9 / 8.83 AP while avoiding its expensive mesh gen - extractive body cue:** This further demonstrates the flexibility of our method in using different VLMs to achieve improved text query performance.
-- **p. 7 / 4 EXPERIMENTS - extractive body cue:** By leveraging implicit 3D reasoning, our approach successfully distinguishes object identities to achieve nearly 100% TSR accuracy.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 깊이·자세·시점 간 일치하는 인스턴스 마스크를 갖춘 InsScene-15K를 구축하고, 같은 물체의 표현이 가까워지도록 대조 학습한다. [PDF 3쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/e1f20114b5233d395486f9cf5b3e0535-Paper-Conference.pdf#page=3) · [PDF 4쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/e1f20114b5233d395486f9cf5b3e0535-Paper-Conference.pdf#page=4) · [PDF 5쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/e1f20114b5233d395486f9cf5b3e0535-Paper-Conference.pdf#page=5)
+- 여러 뷰의 인스턴스 대응, 열린 어휘 분할과 질문 기반 장면 그라운딩에서 기하와 인스턴스 특징의 활용을 평가했다. [PDF 6쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/e1f20114b5233d395486f9cf5b3e0535-Paper-Conference.pdf#page=6) · [PDF 8쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/e1f20114b5233d395486f9cf5b3e0535-Paper-Conference.pdf#page=8) · [PDF 10쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/e1f20114b5233d395486f9cf5b3e0535-Paper-Conference.pdf#page=10)
 
 ## Evaluation Scope
 

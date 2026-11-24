@@ -7,7 +7,8 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2026 / ICLR
-- Authors: Bing He, Jingnan Gao, Yunuo Chen, Ning Cao, Gang Chen, Zhengxue Cheng, Li Song, Wenjun Zhang
+- Authors: Bing He, Jingnan Gao, Yunuo Chen, Gang Chen, Ning Cao, Zhengxue Cheng, Li Song, Wenjun Zhang
+- 저자 판본: ICLR 게재본은 Gang Chen을 네 번째, Ning Cao를 다섯 번째 저자로 싣는다. 학회 웹 서지에는 두 이름의 순서가 뒤바뀌어 있다. [표제면](https://proceedings.iclr.cc/paper_files/paper/2026/file/3a10c46572628d58cb44fb705f25cbbf-Paper-Conference.pdf#page=1) · [학회 서지](https://proceedings.iclr.cc/paper_files/paper/2026/hash/3a10c46572628d58cb44fb705f25cbbf-Abstract-Conference.html)
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
 - Tags: Gaussian Splatting, 3D reconstruction, 3D Vision
@@ -16,14 +17,13 @@
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (19 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다. [본문](https://proceedings.iclr.cc/paper_files/paper/2026/file/3a10c46572628d58cb44fb705f25cbbf-Paper-Conference.pdf)
 
 > DOC-QA1 (2026-10-23): 제어문자·깨진 추출 구간과 직접 연결된 표 항목을 PDF 페이지 이미지와 대조했다. 확인 범위·원문 URL·페이지·수정 이력은 [대조 기록](../../../work/sources/pdf_note_review_2026-10-23.json)에 있다. 노트 전체의 정독이나 모든 기존 주장에 대한 재검증을 뜻하지 않으며 reading status는 유지한다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Furthermore, most datasets lack out-of-distribution viewpoints for reliable assessment.
-
-방법 관련 발췌 — In summary, the main contributions of this work are as follows: • We propose SurfSplat, a feedforward network that reconstructs 3D scenes using 2D Gaussian surfels from sparse inputs.
+SurfSplat은 소수의 입력 뷰에서 픽셀별 2D 가우시안을 예측할 때 인접 표면의 연속성을 이용해 기하와 고해상도 렌더링을 개선한다. [PDF 1쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/3a10c46572628d58cb44fb705f25cbbf-Paper-Conference.pdf#page=1) · [PDF 4쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/3a10c46572628d58cb44fb705f25cbbf-Paper-Conference.pdf#page=4)
 
 ## Problem and Motivation
 
@@ -57,16 +57,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** In summary, the main contributions of this work are as follows: • We propose SurfSplat, a feedforward network that reconstructs 3D scenes using 2D Gaussian ...
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** Our model leverages a surface continuity prior and forced alpha blending to significantly improve reconstruction quality. • We introduce HRRC, a high-resolution rendering-based metric that ...
-- **p. 6 / 3.1 PRELIMINARIES - extractive body cue:** 3.6 HIGH-RESOLUTION RENDERING CONSISTENCY (HRRC) To better evaluate the geometric fidelity of reconstructed 3D scenes, we propose a novel evaluation metric: High-Resolution Rendering Consistency (HRRC).
-- **p. 5 / 3.1 PRELIMINARIES - extractive body cue:** To address these issues, we start by an observation: most visible geometry in real-world scenes consists of smooth, continuous surfaces.
-- **p. 6 / 3.1 PRELIMINARIES - extractive body cue:** To address this, we propose a forced alpha blending strategy that explicitly constrains each Gaussian's opacity.
-- **p. 8 / 4 EXPERIMENT - extractive body cue:** Since using more primitives generally improves performance, we focus our core comparisons on the latter group to ensure a fair comparison.
-- **p. 9 / 4 EXPERIMENT - extractive body cue:** Interestingly, this variant still achieves competitive novel view synthesis (NVS) performance at the original resolution, despite producing visually noisy and discontinuous surfaces.
-- **p. 10 / 4 EXPERIMENT - extractive body cue:** From this comparison, we observe that our method produces more geometrically consistent results, highlighting the improved geometric coherence induced by the surface continuity prior.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 입력 영상에서 인접한 표면 요소의 위치를 이용해 가우시안의 회전과 크기를 서로 일관되게 추정한다. [PDF 4쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/3a10c46572628d58cb44fb705f25cbbf-Paper-Conference.pdf#page=4) · [PDF 5쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/3a10c46572628d58cb44fb705f25cbbf-Paper-Conference.pdf#page=5) · [PDF 6쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/3a10c46572628d58cb44fb705f25cbbf-Paper-Conference.pdf#page=6)
+- 렌더링 해상도를 높였을 때 재구성이 일관적인지 측정하는 HRRC를 제안하고 표준 뷰 합성 지표와 함께 비교했다. [PDF 7쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/3a10c46572628d58cb44fb705f25cbbf-Paper-Conference.pdf#page=7) · [PDF 8쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/3a10c46572628d58cb44fb705f25cbbf-Paper-Conference.pdf#page=8) · [PDF 9쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/3a10c46572628d58cb44fb705f25cbbf-Paper-Conference.pdf#page=9)
 
 ## Evaluation Scope
 

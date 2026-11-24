@@ -7,7 +7,8 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2026 / ICLR
-- Authors: Ziyue Zhu, Zhanqian Wu, Zhenxin Zhu, Lijun Zhou, Haiyang Sun, Bing Wang, Kun Ma, Guang Chen, Hangjun Ye, Jin Xie, jian Yang
+- Authors: Ziyue Zhu, Zhanqian Wu, Zhenxin Zhu, Lijun Zhou, Haiyang Sun, Bing Wang, Kun Ma, Guang Chen, Hangjun Ye, Jin Xie, Jian Yang
+- 저자 판본: ICLR 게재본 표제면의 마지막 저자 표기 Jian Yang을 반영했다. [표제면](https://proceedings.iclr.cc/paper_files/paper/2026/file/6fa4a1def9d60b5bf6078e13c900c45c-Paper-Conference.pdf#page=1) · [학회 서지](https://proceedings.iclr.cc/paper_files/paper/2026/hash/6fa4a1def9d60b5bf6078e13c900c45c-Abstract-Conference.html)
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
 - Tags: Gaussian Splatting, Diffusion, Generation, 3D Vision
@@ -16,12 +17,11 @@
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (20 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다. [본문](https://proceedings.iclr.cc/paper_files/paper/2026/file/6fa4a1def9d60b5bf6078e13c900c45c-Paper-Conference.pdf)
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Existing video generators (Mao et al., 2024; Gao et al., 2023; Wen et al., 2024; Li et al., 2024a; Gao et al., 2024b) work in the 2D image domain and often lack ...
-
-방법 관련 발췌 — Our framework creates a dynamic 4D Gaussian representation and renders the novel views along any user-defined camera trajectory without per-scene optimization.
+WorldSplat은 동적 주행 장면을 시간에 따라 변하는 가우시안으로 생성하고, 여러 카메라 경로에서 일관된 영상을 합성한다. [PDF 1쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/6fa4a1def9d60b5bf6078e13c900c45c-Paper-Conference.pdf#page=1) · [PDF 4쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/6fa4a1def9d60b5bf6078e13c900c45c-Paper-Conference.pdf#page=4)
 
 ## Problem and Motivation
 
@@ -55,16 +55,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** Our framework creates a dynamic 4D Gaussian representation and renders the novel views along any user-defined camera trajectory without per-scene optimization.
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** By embedding 3D awareness into the diffusion model and using an explicit Gaussian-centric world representation, our method ensures spatial and temporal consistency across novel trajectory ...
-- **p. 3 / 3 METHOD - extractive body cue:** 2, our framework comprises three key modules: a 4D-aware latent diffusion model (Sec.
-- **p. 4 / 3 METHOD - extractive body cue:** We introduce a continuous mixing parameter s ∈[0, 1] and define the interpolated state z(s) = (1 -s) ϵ + s x.
-- **p. 4 / 3 METHOD - extractive body cue:** For fine-grained caption control, we introduce DataCrafter, which segments a K-view video into clips, scores them with a VLM evaluator (Wang et al., 2024c), generates ...
-- **p. 8 / Figure/Table caption - extractive body cue:** Figure 4: Comparison with MagicDrive (Gao et al., 2023) and Panacea (Wen et al., 2024). The top row shows real frames, the second row the ...
-- **p. 8 / 4 EXPERIMENTS - extractive body cue:** We systematically validate each component's contribution: (1) 3D Gaussians Representation (Version A →B): Introducing 3D Gaussians as explicit scene representation significantly improves performance with FVD ...
-- **p. 9 / 4 EXPERIMENTS - extractive body cue:** Red boxes indicate where our method achieves the greatest improvements.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 다중 모달 조건을 받는 잠재 확산 모델이 픽셀에 대응하는 4D 가우시안을 예측하고 비디오 확산 모델이 렌더링을 후처리한다. [PDF 4쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/6fa4a1def9d60b5bf6078e13c900c45c-Paper-Conference.pdf#page=4) · [PDF 5쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/6fa4a1def9d60b5bf6078e13c900c45c-Paper-Conference.pdf#page=5) · [PDF 6쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/6fa4a1def9d60b5bf6078e13c900c45c-Paper-Conference.pdf#page=6)
+- 주행 데이터에서 생성 영상의 품질과 경로 간 일관성을 비교하고, 생성한 영상을 이용한 다운스트림 인식 평가를 제시했다. [PDF 7쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/6fa4a1def9d60b5bf6078e13c900c45c-Paper-Conference.pdf#page=7) · [PDF 8쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/6fa4a1def9d60b5bf6078e13c900c45c-Paper-Conference.pdf#page=8) · [PDF 10쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/6fa4a1def9d60b5bf6078e13c900c45c-Paper-Conference.pdf#page=10)
 
 ## Evaluation Scope
 

@@ -6,7 +6,7 @@
 
 ## Evaluation in One Sentence
 
-PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 8 (4 Experiments), p. 3 (Figure/Table caption), p. 7 (4 Experiments), p. 9 (4 Experiments), p. 9 (4 Experiments)): Figure 6: Illustration of results on other datasets of our proposed SSRFlow method. Colors mean the same as Figure 5. More visualization results are exhibited in Appendix, Sec F FT3Do ...
+도메인 적응 손실을 이용하고 합성 자료에서 실제 점군으로 옮긴 조건의 흐름 오차를 비교했다. [PDF 5쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11125601#page=5) · [PDF 6쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11125601#page=6) · [PDF 7쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11125601#page=7)
 
 ## Evaluation Body Digest
 
@@ -21,22 +21,18 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 8 (4 Experiments
 
 ## Evaluation Type and Scope
 
-- **Evaluation type:** `EMPIRICAL / REAL-ROBOT OR HARDWARE`.
-- **Target system/task:** 3D scene/object와 robot coordinate frame.
-- **Input boundary:** RGB-D, image set, point cloud, depth와 camera pose.
-- **Output/decision under evaluation:** point map, pose, scene graph, affordance 또는 query result.
-- **Primary target:** geometric accuracy, semantic consistency와 planning/manipulation utility.
+- **Evaluation type:** `BENCHMARK / DATASET`.
 - **Detected evaluation headings:** 4 Experiments (p. 6); B Experiments Settings (p. 13); B.1 Evaluation Metrics (p. 13).
 
 ## Experimental Matrix
 
 | Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
-| Figure/Table caption | EMPIRICAL / REAL-ROBOT OR HARDWARE | Figure 6: Illustration of results on other datasets of our proposed SSRFlow method. Colors mean the same as Figure 5. More visualization results are ... | p. 8 (Figure/Table caption) |
-| 4 Experiments | EMPIRICAL / REAL-ROBOT OR HARDWARE | The quantitative results presented in Table 1 indicate that SSRFlow outperforms the other methods by a large margin, especially in real-world datasets. | p. 8 (4 Experiments) |
-| Figure/Table caption | EMPIRICAL / REAL-ROBOT OR HARDWARE | Figure 1: Illustration of the proposed network. Firstly, semantic features are hierarchically extracted and sent to GF to achieve global embedding between the two ... | p. 3 (Figure/Table caption) |
-| 4 Experiments | EMPIRICAL / REAL-ROBOT OR HARDWARE | The best results for each dataset are marked in bold. * denotes the methods with an inference time exceeding 250 ms. | p. 7 (4 Experiments) |
-| 4 Experiments | EMPIRICAL / REAL-ROBOT OR HARDWARE | The comprehensive results of the ablation experiments can be found in Table 5, while detailed information is presented in Table 6 and Table 7. | p. 9 (4 Experiments) |
+| Figure/Table caption | BENCHMARK / DATASET | Figure 6: Illustration of results on other datasets of our proposed SSRFlow method. Colors mean the same as Figure 5. More visualization results are ... | p. 8 (Figure/Table caption) |
+| 4 Experiments | BENCHMARK / DATASET | The quantitative results presented in Table 1 indicate that SSRFlow outperforms the other methods by a large margin, especially in real-world datasets. | p. 8 (4 Experiments) |
+| Figure/Table caption | BENCHMARK / DATASET | Figure 1: Illustration of the proposed network. Firstly, semantic features are hierarchically extracted and sent to GF to achieve global embedding between the two ... | p. 3 (Figure/Table caption) |
+| 4 Experiments | BENCHMARK / DATASET | The best results for each dataset are marked in bold. * denotes the methods with an inference time exceeding 250 ms. | p. 7 (4 Experiments) |
+| 4 Experiments | BENCHMARK / DATASET | The comprehensive results of the ablation experiments can be found in Table 5, while detailed information is presented in Table 6 and Table 7. | p. 9 (4 Experiments) |
 
 ## Dataset / Benchmark Role
 

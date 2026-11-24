@@ -17,12 +17,11 @@
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (22 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다. [본문](https://proceedings.neurips.cc/paper_files/paper/2025/file/6a0480190bbe6b622c7f1d3aa9be9c0f-Paper-Conference.pdf)
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, in real-world applications such as autonomous driving in the wild, which often involve fast motion and rapidly changing illumination, RGB cameras-dependent on long exposure times for imaging-face significant challenges, includi ...
-
-방법 관련 발췌 — In this paper, we propose EAG3R, an event-augemented MonST3R framework to enhance pointmapbased 3D geometry estimation under dynamic and extremely low-light conditions.
+EAG3R은 어둡거나 피사체가 움직이는 장면에서 RGB 영상에 비동기 이벤트를 결합해 깊이·카메라 궤적·3D 기하를 추정한다. [PDF 1쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/6a0480190bbe6b622c7f1d3aa9be9c0f-Paper-Conference.pdf#page=1) · [PDF 4쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/6a0480190bbe6b622c7f1d3aa9be9c0f-Paper-Conference.pdf#page=4)
 
 ## Problem and Motivation
 
@@ -54,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1 Introduction - extractive body cue:** In this paper, we propose EAG3R, an event-augemented MonST3R framework to enhance pointmapbased 3D geometry estimation under dynamic and extremely low-light conditions.
-- **p. 1 / 1 Introduction - extractive body cue:** Recent methods like DUSt3R [64] have shown that regressing dense pointmaps from image pairs using transformer-based foundation models enables accurate and efficient pose-free 3D reconstruction.
-- **p. 2 / 1 Introduction - extractive body cue:** This unified representation enables efficient downstream tasks such as depth estimation and camera pose estimation, under challenging lighting conditions. and neural rendering [48, 25], but ...
-- **p. 1 / 1 Introduction - extractive body cue:** Estimating geometry from videos or images is a fundamental problem in 3D vision, with broad applications in camera pose estimation, novel view synthesis, geometry reconstruction, ...
-- **p. 9 / 4 Experiments - extractive body cue:** Each addition improves performance, with the full EAG3R system achieving the best results.
-- **p. 7 / 4 Experiments - extractive body cue:** Fine-tuning MonST3R improves its performance across 7
-- **p. 7 / 4 Experiments - extractive body cue:** However, applying RetinexFormer, a widely used image enhancement network, as a preprocessing light-up step (denoted as (LightUp)) does not yield significant improvements and, in some ...
-- **p. 8 / 4 Experiments - extractive body cue:** 2, RGB-only baselines such as DUSt3R fail under extreme low-light conditions, while MonST3R offers improved results.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- MonST3R에 이벤트 어댑터와 국소 신호 대 잡음비 기반 특징 융합을 추가하고 전역 정렬에서 이벤트 광도 일관성을 제약한다. [PDF 4쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/6a0480190bbe6b622c7f1d3aa9be9c0f-Paper-Conference.pdf#page=4) · [PDF 5쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/6a0480190bbe6b622c7f1d3aa9be9c0f-Paper-Conference.pdf#page=5) · [PDF 6쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/6a0480190bbe6b622c7f1d3aa9be9c0f-Paper-Conference.pdf#page=6)
+- 저조도·동적 장면에서 RGB 기반 기준선과 단안 깊이 및 자세 오차를 비교하고 이벤트 신호의 영향을 분석했다. [PDF 7쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/6a0480190bbe6b622c7f1d3aa9be9c0f-Paper-Conference.pdf#page=7) · [PDF 8쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/6a0480190bbe6b622c7f1d3aa9be9c0f-Paper-Conference.pdf#page=8) · [PDF 9쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/6a0480190bbe6b622c7f1d3aa9be9c0f-Paper-Conference.pdf#page=9)
 
 ## Evaluation Scope
 

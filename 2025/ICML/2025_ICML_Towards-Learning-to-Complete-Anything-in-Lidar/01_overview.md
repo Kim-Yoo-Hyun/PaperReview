@@ -7,7 +7,8 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / ICML
-- Authors: Ayça Takmaz, Cristiano Saltori, Neehar Peri, Tim Meinhardt, Riccardo De Lutio, Laura Leal-Taixé, Aljosa Osep
+- Authors: Ayça Takmaz, Cristiano Saltori, Neehar Peri, Tim Meinhardt, Riccardo de Lutio, Laura Leal-Taixé, Aljosa Osep
+- 저자 판본: ICML 게재본에 인쇄된 다섯 번째 저자 Riccardo de Lutio의 성 표기를 반영했다. [표제면](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/takmaz25a/takmaz25a.pdf#page=1) · [학회 서지](https://proceedings.mlr.press/v267/takmaz25a.html)
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
 - Tags: sensor fusion, LiDAR, 3D Vision
@@ -16,12 +17,11 @@
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (25 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다. [본문](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/takmaz25a/takmaz25a.pdf)
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, prior work can only localize and complete around 1
-
-방법 관련 발췌 — We propose the first method for Zero-Shot Lidar Panoptic Scene Completion.
+CAL은 여러 시점의 센서 관측에서 얻은 부분 형상과 의미 정보를 LiDAR만 사용하는 물체 완성 모델에 전달한다. [PDF 1쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/takmaz25a/takmaz25a.pdf#page=1) · [PDF 3쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/takmaz25a/takmaz25a.pdf#page=3)
 
 ## Problem and Motivation
 
@@ -55,16 +55,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** We propose the first method for Zero-Shot Lidar Panoptic Scene Completion.
-- **p. 2 / 1. Introduction - extractive body cue:** 1, 2⃝) and demonstrate that our method can recognize and complete arbitrary objects not captured in canonical semantic vocabularies (Fig.
-- **p. 4 / 3. Method - extractive body cue:** Our method takes a semantic vocabulary consisting of free-form semantic class descriptions only at test time.
-- **p. 4 / 3.2. Learning To Complete Objects - extractive body cue:** The backbone consists of a sparse feature encoder (●) (Choy et al., 2019) followed by a dense 3D convolutional block (●).
-- **p. 5 / 3.2. Learning To Complete Objects - extractive body cue:** We estimate scene-level occupancy using a multiscale sparse generative decoder that consists of decoder blocks D, two occupancy heads Bo and Bs, and a pseudo-semantic ...
-- **p. 8 / 4.3. Pseudo-labeling engine analysis - extractive body cue:** While the best results are achieved with Tfw = 64, Tbw = 16, w = 1 (13.10 PQ†), we use the combination Tfw = 32 ...
-- **p. 7 / 4.2. Experimental results - extractive body cue:** Specifically, we achieve 13.12 PQ† (49.51 % of PaSCo) and 13.09 mIoU (46.37 % of PaSCo) in the ZS setting on SemanticKITTI and further improve ...
-- **p. 8 / 4.2. Experimental results - extractive body cue:** Results show that CRF refinement significantly improves pseudo-label quality in both datasets and settings.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 주행 시퀀스에서 같은 물체의 관측을 모아 부분 완성 표적과 영상 기반 의미 특징을 만들고 인스턴스 단위로 증류한다. [PDF 3쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/takmaz25a/takmaz25a.pdf#page=3) · [PDF 4쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/takmaz25a/takmaz25a.pdf#page=4) · [PDF 5쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/takmaz25a/takmaz25a.pdf#page=5)
+- 학습한 표현을 의미·파놉틱 장면 완성, 가려진 부분까지 포함한 3차원 상자와 개방 어휘 물체 인식에 적용했다. [PDF 6쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/takmaz25a/takmaz25a.pdf#page=6) · [PDF 7쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/takmaz25a/takmaz25a.pdf#page=7) · [PDF 8쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/takmaz25a/takmaz25a.pdf#page=8)
 
 ## Evaluation Scope
 

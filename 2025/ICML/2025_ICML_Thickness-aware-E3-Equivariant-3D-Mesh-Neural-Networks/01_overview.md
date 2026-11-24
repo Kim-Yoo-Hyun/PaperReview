@@ -16,12 +16,11 @@
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (18 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다. [본문](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/kim25r/kim25r.pdf)
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, meshbased objects, which represent the geometry and topology of surfaces, face challenges in accurately modeling these interactions due to the lack of connections between opposing surfaces within the mesh.
-
-방법 관련 발췌 — The key contributions of this study are as follows: • Thickness-Aware Framework: We propose a Thicknessaware E(3)-Equivariant 3D Mesh Neural Networks (TEMNN) that accurately models interactions between opposing surfaces while retaining ...
+T-EMNN은 표면 메시와 국소 두께가 주어졌을 때 사출 성형 부품의 변형을 예측한다. [PDF 1쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/kim25r/kim25r.pdf#page=1) · [PDF 4쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/kim25r/kim25r.pdf#page=4)
 
 ## Problem and Motivation
 
@@ -55,22 +54,14 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** The key contributions of this study are as follows: • Thickness-Aware Framework: We propose a Thicknessaware E(3)-Equivariant 3D Mesh Neural Networks (TEMNN) that accurately models ...
-- **p. 1 / 1. Introduction - extractive body cue:** To quantitatively illustrate the significance of these interactions, we present an analysis in Fig.
-- **p. 3 / 4. Methodology - extractive body cue:** T-EMNN consists of an encoder (Sec.
-- **p. 3 / 4. Methodology - extractive body cue:** Our method, T-EMNN, extends the encode-process-decode framework of MGN (Pfaff et al., 2020), introducing key innovations for handling 3D shapes with thickness while incorporating spatial ...
-- **p. 5 / 4.2.3. THICKNESS PROCESSOR - extractive body cue:** In addition, to account for thickness-related interactions, we introduce a thickness edge ei,thick connecting vi to T (vi), with its feature fi,thick ∈R2 defined as: ...
-- **p. 7 / 5.4.1. MAIN RESULTS - extractive body cue:** The results demonstrate that spatial information alone is sufficient to achieve strong performance in terms of R2 score, highlighting its importance in representing meaningful relationships ...
-- **p. 7 / 5.4.1. MAIN RESULTS - extractive body cue:** The enhanced alignment provided by our proposed data-driven coordinate system significantly improves the representation of spatial relationships, leading to superior performance in downstream tasks.
-- **p. 8 / 5.4.2. IMPACT OF THICKNESS-AWARE FRAMEWORK - extractive body cue:** 8, all baseline models exhibit improved performance when incorporating thickness edges compared to their counterparts without them.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 두께를 반영한 메시 표현과 형상에 정렬한 좌표계를 구성해 회전·평행이동에 일관된 변형을 예측한다. [PDF 4쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/kim25r/kim25r.pdf#page=4) · [PDF 5쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/kim25r/kim25r.pdf#page=5) · [PDF 6쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/kim25r/kim25r.pdf#page=6)
+- 사출 부품의 변형 자료에서 오차를 평가하고 두께 정보와 좌표 정렬을 제거한 결과를 비교했다. [PDF 6쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/kim25r/kim25r.pdf#page=6) · [PDF 7쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/kim25r/kim25r.pdf#page=7) · [PDF 8쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/kim25r/kim25r.pdf#page=8)
 
 ## Evaluation Scope
 
 | Dimension | Body-grounded record | Boundary | Anchor |
 |---|---|---|---|
-| Evaluation type | EMPIRICAL / REAL-ROBOT OR HARDWARE | do not infer unreported downstream behavior | p. 7 (5.4.1. MAIN RESULTS), p. 7 (5.4.1. MAIN RESULTS) |
+| Evaluation type | BENCHMARK / DATASET | do not infer unreported downstream behavior | p. 7 (5.4.1. MAIN RESULTS), p. 7 (5.4.1. MAIN RESULTS) |
 | Embodiment/environment | We evaluate T-EMNN using a dataset from real-world injection molding applications. | hardware/simulator version and reset protocol | p. 6 (5.1. Dataset Description), p. 6 (5.1. Dataset Description) |
 | Dataset/benchmark | We assess the model performance using three metrics: 1) RMSE, which evaluates the effectiveness of handling outliers, 2) MAE, which measures the consistency and accuracy of the model's predictions, and 3) R2, ... | role, split, size and leakage | p. 6 (5.1. Dataset Description), p. 6 (5.1. Dataset Description), p. 7 (5.3. Evaluation Settings), p. 8 (5.4.3. EVALUATION UNDER DYNAMIC SETTING) |
 | Metric | This underscores the critical role of E(3)-equivariance in ensuring the robustness of the coordinate system. | definition, denominator, direction and uncertainty | p. 7 (5.4.1. MAIN RESULTS), p. 7 (5.4.1. MAIN RESULTS), p. 8 (5.4.1. MAIN RESULTS) |

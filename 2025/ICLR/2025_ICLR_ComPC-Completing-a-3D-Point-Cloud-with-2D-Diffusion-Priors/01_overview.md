@@ -7,7 +7,8 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / ICLR
-- Authors: Tianxin Huang, Zhiwen Yan, Yuyang Zhao, Gim H Lee
+- Authors: Tianxin Huang, Zhiwen Yan, Yuyang Zhao, Gim Hee Lee
+- 저자 판본: ICLR 게재본과 대조해 마지막 저자의 이름을 Gim Hee Lee로 풀어 썼다. [표제면](https://proceedings.iclr.cc/paper_files/paper/2025/file/804f1fac094d7b751410b50066da3a63-Paper-Conference.pdf#page=1) · [학회 서지](https://proceedings.iclr.cc/paper_files/paper/2025/hash/804f1fac094d7b751410b50066da3a63-Abstract-Conference.html)
 - Primary track: Planning and control
 - Tier: ARCHIVE
 - Tags: Diffusion, Generation, point cloud, 3D Vision
@@ -16,12 +17,11 @@
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (20 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다. [본문](https://proceedings.iclr.cc/paper_files/paper/2025/file/804f1fac094d7b751410b50066da3a63-Paper-Conference.pdf)
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, they face challenges in handling data that differs from what they were trained on, such as unseen object categories or real-world scans.
-
-방법 관련 발췌 — Our main contributions can be summarized as below: • We propose the Partial Gaussian Initialization to generate a reference image for partial points, which is observed from an estimated reference viewpoint; • ...
+ComPC는 범주별 완성 모델을 새로 훈련하지 않고, 사전학습된 2D 확산 모델을 사용해 일부만 관측한 물체 점군의 빈 영역을 복원한다. [PDF 1쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/804f1fac094d7b751410b50066da3a63-Paper-Conference.pdf#page=1) · [PDF 4쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/804f1fac094d7b751410b50066da3a63-Paper-Conference.pdf#page=4)
 
 ## Problem and Motivation
 
@@ -54,16 +54,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** Our main contributions can be summarized as below: • We propose the Partial Gaussian Initialization to generate a reference image for partial points, which is ...
-- **p. 1 / 1 INTRODUCTION - extractive body cue:** In view of the above-mentioned issues, we propose a novel test-time point cloud completion framework that eliminates the need for any extra manually provided information ...
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** Inspired by the capability of novel view synthetic diffusion model, e.g., Zero 1-to-3 (Liu et al., 2023), we propose to use the reference image as ...
-- **p. 3 / 1 INTRODUCTION - extractive body cue:** In this study, we propose to leverage 3D Gaussian Splatting (GS) (Kerbl et al., 2023) to bridge point clouds with priors from 2D diffusion models.
-- **p. 3 / 1 INTRODUCTION - extractive body cue:** Due to the efficient rendering from 3D GS, and stronger priors from Zero 1-to-3, our method can achieve much higher optimization efficiency than SDS-Complete (Kasten ...
-- **p. 10 / 4 EXPERIMENTS - extractive body cue:** The results demonstrate that the Preservation Constraint improves performance compared to standard view-dependent diffusion guidance.
-- **p. 9 / 4 EXPERIMENTS - extractive body cue:** The results show that the normal map consistently outperforms other methods.
-- **p. 16 / A.7 EVALUATION ON MULTI-MODAL METRICS - extractive body cue:** Our method achieves superior performance on UHD and MMD metrics, further validating its effectiveness for 3D point cloud completion.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 관측 점군으로 가우시안을 초기화하고 여러 뷰의 확산 단서로 비어 있는 영역을 채운 뒤 완성된 표면에서 균일한 점군을 추출한다. [PDF 4쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/804f1fac094d7b751410b50066da3a63-Paper-Conference.pdf#page=4) · [PDF 5쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/804f1fac094d7b751410b50066da3a63-Paper-Conference.pdf#page=5) · [PDF 6쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/804f1fac094d7b751410b50066da3a63-Paper-Conference.pdf#page=6)
+- 합성 부분 관측과 실제 Redwood 스캔에서 복원 형상을 비교하고 형상 생성과 점 추출 단계를 각각 평가했다. [PDF 7쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/804f1fac094d7b751410b50066da3a63-Paper-Conference.pdf#page=7) · [PDF 8쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/804f1fac094d7b751410b50066da3a63-Paper-Conference.pdf#page=8) · [PDF 10쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/804f1fac094d7b751410b50066da3a63-Paper-Conference.pdf#page=10)
 
 ## Evaluation Scope
 

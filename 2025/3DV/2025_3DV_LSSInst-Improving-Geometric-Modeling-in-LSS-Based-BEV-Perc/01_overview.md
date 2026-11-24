@@ -16,12 +16,11 @@
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (16 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다. [본문](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11125638)
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, unlike LiDAR sensors that provide direct and accurate depth information, detecting objects solely based on camera sensor images poses a significant challenge.
-
-방법 관련 발췌 — Our main contributions can be concluded as follows: i) We proposed LSSInst, a two-stage framework that improves the geometric details in LSS-based BEV perception with instance representations; ii) We proposed the instance ...
+LSSInst는 여러 카메라의 영상을 조감도에서 먼저 검출한 뒤 인스턴스별로 원래 영상 특징을 다시 조회해 3차원 물체를 검출한다. [PDF 1쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11125638#page=1) · [PDF 3쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11125638#page=3)
 
 ## Problem and Motivation
 
@@ -55,16 +54,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** Our main contributions can be concluded as follows: i) We proposed LSSInst, a two-stage framework that improves the geometric details in LSS-based BEV perception with ...
-- **p. 2 / 1. Introduction - extractive body cue:** With this in mind, we propose the instance adaptor module to establish semantic coherence between the scene and instances and an instance branch for detection.
-- **p. 3 / 3. Methodology - extractive body cue:** The overview of our framework is shown in Fig.
-- **p. 3 / 3. Methodology - extractive body cue:** In this work, we propose LSSInst, which looks back for the more geometry-aware and finegrained target feature extraction to bridge the adaptation between scene-level and ...
-- **p. 5 / 3. Methodology - extractive body cue:** Then we introduce five separated linear projections {Ej l3}2 j=1 ∈R3×C, {Ej l2}2 j=1 ∈R2×C and Eg ∈RC×C for comprehensive encoding, of which the former ...
-- **p. 6 / 4.3. Generalization Ability and Geometric-Wise - extractive body cue:** The table reveals that our LSSInst achieves notable improvements in mAP and NDS compared to standalone BEV detectors at a minor cost.
-- **p. 6 / 4.2. Benchmark Results - extractive body cue:** On the test set, our LSSInst achieves an mAP of 54.6% and an NDS of 62.9% without any additional augmentation, outperforming all LSS-based methods.
-- **p. 7 / 4.5. Multiplicate Queries Ablations - extractive body cue:** On the other hand, though the proposal queries from BEV alone can achieve overall good results, adding more queries 7
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 조감도에서 생성한 인스턴스 제안과 영상 질의를 어댑터로 연결해 뷰 변환 과정에서 손실되는 세부 단서를 이용한다. [PDF 3쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11125638#page=3) · [PDF 4쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11125638#page=4) · [PDF 5쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11125638#page=5)
+- nuScenes에서 3차원 검출을 비교하고 영상 특징의 재조회와 입력 교란이 검출 성능에 주는 영향을 평가했다. [PDF 6쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11125638#page=6) · [PDF 7쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11125638#page=7) · [PDF 8쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11125638#page=8)
 
 ## Evaluation Scope
 

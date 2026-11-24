@@ -16,12 +16,11 @@
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (12 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다. [본문](https://openaccess.thecvf.com/content/WACV2025/papers/Fu_Scene-LLM_Extending_Language_Model_for_3D_Visual_Reasoning_WACV_2025_paper.pdf)
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Current models [15, 19, 42] typically focus on one of these aspects or process them with separate models, hindering their effectiveness in tasks like interactive indoor planning that require both.
-
-방법 관련 발췌 — In summary, our primary contributions are: • We introduce Scene-LLM, a 3D-VLM that connecting 3D visual information with LLM and sets new stateof-the-art on 3D-VQA and interactive planning benchmarks; • We show ...
+Scene-LLM은 전체 실내 장면과 에이전트 시점의 3차원 정보를 함께 인코딩해 언어 모델이 장면 상태와 행동 계획을 추론하게 한다. [PDF 1쪽](https://openaccess.thecvf.com/content/WACV2025/papers/Fu_Scene-LLM_Extending_Language_Model_for_3D_Visual_Reasoning_WACV_2025_paper.pdf#page=1) · [PDF 3쪽](https://openaccess.thecvf.com/content/WACV2025/papers/Fu_Scene-LLM_Extending_Language_Model_for_3D_Visual_Reasoning_WACV_2025_paper.pdf#page=3)
 
 ## Problem and Motivation
 
@@ -55,16 +54,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** In summary, our primary contributions are: • We introduce Scene-LLM, a 3D-VLM that connecting 3D visual information with LLM and sets new stateof-the-art on 3D-VQA ...
-- **p. 2 / 1. Introduction - extractive body cue:** To overcome this, we propose integrating both types of 3D visual information to an unified visual feature in Scene-LLM.
-- **p. 1 / Abstract - extractive body cue:** Unique to our approach is the integration of both scene-level and egocentric 3D information with a compact hybrid representation.
-- **p. 1 / Body text (section not recovered) - extractive body cue:** We showcase some applications, including describing scene details (scene captioning), identifying and describing objects (object captioning), breaking down complex tasks into simpler steps (task decomposition), ...
-- **p. 3 / 3. 3D-Visual-Language Data Generation - extractive body cue:** Our dataset comprises about 9, 000 indoor scenes from three sources: real indoor scans [14], single rooms from the Habitat-Matterport 3D dataset (hm3d) [53], and ...
-- **p. 8 / Figure/Table caption - extractive body cue:** Table 5. High-level planning accuracy(HLP) on Alfred dataset valid unseen/seen set with different inference strategy. Full model outperform strategies without egocentric and scene state updates. ...
-- **p. 7 / Figure/Table caption - extractive body cue:** Table 3. Result on Alfred dataset on test unseen/seen set and valid unseen/seen set. The metrics reported include success rate (SR), goal-conditioned success rate(GC), and ...
-- **p. 5 / 5. Experiments - extractive body cue:** The inference setup, more results and analysis are detailed in the supplementary material.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 전역 장면과 자기중심적 프레임의 3차원 특징을 텍스트 임베딩 공간으로 투영하고 프레임과 언어를 정렬한다. [PDF 3쪽](https://openaccess.thecvf.com/content/WACV2025/papers/Fu_Scene-LLM_Extending_Language_Model_for_3D_Visual_Reasoning_WACV_2025_paper.pdf#page=3) · [PDF 4쪽](https://openaccess.thecvf.com/content/WACV2025/papers/Fu_Scene-LLM_Extending_Language_Model_for_3D_Visual_Reasoning_WACV_2025_paper.pdf#page=4) · [PDF 5쪽](https://openaccess.thecvf.com/content/WACV2025/papers/Fu_Scene-LLM_Extending_Language_Model_for_3D_Visual_Reasoning_WACV_2025_paper.pdf#page=5)
+- 장면 설명, 질문 답변과 상호작용 계획을 평가해 전역 정보와 갱신되는 지역 관측의 역할을 비교했다. [PDF 6쪽](https://openaccess.thecvf.com/content/WACV2025/papers/Fu_Scene-LLM_Extending_Language_Model_for_3D_Visual_Reasoning_WACV_2025_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content/WACV2025/papers/Fu_Scene-LLM_Extending_Language_Model_for_3D_Visual_Reasoning_WACV_2025_paper.pdf#page=7) · [PDF 8쪽](https://openaccess.thecvf.com/content/WACV2025/papers/Fu_Scene-LLM_Extending_Language_Model_for_3D_Visual_Reasoning_WACV_2025_paper.pdf#page=8)
 
 ## Evaluation Scope
 

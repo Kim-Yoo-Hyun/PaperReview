@@ -6,7 +6,7 @@
 
 ## Evaluation in One Sentence
 
-PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 7 (Figure/Table caption), p. 8 (Figure/Table caption), p. 1 (Figure/Table caption), p. 4 (3. GaussianVerse), p. 5 (4. Formulating 3D Gaussians as 2D Atlas)): Table 2. Qualitative comparisons. Our method achieves perfor- mance comparable to the state-of-the-art in terms of CLIP similar- ity scores, with the minimum number of 3D Gaussians. sive details. In ...
+텍스트 조건 생성에서 아틀라스를 다시 3D로 렌더링해 비교하고 2D 사전학습과 표현 방식의 영향을 분석했다. [PDF 6쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Xiang_Repurposing_2D_Diffusion_Models_with_Gaussian_Atlas_for_3D_Generation_ICCV_2025_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Xiang_Repurposing_2D_Diffusion_Models_with_Gaussian_Atlas_for_3D_Generation_ICCV_2025_paper.pdf#page=7)
 
 ## Evaluation Body Digest
 
@@ -21,22 +21,18 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 7 (Figure/Table 
 
 ## Evaluation Type and Scope
 
-- **Evaluation type:** `SYSTEM / EVALUATION SCOPE UNRESOLVED`.
-- **Target system/task:** high-dimensional data 또는 robot action-trajectory distribution.
-- **Input boundary:** conditioning observation와 noisy/intermediate sample.
-- **Output/decision under evaluation:** generated sample, action chunk 또는 trajectory.
-- **Primary target:** distribution fit, multimodality, sample quality와 latency.
+- **Evaluation type:** `BENCHMARK / DATASET`.
 - **Detected evaluation headings:** 6. Experiments (p. 6); 6.1. Results (p. 6).
 
 ## Experimental Matrix
 
 | Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
-| Figure/Table caption | SYSTEM / EVALUATION SCOPE UNRESOLVED | Table 2. Qualitative comparisons. Our method achieves perfor- mance comparable to the state-of-the-art in terms of CLIP similar- ity scores, with the minimum number ... | p. 7 (Figure/Table caption) |
-| Figure/Table caption | SYSTEM / EVALUATION SCOPE UNRESOLVED | Figure 7. User study results. Our method outperforms state-of- the-art methods [57, 60] in user preferences regarding generation quality and alignment with text prompts. ... | p. 7 (Figure/Table caption) |
-| Figure/Table caption | SYSTEM / EVALUATION SCOPE UNRESOLVED | Figure 8. Finetuning from a pretrained 2D diffusion model leads to faster generalization. Top: 3D generations at different training checkpoints from finetuning (top row) ... | p. 8 (Figure/Table caption) |
-| Figure/Table caption | SYSTEM / EVALUATION SCOPE UNRESOLVED | Figure 1. Previous 3D generators are either end-to-end 3D models [10, 57] or a combination of a multi-view 2D generator followed by a 2D-to-3D ... | p. 1 (Figure/Table caption) |
-| 3. GaussianVerse | SYSTEM / EVALUATION SCOPE UNRESOLVED | Compared with several previous studies [10, 30, 57] which also fit per-object 3D Gaussians for training diffusion models, we achieve higherquality 3DGS fittings with ... | p. 4 (3. GaussianVerse) |
+| Figure/Table caption | BENCHMARK / DATASET | Table 2. Qualitative comparisons. Our method achieves perfor- mance comparable to the state-of-the-art in terms of CLIP similar- ity scores, with the minimum number ... | p. 7 (Figure/Table caption) |
+| Figure/Table caption | BENCHMARK / DATASET | Figure 7. User study results. Our method outperforms state-of- the-art methods [57, 60] in user preferences regarding generation quality and alignment with text prompts. ... | p. 7 (Figure/Table caption) |
+| Figure/Table caption | BENCHMARK / DATASET | Figure 8. Finetuning from a pretrained 2D diffusion model leads to faster generalization. Top: 3D generations at different training checkpoints from finetuning (top row) ... | p. 8 (Figure/Table caption) |
+| Figure/Table caption | BENCHMARK / DATASET | Figure 1. Previous 3D generators are either end-to-end 3D models [10, 57] or a combination of a multi-view 2D generator followed by a 2D-to-3D ... | p. 1 (Figure/Table caption) |
+| 3. GaussianVerse | BENCHMARK / DATASET | Compared with several previous studies [10, 30, 57] which also fit per-object 3D Gaussians for training diffusion models, we achieve higherquality 3DGS fittings with ... | p. 4 (3. GaussianVerse) |
 
 ## Dataset / Benchmark Role
 

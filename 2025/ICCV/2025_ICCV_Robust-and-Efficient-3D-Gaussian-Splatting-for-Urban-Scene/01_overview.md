@@ -16,12 +16,11 @@
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다. [본문](https://openaccess.thecvf.com/content/ICCV2025/papers/Yuan_Robust_and_Efficient_3D_Gaussian_Splatting_for_Urban_Scene_Reconstruction_ICCV_2025_paper.pdf)
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, its *Corresponding author explicit representation introduces scalability challenges, as spatial complexity increases with scene size.
-
-방법 관련 발췌 — The main contributions are summarized as follows: • We propose a novel visibility-based data division strategy and in-partition prioritized densification method, to achieve efficient urban-scale scene reconstruction. • A controllable LO ...
+이 연구는 도시 규모 촬영 자료를 구역별로 학습하고 서로 다른 시점의 외관을 보정해 3D 가우시안 장면을 렌더링한다. [PDF 1쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Yuan_Robust_and_Efficient_3D_Gaussian_Splatting_for_Urban_Scene_Reconstruction_ICCV_2025_paper.pdf#page=1) · [PDF 3쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Yuan_Robust_and_Efficient_3D_Gaussian_Splatting_for_Urban_Scene_Reconstruction_ICCV_2025_paper.pdf#page=3)
 
 ## Problem and Motivation
 
@@ -55,16 +54,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** The main contributions are summarized as follows: • We propose a novel visibility-based data division strategy and in-partition prioritized densification method, to achieve efficient urban-scale ...
-- **p. 1 / 1. Introduction - extractive body cue:** To address these challenges, we propose a novel, efficient, and robust 3DGS method specifically designed for urban scene reconstruction.
-- **p. 2 / 1. Introduction - extractive body cue:** Experimental results demonstrate that our method outperform existing methods in terms of reconstruction quality, resource efficiency, and rendering speed, enabling the reconstruction of arbitrarily large ...
-- **p. 3 / 3.3. In-Partition Prioritized Densification - extractive body cue:** To solve this problem, as shown in Figure 2 we propose a distance-related threshold for each Gaussian: τi = ˆτmin
-- **p. 4 / 3.4.1. Controllable Detail Level Generation - extractive body cue:** Experiments show that our method achieves higher quality than compression-based method while enabling faster completion by utilizing low-resolution images and a smaller budget for lower ...
-- **p. 8 / 4.4. Ablation Study - extractive body cue:** This model significantly improves all three quality metrics across all scenes.
-- **p. 6 / 4.2. Results - extractive body cue:** This underscores our method's ability to achieve high-fidelity reconstructions of urban-scale scenes.
-- **p. 6 / 4.2. Results - extractive body cue:** For quality-related metrics (SSIM, PSNR, and LPIPS), the results indicate that our method outperforms others.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 구역별 가시성으로 학습 영상을 선택하고 외관 변환과 깊이·스케일 정규화를 적용해 대규모 최적화를 안정화한다. [PDF 3쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Yuan_Robust_and_Efficient_3D_Gaussian_Splatting_for_Urban_Scene_Reconstruction_ICCV_2025_paper.pdf#page=3) · [PDF 4쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Yuan_Robust_and_Efficient_3D_Gaussian_Splatting_for_Urban_Scene_Reconstruction_ICCV_2025_paper.pdf#page=4) · [PDF 5쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Yuan_Robust_and_Efficient_3D_Gaussian_Splatting_for_Urban_Scene_Reconstruction_ICCV_2025_paper.pdf#page=5)
+- 도시 장면의 새 시점 화질과 계산 비용을 비교하고 안티앨리어싱 및 외관 보정 등 개별 구성의 영향을 평가했다. [PDF 6쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Yuan_Robust_and_Efficient_3D_Gaussian_Splatting_for_Urban_Scene_Reconstruction_ICCV_2025_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Yuan_Robust_and_Efficient_3D_Gaussian_Splatting_for_Urban_Scene_Reconstruction_ICCV_2025_paper.pdf#page=7)
 
 ## Evaluation Scope
 

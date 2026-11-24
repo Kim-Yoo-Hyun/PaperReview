@@ -6,7 +6,7 @@
 
 ## Evaluation in One Sentence
 
-PDF body evaluation/result cue (p. 5 (4.1. Experimental Setups), p. 6 (Figure/Table caption), p. 7 (Figure/Table caption), p. 5 (4.1. Experimental Setups), p. 6 (Figure/Table caption), p. 8 (Figure/Table caption)): While PixelNeRF has a smaller model size, our approach achieves lower GPU memory consumption on the ShapeNet-SRN dataset.
+물체와 장면 복원에 각각 다른 교사를 적용해 입력 영상을 조건으로 한 학생 모델과 원래 교사의 결과를 비교했다. [PDF 5쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Peng_A_Lesson_in_Splats_Teacher-Guided_Diffusion_for_3D_Gaussian_Splats_ICCV_2025_paper.pdf#page=5) · [PDF 6쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Peng_A_Lesson_in_Splats_Teacher-Guided_Diffusion_for_3D_Gaussian_Splats_ICCV_2025_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Peng_A_Lesson_in_Splats_Teacher-Guided_Diffusion_for_3D_Gaussian_Splats_ICCV_2025_paper.pdf#page=7)
 
 ## Evaluation Body Digest
 
@@ -21,22 +21,18 @@ PDF body evaluation/result cue (p. 5 (4.1. Experimental Setups), p. 6 (Figure/Ta
 
 ## Evaluation Type and Scope
 
-- **Evaluation type:** `EMPIRICAL / REAL-ROBOT OR HARDWARE`.
-- **Target system/task:** high-dimensional data 또는 robot action-trajectory distribution.
-- **Input boundary:** conditioning observation와 noisy/intermediate sample.
-- **Output/decision under evaluation:** generated sample, action chunk 또는 trajectory.
-- **Primary target:** distribution fit, multimodality, sample quality와 latency.
+- **Evaluation type:** `BENCHMARK / DATASET`.
 - **Detected evaluation headings:** 4. Experiments (p. 5); 4.1. Experimental Setups (p. 5); 4.2. Implementation Details (p. 5).
 
 ## Experimental Matrix
 
 | Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
-| 4.1. Experimental Setups | EMPIRICAL / REAL-ROBOT OR HARDWARE | While PixelNeRF has a smaller model size, our approach achieves lower GPU memory consumption on the ShapeNet-SRN dataset. | p. 5 (4.1. Experimental Setups) |
-| Figure/Table caption | EMPIRICAL / REAL-ROBOT OR HARDWARE | Table 1. ShapeNet-SRN: Single-View Reconstruction (test split). Our method achieves better quality on all metrics on the Car split and Chair dataset, while performing ... | p. 6 (Figure/Table caption) |
-| Figure/Table caption | EMPIRICAL / REAL-ROBOT OR HARDWARE | Table 4. Ablations Studies on Single view Reconstruction, evaluated on the validation set of ShapeNet-SRN Cars. In (b) and (c) rows, we use Splatter ... | p. 7 (Figure/Table caption) |
-| 4.1. Experimental Setups | EMPIRICAL / REAL-ROBOT OR HARDWARE | In our ablation studies, we train a Splatter Image using our "Medium" U-Net and report its performance. | p. 5 (4.1. Experimental Setups) |
-| Figure/Table caption | EMPIRICAL / REAL-ROBOT OR HARDWARE | Table 2. Novel View Synthesis. Our model shows superior performance on RealEstate10k on small, medium and large baseline ranges. | p. 6 (Figure/Table caption) |
+| 4.1. Experimental Setups | BENCHMARK / DATASET | While PixelNeRF has a smaller model size, our approach achieves lower GPU memory consumption on the ShapeNet-SRN dataset. | p. 5 (4.1. Experimental Setups) |
+| Figure/Table caption | BENCHMARK / DATASET | Table 1. ShapeNet-SRN: Single-View Reconstruction (test split). Our method achieves better quality on all metrics on the Car split and Chair dataset, while performing ... | p. 6 (Figure/Table caption) |
+| Figure/Table caption | BENCHMARK / DATASET | Table 4. Ablations Studies on Single view Reconstruction, evaluated on the validation set of ShapeNet-SRN Cars. In (b) and (c) rows, we use Splatter ... | p. 7 (Figure/Table caption) |
+| 4.1. Experimental Setups | BENCHMARK / DATASET | In our ablation studies, we train a Splatter Image using our "Medium" U-Net and report its performance. | p. 5 (4.1. Experimental Setups) |
+| Figure/Table caption | BENCHMARK / DATASET | Table 2. Novel View Synthesis. Our model shows superior performance on RealEstate10k on small, medium and large baseline ranges. | p. 6 (Figure/Table caption) |
 
 ## Dataset / Benchmark Role
 

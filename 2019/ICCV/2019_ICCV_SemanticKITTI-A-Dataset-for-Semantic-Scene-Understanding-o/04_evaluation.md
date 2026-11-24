@@ -8,7 +8,7 @@
 
 ## Evaluation in One Sentence
 
-PDF body evaluation/result cue (p. 6 (4.2. Multiple Scan Experiments), p. 8 (5. Evaluation of Semantic Scene Completion), p. 8 (5. Evaluation of Semantic Scene Completion), p. 4 (3.1. Labeling Process), p. 4 (4.1. Single Scan Experiments), p. 6 (4.2. Multiple Scan Experiments)): In this task, we allow methods to exploit information from a sequence of multiple past scans to improve the segmentation of the current scan.
+SemanticKITTI는 28개 범주에 주석을 붙였다. 표 2의 단일 스캔 분할은 19개 평가 범주를 사용하고 00~10번 가운데 08번을 검증에, 11~21번을 시험에 쓴다. [PDF 2쪽](https://openaccess.thecvf.com/content_ICCV_2019/papers/Behley_SemanticKITTI_A_Dataset_for_Semantic_Scene_Understanding_of_LiDAR_Sequences_ICCV_2019_paper.pdf#page=2) · [PDF 5쪽](https://openaccess.thecvf.com/content_ICCV_2019/papers/Behley_SemanticKITTI_A_Dataset_for_Semantic_Scene_Understanding_of_LiDAR_Sequences_ICCV_2019_paper.pdf#page=5) · [PDF 6쪽](https://openaccess.thecvf.com/content_ICCV_2019/papers/Behley_SemanticKITTI_A_Dataset_for_Semantic_Scene_Understanding_of_LiDAR_Sequences_ICCV_2019_paper.pdf#page=6)
 
 ## Evaluation Body Digest
 
@@ -24,10 +24,7 @@ PDF body evaluation/result cue (p. 6 (4.2. Multiple Scan Experiments), p. 8 (5. 
 ## Evaluation Type and Scope
 
 - **Evaluation type:** `BENCHMARK / DATASET`.
-- **Target system/task:** defined robot simulator/hardware task suite.
-- **Input boundary:** standardized observation, action, task state와 evaluation split.
-- **Output/decision under evaluation:** policy/controller trajectory 또는 measured result.
-- **Primary target:** success metric, robustness, generalization과 reproducibility.
+- **평가 대상:** 단일 스캔 분할, 여러 과거 스캔을 이용한 분할과 의미 장면 완성을 서로 다른 과제로 정의하고 기준선을 제공했다. [PDF 5쪽](https://openaccess.thecvf.com/content_ICCV_2019/papers/Behley_SemanticKITTI_A_Dataset_for_Semantic_Scene_Understanding_of_LiDAR_Sequences_ICCV_2019_paper.pdf#page=5) · [PDF 6쪽](https://openaccess.thecvf.com/content_ICCV_2019/papers/Behley_SemanticKITTI_A_Dataset_for_Semantic_Scene_Understanding_of_LiDAR_Sequences_ICCV_2019_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content_ICCV_2019/papers/Behley_SemanticKITTI_A_Dataset_for_Semantic_Scene_Understanding_of_LiDAR_Sequences_ICCV_2019_paper.pdf#page=7)
 - **Detected evaluation headings:** 3. The SemanticKITTI Dataset (p. 3); 3.2. Dataset Statistics (p. 4); 4. Evaluation of Semantic Segmentation (p. 4); 4.1. Single Scan Experiments (p. 4); 4.2. Multiple Scan Experiments (p. 6); 5. Evaluation of Semantic Scene Completion (p. 7).
 
 ## Experimental Matrix

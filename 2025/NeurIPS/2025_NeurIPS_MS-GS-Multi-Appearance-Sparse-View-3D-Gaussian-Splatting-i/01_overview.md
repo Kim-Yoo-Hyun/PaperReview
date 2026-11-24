@@ -17,12 +17,11 @@
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (21 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다. [본문](https://proceedings.neurips.cc/paper_files/paper/2025/file/58d451ce195db5729b0386a35c74405a-Paper-Conference.pdf)
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — A key challenge is that monocular depth estimation is often incorrect at relative depth between objects due to single-view ambiguity.
-
-방법 관련 발췌 — In summary, the main contributions of our work are: • We introduce a Semantic Depth Alignment approach, which leverages monocular depths in local semantic regions to construct a dense point cloud initialization ...
+MS-GS는 시간대나 계절에 따라 외관이 달라지는 장면을 소수의 사진에서 복원하기 위해 깊이 단서와 가상 뷰 감독을 사용한다. [PDF 1쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/58d451ce195db5729b0386a35c74405a-Paper-Conference.pdf#page=1) · [PDF 4쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/58d451ce195db5729b0386a35c74405a-Paper-Conference.pdf#page=4)
 
 ## Problem and Motivation
 
@@ -56,22 +55,14 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 3 / 1 Introduction - extractive body cue:** In summary, the main contributions of our work are: • We introduce a Semantic Depth Alignment approach, which leverages monocular depths in local semantic regions ...
-- **p. 2 / 1 Introduction - extractive body cue:** 1, they synthesize overly smooth regions, while our method recovers fine details.
-- **p. 2 / 1 Introduction - extractive body cue:** In this paper, we present MS-GS, which improves the robustness of 3DGS in dealing with unconstrained images when limited viewpoints and varying appearances exist, which ...
-- **p. 3 / 1 Introduction - extractive body cue:** To this end, we introduce an unbounded drone dataset that features multi-view appearance.
-- **p. 4 / 3 Method - extractive body cue:** To improve its robustness in sparse-view synthesis and multi-appearance modeling, MS-GS consists of two parts: Semantic Depth Alignment first constructs a dense point cloud by ...
-- **p. 9 / 4 Experiments - extractive body cue:** On the sparse unbounded-drone dataset, our approach significantly outperforms the SoTA methods with improvements of 2.54 dB in PSNR, 0.089 in SSIM, and cuts LPIPS ...
-- **p. 8 / 4 Experiments - extractive body cue:** We identify that incorporating our semantic depth alignment initialization significantly improved the metrics with 0.8 dB in PSNR, 0.046 in SSIM, -0.031 in LPIPS, and ...
-- **p. 8 / 4 Experiments - extractive body cue:** All proposed components are complementary, and the best results are achieved when combined.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- SfM 점을 기준으로 국소 의미 영역의 단안 깊이를 정렬하고 가상 뷰에서 픽셀과 특징 수준의 기하 일관성을 제약한다. [PDF 4쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/58d451ce195db5729b0386a35c74405a-Paper-Conference.pdf#page=4) · [PDF 5쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/58d451ce195db5729b0386a35c74405a-Paper-Conference.pdf#page=5) · [PDF 6쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/58d451ce195db5729b0386a35c74405a-Paper-Conference.pdf#page=6)
+- 외관이 다른 희소 뷰 조건의 자료와 평가 설정을 구성하고 장면 렌더링 및 각 기하 제약의 효과를 비교했다. [PDF 6쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/58d451ce195db5729b0386a35c74405a-Paper-Conference.pdf#page=6) · [PDF 7쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/58d451ce195db5729b0386a35c74405a-Paper-Conference.pdf#page=7) · [PDF 8쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/58d451ce195db5729b0386a35c74405a-Paper-Conference.pdf#page=8)
 
 ## Evaluation Scope
 
 | Dimension | Body-grounded record | Boundary | Anchor |
 |---|---|---|---|
-| Evaluation type | EMPIRICAL / REAL-ROBOT OR HARDWARE | do not infer unreported downstream behavior | p. 9 (4 Experiments), p. 8 (4 Experiments) |
+| Evaluation type | BENCHMARK / DATASET | do not infer unreported downstream behavior | p. 9 (4 Experiments), p. 8 (4 Experiments) |
 | Embodiment/environment | 4.1 Datasets We evaluate the performance of MS-GS and current SoTA methods on three real-world scenes with sparse inputs-one with single appearance and two with varying appearances. | hardware/simulator version and reset protocol | p. 7 (4 Experiments), p. 7 (4 Experiments) |
 | Dataset/benchmark | Additionally, our dataset contains scenes with 360-degree coverage by perspective cameras, whereas Phototourism is covered by face-forward images. | role, split, size and leakage | p. 7 (4 Experiments), p. 7 (4 Experiments), p. 15 (A.1.2 Comparison with prior benchmark), p. 8 (4 Experiments) |
 | Metric | Although SparseGS and FSGS improve the rendering quality through floater pruning, score distillation regularization, and the densification strategy. | definition, denominator, direction and uncertainty | p. 8 (4 Experiments), p. 7 (4 Experiments), p. 8 (4 Experiments) |

@@ -6,7 +6,7 @@
 
 ## Evaluation in One Sentence
 
-PDF body evaluation/result cue (p. 6 (5.1. Object Retrieval), p. 8 (5.4. Task Decomposition), p. 8 (5.4. Task Decomposition), p. 7 (5.1. Object Retrieval), p. 7 (5.1. Object Retrieval), p. 6 (5.1. Object Retrieval)): The select action could be achieved by calculating the similarity between the object embedding and the language embedding, and the object with the highest score will be retrieved.
+Multisensory Universe는 실내 스캔에 배치한 물체와 시뮬레이션 상호작용을 사용한다. 촉각 표식의 변위는 DiffTactile로 생성하고 각 물체의 온도 값은 온도 라벨을 조건으로 언어 모델에 질의해 부여했다. [PDF 3쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Hong_MultiPLY_A_Multisensory_Object-Centric_Embodied_Large_Language_Model_in_3D_CVPR_2024_paper.pdf#page=3) · [PDF 4쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Hong_MultiPLY_A_Multisensory_Object-Centric_Embodied_Large_Language_Model_in_3D_CVPR_2024_paper.pdf#page=4)
 
 ## Evaluation Body Digest
 
@@ -21,22 +21,19 @@ PDF body evaluation/result cue (p. 6 (5.1. Object Retrieval), p. 8 (5.4. Task De
 
 ## Evaluation Type and Scope
 
-- **Evaluation type:** `SYSTEM / EVALUATION SCOPE UNRESOLVED`.
-- **Target system/task:** 3D scene/object와 robot coordinate frame.
-- **Input boundary:** RGB-D, image set, point cloud, depth와 camera pose.
-- **Output/decision under evaluation:** point map, pose, scene graph, affordance 또는 query result.
-- **Primary target:** geometric accuracy, semantic consistency와 planning/manipulation utility.
+- **Evaluation type:** `BENCHMARK / SIMULATION`.
+- **평가 대상:** 여러 감각을 이용하는 물체 검색, 도구 사용과 질의 등에서 상호작용과 감각 입력의 기여를 비교했다. [PDF 6쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Hong_MultiPLY_A_Multisensory_Object-Centric_Embodied_Large_Language_Model_in_3D_CVPR_2024_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Hong_MultiPLY_A_Multisensory_Object-Centric_Embodied_Large_Language_Model_in_3D_CVPR_2024_paper.pdf#page=7) · [PDF 8쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Hong_MultiPLY_A_Multisensory_Object-Centric_Embodied_Large_Language_Model_in_3D_CVPR_2024_paper.pdf#page=8)
 - **Detected evaluation headings:** 3. The Multisensory-Universe Dataset (p. 3); 5. Experiments (p. 6).
 
 ## Experimental Matrix
 
 | Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
-| 5.1. Object Retrieval | SYSTEM / EVALUATION SCOPE UNRESOLVED | The select action could be achieved by calculating the similarity between the object embedding and the language embedding, and the object with the highest ... | p. 6 (5.1. Object Retrieval) |
-| 5.4. Task Decomposition | SYSTEM / EVALUATION SCOPE UNRESOLVED | Note that there is a domain gap between the task decomposition data 3D-LLM was trained on and our setting, which yields almost zero success ... | p. 8 (5.4. Task Decomposition) |
-| 5.4. Task Decomposition | SYSTEM / EVALUATION SCOPE UNRESOLVED | For each baseline we have two variants: 1) wo Interaction: generate all actions all at once, and execute the actions sequentially in the environment; ... | p. 8 (5.4. Task Decomposition) |
-| 5.1. Object Retrieval | SYSTEM / EVALUATION SCOPE UNRESOLVED | Third, LLMs outperform similarity-based retrieval models. | p. 7 (5.1. Object Retrieval) |
-| 5.1. Object Retrieval | SYSTEM / EVALUATION SCOPE UNRESOLVED | In general, our MultiPLY outperforms the baseline models a lot. | p. 7 (5.1. Object Retrieval) |
+| 5.1. Object Retrieval | BENCHMARK / SIMULATION | The select action could be achieved by calculating the similarity between the object embedding and the language embedding, and the object with the highest ... | p. 6 (5.1. Object Retrieval) |
+| 5.4. Task Decomposition | BENCHMARK / SIMULATION | Note that there is a domain gap between the task decomposition data 3D-LLM was trained on and our setting, which yields almost zero success ... | p. 8 (5.4. Task Decomposition) |
+| 5.4. Task Decomposition | BENCHMARK / SIMULATION | For each baseline we have two variants: 1) wo Interaction: generate all actions all at once, and execute the actions sequentially in the environment; ... | p. 8 (5.4. Task Decomposition) |
+| 5.1. Object Retrieval | BENCHMARK / SIMULATION | Third, LLMs outperform similarity-based retrieval models. | p. 7 (5.1. Object Retrieval) |
+| 5.1. Object Retrieval | BENCHMARK / SIMULATION | In general, our MultiPLY outperforms the baseline models a lot. | p. 7 (5.1. Object Retrieval) |
 
 ## Dataset / Benchmark Role
 

@@ -6,7 +6,7 @@
 
 ## Evaluation in One Sentence
 
-PDF body evaluation/result cue (p. 6 (5.2. Quantitative Analysis), p. 6 (5.1. Experimental Setup), p. 8 (5.5. Training Generalization Comparison), p. 1 (Figure/Table caption), p. 7 (Figure/Table caption), p. 19 (Figure/Table caption)): On KITTI, it attains the highest PSNR and OccCov together with the lowest Leak score, indicating improved alignment with occupied regions and fewer free space violations.
+저자들은 가림이 복잡한 KITTI와 Waymo 시퀀스를 골라 동적 물체를 평가에서 제외했다. 보고된 새 시점 품질과 기하 정확도는 정적 장면에 해당한다. [PDF 6쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/song26b/song26b.pdf#page=6) · [PDF 7쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/song26b/song26b.pdf#page=7)
 
 ## Evaluation Body Digest
 
@@ -22,10 +22,7 @@ PDF body evaluation/result cue (p. 6 (5.2. Quantitative Analysis), p. 6 (5.1. Ex
 ## Evaluation Type and Scope
 
 - **Evaluation type:** `EMPIRICAL / SOURCE-REPORTED EVALUATION`.
-- **Target system/task:** 3D scene/object와 robot coordinate frame.
-- **Input boundary:** RGB-D, image set, point cloud, depth와 camera pose.
-- **Output/decision under evaluation:** point map, pose, scene graph, affordance 또는 query result.
-- **Primary target:** geometric accuracy, semantic consistency와 planning/manipulation utility.
+- **평가 대상:** KITTI와 Waymo 주행 장면에서 기하 사전 정보와 입력 시점 조건에 따른 렌더링과 표면 복원을 비교했다. [PDF 6쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/song26b/song26b.pdf#page=6) · [PDF 7쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/song26b/song26b.pdf#page=7) · [PDF 8쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/song26b/song26b.pdf#page=8)
 - **Detected evaluation headings:** 3.5. Complexity and Implementation Efficiency (p. 4); 5. Experiments (p. 6); 5.1. Experimental Setup (p. 6); 5.3. Qualitative Results (p. 6).
 
 ## Experimental Matrix

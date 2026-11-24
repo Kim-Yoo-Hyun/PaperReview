@@ -6,7 +6,7 @@
 
 ## Evaluation in One Sentence
 
-PDF body evaluation/result cue (p. 13 (Figure/Table caption), p. 1 (Body text (section not recovered)), p. 11 (Figure/Table caption), p. 2 (1 Introduction), p. 2 (1 Introduction), p. 4 (1 Introduction)): Table 4: Sparse view rendering on the R1 sequence of Replica dataset. The position and orientation of viewpoints used in training and evaluation are given in Appendix. Training and Evaluation. ...
+실내 장면 등에서 새 시점 렌더링과 기하 복원을 비교하고 입력 뷰가 적을 때 구조가 보존되는지를 검토했다. [PDF 9쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/05218.pdf#page=9) · [PDF 10쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/05218.pdf#page=10) · [PDF 13쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/05218.pdf#page=13)
 
 ## Evaluation Body Digest
 
@@ -21,22 +21,18 @@ PDF body evaluation/result cue (p. 13 (Figure/Table caption), p. 1 (Body text (s
 
 ## Evaluation Type and Scope
 
-- **Evaluation type:** `SYSTEM / EVALUATION SCOPE UNRESOLVED`.
-- **Target system/task:** 3D scene/object와 robot coordinate frame.
-- **Input boundary:** RGB-D, image set, point cloud, depth와 camera pose.
-- **Output/decision under evaluation:** point map, pose, scene graph, affordance 또는 query result.
-- **Primary target:** geometric accuracy, semantic consistency와 planning/manipulation utility.
+- **Evaluation type:** `BENCHMARK / DATASET`.
 - **Detected evaluation headings:** 4 Experiments (p. 8).
 
 ## Experimental Matrix
 
 | Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
-| Figure/Table caption | SYSTEM / EVALUATION SCOPE UNRESOLVED | Table 4: Sparse view rendering on the R1 sequence of Replica dataset. The position and orientation of viewpoints used in training and evaluation are ... | p. 13 (Figure/Table caption) |
-| Body text (section not recovered) | SYSTEM / EVALUATION SCOPE UNRESOLVED | Our proposed pipeline achieves state-of-the-art performance in novel view synthesis and geometric reconstruction, as evaluated qualitatively and quantitatively on public datasets. | p. 1 (Body text (section not recovered)) |
-| Figure/Table caption | SYSTEM / EVALUATION SCOPE UNRESOLVED | Table 2: Comparison of rendering on the Replica dataset. The position and orientation of viewpoints used in training and evaluation are illustrated in Appendix. ... | p. 11 (Figure/Table caption) |
-| 1 Introduction | SYSTEM / EVALUATION SCOPE UNRESOLVED | To address the heavy computational burden and intensive memory consumption, recent improvements have been made using sparse volumes [21], hash tables [27], and hierarchical ... | p. 2 (1 Introduction) |
-| 1 Introduction | SYSTEM / EVALUATION SCOPE UNRESOLVED | Since the impressive achievements of convolutional neural networks are made on many tasks, such as point detection [6] and scene completion [40], deep learningbased ... | p. 2 (1 Introduction) |
+| Figure/Table caption | BENCHMARK / DATASET | Table 4: Sparse view rendering on the R1 sequence of Replica dataset. The position and orientation of viewpoints used in training and evaluation are ... | p. 13 (Figure/Table caption) |
+| Body text (section not recovered) | BENCHMARK / DATASET | Our proposed pipeline achieves state-of-the-art performance in novel view synthesis and geometric reconstruction, as evaluated qualitatively and quantitatively on public datasets. | p. 1 (Body text (section not recovered)) |
+| Figure/Table caption | BENCHMARK / DATASET | Table 2: Comparison of rendering on the Replica dataset. The position and orientation of viewpoints used in training and evaluation are illustrated in Appendix. ... | p. 11 (Figure/Table caption) |
+| 1 Introduction | BENCHMARK / DATASET | To address the heavy computational burden and intensive memory consumption, recent improvements have been made using sparse volumes [21], hash tables [27], and hierarchical ... | p. 2 (1 Introduction) |
+| 1 Introduction | BENCHMARK / DATASET | Since the impressive achievements of convolutional neural networks are made on many tasks, such as point detection [6] and scene completion [40], deep learningbased ... | p. 2 (1 Introduction) |
 
 ## Dataset / Benchmark Role
 

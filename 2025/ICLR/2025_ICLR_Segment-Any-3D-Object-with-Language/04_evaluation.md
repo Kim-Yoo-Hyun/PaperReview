@@ -6,7 +6,7 @@
 
 ## Evaluation in One Sentence
 
-PDF body evaluation/result cue (p. 8 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 10 (4 EXPERIMENTS), p. 9 (Figure/Table caption), p. 19 (Figure/Table caption), p. 8 (4 EXPERIMENTS)): SOLE outperforms all the OV-3DIS methods and achieves competitive results with the fully-supervised model.
+ScanNetv2, ScanNet200, Replica에서 범주 주석 없는 학습 조건의 분할을 비교하고 다양한 표현을 쓴 지시의 결과를 제시했다. [PDF 8쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/f53437debdd397c42929d929614bc705-Paper-Conference.pdf#page=8) · [PDF 9쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/f53437debdd397c42929d929614bc705-Paper-Conference.pdf#page=9) · [PDF 10쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/f53437debdd397c42929d929614bc705-Paper-Conference.pdf#page=10)
 
 ## Evaluation Body Digest
 
@@ -21,22 +21,18 @@ PDF body evaluation/result cue (p. 8 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 1
 
 ## Evaluation Type and Scope
 
-- **Evaluation type:** `EMPIRICAL / REAL-ROBOT OR HARDWARE`.
-- **Target system/task:** 3D scene/object와 robot coordinate frame.
-- **Input boundary:** RGB-D, image set, point cloud, depth와 camera pose.
-- **Output/decision under evaluation:** point map, pose, scene graph, affordance 또는 query result.
-- **Primary target:** geometric accuracy, semantic consistency와 planning/manipulation utility.
+- **Evaluation type:** `BENCHMARK / DATASET`.
 - **Detected evaluation headings:** 4 EXPERIMENTS (p. 7); A IMPLEMENTATION DETAILS (p. 17).
 
 ## Experimental Matrix
 
 | Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
-| 4 EXPERIMENTS | EMPIRICAL / REAL-ROBOT OR HARDWARE | SOLE outperforms all the OV-3DIS methods and achieves competitive results with the fully-supervised model. | p. 8 (4 EXPERIMENTS) |
-| 4 EXPERIMENTS | EMPIRICAL / REAL-ROBOT OR HARDWARE | SOLE outperforms state-of-the-art methods (Nguyen et al., 2024; Takmaz et al., 2023) on five out of the six metrics and achieves comparable performance on ... | p. 9 (4 EXPERIMENTS) |
-| 4 EXPERIMENTS | EMPIRICAL / REAL-ROBOT OR HARDWARE | First, using any of multimodal associations can already achieve significant performance, outperforming previous state-of-the-art method (OpenIns3D (Huang et al., 2023b)) with larger voxel size ... | p. 10 (4 EXPERIMENTS) |
-| Figure/Table caption | EMPIRICAL / REAL-ROBOT OR HARDWARE | Tab. 3. Our SOLE outperforms OpenMask3D (Takmaz et al., 2023) and Open3DIS (Nguyen et al., 2024) by a large margin on both base and ... | p. 9 (Figure/Table caption) |
-| Figure/Table caption | EMPIRICAL / REAL-ROBOT OR HARDWARE | Table 10: Analysis of the light version of SOLE on ScanNetv2 (Dai et al., 2017). Despite of performance drop, SOLE-light still outperforms mask-training methods ... | p. 19 (Figure/Table caption) |
+| 4 EXPERIMENTS | BENCHMARK / DATASET | SOLE outperforms all the OV-3DIS methods and achieves competitive results with the fully-supervised model. | p. 8 (4 EXPERIMENTS) |
+| 4 EXPERIMENTS | BENCHMARK / DATASET | SOLE outperforms state-of-the-art methods (Nguyen et al., 2024; Takmaz et al., 2023) on five out of the six metrics and achieves comparable performance on ... | p. 9 (4 EXPERIMENTS) |
+| 4 EXPERIMENTS | BENCHMARK / DATASET | First, using any of multimodal associations can already achieve significant performance, outperforming previous state-of-the-art method (OpenIns3D (Huang et al., 2023b)) with larger voxel size ... | p. 10 (4 EXPERIMENTS) |
+| Figure/Table caption | BENCHMARK / DATASET | Tab. 3. Our SOLE outperforms OpenMask3D (Takmaz et al., 2023) and Open3DIS (Nguyen et al., 2024) by a large margin on both base and ... | p. 9 (Figure/Table caption) |
+| Figure/Table caption | BENCHMARK / DATASET | Table 10: Analysis of the light version of SOLE on ScanNetv2 (Dai et al., 2017). Despite of performance drop, SOLE-light still outperforms mask-training methods ... | p. 19 (Figure/Table caption) |
 
 ## Dataset / Benchmark Role
 

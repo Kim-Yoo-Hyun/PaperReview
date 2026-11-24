@@ -11,17 +11,18 @@
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
 - Tags: Gaussian Splatting, 3D reconstruction, 3D Vision
+- Aliases: Surface Reconstruction from 3D Gaussian Splatting via Local Structural Hints
+- 게재 PDF 표제: Surface Reconstruction from 3D Gaussian Splatting via Local Structural Hints [표제면](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/00274.pdf#page=1) · [학회 서지](https://www.ecva.net/papers/eccv_2024/papers_ECCV/html/274_ECCV_2024_paper.php)
 - Official paper: https://www.ecva.net/papers/eccv_2024/papers_ECCV/html/274_ECCV_2024_paper.php
 - Full-text retrieval: https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/00274.pdf
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (18 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다. [본문](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/00274.pdf)
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Prior efforts to address this intricate challenge of extracting surface meshes from 3D Gaussian Splatting have been sparse.
-
-방법 관련 발췌 — To address this, we propose a novel regularizer that leverages a neural implicit network to approximate the signed distance values of the MLS function at sampling points and the normals at Gaussian ...
+GSrec은 단안 깊이·법선의 국소 단서로 가우시안의 위치와 모양을 조절하고, 그 주변에 거리장을 구성해 표면 메시를 추출한다. [PDF 1쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/00274.pdf#page=1) · [PDF 5쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/00274.pdf#page=5)
 
 ## Problem and Motivation
 
@@ -55,22 +56,14 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 3 / 1 Introduction - extractive body cue:** To address this, we propose a novel regularizer that leverages a neural implicit network to approximate the signed distance values of the MLS function at ...
-- **p. 8 / 3 Method - extractive body cue:** We propose a novel strategy to further align the Gaussians with the surface.
-- **p. 3 / 1 Introduction - extractive body cue:** Moreover, to ensure geometry consistency, we propose regularizing the MLS-based function prediction with a jointly learned neural implicit field.
-- **p. 7 / 3 Method - extractive body cue:** Inspired by the depth rendering from [15,19,26,28], we also incorporate such a design in our framework by rendering the depth with the z-coordinate zi of ...
-- **p. 2 / 1 Introduction - extractive body cue:** The key insight of our approach is to leverage the local structure hints to guide the optimization of Gaussians.
-- **p. 13 / 4 Experiments - extractive body cue:** While keeping the MLS term with the gradient term in the joint loss (w/o eikonal term), the F-score can be significantly improved thanks to the ...
-- **p. 13 / 4 Experiments - extractive body cue:** 3 (b), although L = 1 has achieved good results, the F-score keeps improving as L gets increased.
-- **p. 12 / 4 Experiments - extractive body cue:** It provides very important hints about the Gaussian orientation, which also significantly improves the quality of Poisson reconstruction.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 단안 추정으로 가우시안의 중심과 공분산을 정제한 뒤, 국소 가우시안 집합에 이동 최소제곱법을 적용해 부호 거리 함수를 정의한다. [PDF 5쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/00274.pdf#page=5) · [PDF 6쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/00274.pdf#page=6) · [PDF 7쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/00274.pdf#page=7)
+- 이 함수를 근사·정규화하는 신경 암시적 표현을 함께 학습하고, Replica 등에서 추출한 메시와 각 거리 제약의 효과를 비교했다. [PDF 8쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/00274.pdf#page=8) · [PDF 11쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/00274.pdf#page=11) · [PDF 13쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/00274.pdf#page=13)
 
 ## Evaluation Scope
 
 | Dimension | Body-grounded record | Boundary | Anchor |
 |---|---|---|---|
-| Evaluation type | EMPIRICAL / REAL-ROBOT OR HARDWARE | do not infer unreported downstream behavior | p. 13 (4 Experiments), p. 13 (4 Experiments) |
+| Evaluation type | BENCHMARK / DATASET | do not infer unreported downstream behavior | p. 13 (4 Experiments), p. 13 (4 Experiments) |
 | Embodiment/environment | 2) ScanNet [10] is a real-world dataset captured with challenging image quality. | hardware/simulator version and reset protocol | p. 10 (4 Experiments), p. 10 (4 Experiments) |
 | Dataset/benchmark | Chamfer-L1↓F-score ↑ COLMAP [41] 0.141 0.537 UNISURF [33] 0.359 0.267 NeuS [51] 0.194 0.291 VolSDF [58] 0.267 0.346 Manhattan-SDF [16] 0.070 0.602 MonoSDF (Grid) [62] 0.064 0.626 MonoSDF (MLP) [62] 0.042 0.733 ... | role, split, size and leakage | p. 10 (4 Experiments), p. 10 (4 Experiments), p. 14 (4 Experiments), p. 11 (4 Experiments) |
 | Metric | For quantitative evaluation of surface quality, we measure Chamfer Distance, Normal Consistency Score and Fscore with a threshold of 5cm on Replica. | definition, denominator, direction and uncertainty | p. 10 (4 Experiments), p. 11 (4 Experiments), p. 11 (4 Experiments) |

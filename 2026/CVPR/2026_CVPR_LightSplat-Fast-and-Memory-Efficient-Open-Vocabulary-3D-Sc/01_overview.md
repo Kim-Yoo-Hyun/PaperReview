@@ -16,12 +16,11 @@
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다. [본문](https://openaccess.thecvf.com/content/CVPR2026/papers/Bang_LightSplat_Fast_and_Memory-Efficient_Open-Vocabulary_3D_Scene_Understanding_in_Five_CVPR_2026_paper.pdf)
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — A main challenge in this task is bridging the gap between language and 3D representations.
-
-방법 관련 발췌 — In summary, our main contributions are as follows: • We propose LightSplat, a simple, training-free framework for open-vocabulary 3D scene understanding eliminating exhaustive iterative optimization. • Our approach assigns each Gaussian ...
+LightSplat은 각 가우시안의 의미를 작은 색인으로 기록해 별도의 특징 최적화 없이 자연어로 3차원 물체를 선택한다. [PDF 1쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Bang_LightSplat_Fast_and_Memory-Efficient_Open-Vocabulary_3D_Scene_Understanding_in_Five_CVPR_2026_paper.pdf#page=1) · [PDF 3쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Bang_LightSplat_Fast_and_Memory-Efficient_Open-Vocabulary_3D_Scene_Understanding_in_Five_CVPR_2026_paper.pdf#page=3)
 
 ## Problem and Motivation
 
@@ -55,26 +54,12 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** In summary, our main contributions are as follows: • We propose LightSplat, a simple, training-free framework for open-vocabulary 3D scene understanding eliminating exhaustive iterative optimization. ...
-- **p. 2 / 1. Introduction - extractive body cue:** In our method, we inject semantics only into Gaussians that have a high rendering contribution to the corresponding 2D masks.
-- **p. 3 / 3.1. Overview - extractive body cue:** To manage semantics efficiently, we propose an index-feature mapping that associates each 2-byte index to its corresponding CLIP feature.
-- **p. 4 / 3.4. Context-Aware 3D Clustering - extractive body cue:** Leveraging the mask indices from the previous stage, our method first connects semantically related 2D masks across views.
-- **p. 3 / 3.1. Overview - extractive body cue:** This enables single-step semantic injection and intermask clustering without per-Gaussian features.
-- **p. 7 / 4.3. 3D Semantic Segmentation - extractive body cue:** With context-aware 3D clustering, our method achieves detailed object boundaries while offering significantly faster performance than other methods.
-- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Comprehensive comparison of speed, performance, and memory overhead. We evaluate recent open-vocabulary 3D scene understanding models in terms of distillation time (x-axis), segmentation ...
-- **p. 5 / 4.2. 3D Object Selection - extractive body cue:** As shown in Table 2, our approach also achieves strong performance on DL3DV-OVS, a dataset with large and 19816
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 기하와 의미가 일치하는 여러 뷰의 마스크를 한 단계에서 묶고 중요한 영역에 2바이트 색인을 할당해 공유 특징을 조회한다. [PDF 3쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Bang_LightSplat_Fast_and_Memory-Efficient_Open-Vocabulary_3D_Scene_Understanding_in_Five_CVPR_2026_paper.pdf#page=3) · [PDF 4쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Bang_LightSplat_Fast_and_Memory-Efficient_Open-Vocabulary_3D_Scene_Understanding_in_Five_CVPR_2026_paper.pdf#page=4) · [PDF 5쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Bang_LightSplat_Fast_and_Memory-Efficient_Open-Vocabulary_3D_Scene_Understanding_in_Five_CVPR_2026_paper.pdf#page=5)
+- LERF-OVS·DL3DV-OVS의 물체 선택과 ScanNet의 의미 분할을 평가하고 특징 증류 시간과 저장 비용을 비교했다. [PDF 6쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Bang_LightSplat_Fast_and_Memory-Efficient_Open-Vocabulary_3D_Scene_Understanding_in_Five_CVPR_2026_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Bang_LightSplat_Fast_and_Memory-Efficient_Open-Vocabulary_3D_Scene_Understanding_in_Five_CVPR_2026_paper.pdf#page=7) · [PDF 8쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Bang_LightSplat_Fast_and_Memory-Efficient_Open-Vocabulary_3D_Scene_Understanding_in_Five_CVPR_2026_paper.pdf#page=8)
 
 ## Evaluation Scope
 
-| Dimension | Body-grounded record | Boundary | Anchor |
-|---|---|---|---|
-| Evaluation type | EMPIRICAL / REAL-ROBOT OR HARDWARE | do not infer unreported downstream behavior | p. 7 (4.3. 3D Semantic Segmentation), p. 1 (Figure/Table caption) |
-| Embodiment/environment | The dataset covers a wide range of object scales, distances, and scene complexities across four scenes (park, road, shop, and office), with categories containing varying numbers of instances. | hardware/simulator version and reset protocol | p. 5 (4.1. Experimental Setup), p. 8 (4.3. 3D Semantic Segmentation) |
-| Dataset/benchmark | The second is ScanNet, a largescale RGB-D dataset containing 1,500 indoor scenes, each with reconstructed point clouds and per-point semantic labels. | role, split, size and leakage | p. 5 (4.1. Experimental Setup), p. 8 (4.3. 3D Semantic Segmentation), p. 5 (4.1. Experimental Setup), p. 6 (4.2. 3D Object Selection) |
-| Metric | Figure 1. Comprehensive comparison of speed, performance, and memory overhead. We evaluate recent open-vocabulary 3D scene understanding models in terms of distillation time (x-axis), segmentation performance (y-axis), and memory overhe ... | definition, denominator, direction and uncertainty | p. 1 (Figure/Table caption), p. 8 (4.3. 3D Semantic Segmentation), p. 5 (4.1. Experimental Setup) |
-| Baseline/ablation | Figure 3. Fast inference via cluster-feature mapping. During inference, the text query is compared with a compact set of cluster features instead of all Gaussians or pixels, enabling fast retrieval. ing SAM ... | fair input/data/compute/action matching | p. 3 (Figure/Table caption), p. 8 (4.3. 3D Semantic Segmentation), p. 5 (4.2. 3D Object Selection) |
+LERF-OVS 표 1의 4.2초는 특징 증류 시간이다. 입력은 여러 뷰의 마스크와 CLIP 특징이며, 저자들이 따로 보고한 텍스트 질의 처리량은 미리 계산한 클러스터 특징을 조회할 때의 수치다. [PDF 3쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Bang_LightSplat_Fast_and_Memory-Efficient_Open-Vocabulary_3D_Scene_Understanding_in_Five_CVPR_2026_paper.pdf#page=3) · [PDF 6쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Bang_LightSplat_Fast_and_Memory-Efficient_Open-Vocabulary_3D_Scene_Understanding_in_Five_CVPR_2026_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Bang_LightSplat_Fast_and_Memory-Efficient_Open-Vocabulary_3D_Scene_Understanding_in_Five_CVPR_2026_paper.pdf#page=7)
 
 ## Explicit Limitations and Failure Boundary
 

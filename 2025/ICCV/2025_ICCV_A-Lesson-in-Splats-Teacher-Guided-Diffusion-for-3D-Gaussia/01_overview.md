@@ -16,12 +16,11 @@
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다. [본문](https://openaccess.thecvf.com/content/ICCV2025/papers/Peng_A_Lesson_in_Splats_Teacher-Guided_Diffusion_for_3D_Gaussian_Splats_ICCV_2025_paper.pdf)
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, diffusion models for 3D generation face a fundamental limitation due to their training process, in which the denoiser - which operates in 3D - is trained on noisy samples using their ...
-
-방법 관련 발췌 — Although the bootstrapping stage precedes finetuning in the pipeline, we present it second in this manuscript to facilitate a smoother explanation of our core contributions.
+이 연구는 결정론적 영상-3D 복원기의 예측을 교사로 사용해, 희소한 2D 영상 감독으로 조건부 3D 가우시안 확산 모델을 학습한다. [PDF 1쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Peng_A_Lesson_in_Splats_Teacher-Guided_Diffusion_for_3D_Gaussian_Splats_ICCV_2025_paper.pdf#page=1) · [PDF 3쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Peng_A_Lesson_in_Splats_Teacher-Guided_Diffusion_for_3D_Gaussian_Splats_ICCV_2025_paper.pdf#page=3)
 
 ## Problem and Motivation
 
@@ -55,22 +54,14 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 3 / 3. Method - extractive body cue:** Although the bootstrapping stage precedes finetuning in the pipeline, we present it second in this manuscript to facilitate a smoother explanation of our core contributions.
-- **p. 2 / 1. Introduction - extractive body cue:** In this work, we propose a novel training strategy that fundamentally revises the principles of diffusion model training by decoupling the denoised modality (3D) from ...
-- **p. 2 / 1. Introduction - extractive body cue:** In both cases, our method significantly improves the performance of the base teacher model by 0.5 -0.85 PSNR.
-- **p. 3 / 3. Method - extractive body cue:** Our method employs this trained model as a noisy teacher, generating noisy samples to train the diffusion model, which is supervised by the target image ...
-- **p. 5 / 3.2. Noisy Teacher Bootstrapping - extractive body cue:** To address this, we propose avoiding this training approach from scratch by first bootstrapping our model using the noisy teacher.
-- **p. 5 / 4.1. Experimental Setups - extractive body cue:** While PixelNeRF has a smaller model size, our approach achieves lower GPU memory consumption on the ShapeNet-SRN dataset.
-- **p. 6 / Figure/Table caption - extractive body cue:** Table 1. ShapeNet-SRN: Single-View Reconstruction (test split). Our method achieves better quality on all metrics on the Car split and Chair dataset, while performing reconstruction ...
-- **p. 7 / Figure/Table caption - extractive body cue:** Table 4. Ablations Studies on Single view Reconstruction, evaluated on the validation set of ShapeNet-SRN Cars. In (b) and (c) rows, we use Splatter Image ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 교사가 예측한 3D 가우시안에 잡음을 넣어 학생의 입력을 만들고, 학생 출력은 다른 뷰의 2D 관측을 렌더링해 감독한다. [PDF 3쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Peng_A_Lesson_in_Splats_Teacher-Guided_Diffusion_for_3D_Gaussian_Splats_ICCV_2025_paper.pdf#page=3) · [PDF 4쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Peng_A_Lesson_in_Splats_Teacher-Guided_Diffusion_for_3D_Gaussian_Splats_ICCV_2025_paper.pdf#page=4) · [PDF 5쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Peng_A_Lesson_in_Splats_Teacher-Guided_Diffusion_for_3D_Gaussian_Splats_ICCV_2025_paper.pdf#page=5)
+- 물체와 장면 복원에 각각 다른 교사를 적용해 입력 영상을 조건으로 한 학생 모델과 원래 교사의 결과를 비교했다. [PDF 5쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Peng_A_Lesson_in_Splats_Teacher-Guided_Diffusion_for_3D_Gaussian_Splats_ICCV_2025_paper.pdf#page=5) · [PDF 6쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Peng_A_Lesson_in_Splats_Teacher-Guided_Diffusion_for_3D_Gaussian_Splats_ICCV_2025_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Peng_A_Lesson_in_Splats_Teacher-Guided_Diffusion_for_3D_Gaussian_Splats_ICCV_2025_paper.pdf#page=7)
 
 ## Evaluation Scope
 
 | Dimension | Body-grounded record | Boundary | Anchor |
 |---|---|---|---|
-| Evaluation type | EMPIRICAL / REAL-ROBOT OR HARDWARE | do not infer unreported downstream behavior | p. 5 (4.1. Experimental Setups), p. 6 (Figure/Table caption) |
+| Evaluation type | BENCHMARK / DATASET | do not infer unreported downstream behavior | p. 5 (4.1. Experimental Setups), p. 6 (Figure/Table caption) |
 | Embodiment/environment | We conduct experiments using two datasets: the object-level ShapeNet-SRN [6, 51] and the scene-level RealEstate10k [73]. | hardware/simulator version and reset protocol | p. 5 (4.1. Experimental Setups), p. 5 (4.1. Experimental Setups) |
 | Dataset/benchmark | We conduct experiments using two datasets: the object-level ShapeNet-SRN [6, 51] and the scene-level RealEstate10k [73]. | role, split, size and leakage | p. 5 (4.1. Experimental Setups), p. 5 (4.1. Experimental Setups) |
 | Metric | The computational efficiency is demonstrated in Tab. | definition, denominator, direction and uncertainty | p. 5 (4.2. Implementation Details), p. 5 (4.1. Experimental Setups), p. 4 (Figure/Table caption) |

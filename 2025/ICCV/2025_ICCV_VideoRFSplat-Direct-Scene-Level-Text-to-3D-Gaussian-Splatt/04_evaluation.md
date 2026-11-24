@@ -6,7 +6,7 @@
 
 ## Evaluation in One Sentence
 
-PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 8 (Figure/Table caption), p. 8 (Figure/Table caption), p. 5 (5. Experimental Results), p. 1 (Figure/Table caption), p. 6 (5.1. Experimental Setups)): Table 2. Quantitative results on MVImgNet [84] and DL3DV [41] validation sets. VideoRFSplat achieves the higher performance across all metrics without SDS++ refinement. sess image quality and CLIP score for ...
+생성한 뷰를 가우시안으로 디코딩하고 텍스트 조건부 장면 생성에서 화질·일관성과 두 경로의 설계 효과를 평가했다. [PDF 5쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Go_VideoRFSplat_Direct_Scene-Level_Text-to-3D_Gaussian_Splatting_Generation_with_Flexible_Pose_ICCV_2025_paper.pdf#page=5) · [PDF 6쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Go_VideoRFSplat_Direct_Scene-Level_Text-to-3D_Gaussian_Splatting_Generation_with_Flexible_Pose_ICCV_2025_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Go_VideoRFSplat_Direct_Scene-Level_Text-to-3D_Gaussian_Splatting_Generation_with_Flexible_Pose_ICCV_2025_paper.pdf#page=7) · [PDF 8쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Go_VideoRFSplat_Direct_Scene-Level_Text-to-3D_Gaussian_Splatting_Generation_with_Flexible_Pose_ICCV_2025_paper.pdf#page=8)
 
 ## Evaluation Body Digest
 
@@ -21,22 +21,18 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 8 (Figure/Table 
 
 ## Evaluation Type and Scope
 
-- **Evaluation type:** `EMPIRICAL / REAL-ROBOT OR HARDWARE`.
-- **Target system/task:** high-dimensional data 또는 robot action-trajectory distribution.
-- **Input boundary:** conditioning observation와 noisy/intermediate sample.
-- **Output/decision under evaluation:** generated sample, action chunk 또는 trajectory.
-- **Primary target:** distribution fit, multimodality, sample quality와 latency.
+- **Evaluation type:** `EMPIRICAL / SOURCE-REPORTED EVALUATION`.
 - **Detected evaluation headings:** 5. Experimental Results (p. 5); 5.1. Experimental Setups (p. 5).
 
 ## Experimental Matrix
 
 | Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
-| Figure/Table caption | EMPIRICAL / REAL-ROBOT OR HARDWARE | Table 2. Quantitative results on MVImgNet [84] and DL3DV [41] validation sets. VideoRFSplat achieves the higher performance across all metrics without SDS++ refinement. sess ... | p. 7 (Figure/Table caption) |
-| Figure/Table caption | EMPIRICAL / REAL-ROBOT OR HARDWARE | Table 5. VideoRFSplat outperforms other methods in FID-8K (43.07), translation error (0.063), rotation error (0.4223), and CLIPScore (31.1). These results confirm that VideoRFSplat generates ... | p. 8 (Figure/Table caption) |
-| Figure/Table caption | EMPIRICAL / REAL-ROBOT OR HARDWARE | Table 5. Results on camera conditioned generation. VideoRFS- plat can perform camera-conditioned generation. models under identical conditions for 60K iterations with Mochi [69] and ... | p. 8 (Figure/Table caption) |
-| 5. Experimental Results | EMPIRICAL / REAL-ROBOT OR HARDWARE | Our primary result is that VideoRFSplat, without SDS optimization, outperforms previous direct text-to-3DGS methods that employ SDS optimization. | p. 5 (5. Experimental Results) |
-| Figure/Table caption | EMPIRICAL / REAL-ROBOT OR HARDWARE | Figure 1. Generated 3D Gaussian Splattings and rendered views from diverse texts by VideoRFSplat. VideoRFSplat directly generates realistic 3D scenes from text without SDS ... | p. 1 (Figure/Table caption) |
+| Figure/Table caption | EMPIRICAL / SOURCE-REPORTED EVALUATION | Table 2. Quantitative results on MVImgNet [84] and DL3DV [41] validation sets. VideoRFSplat achieves the higher performance across all metrics without SDS++ refinement. sess ... | p. 7 (Figure/Table caption) |
+| Figure/Table caption | EMPIRICAL / SOURCE-REPORTED EVALUATION | Table 5. VideoRFSplat outperforms other methods in FID-8K (43.07), translation error (0.063), rotation error (0.4223), and CLIPScore (31.1). These results confirm that VideoRFSplat generates ... | p. 8 (Figure/Table caption) |
+| Figure/Table caption | EMPIRICAL / SOURCE-REPORTED EVALUATION | Table 5. Results on camera conditioned generation. VideoRFS- plat can perform camera-conditioned generation. models under identical conditions for 60K iterations with Mochi [69] and ... | p. 8 (Figure/Table caption) |
+| 5. Experimental Results | EMPIRICAL / SOURCE-REPORTED EVALUATION | Our primary result is that VideoRFSplat, without SDS optimization, outperforms previous direct text-to-3DGS methods that employ SDS optimization. | p. 5 (5. Experimental Results) |
+| Figure/Table caption | EMPIRICAL / SOURCE-REPORTED EVALUATION | Figure 1. Generated 3D Gaussian Splattings and rendered views from diverse texts by VideoRFSplat. VideoRFSplat directly generates realistic 3D scenes from text without SDS ... | p. 1 (Figure/Table caption) |
 
 ## Dataset / Benchmark Role
 

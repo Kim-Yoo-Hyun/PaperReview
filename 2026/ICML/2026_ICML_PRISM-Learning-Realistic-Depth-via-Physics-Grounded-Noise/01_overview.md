@@ -17,12 +17,11 @@
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (35 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다. [본문](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/liang26n/liang26n.pdf)
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, the deployment of simulation-trained policies remains fundamentally bottlenecked by the sim-to-real gap(Jia et al., 2025).
-
-방법 관련 발췌 — To operationalize this insight, we propose PRISM (PhysicsReasoned Implicit Sensor Modeling), a semantic-geometric collaborative framework designed to ′refract′ monolithic sensor noise into physically motivated modalities.
+PRISM은 합성 깊이 영상에 실제 센서에서 관찰되는 결측과 측정 오차를 더해 시뮬레이션에서 학습한 조작 정책의 실물 전이를 평가한다. [PDF 1쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/liang26n/liang26n.pdf#page=1) · [PDF 4쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/liang26n/liang26n.pdf#page=4)
 
 ## Problem and Motivation
 
@@ -56,26 +55,12 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** To operationalize this insight, we propose PRISM (PhysicsReasoned Implicit Sensor Modeling), a semantic-geometric collaborative framework designed to ′refract′ monolithic sensor noise into physically motivated modalities.
-- **p. 2 / 1. Introduction - extractive body cue:** 2) Semantic-Geometric Collaboration: We propose PRISM, a unified framework that distills the rich physical common sense of 3D Visual Foundation Model to drive noise synthesis.
-- **p. 3 / 3.1. Semantic-Physics Reasoner - extractive body cue:** The architecture consists of three sequential modules.
-- **p. 3 / 3. Methodology - extractive body cue:** We present PRISM, a tripartite framework that synthesizes realistic depth by disentangling sensor noise into physically grounded modalities.
-- **p. 5 / 3.4. Hierarchical Positive-Prioritized Supervision - extractive body cue:** To address the extreme class imbalance and ensure precise boundary detection, we propose a supervision strategy comprised of three coupled mechanisms.
-- **p. 8 / 5.3. Downstream Application Evaluation - extractive body cue:** By physically grounding noise synthesis, PRISM forces the policy to learn compliant behaviors robust to sensor dropouts (e.g., inferring geometry from boundaries), achieving an average ...
-- **p. 8 / Figure/Table caption - extractive body cue:** Table 4. Cross-policy Sim2Real generalization. We report the average success rate (%) across all 6 tasks using three different policy architectures. PRISM consistently outperforms baselines. ...
-- **p. 7 / 5.2. Depth Fidelity Evaluation - extractive body cue:** Specifically, our Hierarchical PositivePrioritized Supervision yields high Invalidation IoU/F1 by overcoming mask sparsity, while the disentangled NRG achieves the lowest valid-region MAE/RMSE, effectively preventing the ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 깊이 결측과 유효 픽셀의 오차를 구분하고 시각 기초 모델의 의미·기하 특징과 희소한 결측 영역에 가중한 감독을 이용한다. [PDF 3쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/liang26n/liang26n.pdf#page=3) · [PDF 4쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/liang26n/liang26n.pdf#page=4) · [PDF 5쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/liang26n/liang26n.pdf#page=5)
+- 합성 깊이의 품질과 실물 조작 성공률을 따로 측정하고 여섯 과제에서 DP3·PPT·RISE를 같은 깊이 합성 조건으로 비교했다. [PDF 7쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/liang26n/liang26n.pdf#page=7) · [PDF 8쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/liang26n/liang26n.pdf#page=8)
 
 ## Evaluation Scope
 
-| Dimension | Body-grounded record | Boundary | Anchor |
-|---|---|---|---|
-| Evaluation type | EMPIRICAL / REAL-ROBOT OR HARDWARE | do not infer unreported downstream behavior | p. 8 (5.3. Downstream Application Evaluation), p. 8 (Figure/Table caption) |
-| Embodiment/environment | We establish a benchmark of 6 diverse manipulation tasks (Tab.3) across two robotic platforms to evaluate challenging physical properties. | hardware/simulator version and reset protocol | p. 8 (5.3. Downstream Application Evaluation), p. 6 (5.1. Experimental Settings) |
-| Dataset/benchmark | Assessing the impact of removing SPR and BND on Invalidation IoU and Robot SR. | role, split, size and leakage | p. 8 (5.3. Downstream Application Evaluation), p. 6 (5.1. Experimental Settings), p. 8 (5.3. Downstream Application Evaluation), p. 7 (5.2. Depth Fidelity Evaluation) |
-| Metric | NRG Only w/o SPR w/o BND PRISM Full 0.08 0.10 0.12 0.14 Overall MAE 0.118 0.095 0.098 0.076 -36% (i) Overall MAE NRG Only w/o SPR w/o BND PRISM Full 0.4 0.6 ... | definition, denominator, direction and uncertainty | p. 8 (5.3. Downstream Application Evaluation), p. 24 (Figure/Table caption), p. 7 (5.1. Experimental Settings) |
-| Baseline/ablation | Zero-shot evaluation on the NYU-Depth-v2 dataset (Tab.2) demonstrates PRISM's superior robustness under noisy domain shifts when compared to overfitting-prone baselines. | fair input/data/compute/action matching | p. 7 (5.2. Depth Fidelity Evaluation), p. 8 (5.2. Depth Fidelity Evaluation), p. 8 (5.3. Downstream Application Evaluation) |
+Franka Research 3와 Realman RM75에서 여섯 조작 과제를 평가했다. 표 3은 RISE의 과제별 20회 시행 성공 횟수를 세 시드로 집계하고, 표 4는 여섯 과제에서 DP3 91.1%, PPT 92.8%, RISE 92.5%의 평균 성공률을 각각 보고한다. [PDF 7쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/liang26n/liang26n.pdf#page=7) · [PDF 8쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/liang26n/liang26n.pdf#page=8)
 
 ## Explicit Limitations and Failure Boundary
 

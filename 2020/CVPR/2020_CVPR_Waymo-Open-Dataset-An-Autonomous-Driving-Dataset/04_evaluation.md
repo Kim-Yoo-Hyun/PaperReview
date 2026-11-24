@@ -6,7 +6,7 @@
 
 ## Evaluation in One Sentence
 
-PDF body evaluation/result cue (p. 8 (5.4. Dataset Size), p. 7 (5.2. Baselines for Multi-Object Tracking), p. 7 (5.1. Baselines for Object Detection), p. 8 (5.3. Domain Gap), p. 3 (3.1. Sensor Specifications), p. 4 (3.4. Sensor Data)): For methods that work well on small datasets such as PointPillars [16], more data can achieve better results without requiring data augmentation: we trained the same PointPillars model [16] from ...
+CVPR 2020 논문의 자료는 20초짜리 주행 장면 1,150개다. 표 1은 차량당 LiDAR 5개·카메라 5개와 별도로 주석한 2차원·3차원 상자 수를 제시한다. [PDF 1쪽](https://openaccess.thecvf.com/content_CVPR_2020/papers/Sun_Scalability_in_Perception_for_Autonomous_Driving_Waymo_Open_Dataset_CVPR_2020_paper.pdf#page=1) · [PDF 2쪽](https://openaccess.thecvf.com/content_CVPR_2020/papers/Sun_Scalability_in_Perception_for_Autonomous_Driving_Waymo_Open_Dataset_CVPR_2020_paper.pdf#page=2)
 
 ## Evaluation Body Digest
 
@@ -22,10 +22,7 @@ PDF body evaluation/result cue (p. 8 (5.4. Dataset Size), p. 7 (5.2. Baselines f
 ## Evaluation Type and Scope
 
 - **Evaluation type:** `BENCHMARK / DATASET`.
-- **Target system/task:** defined robot simulator/hardware task suite.
-- **Input boundary:** standardized observation, action, task state와 evaluation split.
-- **Output/decision under evaluation:** policy/controller trajectory 또는 measured result.
-- **Primary target:** success metric, robustness, generalization과 reproducibility.
+- **평가 대상:** 검출·추적 과제의 지표와 분할을 정하고 지역이 달라질 때의 일반화와 학습 자료 규모의 영향을 비교했다. [PDF 5쪽](https://openaccess.thecvf.com/content_CVPR_2020/papers/Sun_Scalability_in_Perception_for_Autonomous_Driving_Waymo_Open_Dataset_CVPR_2020_paper.pdf#page=5) · [PDF 6쪽](https://openaccess.thecvf.com/content_CVPR_2020/papers/Sun_Scalability_in_Perception_for_Autonomous_Driving_Waymo_Open_Dataset_CVPR_2020_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content_CVPR_2020/papers/Sun_Scalability_in_Perception_for_Autonomous_Driving_Waymo_Open_Dataset_CVPR_2020_paper.pdf#page=7)
 - **Detected evaluation headings:** 3. Waymo Open Dataset (p. 2); 3.5. Dataset Analysis (p. 5); 5. Experiments (p. 6); 5.4. Dataset Size (p. 8).
 
 ## Experimental Matrix

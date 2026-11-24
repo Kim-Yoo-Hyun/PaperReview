@@ -6,7 +6,7 @@
 
 ## Evaluation in One Sentence
 
-PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 1 (Figure/Table caption), p. 6 (5.2. Comparisons), p. 7 (5.2. Comparisons), p. 4 (Figure/Table caption), p. 6 (5.2. Comparisons)): Figure 5. Images of various open-vocabulary queries. ner effectively diminishes ambiguity and enhances the mean average precision (mAP) metric. Furthermore, integrating DINO features significantly improves the definition of ob- ject ...
+언어 질의의 정확도와 영상 렌더링 품질·속도·메모리를 함께 평가했다. [PDF 6쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Shi_Language_Embedded_3D_Gaussians_for_Open-Vocabulary_Scene_Understanding_CVPR_2024_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Shi_Language_Embedded_3D_Gaussians_for_Open-Vocabulary_Scene_Understanding_CVPR_2024_paper.pdf#page=7) · [PDF 8쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Shi_Language_Embedded_3D_Gaussians_for_Open-Vocabulary_Scene_Understanding_CVPR_2024_paper.pdf#page=8)
 
 ## Evaluation Body Digest
 
@@ -21,22 +21,18 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 1 (Figure/Table 
 
 ## Evaluation Type and Scope
 
-- **Evaluation type:** `SYSTEM / EVALUATION SCOPE UNRESOLVED`.
-- **Target system/task:** 3D scene/object와 robot coordinate frame.
-- **Input boundary:** RGB-D, image set, point cloud, depth와 camera pose.
-- **Output/decision under evaluation:** point map, pose, scene graph, affordance 또는 query result.
-- **Primary target:** geometric accuracy, semantic consistency와 planning/manipulation utility.
+- **Evaluation type:** `BENCHMARK / DATASET`.
 - **Detected evaluation headings:** 4. Implementation Details (p. 5); 5. Experiments (p. 6).
 
 ## Experimental Matrix
 
 | Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
-| Figure/Table caption | SYSTEM / EVALUATION SCOPE UNRESOLVED | Figure 5. Images of various open-vocabulary queries. ner effectively diminishes ambiguity and enhances the mean average precision (mAP) metric. Furthermore, integrating DINO features significantly ... | p. 8 (Figure/Table caption) |
-| Figure/Table caption | SYSTEM / EVALUATION SCOPE UNRESOLVED | Figure 1. We present Language Embedded 3D Gaussians, a novel scene representation for open-vocabulary querying. The top row visualizes the original image, novel view ... | p. 1 (Figure/Table caption) |
-| 5.2. Comparisons | SYSTEM / EVALUATION SCOPE UNRESOLVED | Our approach outperforms others in ren5338 | p. 6 (5.2. Comparisons) |
-| 5.2. Comparisons | SYSTEM / EVALUATION SCOPE UNRESOLVED | In contrast, our use of the quantization scheme facilitates the incorporation of detailed semantics into complex 3D scenes with numerous 3D Gaussians, and concurrently ... | p. 7 (5.2. Comparisons) |
-| Figure/Table caption | SYSTEM / EVALUATION SCOPE UNRESOLVED | Figure 2. The training process for Language-embedded 3D Gaussians starts with initializing scenes following 3D Gaussian Splatting [20] and randomly initializing semantic features and ... | p. 4 (Figure/Table caption) |
+| Figure/Table caption | BENCHMARK / DATASET | Figure 5. Images of various open-vocabulary queries. ner effectively diminishes ambiguity and enhances the mean average precision (mAP) metric. Furthermore, integrating DINO features significantly ... | p. 8 (Figure/Table caption) |
+| Figure/Table caption | BENCHMARK / DATASET | Figure 1. We present Language Embedded 3D Gaussians, a novel scene representation for open-vocabulary querying. The top row visualizes the original image, novel view ... | p. 1 (Figure/Table caption) |
+| 5.2. Comparisons | BENCHMARK / DATASET | Our approach outperforms others in ren5338 | p. 6 (5.2. Comparisons) |
+| 5.2. Comparisons | BENCHMARK / DATASET | In contrast, our use of the quantization scheme facilitates the incorporation of detailed semantics into complex 3D scenes with numerous 3D Gaussians, and concurrently ... | p. 7 (5.2. Comparisons) |
+| Figure/Table caption | BENCHMARK / DATASET | Figure 2. The training process for Language-embedded 3D Gaussians starts with initializing scenes following 3D Gaussian Splatting [20] and randomly initializing semantic features and ... | p. 4 (Figure/Table caption) |
 
 ## Dataset / Benchmark Role
 

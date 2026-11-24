@@ -17,12 +17,11 @@
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (14 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다. [본문](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11125578)
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — The challenge of learning 3D representations from 2D images has been a longstanding area of interest, but achieving a balance between efficiency and fidelity remains a persistent challenge.
-
-방법 관련 발췌 — Our method consists of three key components designed to function cohesively to improve view consistency and depth accuracy in novel view synthesis: a depth correlation loss, an Unseen Viewpoint Regularization (UVR) module, ...
+SparseGS는 소수의 입력 뷰에서 가우시안 장면을 학습할 때 잘못된 깊이에 떠 있는 가우시안을 찾아 제거한다. [PDF 1쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11125578#page=1) · [PDF 3쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11125578#page=3)
 
 ## Problem and Motivation
 
@@ -56,22 +55,14 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 3 / 3. Methods - extractive body cue:** Our method consists of three key components designed to function cohesively to improve view consistency and depth accuracy in novel view synthesis: a depth correlation ...
-- **p. 2 / 1. Introduction - extractive body cue:** Next, we introduce a module designed to tackle background collapse by leveraging a 2D generative diffusion prior [16, 26] and depth warping [22, 44].
-- **p. 2 / 1. Introduction - extractive body cue:** We propose a novel framework, SparseGS, for training coherent and robust 3D Gaussian representations from limited inputs, outperforming SOTA methods in sparse view synthesis.
-- **p. 5 / 3.3. Unseen Viewpoints Regularization (UVR) - extractive body cue:** In this section, we propose two regularization methods to improve reconstruction from novel viewpoints: 1).
-- **p. 6 / 3.4. Advanced Floater Pruning - extractive body cue:** Therefore, we propose a novel pruning operator to remove the Gaussians at false modes at the end of training.
-- **p. 7 / 4.2. Comparison - extractive body cue:** 1, SparseGS significantly outperforms previous NeRF-based methods and concurrent works, FSGS and DNGaussian, in both 12-view and 24-view settings.
-- **p. 3 / Figure/Table caption - extractive body cue:** Figure 2. Our proposed pipeline incorporates depth priors, diffusion constraints, and a floater pruning technique to improve few- shot novel view synthesis performance. During training, ...
-- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. The quality of 3DGS [12] degrades as the number of input views decreases, particularly in unbounded scenes. SparseGS significantly improves novel view synthesis ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 깊이 누적값과 가장 크게 기여하는 가우시안의 깊이를 비교하고 패치 단위 깊이 상관으로 기하를 제약한다. [PDF 3쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11125578#page=3) · [PDF 4쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11125578#page=4) · [PDF 5쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11125578#page=5)
+- 관측되지 않은 시점에 정규화를 적용하고 여러 희소 뷰 장면에서 렌더링 품질과 가지치기의 효과를 비교했다. [PDF 5쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11125578#page=5) · [PDF 6쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11125578#page=6) · [PDF 7쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11125578#page=7)
 
 ## Evaluation Scope
 
 | Dimension | Body-grounded record | Boundary | Anchor |
 |---|---|---|---|
-| Evaluation type | SYSTEM / EVALUATION SCOPE UNRESOLVED | do not infer unreported downstream behavior | p. 7 (4.2. Comparison), p. 3 (Figure/Table caption) |
+| Evaluation type | BENCHMARK / DATASET | do not infer unreported downstream behavior | p. 7 (4.2. Comparison), p. 3 (Figure/Table caption) |
 | Embodiment/environment | The LLFF dataset comprises eight complex forward-facing real scenes, while the DTU dataset includes object-centric scenes with foreground masks. | hardware/simulator version and reset protocol | p. 7 (4.2. Comparison), p. 6 (4.1. Experimental Settings) |
 | Dataset/benchmark | We use the Mip-NeRF360 dataset to evaluate 3D reconstruction of unbounded 360° scenes. | role, split, size and leakage | p. 7 (4.2. Comparison), p. 6 (4.1. Experimental Settings), p. 7 (4.2. Comparison), p. 6 (4.1. Experimental Settings) |
 | Metric | Figure 2. Our proposed pipeline incorporates depth priors, diffusion constraints, and a floater pruning technique to improve few- shot novel view synthesis performance. During training, we render the softmax depth and use ... | definition, denominator, direction and uncertainty | p. 3 (Figure/Table caption), p. 7 (4.2. Comparison), p. 7 (4.2. Comparison) |

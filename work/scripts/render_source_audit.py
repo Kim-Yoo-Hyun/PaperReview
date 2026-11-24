@@ -450,7 +450,10 @@ def render(rows, meta):
         f"[논문별 판정과 직접 근거]({ledger})", "",
     ]
     if batches:
+        verified_summaries = sum(checks["summary"] == PASS for checks in states.values())
         lines += ["## 요약·기여 원문 대조", "",
+                  f"전체 {n:,}편 중 {verified_summaries:,}편({pct(verified_summaries, n)})의 요약·기여를 원문에서 확인했다. "
+                  "판정 대상 문장은 논문별 원장에 기록했다. 아래 표는 순차 배치의 대조 이력이다.", "",
                   "| 확인일 | 등급 | 대상 | PDF | 공식 웹 원문 | 같은 등급에서 남은 요약 |",
                   "|---|---|---|---:|---:|---:|"]
         remaining = Counter(r["tier_at_audit"] for r in rows if current_checks(r, include_reviews=False)["summary"] == OPEN)
@@ -531,7 +534,7 @@ def render(rows, meta):
         f"자동 분류에서 잘못 붙은 검색 단서와 논문 내용 자체의 오류는 위 표에서 구별했다.", "",
         f"**[해석]** 미확인 필드에서 추가 오류가 나올 수 있어 전체의 실제 잔여 오류율은 점으로 추정할 수 없다. "
         f"기존 통과 판정을 전제로, 미확인만 해소될 때 가능한 논문 단위 범위는 {pct(failed,n)}–{pct(failed+unknown,n)}다. "
-        "이는 표본 신뢰구간이 아니다. 연구 비교에 쓸 요약과 공개 자료부터 미확인 필드를 계속 대조할 필요가 있다.", "",
+        "필드별 미확인 건수와 당시 무작위 표본의 결과는 아래에 따로 제시했다.", "",
         "## 교정 재검증", "", f"{post['verified_on']}에 수행한 전수 점검 기록이다. [당시 조사 시작 판본]({historic}/work/sources/papers.json)", "",
         f"- 전 {n:,}편에서 대표 URL과 논문별 서지 출처에 다시 접근했다. 독립적으로 표제를 식별한 논문은 {biblios['title']:,}편, "
         f"대표 URL 자체에서 표제를 확인한 논문은 {biblios['primary']:,}편이다. "

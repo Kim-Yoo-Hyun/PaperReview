@@ -16,12 +16,11 @@
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다. [본문](https://openaccess.thecvf.com/content/ICCV2025/papers/Xiang_Repurposing_2D_Diffusion_Models_with_Gaussian_Atlas_for_3D_Generation_ICCV_2025_paper.pdf)
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, such models have significant limitations especially when trained solely on 3D data, as high-quality 3D data is relatively scarce compared to 2D images.
-
-방법 관련 발췌 — To summarize, our major contributions are three-fold: (i) We present a large-scale dataset, GaussianVerse, consisting of 205,737 high-quality 3D Gaussian fittings for diverse objects sampled from Sketchfab [43]; (ii) We propose a ...
+Gaussian Atlas는 물체의 3D 가우시안 파라미터를 조밀한 2D 격자로 펼쳐 기존 이미지 확산 모델을 3D 물체 생성에 재사용한다. [PDF 1쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Xiang_Repurposing_2D_Diffusion_Models_with_Gaussian_Atlas_for_3D_Generation_ICCV_2025_paper.pdf#page=1) · [PDF 4쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Xiang_Repurposing_2D_Diffusion_Models_with_Gaussian_Atlas_for_3D_Generation_ICCV_2025_paper.pdf#page=4)
 
 ## Problem and Motivation
 
@@ -55,22 +54,14 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** To summarize, our major contributions are three-fold: (i) We present a large-scale dataset, GaussianVerse, consisting of 205,737 high-quality 3D Gaussian fittings for diverse objects sampled ...
-- **p. 1 / 1. Introduction - extractive body cue:** To fully harness the capabilities of these 2D diffusion models, we introduce Gaussian Atlas, a novel 2D representation of 3D Gaussians.
-- **p. 1 / 1. Introduction - extractive body cue:** In this paper, we propose a fresh perspective that repurposes 2D diffusion models for 3D generation through direct fine-tuning.
-- **p. 4 / 4. Formulating 3D Gaussians as 2D Atlas - extractive body cue:** In this section, we introduce a novel approach that transforms unorganized Gaussians in the 3D space to a dense 2D representation, namely Gaussian Atlas, making ...
-- **p. 2 / 3. GaussianVerse - extractive body cue:** In this section, we present GaussianVerse, a large-scale dataset containing high-quality 3D Gaussian fittings for a wide range of 3D objects.
-- **p. 7 / Figure/Table caption - extractive body cue:** Table 2. Qualitative comparisons. Our method achieves perfor- mance comparable to the state-of-the-art in terms of CLIP similar- ity scores, with the minimum number of ...
-- **p. 7 / Figure/Table caption - extractive body cue:** Figure 7. User study results. Our method outperforms state-of- the-art methods [57, 60] in user preferences regarding generation quality and alignment with text prompts. > ...
-- **p. 8 / Figure/Table caption - extractive body cue:** Figure 8. Finetuning from a pretrained 2D diffusion model leads to faster generalization. Top: 3D generations at different training checkpoints from finetuning (top row) and ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 가우시안 속성을 2D 아틀라스로 표현하고, 다양한 물체에 적합한 가우시안을 모은 GaussianVerse로 생성 모델을 학습한다. [PDF 3쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Xiang_Repurposing_2D_Diffusion_Models_with_Gaussian_Atlas_for_3D_Generation_ICCV_2025_paper.pdf#page=3) · [PDF 4쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Xiang_Repurposing_2D_Diffusion_Models_with_Gaussian_Atlas_for_3D_Generation_ICCV_2025_paper.pdf#page=4) · [PDF 5쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Xiang_Repurposing_2D_Diffusion_Models_with_Gaussian_Atlas_for_3D_Generation_ICCV_2025_paper.pdf#page=5)
+- 텍스트 조건 생성에서 아틀라스를 다시 3D로 렌더링해 비교하고 2D 사전학습과 표현 방식의 영향을 분석했다. [PDF 6쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Xiang_Repurposing_2D_Diffusion_Models_with_Gaussian_Atlas_for_3D_Generation_ICCV_2025_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Xiang_Repurposing_2D_Diffusion_Models_with_Gaussian_Atlas_for_3D_Generation_ICCV_2025_paper.pdf#page=7)
 
 ## Evaluation Scope
 
 | Dimension | Body-grounded record | Boundary | Anchor |
 |---|---|---|---|
-| Evaluation type | SYSTEM / EVALUATION SCOPE UNRESOLVED | do not infer unreported downstream behavior | p. 7 (Figure/Table caption), p. 7 (Figure/Table caption) |
+| Evaluation type | BENCHMARK / DATASET | do not infer unreported downstream behavior | p. 7 (Figure/Table caption), p. 7 (Figure/Table caption) |
 | Embodiment/environment | However, text-to-3D generation presents greater challenges due to two key reasons: (i) the scarcity of large-scale datasets with 3D models comparable to those in 2D, as creating and annotating high-quality, textured 3D ... | hardware/simulator version and reset protocol | p. 4 (4. Formulating 3D Gaussians as 2D Atlas), p. 3 (3. GaussianVerse) |
 | Dataset/benchmark | metal handle house model light box roof table stone character toy sword cube robot rock cartoon hat gun sphere hole Total number of 3DGS fittings = 205,737 d b c Occurrences Number ... | role, split, size and leakage | p. 4 (4. Formulating 3D Gaussians as 2D Atlas), p. 3 (3. GaussianVerse), p. 3 (3. GaussianVerse), p. 4 (3. GaussianVerse) |
 | Metric | Figure 6. Additional qualitative results. Our method effectively repurposes 2D diffusion models for high-quality 3D contents. The generated Gaussian atlases are presented in the order from top left to bottom right: 3D ... | definition, denominator, direction and uncertainty | p. 7 (Figure/Table caption), p. 7 (Figure/Table caption), p. 8 (Figure/Table caption) |

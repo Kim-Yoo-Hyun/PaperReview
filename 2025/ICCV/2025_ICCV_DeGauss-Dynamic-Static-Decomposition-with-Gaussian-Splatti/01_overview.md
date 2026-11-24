@@ -16,12 +16,11 @@
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다. [본문](https://openaccess.thecvf.com/content/ICCV2025/papers/Wang_DeGauss_Dynamic-Static_Decomposition_with_Gaussian_Splatting_for_Distractor-free_3D_Reconstruction_ICCV_2025_paper.pdf)
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — This limitation is further amplified in egocentric videos, a rapidly growing data source that introduces unique challenges for 3D scene reconstruction[7, 16, 29, 32, 41].
-
-방법 관련 발췌 — In summary, our contributions are: • We propose DeGauss, a decoupled foregroundbackground design which leverages dynamic-static Gaussian splatting for robust and generalizable dynamicstatic decomposition. • Our proposed method achieves ...
+DeGauss는 움직이는 사람·물체가 가리는 영상에서 정적 배경과 동적 전경을 별도의 가우시안으로 학습해 배경을 복원한다. [PDF 1쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Wang_DeGauss_Dynamic-Static_Decomposition_with_Gaussian_Splatting_for_Distractor-free_3D_Reconstruction_ICCV_2025_paper.pdf#page=1) · [PDF 3쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Wang_DeGauss_Dynamic-Static_Decomposition_with_Gaussian_Splatting_for_Distractor-free_3D_Reconstruction_ICCV_2025_paper.pdf#page=3)
 
 ## Problem and Motivation
 
@@ -55,22 +54,14 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** In summary, our contributions are: • We propose DeGauss, a decoupled foregroundbackground design which leverages dynamic-static Gaussian splatting for robust and generalizable dynamicstatic decomposition. • ...
-- **p. 2 / 1. Introduction - extractive body cue:** We show that our method achieves superior results compared to baseline dynamic scene modeling approaches, with notable advantages across diverse datasets [13, 21].
-- **p. 4 / 3.4. Background Brightness Control - extractive body cue:** To address this, we introduce a brightness control mask that enhances the background branch's capacity to model non-Lambertian effects.
-- **p. 4 / 3.4. Background Brightness Control - extractive body cue:** Our method simultaneously reconstructs the 3D scene and learns an unsupervised decomposition into decoupled static background and dynamic foreground branches, where the update is loosely ...
-- **p. 5 / 3.6. Unsupervised scene decomposition - extractive body cue:** Our method offers significantly greater robustness in handling local minimas.
-- **p. 7 / 4.3. Results - extractive body cue:** Notably, our method consistently achieves significantly better LPIPS scores over the previous SOTA method SpotlessSplats [24].
-- **p. 7 / 4.3. Results - extractive body cue:** 2, where our methods achieve consistently better LPIPS scores.
-- **p. 5 / 4.3. Results - extractive body cue:** To assess the performance of our method for the distractorfree scene reconstruction task in the presence of noisy inputs, we conduct evaluations on both egocentric ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 전경과 배경 분기의 렌더링을 분리하고 학습되는 마스크로 어느 관측이 각 분기를 갱신할지 조절한다. [PDF 3쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Wang_DeGauss_Dynamic-Static_Decomposition_with_Gaussian_Splatting_for_Distractor-free_3D_Reconstruction_ICCV_2025_paper.pdf#page=3) · [PDF 4쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Wang_DeGauss_Dynamic-Static_Decomposition_with_Gaussian_Splatting_for_Distractor-free_3D_Reconstruction_ICCV_2025_paper.pdf#page=4) · [PDF 5쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Wang_DeGauss_Dynamic-Static_Decomposition_with_Gaussian_Splatting_for_Distractor-free_3D_Reconstruction_ICCV_2025_paper.pdf#page=5)
+- NeRF-on-the-go와 일인칭 상호작용 영상 등에서 방해 물체를 제거한 뷰를 비교하고, 가림과 조명 변화에서의 동작을 분석했다. [PDF 6쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Wang_DeGauss_Dynamic-Static_Decomposition_with_Gaussian_Splatting_for_Distractor-free_3D_Reconstruction_ICCV_2025_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Wang_DeGauss_Dynamic-Static_Decomposition_with_Gaussian_Splatting_for_Distractor-free_3D_Reconstruction_ICCV_2025_paper.pdf#page=7) · [PDF 8쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Wang_DeGauss_Dynamic-Static_Decomposition_with_Gaussian_Splatting_for_Distractor-free_3D_Reconstruction_ICCV_2025_paper.pdf#page=8)
 
 ## Evaluation Scope
 
 | Dimension | Body-grounded record | Boundary | Anchor |
 |---|---|---|---|
-| Evaluation type | EMPIRICAL / REAL-ROBOT OR HARDWARE | do not infer unreported downstream behavior | p. 7 (4.3. Results), p. 7 (4.3. Results) |
+| Evaluation type | BENCHMARK / DATASET | do not infer unreported downstream behavior | p. 7 (4.3. Results), p. 7 (4.3. Results) |
 | Embodiment/environment | HyperNeRF Dataset [21] features real-world activities captured with smooth trajectories. | hardware/simulator version and reset protocol | p. 5 (4.2. Datasets), p. 7 (4.3. Results) |
 | Dataset/benchmark | Distractor free scene reconstruction on NeRF On-the-go Dataset[22].The best , second best , and third best are highlighted. ‡: ±0.005 SSIM and LPIPS due to rounding uncertainty of originally reported result. | role, split, size and leakage | p. 5 (4.2. Datasets), p. 7 (4.3. Results), p. 6 (4.3. Results), p. 5 (4.2. Datasets) |
 | Metric | 2, where our methods achieve consistently better LPIPS scores. | definition, denominator, direction and uncertainty | p. 7 (4.3. Results), p. 7 (4.3. Results), p. 5 (4.2. Datasets) |

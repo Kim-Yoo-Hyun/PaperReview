@@ -8,7 +8,7 @@
 
 ## Evaluation in One Sentence
 
-PDF body evaluation/result cue (p. 9 (Figure/Table caption), p. 8 (4 EXPERIMENTS), p. 10 (4 EXPERIMENTS), p. 10 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 2 (Figure/Table caption)): Figure 4: Qualitative comparison of predictions from each head and our final prediction using TACC (Default) in the 1-way 1-shot setting on the S3DIS dataset. The target classes in the ...
+ScanNet과 S3DIS의 소수 예시 분할에서 비교하고, 융합과 시험 시 보정 모듈을 각각 제거해 성능 차이를 측정했다. [PDF 7쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/8b21a7ea42cbcd1c29a7a88c444cce45-Paper-Conference.pdf#page=7) · [PDF 8쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/8b21a7ea42cbcd1c29a7a88c444cce45-Paper-Conference.pdf#page=8) · [PDF 9쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/8b21a7ea42cbcd1c29a7a88c444cce45-Paper-Conference.pdf#page=9)
 
 ## Evaluation Body Digest
 
@@ -23,22 +23,18 @@ PDF body evaluation/result cue (p. 9 (Figure/Table caption), p. 8 (4 EXPERIMENTS
 
 ## Evaluation Type and Scope
 
-- **Evaluation type:** `EMPIRICAL / SIMULATION`.
-- **Target system/task:** 3D scene/object와 robot coordinate frame.
-- **Input boundary:** RGB-D, image set, point cloud, depth와 camera pose.
-- **Output/decision under evaluation:** point map, pose, scene graph, affordance 또는 query result.
-- **Primary target:** geometric accuracy, semantic consistency와 planning/manipulation utility.
+- **Evaluation type:** `BENCHMARK / DATASET`.
 - **Detected evaluation headings:** 4 EXPERIMENTS (p. 8); A ADDITIONAL EXPERIMENTS (p. 16); B ADDITIONAL IMPLEMENTATION DETAILS (p. 17).
 
 ## Experimental Matrix
 
 | Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
-| Figure/Table caption | EMPIRICAL / SIMULATION | Figure 4: Qualitative comparison of predictions from each head and our final prediction using TACC (Default) in the 1-way 1-shot setting on the S3DIS ... | p. 9 (Figure/Table caption) |
-| 4 EXPERIMENTS | EMPIRICAL / SIMULATION | Despite leveraging the 2D-aligned backbone weights, COSeg† does not significantly improve over COSeg, highlighting the critical role of well-designed fusion modules in achieving significant ... | p. 8 (4 EXPERIMENTS) |
-| 4 EXPERIMENTS | EMPIRICAL / SIMULATION | 3d shows that adding the image modality improves the 3D-only baseline, and further incorporating the textual modality leads to better results. | p. 10 (4 EXPERIMENTS) |
-| 4 EXPERIMENTS | EMPIRICAL / SIMULATION | Moreover, combining both MCF and MSF together further improves performance, confirming that their fusion strategies are both essential and complementary for enhancing few-shot learning. | p. 10 (4 EXPERIMENTS) |
-| 4 EXPERIMENTS | EMPIRICAL / SIMULATION | Overall, our model secures average mIoU improvements of +3.97% and +9.25% across the 1/2-way settings on both datasets. | p. 9 (4 EXPERIMENTS) |
+| Figure/Table caption | BENCHMARK / DATASET | Figure 4: Qualitative comparison of predictions from each head and our final prediction using TACC (Default) in the 1-way 1-shot setting on the S3DIS ... | p. 9 (Figure/Table caption) |
+| 4 EXPERIMENTS | BENCHMARK / DATASET | Despite leveraging the 2D-aligned backbone weights, COSeg† does not significantly improve over COSeg, highlighting the critical role of well-designed fusion modules in achieving significant ... | p. 8 (4 EXPERIMENTS) |
+| 4 EXPERIMENTS | BENCHMARK / DATASET | 3d shows that adding the image modality improves the 3D-only baseline, and further incorporating the textual modality leads to better results. | p. 10 (4 EXPERIMENTS) |
+| 4 EXPERIMENTS | BENCHMARK / DATASET | Moreover, combining both MCF and MSF together further improves performance, confirming that their fusion strategies are both essential and complementary for enhancing few-shot learning. | p. 10 (4 EXPERIMENTS) |
+| 4 EXPERIMENTS | BENCHMARK / DATASET | Overall, our model secures average mIoU improvements of +3.97% and +9.25% across the 1/2-way settings on both datasets. | p. 9 (4 EXPERIMENTS) |
 
 ## Dataset / Benchmark Role
 

@@ -6,7 +6,7 @@
 
 ## Evaluation in One Sentence
 
-PDF body evaluation/result cue (p. 7 (4.2. Quantitative Analysis), p. 7 (4.2. Quantitative Analysis), p. 8 (4.3. Ablation Study), p. 13 (Figure/Table caption), p. 6 (4. Experiments), p. 8 (4.3. Ablation Study)): In terms of FLOPs, our approach adds virtually no extra computational burden compared to baselines, significantly outperforming IDPT and Point-PEFT.
+ScanObjectNN 등에서 분류 성능과 갱신 파라미터 수를 함께 비교하고 프롬프트 위치 조정의 기여를 분석했다. [PDF 6쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/ai25a/ai25a.pdf#page=6) · [PDF 7쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/ai25a/ai25a.pdf#page=7)
 
 ## Evaluation Body Digest
 
@@ -21,22 +21,18 @@ PDF body evaluation/result cue (p. 7 (4.2. Quantitative Analysis), p. 7 (4.2. Qu
 
 ## Evaluation Type and Scope
 
-- **Evaluation type:** `EMPIRICAL / REAL-ROBOT OR HARDWARE`.
-- **Target system/task:** 3D scene/object와 robot coordinate frame.
-- **Input boundary:** RGB-D, image set, point cloud, depth와 camera pose.
-- **Output/decision under evaluation:** point map, pose, scene graph, affordance 또는 query result.
-- **Primary target:** geometric accuracy, semantic consistency와 planning/manipulation utility.
+- **Evaluation type:** `BENCHMARK / DATASET`.
 - **Detected evaluation headings:** 4. Experiments (p. 6); 4.1. Experimental Settings (p. 6).
 
 ## Experimental Matrix
 
 | Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
-| 4.2. Quantitative Analysis | EMPIRICAL / REAL-ROBOT OR HARDWARE | In terms of FLOPs, our approach adds virtually no extra computational burden compared to baselines, significantly outperforming IDPT and Point-PEFT. | p. 7 (4.2. Quantitative Analysis) |
-| 4.2. Quantitative Analysis | EMPIRICAL / REAL-ROBOT OR HARDWARE | As shown in Table 1, our method GAPrompt achieves the highest accuracy among all the parameter-efficient fine-tuning methods for 3D vision models. | p. 7 (4.2. Quantitative Analysis) |
-| 4.3. Ablation Study | EMPIRICAL / REAL-ROBOT OR HARDWARE | This suggests that the Point Shift Prompter can enhance the geometric features of the point cloud at the input level, thereby contributing to improved ... | p. 8 (4.3. Ablation Study) |
-| Figure/Table caption | EMPIRICAL / REAL-ROBOT OR HARDWARE | Figure 10. Ablation study on different input for downstream head. C.2. Analysis on Adapter Enhancing Factor βa. As shown in Figure 8, we conduct ... | p. 13 (Figure/Table caption) |
-| 4. Experiments | EMPIRICAL / REAL-ROBOT OR HARDWARE | We evaluate the performance of our proposed GAPrompt on the point cloud classification task. | p. 6 (4. Experiments) |
+| 4.2. Quantitative Analysis | BENCHMARK / DATASET | In terms of FLOPs, our approach adds virtually no extra computational burden compared to baselines, significantly outperforming IDPT and Point-PEFT. | p. 7 (4.2. Quantitative Analysis) |
+| 4.2. Quantitative Analysis | BENCHMARK / DATASET | As shown in Table 1, our method GAPrompt achieves the highest accuracy among all the parameter-efficient fine-tuning methods for 3D vision models. | p. 7 (4.2. Quantitative Analysis) |
+| 4.3. Ablation Study | BENCHMARK / DATASET | This suggests that the Point Shift Prompter can enhance the geometric features of the point cloud at the input level, thereby contributing to improved ... | p. 8 (4.3. Ablation Study) |
+| Figure/Table caption | BENCHMARK / DATASET | Figure 10. Ablation study on different input for downstream head. C.2. Analysis on Adapter Enhancing Factor βa. As shown in Figure 8, we conduct ... | p. 13 (Figure/Table caption) |
+| 4. Experiments | BENCHMARK / DATASET | We evaluate the performance of our proposed GAPrompt on the point cloud classification task. | p. 6 (4. Experiments) |
 
 ## Dataset / Benchmark Role
 

@@ -16,12 +16,11 @@
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (22 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다. [본문](https://proceedings.iclr.cc/paper_files/paper/2025/file/8b21a7ea42cbcd1c29a7a88c444cce45-Paper-Conference.pdf)
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — To address this challenge, few-shot 3D point cloud semantic segmentation (FS-PCS) has recently attracted increasing attention, enabling models to generalize to unseen/novel categories with just a few annotated samples.
-
-방법 관련 발췌 — Under this cost-free multimodal FS-PCS setup, we introduce a novel model, MultiModal Few-Shot SegNet (MM-FSS), to effectively address FS-PCS by harnessing complementary information from different modalities.
+MM-FSS는 적은 수의 정답 점군으로 새 범주를 분할할 때 언어 라벨과 이용 가능한 2D 영상 특징을 함께 활용한다. [PDF 1쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/8b21a7ea42cbcd1c29a7a88c444cce45-Paper-Conference.pdf#page=1) · [PDF 4쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/8b21a7ea42cbcd1c29a7a88c444cce45-Paper-Conference.pdf#page=4)
 
 ## Problem and Motivation
 
@@ -55,22 +54,14 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** Under this cost-free multimodal FS-PCS setup, we introduce a novel model, MultiModal Few-Shot SegNet (MM-FSS), to effectively address FS-PCS by harnessing complementary information from different ...
-- **p. 3 / 1 INTRODUCTION - extractive body cue:** (ii) We introduce a novel model, MM-FSS, to effectively exploit information from different modalities, which includes multimodal correlation fusion, multimodal semantic fusion, and test-time adaptive ...
-- **p. 6 / 3 METHODOLOGY - extractive body cue:** To this end, we propose two novel modules for cross-modal knowledge fusion: MCF and MSF.
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** Additionally, we propose a simple yet effective Test-time Adaptive Cross-modal Calibration (TACC) technique to mitigate training bias inherent in few-shot models (Cheng et al., 2022).
-- **p. 4 / 3 METHODOLOGY - extractive body cue:** Different from the existing setup, we propose a multimodal FS-PCS setup where two additional modalities exist: the textual modality and the 2D image modality.
-- **p. 9 / Figure/Table caption - extractive body cue:** Figure 4: Qualitative comparison of predictions from each head and our final prediction using TACC (Default) in the 1-way 1-shot setting on the S3DIS dataset. ...
-- **p. 8 / 4 EXPERIMENTS - extractive body cue:** Despite leveraging the 2D-aligned backbone weights, COSeg† does not significantly improve over COSeg, highlighting the critical role of well-designed fusion modules in achieving significant advancements.
-- **p. 10 / 4 EXPERIMENTS - extractive body cue:** 3d shows that adding the image modality improves the 3D-only baseline, and further incorporating the textual modality leads to better results.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 모달리티별 대응을 융합한 뒤 텍스트 의미로 대응을 정제하고, 시험 시 모달리티 간 보정으로 학습 범주에 대한 편향을 줄인다. [PDF 4쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/8b21a7ea42cbcd1c29a7a88c444cce45-Paper-Conference.pdf#page=4) · [PDF 5쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/8b21a7ea42cbcd1c29a7a88c444cce45-Paper-Conference.pdf#page=5) · [PDF 6쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/8b21a7ea42cbcd1c29a7a88c444cce45-Paper-Conference.pdf#page=6)
+- ScanNet과 S3DIS의 소수 예시 분할에서 비교하고, 융합과 시험 시 보정 모듈을 각각 제거해 성능 차이를 측정했다. [PDF 7쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/8b21a7ea42cbcd1c29a7a88c444cce45-Paper-Conference.pdf#page=7) · [PDF 8쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/8b21a7ea42cbcd1c29a7a88c444cce45-Paper-Conference.pdf#page=8) · [PDF 9쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/8b21a7ea42cbcd1c29a7a88c444cce45-Paper-Conference.pdf#page=9)
 
 ## Evaluation Scope
 
 | Dimension | Body-grounded record | Boundary | Anchor |
 |---|---|---|---|
-| Evaluation type | EMPIRICAL / SIMULATION | do not infer unreported downstream behavior | p. 9 (Figure/Table caption), p. 8 (4 EXPERIMENTS) |
+| Evaluation type | BENCHMARK / DATASET | do not infer unreported downstream behavior | p. 9 (Figure/Table caption), p. 8 (4 EXPERIMENTS) |
 | Embodiment/environment | (2021), we divide the large-scale scenes into 1m × 1m blocks. | hardware/simulator version and reset protocol | p. 8 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS) |
 | Dataset/benchmark | Similarly, it achieves +4.53% and +8.58% improvements on the S3DIS dataset in the 1/2-way settings, respectively. | role, split, size and leakage | p. 8 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS) |
 | Metric | This performance gap underscores our model's superior ability to utilize multimodal knowledge for FS-PCS and the importance of considering commonly-ignored multimodal information to enhance few-shot generalization for future research. | definition, denominator, direction and uncertainty | p. 9 (4 EXPERIMENTS), p. 10 (4 EXPERIMENTS), p. 10 (4 EXPERIMENTS) |

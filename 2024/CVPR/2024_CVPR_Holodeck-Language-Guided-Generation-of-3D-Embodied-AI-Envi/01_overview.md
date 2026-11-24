@@ -7,7 +7,8 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2024 / CVPR
-- Authors: Yue Yang, Fan-Yun Sun, Luca Weihs, Eli VanderBilt, Alvaro Herrasti, Winson Han, Jiajun Wu, Nick Haber, Ranjay Krishna, Lingjie Liu, Chris Callison-Burch, Mark Yatskar, Aniruddha Kembhavi, Christopher Clark
+- Authors: Yue Yang, Fan-Yun Sun, Luca Weihs, Eli Vanderbilt, Alvaro Herrasti, Winson Han, Jiajun Wu, Nick Haber, Ranjay Krishna, Lingjie Liu, Chris Callison-Burch, Mark Yatskar, Aniruddha Kembhavi, Christopher Clark
+- 저자 판본: CVPR 게재본 표제면의 네 번째 저자 Eli Vanderbilt 표기를 반영했다. [표제면](https://openaccess.thecvf.com/content/CVPR2024/papers/Yang_Holodeck_Language_Guided_Generation_of_3D_Embodied_AI_Environments_CVPR_2024_paper.pdf#page=1) · [학회 서지](https://openaccess.thecvf.com/content/CVPR2024/html/Yang_Holodeck_Language_Guided_Generation_of_3D_Embodied_AI_Environments_CVPR_2024_paper.html)
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
 - Tags: Generation, 3D scene, Embodied AI
@@ -16,12 +17,11 @@
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다. [본문](https://openaccess.thecvf.com/content/CVPR2024/papers/Yang_Holodeck_Language_Guided_Generation_of_3D_Embodied_AI_Environments_CVPR_2024_paper.pdf)
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, these models often produce scenes with significant artifacts, such as mesh distortions, and lack the interactivity necessary for Embodied AI.
-
-방법 관련 발췌 — To summarize, our contributions are three-fold: (1) We propose HOLODECK, a language-guided system capable of generating diverse, customized, and interactive 3D environments based on textual descriptions; (2) The human evaluation validat ...
+Holodeck은 자연어로 묘사한 실내 환경을 물체 자산과 공간 제약을 갖춘 상호작용 가능한 시뮬레이션 장면으로 생성한다. [PDF 1쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Yang_Holodeck_Language_Guided_Generation_of_3D_Embodied_AI_Environments_CVPR_2024_paper.pdf#page=1) · [PDF 3쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Yang_Holodeck_Language_Guided_Generation_of_3D_Embodied_AI_Environments_CVPR_2024_paper.pdf#page=3)
 
 ## Problem and Motivation
 
@@ -55,26 +55,12 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** To summarize, our contributions are three-fold: (1) We propose HOLODECK, a language-guided system capable of generating diverse, customized, and interactive 3D environments based on textual ...
-- **p. 2 / 1. Introduction - extractive body cue:** In light of these challenges, we present HOLODECK, a language-guided system built upon AI2-THOR [23], to automatically generate diverse, customized, and interactive 3D embodied environments ...
-- **p. 5 / 3. HOLODECK - extractive body cue:** To address this, instead of letting LLM directly operate on numerical values, we propose a novel constraint-based approach that employs LLM to generate spatial relations ...
-- **p. 1 / Abstract - extractive body cue:** To mitigate this limitation, we present HOLODECK, a system that generates 3D environments to match a user-supplied prompt fully automatedly.
-- **p. 3 / 3. HOLODECK - extractive body cue:** In the following sections, we introduce our prompting approach that converts high-level user natural language specifications into a series of language model queries for constructing ...
-- **p. 7 / 4.2. HOLODECK on Diverse Scenes - extractive body cue:** Compared to PROCTHOR's performance in residential scenes, HOLODECK achieves higher human preference scores over half of (28 out of 52) the diverse scenes.
-- **p. 7 / 4.3. Ablation Study on Layout Design - extractive body cue:** HOLODECK's constraint-based approach outperforms the other methods significantly on bathroom, bedroom and living room.
-- **p. 8 / 4.3. Ablation Study on Layout Design - extractive body cue:** Given a novel scene type, e.g., Music Room, HOLODECK can synthesize new scenes for fine-tuning to improve the performance of pretrained agents in expert-designed environments.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 언어 모델로 평면도와 배치 제약을 만들고 자산을 검색해 물체끼리의 관계와 제약을 고려한 배치를 구한다. [PDF 3쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Yang_Holodeck_Language_Guided_Generation_of_3D_Embodied_AI_Environments_CVPR_2024_paper.pdf#page=3) · [PDF 4쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Yang_Holodeck_Language_Guided_Generation_of_3D_Embodied_AI_Environments_CVPR_2024_paper.pdf#page=4) · [PDF 5쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Yang_Holodeck_Language_Guided_Generation_of_3D_Embodied_AI_Environments_CVPR_2024_paper.pdf#page=5)
+- 사람의 장면 선호 평가와 생성한 장면을 사용한 물체 목표 내비게이션의 시뮬레이션 일반화를 각각 측정했다. [PDF 6쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Yang_Holodeck_Language_Guided_Generation_of_3D_Embodied_AI_Environments_CVPR_2024_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Yang_Holodeck_Language_Guided_Generation_of_3D_Embodied_AI_Environments_CVPR_2024_paper.pdf#page=7) · [PDF 8쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Yang_Holodeck_Language_Guided_Generation_of_3D_Embodied_AI_Environments_CVPR_2024_paper.pdf#page=8)
 
 ## Evaluation Scope
 
-| Dimension | Body-grounded record | Boundary | Anchor |
-|---|---|---|---|
-| Evaluation type | SYSTEM / EVALUATION SCOPE UNRESOLVED | do not infer unreported downstream behavior | p. 7 (4.2. HOLODECK on Diverse Scenes), p. 7 (4.3. Ablation Study on Layout Design) |
-| Embodiment/environment | To evaluate HOLODECK's capability beyond residential scenes, we have humans rate its performance on 52 scene types7 from MIT Scenes Dataset [36], covering five categories: Stores (deli, bakery), Home (bedroom, dining room), ... | hardware/simulator version and reset protocol | p. 6 (4.2. HOLODECK on Diverse Scenes), p. 7 (4.2. HOLODECK on Diverse Scenes) |
-| Dataset/benchmark | We modify the residential scenes of HOLODECK used in 4.1 by altering the layouts using the previously mentioned methods while keeping the objects in the scene identical. | role, split, size and leakage | p. 6 (4.2. HOLODECK on Diverse Scenes), p. 7 (4.2. HOLODECK on Diverse Scenes), p. 7 (4.3. Ablation Study on Layout Design), p. 8 (4.3. Ablation Study on Layout Design) |
-| Metric | The ABSOLUTE method performs no better than RANDOM due to its tendency to create scenes with collision and boundary errors (see examples in the supplement), typically rated poorly by humans. | definition, denominator, direction and uncertainty | p. 7 (4.3. Ablation Study on Layout Design), p. 6 (4.1. Comparative Analysis on Residential Scenes), p. 7 (4.2. HOLODECK on Diverse Scenes) |
-| Baseline/ablation | We conduct comprehensive human evaluations to assess the quality of HOLODECK scenes, with a total of 680 graduate students participating in three user studies: (1) a comparative analysis on residential scenes with ... | fair input/data/compute/action matching | p. 6 (4. Human Evaluation), p. 6 (4.1. Comparative Analysis on Residential Scenes), p. 7 (4.3. Ablation Study on Layout Design) |
+사람의 선호와 에이전트 성능은 별도 실험이다. NOVELTYTHOR 시뮬레이션의 ObjectNav 표 2에서 ProcTHOR 사전학습 후 Holodeck으로 미세조정한 모델의 평균 성공률은 20.40%, SPL은 0.127이다. [PDF 7쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Yang_Holodeck_Language_Guided_Generation_of_3D_Embodied_AI_Environments_CVPR_2024_paper.pdf#page=7) · [PDF 8쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Yang_Holodeck_Language_Guided_Generation_of_3D_Embodied_AI_Environments_CVPR_2024_paper.pdf#page=8)
 
 ## Explicit Limitations and Failure Boundary
 

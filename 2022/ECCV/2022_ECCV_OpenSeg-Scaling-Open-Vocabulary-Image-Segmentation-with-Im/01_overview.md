@@ -16,12 +16,11 @@
 - Code/Project: https://github.com/tensorflow/tpu/tree/master/models/official/detection/projects/openseg
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (27 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다. [본문](https://www.ecva.net/papers/eccv_2022/papers_ECCV/papers/136960532.pdf)
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Scaling Open-Vocabulary Image Segmentation with Image-Level Labels 3 However, the issue with this approach is in the scalability of training data.
-
-방법 관련 발췌 — We call our method OpenSeg, standing for open-vocabulary image segmentation.
+OpenSeg는 물체 영역을 제안하는 과정과 영역을 텍스트 어휘에 연결하는 과정을 나누어 개방 어휘 영상 분할을 학습한다. [PDF 1쪽](https://www.ecva.net/papers/eccv_2022/papers_ECCV/papers/136960532.pdf#page=1) · [PDF 5쪽](https://www.ecva.net/papers/eccv_2022/papers_ECCV/papers/136960532.pdf#page=5)
 
 ## Problem and Motivation
 
@@ -55,16 +54,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 3 / 1 Introduction - extractive body cue:** We call our method OpenSeg, standing for open-vocabulary image segmentation.
-- **p. 3 / 1 Introduction - extractive body cue:** To evaluate our method, we measure performances on holdout image segmentation datasets.
-- **p. 6 / 3 Method - extractive body cue:** 3.1 Learning Segmentation Masks We design a model architecture which consists of a feature pyramid network (FPN) [32] for multi-scale feature extraction and a cross-attention ...
-- **p. 11 / 4 Experiments - extractive body cue:** OpenSeg significantly outperforms pre-trained ALIGN [23]: OpenSeg trained on COCO outperforms ALIGN baseline on all of the benchmarks significantly.
-- **p. 12 / 4 Experiments - extractive body cue:** This model significantly outperforms the strongest LSeg model with ViT-L backbone (+19.9 mIoU on PASCAL-20).
-- **p. 12 / 4 Experiments - extractive body cue:** LSeg+ significantly outperforms LSeg (and also SPNet [49] and ZS3Net [6]) as it is trained on the larger dataset of COCO instead of PASCAL-20.
-- **p. 11 / 4 Experiments - extractive body cue:** While adding proposals to ALIGN improves mIoU results.
-- **p. 13 / 4 Experiments - extractive body cue:** 6.8 11.2 24.8 45.9 Incorporating proposals at inference time improves accuracy: We are curious about the importance of mask proposals in OpenSeg during inference.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 마스크 감독으로 영역을 제안하고 영역 특징과 영상 캡션 단어를 정렬해 영상 수준의 감독을 활용한다. [PDF 5쪽](https://www.ecva.net/papers/eccv_2022/papers_ECCV/papers/136960532.pdf#page=5) · [PDF 6쪽](https://www.ecva.net/papers/eccv_2022/papers_ECCV/papers/136960532.pdf#page=6) · [PDF 7쪽](https://www.ecva.net/papers/eccv_2022/papers_ECCV/papers/136960532.pdf#page=7)
+- 학습 때의 분할 범주를 넘어 새로운 데이터셋의 이름으로 분할을 평가하고 캡션과 영역별 정렬의 효과를 비교했다. [PDF 9쪽](https://www.ecva.net/papers/eccv_2022/papers_ECCV/papers/136960532.pdf#page=9) · [PDF 10쪽](https://www.ecva.net/papers/eccv_2022/papers_ECCV/papers/136960532.pdf#page=10) · [PDF 13쪽](https://www.ecva.net/papers/eccv_2022/papers_ECCV/papers/136960532.pdf#page=13)
 
 ## Evaluation Scope
 

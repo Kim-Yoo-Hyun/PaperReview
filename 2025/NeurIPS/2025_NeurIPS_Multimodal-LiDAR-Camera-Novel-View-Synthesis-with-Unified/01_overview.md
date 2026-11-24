@@ -7,7 +7,8 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / NeurIPS
-- Authors: Weiyi Xue, Fan Lu, Yunwei Zhu, Zehan Zheng, Sanqing Qu, Jiangtong Li, Ya Wu, Haiyun Wei, Guang Chen
+- Authors: Weiyi Xue, Fan Lu, Yunwei Zhu, Zehan Zheng, Haiyun Wei, Sanqing Qu, Jiangtong Li, Ya Wu, Guang Chen
+- 저자 판본: NeurIPS 게재본은 Haiyun Wei를 다섯 번째 저자로 싣는다. 학회 웹 서지에는 여덟 번째로 올라 있다. [표제면](https://papers.neurips.cc/paper_files/paper/2025/file/70915b08a205ea5522528690d93518f6-Paper-Conference.pdf#page=1) · [학회 서지](https://proceedings.neurips.cc/paper_files/paper/2025/hash/70915b08a205ea5522528690d93518f6-Abstract-Conference.html)
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
 - Tags: geometry, sensor fusion, LiDAR, 3D Vision
@@ -16,12 +17,11 @@
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (21 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다. [본문](https://papers.neurips.cc/paper_files/paper/2025/file/70915b08a205ea5522528690d93518f6-Paper-Conference.pdf)
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Nevertheless, prior research [37] has faced challenges due to the significant domain gap and uncoordinated convergence problems [27, 42, 34] between these modalities.
-
-방법 관련 발췌 — In summary, our primary contributions can be delineated as follows: (1) We propose MUP, a unified pose-free framework that combines the advantages of two modalities for pose estimation and multimodal NVS in ...
+MUP은 정확한 센서 자세가 주어지지 않은 주행 시퀀스에서 카메라 영상과 LiDAR 스캔을 공동 신경장으로 복원한다. [PDF 1쪽](https://papers.neurips.cc/paper_files/paper/2025/file/70915b08a205ea5522528690d93518f6-Paper-Conference.pdf#page=1) · [PDF 4쪽](https://papers.neurips.cc/paper_files/paper/2025/file/70915b08a205ea5522528690d93518f6-Paper-Conference.pdf#page=4)
 
 ## Problem and Motivation
 
@@ -55,16 +55,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 3 / 1 Introduction - extractive body cue:** In summary, our primary contributions can be delineated as follows: (1) We propose MUP, a unified pose-free framework that combines the advantages of two modalities ...
-- **p. 2 / 1 Introduction - extractive body cue:** Moreover, to enhance color-depth consistency, we introduce a consistency constraint by projecting image pixels onto adjacent frames using depth derived from NeRF.
-- **p. 2 / 1 Introduction - extractive body cue:** To alleviate modality conflicts [37] and address the uncoordinated convergence problem, we introduce a multimodal-specific coarse-to-fine training approach [16], facilitating the utilization of a singular ...
-- **p. 3 / 1 Introduction - extractive body cue:** We evaluate our method across diverse scenarios using the KITTI-360 [15] and NuScenes [4] autonomous driving datasets.
-- **p. 5 / 4 Methodology - extractive body cue:** Finally, we present the proposed consistency constraint and the overall optimization pipeline in Section 4.3.
-- **p. 9 / Figure/Table caption - extractive body cue:** Figure 7: Qualitative NVS results with GT- poses. MUP outperforms single-modal meth- ods i-NGP w/ and w/o point clouds and LiDAR- NeRF. Our method achieves ...
-- **p. 9 / 5 Experiment - extractive body cue:** Our method achieves the highest pose estimation accuracy.
-- **p. 10 / 5 Experiment - extractive body cue:** The results indicate that relying solely on NeRF's implicit pose optimization fails to achieve accurate pose estimates and leads to convergence at local optima.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 점군의 기하 관계와 인접 영상의 광도 제약을 이용해 자세를 갱신하고 센서별 특징을 거친 단계에서 세밀한 단계로 융합한다. [PDF 4쪽](https://papers.neurips.cc/paper_files/paper/2025/file/70915b08a205ea5522528690d93518f6-Paper-Conference.pdf#page=4) · [PDF 5쪽](https://papers.neurips.cc/paper_files/paper/2025/file/70915b08a205ea5522528690d93518f6-Paper-Conference.pdf#page=5) · [PDF 6쪽](https://papers.neurips.cc/paper_files/paper/2025/file/70915b08a205ea5522528690d93518f6-Paper-Conference.pdf#page=6)
+- KITTI-360과 nuScenes에서 새로운 시점의 영상과 LiDAR 관측을 각각 평가하고 모달리티 간 기하 최적화의 효과를 분석했다. [PDF 7쪽](https://papers.neurips.cc/paper_files/paper/2025/file/70915b08a205ea5522528690d93518f6-Paper-Conference.pdf#page=7) · [PDF 8쪽](https://papers.neurips.cc/paper_files/paper/2025/file/70915b08a205ea5522528690d93518f6-Paper-Conference.pdf#page=8) · [PDF 9쪽](https://papers.neurips.cc/paper_files/paper/2025/file/70915b08a205ea5522528690d93518f6-Paper-Conference.pdf#page=9)
 
 ## Evaluation Scope
 

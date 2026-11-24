@@ -16,12 +16,11 @@
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (18 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다. [본문](https://proceedings.iclr.cc/paper_files/paper/2026/file/cb2266111eadcfa2c02187ace64e2183-Paper-Conference.pdf)
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — EvolSplat (Miao et al., 2025) integrates multi-frame geometric information from front-view monocular sequences using 3D-CNN, but ignores semantic fusion and lacks mechanisms for dynamic handling.
-
-방법 관련 발췌 — In summary, our main contributions are as follows: • We introduce UniSplat, a novel feed-forward framework for dynamic scene reconstruction from multi-camera videos via a unified 3D latent scaffold. • We design ...
+UniSplat은 여러 카메라의 연속 주행 영상에서 공간·시간 정보를 희소한 3D 격자에 모아 움직이는 장면을 순차 복원한다. [PDF 1쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/cb2266111eadcfa2c02187ace64e2183-Paper-Conference.pdf#page=1) · [PDF 4쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/cb2266111eadcfa2c02187ace64e2183-Paper-Conference.pdf#page=4)
 
 ## Problem and Motivation
 
@@ -54,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** In summary, our main contributions are as follows: • We introduce UniSplat, a novel feed-forward framework for dynamic scene reconstruction from multi-camera videos via a ...
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** To address these challenges, we propose UniSplat, a general feed-forward framework for dynamic scene modeling from multi-camera videos.
-- **p. 15 / A.1 IMPLEMENTATION DETAILS - extractive body cue:** To supervise the dynamic attributes of the Gaussians in Gt, we introduce a dynamics rendering mechanism that renders dynamic masks using the standard differentiable 15
-- **p. 1 / 1 INTRODUCTION - extractive body cue:** To enable faster inference, feed-forward reconstruction methods have emerged to synthesize novel views in a single forward pass (Xu et al., 2025; Chen et al., ...
-- **p. 8 / 4 EXPERIMENTS - extractive body cue:** As shown in 1st and 2nd rows, the incorporation of spatial scaffold fusion, which aggregates spatial information in 3D space, improves performance by +0.36dB in ...
-- **p. 7 / 4 EXPERIMENTS - extractive body cue:** UniSplat consistently outperforms all baselines across every metric for both input view reconstruction and novel view synthesis.
-- **p. 8 / 4 EXPERIMENTS - extractive body cue:** We also report an variant (denoted by †), in which per-camera scales are set to optimal values derived from LiDAR pointmap, leading to additional improvements.
-- **p. 9 / 4 EXPERIMENTS - extractive body cue:** This approach achieves a lower PSNR of 24.72dB, likely due to its limited ability to model dynamic elements and restricted temporal context.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 점에 고정한 가우시안을 정제하는 경로와 복셀에서 새 가우시안을 생성하는 경로를 결합하고, 정적 가우시안은 메모리에 보존한다. [PDF 4쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/cb2266111eadcfa2c02187ace64e2183-Paper-Conference.pdf#page=4) · [PDF 5쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/cb2266111eadcfa2c02187ace64e2183-Paper-Conference.pdf#page=5) · [PDF 6쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/cb2266111eadcfa2c02187ace64e2183-Paper-Conference.pdf#page=6)
+- 주행 시퀀스의 새 시점과 현재 카메라 시야 밖 장면 완성을 비교하고 두 생성 경로와 메모리의 역할을 분석했다. [PDF 7쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/cb2266111eadcfa2c02187ace64e2183-Paper-Conference.pdf#page=7) · [PDF 9쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/cb2266111eadcfa2c02187ace64e2183-Paper-Conference.pdf#page=9) · [PDF 10쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/cb2266111eadcfa2c02187ace64e2183-Paper-Conference.pdf#page=10)
 
 ## Evaluation Scope
 

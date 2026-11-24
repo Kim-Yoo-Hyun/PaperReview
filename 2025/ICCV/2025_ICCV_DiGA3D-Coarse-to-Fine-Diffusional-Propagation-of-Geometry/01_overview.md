@@ -16,12 +16,11 @@
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다. [본문](https://openaccess.thecvf.com/content/ICCV2025/papers/Pan_DiGA3D_Coarse-to-Fine_Diffusional_Propagation_of_Geometry_and_Appearance_for_Versatile_ICCV_2025_paper.pdf)
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — This limitation becomes particularly evident when inpainting regions require significant geometric changes.
-
-방법 관련 발췌 — In summary, our key contributions can be outlined as follows: • We introduce DiGA3D, a versatile 3D inpainting pipeline that leverages diffusion models to consistently propagate appearance and geometry in a coarse-to-fine ...
+DiGA3D는 여러 시점에서 가려진 영역을 채울 때 확산 모델이 만든 외관과 형상이 하나의 장면에 일치하도록 단계적으로 전파한다. [PDF 1쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Pan_DiGA3D_Coarse-to-Fine_Diffusional_Propagation_of_Geometry_and_Appearance_for_Versatile_ICCV_2025_paper.pdf#page=1) · [PDF 3쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Pan_DiGA3D_Coarse-to-Fine_Diffusional_Propagation_of_Geometry_and_Appearance_for_Versatile_ICCV_2025_paper.pdf#page=3)
 
 ## Problem and Motivation
 
@@ -55,16 +54,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** In summary, our key contributions can be outlined as follows: • We introduce DiGA3D, a versatile 3D inpainting pipeline that leverages diffusion models to consistently ...
-- **p. 1 / 1. Introduction - extractive body cue:** To address these challenges, we introduce DiGA3D, a novel and versatile 3D inpainting pipeline with a coarseThis ICCV paper is the Open Access version, provided ...
-- **p. 5 / 3.4. Texture-Geometry Guided SDS Loss - extractive body cue:** For each scene, we present two novel views to compare the rendering quality and multi-view consistency with the existing state-of-the-art methods. ter is conducted independently.
-- **p. 2 / 1. Introduction - extractive body cue:** Thus, our method offers a coarse-to-fine pipeline that can effectively bridge consistent 2D appearance and 3D geometry, enabling versatile 3D inpainting.
-- **p. 4 / 3.3. Multi-view Consistent Image Inpainting - extractive body cue:** Prior to employing AFP, we introduce a robust strategy for selecting the reference views.
-- **p. 6 / 4.1. Experimental Setup - extractive body cue:** Our method achieves clear improvements in PSNR and obtains better scores in most metrics.
-- **p. 8 / 4.4. Ablation Study - extractive body cue:** By integrating DDIM inversion and AFP within the 2D inpainter, we achieve a notable 0.21 improvement in PSNR, indicating significant enhancements.
-- **p. 7 / 4.3.1. Object Removal - extractive body cue:** While our rendering results exhibit some limitations in the masked LPIPS compared to GScream, we achieve a comparable score in this metric and show significant ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 복수의 참조 뷰를 선택해 인페인팅 오류 확산을 줄이고, 질감과 기하를 함께 다루는 점수 증류 손실로 장면을 정제한다. [PDF 3쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Pan_DiGA3D_Coarse-to-Fine_Diffusional_Propagation_of_Geometry_and_Appearance_for_Versatile_ICCV_2025_paper.pdf#page=3) · [PDF 4쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Pan_DiGA3D_Coarse-to-Fine_Diffusional_Propagation_of_Geometry_and_Appearance_for_Versatile_ICCV_2025_paper.pdf#page=4) · [PDF 5쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Pan_DiGA3D_Coarse-to-Fine_Diffusional_Propagation_of_Geometry_and_Appearance_for_Versatile_ICCV_2025_paper.pdf#page=5)
+- 물체 제거를 포함한 3D 인페인팅 과제에서 결과를 비교하고 참조 뷰 및 손실 설계가 채워진 영역에 미치는 영향을 평가했다. [PDF 6쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Pan_DiGA3D_Coarse-to-Fine_Diffusional_Propagation_of_Geometry_and_Appearance_for_Versatile_ICCV_2025_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Pan_DiGA3D_Coarse-to-Fine_Diffusional_Propagation_of_Geometry_and_Appearance_for_Versatile_ICCV_2025_paper.pdf#page=7) · [PDF 8쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Pan_DiGA3D_Coarse-to-Fine_Diffusional_Propagation_of_Geometry_and_Appearance_for_Versatile_ICCV_2025_paper.pdf#page=8)
 
 ## Evaluation Scope
 

@@ -8,7 +8,7 @@
 
 ## Evaluation in One Sentence
 
-PDF body evaluation/result cue (p. 8 (4 EXPERIMENTS), p. 10 (4.2 RESULTS), p. 25 (C.7 IMPLEMENTATION DETAILS), p. 8 (4 EXPERIMENTS), p. 1 (Figure/Table caption), p. 9 (4.2 RESULTS)): Our method significantly outperforms all baselines across both reconstruction and rendering metrics.
+Replica와 ScanNet++를 포함한 장면에서 관측·미관측 영역의 기하와 외관을 비교하고 평면 모델과 생성 지도의 기여를 분리했다. [PDF 7쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/e0ac27bf3327c9cb99cc5f548db4f73a-Paper-Conference.pdf#page=7) · [PDF 8쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/e0ac27bf3327c9cb99cc5f548db4f73a-Paper-Conference.pdf#page=8) · [PDF 10쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/e0ac27bf3327c9cb99cc5f548db4f73a-Paper-Conference.pdf#page=10)
 
 ## Evaluation Body Digest
 
@@ -23,22 +23,18 @@ PDF body evaluation/result cue (p. 8 (4 EXPERIMENTS), p. 10 (4.2 RESULTS), p. 25
 
 ## Evaluation Type and Scope
 
-- **Evaluation type:** `EMPIRICAL / REAL-ROBOT OR HARDWARE`.
-- **Target system/task:** high-dimensional data 또는 robot action-trajectory distribution.
-- **Input boundary:** conditioning observation와 noisy/intermediate sample.
-- **Output/decision under evaluation:** generated sample, action chunk 또는 trajectory.
-- **Primary target:** distribution fit, multimodality, sample quality와 latency.
+- **Evaluation type:** `BENCHMARK / DATASET`.
 - **Detected evaluation headings:** 4 EXPERIMENTS (p. 7); 4.2 RESULTS (p. 9); A MORE EXPERIMENT RESULTS (p. 18); A.4 MORE QUALITATIVE RESULTS (p. 20); C.5 DATASET DETAILS (p. 24); C.6 EVALUATION METRICS (p. 24); C.7 IMPLEMENTATION DETAILS (p. 24).
 
 ## Experimental Matrix
 
 | Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
-| 4 EXPERIMENTS | EMPIRICAL / REAL-ROBOT OR HARDWARE | Our method significantly outperforms all baselines across both reconstruction and rendering metrics. | p. 8 (4 EXPERIMENTS) |
-| 4.2 RESULTS | EMPIRICAL / REAL-ROBOT OR HARDWARE | Adding plane-aware geometry modeling (PM), either alone or in combination with generative prior (GP), significantly improves geometry reconstruction. | p. 10 (4.2 RESULTS) |
-| C.7 IMPLEMENTATION DETAILS | EMPIRICAL / REAL-ROBOT OR HARDWARE | G4Splat outperforms baselines in both visible and unobserved regions, producing superior geometry with improved smoothness and minimal Gaussian artifacts. | p. 25 (C.7 IMPLEMENTATION DETAILS) |
-| 4 EXPERIMENTS | EMPIRICAL / REAL-ROBOT OR HARDWARE | Notably, all baselines are augmented with MASt3R-SfM (Duisterhof et al., 2025) to provide robust geometric initialization and improve performance in sparse-view scenarios. | p. 8 (4 EXPERIMENTS) |
-| Figure/Table caption | EMPIRICAL / REAL-ROBOT OR HARDWARE | Figure 1: We propose G4SPLAT, which integrates accurate geometry guidance with generative prior to enhance 3D scene reconstruction. Our method significantly improves geometry and ... | p. 1 (Figure/Table caption) |
+| 4 EXPERIMENTS | BENCHMARK / DATASET | Our method significantly outperforms all baselines across both reconstruction and rendering metrics. | p. 8 (4 EXPERIMENTS) |
+| 4.2 RESULTS | BENCHMARK / DATASET | Adding plane-aware geometry modeling (PM), either alone or in combination with generative prior (GP), significantly improves geometry reconstruction. | p. 10 (4.2 RESULTS) |
+| C.7 IMPLEMENTATION DETAILS | BENCHMARK / DATASET | G4Splat outperforms baselines in both visible and unobserved regions, producing superior geometry with improved smoothness and minimal Gaussian artifacts. | p. 25 (C.7 IMPLEMENTATION DETAILS) |
+| 4 EXPERIMENTS | BENCHMARK / DATASET | Notably, all baselines are augmented with MASt3R-SfM (Duisterhof et al., 2025) to provide robust geometric initialization and improve performance in sparse-view scenarios. | p. 8 (4 EXPERIMENTS) |
+| Figure/Table caption | BENCHMARK / DATASET | Figure 1: We propose G4SPLAT, which integrates accurate geometry guidance with generative prior to enhance 3D scene reconstruction. Our method significantly improves geometry and ... | p. 1 (Figure/Table caption) |
 
 ## Dataset / Benchmark Role
 

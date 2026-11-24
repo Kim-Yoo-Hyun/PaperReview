@@ -17,12 +17,11 @@
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (21 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다. [본문](https://proceedings.neurips.cc/paper_files/paper/2025/file/fe318a2b6c699808019a456b706cd845-Paper-Conference.pdf)
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, 2DGS has difficulty reconstructing background geometry and often produces incomplete or distorted surfaces in complex or unbounded scenes.
-
-방법 관련 발췌 — Our contributions are summarized as follows. • Incorporating edge information and visibility-aware multi-view alignment to enhance surface boundary delineation and improve geometric consistency. • Aligning the robust priors based on nor ...
+VA-GS는 여러 뷰에서 표면 경계와 대응 위치가 일치하도록 영상 단서로 가우시안 장면의 기하를 정제한다. [PDF 1쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/fe318a2b6c699808019a456b706cd845-Paper-Conference.pdf#page=1) · [PDF 4쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/fe318a2b6c699808019a456b706cd845-Paper-Conference.pdf#page=4)
 
 ## Problem and Motivation
 
@@ -56,16 +55,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1 Introduction - extractive body cue:** Our contributions are summarized as follows. • Incorporating edge information and visibility-aware multi-view alignment to enhance surface boundary delineation and improve geometric consistency. • Aligning ...
-- **p. 2 / 1 Introduction - extractive body cue:** In this work, we propose a novel method for accurate and detailed surface reconstruction by enhancing the geometric representation of 3D Gaussians.
-- **p. 4 / 4 Method - extractive body cue:** We introduce novel constraints to enable accurate surface reconstruction while preserving high-quality novel view synthesis.
-- **p. 4 / 4 Method - extractive body cue:** To address this limitation, we propose an edge-aware image reconstruction loss that encourages the model to better preserve sharp structures and boundary details: LI = ...
-- **p. 6 / 4 Method - extractive body cue:** To address these limitations, we introduce a multi-view feature alignment loss.
-- **p. 8 / 5 Experiments - extractive body cue:** Although our method is slightly slower than 3DGS [21] and 2DGS [16] due to the use of multi-view alignment, it achieves significant improvements in reconstruction ...
-- **p. 8 / 5 Experiments - extractive body cue:** As shown in Table 2, our method achieves the best reconstruction performance among all competing approaches, including both implicit and explicit methods.
-- **p. 7 / 5 Experiments - extractive body cue:** As shown in Table 1, our method achieves the lowest average Chamfer distance and ranks best across most scenes.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 가림을 고려한 광도 정렬, 경계·법선 제약과 여러 뷰의 심층 특징 대응을 함께 사용해 표면의 위치와 방향을 감독한다. [PDF 4쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/fe318a2b6c699808019a456b706cd845-Paper-Conference.pdf#page=4) · [PDF 5쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/fe318a2b6c699808019a456b706cd845-Paper-Conference.pdf#page=5) · [PDF 6쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/fe318a2b6c699808019a456b706cd845-Paper-Conference.pdf#page=6)
+- 표면의 Chamfer 거리와 새 시점 렌더링 화질을 따로 평가하고 뷰 정렬 손실의 기여를 비교했다. [PDF 7쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/fe318a2b6c699808019a456b706cd845-Paper-Conference.pdf#page=7) · [PDF 8쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/fe318a2b6c699808019a456b706cd845-Paper-Conference.pdf#page=8) · [PDF 9쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/fe318a2b6c699808019a456b706cd845-Paper-Conference.pdf#page=9)
 
 ## Evaluation Scope
 

@@ -7,7 +7,8 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / ICLR
-- Authors: Rongfeng Lu, Hangyu Chen, Zunjie Zhu, Yuhang Qin, Ming Lu, Le zhang, Chenggang Yan, anke xue
+- Authors: Rongfeng Lu, Hangyu Chen, Zunjie Zhu, Yuhang Qin, Ming Lu, Le Zhang, Chenggang Yan, Anke Xue
+- 저자 판본: ICLR 게재본 표제면에 따라 Le Zhang과 Anke Xue의 대소문자를 고쳤다. [표제면](https://proceedings.iclr.cc/paper_files/paper/2025/file/03bdba50e3741ac5e3eaa0e55423587e-Paper-Conference.pdf#page=1) · [학회 서지](https://proceedings.iclr.cc/paper_files/paper/2025/hash/03bdba50e3741ac5e3eaa0e55423587e-Abstract-Conference.html)
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
 - Tags: Gaussian Splatting, 3D Vision
@@ -16,12 +17,11 @@
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (13 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다. [본문](https://proceedings.iclr.cc/paper_files/paper/2025/file/03bdba50e3741ac5e3eaa0e55423587e-Paper-Conference.pdf)
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, these datasets suffer from problems such as lack of color images registered with thermal images, inconsistencies in thermal information from different views, and watermarked images.
-
-방법 관련 발췌 — The final design of this loss is: L = γLRGB + (1 -γ)Lthermal (12) 4 SELF-COLLECTED THERAML DATASET We introduce a new dataset, named RGBT-Scenes, which consists of aligned collections of thermal ...
+ThermalGaussian은 같은 장면을 촬영한 RGB와 열화상 카메라를 정렬해 두 종류의 영상을 렌더링할 수 있는 가우시안 지도를 만든다. [PDF 1쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/03bdba50e3741ac5e3eaa0e55423587e-Paper-Conference.pdf#page=1) · [PDF 4쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/03bdba50e3741ac5e3eaa0e55423587e-Paper-Conference.pdf#page=4)
 
 ## Problem and Motivation
 
@@ -55,16 +55,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 7 / 3 METHOD - extractive body cue:** The final design of this loss is: L = γLRGB + (1 -γ)Lthermal (12) 4 SELF-COLLECTED THERAML DATASET We introduce a new dataset, named RGBT-Scenes, ...
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** In summary, the main contributions as follows: (1)We propose ThermalGaussian, the first multimodal 3DGS capable of simultaneously rendering photorealistic thermal and RGB images of a ...
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** In contrast, our method not only improves thermal rendering quality but also enhances RGB rendering quality by 1 dB.
-- **p. 3 / 1 INTRODUCTION - extractive body cue:** The dataset consists of paired RGB and thermal images captured from multiple viewpoints across 10 different scenes.
-- **p. 4 / 3 METHOD - extractive body cue:** Then, we provide a detailed description of our method's specific implementation details, including multimodal initialization, three types of multimodal thermal Gaussians, thermal loss, and multimodal ...
-- **p. 10 / 5 EXPERIMENTS - extractive body cue:** We not only achieve simultaneous rendering of thermal and RGB images but also significantly improve the rendering quality of both color and thermal images.
-- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1: Compared to NeRF-based methods (Hassan et al., 2024) and methods that directly use thermal images for training 3DGS, our approach not only improves ...
-- **p. 7 / 5 EXPERIMENTS - extractive body cue:** 5.1 IMPLEMENTATION DETAILS Our method is an improvement upon the 3DGS framework, with all experimental settings (e.g., λ) remaining consistent with the reference 3DGS.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 카메라 간 기하 보정을 수행하고 두 모달리티의 공동 정규화 및 열화상 평활화 제약으로 하나의 장면 표현을 학습한다. [PDF 4쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/03bdba50e3741ac5e3eaa0e55423587e-Paper-Conference.pdf#page=4) · [PDF 5쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/03bdba50e3741ac5e3eaa0e55423587e-Paper-Conference.pdf#page=5) · [PDF 6쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/03bdba50e3741ac5e3eaa0e55423587e-Paper-Conference.pdf#page=6)
+- 휴대형 열적외선 장비로 수집한 RGBT-Scenes를 제공하고, RGB와 열화상 렌더링 품질을 별도 표에서 비교했다. [PDF 7쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/03bdba50e3741ac5e3eaa0e55423587e-Paper-Conference.pdf#page=7) · [PDF 8쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/03bdba50e3741ac5e3eaa0e55423587e-Paper-Conference.pdf#page=8) · [PDF 9쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/03bdba50e3741ac5e3eaa0e55423587e-Paper-Conference.pdf#page=9)
 
 ## Evaluation Scope
 

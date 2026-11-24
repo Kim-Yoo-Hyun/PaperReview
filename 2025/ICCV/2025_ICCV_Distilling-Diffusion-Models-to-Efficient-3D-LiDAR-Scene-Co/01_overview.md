@@ -7,7 +7,8 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / ICCV
-- Authors: Shengyuan Zhang, An Zhao, Ling Yang, Zejian Li, Chenye Meng, Haoran Xu, Tianrun Chen, AnYang Wei, Perry Pengyun Gu, Lingyun Sun
+- Authors: Shengyuan Zhang, An Zhao, Ling Yang, Zejian Li, Chenye Meng, Haoran Xu, Tianrun Chen, AnYang Wei, Perry Pengyun GU, Lingyun Sun
+- 저자 판본: ICCV 게재본의 아홉 번째 저자 표기는 Perry Pengyun GU다. [표제면](https://openaccess.thecvf.com/content/ICCV2025/papers/Zhang_Distilling_Diffusion_Models_to_Efficient_3D_LiDAR_Scene_Completion_ICCV_2025_paper.pdf#page=1) · [학회 서지](https://openaccess.thecvf.com/content/ICCV2025/html/Zhang_Distilling_Diffusion_Models_to_Efficient_3D_LiDAR_Scene_Completion_ICCV_2025_paper.html)
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
 - Tags: sensor fusion, LiDAR, Diffusion, Generation, 3D Vision
@@ -16,14 +17,13 @@
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다. [본문](https://openaccess.thecvf.com/content/ICCV2025/papers/Zhang_Distilling_Diffusion_Models_to_Efficient_3D_LiDAR_Scene_Completion_ICCV_2025_paper.pdf)
 
 > DOC-QA1 (2026-10-23): 제어문자·깨진 추출 구간과 직접 연결된 표 항목을 PDF 페이지 이미지와 대조했다. 확인 범위·원문 URL·페이지·수정 이력은 [대조 기록](../../../work/sources/pdf_note_review_2026-10-23.json)에 있다. 노트 전체의 정독이나 모든 기존 주장에 대한 재검증을 뜻하지 않으며 reading status는 유지한다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — ScoreLiDAR aims to tackle the unique 3D distribution alignment challenge in LiDAR scene completion.
-
-방법 관련 발췌 — In this work, we propose ScoreLiDAR, a novel distillation method tailored for 3D LiDAR scene completion diffusion models, which enables efficient and high-quality scene completion (Fig.
+ScoreLiDAR는 부분 LiDAR 스캔에서 장면 전체를 완성하는 확산 모델을 더 적은 반복으로 동작하는 모델에 증류한다. [PDF 1쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Zhang_Distilling_Diffusion_Models_to_Efficient_3D_LiDAR_Scene_Completion_ICCV_2025_paper.pdf#page=1) · [PDF 4쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Zhang_Distilling_Diffusion_Models_to_Efficient_3D_LiDAR_Scene_Completion_ICCV_2025_paper.pdf#page=4)
 
 ## Problem and Motivation
 
@@ -57,26 +57,12 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** In this work, we propose ScoreLiDAR, a novel distillation method tailored for 3D LiDAR scene completion diffusion models, which enables efficient and high-quality scene completion ...
-- **p. 2 / 1. Introduction - extractive body cue:** Finally, we introduce a Structural Loss consisting of a scene-wise term and a point-wise term constraining the key landmark points and their relative configuration.
-- **p. 4 / 4. Method - extractive body cue:** Then, we introduce the structural loss to improve the distillation process with both scene-wise loss and point-wise loss in Sec.
-- **p. 5 / 4.2. Structural loss - extractive body cue:** Thus, we introduce a structural loss to further refine the distillation process and improve the completion quality.
-- **p. 5 / 4.2. Structural loss - extractive body cue:** Thus, we introduce the point-wise loss to capture the relative structural information between different points in the 3D LiDAR scene.
-- **p. 7 / 5.2. Ablation study - extractive body cue:** However, after considering the structural loss, the performance of ScoreLiDAR improves significantly, which achieves better performance on all metrics.
-- **p. 7 / 5.1. Scene completion - extractive body cue:** ScoreLiDAR achieves better completion than LiDiff [24] with fewer sampling steps. a fivefold speedup with 12% improvement in CD and 2% in JSD compared to ...
-- **p. 6 / 5.1. Scene completion - extractive body cue:** The performance of ScoreLiDAR outperforms the teacher model LiDiff [23].
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 교사의 분포를 따르는 증류에 장면 구조 손실을 더해, 샘플링 단계를 줄일 때도 완성한 점군의 기하를 보존하도록 학습한다. [PDF 4쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Zhang_Distilling_Diffusion_Models_to_Efficient_3D_LiDAR_Scene_Completion_ICCV_2025_paper.pdf#page=4) · [PDF 5쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Zhang_Distilling_Diffusion_Models_to_Efficient_3D_LiDAR_Scene_Completion_ICCV_2025_paper.pdf#page=5)
+- SemanticKITTI에서 완성 품질과 프레임당 시간을 함께 비교하고 구조 손실을 제거했을 때의 변화를 측정했다. [PDF 6쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Zhang_Distilling_Diffusion_Models_to_Efficient_3D_LiDAR_Scene_Completion_ICCV_2025_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Zhang_Distilling_Diffusion_Models_to_Efficient_3D_LiDAR_Scene_Completion_ICCV_2025_paper.pdf#page=7)
 
 ## Evaluation Scope
 
-| Dimension | Body-grounded record | Boundary | Anchor |
-|---|---|---|---|
-| Evaluation type | SYSTEM / EVALUATION SCOPE UNRESOLVED | do not infer unreported downstream behavior | p. 7 (5.2. Ablation study), p. 7 (5.1. Scene completion) |
-| Embodiment/environment | Ablation study of different sampling steps on the SemanticKITTI dataset. completion tasks (Sec. | hardware/simulator version and reset protocol | p. 6 (5. Experiment), p. 7 (5.2. Ablation study) |
-| Dataset/benchmark | 5, on both datasets, the difference of point distance matrix between the completed scene of LiDiff [23] and the ground truth is the largest, followed by the ScoreLiDAR variant without the structural ... | role, split, size and leakage | p. 6 (5. Experiment), p. 7 (5.2. Ablation study), p. 8 (5.3. Qualitative analysis), p. 6 (5.1. Scene completion) |
-| Metric | We compared the scene completion performances of the proposed ScoreLiDAR with a variant that does not incorporate structural loss. | definition, denominator, direction and uncertainty | p. 7 (5.2. Ablation study), p. 7 (5.3. Qualitative analysis), p. 2 (Figure/Table caption) |
-| Baseline/ablation | Compared to the SOTA method LiDiff [23] with refinement, which takes 30.55 seconds to complete a scene, ScoreLiDAR completes a scene in just 5.47 seconds (fivefold speedup) yet with 8% improvement in ... | fair input/data/compute/action matching | p. 6 (5.1. Scene completion), p. 7 (5.2. Ablation study), p. 6 (5.1. Scene completion) |
+SemanticKITTI 표 1에서 정제 단계를 포함한 프레임당 샘플링 시간은 LiDiff 30.55초, ScoreLiDAR 5.37초다. 같은 행에서 Chamfer 거리와 JSD는 낮아졌고 EMD는 23.16에서 23.26으로 높아졌다. [PDF 6쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Zhang_Distilling_Diffusion_Models_to_Efficient_3D_LiDAR_Scene_Completion_ICCV_2025_paper.pdf#page=6)
 
 ## Explicit Limitations and Failure Boundary
 

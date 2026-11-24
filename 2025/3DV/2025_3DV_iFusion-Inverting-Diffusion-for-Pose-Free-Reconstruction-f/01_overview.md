@@ -17,12 +17,11 @@
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (14 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다. [본문](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11125593)
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Reconstructing objects from sparse views poses a significant challenge yet holds paramount importance for various applications, including 3D content creation, augmented reality, virtual reality, and robotics.
-
-방법 관련 발췌 — To this end, we introduce iFusion, a novel framework that reconstructs diverse 3D objects with sparse, pose-free views.
+iFusion은 카메라 자세를 모르는 두 물체 영상에서 상대 자세를 찾고 사전학습된 확산 모델을 해당 물체에 적응시켜 3차원 형상을 복원한다. [PDF 1쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11125593#page=1) · [PDF 3쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11125593#page=3)
 
 ## Problem and Motivation
 
@@ -56,16 +55,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** To this end, we introduce iFusion, a novel framework that reconstructs diverse 3D objects with sparse, pose-free views.
-- **p. 2 / 1. Introduction - extractive body cue:** We propose a novel camera pose estimator that significantly outperforms existing methods in terms of both accuracy and required number of input views, while being ...
-- **p. 4 / 3.2. From Single-View to Multi-View - extractive body cue:** We propose to close the gap by further fine-tuning the DM with the given views and estimated poses.
-- **p. 3 / 2. Preliminary - extractive body cue:** For instance, the standalone SD takes texts as the condition c and enables textto-image generation (T2I).
-- **p. 3 / 3. Method - extractive body cue:** Next, the registered views are leveraged to customized the novel view synthesis model for the target object as in Fig.
-- **p. 5 / 4.1. Experimental Setup - extractive body cue:** Evaluation results on pose estimation. iFusion achieves significant improvements for all metrics under 2 input views.
-- **p. 6 / 4.2. Experimental Result - extractive body cue:** Moreover, iFusion significantly outperforms all methods on all metrics.
-- **p. 8 / 4.3. Ablation Study - extractive body cue:** Incorporating stochastic multi-view conditioning (MVC) further improves the performance, as evident in row (c).
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 영상 조건부 확산 모델을 역으로 사용해 상대 카메라 자세를 최적화하고 두 입력의 정보를 뷰 생성 모델에 반영한다. [PDF 3쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11125593#page=3) · [PDF 4쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11125593#page=4)
+- 상대 자세 오차와 새로운 시점에서의 물체 복원 품질을 구분해 두 뷰를 사용하는 효과를 비교했다. [PDF 5쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11125593#page=5) · [PDF 6쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11125593#page=6) · [PDF 7쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11125593#page=7)
 
 ## Evaluation Scope
 

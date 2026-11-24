@@ -16,12 +16,11 @@
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (14 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다. [본문](https://proceedings.iclr.cc/paper_files/paper/2026/file/b8932994f80e23f6dd535f0762ed3ef4-Paper-Conference.pdf)
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Since different sensors present data in varying formats, such as cameras providing perspective semantic data and Lidar capturing 3D spatial information, multi-modal fusion faces significant challenges due to these view discrepancies.
-
-방법 관련 발췌 — Main contributions are as follows: • We propose the first unified 3D Gaussian representation multi-modal fusion framework, where cross-view and cross-modal Gaussian representations are naturally aggregated through the Gaussian mixture m ...
+GaussianFusion은 카메라와 LiDAR의 관측을 공통 3D 가우시안 집합에 모아 차량 주변의 물체와 점유 공간을 추정한다. [PDF 1쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/b8932994f80e23f6dd535f0762ed3ef4-Paper-Conference.pdf#page=1) · [PDF 4쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/b8932994f80e23f6dd535f0762ed3ef4-Paper-Conference.pdf#page=4)
 
 ## Problem and Motivation
 
@@ -55,22 +54,14 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 20560 M - extractive body cue:** Main contributions are as follows: • We propose the first unified 3D Gaussian representation multi-modal fusion framework, where cross-view and cross-modal Gaussian representations are naturally ...
-- **p. 2 / 20560 M - extractive body cue:** To address these challenges, we introduce a fusion approach based on 3D Gaussian Splatting (3DGS) (Kerbl et al., 2023) to achieve more fine-grained information modeling ...
-- **p. 1 / ABSTRACT - extractive body cue:** The bird's-eye view (BEV) representation enables multi-sensor features to be fused within a unified space, serving as the primary approach for achieving comprehensive 3D perception.
-- **p. 6 / 6 Cameras - extractive body cue:** This Gaussian prior enables better alignment of crossmodal features to the "likely object extent," thereby enhancing fusion effectiveness-a capability absent in conventional square-shaped initialization.
-- **p. 1 / ABSTRACT - extractive body cue:** To achieve this, we design a novel forward-projection-based multi-modal Gaussian initialization module and a shared cross-modal Gaussian encoder that iteratively updates Gaussian properties based on ...
-- **p. 8 / 4.1 DATASET - extractive body cue:** Experimental results show that, compared to BEVFusion4D (Liu et al., 2023b), our temporal variant GaussianFusion-T achieves significant improvements.
-- **p. 9 / 4.1 DATASET - extractive body cue:** More importantly, benefiting from our proposed Gaussian initialization strategy and iterative update mechanism, GaussianFusion-C achieves a 1.55 mIoU improvement and nearly 4.5! computational efficiency compared ...
-- **p. 10 / 4.1 DATASET - extractive body cue:** Results show that deformable attention with Gaussian priors outperforms the vanilla variant by +0.4 NDS, demonstrating that the shape prior encoded by Gaussians facilitates model ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 센서 관측을 순방향 투영해 가우시안을 초기화하고, 공유 인코더가 모달리티 간 attention으로 위치와 특징을 반복 갱신한다. [PDF 4쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/b8932994f80e23f6dd535f0762ed3ef4-Paper-Conference.pdf#page=4) · [PDF 5쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/b8932994f80e23f6dd535f0762ed3ef4-Paper-Conference.pdf#page=5) · [PDF 6쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/b8932994f80e23f6dd535f0762ed3ef4-Paper-Conference.pdf#page=6)
+- nuScenes와 Waymo에서 3D 물체 검출을 비교하고, 검출 지표와 별도로 복셀 점유 및 의미 예측을 평가했다. [PDF 8쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/b8932994f80e23f6dd535f0762ed3ef4-Paper-Conference.pdf#page=8) · [PDF 9쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/b8932994f80e23f6dd535f0762ed3ef4-Paper-Conference.pdf#page=9) · [PDF 10쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/b8932994f80e23f6dd535f0762ed3ef4-Paper-Conference.pdf#page=10)
 
 ## Evaluation Scope
 
 | Dimension | Body-grounded record | Boundary | Anchor |
 |---|---|---|---|
-| Evaluation type | SYSTEM / EVALUATION SCOPE UNRESOLVED | do not infer unreported downstream behavior | p. 8 (4.1 DATASET), p. 9 (4.1 DATASET) |
+| Evaluation type | BENCHMARK / DATASET | do not infer unreported downstream behavior | p. 8 (4.1 DATASET), p. 9 (4.1 DATASET) |
 | Embodiment/environment | It is a large-scale multimodal dataset officially split into 700/150/150 scenes for training, validation, and testing, respectively. | hardware/simulator version and reset protocol | p. 7 (4.1 DATASET), p. 7 (4.1 DATASET) |
 | Dataset/benchmark | We further conduct experiments on the Waymo Open Dataset (Sun et al., 2020) to evaluate the generalization capability of our approach. | role, split, size and leakage | p. 7 (4.1 DATASET), p. 7 (4.1 DATASET), p. 9 (4.1 DATASET), p. 8 (4.1 DATASET) |
 | Metric | We utilize the official evaluation metric nuScenes Detection Score (NDS) and mean Average Precision (mAP) for 3D detection. | definition, denominator, direction and uncertainty | p. 7 (4.1 DATASET), p. 8 (4.1 DATASET), p. 9 (4.1 DATASET) |

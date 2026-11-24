@@ -6,7 +6,7 @@
 
 ## Evaluation in One Sentence
 
-PDF body evaluation/result cue (p. 7 (4.1. Baselines), p. 7 (4.2. Analysis), p. 8 (4.2. Analysis), p. 8 (4.2. Analysis), p. 4 (2. The nuScenes dataset), p. 4 (2. The nuScenes dataset)): submissions, MonoDIS [70] was the best, significantly outperforming our image baseline and even some lidar based methods.
+원 논문은 약 20초 길이의 주행 장면 1,000개를 수집했다. 23개 주석 범주 중 10개가 3차원 검출 평가 대상이며, AP의 매칭 기준은 지면에 투영한 두 상자 중심 사이의 거리다. [PDF 1쪽](https://openaccess.thecvf.com/content_CVPR_2020/papers/Caesar_nuScenes_A_Multimodal_Dataset_for_Autonomous_Driving_CVPR_2020_paper.pdf#page=1) · [PDF 4쪽](https://openaccess.thecvf.com/content_CVPR_2020/papers/Caesar_nuScenes_A_Multimodal_Dataset_for_Autonomous_Driving_CVPR_2020_paper.pdf#page=4) · [PDF 5쪽](https://openaccess.thecvf.com/content_CVPR_2020/papers/Caesar_nuScenes_A_Multimodal_Dataset_for_Autonomous_Driving_CVPR_2020_paper.pdf#page=5)
 
 ## Evaluation Body Digest
 
@@ -22,10 +22,7 @@ PDF body evaluation/result cue (p. 7 (4.1. Baselines), p. 7 (4.2. Analysis), p. 
 ## Evaluation Type and Scope
 
 - **Evaluation type:** `BENCHMARK / DATASET`.
-- **Target system/task:** defined robot simulator/hardware task suite.
-- **Input boundary:** standardized observation, action, task state와 evaluation split.
-- **Output/decision under evaluation:** policy/controller trajectory 또는 measured result.
-- **Primary target:** success metric, robustness, generalization과 reproducibility.
+- **평가 대상:** 거리 기반 검출 매칭과 위치·크기·방향·속도·속성 오차를 결합한 검출 지표를 정의하고 추적 평가도 제시했다. [PDF 5쪽](https://openaccess.thecvf.com/content_CVPR_2020/papers/Caesar_nuScenes_A_Multimodal_Dataset_for_Autonomous_Driving_CVPR_2020_paper.pdf#page=5) · [PDF 6쪽](https://openaccess.thecvf.com/content_CVPR_2020/papers/Caesar_nuScenes_A_Multimodal_Dataset_for_Autonomous_Driving_CVPR_2020_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content_CVPR_2020/papers/Caesar_nuScenes_A_Multimodal_Dataset_for_Autonomous_Driving_CVPR_2020_paper.pdf#page=7)
 - **Detected evaluation headings:** Dataset (p. 3); 1.2. Related datasets (p. 3); 2. The nuScenes dataset (p. 3); 4. Experiments (p. 6).
 
 ## Experimental Matrix

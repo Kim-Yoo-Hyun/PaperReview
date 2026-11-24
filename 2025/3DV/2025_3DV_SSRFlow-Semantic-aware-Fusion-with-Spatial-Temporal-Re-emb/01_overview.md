@@ -16,12 +16,11 @@
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (19 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다. [본문](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11125601)
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Overall, our contributions are as follows: • Our GF module leverages the dual cross-attentive mechanism to fuse and align the semantic context from both frames and further matches the all-to-all point-pairs globally ...
-
-방법 관련 발췌 — Overall, our contributions are as follows: • Our GF module leverages the dual cross-attentive mechanism to fuse and align the semantic context from both frames and further matches the all-to-all point-pairs globally ...
+SSRFlow는 합성 점군으로 학습한 장면 흐름을 실제 LiDAR로 전이하기 위해 두 프레임의 특징을 의미와 시공간 기하로 정렬한다. [PDF 1쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11125601#page=1) · [PDF 3쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11125601#page=3)
 
 ## Problem and Motivation
 
@@ -55,22 +54,14 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1 Introduction - extractive body cue:** Overall, our contributions are as follows: • Our GF module leverages the dual cross-attentive mechanism to fuse and align the semantic context from both frames ...
-- **p. 2 / 1 Introduction - extractive body cue:** (2023), we introduce the Dual Cross Attentive (DCA) Fusion to merge the semantic contexts of point clouds from two frames in latent space, which allows ...
-- **p. 3 / 2 Methodology - extractive body cue:** 2.3 Global Fusion Flow Embedding The GF module is designed to capture the global relation between consecutive frames during the flow initialization.
-- **p. 4 / 2 Methodology - extractive body cue:** The obtained coarse dense flow is directly accumulated onto the source frame Sl to generate the warped source frame WSl = {wsi}Nl i=1 = {wxi ...
-- **p. 8 / Figure/Table caption - extractive body cue:** Figure 6: Illustration of results on other datasets of our proposed SSRFlow method. Colors mean the same as Figure 5. More visualization results are exhibited ...
-- **p. 8 / 4 Experiments - extractive body cue:** The quantitative results presented in Table 1 indicate that SSRFlow outperforms the other methods by a large margin, especially in real-world datasets.
-- **p. 3 / Figure/Table caption - extractive body cue:** Figure 1: Illustration of the proposed network. Firstly, semantic features are hierarchically extracted and sent to GF to achieve global embedding between the two point ...
-- **p. 7 / 4 Experiments - extractive body cue:** The best results for each dataset are marked in bold. * denotes the methods with an inference time exceeding 250 ms.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 이중 교차 어텐션으로 두 프레임의 의미 정보를 교환하고 시공간 위치를 다시 부호화해 대응 특징을 만든다. [PDF 3쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11125601#page=3) · [PDF 4쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11125601#page=4) · [PDF 5쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11125601#page=5)
+- 도메인 적응 손실을 이용하고 합성 자료에서 실제 점군으로 옮긴 조건의 흐름 오차를 비교했다. [PDF 5쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11125601#page=5) · [PDF 6쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11125601#page=6) · [PDF 7쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11125601#page=7)
 
 ## Evaluation Scope
 
 | Dimension | Body-grounded record | Boundary | Anchor |
 |---|---|---|---|
-| Evaluation type | EMPIRICAL / REAL-ROBOT OR HARDWARE | do not infer unreported downstream behavior | p. 8 (Figure/Table caption), p. 8 (4 Experiments) |
+| Evaluation type | BENCHMARK / DATASET | do not infer unreported downstream behavior | p. 8 (Figure/Table caption), p. 8 (4 Experiments) |
 | Embodiment/environment | (a) FT3Ds (b) KITTIs (c) SF-KITTI (d) LiDAR-KITTI Figure 4: Comparisons of scene flow datasets, including (a) synthetic stereo, (b) real-world stereo, and (c)(d) real-world LiDAR-scanned. | hardware/simulator version and reset protocol | p. 7 (4 Experiments), p. 6 (4 Experiments) |
 | Dataset/benchmark | The quantitative results presented in Table 1 indicate that SSRFlow outperforms the other methods by a large margin, especially in real-world datasets. | role, split, size and leakage | p. 7 (4 Experiments), p. 6 (4 Experiments), p. 8 (4 Experiments), p. 8 (4 Experiments) |
 | Metric | After removing the DCA Fusion, the model experienced a substantial decline in accuracy, primarily due to its capability to fuse point features with another frame context before embedding. | definition, denominator, direction and uncertainty | p. 9 (4 Experiments), p. 14 (Figure/Table caption), p. 7 (4 Experiments) |

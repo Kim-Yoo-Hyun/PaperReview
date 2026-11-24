@@ -16,12 +16,11 @@
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다. [본문](https://openaccess.thecvf.com/content/ICCV2025/papers/Baik_Learning_3D_Object_Spatial_Relationships_from_Pre-trained_2D_Diffusion_Models_ICCV_2025_paper.pdf)
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — While some are constrained by physical laws (e.g., objects can rest on others but cannot float in mid-air), many arise from functional usage, reflecting how humans interact with and arrange these objects.
-
-방법 관련 발췌 — In summary, our main contributions are as follows: (1) We formulate a novel representation for object-object spatial relationships (OOR); (2) We introduce an effective pipeline to generate diverse 3D OOR data from ...
+이 연구는 2D 확산 모델의 합성 영상에서 물체 쌍의 3D 상대 배치를 얻어 물체 사이에 가능한 공간 관계의 분포를 학습한다. [PDF 1쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Baik_Learning_3D_Object_Spatial_Relationships_from_Pre-trained_2D_Diffusion_Models_ICCV_2025_paper.pdf#page=1) · [PDF 3쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Baik_Learning_3D_Object_Spatial_Relationships_from_Pre-trained_2D_Diffusion_Models_ICCV_2025_paper.pdf#page=3)
 
 ## Problem and Motivation
 
@@ -55,16 +54,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** In summary, our main contributions are as follows: (1) We formulate a novel representation for object-object spatial relationships (OOR); (2) We introduce an effective pipeline ...
-- **p. 3 / 3.2. 3D OOR Samples Generation - extractive body cue:** We present a novel pipeline that synthesizes diverse 3D samples by leveraging pre-trained 2D diffusion models and an advanced 3D uplifting process.
-- **p. 2 / 1. Introduction - extractive body cue:** Through extensive experiments, we demonstrate the robustness of our method across various object-object spatial relationships.
-- **p. 3 / 3.1. Formulating Object-Object Relationship - extractive body cue:** The frontal side, typically the most observable view, faces the z-axis, although our method accommodates any canonical orientation.
-- **p. 6 / 4. Experiments - extractive body cue:** 4.2 demonstrates our advanced sampling approach produces significantly better results compared to text-to-3D models.
-- **p. 7 / 4.1. Pairwise OOR Generation - extractive body cue:** 1 shows that our method outperforms baselines for all metrics.
-- **p. 6 / 4.1. Pairwise OOR Generation - extractive body cue:** The CLIP score [45] measures textimage alignment by averaging CLIP model logits.
-- **p. 7 / 4.2. Multi-object OOR Generation - extractive body cue:** 2 further demonstrates the superiority of our method, especially in the case of VLM score and user study.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 두 물체가 함께 등장하는 영상을 생성해 3D 배치 표본으로 변환하고 상대 변환 분포를 점수 기반 확산 모델로 학습한다. [PDF 3쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Baik_Learning_3D_Object_Spatial_Relationships_from_Pre-trained_2D_Diffusion_Models_ICCV_2025_paper.pdf#page=3) · [PDF 4쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Baik_Learning_3D_Object_Spatial_Relationships_from_Pre-trained_2D_Diffusion_Models_ICCV_2025_paper.pdf#page=4)
+- 쌍별 관계의 일관성과 충돌 제약을 이용해 여러 물체를 배치하고, 공간 관계 생성과 장면 배치 예에서 결과를 평가했다. [PDF 5쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Baik_Learning_3D_Object_Spatial_Relationships_from_Pre-trained_2D_Diffusion_Models_ICCV_2025_paper.pdf#page=5) · [PDF 6쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Baik_Learning_3D_Object_Spatial_Relationships_from_Pre-trained_2D_Diffusion_Models_ICCV_2025_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Baik_Learning_3D_Object_Spatial_Relationships_from_Pre-trained_2D_Diffusion_Models_ICCV_2025_paper.pdf#page=7)
 
 ## Evaluation Scope
 

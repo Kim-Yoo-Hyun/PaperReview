@@ -6,7 +6,7 @@
 
 ## Evaluation in One Sentence
 
-PDF body evaluation/result cue (p. 2 (Figure/Table caption), p. 8 (4.2. Results), p. 7 (4.2. Results), p. 6 (Figure/Table caption), p. 6 (4.1. Datasets and evaluation metrics), p. 7 (4.1. Datasets and evaluation metrics)): Figure 1. MGSR achieves strong NVS and SR results compared with methods based on 2DGS [6] and 3DGS [24]. The input consists of multi-view images captured from various camera positions ...
+합성 및 실측 장면에서 표면 복원과 렌더링을 각각 측정하고 두 분기의 교대 학습 효과를 비교했다. [PDF 6쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Zhou_MGSR_2D3D_Mutual-boosted_Gaussian_Splatting_for_High-fidelity_Surface_Reconstruction_under_ICCV_2025_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Zhou_MGSR_2D3D_Mutual-boosted_Gaussian_Splatting_for_High-fidelity_Surface_Reconstruction_under_ICCV_2025_paper.pdf#page=7) · [PDF 8쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Zhou_MGSR_2D3D_Mutual-boosted_Gaussian_Splatting_for_High-fidelity_Surface_Reconstruction_under_ICCV_2025_paper.pdf#page=8)
 
 ## Evaluation Body Digest
 
@@ -21,22 +21,18 @@ PDF body evaluation/result cue (p. 2 (Figure/Table caption), p. 8 (4.2. Results)
 
 ## Evaluation Type and Scope
 
-- **Evaluation type:** `EMPIRICAL / REAL-ROBOT OR HARDWARE`.
-- **Target system/task:** 3D scene/object와 robot coordinate frame.
-- **Input boundary:** RGB-D, image set, point cloud, depth와 camera pose.
-- **Output/decision under evaluation:** point map, pose, scene graph, affordance 또는 query result.
-- **Primary target:** geometric accuracy, semantic consistency와 planning/manipulation utility.
+- **Evaluation type:** `BENCHMARK / DATASET`.
 - **Detected evaluation headings:** 4. Experiments (p. 6); 4.1. Datasets and evaluation metrics (p. 6); 4.2. Results (p. 7).
 
 ## Experimental Matrix
 
 | Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
-| Figure/Table caption | EMPIRICAL / REAL-ROBOT OR HARDWARE | Figure 1. MGSR achieves strong NVS and SR results compared with methods based on 2DGS [6] and 3DGS [24]. The input consists of multi-view ... | p. 2 (Figure/Table caption) |
-| 4.2. Results | EMPIRICAL / REAL-ROBOT OR HARDWARE | MGSR, supported by an auto-stop warm-up strategy, outperforms GOF and achieves a comparable speed with 2DGS. | p. 8 (4.2. Results) |
-| 4.2. Results | EMPIRICAL / REAL-ROBOT OR HARDWARE | MGSR visually outperforms all baselines, resulting in the best NC, with smooth surfaces and accurate color modeling. | p. 7 (4.2. Results) |
-| Figure/Table caption | EMPIRICAL / REAL-ROBOT OR HARDWARE | Figure 5. Visual comparisons on the Shiny Blender dataset [21]. other hand, a depth loss between 2DGS and 3DGS branches is introduced to improve ... | p. 6 (Figure/Table caption) |
-| 4.1. Datasets and evaluation metrics | EMPIRICAL / REAL-ROBOT OR HARDWARE | We utilize SSIM and PSNR to evaluate the rendering quality, while reconstruction accuracy is validated by 10K sampled points with Normal Consistency (NC) and ... | p. 6 (4.1. Datasets and evaluation metrics) |
+| Figure/Table caption | BENCHMARK / DATASET | Figure 1. MGSR achieves strong NVS and SR results compared with methods based on 2DGS [6] and 3DGS [24]. The input consists of multi-view ... | p. 2 (Figure/Table caption) |
+| 4.2. Results | BENCHMARK / DATASET | MGSR, supported by an auto-stop warm-up strategy, outperforms GOF and achieves a comparable speed with 2DGS. | p. 8 (4.2. Results) |
+| 4.2. Results | BENCHMARK / DATASET | MGSR visually outperforms all baselines, resulting in the best NC, with smooth surfaces and accurate color modeling. | p. 7 (4.2. Results) |
+| Figure/Table caption | BENCHMARK / DATASET | Figure 5. Visual comparisons on the Shiny Blender dataset [21]. other hand, a depth loss between 2DGS and 3DGS branches is introduced to improve ... | p. 6 (Figure/Table caption) |
+| 4.1. Datasets and evaluation metrics | BENCHMARK / DATASET | We utilize SSIM and PSNR to evaluate the rendering quality, while reconstruction accuracy is validated by 10K sampled points with Normal Consistency (NC) and ... | p. 6 (4.1. Datasets and evaluation metrics) |
 
 ## Dataset / Benchmark Role
 

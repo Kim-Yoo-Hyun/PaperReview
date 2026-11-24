@@ -16,12 +16,11 @@
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (25 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다. [본문](https://proceedings.iclr.cc/paper_files/paper/2025/file/64d4ff4fff788cdffe236f9ce8b09400-Paper-Conference.pdf)
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — The challenge is evident in existing models' inability to bridge the gap between scalarization-based and high-degree steerable approaches while maintaining practical applicability.
-
-방법 관련 발췌 — To address this gap, we propose a novel Geometric Tensor Network (GotenNet) that effectively models the geometric intricacies of 3D graphs while ensuring strict equivariance under the Euclidean group E(3).
+GotenNet은 분자의 좌표계를 회전·반사·이동시켜도 예측이 올바르게 변환되도록 3D 그래프에서 기하 텐서 특징을 학습한다. [PDF 1쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/64d4ff4fff788cdffe236f9ce8b09400-Paper-Conference.pdf#page=1) · [PDF 4쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/64d4ff4fff788cdffe236f9ce8b09400-Paper-Conference.pdf#page=4)
 
 ## Problem and Motivation
 
@@ -52,16 +51,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 1 / ABSTRACT - extractive body cue:** To address this gap, we propose a novel Geometric Tensor Network (GotenNet) that effectively models the geometric intricacies of 3D graphs while ensuring strict equivariance ...
-- **p. 2 / B L - extractive body cue:** To address these challenges, we propose a novel framework, the Geometric Tensor Network (GotenNet).
-- **p. 2 / B L - extractive body cue:** First, we introduce a spherical-scalarization model with an efficient representation and embedding strategy designed specifically with geometric tensors, eliminating the need for irreps and CG ...
-- **p. 1 / ABSTRACT - extractive body cue:** We introduce a unified structural embedding, incorporating geometryaware tensor attention and hierarchical tensor refinement that iteratively updates edge representations through inner product operations on high-degree ...
-- **p. 8 / 4 EXPERIMENTS - extractive body cue:** GotenNetB demonstrates further improvements, achieving best performance on eleven targets and significantly improving aggregated metrics, reducing standard MAE by over 16% and log MAE by ...
-- **p. 8 / 4 EXPERIMENTS - extractive body cue:** The largest variant GotenNetL achieves state-of-the-art performance across all metrics, although the relative improvement decreases compared to GotenNetB, which suggests that dataset size may become ...
-- **p. 10 / 4 EXPERIMENTS - extractive body cue:** The inclusion of structural embedding (SE), self-attention (SEA), geometric encoding (GE), and HTR generally leads to improved results, as shown in rows 1, 7, and ...
-- **p. 9 / 4 EXPERIMENTS - extractive body cue:** For molecules such as Tetrapeptide and AT-AT, GotenNet achieves notable reductions in energy errors, with improvements of 18.6% and 29.5% over the previous best models, ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 기하 텐서 attention과 계층적 특징 정제를 결합하고 방향에 따라 변하는 특징의 내적으로 그래프 간선 표현을 갱신한다. [PDF 4쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/64d4ff4fff788cdffe236f9ce8b09400-Paper-Conference.pdf#page=4) · [PDF 5쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/64d4ff4fff788cdffe236f9ce8b09400-Paper-Conference.pdf#page=5) · [PDF 6쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/64d4ff4fff788cdffe236f9ce8b09400-Paper-Conference.pdf#page=6)
+- QM9, rMD17 등 분자 데이터에서 스칼라 및 방향성 물성의 예측 오차와 연산 비용을 비교했다. [PDF 8쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/64d4ff4fff788cdffe236f9ce8b09400-Paper-Conference.pdf#page=8) · [PDF 9쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/64d4ff4fff788cdffe236f9ce8b09400-Paper-Conference.pdf#page=9) · [PDF 10쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/64d4ff4fff788cdffe236f9ce8b09400-Paper-Conference.pdf#page=10)
 
 ## Evaluation Scope
 

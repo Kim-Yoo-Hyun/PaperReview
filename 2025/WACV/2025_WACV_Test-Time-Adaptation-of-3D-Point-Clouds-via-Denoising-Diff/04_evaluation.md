@@ -6,7 +6,7 @@
 
 ## Evaluation in One Sentence
 
-PDF body evaluation/result cue (p. 6 (4.3. Results), p. 6 (4.3. Results), p. 7 (4.3. Results), p. 7 (4.3. Results), p. 5 (Figure/Table caption), p. 8 (4.4. Ablation Study)): In addition, our 3DD-TTA outperforms other TTA frameworks on density-based corruptions such as cut-out and density increase.
+ShapeNet, ModelNet40, ScanObjectNN을 이용해 점군 훼손에 대한 적응을 평가하고 인식 모델의 가중치는 고정했다. [PDF 6쪽](https://openaccess.thecvf.com/content/WACV2025/papers/Dastmalchi_Test-Time_Adaptation_of_3D_Point_Clouds_via_Denoising_Diffusion_Models_WACV_2025_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content/WACV2025/papers/Dastmalchi_Test-Time_Adaptation_of_3D_Point_Clouds_via_Denoising_Diffusion_Models_WACV_2025_paper.pdf#page=7)
 
 ## Evaluation Body Digest
 
@@ -21,22 +21,18 @@ PDF body evaluation/result cue (p. 6 (4.3. Results), p. 6 (4.3. Results), p. 7 (
 
 ## Evaluation Type and Scope
 
-- **Evaluation type:** `EMPIRICAL / REAL-ROBOT OR HARDWARE`.
-- **Target system/task:** high-dimensional data 또는 robot action-trajectory distribution.
-- **Input boundary:** conditioning observation와 noisy/intermediate sample.
-- **Output/decision under evaluation:** generated sample, action chunk 또는 trajectory.
-- **Primary target:** distribution fit, multimodality, sample quality와 latency.
+- **Evaluation type:** `BENCHMARK / DATASET`.
 - **Detected evaluation headings:** 4. Experiments (p. 6); 4.1. Datasets and Corruption Methods (p. 6); 4.3. Results (p. 6).
 
 ## Experimental Matrix
 
 | Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
-| 4.3. Results | EMPIRICAL / REAL-ROBOT OR HARDWARE | In addition, our 3DD-TTA outperforms other TTA frameworks on density-based corruptions such as cut-out and density increase. | p. 6 (4.3. Results) |
-| 4.3. Results | EMPIRICAL / REAL-ROBOT OR HARDWARE | The table clearly shows that the 3DD-TTA method outperforms the other methods by a significant margin in most corruption types. | p. 6 (4.3. Results) |
-| 4.3. Results | EMPIRICAL / REAL-ROBOT OR HARDWARE | 3DD-TTA boosts Point-MAE (source) in most corruption types, showing improved robustness across different corruptions. | p. 7 (4.3. Results) |
-| 4.3. Results | EMPIRICAL / REAL-ROBOT OR HARDWARE | Similarly, the model outperforms other methods in addressing densityrelated corruptions but is less effective for transformationbased corruptions, ranking second or third for these deformations. | p. 7 (4.3. Results) |
-| Figure/Table caption | EMPIRICAL / REAL-ROBOT OR HARDWARE | Figure 3. Given a corrupted test point cloud ˜x, we adapt it to the source domain to improve classifier pc. Using the LION model ... | p. 5 (Figure/Table caption) |
+| 4.3. Results | BENCHMARK / DATASET | In addition, our 3DD-TTA outperforms other TTA frameworks on density-based corruptions such as cut-out and density increase. | p. 6 (4.3. Results) |
+| 4.3. Results | BENCHMARK / DATASET | The table clearly shows that the 3DD-TTA method outperforms the other methods by a significant margin in most corruption types. | p. 6 (4.3. Results) |
+| 4.3. Results | BENCHMARK / DATASET | 3DD-TTA boosts Point-MAE (source) in most corruption types, showing improved robustness across different corruptions. | p. 7 (4.3. Results) |
+| 4.3. Results | BENCHMARK / DATASET | Similarly, the model outperforms other methods in addressing densityrelated corruptions but is less effective for transformationbased corruptions, ranking second or third for these deformations. | p. 7 (4.3. Results) |
+| Figure/Table caption | BENCHMARK / DATASET | Figure 3. Given a corrupted test point cloud ˜x, we adapt it to the source domain to improve classifier pc. Using the LION model ... | p. 5 (Figure/Table caption) |
 
 ## Dataset / Benchmark Role
 

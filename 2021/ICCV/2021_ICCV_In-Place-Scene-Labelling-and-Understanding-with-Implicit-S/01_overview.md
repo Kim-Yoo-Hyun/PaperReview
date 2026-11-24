@@ -16,12 +16,11 @@
 - Code/Project: https://shuaifengzhi.com/Semantic-NeRF/
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (14 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다. [본문](https://openaccess.thecvf.com/content/ICCV2021/papers/Zhi_In-Place_Scene_Labelling_and_Understanding_With_Implicit_Scene_Representation_ICCV_2021_paper.pdf)
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Semantic scene understanding means attaching class laFusion via Learning Label Denoising Super-Resolution Label Propagation Label Synthesis Label Interpolation Figure 1: Neural radiance fields (NeRF) jointly encoding appearance and geom ...
-
-방법 관련 발췌 — In addition, multi-view consistency is inherent to the training process and enables the network to produce accurate semantic labels of the scene, including for views that are substantially different from any in ...
+Semantic-NeRF는 장면 하나의 여러 영상에서 색과 부피 밀도 및 의미를 함께 학습해 일관된 의미 지도를 렌더링한다. [PDF 1쪽](https://openaccess.thecvf.com/content/ICCV2021/papers/Zhi_In-Place_Scene_Labelling_and_Understanding_With_Implicit_Scene_Representation_ICCV_2021_paper.pdf#page=1) · [PDF 3쪽](https://openaccess.thecvf.com/content/ICCV2021/papers/Zhi_In-Place_Scene_Labelling_and_Understanding_With_Implicit_Scene_Representation_ICCV_2021_paper.pdf#page=3)
 
 ## Problem and Motivation
 
@@ -53,22 +52,14 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** In addition, multi-view consistency is inherent to the training process and enables the network to produce accurate semantic labels of the scene, including for views ...
-- **p. 1 / 1. Introduction - extractive body cue:** In this paper, we show how to design a scene-specific network for joint geometric and semantic prediction and train it on images from a single ...
-- **p. 1 / 1. Introduction - extractive body cue:** Unlike scene geometry, however, semantic classes are a human-defined concept and it is not possible to semantically label a novel scene in a purely self-supervised ...
-- **p. 2 / 3.1. Preliminaries - extractive body cue:** Specifically, σ(x) is designed to be a function of only 3D position while the radiance c(x, d) is a function of both 3D position and ...
-- **p. 8 / 4.4. Semantic Fusion - extractive body cue:** Our method achieves the highest improvement across all metrics, showing the effectiveness of our joint representation in label fusion.
-- **p. 4 / 4.2. Semantic Neural Radiance Fields - extractive body cue:** Note that we might expect that significant high quality semantic labelling information could feasibly improve reconstruction quality, but in this paper we are focused on ...
-- **p. 7 / 4.4. Semantic Fusion - extractive body cue:** Object boundaries are gradually refined when more supervision is available and the incremental improvements from more labels tend to saturate.
-- **p. 8 / 4.4. Semantic Fusion - extractive body cue:** Accurate labels can be achieved even from single-clicks, which are zoomed-in 9 times for visualisation purposes.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 공유되는 장면 표현에서 색과 의미 분포를 광선에 따라 누적해 일부 뷰의 의미 감독을 다른 뷰와 공간 위치에 전파한다. [PDF 3쪽](https://openaccess.thecvf.com/content/ICCV2021/papers/Zhi_In-Place_Scene_Labelling_and_Understanding_With_Implicit_Scene_Representation_ICCV_2021_paper.pdf#page=3) · [PDF 4쪽](https://openaccess.thecvf.com/content/ICCV2021/papers/Zhi_In-Place_Scene_Labelling_and_Understanding_With_Implicit_Scene_Representation_ICCV_2021_paper.pdf#page=4)
+- 희소하거나 잡음이 있는 주석, 저해상도 라벨 등의 조건에서 의미 정보의 전파와 복원 품질을 실험했다. [PDF 5쪽](https://openaccess.thecvf.com/content/ICCV2021/papers/Zhi_In-Place_Scene_Labelling_and_Understanding_With_Implicit_Scene_Representation_ICCV_2021_paper.pdf#page=5) · [PDF 6쪽](https://openaccess.thecvf.com/content/ICCV2021/papers/Zhi_In-Place_Scene_Labelling_and_Understanding_With_Implicit_Scene_Representation_ICCV_2021_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content/ICCV2021/papers/Zhi_In-Place_Scene_Labelling_and_Understanding_With_Implicit_Scene_Representation_ICCV_2021_paper.pdf#page=7)
 
 ## Evaluation Scope
 
 | Dimension | Body-grounded record | Boundary | Anchor |
 |---|---|---|---|
-| Evaluation type | EMPIRICAL / REAL-ROBOT OR HARDWARE | do not infer unreported downstream behavior | p. 8 (4.4. Semantic Fusion), p. 4 (4.2. Semantic Neural Radiance Fields) |
+| Evaluation type | BENCHMARK / DATASET | do not infer unreported downstream behavior | p. 8 (4.4. Semantic Fusion), p. 4 (4.2. Semantic Neural Radiance Fields) |
 | Embodiment/environment | ScanNet ScanNet [3] is a large-scale real-world indoor RGB-D video dataset of 2.5M views in 1513 scenes with rich annotations including semantic segmentation, camera poses and surface reconstructions. | hardware/simulator version and reset protocol | p. 4 (4.1. Indoor Scene Datasets and Data Preparation), p. 4 (4.1. Indoor Scene Datasets and Data Preparation) |
 | Dataset/benchmark | To prepare training data in Replica dataset, we render two different sequences per Replica scene to cover various parts of scenes. | role, split, size and leakage | p. 4 (4.1. Indoor Scene Datasets and Data Preparation), p. 4 (4.1. Indoor Scene Datasets and Data Preparation), p. 8 (4.4. Semantic Fusion), p. 7 (4.4. Semantic Fusion) |
 | Metric | 0 20 40 60 80 100 Sparsity Ratio (%) 75 80 85 90 95 100 Segmentation Metrics (%) Total Accuracy Class Average Accuracy mIoU 12 15 20 30 57 97145 Baseline Length ... | definition, denominator, direction and uncertainty | p. 5 (4.4. Semantic Fusion), p. 8 (4.4. Semantic Fusion), p. 4 (4.4. Semantic Fusion) |

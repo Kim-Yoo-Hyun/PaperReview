@@ -6,7 +6,7 @@
 
 ## Evaluation in One Sentence
 
-PDF body evaluation/result cue (p. 7 (5.3. Ablation Studies), p. 6 (5.1. 3D Reconstruction Evaluation), p. 6 (5.1. 3D Reconstruction Evaluation), p. 7 (Figure/Table caption), p. 8 (5.3. Ablation Studies)): We observe that utilizing noisy depths significantly improves the baseline.
+장면의 스케일에 적응하는 옥트리 기반 표면 추출을 적용하고 실내 스캔에서 메시의 정확도와 완전성을 비교했다. [PDF 5쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11125632#page=5) · [PDF 6쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11125632#page=6) · [PDF 7쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11125632#page=7)
 
 ## Evaluation Body Digest
 
@@ -21,22 +21,18 @@ PDF body evaluation/result cue (p. 7 (5.3. Ablation Studies), p. 6 (5.1. 3D Reco
 
 ## Evaluation Type and Scope
 
-- **Evaluation type:** `EMPIRICAL / REAL-ROBOT OR HARDWARE`.
-- **Target system/task:** 3D scene/object와 robot coordinate frame.
-- **Input boundary:** RGB-D, image set, point cloud, depth와 camera pose.
-- **Output/decision under evaluation:** point map, pose, scene graph, affordance 또는 query result.
-- **Primary target:** geometric accuracy, semantic consistency와 planning/manipulation utility.
+- **Evaluation type:** `BENCHMARK / DATASET`.
 - **Detected evaluation headings:** 5. Experiments (p. 6); 5.1. 3D Reconstruction Evaluation (p. 6).
 
 ## Experimental Matrix
 
 | Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
-| 5.3. Ablation Studies | EMPIRICAL / REAL-ROBOT OR HARDWARE | We observe that utilizing noisy depths significantly improves the baseline. | p. 7 (5.3. Ablation Studies) |
-| 5.1. 3D Reconstruction Evaluation | EMPIRICAL / REAL-ROBOT OR HARDWARE | Our results demonstrate that the novel adaptive depth and normal regularization terms we propose (also showcased in the ablation study Table 3) improve mesh ... | p. 6 (5.1. 3D Reconstruction Evaluation) |
-| 5.1. 3D Reconstruction Evaluation | EMPIRICAL / REAL-ROBOT OR HARDWARE | We demonstrate that our method can outperform the traditional volumetric fusion. | p. 6 (5.1. 3D Reconstruction Evaluation) |
-| Figure/Table caption | EMPIRICAL / REAL-ROBOT OR HARDWARE | Table 1. Mesh reconstruction evaluation on MuSHRoom. The mesh metrics are averaged over 6 scenes: "coffee room", "honka", "kokko", "sauna", "computer", and "vr room". ... | p. 7 (Figure/Table caption) |
-| 5.3. Ablation Studies | EMPIRICAL / REAL-ROBOT OR HARDWARE | Ablation on supervision strategy and mesh performance (MuSHRoom). | p. 8 (5.3. Ablation Studies) |
+| 5.3. Ablation Studies | BENCHMARK / DATASET | We observe that utilizing noisy depths significantly improves the baseline. | p. 7 (5.3. Ablation Studies) |
+| 5.1. 3D Reconstruction Evaluation | BENCHMARK / DATASET | Our results demonstrate that the novel adaptive depth and normal regularization terms we propose (also showcased in the ablation study Table 3) improve mesh ... | p. 6 (5.1. 3D Reconstruction Evaluation) |
+| 5.1. 3D Reconstruction Evaluation | BENCHMARK / DATASET | We demonstrate that our method can outperform the traditional volumetric fusion. | p. 6 (5.1. 3D Reconstruction Evaluation) |
+| Figure/Table caption | BENCHMARK / DATASET | Table 1. Mesh reconstruction evaluation on MuSHRoom. The mesh metrics are averaged over 6 scenes: "coffee room", "honka", "kokko", "sauna", "computer", and "vr room". ... | p. 7 (Figure/Table caption) |
+| 5.3. Ablation Studies | BENCHMARK / DATASET | Ablation on supervision strategy and mesh performance (MuSHRoom). | p. 8 (5.3. Ablation Studies) |
 
 ## Dataset / Benchmark Role
 

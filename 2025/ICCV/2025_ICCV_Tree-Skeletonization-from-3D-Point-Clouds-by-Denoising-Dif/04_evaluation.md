@@ -6,7 +6,7 @@
 
 ## Evaluation in One Sentence
 
-PDF body evaluation/result cue (p. 7 (4.2. Performance on multi-variety synthetic dataset), p. 7 (4.2. Performance on multi-variety synthetic dataset), p. 6 (4.1. Experimental setup), p. 6 (4.1. Experimental setup), p. 8 (4.4. Performance on BReTS dataset), p. 8 (4.4. Performance on BReTS dataset)): In fact, our approach still outperforms all baselines in the F1-Score, which gives a more complete picture than precision or recall individually.
+성장기 동안 여러 차례 스캔한 사과 과수원 자료와 참조 골격을 제공하고, 실측 나무와 합성 자료에서 골격 추정 방법을 비교했다. [PDF 5쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Marks_Tree_Skeletonization_from_3D_Point_Clouds_by_Denoising_Diffusion_ICCV_2025_paper.pdf#page=5) · [PDF 6쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Marks_Tree_Skeletonization_from_3D_Point_Clouds_by_Denoising_Diffusion_ICCV_2025_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Marks_Tree_Skeletonization_from_3D_Point_Clouds_by_Denoising_Diffusion_ICCV_2025_paper.pdf#page=7)
 
 ## Evaluation Body Digest
 
@@ -21,22 +21,18 @@ PDF body evaluation/result cue (p. 7 (4.2. Performance on multi-variety syntheti
 
 ## Evaluation Type and Scope
 
-- **Evaluation type:** `EMPIRICAL / REAL-ROBOT OR HARDWARE`.
-- **Target system/task:** high-dimensional data 또는 robot action-trajectory distribution.
-- **Input boundary:** conditioning observation와 noisy/intermediate sample.
-- **Output/decision under evaluation:** generated sample, action chunk 또는 trajectory.
-- **Primary target:** distribution fit, multimodality, sample quality와 latency.
+- **Evaluation type:** `BENCHMARK / DATASET`.
 - **Detected evaluation headings:** 4. Experiments and Discussions (p. 6); 4.1. Experimental setup (p. 6); 4.2. Performance on multi-variety synthetic dataset (p. 7); 4.3. Performance on synthetic apple tree dataset (p. 7); 4.4. Performance on BReTS dataset (p. 7).
 
 ## Experimental Matrix
 
 | Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
-| 4.2. Performance on multi-variety synthetic dataset | EMPIRICAL / REAL-ROBOT OR HARDWARE | In fact, our approach still outperforms all baselines in the F1-Score, which gives a more complete picture than precision or recall individually. | p. 7 (4.2. Performance on multi-variety synthetic dataset) |
-| 4.2. Performance on multi-variety synthetic dataset | EMPIRICAL / REAL-ROBOT OR HARDWARE | 1, we outperform all baselines in the Chamfer distance and F1-Score, showing that our predicted skeletons are closer to the reference and more accurate. | p. 7 (4.2. Performance on multi-variety synthetic dataset) |
-| 4.1. Experimental setup | EMPIRICAL / REAL-ROBOT OR HARDWARE | To evaluate the tree skeletonization performance, we use commonly used metrics: the Chamfer distance, precision, recall, and F1-score. | p. 6 (4.1. Experimental setup) |
-| 4.1. Experimental setup | EMPIRICAL / REAL-ROBOT OR HARDWARE | Skeletonization performance on TreeNet3D dataset (normalized by variety). | p. 6 (4.1. Experimental setup) |
-| 4.4. Performance on BReTS dataset | EMPIRICAL / REAL-ROBOT OR HARDWARE | Qualitative results on the BReTS dataset. | p. 8 (4.4. Performance on BReTS dataset) |
+| 4.2. Performance on multi-variety synthetic dataset | BENCHMARK / DATASET | In fact, our approach still outperforms all baselines in the F1-Score, which gives a more complete picture than precision or recall individually. | p. 7 (4.2. Performance on multi-variety synthetic dataset) |
+| 4.2. Performance on multi-variety synthetic dataset | BENCHMARK / DATASET | 1, we outperform all baselines in the Chamfer distance and F1-Score, showing that our predicted skeletons are closer to the reference and more accurate. | p. 7 (4.2. Performance on multi-variety synthetic dataset) |
+| 4.1. Experimental setup | BENCHMARK / DATASET | To evaluate the tree skeletonization performance, we use commonly used metrics: the Chamfer distance, precision, recall, and F1-score. | p. 6 (4.1. Experimental setup) |
+| 4.1. Experimental setup | BENCHMARK / DATASET | Skeletonization performance on TreeNet3D dataset (normalized by variety). | p. 6 (4.1. Experimental setup) |
+| 4.4. Performance on BReTS dataset | BENCHMARK / DATASET | Qualitative results on the BReTS dataset. | p. 8 (4.4. Performance on BReTS dataset) |
 
 ## Dataset / Benchmark Role
 

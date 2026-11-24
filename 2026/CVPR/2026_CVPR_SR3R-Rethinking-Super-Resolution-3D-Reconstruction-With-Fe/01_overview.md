@@ -16,12 +16,11 @@
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다. [본문](https://openaccess.thecvf.com/content/CVPR2026/papers/Feng_SR3R_Rethinking_Super-Resolution_3D_Reconstruction_With_Feed-Forward_Gaussian_Splatting_CVPR_2026_paper.pdf)
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — This prevents leveraging large-scale cross-scene data to learn 3D-specific SR priors and to train a generalized 3DSR model, thereby inherently limiting reconstruction fidelity, cross-scene generalization, and real-time usage.
-
-방법 관련 발췌 — The main contributions are as follows. • A novel formulation of 3DSR.
+SR3R은 몇 장의 저해상도 입력 영상에서 고해상도 3D 가우시안을 직접 예측하도록 여러 장면에 걸쳐 학습한다. [PDF 1쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Feng_SR3R_Rethinking_Super-Resolution_3D_Reconstruction_With_Feed-Forward_Gaussian_Splatting_CVPR_2026_paper.pdf#page=1) · [PDF 4쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Feng_SR3R_Rethinking_Super-Resolution_3D_Reconstruction_With_Feed-Forward_Gaussian_Splatting_CVPR_2026_paper.pdf#page=4)
 
 ## Problem and Motivation
 
@@ -55,26 +54,12 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** The main contributions are as follows. • A novel formulation of 3DSR.
-- **p. 2 / 1. Introduction - extractive body cue:** We propose SR3R, a feed-forward framework that directly reconstructs HR 3DGS from as few as two LR views through a learned mapping network.
-- **p. 3 / 3.1. Problem Formulation - extractive body cue:** This removes the reliance on 2DSR pseudo-supervision, allows learning from large-scale multiscene data, and enables cross-scene generalization, substantially improving scalability and efficiency.
-- **p. 4 / 3.2. Overall Framework - extractive body cue:** The LR input images are upsampled to the target resolution and processed by our mapping network, which consists of a ViT encoder, a feature refinement ...
-- **p. 4 / 3.4. LR Image to HR 3DGS Mapping - extractive body cue:** To correct these unreliable 2D features, we introduce a feature refinement module that aligns the encoder tokens ten ∈RN×C with geometry-aware tokens tpre ∈RN×C extracted ...
-- **p. 8 / Figure/Table caption - extractive body cue:** Table 3. Component-wise ablation on RE10K (4× 3DSR). Modules are added cumulatively to the NoPoSplat baseline. Each component improves performance, and Gaussian Offset Learning yields ...
-- **p. 8 / 4.4. Ablation Study - extractive body cue:** Offset w/o PTv3), it significantly improves reconstruction quality while reducing the number of learnable Gaussian parameters, demonstrating its efficiency.
-- **p. 7 / 4.3. Zero-Shot Generalization - extractive body cue:** As shown in Table 2, SR3R achieves substantially higher accuracy than all feed-forward baselines in the zero-shot 33390
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 영상 특징을 정제하고 가우시안의 위치 오프셋을 학습해 고주파 외관과 기하를 복원한다. [PDF 4쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Feng_SR3R_Rethinking_Super-Resolution_3D_Reconstruction_With_Feed-Forward_Gaussian_Splatting_CVPR_2026_paper.pdf#page=4) · [PDF 5쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Feng_SR3R_Rethinking_Super-Resolution_3D_Reconstruction_With_Feed-Forward_Gaussian_Splatting_CVPR_2026_paper.pdf#page=5)
+- 입력에 없던 시점의 고해상도 렌더링을 평가하고, 학습에 포함되지 않은 장면에서 장면별 최적화 방법과 비교했다. [PDF 6쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Feng_SR3R_Rethinking_Super-Resolution_3D_Reconstruction_With_Feed-Forward_Gaussian_Splatting_CVPR_2026_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Feng_SR3R_Rethinking_Super-Resolution_3D_Reconstruction_With_Feed-Forward_Gaussian_Splatting_CVPR_2026_paper.pdf#page=7) · [PDF 8쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Feng_SR3R_Rethinking_Super-Resolution_3D_Reconstruction_With_Feed-Forward_Gaussian_Splatting_CVPR_2026_paper.pdf#page=8)
 
 ## Evaluation Scope
 
-| Dimension | Body-grounded record | Boundary | Anchor |
-|---|---|---|---|
-| Evaluation type | EMPIRICAL / SOURCE-REPORTED EVALUATION | do not infer unreported downstream behavior | p. 8 (Figure/Table caption), p. 8 (4.4. Ablation Study) |
-| Embodiment/environment | We further evaluate the zero-shot generalization ability of SR3R on the DTU dataset, a challenging object-centric benchmark with unseen geometries and illumination conditions. | hardware/simulator version and reset protocol | p. 7 (4.3. Zero-Shot Generalization), p. 6 (4.1. Experimental Setup) |
-| Dataset/benchmark | RE10K and ACID are two large-scale datasets, containing indoor real estate walkthrough videos and outdoor natural scenes captured by aerial drones, respectively. | role, split, size and leakage | p. 7 (4.3. Zero-Shot Generalization), p. 6 (4.1. Experimental Setup), p. 6 (4.1. Experimental Setup), p. 8 (4.3. Zero-Shot Generalization) |
-| Metric | Adding PointTransformerV3 further boosts accuracy through multi-scale spatial reasoning, producing the full SR3R model with the best performance. | definition, denominator, direction and uncertainty | p. 8 (4.4. Ablation Study), p. 7 (4.3. Zero-Shot Generalization), p. 6 (4.1. Experimental Setup) |
-| Baseline/ablation | Table 1. Quantitative comparison of 4× 3DSR on the large-scale RE10K and ACID datasets. SR3R consistently and substantially outperforms all baselines and their upscaled-input versions across PSNR, SSIM, and LPIPS, with only ... | fair input/data/compute/action matching | p. 6 (Figure/Table caption), p. 7 (4.3. Zero-Shot Generalization), p. 7 (4.3. Zero-Shot Generalization) |
+4배 초해상도는 RE10K와 ACID의 새 시점에서 평가했다(표 1). 표 2는 RE10K에서 학습한 모델을 물체 중심 DTU에 추가 학습 없이 적용한 별도 전이 실험이다. [PDF 6쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Feng_SR3R_Rethinking_Super-Resolution_3D_Reconstruction_With_Feed-Forward_Gaussian_Splatting_CVPR_2026_paper.pdf#page=6) · [PDF 8쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Feng_SR3R_Rethinking_Super-Resolution_3D_Reconstruction_With_Feed-Forward_Gaussian_Splatting_CVPR_2026_paper.pdf#page=8)
 
 ## Explicit Limitations and Failure Boundary
 

@@ -16,12 +16,11 @@
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (20 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다. [본문](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/hong25c/hong25c.pdf)
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, a unique challenge emerges in the parametrization of pixel-aligned 3DGS.
-
-방법 관련 발췌 — We summarize our contributions below: • We propose PF3plat, a feed-forward network that reconstructs 3D scenes, parameterized by 3D Gaussians, from sparse, unposed views without requiring groundtruth depth or pose at either ...
+PF3plat은 정확한 카메라 자세가 주어지지 않은 소수의 영상에서 깊이와 자세를 보정하고 새 시점을 렌더링한다. [PDF 1쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/hong25c/hong25c.pdf#page=1) · [PDF 3쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/hong25c/hong25c.pdf#page=3)
 
 ## Problem and Motivation
 
@@ -55,16 +54,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** We summarize our contributions below: • We propose PF3plat, a feed-forward network that reconstructs 3D scenes, parameterized by 3D Gaussians, from sparse, unposed views without ...
-- **p. 1 / 1. Introduction - extractive body cue:** In this work, we propose PF3plat (Pose-Free Feed-Forward 3D Gaussian Splatting), a novel framework for fast and photorealistic view synthesis from unposed images in a ...
-- **p. 2 / 1. Introduction - extractive body cue:** Subsequently, we introduce learnable modules designed to refine the depth and pose estimates from the coarse alignment to enhance the quality of 3D reconstruction and ...
-- **p. 5 / 3.2.4. 3D GAUSSIAN PARAMTER PREDICTIONS - extractive body cue:** A key idea of our approach is that Sgeo enables supervision signals to flow from the Gaussian parameters back to the depth and pose estimates.
-- **p. 3 / 3.2.1. COARSE ALIGNMENT OF 3D GAUSSIANS - extractive body cue:** To this end, we propose to provide coarse alignment of 3D Gaussians.
-- **p. 9 / 4.5. Analysis and More Results - extractive body cue:** 5d, show that our method achieves a PSNR of over 20 dB for both datasets, significantly outperforming (Hong et al., 2024).
-- **p. 9 / 4.5. Analysis and More Results - extractive body cue:** From these results, we find that our method achieves significantly better performance than the others, highlighting our capability to extend to multiple N views.
-- **p. 8 / 4.4. Ablation Study - extractive body cue:** We also demonstrate that without pre-trained weights for the depth and correspondence networks, the training either fails or achieves significantly lower performance.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 사전학습된 깊이·대응 모델로 초기 기하를 구한 뒤 뷰 사이의 일관성을 이용해 자세와 깊이를 정제한다. [PDF 3쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/hong25c/hong25c.pdf#page=3) · [PDF 4쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/hong25c/hong25c.pdf#page=4) · [PDF 5쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/hong25c/hong25c.pdf#page=5)
+- 추정 기하의 신뢰도를 가우시안 예측에 반영하고 자세 추정과 렌더링 품질을 나누어 비교했다. [PDF 6쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/hong25c/hong25c.pdf#page=6) · [PDF 7쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/hong25c/hong25c.pdf#page=7) · [PDF 8쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/hong25c/hong25c.pdf#page=8)
 
 ## Evaluation Scope
 

@@ -16,12 +16,11 @@
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다. [본문](https://openaccess.thecvf.com/content/ICCV2025/papers/Xu_FreeSplatter_Pose-free_Gaussian_Splatting_for_Sparse-view_3D_Reconstruction_ICCV_2025_paper.pdf)
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — While generalizable reconstruction models[5, 23, 57] address sparse-view reconstruction using learned priors in a feed-forward manner, they still require accurate camera parameters, sidestepping a fundamental challenge in real-world app ...
-
-방법 관련 발췌 — We introduce FreeSplatter, a feed-forward reconstruction framework that jointly predicts pixel-wise Gaussians from uncalibrated sparse-view images and estimates their camera parameters.
+FreeSplatter는 상대 자세가 주어지지 않은 소수의 영상으로 가우시안 장면을 만들고 입력 카메라의 파라미터를 추정한다. [PDF 1쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Xu_FreeSplatter_Pose-free_Gaussian_Splatting_for_Sparse-view_3D_Reconstruction_ICCV_2025_paper.pdf#page=1) · [PDF 3쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Xu_FreeSplatter_Pose-free_Gaussian_Splatting_for_Sparse-view_3D_Reconstruction_ICCV_2025_paper.pdf#page=3)
 
 ## Problem and Motivation
 
@@ -55,22 +54,14 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** We introduce FreeSplatter, a feed-forward reconstruction framework that jointly predicts pixel-wise Gaussians from uncalibrated sparse-view images and estimates their camera parameters.
-- **p. 7 / 0.027 Method - extractive body cue:** Qualitative comparisons in Figure 4 reveal superior detail preservation by our method, particularly evident in text rendering (4th column), while competitors exhibit blurring artifacts.
-- **p. 2 / 1. Introduction - extractive body cue:** Despite their pioneering contributions, their approaches suffer from inefficient volume rendering and limited resolution, hampering training efficiency and scalability to complex scenes.
-- **p. 7 / 0.027 Method - extractive body cue:** Our end-to-end training approach enables joint optimization of Gaussian parameters, resulting in superior visual fidelity on both ScanNet++ and CO3Dv2 datasets (Figure 5).
-- **p. 3 / 3.2. Model Architecture - extractive body cue:** These maps enable novel view synthesis and camera parameter recovery through iterative optimization.
-- **p. 8 / Figure/Table caption - extractive body cue:** Table 5. Ablation Study on Model Architecture. The results are evaluated on the GSO dataset with FreeSplatter-O. uate pose estimation performance using both rotation and ...
-- **p. 5 / 4. Experiments - extractive body cue:** Please refer to the supplementary material for additional implementation details and experimental results.
-- **p. 6 / 4.1. Experimental Settings - extractive body cue:** Scene-level performance is assessed on the test splits of ScanNet++[62] and CO3Dv2 [37].
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 여러 영상의 토큰을 트랜스포머에서 교환해 각 픽셀에 대응하는 가우시안을 공통 좌표계에서 직접 예측한다. [PDF 3쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Xu_FreeSplatter_Pose-free_Gaussian_Splatting_for_Sparse-view_3D_Reconstruction_ICCV_2025_paper.pdf#page=3) · [PDF 4쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Xu_FreeSplatter_Pose-free_Gaussian_Splatting_for_Sparse-view_3D_Reconstruction_ICCV_2025_paper.pdf#page=4)
+- 물체 중심 복원과 장면 복원에 맞춘 모델을 각각 학습하고, 새 시점 렌더링과 카메라 자세 정확도를 따로 측정했다. [PDF 5쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Xu_FreeSplatter_Pose-free_Gaussian_Splatting_for_Sparse-view_3D_Reconstruction_ICCV_2025_paper.pdf#page=5) · [PDF 6쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Xu_FreeSplatter_Pose-free_Gaussian_Splatting_for_Sparse-view_3D_Reconstruction_ICCV_2025_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Xu_FreeSplatter_Pose-free_Gaussian_Splatting_for_Sparse-view_3D_Reconstruction_ICCV_2025_paper.pdf#page=7)
 
 ## Evaluation Scope
 
 | Dimension | Body-grounded record | Boundary | Anchor |
 |---|---|---|---|
-| Evaluation type | EMPIRICAL / REAL-ROBOT OR HARDWARE | do not infer unreported downstream behavior | p. 8 (Figure/Table caption), p. 5 (4. Experiments) |
+| Evaluation type | BENCHMARK / DATASET | do not infer unreported downstream behavior | p. 8 (Figure/Table caption), p. 5 (4. Experiments) |
 | Embodiment/environment | FreeSplatterS leverages a diverse training set comprising BlendedMVS [61], ScanNet++[62], and CO3Dv2[37]-a subset of DUSt3R's [51] training data encompassing outdoor scenes, indoor environments, and real-world objects. | hardware/simulator version and reset protocol | p. 5 (4.1. Experimental Settings), p. 5 (4. Experiments) |
 | Dataset/benchmark | Scene-level performance is assessed on the test splits of ScanNet++[62] and CO3Dv2 [37]. | role, split, size and leakage | p. 5 (4.1. Experimental Settings), p. 5 (4. Experiments), p. 6 (4.1. Experimental Settings), p. 6 (4.2. Sparse-view Reconstruction) |
 | Metric | Table 5. Ablation Study on Model Architecture. The results are evaluated on the GSO dataset with FreeSplatter-O. uate pose estimation performance using both rotation and translation metrics: relative rotation error (RRE) in ... | definition, denominator, direction and uncertainty | p. 8 (Figure/Table caption), p. 6 (4.1. Experimental Settings), p. 5 (Figure/Table caption) |

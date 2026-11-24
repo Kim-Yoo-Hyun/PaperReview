@@ -16,12 +16,11 @@
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (16 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다. [본문](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11125636)
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — The relative orientations of different objects in the scene cannot be captured by global equivariance as obtained by existing architectures or by data augmentation techniques.
-
-방법 관련 발췌 — In this paper, we propose using a finite subset F(x) ⊂ SE(3), referred to as a frame, to solve the group equivariant integral, which allows for exact equivariance (as opposed to approaches ...
+연속적인 국소 SE(3) 군 합성곱을 점군에 적용해 물체가 서로 다르게 회전·이동하는 장면의 특징을 추출한다. [PDF 1쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11125636#page=1) · [PDF 3쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11125636#page=3)
 
 ## Problem and Motivation
 
@@ -55,22 +54,14 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** In this paper, we propose using a finite subset F(x) ⊂ SE(3), referred to as a frame, to solve the group equivariant integral, which allows ...
-- **p. 3 / 3.1. Group equivariant convolution - extractive body cue:** Further, considering Y = G/H as quotient space with H = {g ∈G/gy0 = y0} as the stabilizer subgroup StabG(y0), which consists of group elements ...
-- **p. 4 / 3.2. Efficient group convolution - extractive body cue:** To achieve exact equivariance with tractable computational load, we propose a carefully constructed grid F(xj) ⊂SE(3) specific to each point xj ∈R3.
-- **p. 4 / 3.1. Group equivariant convolution - extractive body cue:** equivariance, the feature maps need to be lifted to the group itself Y = G since then the stabilizer subgroup only consists of the trivial ...
-- **p. 5 / 3.2. Efficient group convolution - extractive body cue:** Therefore, we propose to perform a stochastic approximation of Eq.
-- **p. 6 / 4.2. Shape classification - extractive body cue:** When we look at the SO(3) / SO(3) setup, all three methods achieve good performance; MC and Ours are able to outperform STD, while Ours ...
-- **p. 7 / Figure/Table caption - extractive body cue:** Figure 3. Qualitative results. Global equivariant methods such as VN, or FA struggle with out-of-distribution models. Our method, on the other hand, achieves almost perfect ...
-- **p. 6 / 4.2. Shape classification - extractive body cue:** MC, although it can also achieve competitive performance, for most of the cases, the drop in performance is significant compared to the I / I ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 점 이웃의 국소 기준 좌표계와 일반 군 합성곱을 결합해 조밀한 6차원 합성곱을 직접 계산하는 비용을 줄인다. [PDF 3쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11125636#page=3) · [PDF 4쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11125636#page=4)
+- 물체 분류와 장면 의미 분할에서 정확도와 연산 부담을 평가하고 회전을 적용한 조건을 비교했다. [PDF 5쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11125636#page=5) · [PDF 6쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11125636#page=6) · [PDF 7쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11125636#page=7)
 
 ## Evaluation Scope
 
 | Dimension | Body-grounded record | Boundary | Anchor |
 |---|---|---|---|
-| Evaluation type | EMPIRICAL / REAL-ROBOT OR HARDWARE | do not infer unreported downstream behavior | p. 6 (4.2. Shape classification), p. 7 (Figure/Table caption) |
+| Evaluation type | BENCHMARK / DATASET | do not infer unreported downstream behavior | p. 6 (4.2. Shape classification), p. 7 (Figure/Table caption) |
 | Embodiment/environment | We test our method on ScanNet [14], a dataset composed of several indoor 3D scene scans, to show its applicability to real-world scenarios. | hardware/simulator version and reset protocol | p. 7 (4.3. Semantic segmentation), p. 5 (4.2. Shape classification) |
 | Dataset/benchmark | 4.3.2 Scene understanding Scenes consist of multiple parts or objects with arbitrary orientations, making local equivariance essential for generalizing to unseen configurations. | role, split, size and leakage | p. 7 (4.3. Semantic segmentation), p. 5 (4.2. Shape classification), p. 7 (4.3. Semantic segmentation), p. 6 (4.3. Semantic segmentation) |
 | Metric | Our model only takes as input point coordinates, and performance is measured with overall accuracy. | definition, denominator, direction and uncertainty | p. 5 (4.2. Shape classification), p. 6 (4.2. Shape classification), p. 6 (4.2. Shape classification) |

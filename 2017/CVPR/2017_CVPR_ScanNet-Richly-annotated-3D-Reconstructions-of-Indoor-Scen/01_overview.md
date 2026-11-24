@@ -16,12 +16,11 @@
 - Code/Project: http://www.scan-net.org/
 - Paper type: benchmark_or_dataset
 - Source audit: full-text PDF body checked on 2026-09-03 (22 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다. [본문](https://openaccess.thecvf.com/content_cvpr_2017/papers/Dai_ScanNet_Richly-Annotated_3D_CVPR_2017_paper.pdf)
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Typically, 3D deep learning methods use synthetic data to mitigate this lack of real-world data [91, 6].
-
-방법 관련 발췌 — In this paper, we introduce ScanNet, a dataset of richlyannotated RGB-D scans of real-world environments containing 2.5M RGB-D images in 1513 scans acquired in 707 distinct spaces.
+ScanNet은 일반 사용자가 수집한 실내 RGB-D 영상을 카메라 궤적·표면·물체 의미가 연결된 3차원 장면 자료로 구축했다. [PDF 1쪽](https://openaccess.thecvf.com/content_cvpr_2017/papers/Dai_ScanNet_Richly-Annotated_3D_CVPR_2017_paper.pdf#page=1) · [PDF 2쪽](https://openaccess.thecvf.com/content_cvpr_2017/papers/Dai_ScanNet_Richly-Annotated_3D_CVPR_2017_paper.pdf#page=2)
 
 ## Problem and Motivation
 
@@ -53,26 +52,12 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 1 / 1. Introduction - extractive body cue:** In this paper, we introduce ScanNet, a dataset of richlyannotated RGB-D scans of real-world environments containing 2.5M RGB-D images in 1513 scans acquired in 707 ...
-- **p. 1 / 1. Introduction - extractive body cue:** In the collection of this dataset, we have considered two main research questions: 1) how can we design a framework that allows many people to ...
-- **p. 4 / 3.2. Surface Reconstruction - extractive body cue:** This allows us to select the floor plane based on the scan bounding box and the normal most similar to the IMU up vector direction.
-- **p. 4 / 3.2. Surface Reconstruction - extractive body cue:** We chose the BundleFusion system [12] as it was designed and evaluated for similar sensor setups as ours, and provides real-time speed while being reasonably ...
-- **p. 7 / 5.1. 3D Object Classification - extractive body cue:** On the other hand, training on ScanNet translates well to testing on SceneNN; as a result, the test results on SceneNN are significantly improved by ...
-- **p. 20 / Figure/Table caption - extractive body cue:** Figure 15. Comparison of calibration results. In the top row, we show results of calibration on a flat wall. As the distance increases the distortion ...
-- **p. 2 / Dataset - extractive body cue:** We also provide CAD model placements for a subset of the scans. • A design for efficient 3D data capture and annotation suitable for novice ...
-- **p. 3 / 3.1. RGB-D Scanning - extractive body cue:** We find that this calibration procedure is easy for users and results in improved data and consequently enhanced reconstruction quality.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 촬영 도구와 재구성 절차를 제공하고 표면에 의미 라벨과 일부 물체의 정렬된 CAD 모델을 붙였다. [PDF 2쪽](https://openaccess.thecvf.com/content_cvpr_2017/papers/Dai_ScanNet_Richly-Annotated_3D_CVPR_2017_paper.pdf#page=2) · [PDF 3쪽](https://openaccess.thecvf.com/content_cvpr_2017/papers/Dai_ScanNet_Richly-Annotated_3D_CVPR_2017_paper.pdf#page=3) · [PDF 4쪽](https://openaccess.thecvf.com/content_cvpr_2017/papers/Dai_ScanNet_Richly-Annotated_3D_CVPR_2017_paper.pdf#page=4)
+- 같은 자료에서 3차원 물체 분류, 복셀 의미 라벨링과 CAD 검색의 과제 및 기준선 결과를 제시했다. [PDF 6쪽](https://openaccess.thecvf.com/content_cvpr_2017/papers/Dai_ScanNet_Richly-Annotated_3D_CVPR_2017_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content_cvpr_2017/papers/Dai_ScanNet_Richly-Annotated_3D_CVPR_2017_paper.pdf#page=7) · [PDF 8쪽](https://openaccess.thecvf.com/content_cvpr_2017/papers/Dai_ScanNet_Richly-Annotated_3D_CVPR_2017_paper.pdf#page=8)
 
 ## Evaluation Scope
 
-| Dimension | Body-grounded record | Boundary | Anchor |
-|---|---|---|---|
-| Evaluation type | BENCHMARK / DATASET | do not infer unreported downstream behavior | p. 7 (5.1. 3D Object Classification), p. 20 (Figure/Table caption) |
-| Embodiment/environment | Our main goal driving the design of our framework was to allow untrained users to capture semantically labeled surfaces of indoor scenes with commodity hardware. | hardware/simulator version and reset protocol | p. 3 (3. Dataset Acquisition Framework), p. 5 (4. ScanNet Dataset) |
-| Dataset/benchmark | We use these tasks to demonstrate that ScanNet enables the use of deep learning methods for 3D scene understanding tasks with supervised training, and compare performance to that using data from other ... | role, split, size and leakage | p. 3 (3. Dataset Acquisition Framework), p. 5 (4. ScanNet Dataset), p. 6 (5. Tasks and Benchmarks), p. 6 (5.1. 3D Object Classification) |
-| Metric | Percentages indicate average instance accuracy of retrieved model to query region. | definition, denominator, direction and uncertainty | p. 7 (5.1. 3D Object Classification), p. 7 (5.1. 3D Object Classification), p. 8 (5.2. Semantic Voxel Labeling) |
-| Baseline/ablation | Summary statistics for ScanNet compared to the most similar existing dataset (SceneNN [32]). | fair input/data/compute/action matching | p. 5 (3.3. Semantic Annotation), p. 6 (5.1. 3D Object Classification), p. 7 (5.2. Semantic Voxel Labeling) |
+원 논문에 보고된 규모는 서로 다른 실내 공간 707곳, RGB-D 스캔 1,513회, 영상 약 250만 장이다. 표 3의 물체 분류·복셀 라벨링 분할은 전체 수집 규모와 구분한다. [PDF 1쪽](https://openaccess.thecvf.com/content_cvpr_2017/papers/Dai_ScanNet_Richly-Annotated_3D_CVPR_2017_paper.pdf#page=1) · [PDF 2쪽](https://openaccess.thecvf.com/content_cvpr_2017/papers/Dai_ScanNet_Richly-Annotated_3D_CVPR_2017_paper.pdf#page=2) · [PDF 6쪽](https://openaccess.thecvf.com/content_cvpr_2017/papers/Dai_ScanNet_Richly-Annotated_3D_CVPR_2017_paper.pdf#page=6)
 
 ## Explicit Limitations and Failure Boundary
 

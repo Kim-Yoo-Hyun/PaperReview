@@ -16,12 +16,11 @@
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (21 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다. [본문](https://proceedings.iclr.cc/paper_files/paper/2025/file/a9cae5b74cfc8f71c39a4e646db819c2-Paper-Conference.pdf)
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Given the lack of camera models accounting for the distortion of 360-degree images and the limitations of existing self-calibration approaches, there is an urgent need for a framework that calibrates the omnidirectional ...
-
-방법 관련 발췌 — To summarize, the main contributions of this work include: • We proposed the first system for self-calibrating omnidirectional radiance fields, which jointly optimizes 3D Gaussians, omnidirectional camera poses, and camera models. • ...
+SC-OmniGS는 360도 영상을 구면에서 직접 처리해 전방위 카메라의 보정값·자세와 가우시안 장면을 함께 추정한다. [PDF 1쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/a9cae5b74cfc8f71c39a4e646db819c2-Paper-Conference.pdf#page=1) · [PDF 4쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/a9cae5b74cfc8f71c39a4e646db819c2-Paper-Conference.pdf#page=4)
 
 ## Problem and Motivation
 
@@ -54,22 +53,14 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** To summarize, the main contributions of this work include: • We proposed the first system for self-calibrating omnidirectional radiance fields, which jointly optimizes 3D Gaussians, ...
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** In this paper, we propose SC-OmniGS, a novel system that self-calibrates the omnidirectional camera model and poses along with omnidirectional radiance field reconstruction.
-- **p. 3 / 1 INTRODUCTION - extractive body cue:** It can also facilitate other applications such as GS-based omnidirectional SLAM. • We introduced a novel differentiable omnidirectional camera model that effectively tackles the complex ...
-- **p. 1 / ABSTRACT - extractive body cue:** We present SC-OmniGS, a novel self-calibrating omnidirectional Gaussian splatting system for fast and accurate omnidirectional radiance field reconstruction using 360-degree images.
-- **p. 1 / ABSTRACT - extractive body cue:** Furthermore, we introduce a differentiable omnidirectional camera model in order to rectify the distortion of real-world data for performance enhancement.
-- **p. 10 / 5 EXPERIMENTS - extractive body cue:** When trained with pose perturbation, our full model, incorporating both camera model and pose optimization, consistently achieves improvement in both training and test view synthesis.
-- **p. 8 / 5 EXPERIMENTS - extractive body cue:** Despite a slight decrease in rendering quality, the results demonstrate that our method still exhibits significant performance improvements compared to baseline methods.
-- **p. 9 / 5 EXPERIMENTS - extractive body cue:** Our results outperform in both rendering quality and camera accuracy. † indicates training from scratch.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 구면 투영과 미분 가능한 카메라 왜곡 모델을 가우시안 렌더링에 포함해 입력 카메라를 장면 복원과 함께 보정한다. [PDF 4쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/a9cae5b74cfc8f71c39a4e646db819c2-Paper-Conference.pdf#page=4) · [PDF 5쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/a9cae5b74cfc8f71c39a4e646db819c2-Paper-Conference.pdf#page=5) · [PDF 6쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/a9cae5b74cfc8f71c39a4e646db819c2-Paper-Conference.pdf#page=6)
+- 합성 장면과 소비자용 전방위 카메라 영상에서 초기 자세의 잡음 또는 부재가 보정·새 시점 렌더링에 주는 영향을 비교했다. [PDF 8쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/a9cae5b74cfc8f71c39a4e646db819c2-Paper-Conference.pdf#page=8) · [PDF 9쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/a9cae5b74cfc8f71c39a4e646db819c2-Paper-Conference.pdf#page=9) · [PDF 10쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/a9cae5b74cfc8f71c39a4e646db819c2-Paper-Conference.pdf#page=10)
 
 ## Evaluation Scope
 
 | Dimension | Body-grounded record | Boundary | Anchor |
 |---|---|---|---|
-| Evaluation type | EMPIRICAL / REAL-ROBOT OR HARDWARE | do not infer unreported downstream behavior | p. 10 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS) |
+| Evaluation type | BENCHMARK / DATASET | do not infer unreported downstream behavior | p. 10 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS) |
 | Embodiment/environment | We evaluated SG-OmniGS against several SOTA models on datasets of 360-degree images, including eight real-world multi-room scenes from 360Roam dataset (Huang et al., 2022) each with on average 110 training views and ... | hardware/simulator version and reset protocol | p. 7 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS) |
 | Dataset/benchmark | 5.2 EVALUATION ON SINGLE-ROOM SYNTHETIC DATASET We conducted experiments on three synthetic scenes from OmniBlender (Choi et al., 2023), namely Barbershop, Classroom, and Flat. | role, split, size and leakage | p. 7 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 7 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS) |
 | Metric | Our camera calibration demonstrates greater robustness to translation errors with only minor degradation compared to rotation errors. | definition, denominator, direction and uncertainty | p. 10 (5 EXPERIMENTS), p. 16 (Figure/Table caption), p. 8 (5 EXPERIMENTS) |

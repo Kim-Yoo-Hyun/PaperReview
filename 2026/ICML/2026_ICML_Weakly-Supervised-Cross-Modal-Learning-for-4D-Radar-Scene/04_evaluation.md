@@ -6,7 +6,7 @@
 
 ## Evaluation in One Sentence
 
-PDF body evaluation/result cue (p. 8 (4.2. Ablation Studies), p. 7 (4.1. Main Results), p. 7 (4.1. Main Results), p. 8 (4.1. Main Results), p. 6 (4. Experiments), p. 13 (Figure/Table caption)): The experimental results in Table 3 illustrate that the addition of Lis successfully improves the prediction accuracy in both dynamic and static areas in the scene, achieving a performance improvement ...
+View-of-Delft의 검증 분할에서 레이더 장면 흐름 오차를 전체·이동·정적 점으로 나누었다(표 1). 저자들은 자료에 완성된 흐름 정답이 없어 평가용 라벨을 전처리로 생성했다. [PDF 5쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/fu26r/fu26r.pdf#page=5) · [PDF 6쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/fu26r/fu26r.pdf#page=6)
 
 ## Evaluation Body Digest
 
@@ -21,22 +21,19 @@ PDF body evaluation/result cue (p. 8 (4.2. Ablation Studies), p. 7 (4.1. Main Re
 
 ## Evaluation Type and Scope
 
-- **Evaluation type:** `EMPIRICAL / REAL-ROBOT OR HARDWARE`.
-- **Target system/task:** 3D scene/object와 robot coordinate frame.
-- **Input boundary:** RGB-D, image set, point cloud, depth와 camera pose.
-- **Output/decision under evaluation:** point map, pose, scene graph, affordance 또는 query result.
-- **Primary target:** geometric accuracy, semantic consistency와 planning/manipulation utility.
+- **Evaluation type:** `BENCHMARK / DATASET`.
+- **평가 대상:** View-of-Delft에서 장면 흐름과 각 감독 항을 평가하고 LiDAR 추적 의사 라벨을 이용한 기존 방법과 비교했다. [PDF 6쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/fu26r/fu26r.pdf#page=6) · [PDF 7쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/fu26r/fu26r.pdf#page=7) · [PDF 8쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/fu26r/fu26r.pdf#page=8)
 - **Detected evaluation headings:** 4. Experiments (p. 6); 4.1. Main Results (p. 6).
 
 ## Experimental Matrix
 
 | Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
-| 4.2. Ablation Studies | EMPIRICAL / REAL-ROBOT OR HARDWARE | The experimental results in Table 3 illustrate that the addition of Lis successfully improves the prediction accuracy in both dynamic and static areas in ... | p. 8 (4.2. Ablation Studies) |
-| 4.1. Main Results | EMPIRICAL / REAL-ROBOT OR HARDWARE | When compared to LiDAR-based approaches, our method even surpasses the best fully supervised model, PVRAFT (Wei et al., 2021), achieving performance improvements across all ... | p. 7 (4.1. Main Results) |
-| 4.1. Main Results | EMPIRICAL / REAL-ROBOT OR HARDWARE | In particular, IterFlow yields a 34.7% performance improvement on the EPE metric, while increasing AccS and AccR by 13.6% and 21.4%, respectively. | p. 7 (4.1. Main Results) |
-| 4.1. Main Results | EMPIRICAL / REAL-ROBOT OR HARDWARE | Furthermore, when replacing the original loss combinations in (Wu et al., 2020) and (Ding et al., 2022) with our proposed ones (rows 2 and ... | p. 8 (4.1. Main Results) |
-| 4. Experiments | EMPIRICAL / REAL-ROBOT OR HARDWARE | In addition, for the cross-modal supervised CMFlow (Ding et al., 2023), we generate extra required optical flow labels and pseudo scene flow labels by ... | p. 6 (4. Experiments) |
+| 4.2. Ablation Studies | BENCHMARK / DATASET | The experimental results in Table 3 illustrate that the addition of Lis successfully improves the prediction accuracy in both dynamic and static areas in ... | p. 8 (4.2. Ablation Studies) |
+| 4.1. Main Results | BENCHMARK / DATASET | When compared to LiDAR-based approaches, our method even surpasses the best fully supervised model, PVRAFT (Wei et al., 2021), achieving performance improvements across all ... | p. 7 (4.1. Main Results) |
+| 4.1. Main Results | BENCHMARK / DATASET | In particular, IterFlow yields a 34.7% performance improvement on the EPE metric, while increasing AccS and AccR by 13.6% and 21.4%, respectively. | p. 7 (4.1. Main Results) |
+| 4.1. Main Results | BENCHMARK / DATASET | Furthermore, when replacing the original loss combinations in (Wu et al., 2020) and (Ding et al., 2022) with our proposed ones (rows 2 and ... | p. 8 (4.1. Main Results) |
+| 4. Experiments | BENCHMARK / DATASET | In addition, for the cross-modal supervised CMFlow (Ding et al., 2023), we generate extra required optical flow labels and pseudo scene flow labels by ... | p. 6 (4. Experiments) |
 
 ## Dataset / Benchmark Role
 

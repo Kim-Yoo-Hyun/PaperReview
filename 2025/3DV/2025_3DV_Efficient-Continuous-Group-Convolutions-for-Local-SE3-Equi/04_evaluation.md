@@ -6,7 +6,7 @@
 
 ## Evaluation in One Sentence
 
-PDF body evaluation/result cue (p. 6 (4.2. Shape classification), p. 7 (Figure/Table caption), p. 6 (4.2. Shape classification), p. 7 (4.3. Semantic segmentation), p. 14 (Figure/Table caption), p. 15 (Figure/Table caption)): When we look at the SO(3) / SO(3) setup, all three methods achieve good performance; MC and Ours are able to outperform STD, while Ours achieves the best accuracy.
+물체 분류와 장면 의미 분할에서 정확도와 연산 부담을 평가하고 회전을 적용한 조건을 비교했다. [PDF 5쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11125636#page=5) · [PDF 6쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11125636#page=6) · [PDF 7쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11125636#page=7)
 
 ## Evaluation Body Digest
 
@@ -21,22 +21,18 @@ PDF body evaluation/result cue (p. 6 (4.2. Shape classification), p. 7 (Figure/T
 
 ## Evaluation Type and Scope
 
-- **Evaluation type:** `EMPIRICAL / REAL-ROBOT OR HARDWARE`.
-- **Target system/task:** 3D scene/object와 robot coordinate frame.
-- **Input boundary:** RGB-D, image set, point cloud, depth와 camera pose.
-- **Output/decision under evaluation:** point map, pose, scene graph, affordance 또는 query result.
-- **Primary target:** geometric accuracy, semantic consistency와 planning/manipulation utility.
+- **Evaluation type:** `BENCHMARK / DATASET`.
 - **Detected evaluation headings:** 4. Experiments (p. 5).
 
 ## Experimental Matrix
 
 | Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
-| 4.2. Shape classification | EMPIRICAL / REAL-ROBOT OR HARDWARE | When we look at the SO(3) / SO(3) setup, all three methods achieve good performance; MC and Ours are able to outperform STD, while ... | p. 6 (4.2. Shape classification) |
-| Figure/Table caption | EMPIRICAL / REAL-ROBOT OR HARDWARE | Figure 3. Qualitative results. Global equivariant methods such as VN, or FA struggle with out-of-distribution models. Our method, on the other hand, achieves almost ... | p. 7 (Figure/Table caption) |
-| 4.2. Shape classification | EMPIRICAL / REAL-ROBOT OR HARDWARE | MC, although it can also achieve competitive performance, for most of the cases, the drop in performance is significant compared to the I / ... | p. 6 (4.2. Shape classification) |
-| 4.3. Semantic segmentation | EMPIRICAL / REAL-ROBOT OR HARDWARE | The results show that using our sampling approach increases the performance significantly, leading to better results with fewer samples. | p. 7 (4.3. Semantic segmentation) |
-| Figure/Table caption | EMPIRICAL / REAL-ROBOT OR HARDWARE | Figure 4. Additional Qualitative results. Global equivariant methods such as VN, or FA struggle with out-of-distribution models, especially up-side down models. Our method, on ... | p. 14 (Figure/Table caption) |
+| 4.2. Shape classification | BENCHMARK / DATASET | When we look at the SO(3) / SO(3) setup, all three methods achieve good performance; MC and Ours are able to outperform STD, while ... | p. 6 (4.2. Shape classification) |
+| Figure/Table caption | BENCHMARK / DATASET | Figure 3. Qualitative results. Global equivariant methods such as VN, or FA struggle with out-of-distribution models. Our method, on the other hand, achieves almost ... | p. 7 (Figure/Table caption) |
+| 4.2. Shape classification | BENCHMARK / DATASET | MC, although it can also achieve competitive performance, for most of the cases, the drop in performance is significant compared to the I / ... | p. 6 (4.2. Shape classification) |
+| 4.3. Semantic segmentation | BENCHMARK / DATASET | The results show that using our sampling approach increases the performance significantly, leading to better results with fewer samples. | p. 7 (4.3. Semantic segmentation) |
+| Figure/Table caption | BENCHMARK / DATASET | Figure 4. Additional Qualitative results. Global equivariant methods such as VN, or FA struggle with out-of-distribution models, especially up-side down models. Our method, on ... | p. 14 (Figure/Table caption) |
 
 ## Dataset / Benchmark Role
 

@@ -16,14 +16,13 @@
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (14 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다. [본문](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11125574)
 
 > DOC-QA1 (2026-10-23): 제어문자·깨진 추출 구간과 직접 연결된 표 항목을 PDF 페이지 이미지와 대조했다. 확인 범위·원문 URL·페이지·수정 이력은 [대조 기록](../../../work/sources/pdf_note_review_2026-10-23.json)에 있다. 노트 전체의 정독이나 모든 기존 주장에 대한 재검증을 뜻하지 않으며 reading status는 유지한다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — The challenges with this approach are two-fold: (i) the choice of priors themselves, that should Figure 1.
-
-방법 관련 발췌 — In summary, our contributions are as follows: • We introduce GRIN, a novel diffusion-based monocular depth estimation framework designed to (i) ingest sparse training data, enabling the use of larger and more ...
+GRIN은 드문드문 측정된 깊이로 픽셀별 확산 모델을 학습해 한 장의 RGB에서 미터 단위 깊이를 예측한다. [PDF 1쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11125574#page=1) · [PDF 3쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11125574#page=3)
 
 ## Problem and Motivation
 
@@ -57,22 +56,14 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** In summary, our contributions are as follows: • We introduce GRIN, a novel diffusion-based monocular depth estimation framework designed to (i) ingest sparse training data, ...
-- **p. 2 / 1. Introduction - extractive body cue:** We propose several key modifications to this original framework to apply it to the task of depth estimation, including the use of 3D geometric positional ...
-- **p. 3 / 3. Diffusion Preliminaries - extractive body cue:** Capitalizing on these benefits, in the next section we introduce our approach for zero shot metric depth estimation with pixel-level diffusion.
-- **p. 3 / 3. Diffusion Preliminaries - extractive body cue:** (b) A RIN model consists of B blocks, each receiving latent Zb and input Xb tokens from the previous block and returning updated Zb+1 and ...
-- **p. 4 / 4.1. Sparse Unstructured Training - extractive body cue:** To address these limitations we propose a combination of local and global conditioning which promote training with unstructured sparse data while still maintaining dense scene-level ...
-- **p. 7 / 5.3. Zero-Shot Metric Depth Estimation - extractive body cue:** We believe GRIN could be modified to operate in a similar setting, which would potentially further improve performance, however this is left for future work.
-- **p. 7 / 5.4. Zero-Shot Relative Depth Estimation - extractive body cue:** Results of this experiment are shown in Table 2, indicating that GRIN also outperforms the current state-of-the-art in relative depth estimation across multiple datasets, with ...
-- **p. 8 / 5.5. Fine-Tuning Experiments - extractive body cue:** Results are shown in Table 3, indicating that GRIN also outperforms other metric depth estimation methods that use in-domain training data.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 희소 깊이가 있는 위치를 직접 감독하고 국소·전역 영상 특징 및 기하 정보를 사용해 픽셀별 깊이 분포를 추정한다. [PDF 3쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11125574#page=3) · [PDF 4쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11125574#page=4) · [PDF 5쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11125574#page=5)
+- 여러 실내·실외 자료에 추가 학습 없이 적용해 절대 깊이 오차와 서로 다른 환경으로의 일반화를 비교했다. [PDF 6쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11125574#page=6) · [PDF 7쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11125574#page=7) · [PDF 8쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11125574#page=8)
 
 ## Evaluation Scope
 
 | Dimension | Body-grounded record | Boundary | Anchor |
 |---|---|---|---|
-| Evaluation type | EMPIRICAL / REAL-ROBOT OR HARDWARE | do not infer unreported downstream behavior | p. 7 (5.3. Zero-Shot Metric Depth Estimation), p. 7 (5.4. Zero-Shot Relative Depth Estimation) |
+| Evaluation type | BENCHMARK / DATASET | do not infer unreported downstream behavior | p. 7 (5.3. Zero-Shot Metric Depth Estimation), p. 7 (5.4. Zero-Shot Relative Depth Estimation) |
 | Embodiment/environment | We trained GRIN using a diverse combination of indoor and outdoor datasets from both real-world and syn | hardware/simulator version and reset protocol | p. 5 (5.1. Training Datasets), p. 6 (5.1. Training Datasets) |
 | Dataset/benchmark | The remaining 80k steps used all training datasets, shuffled to ensure a similar ratio of indoor and outdoor samples per batch, as well as real-world and synthetic samples. | role, split, size and leakage | p. 5 (5.1. Training Datasets), p. 6 (5.1. Training Datasets), p. 6 (5.2. Implementation Details), p. 7 (5.3. Zero-Shot Metric Depth Estimation) |
 | Metric | We believe GRIN could be modified to operate in a similar setting, which would potentially further improve performance, however this is left for future work. | definition, denominator, direction and uncertainty | p. 7 (5.3. Zero-Shot Metric Depth Estimation), p. 8 (5.4. Zero-Shot Relative Depth Estimation), p. 8 (5.4. Zero-Shot Relative Depth Estimation) |

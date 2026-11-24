@@ -16,12 +16,11 @@
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다. [본문](https://openaccess.thecvf.com/content/CVPR2024/papers/Shi_Language_Embedded_3D_Gaussians_for_Open-Vocabulary_Scene_Understanding_CVPR_2024_paper.pdf)
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, accurately incorporating language embedding into current 3D scene representations, while maintaining their efficiency and visual quality, presents a significant challenge.
-
-방법 관련 발췌 — In summary, our contributions include: • We introduce a novel quantization scheme that efficiently compresses and integrates semantic features into dense 3D Gaussians, ensuring efficient optimization and rendering on consumer devices wh ...
+Language Embedded 3D Gaussians는 여러 뷰의 언어 특징을 압축해 가우시안 장면에서 자연어로 3차원 위치나 영역을 질의한다. [PDF 1쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Shi_Language_Embedded_3D_Gaussians_for_Open-Vocabulary_Scene_Understanding_CVPR_2024_paper.pdf#page=1) · [PDF 3쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Shi_Language_Embedded_3D_Gaussians_for_Open-Vocabulary_Scene_Understanding_CVPR_2024_paper.pdf#page=3)
 
 ## Problem and Motivation
 
@@ -55,22 +54,14 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** In summary, our contributions include: • We introduce a novel quantization scheme that efficiently compresses and integrates semantic features into dense 3D Gaussians, ensuring efficient ...
-- **p. 2 / 1. Introduction - extractive body cue:** Our extensive experiments demonstrate that our method achieves state-of-the-art quality in both novel view synthesis and open-vocabulary querying tasks, while allowing real-time rendering on consumer-level ...
-- **p. 4 / 3.4. Language Embedded 3D Gaussians - extractive body cue:** To address semantic ambiguity arising from visual disparities across various viewpoints, we introduce a novel mechanism to reduce the spatial frequency of language embeddings through ...
-- **p. 3 / 3. Method - extractive body cue:** In this section, we introduce our training process of Language Embedded 3D Gaussians, including (1) a recap of 3D Gaussian Splatting [20] (Sec.
-- **p. 3 / 3.3. Quantization of Language Features - extractive body cue:** We propose a dedicated quantization scheme to effectively compress the language features extracted from multiple viewpoints, resulting in a more efficient and compact representation of ...
-- **p. 8 / Figure/Table caption - extractive body cue:** Figure 5. Images of various open-vocabulary queries. ner effectively diminishes ambiguity and enhances the mean average precision (mAP) metric. Furthermore, integrating DINO features significantly improves ...
-- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. We present Language Embedded 3D Gaussians, a novel scene representation for open-vocabulary querying. The top row visualizes the original image, novel view synthesis ...
-- **p. 6 / 5.2. Comparisons - extractive body cue:** Our approach outperforms others in ren5338
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 고차원 의미 특징을 양자화해 가우시안별 저장량을 줄이고 여러 뷰에서 일치하지 않는 특징을 완화하는 임베딩 절차를 도입한다. [PDF 3쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Shi_Language_Embedded_3D_Gaussians_for_Open-Vocabulary_Scene_Understanding_CVPR_2024_paper.pdf#page=3) · [PDF 4쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Shi_Language_Embedded_3D_Gaussians_for_Open-Vocabulary_Scene_Understanding_CVPR_2024_paper.pdf#page=4) · [PDF 5쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Shi_Language_Embedded_3D_Gaussians_for_Open-Vocabulary_Scene_Understanding_CVPR_2024_paper.pdf#page=5)
+- 언어 질의의 정확도와 영상 렌더링 품질·속도·메모리를 함께 평가했다. [PDF 6쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Shi_Language_Embedded_3D_Gaussians_for_Open-Vocabulary_Scene_Understanding_CVPR_2024_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Shi_Language_Embedded_3D_Gaussians_for_Open-Vocabulary_Scene_Understanding_CVPR_2024_paper.pdf#page=7) · [PDF 8쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Shi_Language_Embedded_3D_Gaussians_for_Open-Vocabulary_Scene_Understanding_CVPR_2024_paper.pdf#page=8)
 
 ## Evaluation Scope
 
 | Dimension | Body-grounded record | Boundary | Anchor |
 |---|---|---|---|
-| Evaluation type | SYSTEM / EVALUATION SCOPE UNRESOLVED | do not infer unreported downstream behavior | p. 8 (Figure/Table caption), p. 1 (Figure/Table caption) |
+| Evaluation type | BENCHMARK / DATASET | do not infer unreported downstream behavior | p. 8 (Figure/Table caption), p. 1 (Figure/Table caption) |
 | Embodiment/environment | For a simultaneous evaluation of visual and semantic embedding quality, we select six scenes (excluding Stump) from the Mip-NeRF360 dataset [3] and manually annotate segmentation maps for each scene in the evaluation ... | hardware/simulator version and reset protocol | p. 6 (5.1. Basic Setups), p. 6 (5.2. Comparisons) |
 | Dataset/benchmark | We use a diverse range of vocabulary categories to identify objects in scenes, such as visual attribute terms like "green", and subjective adjectives like "cute". | role, split, size and leakage | p. 6 (5.1. Basic Setups), p. 6 (5.2. Comparisons), p. 7 (5.3. Open-vocabulary Query), p. 7 (5.2. Comparisons) |
 | Metric | For the accuracy of language embedding, we measure the mean intersection over union (mIoU), mean pixel accuracy (mPA), mean precision (mP), and mean average precision (mAP) based on our annotations. | definition, denominator, direction and uncertainty | p. 6 (5.1. Basic Setups), p. 8 (Figure/Table caption), p. 1 (Figure/Table caption) |

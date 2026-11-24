@@ -8,7 +8,7 @@
 
 ## Evaluation in One Sentence
 
-PDF body evaluation/result cue (p. 8 (5.3. Downstream Application Evaluation), p. 8 (Figure/Table caption), p. 7 (5.2. Depth Fidelity Evaluation), p. 9 (Figure/Table caption), p. 24 (Figure/Table caption), p. 24 (Figure/Table caption)): By physically grounding noise synthesis, PRISM forces the policy to learn compliant behaviors robust to sensor dropouts (e.g., inferring geometry from boundaries), achieving an average success rate of 92.5% and ...
+Franka Research 3와 Realman RM75에서 여섯 조작 과제를 평가했다. 표 3은 RISE의 과제별 20회 시행 성공 횟수를 세 시드로 집계하고, 표 4는 여섯 과제에서 DP3 91.1%, PPT 92.8%, RISE 92.5%의 평균 성공률을 각각 보고한다. [PDF 7쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/liang26n/liang26n.pdf#page=7) · [PDF 8쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/liang26n/liang26n.pdf#page=8)
 
 ## Evaluation Body Digest
 
@@ -23,22 +23,19 @@ PDF body evaluation/result cue (p. 8 (5.3. Downstream Application Evaluation), p
 
 ## Evaluation Type and Scope
 
-- **Evaluation type:** `EMPIRICAL / REAL-ROBOT OR HARDWARE`.
-- **Target system/task:** 3D scene/object와 robot coordinate frame.
-- **Input boundary:** RGB-D, image set, point cloud, depth와 camera pose.
-- **Output/decision under evaluation:** point map, pose, scene graph, affordance 또는 query result.
-- **Primary target:** geometric accuracy, semantic consistency와 planning/manipulation utility.
+- **Evaluation type:** `EMPIRICAL / SIMULATION / REAL-ROBOT OR HARDWARE`.
+- **평가 대상:** 합성 깊이의 품질과 실물 조작 성공률을 따로 측정하고 여섯 과제에서 DP3·PPT·RISE를 같은 깊이 합성 조건으로 비교했다. [PDF 7쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/liang26n/liang26n.pdf#page=7) · [PDF 8쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/liang26n/liang26n.pdf#page=8)
 - **Detected evaluation headings:** 5. Experiment (p. 6); 5.1. Experimental Settings (p. 6); 5.2. Depth Fidelity Evaluation (p. 7); 5.3. Downstream Application Evaluation (p. 8).
 
 ## Experimental Matrix
 
 | Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
-| 5.3. Downstream Application Evaluation | EMPIRICAL / REAL-ROBOT OR HARDWARE | By physically grounding noise synthesis, PRISM forces the policy to learn compliant behaviors robust to sensor dropouts (e.g., inferring geometry from boundaries), achieving an ... | p. 8 (5.3. Downstream Application Evaluation) |
-| Figure/Table caption | EMPIRICAL / REAL-ROBOT OR HARDWARE | Table 4. Cross-policy Sim2Real generalization. We report the average success rate (%) across all 6 tasks using three different policy architectures. PRISM consistently outperforms ... | p. 8 (Figure/Table caption) |
-| 5.2. Depth Fidelity Evaluation | EMPIRICAL / REAL-ROBOT OR HARDWARE | Specifically, our Hierarchical PositivePrioritized Supervision yields high Invalidation IoU/F1 by overcoming mask sparsity, while the disentangled NRG achieves the lowest valid-region MAE/RMSE, effectively preventing ... | p. 7 (5.2. Depth Fidelity Evaluation) |
-| Figure/Table caption | EMPIRICAL / REAL-ROBOT OR HARDWARE | Figure 7. Semantics Efficacy. Comparing generic vs. geometric priors. 3D VFMs show superior material awareness. Impact of Causal Architecture. We treat the diffusion-based NRG ... | p. 9 (Figure/Table caption) |
-| Figure/Table caption | EMPIRICAL / REAL-ROBOT OR HARDWARE | Table 16. VFM Backbone Comparison in SPR. We compare CNNs, Generic ViTs, and 3D VFMs. Robot SR refers to the average success rate across ... | p. 24 (Figure/Table caption) |
+| 5.3. Downstream Application Evaluation | EMPIRICAL / SIMULATION / REAL-ROBOT OR HARDWARE | By physically grounding noise synthesis, PRISM forces the policy to learn compliant behaviors robust to sensor dropouts (e.g., inferring geometry from boundaries), achieving an ... | p. 8 (5.3. Downstream Application Evaluation) |
+| Figure/Table caption | EMPIRICAL / SIMULATION / REAL-ROBOT OR HARDWARE | Table 4. Cross-policy Sim2Real generalization. We report the average success rate (%) across all 6 tasks using three different policy architectures. PRISM consistently outperforms ... | p. 8 (Figure/Table caption) |
+| 5.2. Depth Fidelity Evaluation | EMPIRICAL / SIMULATION / REAL-ROBOT OR HARDWARE | Specifically, our Hierarchical PositivePrioritized Supervision yields high Invalidation IoU/F1 by overcoming mask sparsity, while the disentangled NRG achieves the lowest valid-region MAE/RMSE, effectively preventing ... | p. 7 (5.2. Depth Fidelity Evaluation) |
+| Figure/Table caption | EMPIRICAL / SIMULATION / REAL-ROBOT OR HARDWARE | Figure 7. Semantics Efficacy. Comparing generic vs. geometric priors. 3D VFMs show superior material awareness. Impact of Causal Architecture. We treat the diffusion-based NRG ... | p. 9 (Figure/Table caption) |
+| Figure/Table caption | EMPIRICAL / SIMULATION / REAL-ROBOT OR HARDWARE | Table 16. VFM Backbone Comparison in SPR. We compare CNNs, Generic ViTs, and 3D VFMs. Robot SR refers to the average success rate across ... | p. 24 (Figure/Table caption) |
 
 ## Dataset / Benchmark Role
 

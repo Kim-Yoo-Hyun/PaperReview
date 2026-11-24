@@ -6,7 +6,7 @@
 
 ## Evaluation in One Sentence
 
-PDF body evaluation/result cue (p. 6 (5. Experiments), p. 6 (5. Experiments), p. 7 (5. Experiments), p. 8 (5. Experiments), p. 7 (5. Experiments), p. 5 (Figure/Table caption)): These baselines are selected to demonstrate that EKS not only achieves reconstruction quality comparable to or exceeding SOTA methods, while enabling editing with significantly fewer artifacts.
+학습 때 다중 해상도 해시 격자의 특징을 커널에 증류한 뒤 추론에서는 격자 없이 복원·국소 편집 품질을 평가했다. [PDF 5쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/zielinski26a/zielinski26a.pdf#page=5) · [PDF 6쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/zielinski26a/zielinski26a.pdf#page=6) · [PDF 7쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/zielinski26a/zielinski26a.pdf#page=7)
 
 ## Evaluation Body Digest
 
@@ -21,22 +21,18 @@ PDF body evaluation/result cue (p. 6 (5. Experiments), p. 6 (5. Experiments), p.
 
 ## Evaluation Type and Scope
 
-- **Evaluation type:** `EMPIRICAL / REAL-ROBOT OR HARDWARE`.
-- **Target system/task:** 3D scene/object와 robot coordinate frame.
-- **Input boundary:** RGB-D, image set, point cloud, depth와 camera pose.
-- **Output/decision under evaluation:** point map, pose, scene graph, affordance 또는 query result.
-- **Primary target:** geometric accuracy, semantic consistency와 planning/manipulation utility.
+- **Evaluation type:** `BENCHMARK / DATASET`.
 - **Detected evaluation headings:** 5. Experiments (p. 6).
 
 ## Experimental Matrix
 
 | Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
-| 5. Experiments | EMPIRICAL / REAL-ROBOT OR HARDWARE | These baselines are selected to demonstrate that EKS not only achieves reconstruction quality comparable to or exceeding SOTA methods, while enabling editing with significantly ... | p. 6 (5. Experiments) |
-| 5. Experiments | EMPIRICAL / REAL-ROBOT OR HARDWARE | For static scene reconstruction, EKS achieves quality comparable to state-of-the-art editable methods, and in some cases provides the best results among methods that support ... | p. 6 (5. Experiments) |
-| 5. Experiments | EMPIRICAL / REAL-ROBOT OR HARDWARE | Quantitative comparisons (PSNR) on a (Chen et al., 2023) benchmark showing that EKS achieves best results in editing task. | p. 7 (5. Experiments) |
-| 5. Experiments | EMPIRICAL / REAL-ROBOT OR HARDWARE | For static reconstruction, all variants achieve comparable performance, with only minor PSNR differences as shown in Table 3. | p. 8 (5. Experiments) |
-| 5. Experiments | EMPIRICAL / REAL-ROBOT OR HARDWARE | As shown in Table 2, our method consistently outperforms prior stateof-the-art approaches, including GaMeS, a purely Gaussian Splatting-based editing method. | p. 7 (5. Experiments) |
+| 5. Experiments | BENCHMARK / DATASET | These baselines are selected to demonstrate that EKS not only achieves reconstruction quality comparable to or exceeding SOTA methods, while enabling editing with significantly ... | p. 6 (5. Experiments) |
+| 5. Experiments | BENCHMARK / DATASET | For static scene reconstruction, EKS achieves quality comparable to state-of-the-art editable methods, and in some cases provides the best results among methods that support ... | p. 6 (5. Experiments) |
+| 5. Experiments | BENCHMARK / DATASET | Quantitative comparisons (PSNR) on a (Chen et al., 2023) benchmark showing that EKS achieves best results in editing task. | p. 7 (5. Experiments) |
+| 5. Experiments | BENCHMARK / DATASET | For static reconstruction, all variants achieve comparable performance, with only minor PSNR differences as shown in Table 3. | p. 8 (5. Experiments) |
+| 5. Experiments | BENCHMARK / DATASET | As shown in Table 2, our method consistently outperforms prior stateof-the-art approaches, including GaMeS, a purely Gaussian Splatting-based editing method. | p. 7 (5. Experiments) |
 
 ## Dataset / Benchmark Role
 

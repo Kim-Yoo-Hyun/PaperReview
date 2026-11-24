@@ -16,12 +16,11 @@
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다. [본문](https://openaccess.thecvf.com/content/ICCV2025/papers/Wulff_Dream-to-Recon_Monocular_3D_Reconstruction_with_Diffusion-Depth_Distillation_from_Single_Images_ICCV_2025_paper.pdf)
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, such 3D ground truth is difficult and expensive to obtain, e.g. by accumulating Lidar scans from a This ICCV paper is the Open Access version, provided by the Computer Vision Foundation.
-
-방법 관련 발췌 — Furthermore, we show that our method has unique advantages when it comes to dynamic scenes.
+Dream-to-Recon은 단일 도로 영상에서 생성한 추가 뷰와 깊이를 감독 신호로 삼아 단안 장면 복원 모델을 학습한다. [PDF 1쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Wulff_Dream-to-Recon_Monocular_3D_Reconstruction_with_Diffusion-Depth_Distillation_from_Single_Images_ICCV_2025_paper.pdf#page=1) · [PDF 3쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Wulff_Dream-to-Recon_Monocular_3D_Reconstruction_with_Diffusion-Depth_Distillation_from_Single_Images_ICCV_2025_paper.pdf#page=3)
 
 ## Problem and Motivation
 
@@ -55,22 +54,14 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** Furthermore, we show that our method has unique advantages when it comes to dynamic scenes.
-- **p. 2 / 1. Introduction - extractive body cue:** Our contributions are: • A specialized view completion model that inpaints and refines synthetic novel views and which can be trained using only a single ...
-- **p. 3 / 3.1. Preliminaries - extractive body cue:** For a given scene, our method receives as input a single image Iin ∈([0, 1]3)Ω, where Ω= {1, . . . , H} × {1, ...
-- **p. 1 / 1. Introduction - extractive body cue:** A dense reconstruction of the environment enables machines to react to their surroundings and to reason about further actions such as path planning.
-- **p. 4 / 3.3. Synthesizing Scene Geometry - extractive body cue:** Throughout our approach, we consider a continuous synthetic occupancy field ΘV(x) : R3 →{0, 1}, which maps every point x ∈R3 in the scene to ...
-- **p. 6 / 4.2. Scene Reconstruction - extractive body cue:** We contend that, despite being slightly outperformed in quantitative metrics by the directly synthesized geometry, the distilled model is more reliable and significantly faster.
-- **p. 8 / 4.3.2. Occlusion detection in novel views - extractive body cue:** A camera rig with eight predefined poses and random rotations achieves the best performance. leverages two-way optical flow between the input and novel views to ...
-- **p. 6 / 4.2. Scene Reconstruction - extractive body cue:** We hypothesize that this lack of improvement stems from the strong depth cues already inherent in multi-view data.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 뷰 합성 확산 모델과 깊이 예측기로 가상 관측의 기하를 만들고, 가려짐을 고려해 이 단서를 복원 모델에 증류한다. [PDF 3쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Wulff_Dream-to-Recon_Monocular_3D_Reconstruction_with_Diffusion-Depth_Distillation_from_Single_Images_ICCV_2025_paper.pdf#page=3) · [PDF 4쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Wulff_Dream-to-Recon_Monocular_3D_Reconstruction_with_Diffusion-Depth_Distillation_from_Single_Images_ICCV_2025_paper.pdf#page=4) · [PDF 5쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Wulff_Dream-to-Recon_Monocular_3D_Reconstruction_with_Diffusion-Depth_Distillation_from_Single_Images_ICCV_2025_paper.pdf#page=5)
+- KITTI-360과 Waymo에서 장면 기하를 평가하고 가상 시점 선택과 가려짐 판정에 따른 차이를 비교했다. [PDF 6쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Wulff_Dream-to-Recon_Monocular_3D_Reconstruction_with_Diffusion-Depth_Distillation_from_Single_Images_ICCV_2025_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Wulff_Dream-to-Recon_Monocular_3D_Reconstruction_with_Diffusion-Depth_Distillation_from_Single_Images_ICCV_2025_paper.pdf#page=7) · [PDF 8쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Wulff_Dream-to-Recon_Monocular_3D_Reconstruction_with_Diffusion-Depth_Distillation_from_Single_Images_ICCV_2025_paper.pdf#page=8)
 
 ## Evaluation Scope
 
 | Dimension | Body-grounded record | Boundary | Anchor |
 |---|---|---|---|
-| Evaluation type | SYSTEM / EVALUATION SCOPE UNRESOLVED | do not infer unreported downstream behavior | p. 6 (4.2. Scene Reconstruction), p. 8 (4.3.2. Occlusion detection in novel views) |
+| Evaluation type | BENCHMARK / DATASET | do not infer unreported downstream behavior | p. 6 (4.2. Scene Reconstruction), p. 8 (4.3.2. Occlusion detection in novel views) |
 | Embodiment/environment | Both datasets contain scenes with complex layouts and possibly dynamic objects. | hardware/simulator version and reset protocol | p. 5 (4.1. Setup), p. 6 (4.2. Scene Reconstruction) |
 | Dataset/benchmark | We test our method on the challenging KITTI-360 [31] and Waymo [54] self-driving datasets. | role, split, size and leakage | p. 5 (4.1. Setup), p. 6 (4.2. Scene Reconstruction), p. 5 (4.1. Setup), p. 6 (4.2. Scene Reconstruction) |
 | Metric | The accuracy and robustness of our occlusion detection strategy directly influence the effectiveness of refining incomplete novel views using VCM. | definition, denominator, direction and uncertainty | p. 7 (4.3.2. Occlusion detection in novel views), p. 6 (4.1. Setup), p. 6 (4.1. Setup) |

@@ -16,12 +16,11 @@
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (14 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다. [본문](https://proceedings.iclr.cc/paper_files/paper/2026/file/9a0ca0a65535cc70ab9c6e71ed830136-Paper-Conference.pdf)
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, this comes at the cost of limitations inherent to the rasterization paradigm.
-
-방법 관련 발췌 — In this work, we propose a high-fidelity and efficient reconstruction pipeline that enables joint camera and LiDAR simulation for AV scenarios.
+SimULi는 하나의 주행 장면에서 카메라 영상과 회전식 LiDAR 관측을 함께 생성해 센서 모델이나 관측 위치를 바꾼 결과를 렌더링한다. [PDF 1쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/9a0ca0a65535cc70ab9c6e71ed830136-Paper-Conference.pdf#page=1) · [PDF 4쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/9a0ca0a65535cc70ab9c6e71ed830136-Paper-Conference.pdf#page=4)
 
 ## Problem and Motivation
 
@@ -55,16 +54,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** In this work, we propose a high-fidelity and efficient reconstruction pipeline that enables joint camera and LiDAR simulation for AV scenarios.
-- **p. 3 / 1 INTRODUCTION - extractive body cue:** We make the following contributions: (1) we extend 3DGUT with LiDAR support and introduce an automated tiling scheme from which we derive optimal tiling parameters ...
-- **p. 5 / 3 METHOD - extractive body cue:** Particle Contributions and Response.
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** With the rise of end-to-end policy models, accurate sensor simulation has become a critical component in the development and evaluation of autonomous vehicle (AV) systems.
-- **p. 4 / 3 METHOD - extractive body cue:** Our goal is to learn a controllable scene representation that simulates camera and LiDAR renderings from novel viewpoints in real-time (Fig.
-- **p. 10 / 4 EXPERIMENTS - extractive body cue:** Not only does anchoring improve NVS compared to camera-only reconstruction (⇀d = 0), but it outperforms the unified strategy across all metrics for all values ...
-- **p. 9 / 4 EXPERIMENTS - extractive body cue:** It outperforms LiDAR-RT (Zhou et al., 2025), which solely targets LiDAR reconstruction, on all metrics except ray drop accuracy (for which LiDAR-RT uses a U-Net ...
-- **p. 9 / 4 EXPERIMENTS - extractive body cue:** Visually, SimULi outperforms all methods by >2dB PSNR, and is best or nearly-best across all other metrics.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 가우시안 표현을 센서별로 분해·연결하고, LiDAR의 주사 패턴에 맞춘 타일 분할과 광선별 후보 제거를 래스터화에 적용한다. [PDF 4쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/9a0ca0a65535cc70ab9c6e71ed830136-Paper-Conference.pdf#page=4) · [PDF 5쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/9a0ca0a65535cc70ab9c6e71ed830136-Paper-Conference.pdf#page=5) · [PDF 6쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/9a0ca0a65535cc70ab9c6e71ed830136-Paper-Conference.pdf#page=6)
+- 정적·동적 장면에서 새 카메라 영상의 오차, LiDAR 깊이 오차와 처리 속도를 비교해 센서별 품질을 평가했다. [PDF 7쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/9a0ca0a65535cc70ab9c6e71ed830136-Paper-Conference.pdf#page=7) · [PDF 8쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/9a0ca0a65535cc70ab9c6e71ed830136-Paper-Conference.pdf#page=8) · [PDF 10쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/9a0ca0a65535cc70ab9c6e71ed830136-Paper-Conference.pdf#page=10)
 
 ## Evaluation Scope
 

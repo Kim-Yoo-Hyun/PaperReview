@@ -16,12 +16,11 @@
 - Code/Project: https://waymo.com/open/
 - Paper type: benchmark_or_dataset
 - Source audit: full-text PDF body checked on 2026-09-03 (9 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다. [본문](https://openaccess.thecvf.com/content_CVPR_2020/papers/Sun_Scalability_in_Perception_for_Autonomous_Driving_Waymo_Open_Dataset_CVPR_2020_paper.pdf)
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — We demonstrate that the differences in these geographies lead to a pronounced domain gap, enabling exciting research opportunities in the field of domain adaptation.
-
-방법 관련 발췌 — In an effort to help align the research community's contributions with real-world selfdriving problems, we introduce a new large-scale, high quality, diverse dataset.
+Waymo Open Dataset 원 논문은 여러 도시에서 수집한 동기화 카메라·LiDAR 시퀀스와 시각 및 점군 인식용 평가 기준을 제시한다. [PDF 1쪽](https://openaccess.thecvf.com/content_CVPR_2020/papers/Sun_Scalability_in_Perception_for_Autonomous_Driving_Waymo_Open_Dataset_CVPR_2020_paper.pdf#page=1) · [PDF 2쪽](https://openaccess.thecvf.com/content_CVPR_2020/papers/Sun_Scalability_in_Perception_for_Autonomous_Driving_Waymo_Open_Dataset_CVPR_2020_paper.pdf#page=2)
 
 ## Problem and Motivation
 
@@ -54,26 +53,12 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 1 / Abstract - extractive body cue:** In an effort to help align the research community's contributions with real-world selfdriving problems, we introduce a new large-scale, high quality, diverse dataset.
-- **p. 1 / 1. Introduction - extractive body cue:** To further accelerate the development of autonomous driving technology, we present the largest and most diverse multimodal autonomous driving dataset to date, comprising of images ...
-- **p. 2 / 1. Introduction - extractive body cue:** We present benchmark results of several state-of-the-art 2D-and 3D object detection and tracking methods on the dataset.
-- **p. 2 / 1. Introduction - extractive body cue:** Our dataset currently consists of 1000 scenes for training and validation, and 150 scenes for testing, where each scene spans 20 s.
-- **p. 8 / 5.4. Dataset Size - extractive body cue:** For methods that work well on small datasets such as PointPillars [16], more data can achieve better results without requiring data augmentation: we trained the ...
-- **p. 7 / 5.2. Baselines for Multi-Object Tracking - extractive body cue:** The resulting Tracktor model achieved a MOTA of 34.8 at LEVEL 1 and 28.3 at LEVEL 2 when tracking vehicles.
-- **p. 7 / 5.1. Baselines for Object Detection - extractive body cue:** To achieve good heading prediction, we used a different rotation loss formulation, using a smooth-L1 loss of the heading residual error, wrapping the result between ...
-- **p. 8 / 5.3. Domain Gap - extractive body cue:** When evaluating on SUB, training on either SF or SUB yield similar APH, while training on all data yields a 7+ APH improvement.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 여러 방향의 카메라와 LiDAR를 보정하고 영상과 점군에 각각 2차원·3차원 상자 및 시간에 걸친 물체 식별자를 부여했다. [PDF 2쪽](https://openaccess.thecvf.com/content_CVPR_2020/papers/Sun_Scalability_in_Perception_for_Autonomous_Driving_Waymo_Open_Dataset_CVPR_2020_paper.pdf#page=2) · [PDF 3쪽](https://openaccess.thecvf.com/content_CVPR_2020/papers/Sun_Scalability_in_Perception_for_Autonomous_Driving_Waymo_Open_Dataset_CVPR_2020_paper.pdf#page=3) · [PDF 4쪽](https://openaccess.thecvf.com/content_CVPR_2020/papers/Sun_Scalability_in_Perception_for_Autonomous_Driving_Waymo_Open_Dataset_CVPR_2020_paper.pdf#page=4)
+- 검출·추적 과제의 지표와 분할을 정하고 지역이 달라질 때의 일반화와 학습 자료 규모의 영향을 비교했다. [PDF 5쪽](https://openaccess.thecvf.com/content_CVPR_2020/papers/Sun_Scalability_in_Perception_for_Autonomous_Driving_Waymo_Open_Dataset_CVPR_2020_paper.pdf#page=5) · [PDF 6쪽](https://openaccess.thecvf.com/content_CVPR_2020/papers/Sun_Scalability_in_Perception_for_Autonomous_Driving_Waymo_Open_Dataset_CVPR_2020_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content_CVPR_2020/papers/Sun_Scalability_in_Perception_for_Autonomous_Driving_Waymo_Open_Dataset_CVPR_2020_paper.pdf#page=7)
 
 ## Evaluation Scope
 
-| Dimension | Body-grounded record | Boundary | Anchor |
-|---|---|---|---|
-| Evaluation type | BENCHMARK / DATASET | do not infer unreported downstream behavior | p. 8 (5.4. Dataset Size), p. 7 (5.2. Baselines for Multi-Object Tracking) |
-| Embodiment/environment | The dataset has scenes selected from both suburban and urban areas, from different times of the day. | hardware/simulator version and reset protocol | p. 5 (3.5. Dataset Analysis), p. 5 (3.5. Dataset Analysis) |
-| Dataset/benchmark | The majority of the scenes in our dataset were recorded in three distinct cities (Table 4), namely San Francisco, Phoenix, Mountain View. | role, split, size and leakage | p. 5 (3.5. Dataset Analysis), p. 5 (3.5. Dataset Analysis), p. 7 (5.3. Domain Gap), p. 7 (5.3. Domain Gap) |
-| Metric | We ignore detections with lower than a 0.2 class score, and set a minimum threshold of 0.5 IoU for a track and a detect to be considered a match. | definition, denominator, direction and uncertainty | p. 7 (5.2. Baselines for Multi-Object Tracking), p. 7 (5.1. Baselines for Object Detection), p. 6 (5. Experiments) |
-| Baseline/ablation | Baseline multi-object tracking metrics for vehicles and pedestrians. reduction of 7.6 when training on SUB and evaluating on SF compared with training on SF and evaluating on SF. | fair input/data/compute/action matching | p. 8 (5.3. Domain Gap), p. 6 (5. Experiments), p. 6 (5.1. Baselines for Object Detection) |
+CVPR 2020 논문의 자료는 20초짜리 주행 장면 1,150개다. 표 1은 차량당 LiDAR 5개·카메라 5개와 별도로 주석한 2차원·3차원 상자 수를 제시한다. [PDF 1쪽](https://openaccess.thecvf.com/content_CVPR_2020/papers/Sun_Scalability_in_Perception_for_Autonomous_Driving_Waymo_Open_Dataset_CVPR_2020_paper.pdf#page=1) · [PDF 2쪽](https://openaccess.thecvf.com/content_CVPR_2020/papers/Sun_Scalability_in_Perception_for_Autonomous_Driving_Waymo_Open_Dataset_CVPR_2020_paper.pdf#page=2)
 
 ## Explicit Limitations and Failure Boundary
 

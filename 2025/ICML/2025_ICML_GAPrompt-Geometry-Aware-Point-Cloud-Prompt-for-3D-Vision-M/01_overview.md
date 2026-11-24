@@ -16,12 +16,11 @@
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (13 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다. [본문](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/ai25a/ai25a.pdf)
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, the transition of these PEFT methods from 2D to 3D vision poses significant challenges due to the inherent sparsity and irregularity of point clouds.
-
-방법 관련 발췌 — In summary, the key contributions of this work are: (1) We propose GAPrompt, a novel geometry-aware prompt learning method tailored for pre-trained 3D vision models.
+GAPrompt는 사전학습한 점군 인코더를 고정하고 물체 형상에 맞춰 이동하는 프롬프트 점으로 새 인식 과제에 적응한다. [PDF 1쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/ai25a/ai25a.pdf#page=1) · [PDF 3쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/ai25a/ai25a.pdf#page=3)
 
 ## Problem and Motivation
 
@@ -55,22 +54,14 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** In summary, the key contributions of this work are: (1) We propose GAPrompt, a novel geometry-aware prompt learning method tailored for pre-trained 3D vision models.
-- **p. 2 / 1. Introduction - extractive body cue:** To this end, we propose a novel Geometry-Aware Point Cloud Prompt (GAPrompt), specifically designed for parameter-efficient fine-tuning of 3D models.
-- **p. 1 / 1. Introduction - extractive body cue:** This advancement has propelled the development of various 3D vision applications, including 3D reconstruction (Xu et al., 2022; Lu et al., 2024) and autonomous driving ...
-- **p. 7 / 4.2. Quantitative Analysis - extractive body cue:** In terms of FLOPs, our approach adds virtually no extra computational burden compared to baselines, significantly outperforming IDPT and Point-PEFT.
-- **p. 7 / 4.2. Quantitative Analysis - extractive body cue:** As shown in Table 1, our method GAPrompt achieves the highest accuracy among all the parameter-efficient fine-tuning methods for 3D vision models.
-- **p. 8 / 4.3. Ablation Study - extractive body cue:** This suggests that the Point Shift Prompter can enhance the geometric features of the point cloud at the input level, thereby contributing to improved performance.
-- **p. 13 / Figure/Table caption - extractive body cue:** Figure 10. Ablation study on different input for downstream head. C.2. Analysis on Adapter Enhancing Factor βa. As shown in Figure 8, we conduct further ...
-- **p. 6 / 4. Experiments - extractive body cue:** We evaluate the performance of our proposed GAPrompt on the point cloud classification task.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 형상 단서로 프롬프트 점의 위치를 조정하고 층 사이에 프롬프트 정보를 전달한다. [PDF 3쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/ai25a/ai25a.pdf#page=3) · [PDF 4쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/ai25a/ai25a.pdf#page=4) · [PDF 5쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/ai25a/ai25a.pdf#page=5)
+- ScanObjectNN 등에서 분류 성능과 갱신 파라미터 수를 함께 비교하고 프롬프트 위치 조정의 기여를 분석했다. [PDF 6쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/ai25a/ai25a.pdf#page=6) · [PDF 7쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/ai25a/ai25a.pdf#page=7)
 
 ## Evaluation Scope
 
 | Dimension | Body-grounded record | Boundary | Anchor |
 |---|---|---|---|
-| Evaluation type | EMPIRICAL / REAL-ROBOT OR HARDWARE | do not infer unreported downstream behavior | p. 7 (4.2. Quantitative Analysis), p. 7 (4.2. Quantitative Analysis) |
+| Evaluation type | BENCHMARK / DATASET | do not infer unreported downstream behavior | p. 7 (4.2. Quantitative Analysis), p. 7 (4.2. Quantitative Analysis) |
 | Embodiment/environment | The ScanObjectNN (Uy et al., 2019) is a highly challenging 3D dataset comprising 15K real-world objects across 15 categories. | hardware/simulator version and reset protocol | p. 6 (4.1. Experimental Settings), p. 8 (4.3. Ablation Study) |
 | Dataset/benchmark | Note that our experiments on dataset ScanObjectNN sample 6 | role, split, size and leakage | p. 6 (4.1. Experimental Settings), p. 8 (4.3. Ablation Study), p. 6 (4.1. Experimental Settings), p. 8 (4.3. Ablation Study) |
 | Metric | Since voting (Liu et al., 2019) is time-consuming, we focus on reporting overall accuracy without it. | definition, denominator, direction and uncertainty | p. 7 (4.1. Experimental Settings), p. 7 (4.2. Quantitative Analysis), p. 8 (4.3. Ablation Study) |

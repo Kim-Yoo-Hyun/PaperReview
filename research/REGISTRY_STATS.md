@@ -130,18 +130,18 @@
 
 | Value | Count |
 |---|---:|
-| EMPIRICAL / REAL-ROBOT OR HARDWARE | 441 |
+| EMPIRICAL / REAL-ROBOT OR HARDWARE | 411 |
 | not_recorded | 286 |
-| EMPIRICAL / SOURCE-REPORTED EVALUATION | 266 |
-| SYSTEM / EVALUATION SCOPE UNRESOLVED | 94 |
+| EMPIRICAL / SOURCE-REPORTED EVALUATION | 267 |
+| BENCHMARK / DATASET | 101 |
+| SYSTEM / EVALUATION SCOPE UNRESOLVED | 85 |
 | EMPIRICAL / SIMULATION | 74 |
-| BENCHMARK / DATASET | 65 |
 | EMPIRICAL / REAL-ROBOT AND SIMULATION | 8 |
 | EMPIRICAL / BENCHMARK OR DATASET | 5 |
+| BENCHMARK / SIMULATION | 4 |
 | BENCHMARK / DATASET AND REAL-ROBOT COMPARISON | 4 |
-| BENCHMARK / SIMULATION | 3 |
+| EMPIRICAL / SIMULATION / REAL-ROBOT OR HARDWARE | 3 |
 | BENCHMARK / DATASET WITH SIMULATION AND REAL-ROBOT COMPARISON | 2 |
-| EMPIRICAL / SIMULATION / REAL-ROBOT OR HARDWARE | 2 |
 | EMPIRICAL / BENCHMARK / REAL-ROBOT OR HARDWARE | 1 |
 | EMPIRICAL / SIMULATION / REAL-ROBOT OR HARDWARE / BENCHMARK | 1 |
 
@@ -149,12 +149,12 @@
 
 | Value | Count |
 |---|---:|
-| real_robot | 459 |
+| real_robot | 430 |
 | not_recorded | 286 |
-| source_reported | 266 |
-| scope_unresolved | 94 |
-| simulation | 90 |
-| benchmark_or_dataset | 81 |
+| source_reported | 267 |
+| benchmark_or_dataset | 118 |
+| simulation | 92 |
+| scope_unresolved | 85 |
 
 ## Evaluation protocol status
 

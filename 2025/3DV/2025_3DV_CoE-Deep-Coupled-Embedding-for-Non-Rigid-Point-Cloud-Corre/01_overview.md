@@ -16,12 +16,11 @@
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (16 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다. [본문](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11125562)
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — (1), this modification greatly reduced the computational complexity, however it still involves difficult manifold optimisation for only approximately solving the original one.
-
-방법 관련 발췌 — In summary, our contributions are: • We propose a novel unsupervised way to learn per-point embeddings directly from raw point clouds under various non-rigid deformations.
+CoE는 비강체 변형이 있는 두 점군을 공통 임베딩 공간으로 옮겨 점별 최근접 이웃으로 조밀한 대응을 구한다. [PDF 1쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11125562#page=1) · [PDF 3쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11125562#page=3)
 
 ## Problem and Motivation
 
@@ -55,16 +54,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** In summary, our contributions are: • We propose a novel unsupervised way to learn per-point embeddings directly from raw point clouds under various non-rigid deformations.
-- **p. 2 / 1. Introduction - extractive body cue:** Inspired by classical geometry processing technique, our method is effective and simple that only requires to train a single network. • In our learned embedding ...
-- **p. 4 / 3. Background and Notation - extractive body cue:** To overcome these issues, we propose to directly learn coupled embeddings without any ground truth correspondences and without any subspace parameterisation.
-- **p. 5 / 4.2. Unsupervised Loss - extractive body cue:** Our unsupervised loss is inspired by the work of classical geometry processing [16, 22] and consists of three terms.
-- **p. 5 / 4.2. Unsupervised Loss - extractive body cue:** To our best knowledge, this enables, for the first time, the practical application
-- **p. 8 / 5.7. Shape Segmentation - extractive body cue:** Extensive experiments showcase that our proposed method achieves superior results in a number of non-rigid matching benchmarks and is promising in other shape analysis challenges, ...
-- **p. 7 / 5.3. Non-isometric Shape Matching - extractive body cue:** Our method outperforms all learning based baselines.
-- **p. 7 / 5.4. Generalisation - extractive body cue:** Remarkably, ours outperforms all baselines including the multimodal meshdependent method SSMSM under this setting.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 형상의 기하를 반영하는 점별 특징을 쌍으로 학습해 원점군에 메시 연결이나 수작업 대응점이 없는 경우를 다룬다. [PDF 3쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11125562#page=3) · [PDF 4쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11125562#page=4) · [PDF 5쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11125562#page=5)
+- 비강체 형상 정합에서 대응 오차를 측정하고 잡음·부분 관측을 넣었을 때의 견고성을 비교했다. [PDF 6쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11125562#page=6) · [PDF 7쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11125562#page=7) · [PDF 8쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11125562#page=8)
 
 ## Evaluation Scope
 

@@ -6,7 +6,7 @@
 
 ## Evaluation in One Sentence
 
-PDF body evaluation/result cue (p. 7 (4.2. Comparison), p. 3 (Figure/Table caption), p. 1 (Figure/Table caption), p. 7 (4.3. Ablation Studies)): 1, SparseGS significantly outperforms previous NeRF-based methods and concurrent works, FSGS and DNGaussian, in both 12-view and 24-view settings.
+관측되지 않은 시점에 정규화를 적용하고 여러 희소 뷰 장면에서 렌더링 품질과 가지치기의 효과를 비교했다. [PDF 5쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11125578#page=5) · [PDF 6쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11125578#page=6) · [PDF 7쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11125578#page=7)
 
 ## Evaluation Body Digest
 
@@ -21,21 +21,17 @@ PDF body evaluation/result cue (p. 7 (4.2. Comparison), p. 3 (Figure/Table capti
 
 ## Evaluation Type and Scope
 
-- **Evaluation type:** `SYSTEM / EVALUATION SCOPE UNRESOLVED`.
-- **Target system/task:** 3D scene/object와 robot coordinate frame.
-- **Input boundary:** RGB-D, image set, point cloud, depth와 camera pose.
-- **Output/decision under evaluation:** point map, pose, scene graph, affordance 또는 query result.
-- **Primary target:** geometric accuracy, semantic consistency와 planning/manipulation utility.
+- **Evaluation type:** `BENCHMARK / DATASET`.
 - **Detected evaluation headings:** 4. Experiments (p. 6); 4.1. Experimental Settings (p. 6).
 
 ## Experimental Matrix
 
 | Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
-| 4.2. Comparison | SYSTEM / EVALUATION SCOPE UNRESOLVED | 1, SparseGS significantly outperforms previous NeRF-based methods and concurrent works, FSGS and DNGaussian, in both 12-view and 24-view settings. | p. 7 (4.2. Comparison) |
-| Figure/Table caption | SYSTEM / EVALUATION SCOPE UNRESOLVED | Figure 2. Our proposed pipeline incorporates depth priors, diffusion constraints, and a floater pruning technique to improve few- shot novel view synthesis performance. During ... | p. 3 (Figure/Table caption) |
-| Figure/Table caption | SYSTEM / EVALUATION SCOPE UNRESOLVED | Figure 1. The quality of 3DGS [12] degrades as the number of input views decreases, particularly in unbounded scenes. SparseGS significantly improves novel view ... | p. 1 (Figure/Table caption) |
-| 4.3. Ablation Studies | SYSTEM / EVALUATION SCOPE UNRESOLVED | We show the improvements by applying this loss to both alpha-blending and softmax-scaling depth. | p. 7 (4.3. Ablation Studies) |
+| 4.2. Comparison | BENCHMARK / DATASET | 1, SparseGS significantly outperforms previous NeRF-based methods and concurrent works, FSGS and DNGaussian, in both 12-view and 24-view settings. | p. 7 (4.2. Comparison) |
+| Figure/Table caption | BENCHMARK / DATASET | Figure 2. Our proposed pipeline incorporates depth priors, diffusion constraints, and a floater pruning technique to improve few- shot novel view synthesis performance. During ... | p. 3 (Figure/Table caption) |
+| Figure/Table caption | BENCHMARK / DATASET | Figure 1. The quality of 3DGS [12] degrades as the number of input views decreases, particularly in unbounded scenes. SparseGS significantly improves novel view ... | p. 1 (Figure/Table caption) |
+| 4.3. Ablation Studies | BENCHMARK / DATASET | We show the improvements by applying this loss to both alpha-blending and softmax-scaling depth. | p. 7 (4.3. Ablation Studies) |
 
 ## Dataset / Benchmark Role
 

@@ -16,12 +16,11 @@
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (17 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다. [본문](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11125632)
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, performance on room-scale reconstruction with data captured by a mobile device is still lacking.
-
-방법 관련 발췌 — We summarize our contributions with the following statements: • We propose a novel regularization strategy for indoor room reconstruction that adaptively filters geometric priors from mobile devices and off-the-shelf monocular estimator ...
+AGS-Mesh는 휴대전화로 촬영한 실내 장면에서 불확실한 깊이·법선 단서를 거른 뒤 가우시안 표현으로부터 표면 메시를 추출한다. [PDF 1쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11125632#page=1) · [PDF 3쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11125632#page=3)
 
 ## Problem and Motivation
 
@@ -55,22 +54,14 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** We summarize our contributions with the following statements: • We propose a novel regularization strategy for indoor room reconstruction that adaptively filters geometric priors from ...
-- **p. 4 / 4. Method - extractive body cue:** Our method consists of two adaptive supervision strategies for Gaussian Splatting-based methods that effectively combine supervision signals from geometric priors obtained from mobile devices and ...
-- **p. 4 / 4. Method - extractive body cue:** Lastly, in Section 4.4, we propose a novel octree-based mesh extraction method that enhances surface quality and detail preservation compared to previous approaches.
-- **p. 2 / 1. Introduction - extractive body cue:** Additionally, we propose an Adaptive Normal Regularization strategy (ANR) to refine normals by mitigating regularization in regions where monocular normal estimators struggle to provide accurate ...
-- **p. 5 / 4.1. Regularization with Depth Normal Consistency - extractive body cue:** Furthermore, we propose an adaptive TSDF and octree-based Marching Cubes meshing strategy enabling the extraction of smoother and more geometrically detailed meshes.
-- **p. 7 / 5.3. Ablation Studies - extractive body cue:** We observe that utilizing noisy depths significantly improves the baseline.
-- **p. 6 / 5.1. 3D Reconstruction Evaluation - extractive body cue:** Our results demonstrate that the novel adaptive depth and normal regularization terms we propose (also showcased in the ablation study Table 3) improve mesh quality ...
-- **p. 6 / 5.1. 3D Reconstruction Evaluation - extractive body cue:** We demonstrate that our method can outperform the traditional volumetric fusion.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 측정과 예측의 일관성에 따라 깊이·법선 감독을 선별해 가우시안의 표면 방향과 위치를 학습한다. [PDF 3쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11125632#page=3) · [PDF 4쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11125632#page=4) · [PDF 5쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11125632#page=5)
+- 장면의 스케일에 적응하는 옥트리 기반 표면 추출을 적용하고 실내 스캔에서 메시의 정확도와 완전성을 비교했다. [PDF 5쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11125632#page=5) · [PDF 6쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11125632#page=6) · [PDF 7쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11125632#page=7)
 
 ## Evaluation Scope
 
 | Dimension | Body-grounded record | Boundary | Anchor |
 |---|---|---|---|
-| Evaluation type | EMPIRICAL / REAL-ROBOT OR HARDWARE | do not infer unreported downstream behavior | p. 7 (5.3. Ablation Studies), p. 6 (5.1. 3D Reconstruction Evaluation) |
+| Evaluation type | BENCHMARK / DATASET | do not infer unreported downstream behavior | p. 7 (5.3. Ablation Studies), p. 6 (5.1. 3D Reconstruction Evaluation) |
 | Embodiment/environment | We focus on real-world indoor scenes captured using a mobile device. | hardware/simulator version and reset protocol | p. 6 (5. Experiments), p. 6 (5. Experiments) |
 | Dataset/benchmark | We demonstrate our method with two Gaussian-based methods DN-Splatter [43] and 2DGS [19] with qualitative visuals of the reconstructed meshes for the "honka" (top) and "coffee room" (bottom) scenes from the MuSHRoom ... | role, split, size and leakage | p. 6 (5. Experiments), p. 6 (5. Experiments), p. 7 (5.2. Novel View Synthesis), p. 7 (5.2. Novel View Synthesis) |
 | Metric | For mesh reconstruction evaluation, we follow the evaluation protocol from [37, 45] and report Accuracy (Acc.), Completion (Comp.), Chamfer-L1 distance (C-L1), Normal Consistency (NC), and F-scores (F1) with a threshold of 5cm. | definition, denominator, direction and uncertainty | p. 6 (5. Experiments), p. 7 (Figure/Table caption), p. 7 (5.3. Ablation Studies) |

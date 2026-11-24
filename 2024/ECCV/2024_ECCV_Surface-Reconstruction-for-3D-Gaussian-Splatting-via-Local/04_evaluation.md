@@ -6,7 +6,7 @@
 
 ## Evaluation in One Sentence
 
-PDF body evaluation/result cue (p. 13 (4 Experiments), p. 13 (4 Experiments), p. 12 (4 Experiments), p. 12 (4 Experiments), p. 11 (4 Experiments), p. 11 (4 Experiments)): While keeping the MLS term with the gradient term in the joint loss (w/o eikonal term), the F-score can be significantly improved thanks to the zero-order approximation of the MLS ...
+이 함수를 근사·정규화하는 신경 암시적 표현을 함께 학습하고, Replica 등에서 추출한 메시와 각 거리 제약의 효과를 비교했다. [PDF 8쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/00274.pdf#page=8) · [PDF 11쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/00274.pdf#page=11) · [PDF 13쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/00274.pdf#page=13)
 
 ## Evaluation Body Digest
 
@@ -21,22 +21,18 @@ PDF body evaluation/result cue (p. 13 (4 Experiments), p. 13 (4 Experiments), p.
 
 ## Evaluation Type and Scope
 
-- **Evaluation type:** `EMPIRICAL / REAL-ROBOT OR HARDWARE`.
-- **Target system/task:** 3D scene/object와 robot coordinate frame.
-- **Input boundary:** RGB-D, image set, point cloud, depth와 camera pose.
-- **Output/decision under evaluation:** point map, pose, scene graph, affordance 또는 query result.
-- **Primary target:** geometric accuracy, semantic consistency와 planning/manipulation utility.
+- **Evaluation type:** `BENCHMARK / DATASET`.
 - **Detected evaluation headings:** 4 Experiments (p. 10).
 
 ## Experimental Matrix
 
 | Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
-| 4 Experiments | EMPIRICAL / REAL-ROBOT OR HARDWARE | While keeping the MLS term with the gradient term in the joint loss (w/o eikonal term), the F-score can be significantly improved thanks to ... | p. 13 (4 Experiments) |
-| 4 Experiments | EMPIRICAL / REAL-ROBOT OR HARDWARE | 3 (b), although L = 1 has achieved good results, the F-score keeps improving as L gets increased. | p. 13 (4 Experiments) |
-| 4 Experiments | EMPIRICAL / REAL-ROBOT OR HARDWARE | It provides very important hints about the Gaussian orientation, which also significantly improves the quality of Poisson reconstruction. | p. 12 (4 Experiments) |
-| 4 Experiments | EMPIRICAL / REAL-ROBOT OR HARDWARE | Our approach significantly improves the quality of the final mesh. single Gaussian assumption, which potentially makes the output mesh rough. | p. 12 (4 Experiments) |
-| 4 Experiments | EMPIRICAL / REAL-ROBOT OR HARDWARE | 1 where our method outperforms both of SuGaR's variants with a clear margin. | p. 11 (4 Experiments) |
+| 4 Experiments | BENCHMARK / DATASET | While keeping the MLS term with the gradient term in the joint loss (w/o eikonal term), the F-score can be significantly improved thanks to ... | p. 13 (4 Experiments) |
+| 4 Experiments | BENCHMARK / DATASET | 3 (b), although L = 1 has achieved good results, the F-score keeps improving as L gets increased. | p. 13 (4 Experiments) |
+| 4 Experiments | BENCHMARK / DATASET | It provides very important hints about the Gaussian orientation, which also significantly improves the quality of Poisson reconstruction. | p. 12 (4 Experiments) |
+| 4 Experiments | BENCHMARK / DATASET | Our approach significantly improves the quality of the final mesh. single Gaussian assumption, which potentially makes the output mesh rough. | p. 12 (4 Experiments) |
+| 4 Experiments | BENCHMARK / DATASET | 1 where our method outperforms both of SuGaR's variants with a clear margin. | p. 11 (4 Experiments) |
 
 ## Dataset / Benchmark Role
 

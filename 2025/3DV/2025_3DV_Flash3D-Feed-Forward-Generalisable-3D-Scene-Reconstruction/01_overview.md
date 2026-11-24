@@ -16,12 +16,11 @@
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (15 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다. [본문](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11125585)
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, in scene reconstruction, there is not such a reservoir of background pixels, which poses a challenge for the method.
-
-방법 관련 발췌 — In this work, we introduce a new, simple, efficient and performant approach for monocular scene reconstruction called
+Flash3D는 한 장의 RGB 영상에서 단안 깊이를 추정하고 여러 층의 가우시안을 배치해 새로운 시점을 렌더링한다. [PDF 1쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11125585#page=1) · [PDF 3쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11125585#page=3)
 
 ## Problem and Motivation
 
@@ -55,16 +54,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 1 / 1. Introduction - extractive body cue:** In this work, we introduce a new, simple, efficient and performant approach for monocular scene reconstruction called
-- **p. 4 / 3.2. Monocular feed-forward multi-Gaussians - extractive body cue:** Hence, we propose to predict a small number K > 1 of different Gaussians for each pixel.
-- **p. 4 / 3.2. Monocular feed-forward multi-Gaussians - extractive body cue:** For generalisation, we propose to build Flash3D on a highquality pre-trained model trained on a large amount of data.
-- **p. 2 / 1. Introduction - extractive body cue:** We show, in particular, that by building on a high-quality depth predictor [49], we can achieve excellent generalisation to new datasets, to the point that ...
-- **p. 5 / 3.2. Monocular feed-forward multi-Gaussians - extractive body cue:** As we show empirically, it is important for the network to be able to model 3D content just outside its field-of-view.
-- **p. 7 / 4.3. In-domain novel view synthesis - extractive body cue:** 2, we observe that we achieve state-of-the-art results on this mature benchmark across all distances between the source and the target.
-- **p. 5 / 4.1. Experiment settings - extractive body cue:** We outperform baselines which were trained on KITTI specifically.
-- **p. 5 / 4.1. Experiment settings - extractive body cue:** With this, Flash3D can be trained to achieve state-of-the-art quality on a single A6000 GPU in 16 hours.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 첫 층은 보이는 표면의 깊이에 고정하고 추가 층은 그 뒤의 가려진 표면을 나타내도록 상대 깊이와 외관을 예측한다. [PDF 3쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11125585#page=3) · [PDF 4쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11125585#page=4)
+- RealEstate10K의 새 시점 합성과 KITTI로의 전이에서 단일 입력 뷰의 예측을 비교하고 추가 가우시안 층의 효과를 평가했다. [PDF 5쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11125585#page=5) · [PDF 6쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11125585#page=6) · [PDF 7쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11125585#page=7)
 
 ## Evaluation Scope
 

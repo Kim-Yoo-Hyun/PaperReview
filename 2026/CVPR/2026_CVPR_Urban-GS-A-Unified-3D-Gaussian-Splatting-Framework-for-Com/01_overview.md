@@ -16,12 +16,11 @@
 - Code/Project: not identified
 - Paper type: system
 - Source audit: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다. [본문](https://openaccess.thecvf.com/content/CVPR2026/papers/Wang_Urban-GS_A_Unified_3D_Gaussian_Splatting_Framework_for_Compact_and_CVPR_2026_paper.pdf)
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — In this work, we propose Urban-GS, a novel framework that resolves the above challenges to deliver compact, high-fidelity unified aerial-to-street reconstruction.
-
-방법 관련 발췌 — This method resolves densification conflicts, enabling joint contributions and enhancing overall reconstruction fidelity. • A Contribution-based Anchor Pruning method that enables reliable and efficient removal of redundant anchors in m ...
+Urban-GS는 항공 영상과 거리 영상에서 시야 범위와 관측 밀도가 크게 다른 도시를 하나의 가우시안 지도로 복원한다. [PDF 1쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Wang_Urban-GS_A_Unified_3D_Gaussian_Splatting_Framework_for_Compact_and_CVPR_2026_paper.pdf#page=1) · [PDF 4쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Wang_Urban-GS_A_Unified_3D_Gaussian_Splatting_Framework_for_Compact_and_CVPR_2026_paper.pdf#page=4)
 
 ## Problem and Motivation
 
@@ -55,16 +54,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** This method resolves densification conflicts, enabling joint contributions and enhancing overall reconstruction fidelity. • A Contribution-based Anchor Pruning method that enables reliable and efficient removal ...
-- **p. 2 / 1. Introduction - extractive body cue:** To summarize, the main contributions of our method are: • An in-depth analysis of the densification conflicts in aerial-street scene reconstruction, and a corresponding Aerial-Street ...
-- **p. 4 / 4. Methods - extractive body cue:** 4.2, we present a contribution-based anchor pruning strategy adopted in Urban-GS to mitigate the excessive memory consumption caused by capturing multi-scale scene details.
-- **p. 5 / 4.2. Contribution-based Anchor Pruning - extractive body cue:** To address this issue, we propose a contributionweighted mask regularization term.
-- **p. 6 / 4.3. Global-to-Local Optimization - extractive body cue:** Efficiency comparison between our method and Horizon-GS [10] on the Horizon-GS dataset. stage.
-- **p. 8 / 5.3. Ablations Study and Analysis - extractive body cue:** 5 and 8 show that additional iterations under uniform sampling yield no significant performance improvement, whereas our proposed strategy achieves a more noticeable gain.
-- **p. 7 / 5.2. Experiment Results and Analysis - extractive body cue:** 2, our method outperforms the performance of all baselines on the HorizonGS dataset.
-- **p. 7 / 5.2. Experiment Results and Analysis - extractive body cue:** The above experimental results quantitatively validate that our method achieves superior reconstruction quality and efficiency.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 두 시점군의 기여를 함께 고려해 가우시안을 늘리고, 렌더링 기여가 작은 앵커를 제거해 저장 공간을 줄인다. [PDF 4쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Wang_Urban-GS_A_Unified_3D_Gaussian_Splatting_Framework_for_Compact_and_CVPR_2026_paper.pdf#page=4) · [PDF 5쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Wang_Urban-GS_A_Unified_3D_Gaussian_Splatting_Framework_for_Compact_and_CVPR_2026_paper.pdf#page=5)
+- 전체 장면을 학습한 뒤 관측이 부족한 구역을 국소적으로 정제하고, 도시 장면에서 뷰 합성 화질과 저장 용량을 비교했다. [PDF 5쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Wang_Urban-GS_A_Unified_3D_Gaussian_Splatting_Framework_for_Compact_and_CVPR_2026_paper.pdf#page=5) · [PDF 7쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Wang_Urban-GS_A_Unified_3D_Gaussian_Splatting_Framework_for_Compact_and_CVPR_2026_paper.pdf#page=7) · [PDF 8쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Wang_Urban-GS_A_Unified_3D_Gaussian_Splatting_Framework_for_Compact_and_CVPR_2026_paper.pdf#page=8)
 
 ## Evaluation Scope
 

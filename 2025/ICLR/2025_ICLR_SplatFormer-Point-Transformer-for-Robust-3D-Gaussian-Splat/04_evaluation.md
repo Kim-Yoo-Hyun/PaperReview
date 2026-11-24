@@ -6,7 +6,7 @@
 
 ## Evaluation in One Sentence
 
-PDF body evaluation/result cue (p. 9 (5 EXPERIMENTS), p. 10 (5 EXPERIMENTS), p. 10 (5 EXPERIMENTS), p. 2 (Figure/Table caption), p. 9 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS)): While our method still faces challenges with high-frequency texture details, it outperforms previous approaches in terms of fidelity and consistency in out-of-distribution views, which is also supported by the clear ...
+합성 및 실제 자료에서 일반 보간 뷰와 분포 밖 카메라 뷰를 구분해 비교하고 다른 데이터셋에 전이되는지도 시험했다. [PDF 7쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/8cbde11e5e271ef9ff67fc9f292e43ed-Paper-Conference.pdf#page=7) · [PDF 8쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/8cbde11e5e271ef9ff67fc9f292e43ed-Paper-Conference.pdf#page=8) · [PDF 9쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/8cbde11e5e271ef9ff67fc9f292e43ed-Paper-Conference.pdf#page=9)
 
 ## Evaluation Body Digest
 
@@ -21,22 +21,18 @@ PDF body evaluation/result cue (p. 9 (5 EXPERIMENTS), p. 10 (5 EXPERIMENTS), p. 
 
 ## Evaluation Type and Scope
 
-- **Evaluation type:** `EMPIRICAL / REAL-ROBOT OR HARDWARE`.
-- **Target system/task:** 3D scene/object와 robot coordinate frame.
-- **Input boundary:** RGB-D, image set, point cloud, depth와 camera pose.
-- **Output/decision under evaluation:** point map, pose, scene graph, affordance 또는 query result.
-- **Primary target:** geometric accuracy, semantic consistency와 planning/manipulation utility.
+- **Evaluation type:** `BENCHMARK / DATASET`.
 - **Detected evaluation headings:** 5 EXPERIMENTS (p. 8); A EVALUATION DATASETS (p. 15); B IMPLEMENTATION DETAILS (p. 15).
 
 ## Experimental Matrix
 
 | Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
-| 5 EXPERIMENTS | EMPIRICAL / REAL-ROBOT OR HARDWARE | While our method still faces challenges with high-frequency texture details, it outperforms previous approaches in terms of fidelity and consistency in out-of-distribution views, which ... | p. 9 (5 EXPERIMENTS) |
-| 5 EXPERIMENTS | EMPIRICAL / REAL-ROBOT OR HARDWARE | 3, while 2D denoising methods improve the original 3DGS, they significantly underperform compared to SplatFormer and fail to recover geometric details. | p. 10 (5 EXPERIMENTS) |
-| 5 EXPERIMENTS | EMPIRICAL / REAL-ROBOT OR HARDWARE | Third, applying our method to refining 2DGS may further improve the OOD-NVS results. | p. 10 (5 EXPERIMENTS) |
-| Figure/Table caption | EMPIRICAL / REAL-ROBOT OR HARDWARE | Figure 1: We investigate the out-of-distribution (OOD) novel view synthesis (NVS), where test views significantly differ from input views. This scenario contrasts with prior ... | p. 2 (Figure/Table caption) |
-| 5 EXPERIMENTS | EMPIRICAL / REAL-ROBOT OR HARDWARE | While 3DGS performance degrades significantly as the viewing angle deviates from the input views, our method provides more robust synthesis for target views in ... | p. 9 (5 EXPERIMENTS) |
+| 5 EXPERIMENTS | BENCHMARK / DATASET | While our method still faces challenges with high-frequency texture details, it outperforms previous approaches in terms of fidelity and consistency in out-of-distribution views, which ... | p. 9 (5 EXPERIMENTS) |
+| 5 EXPERIMENTS | BENCHMARK / DATASET | 3, while 2D denoising methods improve the original 3DGS, they significantly underperform compared to SplatFormer and fail to recover geometric details. | p. 10 (5 EXPERIMENTS) |
+| 5 EXPERIMENTS | BENCHMARK / DATASET | Third, applying our method to refining 2DGS may further improve the OOD-NVS results. | p. 10 (5 EXPERIMENTS) |
+| Figure/Table caption | BENCHMARK / DATASET | Figure 1: We investigate the out-of-distribution (OOD) novel view synthesis (NVS), where test views significantly differ from input views. This scenario contrasts with prior ... | p. 2 (Figure/Table caption) |
+| 5 EXPERIMENTS | BENCHMARK / DATASET | While 3DGS performance degrades significantly as the viewing angle deviates from the input views, our method provides more robust synthesis for target views in ... | p. 9 (5 EXPERIMENTS) |
 
 ## Dataset / Benchmark Role
 

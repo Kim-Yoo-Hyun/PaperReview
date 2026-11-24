@@ -86620,7 +86620,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -86700,17 +86700,30 @@
         "failure_cases": "reported"
       },
       "trial_evidence": [],
-      "benchmark_cues": [],
+      "benchmark_cues": [
+        {
+          "resource_id": "benchmark:dtu",
+          "name": "DTU",
+          "evidence": "cue_only",
+          "source": "2026/CVPR/2026_CVPR_SR3R-Rethinking-Super-Resolution-3D-Reconstruction-With-Fe/04_evaluation.md"
+        }
+      ],
       "metric_cues": [
         {
           "resource_id": "metric:map",
           "name": "mAP",
           "evidence": "cue_only",
           "source": "2026/CVPR/2026_CVPR_SR3R-Rethinking-Super-Resolution-3D-Reconstruction-With-Fe/04_evaluation.md"
+        },
+        {
+          "resource_id": "metric:lpips",
+          "name": "LPIPS",
+          "evidence": "cue_only",
+          "source": "2026/CVPR/2026_CVPR_SR3R-Rethinking-Super-Resolution-3D-Reconstruction-With-Fe/04_evaluation.md"
         }
       ],
       "source_note": "2026/CVPR/2026_CVPR_SR3R-Rethinking-Super-Resolution-3D-Reconstruction-With-Fe/04_evaluation.md",
-      "reviewed_on": "2026-09-04",
+      "reviewed_on": "2026-11-24",
       "basis": "04_evaluation.md body-derived section cues; benchmark and metric links remain cue_only; unresolved role, split, aggregation, and condition are not promoted to verified metadata."
     },
     "reproducibility": {
@@ -86839,7 +86852,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -87504,7 +87517,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -87571,9 +87584,9 @@
     "evaluation_profile": {
       "profile_version": "1.0",
       "status": "structured_note_cues",
-      "type": "SYSTEM / EVALUATION SCOPE UNRESOLVED",
+      "type": "BENCHMARK / DATASET",
       "settings": [
-        "scope_unresolved"
+        "benchmark_or_dataset"
       ],
       "protocol": {
         "dataset_or_benchmark": "reported",
@@ -87600,9 +87613,22 @@
           "source": "2025/ICCV/2025_ICCV_Dream-to-Recon-Monocular-3D-Reconstruction-with-Diffusion/04_evaluation.md"
         }
       ],
-      "metric_cues": [],
+      "metric_cues": [
+        {
+          "resource_id": "metric:map",
+          "name": "mAP",
+          "evidence": "cue_only",
+          "source": "2025/ICCV/2025_ICCV_Dream-to-Recon-Monocular-3D-Reconstruction-with-Diffusion/04_evaluation.md"
+        },
+        {
+          "resource_id": "metric:psnr",
+          "name": "PSNR",
+          "evidence": "cue_only",
+          "source": "2025/ICCV/2025_ICCV_Dream-to-Recon-Monocular-3D-Reconstruction-with-Diffusion/04_evaluation.md"
+        }
+      ],
       "source_note": "2025/ICCV/2025_ICCV_Dream-to-Recon-Monocular-3D-Reconstruction-with-Diffusion/04_evaluation.md",
-      "reviewed_on": "2026-09-04",
+      "reviewed_on": "2026-11-24",
       "basis": "04_evaluation.md body-derived section cues; benchmark and metric links remain cue_only; unresolved role, split, aggregation, and condition are not promoted to verified metadata."
     },
     "reproducibility": {
@@ -87726,7 +87752,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -87791,9 +87817,9 @@
     "evaluation_profile": {
       "profile_version": "1.0",
       "status": "structured_note_cues",
-      "type": "EMPIRICAL / REAL-ROBOT OR HARDWARE",
+      "type": "BENCHMARK / DATASET",
       "settings": [
-        "real_robot"
+        "benchmark_or_dataset"
       ],
       "protocol": {
         "dataset_or_benchmark": "reported",
@@ -87806,7 +87832,14 @@
         "failure_cases": "reported"
       },
       "trial_evidence": [],
-      "benchmark_cues": [],
+      "benchmark_cues": [
+        {
+          "resource_id": "benchmark:scannet",
+          "name": "ScanNet",
+          "evidence": "cue_only",
+          "source": "2025/ICCV/2025_ICCV_FreeSplatter-Pose-free-Gaussian-Splatting-for-Sparse-view/04_evaluation.md"
+        }
+      ],
       "metric_cues": [
         {
           "resource_id": "metric:map",
@@ -87816,7 +87849,7 @@
         }
       ],
       "source_note": "2025/ICCV/2025_ICCV_FreeSplatter-Pose-free-Gaussian-Splatting-for-Sparse-view/04_evaluation.md",
-      "reviewed_on": "2026-09-04",
+      "reviewed_on": "2026-11-24",
       "basis": "04_evaluation.md body-derived section cues; benchmark and metric links remain cue_only; unresolved role, split, aggregation, and condition are not promoted to verified metadata."
     },
     "reproducibility": {
@@ -87939,7 +87972,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -88004,9 +88037,9 @@
     "evaluation_profile": {
       "profile_version": "1.0",
       "status": "structured_note_cues",
-      "type": "EMPIRICAL / REAL-ROBOT OR HARDWARE",
+      "type": "BENCHMARK / DATASET",
       "settings": [
-        "real_robot"
+        "benchmark_or_dataset"
       ],
       "protocol": {
         "dataset_or_benchmark": "reported",
@@ -88019,17 +88052,30 @@
         "failure_cases": "reported"
       },
       "trial_evidence": [],
-      "benchmark_cues": [],
+      "benchmark_cues": [
+        {
+          "resource_id": "benchmark:scannet",
+          "name": "ScanNet",
+          "evidence": "cue_only",
+          "source": "2025/ICCV/2025_ICCV_RayletDF-Raylet-Distance-Fields-for-Generalizable-3D-Surfa/04_evaluation.md"
+        }
+      ],
       "metric_cues": [
         {
           "resource_id": "metric:map",
           "name": "mAP",
           "evidence": "cue_only",
           "source": "2025/ICCV/2025_ICCV_RayletDF-Raylet-Distance-Fields-for-Generalizable-3D-Surfa/04_evaluation.md"
+        },
+        {
+          "resource_id": "metric:chamfer",
+          "name": "Chamfer",
+          "evidence": "cue_only",
+          "source": "2025/ICCV/2025_ICCV_RayletDF-Raylet-Distance-Fields-for-Generalizable-3D-Surfa/04_evaluation.md"
         }
       ],
       "source_note": "2025/ICCV/2025_ICCV_RayletDF-Raylet-Distance-Fields-for-Generalizable-3D-Surfa/04_evaluation.md",
-      "reviewed_on": "2026-09-04",
+      "reviewed_on": "2026-11-24",
       "basis": "04_evaluation.md body-derived section cues; benchmark and metric links remain cue_only; unresolved role, split, aggregation, and condition are not promoted to verified metadata."
     },
     "reproducibility": {
@@ -88359,7 +88405,13 @@
         "kind": "cvf"
       },
       "project": null,
-      "code": null
+      "code": null,
+      "venue_verification": {
+        "url": "https://openaccess.thecvf.com/content/ICCV2025/html/Zhang_Distilling_Diffusion_Models_to_Efficient_3D_LiDAR_Scene_Completion_ICCV_2025_paper.html",
+        "kind": "cvf",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-24"
+      }
     },
     "artifacts": {
       "code_status": "not_identified",
@@ -88388,7 +88440,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -88431,9 +88483,9 @@
         }
       },
       "authors_verification": {
-        "source": "https://openaccess.thecvf.com/content/ICCV2025/html/Zhang_Distilling_Diffusion_Models_to_Efficient_3D_LiDAR_Scene_Completion_ICCV_2025_paper.html",
-        "verified_on": "2026-11-20",
-        "basis": "논문 표제면 또는 출판사 서지에 실린 순서"
+        "source": "https://openaccess.thecvf.com/content/ICCV2025/papers/Zhang_Distilling_Diffusion_Models_to_Efficient_3D_LiDAR_Scene_Completion_ICCV_2025_paper.pdf#page=1",
+        "verified_on": "2026-11-24",
+        "basis": "ICCV 게재본의 아홉 번째 저자 표기는 Perry Pengyun GU다."
       }
     },
     "paper_id": "pr-0375",
@@ -88457,9 +88509,9 @@
     "evaluation_profile": {
       "profile_version": "1.0",
       "status": "structured_note_cues",
-      "type": "SYSTEM / EVALUATION SCOPE UNRESOLVED",
+      "type": "BENCHMARK / DATASET",
       "settings": [
-        "scope_unresolved"
+        "benchmark_or_dataset"
       ],
       "protocol": {
         "dataset_or_benchmark": "reported",
@@ -88474,6 +88526,12 @@
       "trial_evidence": [],
       "benchmark_cues": [
         {
+          "resource_id": "benchmark:kitti",
+          "name": "KITTI",
+          "evidence": "cue_only",
+          "source": "2025/ICCV/2025_ICCV_Distilling-Diffusion-Models-to-Efficient-3D-LiDAR-Scene-Co/04_evaluation.md"
+        },
+        {
           "resource_id": "benchmark:semantickitti",
           "name": "SemanticKITTI",
           "evidence": "cue_only",
@@ -88486,10 +88544,16 @@
           "name": "mAP",
           "evidence": "cue_only",
           "source": "2025/ICCV/2025_ICCV_Distilling-Diffusion-Models-to-Efficient-3D-LiDAR-Scene-Co/04_evaluation.md"
+        },
+        {
+          "resource_id": "metric:chamfer",
+          "name": "Chamfer",
+          "evidence": "cue_only",
+          "source": "2025/ICCV/2025_ICCV_Distilling-Diffusion-Models-to-Efficient-3D-LiDAR-Scene-Co/04_evaluation.md"
         }
       ],
       "source_note": "2025/ICCV/2025_ICCV_Distilling-Diffusion-Models-to-Efficient-3D-LiDAR-Scene-Co/04_evaluation.md",
-      "reviewed_on": "2026-09-04",
+      "reviewed_on": "2026-11-24",
       "basis": "04_evaluation.md body-derived section cues; benchmark and metric links remain cue_only; unresolved role, split, aggregation, and condition are not promoted to verified metadata."
     },
     "reproducibility": {
@@ -88546,7 +88610,7 @@
       "Haoran Xu",
       "Tianrun Chen",
       "AnYang Wei",
-      "Perry Pengyun Gu",
+      "Perry Pengyun GU",
       "Lingyun Sun"
     ]
   },
@@ -89075,7 +89139,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -89515,7 +89579,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -89580,9 +89644,9 @@
     "evaluation_profile": {
       "profile_version": "1.0",
       "status": "structured_note_cues",
-      "type": "EMPIRICAL / REAL-ROBOT OR HARDWARE",
+      "type": "BENCHMARK / DATASET",
       "settings": [
-        "real_robot"
+        "benchmark_or_dataset"
       ],
       "protocol": {
         "dataset_or_benchmark": "reported",
@@ -89595,17 +89659,48 @@
         "failure_cases": "reported"
       },
       "trial_evidence": [],
-      "benchmark_cues": [],
+      "benchmark_cues": [
+        {
+          "resource_id": "benchmark:dtu",
+          "name": "DTU",
+          "evidence": "cue_only",
+          "source": "2025/ICCV/2025_ICCV_MGSR-2D-3D-Mutual-boosted-Gaussian-Splatting-for-High-fide/04_evaluation.md"
+        }
+      ],
       "metric_cues": [
         {
           "resource_id": "metric:map",
           "name": "mAP",
           "evidence": "cue_only",
           "source": "2025/ICCV/2025_ICCV_MGSR-2D-3D-Mutual-boosted-Gaussian-Splatting-for-High-fide/04_evaluation.md"
+        },
+        {
+          "resource_id": "metric:sr",
+          "name": "SR",
+          "evidence": "cue_only",
+          "source": "2025/ICCV/2025_ICCV_MGSR-2D-3D-Mutual-boosted-Gaussian-Splatting-for-High-fide/04_evaluation.md"
+        },
+        {
+          "resource_id": "metric:psnr",
+          "name": "PSNR",
+          "evidence": "cue_only",
+          "source": "2025/ICCV/2025_ICCV_MGSR-2D-3D-Mutual-boosted-Gaussian-Splatting-for-High-fide/04_evaluation.md"
+        },
+        {
+          "resource_id": "metric:ssim",
+          "name": "SSIM",
+          "evidence": "cue_only",
+          "source": "2025/ICCV/2025_ICCV_MGSR-2D-3D-Mutual-boosted-Gaussian-Splatting-for-High-fide/04_evaluation.md"
+        },
+        {
+          "resource_id": "metric:chamfer",
+          "name": "Chamfer",
+          "evidence": "cue_only",
+          "source": "2025/ICCV/2025_ICCV_MGSR-2D-3D-Mutual-boosted-Gaussian-Splatting-for-High-fide/04_evaluation.md"
         }
       ],
       "source_note": "2025/ICCV/2025_ICCV_MGSR-2D-3D-Mutual-boosted-Gaussian-Splatting-for-High-fide/04_evaluation.md",
-      "reviewed_on": "2026-09-04",
+      "reviewed_on": "2026-11-24",
       "basis": "04_evaluation.md body-derived section cues; benchmark and metric links remain cue_only; unresolved role, split, aggregation, and condition are not promoted to verified metadata."
     },
     "reproducibility": {
@@ -89948,7 +90043,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -90013,9 +90108,9 @@
     "evaluation_profile": {
       "profile_version": "1.0",
       "status": "structured_note_cues",
-      "type": "EMPIRICAL / REAL-ROBOT OR HARDWARE",
+      "type": "BENCHMARK / DATASET",
       "settings": [
-        "real_robot"
+        "benchmark_or_dataset"
       ],
       "protocol": {
         "dataset_or_benchmark": "reported",
@@ -90035,10 +90130,22 @@
           "name": "mAP",
           "evidence": "cue_only",
           "source": "2025/ICCV/2025_ICCV_DeGauss-Dynamic-Static-Decomposition-with-Gaussian-Splatti/04_evaluation.md"
+        },
+        {
+          "resource_id": "metric:ssim",
+          "name": "SSIM",
+          "evidence": "cue_only",
+          "source": "2025/ICCV/2025_ICCV_DeGauss-Dynamic-Static-Decomposition-with-Gaussian-Splatti/04_evaluation.md"
+        },
+        {
+          "resource_id": "metric:lpips",
+          "name": "LPIPS",
+          "evidence": "cue_only",
+          "source": "2025/ICCV/2025_ICCV_DeGauss-Dynamic-Static-Decomposition-with-Gaussian-Splatti/04_evaluation.md"
         }
       ],
       "source_note": "2025/ICCV/2025_ICCV_DeGauss-Dynamic-Static-Decomposition-with-Gaussian-Splatti/04_evaluation.md",
-      "reviewed_on": "2026-09-04",
+      "reviewed_on": "2026-11-24",
       "basis": "04_evaluation.md body-derived section cues; benchmark and metric links remain cue_only; unresolved role, split, aggregation, and condition are not promoted to verified metadata."
     },
     "reproducibility": {
@@ -90376,7 +90483,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -90588,7 +90695,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -90655,9 +90762,9 @@
     "evaluation_profile": {
       "profile_version": "1.0",
       "status": "structured_note_cues",
-      "type": "EMPIRICAL / REAL-ROBOT OR HARDWARE",
+      "type": "BENCHMARK / DATASET",
       "settings": [
-        "real_robot"
+        "benchmark_or_dataset"
       ],
       "protocol": {
         "dataset_or_benchmark": "reported",
@@ -90670,10 +90777,36 @@
         "failure_cases": "reported"
       },
       "trial_evidence": [],
-      "benchmark_cues": [],
-      "metric_cues": [],
+      "benchmark_cues": [
+        {
+          "resource_id": "benchmark:realestate10k",
+          "name": "RealEstate10K",
+          "evidence": "cue_only",
+          "source": "2025/ICCV/2025_ICCV_A-Lesson-in-Splats-Teacher-Guided-Diffusion-for-3D-Gaussia/04_evaluation.md"
+        }
+      ],
+      "metric_cues": [
+        {
+          "resource_id": "metric:psnr",
+          "name": "PSNR",
+          "evidence": "cue_only",
+          "source": "2025/ICCV/2025_ICCV_A-Lesson-in-Splats-Teacher-Guided-Diffusion-for-3D-Gaussia/04_evaluation.md"
+        },
+        {
+          "resource_id": "metric:ssim",
+          "name": "SSIM",
+          "evidence": "cue_only",
+          "source": "2025/ICCV/2025_ICCV_A-Lesson-in-Splats-Teacher-Guided-Diffusion-for-3D-Gaussia/04_evaluation.md"
+        },
+        {
+          "resource_id": "metric:lpips",
+          "name": "LPIPS",
+          "evidence": "cue_only",
+          "source": "2025/ICCV/2025_ICCV_A-Lesson-in-Splats-Teacher-Guided-Diffusion-for-3D-Gaussia/04_evaluation.md"
+        }
+      ],
       "source_note": "2025/ICCV/2025_ICCV_A-Lesson-in-Splats-Teacher-Guided-Diffusion-for-3D-Gaussia/04_evaluation.md",
-      "reviewed_on": "2026-09-04",
+      "reviewed_on": "2026-11-24",
       "basis": "04_evaluation.md body-derived section cues; benchmark and metric links remain cue_only; unresolved role, split, aggregation, and condition are not promoted to verified metadata."
     },
     "reproducibility": {
@@ -91020,7 +91153,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -91085,9 +91218,9 @@
     "evaluation_profile": {
       "profile_version": "1.0",
       "status": "structured_note_cues",
-      "type": "EMPIRICAL / REAL-ROBOT OR HARDWARE",
+      "type": "BENCHMARK / DATASET",
       "settings": [
-        "real_robot"
+        "benchmark_or_dataset"
       ],
       "protocol": {
         "dataset_or_benchmark": "reported",
@@ -91107,10 +91240,22 @@
           "name": "mAP",
           "evidence": "cue_only",
           "source": "2025/ICCV/2025_ICCV_NeRF-Is-a-Valuable-Assistant-for-3D-Gaussian-Splatting/04_evaluation.md"
+        },
+        {
+          "resource_id": "metric:psnr",
+          "name": "PSNR",
+          "evidence": "cue_only",
+          "source": "2025/ICCV/2025_ICCV_NeRF-Is-a-Valuable-Assistant-for-3D-Gaussian-Splatting/04_evaluation.md"
+        },
+        {
+          "resource_id": "metric:ssim",
+          "name": "SSIM",
+          "evidence": "cue_only",
+          "source": "2025/ICCV/2025_ICCV_NeRF-Is-a-Valuable-Assistant-for-3D-Gaussian-Splatting/04_evaluation.md"
         }
       ],
       "source_note": "2025/ICCV/2025_ICCV_NeRF-Is-a-Valuable-Assistant-for-3D-Gaussian-Splatting/04_evaluation.md",
-      "reviewed_on": "2026-09-04",
+      "reviewed_on": "2026-11-24",
       "basis": "04_evaluation.md body-derived section cues; benchmark and metric links remain cue_only; unresolved role, split, aggregation, and condition are not promoted to verified metadata."
     },
     "reproducibility": {
@@ -91238,7 +91383,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -91303,9 +91448,9 @@
     "evaluation_profile": {
       "profile_version": "1.0",
       "status": "structured_note_cues",
-      "type": "EMPIRICAL / REAL-ROBOT OR HARDWARE",
+      "type": "BENCHMARK / DATASET",
       "settings": [
-        "real_robot"
+        "benchmark_or_dataset"
       ],
       "protocol": {
         "dataset_or_benchmark": "reported",
@@ -91327,6 +91472,18 @@
           "source": "2025/ICCV/2025_ICCV_Liberated-GS-3D-Gaussian-Splatting-Independent-from-SfM-Po/04_evaluation.md"
         },
         {
+          "resource_id": "metric:psnr",
+          "name": "PSNR",
+          "evidence": "cue_only",
+          "source": "2025/ICCV/2025_ICCV_Liberated-GS-3D-Gaussian-Splatting-Independent-from-SfM-Po/04_evaluation.md"
+        },
+        {
+          "resource_id": "metric:ssim",
+          "name": "SSIM",
+          "evidence": "cue_only",
+          "source": "2025/ICCV/2025_ICCV_Liberated-GS-3D-Gaussian-Splatting-Independent-from-SfM-Po/04_evaluation.md"
+        },
+        {
           "resource_id": "metric:lpips",
           "name": "LPIPS",
           "evidence": "cue_only",
@@ -91334,7 +91491,7 @@
         }
       ],
       "source_note": "2025/ICCV/2025_ICCV_Liberated-GS-3D-Gaussian-Splatting-Independent-from-SfM-Po/04_evaluation.md",
-      "reviewed_on": "2026-09-04",
+      "reviewed_on": "2026-11-24",
       "basis": "04_evaluation.md body-derived section cues; benchmark and metric links remain cue_only; unresolved role, split, aggregation, and condition are not promoted to verified metadata."
     },
     "reproducibility": {
@@ -91459,7 +91616,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -91666,7 +91823,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -91733,9 +91890,9 @@
     "evaluation_profile": {
       "profile_version": "1.0",
       "status": "structured_note_cues",
-      "type": "EMPIRICAL / REAL-ROBOT OR HARDWARE",
+      "type": "BENCHMARK / DATASET",
       "settings": [
-        "real_robot"
+        "benchmark_or_dataset"
       ],
       "protocol": {
         "dataset_or_benchmark": "reported",
@@ -91749,9 +91906,22 @@
       },
       "trial_evidence": [],
       "benchmark_cues": [],
-      "metric_cues": [],
+      "metric_cues": [
+        {
+          "resource_id": "metric:f1",
+          "name": "F1",
+          "evidence": "cue_only",
+          "source": "2025/ICCV/2025_ICCV_Tree-Skeletonization-from-3D-Point-Clouds-by-Denoising-Dif/04_evaluation.md"
+        },
+        {
+          "resource_id": "metric:chamfer",
+          "name": "Chamfer",
+          "evidence": "cue_only",
+          "source": "2025/ICCV/2025_ICCV_Tree-Skeletonization-from-3D-Point-Clouds-by-Denoising-Dif/04_evaluation.md"
+        }
+      ],
       "source_note": "2025/ICCV/2025_ICCV_Tree-Skeletonization-from-3D-Point-Clouds-by-Denoising-Dif/04_evaluation.md",
-      "reviewed_on": "2026-09-04",
+      "reviewed_on": "2026-11-24",
       "basis": "04_evaluation.md body-derived section cues; benchmark and metric links remain cue_only; unresolved role, split, aggregation, and condition are not promoted to verified metadata."
     },
     "reproducibility": {
@@ -91880,7 +92050,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -91948,9 +92118,9 @@
     "evaluation_profile": {
       "profile_version": "1.0",
       "status": "structured_note_cues",
-      "type": "EMPIRICAL / REAL-ROBOT OR HARDWARE",
+      "type": "EMPIRICAL / SOURCE-REPORTED EVALUATION",
       "settings": [
-        "real_robot"
+        "source_reported"
       ],
       "protocol": {
         "dataset_or_benchmark": "reported",
@@ -91973,7 +92143,7 @@
       ],
       "metric_cues": [],
       "source_note": "2025/ICCV/2025_ICCV_VideoRFSplat-Direct-Scene-Level-Text-to-3D-Gaussian-Splatt/04_evaluation.md",
-      "reviewed_on": "2026-09-04",
+      "reviewed_on": "2026-11-24",
       "basis": "04_evaluation.md body-derived section cues; benchmark and metric links remain cue_only; unresolved role, split, aggregation, and condition are not promoted to verified metadata."
     },
     "reproducibility": {
@@ -92099,7 +92269,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -92166,9 +92336,9 @@
     "evaluation_profile": {
       "profile_version": "1.0",
       "status": "structured_note_cues",
-      "type": "SYSTEM / EVALUATION SCOPE UNRESOLVED",
+      "type": "BENCHMARK / DATASET",
       "settings": [
-        "scope_unresolved"
+        "benchmark_or_dataset"
       ],
       "protocol": {
         "dataset_or_benchmark": "reported",
@@ -92184,7 +92354,7 @@
       "benchmark_cues": [],
       "metric_cues": [],
       "source_note": "2025/ICCV/2025_ICCV_Repurposing-2D-Diffusion-Models-with-Gaussian-Atlas-for-3D/04_evaluation.md",
-      "reviewed_on": "2026-09-04",
+      "reviewed_on": "2026-11-24",
       "basis": "04_evaluation.md body-derived section cues; benchmark and metric links remain cue_only; unresolved role, split, aggregation, and condition are not promoted to verified metadata."
     },
     "reproducibility": {
@@ -92311,7 +92481,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -92525,7 +92695,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -92732,7 +92902,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -92966,7 +93136,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -93033,9 +93203,9 @@
     "evaluation_profile": {
       "profile_version": "1.0",
       "status": "structured_note_cues",
-      "type": "EMPIRICAL / REAL-ROBOT OR HARDWARE",
+      "type": "BENCHMARK / DATASET",
       "settings": [
-        "real_robot"
+        "benchmark_or_dataset"
       ],
       "protocol": {
         "dataset_or_benchmark": "reported",
@@ -93049,9 +93219,16 @@
       },
       "trial_evidence": [],
       "benchmark_cues": [],
-      "metric_cues": [],
+      "metric_cues": [
+        {
+          "resource_id": "metric:chamfer",
+          "name": "Chamfer",
+          "evidence": "cue_only",
+          "source": "2025/WACV/2025_WACV_Test-Time-Adaptation-of-3D-Point-Clouds-via-Denoising-Diff/04_evaluation.md"
+        }
+      ],
       "source_note": "2025/WACV/2025_WACV_Test-Time-Adaptation-of-3D-Point-Clouds-via-Denoising-Diff/04_evaluation.md",
-      "reviewed_on": "2026-09-04",
+      "reviewed_on": "2026-11-24",
       "basis": "04_evaluation.md body-derived section cues; benchmark and metric links remain cue_only; unresolved role, split, aggregation, and condition are not promoted to verified metadata."
     },
     "reproducibility": {
@@ -93182,7 +93359,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -93403,7 +93580,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -93627,7 +93804,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -93707,17 +93884,42 @@
         "failure_cases": "reported"
       },
       "trial_evidence": [],
-      "benchmark_cues": [],
+      "benchmark_cues": [
+        {
+          "resource_id": "benchmark:realestate10k",
+          "name": "RealEstate10K",
+          "evidence": "cue_only",
+          "source": "2024/ECCV/2024_ECCV_GS-LRM-Large-Reconstruction-Model-for-3D-Gaussian-Splattin/04_evaluation.md"
+        }
+      ],
       "metric_cues": [
         {
           "resource_id": "metric:map",
           "name": "mAP",
           "evidence": "cue_only",
           "source": "2024/ECCV/2024_ECCV_GS-LRM-Large-Reconstruction-Model-for-3D-Gaussian-Splattin/04_evaluation.md"
+        },
+        {
+          "resource_id": "metric:psnr",
+          "name": "PSNR",
+          "evidence": "cue_only",
+          "source": "2024/ECCV/2024_ECCV_GS-LRM-Large-Reconstruction-Model-for-3D-Gaussian-Splattin/04_evaluation.md"
+        },
+        {
+          "resource_id": "metric:ssim",
+          "name": "SSIM",
+          "evidence": "cue_only",
+          "source": "2024/ECCV/2024_ECCV_GS-LRM-Large-Reconstruction-Model-for-3D-Gaussian-Splattin/04_evaluation.md"
+        },
+        {
+          "resource_id": "metric:lpips",
+          "name": "LPIPS",
+          "evidence": "cue_only",
+          "source": "2024/ECCV/2024_ECCV_GS-LRM-Large-Reconstruction-Model-for-3D-Gaussian-Splattin/04_evaluation.md"
         }
       ],
       "source_note": "2024/ECCV/2024_ECCV_GS-LRM-Large-Reconstruction-Model-for-3D-Gaussian-Splattin/04_evaluation.md",
-      "reviewed_on": "2026-09-04",
+      "reviewed_on": "2026-11-24",
       "basis": "04_evaluation.md body-derived section cues; benchmark and metric links remain cue_only; unresolved role, split, aggregation, and condition are not promoted to verified metadata."
     },
     "reproducibility": {
@@ -93843,7 +94045,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -94517,7 +94719,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -94582,9 +94784,9 @@
     "evaluation_profile": {
       "profile_version": "1.0",
       "status": "structured_note_cues",
-      "type": "SYSTEM / EVALUATION SCOPE UNRESOLVED",
+      "type": "BENCHMARK / DATASET",
       "settings": [
-        "scope_unresolved"
+        "benchmark_or_dataset"
       ],
       "protocol": {
         "dataset_or_benchmark": "reported",
@@ -94597,23 +94799,30 @@
         "failure_cases": "reported"
       },
       "trial_evidence": [],
-      "benchmark_cues": [],
+      "benchmark_cues": [
+        {
+          "resource_id": "benchmark:replica",
+          "name": "Replica",
+          "evidence": "cue_only",
+          "source": "2024/ECCV/2024_ECCV_GeoGaussian-Geometry-aware-Gaussian-Splatting-for-Scene-Re/04_evaluation.md"
+        },
+        {
+          "resource_id": "benchmark:tum-rgb-d",
+          "name": "TUM RGB-D",
+          "evidence": "cue_only",
+          "source": "2024/ECCV/2024_ECCV_GeoGaussian-Geometry-aware-Gaussian-Splatting-for-Scene-Re/04_evaluation.md"
+        }
+      ],
       "metric_cues": [
         {
           "resource_id": "metric:map",
           "name": "mAP",
           "evidence": "cue_only",
           "source": "2024/ECCV/2024_ECCV_GeoGaussian-Geometry-aware-Gaussian-Splatting-for-Scene-Re/04_evaluation.md"
-        },
-        {
-          "resource_id": "metric:lpips",
-          "name": "LPIPS",
-          "evidence": "cue_only",
-          "source": "2024/ECCV/2024_ECCV_GeoGaussian-Geometry-aware-Gaussian-Splatting-for-Scene-Re/04_evaluation.md"
         }
       ],
       "source_note": "2024/ECCV/2024_ECCV_GeoGaussian-Geometry-aware-Gaussian-Splatting-for-Scene-Re/04_evaluation.md",
-      "reviewed_on": "2026-09-04",
+      "reviewed_on": "2026-11-24",
       "basis": "04_evaluation.md body-derived section cues; benchmark and metric links remain cue_only; unresolved role, split, aggregation, and condition are not promoted to verified metadata."
     },
     "reproducibility": {
@@ -94953,7 +95162,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -95167,7 +95376,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -95232,9 +95441,9 @@
     "evaluation_profile": {
       "profile_version": "1.0",
       "status": "structured_note_cues",
-      "type": "EMPIRICAL / REAL-ROBOT OR HARDWARE",
+      "type": "BENCHMARK / DATASET",
       "settings": [
-        "real_robot"
+        "benchmark_or_dataset"
       ],
       "protocol": {
         "dataset_or_benchmark": "reported",
@@ -95251,6 +95460,12 @@
         {
           "resource_id": "benchmark:scannet",
           "name": "ScanNet",
+          "evidence": "cue_only",
+          "source": "2024/ECCV/2024_ECCV_Surface-Reconstruction-for-3D-Gaussian-Splatting-via-Local/04_evaluation.md"
+        },
+        {
+          "resource_id": "benchmark:replica",
+          "name": "Replica",
           "evidence": "cue_only",
           "source": "2024/ECCV/2024_ECCV_Surface-Reconstruction-for-3D-Gaussian-Splatting-via-Local/04_evaluation.md"
         }
@@ -95276,7 +95491,7 @@
         }
       ],
       "source_note": "2024/ECCV/2024_ECCV_Surface-Reconstruction-for-3D-Gaussian-Splatting-via-Local/04_evaluation.md",
-      "reviewed_on": "2026-09-04",
+      "reviewed_on": "2026-11-24",
       "basis": "04_evaluation.md body-derived section cues; benchmark and metric links remain cue_only; unresolved role, split, aggregation, and condition are not promoted to verified metadata."
     },
     "reproducibility": {
@@ -95328,6 +95543,9 @@
       "Qianyi Wu",
       "Jianmin Zheng",
       "Jianfei Cai"
+    ],
+    "aliases": [
+      "Surface Reconstruction from 3D Gaussian Splatting via Local Structural Hints"
     ]
   },
   {
@@ -95397,7 +95615,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -95863,7 +96081,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -96089,7 +96307,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -96154,9 +96372,9 @@
     "evaluation_profile": {
       "profile_version": "1.0",
       "status": "structured_note_cues",
-      "type": "EMPIRICAL / REAL-ROBOT OR HARDWARE",
+      "type": "BENCHMARK / DATASET",
       "settings": [
-        "real_robot"
+        "benchmark_or_dataset"
       ],
       "protocol": {
         "dataset_or_benchmark": "reported",
@@ -96176,10 +96394,28 @@
           "name": "mAP",
           "evidence": "cue_only",
           "source": "2025/ICLR/2025_ICLR_SplatFormer-Point-Transformer-for-Robust-3D-Gaussian-Splat/04_evaluation.md"
+        },
+        {
+          "resource_id": "metric:psnr",
+          "name": "PSNR",
+          "evidence": "cue_only",
+          "source": "2025/ICLR/2025_ICLR_SplatFormer-Point-Transformer-for-Robust-3D-Gaussian-Splat/04_evaluation.md"
+        },
+        {
+          "resource_id": "metric:ssim",
+          "name": "SSIM",
+          "evidence": "cue_only",
+          "source": "2025/ICLR/2025_ICLR_SplatFormer-Point-Transformer-for-Robust-3D-Gaussian-Splat/04_evaluation.md"
+        },
+        {
+          "resource_id": "metric:lpips",
+          "name": "LPIPS",
+          "evidence": "cue_only",
+          "source": "2025/ICLR/2025_ICLR_SplatFormer-Point-Transformer-for-Robust-3D-Gaussian-Splat/04_evaluation.md"
         }
       ],
       "source_note": "2025/ICLR/2025_ICLR_SplatFormer-Point-Transformer-for-Robust-3D-Gaussian-Splat/04_evaluation.md",
-      "reviewed_on": "2026-09-04",
+      "reviewed_on": "2026-11-24",
       "basis": "04_evaluation.md body-derived section cues; benchmark and metric links remain cue_only; unresolved role, split, aggregation, and condition are not promoted to verified metadata."
     },
     "reproducibility": {
@@ -96314,7 +96550,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -96539,7 +96775,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -96737,6 +96973,12 @@
         "kind": "openreview",
         "scope": "paper_specific",
         "verified_on": "2026-07-02"
+      },
+      "venue_verification": {
+        "url": "https://proceedings.iclr.cc/paper_files/paper/2025/hash/804f1fac094d7b751410b50066da3a63-Abstract-Conference.html",
+        "kind": "official_paper",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-24"
       }
     },
     "artifacts": {
@@ -96766,7 +97008,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -96809,9 +97051,9 @@
         }
       },
       "authors_verification": {
-        "source": "https://proceedings.iclr.cc/paper_files/paper/2025/hash/804f1fac094d7b751410b50066da3a63-Abstract-Conference.html",
-        "verified_on": "2026-11-20",
-        "basis": "논문 표제면 또는 출판사 서지에 실린 순서"
+        "source": "https://proceedings.iclr.cc/paper_files/paper/2025/file/804f1fac094d7b751410b50066da3a63-Paper-Conference.pdf#page=1",
+        "verified_on": "2026-11-24",
+        "basis": "ICLR 게재본과 대조해 마지막 저자의 이름을 Gim Hee Lee로 풀어 썼다."
       }
     },
     "paper_id": "pr-0413",
@@ -96914,7 +97156,7 @@
       "Tianxin Huang",
       "Zhiwen Yan",
       "Yuyang Zhao",
-      "Gim H Lee"
+      "Gim Hee Lee"
     ]
   },
   {
@@ -96994,7 +97236,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -97192,6 +97434,12 @@
         "kind": "openreview",
         "scope": "paper_specific",
         "verified_on": "2026-07-02"
+      },
+      "venue_verification": {
+        "url": "https://proceedings.iclr.cc/paper_files/paper/2025/hash/6518f9339196e172fa0ceef48a85543a-Abstract-Conference.html",
+        "kind": "official_paper",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-24"
       }
     },
     "artifacts": {
@@ -97221,7 +97469,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -97264,9 +97512,9 @@
         }
       },
       "authors_verification": {
-        "source": "https://proceedings.iclr.cc/paper_files/paper/2025/hash/6518f9339196e172fa0ceef48a85543a-Abstract-Conference.html",
-        "verified_on": "2026-11-20",
-        "basis": "논문 표제면 또는 출판사 서지에 실린 순서"
+        "source": "https://proceedings.iclr.cc/paper_files/paper/2025/file/6518f9339196e172fa0ceef48a85543a-Paper-Conference.pdf#page=1",
+        "verified_on": "2026-11-24",
+        "basis": "ICLR 게재본 표제면에 인쇄된 마지막 저자 Yadong Mu의 대소문자를 반영했다."
       }
     },
     "paper_id": "pr-0415",
@@ -97359,7 +97607,7 @@
       "Panwang Pan",
       "Bangbang Yang",
       "Zeming Li",
-      "Yadong MU"
+      "Yadong Mu"
     ]
   },
   {
@@ -97439,7 +97687,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -97874,7 +98122,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -97939,9 +98187,9 @@
     "evaluation_profile": {
       "profile_version": "1.0",
       "status": "structured_note_cues",
-      "type": "EMPIRICAL / REAL-ROBOT OR HARDWARE",
+      "type": "BENCHMARK / DATASET",
       "settings": [
-        "real_robot"
+        "benchmark_or_dataset"
       ],
       "protocol": {
         "dataset_or_benchmark": "reported",
@@ -97961,10 +98209,16 @@
           "name": "mAP",
           "evidence": "cue_only",
           "source": "2025/ICLR/2025_ICLR_SC-OmniGS-Self-Calibrating-Omnidirectional-Gaussian-Splatt/04_evaluation.md"
+        },
+        {
+          "resource_id": "metric:psnr",
+          "name": "PSNR",
+          "evidence": "cue_only",
+          "source": "2025/ICLR/2025_ICLR_SC-OmniGS-Self-Calibrating-Omnidirectional-Gaussian-Splatt/04_evaluation.md"
         }
       ],
       "source_note": "2025/ICLR/2025_ICLR_SC-OmniGS-Self-Calibrating-Omnidirectional-Gaussian-Splatt/04_evaluation.md",
-      "reviewed_on": "2026-09-04",
+      "reviewed_on": "2026-11-24",
       "basis": "04_evaluation.md body-derived section cues; benchmark and metric links remain cue_only; unresolved role, split, aggregation, and condition are not promoted to verified metadata."
     },
     "reproducibility": {
@@ -98070,6 +98324,12 @@
         "kind": "openreview",
         "scope": "paper_specific",
         "verified_on": "2026-07-02"
+      },
+      "venue_verification": {
+        "url": "https://proceedings.iclr.cc/paper_files/paper/2025/hash/03bdba50e3741ac5e3eaa0e55423587e-Abstract-Conference.html",
+        "kind": "official_paper",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-24"
       }
     },
     "artifacts": {
@@ -98099,7 +98359,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -98142,9 +98402,9 @@
         }
       },
       "authors_verification": {
-        "source": "https://proceedings.iclr.cc/paper_files/paper/2025/hash/03bdba50e3741ac5e3eaa0e55423587e-Abstract-Conference.html",
-        "verified_on": "2026-11-20",
-        "basis": "논문 표제면 또는 출판사 서지에 실린 순서"
+        "source": "https://proceedings.iclr.cc/paper_files/paper/2025/file/03bdba50e3741ac5e3eaa0e55423587e-Paper-Conference.pdf#page=1",
+        "verified_on": "2026-11-24",
+        "basis": "ICLR 게재본 표제면에 따라 Le Zhang과 Anke Xue의 대소문자를 고쳤다."
       }
     },
     "paper_id": "pr-0419",
@@ -98243,9 +98503,9 @@
       "Zunjie Zhu",
       "Yuhang Qin",
       "Ming Lu",
-      "Le zhang",
+      "Le Zhang",
       "Chenggang Yan",
-      "anke xue"
+      "Anke Xue"
     ]
   },
   {
@@ -98327,7 +98587,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -98393,9 +98653,9 @@
     "evaluation_profile": {
       "profile_version": "1.0",
       "status": "structured_note_cues",
-      "type": "EMPIRICAL / SIMULATION",
+      "type": "BENCHMARK / DATASET",
       "settings": [
-        "simulation"
+        "benchmark_or_dataset"
       ],
       "protocol": {
         "dataset_or_benchmark": "reported",
@@ -98430,8 +98690,27 @@
           "basis": "04_evaluation.md body cue; exact condition remains paper-specific"
         }
       ],
-      "benchmark_cues": [],
+      "benchmark_cues": [
+        {
+          "resource_id": "benchmark:scannet",
+          "name": "ScanNet",
+          "evidence": "cue_only",
+          "source": "2025/ICLR/2025_ICLR_Multimodality-Helps-Few-shot-3D-Point-Cloud-Semantic-Segme/04_evaluation.md"
+        },
+        {
+          "resource_id": "benchmark:s3dis",
+          "name": "S3DIS",
+          "evidence": "cue_only",
+          "source": "2025/ICLR/2025_ICLR_Multimodality-Helps-Few-shot-3D-Point-Cloud-Semantic-Segme/04_evaluation.md"
+        }
+      ],
       "metric_cues": [
+        {
+          "resource_id": "metric:miou",
+          "name": "mIoU",
+          "evidence": "cue_only",
+          "source": "2025/ICLR/2025_ICLR_Multimodality-Helps-Few-shot-3D-Point-Cloud-Semantic-Segme/04_evaluation.md"
+        },
         {
           "resource_id": "metric:map",
           "name": "mAP",
@@ -98440,7 +98719,7 @@
         }
       ],
       "source_note": "2025/ICLR/2025_ICLR_Multimodality-Helps-Few-shot-3D-Point-Cloud-Semantic-Segme/04_evaluation.md",
-      "reviewed_on": "2026-09-04",
+      "reviewed_on": "2026-11-24",
       "basis": "04_evaluation.md body-derived section cues; benchmark and metric links remain cue_only; unresolved role, split, aggregation, and condition are not promoted to verified metadata."
     },
     "reproducibility": {
@@ -98546,6 +98825,12 @@
         "kind": "openreview",
         "scope": "paper_specific",
         "verified_on": "2026-07-02"
+      },
+      "venue_verification": {
+        "url": "https://proceedings.iclr.cc/paper_files/paper/2025/hash/f53437debdd397c42929d929614bc705-Abstract-Conference.html",
+        "kind": "official_paper",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-24"
       }
     },
     "artifacts": {
@@ -98575,7 +98860,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -98618,9 +98903,9 @@
         }
       },
       "authors_verification": {
-        "source": "https://proceedings.iclr.cc/paper_files/paper/2025/hash/f53437debdd397c42929d929614bc705-Abstract-Conference.html",
-        "verified_on": "2026-11-20",
-        "basis": "논문 표제면 또는 출판사 서지에 실린 순서"
+        "source": "https://proceedings.iclr.cc/paper_files/paper/2025/file/f53437debdd397c42929d929614bc705-Paper-Conference.pdf#page=1",
+        "verified_on": "2026-11-24",
+        "basis": "ICLR 게재본에서 마지막 저자의 이름 Gim Hee Lee를 확인했다."
       }
     },
     "paper_id": "pr-0421",
@@ -98640,9 +98925,9 @@
     "evaluation_profile": {
       "profile_version": "1.0",
       "status": "structured_note_cues",
-      "type": "EMPIRICAL / REAL-ROBOT OR HARDWARE",
+      "type": "BENCHMARK / DATASET",
       "settings": [
-        "real_robot"
+        "benchmark_or_dataset"
       ],
       "protocol": {
         "dataset_or_benchmark": "reported",
@@ -98655,8 +98940,39 @@
         "failure_cases": "reported"
       },
       "trial_evidence": [],
-      "benchmark_cues": [],
+      "benchmark_cues": [
+        {
+          "resource_id": "benchmark:scannet200",
+          "name": "ScanNet200",
+          "evidence": "cue_only",
+          "source": "2025/ICLR/2025_ICLR_Segment-Any-3D-Object-with-Language/04_evaluation.md"
+        },
+        {
+          "resource_id": "benchmark:scanrefer",
+          "name": "ScanRefer",
+          "evidence": "cue_only",
+          "source": "2025/ICLR/2025_ICLR_Segment-Any-3D-Object-with-Language/04_evaluation.md"
+        },
+        {
+          "resource_id": "benchmark:replica",
+          "name": "Replica",
+          "evidence": "cue_only",
+          "source": "2025/ICLR/2025_ICLR_Segment-Any-3D-Object-with-Language/04_evaluation.md"
+        }
+      ],
       "metric_cues": [
+        {
+          "resource_id": "metric:iou",
+          "name": "IoU",
+          "evidence": "cue_only",
+          "source": "2025/ICLR/2025_ICLR_Segment-Any-3D-Object-with-Language/04_evaluation.md"
+        },
+        {
+          "resource_id": "metric:ap",
+          "name": "AP",
+          "evidence": "cue_only",
+          "source": "2025/ICLR/2025_ICLR_Segment-Any-3D-Object-with-Language/04_evaluation.md"
+        },
         {
           "resource_id": "metric:map",
           "name": "mAP",
@@ -98665,7 +98981,7 @@
         }
       ],
       "source_note": "2025/ICLR/2025_ICLR_Segment-Any-3D-Object-with-Language/04_evaluation.md",
-      "reviewed_on": "2026-09-04",
+      "reviewed_on": "2026-11-24",
       "basis": "04_evaluation.md body-derived section cues; benchmark and metric links remain cue_only; unresolved role, split, aggregation, and condition are not promoted to verified metadata."
     },
     "reproducibility": {
@@ -98716,7 +99032,7 @@
     "authors": [
       "Seungjun Lee",
       "Yuyang Zhao",
-      "Gim H Lee"
+      "Gim Hee Lee"
     ]
   },
   {
@@ -99026,7 +99342,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -99093,9 +99409,9 @@
     "evaluation_profile": {
       "profile_version": "1.0",
       "status": "structured_note_cues",
-      "type": "EMPIRICAL / REAL-ROBOT OR HARDWARE",
+      "type": "BENCHMARK / DATASET",
       "settings": [
-        "real_robot"
+        "benchmark_or_dataset"
       ],
       "protocol": {
         "dataset_or_benchmark": "reported",
@@ -99108,10 +99424,66 @@
         "failure_cases": "reported"
       },
       "trial_evidence": [],
-      "benchmark_cues": [],
-      "metric_cues": [],
+      "benchmark_cues": [
+        {
+          "resource_id": "benchmark:scannet",
+          "name": "ScanNet",
+          "evidence": "cue_only",
+          "source": "2026/ICLR/2026_ICLR_G4Splat-Geometry-Guided-Gaussian-Splatting-with-Generative/04_evaluation.md"
+        },
+        {
+          "resource_id": "benchmark:replica",
+          "name": "Replica",
+          "evidence": "cue_only",
+          "source": "2026/ICLR/2026_ICLR_G4Splat-Geometry-Guided-Gaussian-Splatting-with-Generative/04_evaluation.md"
+        }
+      ],
+      "metric_cues": [
+        {
+          "resource_id": "metric:ap",
+          "name": "AP",
+          "evidence": "cue_only",
+          "source": "2026/ICLR/2026_ICLR_G4Splat-Geometry-Guided-Gaussian-Splatting-with-Generative/04_evaluation.md"
+        },
+        {
+          "resource_id": "metric:map",
+          "name": "mAP",
+          "evidence": "cue_only",
+          "source": "2026/ICLR/2026_ICLR_G4Splat-Geometry-Guided-Gaussian-Splatting-with-Generative/04_evaluation.md"
+        },
+        {
+          "resource_id": "metric:psnr",
+          "name": "PSNR",
+          "evidence": "cue_only",
+          "source": "2026/ICLR/2026_ICLR_G4Splat-Geometry-Guided-Gaussian-Splatting-with-Generative/04_evaluation.md"
+        },
+        {
+          "resource_id": "metric:ssim",
+          "name": "SSIM",
+          "evidence": "cue_only",
+          "source": "2026/ICLR/2026_ICLR_G4Splat-Geometry-Guided-Gaussian-Splatting-with-Generative/04_evaluation.md"
+        },
+        {
+          "resource_id": "metric:lpips",
+          "name": "LPIPS",
+          "evidence": "cue_only",
+          "source": "2026/ICLR/2026_ICLR_G4Splat-Geometry-Guided-Gaussian-Splatting-with-Generative/04_evaluation.md"
+        },
+        {
+          "resource_id": "metric:chamfer",
+          "name": "Chamfer",
+          "evidence": "cue_only",
+          "source": "2026/ICLR/2026_ICLR_G4Splat-Geometry-Guided-Gaussian-Splatting-with-Generative/04_evaluation.md"
+        },
+        {
+          "resource_id": "metric:f-score",
+          "name": "F-score",
+          "evidence": "cue_only",
+          "source": "2026/ICLR/2026_ICLR_G4Splat-Geometry-Guided-Gaussian-Splatting-with-Generative/04_evaluation.md"
+        }
+      ],
       "source_note": "2026/ICLR/2026_ICLR_G4Splat-Geometry-Guided-Gaussian-Splatting-with-Generative/04_evaluation.md",
-      "reviewed_on": "2026-09-04",
+      "reviewed_on": "2026-11-24",
       "basis": "04_evaluation.md body-derived section cues; benchmark and metric links remain cue_only; unresolved role, split, aggregation, and condition are not promoted to verified metadata."
     },
     "reproducibility": {
@@ -99479,7 +99851,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -99547,9 +99919,9 @@
     "evaluation_profile": {
       "profile_version": "1.0",
       "status": "structured_note_cues",
-      "type": "SYSTEM / EVALUATION SCOPE UNRESOLVED",
+      "type": "BENCHMARK / DATASET",
       "settings": [
-        "scope_unresolved"
+        "benchmark_or_dataset"
       ],
       "protocol": {
         "dataset_or_benchmark": "reported",
@@ -99562,8 +99934,33 @@
         "failure_cases": "reported"
       },
       "trial_evidence": [],
-      "benchmark_cues": [],
+      "benchmark_cues": [
+        {
+          "resource_id": "benchmark:nuscenes",
+          "name": "nuScenes",
+          "evidence": "cue_only",
+          "source": "2026/ICLR/2026_ICLR_GaussianFusion-Unified-3D-Gaussian-Representation-for-Mult/04_evaluation.md"
+        },
+        {
+          "resource_id": "benchmark:waymo",
+          "name": "Waymo",
+          "evidence": "cue_only",
+          "source": "2026/ICLR/2026_ICLR_GaussianFusion-Unified-3D-Gaussian-Representation-for-Mult/04_evaluation.md"
+        }
+      ],
       "metric_cues": [
+        {
+          "resource_id": "metric:miou",
+          "name": "mIoU",
+          "evidence": "cue_only",
+          "source": "2026/ICLR/2026_ICLR_GaussianFusion-Unified-3D-Gaussian-Representation-for-Mult/04_evaluation.md"
+        },
+        {
+          "resource_id": "metric:iou",
+          "name": "IoU",
+          "evidence": "cue_only",
+          "source": "2026/ICLR/2026_ICLR_GaussianFusion-Unified-3D-Gaussian-Representation-for-Mult/04_evaluation.md"
+        },
         {
           "resource_id": "metric:map",
           "name": "mAP",
@@ -99572,7 +99969,7 @@
         }
       ],
       "source_note": "2026/ICLR/2026_ICLR_GaussianFusion-Unified-3D-Gaussian-Representation-for-Mult/04_evaluation.md",
-      "reviewed_on": "2026-09-04",
+      "reviewed_on": "2026-11-24",
       "basis": "04_evaluation.md body-derived section cues; benchmark and metric links remain cue_only; unresolved role, split, aggregation, and condition are not promoted to verified metadata."
     },
     "reproducibility": {
@@ -100139,6 +100536,12 @@
         "kind": "openreview",
         "scope": "paper_specific",
         "verified_on": "2026-07-02"
+      },
+      "venue_verification": {
+        "url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/3a10c46572628d58cb44fb705f25cbbf-Abstract-Conference.html",
+        "kind": "official_paper",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-24"
       }
     },
     "artifacts": {
@@ -100168,7 +100571,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -100211,9 +100614,9 @@
         }
       },
       "authors_verification": {
-        "source": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/3a10c46572628d58cb44fb705f25cbbf-Abstract-Conference.html",
-        "verified_on": "2026-11-20",
-        "basis": "논문 표제면 또는 출판사 서지에 실린 순서"
+        "source": "https://proceedings.iclr.cc/paper_files/paper/2026/file/3a10c46572628d58cb44fb705f25cbbf-Paper-Conference.pdf#page=1",
+        "verified_on": "2026-11-24",
+        "basis": "ICLR 게재본은 Gang Chen을 네 번째, Ning Cao를 다섯 번째 저자로 싣는다. 학회 웹 서지에는 두 이름의 순서가 뒤바뀌어 있다."
       }
     },
     "paper_id": "pr-0428",
@@ -100310,8 +100713,8 @@
       "Bing He",
       "Jingnan Gao",
       "Yunuo Chen",
-      "Ning Cao",
       "Gang Chen",
+      "Ning Cao",
       "Zhengxue Cheng",
       "Li Song",
       "Wenjun Zhang"
@@ -100397,7 +100800,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -100639,7 +101042,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -100791,6 +101194,9 @@
       "Linlin Yang",
       "Huobin Tan",
       "Baochang Zhang"
+    ],
+    "aliases": [
+      "UrbanGS: A Scalable and Efficient Architecture for Geometrically Accurate Large-Scene Reconstruction"
     ]
   },
   {
@@ -100843,6 +101249,12 @@
         "kind": "openreview",
         "scope": "paper_specific",
         "verified_on": "2026-07-02"
+      },
+      "venue_verification": {
+        "url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/6fa4a1def9d60b5bf6078e13c900c45c-Abstract-Conference.html",
+        "kind": "official_paper",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-24"
       }
     },
     "artifacts": {
@@ -100872,7 +101284,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -100915,9 +101327,9 @@
         }
       },
       "authors_verification": {
-        "source": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/6fa4a1def9d60b5bf6078e13c900c45c-Abstract-Conference.html",
-        "verified_on": "2026-11-20",
-        "basis": "논문 표제면 또는 출판사 서지에 실린 순서"
+        "source": "https://proceedings.iclr.cc/paper_files/paper/2026/file/6fa4a1def9d60b5bf6078e13c900c45c-Paper-Conference.pdf#page=1",
+        "verified_on": "2026-11-24",
+        "basis": "ICLR 게재본 표제면의 마지막 저자 표기 Jian Yang을 반영했다."
       }
     },
     "paper_id": "pr-0431",
@@ -101016,7 +101428,7 @@
       "Guang Chen",
       "Hangjun Ye",
       "Jin Xie",
-      "jian Yang"
+      "Jian Yang"
     ]
   },
   {
@@ -101069,6 +101481,12 @@
         "kind": "openreview",
         "scope": "paper_specific",
         "verified_on": "2026-07-02"
+      },
+      "venue_verification": {
+        "url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/e1f20114b5233d395486f9cf5b3e0535-Abstract-Conference.html",
+        "kind": "official_paper",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-24"
       }
     },
     "artifacts": {
@@ -101098,7 +101516,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -101141,9 +101559,9 @@
         }
       },
       "authors_verification": {
-        "source": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/e1f20114b5233d395486f9cf5b3e0535-Abstract-Conference.html",
-        "verified_on": "2026-11-20",
-        "basis": "논문 표제면 또는 출판사 서지에 실린 순서"
+        "source": "https://proceedings.iclr.cc/paper_files/paper/2026/file/e1f20114b5233d395486f9cf5b3e0535-Paper-Conference.pdf#page=1",
+        "verified_on": "2026-11-24",
+        "basis": "ICLR 게재본의 첫 번째·네 번째·일곱 번째 저자를 각각 Hao Li, Xuanyang Zhang, Yushi Lan으로 대조했다."
       }
     },
     "paper_id": "pr-0432",
@@ -101237,13 +101655,13 @@
       "basis": "manifest relations are curated edges; queue adjacency and legacy lineage matches are retained as non-relational candidates. Absence of an edge is not a claim that the paper has no citations."
     },
     "authors": [
-      "昊 李",
+      "Hao Li",
       "Zhengyu Zou",
       "Fangfu Liu",
-      "zhang xuanyang",
+      "Xuanyang Zhang",
       "Fangzhou Hong",
       "Yukang Cao",
-      "Yushi LAN",
+      "Yushi Lan",
       "Manyuan Zhang",
       "Gang Yu",
       "Dingwen Zhang",
@@ -101328,7 +101746,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -101786,7 +102204,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -102751,7 +103169,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -103240,7 +103658,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -103305,9 +103723,9 @@
     "evaluation_profile": {
       "profile_version": "1.0",
       "status": "structured_note_cues",
-      "type": "EMPIRICAL / REAL-ROBOT OR HARDWARE",
+      "type": "BENCHMARK / DATASET",
       "settings": [
-        "real_robot"
+        "benchmark_or_dataset"
       ],
       "protocol": {
         "dataset_or_benchmark": "reported",
@@ -103327,10 +103745,28 @@
           "name": "mAP",
           "evidence": "cue_only",
           "source": "2025/NeurIPS/2025_NeurIPS_MS-GS-Multi-Appearance-Sparse-View-3D-Gaussian-Splatting-i/04_evaluation.md"
+        },
+        {
+          "resource_id": "metric:psnr",
+          "name": "PSNR",
+          "evidence": "cue_only",
+          "source": "2025/NeurIPS/2025_NeurIPS_MS-GS-Multi-Appearance-Sparse-View-3D-Gaussian-Splatting-i/04_evaluation.md"
+        },
+        {
+          "resource_id": "metric:ssim",
+          "name": "SSIM",
+          "evidence": "cue_only",
+          "source": "2025/NeurIPS/2025_NeurIPS_MS-GS-Multi-Appearance-Sparse-View-3D-Gaussian-Splatting-i/04_evaluation.md"
+        },
+        {
+          "resource_id": "metric:lpips",
+          "name": "LPIPS",
+          "evidence": "cue_only",
+          "source": "2025/NeurIPS/2025_NeurIPS_MS-GS-Multi-Appearance-Sparse-View-3D-Gaussian-Splatting-i/04_evaluation.md"
         }
       ],
       "source_note": "2025/NeurIPS/2025_NeurIPS_MS-GS-Multi-Appearance-Sparse-View-3D-Gaussian-Splatting-i/04_evaluation.md",
-      "reviewed_on": "2026-09-04",
+      "reviewed_on": "2026-11-24",
       "basis": "04_evaluation.md body-derived section cues; benchmark and metric links remain cue_only; unresolved role, split, aggregation, and condition are not promoted to verified metadata."
     },
     "reproducibility": {
@@ -103437,6 +103873,12 @@
         "kind": "openreview",
         "scope": "paper_specific",
         "verified_on": "2026-07-02"
+      },
+      "venue_verification": {
+        "url": "https://proceedings.neurips.cc/paper_files/paper/2025/hash/70915b08a205ea5522528690d93518f6-Abstract-Conference.html",
+        "kind": "official_publication",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-24"
       }
     },
     "artifacts": {
@@ -103466,7 +103908,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -103509,9 +103951,9 @@
         }
       },
       "authors_verification": {
-        "source": "https://papers.neurips.cc/paper_files/paper/2025/hash/70915b08a205ea5522528690d93518f6-Abstract-Conference.html",
-        "verified_on": "2026-11-20",
-        "basis": "표제 일치하는 학회 논문집 또는 저자 preprint 서지의 저자 순서"
+        "source": "https://papers.neurips.cc/paper_files/paper/2025/file/70915b08a205ea5522528690d93518f6-Paper-Conference.pdf#page=1",
+        "verified_on": "2026-11-24",
+        "basis": "NeurIPS 게재본은 Haiyun Wei를 다섯 번째 저자로 싣는다. 학회 웹 서지에는 여덟 번째로 올라 있다."
       }
     },
     "paper_id": "pr-0442",
@@ -103611,10 +104053,10 @@
       "Fan Lu",
       "Yunwei Zhu",
       "Zehan Zheng",
+      "Haiyun Wei",
       "Sanqing Qu",
       "Jiangtong Li",
       "Ya Wu",
-      "Haiyun Wei",
       "Guang Chen"
     ]
   },
@@ -105130,7 +105572,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -105381,7 +105823,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -105448,9 +105890,9 @@
     "evaluation_profile": {
       "profile_version": "1.0",
       "status": "structured_note_cues",
-      "type": "EMPIRICAL / REAL-ROBOT OR HARDWARE",
+      "type": "BENCHMARK / DATASET",
       "settings": [
-        "real_robot"
+        "benchmark_or_dataset"
       ],
       "protocol": {
         "dataset_or_benchmark": "reported",
@@ -105463,17 +105905,42 @@
         "failure_cases": "reported"
       },
       "trial_evidence": [],
-      "benchmark_cues": [],
+      "benchmark_cues": [
+        {
+          "resource_id": "benchmark:scannet",
+          "name": "ScanNet",
+          "evidence": "cue_only",
+          "source": "2025/ICML/2025_ICML_Generative-Point-Cloud-Registration/04_evaluation.md"
+        }
+      ],
       "metric_cues": [
         {
           "resource_id": "metric:map",
           "name": "mAP",
           "evidence": "cue_only",
           "source": "2025/ICML/2025_ICML_Generative-Point-Cloud-Registration/04_evaluation.md"
+        },
+        {
+          "resource_id": "metric:chamfer",
+          "name": "Chamfer",
+          "evidence": "cue_only",
+          "source": "2025/ICML/2025_ICML_Generative-Point-Cloud-Registration/04_evaluation.md"
+        },
+        {
+          "resource_id": "metric:translation-error",
+          "name": "translation error",
+          "evidence": "cue_only",
+          "source": "2025/ICML/2025_ICML_Generative-Point-Cloud-Registration/04_evaluation.md"
+        },
+        {
+          "resource_id": "metric:rotation-error",
+          "name": "rotation error",
+          "evidence": "cue_only",
+          "source": "2025/ICML/2025_ICML_Generative-Point-Cloud-Registration/04_evaluation.md"
         }
       ],
       "source_note": "2025/ICML/2025_ICML_Generative-Point-Cloud-Registration/04_evaluation.md",
-      "reviewed_on": "2026-09-04",
+      "reviewed_on": "2026-11-24",
       "basis": "04_evaluation.md body-derived section cues; benchmark and metric links remain cue_only; unresolved role, split, aggregation, and condition are not promoted to verified metadata."
     },
     "reproducibility": {
@@ -105607,7 +106074,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -105834,7 +106301,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -105899,9 +106366,9 @@
     "evaluation_profile": {
       "profile_version": "1.0",
       "status": "structured_note_cues",
-      "type": "EMPIRICAL / REAL-ROBOT OR HARDWARE",
+      "type": "BENCHMARK / DATASET",
       "settings": [
-        "real_robot"
+        "benchmark_or_dataset"
       ],
       "protocol": {
         "dataset_or_benchmark": "reported",
@@ -105924,7 +106391,7 @@
         }
       ],
       "source_note": "2025/ICML/2025_ICML_GAPrompt-Geometry-Aware-Point-Cloud-Prompt-for-3D-Vision-M/04_evaluation.md",
-      "reviewed_on": "2026-09-04",
+      "reviewed_on": "2026-11-24",
       "basis": "04_evaluation.md body-derived section cues; benchmark and metric links remain cue_only; unresolved role, split, aggregation, and condition are not promoted to verified metadata."
     },
     "reproducibility": {
@@ -106059,7 +106526,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -106124,9 +106591,9 @@
     "evaluation_profile": {
       "profile_version": "1.0",
       "status": "structured_note_cues",
-      "type": "EMPIRICAL / REAL-ROBOT OR HARDWARE",
+      "type": "BENCHMARK / DATASET",
       "settings": [
-        "real_robot"
+        "benchmark_or_dataset"
       ],
       "protocol": {
         "dataset_or_benchmark": "reported",
@@ -106164,7 +106631,7 @@
         }
       ],
       "source_note": "2025/ICML/2025_ICML_Thickness-aware-E3-Equivariant-3D-Mesh-Neural-Networks/04_evaluation.md",
-      "reviewed_on": "2026-09-04",
+      "reviewed_on": "2026-11-24",
       "basis": "04_evaluation.md body-derived section cues; benchmark and metric links remain cue_only; unresolved role, split, aggregation, and condition are not promoted to verified metadata."
     },
     "reproducibility": {
@@ -106272,6 +106739,12 @@
         "kind": "openreview",
         "scope": "paper_specific",
         "verified_on": "2026-07-02"
+      },
+      "venue_verification": {
+        "url": "https://proceedings.mlr.press/v267/takmaz25a.html",
+        "kind": "official_paper",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-24"
       }
     },
     "artifacts": {
@@ -106301,7 +106774,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -106344,9 +106817,9 @@
         }
       },
       "authors_verification": {
-        "source": "https://proceedings.mlr.press/v267/takmaz25a.html",
-        "verified_on": "2026-11-20",
-        "basis": "논문 표제면 또는 출판사 서지에 실린 순서"
+        "source": "https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/takmaz25a/takmaz25a.pdf#page=1",
+        "verified_on": "2026-11-24",
+        "basis": "ICML 게재본에 인쇄된 다섯 번째 저자 Riccardo de Lutio의 성 표기를 반영했다."
       }
     },
     "paper_id": "pr-0454",
@@ -106446,7 +106919,7 @@
       "Cristiano Saltori",
       "Neehar Peri",
       "Tim Meinhardt",
-      "Riccardo De Lutio",
+      "Riccardo de Lutio",
       "Laura Leal-Taixé",
       "Aljosa Osep"
     ]
@@ -106532,7 +107005,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -106994,7 +107467,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -107238,7 +107711,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -107304,9 +107777,10 @@
     "evaluation_profile": {
       "profile_version": "1.0",
       "status": "structured_note_cues",
-      "type": "EMPIRICAL / REAL-ROBOT OR HARDWARE",
+      "type": "EMPIRICAL / SIMULATION / REAL-ROBOT OR HARDWARE",
       "settings": [
-        "real_robot"
+        "real_robot",
+        "simulation"
       ],
       "protocol": {
         "dataset_or_benchmark": "reported",
@@ -107319,6 +107793,20 @@
         "failure_cases": "reported"
       },
       "trial_evidence": [
+        {
+          "count": 3,
+          "unit": "seed",
+          "text": "- **PDF p. 8, Table 3 (DOC-QA2 원문 대조):** Table 3은 RISE로 6개 manipulation task를 평가하며 specular·deformable·articulated·long-horizon 특성을 icon으로 표시한다. 각 task 값은 3 seeds에서 20 trials당 성공 횟수의 mean±std이고, 마지막 행만 평균 성공률이다. PRISM은 평균 92.5%, Stable-S2R은 90.8%다.",
+          "source": "2026/ICML/2026_ICML_PRISM-Learning-Realistic-Depth-via-Physics-Grounded-Noise/04_evaluation.md",
+          "basis": "04_evaluation.md body cue; exact condition remains paper-specific"
+        },
+        {
+          "count": 20,
+          "unit": "trial",
+          "text": "- **PDF p. 8, Table 3 (DOC-QA2 원문 대조):** Table 3은 RISE로 6개 manipulation task를 평가하며 specular·deformable·articulated·long-horizon 특성을 icon으로 표시한다. 각 task 값은 3 seeds에서 20 trials당 성공 횟수의 mean±std이고, 마지막 행만 평균 성공률이다. PRISM은 평균 92.5%, Stable-S2R은 90.8%다.",
+          "source": "2026/ICML/2026_ICML_PRISM-Learning-Realistic-Depth-via-Physics-Grounded-Noise/04_evaluation.md",
+          "basis": "04_evaluation.md body cue; exact condition remains paper-specific"
+        },
         {
           "count": 20,
           "unit": "trial",
@@ -107351,6 +107839,12 @@
       "benchmark_cues": [],
       "metric_cues": [
         {
+          "resource_id": "metric:iou",
+          "name": "IoU",
+          "evidence": "cue_only",
+          "source": "2026/ICML/2026_ICML_PRISM-Learning-Realistic-Depth-via-Physics-Grounded-Noise/04_evaluation.md"
+        },
+        {
           "resource_id": "metric:map",
           "name": "mAP",
           "evidence": "cue_only",
@@ -107361,10 +107855,22 @@
           "name": "success rate",
           "evidence": "cue_only",
           "source": "2026/ICML/2026_ICML_PRISM-Learning-Realistic-Depth-via-Physics-Grounded-Noise/04_evaluation.md"
+        },
+        {
+          "resource_id": "metric:sr",
+          "name": "SR",
+          "evidence": "cue_only",
+          "source": "2026/ICML/2026_ICML_PRISM-Learning-Realistic-Depth-via-Physics-Grounded-Noise/04_evaluation.md"
+        },
+        {
+          "resource_id": "metric:f1",
+          "name": "F1",
+          "evidence": "cue_only",
+          "source": "2026/ICML/2026_ICML_PRISM-Learning-Realistic-Depth-via-Physics-Grounded-Noise/04_evaluation.md"
         }
       ],
       "source_note": "2026/ICML/2026_ICML_PRISM-Learning-Realistic-Depth-via-Physics-Grounded-Noise/04_evaluation.md",
-      "reviewed_on": "2026-09-04",
+      "reviewed_on": "2026-11-24",
       "basis": "04_evaluation.md body-derived section cues; benchmark and metric links remain cue_only; unresolved role, split, aggregation, and condition are not promoted to verified metadata."
     },
     "reproducibility": {
@@ -107739,7 +108245,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -107974,7 +108480,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -108055,17 +108561,60 @@
         "failure_cases": "reported"
       },
       "trial_evidence": [],
-      "benchmark_cues": [],
+      "benchmark_cues": [
+        {
+          "resource_id": "benchmark:scannet",
+          "name": "ScanNet",
+          "evidence": "cue_only",
+          "source": "2026/ICML/2026_ICML_S2GS-Streaming-Semantic-Gaussian-Splatting-for-Online-Scen/04_evaluation.md"
+        },
+        {
+          "resource_id": "benchmark:replica",
+          "name": "Replica",
+          "evidence": "cue_only",
+          "source": "2026/ICML/2026_ICML_S2GS-Streaming-Semantic-Gaussian-Splatting-for-Online-Scen/04_evaluation.md"
+        }
+      ],
       "metric_cues": [
+        {
+          "resource_id": "metric:miou",
+          "name": "mIoU",
+          "evidence": "cue_only",
+          "source": "2026/ICML/2026_ICML_S2GS-Streaming-Semantic-Gaussian-Splatting-for-Online-Scen/04_evaluation.md"
+        },
+        {
+          "resource_id": "metric:iou",
+          "name": "IoU",
+          "evidence": "cue_only",
+          "source": "2026/ICML/2026_ICML_S2GS-Streaming-Semantic-Gaussian-Splatting-for-Online-Scen/04_evaluation.md"
+        },
         {
           "resource_id": "metric:map",
           "name": "mAP",
           "evidence": "cue_only",
           "source": "2026/ICML/2026_ICML_S2GS-Streaming-Semantic-Gaussian-Splatting-for-Online-Scen/04_evaluation.md"
+        },
+        {
+          "resource_id": "metric:sr",
+          "name": "SR",
+          "evidence": "cue_only",
+          "source": "2026/ICML/2026_ICML_S2GS-Streaming-Semantic-Gaussian-Splatting-for-Online-Scen/04_evaluation.md"
+        },
+        {
+          "resource_id": "metric:psnr",
+          "name": "PSNR",
+          "evidence": "cue_only",
+          "source": "2026/ICML/2026_ICML_S2GS-Streaming-Semantic-Gaussian-Splatting-for-Online-Scen/04_evaluation.md"
+        },
+        {
+          "resource_id": "metric:ssim",
+          "name": "SSIM",
+          "evidence": "cue_only",
+          "source": "2026/ICML/2026_ICML_S2GS-Streaming-Semantic-Gaussian-Splatting-for-Online-Scen/04_evaluation.md"
         }
       ],
       "source_note": "2026/ICML/2026_ICML_S2GS-Streaming-Semantic-Gaussian-Splatting-for-Online-Scen/04_evaluation.md",
-      "reviewed_on": "2026-09-04",
+      "reviewed_on": "2026-11-24",
       "basis": "04_evaluation.md body-derived section cues; benchmark and metric links remain cue_only; unresolved role, split, aggregation, and condition are not promoted to verified metadata."
     },
     "reproducibility": {
@@ -108206,7 +108755,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -108286,17 +108835,42 @@
         "failure_cases": "reported"
       },
       "trial_evidence": [],
-      "benchmark_cues": [],
+      "benchmark_cues": [
+        {
+          "resource_id": "benchmark:waymo",
+          "name": "Waymo",
+          "evidence": "cue_only",
+          "source": "2026/ICML/2026_ICML_EnerGS-Energy-Based-Gaussian-Splatting-under-Partial-Geome/04_evaluation.md"
+        },
+        {
+          "resource_id": "benchmark:kitti",
+          "name": "KITTI",
+          "evidence": "cue_only",
+          "source": "2026/ICML/2026_ICML_EnerGS-Energy-Based-Gaussian-Splatting-under-Partial-Geome/04_evaluation.md"
+        }
+      ],
       "metric_cues": [
         {
           "resource_id": "metric:map",
           "name": "mAP",
           "evidence": "cue_only",
           "source": "2026/ICML/2026_ICML_EnerGS-Energy-Based-Gaussian-Splatting-under-Partial-Geome/04_evaluation.md"
+        },
+        {
+          "resource_id": "metric:psnr",
+          "name": "PSNR",
+          "evidence": "cue_only",
+          "source": "2026/ICML/2026_ICML_EnerGS-Energy-Based-Gaussian-Splatting-under-Partial-Geome/04_evaluation.md"
+        },
+        {
+          "resource_id": "metric:ssim",
+          "name": "SSIM",
+          "evidence": "cue_only",
+          "source": "2026/ICML/2026_ICML_EnerGS-Energy-Based-Gaussian-Splatting-under-Partial-Geome/04_evaluation.md"
         }
       ],
       "source_note": "2026/ICML/2026_ICML_EnerGS-Energy-Based-Gaussian-Splatting-under-Partial-Geome/04_evaluation.md",
-      "reviewed_on": "2026-09-04",
+      "reviewed_on": "2026-11-24",
       "basis": "04_evaluation.md body-derived section cues; benchmark and metric links remain cue_only; unresolved role, split, aggregation, and condition are not promoted to verified metadata."
     },
     "reproducibility": {
@@ -108681,7 +109255,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -108746,9 +109320,9 @@
     "evaluation_profile": {
       "profile_version": "1.0",
       "status": "structured_note_cues",
-      "type": "EMPIRICAL / REAL-ROBOT OR HARDWARE",
+      "type": "BENCHMARK / DATASET",
       "settings": [
-        "real_robot"
+        "benchmark_or_dataset"
       ],
       "protocol": {
         "dataset_or_benchmark": "reported",
@@ -108768,10 +109342,16 @@
           "name": "mAP",
           "evidence": "cue_only",
           "source": "2026/ICML/2026_ICML_Affine-Equivariant-Kernel-Space-Encoding-for-NeRF-Editing/04_evaluation.md"
+        },
+        {
+          "resource_id": "metric:psnr",
+          "name": "PSNR",
+          "evidence": "cue_only",
+          "source": "2026/ICML/2026_ICML_Affine-Equivariant-Kernel-Space-Encoding-for-NeRF-Editing/04_evaluation.md"
         }
       ],
       "source_note": "2026/ICML/2026_ICML_Affine-Equivariant-Kernel-Space-Encoding-for-NeRF-Editing/04_evaluation.md",
-      "reviewed_on": "2026-09-04",
+      "reviewed_on": "2026-11-24",
       "basis": "04_evaluation.md body-derived section cues; benchmark and metric links remain cue_only; unresolved role, split, aggregation, and condition are not promoted to verified metadata."
     },
     "reproducibility": {
@@ -108911,7 +109491,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -109150,7 +109730,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -109217,9 +109797,9 @@
     "evaluation_profile": {
       "profile_version": "1.0",
       "status": "structured_note_cues",
-      "type": "EMPIRICAL / REAL-ROBOT OR HARDWARE",
+      "type": "BENCHMARK / DATASET",
       "settings": [
-        "real_robot"
+        "benchmark_or_dataset"
       ],
       "protocol": {
         "dataset_or_benchmark": "reported",
@@ -109239,10 +109819,16 @@
           "name": "mAP",
           "evidence": "cue_only",
           "source": "2026/ICML/2026_ICML_Weakly-Supervised-Cross-Modal-Learning-for-4D-Radar-Scene/04_evaluation.md"
+        },
+        {
+          "resource_id": "metric:chamfer",
+          "name": "Chamfer",
+          "evidence": "cue_only",
+          "source": "2026/ICML/2026_ICML_Weakly-Supervised-Cross-Modal-Learning-for-4D-Radar-Scene/04_evaluation.md"
         }
       ],
       "source_note": "2026/ICML/2026_ICML_Weakly-Supervised-Cross-Modal-Learning-for-4D-Radar-Scene/04_evaluation.md",
-      "reviewed_on": "2026-09-04",
+      "reviewed_on": "2026-11-24",
       "basis": "04_evaluation.md body-derived section cues; benchmark and metric links remain cue_only; unresolved role, split, aggregation, and condition are not promoted to verified metadata."
     },
     "reproducibility": {
@@ -109864,7 +110450,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -110126,7 +110712,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -110191,9 +110777,9 @@
     "evaluation_profile": {
       "profile_version": "1.0",
       "status": "structured_note_cues",
-      "type": "EMPIRICAL / REAL-ROBOT OR HARDWARE",
+      "type": "BENCHMARK / DATASET",
       "settings": [
-        "real_robot"
+        "benchmark_or_dataset"
       ],
       "protocol": {
         "dataset_or_benchmark": "reported",
@@ -110213,10 +110799,22 @@
           "name": "mAP",
           "evidence": "cue_only",
           "source": "2025/3DV/2025_3DV_AGS-Mesh-Adaptive-Gaussian-Splatting-and-Meshing-with-Geom/04_evaluation.md"
+        },
+        {
+          "resource_id": "metric:chamfer",
+          "name": "Chamfer",
+          "evidence": "cue_only",
+          "source": "2025/3DV/2025_3DV_AGS-Mesh-Adaptive-Gaussian-Splatting-and-Meshing-with-Geom/04_evaluation.md"
+        },
+        {
+          "resource_id": "metric:f-score",
+          "name": "F-score",
+          "evidence": "cue_only",
+          "source": "2025/3DV/2025_3DV_AGS-Mesh-Adaptive-Gaussian-Splatting-and-Meshing-with-Geom/04_evaluation.md"
         }
       ],
       "source_note": "2025/3DV/2025_3DV_AGS-Mesh-Adaptive-Gaussian-Splatting-and-Meshing-with-Geom/04_evaluation.md",
-      "reviewed_on": "2026-09-04",
+      "reviewed_on": "2026-11-24",
       "basis": "04_evaluation.md body-derived section cues; benchmark and metric links remain cue_only; unresolved role, split, aggregation, and condition are not promoted to verified metadata."
     },
     "reproducibility": {
@@ -110841,7 +111439,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -110906,9 +111504,9 @@
     "evaluation_profile": {
       "profile_version": "1.0",
       "status": "structured_note_cues",
-      "type": "SYSTEM / EVALUATION SCOPE UNRESOLVED",
+      "type": "BENCHMARK / DATASET",
       "settings": [
-        "scope_unresolved"
+        "benchmark_or_dataset"
       ],
       "protocol": {
         "dataset_or_benchmark": "reported",
@@ -110935,10 +111533,28 @@
           "name": "mAP",
           "evidence": "cue_only",
           "source": "2025/3DV/2025_3DV_SparseGS-Sparse-View-Synthesis-using-3D-Gaussian-Splatting/04_evaluation.md"
+        },
+        {
+          "resource_id": "metric:psnr",
+          "name": "PSNR",
+          "evidence": "cue_only",
+          "source": "2025/3DV/2025_3DV_SparseGS-Sparse-View-Synthesis-using-3D-Gaussian-Splatting/04_evaluation.md"
+        },
+        {
+          "resource_id": "metric:ssim",
+          "name": "SSIM",
+          "evidence": "cue_only",
+          "source": "2025/3DV/2025_3DV_SparseGS-Sparse-View-Synthesis-using-3D-Gaussian-Splatting/04_evaluation.md"
+        },
+        {
+          "resource_id": "metric:lpips",
+          "name": "LPIPS",
+          "evidence": "cue_only",
+          "source": "2025/3DV/2025_3DV_SparseGS-Sparse-View-Synthesis-using-3D-Gaussian-Splatting/04_evaluation.md"
         }
       ],
       "source_note": "2025/3DV/2025_3DV_SparseGS-Sparse-View-Synthesis-using-3D-Gaussian-Splatting/04_evaluation.md",
-      "reviewed_on": "2026-09-04",
+      "reviewed_on": "2026-11-24",
       "basis": "04_evaluation.md body-derived section cues; benchmark and metric links remain cue_only; unresolved role, split, aggregation, and condition are not promoted to verified metadata."
     },
     "reproducibility": {
@@ -111340,7 +111956,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -111405,9 +112021,9 @@
     "evaluation_profile": {
       "profile_version": "1.0",
       "status": "structured_note_cues",
-      "type": "EMPIRICAL / REAL-ROBOT OR HARDWARE",
+      "type": "BENCHMARK / DATASET",
       "settings": [
-        "real_robot"
+        "benchmark_or_dataset"
       ],
       "protocol": {
         "dataset_or_benchmark": "reported",
@@ -111420,8 +112036,21 @@
         "failure_cases": "reported"
       },
       "trial_evidence": [],
-      "benchmark_cues": [],
+      "benchmark_cues": [
+        {
+          "resource_id": "benchmark:scannet",
+          "name": "ScanNet",
+          "evidence": "cue_only",
+          "source": "2025/3DV/2025_3DV_Efficient-Continuous-Group-Convolutions-for-Local-SE3-Equi/04_evaluation.md"
+        }
+      ],
       "metric_cues": [
+        {
+          "resource_id": "metric:miou",
+          "name": "mIoU",
+          "evidence": "cue_only",
+          "source": "2025/3DV/2025_3DV_Efficient-Continuous-Group-Convolutions-for-Local-SE3-Equi/04_evaluation.md"
+        },
         {
           "resource_id": "metric:map",
           "name": "mAP",
@@ -111430,7 +112059,7 @@
         }
       ],
       "source_note": "2025/3DV/2025_3DV_Efficient-Continuous-Group-Convolutions-for-Local-SE3-Equi/04_evaluation.md",
-      "reviewed_on": "2026-09-04",
+      "reviewed_on": "2026-11-24",
       "basis": "04_evaluation.md body-derived section cues; benchmark and metric links remain cue_only; unresolved role, split, aggregation, and condition are not promoted to verified metadata."
     },
     "reproducibility": {
@@ -111576,7 +112205,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -111645,9 +112274,9 @@
     "evaluation_profile": {
       "profile_version": "1.0",
       "status": "structured_note_cues",
-      "type": "EMPIRICAL / REAL-ROBOT OR HARDWARE",
+      "type": "BENCHMARK / DATASET",
       "settings": [
-        "real_robot"
+        "benchmark_or_dataset"
       ],
       "protocol": {
         "dataset_or_benchmark": "reported",
@@ -111660,7 +112289,14 @@
         "failure_cases": "reported"
       },
       "trial_evidence": [],
-      "benchmark_cues": [],
+      "benchmark_cues": [
+        {
+          "resource_id": "benchmark:kitti",
+          "name": "KITTI",
+          "evidence": "cue_only",
+          "source": "2025/3DV/2025_3DV_SSRFlow-Semantic-aware-Fusion-with-Spatial-Temporal-Re-emb/04_evaluation.md"
+        }
+      ],
       "metric_cues": [
         {
           "resource_id": "metric:map",
@@ -111670,7 +112306,7 @@
         }
       ],
       "source_note": "2025/3DV/2025_3DV_SSRFlow-Semantic-aware-Fusion-with-Spatial-Temporal-Re-emb/04_evaluation.md",
-      "reviewed_on": "2026-09-04",
+      "reviewed_on": "2026-11-24",
       "basis": "04_evaluation.md body-derived section cues; benchmark and metric links remain cue_only; unresolved role, split, aggregation, and condition are not promoted to verified metadata."
     },
     "reproducibility": {
@@ -111817,7 +112453,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -112059,7 +112695,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -112292,7 +112928,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -112359,9 +112995,9 @@
     "evaluation_profile": {
       "profile_version": "1.0",
       "status": "structured_note_cues",
-      "type": "EMPIRICAL / REAL-ROBOT OR HARDWARE",
+      "type": "BENCHMARK / DATASET",
       "settings": [
-        "real_robot"
+        "benchmark_or_dataset"
       ],
       "protocol": {
         "dataset_or_benchmark": "reported",
@@ -112375,9 +113011,16 @@
       },
       "trial_evidence": [],
       "benchmark_cues": [],
-      "metric_cues": [],
+      "metric_cues": [
+        {
+          "resource_id": "metric:map",
+          "name": "mAP",
+          "evidence": "cue_only",
+          "source": "2025/3DV/2025_3DV_GRIN-Zero-Shot-Metric-Depth-with-Pixel-Level-Diffusion/04_evaluation.md"
+        }
+      ],
       "source_note": "2025/3DV/2025_3DV_GRIN-Zero-Shot-Metric-Depth-with-Pixel-Level-Diffusion/04_evaluation.md",
-      "reviewed_on": "2026-09-04",
+      "reviewed_on": "2026-11-24",
       "basis": "04_evaluation.md body-derived section cues; benchmark and metric links remain cue_only; unresolved role, split, aggregation, and condition are not promoted to verified metadata."
     },
     "reproducibility": {
@@ -112522,7 +113165,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -112757,7 +113400,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -115490,7 +116133,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -116197,7 +116840,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -116276,10 +116919,17 @@
         "failure_cases": "reported"
       },
       "trial_evidence": [],
-      "benchmark_cues": [],
+      "benchmark_cues": [
+        {
+          "resource_id": "benchmark:scannet",
+          "name": "ScanNet",
+          "evidence": "cue_only",
+          "source": "2017/CVPR/2017_CVPR_ScanNet-Richly-annotated-3D-Reconstructions-of-Indoor-Scen/04_evaluation.md"
+        }
+      ],
       "metric_cues": [],
       "source_note": "2017/CVPR/2017_CVPR_ScanNet-Richly-annotated-3D-Reconstructions-of-Indoor-Scen/04_evaluation.md",
-      "reviewed_on": "2026-09-04",
+      "reviewed_on": "2026-11-24",
       "basis": "04_evaluation.md body-derived section cues; benchmark and metric links remain cue_only; unresolved role, split, aggregation, and condition are not promoted to verified metadata."
     },
     "reproducibility": {
@@ -116385,7 +117035,13 @@
         "url": "http://semantic-kitti.org/",
         "kind": "publisher_or_project"
       },
-      "code": null
+      "code": null,
+      "venue_verification": {
+        "url": "https://openaccess.thecvf.com/content_ICCV_2019/html/Behley_SemanticKITTI_A_Dataset_for_Semantic_Scene_Understanding_of_LiDAR_Sequences_ICCV_2019_paper.html",
+        "kind": "cvf",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-24"
+      }
     },
     "artifacts": {
       "code_status": "project_only",
@@ -116414,7 +117070,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -116457,9 +117113,9 @@
         }
       },
       "authors_verification": {
-        "source": "https://api.crossref.org/works/10.1109/iccv.2019.00939",
-        "verified_on": "2026-11-20",
-        "basis": "논문 표제면 또는 출판사 서지에 실린 순서"
+        "source": "https://openaccess.thecvf.com/content_ICCV_2019/papers/Behley_SemanticKITTI_A_Dataset_for_Semantic_Scene_Understanding_of_LiDAR_Sequences_ICCV_2019_paper.pdf#page=1",
+        "verified_on": "2026-11-24",
+        "basis": "ICCV 게재본에서 마지막 저자가 Juergen Gall로 인쇄된 것을 확인했다. CVF 웹 서지는 Jurgen Gall로 표기한다."
       }
     },
     "paper_id": "pr-0497",
@@ -116500,11 +117156,30 @@
           "name": "KITTI",
           "evidence": "cue_only",
           "source": "2019/ICCV/2019_ICCV_SemanticKITTI-A-Dataset-for-Semantic-Scene-Understanding-o/04_evaluation.md"
+        },
+        {
+          "resource_id": "benchmark:semantickitti",
+          "name": "SemanticKITTI",
+          "evidence": "cue_only",
+          "source": "2019/ICCV/2019_ICCV_SemanticKITTI-A-Dataset-for-Semantic-Scene-Understanding-o/04_evaluation.md"
         }
       ],
-      "metric_cues": [],
+      "metric_cues": [
+        {
+          "resource_id": "metric:miou",
+          "name": "mIoU",
+          "evidence": "cue_only",
+          "source": "2019/ICCV/2019_ICCV_SemanticKITTI-A-Dataset-for-Semantic-Scene-Understanding-o/04_evaluation.md"
+        },
+        {
+          "resource_id": "metric:iou",
+          "name": "IoU",
+          "evidence": "cue_only",
+          "source": "2019/ICCV/2019_ICCV_SemanticKITTI-A-Dataset-for-Semantic-Scene-Understanding-o/04_evaluation.md"
+        }
+      ],
       "source_note": "2019/ICCV/2019_ICCV_SemanticKITTI-A-Dataset-for-Semantic-Scene-Understanding-o/04_evaluation.md",
-      "reviewed_on": "2026-09-04",
+      "reviewed_on": "2026-11-24",
       "basis": "04_evaluation.md body-derived section cues; benchmark and metric links remain cue_only; unresolved role, split, aggregation, and condition are not promoted to verified metadata."
     },
     "reproducibility": {
@@ -116560,7 +117235,7 @@
       "Jan Quenzel",
       "Sven Behnke",
       "Cyrill Stachniss",
-      "Jurgen Gall"
+      "Juergen Gall"
     ]
   },
   {
@@ -116643,7 +117318,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -116708,9 +117383,9 @@
     "evaluation_profile": {
       "profile_version": "1.0",
       "status": "structured_note_cues",
-      "type": "EMPIRICAL / REAL-ROBOT OR HARDWARE",
+      "type": "BENCHMARK / DATASET",
       "settings": [
-        "real_robot"
+        "benchmark_or_dataset"
       ],
       "protocol": {
         "dataset_or_benchmark": "reported",
@@ -116723,17 +117398,48 @@
         "failure_cases": "reported"
       },
       "trial_evidence": [],
-      "benchmark_cues": [],
+      "benchmark_cues": [
+        {
+          "resource_id": "benchmark:scannet",
+          "name": "ScanNet",
+          "evidence": "cue_only",
+          "source": "2022/CVPR/2022_CVPR_ScanQA-3D-Question-Answering-for-Spatial-Scene-Understandi/04_evaluation.md"
+        },
+        {
+          "resource_id": "benchmark:scanrefer",
+          "name": "ScanRefer",
+          "evidence": "cue_only",
+          "source": "2022/CVPR/2022_CVPR_ScanQA-3D-Question-Answering-for-Spatial-Scene-Understandi/04_evaluation.md"
+        },
+        {
+          "resource_id": "benchmark:scanqa",
+          "name": "ScanQA",
+          "evidence": "cue_only",
+          "source": "2022/CVPR/2022_CVPR_ScanQA-3D-Question-Answering-for-Spatial-Scene-Understandi/04_evaluation.md"
+        }
+      ],
       "metric_cues": [
         {
           "resource_id": "metric:map",
           "name": "mAP",
           "evidence": "cue_only",
           "source": "2022/CVPR/2022_CVPR_ScanQA-3D-Question-Answering-for-Spatial-Scene-Understandi/04_evaluation.md"
+        },
+        {
+          "resource_id": "metric:bleu",
+          "name": "BLEU",
+          "evidence": "cue_only",
+          "source": "2022/CVPR/2022_CVPR_ScanQA-3D-Question-Answering-for-Spatial-Scene-Understandi/04_evaluation.md"
+        },
+        {
+          "resource_id": "metric:em",
+          "name": "EM",
+          "evidence": "cue_only",
+          "source": "2022/CVPR/2022_CVPR_ScanQA-3D-Question-Answering-for-Spatial-Scene-Understandi/04_evaluation.md"
         }
       ],
       "source_note": "2022/CVPR/2022_CVPR_ScanQA-3D-Question-Answering-for-Spatial-Scene-Understandi/04_evaluation.md",
-      "reviewed_on": "2026-09-04",
+      "reviewed_on": "2026-11-24",
       "basis": "04_evaluation.md body-derived section cues; benchmark and metric links remain cue_only; unresolved role, split, aggregation, and condition are not promoted to verified metadata."
     },
     "reproducibility": {
@@ -125630,7 +126336,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -125696,9 +126402,9 @@
     "evaluation_profile": {
       "profile_version": "1.0",
       "status": "structured_note_cues",
-      "type": "EMPIRICAL / REAL-ROBOT OR HARDWARE",
+      "type": "BENCHMARK / DATASET",
       "settings": [
-        "real_robot"
+        "benchmark_or_dataset"
       ],
       "protocol": {
         "dataset_or_benchmark": "reported",
@@ -125711,8 +126417,27 @@
         "failure_cases": "reported"
       },
       "trial_evidence": [],
-      "benchmark_cues": [],
+      "benchmark_cues": [
+        {
+          "resource_id": "benchmark:scannet",
+          "name": "ScanNet",
+          "evidence": "cue_only",
+          "source": "2021/ICCV/2021_ICCV_In-Place-Scene-Labelling-and-Understanding-with-Implicit-S/04_evaluation.md"
+        },
+        {
+          "resource_id": "benchmark:replica",
+          "name": "Replica",
+          "evidence": "cue_only",
+          "source": "2021/ICCV/2021_ICCV_In-Place-Scene-Labelling-and-Understanding-with-Implicit-S/04_evaluation.md"
+        }
+      ],
       "metric_cues": [
+        {
+          "resource_id": "metric:miou",
+          "name": "mIoU",
+          "evidence": "cue_only",
+          "source": "2021/ICCV/2021_ICCV_In-Place-Scene-Labelling-and-Understanding-with-Implicit-S/04_evaluation.md"
+        },
         {
           "resource_id": "metric:map",
           "name": "mAP",
@@ -125721,7 +126446,7 @@
         }
       ],
       "source_note": "2021/ICCV/2021_ICCV_In-Place-Scene-Labelling-and-Understanding-with-Implicit-S/04_evaluation.md",
-      "reviewed_on": "2026-09-04",
+      "reviewed_on": "2026-11-24",
       "basis": "04_evaluation.md body-derived section cues; benchmark and metric links remain cue_only; unresolved role, split, aggregation, and condition are not promoted to verified metadata."
     },
     "reproducibility": {
@@ -127280,7 +128005,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -127521,7 +128246,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -127751,7 +128476,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -127831,10 +128556,48 @@
         "failure_cases": "reported"
       },
       "trial_evidence": [],
-      "benchmark_cues": [],
-      "metric_cues": [],
+      "benchmark_cues": [
+        {
+          "resource_id": "benchmark:nuscenes",
+          "name": "nuScenes",
+          "evidence": "cue_only",
+          "source": "2020/CVPR/2020_CVPR_nuScenes-A-Multimodal-Dataset-for-Autonomous-Driving/04_evaluation.md"
+        },
+        {
+          "resource_id": "benchmark:waymo",
+          "name": "Waymo",
+          "evidence": "cue_only",
+          "source": "2020/CVPR/2020_CVPR_nuScenes-A-Multimodal-Dataset-for-Autonomous-Driving/04_evaluation.md"
+        },
+        {
+          "resource_id": "benchmark:kitti",
+          "name": "KITTI",
+          "evidence": "cue_only",
+          "source": "2020/CVPR/2020_CVPR_nuScenes-A-Multimodal-Dataset-for-Autonomous-Driving/04_evaluation.md"
+        }
+      ],
+      "metric_cues": [
+        {
+          "resource_id": "metric:iou",
+          "name": "IoU",
+          "evidence": "cue_only",
+          "source": "2020/CVPR/2020_CVPR_nuScenes-A-Multimodal-Dataset-for-Autonomous-Driving/04_evaluation.md"
+        },
+        {
+          "resource_id": "metric:ap",
+          "name": "AP",
+          "evidence": "cue_only",
+          "source": "2020/CVPR/2020_CVPR_nuScenes-A-Multimodal-Dataset-for-Autonomous-Driving/04_evaluation.md"
+        },
+        {
+          "resource_id": "metric:map",
+          "name": "mAP",
+          "evidence": "cue_only",
+          "source": "2020/CVPR/2020_CVPR_nuScenes-A-Multimodal-Dataset-for-Autonomous-Driving/04_evaluation.md"
+        }
+      ],
       "source_note": "2020/CVPR/2020_CVPR_nuScenes-A-Multimodal-Dataset-for-Autonomous-Driving/04_evaluation.md",
-      "reviewed_on": "2026-09-04",
+      "reviewed_on": "2026-11-24",
       "basis": "04_evaluation.md body-derived section cues; benchmark and metric links remain cue_only; unresolved role, split, aggregation, and condition are not promoted to verified metadata."
     },
     "reproducibility": {
@@ -128206,7 +128969,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -128286,10 +129049,36 @@
         "failure_cases": "reported"
       },
       "trial_evidence": [],
-      "benchmark_cues": [],
-      "metric_cues": [],
+      "benchmark_cues": [
+        {
+          "resource_id": "benchmark:waymo",
+          "name": "Waymo",
+          "evidence": "cue_only",
+          "source": "2020/CVPR/2020_CVPR_Waymo-Open-Dataset-An-Autonomous-Driving-Dataset/04_evaluation.md"
+        }
+      ],
+      "metric_cues": [
+        {
+          "resource_id": "metric:iou",
+          "name": "IoU",
+          "evidence": "cue_only",
+          "source": "2020/CVPR/2020_CVPR_Waymo-Open-Dataset-An-Autonomous-Driving-Dataset/04_evaluation.md"
+        },
+        {
+          "resource_id": "metric:ap",
+          "name": "AP",
+          "evidence": "cue_only",
+          "source": "2020/CVPR/2020_CVPR_Waymo-Open-Dataset-An-Autonomous-Driving-Dataset/04_evaluation.md"
+        },
+        {
+          "resource_id": "metric:sr",
+          "name": "SR",
+          "evidence": "cue_only",
+          "source": "2020/CVPR/2020_CVPR_Waymo-Open-Dataset-An-Autonomous-Driving-Dataset/04_evaluation.md"
+        }
+      ],
       "source_note": "2020/CVPR/2020_CVPR_Waymo-Open-Dataset-An-Autonomous-Driving-Dataset/04_evaluation.md",
-      "reviewed_on": "2026-09-04",
+      "reviewed_on": "2026-11-24",
       "basis": "04_evaluation.md body-derived section cues; benchmark and metric links remain cue_only; unresolved role, split, aggregation, and condition are not promoted to verified metadata."
     },
     "reproducibility": {
@@ -177301,7 +178090,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -177366,9 +178155,9 @@
     "evaluation_profile": {
       "profile_version": "1.0",
       "status": "structured_note_cues",
-      "type": "SYSTEM / EVALUATION SCOPE UNRESOLVED",
+      "type": "BENCHMARK / DATASET",
       "settings": [
-        "scope_unresolved"
+        "benchmark_or_dataset"
       ],
       "protocol": {
         "dataset_or_benchmark": "reported",
@@ -177384,6 +178173,12 @@
       "benchmark_cues": [],
       "metric_cues": [
         {
+          "resource_id": "metric:miou",
+          "name": "mIoU",
+          "evidence": "cue_only",
+          "source": "2024/CVPR/2024_CVPR_Language-Embedded-3D-Gaussians-for-Open-Vocabulary-Scene-U/04_evaluation.md"
+        },
+        {
           "resource_id": "metric:map",
           "name": "mAP",
           "evidence": "cue_only",
@@ -177391,7 +178186,7 @@
         }
       ],
       "source_note": "2024/CVPR/2024_CVPR_Language-Embedded-3D-Gaussians-for-Open-Vocabulary-Scene-U/04_evaluation.md",
-      "reviewed_on": "2026-09-04",
+      "reviewed_on": "2026-11-24",
       "basis": "04_evaluation.md body-derived section cues; benchmark and metric links remain cue_only; unresolved role, split, aggregation, and condition are not promoted to verified metadata."
     },
     "reproducibility": {
@@ -177729,7 +178524,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -179226,7 +180021,13 @@
         "kind": "cvf"
       },
       "project": null,
-      "code": null
+      "code": null,
+      "venue_verification": {
+        "url": "https://openaccess.thecvf.com/content/CVPR2024/html/Yang_Holodeck_Language_Guided_Generation_of_3D_Embodied_AI_Environments_CVPR_2024_paper.html",
+        "kind": "cvf",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-24"
+      }
     },
     "artifacts": {
       "code_status": "not_identified",
@@ -179255,7 +180056,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -179298,9 +180099,9 @@
         }
       },
       "authors_verification": {
-        "source": "https://openaccess.thecvf.com/content/CVPR2024/html/Yang_Holodeck_Language_Guided_Generation_of_3D_Embodied_AI_Environments_CVPR_2024_paper.html",
-        "verified_on": "2026-11-20",
-        "basis": "논문 표제면 또는 출판사 서지에 실린 순서"
+        "source": "https://openaccess.thecvf.com/content/CVPR2024/papers/Yang_Holodeck_Language_Guided_Generation_of_3D_Embodied_AI_Environments_CVPR_2024_paper.pdf#page=1",
+        "verified_on": "2026-11-24",
+        "basis": "CVPR 게재본 표제면의 네 번째 저자 Eli Vanderbilt 표기를 반영했다."
       }
     },
     "paper_id": "pr-0765",
@@ -179325,9 +180126,9 @@
     "evaluation_profile": {
       "profile_version": "1.0",
       "status": "structured_note_cues",
-      "type": "SYSTEM / EVALUATION SCOPE UNRESOLVED",
+      "type": "EMPIRICAL / SIMULATION",
       "settings": [
-        "scope_unresolved"
+        "simulation"
       ],
       "protocol": {
         "dataset_or_benchmark": "reported",
@@ -179347,10 +180148,16 @@
           "name": "mAP",
           "evidence": "cue_only",
           "source": "2024/CVPR/2024_CVPR_Holodeck-Language-Guided-Generation-of-3D-Embodied-AI-Envi/04_evaluation.md"
+        },
+        {
+          "resource_id": "metric:spl",
+          "name": "SPL",
+          "evidence": "cue_only",
+          "source": "2024/CVPR/2024_CVPR_Holodeck-Language-Guided-Generation-of-3D-Embodied-AI-Envi/04_evaluation.md"
         }
       ],
       "source_note": "2024/CVPR/2024_CVPR_Holodeck-Language-Guided-Generation-of-3D-Embodied-AI-Envi/04_evaluation.md",
-      "reviewed_on": "2026-09-04",
+      "reviewed_on": "2026-11-24",
       "basis": "04_evaluation.md body-derived section cues; benchmark and metric links remain cue_only; unresolved role, split, aggregation, and condition are not promoted to verified metadata."
     },
     "reproducibility": {
@@ -179402,7 +180209,7 @@
       "Yue Yang",
       "Fan-Yun Sun",
       "Luca Weihs",
-      "Eli VanderBilt",
+      "Eli Vanderbilt",
       "Alvaro Herrasti",
       "Winson Han",
       "Jiajun Wu",
@@ -179483,7 +180290,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -179548,9 +180355,10 @@
     "evaluation_profile": {
       "profile_version": "1.0",
       "status": "structured_note_cues",
-      "type": "SYSTEM / EVALUATION SCOPE UNRESOLVED",
+      "type": "BENCHMARK / SIMULATION",
       "settings": [
-        "scope_unresolved"
+        "simulation",
+        "benchmark_or_dataset"
       ],
       "protocol": {
         "dataset_or_benchmark": "reported",
@@ -179563,7 +180371,20 @@
         "failure_cases": "reported"
       },
       "trial_evidence": [],
-      "benchmark_cues": [],
+      "benchmark_cues": [
+        {
+          "resource_id": "benchmark:hm3d",
+          "name": "HM3D",
+          "evidence": "cue_only",
+          "source": "2024/CVPR/2024_CVPR_MultiPLY-A-Multisensory-Object-Centric-Embodied-Large-Lang/04_evaluation.md"
+        },
+        {
+          "resource_id": "benchmark:habitat",
+          "name": "Habitat",
+          "evidence": "cue_only",
+          "source": "2024/CVPR/2024_CVPR_MultiPLY-A-Multisensory-Object-Centric-Embodied-Large-Lang/04_evaluation.md"
+        }
+      ],
       "metric_cues": [
         {
           "resource_id": "metric:map",
@@ -179573,7 +180394,7 @@
         }
       ],
       "source_note": "2024/CVPR/2024_CVPR_MultiPLY-A-Multisensory-Object-Centric-Embodied-Large-Lang/04_evaluation.md",
-      "reviewed_on": "2026-09-04",
+      "reviewed_on": "2026-11-24",
       "basis": "04_evaluation.md body-derived section cues; benchmark and metric links remain cue_only; unresolved role, split, aggregation, and condition are not promoted to verified metadata."
     },
     "reproducibility": {
@@ -182002,7 +182823,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -182106,7 +182927,7 @@
         }
       ],
       "source_note": "2025/CVPR/2025_CVPR_Chain-of-Semantics-Programming-in-3D-Gaussian-Splatting-Re/04_evaluation.md",
-      "reviewed_on": "2026-09-04",
+      "reviewed_on": "2026-11-24",
       "basis": "04_evaluation.md body-derived section cues; benchmark and metric links remain cue_only; unresolved role, split, aggregation, and condition are not promoted to verified metadata."
     },
     "reproducibility": {
@@ -183361,7 +184182,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -183578,7 +184399,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -184965,7 +185786,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -185031,9 +185852,9 @@
     "evaluation_profile": {
       "profile_version": "1.0",
       "status": "structured_note_cues",
-      "type": "EMPIRICAL / REAL-ROBOT OR HARDWARE",
+      "type": "BENCHMARK / DATASET",
       "settings": [
-        "real_robot"
+        "benchmark_or_dataset"
       ],
       "protocol": {
         "dataset_or_benchmark": "reported",
@@ -185046,8 +185867,45 @@
         "failure_cases": "reported"
       },
       "trial_evidence": [],
-      "benchmark_cues": [],
+      "benchmark_cues": [
+        {
+          "resource_id": "benchmark:scannet",
+          "name": "ScanNet",
+          "evidence": "cue_only",
+          "source": "2025/ICCV/2025_ICCV_SceneSplat-Gaussian-Splatting-based-Scene-Understanding-wi/04_evaluation.md"
+        },
+        {
+          "resource_id": "benchmark:scannet200",
+          "name": "ScanNet200",
+          "evidence": "cue_only",
+          "source": "2025/ICCV/2025_ICCV_SceneSplat-Gaussian-Splatting-based-Scene-Understanding-wi/04_evaluation.md"
+        },
+        {
+          "resource_id": "benchmark:replica",
+          "name": "Replica",
+          "evidence": "cue_only",
+          "source": "2025/ICCV/2025_ICCV_SceneSplat-Gaussian-Splatting-based-Scene-Understanding-wi/04_evaluation.md"
+        },
+        {
+          "resource_id": "benchmark:matterport3d",
+          "name": "Matterport3D",
+          "evidence": "cue_only",
+          "source": "2025/ICCV/2025_ICCV_SceneSplat-Gaussian-Splatting-based-Scene-Understanding-wi/04_evaluation.md"
+        }
+      ],
       "metric_cues": [
+        {
+          "resource_id": "metric:miou",
+          "name": "mIoU",
+          "evidence": "cue_only",
+          "source": "2025/ICCV/2025_ICCV_SceneSplat-Gaussian-Splatting-based-Scene-Understanding-wi/04_evaluation.md"
+        },
+        {
+          "resource_id": "metric:iou",
+          "name": "IoU",
+          "evidence": "cue_only",
+          "source": "2025/ICCV/2025_ICCV_SceneSplat-Gaussian-Splatting-based-Scene-Understanding-wi/04_evaluation.md"
+        },
         {
           "resource_id": "metric:map",
           "name": "mAP",
@@ -185056,7 +185914,7 @@
         }
       ],
       "source_note": "2025/ICCV/2025_ICCV_SceneSplat-Gaussian-Splatting-based-Scene-Understanding-wi/04_evaluation.md",
-      "reviewed_on": "2026-09-04",
+      "reviewed_on": "2026-11-24",
       "basis": "04_evaluation.md body-derived section cues; benchmark and metric links remain cue_only; unresolved role, split, aggregation, and condition are not promoted to verified metadata."
     },
     "reproducibility": {
@@ -188699,7 +189557,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -188921,7 +189779,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -188986,9 +189844,9 @@
     "evaluation_profile": {
       "profile_version": "1.0",
       "status": "structured_note_cues",
-      "type": "EMPIRICAL / REAL-ROBOT OR HARDWARE",
+      "type": "BENCHMARK / DATASET",
       "settings": [
-        "real_robot"
+        "benchmark_or_dataset"
       ],
       "protocol": {
         "dataset_or_benchmark": "reported",
@@ -189001,8 +189859,21 @@
         "failure_cases": "reported"
       },
       "trial_evidence": [],
-      "benchmark_cues": [],
+      "benchmark_cues": [
+        {
+          "resource_id": "benchmark:scannet",
+          "name": "ScanNet",
+          "evidence": "cue_only",
+          "source": "2026/CVPR/2026_CVPR_LightSplat-Fast-and-Memory-Efficient-Open-Vocabulary-3D-Sc/04_evaluation.md"
+        }
+      ],
       "metric_cues": [
+        {
+          "resource_id": "metric:miou",
+          "name": "mIoU",
+          "evidence": "cue_only",
+          "source": "2026/CVPR/2026_CVPR_LightSplat-Fast-and-Memory-Efficient-Open-Vocabulary-3D-Sc/04_evaluation.md"
+        },
         {
           "resource_id": "metric:map",
           "name": "mAP",
@@ -189011,7 +189882,7 @@
         }
       ],
       "source_note": "2026/CVPR/2026_CVPR_LightSplat-Fast-and-Memory-Efficient-Open-Vocabulary-3D-Sc/04_evaluation.md",
-      "reviewed_on": "2026-09-04",
+      "reviewed_on": "2026-11-24",
       "basis": "04_evaluation.md body-derived section cues; benchmark and metric links remain cue_only; unresolved role, split, aggregation, and condition are not promoted to verified metadata."
     },
     "reproducibility": {
@@ -189135,7 +190006,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",

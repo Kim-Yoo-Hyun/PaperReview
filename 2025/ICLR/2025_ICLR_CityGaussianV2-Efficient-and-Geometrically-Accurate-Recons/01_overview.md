@@ -16,12 +16,11 @@
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (18 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다. [본문](https://proceedings.iclr.cc/paper_files/paper/2025/file/d218ec74edbfc494fa7d7a253951c603-Paper-Conference.pdf)
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — On the one hand, existing methods face significant challenges related to scalability and generalization ability.
-
-방법 관련 발췌 — In summary, our contributions are four-fold: • A novel optimization strategy for 2DGS, that accelerates its convergence under large-scale scenes and enables it to be scaled up to high capacity (Sec.
+CityGaussianV2는 도시 규모 장면에서 2D 가우시안의 기하와 렌더링을 함께 복원하면서 훈련·저장 비용을 줄인다. [PDF 1쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/d218ec74edbfc494fa7d7a253951c603-Paper-Conference.pdf#page=1) · [PDF 5쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/d218ec74edbfc494fa7d7a253951c603-Paper-Conference.pdf#page=5)
 
 ## Problem and Motivation
 
@@ -55,16 +54,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** In summary, our contributions are four-fold: • A novel optimization strategy for 2DGS, that accelerates its convergence under large-scale scenes and enables it to be ...
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** Furthermore, our contribution-based vectree quantization enables a tenfold reduction in storage requirements for large-scale 2DGS.
-- **p. 6 / 3 METHOD - extractive body cue:** To resolve these issues, we propose a novel pipeline, as shown in Fig.
-- **p. 3 / 1 INTRODUCTION - extractive body cue:** TrimGS (Fan et al., 2024) further provides a novel per-Gaussian contribution definition to remove inaccurate geometry.
-- **p. 3 / 1 INTRODUCTION - extractive body cue:** One of the most seminal contributions to this field is Neural Radiance Fields (NeRF) (Mildenhall et al., 2021), which implicitly models target scenes using multi-layer ...
-- **p. 9 / 5 EXPERIMENTS - extractive body cue:** For MatrixCity-Aerial, our method achieves the best surface quality among all algorithms, with the F1 score being twice that of 2DGS and outperforming CityGaussian by ...
-- **p. 8 / 5 EXPERIMENTS - extractive body cue:** For GauU-Scene, our model significantly outperforms existing geometry-specialized methods in rendering quality.
-- **p. 8 / 5 EXPERIMENTS - extractive body cue:** 1 shows that even without parallel tuning, our proposed optimization strategy enables our model to achieve significantly better 8
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 분리한 기울기와 깊이 회귀로 가우시안 증식을 제어하고, 지나치게 길어진 가우시안을 걸러 개수 폭증을 억제한다. [PDF 4쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/d218ec74edbfc494fa7d7a253951c603-Paper-Conference.pdf#page=4) · [PDF 5쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/d218ec74edbfc494fa7d7a253951c603-Paper-Conference.pdf#page=5) · [PDF 6쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/d218ec74edbfc494fa7d7a253951c603-Paper-Conference.pdf#page=6)
+- 대규모 장면에서 정답 점군에 대한 표면 오차와 렌더링 품질을 평가하고 블록별 학습의 시간·메모리·저장 비용을 비교했다. [PDF 7쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/d218ec74edbfc494fa7d7a253951c603-Paper-Conference.pdf#page=7) · [PDF 8쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/d218ec74edbfc494fa7d7a253951c603-Paper-Conference.pdf#page=8) · [PDF 9쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/d218ec74edbfc494fa7d7a253951c603-Paper-Conference.pdf#page=9)
 
 ## Evaluation Scope
 

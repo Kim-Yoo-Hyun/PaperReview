@@ -6,7 +6,7 @@
 
 ## Evaluation in One Sentence
 
-PDF body evaluation/result cue (p. 7 (5.2. Ablation study), p. 7 (5.1. Scene completion), p. 6 (5.1. Scene completion), p. 6 (5.1. Scene completion), p. 2 (Figure/Table caption), p. 8 (5.3. Qualitative analysis)): However, after considering the structural loss, the performance of ScoreLiDAR improves significantly, which achieves better performance on all metrics.
+SemanticKITTI 표 1에서 정제 단계를 포함한 프레임당 샘플링 시간은 LiDiff 30.55초, ScoreLiDAR 5.37초다. 같은 행에서 Chamfer 거리와 JSD는 낮아졌고 EMD는 23.16에서 23.26으로 높아졌다. [PDF 6쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Zhang_Distilling_Diffusion_Models_to_Efficient_3D_LiDAR_Scene_Completion_ICCV_2025_paper.pdf#page=6)
 
 ## Evaluation Body Digest
 
@@ -21,22 +21,19 @@ PDF body evaluation/result cue (p. 7 (5.2. Ablation study), p. 7 (5.1. Scene com
 
 ## Evaluation Type and Scope
 
-- **Evaluation type:** `SYSTEM / EVALUATION SCOPE UNRESOLVED`.
-- **Target system/task:** 3D scene/object와 robot coordinate frame.
-- **Input boundary:** RGB-D, image set, point cloud, depth와 camera pose.
-- **Output/decision under evaluation:** point map, pose, scene graph, affordance 또는 query result.
-- **Primary target:** geometric accuracy, semantic consistency와 planning/manipulation utility.
+- **Evaluation type:** `BENCHMARK / DATASET`.
+- **평가 대상:** SemanticKITTI에서 완성 품질과 프레임당 시간을 함께 비교하고 구조 손실을 제거했을 때의 변화를 측정했다. [PDF 6쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Zhang_Distilling_Diffusion_Models_to_Efficient_3D_LiDAR_Scene_Completion_ICCV_2025_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Zhang_Distilling_Diffusion_Models_to_Efficient_3D_LiDAR_Scene_Completion_ICCV_2025_paper.pdf#page=7)
 - **Detected evaluation headings:** 5. Experiment (p. 6).
 
 ## Experimental Matrix
 
 | Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
-| 5.2. Ablation study | SYSTEM / EVALUATION SCOPE UNRESOLVED | However, after considering the structural loss, the performance of ScoreLiDAR improves significantly, which achieves better performance on all metrics. | p. 7 (5.2. Ablation study) |
-| 5.1. Scene completion | SYSTEM / EVALUATION SCOPE UNRESOLVED | ScoreLiDAR achieves better completion than LiDiff [24] with fewer sampling steps. a fivefold speedup with 12% improvement in CD and 2% in JSD compared ... | p. 7 (5.1. Scene completion) |
-| 5.1. Scene completion | SYSTEM / EVALUATION SCOPE UNRESOLVED | The performance of ScoreLiDAR outperforms the teacher model LiDiff [23]. | p. 6 (5.1. Scene completion) |
-| 5.1. Scene completion | SYSTEM / EVALUATION SCOPE UNRESOLVED | ScoreLiDAR also achieves optimal performance in most cases and boasts 5012 | p. 6 (5.1. Scene completion) |
-| Figure/Table caption | SYSTEM / EVALUATION SCOPE UNRESOLVED | Figure 2. A visualization of LiDAR scene completion perfor- mances with different models on SemanticKITTI [1] dataset. Gen- erally, our proposed ScoreLiDAR achieves better ... | p. 2 (Figure/Table caption) |
+| 5.2. Ablation study | BENCHMARK / DATASET | However, after considering the structural loss, the performance of ScoreLiDAR improves significantly, which achieves better performance on all metrics. | p. 7 (5.2. Ablation study) |
+| 5.1. Scene completion | BENCHMARK / DATASET | ScoreLiDAR achieves better completion than LiDiff [24] with fewer sampling steps. a fivefold speedup with 12% improvement in CD and 2% in JSD compared ... | p. 7 (5.1. Scene completion) |
+| 5.1. Scene completion | BENCHMARK / DATASET | The performance of ScoreLiDAR outperforms the teacher model LiDiff [23]. | p. 6 (5.1. Scene completion) |
+| 5.1. Scene completion | BENCHMARK / DATASET | ScoreLiDAR also achieves optimal performance in most cases and boasts 5012 | p. 6 (5.1. Scene completion) |
+| Figure/Table caption | BENCHMARK / DATASET | Figure 2. A visualization of LiDAR scene completion perfor- mances with different models on SemanticKITTI [1] dataset. Gen- erally, our proposed ScoreLiDAR achieves better ... | p. 2 (Figure/Table caption) |
 
 ## Dataset / Benchmark Role
 

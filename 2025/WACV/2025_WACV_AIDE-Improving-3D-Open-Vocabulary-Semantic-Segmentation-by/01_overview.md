@@ -16,12 +16,11 @@
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (12 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다. [본문](https://openaccess.thecvf.com/content/WACV2025/papers/Wang_AIDE_Improving_3D_Open-Vocabulary_Semantic_Segmentation_by_Aligned_Vision-Language_Learning_WACV_2025_paper.pdf)
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — In summary, our contributions are as follows, • We identify two significant challenges within existing methods, i.e., the misalignment in 3D-scene-image-totext data pairs and the need to adapt text encoders into 1Higher ...
-
-방법 관련 발췌 — To address these issues, we propose a novel AlIgned 3D Open-Vocabulary SEmantic Segmentation framework, called AIDE.
+AIDE는 실내 점군과 뷰별 캡션의 정렬을 개선하고 텍스트 인코더를 3차원 의미 분할에 적응시킨다. [PDF 1쪽](https://openaccess.thecvf.com/content/WACV2025/papers/Wang_AIDE_Improving_3D_Open-Vocabulary_Semantic_Segmentation_by_Aligned_Vision-Language_Learning_WACV_2025_paper.pdf#page=1) · [PDF 4쪽](https://openaccess.thecvf.com/content/WACV2025/papers/Wang_AIDE_Improving_3D_Open-Vocabulary_Semantic_Segmentation_by_Aligned_Vision-Language_Learning_WACV_2025_paper.pdf#page=4)
 
 ## Problem and Motivation
 
@@ -53,16 +52,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** To address these issues, we propose a novel AlIgned 3D Open-Vocabulary SEmantic Segmentation framework, called AIDE.
-- **p. 2 / 1. Introduction - extractive body cue:** Then, to encourage rich associations between 3D and text, we propose the CLIP-rewarded sampling method, which samples captions based on their similarity to the 3D-scene ...
-- **p. 4 / 3.1. Problem Definition - extractive body cue:** Our solution: To generate aligned data, we propose the CLIP-rewarded alignment module in Sec.
-- **p. 4 / 3.1. Problem Definition - extractive body cue:** Our solution: To solve this issue and adapt text encoders by automatically finding the most suitable prompt, we propose the adaptive segmentation module elaborated in ...
-- **p. 5 / 3.4. Adaptive Segmentation-Text Modeling - extractive body cue:** To better adapt the text encoder to 3D scenarios, we introduce a small number of learnable tokens TOKENS at the input and every transformer layer ...
-- **p. 8 / 4.4. Qualitative Results-Generalization - extractive body cue:** Qualitative results of segmentation compared between baseline and AIDE. achieves significant improvements in all metrics, with hIoU, mIoUB, and mIoUN increasing from 32.1, 31.6, and ...
-- **p. 7 / Figure/Table caption - extractive body cue:** Table 5. Ablation studies on different numbers of learnable tokens of AIDE on ScanNet (B15/N4). conduct a series of experiments as shown in Tab. 5. ...
-- **p. 7 / 4.3. Ablation Studies - extractive body cue:** Also, we observe consistent improvement when increasing the number of samples from 1 to 30, underscoring the value of leveraging more descriptive and diverse captions ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 여러 샘플링 온도로 영상 설명을 생성한 뒤 CLIP 유사도로 설명을 선택해 영상·점군·텍스트의 감독 쌍을 구성한다. [PDF 3쪽](https://openaccess.thecvf.com/content/WACV2025/papers/Wang_AIDE_Improving_3D_Open-Vocabulary_Semantic_Segmentation_by_Aligned_Vision-Language_Learning_WACV_2025_paper.pdf#page=3) · [PDF 4쪽](https://openaccess.thecvf.com/content/WACV2025/papers/Wang_AIDE_Improving_3D_Open-Vocabulary_Semantic_Segmentation_by_Aligned_Vision-Language_Learning_WACV_2025_paper.pdf#page=4) · [PDF 5쪽](https://openaccess.thecvf.com/content/WACV2025/papers/Wang_AIDE_Improving_3D_Open-Vocabulary_Semantic_Segmentation_by_Aligned_Vision-Language_Learning_WACV_2025_paper.pdf#page=5)
+- 고정한 텍스트 인코더의 입력과 내부 층에 학습 토큰을 넣고 여러 개방 어휘 분할 자료에서 각 구성 요소의 효과를 평가했다. [PDF 5쪽](https://openaccess.thecvf.com/content/WACV2025/papers/Wang_AIDE_Improving_3D_Open-Vocabulary_Semantic_Segmentation_by_Aligned_Vision-Language_Learning_WACV_2025_paper.pdf#page=5) · [PDF 6쪽](https://openaccess.thecvf.com/content/WACV2025/papers/Wang_AIDE_Improving_3D_Open-Vocabulary_Semantic_Segmentation_by_Aligned_Vision-Language_Learning_WACV_2025_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content/WACV2025/papers/Wang_AIDE_Improving_3D_Open-Vocabulary_Semantic_Segmentation_by_Aligned_Vision-Language_Learning_WACV_2025_paper.pdf#page=7)
 
 ## Evaluation Scope
 

@@ -16,12 +16,11 @@
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다. [본문](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/zhang26fn/zhang26fn.pdf)
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, most existing approaches remain limited to streaming modeling of geometry and appearance, lacking semantic scene understanding and instance-level, decomposable representations, and thus falling short for downstream applications ...
-
-방법 관련 발췌 — We propose S2GS, a strictly causal and reprocessing-free framework for online joint 3D reconstruction and scene understanding, which incrementally maintains scene geometry, appearance, and an instance-level semantic field.
+S2GS는 영상이 도착할 때마다 과거 프레임을 다시 처리하지 않고 장면의 기하·외관과 인스턴스 의미를 갱신한다. [PDF 1쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/zhang26fn/zhang26fn.pdf#page=1) · [PDF 3쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/zhang26fn/zhang26fn.pdf#page=3)
 
 ## Problem and Motivation
 
@@ -55,26 +54,12 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** We propose S2GS, a strictly causal and reprocessing-free framework for online joint 3D reconstruction and scene understanding, which incrementally maintains scene geometry, appearance, and an ...
-- **p. 5 / 3.4. Language-driven Open-vocabulary Segmentation - extractive body cue:** To bridge this gap, we introduce a lightweight Query Semantic Projector gθ(·) that maps each per-frame query embedding to the 2D foundation vision model (Tschannen ...
-- **p. 2 / 1. Introduction - extractive body cue:** Our contributions are summarized as follows: 1.
-- **p. 3 / 3.2. Causal Transformer for 3D Gaussian Regression - extractive body cue:** (1) This design allows parallel processing of training clips while remaining equivalent to an autoregressive causal model.
-- **p. 4 / 3.2. Causal Transformer for 3D Gaussian Regression - extractive body cue:** Semantic confidence is lifted to the 3D Gaussian field and decoded via splatting, enabling unified novel view synthesis, semantic segmentation, instance segmentation, and panoptic segmentation ...
-- **p. 6 / 4.2. Results - extractive body cue:** Nevertheless, as the number of input views increases (8/14/32), S2GS consistently improves and achieves strong performance in both reconstruction quality and temporal semantic/instance consistency, highlighting ...
-- **p. 8 / 4.3. Ablation Studies - extractive body cue:** The results demonstrate that the distillation loss significantly improves reconstruction quality.
-- **p. 8 / 4.3. Ablation Studies - extractive body cue:** As shown in Table 7, geometry-semantic decoupling leads to a clear improvement in per-frame semantic accuracy and yields even larger gains in temporal instance consistency ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 인과적 기하 분기에서 가우시안을 갱신하고 의미 분기에서 쿼리 대조 학습과 인스턴스 메모리로 프레임 사이의 식별자를 연결한다. [PDF 3쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/zhang26fn/zhang26fn.pdf#page=3) · [PDF 4쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/zhang26fn/zhang26fn.pdf#page=4) · [PDF 5쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/zhang26fn/zhang26fn.pdf#page=5)
+- 복원과 분할을 함께 평가하고 입력 길이에 따른 메모리 사용량과 처리 시간을 오프라인 일괄 처리 모델과 비교했다. [PDF 6쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/zhang26fn/zhang26fn.pdf#page=6) · [PDF 7쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/zhang26fn/zhang26fn.pdf#page=7) · [PDF 8쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/zhang26fn/zhang26fn.pdf#page=8)
 
 ## Evaluation Scope
 
-| Dimension | Body-grounded record | Boundary | Anchor |
-|---|---|---|---|
-| Evaluation type | EMPIRICAL / SOURCE-REPORTED EVALUATION | do not infer unreported downstream behavior | p. 6 (4.2. Results), p. 8 (4.3. Ablation Studies) |
-| Embodiment/environment | Comparison with feed-forward methods on the ScanNet (Dai et al., 2017) dataset under short-sequence inputs. "•", "†", and "⋆" denote reconstruction-only, understanding-only, and joint reconstruction-and-understanding methods, respectively. | hardware/simulator version and reset protocol | p. 6 (4.1. Experimental Setup), p. 7 (4.2. Results) |
-| Dataset/benchmark | Zero-shot cross-dataset comparison under 32-view input. | role, split, size and leakage | p. 6 (4.1. Experimental Setup), p. 7 (4.2. Results), p. 7 (4.2. Results), p. 8 (4.2. Results) |
-| Metric | Detailed sequence construction, the IoU definition, and training settings are provided in the appendix. | definition, denominator, direction and uncertainty | p. 5 (4.1. Experimental Setup), p. 6 (82.49 Method), p. 8 (4.3. Ablation Studies) |
-| Baseline/ablation | We also include widely used 2D semantic segmentation baselines, LSeg (Li et al., 2022) and Mask2Former (Cheng et al., 2022). | fair input/data/compute/action matching | p. 5 (4.1. Experimental Setup), p. 5 (4.1. Experimental Setup), p. 6 (4.2. Results) |
+스트리밍 효율 비교는 현재 뷰를 처리해 누적 상태를 갱신하는 프레임당 지연과 최대 GPU 메모리를 입력 길이별로 측정했다. 재구성·분할·인스턴스 추적의 정확도는 별도 지표로 평가했다. [PDF 6쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/zhang26fn/zhang26fn.pdf#page=6) · [PDF 7쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/zhang26fn/zhang26fn.pdf#page=7) · [PDF 8쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/zhang26fn/zhang26fn.pdf#page=8)
 
 ## Explicit Limitations and Failure Boundary
 

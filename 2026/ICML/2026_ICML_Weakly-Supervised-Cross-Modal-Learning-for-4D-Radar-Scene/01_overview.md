@@ -16,12 +16,11 @@
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (16 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다. [본문](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/fu26r/fu26r.pdf)
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — A straightforward attempt is to extend LiDAR-based self-supervised approaches, but the commonly used clustering strategies (Zhang et al., 2024b; Lin et al., 2025b) and Chamfer-guided (Wu et al., 2020; Mittal et al., ...
-
-방법 관련 발췌 — Given the high cost of high-performance LiDAR sensors, we propose a novel setting, weakly supervised cross-modal learning for 4D radar scene flow, that relies only on RGB images and odometry, which are ...
+IterFlow는 훈련 때 카메라 영상과 차량 주행계 정보를 보조 감독으로 사용해 4D 레이더의 장면 흐름을 추정한다. [PDF 1쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/fu26r/fu26r.pdf#page=1) · [PDF 3쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/fu26r/fu26r.pdf#page=3)
 
 ## Problem and Motivation
 
@@ -55,26 +54,12 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** Given the high cost of high-performance LiDAR sensors, we propose a novel setting, weakly supervised cross-modal learning for 4D radar scene flow, that relies only ...
-- **p. 3 / 3.1. IterFlow - extractive body cue:** To address these limitations and achieve high-accuracy flow estimation on challenging 4D radar data, we propose IterFlow, a task-specific iterative network designed to refine scene ...
-- **p. 3 / 3. Method - extractive body cue:** Every radar point consists of five attributes: its 3D coordinates, radar cross-section (RCS), and relative radial velocity (RRV).
-- **p. 4 / 3.1. IterFlow - extractive body cue:** Each pointwise feature φ(xi) ∈Et and φ(yi) ∈Et+1 consists of the original input 3D position and the feature dimension C.
-- **p. 5 / 3.2. Instance-aware Loss Functions - extractive body cue:** To address this problem, we introduce an instance-level flow smoothness loss Lis.
-- **p. 8 / 4.2. Ablation Studies - extractive body cue:** The experimental results in Table 3 illustrate that the addition of Lis successfully improves the prediction accuracy in both dynamic and static areas in the ...
-- **p. 7 / 4.1. Main Results - extractive body cue:** When compared to LiDAR-based approaches, our method even surpasses the best fully supervised model, PVRAFT (Wei et al., 2021), achieving performance improvements across all metrics, ...
-- **p. 7 / 4.1. Main Results - extractive body cue:** In particular, IterFlow yields a 34.7% performance improvement on the EPE metric, while increasing AccS and AccR by 13.6% and 21.4%, respectively.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 영상 추적과 분할 마스크를 레이더 점에 연결해 물체 단위 흐름을 제약하고 정적 영역에는 주행계와 레이더 운동 단서를 이용한다. [PDF 3쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/fu26r/fu26r.pdf#page=3) · [PDF 4쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/fu26r/fu26r.pdf#page=4) · [PDF 5쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/fu26r/fu26r.pdf#page=5)
+- View-of-Delft에서 장면 흐름과 각 감독 항을 평가하고 LiDAR 추적 의사 라벨을 이용한 기존 방법과 비교했다. [PDF 6쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/fu26r/fu26r.pdf#page=6) · [PDF 7쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/fu26r/fu26r.pdf#page=7) · [PDF 8쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/fu26r/fu26r.pdf#page=8)
 
 ## Evaluation Scope
 
-| Dimension | Body-grounded record | Boundary | Anchor |
-|---|---|---|---|
-| Evaluation type | EMPIRICAL / REAL-ROBOT OR HARDWARE | do not infer unreported downstream behavior | p. 8 (4.2. Ablation Studies), p. 7 (4.1. Main Results) |
-| Embodiment/environment | Since the VoD dataset does not provide ready-made scene flow ground truth, we adopt the commonly used preprocessing methods to generate scene flow labels from annotated 3D tracking boxes for the training ... | hardware/simulator version and reset protocol | p. 6 (4. Experiments), p. 6 (4. Experiments) |
-| Dataset/benchmark | Note that fully-supervised methods are trained with the radar scene flow ground truth derived from the annotated 3D tracking boxes provided by the dataset, and CMFlow (Ding et al., 2023) is trained ... | role, split, size and leakage | p. 6 (4. Experiments), p. 6 (4. Experiments), p. 7 (4.1. Main Results), p. 7 (4.1. Main Results) |
-| Metric | The experimental results in Table 3 illustrate that the addition of Lis successfully improves the prediction accuracy in both dynamic and static areas in the scene, achieving a performance improvement of 16.3% ... | definition, denominator, direction and uncertainty | p. 8 (4.2. Ablation Studies), p. 7 (4.1. Main Results), p. 6 (4. Experiments) |
-| Baseline/ablation | For a fair comparison with the baselines, we use their official loss configuration and hyperparameter settings for network retraining on the VoD radar scene flow dataset. | fair input/data/compute/action matching | p. 6 (4. Experiments), p. 6 (4.1. Main Results), p. 7 (4.1. Main Results) |
+View-of-Delft의 검증 분할에서 레이더 장면 흐름 오차를 전체·이동·정적 점으로 나누었다(표 1). 저자들은 자료에 완성된 흐름 정답이 없어 평가용 라벨을 전처리로 생성했다. [PDF 5쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/fu26r/fu26r.pdf#page=5) · [PDF 6쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/fu26r/fu26r.pdf#page=6)
 
 ## Explicit Limitations and Failure Boundary
 

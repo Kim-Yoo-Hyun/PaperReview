@@ -16,12 +16,11 @@
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다. [본문](https://openaccess.thecvf.com/content/CVPR2024/papers/Hong_MultiPLY_A_Multisensory_Object-Centric_Embodied_Large_Language_Model_in_3D_CVPR_2024_paper.pdf)
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Looking ahead, challenges inevitably exist for building embodied multisensory large language models.
-
-방법 관련 발췌 — To sum up, the contributions of this paper are: • We propose Multisensory Universe, a large-scale multisensory dataset comprising 500k data collected by an agent engaging with the 3D embodied environment, covering ...
+MultiPLY는 실내 장면에서 물체에 행동을 가한 뒤 얻는 시각·소리·촉각·온도 정보를 언어 모델의 물체 중심 표현에 반영한다. [PDF 1쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Hong_MultiPLY_A_Multisensory_Object-Centric_Embodied_Large_Language_Model_in_3D_CVPR_2024_paper.pdf#page=1) · [PDF 3쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Hong_MultiPLY_A_Multisensory_Object-Centric_Embodied_Large_Language_Model_in_3D_CVPR_2024_paper.pdf#page=3)
 
 ## Problem and Motivation
 
@@ -55,26 +54,12 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** To sum up, the contributions of this paper are: • We propose Multisensory Universe, a large-scale multisensory dataset comprising 500k data collected by an agent ...
-- **p. 2 / 1. Introduction - extractive body cue:** To this end, we propose MultiPLY, a multisensory embodied LLM that could encode multisensory object-centric representations, including visual, audio, tactile, and thermal information, by deploying ...
-- **p. 5 / 4.4. Training & Inference - extractive body cue:** Our training loss consists of two parts.
-- **p. 5 / 4.2. Action Tokens - extractive body cue:** Note that the navigation action could be executed by any pre-defined pathfinder module and is not the research focus of this paper. • <OBSERVE> token ...
-- **p. 6 / 5.1. Object Retrieval - extractive body cue:** The select action could be achieved by calculating the similarity between the object embedding and the language embedding, and the object with the highest score ...
-- **p. 8 / 5.4. Task Decomposition - extractive body cue:** Note that there is a domain gap between the task decomposition data 3D-LLM was trained on and our setting, which yields almost zero success rates ...
-- **p. 8 / 5.4. Task Decomposition - extractive body cue:** For each baseline we have two variants: 1) wo Interaction: generate all actions all at once, and execute the actions sequentially in the environment; 2) ...
-- **p. 7 / 5.1. Object Retrieval - extractive body cue:** Third, LLMs outperform similarity-based retrieval models.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 스캔 장면과 물체 자산에 상호작용 및 감각 정보를 결합해 Multisensory Universe 자료를 구성하고 행동과 관측 상태를 토큰으로 표현한다. [PDF 3쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Hong_MultiPLY_A_Multisensory_Object-Centric_Embodied_Large_Language_Model_in_3D_CVPR_2024_paper.pdf#page=3) · [PDF 4쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Hong_MultiPLY_A_Multisensory_Object-Centric_Embodied_Large_Language_Model_in_3D_CVPR_2024_paper.pdf#page=4) · [PDF 5쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Hong_MultiPLY_A_Multisensory_Object-Centric_Embodied_Large_Language_Model_in_3D_CVPR_2024_paper.pdf#page=5)
+- 여러 감각을 이용하는 물체 검색, 도구 사용과 질의 등에서 상호작용과 감각 입력의 기여를 비교했다. [PDF 6쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Hong_MultiPLY_A_Multisensory_Object-Centric_Embodied_Large_Language_Model_in_3D_CVPR_2024_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Hong_MultiPLY_A_Multisensory_Object-Centric_Embodied_Large_Language_Model_in_3D_CVPR_2024_paper.pdf#page=7) · [PDF 8쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Hong_MultiPLY_A_Multisensory_Object-Centric_Embodied_Large_Language_Model_in_3D_CVPR_2024_paper.pdf#page=8)
 
 ## Evaluation Scope
 
-| Dimension | Body-grounded record | Boundary | Anchor |
-|---|---|---|---|
-| Evaluation type | SYSTEM / EVALUATION SCOPE UNRESOLVED | do not infer unreported downstream behavior | p. 6 (5.1. Object Retrieval), p. 8 (5.4. Task Decomposition) |
-| Embodiment/environment | As presented in Figure 2, we begin by explaining how we input interactive objects into the scene to construct object-centric 3D scenes for our dataset in Section 3.1. | hardware/simulator version and reset protocol | p. 3 (3. The Multisensory-Universe Dataset), p. 3 (3.1. Inputting Interactive Objects into 3D Scenes) |
-| Dataset/benchmark | We ensure that no scenes and objects in the Multisensory Universe appear in the evaluation setup. | role, split, size and leakage | p. 3 (3. The Multisensory-Universe Dataset), p. 3 (3.1. Inputting Interactive Objects into 3D Scenes), p. 6 (5. Experiments), p. 6 (5.1. Object Retrieval) |
-| Metric | Note that there is a domain gap between the task decomposition data 3D-LLM was trained on and our setting, which yields almost zero success rates of 3D-LLM without finetuning. | definition, denominator, direction and uncertainty | p. 8 (5.4. Task Decomposition), p. 8 (5.4. Task Decomposition), p. 6 (5.1. Object Retrieval) |
-| Baseline/ablation | In general, our MultiPLY outperforms the baseline models a lot. | fair input/data/compute/action matching | p. 7 (5.1. Object Retrieval), p. 6 (5.1. Object Retrieval), p. 6 (5.1. Object Retrieval) |
+Multisensory Universe는 실내 스캔에 배치한 물체와 시뮬레이션 상호작용을 사용한다. 촉각 표식의 변위는 DiffTactile로 생성하고 각 물체의 온도 값은 온도 라벨을 조건으로 언어 모델에 질의해 부여했다. [PDF 3쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Hong_MultiPLY_A_Multisensory_Object-Centric_Embodied_Large_Language_Model_in_3D_CVPR_2024_paper.pdf#page=3) · [PDF 4쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Hong_MultiPLY_A_Multisensory_Object-Centric_Embodied_Large_Language_Model_in_3D_CVPR_2024_paper.pdf#page=4)
 
 ## Explicit Limitations and Failure Boundary
 

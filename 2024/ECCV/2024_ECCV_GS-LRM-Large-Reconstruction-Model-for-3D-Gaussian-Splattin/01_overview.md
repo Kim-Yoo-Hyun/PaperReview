@@ -16,12 +16,11 @@
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (19 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다. [본문](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/03212.pdf)
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Reconstructing a 3D scene from image captures is both a central problem and a long-standing challenge in computer vision.
-
-방법 관련 발췌 — In this section, we present the technical details of our method, including the architecture of our transformer-based model (Sec.
+GS-LRM은 알려진 카메라 자세와 소수의 입력 뷰에서 픽셀별 가우시안 속성을 직접 예측해 물체나 장면을 복원한다. [PDF 1쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/03212.pdf#page=1) · [PDF 5쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/03212.pdf#page=5)
 
 ## Problem and Motivation
 
@@ -54,26 +53,12 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 4 / 3 Method - extractive body cue:** In this section, we present the technical details of our method, including the architecture of our transformer-based model (Sec.
-- **p. 2 / 1 Introduction - extractive body cue:** To this end, we propose GS-LRM, a novel transformer-based large reconstruction model that predicts 3D Gaussian primitives [30] from sparse input images, enabling fast and ...
-- **p. 5 / 3 Method - extractive body cue:** 2) and consists of Pre-LayerNorm [3], multi-head Self-Attention [60] and MLP.
-- **p. 2 / 1 Introduction - extractive body cue:** The core of our approach is a simple and scalable transformer-based network architecture that predicts per-pixel Gaussians.
-- **p. 6 / 3 Method - extractive body cue:** This property allows us to better handle high-frequency details in the inputs and large-scale scene captures.
-- **p. 10 / Figure/Table caption - extractive body cue:** Fig. 5: We compare scene-level GS-LRM with the best-performing baseline pixel- Splat [8]. We can observe that our model is better in sharpness (leftmost column), ...
-- **p. 10 / 4 Experiments - extractive body cue:** 1, our approach achieves the best quantitative results on the RealEstate10k
-- **p. 7 / 4 Experiments - extractive body cue:** We outperform relevant baselines by a large margin in both scenarios.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 여러 뷰의 영상 패치를 하나의 트랜스포머 입력으로 결합하고 디코딩한 가우시안을 미분 가능하게 렌더링해 학습한다. [PDF 4쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/03212.pdf#page=4) · [PDF 5쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/03212.pdf#page=5) · [PDF 6쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/03212.pdf#page=6)
+- Objaverse 물체와 RealEstate10K 장면에 맞춘 모델을 따로 학습해 희소 뷰 복원 성능과 추론 비용을 비교했다. [PDF 7쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/03212.pdf#page=7) · [PDF 9쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/03212.pdf#page=9) · [PDF 10쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/03212.pdf#page=10)
 
 ## Evaluation Scope
 
-| Dimension | Body-grounded record | Boundary | Anchor |
-|---|---|---|---|
-| Evaluation type | EMPIRICAL / SOURCE-REPORTED EVALUATION | do not infer unreported downstream behavior | p. 10 (Figure/Table caption), p. 10 (4 Experiments) |
-| Embodiment/environment | We follow the standard training/testing split for the dataset, which is also used in pixelSplat [8]. | hardware/simulator version and reset protocol | p. 7 (4 Experiments), p. 7 (4 Experiments) |
-| Dataset/benchmark | In this section, we first describe the training and testing datasets (Sec. | role, split, size and leakage | p. 7 (4 Experiments), p. 7 (4 Experiments), p. 6 (4 Experiments), p. 10 (4 Experiments) |
-| Metric | The dataset contains 80K video clips curated from 10K YouTube videos. | definition, denominator, direction and uncertainty | p. 7 (4 Experiments), p. 7 (4 Experiments), p. 8 (4 Experiments) |
-| Baseline/ablation | We outperform relevant baselines by a large margin in both scenarios. | fair input/data/compute/action matching | p. 7 (4 Experiments), p. 9 (4 Experiments), p. 11 (4 Experiments) |
+약 0.23초는 카메라 자세를 아는 2~4개 입력 뷰에서 A100 한 장으로 가우시안을 예측하는 추론 시간이다. 물체 복원과 장면 복원은 별도로 학습한 모델로 비교했다. [PDF 1쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/03212.pdf#page=1) · [PDF 7쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/03212.pdf#page=7) · [PDF 14쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/03212.pdf#page=14)
 
 ## Explicit Limitations and Failure Boundary
 

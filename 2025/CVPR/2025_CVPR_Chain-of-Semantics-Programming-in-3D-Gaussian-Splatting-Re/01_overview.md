@@ -16,12 +16,11 @@
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다. [본문](https://openaccess.thecvf.com/content/CVPR2025/papers/Shi_Chain_of_Semantics_Programming_in_3D_Gaussian_Splatting_Representation_for_CVPR_2025_paper.pdf)
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — This oversight in capturing the connection and conditionality of spatial relationships results in a significant performance gap in grounding between these zero-shot methods and the current stateof-the-art supervised approaches.
-
-방법 관련 발췌 — Our contributions are summarized as follows: • We propose a chain of semantics programming method with the grounded-aware self-check mechanism for enhanced grounded reasoning in the 3DVG task. • We introduce a ...
+Chain-of-Semantics는 가우시안 장면에서 언어가 가리키는 물체를 찾기 위해 여러 뷰의 영상과 공간 관계를 순서대로 판별한다. [PDF 1쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Shi_Chain_of_Semantics_Programming_in_3D_Gaussian_Splatting_Representation_for_CVPR_2025_paper.pdf#page=1) · [PDF 3쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Shi_Chain_of_Semantics_Programming_in_3D_Gaussian_Splatting_Representation_for_CVPR_2025_paper.pdf#page=3)
 
 ## Problem and Motivation
 
@@ -55,26 +54,12 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** Our contributions are summarized as follows: • We propose a chain of semantics programming method with the grounded-aware self-check mechanism for enhanced grounded reasoning in ...
-- **p. 2 / 1. Introduction - extractive body cue:** This method constructs a relationship graph and facilitates a chain of semantics programming, enabling multi-step object grounding. • We first use 3DGS to reconstruct the ...
-- **p. 3 / 3. Methodology - extractive body cue:** In this section, we introduce our proposed zero-shot neurosymbolic framework that employs a LLM as a neurosymbolic function for object grounding.
-- **p. 3 / 3. Methodology - extractive body cue:** To enhance the effectiveness and robustness of the programming and reasoning process, we propose a grounded-aware self-check mechanism that reflects on the reasoning results.
-- **p. 5 / 3.3. Chain of Semantics Programming - extractive body cue:** Through the chain of semantics programming, our framework can explicitly account for the conditionality of relationships and connections among multiple relationships, utilizing fine-grained semantics and ...
-- **p. 7 / 4.4. Ablation study - extractive body cue:** This mechanism achieves improvements of 4.5% on Nr3D and 1.8% on Sr3D.
-- **p. 5 / 4.3. Comparison to Prior Works - extractive body cue:** In Table 2, we find that our method outperforms the current state-of-the-art zeroshot methods on the Nr3D dataset and approaches the performance of the best-supervised ...
-- **p. 6 / 4.4. Ablation study - extractive body cue:** Utilizing only the Chain of Semantics on the Nr3D dataset results in an improvement of 2.2% compared to dialogue and 1.9% compared to programming.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 장면을 여러 시점에서 렌더링하고 관계 그래프와 언어 모델의 의미 단계를 이용해 후보를 좁힌 뒤 선택 결과를 자체 점검한다. [PDF 3쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Shi_Chain_of_Semantics_Programming_in_3D_Gaussian_Splatting_Representation_for_CVPR_2025_paper.pdf#page=3) · [PDF 4쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Shi_Chain_of_Semantics_Programming_in_3D_Gaussian_Splatting_Representation_for_CVPR_2025_paper.pdf#page=4) · [PDF 5쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Shi_Chain_of_Semantics_Programming_in_3D_Gaussian_Splatting_Representation_for_CVPR_2025_paper.pdf#page=5)
+- Nr3D와 Sr3D에서 주석된 지시 대상의 식별 정확도를 비교하고 학습을 추가하지 않는 조건에서 공간 추론을 평가했다. [PDF 5쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Shi_Chain_of_Semantics_Programming_in_3D_Gaussian_Splatting_Representation_for_CVPR_2025_paper.pdf#page=5) · [PDF 6쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Shi_Chain_of_Semantics_Programming_in_3D_Gaussian_Splatting_Representation_for_CVPR_2025_paper.pdf#page=6)
 
 ## Evaluation Scope
 
-| Dimension | Body-grounded record | Boundary | Anchor |
-|---|---|---|---|
-| Evaluation type | EMPIRICAL / SOURCE-REPORTED EVALUATION | do not infer unreported downstream behavior | p. 7 (4.4. Ablation study), p. 5 (4.3. Comparison to Prior Works) |
-| Embodiment/environment | Sr3D comprises 83.5K template-based utterances that leverage spatial relationships among fine-grained object classes to localize a referred object in a scene, and Nr3D includes 41.5K natural, free-form utterances collected by deploying ... | hardware/simulator version and reset protocol | p. 5 (4.1. Datasets), p. 7 (4.4. Ablation study) |
-| Dataset/benchmark | In the context of object grounding through programming, the Chain of Semantics yields beneficial improvements across both datasets, particularly on Sr3D, where the gap between Easy and Hard samples reduces from 6.9% ... | role, split, size and leakage | p. 5 (4.1. Datasets), p. 7 (4.4. Ablation study), p. 7 (4.4. Ablation study), p. 5 (4.3. Comparison to Prior Works) |
-| Metric | The introduction of this mechanism enhances the accuracy of the generated code and deepens the reasoning regarding spatial relationships 24566 | definition, denominator, direction and uncertainty | p. 7 (4.4. Ablation study), p. 6 (4.4. Ablation study), p. 7 (4.4. Ablation study) |
-| Baseline/ablation | With limited train data for the supervised models, our zero-shot method outperforms all compared models in both two datasets, as shown in Figure 3. | fair input/data/compute/action matching | p. 5 (4.3. Comparison to Prior Works), p. 5 (4.3. Comparison to Prior Works), p. 7 (4.4. Ablation study) |
+표 2·3에서 자체 점검을 포함한 방법의 정답 물체 식별 정확도는 Nr3D 60.8%, Sr3D 91.4%다. 두 값의 단위는 지시 표현에서 맞는 물체를 선택한 비율이다. [PDF 5쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Shi_Chain_of_Semantics_Programming_in_3D_Gaussian_Splatting_Representation_for_CVPR_2025_paper.pdf#page=5) · [PDF 6쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Shi_Chain_of_Semantics_Programming_in_3D_Gaussian_Splatting_Representation_for_CVPR_2025_paper.pdf#page=6)
 
 ## Explicit Limitations and Failure Boundary
 

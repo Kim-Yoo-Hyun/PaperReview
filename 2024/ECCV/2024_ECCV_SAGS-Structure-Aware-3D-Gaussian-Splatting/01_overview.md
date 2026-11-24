@@ -16,12 +16,11 @@
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (17 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다. [본문](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/02887.pdf)
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — [15] introduced 3D Gaussian Splatting (3D-GS) to tackle this limitation using a set of differentiable 3D Gaussians that can achieve state-of-the-art rendering quality and real-time speed on a single GPU, outperforming previous ...
-
-방법 관련 발췌 — To sum up, our contributions can be summarized as follows: - We introduce the first structure-aware 3D Gaussian Splatting method that leverages both local and global structure of the scene. - We ...
+SAGS는 초기 점군의 국소 이웃 관계를 이용해 가우시안 속성을 예측하고 장면 표현의 크기를 줄인다. [PDF 1쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/02887.pdf#page=1) · [PDF 5쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/02887.pdf#page=5)
 
 ## Problem and Motivation
 
@@ -55,16 +54,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 3 / 1 Introduction - extractive body cue:** To sum up, our contributions can be summarized as follows: - We introduce the first structure-aware 3D Gaussian Splatting method that leverages both local and ...
-- **p. 2 / 1 Introduction - extractive body cue:** In this study, we propose a structure-aware Gaussian splatting method that aims to implicitly encode the scene's geometry and learn inductive biases that
-- **p. 3 / 1 Introduction - extractive body cue:** Inspired by the success of Point Cloud analysis [28], we found our method on a graph constructed from the input scene and learn to model ...
-- **p. 5 / 3 Method - extractive body cue:** To tackle such cases, we introduce a densification step that aims to populate areas with zero or few points.
-- **p. 5 / 3 Method - extractive body cue:** 3.2 Structure-Aware 3D Gaussian Splatting In this work, we propose a structure-aware 3D Gaussian Splatting method, that takes as input a sparse point cloud P ...
-- **p. 6 / Figure/Table caption - extractive body cue:** Fig. 3: Overview of the densification. Given an initial SfM [31] point cloud (left) we estimate the curvature following [25]. Curvature values are presented color-coded ...
-- **p. 2 / Figure/Table caption - extractive body cue:** Fig. 1: Structure-Aware GS (SAGS) leverages the intrinsic structure of the scene and enforces point interaction using graph neural networks outperforming the struc- ture agnostic ...
-- **p. 9 / 4 Experiments - extractive body cue:** As can be easily seen, SAGS outperforms 3D-GS and the recently introduced Scaffold-GS method under all datasets and metrics.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 초기 점을 곡률에 따라 보강하고 근접 이웃 그래프에서 특징을 모으며, 경량 변형은 중점 보간으로 가우시안을 추가한다. [PDF 5쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/02887.pdf#page=5) · [PDF 6쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/02887.pdf#page=6)
+- 여러 장면에서 렌더링 품질과 저장 크기를 함께 비교하고 구조 모델링과 보간 단계를 바꿔 효과를 측정했다. [PDF 9쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/02887.pdf#page=9) · [PDF 12쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/02887.pdf#page=12) · [PDF 14쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/02887.pdf#page=14)
 
 ## Evaluation Scope
 

@@ -17,12 +17,11 @@
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (27 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다. [본문](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/zhao26s/zhao26s.pdf)
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — (a) RGB(View-1) + zoom-in box (b) Baseline mask (View-1) (c) Baseline multi-view inconsistency (View-1 vs View-2) Problem: Boundary ambiguity & view inconsistency (d) VCD (f) LIC (h) Our multi-view stable(View-1 vs View-2) ...
-
-방법 관련 발췌 — We propose Visibility-Calibrated Distillation (VCD).
+Rh-3DGS는 관측 방향과 가시성에 따라 달라지는 시각언어 특징의 신뢰도를 고려해 가우시안 장면에 의미 정보를 증류한다. [PDF 1쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/zhao26s/zhao26s.pdf#page=1) · [PDF 4쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/zhao26s/zhao26s.pdf#page=4)
 
 ## Problem and Motivation
 
@@ -55,16 +54,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 4 / 4.3. Visibility-Calibrated Distillation (VCD) - extractive body cue:** We propose Visibility-Calibrated Distillation (VCD).
-- **p. 5 / 4.4. Visibility-Weighted Fr´echet Mean (VFM) - extractive body cue:** We propose Visibility-Weighted Fr´echet Mean (VFM).
-- **p. 4 / 4.3. Visibility-Calibrated Distillation (VCD) - extractive body cue:** Low accumulated opacity often indicates weak or unstable contributions.
-- **p. 6 / 5.2. Quantitative Results - extractive body cue:** Rh-3DGS achieves the best results on both tables.
-- **p. 7 / 5.2. Quantitative Results - extractive body cue:** Rh-3DGS again achieves the best performance.
-- **p. 7 / 5.2. Quantitative Results - extractive body cue:** Rh-3DGS achieves the best results across all splits.
-- **p. 8 / 5.4. Ablation Study - extractive body cue:** The full model (VCD+VFM+LIC) achieves the best performance (81.62 mIoU, 58.11 mBIoU).
-- **p. 6 / 5.2. Quantitative Results - extractive body cue:** We also observe consistent improvements in rendering metrics.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 단위구 위의 특징을 가시성으로 가중해 결합하고 리만 공간의 Huber 손실로 이상 관측의 영향을 줄인다. [PDF 4쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/zhao26s/zhao26s.pdf#page=4) · [PDF 5쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/zhao26s/zhao26s.pdf#page=5) · [PDF 6쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/zhao26s/zhao26s.pdf#page=6)
+- 국소 의미 일관성을 함께 적용해 개방 어휘 분할과 경계 보존을 평가하고 신뢰도 처리의 효과를 비교했다. [PDF 7쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/zhao26s/zhao26s.pdf#page=7) · [PDF 8쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/zhao26s/zhao26s.pdf#page=8)
 
 ## Evaluation Scope
 

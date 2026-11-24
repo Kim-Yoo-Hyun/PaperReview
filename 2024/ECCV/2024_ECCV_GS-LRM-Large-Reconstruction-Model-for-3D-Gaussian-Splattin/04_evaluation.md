@@ -6,7 +6,7 @@
 
 ## Evaluation in One Sentence
 
-PDF body evaluation/result cue (p. 10 (Figure/Table caption), p. 10 (4 Experiments), p. 7 (4 Experiments), p. 9 (4 Experiments), p. 9 (4 Experiments), p. 11 (4 Experiments)): Fig. 5: We compare scene-level GS-LRM with the best-performing baseline pixel- Splat [8]. We can observe that our model is better in sharpness (leftmost column), has fewer floaters (mid-right and ...
+약 0.23초는 카메라 자세를 아는 2~4개 입력 뷰에서 A100 한 장으로 가우시안을 예측하는 추론 시간이다. 물체 복원과 장면 복원은 별도로 학습한 모델로 비교했다. [PDF 1쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/03212.pdf#page=1) · [PDF 7쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/03212.pdf#page=7) · [PDF 14쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/03212.pdf#page=14)
 
 ## Evaluation Body Digest
 
@@ -22,10 +22,7 @@ PDF body evaluation/result cue (p. 10 (Figure/Table caption), p. 10 (4 Experimen
 ## Evaluation Type and Scope
 
 - **Evaluation type:** `EMPIRICAL / SOURCE-REPORTED EVALUATION`.
-- **Target system/task:** 3D scene/object와 robot coordinate frame.
-- **Input boundary:** RGB-D, image set, point cloud, depth와 camera pose.
-- **Output/decision under evaluation:** point map, pose, scene graph, affordance 또는 query result.
-- **Primary target:** geometric accuracy, semantic consistency와 planning/manipulation utility.
+- **평가 대상:** Objaverse 물체와 RealEstate10K 장면에 맞춘 모델을 따로 학습해 희소 뷰 복원 성능과 추론 비용을 비교했다. [PDF 7쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/03212.pdf#page=7) · [PDF 9쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/03212.pdf#page=9) · [PDF 10쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/03212.pdf#page=10)
 - **Detected evaluation headings:** 4 Experiments (p. 6).
 
 ## Experimental Matrix

@@ -16,12 +16,11 @@
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (23 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다. [본문](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/liu26cw/liu26cw.pdf)
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Pow3R (Jang et al., 2025) enables prior-conditioned binocular reconstruction but outputs only point maps, while VGGT (Wang et al., 2025a) predicts multiple geometric quantities but lacks the ability to incorporate auxiliary inputs.
-
-방법 관련 발췌 — We summarize our contributions as follows: (1) We present WorldMirror, a unified end-to-end framework for 3D geometry that jointly addresses flexible prior conditioning and comprehensive multi-task prediction within a single model.
+WorldMirror는 입력 영상과 선택적으로 주어진 카메라·깊이 정보를 한 모델에서 이용해 다중 뷰 장면 기하를 예측한다. [PDF 1쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/liu26cw/liu26cw.pdf#page=1) · [PDF 3쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/liu26cw/liu26cw.pdf#page=3)
 
 ## Problem and Motivation
 
@@ -55,16 +54,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** We summarize our contributions as follows: (1) We present WorldMirror, a unified end-to-end framework for 3D geometry that jointly addresses flexible prior conditioning and comprehensive ...
-- **p. 2 / 1. Introduction - extractive body cue:** (3) We introduce a Unified Spatial Prediction architecture with a decoupled sequential training that effectively coordinates multi-task training across camera poses, depth, normals, point maps, ...
-- **p. 3 / 3. Method - extractive body cue:** We introduce two core components: (1) Multi-modal Tokenization (Sec.
-- **p. 4 / 3.1. Multi-modal Tokenization - extractive body cue:** Besides real photos, our method generalizes well to AI-created videos spanning diverse styles. dropped tokens to zero.
-- **p. 4 / 3.2. Unified Spatial Prediction - extractive body cue:** To address these issues, we introduce a decoupled modeling strategy that separates geometry prediction from appearance reconstruction, along with a curriculum learning scheme that progressively ...
-- **p. 8 / 5.1. Evaluation on Different Tasks - extractive body cue:** 3 shows substantial improvements over existing methods, demonstrating that multi-task learning with shared representations can outperform specialized single-task approaches.
-- **p. 7 / 5.1. Evaluation on Different Tasks - extractive body cue:** Incorporating priors further improves results; using all priors yields 58.1% and 53.1% accuracy gains on 7-Scenes and NRGBD over our no-prior baseline, demonstrating effective prior ...
-- **p. 7 / 5.1. Evaluation on Different Tasks - extractive body cue:** 2, our method achieves superior zero-shot performance on RealEstate10K and TUM-dynamics, while remaining competitive on Sintel despite limited outdoor dynamic scenes data involved in the ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 내부·외부 카메라 파라미터와 깊이를 서로 다른 조합으로 입력할 수 있게 하고 카메라, 점 지도, 표면 법선과 가우시안 표현을 예측한다. [PDF 3쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/liu26cw/liu26cw.pdf#page=3) · [PDF 4쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/liu26cw/liu26cw.pdf#page=4) · [PDF 5쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/liu26cw/liu26cw.pdf#page=5)
+- 기하 사전 정보가 없거나 일부만 제공될 때의 복원과 카메라 추정 성능을 같은 모델에서 비교했다. [PDF 6쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/liu26cw/liu26cw.pdf#page=6) · [PDF 7쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/liu26cw/liu26cw.pdf#page=7) · [PDF 8쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/liu26cw/liu26cw.pdf#page=8)
 
 ## Evaluation Scope
 

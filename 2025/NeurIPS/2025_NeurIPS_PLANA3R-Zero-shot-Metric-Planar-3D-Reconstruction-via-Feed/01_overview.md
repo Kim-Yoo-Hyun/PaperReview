@@ -17,12 +17,11 @@
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (18 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다. [본문](https://proceedings.neurips.cc/paper_files/paper/2025/file/fc8ee7c7ab5b5f6b1615045dfb617ed6-Paper-Conference.pdf)
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, these approaches face two key limitations: • Annotation dependence for feedforward methods: Learning feedforward models [36, 24, 28] typically requires accurate plane masks and 3D plane annotations from monocular or binocular ...
-
-방법 관련 발췌 — To address these challenges and facilitate training, we introduce a patch loss designed to stabilize primitive positioning and orientation: Lpatch ∗ = α1
+PLANA3R은 카메라 자세가 없는 두 실내 영상에서 벽·바닥 같은 평면 요소와 두 카메라의 상대 자세를 미터 단위로 복원한다. [PDF 1쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/fc8ee7c7ab5b5f6b1615045dfb617ed6-Paper-Conference.pdf#page=1) · [PDF 4쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/fc8ee7c7ab5b5f6b1615045dfb617ed6-Paper-Conference.pdf#page=4)
 
 ## Problem and Motivation
 
@@ -56,16 +55,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 5 / 3 Method - extractive body cue:** To address these challenges and facilitate training, we introduce a patch loss designed to stabilize primitive positioning and orientation: Lpatch ∗ = α1
-- **p. 2 / 1 Introduction - extractive body cue:** Once the model is trained, our method generates a set of 3D planar primitives that approximate indoor scenes far more efficiently than per-scene optimization methods ...
-- **p. 4 / 3 Method - extractive body cue:** The input consists of two images I1, I2 ∈R3×H×W with camera intrinsics K1 and K2.
-- **p. 4 / 3 Method - extractive body cue:** The core innovation of our method lies in the sparse primitive prediction architecture outlined in Sec.
-- **p. 5 / 3 Method - extractive body cue:** After the warm-up phase, we introduce a rendering loss.
-- **p. 7 / 4 Experiment - extractive body cue:** 1, both MASt3R and our PLANA3R significantly outperform prior learning-based planar reconstruction methods [28, 11, 1] in terms of pose estimation accuracy.
-- **p. 7 / 4 Experiment - extractive body cue:** 1, PLANA3R achieves SOTA performance on ScanNetV2.
-- **p. 9 / 4 Experiment - extractive body cue:** 5, using approximately half the number of high-resolution primitives achieves performance comparable to using the full high-resolution set.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 희소한 평면 요소를 예측한 뒤 깊이와 법선을 고해상도로 렌더링해 평면의 위치·방향을 학습한다. [PDF 4쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/fc8ee7c7ab5b5f6b1615045dfb617ed6-Paper-Conference.pdf#page=4) · [PDF 5쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/fc8ee7c7ab5b5f6b1615045dfb617ed6-Paper-Conference.pdf#page=5) · [PDF 6쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/fc8ee7c7ab5b5f6b1615045dfb617ed6-Paper-Conference.pdf#page=6)
+- 실내 장면에서 평면 복원, 깊이 추정, 상대 자세와 평면 분할을 평가하고 학습 밖 장면으로의 일반화를 시험했다. [PDF 7쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/fc8ee7c7ab5b5f6b1615045dfb617ed6-Paper-Conference.pdf#page=7) · [PDF 8쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/fc8ee7c7ab5b5f6b1615045dfb617ed6-Paper-Conference.pdf#page=8) · [PDF 9쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/fc8ee7c7ab5b5f6b1615045dfb617ed6-Paper-Conference.pdf#page=9)
 
 ## Evaluation Scope
 

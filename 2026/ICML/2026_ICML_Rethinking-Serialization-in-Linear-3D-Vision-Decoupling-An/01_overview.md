@@ -17,12 +17,11 @@
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (14 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다. [본문](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/yan26v/yan26v.pdf)
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Effective 3D point cloud understanding must reconcile local anisotropic geometry with global isotropic semantics, but the irregular and unordered nature of point sets makes this difficult.
-
-방법 관련 발췌 — Based on this observation, we propose AnIsoNet, which decouples local anisotropic geometry modeling from global semantic aggregation.
+AnIsoNet은 점군 직렬화 순서에 따른 편향을 줄이기 위해 국소 기하와 넓은 범위의 의미 정보를 서로 다르게 집계한다. [PDF 1쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/yan26v/yan26v.pdf#page=1) · [PDF 3쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/yan26v/yan26v.pdf#page=3)
 
 ## Problem and Motivation
 
@@ -56,16 +55,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** Based on this observation, we propose AnIsoNet, which decouples local anisotropic geometry modeling from global semantic aggregation.
-- **p. 3 / 3.1. Overview - extractive body cue:** The framework consists of two complementary modules: 1.
-- **p. 3 / 3.1. Overview - extractive body cue:** To address this limitation, we propose AnIsoNet, a unified framework that decouples these two processes (Figure 2).
-- **p. 2 / 1. Introduction - extractive body cue:** Our contributions are as follows: • We identify serialization bias as a key bottleneck in 3D SSMs and propose a decoupling paradigm that addresses local ...
-- **p. 5 / 3.1. Overview - extractive body cue:** The recurrence ht = f(ht-1, xt) inherently requires a sequential ordering, so 3D point clouds must be artificially serialized and the contribution of xs to ...
-- **p. 8 / 4.4. Efficiency Analysis - extractive body cue:** Overall, the figure shows that AnIsoNet improves accuracy while remaining in a much smaller parameter regime, rather than trading scale for performance.
-- **p. 6 / 4.1. Experimental Setup - extractive body cue:** AnIsoNet achieves strong performance among linear-complexity methods.
-- **p. 6 / 4.2. Main Results - extractive body cue:** AnIsoNet achieves 94.21% overall accuracy, the best result among the compared linear architectures without external pre-training.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 국소 이웃은 방향에 민감하게 모델링하고 전역 의미는 등방적으로 집계해 서로 다른 인접 관계를 이용한다. [PDF 3쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/yan26v/yan26v.pdf#page=3) · [PDF 4쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/yan26v/yan26v.pdf#page=4) · [PDF 5쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/yan26v/yan26v.pdf#page=5)
+- 실내 점군 의미 분할 자료에서 정확도를 평가하고 두 집계 방식과 직렬화 순서의 영향을 비교했다. [PDF 6쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/yan26v/yan26v.pdf#page=6) · [PDF 7쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/yan26v/yan26v.pdf#page=7) · [PDF 8쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/yan26v/yan26v.pdf#page=8)
 
 ## Evaluation Scope
 

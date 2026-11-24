@@ -16,12 +16,11 @@
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (18 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다. [본문](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/04195.pdf)
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Most of these methods cannot generalize to open-world scenarios.
-
-방법 관련 발췌 — To our knowledge, we propose the first Gaussian-based method to tackle open-world 3D scene understanding, where we show the advantages compared to existing NeRF-based approaches [15,18,43] in segmentation quality, efficiency and good ...
+Gaussian Grouping은 각 3D 가우시안에 인스턴스 식별 특징을 부여해 장면을 복원하면서 물체와 배경 영역을 구별한다. [PDF 1쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/04195.pdf#page=1) · [PDF 6쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/04195.pdf#page=6)
 
 ## Problem and Motivation
 
@@ -55,16 +54,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 4 / 1 Introduction - extractive body cue:** To our knowledge, we propose the first Gaussian-based method to tackle open-world 3D scene understanding, where we show the advantages compared to existing NeRF-based approaches ...
-- **p. 2 / 1 Introduction - extractive body cue:** We propose Gaussian Grouping, which represents the whole 3D scene with a set of grouped 3D Gaussians.
-- **p. 2 / 1 Introduction - extractive body cue:** By inputting multi-view captures and the corresponding automatically generated masks by SAM, our method learns a discrete and grouped 3D representation for reconstructing and segmenting ...
-- **p. 3 / 1 Introduction - extractive body cue:** We introduce Gaussian Grouping, the first 3D Gaussian Splatting-based segmentation framework that lifts knowledge of SAM to 3D scene anything zero-shot segmentation without the need ...
-- **p. 5 / 3 Method - extractive body cue:** We design our method based on the recent 3D Gaussian Splatting [14], and extend it from pure 3D reconstruction to fine-grained scene understanding.
-- **p. 11 / 4 Experiments - extractive body cue:** 6 and Table 2, K = 5 achieves both the best balance between the scene reconstruction and 3D object removal accuracy.
-- **p. 12 / 4 Experiments - extractive body cue:** Gaussian Grouping outperforms Panoptic Lifting in both performance and speed.
-- **p. 12 / 4 Experiments - extractive body cue:** While the performance of DFFs is limited by the quality of its CLIP-distilled features, which results in the complete foreground removal (Train case) or inaccurate ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 2D SAM 마스크를 감독으로 사용하고 가까운 가우시안의 식별 특징이 일관되도록 3D 정규화를 적용한다. [PDF 5쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/04195.pdf#page=5) · [PDF 6쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/04195.pdf#page=6) · [PDF 7쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/04195.pdf#page=7)
+- 복원된 가우시안 그룹의 분할을 평가하고 지정 물체의 제거·색 변경·재배치 같은 국소 편집을 시연했다. [PDF 11쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/04195.pdf#page=11) · [PDF 12쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/04195.pdf#page=12) · [PDF 14쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/04195.pdf#page=14)
 
 ## Evaluation Scope
 

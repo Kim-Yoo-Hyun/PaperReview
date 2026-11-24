@@ -6,7 +6,7 @@
 
 ## Evaluation in One Sentence
 
-PDF body evaluation/result cue (p. 7 (5.3. Zero-Shot Metric Depth Estimation), p. 7 (5.4. Zero-Shot Relative Depth Estimation), p. 8 (5.5. Fine-Tuning Experiments), p. 8 (5.5. Fine-Tuning Experiments), p. 6 (5.1. Training Datasets), p. 6 (5.1. Training Datasets)): We believe GRIN could be modified to operate in a similar setting, which would potentially further improve performance, however this is left for future work.
+여러 실내·실외 자료에 추가 학습 없이 적용해 절대 깊이 오차와 서로 다른 환경으로의 일반화를 비교했다. [PDF 6쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11125574#page=6) · [PDF 7쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11125574#page=7) · [PDF 8쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11125574#page=8)
 
 ## Evaluation Body Digest
 
@@ -21,22 +21,18 @@ PDF body evaluation/result cue (p. 7 (5.3. Zero-Shot Metric Depth Estimation), p
 
 ## Evaluation Type and Scope
 
-- **Evaluation type:** `EMPIRICAL / REAL-ROBOT OR HARDWARE`.
-- **Target system/task:** high-dimensional data 또는 robot action-trajectory distribution.
-- **Input boundary:** conditioning observation와 noisy/intermediate sample.
-- **Output/decision under evaluation:** generated sample, action chunk 또는 trajectory.
-- **Primary target:** distribution fit, multimodality, sample quality와 latency.
+- **Evaluation type:** `BENCHMARK / DATASET`.
 - **Detected evaluation headings:** 5. Experiments (p. 5); 5.1. Training Datasets (p. 5); 5.2. Implementation Details (p. 6); 5.5. Fine-Tuning Experiments (p. 8).
 
 ## Experimental Matrix
 
 | Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
-| 5.3. Zero-Shot Metric Depth Estimation | EMPIRICAL / REAL-ROBOT OR HARDWARE | We believe GRIN could be modified to operate in a similar setting, which would potentially further improve performance, however this is left for future ... | p. 7 (5.3. Zero-Shot Metric Depth Estimation) |
-| 5.4. Zero-Shot Relative Depth Estimation | EMPIRICAL / REAL-ROBOT OR HARDWARE | Results of this experiment are shown in Table 2, indicating that GRIN also outperforms the current state-of-the-art in relative depth estimation across multiple datasets, ... | p. 7 (5.4. Zero-Shot Relative Depth Estimation) |
-| 5.5. Fine-Tuning Experiments | EMPIRICAL / REAL-ROBOT OR HARDWARE | Results are shown in Table 3, indicating that GRIN also outperforms other metric depth estimation methods that use in-domain training data. | p. 8 (5.5. Fine-Tuning Experiments) |
-| 5.5. Fine-Tuning Experiments | EMPIRICAL / REAL-ROBOT OR HARDWARE | Although our main focus is on zero-shot depth estimation, here we explore how GRIN can also be fine-tuned indomain to further improve performance in ... | p. 8 (5.5. Fine-Tuning Experiments) |
-| 5.1. Training Datasets | EMPIRICAL / REAL-ROBOT OR HARDWARE | Zero-shot metric monocular depth estimation results on various indoor and outdoor datasets. | p. 6 (5.1. Training Datasets) |
+| 5.3. Zero-Shot Metric Depth Estimation | BENCHMARK / DATASET | We believe GRIN could be modified to operate in a similar setting, which would potentially further improve performance, however this is left for future ... | p. 7 (5.3. Zero-Shot Metric Depth Estimation) |
+| 5.4. Zero-Shot Relative Depth Estimation | BENCHMARK / DATASET | Results of this experiment are shown in Table 2, indicating that GRIN also outperforms the current state-of-the-art in relative depth estimation across multiple datasets, ... | p. 7 (5.4. Zero-Shot Relative Depth Estimation) |
+| 5.5. Fine-Tuning Experiments | BENCHMARK / DATASET | Results are shown in Table 3, indicating that GRIN also outperforms other metric depth estimation methods that use in-domain training data. | p. 8 (5.5. Fine-Tuning Experiments) |
+| 5.5. Fine-Tuning Experiments | BENCHMARK / DATASET | Although our main focus is on zero-shot depth estimation, here we explore how GRIN can also be fine-tuned indomain to further improve performance in ... | p. 8 (5.5. Fine-Tuning Experiments) |
+| 5.1. Training Datasets | BENCHMARK / DATASET | Zero-shot metric monocular depth estimation results on various indoor and outdoor datasets. | p. 6 (5.1. Training Datasets) |
 
 ## Dataset / Benchmark Role
 

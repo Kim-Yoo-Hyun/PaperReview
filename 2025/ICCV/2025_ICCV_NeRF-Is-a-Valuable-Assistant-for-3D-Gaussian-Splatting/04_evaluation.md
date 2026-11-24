@@ -6,7 +6,7 @@
 
 ## Evaluation in One Sentence
 
-PDF body evaluation/result cue (p. 5 (5.2. Comparison), p. 5 (5.2. Comparison), p. 8 (5.4. Ablation Studies), p. 1 (Figure/Table caption), p. 6 (5.2. Comparison), p. 8 (5.4. Ablation Studies)): Notably, compared to other methods that incorporate NeRF-like concepts, such as VDGS and Hash-GS, NeRF-GS achieves even more substantial improvements.
+실제 장면의 새 시점 렌더링에서 기존 방법과 비교하고 특징 공유와 잔차를 제거했을 때 달라지는 결과를 평가했다. [PDF 5쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Fang_NeRF_Is_a_Valuable_Assistant_for_3D_Gaussian_Splatting_ICCV_2025_paper.pdf#page=5) · [PDF 6쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Fang_NeRF_Is_a_Valuable_Assistant_for_3D_Gaussian_Splatting_ICCV_2025_paper.pdf#page=6) · [PDF 8쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Fang_NeRF_Is_a_Valuable_Assistant_for_3D_Gaussian_Splatting_ICCV_2025_paper.pdf#page=8)
 
 ## Evaluation Body Digest
 
@@ -21,22 +21,18 @@ PDF body evaluation/result cue (p. 5 (5.2. Comparison), p. 5 (5.2. Comparison), 
 
 ## Evaluation Type and Scope
 
-- **Evaluation type:** `EMPIRICAL / REAL-ROBOT OR HARDWARE`.
-- **Target system/task:** 3D scene/object와 robot coordinate frame.
-- **Input boundary:** RGB-D, image set, point cloud, depth와 camera pose.
-- **Output/decision under evaluation:** point map, pose, scene graph, affordance 또는 query result.
-- **Primary target:** geometric accuracy, semantic consistency와 planning/manipulation utility.
+- **Evaluation type:** `BENCHMARK / DATASET`.
 - **Detected evaluation headings:** 5. Experiments (p. 5); 5.1. Implementation Details (p. 5).
 
 ## Experimental Matrix
 
 | Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
-| 5.2. Comparison | EMPIRICAL / REAL-ROBOT OR HARDWARE | Notably, compared to other methods that incorporate NeRF-like concepts, such as VDGS and Hash-GS, NeRF-GS achieves even more substantial improvements. | p. 5 (5.2. Comparison) |
-| 5.2. Comparison | EMPIRICAL / REAL-ROBOT OR HARDWARE | Comparative results are shown in Table 1, where our approach significantly outperforms the vanilla 3DGS model and other state-of-the-art methods across PSNR, SSIM, and ... | p. 5 (5.2. Comparison) |
-| 5.4. Ablation Studies | EMPIRICAL / REAL-ROBOT OR HARDWARE | The ablation results in Table 4 indicate that our proposed initialization significantly outperforms the alternatives. | p. 8 (5.4. Ablation Studies) |
-| Figure/Table caption | EMPIRICAL / REAL-ROBOT OR HARDWARE | Figure 1. NeRF-GS establishes a bridge of communication be- tween NeRF and 3DGS, leveraging information sharing, modeling of distinct characteristics, and joint optimization to ... | p. 1 (Figure/Table caption) |
-| 5.2. Comparison | EMPIRICAL / REAL-ROBOT OR HARDWARE | Remarkably, NeRF-GS achieves performance comparable to or even surpassing the SplatField method, which is specifically designed for sparse-view set26235 | p. 6 (5.2. Comparison) |
+| 5.2. Comparison | BENCHMARK / DATASET | Notably, compared to other methods that incorporate NeRF-like concepts, such as VDGS and Hash-GS, NeRF-GS achieves even more substantial improvements. | p. 5 (5.2. Comparison) |
+| 5.2. Comparison | BENCHMARK / DATASET | Comparative results are shown in Table 1, where our approach significantly outperforms the vanilla 3DGS model and other state-of-the-art methods across PSNR, SSIM, and ... | p. 5 (5.2. Comparison) |
+| 5.4. Ablation Studies | BENCHMARK / DATASET | The ablation results in Table 4 indicate that our proposed initialization significantly outperforms the alternatives. | p. 8 (5.4. Ablation Studies) |
+| Figure/Table caption | BENCHMARK / DATASET | Figure 1. NeRF-GS establishes a bridge of communication be- tween NeRF and 3DGS, leveraging information sharing, modeling of distinct characteristics, and joint optimization to ... | p. 1 (Figure/Table caption) |
+| 5.2. Comparison | BENCHMARK / DATASET | Remarkably, NeRF-GS achieves performance comparable to or even surpassing the SplatField method, which is specifically designed for sparse-view set26235 | p. 6 (5.2. Comparison) |
 
 ## Dataset / Benchmark Role
 

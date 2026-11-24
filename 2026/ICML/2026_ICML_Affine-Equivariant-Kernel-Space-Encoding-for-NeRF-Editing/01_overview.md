@@ -17,12 +17,11 @@
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (15 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다. [본문](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/zielinski26a/zielinski26a.pdf)
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — This limitation restricts their applicability in interactive and physically grounded settings.
-
-방법 관련 발췌 — In this work, we introduce Affine-Equivariant Kernel Space Encoding (EKS), a novel positional encoding mechanism for NeRFs.
+EKS는 국소적으로 변형할 수 있는 비등방 가우시안 커널로 신경 복사장의 공간 특징을 표현한다. [PDF 1쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/zielinski26a/zielinski26a.pdf#page=1) · [PDF 3쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/zielinski26a/zielinski26a.pdf#page=3)
 
 ## Problem and Motivation
 
@@ -56,22 +55,14 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** In this work, we introduce Affine-Equivariant Kernel Space Encoding (EKS), a novel positional encoding mechanism for NeRFs.
-- **p. 6 / 4. Proposed Method - extractive body cue:** Interpolation between these modified Gaussians then enables the system to synthesize novel views of the edited scene.
-- **p. 4 / 4. Proposed Method - extractive body cue:** Our method, called EKS, integrates affine-equvariant transformation properties of Gaussian kernels and a neural network-based rendering procedure into a single system.
-- **p. 5 / 4. Proposed Method - extractive body cue:** Our method preserves relative feature structure under spatial transformations and yields visibly improved results with no holes and distortions. following section).
-- **p. 5 / 4. Proposed Method - extractive body cue:** To address this limitation, we introduce a Hash Grid Feature Distillation mechanism, which decouples the feature representation from the underlying grid vertices and transfers it ...
-- **p. 6 / 5. Experiments - extractive body cue:** These baselines are selected to demonstrate that EKS not only achieves reconstruction quality comparable to or exceeding SOTA methods, while enabling editing with significantly fewer ...
-- **p. 6 / 5. Experiments - extractive body cue:** For static scene reconstruction, EKS achieves quality comparable to state-of-the-art editable methods, and in some cases provides the best results among methods that support editing.
-- **p. 7 / 5. Experiments - extractive body cue:** Quantitative comparisons (PSNR) on a (Chen et al., 2023) benchmark showing that EKS achieves best results in editing task.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 각 커널의 국소 좌표에서 특징을 보간해 커널의 아핀 변환에 따라 장면 일부를 이동하거나 변형할 수 있게 한다. [PDF 3쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/zielinski26a/zielinski26a.pdf#page=3) · [PDF 4쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/zielinski26a/zielinski26a.pdf#page=4) · [PDF 5쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/zielinski26a/zielinski26a.pdf#page=5)
+- 학습 때 다중 해상도 해시 격자의 특징을 커널에 증류한 뒤 추론에서는 격자 없이 복원·국소 편집 품질을 평가했다. [PDF 5쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/zielinski26a/zielinski26a.pdf#page=5) · [PDF 6쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/zielinski26a/zielinski26a.pdf#page=6) · [PDF 7쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/zielinski26a/zielinski26a.pdf#page=7)
 
 ## Evaluation Scope
 
 | Dimension | Body-grounded record | Boundary | Anchor |
 |---|---|---|---|
-| Evaluation type | EMPIRICAL / REAL-ROBOT OR HARDWARE | do not infer unreported downstream behavior | p. 6 (5. Experiments), p. 6 (5. Experiments) |
+| Evaluation type | BENCHMARK / DATASET | do not infer unreported downstream behavior | p. 6 (5. Experiments), p. 6 (5. Experiments) |
 | Embodiment/environment | Additionally to synthetic data we trained our NeRF model trained on the Mip-NeRF 360 dataset (Barron et al., 2022), comprising five outdoor and four indoor real-world 360°scenes. | hardware/simulator version and reset protocol | p. 6 (5. Experiments), p. 7 (5. Experiments) |
 | Dataset/benchmark | Example edits on real-world scenes. | role, split, size and leakage | p. 6 (5. Experiments), p. 7 (5. Experiments), p. 6 (5. Experiments), p. 7 (5. Experiments) |
 | Metric | This demonstrates that our approach preserves rendering quality while enabling scene edits. | definition, denominator, direction and uncertainty | p. 6 (5. Experiments), p. 6 (5. Experiments), p. 7 (5. Experiments) |

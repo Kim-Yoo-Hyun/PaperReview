@@ -16,12 +16,11 @@
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다. [본문](https://openaccess.thecvf.com/content/CVPR2026/papers/Ye_LangRef3DGS_Natural_Language-Guided_3D_Referential_Segmentation_from_Partial_Observations_via_CVPR_2026_paper.pdf)
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — feature embeddings, causing difficulty in separating new or occluded categories from existing ones.
-
-방법 관련 발췌 — To address these challenges, we propose a novel framework built upon the powerful 3D scene representation of 3D Gaussian Splatting (3DGS) [18] that jointly tackles new-class discovery and low-rank semantic adaptation for ...
+LangRef3DGS는 가려지거나 일부만 보이는 RGB-D 관측을 연속적인 가우시안 임베딩장으로 구성해 텍스트가 가리키는 영역을 분할한다. [PDF 1쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Ye_LangRef3DGS_Natural_Language-Guided_3D_Referential_Segmentation_from_Partial_Observations_via_CVPR_2026_paper.pdf#page=1) · [PDF 3쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Ye_LangRef3DGS_Natural_Language-Guided_3D_Referential_Segmentation_from_Partial_Observations_via_CVPR_2026_paper.pdf#page=3)
 
 ## Problem and Motivation
 
@@ -55,16 +54,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** To address these challenges, we propose a novel framework built upon the powerful 3D scene representation of 3D Gaussian Splatting (3DGS) [18] that jointly tackles ...
-- **p. 1 / 1. Introduction - extractive body cue:** Despite significant missing data (e.g., the stuffed bear, plate, and cookies are partially unobserved), our method accurately segments objects of varying scales-from the large tea ...
-- **p. 2 / 1. Introduction - extractive body cue:** Our method constructs a semantically continuous field within the 3DGS representation, which naturally supports both geometric and language-guided segmentation by aligning dense Gaussian embeddings with ...
-- **p. 3 / 4. Method - extractive body cue:** Our method targets language-guided 3D segmentation under partial viewpoints, where small or partially observed objects are prone to be overlooked.
-- **p. 4 / 4. Method - extractive body cue:** To enhance inter-class separability at the feature level, we introduce a Gradient Low-Rank Mechanism (Sec.
-- **p. 6 / 5.2.1. Quantitative Results - extractive body cue:** Although our model improves performance in the dense-view setting, the relative gains become substantially larger under incompleteness.
-- **p. 6 / 5.2.2. Qualitative Results - extractive body cue:** Compared with prior methods, our results exhibit cleaner boundaries, fewer fragmented regions, and improved alignment with textual prompts.
-- **p. 7 / 5.3. Ablation and Analysis - extractive body cue:** GLR constraints further improve performance to 54.1/75.2, fostering stable, low-rank semantic representations.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 디리클레 과정으로 새로운 범주를 찾고 저랭크 기울기 처리를 통해 중복 특징을 줄여 범주 분리를 유도한다. [PDF 3쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Ye_LangRef3DGS_Natural_Language-Guided_3D_Referential_Segmentation_from_Partial_Observations_via_CVPR_2026_paper.pdf#page=3) · [PDF 4쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Ye_LangRef3DGS_Natural_Language-Guided_3D_Referential_Segmentation_from_Partial_Observations_via_CVPR_2026_paper.pdf#page=4) · [PDF 5쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Ye_LangRef3DGS_Natural_Language-Guided_3D_Referential_Segmentation_from_Partial_Observations_via_CVPR_2026_paper.pdf#page=5)
+- LERF-Mask·LERF-OVS 등에서 언어 조건 분할을 평가하고 부분 관측 및 새 범주 발견 조건에서 구성 요소를 비교했다. [PDF 6쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Ye_LangRef3DGS_Natural_Language-Guided_3D_Referential_Segmentation_from_Partial_Observations_via_CVPR_2026_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Ye_LangRef3DGS_Natural_Language-Guided_3D_Referential_Segmentation_from_Partial_Observations_via_CVPR_2026_paper.pdf#page=7) · [PDF 8쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Ye_LangRef3DGS_Natural_Language-Guided_3D_Referential_Segmentation_from_Partial_Observations_via_CVPR_2026_paper.pdf#page=8)
 
 ## Evaluation Scope
 

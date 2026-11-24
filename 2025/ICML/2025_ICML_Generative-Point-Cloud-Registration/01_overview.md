@@ -16,12 +16,11 @@
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (14 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다. [본문](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/jiang25k/jiang25k.pdf)
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, in geometry-only point cloud registration, the RGB images corresponding to the point clouds are unavailable, and existing methods rely solely on 3D geometric information for correspondence estimation and pose calcu1
-
-방법 관련 발췌 — To summarize, our contributions are as follows: • We propose a new Generative Point Cloud Registration paradigm, aimed at generating cross-view image pairs for both source and target point clouds, thereby providing ...
+Generative Point Cloud Registration은 정합할 두 점군의 깊이에서 서로 일관된 가상 컬러 영상을 생성해 점 대응을 찾는다. [PDF 1쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/jiang25k/jiang25k.pdf#page=1) · [PDF 3쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/jiang25k/jiang25k.pdf#page=3)
 
 ## Problem and Motivation
 
@@ -55,22 +54,14 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** To summarize, our contributions are as follows: • We propose a new Generative Point Cloud Registration paradigm, aimed at generating cross-view image pairs for both ...
-- **p. 2 / 1. Introduction - extractive body cue:** To achieve this, we introduce MatchControlNet, a matching-specific, controllable 2D generative model.
-- **p. 4 / 3.3. Zero-Shot Texture Consistency Generation - extractive body cue:** Additionally, we introduce two key designs: coupled conditional denoising and coupled prompt guidance to achieve the cross-view texture consistency generation.
-- **p. 4 / 3.3. Zero-Shot Texture Consistency Generation - extractive body cue:** To enable effective cross-view message passing without any finetuning (i.e., zero-shot), we propose an efficient coupled conditional denoising scheme for joint, interactive source and target ...
-- **p. 1 / 1. Introduction - extractive body cue:** Unlike geometry-only matching in previous methods, our approach introduces MatchControlNet, a matching-specific 2D generative model that generates cross-view images pairs from point cloud data, providing ...
-- **p. 7 / 4.3. Ablation Studies and Analysis - extractive body cue:** Moreover, because the finetuned Match-ControlNet benefits from task-specific training, it consistently achieves higher registration accuracy than the zero-shot version.
-- **p. 7 / 4.3. Ablation Studies and Analysis - extractive body cue:** Increasing the number of finetuning samples (e.g., to 3K or 5K) provides additional improvements; however, models trained on 3K or 5K samples show comparable registration ...
-- **p. 8 / 4.3. Ablation Studies and Analysis - extractive body cue:** By contrast, a balanced weight (e.g., ω = 0.50) achieves higher performance.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- Match-ControlNet은 두 영상의 잡음 제거와 프롬프트 조건을 결합해 각 영상이 자기 점군에 맞으면서 공통 영역의 질감을 공유하도록 한다. [PDF 3쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/jiang25k/jiang25k.pdf#page=3) · [PDF 4쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/jiang25k/jiang25k.pdf#page=4) · [PDF 5쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/jiang25k/jiang25k.pdf#page=5)
+- 생성된 색상 특징을 기하 특징과 결합하고 3DMatch와 ScanNet에서 기존 정합기에 추가했을 때의 대응 및 정합 성능을 비교했다. [PDF 6쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/jiang25k/jiang25k.pdf#page=6) · [PDF 7쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/jiang25k/jiang25k.pdf#page=7)
 
 ## Evaluation Scope
 
 | Dimension | Body-grounded record | Boundary | Anchor |
 |---|---|---|---|
-| Evaluation type | EMPIRICAL / REAL-ROBOT OR HARDWARE | do not infer unreported downstream behavior | p. 7 (4.3. Ablation Studies and Analysis), p. 7 (4.3. Ablation Studies and Analysis) |
+| Evaluation type | BENCHMARK / DATASET | do not infer unreported downstream behavior | p. 7 (4.3. Ablation Studies and Analysis), p. 7 (4.3. Ablation Studies and Analysis) |
 | Embodiment/environment | We first perform model evaluation on a widely-used, large-scale indoor benchmark dataset, ScanNet (Dai et al., 2017). | hardware/simulator version and reset protocol | p. 6 (4.2. Comparison with Existing Methods), p. 6 (4.1. Experimental Setting) |
 | Dataset/benchmark | We next evaluate our method on 3DMatch (Zeng et al., 2017), another widely-used benchmark dataset for 3D registration. | role, split, size and leakage | p. 6 (4.2. Comparison with Existing Methods), p. 6 (4.1. Experimental Setting), p. 7 (4.2. Comparison with Existing Methods), p. 8 (4.3. Ablation Studies and Analysis) |
 | Metric | Following (El Banani et al., 2021; Yuan et al., 2023), we use rotation error, translation error, and Chamfer error, including the accuracy across varying thresholds and mean/median errors, for performance evaluation. | definition, denominator, direction and uncertainty | p. 6 (4.1. Experimental Setting), p. 6 (Figure/Table caption), p. 7 (4.3. Ablation Studies and Analysis) |

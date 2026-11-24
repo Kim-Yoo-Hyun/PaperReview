@@ -16,14 +16,13 @@
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (28 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다. [본문](https://proceedings.iclr.cc/paper_files/paper/2026/file/e0ac27bf3327c9cb99cc5f548db4f73a-Paper-Conference.pdf)
 
 > DOC-QA2 targeted source review: 2026-10-23; PDF pp. 27. 손상 구간·직접 연결된 표 분류만 원문 이미지와 대조했다. 전체 주장 정독·실험 검증·reading status 승격을 뜻하지 않는다. [URL·PDF hash·수정 기록](../../../work/sources/pdf_note_review_followup_2026-10-23.json).
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — First, lacking reliable geometric supervision, these methods produce poor reconstruction quality even in observed regions with sparse input views, which undermines the geometric basis essential for inpainting unobserved areas.
-
-방법 관련 발췌 — Our main contributions are summarized as follows: • We propose a novel method that leverages the plane representation to derive scale-accurate geometric constraints, substantially improving 3D scene reconstruction even in unobserved reg ...
+G4Splat은 희소한 입력으로 장면을 완성할 때 평면 구조에서 얻은 깊이로 가우시안 최적화와 비디오 확산 인페인팅을 함께 제약한다. [PDF 1쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/e0ac27bf3327c9cb99cc5f548db4f73a-Paper-Conference.pdf#page=1) · [PDF 4쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/e0ac27bf3327c9cb99cc5f548db4f73a-Paper-Conference.pdf#page=4)
 
 ## Problem and Motivation
 
@@ -57,22 +56,14 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** Our main contributions are summarized as follows: • We propose a novel method that leverages the plane representation to derive scale-accurate geometric constraints, substantially improving ...
-- **p. 5 / 3.1 BACKGROUND - extractive body cue:** Our method addresses key issues in prior approaches: (a) MAtCha produces noticeable errors in non-overlapping regions (highlighted by circles); (b) masks derived from alpha maps ...
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** To this end, we introduce G4SPLAT, which first leverages the prevalence of planar structures in man-made environments, consistent with the Manhattan world assumption (Coughlan & ...
-- **p. 4 / 3 METHOD - extractive body cue:** We propose G4SPLAT, a method that integrates accurate geometry guidance with generative priors to enhance 3D scene reconstruction.
-- **p. 4 / 3 METHOD - extractive body cue:** Next, we present our plane-aware geometry modeling in Section 3.2, followed by the geometry-guided generative pipeline in Section 3.3.
-- **p. 8 / 4 EXPERIMENTS - extractive body cue:** Our method significantly outperforms all baselines across both reconstruction and rendering metrics.
-- **p. 10 / 4.2 RESULTS - extractive body cue:** Adding plane-aware geometry modeling (PM), either alone or in combination with generative prior (GP), significantly improves geometry reconstruction.
-- **p. 25 / C.7 IMPLEMENTATION DETAILS - extractive body cue:** G4Splat outperforms baselines in both visible and unobserved regions, producing superior geometry with improved smoothness and minimal Gaussian artifacts.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 평면 단서로 미터 단위 깊이를 보강하고 이 기하를 가시성 마스크, 다음 뷰 선택과 다중 뷰 영상 생성에 사용한다. [PDF 4쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/e0ac27bf3327c9cb99cc5f548db4f73a-Paper-Conference.pdf#page=4) · [PDF 5쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/e0ac27bf3327c9cb99cc5f548db4f73a-Paper-Conference.pdf#page=5) · [PDF 6쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/e0ac27bf3327c9cb99cc5f548db4f73a-Paper-Conference.pdf#page=6)
+- Replica와 ScanNet++를 포함한 장면에서 관측·미관측 영역의 기하와 외관을 비교하고 평면 모델과 생성 지도의 기여를 분리했다. [PDF 7쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/e0ac27bf3327c9cb99cc5f548db4f73a-Paper-Conference.pdf#page=7) · [PDF 8쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/e0ac27bf3327c9cb99cc5f548db4f73a-Paper-Conference.pdf#page=8) · [PDF 10쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/e0ac27bf3327c9cb99cc5f548db4f73a-Paper-Conference.pdf#page=10)
 
 ## Evaluation Scope
 
 | Dimension | Body-grounded record | Boundary | Anchor |
 |---|---|---|---|
-| Evaluation type | EMPIRICAL / REAL-ROBOT OR HARDWARE | do not infer unreported downstream behavior | p. 8 (4 EXPERIMENTS), p. 10 (4.2 RESULTS) |
+| Evaluation type | BENCHMARK / DATASET | do not infer unreported downstream behavior | p. 8 (4 EXPERIMENTS), p. 10 (4.2 RESULTS) |
 | Embodiment/environment | The real-world datasets include 6 scenes from ScanNet++ (Yeshwanth et al., 2023), 3 scenes from DeepBlending (Hedman et al., 2018) and 9 scenes from Mip-NeRF 360 (Barron et al., 2022). | hardware/simulator version and reset protocol | p. 7 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS) |
 | Dataset/benchmark | As the Mip-NeRF 360 dataset lacks ground-truth meshes, we evaluate only the rendering performance for those scenes; for the remaining three datasets, we report the full suite of metrics. | role, split, size and leakage | p. 7 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 9 (4.2 RESULTS) |
 | Metric | Table A4는 CD=(Accuracy+Completeness)/2, 두 방향 nearest-point L1 distance 평균, F-score=2PR/(P+R)를 정의한다. Precision/recall은 L1 distance<0.05인 비율이다. | 이 표의 L1 norm·0.05 threshold를 보존; 다른 CD 정의와 혼용하지 않음 | PDF p. 27 Table A4 |

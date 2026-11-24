@@ -6,7 +6,7 @@
 
 ## Evaluation in One Sentence
 
-PDF body evaluation/result cue (p. 7 (5.4.1. MAIN RESULTS), p. 7 (5.4.1. MAIN RESULTS), p. 8 (5.4.2. IMPACT OF THICKNESS-AWARE FRAMEWORK), p. 14 (Figure/Table caption), p. 13 (Figure/Table caption), p. 8 (5.4.2. IMPACT OF THICKNESS-AWARE FRAMEWORK)): The results demonstrate that spatial information alone is sufficient to achieve strong performance in terms of R2 score, highlighting its importance in representing meaningful relationships and Figure 6.
+사출 부품의 변형 자료에서 오차를 평가하고 두께 정보와 좌표 정렬을 제거한 결과를 비교했다. [PDF 6쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/kim25r/kim25r.pdf#page=6) · [PDF 7쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/kim25r/kim25r.pdf#page=7) · [PDF 8쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/kim25r/kim25r.pdf#page=8)
 
 ## Evaluation Body Digest
 
@@ -21,22 +21,18 @@ PDF body evaluation/result cue (p. 7 (5.4.1. MAIN RESULTS), p. 7 (5.4.1. MAIN RE
 
 ## Evaluation Type and Scope
 
-- **Evaluation type:** `EMPIRICAL / REAL-ROBOT OR HARDWARE`.
-- **Target system/task:** 3D scene/object와 robot coordinate frame.
-- **Input boundary:** RGB-D, image set, point cloud, depth와 camera pose.
-- **Output/decision under evaluation:** point map, pose, scene graph, affordance 또는 query result.
-- **Primary target:** geometric accuracy, semantic consistency와 planning/manipulation utility.
+- **Evaluation type:** `BENCHMARK / DATASET`.
 - **Detected evaluation headings:** 5. Experiment (p. 6); 5.1. Dataset Description (p. 6); 5.3. Evaluation Settings (p. 6); 5.4. Experiment Results (p. 7); 5.4.1. MAIN RESULTS (p. 7); 5.4.3. EVALUATION UNDER DYNAMIC SETTING (p. 8).
 
 ## Experimental Matrix
 
 | Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
-| 5.4.1. MAIN RESULTS | EMPIRICAL / REAL-ROBOT OR HARDWARE | The results demonstrate that spatial information alone is sufficient to achieve strong performance in terms of R2 score, highlighting its importance in representing meaningful ... | p. 7 (5.4.1. MAIN RESULTS) |
-| 5.4.1. MAIN RESULTS | EMPIRICAL / REAL-ROBOT OR HARDWARE | The enhanced alignment provided by our proposed data-driven coordinate system significantly improves the representation of spatial relationships, leading to superior performance in downstream tasks. | p. 7 (5.4.1. MAIN RESULTS) |
-| 5.4.2. IMPACT OF THICKNESS-AWARE FRAMEWORK | EMPIRICAL / REAL-ROBOT OR HARDWARE | 8, all baseline models exhibit improved performance when incorporating thickness edges compared to their counterparts without them. | p. 8 (5.4.2. IMPACT OF THICKNESS-AWARE FRAMEWORK) |
-| Figure/Table caption | EMPIRICAL / REAL-ROBOT OR HARDWARE | Figure 13. R2 scores for all test data. In the shape IDs, ‘s' indicates seen shapes included in the training data, while ‘us' refers ... | p. 14 (Figure/Table caption) |
-| Figure/Table caption | EMPIRICAL / REAL-ROBOT OR HARDWARE | Table 4. Comparison of training speed (iteration/sec) and GPU memory usage (MB) across different models. Our model is based on MGN, with an additional ... | p. 13 (Figure/Table caption) |
+| 5.4.1. MAIN RESULTS | BENCHMARK / DATASET | The results demonstrate that spatial information alone is sufficient to achieve strong performance in terms of R2 score, highlighting its importance in representing meaningful ... | p. 7 (5.4.1. MAIN RESULTS) |
+| 5.4.1. MAIN RESULTS | BENCHMARK / DATASET | The enhanced alignment provided by our proposed data-driven coordinate system significantly improves the representation of spatial relationships, leading to superior performance in downstream tasks. | p. 7 (5.4.1. MAIN RESULTS) |
+| 5.4.2. IMPACT OF THICKNESS-AWARE FRAMEWORK | BENCHMARK / DATASET | 8, all baseline models exhibit improved performance when incorporating thickness edges compared to their counterparts without them. | p. 8 (5.4.2. IMPACT OF THICKNESS-AWARE FRAMEWORK) |
+| Figure/Table caption | BENCHMARK / DATASET | Figure 13. R2 scores for all test data. In the shape IDs, ‘s' indicates seen shapes included in the training data, while ‘us' refers ... | p. 14 (Figure/Table caption) |
+| Figure/Table caption | BENCHMARK / DATASET | Table 4. Comparison of training speed (iteration/sec) and GPU memory usage (MB) across different models. Our model is based on MGN, with an additional ... | p. 13 (Figure/Table caption) |
 
 ## Dataset / Benchmark Role
 

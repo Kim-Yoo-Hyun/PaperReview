@@ -6,7 +6,7 @@
 
 ## Evaluation in One Sentence
 
-PDF body evaluation/result cue (p. 7 (4.3. Results), p. 7 (4.3. Results), p. 5 (4.3. Results), p. 6 (4.3. Results)): Notably, our method consistently achieves significantly better LPIPS scores over the previous SOTA method SpotlessSplats [24].
+NeRF-on-the-go와 일인칭 상호작용 영상 등에서 방해 물체를 제거한 뷰를 비교하고, 가림과 조명 변화에서의 동작을 분석했다. [PDF 6쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Wang_DeGauss_Dynamic-Static_Decomposition_with_Gaussian_Splatting_for_Distractor-free_3D_Reconstruction_ICCV_2025_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Wang_DeGauss_Dynamic-Static_Decomposition_with_Gaussian_Splatting_for_Distractor-free_3D_Reconstruction_ICCV_2025_paper.pdf#page=7) · [PDF 8쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Wang_DeGauss_Dynamic-Static_Decomposition_with_Gaussian_Splatting_for_Distractor-free_3D_Reconstruction_ICCV_2025_paper.pdf#page=8)
 
 ## Evaluation Body Digest
 
@@ -21,21 +21,17 @@ PDF body evaluation/result cue (p. 7 (4.3. Results), p. 7 (4.3. Results), p. 5 (
 
 ## Evaluation Type and Scope
 
-- **Evaluation type:** `EMPIRICAL / REAL-ROBOT OR HARDWARE`.
-- **Target system/task:** 3D scene/object와 robot coordinate frame.
-- **Input boundary:** RGB-D, image set, point cloud, depth와 camera pose.
-- **Output/decision under evaluation:** point map, pose, scene graph, affordance 또는 query result.
-- **Primary target:** geometric accuracy, semantic consistency와 planning/manipulation utility.
+- **Evaluation type:** `BENCHMARK / DATASET`.
 - **Detected evaluation headings:** 4. Experiments (p. 5); 4.1. Implementation Details (p. 5); 4.2. Datasets (p. 5); 4.3. Results (p. 5).
 
 ## Experimental Matrix
 
 | Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
-| 4.3. Results | EMPIRICAL / REAL-ROBOT OR HARDWARE | Notably, our method consistently achieves significantly better LPIPS scores over the previous SOTA method SpotlessSplats [24]. | p. 7 (4.3. Results) |
-| 4.3. Results | EMPIRICAL / REAL-ROBOT OR HARDWARE | 2, where our methods achieve consistently better LPIPS scores. | p. 7 (4.3. Results) |
-| 4.3. Results | EMPIRICAL / REAL-ROBOT OR HARDWARE | To assess the performance of our method for the distractorfree scene reconstruction task in the presence of noisy inputs, we conduct evaluations on both ... | p. 5 (4.3. Results) |
-| 4.3. Results | EMPIRICAL / REAL-ROBOT OR HARDWARE | Our method shows generally superior performance over state-of-the-art methods. | p. 6 (4.3. Results) |
+| 4.3. Results | BENCHMARK / DATASET | Notably, our method consistently achieves significantly better LPIPS scores over the previous SOTA method SpotlessSplats [24]. | p. 7 (4.3. Results) |
+| 4.3. Results | BENCHMARK / DATASET | 2, where our methods achieve consistently better LPIPS scores. | p. 7 (4.3. Results) |
+| 4.3. Results | BENCHMARK / DATASET | To assess the performance of our method for the distractorfree scene reconstruction task in the presence of noisy inputs, we conduct evaluations on both ... | p. 5 (4.3. Results) |
+| 4.3. Results | BENCHMARK / DATASET | Our method shows generally superior performance over state-of-the-art methods. | p. 6 (4.3. Results) |
 
 ## Dataset / Benchmark Role
 

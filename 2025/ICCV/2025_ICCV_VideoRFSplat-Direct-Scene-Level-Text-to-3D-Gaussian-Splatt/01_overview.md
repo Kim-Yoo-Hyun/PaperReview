@@ -16,12 +16,11 @@
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (12 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다. [본문](https://openaccess.thecvf.com/content/ICCV2025/papers/Go_VideoRFSplat_Direct_Scene-Level_Text-to-3D_Gaussian_Splatting_Generation_with_Flexible_Pose_ICCV_2025_paper.pdf)
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — These pose fundamental challenges to developing generative models for direct 3DGS generation, introducing difficulties distinct from object-level generation.
-
-방법 관련 발췌 — Furthermore, we propose an asynchronous adaptation of Classifier-Free Guidance (CFG) that enables the clearer pose to better guide multi-view image generation.
+VideoRFSplat은 텍스트로부터 장면의 여러 뷰와 그 뷰를 촬영할 카메라 자세를 함께 생성해 3D 가우시안 장면으로 변환한다. [PDF 1쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Go_VideoRFSplat_Direct_Scene-Level_Text-to-3D_Gaussian_Splatting_Generation_with_Flexible_Pose_ICCV_2025_paper.pdf#page=1) · [PDF 4쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Go_VideoRFSplat_Direct_Scene-Level_Text-to-3D_Gaussian_Splatting_Generation_with_Flexible_Pose_ICCV_2025_paper.pdf#page=4)
 
 ## Problem and Motivation
 
@@ -55,22 +54,14 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** Furthermore, we propose an asynchronous adaptation of Classifier-Free Guidance (CFG) that enables the clearer pose to better guide multi-view image generation.
-- **p. 2 / 1. Introduction - extractive body cue:** In this paper, to eliminate external dependency, we present VideoRFSplat, a direct 3DGS generation model that introduces an architecture and sampling strategy for jointly generating ...
-- **p. 4 / 4.1. Dual-Stream Pose-Video Joint Model - extractive body cue:** To reduce interference, we propose a dual-stream architecture with dedicated submodules for pose and image generation, communicating via cross-attention at intermediate layers (see Fig.
-- **p. 5 / 4.1. Dual-Stream Pose-Video Joint Model - extractive body cue:** To address this, we propose an asynchronous timestep strategy, decoupling the timesteps of pose and multi-view generation modules and enabling one modality to denoise faster, ...
-- **p. 4 / 4.1. Dual-Stream Pose-Video Joint Model - extractive body cue:** This exchange enables controlled interaction between the two models while preserving their specialized forward paths and reducing interference between pose and multi-view modalities.
-- **p. 7 / Figure/Table caption - extractive body cue:** Table 2. Quantitative results on MVImgNet [84] and DL3DV [41] validation sets. VideoRFSplat achieves the higher performance across all metrics without SDS++ refinement. sess image ...
-- **p. 8 / Figure/Table caption - extractive body cue:** Table 5. VideoRFSplat outperforms other methods in FID-8K (43.07), translation error (0.063), rotation error (0.4223), and CLIPScore (31.1). These results confirm that VideoRFSplat generates images ...
-- **p. 8 / Figure/Table caption - extractive body cue:** Table 5. Results on camera conditioned generation. VideoRFS- plat can perform camera-conditioned generation. models under identical conditions for 60K iterations with Mochi [69] and then ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 영상과 자세를 별도 경로에서 생성하되 중간 특징을 교환하고, 자세의 잡음을 먼저 제거해 뷰 생성을 조건화한다. [PDF 4쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Go_VideoRFSplat_Direct_Scene-Level_Text-to-3D_Gaussian_Splatting_Generation_with_Flexible_Pose_ICCV_2025_paper.pdf#page=4) · [PDF 5쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Go_VideoRFSplat_Direct_Scene-Level_Text-to-3D_Gaussian_Splatting_Generation_with_Flexible_Pose_ICCV_2025_paper.pdf#page=5)
+- 생성한 뷰를 가우시안으로 디코딩하고 텍스트 조건부 장면 생성에서 화질·일관성과 두 경로의 설계 효과를 평가했다. [PDF 5쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Go_VideoRFSplat_Direct_Scene-Level_Text-to-3D_Gaussian_Splatting_Generation_with_Flexible_Pose_ICCV_2025_paper.pdf#page=5) · [PDF 6쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Go_VideoRFSplat_Direct_Scene-Level_Text-to-3D_Gaussian_Splatting_Generation_with_Flexible_Pose_ICCV_2025_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Go_VideoRFSplat_Direct_Scene-Level_Text-to-3D_Gaussian_Splatting_Generation_with_Flexible_Pose_ICCV_2025_paper.pdf#page=7) · [PDF 8쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Go_VideoRFSplat_Direct_Scene-Level_Text-to-3D_Gaussian_Splatting_Generation_with_Flexible_Pose_ICCV_2025_paper.pdf#page=8)
 
 ## Evaluation Scope
 
 | Dimension | Body-grounded record | Boundary | Anchor |
 |---|---|---|---|
-| Evaluation type | EMPIRICAL / REAL-ROBOT OR HARDWARE | do not infer unreported downstream behavior | p. 7 (Figure/Table caption), p. 8 (Figure/Table caption) |
+| Evaluation type | EMPIRICAL / SOURCE-REPORTED EVALUATION | do not infer unreported downstream behavior | p. 7 (Figure/Table caption), p. 8 (Figure/Table caption) |
 | Embodiment/environment | Following previous works [20, 35], we evaluate our model on the MVImgNet and DL3DV validation datasets, as well as the T3Bench benchmark [23]. | hardware/simulator version and reset protocol | p. 6 (5.1. Experimental Setups), p. 6 (5.1. Experimental Setups) |
 | Dataset/benchmark | Following previous works [20, 35], we evaluate our model on the MVImgNet and DL3DV validation datasets, as well as the T3Bench benchmark [23]. | role, split, size and leakage | p. 6 (5.1. Experimental Setups), p. 6 (5.1. Experimental Setups) |
 | Metric | Table 5. VideoRFSplat outperforms other methods in FID-8K (43.07), translation error (0.063), rotation error (0.4223), and CLIPScore (31.1). These results confirm that VideoRFSplat generates images following camera trajectories. Qualita ... | definition, denominator, direction and uncertainty | p. 8 (Figure/Table caption), p. 7 (Figure/Table caption), p. 7 (Figure/Table caption) |

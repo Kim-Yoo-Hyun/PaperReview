@@ -16,12 +16,11 @@
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (13 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다. [본문](https://proceedings.iclr.cc/paper_files/paper/2025/file/623307df18da128262aaf394cdcfb235-Paper-Conference.pdf)
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, sensor depth acquisition is costly, and the depth prior information from pre-trained monocular deep models inevitably suffer from the scale ambiguity (Liu et al., 2023b).
-
-방법 관련 발췌 — In this paper, we introduce Flow Distillation Sampling (FDS), an online method for distilling matching prior from a pre-trained optical flow model into the 3DGS training process.
+Flow Distillation Sampling은 관측 뷰에 가까운 새 시점에서 예상되는 광류를 이용해 장면별 3D 가우시안의 기하를 개선한다. [PDF 1쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/623307df18da128262aaf394cdcfb235-Paper-Conference.pdf#page=1) · [PDF 4쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/623307df18da128262aaf394cdcfb235-Paper-Conference.pdf#page=4)
 
 ## Problem and Motivation
 
@@ -54,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 1 / 1 INTRODUCTION - extractive body cue:** In this paper, we introduce Flow Distillation Sampling (FDS), an online method for distilling matching prior from a pre-trained optical flow model into the 3DGS ...
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** Our contributions are summarized as follows: • FDS leverages matching prior information to recover absolute scale, significantly enhancing the geometric quality of the Gaussian radiance ...
-- **p. 1 / 1 INTRODUCTION - extractive body cue:** 3D Gaussian Splatting (3DGS) (Kerbl et al., 2023) has been widely applied to the field of 3D reconstruction and rendering, including novel view synthesis of ...
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** Finally the Prior Flow is used to supervise Radiance flow, which enhances the geometric quality of Gaussian Radiance Field. into the unobserved novel view.
-- **p. 8 / 4.2 RESULTS - extractive body cue:** We found that Sea Raft (Wang et al., 2024) outperforms Raft (Teed and Deng, 2020) on FDS, indicating that a better optical flow model can ...
-- **p. 9 / 4.2 RESULTS - extractive body cue:** From the results, it can be seen that depth order information provided by monocular depth improves reconstruction accuracy.
-- **p. 9 / 4.2 RESULTS - extractive body cue:** Meanwhile, our FDS achieves the best performance among all the priors, and by integrating all three components, we obtained the optimal results.
-- **p. 8 / 4.2 RESULTS - extractive body cue:** By incorporating the matching prior through FDS, the quality of the rendered depth is significantly improved.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 가우시안 기하에서 계산한 광류와 사전학습된 대응 모델이 두 뷰에서 추정한 광류를 일치시키도록 장면을 최적화한다. [PDF 3쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/623307df18da128262aaf394cdcfb235-Paper-Conference.pdf#page=3) · [PDF 4쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/623307df18da128262aaf394cdcfb235-Paper-Conference.pdf#page=4) · [PDF 5쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/623307df18da128262aaf394cdcfb235-Paper-Conference.pdf#page=5)
+- 깊이·메시·새 시점 영상을 각각 평가하고 대응 사전분포와 가상 카메라 이동 방식이 복원에 미치는 영향을 분석했다. [PDF 7쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/623307df18da128262aaf394cdcfb235-Paper-Conference.pdf#page=7) · [PDF 8쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/623307df18da128262aaf394cdcfb235-Paper-Conference.pdf#page=8) · [PDF 9쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/623307df18da128262aaf394cdcfb235-Paper-Conference.pdf#page=9)
 
 ## Evaluation Scope
 

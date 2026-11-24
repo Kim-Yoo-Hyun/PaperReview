@@ -9176,6 +9176,11 @@
           "evidence": "cue_only"
         },
         {
+          "paper_id": "pr-0375",
+          "source": "2025/ICCV/2025_ICCV_Distilling-Diffusion-Models-to-Efficient-3D-LiDAR-Scene-Co/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
           "paper_id": "pr-0376",
           "source": "2025/ICCV/2025_ICCV_RadarSplat-Radar-Gaussian-Splatting-for-High-Fidelity-Data/04_evaluation.md",
           "evidence": "cue_only"
@@ -9525,11 +9530,6 @@
         {
           "paper_id": "pr-0347",
           "source": "2026/CVPR/2026_CVPR_TokenSplat-Token-aligned-3D-Gaussian-Splatting-for-Feed-fo/04_evaluation.md",
-          "evidence": "cue_only"
-        },
-        {
-          "paper_id": "pr-0372",
-          "source": "2025/ICCV/2025_ICCV_FreeSplatter-Pose-free-Gaussian-Splatting-for-Sparse-view/04_evaluation.md",
           "evidence": "cue_only"
         },
         {

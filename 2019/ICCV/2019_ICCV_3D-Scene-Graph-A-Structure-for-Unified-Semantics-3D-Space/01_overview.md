@@ -16,12 +16,11 @@
 - Code/Project: https://3dscenegraph.stanford.edu/
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다. [본문](https://openaccess.thecvf.com/content_ICCV_2019/papers/Armeni_3D_Scene_Graph_A_Structure_for_Unified_Semantics_3D_Space_ICCV_2019_paper.pdf)
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — This gives free computation for various attributes and relationships. • We propose a two-step robustification approach to optimizing semantic recognition using imperfect existing detectors, which allows the automation of a mainly manual ...
-
-방법 관련 발췌 — The input to our method is the typical output of 3D scanners and consists of 3D mesh models, registered RGB panoramas and the corresponding camera parameters, such as the data in Matterport3D ...
+3D Scene Graph는 실내 스캔을 건물·방·물체·카메라의 관계와 속성으로 구성해 장면에 대한 구조화된 질의를 지원한다. [PDF 1쪽](https://openaccess.thecvf.com/content_ICCV_2019/papers/Armeni_3D_Scene_Graph_A_Structure_for_Unified_Semantics_3D_Space_ICCV_2019_paper.pdf#page=1) · [PDF 3쪽](https://openaccess.thecvf.com/content_ICCV_2019/papers/Armeni_3D_Scene_Graph_A_Structure_for_Unified_Semantics_3D_Space_ICCV_2019_paper.pdf#page=3)
 
 ## Problem and Motivation
 
@@ -54,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 4 / 3. 3D Scene Graph Structure - extractive body cue:** The input to our method is the typical output of 3D scanners and consists of 3D mesh models, registered RGB panoramas and the corresponding camera ...
-- **p. 2 / 1. Introduction - extractive body cue:** This gives free computation for various attributes and relationships. • We propose a two-step robustification approach to optimizing semantic recognition using imperfect existing detectors, which ...
-- **p. 1 / 1. Introduction - extractive body cue:** 3D Scene Graph: It consists of 4 layers, that represent semantics, 3D space and camera.
-- **p. 2 / 1. Introduction - extractive body cue:** The contributions of this paper can be summarized as: • We extend the scene graph idea in [27] to 3D space and ground semantic information ...
-- **p. 3 / C S1 - extractive body cue:** The Gibson database [44], consists of several hundreds of 3D mesh models with registered panoramic images.
-- **p. 7 / 5.2. Evaluation of Automated Pipeline - extractive body cue:** Similar improvements can be seen in the case of 3D (Figure 7).
-- **p. 6 / 5.2. Evaluation of Automated Pipeline - extractive body cue:** The panorama results are obtained after applying both robustification mechanisms.
-- **p. 6 / 5.2. Evaluation of Automated Pipeline - extractive body cue:** And these in 3D: • Mask R-CNN [18] and Pano Projection: The panorama results of Mask R-CNN are projected on the 3D mesh surfaces with ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 건물에서 개별 물체와 관측 카메라까지 잇는 계층을 정의하고 공간 관계 및 관측 속성을 그래프에 표현한다. [PDF 3쪽](https://openaccess.thecvf.com/content_ICCV_2019/papers/Armeni_3D_Scene_Graph_A_Structure_for_Unified_Semantics_3D_Space_ICCV_2019_paper.pdf#page=3) · [PDF 4쪽](https://openaccess.thecvf.com/content_ICCV_2019/papers/Armeni_3D_Scene_Graph_A_Structure_for_Unified_Semantics_3D_Space_ICCV_2019_paper.pdf#page=4)
+- 여러 뷰의 예측을 3차원에 모으고 사람이 결과를 검수하는 방식으로 주석을 구축해 실제 스캔에서의 활용 예를 제시했다. [PDF 4쪽](https://openaccess.thecvf.com/content_ICCV_2019/papers/Armeni_3D_Scene_Graph_A_Structure_for_Unified_Semantics_3D_Space_ICCV_2019_paper.pdf#page=4) · [PDF 5쪽](https://openaccess.thecvf.com/content_ICCV_2019/papers/Armeni_3D_Scene_Graph_A_Structure_for_Unified_Semantics_3D_Space_ICCV_2019_paper.pdf#page=5) · [PDF 6쪽](https://openaccess.thecvf.com/content_ICCV_2019/papers/Armeni_3D_Scene_Graph_A_Structure_for_Unified_Semantics_3D_Space_ICCV_2019_paper.pdf#page=6)
 
 ## Evaluation Scope
 

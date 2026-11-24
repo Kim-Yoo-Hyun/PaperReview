@@ -16,12 +16,11 @@
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (27 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다. [본문](https://proceedings.iclr.cc/paper_files/paper/2025/file/8cbde11e5e271ef9ff67fc9f292e43ed-Paper-Conference.pdf)
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — 1, existing NVS methods perform poorly on the OOD views when restricted to low-elevation inputs, highlighting the need for a novel approach to address this problem.
-
-방법 관련 발췌 — In summary, we make the following contributions: • We introduce OOD-NVS, a new experimental protocol specifically designed to evaluate the performance of NVS methods when rendering 3D scenes from novel viewing angles ...
+SplatFormer는 기존 가우시안 장면을 점 집합으로 처리해 학습 카메라 분포에서 크게 벗어난 시점의 렌더링을 개선한다. [PDF 1쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/8cbde11e5e271ef9ff67fc9f292e43ed-Paper-Conference.pdf#page=1) · [PDF 6쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/8cbde11e5e271ef9ff67fc9f292e43ed-Paper-Conference.pdf#page=6)
 
 ## Problem and Motivation
 
@@ -55,22 +54,14 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 3 / 1 INTRODUCTION - extractive body cue:** In summary, we make the following contributions: • We introduce OOD-NVS, a new experimental protocol specifically designed to evaluate the performance of NVS methods when ...
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** To meet these needs, we propose SplatFormer, a novel learning-based feed-forward 3D transformer designed to operate on Gaussian splats.
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** Existing NVS methods, including MipNeRF360 (Barron et al., 2022), and those designed for sparse inputs like LaRa (Chen et al., 2024a), face challenges in this ...
-- **p. 3 / 1 INTRODUCTION - extractive body cue:** Our results demonstrate that existing methods struggle to generalize under the OOD-NVS protocol; • We propose SplatFormer, a novel learning-based model that refines flawed 3D ...
-- **p. 15 / B IMPLEMENTATION DETAILS - extractive body cue:** Each MLP branch consists of four linear layers, with hidden dimensions of 512 and ReLU activations for all but the last layer.
-- **p. 9 / 5 EXPERIMENTS - extractive body cue:** While our method still faces challenges with high-frequency texture details, it outperforms previous approaches in terms of fidelity and consistency in out-of-distribution views, which is ...
-- **p. 10 / 5 EXPERIMENTS - extractive body cue:** 3, while 2D denoising methods improve the original 3DGS, they significantly underperform compared to SplatFormer and fail to recover geometric details.
-- **p. 10 / 5 EXPERIMENTS - extractive body cue:** Third, applying our method to refining 2DGS may further improve the OOD-NVS results.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 기존 가우시안을 점 트랜스포머에 입력해 속성을 갱신하고, 훈련 뷰 주변에서는 보이지 않던 왜곡을 줄이도록 여러 장면에서 학습한다. [PDF 3쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/8cbde11e5e271ef9ff67fc9f292e43ed-Paper-Conference.pdf#page=3) · [PDF 5쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/8cbde11e5e271ef9ff67fc9f292e43ed-Paper-Conference.pdf#page=5) · [PDF 6쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/8cbde11e5e271ef9ff67fc9f292e43ed-Paper-Conference.pdf#page=6)
+- 합성 및 실제 자료에서 일반 보간 뷰와 분포 밖 카메라 뷰를 구분해 비교하고 다른 데이터셋에 전이되는지도 시험했다. [PDF 7쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/8cbde11e5e271ef9ff67fc9f292e43ed-Paper-Conference.pdf#page=7) · [PDF 8쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/8cbde11e5e271ef9ff67fc9f292e43ed-Paper-Conference.pdf#page=8) · [PDF 9쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/8cbde11e5e271ef9ff67fc9f292e43ed-Paper-Conference.pdf#page=9)
 
 ## Evaluation Scope
 
 | Dimension | Body-grounded record | Boundary | Anchor |
 |---|---|---|---|
-| Evaluation type | EMPIRICAL / REAL-ROBOT OR HARDWARE | do not infer unreported downstream behavior | p. 9 (5 EXPERIMENTS), p. 10 (5 EXPERIMENTS) |
+| Evaluation type | BENCHMARK / DATASET | do not infer unreported downstream behavior | p. 9 (5 EXPERIMENTS), p. 10 (5 EXPERIMENTS) |
 | Embodiment/environment | Following the OOD-NVS protocol, we rendered 20 objects from Google Scanned Objects (GSO) (Downs et al., 2022) and captured 4 real-world scenes. | hardware/simulator version and reset protocol | p. 9 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS) |
 | Dataset/benchmark | Even on the real-world dataset, despite being trained exclusively on synthetic data, SplatFormer reduces artifacts. | role, split, size and leakage | p. 9 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), p. 10 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS) |
 | Metric | To demonstrate this, we evaluate NVS with elevations ϕ ∈[10◦, 90◦] in Objaverse-OOD scenes and compare SplatFormer to 3DGS (Fig. | definition, denominator, direction and uncertainty | p. 9 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), p. 10 (5 EXPERIMENTS) |

@@ -16,12 +16,11 @@
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (12 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다. [본문](https://openaccess.thecvf.com/content/ICCV2025/papers/Li_SceneSplat_Gaussian_Splatting-based_Scene_Understanding_with_Vision-Language_Pretraining_ICCV_2025_paper.pdf)
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — This highlights a key limitation: the absence of a robust model for processing 3D data end-to-end for semantic learning, along with the lack of sufficient data for training such a model.
-
-방법 관련 발췌 — Our contributions can be summarized as follows: • We present SceneSplat-7K, a high-quality large-scale Gaussian splats dataset spanning 7K indoor scenes, which boosts 3DGS scene understanding research. • We propose SceneSplat, a ...
+SceneSplat은 실내 장면의 가우시안 파라미터를 직접 입력으로 받아 장면을 넘나드는 3차원 의미 표현을 학습한다. [PDF 1쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Li_SceneSplat_Gaussian_Splatting-based_Scene_Understanding_with_Vision-Language_Pretraining_ICCV_2025_paper.pdf#page=1) · [PDF 3쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Li_SceneSplat_Gaussian_Splatting-based_Scene_Understanding_with_Vision-Language_Pretraining_ICCV_2025_paper.pdf#page=3)
 
 ## Problem and Motivation
 
@@ -55,26 +54,12 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** Our contributions can be summarized as follows: • We present SceneSplat-7K, a high-quality large-scale Gaussian splats dataset spanning 7K indoor scenes, which boosts 3DGS scene ...
-- **p. 2 / 1. Introduction - extractive body cue:** Furthermore, we propose GaussSSL, a self-supervised learning scheme that unlocks rich 3D feature learning from unlabeled scenes.
-- **p. 6 / 4.3. Self Supervised Pretraining - extractive body cue:** We propose to mitigate the decoder collapse issues by multitask reconstruction LMGM, as coding rate regularization stabilizes only the hierarchical encoder.
-- **p. 4 / 4. Methodology - extractive body cue:** Building upon the SceneSplat-7K dataset, we carry out both vision-language 3DGS pretraining, which enables openvocabulary scene understanding, and self-supervised pretraining, which regularizes the latent space ...
-- **p. 6 / 4.3. Self Supervised Pretraining - extractive body cue:** 4.2, the precomputed language feature enables effective knowledge distillation.
-- **p. 6 / 5.2. Label-free 3DGS Pretraining - extractive body cue:** Our method achieves a +0.1% improvement over supervised-only baselines on ScanNet20 and +0.5% on ScanNet200, while observing a performance drop on ScanNet++ primarily due to ...
-- **p. 7 / Figure/Table caption - extractive body cue:** Table 2. Zero-Shot 3D Semantic Segmentation on the Fine-Grained ScanNet++ (100 classes) [57], Matterport3D (160 classes) [2] and ScanNet200 (200 classes) [5] Benchmarks. We report ...
-- **p. 6 / 5.1. Vision-Language Pretraining - extractive body cue:** Notably, [21] uses 8.32× training scenes to achieve its best results, Zero-Shot Prediction Ground Truth Figure 3.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 기존 실내 스캔 자료를 공통 가우시안 표현으로 재구성해 SceneSplat-7K를 만들고 주석 없는 장면에도 적용할 자기지도 학습을 제시한다. [PDF 3쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Li_SceneSplat_Gaussian_Splatting-based_Scene_Understanding_with_Vision-Language_Pretraining_ICCV_2025_paper.pdf#page=3) · [PDF 4쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Li_SceneSplat_Gaussian_Splatting-based_Scene_Understanding_with_Vision-Language_Pretraining_ICCV_2025_paper.pdf#page=4) · [PDF 5쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Li_SceneSplat_Gaussian_Splatting-based_Scene_Understanding_with_Vision-Language_Pretraining_ICCV_2025_paper.pdf#page=5)
+- 가우시안 공간의 의미 분할과 개방 어휘 장면 이해를 비교하고 사전학습과 입력 표현의 영향을 확인했다. [PDF 6쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Li_SceneSplat_Gaussian_Splatting-based_Scene_Understanding_with_Vision-Language_Pretraining_ICCV_2025_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Li_SceneSplat_Gaussian_Splatting-based_Scene_Understanding_with_Vision-Language_Pretraining_ICCV_2025_paper.pdf#page=7) · [PDF 8쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Li_SceneSplat_Gaussian_Splatting-based_Scene_Understanding_with_Vision-Language_Pretraining_ICCV_2025_paper.pdf#page=8)
 
 ## Evaluation Scope
 
-| Dimension | Body-grounded record | Boundary | Anchor |
-|---|---|---|---|
-| Evaluation type | EMPIRICAL / REAL-ROBOT OR HARDWARE | do not infer unreported downstream behavior | p. 6 (5.2. Label-free 3DGS Pretraining), p. 7 (Figure/Table caption) |
-| Embodiment/environment | The dataset contains about seven thousand scenes, including both real-world and synthetic environments. | hardware/simulator version and reset protocol | p. 3 (3. SceneSplat Dataset), p. 8 (5.3. Further Statistical Evaluation) |
-| Dataset/benchmark | We introduce SceneSplat-7K - a carefully curated dataset of 3D Gaussian Splats representing indoor scenes. | role, split, size and leakage | p. 3 (3. SceneSplat Dataset), p. 8 (5.3. Further Statistical Evaluation), p. 3 (3. SceneSplat Dataset), p. 4 (3.2. Data Statistic) |
-| Metric | Table 2. Zero-Shot 3D Semantic Segmentation on the Fine-Grained ScanNet++ (100 classes) [57], Matterport3D (160 classes) [2] and ScanNet200 (200 classes) [5] Benchmarks. We report the foreground mean IoU (f-mIoU) and foreground ... | definition, denominator, direction and uncertainty | p. 7 (Figure/Table caption), p. 8 (5.3. Further Statistical Evaluation), p. 8 (5.3. Further Statistical Evaluation) |
-| Baseline/ablation | Table 4. Supervised Semantic Segmentation Experiments. We report our best results from Tab. 3 comparing against the state-of- the-art Point Transformer method. (Tab. 1). Furthermore, compared with our reproduced im- plementation of ... | fair input/data/compute/action matching | p. 7 (Figure/Table caption), p. 7 (Figure/Table caption), p. 6 (5.2. Label-free 3DGS Pretraining) |
+SceneSplat-7K의 7,916개 장면은 일곱 기존 실내 자료에서 구축한 가우시안 표현이다. 주석이 없는 장면을 자기지도 학습에 활용하며, 평가 단위는 장면의 의미 예측이다. [PDF 1쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Li_SceneSplat_Gaussian_Splatting-based_Scene_Understanding_with_Vision-Language_Pretraining_ICCV_2025_paper.pdf#page=1) · [PDF 3쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Li_SceneSplat_Gaussian_Splatting-based_Scene_Understanding_with_Vision-Language_Pretraining_ICCV_2025_paper.pdf#page=3) · [PDF 4쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Li_SceneSplat_Gaussian_Splatting-based_Scene_Understanding_with_Vision-Language_Pretraining_ICCV_2025_paper.pdf#page=4)
 
 ## Explicit Limitations and Failure Boundary
 

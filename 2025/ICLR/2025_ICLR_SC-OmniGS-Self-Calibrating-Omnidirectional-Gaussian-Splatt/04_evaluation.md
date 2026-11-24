@@ -6,7 +6,7 @@
 
 ## Evaluation in One Sentence
 
-PDF body evaluation/result cue (p. 10 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 19 (Figure/Table caption), p. 9 (5 EXPERIMENTS)): When trained with pose perturbation, our full model, incorporating both camera model and pose optimization, consistently achieves improvement in both training and test view synthesis.
+합성 장면과 소비자용 전방위 카메라 영상에서 초기 자세의 잡음 또는 부재가 보정·새 시점 렌더링에 주는 영향을 비교했다. [PDF 8쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/a9cae5b74cfc8f71c39a4e646db819c2-Paper-Conference.pdf#page=8) · [PDF 9쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/a9cae5b74cfc8f71c39a4e646db819c2-Paper-Conference.pdf#page=9) · [PDF 10쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/a9cae5b74cfc8f71c39a4e646db819c2-Paper-Conference.pdf#page=10)
 
 ## Evaluation Body Digest
 
@@ -21,22 +21,18 @@ PDF body evaluation/result cue (p. 10 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 
 
 ## Evaluation Type and Scope
 
-- **Evaluation type:** `EMPIRICAL / REAL-ROBOT OR HARDWARE`.
-- **Target system/task:** 3D scene/object와 robot coordinate frame.
-- **Input boundary:** RGB-D, image set, point cloud, depth와 camera pose.
-- **Output/decision under evaluation:** point map, pose, scene graph, affordance 또는 query result.
-- **Primary target:** geometric accuracy, semantic consistency와 planning/manipulation utility.
+- **Evaluation type:** `BENCHMARK / DATASET`.
 - **Detected evaluation headings:** 5 EXPERIMENTS (p. 7); C EXPERIMENT DETAILS (p. 14); C.2 DATASETS (p. 14).
 
 ## Experimental Matrix
 
 | Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
-| 5 EXPERIMENTS | EMPIRICAL / REAL-ROBOT OR HARDWARE | When trained with pose perturbation, our full model, incorporating both camera model and pose optimization, consistently achieves improvement in both training and test view ... | p. 10 (5 EXPERIMENTS) |
-| 5 EXPERIMENTS | EMPIRICAL / REAL-ROBOT OR HARDWARE | Despite a slight decrease in rendering quality, the results demonstrate that our method still exhibits significant performance improvements compared to baseline methods. | p. 8 (5 EXPERIMENTS) |
-| 5 EXPERIMENTS | EMPIRICAL / REAL-ROBOT OR HARDWARE | Our results outperform in both rendering quality and camera accuracy. † indicates training from scratch. | p. 9 (5 EXPERIMENTS) |
-| 5 EXPERIMENTS | EMPIRICAL / REAL-ROBOT OR HARDWARE | After modifying ray sampling functions, we can effectively improve NeRF-based methods' performance, proving the necessity of properly treating omnidirectional images as a whole. | p. 8 (5 EXPERIMENTS) |
-| Figure/Table caption | EMPIRICAL / REAL-ROBOT OR HARDWARE | Figure 8: Depth visualization of 360-degree views rendered by calibration methods equipped with omnidirectional sampling. Our results outperform in geometry accuracy and details. † ... | p. 19 (Figure/Table caption) |
+| 5 EXPERIMENTS | BENCHMARK / DATASET | When trained with pose perturbation, our full model, incorporating both camera model and pose optimization, consistently achieves improvement in both training and test view ... | p. 10 (5 EXPERIMENTS) |
+| 5 EXPERIMENTS | BENCHMARK / DATASET | Despite a slight decrease in rendering quality, the results demonstrate that our method still exhibits significant performance improvements compared to baseline methods. | p. 8 (5 EXPERIMENTS) |
+| 5 EXPERIMENTS | BENCHMARK / DATASET | Our results outperform in both rendering quality and camera accuracy. † indicates training from scratch. | p. 9 (5 EXPERIMENTS) |
+| 5 EXPERIMENTS | BENCHMARK / DATASET | After modifying ray sampling functions, we can effectively improve NeRF-based methods' performance, proving the necessity of properly treating omnidirectional images as a whole. | p. 8 (5 EXPERIMENTS) |
+| Figure/Table caption | BENCHMARK / DATASET | Figure 8: Depth visualization of 360-degree views rendered by calibration methods equipped with omnidirectional sampling. Our results outperform in geometry accuracy and details. † ... | p. 19 (Figure/Table caption) |
 
 ## Dataset / Benchmark Role
 

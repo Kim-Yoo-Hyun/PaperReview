@@ -7,7 +7,8 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / ICLR
-- Authors: Seungjun Lee, Yuyang Zhao, Gim H Lee
+- Authors: Seungjun Lee, Yuyang Zhao, Gim Hee Lee
+- 저자 판본: ICLR 게재본에서 마지막 저자의 이름 Gim Hee Lee를 확인했다. [표제면](https://proceedings.iclr.cc/paper_files/paper/2025/file/f53437debdd397c42929d929614bc705-Paper-Conference.pdf#page=1) · [학회 서지](https://proceedings.iclr.cc/paper_files/paper/2025/hash/f53437debdd397c42929d929614bc705-Abstract-Conference.html)
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
 - Tags: 3D Vision
@@ -16,12 +17,11 @@
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (23 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다. [본문](https://proceedings.iclr.cc/paper_files/paper/2025/file/f53437debdd397c42929d929614bc705-Paper-Conference.pdf)
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Failure to segment such instances drastically narrows the scope of application.
-
-방법 관련 발췌 — To circumvent this issue, we introduce Cross Modality Decoder (CMD) to incorporate textual information in the decoding process of our framework.
+SOLE는 3D 점군에서 자유 형식 언어 지시가 가리키는 인스턴스 마스크를 예측한다. [PDF 1쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/f53437debdd397c42929d929614bc705-Paper-Conference.pdf#page=1) · [PDF 4쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/f53437debdd397c42929d929614bc705-Paper-Conference.pdf#page=4)
 
 ## Problem and Motivation
 
@@ -55,22 +55,14 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 5 / 3 METHOD - extractive body cue:** To circumvent this issue, we introduce Cross Modality Decoder (CMD) to incorporate textual information in the decoding process of our framework.
-- **p. 3 / 1 INTRODUCTION - extractive body cue:** In summary, our contributions are as follows: • We propose a visual-language learning framework for OV-3DIS, SOLE.
-- **p. 3 / 1 INTRODUCTION - extractive body cue:** A multimodal fusion network is designed for SOLE, which can directly predict semantic-related masks from 3D point clouds with multimodal information, leading to high-quality and ...
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** In this paper, we propose SOLE: Segment any 3D Object with LanguagE to circumvent the abovementioned issues for OV-3DIS.
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** We propose the semantic-aware mask generator to obtain semantic-related masks from 3D point clouds, yielding better and more generalizable 3D masks.
-- **p. 8 / 4 EXPERIMENTS - extractive body cue:** SOLE outperforms all the OV-3DIS methods and achieves competitive results with the fully-supervised model.
-- **p. 9 / 4 EXPERIMENTS - extractive body cue:** SOLE outperforms state-of-the-art methods (Nguyen et al., 2024; Takmaz et al., 2023) on five out of the six metrics and achieves comparable performance on the ...
-- **p. 10 / 4 EXPERIMENTS - extractive body cue:** First, using any of multimodal associations can already achieve significant performance, outperforming previous state-of-the-art method (OpenIns3D (Huang et al., 2023b)) with larger voxel size (lower ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 점군 백본과 디코더에 다중 모달 특징을 결합하고, 마스크·개체를 포함한 세 종류의 연관 신호로 언어와 인스턴스를 정렬한다. [PDF 4쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/f53437debdd397c42929d929614bc705-Paper-Conference.pdf#page=4) · [PDF 5쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/f53437debdd397c42929d929614bc705-Paper-Conference.pdf#page=5) · [PDF 6쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/f53437debdd397c42929d929614bc705-Paper-Conference.pdf#page=6)
+- ScanNetv2, ScanNet200, Replica에서 범주 주석 없는 학습 조건의 분할을 비교하고 다양한 표현을 쓴 지시의 결과를 제시했다. [PDF 8쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/f53437debdd397c42929d929614bc705-Paper-Conference.pdf#page=8) · [PDF 9쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/f53437debdd397c42929d929614bc705-Paper-Conference.pdf#page=9) · [PDF 10쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/f53437debdd397c42929d929614bc705-Paper-Conference.pdf#page=10)
 
 ## Evaluation Scope
 
 | Dimension | Body-grounded record | Boundary | Anchor |
 |---|---|---|---|
-| Evaluation type | EMPIRICAL / REAL-ROBOT OR HARDWARE | do not infer unreported downstream behavior | p. 8 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS) |
+| Evaluation type | BENCHMARK / DATASET | do not infer unreported downstream behavior | p. 8 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS) |
 | Embodiment/environment | Therefore, despite slightly impairing the performance on benchmark, mask-visual association and mask-caption association are crucial to recognizing free-form language instructions, benefiting the applications in real-world scenarios. | hardware/simulator version and reset protocol | p. 10 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS) |
 | Dataset/benchmark | Replica (Straub et al., 2019) is a high-quality synthetic dataset annotated with 48 instance categories. | role, split, size and leakage | p. 10 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS) |
 | Metric | Average precision (AP) of different IoU thresholds is adopted as the evaluation metric, including AP under 25%, 50% IoU and the average AP from 50% to 95% IoU. | definition, denominator, direction and uncertainty | p. 8 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS) |

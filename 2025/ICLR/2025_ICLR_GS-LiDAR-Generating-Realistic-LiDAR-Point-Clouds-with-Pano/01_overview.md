@@ -16,12 +16,11 @@
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (15 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- 요약 대조 판본: 2026-11-24 한 줄 요약과 핵심 기여 두 개를 게재본 해당 쪽과 대조했다. [본문](https://proceedings.iclr.cc/paper_files/paper/2025/file/8e86fd925dda476f574689f4ce748193-Paper-Conference.pdf)
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Furthermore, LiDAR sensors do not capture all emitted beams, as factors such as the reflective properties of objects affect beam reception, leading to point cloud dropout, which further increases the difficulty of ...
-
-방법 관련 발췌 — In this paper, we propose GS-LiDAR, a novel framework for generating realistic LiDAR point clouds using panoramic Gaussian splatting.
+GS-LiDAR는 주행 장면의 정적·동적 표면을 2D 가우시안으로 표현하고 회전식 LiDAR가 돌려줄 점군과 반사 강도를 렌더링한다. [PDF 1쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/8e86fd925dda476f574689f4ce748193-Paper-Conference.pdf#page=1) · [PDF 4쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/8e86fd925dda476f574689f4ce748193-Paper-Conference.pdf#page=4)
 
 ## Problem and Motivation
 
@@ -55,16 +54,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** In this paper, we propose GS-LiDAR, a novel framework for generating realistic LiDAR point clouds using panoramic Gaussian splatting.
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** Focusing on the task of novel LiDAR view synthesis, we introduce a novel panoramic rendering process to facilitate fast and efficient rendering of panoramic depth ...
-- **p. 3 / 1 INTRODUCTION - extractive body cue:** (3) We introduce a novel panoramic rendering technique based on 2D Gaussian primitives, with geometrically accurate ray-splat intersection, where the rendered panoramic maps are supervised ...
-- **p. 3 / 3 METHOD - extractive body cue:** To integrate LiDAR supervision, we propose an innovative panoramic rendering technique with explicit ray-splat intersection, described in Section 3.3.
-- **p. 4 / 3 METHOD - extractive body cue:** For a 2D Gaussian defined by its central point µ ∈R3, an opacity parameter o ∈[0, 1], two principal tangential vectors tu ∈R3 and tv ...
-- **p. 10 / 4 EXPERIMENT - extractive body cue:** As illustrated in Figure 6 and Figure 7, GS-LiDAR achieves significantly better visual quality in simulated depth and intensity maps compared to competitors.
-- **p. 10 / 4 EXPERIMENT - extractive body cue:** Additionally, the ray-drop refinement technique improves the accuracy of the ray-drop mask, resulting in substantial gains in the metrics for simulated depth and intensity.
-- **p. 9 / 4 EXPERIMENT - extractive body cue:** GS-LiDAR outperforms the competitors on most metrics.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 파노라마 광선과 가우시안의 교점을 계산하고 시간에 따른 움직임, 반사 강도와 반사 신호가 누락될 가능성을 표현한다. [PDF 4쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/8e86fd925dda476f574689f4ce748193-Paper-Conference.pdf#page=4) · [PDF 5쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/8e86fd925dda476f574689f4ce748193-Paper-Conference.pdf#page=5) · [PDF 6쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/8e86fd925dda476f574689f4ce748193-Paper-Conference.pdf#page=6)
+- KITTI-360과 nuScenes에서 예측 깊이·점군·강도와 렌더링 비용을 비교하고 광선 교점 및 시간 모델의 효과를 평가했다. [PDF 7쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/8e86fd925dda476f574689f4ce748193-Paper-Conference.pdf#page=7) · [PDF 8쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/8e86fd925dda476f574689f4ce748193-Paper-Conference.pdf#page=8) · [PDF 10쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/8e86fd925dda476f574689f4ce748193-Paper-Conference.pdf#page=10)
 
 ## Evaluation Scope
 
