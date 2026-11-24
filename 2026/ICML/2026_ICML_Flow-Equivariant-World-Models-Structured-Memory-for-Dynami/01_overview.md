@@ -15,13 +15,11 @@
 - Full-text retrieval: https://arxiv.org/pdf/2601.01075.pdf
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (35 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (35 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 한 줄 요약과 핵심 기여 두 개를 각 문장에 인용한 판본의 원문에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — While these models achieve impressive perceptual quality and scale well with growing data and compute, their current form inherently lacks the ability to predict long-horizon dynamics, especially in partially observable environments (Fi ...
-
-방법 관련 발췌 — To support more complex tasks, such as 3D partially observed world modeling, we introduce an abstract version of the flow equivariant recurrence relation which supports arbitrary encoders and update operations.
+Flow Equivariant World Models는 관측 주체와 물체의 움직임에 맞춰 잠재 기억을 변환해 시야 밖 영역의 시간 변화를 예측한다. [PDF 1쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/lillemark26a/lillemark26a.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 3 / 3.1. Generalized Flow Equivariance - extractive body cue:** To support more complex tasks, such as 3D partially observed world modeling, we introduce an abstract version of the flow equivariant recurrence relation which supports ...
-- **p. 4 / 3.1. Generalized Flow Equivariance - extractive body cue:** Finally, to complete our framework, we note that motion is relative (i.e. self-motion of an agent is equivalent to global motion of the input).
-- **p. 4 / 3.1. Generalized Flow Equivariance - extractive body cue:** For the first set of experiments, to validate our framework in a 2D environment, we construct a recurrent model with self-motion and flow equivariance following ...
-- **p. 5 / 3.1. Generalized Flow Equivariance - extractive body cue:** To extend our framework to more complex datasets, we construct a second FloWM instantiation with a Vision Transformer (ViT) (Dosovitskiy et al., 2021) encoder and ...
-- **p. 2 / 1. Introduction - extractive body cue:** We show that this yields substantially improved video world modeling performance and generalization to significantly longer sequences than those seen during training, highlighting the benefits ...
-- **p. 8 / 4.3. 3D Dynamic Block World Benchmark - extractive body cue:** Comparatively, the DFoT model achieves an equivariance error of 2.36.
-- **p. 23 / Figure/Table caption - extractive body cue:** Table 6. As with the static MNIST World dataset, in this setting, the default configuration of FloWM with velocity channels only adds noise to the ...
-- **p. 6 / 4. Experiments - extractive body cue:** Our results demonstrate that the structured dynamic memory afforded by flow equivariance is critical for modeling partially observed dynamic environments.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 자기 움직임과 추정한 외부 물체 흐름에 따라 잠재 상태의 위치·내용이 변하도록 기억 구조를 설계했다. [PDF 3쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/lillemark26a/lillemark26a.pdf#page=3) · [PDF 4쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/lillemark26a/lillemark26a.pdf#page=4) · [PDF 5쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/lillemark26a/lillemark26a.pdf#page=5)
+- 부분 관측 2차원·3차원 영상 환경에서 긴 예측 구간의 품질을 순환형·기억 기반·확산 세계 모델과 비교했다. [PDF 6쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/lillemark26a/lillemark26a.pdf#page=6) · [PDF 7쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/lillemark26a/lillemark26a.pdf#page=7) · [PDF 8쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/lillemark26a/lillemark26a.pdf#page=8) · [PDF 9쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/lillemark26a/lillemark26a.pdf#page=9)
 
 ## Evaluation Scope
 

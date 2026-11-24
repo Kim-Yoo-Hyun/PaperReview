@@ -15,13 +15,11 @@
 - Full-text retrieval: https://arxiv.org/pdf/1604.01093
 - Code/Project: https://graphics.stanford.edu/projects/bundlefusion/
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (19 pages; PyMuPDF text; title-token overlap first two pages=0.889)
+- Source audit: full-text PDF body checked on 2026-09-03 (19 pages; PyMuPDF text; title-token overlap first two pages=0.889) 2026-11-24 한 줄 요약과 핵심 기여 두 개를 각 문장에 인용한 판본의 원문에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Many existing approaches rely heavily on proximity to the previous frame, limiting fast camera motion and recovery from tracking failure.
-
-방법 관련 발췌 — Tis enables our method to be extremely robust to tracking failures, with tracking far less britle than existing frame-to-frame or frame-to-model RGB-D approaches.
+BundleFusion은 RGB-D 프레임 이력을 사용해 카메라 궤적을 전역 보정하고 이미 융합한 표면도 수정된 자세에 맞춰 갱신한다. [PDF 1쪽](https://arxiv.org/pdf/1604.01093v3#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** Tis enables our method to be extremely robust to tracking failures, with tracking far less britle than existing frame-to-frame or frame-to-model RGB-D approaches.
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** In summary, the main contributions of our work are as follows: (1) A novel, real-time global pose alignment framework which considers the complete history of ...
-- **p. 1 / 1 INTRODUCTION - extractive body cue:** At the core of our method is a robust pose estimation strategy, which globally optimizes for the camera trajectory per frame, considering the complete history ...
-- **p. 1 / Body text (section not recovered) - extractive body cue:** Our framework leads to a comprehensive online scanning solution for large indoor environments, enabling ease of use and high-quality results1.
-- **p. 12 / 6 RESULTS - extractive body cue:** While online alignment based on sparse features only (Ours (s)) achieves reasonable results, using dense matching only in per chunk alignment further increases accuracy (Ours ...
-- **p. 9 / 6 RESULTS - extractive body cue:** Large-scale reconstruction results: our proposed real-time global pose optimization outperforms current state-of-the-art online reconstruction systems.
-- **p. 10 / 6 RESULTS - extractive body cue:** We achieve this real-time performance with the combination of our tailored data-parallel Gauss-Newton solver (efficiently handling millions of residuals and solving for over a hundred ...
-- **p. 10 / 6 RESULTS - extractive body cue:** Dense Alignment: the proposed dense intra- and inter- chunk alignment (top) leads to higher quality reconstructions than only the sparse alignment step (botom). their approach ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 희소 특징과 조밀한 기하·광도 대응을 결합한 계층적 자세 최적화로 추적을 복구하고 전역 일관성을 유지한다. [PDF 3쪽](https://arxiv.org/pdf/1604.01093v3#page=3) · [PDF 4쪽](https://arxiv.org/pdf/1604.01093v3#page=4) · [PDF 5쪽](https://arxiv.org/pdf/1604.01093v3#page=5) · [PDF 6쪽](https://arxiv.org/pdf/1604.01093v3#page=6)
+- 자세가 바뀐 프레임을 표면에 재통합하고 실내 시퀀스에서 루프 폐쇄, 궤적 오차와 자원 사용을 평가했다. [PDF 4쪽](https://arxiv.org/pdf/1604.01093v3#page=4) · [PDF 11쪽](https://arxiv.org/pdf/1604.01093v3#page=11) · [PDF 12쪽](https://arxiv.org/pdf/1604.01093v3#page=12) · [PDF 13쪽](https://arxiv.org/pdf/1604.01093v3#page=13)
 
 ## Evaluation Scope
 

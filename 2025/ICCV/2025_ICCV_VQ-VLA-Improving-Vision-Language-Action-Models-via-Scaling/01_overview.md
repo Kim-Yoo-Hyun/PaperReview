@@ -15,13 +15,11 @@
 - Full-text retrieval: https://openaccess.thecvf.com/content/ICCV2025/papers/Wang_VQ-VLA_Improving_Vision-Language-Action_Models_via_Scaling_Vector-Quantized_Action_Tokenizers_ICCV_2025_paper.pdf
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 한 줄 요약과 핵심 기여 두 개를 각 문장에 인용한 판본의 원문에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — In this paper, we delve deeper into the potential of action tokenization, with a specific emphasis on its scalability and accuracy.
-
-방법 관련 발췌 — In summary, our contributions are as follows: • We propose a general convolutional residual VQ-VAEbased framework for action tokenizers. • We demonstrate that action tokenizers can be effectively scaled by leveraging large-scale ...
+VQ-VLA는 연속적인 로봇 행동 구간을 벡터 양자화하고 합성 궤적과 실제 궤적으로 토크나이저를 학습한다. [PDF 1쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Wang_VQ-VLA_Improving_Vision-Language-Action_Models_via_Scaling_Vector-Quantized_Action_Tokenizers_ICCV_2025_paper.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -41,7 +39,7 @@
 - **p. 3 / 3.3. Training Residual VQ-VAE - extractive body cue:** To improve the encoder's ability to process temporal and spatial information, we introduced two types of embeddings before the action sequences are passed into the ...
 - **p. 4 / 3.4. Integrating Residual VQ-VAE as Action Tok - extractive body cue:** Instead of discretizing action sequences into uniform bins, the action sequence at:t+n is first processed through a pre-trained and frozen Residual VQVAE encoder ϕ(·), generating ...
 - **p. 4 / 3.4. Integrating Residual VQ-VAE as Action Tok - extractive body cue:** By leveraging hierarchical quantization with non-overlapping token ID ranges, the model achieves better action representation, avoids semantic confusion between layers, and ensures stable loss convergence ...
-- **p. 3 / 3. Methods - extractive body cue:** Conv Residual VQ Encoder � Action sequence Conv Residual VQ Decoder � � q(�) Action Reconstruction Quantizer ⊕ - + Quantizer ⊕ - + VQVAE ...
+- 그림 1에서 합성곱 인코더는 행동 구간을 잠재 표현으로 바꾸고, 잔차 양자화기와 디코더는 이산 코드로 연속 행동을 복원한다. [PDF 3쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Wang_VQ-VLA_Improving_Vision-Language-Action_Models_via_Scaling_Vector-Quantized_Action_Tokenizers_ICCV_2025_paper.pdf#page=3)
 
 ## Observation, State, and Output Interface
 
@@ -49,21 +47,13 @@
 |---|---|---|---|
 | Observation/input | The method frames action prediction as a vision-language task, mapping input observation images and natural language instructions to discrete robot action sequences. | image/video, language instruction, proprioception과 history | p. 2 (3. Methods), p. 3 (3. Methods) |
 | State/latent | frames, action, prediction, vision-language, task, mapping, input, observation, images, natural, language, instructions | language-grounded task state와 action-policy context | p. 2 (3. Methods), p. 3 (3. Methods), p. 4 (3.3. Training Residual VQ-VAE) |
-| Output/action | A: Input image Language Instruction VQ Decoder � language tokenizer task: Put all cups into the basket predicted robot actions XYZ positions, Euler angles, gripper states Lora Figure 1. | continuous action, pose 또는 action chunk | p. 3 (3. Methods), p. 4 (3.3. Training Residual VQ-VAE), p. 3 (3.2. Action Tokenizer via Residual VQ-VAE) |
+| Output/action | 디코더가 위치·오일러 각·그리퍼 상태로 구성된 행동열을 복원한다. | 연속 행동 구간 | 그림 1에서 출력 표현을 확인할 수 있다. [PDF 3쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Wang_VQ-VLA_Improving_Vision-Language-Action_Models_via_Scaling_Vector-Quantized_Action_Tokenizers_ICCV_2025_paper.pdf#page=3) |
 | Objective/outcome | To train the framework, we minimize the total loss L, a weighted combination of reconstruction loss Lrec, vector quantization (VQ) loss Lcodebook, and commitment loss Lcommit: L =∥at:t+n -ˆat:t+n∥2 2 + λ ... | instruction following, task success, generalization과 latency | p. 3 (3.2. Action Tokenizer via Residual VQ-VAE), p. 4 (3.4. Integrating Residual VQ-VAE as Action Tok), p. 3 (3. Methods) |
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** In summary, our contributions are as follows: • We propose a general convolutional residual VQ-VAEbased framework for action tokenizers. • We demonstrate that action tokenizers ...
-- **p. 1 / 1. Introduction - extractive body cue:** Specifically, we propose a convolutional residual VQVAE [5, 28, 52] framework for training action tokenizers.
-- **p. 1 / 1. Introduction - extractive body cue:** To effectively train the model, we propose a progressive training strategy: Initially, we train the tokenizer on realworld robotic datasets, such as OpenX-Embodiment [34], which ...
-- **p. 2 / 1. Introduction - extractive body cue:** Compared to previous approaches that typically rely on training with single-task datasets, our method expands the tokenizer training dataset by more than 100 times, effectively ...
-- **p. 3 / 3.3. Training Residual VQ-VAE - extractive body cue:** To improve the encoder's ability to process temporal and spatial information, we introduced two types of embeddings before the action sequences are passed into the ...
-- **p. 5 / 4.1.2. Effectiveness of Conv Residual VQ-VAE - extractive body cue:** The evaluation results of residual VQ-VAE architectures.The results demonstrate that the Conv Residual VQ-VAE outperforms the MLP-based version, particularly when trained on the full LIBERO ...
-- **p. 7 / Figure/Table caption - extractive body cue:** Figure 3. Real-world experimental results: We compare the performance of Baseline, VQO, VQO+L, and VQO+L+M on both short-horizon and long-horizon tasks. In terms of the ...
-- **p. 6 / 4.2.3. Performance on Long-Horizon Tasks - extractive body cue:** VQ-VLA demonstrates outstanding performance on longhorizon tasks ("Put all cups in the basket" and "Put the toy into the drawer"), significantly outperforming baseline model in ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 잔차 벡터 양자화 자동인코더가 여러 시점의 행동을 짧은 이산 코드열로 표현하고 다시 연속 행동으로 복원한다. [PDF 3쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Wang_VQ-VLA_Improving_Vision-Language-Action_Models_via_Scaling_Vector-Quantized_Action_Tokenizers_ICCV_2025_paper.pdf#page=3) · [PDF 4쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Wang_VQ-VLA_Improving_Vision-Language-Action_Models_via_Scaling_Vector-Quantized_Action_Tokenizers_ICCV_2025_paper.pdf#page=4)
+- 행동 복원과 정책의 실제 과제 성공을 별도로 측정하고 궤적 자료 규모와 행동 청크 구성의 영향을 비교했다. [PDF 5쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Wang_VQ-VLA_Improving_Vision-Language-Action_Models_via_Scaling_Vector-Quantized_Action_Tokenizers_ICCV_2025_paper.pdf#page=5) · [PDF 7쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Wang_VQ-VLA_Improving_Vision-Language-Action_Models_via_Scaling_Vector-Quantized_Action_Tokenizers_ICCV_2025_paper.pdf#page=7) · [PDF 8쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Wang_VQ-VLA_Improving_Vision-Language-Action_Models_via_Scaling_Vector-Quantized_Action_Tokenizers_ICCV_2025_paper.pdf#page=8)
 
 ## Evaluation Scope
 

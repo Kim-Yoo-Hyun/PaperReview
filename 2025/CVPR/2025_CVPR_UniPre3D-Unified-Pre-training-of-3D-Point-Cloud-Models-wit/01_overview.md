@@ -15,13 +15,11 @@
 - Full-text retrieval: https://openaccess.thecvf.com/content/CVPR2025/papers/Wang_UniPre3D_Unified_Pre-training_of_3D_Point_Cloud_Models_with_Cross-Modal_CVPR_2025_paper.pdf
 - Code/Project: https://github.com/wangzy22/UniPre3D
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 한 줄 요약과 핵심 기여 두 개를 각 문장에 인용한 판본의 원문에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — A key challenge lies in the greater scale diversity of point clouds compared to images.
-
-방법 관련 발췌 — In conclusion, the contributions of our paper are as follows: (1) We propose UniPre3D, the first unified pretraining method for point clouds of any scale and 3D models of any architecture.
+UniPre3D는 점군 모델이 예측한 Gaussian을 영상으로 렌더링해 물체·장면 규모에 공통으로 쓸 3차원 표현을 사전학습한다. [PDF 1쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Wang_UniPre3D_Unified_Pre-training_of_3D_Point_Cloud_Models_with_Cross-Modal_CVPR_2025_paper.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** In conclusion, the contributions of our paper are as follows: (1) We propose UniPre3D, the first unified pretraining method for point clouds of any scale ...
-- **p. 3 / 3.2. Overall Pipeline - extractive body cue:** To further enhance the scale adaptability, we propose the integration of a pre-trained image model, which provides supplementary color and texture information through our novel ...
-- **p. 2 / 1. Introduction - extractive body cue:** This enables end-toend optimization and allows for precise pixel-wise supervision in the image domain.
-- **p. 1 / 1. Introduction - extractive body cue:** We propose a unified pre-training method that is applicable and effective to both object- and scene-level point clouds and models. tain hundreds of times more ...
-- **p. 3 / 3.2. Overall Pipeline - extractive body cue:** Based on this observation, we propose using the image domain as an intermediary to reduce the scale differences in point cloud data.
-- **p. 6 / 4.2.1. Object-level Fine-tuning - extractive body cue:** For part segmentation in Table 2, UniPre3D achieves the best performance on the mIoUC metric and competitive results with TAP on mIoUI.
-- **p. 7 / 4.2.2. Scene-level Fine-tuning - extractive body cue:** For instance segmentation in Table 4, UniPre3D also achieves state-ofthe-art performance across most benchmarks, with particularly strong results on ScanNet200.
-- **p. 7 / 4.2.2. Scene-level Fine-tuning - extractive body cue:** When compared to prior scene pre-training approaches with the SparseUNet backbone, UniPre3D also achieves the best results on ScanNet20 and ScanNet200.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 사전학습된 2차원 특징으로 질감 정보를 보완하고 미분 가능한 렌더링에 픽셀 단위 감독을 적용한다. [PDF 3쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Wang_UniPre3D_Unified_Pre-training_of_3D_Point_Cloud_Models_with_Cross-Modal_CVPR_2025_paper.pdf#page=3) · [PDF 4쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Wang_UniPre3D_Unified_Pre-training_of_3D_Point_Cloud_Models_with_Cross-Modal_CVPR_2025_paper.pdf#page=4) · [PDF 5쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Wang_UniPre3D_Unified_Pre-training_of_3D_Point_Cloud_Models_with_Cross-Modal_CVPR_2025_paper.pdf#page=5)
+- 여러 점군 백본과 물체·장면 수준 다운스트림 과제에서 사전학습 표현의 전이를 비교했다. [PDF 6쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Wang_UniPre3D_Unified_Pre-training_of_3D_Point_Cloud_Models_with_Cross-Modal_CVPR_2025_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Wang_UniPre3D_Unified_Pre-training_of_3D_Point_Cloud_Models_with_Cross-Modal_CVPR_2025_paper.pdf#page=7) · [PDF 8쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Wang_UniPre3D_Unified_Pre-training_of_3D_Point_Cloud_Models_with_Cross-Modal_CVPR_2025_paper.pdf#page=8)
 
 ## Evaluation Scope
 

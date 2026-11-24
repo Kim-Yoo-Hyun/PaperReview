@@ -15,13 +15,11 @@
 - Full-text retrieval: https://arxiv.org/pdf/2602.21445
 - Code/Project: https://hatchetproject.github.io/
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (15 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (15 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 한 줄 요약과 핵심 기여 두 개를 각 문장에 인용한 판본의 원문에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — 1, varying the execution horizon leads to substantial performance fluctuations-ranging from consistent successes to frequent failures.
-
-방법 관련 발췌 — (2) Building on these insights, we propose AutoHorizon, a novel attention-guided strategy that dynamically estimates the execution horizon for each action chunk, allowing the policy to adapt to varying perceptual conditions.
+AutoHorizon은 흐름 기반 VLA가 예측한 행동 청크에서 실제로 몇 단계까지 실행한 뒤 다시 관측할지 추론 시점에 정한다. [PDF 1쪽](https://arxiv.org/pdf/2602.21445v2#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** (2) Building on these insights, we propose AutoHorizon, a novel attention-guided strategy that dynamically estimates the execution horizon for each action chunk, allowing the policy ...
-- **p. 2 / 1. Introduction - extractive body cue:** Specifically, we introduce a bidirectional soft-pointer mechanism that locates the first turning points where the attention mass ceases to advance and begins to plateau.
-- **p. 3 / 3.1. Preliminary - extractive body cue:** Building on these insights, we introduce an efficient strategy for execution 3
-- **p. 5 / 3.4. AutoHorizon - extractive body cue:** Motivated by the above analysis, we propose leveraging attention weights as a proxy to estimate the execution horizon for each action chunk.
-- **p. 5 / 3.4. AutoHorizon - extractive body cue:** To this end, we introduce AutoHorizon-a dataadaptive approach that estimates execution horizons directly from the model's intrinsic attention dynamics.
-- **p. 8 / 4.2. Simulation Results - extractive body cue:** 8, and find that AutoHorizon consistently achieves higher success rates.
-- **p. 13 / Figure/Table caption - extractive body cue:** Figure 7. Average success rates on the LIBERO benchmark with a prediction horizon of 10 using π0.5. Fig. 7 reports results under a shorter prediction ...
-- **p. 7 / 4.2. Simulation Results - extractive body cue:** The enhanced Static Oracle+ consistently achieves strong results, and the specific horizon values used for this baseline are listed in Sec.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 청크 안에서 행동 토큰들의 자기어텐션이 집중되는 위치를 이용해 현재 관측의 예측 가능 구간을 추정했다. [PDF 4쪽](https://arxiv.org/pdf/2602.21445v2#page=4) · [PDF 5쪽](https://arxiv.org/pdf/2602.21445v2#page=5) · [PDF 6쪽](https://arxiv.org/pdf/2602.21445v2#page=6)
+- 고정한 실행 길이들과 적응형 길이를 시뮬레이션과 실물 조작에서 비교하고 과제·모델별 차이를 보였다. [PDF 6쪽](https://arxiv.org/pdf/2602.21445v2#page=6) · [PDF 7쪽](https://arxiv.org/pdf/2602.21445v2#page=7) · [PDF 8쪽](https://arxiv.org/pdf/2602.21445v2#page=8)
 
 ## Evaluation Scope
 

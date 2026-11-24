@@ -15,13 +15,11 @@
 - Full-text retrieval: https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/01143.pdf
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (20 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (20 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 한 줄 요약과 핵심 기여 두 개를 각 문장에 인용한 판본의 원문에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, these approaches reveal a notable performance gap towards agents designed and trained tailored for solving VLN [10, 46, 81], usually lie at two extremes that carry significant limitations: - For the ...
-
-방법 관련 발췌 — Our contributions are as follows: (1) We propose a pipeline to incorporate VLN specialists with VLMs free from LLM training.
+NavGPT-2는 동결한 언어모델에 항법 관측을 정렬하고 이동 정책과 연결해 언어 지시에 따른 다음 행동과 이유를 생성한다. [PDF 1쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/01143.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 3 / 1 Introduction - extractive body cue:** Our contributions are as follows: (1) We propose a pipeline to incorporate VLN specialists with VLMs free from LLM training.
-- **p. 3 / 1 Introduction - extractive body cue:** In light of this, we propose NavGPT-2, a system that finds a balance between the two aforementioned extremes, incorporating effective navigational modules to facilitate navigational ...
-- **p. 5 / 3 Method - extractive body cue:** Moreover, we introduce special tokens <IMG>, </IMG>, <INST> and </INST> to insert images tokens and instructions into the prompt.
-- **p. 6 / 3 Method - extractive body cue:** 2: Model architecture of NavGPT-2, it consists of a multimodality Large Language Model and a topological graph-based navigation policy network.
-- **p. 7 / 3 Method - extractive body cue:** We introduce the graph-based policy in the following sections.
-- **p. 13 / 4 Experiments - extractive body cue:** Additionally, we can see from Model#3 of Table 5 that the pretraining of Q-former on reasonings brings slight improvement to the success rates of the ...
-- **p. 9 / 4 Experiments - extractive body cue:** We adopt a comprehensive set of navigation metrics to evaluate performance [6], including Trajectory Length (TL), which measures the average path length in meters; Navigation ...
-- **p. 13 / 4 Experiments - extractive body cue:** As shown in Table 4, NavGPT-2 significantly outperforms DUET.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 후보 시점의 시각 정보와 지시를 언어모델에 전달하고 그 표현을 이동 정책에서 사용한다. [PDF 1쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/01143.pdf#page=1) · [PDF 5쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/01143.pdf#page=5) · [PDF 6쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/01143.pdf#page=6)
+- R2R의 경로 추종, 생성한 이유 설명에 대한 사람 평가, 다른 내비게이션 데이터에서의 전이를 따로 비교했다. [PDF 10쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/01143.pdf#page=10) · [PDF 11쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/01143.pdf#page=11) · [PDF 13쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/01143.pdf#page=13)
 
 ## Evaluation Scope
 

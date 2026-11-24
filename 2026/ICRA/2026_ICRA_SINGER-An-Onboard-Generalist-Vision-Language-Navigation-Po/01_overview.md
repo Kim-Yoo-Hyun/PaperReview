@@ -15,13 +15,11 @@
 - Full-text retrieval: https://arxiv.org/pdf/2509.18610
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (9 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (9 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 한 줄 요약과 핵심 기여 두 개를 각 문장에 인용한 판본의 원문에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — [8] introduces FiGS, a high-fidelity Gaussian-Splatting-based drone simulator to narrow the sim-to-real gap for stronger real-world transfer; however, FiGS lacks the semantic knowledge required for open-world drone navigation, limiting ...
-
-방법 관련 발췌 — We summarize our contributions as follows: • We introduce a high-fidelity drone simulator for efficient imitation learning in language-specified drone navigation problems built on language embedded Gaussian Splatting. • We design a ...
+SINGER는 드론에 탑재한 센서와 연산 장치로 자연어가 지시하는 물체를 향해 비행하는 시각운동 정책을 학습한다. [PDF 1쪽](https://arxiv.org/pdf/2509.18610v1#page=1)
 
 ## Problem and Motivation
 
@@ -51,15 +49,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / I. INTRODUCTION - extractive body cue:** We summarize our contributions as follows: • We introduce a high-fidelity drone simulator for efficient imitation learning in language-specified drone navigation problems built on language ...
-- **p. 2 / I. INTRODUCTION - extractive body cue:** In this paper, we introduce SINGER (Semantic In-situ Navigation and Guidance for Embodied Robots), a pipeline for training language-conditioned drone navigation policies addressing the aforementioned ...
-- **p. 7 / VI. EXPERIMENTS - extractive body cue:** The overall success rate of the policy insimulation is also comparable to the results in hardware.
-- **p. 7 / VI. EXPERIMENTS - extractive body cue:** We include SINGER's results under the same conditions as a testament to its ability to outperform the baseline.
-- **p. 5 / VI. EXPERIMENTS - extractive body cue:** We evaluate the performance of the SINGER in drone experiments to evaluate its generalization and robustness capabilities in simulation within a 3DGS environment and in ...
-- **p. 6 / VI. EXPERIMENTS - extractive body cue:** The policy is evaluated on successful flight towards the queried object without collisions.
-- **p. 6 / VI. EXPERIMENTS - extractive body cue:** Finally, the hardest scenario is designed to evaluate policy performance in a unseen environment and on unseen semantic queries.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 언어 단서가 포함된 Gaussian Splatting 시뮬레이터와 여러 경로를 만드는 전문가로 충돌을 피하는 비행 시연을 생성했다. [PDF 3쪽](https://arxiv.org/pdf/2509.18610v1#page=3) · [PDF 4쪽](https://arxiv.org/pdf/2509.18610v1#page=4) · [PDF 5쪽](https://arxiv.org/pdf/2509.18610v1#page=5)
+- 시뮬레이션에서 학습한 정책을 실제 드론에 적용해 목표 도달, 목표가 시야에 머문 정도, 충돌을 각각 비교했다. [PDF 5쪽](https://arxiv.org/pdf/2509.18610v1#page=5) · [PDF 6쪽](https://arxiv.org/pdf/2509.18610v1#page=6) · [PDF 7쪽](https://arxiv.org/pdf/2509.18610v1#page=7)
 
 ## Evaluation Scope
 

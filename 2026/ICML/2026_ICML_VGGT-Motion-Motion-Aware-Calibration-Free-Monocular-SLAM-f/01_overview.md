@@ -15,15 +15,13 @@
 - Full-text retrieval: https://arxiv.org/pdf/2602.05508.pdf
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (22 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (22 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 한 줄 요약과 핵심 기여 두 개를 각 문장에 인용한 판본의 원문에서 확인했다.
 
 > DOC-QA1 (2026-10-23): 제어문자·깨진 추출 구간과 직접 연결된 표 항목을 PDF 페이지 이미지와 대조했다. 확인 범위·원문 URL·페이지·수정 이력은 [대조 기록](../../../work/sources/pdf_note_review_2026-10-23.json)에 있다. 노트 전체의 정독이나 모든 기존 주장에 대한 재검증을 뜻하지 않으며 reading status는 유지한다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, the quadratic complexity (O(N 2)) of their Transformer-based architectures imposes severe memory constraints and computational bottlenecks, rendering direct deployment on long-horizon sequences infeasible.
-
-방법 관련 발췌 — Then, we develop an anchor-driven direct Sim(3) registration algorithm to align submaps and optimize their poses.
+VGGT-Motion은 내부 보정값이 없는 단안 영상열을 움직임에 따라 서브맵으로 나누고 긴 경로에서 카메라 궤적을 일관되게 맞춘다. [PDF 1쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/xiong26o/xiong26o.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -56,16 +54,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 3 / 3. Method - extractive body cue:** Then, we develop an anchor-driven direct Sim(3) registration algorithm to align submaps and optimize their poses.
-- **p. 8 / 4.5. Ablation Studies - extractive body cue:** Topology-aware partitioning significantly outperforms heuristic baselines by preserving turning topology.
-- **p. 6 / 4.3. Zero-Shot Generalization & Scalability - extractive body cue:** We attribute this success to our targeted algorithmic designs: Submap Composition with Geometric Anchors injects loop keyframes as geometric anchors to bridge appearance gaps across ...
-- **p. 7 / 4.4. Efficiency - extractive body cue:** The performance gap is particularly large on long-sequence datasets (4Seasons, Complex Urban, and A2D2), where we achieve an 18-36× speedup in total processing time over ...
-- **p. 8 / 4.5. Ablation Studies - extractive body cue:** By eliminating the primary source of noise-induced drift during stops, it simultaneously improves accuracy and reduces computational overhead.
-- **p. 6 / 4.2. Comparison on Standard Benchmarks - extractive body cue:** On highly dynamic Waymo segments, our context-balanced anchor selection and robust Sim(3) estimation enforce geometric constraints under occlusions, yielding a further 20% improvement.
-- **p. 7 / 4.4. Efficiency - extractive body cue:** As shown in Figure 5, our pipeline consistently outperforms state-of-the-art foundation-modelbased methods (VGGT-Long and VGGT-SLAM) across all five benchmarks.
-- **p. 14 / Figure/Table caption - extractive body cue:** Figure 8. Kitti dataset sequence 00 & sequence 05 trajectory visualizations on Depthanything-v3 with SE(3) alignment. Coupling Between Geometric Priors and SLAM Performance. Our study ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 광류로 정지 구간의 중복과 회전 구간을 구분하고 공유 앵커를 이용해 서브맵 사이의 유사변환을 추정한다. [PDF 3쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/xiong26o/xiong26o.pdf#page=3) · [PDF 4쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/xiong26o/xiong26o.pdf#page=4) · [PDF 5쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/xiong26o/xiong26o.pdf#page=5)
+- 서브맵 자세 그래프와 루프 폐쇄를 적용하고 장거리 주행 시퀀스에서 궤적 오차와 중복 제거의 영향을 측정했다. [PDF 5쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/xiong26o/xiong26o.pdf#page=5) · [PDF 6쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/xiong26o/xiong26o.pdf#page=6) · [PDF 7쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/xiong26o/xiong26o.pdf#page=7) · [PDF 8쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/xiong26o/xiong26o.pdf#page=8)
 
 ## Evaluation Scope
 

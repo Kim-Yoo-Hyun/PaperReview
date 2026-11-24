@@ -6,7 +6,7 @@
 
 ## Evaluation in One Sentence
 
-PDF body evaluation/result cue (p. 5 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 2 (Figure/Table caption), p. 3 (Figure/Table caption)): First, success rate is computed considering only the top 1% of the predictions; a trial is deemed successful if the robot ends up within 20 m of the center of ...
+표 IV의 실물 실험에서 LAMP와 명시적 지도 기준선의 성공률은 모두 90%였다. 목표까지의 거리는 각각 1.89 m와 5.19 m, 질의당 계획 시간은 3.84초와 1.82초였다. [PDF 7쪽](https://arxiv.org/pdf/2602.11862v1#page=7)
 
 ## Evaluation Body Digest
 

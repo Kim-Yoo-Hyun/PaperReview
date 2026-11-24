@@ -8,20 +8,21 @@
 
 - Year/Venue: 2025 / IROS
 - Authors: Yujie Tang, Meiling Wang, Yinan Deng, Zibo Zheng, Jiagui Zhong, Tiancheng Liu, Chenjie Zhao, Yufeng Yue
+- IROS 출판사 서지는 저자 8명을 기록한다. 요약에 사용한 arXiv v1 표제면에는 6명이 있으며, 게재 서지에 Tiancheng Liu와 Chenjie Zhao가 추가됐다. [출판사 서지](https://api.crossref.org/works/10.1109/iros60139.2025.11247413) · [저자판 표제면](https://arxiv.org/pdf/2409.18743v1#page=1)
 - Primary track: Robotics-enabling 3D perception
 - Tier: REFERENCE
 - Tags: Navigation, Graph Reasoning, semantic
 - Official paper: https://arxiv.org/abs/2409.18743
+- Venue verification: https://api.crossref.org/works/10.1109/iros60139.2025.11247413
+- DOI: https://doi.org/10.1109/iros60139.2025.11247413
 - Full-text retrieval: https://arxiv.org/pdf/2409.18743
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (7 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (7 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 한 줄 요약과 핵심 기여 두 개를 각 문장에 인용한 판본의 원문에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, they struggle to represent everyday dynamic environments due to two key challenges.
-
-방법 관련 발췌 — In summary, our contributions are as follows: • We present an adaptable carrier relationship scene graph (CRSG) that primarily describes the dynamic carrier and carried relationships between objects. • We design a ...
+OpenObject-NAV는 자주 옮겨지는 물건과 이를 받치는 가구의 관계를 갱신해 로봇이 이동한 목표를 다시 찾도록 한다. [PDF 1쪽](https://arxiv.org/pdf/2409.18743v1#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +56,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / I. INTRODUCTION - extractive body cue:** In summary, our contributions are as follows: • We present an adaptable carrier relationship scene graph (CRSG) that primarily describes the dynamic carrier and carried ...
-- **p. 3 / III. METHOD - extractive body cue:** The OpenObject-NAV system framework consists of two main modules.
-- **p. 1 / I. INTRODUCTION - extractive body cue:** This update enables efficient point-to-point navigation for the third task. dynamic and subject to interference, making it challenging to efficiently and effectively navigate to them.
-- **p. 2 / I. INTRODUCTION - extractive body cue:** Based on the CRSG, we designed an object-oriented navigation strategy, modeling the object search process as a Markov Decision Process (MDP) [21].
-- **p. 5 / 1. Does the carrier-relationship scene graph (CRSG) im - extractive body cue:** 4 illustrates an example of long-sequence navigation, where the efficiency of navigating to the target significantly improves as the number of navigated objects increases.
-- **p. 4 / 1. Does the carrier-relationship scene graph (CRSG) im - extractive body cue:** We report Success Rate(SR) and Success weighted by inverse Path Length (SPL) [39].
-- **p. 4 / 1. Does the carrier-relationship scene graph (CRSG) im - extractive body cue:** I, where our object query success rate averages 86% and is the highest in all three scenarios.
-- **p. 5 / 1. Does the carrier-relationship scene graph (CRSG) im - extractive body cue:** Tasks SR(i) represents the success rate of correctly navigating to all i objects.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 탐색 중 지지 관계 그래프를 수정하고 언어모델의 상식과 시각·언어 유사도로 다음에 조사할 위치를 고른다. [PDF 3쪽](https://arxiv.org/pdf/2409.18743v1#page=3) · [PDF 4쪽](https://arxiv.org/pdf/2409.18743v1#page=4) · [PDF 5쪽](https://arxiv.org/pdf/2409.18743v1#page=5)
+- Habitat에서 물건을 옮기는 연속 과제를 구성해 탐색을 평가하고 실제 로봇에서도 이동한 물체를 찾는 사례를 제시했다. [PDF 5쪽](https://arxiv.org/pdf/2409.18743v1#page=5) · [PDF 6쪽](https://arxiv.org/pdf/2409.18743v1#page=6) · [PDF 7쪽](https://arxiv.org/pdf/2409.18743v1#page=7)
 
 ## Evaluation Scope
 

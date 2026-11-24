@@ -85,6 +85,7 @@ CORE 50편에서 직접 관련된 17편을 심화 검토했다. VLA 정책 11편
 논문 개요 278편에 연도·발표처의 항목명만 남아 있었다. 2026-11-23에 원장의 값으로 해당 표시를 복원했다. 무결성 검사는 1,252편 모두에서 개요 상단의 연도·발표처가 한 번 표시되고 원장과 일치하는지도 확인한다. [원장](../sources/papers.json) · [검사 코드](../scripts/audit_repository.py)
 
 - Point2Graph의 노트 5개에서 원문에 표시된 `fi`·`fl` 합자를 확인해 글꼴 전용 문자 96개를 복원했다. Audio-VLA의 노트 5개에서는 페이지 경계에서 잘려 반복된 구성요소 설명을 복원했다. 글꼴과 문자 간 대응은 논문마다 달라 검사기는 해당 줄을 표시하고 보존한다. [Point2Graph 원문](https://arxiv.org/pdf/2409.10350v1) · [Audio-VLA 그림 2](https://arxiv.org/pdf/2511.09958v1#page=3) · [문자 검사](../scripts/audit_note_artifacts.py)
+- AutoHorizon의 실행 길이 계산식, PD-VLA의 토큰 갱신식, BA-GS의 관측 행렬과 VQ-VLA의 행동 인코더·디코더 도식은 렌더링한 원문과 대조해 노트 7개에 남은 손상 12줄을 복원했다. [AutoHorizon 식 6](https://arxiv.org/pdf/2602.21445v2#page=6) · [PD-VLA 식 5](https://arxiv.org/pdf/2503.02310v2#page=4) · [BA-GS 식 4](https://openaccess.thecvf.com/content/CVPR2026/papers/Ma_BA-GS_Bayesian_Adaptive_Gaussian_Splatting_for_SFM-Free_3D_Reconstruction_CVPR_2026_paper.pdf#page=4) · [VQ-VLA 그림 1](https://openaccess.thecvf.com/content/ICCV2025/papers/Wang_VQ-VLA_Improving_Vision-Language-Action_Models_via_Scaling_Vector-Quantized_Action_Tokenizers_ICCV_2025_paper.pdf#page=3)
 - PDF 원문 확인 요청 112개 노트를 포함해 55편의 노트 135개에서 손상된 구간 306개를 대조·수정했다. 수정 구간의 확인 수준과 논문 전체 정독을 구별한다. [논문별 원문·페이지·수정 근거](../sources/pdf_note_review_2026-10-23.json) · [후속 근거](../sources/pdf_note_review_followup_2026-10-23.json)
 - 논문별 출처와 증거 수준은 [원장](../sources/papers.json)이 관리하고, 사용자 읽기 이력은 [읽기 기록](../../research/READING_STATUS.csv)에 둔다.
 

@@ -15,13 +15,11 @@
 - Full-text retrieval: https://arxiv.org/pdf/2204.14198
 - Code/Project: not identified
 - Paper type: theory_or_foundation
-- Source audit: full-text PDF body checked on 2026-09-03 (54 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (54 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 한 줄 요약과 핵심 기여 두 개를 각 문장에 인용한 판본의 원문에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — They crucially lack the ability to generate language, which makes them less suitable to more open-ended tasks such as captioning or visual questionanswering.
-
-방법 관련 발췌 — In summary, our contributions are the following: (i) We introduce the Flamingo family of VLMs which can perform various multimodal tasks (such as captioning, visual dialogue, or visual question-answering) from only a ...
+Flamingo는 영상·이미지와 텍스트가 섞인 예시를 프롬프트로 받아 여러 시각언어 과제를 소수 예시로 수행한다. [PDF 1쪽](https://proceedings.neurips.cc/paper_files/paper/2022/file/960a172bc7fbf0177ccccbb411a7d800-Paper-Conference.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 4 / 1 Introduction - extractive body cue:** In summary, our contributions are the following: (i) We introduce the Flamingo family of VLMs which can perform various multimodal tasks (such as captioning, visual ...
-- **p. 3 / 1 Introduction - extractive body cue:** We introduce Flamingo, a Visual Language Model (VLM) that sets a new state of the art in few-shot learning on a wide range of open-ended ...
-- **p. 3 / 1 Introduction - extractive body cue:** While initial progress has been made towards a similar capability in computer vision, the most widely used paradigm still consists of first pretraining on a ...
-- **p. 6 / 2 Approach - extractive body cue:** We also collect a similar dataset but with videos instead of still images: VTP (Video & Text Pairs) consists of 27 million short videos (approximately ...
-- **p. 6 / 2 Approach - extractive body cue:** To complement this dataset, we collect our own dataset of image and text pairs targeting better quality and longer descriptions: LTIP (Long Text & Image ...
-- **p. 3 / Figure/Table caption - extractive body cue:** Figure 2: Flamingo results overview. Left: Our largest model, dubbed Flamingo, outperforms state-of-the-art fine-tuned models on 6 of the 16 tasks we consider with no ...
-- **p. 7 / Figure/Table caption - extractive body cue:** Table 1: Comparison to the state of the art. A single Flamingo model reaches the state of the art on a wide array of image ...
-- **p. 8 / Figure/Table caption - extractive body cue:** Table 3: Ablation studies. Each row should be compared to the baseline Flamingo run (top row). Step time measures the time spent to perform gradient ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 사전학습된 시각·언어모델 사이에 시각 토큰을 요약하는 모듈과 게이트형 교차 어텐션을 학습해 교차 배치된 입력을 처리한다. [PDF 3쪽](https://proceedings.neurips.cc/paper_files/paper/2022/file/960a172bc7fbf0177ccccbb411a7d800-Paper-Conference.pdf#page=3) · [PDF 4쪽](https://proceedings.neurips.cc/paper_files/paper/2022/file/960a172bc7fbf0177ccccbb411a7d800-Paper-Conference.pdf#page=4) · [PDF 5쪽](https://proceedings.neurips.cc/paper_files/paper/2022/file/960a172bc7fbf0177ccccbb411a7d800-Paper-Conference.pdf#page=5)
+- 질의응답, 캡셔닝 등 영상·이미지 과제에서 예시 수에 따른 성능과 과제별 미세조정 결과를 비교했다. [PDF 6쪽](https://proceedings.neurips.cc/paper_files/paper/2022/file/960a172bc7fbf0177ccccbb411a7d800-Paper-Conference.pdf#page=6) · [PDF 7쪽](https://proceedings.neurips.cc/paper_files/paper/2022/file/960a172bc7fbf0177ccccbb411a7d800-Paper-Conference.pdf#page=7) · [PDF 8쪽](https://proceedings.neurips.cc/paper_files/paper/2022/file/960a172bc7fbf0177ccccbb411a7d800-Paper-Conference.pdf#page=8)
 
 ## Evaluation Scope
 

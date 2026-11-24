@@ -15,13 +15,11 @@
 - Full-text retrieval: https://arxiv.org/pdf/1512.03012
 - Code/Project: https://shapenet.org/
 - Paper type: benchmark_or_dataset
-- Source audit: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 한 줄 요약과 핵심 기여 두 개를 각 문장에 인용한 판본의 원문에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, a critical bottleneck facing the adoption of data-driven methods for 3D content is the lack of large-scale, curated datasets of 3D models that are available to the community.
-
-방법 관련 발췌 — Motivated by the far-reaching impact of dataset efforts such as the Penn Treebank [20], WordNet [21] and ImageNet [4], which collectively have tens of thousands of citations, we propose establishing ShapeNet: a ...
+ShapeNet은 3차원 CAD 물체를 의미 범주로 정리하고 정렬·물리 크기·대칭·부품 등 모델별 주석을 체계화한 자료 저장소다. [PDF 1쪽](https://arxiv.org/pdf/1512.03012v1#page=1)
 
 ## Problem and Motivation
 
@@ -55,15 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 1 / 1. Introduction - extractive body cue:** Motivated by the far-reaching impact of dataset efforts such as the Penn Treebank [20], WordNet [21] and ImageNet [4], which collectively have tens of thousands ...
-- **p. 1 / Abstract - extractive body cue:** We present ShapeNet: a richly-annotated, large-scale repository of shapes represented by 3D CAD models of objects.
-- **p. 9 / Figure/Table caption - extractive body cue:** Table 3. Total number of models for the top 100 ShapeNetSem categories (out of 270 categories). Each category is also linked to the corresponding WordNet ...
-- **p. 5 / 4. Annotation Acquisition and Validation - extractive body cue:** Our goal is to provide all annotations with high accuracy.
-- **p. 6 / 4.2. Hierarchical Rigid Alignment - extractive body cue:** We explain by an example. "armchair", "chair" and "seat" are three categories in our taxonomy, each being a subcategory of its successor.
-- **p. 6 / 4.1. Category Annotation - extractive body cue:** After we retrieve these models we use the popularity score of each model on the repository to sort models and ask human workers to verify ...
-- **p. 7 / 4.3. Parts and Keypoints - extractive body cue:** models where further human annotation would be most informative, generate a new set of crowd-sourced annotation tasks, algorithmically propagate their results, and so on.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- WordNet 범주와 다양한 주석 유형을 연결하고 자동 처리와 사람 검증을 결합하는 주석 수집 절차를 설명했다. [PDF 3쪽](https://arxiv.org/pdf/1512.03012v1#page=3) · [PDF 4쪽](https://arxiv.org/pdf/1512.03012v1#page=4) · [PDF 5쪽](https://arxiv.org/pdf/1512.03012v1#page=5)
+- 보고서 당시 색인 규모 및 범주 분류 규모와 별도로 ShapeNetCore·ShapeNetSem 하위 자료의 범주별 통계를 제시했다. [PDF 1쪽](https://arxiv.org/pdf/1512.03012v1#page=1) · [PDF 8쪽](https://arxiv.org/pdf/1512.03012v1#page=8) · [PDF 9쪽](https://arxiv.org/pdf/1512.03012v1#page=9)
 
 ## Evaluation Scope
 

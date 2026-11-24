@@ -15,13 +15,11 @@
 - Full-text retrieval: https://openaccess.thecvf.com/content/CVPR2026/papers/Haitman_C-GenReg_Training-Free_3D_Point_Cloud_Registration_by_Multi-View-Consistent_Geometry-to-Image_Generation_CVPR_2026_paper.pdf
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 한 줄 요약과 핵심 기여 두 개를 각 문장에 인용한 판본의 원문에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, these methods primarily rely on single-view generation and lack mechanisms for handling multiple geometrically related views.
-
-방법 관련 발췌 — Standard point cloud registration consists of feature extraction, feature matching, and robust pose estimation (e.g.
+C-GenReg는 점군에서 합성한 다중 시점 영상의 대응과 원래 점군의 기하 대응을 결합해 추가 학습 없이 두 점군을 정합한다. [PDF 1쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Haitman_C-GenReg_Training-Free_3D_Point_Cloud_Registration_by_Multi-View-Consistent_Geometry-to-Image_Generation_CVPR_2026_paper.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 1 / 1. Introduction - extractive body cue:** Standard point cloud registration consists of feature extraction, feature matching, and robust pose estimation (e.g.
-- **p. 2 / 1. Introduction - extractive body cue:** In contrast, our method, C-GenReg (stands for Consistent Generative Registration), leverages WFMs to generate multiview-consistent RGB views directly from geometry, eliminating the need for any ...
-- **p. 2 / 1. Introduction - extractive body cue:** Instead, we introduce a "Matchthen-Fuse" scheme that combines two independent correspondence posteriors, one from the WFM + VFM branch and one from the geometric branch, ...
-- **p. 5 / 3.5. Match-then-Fuse Probabilistic Fusion - extractive body cue:** To address this, we introduce the Disjunctive Posterior Fusion (Noisy-OR), which aggregates evidence 3008
-- **p. 5 / 3.5. Match-then-Fuse Probabilistic Fusion - extractive body cue:** To meet these goals, we propose a "match-then-fuse" probabilistic strategy, where putative correspondences are first established independently for each modality by computing feature similarity matrices ...
-- **p. 7 / 4.2. Method Evaluation - extractive body cue:** Although this comparison is not strictly fair, since C-GenReg relies solely on 3D point cloud inputs, it is noteworthy that C-GenReg achieves comparable results to ...
-- **p. 7 / 4.2. Method Evaluation - extractive body cue:** Best results are in bold. achieves superior rotation accuracy, demonstrating the benefit of our probabilistic fusion.
-- **p. 6 / 4.2. Method Evaluation - extractive body cue:** Despite this, C-GenReg achieves the best overall performance across most rotation and translation metrics.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 기하에 일관된 RGB 영상을 합성하고 이미지에서 구한 대응점을 원래의 깊이로 3차원에 역투영한다. [PDF 3쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Haitman_C-GenReg_Training-Free_3D_Point_Cloud_Registration_by_Multi-View-Consistent_Geometry-to-Image_Generation_CVPR_2026_paper.pdf#page=3) · [PDF 4쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Haitman_C-GenReg_Training-Free_3D_Point_Cloud_Registration_by_Multi-View-Consistent_Geometry-to-Image_Generation_CVPR_2026_paper.pdf#page=4) · [PDF 5쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Haitman_C-GenReg_Training-Free_3D_Point_Cloud_Registration_by_Multi-View-Consistent_Geometry-to-Image_Generation_CVPR_2026_paper.pdf#page=5)
+- 두 대응 분포를 확률적으로 융합하고 실내 3DMatch·ScanNet 및 실외 Waymo에서 회전·이동 정합을 평가했다. [PDF 5쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Haitman_C-GenReg_Training-Free_3D_Point_Cloud_Registration_by_Multi-View-Consistent_Geometry-to-Image_Generation_CVPR_2026_paper.pdf#page=5) · [PDF 6쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Haitman_C-GenReg_Training-Free_3D_Point_Cloud_Registration_by_Multi-View-Consistent_Geometry-to-Image_Generation_CVPR_2026_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Haitman_C-GenReg_Training-Free_3D_Point_Cloud_Registration_by_Multi-View-Consistent_Geometry-to-Image_Generation_CVPR_2026_paper.pdf#page=7) · [PDF 8쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Haitman_C-GenReg_Training-Free_3D_Point_Cloud_Registration_by_Multi-View-Consistent_Geometry-to-Image_Generation_CVPR_2026_paper.pdf#page=8)
 
 ## Evaluation Scope
 

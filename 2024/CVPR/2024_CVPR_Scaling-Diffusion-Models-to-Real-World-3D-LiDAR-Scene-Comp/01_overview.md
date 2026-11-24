@@ -15,13 +15,11 @@
 - Full-text retrieval: https://openaccess.thecvf.com/content/CVPR2024/papers/Nunes_Scaling_Diffusion_Models_to_Real-World_3D_LiDAR_Scene_Completion_CVPR_2024_paper.pdf
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 한 줄 요약과 핵심 기여 두 개를 각 문장에 인용한 판본의 원문에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Computer vision techniques play a central role in the perception stack of autonomous vehicles.
-
-방법 관련 발췌 — In summary, our key contributions are: • We propose a novel scene-scale diffusion scheme for 3D sensor data that operates at the point level. • We propose a regularization that approximates the ...
+LiDiff는 희소 LiDAR 한 프레임에서 거리 영상을 거치지 않고 3차원 점을 직접 생성해 비어 있는 관측 영역을 보완한다. [PDF 1쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Nunes_Scaling_Diffusion_Models_to_Real-World_3D_LiDAR_Scene_Completion_CVPR_2024_paper.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -53,16 +51,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** In summary, our key contributions are: • We propose a novel scene-scale diffusion scheme for 3D sensor data that operates at the point level. • ...
-- **p. 2 / 1. Introduction - extractive body cue:** Furthermore, we propose a regularization to stabilize the DDPMs during training, approximating the predicted noise distribution closer to the real data.
-- **p. 3 / 3. Approach - extractive body cue:** We propose using DDPMs to achieve scene completion from a single 3D LiDAR scan as input.
-- **p. 3 / 3. Approach - extractive body cue:** Next, we provide the needed background on diffusion models and describe the individual components of our approach.
-- **p. 8 / Figure/Table caption - extractive body cue:** Figure 6. Mean and standard deviation of the predicted noise ϵθ over different regularization weights. In this experiment we use DPMSolver [17] to reduce the ...
-- **p. 6 / Figure/Table caption - extractive body cue:** Table 2. Mean chamfer distance and Jensen-Shannon divergence evaluation on KITTI-360 sequence 00 and our data. ing that current 3D diffusion methods cannot directly be ...
-- **p. 7 / Figure/Table caption - extractive body cue:** Figure 5. Qualitative results on one scan from KITTI-360. Colors depict point height normalized by the height range of each point cloud. IoU [%] Grid ...
-- **p. 7 / Figure/Table caption - extractive body cue:** Table 4. Completion metric where the IoU is computed against the ground truth and prediction grids with different resolutions. Tab. 3 shows the IoU of ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 장면 규모에서 작동하는 점 단위 확산과 국소 잡음 제거를 설계하고 예측 잡음 분포에 정규화를 적용했다. [PDF 3쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Nunes_Scaling_Diffusion_Models_to_Real-World_3D_LiDAR_Scene_Completion_CVPR_2024_paper.pdf#page=3) · [PDF 4쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Nunes_Scaling_Diffusion_Models_to_Real-World_3D_LiDAR_Scene_Completion_CVPR_2024_paper.pdf#page=4) · [PDF 5쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Nunes_Scaling_Diffusion_Models_to_Real-World_3D_LiDAR_Scene_Completion_CVPR_2024_paper.pdf#page=5)
+- 장면 완성 결과의 점 간 거리·분포와 점유 겹침을 측정하고 잡음 정규화의 효과를 비교했다. [PDF 6쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Nunes_Scaling_Diffusion_Models_to_Real-World_3D_LiDAR_Scene_Completion_CVPR_2024_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Nunes_Scaling_Diffusion_Models_to_Real-World_3D_LiDAR_Scene_Completion_CVPR_2024_paper.pdf#page=7) · [PDF 8쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Nunes_Scaling_Diffusion_Models_to_Real-World_3D_LiDAR_Scene_Completion_CVPR_2024_paper.pdf#page=8)
 
 ## Evaluation Scope
 

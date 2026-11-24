@@ -12,16 +12,15 @@
 - Tier: REFERENCE
 - Tags: VLA, Vision-Language Model, Robotics
 - Official paper: https://arxiv.org/abs/2409.12514
+- PDF title variant: TinyVLA: Towards Fast, Data-Efficient Vision-Language-Action Models for Robotic Manipulation [원문 표제면](https://arxiv.org/pdf/2409.12514v5#page=1) · [공식 서지](https://api.crossref.org/works/10.1109/LRA.2025.3544909)
 - Full-text retrieval: https://arxiv.org/pdf/2409.12514
 - Code/Project: https://tiny-vla.github.io/
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 한 줄 요약과 핵심 기여 두 개를 각 문장에 인용한 판본의 원문에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Our results show that TinyVLA-H outperforms OpenVLA, achieving superior performance with 20 times less inference latency. challenges due to limited data and the difficulty of learning physical motion [1], [2].
-
-방법 관련 발췌 — Our contribution are the three folds: • We introduce a novel VLA architecture that combines lightweight vision-language models with a diffusion model, enabling fast inference, strong performance, and excellent generalization capabilitie ...
+TinyVLA는 사전학습된 소형 멀티모달 모델에 확산 행동 디코더를 붙여 별도의 대규모 로봇 사전학습 없이 조작 정책을 학습한다. [PDF 1쪽](https://arxiv.org/pdf/2409.12514v5#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +54,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / I. INTRODUCTION - extractive body cue:** Our contribution are the three folds: • We introduce a novel VLA architecture that combines lightweight vision-language models with a diffusion model, enabling fast inference, ...
-- **p. 6 / 1 Background - extractive body cue:** In Figure 9, we present the spatial generalization performance of our methods.
-- **p. 2 / I. INTRODUCTION - extractive body cue:** In this work, we propose TinyVLA, a compact visionlanguage-action model designed for fast inference.
-- **p. 3 / III. METHOD - extractive body cue:** We report the average success rate on multiple tasks, We use TinyVLA-H as our method.
-- **p. 3 / III. METHOD - extractive body cue:** We posit that this approach enables the pre-trained model to process inputs with maximum linguistic fidelity while retaining flexibility.
-- **p. 3 / IV. EXPERIMENTS - extractive body cue:** In our experiments, we aim to study the following questions: • Does TinyVLA achieve a higher success rate in multitasking robotic manipulation compared to the ...
-- **p. 5 / IV. EXPERIMENTS - extractive body cue:** As shown in Table III, while the Diffusion Policy excels in the PlaceTennisBag task, our TinyVLA-H model achieved an average success rate of 44.5%, surpassing ...
-- **p. 3 / IV. EXPERIMENTS - extractive body cue:** It is evaluated with 3 seeds, and for each seed, the success rate was averaged over five different iterations.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 시각 관측과 언어 지시로 만든 표현에 조건화한 확산 디코더를 로봇 시연으로 학습했다. [PDF 2쪽](https://arxiv.org/pdf/2409.12514v5#page=2) · [PDF 3쪽](https://arxiv.org/pdf/2409.12514v5#page=3)
+- 실물 조작 성공률과 추론 지연을 따로 측정하고 지시·물체·위치·배경을 바꾼 조건에서 일반화를 비교했다. [PDF 4쪽](https://arxiv.org/pdf/2409.12514v5#page=4) · [PDF 5쪽](https://arxiv.org/pdf/2409.12514v5#page=5) · [PDF 6쪽](https://arxiv.org/pdf/2409.12514v5#page=6) · [PDF 7쪽](https://arxiv.org/pdf/2409.12514v5#page=7)
 
 ## Evaluation Scope
 

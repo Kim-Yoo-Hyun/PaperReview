@@ -15,13 +15,11 @@
 - Full-text retrieval: https://arxiv.org/pdf/2606.25497
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 한 줄 요약과 핵심 기여 두 개를 각 문장에 인용한 판본의 원문에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Large Language Models (LLMs) offer this capability through the vast commonsense priors, yet they lack spatial grounding required for navigation.
-
-방법 관련 발췌 — In summary, the contributions of this work are threefold: • We propose SAGE-Nav, a hierarchical navigation
+SAGE-Nav는 언어모델이 제안한 의미 경유지와 계층적 장면 그래프를 이용해 지시 기반 이동 정책을 안내한다. [PDF 1쪽](https://arxiv.org/pdf/2606.25497v1#page=1)
 
 ## Problem and Motivation
 
@@ -54,16 +52,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 1 / I. INTRODUCTION - extractive body cue:** In summary, the contributions of this work are threefold: • We propose SAGE-Nav, a hierarchical navigation.
-- **p. 1 / I. INTRODUCTION - extractive body cue:** In contrast, our method constructs a hierarchical scene graph as an explicit environment prior.
-- **p. 2 / I. INTRODUCTION - extractive body cue:** By leveraging relational graph convolutions, it produces structure-aware embeddings designed to capture both semantic and spatial hierarchies. • We develop the Goal-aware Alignment-Fusion Network (GAFN) ...
-- **p. 2 / IV. PROPOSED METHOD - extractive body cue:** LLM-Guided Global Planning over Hierarchical Scene Graphs Inspired by recent advances that extend RAG to embodied environments [41, 42], we develop an LLM-driven global planner ...
-- **p. 5 / V. EXPERIMENTS - extractive body cue:** In iTHOR, SAGE-Nav achieves state-of-the-art Success Rates (SR) of 82.47% overall and 77.22% in challenging long-horizon scenarios (L ≥5), outperforming TSOG and CGI-GAIL by absolute ...
-- **p. 6 / V. EXPERIMENTS - extractive body cue:** Crucially, leveraging waypoint guidance for hardto-find targets, our method improves both the navigation success rate and overall robustness.
-- **p. 6 / V. EXPERIMENTS - extractive body cue:** These results show that decoupling high-level semantic planning from local reactive control improves inference efficiency while preserving navigation performance.
-- **p. 5 / V. EXPERIMENTS - extractive body cue:** 2) Evaluation Metrics: To comprehensively assess navigation performance, we adopt three standard Object-Goal Navigation metrics [2]: Success Rate (SR), Success weighted by Path Length (SPL), ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 그래프 인코더가 공간 관계를 표현하고 게이트가 이를 현재 시각 관측과 결합해 상위 계획과 저수준 제어를 다른 주기로 실행한다. [PDF 3쪽](https://arxiv.org/pdf/2606.25497v1#page=3) · [PDF 4쪽](https://arxiv.org/pdf/2606.25497v1#page=4) · [PDF 5쪽](https://arxiv.org/pdf/2606.25497v1#page=5)
+- iTHOR와 RoboTHOR에서 내비게이션 성능과 모듈별 기여를 비교했다. [PDF 6쪽](https://arxiv.org/pdf/2606.25497v1#page=6) · [PDF 7쪽](https://arxiv.org/pdf/2606.25497v1#page=7)
 
 ## Evaluation Scope
 

@@ -15,13 +15,11 @@
 - Full-text retrieval: https://openaccess.thecvf.com/content/ICCV2025/papers/Wu_On-Device_Diffusion_Transformer_Policy_for_Efficient_Robot_Manipulation_ICCV_2025_paper.pdf
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 한 줄 요약과 핵심 기여 두 개를 각 문장에 인용한 판본의 원문에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, this endeavor presents multifaceted challenges: 1) Diffusion Policies require multiple denoising steps, which slows down the generation process; 2) the standard architectures [8, 36, 37] involve billions of parameters, leading ...
-
-방법 관련 발췌 — In this work, we introduce a novel framework named LightDP for Diffusion Policies that enables models to achieve real-time generation on mobile devices.
+LightDP는 조작용 확산 정책의 잡음 제거 네트워크와 샘플링 단계 수를 함께 줄여 모바일 장치에서 행동을 예측한다. [PDF 1쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Wu_On-Device_Diffusion_Transformer_Policy_for_Efficient_Robot_Manipulation_ICCV_2025_paper.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 1 / 1. Introduction - extractive body cue:** In this work, we introduce a novel framework named LightDP for Diffusion Policies that enables models to achieve real-time generation on mobile devices.
-- **p. 2 / 1. Introduction - extractive body cue:** Our contributions are summarized as follows: • We present a novel framework for Diffusion Policies to obtain the efficient diffusion transformer that achieves real-time action ...
-- **p. 5 / 4.3. Prune the Model by Learning - extractive body cue:** In the left figure, we present the consistency distillation pipeline adopted in our method.
-- **p. 5 / 4.3. Prune the Model by Learning - extractive body cue:** In the right figure, we present the prune by learning technique used in our method, where a set of Bernoulli variables (gate score) is learned ...
-- **p. 4 / 4.3. Prune the Model by Learning - extractive body cue:** To address this issue, we propose to use a single-stage pruning method [10], where the mask M and weight ˆϕ are jointly optimized to minimize ...
-- **p. 6 / 5.3. Evaluation on DiffusionPolicy Transformer - extractive body cue:** The results show that through our method, the pruned model can achieve a comparable success rate with the vanilla model.
-- **p. 6 / 5.3. Evaluation on DiffusionPolicy Transformer - extractive body cue:** Especially, we find a 2-layer diffusion transformer can achieve a success rate with 0.724, which is quite close to the original 14078
-- **p. 7 / 5.4. Evaluation on MDT-V - extractive body cue:** Similarly, in the D→D scenario, all models register lower performance, with the most compressed model suffering from a steep decline in both success rate and ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 가지치기 뒤 재학습을 최적화하고 일관성 증류로 행동 생성에 필요한 반복 횟수를 줄였다. [PDF 3쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Wu_On-Device_Diffusion_Transformer_Policy_for_Efficient_Robot_Manipulation_ICCV_2025_paper.pdf#page=3) · [PDF 4쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Wu_On-Device_Diffusion_Transformer_Policy_for_Efficient_Robot_Manipulation_ICCV_2025_paper.pdf#page=4) · [PDF 5쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Wu_On-Device_Diffusion_Transformer_Policy_for_Efficient_Robot_Manipulation_ICCV_2025_paper.pdf#page=5)
+- 조작 벤치마크와 실제 과제에서 압축 전후의 과제 성능을 비교하고 장치별 추론 지연을 측정했다. [PDF 6쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Wu_On-Device_Diffusion_Transformer_Policy_for_Efficient_Robot_Manipulation_ICCV_2025_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Wu_On-Device_Diffusion_Transformer_Policy_for_Efficient_Robot_Manipulation_ICCV_2025_paper.pdf#page=7) · [PDF 8쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Wu_On-Device_Diffusion_Transformer_Policy_for_Efficient_Robot_Manipulation_ICCV_2025_paper.pdf#page=8)
 
 ## Evaluation Scope
 

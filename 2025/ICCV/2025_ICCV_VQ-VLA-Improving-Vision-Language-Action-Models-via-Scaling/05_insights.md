@@ -41,7 +41,7 @@
 ### Reusable lesson in the robotics loop
 
 - **Closed-loop position:** `image/video, language instruction, proprioception과 history → language-grounded task state와 action-policy context → continuous action, pose 또는 action chunk`.
-- 이 논문의 재사용 가능한 지점은 The method frames action prediction as a vision-language task, mapping input observation images and natural language instructions to discrete robot action sequences.를 A: Input image Language Instruction VQ Decoder � language tokenizer task: Put all cups into the basket predicted robot actions XYZ positions, Euler angles, gripper states Lora Figure 1.로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 language-grounded task state와 action-policy context가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 Despite these promising results, there still remain some limitations and opportunities for future work.에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
+- 그림 1의 디코더는 이산 예측을 위치·오일러 각·그리퍼 상태로 복원한다. [PDF 3쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Wang_VQ-VLA_Improving_Vision-Language-Action_Models_via_Scaling_Vector-Quantized_Action_Tokenizers_ICCV_2025_paper.pdf#page=3) 연구 해석으로는 토크나이저의 복원 오차와 실제 조작 성공률을 분리해 비교할 수 있다.
 - The paper-specific mechanism to preserve in a reproduction is: In summary, our contributions are as follows: • We propose a general convolutional residual VQ-VAEbased framework for action tokenizers. • We demonstrate that action tokenizers can be effectively scaled by leveraging large-scale ...
 - Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
 

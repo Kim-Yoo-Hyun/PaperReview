@@ -15,13 +15,11 @@
 - Full-text retrieval: https://arxiv.org/pdf/2503.03984
 - Code/Project: https://qianzhong-chen.github.io/gradnav.github.io/
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 한 줄 요약과 핵심 기여 두 개를 각 문장에 인용한 판본의 원문에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — To tackle the challenge, one of the most important bottlenecks lies on the difficulty in getting high-quality perception data when training the policy in conventional simulators [10], [11].
-
-방법 관련 발췌 — Our main contributions are: • We introduce a simulator for training robot vision-based control policies by integrating 3DGS for high-fidelity visuals with a differentiable dynamics model to enable end-to-end gradient computation. • ...
+GRaD-Nav는 Gaussian Splatting으로 만든 시각 환경과 미분 가능한 비행 동역학을 결합해 드론 이동 정책을 학습한다. [PDF 1쪽](https://arxiv.org/pdf/2503.03984v3#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / I. INTRODUCTION - extractive body cue:** Our main contributions are: • We introduce a simulator for training robot vision-based control policies by integrating 3DGS for high-fidelity visuals with a differentiable dynamics ...
-- **p. 2 / I. INTRODUCTION - extractive body cue:** To achieve the goal of visual-motor navigation, we propose a novel approach that leverages 3DGS in conjunction with DDRL, using SHAC-like training algorithm and a ...
-- **p. 3 / III. METHOD - extractive body cue:** (10) The state st = [pt, vt, qt, ωt] consists of position, velocity, orientation (quaternion), and angular velocity.
-- **p. 3 / III. METHOD - extractive body cue:** At its core, we introduce GRaD-Nav, a DDRL algorithm tailored for end-to-end visual navigation, improving sample efficiency over prior methods.
-- **p. 5 / 4) Curriculum training for generalizable navigation pol - extractive body cue:** icy: Beyond training a single policy for a long horizon trajectory, our method can also train generalizable policies that can adapt to different surrounding environments ...
-- **p. 6 / IV. EXPERIMENTAL RESULTS - extractive body cue:** The experiment results show that our proposed method achieves the highest training and evaluation rewards as well as success rate on both trajectories among all ...
-- **p. 7 / IV. EXPERIMENTAL RESULTS - extractive body cue:** By comparing three methods' real robot test performance in Table V, we can conclude that (i) the sim-to-real gap of our method is reasonably low; ...
-- **p. 5 / IV. EXPERIMENTAL RESULTS - extractive body cue:** The experiment results in Fig.2 show that (i) non-differentiable RL can struggle to train a satisfactory policy for this end-to-end visual navigation task within 1 ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 시각 관측과 동역학을 이용한 정책 학습에 환경 변화를 추정하는 네트워크와 여러 장면의 교과학습을 결합한다. [PDF 2쪽](https://arxiv.org/pdf/2503.03984v3#page=2) · [PDF 3쪽](https://arxiv.org/pdf/2503.03984v3#page=3) · [PDF 4쪽](https://arxiv.org/pdf/2503.03984v3#page=4) · [PDF 5쪽](https://arxiv.org/pdf/2503.03984v3#page=5)
+- 실물 드론에서 추가 미세조정 없이 비행을 시험하고 게이트의 위치나 주변 배치가 달라졌을 때의 전이를 측정했다. [PDF 6쪽](https://arxiv.org/pdf/2503.03984v3#page=6) · [PDF 7쪽](https://arxiv.org/pdf/2503.03984v3#page=7)
 
 ## Evaluation Scope
 

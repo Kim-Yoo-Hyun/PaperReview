@@ -15,13 +15,11 @@
 - Full-text retrieval: https://openaccess.thecvf.com/content/CVPR2025/papers/Huang_V2X-R_Cooperative_LiDAR-4D_Radar_Fusion_with_Denoising_Diffusion_for_3D_CVPR_2025_paper.pdf
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 한 줄 요약과 핵심 기여 두 개를 각 문장에 인용한 판본의 원문에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, there is a lack of 4D radar data in the current cooperative perception dataset.
-
-방법 관련 발췌 — Our contributions can be summarized in three key points: • We present V2X-R, the first simulated V2X dataset that not only includes LiDAR, cameras, but also 4D radar data.
+V2X-R은 여러 차량의 LiDAR·카메라·4D 레이더를 함께 기록한 시뮬레이션 데이터와 협력 3차원 객체 검출 방법을 제시한다. [PDF 1쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Huang_V2X-R_Cooperative_LiDAR-4D_Radar_Fusion_with_Denoising_Diffusion_for_3D_CVPR_2025_paper.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** Our contributions can be summarized in three key points: • We present V2X-R, the first simulated V2X dataset that not only includes LiDAR, cameras, but ...
-- **p. 2 / 1. Introduction - extractive body cue:** To address the challenge of agent-fused LiDAR features becoming noisy in adverse weather, we propose a novel Multi-modal Diffusion Denoising (MDD) module in the modal ...
-- **p. 1 / Abstract - extractive body cue:** Subsequently, we propose a novel cooperative LiDAR-4D radar fusion pipeline for 3D object detection and implement it with multiple fusion strategies.
-- **p. 1 / Abstract - extractive body cue:** To this end, we present V2X-R, the first simulated V2X dataset incorporating LiDAR, camera, and 4D radar modalities.
-- **p. 4 / 3.4. Adverse Weather Simulation - extractive body cue:** Subsequent fusion consists of four stages: 1) Encode by each agent.
-- **p. 8 / Figure/Table caption - extractive body cue:** Table 7. Effect of each component in MDD module, tested by AttFuse [55] on V2X-R testing with fog-simulation. SM2MM fusion strategies, to evaluate the performance ...
-- **p. 2 / Figure/Table caption - extractive body cue:** Figure 2. The performance of different methods in our V2X-R dataset. (a) Performance comparison of different modalities (L and 4DR represent LiDAR and 4D radar ...
-- **p. 8 / 5.4. Multi-modal Diffusion Denoising Analysis - extractive body cue:** Although MDD inevitably introduces an additional inference time of 32 ms, it significantly improves weather robustness and still maintains real-time (about 20 FPS).
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 악천후에 강한 레이더 특징을 조건으로 사용해 잡음이 낀 LiDAR 특징을 정제하는 확산 모듈을 설계했다. [PDF 3쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Huang_V2X-R_Cooperative_LiDAR-4D_Radar_Fusion_with_Denoising_Diffusion_for_3D_CVPR_2025_paper.pdf#page=3) · [PDF 4쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Huang_V2X-R_Cooperative_LiDAR-4D_Radar_Fusion_with_Denoising_Diffusion_for_3D_CVPR_2025_paper.pdf#page=4) · [PDF 5쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Huang_V2X-R_Cooperative_LiDAR-4D_Radar_Fusion_with_Denoising_Diffusion_for_3D_CVPR_2025_paper.pdf#page=5)
+- 센서 융합 방식과 날씨에 따른 검출 성능을 비교하고 눈·안개 조건에서 잡음 제거 모듈의 영향을 평가했다. [PDF 6쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Huang_V2X-R_Cooperative_LiDAR-4D_Radar_Fusion_with_Denoising_Diffusion_for_3D_CVPR_2025_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Huang_V2X-R_Cooperative_LiDAR-4D_Radar_Fusion_with_Denoising_Diffusion_for_3D_CVPR_2025_paper.pdf#page=7) · [PDF 8쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Huang_V2X-R_Cooperative_LiDAR-4D_Radar_Fusion_with_Denoising_Diffusion_for_3D_CVPR_2025_paper.pdf#page=8)
 
 ## Evaluation Scope
 

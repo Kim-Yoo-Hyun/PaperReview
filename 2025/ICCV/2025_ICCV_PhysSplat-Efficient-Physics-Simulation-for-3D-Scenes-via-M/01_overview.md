@@ -15,13 +15,11 @@
 - Full-text retrieval: https://openaccess.thecvf.com/content/ICCV2025/papers/Zhao_PhysSplat_Efficient_Physics_Simulation_for_3D_Scenes_via_MLLM-Guided_Gaussian_ICCV_2025_paper.pdf
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 한 줄 요약과 핵심 기여 두 개를 각 문장에 인용한 판본의 원문에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Some recent approaches aim to bridge the gap between rendering and simulation integrating physics-based This ICCV paper is the Open Access version, provided by the Computer Vision Foundation.
-
-방법 관련 발췌 — Our method is the only one that can simulate the entire scene at a much faster speed. priors into 3D object representations using physical simulators [4, 7, 27].
+PhysSplat은 정적인 3차원 장면의 물체에 시각언어모델로 추정한 재질 특성을 부여해 힘을 받았을 때의 변형을 시뮬레이션한다. [PDF 1쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Zhao_PhysSplat_Efficient_Physics_Simulation_for_3D_Scenes_via_MLLM-Guided_Gaussian_ICCV_2025_paper.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** Our method is the only one that can simulate the entire scene at a much faster speed. priors into 3D object representations using physical simulators ...
-- **p. 2 / 1. Introduction - extractive body cue:** In this paper, we propose PhysSplat, a physics-based method that efficiently transforms static 3D objects into interactive ones capable of responding to new interactions, as ...
-- **p. 3 / 4. Our Methodology - extractive body cue:** We propose MLLM-based Physical Property Perception (MLLM-P3) to predict the mean values of these properties (Section 4.2).
-- **p. 4 / 4.2. MLLM-based Physical Property Perception - extractive body cue:** Inspired by human reasoning, we propose MLLM-based Physical Property Perception (MLLM-P3), which uses MLLM for open-vocabulary semantic reasoning about materials and their physical properties.
-- **p. 5 / 4.3. Physics-Based Dynamics - extractive body cue:** To address these challenges, we propose material property distribution prediction (MPDP), and reformulate the problem from a regression task to a probability distribution estimation task.
-- **p. 6 / 5.3. Comparison with SOTA Methods - extractive body cue:** Our PhysSplat achieves better performance in both metrics, which demonstrates that PhysSplat generates videos that are both realistic and physically plausible, with a high degree ...
-- **p. 8 / Figure/Table caption - extractive body cue:** Table 3. Ablation Study on PhysDreamer [47] dataset. AS denotes the average aesthetic quality score predicted using the LAION aesthetic predictor. property distribution prediction is ...
-- **p. 6 / 5.3. Comparison with SOTA Methods - extractive body cue:** 2 presents the user study results (RS) and aesthetic score (AS) predicted by LAION aesthetic predictor following [14].
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 다중 시점에서 물체의 평균 물성을 추정하고 기하 정보에 따라 물성의 공간 분포와 시뮬레이션 입자 표본을 구성했다. [PDF 3쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Zhao_PhysSplat_Efficient_Physics_Simulation_for_3D_Scenes_via_MLLM-Guided_Gaussian_ICCV_2025_paper.pdf#page=3) · [PDF 4쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Zhao_PhysSplat_Efficient_Physics_Simulation_for_3D_Scenes_via_MLLM-Guided_Gaussian_ICCV_2025_paper.pdf#page=4) · [PDF 5쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Zhao_PhysSplat_Efficient_Physics_Simulation_for_3D_Scenes_via_MLLM-Guided_Gaussian_ICCV_2025_paper.pdf#page=5)
+- 기존 방법과 생성한 움직임, 실행 비용, 사람이 평가한 시각적 사실성을 비교했다. [PDF 6쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Zhao_PhysSplat_Efficient_Physics_Simulation_for_3D_Scenes_via_MLLM-Guided_Gaussian_ICCV_2025_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Zhao_PhysSplat_Efficient_Physics_Simulation_for_3D_Scenes_via_MLLM-Guided_Gaussian_ICCV_2025_paper.pdf#page=7) · [PDF 8쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Zhao_PhysSplat_Efficient_Physics_Simulation_for_3D_Scenes_via_MLLM-Guided_Gaussian_ICCV_2025_paper.pdf#page=8)
 
 ## Evaluation Scope
 

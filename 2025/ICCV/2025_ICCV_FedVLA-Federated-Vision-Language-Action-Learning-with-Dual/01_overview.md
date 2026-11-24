@@ -15,13 +15,11 @@
 - Full-text retrieval: https://openaccess.thecvf.com/content/ICCV2025/papers/Miao_FedVLA_Federated_Vision-Language-Action_Learning_with_Dual_Gating_Mixture-of-Experts_for_Robotic_ICCV_2025_paper.pdf
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 한 줄 요약과 핵심 기여 두 개를 각 문장에 인용한 판본의 원문에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, existing methods typically select a fixed number of experts, lacking adaptability to tasks of varying complexity.
-
-방법 관련 발췌 — Extensive experiments in both simulation and real-world environments demonstrate that FedVLA achieves performance comparable to centralized training while preserving data privacy. • We introduce the Dual Gating Mixture-of-Experts, where ...
+FedVLA는 여러 로봇 사용자의 시연을 각 클라이언트에 두고 조작 정책의 전문가 모듈을 연합학습한다. [PDF 1쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Miao_FedVLA_Federated_Vision-Language-Action_Learning_with_Dual_Gating_Mixture-of-Experts_for_Robotic_ICCV_2025_paper.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -54,16 +52,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** Extensive experiments in both simulation and real-world environments demonstrate that FedVLA achieves performance comparable to centralized training while preserving data privacy. • We introduce the ...
-- **p. 2 / 1. Introduction - extractive body cue:** Our main contributions in this work can be summarized as follows: • We propose FedVLA, the first privacy-preserving federated learning framework for VLA training, ensuring ...
-- **p. 1 / 1. Introduction - extractive body cue:** Unlike traditional centralized training, which requires aggregating all user data on a central server, FL enables distributed model training across multiple clients without transferring raw ...
-- **p. 1 / 1. Introduction - extractive body cue:** Our federated VLA framework enables decentralized training on user devices, preserving privacy while utilizing expertdriven aggregation to enhance model generalization across diverse tasks. enabling robots ...
-- **p. 6 / 4.1. Simulation - extractive body cue:** Furthermore, FedVLA consistently outperforms FedAvg, which only achieves an average success rate of 51.7%.
-- **p. 6 / Figure/Table caption - extractive body cue:** Table 1. Simulation evaluation across four tasks. Performance Comparison. The evaluation results in the simulation environment are presented in Table 1. Fed- VLA achieves an ...
-- **p. 7 / 4.2. Real-World - extractive body cue:** In contrast, FedAvg exhibits a significant performance drop across all tasks, with an average success rate of 53.3%, which is 10.0% lower than our method.
-- **p. 7 / 4.3. Ablation Studies - extractive body cue:** We compare the task success rate and record the validation loss during the training process.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 지시로 물체 특징을 선별하고 토큰과 전문가 양쪽의 게이트로 활성화된 전문가의 갱신을 서버에서 집계한다. [PDF 3쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Miao_FedVLA_Federated_Vision-Language-Action_Learning_with_Dual_Gating_Mixture-of-Experts_for_Robotic_ICCV_2025_paper.pdf#page=3) · [PDF 4쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Miao_FedVLA_Federated_Vision-Language-Action_Learning_with_Dual_Gating_Mixture-of-Experts_for_Robotic_ICCV_2025_paper.pdf#page=4) · [PDF 5쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Miao_FedVLA_Federated_Vision-Language-Action_Learning_with_Dual_Gating_Mixture-of-Experts_for_Robotic_ICCV_2025_paper.pdf#page=5)
+- 시뮬레이션과 실제 로봇팔 과제에서 중앙집중 학습과 연합학습을 비교하고 전문가 활성화의 계산 부담을 분석했다. [PDF 6쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Miao_FedVLA_Federated_Vision-Language-Action_Learning_with_Dual_Gating_Mixture-of-Experts_for_Robotic_ICCV_2025_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Miao_FedVLA_Federated_Vision-Language-Action_Learning_with_Dual_Gating_Mixture-of-Experts_for_Robotic_ICCV_2025_paper.pdf#page=7) · [PDF 8쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Miao_FedVLA_Federated_Vision-Language-Action_Learning_with_Dual_Gating_Mixture-of-Experts_for_Robotic_ICCV_2025_paper.pdf#page=8)
 
 ## Evaluation Scope
 

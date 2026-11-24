@@ -15,13 +15,11 @@
 - Full-text retrieval: https://openaccess.thecvf.com/content/ICCV2025/papers/Kung_RadarSplat_Radar_Gaussian_Splatting_for_High-Fidelity_Data_Synthesis_and_3D_ICCV_2025_paper.pdf
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 한 줄 요약과 핵심 기여 두 개를 각 문장에 인용한 판본의 원문에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Data-driven, learning-based methods have significantly advanced autonomous driving; however, acquiring suitable training data remains a substantial challenge.
-
-방법 관련 발췌 — To account for radar noise, we propose a noise detection method (Sec.
+RadarSplat은 차량용 레이더의 잡음과 반사를 Gaussian 렌더링에 반영해 레이더 관측을 합성하고 3차원 장면을 복원한다. [PDF 1쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Kung_RadarSplat_Radar_Gaussian_Splatting_for_High-Fidelity_Data_Synthesis_and_3D_ICCV_2025_paper.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 3 / 3. Methods - extractive body cue:** To account for radar noise, we propose a noise detection method (Sec.
-- **p. 3 / 3. Methods - extractive body cue:** For scene reconstruction, we present a radar model that renders radar images from 3D Gaussians based on radar physics (Sec.
-- **p. 5 / 3.4. Denoising and Occupancy Map Pre-processing - extractive body cue:** Our method produces a clear denoised image, whereas Radar Fields struggles with multipath effects.
-- **p. 5 / 3.4. Denoising and Occupancy Map Pre-processing - extractive body cue:** We propose a denoising algorithm that removes noise across detected noisy azimuth angles, θnoise ∈Θsat ∪Θmulti, identified in Sec.
-- **p. 2 / 1. Introduction - extractive body cue:** This enables more realistic radar image synthesis and improved 3D geometry estimation compared to [5], as shown in Figure 1.
-- **p. 6 / 4.2. Novel Radar View Rendering - extractive body cue:** With the correct noise modeling and rendering, our proposed method outperforms state-of-the-art, Radar Fields, by +3.4 PSNR and achieves more than 2.6× better in SSIM ...
-- **p. 7 / 4.3. Occupancy State Estimation - extractive body cue:** The results indicate that RadarSplat achieves accurate 3D reconstruction similar to LiDAR, by taking only 2D noisy radar images as input.
-- **p. 7 / 4.3. Occupancy State Estimation - extractive body cue:** The proposed method outperforms Radar Fields across all metrics, achieving better reconstruction by reducing RMSE by 1.22 m and improving accuracy more than 1.5× compared ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 신호의 다중경로 반사와 수신기 포화를 모델링해 실제 레이더 영상에 나타나는 구조를 재현한다. [PDF 3쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Kung_RadarSplat_Radar_Gaussian_Splatting_for_High-Fidelity_Data_Synthesis_and_3D_ICCV_2025_paper.pdf#page=3) · [PDF 4쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Kung_RadarSplat_Radar_Gaussian_Splatting_for_High-Fidelity_Data_Synthesis_and_3D_ICCV_2025_paper.pdf#page=4) · [PDF 5쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Kung_RadarSplat_Radar_Gaussian_Splatting_for_High-Fidelity_Data_Synthesis_and_3D_ICCV_2025_paper.pdf#page=5)
+- 레이더 영상 유사도와 복원 기하 오차를 별도로 측정하고 잡음 모델을 제거한 결과와 비교했다. [PDF 6쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Kung_RadarSplat_Radar_Gaussian_Splatting_for_High-Fidelity_Data_Synthesis_and_3D_ICCV_2025_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Kung_RadarSplat_Radar_Gaussian_Splatting_for_High-Fidelity_Data_Synthesis_and_3D_ICCV_2025_paper.pdf#page=7) · [PDF 8쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Kung_RadarSplat_Radar_Gaussian_Splatting_for_High-Fidelity_Data_Synthesis_and_3D_ICCV_2025_paper.pdf#page=8)
 
 ## Evaluation Scope
 

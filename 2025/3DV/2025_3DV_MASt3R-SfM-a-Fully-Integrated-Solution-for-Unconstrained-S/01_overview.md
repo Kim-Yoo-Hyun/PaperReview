@@ -15,13 +15,11 @@
 - Full-text retrieval: https://arxiv.org/pdf/2409.19152.pdf
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (18 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (18 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 한 줄 요약과 핵심 기여 두 개를 각 문장에 인용한 판본의 원문에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — These changes must, however, be put into perspective, as they do not fundamentally challenge the overall structure of the traditional pipeline.
-
-방법 관련 발췌 — We present a novel large-scale 3D reconstruction approach consisting of four steps outlined in fig.
+MASt3R-SfM은 영상 쌍에서 예측한 국소 3차원 구조와 대응을 전역 좌표계로 정렬해 순서가 없는 사진 모음도 재구성한다. [PDF 1쪽](https://arxiv.org/pdf/2409.19152v1#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 4 / 4. Proposed Method - extractive body cue:** We present a novel large-scale 3D reconstruction approach consisting of four steps outlined in fig.
-- **p. 2 / 1. Introduction - extractive body cue:** To achieve linear complexity in the number of images, we show as second contribution how the encoder from MASt3R can be exploited for large-scale image ...
-- **p. 2 / 1. Introduction - extractive body cue:** First, we propose MASt3R-SfM, a full-fledged SfM pipeline able to process unconstrained image collections.
-- **p. 4 / 4.1. Scene graph - extractive body cue:** While any off-the-shelf image retriever can in theory do, we propose to leverage MASt3R's encoder Enc(·).
-- **p. 6 / 4.4. Refinement - extractive body cue:** We propose instead to form pseudo-tracks by creating anchor points and rigidly tying together every pixel with their closest anchor point.
-- **p. 7 / 5.2. Comparison with the state of the art - extractive body cue:** MASt3R-SfM provides nearly constant performance for all ranges, significantly outperforming COLMAP, Ace-Zero, FlowMap and VGGSfM in all settings.
-- **p. 7 / 5.2. Comparison with the state of the art - extractive body cue:** Results reported in table 3 shows that MASt3R-SfM outperforms all competing approaches by a large margin on average.
-- **p. 8 / 8.4 GB - extractive body cue:** Slightly better results are achieved with the complete graph, but it is about 10x slower than retrieval-based graph and no scalable in general.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- MASt3R 특징을 영상 검색에 재사용해 비교할 쌍을 줄이고 국소 점 지도를 메모리 부담이 작은 전역 정렬에 이용한다. [PDF 3쪽](https://arxiv.org/pdf/2409.19152v1#page=3) · [PDF 4쪽](https://arxiv.org/pdf/2409.19152v1#page=4) · [PDF 5쪽](https://arxiv.org/pdf/2409.19152v1#page=5)
+- 여러 규모와 장면에서 카메라 등록·자세 정확도를 평가하고 일반 SfM 및 학습 기반 방법과 비교했다. [PDF 6쪽](https://arxiv.org/pdf/2409.19152v1#page=6) · [PDF 7쪽](https://arxiv.org/pdf/2409.19152v1#page=7) · [PDF 8쪽](https://arxiv.org/pdf/2409.19152v1#page=8)
 
 ## Evaluation Scope
 

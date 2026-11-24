@@ -15,13 +15,11 @@
 - Full-text retrieval: https://arxiv.org/pdf/2603.00926v1
 - Code/Project: not identified
 - Paper type: system
-- Source audit: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 한 줄 요약과 핵심 기여 두 개를 각 문장에 인용한 판본의 원문에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — A central challenge in robotics is enabling robots to perform diverse tasks in dynamic environments.
-
-방법 관련 발췌 — Rather than loosely coupling a VLM with separate action models, we introduce the DAM-VLA framework (Figure 1), which fully exploits the strengths of VLMs to support both task-specific precision and generalization in ...
+DAM-VLA는 언어 지시와 시각 관측에 맞춰 팔 이동과 그리퍼 조작에 특화된 확산 행동 모델을 조율한다. [PDF 1쪽](https://arxiv.org/pdf/2603.00926v1#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / I. INTRODUCTION - extractive body cue:** Rather than loosely coupling a VLM with separate action models, we introduce the DAM-VLA framework (Figure 1), which fully exploits the strengths of VLMs to ...
-- **p. 3 / III. METHOD - extractive body cue:** Overall Architecture Our goal is to develop a dynamic action model-based VLA framework that enables different robots to physically execute diverse tasks in dynamic environments ...
-- **p. 3 / III. METHOD - extractive body cue:** The vision model consists of powerful
-- **p. 4 / III. METHOD - extractive body cue:** (1) To fully leverage the specific manipulation capabilities of different diffusion action models and the VLM's inherent reasoning capabilities, we propose the dynamic action model.
-- **p. 4 / III. METHOD - extractive body cue:** Dual-Scale Action Weighting To enhance the robustness in distinguishing between arm movement and gripper manipulation, we propose a dualscale action weighting mechanism for model training, ...
-- **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1: DAM-VLA framework and experimental results. (a) We propose a DAM-VLA framework that dynamically integrates the inherent reasoning capabilities of VLMs with specialized diffusion-based ...
-- **p. 6 / IV. EXPERIMENTS - extractive body cue:** Our model achieves the highest average success rate of 71%, outperforming competing methods by a substantial margin.
-- **p. 6 / Figure/Table caption - extractive body cue:** Figure 5. We conduct 50 evaluation trials with randomized initial furniture placements. As shown in Table IV are the success rates of each step of ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 시각·언어 단서로 행동 모델을 선택하고 고수준 표현과 저수준 시각 특징을 결합해 팔과 그리퍼 명령을 예측한다. [PDF 3쪽](https://arxiv.org/pdf/2603.00926v1#page=3) · [PDF 4쪽](https://arxiv.org/pdf/2603.00926v1#page=4)
+- SIMPLER와 FurnitureBench의 시뮬레이션 결과, 실물 조작의 성공률, 모듈을 제거한 비교를 각각 보고했다. [PDF 5쪽](https://arxiv.org/pdf/2603.00926v1#page=5) · [PDF 6쪽](https://arxiv.org/pdf/2603.00926v1#page=6) · [PDF 7쪽](https://arxiv.org/pdf/2603.00926v1#page=7)
 
 ## Evaluation Scope
 

@@ -15,13 +15,11 @@
 - Full-text retrieval: https://arxiv.org/pdf/2011.13456
 - Code/Project: https://github.com/yang-song/score_sde
 - Paper type: theory_or_foundation
-- Source audit: full-text PDF body checked on 2026-09-03 (36 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (36 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 한 줄 요약과 핵심 기여 두 개를 각 문장에 인용한 판본의 원문에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — The latter allows for fast adaptive sampling via black-box ODE solvers, flexible data manipulation via latent codes, a uniquely identifiable encoding, and notably, exact likelihood computation.
-
-방법 관련 발췌 — In addition, we propose a new SDE under our framework that achieves a likelihood value of 2.99 bits/dim on uniformly dequantized CIFAR-10 images, setting a new record on this task.
+점수 기반 생성 모델과 확산 모델을 순방향 확률미분방정식과 시간별 스코어에 의존하는 역방향 과정으로 통합했다. [PDF 1쪽](https://arxiv.org/pdf/2011.13456v2#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** In addition, we propose a new SDE under our framework that achieves a likelihood value of 2.99 bits/dim on uniformly dequantized CIFAR-10 images, setting a ...
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** Although DDPM (Ho et al., 2020) was recently reported to achieve higher sample quality than SMLD (Song & Ermon, 2019; 2020), we show that with ...
-- **p. 8 / 2 BACKGROUND - extractive body cue:** 5 CONTROLLABLE GENERATION The continuous structure of our framework allows us to not only produce data samples from p0, but also from p0pxp0q / yq ...
-- **p. 1 / ABSTRACT - extractive body cue:** In particular, we introduce a predictor-corrector framework to correct errors in the evolution of the discretized reverse-time SDE.
-- **p. 1 / ABSTRACT - extractive body cue:** We present a stochastic differential equation (SDE) that smoothly transforms a complex data distribution to a known prior distribution by slowly injecting noise, and a ...
-- **p. 1 / ABSTRACT - extractive body cue:** Combined with multiple architectural improvements, we achieve record-breaking performance for unconditional image generation on CIFAR-10 with an Inception score of 9.89 and FID of 2.20, ...
-- **p. 6 / 2 BACKGROUND - extractive body cue:** We observe that our reverse diffusion sampler always outperform ancestral sampling, and corrector-only methods (C2000) perform worse than other competitors (P2000, PC1000) with the same ...
-- **p. 9 / 2 BACKGROUND - extractive body cue:** 4 (right) shows results for inpainting and colorization achieved with unconditional time-dependent score-based models.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 교란된 데이터 분포의 스코어를 학습하고 역방향 수치 적분과 예측·보정 샘플링으로 새로운 표본을 생성한다. [PDF 3쪽](https://arxiv.org/pdf/2011.13456v2#page=3) · [PDF 4쪽](https://arxiv.org/pdf/2011.13456v2#page=4) · [PDF 5쪽](https://arxiv.org/pdf/2011.13456v2#page=5)
+- 같은 주변 분포를 따르는 확률 흐름 ODE를 도출하고 영상 생성의 품질·우도와 역문제 적용을 평가했다. [PDF 5쪽](https://arxiv.org/pdf/2011.13456v2#page=5) · [PDF 6쪽](https://arxiv.org/pdf/2011.13456v2#page=6) · [PDF 7쪽](https://arxiv.org/pdf/2011.13456v2#page=7) · [PDF 8쪽](https://arxiv.org/pdf/2011.13456v2#page=8)
 
 ## Evaluation Scope
 

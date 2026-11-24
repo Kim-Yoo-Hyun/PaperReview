@@ -17,13 +17,11 @@
 - Full-text retrieval at original review: https://arxiv.org/pdf/2604.17721
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (23 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (23 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 한 줄 요약과 핵심 기여 두 개를 각 문장에 인용한 판본의 원문에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — When color differences are not distinct, simply incorporating color information still fails to establish the correct correspondences.
-
-방법 관련 발췌 — Additionally, we introduce a joint photometric loss to improve the utilization of color information during the registration process.
+GeGS-PCR는 색이 있는 점군 쌍에서 기하·색 특징으로 초기 대응을 구하고 미분 가능한 Gaussian 렌더링으로 정합을 정제한다. [PDF 1쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/0d2e544c1baa964a0e274e711ecdacf5-Paper-Conference.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -57,16 +55,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1 Introduction - extractive body cue:** Additionally, we introduce a joint photometric loss to improve the utilization of color information during the registration process.
-- **p. 2 / 1 Introduction - extractive body cue:** To address the challenges of point cloud registration in low-overlap real-world scenarios, we propose GeGS-PCR, a two-stage method that integrates Geometric-3DGS for colored point cloud ...
-- **p. 3 / 1 Introduction - extractive body cue:** • We propose the Geometric-3DGS module to encode multimodal representations of superpoint neighborhood information.
-- **p. 3 / 1 Introduction - extractive body cue:** Using attention with 3DGS embeddings, we focus on global geometric distribution-color features and perform fast coarse registration by reducing computational complexity with LORA. • We ...
-- **p. 5 / 3 Method - extractive body cue:** Based on this, we introduce a learned scalar weight α = δ(ω), where ω represents the parameter, to adaptively fuse the geometric and color features.
-- **p. 18 / A.5 Additional Experiments - extractive body cue:** The photometric optimization loss achieves the highest performance with 87.6% PIR, 98.2% FMR, 71.6% IR, and 91.9% RR on C3DM, and 56.1% PIR, 89.3% FMR, ...
-- **p. 8 / 4 Experiments - extractive body cue:** In RR, GeGS-PCR achieves 97.9% on C3DM and 90.7% on C3DLM, outperforming ColorPCR by 0.4% on C3DM and 4.2% on C3DLM.
-- **p. 9 / 4 Experiments - extractive body cue:** In addition, removing LoRA optimization (row f) leads to a slight drop in registration performance, particularly in IR and RR, indicating that LoRA mainly accelerates ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 슈퍼포인트의 주변 색과 기하를 함께 인코딩하고 렌더링 기반 광도 손실로 두 점군의 정렬을 개선한다. [PDF 3쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/0d2e544c1baa964a0e274e711ecdacf5-Paper-Conference.pdf#page=3) · [PDF 4쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/0d2e544c1baa964a0e274e711ecdacf5-Paper-Conference.pdf#page=4) · [PDF 5쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/0d2e544c1baa964a0e274e711ecdacf5-Paper-Conference.pdf#page=5) · [PDF 6쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/0d2e544c1baa964a0e274e711ecdacf5-Paper-Conference.pdf#page=6)
+- 색을 입힌 KITTI와 실내 점군에서 겹침이 다른 조건의 정합 재현율 및 회전·이동 오차를 비교했다. [PDF 7쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/0d2e544c1baa964a0e274e711ecdacf5-Paper-Conference.pdf#page=7) · [PDF 8쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/0d2e544c1baa964a0e274e711ecdacf5-Paper-Conference.pdf#page=8) · [PDF 9쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/0d2e544c1baa964a0e274e711ecdacf5-Paper-Conference.pdf#page=9)
 
 ## Evaluation Scope
 

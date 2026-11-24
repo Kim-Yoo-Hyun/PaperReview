@@ -15,13 +15,11 @@
 - Full-text retrieval: https://openaccess.thecvf.com/content/CVPR2026/papers/Ma_BA-GS_Bayesian_Adaptive_Gaussian_Splatting_for_SFM-Free_3D_Reconstruction_CVPR_2026_paper.pdf
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 한 줄 요약과 핵심 기여 두 개를 각 문장에 인용한 판본의 원문에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Although these approaches partially alleviate the challenges of sparse-view reconstruction such as rendering uncertainty and geometric inconsistency, they do not fundamentally resolve the issue.
-
-방법 관련 발췌 — Hence, we introduce a variational optimization scheme to obtain a cleaner and more structured initialization.
+BA-GS는 희소 영상의 3차원 재구성에서 초기 Gaussian 분포와 각 Gaussian 위치 갱신의 불확실성을 따로 모델링한다. [PDF 1쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Ma_BA-GS_Bayesian_Adaptive_Gaussian_Splatting_for_SFM-Free_3D_Reconstruction_CVPR_2026_paper.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 4 / 4.1. Variational Bayesian Initialization - extractive body cue:** Hence, we introduce a variational optimization scheme to obtain a cleaner and more structured initialization.
-- **p. 4 / 4.1. Variational Bayesian Initialization - extractive body cue:** Since the exact posterior distribution is intractable for most mixture models, we introduce a variational distribution q, which is optimized to be as close as ...
-- **p. 5 / 4.3. Kalman Filtering for Position Denoising - extractive body cue:** To stabilize this update, we introduce an Adaptive Kalman Filter that recursively fuses predicted positions with observed projections.
-- **p. 1 / 1. Introduction - extractive body cue:** Recent advances such as Neural Radiance Fields (NeRFs) and 3D Gaussian Splatting (3DGS) [12, 20] have enabled high-quality novel view * Co-Corresponding authors. synthesis and ...
-- **p. 5 / 4.2. Prior-Guided Adaptive Density Control - extractive body cue:** This allows the control mechanism to adapt to local geometric complexity rather than relying on a uniform hyperparameter.
-- **p. 8 / Figure/Table caption - extractive body cue:** Figure 5. Convergence analysis on the MVImgNet dataset (12 views). BA-GS achieves a higher performance ceiling and bet- ter stability compared to the baseline. The ...
-- **p. 6 / 5.2. Experiment Results - extractive body cue:** The results consistently outperform baselines in both numerical and perceptual metrics across most settings, indicating that the performance gain is attributable to the method itself ...
-- **p. 6 / 5.2. Experiment Results - extractive body cue:** In addition, by removing redundant or noisy primitives during initialization, our method significantly decreases the number of active primitives, therefore improves runtime efficiency while maintaining ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 초기 프리미티브의 밀도와 국소 기울기에 변분 베이즈 혼합 모델을 적합해 영역별 분포를 추정한다. [PDF 3쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Ma_BA-GS_Bayesian_Adaptive_Gaussian_Splatting_for_SFM-Free_3D_Reconstruction_CVPR_2026_paper.pdf#page=3) · [PDF 4쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Ma_BA-GS_Bayesian_Adaptive_Gaussian_Splatting_for_SFM-Free_3D_Reconstruction_CVPR_2026_paper.pdf#page=4) · [PDF 5쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Ma_BA-GS_Bayesian_Adaptive_Gaussian_Splatting_for_SFM-Free_3D_Reconstruction_CVPR_2026_paper.pdf#page=5)
+- 적응형 칼만 필터로 위치를 갱신하고 희소 시점에서 렌더링 품질과 모듈별 기여를 평가했다. [PDF 5쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Ma_BA-GS_Bayesian_Adaptive_Gaussian_Splatting_for_SFM-Free_3D_Reconstruction_CVPR_2026_paper.pdf#page=5) · [PDF 6쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Ma_BA-GS_Bayesian_Adaptive_Gaussian_Splatting_for_SFM-Free_3D_Reconstruction_CVPR_2026_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Ma_BA-GS_Bayesian_Adaptive_Gaussian_Splatting_for_SFM-Free_3D_Reconstruction_CVPR_2026_paper.pdf#page=7)
 
 ## Evaluation Scope
 

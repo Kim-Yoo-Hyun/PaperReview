@@ -15,13 +15,11 @@
 - Full-text retrieval: https://arxiv.org/pdf/2302.12251
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (13 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (13 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 한 줄 요약과 핵심 기여 두 개를 각 문장에 인용한 판본의 원문에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, obtaining accurate and complete 3D information of the real world is difficult, since the task is challenged by the lack of sensing resolution and the incomplete observation due to the limited ...
-
-방법 관련 발췌 — Our contributions in this work can be summarized as follows: • A novel two-stage framework that lifts images into a complete 3D voxelized semantic scene. • A novel query proposal network based ...
+VoxFormer는 카메라 영상에서 관측 가능한 점유 복셀을 먼저 고르고 이를 출발점으로 보이지 않는 영역까지 3차원 의미 점유를 예측한다. [PDF 1쪽](https://openaccess.thecvf.com/content/CVPR2023/papers/Li_VoxFormer_Sparse_Voxel_Transformer_for_Camera-Based_3D_Semantic_Scene_Completion_CVPR_2023_paper.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** Our contributions in this work can be summarized as follows: • A novel two-stage framework that lifts images into a complete 3D voxelized semantic scene. ...
-- **p. 2 / 1. Introduction - extractive body cue:** VoxFormer consists of class-agnostic query proposal (stage-1) and class-specific semantic segmentation (stage2), where stage-1 proposes a sparse set of occupied voxels, and stage-2 completes the ...
-- **p. 3 / 3.2. Overall Architecture - extractive body cue:** Our framework is a two-stage cascade composed of class-agnostic proposals and class-specific segmentation similar to [68]: stage-1 generates class-agnostic query proposals, and stage-2 uses an ...
-- **p. 4 / 3.3. Predefined Parameters - extractive body cue:** Note that our framework supports the input of single or multiple images. computations.
-- **p. 4 / 3.3. Predefined Parameters - extractive body cue:** The estimated depth after correction enables the class-agnostic query proposal stage: the query located at an occupied position will be selected to carry out deformable ...
-- **p. 7 / 4.2. Performance - extractive body cue:** VoxFormer-T can achieve mIoU scores of 21.55 and 18.42 within 12.8 meters and 25.6 meters, which outperforms the state-of-the-art MonoScene by 75.92% and 50.74% respectively.
-- **p. 6 / 4.2. Performance - extractive body cue:** Meanwhile, the semantic score is also improved by 9.29% without sacrificing IoU.
-- **p. 6 / 4.2. Performance - extractive body cue:** Despite the negligible difference in IoU, VoxFormer-T further improves the SSC performance over
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 깊이 추정으로 희소한 복셀 질의를 만든 뒤 자기어텐션으로 주변 전체 복셀에 정보를 전파한다. [PDF 3쪽](https://openaccess.thecvf.com/content/CVPR2023/papers/Li_VoxFormer_Sparse_Voxel_Transformer_for_Camera-Based_3D_Semantic_Scene_Completion_CVPR_2023_paper.pdf#page=3) · [PDF 4쪽](https://openaccess.thecvf.com/content/CVPR2023/papers/Li_VoxFormer_Sparse_Voxel_Transformer_for_Camera-Based_3D_Semantic_Scene_Completion_CVPR_2023_paper.pdf#page=4) · [PDF 5쪽](https://openaccess.thecvf.com/content/CVPR2023/papers/Li_VoxFormer_Sparse_Voxel_Transformer_for_Camera-Based_3D_Semantic_Scene_Completion_CVPR_2023_paper.pdf#page=5)
+- SemanticKITTI에서 공간 점유와 의미 클래스 복원을 따로 측정하고 깊이 기반 질의 선택 방식을 비교했다. [PDF 5쪽](https://openaccess.thecvf.com/content/CVPR2023/papers/Li_VoxFormer_Sparse_Voxel_Transformer_for_Camera-Based_3D_Semantic_Scene_Completion_CVPR_2023_paper.pdf#page=5) · [PDF 6쪽](https://openaccess.thecvf.com/content/CVPR2023/papers/Li_VoxFormer_Sparse_Voxel_Transformer_for_Camera-Based_3D_Semantic_Scene_Completion_CVPR_2023_paper.pdf#page=6) · [PDF 8쪽](https://openaccess.thecvf.com/content/CVPR2023/papers/Li_VoxFormer_Sparse_Voxel_Transformer_for_Camera-Based_3D_Semantic_Scene_Completion_CVPR_2023_paper.pdf#page=8)
 
 ## Evaluation Scope
 

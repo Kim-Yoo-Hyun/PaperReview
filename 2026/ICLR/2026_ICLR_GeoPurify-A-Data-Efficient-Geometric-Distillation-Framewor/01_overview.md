@@ -15,13 +15,11 @@
 - Full-text retrieval: https://proceedings.iclr.cc/paper_files/paper/2026/file/039bc8e424e1fc196b4203555b54ebc4-Paper-Conference.pdf
 - Code/Project: not identified
 - Paper type: system
-- Source audit: full-text PDF body checked on 2026-09-03 (22 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (22 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 한 줄 요약과 핵심 기여 두 개를 각 문장에 인용한 판본의 원문에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, this often results in severe geometric inconsistencies, since 2D models lack awareness of 3D spatial structure.
-
-방법 관련 발췌 — In summary, our contributions are: • We introduce GeoPurify, a data-efficient framework built on the hypothesis that beyond their semantic richness, VLM-projected features also embed a latent 3D geometric structure.
+GeoPurify는 2차원 시각언어 특징을 3차원으로 옮길 때 생기는 잡음을 3차원 자기지도 모델의 기하 정보로 줄인다. [PDF 1쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/039bc8e424e1fc196b4203555b54ebc4-Paper-Conference.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** In summary, our contributions are: • We introduce GeoPurify, a data-efficient framework built on the hypothesis that beyond their semantic richness, VLM-projected features also embed ...
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** Motivated by this hypothesis, we present GeoPurify, a data-efficient framework designed to recover latent geometric structure from noisy semantic features and produce robust 3D representations.
-- **p. 3 / 3 METHODOLOGY - extractive body cue:** To address this, we introduce a 3D student affinity network ϕS that learns geometric affinities from the point cloud using a self-supervised 3D geometric model ...
-- **p. 4 / 3 METHODOLOGY - extractive body cue:** 3.3 GEOMETRIC CONTRASTIVE DISTILLATION To rectify the geometric inconsistencies within the initial semantic features Fsem, we introduce a contrastive purification module trained via knowledge distillation.
-- **p. 1 / 1 INTRODUCTION - extractive body cue:** To move beyond these limitations, the field is shifting toward open-vocabulary 3D understanding, which enables models to identify objects using arbitrary descriptions rather than predefined ...
-- **p. 14 / A.1 NETWORK ARCHITECTURES - extractive body cue:** The efficacy of these features is demonstrated on the ScanNet benchmark, where they achieve 72.5% mIoU with linear probing, substantially outperforming 2D-lifted features from models ...
-- **p. 8 / 4 EXPERIMENTS - extractive body cue:** As shown in Table 3, GeoPurify significantly outperforms existing methods in both transfer directions.
-- **p. 7 / 4 EXPERIMENTS - extractive body cue:** The advantage is even more pronounced in the mean Accuracy (mAcc) metric, where GeoPurify attains 72.5 on ScanNetV2 and 62.4 on Matterport3D, substantially outperforming fullytrained ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 작은 학생 네트워크가 점들 사이의 기하적 유사성을 증류하고 추론 시 이 유사성으로 이웃 특징을 집계한다. [PDF 3쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/039bc8e424e1fc196b4203555b54ebc4-Paper-Conference.pdf#page=3) · [PDF 4쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/039bc8e424e1fc196b4203555b54ebc4-Paper-Conference.pdf#page=4) · [PDF 5쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/039bc8e424e1fc196b4203555b54ebc4-Paper-Conference.pdf#page=5)
+- 실내 열린 어휘 분할과 긴 꼬리 범주 평가에서 훈련 자료량과 모듈 구성에 따른 성능을 비교했다. [PDF 6쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/039bc8e424e1fc196b4203555b54ebc4-Paper-Conference.pdf#page=6) · [PDF 7쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/039bc8e424e1fc196b4203555b54ebc4-Paper-Conference.pdf#page=7) · [PDF 8쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/039bc8e424e1fc196b4203555b54ebc4-Paper-Conference.pdf#page=8) · [PDF 9쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/039bc8e424e1fc196b4203555b54ebc4-Paper-Conference.pdf#page=9)
 
 ## Evaluation Scope
 

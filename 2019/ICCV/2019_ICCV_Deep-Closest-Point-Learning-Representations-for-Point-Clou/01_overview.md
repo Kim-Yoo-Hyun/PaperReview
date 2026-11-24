@@ -15,13 +15,11 @@
 - Full-text retrieval: https://arxiv.org/pdf/1905.03304
 - Code/Project: https://github.com/WangYueFt/dcp
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 한 줄 요약과 핵심 기여 두 개를 각 문장에 인용한 판본의 원문에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Many modeling and computational challenges hamper the design of a stable and efficient registration method.
-
-방법 관련 발췌 — Contributions: Our contributions include the following: • We identify sub-network architectures designed to address difficulties in the classical ICP pipeline. • We propose a simple architecture to predict a rigid transformation alignin ...
+Deep Closest Point는 두 점군의 소프트 대응을 학습하고 미분 가능한 특이값 분해로 강체 변환을 계산한다. [PDF 1쪽](https://openaccess.thecvf.com/content_ICCV_2019/papers/Wang_Deep_Closest_Point_Learning_Representations_for_Point_Cloud_Registration_ICCV_2019_paper.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -52,15 +50,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** Contributions: Our contributions include the following: • We identify sub-network architectures designed to address difficulties in the classical ICP pipeline. • We propose a simple ...
-- **p. 1 / 1. Introduction - extractive body cue:** However, only our method achieve satisfying alignment for objects with sharp features and large transformation. globally optimal alignment; similarly, computing matchings becomes easier given some ...
-- **p. 2 / 1. Introduction - extractive body cue:** Our model consists of three parts: (1) We map the input point clouds to permutation/rigid-invariant embeddings that help identify matching pairs of points (we compare ...
-- **p. 6 / 5. Experiments - extractive body cue:** DCP-v1 already outperforms other methods under all the performance metrics, and DCP-v2 exhibits even stronger performance.
-- **p. 8 / Figure/Table caption - extractive body cue:** Figure 4. Results of DCP-v2. Top: inputs. Bottom: outputs of DCP-v2. lems as a drop-in replacement for ICP with improved behav- ior. Beyond its direct ...
-- **p. 6 / 5. Experiments - extractive body cue:** All angular measurements in our results are in units of degrees.
-- **p. 7 / 5.5. Efficiency - extractive body cue:** Computational time is measured in seconds and is computed by averaging 100 results.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 점별 임베딩을 다른 점군의 특징에 조건화한 뒤 포인터 모듈로 대응 가중치를 얻어 회전과 이동 추정까지 함께 학습한다. [PDF 3쪽](https://openaccess.thecvf.com/content_ICCV_2019/papers/Wang_Deep_Closest_Point_Learning_Representations_for_Point_Cloud_Registration_ICCV_2019_paper.pdf#page=3) · [PDF 4쪽](https://openaccess.thecvf.com/content_ICCV_2019/papers/Wang_Deep_Closest_Point_Learning_Representations_for_Point_Cloud_Registration_ICCV_2019_paper.pdf#page=4) · [PDF 5쪽](https://openaccess.thecvf.com/content_ICCV_2019/papers/Wang_Deep_Closest_Point_Learning_Representations_for_Point_Cloud_Registration_ICCV_2019_paper.pdf#page=5)
+- ModelNet40에서 새로운 표본·물체 범주 및 잡음 조건을 나누어 정합 오차를 측정하고 ICP 계열과 비교했다. [PDF 6쪽](https://openaccess.thecvf.com/content_ICCV_2019/papers/Wang_Deep_Closest_Point_Learning_Representations_for_Point_Cloud_Registration_ICCV_2019_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content_ICCV_2019/papers/Wang_Deep_Closest_Point_Learning_Representations_for_Point_Cloud_Registration_ICCV_2019_paper.pdf#page=7) · [PDF 8쪽](https://openaccess.thecvf.com/content_ICCV_2019/papers/Wang_Deep_Closest_Point_Learning_Representations_for_Point_Cloud_Registration_ICCV_2019_paper.pdf#page=8)
 
 ## Evaluation Scope
 

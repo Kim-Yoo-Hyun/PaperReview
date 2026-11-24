@@ -16,15 +16,13 @@
 - Full-text retrieval at original review: https://arxiv.org/pdf/2506.10977
 - Code/Project: https://zuosc19.github.io/QuadricFormer/
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (14 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (14 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 한 줄 요약과 핵심 기여 두 개를 각 문장에 인용한 판본의 원문에서 확인했다.
 
 > DOC-QA3 (2026-10-23): [QuadricFormer의 지정 수식·공개 구현 대조](./03_method.md). Commit `f4b5b03d9d2f73b18b874b5ed9ce1f465bb8f490`의 정적 검토이며 paper-run 버전·실행 결과는 미확인. [결과와 경계](https://github.com/Kim-Yoo-Hyun/PaperReview/blob/cb650415f47a2a45ad883dabe5bd20c382b5c183/work/update/PAPER_CODE_FORMULA_REVIEW_2026-10-23.md).
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Despite promising applications, 3D semantic occupancy prediction faces efficiency challenges due to its dense 3D predictions [4, 31].
-
-방법 관련 발췌 — 3 Proposed Approach In this section, we present our method based on the superquadric representation for efficient 3D semantic occupancy prediction.
+QuadricFormer는 다양한 물체 형상을 나타내는 초이차곡면을 희소 장면 요소로 사용해 주행 환경의 3차원 의미 점유를 예측한다. [PDF 1쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/4470d0b5795c3721e2a622a249ef2154-Paper-Conference.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -58,16 +56,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 3 / 6 Superquadrics - extractive body cue:** 3 Proposed Approach In this section, we present our method based on the superquadric representation for efficient 3D semantic occupancy prediction.
-- **p. 2 / 1 Introduction - extractive body cue:** In this paper, we propose an efficient and expressive object-centric 3D representation using superquadrics [1] as scene primitives.
-- **p. 2 / 1 Introduction - extractive body cue:** Building on this representation, we introduce QuadricFormer, a superquadric-based framework for efficient 3D semantic occupancy prediction.
-- **p. 1 / Abstract - extractive body cue:** To address this, we propose to use geometrically expressive superquadrics as scene primitives, enabling efficient representation of complex structures with fewer primitives through their inherent ...
-- **p. 1 / 12800 Gaussians - extractive body cue:** 20.02 mIoU 1600 Superquadrics 20.12 mIoU GaussianFormer QuadricFormer Figure 1: Considering the ellipsoidal shape prior of Gaussians, we propose leveraging expressive superquadrics to build an ...
-- **p. 9 / 4 Experiments - extractive body cue:** The results demonstrate that increasing the crop & split number consistently improves performance.
-- **p. 8 / 4 Experiments - extractive body cue:** Compared to other methods, our approach achieves state-of-the-art performance.
-- **p. 8 / 4 Experiments - extractive body cue:** Our model is able to predict high-fidelity shapes and achieves comprehensive occupancy results. numbers of Superquarics are set to 1600 in our main results for ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 각 초이차곡면을 점유 확률로 해석하고 혼합 모델로 의미를 합성하며, 가지치기와 분할로 요소를 점유 영역에 집중시킨다. [PDF 3쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/4470d0b5795c3721e2a622a249ef2154-Paper-Conference.pdf#page=3) · [PDF 4쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/4470d0b5795c3721e2a622a249ef2154-Paper-Conference.pdf#page=4) · [PDF 5쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/4470d0b5795c3721e2a622a249ef2154-Paper-Conference.pdf#page=5) · [PDF 6쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/4470d0b5795c3721e2a622a249ef2154-Paper-Conference.pdf#page=6)
+- nuScenes와 KITTI-360에서 점유 성능을 평가하고 Gaussian 기반 표현과 필요한 요소 수·계산 효율을 비교했다. [PDF 7쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/4470d0b5795c3721e2a622a249ef2154-Paper-Conference.pdf#page=7) · [PDF 8쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/4470d0b5795c3721e2a622a249ef2154-Paper-Conference.pdf#page=8) · [PDF 9쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/4470d0b5795c3721e2a622a249ef2154-Paper-Conference.pdf#page=9)
 
 ## Evaluation Scope
 

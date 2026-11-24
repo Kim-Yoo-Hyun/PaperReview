@@ -15,13 +15,11 @@
 - Full-text retrieval: https://arxiv.org/pdf/2606.22540
 - Code/Project: https://inceptionwang.github.io/PolicyTrim/
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (27 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (27 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 한 줄 요약과 핵심 기여 두 개를 각 문장에 인용한 판본의 원문에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — The main contributions of this work are summarized as follows: - We identify policy efficiency as a critical yet overlooked deployment bottleneck for VLA models and distinguish it from pure computational efficiency ...
-
-방법 관련 발췌 — The main contributions of this work are summarized as follows: - We identify policy efficiency as a critical yet overlooked deployment bottleneck for VLA models and distinguish it from pure computational efficiency ...
+PolicyTrim은 VLA를 강화학습으로 후학습해 한 번에 믿고 실행할 행동 구간을 늘리고 과제를 마치는 데 필요한 동작 수를 줄인다. [PDF 1쪽](https://arxiv.org/pdf/2606.22540v3#page=1)
 
 ## Problem and Motivation
 
@@ -54,16 +52,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 3 / X. Wang et al - extractive body cue:** The main contributions of this work are summarized as follows: - We identify policy efficiency as a critical yet overlooked deployment bottleneck for VLA models ...
-- **p. 5 / 3 Method - extractive body cue:** We propose a two-stage posttraining framework that extends the executable action horizon per inference and reduces the number of steps required to complete a task ...
-- **p. 1 / Body text (section not recovered) - extractive body cue:** Ultimately, our framework delivers up to a 5.83× end-to-end deployment speedup without compromising task success rates.
-- **p. 3 / X. Wang et al - extractive body cue:** PolicyTrim 3 In this paper, we propose PolicyTrim, a two-stage RL-based post-training framework that enhances the policy efficiency of VLA models through reliable chunk extension ...
-- **p. 9 / 4 Experiment - extractive body cue:** Reported metrics include average success rate, average physical steps, average action chunk execution length, end-to-end execution speedup, and wall-clock execution time for real-world deployment. • ...
-- **p. 12 / Figure/Table caption - extractive body cue:** Table 3: Cross-architecture results. We report success rate (SR), average physical steps, action horizon h, and end-to-end speedup.
-- **p. 12 / Figure/Table caption - extractive body cue:** Table 4: Real-world deployment results. Standard uses a fixed target pose, while Dynamic perturbs the target during grasping. Values under Standard and Dynamic are success ...
-- **p. 25 / Figure/Table caption - extractive body cue:** Table 10: Simulation robustness results on LIBERO-Spatial under visual perturba- tions. We report SR / Step, where SR is success rate in % and Step ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 실행 구간을 늘려도 성공하는 경우와 더 적은 동작으로 성공하는 경우를 보상에 반영하고 재현하기 어려운 단축 경로를 억제한다. [PDF 1쪽](https://arxiv.org/pdf/2606.22540v3#page=1) · [PDF 5쪽](https://arxiv.org/pdf/2606.22540v3#page=5) · [PDF 6쪽](https://arxiv.org/pdf/2606.22540v3#page=6) · [PDF 7쪽](https://arxiv.org/pdf/2606.22540v3#page=7)
+- 여러 정책에서 성공률, 실제 동작 수, 정책 호출 수를 나누어 측정해 행동 청크 사용 효율을 비교했다. [PDF 10쪽](https://arxiv.org/pdf/2606.22540v3#page=10) · [PDF 11쪽](https://arxiv.org/pdf/2606.22540v3#page=11) · [PDF 12쪽](https://arxiv.org/pdf/2606.22540v3#page=12)
 
 ## Evaluation Scope
 

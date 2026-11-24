@@ -15,13 +15,11 @@
 - Full-text retrieval: https://arxiv.org/pdf/2603.02972
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 한 줄 요약과 핵심 기여 두 개를 각 문장에 인용한 판본의 원문에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, these methods ignore the gap between disembodied knowledge of pretrained VLMs and the embodied property of the VLN task, requiring the model to understand implicit visual-topological alignment passively and therefore increasing ...
-
-방법 관련 발췌 — Our contribution can be summarized as follows: • We introduce TagaVLM, an end-to-end VLN framework that architecturally embeds topological structures into the VLM backbone. • We propose two synergistic components: the INP ...
+TagaVLM은 탐색 중 만든 위상 그래프를 시각언어모델에 넣어 과거 위치를 포함한 다음 이동 목표를 선택한다. [PDF 1쪽](https://arxiv.org/pdf/2603.02972v2#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / I. INTRODUCTION - extractive body cue:** Our contribution can be summarized as follows: • We introduce TagaVLM, an end-to-end VLN framework that architecturally embeds topological structures into the VLM backbone. • ...
-- **p. 1 / I. INTRODUCTION - extractive body cue:** Instead, other methods usually act on local space, which only consists of local navigable viewpoints directly connected to the current viewpoint.
-- **p. 3 / III. METHOD - extractive body cue:** In the following subsections, we will elaborate on the four key components of our framework: (1) online topological map for global environment representation, (2) Interleaved ...
-- **p. 1 / I. INTRODUCTION - extractive body cue:** Second, it memorizes a global action space and enables the model to backtrack once an error occurs.
-- **p. 5 / III. METHOD - extractive body cue:** This global action space enables the model to perform global target selection.
-- **p. 6 / IV. EXPERIMENTS - extractive body cue:** It is worth noting that, our 0.5B parameter model already outperforms most largemodel-based methods and achieves comparable performance to state-of-the-art approaches with significantly larger parameter ...
-- **p. 7 / IV. EXPERIMENTS - extractive body cue:** However, the text-based topological map achieves substantially lower performance improvements than the STAR-Att used in row (c), indicating significant challenges for understanding topological structures through ...
-- **p. 6 / IV. EXPERIMENTS - extractive body cue:** Notably, compared to MapGPT[15], our approach achieves an absolute improvement of 3.39% in SR and 9.08 in SPL on the val unseen split.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 그래프 간선 정보를 잔차 어텐션에 반영하고 노드별 시각 특징과 텍스트를 교차 배치해 후보 위치를 표현했다. [PDF 3쪽](https://arxiv.org/pdf/2603.02972v2#page=3) · [PDF 4쪽](https://arxiv.org/pdf/2603.02972v2#page=4) · [PDF 5쪽](https://arxiv.org/pdf/2603.02972v2#page=5)
+- R2R의 보지 못한 환경에서 성공률 51.09와 경로 길이를 반영한 SPL 47.18을 백분율 척도로 보고했다. [PDF 6쪽](https://arxiv.org/pdf/2603.02972v2#page=6)
 
 ## Evaluation Scope
 

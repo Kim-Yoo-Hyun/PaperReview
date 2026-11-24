@@ -12,17 +12,16 @@
 - Tier: REFERENCE
 - Tags: sensor fusion, LiDAR, 3D Vision
 - Official paper: https://api.crossref.org/works/10.1109/3dv66043.2025.00024
+- PDF title variant: LangOcc: Self-Supervised Open Vocabulary Occupancy Estimation via Volume Rendering [원문 표제면](https://arxiv.org/pdf/2407.17310v2#page=1) · [공식 서지](https://api.crossref.org/works/10.1109/3dv66043.2025.00024)
 - Preprint PDF: https://arxiv.org/pdf/2407.17310
 - Full-text retrieval at original review: https://openreview.net/attachment?id=KhjlXNbYea&name=pdf
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (13 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (13 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 한 줄 요약과 핵심 기여 두 개를 각 문장에 인용한 판본의 원문에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, most existing 3D occupancy estimation methods rely on expensive 3D ground-truth labels [15, 25, 50].
-
-방법 관련 발췌 — In this paper we propose a novel self-supervised occupancy estimation method which aligns geometric estimations with open vocabulary natural language features, hence allowing representations of any semantics and therefore eliminating th ...
+LangOcc는 카메라 영상만으로 3차원 점유와 언어에 정렬된 특징을 학습해 사전 정의한 클래스 밖의 물체도 질의할 수 있게 한다. [PDF 1쪽](https://arxiv.org/pdf/2407.17310v2#page=1)
 
 ## Problem and Motivation
 
@@ -56,16 +55,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 1 / 1. Introduction - extractive body cue:** In this paper we propose a novel self-supervised occupancy estimation method which aligns geometric estimations with open vocabulary natural language features, hence allowing representations of ...
-- **p. 1 / 1. Introduction - extractive body cue:** In summary, our contributions are: • Open vocabulary occupancy: A novel vision-only architecture to model arbitrary geometries and semantics by aligning the semantic feature space ...
-- **p. 2 / 1. Introduction - extractive body cue:** Our model generalizes to estimate geometry and semantics in a zero-shot manner, without per-scene optimization like NeRF-approaches. • Feature subspace learning: In addition we introduce ...
-- **p. 4 / 3.3. Volume Rendering Supervision - extractive body cue:** As a loss function, we propose the Cosine Similarity Guided MSE, which is a combination of the cosine similarity loss and the mean-squared error loss ...
-- **p. 5 / 3.4. Feature Subspace Learning - extractive body cue:** (9) The dataset consists of just a few text prompts, enabling the training of U within seconds.
-- **p. 7 / 4.5. Ablations - extractive body cue:** Adding 4 future and past frames during rendering supervision already improves all scores significantly, such that LangOcc achieves a better open vocabulary retrieval performance than ...
-- **p. 6 / 4.3. 3D Open Vocabulary Retrieval - extractive body cue:** We achieve a mAP score of 21.7 and 22.7 (for all points and only visible points, respectively) compared to the 17.5 and 18.4 of POP-3D, ...
-- **p. 6 / 4.4. Zero-shot Semantic Occupancy Estimation - extractive body cue:** LangOcc achieves a geometric IoU score of at least 51.59, showing that our model is able to estimate the scene geometry well without any photometric ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 복셀 특징을 다시 영상으로 렌더링해 CLIP 특징과 맞추면서 명시적인 3차원 기하 정답 없이 장면 표현을 학습한다. [PDF 3쪽](https://arxiv.org/pdf/2407.17310v2#page=3) · [PDF 4쪽](https://arxiv.org/pdf/2407.17310v2#page=4) · [PDF 5쪽](https://arxiv.org/pdf/2407.17310v2#page=5)
+- Occ3D-nuScenes에서 열린 어휘 점유와 고정 클래스 의미 점유를 평가하고 시간 범위에 따른 성능을 비교했다. [PDF 6쪽](https://arxiv.org/pdf/2407.17310v2#page=6) · [PDF 7쪽](https://arxiv.org/pdf/2407.17310v2#page=7) · [PDF 8쪽](https://arxiv.org/pdf/2407.17310v2#page=8)
 
 ## Evaluation Scope
 

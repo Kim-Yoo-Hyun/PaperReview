@@ -15,13 +15,11 @@
 - Full-text retrieval: https://arxiv.org/pdf/2402.04555
 - Code/Project: https://github.com/HKUST-Aerial-Robotics/FM-Fusion
 - Paper type: theory_or_foundation
-- Source audit: full-text PDF body checked on 2026-09-03 (9 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (9 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 한 줄 요약과 핵심 기여 두 개를 각 문장에 인용한 판본의 원문에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, the supervised object detectors are trained in specific data distribution and lack generalization ability.
-
-방법 관련 발췌 — Our method incrementally fuses the object detections from foundation models into an instance-aware semantic map.
+FM-Fusion은 순차 RGB-D 관측에서 열린 어휘 검출을 통합해 물체 인스턴스와 의미 범주가 표시된 3차원 지도를 만든다. [PDF 1쪽](https://arxiv.org/pdf/2402.04555v2#page=1)
 
 ## Problem and Motivation
 
@@ -54,16 +52,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 1 / I. INTRODUCTION - extractive body cue:** Our method incrementally fuses the object detections from foundation models into an instance-aware semantic map.
-- **p. 2 / I. INTRODUCTION - extractive body cue:** To address such challenges, we propose a probabilistic label fusion method following the Bayes filter algorithm.
-- **p. 6 / 6 Method - extractive body cue:** Compared with Kimera using RAM-GroundedSAM, our method achieved +15.6 mAP50.
-- **p. 6 / 6 Method - extractive body cue:** The rest of the ScanNet experiment focus on evaluating each module of our method through an ablation study.
-- **p. 7 / 6 Method - extractive body cue:** As shown in Figure 10(b), our method detects the table correctly.
-- **p. 5 / V. EXPERIMENT - extractive body cue:** Even for those predictable semantic classes, the pretrained Mask R-CNN suffers from the issue of generalization and achieve low AP50 scores.
-- **p. 5 / V. EXPERIMENT - extractive body cue:** In experiment with fine-tune Mask R-CNN, although the mean AP is improved, they still reconstruct a few of semantic classes with 0 AP.
-- **p. 8 / Figure/Table caption - extractive body cue:** Fig. 11: Reconstructions in SceneNN 096. False semantic and over-segmented instances are highlighted in red circles. So far, the system run offline. As shown in ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 열린 어휘 검출 레이블을 목표 범주에 대해 확률적으로 융합하고 하나의 물체가 여러 조각으로 나뉜 인스턴스를 병합한다. [PDF 2쪽](https://arxiv.org/pdf/2402.04555v2#page=2) · [PDF 3쪽](https://arxiv.org/pdf/2402.04555v2#page=3) · [PDF 4쪽](https://arxiv.org/pdf/2402.04555v2#page=4)
+- ScanNet과 SceneNN에서 추가 학습 없이 얻은 인스턴스 분할을 평가하고 레이블 융합과 보정의 영향을 측정했다. [PDF 6쪽](https://arxiv.org/pdf/2402.04555v2#page=6) · [PDF 7쪽](https://arxiv.org/pdf/2402.04555v2#page=7)
 
 ## Evaluation Scope
 

@@ -15,13 +15,11 @@
 - Full-text retrieval: https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/03580.pdf
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (19 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (19 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 한 줄 요약과 핵심 기여 두 개를 각 문장에 인용한 판본의 원문에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Traditional visual SLAM systems [24] have shown accurate tracking performance across various scenes, while the underlying 3D representations (e.g., point cloud, mesh, and surfel) demonstrate limitations in facilitating highly free scene ...
-
-방법 관련 발췌 — Overall, our contributions can be summarized as follows: - We present a new GPU-accelerated framework for real-time dense RGB-D SLAM based on a thorough theoretical analysis of camera pose derivatives in 3D ...
+CG-SLAM은 깊이 불확실성을 고려하는 조밀한 Gaussian 지도로 RGB-D 카메라를 추적하며 장면을 재구성한다. [PDF 1쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/03580.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 3 / 1 Introduction - extractive body cue:** Overall, our contributions can be summarized as follows: - We present a new GPU-accelerated framework for real-time dense RGB-D SLAM based on a thorough theoretical ...
-- **p. 2 / 1 Introduction - extractive body cue:** In this paper, we introduce a real-time Gaussian splatting SLAM system, i.e., CG-SLAM, based on a novel uncertainty-aware 3D Gaussian field with high consistency and ...
-- **p. 7 / 3 Method - extractive body cue:** To mitigate drastic changes in positions of Gaussian primitives during optimization, we proposed a geometry variance loss term (Eq.
-- **p. 7 / 3 Method - extractive body cue:** Hence, we propose an uncertainty model suitable for RGB-D observations from two perspectives: rendering images and Gaussian primitives.
-- **p. 6 / 3 Method - extractive body cue:** Fast Gaussian splatting rasterizer enables efficient pixel-by-pixel parallel rendering, and is fully differentiable, which provides a useful GPU-accelerated framework.
-- **p. 9 / 4 Experiments - extractive body cue:** In this section, we describe our experimental setup and validate that the proposed system can achieve improvement in both accuracy (Sec.
-- **p. 11 / 4 Experiments - extractive body cue:** Our system achieves better tracking accuracy and lower variance in different scenarios. "-" indicates unavailable results because the related work is not open source.
-- **p. 10 / 4 Experiments - extractive body cue:** 2, despite noisy and sparse depth information in the real-world TUM-RGBD dataset [44], our method still achieves better or competitive performance in 5 selected scenarios.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 깊이 관측의 불확실성으로 최적화에 유용한 Gaussian을 선택해 추적 비용을 줄인다. [PDF 5쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/03580.pdf#page=5) · [PDF 6쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/03580.pdf#page=6) · [PDF 7쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/03580.pdf#page=7) · [PDF 8쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/03580.pdf#page=8)
+- 카메라 궤적 오차, 표면 재구성, 추적 속도와 메모리를 별도 지표로 비교했다. [PDF 11쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/03580.pdf#page=11) · [PDF 12쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/03580.pdf#page=12) · [PDF 13쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/03580.pdf#page=13)
 
 ## Evaluation Scope
 

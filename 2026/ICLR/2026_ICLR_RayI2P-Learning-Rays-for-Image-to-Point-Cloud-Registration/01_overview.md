@@ -15,13 +15,11 @@
 - Full-text retrieval: https://proceedings.iclr.cc/paper_files/paper/2026/file/49f42aafbcce59b2665640cb9f3d794f-Paper-Conference.pdf
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (18 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (18 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 한 줄 요약과 핵심 기여 두 개를 각 문장에 인용한 판본의 원문에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — This modality gap makes it inherently difficult to design shared feature representations and establish reliable 2D-3D correspondences.
-
-방법 관련 발췌 — The main contributions are summarized as follows: (1) We propose a novel ray-based paradigm for image-to-point cloud registration, which effectively addresses the core limitations of prior approaches by modeling image patches as ...
+RayI2P는 영상 패치에서 장면으로 향하는 광선 묶음을 예측하고 이를 이용해 영상과 점군 사이의 카메라 자세를 추정한다. [PDF 1쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/49f42aafbcce59b2665640cb9f3d794f-Paper-Conference.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 3 / 1 INTRODUCTION - extractive body cue:** The main contributions are summarized as follows: (1) We propose a novel ray-based paradigm for image-to-point cloud registration, which effectively addresses the core limitations of ...
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** To realize this idea, we propose a novel ray-based framework for image-to-point cloud registration as shown in Figure 1(c).
-- **p. 3 / 1 INTRODUCTION - extractive body cue:** (2) Extensive experiments on KITTI and nuScenes demonstrate that our method achieves state-of-the-art performance in cross-modal registration accuracy, validating the effectiveness of our ray-based representation.
-- **p. 4 / 3 METHOD - extractive body cue:** 3.1 OVERVIEW Given an image I ∈RH×W ×3 and a point cloud P ∈RN×3 from the same scene, our goal is to determine the camera ...
-- **p. 4 / 3 METHOD - extractive body cue:** In this paper, we propose a ray-based imageto-point cloud registration method composed of two main stages: a ray prediction module to infer consistent 3D rays ...
-- **p. 8 / 4 EXPERIMENTS - extractive body cue:** As a result, our method achieves much faster inference time, making it more efficient without compromising performance.
-- **p. 8 / 4 EXPERIMENTS - extractive body cue:** Specifically, our method achieves the highest registration accuracy (Acc), while reducing RTE by 0.11m and RRE by 0.61◦compared to ICL.
-- **p. 9 / 4 EXPERIMENTS - extractive body cue:** While classical pose solver (Row 4) achieves reasonable results, it is less stable than learning-based formulation, with notably larger mean and variance in rotation errors ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 영상 패치별 광선과 점군의 공간 관계를 학습하고 미분 가능한 회귀 모듈로 상대 자세를 구한다. [PDF 3쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/49f42aafbcce59b2665640cb9f3d794f-Paper-Conference.pdf#page=3) · [PDF 4쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/49f42aafbcce59b2665640cb9f3d794f-Paper-Conference.pdf#page=4) · [PDF 5쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/49f42aafbcce59b2665640cb9f3d794f-Paper-Conference.pdf#page=5)
+- KITTI와 nuScenes에서 정합 오차·효율을 비교하고 광선 기반 자세 회귀의 구성요소를 점검했다. [PDF 7쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/49f42aafbcce59b2665640cb9f3d794f-Paper-Conference.pdf#page=7) · [PDF 8쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/49f42aafbcce59b2665640cb9f3d794f-Paper-Conference.pdf#page=8) · [PDF 9쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/49f42aafbcce59b2665640cb9f3d794f-Paper-Conference.pdf#page=9)
 
 ## Evaluation Scope
 

@@ -15,13 +15,11 @@
 - Full-text retrieval: https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/06612.pdf
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (18 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (18 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 한 줄 요약과 핵심 기여 두 개를 각 문장에 인용한 판본의 원문에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — To build dense associations across different modalities, the primary bottleneck is how to obtain rich and reliable text descriptions without relying on manual labeling.
-
-방법 관련 발췌 — In order to leverage the synergistic benefits of multiple modalities for dense prediction tasks, we propose a dense multimodal alignment (DMA) strategy to co-embed 3D points, image pixels, and text strings into ...
+DMA는 점·영상 픽셀·텍스트를 같은 특징 공간에 정렬해 보지 못한 범주까지 3차원 장면을 분할한다. [PDF 1쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/06612.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1 Introduction - extractive body cue:** In order to leverage the synergistic benefits of multiple modalities for dense prediction tasks, we propose a dense multimodal alignment (DMA) strategy to co-embed 3D ...
-- **p. 4 / 3 Method - extractive body cue:** 1, we propose a dense multimodal alignment (DMA) framework for open-vocabulary 3D scene understanding, where we construct dense correspondences across 2D image pixels, 3D points ...
-- **p. 9 / 3 Method - extractive body cue:** By densely aligning these modalities in a shared space, our method can maximize the synergistic benefits among them and achieve outstanding segmentation performance without compromising ...
-- **p. 1 / 1 Introduction - extractive body cue:** Though many existing methods [9,10,20,29-31,41,46,58] have achieved significant advancements in recognizing closed-set categories for specific tasks, they fail to identify novel categories and other types ...
-- **p. 10 / 4 Experiments - extractive body cue:** Our DMA(OpenSeg) using only 3D model for prediction outperforms OpenScene(OpenSeg)-2D3D by 5.4% mIoU at a significantly lower latency, wherein the mIoU (F) and mIoU (B) ...
-- **p. 14 / Figure/Table caption - extractive body cue:** Fig. 7: Open-vocabulary segmentation results on rare categories and different forms of queries. The same color corresponds to the same query/category. priors into mask features. ...
-- **p. 10 / 4 Experiments - extractive body cue:** 2, by densely aligning with the tagging information and the detailed description extracted from each scene, our DMA(OpenSeg) using only 3D encoder significantly improves the ...
-- **p. 13 / Figure/Table caption - extractive body cue:** Table 6: Comparisons of dif- ferent fine-tuning methods. performance to using both 2D and 3D encoders by solely utilizing the 3D encoder, i.e., 53.3% vs. ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 장면 설명과 범주 정보를 생성하고 영상을 매개로 점별 텍스트·시각 감독을 구성했다. [PDF 1쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/06612.pdf#page=1) · [PDF 4쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/06612.pdf#page=4) · [PDF 5쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/06612.pdf#page=5)
+- 동결한 CLIP 시각 특징과 학습 가능한 마스크 특징을 결합하고 ScanNet과 nuScenes에서 분할 성능을 평가했다. [PDF 1쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/06612.pdf#page=1) · [PDF 10쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/06612.pdf#page=10) · [PDF 11쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/06612.pdf#page=11)
 
 ## Evaluation Scope
 

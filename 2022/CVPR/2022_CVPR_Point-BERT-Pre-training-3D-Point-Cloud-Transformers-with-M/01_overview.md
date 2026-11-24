@@ -15,15 +15,13 @@
 - Full-text retrieval: https://arxiv.org/pdf/2111.14819
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (13 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (13 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 한 줄 요약과 핵심 기여 두 개를 각 문장에 인용한 판본의 원문에서 확인했다.
 
 > DOC-QA2 targeted source review: 2026-10-23; PDF pp. 5. 손상 구간·직접 연결된 표 분류만 원문 이미지와 대조했다. 전체 주장 정독·실험 검증·reading status 승격을 뜻하지 않는다. [URL·PDF hash·수정 기록](../../../work/sources/pdf_note_review_followup_2026-10-23.json).
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, it is challenging to directly employ BERT on point clouds due to a lack of pre-existing vocabulary.
-
-방법 관련 발췌 — Driven by the above analysis, we present Point-BERT, a new scheme for learning point cloud Transformers.
+Point-BERT는 점군을 국소 패치로 나누고 가린 패치에 해당하는 이산 토큰을 예측해 점군 트랜스포머를 사전학습한다. [PDF 1쪽](https://openaccess.thecvf.com/content/CVPR2022/papers/Yu_Point-BERT_Pre-Training_3D_Point_Cloud_Transformers_With_Masked_Point_Modeling_CVPR_2022_paper.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -56,16 +54,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** Driven by the above analysis, we present Point-BERT, a new scheme for learning point cloud Transformers.
-- **p. 2 / 1. Introduction - extractive body cue:** We hope that our model enables reasoning the geometric relations among different patches of the point cloud, capturing meaningful geometric features for point cloud understanding.
-- **p. 3 / 1. Introduction - extractive body cue:** We hope a neat and unified Transformer architecture across images and point clouds could facilitate both domains since it enables joint modeling of 2D and ...
-- **p. 5 / 3.3. Masked Point Modeling - extractive body cue:** Coupling MPM objective and contrastive loss enables our Point-BERT to simultaneously capture the local geometric structures and high-level semantic patterns, which are crucial in point ...
-- **p. 1 / 1. Introduction - extractive body cue:** Point-BERT is designed for pre-training of standard point cloud Transformers.
-- **p. 8 / 4.4. Visualization - extractive body cue:** As can be seen, pre-training with our Point-BERT significantly improves the performance of baseline Transformers both in accuracy and speed on both synthetic and real-world ...
-- **p. 6 / 4.2. Downstream Tasks - extractive body cue:** When we increase the density of inputs (4096), our Point-BERT achieves significantly better performance (93.4%) than that with the baseline (91.2%) and OcCo (92.2%).
-- **p. 6 / 4.2. Downstream Tasks - extractive body cue:** We also observe that adding more points will not significantly improve the Transformer model without pre-training while Point-BERT models can be consistently improved by increasing ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 이산 변분 오토인코더로 국소 형상을 토큰화하고 그 토큰을 가려진 위치의 학습 표적으로 사용한다. [PDF 3쪽](https://openaccess.thecvf.com/content/CVPR2022/papers/Yu_Point-BERT_Pre-Training_3D_Point_Cloud_Transformers_With_Masked_Point_Modeling_CVPR_2022_paper.pdf#page=3) · [PDF 4쪽](https://openaccess.thecvf.com/content/CVPR2022/papers/Yu_Point-BERT_Pre-Training_3D_Point_Cloud_Transformers_With_Masked_Point_Modeling_CVPR_2022_paper.pdf#page=4) · [PDF 5쪽](https://openaccess.thecvf.com/content/CVPR2022/papers/Yu_Point-BERT_Pre-Training_3D_Point_Cloud_Transformers_With_Masked_Point_Modeling_CVPR_2022_paper.pdf#page=5)
+- ModelNet40·ScanObjectNN 물체 분류와 소수 예시 분류, 부품 분할에서 사전학습 표현의 전이를 평가했다. [PDF 5쪽](https://openaccess.thecvf.com/content/CVPR2022/papers/Yu_Point-BERT_Pre-Training_3D_Point_Cloud_Transformers_With_Masked_Point_Modeling_CVPR_2022_paper.pdf#page=5) · [PDF 6쪽](https://openaccess.thecvf.com/content/CVPR2022/papers/Yu_Point-BERT_Pre-Training_3D_Point_Cloud_Transformers_With_Masked_Point_Modeling_CVPR_2022_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content/CVPR2022/papers/Yu_Point-BERT_Pre-Training_3D_Point_Cloud_Transformers_With_Masked_Point_Modeling_CVPR_2022_paper.pdf#page=7)
 
 ## Evaluation Scope
 

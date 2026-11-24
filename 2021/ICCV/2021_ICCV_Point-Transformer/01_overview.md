@@ -15,13 +15,11 @@
 - Full-text retrieval: https://arxiv.org/pdf/2012.09164
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 한 줄 요약과 핵심 기여 두 개를 각 문장에 인용한 판본의 원문에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — A variety of approaches to deep learning on 3D point clouds have arisen in response to this challenge.
-
-방법 관련 발췌 — It consists of 16,880 models from 16 shape categories, with 14,006 3D models for training and 2,874 for testing.
+Point Transformer는 불규칙한 3차원 점 집합에서 이웃 점의 위치와 특징을 고려하는 자기어텐션을 구성한다. [PDF 1쪽](https://openaccess.thecvf.com/content/ICCV2021/papers/Zhao_Point_Transformer_ICCV_2021_paper.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 6 / 4.3. Object Part Segmentation - extractive body cue:** It consists of 16,880 models from 16 shape categories, with 14,006 3D models for training and 2,874 for testing.
-- **p. 2 / 1. Introduction - extractive body cue:** In summary, our main contributions include the following. • We design a highly expressive Point Transformer layer for point cloud processing.
-- **p. 1 / 1. Introduction - extractive body cue:** We show that Point Transformers are remarkably effective in 3D deep learning tasks, both at the level of detailed object analysis and large-scale parsing of ...
-- **p. 1 / 1. Introduction - extractive body cue:** We flesh out this intuition and develop a self-attention layer for 3D point cloud processing.
-- **p. 5 / 4.1. Semantic Segmentation - extractive body cue:** Point Transformer also substantially outperforms all prior models under 6-fold cross-validation.
-- **p. 5 / 4.1. Semantic Segmentation - extractive body cue:** The Point Transformer outperforms all prior models according to all metrics in both evaluation modes.
-- **p. 6 / Figure/Table caption - extractive body cue:** Table 3. Shape classification results on the ModelNet40 dataset.
-- **p. 6 / Figure/Table caption - extractive body cue:** Table 1. Semantic segmentation results on the S3DIS dataset, evaluated on Area 5.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 상대 위치 인코딩과 벡터 어텐션을 사용해 점별로 이웃 특징을 집계하는 층을 설계했다. [PDF 3쪽](https://openaccess.thecvf.com/content/ICCV2021/papers/Zhao_Point_Transformer_ICCV_2021_paper.pdf#page=3) · [PDF 4쪽](https://openaccess.thecvf.com/content/ICCV2021/papers/Zhao_Point_Transformer_ICCV_2021_paper.pdf#page=4)
+- S3DIS 장면 분할, 물체 분류, 부품 분할에서 네트워크를 평가하고 위치 인코딩과 어텐션 구성의 영향을 분석했다. [PDF 5쪽](https://openaccess.thecvf.com/content/ICCV2021/papers/Zhao_Point_Transformer_ICCV_2021_paper.pdf#page=5) · [PDF 6쪽](https://openaccess.thecvf.com/content/ICCV2021/papers/Zhao_Point_Transformer_ICCV_2021_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content/ICCV2021/papers/Zhao_Point_Transformer_ICCV_2021_paper.pdf#page=7)
 
 ## Evaluation Scope
 

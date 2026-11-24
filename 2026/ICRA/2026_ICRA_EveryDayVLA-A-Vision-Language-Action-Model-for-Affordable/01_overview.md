@@ -15,15 +15,13 @@
 - Full-text retrieval: https://arxiv.org/pdf/2511.05397
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 한 줄 요약과 핵심 기여 두 개를 각 문장에 인용한 판본의 원문에서 확인했다.
 
 > DOC-QA1 (2026-10-23): 제어문자·깨진 추출 구간과 직접 연결된 표 항목을 PDF 페이지 이미지와 대조했다. 확인 범위·원문 URL·페이지·수정 이력은 [대조 기록](../../../work/sources/pdf_note_review_2026-10-23.json)에 있다. 노트 전체의 정독이나 모든 기존 주장에 대한 재검증을 뜻하지 않으며 reading status는 유지한다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — To address these challenges, we present a full-stack system, and present three distinct contributions. • Collaborative training with adaptive horizon control (AdaHorizon).
-
-방법 관련 발췌 — To address these challenges, we present a full-stack system, and present three distinct contributions. • Collaborative training with adaptive horizon control (AdaHorizon).
+EveryDayVLA는 저비용 6자유도 로봇팔에 이산·연속 행동을 함께 예측하는 정책과 동작 중 재계획을 결합한다. [PDF 1쪽](https://arxiv.org/pdf/2511.05397v1#page=1)
 
 ## Problem and Motivation
 
@@ -57,16 +55,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 1 / I. INTRODUCTION - extractive body cue:** To address these challenges, we present a full-stack system, and present three distinct contributions. • Collaborative training with adaptive horizon control (AdaHorizon).
-- **p. 3 / III. METHOD - extractive body cue:** We term our method AdaHorizon, and find that it enables discrete actions to match or exceed the precision of continuous controls, even on dexterous tasks ...
-- **p. 2 / III. METHOD - extractive body cue:** To further improve performance, we introduce a novel adaptive horizon module, allowing the
-- **p. 3 / III. METHOD - extractive body cue:** To harness both strengths, we introduce a more robust uncertainty metric: the mean absolute difference between the continuous and discrete action predictions, which outperforms the ...
-- **p. 1 / I. INTRODUCTION - extractive body cue:** Yet, even with internet-scale pretraining, they remain brittle under unfamiliar lighting [3], novel objects [4], and visual distractors [5], and often fail to generalize to ...
-- **p. 4 / IV. EXPERIMENTS - extractive body cue:** For all experiments, we use the discrete actions, with the adaptive horizon ensembler (AdaHorizon), which yields higher success rates and improved grasp accuracy compared to ...
-- **p. 6 / V. RESULTS - extractive body cue:** Results on Real-World Tests In real-world, in-distribution pick-and-place experiments, EverydayVLA outperforms other methods by an average of 49% in success rate across blocks, balls, and ...
-- **p. 6 / V. RESULTS - extractive body cue:** Our ensembler shows a 1.6% improvement in success rate compared to the next best method.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 이산 행동과 연속 행동 예측의 평균 절대 차이를 불확실성으로 삼아, 예측한 행동 중 몇 단계까지 실행할지 조절한다. [PDF 2쪽](https://arxiv.org/pdf/2511.05397v1#page=2) · [PDF 3쪽](https://arxiv.org/pdf/2511.05397v1#page=3) · [PDF 4쪽](https://arxiv.org/pdf/2511.05397v1#page=4)
+- LIBERO와 실제 저비용 팔에서 조작을 시험하고, 실물에서는 익숙한 조건과 물체·장면 등이 바뀐 조건의 성공률을 구분했다. [PDF 4쪽](https://arxiv.org/pdf/2511.05397v1#page=4) · [PDF 5쪽](https://arxiv.org/pdf/2511.05397v1#page=5) · [PDF 6쪽](https://arxiv.org/pdf/2511.05397v1#page=6)
 
 ## Evaluation Scope
 

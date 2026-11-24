@@ -15,13 +15,11 @@
 - Full-text retrieval: https://arxiv.org/pdf/2503.05152
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 한 줄 요약과 핵심 기여 두 개를 각 문장에 인용한 판본의 원문에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Efficient robot navigation relies on the availability of sufficient environmental information; however, the associated data collection costs cannot always be justified.
-
-방법 관련 발췌 — 3DGS is a neural model that enables high-quality 3D reconstruction of the environment from a pre-collected image database (DB) and can further synthesize novel images for arbitrary viewpoints not present in the ...
+GSplatVNM은 성긴 기준 영상 사이의 중간 시점을 Gaussian Splatting으로 합성해 시각 내비게이션 정책에 이동 목표를 공급한다. [PDF 1쪽](https://arxiv.org/pdf/2503.05152v3#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 1 / I. INTRODUCTION - extractive body cue:** 3DGS is a neural model that enables high-quality 3D reconstruction of the environment from a pre-collected image database (DB) and can further synthesize novel images ...
-- **p. 1 / I. INTRODUCTION - extractive body cue:** In this work, we propose GSplatVNM, a new visionbased navigation framework that requires reduced data collection.
-- **p. 2 / A. ITG-based Visual Navigation - extractive body cue:** In contrast, our method uses 3DGS as an offline environment model solely to synthesize a sequence of target viewpoints.
-- **p. 2 / A. ITG-based Visual Navigation - extractive body cue:** Our core contribution is therefore the integration of 3DGS as a viewpoint generator to guide a localization-free policy, rather than using it as a map ...
-- **p. 4 / V. EXPERIMENTS - extractive body cue:** In our experiments, we compare the proposed method with conventional methods in terms of success rate, path efficiency, and robustness with respect to the number ...
-- **p. 3 / Figure/Table caption - extractive body cue:** Fig. 2. Overview of the proposed GSplatVNM. In a conventional ITG-based approach, the environment is represented by ITG, and the target point-of-views given to the ...
-- **p. 4 / V. EXPERIMENTS - extractive body cue:** Consequently, the simulator restricts the robot from leaving the traversable area, and collision avoidance performance is not evaluated2.
-- **p. 5 / Figure/Table caption - extractive body cue:** Fig. 3. Comparison of the SPL on each environment. where Ntrials is the number of trials, Li is the path length of the i-th trial, ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 출발지와 목적지를 잇는 구간에서 가상 관측을 만들어 실제로 저장해야 할 기준 영상의 간격을 넓힌다. [PDF 2쪽](https://arxiv.org/pdf/2503.05152v3#page=2) · [PDF 3쪽](https://arxiv.org/pdf/2503.05152v3#page=3) · [PDF 4쪽](https://arxiv.org/pdf/2503.05152v3#page=4)
+- 광실사 시뮬레이션에서 기준 영상의 밀도를 달리해 이동 성능과 저장 부담을 비교했고, 실물 주행 검증은 후속 과제로 남겼다. [PDF 4쪽](https://arxiv.org/pdf/2503.05152v3#page=4) · [PDF 5쪽](https://arxiv.org/pdf/2503.05152v3#page=5) · [PDF 6쪽](https://arxiv.org/pdf/2503.05152v3#page=6) · [PDF 7쪽](https://arxiv.org/pdf/2503.05152v3#page=7)
 
 ## Evaluation Scope
 

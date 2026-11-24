@@ -15,13 +15,11 @@
 - Full-text retrieval: https://arxiv.org/pdf/2503.02310
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 한 줄 요약과 핵심 기여 두 개를 각 문장에 인용한 판본의 원문에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — The pursuit of robust and generalizable robotic manipulation policies remains a fundamental challenge in embodied AI research [1].
-
-방법 관련 발췌 — In this section, we introduce the details of our method PD-VLA.
+PD-VLA는 행동 청크를 생성하는 자기회귀 VLA에서 여러 토큰 위치를 병렬 갱신해 재학습 없이 디코딩 시간을 줄인다. [PDF 1쪽](https://arxiv.org/pdf/2503.02310v2#page=1) · [PDF 2쪽](https://arxiv.org/pdf/2503.02310v2#page=2)
 
 ## Problem and Motivation
 
@@ -51,20 +49,12 @@
 | Observation/input | It takes two images as input, a static image Istatic and a gripper image Igripper, to get a comprehensive observation. | image/video, language instruction, proprioception과 history | p. 3 (III. METHOD), p. 3 (III. METHOD) |
 | State/latent | takes, images, input, static, image, Istatic, gripper, Igripper, comprehensive, observation, Along, text | language-grounded task state와 action-policy context | p. 3 (III. METHOD), p. 3 (III. METHOD), p. 1 (I. INTRODUCTION) |
 | Output/action | Along with the input images, the text instructions and proprioceptive input are first concatenated into a unified instruction S, which is then tokenized into tokens hS via a tokenizer T. | continuous action, pose 또는 action chunk | p. 3 (III. METHOD), p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION) |
-| Objective/outcome | Considering Equation 3, the system of nonlinear equation system can be formulated as:                  y(j+1) 1 ... | instruction following, task success, generalization과 latency | p. 4 (III. METHOD), p. 4 (III. METHOD), p. 3 (III. METHOD) |
+| Objective/outcome | 병렬 반복으로 자기회귀 토큰열의 고정점을 구한다. | 청크 디코딩 시간과 과제 성공률 | 토큰 갱신은 식 (5)를 따른다. [PDF 4쪽](https://arxiv.org/pdf/2503.02310v2#page=4) |
 
 ## Main Claims and Actual Contribution
 
-- **p. 3 / III. METHOD - extractive body cue:** In this section, we introduce the details of our method PD-VLA.
-- **p. 2 / I. INTRODUCTION - extractive body cue:** Our primary contributions include: • We propose the first parallel decoding framework for VLA models integrated with action chunking.
-- **p. 2 / I. INTRODUCTION - extractive body cue:** Accordingly, our method enables friendly deployment, compared with existing methods, i.e., it achieves training-free acceleration without redesign and modification of models (see Table I).
-- **p. 3 / III. METHOD - extractive body cue:** Finally, we present parallel decoding to accelerate inference in subsection III-C.
-- **p. 4 / III. METHOD - extractive body cue:** (6) This enables updates of all action tokens in every single iteration.
-- **p. 6 / IV. EXPERIMENTS - extractive body cue:** Compared with prior stateof-the-art approaches, PD-VLA achieves the best average performance, attaining a 91.7% success rate on the most challenging LIBERO-Long benchmark.
-- **p. 6 / IV. EXPERIMENTS - extractive body cue:** These components enable PD-VLA to improve 2.34 in success rates and realize 2.52× execution frequency compared to the fundamental model LLaVA-VLA.
-- **p. 5 / IV. EXPERIMENTS - extractive body cue:** Our method demonstrates competitive performance, with PD-VLA achieving significant improvements over the fundamental LLaVA-VLA model, further validating its effectiveness.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 순차적인 다음 토큰 결정을 연립 고정점 문제로 표현하고 직전 반복의 접두 토큰으로 각 위치를 동시에 갱신한다. [PDF 3쪽](https://arxiv.org/pdf/2503.02310v2#page=3) · [PDF 4쪽](https://arxiv.org/pdf/2503.02310v2#page=4)
+- 청크와 디코딩 설정을 바꾸어 실행 빈도와 조작 성공률을 따로 비교하고 실물 과제에서도 적용을 시험했다. [PDF 5쪽](https://arxiv.org/pdf/2503.02310v2#page=5) · [PDF 6쪽](https://arxiv.org/pdf/2503.02310v2#page=6) · [PDF 7쪽](https://arxiv.org/pdf/2503.02310v2#page=7)
 
 ## Evaluation Scope
 

@@ -16,13 +16,11 @@
 - Full-text retrieval: https://arxiv.org/pdf/2412.18381
 - Code/Project: not identified
 - Paper type: system
-- Source audit: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 한 줄 요약과 핵심 기여 두 개를 각 문장에 인용한 판본의 원문에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, current open-vocabulary 3D map representations demand significant data storage [9][11], which becomes a communication bottleneck for multi-robot mapping systems.
-
-방법 관련 발췌 — To fulfill the requirements above, we propose a Communication-efficient Multi-Robot Open-vocabulary 3D Scene Graphs-based Mapping (MR-COGraphs) System with the following contributions: • A data-efficient open-vocabulary 3D scene graph c ...
+MR-COGraphs는 여러 로봇이 물체 중심의 압축된 3차원 장면 그래프를 교환해 열린 어휘로 질의할 수 있는 공동 지도를 만든다. [PDF 1쪽](https://arxiv.org/pdf/2412.18381v2#page=1)
 
 ## Problem and Motivation
 
@@ -56,16 +54,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / I. INTRODUCTION - extractive body cue:** To fulfill the requirements above, we propose a Communication-efficient Multi-Robot Open-vocabulary 3D Scene Graphs-based Mapping (MR-COGraphs) System with the following contributions: • A data-efficient open-vocabulary ...
-- **p. 2 / I. INTRODUCTION - extractive body cue:** 1, we propose a graph-structured open-vocabulary representation called COGraph (detailed in Section III-A).
-- **p. 3 / III. METHOD - extractive body cue:** COGraphs Representation The proposed COGraph consists of the robot name, nodes, and edges.
-- **p. 1 / I. INTRODUCTION - extractive body cue:** Recent advances in visual foundation models (e.g., SAM [2]) and vision-language models (e.g., CLIP [3]) have enabled the development of open-vocabulary 3D map representations.
-- **p. 6 / IV. EXPERIMENTS - extractive body cue:** Compared to baseline methods, our approach not only maintains high accuracy and query success rates but also ensures realtime performance in the mapping system.
-- **p. 6 / IV. EXPERIMENTS - extractive body cue:** The results show that both domainencode and general-encode achieve performance comparable to raw-clip. domain-encode performs the same with raw-clip when k = 1 while the ...
-- **p. 5 / IV. EXPERIMENTS - extractive body cue:** 2) Metrics: We evaluate the accuracy of 3D Scene Graphs using the object finding rate Robj [13], which measures the proportion of object nodes successfully ...
-- **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1. Overview of the MR-COGraphs Framework. to the classes of objects annotated in the training datasets [6]. In contrast, open-vocabulary maps are not constrained ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 물체와 공간적 이웃 관계를 그래프로 저장하고 노드의 의미 특징을 전송 전에 압축한 뒤 수신 측에서 복원한다. [PDF 3쪽](https://arxiv.org/pdf/2412.18381v2#page=3) · [PDF 4쪽](https://arxiv.org/pdf/2412.18381v2#page=4) · [PDF 5쪽](https://arxiv.org/pdf/2412.18381v2#page=5)
+- 겹치는 장소를 찾아 로컬 그래프를 정렬하고 데이터 전송량, 지도 품질, 질의 성능을 비교했다. [PDF 5쪽](https://arxiv.org/pdf/2412.18381v2#page=5) · [PDF 6쪽](https://arxiv.org/pdf/2412.18381v2#page=6) · [PDF 7쪽](https://arxiv.org/pdf/2412.18381v2#page=7)
 
 ## Evaluation Scope
 

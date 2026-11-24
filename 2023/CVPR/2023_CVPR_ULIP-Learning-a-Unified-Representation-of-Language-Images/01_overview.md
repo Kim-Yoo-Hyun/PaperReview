@@ -15,13 +15,11 @@
 - Full-text retrieval: https://arxiv.org/pdf/2212.05171
 - Code/Project: https://github.com/salesforce/ULIP
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (12 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (12 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 한 줄 요약과 핵심 기여 두 개를 각 문장에 인용한 판본의 원문에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — To circumvent the lack of triplet data, we take advantage of a vision-language model pretrained on massive imagetext pairs, and align the feature space of a 3D point cloud encoder to the ...
-
-방법 관련 발췌 — We present the standard 3D classification performances of our baselines and our methods on ScanObjectNN in Table 7.
+ULIP은 동일한 물체의 점군·영상·텍스트를 묶어 3차원 인코더의 출력을 기존 시각언어 표현 공간에 정렬한다. [PDF 1쪽](https://openaccess.thecvf.com/content/CVPR2023/papers/Gao_ULIP_Learning_a_Unified_Representation_of_Language_Images_and_Point_CVPR_2023_paper.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 5 / 4.4. Standard 3D Classification - extractive body cue:** We present the standard 3D classification performances of our baselines and our methods on ScanObjectNN in Table 7.
-- **p. 2 / 1. Introduction - extractive body cue:** An illustration of our framework is shown in Figure 1.
-- **p. 2 / 1. Introduction - extractive body cue:** In this paper, we propose Learning a Unified Representation of Language, Images, and Point Clouds (ULIP).
-- **p. 5 / 4.4. Standard 3D Classification - extractive body cue:** Specifically, our framework improves PointBERT and PointMLP significantly by around 3%.
-- **p. 6 / Figure/Table caption - extractive body cue:** Table 2. Standard 3D classification results on ModelNet40. ULIP significantly improves our baselines. Our best number achieves new SOTA. * means a voting technique is ...
-- **p. 7 / Figure/Table caption - extractive body cue:** Table 5. Zero-shot 3D classification on ScanObjectNN. ULIP- based methods outperform the previous SOTA (PointCLIP) by a very large margin (at least 29.2% on top-1 ...
-- **p. 5 / Figure/Table caption - extractive body cue:** Table 1. 3D classification results on ScanObjectNN. ULIP signifi- cantly improves our baselines. Our best result outperforms SOTA largely by around 3% on Overall Acc. ...
-- **p. 6 / Figure/Table caption - extractive body cue:** Figure 3. Data efficiency comparison. The X axis indicates the percentage of samples used for training and Y axis denotes the overall accuracy. Both PointMLP ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 3차원 물체에서 렌더링 영상과 텍스트를 구성하고 사전학습된 영상·텍스트 표현을 기준으로 점군 특징을 학습한다. [PDF 3쪽](https://openaccess.thecvf.com/content/CVPR2023/papers/Gao_ULIP_Learning_a_Unified_Representation_of_Language_Images_and_Point_CVPR_2023_paper.pdf#page=3) · [PDF 4쪽](https://openaccess.thecvf.com/content/CVPR2023/papers/Gao_ULIP_Learning_a_Unified_Representation_of_Language_Images_and_Point_CVPR_2023_paper.pdf#page=4)
+- 서로 다른 3차원 백본에서 지도 및 제로샷 분류와 양식 간 검색을 평가했다. [PDF 5쪽](https://openaccess.thecvf.com/content/CVPR2023/papers/Gao_ULIP_Learning_a_Unified_Representation_of_Language_Images_and_Point_CVPR_2023_paper.pdf#page=5) · [PDF 6쪽](https://openaccess.thecvf.com/content/CVPR2023/papers/Gao_ULIP_Learning_a_Unified_Representation_of_Language_Images_and_Point_CVPR_2023_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content/CVPR2023/papers/Gao_ULIP_Learning_a_Unified_Representation_of_Language_Images_and_Point_CVPR_2023_paper.pdf#page=7) · [PDF 8쪽](https://openaccess.thecvf.com/content/CVPR2023/papers/Gao_ULIP_Learning_a_Unified_Representation_of_Language_Images_and_Point_CVPR_2023_paper.pdf#page=8)
 
 ## Evaluation Scope
 

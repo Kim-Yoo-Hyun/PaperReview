@@ -15,13 +15,11 @@
 - Full-text retrieval: https://openaccess.thecvf.com/content/ICCV2025/papers/Gan_GaussianOcc_Fully_Self-supervised_and_Efficient_3D_Occupancy_Estimation_with_Gaussian_ICCV_2025_paper.pdf
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 한 줄 요약과 핵심 기여 두 개를 각 문장에 인용한 판본의 원문에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, these approaches face two significant limitations.
-
-방법 관련 발췌 — In summary, our core contributions are as follows: • We introduce the first fully self-supervised method for efficient surrounding-view 3D occupancy estimation, featuring the exploration of Gaussian splatting. • We propose Gaussian ...
+GaussianOcc는 차량 주변 카메라 영상으로부터 정답 자차 자세 없이 3차원 점유를 자기지도 방식으로 학습한다. [PDF 1쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Gan_GaussianOcc_Fully_Self-supervised_and_Efficient_3D_Occupancy_Estimation_with_Gaussian_ICCV_2025_paper.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** In summary, our core contributions are as follows: • We introduce the first fully self-supervised method for efficient surrounding-view 3D occupancy estimation, featuring the exploration ...
-- **p. 2 / 1. Introduction - extractive body cue:** Instead, we propose performing Gaussian splatting directly from the 3D voxel space.
-- **p. 4 / 3.2. Scale-aware training by Gaussian Splatting - extractive body cue:** We propose Gaussian splatting for projection in stage 1 for better scale-aware training as follows.
-- **p. 5 / 4.2. Implementation details - extractive body cue:** Training details: We propose a two-stage training for fully self-supervised 3D occupancy estimation as indicated in Figure 2.
-- **p. 1 / 1. Introduction - extractive body cue:** To facilitate 3D occupancy estimation, several benchmarks have been developed for supervised training [40-42, 44], though these require substantial effort in 3D annotation.
-- **p. 5 / 4.3. Main results - extractive body cue:** In stage 1, GaussianOcc ‡ achieves top performance on the nuScenes dataset and delivers competitive results on the DDAD.
-- **p. 5 / 4.3. Main results - extractive body cue:** 3D occupancy estimation in nuScenes: In Table 1, the proposed GaussianOcc achieves the best performance compared to other self-supervised methods.
-- **p. 6 / Figure/Table caption - extractive body cue:** Table 2. Comparisons for self-supervised multi-camera depth estimation on the nuScenes [3] and DDAD datasets [13]. The results are averaged over all views without median ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 인접 시점 사이 투영으로 스케일 단서를 얻고 복셀 공간의 Gaussian을 렌더링해 영상 기반 감독을 적용한다. [PDF 3쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Gan_GaussianOcc_Fully_Self-supervised_and_Efficient_3D_Occupancy_Estimation_with_Gaussian_ICCV_2025_paper.pdf#page=3) · [PDF 4쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Gan_GaussianOcc_Fully_Self-supervised_and_Efficient_3D_Occupancy_Estimation_with_Gaussian_ICCV_2025_paper.pdf#page=4)
+- Occ3D 점유와 다중 카메라 깊이를 평가하고, 자세의 출처 및 투영 구성이 결과에 미치는 영향을 비교했다. [PDF 5쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Gan_GaussianOcc_Fully_Self-supervised_and_Efficient_3D_Occupancy_Estimation_with_Gaussian_ICCV_2025_paper.pdf#page=5) · [PDF 6쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Gan_GaussianOcc_Fully_Self-supervised_and_Efficient_3D_Occupancy_Estimation_with_Gaussian_ICCV_2025_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Gan_GaussianOcc_Fully_Self-supervised_and_Efficient_3D_Occupancy_Estimation_with_Gaussian_ICCV_2025_paper.pdf#page=7) · [PDF 8쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Gan_GaussianOcc_Fully_Self-supervised_and_Efficient_3D_Occupancy_Estimation_with_Gaussian_ICCV_2025_paper.pdf#page=8)
 
 ## Evaluation Scope
 

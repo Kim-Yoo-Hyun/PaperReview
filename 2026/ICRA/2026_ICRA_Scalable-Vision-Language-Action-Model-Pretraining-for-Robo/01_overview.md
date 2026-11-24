@@ -15,13 +15,11 @@
 - Full-text retrieval: https://arxiv.org/pdf/2510.21571
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (36 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (36 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 한 줄 요약과 핵심 기여 두 개를 각 문장에 인용한 판본의 원문에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — By contrast, simply splitting the video into fixed-length segments (e.g., 1-second) reduces accuracy, likely because each segment may still contain multiple atomic actions, which increases the difficulty for GPT to reason about ...
-
-방법 관련 발췌 — Pretraining Unseen Object & BG Finetuning Pick up popcorn box Grasp whisk Grasp electric drill Pour into pot Sweep paper balls Pick up charger Pick up spray can Place towel into box ...
+일상적인 1인칭 인간 손 영상을 언어 지시와 손동작 궤적으로 변환해 다지 로봇 조작 정책의 사전학습에 사용했다. [PDF 1쪽](https://arxiv.org/pdf/2510.21571v1#page=1) · [PDF 2쪽](https://arxiv.org/pdf/2510.21571v1#page=2)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1 Introduction - extractive body cue:** Pretraining Unseen Object & BG Finetuning Pick up popcorn box Grasp whisk Grasp electric drill Pour into pot Sweep paper balls Pick up charger Pick ...
-- **p. 3 / 1 Introduction - extractive body cue:** For temporal atomic action segmentation, we propose a simple yet surprisingly effective algorithm based on the hand movement speed in the 3D space, obtained from ...
-- **p. 3 / 1 Introduction - extractive body cue:** To this end, we introduce a holistic human activity analytic framework that converts any human hand activity video of arbitrary length into multiple V-L-A trajectories ...
-- **p. 6 / 1 Introduction - extractive body cue:** Our model consists of a VLM backbone and a diffusion action expert.
-- **p. 6 / 1 Introduction - extractive body cue:** Note that the human annotations for actions provided by these datasets are NOT used in this work; instead, we process the raw videos through our ...
-- **p. 15 / 5 Experiments - extractive body cue:** By contrast, our approach achieves significantly better performance, benefiting from more explicit action supervision, which leads to a smaller pretraining-finetuning gap.
-- **p. 14 / 5 Experiments - extractive body cue:** For quantitative evaluation, we examine the model's performance in terms of task success rate and compare with prior methods.
-- **p. 15 / 5 Experiments - extractive body cue:** Pretraining Hand-Prediction Accuracy Finally, we investigate the relationship between the fine-tuned robotic task success rates and the pretraining accuracy on human-hand prediction.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 손 활동을 짧은 동작 단위로 나누고 설명과 프레임별 3차원 손·카메라 움직임을 추정해 학습 예제를 만들었다. [PDF 4쪽](https://arxiv.org/pdf/2510.21571v1#page=4) · [PDF 5쪽](https://arxiv.org/pdf/2510.21571v1#page=5) · [PDF 6쪽](https://arxiv.org/pdf/2510.21571v1#page=6)
+- 사람 손의 움직임을 예측하는 평가와 로봇 시연으로 미세조정한 뒤 실물에서 물체를 조작하는 평가를 각각 수행했다. [PDF 11쪽](https://arxiv.org/pdf/2510.21571v1#page=11) · [PDF 12쪽](https://arxiv.org/pdf/2510.21571v1#page=12) · [PDF 13쪽](https://arxiv.org/pdf/2510.21571v1#page=13) · [PDF 14쪽](https://arxiv.org/pdf/2510.21571v1#page=14)
 
 ## Evaluation Scope
 

@@ -16,13 +16,11 @@
 - Full-text retrieval: https://arxiv.org/pdf/2602.11862
 - Code/Project: https://lab-of-ai-and-robotics.github.io/LAMP/
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 한 줄 요약과 핵심 기여 두 개를 각 문장에 인용한 판본의 원문에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — This limitation arises from the inherent difficulty of densely and explicitly storing information on large scales.
-
-방법 관련 발췌 — We summarize our main contributions of LAMP (Language Map) as follows: • We introduce LAMP, the first implicit language map leveraging a language-driven continuous field for finegrained path generation using only RGB ...
+LAMP는 언어 특징을 연속적인 공간 함수로 학습해 언어 지시와 맞는 위치로 가는 경로와 목표 자세를 구한다. [PDF 1쪽](https://arxiv.org/pdf/2602.11862v1#page=1)
 
 ## Problem and Motivation
 
@@ -56,16 +54,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / I. INTRODUCTION - extractive body cue:** We summarize our main contributions of LAMP (Language Map) as follows: • We introduce LAMP, the first implicit language map leveraging a language-driven continuous field ...
-- **p. 1 / I. INTRODUCTION - extractive body cue:** To address this gap, we propose an implicit language map representation that continuously models language vectors from RGB-only input, facilitating memoryefficient path planning that supports ...
-- **p. 2 / I. INTRODUCTION - extractive body cue:** Building on the strengths of our implicit language map, we propose methods to construct and utilize this representation more effectively.
-- **p. 3 / III. METHOD - extractive body cue:** By dynamically generating embeddings through FΘ, our method significantly reduces storage while preserving language features.
-- **p. 4 / III. METHOD - extractive body cue:** To address this, we propose a graph sampling method that retains only the most informative nodes, scored by three criteria.
-- **p. 5 / IV. EXPERIMENTS - extractive body cue:** First, success rate is computed considering only the top 1% of the predictions; a trial is deemed successful if the robot ends up within 20 ...
-- **p. 5 / IV. EXPERIMENTS - extractive body cue:** The purpose of our experiments is to demonstrate that LAMP, our method which implicitly incorporates language information within large-scale scenes, achieves memory efficiency and enables ...
-- **p. 2 / Figure/Table caption - extractive body cue:** Fig. 1. Comparison of three language map representation methods. (a) The grid-based approach struggles to accurately represent objects at coarse resolutions and requires excessive memory ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 희소 그래프에서 대략적인 경로를 찾은 뒤 연속 언어장 위에서 기울기를 이용해 목표 근처의 자세를 정밀하게 조정한다. [PDF 2쪽](https://arxiv.org/pdf/2602.11862v1#page=2) · [PDF 3쪽](https://arxiv.org/pdf/2602.11862v1#page=3) · [PDF 4쪽](https://arxiv.org/pdf/2602.11862v1#page=4)
+- 특징 방향의 불확실성을 모델링하고 그래프 표본 수와 최종 목표 위치·방향에 미치는 영향을 평가했다. [PDF 3쪽](https://arxiv.org/pdf/2602.11862v1#page=3) · [PDF 5쪽](https://arxiv.org/pdf/2602.11862v1#page=5) · [PDF 6쪽](https://arxiv.org/pdf/2602.11862v1#page=6) · [PDF 7쪽](https://arxiv.org/pdf/2602.11862v1#page=7)
 
 ## Evaluation Scope
 

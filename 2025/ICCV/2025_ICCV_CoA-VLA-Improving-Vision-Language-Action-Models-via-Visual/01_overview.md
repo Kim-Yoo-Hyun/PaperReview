@@ -12,16 +12,15 @@
 - Tier: REFERENCE
 - Tags: VLA, Vision-Language Model
 - Official paper: https://openaccess.thecvf.com/content/ICCV2025/html/Li_CoA-VLA_Improving_Vision-Language-Action_Models_via_Visual-Text_Chain-of-Affordance_ICCV_2025_paper.html
+- PDF title variant: CoA-VLA: Improving Vision-Language-Action Models via Visual-Textual Chain-of-Affordance [원문 표제면](https://openaccess.thecvf.com/content/ICCV2025/papers/Li_CoA-VLA_Improving_Vision-Language-Action_Models_via_Visual-Text_Chain-of-Affordance_ICCV_2025_paper.pdf#page=1) · [공식 서지](https://openaccess.thecvf.com/content/ICCV2025/html/Li_CoA-VLA_Improving_Vision-Language-Action_Models_via_Visual-Text_Chain-of-Affordance_ICCV_2025_paper.html)
 - Full-text retrieval: https://openaccess.thecvf.com/content/ICCV2025/papers/Li_CoA-VLA_Improving_Vision-Language-Action_Models_via_Visual-Text_Chain-of-Affordance_ICCV_2025_paper.pdf
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 한 줄 요약과 핵심 기여 두 개를 각 문장에 인용한 판본의 원문에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, current approaches often rely heavily on high-level planning or task decomposition by off-the-shelf Large language models(LLMs) or Vision language models (VLMs), limiting models from developing implicit reasoning on their own.
-
-방법 관련 발췌 — In this work, we propose Chain-of-Affordance, namely CoA-VLA, a novel perspective on generalizing model reasoning at test-time, and leverage such generated reasoning to facilitate the policy learning process.
+CoA-VLA는 행동을 예측하기 전에 대상 물체, 잡을 부분, 놓을 위치, 이동 경로를 시각·텍스트 단서로 표현한다. [PDF 1쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Li_CoA-VLA_Improving_Vision-Language-Action_Models_via_Visual-Text_Chain-of-Affordance_ICCV_2025_paper.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -54,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** In this work, we propose Chain-of-Affordance, namely CoA-VLA, a novel perspective on generalizing model reasoning at test-time, and leverage such generated reasoning to facilitate the ...
-- **p. 2 / 1. Introduction - extractive body cue:** Our method leverages visual affordance in robot learning, conceptualizing various actions and interactions with objects or the environment that a robot can perform based on ...
-- **p. 3 / 4. Methodology - extractive body cue:** In Section 4.2, we present two formats for representing the chain of affordances: a text format and an image format.
-- **p. 4 / 4.1. Definition of Chain-of-Affordance - extractive body cue:** In our framework, spatial affordance is operationalized as actionable destinations-discrete 2D coordinates representing feasible interaction zones.
-- **p. 4 / 4.1. Definition of Chain-of-Affordance - extractive body cue:** By employing a dynamic affordance selection mechanism, our method avoids generating redundant affordances at every timestep. object to interact with and where it is located, ...
-- **p. 7 / 5.2. Evaluation on Simulation - extractive body cue:** Specifically, CoA-VLA achieves an overall success rate of 79.8%, outperforming OpenVLA, the previous best-performing method, by a margin of 3.3%.
-- **p. 7 / 5.2. Evaluation on Simulation - extractive body cue:** Our findings indicate that CoA-VLA consistently achieves superior performance across all evaluated settings, securing the highest success rate among the methods tested.
-- **p. 6 / Figure/Table caption - extractive body cue:** Table 1. Experimental results for multi-task learning. Our method achieved the best performance in both the in-distribution test setup and under visual changes. Seven Tasks ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 네 종류의 행동 가능성을 순서대로 표현한 자료를 만들고 두 양식의 정보를 정책에 함께 제공하는 모듈을 학습했다. [PDF 3쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Li_CoA-VLA_Improving_Vision-Language-Action_Models_via_Visual-Text_Chain-of-Affordance_ICCV_2025_paper.pdf#page=3) · [PDF 4쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Li_CoA-VLA_Improving_Vision-Language-Action_Models_via_Visual-Text_Chain-of-Affordance_ICCV_2025_paper.pdf#page=4) · [PDF 5쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Li_CoA-VLA_Improving_Vision-Language-Action_Models_via_Visual-Text_Chain-of-Affordance_ICCV_2025_paper.pdf#page=5)
+- 실물 조작과 LIBERO에서 정책을 비교하고 시각 단서와 텍스트 단서를 각각 사용했을 때의 차이를 분석했다. [PDF 6쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Li_CoA-VLA_Improving_Vision-Language-Action_Models_via_Visual-Text_Chain-of-Affordance_ICCV_2025_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Li_CoA-VLA_Improving_Vision-Language-Action_Models_via_Visual-Text_Chain-of-Affordance_ICCV_2025_paper.pdf#page=7) · [PDF 8쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Li_CoA-VLA_Improving_Vision-Language-Action_Models_via_Visual-Text_Chain-of-Affordance_ICCV_2025_paper.pdf#page=8)
 
 ## Evaluation Scope
 

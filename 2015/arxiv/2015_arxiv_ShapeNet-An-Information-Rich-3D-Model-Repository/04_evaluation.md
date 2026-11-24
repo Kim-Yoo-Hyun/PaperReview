@@ -6,7 +6,7 @@
 
 ## Evaluation in One Sentence
 
-PDF body evaluation/result cue (p. 9 (Figure/Table caption), p. 5 (4. Annotation Acquisition and Validation), p. 6 (4.2. Hierarchical Rigid Alignment), p. 6 (4.1. Category Annotation), p. 7 (4.3. Parts and Keypoints)): Table 3. Total number of models for the top 100 ShapeNetSem categories (out of 270 categories). Each category is also linked to the corresponding WordNet synset, establishing the same linkage ...
+2015년 보고서 당시 색인된 모델은 300만 개 이상이고 그중 22만 개를 WordNet 범주 3,135개로 분류했다. 표 2가 제시한 ShapeNetCore 하위 집합의 합계는 57,386개다. [PDF 1쪽](https://arxiv.org/pdf/1512.03012v1#page=1) · [PDF 8쪽](https://arxiv.org/pdf/1512.03012v1#page=8)
 
 ## Evaluation Body Digest
 

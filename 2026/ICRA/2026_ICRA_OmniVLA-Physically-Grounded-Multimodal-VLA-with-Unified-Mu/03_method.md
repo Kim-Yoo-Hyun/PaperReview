@@ -110,7 +110,7 @@ PDF body method statement (p. 2 (I. INTRODUCTION), p. 3 (III. SYSTEM DESIGN), p.
 |---|---|---|
 | Multimodal task encoding | This is likely due to SmolVLA is pretrained with lerobot robot arm dataset [2]. | p. 6 (IV. EVALUATION), p. 6 (IV. EVALUATION) |
 | Action / skill decoding | Second, we show that our approach provides superior generalization capability for sensor-related tasks, outperforming baselines. | p. 5 (IV. EVALUATION), p. 6 (IV. EVALUATION) |
-| Receding execution / feedback | On average, OmniVLA outperforms VLA-RGB model and VLA-RAW model by 59% and 28% in success rate respectively. | p. 6 (IV. EVALUATION), p. 6 (IV. EVALUATION) |
+| Receding execution / feedback | 표 I의 평균 성공률 차이는 RGB 단독 대비 59퍼센트포인트, 원시 센서 입력 대비 28퍼센트포인트다. [PDF 6쪽](https://arxiv.org/pdf/2511.01210v3#page=6) | p. 6 (IV. EVALUATION), p. 6 (IV. EVALUATION) |
 
 ## Failure and Ablation Link
 

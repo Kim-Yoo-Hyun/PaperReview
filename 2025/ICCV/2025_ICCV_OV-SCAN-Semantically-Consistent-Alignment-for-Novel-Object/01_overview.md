@@ -15,13 +15,11 @@
 - Full-text retrieval: https://openaccess.thecvf.com/content/ICCV2025/papers/Chow_OV-SCAN_Semantically_Consistent_Alignment_for_Novel_Object_Discovery_in_Open-Vocabulary_ICCV_2025_paper.pdf
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 한 줄 요약과 핵심 기여 두 개를 각 문장에 인용한 판본의 원문에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Due to the aforementioned challenges with online methods, recent work has increasingly shifted toward offline approaches.
-
-방법 관련 발췌 — We summarize our main contributions as follows: • We present OV-SCAN, an OV-3D object detector benefiting from improved cross-modal alignment, see Fig.
+OV-SCAN은 주행 장면에서 영상과 점군의 특징 짝이 서로 다른 물체나 가려진 부분을 가리키는 문제를 줄여 새로운 범주를 검출한다. [PDF 1쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Chow_OV-SCAN_Semantically_Consistent_Alignment_for_Novel_Object_Discovery_in_Open-Vocabulary_ICCV_2025_paper.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** We summarize our main contributions as follows: • We present OV-SCAN, an OV-3D object detector benefiting from improved cross-modal alignment, see Fig.
-- **p. 2 / 1. Introduction - extractive body cue:** More specifically, we introduce the Semantically-Consistent Novel-Object Discovery (SCNOD) module to handle the inherent challenges of noisy cross-modal alignment.
-- **p. 4 / 3.2. Semantically Consistent NOD (SC-NOD) - extractive body cue:** Our method relies on CLIP to classify the object into its corresponding novel class c.
-- **p. 3 / 3. Method - extractive body cue:** In this section, we present the details of OV-SCAN.
-- **p. 3 / 3.1. Notation and Preliminaries - extractive body cue:** Our method extends the traditional target pair of 3D bounding box and class label, into a triplet target denoted by !→= {(Bi, ci, A2D,i)}N i=1.
-- **p. 8 / 4.3. Ablation Studies - extractive body cue:** A simple occlusion filter with a fixed threshold ςocc yields a notable performance gain, while class-based thresholds achieve the highest improvement (+1.7 mAP).
-- **p. 7 / 4.2. Main Results - extractive body cue:** Without being given 3D human-annotations, OV-SCAN achieves an AP score above 60 for both car and pedestrian categories.
-- **p. 7 / 4.2. Main Results - extractive body cue:** Furthermore, we show that simply adding camera as an additional input modality to OV-SCAN and then fine-tuning can improve the overall performance.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 새 범주의 3차원 후보 주석을 정제하고 가림·해상도·주석 오류로 의미가 어긋난 정렬 쌍을 걸러낸다. [PDF 3쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Chow_OV-SCAN_Semantically_Consistent_Alignment_for_Novel_Object_Discovery_in_Open-Vocabulary_ICCV_2025_paper.pdf#page=3) · [PDF 4쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Chow_OV-SCAN_Semantically_Consistent_Alignment_for_Novel_Object_Discovery_in_Open-Vocabulary_ICCV_2025_paper.pdf#page=4) · [PDF 5쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Chow_OV-SCAN_Semantically_Consistent_Alignment_for_Novel_Object_Discovery_in_Open-Vocabulary_ICCV_2025_paper.pdf#page=5)
+- nuScenes와 KITTI에서 3차원 검출 성능을 비교하고 정렬 쌍을 고르는 구성의 효과를 분석했다. [PDF 7쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Chow_OV-SCAN_Semantically_Consistent_Alignment_for_Novel_Object_Discovery_in_Open-Vocabulary_ICCV_2025_paper.pdf#page=7) · [PDF 8쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Chow_OV-SCAN_Semantically_Consistent_Alignment_for_Novel_Object_Discovery_in_Open-Vocabulary_ICCV_2025_paper.pdf#page=8)
 
 ## Evaluation Scope
 

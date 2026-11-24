@@ -6,7 +6,7 @@
 
 ## Evaluation in One Sentence
 
-PDF body evaluation/result cue (p. 5 (4.2. Zero-Shot Relative Depth Estimation), p. 5 (4.2. Zero-Shot Relative Depth Estimation), p. 8 (Figure/Table caption), p. 8 (4.6. Qualitative Results), p. 9 (9. More Qualitative Results), p. 9 (9. More Qualitative Results)): Moreover, our ViT-S model, whose scale is less than 1/10 of the MiDaS model, even outperforms MiDaS on several unseen datasets, including Sintel, DDAD, and ETH3D.
+표 2는 여러 데이터셋의 상대 깊이 제로샷 전이를 평가한다. 표 3은 NYUv2에서 미터 단위 정답으로 미세조정한 결과다. KITTI의 미세조정 결과는 표 4에 따로 실렸다. [PDF 5쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Yang_Depth_Anything_Unleashing_the_Power_of_Large-Scale_Unlabeled_Data_CVPR_2024_paper.pdf#page=5) · [PDF 6쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Yang_Depth_Anything_Unleashing_the_Power_of_Large-Scale_Unlabeled_Data_CVPR_2024_paper.pdf#page=6)
 
 ## Evaluation Body Digest
 

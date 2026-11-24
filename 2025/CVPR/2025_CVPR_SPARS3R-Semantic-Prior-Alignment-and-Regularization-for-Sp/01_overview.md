@@ -15,13 +15,11 @@
 - Full-text retrieval: https://openaccess.thecvf.com/content/CVPR2025/papers/Tang_SPARS3R_Semantic_Prior_Alignment_and_Regularization_for_Sparse_3D_Reconstruction_CVPR_2025_paper.pdf
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (12 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (12 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 한 줄 요약과 핵심 기여 두 개를 각 문장에 인용한 판본의 원문에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — To address outliers that cannot be aligned accurately due to depth discrepancies, we propose a Semantic Outlier Alignment step.
-
-방법 관련 발췌 — Our method, SPARS3R, can reliably render details in the foreground and background with accurate poses.
+SPARS3R는 적은 수의 사진에서 얻은 SfM 희소 기하에 조밀한 깊이 예측을 정렬해 새 시점 렌더링을 위한 장면을 초기화한다. [PDF 1쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Tang_SPARS3R_Semantic_Prior_Alignment_and_Regularization_for_Sparse_3D_Reconstruction_CVPR_2025_paper.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 1 / 1. Introduction - extractive body cue:** Our method, SPARS3R, can reliably render details in the foreground and background with accurate poses.
-- **p. 2 / 1. Introduction - extractive body cue:** To address sparse point cloud initialization and pose inaccuracy in sparse-view NVS, we propose SPARS3R.
-- **p. 2 / 1. Introduction - extractive body cue:** To address outliers that cannot be aligned accurately due to depth discrepancies, we propose a Semantic Outlier Alignment step.
-- **p. 3 / 3.2.1. Global Fusion Alignment - extractive body cue:** To construct a better point cloud prior, we propose to align MASt3R's point cloud with that from a SfM pipeline, which is more reliable based ...
-- **p. 4 / 3.2.2. Semantic Outlier Alignment - extractive body cue:** Based on the observation that geometric inconsistencies between χ and sX tend to occur between objects and not within objects, we introduce an Interactive Segmentation ...
-- **p. 5 / 4.1. Sparse NVS Evaluation - extractive body cue:** 1, these two improvements enhance camera alignment accuracy in both rotation and translation.
-- **p. 6 / 4.2. Ablation Studies - extractive body cue:** InstantSplat [14] uses DUSt3R's [52] dense point cloud and pose estimation and attempts to improve accuracy through a training pose optimization approach similar to BARF ...
-- **p. 5 / 4.1. Sparse NVS Evaluation - extractive body cue:** Improvements over Procrustes Alignment baseline in average rotation error ER and translation error ET .
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 삼각측량 대응으로 전역 정렬을 추정하고 RANSAC 이상치 주변의 의미적으로 연결된 영역을 따로 정렬한다. [PDF 3쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Tang_SPARS3R_Semantic_Prior_Alignment_and_Regularization_for_Sparse_3D_Reconstruction_CVPR_2025_paper.pdf#page=3) · [PDF 4쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Tang_SPARS3R_Semantic_Prior_Alignment_and_Regularization_for_Sparse_3D_Reconstruction_CVPR_2025_paper.pdf#page=4)
+- 희소 입력 조건에서 렌더링 품질을 비교하고 전역·국소 정렬을 각각 제거했을 때의 차이를 평가했다. [PDF 5쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Tang_SPARS3R_Semantic_Prior_Alignment_and_Regularization_for_Sparse_3D_Reconstruction_CVPR_2025_paper.pdf#page=5) · [PDF 6쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Tang_SPARS3R_Semantic_Prior_Alignment_and_Regularization_for_Sparse_3D_Reconstruction_CVPR_2025_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Tang_SPARS3R_Semantic_Prior_Alignment_and_Regularization_for_Sparse_3D_Reconstruction_CVPR_2025_paper.pdf#page=7)
 
 ## Evaluation Scope
 

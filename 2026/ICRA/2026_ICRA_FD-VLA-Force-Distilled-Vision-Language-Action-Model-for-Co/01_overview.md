@@ -15,13 +15,11 @@
 - Full-text retrieval: https://arxiv.org/pdf/2602.02142
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 한 줄 요약과 핵심 기여 두 개를 각 문장에 인용한 판본의 원문에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — This enables practical deployment on a wide range of robot platforms that lack force sensors, reducing hardware cost and
-
-방법 관련 발췌 — In summary, the main contributions of this work are summarized as follows: • We propose the FD-VLA framework that injects a distilled force token into the VLA model to improve contact-rich manipulation. ...
+FD-VLA는 학습 때 계측한 힘의 표현을 시각·로봇 상태로 예측하게 해 배포 시 힘 센서 없이 접촉 조작을 수행한다. [PDF 1쪽](https://arxiv.org/pdf/2602.02142v2#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / I. INTRODUCTION - extractive body cue:** In summary, the main contributions of this work are summarized as follows: • We propose the FD-VLA framework that injects a distilled force token into ...
-- **p. 1 / I. INTRODUCTION - extractive body cue:** In this work, we propose a novel FD-VLA framework that incorporates a distilled force token, rather than raw sensor signals, into the VLA model to ...
-- **p. 3 / III. METHODOLOGY - extractive body cue:** Motivated by these challenges, we propose FD-VLA guided by three design principles: (i) leverage predicted force tokens obtained through distillation with actual force signals during ...
-- **p. 4 / III. METHODOLOGY - extractive body cue:** The realization of FDM consists of two parallel branches, i.e., the prediction branch and actual force branch.
-- **p. 4 / III. METHODOLOGY - extractive body cue:** Rather than directly incorporating the raw force measurements into the VLM, we introduce the Force Distillation Module (FDM) that can predict a latent force representation ...
-- **p. 6 / IV. EXPERIMENTS - extractive body cue:** Across all the tasks, our FD-VLA achieves the highest overall performance with a mean success rate of 61.1%, substantially outperforming both SmolVLA without force encoding ...
-- **p. 6 / Figure/Table caption - extractive body cue:** Fig. 6: Success rates for three contact-rich manipulation tasks: Plug in Socket, Clean Whiteboard, and Press Button. Results are averaged over 30 evaluation episodes per ...
-- **p. 2 / Figure/Table caption - extractive body cue:** Fig. 1: Overview of differentiate architectures of force VLAs. (Left) Tactile-VLA with tactile encoder directly encode tactile information. (Middle) Force-VLA with MoE module between VLM ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 학습 가능한 질의로 예측한 토큰을 측정 힘의 잠재 표현에 맞춘 뒤 행동 생성기의 입력에 포함한다. [PDF 3쪽](https://arxiv.org/pdf/2602.02142v2#page=3) · [PDF 4쪽](https://arxiv.org/pdf/2602.02142v2#page=4)
+- 실물 접촉 과제에서 예측한 힘 토큰, 센서 측정값을 입력한 정책, 힘 정보를 제거한 조건을 비교했다. [PDF 5쪽](https://arxiv.org/pdf/2602.02142v2#page=5) · [PDF 6쪽](https://arxiv.org/pdf/2602.02142v2#page=6) · [PDF 7쪽](https://arxiv.org/pdf/2602.02142v2#page=7)
 
 ## Evaluation Scope
 

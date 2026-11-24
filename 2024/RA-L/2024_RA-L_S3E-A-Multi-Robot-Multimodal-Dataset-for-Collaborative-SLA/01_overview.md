@@ -15,13 +15,11 @@
 - Full-text retrieval: https://arxiv.org/pdf/2210.13723
 - Code/Project: https://pengyu-team.github.io/S3E/
 - Paper type: benchmark_or_dataset
-- Source audit: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 한 줄 요약과 핵심 기여 두 개를 각 문장에 인용한 판본의 원문에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Despite this interest, the scalability and diversity of existing datasets for collaborative trajectories remain limited, especially in scenarios with constrained perspectives where the generalization capabilities of Collaborative SLAM ( ...
-
-방법 관련 발췌 — In this paper, we introduce four trajectory prototypes designed to meet these principles and evaluate the adaptability of C-SLAM methodologies across diverse closure strategies in multi-robot operations.
+S3E는 여러 지상 로봇이 함께 이동하며 동기화·보정한 센서 기록을 제공해 단일 및 협력 SLAM을 같은 경로에서 시험할 수 있게 한다. [PDF 1쪽](https://arxiv.org/pdf/2210.13723v8#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 1 / C OLLABORATIVE Simultaneous Localization and Map - extractive body cue:** In this paper, we introduce four trajectory prototypes designed to meet these principles and evaluate the adaptability of C-SLAM methodologies across diverse closure strategies in ...
-- **p. 1 / Abstract - extractive body cue:** Addressing this gap, we introduce S3E, an expansive multimodal dataset.
-- **p. 2 / 3 UGVs - extractive body cue:** In conclusion, our work makes several key contributions to the field: ∙We have created a cutting-edge C-SLAM dataset using three ground robots, each equipped with ...
-- **p. 3 / III. S3E DATASET - extractive body cue:** This includes the sensor types, their resolution, measurement range, accuracy, and any other pertinent technical details that define their contribution to the SLAM system's performance.
-- **p. 2 / 3 UGVs - extractive body cue:** In the right part, our mobile platforms are available in two versions, each designed for different operational requirements.
-- **p. 7 / IV. EXPERIMENTS - extractive body cue:** However, in areas with limited overlap, reducing drift remained a challenge. - The incorporation of UWB measurements in CoLRIO significantly improved localization robustness and accuracy, ...
-- **p. 7 / IV. EXPERIMENTS - extractive body cue:** The results, summarized in Table V and Table VI , reveal the absolute trajectory error (ATE) for both single-agent and collaborative SLAM (C-SLAM) systems in ...
-- **p. 3 / III. S3E DATASET - extractive body cue:** The dataset features two mobile robot platform versions: ∙S3Ev1.0: Designed for indoor use with a compact design for exceptional maneuverability in tight spaces. ∙S3Ev2.0: Enhanced ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 서로 다른 로봇 간 이동 관계로 구성한 실외 13개·실내 5개 시퀀스에 스테레오 영상, LiDAR, IMU, UWB 거리 관측을 담았다. [PDF 1쪽](https://arxiv.org/pdf/2210.13723v8#page=1) · [PDF 4쪽](https://arxiv.org/pdf/2210.13723v8#page=4) · [PDF 5쪽](https://arxiv.org/pdf/2210.13723v8#page=5)
+- 센서별 좌표·시각 정보와 궤적 평가 조건을 설명하고 여러 SLAM 방식의 궤적 오차를 비교했다. [PDF 5쪽](https://arxiv.org/pdf/2210.13723v8#page=5) · [PDF 6쪽](https://arxiv.org/pdf/2210.13723v8#page=6) · [PDF 7쪽](https://arxiv.org/pdf/2210.13723v8#page=7)
 
 ## Evaluation Scope
 

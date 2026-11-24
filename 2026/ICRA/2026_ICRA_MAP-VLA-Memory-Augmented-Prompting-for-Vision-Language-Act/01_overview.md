@@ -15,13 +15,11 @@
 - Full-text retrieval: https://arxiv.org/pdf/2511.09516v1
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (9 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (9 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 한 줄 요약과 핵심 기여 두 개를 각 문장에 인용한 판본의 원문에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — In other words, the robot lacks episodic memory; it cannot directly recall "how an expert accomplished a similar stage" when it is performing one.
-
-방법 관련 발췌 — The main contributions of this work can be summarized as follows: • We propose MAP-VLA, a novel framework that augments a pre-trained VLA model with demonstrationderived memory prompts.
+MAP-VLA는 시연에서 얻은 단계별 기억을 동결된 VLA에 제공해 긴 조작 과제에서 다음 행동을 선택하게 한다. [PDF 1쪽](https://arxiv.org/pdf/2511.09516v1#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / I. INTRODUCTION - extractive body cue:** The main contributions of this work can be summarized as follows: • We propose MAP-VLA, a novel framework that augments a pre-trained VLA model with ...
-- **p. 2 / I. INTRODUCTION - extractive body cue:** We also develop MemoryAugmented Action Generation (MAAG), which enables memory retrieval and dynamic memory-aware prompt ensembling to augment action generation during realtime task execution. • ...
-- **p. 1 / I. INTRODUCTION - extractive body cue:** In this paper, we present the Memory-Augmented Prompting for Vision-Language-Action model (MAP-VLA), bridging the gap in current VLA models by enabling dynamic access to demonstration-derived ...
-- **p. 1 / I. INTRODUCTION - extractive body cue:** Next, we propose Memory-Augmented Action Generation, which retrieves the most relevant stage-specific memory prompt along with the corresponding demonstration actions by comparing the trajectory similarity.
-- **p. 3 / III. METHODOLOGY - extractive body cue:** To overcome this, we introduce a memory-augmented framework that enhances VLA models for better long-horizon task performance.
-- **p. 6 / IV. EXPERIMENTS - extractive body cue:** On average, MAP-VLA achieves an 83.4% success rate, whereas the baseline OpenVLA and π0 achieve 54.0% and 76.4%, respectively.
-- **p. 6 / IV. EXPERIMENTS - extractive body cue:** Averaged over the three tasks, MAP-VLA's partial success and complete success rates are 68.3% and 48.3%, versus 53.3% and 23.3% for the baseline, showing a ...
-- **p. 7 / IV. EXPERIMENTS - extractive body cue:** MAP-VLA achieves average success rates of 55.8% and 75.9% for the 10-shot and 20-shot settings, which are consistently higher than those of the baseline π0 ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 시연을 작업 단계로 나누고 단계별 정보를 학습 가능한 소프트 프롬프트로 저장했다. [PDF 3쪽](https://arxiv.org/pdf/2511.09516v1#page=3) · [PDF 4쪽](https://arxiv.org/pdf/2511.09516v1#page=4)
+- 실행 중 최근 궤적과 유사한 시연을 찾아 프롬프트를 선택하고, 시뮬레이션과 실물에서 긴 과제의 성공을 비교했다. [PDF 4쪽](https://arxiv.org/pdf/2511.09516v1#page=4) · [PDF 5쪽](https://arxiv.org/pdf/2511.09516v1#page=5) · [PDF 7쪽](https://arxiv.org/pdf/2511.09516v1#page=7)
 
 ## Evaluation Scope
 

@@ -15,13 +15,11 @@
 - Full-text retrieval: https://arxiv.org/pdf/2410.00231
 - Code/Project: https://helpful-doggybot.github.io/
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 한 줄 요약과 핵심 기여 두 개를 각 문장에 인용한 판본의 원문에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — In this paper, we present Helpful DoggyBot, a quadrupedal robot system that aims to overcome these limitations and enable helpful mobile manipulation skills that can understand human commands and generalize across different ...
-
-방법 관련 발췌 — The key contributions of our system include (1) a simple yet effective 1-DoF gripper design that enables object grasping for quadrupeds, (2) a general-purpose low-level controller trained in simulation that enables real-world ...
+Helpful DoggyBot은 앞쪽 그리퍼를 단 사족로봇이 실내를 돌아다니며 언어 지시로 지정한 물체를 집어 오게 한다. [PDF 1쪽](https://arxiv.org/pdf/2410.00231v1#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / I. INTRODUCTION - extractive body cue:** The key contributions of our system include (1) a simple yet effective 1-DoF gripper design that enables object grasping for quadrupeds, (2) a general-purpose low-level ...
-- **p. 1 / I. INTRODUCTION - extractive body cue:** In this paper, we present Helpful DoggyBot, a quadrupedal robot system that aims to overcome these limitations and enable helpful mobile manipulation skills that can ...
-- **p. 3 / IV. LEARNING A GENERAL WHOLE-BODY CONTROLLER - extractive body cue:** Our online estimator architecture consists of a convolutional neural network (CNN) followed by a gated recurrent unit (GRU) to process the temporal sequence of depth ...
-- **p. 3 / IV. LEARNING A GENERAL WHOLE-BODY CONTROLLER - extractive body cue:** We introduce auxiliary rewards for maintaining balance, minimizing energy consumption, and smooth transitions between different locomotion modes (e.g., walking, climbing, and tilting).
-- **p. 2 / I. INTRODUCTION - extractive body cue:** Notably, our system achieves this generalization without any real-world data collection or training, highlighting the potential of our approach for creating helpful quadrupedal assistants that ...
-- **p. 6 / VI. EXPERIMENTS - extractive body cue:** In the task involving navigating to a toy on a bed, our system achieved a 60% total first-attempt success rate, significantly outperforming the Go2 default ...
-- **p. 5 / VI. EXPERIMENTS - extractive body cue:** In contrast, our approach achieves consistently higher performance, with nearperfect scores in most tasks, especially Climb Up and Climb Down, and outperforms all baselines.
-- **p. 6 / VI. EXPERIMENTS - extractive body cue:** Ours outperform all baselines in average time to completion, and close to teleoperation in success rates.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 시뮬레이션에서 자기 시점 깊이 영상으로 보행·기울이기 제어기를 학습하고 시각언어모델이 대상과 상위 명령을 선택한다. [PDF 2쪽](https://arxiv.org/pdf/2410.00231v1#page=2) · [PDF 3쪽](https://arxiv.org/pdf/2410.00231v1#page=3) · [PDF 4쪽](https://arxiv.org/pdf/2410.00231v1#page=4)
+- 두 낯선 실내 환경에서 장애물을 넘은 뒤 물체를 찾고 집는 과제를 수행해 전신 이동과 조작의 성공을 평가했다. [PDF 5쪽](https://arxiv.org/pdf/2410.00231v1#page=5) · [PDF 6쪽](https://arxiv.org/pdf/2410.00231v1#page=6)
 
 ## Evaluation Scope
 

@@ -15,13 +15,11 @@
 - Full-text retrieval: https://arxiv.org/pdf/2007.10985
 - Code/Project: https://github.com/facebookresearch/PointContrast
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (24 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (24 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 한 줄 요약과 핵심 기여 두 개를 각 문장에 인용한 판본의 원문에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — This status quo can be attributed to multiple reasons: 1) Lack of large-scale and high-quality data: compared to 2D images, 3D data is harder to collect, more expensive to label, and the ...
-
-방법 관련 발췌 — Our contributions can be summarized as follows: - We evaluate, for the first time, the transferability of learned representation in 3D point clouds to high-level scene understanding. - Our results indicate that ...
+PointContrast는 같은 장면에서 정렬된 두 점군의 대응점 특징을 가깝게 학습해 다른 장면 이해 과제로 전이한다. [PDF 1쪽](https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123480579.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -52,16 +50,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1 Introduction - extractive body cue:** Our contributions can be summarized as follows: - We evaluate, for the first time, the transferability of learned representation in 3D point clouds to high-level ...
-- **p. 1 / body section not recovered - extractive body cue:** Our findings are extremely encouraging: using a unified triplet of architecture, source dataset, and contrastive loss for pre-training, we achieve improvement over recent best results ...
-- **p. 2 / 1 Introduction - extractive body cue:** Remarkably, our results indicate improved performance across all datasets and tasks (See Table 1 for a summary of the results).
-- **p. 10 / Figure/Table caption - extractive body cue:** Table 2: ShapeNet classification. Top: classification accuracy with limited labeled training data for finetuning. Bottom: classification accuracy on the least represented classes in the data ...
-- **p. 12 / Figure/Table caption - extractive body cue:** Table 6: Segmentation results on the 4D Synthia test set. All networks here are SR-UNet with 3D kernels, trained on individual 3D frames without temporal ...
-- **p. 24 / Figure/Table caption - extractive body cue:** Table 13: ScanNet detection results Per-category AP@0.5 performance. I PointContrast vs FCGF for low- and high-level tasks We take the best performing FCGF model released ...
-- **p. 12 / Figure/Table caption - extractive body cue:** Table 5: SUN RGB-D detection results. PointContrast demonstrates a substan- tial boost compared to training from scratch. We observe a larger improvement in localization as ...
-- **p. 1 / body section not recovered - extractive body cue:** Furthermore, the improvement was similar to supervised pre-training, suggesting that future efforts should favor scaling data collection over more detailed annotation.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 다른 시점·변환을 거친 두 관측의 점별 대응을 양성 쌍으로 삼고 비대응점과 구분하는 대조 목적함수를 비교했다. [PDF 4쪽](https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123480579.pdf#page=4) · [PDF 5쪽](https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123480579.pdf#page=5) · [PDF 6쪽](https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123480579.pdf#page=6) · [PDF 7쪽](https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123480579.pdf#page=7)
+- 실내·실외 자료의 분할과 물체 검출 등에 미세조정해 무작위 초기화 및 다른 사전학습 방식과 비교했다. [PDF 10쪽](https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123480579.pdf#page=10) · [PDF 11쪽](https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123480579.pdf#page=11) · [PDF 12쪽](https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123480579.pdf#page=12) · [PDF 13쪽](https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123480579.pdf#page=13)
 
 ## Evaluation Scope
 

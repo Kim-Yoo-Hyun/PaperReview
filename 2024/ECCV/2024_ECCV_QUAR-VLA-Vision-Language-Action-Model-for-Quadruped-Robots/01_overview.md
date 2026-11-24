@@ -15,13 +15,11 @@
 - Full-text retrieval: https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/00808.pdf
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (17 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (17 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 한 줄 요약과 핵심 기여 두 개를 각 문장에 인용한 판본의 원문에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, such a task specification often relies on a single (coarse-grained) goal image instruction, making it difficult to apply in many real-world combination tasks, i.e. requiring combining multiple sub-instructions.
-
-방법 관련 발췌 — Our extensive evaluation shows that our approach leads to performant robotic policies and enables QUART to obtain a range of generalization capabilities.
+QUAR-VLA는 사족로봇이 영상·언어 지시를 실행 가능한 행동으로 변환하는 멀티태스크 문제와 데이터셋을 제시했다. [PDF 1쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/00808.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 3 / 1 Introduction - extractive body cue:** Our extensive evaluation shows that our approach leads to performant robotic policies and enables QUART to obtain a range of generalization capabilities.
-- **p. 2 / 1 Introduction - extractive body cue:** To enable quadruped robots to autonomously navigate and manipulate various tasks, in this paper, we propose a new paradigm: Vision-Language-Action tasks for QUAdruped Robots (QUAR-VLA), ...
-- **p. 4 / 1 Introduction - extractive body cue:** 2) We present a large-scale multi-task dataset, QUARD, and a Vision-Language-Action model, QUART to solve the QUAR-VLA tasks.
-- **p. 5 / 3 Method - extractive body cue:** Initially, we present the definition of our proposed QUAR-VLA in Section 3.1.
-- **p. 5 / 3 Method - extractive body cue:** The policy is a mapping from images and instructions to actions, and can be written as µ : S × W →A, where the action ...
-- **p. 11 / 4 Experiments - extractive body cue:** QUART has achieved success rates far exceeding those of the baselines in tasks of all difficulty levels, especially in the most challenging crawl and unload ...
-- **p. 12 / 1. Comparison within VLM baselines. The experiment results reveal - extractive body cue:** Consequently, while the performance gains may be marginal in simple tasks, there is a noticeable enhancement in tasks that involve complex mechanical movements. significantly improved ...
-- **p. 10 / 4 Experiments - extractive body cue:** We follow the standard robot evaluation metrics [7, 9], success rate (SR), to evaluate the overall performance.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 지각, 이동, 전신 조작 같은 서로 다른 능력을 요구하는 과제의 자료를 QUARD에 모았다. [PDF 1쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/00808.pdf#page=1) · [PDF 5쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/00808.pdf#page=5) · [PDF 6쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/00808.pdf#page=6)
+- QUART 정책이 영상과 지시를 함께 사용해 동작을 생성하도록 학습시키고 과제별 성공과 일반화를 평가했다. [PDF 1쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/00808.pdf#page=1) · [PDF 10쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/00808.pdf#page=10) · [PDF 11쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/00808.pdf#page=11)
 
 ## Evaluation Scope
 

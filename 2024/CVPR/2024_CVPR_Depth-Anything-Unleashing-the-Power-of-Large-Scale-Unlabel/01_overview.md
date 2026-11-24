@@ -15,13 +15,11 @@
 - Full-text retrieval: https://arxiv.org/pdf/2401.10891
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (18 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (18 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 한 줄 요약과 핵심 기여 두 개를 각 문장에 인용한 판본의 원문에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, this has been underexplored due to the difficulty of building datasets with tens of millions of depth labels.
-
-방법 관련 발췌 — This allows our method to enjoy both the semantic-aware representation from DINOv2 and the part-level discriminative representation from depth supervision.
+Depth Anything은 대규모 비표지 영상에 의사 깊이 레이블을 생성해 단안 영상에서 상대 깊이를 추정하는 모델을 학습한다. [PDF 1쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Yang_Depth_Anything_Unleashing_the_Power_of_Large-Scale_Unlabeled_Data_CVPR_2024_paper.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 5 / Method - extractive body cue:** This allows our method to enjoy both the semantic-aware representation from DINOv2 and the part-level discriminative representation from depth supervision.
-- **p. 2 / 1. Introduction - extractive body cue:** To address the dilemma, we propose to challenge the student model with a more difficult optimization target when learning the pseudo labels.
-- **p. 2 / 1. Introduction - extractive body cue:** Therefore, considering the excellent performance of DINOv2 in semantic-related tasks, we propose to maintain the rich semantic priors from it with a simple feature alignment ...
-- **p. 6 / 4.4. Fine-tuned to Semantic Segmentation - extractive body cue:** In our method, we design our MDE model to inherit the rich semantic priors from a pre-trained encoder via a simple feature alignment constraint.
-- **p. 7 / Method - extractive body cue:** More importantly, as emphasized in Section 4.4, this auxiliary constraint also enables our trained encoder to serve as a key component in a multi-task visual ...
-- **p. 5 / 4.2. Zero-Shot Relative Depth Estimation - extractive body cue:** Moreover, our ViT-S model, whose scale is less than 1/10 of the MiDaS model, even outperforms MiDaS on several unseen datasets, including Sintel, DDAD, and ...
-- **p. 5 / 4.2. Zero-Shot Relative Depth Estimation - extractive body cue:** For example, when tested on the well-known autonomous driving dataset DDAD [20], we improve the AbsRel (↓) from 0.251 →0.230 and improve the δ1 (↑) ...
-- **p. 8 / Figure/Table caption - extractive body cue:** Table 10. Comparison between our trained encoder and MiDaS [5] trained encoder in terms of downstream fine-tuning performance. Better performance: AbsRel ↓, δ1 ↑, mIoU ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 레이블이 있는 자료로 학습한 교사가 비표지 영상을 감독하고, 학생에게 강한 영상 증강과 의미 특징 보존 손실을 적용한다. [PDF 3쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Yang_Depth_Anything_Unleashing_the_Power_of_Large-Scale_Unlabeled_Data_CVPR_2024_paper.pdf#page=3) · [PDF 4쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Yang_Depth_Anything_Unleashing_the_Power_of_Large-Scale_Unlabeled_Data_CVPR_2024_paper.pdf#page=4)
+- 여러 데이터셋의 무학습 전이에서 상대 깊이를 평가하고, 미터 단위 깊이 추정에는 별도의 미세조정과 평가를 수행했다. [PDF 5쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Yang_Depth_Anything_Unleashing_the_Power_of_Large-Scale_Unlabeled_Data_CVPR_2024_paper.pdf#page=5) · [PDF 6쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Yang_Depth_Anything_Unleashing_the_Power_of_Large-Scale_Unlabeled_Data_CVPR_2024_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Yang_Depth_Anything_Unleashing_the_Power_of_Large-Scale_Unlabeled_Data_CVPR_2024_paper.pdf#page=7)
 
 ## Evaluation Scope
 

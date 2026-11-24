@@ -16,13 +16,11 @@
 - Full-text retrieval at original review: https://arxiv.org/pdf/2507.02705
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (24 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (24 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 한 줄 요약과 핵심 기여 두 개를 각 문장에 인용한 판본의 원문에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, the aforementioned approaches inherently have the following limitations due to the nature of 2D-to-3D feature alignment.
-
-방법 관련 발췌 — Our method consists of Image and Text Encoders for extracting multi-view and text features, Gaussian Decoder for decoding pixel-aligned 3D Gaussians, Unified Query Decoder for decoding pixel-aligned 2D cross-view masks, Mutual Benefit ...
+SIU3R는 촬영 자세를 모르는 여러 영상에서 공유 픽셀 단위 3차원 표현으로 장면 재구성과 의미 분할을 함께 수행한다. [PDF 1쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/a070d9c5759cea39a5e166fdd2df0435-Paper-Conference.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -56,16 +54,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 4 / 3 Methodology - extractive body cue:** Our method consists of Image and Text Encoders for extracting multi-view and text features, Gaussian Decoder for decoding pixel-aligned 3D Gaussians, Unified Query Decoder for ...
-- **p. 2 / 1 Introduction - extractive body cue:** In summary, our main contributions are as follows: • We propose SIU3R, the first alignment-free framework for generalizable simultaneous understanding and 3D reconstruction, which bridges ...
-- **p. 6 / 3 Methodology - extractive body cue:** 3.4 Training Objective Through holistic integration of components, our framework enables end-to-end optimization across the complete learning pipeline.
-- **p. 2 / 1 Introduction - extractive body cue:** To address the challenges outlined above, we propose SIU3R, a novel generalizable framework achieving SIMULTANEOUS UNDERSTANDING and 3D RECONSTRUCTION beyond feature alignment (Fig.1 b).
-- **p. 3 / 1 Introduction - extractive body cue:** To encourage the bidirectional promotion between the two tasks, we incorporate two lightweight modules into our pipeline and achieve significant performance improvements in both tasks. ...
-- **p. 9 / 4 Experiments - extractive body cue:** We can see that this module can significantly w/ R→U w/o R→U RGB w/ R→U w/o R→U RGB ✓ ☓ ✓ ☓ Figure 6: Ablation ...
-- **p. 9 / 4 Experiments - extractive body cue:** As demonstrated in Fig.5 (b), thanks to our simultaneous task modeling and Multi-View Mask Aggregation mechanism, our method can effectively leverage geometric clues to improve ...
-- **p. 8 / Figure/Table caption - extractive body cue:** Figure 5: Qualitative Results. that can achieve 3D-aware understanding is LSM. However, its understanding capability is restricted by its source 2D model (LSeg) due to ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 분할 과제를 학습 가능한 질의로 표현하고 재구성·이해 분기가 같은 장면 표현을 통해 정보를 교환하게 했다. [PDF 3쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/a070d9c5759cea39a5e166fdd2df0435-Paper-Conference.pdf#page=3) · [PDF 4쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/a070d9c5759cea39a5e166fdd2df0435-Paper-Conference.pdf#page=4) · [PDF 5쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/a070d9c5759cea39a5e166fdd2df0435-Paper-Conference.pdf#page=5)
+- 장면 재구성과 분할을 각각 평가하고 두 과제를 결합했을 때와 결합 모듈을 바꿨을 때의 차이를 분석했다. [PDF 6쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/a070d9c5759cea39a5e166fdd2df0435-Paper-Conference.pdf#page=6) · [PDF 7쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/a070d9c5759cea39a5e166fdd2df0435-Paper-Conference.pdf#page=7) · [PDF 8쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/a070d9c5759cea39a5e166fdd2df0435-Paper-Conference.pdf#page=8) · [PDF 9쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/a070d9c5759cea39a5e166fdd2df0435-Paper-Conference.pdf#page=9)
 
 ## Evaluation Scope
 

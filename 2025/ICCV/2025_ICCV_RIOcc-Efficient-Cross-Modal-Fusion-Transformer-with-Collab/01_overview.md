@@ -15,13 +15,11 @@
 - Full-text retrieval: https://openaccess.thecvf.com/content/ICCV2025/papers/Fan_RIOcc_Efficient_Cross-Modal_Fusion_Transformer_with_Collaborative_Feature_Refinement_for_ICCV_2025_paper.pdf
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 한 줄 요약과 핵심 기여 두 개를 각 문장에 인용한 판본의 원문에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, the task of semantic occupancy prediction [2, 9, 10, 12, 39, 40, 49] also faces significant computational challenges, especially when it involves real-time processing of large-scale voxel data, which demands high ...
-
-방법 관련 발췌 — Our contributions are summarized as follows: • We propose a novel multi-modal 3D semantic occupancy prediction framework, RIOcc.
+RIOcc는 LiDAR·카메라 특징을 공통 조감도 좌표에 놓고 결합해 주행 장면의 3차원 의미 점유를 예측한다. [PDF 1쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Fan_RIOcc_Efficient_Cross-Modal_Fusion_Transformer_with_Collaborative_Feature_Refinement_for_ICCV_2025_paper.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / C Vox - extractive body cue:** Our contributions are summarized as follows: • We propose a novel multi-modal 3D semantic occupancy prediction framework, RIOcc.
-- **p. 2 / C Vox - extractive body cue:** To address the aforementioned issues, we propose RIOcc, a novel multi-modal 3D semantic occupancy prediction method.
-- **p. 4 / 3.4.2. Semantic Encoder - extractive body cue:** To enhance the semantic expressiveness of the BEV features, we propose a lightweight 2D Semantic Encoder for efficiently extracting rich semantic information.
-- **p. 5 / 3.6. Occupancy Prediction Module - extractive body cue:** In our framework, the BEV features obtain from the multiscale fusion stage are input into the occupancy prediction module.
-- **p. 5 / 3.4.2. Semantic Encoder - extractive body cue:** Additionally, we introduce an Auxiliary Semantic Loss at the output stage to enhance the semantic consistency of the features and improve the model's understanding of ...
-- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Comparison between OpenOccupancy and the pro- posed RIOcc. Instead of processing voxel features like OpenOc- cupancy, we choose BEV features to achieve higher ...
-- **p. 3 / Figure/Table caption - extractive body cue:** Figure 2. The overall framework of RIOcc. This framework includes three main branches: LiDAR, Camera, and Interaction Branch. The LiDAR Branch processes LiDAR points through ...
-- **p. 4 / Figure/Table caption - extractive body cue:** Figure 3. The schema of Dual-branch Pooling (DBP). LiDAR feature representation is improved by adaptively highlighting im- portant semantic channels and significant geometric regions. hance ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- LiDAR의 격자·채널별 기하 특징과 카메라의 웨이블릿·의미 특징을 추출해 변형 가능한 이중 어텐션으로 융합한다. [PDF 3쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Fan_RIOcc_Efficient_Cross-Modal_Fusion_Transformer_with_Collaborative_Feature_Refinement_for_ICCV_2025_paper.pdf#page=3) · [PDF 4쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Fan_RIOcc_Efficient_Cross-Modal_Fusion_Transformer_with_Collaborative_Feature_Refinement_for_ICCV_2025_paper.pdf#page=4) · [PDF 5쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Fan_RIOcc_Efficient_Cross-Modal_Fusion_Transformer_with_Collaborative_Feature_Refinement_for_ICCV_2025_paper.pdf#page=5)
+- Occ3D-nuScenes와 nuScenes-Occupancy의 클래스별 점유 성능을 비교하고 센서별 구성의 영향을 분석했다. [PDF 6쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Fan_RIOcc_Efficient_Cross-Modal_Fusion_Transformer_with_Collaborative_Feature_Refinement_for_ICCV_2025_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Fan_RIOcc_Efficient_Cross-Modal_Fusion_Transformer_with_Collaborative_Feature_Refinement_for_ICCV_2025_paper.pdf#page=7) · [PDF 8쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Fan_RIOcc_Efficient_Cross-Modal_Fusion_Transformer_with_Collaborative_Feature_Refinement_for_ICCV_2025_paper.pdf#page=8)
 
 ## Evaluation Scope
 

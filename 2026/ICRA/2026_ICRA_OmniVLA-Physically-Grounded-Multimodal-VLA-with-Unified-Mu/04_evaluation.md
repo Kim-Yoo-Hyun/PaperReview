@@ -6,7 +6,7 @@
 
 ## Evaluation in One Sentence
 
-PDF body evaluation/result cue (p. 6 (IV. EVALUATION), p. 6 (IV. EVALUATION), p. 5 (IV. EVALUATION), p. 5 (IV. EVALUATION), p. 7 (Figure/Table caption), p. 7 (Figure/Table caption)): On average, OmniVLA outperforms VLA-RGB model and VLA-RAW model by 59% and 28% in success rate respectively.
+조작용 OmniVLA의 표 I에서 열·레이더·소리 과제의 평균 성공률은 84%, RGB 단독은 25%, 원시 센서 입력은 56%다. 표에 표시된 평균의 차이는 각각 59·28퍼센트포인트다. [PDF 6쪽](https://arxiv.org/pdf/2511.01210v3#page=6)
 
 ## Evaluation Body Digest
 
@@ -16,7 +16,7 @@ PDF body evaluation/result cue (p. 6 (IV. EVALUATION), p. 6 (IV. EVALUATION), p.
 - **p. 5 / IV. EVALUATION - extractive body cue:** We evaluate OmniVLA with a real-world prototype across several sensor-related manipulation tasks.
 - **p. 5 / IV. EVALUATION - extractive body cue:** We evaluate model performance using task success rates computed over 25 independent trials per task with random object placement, complemented by task scores: 0.5 score ...
 - **p. 6 / IV. EVALUATION - extractive body cue:** Success Rate Task Score Base Model Thermal mmWave Acoustic Average Thermal mmWave Acoustic Average SmolVLA 80% 84% 88% 84% 0.91 0.88 0.92 0.90 Pi0 68% ...
-- **p. 6 / IV. EVALUATION - extractive body cue:** On average, OmniVLA outperforms VLA-RGB model and VLA-RAW model by 59% and 28% in success rate respectively.
+- **p. 6 / IV. EVALUATION - extractive body cue:** 표 I의 평균 성공률 차이는 RGB 단독 대비 59퍼센트포인트, 원시 센서 입력 대비 28퍼센트포인트다. [PDF 6쪽](https://arxiv.org/pdf/2511.01210v3#page=6)
 - **p. 7 / Figure/Table caption - extractive body cue:** Fig. 6: Success rates over number of demonstration episodes. Thermal mmWave Acoustic 0 20 40 60
 
 ## Evaluation Type and Scope
@@ -32,7 +32,7 @@ PDF body evaluation/result cue (p. 6 (IV. EVALUATION), p. 6 (IV. EVALUATION), p.
 
 | Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
-| IV. EVALUATION | EMPIRICAL / REAL-ROBOT OR HARDWARE | On average, OmniVLA outperforms VLA-RGB model and VLA-RAW model by 59% and 28% in success rate respectively. | p. 6 (IV. EVALUATION) |
+| IV. EVALUATION | EMPIRICAL / REAL-ROBOT OR HARDWARE | 표 I의 평균 성공률 차이는 RGB 단독 대비 59퍼센트포인트, 원시 센서 입력 대비 28퍼센트포인트다. [PDF 6쪽](https://arxiv.org/pdf/2511.01210v3#page=6) | p. 6 (IV. EVALUATION) |
 | IV. EVALUATION | EMPIRICAL / REAL-ROBOT OR HARDWARE | As shown in Figure 6, OmniVLA constantly outperforms VLA-RAW model, achieving similar success rate with only around 50% of the training episodes. | p. 6 (IV. EVALUATION) |
 | IV. EVALUATION | EMPIRICAL / REAL-ROBOT OR HARDWARE | We evaluate model performance using task success rates computed over 25 independent trials per task with random object placement, complemented by task scores: 0.5 ... | p. 5 (IV. EVALUATION) |
 | IV. EVALUATION | EMPIRICAL / REAL-ROBOT OR HARDWARE | OmniVLA significantly outperforms RGB-only VLA models and VLA models trained with unprocessed sensor images. | p. 5 (IV. EVALUATION) |
@@ -72,7 +72,7 @@ PDF body evaluation/result cue (p. 6 (IV. EVALUATION), p. 6 (IV. EVALUATION), p.
 |---|---|---|
 | We evaluate model performance using task success rates computed over 25 independent trials per task with random object placement, complemented by task scores: 0.5 ... | definition/direction/unit from same section | p. 5 (IV. EVALUATION) |
 | Success Rate Task Score Base Model Thermal mmWave Acoustic Average Thermal mmWave Acoustic Average SmolVLA 80% 84% 88% 84% 0.91 0.88 0.92 0.90 Pi0 ... | definition/direction/unit from same section | p. 6 (IV. EVALUATION) |
-| On average, OmniVLA outperforms VLA-RGB model and VLA-RAW model by 59% and 28% in success rate respectively. | definition/direction/unit from same section | p. 6 (IV. EVALUATION) |
+| 표 I의 평균 성공률 차이는 RGB 단독 대비 59퍼센트포인트, 원시 센서 입력 대비 28퍼센트포인트다. [PDF 6쪽](https://arxiv.org/pdf/2511.01210v3#page=6) | definition/direction/unit from same section | p. 6 (IV. EVALUATION) |
 | Fig. 6: Success rates over number of demonstration episodes. Thermal mmWave Acoustic 0 20 40 60 | definition/direction/unit from same section | p. 7 (Figure/Table caption) |
 | Fig. 7: Success rates when adapting to unseen tasks. We compare the pretrained OmniVLA model with two base- lines, OmniVLA-Base (no pretraining), Pretrained VLA- ... | definition/direction/unit from same section | p. 7 (Figure/Table caption) |
 | 5: Examples of Robotic Manipulation Task Completion over Time. | definition/direction/unit from same section | p. 5 (IV. EVALUATION) |
@@ -111,7 +111,7 @@ PDF body evaluation/result cue (p. 6 (IV. EVALUATION), p. 6 (IV. EVALUATION), p.
 
 | Claim or target | Result/condition cue | Evidence strength | Anchor |
 |---|---|---|---|
-| We present OmniVLA, the first multisensory VLA that integrates novel sensing modalities to enable beyond-RGB robotic perception and manipulation by unifying heterogeneous sensors into ... | On average, OmniVLA outperforms VLA-RGB model and VLA-RAW model by 59% and 28% in success rate respectively. | PDF body cue; verify exact table/figure and matched conditions | p. 6 (IV. EVALUATION), p. 6 (IV. EVALUATION), p. 5 (IV. EVALUATION), p. 5 (IV. EVALUATION), p. 7 (Figure/Table caption), p. 7 (Figure/Table caption) |
+| We present OmniVLA, the first multisensory VLA that integrates novel sensing modalities to enable beyond-RGB robotic perception and manipulation by unifying heterogeneous sensors into ... | 표 I의 평균 성공률 차이는 RGB 단독 대비 59퍼센트포인트, 원시 센서 입력 대비 28퍼센트포인트다. [PDF 6쪽](https://arxiv.org/pdf/2511.01210v3#page=6) | PDF body cue; verify exact table/figure and matched conditions | p. 6 (IV. EVALUATION), p. 6 (IV. EVALUATION), p. 5 (IV. EVALUATION), p. 5 (IV. EVALUATION), p. 7 (Figure/Table caption), p. 7 (Figure/Table caption) |
 | Primary metric/result | As shown in Figure 6, OmniVLA constantly outperforms VLA-RAW model, achieving similar success rate with only around 50% of the training episodes. | numeric claim only at cited anchor | p. 6 (IV. EVALUATION) |
 
 - Numeric sentences retained from the body:

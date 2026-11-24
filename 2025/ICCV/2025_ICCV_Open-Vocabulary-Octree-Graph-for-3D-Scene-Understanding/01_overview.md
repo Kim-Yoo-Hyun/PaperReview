@@ -15,13 +15,11 @@
 - Full-text retrieval: https://openaccess.thecvf.com/content/ICCV2025/papers/Wang_Open-Vocabulary_Octree-Graph_for_3D_Scene_Understanding_ICCV_2025_paper.pdf
 - Code/Project: https://github.com/yifeisu/OV-Octree-Graph
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 한 줄 요약과 핵심 기여 두 개를 각 문장에 인용한 판본의 원문에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Point clouds are unordered discrete coordinates that require considerable storage space, making existing methods inefficient to deploy on embodied agents with limited storage resources.
-
-방법 관련 발췌 — Our contributions are summarized as follows. • We propose the Octree-Graph for open-vocabulary 3D scene understanding, which efficiently depicts objects' occupancies, semantics, and relations, benefiting several downstream tasks. • We p ...
+Octree-Graph는 물체별 적응형 옥트리를 그래프 노드로, 물체 사이의 공간 관계를 간선으로 저장한다. [PDF 1쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Wang_Open-Vocabulary_Octree-Graph_for_3D_Scene_Understanding_ICCV_2025_paper.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** Our contributions are summarized as follows. • We propose the Octree-Graph for open-vocabulary 3D scene understanding, which efficiently depicts objects' occupancies, semantics, and relations, benefiting ...
-- **p. 2 / 1. Introduction - extractive body cue:** To alleviate these problems, we propose Octree-Graph as shown in Fig.
-- **p. 3 / 3.3. Chronological Group-wise Segment Merging - extractive body cue:** To this end, we propose a Chronological Group-wise Segment Merging (CGSM) strategy with semantic-guided under-segment filtering and a dynamic threshold decay strategy.
-- **p. 4 / 3.5. Octree-Graph Construction and Applications - extractive body cue:** The node Ni consists of correlated semantics ns i (e.g., captions and features), center nc i, and adaptive-octree no i .
-- **p. 4 / 3.5. Octree-Graph Construction and Applications - extractive body cue:** Furthermore, we propose an adaptive-octree to depict the occupancy information of each object, which acts as a node of the Octree-Graph.
-- **p. 6 / Figure/Table caption - extractive body cue:** Table 4. Path planning results on HM3DSem. SR denotes success rate (%). s is the threshold within which the distance between the navigation endpoint and ...
-- **p. 7 / 4.4. Ablation Studies - extractive body cue:** By contrast, our IFA achieves an improvement of 1.8% mIoU over Row 1.
-- **p. 6 / 4.3. Quantitative Comparison - extractive body cue:** It can be seen that our method significantly outperforms exMethod SR(s=1.0m) SR(s=0.5m) SR(s=0.25m) HOV-SG [44] 55.25 46.75 32.16 Ours 97.88 96.88 96.38 Table 4.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 시간 순서대로 관측한 분할 영역과 특징을 합쳐 3차원 인스턴스를 만들고 그 형상에 맞춰 점유 공간을 표현했다. [PDF 3쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Wang_Open-Vocabulary_Octree-Graph_for_3D_Scene_Understanding_ICCV_2025_paper.pdf#page=3) · [PDF 4쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Wang_Open-Vocabulary_Octree-Graph_for_3D_Scene_Understanding_ICCV_2025_paper.pdf#page=4) · [PDF 5쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Wang_Open-Vocabulary_Octree-Graph_for_3D_Scene_Understanding_ICCV_2025_paper.pdf#page=5)
+- 열린 어휘의 3차원 의미 분할과 구성요소를 제거한 실험을 통해 장면 표현을 평가했다. [PDF 5쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Wang_Open-Vocabulary_Octree-Graph_for_3D_Scene_Understanding_ICCV_2025_paper.pdf#page=5) · [PDF 6쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Wang_Open-Vocabulary_Octree-Graph_for_3D_Scene_Understanding_ICCV_2025_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Wang_Open-Vocabulary_Octree-Graph_for_3D_Scene_Understanding_ICCV_2025_paper.pdf#page=7)
 
 ## Evaluation Scope
 

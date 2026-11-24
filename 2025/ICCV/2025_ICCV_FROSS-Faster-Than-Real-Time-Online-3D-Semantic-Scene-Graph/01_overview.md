@@ -15,13 +15,11 @@
 - Full-text retrieval: https://openaccess.thecvf.com/content/ICCV2025/papers/Hou_FROSS_Faster-Than-Real-Time_Online_3D_Semantic_Scene_Graph_Generation_from_RGB-D_ICCV_2025_paper.pdf
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (5 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (5 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 한 줄 요약과 핵심 기여 두 개를 각 문장에 인용한 판본의 원문에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — FROSS: Faster-than-Real-Time Online 3D Semantic Scene Graph Generation from RGB-D Images Supplementary Material
-
-방법 관련 발췌 — In this section, we present the evaluation of two models: the original EGTR [12] 2D SG generation model and our modified version employed in FROSS, RT-DETR+EGTR.
+FROSS는 순차 RGB-D 영상에서 얻은 2차원 장면 그래프를 3차원으로 올려 물체와 관계를 온라인으로 갱신한다. [PDF 1쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Hou_FROSS_Faster-Than-Real-Time_Online_3D_Semantic_Scene_Graph_Generation_from_RGB-D_ICCV_2025_paper.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -47,15 +45,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 7.3. 2D Scene Graph Generation Performance - extractive body cue:** In this section, we present the evaluation of two models: the original EGTR [12] 2D SG generation model and our modified version employed in FROSS, ...
-- **p. 2 / 7.3. 2D Scene Graph Generation Performance - extractive body cue:** The above observations reveal that the integration of RT-DETR as the object detection backbone results in substantial processing efficiency improvements, with only a slight impact ...
-- **p. 2 / Figure/Table caption - extractive body cue:** Table 9. For these evaluations, the models tested on Repli- caSSG received training on the Visual Genome dataset, whereas the models tested on the other ...
-- **p. 1 / 7.1. Object and Predicate Performance per Class - extractive body cue:** FROSS's ability to capture complex visual features leads to significantly higher performance in both object recall and mean recall.
-- **p. 1 / 7.1. Object and Predicate Performance per Class - extractive body cue:** FROSS's predicate performance is significantly affected by class imbalance, excelling in relationship classes such as attached to, build in, and standing on, while performing poorly ...
-- **p. 3 / Figure/Table caption - extractive body cue:** Table 10. Per-class object detection performance in 2D SG generation with RT-DETR (AP@50).
-- **p. 3 / 8. Statistics of the ReplicaSSG Dataset - extractive body cue:** Per-class performance comparison of FROSS on the ReplicaSSG dataset for object and predicate recall (%).
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 물체를 3차원 Gaussian 분포로 나타내고 다른 프레임에서 관측한 물체와 관계를 기존 그래프에 연결한다. [PDF 3쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Hou_FROSS_Faster-Than-Real-Time_Online_3D_Semantic_Scene_Graph_Generation_from_RGB-D_ICCV_2025_paper.pdf#page=3) · [PDF 4쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Hou_FROSS_Faster-Than-Real-Time_Online_3D_Semantic_Scene_Graph_Generation_from_RGB-D_ICCV_2025_paper.pdf#page=4)
+- Replica에 물체 간 관계 주석을 추가한 ReplicaSSG를 만들고 3DSSG와 함께 그래프 정확도와 처리 시간을 평가했다. [PDF 5쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Hou_FROSS_Faster-Than-Real-Time_Online_3D_Semantic_Scene_Graph_Generation_from_RGB-D_ICCV_2025_paper.pdf#page=5) · [PDF 7쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Hou_FROSS_Faster-Than-Real-Time_Online_3D_Semantic_Scene_Graph_Generation_from_RGB-D_ICCV_2025_paper.pdf#page=7) · [PDF 8쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Hou_FROSS_Faster-Than-Real-Time_Online_3D_Semantic_Scene_Graph_Generation_from_RGB-D_ICCV_2025_paper.pdf#page=8)
 
 ## Evaluation Scope
 

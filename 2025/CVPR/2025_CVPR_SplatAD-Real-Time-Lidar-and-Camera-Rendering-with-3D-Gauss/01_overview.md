@@ -15,13 +15,11 @@
 - Full-text retrieval: https://openaccess.thecvf.com/content/CVPR2025/papers/Hess_SplatAD_Real-Time_Lidar_and_Camera_Rendering_with_3D_Gaussian_Splatting_CVPR_2025_paper.pdf
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 한 줄 요약과 핵심 기여 두 개를 각 문장에 인용한 판본의 원문에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Nevertheless, 3DGS-based methods for the AD setting [7, 43, 51] inherit the limitation of only being able to render camera data, overlooking the lidar modality.
-
-방법 관련 발췌 — To summarize, our contributions are as follows: • We propose the first method for efficient lidar rendering using 3D Gaussians, introducing custom CUDA-accelerated algorithms for rasterizing sparse point clouds in spherical coordinates. ...
+SplatAD는 실제 주행 기록으로 만든 동적 3차원 장면에서 카메라 관측과 LiDAR 관측을 함께 렌더링한다. [PDF 1쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Hess_SplatAD_Real-Time_Lidar_and_Camera_Rendering_with_3D_Gaussian_Splatting_CVPR_2025_paper.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** To summarize, our contributions are as follows: • We propose the first method for efficient lidar rendering using 3D Gaussians, introducing custom CUDA-accelerated algorithms for ...
-- **p. 2 / 1. Introduction - extractive body cue:** To overcome these challenges, we introduce SplatAD, a novel view synthesis method that unifies camera and lidar rendering and is designed for real-time rendering of ...
-- **p. 3 / 3. Method - extractive body cue:** Our method projects 3D Gaussians with associated feature vectors onto the corresponding sensor modalities (camera and lidar) and employs sensor-specific tiling to match their distinct ...
-- **p. 3 / 3.2. Camera rendering - extractive body cue:** While we retain 3DGS's high-level steps-projection and view frustum culling, tile-assignment, depth sorting, and tilebased rasterization-we introduce key adaptations to better model the unique characteristics ...
-- **p. 5 / 3.3. Lidar rendering - extractive body cue:** done in our method by modifying the projection accordingly.
-- **p. 7 / Figure/Table caption - extractive body cue:** Figure 4. Removing our rolling shutter modeling compensation leads to inaccurate geometries and inconsistencies in the learning. We measure speed using resolution-agnostic megapixels per second. ...
-- **p. 7 / 4.1. Image rendering - extractive body cue:** SplatAD achieves SOTA results while rendering ×10 faster than the previous best method.
-- **p. 8 / 4.3. Ablations - extractive body cue:** Last, we note that MCMC [16] and EWA antialiasing [47, 52] both improve our performance, with the antialiasing having the largest impact on perceptual quality ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 카메라의 롤링 셔터와 LiDAR의 반사 강도·누락 광선을 센서별 렌더링 과정에 반영했다. [PDF 3쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Hess_SplatAD_Real-Time_Lidar_and_Camera_Rendering_with_3D_Gaussian_Splatting_CVPR_2025_paper.pdf#page=3) · [PDF 4쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Hess_SplatAD_Real-Time_Lidar_and_Camera_Rendering_with_3D_Gaussian_Splatting_CVPR_2025_paper.pdf#page=4) · [PDF 5쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Hess_SplatAD_Real-Time_Lidar_and_Camera_Rendering_with_3D_Gaussian_Splatting_CVPR_2025_paper.pdf#page=5)
+- 주행 데이터에서 새로운 시점과 재구성된 시점의 RGB·LiDAR 품질 및 렌더링 속도를 구분해 평가했다. [PDF 6쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Hess_SplatAD_Real-Time_Lidar_and_Camera_Rendering_with_3D_Gaussian_Splatting_CVPR_2025_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Hess_SplatAD_Real-Time_Lidar_and_Camera_Rendering_with_3D_Gaussian_Splatting_CVPR_2025_paper.pdf#page=7) · [PDF 8쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Hess_SplatAD_Real-Time_Lidar_and_Camera_Rendering_with_3D_Gaussian_Splatting_CVPR_2025_paper.pdf#page=8)
 
 ## Evaluation Scope
 

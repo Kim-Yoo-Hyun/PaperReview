@@ -15,13 +15,11 @@
 - Full-text retrieval: https://arxiv.org/pdf/1801.07791
 - Code/Project: https://github.com/yangyanli/PointCNN
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (14 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (14 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 한 줄 요약과 핵심 기여 두 개를 각 문장에 인용한 판본의 원문에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — (1b) We illustrate the problems and challenges of applying convolutions on point clouds in Figure 1.
-
-방법 관련 발췌 — In this paper, we propose to learn a K × K X-transformation for the coordinates of K input points (p1, p2, ..., pK), with a multilayer perceptron [39], i.e., X = MLP(p1, ...
+PointCNN은 순서가 없는 이웃 점에서 특징의 가중치와 배열을 학습한 뒤 합성곱을 적용해 점군을 표현한다. [PDF 1쪽](https://proceedings.neurips.cc/paper_files/paper/2018/file/f5f8590cd58a54e94377e6ae2eded4d9-Paper.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -53,16 +51,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1 Introduction - extractive body cue:** In this paper, we propose to learn a K × K X-transformation for the coordinates of K input points (p1, p2, ..., pK), with a ...
-- **p. 1 / Abstract - extractive body cue:** We present a simple and general framework for feature learning from point clouds.
-- **p. 1 / Abstract - extractive body cue:** To address these problems, we propose to learn an X-transformation from the input points to simultaneously promote two causes: the first is the weighting of ...
-- **p. 2 / 1 Introduction - extractive body cue:** We show our results on multiple challenging benchmark datasets and tasks in Section 4, together with ablation experiments and visualizations for a better understanding of ...
-- **p. 14 / Figure/Table caption - extractive body cue:** Table 3: Segmentation result comparisons on the S3DIS [2] Area 5 in overall accuracy (OA, %), micro-averaged accuracy (mAcc, %), micro-averaged IoU (mIoU, %) and ...
-- **p. 7 / 4 Experiments - extractive body cue:** PointCNN outperforms PointNet++ on both datasets, with a more prominent advantage on Quick Draw (25M data samples), which is significantly larger than TU-Berlin (0.02M data ...
-- **p. 6 / 4 Experiments - extractive body cue:** Note that PointCNN achieved top performance on both ModelNet40 and ScanNet.
-- **p. 7 / 4 Experiments - extractive body cue:** For MNIST data, PointCNN achieved comparable performance with other methods, indicating its effective learning of the digits' shape information.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 국소 점 좌표에서 학습한 X 변환으로 특징을 재배열·가중해 근방의 형상을 반영하는 연산을 구성한다. [PDF 2쪽](https://proceedings.neurips.cc/paper_files/paper/2018/file/f5f8590cd58a54e94377e6ae2eded4d9-Paper.pdf#page=2) · [PDF 3쪽](https://proceedings.neurips.cc/paper_files/paper/2018/file/f5f8590cd58a54e94377e6ae2eded4d9-Paper.pdf#page=3) · [PDF 4쪽](https://proceedings.neurips.cc/paper_files/paper/2018/file/f5f8590cd58a54e94377e6ae2eded4d9-Paper.pdf#page=4)
+- 3차원 물체 분류와 부품·장면 분할을 평가하고 X 변환을 바꾼 조건과 비교했다. [PDF 6쪽](https://proceedings.neurips.cc/paper_files/paper/2018/file/f5f8590cd58a54e94377e6ae2eded4d9-Paper.pdf#page=6) · [PDF 7쪽](https://proceedings.neurips.cc/paper_files/paper/2018/file/f5f8590cd58a54e94377e6ae2eded4d9-Paper.pdf#page=7) · [PDF 8쪽](https://proceedings.neurips.cc/paper_files/paper/2018/file/f5f8590cd58a54e94377e6ae2eded4d9-Paper.pdf#page=8)
 
 ## Evaluation Scope
 

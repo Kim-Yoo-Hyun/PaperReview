@@ -15,13 +15,11 @@
 - Full-text retrieval: https://arxiv.org/pdf/1812.05784
 - Code/Project: https://github.com/nutonomy/second.pytorch
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (9 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (9 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 한 줄 요약과 핵심 기여 두 개를 각 문장에 인용한 판본의 원문에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Deploying autonomous vehicles (AVs) in urban environments poses a difficult technological challenge.
-
-방법 관련 발췌 — Both network consists of three blocks, Block1(S, 4, C), Block2(2S, 6, 2C), and Block3(4S, 6, 4C).
+PointPillars는 LiDAR 점을 수직 기둥별로 인코딩해 2차원 합성곱 검출기에서 3차원 물체 상자를 예측한다. [PDF 1쪽](https://openaccess.thecvf.com/content_CVPR_2019/papers/Lang_PointPillars_Fast_Encoders_for_Object_Detection_From_Point_Clouds_CVPR_2019_paper.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -52,16 +50,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 5 / 3.1. Network - extractive body cue:** Both network consists of three blocks, Block1(S, 4, C), Block2(2S, 6, 2C), and Block3(4S, 6, 4C).
-- **p. 5 / 3.2. Loss - extractive body cue:** The total localization loss is: Lloc = X b∈(x,y,z,w,l,h,θ) SmoothL1 (∆b) Since the angle localization loss cannot distinguish flipped boxes, we use a softmax classification ...
-- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Bird's eye view performance vs speed for our proposed PointPillars, PP method on the KITTI [5] test set. Lidar-only methods drawn as blue ...
-- **p. 6 / 5. Results - extractive body cue:** Compared to lidar-only methods, PointPillars achieves better results across all classes and difficulty strata except for the easy car stratum.
-- **p. 6 / 5. Results - extractive body cue:** It also outperforms fusion based methods on cars and cyclists.
-- **p. 8 / Figure/Table caption - extractive body cue:** Figure 5. BEV detection performance (mAP) vs speed (Hz) on the KITTI [5] val set across pedestrians, bicycles and cars. Blue cir- cles indicate lidar ...
-- **p. 5 / 4.2. Settings - extractive body cue:** This provides similar performance compared to rotational NMS, but is much faster.
-- **p. 4 / Figure/Table caption - extractive body cue:** Figure 3. Qualitative analysis of KITTI results. We show a bird's-eye view of the lidar point cloud (top), as well as the 3D bounding boxes ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 각 기둥의 점을 PointNet 계열 층으로 집계하고 특징을 조감도 의사 영상에 배치해 검출 백본으로 처리한다. [PDF 3쪽](https://openaccess.thecvf.com/content_CVPR_2019/papers/Lang_PointPillars_Fast_Encoders_for_Object_Detection_From_Point_Clouds_CVPR_2019_paper.pdf#page=3) · [PDF 4쪽](https://openaccess.thecvf.com/content_CVPR_2019/papers/Lang_PointPillars_Fast_Encoders_for_Object_Detection_From_Point_Clouds_CVPR_2019_paper.pdf#page=4) · [PDF 5쪽](https://openaccess.thecvf.com/content_CVPR_2019/papers/Lang_PointPillars_Fast_Encoders_for_Object_Detection_From_Point_Clouds_CVPR_2019_paper.pdf#page=5)
+- KITTI에서 조감도·3차원 검출 정확도와 실행 속도를 비교하고 기둥 인코딩 선택의 영향을 측정했다. [PDF 6쪽](https://openaccess.thecvf.com/content_CVPR_2019/papers/Lang_PointPillars_Fast_Encoders_for_Object_Detection_From_Point_Clouds_CVPR_2019_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content_CVPR_2019/papers/Lang_PointPillars_Fast_Encoders_for_Object_Detection_From_Point_Clouds_CVPR_2019_paper.pdf#page=7) · [PDF 8쪽](https://openaccess.thecvf.com/content_CVPR_2019/papers/Lang_PointPillars_Fast_Encoders_for_Object_Detection_From_Point_Clouds_CVPR_2019_paper.pdf#page=8)
 
 ## Evaluation Scope
 

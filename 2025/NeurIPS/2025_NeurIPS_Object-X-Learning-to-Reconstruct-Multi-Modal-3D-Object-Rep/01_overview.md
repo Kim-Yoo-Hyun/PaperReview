@@ -16,13 +16,11 @@
 - Full-text retrieval at original review: https://arxiv.org/pdf/2506.04789
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (26 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (26 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 한 줄 요약과 핵심 기여 두 개를 각 문장에 인용한 판본의 원문에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, a key limitation is that these embeddings typically lack a generative or reconstructive capability; they cannot be decoded back into explicit object geometry or appearance.
-
-방법 관련 발췌 — 3 Learning Versatile Object Embeddings We propose Object-X, taking a reconstructed scene with a 3D object segmentation as input and learning a compact and descriptive embedding for each object from their associated ...
+Object-X는 영상·점군·텍스트로부터 물체별 임베딩을 만들고 이를 3차원 재구성이나 위치 식별에 다시 사용한다. [PDF 1쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/259774803d1f4302cb0a1eff47562888-Paper-Conference.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -56,16 +54,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 4 / 1 Introduction - extractive body cue:** 3 Learning Versatile Object Embeddings We propose Object-X, taking a reconstructed scene with a 3D object segmentation as input and learning a compact and descriptive ...
-- **p. 5 / 1 Introduction - extractive body cue:** Specifically, we introduce a decompression function fdecomp that maps w back to a predicted ˆz = {ˆzi, pi}L i=1.
-- **p. 10 / Method - extractive body cue:** Our method, along with SceneGraphLoc and the recent CrossOver [23], uses a ViT to extract per-patch object embeddings from the query image.
-- **p. 10 / Method - extractive body cue:** Unlike SGAligner, explicitly trained for this task using point cloud and object-level modalities, our method relies solely on the proposed Object-X embedding trained with reconstruction ...
-- **p. 3 / 1 Introduction - extractive body cue:** The embedding is trained with a masked mean squared error loss to ensure accurate reconstruction of the SLat, which in turn enables decoding into 3D ...
-- **p. 8 / 4 Experiments - extractive body cue:** While Object-X achieves lower SSIM and PSNR compared to 3DGS (12V), it significantly outperforms all methods in geometric accuracy.
-- **p. 8 / 4 Experiments - extractive body cue:** Object-X produces significantly smoother renderings and higher-quality meshes, whereas meshes reconstructed by baselines exhibit strong artifacts and fail to achieve accurate geometry.
-- **p. 9 / Figure/Table caption - extractive body cue:** Figure 5: Comparison of (a) object reconstruction and (b) coarse localization performance using 3DGS and Object-X across tasks and input modalities. highest geometric accuracy by ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 복셀 격자에서 양식별 관측을 공간적으로 대응시킨 뒤 물체 특징으로 집계해 Gaussian 기반 형상·외관을 복원한다. [PDF 3쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/259774803d1f4302cb0a1eff47562888-Paper-Conference.pdf#page=3) · [PDF 4쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/259774803d1f4302cb0a1eff47562888-Paper-Conference.pdf#page=4) · [PDF 5쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/259774803d1f4302cb0a1eff47562888-Paper-Conference.pdf#page=5) · [PDF 6쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/259774803d1f4302cb0a1eff47562888-Paper-Conference.pdf#page=6)
+- 재구성의 시각·기하 품질과 물체 표현을 이용한 장면 정렬·위치 추정을 평가하고 저장 공간을 비교했다. [PDF 7쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/259774803d1f4302cb0a1eff47562888-Paper-Conference.pdf#page=7) · [PDF 8쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/259774803d1f4302cb0a1eff47562888-Paper-Conference.pdf#page=8) · [PDF 9쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/259774803d1f4302cb0a1eff47562888-Paper-Conference.pdf#page=9) · [PDF 10쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/259774803d1f4302cb0a1eff47562888-Paper-Conference.pdf#page=10)
 
 ## Evaluation Scope
 

@@ -15,13 +15,11 @@
 - Full-text retrieval: https://openaccess.thecvf.com/content/ICCV2025/papers/Zhu_PASG_A_Closed-Loop_Framework_for_Automated_Geometric_Primitive_Extraction_and_ICCV_2025_paper.pdf
 - Code/Project: not identified
 - Paper type: system
-- Source audit: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 한 줄 요약과 핵심 기여 두 개를 각 문장에 인용한 판본의 원문에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — This limitation stems from insufficient semantic understanding of object canonical spaces-for instance, manually annotated "handle centers" for teapots lack contextual semantics (such as functional descriptions and usage scenarios), lea ...
-
-방법 관련 발췌 — Our contributions are as follows: • We propose a novel framework that automatically annotates hierarchical semantics for object interaction primitives, bridging the gap between low-level geometric features and high-level task semantics. ...
+PASG는 영상에서 물체의 점과 축 같은 기하 요소를 추출한 뒤 지시가 요구하는 기능과 연결해 조작을 계획한다. [PDF 1쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Zhu_PASG_A_Closed-Loop_Framework_for_Automated_Geometric_Primitive_Extraction_and_ICCV_2025_paper.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** Our contributions are as follows: • We propose a novel framework that automatically annotates hierarchical semantics for object interaction primitives, bridging the gap between low-level ...
-- **p. 2 / 1. Introduction - extractive body cue:** To address these challenges, as shown in Fig 1, we propose PASG, a closed-loop framework establishing the mapping between spatial primitives and functional semantics.
-- **p. 3 / Method - extractive body cue:** OmniManip employs computational constraint optimization and scene rendering for VLM validation, while our method directly detects annotation-primitive misalignment for efficient self-correction. addresses this limitation by ...
-- **p. 5 / 3.3. Task-Oriented Semantic Annotation - extractive body cue:** Experiments demonstrate that our method achieves a 98% matching success rate on our dataset and effectively mitigates error propagation from poor segmentation.
-- **p. 6 / 3.4. Semantic-guide Reasoning in Manipulation - extractive body cue:** Beyond generating geometrically annotated object datasets, our framework facilitates the integration of spatial semantics into manipulation tasks.
-- **p. 7 / 4.2. Manipulation Task Evaluation - extractive body cue:** Results of this comparison are summarized in Table 2, the PASG-based policy achieves competitive performance compared to manual annotations, and even outperforms them in tasks ...
-- **p. 8 / 4.3. Object-based Spatial-Semantic Reasoning - extractive body cue:** As shown in Fig 5, with only 5% data, the model achieved an absolute accuracy improvement of approximately 10% on both in-distribution and out-of-distribution test ...
-- **p. 7 / Figure/Table caption - extractive body cue:** Table 2. Task success rates (%) for different manipulation scenarios. Bold highlights where PASG outperforms human annotations. Qualitative Results A key advantage of PASG is ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 기하 특징으로 상호작용에 필요한 점·축 후보를 구성하고 시각언어모델로 후보에 과제별 의미를 부여한다. [PDF 3쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Zhu_PASG_A_Closed-Loop_Framework_for_Automated_Geometric_Primitive_Extraction_and_ICCV_2025_paper.pdf#page=3) · [PDF 4쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Zhu_PASG_A_Closed-Loop_Framework_for_Automated_Geometric_Primitive_Extraction_and_ICCV_2025_paper.pdf#page=4) · [PDF 5쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Zhu_PASG_A_Closed-Loop_Framework_for_Automated_Geometric_Primitive_Extraction_and_ICCV_2025_paper.pdf#page=5)
+- 공간 의미 추론 자료와 실물 조작을 통해 자동으로 찾은 기하 요소와 수작업 주석을 사용한 조건을 비교했다. [PDF 6쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Zhu_PASG_A_Closed-Loop_Framework_for_Automated_Geometric_Primitive_Extraction_and_ICCV_2025_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Zhu_PASG_A_Closed-Loop_Framework_for_Automated_Geometric_Primitive_Extraction_and_ICCV_2025_paper.pdf#page=7) · [PDF 8쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Zhu_PASG_A_Closed-Loop_Framework_for_Automated_Geometric_Primitive_Extraction_and_ICCV_2025_paper.pdf#page=8)
 
 ## Evaluation Scope
 

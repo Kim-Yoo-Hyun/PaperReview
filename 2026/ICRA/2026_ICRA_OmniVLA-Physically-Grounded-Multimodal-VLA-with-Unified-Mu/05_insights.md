@@ -35,7 +35,7 @@
 | Claim target | Body evidence | Anchor |
 |---|---|---|
 | Mechanism/contribution | We present OmniVLA, the first multisensory VLA that integrates novel sensing modalities to enable beyond-RGB robotic perception and manipulation by unifying heterogeneous sensors into an image-native space. | p. 2 (I. INTRODUCTION), p. 2 (I. INTRODUCTION) |
-| Reported outcome | On average, OmniVLA outperforms VLA-RGB model and VLA-RAW model by 59% and 28% in success rate respectively. | p. 6 (IV. EVALUATION), p. 6 (IV. EVALUATION) |
+| Reported outcome | 표 I의 평균 성공률 차이는 RGB 단독 대비 59퍼센트포인트, 원시 센서 입력 대비 28퍼센트포인트다. [PDF 6쪽](https://arxiv.org/pdf/2511.01210v3#page=6) | p. 6 (IV. EVALUATION), p. 6 (IV. EVALUATION) |
 | Failure/limitation | Fig. 3: Sensor Data Processing Illustration. We propose a general sensor data processing pipeline applicable to various sensors, including (a) thermal camera, (b) mmWave radar, and (c) acoustic microphone array, by overlaying ... | p. 4 (Figure/Table caption), p. 5 (III. SYSTEM DESIGN) |
 
 ## Researcher interpretation

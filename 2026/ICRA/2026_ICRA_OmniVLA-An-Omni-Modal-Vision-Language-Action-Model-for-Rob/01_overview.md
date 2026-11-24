@@ -15,13 +15,11 @@
 - Full-text retrieval: https://arxiv.org/pdf/2509.19480
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (9 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (9 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 한 줄 요약과 핵심 기여 두 개를 각 문장에 인용한 판본의 원문에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, prior work in robot navigation typically trains policies with single modalities based on narrow applications.
-
-방법 관련 발췌 — Moreover, our method allows the user to instruct the robot with multiple modalities, making it more user friendly and directly allowing the policy to leverage more than one kind of information about ...
+내비게이션용 OmniVLA는 언어, 목표 장면 사진, 2차원 목표 자세 중 주어진 정보를 조합해 이동 정책을 조건화한다. [PDF 1쪽](https://arxiv.org/pdf/2509.19480v1#page=1)
 
 ## Problem and Motivation
 
@@ -53,15 +51,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / I. INTRODUCTION - extractive body cue:** Moreover, our method allows the user to instruct the robot with multiple modalities, making it more user friendly and directly allowing the policy to leverage ...
-- **p. 1 / I. INTRODUCTION - extractive body cue:** In this study, we propose a family of Omni-Modal VisionLanguage-Action Models (OmniVLA) for autonomous navigation that can ingest goals expressed in multiple modalities, leveraging information ...
-- **p. 5 / Method - extractive body cue:** To ensure fair comparison with our approach, which relies solely on a single RGB camera without depth or LiDAR, we estimate depth using Depth360 [37] ...
-- **p. 1 / I. INTRODUCTION - extractive body cue:** By training on omni-modal goals, we aim to enable stronger and more flexible policies, ultimately acquiring a foundation model that exhibits high adaptability to novel ...
-- **p. 7 / Figure/Table caption - extractive body cue:** Fig. 6: Deploying OmniVLA on multiple embodi- ments. We deploy our policy on the Vizbot and Unitree Go1 robots. Our policy can follow natural language ...
-- **p. 3 / Dataset - extractive body cue:** Naturally, we get coverage over all modalities and datasets while using this dropout mechanism to improve training stability.
-- **p. 3 / Dataset - extractive body cue:** Training on these mixed-modality batches encourages the model to better represent goal information, yielding improved representations for generalization and fine-tuning.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 훈련 중 목표 표현의 조합을 무작위로 바꿔 서로 다른 형태의 목표가 달린 이동 데이터를 함께 사용했다. [PDF 2쪽](https://arxiv.org/pdf/2509.19480v1#page=2) · [PDF 3쪽](https://arxiv.org/pdf/2509.19480v1#page=3)
+- 단일 목표 양식과 여러 양식을 함께 준 조건에서 도달 성능을 비교하고 낯선 환경에서의 일반화를 평가했다. [PDF 4쪽](https://arxiv.org/pdf/2509.19480v1#page=4) · [PDF 5쪽](https://arxiv.org/pdf/2509.19480v1#page=5) · [PDF 6쪽](https://arxiv.org/pdf/2509.19480v1#page=6)
 
 ## Evaluation Scope
 

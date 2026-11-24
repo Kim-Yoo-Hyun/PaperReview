@@ -15,13 +15,11 @@
 - Full-text retrieval: https://openaccess.thecvf.com/content/CVPR2026/papers/Ding_ExtrinSplat_Decoupling_Geometry_and_Semantics_for_Open-Vocabulary_Understanding_in_3D_CVPR_2026_paper.pdf
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 한 줄 요약과 핵심 기여 두 개를 각 문장에 인용한 판본의 원문에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Open-vocabulary 3D scene understanding enables the parsing of 3D scenes with arbitrary natural language queries, moving beyond the limitations of predefined categories to offer enhanced generalization and richer semantics for applicatio ...
-
-방법 관련 발췌 — Our contributions are summarized as follows: • We propose ExtrinSplat, a new framework realizing the extrinsic paradigm, which efficiently decouples 3D geometry and semantics through object grouping and lightweight textual indices. • ...
+ExtrinSplat은 3차원 Gaussian마다 의미 특징을 저장하는 대신 물체 그룹에 텍스트 설명을 연결해 열린 어휘 질의를 처리한다. [PDF 1쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Ding_ExtrinSplat_Decoupling_Geometry_and_Semantics_for_Open-Vocabulary_Understanding_in_3D_CVPR_2026_paper.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** Our contributions are summarized as follows: • We propose ExtrinSplat, a new framework realizing the extrinsic paradigm, which efficiently decouples 3D geometry and semantics through ...
-- **p. 2 / 1. Introduction - extractive body cue:** To overcome these limitations, we propose the extrinsic paradigm, a distinct, decoupled and layered architecture.
-- **p. 3 / 3.1. Overall Architecture - extractive body cue:** Our method takes an optimized 3DGS scene representation and its corresponding image sequence as input.
-- **p. 3 / 3.1. Overall Architecture - extractive body cue:** We present ExtrinSplat, a training-free framework that realizes the extrinsic paradigm by decoupling 3D geometry from semantics, as shown in Fig.
-- **p. 5 / 3.3. Object-level Grouping - extractive body cue:** (b) Our method (via semantic distillation): We leverage DAM2SAM to track a single instance.
-- **p. 7 / Figure/Table caption - extractive body cue:** Figure 4. Qualitative results of our 3D object segmentation on the ScanNet dataset. OpenGaussian and InstanceGaussian rely on matching CLIP features extracted from 2D images. ...
-- **p. 6 / Figure/Table caption - extractive body cue:** Table 1. This caption compares computational resources for the LERF figurines scene, including per-scene optimization time, peak VRAM use, and storage for CLIP features. By ...
-- **p. 7 / Figure/Table caption - extractive body cue:** Table 2. mIoU results for open-vocabulary object selection in 3D space on the LERF dataset. Bold/Underline indicates the best/second-best performance per category.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 여러 크기의 겹치는 Gaussian 그룹을 만들고 시각언어모델이 생성한 설명을 외부 색인으로 연결한다. [PDF 3쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Ding_ExtrinSplat_Decoupling_Geometry_and_Semantics_for_Open-Vocabulary_Understanding_in_3D_CVPR_2026_paper.pdf#page=3) · [PDF 4쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Ding_ExtrinSplat_Decoupling_Geometry_and_Semantics_for_Open-Vocabulary_Understanding_in_3D_CVPR_2026_paper.pdf#page=4) · [PDF 5쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Ding_ExtrinSplat_Decoupling_Geometry_and_Semantics_for_Open-Vocabulary_Understanding_in_3D_CVPR_2026_paper.pdf#page=5)
+- 열린 어휘 물체 선택·의미 분할 정확도와 장면 적응 시간·저장 비용을 함께 비교했다. [PDF 6쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Ding_ExtrinSplat_Decoupling_Geometry_and_Semantics_for_Open-Vocabulary_Understanding_in_3D_CVPR_2026_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Ding_ExtrinSplat_Decoupling_Geometry_and_Semantics_for_Open-Vocabulary_Understanding_in_3D_CVPR_2026_paper.pdf#page=7) · [PDF 8쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Ding_ExtrinSplat_Decoupling_Geometry_and_Semantics_for_Open-Vocabulary_Understanding_in_3D_CVPR_2026_paper.pdf#page=8)
 
 ## Evaluation Scope
 

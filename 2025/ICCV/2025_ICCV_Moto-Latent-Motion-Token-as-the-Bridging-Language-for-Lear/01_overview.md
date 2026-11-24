@@ -15,13 +15,11 @@
 - Full-text retrieval: https://openaccess.thecvf.com/content/ICCV2025/papers/Chen_Moto_Latent_Motion_Token_as_the_Bridging_Language_for_Learning_ICCV_2025_paper.pdf
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (12 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (12 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 한 줄 요약과 핵심 기여 두 개를 각 문장에 인용한 판본의 원문에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — The main challenge is finding an appropriate representation for autoregressive pre-training on video data that effectively captures prior knowledge for robot manipulation.
-
-방법 관련 발췌 — In summary, our contributions are as below: • Introduction of Latent Motion Tokens, which model visual motions between video frames in an unsupervised manner, serving as a bridging "language" for autoregressive pre-training ...
+Moto는 영상에서 관찰되는 움직임을 이산 잠재 토큰으로 학습하고 이를 로봇 조작 행동에 전이한다. [PDF 1쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Chen_Moto_Latent_Motion_Token_as_the_Bridging_Language_for_Learning_ICCV_2025_paper.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -54,16 +52,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** In summary, our contributions are as below: • Introduction of Latent Motion Tokens, which model visual motions between video frames in an unsupervised manner, serving ...
-- **p. 3 / 3.1. Overview - extractive body cue:** 2, Moto consists of three stages: 1) unsupervised training of the Latent Motion Tokenizer, 2) pre-training of the generative model MotoGPT, and 3) co-fine-tuning for ...
-- **p. 4 / 3.4. Co-fine-tuning for Robot Manipulation - extractive body cue:** To address this, during fine-tuning, we introduce special action query tokens into Moto-GPT's input, enabling the generation of real robot actions through a flexible action ...
-- **p. 2 / 1. Introduction - extractive body cue:** The performance can be further boosted with human video pre-training, highlighting the potential of our approach in transferring motion knowledge learned from Internet-scale videos to ...
-- **p. 7 / 5.3. Moto-GPT as an Effective Robot Policy - extractive body cue:** 8, Moto-GPT consistently outperforms Moto w/o Motion Token on these tasks, improving the average success rate from 23.33% to Moto w/o Motion Token Moto (OXE) ...
-- **p. 8 / 5.3. Moto-GPT as an Effective Robot Policy - extractive body cue:** For instance, Moto-GPT achieves a 52.5% success rate with just 1% of labeled data, compared to 0% for the variant.
-- **p. 6 / 5.3. Moto-GPT as an Effective Robot Policy - extractive body cue:** It significantly outperforms Moto w/o Motion Token, which is trained from scratch without latent motion tokens, underscoring the effectiveness of transferring motion priors learned from ...
-- **p. 7 / 5.3. Moto-GPT as an Effective Robot Policy - extractive body cue:** With additional human video (SSV2) pre-training, Moto (OXE+SSV2) significantly outperforms both Moto w/o Motion Token and Moto (OXE) on the Move Near task in SIMPLER.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 인접 영상 관측 사이의 변화를 토큰화하고 Moto-GPT가 이후의 움직임을 자기회귀적으로 예측하도록 사전학습했다. [PDF 3쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Chen_Moto_Latent_Motion_Token_as_the_Bridging_Language_for_Learning_ICCV_2025_paper.pdf#page=3) · [PDF 4쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Chen_Moto_Latent_Motion_Token_as_the_Bridging_Language_for_Learning_ICCV_2025_paper.pdf#page=4)
+- 로봇 동작과 잠재 움직임 예측을 함께 미세조정해 SIMPLER에서 영상 사전학습의 조작 전이를 비교했다. [PDF 4쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Chen_Moto_Latent_Motion_Token_as_the_Bridging_Language_for_Learning_ICCV_2025_paper.pdf#page=4) · [PDF 7쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Chen_Moto_Latent_Motion_Token_as_the_Bridging_Language_for_Learning_ICCV_2025_paper.pdf#page=7)
 
 ## Evaluation Scope
 

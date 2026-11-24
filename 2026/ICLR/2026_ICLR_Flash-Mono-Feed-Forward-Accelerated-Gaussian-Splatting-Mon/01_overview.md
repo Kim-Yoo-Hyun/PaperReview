@@ -15,13 +15,11 @@
 - Full-text retrieval: https://proceedings.iclr.cc/paper_files/paper/2026/file/5fcacc84d87c97bee5baecb3fb8f6e88-Paper-Conference.pdf
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (20 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (20 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 한 줄 요약과 핵심 기여 두 개를 각 문장에 인용한 판본의 원문에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Furthermore, S3PO-GS (Cheng et al., 2025) addresses the challenges of scale drift and the lack of geometric priors commonly encountered in outdoor scenarios by introducing a scale self-consistent pointmap.
-
-방법 관련 발췌 — In summary, our main contributions are: • We propose a real-time (10 FPS+) monocular GS-SLAM framework that leverages a recurrent feed-forward model to predict poses and Gaussians directly.
+Flash-Mono는 단안 영상열에서 카메라 자세와 2차원 Gaussian 표면 요소를 직접 예측하면서 장기 이동의 누적 오차를 보정한다. [PDF 1쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/5fcacc84d87c97bee5baecb3fb8f6e88-Paper-Conference.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** In summary, our main contributions are: • We propose a real-time (10 FPS+) monocular GS-SLAM framework that leverages a recurrent feed-forward model to predict poses ...
-- **p. 4 / 1 INTRODUCTION - extractive body cue:** 4 OUR APPROACH In this section, we introduce our approach in the following order.
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** To overcome these challenges, we propose Flash-Mono, a monocular GS-SLAM system designed to deliver exceptional speed performance and high-quality mapping.
-- **p. 6 / 1 INTRODUCTION - extractive body cue:** To address this, we introduce a novel mechanism to compute a geometric constraint between the current frame and a past frame with a single forward ...
-- **p. 5 / 1 INTRODUCTION - extractive body cue:** The training objective consists of three loss components, summed over a sequence of length L.
-- **p. 8 / 5 EXPERIMENTS - extractive body cue:** 5.2 TRACKING PERFORMANCE As shown in Table 1, Flash-Mono significantly outperformed all traditional and GS-SLAM baseline methods.
-- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1: Our Results for Reconstruction and Rendering & Tracking & Speed Metrics. Our method reconstructs high-quality Gaussian maps in complex scenes with multiple rooms ...
-- **p. 8 / 5 EXPERIMENTS - extractive body cue:** Although we perform only 20 optimization iterations per keyframe (a 10x reduction compared to the 250 iterations used by MonoGS (Matsuki et al., 2024) and ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 순환형 전단의 은닉 상태에 여러 프레임의 특징을 모아 자세와 지도 요소를 예측하고 서브맵을 표현한다. [PDF 3쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/5fcacc84d87c97bee5baecb3fb8f6e88-Paper-Conference.pdf#page=3) · [PDF 4쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/5fcacc84d87c97bee5baecb3fb8f6e88-Paper-Conference.pdf#page=4) · [PDF 5쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/5fcacc84d87c97bee5baecb3fb8f6e88-Paper-Conference.pdf#page=5) · [PDF 6쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/5fcacc84d87c97bee5baecb3fb8f6e88-Paper-Conference.pdf#page=6)
+- 은닉 상태로 재방문을 탐지해 전역 유사변환을 최적화하고 궤적 오차와 지도 품질을 평가했다. [PDF 6쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/5fcacc84d87c97bee5baecb3fb8f6e88-Paper-Conference.pdf#page=6) · [PDF 7쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/5fcacc84d87c97bee5baecb3fb8f6e88-Paper-Conference.pdf#page=7) · [PDF 8쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/5fcacc84d87c97bee5baecb3fb8f6e88-Paper-Conference.pdf#page=8) · [PDF 9쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/5fcacc84d87c97bee5baecb3fb8f6e88-Paper-Conference.pdf#page=9)
 
 ## Evaluation Scope
 

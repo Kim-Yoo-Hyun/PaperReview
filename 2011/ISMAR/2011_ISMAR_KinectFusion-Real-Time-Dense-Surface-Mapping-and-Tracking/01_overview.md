@@ -15,13 +15,11 @@
 - Full-text retrieval: https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/ismar2011.pdf
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 한 줄 요약과 핵심 기여 두 개를 각 문장에 인용한 판본의 원문에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — While this work is very promising for AR, dense scene reconstruction in real-time remains a challenge for passive monocular systems which assume the availability of the right type of camera motion and ...
-
-방법 관련 발췌 — In this paper we present a detailed method with analysis of what we believe is the first system which permits real-time, dense volumetric reconstruction of complex room-sized scenes using a handheld Kinect ...
+KinectFusion은 이동하는 깊이 카메라의 영상을 하나의 부호 거리장에 실시간으로 누적하면서 카메라 자세를 추정한다. [PDF 1쪽](https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/ismar2011.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** In this paper we present a detailed method with analysis of what we believe is the first system which permits real-time, dense volumetric reconstruction of ...
-- **p. 6 / 3.1 Preliminaries - extractive body cue:** Second, modern GPU hardware enables a fully parrallelised processing pipeline, so that the data association and point-plane optimisation can use all of the available surface ...
-- **p. 7 / 3.1 Preliminaries - extractive body cue:** The symmetry of the system enables operations and memory to be saved and the final sum is obtained using a parallel tree-based reduction [13], to ...
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** A key novelty is that tracking, performed at 30Hz frame-rate, is always relative to the fully up-to-date fused dense model, and we demonstrate the advantages ...
-- **p. 4 / 3.1 Preliminaries - extractive body cue:** An example given in Figure 4 demonstrates how the TSDF allows us to represent arbitrary genus surfaces as zero crossings within the volume.
-- **p. 8 / 4 EXPERIMENTS - extractive body cue:** Rapid accumulation of errors results in the non-circular trajectory and poor reconstruction is apparent (though see later Figure 11 where frame-skipping is shown to improve ...
-- **p. 7 / 4 EXPERIMENTS - extractive body cue:** We have conducted a number of experiments to investigate the performance of our system.
-- **p. 9 / 4 EXPERIMENTS - extractive body cue:** But the frame-model tracking results in drift-free operation without explicit global optimisation.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 현재 깊이 프레임을 누적 모델에서 예측한 표면과 다단계 ICP로 맞추고 갱신된 자세로 깊이를 TSDF에 융합한다. [PDF 3쪽](https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/ismar2011.pdf#page=3) · [PDF 4쪽](https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/ismar2011.pdf#page=4) · [PDF 5쪽](https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/ismar2011.pdf#page=5) · [PDF 6쪽](https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/ismar2011.pdf#page=6)
+- 방 규모 실내 장면에서 누적 표면에 대한 추적과 프레임 간 추적의 드리프트 및 복원 표면의 차이를 비교했다. [PDF 7쪽](https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/ismar2011.pdf#page=7) · [PDF 8쪽](https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/ismar2011.pdf#page=8) · [PDF 9쪽](https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/ismar2011.pdf#page=9)
 
 ## Evaluation Scope
 

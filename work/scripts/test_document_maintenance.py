@@ -217,12 +217,13 @@ class DocumentMaintenanceTest(unittest.TestCase):
             root = Path(directory)
             note = root / "03_method.md"
             # The second line also matches a removable footer. The symbol needs a source.
-            body = "classi\ue000cation\nCopyright 2020 symbol \U000f0011\n"
+            body = "classi\ue000cation\nCopyright 2020 symbol \U000f0011\nCopyright 2020 encoder \ufffd\n"
             note.write_text(body)
             with patch.object(artifacts, "ROOT", root):
                 found = artifacts.scan([note])
                 cleaned = artifacts.apply_cleanup([note])
             self.assertEqual(found["findings"][0]["line_numbers"][issue], [1, 2])
+            self.assertEqual(found["findings"][0]["line_numbers"]["replacement_character_source_review_required"], [3])
             self.assertEqual(cleaned["modified_file_count"], 0)
             self.assertEqual(note.read_text(), body)
             self.assertNotIn(issue, artifacts.issue_kinds("classification, floor, ∇ and π"))

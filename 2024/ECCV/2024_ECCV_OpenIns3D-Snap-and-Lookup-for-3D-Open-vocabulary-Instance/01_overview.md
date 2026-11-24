@@ -15,13 +15,11 @@
 - Full-text retrieval: https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/07914.pdf
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (17 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (17 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 한 줄 요약과 핵심 기여 두 개를 각 문장에 인용한 판본의 원문에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, unlike 2D data that can be easily collected from the internet, constructing a large-scale 3D-text dataset poses a challenge.
-
-방법 관련 발췌 — To this end, we introduce OpenIns3D, a framework designed to effectively perform 3D open-vocabulary scene understanding tasks without relying on 2D aligned images.
+OpenIns3D는 3차원 점군에서 후보 마스크를 만들고 직접 렌더링한 여러 시점의 영상으로 각 물체에 열린 어휘의 이름을 붙인다. [PDF 1쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/07914.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 3 / 1 Introduction - extractive body cue:** To this end, we introduce OpenIns3D, a framework designed to effectively perform 3D open-vocabulary scene understanding tasks without relying on 2D aligned images.
-- **p. 4 / 1 Introduction - extractive body cue:** In summary, our contributions are: - OpenIns3D employs a distinct pipeline that operates without the need for well-aligned images.
-- **p. 2 / 1 Introduction - extractive body cue:** While the development of 3D closed-set understanding is relatively mature, scene understanding in an open-vocabulary setting is still in its infancy.
-- **p. 2 / 1 Introduction - extractive body cue:** We believe that developing a 3D open-vocabulary framework without relying on well-aligned 2D images is meaningful, as this will simplify deployment pre
-- **p. 3 / 1 Introduction - extractive body cue:** The design of OpenIns3D also allows 2D detectors to be changed without the need for retraining.
-- **p. 11 / 4 Experiments - extractive body cue:** Significant improvements are achieved on the S3DIS dataset, and competitive results are observed on ScanNetv2 (B/N: Base/Novel).
-- **p. 12 / 4 Experiments - extractive body cue:** Model use 2D APhead APcommon APtail AP AP50 AP25 OpenScene (2D Fusion) [23] ✓ 13.4 11.6 9.9 11.7 15.2 17.8 OpenScene (2D/3D Ens.) [23] ✓ ...
-- **p. 11 / 4 Experiments - extractive body cue:** With the enhanced recognition capability, the performance of 3D open-vocabulary Object Detection among the ScanNet dataset has also achieved state-of-the-art results by a large margin.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 점군에서 범주에 독립적인 제안을 만든 뒤 장면을 여러 크기로 렌더링해 2차원 검출 결과를 3차원 후보에 대응시킨다. [PDF 1쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/07914.pdf#page=1) · [PDF 4쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/07914.pdf#page=4) · [PDF 5쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/07914.pdf#page=5)
+- 객체 분류, 새로운 범주의 3차원 검출, 인스턴스 분할을 별도 과제로 평가했다. [PDF 10쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/07914.pdf#page=10) · [PDF 11쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/07914.pdf#page=11) · [PDF 12쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/07914.pdf#page=12)
 
 ## Evaluation Scope
 

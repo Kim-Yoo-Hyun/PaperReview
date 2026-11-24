@@ -15,13 +15,11 @@
 - Full-text retrieval: https://arxiv.org/pdf/2209.14988
 - Code/Project: https://dreamfusion3d.github.io/
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (18 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (18 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 한 줄 요약과 핵심 기여 두 개를 각 문장에 인용한 판본의 원문에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — This work showed that pretrained 2D image-text models may be used for 3D synthesis, though 3D objects produced by this approach tend to lack realism and accuracy.
-
-방법 관련 발췌 — 3.1 NEURAL RENDERING OF A 3D MODEL NeRF is a technique for neural inverse rendering that consists of a volumetric raytracer and a multilayer perceptron (MLP).
+DreamFusion은 동결된 2차원 텍스트·영상 확산 모델의 감독으로 무작위 시점의 렌더링을 최적화해 텍스트에서 3차원 물체를 만든다. [PDF 1쪽](https://arxiv.org/pdf/2209.14988v1#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 5 / 1 INTRODUCTION - extractive body cue:** 3.1 NEURAL RENDERING OF A 3D MODEL NeRF is a technique for neural inverse rendering that consists of a volumetric raytracer and a multilayer perceptron ...
-- **p. 6 / 1 INTRODUCTION - extractive body cue:** While our method can generate some complex scenes, we find that it is helpful to only query the NeRF scene representation within a fixed bounding ...
-- **p. 3 / 1 INTRODUCTION - extractive body cue:** The resulting Score Distillation Sampling (SDS) method enables sampling via optimization in differentiable image parameterizations.
-- **p. 4 / 1 INTRODUCTION - extractive body cue:** Though conditional diffusion sampling enables quite a bit of flexibility (e.g. inpainting), diffusion models trained on pixels have traditionally been used to sample only pixels.
-- **p. 5 / 1 INTRODUCTION - extractive body cue:** SDS produces detail comparable to ancestral sampling, but enables new transfer learning applications because it operates in parameter space.
-- **p. 8 / 4 EXPERIMENTS - extractive body cue:** Geometry significantly improves with each of these choices and full renderings improve by +12.5%.
-- **p. 8 / 4 EXPERIMENTS - extractive body cue:** Despite this, DreamFusion outperforms both baselines on color images, and approaches the performance of ground truth images.
-- **p. 2 / Figure/Table caption - extractive body cue:** Figure 1: DreamFusion uses a pretrained text-to-image diffusion model to generate realistic 3D models from text prompts. Rendered 3D models are presented from two views, ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 스코어 증류 샘플링으로 렌더링에 대한 기울기를 계산해 3차원 훈련 자료 없이 신경 복사장을 최적화한다. [PDF 3쪽](https://arxiv.org/pdf/2209.14988v1#page=3) · [PDF 4쪽](https://arxiv.org/pdf/2209.14988v1#page=4) · [PDF 5쪽](https://arxiv.org/pdf/2209.14988v1#page=5)
+- 생성한 물체를 다른 시점·조명으로 렌더링해 형상과 외관을 살펴보고 텍스트와의 일치도 및 구성요소의 효과를 평가했다. [PDF 6쪽](https://arxiv.org/pdf/2209.14988v1#page=6) · [PDF 7쪽](https://arxiv.org/pdf/2209.14988v1#page=7) · [PDF 8쪽](https://arxiv.org/pdf/2209.14988v1#page=8)
 
 ## Evaluation Scope
 

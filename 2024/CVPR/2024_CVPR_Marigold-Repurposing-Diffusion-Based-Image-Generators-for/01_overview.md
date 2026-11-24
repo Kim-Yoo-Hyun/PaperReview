@@ -15,13 +15,11 @@
 - Full-text retrieval: https://arxiv.org/pdf/2312.02145
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (33 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (33 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 한 줄 요약과 핵심 기여 두 개를 각 문장에 인용한 판본의 원문에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Empowered by the underlying diffusion prior of natural images, Marigold exhibits excellent zero-shot generalization: Without ever having seen real depth maps, it attains state-ofthe-art performance on several real datasets.
-
-방법 관련 발췌 — Capitalizing on that, we propose the following test-time ensembling scheme, capable of combining multiple inference passes over the same input.
+Marigold는 사전학습된 텍스트·영상 확산 모델을 재사용해 단안 RGB 영상의 스케일과 오프셋에 불변인 깊이를 추정한다. [PDF 1쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Ke_Repurposing_Diffusion-Based_Image_Generators_for_Monocular_Depth_Estimation_CVPR_2024_paper.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 5 / 3.4. Inference - extractive body cue:** Capitalizing on that, we propose the following test-time ensembling scheme, capable of combining multiple inference passes over the same input.
-- **p. 2 / 1. Introduction - extractive body cue:** To summarize, our contributions are: 1.
-- **p. 5 / 3.4. Inference - extractive body cue:** This scheme enables a flexible trade-off between computation efficiency and prediction quality by choosing N accordingly.
-- **p. 2 / 1. Introduction - extractive body cue:** In this paper, we set out to explore this option and develop Marigold, a latent diffusion model (LDM) based on Stable Diffusion [38], along with ...
-- **p. 4 / 3.3. Fine-Tuning Protocol - extractive body cue:** This normalization allows Marigold to focus on pure affine-invariant depth estimation.
-- **p. 8 / 4.3. Ablation Studies - extractive body cue:** 2, training with multi-resolution noise significantly improves the depth prediction accuracy over using standard Gaussian noise.
-- **p. 8 / 4.3. Ablation Studies - extractive body cue:** Hypersim [37] delivers strong results; Virtual KITTI [7] improves outdoor performance.
-- **p. 6 / 4.2. Evaluation - extractive body cue:** 1, Marigold outperforms prior art in most cases and secures the highest overall ranking.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 영상과 깊이를 잠재공간에 인코딩해 합성 RGB·깊이 쌍으로 조건부 잡음 제거를 학습한다. [PDF 3쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Ke_Repurposing_Diffusion-Based_Image_Generators_for_Monocular_Depth_Estimation_CVPR_2024_paper.pdf#page=3) · [PDF 4쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Ke_Repurposing_Diffusion-Based_Image_Generators_for_Monocular_Depth_Estimation_CVPR_2024_paper.pdf#page=4) · [PDF 5쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Ke_Repurposing_Diffusion-Based_Image_Generators_for_Monocular_Depth_Estimation_CVPR_2024_paper.pdf#page=5)
+- 추론 표본을 정렬·결합하는 방식과 여러 실측 데이터셋에서 추가 학습 없이 얻은 깊이 오차를 평가했다. [PDF 5쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Ke_Repurposing_Diffusion-Based_Image_Generators_for_Monocular_Depth_Estimation_CVPR_2024_paper.pdf#page=5) · [PDF 6쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Ke_Repurposing_Diffusion-Based_Image_Generators_for_Monocular_Depth_Estimation_CVPR_2024_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Ke_Repurposing_Diffusion-Based_Image_Generators_for_Monocular_Depth_Estimation_CVPR_2024_paper.pdf#page=7)
 
 ## Evaluation Scope
 

@@ -15,13 +15,11 @@
 - Full-text retrieval: https://openaccess.thecvf.com/content/ICCV2025/papers/Jung_Details_Matter_for_Indoor_Open-vocabulary_3D_Instance_Segmentation_ICCV_2025_paper.pdf
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 한 줄 요약과 핵심 기여 두 개를 각 문장에 인용한 판본의 원문에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, ours has unique features to improve the limitations of existing works.
-
-방법 관련 발췌 — Our contributions are summarized as follows: • We carefully combine the existing concepts and refine 3D proposal generation by removing overlaps in 2D predictions and applying robust 3D tracking for aggregation. • ...
+실내 열린 어휘 인스턴스 분할에서 여러 영상의 후보를 추적해 완전한 3차원 물체로 합치고 마스크를 반영해 범주를 부여한다. [PDF 1쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Jung_Details_Matter_for_Indoor_Open-vocabulary_3D_Instance_Segmentation_ICCV_2025_paper.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** Our contributions are summarized as follows: • We carefully combine the existing concepts and refine 3D proposal generation by removing overlaps in 2D predictions and ...
-- **p. 1 / 1. Introduction - extractive body cue:** Examples of open-vocabulary predictions from our method in the ScanNet200 dataset [7].
-- **p. 1 / 1. Introduction - extractive body cue:** Our method effectively retrieves instances based on functional descriptions (e.g., drink water, heat mac & cheese) and object attributes (e.g., red chair). dicted proposals into ...
-- **p. 4 / 3.1. Image-based Proposal Generation - extractive body cue:** With refinement, irrelevant 3D superpoints are removed, and our method successfully removes 3D superpoints that do not belong to the object, resulting in geometrically consistent ...
-- **p. 3 / 3.1. Image-based Proposal Generation - extractive body cue:** Leveraging VFMs [28, 35, 43], image-based proposals provide a complementary approach for detecting novel classes not covered during the training of the 3D instance segmentation ...
-- **p. 7 / 4.3. Qualitative Results - extractive body cue:** These visual results are consistent with the recall metrics: Open3DIS and OpenYOLO3D achieve the mAR of 43.3% and 47.7%, respectively, whereas our method significantly outperforms ...
-- **p. 6 / Figure/Table caption - extractive body cue:** Table 1. OV-3DIS results on the ScanNet200 validation set [7]. Top-1 evaluation protocol refers to assigning one predicted class per instance mask, and Top-K evaluation ...
-- **p. 8 / 4.4. Ablation Study - extractive body cue:** As shown, using Alpha-CLIP improves the performance from 27.5 to 30.5 mAP, proving the importance of considering object-centric representation in instance classification.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 여러 시점의 추적 결과를 집계한 뒤 중복·부분 제안을 반복해서 병합하거나 제거한다. [PDF 3쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Jung_Details_Matter_for_Indoor_Open-vocabulary_3D_Instance_Segmentation_ICCV_2025_paper.pdf#page=3) · [PDF 4쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Jung_Details_Matter_for_Indoor_Open-vocabulary_3D_Instance_Segmentation_ICCV_2025_paper.pdf#page=4) · [PDF 5쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Jung_Details_Matter_for_Indoor_Open-vocabulary_3D_Instance_Segmentation_ICCV_2025_paper.pdf#page=5)
+- Alpha-CLIP의 물체 중심 특징과 표준화한 유사도 점수를 사용하고 ScanNet200·S3DIS에서 검출 정밀도와 재현율을 평가했다. [PDF 5쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Jung_Details_Matter_for_Indoor_Open-vocabulary_3D_Instance_Segmentation_ICCV_2025_paper.pdf#page=5) · [PDF 6쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Jung_Details_Matter_for_Indoor_Open-vocabulary_3D_Instance_Segmentation_ICCV_2025_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Jung_Details_Matter_for_Indoor_Open-vocabulary_3D_Instance_Segmentation_ICCV_2025_paper.pdf#page=7)
 
 ## Evaluation Scope
 

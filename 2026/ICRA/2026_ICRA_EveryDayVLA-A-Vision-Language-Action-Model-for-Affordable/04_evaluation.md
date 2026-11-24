@@ -6,7 +6,7 @@
 
 ## Evaluation in One Sentence
 
-PDF body evaluation/result cue (p. 4 (IV. EXPERIMENTS), p. 6 (V. RESULTS), p. 6 (V. RESULTS), p. 4 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS)): For all experiments, we use the discrete actions, with the adaptive horizon ensembler (AdaHorizon), which yields higher success rates and improved grasp accuracy compared to continuous-action baselines.
+알고리즘 1은 이산·연속 행동 예측의 평균 절대 차이로 실행 길이를 결정한다. 실험에서 기본적으로 실행하는 명령은 이산 예측이다. [PDF 3쪽](https://arxiv.org/pdf/2511.05397v1#page=3) · [PDF 4쪽](https://arxiv.org/pdf/2511.05397v1#page=4)
 
 ## Evaluation Body Digest
 

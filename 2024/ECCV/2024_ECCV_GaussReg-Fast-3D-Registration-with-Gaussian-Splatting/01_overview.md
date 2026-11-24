@@ -15,13 +15,11 @@
 - Full-text retrieval: https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/02380.pdf
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (17 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (17 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 한 줄 요약과 핵심 기여 두 개를 각 문장에 인용한 판본의 원문에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — But this method faces two issues: a) it is difficult to turn NeRF of unbounded scene to bounded voxel; b) the resolution limitation of the voxel grid makes this method unsuitable for ...
-
-방법 관련 발췌 — The main contributions can be summarized as: • To the best of our knowledge, we are the first to explore the registration of 3D scenes considering Gaussian Splatting representations. • We carefully ...
+GaussReg는 각각 Gaussian Splatting으로 표현된 두 장면을 점군으로 먼저 정렬하고 렌더링한 영상으로 세밀하게 맞춘다. [PDF 1쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/02380.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 3 / 1 Introduction - extractive body cue:** The main contributions can be summarized as: • To the best of our knowledge, we are the first to explore the registration of 3D scenes ...
-- **p. 3 / 1 Introduction - extractive body cue:** Ultimately, we propose a novel coarse-to-fine GS registration framework: GaussReg.
-- **p. 2 / 1 Introduction - extractive body cue:** 1: The purpose of our method is to register scenes A and B with Gaussian Splatting [17] models, and then combine A with B to ...
-- **p. 5 / 3 Method - extractive body cue:** In this section, we present our proposed GaussReg for 3D Registration with Gaussian Splatting (GS).
-- **p. 5 / 3 Method - extractive body cue:** 3.1 Overview As shown in Figure 2, the proposed GaussReg mainly consists of two stages, including the Coarse Registration, and the Image-Guided Fine Registration.
-- **p. 12 / 4 Experiment - extractive body cue:** Moreover, our method (ours) significantly outperforms our coarse registration (ours w./o. fine), proving the effectiveness of our fine registration.
-- **p. 11 / 4 Experiment - extractive body cue:** As shown in Table 1, for 82 scenes in ScanNet-GSReg, HLoc only registers 75.6% of them successfully, while our method achieves a 100% success ratio.
-- **p. 12 / 4 Experiment - extractive body cue:** As shown in Table 2, our method achieves registration results close to HLoc without fine-tuning, proving the strong generalizability of our approach.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- Gaussian의 공간 위치에서 거친 상대 자세를 얻은 뒤 렌더링 시점의 세밀한 기하 정보를 정합에 반영한다. [PDF 4쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/02380.pdf#page=4) · [PDF 5쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/02380.pdf#page=5) · [PDF 6쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/02380.pdf#page=6) · [PDF 7쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/02380.pdf#page=7)
+- ScanNet 기반 ScanNet-GSReg와 직접 수집한 GSReg를 구성하고 단계별 정합 정확도를 비교했다. [PDF 9쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/02380.pdf#page=9) · [PDF 10쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/02380.pdf#page=10) · [PDF 11쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/02380.pdf#page=11) · [PDF 12쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/02380.pdf#page=12)
 
 ## Evaluation Scope
 

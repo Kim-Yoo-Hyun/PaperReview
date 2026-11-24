@@ -16,7 +16,7 @@
   "identity_policy": "paper_id is the stable internal identity; DOI/arXiv/OpenReview identifiers are optional public identifiers.",
   "version_policy": "Use relations with type=version_of or same_work_as when a preprint and publication must remain separate.",
   "evidence_policy": "Manifest provenance records source scope; note evidence and reading status are not inferred from local PDF presence.",
-  "manifest_sha256": "54664be3db0f4b41f01c5b0e8e19eb251e8f6e7610f0d516eeda67b4780b1679",
+  "manifest_sha256": "8d83a8aa6d4a6252dc1ff735be10080afc9cff7f19299de30ba437d9bdfa147a",
   "last_reconciled_on": "2026-09-04",
   "reconciliation_policy": "review manifest evidence is paper-level; per-note evidence is retained under provenance.note_evidence; note-scoped review manifests are retained under provenance.note_review without changing paper-level review precedence; tracker status remains user-controlled.",
   "relation_count": 91,
@@ -104,6 +104,13 @@
         "verified_on": "2026-11-24",
         "count": 100,
         "baseline_commit": "bde6ed0a06c8a2aad9fb809889bd50b3521c39dd"
+      },
+      {
+        "batch": "reference-summary-02",
+        "tier": "REFERENCE",
+        "verified_on": "2026-11-24",
+        "count": 100,
+        "baseline_commit": "5b2939af8404530fa2cd9fa8d069492ece6bb3ac"
       }
     ],
     "artifact_review": {
@@ -112,7 +119,7 @@
       "count": 43,
       "baseline_commit": "f3806160de5ecd1a08dd7b18364fd63d0dac5745"
     },
-    "manifest_sha256": "54664be3db0f4b41f01c5b0e8e19eb251e8f6e7610f0d516eeda67b4780b1679",
+    "manifest_sha256": "8d83a8aa6d4a6252dc1ff735be10080afc9cff7f19299de30ba437d9bdfa147a",
     "initial_verified_on": "2026-11-20"
   }
 }

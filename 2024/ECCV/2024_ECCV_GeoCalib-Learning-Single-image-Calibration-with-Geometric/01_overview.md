@@ -15,13 +15,11 @@
 - Full-text retrieval: https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/05636.pdf
 - Code/Project: https://github.com/cvg/GeoCalib
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (19 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (19 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 한 줄 요약과 핵심 기여 두 개를 각 문장에 인용한 판본의 원문에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Veicht et al. ✓accurate ✗not robust man-made natural input image classical geometry lines & vanishing points black-box learning end-to-end training GeoCalib learning & optimization FAILURE horizon line estimated gravity & camera intrins ...
-
-방법 관련 발췌 — Camera calibration consists of estimating the intrinsic and extrinsic parameters of a camera.
+GeoCalib은 사진 한 장에서 학습한 시각 단서와 카메라 투영 기하를 이용해 초점거리·중력 방향 등 보정 파라미터를 추정한다. [PDF 1쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/05636.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 1 / 1 Introduction - extractive body cue:** Camera calibration consists of estimating the intrinsic and extrinsic parameters of a camera.
-- **p. 2 / 1 Introduction - extractive body cue:** In this work, we introduce GeoCalib, a deep neural network (DNN) that leverages our knowledge of projective geometry through an optimization process.
-- **p. 2 / 1 Introduction - extractive body cue:** Our approach can thus learn the right visual cues without explicit supervision but does not need to learn the process of estimating camera parameters, which ...
-- **p. 3 / 1 Introduction - extractive body cue:** To support this, we show that GeoCalib can readily improve the accuracy of visual positioning.
-- **p. 1 / 1 Introduction - extractive body cue:** This information is required for most image-based 3D applications, including metrology, 3D reconstruction, and novel view synthesis.
-- **p. 11 / 5 Experiments - extractive body cue:** Results: Table 1 shows that GeoCalib largely improves on top of all deep singleimage calibration networks, and outperforms classical methods in all metrics, except for ...
-- **p. 12 / 5 Experiments - extractive body cue:** Simultaneously optimizing multiple images with shared intrinsic parameters improves the estimation accuracy of both field of view (left) and gravity direction (right).
-- **p. 12 / 5 Experiments - extractive body cue:** GeoCalib-pinhole already improves over all baselines, suggesting that the model can zero-shot generalize to radial distortion through optimization.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 영상 위치별 방향 단서와 신뢰도를 예측하고 이를 가장 잘 설명하는 카메라 파라미터를 기하 최적화로 계산한다. [PDF 4쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/05636.pdf#page=4) · [PDF 5쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/05636.pdf#page=5) · [PDF 6쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/05636.pdf#page=6) · [PDF 7쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/05636.pdf#page=7)
+- 여러 영상 데이터에서 보정 오차를 측정하고 추정 불확실성이 큰 실패 사례와 렌즈 왜곡 조건을 분석했다. [PDF 8쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/05636.pdf#page=8) · [PDF 9쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/05636.pdf#page=9) · [PDF 10쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/05636.pdf#page=10) · [PDF 11쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/05636.pdf#page=11)
 
 ## Evaluation Scope
 

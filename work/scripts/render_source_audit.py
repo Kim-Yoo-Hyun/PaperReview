@@ -211,10 +211,21 @@ def check_applied(rows, papers, root):
                 expect("DOI", paper["identifiers"].get("doi"), evidence["doi"])
                 check_source("venue_verification", evidence["source"])
             if variant := review.get("title_variant"):
-                expect("catalog title source", paper["page"], variant["catalog_title_source"])
+                catalog_sources = {paper["page"], (paper["sources"].get("venue_verification") or {}).get("url")}
+                if not variant.get("catalog_title_source") or variant["catalog_title_source"] not in catalog_sources:
+                    errors.append(f"{pid} catalog title source missing from manifest")
                 located = any(variant["text"] in line and variant["source"] in line for line in overview.splitlines())
                 if variant["text"] not in paper.get("aliases", []) or not located:
                     errors.append(f"{pid} printed title variant or its source missing")
+            if byline := review.get("printed_byline"):
+                expect("printed byline", final_authors, byline["authors"])
+                expect("printed byline evidence", paper["provenance"]["authors_verification"]["source"], byline["source"])
+                check_source("venue_verification", byline["catalog_source"])
+            if byline := review.get("author_version_byline"):
+                expect("published byline", final_authors, byline["published_authors"])
+                check_source("venue_verification", byline["publisher_record"])
+                if byline["preprint_authors"] == final_authors or byline["preprint_source"] not in overview:
+                    errors.append(f"{pid} author-version distinction missing")
             summary_header, claims_header = summary_headings(overview)
             for header, claims in ((summary_header, [review["summary"]]), (claims_header, review["contributions"])):
                 section = overview.partition("## " + header + "\n")[2].partition("\n## ")[0]
@@ -443,9 +454,12 @@ def render(rows, meta):
     clarified = [r for r in rows if "scope_clarification" in r.get("summary_review", {})]
     if clarified:
         lines += ["### 평가 조건과 지표", "", "| 논문 | 원문에서 확인한 범위 |", "|---|---|"]
+        short_titles = Counter(row["title"].split(":")[0] for row in clarified)
         for row in clarified:
             review = row["summary_review"]
             title = row["title"].split(":")[0]
+            if short_titles[title] > 1:
+                title = row["title"]
             lines.append(f"| {title} | {cited_statement(review['scope_clarification'], review)} |")
         lines.append("")
     artifacts = [fields for r in rows if (fields := r.get("artifact_review", {}).get("fields"))]

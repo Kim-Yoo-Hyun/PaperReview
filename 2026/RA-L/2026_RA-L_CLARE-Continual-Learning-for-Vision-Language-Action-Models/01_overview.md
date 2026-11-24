@@ -15,15 +15,13 @@
 - Full-text retrieval: https://arxiv.org/pdf/2601.09512
 - Code/Project: https://tum-lsy.github.io/clare
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 한 줄 요약과 핵심 기여 두 개를 각 문장에 인용한 판본의 원문에서 확인했다.
 
 > DOC-QA2 targeted source review: 2026-10-23; PDF pp. 3, 4. 손상 구간·직접 연결된 표 분류만 원문 이미지와 대조했다. 전체 주장 정독·실험 검증·reading status 승격을 뜻하지 않는다. [URL·PDF hash·수정 기록](../../../work/sources/pdf_note_review_followup_2026-10-23.json).
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, state-of-the-art VLAs still cannot adapt reliably to unseen tasks without fine-tuning on task-specific data [6]- [8].
-
-방법 관련 발췌 — As our method is architecture-agnostic, we keep the following sections general.
+CLARE는 이전 시연을 보관하지 않고 VLA에 새 과제를 순서대로 학습시키며, 실행 시 과제 이름 없이 필요한 어댑터를 선택한다. [PDF 1쪽](https://arxiv.org/pdf/2601.09512v2#page=1)
 
 ## Problem and Motivation
 
@@ -57,16 +55,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 3 / IV. METHODOLOGY - extractive body cue:** As our method is architecture-agnostic, we keep the following sections general.
-- **p. 5 / IV. METHODOLOGY - extractive body cue:** We found that introducing at least some new parameters per task is essential for the policy to acquire and retain novel skills.
-- **p. 10 / Figure/Table caption - extractive body cue:** Fig. 8: Success rate curves of CLARE and five baselines on the LIBERO-Long benchmark. The solid lines represent the average success rates across three random ...
-- **p. 6 / V. EVALUATION - extractive body cue:** CLARE achieves the highest overall performance, as measured by AUC, outperforming the best baseline, ER, by about 10 to 14 percentage points.
-- **p. 6 / V. EVALUATION - extractive body cue:** Backbone Expandable layers AUC ↑ FWT ↑ NBT ↓ DiT-Dec Linear projection 75.1±1.3 75.0±1.4 1.9±0.4 Decoder 41.8±2.4 45.5±3.8 7.0±1.7 DiT-EncDec Encoder 65.4±2.7 66.5±2.2 1.7±1.2 Decoder ...
-- **p. 7 / V. EVALUATION - extractive body cue:** CLARE achieves the highest overall performance, as measured by AUC, and demonstrates strong capabilities to acquire new skills without forgetting. "NA" indicates not available.
-- **p. 5 / V. EVALUATION - extractive body cue:** We conduct extensive simulation and real-world experiments with a focus on the following research questions: • Q1: Which layers are best suited for expansion? • ...
-- **p. 4 / Figure/Table caption - extractive body cue:** Fig. 2: CLARE sequentially adds adapters and discriminators as side branches to selected VLA modules. Top: During inference, our router activates only the most relevant ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 층별 특징 유사도로 어댑터를 재사용하거나 추가하고 오토인코더의 재구성 신호로 추론에 사용할 모듈을 고른다. [PDF 3쪽](https://arxiv.org/pdf/2601.09512v2#page=3) · [PDF 4쪽](https://arxiv.org/pdf/2601.09512v2#page=4) · [PDF 5쪽](https://arxiv.org/pdf/2601.09512v2#page=5)
+- LIBERO 과제열과 다섯 실물 과제에서 새 과제의 습득과 이전 과제의 성능 유지를 평가했다. [PDF 6쪽](https://arxiv.org/pdf/2601.09512v2#page=6) · [PDF 7쪽](https://arxiv.org/pdf/2601.09512v2#page=7) · [PDF 8쪽](https://arxiv.org/pdf/2601.09512v2#page=8)
 
 ## Evaluation Scope
 

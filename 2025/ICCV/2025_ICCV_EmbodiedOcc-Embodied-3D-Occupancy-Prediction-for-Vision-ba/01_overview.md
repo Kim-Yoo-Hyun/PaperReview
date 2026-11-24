@@ -15,13 +15,11 @@
 - Full-text retrieval: https://openaccess.thecvf.com/content/ICCV2025/papers/Wu_EmbodiedOcc_Embodied_3D_Occupancy_Prediction_for_Vision-based_Online_Scene_Understanding_ICCV_2025_paper.pdf
 - Code/Project: https://github.com/YkiWu/EmbodiedOcc
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 한 줄 요약과 핵심 기여 두 개를 각 문장에 인용한 판본의 원문에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — To bridge this gap, we formulate a new embodied 3D occupancy prediction task to evaluate the ability to progressively explore an unknown scene using only visual inputs.
-
-방법 관련 발췌 — Specifically, we propose a structure-aware local refinement module to update the relevant Gaussians within the current frustum.
+EmbodiedOcc는 이동하며 얻은 영상으로 관측된 주변의 점유 상태를 갱신해 실내 전체의 3차원 의미 지도를 유지한다. [PDF 1쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Wu_EmbodiedOcc_Embodied_3D_Occupancy_Prediction_for_Vision-based_Online_Scene_Understanding_ICCV_2025_paper.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -53,16 +51,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** Specifically, we propose a structure-aware local refinement module to update the relevant Gaussians within the current frustum.
-- **p. 2 / 1. Introduction - extractive body cue:** We propose an EmbodiedOcc framework based on Gaussian memories to accomplish this task, considering the explicity and structural nature of 3D Gaussians.
-- **p. 3 / 3.1. Embodied 3D Occupancy Prediction - extractive body cue:** Motivated by this, we propose an embodied 3D occupancy prediction task in this paper.
-- **p. 1 / 1. Introduction - extractive body cue:** With the rapid development of embodied intelligence and active agents [14, 17, 32], 3D scene perception [30, 34, 41, 42] has become a crucial task ...
-- **p. 7 / 4.3. Main Results - extractive body cue:** As shown in Table 1, the results indicate that our local refinement module outperforms ISO [56].
-- **p. 7 / 4.3. Main Results - extractive body cue:** We spliced the local occupancy obtained from our local module to serve as the main baseline (referred to as SplicingOcc), as our local module has ...
-- **p. 8 / 4.4. Experimental Analysis - extractive body cue:** Our model demonstrates reasonable local perception ability and further achieves good online prediction with the Gaussian memory.
-- **p. 8 / Figure/Table caption - extractive body cue:** Figure 8. Visualization of local occupancy prediction. Occ-ScanNet-mini2 and the EmbodiedOcc-ScanNet-mini datasets. We find that depth information will significantly benefit the local and embodied occupancy ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 보이는 영역에 해당하는 Gaussian만 영상 특징으로 갱신하고 누적된 Gaussian을 점유 복셀로 변환한다. [PDF 3쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Wu_EmbodiedOcc_Embodied_3D_Occupancy_Prediction_for_Vision-based_Online_Scene_Understanding_ICCV_2025_paper.pdf#page=3) · [PDF 4쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Wu_EmbodiedOcc_Embodied_3D_Occupancy_Prediction_for_Vision-based_Online_Scene_Understanding_ICCV_2025_paper.pdf#page=4) · [PDF 5쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Wu_EmbodiedOcc_Embodied_3D_Occupancy_Prediction_for_Vision-based_Online_Scene_Understanding_ICCV_2025_paper.pdf#page=5)
+- ScanNet에서 순차 관측 평가를 구성하고 지역 예측, 누적 장면 예측, 이미 방문한 영역의 예측을 나누어 비교했다. [PDF 5쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Wu_EmbodiedOcc_Embodied_3D_Occupancy_Prediction_for_Vision-based_Online_Scene_Understanding_ICCV_2025_paper.pdf#page=5) · [PDF 6쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Wu_EmbodiedOcc_Embodied_3D_Occupancy_Prediction_for_Vision-based_Online_Scene_Understanding_ICCV_2025_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Wu_EmbodiedOcc_Embodied_3D_Occupancy_Prediction_for_Vision-based_Online_Scene_Understanding_ICCV_2025_paper.pdf#page=7)
 
 ## Evaluation Scope
 

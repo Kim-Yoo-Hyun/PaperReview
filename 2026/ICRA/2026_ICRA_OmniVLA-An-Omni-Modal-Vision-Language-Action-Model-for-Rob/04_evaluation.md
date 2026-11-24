@@ -6,7 +6,7 @@
 
 ## Evaluation in One Sentence
 
-PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 3 (Dataset), p. 3 (Dataset)): Fig. 6: Deploying OmniVLA on multiple embodi- ments. We deploy our policy on the Vizbot and Unitree Go1 robots. Our policy can follow natural language instructions out of the box ...
+이동용 OmniVLA의 표 II는 언어·2차원 자세·목표 영상으로 지정한 목적지 도달을 평가한다. 성공률(SR)과 목표를 향한 부분 진행도(Prog.)를 별도 열에 보고한다. [PDF 5쪽](https://arxiv.org/pdf/2509.19480v1#page=5)
 
 ## Evaluation Body Digest
 

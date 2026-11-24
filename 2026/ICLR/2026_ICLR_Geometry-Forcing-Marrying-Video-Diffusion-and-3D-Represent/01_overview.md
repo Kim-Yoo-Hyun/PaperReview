@@ -15,13 +15,11 @@
 - Full-text retrieval: https://proceedings.iclr.cc/paper_files/paper/2026/file/c196239c5f9481e0db2755f31fe4585f-Paper-Conference.pdf
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (24 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (24 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 한 줄 요약과 핵심 기여 두 개를 각 문장에 인용한 판본의 원문에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Bridging the gap between video diffusion models and the dynamic 3D structure of the world presents significant challenges, primarily due to the limited annotated 3D data.
-
-방법 관련 발췌 — To align these two representations, our method introduces two complementary alignment objectives: Angular Alignment and Scale Alignment.
+Geometry Forcing은 비디오 확산 모델의 중간 특징을 3차원 기하 모델의 특징과 정렬해 생성한 영상의 시점 간 일관성을 높인다. [PDF 1쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/c196239c5f9481e0db2755f31fe4585f-Paper-Conference.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** To align these two representations, our method introduces two complementary alignment objectives: Angular Alignment and Scale Alignment.
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** Experimental results demonstrate that our method delivers substantial gains in geometric consistency and visual quality over the baseline methods.
-- **p. 4 / 3 PRELIMINARIES - extractive body cue:** 4.2, we introduce two regularization objectives designed to facilitate representation alignment between the diffusion model and geometric foundation model.
-- **p. 3 / 3 PRELIMINARIES - extractive body cue:** In this section, we provide a brief overview of both components to establish the foundation for our method.
-- **p. 4 / 3 PRELIMINARIES - extractive body cue:** In this work, inspired by recent advances in REPA (Yu et al., 2024a), we propose Geometry Forcing (GF) that aligns the features of video diffusion ...
-- **p. 20 / C.4 METRICS - extractive body cue:** Experimental results demonstrate that our approach achieves improvements across multiple evaluation dimensions, including visual aesthetics, motion smoothness, and motion quality, as detailed in Table 11.
-- **p. 19 / C.4 METRICS - extractive body cue:** We conduct Geometry Forcing algorithm on Pi3 model and also achieves significant improvement on video generation as shown in Tab.
-- **p. 7 / 5 EXPERIMENTS - extractive body cue:** 5, the model achieves a lower FVD score, indicating that GF can be seamlessly integrated into video diffusion models and yields measurable gains.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 방향 일치는 코사인 유사도로, 스케일 관련 정보는 정규화한 확산 특징으로부터 기하 특징을 회귀해 학습한다. [PDF 3쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/c196239c5f9481e0db2755f31fe4585f-Paper-Conference.pdf#page=3) · [PDF 4쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/c196239c5f9481e0db2755f31fe4585f-Paper-Conference.pdf#page=4) · [PDF 5쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/c196239c5f9481e0db2755f31fe4585f-Paper-Conference.pdf#page=5)
+- 카메라 시점 및 행동에 조건화한 영상 생성에서 영상 품질과 기하 일관성을 평가했다. [PDF 6쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/c196239c5f9481e0db2755f31fe4585f-Paper-Conference.pdf#page=6) · [PDF 7쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/c196239c5f9481e0db2755f31fe4585f-Paper-Conference.pdf#page=7) · [PDF 8쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/c196239c5f9481e0db2755f31fe4585f-Paper-Conference.pdf#page=8) · [PDF 9쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/c196239c5f9481e0db2755f31fe4585f-Paper-Conference.pdf#page=9)
 
 ## Evaluation Scope
 

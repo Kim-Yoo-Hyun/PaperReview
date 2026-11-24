@@ -6,7 +6,7 @@
 
 ## Evaluation in One Sentence
 
-PDF body evaluation/result cue (p. 4 (V. EXPERIMENTS), p. 3 (Figure/Table caption), p. 4 (V. EXPERIMENTS), p. 5 (Figure/Table caption), p. 6 (Figure/Table caption)): In our experiments, we compare the proposed method with conventional methods in terms of success rate, path efficiency, and robustness with respect to the number of pre-collected images in the ...
+중간 시점 합성으로 개선된 시각 내비게이션 결과는 광실사 시뮬레이터에서 측정했다. 저자들은 실제 로봇 주행 검증을 후속 과제로 명시했다. [PDF 4쪽](https://arxiv.org/pdf/2503.05152v3#page=4) · [PDF 5쪽](https://arxiv.org/pdf/2503.05152v3#page=5) · [PDF 7쪽](https://arxiv.org/pdf/2503.05152v3#page=7)
 
 ## Evaluation Body Digest
 

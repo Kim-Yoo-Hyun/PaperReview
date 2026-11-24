@@ -15,13 +15,11 @@
 - Full-text retrieval: https://proceedings.iclr.cc/paper_files/paper/2026/file/829d8117138ea1ea3eae65bd526ff727-Paper-Conference.pdf
 - Code/Project: not identified
 - Paper type: theory_or_foundation
-- Source audit: full-text PDF body checked on 2026-09-03 (31 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (31 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 한 줄 요약과 핵심 기여 두 개를 각 문장에 인용한 판본의 원문에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, training such a multi-task, multi-output 3D foundation model still faces significant challenges.
-
-방법 관련 발췌 — For the training strategy, we propose a novel two-staged approach.
+Dens3R는 한 장 또는 여러 장의 영상에서 점 지도, 깊이, 표면 법선을 일관된 기하 표현으로 함께 추정한다. [PDF 1쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/829d8117138ea1ea3eae65bd526ff727-Paper-Conference.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** For the training strategy, we propose a novel two-staged approach.
-- **p. 3 / 1 INTRODUCTION - extractive body cue:** In contrast, our method allows the communication between 3D geometric representation and normal prediction without known camera poses.
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** In this paper, we present Dens3R, a foundation model for high-quality geometric prediction.
-- **p. 4 / 1 INTRODUCTION - extractive body cue:** We propose Dens3R, a dense visual transformer backbone featuring a shared encoder-decoder architecture and multiple task-specific heads for geometric prediction.
-- **p. 5 / 3 METHOD - extractive body cue:** To this end, we propose to build upon a unified geometric representation since all geometric representations are inherently interconvertible.
-- **p. 8 / Figure/Table caption - extractive body cue:** Figure 4: Qualitative comparison of normal prediction. Dens3R generates more accurate and de- tailed normal maps than previous methods for both object-centric and unbounded scenes,. ...
-- **p. 24 / Figure/Table caption - extractive body cue:** Figure 12: Limitations. Despite that our method outperforms previous methods in geometric pre- dictions, the prediction quality for thin structures still require further improvement. inputs ...
-- **p. 10 / Figure/Table caption - extractive body cue:** Figure 5: Qualitative comparison of depth maps and pointmaps. We compare our method with previous DUSt3R-based methods and demonstrate high-quality depth prediction results. Dens3R also ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 공유 인코더·디코더에서 영상 쌍의 대응 특징을 학습하고 카메라 내부 파라미터 변화에 견디는 점 지도를 단계적으로 학습한다. [PDF 2쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/829d8117138ea1ea3eae65bd526ff727-Paper-Conference.pdf#page=2) · [PDF 3쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/829d8117138ea1ea3eae65bd526ff727-Paper-Conference.pdf#page=3) · [PDF 4쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/829d8117138ea1ea3eae65bd526ff727-Paper-Conference.pdf#page=4) · [PDF 5쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/829d8117138ea1ea3eae65bd526ff727-Paper-Conference.pdf#page=5)
+- 다중 시점의 기하를 정합하는 후처리를 제안하고 깊이 및 표면 법선 등 예측 항목별로 성능을 검증했다. [PDF 6쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/829d8117138ea1ea3eae65bd526ff727-Paper-Conference.pdf#page=6) · [PDF 7쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/829d8117138ea1ea3eae65bd526ff727-Paper-Conference.pdf#page=7) · [PDF 8쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/829d8117138ea1ea3eae65bd526ff727-Paper-Conference.pdf#page=8) · [PDF 9쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/829d8117138ea1ea3eae65bd526ff727-Paper-Conference.pdf#page=9)
 
 ## Evaluation Scope
 

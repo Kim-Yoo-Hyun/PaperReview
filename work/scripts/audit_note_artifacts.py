@@ -133,6 +133,8 @@ def issue_kinds(line: str) -> list[str]:
         issues.append("control_character_source_review_required")
     if PRIVATE_USE_RE.search(line):
         issues.append("private_use_glyph_source_review_required")
+    if "\ufffd" in line:
+        issues.append("replacement_character_source_review_required")
     if FRONT_MATTER_RE.search(line):
         issues.append("front_matter_anchor")
     if EQUAL_RE.search(line):
@@ -241,7 +243,7 @@ def finish_body_prefix(prefix: str) -> str:
 
 
 def clean_line(line: str, changes: Counter[str]) -> str | None:
-    if CONTROL_RE.search(line) or PRIVATE_USE_RE.search(line):
+    if CONTROL_RE.search(line) or PRIVATE_USE_RE.search(line) or "\ufffd" in line:
         return line
     newline = "\n" if line.endswith("\n") else ""
     content = line[:-1] if newline else line
@@ -509,6 +511,7 @@ def main() -> int:
             "manual_review_only": [
                 "C0/C1 control characters: preserve the note; original PDF comparison required",
                 "Private-use glyphs: preserve the affected line for comparison with the rendered source",
+                "Unicode replacement characters: recover the original notation from the rendered source",
                 "ambiguous section labels such as a university/institute heading",
                 "OCR corruption that cannot be safely reconstructed",
                 "claims requiring the original PDF or experiment context",

@@ -15,13 +15,13 @@
 - Full-text retrieval: https://openaccess.thecvf.com/content/ICCV2025/papers/Wang_Exploring_the_Adversarial_Vulnerabilities_of_Vision-Language-Action_Models_in_Robotics_ICCV_2025_paper.pdf
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 한 줄 요약과 핵심 기여 두 개를 각 문장에 인용한 판본의 원문에서 확인했다.
 
 > DOC-QA2 targeted source review: 2026-10-23; PDF pp. 2. 손상 구간·직접 연결된 표 분류만 원문 이미지와 대조했다. 전체 주장 정독·실험 검증·reading status 승격을 뜻하지 않는다. [URL·PDF hash·수정 기록](../../../work/sources/pdf_note_review_followup_2026-10-23.json).
 
 ## Why This Paper Is Here
 
-VLA의 visual adversarial patch가 action에 미치는 취약성을 읽기 위한 논문이다. PDF p. 2의 contribution 목록은 attack objective와 simulation/real-world 평가를 설명한다. 손상된 항목 번호를 본문 내용으로 읽거나 평가 범위를 보편적 안전 보장으로 확대하지 않는다. (DOC-QA2 원문 대조)
+로봇 VLA의 시각 입력이 교란됐을 때 행동과 과제 성공이 얼마나 달라지는지 시뮬레이션과 실물에서 평가했다. [PDF 1쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Wang_Exploring_the_Adversarial_Vulnerabilities_of_Vision-Language-Action_Models_in_Robotics_ICCV_2025_paper.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -54,16 +54,8 @@ VLA의 visual adversarial patch가 action에 미치는 취약성을 읽기 위�
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** Additionally, we introduce Geometry-Aware Objective that considers the robot's movement in three-dimensional space, characterized by three degrees of freedom.
-- **p. 3 / 3. Methodology - extractive body cue:** Finally, we introduce the Normalized Action Discrepancy (NAD) metric in §3.5.
-- **p. 3 / 3.2. Untargeted Action Discrepancy Attack - extractive body cue:** To exacerbate action discrepancies, we introduce the Untargeted Action Discrepancy Attack (UADA), which aims to maximize deviations in robot actions.
-- **p. 4 / 3.3. Untargeted Position-aware Attack - extractive body cue:** Recognizing the importance of Ap = DT(yp) in controlling the end-effector's path, we introduce a position-aware attack to disrupt the intended movement trajectory.
-- **p. 4 / 3.2. Untargeted Action Discrepancy Attack - extractive body cue:** Instead of directly using yi adv as the misclassification target, we introduce a soft attack objective to capture the discrepancy between actions, ensuring smooth gradient ...
-- **p. 6 / 4.3. Main Result - extractive body cue:** Specifically, while attacking DoF1 and DoF1∼3 in the Simulation setup, UADA and UPA achieve NAD of 21.0% and 14.5%, significantly outperforming UMA scenarios with increments ...
-- **p. 8 / 4.3. Main Result - extractive body cue:** Although this success rate is lower than the corresponding digital-world performance (i.e., 100%), it highlights the effectiveness of our patches in physical-world applications as well ...
-- **p. 8 / 4.4. Diagnostic Experiment - extractive body cue:** The results show that NAD first improves when inner-loop steps continue to increase.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 과제 실패와 행동 편차를 서로 다른 지표로 측정해 LIBERO 과제의 결과를 비교했다. [PDF 1쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Wang_Exploring_the_Adversarial_Vulnerabilities_of_Vision-Language-Action_Models_in_Robotics_ICCV_2025_paper.pdf#page=1) · [PDF 6쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Wang_Exploring_the_Adversarial_Vulnerabilities_of_Vision-Language-Action_Models_in_Robotics_ICCV_2025_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Wang_Exploring_the_Adversarial_Vulnerabilities_of_Vision-Language-Action_Models_in_Robotics_ICCV_2025_paper.pdf#page=7)
+- 실물 실험과 추가 진단을 통해 평가 환경 및 과제에 따라 정책의 시각적 견고성이 달라질 수 있음을 보였다. [PDF 7쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Wang_Exploring_the_Adversarial_Vulnerabilities_of_Vision-Language-Action_Models_in_Robotics_ICCV_2025_paper.pdf#page=7) · [PDF 8쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Wang_Exploring_the_Adversarial_Vulnerabilities_of_Vision-Language-Action_Models_in_Robotics_ICCV_2025_paper.pdf#page=8)
 
 ## Evaluation Scope
 

@@ -15,13 +15,11 @@
 - Full-text retrieval: https://arxiv.org/pdf/2511.01210
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 한 줄 요약과 핵심 기여 두 개를 각 문장에 인용한 판본의 원문에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — This brings several benefits that solve the challenges above: (i) making sensor information spatially grounded in RGB pixel coordinates to facilitate robotic manipulation on target objects, (ii) remaining close to RGB statistics ...
-
-방법 관련 발췌 — We present OmniVLA, the first multisensory VLA that integrates novel sensing modalities to enable beyond-RGB robotic perception and manipulation by unifying heterogeneous sensors into an image-native space.
+조작용 OmniVLA는 열화상·밀리미터파 레이더·마이크 배열에서 얻은 단서를 RGB 관측에 맞춰 로봇팔의 행동을 선택한다. [PDF 1쪽](https://arxiv.org/pdf/2511.01210v3#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / I. INTRODUCTION - extractive body cue:** We present OmniVLA, the first multisensory VLA that integrates novel sensing modalities to enable beyond-RGB robotic perception and manipulation by unifying heterogeneous sensors into an ...
-- **p. 2 / I. INTRODUCTION - extractive body cue:** Building on the sensor-masked images, we propose a tailored VLA model architecture (Figure 2).
-- **p. 1 / I. INTRODUCTION - extractive body cue:** This enables robots to combine the strong generalization of foundation models and physical information from various sensors seamlessly, to enable physically-grounded spatial intelligence.
-- **p. 4 / III. SYSTEM DESIGN - extractive body cue:** We propose a general sensor data processing pipeline applicable to various sensors, including (a) thermal camera, (b) mmWave radar, and (c) acoustic microphone array, by ...
-- **p. 1 / Abstract - extractive body cue:** This image-native unification keeps sensor input close to RGB statistics to facilitate training, provides a uniform interface across sensor hardware, and enables data-efficient learning with ...
-- **p. 6 / IV. EVALUATION - extractive body cue:** On average, OmniVLA outperforms VLA-RGB model and VLA-RAW model by 59% and 28% in success rate respectively.
-- **p. 6 / IV. EVALUATION - extractive body cue:** As shown in Figure 6, OmniVLA constantly outperforms VLA-RAW model, achieving similar success rate with only around 50% of the training episodes.
-- **p. 5 / IV. EVALUATION - extractive body cue:** We evaluate model performance using task success rates computed over 25 independent trials per task with random object placement, complemented by task scores: 0.5 score ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 센서 관측을 영상 좌표의 마스크로 바꾸고 이 마스크로 강조한 RGB 영상을 정책에 입력한다. [PDF 3쪽](https://arxiv.org/pdf/2511.01210v3#page=3) · [PDF 4쪽](https://arxiv.org/pdf/2511.01210v3#page=4)
+- 실제 로봇팔에서 온도로 물체를 고르기, 상자 내부를 구별하기, 소리로 물체를 찾기를 시험하고 RGB 단독 및 센서 원시 입력과 비교했다. [PDF 5쪽](https://arxiv.org/pdf/2511.01210v3#page=5) · [PDF 6쪽](https://arxiv.org/pdf/2511.01210v3#page=6)
 
 ## Evaluation Scope
 
