@@ -15,13 +15,11 @@
 - Full-text retrieval: https://www.roboticsproceedings.org/rss21/p124.pdf
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (13 pages; tesseract OCR fallback; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (13 pages; tesseract OCR fallback; title-token overlap first two pages=1.0) 2026-11-24 한 줄 요약과 핵심 기여 두 개를 각 문장에 인용한 판본의 원문에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, challenges such as a highly nonlinear state ‘space and inefficient exploration during training have hindered their broader adoption, To address these limit
-
-방법 관련 발췌 — + Stable and Efficient Torque-Based Learning: We propose «novel framework for learning torque-based loco- ‘motion policies with a growth mechanism that gradually. unlocks torque limits, control frequency, and reward terms, enhancing sam ...
+SATA는 관절 토크를 직접 출력하는 사족 보행 정책을 학습해 실제 로봇의 접촉 외란에 대응하게 한다. [PDF 1쪽](https://www.roboticsproceedings.org/rss21/p124.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Iyrropuction - extractive body cue:** + Stable and Efficient Torque-Based Learning: We propose «novel framework for learning torque-based loco- ‘motion policies with a growth mechanism that gradually. unlocks torque limits, ...
-- **p. 5 / IV. GROWTH-BASED TRAINING - extractive body cue:** Due to the highly nonlinear nature of the torque space, training a torque-based policy poses greater challenges than a position-based one, especially during early-stage exploration. ...
-- **p. 2 / 1. Iyrropuction - extractive body cue:** By directly controlling actuation in torque space, this approach enables finer interaction with the environment, leading to more dynamic and robust locomotion, Moreover. torque control ...
-- **p. 1 / 1. Iyrropuction - extractive body cue:** 1 of animals in nature, we propose a framework that addresses the challenges ‘of torque-based lecomosion learning achieving 2roshot sim-o-real tanser slong with exceptional compliance ...
-- **p. 3 / 1. Iyrropuction - extractive body cue:** ‘To achieve robust and adaptive locomotion contro! in legged robots, we propose a bio-inspired neural architecture that em
-- **p. 7 / A. Simulation Experiments - extractive body cue:** Sa, SATA significantly outperforms SATA w/o growth in early stages of training, demonstrating the impact of this mechanism in early stage exploration.
-- **p. 7 / A. Simulation Experiments - extractive body cue:** 5b, we can see that our method ‘outperforms SATA w/o growth, demonstrating the impact of the growth mechanism on policy generalization.
-- **p. 6 / A. Implementation of the Growth Mechanism - extractive body cue:** Leveraging this framework, we achieve efficient policy learning within 20 minutes/ 3000 episodes. ‘The maximum episode length is set to 10 seconds. ‘The environment resets ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 학습 초기에 사용할 수 있는 동작 능력을 제한했다가 점차 늘리는 성장 교육과정으로 토크 공간의 탐색을 돕는다. [PDF 5쪽](https://www.roboticsproceedings.org/rss21/p124.pdf#page=5) · [PDF 6쪽](https://www.roboticsproceedings.org/rss21/p124.pdf#page=6)
+- 실물 밀기 외란과 부드러운 지면에서 안정성과 순응성을 시험해 토크 제어 정책의 대응 범위를 평가한다. [PDF 8쪽](https://www.roboticsproceedings.org/rss21/p124.pdf#page=8) · [PDF 10쪽](https://www.roboticsproceedings.org/rss21/p124.pdf#page=10)
 
 ## Evaluation Scope
 

@@ -15,13 +15,11 @@
 - Full-text retrieval: https://arxiv.org/pdf/2303.05499
 - Code/Project: https://github.com/IDEA-Research/GroundingDINO
 - Paper type: theory_or_foundation
-- Source audit: full-text PDF body checked on 2026-09-03 (33 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (33 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 한 줄 요약과 핵심 기여 두 개를 각 문장에 인용한 판본의 원문에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Most existing open-set models [14,21] rely on pre-trained CLIP models for concept generalization.
-
-방법 관련 발췌 — To mitigate this issue and improve model performance during grounded training, we introduce a technique that utilizes sub-sentence level text features.
+Grounding DINO는 이미지와 범주명 또는 지시 표현을 받아 문구에 대응하는 물체의 경계 상자를 검출한다. [PDF 1쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/06319.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 3 / 1 Introduction - extractive body cue:** To mitigate this issue and improve model performance during grounded training, we introduce a technique that utilizes sub-sentence level text features.
-- **p. 3 / 1 Introduction - extractive body cue:** The layer-by-layer design enables it to interact with language information easily.
-- **p. 19 / A.2 Pseudo Code Language-Guided Query Selection - extractive body cue:** We present the pseudo-code of the Language-Guided Query Selection module in Algorithm 1.
-- **p. 2 / 1 Introduction - extractive body cue:** Most existing open-set detectors are developed by extending closed-set detectors to open-set scenarios with language information.
-- **p. 2 / 1 Introduction - extractive body cue:** In this paper, we aim to develop a strong system to detect arbitrary objects specified by human language inputs, a task commonly referred to as ...
-- **p. 21 / Figure/Table caption - extractive body cue:** Table 9: Transfer pre-trained DINO to Grounding DINO. We freeze shared modules between DINO and Grounding DINO during grounded fine-tuning. All models are trained with ...
-- **p. 13 / 4 Experiments - extractive body cue:** The results show that encoder fusion significantly improves model performance on both COCO and LVIS datasets.
-- **p. 13 / 4 Experiments - extractive body cue:** Grounding DINO 13 The results show that RefC helps improve the COCO zero-shot and fine-tuning performance but hurts the LVIS and ODinW results.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 영상·언어 특징을 융합하고 텍스트에 관련된 쿼리를 선택한 뒤 두 모달리티를 보는 디코더로 상자를 정제한다. [PDF 5쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/06319.pdf#page=5) · [PDF 6쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/06319.pdf#page=6)
+- 검출·구문 정합 자료로 사전학습한 뒤 COCO의 영점 전이와 여러 도메인의 개방형 검출 성능을 평가한다. [PDF 8쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/06319.pdf#page=8) · [PDF 10쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/06319.pdf#page=10)
 
 ## Evaluation Scope
 

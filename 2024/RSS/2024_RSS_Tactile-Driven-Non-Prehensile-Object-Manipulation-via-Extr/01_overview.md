@@ -15,13 +15,11 @@
 - Full-text retrieval: https://www.roboticsproceedings.org/rss20/p135.pdf
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (12 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (12 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 한 줄 요약과 핵심 기여 두 개를 각 문장에 인용한 판본의 원문에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — These failures are due to the nonlinear, discontinuous, and multimodal nature of contact interactions.
-
-방법 관련 발췌 — The key contribution of our method is to formulate the contact trajectory optimization precisely to address these requirements while also being amenable to gradient-based optimization and capable of producing a variety of ...
+이 연구는 유연한 촉각 센서가 붙은 그리퍼로 물체를 쥔 채 외부 접촉을 이용해 미끄러뜨리거나 회전시키는 동작을 계획한다. [PDF 1쪽](https://www.roboticsproceedings.org/rss20/p135.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 5 / IV. METHODOLOGY - extractive body cue:** The key contribution of our method is to formulate the contact trajectory optimization precisely to address these requirements while also being amenable to gradient-based optimization ...
-- **p. 2 / I. INTRODUCTION - extractive body cue:** An integral part of our method is the use of tactile sensors.
-- **p. 2 / I. INTRODUCTION - extractive body cue:** Our method is able to produce a variety of "manipulation skills" and is amenable to gradient-based optimization by exploiting differentiability within contact modes (e.g., specifications ...
-- **p. 3 / IV. METHODOLOGY - extractive body cue:** Our method is composed of 4 core components: i) a stateestimation pipeline using the feedback from the tactile sensor to estimate object pose and extrinsic ...
-- **p. 5 / IV. METHODOLOGY - extractive body cue:** Trajectory Optimization Overview: Given a desired trajectory of the extrinsic object {xeo,k}K k=1 as well as the contact modes {ck}K k=1, our method optimizes the ...
-- **p. 10 / V. EXPERIMENTS AND RESULTS - extractive body cue:** While the current model yields satisfactory results, exploring higher-dimensional models with improved accuracy could further enhance performance.
-- **p. 7 / V. EXPERIMENTS AND RESULTS - extractive body cue:** Our experiments show that the closedloop controllers achieve superior performance tracking the desired trajectories than the other tested control approaches.
-- **p. 8 / V. EXPERIMENTS AND RESULTS - extractive body cue:** We observe that we achieve errors below 1N for force and in the order of a millimeter accuracy for the pose tracking error.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 센서 변형, 정적 평형과 마찰을 함께 모델링하고 각 접촉 모드 안에서 미분 가능한 궤적 최적화를 수행한다. [PDF 4쪽](https://www.roboticsproceedings.org/rss20/p135.pdf#page=4) · [PDF 5쪽](https://www.roboticsproceedings.org/rss20/p135.pdf#page=5)
+- 여러 제어기 변형으로 실제 밀착 미끄러짐·피벗 동작을 실행해 접촉 피드백의 역할을 비교한다. [PDF 6쪽](https://www.roboticsproceedings.org/rss20/p135.pdf#page=6) · [PDF 7쪽](https://www.roboticsproceedings.org/rss20/p135.pdf#page=7)
 
 ## Evaluation Scope
 

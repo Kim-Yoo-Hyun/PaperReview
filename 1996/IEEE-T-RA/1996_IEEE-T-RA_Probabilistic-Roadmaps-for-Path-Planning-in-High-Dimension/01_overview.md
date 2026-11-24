@@ -15,13 +15,11 @@
 - Full-text retrieval: https://kavrakilab.org/publications/kavraki-svestka1996probabilistic-roadmaps-for.pdf
 - Code/Project: not identified
 - Paper type: theory_or_foundation
-- Source audit: full-text PDF body checked on 2026-09-03 (15 pages; tesseract OCR fallback; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (15 pages; tesseract OCR fallback; title-token overlap first two pages=1.0) 2026-11-24 한 줄 요약과 핵심 기여 두 개를 각 문장에 인용한 판본의 원문에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, while building the roadmap, our method heuristically identifies "difficult" regions in free C-space and generates additional configurations in those regions to increase network connectivity.
-
-방법 관련 발췌 — Our method emphasizes efficiency and is primarily developed for robots with many dofs which move in static ‘environments.
+PRM은 정적인 환경에서 충돌 없는 구성들의 로드맵을 미리 만든 뒤 시작점과 목표점이 다른 여러 경로 질의에 재사용한다. [PDF 1쪽](https://kavrakilab.org/publications/kavraki-svestka1996probabilistic-roadmaps-for.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 3 / I. RELATION 70 Previous Work - extractive body cue:** Our method emphasizes efficiency and is primarily developed for robots with many dofs which move in static ‘environments.
-- **p. 1 / 1. IntRopuction - extractive body cue:** ‘We have demonstrated the power of our method by applying it to a number of difficult motion planning problems involving ‘variety of robots.
-- **p. 1 / 1. IntRopuction - extractive body cue:** Moreover, increased efficiency can be achieved by tailoring several components of our method, in particular the local planner, to the considered robots.
-- **p. 2 / 1. IntRopuction - extractive body cue:** Next, in Sections IV-VI we apply four method to planar articulated robots.
-- **p. 3 / I. RELATION 70 Previous Work - extractive body cue:** Instead, our method applies a roadmap approach 134), that is, it constructs a network of paths in free Cspace.
-- **p. 12 / VI. RESULTS WITH GENERAL IMPLEMENTATION - extractive body cue:** For each such pair of times we report the success rate in answering the query (s, 9).
-- **p. 12 / VI. RESULTS WITH GENERAL IMPLEMENTATION - extractive body cue:** We present results obtained with two representative examples.
-- **p. 13 / VI. RESULTS WITH GENERAL IMPLEMENTATION - extractive body cue:** 12 reports some experimental results obtained over many independently ‘constructed roadmaps, for different learning times.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 자유 구성 공간에서 표본을 뽑고 가까운 표본들을 국소 계획기가 연결할 수 있을 때만 간선을 추가한다. [PDF 8쪽](https://kavrakilab.org/publications/kavraki-svestka1996probabilistic-roadmaps-for.pdf#page=8) · [PDF 9쪽](https://kavrakilab.org/publications/kavraki-svestka1996probabilistic-roadmaps-for.pdf#page=9)
+- 질의 때 시작·목표 구성을 기존 로드맵에 연결하고 같은 연결 성분에서 경로를 찾는다. [PDF 16쪽](https://kavrakilab.org/publications/kavraki-svestka1996probabilistic-roadmaps-for.pdf#page=16) · [PDF 17쪽](https://kavrakilab.org/publications/kavraki-svestka1996probabilistic-roadmaps-for.pdf#page=17)
 
 ## Evaluation Scope
 

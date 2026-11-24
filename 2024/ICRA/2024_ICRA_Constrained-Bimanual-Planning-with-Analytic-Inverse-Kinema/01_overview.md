@@ -15,13 +15,11 @@
 - Full-text retrieval: https://arxiv.org/pdf/2309.08770
 - Code/Project: https://tommycohn.com/Bimanual-Web/
 - Paper type: theory_or_foundation
-- Source audit: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 한 줄 요약과 핵심 기여 두 개를 각 문장에 인용한 판본의 원문에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Such task space constraints appear as complicated nonlinear equality constraints in configuration space, posing a major challenge to traditional motion planning algorithms.
-
-방법 관련 발췌 — Then, we present our parametrization of the constraint manifold for bimanual planning, and discuss its relevant geometric and topological properties.
+이 연구는 두 손이 같은 물체를 잡은 채 상대 자세를 유지하도록 해석적 역기구학으로 양팔 계획 공간의 차원을 줄인다. [PDF 1쪽](https://arxiv.org/pdf/2309.08770v2#page=1)
 
 ## Problem and Motivation
 
@@ -55,15 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 1 / I. INTRODUCTION - extractive body cue:** Then, we present our parametrization of the constraint manifold for bimanual planning, and discuss its relevant geometric and topological properties.
-- **p. 1 / I. INTRODUCTION - extractive body cue:** If a robot must move an object that it is holding with both hands, we propose constructing a plan for one "controllable" arm, and then ...
-- **p. 2 / I. INTRODUCTION - extractive body cue:** Finally, we present various experiments demonstrating the efficacy of these new techniques.
-- **p. 2 / III. METHODOLOGY - extractive body cue:** We introduce a bijective mapping between joint angles and end-effector pose for a single arm with analytic IK.
-- **p. 4 / III. METHODOLOGY - extractive body cue:** In Section IV, we demonstrate that this theoretical limitation is not a major roadblock to our framework's efficacy.
-- **p. 5 / IV. RESULTS - extractive body cue:** AtlasBiRRT runtimes were only averaged over successful runs (not including timeouts).
-- **p. 6 / IV. RESULTS - extractive body cue:** GCS can use such regions to plan motions for objects of different sizes; we include hardware demonstrations in our results video.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 한 팔과 자유 매개변수로부터 다른 팔의 구성을 복원해 양손 제약을 만족하는 표본을 생성한다. [PDF 3쪽](https://arxiv.org/pdf/2309.08770v2#page=3) · [PDF 4쪽](https://arxiv.org/pdf/2309.08770v2#page=4)
+- 같은 매개변수화를 표본 기반 계획과 궤적 최적화 등에 적용해 제약을 직접 처리하는 접근과 비교한다. [PDF 5쪽](https://arxiv.org/pdf/2309.08770v2#page=5) · [PDF 6쪽](https://arxiv.org/pdf/2309.08770v2#page=6)
 
 ## Evaluation Scope
 

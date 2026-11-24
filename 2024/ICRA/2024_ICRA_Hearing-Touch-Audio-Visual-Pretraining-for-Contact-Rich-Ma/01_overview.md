@@ -15,13 +15,11 @@
 - Full-text retrieval: https://arxiv.org/pdf/2405.08576
 - Code/Project: https://sites.google.com/view/hearing-touch
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 한 줄 요약과 핵심 기여 두 개를 각 문장에 인용한 판본의 원문에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — This gap arises due to the lack of relevant data at a comparable scale for tactile sensing.
-
-방법 관련 발췌 — Our method makes use of Audio-Visual Instance Discrimination (AVID) [14], a selfsupervised learning approach to learn audio-visual representations, pre-trained on Audioset [15], a dataset containing 1Robotics Institute, Carnegie Mellon ...
+Hearing Touch는 접촉 마이크가 포착한 진동을 소리로 표현해 기존 시청각 사전학습을 로봇 접촉 감지에 활용한다. [PDF 1쪽](https://arxiv.org/pdf/2405.08576v1#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 1 / I. INTRODUCTION - extractive body cue:** Our method makes use of Audio-Visual Instance Discrimination (AVID) [14], a selfsupervised learning approach to learn audio-visual representations, pre-trained on Audioset [15], a dataset containing ...
-- **p. 3 / III. MANIPULATION WITH AUDIO-VISUAL PRETRAINING - extractive body cue:** Similar to [41], [42] our method is quasi open-loop-at time step t the policy predicts H steps of actions, of which h ≤H steps of ...
-- **p. 3 / III. MANIPULATION WITH AUDIO-VISUAL PRETRAINING - extractive body cue:** Audio and Visual Representation Pretraining Our method uses large-scale audio-visual pre-training to initialize our audio encoder and large-scale visual pretraining to initialize our visual encoder.
-- **p. 1 / I. INTRODUCTION - extractive body cue:** Furthermore, our approach outperforms equivalent policies with audio encoders trained from scratch.
-- **p. 2 / III. MANIPULATION WITH AUDIO-VISUAL PRETRAINING - extractive body cue:** We outline further details of our approach in the following sections.
-- **p. 4 / IV. EXPERIMENTS - extractive body cue:** Flipping Scooping Zipping Success % Reward Success % Reward Success % Ours 50.0% 15.4 78.1% 8.9 88.9% BYOL-A 25.0% 2.3 25.0% 3.8 66.7% Scratch 15.4% ...
-- **p. 4 / Figure/Table caption - extractive body cue:** Fig. 4: Success rates across methods and tasks. Our method, shown in blue, outperforms baselines in all but one setup of the zipping task. Furthermore, ...
-- **p. 5 / IV. EXPERIMENTS - extractive body cue:** The results show that keeping the pre-trained audio encoder weights frozen during policy learning only slightly diminishes the performance of our method and still outperforms ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 영상과 접촉 음향 인코더의 특징을 결합하고 소수의 로봇 시연으로 조작 정책을 학습한다. [PDF 2쪽](https://arxiv.org/pdf/2405.08576v1#page=2) · [PDF 3쪽](https://arxiv.org/pdf/2405.08576v1#page=3)
+- 뒤집기·퍼내기·지퍼 조작에서 감각 조합과 사전학습 조건을 바꾸며 실물 성공률을 비교한다. [PDF 3쪽](https://arxiv.org/pdf/2405.08576v1#page=3) · [PDF 4쪽](https://arxiv.org/pdf/2405.08576v1#page=4)
 
 ## Evaluation Scope
 

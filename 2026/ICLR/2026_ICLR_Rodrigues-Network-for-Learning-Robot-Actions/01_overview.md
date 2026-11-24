@@ -15,13 +15,11 @@
 - Full-text retrieval: https://arxiv.org/pdf/2506.02618
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (23 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (23 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 한 줄 요약과 핵심 기여 두 개를 각 문장에 인용한 판본의 원문에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — This gap raises our central question: Can we design a neural network for action learning that embeds articulated kinematics as an inductive bias?
-
-방법 관련 발췌 — To this end, we propose the Neural Rodrigues Operator, a learnable generalization of the classical forward kinematics operation, designed to inject kinematics-aware inductive bias into neural computation.
+RodriNet은 순기구학의 회전·연결 구조를 학습 가능한 연산에 반영해 관절형 시스템의 행동과 형상을 표현한다. [PDF 1쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/eb9b18ccb76a1156af5779ffdca1d91f-Paper-Conference.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 1 / ABSTRACT - extractive body cue:** To this end, we propose the Neural Rodrigues Operator, a learnable generalization of the classical forward kinematics operation, designed to inject kinematics-aware inductive bias into ...
-- **p. 3 / 1 INTRODUCTION - extractive body cue:** In contrast, our method derive a learnable operator from forward kinematics, thereby making the network kinematics-aware while maintaining the flexibility to learn high-level features.
-- **p. 5 / 3.1 BACKGROUND - extractive body cue:** To achieve that, we propose a basic building block called Rodrigues Block (Figure 2), which comprises the following three components: (1) a Rodrigues Layer for ...
-- **p. 6 / 3.1 BACKGROUND - extractive body cue:** The global token enables the network to store and propagate task-wide information that is not tied to any specific joint or link.
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** Second, we showcase our effectiveness in realistic robot-learning scenarios with imitation learning on 5 robot manipulation tasks.
-- **p. 9 / 5 EXPERIMENTS - extractive body cue:** Our network achieves a notable performance improvement while significantly reducing the number of parameters (39.5M vs. ours: 10.7M).
-- **p. 8 / 5 EXPERIMENTS - extractive body cue:** Results and analysis As shown in Table 2, Diffusion Policy (Chi et al., 2023) with the Rodrigues Network backbone achieves overall state-of-the-art performance, demonstrating that ...
-- **p. 8 / 5 EXPERIMENTS - extractive body cue:** Performance is measured by running 100 evaluation rollouts in simulation, and all models are trained with 5 random seeds to report the mean and standard ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 회전축을 따르는 Rodrigues 연산을 학습 가능한 특징 변환으로 일반화하고 이를 블록으로 쌓는다. [PDF 4쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/eb9b18ccb76a1156af5779ffdca1d91f-Paper-Conference.pdf#page=4) · [PDF 5쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/eb9b18ccb76a1156af5779ffdca1d91f-Paper-Conference.pdf#page=5)
+- 합성 운동 예측 외에 Diffusion Policy를 쓰는 모방학습과 단일 영상의 3차원 손 복원에서 기존 신경망과 비교한다. [PDF 8쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/eb9b18ccb76a1156af5779ffdca1d91f-Paper-Conference.pdf#page=8) · [PDF 9쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/eb9b18ccb76a1156af5779ffdca1d91f-Paper-Conference.pdf#page=9)
 
 ## Evaluation Scope
 

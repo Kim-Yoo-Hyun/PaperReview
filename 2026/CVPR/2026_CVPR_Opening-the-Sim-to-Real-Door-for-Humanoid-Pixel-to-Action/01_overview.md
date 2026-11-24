@@ -15,13 +15,11 @@
 - Full-text retrieval: https://openaccess.thecvf.com/content/CVPR2026/papers/Xue_Opening_the_Sim-to-Real_Door_for_Humanoid_Pixel-to-Action_Policy_Transfer_CVPR_2026_paper.pdf
 - Code/Project: https://doorman-humanoid.github.io/
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 한 줄 요약과 핵심 기여 두 개를 각 문장에 인용한 판본의 원문에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — These requirements remain unmet in prior work; and (ii) the visual sim-to-real gap spans a vast space of appearance and physics variation, requiring broad, heterogeneous data rather than a few curated scenes.
-
-방법 관련 발췌 — To summarize, the main contributions of our work are: • We present the first end-to-end humanoid sim-to-real policy capable of diverse articulated loco-manipulation from pure RGB perception. • We introduce a teacher-student-bootstrap ...
+DoorMan은 관절형 물체를 조작하는 휴머노이드를 합성 자료만으로 훈련해 RGB 관측으로 실제 문을 열게 한다. [PDF 1쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Xue_Opening_the_Sim-to-Real_Door_for_Humanoid_Pixel-to-Action_Policy_Transfer_CVPR_2026_paper.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 3 / 1. Introduction - extractive body cue:** To summarize, the main contributions of our work are: • We present the first end-to-end humanoid sim-to-real policy capable of diverse articulated loco-manipulation from pure ...
-- **p. 3 / 1. Introduction - extractive body cue:** To address the first challenge, we introduce a novel, scalable teacher-student-bootstrap learning pipeline.
-- **p. 4 / 2.2. Multi-Stage Whole-Body Loco-Manipulation - extractive body cue:** Here, we present the design of a robust teacher training pipeline for whole-body loco-manipulation tasks.
-- **p. 4 / 2.2. Multi-Stage Whole-Body Loco-Manipulation - extractive body cue:** To address this, we introduce a staged reset law α = (α1, . . . , αK), K X y=1 αy = 1, (1) which ...
-- **p. 5 / 2.4. Massive-Scale Simulation Randomization - extractive body cue:** Compared with prior work such as InfinigenSim [21], our IsaacLab-native implementation significantly improves physical realism and enables contact simulation that is both accurate and efficient ...
-- **p. 7 / Figure/Table caption - extractive body cue:** Figure 7. Training progress of student policy bootstrapping with improvements in task success rate. The dashed lines are teacher policy success rates. cies can consistently ...
-- **p. 7 / 3.2. Effect of Photorealistic Visual Randomization - extractive body cue:** This setting achieves a commendable success rate of 65.8-70%.
-- **p. 6 / 3.1. Surpassing Human-Teleop Baseline - extractive body cue:** We hypothesize that the current whole-body teleoperation technology, due to its unintuitive nature, create a gap in both efficiency and success rate compared to direct ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 과제 내 여러 단계에서 에피소드를 시작해 긴 동작을 탐색하고 특권 상태 교사의 행동을 영상 정책에 전달한다. [PDF 3쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Xue_Opening_the_Sim-to-Real_Door_for_Humanoid_Pixel-to-Action_Policy_Transfer_CVPR_2026_paper.pdf#page=3) · [PDF 5쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Xue_Opening_the_Sim-to-Real_Door_for_Humanoid_Pixel-to-Action_Policy_Transfer_CVPR_2026_paper.pdf#page=5)
+- 증류한 정책을 그룹 상대 정책 최적화로 추가 훈련하고 시각 무작위화와 학습 단계의 역할을 평가한다. [PDF 5쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Xue_Opening_the_Sim-to-Real_Door_for_Humanoid_Pixel-to-Action_Policy_Transfer_CVPR_2026_paper.pdf#page=5) · [PDF 7쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Xue_Opening_the_Sim-to-Real_Door_for_Humanoid_Pixel-to-Action_Policy_Transfer_CVPR_2026_paper.pdf#page=7)
 
 ## Evaluation Scope
 

@@ -15,13 +15,11 @@
 - Full-text retrieval: https://www.roboticsproceedings.org/rss21/p025.pdf
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (15 pages; tesseract OCR fallback; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (15 pages; tesseract OCR fallback; title-token overlap first two pages=1.0) 2026-11-24 한 줄 요약과 핵심 기여 두 개를 각 문장에 인용한 판본의 원문에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Continual learning also faces challenges, such as catastrophic forgetting, as discussed in prior work [18].
-
-방법 관련 발췌 — We show that CASHER enables fine-tuning of prestrained to a target scenario using a video sean without any additional hbuman effort.
+CASHER는 사람이 스캔한 실제 장면을 시뮬레이션으로 옮겨 인간 시연과 자율 수집을 결합하고 수집 노력 대비 실물 조작 성과를 조사한다. [PDF 1쪽](https://www.roboticsproceedings.org/rss21/p025.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -53,15 +51,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 1 / Abstract - extractive body cue:** We show that CASHER enables fine-tuning of prestrained to a target scenario using a video sean without any additional hbuman effort.
-- **p. 1 / 1. Iyrropucrion - extractive body cue:** Our contributions include 1) a novel continual data collection system based on real-to-sim-to-real for training generalist policies, 2) a novel scanned deployment fine-tuning technique for ...
-- **p. 2 / 1. Iyrropucrion - extractive body cue:** Overview of CASHER, we propose « system for taining generalist policies leveraging real-o-sim simulation on crowdsouced scans.
-- **p. 3 / 1. Iyrropucrion - extractive body cue:** CASHER consists of three elements - 1) fast, accessible digital twin generation with 3-D reconstruction methods, 2) multi-environment model learning that amortizes the data collection ...
-- **p. 12 / IX. IMPLEMENTATION DETAILS - extractive body cue:** To encode the point cloud observation, we use the volumetric 3D point cloud encoder proposed in Convolutional Occupancy Networks [31], which consists ofa local point ...
-- **p. 6 / A. Zero-Shot Scaling Laws Analysis - extractive body cue:** To verify the robustness of the learned policies, we ran evaluation on eight additional kitchens, ‘The results highlight an improvement of 16% to 60% rate ...
-- **p. 6 / A. Zero-Shot Scaling Laws Analysis - extractive body cue:** Furthermore, Figure 3b shows a linear correlation between simulation and real world performance, indicating that our real-to-sim-to-real scaling approach in simulation proportionally corresponds to improved ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 처음에는 시연으로 장면별 학습을 돕고 일반 정책이 개선되면 그 정책으로 새 장면의 자료 수집을 시작한다. [PDF 3쪽](https://www.roboticsproceedings.org/rss21/p025.pdf#page=3) · [PDF 4쪽](https://www.roboticsproceedings.org/rss21/p025.pdf#page=4)
+- 세 실물 과제에서 학습 환경 수와 사람의 수집 노력에 따른 영점·소수 예시 적응 성능을 분석한다. [PDF 5쪽](https://www.roboticsproceedings.org/rss21/p025.pdf#page=5) · [PDF 6쪽](https://www.roboticsproceedings.org/rss21/p025.pdf#page=6)
 
 ## Evaluation Scope
 

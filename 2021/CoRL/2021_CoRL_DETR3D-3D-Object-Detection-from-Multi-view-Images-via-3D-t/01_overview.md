@@ -15,13 +15,11 @@
 - Full-text retrieval: https://arxiv.org/pdf/2110.06922
 - Code/Project: https://github.com/WangYueFt/detr3d
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (12 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (12 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 한 줄 요약과 핵심 기여 두 개를 각 문장에 인용한 판본의 원문에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — 3D object detection from visual information is a long-standing challenge for low-cost autonomous driving systems.
-
-방법 관련 발췌 — We summarize our key contributions as follows: • We present a streamlined 3D object detection model from RGB images.
+DETR3D는 보정된 여러 카메라 영상에서 소수의 3차원 물체 쿼리로 물체 상자를 직접 검출한다. [PDF 1쪽](https://proceedings.mlr.press/v164/wang22b/wang22b.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1 Introduction - extractive body cue:** We summarize our key contributions as follows: • We present a streamlined 3D object detection model from RGB images.
-- **p. 2 / 1 Introduction - extractive body cue:** Moreover, our method does not require any post-processing, such as non-maximum suppression (NMS), improving efficiency and reducing reliance on hand-designed methods for cleaning its output.
-- **p. 1 / Abstract - extractive body cue:** We introduce a framework for multi-camera 3D object detection.
-- **p. 1 / Abstract - extractive body cue:** In contrast to existing works, which estimate 3D bounding boxes directly from monocular images or use depth prediction networks to generate input for 3D object ...
-- **p. 7 / 4 Experiments - extractive body cue:** We also provide quantitative results in Table 5, which shows that iterative refinement indeed improves performance significantly.
-- **p. 7 / 4 Experiments - extractive body cue:** Furthermore, we provide ablations on the number of object queries in Table 6; increasing the number queries consistently improves the performance until it gets saturated ...
-- **p. 6 / 4 Experiments - extractive body cue:** As shown in Table 1, our method outperforms these methods even though we do not use any post-processing.
-- **p. 6 / 4 Experiments - extractive body cue:** On the test set (Table 2), our method outperforms all existing methods as of 10/13/2021; our method uses the same backbone as DD3D [37] for ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 쿼리의 3차원 기준점을 각 영상에 투영해 해당 지점의 2차원 특징을 모으고 상자를 정제한다. [PDF 3쪽](https://proceedings.mlr.press/v164/wang22b/wang22b.pdf#page=3) · [PDF 4쪽](https://proceedings.mlr.press/v164/wang22b/wang22b.pdf#page=4)
+- nuScenes 전체 검출 점수와 카메라 시야가 겹치는 영역의 검출 결과를 별도로 비교한다. [PDF 6쪽](https://proceedings.mlr.press/v164/wang22b/wang22b.pdf#page=6) · [PDF 7쪽](https://proceedings.mlr.press/v164/wang22b/wang22b.pdf#page=7)
 
 ## Evaluation Scope
 

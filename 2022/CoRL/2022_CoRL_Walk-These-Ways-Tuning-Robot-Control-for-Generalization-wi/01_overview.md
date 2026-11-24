@@ -15,13 +15,11 @@
 - Full-text retrieval: https://arxiv.org/pdf/2212.03238
 - Code/Project: https://sites.google.com/view/walk-these-ways
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (14 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (14 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 한 줄 요약과 핵심 기여 두 개를 각 문장에 인용한 판본의 원문에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — The difficulty of designing a single set of auxiliary rewards that promote generalization in diverse set of downstream tasks is illustrated in the top row insets of Figure 1: each shows an ...
-
-방법 관련 발췌 — We present a framework for policy learning that enables improved performance in out-of-distribution scenarios under some assumptions detailed below.
+Walk These Ways는 여러 보행 방식을 하나의 사족 정책에 학습시켜 새 환경에서도 동작 매개변수를 바꿔 적응할 수 있게 한다. [PDF 1쪽](https://proceedings.mlr.press/v205/margolis23a/margolis23a.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1 Introduction - extractive body cue:** We present a framework for policy learning that enables improved performance in out-of-distribution scenarios under some assumptions detailed below.
-- **p. 2 / 1 Introduction - extractive body cue:** To facilitate generalization to diverse scenarios, we propose a technique, Multiplicity of Behavior (MoB), that given the same observation history and a small set of ...
-- **p. 5 / 3 Method - extractive body cue:** The action at consists of position targets for each of the twelve joints.
-- **p. 5 / 3 Method - extractive body cue:** The observation space ot consists of joint positions and velocities qt, ˙qt (measured by joint encoders) and the gravity vector in the body frame gt ...
-- **p. 6 / 3 Method - extractive body cue:** Gait 0.0 m/s 1.0 m/s 2.0 m/s 3.0 m/s Trotting 9±1 24±1 53±5 98±9 Pronking 32±1 43±2 68±5 112±5 Pacing 13±3 25±2 55±3 99±6 Bounding ...
-- **p. 11 / Figure/Table caption - extractive body cue:** Table 5: Removing gait constraints results in improved velocity tracking task performance on flat ground. Heat maps (right) break down the mean task reward for ...
-- **p. 7 / 3 Method - extractive body cue:** Therefore, it is possible to improve performance in an out-of-distribution terrain by modulating the parameters of the MoB policy.
-- **p. 7 / Figure/Table caption - extractive body cue:** Table 4: Zero-shot generalization to platform terrain (visualized right). Pacing and trotting yield the best survival time in out-of-distribution deployment, outperforming the gait-free baseline. Pronk- ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 속도 외에 보행 위상·발의 이동·몸통 자세 등을 정책에 조건으로 주고 이에 대응하는 보상을 구성한다. [PDF 3쪽](https://proceedings.mlr.press/v205/margolis23a/margolis23a.pdf#page=3) · [PDF 4쪽](https://proceedings.mlr.press/v205/margolis23a/margolis23a.pdf#page=4)
+- 실물 과제에서 보행 매개변수 선택에 따른 장애물 대응과 학습 때 보지 못한 조건에서의 성능 변화를 비교한다. [PDF 6쪽](https://proceedings.mlr.press/v205/margolis23a/margolis23a.pdf#page=6) · [PDF 7쪽](https://proceedings.mlr.press/v205/margolis23a/margolis23a.pdf#page=7)
 
 ## Evaluation Scope
 

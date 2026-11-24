@@ -15,13 +15,11 @@
 - Full-text retrieval: https://arxiv.org/pdf/2102.05918
 - Code/Project: not identified
 - Paper type: theory_or_foundation
-- Source audit: full-text PDF body checked on 2026-09-03 (14 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (14 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 한 줄 요약과 핵심 기여 두 개를 각 문장에 인용한 판본의 원문에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Curation of such pre-training datasets requires heavy work on data gathering, sampling, and human annotation, and hence is difficult to scale.
-
-방법 관련 발췌 — Moreover, such cross-modality matching naturally enables zero-shot image classification when feeding the classnames into the text encoder, achieving 76.4% top-1 accuracy in ImageNet without using any of its training samples.
+ALIGN은 웹 이미지와 대체 텍스트의 잡음 많은 대규모 쌍에서 시각·언어 표현의 공통 공간을 학습한다. [PDF 1쪽](https://proceedings.mlr.press/v139/jia21b/jia21b.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** Moreover, such cross-modality matching naturally enables zero-shot image classification when feeding the classnames into the text encoder, achieving 76.4% top-1 accuracy in ImageNet without using ...
-- **p. 3 / 4.1. Pre-training on Noisy Image-Text Pairs - extractive body cue:** The model consists of a pair of image and text encoders with a cosine-similarity combination function at the top.
-- **p. 4 / 4.3. Transferring to Visual Classification - extractive body cue:** (2020), we also evaluate the robustness of our model on Visual Task Adaptation Benchmark (VTAB) (Zhai et al., 2019) which consists of 19 diverse (covering ...
-- **p. 9 / 8. Multilingual ALIGN Model - extractive body cue:** The dataset consists of 31,783 images with 5 captions per image in English and German and 1 caption per image in French and Czech.
-- **p. 1 / 1. Introduction - extractive body cue:** We show that visual and visionlanguage representations pre-trained on our exascale dataset achieve very strong performance on a wide range of tasks.
-- **p. 6 / 5.2. Zero-shot Visual Classification - extractive body cue:** With frozen features, ALIGN slightly outperforms CLIP and achieves SOTA result of 85.5% top-1 accuracy.
-- **p. 5 / 5.2. Zero-shot Visual Classification - extractive body cue:** We find that such ensembling gives 2.9% improvement on ImageNet top-1 accuracy.
-- **p. 6 / 5.2. Zero-shot Visual Classification - extractive body cue:** After fine-tuning ALIGN achieves higher accuracy than BiT and ViT models, and is only worse than Meta Pseudo Labels which requires deeper interaction between ImageNet ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 이미지와 텍스트를 각각 부호화한 뒤 같은 쌍의 유사도를 배치 안의 다른 조합보다 높이는 대조 목적을 쓴다. [PDF 2쪽](https://proceedings.mlr.press/v139/jia21b/jia21b.pdf#page=2) · [PDF 3쪽](https://proceedings.mlr.press/v139/jia21b/jia21b.pdf#page=3)
+- 검색에서는 이미지와 문장을 양방향으로 질의하고, ImageNet에서는 텍스트 범주명을 사용한 영점 분류를 평가한다. [PDF 5쪽](https://proceedings.mlr.press/v139/jia21b/jia21b.pdf#page=5) · [PDF 6쪽](https://proceedings.mlr.press/v139/jia21b/jia21b.pdf#page=6)
 
 ## Evaluation Scope
 

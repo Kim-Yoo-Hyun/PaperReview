@@ -8,7 +8,7 @@
 
 ## Evaluation in One Sentence
 
-PDF body evaluation/result cue (p. 18 (Figure/Table caption), p. 7 (Figure/Table caption), p. 2 (Figure/Table caption), p. 7 (Figure/Table caption), p. 16 (Figure/Table caption), p. 17 (Figure/Table caption)): Figure 12: Simulated benchmark results. Better performance is achieved when using our semi- structured dynamics models and a multi-step loss. Plots show the mean and standard deviation for episodic rewards. ...
+3분은 Go1에서 수집한 실제 상호작용 데이터의 길이다. 각 지면에서 3분의 자료를 쓴 뒤 평균 전진 속도는 단단한 바닥 0.98 m/s, 메모리폼 0.53 m/s였다. [PDF 6쪽](https://raw.githubusercontent.com/mlresearch/v270/d9fe509ba390176a5fd650178a381a0a7b2d4f64/assets/levy25a/levy25a.pdf#page=6) · [PDF 7쪽](https://raw.githubusercontent.com/mlresearch/v270/d9fe509ba390176a5fd650178a381a0a7b2d4f64/assets/levy25a/levy25a.pdf#page=7)
 
 ## Evaluation Body Digest
 

@@ -15,11 +15,11 @@
 - Full-text retrieval: https://aclanthology.org/2020.emnlp-main.356.pdf
 - Code/Project: https://github.com/google-research-datasets/RxR
 - Paper type: benchmark_or_dataset
-- Source audit: full-text PDF body checked on 2026-09-03 (21 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (21 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 한 줄 요약과 핵심 기여 두 개를 각 문장에 인용한 판본의 원문에서 확인했다.
 
 ## Why This Paper Is Here
 
-Robotics-enabling 3D perception의 benchmark 문제를 이해하기 위해 읽는다. 본문은 High variance in path length, such that agents cannot simply exploit a strong length prior.를 문제로 두고, We introduce Room-across-Room (RxR), a VLN dataset that addresses gaps in existing ones by (1) ∗First two.
+RxR은 영어·힌디어·텔루구어로 기술된 실내 길 안내와 그 생성·검증 과정의 가상 시점 궤적을 제공한다. [PDF 1쪽](https://aclanthology.org/2020.emnlp-main.356.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -53,16 +53,8 @@ Robotics-enabling 3D perception의 benchmark 문제를 이해하기 위해 읽�
 
 ## Main Claims and Actual Contribution
 
-- **p. 1 / 1 Introduction - extractive body cue:** We introduce Room-across-Room (RxR), a VLN dataset that addresses gaps in existing ones by (1) ∗First two.
-- **p. 1 / Abstract - extractive body cue:** We introduce Room-Across-Room (RxR), a new Vision-and-Language Navigation (VLN) dataset.
-- **p. 2 / 1 Introduction - extractive body cue:** In addition to verifying instruction quality, this allows us to collect a play-by-play account of how a human interpreted the instructions, represented as a pose ...
-- **p. 8 / 5 Experiments - extractive body cue:** Applying the same approach to textual attention did not improve performance.
-- **p. 9 / 5 Experiments - extractive body cue:** The multimodal agent (4) outperforms both the languageonly agent (9) and the vision-only agent (10), indicating that both modalities contribute to performance.
-- **p. 8 / Figure/Table caption - extractive body cue:** Table 5: RxR val-unseen: Monolingual vs. multilingual results. Training with both Guide and Follower paths benefits all languages (exp. 3 vs. 1 and 2), monolingual ...
-- **p. 7 / 5 Experiments - extractive body cue:** In preliminary experiments, we found that pretraining the CNN in this way gave noticeable improvements over the same CNN pretrained for image classification on ImageNet ...
-- **p. 7 / 5 Experiments - extractive body cue:** Monolingual Results Table 5 provides results on the val-unseen split for several training settings, as well as human performance from Follower annotations.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 경로를 수집하고 안내자와 독립 검증자의 시점 기록을 발화 시간에 맞춰 연결한다. [PDF 3쪽](https://aclanthology.org/2020.emnlp-main.356.pdf#page=3) · [PDF 5쪽](https://aclanthology.org/2020.emnlp-main.356.pdf#page=5)
+- 다국어 내비게이션 기준선을 비교하고 시연자가 바라본 파노라마 영역을 학습에 활용하는 조건을 평가한다. [PDF 8쪽](https://aclanthology.org/2020.emnlp-main.356.pdf#page=8) · [PDF 9쪽](https://aclanthology.org/2020.emnlp-main.356.pdf#page=9)
 
 ## Evaluation Scope
 

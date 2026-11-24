@@ -6,7 +6,7 @@
 
 ## Evaluation in One Sentence
 
-PDF body evaluation/result cue (p. 12 (B. Table-Top Franka Arm Results), p. 12 (C. Mobile X-Arm Results), p. 13 (C. Mobile X-Arm Results), p. 13 (C. Mobile X-Arm Results)): If we compute the normalized opening performance for ArticuBot only in cases where the grasp is successful (Le., the same starting conditions as FlowBot3D), the performance of ArticuBot further improves ...
+실험실 A의 Franka는 9개 물체를 각각 5회 시험해 파지 성공률 0.78과 정규화 개방 거리 0.63을 기록했다. 후자는 작업 공간과 관절 한계 안에서 물체가 열릴 수 있는 최대 거리 대비 실제 열린 거리다. [PDF 10쪽](https://www.roboticsproceedings.org/rss21/p156.pdf#page=10) · [PDF 11쪽](https://www.roboticsproceedings.org/rss21/p156.pdf#page=11)
 
 ## Evaluation Body Digest
 

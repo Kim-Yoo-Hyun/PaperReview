@@ -15,13 +15,11 @@
 - Full-text retrieval: https://arxiv.org/pdf/1806.01260
 - Code/Project: https://github.com/nianticlabs/monodepth2
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (18 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (18 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 한 줄 요약과 핵심 기여 두 개를 각 문장에 인용한 판본의 원문에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, collecting large and varied training datasets with accurate ground truth depth for supervised learning [55, 9] is itself a formidable challenge.
-
-방법 관련 발췌 — Our method succeeds here where others, and our baseline with our contributions turned off, fail. motion is observed in monocular training.
+Monodepth2는 여러 영상 사이의 광도 일관성으로 학습해 한 장의 RGB 영상에서 깊이를 예측한다. [PDF 1쪽](https://openaccess.thecvf.com/content_ICCV_2019/papers/Godard_Digging_Into_Self-Supervised_Monocular_Depth_Estimation_ICCV_2019_paper.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** Our method succeeds here where others, and our baseline with our contributions turned off, fail. motion is observed in monocular training.
-- **p. 1 / 1. Introduction - extractive body cue:** We propose three architectural and loss innovations that combined, lead to large improvements in monocular depth estimation when training with monocular video, stereo pairs, or ...
-- **p. 4 / 3.2. Improved Self-Supervised Depth Estimation - extractive body cue:** We propose an improvement that deals with both issues Figure 5.
-- **p. 4 / 3.2. Improved Self-Supervised Depth Estimation - extractive body cue:** To close this gap, we propose several improvements that significantly increase predicted depth quality, without adding additional model components that also require training (see Fig.
-- **p. 5 / 3.2. Improved Self-Supervised Depth Estimation - extractive body cue:** Inspired by techniques in stereo reconstruction [56], we propose an improvement to this multi-scale formulation, where we decouple the resolutions of the disparity images and ...
-- **p. 7 / Figure/Table caption - extractive body cue:** Table 2. Ablation. Results for different variants of our model (Monodepth2) with monocular training on KITTI 2015 [13] using the Eigen split. (a) The baseline ...
-- **p. 5 / 4. Experiments - extractive body cue:** Here, we validate that (1) our reprojection loss helps with occluded pixels compared to existing pixel-averaging, (2) our auto-masking improves results, especially when training on ...
-- **p. 14 / Figure/Table caption - extractive body cue:** Table 7. We present results for all other methods for which we have obtained predictions from the authors. We use the same error metrics from ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 소스 영상별 재투영 오차의 최솟값과 자동 마스크를 사용해 가려진 픽셀과 움직임 가정을 위반하는 픽셀의 영향을 줄인다. [PDF 3쪽](https://openaccess.thecvf.com/content_ICCV_2019/papers/Godard_Digging_Into_Self-Supervised_Monocular_Depth_Estimation_ICCV_2019_paper.pdf#page=3) · [PDF 4쪽](https://openaccess.thecvf.com/content_ICCV_2019/papers/Godard_Digging_Into_Self-Supervised_Monocular_Depth_Estimation_ICCV_2019_paper.pdf#page=4)
+- 여러 해상도의 깊이 예측을 입력 영상 해상도에서 재투영하고 KITTI 절제 실험으로 각 설계의 효과를 분리한다. [PDF 5쪽](https://openaccess.thecvf.com/content_ICCV_2019/papers/Godard_Digging_Into_Self-Supervised_Monocular_Depth_Estimation_ICCV_2019_paper.pdf#page=5) · [PDF 7쪽](https://openaccess.thecvf.com/content_ICCV_2019/papers/Godard_Digging_Into_Self-Supervised_Monocular_Depth_Estimation_ICCV_2019_paper.pdf#page=7)
 
 ## Evaluation Scope
 

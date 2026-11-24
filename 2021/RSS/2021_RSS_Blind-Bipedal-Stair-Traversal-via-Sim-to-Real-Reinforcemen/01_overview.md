@@ -15,13 +15,11 @@
 - Full-text retrieval: https://www.roboticsproceedings.org/rss17/p061.pdf
 - Code/Project: not identified
 - Paper type: theory_or_foundation
-- Source audit: full-text PDF body checked on 2026-09-03 (9 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (9 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 한 줄 요약과 핵심 기여 두 개를 각 문장에 인용한 판본의 원문에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — On stair-like environments, this is especially apparent due to the difficulty of recovery from missteps with only two legs.
-
-방법 관련 발췌 — We present a training pipeline which produces policies capable of blindly ascending and descending stairs in the real world.
+이 연구는 외부 지형 센서 없이 자기수용감각만으로 Cassie가 다양한 높이의 실제 계단을 통과하도록 학습한다. [PDF 1쪽](https://www.roboticsproceedings.org/rss17/p061.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 1 / I. INTRODUCTION - extractive body cue:** We present a training pipeline which produces policies capable of blindly ascending and descending stairs in the real world.
-- **p. 2 / I. INTRODUCTION - extractive body cue:** In this work, we show that robust proprioceptive bipedal control for complex stair-like terrain can be learned via an existing RL framework with surprisingly little ...
-- **p. 1 / I. INTRODUCTION - extractive body cue:** These policies learn proprioceptive reflexes to reject significant disturbances in ground height, resulting in highly robust behavior to many realworld environments. start location or the ...
-- **p. 2 / I. INTRODUCTION - extractive body cue:** Learning on this distribution allows for blind locomotion up and down unknown stairs as well as handling more general stair-like terrain characteristics, e.g. logs, curbs, ...
-- **p. 3 / II. REINFORCEMENT LEARNING FORMULATION - extractive body cue:** Intuitively, this allows the controller to choose an appropriate stepping frequency for a particular gait, command, and terrain.
-- **p. 4 / Figure/Table caption - extractive body cue:** Fig. 3: The learned policies exhibit a high degree of blind robustness to a variety of stair-like terrain, and can reliably ascend and descend stairs ...
-- **p. 5 / Figure/Table caption - extractive body cue:** Fig. 4: We evaluate the probability of successfully climbing and descending stairs without falling as a function of commanded speed between 0.25 m/s and 1.5 ...
-- **p. 7 / Figure/Table caption - extractive body cue:** Fig. 6: The ground reaction forces and cumulative impulses of a Stair LSTM policy when it encounters varying ground height. The peak vertical force (A) ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 평지용 보행 보상을 유지한 채 학습 지형에 계단형 높이 변화를 도입한다. [PDF 2쪽](https://www.roboticsproceedings.org/rss17/p061.pdf#page=2) · [PDF 3쪽](https://www.roboticsproceedings.org/rss17/p061.pdf#page=3)
+- 높이와 보행 조건에 따른 계단 통과 성능과 발의 흔들림 궤적을 분석해 맹목 보행의 적응 범위를 시험한다. [PDF 5쪽](https://www.roboticsproceedings.org/rss17/p061.pdf#page=5) · [PDF 6쪽](https://www.roboticsproceedings.org/rss17/p061.pdf#page=6)
 
 ## Evaluation Scope
 

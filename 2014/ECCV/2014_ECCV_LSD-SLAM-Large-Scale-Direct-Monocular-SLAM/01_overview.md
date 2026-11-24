@@ -15,13 +15,11 @@
 - Full-text retrieval: https://jakobengel.github.io/pdf/engel14eccv.pdf
 - Code/Project: https://github.com/tum-vision/lsd_slam
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (16 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (16 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 한 줄 요약과 핵심 기여 두 개를 각 문장에 인용한 판본의 원문에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — One of the major benefits of monocular SLAM - and simultaneously one of the biggest challenges - comes with the inherent scale-ambiguity: The scale of the world cannot be observed and drifts ...
-
-방법 관련 발췌 — We propose a direct (feature-less) monocular SLAM algorithm which, in contrast to current state-of-the-art regarding direct methods, allows to build large-scale, consistent maps of the environment.
+LSD-SLAM은 단안 영상의 밝기를 직접 정합해 카메라 자세와 키프레임별 준조밀 깊이 지도를 추정한다. [PDF 1쪽](https://jakobengel.github.io/pdf/engel14eccv.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 1 / Body text (section not recovered) - extractive body cue:** We propose a direct (feature-less) monocular SLAM algorithm which, in contrast to current state-of-the-art regarding direct methods, allows to build large-scale, consistent maps of the ...
-- **p. 6 / 2 Preliminaries - extractive body cue:** 3.1 The Complete Method The algorithm consists of three major components: tracking, depth map estimation and map optimization as visualized in Fig.
-- **p. 7 / 2 Preliminaries - extractive body cue:** 3.2 Map Representation The map is represented as a pose graph of keyframes: Each keyframe Ki consists of a camera image Ii : Ωi →R, ...
-- **p. 1 / 1 Introduction - extractive body cue:** The advantage is that this allows to seamlessly switch between differently scaled environments, such as a desk environment indoors and large-scale outdoor environments.
-- **p. 12 / 4 Results - extractive body cue:** 4.1 Qualitative Results on Large Trajectories We tested the algorithm on several long and challenging trajectories, which include many camera rotations, large scale changes and ...
-- **p. 13 / 4 Results - extractive body cue:** 9: Results on the TUM RGB-D benchmark [25], and two simulated sequences from [12], measured as absolute trajectory RMSE (cm).
-- **p. 13 / 4 Results - extractive body cue:** For comparison we show respective results from semi-dense mono-VO [9], keypoint-based mono-SLAM [15], direct RGB-D SLAM [14] and keypointbased RGB-D SLAM [7].
-- **p. 14 / 4 Results - extractive body cue:** 10: Convergence radius and accuracy of sim(3) direct image alignment with and without ESM minimization (indicated by light / dark) for a different number of ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 시차가 작은 연속 관측을 픽셀별로 필터링해 깊이와 불확실성을 갱신한다. [PDF 6쪽](https://jakobengel.github.io/pdf/engel14eccv.pdf#page=6) · [PDF 7쪽](https://jakobengel.github.io/pdf/engel14eccv.pdf#page=7)
+- 유사변환으로 키프레임을 정합해 축척 드리프트를 추정하고 루프 폐쇄가 포함된 궤적에서 보정을 보인다. [PDF 9쪽](https://jakobengel.github.io/pdf/engel14eccv.pdf#page=9) · [PDF 12쪽](https://jakobengel.github.io/pdf/engel14eccv.pdf#page=12)
 
 ## Evaluation Scope
 

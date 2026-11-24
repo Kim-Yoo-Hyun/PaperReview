@@ -15,13 +15,11 @@
 - Full-text retrieval: https://www.roboticsproceedings.org/rss20/p061.pdf
 - Code/Project: https://humanoid-bench.github.io/
 - Paper type: benchmark_or_dataset
-- Source audit: full-text PDF body checked on 2026-09-03 (13 pages; tesseract OCR fallback; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (13 pages; tesseract OCR fallback; title-token overlap first two pages=1.0) 2026-11-24 한 줄 요약과 핵심 기여 두 개를 각 문장에 인용한 판본의 원문에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, all these works focus fon demonstrating their approaches on specific humanoid tasks and lack a diversity of tasks.
-
-방법 관련 발췌 — To accelerate the progress of research for humanoid robots, We present the first-of-its-kind humanoid robot benchmark, HumanoidBench, with a diverse set of locomotion and manipulation tasks.
+HumanoidBench는 다지 손을 가진 휴머노이드의 전신 조작과 이동을 평가하는 고차원 시뮬레이션 벤치마크다. [PDF 1쪽](https://www.roboticsproceedings.org/rss20/p061.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 1 / I. INTRODUCTION - extractive body cue:** To accelerate the progress of research for humanoid robots, We present the first-of-its-kind humanoid robot benchmark, HumanoidBench, with a diverse set of locomotion and manipulation ...
-- **p. 1 / I. INTRODUCTION - extractive body cue:** In this paper, we present extensive benchmarking results of the state-of-the-art reinforcement leaning (RL) algorithms, which do not require extensive domain knowledge, and a hierarchical ...
-- **p. 2 / I. INTRODUCTION - extractive body cue:** 4, 42, 29, 17, 30, 48] In the context of humanoids, we propose an HRL paradigm
-- **p. 3 / I. INTRODUCTION - extractive body cue:** While this is not currently a realistic model, we anticipate the trend in the industry towards developing slimmer, human-like hhands (e-g., Tesla Optimus, Figure 01) ...
-- **p. 4 / I. INTRODUCTION - extractive body cue:** Torque-based control is also supported but we found that position control is generally more stable and allows for lower control frequency than torque control.
-- **p. 9 / B. Results - extractive body cue:** In Figure 9, our hierarchical architecture significantly outperforms the flat, end-to-end baselines on the push task, achieving very high success rates ‘with DreamerV3.
-- **p. 9 / B. Results - extractive body cue:** On the other hand, we note a less pronounced performance improvement in the more challenging package task.
-- **p. 8 / B. Results - extractive body cue:** The results in Figure 7 show that the presence of hands, with their additional joints and actuators, leads to a large decrease in performance ‘compared ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 동일한 휴머노이드 모형에서 이동·조작 과제와 관측 설정을 정의하고 과제별 목표와 성공 기준을 제시한다. [PDF 3쪽](https://www.roboticsproceedings.org/rss20/p061.pdf#page=3) · [PDF 4쪽](https://www.roboticsproceedings.org/rss20/p061.pdf#page=4) · [PDF 5쪽](https://www.roboticsproceedings.org/rss20/p061.pdf#page=5)
+- 일반 강화학습과 걷기·뻗기 저수준 정책을 활용한 계층적 기준선을 비교해 제어 난도가 성능에 미치는 영향을 보인다. [PDF 6쪽](https://www.roboticsproceedings.org/rss20/p061.pdf#page=6) · [PDF 7쪽](https://www.roboticsproceedings.org/rss20/p061.pdf#page=7) · [PDF 8쪽](https://www.roboticsproceedings.org/rss20/p061.pdf#page=8)
 
 ## Evaluation Scope
 

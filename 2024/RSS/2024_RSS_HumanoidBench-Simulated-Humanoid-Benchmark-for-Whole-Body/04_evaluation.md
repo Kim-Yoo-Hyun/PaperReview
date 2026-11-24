@@ -6,7 +6,7 @@
 
 ## Evaluation in One Sentence
 
-PDF body evaluation/result cue (p. 9 (B. Results), p. 9 (B. Results), p. 8 (B. Results), p. 8 (B. Results), p. 7 (Figure/Table caption)): In Figure 9, our hierarchical architecture significantly outperforms the flat, end-to-end baselines on the push task, achieving very high success rates ‘with DreamerV3.
+시뮬레이션 과제는 전신 조작 15개와 이동 12개다. 논문에 제시된 정책 성과는 이 가상 휴머노이드에서 측정했다. [PDF 2쪽](https://www.roboticsproceedings.org/rss20/p061.pdf#page=2) · [PDF 4쪽](https://www.roboticsproceedings.org/rss20/p061.pdf#page=4) · [PDF 5쪽](https://www.roboticsproceedings.org/rss20/p061.pdf#page=5)
 
 ## Evaluation Body Digest
 

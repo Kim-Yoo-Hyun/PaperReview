@@ -15,13 +15,11 @@
 - Full-text retrieval: https://arxiv.org/pdf/2503.00923
 - Code/Project: https://simonlinsx.github.io/HWC_Loco/
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (24 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (24 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 한 줄 요약과 핵심 기여 두 개를 각 문장에 인용한 판본의 원문에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, excessive regularization can greatly affect the efficiency of control policy, and unstructured randomization often fails to capture safety-critical patterns in real-world applications.
-
-방법 관련 발췌 — To develop a reliable locomotion policy capable of generalizing from the training to the deployment environment, we propose formulating policy optimization as a robust optimization problem under misspecified environmental dynamics.
+HWC-Loco는 휴머노이드 보행에서 목표 추종을 계속할지 안전한 상태로 회복할지 조절하는 계층 정책을 학습한다. [PDF 1쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/8c854e7870dc67e0b410a266cd45e0ad-Paper-Conference.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1 Introduction - extractive body cue:** To develop a reliable locomotion policy capable of generalizing from the training to the deployment environment, we propose formulating policy optimization as a robust optimization ...
-- **p. 2 / 1 Introduction - extractive body cue:** To address this limitation, we propose a high-level planning policy that dynamically selects which policy to activate based on the scenario.
-- **p. 15 / A.2 Implementation Details - extractive body cue:** To address this, we introduce a terrain curriculum method [63].
-- **p. 15 / A.2 Implementation Details - extractive body cue:** The training terrain consists of various types, including flat planes, rough surfaces, steps, and slopes.
-- **p. 17 / A.2 Implementation Details - extractive body cue:** To further promote stable posture restoration and enable smooth transitions back to the goal-tracking policy, we introduce an additional stand reward, defined as: rstand = ...
-- **p. 20 / Figure/Table caption - extractive body cue:** Figure 9: Extreme State: Policy's state distribution in the extreme cases A.8 History Length Experiments We investigate the impact of observation history length on HWC-Loco's ...
-- **p. 8 / 5 Experiment - extractive body cue:** HWC-Loco reaches a success rate of 81.27%, outperforming all baselines by a significant margin.
-- **p. 8 / 5 Experiment - extractive body cue:** As shown in Table 2, HWC-Loco consistently achieves the highest success rates across all types of disturbances.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 위험 상태에서 복귀하는 제어와 목표 추종을 구분하고 상위 정책이 두 행동의 사용을 조절한다. [PDF 4쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/8c854e7870dc67e0b410a266cd45e0ad-Paper-Conference.pdf#page=4) · [PDF 5쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/8c854e7870dc67e0b410a266cd45e0ad-Paper-Conference.pdf#page=5)
+- 지형·로봇 구조·외란을 바꾼 보행 조건에서 과제 달성과 강건성을 기존 제어기와 비교한다. [PDF 8쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/8c854e7870dc67e0b410a266cd45e0ad-Paper-Conference.pdf#page=8) · [PDF 9쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/8c854e7870dc67e0b410a266cd45e0ad-Paper-Conference.pdf#page=9)
 
 ## Evaluation Scope
 

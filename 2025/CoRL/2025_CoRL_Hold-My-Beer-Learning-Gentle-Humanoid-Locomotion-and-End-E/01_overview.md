@@ -15,13 +15,11 @@
 - Full-text retrieval: https://arxiv.org/pdf/2505.24198
 - Code/Project: https://lecar-lab.github.io/SoFTA/
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (18 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (18 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 한 줄 요약과 핵심 기여 두 개를 각 문장에 인용한 판본의 원문에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — The nature of ground contacts makes it more susceptible to the sim-to-real gap, demanding greater robustness against noise and disturbances.
-
-방법 관련 발췌 — Our key contributions are: • We introduce SoFTA, a novel slow-fast two-agent RL framework that decouples control for locomotion and EE stabilization in both temporal and task objective space, enabling robust locomotion ...
+SoFTA는 휴머노이드 보행 중 들고 있는 물체의 흔들림을 줄이기 위해 상체와 하체를 서로 다른 주기로 제어한다. [PDF 1쪽](https://raw.githubusercontent.com/mlresearch/v305/d42e9e994b3821cca9121500c717f9a87c7cb4f6/assets/li25i/li25i.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1 Introduction - extractive body cue:** Our key contributions are: • We introduce SoFTA, a novel slow-fast two-agent RL framework that decouples control for locomotion and EE stabilization in both temporal ...
-- **p. 2 / 1 Introduction - extractive body cue:** To bridge the gap, we propose SoFTA-a Slow-Fast Two-Agent reinforcement learning (RL) framework that decouples the action and value spaces of the upper and lower ...
-- **p. 16 / A.1 Training Details - extractive body cue:** After obtaining a stable policy, we introduce push disturbances to further improve robustness under external disturbance.
-- **p. 16 / A.1 Training Details - extractive body cue:** Notice that the termination is a shared reward component Also, we introduce several penalties and energy regularization in order to achieve robust sim-to-real performance like ...
-- **p. 7 / Figure/Table caption - extractive body cue:** Figure 5: Top: Humanoid carring bottle of water without spillage during tepping. Bottom: Hu- manoid disturbance rejection with EE stability. ping are insufficient for tasks ...
-- **p. 5 / Figure/Table caption - extractive body cue:** Table 1: Simulation Results: EE stability is evaluated in Isaac Gym across various tasks. SoFTA consistently outperforms the baselines in most metrics, demonstrating superior EE ...
-- **p. 6 / Figure/Table caption - extractive body cue:** Table 2: Real-World Results: EE stability evaluated in Real World across diverse task settings. SoFTA consistently outperforms baselines, especially in Acc-Z metric. Jointly Learn Locomotion ...
-- **p. 15 / Figure/Table caption - extractive body cue:** Table 4: Comparison of actor and critic observations with scaling factors. Privileged observations used only by the critic are shaded and marked in red. During ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 상체의 말단 안정화와 하체의 보행에 별도 정책과 보상을 두고 두 정책을 함께 훈련한다. [PDF 4쪽](https://raw.githubusercontent.com/mlresearch/v305/d42e9e994b3821cca9121500c717f9a87c7cb4f6/assets/li25i/li25i.pdf#page=4)
+- 시뮬레이션과 실물에서 말단 가속도와 추종 성능을 비교해 걸으면서 물체를 안정화하는 정도를 측정한다. [PDF 5쪽](https://raw.githubusercontent.com/mlresearch/v305/d42e9e994b3821cca9121500c717f9a87c7cb4f6/assets/li25i/li25i.pdf#page=5) · [PDF 6쪽](https://raw.githubusercontent.com/mlresearch/v305/d42e9e994b3821cca9121500c717f9a87c7cb4f6/assets/li25i/li25i.pdf#page=6)
 
 ## Evaluation Scope
 

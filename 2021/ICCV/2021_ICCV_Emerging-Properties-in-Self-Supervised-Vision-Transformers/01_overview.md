@@ -15,13 +15,11 @@
 - Full-text retrieval: https://arxiv.org/pdf/2104.14294
 - Code/Project: https://github.com/facebookresearch/dino
 - Paper type: theory_or_foundation
-- Source audit: full-text PDF body checked on 2026-09-03 (21 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (21 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 한 줄 요약과 핵심 기여 두 개를 각 문장에 인용한 판본의 원문에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — text specific, many existing self-supervised methods have shown their potential on images with convnets [10, 12, 30, 33].
-
-방법 관련 발췌 — However, our method shares also similarities with knowledge distillation [35] and we present it under this angle.
+DINO는 같은 이미지의 서로 다른 부분을 본 비전 트랜스포머가 일관된 표현을 만들도록 레이블 없이 자기증류한다. [PDF 1쪽](https://openaccess.thecvf.com/content/ICCV2021/papers/Caron_Emerging_Properties_in_Self-Supervised_Vision_Transformers_ICCV_2021_paper.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -54,16 +52,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 3 / 3.1. SSL with Knowledge Distillation - extractive body cue:** However, our method shares also similarities with knowledge distillation [35] and we present it under this angle.
-- **p. 2 / 1. Introduction - extractive body cue:** Of particular importance, our framework is flexible and works on both convnets and ViTs without the need to modify the architecture, nor adapt internal normalizations ...
-- **p. 2 / 1. Introduction - extractive body cue:** Interestingly, our method can work with only a centering and sharpening of the teacher output to avoid collapse, while other popular components such as predictor ...
-- **p. 4 / 3.1. SSL with Knowledge Distillation - extractive body cue:** Of particular interest, using an exponential moving average (EMA) on the student weights, i.e., a momentum encoder [33], is particularly well suited for our framework.
-- **p. 4 / 3.1. SSL with Knowledge Distillation - extractive body cue:** However, in our framework, its role differs since we do not have a queue nor a contrastive loss, and may be closer to the role ...
-- **p. 6 / 4.1. Comparing with SSL frameworks on ImageNet - extractive body cue:** While training a larger ViT with DINO improves the performance, reducing the size of the patches ("/8" variants) has a bigger impact on the performance.
-- **p. 7 / 4.2. Properties of ViT trained with SSL - extractive body cue:** Finally, self-supervised pretraining greatly improves results on ImageNet (+1-2%).
-- **p. 14 / Figure/Table caption - extractive body cue:** Table 13: Methodology comparison for DEIT-small and ResNet-50. We report ImageNet linear and k-NN evaluations validation accuracy after 300 epochs pre-training. All numbers are run ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 학생의 예측을 다른 크롭을 본 교사의 출력에 맞추고, 교사 가중치는 학생 가중치의 이동평균으로 갱신한다. [PDF 2쪽](https://openaccess.thecvf.com/content/ICCV2021/papers/Caron_Emerging_Properties_in_Self-Supervised_Vision_Transformers_ICCV_2021_paper.pdf#page=2) · [PDF 3쪽](https://openaccess.thecvf.com/content/ICCV2021/papers/Caron_Emerging_Properties_in_Self-Supervised_Vision_Transformers_ICCV_2021_paper.pdf#page=3)
+- 동결한 특징의 ImageNet 분류와 비디오 객체 분할을 평가해 범주 정보와 공간 정보가 얼마나 남는지 살핀다. [PDF 5쪽](https://openaccess.thecvf.com/content/ICCV2021/papers/Caron_Emerging_Properties_in_Self-Supervised_Vision_Transformers_ICCV_2021_paper.pdf#page=5) · [PDF 7쪽](https://openaccess.thecvf.com/content/ICCV2021/papers/Caron_Emerging_Properties_in_Self-Supervised_Vision_Transformers_ICCV_2021_paper.pdf#page=7)
 
 ## Evaluation Scope
 

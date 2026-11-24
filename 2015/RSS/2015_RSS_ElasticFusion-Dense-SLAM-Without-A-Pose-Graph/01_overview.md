@@ -15,13 +15,11 @@
 - Full-text retrieval: https://www.roboticsproceedings.org/rss11/p01.pdf
 - Code/Project: https://github.com/mp3guy/ElasticFusion
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (9 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (9 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 한 줄 요약과 핵심 기여 두 개를 각 문장에 인용한 판본의 원문에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, existing dense SLAM methods suitable for incremental, real-time operation struggle when the sensor makes movements which are both of extended duration and often criss-cross loop back on themselves.
-
-방법 관련 발췌 — In the following, we summarise the key elements of our method.
+ElasticFusion은 방 규모의 RGB-D 영상에서 카메라 자세를 추적하면서 표면 요소 지도를 실시간으로 갱신한다. [PDF 1쪽](https://www.roboticsproceedings.org/rss11/p01.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -54,15 +52,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / II. APPROACH OVERVIEW - extractive body cue:** In the following, we summarise the key elements of our method.
-- **p. 2 / 1) Estimate a fused surfel-based model of the environment - extractive body cue:** This component of our method is inspired by the surfelbased fusion system of Keller et al.
-- **p. 1 / I. INTRODUCTION - extractive body cue:** Pose graph SLAM systems primarily focus on optimising the camera trajectory, whereas our approach (utilising a deformation graph) instead focuses on optimising the map.
-- **p. 7 / VII. EVALUATION - extractive body cue:** Interestingly our frame-to-model only results are also comparable in performance, whereas a uniform increase in accuracy is achieved when active to inactive model deformations are ...
-- **p. 7 / VII. EVALUATION - extractive body cue:** These results show that our trajectory estimation performance is on par with or better than existing state-of-the-art systems that Fig.
-- **p. 8 / VII. EVALUATION - extractive body cue:** It is also shown that our surface reconstruction results are superior to all other systems.
-- **p. 8 / VII. EVALUATION - extractive body cue:** On surface reconstruction, local loops only scores 0.099m and global loops only scores 0.103m.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 활성 표면으로부터 예측한 색상·기하와 현재 프레임을 정합해 지도와 카메라 자세를 갱신한다. [PDF 2쪽](https://www.roboticsproceedings.org/rss11/p01.pdf#page=2) · [PDF 3쪽](https://www.roboticsproceedings.org/rss11/p01.pdf#page=3)
+- 변형 그래프를 사용해 가까운 표면의 재방문과 큰 루프 폐쇄 모두에서 누적 오차를 지도에 분산한다. [PDF 4쪽](https://www.roboticsproceedings.org/rss11/p01.pdf#page=4) · [PDF 5쪽](https://www.roboticsproceedings.org/rss11/p01.pdf#page=5) · [PDF 6쪽](https://www.roboticsproceedings.org/rss11/p01.pdf#page=6)
 
 ## Evaluation Scope
 

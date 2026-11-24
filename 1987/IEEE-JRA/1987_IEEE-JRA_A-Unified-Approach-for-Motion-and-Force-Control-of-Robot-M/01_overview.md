@@ -15,13 +15,11 @@
 - Full-text retrieval: https://cs.stanford.edu/group/manips/publications/pdfs/Khatib_1987_RA.pdf
 - Code/Project: not identified
 - Paper type: theory_or_foundation
-- Source audit: full-text PDF body checked on 2026-09-03 (11 pages; tesseract OCR fallback; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (11 pages; tesseract OCR fallback; title-token overlap first two pages=1.0) 2026-11-24 한 줄 요약과 핵심 기여 두 개를 각 문장에 인용한 판본의 원문에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — The magnitude of these dynamic forces cannot be ignored when large accelerations and fast motions are considered.
-
-방법 관련 발췌 — These results are used in the development ofa new and approach for dealing with the problems arising at kinematic sn
+Khatib은 말단장치의 위치·방향과 접촉력을 작업 좌표에서 지정하고 제어하는 동역학 정식화를 제시한다. [PDF 1쪽](https://cs.stanford.edu/group/manips/publications/pdfs/Khatib_1987_RA.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 1 / Abstract - extractive body cue:** These results are used in the development ofa new and approach for dealing with the problems arising at kinematic sn
-- **p. 1 / Abstract - extractive body cue:** A framework for the analysis and control of manipulator systems with respect to the dynamic behavior of their end-effectors is developed.
-- **p. 3 / I. Inrropucrion - extractive body cue:** This allows a more efficient implementation of the control system for real-time operations.
-- **p. 3 / I. Inrropucrion - extractive body cue:** The construction of the end-effector dynamic model is achieved by expressing the relationships between its ‘operational positions, velocities, accelerations, and the virtual ‘operational forces acting ...
-- **p. 6 / IV. Exp-Errecror Morton Controt - extractive body cue:** By isolating these coefficients, end-effector dynamic decoupling and control can be achieved in a two-level control system architecture [15].
-- **p. 6 / V. Constnainep Motion Operarions - extractive body cue:** For end-effector motions specified in terms of Cartesian coordinates and instantaneous angular rotations, the dynamic decoupling and motion control of the end-effector can be achieved ...
-- **p. 8 / VII. Contnot. oF REDUNDANT MANIPULATORS - extractive body cue:** Asymptotic stabilization of the system can be achieved by the addition of dissipative joint forces [13].
-- **p. 8 / VII. Contnot. oF REDUNDANT MANIPULATORS - extractive body cue:** As in the case of nonredundant manipulators, the dynamic decoupling and control of the end-effector can be achieved by selecting an operational command vector of ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 작업이 허용하는 운동 방향과 힘을 제어할 방향을 명시해 구속된 작업에서 두 제어 명령을 결합한다. [PDF 2쪽](https://cs.stanford.edu/group/manips/publications/pdfs/Khatib_1987_RA.pdf#page=2) · [PDF 6쪽](https://cs.stanford.edu/group/manips/publications/pdfs/Khatib_1987_RA.pdf#page=6)
+- 여유 자유도가 있는 조작기의 말단 운동과 내부 운동을 분해하고 특이 방향에서 남는 과제 운동을 분석한다. [PDF 8쪽](https://cs.stanford.edu/group/manips/publications/pdfs/Khatib_1987_RA.pdf#page=8) · [PDF 9쪽](https://cs.stanford.edu/group/manips/publications/pdfs/Khatib_1987_RA.pdf#page=9)
 
 ## Evaluation Scope
 

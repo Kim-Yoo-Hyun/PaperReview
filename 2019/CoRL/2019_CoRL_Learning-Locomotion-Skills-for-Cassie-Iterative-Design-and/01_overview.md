@@ -15,13 +15,11 @@
 - Full-text retrieval: https://arxiv.org/pdf/1903.09537
 - Code/Project: https://www.cs.ubc.ca/~van/papers/2019-CORL-cassie/index.html
 - Paper type: theory_or_foundation
-- Source audit: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; title-token overlap first two pages=0.875)
+- Source audit: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; title-token overlap first two pages=0.875) 2026-11-24 한 줄 요약과 핵심 기여 두 개를 각 문장에 인용한 판본의 원문에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, these systems are relatively stable in comparison to human-scale bipeds, for which convincing demonstrations of DRL methods to dynamic locomotion on real hardware are still lacking, to the best of our ...
-
-방법 관련 발췌 — In this section, we present our method for collecting stateaction pairs as a dataset for imitation learning, and how this dataset can be used to combine imitation learning and reinforcement learning.
+이 연구는 Cassie의 보행 보상을 반복해 설계하면서 이전 정책의 경험을 다음 정책에 전달하는 sim-to-real 절차를 제시한다. [PDF 1쪽](https://proceedings.mlr.press/v100/xie20a/xie20a.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 3 / IV. METHODS - extractive body cue:** In this section, we present our method for collecting stateaction pairs as a dataset for imitation learning, and how this dataset can be used to ...
-- **p. 1 / I. INTRODUCTION - extractive body cue:** To summarize, this paper makes the following contributions: • We present a simple-yet-effective technique to reconstruct policies from only a small number of samples, and ...
-- **p. 1 / I. INTRODUCTION - extractive body cue:** In this paper, we propose a DRL design process that reflects and supports the iterative nature of control policy design.
-- **p. 5 / VI. POLICY COMPRESSION AND DISTILLATION - extractive body cue:** In this section, we present results for using DASS to compress and distill multiple policies.
-- **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1: Cassie walking on a treadmill with a neural network policy. gradient updates that combine the supervised learning samples and conventional DRL policy-gradient samples, ...
-- **p. 6 / Figure/Table caption - extractive body cue:** Fig. 5: Network sizes impact the final result for reinforce- ment learning. We observe that larger network sizes typically learn faster and yield more stable ...
-- **p. 7 / Figure/Table caption - extractive body cue:** Fig. 7: Comparison of the norm of the angular velocity of the pelvis before and after optimization. We extend this iterative-improvement approach to an tracking-based ...
-- **p. 5 / V. EXPERIMENTAL SETUP - extractive body cue:** Several intermediate policies are also successfully tested on the robot, but are not shown due to videoduration constraints.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 확률적 정책이 방문한 상태와 그 상태에서의 결정론적 행동을 짝지어 다음 정책의 학습에 쓴다. [PDF 3쪽](https://proceedings.mlr.press/v100/xie20a/xie20a.pdf#page=3) · [PDF 4쪽](https://proceedings.mlr.press/v100/xie20a/xie20a.pdf#page=4)
+- 학습 설정에 따라 시뮬레이션과 실물 동작이 어떻게 달라지는지 비교하고 동역학 무작위화 없이 전이한 경우를 보고한다. [PDF 6쪽](https://proceedings.mlr.press/v100/xie20a/xie20a.pdf#page=6) · [PDF 7쪽](https://proceedings.mlr.press/v100/xie20a/xie20a.pdf#page=7)
 
 ## Evaluation Scope
 

@@ -15,13 +15,11 @@
 - Full-text retrieval: https://arxiv.org/pdf/2304.05316
 - Code/Project: https://github.com/zhangyp15/OccFormer
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (13 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (13 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 한 줄 요약과 핵심 기여 두 개를 각 문장에 인용한 판본의 원문에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, the 3D convolution suffers from several limitations.
-
-방법 관련 발췌 — For the encoder part, we propose the dual-path transformer block to unleash the capacity of selfattention while limiting the quadratic complexity.
+OccFormer는 차량 카메라 특징을 복셀로 변환한 뒤 두 경로의 트랜스포머로 3차원 의미 점유를 추정한다. [PDF 1쪽](https://openaccess.thecvf.com/content/ICCV2023/papers/Zhang_OccFormer_Dual-path_Transformer_for_Vision-based_3D_Semantic_Occupancy_Prediction_ICCV_2023_paper.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 1 / 1. Introduction - extractive body cue:** For the encoder part, we propose the dual-path transformer block to unleash the capacity of selfattention while limiting the quadratic complexity.
-- **p. 2 / 3.1. Overview - extractive body cue:** The image encoder consists of a backbone network for extracting multi-scale features and a neck for further fusion.
-- **p. 2 / 1. Introduction - extractive body cue:** Our method surpasses TPVFormer by 1.4% mIoU and generates more complete and realistic predictions for 3D semantic occupancy prediction.
-- **p. 3 / 3.2. Dual-path Transformer Encoder - extractive body cue:** We introduce the dual-path processing with more details in the following paragraph.
-- **p. 3 / 3.2. Dual-path Transformer Encoder - extractive body cue:** To pursue long-range, dynamic, and efficient processing of the 3D feature volumes, we propose the dual-path transformer block to build the 3D encoder.
-- **p. 6 / 4.1. Datasets - extractive body cue:** The proposed OccFormer outperforms the only vision-based method TPVFormer [21] and achieves comparable performance with LiDAR-based methods.
-- **p. 7 / 4.4. Main Results - extractive body cue:** OccFormer achieves comparable IoU for scene completion and significantly better performance for the SSC mIoU.
-- **p. 8 / 4.5. Ablation Studies - extractive body cue:** On the other hand, the proposed class-guided sampling significantly outperforms the default uniform sampling because it can better adapt to the task of 3D semantic ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 국소 경로는 수평 단면의 상세 구조를, 전역 경로는 단면들이 공유하는 장거리 문맥을 처리한다. [PDF 3쪽](https://openaccess.thecvf.com/content/ICCV2023/papers/Zhang_OccFormer_Dual-path_Transformer_for_Vision-based_3D_Semantic_Occupancy_Prediction_ICCV_2023_paper.pdf#page=3) · [PDF 4쪽](https://openaccess.thecvf.com/content/ICCV2023/papers/Zhang_OccFormer_Dual-path_Transformer_for_Vision-based_3D_Semantic_Occupancy_Prediction_ICCV_2023_paper.pdf#page=4)
+- 디코더의 풀링과 클래스별 표본 추출을 바꿔 희소 물체와 클래스 불균형을 다루며, 장면 완성과 점 단위 분할을 별도로 평가한다. [PDF 5쪽](https://openaccess.thecvf.com/content/ICCV2023/papers/Zhang_OccFormer_Dual-path_Transformer_for_Vision-based_3D_Semantic_Occupancy_Prediction_ICCV_2023_paper.pdf#page=5) · [PDF 6쪽](https://openaccess.thecvf.com/content/ICCV2023/papers/Zhang_OccFormer_Dual-path_Transformer_for_Vision-based_3D_Semantic_Occupancy_Prediction_ICCV_2023_paper.pdf#page=6)
 
 ## Evaluation Scope
 

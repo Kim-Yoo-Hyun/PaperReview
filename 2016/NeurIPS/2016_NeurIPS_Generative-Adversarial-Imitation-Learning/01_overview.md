@@ -15,15 +15,13 @@
 - Full-text retrieval: https://arxiv.org/pdf/1606.03476
 - Code/Project: not identified
 - Paper type: theory_or_foundation
-- Source audit: full-text PDF body checked on 2026-09-03 (14 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (14 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 한 줄 요약과 핵심 기여 두 개를 각 문장에 인용한 판본의 원문에서 확인했다.
 
 > DOC-QA2 targeted source review: 2026-10-23; PDF pp. 6. 손상 구간·직접 연결된 표 분류만 원문 이미지와 대조했다. 전체 주장 정독·실험 검증·reading status 승격을 뜻하지 않는다. [URL·PDF hash·수정 기록](../../../work/sources/pdf_note_review_followup_2026-10-23.json).
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Given that learner's true goal often is to take actions imitating the expert-indeed, many IRL algorithms are evaluated on the quality of the optimal actions of the costs they learn-why, then, must ...
-
-방법 관련 발췌 — We show that a certain instantiation of our framework draws an analogy between imitation learning and generative adversarial networks, from which we derive a model-free imitation learning algorithm that obtains significant performance ...
+GAIL은 전문가 시연과 현재 정책의 상호작용을 판별하는 모형을 이용해 명시적인 보상 없이 모방 정책을 학습한다. [PDF 1쪽](https://proceedings.neurips.cc/paper_files/paper/2016/file/cc7e2b878868cbae992d1fb743995d8f-Paper.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -57,16 +55,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 1 / Abstract - extractive body cue:** We show that a certain instantiation of our framework draws an analogy between imitation learning and generative adversarial networks, from which we derive a model-free ...
-- **p. 1 / 1 Introduction - extractive body cue:** Then, we instantiate our framework in Sections 4 and 5 with a new model-free imitation learning algorithm.
-- **p. 3 / 2 Background - extractive body cue:** We explore such algorithms in Sections 4 and 5, where we show that certain settings of ψ lead to both existing algorithms and a novel ...
-- **p. 3 / 2 Background - extractive body cue:** The occupancy measure can be interpreted as the distribution of state-action pairs that an agent encounters when navigating the environment with policy π, and it ...
-- **p. 4 / 2 Background - extractive body cue:** Keeping in mind that we wish to eventually develop an imitation learning algorithm suitable for large environments, we would like to relax Eq.
-- **p. 7 / 6 Experiments - extractive body cue:** Our algorithm almost always achieved at least 70% of expert performance for all dataset 7
-- **p. 7 / 6 Experiments - extractive body cue:** We were able to slightly improve our algorithm's performance on Reacher using causal entropy regularization-in the 4-trajectory setting, the improvement from λ = 0 to ...
-- **p. 13 / Figure/Table caption - extractive body cue:** Table 1: Environments Task Observation space Action space Random policy performance Expert performance Cartpole-v0 4 (continuous)
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 정규화된 역강화학습과 정책 최적화의 결합을 상태·행동 점유 분포 맞추기로 정식화한다. [PDF 3쪽](https://proceedings.neurips.cc/paper_files/paper/2016/file/cc7e2b878868cbae992d1fb743995d8f-Paper.pdf#page=3) · [PDF 4쪽](https://proceedings.neurips.cc/paper_files/paper/2016/file/cc7e2b878868cbae992d1fb743995d8f-Paper.pdf#page=4)
+- 판별기 학습과 신뢰 영역 정책 갱신을 번갈아 수행하고 연속 제어 과제에서 시연 수에 따른 성능을 비교한다. [PDF 6쪽](https://proceedings.neurips.cc/paper_files/paper/2016/file/cc7e2b878868cbae992d1fb743995d8f-Paper.pdf#page=6) · [PDF 8쪽](https://proceedings.neurips.cc/paper_files/paper/2016/file/cc7e2b878868cbae992d1fb743995d8f-Paper.pdf#page=8)
 
 ## Evaluation Scope
 

@@ -15,15 +15,13 @@
 - Full-text retrieval: https://arxiv.org/pdf/2111.12077
 - Code/Project: https://jonbarron.info/mipnerf360/
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (18 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (18 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 한 줄 요약과 핵심 기여 두 개를 각 문장에 인용한 판본의 원문에서 확인했다.
 
 > DOC-QA1 (2026-10-23): 제어문자·깨진 추출 구간과 직접 연결된 표 항목을 PDF 페이지 이미지와 대조했다. 확인 범위·원문 URL·페이지·수정 이력은 [대조 기록](../../../work/sources/pdf_note_review_2026-10-23.json)에 있다. 노트 전체의 정독이나 모든 기존 주장에 대한 재검증을 뜻하지 않으며 reading status는 유지한다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — We present an extension of mip-NeRF (a NeRF variant that addresses sampling and aliasing) that uses a non-linear scene parameterization, online distillation, and a novel distortion-based regularizer to overcome the challenges presented ...
-
-방법 관련 발췌 — We present an extension of mip-NeRF (a NeRF variant that addresses sampling and aliasing) that uses a non-linear scene parameterization, online distillation, and a novel distortion-based regularizer to overcome the challenges presented ...
+Mip-NeRF 360은 카메라가 한 지점 주위를 돌며 촬영한 장면에서 가까운 물체와 먼 배경을 함께 표현해 새 시점을 합성한다. [PDF 1쪽](https://openaccess.thecvf.com/content/CVPR2022/papers/Barron_Mip-NeRF_360_Unbounded_Anti-Aliased_Neural_Radiance_Fields_CVPR_2022_paper.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -57,16 +55,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 1 / Abstract - extractive body cue:** We present an extension of mip-NeRF (a NeRF variant that addresses sampling and aliasing) that uses a non-linear scene parameterization, online distillation, and a novel ...
-- **p. 1 / Abstract - extractive body cue:** In this work, we present an extension to mip-NeRF we call "mip-NeRF 360" that is capable of producing realistic renderings of these unbounded scenes, as ...
-- **p. 6 / 4. Regularization for Interval-Based Models - extractive body cue:** Here we presents a regularizer that, as shown in Figure 5, prevents floaters and background collapse more effectively than the approach used by NeRF of ...
-- **p. 3 / 3. Ambiguity. The content of unbounded scenes may lie - extractive body cue:** Additionally, these regularizers are designed for the point samples used by NeRF, while our approach is designed to work with the continuous weights defined along ...
-- **p. 2 / 3. Ambiguity. The content of unbounded scenes may lie - extractive body cue:** A learned "proposer" network was explored in NeRF in Detail [1] but only achieves a speedup of 25%, while our approach accelerates training by 300%.
-- **p. 7 / 6. Results - extractive body cue:** The mip-NeRF and NeRF++ baselines that use larger MLPs are more competitive, but are ∼3× slower to train than our model and still achieve significantly ...
-- **p. 8 / 6. Results - extractive body cue:** Though mip-NeRF 360 significantly outperforms mip-NeRF and other prior work, it is not perfect.
-- **p. 7 / 6. Results - extractive body cue:** See the appendix for renderings from SVS that achieve lower LPIPS scores than our model despite having reduced image quality [22].
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 먼 공간을 유계 좌표로 수축해 근경에 더 많은 표현 해상도를 배정한다. [PDF 3쪽](https://openaccess.thecvf.com/content/CVPR2022/papers/Barron_Mip-NeRF_360_Unbounded_Anti-Aliased_Neural_Radiance_Fields_CVPR_2022_paper.pdf#page=3) · [PDF 4쪽](https://openaccess.thecvf.com/content/CVPR2022/papers/Barron_Mip-NeRF_360_Unbounded_Anti-Aliased_Neural_Radiance_Fields_CVPR_2022_paper.pdf#page=4)
+- 제안 네트워크로 광선 위 표본을 배치하고 거리 왜곡 손실로 여러 깊이에 흩어지는 렌더링 가중치를 억제한다. [PDF 5쪽](https://openaccess.thecvf.com/content/CVPR2022/papers/Barron_Mip-NeRF_360_Unbounded_Anti-Aliased_Neural_Radiance_Fields_CVPR_2022_paper.pdf#page=5) · [PDF 6쪽](https://openaccess.thecvf.com/content/CVPR2022/papers/Barron_Mip-NeRF_360_Unbounded_Anti-Aliased_Neural_Radiance_Fields_CVPR_2022_paper.pdf#page=6)
 
 ## Evaluation Scope
 

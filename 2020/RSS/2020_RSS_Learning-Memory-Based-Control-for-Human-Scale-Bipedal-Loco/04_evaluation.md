@@ -23,8 +23,8 @@ PDF body evaluation/result cue (p. 5 (IV. RESULTS), p. 5 (IV. RESULTS), p. 1 (Fi
 
 - **Evaluation type:** `EMPIRICAL / REAL-ROBOT OR HARDWARE`.
 - **Target system/task:** legged robot, terrain과 contact dynamics.
-- **Input boundary:** proprioception, terrain/perception observation과 velocity command.
-- **Output/decision under evaluation:** joint target, torque, footstep 또는 locomotion action.
+- **Input boundary:** 목표 전진 속도, 보행 위상의 사인·코사인, 추정한 몸체 방향·관절 위치·속도.
+- **Output/decision under evaluation:** 중립 자세에 더할 모터 위치 목표.
 - **Primary target:** velocity/progress, stability, energy와 terrain generalization.
 - **Detected evaluation headings:** IV. RESULTS (p. 4).
 
@@ -58,8 +58,8 @@ PDF body evaluation/result cue (p. 5 (IV. RESULTS), p. 5 (IV. RESULTS), p. 1 (Fi
 |---|---|---|---|
 | Robot/hardware/simulator | The LSTM achieves a much higher reward with remarkably little variance, but both networks perform roughly the same on hardware. | embodiment, simulator version and control stack | p. 5 (IV. RESULTS), p. 5 (IV. RESULTS) |
 | Task/environment | All networks were trained for fifty million simulation timesteps, and each iteration we sampled about fifty thousand timesteps from the simulated environment. | reset, timeout, object/scene variation | p. 5 (IV. RESULTS), p. 4 (IV. RESULTS) |
-| Observation/sensor | proprioception, terrain/perception observation과 velocity command | calibration, preprocessing, privileged input | p. 3 (III. METHOD), p. 2 (II. BACKGROUND) |
-| Output/decision | joint target, torque, footstep 또는 locomotion action | action frame, controller and termination | p. 3 (III. METHOD), p. 4 (III. METHOD) |
+| Observation/sensor | 목표 전진 속도, 보행 위상의 사인·코사인, 추정한 몸체 방향·관절 위치·속도 | calibration, preprocessing, privileged input | p. 3 (III. METHOD), p. 2 (II. BACKGROUND) |
+| Output/decision | 중립 자세에 더할 모터 위치 목표 | action frame, controller and termination | p. 3 (III. METHOD), p. 4 (III. METHOD) |
 
 ## Metrics and Success Definition
 
@@ -101,7 +101,7 @@ PDF body evaluation/result cue (p. 5 (IV. RESULTS), p. 5 (IV. RESULTS), p. 1 (Fi
 
 | Claim or target | Result/condition cue | Evidence strength | Anchor |
 |---|---|---|---|
-| State Space and Action Space The policy's input consists of: Xt =          fvel desired forward ... | As can be seen, dynamics randomization improves performance of both policy types and LSTM with dynamics randomization performs the best. | PDF body cue; verify exact table/figure and matched conditions | p. 5 (IV. RESULTS), p. 5 (IV. RESULTS), p. 1 (Figure/Table caption) |
+| 기억을 사용하는 정책과 기억 없는 정책의 비교 | 실물 전이는 학습 중 동역학 무작위화에 따라 달라졌다. | 동일한 속도 명령·관절 위치 인터페이스 | [PDF 3쪽](https://www.roboticsproceedings.org/rss16/p031.pdf#page=3) · [PDF 6쪽](https://www.roboticsproceedings.org/rss16/p031.pdf#page=6) |
 | Primary metric/result | The LSTM achieves a much higher reward with remarkably little variance, but both networks perform roughly the same on hardware. | numeric claim only at cited anchor | p. 5 (IV. RESULTS) |
 
 - Numeric sentences retained from the body:

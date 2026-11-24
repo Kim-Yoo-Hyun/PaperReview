@@ -15,13 +15,11 @@
 - Full-text retrieval: https://arxiv.org/pdf/2406.10454
 - Code/Project: https://humanoid-ai.github.io/
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (17 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (17 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 한 줄 요약과 핵심 기여 두 개를 각 문장에 인용한 판본의 원문에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — This problem is further exacerbated by the lack of off-the-shelf and integrated hardware platforms.
-
-방법 관련 발췌 — In this paper, we present a full-stack system for humanoids to learn motion and autonomous skills from human data.
+HumanPlus는 사람의 동작을 실시간 모방해 휴머노이드를 원격조작하고, 그렇게 모은 시연으로 자율 시각 정책을 학습한다. [PDF 1쪽](https://raw.githubusercontent.com/mlresearch/v270/d9fe509ba390176a5fd650178a381a0a7b2d4f64/assets/fu25a/fu25a.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** In this paper, we present a full-stack system for humanoids to learn motion and autonomous skills from human data.
-- **p. 3 / 1. Introduction - extractive body cue:** Core to this system is both (1) a real-time shadowing system that allows human operators to whole-body control humanoids using a single RGB camera and ...
-- **p. 3 / 1. Introduction - extractive body cue:** Using forward dynamics prediction on image features, our method shows improved performance by regularizing on image feature spaces and preventing the vision-based skill policy from ...
-- **p. 4 / 4. Human Body and Hand Data - extractive body cue:** Each of the humanoid hip and shoulder joints consists of 3 orthogonal revolute joints, so can be viewed as one spherical joints.
-- **p. 1 / Body text (section boundary not confidently recovered) - extractive body cue:** Our system enables robots to shadow fast, diverse motions from a human operator, including boxing and playing table tennis, and to learn autonomous skills like ...
-- **p. 10 / 9. Experiments on Imitation - extractive body cue:** Our HIT achieves higher success rates than other baselines across all tasks.
-- **p. 9 / Figure/Table caption - extractive body cue:** Table 5: Comparisons on Imitation. We show success rates of Humanoid Imitation Transformer (Ours), HIT with monocular input, ACT and open-loop trajectory replay across all ...
-- **p. 9 / 8.1. Comparisons with Other Teleoperation - extractive body cue:** We also record the average success rates of stable standing during teleoperation 9
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 사람의 전신·손 자세를 RGB 카메라로 추정하고 시뮬레이션에서 훈련한 저수준 제어기로 실물 동작을 추종한다. [PDF 3쪽](https://raw.githubusercontent.com/mlresearch/v270/d9fe509ba390176a5fd650178a381a0a7b2d4f64/assets/fu25a/fu25a.pdf#page=3) · [PDF 4쪽](https://raw.githubusercontent.com/mlresearch/v270/d9fe509ba390176a5fd650178a381a0a7b2d4f64/assets/fu25a/fu25a.pdf#page=4)
+- 원격조작 시연의 1인칭 영상과 행동으로 기술 정책을 모방학습하고 실제 작업별 성공을 평가한다. [PDF 5쪽](https://raw.githubusercontent.com/mlresearch/v270/d9fe509ba390176a5fd650178a381a0a7b2d4f64/assets/fu25a/fu25a.pdf#page=5) · [PDF 8쪽](https://raw.githubusercontent.com/mlresearch/v270/d9fe509ba390176a5fd650178a381a0a7b2d4f64/assets/fu25a/fu25a.pdf#page=8)
 
 ## Evaluation Scope
 

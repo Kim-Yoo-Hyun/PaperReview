@@ -15,15 +15,13 @@
 - Full-text retrieval: https://www.ri.cmu.edu/pub_files/pub2/lynch_kevin_1995_1/lynch_kevin_1995_1.pdf
 - Code/Project: not identified
 - Paper type: theory_or_foundation
-- Source audit: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 한 줄 요약과 핵심 기여 두 개를 각 문장에 인용한 판본의 원문에서 확인했다.
 
 > DOC-QA1 (2026-10-23): 제어문자·깨진 추출 구간과 직접 연결된 표 항목을 PDF 페이지 이미지와 대조했다. 확인 범위·원문 URL·페이지·수정 이력은 [대조 기록](../../../work/sources/pdf_note_review_2026-10-23.json)에 있다. 노트 전체의 정독이나 모든 기존 주장에 대한 재검증을 뜻하지 않으며 reading status는 유지한다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — If the object is too large to be grasped or too heavy to be carried, however, this approach fails.
-
-방법 관련 발췌 — Proof: Proposition 5 in Appendix B of (Barraquand and Latombe [5]) provesthe case when V consists oftwo velocity
+이 연구는 평면에서 물체를 한 점 또는 선분으로 밀 때 원하는 위치와 방향으로 재배치할 수 있는 조건을 분석한다. [PDF 1쪽](https://www.ri.cmu.edu/pub_files/pub2/lynch_kevin_1995_1/lynch_kevin_1995_1.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -57,10 +55,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 3 / C H can be followed - extractive body cue:** Proof: Proposition 5 in Appendix B of (Barraquand and Latombe [5]) provesthe case when V consists oftwo velocity
-- **p. 4 / C H can be followed - extractive body cue:** Using the results of the previous section, we elucidate the controllabilityproperties of objects pushed with either point contact or stable line contact.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 푸셔와 물체의 접촉 형태 및 마찰이 허용하는 이동 방향을 분석해 제어 가능 조건을 구분한다. [PDF 4쪽](https://www.ri.cmu.edu/pub_files/pub2/lynch_kevin_1995_1/lynch_kevin_1995_1.pdf#page=4) · [PDF 6쪽](https://www.ri.cmu.edu/pub_files/pub2/lynch_kevin_1995_1/lynch_kevin_1995_1.pdf#page=6)
+- 선 접촉을 유지하는 안정적 밀기 방향을 계산해 장애물 사이에서 센서 피드백 없이 물체를 옮길 계획을 구성한다. [PDF 7쪽](https://www.ri.cmu.edu/pub_files/pub2/lynch_kevin_1995_1/lynch_kevin_1995_1.pdf#page=7) · [PDF 8쪽](https://www.ri.cmu.edu/pub_files/pub2/lynch_kevin_1995_1/lynch_kevin_1995_1.pdf#page=8)
 
 ## Evaluation Scope
 

@@ -16,13 +16,11 @@
 - Code/Project: not identified
 - Code availability: 기존 링크는 RMA·Cross-Modal Supervision 구현이다. 원 DreamWaQ의 저자 구현은 미확인. [근거](https://github.com/antonilo/rl_locomotion)
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (7 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (7 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 한 줄 요약과 핵심 기여 두 개를 각 문장에 인용한 판본의 원문에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — This dilemma is often called the representation learning bottleneck [25], which can hinder optimal policy learning.
-
-방법 관련 발췌 — In this paper, we proposed a framework called Dream Walking for Quadrupedal Robots (DreamWaQ), that trains a robust locomotion policy for quadrupedal robots with
+DreamWaQ는 사족 로봇의 자기수용감각 이력에서 몸체 속도와 지형 문맥을 함께 추정해 외부 지형 센서 없이 걷도록 학습한다. [PDF 1쪽](https://arxiv.org/pdf/2301.10602v2#page=1) · [PDF 2쪽](https://arxiv.org/pdf/2301.10602v2#page=2)
 
 ## Problem and Motivation
 
@@ -56,16 +54,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 1 / I. INTRODUCTION - extractive body cue:** In this paper, we proposed a framework called Dream Walking for Quadrupedal Robots (DreamWaQ), that trains a robust locomotion policy for quadrupedal robots with ...
-- **p. 2 / I. INTRODUCTION - extractive body cue:** In summary, the contributions of this work are threefold:
-- **p. 2 / II. DREAMWAQ - extractive body cue:** The reward function consists of task rewards for tracking the
-- **p. 3 / II. DREAMWAQ - extractive body cue:** Therefore, we introduced a power distribution reward to reduce motor overheating in the real world by penalizing motors' power with high variance over all motors ...
-- **p. 1 / I. INTRODUCTION - extractive body cue:** 20018216, "Development of Mobile Intelligence SW for Autonomous Navigation of Legged Robots in Dynamic and Atypical Environments for Real Application").
-- **p. 5 / Figure/Table caption - extractive body cue:** Fig. 5: Estimation error of CENet and EstimatorNet. The superiority of CENet is highlighted when the robot's feet stumbled by stairs. barplot, as shown in ...
-- **p. 5 / III. EXPERIMENTS - extractive body cue:** The robust performance was achieved through the interplay between accurate estimation and robust policy learning of DreamWaQ.
-- **p. 2 / 3) A robustness and durability evaluation of the learned - extractive body cue:** Section III presents the experimental setting, results, and an in-depth comparative analysis of the proposed and baseline methods.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 몸체 상태와 잠재 환경 표현을 예측하는 추정기를 보행 정책과 함께 학습한다. [PDF 2쪽](https://arxiv.org/pdf/2301.10602v2#page=2) · [PDF 3쪽](https://arxiv.org/pdf/2301.10602v2#page=3)
+- 상태 추정 오차를 비교하고 여러 바닥·계단을 포함한 실제 야외 장거리 이동에서 정책을 시험한다. [PDF 5쪽](https://arxiv.org/pdf/2301.10602v2#page=5) · [PDF 6쪽](https://arxiv.org/pdf/2301.10602v2#page=6)
 
 ## Evaluation Scope
 

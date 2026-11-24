@@ -15,13 +15,11 @@
 - Full-text retrieval: https://www.roboticsproceedings.org/rss20/p054.pdf
 - Code/Project: https://zhaohengyin.github.io/gsr/
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 한 줄 요약과 핵심 기여 두 개를 각 문장에 인용한 판본의 원문에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Moreover, there usually exist suboptimal behaviors within a successful demonstration, such as retrying to grip the item if the first attempt fails.
-
-방법 관련 발췌 — As a direct approach that uses graph search rather than deep RL, our method enjoys high time efficiency.
+GSR은 불완전한 시연과 상호작용 자료에서 상태 전이 그래프를 만들어 유리한 행동을 검색하고 모방한다. [PDF 1쪽](https://www.roboticsproceedings.org/rss20/p054.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / I. INTRODUCTION - extractive body cue:** As a direct approach that uses graph search rather than deep RL, our method enjoys high time efficiency.
-- **p. 2 / I. INTRODUCTION - extractive body cue:** We also provide various quantitative and qualitative analyses to show that our method is capable of identifying good behaviors in the dataset.
-- **p. 3 / IV. POLICY LEARNING - extractive body cue:** We introduce the implementation details in the remaining sections.
-- **p. 4 / IV. POLICY LEARNING - extractive body cue:** To address the first problem, we propose to identify and connect similar states in the dataset to form a better distance estimate in section IV-B.
-- **p. 5 / IV. POLICY LEARNING - extractive body cue:** The pseudo-code of our method is summarized in Algorithm 1.
-- **p. 7 / V. EXPERIMENTS - extractive body cue:** We find that our method can achieve a success rate greater than 80% in the considered task and outperform all baselines in execution time.
-- **p. 6 / V. EXPERIMENTS - extractive body cue:** A good method is expected to achieve a high success rate with low execution time. • Normalized Proficiency (NP) is a metric we use for ...
-- **p. 7 / V. EXPERIMENTS - extractive body cue:** The second finding is that our algorithm can also improve the success rate of state-of-the-art algorithms.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 사전학습 표현에서 상태 사이의 연결을 판정하고 그래프 탐색으로 각 행동에서 목표에 도달할 가치를 계산한다. [PDF 3쪽](https://www.roboticsproceedings.org/rss20/p054.pdf#page=3) · [PDF 4쪽](https://www.roboticsproceedings.org/rss20/p054.pdf#page=4)
+- 검색한 행동으로 정책을 지도학습하고 정밀한 물체 상호작용이 필요한 시뮬레이션·실물 조작에서 평가한다. [PDF 5쪽](https://www.roboticsproceedings.org/rss20/p054.pdf#page=5) · [PDF 7쪽](https://www.roboticsproceedings.org/rss20/p054.pdf#page=7)
 
 ## Evaluation Scope
 

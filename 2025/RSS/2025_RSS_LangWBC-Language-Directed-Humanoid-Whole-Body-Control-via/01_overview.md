@@ -15,13 +15,11 @@
 - Full-text retrieval: https://www.roboticsproceedings.org/rss21/p065.pdf
 - Code/Project: https://langwbc.github.io/
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (15 pages; tesseract OCR fallback; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (15 pages; tesseract OCR fallback; title-token overlap first two pages=1.0) 2026-11-24 한 줄 요약과 핵심 기여 두 개를 각 문장에 인용한 판본의 원문에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, transferring these controllers to real-world hardware faces challenges due to the sim-to-real gap.
-
-방법 관련 발췌 — Furthermore, our framework enables smooth transitions between motion clips and generates novel motions through interpolation, demonstrating generalization beyond the training data
+LangWBC는 자연어로 요청한 움직임을 휴머노이드 전신 관절 제어로 변환하는 단일 배포 정책을 학습한다. [PDF 1쪽](https://www.roboticsproceedings.org/rss21/p065.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,14 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Iyrropucrion - extractive body cue:** Furthermore, our framework enables smooth transitions between motion clips and generates novel motions through interpolation, demonstrating generalization beyond the training data
-- **p. 2 / 1. Iyrropucrion - extractive body cue:** ‘+ Our method enables the generation of diverse motions, smooth transitions, and adaptability to a wide range of textual inputs, including the synthesis of novel ...
-- **p. 1 / Abstract - extractive body cue:** In this work, we present an end-to-end, language-directed policy for real-world humanoid whole-body ‘control.
-- **p. 1 / 1. Iyrropucrion - extractive body cue:** In this work, we introduce LangWBC, a framework that addresses these dual challenges through a single end-to-end
-- **p. 3 / B. Generative Action Modeling - extractive body cue:** enables robust real-world deployment but also generates novel, unseen motions while generalizing to similar text commands.
-- **p. 9 / Figure/Table caption - extractive body cue:** Fig. 9. Latent Space Interpolation: CLIP+CVAE ys. CLIP. Alone ‘Comparison of motion quality when iterpolting between forward and side- ‘ways walking. The CLIPSCVAE model (let) ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 동작 추종 교사의 행동을 언어 조건부 학생에게 증류하고 조건부 변분 오토인코더로 동작 다양성을 표현한다. [PDF 3쪽](https://www.roboticsproceedings.org/rss21/p065.pdf#page=3) · [PDF 4쪽](https://www.roboticsproceedings.org/rss21/p065.pdf#page=4)
+- 실물 동작 실행과 명령 전환을 평가하고 표현이 다른 언어 지시에 대한 반응을 살핀다. [PDF 6쪽](https://www.roboticsproceedings.org/rss21/p065.pdf#page=6) · [PDF 8쪽](https://www.roboticsproceedings.org/rss21/p065.pdf#page=8)
 
 ## Evaluation Scope
 

@@ -147,7 +147,7 @@ PDF body evaluation/result cue (p. 6 (IV. EXPERIMENTS), p. 4 (IV. EXPERIMENTS), 
 | Frames are encoded via SARA variants of the ViTs (sViT). | p. 6 (IV. EXPERIMENTS) |
 | The ViT encoder of PaLI is computationally bottlenecked by its attention module. | p. 6 (IV. EXPERIMENTS) |
 | On the other side of the spectrum are linear attention models with ϕ = ϕf given as: ϕf(z) = (f(z1), ..., f(zdQK))⊤for some f ... | p. 3 (II. SELF-ADAPTIVE ROBUST ATTENTION VIA) |
-| In that case, each ai can be approximated as:      ˜ai = Ψϕ(qi) Γϕ(qi) , Ψ = PN j=1 ¯ajϕ⊤(kj), ... | p. 3 (II. SELF-ADAPTIVE ROBUST ATTENTION VIA) |
+| 식 (3)의 선형 어텐션 출력은 $\tilde{\mathbf a}_i=\Psi\phi(\mathbf q_i)/(\Gamma\phi(\mathbf q_i))$다. 키와 값으로 구성한 $\Psi$와 키 특징을 합한 $\Gamma$를 쿼리 사이에서 재사용한다. | [PDF 3쪽](https://arxiv.org/pdf/2312.01990v1#page=3) |
 
 | Audit field | Current status |
 |---|---|

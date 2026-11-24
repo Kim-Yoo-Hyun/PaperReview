@@ -15,13 +15,11 @@
 - Full-text retrieval: https://www.cs.cmu.edu/~cga/legs/kuff1e.pdf
 - Code/Project: not identified
 - Paper type: theory_or_foundation
-- Source audit: full-text PDF body checked on 2026-09-03 (7 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (7 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 한 줄 요약과 핵심 기여 두 개를 각 문장에 인용한 판본의 원문에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Research on humanoid robots and biped locomotion is currently one of the most exciting topics in the field of robotics and there exist many ongoing projects.
-
-방법 관련 발췌 — It allows a separate controller design for the sagittal (x-z) and the lateral (y-z) motions and simplifies a walking pattern generation a great deal.
+3차원 선형 역진자 모드는 이족 로봇의 질량중심 운동을 평면에 구속해 실시간으로 보행 패턴을 생성한다. [PDF 1쪽](https://www.cs.cmu.edu/~cga/legs/kuff1e.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -54,12 +52,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 1 / 1 Introduction - extractive body cue:** It allows a separate controller design for the sagittal (x-z) and the lateral (y-z) motions and simplifies a walking pattern generation a great deal.
-- **p. 6 / 4 Experiments - extractive body cue:** From the experimental results, the effectiveness of the proposed realtime walk generation method was confirmed.
-- **p. 6 / 4 Experiments - extractive body cue:** The realtime walk generation was tested on a 12 d.o.f. biped robot HRP-2L with the game pad interface, and a dynamically stable walk was successfully ...
-- **p. 4 / Figure/Table caption - extractive body cue:** Figure 6: Two successive steps in the sagittal plane are illustrated. The body travels from B to D in the single-leg support phase, then moves ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 평면 구속 아래 3차원 역진자의 수평 운동이 단순한 선형식이 되는 조건과 궤적의 기하를 유도한다. [PDF 2쪽](https://www.cs.cmu.edu/~cga/legs/kuff1e.pdf#page=2) · [PDF 3쪽](https://www.cs.cmu.edu/~cga/legs/kuff1e.pdf#page=3)
+- 사용자의 이동 방향 입력으로 발 디딜 위치와 보행을 갱신하는 과정을 HRP-2L에서 확인한다. [PDF 6쪽](https://www.cs.cmu.edu/~cga/legs/kuff1e.pdf#page=6) · [PDF 7쪽](https://www.cs.cmu.edu/~cga/legs/kuff1e.pdf#page=7)
 
 ## Evaluation Scope
 

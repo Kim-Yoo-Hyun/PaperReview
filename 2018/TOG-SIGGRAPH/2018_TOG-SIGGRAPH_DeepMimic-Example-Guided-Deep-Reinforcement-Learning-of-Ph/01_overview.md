@@ -15,13 +15,11 @@
 - Full-text retrieval: https://arxiv.org/pdf/1804.02717
 - Code/Project: https://github.com/xbpeng/DeepMimic
 - Paper type: theory_or_foundation
-- Source audit: full-text PDF body checked on 2026-09-03 (18 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (18 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 한 줄 요약과 핵심 기여 두 개를 각 문장에 인용한 판본의 원문에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Authoring motions for simulated characters remains notoriously difficult, and current interfaces still cannot provide users with an effective means of eliciting the desired behaviours from simulated characters.
-
-방법 관련 발췌 — Although our framework consists of individual components that have been known for some time, the particular combination of these components in the context of data-driven and physics-based character animation is novel and, ...
+DeepMimic은 참조 모션과 과제 보상을 함께 사용해 물리 시뮬레이션의 캐릭터가 시연 동작을 모방하면서 목표에 대응하도록 학습한다. [PDF 1쪽](https://arxiv.org/pdf/1804.02717v3#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** Although our framework consists of individual components that have been known for some time, the particular combination of these components in the context of data-driven ...
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** In our ablation studies, we identify two specific components of our method, reference state initialization and early termination, that are critical for achieving highly dynamic ...
-- **p. 1 / Body text (section boundary not confidently recovered) - extractive body cue:** Our method handles keyframed motions, highly-dynamic actions such as motion-captured flips and spins, and retargeted motions.
-- **p. 1 / Body text (section boundary not confidently recovered) - extractive body cue:** Highly dynamic skills learned by imitating reference motion capture clips using our method, executed by physically simulated characters.
-- **p. 4 / 4 BACKGROUND - extractive body cue:** The value function is modeled by a similar network, with exception of the output layer, which consists of a single linear unit.
-- **p. 12 / 10 RESULTS - extractive body cue:** The performance achieved by the Atlas policies are comparable to those achieved by the humanoid.
-- **p. 11 / 10 RESULTS - extractive body cue:** Success rate of policies trained with the imitation or task objectives disabled.
-- **p. 11 / 10 RESULTS - extractive body cue:** Similarly, for the strike task, the policy trained with both objectives successfully hits 99% of the targets, while the policy trained only to imitate the ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 참조 동작의 여러 시점에서 에피소드를 시작하고 자세·속도·말단 위치 등을 기준으로 모방 보상을 구성한다. [PDF 4쪽](https://arxiv.org/pdf/1804.02717v3#page=4) · [PDF 5쪽](https://arxiv.org/pdf/1804.02717v3#page=5)
+- 동적 기술을 단일 모션과 복수 모션에서 학습하고 지형 변화나 과제 명령을 받는 캐릭터의 행동을 평가한다. [PDF 7쪽](https://arxiv.org/pdf/1804.02717v3#page=7) · [PDF 9쪽](https://arxiv.org/pdf/1804.02717v3#page=9)
 
 ## Evaluation Scope
 

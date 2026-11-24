@@ -15,13 +15,11 @@
 - Full-text retrieval: https://arxiv.org/pdf/2304.14365
 - Code/Project: https://tsinghua-mars-lab.github.io/Occ3D/
 - Paper type: benchmark_or_dataset
-- Source audit: full-text PDF body checked on 2026-09-03 (25 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (25 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 한 줄 요약과 핵심 기여 두 개를 각 문장에 인용한 판본의 원문에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — While the resulting 3D bounding boxes are compact, the level of expressiveness they provide is restricted, as illustrated in Figure 1: (1) 3D bounding box representation erases the geometric details of objects, ...
-
-방법 관련 발췌 — The contributions of this work are as follows: (1) We introduce Occ3D, a high-quality 3D occupancy prediction benchmark to facilitate research in this emerging area; (2) We put forward a rigorous automatic ...
+Occ3D는 자율주행 장면의 복셀별 점유와 의미 범주를 평가하기 위해 관측 가시성을 표시한 두 벤치마크를 구축한다. [PDF 1쪽](https://proceedings.neurips.cc/paper_files/paper/2023/file/cabfaeecaae7d6540ee797a66f0130b0-Paper-Datasets_and_Benchmarks.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -52,16 +50,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1 Introduction - extractive body cue:** The contributions of this work are as follows: (1) We introduce Occ3D, a high-quality 3D occupancy prediction benchmark to facilitate research in this emerging area; ...
-- **p. 2 / 1 Introduction - extractive body cue:** Additionally, we propose CTF-Occ, a transformer-based Coarse-To-Fine 3D Occupancy prediction network.
-- **p. 1 / Abstract - extractive body cue:** Lastly, we propose a new model, dubbed Coarse-to-Fine Occupancy (CTF-Occ) network, which demonstrates superior performance on the Occ3D benchmarks.
-- **p. 1 / Abstract - extractive body cue:** To support 3D occupancy prediction, we develop a label generation pipeline that produces dense, visibility-aware labels for any given scene.
-- **p. 10 / 6 Experiments - extractive body cue:** For token selection, uncertain selection and top-k selection are on par and they significantly outperform the random selection as expected.
-- **p. 10 / 6 Experiments - extractive body cue:** Both techniques improve performance.
-- **p. 18 / Figure/Table caption - extractive body cue:** Figure 8: Occlusion reasoning and camera visibility. Grey voxels are unobserved in the LiDAR view and red voxels are observed in the accumulative LiDAR view ...
-- **p. 8 / 6 Experiments - extractive body cue:** We adopt the metrics of Intersection-over-Union (IoU) and mean Intersection-over-Union(mIoU) to evaluate performance.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 여러 관측을 모아 복셀을 채운 뒤 가림을 판정하고 이미지 경계를 이용해 레이블을 정제한다. [PDF 4쪽](https://proceedings.neurips.cc/paper_files/paper/2023/file/cabfaeecaae7d6540ee797a66f0130b0-Paper-Datasets_and_Benchmarks.pdf#page=4) · [PDF 5쪽](https://proceedings.neurips.cc/paper_files/paper/2023/file/cabfaeecaae7d6540ee797a66f0130b0-Paper-Datasets_and_Benchmarks.pdf#page=5)
+- Waymo와 nuScenes 기반 평가를 구성하고 카메라 특징에서 거친 점유 예측을 세밀하게 만드는 CTF-Occ를 비교한다. [PDF 6쪽](https://proceedings.neurips.cc/paper_files/paper/2023/file/cabfaeecaae7d6540ee797a66f0130b0-Paper-Datasets_and_Benchmarks.pdf#page=6) · [PDF 7쪽](https://proceedings.neurips.cc/paper_files/paper/2023/file/cabfaeecaae7d6540ee797a66f0130b0-Paper-Datasets_and_Benchmarks.pdf#page=7)
 
 ## Evaluation Scope
 

@@ -15,13 +15,11 @@
 - Full-text retrieval: https://arxiv.org/pdf/2403.12203
 - Code/Project: https://bootstrap-rl-with-il.github.io/
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (15 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (15 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 한 줄 요약과 핵심 기여 두 개를 각 문장에 인용한 판본의 원문에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, learning from only visual inputs introduces a range of distinct challenges.
-
-방법 관련 발췌 — Contributions By leveraging the complementary advantages of IL and RL, we propose a framework that trains a policy capable of navigating through a sequence of gates using solely gate corners or RGB ...
+이 연구는 시뮬레이터의 특권 상태로 학습한 레이싱 드론 교사 정책을 영상 기반 학생 정책의 출발점으로 사용한다. [PDF 1쪽](https://raw.githubusercontent.com/mlresearch/v270/d9fe509ba390176a5fd650178a381a0a7b2d4f64/assets/xing25a/xing25a.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1 Introduction - extractive body cue:** Contributions By leveraging the complementary advantages of IL and RL, we propose a framework that trains a policy capable of navigating through a sequence of ...
-- **p. 4 / 3 Methodology - extractive body cue:** 2, our approach consists of three phases: (I) initial training of a teacher policy using state information, (II) distillation into a student policy via IL ...
-- **p. 2 / 1 Introduction - extractive body cue:** Although we validate our method using vision-based drone racing, our approach does not rely on task-specific adaptations that might limit its applicability to other robotic ...
-- **p. 4 / 3 Methodology - extractive body cue:** To address this, we propose an algorithm that conditions exploration and network updates on the policy's performance, as shown in Algorithm 1.
-- **p. 1 / 1 Introduction - extractive body cue:** Visuomotor policy learning enables robots to perform complex tasks by directly mapping visual information into action.
-- **p. 15 / A.8 Unobservable States Illustration - extractive body cue:** The quantitative results, shown in 6, clearly indicate that our approach greatly improves policy performance, achieving lap times within a difference of 0.05s to that ...
-- **p. 13 / A.6 Performance w/ Diff. History Length - extractive body cue:** More importantly, in all of these cases, our approach achieves both better performance and success rate.
-- **p. 7 / 3 Methodology - extractive body cue:** Firstly, it is noteworthy that the direct RL from corners or pixels achieves a 0% success rate in all three tracks.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 모방학습으로 교사의 행동을 학생에게 전달한 뒤 강화학습으로 학생 정책을 추가 조정한다. [PDF 3쪽](https://raw.githubusercontent.com/mlresearch/v270/d9fe509ba390176a5fd650178a381a0a7b2d4f64/assets/xing25a/xing25a.pdf#page=3) · [PDF 4쪽](https://raw.githubusercontent.com/mlresearch/v270/d9fe509ba390176a5fd650178a381a0a7b2d4f64/assets/xing25a/xing25a.pdf#page=4)
+- 시뮬레이션과 실제 경주 코스에서 경로·비행 성능을 비교해 모방만 사용한 경우와 추가 강화학습의 차이를 측정한다. [PDF 7쪽](https://raw.githubusercontent.com/mlresearch/v270/d9fe509ba390176a5fd650178a381a0a7b2d4f64/assets/xing25a/xing25a.pdf#page=7) · [PDF 8쪽](https://raw.githubusercontent.com/mlresearch/v270/d9fe509ba390176a5fd650178a381a0a7b2d4f64/assets/xing25a/xing25a.pdf#page=8)
 
 ## Evaluation Scope
 

@@ -16,13 +16,11 @@
 - Full-text retrieval: https://arxiv.org/pdf/2207.12598
 - Code/Project: not identified
 - Paper type: theory_or_foundation
-- Source audit: full-text PDF body checked on 2026-09-03 (14 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (14 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 한 줄 요약과 핵심 기여 두 개를 각 문장에 인용한 판본의 원문에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — (6) has no classifier gradient present, so taking a step in the ˜ϵθ direction cannot be interpreted as a gradient-based adversarial attack on an image classifier.
-
-방법 관련 발췌 — To resolve these questions, we present classifier-free guidance, our guidance method which avoids any classifier entirely.
+분류기 없는 확산 유도는 조건부와 무조건부의 두 점수 추정값을 결합해 생성 표본의 충실도와 다양성을 조절한다. [PDF 1쪽](https://arxiv.org/pdf/2207.12598v1#page=1)
 
 ## Problem and Motivation
 
@@ -56,16 +54,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** To resolve these questions, we present classifier-free guidance, our guidance method which avoids any classifier entirely.
-- **p. 1 / ABSTRACT - extractive body cue:** We show that guidance can be indeed performed by a pure generative model without such a classifier: in what we call classifier-free guidance, we jointly ...
-- **p. 5 / 2 BACKGROUND - extractive body cue:** Nevertheless, in Section 4, we show empirically that classifier-free guidance is able to trade off FID and IS in the same way as classifier guidance.
-- **p. 7 / 4 EXPERIMENTS - extractive body cue:** At w = 0.3, our model's FID score on 128 × 128 ImageNet outperforms the classifier-guided ADM-G, and at w = 4.0, our model outperforms ...
-- **p. 6 / 4 EXPERIMENTS - extractive body cue:** Nevertheless, our classifier-free guided models still produce competitive sample quality metrics and sometimes outperform prior work, as can be seen in the following sections.
-- **p. 8 / 4 EXPERIMENTS - extractive body cue:** Note that T = 256 is approximately the same number of sampling steps used by ADM-G (Dhariwal & Nichol, 2021), which is outperformed by our ...
-- **p. 8 / 4 EXPERIMENTS - extractive body cue:** As expected, sample quality improves when T is increased, and for this model T = 256 attains a good balance between sample quality and sampling ...
-- **p. 5 / 4 EXPERIMENTS - extractive body cue:** We train diffusion models with classifier-free guidance on area-downsampled class-conditional ImageNet (Russakovsky et al., 2015), the standard setting for studying tradeoffs between FID and Inception ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 학습 중 조건 정보를 일정 확률로 지워 같은 네트워크가 두 추정값을 모두 학습하게 한다. [PDF 4쪽](https://arxiv.org/pdf/2207.12598v1#page=4) · [PDF 5쪽](https://arxiv.org/pdf/2207.12598v1#page=5)
+- ImageNet의 두 해상도에서 유도 강도를 바꾸며 FID와 Inception Score의 변화를 측정한다. [PDF 7쪽](https://arxiv.org/pdf/2207.12598v1#page=7) · [PDF 8쪽](https://arxiv.org/pdf/2207.12598v1#page=8)
 
 ## Evaluation Scope
 

@@ -15,13 +15,11 @@
 - Full-text retrieval: https://www.robots.ox.ac.uk/~gk/publications/KleinMurray2007ISMAR.pdf
 - Code/Project: https://www.robots.ox.ac.uk/~gk/PTAM/
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; title-token overlap first two pages=0.833)
+- Source audit: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; title-token overlap first two pages=0.833) 2026-11-24 한 줄 요약과 핵심 기여 두 개를 각 문장에 인용한 판본의 원문에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Finally, in our hand-held camera scenario, we cannot rely on long 2D feature tracks being available to initialise features and we replace this with an epipolar feature search.
-
-방법 관련 발췌 — While this has previously been attempted by adapting SLAM algorithms developed for robotic exploration, we propose a system specifically designed to track a hand-held camera in a small AR workspace.
+PTAM은 작은 증강현실 작업 공간에서 손에 든 단안 카메라의 추적과 3차원 지도 생성을 서로 다른 스레드로 수행한다. [PDF 1쪽](https://www.robots.ox.ac.uk/~gk/publications/KleinMurray2007ISMAR.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 1 / ABSTRACT - extractive body cue:** While this has previously been attempted by adapting SLAM algorithms developed for robotic exploration, we propose a system specifically designed to track a hand-held camera ...
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** The map consists of a collection of M point features located in a world coordinate frame W.
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** While we adopt the stereo initialisation, and occasionally make use of local bundle updates, our method is different in that we attempt to build a ...
-- **p. 1 / ABSTRACT - extractive body cue:** We propose to split tracking and mapping into two separate tasks, processed in parallel threads on a dual-core computer: one thread deals with the task ...
-- **p. 8 / 7 RESULTS - extractive body cue:** At the same time, the use of a larger number of features reduces visible tracking jitter and improves performance when some features are occluded or ...
-- **p. 8 / 7 RESULTS - extractive body cue:** Frames are tracked in a relatively constant 20ms by our system, whereas EKF-SLAM scales quadratically from 3ms when the map is empty to 40ms at ...
-- **p. 6 / 7 RESULTS - extractive body cue:** All results were obtained with identical tunable parameters.
-- **p. 6 / 7 RESULTS - extractive body cue:** 7.1 Tracking performance on live video An example of the system's operation is provided in the accompanying video file1.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 추적 스레드는 매 프레임 지도점을 다시 찾고, 지도 스레드는 선별한 키프레임에서 새 점을 삼각측량한다. [PDF 3쪽](https://www.robots.ox.ac.uk/~gk/publications/KleinMurray2007ISMAR.pdf#page=3) · [PDF 4쪽](https://www.robots.ox.ac.uk/~gk/publications/KleinMurray2007ISMAR.pdf#page=4)
+- 키프레임과 점을 번들 조정하는 동안 추적을 계속하며 지도 크기에 따른 프레임 처리 시간을 보고한다. [PDF 4쪽](https://www.robots.ox.ac.uk/~gk/publications/KleinMurray2007ISMAR.pdf#page=4) · [PDF 6쪽](https://www.robots.ox.ac.uk/~gk/publications/KleinMurray2007ISMAR.pdf#page=6)
 
 ## Evaluation Scope
 

@@ -15,13 +15,11 @@
 - Full-text retrieval: https://openaccess.thecvf.com/content/CVPR2026/papers/He_VIRAL_Visual_Sim-to-Real_at_Scale_for_Humanoid_Loco-Manipulation_CVPR_2026_paper.pdf
 - Code/Project: https://viral-humanoid.github.io/
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (12 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (12 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 한 줄 요약과 핵심 기여 두 개를 각 문장에 인용한 판본의 원문에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Yet, despite rapid progress in hardware and control, current humanoids have delivered limited real, sustained productivity outside of carefully engineered demos [21].
-
-방법 관련 발췌 — Proprioception consists of oprop-priv t = [vt, ωt, gt, at→1, qt, ˙qt, f finger t ] where vt, ωt are base linear and angular velocities, gt is base projected gravity, at→1 is ...
+VIRAL은 시뮬레이션에서 전신 상태를 쓰는 교사로 휴머노이드 이동·조작을 학습한 뒤 RGB 정책을 증류해 G1에 배포한다. [PDF 1쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/He_VIRAL_Visual_Sim-to-Real_at_Scale_for_Humanoid_Loco-Manipulation_CVPR_2026_paper.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -54,16 +52,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 3 / 2.1. Key Elements of Teacher Training - extractive body cue:** Proprioception consists of oprop-priv t = [vt, ωt, gt, at→1, qt, ˙qt, f finger t ] where vt, ωt are base linear and angular velocities, ...
-- **p. 2 / 1. Introduction - extractive body cue:** Our goal is not to propose yet another novel RL or sim-to-real algorithm, but to provide a technical recipe on the full stack required to ...
-- **p. 6 / 3.1. Robustness - extractive body cue:** These results show that although expert-level success remains challenging, VIRAL achieves near-expert success performance while being faster than the expert, and it substantially outperforms non-experts ...
-- **p. 6 / Figure/Table caption - extractive body cue:** Figure 8. Real-world generalization of VIRAL RGB-based policy under variations in tray and object position, robot start pose, table height and type, tablecloth color, lighting, ...
-- **p. 5 / 3. Real-World Results of VIRAL - extractive body cue:** In this section, we present real-world humanoid locomanipulation results achieved by VIRAL.
-- **p. 8 / Figure/Table caption - extractive body cue:** Figure 15. Scaling compute for student policy training. Distil- lation loss (left) and success rate (right) when training with 1-64 GPUs. Larger GPU counts provide ...
-- **p. 7 / Figure/Table caption - extractive body cue:** Figure 14. Scaling compute for teacher training. Rewards (left) and success rates (right) for 1-16 GPUs. More GPUs yield faster convergence and better asymptotic performance.
-- **p. 5 / Figure/Table caption - extractive body cue:** Figure 7. Real-world performance comparison: VIRAL matches expert-level reliability, outperforms non-experts, and op- erates faster than the expert teleoperator. ure 3) to ensure that the ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 행동 복제와 학생이 방문한 상태에서 교사 행동을 수집하는 학습을 결합하고 영상·센서 조건을 무작위화한다. [PDF 2쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/He_VIRAL_Visual_Sim-to-Real_at_Scale_for_Humanoid_Loco-Manipulation_CVPR_2026_paper.pdf#page=2) · [PDF 4쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/He_VIRAL_Visual_Sim-to-Real_at_Scale_for_Humanoid_Loco-Manipulation_CVPR_2026_paper.pdf#page=4)
+- 손과 카메라를 실제 하드웨어에 맞추고 물체 배치·외관이 바뀌는 실물 연속 조작에서 전이를 평가한다. [PDF 5쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/He_VIRAL_Visual_Sim-to-Real_at_Scale_for_Humanoid_Loco-Manipulation_CVPR_2026_paper.pdf#page=5) · [PDF 6쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/He_VIRAL_Visual_Sim-to-Real_at_Scale_for_Humanoid_Loco-Manipulation_CVPR_2026_paper.pdf#page=6)
 
 ## Evaluation Scope
 

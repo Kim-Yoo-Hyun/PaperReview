@@ -15,13 +15,11 @@
 - Full-text retrieval: https://arxiv.org/pdf/1602.07576
 - Code/Project: https://github.com/tscohen/gconv_experiments
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (12 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (12 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 한 줄 요약과 핵심 기여 두 개를 각 문장에 인용한 판본의 원문에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Although a strong theory of neural network design is currently lacking, a large amount of empirical evidence supports the notion that both convolutional weight sharing and depth (among other factors) are important ...
-
-방법 관련 발췌 — Here we present the details for a G-convolution implementation that can leverage recent advances in fast computation of planar convolutions (Mathieu et al., 2014; Vasilache et al., 2015; Lavin & Gray, 2015).
+그룹 등변 합성곱 신경망은 입력의 이산 대칭 변환에 맞춰 중간 특징도 정해진 방식으로 변하도록 가중치를 공유한다. [PDF 1쪽](https://proceedings.mlr.press/v48/cohenc16.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -50,13 +48,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 6 / 7. Efficient Implementation - extractive body cue:** Here we present the details for a G-convolution implementation that can leverage recent advances in fast computation of planar convolutions (Mathieu et al., 2014; Vasilache ...
-- **p. 7 / 8.1. Rotated MNIST - extractive body cue:** This network (P4CNNRotationPooling) outperforms the baseline and the previous state of the art, but performs significantly worse than the P4CNN which does not pool over ...
-- **p. 8 / 8.1. Rotated MNIST - extractive body cue:** To the best of our knowledge, the p4m-CNN outperforms all published results on plain CIFAR10 (Wan et al., 2013; Goodfellow et al., 2013; Lin et ...
-- **p. 7 / 8.1. Rotated MNIST - extractive body cue:** This baseline architecture outperforms the models tested by Larochelle et al.
-- **p. 8 / 8.1. Rotated MNIST - extractive body cue:** Extreme data augmentation and model ensembles can also further improve the numbers (Graham, 2014).
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 평면의 이동·회전·반사를 포함하는 그룹 위에 특징 맵과 합성곱을 정의한다. [PDF 4쪽](https://proceedings.mlr.press/v48/cohenc16.pdf#page=4) · [PDF 5쪽](https://proceedings.mlr.press/v48/cohenc16.pdf#page=5)
+- 회전시킨 MNIST와 CIFAR 계열 분류에서 평면 합성곱과 그룹 합성곱의 오차를 비교한다. [PDF 7쪽](https://proceedings.mlr.press/v48/cohenc16.pdf#page=7) · [PDF 8쪽](https://proceedings.mlr.press/v48/cohenc16.pdf#page=8)
 
 ## Evaluation Scope
 

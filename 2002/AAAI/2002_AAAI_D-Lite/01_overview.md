@@ -15,7 +15,7 @@
 - Full-text retrieval: https://www.cs.cmu.edu/~motionplanning/papers/sbp_papers/integrated3/koenig_dstarlite_aaai02b.pdf
 - Code/Project: not identified
 - Paper type: theory_or_foundation
-- Source audit: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 한 줄 요약과 핵심 기여 두 개를 각 문장에 인용한 판본의 원문에서 확인했다.
 
 > DOC-QA1 (2026-10-23): 제어문자·깨진 추출 구간과 직접 연결된 표 항목을 PDF 페이지 이미지와 대조했다. 확인 범위·원문 URL·페이지·수정 이력은 [대조 기록](../../../work/sources/pdf_note_review_2026-10-23.json)에 있다. 노트 전체의 정독이나 모든 기존 주장에 대한 재검증을 뜻하지 않으며 reading status는 유지한다.
 
@@ -24,9 +24,7 @@
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — The challenge is to identify these cells efficiently.
-
-방법 관련 발췌 — To gain insight into its behavior, we present various theoretical properties of LPA* that also apply to D* Lite.
+D* Lite는 미지 지형을 이동하며 통과 비용이 바뀔 때 이전 탐색 결과를 재사용해 목표까지의 경로를 다시 구한다. [PDF 1쪽](https://cdn.aaai.org/AAAI/2002/AAAI02-072.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -39,6 +37,8 @@
 - **p. 4 / Abstract - extractive body cue:** They change to infinity when the robot discovers that they cannot be traversed.
 
 ## Core Idea
+
+- **원문 대조:** Succ(s)는 vertex s의 successor 집합이고 Pred(s)는 predecessor 집합이다. 탐색 대상은 유한 graph이며 edge cost의 증가·감소를 허용한다. ([PDF p. 2](https://www.cs.cmu.edu/~motionplanning/papers/sbp_papers/integrated3/koenig_dstarlite_aaai02b.pdf#page=2), Lifelong Planning A*, graph notation).
 
 - **p. 1 / Abstract - extractive body cue:** To gain insight into its behavior, we present various theoretical properties of LPA* that also apply to D* Lite.
 - **p. 1 / Abstract - extractive body cue:** Building on LPA*, we therefore present D* Lite, a novel replanning method that implements the same navigation strategy as D* but is algorithmically different.
@@ -60,16 +60,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 1 / Abstract - extractive body cue:** To gain insight into its behavior, we present various theoretical properties of LPA* that also apply to D* Lite.
-- **p. 1 / Abstract - extractive body cue:** Building on LPA*, we therefore present D* Lite, a novel replanning method that implements the same navigation strategy as D* but is algorithmically different.
-- **p. 4 / Abstract - extractive body cue:** We now use LPA* to develop D* Lite, that repeatedly determines shortest paths between the current vertex of the robot and the goal vertex as ...
-- **p. 7 / A Performance of D* Lite - extractive body cue:** D* Lite outperforms D* Lite without incremental search (that is, A*) according to all three performance measures, even more than a factor of four for ...
-- **p. 7 / A B - extractive body cue:** These results also confirm earlier experimental results that D* can outperform A* for goal-directed navigation in unknown terrain by one order of magnitude or more ...
-- **p. 6 / Abstract - extractive body cue:** In the following, we study to which degree the combination of incremental and heuristic search that D* Lite implements outperforms incremental or heuristic searches individually.
-- **p. 6 / Abstract - extractive body cue:** Since the actual planning times are implementation and machine dependent, they make it difficult for others to reproduce the results of our performance comparison.
-- **원문 대조:** Succ(s)는 vertex s의 successor 집합이고 Pred(s)는 predecessor 집합이다. 탐색 대상은 유한 graph이며 edge cost의 증가·감소를 허용한다. ([PDF p. 2](https://www.cs.cmu.edu/~motionplanning/papers/sbp_papers/integrated3/koenig_dstarlite_aaai02b.pdf#page=2), Lifelong Planning A*, graph notation).
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 목표 쪽에서 계산한 비용과 한 단계 앞선 비용 추정을 유지하고 불일치가 생긴 정점을 우선순위 큐에서 갱신한다. [PDF 3쪽](https://cdn.aaai.org/AAAI/2002/AAAI02-072.pdf#page=3) · [PDF 4쪽](https://cdn.aaai.org/AAAI/2002/AAAI02-072.pdf#page=4)
+- 미지 지형의 목표 지향 이동과 지도 작성에서 기존 재계획 기법과 탐색·계산 부담을 비교한다. [PDF 6쪽](https://cdn.aaai.org/AAAI/2002/AAAI02-072.pdf#page=6) · [PDF 7쪽](https://cdn.aaai.org/AAAI/2002/AAAI02-072.pdf#page=7)
 
 ## Evaluation Scope
 

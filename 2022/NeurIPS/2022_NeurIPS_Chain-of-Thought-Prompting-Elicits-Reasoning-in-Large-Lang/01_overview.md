@@ -15,13 +15,11 @@
 - Full-text retrieval: https://arxiv.org/pdf/2201.11903
 - Code/Project: not identified
 - Paper type: theory_or_foundation
-- Source audit: full-text PDF body checked on 2026-09-03 (43 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (43 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 한 줄 요약과 핵심 기여 두 개를 각 문장에 인용한 판본의 원문에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Both of the above ideas, however, have key limitations.
-
-방법 관련 발췌 — We show that chain-ofthought prompting not only enables language models to perform symbolic reasoning tasks that are challenging in the standard prompting setting, but also facilitates length generalization to inference-time inputs long ...
+연쇄 사고 프롬프팅은 풀이의 중간 단계가 포함된 소수 예시를 언어모형에 제시해 새 문제의 답을 생성하도록 한다. [PDF 1쪽](https://proceedings.neurips.cc/paper_files/paper/2022/file/9d5609613524ecf4f15af0f7b31abca4-Paper-Conference.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 8 / 3.2 Results - extractive body cue:** We show that chain-ofthought prompting not only enables language models to perform symbolic reasoning tasks that are challenging in the standard prompting setting, but also ...
-- **p. 2 / 1 Introduction - extractive body cue:** Specifically, we explore the ability of language models to perform few-shot prompting for reasoning tasks, given a prompt that consists of triples: ⟨input, chain of ...
-- **p. 2 / 1 Introduction - extractive body cue:** We present empirical evaluations on arithmetic, commonsense, and symbolic reasoning benchmarks, showing that chain-of-thought prompting outperforms standard prompting, sometimes to a striking degree.
-- **p. 5 / 3.2 Results - extractive body cue:** 0 20 40 60 GSM8K solve rate (%) LaMDA GPT PaLM Standard prompting Chain-of-thought prompting Prior supervised best 0 20 40 60 80 SVAMP solve ...
-- **p. 1 / Abstract - extractive body cue:** Model Input Model Output Model Output Model Input Figure 1: Chain-of-thought prompting enables large language models to tackle complex arithmetic, commonsense, and symbolic reasoning tasks.
-- **p. 7 / 3.2 Results - extractive body cue:** With chain-of-thought prompting, PaLM 540B achieved strong performance relative to baselines, outperforming the prior state of the art on StrategyQA (75.6% vs 69.4%) and outperforming ...
-- **p. 7 / 3.2 Results - extractive body cue:** These results demonstrate that chain-of-thought prompting can also improve performance on tasks requiring a range of commonsense reasoning abilities (though note that gain was minimal ...
-- **p. 5 / 3.2 Results - extractive body cue:** On the other hand, for SingleOp, the easiest subset of MAWPS which only requires a single step to solve, performance improvements were either negative or ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 산술 문장제에서 풀이 예시를 사용하는 조건과 답만 제시하는 조건을 여러 모형 크기에 걸쳐 비교한다. [PDF 3쪽](https://proceedings.neurips.cc/paper_files/paper/2022/file/9d5609613524ecf4f15af0f7b31abca4-Paper-Conference.pdf#page=3) · [PDF 4쪽](https://proceedings.neurips.cc/paper_files/paper/2022/file/9d5609613524ecf4f15af0f7b31abca4-Paper-Conference.pdf#page=4)
+- 상식 및 기호 추론 과제로 적용 범위를 넓혀 과제와 모형 크기에 따라 이득이 달라지는 양상을 확인한다. [PDF 6쪽](https://proceedings.neurips.cc/paper_files/paper/2022/file/9d5609613524ecf4f15af0f7b31abca4-Paper-Conference.pdf#page=6) · [PDF 8쪽](https://proceedings.neurips.cc/paper_files/paper/2022/file/9d5609613524ecf4f15af0f7b31abca4-Paper-Conference.pdf#page=8)
 
 ## Evaluation Scope
 

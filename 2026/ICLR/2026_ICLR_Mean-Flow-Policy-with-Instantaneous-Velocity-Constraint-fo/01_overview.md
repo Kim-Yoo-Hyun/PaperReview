@@ -15,13 +15,11 @@
 - Full-text retrieval: https://arxiv.org/pdf/2602.13810
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (23 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (23 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 한 줄 요약과 핵심 기여 두 개를 각 문장에 인용한 판본의 원문에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, a key limitation of existing generative policies is their dependence on iterative multi-step refinement from noise to actions (Wang et al., 2024a; 2025; Ding et al., 2024).
-
-방법 관련 발췌 — Our contributions are summarized threefold: • We propose a new flow-based policy, namely mean velocity policy (MVP), that enables fastest one-step action generation.
+평균 속도 정책은 잠재 잡음에서 행동까지의 평균 속도장을 학습해 한 번의 흐름 갱신으로 연속 행동을 생성한다. [PDF 1쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/fe7f375ef01e43f17d2c32b28a176577-Paper-Conference.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** Our contributions are summarized threefold: • We propose a new flow-based policy, namely mean velocity policy (MVP), that enables fastest one-step action generation.
-- **p. 3 / 3 METHOD - extractive body cue:** First, we introduce the mean velocity policy (MVP), showing how its integration with a "generateand-select" mechanism enables a direct mapping from noise to optimal actions.
-- **p. 1 / 1 INTRODUCTION - extractive body cue:** In this paper, we propose the mean velocity policy (MVP) as an affirmative answer.
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** To address this, we introduce an instantaneous velocity constraint (IVC) to compensate for the lack of boundary conditions.
-- **p. 5 / 3 METHOD - extractive body cue:** Inspired by this, we introduce the instantaneous velocity constraint (IVC), a training objective that explicitly enforces a boundary condition at t.
-- **p. 7 / 4 EXPERIMENTS - extractive body cue:** Specifically, MVP consistently outperforms all baselines on Robomimic-square, Cube-doubletask4, and all Cube-triple tasks, where it consistently achieves the highest success rates.
-- **p. 7 / 4 EXPERIMENTS - extractive body cue:** For instance, on the most difficult task, Cube-triple-task4, MVP achieves a success rate of 0.52 ± 0.11, which is significantly higher than the next-best baseline, ...
-- **p. 8 / 4 EXPERIMENTS - extractive body cue:** Our MVP achieves highest success rate and fastest training speed.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 평균 속도장 학습에 순간 속도 일치 조건을 부과하고 이 조건이 경계에서 필요한 이유를 유도한다. [PDF 3쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/fe7f375ef01e43f17d2c32b28a176577-Paper-Conference.pdf#page=3) · [PDF 4쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/fe7f375ef01e43f17d2c32b28a176577-Paper-Conference.pdf#page=4)
+- Robomimic과 OGBench에서 과제 성공률과 흐름 단계 수에 따른 계산 부담을 비교한다. [PDF 6쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/fe7f375ef01e43f17d2c32b28a176577-Paper-Conference.pdf#page=6) · [PDF 8쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/fe7f375ef01e43f17d2c32b28a176577-Paper-Conference.pdf#page=8) · [PDF 9쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/fe7f375ef01e43f17d2c32b28a176577-Paper-Conference.pdf#page=9)
 
 ## Evaluation Scope
 

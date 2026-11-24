@@ -15,13 +15,11 @@
 - Full-text retrieval: https://ai.stanford.edu/~ang/papers/icml04-apprentice.pdf
 - Code/Project: https://ai.stanford.edu/~pabbeel/irl/
 - Paper type: theory_or_foundation
-- Source audit: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 한 줄 요약과 핵심 기여 두 개를 각 문장에 인용한 판본의 원문에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — From conversations with engineers in industry and our own experience in applying reinforcement learning algorithms to several robots, we believe that, for many problems, the difficulty of manually specifying a reward function ...
-
-방법 관련 발췌 — In this paper, we assume that the expert is trying (without necessarily succeeding) to optimize an unknown reward function that can be expressed as a linear combination of known "features." Even though ...
+Abbeel과 Ng는 전문가의 보상이 알려진 특징들의 선형 결합이라고 가정하고, 시연만으로 전문가에 가까운 성과를 내는 정책을 찾는다. [PDF 1쪽](https://ai.stanford.edu/~ang/papers/icml04-apprentice.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -52,16 +50,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** In this paper, we assume that the expert is trying (without necessarily succeeding) to optimize an unknown reward function that can be expressed as a ...
-- **p. 3 / 3. Algorithm - extractive body cue:** (The SVM problem is a quadratic programming problem (QP), so we can also use any generic QP solver.) In Figure 1 we show an example ...
-- **p. 6 / 5.1. Gridworld - extractive body cue:** Screenshot of driving simulator. learning a compact representation of the reward function, our algorithm significantly outperforms the other methods.
-- **p. 4 / 4. Theoretical results - extractive body cue:** Most of the results in the previous section were predicated on the assumption that the algorithm terminates with t ≤ϵ.
-- **p. 4 / 4. Theoretical results - extractive body cue:** In the case where the true reward function R∗does not lie exactly in the span of the basis functions φ, the algorithm still enjoys a ...
-- **p. 5 / 5.1. Gridworld - extractive body cue:** Plot of performance vs. number of sampled trajectories from the expert.
-- **p. 5 / 5.1. Gridworld - extractive body cue:** The performance measure is the value of the best policy in the set output by the algorithm.
-- **p. 6 / 5.2. Car driving simulation - extractive body cue:** Since no "true" reward was ever specified or used in the experiments, we cannot report on the results of the algorithm according to R∗.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 할인된 특징 기대값을 전문가의 값에 가깝게 만들면 허용한 보상 함수들에 대해 성과 차이를 제한할 수 있음을 보인다. [PDF 2쪽](https://ai.stanford.edu/~ang/papers/icml04-apprentice.pdf#page=2) · [PDF 3쪽](https://ai.stanford.edu/~ang/papers/icml04-apprentice.pdf#page=3)
+- 정책을 반복해 추가하는 투영 방법을 제시하고 모의 운전에서 서로 다른 전문가의 선호를 모방한다. [PDF 4쪽](https://ai.stanford.edu/~ang/papers/icml04-apprentice.pdf#page=4) · [PDF 6쪽](https://ai.stanford.edu/~ang/papers/icml04-apprentice.pdf#page=6)
 
 ## Evaluation Scope
 

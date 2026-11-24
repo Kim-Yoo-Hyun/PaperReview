@@ -15,13 +15,11 @@
 - Full-text retrieval: https://www.roboticsproceedings.org/rss21/p068.pdf
 - Code/Project: https://why618188.github.io/beamdojo/
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (15 pages; tesseract OCR fallback; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (15 pages; tesseract OCR fallback; title-token overlap first two pages=1.0) 2026-11-24 한 줄 요약과 핵심 기여 두 개를 각 문장에 인용한 판본의 원문에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, these methods encounter great challenges when applied to humanoid robots, primarily due to a key difference
-
-방법 관련 발췌 — To address these challenges, we introduce BEAMDOJO, a reinforcement learning (RL) framework designed for enabling agile humanoid locomotion on sparse footholds.
+BeamDojo는 디딜 면이 좁고 떨어져 있는 지형에서 휴머노이드가 발 전체를 안정적으로 놓도록 강화학습한다. [PDF 1쪽](https://www.roboticsproceedings.org/rss21/p068.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 1 / Abstract - extractive body cue:** To address these challenges, we introduce BEAMDOJO, a reinforcement learning (RL) framework designed for enabling agile humanoid locomotion on sparse footholds.
-- **p. 2 / 1. INrRopucTION - extractive body cue:** In this work, we introduce BEAMDOJO, a novel reinforcement learning-based framework for controlling humanoid robots traversing risky terrains with sparse footholds.
-- **p. 2 / 1. INrRopucTION - extractive body cue:** + We propose BEAMDOIO, a two-stage RL framework that combines a newly designed foothold reward for the polygonal foot model and a double critic, enabling ...
-- **p. 3 / A. Foothold Reward - extractive body cue:** To accommodate the polygonal foot model of the humanoid robot, we introduce a sampling-based foothold reward that evaluates foot placement on sparse footholds.This evaluation
-- **p. 1 / Body text (section not recovered) - extractive body cue:** 1: Our proposed framework, BEAMDOJO, enables agile and robust humanoid locomotion across challenging sparse foothold.
-- **p. 7 / B. Simulation Experiments - extractive body cue:** 1) Quantitative results: We report the success rate (Race) and traverse rate (R,9y) for four terrains at medium and hard difficulty levels (terrain level 6 ...
-- **p. 7 / A. Experimental Setup - extractive body cue:** 4 Success Rate Raocc: The percentage of successful at
-- **p. 8 / B. Simulation Experiments - extractive body cue:** In contrast, ‘our method and the ablation with double critic demonstrates superior motion smoothness and improved feet clearance.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 발바닥 여러 지점에서 지지 여부를 평가하고 보행 보상과 희소한 디딤 보상을 별도 가치 추정기로 다룬다. [PDF 3쪽](https://www.roboticsproceedings.org/rss21/p068.pdf#page=3) · [PDF 4쪽](https://www.roboticsproceedings.org/rss21/p068.pdf#page=4)
+- 평지 동역학에서 목표 지형을 먼저 관측한 뒤 실제 지형 동역학으로 미세조정하고 라이다를 쓰는 실물 보행을 평가한다. [PDF 4쪽](https://www.roboticsproceedings.org/rss21/p068.pdf#page=4) · [PDF 9쪽](https://www.roboticsproceedings.org/rss21/p068.pdf#page=9)
 
 ## Evaluation Scope
 

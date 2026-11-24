@@ -15,13 +15,11 @@
 - Full-text retrieval: https://arxiv.org/pdf/2502.07005
 - Code/Project: https://thobotics.github.io/hepi
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (30 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (30 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 한 줄 요약과 핵심 기여 두 개를 각 문장에 인용한 판본의 원문에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — They are designed to highlight the role of geometric structure in manipulation tasks, with a progressive increase in difficulty, from simple rigid-body manipulation with diverse objects to more challenging tasks involving multiple ...
-
-방법 관련 발췌 — To evaluate our approach and future advancements in this direction, we propose a novel suite of seven tasks, realized using NIVIDA IsaacLab (Mittal et al., 2023) to utilize its GPU-based simulation engine.
+HEPi는 구동기와 물체의 서로 다른 상호작용을 그래프로 나타내 강체·변형체의 3차원 조작 정책을 학습한다. [PDF 1쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/7571c9d44179c7988178593c5b62a9b6-Paper-Conference.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** To evaluate our approach and future advancements in this direction, we propose a novel suite of seven tasks, realized using NIVIDA IsaacLab (Mittal et al., ...
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** The architecture's equivariance allows generalizing between poses and its heterogeneity enables us to include and exploit knowledge about the scene as well as the unactuated ...
-- **p. 3 / 3 METHODOLOGY - extractive body cue:** To handle the complexities of robotic manipulation, where actuators and objects play distinct roles, we propose the Heterogeneous Equivariant Policy (HEPi), which comprises three key ...
-- **p. 5 / 3 METHODOLOGY - extractive body cue:** For actuator nodes, the output consists of both a scalar c and a vector vout, where the final output vector is computed as vout = ...
-- **p. 4 / 3 METHODOLOGY - extractive body cue:** Our approach captures these roles by first processing local information within the object and actuator clusters and then aggregating it globally to the actuators via ...
-- **p. 8 / Figure/Table caption - extractive body cue:** Figure 4: Performance of different models on the Cloth-Hanging task across varying sample spaces. Overall, performance improves as the sample space decreases. In terms of ...
-- **p. 25 / Figure/Table caption - extractive body cue:** Figure 20: Performance of different models on the Cloth-Hanging task across various sample spaces. Assuming the global scene located at r = [0, 1, 0]T ...
-- **p. 9 / 4 EXPERIMENTS - extractive body cue:** Adding attention significantly increases the training time but does not improve performance, as shown on the right.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 노드와 간선 유형별로 구분한 메시지 전달에 SE(3) 등변성을 부여해 장면의 회전·이동에 대응한다. [PDF 2쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/7571c9d44179c7988178593c5b62a9b6-Paper-Conference.pdf#page=2) · [PDF 4쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/7571c9d44179c7988178593c5b62a9b6-Paper-Conference.pdf#page=4)
+- 다양한 형상의 삽입과 밧줄·천 조작으로 평가 환경을 구성해 여러 정책의 학습 효율과 반환값을 비교한다. [PDF 6쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/7571c9d44179c7988178593c5b62a9b6-Paper-Conference.pdf#page=6) · [PDF 7쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/7571c9d44179c7988178593c5b62a9b6-Paper-Conference.pdf#page=7)
 
 ## Evaluation Scope
 

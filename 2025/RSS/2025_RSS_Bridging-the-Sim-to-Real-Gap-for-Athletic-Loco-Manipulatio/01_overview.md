@@ -15,13 +15,11 @@
 - Full-text retrieval: https://www.roboticsproceedings.org/rss21/p125.pdf
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (11 pages; tesseract OCR fallback; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (11 pages; tesseract OCR fallback; title-token overlap first two pages=1.0) 2026-11-24 한 줄 요약과 핵심 기여 두 개를 각 문장에 인용한 판본의 원문에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, training solely with task rewards introduces two major challenges: these rewards are prone (o exploitation (reward hacking), and the exploration process can lack sufficient direction.
-
-방법 관련 발췌 — Rather than enforcing strict adherence to a reference trajectory, we propose treating it as a hint to guide exploration, In our approach, « WBC is frst pre-trained on random base velocities and ...
+이 연구는 실제 로봇의 구동 응답을 모형화하고 참조 동작에서 시작해 물체를 들거나 던지는 작업의 성과를 강화학습으로 최적화한다. [PDF 1쪽](https://www.roboticsproceedings.org/rss21/p125.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Iyrropucrion - extractive body cue:** Rather than enforcing strict adherence to a reference trajectory, we propose treating it as a hint to guide exploration, In our approach, « WBC is ...
-- **p. 1 / Body text (section not recovered) - extractive body cue:** First, we introduce the Un= supervised Actuator Net (UAN), which leverages real-world data {o bridge the sim-to-real gap for complex actuation mechanisms without requiring access ...
-- **p. 2 / A. Unsupervised Actuator Net - extractive body cue:** Alternatively, we propose a method for matching the transition dynamics of the actuator such that
-- **p. 3 / A. Unsupervised Actuator Net - extractive body cue:** Each training episode consists of a 20s rollout executing the torque sequence from the hardware data from 3, t0 8744.20 Through taining on rollouts, the ...
-- **p. 3 / B. Whole-body Controller Pre-training - extractive body cue:** 2) Observation Space: ‘The policy's observation space consists of proprioceptive readings from the robot's onboard sen= sors including the gravity vector projected in the robot's ...
-- **p. 5 / Figure/Table caption - extractive body cue:** Fig. 4: UAN improves simulator accuracy and real throwing performance. UAN (Ours) achieves lower sim-to-real difference in throw distance as compared to standard baselines, resulting ...
-- **p. 5 / A. Comparing System Identification Approaches - extractive body cue:** We first evaluate the modeling accuracy of these approaches by reporting the mean-square joint position error on both the training data and on an unseen ...
-- **p. 6 / B. Finetuning Foundational WBC - extractive body cue:** We found that No-Pre-Training achieved similar throwing performance to No-E2E, despite hitting a larger peak power ouput
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 토크 정답을 요구하지 않는 구동기 네트워크를 실물 운동 기록에서 학습해 시뮬레이션의 구동 응답을 보정한다. [PDF 2쪽](https://www.roboticsproceedings.org/rss21/p125.pdf#page=2) · [PDF 3쪽](https://www.roboticsproceedings.org/rss21/p125.pdf#page=3)
+- 참조 추종 사전학습 후 작업 보상으로 미세조정하고 실제 들기·던지기·끌기에서 동역학 보정과 학습 절차를 비교한다. [PDF 5쪽](https://www.roboticsproceedings.org/rss21/p125.pdf#page=5) · [PDF 6쪽](https://www.roboticsproceedings.org/rss21/p125.pdf#page=6)
 
 ## Evaluation Scope
 

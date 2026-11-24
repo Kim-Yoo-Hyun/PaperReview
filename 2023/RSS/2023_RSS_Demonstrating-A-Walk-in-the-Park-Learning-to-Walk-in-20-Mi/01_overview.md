@@ -15,13 +15,11 @@
 - Full-text retrieval: https://arxiv.org/pdf/2208.07860
 - Code/Project: https://sites.google.com/berkeley.edu/walk-in-the-park
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (9 pages; PyMuPDF text; title-token overlap first two pages=0.875)
+- Source audit: full-text PDF body checked on 2026-09-03 (9 pages; PyMuPDF text; title-token overlap first two pages=0.875) 2026-11-24 한 줄 요약과 핵심 기여 두 개를 각 문장에 인용한 판본의 원문에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — This result runs counter to the principles articulated in several prior works, which suggest either than simulated training is critical for robotic locomotion because the training times are too long [22], [32]-[35], ...
-
-방법 관련 발췌 — Our main contribution is an empirical demonstration that current deep RL methods can effectively learn quadrupedal locomotion directly in the real world in under 20 minutes.
+Walk in the Park는 시뮬레이터 사전학습 없이 실제 사족 로봇의 상호작용으로 보행 정책을 짧은 시간에 학습한다. [PDF 1쪽](https://roboticsproceedings.org/rss19/p056.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -52,15 +50,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 1 / I. INTRODUCTION - extractive body cue:** Our main contribution is an empirical demonstration that current deep RL methods can effectively learn quadrupedal locomotion directly in the real world in under 20 ...
-- **p. 1 / I. INTRODUCTION - extractive body cue:** Crucially, this does not require novel algorithmic components or any other unexpected innovation, but rather careful implementation of one of several existing algorithmic frameworks (and ...
-- **p. 4 / B. Efficient Model-Free RL - extractive body cue:** DroQ [60] similarly allows for a higher update to data ratio by regularizing the critic networks with dropout [61] and layer normalization [65].
-- **p. 6 / V. SIMULATION ANALYSIS - extractive body cue:** From these results, we can conclude that a variety of regularization or normalization methods, if implemented and applied carefully, can all achieve a similar level ...
-- **p. 5 / V. SIMULATION ANALYSIS - extractive body cue:** Since our goal is to run training on a real robot, we aim for design decisions and algorithms that lead to improved stability and sample ...
-- **p. 5 / V. SIMULATION ANALYSIS - extractive body cue:** We see that na¨ıvely increasing the number of critic updates made per time-step improves sample efficiency, but still requires roughly 30k samples, which would amount ...
-- **p. 6 / V. SIMULATION ANALYSIS - extractive body cue:** Left to right: flat, solid ground covered in dense foam mats; a 5cm memory foam mattress; loose ground comprised of eucalyptus bark; a grassy lawn; ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 행동 범위와 물리 제어 주기를 설계하고 실물에서 수집한 전이로 모델 없는 오프폴리시 정책을 갱신한다. [PDF 3쪽](https://roboticsproceedings.org/rss19/p056.pdf#page=3) · [PDF 4쪽](https://roboticsproceedings.org/rss19/p056.pdf#page=4)
+- 실내·외의 서로 다른 지면에서 개별 정책의 보행 학습을 평가하고 추가 시뮬레이션에서 설계 선택을 비교한다. [PDF 5쪽](https://roboticsproceedings.org/rss19/p056.pdf#page=5) · [PDF 6쪽](https://roboticsproceedings.org/rss19/p056.pdf#page=6)
 
 ## Evaluation Scope
 

@@ -15,13 +15,11 @@
 - Full-text retrieval: https://arxiv.org/pdf/2010.02502
 - Code/Project: https://github.com/ermongroup/ddim
 - Paper type: theory_or_foundation
-- Source audit: full-text PDF body checked on 2026-09-03 (22 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (22 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 한 줄 요약과 핵심 기여 두 개를 각 문장에 인용한 판본의 원문에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — To close this efficiency gap between DDPMs and GANs, we present denoising diffusion implicit models (DDIMs).
-
-방법 관련 발췌 — To close this efficiency gap between DDPMs and GANs, we present denoising diffusion implicit models (DDIMs).
+DDIM은 DDPM과 같은 학습 목적을 쓰면서 더 적은 역방향 단계로 이미지를 생성하는 확산 모형이다. [PDF 1쪽](https://arxiv.org/pdf/2010.02502v4#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 1 / 1 INTRODUCTION - extractive body cue:** To close this efficiency gap between DDPMs and GANs, we present denoising diffusion implicit models (DDIMs).
-- **p. 1 / ABSTRACT - extractive body cue:** To accelerate sampling, we present denoising diffusion implicit models (DDIMs), a more efficient class of iterative implicit probabilistic models with the same training procedure as ...
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** We show that the resulting variational training objectives have a shared surrogate objective, which is exactly the objective used to train DDPM.
-- **p. 3 / 2 BACKGROUND - extractive body cue:** In Appendix A, we show that the non-Markovian perspective also applies beyond the Gaussian case.
-- **p. 4 / 2 BACKGROUND - extractive body cue:** However, Jσ is equivalent to Lγ for certain weights γ, as we show below.
-- **p. 7 / 5 EXPERIMENTS - extractive body cue:** Even though DDPM could also achieve reasonable sample quality with 100× steps, DDIM requires much fewer steps to achieve this; on CelebA, the FID score ...
-- **p. 6 / 5 EXPERIMENTS - extractive body cue:** In this section, we show that DDIMs outperform DDPMs in terms of image generation when fewer iterations are considered, giving speed ups of 10× to ...
-- **p. 6 / 5 EXPERIMENTS - extractive body cue:** The only changes that we make is how we produce samples from the model; we achieve this by controlling τ (which controls how fast the ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 비마르코프 순방향 과정에서 결정론적 역방향 갱신을 유도해 학습한 잡음 예측기를 재사용한다. [PDF 4쪽](https://arxiv.org/pdf/2010.02502v4#page=4) · [PDF 5쪽](https://arxiv.org/pdf/2010.02502v4#page=5)
+- 단계 수를 줄였을 때 CIFAR-10·CelebA의 FID와 실제 생성 시간이 어떻게 달라지는지 비교한다. [PDF 7쪽](https://arxiv.org/pdf/2010.02502v4#page=7) · [PDF 8쪽](https://arxiv.org/pdf/2010.02502v4#page=8)
 
 ## Evaluation Scope
 

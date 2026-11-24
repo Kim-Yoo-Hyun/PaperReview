@@ -15,13 +15,11 @@
 - Full-text retrieval: https://arxiv.org/pdf/2312.01990
 - Code/Project: https://deepmind.google/discover/blog/shaping-the-future-of-advanced-robotics/
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 한 줄 요약과 핵심 기여 두 개를 각 문장에 인용한 판본의 원문에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — We present Self-Adaptive Robust Attention for Robotics Transformers (SARA-RT): a new paradigm for addressing the emerging challenge of scaling up Robotics Transformers (RT) for on-robot deployment.
-
-방법 관련 발췌 — We present Self-Adaptive Robust Attention for Robotics Transformers (SARA-RT): a new paradigm for addressing the emerging challenge of scaling up Robotics Transformers (RT) for on-robot deployment.
+SARA-RT는 이미 학습한 로봇 트랜스포머의 어텐션을 선형 계산 형태로 바꾸고 미세조정해 추론 부담을 낮춘다. [PDF 1쪽](https://arxiv.org/pdf/2312.01990v1#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 1 / Abstract - extractive body cue:** We present Self-Adaptive Robust Attention for Robotics Transformers (SARA-RT): a new paradigm for addressing the emerging challenge of scaling up Robotics Transformers (RT) for on-robot ...
-- **p. 3 / II. SELF-ADAPTIVE ROBUST ATTENTION VIA - extractive body cue:** 2 (blue- and brown-border boxes), this modification enables both the ReLU and exp variants to reach their targets with no distractions and furthermore already leads ...
-- **p. 2 / II. SELF-ADAPTIVE ROBUST ATTENTION VIA - extractive body cue:** First we show that vision-language (VL) models can be used in a zero-shot manner for steering the agent.
-- **p. 3 / III. THE MATHEMATICS OF SARA-RTS - extractive body cue:** As a warm-up, we show that a linear attention mechanism using ϕrandom exp : RdQK →Rm leads to the unbiased
-- **p. 2 / II. SELF-ADAPTIVE ROBUST ATTENTION VIA - extractive body cue:** Developing intuition: zero-shot navigation via VL models Consider a vision-based VR navigation agent, conditioned on the images of the target objects: t1, ..., tM or ...
-- **p. 6 / IV. EXPERIMENTS - extractive body cue:** It turns out that the resulting ViT-linear-attention hybrid RT-2 variant (third row in Table I) provides 12%+ mean accuracy improvement, excelling in certain tasks (e.g.
-- **p. 4 / IV. EXPERIMENTS - extractive body cue:** 3: The simulator used to train PC-input grasping policies and the successful coke can grasp with corresponding reward r = 1. iterations iterations iterations iterations ...
-- **p. 5 / IV. EXPERIMENTS - extractive body cue:** The agent gets a binary reward r ∈{0, 1} for each grasp (success or failure).
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 커널 특징을 사용해 쿼리·키의 모든 쌍을 직접 계산하는 연산 순서를 바꾸는 방법을 제시한다. [PDF 3쪽](https://arxiv.org/pdf/2312.01990v1#page=3) · [PDF 4쪽](https://arxiv.org/pdf/2312.01990v1#page=4)
+- RT-2 계열을 이용한 로봇 정책 평가와 점군 입력 정책 실험으로 변환 후의 품질과 실행 비용을 비교한다. [PDF 4쪽](https://arxiv.org/pdf/2312.01990v1#page=4) · [PDF 5쪽](https://arxiv.org/pdf/2312.01990v1#page=5) · [PDF 6쪽](https://arxiv.org/pdf/2312.01990v1#page=6)
 
 ## Evaluation Scope
 

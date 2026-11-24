@@ -6,7 +6,7 @@
 
 ## Evaluation in One Sentence
 
-PDF body evaluation/result cue (p. 7 (4 Results), p. 7 (4 Results), p. 8 (4 Results), p. 6 (4 Results), p. 6 (4 Results), p. 8 (4 Results)): (b) Success rate for climbing and descending sloped terrains.
+평지 정책의 4분 미만과 험지 정책의 약 20분은 시뮬레이션 학습의 벽시계 시간이다. 험지 실험은 RTX A6000 한 장에서 정책을 1,500회 갱신했다. [PDF 1쪽](https://proceedings.mlr.press/v164/rudin22a/rudin22a.pdf#page=1) · [PDF 7쪽](https://proceedings.mlr.press/v164/rudin22a/rudin22a.pdf#page=7)
 
 ## Evaluation Body Digest
 

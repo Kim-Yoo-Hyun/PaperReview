@@ -15,13 +15,11 @@
 - Full-text retrieval: https://arxiv.org/pdf/2306.14874
 - Code/Project: https://anymal-parkour.ethz.ch/
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (19 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (19 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 한 줄 요약과 핵심 기여 두 개를 각 문장에 인용한 판본의 원문에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — The complexity of the task exacerbates many of the challenges commonly faced by mobile robots: • The locomotion controller cannot rely on a stable and periodic gait but must use completely different ...
-
-방법 관련 발췌 — Despite the promising results and the close similarity to our method, this work requires human-designed path and skill selection and is limited to a single pre-mapped environment with a motion capture system.
+ANYmal Parkour는 사족 로봇이 여러 장애물을 연속으로 넘도록 학습된 이동 기술과 기술 선택 정책을 결합한다. [PDF 1쪽](https://arxiv.org/pdf/2306.14874v1#page=1)
 
 ## Problem and Motivation
 
@@ -55,15 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 5 / 3) We develop a neural terrain reconstruction method that - extractive body cue:** Despite the promising results and the close similarity to our method, this work requires human-designed path and skill selection and is limited to a single ...
-- **p. 5 / 3) We develop a neural terrain reconstruction method that - extractive body cue:** To the best of our knowledge, we propose the first system that can perform agile navigation with a quadrupedal robot in such challenging scenarios without ...
-- **p. 3 / I. INTRODUCTION - extractive body cue:** We can summarize our contributions as follows:
-- **p. 3 / I. INTRODUCTION - extractive body cue:** Contributions In our experimental validation, we demonstrate the system's ability to solve the problem autonomously, resulting in behaviors not shown before with such platforms.
-- **p. 1 / I. INTRODUCTION - extractive body cue:** This discipline requires years of practice to develop the necessary competencies, intuitions, and reflexes and is considered particularly dangerous.
-- **p. 8 / Figure/Table caption - extractive body cue:** Fig. 4: Training scenarios of the locomotion skills with the resulting behaviors. (A) Jumping. (B) Climbing down. (C) Climbing up. (D) Crouching. (E) Walking. (F) ...
-- **p. 4 / Figure/Table caption - extractive body cue:** Fig. 2: Description of our approach. We decompose the problem into three components: The perception module receives the point cloud measurements to estimate the scene's ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 가려지고 잡음이 있는 관측에서 장애물을 복원하고 상위 정책이 지형과 하위 기술의 능력에 맞는 경로·기술을 고른다. [PDF 4쪽](https://arxiv.org/pdf/2306.14874v1#page=4) · [PDF 5쪽](https://arxiv.org/pdf/2306.14874v1#page=5)
+- 실제 로봇에서 장애물 연속 통과를 시연하고 대체 경로가 있을 때 기술 선택과 주행 경로가 어떻게 달라지는지 평가한다. [PDF 6쪽](https://arxiv.org/pdf/2306.14874v1#page=6) · [PDF 9쪽](https://arxiv.org/pdf/2306.14874v1#page=9)
 
 ## Evaluation Scope
 

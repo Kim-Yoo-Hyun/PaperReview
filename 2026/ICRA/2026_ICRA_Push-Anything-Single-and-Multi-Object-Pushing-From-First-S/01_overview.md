@@ -15,13 +15,11 @@
 - Full-text retrieval: https://arxiv.org/pdf/2510.19974
 - Code/Project: https://dairlab.github.io/push-anything
 - Paper type: theory_or_foundation
-- Source audit: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 한 줄 요약과 핵심 기여 두 개를 각 문장에 인용한 판본의 원문에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Moreover, tasks involving complex multi-object interactions, such as resolving cluttered scenes, remain intractable for prior CIMPC methods as problem complexity grows exponentially with the number of contacts.
-
-방법 관련 발췌 — We introduce Push Anything, a manipulation pipeline for real-time planar pushing of a wide variety of objects, including multi-object scenes.
+Push Anything은 스캔한 물체 형상과 접촉을 고려하는 모델예측제어를 결합해 여러 물체를 평면에서 목표 자세로 민다. [PDF 1쪽](https://arxiv.org/pdf/2510.19974v2#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 1 / I. INTRODUCTION - extractive body cue:** We introduce Push Anything, a manipulation pipeline for real-time planar pushing of a wide variety of objects, including multi-object scenes.
-- **p. 3 / IV. METHODS - extractive body cue:** Our framework operates in two phases.
-- **p. 3 / IV. METHODS - extractive body cue:** We present the Push Anything framework (Fig.
-- **p. 4 / IV. METHODS - extractive body cue:** (4d) Our method, C3+, seeks a more efficient solution than solving with an MIQP.
-- **p. 6 / V. HARDWARE EXPERIMENTS - extractive body cue:** The system achieved a 99.9% success rate (700/701), with the only failure occurring when the large egg carton was pushed out of the robot's
-- **p. 7 / V. HARDWARE EXPERIMENTS - extractive body cue:** Under the tight tolerance, our method achieved a 92.5% success rate (210/227), with time-to-goal statistics for both tight and loose tolerances reported in Table II.
-- **p. 7 / V. HARDWARE EXPERIMENTS - extractive body cue:** Each experiment was run until 10 successful trials were achieved.
-- **p. 6 / V. HARDWARE EXPERIMENTS - extractive body cue:** 7, this results in 16 contact pairs, yielding λ ∈R64.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- C3+는 접촉의 상보 조건을 이용하는 궤적 최적화의 계산을 줄여 여러 동시 접촉을 제어 주기 안에서 다룬다. [PDF 3쪽](https://arxiv.org/pdf/2510.19974v2#page=3) · [PDF 4쪽](https://arxiv.org/pdf/2510.19974v2#page=4)
+- 실물 밀기 실험에서 물체 수를 늘리며 성공 여부와 목표 도달 시간을 측정하고 실패 원인을 분석한다. [PDF 6쪽](https://arxiv.org/pdf/2510.19974v2#page=6) · [PDF 7쪽](https://arxiv.org/pdf/2510.19974v2#page=7)
 
 ## Evaluation Scope
 

@@ -15,13 +15,11 @@
 - Full-text retrieval: https://proceedings.mlr.press/v164/rudin22a/rudin22a.pdf
 - Code/Project: https://leggedrobotics.github.io/legged_gym/
 - Paper type: theory_or_foundation
-- Source audit: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 한 줄 요약과 핵심 기여 두 개를 각 문장에 인용한 판본의 원문에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Additionally, we present a novel game-inspired curriculum which automatically adapts the task difficulty to the performance of the policy.
-
-방법 관련 발췌 — Additionally, we present a novel game-inspired curriculum which automatically adapts the task difficulty to the performance of the policy.
+Rudin 등은 한 GPU에서 많은 로봇을 병렬 시뮬레이션해 ANYmal 보행 정책을 짧은 벽시계 시간에 학습한다. [PDF 1쪽](https://proceedings.mlr.press/v164/rudin22a/rudin22a.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1 Introduction - extractive body cue:** Additionally, we present a novel game-inspired curriculum which automatically adapts the task difficulty to the performance of the policy.
-- **p. 2 / 1 Introduction - extractive body cue:** Each step consists of policy inference, simulation, reward, and observation calculation.
-- **p. 1 / Abstract - extractive body cue:** In addition, we present a novel game-inspired curriculum that is well suited for training with thousands of simulated robots in parallel.
-- **p. 5 / 1 Introduction - extractive body cue:** Furthermore, our method doesn't require tuning and is straightforward to implement in a parallel manner with nearzero processing cost.
-- **p. 1 / Abstract - extractive body cue:** In this work, we present and study a training set-up that achieves fast policy generation for real-world robotic tasks by using massive parallelism on a ...
-- **p. 7 / 4 Results - extractive body cue:** (b) Success rate for climbing and descending sloped terrains.
-- **p. 7 / 4 Results - extractive body cue:** (a) (b) Figure 5: Success rate of the tested policy on increasing terrain complexities.
-- **p. 8 / 4 Results - extractive body cue:** We find that an additional reward encouraging standing on a single foot is necessary to achieve a walking gait.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 로봇이 이동한 거리에 따라 각 환경의 지형 난도를 바꿔 서로 다른 난이도를 동시에 학습하게 한다. [PDF 4쪽](https://proceedings.mlr.press/v164/rudin22a/rudin22a.pdf#page=4) · [PDF 5쪽](https://proceedings.mlr.press/v164/rudin22a/rudin22a.pdf#page=5)
+- 시뮬레이션에서 학습한 험지 정책을 실제 ANYmal로 옮겨 장애물이 있는 지형에서 보행을 확인한다. [PDF 7쪽](https://proceedings.mlr.press/v164/rudin22a/rudin22a.pdf#page=7) · [PDF 8쪽](https://proceedings.mlr.press/v164/rudin22a/rudin22a.pdf#page=8)
 
 ## Evaluation Scope
 

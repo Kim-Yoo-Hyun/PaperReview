@@ -12,16 +12,16 @@
 - Tier: REFERENCE
 - Tags: Robotics, whole-body control, rigid contact, hierarchical control
 - Official paper: https://hal.science/lirmm-00831097
-- Full-text retrieval: https://hal-lirmm.ccsd.cnrs.fr/file/index/docid/831097/filename/2013_itro_saab-Dynamic_Whole_Body_Motion_Generation.pdf
+- Full-text retrieval: https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=6482266
 - Code/Project: not identified
+- DOI: 10.1109/tro.2012.2234351 [IEEE 게재 기록](https://ieeexplore.ieee.org/document/6482266)
+- 판본: 이번 요약은 IEEE 게재본 17쪽 기준이다. 9월에 작성한 발췌는 HAL 보관본 18쪽 기준이다. 게재본의 둘째 저자는 Oscar E. Ramos로 표기된다. [PDF 1쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=6482266#page=1)
 - Paper type: theory_or_foundation
-- Source audit: full-text PDF body checked on 2026-09-03 (18 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (18 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 한 줄 요약과 핵심 기여 두 개를 각 문장에 인용한 판본의 원문에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, inequality constraints cannot be taken into account explicitly.
-
-방법 관련 발췌 — In this paper, we propose a generic solution to take into account equalities and inequalities in a strict hierarchy to generate a dynamic motion.
+Saab 등은 다수 접촉과 등식·부등식 제약이 있는 휴머노이드의 전신 동역학 과제를 엄격한 우선순위로 푼다. [PDF 1쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=6482266#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +55,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 3 / I. INTRODUCTION - extractive body cue:** In this paper, we propose a generic solution to take into account equalities and inequalities in a strict hierarchy to generate a dynamic motion.
-- **p. 7 / V. REDUCED FORMULATION OF RIGID PLANAR CONTACTS - extractive body cue:** To cope with this problem we propose to include the contact forces f in the optimization variables of the QP resolution.
-- **p. 2 / I. INTRODUCTION - extractive body cue:** In total, the motion has to be designed in a set that lives in the high-dimensional configuration space but is implicitly limited to a much ...
-- **p. 12 / VII. EXPERIMENTS - extractive body cue:** To improve the naturalness of the motion, a task egaze defined by (50) is set to constrain the gaze toward the armrest to be grasped.
-- **p. 14 / VII. EXPERIMENTS - extractive body cue:** The second gripper helps to improve the stability by decreasing the tangent forces at each contact point.
-- **p. 10 / VII. EXPERIMENTS - extractive body cue:** The second one presents a complex sequence of tasks to make the robot sit in an armchair using several successive contacts.
-- **p. 10 / VII. EXPERIMENTS - extractive body cue:** However, this solution has the drawback that the servo is on the position variables, while, as explained in the previous section, the robustness mainly relies ...
-- **p. 11 / VII. EXPERIMENTS - extractive body cue:** 2) Results: The experiment is summed up by Figures 3 to 6.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 강체 평면 접촉이 유지되는 조건을 이용해 역동역학 문제의 차원을 줄이고 단방향 접촉 제약을 포함한다. [PDF 4쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=6482266#page=4) · [PDF 6쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=6482266#page=6)
+- 시뮬레이션의 복수 접촉 동작과 실물 HRP-2 실험을 통해 작업 순위와 접촉 조건이 있는 전신 운동을 평가한다. [PDF 11쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=6482266#page=11) · [PDF 13쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=6482266#page=13)
 
 ## Evaluation Scope
 

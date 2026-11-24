@@ -83,6 +83,7 @@ def cited_statement(claim, review):
 def summary_headings(overview):
     headings = re.findall(r"^## (.+)$", overview, re.M)
     layouts = [("Why This Paper Is Here", "Main Claims and Actual Contribution"),
+               ("Why This Paper Is Here", "Contribution and Interface"),
                ("Problem and Importance", "Core Idea and Contribution")]
     matches = [pair for pair in layouts if all(headings.count(title) == 1 for title in pair)]
     if len(matches) != 1:
@@ -210,6 +211,10 @@ def check_applied(rows, papers, root):
             if evidence := review.get("identifier_evidence"):
                 expect("DOI", paper["identifiers"].get("doi"), evidence["doi"])
                 check_source("venue_verification", evidence["source"])
+            if replacement := review.get("pdf_replacement"):
+                check_source("pdf", review["source"])
+                if replacement["before"] == review["source"] or "- Full-text retrieval: " + review["source"] not in overview.splitlines():
+                    errors.append(f"{pid} replacement PDF missing from overview or unchanged")
             if variant := review.get("title_variant"):
                 catalog_sources = {paper["page"], (paper["sources"].get("venue_verification") or {}).get("url")}
                 if not variant.get("catalog_title_source") or variant["catalog_title_source"] not in catalog_sources:

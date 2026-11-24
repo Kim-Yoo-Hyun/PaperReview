@@ -15,13 +15,11 @@
 - Full-text retrieval: https://arxiv.org/pdf/2412.15109
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (20 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (20 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 한 줄 요약과 핵심 기여 두 개를 각 문장에 인용한 판본의 원문에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — For example, R3M (Nair et al., 2022) and MVP (Xiao et al., 2022) learn discriminative representations from large-scale video datasets such as Ego4D (Grauman et al., 2022), while UniPI (Du et al., ...
-
-방법 관련 발췌 — Additionally, We evaluate our method on six challenging real-world tasks with over 900 trials.
+Seer는 로봇의 미래 시각 상태를 예측하고 그 예측에 조건화한 역동역학으로 행동을 생성한다. [PDF 1쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/e5b5c402bb7bd5e60bede6961d6fe39e-Paper-Conference.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** Additionally, We evaluate our method on six challenging real-world tasks with over 900 trials.
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** We introduce a foresight token to predict future RGB images and an action token to estimate intermediate actions between current and predicted future observations.
-- **p. 3 / 3 METHOD - extractive body cue:** Therefore, we propose conditional visual foresight ffore to effectively anticipate future visual representations.
-- **p. 4 / 3 METHOD - extractive body cue:** Seer consists of three parts: Multi-Modal Encoder, Conditional Visual Foresight and Inverse Dynamics Prediction.
-- **p. 5 / 3 METHOD - extractive body cue:** Our aim is to answer: 1) How does our method perform on challenging simulation benchmarks?
-- **p. 6 / Figure/Table caption - extractive body cue:** Table 1: LIBERO-LONG results. For each task, we present the average performance of top-3 checkpoints averaged over 20 rollouts. The metric "Avg. Success" measures the ...
-- **p. 19 / A.6.5 DETAILED REAL-WORLD RESULTS - extractive body cue:** The raw records of the real-world experiments are shown in Table A-V, Table A-VI, Table A-VII, and Table A-VIII, which we use to calculate the ...
-- **p. 9 / Figure/Table caption - extractive body cue:** Figure 4: Real-world Benchmark of four generalization-centric tasks. Left: We use a Franka Research 3 robot with a Robotiq-2f-85 gripper and two RealSense D435i cameras. ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 하나의 트랜스포머에서 미래 관측 예측과 행동 예측을 함께 최적화하고 로봇 데이터 사전학습 후 목표 작업에 맞춘다. [PDF 4쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/e5b5c402bb7bd5e60bede6961d6fe39e-Paper-Conference.pdf#page=4) · [PDF 5쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/e5b5c402bb7bd5e60bede6961d6fe39e-Paper-Conference.pdf#page=5)
+- LIBERO-LONG·CALVIN의 연속 작업과 실물 조작에서 정책을 비교하고 물체·조명 변화에 대한 결과를 보고한다. [PDF 6쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/e5b5c402bb7bd5e60bede6961d6fe39e-Paper-Conference.pdf#page=6) · [PDF 7쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/e5b5c402bb7bd5e60bede6961d6fe39e-Paper-Conference.pdf#page=7) · [PDF 9쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/e5b5c402bb7bd5e60bede6961d6fe39e-Paper-Conference.pdf#page=9)
 
 ## Evaluation Scope
 

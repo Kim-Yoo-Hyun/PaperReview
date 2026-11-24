@@ -15,13 +15,11 @@
 - Full-text retrieval: https://arxiv.org/pdf/2412.13211
 - Code/Project: not identified
 - Paper type: benchmark_or_dataset
-- Source audit: full-text PDF body checked on 2026-09-03 (31 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (31 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 한 줄 요약과 핵심 기여 두 개를 각 문장에 인용한 판본의 원문에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Using these events lists, we define mutually exclusive, collectively exhaustive success and failure modes.
-
-방법 관련 발췌 — We present MS-HAB1, a holistic, open-sourced, home-scale manipulation benchmark with four key features: (1) fast simulation with realistic physics and manipulation, including low-level control, for efficient training, evaluation, and da ...
+MS-HAB는 가정 내 물체 재배치를 GPU에서 병렬화하고 실제로 물체를 집고 놓는 저수준 제어까지 평가하는 벤치마크다. [PDF 1쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/27aa3a0e6d63db269977bb2df5607cb8-Paper-Conference.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** We present MS-HAB1, a holistic, open-sourced, home-scale manipulation benchmark with four key features: (1) fast simulation with realistic physics and manipulation, including low-level control, for ...
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** Summary of Contributions: The contributions of MS-HAB are summarized as follows: 1) GPUaccelerated HAB implementation which supports realistic low-level control and achieves over 4300 SPS ...
-- **p. 8 / 6 RESULTS - extractive body cue:** Even with per-object RL policies, our low-level mobile manipulation subtasks are difficult to train on dense reward, and improving subtask success rate is the most ...
-- **p. 10 / 6 RESULTS - extractive body cue:** Does training per-object Pick and Place policies improve subtask success rate compared to allobject policies?
-- **p. 19 / Figure/Table caption - extractive body cue:** Figure 8: SAC vs PPO subtask success once rate (%) curves on the train split. Lines are averaged across 3 seeds; since success rate can ...
-- **p. 9 / 6 RESULTS - extractive body cue:** Futhermore, we provide an ‘upper bound' on performance based on the success rates of each subtask policy.
-- **p. 8 / 6 RESULTS - extractive body cue:** First, our optimistic upper bound shows low expected success rate on the long-horizon tasks.
-- **p. 10 / 6 RESULTS - extractive body cue:** So, per-object Pick and Place policies learn improved manipulation when grasping a greater variety of objects, or when manipulating objects in areas with tighter constraints.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 접촉 기반의 파지를 포함한 하위 작업과 긴 재배치 절차를 구현하고 시뮬레이션 처리량을 비교한다. [PDF 5쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/27aa3a0e6d63db269977bb2df5607cb8-Paper-Conference.pdf#page=5) · [PDF 6쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/27aa3a0e6d63db269977bb2df5607cb8-Paper-Conference.pdf#page=6)
+- 강화·모방학습 기준선을 제공하고 행동·안전 조건에 맞는 궤적만 규칙으로 골라 시연을 생성한다. [PDF 9쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/27aa3a0e6d63db269977bb2df5607cb8-Paper-Conference.pdf#page=9) · [PDF 10쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/27aa3a0e6d63db269977bb2df5607cb8-Paper-Conference.pdf#page=10)
 
 ## Evaluation Scope
 

@@ -15,13 +15,11 @@
 - Full-text retrieval: https://arxiv.org/pdf/2410.18647
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (34 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (34 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 한 줄 요약과 핵심 기여 두 개를 각 문장에 인용한 판본의 원문에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — (2023), most of today's robotic policies still lack comparable zero-shot generalization (Xie et al., 2024).
-
-방법 관련 발췌 — To answer this, we present a comprehensive empirical study on data scaling in imitation learning, which is a predominant method for learning real-world manipulation skills (Shafiullah et al., 2024).
+이 연구는 단일 조작 작업에서 시연 횟수와 물체·환경 다양성이 모방 정책의 새 조건 일반화에 각각 미치는 영향을 실물에서 조사한다. [PDF 1쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/88b7b2c896506daabc8d3fd587055167-Paper-Conference.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 1 / 1 INTRODUCTION - extractive body cue:** To answer this, we present a comprehensive empirical study on data scaling in imitation learning, which is a predominant method for learning real-world manipulation skills ...
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** Then, based on these data scaling laws, we propose an efficient data collection strategy to achieve the desired level of generalization (Sec.
-- **p. 4 / 3 APPROACH - extractive body cue:** It enables highly efficient data collection and allows for seamless switching between different in-the-wild environments with minimal setup time.
-- **p. 3 / 3 APPROACH - extractive body cue:** Finally, we introduce our rigorous evaluation protocol.
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** Our extensive investigation reveals surprising results and contributions: • Simple power laws.
-- **p. 4 / 3 APPROACH - extractive body cue:** To further enhance performance, we make two improvements: (1) DINOv2 visual encoder: In our experiments, fine-tuning the DINOv2 ViT (Oquab et al., 2023) outperforms both ...
-- **p. 1 / ABSTRACT - extractive body cue:** With four data collectors working for one afternoon, we collect sufficient data to enable the policies for two tasks to achieve approximately 90% success rates ...
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** We apply this strategy to two new tasks (Fold Towels and Unplug Charger), and within a single afternoon using four data collectors, we collect sufficient ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 학습 물체 수와 환경 수를 바꿔 보지 못한 물체와 장소에서 성공률이 어떻게 변하는지 곡선으로 제시한다. [PDF 6쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/88b7b2c896506daabc8d3fd587055167-Paper-Conference.pdf#page=6) · [PDF 7쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/88b7b2c896506daabc8d3fd587055167-Paper-Conference.pdf#page=7)
+- 같은 조건의 시연을 늘리는 경우와 수집할 조건을 넓히는 경우를 비교해 주어진 수집 시간의 배분 방식을 검토한다. [PDF 8쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/88b7b2c896506daabc8d3fd587055167-Paper-Conference.pdf#page=8) · [PDF 9쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/88b7b2c896506daabc8d3fd587055167-Paper-Conference.pdf#page=9)
 
 ## Evaluation Scope
 

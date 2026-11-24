@@ -15,13 +15,11 @@
 - Full-text retrieval: https://arxiv.org/pdf/2309.14594
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (7 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (7 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 한 줄 요약과 핵심 기여 두 개를 각 문장에 인용한 판본의 원문에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Robustly achieving such an integration of vision and locomotion remains an open problem for bipedal robots.
-
-방법 관련 발췌 — The relative encoding means that the heights vary as the robot moves up and down during its gait, but enables us to avoid using global mapping and odometry estimation techniques, 3) user ...
+이족 보행 정책은 깊이 영상 이력으로 로봇 기준의 높이 지도를 추정해 목표 속도와 방향을 유지하면서 지형에 대응한다. [PDF 1쪽](https://arxiv.org/pdf/2309.14594v2#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / IV. LEARNING A TERRAIN-AWARE LOCOMOTION POLICY - extractive body cue:** The relative encoding means that the heights vary as the robot moves up and down during its gait, but enables us to avoid using global ...
-- **p. 1 / I. INTRODUCTION - extractive body cue:** The key contribution of our work is the sim-to-real pipeline and the system integration for these components, which allows the overall locomotion controller to transfer ...
-- **p. 1 / I. INTRODUCTION - extractive body cue:** The proposed approach enables bipedal robot Cassie traversing over challenging terrains, including random high blocks, stairs, 0.5m step up (∼60% leg length), with speed up ...
-- **p. 3 / IV. LEARNING A TERRAIN-AWARE LOCOMOTION POLICY - extractive body cue:** 3: Policy consists of a blind policy and a vision-based modulator. cos (2π(ϕt + γi t)).
-- **p. 3 / IV. LEARNING A TERRAIN-AWARE LOCOMOTION POLICY - extractive body cue:** This allows the policy to gain some experience on easier terrains, which is useful early in learning, but focuses most of the learning effort on ...
-- **p. 5 / Figure/Table caption - extractive body cue:** Fig. 6: Depth image from simulation and real world, with corre- sponding real predicted heightmap and simulation heightmap. mode of terrains. For more difficult terrain ...
-- **p. 5 / VI. SIMULATION RESULTS - extractive body cue:** In Success Rate, all policies have approximately the same performance at easy Fig.
-- **p. 6 / VI. SIMULATION RESULTS - extractive body cue:** In Success Rate, all predictors produce similar performance over each terrain mode.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 시뮬레이터의 높이 지도를 쓰는 제어기를 학습한 뒤 깊이 영상과 로봇 상태로 같은 지도를 예측하도록 학습한다. [PDF 3쪽](https://arxiv.org/pdf/2309.14594v2#page=3) · [PDF 4쪽](https://arxiv.org/pdf/2309.14594v2#page=4)
+- 지형·센서 변이를 넣어 학습한 정책을 실물 이족 로봇에 옮겨 시각 정보의 유무에 따른 장애물 대응을 비교한다. [PDF 5쪽](https://arxiv.org/pdf/2309.14594v2#page=5) · [PDF 6쪽](https://arxiv.org/pdf/2309.14594v2#page=6)
 
 ## Evaluation Scope
 

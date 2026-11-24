@@ -15,13 +15,11 @@
 - Full-text retrieval: https://arxiv.org/pdf/2505.08078
 - Code/Project: https://pd-perry.github.io/batch-online-rl/
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (15 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (15 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 한 줄 요약과 핵심 기여 두 개를 각 문장에 인용한 판본의 원문에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Learning from autonomously collected data for policy improvement, however, remains a significant challenge in robot learning as current algorithms struggle to fully leverage this autonomous data [3].
-
-방법 관련 발췌 — On top of the recipe, we propose a simple practical addition to induce even more diversity and achieve better sample efficiency: applying a small amount of temporally correlated noise modeled by the ...
+이 연구는 로봇이 자율적으로 수집한 행동 자료를 배치마다 추가할 때 어떤 학습·행동 선택 방식이 정책 개선에 유리한지 비교한다. [PDF 1쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/b650f2838de7e1e817b5408b48a19a63-Paper-Conference.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1 Introduction - extractive body cue:** On top of the recipe, we propose a simple practical addition to induce even more diversity and achieve better sample efficiency: applying a small amount ...
-- **p. 2 / 1 Introduction - extractive body cue:** Based on these observations, we propose a general recipe for effective batch online RL: train an expressive IL policy as the actor, train a Q-function ...
-- **p. 5 / 3 Preliminaries - extractive body cue:** In Figure 3, we present the average normalized returns over iterations of batch online RL for each algorithm class on our six tasks.
-- **p. 5 / 3 Preliminaries - extractive body cue:** Based on our results, in Section 5 we present a recipe for batch online RL, and demonstrate the practicality of the recipe on a challenging ...
-- **p. 6 / 3 Preliminaries - extractive body cue:** We present the results of data scaling in Figure 5.
-- **p. 7 / Figure/Table caption - extractive body cue:** Figure 7: Normalized returns of value-based RL with diffusion versus Gaussian policy before and after improvement. To address confounding of policy extraction methods, we show ...
-- **p. 8 / 3 Preliminaries - extractive body cue:** However, it does not improve data scaling because the correlated noise has the effect of increasing the distribution the policy learns, but this increase in ...
-- **p. 5 / 3 Preliminaries - extractive body cue:** We observe that value-based RL methods tend to significantly outperform IL-based methods.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 자율 수집 자료에 대한 모방·가치 기반 학습과 정책 분포에서 높은 가치의 행동을 고르는 방법을 비교한다. [PDF 3쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/b650f2838de7e1e817b5408b48a19a63-Paper-Conference.pdf#page=3) · [PDF 6쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/b650f2838de7e1e817b5408b48a19a63-Paper-Conference.pdf#page=6)
+- 정책 분포의 표현력과 시간적으로 상관된 탐색 잡음이 추가 수집 뒤의 성과에 미치는 영향을 실험한다. [PDF 7쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/b650f2838de7e1e817b5408b48a19a63-Paper-Conference.pdf#page=7) · [PDF 8쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/b650f2838de7e1e817b5408b48a19a63-Paper-Conference.pdf#page=8) · [PDF 9쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/b650f2838de7e1e817b5408b48a19a63-Paper-Conference.pdf#page=9)
 
 ## Evaluation Scope
 

@@ -12,10 +12,11 @@
 | 2026-11-23 | NEXT | [pr-1136–pr-1227 중 당시 미확인 논문](https://github.com/Kim-Yoo-Hyun/PaperReview/tree/9339824126e387e43b48219f75d4a813bb50fa77) | 61 | 0 | 0 |
 | 2026-11-24 | REFERENCE | [pr-0029–pr-0181 중 당시 미확인 논문](https://github.com/Kim-Yoo-Hyun/PaperReview/tree/bde6ed0a06c8a2aad9fb809889bd50b3521c39dd) | 100 | 0 | 340 |
 | 2026-11-24 | REFERENCE | [pr-0182–pr-0509 중 당시 미확인 논문](https://github.com/Kim-Yoo-Hyun/PaperReview/tree/5b2939af8404530fa2cd9fa8d069492ece6bb3ac) | 100 | 0 | 240 |
+| 2026-11-24 | REFERENCE | [pr-0510–pr-0674 중 당시 미확인 논문](https://github.com/Kim-Yoo-Hyun/PaperReview/tree/7f49e6ff2c9f9cab212c65418f9121c5f2dd4922) | 100 | 0 | 140 |
 
 안정 ID 순서로 미확인 논문을 골라 각 overview의 한 줄 요약과 핵심 기여 두 개를 원문에 대조했다. 문장마다 실제 확인한 PDF 쪽수 또는 공식 웹 보고서의 절을 연결했다. 원장에는 판본과 교정 전 노트의 SHA-256을 기록했다. 이 순차 배치에서 집계하는 값은 검증 진척이다.
 
-기존 노트에서 확인한 문자 전사 교정은 12편이다. 원장에 해당 문구와 근거를 기록했다. [pr-0174 원문](https://arxiv.org/pdf/2409.10350v1) · [pr-0181 원문](https://arxiv.org/pdf/2511.09958v1) · [pr-0248 원문](https://openaccess.thecvf.com/content/ICCV2025/papers/Wang_VQ-VLA_Improving_Vision-Language-Action_Models_via_Scaling_Vector-Quantized_Action_Tokenizers_ICCV_2025_paper.pdf) · [pr-0260 원문](https://arxiv.org/pdf/2602.21445v2) · [pr-0278 원문](https://arxiv.org/pdf/2503.02310v2) · [pr-0354 원문](https://openaccess.thecvf.com/content/CVPR2026/papers/Ma_BA-GS_Bayesian_Adaptive_Gaussian_Splatting_for_SFM-Free_3D_Reconstruction_CVPR_2026_paper.pdf) · [pr-0552 원문](https://lavalle.pl/papers/Lav98c.pdf) · [pr-0751 원문](https://www.roboticsproceedings.org/rss21/p052.pdf) · [pr-0772 원문](https://openaccess.thecvf.com/content/CVPR2025/papers/Song_RoboSpatial_Teaching_Spatial_Understanding_to_2D_and_3D_Vision-Language_Models_CVPR_2025_paper.pdf) · [pr-0795 원문](https://openaccess.thecvf.com/content/CVPR2026/papers/Liu_ActiveVLA_Injecting_Active_Perception_into_Vision-Language-Action_Models_for_Precise_3D_CVPR_2026_paper.pdf) · [pr-0805 원문](https://openaccess.thecvf.com/content/CVPR2026/papers/Liu_SaPaVe_Towards_Active_Perception_and_Manipulation_in_Vision-Language_Action_Models_CVPR_2026_paper.pdf) · [pr-0813 원문](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/yan26r/yan26r.pdf)
+기존 노트에서 확인한 문자 전사 교정은 15편이다. 원장에 해당 문구와 근거를 기록했다. [pr-0174 원문](https://arxiv.org/pdf/2409.10350v1) · [pr-0181 원문](https://arxiv.org/pdf/2511.09958v1) · [pr-0248 원문](https://openaccess.thecvf.com/content/ICCV2025/papers/Wang_VQ-VLA_Improving_Vision-Language-Action_Models_via_Scaling_Vector-Quantized_Action_Tokenizers_ICCV_2025_paper.pdf) · [pr-0260 원문](https://arxiv.org/pdf/2602.21445v2) · [pr-0278 원문](https://arxiv.org/pdf/2503.02310v2) · [pr-0354 원문](https://openaccess.thecvf.com/content/CVPR2026/papers/Ma_BA-GS_Bayesian_Adaptive_Gaussian_Splatting_for_SFM-Free_3D_Reconstruction_CVPR_2026_paper.pdf) · [pr-0552 원문](https://lavalle.pl/papers/Lav98c.pdf) · [pr-0555 원문](https://www.ri.cmu.edu/pub_files/2009/5/icra09-chomp.pdf) · [pr-0567 원문](https://arxiv.org/pdf/2312.01990v1) · [pr-0597 원문](https://www.roboticsproceedings.org/rss16/p031.pdf) · [pr-0751 원문](https://www.roboticsproceedings.org/rss21/p052.pdf) · [pr-0772 원문](https://openaccess.thecvf.com/content/CVPR2025/papers/Song_RoboSpatial_Teaching_Spatial_Understanding_to_2D_and_3D_Vision-Language_Models_CVPR_2025_paper.pdf) · [pr-0795 원문](https://openaccess.thecvf.com/content/CVPR2026/papers/Liu_ActiveVLA_Injecting_Active_Perception_into_Vision-Language-Action_Models_for_Precise_3D_CVPR_2026_paper.pdf) · [pr-0805 원문](https://openaccess.thecvf.com/content/CVPR2026/papers/Liu_SaPaVe_Towards_Active_Perception_and_Manipulation_in_Vision-Language_Action_Models_CVPR_2026_paper.pdf) · [pr-0813 원문](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/yan26r/yan26r.pdf)
 
 **CLIP-Fields 저자 표기.** 2026-11-24에 RSS 게재본 표제면에 따라 첫 저자의 이름과 성 사이 공백을 복원해 Nur Muhammad (Mahi) Shafiullah로 교정했다. [게재본 표제면](https://www.roboticsproceedings.org/rss19/p074.pdf#page=1)
 
@@ -38,6 +39,13 @@
 | GSplatVNM | 중간 시점 합성으로 개선된 시각 내비게이션 결과는 광실사 시뮬레이터에서 측정했다. 저자들은 실제 로봇 주행 검증을 후속 과제로 명시했다. [PDF 4쪽](https://arxiv.org/pdf/2503.05152v3#page=4) · [PDF 5쪽](https://arxiv.org/pdf/2503.05152v3#page=5) · [PDF 7쪽](https://arxiv.org/pdf/2503.05152v3#page=7) |
 | Depth Anything | 표 2는 여러 데이터셋의 상대 깊이 제로샷 전이를 평가한다. 표 3은 NYUv2에서 미터 단위 정답으로 미세조정한 결과다. KITTI의 미세조정 결과는 표 4에 따로 실렸다. [PDF 5쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Yang_Depth_Anything_Unleashing_the_Power_of_Large-Scale_Unlabeled_Data_CVPR_2024_paper.pdf#page=5) · [PDF 6쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Yang_Depth_Anything_Unleashing_the_Power_of_Large-Scale_Unlabeled_Data_CVPR_2024_paper.pdf#page=6) |
 | ShapeNet | 2015년 보고서 당시 색인된 모델은 300만 개 이상이고 그중 22만 개를 WordNet 범주 3,135개로 분류했다. 표 2가 제시한 ShapeNetCore 하위 집합의 합계는 57,386개다. [PDF 1쪽](https://arxiv.org/pdf/1512.03012v1#page=1) · [PDF 8쪽](https://arxiv.org/pdf/1512.03012v1#page=8) |
+| Dex-Net 2.0 | 새 생활용품 40개에서 보고한 전체 파지 성공률은 94%다. 99%는 모델이 안정적이라고 판정한 69회 중 성공한 68회의 정밀도다. 학습 때 본 까다로운 형상 8개의 성공률은 93%였다. [PDF 7쪽](https://www.roboticsproceedings.org/rss13/p58.pdf#page=7) · [PDF 8쪽](https://www.roboticsproceedings.org/rss13/p58.pdf#page=8) |
+| Learning to Walk in Minutes Using Massively Parallel Deep Reinforcement Learning | 평지 정책의 4분 미만과 험지 정책의 약 20분은 시뮬레이션 학습의 벽시계 시간이다. 험지 실험은 RTX A6000 한 장에서 정책을 1,500회 갱신했다. [PDF 1쪽](https://proceedings.mlr.press/v164/rudin22a/rudin22a.pdf#page=1) · [PDF 7쪽](https://proceedings.mlr.press/v164/rudin22a/rudin22a.pdf#page=7) |
+| Learning to Walk from Three Minutes of Real-World Data with Semi-structured Dynamics Models | 3분은 Go1에서 수집한 실제 상호작용 데이터의 길이다. 각 지면에서 3분의 자료를 쓴 뒤 평균 전진 속도는 단단한 바닥 0.98 m/s, 메모리폼 0.53 m/s였다. [PDF 6쪽](https://raw.githubusercontent.com/mlresearch/v270/d9fe509ba390176a5fd650178a381a0a7b2d4f64/assets/levy25a/levy25a.pdf#page=6) · [PDF 7쪽](https://raw.githubusercontent.com/mlresearch/v270/d9fe509ba390176a5fd650178a381a0a7b2d4f64/assets/levy25a/levy25a.pdf#page=7) |
+| HumanoidBench | 시뮬레이션 과제는 전신 조작 15개와 이동 12개다. 논문에 제시된 정책 성과는 이 가상 휴머노이드에서 측정했다. [PDF 2쪽](https://www.roboticsproceedings.org/rss20/p061.pdf#page=2) · [PDF 4쪽](https://www.roboticsproceedings.org/rss20/p061.pdf#page=4) · [PDF 5쪽](https://www.roboticsproceedings.org/rss20/p061.pdf#page=5) |
+| Demonstrating A Walk in the Park | 실물 A1 보행은 지면별로 2만 표본 미만에서 학습됐다. 약 17분은 상호작용 데이터 길이이고 약 20분은 컴파일·리셋·방향 재설정을 포함한 경과 시간이다. [PDF 5쪽](https://roboticsproceedings.org/rss19/p056.pdf#page=5) |
+| On Bringing Robots Home | 새 가정 10곳의 과제 109개에서 보고한 시행 성공률은 81%다. 과제마다 10회 시험했고 그중 102개 과제에서 10회 중 적어도 5회 성공했다. [PDF 12쪽](https://arxiv.org/pdf/2311.16098v1#page=12) · [PDF 13쪽](https://arxiv.org/pdf/2311.16098v1#page=13) |
+| ArticuBot | 실험실 A의 Franka는 9개 물체를 각각 5회 시험해 파지 성공률 0.78과 정규화 개방 거리 0.63을 기록했다. 후자는 작업 공간과 관절 한계 안에서 물체가 열릴 수 있는 최대 거리 대비 실제 열린 거리다. [PDF 10쪽](https://www.roboticsproceedings.org/rss21/p156.pdf#page=10) · [PDF 11쪽](https://www.roboticsproceedings.org/rss21/p156.pdf#page=11) |
 
 ## CORE 공개 자료
 
@@ -86,7 +94,7 @@ NoMaD(`pr-0568`)의 데이터는 기존에 `not_applicable`로 분류되어 있�
 | 저자 | 6 | 1,251 | 1 | 0 |
 | 연도 | 0 | 1,252 | 0 | 0 |
 | 발표처·게재 | 0 | 1,182 | 70 | 0 |
-| 요약·기여 | 30 | 814 | 438 | 0 |
+| 요약·기여 | 30 | 914 | 338 | 0 |
 | 코드 | 0 | 383 | 869 | 0 |
 | 가중치 | 0 | 84 | 1,168 | 0 |
 | 데이터 | 0 | 101 | 1,151 | 0 |
@@ -100,7 +108,7 @@ NoMaD(`pr-0568`)의 데이터는 기존에 `not_applicable`로 분류되어 있�
 |---|---:|---:|---:|---:|---:|
 | CORE | 50 | 13 | 0 | 0 | 36 |
 | NEXT | 450 | 6 | 0 | 360 | 433 |
-| REFERENCE | 510 | 0 | 240 | 366 | 504 |
+| REFERENCE | 510 | 0 | 140 | 366 | 504 |
 | ARCHIVE | 242 | 0 | 198 | 131 | 242 |
 
 ## 배치별 결과

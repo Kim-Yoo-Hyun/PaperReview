@@ -15,13 +15,11 @@
 - Full-text retrieval: https://arxiv.org/pdf/1611.08974
 - Code/Project: https://github.com/shurans/sscnet
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (14 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (14 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 한 줄 요약과 핵심 기여 두 개를 각 문장에 인용한 판본의 원문에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, if we consider the context due to surrounding objects, such as the table and floor, the problem is much easier.
-
-방법 관련 발췌 — To provide the training data for our network, we introduce SUNCG, a manually created large-scale dataset of synthetic 3D scenes with dense occupancy and semantic annotations.
+SSCNet은 깊이 영상 한 장으로 카메라 시야 절두체에 있는 복셀의 점유 상태와 의미 범주를 함께 예측한다. [PDF 1쪽](https://openaccess.thecvf.com/content_cvpr_2017/papers/Song_Semantic_Scene_Completion_CVPR_2017_paper.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** To provide the training data for our network, we introduce SUNCG, a manually created large-scale dataset of synthetic 3D scenes with dense occupancy and semantic ...
-- **p. 1 / 1. Introduction - extractive body cue:** Similarly, for a robot, the ability to infer complete 3D shape from partial observations is necessary for low-level tasks such as grasping and obstacle avoidance ...
-- **p. 2 / 1. Introduction - extractive body cue:** In support of that goal, we design a dilation-based 3D context module that enables efficient context learning with large receptive fields.
-- **p. 5 / 4. Synthesizing training data - extractive body cue:** In this paper, we present a new large-scale synthetic 3D scene dataset, from which we obtain a large amount of training data with synthetically rendered ...
-- **p. 5 / 4. Synthesizing training data - extractive body cue:** During the task, we show a set of top view renderings of each floor and ask turkers to vote whether this is a valid apartment ...
-- **p. 8 / 5.1. Experimental results - extractive body cue:** Increasing the receptive field gives the network a opportunity to capture richer contextual information and significantly improve the network performance from 38.0% to 44.3%.
-- **p. 8 / 5.1. Experimental results - extractive body cue:** We see a performance gain by using additional synthetic data especially for the semantic scene completion task having an 10.3% improvement in IoU.
-- **p. 6 / 5.1. Experimental results - extractive body cue:** Therefore, they can achieve perfect alignments by finding the exact mesh model in a small database.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 3차원 팽창 합성곱으로 수용 영역을 넓혀 가려진 부분의 추론에 주변 구조를 쓴다. [PDF 3쪽](https://openaccess.thecvf.com/content_cvpr_2017/papers/Song_Semantic_Scene_Completion_CVPR_2017_paper.pdf#page=3) · [PDF 4쪽](https://openaccess.thecvf.com/content_cvpr_2017/papers/Song_Semantic_Scene_Completion_CVPR_2017_paper.pdf#page=4)
+- SUNCG 장면에서 깊이 관측과 조밀한 정답을 합성해 학습하고 NYU 실내 장면에서 완성과 의미 분류를 평가한다. [PDF 5쪽](https://openaccess.thecvf.com/content_cvpr_2017/papers/Song_Semantic_Scene_Completion_CVPR_2017_paper.pdf#page=5) · [PDF 6쪽](https://openaccess.thecvf.com/content_cvpr_2017/papers/Song_Semantic_Scene_Completion_CVPR_2017_paper.pdf#page=6)
 
 ## Evaluation Scope
 

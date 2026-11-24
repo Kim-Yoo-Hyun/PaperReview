@@ -15,13 +15,11 @@
 - Full-text retrieval: https://arxiv.org/pdf/2203.02155
 - Code/Project: not identified
 - Paper type: theory_or_foundation
-- Source audit: full-text PDF body checked on 2026-09-03 (68 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (68 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 한 줄 요약과 핵심 기여 두 개를 각 문장에 인용한 판본의 원문에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Finally we give an extended discussion of our work in Section 5, including implications for alignment research (5.1), what we are aligning to (5.2), limitations (5.3), open questions (5.4), and broader impacts ...
-
-방법 관련 발췌 — See Section 3 for more details on our method. sizes (1.3B, 6B, and 175B parameters), and all of our models use the GPT-3 architecture.
+InstructGPT는 사람의 시범 답변과 여러 답변에 매긴 선호 순위를 이용해 GPT-3의 지시 수행을 미세조정한다. [PDF 1쪽](https://proceedings.neurips.cc/paper_files/paper/2022/file/b1efde53be364a73914f58805a001731-Paper-Conference.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 3 / 1 Introduction - extractive body cue:** See Section 3 for more details on our method. sizes (1.3B, 6B, and 175B parameters), and all of our models use the GPT-3 architecture.
-- **p. 4 / 1 Introduction - extractive body cue:** The rest of this paper is structured as follows: We first detail related work in Section 2, before diving into our method and experiment details ...
-- **p. 1 / Abstract - extractive body cue:** In this paper, we show an avenue for aligning language models with user intent on a wide range of tasks by fine-tuning with human feedback.
-- **p. 13 / 4 Results - extractive body cue:** When evaluated only on prompts that were not adversarially selected against GPT-3, our PPO models are still significantly more truthful and informative than GPT-3 (although ...
-- **p. 12 / 4 Results - extractive body cue:** This indicates that these datasets are not sufficiently diverse to improve performance on our API prompt 12
-- **p. 13 / 4 Results - extractive body cue:** 4.2 Results on public NLP datasets InstructGPT models show improvements in truthfulness over GPT-3.
-- **p. 2 / Figure/Table caption - extractive body cue:** Figure 1: Human evaluations of various models on our API prompt distribution, evaluated by how often outputs from each model were preferred to those from ...
-- **p. 11 / 4 Results - extractive body cue:** 4.1 Results on the API distribution Labelers significantly prefer InstructGPT outputs over outputs from GPT-3.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 시범 답변으로 지도학습한 뒤 선호 순위로 보상 모형을 학습하고 이를 PPO 정책 갱신에 사용한다. [PDF 4쪽](https://proceedings.neurips.cc/paper_files/paper/2022/file/b1efde53be364a73914f58805a001731-Paper-Conference.pdf#page=4) · [PDF 5쪽](https://proceedings.neurips.cc/paper_files/paper/2022/file/b1efde53be364a73914f58805a001731-Paper-Conference.pdf#page=5)
+- 논문이 수집한 프롬프트의 사람 평가에서 1.3B InstructGPT의 답변이 기본 175B GPT-3의 답변보다 선호됐다. [PDF 2쪽](https://proceedings.neurips.cc/paper_files/paper/2022/file/b1efde53be364a73914f58805a001731-Paper-Conference.pdf#page=2) · [PDF 7쪽](https://proceedings.neurips.cc/paper_files/paper/2022/file/b1efde53be364a73914f58805a001731-Paper-Conference.pdf#page=7)
 
 ## Evaluation Scope
 

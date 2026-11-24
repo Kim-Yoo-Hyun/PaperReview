@@ -15,15 +15,13 @@
 - Full-text retrieval: https://www.cs.cmu.edu/~cga/z/Kuindersma_AURO_2016.pdf
 - Code/Project: not identified
 - Paper type: theory_or_foundation
-- Source audit: full-text PDF body checked on 2026-09-03 (27 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (27 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 한 줄 요약과 핵심 기여 두 개를 각 문장에 인용한 판본의 원문에서 확인했다.
 
 > DOC-QA2 targeted source review: 2026-10-23; PDF pp. 11. 손상 구간·직접 연결된 표 분류만 원문 이미지와 대조했다. 전체 주장 정독·실험 검증·reading status 승격을 뜻하지 않는다. [URL·PDF hash·수정 기록](../../../work/sources/pdf_note_review_followup_2026-10-23.json).
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Several practical challenges arise in the design of these systems, such as how to manage the complexity of the robot and environment model to efficiently do online planning and feedback control and ...
-
-방법 관련 발췌 — Unfortunately, the set of safe terrain is unlikely to be convex or even connected: in an environment as simple as a staircase, the safe terrain consists of the top surface of every ...
+이 연구는 발 디딤 계획, 전신 제어, 상태 추정을 통합해 유압식 휴머노이드 Atlas의 비평탄 지형 보행을 구현한다. [PDF 1쪽](https://www.cs.cmu.edu/~cga/z/Kuindersma_AURO_2016.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -57,15 +55,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 4 / 3.1 Footstep planning as a mixed-integer convex - extractive body cue:** Unfortunately, the set of safe terrain is unlikely to be convex or even connected: in an environment as simple as a staircase, the safe terrain ...
-- **p. 1 / 1 Introduction - extractive body cue:** In this paper we describe our approach to addressing these problems with Atlas.
-- **p. 1 / 1 Introduction - extractive body cue:** Our approach to walking combines an efficient footstep planner with a simple dynamic model of the robot to efficiently compute desired walking trajectories.
-- **p. 2 / 1 Introduction - extractive body cue:** We show that the robot is capable of walking over nontrivial terrain while maintaining extremely low drift from the desired footstep trajectory-a critically important capability ...
-- **p. 2 / 1 Introduction - extractive body cue:** 6 we describe several experiments performed on the physical robot evaluatingthestateestimationandcontrolalgorithmsinpractice.We also describe recent simulation results of controlled highly dynamic motions that are currently being ...
-- **p. 19 / 6.1 State estimation evaluation - extractive body cue:** To characterize the state estimator we evaluate its performance in a variety of experiments.
-- **p. 19 / 6.1 State estimation evaluation - extractive body cue:** In the manipulation experiment, the LIDAR contribution actually degrades performance slightly due to occlusions caused by arm motions.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 안전하게 디딜 수 있는 지형에 발을 배치하는 계획과 동역학을 고려한 전신 운동 계획을 구성한다. [PDF 3쪽](https://www.cs.cmu.edu/~cga/z/Kuindersma_AURO_2016.pdf#page=3) · [PDF 7쪽](https://www.cs.cmu.edu/~cga/z/Kuindersma_AURO_2016.pdf#page=7)
+- 접촉 제약을 포함한 전신 제어와 보행 시 상태 추정을 연결해 계획한 움직임을 추종하게 한다. [PDF 10쪽](https://www.cs.cmu.edu/~cga/z/Kuindersma_AURO_2016.pdf#page=10) · [PDF 14쪽](https://www.cs.cmu.edu/~cga/z/Kuindersma_AURO_2016.pdf#page=14)
 
 ## Evaluation Scope
 

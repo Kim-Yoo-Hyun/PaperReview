@@ -6,7 +6,7 @@
 
 ## Evaluation in One Sentence
 
-PDF body evaluation/result cue (p. 1 (Figure/Table caption), p. 22 (Figure/Table caption), p. 21 (3 Experiments), p. 21 (3 Experiments), p. 12 (3 Experiments), p. 12 (3 Experiments)): Figure 1: We present Dobb·E, a simple framework to train robots, which is then field tested in homes across New York City. In under 30 mins of training per task, ...
+새 가정 10곳의 과제 109개에서 보고한 시행 성공률은 81%다. 과제마다 10회 시험했고 그중 102개 과제에서 10회 중 적어도 5회 성공했다. [PDF 12쪽](https://arxiv.org/pdf/2311.16098v1#page=12) · [PDF 13쪽](https://arxiv.org/pdf/2311.16098v1#page=13)
 
 ## Evaluation Body Digest
 

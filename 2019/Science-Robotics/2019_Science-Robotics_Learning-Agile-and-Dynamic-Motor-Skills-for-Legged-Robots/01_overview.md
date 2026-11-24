@@ -14,14 +14,14 @@
 - Official paper: https://arxiv.org/abs/1901.08652
 - Full-text retrieval: https://arxiv.org/pdf/1901.08652
 - Code/Project: https://leggedrobotics.github.io/rl-blindloco/
+- DOI: 10.1126/scirobotics.aau5872
+- 저자 판본: arXiv v1 표제면에는 Joonho Lee가 두 번 인쇄돼 있다. 게재 서지는 해당 이름을 한 번 기재하며 전체 저자는 7명이다. [게재 서지](https://api.crossref.org/works/10.1126/scirobotics.aau5872) · [PDF 1쪽](https://arxiv.org/pdf/1901.08652v1#page=1)
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (20 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (20 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 한 줄 요약과 핵심 기여 두 개를 각 문장에 인용한 판본의 원문에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — The nominal posture cannot be adjusted to this level in the approach of Bellicoso et al. since this would drastically increase the rate of failure (falling).
-
-방법 관련 발췌 — Furthermore, the system still consists of two independent modules that do not adapt to each other's performance characteristics.
+이 연구는 실물에서 식별한 구동기 특성을 시뮬레이션에 반영해 ANYmal의 속도 추종·달리기·넘어진 자세 회복을 강화학습한다. [PDF 1쪽](https://arxiv.org/pdf/1901.08652v1#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +55,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / Body text (section not recovered) - extractive body cue:** Furthermore, the system still consists of two independent modules that do not adapt to each other's performance characteristics.
-- **p. 4 / Body text (section not recovered) - extractive body cue:** A command consists of three components: forward velocity, lateral velocity, and yaw rate.
-- **p. 4 / Body text (section not recovered) - extractive body cue:** Next, we compare our method to ablated alternatives: training with an ideal actuator model and training with an analytical actuator model.
-- **p. 1 / Body text (section not recovered) - extractive body cue:** Their freedom to choose contact points with the environment enables them to overcome obstacles comparable to their leg length.
-- **p. 3 / Body text (section not recovered) - extractive body cue:** First, the controller enables the ANYmal robot to follow base velocity commands more accurately and energy-efficiently than the best previously existing controller running on the ...
-- **p. 6 / Body text (section not recovered) - extractive body cue:** We then further improved the success rate to 100 % by relaxing the joint velocity constraints.
-- **p. 9 / Body text (section not recovered) - extractive body cue:** [57] found that such a controller can outperform a torque controller in both training speed and final control performance.
-- **p. 9 / Body text (section not recovered) - extractive body cue:** A learning session terminates if the average performance of the policy does not improve by more than a task-specific threshold within 300 TRPO iterations.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 측정한 구동기 데이터로 토크 응답을 예측하는 신경망을 학습하고 강체 시뮬레이터와 결합한다. [PDF 3쪽](https://arxiv.org/pdf/1901.08652v1#page=3) · [PDF 10쪽](https://arxiv.org/pdf/1901.08652v1#page=10)
+- 실제 로봇에서 명령 속도 추종과 소비 에너지를 비교하고 여러 초기 자세에서 넘어짐 회복을 시험한다. [PDF 5쪽](https://arxiv.org/pdf/1901.08652v1#page=5) · [PDF 7쪽](https://arxiv.org/pdf/1901.08652v1#page=7)
 
 ## Evaluation Scope
 

@@ -15,13 +15,11 @@
 - Full-text retrieval: https://www.roboticsproceedings.org/rss20/p107.pdf
 - Code/Project: https://expressive-humanoid.github.io/
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (17 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (17 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 한 줄 요약과 핵심 기여 두 개를 각 문장에 인용한 판본의 원문에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — The root movement goal gm can also be intuitively given by joystick commands, enabling convenient deployment in the real world. methods on both of these two form factors tend to produce singular ...
-
-방법 관련 발췌 — We also compare our method with applying more imitation constraints on legged motion in both simulation and the real world and show our approach that relaxes the constraints indeed leads to better ...
+ExBody는 휴머노이드의 상체에는 인간 동작 모방을, 하체에는 지령 속도 추종을 요구해 실물에서 표현력 있는 전신 운동을 생성한다. [PDF 1쪽](https://www.roboticsproceedings.org/rss20/p107.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -51,16 +49,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / I. INTRODUCTION - extractive body cue:** We also compare our method with applying more imitation constraints on legged motion in both simulation and the real world and show our approach that ...
-- **p. 2 / I. INTRODUCTION - extractive body cue:** We propose to train a novel controller that takes both a reference motion and a root movement command as inputs for real humanoid robot control.
-- **p. 6 / IV. RESULTS - extractive body cue:** V, our method achieves the best linear velocity tracking performance (MELV).
-- **p. 6 / IV. RESULTS - extractive body cue:** However, even with a reduced sampling range, the performance is significantly worse than ours, indicating ExBody's advantage in overcoming conflicts of objectives problems.
-- **p. 9 / Figure/Table caption - extractive body cue:** Fig. 11: Text2Motion trajectories replay. A motion sequence is prompted offline with the input "a man mimics boxing punches" through MDM [64]. Our robot presents ...
-- **p. 5 / IV. RESULTS - extractive body cue:** 5, we study whether velocity goal vx will affect the performance of other goals.
-- **p. 5 / IV. RESULTS - extractive body cue:** The average performance is not directly implied from the heatmap and is further discussed in Tab.
-- **p. 7 / IV. RESULTS - extractive body cue:** We also added the O.O.D. motions to the evaluation on the tracking performance in Tab.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 사람의 모션에서 상체와 이동 명령을 추출해 두 목표에 맞는 강화학습 보상을 설계한다. [PDF 4쪽](https://www.roboticsproceedings.org/rss20/p107.pdf#page=4) · [PDF 5쪽](https://www.roboticsproceedings.org/rss20/p107.pdf#page=5)
+- 상체와 몸통의 추종 오차 및 실제 동작을 비교해 다리 참조 제약을 완화한 설계의 효과를 평가한다. [PDF 6쪽](https://www.roboticsproceedings.org/rss20/p107.pdf#page=6) · [PDF 7쪽](https://www.roboticsproceedings.org/rss20/p107.pdf#page=7)
 
 ## Evaluation Scope
 

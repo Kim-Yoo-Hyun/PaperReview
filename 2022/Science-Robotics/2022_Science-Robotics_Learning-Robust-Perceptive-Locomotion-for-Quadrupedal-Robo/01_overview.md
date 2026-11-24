@@ -15,13 +15,11 @@
 - Full-text retrieval: https://arxiv.org/pdf/2201.08117
 - Code/Project: https://leggedrobotics.github.io/rl-perceptiveloco/
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (22 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (22 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 한 줄 요약과 핵심 기여 두 개를 각 문장에 인용한 판본의 원문에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Most existing methods that rely on onboard terrain perception are still vulnerable to these failures.
-
-방법 관련 발췌 — Our method consists of three stages, illustrated in Figure 6.
+이 연구는 지형 관측의 신뢰도가 달라질 때 자기수용감각과 외부 지각을 적응적으로 결합해 사족 로봇의 보행을 제어한다. [PDF 1쪽](https://arxiv.org/pdf/2201.08117v1#page=1)
 
 ## Problem and Motivation
 
@@ -53,16 +51,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 8 / 4. MATERIALS AND METHODS - extractive body cue:** Our method consists of three stages, illustrated in Figure 6.
-- **p. 3 / 1. INTRODUCTION - extractive body cue:** Here we present a terrain-aware locomotion controller for quadrupedal robots that overcomes limitations of previous approaches and enables robust traversal of harsh natural terrain at ...
-- **p. 3 / 1. INTRODUCTION - extractive body cue:** The elevation map serves as an abstraction layer between sensors and the locomotion controller, making our method independent of depth sensor choices.
-- **p. 5 / 2. RESULTS - extractive body cue:** First, we compared the success rate of overcoming fixed-height steps as shown in Figure 4A.
-- **p. 5 / 2. RESULTS - extractive body cue:** The success rate of the proprioceptive baseline dropped at 20 cm step height when the front legs started frequently getting stuck at the step (Figure ...
-- **p. 3 / 2. RESULTS - extractive body cue:** Because of the exteroceptive perception, the robot could anticipate the terrain and adapt its motion to achieve fast and smooth walking.
-- **p. 8 / 2. RESULTS - extractive body cue:** The sensors perceived the foam block as solid and the robot consequently prepared to step on it but could not achieve a stable foothold due ...
-- **p. 3 / 2. RESULTS - extractive body cue:** ANYmal successfully traversed challenging natural environments with steep inclination, slippery surfaces, grass, and snow (Figure 1 A-J).
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 순환 인코더의 내부 지형 추정을 학습하고 주의 기제로 외부 관측이 행동에 미치는 영향을 조절한다. [PDF 9쪽](https://arxiv.org/pdf/2201.08117v1#page=9) · [PDF 10쪽](https://arxiv.org/pdf/2201.08117v1#page=10)
+- 산악 경로 주행과 지형 지도가 잘못되는 조건의 실험으로 시각 정보와 접촉 피드백의 역할을 평가한다. [PDF 4쪽](https://arxiv.org/pdf/2201.08117v1#page=4) · [PDF 6쪽](https://arxiv.org/pdf/2201.08117v1#page=6)
 
 ## Evaluation Scope
 

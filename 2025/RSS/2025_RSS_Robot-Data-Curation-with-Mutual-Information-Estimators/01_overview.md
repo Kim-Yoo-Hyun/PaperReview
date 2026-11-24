@@ -15,13 +15,11 @@
 - Full-text retrieval: https://www.roboticsproceedings.org/rss21/p023.pdf
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (19 pages; tesseract OCR fallback; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (19 pages; tesseract OCR fallback; title-token overlap first two pages=1.0) 2026-11-24 한 줄 요약과 핵심 기여 두 개를 각 문장에 인용한 판본의 원문에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — In robotics, we often do not have access to data at a similar scale due to the difficulty and cost of collection Moreover. even if we assume access to more data, existing ...
-
-방법 관련 발췌 — come this challenge we propose Demonstration Information Estimation, which uses k-nearest-neighbor (k-NN) estimates of mutual information, Our method involves three steps - representation learning, mutual information estimation, and sco ...
+이 연구는 시연 뒤에 모방 정책이 배울 행동의 다양성과 예측 가능성을 함께 고려해 개별 로봇 시연의 상대 품질을 추정한다. [PDF 1쪽](https://www.roboticsproceedings.org/rss21/p023.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 4 / V. MetHop - extractive body cue:** come this challenge we propose Demonstration Information Estimation, which uses k-nearest-neighbor (k-NN) estimates of mutual information, Our method involves three steps - representation learning, mutual ...
-- **p. 4 / V. MetHop - extractive body cue:** In this section we propose the Demonstration Information Estimation (DemInf) method for computationally estimating mutual information for demonstration data, Though mutual information is usually considered ...
-- **p. 1 / Abstract - extractive body cue:** Moreover, training polices based on data filtered bby our method leads to a §-10% improvement in RoboMimic and better performance on real ALOHA and Franka ...
-- **p. 2 / 1. Iyrropucrion - extractive body cue:** To address this problem, we introduce Demonstration Information Estimation ‘or Deming for short.
-- **p. 2 / 1. Iyrropucrion - extractive body cue:** For text data, this often consists of simple n-gram classifiers, or metadata filtering, which have been shown to have a large impact oon performance [72].
-- **p. 6 / A. Experimental Setup - extractive body cue:** Following Gandhi et al, [25], we use a measure of demonstration "compatibility" to score data.
-- **p. 6 / A. Experimental Setup - extractive body cue:** We measure the performance of different data curation methods from both state, in which ground truth object information is provided, as well as third-person images.
-- **p. 7 / A. Experimental Setup - extractive body cue:** Results are shown as an average of 3 secs.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 상태·행동의 잠재 표현에서 최근접 이웃을 이용해 각 궤적이 상호정보량에 기여하는 정도를 계산한다. [PDF 3쪽](https://www.roboticsproceedings.org/rss21/p023.pdf#page=3) · [PDF 4쪽](https://www.roboticsproceedings.org/rss21/p023.pdf#page=4)
+- 예측한 순위를 사람의 품질 평가와 비교하고 선별한 시연으로 학습했을 때의 정책 성능을 측정한다. [PDF 7쪽](https://www.roboticsproceedings.org/rss21/p023.pdf#page=7) · [PDF 8쪽](https://www.roboticsproceedings.org/rss21/p023.pdf#page=8)
 
 ## Evaluation Scope
 

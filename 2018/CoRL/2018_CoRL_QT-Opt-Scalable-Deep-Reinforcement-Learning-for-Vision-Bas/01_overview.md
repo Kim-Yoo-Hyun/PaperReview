@@ -15,13 +15,11 @@
 - Full-text retrieval: https://arxiv.org/pdf/1806.10293
 - Code/Project: https://ai.googleblog.com/2018/06/scalable-deep-reinforcement-learning.html
 - Paper type: theory_or_foundation
-- Source audit: full-text PDF body checked on 2026-09-03 (23 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (23 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 한 줄 요약과 핵심 기여 두 개를 각 문장에 인용한 판본의 원문에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, a major challenge with closed-loop grasp control is that the sensorimotor loop must be closed on the visual modality, which is very difficult to utilize effectively with standard optimal control methods ...
-
-방법 관련 발췌 — We show that our method attains a high success rate across a range of objects not seen during training, and our qualitative experiments show that this high success rate is due to ...
+QT-Opt는 실물 로봇의 파지 시도로 시각 행동가치 함수를 학습해 파지 중에도 관측에 따라 동작을 수정한다. [PDF 1쪽](https://proceedings.mlr.press/v87/kalashnikov18a/kalashnikov18a.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1 Introduction - extractive body cue:** We show that our method attains a high success rate across a range of objects not seen during training, and our qualitative experiments show that ...
-- **p. 2 / 1 Introduction - extractive body cue:** Each cell (left) consists of a KUKA LBR IIWA arm with a two-finger gripper and an over-theshoulder RGB camera.
-- **p. 7 / Method - extractive body cue:** The performance of our method is shown in Table 1.
-- **p. 7 / Method - extractive body cue:** The success rate of our method in both cases is very high.
-- **p. 8 / Method - extractive body cue:** Our framework is generic with respect to the task, and extending the approach to other manipulation skills would be an exciting direction for future work.
-- **p. 8 / Method - extractive body cue:** We apply this framework to the task of grasping, learning closed-loop vision-based policies that attain a high success rate on previously unseen objects, and exhibit ...
-- **p. 12 / Figure/Table caption - extractive body cue:** Table 4: Off-policy and on-policy ablation of termination condition. Quantitative experiments The performance of our algorithm is evaluated empirically in a set of grasping experiments. ...
-- **p. 17 / Figure/Table caption - extractive body cue:** Table 8: Data efficiency comparison in simulation. We argue that the algorithm from Levine et al. [27] is less data efficient because it optimizes a ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 분산 벨만 갱신과 교차 엔트로피 탐색을 사용해 연속 행동의 가치를 학습하고 큰 가치의 행동을 선택한다. [PDF 3쪽](https://proceedings.mlr.press/v87/kalashnikov18a/kalashnikov18a.pdf#page=3) · [PDF 4쪽](https://proceedings.mlr.press/v87/kalashnikov18a/kalashnikov18a.pdf#page=4)
+- 새 물체의 실물 파지에서 정책을 평가하고 물체 재배치와 재파지가 나타난 사례를 제시한다. [PDF 7쪽](https://proceedings.mlr.press/v87/kalashnikov18a/kalashnikov18a.pdf#page=7) · [PDF 8쪽](https://proceedings.mlr.press/v87/kalashnikov18a/kalashnikov18a.pdf#page=8)
 
 ## Evaluation Scope
 

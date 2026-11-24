@@ -6,7 +6,7 @@
 
 ## Evaluation in One Sentence
 
-PDF body evaluation/result cue (p. 6 (V. SIMULATION ANALYSIS), p. 5 (V. SIMULATION ANALYSIS), p. 5 (V. SIMULATION ANALYSIS), p. 6 (V. SIMULATION ANALYSIS)): From these results, we can conclude that a variety of regularization or normalization methods, if implemented and applied carefully, can all achieve a similar level of improvement in performance over ...
+실물 A1 보행은 지면별로 2만 표본 미만에서 학습됐다. 약 17분은 상호작용 데이터 길이이고 약 20분은 컴파일·리셋·방향 재설정을 포함한 경과 시간이다. [PDF 5쪽](https://roboticsproceedings.org/rss19/p056.pdf#page=5)
 
 ## Evaluation Body Digest
 

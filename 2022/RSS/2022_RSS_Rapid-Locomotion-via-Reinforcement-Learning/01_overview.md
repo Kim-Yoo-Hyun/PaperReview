@@ -15,13 +15,11 @@
 - Full-text retrieval: https://arxiv.org/pdf/2205.02824
 - Code/Project: https://agility.csail.mit.edu/
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (12 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (12 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 한 줄 요약과 핵심 기여 두 개를 각 문장에 인용한 판본의 원문에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Task difficulty is a function of both the system dynamics and the optimization algorithm, making manual curriculum design tedious and problem-dependent.
-
-방법 관련 발췌 — 1: An end-to-end learned controller enables the MIT Mini Cheetah to execute: (a) fast sprinting at 3.9 m/s (top); (b) a rough terrain 10-meter sprint at 3.4 m/s; (c) high-speed spinning indoors; ...
+이 연구는 시뮬레이션 강화학습 정책을 MIT Mini Cheetah에 옮겨 자연 노면에서 빠른 달리기와 방향 전환을 제어한다. [PDF 1쪽](https://www.roboticsproceedings.org/rss18/p022.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 1 / I. INTRODUCTION - extractive body cue:** 1: An end-to-end learned controller enables the MIT Mini Cheetah to execute: (a) fast sprinting at 3.9 m/s (top); (b) a rough terrain 10-meter sprint ...
-- **p. 2 / I. INTRODUCTION - extractive body cue:** The same policy can spin the robot at 5.7 rad/s on flat ground and also enables the robot to spin on the more challenging icy ...
-- **p. 3 / III. METHOD - extractive body cue:** Teacher-student training enables the agent to specialize its behavior to the current dynamics dt, instead of learning a single behavior that works across different dt.
-- **p. 2 / I. INTRODUCTION - extractive body cue:** We show that reinforcement learning can be used to learn locomotion controllers that simultaneously achieve linear and angular high-speed behaviors and operate on diverse natural ...
-- **p. 1 / I. INTRODUCTION - extractive body cue:** One possibility is to resolve these issues by making targeted improvements to the hand-designed models used in modelbased control.
-- **p. 6 / IV. RESULTS - extractive body cue:** The performance of the system is improved substantially by implementing the Box Curriculum.
-- **p. 6 / IV. RESULTS - extractive body cue:** Using the Grid Curriculum, the performance of the policy further improves, as evidenced by the larger command area.
-- **p. 7 / IV. RESULTS - extractive body cue:** In contrast, a single policy achieved all indoor and outdoor running and spinning results in our work.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 이미 추종할 수 있는 속도에서 이웃 명령으로 학습 범위를 넓혀 고속 영역까지 탐색하게 한다. [PDF 2쪽](https://www.roboticsproceedings.org/rss18/p022.pdf#page=2) · [PDF 3쪽](https://www.roboticsproceedings.org/rss18/p022.pdf#page=3)
+- 최근 관측 이력에서 동역학 정보를 추정하도록 하고 지면과 명령이 바뀔 때 실물 속도 추종을 평가한다. [PDF 6쪽](https://www.roboticsproceedings.org/rss18/p022.pdf#page=6) · [PDF 7쪽](https://www.roboticsproceedings.org/rss18/p022.pdf#page=7)
 
 ## Evaluation Scope
 

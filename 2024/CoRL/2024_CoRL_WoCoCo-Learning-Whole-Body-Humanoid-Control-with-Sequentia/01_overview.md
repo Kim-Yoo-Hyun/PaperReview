@@ -15,13 +15,11 @@
 - Full-text retrieval: https://arxiv.org/pdf/2406.06005
 - Code/Project: https://lecar-lab.github.io/wococo/
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (18 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (18 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 한 줄 요약과 핵심 기여 두 개를 각 문장에 인용한 판본의 원문에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — 6 Limitation and Future Works One limitation of our work is the lacking knowledge of when the controller will fail.
-
-방법 관련 발췌 — In Section 4, we show how our framework, WoCoCo, can be applied to a variety of challenging dynamic tasks with flexible definitions and representations of contact and task goals.
+WoCoCo는 접촉 순서가 정해진 휴머노이드 과제를 접촉 단계들로 분해해 전신 강화학습 정책을 훈련한다. [PDF 1쪽](https://raw.githubusercontent.com/mlresearch/v270/d9fe509ba390176a5fd650178a381a0a7b2d4f64/assets/zhang25a/zhang25a.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 3 / 1 Introduction - extractive body cue:** In Section 4, we show how our framework, WoCoCo, can be applied to a variety of challenging dynamic tasks with flexible definitions and representations of ...
-- **p. 5 / 1 Introduction - extractive body cue:** 4 Case Studies In this section, we show how our framework, WoCoCo, can be applied to various challenging tasks with different contact sequences.
-- **p. 3 / 1 Introduction - extractive body cue:** In this paper, we study tasks where contact stages are predefined (e.g., heuristically designed), and our method can seamlessly be integrated with high-level contact planners ...
-- **p. 2 / 1 Introduction - extractive body cue:** To better facilitate exploration, we propose a task-agnostic curiosity reward term.
-- **p. 4 / 1 Introduction - extractive body cue:** Instead, we propose to use count-based curiosity rewards via random neural network (NN) based hash, inspired by Tang et al.
-- **p. 6 / Figure/Table caption - extractive body cue:** Figure 3: Learned whole-body box loco-manipulation behaviors in the real world. Results. As shown in Fig. 3, the humanoid can efficiently turn, transition seamlessly between ...
-- **p. 6 / 1 Introduction - extractive body cue:** By defining the contact sequence solely on the hands, we leverage RL to achieve robust locomotion while simplifying the whole task.
-- **p. 8 / 1 Introduction - extractive body cue:** In comparison, our curiosity rewards achieves effective exploration without overfitting specific behaviors.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 예정한 접촉이 이루어지는지를 이용해 단계 전이를 정의하고 여러 과제에서 공통 보상 항을 재사용한다. [PDF 3쪽](https://raw.githubusercontent.com/mlresearch/v270/d9fe509ba390176a5fd650178a381a0a7b2d4f64/assets/zhang25a/zhang25a.pdf#page=3) · [PDF 4쪽](https://raw.githubusercontent.com/mlresearch/v270/d9fe509ba390176a5fd650178a381a0a7b2d4f64/assets/zhang25a/zhang25a.pdf#page=4)
+- 점프·상자 운반·박수와 발 구르기·등반에서 학습된 접촉 순서와 실물 동작 수행을 평가한다. [PDF 6쪽](https://raw.githubusercontent.com/mlresearch/v270/d9fe509ba390176a5fd650178a381a0a7b2d4f64/assets/zhang25a/zhang25a.pdf#page=6) · [PDF 7쪽](https://raw.githubusercontent.com/mlresearch/v270/d9fe509ba390176a5fd650178a381a0a7b2d4f64/assets/zhang25a/zhang25a.pdf#page=7)
 
 ## Evaluation Scope
 

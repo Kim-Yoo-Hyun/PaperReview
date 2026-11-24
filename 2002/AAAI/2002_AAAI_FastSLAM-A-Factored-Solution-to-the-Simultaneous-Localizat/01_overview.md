@@ -15,13 +15,11 @@
 - Full-text retrieval: https://cdn.aaai.org/AAAI/2002/AAAI02-089.pdf
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (6 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (6 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 한 줄 요약과 핵심 기여 두 개를 각 문장에 인용한 판본의 원문에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Data Association In many real-world problems, landmarks are not identifiable, and the total number of landmarks K cannot be obtained trivially-as was the case above.
-
-방법 관련 발췌 — We also extend the FastSLAM algorithm to situations with unknown data association and unknown number of landmarks, showing that our approach can be extended to the full range of SLAM problems discussed ...
+FastSLAM은 로봇의 이동 궤적이 주어지면 랜드마크 위치가 조건부 독립이 된다는 성질로 SLAM 사후분포를 분해한다. [PDF 1쪽](https://cdn.aaai.org/AAAI/2002/AAAI02-089.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / Abstract - extractive body cue:** We also extend the FastSLAM algorithm to situations with unknown data association and unknown number of landmarks, showing that our approach can be extended to ...
-- **p. 4 / Abstract - extractive body cue:** Our approach makes it possible to execute a FastSLAM iteration in O(M log K) time.
-- **p. 1 / Abstract - extractive body cue:** This observation was made previously by Murphy [13], who developed an efficient particle filtering algorithm for learning grid maps.
-- **p. 2 / Abstract - extractive body cue:** We develop a tree-based data structure that reduces the running time of FastSLAM to O(M log K), making it significantly faster than existing EKF-based SLAM ...
-- **p. 3 / Abstract - extractive body cue:** This will allows us to silently "forget" all other pose estimates, rendering the size of each particle independent of the time index t.
-- **p. 6 / Figure/Table caption - extractive body cue:** Figure 6: Accuracy of the FastSLAM algorithm as a function of (a) the number of landmarks N, and (b) the number of particles M. Large ...
-- **p. 2 / Abstract - extractive body cue:** Experimental results using a physical robot and a robot simulator illustrate that the FastSLAM algorithm can handle orders of magnitude more landmarks than present day ...
-- **p. 5 / Abstract - extractive body cue:** The results are graphically depicted in Figure 6.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 입자로 궤적 가설을 근사하고 각 입자 안에서 개별 랜드마크의 추정치를 갱신한다. [PDF 2쪽](https://cdn.aaai.org/AAAI/2002/AAAI02-089.pdf#page=2) · [PDF 3쪽](https://cdn.aaai.org/AAAI/2002/AAAI02-089.pdf#page=3)
+- 랜드마크 지도를 트리로 공유해 입자당 관측 갱신 비용을 줄이고 시뮬레이션과 실제 주행 자료로 평가한다. [PDF 4쪽](https://cdn.aaai.org/AAAI/2002/AAAI02-089.pdf#page=4) · [PDF 5쪽](https://cdn.aaai.org/AAAI/2002/AAAI02-089.pdf#page=5)
 
 ## Evaluation Scope
 

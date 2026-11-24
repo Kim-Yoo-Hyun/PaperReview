@@ -6,7 +6,7 @@
 
 ## Evaluation in One Sentence
 
-PDF body evaluation/result cue (p. 7 (VI. EXPERIMENTS), p. 7 (VI. EXPERIMENTS), p. 8 (VI. EXPERIMENTS), p. 8 (VI. EXPERIMENTS), p. 6 (VI. EXPERIMENTS), p. 6 (VI. EXPERIMENTS)): We found that GQ planned grasps 3× faster than REG and achieved a high 93% success rate and 94% precision.
+새 생활용품 40개에서 보고한 전체 파지 성공률은 94%다. 99%는 모델이 안정적이라고 판정한 69회 중 성공한 68회의 정밀도다. 학습 때 본 까다로운 형상 8개의 성공률은 93%였다. [PDF 7쪽](https://www.roboticsproceedings.org/rss13/p58.pdf#page=7) · [PDF 8쪽](https://www.roboticsproceedings.org/rss13/p58.pdf#page=8)
 
 ## Evaluation Body Digest
 

@@ -15,13 +15,11 @@
 - Full-text retrieval: https://arxiv.org/pdf/2408.06316
 - Code/Project: https://sferrazza.cc/bot_site/
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (18 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (18 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 한 줄 요약과 핵심 기여 두 개를 각 문장에 인용한 판본의 원문에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Our contributions are listed below: • We propose the BoT architecture, which augments the transformer architecture with a novel masking that leverages the morphology of the robot body. • We incorporate this ...
-
-방법 관련 발췌 — Our contributions are listed below: • We propose the BoT architecture, which augments the transformer architecture with a novel masking that leverages the morphology of the robot body. • We incorporate this ...
+Body Transformer는 로봇 몸체의 센서·구동기를 그래프로 표현하고 그 연결 구조를 정책의 어텐션에 반영한다. [PDF 1쪽](https://raw.githubusercontent.com/mlresearch/v270/d9fe509ba390176a5fd650178a381a0a7b2d4f64/assets/sferrazza25a/sferrazza25a.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -54,16 +52,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1 Introduction - extractive body cue:** Our contributions are listed below: • We propose the BoT architecture, which augments the transformer architecture with a novel masking that leverages the morphology of ...
-- **p. 2 / 1 Introduction - extractive body cue:** In contrast, we propose Body Transformer (BoT), an architecture that augments the attention mechanism of transformers by taking into account the spatial placement of sensors ...
-- **p. 1 / Abstract - extractive body cue:** Therefore, we propose Body Transformer (BoT), an architecture that leverages the robot embodiment by providing an inductive bias that guides the learning process.
-- **p. 4 / 3 Background - extractive body cue:** We propose Body Transformer (BoT), which is based on masked attention, where at each layer in the resulting architecture, a node can only attend to ...
-- **p. 4 / 3 Background - extractive body cue:** We present below the various components of the BoT architecture (see also Figure 1): (1) a tokenizer that projects the sensory inputs into the corresponding ...
-- **p. 5 / 5 Experiments - extractive body cue:** We report results in the table shown in Figure 3a, where BoT consistently outperforms the MLP and transformer baselines.
-- **p. 6 / 5 Experiments - extractive body cue:** The result shows that BoT-Mix consistently outperforms both the MLP and vanilla transformer baselines in terms of sample efficiency and asymptotic performance, highlighting the efficacy ...
-- **p. 5 / 5 Experiments - extractive body cue:** While the multi-clip policy is competitive with the vanilla transformer baseline, it is strongly outperformed by our architecture.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 신체 부위별 토큰의 어텐션을 기구학적 연결에 따라 제한하거나 가중해 관측과 행동을 대응시킨다. [PDF 3쪽](https://raw.githubusercontent.com/mlresearch/v270/d9fe509ba390176a5fd650178a381a0a7b2d4f64/assets/sferrazza25a/sferrazza25a.pdf#page=3) · [PDF 4쪽](https://raw.githubusercontent.com/mlresearch/v270/d9fe509ba390176a5fd650178a381a0a7b2d4f64/assets/sferrazza25a/sferrazza25a.pdf#page=4)
+- 모방학습과 강화학습 과제에서 일반 트랜스포머 및 다층 퍼셉트론과 과제 달성 성능을 비교한다. [PDF 6쪽](https://raw.githubusercontent.com/mlresearch/v270/d9fe509ba390176a5fd650178a381a0a7b2d4f64/assets/sferrazza25a/sferrazza25a.pdf#page=6) · [PDF 7쪽](https://raw.githubusercontent.com/mlresearch/v270/d9fe509ba390176a5fd650178a381a0a7b2d4f64/assets/sferrazza25a/sferrazza25a.pdf#page=7)
 
 ## Evaluation Scope
 

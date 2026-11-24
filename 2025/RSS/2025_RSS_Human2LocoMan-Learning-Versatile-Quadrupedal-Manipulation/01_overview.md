@@ -15,13 +15,11 @@
 - Full-text retrieval: https://www.roboticsproceedings.org/rss21/p122.pdf
 - Code/Project: https://human2bots.github.io/
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (17 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (17 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 한 줄 요약과 핵심 기여 두 개를 각 문장에 인용한 판본의 원문에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, the substantial embodiment gap between humans and quadrupedal robots poses challenges to both data collection and policy transfer.
-
-방법 관련 발췌 — In summary, our paper provides the following contributions: • We propose Human2LocoMan, a framework that enables flexible and scalable collection of human demonstrations and teleoperated robot trajectories for learning versatile quadrup ...
+Human2LocoMan은 인간과 사족 조작 로봇의 관측·행동 중 대응하는 부분을 맞춰 사람 시연을 로봇 조작 학습에 활용한다. [PDF 1쪽](https://www.roboticsproceedings.org/rss21/p122.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / I. INTRODUCTION - extractive body cue:** In summary, our paper provides the following contributions: • We propose Human2LocoMan, a framework that enables flexible and scalable collection of human demonstrations and teleoperated ...
-- **p. 6 / III. METHODOLOGY - extractive body cue:** This design preserves modality-specific distributions unique to each embodiment and enables the model to explicitly account for distributional gaps across embodiments, which is core to ...
-- **p. 2 / I. INTRODUCTION - extractive body cue:** To address these challenges, and drawing inspiration from the LocoMan platform [14]-a quadrupedal robot equipped with two leg-mounted loco-manipulators that offers a versatile foundation for ...
-- **p. 3 / III. METHODOLOGY - extractive body cue:** In this section, we present the design and implementation of our system, Human2LocoMan, which integrates teleoperation, data collection, and a Transformer-based architecture for cross-embodied learning.
-- **p. 4 / III. METHODOLOGY - extractive body cue:** The dataset consists of aligned vision, proprioception, and actions from the human and the robot.
-- **p. 10 / Figure/Table caption - extractive body cue:** Fig. 6: Substep success rate. The success rate for some substep is calcuated as the percentage of trials where the robot success- fully completed the ...
-- **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1: Human2LocoMan provides a unified framework for collecting human demonstrations and teleoperated robot whole- body motions, along with cross-embodiment policy learning for quadrupedal manipulation. ...
-- **p. 7 / IV. EXPERIMENTS - extractive body cue:** (3) How does human data collected by Human2LocoMan contribute to imitation learning performance?
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 두 형태의 데이터를 같은 구성 요소별로 수집하고 대응하는 모달리티를 공유하는 정책으로 사전학습과 공동학습을 수행한다. [PDF 3쪽](https://www.roboticsproceedings.org/rss21/p122.pdf#page=3) · [PDF 4쪽](https://www.roboticsproceedings.org/rss21/p122.pdf#page=4) · [PDF 6쪽](https://www.roboticsproceedings.org/rss21/p122.pdf#page=6)
+- LocoMan의 단팔·양팔 실물 작업에서 사람 시연의 추가와 로봇 데이터 수에 따른 성공률을 비교한다. [PDF 8쪽](https://www.roboticsproceedings.org/rss21/p122.pdf#page=8) · [PDF 9쪽](https://www.roboticsproceedings.org/rss21/p122.pdf#page=9)
 
 ## Evaluation Scope
 

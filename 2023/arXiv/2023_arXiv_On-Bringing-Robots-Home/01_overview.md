@@ -15,13 +15,11 @@
 - Full-text retrieval: https://arxiv.org/pdf/2311.16098
 - Code/Project: https://dobb-e.com/
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (32 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (32 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 한 줄 요약과 핵심 기여 두 개를 각 문장에 인용한 판본의 원문에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Such an effort requires a shift from the prevailing paradigm - current research in robotics is predominantly either conducted in industrial environments or in academic labs, both containing curated objects, scenes, and ...
-
-방법 관련 발췌 — In this work we present Dobb·E, a framework for teaching robots in homes by embodying three core principles: efficiency, safety, and user comfort.
+Dobb·E는 가정에서 휴대용 도구로 수집한 조작 시연으로 시각 표현을 사전학습하고 새 집의 소수 시연으로 Stretch의 정책을 훈련한다. [PDF 1쪽](https://arxiv.org/pdf/2311.16098v1#page=1)
 
 ## Problem and Motivation
 
@@ -54,16 +52,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 4 / 1 Introduction - extractive body cue:** In this work we present Dobb·E, a framework for teaching robots in homes by embodying three core principles: efficiency, safety, and user comfort.
-- **p. 1 / Abstract - extractive body cue:** Success 81% Pick up hat Open microwave door Pick up paper towel roll Place rag in laundry Open cabinet door Close cabinet door Open shower ...
-- **p. 7 / C D - extractive body cue:** Our method can be divided into four broad stages: (a) designing a hardware setup that helps us in the collection of demonstrations and their seamless ...
-- **p. 1 / Abstract - extractive body cue:** Then, in a novel home environment, with five minutes of demonstrations and fifteen minutes of adapting the HPR model, we show that Dobb·E can reliably ...
-- **p. 4 / 1 Introduction - extractive body cue:** For user comfort, we have developed an ergonomic demonstration collection tool, enabling us to gather task-specific demonstrations in unfamiliar homes without direct robot operation.
-- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1: We present Dobb·E, a simple framework to train robots, which is then field tested in homes across New York City. In under 30 ...
-- **p. 22 / Figure/Table caption - extractive body cue:** Figure 23: Barplot showing the distribution of task success rates in our two setups, one using depth and another not using depth. In most settings, ...
-- **p. 21 / 3 Experiments - extractive body cue:** As we see in Figure 22, adding more demonstrations always improves the performance of our system.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 아이폰을 부착한 시연 수집기와 가정 내 데이터셋을 구축해 로봇 없이도 사람의 시각·동작 기록을 수집한다. [PDF 5쪽](https://arxiv.org/pdf/2311.16098v1#page=5) · [PDF 6쪽](https://arxiv.org/pdf/2311.16098v1#page=6) · [PDF 9쪽](https://arxiv.org/pdf/2311.16098v1#page=9)
+- 새 가정에서 과제별 시연을 모아 정책을 조정한 뒤 실제 시행을 반복해 작업별 성공률을 기록한다. [PDF 12쪽](https://arxiv.org/pdf/2311.16098v1#page=12) · [PDF 13쪽](https://arxiv.org/pdf/2311.16098v1#page=13)
 
 ## Evaluation Scope
 

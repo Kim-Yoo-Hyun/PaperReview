@@ -15,13 +15,11 @@
 - Full-text retrieval: https://arxiv.org/pdf/2304.08485
 - Code/Project: https://github.com/haotian-liu/LLaVA
 - Paper type: theory_or_foundation
-- Source audit: full-text PDF body checked on 2026-09-03 (25 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (25 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 한 줄 요약과 핵심 기여 두 개를 각 문장에 인용한 판본의 원문에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — One key challenge is the lack of vision-language instruction-following data.
-
-방법 관련 발췌 — We present LLaVA-Bench with two challenging benchmarks, with a diverse selection of paired images, instructions and detailed annotations. • Open-source.
+LLaVA는 이미지 설명과 상자 정보를 바탕으로 만든 시각 지시 데이터를 사용해 비전 인코더와 언어모형을 연결한다. [PDF 1쪽](https://proceedings.neurips.cc/paper_files/paper/2023/file/6dcf277ea32ce3288914faf369fe6de0-Paper-Conference.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -53,16 +51,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1 Introduction - extractive body cue:** We present LLaVA-Bench with two challenging benchmarks, with a diverse selection of paired images, instructions and detailed annotations. • Open-source.
-- **p. 2 / 1 Introduction - extractive body cue:** We present a data reformation perspective and pipeline to convert image-text pairs into an appropriate instruction-following format, using ChatGPT/GPT-4. • Large multimodal models.
-- **p. 1 / 1 Introduction - extractive body cue:** For example, the recent success of ChatGPT [35] and GPT-4 [36] have demonstrated the power of aligned LLMs in following human instructions, and have stimulated ...
-- **p. 1 / 1 Introduction - extractive body cue:** One of the core aspirations in artificial intelligence is to develop a general-purpose assistant that can effectively follow multi-modal vision-and-language instructions, aligned with human intent ...
-- **p. 9 / Method - extractive body cue:** Our novel model ensembling with the text-only GPT-4 consistently improves the model's performance under all categories, setting the new SoTA performance. this is the first ...
-- **p. 8 / 5 Experiments - extractive body cue:** Surprisingly, this scheme is able to provide consistent improvement over all question classes, and achieves a new SoTA accuracy of 92.53%.
-- **p. 7 / 5 Experiments - extractive body cue:** Thanks to visual instruction tuning, LLaVA achieves significantly better performance compared with BLIP-2 (+29%) and OpenFlamingo (+48%).
-- **p. 7 / 5 Experiments - extractive body cue:** Compared to the text-only GPT-4 that has access to ground-truth labels, LLaVA achieves an impressive 81.7% performance on complex reasoning questions, with an overall score ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 텍스트만 받는 GPT-4에 이미지의 기호화된 설명을 제시해 대화·상세 설명·추론 예시를 만든다. [PDF 3쪽](https://proceedings.neurips.cc/paper_files/paper/2023/file/6dcf277ea32ce3288914faf369fe6de0-Paper-Conference.pdf#page=3) · [PDF 4쪽](https://proceedings.neurips.cc/paper_files/paper/2023/file/6dcf277ea32ce3288914faf369fe6de0-Paper-Conference.pdf#page=4)
+- 먼저 투영층을 학습해 시각 특징을 언어 임베딩에 맞춘 뒤 시각 지시 데이터로 응답 생성을 미세조정한다. [PDF 4쪽](https://proceedings.neurips.cc/paper_files/paper/2023/file/6dcf277ea32ce3288914faf369fe6de0-Paper-Conference.pdf#page=4) · [PDF 5쪽](https://proceedings.neurips.cc/paper_files/paper/2023/file/6dcf277ea32ce3288914faf369fe6de0-Paper-Conference.pdf#page=5)
 
 ## Evaluation Scope
 

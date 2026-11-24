@@ -15,13 +15,11 @@
 - Full-text retrieval: https://cdn.aaai.org/AAAI/2008/AAAI08-227.pdf
 - Code/Project: not identified
 - Paper type: theory_or_foundation
-- Source audit: full-text PDF body checked on 2026-09-03 (6 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (6 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 한 줄 요약과 핵심 기여 두 개를 각 문장에 인용한 판본의 원문에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Capturing purposeful, sequential decision-making behavior can be quite difficult for general-purpose statistical machine learning algorithms; in such problems, algorithms must often reason about consequences of actions far into the future.
-
-방법 관련 발췌 — Our probabilistic approach enables modeling of route preferences as well as a powerful new approach to inferring destinations and routes based on partial trajectories.
+최대 엔트로피 역강화학습은 시연의 특징 통계를 만족하는 궤적들에 확률을 부여해 불완전한 운전 시연에서 경로 선호를 추정한다. [PDF 1쪽](https://cdn.aaai.org/AAAI/2008/AAAI08-227.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 1 / Abstract - extractive body cue:** Our probabilistic approach enables modeling of route preferences as well as a powerful new approach to inferring destinations and routes based on partial trajectories.
-- **p. 4 / 2. Recursively compute for N iterations - extractive body cue:** Each road segment's contribution to these 22 different counts is represented in the road segment's features.
-- **p. 1 / Abstract - extractive body cue:** Our approach provides a well-defined, globally normalized distribution over decision sequences, while providing the same performance guarantees as existing methods.
-- **p. 4 / 2. Recursively compute for N iterations - extractive body cue:** We demonstrate our approach's effectiveness by comparing with two other IRL models.
-- **p. 2 / Abstract - extractive body cue:** Maximum Entropy IRL We take a different approach to matching feature counts that allows us to deal with this ambiguity in a principled way, and ...
-- **p. 2 / Abstract - extractive body cue:** The authors propose a strategy of matching feature expectations (Equation 1) between an observed policy and a learner's behavior; they demonstrate that this matching is ...
-- **p. 3 / 2. Recursively compute for N iterations - extractive body cue:** Space doesn't permit the full exposition of the incomplete (and non-convex) log-likelihood, but the intuitive expectation-maximization algorithm that results fits the maximumentropy model using initial ...
-- **p. 5 / Figure/Table caption - extractive body cue:** Table 1: Comparison of different models' abilities to match most likely path predictions to withheld paths (average per- centage of distance matching and percentage of ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 전체 궤적에 대해 정규화한 분포를 정의하고 특징 기대값을 계산해 보상 가중치를 학습한다. [PDF 2쪽](https://cdn.aaai.org/AAAI/2008/AAAI08-227.pdf#page=2) · [PDF 3쪽](https://cdn.aaai.org/AAAI/2008/AAAI08-227.pdf#page=3)
+- 실제 운전 경로에서 이동 선호를 평가하고 여정의 앞부분만 주어졌을 때 목적지와 이후 경로를 추론한다. [PDF 5쪽](https://cdn.aaai.org/AAAI/2008/AAAI08-227.pdf#page=5) · [PDF 6쪽](https://cdn.aaai.org/AAAI/2008/AAAI08-227.pdf#page=6)
 
 ## Evaluation Scope
 

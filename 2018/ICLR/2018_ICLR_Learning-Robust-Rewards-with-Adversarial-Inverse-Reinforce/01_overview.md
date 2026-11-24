@@ -15,13 +15,11 @@
 - Full-text retrieval: https://arxiv.org/pdf/1710.11248
 - Code/Project: https://github.com/justinjfu/inverse_rl
 - Paper type: theory_or_foundation
-- Source audit: full-text PDF body checked on 2026-09-03 (15 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (15 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 한 줄 요약과 핵심 기여 두 개를 각 문장에 인용한 판본의 원문에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Our algorithm provides for simultaneous learning of the reward function and value function, which enables us to both make use of the efficient adversarial formulation and recover a generalizable and portable reward ...
-
-방법 관련 발췌 — In this paper, we propose adversarial inverse reinforcement learning (AIRL), an inverse reinforcement learning algorithm based on adversarial learning.
+AIRL은 전문가와 정책의 전이를 구별하는 적대적 학습으로 동역학 변화에도 재사용할 수 있는 보상 함수를 추정한다. [PDF 1쪽](https://arxiv.org/pdf/1710.11248v2#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** In this paper, we propose adversarial inverse reinforcement learning (AIRL), an inverse reinforcement learning algorithm based on adversarial learning.
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** When compared to GAIL (Ho & Ermon, 2016), which does not attempt to directly recover rewards, our method achieves comparable results on tasks that do ...
-- **p. 5 / 3 BACKGROUND - extractive body cue:** In order to decouple the reward function from the advantage, we propose to modify the discriminator of Sec.
-- **p. 1 / 1 INTRODUCTION - extractive body cue:** There are many scenarios where IRL may be preferred over direct imitation learning, such as re-optimizing a reward in novel environments (Finn et al., 2017) ...
-- **p. 5 / 3 BACKGROUND - extractive body cue:** If the ground truth reward is also only a function of state, this allows us to recover the true reward up to a constant.
-- **p. 6 / 7 EXPERIMENTS - extractive body cue:** We also show that in the transfer learning setup, under a new transition matrix T ′, the optimal policy under the state-only reward achieves optimal ...
-- **p. 7 / Figure/Table caption - extractive body cue:** Fig. 4. In our second task, we modify the agent itself. We train a quadrupedal "ant" agent to run forwards, and at test time we ...
-- **p. 6 / 7 EXPERIMENTS - extractive body cue:** We find that AIRL performs on par with GAIL in a traditional imitation learning setup while vastly outperforming it in transfer learning setups, and outperforms ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 판별기의 점수를 보상 성분과 상태 잠재함수에 의한 보상 변형 성분으로 구조화한다. [PDF 4쪽](https://arxiv.org/pdf/1710.11248v2#page=4) · [PDF 5쪽](https://arxiv.org/pdf/1710.11248v2#page=5)
+- 훈련과 다른 환경 동역학에서 학습한 보상으로 정책을 다시 최적화해 모방 정책 및 기존 보상 학습과 비교한다. [PDF 7쪽](https://arxiv.org/pdf/1710.11248v2#page=7) · [PDF 8쪽](https://arxiv.org/pdf/1710.11248v2#page=8)
 
 ## Evaluation Scope
 

@@ -15,15 +15,13 @@
 - Full-text retrieval: https://arxiv.org/pdf/2406.08858
 - Code/Project: https://omni.human2humanoid.com/
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (25 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (25 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 한 줄 요약과 핵심 기여 두 개를 각 문장에 인용한 판본의 원문에서 확인했다.
 
 > DOC-QA1 (2026-10-23): 제어문자·깨진 추출 구간과 직접 연결된 표 항목을 PDF 페이지 이미지와 대조했다. 확인 범위·원문 URL·페이지·수정 이력은 [대조 기록](../../../work/sources/pdf_note_review_2026-10-23.json)에 있다. 노트 전체의 정독이나 모든 기존 주장에 대한 재검증을 뜻하지 않으며 reading status는 유지한다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, due to the delay and inaccuracy of RGB-based pose estimation and the requirement for global linear velocity estimation, H2O [3] requires MoCap during test time, only supports simple mobility tasks, and ...
-
-방법 관련 발췌 — In conclusion, our contributions are as follows: (1) We propose a pipeline to train a robust humanoid control policy that supports whole-body dexterous loco-manipulation with a universal interface that enables versatile human ...
+OmniH2O는 운동학적 자세를 공통 명령으로 사용해 여러 입력 장치로 휴머노이드를 조종하고 자율 기술을 학습한다. [PDF 1쪽](https://raw.githubusercontent.com/mlresearch/v270/d9fe509ba390176a5fd650178a381a0a7b2d4f64/assets/he25b/he25b.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -57,16 +55,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1 Introduction - extractive body cue:** In conclusion, our contributions are as follows: (1) We propose a pipeline to train a robust humanoid control policy that supports whole-body dexterous loco-manipulation with ...
-- **p. 2 / 1 Introduction - extractive body cue:** In this work, we propose OmniH2O, a learning-based system for whole-body humanoid teleoperation and autonomy.
-- **p. 4 / 1 Introduction - extractive body cue:** To encourage standing still and taking large steps during locomotion, we propose a key reward function max feet height for each step.
-- **p. 3 / 1 Introduction - extractive body cue:** By contrast, OmniH2O enables high-precision dexterous loco-manipulation indoors and in the wild.
-- **p. 7 / 1 Introduction - extractive body cue:** By linking πOmniH2O with a pretrained text to motion generative model (MDM) [57], it enables controlling the humanoid via verbal instructions.
-- **p. 8 / 1 Introduction - extractive body cue:** We draw two key conclusions: (1) The Diffusion Policy significantly outperforms vanilla BC with ResNet; (2) In our LfD training, predicting a sequence of actions ...
-- **p. 7 / Figure/Table caption - extractive body cue:** Figure 5: OmniH2O shows superior robustness against human strikes and different outdoor terrains. History Steps and Architecture. Real-world evaluation in Table 2(b) also shows that ...
-- **p. 21 / Figure/Table caption - extractive body cue:** Table 15: Reward components and weights: penalty rewards for preventing undesired behaviors for sim-to-real transfer, regularization to refine motion, and task reward to achieve successful ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 사람의 동작을 로봇에 맞춰 증강하고 특권 관측을 쓰는 교사로부터 제한된 감각 입력의 제어기를 학습한다. [PDF 3쪽](https://raw.githubusercontent.com/mlresearch/v270/d9fe509ba390176a5fd650178a381a0a7b2d4f64/assets/he25b/he25b.pdf#page=3) · [PDF 4쪽](https://raw.githubusercontent.com/mlresearch/v270/d9fe509ba390176a5fd650178a381a0a7b2d4f64/assets/he25b/he25b.pdf#page=4)
+- 실물 원격조작과 수집한 시연을 이용한 자율 기술을 보이고, 여섯 일상 작업의 OmniH2O-6 자료를 제시한다. [PDF 7쪽](https://raw.githubusercontent.com/mlresearch/v270/d9fe509ba390176a5fd650178a381a0a7b2d4f64/assets/he25b/he25b.pdf#page=7) · [PDF 8쪽](https://raw.githubusercontent.com/mlresearch/v270/d9fe509ba390176a5fd650178a381a0a7b2d4f64/assets/he25b/he25b.pdf#page=8)
 
 ## Evaluation Scope
 

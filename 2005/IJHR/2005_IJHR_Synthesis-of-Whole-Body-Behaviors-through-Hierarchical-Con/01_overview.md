@@ -15,13 +15,11 @@
 - Full-text retrieval: https://ai.stanford.edu/manips/publications/pdfs/Sentis_2005_IJHR.pdf
 - Code/Project: https://ai.stanford.edu/~lsentis/files/publications.html
 - Paper type: theory_or_foundation
-- Source audit: full-text PDF body checked on 2026-09-03 (15 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (15 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 한 줄 요약과 핵심 기여 두 개를 각 문장에 인용한 판본의 원문에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Controlling humanoids in these environments requires us to synthesize and change complex whole-body behaviors on-demand in the presence of high uncertainty.
-
-방법 관련 발췌 — In contrast, our methodology integrates constraints in the control formulation as primary controls and projects the operational tasks and the posture primitives into the constraint motion null-space, thus eliminating the motion componen ...
+Sentis와 Khatib은 관절·접촉 제약, 작업 목표, 자세를 우선순위에 따라 동시에 제어하는 전신 제어 방법을 제안한다. [PDF 1쪽](https://ai.stanford.edu/manips/publications/pdfs/Sentis_2005_IJHR.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** In contrast, our methodology integrates constraints in the control formulation as primary controls and projects the operational tasks and the posture primitives into the constraint ...
-- **p. 2 / 1. Introduction - extractive body cue:** In Section 2 we describe previous related work, and also lay the mathematical foundations for this research based on our previous work.9 In Section 3 ...
-- **p. 5 / 3. Integration of constraints - extractive body cue:** Based on the operational space formulation for redundant robots, further represented by the torque decomposition Γ = J T F + N T Γnull, (9) ...
-- **p. 6 / 4. Multi-level hierarchy - extractive body cue:** We propose a multi-level control hierarchy that extends the task and posture decomposition previously described.
-- **p. 1 / 1. Introduction - extractive body cue:** New behaviors are created by adding or removing individual, or collections of, pre-designed behavioral primitives, without the need to interrupt the movement.
-- **p. 10 / 4.3. Movement feasibility - extractive body cue:** But first, to evaluate the performance and determine the optimal ordering we examine a scenario where the center of gravity control shares control priority with ...
-- **p. 12 / X Direction - extractive body cue:** The results of this control are shown in Figure 4.
-- **p. 13 / 6. Summary and discussion - extractive body cue:** Our major contribution is in presenting a novel and unified framework that is based on robust theoretical results.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 작업 중 활성화되는 제약을 우선 처리하고 남은 자유도에서 손이나 몸통의 과제를 수행하게 한다. [PDF 4쪽](https://ai.stanford.edu/manips/publications/pdfs/Sentis_2005_IJHR.pdf#page=4) · [PDF 5쪽](https://ai.stanford.edu/manips/publications/pdfs/Sentis_2005_IJHR.pdf#page=5)
+- 재귀적으로 영공간을 구성해 낮은 순위의 제어가 높은 순위의 행동을 방해하지 않도록 한다. [PDF 7쪽](https://ai.stanford.edu/manips/publications/pdfs/Sentis_2005_IJHR.pdf#page=7) · [PDF 8쪽](https://ai.stanford.edu/manips/publications/pdfs/Sentis_2005_IJHR.pdf#page=8)
 
 ## Evaluation Scope
 

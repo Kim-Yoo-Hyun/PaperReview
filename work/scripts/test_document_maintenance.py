@@ -38,6 +38,12 @@ class DocumentMaintenanceTest(unittest.TestCase):
         self.assertEqual(cited_statement({"text": "Claim.", "pages": [2]}, {"source": source}),
                          "Claim. [PDF 2쪽](https://example.org/report#page=2)")
 
+    def test_manual_interface_heading_preserves_a_unique_contribution_section(self):
+        overview = "## Why This Paper Is Here\n\n## Contribution and Interface\n\n## Scope and Source Correction\n"
+        self.assertEqual(summary_headings(overview), ("Why This Paper Is Here", "Contribution and Interface"))
+        with self.assertRaises(ValueError):
+            summary_headings(overview + "## Main Claims and Actual Contribution\n")
+
     def test_reinforcement_is_not_a_contact_or_force_sensor_cue(self):
         paper = {"title": "Reinforcement learning", "tags": []}
         facets = build_facets(paper)

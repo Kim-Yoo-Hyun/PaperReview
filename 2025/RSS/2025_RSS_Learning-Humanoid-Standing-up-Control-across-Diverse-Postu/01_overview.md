@@ -15,13 +15,11 @@
 - Full-text retrieval: https://www.roboticsproceedings.org/rss21/p064.pdf
 - Code/Project: https://github.com/InternRobotics/HoST
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (13 pages; tesseract OCR fallback; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (13 pages; tesseract OCR fallback; title-token overlap first two pages=1.0) 2026-11-24 한 줄 요약과 핵심 기여 두 개를 각 문장에 인용한 판본의 원문에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Our proposed RL. framework addresses these limitations by achieving posture adaptivity and real-world deployability without predefined motions, enabling smooth, stable, and robust standing-up across a wide range of laboratory and outdoo ...
-
-방법 관련 발췌 — To enable postureadaptive motion beyond the ground, we introduce multiple terrains for training and a vertical pull force during the initial stages to facilitate exploration, Given the multiple stages of the task, ...
+HoST는 다양한 초기 자세에서 휴머노이드가 일어서도록 참조 동작 없이 강화학습하고, 실제 G1에 제어 정책을 옮긴다. [PDF 1쪽](https://www.roboticsproceedings.org/rss21/p064.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / I. INTRODUCTION - extractive body cue:** To enable postureadaptive motion beyond the ground, we introduce multiple terrains for training and a vertical pull force during the initial stages to facilitate exploration, ...
-- **p. 2 / I. INTRODUCTION - extractive body cue:** We overview the real-world performance of our controllers in Fg. / and summarize our core contributions as follows:
-- **p. 12 / B. More Implementation Details - extractive body cue:** Our PPO implementation follows the framework outlined in [39]. ‘The actor network consists of 4 3-layer MLP with hidden dimensions [512, 256, 128], while each ...
-- **p. 12 / B. More Implementation Details - extractive body cue:** We present the complete set of ward functions and their detailed descriptions in Tulble V1 Several regularization reward terms are adapted from prior work [21, ...
-- **p. 13 / B. More Implementation Details - extractive body cue:** During the hardware deployment, the stiffness of hip and knee joints are amplified to 1.5 times than the simulation ones, similar to G1, We present ...
-- **p. 6 / B. Main Results - extractive body cue:** key design choices is summarized as follows: Multiple critics are crucial for learning motor skills Using the same reward functions, the performance of the single ...
-- **p. 6 / B. Main Results - extractive body cue:** HOST with short history length underperforms in contact-rich scenarios, such as the Wall terrain, In contrast, a longer history length improves performance, though it slightly ...
-- **p. 8 / A. Main Results - extractive body cue:** this conclusion, with our approach achieving a 100% success rate and high motion smoothness across all scenes.' Generalization to outdoor environments (Viz.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 여러 가치 추정기와 지형 난도 교육과정을 사용해 자세별 일어서기 행동을 학습한다. [PDF 3쪽](https://www.roboticsproceedings.org/rss21/p064.pdf#page=3) · [PDF 4쪽](https://www.roboticsproceedings.org/rss21/p064.pdf#page=4)
+- 동작의 급격한 변화와 관절 속도를 억제하는 설계를 검토하고 실제 실내·외 표면에서 기립 동작을 평가한다. [PDF 5쪽](https://www.roboticsproceedings.org/rss21/p064.pdf#page=5) · [PDF 8쪽](https://www.roboticsproceedings.org/rss21/p064.pdf#page=8)
 
 ## Evaluation Scope
 

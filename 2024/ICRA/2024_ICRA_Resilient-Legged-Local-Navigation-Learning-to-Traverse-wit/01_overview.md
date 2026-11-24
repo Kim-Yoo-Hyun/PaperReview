@@ -15,13 +15,11 @@
 - Full-text retrieval: https://arxiv.org/pdf/2310.03581
 - Code/Project: https://bit.ly/45NBTuh
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 한 줄 요약과 핵심 기여 두 개를 각 문장에 인용한 판본의 원문에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, such manually-designed rules cannot scale well to diverse situations.
-
-방법 관련 발췌 — In this work, we propose to incorporate locomotion-level observations into navigation, contrasting existing methods that typically decouple navigation from locomotion.
+이 연구는 장애물이나 구덩이가 외부 센서에서 사라지는 상황에서도 사족 로봇을 안내하는 국소 탐색 정책을 학습한다. [PDF 1쪽](https://arxiv.org/pdf/2310.03581v1#page=1)
 
 ## Problem and Motivation
 
@@ -52,14 +50,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 1 / I. INTRODUCTION - extractive body cue:** In this work, we propose to incorporate locomotion-level observations into navigation, contrasting existing methods that typically decouple navigation from locomotion.
-- **p. 2 / III. METHOD - extractive body cue:** Overview The objective of our method is to guide the robot to a local target within the given time.
-- **p. 1 / I. INTRODUCTION - extractive body cue:** However, such manually-designed rules cannot scale well to diverse situations.
-- **p. 5 / V. RESULTS AND ANALYSES - extractive body cue:** According to the results, all of the policies perform well when the visibility is 100 %, and the Planner achieves a perfect 100 % success ...
-- **p. 5 / V. RESULTS AND ANALYSES - extractive body cue:** However, as the visibility decreases, i.e., when perception failures increase, Ours drop performance much slower than the other two, and significantly outperform them.
-- **p. 4 / IV. EXPERIMENTAL SETUP - extractive body cue:** Each setting is run 3 times with different random seeds for statistics, which supports the significance of our performance by P Values.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 손상된 지형 관측과 자기수용감각을 결합해 지형 정보를 잠재 공간에서 복원하도록 정책을 훈련한다. [PDF 3쪽](https://arxiv.org/pdf/2310.03581v1#page=3) · [PDF 4쪽](https://arxiv.org/pdf/2310.03581v1#page=4)
+- 시뮬레이션의 반응형 계획기 비교와 실제 ANYmal의 접촉·낙차 대응 실험으로 인지 실패 시 행동을 평가한다. [PDF 4쪽](https://arxiv.org/pdf/2310.03581v1#page=4) · [PDF 5쪽](https://arxiv.org/pdf/2310.03581v1#page=5) · [PDF 6쪽](https://arxiv.org/pdf/2310.03581v1#page=6)
 
 ## Evaluation Scope
 

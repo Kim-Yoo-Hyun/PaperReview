@@ -15,13 +15,11 @@
 - Full-text retrieval: https://www.roboticsproceedings.org/rss21/p066.pdf
 - Code/Project: https://agile.human2humanoid.com/
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (18 pages; tesseract OCR fallback; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (18 pages; tesseract OCR fallback; title-token overlap first two pages=1.0) 2026-11-24 한 줄 요약과 핵심 기여 두 개를 각 문장에 인용한 판본의 원문에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, a successful backflip requires ‘mastering the landing first-if the policy cannot land correctly,
-
-방법 관련 발췌 — mnparal- or result in overly conservative policies that sacrifice a yaper, we present ASAP
+ASAP는 휴머노이드가 실제로 움직인 궤적에서 시뮬레이터의 동역학 차이를 보상하는 행동 보정 모형을 학습한다. [PDF 2쪽](https://www.roboticsproceedings.org/rss21/p066.pdf#page=2)
 
 ## Problem and Motivation
 
@@ -55,14 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 1 / Abstract - extractive body cue:** mnparal- or result in overly conservative policies that sacrifice a yaper, we present ASAP
-- **p. 2 / Abstract - extractive body cue:** To this end, we propose ASAP, a two-stage framework that aligns the dynamics mismatch between simulation and realworld physics, enabling agile humanoid whole-body skills ASAP ...
-- **p. 3 / Abstract - extractive body cue:** 1) We introduce ASAP, a framework that bridges the simto-real gap by leveraging a delta action model trained via reinforcement learning (RL) with real-world data
-- **p. 4 / B. Phase-based Motion Tracking Policy Training - extractive body cue:** To mitigate this issue, we introduce a termination curriculum that progressively refines the motion error tolerance throughout training, guiding the policy toward improved tracking performance, ...
-- **p. 5 / C. Fine-tuning Motion Tracking Policy under New Dynamics - extractive body cue:** In this section, we present extensive experimental results oon three policy transfers: IsaaeGym [58] to IsaacSim [63], IsaaeGym to Genesis [6], and IsiaeGym to real-world ...
-- **p. 10 / Figure/Table caption - extractive body cue:** Fig. 10. Analysis of dataset size, waning horizon, and scion aorm on the performance of x. (a) Dataset Size: Mean Per Joint Position Eror (MPIPE) ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 참조 동작으로 사전학습한 정책을 실물에서 실행해 얻은 궤적으로 잔차 행동 모형을 맞춘다. [PDF 2쪽](https://www.roboticsproceedings.org/rss21/p066.pdf#page=2) · [PDF 3쪽](https://www.roboticsproceedings.org/rss21/p066.pdf#page=3)
+- 보정 모형을 포함한 시뮬레이터에서 정책을 다시 학습한 뒤 실제 G1의 민첩한 동작 추종을 비교한다. [PDF 6쪽](https://www.roboticsproceedings.org/rss21/p066.pdf#page=6) · [PDF 7쪽](https://www.roboticsproceedings.org/rss21/p066.pdf#page=7)
 
 ## Evaluation Scope
 

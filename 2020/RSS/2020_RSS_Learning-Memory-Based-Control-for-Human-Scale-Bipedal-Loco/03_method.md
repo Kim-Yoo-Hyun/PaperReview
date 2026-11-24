@@ -11,7 +11,7 @@ PDF body method statement (p. 4 (III. METHOD), p. 3 (III. METHOD), p. 4 (III. ME
 ## Method Body Digest
 
 - **p. 4 / III. METHOD - extractive body cue:** Optimize surrogate L wrt θ, using ˆs, ˆa, ˆA if KL(πθ(ˆs, ˆa), πθold(ˆs, ˆa)) > klthresh then break end if end for end for end ...
-- **p. 3 / III. METHOD - extractive body cue:** State Space and Action Space The policy's input consists of: Xt =          fvel desired forward speed ...
+- 목표 전진 속도, 보행 위상의 사인·코사인, 추정한 몸체 방향·관절 위치·속도를 입력받아 모터 위치 목표를 낸다. [PDF 3쪽](https://www.roboticsproceedings.org/rss16/p031.pdf#page=3)
 - **p. 4 / III. METHOD - extractive body cue:** Recurrent Proximal Policy Optimization We trained all policies with PPO, a model-free reinforcement learning algorithm.
 - **p. 3 / III. METHOD - extractive body cue:** Reward Design Our learning process makes use of a reference trajectory produced by an expert walking controller to help the policy learn in the initial ...
 - **p. 3 / III. METHOD - extractive body cue:** All policies were trained to maximize the following reward function: R =0.20 · exp(-qerr) +0.20 · exp(-˙xerr) +0.05 · exp(-xerr) +0.20 · exp(-˙yerr) +0.30 · ...
@@ -21,14 +21,14 @@ PDF body method statement (p. 4 (III. METHOD), p. 3 (III. METHOD), p. 4 (III. ME
 
 ## Design Rationale
 
-- **p. 3 / III. METHOD - extractive body cue:** State Space and Action Space The policy's input consists of: Xt =          fvel desired forward speed ...
+- 목표 전진 속도, 보행 위상의 사인·코사인, 추정한 몸체 방향·관절 위치·속도를 입력받아 모터 위치 목표를 낸다. [PDF 3쪽](https://www.roboticsproceedings.org/rss16/p031.pdf#page=3)
 - **p. 2 / I. INTRODUCTION - extractive body cue:** One of the main contributions of our work is to demonstrate that this approach is highly effective for training RNN controllers for the Cassie biped.
 - **p. 2 / I. INTRODUCTION - extractive body cue:** We show that by randomizing a small number of dynamics parameters over reasonable ranges, the RNNs can be consistently trained in simulation and successfully transferred ...
 
 ## Source Evidence Cues
 
 - **p. 4 / III. METHOD - extractive body cue:** Optimize surrogate L wrt θ, using ˆs, ˆa, ˆA if KL(πθ(ˆs, ˆa), πθold(ˆs, ˆa)) > klthresh then break end if end for end for end ...
-- **p. 3 / III. METHOD - extractive body cue:** State Space and Action Space The policy's input consists of: Xt =          fvel desired forward speed ...
+- 목표 전진 속도, 보행 위상의 사인·코사인, 추정한 몸체 방향·관절 위치·속도를 입력받아 모터 위치 목표를 낸다. [PDF 3쪽](https://www.roboticsproceedings.org/rss16/p031.pdf#page=3)
 - **p. 4 / III. METHOD - extractive body cue:** Recurrent Proximal Policy Optimization We trained all policies with PPO, a model-free reinforcement learning algorithm.
 - **p. 3 / III. METHOD - extractive body cue:** Reward Design Our learning process makes use of a reference trajectory produced by an expert walking controller to help the policy learn in the initial ...
 - **Detected method headings:** III. METHOD (p. 3)
@@ -37,9 +37,9 @@ PDF body method statement (p. 4 (III. METHOD), p. 3 (III. METHOD), p. 4 (III. ME
 
 | Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
-| Command / terrain state | body state와 terrain/task context를 표현한다 | proprioception, terrain/perception, velocity command | history encoder, reference, terrain latent 또는 behavior mode를 구성 | locomotion context | Optimize surrogate L wrt θ, using ˆs, ˆa, ˆA if KL(πθ(ˆs, ˆa), πθold(ˆs, ˆa)) > klthresh then break end if end for ... | p. 4 (III. METHOD), p. 3 (III. METHOD) |
-| Whole-body policy / controller | context에서 joint target 또는 torque를 만든다 | context, body state, contact | RL policy, reference tracking, inverse dynamics 또는 whole-body control을 적용 | joint action/torque | State Space and Action Space The policy's input consists of: Xt =          fvel ... | p. 3 (III. METHOD), p. 4 (III. METHOD) |
-| Adaptation / recovery | disturbance와 contact mismatch에 대응한다 | new observation/history와 failure signal | latent adaptation, foothold change, recovery 또는 replan을 수행 | updated command | Recurrent Proximal Policy Optimization We trained all policies with PPO, a model-free reinforcement learning algorithm. | p. 4 (III. METHOD), p. 3 (III. METHOD) |
+| 입력 구성 | 명령과 로봇 상태를 결합한다 | 목표 전진 속도, 보행 위상의 사인·코사인, 추정한 몸체 방향·관절 위치·속도 | 49차원 입력 벡터 구성 | 정책 입력 | 본문 III-A | [PDF 3쪽](https://www.roboticsproceedings.org/rss16/p031.pdf#page=3) |
+| 관절 위치 정책 | 30 ms마다 목표를 갱신한다 | 정책 입력 및 이전 순환 상태 | LSTM 갱신 | 중립 자세에 더할 모터 위치 목표 | 그림 2 | [PDF 3쪽](https://www.roboticsproceedings.org/rss16/p031.pdf#page=3) |
+| 관절 PD 제어 | 모터 위치를 추종한다 | 중립 자세를 더한 위치 목표와 센서 신호 | 2 kHz PD 제어 | 모터 토크 | 그림 2 | [PDF 3쪽](https://www.roboticsproceedings.org/rss16/p031.pdf#page=3) |
 
 - Pipeline rows are domain labels; the paper-specific operations are the extractive cues and section anchors in the same row.
 
@@ -49,7 +49,7 @@ PDF body method statement (p. 4 (III. METHOD), p. 3 (III. METHOD), p. 4 (III. ME
 - **p. 3 / III. METHOD - extractive body cue:** It is important to note that while the reward function is partially based on a reference motion, very similarly to Xie et al.
 - **p. 4 / III. METHOD - extractive body cue:** However, correctly calculating the gradient of an RNN requires the use of the backpropagation through time (BPTT) algorithm, which necessitates special measures when sampling from ...
 - **p. 4 / III. METHOD - extractive body cue:** The recurrent critic was also an LSTM network with two layers of 128 units each, with a single output representing the value function.
-- **Formal bridge:** body/proprioceptive/terrain state -> joint action/torque/footstep -> return, tracking or stability objective -> progress, balance and terrain robustness.
+- 정책은 속도 지령·주기 신호·추정한 로봇 상태에서 관절 위치 목표를 낸다. 학습 보상에는 전진 속도·자세·관절의 참조 궤적 추종 오차가 들어간다. [PDF 3쪽](https://www.roboticsproceedings.org/rss16/p031.pdf#page=3)
 - **Equation/algorithm anchors:** p. 4 (III. METHOD).
 - Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
@@ -57,31 +57,31 @@ PDF body method statement (p. 4 (III. METHOD), p. 3 (III. METHOD), p. 4 (III. ME
 
 | Role | PDF-derived terms | Normalized robotics interpretation | Status |
 |---|---|---|---|
-| Input/observation | State, Space, Action, policy, input, consists, fvel, desired, forward, speed, clock, robot, Where, inputs | proprioception, terrain/perception observation과 velocity command | body cue; exact tensor/frame verify |
-| State/latent | State, Space, Action, policy, input, consists, fvel, desired, forward, speed | body/contact state, foothold 또는 behavior mode | body cue; notation verify |
-| Action/output | State, Space, Action, policy, input, consists, fvel, desired, forward, speed | joint target, torque, footstep 또는 locomotion action | body cue; unit/decoder verify |
+| Input/observation | 목표 전진 속도, 보행 위상의 사인·코사인, 추정한 몸체 방향·관절 위치·속도 | 49차원 네트워크 입력 | [PDF 3쪽](https://www.roboticsproceedings.org/rss16/p031.pdf#page=3) |
+| State/latent | LSTM의 순환 상태 | 기억 없는 정책과 비교 | [PDF 4쪽](https://www.roboticsproceedings.org/rss16/p031.pdf#page=4) |
+| Action/output | 중립 자세에 더할 모터 위치 목표 | PD 제어기로 전달 | [PDF 3쪽](https://www.roboticsproceedings.org/rss16/p031.pdf#page=3) |
 | Objective/constraint | policies, trained, maximize, following, reward, function, qerr, xerr, yerr, orienterr | return, tracking or stability objective | equation anchor required |
 
 ## Observation–State–Action Interface
 
-- **p. 3 / III. METHOD - extractive body cue:** State Space and Action Space The policy's input consists of: Xt =          fvel desired forward speed ...
+- 목표 전진 속도, 보행 위상의 사인·코사인, 추정한 몸체 방향·관절 위치·속도를 입력받아 모터 위치 목표를 낸다. [PDF 3쪽](https://www.roboticsproceedings.org/rss16/p031.pdf#page=3)
 - **p. 2 / II. BACKGROUND - extractive body cue:** The policy is often a stochastic policy, in which case it is a function π(a/s) which takes in a state s and outputs the parameters ...
 - **p. 3 / III. METHOD - extractive body cue:** The outputs of the policy are simply raw motor PD targets, much like Xie et al.
 - **p. 4 / III. METHOD - extractive body cue:** Network Architecture All policies had an input dimension of length 49, and an output dimension of size 10.
 - **p. 4 / III. METHOD - extractive body cue:** No information about the dynamics disturbances was provided to either the policy or the critic in the input space.
 - **p. 1 / I. INTRODUCTION - extractive body cue:** Recent work in transferring these trained controllers from simulation onto real robots has also enjoyed encouraging results [1, 2, 3, 4, 5, 6], but many ...
 - **p. 2 / II. BACKGROUND - extractive body cue:** The reward r = R(s, a) is a scalar signal that expresses how good a particular state-action pair is.
-- **Normalized interface:** observation=proprioception, terrain/perception observation과 velocity command; state=body/contact state, foothold 또는 behavior mode; output/action=joint target, torque, footstep 또는 locomotion action.
+- 정책 입력은 목표 전진 속도, 보행 위상의 사인·코사인, 추정한 몸체 방향·관절 위치·속도다. 순환 정책은 모터 위치 목표를 내고 PD 제어기가 토크를 계산한다. [PDF 3쪽](https://www.roboticsproceedings.org/rss16/p031.pdf#page=3)
 - Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
 | Contract | Generic domain prior | PDF body cue | Unresolved detail |
 |---|---|---|---|
-| Horizon | gait/skill episode horizon과 short-horizon body control이 계층적으로 분리된다. | Though the reference contains the full robot state at each timestep, we only use the center of mass position, orientation, and velocity, ... | episode/sequence/action-chunk boundary |
-| Rate / latency | high-level command, policy rate와 low-level torque rate를 구분; exact rate 확인 필요. | The recurrent policy has connections which loop back onto itself, so that information from previous timesteps is available. | Hz/fps, inference time and control rate |
-| Memory | proprioceptive history, terrain latent와 contact/body state. | This produces a memory-like mechanism, allowing the RNN to encode things about the state history which may be useful for choosing actions. | window and reset |
-| Compute | policy inference, adaptation encoder와 whole-body/control solve가 latency를 결정한다. | Dots become lighter as a function of time. batch size of 64 trajectories and a maximum trajectory length of 300 timesteps, equal ... | hardware, batch and throughput |
+| Horizon | 보행 참조의 주기 위상을 입력으로 제공 | 정책을 실행할 때마다 위상 카운터를 갱신 | [PDF 3쪽](https://www.roboticsproceedings.org/rss16/p031.pdf#page=3) |
+| Rate / latency | 정책 30 ms 주기, 관절 PD 2 kHz | 그림 2와 III-A에서 명시 | 추론 지연 시간은 별도 지표 |
+| Memory | LSTM의 순환 상태 | 기억 없는 정책과 같은 과제에서 비교 | [PDF 4쪽](https://www.roboticsproceedings.org/rss16/p031.pdf#page=4) |
+| Compute | 정책과 관절 PD 제어의 주기를 비교 | 그림 2에 보고한 각 갱신 주기 | [PDF 3쪽](https://www.roboticsproceedings.org/rss16/p031.pdf#page=3) |
 
 ## Training vs Inference
 
@@ -103,9 +103,9 @@ PDF body method statement (p. 4 (III. METHOD), p. 3 (III. METHOD), p. 4 (III. ME
 
 | Method component | Evaluation evidence to inspect | PDF anchor |
 |---|---|---|
-| Command / terrain state | The LSTM achieves a much higher reward with remarkably little variance, but both networks perform roughly the same on hardware. | p. 5 (IV. RESULTS), p. 5 (IV. RESULTS) |
-| Whole-body policy / controller | Simulation We trained ten LSTM networks and ten FF networks with dynamics randomization, and ten LSTM networks and ten FF networks without ... | p. 4 (IV. RESULTS), p. 5 (IV. RESULTS) |
-| Adaptation / recovery | As can be seen, dynamics randomization improves performance of both policy types and LSTM with dynamics randomization performs the best. | p. 5 (IV. RESULTS), p. 5 (IV. RESULTS) |
+| 순환 기억 | 무작위화 없이 훈련했을 때 LSTM의 시뮬레이션 보상 이득은 실물 보행에서 재현되지 않았다. | [PDF 5쪽](https://www.roboticsproceedings.org/rss16/p031.pdf#page=5) |
+| 학습 조건 | LSTM과 피드포워드 정책을 각각 동역학 무작위화가 있는 조건과 없는 조건에서 비교했다. | [PDF 4쪽](https://www.roboticsproceedings.org/rss16/p031.pdf#page=4) |
+| 실물 전이 | 무작위화한 동역학에서 학습한 LSTM이 실제 Cassie에서 가장 잘 수행한 조건을 제시한다. | [PDF 5쪽](https://www.roboticsproceedings.org/rss16/p031.pdf#page=5) · [PDF 6쪽](https://www.roboticsproceedings.org/rss16/p031.pdf#page=6) |
 
 ## Failure and Ablation Link
 

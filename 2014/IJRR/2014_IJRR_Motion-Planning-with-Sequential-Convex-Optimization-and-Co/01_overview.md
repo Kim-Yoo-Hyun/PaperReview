@@ -15,13 +15,11 @@
 - Full-text retrieval: https://rll.berkeley.edu/trajopt/ijrr/2013-IJRR-TRAJOPT.pdf
 - Code/Project: https://rll.berkeley.edu/trajopt/
 - Paper type: theory_or_foundation
-- Source audit: full-text PDF body checked on 2026-09-03 (16 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (16 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 한 줄 요약과 핵심 기여 두 개를 각 문장에 인용한 판본의 원문에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Optimal planners such as RRT* [20] and discretization-based approaches [29, 28] are very promising but are currently computationally inefficient for solving high-dimensional motion planning problems.
-
-방법 관련 발췌 — Our method for handling collisions yields a polyhedral approximation of the free part of configuration space, which is directly incorporated into the convex optimization problem that is solved at each optimization iteration.
+TrajOpt는 충돌할 수 있는 초기 궤적에서 출발해 순차 볼록 최적화로 로봇 동작을 계획한다. [PDF 1쪽](https://rll.berkeley.edu/trajopt/ijrr/2013-IJRR-TRAJOPT.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / I. INTRODUCTION - extractive body cue:** Our method for handling collisions yields a polyhedral approximation of the free part of configuration space, which is directly incorporated into the convex optimization problem ...
-- **p. 2 / I. INTRODUCTION - extractive body cue:** The ability to add new constraints and costs to the optimization problem allows our approach to tackle a larger range of motion planning problems, including ...
-- **p. 5 / A. Sequential Convex Optimization over SE(3) - extractive body cue:** In this work, at the ith iteration of SQP our trajectory consists of a sequence of nominal poses ˆ X (i) = { ˆX(i) 0 ...
-- **p. 5 / A. Sequential Convex Optimization over SE(3) - extractive body cue:** This parametrization is provided by the Lie algebra se(3), which is defined as the tangent vector space at the identity of SE(3), and, informally, consists ...
-- **p. 9 / V. MOTION PLANNING BENCHMARK - extractive body cue:** Multiple trajectory initializations are important to guide the optimization out of local minima and improves the success rate for both TrajOpt and CHOMP.
-- **p. 13 / Figure/Table caption - extractive body cue:** Fig. 13. Effect of noise level on the success rate. Re-planning after each time step greatly increases the probability of success. Collocation consistently outperforms shooting ...
-- **p. 8 / V. MOTION PLANNING BENCHMARK - extractive body cue:** Note that even though we initialize with tucked arms, the optimization typically untucks the arms to improve the cost.
-- **p. 9 / V. MOTION PLANNING BENCHMARK - extractive body cue:** TrajOpt with multiple initializations outperformed the other approaches in both sets of problems.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 충돌 제약 위반에 힌지 벌점을 주고 바깥 반복에서 벌점 계수를 높인다. [PDF 3쪽](https://rll.berkeley.edu/trajopt/ijrr/2013-IJRR-TRAJOPT.pdf#page=3) · [PDF 4쪽](https://rll.berkeley.edu/trajopt/ijrr/2013-IJRR-TRAJOPT.pdf#page=4) · [PDF 5쪽](https://rll.berkeley.edu/trajopt/ijrr/2013-IJRR-TRAJOPT.pdf#page=5)
+- 연속한 두 시점 사이의 충돌을 고려하는 조건을 도입하고 PR2 실물 동작을 포함한 계획 과제에서 평가한다. [PDF 6쪽](https://rll.berkeley.edu/trajopt/ijrr/2013-IJRR-TRAJOPT.pdf#page=6) · [PDF 9쪽](https://rll.berkeley.edu/trajopt/ijrr/2013-IJRR-TRAJOPT.pdf#page=9)
 
 ## Evaluation Scope
 

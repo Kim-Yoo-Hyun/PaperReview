@@ -15,13 +15,11 @@
 - Full-text retrieval: https://arxiv.org/pdf/2112.00726
 - Code/Project: https://github.com/cv-rits/MonoScene
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (16 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (16 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 한 줄 요약과 핵심 기여 두 개를 각 문장에 인용한 판본의 원문에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — The SSC literature mainly relies on cross-entropy loss which considers each voxel independently, lacking context awareness.
-
-방법 관련 발췌 — Our framework infers dense semantic scenes, hallucinating scenery outside the field of view of the image (dark voxels, right). and outdoor scenes.
+MonoScene은 단안 RGB 영상 한 장에서 3차원 공간의 점유와 의미 레이블을 예측한다. [PDF 1쪽](https://openaccess.thecvf.com/content/CVPR2022/papers/Cao_MonoScene_Monocular_3D_Semantic_Scene_Completion_CVPR_2022_paper.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -54,16 +52,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 1 / 1. Introduction - extractive body cue:** Our framework infers dense semantic scenes, hallucinating scenery outside the field of view of the image (dark voxels, right). and outdoor scenes.
-- **p. 1 / 1. Introduction - extractive body cue:** Here, we present MonoScene which - unlike the literature - relies on a single RGB image to infer the dense 3D voxelized semantic scene working ...
-- **p. 2 / 3. Method - extractive body cue:** To guide the SSC training, we introduce new complementary losses.
-- **p. 3 / 3.2. 3D Context Relation Prior (3D CRP) - extractive body cue:** As voxels relations are greedy with N 2 relations for N voxels, we present the lighter supervoxel↔voxel relations.
-- **p. 3 / 3.2. 3D Context Relation Prior (3D CRP) - extractive body cue:** Here, we propose a 3D Context Relation Prior (3D CRP) layer, inserted at the 3D UNet bottleneck, which learns n-way voxel↔voxel semantic scene-wise relation maps.
-- **p. 6 / 4.2.1 Evaluation - extractive body cue:** Despite the various indoor and outdoor setups, we significantly outperform other RGB-inferred baselines, in both mIoU and IoU.
-- **p. 5 / 4.2.1 Evaluation - extractive body cue:** On both datasets we outperform all methods by a significant mIoU margin of +4.03 on NYUv2 (Tab.
-- **p. 5 / 4. Experiments - extractive body cue:** Note the strong interaction between IoU and mIoU since better geometry estimation (i.e. high IoU) can be achieved by invalidating semantic labels (i.e. low mIoU).
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- FLoSP는 서로 다른 해상도의 2차원 특징을 시선에 따라 복셀 격자로 투영한다. [PDF 3쪽](https://openaccess.thecvf.com/content/CVPR2022/papers/Cao_MonoScene_Monocular_3D_Semantic_Scene_Completion_CVPR_2022_paper.pdf#page=3)
+- 복셀 사이의 기하·의미 관계를 학습하는 문맥 모듈을 도입하고 NYUv2와 SemanticKITTI에서 결과를 비교한다. [PDF 4쪽](https://openaccess.thecvf.com/content/CVPR2022/papers/Cao_MonoScene_Monocular_3D_Semantic_Scene_Completion_CVPR_2022_paper.pdf#page=4) · [PDF 6쪽](https://openaccess.thecvf.com/content/CVPR2022/papers/Cao_MonoScene_Monocular_3D_Semantic_Scene_Completion_CVPR_2022_paper.pdf#page=6)
 
 ## Evaluation Scope
 

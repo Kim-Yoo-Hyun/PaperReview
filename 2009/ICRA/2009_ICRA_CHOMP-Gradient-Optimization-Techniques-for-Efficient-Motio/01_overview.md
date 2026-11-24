@@ -15,13 +15,11 @@
 - Full-text retrieval: https://www.ri.cmu.edu/pub_files/2009/5/icra09-chomp.pdf
 - Code/Project: https://moveit.github.io/moveit_tutorials/doc/chomp_planner/chomp_planner_tutorial.html
 - Paper type: theory_or_foundation
-- Source audit: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 한 줄 요약과 핵심 기여 두 개를 각 문장에 인용한 판본의 원문에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Few current approaches to optimal control are equipped to handle obstacle avoidance, though.
-
-방법 관련 발췌 — In this paper, we present Covariant Hamiltonian Optimization for Motion Planning (CHOMP), a novel method for generating and optimizing trajectories for robotic systems.
+CHOMP는 궤적의 매끄러움과 장애물 비용을 함께 줄이는 공변 경사 갱신으로 연속 동작 경로를 정제한다. [PDF 1쪽](https://www.ri.cmu.edu/pub_files/2009/5/icra09-chomp.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 1 / I. INTRODUCTION - extractive body cue:** In this paper, we present Covariant Hamiltonian Optimization for Motion Planning (CHOMP), a novel method for generating and optimizing trajectories for robotic systems.
-- **p. 1 / II. THE CHOMP ALGORITHM - extractive body cue:** In this section, we present CHOMP, a new trajectory optimization procedure based on covariant gradient descent.
-- **p. 2 / II. THE CHOMP ALGORITHM - extractive body cue:** Given suitable finite differencing matrices Kd for d = 1, . . . , D, we can represent fprior as a sum of terms fprior(ξ) ...
-- **p. 4 / II. THE CHOMP ALGORITHM - extractive body cue:** As we show in the next section, we could also derive the objective over a prespecified discretization, but we find that the properties of the ...
-- **p. 3 / II. THE CHOMP ALGORITHM - extractive body cue:** We gain additional insight into the computational benefits of the covariant gradient based update by considering the analysis tools developed in the online learning/optimization literature, ...
-- **p. 6 / III. EXPERIMENTS ON A ROBOTIC ARM - extractive body cue:** Surprisingly, when CHOMP successfully finds a collision free trajectory, straight-line 4We found that adding a small amount (.001) to the diagonal of A improved performance ...
-- **p. 6 / III. EXPERIMENTS ON A ROBOTIC ARM - extractive body cue:** On average, excluding those problems that CHOMP could not solve, the log-objective value achieved when starting from a straight-line trajectory was approximately .5 units smaller ...
-- **p. 5 / III. EXPERIMENTS ON A ROBOTIC ARM - extractive body cue:** This section presents experimental results for our implementation of CHOMP on Barrett Technology's WAM arm shown in figure 1.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 로봇 몸체의 점들이 이동한 길이에 따라 장애물 비용을 적분하고 궤적 전체로 회피 변위를 분배한다. [PDF 3쪽](https://www.ri.cmu.edu/pub_files/2009/5/icra09-chomp.pdf#page=3) · [PDF 4쪽](https://www.ri.cmu.edu/pub_files/2009/5/icra09-chomp.pdf#page=4)
+- 6자유도 팔의 장애물 회피와 사족 로봇의 보행 궤적 생성에 같은 최적화 원리를 적용한다. [PDF 5쪽](https://www.ri.cmu.edu/pub_files/2009/5/icra09-chomp.pdf#page=5) · [PDF 6쪽](https://www.ri.cmu.edu/pub_files/2009/5/icra09-chomp.pdf#page=6) · [PDF 7쪽](https://www.ri.cmu.edu/pub_files/2009/5/icra09-chomp.pdf#page=7)
 
 ## Evaluation Scope
 

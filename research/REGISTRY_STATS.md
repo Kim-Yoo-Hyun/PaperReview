@@ -15,7 +15,7 @@
 - Reproducibility profiles: **1252**
 - Lineage coverage profiles: **1252**
 - Papers with explicit trial/seed cues: **246**
-- Papers without DOI/arXiv/OpenReview identifier: **364**
+- Papers without DOI/arXiv/OpenReview identifier: **363**
 
 ## 연도와 발표처
 
@@ -99,8 +99,8 @@
 
 | Value | Count |
 |---|---:|
-| identified | 888 |
-| source_only | 364 |
+| identified | 889 |
+| source_only | 363 |
 
 ## Primary source scope
 

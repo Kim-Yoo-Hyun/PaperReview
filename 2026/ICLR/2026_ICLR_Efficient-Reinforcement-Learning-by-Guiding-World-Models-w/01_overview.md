@@ -15,13 +15,11 @@
 - Full-text retrieval: https://arxiv.org/pdf/2502.19544
 - Code/Project: https://aidanscannell.com/publications/efficient-rl-by-guiding-generalist-world-models-with-non-curated-data/
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (35 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (35 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 한 줄 요약과 핵심 기여 두 개를 각 문장에 인용한 판본의 원문에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — While pre-training visual encoders (Schwarzer et al., 2021; Nair et al., 2022; Parisi et al., 2022; Xiao et al., 2022; Yang & Nachum, 2021; Shang et al., 2024) is a common approach ...
-
-방법 관련 발췌 — To summarize, our contributions are: C1 We propose a more realistic setting for leveraging offline data that consists of reward-free and mixed-quality multi-embodiment data.
+이 연구는 보상 표지가 없고 여러 형태의 로봇에서 수집한 자료를 세계 모형에 활용해 온라인 강화학습의 표본 효율을 높인다. [PDF 1쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/7ff013b7e372ba5b790352ccd6908f03-Paper-Conference.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 3. Train - extractive body cue:** To summarize, our contributions are: C1 We propose a more realistic setting for leveraging offline data that consists of reward-free and mixed-quality multi-embodiment data.
-- **p. 1 / ABSTRACT - extractive body cue:** To address this issue and effectively use the offline data, we propose two techniques: i) experience rehearsal and ii) execution guidance.
-- **p. 1 / ABSTRACT - extractive body cue:** Under limited sample budgets, our method achieves nearly twice the aggregate score of learning-from-scratch baselines across 72 visuomotor tasks spanning 6 embodiments.
-- **p. 2 / 3. Train - extractive body cue:** To this end, we propose a pipeline named Non-curated offline data for efficient RL (NCRL).
-- **p. 3 / 3. Train - extractive body cue:** C3 We propose two techniques, experience rehearsal and execution guidance, to mitigate the distributional gap and encourage exploration during RL fine-tuning.
-- **p. 20 / Figure/Table caption - extractive body cue:** Figure 15: Comparison of DreamerV3 under different model size configurations. NCRL consis- tently outperforms both variants. A.6 PERFORMANCE ON CHALLENGING METAWORLD TASKS In Sec. I, ...
-- **p. 9 / 4 EXPERIMENTS - extractive body cue:** Results Figure 5 shows NCRL significantly outperforms PackNet, enabling adaptation within 100 trials per task.
-- **p. 8 / 4 EXPERIMENTS - extractive body cue:** With 150k online samples, NCRL achieves higher aggregate scores compared to DrQ-v2 and DreamerV3, matching their performance obtained with 3.3-6.7× more samples (500k for DMControl, ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 사전학습 뒤 온라인 자료만으로 갱신할 때 생기는 분포 변화를 분석하고 기존 경험을 함께 재생한다. [PDF 5쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/7ff013b7e372ba5b790352ccd6908f03-Paper-Conference.pdf#page=5) · [PDF 6쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/7ff013b7e372ba5b790352ccd6908f03-Paper-Conference.pdf#page=6)
+- 사전학습 자료를 행동 실행의 안내에도 사용하고 여러 로봇 형태의 시각 제어 과제에서 온라인 표본 예산별 성능을 비교한다. [PDF 6쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/7ff013b7e372ba5b790352ccd6908f03-Paper-Conference.pdf#page=6) · [PDF 8쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/7ff013b7e372ba5b790352ccd6908f03-Paper-Conference.pdf#page=8)
 
 ## Evaluation Scope
 

@@ -23,9 +23,9 @@ PDF body framing (p. 1 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 2 (I. INTRO
 | Dimension | PDF body evidence | Registry/robotics interpretation | Boundary |
 |---|---|---|---|
 | Target problem | RNNs trained without dynamics randomization are unable to consistently transfer to hardware (failures darkened and overlaid with X), while the same RNNs, ... | legged robot, terrain과 contact dynamics | body wording is the source claim |
-| Observation / input | State Space and Action Space The policy's input consists of: Xt =          fvel ... | proprioception, terrain/perception observation과 velocity command | exact sensor/frame/preprocessing from PDF body |
-| State / latent | State, Space, Action, policy, input, consists, fvel, desired, forward, speed | body/contact state, foothold 또는 behavior mode | notation and tensor shape require body check |
-| Output / action | outputs, policy, simply, motor, targets, much, like, Xie | joint target, torque, footstep 또는 locomotion action | exact unit/frame/decoder require body check |
+| Observation / input | 목표 전진 속도, 보행 위상의 사인·코사인, 추정한 몸체 방향·관절 위치·속도 | 49차원 정책 입력 | [PDF 3쪽](https://www.roboticsproceedings.org/rss16/p031.pdf#page=3) |
+| State / latent | LSTM의 순환 상태 | 기억 없는 정책과 비교 | [PDF 4쪽](https://www.roboticsproceedings.org/rss16/p031.pdf#page=4) |
+| Output / action | 중립 자세에 더할 모터 위치 목표 | 약 33 Hz 정책과 2 kHz 관절 PD 제어 | [PDF 3쪽](https://www.roboticsproceedings.org/rss16/p031.pdf#page=3) |
 | Target outcome | progress, balance and terrain robustness | velocity/progress, stability, energy와 terrain generalization | metric/denominator are in 04 evidence |
 
 ## Formal Problem Formulation
@@ -33,7 +33,7 @@ PDF body framing (p. 1 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 2 (I. INTRO
 | Formulation field | PDF body-grounded record | Evidence anchor |
 |---|---|---|
 | State / observation variable | body/proprioceptive/terrain state; body terms: State, Space, Action, policy, input, consists, fvel, desired, forward, speed | p. 3 (III. METHOD), p. 2 (II. BACKGROUND), p. 3 (III. METHOD) |
-| Decision / output variable | joint action/torque/footstep; body terms: State, Space, Action, policy, input, consists, fvel, desired | p. 3 (III. METHOD), p. 2 (I. INTRODUCTION), p. 2 (I. INTRODUCTION) |
+| Decision / output variable | 중립 자세에 더할 모터 위치 목표 | [PDF 3쪽](https://www.roboticsproceedings.org/rss16/p031.pdf#page=3) |
 | Objective / loss / cost | return, tracking or stability objective; cue terms: policies, trained, maximize, following, reward, function, qerr, xerr | p. 4 (III. METHOD) |
 | Constraint / feasibility | paper-specific constraints are recorded only where the body states them; otherwise unresolved | p. 3 (III. METHOD), p. 4 (III. METHOD), p. 4 (III. METHOD) |
 | Success / guarantee | progress, balance and terrain robustness | p. 5 (IV. RESULTS), p. 5 (IV. RESULTS), p. 4 (IV. RESULTS) |
@@ -48,7 +48,7 @@ PDF body framing (p. 1 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 2 (I. INTRO
 
 ## What the Paper Changes
 
-PDF body contribution framing (p. 3 (III. METHOD), p. 2 (I. INTRODUCTION), p. 2 (I. INTRODUCTION)): State Space and Action Space The policy's input consists of: Xt =          fvel desired forward speed sin( 2πω L ) clock ...
+속도·위상·로봇 상태 입력을 공유하는 조건에서 순환 정책과 기억 없는 정책을 비교한다. [PDF 3쪽](https://www.roboticsproceedings.org/rss16/p031.pdf#page=3) · [PDF 4쪽](https://www.roboticsproceedings.org/rss16/p031.pdf#page=4)
 
 - **p. 2 / I. INTRODUCTION - extractive body cue:** One of the main contributions of our work is to demonstrate that this approach is highly effective for training RNN controllers for the Cassie biped.
 - **p. 2 / I. INTRODUCTION - extractive body cue:** We show that by randomizing a small number of dynamics parameters over reasonable ranges, the RNNs can be consistently trained in simulation and successfully transferred ...

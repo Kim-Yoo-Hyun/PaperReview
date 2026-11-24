@@ -15,13 +15,11 @@
 - Full-text retrieval: https://www.pure.ed.ac.uk/ws/portalfiles/portal/7874487/NECO_a_00393.pdf
 - Code/Project: not identified
 - Paper type: theory_or_foundation
-- Source audit: full-text PDF body checked on 2026-09-03 (47 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (47 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 한 줄 요약과 핵심 기여 두 개를 각 문장에 인용한 판본의 원문에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Finding an appropriate dynamical systems model for a given behavioral phenomenon is nontrivial due to the parameter sensitivity of nonlinear differential equations and their lack of analytical predictability.
-
-방법 관련 발췌 — In this letter, we propose a generic modeling approach to generate multidimensional systems of weakly nonlinear differential equations to 1With low-dimensional, we refer to systems with less than about 100 degrees of ...
+동적 운동 프리미티브는 안정적인 끌개 동역학에 학습 가능한 강제항을 더해 목표 지향 운동과 반복 운동을 표현한다. [PDF 3쪽](https://www.pure.ed.ac.uk/ws/portalfiles/portal/7874487/NECO_a_00393.pdf#page=3) · [PDF 4쪽](https://www.pure.ed.ac.uk/ws/portalfiles/portal/7874487/NECO_a_00393.pdf#page=4)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 3 / 1 Introduction - extractive body cue:** In this letter, we propose a generic modeling approach to generate multidimensional systems of weakly nonlinear differential equations to 1With low-dimensional, we refer to systems ...
-- **p. 4 / 1 Introduction - extractive body cue:** The essence of our methodology is to transform well-understood simple attractor systems with the help of a learnable forcing function term into a desired attractor ...
-- **p. 6 / 2 A Learnable Nonlinear Attractor Systems - extractive body cue:** Thus, as a novel component, we introduce a replacement of time by means of the following first-order linear dynamics in x τ ˙x = -αxx, ...
-- **p. 4 / 1 Introduction - extractive body cue:** Our approach also provides a metric to compare different dynamical systems in a scale-invariant and temporally invariant way.
-- **p. 3 / 1 Introduction - extractive body cue:** In the wake of the development of nonlinear systems theory (Guckenheimer & Holmes, 1983; Strogatz, 1994; Scott, 2005), it has become common practice in several ...
-- **p. 29 / 3 Evaluations - extractive body cue:** Within two beats (the time needed to extract the frequency from the acoustic signal), perfect synchronization and phase locking is achieved with a 0.15 Hz ...
-- **p. 30 / 3 Evaluations - extractive body cue:** It should be noted that many other coupling terms could be created to achieve similar behavior and that our realization is just a simple and ...
-- **p. 22 / 3 Evaluations - extractive body cue:** For instance, Wada and Kawato (2004) presented an elegant algorithm that recursively fits a demonstrated trajectory with a growing number of spline nodes until an ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 점 끌개와 주기 운동에 각각 위상 변수를 두어 운동 형태를 시간 진행과 분리한다. [PDF 6쪽](https://www.pure.ed.ac.uk/ws/portalfiles/portal/7874487/NECO_a_00393.pdf#page=6) · [PDF 10쪽](https://www.pure.ed.ac.uk/ws/portalfiles/portal/7874487/NECO_a_00393.pdf#page=10)
+- 시연에서 강제항을 맞추고 목표 위치나 시간 척도를 바꿀 때 생성되는 궤적의 변화를 분석한다. [PDF 13쪽](https://www.pure.ed.ac.uk/ws/portalfiles/portal/7874487/NECO_a_00393.pdf#page=13) · [PDF 16쪽](https://www.pure.ed.ac.uk/ws/portalfiles/portal/7874487/NECO_a_00393.pdf#page=16)
 
 ## Evaluation Scope
 
