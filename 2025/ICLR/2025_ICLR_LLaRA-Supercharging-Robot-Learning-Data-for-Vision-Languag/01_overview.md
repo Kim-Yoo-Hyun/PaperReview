@@ -15,13 +15,11 @@
 - Full-text retrieval: https://proceedings.iclr.cc/paper_files/paper/2025/file/909f526db5127f8bd8158af32d9e313a-Paper-Conference.pdf
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (47 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (47 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 요약과 핵심 기여 두 개를 각 문장에 연결한 판본에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — The resulting VLMs exhibit strong vision-language skills, but not without limitations such as spatial awareness (Chen et al., 2023; Ranasinghe et al., 2024b) or niche-domain understanding.
-
-방법 관련 발췌 — Such a formulation based on conversation-style instruction-response data enables us to convert a VLM into a robot action policy effortlessly.
+LLaRA는 기존 로봇 시연을 영상에 관한 대화와 영상 좌표로 표현한 행동 지시로 변환해 VLM을 조작 정책으로 학습한다. [PDF 1쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/909f526db5127f8bd8158af32d9e313a-Paper-Conference.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** Such a formulation based on conversation-style instruction-response data enables us to convert a VLM into a robot action policy effortlessly.
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** Formulating robot manipulation tasks into instruction-response pairs described in natural language, which enables successful instruction tuning of a VLM as a policy.
-- **p. 16 / A.1.1 BUILD inBC DATASET FROM EXPERT TRAJECTORIES - extractive body cue:** Given the current limitations of LLaVA (Liu et al., 2023a), to optimize performance, we propose two techniques: • Action history in query.
-- **p. 17 / A.1.2 BUILD D-inBC FROM inBC - extractive body cue:** We present the performance of D-inBC (L) at Tab.
-- **p. 17 / A.1.1 BUILD inBC DATASET FROM EXPERT TRAJECTORIES - extractive body cue:** The action space consists of two poses: for the robot equipped with a spatula, these poses indicate the start and end points of a push; ...
-- **p. 7 / Figure/Table caption - extractive body cue:** Figure 5: Success rates of the models trained on VIMA subsets. The log-scale x-axis shows the number of expert episodes used in the training set. ...
-- **p. 7 / 6 EXPERIMENTS - extractive body cue:** Methods based on RT-2 Style improve when more robot supervision data is available; however, they significantly underperform compared to our methods when data is limited.
-- **p. 8 / 6 EXPERIMENTS - extractive body cue:** Our best model not only achieves better performance but also requires less input and is trained on only 12% of the expert trajectories used in ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 시연에서 위치와 시간 관계 등 여섯 보조 과제의 정답을 자동 생성해 추가 행동 주석 없이 지시 학습 자료를 확장했다. [PDF 3쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/909f526db5127f8bd8158af32d9e313a-Paper-Conference.pdf#page=3) · [PDF 4쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/909f526db5127f8bd8158af32d9e313a-Paper-Conference.pdf#page=4) · [PDF 5쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/909f526db5127f8bd8158af32d9e313a-Paper-Conference.pdf#page=5)
+- 시뮬레이션과 실물 조작에서 정책을 평가하고 행동을 예측하는 대화에 보조 과제를 추가했을 때 성능 변화를 비교했다. [PDF 6쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/909f526db5127f8bd8158af32d9e313a-Paper-Conference.pdf#page=6) · [PDF 7쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/909f526db5127f8bd8158af32d9e313a-Paper-Conference.pdf#page=7) · [PDF 8쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/909f526db5127f8bd8158af32d9e313a-Paper-Conference.pdf#page=8)
 
 ## Evaluation Scope
 

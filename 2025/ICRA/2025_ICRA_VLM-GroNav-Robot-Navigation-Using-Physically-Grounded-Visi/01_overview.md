@@ -15,13 +15,11 @@
 - Full-text retrieval: https://arxiv.org/pdf/2409.20445v1
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 요약과 핵심 기여 두 개를 각 문장에 연결한 판본에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, using such imagery for effective terrain analysis presents additional challenges; these images may lack sufficient detail to capture the complex characteristics of natural terrain [17].
-
-방법 관련 발췌 — Main contributions: We present VLM-GroNav, a novel navigation method that integrates Vision-Language Models (VLMs) with proprioception-based sensing.
+VLM-GroNav는 야외 지형의 시각적 의미와 로봇이 직접 느낀 미끄러짐·변형 단서를 결합해 주행 가능성을 갱신한다. [PDF 1쪽](https://arxiv.org/pdf/2409.20445v1#page=1)
 
 ## Problem and Motivation
 
@@ -55,13 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / I. INTRODUCTION - extractive body cue:** Main contributions: We present VLM-GroNav, a novel navigation method that integrates Vision-Language Models (VLMs) with proprioception-based sensing.
-- **p. 2 / I. INTRODUCTION - extractive body cue:** This process allows for dynamic trajectory re-planning, informed by both visual cues and updated traversability estimates. • A real-time adaptive local planner: We introduce a ...
-- **p. 3 / IV. OUR APPROACH - extractive body cue:** We propose a novel navigation method that integrates Vision-Language Models (VLMs) with proprioceptive sensing to enable adaptive and robust navigation across complex outdoor terrains.
-- **p. 1 / I. INTRODUCTION - extractive body cue:** 1: Overview of our VLM-GroNav system: Our method uses the given information to achieve a navigation objective.
-- **p. 3 / IV. OUR APPROACH - extractive body cue:** The overall architecture of our method is shown in Fig 2.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 지면을 통과할 때 얻은 고유수용감각을 시각·언어 모델의 문맥 예시로 사용하고, 갱신된 지형 비용을 지역 및 전역 경로 계획에 반영한다. [PDF 3쪽](https://arxiv.org/pdf/2409.20445v1#page=3) · [PDF 4쪽](https://arxiv.org/pdf/2409.20445v1#page=4)
+- 사족 로봇 Ghost Vision 60과 바퀴형 Clearpath Husky를 서로 다른 야외 지형에서 주행시켜 물리 경험을 반영한 경로 선택과 성공률을 평가했다. [PDF 5쪽](https://arxiv.org/pdf/2409.20445v1#page=5) · [PDF 6쪽](https://arxiv.org/pdf/2409.20445v1#page=6)
 
 ## Evaluation Scope
 

@@ -15,13 +15,11 @@
 - Full-text retrieval: https://arxiv.org/pdf/2605.10118.pdf
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (28 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (28 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 요약과 핵심 기여 두 개를 각 문장에 연결한 판본에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — In summary, the key contributions of our work are: • We introduce a novel Generative Experience-Driven Learning paradigm to address the severe data scarcity and real-world transfer challenges in embodied navigation. • ...
-
-방법 관련 발췌 — In summary, the key contributions of our work are: • We introduce a novel Generative Experience-Driven Learning paradigm to address the severe data scarcity and real-world transfer challenges in embodied navigation. • ...
+SAGE는 실제 같은 영상을 합성하는 대신 물리 제약이 있는 추상 장면에서 강화학습한 계획 경험을 실내 탐색에 활용한다. [PDF 1쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/shen26e/shen26e.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -53,16 +51,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** In summary, the key contributions of our work are: • We introduce a novel Generative Experience-Driven Learning paradigm to address the severe data scarcity and ...
-- **p. 2 / 1. Introduction - extractive body cue:** Instead of relying on difficult exploration in the real world, we propose operating the VLM within a physics-grounded sandbox to synthesize diverse tasks and proactively ...
-- **p. 3 / 2.3. Navigation Task - extractive body cue:** To address this, we propose approximating the optimal behavior by maximizing a surrogate objective Jϕ(θ) within the sandbox task distribution O.
-- **p. 1 / 1. Introduction - extractive body cue:** Motivated by these strides, the research community has increasingly focused on developing general-purpose embodied navigation agents.
-- **p. 3 / 2.3. Navigation Task - extractive body cue:** Intuitively, the core objective is to optimize the policy against the synthesized experiences: Jϕ(θ) = E o∼O, at∼πθ(·/st,o), st+1∼P(·/st,at) "X t=0 γtrϕ(st, at, o) # ...
-- **p. 6 / 4.2. Main Navigation Results - extractive body cue:** SAGE demonstrates superior performance, significantly outperforming traditional RL baselines by a large margin.
-- **p. 8 / 4.5. Analysis and Ablation - extractive body cue:** As shown in Table 3, the full SAGE framework achieves substantial improvements of 9.70%/6.03% on A-EQA and 7.52%/8.09% on GOATBench compared to the baselines (Qwen3-VL-2B/4B).
-- **p. 6 / 4.1. Experimental Settings - extractive body cue:** Adhering to the OpenEQA (Majumdar et al., 2024) standards, we quantify performance using LLM-Match Success Rate (SR†) and LLM-Match Success weighted by Path Length (SPL†), ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 단순화한 의미 환경을 생성하고 비대칭 적응 클리핑으로 정책을 갱신한 뒤, 실제 장면 관측과 추상 계획을 연결한다. [PDF 3쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/shen26e/shen26e.pdf#page=3) · [PDF 4쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/shen26e/shen26e.pdf#page=4) · [PDF 5쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/shen26e/shen26e.pdf#page=5)
+- A-EQA에서 보고한 53.21%는 이동 후 나온 답을 LLM이 정답과 대조해 매긴 1~5점을 정규화한 평균이며, 실제 실내 로봇 적용은 별도로 평가했다. [PDF 1쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/shen26e/shen26e.pdf#page=1) · [PDF 6쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/shen26e/shen26e.pdf#page=6) · [PDF 7쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/shen26e/shen26e.pdf#page=7)
 
 ## Evaluation Scope
 

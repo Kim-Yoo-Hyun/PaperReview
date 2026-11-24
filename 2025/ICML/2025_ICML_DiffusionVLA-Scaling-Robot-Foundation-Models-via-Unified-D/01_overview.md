@@ -15,13 +15,11 @@
 - Full-text retrieval: https://raw.githubusercontent.com/mlresearch/v267/main/assets/wen25g/wen25g.pdf
 - Code/Project: not identified
 - Paper type: theory_or_foundation
-- Source audit: full-text PDF body checked on 2026-09-03 (17 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (17 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 요약과 핵심 기여 두 개를 각 문장에 연결한 판본에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, simply combining these elements does not fully exploit the reasoning potential, as there is often an implicit gap between logical reasoning and actionable robot policies.
-
-방법 관련 발췌 — In this section, we introduce the overall framework of our method in Section 3.1 and explore the design choices that inform our model architecture in Section 3.2.
+DiffusionVLA는 자기회귀 언어 모델이 생성한 과제 해석을 확산 정책에 전달해 연속 로봇 행동을 생성한다. [PDF 1쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/wen25g/wen25g.pdf#page=1) · [PDF 2쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/wen25g/wen25g.pdf#page=2)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 3 / 3. Methodology - extractive body cue:** In this section, we introduce the overall framework of our method in Section 3.1 and explore the design choices that inform our model architecture in ...
-- **p. 2 / 1. Introduction - extractive body cue:** In this work, we propose a unified model, named DiffusionVLA (DiVLA in short), that integrates autoregression with a diffusion model.
-- **p. 2 / 1. Introduction - extractive body cue:** To bridge this gap, we propose a reasoning injection module, which reuses reasoning outputs and embeds them directly into the policy head, thus enriching the ...
-- **p. 5 / 3.2. Model Design Choices - extractive body cue:** We illustrate the training strategy and other techniques that we used to improve the efficiency and effectiveness of our method.
-- **p. 5 / 3.1. Architecture - extractive body cue:** Unlike most autoregressive VLAs, which require a recursive setup - converting reasoning outputs into inputs for subsequent model runs - our method proposes a more ...
-- **p. 8 / 4.6. Adapt to Real-World Bimanual Robot - extractive body cue:** In contrast, the Diffusion Policy and OpenVLA achieve 45.8% and 0% success rates.
-- **p. 8 / 4.6. Adapt to Real-World Bimanual Robot - extractive body cue:** For tasks involving both seen and unseen objects, DiVLA achieves up to a 70.8% success rate, a slight decrease in success rate compared to the ...
-- **p. 6 / 4.2. Real-World Multi-Task Learning - extractive body cue:** Our evaluation of these scenarios reveals that while all methods experience a decline in performance due to these visual changes, our method consistently maintains the ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- VLM이 생성한 추론 문구의 표현을 별도 모듈로 행동 정책에 주입해 과제 해석과 세밀한 운동 생성을 연결했다. [PDF 2쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/wen25g/wen25g.pdf#page=2) · [PDF 3쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/wen25g/wen25g.pdf#page=3) · [PDF 4쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/wen25g/wen25g.pdf#page=4)
+- 실물 공장형 분류와 낯선 물체의 빈 피킹에서 정책을 시험하고 양팔 플랫폼으로 적응하는 평가를 수행했다. [PDF 5쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/wen25g/wen25g.pdf#page=5) · [PDF 6쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/wen25g/wen25g.pdf#page=6) · [PDF 8쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/wen25g/wen25g.pdf#page=8)
 
 ## Evaluation Scope
 

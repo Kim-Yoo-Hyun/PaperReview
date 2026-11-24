@@ -15,15 +15,13 @@
 - Full-text retrieval: https://arxiv.org/pdf/2605.17522.pdf
 - Code/Project: https://simonlinsx.github.io/RoboFlow4D_Page/
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (17 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (17 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 요약과 핵심 기여 두 개를 각 문장에 연결한 판본에서 확인했다.
 
 > DOC-QA3 (2026-10-23): [RoboFlow4D의 지정 수식·공개 구현 대조](./03_method.md). Commit `31c950750f0074067cd7c8ff5df86b8d6fa6f223`의 정적 검토이며 paper-run 버전·실행 결과는 미확인. [결과와 경계](https://github.com/Kim-Yoo-Hyun/PaperReview/blob/cb650415f47a2a45ad883dabe5bd20c382b5c183/work/update/PAPER_CODE_FORMULA_REVIEW_2026-10-23.md).
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Although this paradigm has demonstrated substantial effectiveness, it still encounters unknown failures.
-
-방법 관련 발췌 — To enable real-time robotic deployment, we propose RoboFlow4D, an end-to-end lightweight world model that directly predicts a sequence of multi-frame 3D flows (i.e., flows across 4D spacetime), conditioned on RGB images and ...
+RoboFlow4D는 영상 관측과 지시에서 여러 미래 시점의 3차원 점 이동을 예측하고 이를 로봇 조작 정책의 계획으로 사용한다. [PDF 1쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/lin26g/lin26g.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -57,16 +55,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** To enable real-time robotic deployment, we propose RoboFlow4D, an end-to-end lightweight world model that directly predicts a sequence of multi-frame 3D flows (i.e., flows across ...
-- **p. 2 / 1. Introduction - extractive body cue:** Unlike the traditional cascaded planning-control architecture (Xu et al., 2024; AgiBot-World-Contributors et al., 2025), our framework adopts a dual-system architecture enabling slow-fast collaboration (Kahneman, 2011; ...
-- **p. 5 / 3.2. RoboFlow4D - extractive body cue:** To enhance perceptual capability, we introduce a spatiotemporal cross-attention to replace the original MHA in each DiT block.
-- **p. 5 / 3.2. RoboFlow4D - extractive body cue:** The FlowDiT module consists of N stacked diffusion transformer (DiT) (Peebles & Xie, 2023) blocks and an MLP Projector, where each block comprises adaptive layer ...
-- **p. 1 / 1. Introduction - extractive body cue:** This observation →action paradigm enables a wide range of general-purpose skills such as grasping, pushing, and stacking (Liu et al., 2024a; Kim et al., 2024; ...
-- **p. 6 / 4.2. Main Results - extractive body cue:** DP achieves substantial improvements in success rates of 8.2%, 8.0%, and 6.2% on Spatial, Long, and average, respectively.
-- **p. 8 / Figure/Table caption - extractive body cue:** Figure 4. Real-world robot platform. consistently improves success rates by a large margin and reduces task completion time across various policies, includ- ing DP and ...
-- **p. 8 / 4.4. Real-World Experiments - extractive body cue:** Generally, both DP and DiT equipped with RoboFlow4D achieve better or competitive success rates and less task completion time compared to other approaches.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 비교적 느리게 갱신하는 흐름 예측과 더 자주 실행하는 행동 제어를 연결해, 물체의 예상 움직임을 정책에 제공한다. [PDF 3쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/lin26g/lin26g.pdf#page=3) · [PDF 4쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/lin26g/lin26g.pdf#page=4) · [PDF 5쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/lin26g/lin26g.pdf#page=5)
+- 시뮬레이션과 실제 조작에서 흐름 계획을 사용하는 정책을 비교하고, 성공률과 계획 계산에 드는 비용을 함께 분석했다. [PDF 6쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/lin26g/lin26g.pdf#page=6) · [PDF 7쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/lin26g/lin26g.pdf#page=7) · [PDF 8쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/lin26g/lin26g.pdf#page=8)
 
 ## Evaluation Scope
 

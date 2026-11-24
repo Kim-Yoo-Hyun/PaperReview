@@ -15,13 +15,11 @@
 - Full-text retrieval: https://proceedings.iclr.cc/paper_files/paper/2026/file/b81d83165e3145a2e7d33bb5e33ea913-Paper-Conference.pdf
 - Code/Project: not identified
 - Paper type: benchmark_or_dataset
-- Source audit: full-text PDF body checked on 2026-09-03 (68 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (68 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 요약과 핵심 기여 두 개를 각 문장에 연결한 판본에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Although web-scale multimodal data enables broad semantic reasoning, existing large-scale robot datasets (et al., 2023; Khazatsky et al., 2024; Wu et al., 2024; Bu et al., 2025) remain costly and tightly coupled ...
-
-방법 관련 발췌 — To address this gap, we propose the RoboInter Manipulation Suite, illustrated in Figure.1.
+RoboInter는 조작 궤적에서 고수준 계획과 저수준 행동을 이어 주는 중간 표현을 주석화하고 평가하기 위한 자료·도구·모델을 제공한다. [PDF 1쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/b81d83165e3145a2e7d33bb5e33ea913-Paper-Conference.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -54,16 +52,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** To address this gap, we propose the RoboInter Manipulation Suite, illustrated in Figure.1.
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** Built upon the high-level VLM planner trained on these curated VQA data, we introduce RoboInter-VLA, an integrated plan-then-execute framework that supports both modular and end2
-- **p. 1 / 1 INTRODUCTION - extractive body cue:** Although web-scale multimodal data enables broad semantic reasoning, existing large-scale robot datasets (et al., 2023; Khazatsky et al., 2024; Wu et al., 2024; Bu et ...
-- **p. 1 / 1 INTRODUCTION - extractive body cue:** Meanwhile, many endto-end VLAs (Zhou et al., 2025b; Yang et al., 2025b; Zawalski et al., 2024; Shi et al., 2025; Lin et al., 2025; Deng ...
-- **p. 3 / 1 INTRODUCTION - extractive body cue:** Through extensive experiments, we show that RoboInter-Data substantially improves the reasoning and grounding capabilities of VLM planners, particularly in understanding and generating various embodied intermediate ...
-- **p. 18 / A.1.1 EXPERIMENTAL SETTING - extractive body cue:** 60.0%) and achieves a higher average success rate (60.0% vs.
-- **p. 9 / 3 DATASET - extractive body cue:** The most significant improvement comes from Trace, which introduces dense, temporally grounded information and achieves the strongest overall performance.
-- **p. 25 / A.3.1 OPEN-LOOP CROSS-PLATFORM EVALUATION - extractive body cue:** The results show that all RoboInterVLA variants consistently outperform the vanilla baseline across platforms, with the Modular configuration achieving the best overall accuracy among learned ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 반자동 주석 도구로 시연 영상의 프레임에 공간·시간 단서를 부여하고, 이를 이용해 로봇 작업에 관한 질의응답 과제를 구성했다. [PDF 3쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/b81d83165e3145a2e7d33bb5e33ea913-Paper-Conference.pdf#page=3) · [PDF 4쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/b81d83165e3145a2e7d33bb5e33ea913-Paper-Conference.pdf#page=4) · [PDF 5쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/b81d83165e3145a2e7d33bb5e33ea913-Paper-Conference.pdf#page=5)
+- 중간 계획을 행동 정책에 전달하는 모듈형과 종단간 모델을 구현하고, 기록된 행동을 예측하는 평가와 실물 조작을 구분해 시험했다. [PDF 6쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/b81d83165e3145a2e7d33bb5e33ea913-Paper-Conference.pdf#page=6) · [PDF 9쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/b81d83165e3145a2e7d33bb5e33ea913-Paper-Conference.pdf#page=9) · [PDF 10쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/b81d83165e3145a2e7d33bb5e33ea913-Paper-Conference.pdf#page=10)
 
 ## Evaluation Scope
 

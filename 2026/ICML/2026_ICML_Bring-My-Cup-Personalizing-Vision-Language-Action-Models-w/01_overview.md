@@ -15,13 +15,11 @@
 - Full-text retrieval: https://arxiv.org/pdf/2512.20014.pdf
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (48 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (48 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 요약과 핵심 기여 두 개를 각 문장에 연결한 판본에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — To bridge this semantic gap, we formulate the challenge of manipulating personal objects.
-
-방법 관련 발췌 — Our main contributions are as follows: • Personal Object Manipulation: We introduce a personalization task for VLAs where the policy must manipulate user-specific objects among visually similar distractors using only a few ...
+Visual Attentive Prompting은 참조 사진 몇 장으로 사용자가 원하는 특정 물체를 찾아, 기존 VLA가 비슷한 물체들 중 올바른 대상을 조작하도록 한다. [PDF 1쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/lee26ax/lee26ax.pdf#page=1) · [PDF 2쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/lee26ax/lee26ax.pdf#page=2)
 
 ## Problem and Motivation
 
@@ -52,16 +50,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 3 / 1. Introduction - extractive body cue:** Our main contributions are as follows: • Personal Object Manipulation: We introduce a personalization task for VLAs where the policy must manipulate user-specific objects among ...
-- **p. 2 / 1. Introduction - extractive body cue:** We propose Visual Attentive Prompting (VAP), a training-free framework that injects instance-awareness into frozen VLAs by intervening only on their inputs.
-- **p. 4 / 3.1. Problem Formulation - extractive body cue:** While exact gradientbased optimization would be computationally prohibitive, we propose VAP as a zero-shot approximation.
-- **p. 4 / 3.1. Problem Formulation - extractive body cue:** The category is known, but the specific instance is novel and unseen during training, and at test time the robot encounters o amidst visually similar ...
-- **p. 8 / 5.4. Results on Real-world Benchmark - extractive body cue:** VAP improves average SR from 18.8% to 58.8%, significantly outperforming soft/hard prompts which remain in the 27.5-31.2% range.
-- **p. 7 / 5.1. Experimental Setup - extractive body cue:** VAP's modular perception pipeline achieves consistently high success rates, whereas prior methods struggle to personalize.
-- **p. 8 / 5.2. Baselines - extractive body cue:** This optimized setup achieves > 95% accuracy on VQA recognition probes, and we further verify that the learned token transfers to the VLA with minimal ...
-- **p. 7 / 5.1. Experimental Setup - extractive body cue:** We report Success Rate (SR), the fraction of episodes that complete the task, following standard VLA evaluations (Intelligence et al., 2025; Kim et al., 2024).
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 참조 사진을 시각 기억으로 저장하고 물체 검출과 특징 대응으로 현재 영상의 대상을 표시한 뒤 언어 지시를 다시 써서 고정된 정책에 제공한다. [PDF 4쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/lee26ax/lee26ax.pdf#page=4) · [PDF 5쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/lee26ax/lee26ax.pdf#page=5)
+- 두 개인화 시뮬레이션 벤치마크와 실제 탁상 과제를 만들어, 작업 성공 여부와 올바른 물체를 조작했는지를 구분해 평가했다. [PDF 6쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/lee26ax/lee26ax.pdf#page=6) · [PDF 7쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/lee26ax/lee26ax.pdf#page=7) · [PDF 8쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/lee26ax/lee26ax.pdf#page=8) · [PDF 9쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/lee26ax/lee26ax.pdf#page=9)
 
 ## Evaluation Scope
 

@@ -32,6 +32,8 @@ EMAIL_RE = re.compile(r"\b[A-Za-z0-9._%+\-]+@[A-Za-z0-9.\-]+\.[A-Za-z]{2,}\b")
 # PDF fonts can map parentheses, minus signs, or Greek symbols to these
 # codepoints. Detect them, but never guess a replacement without the source.
 CONTROL_RE = re.compile(r"[\x00-\x08\x0b\x0c\x0e-\x1f\x7f-\x9f]")
+# A PDF may render a ligature or a mathematical symbol through a private font mapping.
+PRIVATE_USE_RE = re.compile(r"[\ue000-\uf8ff\U000f0000-\U000ffffd\U00100000-\U0010fffd]")
 FRONT_MATTER_RE = re.compile(r"front matter", re.I)
 EQUAL_RE = re.compile(
     r"(?:[*†‡∗]\s*)?(?:equal (?:contribution|contributions|advising)|"
@@ -129,6 +131,8 @@ def issue_kinds(line: str) -> list[str]:
     issues: list[str] = []
     if CONTROL_RE.search(line):
         issues.append("control_character_source_review_required")
+    if PRIVATE_USE_RE.search(line):
+        issues.append("private_use_glyph_source_review_required")
     if FRONT_MATTER_RE.search(line):
         issues.append("front_matter_anchor")
     if EQUAL_RE.search(line):
@@ -237,7 +241,7 @@ def finish_body_prefix(prefix: str) -> str:
 
 
 def clean_line(line: str, changes: Counter[str]) -> str | None:
-    if CONTROL_RE.search(line):
+    if CONTROL_RE.search(line) or PRIVATE_USE_RE.search(line):
         return line
     newline = "\n" if line.endswith("\n") else ""
     content = line[:-1] if newline else line
@@ -504,6 +508,7 @@ def main() -> int:
             ],
             "manual_review_only": [
                 "C0/C1 control characters: preserve the note; original PDF comparison required",
+                "Private-use glyphs: preserve the affected line for comparison with the rendered source",
                 "ambiguous section labels such as a university/institute heading",
                 "OCR corruption that cannot be safely reconstructed",
                 "claims requiring the original PDF or experiment context",

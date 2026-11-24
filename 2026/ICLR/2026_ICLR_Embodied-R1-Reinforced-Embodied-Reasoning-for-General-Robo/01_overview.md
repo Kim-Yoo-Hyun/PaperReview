@@ -15,13 +15,11 @@
 - Full-text retrieval: https://proceedings.iclr.cc/paper_files/paper/2026/file/0f7ad318868d228b980b13cf827e85f4-Paper-Conference.pdf
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (26 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (26 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 요약과 핵심 기여 두 개를 각 문장에 연결한 판본에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — This disparity is widely recognized as the "seeing-to-doing gap" (Yuan et al., 2025): a failure to reliably translate rich perceptual understanding into effective robotic actions.
-
-방법 관련 발췌 — To bridge this gap, we propose pointing as an intuitive and effective paradigm to connect high-level understanding with generalizable action.
+Embodied-R1은 영상의 점을 가리키는 표현으로 언어 지시와 로봇별 동작을 연결하고 이 공간 추론 능력을 강화학습으로 개선한다. [PDF 1쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/0f7ad318868d228b980b13cf827e85f4-Paper-Conference.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -52,16 +50,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 1 / 1 INTRODUCTION - extractive body cue:** To bridge this gap, we propose pointing as an intuitive and effective paradigm to connect high-level understanding with generalizable action.
-- **p. 1 / 1 INTRODUCTION - extractive body cue:** Simultaneously, its embodiment-agnostic nature enables knowledge transfer across diverse robot platforms, resolving the heterogeneity challenge.
-- **p. 18 / B IMPLEMENTATION DETAILS OF EMBODIED-R1 - extractive body cue:** Second, for the VTG task, we introduced an additional constraint on the format: the generated visual trace must consist of exactly 8 points.
-- **p. 9 / 4 EXPERIMENTS - extractive body cue:** 5, Embodied-R1 achieves an 87.5% zero-shot success rate, an improvement of over 60% compared to the RoboPoint and FSD baselines.
-- **p. 9 / 4 EXPERIMENTS - extractive body cue:** We attribute this significant improvement to the baselines' poor performance on tasks requiring spatial reasoning (e.g., moving the nearest object) and their low success rates ...
-- **p. 7 / 4 EXPERIMENTS - extractive body cue:** It achieves an average rank of 2.1, significantly outperforming its variants trained without common-sense data (Embodied-R1 w/o CS, Rank 3.4) or with only SFT (Embodied-SFT, ...
-- **p. 24 / Figure/Table caption - extractive body cue:** Figure 12: Case Analysis: Embodied-R1 possesses embodied reasoning capabilities. It can progressively locate relevant objects and infer spatial relationships according to task instructions, and ultimately ...
-- **p. 8 / 4 EXPERIMENTS - extractive body cue:** (O4) Embodied-R1 significantly outperforms models trained solely with SFT.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 네 종류의 위치 지시 능력을 구분해 Embodied-Points-200K를 구성하고, 과제별 보상을 둔 두 단계 후학습을 적용했다. [PDF 3쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/0f7ad318868d228b980b13cf827e85f4-Paper-Conference.pdf#page=3) · [PDF 5쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/0f7ad318868d228b980b13cf827e85f4-Paper-Conference.pdf#page=5) · [PDF 6쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/0f7ad318868d228b980b13cf827e85f4-Paper-Conference.pdf#page=6)
+- 공간 위치 추론의 정답률을 비교한 뒤 예측한 점을 동작에 연결해 SimplerEnv와 실제 xArm 여덟 과제에서 과제별 추가 학습 없이 평가했다. [PDF 7쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/0f7ad318868d228b980b13cf827e85f4-Paper-Conference.pdf#page=7) · [PDF 8쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/0f7ad318868d228b980b13cf827e85f4-Paper-Conference.pdf#page=8) · [PDF 9쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/0f7ad318868d228b980b13cf827e85f4-Paper-Conference.pdf#page=9)
 
 ## Evaluation Scope
 

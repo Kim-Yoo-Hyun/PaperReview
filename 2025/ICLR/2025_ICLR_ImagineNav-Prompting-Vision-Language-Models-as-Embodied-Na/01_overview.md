@@ -15,13 +15,11 @@
 - Full-text retrieval: https://proceedings.iclr.cc/paper_files/paper/2025/file/eb261df4322a8bd0a73093c4d8a0d02d-Paper-Conference.pdf
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (15 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (15 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 요약과 핵심 기여 두 개를 각 문장에 연결한 판본에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, one limitation of LLMs is their difficulty in embedding the robot's state directly into the planning process.
-
-방법 관련 발췌 — In summary, our contributions are: • We propose a mapless navigation approach ImagineNav.
+ImagineNav는 후보 위치에서 보일 장면을 먼저 상상해 목표 물체를 찾기에 유리한 다음 이동 지점을 선택한다. [PDF 1쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/eb261df4322a8bd0a73093c4d8a0d02d-Paper-Conference.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** In summary, our contributions are: • We propose a mapless navigation approach ImagineNav.
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** We also provide a detailed ablation analysis to help understand the important conclusions in our framework.
-- **p. 3 / 1 INTRODUCTION - extractive body cue:** We propose a new decision-making paradigm based on imagined imagery, wherein decisions are made on imaginations, enabling more nuanced, context-aware interactions that better harness VLMs' ...
-- **p. 4 / 3 METHODOLOGY - extractive body cue:** The discrete action space consists of the following commands: {Stop, MoveAhead, TurnLeft, TurnRight, LookUp, LookDown}.
-- **p. 5 / 3 METHODOLOGY - extractive body cue:** 3.2 FUTURE-VIEW IMAGINATION To better leverage the spatial perception and reasoning capabilities of VLMs for open-vocabulary object navigation in unknown environments, we propose an future-view ...
-- **p. 7 / 4 EXPERIMENTS - extractive body cue:** On the HM3D dataset, ImagineNav achieves a success rate of 53.0% and a SPL of 23.8%, significantly outperforming most of the methods especially at success ...
-- **p. 7 / 4 EXPERIMENTS - extractive body cue:** Moreover, ImagineNav achieves the highest success rate and SPL on the HSSD dataset.
-- **p. 8 / 4 EXPERIMENTS - extractive body cue:** Further incorporating Where2Image improve success rate from 55.0 to 64.0, and from 49.0 to 56.0 under settings of ‘NVS' and ‘w/o NVS', respectively.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 사람의 탐색 행동을 바탕으로 후보 시점을 생성하고, 각 후보에서의 예상 영상을 VLM에 제시해 이동할 곳을 고르게 했다. [PDF 4쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/eb261df4322a8bd0a73093c4d8a0d02d-Paper-Conference.pdf#page=4) · [PDF 5쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/eb261df4322a8bd0a73093c4d8a0d02d-Paper-Conference.pdf#page=5)
+- 선택한 시점까지는 점 목표 내비게이션 정책으로 이동하고, 개방 어휘 물체 탐색에서 후보 생성과 장면 상상의 기여를 따로 평가했다. [PDF 6쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/eb261df4322a8bd0a73093c4d8a0d02d-Paper-Conference.pdf#page=6) · [PDF 7쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/eb261df4322a8bd0a73093c4d8a0d02d-Paper-Conference.pdf#page=7) · [PDF 8쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/eb261df4322a8bd0a73093c4d8a0d02d-Paper-Conference.pdf#page=8)
 
 ## Evaluation Scope
 

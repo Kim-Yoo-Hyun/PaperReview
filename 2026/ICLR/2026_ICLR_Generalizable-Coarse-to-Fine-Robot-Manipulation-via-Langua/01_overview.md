@@ -15,13 +15,11 @@
 - Full-text retrieval: https://proceedings.iclr.cc/paper_files/paper/2026/file/314129fede356d33eb7719d9edb01cc7-Paper-Conference.pdf
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (19 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (19 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 요약과 핵심 기여 두 개를 각 문장에 연결한 판본에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — For simulation, we use GemBench (Garcia et al., 2025), a benchmark specifically designed to assess the generalization ability of multi-task language-conditioned policies across varying difficulty levels.
-
-방법 관련 발췌 — In real-world experiments, our method demonstrate strong generalization ability to novel tasks and object variations with only 10 demonstrations per task.
+CLAP는 언어 지시가 가리키는 3차원 키포인트로 작업 영역을 좁힌 뒤 정밀한 로봇팔 동작을 예측한다. [PDF 1쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/314129fede356d33eb7719d9edb01cc7-Paper-Conference.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** In real-world experiments, our method demonstrate strong generalization ability to novel tasks and object variations with only 10 demonstrations per task.
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** To address these limitations and issues, we propose Coarse-to-fine Language-Aligned manipulation Policy (CLAP), a novel coarse-to-fine 3D manipulation policy.
-- **p. 5 / 4 METHOD - extractive body cue:** Our hierarchical policy consists of a coarse task planner and a fine-grained action predictor, as shown in Figure 2.
-- **p. 6 / 4 METHOD - extractive body cue:** To mitigate this, we introduce two ideas.
-- **p. 6 / 4 METHOD - extractive body cue:** To address this issue, we propose decoupling task planning from keypoint prediction via a two-round inference protocol.
-- **p. 8 / Figure/Table caption - extractive body cue:** Table 2: Ablation study of CLAP on GemBench. Here are the average success rates of 4 levels of evaluation tasks from Gembench under different training ...
-- **p. 7 / 5 EXPERIMENTS - extractive body cue:** Our method achieves an overall success rate 12% higher than prior 7
-- **p. 9 / 5 EXPERIMENTS - extractive body cue:** CLAP achieves 54.8% higher average success rates compared to RVT2 on the evaluation tasks.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 복합 지시를 하위 과제로 나누고 VLM을 키포인트 예측에 맞게 학습해, 지역 3차원 표현을 쓰는 행동 모듈에 목표 영역을 전달한다. [PDF 4쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/314129fede356d33eb7719d9edb01cc7-Paper-Conference.pdf#page=4) · [PDF 5쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/314129fede356d33eb7719d9edb01cc7-Paper-Conference.pdf#page=5) · [PDF 6쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/314129fede356d33eb7719d9edb01cc7-Paper-Conference.pdf#page=6)
+- GemBench의 새로운 지시·환경 조건에서 비교하고, 실물에서는 과제별 시연 열 개로 훈련한 정책의 일반화를 평가했다. [PDF 8쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/314129fede356d33eb7719d9edb01cc7-Paper-Conference.pdf#page=8) · [PDF 9쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/314129fede356d33eb7719d9edb01cc7-Paper-Conference.pdf#page=9)
 
 ## Evaluation Scope
 

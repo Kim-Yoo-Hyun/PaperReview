@@ -15,13 +15,11 @@
 - Full-text retrieval: https://proceedings.iclr.cc/paper_files/paper/2025/file/a3cf318fbeec1126da21e9185ae9908c-Paper-Conference.pdf
 - Code/Project: not identified
 - Paper type: benchmark_or_dataset
-- Source audit: full-text PDF body checked on 2026-09-03 (64 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (64 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 요약과 핵심 기여 두 개를 각 문장에 연결한 판본에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Through systematic evaluation, we reveal critical insights into the current limitations of LLM-based planners, opening interesting future research directions.
-
-방법 관련 발췌 — To bridge this gap, we introduce Planning And Reasoning Tasks in humaN-Robot collaboration (PARTNR), a novel benchmark that evaluates the ability of embodied AI agents to collaborate with humans across a range ...
+PARTNR는 사람과 로봇이 가정에서 협력할 때 공간·시간 순서와 각자의 능력 제약을 만족하는지 평가하는 시뮬레이션 벤치마크다. [PDF 1쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/a3cf318fbeec1126da21e9185ae9908c-Paper-Conference.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 1 / 1 INTRODUCTION - extractive body cue:** To bridge this gap, we introduce Planning And Reasoning Tasks in humaN-Robot collaboration (PARTNR), a novel benchmark that evaluates the ability of embodied AI agents ...
-- **p. 1 / 1 INTRODUCTION - extractive body cue:** Instead, we propose a semi-automated approach using 1
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** LLM-based helper agents LLM Planner We propose modular LLM-based agent baselines to collaborate in our benchmark.
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** As PARTNR consists of natural language tasks and LLMs have shown strong results in planning (Yao et al., 2023; Ahn et al., 2022; Huang et ...
-- **p. 10 / Figure/Table caption - extractive body cue:** Table 3: Human-in-the-Loop Evaluation. We evaluate the performance of a 2-person human team and human-LLM teams, comparing them to solo human performance on PARTNR tasks ...
-- **p. 35 / Figure/Table caption - extractive body cue:** Table 11: Baseline results on PARTNR test set. We measure performance using simulation steps required to finish the episode, success rate and completion rate on ...
-- **p. 9 / Figure/Table caption - extractive body cue:** Table 2: Analysis of planner baselines in various settings. We compare performance using simula- tion steps, success rate and percent complete on the tasks, and ...
-- **p. 37 / Figure/Table caption - extractive body cue:** Table 13: Task performance per task type. Average and standard errors of task success rate for episodes from the validation set categorized by task type. ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 언어 모델로 가사 과제를 생성한 뒤 시뮬레이션에서 검증해 60개 주택을 대상으로 한 자연어 과제 10만 개를 구성했다. [PDF 3쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/a3cf318fbeec1126da21e9185ae9908c-Paper-Conference.pdf#page=3) · [PDF 4쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/a3cf318fbeec1126da21e9185ae9908c-Paper-Conference.pdf#page=4) · [PDF 5쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/a3cf318fbeec1126da21e9185ae9908c-Paper-Conference.pdf#page=5)
+- 계획·지각·기술 실행의 영향을 분리해 분석하고 실제 사람이 시뮬레이터에 참여하는 비교에서 협동 완료에 걸리는 단계를 측정했다. [PDF 9쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/a3cf318fbeec1126da21e9185ae9908c-Paper-Conference.pdf#page=9) · [PDF 10쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/a3cf318fbeec1126da21e9185ae9908c-Paper-Conference.pdf#page=10)
 
 ## Evaluation Scope
 

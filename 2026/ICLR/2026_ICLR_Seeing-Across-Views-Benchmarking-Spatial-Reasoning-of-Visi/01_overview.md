@@ -15,13 +15,11 @@
 - Full-text retrieval: https://proceedings.iclr.cc/paper_files/paper/2026/file/fb1b83b35e96998ddfc0ce1dab635445-Paper-Conference.pdf
 - Code/Project: not identified
 - Paper type: benchmark_or_dataset
-- Source audit: full-text PDF body checked on 2026-09-03 (50 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (50 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 요약과 핵심 기여 두 개를 각 문장에 연결한 판본에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — By isolating failure modes in multi-view grounding rather than in isolated perception, MVRoboBench exposes the precise bottlenecks that future embodied AI systems must overcome.
-
-방법 관련 발췌 — To fill this gap, we introduce MV-RoboBench, a benchmark specifically designed to evaluate multiview spatial reasoning in robotic manipulation scenarios.
+MV-RoboBench는 여러 카메라에서 본 로봇 작업 장면을 종합해 공간 관계와 조작 선택에 관한 질문에 답하는 능력을 측정한다. [PDF 1쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/fb1b83b35e96998ddfc0ce1dab635445-Paper-Conference.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** To fill this gap, we introduce MV-RoboBench, a benchmark specifically designed to evaluate multiview spatial reasoning in robotic manipulation scenarios.
-- **p. 3 / 1 INTRODUCTION - extractive body cue:** 2 MV-ROBOBENCH 2.1 OVERVIEW We introduce MV-RoboBench, a benchmark designed to evaluate the multi-view reasoning capabilities of VLMs in robotic manipulation scenarios.
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** Our key contributions are as follows: • We establish the first benchmark that integrates spatial and robotic reasoning with synchronized multi-view inputs in robotic manipulation ...
-- **p. 23 / C.4 STRUCTURAL AUGMENTATION VIA DEPTH PRIORS - extractive body cue:** This design enables rapid prototyping of spatial arrangements and provides a consistent interface for generating QA items that require reasoning about relative positions and geometric ...
-- **p. 5 / 1 INTRODUCTION - extractive body cue:** For each subtask, task-specific templates were designed, and trained annotators constructed corresponding five-choice QA pairs from the curated image pairs.
-- **p. 33 / Figure/Table caption - extractive body cue:** Table 7: Comparison of Single-View vs. Multi-View performance on selected subtasks. The values represent Multi-View accuracy, and values in parentheses indicate the change (∆) compared ...
-- **p. 8 / Figure/Table caption - extractive body cue:** Table 3: Accuracy of CoT-style augmentations on MV-RoboBench. ∆s and ∆r indicate changes on spatial and robotic tasks relative to the origin baseline. Variants: w ...
-- **p. 37 / C.4 STRUCTURAL AUGMENTATION VIA DEPTH PRIORS - extractive body cue:** This suggests that MV-RoboBench does not merely lower raw accuracy; it exposes non-trivial limitations in current vision-language models' spatial reasoning, and can serve as a ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 공간 이해와 로봇 실행 판단을 여덟 하위 과제로 나누고 사람이 검수한 질의응답을 구축했다. [PDF 4쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/fb1b83b35e96998ddfc0ce1dab635445-Paper-Conference.pdf#page=4) · [PDF 5쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/fb1b83b35e96998ddfc0ce1dab635445-Paper-Conference.pdf#page=5)
+- 공개·비공개 VLM과 사람의 답을 비교하고 단일 시점 벤치마크 점수가 다중 시점 조작 장면의 정답률을 얼마나 설명하는지 검사했다. [PDF 6쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/fb1b83b35e96998ddfc0ce1dab635445-Paper-Conference.pdf#page=6) · [PDF 7쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/fb1b83b35e96998ddfc0ce1dab635445-Paper-Conference.pdf#page=7) · [PDF 8쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/fb1b83b35e96998ddfc0ce1dab635445-Paper-Conference.pdf#page=8)
 
 ## Evaluation Scope
 

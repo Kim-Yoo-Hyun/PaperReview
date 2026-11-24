@@ -15,13 +15,11 @@
 - Full-text retrieval: https://arxiv.org/pdf/2601.05248.pdf
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (23 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (23 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 요약과 핵심 기여 두 개를 각 문장에 연결한 판본에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — 1, unlike prior explicit CoT-based VLA methods, LaST0 performs reasoning in a compact latent space, enabling the capture of fine-grained physical and robotic dynamics that are difficult to verbalize, while supporting temporally ...
-
-방법 관련 발췌 — Our contributions are summarized as follows: • We propose LaST0, a unified VLA model that enables efficient reason-before-act behavior through a Latent SpatioTemporal CoT, performing reasoning in a compact latent space to ...
+LaST₀는 로봇이 다음 행동을 내기 전에 미래 시각 변화, 3차원 구조, 고유수용 상태를 잠재 토큰에서 예측하도록 한다. [PDF 1쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/liu26ch/liu26ch.pdf#page=1) · [PDF 2쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/liu26ch/liu26ch.pdf#page=2)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** Our contributions are summarized as follows: • We propose LaST0, a unified VLA model that enables efficient reason-before-act behavior through a Latent SpatioTemporal CoT, performing ...
-- **p. 2 / 1. Introduction - extractive body cue:** In this paper, we propose LaST0, a dual-system VLA model that enables efficient reason-before-act behavior through a Latent Spatio-Temporal Chain-of-Thought (CoT).
-- **p. 3 / 3.1. Preliminaries - extractive body cue:** Specifically, this control vector consists of 3-DoF for relative positional offsets ([∆x, ∆y, ∆z] ∈R3), 3-DoF for rotation (represented as Euler angles [roll, pitch, yaw] ...
-- **p. 3 / 3.2. LaST0 Architecture - extractive body cue:** In our framework, these encoded features fimg serve a dual purpose: the current frame acts as real-time contextual input to the MoT experts, while future ...
-- **p. 4 / 3.2. LaST0 Architecture - extractive body cue:** Framework. a) We propose LaST0, a unified VLA model with a dual-system architecture.
-- **p. 8 / 4.3. Real-World Experiment - extractive body cue:** As shown in Table 3, LaST0 achieves the best overall performance on realworld manipulation tasks, with a mean success rate of 72% (±3) on Franka ...
-- **p. 7 / 15.4 Hz - extractive body cue:** In this suite, LaST0 achieves a 95.6% success rate, outperforming strong baselines such as OpenVLA-OFT (94.5%) and π0.5 (92.4%).
-- **p. 7 / 15.4 Hz - extractive body cue:** As shown in Table 2, LaST0 consistently outperforms all baselines, achieving a SOTA mean success rate of 98.1%.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 미래의 여러 시점에 대한 공간·시간 표현을 짧은 잠재 추론열로 만들고 이를 행동 생성에 전달해 명시적 문장 생성의 지연을 줄인다. [PDF 4쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/liu26ch/liu26ch.pdf#page=4) · [PDF 5쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/liu26ch/liu26ch.pdf#page=5) · [PDF 6쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/liu26ch/liu26ch.pdf#page=6)
+- 시뮬레이션과 실물 조작에서 기준 정책과 성공률을 비교하고 잠재 추론의 길이와 구성에 따른 수행 차이를 검사했다. [PDF 7쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/liu26ch/liu26ch.pdf#page=7) · [PDF 8쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/liu26ch/liu26ch.pdf#page=8) · [PDF 9쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/liu26ch/liu26ch.pdf#page=9)
 
 ## Evaluation Scope
 

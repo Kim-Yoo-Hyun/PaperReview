@@ -15,13 +15,11 @@
 - Full-text retrieval: https://arxiv.org/pdf/2403.11898v2
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (7 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (7 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 요약과 핵심 기여 두 개를 각 문장에 연결한 판본에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Achieving proficiency in complex manipulation tasks remains a longstanding challenge in robotics, with applications ranging from industrial automation to clay sculpting [1], [2].
-
-방법 관련 발췌 — Next, we propose a new methodology for using tactile data in imitation learning: VITaL (Vison-only Imitation using Tactile Latent) pretraining, in which we discard the tactile encoder and use the pretrained vision ...
+VITaL은 시연에 동기화된 영상과 촉각을 사전학습에 사용했을 때 실행 중 영상을 쓰는 조작 정책에도 이득이 전달되는지 검증한다. [PDF 1쪽](https://arxiv.org/pdf/2403.11898v2#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 1 / I. INTRODUCTION - extractive body cue:** Next, we propose a new methodology for using tactile data in imitation learning: VITaL (Vison-only Imitation using Tactile Latent) pretraining, in which we discard the ...
-- **p. 3 / III. METHODS - extractive body cue:** A vision projection head, pϕV : Z →L, and a tactile projection head, qϕT : Z, P →L, each of which consists of a single ...
-- **p. 1 / I. INTRODUCTION - extractive body cue:** Our primary contribution is a pretraining strategy for these SOTA imitation learning frameworks, leveraging the multimodal nature of our data to incorporate a temporalbased visual-tactile ...
-- **p. 4 / III. METHODS - extractive body cue:** 2) Diffusion Policy: Our approach to diffusion policy was based on the implementation by [11] that generates action sequences conditioned on observations with DDPM.
-- **p. 4 / III. METHODS - extractive body cue:** We used the Oculus Virtual Reality (VR) teleoperation pipeline developed by [38], which tracks the Quest's controller using the headset.
-- **p. 5 / IV. EXPERIMENTAL EVALUATION - extractive body cue:** This is significantly higher than the 20% and 45% success rates that learning from vision only with ACT and diffusion policy (respectively) achieves.
-- **p. 6 / IV. EXPERIMENTAL EVALUATION - extractive body cue:** In all block stacking experiments, as with cable plugging, we observed that visuo-tactile pretraining improved performance for both visuo-tactile and vision-only agents, and that a ...
-- **p. 6 / Figure/Table caption - extractive body cue:** Fig. 7. Success rate for our experiment tasks. All experiments were run 20 times, with the total success rate shown. The use of visuo-tactile pretraining ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 시각·촉각을 함께 학습한 뒤 실행 시 촉각을 사용하는 정책과 사용하지 않는 정책을 나누어 모방학습의 효과를 비교했다. [PDF 3쪽](https://arxiv.org/pdf/2403.11898v2#page=3) · [PDF 4쪽](https://arxiv.org/pdf/2403.11898v2#page=4)
+- 실물 케이블 삽입에서 실행 시 촉각을 받지 않는 ACT의 성공률이 촉각 사전학습 후 20%에서 85%로 높아졌고, 같은 조건의 확산 정책은 45%에서 75%로 높아졌다. [PDF 5쪽](https://arxiv.org/pdf/2403.11898v2#page=5) · [PDF 6쪽](https://arxiv.org/pdf/2403.11898v2#page=6)
 
 ## Evaluation Scope
 

@@ -15,13 +15,11 @@
 - Full-text retrieval: https://papers.nips.cc/paper_files/paper/2025/file/8cf3760422b9d4505589a97c8f9569e7-Paper-Conference.pdf
 - Code/Project: not identified
 - Paper type: system
-- Source audit: full-text PDF body checked on 2026-09-03 (35 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (35 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 요약과 핵심 기여 두 개를 각 문장에 연결한 판본에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Simultaneously, enabling robots to execute a broad spectrum of tasks while adapting to variations in objects and environments remains the core challenge.
-
-방법 관련 발췌 — In summary, our contributions are as follows: • We propose Fast-in-Slow (FiS), a unified dual-system VLA model that embeds System 1 execution within a pretrained VLM while preserving its inherent System 2 ...
+Fast-in-Slow는 빠른 행동 모듈을 느린 시각·언어 추론 모델 안에 두고 일부 매개변수를 공유해 조작 제어 빈도를 높인다. [PDF 1쪽](https://papers.nips.cc/paper_files/paper/2025/file/8cf3760422b9d4505589a97c8f9569e7-Paper-Conference.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 3 / 1 Introduction - extractive body cue:** In summary, our contributions are as follows: • We propose Fast-in-Slow (FiS), a unified dual-system VLA model that embeds System 1 execution within a pretrained ...
-- **p. 2 / 1 Introduction - extractive body cue:** To jointly optimize the reasoning and execution components in FiS-VLA, we introduce a dualaware co-training strategy.
-- **p. 2 / 1 Introduction - extractive body cue:** Considering these limitations, and motivated by the functional abstraction of Kahneman's dual-system theory, we raise a question: "If a VLM model serves as the central ...
-- **p. 1 / Abstract - extractive body cue:** In this work, we propose Fast-in-Slow (FiS), a unified dual-system vision-language-action (VLA) model that embeds the System 1 execution module within the VLM-based System 2 ...
-- **p. 1 / Abstract - extractive body cue:** This innovative paradigm not only enables high-frequency execution in System 1, but also facilitates coordination between multimodal reasoning and execution components within a single foundation ...
-- **p. 9 / Figure/Table caption - extractive body cue:** Figure 4: Visualization of real-world experiments with Agilex and AlphaBot dual-arm robots. Quantitative and qualitative results. As shown in Table 2, FiS-VLA consistently outperforms the ...
-- **p. 8 / 4 Experiments - extractive body cue:** FiS-VLA achieves a 73% average success rate with plan-based co-training, outperforming the 69% obtained using discrete actions.
-- **p. 29 / Figure/Table caption - extractive body cue:** Figure 7: Ablation studies on action chunk size and input variants of FiS-VLA. (Left) Impact of different action chunk sizes on success rate and inference ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 두 모듈에 서로 다른 입력과 갱신 주기를 부여하고, 느린 모듈의 문맥 표현을 빠른 행동 생성에 활용하도록 공동 학습했다. [PDF 4쪽](https://papers.nips.cc/paper_files/paper/2025/file/8cf3760422b9d4505589a97c8f9569e7-Paper-Conference.pdf#page=4) · [PDF 5쪽](https://papers.nips.cc/paper_files/paper/2025/file/8cf3760422b9d4505589a97c8f9569e7-Paper-Conference.pdf#page=5)
+- 시뮬레이션과 실물 조작에서 개별 구성요소와 추론 속도를 비교하고 물체·배경 등의 변화가 일반화에 미치는 영향을 측정했다. [PDF 7쪽](https://papers.nips.cc/paper_files/paper/2025/file/8cf3760422b9d4505589a97c8f9569e7-Paper-Conference.pdf#page=7) · [PDF 8쪽](https://papers.nips.cc/paper_files/paper/2025/file/8cf3760422b9d4505589a97c8f9569e7-Paper-Conference.pdf#page=8) · [PDF 9쪽](https://papers.nips.cc/paper_files/paper/2025/file/8cf3760422b9d4505589a97c8f9569e7-Paper-Conference.pdf#page=9) · [PDF 10쪽](https://papers.nips.cc/paper_files/paper/2025/file/8cf3760422b9d4505589a97c8f9569e7-Paper-Conference.pdf#page=10)
 
 ## Evaluation Scope
 

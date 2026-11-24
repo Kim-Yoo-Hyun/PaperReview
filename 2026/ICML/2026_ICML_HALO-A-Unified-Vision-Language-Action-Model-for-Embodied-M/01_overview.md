@@ -15,13 +15,11 @@
 - Full-text retrieval: https://arxiv.org/pdf/2602.21157.pdf
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (18 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (18 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 요약과 핵심 기여 두 개를 각 문장에 연결한 판본에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, most existing VLAs map perceptual inputs directly to motor commands, lacking explicit mechanisms for reasoning about task structure or anticipating how the environment will evolve under motion and contact.
-
-방법 관련 발췌 — To address this, we propose HALO, a unified VLA model that enables embodied multimodal chain-of-thought (EM-CoT) reasoning.
+HALO는 언어 추론, 다음 시각 하위 목표 예측, 로봇 행동 생성을 한 VLA 안에서 함께 학습한다. [PDF 1쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/shou26a/shou26a.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** To address this, we propose HALO, a unified VLA model that enables embodied multimodal chain-of-thought (EM-CoT) reasoning.
-- **p. 2 / 1. Introduction - extractive body cue:** Third, we propose a carefully designed training recipe that combines broad generalization with embodied reasoning specialization.
-- **p. 1 / 1. Introduction - extractive body cue:** This limitation becomes particularly pronounced in long-horizon or out-of-distribution scenarios-such as novel layouts, unfamiliar objects, or contact-rich interactions-where successful execution depends more on deliberation and ...
-- **p. 5 / 3.4. Training Recipe - extractive body cue:** This diversity ensures the model develops a generalized representation capable of supporting complex downstream reasoning. • VQA (Mutilmodal understanding): We use LLaVA-NeXT-779k (Liu et al., ...
-- **p. 8 / 4.5. Real-World Results - extractive body cue:** While the baselines suffer noticeable performance degradation in the presence of visual distractions, lighting and background variations, and novel objects, HALO remains robust and achieves ...
-- **p. 6 / 4. Experiments - extractive body cue:** Our study focuses on: (i) whether the proposed unified VLA architecture with EM-CoT improves overall performance and generalization; (ii) whether HALO can generate informative EM-CoT ...
-- **p. 7 / 4.2. Simulation Results - extractive body cue:** On fine-grained tasks such as "Blocks Ranking Size" and "Stamp Seal," HALO achieves a multi-fold increase in success rates compared to baselines, demonstrating its ability ...
-- **p. 7 / 4.2. Simulation Results - extractive body cue:** While π0 and RDT-1B exhibit some degree of robustness, they plateau at significantly lower performance levels, whereas HALO continues to improve as it incorporates more ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 각 출력을 담당하는 트랜스포머 전문가가 정보를 주고받도록 하고, 추론 문구와 시각 하위 목표가 포함된 학습 예시를 자동 생성했다. [PDF 3쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/shou26a/shou26a.pdf#page=3) · [PDF 4쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/shou26a/shou26a.pdf#page=4) · [PDF 5쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/shou26a/shou26a.pdf#page=5)
+- RoboTwin 및 실물 조작에서 평가하고 언어·시각 추론과 학습 절차의 구성요소가 성공률과 낯선 환경에서의 일반화에 주는 영향을 비교했다. [PDF 6쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/shou26a/shou26a.pdf#page=6) · [PDF 7쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/shou26a/shou26a.pdf#page=7) · [PDF 8쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/shou26a/shou26a.pdf#page=8)
 
 ## Evaluation Scope
 

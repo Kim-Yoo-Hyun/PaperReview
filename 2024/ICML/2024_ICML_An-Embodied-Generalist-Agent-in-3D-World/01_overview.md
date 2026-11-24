@@ -15,13 +15,11 @@
 - Full-text retrieval: https://arxiv.org/pdf/2311.12871
 - Code/Project: https://embodied-generalist.github.io/
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (39 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (39 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 요약과 핵심 기여 두 개를 각 문장에 연결한 판본에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — The development of such generalist agents encounters three primary challenges: the lack of suitable datasets, unified models, and effective learning strategies.
-
-방법 관련 발췌 — We present the results of CLIPort manipulation and object navigation in Tabs.
+LEO는 3차원 장면 이해와 언어 응답, 내비게이션·조작 행동 생성을 한 모델의 토큰 예측 문제로 다룬다. [PDF 1쪽](https://raw.githubusercontent.com/mlresearch/v235/a6e7a82d46bf2f2e91bbb1f611453b53041007ef/assets/huang24ae/huang24ae.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 7 / 4.3. Embodied Action in 3D World - extractive body cue:** We present the results of CLIPort manipulation and object navigation in Tabs.
-- **p. 1 / 1. Introduction - extractive body cue:** The development of such generalist agents encounters three primary challenges: the lack of suitable datasets, unified models, and effective learning strategies.
-- **p. 1 / 1. Introduction - extractive body cue:** Furthermore, large-scale unified pretraining and efficient finetuning are under-explored by previous 3D VL models, which are often designed with strong priors (Zhao et al., 2021; ...
-- **p. 7 / 4.3. Embodied Action in 3D World - extractive body cue:** Underlined figures indicate zero-shot results on novel scenes (3RScan).
-- **p. 5 / Figure/Table caption - extractive body cue:** Figure 2: Our proposed LLM-assisted 3D-language data generation pipeline and data examples.. (Top-left) Messages with 3D scene graphs, including object attributes and relations in a ...
-- **p. 8 / 4.5. Scaling Law Analysis - extractive body cue:** 2) Scaling up LLM leads to consistent improvements.
-- **p. 8 / 4.5. Scaling Law Analysis - extractive body cue:** In contrast, despite the consistent improvements, the gap between Aligned Vicuna-7B and Vicuna-13B appears less significant, suggesting potential saturation if we continue to scale up ...
-- **p. 6 / Figure/Table caption - extractive body cue:** Table 6: Results on object navigation. † indi- cates zero-shot evaluation. MP3D-val HM3D-val Success(↑) SPL(↑) Success(↑) SPL(↑) Habitat-web (shortest) 4.4
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 객체별 3차원 특징과 텍스트·행동을 공통 입력·출력 형식에 배치하고, 시각·언어 정렬 후 행동을 포함한 지시 학습을 수행했다. [PDF 3쪽](https://raw.githubusercontent.com/mlresearch/v235/a6e7a82d46bf2f2e91bbb1f611453b53041007ef/assets/huang24ae/huang24ae.pdf#page=3) · [PDF 4쪽](https://raw.githubusercontent.com/mlresearch/v235/a6e7a82d46bf2f2e91bbb1f611453b53041007ef/assets/huang24ae/huang24ae.pdf#page=4)
+- 장면 질의응답 외에 객체 목표 내비게이션과 CLIPort 조작을 평가하고, 조작에서 학습 중 본 조건과 새로운 물체·색상 조건을 구분했다. [PDF 6쪽](https://raw.githubusercontent.com/mlresearch/v235/a6e7a82d46bf2f2e91bbb1f611453b53041007ef/assets/huang24ae/huang24ae.pdf#page=6) · [PDF 7쪽](https://raw.githubusercontent.com/mlresearch/v235/a6e7a82d46bf2f2e91bbb1f611453b53041007ef/assets/huang24ae/huang24ae.pdf#page=7)
 
 ## Evaluation Scope
 

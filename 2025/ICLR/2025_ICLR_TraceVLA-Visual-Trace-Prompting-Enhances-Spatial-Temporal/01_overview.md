@@ -15,20 +15,18 @@
 - Full-text retrieval: https://proceedings.iclr.cc/paper_files/paper/2025/file/8667f264f88c7938a73a53ab01eb1327-Paper-Conference.pdf
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (20 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (20 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 요약과 핵심 기여 두 개를 각 문장에 연결한 판본에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, these models are not equipped to handle the challenges unique to robot manipulation, such as understanding kinematics, adapting to different embodiment configurations, and executing reliable physical actions.
-
-방법 관련 발췌 — To further validate the effectiveness and generality of our method, we present a compact VLA model based on 4B Phi-3-Vision, pretrained on the Open-XEmbodiment and finetuned on our dataset, rivals the 7B ...
+TraceVLA는 과거 영상에서 추적한 움직임을 현재 영상에 그려 넣어 로봇 정책이 시간에 따른 변화와 행동 방향을 읽게 한다. [PDF 1쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/8667f264f88c7938a73a53ab01eb1327-Paper-Conference.pdf#page=1)
 
 ## Problem and Motivation
 
 - **p. 1 / ABSTRACT - extractive body cue:** Although large vision-language-action (VLA) models pretrained on extensive robot datasets offer promising generalist policies for robotic learning, they still struggle with spatial-temporal dynamics in interactive ...
 - **p. 1 / ABSTRACT - extractive body cue:** In this work, we introduce visual trace prompting, a simple yet effective approach to facilitate VLA models' spatialtemporal awareness for action prediction by encoding state-action ...
 - **p. 1 / ABSTRACT - extractive body cue:** We develop a new TraceVLA model by finetuning OpenVLA on our own collected dataset of 150K robot manipulation trajectories using visual trace prompting.
-- **p. 1 / ABSTRACT - extractive body cue:** Evaluations of TraceVLA across 137 configurations in SimplerEnv and 4 tasks on a physical WidowX robot demonstrate state-of-the-art performance, outperforming OpenVLA by 10% on SimplerEnv ...
+- 초록은 실물 네 과제를 소개하고, 본문 그림 6은 기본 비교 네 과제와 그 뒤의 추가 일반화 네 과제를 구분한다. [PDF 1쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/8667f264f88c7938a73a53ab01eb1327-Paper-Conference.pdf#page=1) · [PDF 7쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/8667f264f88c7938a73a53ab01eb1327-Paper-Conference.pdf#page=7)
 - **p. 1 / ABSTRACT - extractive body cue:** To further validate the effectiveness and generality of our method, we present a compact VLA model based on 4B Phi-3-Vision, pretrained on the Open-XEmbodiment and ...
 - **p. 1 / 1 INTRODUCTION - extractive body cue:** However, these models are not equipped to handle the challenges unique to robot manipulation, such as understanding kinematics, adapting to different embodiment configurations, and executing ...
 - **p. 1 / 1 INTRODUCTION - extractive body cue:** We posit that this limitation arises because simply mapping image inputs as current states to control actions is insufficient.
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 1 / ABSTRACT - extractive body cue:** To further validate the effectiveness and generality of our method, we present a compact VLA model based on 4B Phi-3-Vision, pretrained on the Open-XEmbodiment and ...
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** We introduce visual trace prompting, a novel technique that significantly enhances VLA models' spatial-temporal reasoning in manipulation tasks. • Dataset & models.
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** We introduce TraceVLA, a 7B-parameter VLA model fine-tuned from OpenVLA using our novel visual trace prompting dataset, which includes 150K robot manipulation trajectories as shown ...
-- **p. 1 / 1 INTRODUCTION - extractive body cue:** To address this, we propose explicitly computing multi-point temporal trajectories and overlaying them directly onto the image inputs for VLA models.
-- **p. 3 / 2 PRELIMINARIES - extractive body cue:** First, we introduce visual trace prompting in Section 3.1.
-- **p. 6 / 4 EXPERIMENT - extractive body cue:** These results suggest that the visual trace prompting technique employed in TraceVLA enhances the model's ability to generalize across different robotic manipulation tasks and environmental ...
-- **p. 7 / 4 EXPERIMENT - extractive body cue:** 0 2 4 6 8 10 Number of Successful Trials Pickplace Corn Pickplace Knife Swipe Corn Sink Fold Cloth 1 4 0 2 8 8 ...
-- **p. 9 / 4 EXPERIMENT - extractive body cue:** As shown in Figure 9, using a smaller number of steps (N = 3) results in a 3.2% performance improvement.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 영상의 점 궤적을 시각 프롬프트로 만들어 OpenVLA를 미세조정하고, 같은 자료로 궤적 표시 없이 학습한 경우와 비교했다. [PDF 3쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/8667f264f88c7938a73a53ab01eb1327-Paper-Conference.pdf#page=3) · [PDF 4쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/8667f264f88c7938a73a53ab01eb1327-Paper-Conference.pdf#page=4) · [PDF 8쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/8667f264f88c7938a73a53ab01eb1327-Paper-Conference.pdf#page=8)
+- 실물 WidowX-250에서 기본 비교 네 과제와 추가 일반화 네 과제를 구분해 OpenVLA와 비교했고, 별도로 과거 영상만 이어 붙이는 방식도 시험했다. [PDF 7쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/8667f264f88c7938a73a53ab01eb1327-Paper-Conference.pdf#page=7) · [PDF 8쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/8667f264f88c7938a73a53ab01eb1327-Paper-Conference.pdf#page=8)
 
 ## Evaluation Scope
 

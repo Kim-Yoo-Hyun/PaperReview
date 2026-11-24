@@ -15,13 +15,11 @@
 - Full-text retrieval: https://arxiv.org/pdf/2503.11651
 - Code/Project: https://github.com/facebookresearch/vggt
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (20 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (20 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 요약과 핵심 기여 두 개를 각 문장에 연결한 판본에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Machine learning has often played an important complementary role, addressing tasks that cannot be solved by geometry alone, such as feature matching and monocular depth prediction.
-
-방법 관련 발췌 — To summarize, we make the following contributions: (1) We introduce VGGT, a large feed-forward transformer that, given one, a few, or even hundreds of images of a scene, can predict all its ...
+VGGT는 하나 이상의 장면 영상을 한 번의 순전파로 처리해 카메라 매개변수, 깊이, 3차원 점 지도와 점 궤적을 함께 추정한다. [PDF 1쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Wang_VGGT_Visual_Geometry_Grounded_Transformer_CVPR_2025_paper.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** To summarize, we make the following contributions: (1) We introduce VGGT, a large feed-forward transformer that, given one, a few, or even hundreds of images ...
-- **p. 3 / 3. Method - extractive body cue:** We introduce VGGT, a large transformer that ingests a set of images as input and produces a variety of 3D quantities as output.
-- **p. 4 / 3.1. Problem definition and notation - extractive body cue:** In the second row, our method correctly recovers a 3D scene from two images with no overlap, while DUSt3R fails.
-- **p. 4 / 3.1. Problem definition and notation - extractive body cue:** As shown in the top row, our method successfully predicts the geometric structure of an oil painting, while DUSt3R predicts a slightly distorted plane.
-- **p. 1 / 1. Introduction - extractive body cue:** Recent contributions like DUSt3R [129] and its evolution 1.
-- **p. 12 / Figure/Table caption - extractive body cue:** Table 10. Camera Pose Estimation on IMC [54]. Our method achieves state-of-the-art performance on the challenging pho- totropism data, outperforming VGGSfMv2 [125] which ranked first ...
-- **p. 8 / Figure/Table caption - extractive body cue:** Figure 5. Visualization of Rigid and Dynamic Point Tracking. Top: VGGT's tracking module T outputs keypoint tracks for an unordered set of input images depicting ...
-- **p. 7 / 4.1. Camera Pose Estimation - extractive body cue:** Hence, while the feed-forward mode of VGGT outperforms all previous alternatives (whether they are feed-forward or not), there is still room for improvement since post-optimization ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 영상 내부와 영상 간의 주의 연산을 번갈아 적용해 공통 특징을 만들고 과제별 출력 헤드가 기하량을 복원하도록 학습했다. [PDF 3쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Wang_VGGT_Visual_Geometry_Grounded_Transformer_CVPR_2025_paper.pdf#page=3) · [PDF 4쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Wang_VGGT_Visual_Geometry_Grounded_Transformer_CVPR_2025_paper.pdf#page=4)
+- 카메라 자세, 다중 시점 깊이, 점 지도와 영상 대응을 각각 평가해 공통 특징을 여러 기하 과제에 사용할 수 있음을 보였다. [PDF 5쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Wang_VGGT_Visual_Geometry_Grounded_Transformer_CVPR_2025_paper.pdf#page=5) · [PDF 6쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Wang_VGGT_Visual_Geometry_Grounded_Transformer_CVPR_2025_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Wang_VGGT_Visual_Geometry_Grounded_Transformer_CVPR_2025_paper.pdf#page=7)
 
 ## Evaluation Scope
 

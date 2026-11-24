@@ -6,23 +6,23 @@
 
 ## Problem in One Sentence
 
-PDF body framing (p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION)): Lacking 3D-text pair data leads to poor performance in 3D object and room segmentation and classication.
+PDF body framing (p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION)): Lacking 3D-text pair data leads to poor performance in 3D object and room segmentation and classification.
 
 ## PDF Body Digest
 
 - **p. 1 / Abstract - extractive body cue:** Current open-vocabulary scene graph generation algorithms highly rely on both 3D scene point cloud data and posed RGB-D images and thus have limited applications in ...
 - **p. 1 / Abstract - extractive body cue:** To solve this problem, we propose Point2Graph, a novel end-to-end point cloud-based 3D open-vocabulary scene graph generation framework in which the requirement of posed RGB-D ...
-- **p. 1 / Abstract - extractive body cue:** This hierarchical framework contains room and object detection/segmentation and openvocabulary classication.
+- **p. 1 / Abstract - extractive body cue:** This hierarchical framework contains room and object detection/segmentation and openvocabulary classification.
 - **p. 1 / Abstract - extractive body cue:** For the room layer, we leverage the advantage of merging the geometry-based border detection algorithm with the learning-based region detection to segment rooms and create ...
 - **p. 1 / Abstract - extractive body cue:** In addition, we create an end-toend pipeline for the object layer to detect and classify 3D objects based solely on 3D point cloud data.
-- **p. 1 / I. INTRODUCTION - extractive body cue:** Lacking 3D-text pair data leads to poor performance in 3D object and room segmentation and classication.
+- **p. 1 / I. INTRODUCTION - extractive body cue:** Lacking 3D-text pair data leads to poor performance in 3D object and room segmentation and classification.
 - **p. 1 / I. INTRODUCTION - extractive body cue:** For example, the point clouds created from a Building Information Model (BIM) or LiDAR sensors often lack the RGB-D images and their pose data [13], ...
 
 ## System and Scope
 
 | Dimension | PDF body evidence | Registry/robotics interpretation | Boundary |
 |---|---|---|---|
-| Target problem | Lacking 3D-text pair data leads to poor performance in 3D object and room segmentation and classication. | mapped 3D environment과 mobile robot | body wording is the source claim |
+| Target problem | Lacking 3D-text pair data leads to poor performance in 3D object and room segmentation and classification. | mapped 3D environment과 mobile robot | body wording is the source claim |
 | Observation / input | First, the input point cloud is segmented into N slices along the z-axis, with each slice projected onto an occupancy grid map ... | camera/depth stream, pose, map와 language goal | exact sensor/frame/preprocessing from PDF body |
 | State / latent | First, input, point, cloud, segmented, slices, along, z-axis, slice, projected | robot pose, free-space/semantic map와 local goal | notation and tensor shape require body check |
 | Output / action | Speci, cally, model, takes, input, ltered, point, cloud | collision-free trajectory 또는 velocity command | exact unit/frame/decoder require body check |
@@ -46,11 +46,11 @@ PDF body framing (p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION)): Lacking 3D-te
 
 ## What the Paper Changes
 
-PDF body contribution framing (p. 1 (I. INTRODUCTION), p. 4 (III. METHODOLOGY), p. 2 (III. METHODOLOGY), p. 4 (III. METHODOLOGY), p. 5 (III. METHODOLOGY)): Generally speaking, our framework consists of a room segmentation and classication module and an object detection and classication module.
+PDF body contribution framing (p. 1 (I. INTRODUCTION), p. 4 (III. METHODOLOGY), p. 2 (III. METHODOLOGY), p. 4 (III. METHODOLOGY), p. 5 (III. METHODOLOGY)): Generally speaking, our framework consists of a room segmentation and classification module and an object detection and classification module.
 
-- **p. 4 / III. METHODOLOGY - extractive body cue:** Object-Level Detection and Classication After getting the segmentation result for each room, our approach mainly consists of two steps, where the rst step deals with ...
+- **p. 4 / III. METHODOLOGY - extractive body cue:** Object-Level Detection and Classification After getting the segmentation result for each room, our approach mainly consists of two steps, where the first step deals with ...
 - **p. 2 / III. METHODOLOGY - extractive body cue:** In this section, we present our design of Point2Graph, which builds a compact and enriched open-vocabulary 3D scene graph with solely 3D scene model input.
-- **p. 4 / III. METHODOLOGY - extractive body cue:** 5: Overview of the 3D open-vocabulary detection pipeline: It consists of two stages: (1) detection and localization using class-agnostic bounding boxes and DBSCAN ltering for ...
+- **p. 4 / III. METHODOLOGY - extractive body cue:** 5: Overview of the 3D open-vocabulary detection pipeline: It consists of two stages: (1) detection and localization using class-agnostic bounding boxes and DBSCAN filtering for ...
 - **p. 5 / III. METHODOLOGY - extractive body cue:** Voronoi Navigation Graph In order to let a robot navigate in the area where our scene graph is built, we propose a navigation graph based ...
 
 ## Assumptions and Failure Boundary

@@ -17,13 +17,11 @@
 - Full-text retrieval at original review: https://arxiv.org/pdf/2505.21906.pdf
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (16 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (16 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 요약과 핵심 기여 두 개를 각 문장에 연결한 판본에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Such a gap leads to a natural question: How can we build VLA models that both keep their VLM prior intact and actively leverage it to achieve superior generalization in robotic control?
-
-방법 관련 발췌 — To achieve this, we propose a novel VLA model architecture employing a dynamic mixture-ofexperts within the VLM backbone.
+ChatVLA-2는 기존 시각·언어 모델의 추론 능력을 조작 학습 후에도 유지하고 추론한 결과에 맞는 물리 행동을 내도록 설계했다. [PDF 1쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/41128e5b3a7622da5b17588757599077-Paper-Conference.pdf#page=1) · [PDF 2쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/41128e5b3a7622da5b17588757599077-Paper-Conference.pdf#page=2)
 
 ## Problem and Motivation
 
@@ -56,16 +54,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 3 / 1 Introduction - extractive body cue:** To achieve this, we propose a novel VLA model architecture employing a dynamic mixture-ofexperts within the VLM backbone.
-- **p. 3 / 1 Introduction - extractive body cue:** Additionally, we introduce a straightforward reasoning-enhancement module designed to align the action expert's output more closely with the model's internal reasoning process.
-- **p. 5 / 3 Methodology - extractive body cue:** We introduce an enhanced reasoning-following module designed to improve reasoning capabilities in action models.
-- **p. 6 / 3 Methodology - extractive body cue:** To address this, we propose a dual-stage training strategy designed to enhance the smoothness of robotic control and increase the success rate of task completion.
-- **p. 2 / 1 Introduction - extractive body cue:** In this study, we introduce ChatVLA-2, a significant advancement toward achieving a truly generalizable robotic foundation model.
-- **p. 8 / 4 Experiments - extractive body cue:** In contrast, our method achieved an average success rate of 81.4%, representing a 3.52-times improvement over DexVLA.
-- **p. 8 / 4 Experiments - extractive body cue:** In contrast, ChatVLA-2 achieves meaningful performance: 3.58 in OCR accuracy, 1.73 in mathematical reasoning accuracy, and 82.7% manipulation success rate.
-- **p. 9 / 4 Experiments - extractive body cue:** We evaluate average object recognition score, spatial affordance score and task success rate at both setups.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 전문가 혼합 구조와 두 단계의 학습을 사용해 언어·영상 과제에서 쓰는 표현과 로봇 행동 학습을 조율한다. [PDF 4쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/41128e5b3a7622da5b17588757599077-Paper-Conference.pdf#page=4) · [PDF 5쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/41128e5b3a7622da5b17588757599077-Paper-Conference.pdf#page=5) · [PDF 6쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/41128e5b3a7622da5b17588757599077-Paper-Conference.pdf#page=6)
+- 실제 로봇이 수식을 읽고 알맞은 숫자 카드를 고르는 과제와 공간 방향 지시를 따르는 과제로 이해와 행동의 연결을 평가했다. [PDF 7쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/41128e5b3a7622da5b17588757599077-Paper-Conference.pdf#page=7) · [PDF 8쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/41128e5b3a7622da5b17588757599077-Paper-Conference.pdf#page=8) · [PDF 9쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/41128e5b3a7622da5b17588757599077-Paper-Conference.pdf#page=9) · [PDF 10쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/41128e5b3a7622da5b17588757599077-Paper-Conference.pdf#page=10)
 
 ## Evaluation Scope
 

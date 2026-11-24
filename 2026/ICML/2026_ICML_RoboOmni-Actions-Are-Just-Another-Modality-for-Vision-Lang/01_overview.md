@@ -16,13 +16,11 @@
 - Full-text retrieval at original review: https://openreview.net/pdf/b090562c668703f4568061335c66e0e592e16d9d.pdf
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (25 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (25 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 요약과 핵심 기여 두 개를 각 문장에 연결한 판본에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, a critical challenge has emerged: while built upon highly capable VLMs, many current VLA implementations struggle to retain the broad generalization abilities inherent in their parent models.
-
-방법 관련 발췌 — To overcome these challenges, we introduce a versatile Multi-Token Action Prediction (MTAP) framework that enables efficient, parallelized action prediction within a unified discrete architecture.
+RoboOmni는 행동 묶음을 이산 토큰으로 표현해 일반 시각·언어 모델의 다음 토큰 예측 구조에서 로봇 조작까지 학습한다. [PDF 1쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/wang26v/wang26v.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -56,16 +54,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 3 / 3.1. MTAP for Action Chunking - extractive body cue:** To overcome these challenges, we introduce a versatile Multi-Token Action Prediction (MTAP) framework that enables efficient, parallelized action prediction within a unified discrete architecture.
-- **p. 2 / 1. Introduction - extractive body cue:** This design enables long-context, multimodal co-training and allows the model to explicitly reason over historical observations and actions.
-- **p. 1 / 1. Introduction - extractive body cue:** To overcome these limitations, we present RoboOmni, a 1
-- **p. 2 / 1. Introduction - extractive body cue:** Specifically, we introduce Multi-Token Action Prediction (MTAP), which performs parallel decoding of H actions by repeating only the last layer for action tokens, inspired by ...
-- **p. 5 / 3.2. Multi-Modal Action Co-Training - extractive body cue:** To encourage short-horizon temporal reasoning and motion understanding, we introduce a 2D end-effector trace prediction task inspired by (Li et al., 2025).
-- **p. 7 / 4.3. Real Robot Experiments - extractive body cue:** On average, RoboOmni achieves a 91% success rate, significantly surpassing π0-FAST (68%) and RoboVLMs (60%).
-- **p. 7 / 4.4. Ablation Study - extractive body cue:** For the FAST tokenizer, enabling MTAP improves the 5-task success rate from 80.1% to 88.1%.
-- **p. 8 / Figure/Table caption - extractive body cue:** Figure 3. Comparison of success rates in the real-world setting. RoboOmni consistently outperforms baselines, including π0-FAST and RoboVLMs, particularly in the challenging Unseen Objects setting. ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 하나의 행동 묶음에서 여러 토큰을 예측하는 MTAP를 토크나이저와 결합해 시각·언어 자료와 로봇 자료를 공동학습한다. [PDF 3쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/wang26v/wang26v.pdf#page=3) · [PDF 4쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/wang26v/wang26v.pdf#page=4) · [PDF 5쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/wang26v/wang26v.pdf#page=5)
+- CALVIN·SimplerEnv와 실제 조작에서 성능을 비교하고, FAST와 구간화 토크나이저를 사용한 설정의 성공률과 추론 속도를 구분해 보고했다. [PDF 6쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/wang26v/wang26v.pdf#page=6) · [PDF 7쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/wang26v/wang26v.pdf#page=7) · [PDF 8쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/wang26v/wang26v.pdf#page=8)
 
 ## Evaluation Scope
 

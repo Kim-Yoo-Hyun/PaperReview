@@ -16,13 +16,11 @@
 - Full-text retrieval at original review: https://arxiv.org/pdf/2502.02175
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (19 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (19 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 요약과 핵심 기여 두 개를 각 문장에 연결한 판본에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — While effective to some extent, these methods often require architectural modifications or retraining, and more importantly, they lack task-specific design tailored to the intrinsic characteristics of VLA tasks.
-
-방법 관련 발췌 — To address the inefficiency introduced by repeatedly processing static visual information, we present VLA-Cache, a training-free inference acceleration method that exploits temporal continuity in robotic perception.
+VLA-Cache는 인접 영상 간에 거의 변하지 않은 시각 토큰의 키와 값을 재사용해 추가 훈련 없이 로봇 정책의 추론을 줄인다. [PDF 1쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/f062da1973ac9ac61fc6d44dd7fa309f-Paper-Conference.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -52,16 +50,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1 Introduction - extractive body cue:** To address the inefficiency introduced by repeatedly processing static visual information, we present VLA-Cache, a training-free inference acceleration method that exploits temporal continuity in robotic ...
-- **p. 3 / 3 Methodology - extractive body cue:** To address this, we propose a method that identifies visually static tokens and filters out semantically important ones based on attention scores from the VLA ...
-- **p. 3 / 3 Methodology - extractive body cue:** In the following sections, we introduce its core mechanisms: static token selection, task-relevance filtering, and layer-adaptive reuse to accelerate VLA inference while preserving action accuracy.
-- **p. 2 / 1 Introduction - extractive body cue:** This consistency allows for caching the computations of these tokens from the previous step.
-- **p. 9 / Figure/Table caption - extractive body cue:** Figure 4: Visualization of VLA-Cache token reuse across settings. (a) LIBERO simulation with OpenVLA. (b) Real-world task under dynamic background. (c) and (d) Main and ...
-- **p. 8 / 5 Experiment - extractive body cue:** VLACache reduces FLOPs by 27.31% and improves latency by 1.63× over standard OpenVLA, with only a 0.3% drop in success rate.
-- **p. 9 / 5 Experiment - extractive body cue:** Overall, VLA-Cache improves the average success rate by 2.4%, likely due to reduced interference from redundant visual tokens and enhanced decision robustness.
-- **p. 16 / Figure/Table caption - extractive body cue:** Table 10: Varying the relevance threshold τ (with k=100). Overall, efficiency (FLOPs and latency) improves monotonically with larger k and τ, while success rate remains ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 변화가 작아도 과제에 중요한 토큰은 다시 계산하고, 디코더 층별 주의 분포에 맞춰 재사용하는 비율을 조절한다. [PDF 3쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/f062da1973ac9ac61fc6d44dd7fa309f-Paper-Conference.pdf#page=3) · [PDF 4쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/f062da1973ac9ac61fc6d44dd7fa309f-Paper-Conference.pdf#page=4) · [PDF 5쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/f062da1973ac9ac61fc6d44dd7fa309f-Paper-Conference.pdf#page=5)
+- LIBERO·SIMPLER와 실제 로봇에서 과제 성공을 확인하고 GPU 추론 지연과 로봇 제어 빈도를 구분해 속도 효과를 측정했다. [PDF 7쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/f062da1973ac9ac61fc6d44dd7fa309f-Paper-Conference.pdf#page=7) · [PDF 8쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/f062da1973ac9ac61fc6d44dd7fa309f-Paper-Conference.pdf#page=8) · [PDF 9쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/f062da1973ac9ac61fc6d44dd7fa309f-Paper-Conference.pdf#page=9)
 
 ## Evaluation Scope
 

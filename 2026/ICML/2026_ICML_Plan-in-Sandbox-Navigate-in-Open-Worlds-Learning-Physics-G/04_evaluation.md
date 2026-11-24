@@ -6,7 +6,7 @@
 
 ## Evaluation in One Sentence
 
-PDF body evaluation/result cue (p. 6 (4.2. Main Navigation Results), p. 8 (4.5. Analysis and Ablation), p. 6 (4.1. Experimental Settings), p. 7 (4.3. Analysis on Sandbox Data), p. 7 (4.3. Analysis on Sandbox Data), p. 8 (4.4. Analysis on Evolution)): SAGE demonstrates superior performance, significantly outperforming traditional RL baselines by a large margin.
+A-EQA는 탐색 후 에이전트가 작성한 답을 평가한다. 논문은 이 결과 외에 실제 실내 로봇 적용 사례도 제시한다. [PDF 1쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/shen26e/shen26e.pdf#page=1) · [PDF 6쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/shen26e/shen26e.pdf#page=6)
 
 ## Evaluation Body Digest
 
@@ -70,6 +70,8 @@ PDF body evaluation/result cue (p. 6 (4.2. Main Navigation Results), p. 8 (4.5. 
 | Output/decision | collision-free trajectory 또는 velocity command | action frame, controller and termination | p. 2 (1. Introduction), p. 2 (1. Introduction) |
 
 ## Metrics and Success Definition
+
+식 (14)의 SR†는 탐색 후 생성한 답과 정답의 의미 일치를 평가 모델이 1~5점으로 채점한 뒤 0~1로 바꾸어 평균한 값이다. A-EQA의 53.21%는 이 척도로 읽는다. SPL†는 여기에 경로 길이 가중치를 추가한다. [PDF 1쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/shen26e/shen26e.pdf#page=1) · [PDF 6쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/shen26e/shen26e.pdf#page=6) · [PDF 7쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/shen26e/shen26e.pdf#page=7)
 
 | Metric/result evidence | Definition and aggregation to verify | Anchor |
 |---|---|---|

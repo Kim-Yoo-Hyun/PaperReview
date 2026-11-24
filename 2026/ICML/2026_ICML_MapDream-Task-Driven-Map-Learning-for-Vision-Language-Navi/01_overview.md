@@ -15,15 +15,13 @@
 - Full-text retrieval: https://arxiv.org/pdf/2602.00222.pdf
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 요약과 핵심 기여 두 개를 각 문장에 연결한 판본에서 확인했다.
 
 > DOC-QA1 (2026-10-23): 제어문자·깨진 추출 구간과 직접 연결된 표 항목을 PDF 페이지 이미지와 대조했다. 확인 범위·원문 URL·페이지·수정 이력은 [대조 기록](../../../work/sources/pdf_note_review_2026-10-23.json)에 있다. 노트 전체의 정독이나 모든 기존 주장에 대한 재검증을 뜻하지 않으며 reading status는 유지한다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — A central difficulty of VLN is partial observability.
-
-방법 관련 발췌 — Our main contributions are: • We first introduce a task-driven perspective on map representations for VLN, reframing maps as representations shaped by downstream navigation objectives rather than fixed by expert design. • ...
+MapDream은 지시를 따라가는 데 필요한 정보가 남도록 조감도 지도 생성과 다음 이동 행동 예측을 한 정책에서 학습한다. [PDF 1쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/lian26c/lian26c.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -57,16 +55,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** Our main contributions are: • We first introduce a task-driven perspective on map representations for VLN, reframing maps as representations shaped by downstream navigation objectives ...
-- **p. 2 / 1. Introduction - extractive body cue:** Based on this insight, we propose MapDream, a framework that unifies spatial representation learning and decision making.
-- **p. 4 / 3.3. Supervised Pre-training - extractive body cue:** It consists of three parts: task-driven map supervision, pre-training the map module, and pre-training the VLN policy.
-- **p. 1 / 1. Introduction - extractive body cue:** Obs Inst VLN Policy Act Vanilla Obs Map Inst VLN Policy Map Module Act Expert-Designed Maps Map Inst Obs VLN Policy Map Module Act Task-Driven ...
-- **p. 1 / 1. Introduction - extractive body cue:** Unlike previous approaches that either omit maps or rely on expert-designed representations, MapDream adopts a map-in-the-loop design that learns a task-driven generative map jointly with ...
-- **p. 6 / 4.3. Comparison with State-of-the-Art Methods - extractive body cue:** Across all settings, MapDream improves both success rate and path efficiency, which we attribute to its task-driven generative maps that are refined through two-stage optimization ...
-- **p. 5 / 4.1.2. METRICS - extractive body cue:** We adopt the standard VLN evaluation protocol (Krantz et al., 2020; Ku et al., 2020) to assess navigation performance using success rate (SR), oracle success ...
-- **p. 6 / 4.3. Comparison with State-of-the-Art Methods - extractive body cue:** As shown in Table 1, MapDream achieves the best overall performance among monocular approaches on both datasets, with the highest SR and SPL while reducing ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 자기회귀 모델이 세 채널의 조감도 지도를 생성하도록 지도학습하고, 지도를 거쳐 행동을 내는 전체 과정을 내비게이션 보상으로 후학습한다. [PDF 3쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/lian26c/lian26c.pdf#page=3) · [PDF 4쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/lian26c/lian26c.pdf#page=4) · [PDF 5쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/lian26c/lian26c.pdf#page=5)
+- R2R-CE와 RxR-CE에서 단안 영상 기반 이동 성능을 비교하고, 강화학습 후학습과 학습된 지도가 내비게이션에 미치는 영향을 평가했다. [PDF 6쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/lian26c/lian26c.pdf#page=6) · [PDF 7쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/lian26c/lian26c.pdf#page=7) · [PDF 8쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/lian26c/lian26c.pdf#page=8)
 
 ## Evaluation Scope
 

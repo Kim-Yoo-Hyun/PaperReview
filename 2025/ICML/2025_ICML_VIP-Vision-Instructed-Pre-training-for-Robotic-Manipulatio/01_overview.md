@@ -15,13 +15,11 @@
 - Full-text retrieval: https://raw.githubusercontent.com/mlresearch/v267/main/assets/li25by/li25by.pdf
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 요약과 핵심 기여 두 개를 각 문장에 연결한 판본에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — 1, the text instructed policy fails to concentrate on the green block specified in the text instruction, and the robot hand often grasps a block in a false color.
-
-방법 관련 발췌 — To specify the manipulation procedures clearly while maintaining an acceptable computational burden, we propose to represent the intermediate action information with sparse point flows.
+VIP는 현재 영상에서 어떤 변화가 일어나야 하는지를 미래 영상과 희소한 점 이동으로 지정해 조작 정책을 사전학습한다. [PDF 1쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/li25by/li25by.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** To specify the manipulation procedures clearly while maintaining an acceptable computational burden, we propose to represent the intermediate action information with sparse point flows.
-- **p. 3 / 3.1. Vision Intructed Pre-training - extractive body cue:** A data sample for robotic manipulation pre-training consists of two parts, a video sequence V = {I1, I2, · · · , IT } and ...
-- **p. 5 / 3.3. Vision Instruction after Pre-train - extractive body cue:** 2, the vision instruction in pretraining consists of two parts, the future frame and sparse point flows.
-- **p. 5 / 3.3. Vision Instruction after Pre-train - extractive body cue:** To bridge this gap, we propose to replace the future frame in pre-training as the cropped image region of the object to manipulate during fine-tuning ...
-- **p. 2 / 1. Introduction - extractive body cue:** Additionally, this design enables us to specify the object manipulation order dynamically.
-- **p. 8 / 4.3. Method Analysis - extractive body cue:** As shown, all these designs improve the success rates of VIRT on the three evaluated tasks significantly.
-- **p. 8 / 4.3. Method Analysis - extractive body cue:** In addition, we can find that increasing the fine-tuning data volume boosts execution success rates more significantly, which is because the fine-tuning data aligns better ...
-- **p. 7 / 4.1. VIP Effectiveness - extractive body cue:** Comparing the various policies, it is found that VIRT achieves the best performance, and its inference speed is also promising.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 현재·미래 관측 사이의 점 이동을 시각 지시로 만들어, 단일 목표 영상에서 구별하기 어려운 동작까지 행동 학습에 반영했다. [PDF 3쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/li25by/li25by.pdf#page=3) · [PDF 4쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/li25by/li25by.pdf#page=4) · [PDF 5쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/li25by/li25by.pdf#page=5)
+- 실물과 시뮬레이션에서 언어 지시, 미래 영상, 점 이동을 이용한 학습을 비교하고 정밀한 조작으로의 전이를 시험했다. [PDF 6쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/li25by/li25by.pdf#page=6) · [PDF 7쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/li25by/li25by.pdf#page=7) · [PDF 8쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/li25by/li25by.pdf#page=8)
 
 ## Evaluation Scope
 

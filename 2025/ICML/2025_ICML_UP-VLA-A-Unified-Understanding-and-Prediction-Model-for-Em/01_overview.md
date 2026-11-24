@@ -15,13 +15,11 @@
 - Full-text retrieval: https://raw.githubusercontent.com/mlresearch/v267/main/assets/zhang25w/zhang25w.pdf
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (12 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (12 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 요약과 핵심 기여 두 개를 각 문장에 연결한 판본에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — These limitations are largely attributed to the pre-training paradigm of VLMs (Wen et al., 2024; Chen et al., 2024a), which prioritizes multi-modal understanding tasks, such as Visual Question Answering (VQA), that enhance ...
-
-방법 관련 발췌 — We introduce a novel training paradigm for VLA models that combines both vision-language understanding and future prediction objectives, enabling the capture of both high-level semantic and low-level visual patterns essential for embodi ...
+UP-VLA는 영상·언어 이해와 미래 관측 예측을 함께 학습해 의미 정보와 세밀한 공간 정보를 로봇 행동 생성에 활용한다. [PDF 1쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/zhang25w/zhang25w.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** We introduce a novel training paradigm for VLA models that combines both vision-language understanding and future prediction objectives, enabling the capture of both high-level semantic ...
-- **p. 2 / 1. Introduction - extractive body cue:** Inspired by prior papers on visual pre-training (Wu et al., 2023; Guo et al., 2024), we introduce a novel training paradigm for VLA models that ...
-- **p. 3 / 4.2. Bridging Visual Prediction and Multi-modal - extractive body cue:** Meanwhile, we introduce a new special token PRE to denote this new task.
-- **p. 4 / 4.3. Enhancing Action Learning with Joint Prediction - extractive body cue:** To address this limitation, we propose a joint predictionand-understanding action learning mechanism.
-- **p. 1 / 1. Introduction - extractive body cue:** This method enables VLA models to inherit the semantic knowledge and reasoning capabilities encoded in powerful VLMs, thereby enhancing decision-making in unknown environments.
-- **p. 6 / 5.2. Simulation Evaluation - extractive body cue:** Compared to UPVLA-RT-2, which uses only action learning and achieves a completion length of 1.44, UP-VLA with visual prediction significantly improves the length to 4.08.
-- **p. 6 / 5.2. Simulation Evaluation - extractive body cue:** Compared to other baselines, which perform significantly worse on ABC→D than on ABCD→D, UP-VLA achieves higher completion lengths in both scenarios, indicating that our method ...
-- **p. 7 / 5.2. Simulation Evaluation - extractive body cue:** UP-VLA achieves the best performance, demonstrating that our approach exhibits strong generalization capabilities in simulated environments.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 이해 과제와 미래 영상 예측의 토큰을 하나의 학습 흐름에서 처리하고, 예측 과정의 표현을 행동 출력에 연결한다. [PDF 3쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/zhang25w/zhang25w.pdf#page=3) · [PDF 4쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/zhang25w/zhang25w.pdf#page=4) · [PDF 5쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/zhang25w/zhang25w.pdf#page=5)
+- CALVIN의 학습 외 환경과 실물 조작에서 성능을 측정하고, 미래 예측 또는 이해 학습을 제외하면 성공률이 어떻게 달라지는지 비교했다. [PDF 6쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/zhang25w/zhang25w.pdf#page=6) · [PDF 7쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/zhang25w/zhang25w.pdf#page=7) · [PDF 8쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/zhang25w/zhang25w.pdf#page=8)
 
 ## Evaluation Scope
 

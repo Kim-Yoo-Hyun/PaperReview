@@ -7,21 +7,21 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2023 / RSS
-- Authors: Nur Muhammad (Mahi)Shafiullah, Chris Paxton, Lerrel Pinto, Soumith Chintala, Arthur Szlam
+- Authors: Nur Muhammad (Mahi) Shafiullah, Chris Paxton, Lerrel Pinto, Soumith Chintala, Arthur Szlam
 - Primary track: Robotics-enabling 3D perception
 - Tier: REFERENCE
 - Tags: CLIP, Robotics, semantic, NeRF
 - Official paper: https://arxiv.org/abs/2210.05663
+- Venue verification: https://www.roboticsproceedings.org/rss19/p074.html
+- DOI: https://doi.org/10.15607/RSS.2023.XIX.074
 - Full-text retrieval: https://arxiv.org/pdf/2210.05663
 - Code/Project: https://mahis.life/clip-fields/
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 요약과 핵심 기여 두 개를 각 문장에 연결한 판본에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, existing representations are coarse, often relying on a preset list of classes and capturing minimal semantics [2, 11].
-
-방법 관련 발췌 — As a solution, we propose CLIP-Fields, which builds an implicit spatial semantic memory using webscale pretrained models as weak supervision.
+CLIP-Fields는 3차원 좌표에서 시각·언어 특징을 조회하는 장면 기억을 학습해 로봇이 자연어로 지정한 장소나 물체를 찾게 한다. [PDF 1쪽](https://www.roboticsproceedings.org/rss19/p074.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +55,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 1 / I. INTRODUCTION - extractive body cue:** As a solution, we propose CLIP-Fields, which builds an implicit spatial semantic memory using webscale pretrained models as weak supervision.
-- **p. 1 / I. INTRODUCTION - extractive body cue:** In this work, we introduce a method for building weakly supervised semantic neural fields, called CLIP-Fields, which combines the advantages of both of these lines ...
-- **p. 6 / V. EXPERIMENTAL EVALUATION - extractive body cue:** In Figure 5, we see once again that CLIP-Fields outperforms the RGB-based models significantly, to the point where even with three labelled views, CLIP-Fields has ...
-- **p. 7 / V. EXPERIMENTAL EVALUATION - extractive body cue:** As the base models naturally improve over time with continuous efforts in the computer vision and natural language processing fields, we expect CLIP-Fields's performance to ...
-- **p. 6 / V. EXPERIMENTAL EVALUATION - extractive body cue:** As we can see in Figure 4, the average precision of the predictions retrieved from CLIP-Fields largely outperforms the RGB-models.
-- **p. 7 / V. EXPERIMENTAL EVALUATION - extractive body cue:** By doing so, we simulate labelling our training data by a model whose mean accuracy is 1 -p.
-- **p. 8 / V. EXPERIMENTAL EVALUATION - extractive body cue:** We consider the navigation task successful if the robot can navigate to and point the camera at an object that satisfies the query.
-- **p. 8 / V. EXPERIMENTAL EVALUATION - extractive body cue:** This observation lines up with our simulated experiments in Section V-A4 where we saw that CLIP-Fields performance has a linear relationship with the base models' ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- RGB-D 관측을 공간에 투영하고 Detic, CLIP, Sentence-BERT의 출력을 약한 감독으로 사용해 장면별 수작업 주석 없이 좌표별 표현을 학습했다. [PDF 3쪽](https://www.roboticsproceedings.org/rss19/p074.pdf#page=3) · [PDF 4쪽](https://www.roboticsproceedings.org/rss19/p074.pdf#page=4)
+- HM3D의 물체 인스턴스 식별과 의미 분할을 평가하고, 실제 실내에서는 질의와 유사한 공간 위치를 이동 목표로 사용했다. [PDF 6쪽](https://www.roboticsproceedings.org/rss19/p074.pdf#page=6) · [PDF 7쪽](https://www.roboticsproceedings.org/rss19/p074.pdf#page=7) · [PDF 8쪽](https://www.roboticsproceedings.org/rss19/p074.pdf#page=8)
 
 ## Evaluation Scope
 

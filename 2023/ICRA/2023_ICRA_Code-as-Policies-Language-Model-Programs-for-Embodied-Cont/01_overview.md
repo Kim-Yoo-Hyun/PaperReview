@@ -15,13 +15,11 @@
 - Full-text retrieval: https://arxiv.org/pdf/2209.07753
 - Code/Project: https://code-as-policies.github.io/
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (16 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (16 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 요약과 핵심 기여 두 개를 각 문장에 연결한 판본에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — While promising, this abstraction prevents the LLMs from directly influencing the perception-action feedback loop, making it difficult to ground language in ways that (i) generalize modes of feedback that share percepts and ...
-
-방법 관련 발췌 — Our approach enables robots to perform spatial-geometric reasoning, parse object relationships, and form multi-step behaviors using off-the-shelf models and few-shot prompting with no additional training.
+Code as Policies는 언어 지시를 지각 결과를 읽고 로봇 제어 함수를 호출하는 실행 가능한 정책 프로그램으로 바꾼다. [PDF 1쪽](https://arxiv.org/pdf/2209.07753v4#page=1)
 
 ## Problem and Motivation
 
@@ -51,15 +49,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / I. INTRODUCTION - extractive body cue:** Our approach enables robots to perform spatial-geometric reasoning, parse object relationships, and form multi-step behaviors using off-the-shelf models and few-shot prompting with no additional training.
-- **p. 2 / I. INTRODUCTION - extractive body cue:** See full videos and more tasks at code-as-policies.github.io We present Code as Policies (CaP): a robot-centric formulation of language model generated programs (LMPs) executed on ...
-- **p. 5 / IV. EXPERIMENTS - extractive body cue:** Within each model family, performance improves with larger models.
-- **p. 5 / IV. EXPERIMENTS - extractive body cue:** Numbers achieved are higher than in recent works [1], [11], [58].
-- **p. 6 / IV. EXPERIMENTS - extractive body cue:** With unseen task attributes, CLIPort's performance degrades significantly, while LLM-based methods retain similar performance.
-- **p. 6 / IV. EXPERIMENTS - extractive body cue:** On unseen tasks and attributes, endto-end systems like CLIPort struggle to generalize, and CaP outperforms LLM reasoning directly with language (also observed in [20]).
-- **p. 11 / Figure/Table caption - extractive body cue:** Fig. 4: Robot Code-Generation Benchmark Performance across Generalization Types for Flat (top) and Hierarchical (middle) Code- Generation, as well as the performance improvements made by ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 지시와 코드의 예시를 프롬프트에 넣고, 생성된 코드에서 정의되지 않은 함수를 재귀적으로 구현해 복합 동작을 구성했다. [PDF 3쪽](https://arxiv.org/pdf/2209.07753v4#page=3) · [PDF 4쪽](https://arxiv.org/pdf/2209.07753v4#page=4)
+- 탁상 조작 등 실제 로봇 과제에서 공간 관계와 피드백을 사용하는 프로그램을 시험하고, 별도의 코드 생성 문제에서 계층적 생성의 효과를 평가했다. [PDF 5쪽](https://arxiv.org/pdf/2209.07753v4#page=5) · [PDF 6쪽](https://arxiv.org/pdf/2209.07753v4#page=6)
 
 ## Evaluation Scope
 

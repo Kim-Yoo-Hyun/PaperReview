@@ -48,7 +48,7 @@ PDF body framing (p. 2 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 1 (I. INTRO
 
 ## What the Paper Changes
 
-PDF body contribution framing (p. 2 (III. METHOD), p. 2 (I. INTRODUCTION), p. 3 (III. METHOD), p. 3 (III. METHOD), p. 1 (I. INTRODUCTION)): 2, the proposed Audio-VLA consists of four components including a multi-modal encoder, multi
+PDF body contribution framing (p. 2 (III. METHOD), p. 2 (I. INTRODUCTION), p. 3 (III. METHOD), p. 3 (III. METHOD), p. 1 (I. INTRODUCTION)): Audio-VLA는 멀티모달 인코더, 모달리티 투영기, 언어 모델, 행동 헤드로 구성된다. [그림 2](https://arxiv.org/pdf/2511.09958v1#page=3)
 
 - **p. 2 / I. INTRODUCTION - extractive body cue:** In this paper, we propose Audio-VLA, a multimodal manipulation policy that combines acoustic and visual perception.
 - **p. 3 / III. METHOD - extractive body cue:** It consists of two powerful vision transformers, DINOv2 [23] and SigLIP [24], pre-trained on Internet-scale image data to capture rich visual features and comprehensive spatial ...

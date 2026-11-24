@@ -16,13 +16,11 @@
 - Full-text retrieval at original review: https://arxiv.org/pdf/2506.17561
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (26 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (26 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 요약과 핵심 기여 두 개를 각 문장에 연결한 판본에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — 3) Bottleneck: Between task planning and policy learning, which presents a greater challenge for current manipulation tasks?
-
-방법 관련 발췌 — To systematically investigate the impacts of different planning paradigms and representations isolating from network architectures and training data, in this paper, we introduce VLA-OS, a unified VLA architecture series capable of vario ...
+VLA-OS는 조작 정책에서 계획 표현의 종류와 계획을 행동에 연결하는 방식 중 무엇이 성능 차이를 만드는지 통제된 조건에서 비교한다. [PDF 1쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/c7af751b5e0a407c62ac023e3cb381f9-Paper-Conference.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -56,16 +54,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 1 / Abstract - extractive body cue:** To systematically investigate the impacts of different planning paradigms and representations isolating from network architectures and training data, in this paper, we introduce VLA-OS, a ...
-- **p. 3 / 1 Introduction - extractive body cue:** Furthermore, to answer the bottleneck question, we designed a novel set of evaluation metrics tailored to separately assess the performance of task planning and policy ...
-- **p. 3 / 1 Introduction - extractive body cue:** We show in Table 1 that VLA-OS exhibits superior performance compared to most existing VLA methods with fewer parameters and without pretraining.
-- **p. 8 / 3.1 Preliminaries - extractive body cue:** For qualitative comparisons, we show in Figure 5 an example that when VLA-OS-H uses the same planning heads as VLA-OS-I-E where there are some planning ...
-- **p. 1 / 1 Introduction - extractive body cue:** Recent studies have increasingly emphasized the development of foundational models for robot manipulation tasks by training large Vision-Language-Action models (VLAs) on extensive datasets [8, 82, ...
-- **p. 2 / Figure/Table caption - extractive body cue:** Figure 1: Left: four different VLA paradigms. Note that in this paper, we didn't explore PlanningOnly- VLA since they usually cannot be trained with the ...
-- **p. 7 / Figure/Table caption - extractive body cue:** Table 1: Sanity check. Success rates on four LIBERO benchmarks. Baseline results are from their papers [43, 8, 44]. Our results are the average of ...
-- **p. 9 / 3.1 Preliminaries - extractive body cue:** Finding 11: The performance of all VLA paradigms improves as the amount of action-labeled demonstration data increases, i.e., all VLA paradigms have the data scalability.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 공통 모델 계열과 학습 자료를 사용해 언어 계획과 시각적으로 위치가 연결된 계획, 여러 계획·실행 구조를 교차 비교했다. [PDF 4쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/c7af751b5e0a407c62ac023e3cb381f9-Paper-Conference.pdf#page=4) · [PDF 5쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/c7af751b5e0a407c62ac023e3cb381f9-Paper-Conference.pdf#page=5) · [PDF 6쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/c7af751b5e0a407c62ac023e3cb381f9-Paper-Conference.pdf#page=6)
+- 시험한 조작 과제에서는 시각 근거가 있는 계획과 계층형 모델이 대체로 우세했으며, 계층형 모델의 추가 학습·추론 비용도 보고했다. [PDF 7쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/c7af751b5e0a407c62ac023e3cb381f9-Paper-Conference.pdf#page=7) · [PDF 8쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/c7af751b5e0a407c62ac023e3cb381f9-Paper-Conference.pdf#page=8) · [PDF 9쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/c7af751b5e0a407c62ac023e3cb381f9-Paper-Conference.pdf#page=9)
 
 ## Evaluation Scope
 

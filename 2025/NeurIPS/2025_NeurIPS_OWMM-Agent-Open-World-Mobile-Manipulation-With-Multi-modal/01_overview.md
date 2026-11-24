@@ -16,13 +16,11 @@
 - Full-text retrieval at original review: https://arxiv.org/pdf/2506.04217
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (19 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (19 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 요약과 핵심 기여 두 개를 각 문장에 연결한 판본에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, directly applying pre-trained VLMs to our embodied agent presents challenges of domain shift: 1) Rare grounding tasks: Robotic planners and controllers require multi-modal inputs, including both tools and coordinates in the ...
-
-방법 관련 발췌 — In summary, our contributions are as follows: • We propose OWMM-Agent, a unified VLM-based agent architecture for open-world mobile manipulation, capable of global scene understanding, state tracking, and end-to-end action generation. • ...
+OWMM-Agent는 여러 시점의 장면 기억과 현재 로봇 상태를 함께 읽고 조작·이동 함수를 호출해 개방형 이동 조작 지시를 수행한다. [PDF 1쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/bc97207e3979d1cc23109db0be0e8ed2-Paper-Conference.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -56,16 +54,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1 Introduction - extractive body cue:** In summary, our contributions are as follows: • We propose OWMM-Agent, a unified VLM-based agent architecture for open-world mobile manipulation, capable of global scene understanding, ...
-- **p. 2 / 1 Introduction - extractive body cue:** Based on the aforementioned observations, we propose a novel VLM agent framework, OWMM-Agent, to address these challenges and leverage the power of VLMs for OWMM ...
-- **p. 3 / 1 Introduction - extractive body cue:** • We introduce a foundation model for OWMM, capable of multi-image reasoning and executable multi-modal action generation, with extensive experiments analyzing the model's performance.
-- **p. 4 / 3 Methodology - extractive body cue:** The overview of our method is shown in Figure 2.
-- **p. 4 / 3 Methodology - extractive body cue:** In this section, we introduce the definition of OWMM in section 3.1.
-- **p. 15 / Figure/Table caption - extractive body cue:** Figure 5: OVMM-VLM-8B Sub-task Performance with the Increase of Training Data Size. The task scores consistently improve as the training data size increases. marginal gains ...
-- **p. 9 / 5 Experiments - extractive body cue:** OWMM-VLM-38B model achieved the best performance, and OWMM-VLM-8B model also outperformed the baseline.
-- **p. 7 / 5 Experiments - extractive body cue:** The OWMM-VLM-38B model achieves the best performance across all metrics, demonstrating its superior ability to integrate scene understanding, decision-making, and action generation. *: Since PIVOT ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 오래 유지되는 장면 영상과 수시로 바뀌는 로봇 상태를 분리해 저장하고, 에이전트가 생성한 과제 자료로 지시 미세조정을 수행했다. [PDF 4쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/bc97207e3979d1cc23109db0be0e8ed2-Paper-Conference.pdf#page=4) · [PDF 5쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/bc97207e3979d1cc23109db0be0e8ed2-Paper-Conference.pdf#page=5) · [PDF 7쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/bc97207e3979d1cc23109db0be0e8ed2-Paper-Conference.pdf#page=7)
+- 기록된 상태에서 한 단계 결정을 내리는 평가와 여러 단계를 연결하는 수행을 비교하고, 실물 이동 조작으로의 전이를 시험했다. [PDF 8쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/bc97207e3979d1cc23109db0be0e8ed2-Paper-Conference.pdf#page=8) · [PDF 9쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/bc97207e3979d1cc23109db0be0e8ed2-Paper-Conference.pdf#page=9) · [PDF 10쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/bc97207e3979d1cc23109db0be0e8ed2-Paper-Conference.pdf#page=10)
 
 ## Evaluation Scope
 

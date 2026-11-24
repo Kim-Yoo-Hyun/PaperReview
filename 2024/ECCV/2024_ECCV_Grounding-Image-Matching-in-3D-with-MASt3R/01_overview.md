@@ -15,13 +15,11 @@
 - Full-text retrieval: https://arxiv.org/pdf/2406.09756
 - Code/Project: https://github.com/naver/mast3r
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (21 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (21 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 요약과 핵심 기여 두 개를 각 문장에 연결한 판본에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — We argue that this is because, so far, practically all matching approaches have been treating matching as a 2D problem in image space.
-
-방법 관련 발췌 — First, we propose MASt3R, a 3D-aware matching approach building on the recently released DUSt3R framework.
+MASt3R는 DUSt3R의 3차원 점 지도에 픽셀별 대응 특징을 더해 시점이 다른 영상에서도 더 정밀한 대응점을 찾는다. [PDF 1쪽](https://arxiv.org/pdf/2406.09756v1#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** First, we propose MASt3R, a 3D-aware matching approach building on the recently released DUSt3R framework.
-- **p. 2 / 1. Introduction - extractive body cue:** To get pixel-accurate matches, we propose a coarse-to-fine matching scheme during which matching is performed at several scales.
-- **p. 4 / 3.2. Matching prediction head and loss - extractive body cue:** For these reasons, we propose to add a second head that outputs two dense feature maps 𝐷1 and 𝐷2 ∈ℝ𝐻×𝑊×𝑑of dimensional 𝑑: 𝐷1 = Head1 ...
-- **p. 5 / 3.3. Fast reciprocal matching - extractive body cue:** Finally, the output set of correspondences consists of the concatenation of all reciprocal pairs M𝑘= Ð 𝑡M𝑡 𝑘.
-- **p. 4 / 3.1. The DUSt3R framework - extractive body cue:** Compared to the DUSt3R framework which we build upon, our contributions are highlighted in blue.
-- **p. 7 / 4.2. Map-free localization - extractive body cue:** Surprisingly, the performance significantly improves for intermediate values of subsampling.
-- **p. 7 / 4.2. Map-free localization - extractive body cue:** A large part of the improvement is of course due to MASt3R predicting metric depth, but note that our variant leveraging depth from DPT-KITTI (thus ...
-- **p. 9 / 4.4. Visual localization - extractive body cue:** As expected, a greater number of retrieved images (top40) yields better performance, achieving competitive performance on Aachen and significantly outperforming the state of the art ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 3차원 회귀와 함께 조밀한 지역 기술자를 출력하는 헤드를 학습시키고, 영상 간 특징 대응에 별도의 손실을 부여했다. [PDF 3쪽](https://arxiv.org/pdf/2406.09756v1#page=3) · [PDF 4쪽](https://arxiv.org/pdf/2406.09756v1#page=4)
+- 상호 최근접 대응을 빠르게 찾는 알고리즘을 제안하고, 사전 장면 지도 없이 카메라 위치를 찾는 평가에서 대응 방식별 성능을 비교했다. [PDF 5쪽](https://arxiv.org/pdf/2406.09756v1#page=5) · [PDF 7쪽](https://arxiv.org/pdf/2406.09756v1#page=7) · [PDF 8쪽](https://arxiv.org/pdf/2406.09756v1#page=8)
 
 ## Evaluation Scope
 

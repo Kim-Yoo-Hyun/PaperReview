@@ -15,13 +15,11 @@
 - Full-text retrieval: https://proceedings.iclr.cc/paper_files/paper/2025/file/2c8047bf3ed8ef6905351608d641f02f-Paper-Conference.pdf
 - Code/Project: not identified
 - Paper type: theory_or_foundation
-- Source audit: full-text PDF body checked on 2026-09-03 (25 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (25 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 요약과 핵심 기여 두 개를 각 문장에 연결한 판본에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — ARTICULATE-ANYTHING represents a step function improvement in quality, accuracy (8.7-12.2% to 75%), and generalizability over prior art (Chen et al., 2024; Mandi et al., 2024), overcoming previous limitations that restricted success to ...
-
-방법 관련 발췌 — To address this challenge, we present ARTICULATE-ANYTHING, a novel approach in automatic articulation that harnesses the power of leading foundation vision-language models (VLMs) to articulate a diverse range of objects of arbitrary ...
+Articulate-Anything은 영상·이미지·텍스트에 나타난 물체의 부품과 관절을 추론해 시뮬레이터에서 움직일 수 있는 객체 모델을 생성한다. [PDF 1쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/2c8047bf3ed8ef6905351608d641f02f-Paper-Conference.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -52,16 +50,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** To address this challenge, we present ARTICULATE-ANYTHING, a novel approach in automatic articulation that harnesses the power of leading foundation vision-language models (VLMs) to articulate ...
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** ARTICULATE-ANYTHING: We present a vision-language actor-critic system that accurately articulates objects from diverse input modalities, including texts, images, and videos.
-- **p. 9 / Figure/Table caption - extractive body cue:** Figure 10: In-context learning. ARTICULATE-ANYTHING improves with the number of prompting examples, demonstrating in-context learning. The zero-shot performance (0 example) is included. We conduct this ...
-- **p. 9 / 5 EXPERIMENTS - extractive body cue:** 1 2 3 Iteration 70 80 90 100 Success Rate (%) 80.2 85.5 86.0 84.0 89.4 90.1 Link Placement Ground Truth Critic 1 2 3 ...
-- **p. 10 / 5 EXPERIMENTS - extractive body cue:** Both policies trained via ARTICULATE-ANYTHING's and human-annotated assets achieve 100% success rate in the real world.
-- **p. 6 / 5 EXPERIMENTS - extractive body cue:** Evaluation Metrics: We assess performance using success rates for each task.
-- **p. 7 / 5 EXPERIMENTS - extractive body cue:** Our approach significantly outperforms all baselines in the joint prediction task.
-- **p. 7 / 5 EXPERIMENTS - extractive body cue:** Our innovations allow ARTICULATE-ANYTHING to achieve superior performance as demonstrated in Fig.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 기존 메시에서 부품을 검색하고 VLM이 배치와 관절을 코드로 제안한 뒤, 렌더링 결과를 보고 오류를 수정하게 했다. [PDF 4쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/2c8047bf3ed8ef6905351608d641f02f-Paper-Conference.pdf#page=4) · [PDF 5쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/2c8047bf3ed8ef6905351608d641f02f-Paper-Conference.pdf#page=5) · [PDF 6쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/2c8047bf3ed8ef6905351608d641f02f-Paper-Conference.pdf#page=6)
+- PartNet-Mobility에서 관절 모델링을 평가하고, 영상에서 만든 시뮬레이션 자산으로 조작 정책을 훈련해 실물로 옮기는 예를 제시했다. [PDF 6쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/2c8047bf3ed8ef6905351608d641f02f-Paper-Conference.pdf#page=6) · [PDF 7쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/2c8047bf3ed8ef6905351608d641f02f-Paper-Conference.pdf#page=7) · [PDF 10쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/2c8047bf3ed8ef6905351608d641f02f-Paper-Conference.pdf#page=10)
 
 ## Evaluation Scope
 

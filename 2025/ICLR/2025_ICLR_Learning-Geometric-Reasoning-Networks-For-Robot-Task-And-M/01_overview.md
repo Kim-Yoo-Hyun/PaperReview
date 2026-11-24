@@ -15,15 +15,13 @@
 - Full-text retrieval: https://proceedings.iclr.cc/paper_files/paper/2025/file/561dd71d04695c85e1c0f6a0fbe0bd85-Paper-Conference.pdf
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (24 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (24 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 요약과 핵심 기여 두 개를 각 문장에 연결한 판본에서 확인했다.
 
 > DOC-QA2 targeted source review: 2026-10-23; PDF pp. 4. 손상 구간·직접 연결된 표 분류만 원문 이미지와 대조했다. 전체 주장 정독·실험 검증·reading status 승격을 뜻하지 않는다. [URL·PDF hash·수정 기록](../../../work/sources/pdf_note_review_followup_2026-10-23.json).
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, action feasibility prediction presents several challenges.
-
-방법 관련 발췌 — The contributions of this paper are threefold: (1) We propose a novel GNN-based model for efficient and accurate action and grasp feasibility prediction in complex 3D environments.
+GRN은 작업·동작 계획에서 어떤 행동과 파지를 기하학적으로 실행할 수 있는지 예측해 비용이 큰 동작 계획기 호출을 줄인다. [PDF 1쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/561dd71d04695c85e1c0f6a0fbe0bd85-Paper-Conference.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -56,16 +54,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** The contributions of this paper are threefold: (1) We propose a novel GNN-based model for efficient and accurate action and grasp feasibility prediction in complex ...
-- **p. 1 / 1 INTRODUCTION - extractive body cue:** To address these limitations, we propose a novel approach that leverages a GNN-based model for robot action and grasp feasibility prediction.
-- **p. 1 / 1 INTRODUCTION - extractive body cue:** Our method constructs a graph representation of 3D environments, where fixed and movable objects are represented as nodes, and edges capture spatial relationships and interaction ...
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** (3) We provide comprehensive experiments showcasing our method's state-of-the-art (SOTA) performance, including evaluations of its interpretability and generalization capabilities.
-- **PDF p. 4, §3 / Eq. (2) (DOC-QA2 원문 대조):** GRN은 feasibility classifier f_F와 IK classifier f_κ, obstruction regressor f_ρ를 학습한다. f_F는 object/environment와 예측 κ_G, ρ_G를 사용해 action·grasp feasibility 벡터 [F_a,F_G]ᵀ를 출력한다.
-- **p. 9 / 6 RESULTS - extractive body cue:** The results show that GRN achieves a better performance than the state-of-the-art on robots with various kinematics.
-- **p. 8 / 6 RESULTS - extractive body cue:** This allows our model to achieve an F1 score up to 10.3% higher than other GNN-based baselines on action feasibility prediction, and up to 21.8% ...
-- **p. 9 / 6 RESULTS - extractive body cue:** Moreover, the improved performance obtained using EGAT instead of classical GAT Veliˇckovi´c et al.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 장면 그래프에서 역기구학의 가능성과 파지를 가로막는 물체를 함께 추정해 후보가 실패할 원인을 계획 탐색에 제공한다. [PDF 4쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/561dd71d04695c85e1c0f6a0fbe0bd85-Paper-Conference.pdf#page=4) · [PDF 5쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/561dd71d04695c85e1c0f6a0fbe0bd85-Paper-Conference.pdf#page=5)
+- 더 복잡한 장면, 다른 물체 모양과 로봇 구성으로 옮겼을 때 예측과 계획 효율을 비교하고 실물 로봇에서도 적용을 평가했다. [PDF 8쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/561dd71d04695c85e1c0f6a0fbe0bd85-Paper-Conference.pdf#page=8) · [PDF 9쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/561dd71d04695c85e1c0f6a0fbe0bd85-Paper-Conference.pdf#page=9) · [PDF 10쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/561dd71d04695c85e1c0f6a0fbe0bd85-Paper-Conference.pdf#page=10)
 
 ## Evaluation Scope
 

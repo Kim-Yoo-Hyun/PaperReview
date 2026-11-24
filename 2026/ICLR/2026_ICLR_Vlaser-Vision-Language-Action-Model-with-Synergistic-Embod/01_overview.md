@@ -15,13 +15,11 @@
 - Full-text retrieval: https://proceedings.iclr.cc/paper_files/paper/2026/file/6bb891f36b1e5aa28f72f00a7c78bb94-Paper-Conference.pdf
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (30 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (30 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 요약과 핵심 기여 두 개를 각 문장에 연결한 판본에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — A: (E) remove the tomato from the blackpot and put it on the table.
-
-방법 관련 발췌 — Here we present the overall data scale and sources for each reasoning modality, while more details about the construction methodologies are provided in Appendix A.2.
+Vlaser는 로봇 장면에서의 추론을 먼저 학습한 시각·언어 모델이 이후 정책 학습에 적합한 초기 표현을 제공하는지 검증한다. [PDF 1쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/6bb891f36b1e5aa28f72f00a7c78bb94-Paper-Conference.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 4 / 2 METHOD - extractive body cue:** Here we present the overall data scale and sources for each reasoning modality, while more details about the construction methodologies are provided in Appendix A.2.
-- **p. 1 / 1 INTRODUCTION - extractive body cue:** Developing foundation models that possess strong reasoning and control capabilities is therefore an important advancement toward general-purpose embodied AI.
-- **p. 4 / 2 METHOD - extractive body cue:** General and Spatial Reasoning Data The Vlaser dataset integrates 1.2 million question-answer pairs dedicated to general Robotic Visual Question Answering (RoboVQA) tasks, along with an ...
-- **p. 5 / 2 METHOD - extractive body cue:** Effective planning allows robots to combine basic skills and generalize to new scenarios.
-- **p. 5 / 2 METHOD - extractive body cue:** 2.3 TRAINING RECIPE Vlaser adopts a two-stage training recipe, designed to optimize both embodied reasoning and robot control.
-- **p. 9 / 3 EXPERIMENTS - extractive body cue:** This suggests that pretraining with diverse in-domain multimodal data, spanning general QA, grounding, and spatial intelligence, could best facilitates transfer learning for VLA policy learning ...
-- **p. 7 / 3 EXPERIMENTS - extractive body cue:** When compared against current state-of-the-art embodied-specific VLMs, including RoboBrain2.0 (Team et al., 2025a) and Embodied-R1 (Yuan et al., 2025), our method, Vlaser still achieves superior ...
-- **p. 3 / Figure/Table caption - extractive body cue:** Figure 2: An illustration of Vlaser architecture. Vlaser includes two components and corresponding training phases: 1) the Multimodal Pretraining is for embodied reasoning enhancement based ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 공간 추론, 지시 대상 찾기, 질의응답과 계획을 포함한 Vlaser-6M으로 로봇 장면의 시각·언어 표현을 학습했다. [PDF 3쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/6bb891f36b1e5aa28f72f00a7c78bb94-Paper-Conference.pdf#page=3) · [PDF 4쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/6bb891f36b1e5aa28f72f00a7c78bb94-Paper-Conference.pdf#page=4) · [PDF 5쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/6bb891f36b1e5aa28f72f00a7c78bb94-Paper-Conference.pdf#page=5)
+- 시각·언어 모델의 초기화를 바꾼 뒤 행동을 지도학습하고, SimplerEnv의 WidowX·Google Robot 과제에서 차이를 비교했다. [PDF 7쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/6bb891f36b1e5aa28f72f00a7c78bb94-Paper-Conference.pdf#page=7) · [PDF 8쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/6bb891f36b1e5aa28f72f00a7c78bb94-Paper-Conference.pdf#page=8) · [PDF 9쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/6bb891f36b1e5aa28f72f00a7c78bb94-Paper-Conference.pdf#page=9)
 
 ## Evaluation Scope
 

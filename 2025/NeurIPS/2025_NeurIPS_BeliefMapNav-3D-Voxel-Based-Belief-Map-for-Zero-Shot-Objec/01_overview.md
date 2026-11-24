@@ -16,13 +16,11 @@
 - Full-text retrieval at original review: https://arxiv.org/pdf/2506.06487.pdf
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (20 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (20 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 요약과 핵심 기여 두 개를 각 문장에 연결한 판본에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Training-based methods typically require large amounts of data and have difficulty generalizing due to limited environmental diversity [17, 18], while zero-shot methods offer flexibility and adaptability to novel environments, but are c ...
-
-방법 관련 발췌 — The contributions of our method are mainly summarized as follows: 1)We propose BeliefMapNav, an efficient zero-shot object navigation system that accurately predicts target location through fine-grained belief estimation in a 3D voxel-b ...
+BeliefMapNav는 보지 못한 실내에서 목표 물체가 있을 확률을 3차원 복셀에 유지하고, 관측에 따라 갱신해 탐색 경로를 정한다. [PDF 1쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/77b277ef10f16c9d4ecd3b2c0313da0a-Paper-Conference.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -56,16 +54,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 3 / 1 Introduction - extractive body cue:** The contributions of our method are mainly summarized as follows: 1)We propose BeliefMapNav, an efficient zero-shot object navigation system that accurately predicts target location through ...
-- **p. 2 / 1 Introduction - extractive body cue:** To enable more precise and accurate predictions of the target object's location within 3D space, we propose a novel 3D voxel-based belief map that considers ...
-- **p. 1 / 1 Introduction - extractive body cue:** Zero-shot object navigation(ZSON) enables robots to locate targets in novel environments through natural language instructions (e.g., "find the red sofa"), eliminating reliance on pre-mapped scenes ...
-- **p. 2 / 1 Introduction - extractive body cue:** To further enhance search efficiency, we introduce BeliefMapNav, an efficient zero-shot object navigation system based on path sequence optimization over the belief map.
-- **p. 3 / 1 Introduction - extractive body cue:** In contrast, our method constructs a multi-level, spatially-aligned semantic map that supports accurate target object localization estimation.
-- **p. 8 / 3 Method - extractive body cue:** On the HM3D dataset, our method improves SPL by 46.4% compared to the zero-shot method InstructNav [9], which achieves the highest SR.
-- **p. 8 / 3 Method - extractive body cue:** However, on the HSSD dataset, performance significantly improves because the synthetic scenes avoid the issues present in MP3D and HM3D.
-- **p. 9 / 3 Method - extractive body cue:** Results indicate that incorporating more semantic levels generally improves SR.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 언어 모델의 장소·물체 관련 지식과 시각 특징으로 계층적 공간의 사전분포를 만들고, 이동 중 관측을 반영한 분포로 다음 탐색 지점을 선택한다. [PDF 4쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/77b277ef10f16c9d4ecd3b2c0313da0a-Paper-Conference.pdf#page=4) · [PDF 5쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/77b277ef10f16c9d4ecd3b2c0313da0a-Paper-Conference.pdf#page=5) · [PDF 6쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/77b277ef10f16c9d4ecd3b2c0313da0a-Paper-Conference.pdf#page=6)
+- HM3D와 HSSD에서 목표 도달률과 경로 길이를 고려한 성공 지표를 평가하고, 계획기와 가시성 정보의 기여를 비교했다. [PDF 8쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/77b277ef10f16c9d4ecd3b2c0313da0a-Paper-Conference.pdf#page=8) · [PDF 9쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/77b277ef10f16c9d4ecd3b2c0313da0a-Paper-Conference.pdf#page=9)
 
 ## Evaluation Scope
 

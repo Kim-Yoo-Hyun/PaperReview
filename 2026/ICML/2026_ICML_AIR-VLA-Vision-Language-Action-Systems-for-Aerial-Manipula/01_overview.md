@@ -15,14 +15,12 @@
 - Full-text retrieval: https://raw.githubusercontent.com/mlresearch/v306/main/assets/sun26an/sun26an.pdf
 - Code/Project: not identified
 - Paper type: benchmark_or_dataset
-- Source audit: full-text PDF body checked on 2026-09-03 (20 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (20 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 요약과 핵심 기여 두 개를 각 문장에 연결한 판본에서 확인했다.
 - Metadata refresh: 2026-10-25 PMLR ICML 2026 공식 proceedings metadata 재확인. 기존 OpenReview PDF의 본문 검토 근거는 보존하며 final 본문 동등성은 재검토하지 않았다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, extending VLA models to aerial platforms introduces unique physical and control challenges.
-
-방법 관련 발췌 — The main contributions of this paper are summarized as follows: • Pioneering Aerial Manipulation VLA Benchmark: We propose the first VLA benchmark testbed specifically designed for AMS, filling the evaluation gap in ...
+AIR-VLA는 공중에 떠 있는 기체와 부착된 로봇팔이 함께 물체를 조작할 때 정책을 평가하기 위한 물리 시뮬레이션 벤치마크다. [PDF 1쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/sun26an/sun26an.pdf#page=1) · [PDF 2쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/sun26an/sun26an.pdf#page=2)
 
 ## Problem and Motivation
 
@@ -52,16 +50,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** The main contributions of this paper are summarized as follows: • Pioneering Aerial Manipulation VLA Benchmark: We propose the first VLA benchmark testbed specifically designed ...
-- **p. 2 / 1. Introduction - extractive body cue:** To address these challenges, we propose AIR-VLA, the first VLA training and evaluation benchmark designed specifically for Aerial Manipulation Systems.
-- **p. 6 / 4.1.2. MAIN RESULTS AND ANALYSIS - extractive body cue:** Compared to low-DoF ground-based platforms, the performance of existing VLA models on high-DoF aerial platforms remains suboptimal. π0 achieves its peak success rate in Base ...
-- **p. 8 / 4.2.2. RESULTS AND ANALYSIS - extractive body cue:** The table displays normalized sub-metric scores and planning success rates (Succ, %) for each model across different task scenarios and instruction types.
-- **p. 6 / 4.1.2. MAIN RESULTS AND ANALYSIS - extractive body cue:** Experimental results indicate that large-scale pre-trained models, represented by π0.5 and π0, demonstrate significant advantages in the AIR-VLA evaluation, outperforming traditional imitation learning baselines such ...
-- **p. 7 / 4.2.2. RESULTS AND ANALYSIS - extractive body cue:** Notably, Qwen3-VL achieves state-ofthe-art (SOTA) performance across all baseline models in four core dimensions: Process Planning, Spatial Navigation, Object Grounding, and Skill Selection, highlighting its ...
-- **p. 7 / 4.2.2. RESULTS AND ANALYSIS - extractive body cue:** In-depth analysis indicates that this lack of 3D spatial awareness is the primary bottleneck limiting the end-to-end planning Success Rate.
-- **p. 4 / 3.2. Evaluation Framework - extractive body cue:** To comprehensively evaluate the limit performance of embodied intelligence models in this high-dimensional domain, we constructed a two-layer evaluation framework covering perception, planning, and control.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 기체·팔·그리퍼의 동작을 함께 기록하는 환경을 만들고 사람이 원격조작한 시연 3,000개를 시각·언어·행동 자료로 정리했다. [PDF 1쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/sun26an/sun26an.pdf#page=1) · [PDF 4쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/sun26an/sun26an.pdf#page=4) · [PDF 5쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/sun26an/sun26an.pdf#page=5)
+- 시뮬레이션에서 VLA들의 공중 조작 수행 점수를 비교하고, 고수준 VLM의 절차 계획·공간 판단·물체 지시·기술 선택은 별도의 지표로 평가했다. [PDF 6쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/sun26an/sun26an.pdf#page=6) · [PDF 7쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/sun26an/sun26an.pdf#page=7) · [PDF 8쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/sun26an/sun26an.pdf#page=8)
 
 ## Evaluation Scope
 

@@ -16,13 +16,11 @@
 - Full-text retrieval at original review: https://arxiv.org/pdf/2505.11383
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (14 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (14 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 요약과 핵심 기여 두 개를 각 문장에 연결한 판본에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — 2) These models lack mechanisms for structured scene memory.
-
-방법 관련 발췌 — In summary, our main contributions include: • We propose Dynam3D, a multi-level patch-instance-zone 3D representation model that performs online 3D instance and zone-level encoding and real-time hierarchical updates in dynamic environme ...
+Dynam3D는 로봇이 이동하며 관측한 장면을 패치·물체 인스턴스·구역 단위의 3차원 토큰으로 유지해 언어 지시를 따른다. [PDF 1쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/e1a1847e39a7b79b41199176b152f0e6-Paper-Conference.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -54,16 +52,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1 Introduction - extractive body cue:** In summary, our main contributions include: • We propose Dynam3D, a multi-level patch-instance-zone 3D representation model that performs online 3D instance and zone-level encoding and ...
-- **p. 2 / 1 Introduction - extractive body cue:** We propose Dynam3D to alleviate the limitations mentioned above.
-- **p. 1 / Abstract - extractive body cue:** To address these limitations, we propose Dynam3D, a dynamic layered 3D representation model that leverages language-aligned, generalizable, and hierarchical 3D representations as visual input to ...
-- **p. 1 / 1 Introduction - extractive body cue:** As illustrated in Figure 1(a), recent works [5-7] have predominantly focused on using video-based large models [8-10] to develop monocular VLN systems.
-- **p. 7 / 4 Experiments - extractive body cue:** Our Dynam3D still demonstrates substantial improvements, outperforming NaVid by over 13% in Success Rate (SR) on REVERIE-CE and by over 5% on NavRAG-CE.
-- **p. 7 / 4 Experiments - extractive body cue:** Compared to prior state-of-the-art methods, e.g., g3D-LF and Uni-NaVid, our Dynam3D achieves an improvement of nearly 5% in navigation success rate (SR).
-- **p. 8 / 4 Experiments - extractive body cue:** Under the Lifelong Memory setting, our Dynam3D also achieves performance gains, with a 2.7% SR improvement on R2R-CE and a 4.9% SR improvement on REVERIE-CE.
-- **p. 8 / 4 Experiments - extractive body cue:** In the static environment (Table 4) Dynam3D achieves a 20% higher success rate than baselines, reaching 70% after pre-exploration.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 자세가 알려진 RGB-D 관측으로 2차원 CLIP 특징을 3차원에 투영하고, 세분도가 다른 표현을 관측 변화에 맞춰 단계별로 갱신한다. [PDF 4쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/e1a1847e39a7b79b41199176b152f0e6-Paper-Conference.pdf#page=4) · [PDF 5쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/e1a1847e39a7b79b41199176b152f0e6-Paper-Conference.pdf#page=5)
+- R2R-CE와 REVERIE-CE 등에서 온라인 표현을 이용해 다음 이동을 선택하고, 지시 이행과 대상 탐색 성능을 평가했다. [PDF 7쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/e1a1847e39a7b79b41199176b152f0e6-Paper-Conference.pdf#page=7) · [PDF 8쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/e1a1847e39a7b79b41199176b152f0e6-Paper-Conference.pdf#page=8) · [PDF 9쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/e1a1847e39a7b79b41199176b152f0e6-Paper-Conference.pdf#page=9)
 
 ## Evaluation Scope
 

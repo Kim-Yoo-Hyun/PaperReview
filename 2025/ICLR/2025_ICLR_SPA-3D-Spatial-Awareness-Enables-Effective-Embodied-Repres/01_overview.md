@@ -15,13 +15,11 @@
 - Full-text retrieval: https://proceedings.iclr.cc/paper_files/paper/2025/file/421fcf51a0e243f15f977553a6f482cb-Paper-Conference.pdf
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (31 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (31 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 요약과 핵심 기여 두 개를 각 문장에 연결한 판본에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — This limitation arises from their primary emphasis on 2D semantic understanding, which, though valuable, is still insufficient for the sophisticated spatial reasoning required in embodied AI tasks, where agents need to navigate ...
-
-방법 관련 발췌 — Our contribution can be summarized as follows. • We propose a significant spatial hypothesis: 3D spatial awareness is crucial for embodied representation learning.
+SPA는 여러 시점의 영상을 미분 가능한 3차원 렌더링으로 학습해 로봇 정책에 사용할 시각 표현을 얻는다. [PDF 1쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/421fcf51a0e243f15f977553a6f482cb-Paper-Conference.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** Our contribution can be summarized as follows. • We propose a significant spatial hypothesis: 3D spatial awareness is crucial for embodied representation learning.
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** Our experiments provide clear evidence for the hypothesis. • We introduce SPA, a novel paradigm for representation learning in embodied AI.
-- **p. 1 / 1 INTRODUCTION - extractive body cue:** In this paper, we introduce SPA, a general 3D spatial-aware representation learning framework for embodied AI.
-- **p. 3 / 2 METHODOLOGY - extractive body cue:** Unlike the bird's-eye view (BEV) construction in autonomous driving (Li et al., 2022), which usually relies on a fixed scene range around ego vehicle , ...
-- **p. 4 / 2 METHODOLOGY - extractive body cue:** Our framework has the capability to distill knowledge from multiple vision foundation models by adding multiple rendering heads.
-- **p. 7 / Figure/Table caption - extractive body cue:** Tab. 3. For detailed results on each task and each random seed, please refer to Appendix D. We also have visualized the performance radar chart ...
-- **p. 8 / Figure/Table caption - extractive body cue:** Figure 4: Correlation between mean success rate and camera pose regression error. 5.2 ADDITIONAL COMPARISONS (Q1) We primarily compare with SOTA methods using the ViT-L ...
-- **p. 6 / Figure/Table caption - extractive body cue:** Table 1: Influence of different datasets. We present the performance results on the VC-1 benchmark. Mean S.R. refers to the mean success rate across all ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 영상 특징을 3차원 공간에 배치하고 여러 시점에서 다시 렌더링한 신호를 감독으로 사용해 시각 트랜스포머에 공간 정보를 학습시켰다. [PDF 3쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/421fcf51a0e243f15f977553a6f482cb-Paper-Conference.pdf#page=3) · [PDF 4쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/421fcf51a0e243f15f977553a6f482cb-Paper-Conference.pdf#page=4) · [PDF 5쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/421fcf51a0e243f15f977553a6f482cb-Paper-Conference.pdf#page=5)
+- 여덟 시뮬레이터의 268개 과제에 걸쳐 표현을 비교하고, 실물 조작에서도 같은 사전학습 표현의 효과를 평가했다. [PDF 1쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/421fcf51a0e243f15f977553a6f482cb-Paper-Conference.pdf#page=1) · [PDF 7쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/421fcf51a0e243f15f977553a6f482cb-Paper-Conference.pdf#page=7) · [PDF 10쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/421fcf51a0e243f15f977553a6f482cb-Paper-Conference.pdf#page=10)
 
 ## Evaluation Scope
 

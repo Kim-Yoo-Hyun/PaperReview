@@ -15,13 +15,11 @@
 - Full-text retrieval: https://arxiv.org/pdf/2607.03449.pdf
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (24 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (24 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 요약과 핵심 기여 두 개를 각 문장에 연결한 판본에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, these training-based methods are often constrained by limited context windows and the inherent difficulty of optimizing long-range causal dependencies over hundreds of steps.
-
-방법 관련 발췌 — Our core contributions are summarized as follows: • We propose a Hierarchical Memory Management framework that decouples robotic control into transient (Executor), working (Sentry), and episodic (Planner) memory layers, resolving the gr ...
+HiMe는 장기 조작에서 즉시 동작을 실행하는 정책, 작업 기억을 갱신하는 모듈, 장기 전략을 세우는 모듈을 나누어 운영한다. [PDF 1쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/ji26k/ji26k.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 3 / 1 Introduction - extractive body cue:** Our core contributions are summarized as follows: • We propose a Hierarchical Memory Management framework that decouples robotic control into transient (Executor), working (Sentry), and ...
-- **p. 2 / 1 Introduction - extractive body cue:** 1, motivated by this temporal and scale mismatch, we introduce HiMe, a Hierarchical Embodied Memory framework that decouples embodied intelligence into three functional layers with ...
-- **p. 3 / 1 Introduction - extractive body cue:** In contrast to passive storage, we introduce explicit Add, Update, and Delete operations to grant the robot knowledge plasticity.
-- **p. 1 / Abstract - extractive body cue:** To resolve this architectural misalignment, we propose HiMe, a Hierarchical Embodied Memory framework that decouples embodied intelligence into a high-frequency Executor for execution, a Sentry ...
-- **p. 2 / 1 Introduction - extractive body cue:** This organization allows the Planner to retrieve not only vi2
-- **p. 9 / 4 Experiments - extractive body cue:** HiMe significantly outperforms all baselines, achieving a 90% average success rate.
-- **p. 9 / 4 Experiments - extractive body cue:** Although it stores history, it achieves a significantly lower task progress (65%) compared to HiMe (90%).
-- **p. 10 / 4 Experiments - extractive body cue:** 2) The Value of Consistency: While No Management achieves decent performance by retaining all history, it is still inferior to our full method (86% vs.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 관측과 언어에서 얻은 기억 항목을 추가·수정·삭제할 수 있게 하고, 각 모듈이 역할에 맞는 주기로 기억을 읽거나 갱신하게 했다. [PDF 3쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/ji26k/ji26k.pdf#page=3) · [PDF 4쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/ji26k/ji26k.pdf#page=4) · [PDF 5쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/ji26k/ji26k.pdf#page=5)
+- 긴 조작 과제에서 단일 기억 구조와 비교하고, 사람의 선호가 달라질 때 그에 맞춰 이전에 저장한 지식을 수정하는지 검사했다. [PDF 7쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/ji26k/ji26k.pdf#page=7) · [PDF 8쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/ji26k/ji26k.pdf#page=8) · [PDF 9쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/ji26k/ji26k.pdf#page=9)
 
 ## Evaluation Scope
 

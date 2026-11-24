@@ -15,15 +15,13 @@
 - Full-text retrieval: https://proceedings.iclr.cc/paper_files/paper/2025/file/969a11f489c59c50c2cfe8c407c68a9b-Paper-Conference.pdf
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (19 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (19 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 요약과 핵심 기여 두 개를 각 문장에 연결한 판본에서 확인했다.
 
 > DOC-QA2 targeted source review: 2026-10-23; PDF pp. 7. 손상 구간·직접 연결된 표 분류만 원문 이미지와 대조했다. 전체 주장 정독·실험 검증·reading status 승격을 뜻하지 않는다. [URL·PDF hash·수정 기록](../../../work/sources/pdf_note_review_followup_2026-10-23.json).
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, previous trajectory-level diffusion models for robotic manipulation have two key limitations.
-
-방법 관련 발췌 — In summary, our contributions are mainly as followed: • We propose ET-SEED, an efficient trajectory-level SE(3) equivariant diffusion policy defined on SE(3) manifold, which achieves a proficient and generalizable manipulation policy wi ...
+ET-SEED는 물체와 장면에 같은 강체 변환을 가했을 때 로봇 행동 궤적도 그에 따라 변하도록 설계한 확산 모방 정책이다. [PDF 1쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/969a11f489c59c50c2cfe8c407c68a9b-Paper-Conference.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -57,16 +55,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** In summary, our contributions are mainly as followed: • We propose ET-SEED, an efficient trajectory-level SE(3) equivariant diffusion policy defined on SE(3) manifold, which achieves ...
-- **p. 7 / 4 METHOD - extractive body cue:** Formally, we have ˆAk→0 = sθ(O, Ak; k) (8) To ensure the overall SE(3) equivariance of our pipeline, we propose a novel design of denoising ...
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** Further, in real-world experiments, with only 20 demonstration trajectories, our method is able to generalize to unseen scenarios.
-- **p. 4 / 4 METHOD - extractive body cue:** In this paper, we propose ET-SEED, a trajectorylevel end-to-end SE(3) equivariant diffusion model for robotic manipulation.
-- **p. 5 / 4 METHOD - extractive body cue:** This key design choice significantly reduces the training complexity, thereby enhancing the overall performance of our method.
-- **p. 9 / 5 EXPERIMENTS - extractive body cue:** Design Average Ours w/o SE(3) 24±4.48 Ours w/o Eqv-Diff 57±6.52 Ours 76±2.24 While EquiBot achieves commendable results in both success rate and Dgeo, it struggles ...
-- **p. 8 / 5 EXPERIMENTS - extractive body cue:** (2) Can our method achieve comparable performance with fewer demonstrations?
-- **p. 9 / 5 EXPERIMENTS - extractive body cue:** In contrast, ET-SEED consistently outperforms across all six tasks, with minimal performance drop when facing unseen object poses.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 마르코프 전이의 대칭 조건을 분석해 모든 잡음 제거 단계에 같은 등변성 제약을 부과하지 않아도 궤적 분포의 등변성을 얻는 구조를 도출했다. [PDF 4쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/969a11f489c59c50c2cfe8c407c68a9b-Paper-Conference.pdf#page=4) · [PDF 5쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/969a11f489c59c50c2cfe8c407c68a9b-Paper-Conference.pdf#page=5) · [PDF 6쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/969a11f489c59c50c2cfe8c407c68a9b-Paper-Conference.pdf#page=6)
+- 강체·관절 물체·변형 물체 조작에서 시연 수와 초기 배치 변화에 따른 성공률을 비교하고 실물에서 생성 궤적을 시험했다. [PDF 8쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/969a11f489c59c50c2cfe8c407c68a9b-Paper-Conference.pdf#page=8) · [PDF 9쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/969a11f489c59c50c2cfe8c407c68a9b-Paper-Conference.pdf#page=9) · [PDF 10쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/969a11f489c59c50c2cfe8c407c68a9b-Paper-Conference.pdf#page=10)
 
 ## Evaluation Scope
 

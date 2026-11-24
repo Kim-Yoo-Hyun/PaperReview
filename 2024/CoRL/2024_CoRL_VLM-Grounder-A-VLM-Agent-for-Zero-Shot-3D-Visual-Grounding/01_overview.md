@@ -15,13 +15,11 @@
 - Full-text retrieval: https://raw.githubusercontent.com/mlresearch/v270/main/assets/xu25c/xu25c.pdf
 - Code/Project: https://github.com/InternRobotics/VLM-Grounder
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (25 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (25 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 요약과 핵심 기여 두 개를 각 문장에 연결한 판본에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, existing visual grounding datasets[1, 2] are scarce and limited to a pre-defined vocabulary, challenging the development of general models for open-world applications.
-
-방법 관련 발췌 — While these methods achieve strong performance, they use only objectcentric information and often miss detailed scene context, making it challenging to handle queries like "find the room with the most abundant natural ...
+VLM-Grounder는 여러 장면 영상과 자연어 설명을 대조해 그 설명이 가리키는 물체의 3차원 경계 상자를 추정한다. [PDF 1쪽](https://raw.githubusercontent.com/mlresearch/v270/d9fe509ba390176a5fd650178a381a0a7b2d4f64/assets/xu25c/xu25c.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 1 / 1 Introduction - extractive body cue:** While these methods achieve strong performance, they use only objectcentric information and often miss detailed scene context, making it challenging to handle queries like "find ...
-- **p. 2 / 1 Introduction - extractive body cue:** Further, we propose a dynamic stitching strategy that dynamically uses the optimal layouts identified by the benchmark to stitch images, enhancing VLM's performance.
-- **p. 3 / 3 Methodology - extractive body cue:** In this section, we present the overall framework of VLM-Grounder (Sec.
-- **p. 4 / 3 Methodology - extractive body cue:** To study the effects of stitching, we designed a novel benchmark called the VisualRetrieval Benchmark, detailed in Sec.
-- **p. 1 / 1 Introduction - extractive body cue:** Our approach involves a VLM that analyzes user queries and sequences of images capturing the scene to locate the target object, whose 2D mask is ...
-- **p. 6 / Figure/Table caption - extractive body cue:** Table 1: 3D visual grounding results on ScanRefer. Without using geometric information from point clouds, VLM-Grounder outperforms previous zero-shot methods and achieves performance comparable to ...
-- **p. 8 / 3 Methodology - extractive body cue:** As shown in our results, the proposed dynamic stitching outperforms the others, demonstrating its efficacy.
-- **p. 8 / 3 Methodology - extractive body cue:** 5 shows a clear performance improvement with each additional component, confirming the importance and effectiveness of these operations.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 여러 영상을 묶어 대상이 보이는 시점을 찾고, 검출 피드백과 다중 시점 투영을 결합해 물체의 3차원 위치를 정한다. [PDF 3쪽](https://raw.githubusercontent.com/mlresearch/v270/d9fe509ba390176a5fd650178a381a0a7b2d4f64/assets/xu25c/xu25c.pdf#page=3) · [PDF 4쪽](https://raw.githubusercontent.com/mlresearch/v270/d9fe509ba390176a5fd650178a381a0a7b2d4f64/assets/xu25c/xu25c.pdf#page=4) · [PDF 5쪽](https://raw.githubusercontent.com/mlresearch/v270/d9fe509ba390176a5fd650178a381a0a7b2d4f64/assets/xu25c/xu25c.pdf#page=5)
+- ScanRefer와 Nr3D에서 제로샷 물체 지시 해석을 평가하고, 두 데이터셋의 서로 다른 위치 판정 지표를 각각 보고했다. [PDF 6쪽](https://raw.githubusercontent.com/mlresearch/v270/d9fe509ba390176a5fd650178a381a0a7b2d4f64/assets/xu25c/xu25c.pdf#page=6) · [PDF 7쪽](https://raw.githubusercontent.com/mlresearch/v270/d9fe509ba390176a5fd650178a381a0a7b2d4f64/assets/xu25c/xu25c.pdf#page=7)
 
 ## Evaluation Scope
 

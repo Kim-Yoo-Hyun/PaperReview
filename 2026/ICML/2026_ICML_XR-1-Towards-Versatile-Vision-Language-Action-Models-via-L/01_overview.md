@@ -16,13 +16,11 @@
 - Full-text retrieval at original review: https://openreview.net/pdf/181715f87df4dd5677ebf2619dcb456e071c95dd.pdf
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (45 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (45 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 요약과 핵심 기여 두 개를 각 문장에 연결한 판본에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Despite VLM advancements, two challenges persist: (i) Precision Gap: Mapping high-dimensional observations to precise low-level actions is difficult due to multimodal uncertainty; even centimeter-level errors lead to failure in dexterou ...
-
-방법 관련 발췌 — Our main contributions are summarized as follows: • We propose X Robotic Model 1 (XR-1), a scalable three-stage framework for VLA learning that effectively leverages heterogeneous data sources, including Internet-scale human videos ...
+XR-1은 영상에 나타나는 변화와 로봇의 운동을 공유하는 이산 표현으로 바꾸어 여러 로봇과 인간 시연에서 정책을 학습한다. [PDF 1쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/fan26f/fan26f.pdf#page=1) · [PDF 2쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/fan26f/fan26f.pdf#page=2)
 
 ## Problem and Motivation
 
@@ -56,16 +54,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** Our main contributions are summarized as follows: • We propose X Robotic Model 1 (XR-1), a scalable three-stage framework for VLA learning that effectively leverages ...
-- **p. 2 / 1. Introduction - extractive body cue:** Addressing the limitations of unimodal representations and inspired by human supramodal cognition, we propose X Robotic Model 1 (XR-1) to achieve cross-data exploitation and cross-embodiment ...
-- **p. 4 / 3.1. Overview - extractive body cue:** We introduce XR-1, a scalable framework for cross-robot VLA learning (Figure 2), structured in three stages.
-- **p. 5 / 3.1. Overview - extractive body cue:** To unify both modalities, we introduce a VQ-VAE codebook e ∈Rd×f with d discrete entries of dimension f.
-- **p. 5 / 3.1. Overview - extractive body cue:** To mitigate this gap, we introduce an alignment loss that constrains visual codes to remain consistent with their motion counterparts: Lalign = DKL(q(ze mo) ∥q(ze ...
-- **p. 8 / 4.4. Generalization Analysis - extractive body cue:** As shown in Figure 7, XR-1 achieves significantly higher success rates than ACT and DP, despite the setting favoring 8
-- **p. 8 / 4.4. Generalization Analysis - extractive body cue:** As shown in Figure 6, the pre-trained XR-1-oob model, despite no adaptation, achieves performance comparable to GR00T-N1.5 and π0, while outperforming RDT and UniVLA.
-- **p. 7 / 4.1. Experiment Setup - extractive body cue:** Success rate results across 20 tasks on Tien Kung 2.0.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 두 입력을 처리하는 벡터 양자화 인코더로 공통 코드를 만들고, 코드를 예측하는 사전학습 뒤 이를 저수준 행동 학습의 중간 표현으로 사용했다. [PDF 4쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/fan26f/fan26f.pdf#page=4) · [PDF 5쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/fan26f/fan26f.pdf#page=5)
+- 서로 다른 로봇과 작업에서 조작 성공률 및 새로운 조건에 대한 일반화를 평가하고 시각·운동 정보의 결합이 주는 효과를 분석했다. [PDF 6쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/fan26f/fan26f.pdf#page=6) · [PDF 7쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/fan26f/fan26f.pdf#page=7) · [PDF 8쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/fan26f/fan26f.pdf#page=8) · [PDF 9쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/fan26f/fan26f.pdf#page=9)
 
 ## Evaluation Scope
 

@@ -11,9 +11,9 @@ PDF body method statement (p. 4 (III. METHODOLOGY), p. 4 (III. METHODOLOGY), p. 
 ## Method Body Digest
 
 - **p. 4 / III. METHODOLOGY - extractive body cue:** To obtain open-vocabulary features for each room, inspired by the approach in [8], we use the CLIP visual encoder to extract embeddings from the images.
-- **p. 4 / III. METHODOLOGY - extractive body cue:** Specically, the model takes as input both the ltered 3D point cloud and a textual description and retrieves the appropriate object label by identifying the ...
+- **p. 4 / III. METHODOLOGY - extractive body cue:** Specifically, the model takes as input both the filtered 3D point cloud and a textual description and retrieves the appropriate object label by identifying the ...
 - **p. 3 / III. METHODOLOGY - extractive body cue:** A region detection module is then applied to segment the scene into individual rooms.
-- **p. 3 / III. METHODOLOGY - extractive body cue:** These objects are then processed with a text query in an open-vocabulary 3D object classication module to obtain segmented and labeled objects.
+- **p. 3 / III. METHODOLOGY - extractive body cue:** These objects are then processed with a text query in an open-vocabulary 3D object classification module to obtain segmented and labeled objects.
 - **p. 2 / III. METHODOLOGY - extractive body cue:** In this section, we present our design of Point2Graph, which builds a compact and enriched open-vocabulary 3D scene graph with solely 3D scene model input.
 - **p. 5 / III. METHODOLOGY - extractive body cue:** Using the Voronoi planner, we are able to generate the Voronoi navigation map.
 - **p. 4 / III. METHODOLOGY - extractive body cue:** Then, argmax and majority voting are applied to get the type for each room.
@@ -21,16 +21,16 @@ PDF body method statement (p. 4 (III. METHODOLOGY), p. 4 (III. METHODOLOGY), p. 
 
 ## Design Rationale
 
-- **p. 1 / I. INTRODUCTION - extractive body cue:** Generally speaking, our framework consists of a room segmentation and classication module and an object detection and classication module.
-- **p. 4 / III. METHODOLOGY - extractive body cue:** Object-Level Detection and Classication After getting the segmentation result for each room, our approach mainly consists of two steps, where the rst step deals with ...
+- **p. 1 / I. INTRODUCTION - extractive body cue:** Generally speaking, our framework consists of a room segmentation and classification module and an object detection and classification module.
+- **p. 4 / III. METHODOLOGY - extractive body cue:** Object-Level Detection and Classification After getting the segmentation result for each room, our approach mainly consists of two steps, where the first step deals with ...
 - **p. 2 / III. METHODOLOGY - extractive body cue:** In this section, we present our design of Point2Graph, which builds a compact and enriched open-vocabulary 3D scene graph with solely 3D scene model input.
 
 ## Source Evidence Cues
 
 - **p. 4 / III. METHODOLOGY - extractive body cue:** To obtain open-vocabulary features for each room, inspired by the approach in [8], we use the CLIP visual encoder to extract embeddings from the images.
-- **p. 4 / III. METHODOLOGY - extractive body cue:** Specically, the model takes as input both the ltered 3D point cloud and a textual description and retrieves the appropriate object label by identifying the ...
+- **p. 4 / III. METHODOLOGY - extractive body cue:** Specifically, the model takes as input both the filtered 3D point cloud and a textual description and retrieves the appropriate object label by identifying the ...
 - **p. 3 / III. METHODOLOGY - extractive body cue:** A region detection module is then applied to segment the scene into individual rooms.
-- **p. 3 / III. METHODOLOGY - extractive body cue:** These objects are then processed with a text query in an open-vocabulary 3D object classication module to obtain segmented and labeled objects.
+- **p. 3 / III. METHODOLOGY - extractive body cue:** These objects are then processed with a text query in an open-vocabulary 3D object classification module to obtain segmented and labeled objects.
 - **p. 2 / III. METHODOLOGY - extractive body cue:** In this section, we present our design of Point2Graph, which builds a compact and enriched open-vocabulary 3D scene graph with solely 3D scene model input.
 - **p. 5 / III. METHODOLOGY - extractive body cue:** Using the Voronoi planner, we are able to generate the Voronoi navigation map.
 - **Detected method headings:** III. METHODOLOGY (p. 2)
@@ -40,7 +40,7 @@ PDF body method statement (p. 4 (III. METHODOLOGY), p. 4 (III. METHODOLOGY), p. 
 | Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
 | Map / localization state | sensor stream을 pose와 world map으로 누적한다 | camera/depth/LiDAR, odometry, history | mapping, localization, scene graph 또는 map update를 수행 | pose/map/free-space state | To obtain open-vocabulary features for each room, inspired by the approach in [8], we use the CLIP visual encoder to extract embeddings ... | p. 4 (III. METHODOLOGY), p. 4 (III. METHODOLOGY) |
-| Global / local decision | goal과 risk를 고려해 route를 정한다 | map, goal, obstacle/risk estimate | graph search, local planning, language grounding 또는 replanning을 수행 | path/waypoint/local goal | Specically, the model takes as input both the ltered 3D point cloud and a textual description and retrieves the appropriate object label ... | p. 4 (III. METHODOLOGY), p. 3 (III. METHODOLOGY) |
+| Global / local decision | goal과 risk를 고려해 route를 정한다 | map, goal, obstacle/risk estimate | graph search, local planning, language grounding 또는 replanning을 수행 | path/waypoint/local goal | Specifically, the model takes as input both the filtered 3D point cloud and a textual description and retrieves the appropriate object label ... | p. 4 (III. METHODOLOGY), p. 3 (III. METHODOLOGY) |
 | Motion execution / recovery | route를 velocity/action으로 실행하고 실패에 대응한다 | path와 current pose/feedback | tracking, collision check, recovery 또는 replan을 수행 | velocity/base command | A region detection module is then applied to segment the scene into individual rooms. | p. 3 (III. METHODOLOGY), p. 3 (III. METHODOLOGY) |
 
 - Pipeline rows are domain labels; the paper-specific operations are the extractive cues and section anchors in the same row.
@@ -66,7 +66,7 @@ PDF body method statement (p. 4 (III. METHODOLOGY), p. 4 (III. METHODOLOGY), p. 
 
 - **p. 3 / III. METHODOLOGY - extractive body cue:** First, the input point cloud is segmented into N slices along the z-axis, with each slice projected onto an occupancy grid map denoted as Gk, ...
 - **p. 1 / I. INTRODUCTION - extractive body cue:** Compared with existing methods [8], [9], our proposed Point2Graph framework solely use the scene point cloud as input to generate open-vocabulary 3D scene graph.
-- **p. 4 / III. METHODOLOGY - extractive body cue:** Specically, the model takes as input both the ltered 3D point cloud and a textual description and retrieves the appropriate object label by identifying the ...
+- **p. 4 / III. METHODOLOGY - extractive body cue:** Specifically, the model takes as input both the filtered 3D point cloud and a textual description and retrieves the appropriate object label by identifying the ...
 - **p. 1 / I. INTRODUCTION - extractive body cue:** For example, the point clouds created from a Building Information Model (BIM) or LiDAR sensors often lack the RGB-D images and their pose data [13], ...
 - **p. 2 / III. METHODOLOGY - extractive body cue:** In this section, we present our design of Point2Graph, which builds a compact and enriched open-vocabulary 3D scene graph with solely 3D scene model input.
 - **p. 3 / III. METHODOLOGY - extractive body cue:** 3: Generation of border-enhanced density map: The process begins by segmenting the point cloud into N layers, each of which is projected into a grid ...
@@ -78,8 +78,8 @@ PDF body method statement (p. 4 (III. METHODOLOGY), p. 4 (III. METHODOLOGY), p. 
 
 | Contract | Generic domain prior | PDF body cue | Unresolved detail |
 |---|---|---|---|
-| Horizon | map-level start-goal plan과 local controller horizon을 계층적으로 분리한다. | This step ensures that only the regions consistently identied across most layers are considered as wall boundaries. | episode/sequence/action-chunk boundary |
-| Rate / latency | mapping/localization, global planner, local planner와 base controller rate를 구분한다. | Object-Level Detection and Classication After getting the segmentation result for each room, our approach mainly consists of two steps, where the rst ... | Hz/fps, inference time and control rate |
+| Horizon | map-level start-goal plan과 local controller horizon을 계층적으로 분리한다. | This step ensures that only the regions consistently identified across most layers are considered as wall boundaries. | episode/sequence/action-chunk boundary |
+| Rate / latency | mapping/localization, global planner, local planner와 base controller rate를 구분한다. | Object-Level Detection and Classification After getting the segmentation result for each room, our approach mainly consists of two steps, where the first ... | Hz/fps, inference time and control rate |
 | Memory | map/scene graph, pose history와 current local goal. | not recovered | window and reset |
 | Compute | map update, collision checking, path search와 replanning frequency가 결정한다. | not recovered | hardware, batch and throughput |
 
@@ -99,13 +99,13 @@ PDF body method statement (p. 4 (III. METHODOLOGY), p. 4 (III. METHODOLOGY), p. 
 
 | Method component | Evaluation evidence to inspect | PDF anchor |
 |---|---|---|
-| Map / localization state | Evaluation for Object Detection and Classication We conducted our experiments on the widely-used ScanNetv2 [45] indoor point cloud dataset, which consists of ... | p. 5 (IV. EXPERIMENTAL RESULTS), p. 5 (IV. EXPERIMENTAL RESULTS) |
+| Map / localization state | Evaluation for Object Detection and Classification We conducted our experiments on the widely-used ScanNetv2 [45] indoor point cloud dataset, which consists of ... | p. 5 (IV. EXPERIMENTAL RESULTS), p. 5 (IV. EXPERIMENTAL RESULTS) |
 | Global / local decision | We compared our method to RoomFormer [28], the current SOTA in learning-based algorithms, and the room segmentation techniques employed in HOV-SG [8], ... | p. 5 (IV. EXPERIMENTAL RESULTS), p. 5 (IV. EXPERIMENTAL RESULTS) |
 | Motion execution / recovery | In our experimental results, shown in TABLE I, by generating a border-enhanced density map before input to RoomFormer, our approach achieved 12% ... | p. 5 (IV. EXPERIMENTAL RESULTS), p. 5 (IV. EXPERIMENTAL RESULTS) |
 
 ## Failure and Ablation Link
 
-- **p. 4 / Figure/Table caption - extractive body cue:** Fig. 5: Overview of the 3D open-vocabulary detection pipeline: It consists of two stages: (1) detection and localization using class-agnostic bounding boxes and DBSCAN ltering ...
+- **p. 4 / Figure/Table caption - extractive body cue:** Fig. 5: Overview of the 3D open-vocabulary detection pipeline: It consists of two stages: (1) detection and localization using class-agnostic bounding boxes and DBSCAN filtering ...
 - **p. 6 / V. CONCLUSION - extractive body cue:** Nevertheless, Point2Graph has its limitations.
 - **p. 6 / V. CONCLUSION - extractive body cue:** In conclusion, this work presents the Point2Graph framework, which addresses the limitations of current openvocabulary 3D scene graph generation methods by eliminating the need for ...
 - **p. 5 / IV. EXPERIMENTAL RESULTS - extractive body cue:** Our proposed "Snap-Lookup" pipeline, which incorporates room visual features into type inference, can differentiate between various types of rooms that contain the same objects-something text-only ...

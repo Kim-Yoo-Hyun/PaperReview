@@ -16,13 +16,11 @@
 - Full-text retrieval at original review: https://openreview.net/pdf/2958fe5249a1a673a414d689de7784b306b2a02a.pdf
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (17 pages; PyMuPDF text; title-token overlap first two pages=0.917)
+- Source audit: full-text PDF body checked on 2026-09-03 (17 pages; PyMuPDF text; title-token overlap first two pages=0.917) 2026-11-24 요약과 핵심 기여 두 개를 각 문장에 연결한 판본에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — 2) Current VLA methods lack robust generalization to new vehicle platforms or unseen driving scenarios.
-
-방법 관련 발췌 — To summarize, the main contributions are as follows: • We propose Reasoning-VLA, an efficient and fast VLA framework that employs learnable action queries to interact with reasoning-enhanced vision-language representations, enabling one ...
+Reasoning-VLA는 주행 장면과 언어 추론에서 얻은 특징을 이용해 자율주행 차량의 연속 궤적을 병렬로 예측한다. [PDF 1쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/zhang26ib/zhang26ib.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -56,16 +54,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** To summarize, the main contributions are as follows: • We propose Reasoning-VLA, an efficient and fast VLA framework that employs learnable action queries to interact ...
-- **p. 3 / 3. Method - extractive body cue:** In the following sections, we present a detailed description of our approach to developing a VLA framework for autonomous driving and highlight key insights.
-- **p. 1 / 1. Introduction - extractive body cue:** To address these challenges, we propose ReasoningVLA, an efficient and generalist VLA framework that establishes a new state-of-the-art for autonomous driving.
-- **p. 3 / 3. Method - extractive body cue:** 1, the Reasoning-VLA framework comprises three main components: (1) a reasoningenhanced vision-language model (VLM) backbone, (2) an action module that interacts with the VLM and ...
-- **p. 4 / 3.5. Action Refinement Module - extractive body cue:** To further enhance the representation quality and accuracy of the predicted action trajectories, we introduce an Action Refinement Module (ARM).
-- **p. 7 / 5.2.1. Open-loop Evaluation - extractive body cue:** As shown in the last row of Table 1, the additional fine-tuning further improves performance across all time intervals: Reasoning-VLA-7B+ achieves increases of 4.3% and ...
-- **p. 7 / 5.2.1. Open-loop Evaluation - extractive body cue:** Reasoning-VLA-3B also achieves results comparable to state-of-the-art methods.
-- **p. 6 / 4. Unified Datasets - extractive body cue:** To capture diverse driving scenarios and further improve generalization, we specifically selected eight widely used autonomous driving datasets as the foundation for our unified dataset: ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 공간 단서를 받는 학습 가능한 행동 질의를 두고, 공개 주행 자료 여덟 개를 공통 형식으로 정리해 지도학습과 강화학습 후학습에 사용했다. [PDF 3쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/zhang26ib/zhang26ib.pdf#page=3) · [PDF 4쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/zhang26ib/zhang26ib.pdf#page=4) · [PDF 5쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/zhang26ib/zhang26ib.pdf#page=5)
+- 기록된 주행 궤적의 예측 오차와 폐루프 주행 평가를 나누고, 다른 데이터셋이나 차량 구성에 대한 일반화도 비교했다. [PDF 6쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/zhang26ib/zhang26ib.pdf#page=6) · [PDF 7쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/zhang26ib/zhang26ib.pdf#page=7) · [PDF 8쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/zhang26ib/zhang26ib.pdf#page=8) · [PDF 9쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/zhang26ib/zhang26ib.pdf#page=9)
 
 ## Evaluation Scope
 

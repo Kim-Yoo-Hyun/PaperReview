@@ -15,13 +15,11 @@
 - Full-text retrieval: https://arxiv.org/pdf/2501.12387
 - Code/Project: https://cut3r.github.io/
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (17 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (17 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 요약과 핵심 기여 두 개를 각 문장에 연결한 판본에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — The learned prior enables our method to address challenges encountered by traditional methods (e.g., dynamic objects, sparse observations, degenerate camera motion), while the ability to continuously update allows it to process new ...
-
-방법 관련 발췌 — The learned prior enables our method to address challenges encountered by traditional methods (e.g., dynamic objects, sparse observations, degenerate camera motion), while the ability to continuously update allows it to process new ...
+CUT3R는 새 영상이 들어올 때마다 지속 상태를 갱신해 공통 좌표계에서 실제 척도의 3차원 점 지도를 순차적으로 예측한다. [PDF 1쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Wang_Continuous_3D_Perception_Model_with_Persistent_State_CVPR_2025_paper.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 1 / 1. Introduction - extractive body cue:** The learned prior enables our method to address challenges encountered by traditional methods (e.g., dynamic objects, sparse observations, degenerate camera motion), while the ability to ...
-- **p. 2 / 1. Introduction - extractive body cue:** Our framework is designed to be general and flexible, making it well-suited for training on an extensive collection of datasets and adaptable to diverse inference ...
-- **p. 1 / 1. Introduction - extractive body cue:** Building on these insights, we introduce an online 3D perception framework that unifies three key capabilities: 1) reconstructing 3D scenes from few observations, 2) continuously ...
-- **p. 2 / 1. Introduction - extractive body cue:** We also show that our method can infer previously unseen structures and continuously refine the reconstruction as new observations arrive.
-- **p. 3 / 3.1. State-Input Interaction Mechanism - extractive body cue:** Our method takes a stream of images as input.
-- **p. 7 / 4.3. 3D Reconstruction - extractive body cue:** Our method significantly outperforms the other online approach Spann3R [101], and achieves comparable or sometimes better results than the top optimization-based method, DUSt3RGA, while operating ...
-- **p. 6 / 4.1. Monocular and Video Depth Estimation - extractive body cue:** Our method achieves the best overall performance among all online methods. global alignment they use assumes that the scene is static, and enforcing multi-view consistency ...
-- **p. 8 / 4.4. Analysis - extractive body cue:** 5, revisiting improves performance compared to the online version, especially for accuracy.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 영상 토큰과 상태 토큰이 서로 정보를 교환하도록 학습해 과거 영상을 모두 다시 처리하지 않고 관측을 누적한다. [PDF 3쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Wang_Continuous_3D_Perception_Model_with_Persistent_State_CVPR_2025_paper.pdf#page=3) · [PDF 4쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Wang_Continuous_3D_Perception_Model_with_Persistent_State_CVPR_2025_paper.pdf#page=4)
+- 관측하지 않은 가상 시점에서도 상태에 질의해 장면을 예측하고, 실제 영상열에서 깊이·카메라 자세·다중 시점 복원의 정확도를 평가했다. [PDF 4쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Wang_Continuous_3D_Perception_Model_with_Persistent_State_CVPR_2025_paper.pdf#page=4) · [PDF 6쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Wang_Continuous_3D_Perception_Model_with_Persistent_State_CVPR_2025_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Wang_Continuous_3D_Perception_Model_with_Persistent_State_CVPR_2025_paper.pdf#page=7)
 
 ## Evaluation Scope
 

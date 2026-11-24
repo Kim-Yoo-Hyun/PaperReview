@@ -15,13 +15,11 @@
 - Full-text retrieval: https://proceedings.iclr.cc/paper_files/paper/2026/file/2aa3da3c1463ee2cdaaee94be4f8ba3f-Paper-Conference.pdf
 - Code/Project: not identified
 - Paper type: benchmark_or_dataset
-- Source audit: full-text PDF body checked on 2026-09-03 (27 pages; PyMuPDF text; title-token overlap first two pages=0.875)
+- Source audit: full-text PDF body checked on 2026-09-03 (27 pages; PyMuPDF text; title-token overlap first two pages=0.875) 2026-11-24 요약과 핵심 기여 두 개를 각 문장에 연결한 판본에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — While recent years have witnessed substantial progress in developing more capable and general robot policies, their evaluation remains a persistent challenge and lacks standardization.
-
-방법 관련 발췌 — RobotArena ∞: We introduce RobotArena ∞, a new benchmarking framework that scales robot evaluation by deploying policies in automatically constructed simulated environments and assessing them through automatic VLM score and online human ...
+RobotArena ∞는 실제 로봇 시연 영상을 시뮬레이션 장면으로 변환한 뒤 여러 정책의 실행 영상을 공통 환경에서 비교하는 평가 체계다. [PDF 1쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/2aa3da3c1463ee2cdaaee94be4f8ba3f-Paper-Conference.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** RobotArena ∞: We introduce RobotArena ∞, a new benchmarking framework that scales robot evaluation by deploying policies in automatically constructed simulated environments and assessing them ...
-- **p. 3 / 1 INTRODUCTION - extractive body cue:** We present key evaluation results that reveal how current robot policies generalize-or fail to-under distribution shifts.
-- **p. 3 / 1 INTRODUCTION - extractive body cue:** We introduce a fully automated reality-to-simulation translation pipeline built upon VLMs, 2D-to-3D generative models and differentiable rendering.
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** RobotArena ∞is inspired by prior efforts to design scalable robot benchmarks, particularly the seminal contributions of BEHAVIOR (Li et al., 2024) and SIMPLER (Li et ...
-- **p. 1 / ABSTRACT - extractive body cue:** We introduce RobotArena ∞, a new benchmarking framework that overcomes these challenges by shifting VLA evaluation into large-scale simulated environments augmented with online human feedback.
-- **p. 9 / Figure/Table caption - extractive body cue:** Figure 9: Policy evaluation results in RobotArena ∞ versus SIMPLER of Li et al. (2024c). 5.3 ROBOTARENA ∞VERSUS SIMPLER OF LI ET AL. (2024C) In ...
-- **p. 6 / Figure/Table caption - extractive body cue:** Figure 4: Left: Task progress scores computed by prompting Gemini 2.5 Pro with image frames and synchronized object and robot state sequences. Right: Example task ...
-- **p. 24 / Figure/Table caption - extractive body cue:** Figure 19: Example VLM-generated task evaluation curves on perturbed environments. Top: A successful pick-and-place execution-after the object lift the VLM score climbs steadily and correctly ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 영상의 물체와 장면을 3차원 자산으로 복원해 시뮬레이터에 배치하고 원래 작업과 대응하는 정책 평가 환경을 구성했다. [PDF 3쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/2aa3da3c1463ee2cdaaee94be4f8ba3f-Paper-Conference.pdf#page=3) · [PDF 4쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/2aa3da3c1463ee2cdaaee94be4f8ba3f-Paper-Conference.pdf#page=4) · [PDF 5쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/2aa3da3c1463ee2cdaaee94be4f8ba3f-Paper-Conference.pdf#page=5)
+- 시뮬레이션 실행에 대한 VLM의 진행도 채점과 사람의 쌍별 선호를 함께 수집해 정책별 수행 품질을 비교했다. [PDF 5쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/2aa3da3c1463ee2cdaaee94be4f8ba3f-Paper-Conference.pdf#page=5) · [PDF 6쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/2aa3da3c1463ee2cdaaee94be4f8ba3f-Paper-Conference.pdf#page=6) · [PDF 7쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/2aa3da3c1463ee2cdaaee94be4f8ba3f-Paper-Conference.pdf#page=7)
 
 ## Evaluation Scope
 

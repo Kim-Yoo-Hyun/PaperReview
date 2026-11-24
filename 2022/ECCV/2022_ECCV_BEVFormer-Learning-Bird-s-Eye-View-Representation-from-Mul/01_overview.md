@@ -15,13 +15,11 @@
 - Full-text retrieval: https://arxiv.org/pdf/2203.17270
 - Code/Project: https://github.com/fundamentalvision/BEVFormer
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (20 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (20 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 요약과 핵심 기여 두 개를 각 문장에 연결한 판본에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, the existing state-of-the-art multi-camera 3D detection methods rarely exploit temporal information.
-
-방법 관련 발췌 — Our main contributions are as follows: • We propose BEVFormer, a spatiotemporal transformer encoder that projects multi-camera and/or timestamp input to BEV representations.
+BEVFormer는 여러 카메라의 현재 영상과 이전 시점의 조감도 특징을 결합해 차량 주변의 물체와 지도를 추정한다. [PDF 1쪽](https://arxiv.org/pdf/2203.17270v2#page=1)
 
 ## Problem and Motivation
 
@@ -52,16 +50,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1 Introduction - extractive body cue:** Our main contributions are as follows: • We propose BEVFormer, a spatiotemporal transformer encoder that projects multi-camera and/or timestamp input to BEV representations.
-- **p. 2 / 1 Introduction - extractive body cue:** To this end, we present a transformer-based bird's-eye-view (BEV) encoder, termed BEVFormer, which can effectively aggregate spatiotemporal features from multi-view cameras and history BEV features.
-- **p. 3 / 1 Introduction - extractive body cue:** • We designed learnable BEV queries along with a spatial cross-attention layer and a temporal self-attention layer to lookup spatial features from cross cameras and ...
-- **p. 10 / Figure/Table caption - extractive body cue:** Figure 3: The detection results of subsets with different visibilities. We divide the nuScenes val set into four subsets based on the visibility that {0-40%, ...
-- **p. 11 / Figure/Table caption - extractive body cue:** Figure 4: Visualization results of BEVFormer on nuScenes val set. We show the 3D bboxes predictions in multi-camera images and the bird's-eye-view. predicted boxes is ...
-- **p. 7 / 4 Experiments - extractive body cue:** On the test set, our model achieves 56.9% NDS without bells and whistles, 9.0 points 7
-- **p. 7 / 4 Experiments - extractive body cue:** Our method outperforms previous best method DETR3D [47] over 9.2 points on val set (51.7% NDS vs.
-- **p. 11 / Figure/Table caption - extractive body cue:** Tab. 6. We ablate the scales of BEVFormer in three aspects, including whether to use multi-scale view features, the shape of BEV queries, and the ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 격자 질의가 카메라별 관심 영역에서 공간 정보를 모으고, 시간축 주의 기제가 이전 조감도 표현을 현재 격자와 결합한다. [PDF 4쪽](https://arxiv.org/pdf/2203.17270v2#page=4) · [PDF 5쪽](https://arxiv.org/pdf/2203.17270v2#page=5)
+- nuScenes에서 3차원 검출과 지도 분할을 평가하고, 물체 가시성에 따른 검출 성능과 시간 정보가 속도 추정에 주는 영향을 분석했다. [PDF 8쪽](https://arxiv.org/pdf/2203.17270v2#page=8) · [PDF 9쪽](https://arxiv.org/pdf/2203.17270v2#page=9) · [PDF 10쪽](https://arxiv.org/pdf/2203.17270v2#page=10)
 
 ## Evaluation Scope
 

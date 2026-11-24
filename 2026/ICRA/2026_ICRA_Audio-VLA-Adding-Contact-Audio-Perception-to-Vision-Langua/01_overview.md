@@ -15,13 +15,11 @@
 - Full-text retrieval: https://arxiv.org/pdf/2511.09958v1
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 요약과 핵심 기여 두 개를 각 문장에 연결한 판본에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Despite these promising capabilities, integrating acoustic information into existing VLA frameworks presents technical challenges, such as extracting contact event information from high-frequency contact audio, and the lack of audio-enh ...
-
-방법 관련 발췌 — 2, the proposed Audio-VLA consists of four components including a multi-modal encoder, multi
+Audio-VLA는 영상만으로 알기 어려운 접촉과 작업 진행을 감지하도록 소리 특징을 시각·언어 기반 조작 정책에 결합한다. [PDF 1쪽](https://arxiv.org/pdf/2511.09958v1#page=1)
 
 ## Problem and Motivation
 
@@ -35,7 +33,7 @@
 
 ## Core Idea
 
-- **p. 2 / III. METHOD - extractive body cue:** 2, the proposed Audio-VLA consists of four components including a multi-modal encoder, multi
+- **PDF 2–3쪽 / III. Method:** Audio-VLA는 멀티모달 인코더, 모달리티 투영기, 언어 모델, 행동 헤드로 구성된다. [그림 2](https://arxiv.org/pdf/2511.09958v1#page=3)
 - **p. 2 / I. INTRODUCTION - extractive body cue:** In this paper, we propose Audio-VLA, a multimodal manipulation policy that combines acoustic and visual perception.
 - **p. 3 / III. METHOD - extractive body cue:** It consists of two powerful vision transformers, DINOv2 [23] and SigLIP [24], pre-trained on Internet-scale image data to capture rich visual features and comprehensive spatial ...
 - **p. 3 / III. METHOD - extractive body cue:** The model consists of multi-modal encoders including audio, vision, and proprioceptive modules, multi-modal Projector that map heterogeneous features to a unified representation space, a 7B-parameter ...
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / III. METHOD - extractive body cue:** 2, the proposed Audio-VLA consists of four components including a multi-modal encoder, multi
-- **p. 2 / I. INTRODUCTION - extractive body cue:** In this paper, we propose Audio-VLA, a multimodal manipulation policy that combines acoustic and visual perception.
-- **p. 3 / III. METHOD - extractive body cue:** It consists of two powerful vision transformers, DINOv2 [23] and SigLIP [24], pre-trained on Internet-scale image data to capture rich visual features and comprehensive spatial ...
-- **p. 3 / III. METHOD - extractive body cue:** The model consists of multi-modal encoders including audio, vision, and proprioceptive modules, multi-modal Projector that map heterogeneous features to a unified representation space, a 7B-parameter ...
-- **p. 1 / I. INTRODUCTION - extractive body cue:** Large-scale vision-language pretraining [4] enables VLA models to achieve generalizable manipulation capabilities across diverse scenarios.
-- **p. 6 / IV. EXPERIMENT - extractive body cue:** I, AudioVLA achieves 97.6% average success rate on LIBERO and 55.1% on RLBench, outperforming all comparative methods.
-- **p. 6 / IV. EXPERIMENT - extractive body cue:** II, in seen environmental conditions, our Audio-VLA achieves threefold improvements in success rates compared to OpenVLA-OFT [39] and π0-FAST [5] on both EAWM and S5GO ...
-- **p. 7 / IV. EXPERIMENT - extractive body cue:** The doubling of EAWM success rates after LoRA finetuning [26] and consistent improvements across both simulation and real-world experiments demonstrate that LoRA [26] is particularly ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 영상·접촉 음향 특징을 공통 표현에 정렬하고 LIBERO와 RLBench에는 충돌 기반 소리 생성을 추가해 소리의 기여를 시험했다. [PDF 3쪽](https://arxiv.org/pdf/2511.09958v1#page=3) · [PDF 4쪽](https://arxiv.org/pdf/2511.09958v1#page=4) · [PDF 5쪽](https://arxiv.org/pdf/2511.09958v1#page=5)
+- 두 실물 과제에서 성공 여부와 별도로 지운 자국의 면적이나 퍼낸 귀리의 양을 목표치로 나눈 연속 진행 지표 TCR을 보고했다. [PDF 6쪽](https://arxiv.org/pdf/2511.09958v1#page=6) · [PDF 7쪽](https://arxiv.org/pdf/2511.09958v1#page=7)
 
 ## Evaluation Scope
 

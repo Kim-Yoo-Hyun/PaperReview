@@ -15,13 +15,11 @@
 - Full-text retrieval: https://raw.githubusercontent.com/mlresearch/v267/main/assets/shi25d/shi25d.pdf
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (15 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (15 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 요약과 핵심 기여 두 개를 각 문장에 연결한 판본에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — This challenge resembles the distinction between Kahneman's "System 1" and "System 2" cognitive processes (Kahneman, 2011).
-
-방법 관련 발췌 — We show that our framework enables a robot to process much more complex prompts than prior end-to-end instruction following systems and incorporate feedback during task execution (Figure 1).
+Hi Robot은 복잡한 요청이나 실행 도중의 사용자 피드백을 고수준 VLM이 다음 단계 지시로 해석하고 저수준 정책이 그 단계를 실행하는 구조다. [PDF 1쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/shi25d/shi25d.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** We show that our framework enables a robot to process much more complex prompts than prior end-to-end instruction following systems and incorporate feedback during task ...
-- **p. 2 / 1. Introduction - extractive body cue:** The main contribution of our paper is a hierarchical interactive robot learning system (Hi Robot), a novel framework that uses VLMs for both high-level reasoning ...
-- **p. 5 / 5.1. Tasks and Baseline Methods - extractive body cue:** The training data consists of full table cleaning episodes.
-- **p. 7 / 5.1. Tasks and Baseline Methods - extractive body cue:** Hi Robot without synthetic data: This ablation corresponds to our method without synthetic training data, evaluating the importance of including diverse syntheticallygenerated prompts in training.
-- **p. 4 / 3. Preliminaries and Problem Statement - extractive body cue:** The policy consists of a high-level and a low-level policy.
-- **p. 9 / Figure/Table caption - extractive body cue:** Figure 8: Hierarchical policy vs. flat policy. The hierarchical approach outperforms the flat variant trained on the same data, as it effectively integrates user feedback ...
-- **p. 8 / 5.3. Core Results - extractive body cue:** We present results for our system and two key baselines: a GPT-4o policy and a flat VLA method.
-- **p. 8 / 5.3. Core Results - extractive body cue:** Quantitative and qualitative results are in Figure 5 and Figure 6, and we summarize our findings below.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 현장 관측과 대화에서 단순 행동 지시를 내리는 상위 모델을 구성하고, 합성한 언어 예시와 로봇 시연을 각 학습 단계에 활용했다. [PDF 4쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/shi25d/shi25d.pdf#page=4) · [PDF 5쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/shi25d/shi25d.pdf#page=5)
+- 단팔·양팔·이동형 양팔 로봇에 적용해 식탁 정리, 샌드위치 만들기와 장보기에서 복합 요청 및 중간 피드백에 대한 행동 변화를 평가했다. [PDF 6쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/shi25d/shi25d.pdf#page=6) · [PDF 7쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/shi25d/shi25d.pdf#page=7) · [PDF 8쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/shi25d/shi25d.pdf#page=8)
 
 ## Evaluation Scope
 

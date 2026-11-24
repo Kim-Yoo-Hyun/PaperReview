@@ -15,13 +15,11 @@
 - Full-text retrieval: https://papers.nips.cc/paper_files/paper/2025/file/5eee634cb9729b8bcc2ec9f2a46a74ae-Paper-Conference.pdf
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (19 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (19 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 요약과 핵심 기여 두 개를 각 문장에 연결한 판본에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — This approach addresses several critical challenges in the field: (1) Existing single-pass inference methods lack the ability to iteratively refine predictions, often leading to suboptimal segmentation, especially on complex geometries; ...
-
-방법 관련 발췌 — In summary, our contributions are: • We introduce Visual Iterative Self-Prompting for 3D Affordance Learning (ViSPLA), which leverages geometric features from predicted masks as visual prompts for progressive refinement.
+ViSPLA는 점군에서 언어 지시에 맞는 행동 가능 영역을 분할하고, 예측 마스크의 기하를 다음 단계의 입력으로 써서 영역을 다듬는다. [PDF 1쪽](https://papers.nips.cc/paper_files/paper/2025/file/5eee634cb9729b8bcc2ec9f2a46a74ae-Paper-Conference.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 3 / 1 Introduction - extractive body cue:** In summary, our contributions are: • We introduce Visual Iterative Self-Prompting for 3D Affordance Learning (ViSPLA), which leverages geometric features from predicted masks as visual ...
-- **p. 3 / 1 Introduction - extractive body cue:** Unlike existing single-pass methods, our approach establishes a self-improving cycle that enhances precision across multiple object geometries. • We propose a novel Differential Geometric Self-Prompting ...
-- **p. 2 / 1 Introduction - extractive body cue:** Unlike prior approaches that perform singlepass inference, our method implements a closed-loop system where each predicted affordance mask is used to generate geometric self-prompts that ...
-- **p. 2 / 1 Introduction - extractive body cue:** To this end, we propose an iterative self-prompting-based 3D affordance detection paradigm that bridges the gap between language understanding and affordance segmentation through geometric feedback-driven ...
-- **p. 1 / Abstract - extractive body cue:** In this work, we introduce ViSPLA, a novel iterative selfprompting framework that leverages the intrinsic geometry of predicted masks for continual refinement.
-- **p. 8 / Figure/Table caption - extractive body cue:** Figure 4: Qualitative comparison of our affor- dance segmentation results with GEAL [5]. Our proposed framework achieves consistent and sub- stantial performance improvements across the ...
-- **p. 1 / Abstract - extractive body cue:** Extensive experiments demonstrate that ViSPLA achieves state-of-the-art results on both seen and unseen objects on two benchmark datasets.
-- **p. 9 / Figure/Table caption - extractive body cue:** Figure 4. (3) The most substantial gains come from incorporating Iterative Differential Geometry-Based Self-Prompting (IDGSP), which provides a significant boost on LASO seen (+2.5 aIoU) ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 표면 곡률과 법선 변화 등 마스크의 기하 특징을 시각 프롬프트로 만들고 여러 해상도에서 예측을 반복 갱신한다. [PDF 4쪽](https://papers.nips.cc/paper_files/paper/2025/file/5eee634cb9729b8bcc2ec9f2a46a74ae-Paper-Conference.pdf#page=4) · [PDF 5쪽](https://papers.nips.cc/paper_files/paper/2025/file/5eee634cb9729b8bcc2ec9f2a46a74ae-Paper-Conference.pdf#page=5) · [PDF 6쪽](https://papers.nips.cc/paper_files/paper/2025/file/5eee634cb9729b8bcc2ec9f2a46a74ae-Paper-Conference.pdf#page=6)
+- 연속적인 표면 위의 행동 가능 확률을 학습하고, 학습 때 본 물체와 새로운 물체에서 마스크 정확도 및 구성요소의 영향을 평가했다. [PDF 7쪽](https://papers.nips.cc/paper_files/paper/2025/file/5eee634cb9729b8bcc2ec9f2a46a74ae-Paper-Conference.pdf#page=7) · [PDF 8쪽](https://papers.nips.cc/paper_files/paper/2025/file/5eee634cb9729b8bcc2ec9f2a46a74ae-Paper-Conference.pdf#page=8) · [PDF 9쪽](https://papers.nips.cc/paper_files/paper/2025/file/5eee634cb9729b8bcc2ec9f2a46a74ae-Paper-Conference.pdf#page=9) · [PDF 10쪽](https://papers.nips.cc/paper_files/paper/2025/file/5eee634cb9729b8bcc2ec9f2a46a74ae-Paper-Conference.pdf#page=10)
 
 ## Evaluation Scope
 

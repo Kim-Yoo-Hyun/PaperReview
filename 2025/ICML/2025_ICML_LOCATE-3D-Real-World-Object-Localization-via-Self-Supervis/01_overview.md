@@ -15,13 +15,11 @@
 - Full-text retrieval: https://raw.githubusercontent.com/mlresearch/v267/main/assets/mcvay25a/mcvay25a.pdf
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (27 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (27 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 요약과 핵심 기여 두 개를 각 문장에 연결한 판본에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — They often require human annotation at inference time in the form of detailed 3D meshes or object instance segmentation, making them difficult to deploy on real-world devices.
-
-방법 관련 발췌 — Specifically, each decoder module consists of three attention blocks: (1) a self-attention block that enables queries to refine their representations through mutual interaction, (2) a cross-attention block where queries extract relevant ...
+LOCATE 3D는 자연어로 설명한 물체를 카메라 자세가 알려진 RGB-D 영상열에서 찾아 3차원 마스크와 경계 상자로 출력한다. [PDF 1쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/mcvay25a/mcvay25a.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -54,16 +52,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 4 / 2.3.1. LANGUAGE-CONDITIONED 3D DECODER - extractive body cue:** Specifically, each decoder module consists of three attention blocks: (1) a self-attention block that enables queries to refine their representations through mutual interaction, (2) a ...
-- **p. 5 / 2.3.1. LANGUAGE-CONDITIONED 3D DECODER - extractive body cue:** Our decoder consists of three parallel prediction heads (Figure 7) that process the refined learned queries Q independently as object proposals.
-- **p. 1 / 1. Introduction - extractive body cue:** We outline our contributions in this work below.
-- **p. 5 / 2.3.1. LANGUAGE-CONDITIONED 3D DECODER - extractive body cue:** For bounding boxes, we developed a novel architecture (Figure 7).
-- **p. 2 / 1. Introduction - extractive body cue:** We show that the resulting 3D-JEPA features are contextualized for the scene, while the features lifted from 2D foundation models only provide local understanding.
-- **p. 8 / 4.4. Evaluating LOCATE 3D in novel environments - extractive body cue:** Our results show that LOCATE 3D achieved a success rate of 8/10 trials, outperforming baselines with a maximum success rate of 5.66/10 (see details in ...
-- **p. 8 / 4.4. Evaluating LOCATE 3D in novel environments - extractive body cue:** First, replacing raw RGB inputs with lifted foundation features (CF) significantly improves crossdataset performance across all benchmarks (SN++: 37.5% →51.5%, ARKitScenes: 11.3% →41.7%, FRE: 39.9% ...
-- **p. 20 / Figure/Table caption - extractive body cue:** Table 7: Impact of LX3D train data. We report accuracy @25 IoU. ARKitScenes column contains both pretrain and val split as we saw no significant ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 2차원 기반 모델의 특징을 점군에 연결하고, 가려진 부분의 잠재 특징을 예측하는 3D-JEPA로 장면 인코더를 사전학습했다. [PDF 3쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/mcvay25a/mcvay25a.pdf#page=3) · [PDF 4쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/mcvay25a/mcvay25a.pdf#page=4)
+- 여러 촬영 장치에서 얻은 3차원 지시 대상 주석을 구축하고, 언어 조건 복호기의 위치 추정과 다른 촬영 조건으로의 일반화를 평가했다. [PDF 5쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/mcvay25a/mcvay25a.pdf#page=5) · [PDF 6쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/mcvay25a/mcvay25a.pdf#page=6) · [PDF 8쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/mcvay25a/mcvay25a.pdf#page=8)
 
 ## Evaluation Scope
 

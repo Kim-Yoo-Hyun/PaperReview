@@ -15,13 +15,11 @@
 - Full-text retrieval: https://proceedings.iclr.cc/paper_files/paper/2026/file/e705c234619bd9db3548421e94516fea-Paper-Conference.pdf
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (26 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (26 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 요약과 핵심 기여 두 개를 각 문장에 연결한 판본에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, it lacks principled studies on redesigning VLA models to close the Sim2Real gap.
-
-방법 관련 발췌 — These findings call for an alternative approach: instead of focusing on generating high-fidelity data, we propose addressing the Sim2Real by redesigning the VLA architecture.
+Sim2Real-VLA는 합성 로봇 조작 자료에서 조작 계획과 실행을 학습한 뒤 실제 작업에 적용한다. [PDF 1쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/e705c234619bd9db3548421e94516fea-Paper-Conference.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** These findings call for an alternative approach: instead of focusing on generating high-fidelity data, we propose addressing the Sim2Real by redesigning the VLA architecture.
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** In this study, we introduce Sim2Real-VLA, which, despite being trained solely on synthetic data, demonstrates generalizable and sustained manipulation performance across diverse real-world environments.
-- **p. 6 / 1 INTRODUCTION - extractive body cue:** We present more details in Appendix A.4.
-- **p. 7 / 1 INTRODUCTION - extractive body cue:** In this study, we evaluate our method using the manipulation tasks summarized in Table 2.
-- **p. 8 / 1 INTRODUCTION - extractive body cue:** In particular, our method attains an average real-world success rate of 60.8%, significantly outperforming the best baseline with an absolute improvement of over 35%.
-- **p. 9 / Figure/Table caption - extractive body cue:** Figure 4: Visualization of environment configurations under the domain gaps of background texture, object features, and table texture across different manipulation tasks. Table 4 illustrates ...
-- **p. 24 / Figure/Table caption - extractive body cue:** Figure 8: Data Efficiency Scaling. Success rates (at 40k steps) vs. number of real demonstrations. Baselines improve monotonically. Our method shows a "dip" at 5 ...
-- **p. 25 / Figure/Table caption - extractive body cue:** Figure 9: Analysis of Training Dynamics and Efficiency. (a-b) Training curves of Sim2Real VLA under different data strategies. The Sim-then-Real (10 eps) strategy yields the ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 고수준 모델은 순차적인 행동 가능 단서를 예측하고, 저수준 모델은 토큰화한 행동을 실행하면서 계획의 진행을 점검한다. [PDF 3쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/e705c234619bd9db3548421e94516fea-Paper-Conference.pdf#page=3) · [PDF 4쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/e705c234619bd9db3548421e94516fea-Paper-Conference.pdf#page=4) · [PDF 5쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/e705c234619bd9db3548421e94516fea-Paper-Conference.pdf#page=5)
+- 시뮬레이션 시연을 자동 생성해 정책을 학습하고, 실제 양팔·손 조작과 장기 과제에서 환경 조건이 달라졌을 때 적용성을 평가했다. [PDF 7쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/e705c234619bd9db3548421e94516fea-Paper-Conference.pdf#page=7) · [PDF 8쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/e705c234619bd9db3548421e94516fea-Paper-Conference.pdf#page=8) · [PDF 9쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/e705c234619bd9db3548421e94516fea-Paper-Conference.pdf#page=9)
 
 ## Evaluation Scope
 

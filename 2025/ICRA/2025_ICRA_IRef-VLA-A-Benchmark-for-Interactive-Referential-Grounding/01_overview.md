@@ -15,13 +15,11 @@
 - Full-text retrieval: https://arxiv.org/pdf/2503.17406v1
 - Code/Project: not identified
 - Paper type: benchmark_or_dataset
-- Source audit: full-text PDF body checked on 2026-09-03 (7 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (7 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 요약과 핵심 기여 두 개를 각 문장에 연결한 판본에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Despite impressive recent advancements with foundation models, such problems remain difficult when applied to robotics as current methods fail to offer the accuracy and robustness needed for real-world deployment [13].
-
-방법 관련 발췌 — To advance the path towards more intelligent interaction in natural language navigation, we propose the IRef-VLA dataset as a benchmark for both the referential objectgrounding task, and a novel extension of this ...
+IRef-VLA는 모호하거나 장면과 맞지 않는 언어 표현이 주어졌을 때 3차원 실내 장면에서 지시 대상을 찾는 능력을 평가하는 자료다. [PDF 1쪽](https://arxiv.org/pdf/2503.17406v1#page=1)
 
 ## Problem and Motivation
 
@@ -50,14 +48,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 1 / I. INTRODUCTION - extractive body cue:** To advance the path towards more intelligent interaction in natural language navigation, we propose the IRef-VLA dataset as a benchmark for both the referential objectgrounding ...
-- **p. 1 / Abstract - extractive body cue:** With this benchmark, we aim to provide a resource for 3D scene understanding that aids the development of robust, interactive navigation systems.
-- **p. 5 / Figure/Table caption - extractive body cue:** Fig. 5. A comparison between heuristically generated statements describing a binary spatial relation from Sr3D, Nr3D [14], SceneVerse [16], and IRef- VLA. Both chairs are ...
-- **p. 1 / I. INTRODUCTION - extractive body cue:** Third, the scale of available visionlanguage data in the 3D space pales in comparison to the amount of 2D data, which was crucial to the ...
-- **p. 1 / I. INTRODUCTION - extractive body cue:** The pursuit of such agents that can identify and understand 3D scenes, consolidate visual input with language semantics, and display robust performance for real-world deployment, ...
-- **p. 3 / Figure/Table caption - extractive body cue:** Fig. 2. Breakdown of regions from each data source heavily on original user intent and preferences. Thus, human- labeled scores may better quantify quality, though ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 실제 실내 스캔으로부터 물체·방 주석, 공간 관계와 이동 가능 영역을 구축하고 같은 장면에 올바른 표현 및 불완전한 표현을 생성했다. [PDF 2쪽](https://arxiv.org/pdf/2503.17406v1#page=2) · [PDF 3쪽](https://arxiv.org/pdf/2503.17406v1#page=3) · [PDF 4쪽](https://arxiv.org/pdf/2503.17406v1#page=4)
+- 지시 대상 추정 모델과 장면 그래프 탐색 기준선을 평가하고, 원래 설명과 일치하는 물체가 없을 때 대안을 생성하는 경우도 조사했다. [PDF 4쪽](https://arxiv.org/pdf/2503.17406v1#page=4) · [PDF 5쪽](https://arxiv.org/pdf/2503.17406v1#page=5) · [PDF 6쪽](https://arxiv.org/pdf/2503.17406v1#page=6)
 
 ## Evaluation Scope
 

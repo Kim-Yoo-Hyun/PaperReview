@@ -16,13 +16,11 @@
 - Full-text retrieval at original review: https://openreview.net/pdf/fa35fc3f33ae33100b9b86126d95a99def1057d8.pdf
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (16 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (16 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 요약과 핵심 기여 두 개를 각 문장에 연결한 판본에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, such independently designed policies and limited heuristics struggle to generalize across diverse situations.
-
-방법 관련 발췌 — In summary, we propose 3D Interaction Chains (3D-IC) for the OVMM task in this paper.
+3D Interaction Chains는 이동이 끝난 자리에서 조작이 가능한지까지 고려해 이동·조작의 경유점들을 하나의 계획으로 선택한다. [PDF 1쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/zhang26ip/zhang26ip.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -56,16 +54,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** In summary, we propose 3D Interaction Chains (3D-IC) for the OVMM task in this paper.
-- **p. 2 / 1. Introduction - extractive body cue:** Our 3D-IC includes: (1) a 3D feature map that captures information needed for both navigation and manipulation, (2) an interaction chain that enables unified planning ...
-- **p. 5 / 4.2. 3D-IC Construction - extractive body cue:** Following frontier-based exploration (FBE) (Yamauchi, 1997), repeatedly navigating to frontier locations enables the robot to progressively reveal unknown areas and discover targets.
-- **p. 7 / 5.2. Evaluation Results - extractive body cue:** Experimental results validate improvements in both success rate and efficiency (SPL).
-- **p. 9 / Figure/Table caption - extractive body cue:** Table 5. Comparisons with the related works. We report Success Rate (SR) and Success weighted by Path Length (SPL) across all four stages. Note that ...
-- **p. 9 / 5.4. Comparison with SOTA Methods - extractive body cue:** Notably, while our method is built upon the OVMM (Heuristic) baseline, which originally exhibited significantly lower Overall Success Rate (SR) compared to the OVMM (RL) ...
-- **p. 8 / 5.3. Real-world Evaluation - extractive body cue:** Experimental results demonstrate that our method yields significant performance improvements, particularly in long-horizon cross-room tasks and during the Place stage.
-- **p. 7 / 5.2. Evaluation Results - extractive body cue:** Our approach, which utilizes a 3D feature map to construct interaction point representations, achieves the highest performance (Row 4).
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 이동과 조작이 같은 3차원 특징 지도를 쓰며, 단계별 경유점을 연결한 후보별로 실행 가능성과 다음 지점까지의 비용을 함께 계산한다. [PDF 3쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/zhang26ip/zhang26ip.pdf#page=3) · [PDF 4쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/zhang26ip/zhang26ip.pdf#page=4) · [PDF 5쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/zhang26ip/zhang26ip.pdf#page=5)
+- 다음 경유점 실행 뒤 새 관측으로 계획을 갱신하고 시뮬레이션과 실제 Stretch 3에서 작업 성공과 경로 효율을 모두 평가했다. [PDF 7쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/zhang26ip/zhang26ip.pdf#page=7) · [PDF 8쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/zhang26ip/zhang26ip.pdf#page=8) · [PDF 9쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/zhang26ip/zhang26ip.pdf#page=9)
 
 ## Evaluation Scope
 

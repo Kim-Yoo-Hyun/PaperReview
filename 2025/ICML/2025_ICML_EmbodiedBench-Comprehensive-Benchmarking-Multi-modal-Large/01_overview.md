@@ -15,13 +15,11 @@
 - Full-text retrieval: https://raw.githubusercontent.com/mlresearch/v267/main/assets/yang25f/yang25f.pdf
 - Code/Project: not identified
 - Paper type: benchmark_or_dataset
-- Source audit: full-text PDF body checked on 2026-09-03 (56 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (56 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 요약과 핵심 기여 두 개를 각 문장에 연결한 판본에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Developing embodied agents capable of solving complex tasks in real world remains a significant challenge (Durante et al., 2024).
-
-방법 관련 발췌 — Our contributions are threefold: (1) proposing a comprehensive benchmark suite for evaluating MLLM-based embodied agents with different action levels and fine-grained capability-oriented subsets, (2) the development of an efficient MLLM ...
+EmbodiedBench는 시각 입력을 받는 언어 모델이 고수준 가사 계획부터 저수준 이동·조작까지 어느 수준에서 수행할 수 있는지 평가한다. [PDF 1쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/yang25f/yang25f.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -52,16 +50,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** Our contributions are threefold: (1) proposing a comprehensive benchmark suite for evaluating MLLM-based embodied agents with different action levels and fine-grained capability-oriented subsets, (2) the ...
-- **p. 1 / 1. Introduction - extractive body cue:** To address these questions, we introduce EMBODIEDBENCH, a comprehensive benchmark comprising 1,128 testing instances across four environments.
-- **p. 1 / 1. Introduction - extractive body cue:** EMBODIEDBENCH is designed with two key features that set it apart from existing benchmarks: 1.
-- **p. 9 / 5.4. Visual-centric Ablation - extractive body cue:** As shown in Figure 5 (d), the results demonstrate that visual ICL significantly outperforms language-only ICL.
-- **p. 30 / Figure/Table caption - extractive body cue:** Figure 16. Impact of visual in-context learning on EMBODIEDBENCH. impressive gains in manipulation tasks. For instance, Claude-3.5-Sonnet achieves a 16.7% improvement in performance. These findings ...
-- **p. 26 / Figure/Table caption - extractive body cue:** Figure 7. Impact of different camera resolutions on EMBODIEDBENCH. F.4. Detection Boxes Figure 8 illustrates the impact of using detection (bounding) boxes. The results show ...
-- **p. 6 / 5.2. Benchmark Results - extractive body cue:** Among proprietary models, we observe that different models excel at different task levels: Claude-3.5-Sonnet achieves the highest average accuracy on high-level tasks, with 64.0% on ...
-- **p. 8 / 5.4. Visual-centric Ablation - extractive body cue:** Our results, shown in Figure 5 (a), indicate that mid-range resolutions (500 × 500) achieve better results compared to both lower (300 × 300) and ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 네 시뮬레이션 환경에 1,128개 평가 과제를 구성하고 복잡한 지시 이해, 공간 판단, 장기 계획 등 역량별 하위 집합으로 나눴다. [PDF 3쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/yang25f/yang25f.pdf#page=3) · [PDF 4쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/yang25f/yang25f.pdf#page=4) · [PDF 5쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/yang25f/yang25f.pdf#page=5)
+- 모델별 과제 성공률과 실패 이유를 분석해 고수준 가사 행동과 저수준 조작에서 나타나는 성능 격차를 확인했다. [PDF 7쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/yang25f/yang25f.pdf#page=7) · [PDF 8쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/yang25f/yang25f.pdf#page=8) · [PDF 9쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/yang25f/yang25f.pdf#page=9)
 
 ## Evaluation Scope
 

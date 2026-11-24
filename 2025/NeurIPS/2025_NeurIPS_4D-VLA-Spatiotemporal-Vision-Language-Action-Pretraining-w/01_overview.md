@@ -16,13 +16,11 @@
 - Full-text retrieval at original review: https://arxiv.org/pdf/2506.22242
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (17 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (17 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 요약과 핵심 기여 두 개를 각 문장에 연결한 판본에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, this approach lacks scalability and increases the complexity of training.
-
-방법 관련 발췌 — Our contributions are: (i) We propose 4D-VLA, an efficient VLA model that integrates a spatial module with vision features to generate 3D-aware spatial vision tokens, effectively mitigating coordinate system and state chaos, ...
+4D-VLA는 서로 다른 카메라와 로봇에서 모은 시연을 학습할 때 좌표계와 현재 상태의 모호성을 줄이도록 공간·시간 관측을 함께 사용한다. [PDF 1쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/30b9c38b9ebeee281cd2bc41d39bf0e7-Paper-Conference.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -56,16 +54,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1 Introduction - extractive body cue:** Our contributions are: (i) We propose 4D-VLA, an efficient VLA model that integrates a spatial module with vision features to generate 3D-aware spatial vision tokens, ...
-- **p. 2 / 1 Introduction - extractive body cue:** Our approach enables robust pretraining, improving generalization to novel scenarios while outperforming baselines.
-- **p. 5 / 3 Method - extractive body cue:** 3.5 MV-Bench We propose the MV-Bench to provide a comprehensive evaluation of model capabilities in learning control policies across diverse viewpoints and generalizing to novel ...
-- **p. 3 / 3 Method - extractive body cue:** Vision-language model backbone We leverage a pretrained large vision-language model (VLM) as the backbone, specifically InternVL-4B [12], which consists of a text tokenizer T , ...
-- **p. 4 / 3 Method - extractive body cue:** In our method, the input image I ∈R3×h×w is first encoded by E into a feature map with a downsampling rate of c, yielding fv ...
-- **p. 6 / 4 Experiments - extractive body cue:** Our model significantly outperforms other competitors, with an average success rate 12.1 higher than OpenVLA. †Denotes no available standard deviation data.
-- **p. 7 / 4 Experiments - extractive body cue:** 2, our model achieves a 81.0% success rate in the In-View setting, demonstrating its capability to handle diverse training views effectively.
-- **p. 7 / 4 Experiments - extractive body cue:** On average, 4D-VLA improves success rate by 12.1% than OpenVLA, demonstrating stronger stability and spatiotemporal reasoning in complex settings.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 순차 RGB-D 관측으로 장면과 로봇 좌표를 정렬하고, 기억에서 서로 다른 정보를 담은 과거 프레임을 골라 행동 예측에 사용한다. [PDF 3쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/30b9c38b9ebeee281cd2bc41d39bf0e7-Paper-Conference.pdf#page=3) · [PDF 4쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/30b9c38b9ebeee281cd2bc41d39bf0e7-Paper-Conference.pdf#page=4) · [PDF 5쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/30b9c38b9ebeee281cd2bc41d39bf0e7-Paper-Conference.pdf#page=5)
+- 새 카메라 시점에 대한 일반화를 시험하는 MV-Bench를 구성하고, 실물 조작에서도 시점 변화와 과거 프레임 사용의 효과를 비교했다. [PDF 6쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/30b9c38b9ebeee281cd2bc41d39bf0e7-Paper-Conference.pdf#page=6) · [PDF 7쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/30b9c38b9ebeee281cd2bc41d39bf0e7-Paper-Conference.pdf#page=7) · [PDF 8쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/30b9c38b9ebeee281cd2bc41d39bf0e7-Paper-Conference.pdf#page=8) · [PDF 9쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/30b9c38b9ebeee281cd2bc41d39bf0e7-Paper-Conference.pdf#page=9)
 
 ## Evaluation Scope
 

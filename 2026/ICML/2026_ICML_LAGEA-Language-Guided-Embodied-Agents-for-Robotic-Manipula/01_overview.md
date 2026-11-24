@@ -15,13 +15,11 @@
 - Full-text retrieval: https://arxiv.org/pdf/2509.23155.pdf
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (23 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (23 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 요약과 핵심 기여 두 개를 각 문장에 연결한 판본에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Yet converting such priors into reliable learning signals still hinges on reward design, which remains a bottleneck across tasks and scenes.
-
-방법 관련 발췌 — For this purpose, we present our framework LAGEA, which addresses this by using VLMs to generate episodic natural-language reflections on a robot's 1
+LAGEA는 조작 시도의 결정적 순간에 VLM의 언어 피드백을 연결하고 이를 시간 단계별 강화학습 보상으로 변환한다. [PDF 1쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/chowdhury26a/chowdhury26a.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 1 / 1. Introduction - extractive body cue:** For this purpose, we present our framework LAGEA, which addresses this by using VLMs to generate episodic natural-language reflections on a robot's 1.
-- **p. 2 / 1. Introduction - extractive body cue:** Our core contributions are: • We present LAGEA, an embodied VLM-RL framework that generates causal episodic feedback which are localized in time to turn failures ...
-- **p. 3 / 3. Methodology - extractive body cue:** Our framework overview is given in Figure 1.
-- **p. 4 / 3.1.2. KEY FRAME GENERATION - extractive body cue:** They are later used in feedback alignment, where each timestep's contribution is scaled by ˆwt so imagefeedback geometry is learned primarily from causal moments, and ...
-- **p. 15 / Figure/Table caption - extractive body cue:** Table 8. Effect of different text encoders on observation-based manipulation tasks. Results are averaged over three random seeds (Standard Deviation is in brackets); higher is ...
-- **p. 6 / 4. Experiments - extractive body cue:** As shown in Table 1, LAGEA achieves a strong performance improvement of 5.3% over baselines, with an average success rate of 80% on hidden-fixed goal ...
-- **p. 6 / 4. Experiments - extractive body cue:** In the observable-random goal setting (Table 2), LAGEA achieves a 70.4% average success rate, representing a 9% improvement over all baselines.
-- **p. 7 / 4.3.1. SYNERGY OF DELTA REWARDS AND ADAPTIVE - extractive body cue:** The complete LAGEA framework achieves a near-perfect average success score outperforming other baselines in these experiments.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 언어 피드백과 시각 상태의 일치도·목표 진행도로 범위가 제한된 보상을 만들고, 실패 정도에 따라 보상 가중치를 조정한다. [PDF 3쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/chowdhury26a/chowdhury26a.pdf#page=3) · [PDF 4쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/chowdhury26a/chowdhury26a.pdf#page=4) · [PDF 5쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/chowdhury26a/chowdhury26a.pdf#page=5)
+- Meta-World MT10과 Fetch 조작에서 학습 속도와 성공률을 비교하고 언어 피드백을 시각 상태와 정렬하는 과정의 영향을 시험했다. [PDF 6쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/chowdhury26a/chowdhury26a.pdf#page=6) · [PDF 7쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/chowdhury26a/chowdhury26a.pdf#page=7) · [PDF 8쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/chowdhury26a/chowdhury26a.pdf#page=8)
 
 ## Evaluation Scope
 

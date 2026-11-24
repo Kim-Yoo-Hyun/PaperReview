@@ -15,13 +15,11 @@
 - Full-text retrieval: https://arxiv.org/pdf/2506.19212.pdf
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (29 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (29 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 요약과 핵심 기여 두 개를 각 문장에 연결한 판본에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — To avoid both data scarcity and the embodiment gap, a combination of reinforcement learning (RL) and sim-to-real transfer has emerged as a promising approach by enabling large-scale experience generation [3].
-
-방법 관련 발췌 — Moreover, we showcase that our method transfers to realworld robotic hands without any human demonstrations or handcrafted rewards.
+이 연구는 언어 지시와 장면으로부터 손과 물체의 대략적인 기준 궤적을 만든 뒤 잔차 강화학습으로 다지 손 조작을 정밀화한다. [PDF 1쪽](https://arxiv.org/pdf/2506.19212v3#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 1 / Abstract - extractive body cue:** Moreover, we showcase that our method transfers to realworld robotic hands without any human demonstrations or handcrafted rewards.
-- **p. 2 / 1 Introduction - extractive body cue:** Building upon this insight, we introduce a framework for learning manipulation policies for dexterous robot hands with VLM-generated motion plans and residual RL.
-- **p. 2 / 1 Introduction - extractive body cue:** Across 8 tasks, our method achieves close performance in both success rate and generalization to handcrafted, oracle plans despite requiring no manual reward engineering.
-- **p. 1 / Abstract - extractive body cue:** Across a number of simulated tasks involving articulated objects and semantic understanding, we demonstrate that our method is able to learn robust dexterous manipulation policies.
-- **p. 8 / Figure/Table caption - extractive body cue:** Figure 5: (Left) The performance of our method as we iteratively refine the high-level policy πh by providing successful plans τ in-context. (Right) The projected ...
-- **p. 23 / Figure/Table caption - extractive body cue:** Figure 11: Effect of Gaussian noise on VLM predictions in the simulation task suite. Success rate (in %) is averaged across three seeds; uncertainty indicates ...
-- **p. 9 / 4 Experiments - extractive body cue:** The resulting improvements vary across tasks: in the drawer task, the Traj. oracle achieves near perfect performance indicating planning was the bottleneck, however, in the ...
-- **p. 8 / 4 Experiments - extractive body cue:** After iterative refinement, the overall success rate improves to 81%.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- VLM이 과제와 관련된 키포인트 및 3차원 기준 움직임을 생성하고, 저수준 정책은 시뮬레이션에서 기준과 실제 움직임의 차이를 보정한다. [PDF 4쪽](https://arxiv.org/pdf/2506.19212v3#page=4) · [PDF 5쪽](https://arxiv.org/pdf/2506.19212v3#page=5) · [PDF 6쪽](https://arxiv.org/pdf/2506.19212v3#page=6)
+- 다양한 관절 물체의 조작을 시뮬레이션에서 비교하고 실제 로봇 손에서 RGB-D 관측과 언어 지시로 같은 방식을 적용했다. [PDF 7쪽](https://arxiv.org/pdf/2506.19212v3#page=7) · [PDF 8쪽](https://arxiv.org/pdf/2506.19212v3#page=8) · [PDF 9쪽](https://arxiv.org/pdf/2506.19212v3#page=9)
 
 ## Evaluation Scope
 

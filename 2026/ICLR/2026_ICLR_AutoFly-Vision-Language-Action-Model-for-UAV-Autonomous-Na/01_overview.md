@@ -15,15 +15,13 @@
 - Full-text retrieval: https://proceedings.iclr.cc/paper_files/paper/2026/file/2e9f9cde1b709281a06dd14f679e4c51-Paper-Conference.pdf
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (24 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (24 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 요약과 핵심 기여 두 개를 각 문장에 연결한 판본에서 확인했다.
 
 > DOC-QA2 targeted source review: 2026-10-23; PDF pp. 4, 17. 손상 구간·직접 연결된 표 분류만 원문 이미지와 대조했다. 전체 주장 정독·실험 검증·reading status 승격을 뜻하지 않는다. [URL·PDF hash·수정 기록](../../../work/sources/pdf_note_review_followup_2026-10-23.json).
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Vision-language navigation (VLN) requires intelligent agents to navigate environments by interpreting linguistic instructions alongside visual observations, serving as a cornerstone task in Embodied AI.
-
-방법 관련 발췌 — This standardized backbone approach enables fair comparison of each method's core contributions while maintaining implementation feasibility within our experimental framework.
+AutoFly는 실외 비행에서 자세한 경로 지시 없이 대략적인 위치·방향 지시와 카메라 관측으로 다음 이동을 선택하는 VLA다. [PDF 1쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/2e9f9cde1b709281a06dd14f679e4c51-Paper-Conference.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 21 / A.4.1 BASELINE CONSTRUCTION DETAILS - extractive body cue:** This standardized backbone approach enables fair comparison of each method's core contributions while maintaining implementation feasibility within our experimental framework.
-- **p. 4 / 3 METHOD - extractive body cue:** To enhance geometric reasoning capability, we introduce AutoFly, a VLA architecture augmented with pseudo-depth encoding.
-- **p. 4 / 3 METHOD - extractive body cue:** Our framework integrates three core components, including a visionlanguage model, pseudo-depth encoder, and action de-tokenizer, as illustrated in Figure 2.
-- **p. 21 / A.4.1 BASELINE CONSTRUCTION DETAILS - extractive body cue:** We utilize the same prism-siglip-7b backbone for consistency across VLM-based baselines, ensuring that performance differences reflect methodological contributions rather than backbone variations.
-- **p. 22 / A.5.3 MODEL ACCELERATION - extractive body cue:** Additional CUDA operators are implemented for custom depth processing operations, while model parallelism enables distributed inference across multiple GPU processes to handle the computational demands ...
-- **p. 19 / A.3.2 ABLATION EXPERIMENTS - extractive body cue:** Results demonstrate clear performance differences: SigLIP achieves the highest success rate among single encoders (46.6%), outperforming CLIP (43.1%) by 3.5% and DINO (45.2%) by 1.4%.
-- **p. 9 / 4 EXPERIMENTS - extractive body cue:** The results in Table 4 demonstrate that the method with the pseudo-depth encoder (47.9%, 21.9%) in success rate and collision rate significantly outperforms the one ...
-- **p. 9 / 4 EXPERIMENTS - extractive body cue:** As shown in Table refsim-to-real, AutoFly achieves comparable performance across both environments: 60% success rate indoors versus 55% outdoors, with collision rates of 30% and ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- RGB에서 깊이 단서를 추출하는 인코더를 결합하고 영상·언어를 비행 행동에 맞추는 두 단계 학습을 구성했다. [PDF 4쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/2e9f9cde1b709281a06dd14f679e4c51-Paper-Conference.pdf#page=4) · [PDF 5쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/2e9f9cde1b709281a06dd14f679e4c51-Paper-Conference.pdf#page=5)
+- 실제 비행과 시뮬레이션에서 수집한 탐색 자료를 바탕으로 제시된 경로를 따르는 방식과 비교하고 실외 내비게이션 성공을 평가했다. [PDF 7쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/2e9f9cde1b709281a06dd14f679e4c51-Paper-Conference.pdf#page=7) · [PDF 8쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/2e9f9cde1b709281a06dd14f679e4c51-Paper-Conference.pdf#page=8) · [PDF 9쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/2e9f9cde1b709281a06dd14f679e4c51-Paper-Conference.pdf#page=9)
 
 ## Evaluation Scope
 

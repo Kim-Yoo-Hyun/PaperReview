@@ -15,15 +15,13 @@
 - Full-text retrieval: https://arxiv.org/pdf/2608.01899.pdf
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (27 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (27 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 요약과 핵심 기여 두 개를 각 문장에 연결한 판본에서 확인했다.
 
 > DOC-QA1 (2026-10-23): 제어문자·깨진 추출 구간과 직접 연결된 표 항목을 PDF 페이지 이미지와 대조했다. 확인 범위·원문 URL·페이지·수정 이력은 [대조 기록](../../../work/sources/pdf_note_review_2026-10-23.json)에 있다. 노트 전체의 정독이나 모든 기존 주장에 대한 재검증을 뜻하지 않으며 reading status는 유지한다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — The aforementioned analysis highlights an unresolved core challenge: how to enhance the spatial intelligence of VLMs without extra 3D prior inputs or third-party spatial encoders, while preserving their general-purpose capabilities.
-
-방법 관련 발췌 — Our main contributions are summarized as follows: • We propose SpatioLM, a purely 2D vision-language framework that elicits implicit 3D geometric structure from pretrained VLM vision tokens, eliminating reliance on sensor-based or ...
+SpatioLM은 VLM 내부의 시각 특징에 공간 모듈을 추가해 모델의 일반 영상·언어 능력을 유지하면서 물리적 공간 판단을 개선한다. [PDF 1쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/wu26bi/wu26bi.pdf#page=1) · [PDF 2쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/wu26bi/wu26bi.pdf#page=2)
 
 ## Problem and Motivation
 
@@ -57,16 +55,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** Our main contributions are summarized as follows: • We propose SpatioLM, a purely 2D vision-language framework that elicits implicit 3D geometric structure from pretrained VLM ...
-- **p. 3 / 3. Method - extractive body cue:** We propose SpatioLM, a unified framework that enhances VLMs with general physical spatial intelligence.
-- **p. 3 / 3. Method - extractive body cue:** 3, SpatioLM freezes a pretrained VLM backbone and introduces a parameter-efficient runtime plugand-play Spatio-Vision Module (SV-Module, which consists of stacked Spatio-Vision Blocks) to elicit the ...
-- **p. 2 / 1. Introduction - extractive body cue:** Without modifying the core structure of the base VLM, SpatioLM enables flexible activation or deactivation during the inference phase, thereby enhancing the base VLM with ...
-- **p. 4 / 3.2. Spatio-Vision Module - extractive body cue:** This mechanism allows the model to separately model fine-grained geometry within each frame and global geometric relationships across frames.
-- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. We propose SpatioLM, a parameter-efficient framework that improves spatial intelligence in VLMs without extra 3D prior inputs or external spatial encoders. SpatioLM achieves ...
-- **p. 7 / 4.2.1. SPATIAL PERCEPTION - extractive body cue:** It significantly outperforms strong baselines on both single-image and multi-image metric depth, attains the highest accuracy on DA-2K, and demonstrates more stable generalization on a ...
-- **p. 7 / 4.3. Evaluation on General Capabilities - extractive body cue:** Its overall performance remains on par with the baseline and even improves on certain benchmarks (e.g., +12% on VideoMMMU).
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 추정한 깊이와 카메라 정보를 학습 감독으로 사용하고, 추론에서는 별도 3차원 관측 입력 없이 공간 표현을 추출한다. [PDF 3쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/wu26bi/wu26bi.pdf#page=3) · [PDF 4쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/wu26bi/wu26bi.pdf#page=4) · [PDF 5쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/wu26bi/wu26bi.pdf#page=5)
+- 공간 이해와 일반 시각·언어 문항에서 성능을 점검하고, LIBERO 조작으로 표현을 전이했을 때의 성공률도 평가했다. [PDF 6쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/wu26bi/wu26bi.pdf#page=6) · [PDF 7쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/wu26bi/wu26bi.pdf#page=7) · [PDF 8쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/wu26bi/wu26bi.pdf#page=8)
 
 ## Evaluation Scope
 

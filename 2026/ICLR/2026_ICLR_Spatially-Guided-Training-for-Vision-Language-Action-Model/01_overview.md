@@ -15,13 +15,11 @@
 - Full-text retrieval: https://proceedings.iclr.cc/paper_files/paper/2026/file/37294f033582ac0064bf90fa557c2573-Paper-Conference.pdf
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (40 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (40 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 요약과 핵심 기여 두 개를 각 문장에 연결한 판본에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, a critical gap remains when transferring these capabilities to the physical domain, because robots must not only understand what an instruction means but also determine where and how to act in ...
-
-방법 관련 발췌 — In contrast, simple spatial prompting effectively mitigates these issues (Section 3.1). • We propose ST4VLA, a spatially guided training framework that explicitly aligns action optimization with spatial grounding objectives, preserving ...
+ST4VLA는 대상 위치와 이동 경로를 먼저 학습한 공간 표현이 로봇의 저수준 행동 생성을 안내하도록 훈련한다. [PDF 1쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/37294f033582ac0064bf90fa557c2573-Paper-Conference.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 3 / 1 INTRODUCTION - extractive body cue:** In contrast, simple spatial prompting effectively mitigates these issues (Section 3.1). • We propose ST4VLA, a spatially guided training framework that explicitly aligns action optimization ...
-- **p. 3 / 1 INTRODUCTION - extractive body cue:** 2 METHODS We propose ST4VLA, a spatially guided training framework that bridges spatial understanding with embodied control through a novel two-stage training recipe 2.2.
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** To address the fundamental gap between multimodal understanding and embodied control, we propose ST4VLA, a dual-system vision-language-action framework that explicitly integrates spatial priors into robot ...
-- **p. 4 / 1 INTRODUCTION - extractive body cue:** (2025) showing that direct gradient flow between action and VLM modules may distort multimodal knowledge, we introduce a gradient decay factor within the querying transformer.
-- **p. 1 / ABSTRACT - extractive body cue:** We introduce ST4VLA, a dual-system Vision-Language-Action framework that leverages Spatial Guided Training to align action learning with spatial priors in VLMs.
-- **p. 7 / Figure/Table caption - extractive body cue:** Figure 4: Success rate (%) across different generalization settings on 200 simulated instruction- following pick-and-place tasks. Results. Since both baseline methods, π0 Black et al. ...
-- **p. 20 / Figure/Table caption - extractive body cue:** Table 5. Compared to previous strong baselines, such as GR00T N1 and π0, the ST4VLA framework achieves notable improvements, particularly on the spatial and long-horizon ...
-- **p. 6 / 3 EXPERIMENTS - extractive body cue:** Compared to the Vanilla VLA based on QwenVL-2.5-3B-Instruct, ST4VLA achieves substantial improvements: a 14.6% increase in Google Robot Visual Matching and a 12.4% increase in ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 웹·로봇 자료에서 점, 상자, 궤적 예측을 사전학습하고 행동 후학습에서도 공간 프롬프트를 사용해 행동 모듈과 연결했다. [PDF 3쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/37294f033582ac0064bf90fa557c2573-Paper-Conference.pdf#page=3) · [PDF 4쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/37294f033582ac0064bf90fa557c2573-Paper-Conference.pdf#page=4)
+- SimplerEnv의 Google Robot·WidowX 조건을 비교하고, 별도의 실물 과제에서 물체와 언어 지시 변화에 대한 일반화를 평가했다. [PDF 6쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/37294f033582ac0064bf90fa557c2573-Paper-Conference.pdf#page=6) · [PDF 7쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/37294f033582ac0064bf90fa557c2573-Paper-Conference.pdf#page=7) · [PDF 8쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/37294f033582ac0064bf90fa557c2573-Paper-Conference.pdf#page=8)
 
 ## Evaluation Scope
 

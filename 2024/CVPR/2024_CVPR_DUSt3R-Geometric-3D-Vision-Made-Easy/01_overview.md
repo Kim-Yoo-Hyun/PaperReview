@@ -15,13 +15,11 @@
 - Full-text retrieval: https://arxiv.org/pdf/2312.14132
 - Code/Project: https://github.com/naver/dust3r
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (23 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (23 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 요약과 핵심 기여 두 개를 각 문장에 연결한 판본에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — The network learns strong geometric and shape priors, which are reminiscent of those commonly leveraged in MVS, like shape from texture, shading or contours [111].
-
-방법 관련 발췌 — Before delving into the details of our method, we introduce below the essential concept of pointmaps.
+DUSt3R는 카메라 보정값이나 상대 자세를 입력받지 않고 영상 쌍의 픽셀을 같은 3차원 좌표계의 점으로 예측한다. [PDF 1쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Wang_DUSt3R_Geometric_3D_Vision_Made_Easy_CVPR_2024_paper.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 3 / 3. Method - extractive body cue:** Before delving into the details of our method, we introduce below the essential concept of pointmaps.
-- **p. 2 / 1. Introduction - extractive body cue:** Second, we introduce the pointmap representation for MVS applications, that enables the network to predict the 3D shape in a canonical frame, while preserving the ...
-- **p. 2 / 1. Introduction - extractive body cue:** In this paper, we present DUSt3R, a radically novel approach for Dense Unconstrained Stereo 3D Reconstruction from un-calibrated and un-posed cameras.
-- **p. 5 / 3.3. Downstream Applications - extractive body cue:** One possibility consists of obtaining 2D correspondences between IQ and IB, which in turn yields 2D-3D correspondences for IQ, and then running PnP-RANSAC [30, 52].
-- **p. 5 / 3.4. Global Alignment - extractive body cue:** We now present a fast and simple post-processing optimization for entire scenes that enables the alignment of pointmaps predicted from multiple images into a joint ...
-- **p. 8 / 4.4. Multi-view Depth - extractive body cue:** We observe in Table 3 that DUSt3R achieves stateof-the-art accuracy on ETH-3D and outperforms most recent state-of-the-art methods overall, even those using groundtruth camera poses.
-- **p. 7 / 4.2. Multi-view Pose Estimation - extractive body cue:** As shown in Table 2, DUSt3R with global alignment achieves the best overall performance on the two datasets and significantly surpasses the state-of-the-art PoseDiffusion [140].
-- **p. 7 / 4.1. Visual Localization - extractive body cue:** Our method obtains comparable accuracy compared to existing approaches, being feature-matching ones [101, 103] or end-to-end learningbased methods [11, 55, 102, 125, 152], even managing ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 두 영상의 특징을 교환하는 트랜스포머로 조밀한 점 지도와 신뢰도를 회귀하고, 신뢰도를 고려한 3차원 회귀 손실로 학습한다. [PDF 3쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Wang_DUSt3R_Geometric_3D_Vision_Made_Easy_CVPR_2024_paper.pdf#page=3) · [PDF 4쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Wang_DUSt3R_Geometric_3D_Vision_Made_Easy_CVPR_2024_paper.pdf#page=4)
+- 여러 영상 쌍의 점 지도를 전역 정렬해 장면을 복원하고, 그 표현에서 카메라 자세와 깊이를 구해 별도로 평가했다. [PDF 5쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Wang_DUSt3R_Geometric_3D_Vision_Made_Easy_CVPR_2024_paper.pdf#page=5) · [PDF 7쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Wang_DUSt3R_Geometric_3D_Vision_Made_Easy_CVPR_2024_paper.pdf#page=7) · [PDF 8쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Wang_DUSt3R_Geometric_3D_Vision_Made_Easy_CVPR_2024_paper.pdf#page=8)
 
 ## Evaluation Scope
 

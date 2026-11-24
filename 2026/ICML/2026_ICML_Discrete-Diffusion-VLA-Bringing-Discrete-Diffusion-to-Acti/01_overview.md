@@ -15,13 +15,11 @@
 - Full-text retrieval: https://arxiv.org/pdf/2508.20072.pdf
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (17 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (17 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 요약과 핵심 기여 두 개를 각 문장에 연결한 판본에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — OpenVLA (Kim et al., 2024), π0-FAST (Pertsch et al., 2025)); and (2) a separate action head that employs MLP or continuous diffusion to map VLM output latent tokens to executable actions (e.g., ...
-
-방법 관련 발췌 — In summary, our contributions are threefold: 1) We introduce the first discrete diffusion VLA, unifying action generation with vision-language modeling in one transformer, demonstrating superior retention of pretrained VL capabilities.
+Discrete Diffusion VLA는 행동 묶음을 이산화하고 VLA 백본 안에서 여러 행동 토큰을 반복적으로 정제해 생성한다. [PDF 1쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/liang26l/liang26l.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** In summary, our contributions are threefold: 1) We introduce the first discrete diffusion VLA, unifying action generation with vision-language modeling in one transformer, demonstrating superior ...
-- **p. 2 / 1. Introduction - extractive body cue:** 2) We develop an adaptive decoding strategy with secondary re-masking that enables confidence-based actiontoken decoding and robust error correction, improving both effectiveness and efficiency.
-- **p. 1 / 1. Introduction - extractive body cue:** Drawing on recent advances in discrete diffusion and discrete flow-matching for language and multi-modal generation (Nie et al., 2025a; Shi et al., 2024b; Gat et ...
-- **p. 6 / 4.3. Extended Evaluation Across Robot Platforms - extractive body cue:** 5 shows Discrete Diffusion VLA achieves SOTA performance with 54.2% overall, outperforming all continuous diffusion/flowmatching policies (π0: 40.1%, +14.1%; GR00T-N1: 49.5%, +4.7%) and discrete baselines ...
-- **p. 7 / 4.4. Ablation Study - extractive body cue:** Discrete diffusion achieves the best average performance across all LIBERO suites, outperforming AR, FAST, parallel decoding, and continuous diffusion, confirming that the advantage is intrinsic ...
-- **p. 7 / 4.4. Ablation Study - extractive body cue:** 8 shows that linear decay from 1.0 to 0.0 achieves 96.8%, outperforming hard argmax (96.2%) and fixed temperature (96.4%).
-- **p. 6 / 4.1. Simulation Benchmarks and Baselines - extractive body cue:** Notably, while OpenVLAOFT (L1) achieves the highest in-distribution (ID) accuracy, Discrete Diffusion VLA attains the best absolute OOD performance with the smallest degradation under both ...
-- **p. 8 / 4.4. Ablation Study - extractive body cue:** Ranking tokens by instance-wise confidence improves over one-shot parallel, and our max confidence yields the best accuracy (96.8%).
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 확신이 높은 행동 요소부터 확정하고 불확실한 예측은 다시 가리는 복호화로 고정된 좌우 생성 순서에 대한 의존을 줄였다. [PDF 3쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/liang26l/liang26l.pdf#page=3) · [PDF 4쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/liang26l/liang26l.pdf#page=4) · [PDF 5쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/liang26l/liang26l.pdf#page=5)
+- LIBERO와 SimplerEnv의 성공률 및 분포 변화에 대한 강건성을 비교하고, 별도의 실물 로봇 평가로 행동 복호화 방식을 시험했다. [PDF 6쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/liang26l/liang26l.pdf#page=6) · [PDF 7쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/liang26l/liang26l.pdf#page=7) · [PDF 8쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/liang26l/liang26l.pdf#page=8)
 
 ## Evaluation Scope
 

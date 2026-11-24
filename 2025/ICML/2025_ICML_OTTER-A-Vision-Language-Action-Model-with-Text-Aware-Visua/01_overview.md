@@ -15,13 +15,11 @@
 - Full-text retrieval: https://raw.githubusercontent.com/mlresearch/v267/main/assets/huang25u/huang25u.pdf
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (15 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (15 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 요약과 핵심 기여 두 개를 각 문장에 연결한 판본에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — This approach requires the policy network to connect the vision and language information and conduct precise robot control, which often presents significant challenges, especially in unseen environments.
-
-방법 관련 발췌 — To this end, we propose OTTER, a novel VLA architecture that freezes pre-trained vision and language encoders and extracts taskrelevant visual features guided by language instructions.
+OTTER는 사전학습한 영상·언어 인코더를 고정하고 현재 지시와 관련 있는 시각 특징만 추려 행동 정책에 전달한다. [PDF 1쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/huang25u/huang25u.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** To this end, we propose OTTER, a novel VLA architecture that freezes pre-trained vision and language encoders and extracts taskrelevant visual features guided by language ...
-- **p. 2 / 1. Introduction - extractive body cue:** We propose OTTER, a VLA model that leverages the semantic alignment capabilities of pre-trained VLMs for better generalization.
-- **p. 3 / 3. Method - extractive body cue:** We propose OTTER, a vision-language-action model for learning a robot manipulation policy through extraction of text-aware vision features from a pre-trained VLM.
-- **p. 1 / 1. Introduction - extractive body cue:** OTTER exhibits better zero-shot generalization to unseen objects, maintaining strong performance across a variety of novel tasks.
-- **p. 6 / 4.2. Baselines - extractive body cue:** OTTER achieves a similar success rate on the in-distribution training tasks and unseen tasks, significantly outperforming the baselines, highlighting the benefits of extracting text-aware visual ...
-- **p. 7 / Figure/Table caption - extractive body cue:** Table 2: Multi-primitive zero-shot generalization: We train models across four manipulation primitives (pouring, drawer manipulation, poking, and pick-and-place) with a total of 1,185 human tele-operated ...
-- **p. 6 / 5.1. Real-world Experiments - extractive body cue:** For unseen pick up and place tasks, π0-Fast-Droid is able to achieve a success rate of 61%.
-- **p. 7 / 5.1. Real-world Experiments - extractive body cue:** Finetuned π0-Fast-Droid achieves non-zero success rate on Drawer and Poking primitives, but still fails on the pouring primitive.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 언어와 정렬된 영상 특징을 명시적으로 선택해 불필요한 영상 정보를 줄이고 정책 트랜스포머가 조작 행동을 예측하도록 학습했다. [PDF 2쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/huang25u/huang25u.pdf#page=2) · [PDF 4쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/huang25u/huang25u.pdf#page=4)
+- 실물의 단일·복합 조작과 LIBERO에서 낯선 물체와 환경에 대한 제로샷 일반화를 비교했다. [PDF 6쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/huang25u/huang25u.pdf#page=6) · [PDF 7쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/huang25u/huang25u.pdf#page=7) · [PDF 8쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/huang25u/huang25u.pdf#page=8)
 
 ## Evaluation Scope
 

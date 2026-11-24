@@ -16,13 +16,11 @@
 - Full-text retrieval at original review: https://arxiv.org/pdf/2505.23705
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (18 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (18 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 요약과 핵심 기여 두 개를 각 문장에 연결한 판본에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, adapting LLMs and VLMs to real-world control requires addressing a number of new challenges.
-
-방법 관련 발췌 — To address this challenge, we propose a training recipe that addresses these issues, which we refer to as knowledge insulation.
+이 연구는 연속 행동 전문가를 VLM에 붙일 때 전문가의 학습 신호가 백본에 전달되는 방식이 조작 성능과 의미 지식 전이에 미치는 영향을 조사한다. [PDF 1쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/94e936034d12bcd04834ec2773f02aff-Paper-Conference.pdf#page=1) · [PDF 2쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/94e936034d12bcd04834ec2773f02aff-Paper-Conference.pdf#page=2)
 
 ## Problem and Motivation
 
@@ -54,16 +52,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1 Introduction - extractive body cue:** To address this challenge, we propose a training recipe that addresses these issues, which we refer to as knowledge insulation.
-- **p. 2 / 1 Introduction - extractive body cue:** Second, using an action expert still enables fast inference.
-- **p. 8 / 6 Experiments - extractive body cue:** 6a shows that for the "table bussing" task our recipe achieves comparable performance to the embodiment specific results from above.
-- **p. 10 / Figure/Table caption - extractive body cue:** Table 1: Success rates (%) on the LIBERO [30] benchmark. Our method achieves a state-of-the-art in LIBERO-90 and LIBERO-Spatial, but is worse on LIBERO-10. inference ...
-- **p. 7 / 6 Experiments - extractive body cue:** Our method consistently achieves the highest performance in the real world evaluations.
-- **p. 8 / 6 Experiments - extractive body cue:** Our method received a score of 0.55 ± 0.09, π0 received 0.49±0.09, and π0-FAST achieved 0.45±0.09.
-- **p. 7 / 6 Experiments - extractive body cue:** This seems to hurt performance on this task significantly.
-- **p. 9 / 6 Experiments - extractive body cue:** 7, then joint-training without stop-gradient can also achieve good language following.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 백본은 이산 행동 토큰 예측으로 적응시키면서 연속 행동 전문가의 손실 기울기가 백본으로 흐르지 않도록 두 학습 경로를 분리했다. [PDF 3쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/94e936034d12bcd04834ec2773f02aff-Paper-Conference.pdf#page=3) · [PDF 5쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/94e936034d12bcd04834ec2773f02aff-Paper-Conference.pdf#page=5) · [PDF 6쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/94e936034d12bcd04834ec2773f02aff-Paper-Conference.pdf#page=6)
+- 기울기 차단과 시각·언어 공동학습을 따로 제거한 모델을 비교해 학습 속도, 언어 지시 일반화 및 조작 성공률에 대한 영향을 평가했다. [PDF 7쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/94e936034d12bcd04834ec2773f02aff-Paper-Conference.pdf#page=7) · [PDF 8쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/94e936034d12bcd04834ec2773f02aff-Paper-Conference.pdf#page=8) · [PDF 9쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/94e936034d12bcd04834ec2773f02aff-Paper-Conference.pdf#page=9) · [PDF 10쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/94e936034d12bcd04834ec2773f02aff-Paper-Conference.pdf#page=10)
 
 ## Evaluation Scope
 

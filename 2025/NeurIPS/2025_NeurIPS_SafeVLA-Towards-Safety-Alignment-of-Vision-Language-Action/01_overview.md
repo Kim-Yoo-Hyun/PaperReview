@@ -15,13 +15,11 @@
 - Full-text retrieval: https://proceedings.neurips.cc/paper_files/paper/2025/file/e185c7be603426028c32ae1003a59d78-Paper-Conference.pdf
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (39 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (39 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 요약과 핵심 기여 두 개를 각 문장에 연결한 판본에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, these safety mechanisms cannot be directly applied to VLAs, as there is a substantial gap between the abstract safety concerns at the model intention level [25, 26] and the unique safety
-
-방법 관련 발췌 — Our study details how these interconnected aspects contribute to a more holistic safety alignment. • Environment: Addressing the gap in comprehensive VLA safety assessment, we introduce Safety-CHORES.
+SafeVLA는 긴 이동 조작 과제에서 과제 보상과 안전 위반 비용을 분리해 VLA 정책을 제약 강화학습으로 조정한다. [PDF 1쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/e185c7be603426028c32ae1003a59d78-Paper-Conference.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1 Introduction - extractive body cue:** Our study details how these interconnected aspects contribute to a more holistic safety alignment. • Environment: Addressing the gap in comprehensive VLA safety assessment, we ...
-- **p. 2 / 1 Introduction - extractive body cue:** Our main contributions are: • Integrated Safety Approach (ISA) Exploration: We conduct a comprehensive investigation into an ISA for VLA safety alignment.
-- **p. 1 / 1 Introduction - extractive body cue:** Embodied AI aims to develop a generalist policy that can perform perception, interaction, reasoning, and adaptation in the physical world [1].
-- **p. 33 / C.3 Model Selection - extractive body cue:** 2) Long-Horizon Reasoning: The 100-frame transformer context window (Table 6 in SPOC) allows modeling temporal dependencies critical for anticipating and avoiding cumulative safety risks during ...
-- **p. 8 / Figure/Table caption - extractive body cue:** Figure 5: Comparative performance of VLA models on multiple benchmarks. Left: SR of each model per benchmark. Right: CC incurred by each model on these ...
-- **p. 9 / 5 Experiments - extractive body cue:** The results demonstrate that our approach with dynamic Lagrangian multipliers achieves a superior trade-off, adhering to the cost limit while attaining a higher success rate ...
-- **p. 8 / 5 Experiments - extractive body cue:** 0.00 0.25 0.50 0.75 1.00 Success Rate EmbCLIP 0.00 0.25 0.50 0.75 1.00 Success Rate Embodied-Codebook 0.00 0.25 0.50 0.75 1.00 Success Rate EmbCLIP-DINOv2 0.00 ...
-- **p. 9 / 5 Experiments - extractive body cue:** The average changes reported at the bottom of Table 2 indicate that, the safety benefits and reasonable task performance achieved by ISA are largely preserved ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 실행 중 발생할 수 있는 위험을 조건과 비용으로 모델링하고, 위험이 드러나는 환경에서 제약 마르코프 결정 과정의 정책을 학습했다. [PDF 3쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/e185c7be603426028c32ae1003a59d78-Paper-Conference.pdf#page=3) · [PDF 4쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/e185c7be603426028c32ae1003a59d78-Paper-Conference.pdf#page=4) · [PDF 5쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/e185c7be603426028c32ae1003a59d78-Paper-Conference.pdf#page=5)
+- 과제 성공률과 누적 위반 비용을 함께 비교하고 드문 실패와 환경 교란에서도 학습한 안전 행동이 유지되는지 평가했다. [PDF 6쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/e185c7be603426028c32ae1003a59d78-Paper-Conference.pdf#page=6) · [PDF 7쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/e185c7be603426028c32ae1003a59d78-Paper-Conference.pdf#page=7) · [PDF 8쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/e185c7be603426028c32ae1003a59d78-Paper-Conference.pdf#page=8) · [PDF 9쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/e185c7be603426028c32ae1003a59d78-Paper-Conference.pdf#page=9)
 
 ## Evaluation Scope
 

@@ -15,13 +15,11 @@
 - Full-text retrieval: https://arxiv.org/pdf/2506.07961.pdf
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (32 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (32 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 요약과 핵심 기여 두 개를 각 문장에 연결한 판본에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — This strategy fails to take advantage of the 3D structural priors as previous efficient 3D policies [10-14] that align the observation input and action output into a unified space, therefore leading to ...
-
-방법 관련 발췌 — In summary, the contributions of this paper are threefold: • We introduce BridgeVLA, a novel 3D VLA model that efficiently and effectively learns 3D robot manipulation with a vision-language model via input-output ...
+BridgeVLA는 3차원 점군을 여러 시점의 영상으로 투영하고, 각 영상에서 행동 위치의 히트맵을 예측해 로봇팔 동작을 결정한다. [PDF 1쪽](https://arxiv.org/pdf/2506.07961v2#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 3 / 1 Introduction - extractive body cue:** In summary, the contributions of this paper are threefold: • We introduce BridgeVLA, a novel 3D VLA model that efficiently and effectively learns 3D robot ...
-- **p. 2 / 1 Introduction - extractive body cue:** 1, we present BridgeVLA, a novel 3D VLA model that achieves remarkable sample efficiency and strong generalization capabilities.
-- **p. 2 / 1 Introduction - extractive body cue:** 2D Finetune 2D Pretrain Real World Simulation BridgeVLA 2D Heatmap Image Instructions 3D Projection 3D actions [ Our framework VLM BridgeVLA ... ... "Find all ...
-- **p. 9 / Method - extractive body cue:** We also compare with four methods introduced in Sec.
-- **p. 10 / Method - extractive body cue:** Although our method outperforms baseline methods in the Category setting, its absolute success rate is not high.
-- **p. 8 / 4 Experiments - extractive body cue:** BridgeVLA outperforms all the comparing baseline methods in terms of average success rate, significantly outperforming the best baseline method by 7.3%.
-- **p. 7 / 4 Experiments - extractive body cue:** BridgeVLA outperforms all the comparing baseline methods, achieving an average success rate of 88.2% and an average rank of 1.9 across all the 18 tasks, ...
-- **p. 8 / 4 Experiments - extractive body cue:** Compared to the state-of-the-art baseline, BridgeVLA improves the average success rate by 7.3%. perturbation, 3) compute the average success rate of all evaluated tasks for ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 일반 영상에서 2차원 위치 히트맵을 예측하도록 VLM을 사전학습한 뒤, 로봇 자료에서도 같은 공간적 입력·출력 형식을 유지했다. [PDF 3쪽](https://arxiv.org/pdf/2506.07961v2#page=3) · [PDF 4쪽](https://arxiv.org/pdf/2506.07961v2#page=4) · [PDF 5쪽](https://arxiv.org/pdf/2506.07961v2#page=5)
+- RLBench에서 조작 과제 성공률을 비교하고 COLOSSEUM에서 카메라·배경 등 조건 변화에 대한 강건성을 평가했다. [PDF 6쪽](https://arxiv.org/pdf/2506.07961v2#page=6) · [PDF 7쪽](https://arxiv.org/pdf/2506.07961v2#page=7) · [PDF 8쪽](https://arxiv.org/pdf/2506.07961v2#page=8)
 
 ## Evaluation Scope
 

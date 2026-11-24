@@ -15,13 +15,11 @@
 - Full-text retrieval: https://raw.githubusercontent.com/mlresearch/v305/main/assets/wu25c/wu25c.pdf
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (16 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (16 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 요약과 핵심 기여 두 개를 각 문장에 연결한 판본에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Get the Water Cook Food Pick up the Fruit Mobile Trajectory Arm Trajectory Fixed-base Manipulation MoTo AnyGrasp OpenVLA RDT-1B iDP3 Figure 1: MoTo can be plugged into any fixed-base manipulation model and ...
-
-방법 관련 발췌 — In this paper, we propose to solve the problem of mobile manipulation with an interaction-aware navigation policy, namely Move and Touch (MoTo).
+MoTo는 고정된 위치에서 동작하는 조작 정책을 이동 로봇에 쓸 수 있도록, 대상에 접근해 팔이 작업할 수 있는 정차 위치를 찾는다. [PDF 1쪽](https://raw.githubusercontent.com/mlresearch/v305/d42e9e994b3821cca9121500c717f9a87c7cb4f6/assets/wu25c/wu25c.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1 Introduction - extractive body cue:** In this paper, we propose to solve the problem of mobile manipulation with an interaction-aware navigation policy, namely Move and Touch (MoTo).
-- **p. 3 / 1 Introduction - extractive body cue:** Inspired by ReKep, we propose a multi-view voting strategy to generate scene-level interaction keypoints to fine-grain guide mobile manipulation trajectory generation.
-- **p. 5 / 4 Approach - extractive body cue:** Therefore, we propose a two-stage VLM-based method to generate keypoints for an image, which is divided into keypoint proposal stage and keypoint selection stage.
-- **p. 3 / 1 Introduction - extractive body cue:** With the fast development of manipulation foundation models [37, 11, 12, 38], we believe this assumption is reasonable and feasible.
-- **p. 8 / 5 Experiment - extractive body cue:** All methods are run 10 times on the three types of mobile manipulation tasks, where the dots represent the performance of each test (Best view ...
-- **p. 7 / 5 Experiment - extractive body cue:** As shown in Table 1, Home-Robot w/ MoTo outperforms Home-Robot (RL), achieving a 3.52% higher overall success rate.
-- **p. 8 / 5 Experiment - extractive body cue:** Since L3MVN only ensures proximity to the target while ignoring the feasibility of subsequent manipulations, it yields only a marginal overall success rate gain of ...
-- **p. 7 / 5 Experiment - extractive body cue:** The similar success rates in stages FindObj and Pick are due to MoTo's focus on interaction-aware navigation, which is invoked only after finding a container ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 여러 시점에서 대상과 팔의 상호작용 키포인트를 구하고, 두 점의 거리와 궤적의 물리적 실행 가능성을 고려해 베이스와 팔의 움직임을 계획한다. [PDF 4쪽](https://raw.githubusercontent.com/mlresearch/v305/d42e9e994b3821cca9121500c717f9a87c7cb4f6/assets/wu25c/wu25c.pdf#page=4) · [PDF 5쪽](https://raw.githubusercontent.com/mlresearch/v305/d42e9e994b3821cca9121500c717f9a87c7cb4f6/assets/wu25c/wu25c.pdf#page=5)
+- 이동 조작 전문가의 궤적을 추가 학습하지 않고 OVMM과 실물 과제에서 접근 후 조작이 가능한지 평가했다. [PDF 7쪽](https://raw.githubusercontent.com/mlresearch/v305/d42e9e994b3821cca9121500c717f9a87c7cb4f6/assets/wu25c/wu25c.pdf#page=7) · [PDF 8쪽](https://raw.githubusercontent.com/mlresearch/v305/d42e9e994b3821cca9121500c717f9a87c7cb4f6/assets/wu25c/wu25c.pdf#page=8)
 
 ## Evaluation Scope
 

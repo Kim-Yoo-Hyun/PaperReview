@@ -15,15 +15,13 @@
 - Full-text retrieval: https://proceedings.iclr.cc/paper_files/paper/2026/file/274d0146144643ee2459a602123c60ff-Paper-Conference.pdf
 - Code/Project: https://sage-3d.github.io/
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (21 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (21 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 요약과 핵심 기여 두 개를 각 문장에 연결한 판본에서 확인했다.
 
 > DOC-QA3 (2026-10-23): [SAGE-3D의 지정 수식·공개 구현 대조](./03_method.md). Commit `69e60c2123aca55ff2ad96d66a80a9bac5a7912d`의 정적 검토이며 paper-run 버전·실행 결과는 미확인. [결과와 경계](https://github.com/Kim-Yoo-Hyun/PaperReview/blob/cb650415f47a2a45ad883dabe5bd20c382b5c183/work/update/PAPER_CODE_FORMULA_REVIEW_2026-10-23.md).
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — (2) Lack of a physically executable structure.
-
-방법 관련 발췌 — We introduce a 3DGS-Mesh Hybrid Representation: starting from our mesh scene data, we extract collision bodies for each object as the physics layer, while using 3DGS to provide photorealistic appearance.
+SAGE-3D는 렌더링 가능한 3차원 가우시안 실내 장면에 물체 의미와 충돌 형상을 연결해 로봇이 이동할 수 있는 평가 환경을 만든다. [PDF 1쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/274d0146144643ee2459a602123c60ff-Paper-Conference.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -53,16 +51,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** We introduce a 3DGS-Mesh Hybrid Representation: starting from our mesh scene data, we extract collision bodies for each object as the physics layer, while using ...
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** In this work, we present SAGE-3D (Semantically and Physically Aligned Gaussian Environments for 3D Navigation), a paradigm that upgrades 3DGS from a purely perceptual scene ...
-- **p. 9 / 4 EXPERIMENTS - extractive body cue:** Even the recent SOTA model NaVILA achieves only a 0.39 success rate on high-level instructions, significantly lower than its 0.56 success rate on low-level instructions.
-- **p. 8 / 4 EXPERIMENTS - extractive body cue:** The results show that 3DGS scene data achieves a perframe rendering time of 6.2 ms and an average memory usage of 220 MB, outperforming the ...
-- **p. 9 / 4 EXPERIMENTS - extractive body cue:** 4, models trained entirely on SAGE-Bench data (without any VLN-CE data) achieved clear performance improvements over their respective baselines.
-- **p. 10 / 4 EXPERIMENTS - extractive body cue:** Specifically, with the same number of augmented scenes (800), increasing the sampling density progressively improves the VLN model's performance on the val-unseen split.
-- **p. 7 / 4 EXPERIMENTS - extractive body cue:** In addition to the three novel metrics we proposed in Section 3.3 for evaluating the natural continuity of model navigation - CSR, ICP, and PS ...
-- **p. 7 / 4 EXPERIMENTS - extractive body cue:** For example, the 0.20 OSR achieved by InternVL-3 exceeds that of NaVid (0.17 OSR).
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 개별 물체의 주석과 충돌체를 가우시안 장면에 연결하고, 주석을 갖춘 실내 장면 모음 InteriorGS와 이동 지시 자료 SAGE-Bench를 구성했다. [PDF 3쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/274d0146144643ee2459a602123c60ff-Paper-Conference.pdf#page=3) · [PDF 4쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/274d0146144643ee2459a602123c60ff-Paper-Conference.pdf#page=4) · [PDF 5쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/274d0146144643ee2459a602123c60ff-Paper-Conference.pdf#page=5)
+- 생성한 장면에서 내비게이션 모델들을 평가하고, 해당 자료로 학습한 정책이 VLN-CE의 학습 외 장면에 전이되는지 검사했다. [PDF 8쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/274d0146144643ee2459a602123c60ff-Paper-Conference.pdf#page=8) · [PDF 9쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/274d0146144643ee2459a602123c60ff-Paper-Conference.pdf#page=9)
 
 ## Evaluation Scope
 

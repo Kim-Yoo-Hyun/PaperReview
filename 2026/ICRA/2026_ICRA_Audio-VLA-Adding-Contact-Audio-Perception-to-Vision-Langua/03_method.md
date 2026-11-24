@@ -15,13 +15,13 @@ PDF body method statement (p. 3 (III. METHOD), p. 2 (III. METHOD), p. 3 (III. ME
 - **p. 3 / III. METHOD - extractive body cue:** It consists of two powerful vision transformers, DINOv2 [23] and SigLIP [24], pre-trained on Internet-scale image data to capture rich visual features and comprehensive spatial ...
 - **p. 4 / III. METHOD - extractive body cue:** This enables Faud to capture high-frequency acoustic features and temporal dynamics of contact events, providing physical interaction information unavailable through visual perception alone.
 - **p. 4 / III. METHOD - extractive body cue:** The input of the proprio encoder is proprioceptive robot state pt, which includes information such as joint angles, encoded via an MLP layer ϕstate(·) to ...
-- **p. 2 / III. METHOD - extractive body cue:** 2, the proposed Audio-VLA consists of four components including a multi-modal encoder, multi
+- **PDF 2–3쪽 / III. Method:** Audio-VLA는 멀티모달 인코더, 모달리티 투영기, 언어 모델, 행동 헤드로 구성된다. [그림 2](https://arxiv.org/pdf/2511.09958v1#page=3)
 - **p. 5 / III. METHOD - extractive body cue:** These recordings are organized into a structured library indexed by material pairs, interaction types, and force magnitudes.
 - **p. 4 / III. METHOD - extractive body cue:** This is achieved through the minimization of the mean L1 loss function: L = 1 K · D K-1 X k=0 D X i=1
 
 ## Design Rationale
 
-- **p. 2 / III. METHOD - extractive body cue:** 2, the proposed Audio-VLA consists of four components including a multi-modal encoder, multi
+- **PDF 2–3쪽 / III. Method:** Audio-VLA는 멀티모달 인코더, 모달리티 투영기, 언어 모델, 행동 헤드로 구성된다. [그림 2](https://arxiv.org/pdf/2511.09958v1#page=3)
 - **p. 2 / I. INTRODUCTION - extractive body cue:** In this paper, we propose Audio-VLA, a multimodal manipulation policy that combines acoustic and visual perception.
 - **p. 3 / III. METHOD - extractive body cue:** It consists of two powerful vision transformers, DINOv2 [23] and SigLIP [24], pre-trained on Internet-scale image data to capture rich visual features and comprehensive spatial ...
 
@@ -32,7 +32,7 @@ PDF body method statement (p. 3 (III. METHOD), p. 2 (III. METHOD), p. 3 (III. ME
 - **p. 3 / III. METHOD - extractive body cue:** It consists of two powerful vision transformers, DINOv2 [23] and SigLIP [24], pre-trained on Internet-scale image data to capture rich visual features and comprehensive spatial ...
 - **p. 4 / III. METHOD - extractive body cue:** This enables Faud to capture high-frequency acoustic features and temporal dynamics of contact events, providing physical interaction information unavailable through visual perception alone.
 - **p. 4 / III. METHOD - extractive body cue:** The input of the proprio encoder is proprioceptive robot state pt, which includes information such as joint angles, encoded via an MLP layer ϕstate(·) to ...
-- **p. 2 / III. METHOD - extractive body cue:** 2, the proposed Audio-VLA consists of four components including a multi-modal encoder, multi
+- **PDF 2–3쪽 / III. Method:** Audio-VLA는 멀티모달 인코더, 모달리티 투영기, 언어 모델, 행동 헤드로 구성된다. [그림 2](https://arxiv.org/pdf/2511.09958v1#page=3)
 - **p. 5 / III. METHOD - extractive body cue:** These recordings are organized into a structured library indexed by material pairs, interaction types, and force magnitudes.
 - **Detected method headings:** III. METHOD (p. 2)
 
@@ -110,7 +110,7 @@ PDF body method statement (p. 3 (III. METHOD), p. 2 (III. METHOD), p. 3 (III. ME
 |---|---|---|
 | Multimodal task encoding | The performance gap reveals that in tasks requiring precise force control and continuous state monitoring, visual modality nearly loses its ability to ... | p. 6 (IV. EXPERIMENT), p. 5 (IV. EXPERIMENT) |
 | Action / skill decoding | The inferior performance of the vision-only configuration compared to the full configuration demonstrates that audio provides critical information for TABLE IV: Ablation ... | p. 7 (IV. EXPERIMENT), p. 5 (IV. EXPERIMENT) |
-| Receding execution / feedback | I, AudioVLA achieves 97.6% average success rate on LIBERO and 55.1% on RLBench, outperforming all comparative methods. | p. 6 (IV. EXPERIMENT), p. 6 (IV. EXPERIMENT) |
+| Receding execution / feedback | 표 I의 표준 환경에서 Audio-VLA의 평균 성공률은 LIBERO 97.6%, RLBench 55.1%다. [표 I](https://arxiv.org/pdf/2511.09958v1#page=7) | p. 6 (IV. EXPERIMENT), p. 6 (IV. EXPERIMENT) |
 
 ## Failure and Ablation Link
 

@@ -15,13 +15,11 @@
 - Full-text retrieval: https://proceedings.iclr.cc/paper_files/paper/2025/file/b364c8cbb3f229f40d5873e877391bd2-Paper-Conference.pdf
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (17 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (17 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 요약과 핵심 기여 두 개를 각 문장에 연결한 판본에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — The IRAS task is designed to output an affordance mask region in response to complex, reasoning-based query text, overcoming the limitations of fixed affordance labels and the difficulty of understanding complex instructions.
-
-방법 관련 발췌 — By reforming the label-based semantic segmentation task in the traditional affordance detection paradigm into a natural language-driven reasoning affordance segmentation task, our model enables more flexible and context-aware reasoning, ...
+3D-AffordanceLLM은 자연어로 설명한 상호작용이 가능한 부분을 3차원 물체에서 찾아 마스크로 출력한다. [PDF 1쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/b364c8cbb3f229f40d5873e877391bd2-Paper-Conference.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** By reforming the label-based semantic segmentation task in the traditional affordance detection paradigm into a natural language-driven reasoning affordance segmentation task, our model enables more ...
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** Specifically, we introduce an additional token, <AFF>, into the original LLM vocabulary.
-- **p. 3 / 3 METHOD - extractive body cue:** To address these limitations, we introduce a new paradigm formulated as an Instruction Reasoning Affordance Segmentation (IRAS) task as depicted in Fig.
-- **p. 4 / 3 METHOD - extractive body cue:** Our framework, 3D AffordanceLLM, as illustrated in Fig.
-- **p. 4 / 3 METHOD - extractive body cue:** To harness this capability for 3D affordance perception, we introduce the 3D AffordanceLLM Model, aiming to improve affordance detection in previously unseen contexts.
-- **p. 8 / 4 EXPERIMENT - extractive body cue:** Notably, 3D AffordanceLLM significantly outperforms the runner-up model (LASO) in terms of mIoU, with improvements of 8.02% and 7.19% on the full and partial view ...
-- **p. 10 / 4 EXPERIMENT - extractive body cue:** 4 (g), our model significantly outperforms other models.
-- **p. 8 / 4 EXPERIMENT - extractive body cue:** As is shown in Table 3, our approach achieved the best zero-shot performance on this ood data.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 언어 모델과 3차원 특징을 결합하고 마스크 복호기를 두어 고정된 행동 분류표 밖의 지시도 영역 추정 문제로 다룬다. [PDF 4쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/b364c8cbb3f229f40d5873e877391bd2-Paper-Conference.pdf#page=4) · [PDF 5쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/b364c8cbb3f229f40d5873e877391bd2-Paper-Conference.pdf#page=5)
+- 먼저 지시된 물체 부위를 분할하도록 학습한 뒤 행동 가능 영역 추론에 맞춰 미세조정하고, 보지 못한 어휘에서 분할 성능을 평가했다. [PDF 6쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/b364c8cbb3f229f40d5873e877391bd2-Paper-Conference.pdf#page=6) · [PDF 8쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/b364c8cbb3f229f40d5873e877391bd2-Paper-Conference.pdf#page=8) · [PDF 9쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/b364c8cbb3f229f40d5873e877391bd2-Paper-Conference.pdf#page=9)
 
 ## Evaluation Scope
 

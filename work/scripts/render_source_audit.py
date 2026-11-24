@@ -207,6 +207,14 @@ def check_applied(rows, papers, root):
             overview = (root / paper["folder"] / "01_overview.md").read_text()
             if review.get("source_format") == "html":
                 expect("official web report", review["source"], paper["page"])
+            if evidence := review.get("identifier_evidence"):
+                expect("DOI", paper["identifiers"].get("doi"), evidence["doi"])
+                check_source("venue_verification", evidence["source"])
+            if variant := review.get("title_variant"):
+                expect("catalog title source", paper["page"], variant["catalog_title_source"])
+                located = any(variant["text"] in line and variant["source"] in line for line in overview.splitlines())
+                if variant["text"] not in paper.get("aliases", []) or not located:
+                    errors.append(f"{pid} printed title variant or its source missing")
             summary_header, claims_header = summary_headings(overview)
             for header, claims in ((summary_header, [review["summary"]]), (claims_header, review["contributions"])):
                 section = overview.partition("## " + header + "\n")[2].partition("\n## ")[0]
@@ -287,7 +295,10 @@ def validate(rows, meta):
                 or not re.fullmatch(r"[0-9a-f]{64}", review["before_sha256"])
                 or review["verified_on"] != batch["verified_on"] or len(review["contributions"]) != 2):
                 raise ValueError(f"Incomplete summary review for {row['id']}")
-            for claim in [review["summary"], *review["contributions"]]:
+            claims = [review["summary"], *review["contributions"]]
+            if "scope_clarification" in review:
+                claims.append(review["scope_clarification"])
+            for claim in claims:
                 if not claim["text"].strip():
                     raise ValueError(f"Empty statement for {row['id']}")
                 if source_format == "html":
@@ -429,6 +440,14 @@ def render(rows, meta):
             short_title = row["title"].split(":")[0]
             lines += [f"**{short_title} 저자 표기.** {change['verified_on']}에 {change['basis']} "
                       f"[게재본 표제면]({change['source']})", ""]
+    clarified = [r for r in rows if "scope_clarification" in r.get("summary_review", {})]
+    if clarified:
+        lines += ["### 평가 조건과 지표", "", "| 논문 | 원문에서 확인한 범위 |", "|---|---|"]
+        for row in clarified:
+            review = row["summary_review"]
+            title = row["title"].split(":")[0]
+            lines.append(f"| {title} | {cited_statement(review['scope_clarification'], review)} |")
+        lines.append("")
     artifacts = [fields for r in rows if (fields := r.get("artifact_review", {}).get("fields"))]
     if artifacts:
         lines += ["## CORE 공개 자료", "",

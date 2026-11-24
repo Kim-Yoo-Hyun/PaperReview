@@ -6,7 +6,7 @@
 
 ## Evaluation in One Sentence
 
-PDF body evaluation/result cue (p. 6 (4 EXPERIMENT), p. 7 (4 EXPERIMENT), p. 9 (4 EXPERIMENT), p. 6 (4 EXPERIMENT), p. 8 (4 EXPERIMENT), p. 17 (Figure/Table caption)): These results suggest that the visual trace prompting technique employed in TraceVLA enhances the model's ability to generalize across different robotic manipulation tasks and environmental conditions, leading to improved performance ...
+실물 WidowX-250의 여덟 과제는 기본 비교 네 개와 추가 일반화 네 개로 구성된다. 두 묶음에서 OpenVLA와 TraceVLA를 비교했다. [PDF 7쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/8667f264f88c7938a73a53ab01eb1327-Paper-Conference.pdf#page=7)
 
 ## Evaluation Body Digest
 
@@ -72,6 +72,8 @@ PDF body evaluation/result cue (p. 6 (4 EXPERIMENT), p. 7 (4 EXPERIMENT), p. 9 (
 | Output/decision | continuous action, pose 또는 action chunk | action frame, controller and termination | p. 2 (1 INTRODUCTION), p. 1 (1 INTRODUCTION) |
 
 ## Metrics and Success Definition
+
+그림 6(a)의 옥수수 집어 옮기기에서 TraceVLA는 10회 중 8회, OpenVLA는 10회 중 1회 성공했다. 추가 일반화 네 과제의 성공 횟수는 그림 6(b)에 따로 표시한다. [PDF 7쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/8667f264f88c7938a73a53ab01eb1327-Paper-Conference.pdf#page=7)
 
 | Metric/result evidence | Definition and aggregation to verify | Anchor |
 |---|---|---|

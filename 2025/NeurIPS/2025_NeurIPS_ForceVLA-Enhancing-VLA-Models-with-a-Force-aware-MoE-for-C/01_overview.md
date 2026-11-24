@@ -16,13 +16,11 @@
 - Full-text retrieval at original review: https://arxiv.org/pdf/2505.22159
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (20 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (20 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 요약과 핵심 기여 두 개를 각 문장에 연결한 판본에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, these methods largely omit explicit modeling of the force/tactile modalities, and lack mechanisms for dynamically routing across multimodal signals in contact-intensive tasks.
-
-방법 관련 발췌 — Our main contributions are: • We present a novel framework that integrates force, vision, language, and action for improved precision and stability on contact-rich manipulation tasks.
+ForceVLA는 시각·언어 입력에 실시간 6축 힘·토크 신호를 결합해 접촉을 조절해야 하는 로봇 조작을 수행한다. [PDF 1쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/8633b46e12cc5f2ee1f05a6ca2c65b38-Paper-Conference.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -56,16 +54,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1 Introduction - extractive body cue:** Our main contributions are: • We present a novel framework that integrates force, vision, language, and action for improved precision and stability on contact-rich manipulation ...
-- **p. 2 / 1 Introduction - extractive body cue:** Key to our approach is a force-aware Mixture-of-Experts-based fusion module, which enables dynamic processing and deep integration of force, visual, and language features during action ...
-- **p. 1 / Abstract - extractive body cue:** To address these limitations, we propose ForceVLA, a novel end-to-end manipulation framework that treats external force sensing as a first-class modality within VLA systems.
-- **p. 3 / 1 Introduction - extractive body cue:** The robot's observation at timestep t consists of base and hand visual inputs V b t and V h t , the proprioceptive state st ...
-- **p. 3 / 1 Introduction - extractive body cue:** TCP position is represented by Cartesian coordinates (x, y, z) and orientation is represented by Euler angles (α, β, γ). ft is the estimated external ...
-- **p. 7 / Figure/Table caption - extractive body cue:** Figure 5: Main task success rates across different methods. ForceVLA significantly outperforms all baselines on five contact-rich tasks. Incorporating external force feedback improves performance for ...
-- **p. 6 / 5 Experiments - extractive body cue:** As demonstrated in Figure 5, ForceVLA achieves an average success rate of 60.5% across all five tasks, significantly outperforming all baseline configurations.
-- **p. 8 / 5 Experiments - extractive body cue:** 1, it achieved an 80.00% success rate, outperforming baselines that lacked force input or processed it naively.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- FVLMoE 모듈이 행동을 복호화할 때 힘과 시각·언어에 맞는 전문가를 선택하도록 하고, 영상·고유수용감각·힘 신호가 동기화된 시연을 구축했다. [PDF 4쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/8633b46e12cc5f2ee1f05a6ca2c65b38-Paper-Conference.pdf#page=4) · [PDF 5쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/8633b46e12cc5f2ee1f05a6ca2c65b38-Paper-Conference.pdf#page=5)
+- 다섯 접촉 조작 과제에서 힘 정보를 쓰는 정책과 기준선을 비교하고, 삽입 등에서 센서 융합 방법에 따른 성공률을 평가했다. [PDF 6쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/8633b46e12cc5f2ee1f05a6ca2c65b38-Paper-Conference.pdf#page=6) · [PDF 7쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/8633b46e12cc5f2ee1f05a6ca2c65b38-Paper-Conference.pdf#page=7) · [PDF 8쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/8633b46e12cc5f2ee1f05a6ca2c65b38-Paper-Conference.pdf#page=8) · [PDF 9쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/8633b46e12cc5f2ee1f05a6ca2c65b38-Paper-Conference.pdf#page=9)
 
 ## Evaluation Scope
 

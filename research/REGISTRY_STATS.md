@@ -1,6 +1,6 @@
 # 레지스트리 통계
 
-- Generated: 2026-11-23 KST
+- Generated: 2026-11-24 KST
 - Source: [papers.json](../work/sources/papers.json)
 - 분포와 검색 필드는 원장·등급표·읽기 이력에서 생성한다. 교정 후 오류율과 미확인 항목은 [원문 감사](./SOURCE_AUDIT.md)에서 확인한다.
 

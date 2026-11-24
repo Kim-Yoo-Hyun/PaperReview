@@ -15,13 +15,11 @@
 - Full-text retrieval: https://arxiv.org/pdf/2602.01166.pdf
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (18 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (18 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 요약과 핵심 기여 두 개를 각 문장에 연결한 판본에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Despite their effectiveness, existing CoT-based methods face two fundamental challenges.
-
-방법 관련 발췌 — Our contributions are threefold: • We introduce a latent-reasoning paradigm for VisionLanguage-Action models, in which chain-of-thought reasoning is internalized into continuous latent representations across textual and visual modalitie ...
+LaRA-VLA는 문장이나 미래 영상을 실행 때 명시적으로 생성하는 대신 연속 잠재 표현 안에서 추론한 결과로 로봇 행동을 정한다. [PDF 1쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/bai26h/bai26h.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** Our contributions are threefold: • We introduce a latent-reasoning paradigm for VisionLanguage-Action models, in which chain-of-thought reasoning is internalized into continuous latent representations across textual ...
-- **p. 4 / 3.2. Model Architecture - extractive body cue:** To predict visual goal information, we introduce a dedicated <img next> token to represent predicted visual latents, which enables explicit supervision and alignment during early-stage ...
-- **p. 2 / 1. Introduction - extractive body cue:** To address these challenges, we propose Latent Reasoning VLA (LaRA-VLA), a unified latent-reasoning VLA framework that performs reasoning and prediction entirely in latent space for ...
-- **p. 4 / 3. Method - extractive body cue:** In this section, we present the complete pipeline of our Latent Reasoning VLA (LaRA-VLA) framework.
-- **p. 6 / 3.3. Training Procedures - extractive body cue:** We introduce an attention mechanism tailored to our three-stage training paradigm, as illustrated in Figure 3.
-- **p. 8 / 4.2. Real-World Experiments - extractive body cue:** As shown in Figure 5, LaRA-VLA achieves the highest average success rate among all compared methods, substantially outperforming ACT and ECoT and surpassing GR00T N1.5 ...
-- **p. 7 / 4.1. Simulation Experiments - extractive body cue:** On LIBERO, LaRA-VLA achieves the best overall performance with an average success rate of 97.9%, including 99.8% on the Object suite and 96.6% on the ...
-- **p. 9 / Figure/Table caption - extractive body cue:** Figure 7. Latent collapse analysis. corruption, but LaRA-VLA consistently maintains higher success rates across all perturbation types and severity lev- els. These results indicate that ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 언어·시각 추론 정답으로 시작해 단계적으로 잠재 추론으로 옮겨가고, 마지막에는 그 표현이 정책의 행동 생성을 조건화하도록 학습한다. [PDF 4쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/bai26h/bai26h.pdf#page=4) · [PDF 5쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/bai26h/bai26h.pdf#page=5)
+- 시뮬레이션과 장기 실물 조작에서 성공률을 측정하고, 명시적 추론을 생성하는 방식과 추론 지연 및 시각 교란에 대한 민감도를 비교했다. [PDF 6쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/bai26h/bai26h.pdf#page=6) · [PDF 7쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/bai26h/bai26h.pdf#page=7) · [PDF 8쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/bai26h/bai26h.pdf#page=8) · [PDF 9쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/bai26h/bai26h.pdf#page=9)
 
 ## Evaluation Scope
 

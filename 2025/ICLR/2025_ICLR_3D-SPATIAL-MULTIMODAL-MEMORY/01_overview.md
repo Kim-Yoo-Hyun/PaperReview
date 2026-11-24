@@ -15,13 +15,11 @@
 - Full-text retrieval: https://proceedings.iclr.cc/paper_files/paper/2025/file/639f9db06bf70c4ff44cf22a7f92cb08-Paper-Conference.pdf
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (13 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (13 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 요약과 핵심 기여 두 개를 각 문장에 연결한 판본에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — We observe two key issues: First, due to the computational limitations, the feature vector dimensions in Gaussian primitives are significantly reduced compared to the original 2D feature maps (typically 16-64 versus 1024), ...
-
-방법 관련 발췌 — Specifically, we propose to store the original high-dimensional 2D feature maps in a memory bank called principal scene components and use the low-dimensional principal queries from 3D Gaussians as indices.
+M3는 정적인 장면의 영상에서 여러 시각 기반 모델의 특징을 3차원 가우시안에 저장하고 원하는 시점에서 다시 조회하게 한다. [PDF 1쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/639f9db06bf70c4ff44cf22a7f92cb08-Paper-Conference.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -54,16 +52,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** Specifically, we propose to store the original high-dimensional 2D feature maps in a memory bank called principal scene components and use the low-dimensional principal queries ...
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** To address these issues, we present MultiModal Memory (M3), a better integration of Gaussian splatting and multimodal foundation models that efficiently store expressive multimodal memory ...
-- **p. 3 / 3 METHOD - extractive body cue:** A real-world visual perception scene (V) consists of both structure (S) and knowledge (I).
-- **p. 4 / 3 METHOD - extractive body cue:** We introduce optimizable attribute queries (q) to Gaussian primitives, and apply a Gaussian Memory Attention (Agm) mechanism to produce the final rendered features ( ˆR), ...
-- **p. 8 / 4 EXPERIMENTS - extractive body cue:** Our method, M3, outperforms F-Splat while reducing significantly compute than F-3DGS.
-- **p. 8 / 4 EXPERIMENTS - extractive body cue:** The table clearly shows that increasing the number degree will generally improve the performance on all metrics.
-- **p. 7 / 4 EXPERIMENTS - extractive body cue:** 4.2 QUANTITATIVE RESULTS Baseline Implementation For quantitative experiments, we compare M3 with two recent distillation-based feature GS methods [26; 51].
-- **p. 9 / 4 EXPERIMENTS - extractive body cue:** M3 demonstrates superior downstream task accuracy with reduced training costs and shows practical utility when deployed on a real robot.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 장면 안에서 공유하는 주성분과 가우시안 기억에 대한 주의 연산을 이용해 고차원 특징의 저장 부담과 원래 특징과의 차이를 줄였다. [PDF 3쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/639f9db06bf70c4ff44cf22a7f92cb08-Paper-Conference.pdf#page=3) · [PDF 4쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/639f9db06bf70c4ff44cf22a7f92cb08-Paper-Conference.pdf#page=4) · [PDF 5쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/639f9db06bf70c4ff44cf22a7f92cb08-Paper-Conference.pdf#page=5)
+- 원래 모델 특징과의 거리 및 후속 인지 과제로 압축 표현을 평가하고, 사족 로봇으로 수집하거나 이용한 실내 장면에서 활용 사례를 보였다. [PDF 7쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/639f9db06bf70c4ff44cf22a7f92cb08-Paper-Conference.pdf#page=7) · [PDF 8쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/639f9db06bf70c4ff44cf22a7f92cb08-Paper-Conference.pdf#page=8) · [PDF 9쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/639f9db06bf70c4ff44cf22a7f92cb08-Paper-Conference.pdf#page=9)
 
 ## Evaluation Scope
 

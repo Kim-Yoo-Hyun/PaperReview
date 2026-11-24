@@ -15,13 +15,11 @@
 - Full-text retrieval: https://arxiv.org/pdf/2602.02459.pdf
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (24 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (24 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 요약과 핵심 기여 두 개를 각 문장에 연결한 판본에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, existing VLA systems rely on a hidden and impractical assumption: reasoning and control are temporally aligned.
-
-방법 관련 발췌 — To this end, we introduce Think-in-Control (TIC)-VLA, a latency-aware framework that explicitly exposes inference delay to the control policy.
+TIC-VLA는 의미 추론에 걸리는 지연을 정책에 알려 현재 관측과 이미 지나간 시점의 추론 결과를 함께 써서 이동 행동을 정한다. [PDF 1쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/huang26cd/huang26cd.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** To this end, we introduce Think-in-Control (TIC)-VLA, a latency-aware framework that explicitly exposes inference delay to the control policy.
-- **p. 1 / 1. Introduction - extractive body cue:** TIC-VLA enables real-time, language-conditioned navigation by decoupling slow vision-language reasoning from fast reactive control via a delayed semantic-control interface.
-- **p. 2 / 1. Introduction - extractive body cue:** The primary contributions can be summarized as:
-- **p. 4 / 3.2. Think-in-Control VLA - extractive body cue:** This latency-aware semantic-control coupling enables robust navigation despite asynchronous and delayed reasoning updates.
-- **p. 4 / 3.2. Think-in-Control VLA - extractive body cue:** Crucially, rather than treating this as an architectural contribution, we explicitly model the resulting inference delay as part of the control problem.
-- **p. 7 / 4.2. Simulation Testing - extractive body cue:** After RL fine-tuning, TICVLA achieves the highest success rate and the lowest collision rate, indicating improved closed-loop robustness in dynamic scenes.
-- **p. 8 / 4.2. Simulation Testing - extractive body cue:** The effect of VLM asynchronous reasoning inference latency in TIC-VLA on task performance. fine-tuned policy maintains consistently higher success rates across all latency settings, demonstrating ...
-- **p. 8 / 4.2. Simulation Testing - extractive body cue:** As shown in Table 2, using KV-cache features significantly improves navigation success, and latencyawareness enhances performance under asynchronous inference.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 모방학습과 온라인 강화학습 때 추론 지연을 주입해, 배포 시 비동기적으로 도착하는 의미 상태와 지연 정보를 정책이 해석하도록 했다. [PDF 3쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/huang26cd/huang26cd.pdf#page=3) · [PDF 4쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/huang26cd/huang26cd.pdf#page=4) · [PDF 5쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/huang26cd/huang26cd.pdf#page=5)
+- 사람이 움직이는 DynaNav 시뮬레이션과 실제 로봇에서 추론 지연이 달라질 때 언어 지시 이행과 반응형 이동을 평가했다. [PDF 6쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/huang26cd/huang26cd.pdf#page=6) · [PDF 7쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/huang26cd/huang26cd.pdf#page=7) · [PDF 8쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/huang26cd/huang26cd.pdf#page=8) · [PDF 9쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/huang26cd/huang26cd.pdf#page=9)
 
 ## Evaluation Scope
 

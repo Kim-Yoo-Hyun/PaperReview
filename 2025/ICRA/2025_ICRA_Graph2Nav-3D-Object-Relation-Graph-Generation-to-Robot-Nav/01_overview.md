@@ -15,13 +15,11 @@
 - Full-text retrieval: https://arxiv.org/pdf/2504.16782v1
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (7 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (7 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 요약과 핵심 기여 두 개를 각 문장에 연결한 판본에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, there are two major limitations in current 3D scene graph generation methods which hinder the growth of this field.
-
-방법 관련 발췌 — Our main contributions are summarized as follows: • We propose Graph2Nav, a new real-time 3D objectrelation graph generation framework that combines strengths of 2D object-relation graphs and 3D semantic mapping techniques. • ...
+Graph2Nav는 이동 로봇이 관측한 물체와 물체 사이의 의미 관계를 3차원 장면 그래프로 구축해 실환경의 물체 탐색을 돕는다. [PDF 1쪽](https://arxiv.org/pdf/2504.16782v1#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 1 / I. INTRODUCTION - extractive body cue:** Our main contributions are summarized as follows: • We propose Graph2Nav, a new real-time 3D objectrelation graph generation framework that combines strengths of 2D object-relation ...
-- **p. 1 / I. INTRODUCTION - extractive body cue:** In this paper, we present Graph2Nav (Figure 1), a novel real-time 3D object-relation graph generation framework that addresses these limitations to robot navigation.
-- **p. 3 / III. GRAPH2NAV - extractive body cue:** Note Graph2Nav is designed to support various types of pose graph-based SLAM systems, whether it is vision-based, LiDAR-based, or a tightly-coupled LiDAR-vision system.
-- **p. 5 / V. EXPERIMENTS - extractive body cue:** Combining observations from different 2D images shall improve the robustness and accuracy in depicting the actual relationships among 3D objects in the real world.
-- **p. 5 / V. EXPERIMENTS - extractive body cue:** Clearly, Graph2Nav greatly improves the capability in detecting correct relationships among the objects, compared to 2D-based method.
-- **p. 4 / V. EXPERIMENTS - extractive body cue:** First, we validate the accuracy of our generated 3D scene graphs for both indoor and outdoor scenes in the real world.
-- **p. 4 / V. EXPERIMENTS - extractive body cue:** Note the accuracy of our mapped 3D point cloud and the estimated platform pose relies on the underlying SLAM system (LIO-SAM [23] in our case), ...
-- **p. 6 / V. EXPERIMENTS - extractive body cue:** From the results, we found that the LLM is able to utilize the object-relations to design more efficient plans to search objects.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 2차원 장면에서 검출한 물체·관계와 3차원 의미 지도를 결합해 실내외에서 조회할 수 있는 계층적 그래프를 생성한다. [PDF 2쪽](https://arxiv.org/pdf/2504.16782v1#page=2) · [PDF 3쪽](https://arxiv.org/pdf/2504.16782v1#page=3) · [PDF 4쪽](https://arxiv.org/pdf/2504.16782v1#page=4)
+- 물체 위치와 관계 라벨 정확도를 평가하고, 실제 지상 로봇에서 SayNav 계획기에 관계 정보를 제공했을 때 물체 검색 시간을 비교했다. [PDF 5쪽](https://arxiv.org/pdf/2504.16782v1#page=5) · [PDF 6쪽](https://arxiv.org/pdf/2504.16782v1#page=6)
 
 ## Evaluation Scope
 

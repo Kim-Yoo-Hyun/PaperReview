@@ -10,7 +10,7 @@
 
 ### What was actually new
 
-- **p. 2 / III. METHOD - extractive body cue:** 2, the proposed Audio-VLA consists of four components including a multi-modal encoder, multi
+- **PDF 2–3쪽 / III. Method:** Audio-VLA는 멀티모달 인코더, 모달리티 투영기, 언어 모델, 행동 헤드로 구성된다. [그림 2](https://arxiv.org/pdf/2511.09958v1#page=3)
 - **p. 2 / I. INTRODUCTION - extractive body cue:** In this paper, we propose Audio-VLA, a multimodal manipulation policy that combines acoustic and visual perception.
 - **p. 3 / III. METHOD - extractive body cue:** It consists of two powerful vision transformers, DINOv2 [23] and SigLIP [24], pre-trained on Internet-scale image data to capture rich visual features and comprehensive spatial ...
 - **p. 3 / III. METHOD - extractive body cue:** The model consists of multi-modal encoders including audio, vision, and proprioceptive modules, multi-modal Projector that map heterogeneous features to a unified representation space, a 7B-parameter ...
@@ -34,8 +34,8 @@
 
 | Claim target | Body evidence | Anchor |
 |---|---|---|
-| Mechanism/contribution | 2, the proposed Audio-VLA consists of four components including a multi-modal encoder, multi | p. 2 (III. METHOD), p. 2 (I. INTRODUCTION) |
-| Reported outcome | I, AudioVLA achieves 97.6% average success rate on LIBERO and 55.1% on RLBench, outperforming all comparative methods. | p. 6 (IV. EXPERIMENT), p. 6 (IV. EXPERIMENT) |
+| Mechanism/contribution | Audio-VLA는 멀티모달 인코더, 모달리티 투영기, 언어 모델, 행동 헤드로 구성된다. [그림 2](https://arxiv.org/pdf/2511.09958v1#page=3) | p. 2 (III. METHOD), p. 2 (I. INTRODUCTION) |
+| Reported outcome | 표 I의 표준 환경에서 Audio-VLA의 평균 성공률은 LIBERO 97.6%, RLBench 55.1%다. [표 I](https://arxiv.org/pdf/2511.09958v1#page=7) | p. 6 (IV. EXPERIMENT), p. 6 (IV. EXPERIMENT) |
 | Failure/limitation | Our proposed Audio-VLA demonstrates that acoustic perception addresses fundamental limitations of vision-only approaches in manipulation tasks, providing irreplaceable information particularly when visual perception fails to capture con ... | p. 6 (IV. EXPERIMENT), p. 7 (V. CONCLUSION) |
 
 ## Researcher interpretation
@@ -44,7 +44,7 @@
 
 - **Closed-loop position:** `image/video, language instruction, proprioception과 history → language-grounded task state와 action-policy context → continuous action, pose 또는 action chunk`.
 - 이 논문의 재사용 가능한 지점은 Furthermore, recognizing the limitations of existing evaluation metrics that focus primarily on final task outcomes, the Task Completion Rate (TCR) evaluation metric is proposed to quantify dynamic process perceptual feedback capabiliti ...를 Subsequently, we extract the action hidden states Hact from Hdec, where each vector h(m) ∈Rdllm for m = 1, . . . , K · D encodes contextual information from all input ...로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 language-grounded task state와 action-policy context가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 Our proposed Audio-VLA demonstrates that acoustic perception addresses fundamental limitations of vision-only approaches in manipulation tasks, providing irreplaceable information particularly when visual perception fails to capture con ...에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
-- The paper-specific mechanism to preserve in a reproduction is: 2, the proposed Audio-VLA consists of four components including a multi-modal encoder, multi
+- The paper-specific mechanism to preserve in a reproduction is: Audio-VLA는 멀티모달 인코더, 모달리티 투영기, 언어 모델, 행동 헤드로 구성된다. [그림 2](https://arxiv.org/pdf/2511.09958v1#page=3)
 - Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
 
 ### Dependency and evolution

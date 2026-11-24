@@ -1,6 +1,6 @@
 # 원문 감사
 
-2026-11-23 KST 기준. 등록된 1,252편에서 **확인된 잔여 오류는 0/1,252편(0.00%)**, 10개 필드에 근거가 갖춰진 논문은 **19편**, 한 필드 이상 미확인인 논문은 **1,233편**이다. [논문별 판정과 직접 근거](../work/sources/batches/source_audit_2026_11.jsonl)
+2026-11-24 KST 기준. 등록된 1,252편에서 **확인된 잔여 오류는 0/1,252편(0.00%)**, 10개 필드에 근거가 갖춰진 논문은 **19편**, 한 필드 이상 미확인인 논문은 **1,233편**이다. [논문별 판정과 직접 근거](../work/sources/batches/source_audit_2026_11.jsonl)
 
 ## 요약·기여 원문 대조
 
@@ -10,12 +10,26 @@
 | 2026-11-23 | NEXT | [pr-0772–pr-0966 중 당시 미확인 논문](https://github.com/Kim-Yoo-Hyun/PaperReview/tree/a519b5f2684571e98d2b30458c3c5b3fce66674d) | 98 | 2 | 161 |
 | 2026-11-23 | NEXT | [pr-0967–pr-1135 중 당시 미확인 논문](https://github.com/Kim-Yoo-Hyun/PaperReview/tree/a7724b50a080b0c95ceab4dae27710898c78b7da) | 100 | 0 | 61 |
 | 2026-11-23 | NEXT | [pr-1136–pr-1227 중 당시 미확인 논문](https://github.com/Kim-Yoo-Hyun/PaperReview/tree/9339824126e387e43b48219f75d4a813bb50fa77) | 61 | 0 | 0 |
+| 2026-11-24 | REFERENCE | [pr-0029–pr-0181 중 당시 미확인 논문](https://github.com/Kim-Yoo-Hyun/PaperReview/tree/bde6ed0a06c8a2aad9fb809889bd50b3521c39dd) | 100 | 0 | 340 |
 
 안정 ID 순서로 미확인 논문을 골라 각 overview의 한 줄 요약과 핵심 기여 두 개를 원문에 대조했다. 문장마다 실제 확인한 PDF 쪽수 또는 공식 웹 보고서의 절을 연결했다. 원장에는 판본과 교정 전 노트의 SHA-256을 기록했다. 이 순차 배치에서 집계하는 값은 검증 진척이다.
 
-기존 노트에서 확인한 문자 전사 교정은 6편이다. 원장에 해당 문구와 근거를 기록했다. [pr-0552 원문](https://lavalle.pl/papers/Lav98c.pdf) · [pr-0751 원문](https://www.roboticsproceedings.org/rss21/p052.pdf) · [pr-0772 원문](https://openaccess.thecvf.com/content/CVPR2025/papers/Song_RoboSpatial_Teaching_Spatial_Understanding_to_2D_and_3D_Vision-Language_Models_CVPR_2025_paper.pdf) · [pr-0795 원문](https://openaccess.thecvf.com/content/CVPR2026/papers/Liu_ActiveVLA_Injecting_Active_Perception_into_Vision-Language-Action_Models_for_Precise_3D_CVPR_2026_paper.pdf) · [pr-0805 원문](https://openaccess.thecvf.com/content/CVPR2026/papers/Liu_SaPaVe_Towards_Active_Perception_and_Manipulation_in_Vision-Language_Action_Models_CVPR_2026_paper.pdf) · [pr-0813 원문](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/yan26r/yan26r.pdf)
+기존 노트에서 확인한 문자 전사 교정은 8편이다. 원장에 해당 문구와 근거를 기록했다. [pr-0174 원문](https://arxiv.org/pdf/2409.10350v1) · [pr-0181 원문](https://arxiv.org/pdf/2511.09958v1) · [pr-0552 원문](https://lavalle.pl/papers/Lav98c.pdf) · [pr-0751 원문](https://www.roboticsproceedings.org/rss21/p052.pdf) · [pr-0772 원문](https://openaccess.thecvf.com/content/CVPR2025/papers/Song_RoboSpatial_Teaching_Spatial_Understanding_to_2D_and_3D_Vision-Language_Models_CVPR_2025_paper.pdf) · [pr-0795 원문](https://openaccess.thecvf.com/content/CVPR2026/papers/Liu_ActiveVLA_Injecting_Active_Perception_into_Vision-Language-Action_Models_for_Precise_3D_CVPR_2026_paper.pdf) · [pr-0805 원문](https://openaccess.thecvf.com/content/CVPR2026/papers/Liu_SaPaVe_Towards_Active_Perception_and_Manipulation_in_Vision-Language_Action_Models_CVPR_2026_paper.pdf) · [pr-0813 원문](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/yan26r/yan26r.pdf)
+
+**CLIP-Fields 저자 표기.** 2026-11-24에 RSS 게재본 표제면에 따라 첫 저자의 이름과 성 사이 공백을 복원해 Nur Muhammad (Mahi) Shafiullah로 교정했다. [게재본 표제면](https://www.roboticsproceedings.org/rss19/p074.pdf#page=1)
 
 **EgoDex 저자 표기.** 2026-11-23에 ICLR 게재본 표제면에 따라 세 번째 저자를 David J. Yoon, 네 번째 저자를 Mouli Sivapurapu로 교정했다. [게재본 표제면](https://proceedings.iclr.cc/paper_files/paper/2026/file/07fcc6e2b89439d3ee5ab60939aaa6a0-Paper-Conference.pdf#page=1)
+
+### 평가 조건과 지표
+
+| 논문 | 원문에서 확인한 범위 |
+|---|---|
+| TraceVLA | 초록의 실물 네 과제와 본문 그림 6의 전체 여덟 과제를 구분했다. 그림 6(a)는 기본 비교 네 과제, 6(b)는 추가 일반화 네 과제다. [PDF 1쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/8667f264f88c7938a73a53ab01eb1327-Paper-Conference.pdf#page=1) · [PDF 7쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/8667f264f88c7938a73a53ab01eb1327-Paper-Conference.pdf#page=7) |
+| AIR-VLA | 표 1의 시뮬레이션 조작 실행과 표 3의 VLM 계획 평가에는 서로 다른 지표가 쓰인다. [PDF 7쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/sun26an/sun26an.pdf#page=7) · [PDF 8쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/sun26an/sun26an.pdf#page=8) |
+| Plan in Sandbox, Navigate in Open Worlds | A-EQA의 53.21%는 식 (14)의 LLM 답변 일치 점수다. 평가 모델이 답에 매긴 1~5점을 0~1로 정규화한 후 평균한다. [PDF 1쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/shen26e/shen26e.pdf#page=1) · [PDF 6쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/shen26e/shen26e.pdf#page=6) · [PDF 7쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/shen26e/shen26e.pdf#page=7) |
+| SpikeVLA | 내비게이션 성능과 함께 보고한 Eng(J)는 연산 횟수와 45 nm 공정의 연산당 에너지 가정으로 산출한 이론값이다. [PDF 7쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/song26r/song26r.pdf#page=7) · [PDF 12쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/song26r/song26r.pdf#page=12) · [PDF 13쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/song26r/song26r.pdf#page=13) |
+| VITaL Pretraining | 케이블 삽입의 20%→85%는 실행 시 촉각이 없는 ACT의 사전학습 전후 비교다. 같은 조건의 확산 정책은 45%→75%였다. [PDF 5쪽](https://arxiv.org/pdf/2403.11898v2#page=5) · [PDF 6쪽](https://arxiv.org/pdf/2403.11898v2#page=6) |
+| Audio-VLA | 표 II에서 이진 성공률과 연속 작업 진행 지표 TCR을 따로 보고한다. 식 (13)은 달성한 진행량을 과제별 목표량으로 정규화한다. [PDF 6쪽](https://arxiv.org/pdf/2511.09958v1#page=6) · [PDF 7쪽](https://arxiv.org/pdf/2511.09958v1#page=7) |
 
 ## CORE 공개 자료
 
@@ -64,7 +78,7 @@ NoMaD(`pr-0568`)의 데이터는 기존에 `not_applicable`로 분류되어 있�
 | 저자 | 6 | 1,251 | 1 | 0 |
 | 연도 | 0 | 1,252 | 0 | 0 |
 | 발표처·게재 | 0 | 1,182 | 70 | 0 |
-| 요약·기여 | 30 | 614 | 638 | 0 |
+| 요약·기여 | 30 | 714 | 538 | 0 |
 | 코드 | 0 | 383 | 869 | 0 |
 | 가중치 | 0 | 84 | 1,168 | 0 |
 | 데이터 | 0 | 101 | 1,151 | 0 |
@@ -78,7 +92,7 @@ NoMaD(`pr-0568`)의 데이터는 기존에 `not_applicable`로 분류되어 있�
 |---|---:|---:|---:|---:|---:|
 | CORE | 50 | 13 | 0 | 0 | 36 |
 | NEXT | 450 | 6 | 0 | 360 | 433 |
-| REFERENCE | 510 | 0 | 440 | 366 | 504 |
+| REFERENCE | 510 | 0 | 340 | 366 | 504 |
 | ARCHIVE | 242 | 0 | 198 | 131 | 242 |
 
 ## 배치별 결과

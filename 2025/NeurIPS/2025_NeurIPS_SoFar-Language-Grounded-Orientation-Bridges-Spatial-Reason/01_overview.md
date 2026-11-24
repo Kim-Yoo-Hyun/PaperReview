@@ -16,15 +16,13 @@
 - Full-text retrieval at original review: https://arxiv.org/pdf/2502.13143
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (46 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (46 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 요약과 핵심 기여 두 개를 각 문장에 연결한 판본에서 확인했다.
 
 > DOC-QA2 targeted source review: 2026-10-23; PDF pp. 4. 손상 구간·직접 연결된 표 분류만 원문 이미지와 대조했다. 전체 주장 정독·실험 검증·reading status 승격을 뜻하지 않는다. [URL·PDF hash·수정 기록](../../../work/sources/pdf_note_review_followup_2026-10-23.json).
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, translating a specific language description into a desired orientation is challenging for existing VLMs.
-
-방법 관련 발췌 — We propose PointSO, a generalizable cross-modal 3D Transformer [114, 26, 89, 91] for semantic orientation prediction.
+SoFar는 물체의 손잡이나 삽입 방향처럼 언어로 지시할 수 있는 방향을 예측해 6자유도 조작에 필요한 자세를 결정한다. [PDF 1쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/6ea83df350753236215cbf2fe9716eca-Paper-Conference.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -58,16 +56,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1 Introduction - extractive body cue:** We propose PointSO, a generalizable cross-modal 3D Transformer [114, 26, 89, 91] for semantic orientation prediction.
-- **p. 2 / 1 Introduction - extractive body cue:** In addition, we introduce Open6DOR V2, a large-scale benchmark for 6-DoF object rearrangement in simulation, which supports both open-loop and closed-loop control.
-- **p. 3 / 1 Introduction - extractive body cue:** Finally, we present two new benchmarks, Open6DOR V2 and 6-DoF SpatialBench, to evaluate 6-DoF rearrangement and spatial reasoning.
-- **p. 3 / 1 Introduction - extractive body cue:** To support this, we introduce OrienText300K, a curated dataset of 3D models annotated with diverse language-guided orientation labels.
-- **p. 5 / 1 Introduction - extractive body cue:** This enriched spatial representation enables the VLM to perform accurate spatial reasoning by leveraging its visual and linguistic understanding.
-- **p. 9 / 4 Experiments - extractive body cue:** SOFAR consistently outperforms other methods across both tracks, achieving over 18% improvement.
-- **p. 8 / 4 Experiments - extractive body cue:** SOFAR achieves the best performance, demonstrating strong spatial understanding and zero-shot generalization.
-- **p. 8 / 4 Experiments - extractive body cue:** We note that certain objects are intrinsically difficult to manipulate, suggesting the need for more robust policies incorporating prehensile grasping and adaptive strategies to improve ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 3차원 물체에 의미 방향을 주석화한 OrienText300K를 구축하고 PointSO가 점군과 언어에서 그 방향을 예측하도록 학습했다. [PDF 3쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/6ea83df350753236215cbf2fe9716eca-Paper-Conference.pdf#page=3) · [PDF 4쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/6ea83df350753236215cbf2fe9716eca-Paper-Conference.pdf#page=4) · [PDF 5쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/6ea83df350753236215cbf2fe9716eca-Paper-Conference.pdf#page=5)
+- 추정한 방향을 VLM 에이전트에 전달해 Open6DOR의 물체 재배치와 SimplerEnv 조작에서 과제별 추가 학습 없이 평가했다. [PDF 7쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/6ea83df350753236215cbf2fe9716eca-Paper-Conference.pdf#page=7) · [PDF 8쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/6ea83df350753236215cbf2fe9716eca-Paper-Conference.pdf#page=8) · [PDF 9쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/6ea83df350753236215cbf2fe9716eca-Paper-Conference.pdf#page=9)
 
 ## Evaluation Scope
 

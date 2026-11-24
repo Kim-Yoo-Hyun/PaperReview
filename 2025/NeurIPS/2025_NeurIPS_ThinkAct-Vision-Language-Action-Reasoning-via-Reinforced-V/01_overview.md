@@ -16,13 +16,11 @@
 - Full-text retrieval at original review: https://arxiv.org/pdf/2507.16815
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (22 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (22 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 요약과 핵심 기여 두 개를 각 문장에 연결한 판본에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — While this manner enables long-form reasoning without step-level supervision, the reliance on QA-style reward signals limits their ability to support long-horizon planning and makes it difficult to connect reasoning with real-world acti ...
-
-방법 관련 발췌 — Our main contributions are summarized as follows: • We propose ThinkAct, a dual-system framework that mutually enhances action execution and visualgrounded embodied reasoning connected by visual latent planning. • We leverage the ...
+ThinkAct는 목표 달성과 궤적 일관성에 대한 보상으로 시각 계획을 학습하고, 그 계획을 잠재 표현으로 전달해 로봇 행동을 생성한다. [PDF 1쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/7749f9c0d5ff109231be21e910a3ced2-Paper-Conference.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -56,16 +54,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** Our main contributions are summarized as follows: • We propose ThinkAct, a dual-system framework that mutually enhances action execution and visualgrounded embodied reasoning connected by ...
-- **p. 2 / 1. Introduction - extractive body cue:** In this paper, we propose ThinkAct, which aims to enable MLLMs with the capability to reason before acting in physical environments.
-- **p. 3 / 3.1. Problem Formulation - extractive body cue:** To tackle this problem, we propose ThinkAct, a unified framework that aims to leverage an MLLM ℱ𝜃to reason the high-level plans while connecting with an ...
-- **p. 4 / 3.2. Reinforced Visual Latent Planning for Embodied Reasoning - extractive body cue:** As a result, to encourage the model to anticipate visual goal completetion, we introduce the goal reward for comparing predicted start and end positions with ...
-- **p. 4 / 3.1. Problem Formulation - extractive body cue:** Note that, during inference, 𝜋𝜑and ℱ𝜃could operate asynchronously to enable slow thinking and fast control for VLA reasoning tasks. our ThinkAct enables long-horizon reasoning and ...
-- **p. 7 / 4.2. Quantitative Evaluation - extractive body cue:** On the LIBERO benchmark, ThinkAct achieves the best overall success rate of 84.4%, outperforming DiT-Policy and recent state-of-the-art CoT-VLA Zhao et al.
-- **p. 10 / 4.5. Analysis of ThinkAct - extractive body cue:** 5, ThinkAct consistently outperforms state-of-the-art methods, achieving the highest success rates across all tasks.
-- **p. 10 / 4.4. Ablation Study - extractive body cue:** Method SimplerEnv EgoPlan RoboVQA ThinkAct (Ours) 60.1 48.2 59.8 Ours w/o 𝑟traj 59.2 47.9 58.5 Ours w/o 𝑟goal 59.1 47.6 58.9 Ours w/o 𝑟traj, 𝑟goal ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 추론 모델에 영상에서 확인할 수 있는 행동 정렬 보상을 부여하고, 추론 결과를 압축해 환경별 저수준 정책의 조건으로 사용했다. [PDF 3쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/7749f9c0d5ff109231be21e910a3ced2-Paper-Conference.pdf#page=3) · [PDF 4쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/7749f9c0d5ff109231be21e910a3ced2-Paper-Conference.pdf#page=4) · [PDF 5쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/7749f9c0d5ff109231be21e910a3ced2-Paper-Conference.pdf#page=5)
+- 로봇 조작에서 적은 시연으로 새 과제에 적응하는 성능을 비교하고, 긴 과제를 수행하며 실패를 인식해 계획을 고치는 사례를 분석했다. [PDF 6쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/7749f9c0d5ff109231be21e910a3ced2-Paper-Conference.pdf#page=6) · [PDF 8쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/7749f9c0d5ff109231be21e910a3ced2-Paper-Conference.pdf#page=8) · [PDF 9쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/7749f9c0d5ff109231be21e910a3ced2-Paper-Conference.pdf#page=9)
 
 ## Evaluation Scope
 

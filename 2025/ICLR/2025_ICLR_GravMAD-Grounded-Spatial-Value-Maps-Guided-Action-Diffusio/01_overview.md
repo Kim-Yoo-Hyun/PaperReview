@@ -15,15 +15,13 @@
 - Full-text retrieval: https://proceedings.iclr.cc/paper_files/paper/2025/file/fce176458ff542940fa3ed16e6f9c852-Paper-Conference.pdf
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (33 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (33 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 요약과 핵심 기여 두 개를 각 문장에 연결한 판본에서 확인했다.
 
 > DOC-QA1 (2026-10-23): 제어문자·깨진 추출 구간과 직접 연결된 표 항목을 PDF 페이지 이미지와 대조했다. 확인 범위·원문 URL·페이지·수정 이력은 [대조 기록](../../../work/sources/pdf_note_review_2026-10-23.json)에 있다. 노트 전체의 정독이나 모든 기존 주장에 대한 재검증을 뜻하지 않으며 reading status는 유지한다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, these policies often lack the language understanding and generalization abilities of foundation models.
-
-방법 관련 발췌 — In summary, our contributions are: 1) We propose leveraging key sub-goals in 3D manipulation tasks to bridge the gap between foundation models and learned policies.
+GravMAD는 언어 지시를 하위 목표로 나누고, 목표 주변의 3차원 공간 가치 지도로 확산 기반 로봇팔 행동 생성을 유도한다. [PDF 1쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/fce176458ff542940fa3ed16e6f9c852-Paper-Conference.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -57,16 +55,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 3 / 1 INTRODUCTION - extractive body cue:** In summary, our contributions are: 1) We propose leveraging key sub-goals in 3D manipulation tasks to bridge the gap between foundation models and learned policies.
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** To this end, inspired by the approach of introducing task sub-goals to achieve efficient execution in robotic manipulation (Black et al., 2024; Kang et al., ...
-- **p. 3 / 1 INTRODUCTION - extractive body cue:** 3) We propose a new action diffusion framework, GravMAD, guided by GravMaps.
-- **p. 4 / 1 INTRODUCTION - extractive body cue:** Our method combines the learning power of diffusion architectures with the generalization of VLMs.
-- **p. 4 / 3 METHOD - extractive body cue:** In this section, we introduce GravMAD, a multi-task, sub-goal-driven, language-conditioned diffusion framework for 3D manipulation, as shown in Fig.
-- **p. 9 / 4 EXPERIMENTS - extractive body cue:** GravMAD (Manual) outperforms Act3D and Voxposer across all tasks and exceeds the best baseline, 3D Diffuser Actor, in 9 out of 12 tasks, with an ...
-- **p. 9 / 4 EXPERIMENTS - extractive body cue:** Despite the Detector's coarse SoM positioning affecting GravMAD (VLM)'s performance, it still outperforms Act3D and Voxposer on all tasks, with a 0.91% higher average success ...
-- **p. 10 / Figure/Table caption - extractive body cue:** Figure 4: Ablation Studies. We evaluate the impact of key design elements by reporting the average success rates across 12 base tasks and 8 novel ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 학습 때는 시연의 핵심 자세에서 하위 목표를 추출하고, 실행 때는 사전학습 모델로 하위 목표를 추정해 공간 지도를 생성한다. [PDF 4쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/fce176458ff542940fa3ed16e6f9c852-Paper-Conference.pdf#page=4) · [PDF 5쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/fce176458ff542940fa3ed16e6f9c852-Paper-Conference.pdf#page=5)
+- RLBench에서 학습 때 본 과제와 새로운 과제를 구분해 성공률을 비교하고, 실물 로봇에서 공간 지도를 사용한 조작을 시험했다. [PDF 8쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/fce176458ff542940fa3ed16e6f9c852-Paper-Conference.pdf#page=8) · [PDF 9쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/fce176458ff542940fa3ed16e6f9c852-Paper-Conference.pdf#page=9) · [PDF 32쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/fce176458ff542940fa3ed16e6f9c852-Paper-Conference.pdf#page=32)
 
 ## Evaluation Scope
 

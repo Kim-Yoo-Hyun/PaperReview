@@ -15,13 +15,11 @@
 - Full-text retrieval: https://raw.githubusercontent.com/mlresearch/v305/main/assets/munje25a/munje25a.pdf
 - Code/Project: not identified
 - Paper type: benchmark_or_dataset
-- Source audit: full-text PDF body checked on 2026-09-03 (24 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (24 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 요약과 핵심 기여 두 개를 각 문장에 연결한 판본에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — By bridging the gap between VLM capabilities and the challenges of social robot navigation, our work provides a foundation for advancing the use of VLMs for social robot navigation.
-
-방법 관련 발췌 — In this paper, we introduce the Social Navigation Scene Understanding Benchmark (SOCIALNAVSUB), a novel Visual Question Answering (VQA) benchmark designed to evaluate VLMs on social robot navigation tasks.
+SocialNav-SUB는 실제 사회적 내비게이션 장면에서 사람과 로봇의 공간 관계·시간 변화·사회적 상황을 모델이 얼마나 잘 읽는지 묻는 시각 질의응답 벤치마크다. [PDF 1쪽](https://raw.githubusercontent.com/mlresearch/v305/d42e9e994b3821cca9121500c717f9a87c7cb4f6/assets/munje25a/munje25a.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -54,16 +52,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1 Introduction - extractive body cue:** In this paper, we introduce the Social Navigation Scene Understanding Benchmark (SOCIALNAVSUB), a novel Visual Question Answering (VQA) benchmark designed to evaluate VLMs on social ...
-- **p. 2 / 1 Introduction - extractive body cue:** Social Navigation VQA Benchmark for VLMs: We introduce the first VQA benchmark for assessing VLMs' capabilities in social robot navigation scenarios using 60 unique scenarios ...
-- **p. 14 / 7 Appendix - extractive body cue:** Overall, when scene context is extracted from the human oracle's responses, VLM performance significantly improves compared to using no context or randomly generated context, and ...
-- **p. 23 / 7 Appendix - extractive body cue:** The results indicate that removing the CoT component does not significantly affect spatial and spatiotemporal reasoning performance.
-- **p. 24 / 7 Appendix - extractive body cue:** These results indicate that a strong spatial and spatiotemporal reasoning capabilities can lead to significantly better performance on social reasoning questions.
-- **p. 15 / 7 Appendix - extractive body cue:** Estimates achieve an average displacement error of 0.67±0.14 m across all samples.
-- **p. 7 / Figure/Table caption - extractive body cue:** Table 1: Average Performance Across Question Categories. The metrics used are PA and CWPA for all questions and for each question category, along with standard ...
-- **p. 14 / 7 Appendix - extractive body cue:** The evaluation results are averaged over 5 runs, and we report mean accuracy ± standard error.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 실제 로봇이 이동하며 관측한 장면을 질문과 연결하고, 사람마다 답이 다를 수 있어 사람 응답과의 일치 확률을 지표로 구성했다. [PDF 3쪽](https://raw.githubusercontent.com/mlresearch/v305/d42e9e994b3821cca9121500c717f9a87c7cb4f6/assets/munje25a/munje25a.pdf#page=3) · [PDF 4쪽](https://raw.githubusercontent.com/mlresearch/v305/d42e9e994b3821cca9121500c717f9a87c7cb4f6/assets/munje25a/munje25a.pdf#page=4) · [PDF 5쪽](https://raw.githubusercontent.com/mlresearch/v305/d42e9e994b3821cca9121500c717f9a87c7cb4f6/assets/munje25a/munje25a.pdf#page=5)
+- 사람 간 합의와 규칙 기반 응답을 기준선으로 비교해 VLM이 특히 공간 관계 판단에서 보이는 한계를 측정했다. [PDF 6쪽](https://raw.githubusercontent.com/mlresearch/v305/d42e9e994b3821cca9121500c717f9a87c7cb4f6/assets/munje25a/munje25a.pdf#page=6) · [PDF 7쪽](https://raw.githubusercontent.com/mlresearch/v305/d42e9e994b3821cca9121500c717f9a87c7cb4f6/assets/munje25a/munje25a.pdf#page=7)
 
 ## Evaluation Scope
 

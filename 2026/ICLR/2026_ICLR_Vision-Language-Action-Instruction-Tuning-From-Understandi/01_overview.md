@@ -15,13 +15,11 @@
 - Full-text retrieval: https://proceedings.iclr.cc/paper_files/paper/2026/file/f81332c0e757b169c66d436ec2fff624-Paper-Conference.pdf
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (48 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (48 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 요약과 핵심 기여 두 개를 각 문장에 연결한 판본에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — To address these challenges and utilize VLMs more effectively, prior work has primarily adopted two strategies.
-
-방법 관련 발췌 — We propose a unified framework that enables simultaneous multimodal reasoning and language-steered latent action planning using a single VLM (Figure 2 (1) and (2)).
+InstructVLA는 로봇 행동을 배우는 동안 시각·언어 모델의 지시 이해 능력을 유지하도록 언어 응답과 조작 행동 생성을 함께 학습한다. [PDF 1쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/f81332c0e757b169c66d436ec2fff624-Paper-Conference.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 4 / 3. Atomic-Instruction Manipulation - extractive body cue:** We propose a unified framework that enables simultaneous multimodal reasoning and language-steered latent action planning using a single VLM (Figure 2 (1) and (2)).
-- **p. 2 / 3. Atomic-Instruction Manipulation - extractive body cue:** To validate the performance of InstructVLA, we introduce the SimplerEnv-Instruct benchmark, a manually designed evaluation suite featuring 80 zero-shot manipulation tasks.
-- **p. 1 / 1 INTRODUCTION - extractive body cue:** The first aims to retain general multimodal capabilities while learning manipulation.
-- **p. 1 / ABSTRACT - extractive body cue:** To bridge this gap, we introduce InstructVLA, an end-to-end VLA model that preserves the flexible reasoning of large vision-language models (VLMs) while delivering leading manipulation ...
-- **p. 2 / 3. Atomic-Instruction Manipulation - extractive body cue:** Building on these observations, we propose InstructVLA, a generalist VLA model that extends pretrained VLMs for accurate action generation while preserving strong multimodal understanding.
-- **p. 8 / 5 EXPERIMENT - extractive body cue:** Meanwhile, InstructVLA (generalist) not only maintains strong performance on SimplerEnv's atomic instructions but also achieves a 31.7% relative improvement on SimplerEnv-Instruct over the state-of-the-art baseline ...
-- **p. 9 / 5 EXPERIMENT - extractive body cue:** As shown in Table 3, introducing "language motion" (textual descriptions of low-level actions) supervision enhances the VLM's ability to associate visual cues with manipulation primitives, ...
-- **p. 30 / Figure/Table caption - extractive body cue:** Figure 20: Failure case 2 of InstructVLA. The model fails to accurately estimate depth due to the real-to-sim gap, specifically the absence of arm reflection ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 전문가 혼합 방식의 적응 모듈을 사용해 기존 시각·언어 자료와 로봇 지시 자료에서 서로 다른 출력을 최적화했다. [PDF 4쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/f81332c0e757b169c66d436ec2fff624-Paper-Conference.pdf#page=4) · [PDF 5쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/f81332c0e757b169c66d436ec2fff624-Paper-Conference.pdf#page=5)
+- 복합 지시 이해와 폐루프 제어를 함께 요구하는 SimplerEnv-Instruct를 구성하고, 행동만 학습한 정책과 고수준 모델의 도움을 받는 정책을 비교했다. [PDF 6쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/f81332c0e757b169c66d436ec2fff624-Paper-Conference.pdf#page=6) · [PDF 7쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/f81332c0e757b169c66d436ec2fff624-Paper-Conference.pdf#page=7) · [PDF 8쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/f81332c0e757b169c66d436ec2fff624-Paper-Conference.pdf#page=8)
 
 ## Evaluation Scope
 

@@ -15,13 +15,11 @@
 - Full-text retrieval: https://papers.neurips.cc/paper_files/paper/2025/file/4a81c1aad3064fb8243b8938a49ecca0-Paper-Conference.pdf
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (41 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (41 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 요약과 핵심 기여 두 개를 각 문장에 연결한 판본에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, to address the critical challenges faced by real-world robotics in urban environments, they lack the necessary realism, customizability, scalability, and versatility.
-
-방법 관련 발췌 — In sum, our key contributions include: (1) a new embodied AI simulator, SimWorld-Robotics (SWR), that supports the creation and simulation of photorealistic and dynamic urban environments with diverse embodied agents; (2) two ...
+SimWorld-Robotics는 보행자와 차량이 움직이는 가상 도시를 생성해 로봇의 장거리 지시 이행과 로봇 간 협력을 평가한다. [PDF 1쪽](https://papers.neurips.cc/paper_files/paper/2025/file/4a81c1aad3064fb8243b8938a49ecca0-Paper-Conference.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 3 / 1 Introduction - extractive body cue:** In sum, our key contributions include: (1) a new embodied AI simulator, SimWorld-Robotics (SWR), that supports the creation and simulation of photorealistic and dynamic urban ...
-- **p. 3 / 1 Introduction - extractive body cue:** To address this gap, we introduce SimWorld-20K, a large-scale dataset for benchmarking multimodal robot navigation in photo-realistic urban environments.
-- **p. 2 / 1 Introduction - extractive body cue:** It offers diverse high-fidelity building and object assets, supports embodied agents with rich action spaces, includes a background traffic system powered by city-scale waypoint generation, ...
-- **p. 1 / Abstract - extractive body cue:** In this work, we present SimWorldRobotics (SWR), a simulation platform for embodied AI in large-scale, photorealistic urban environments.
-- **p. 2 / 1 Introduction - extractive body cue:** By leveraging SWR, we develop two novel benchmarks for robots in large, urban environments.
-- **p. 3 / 1 Introduction - extractive body cue:** After fine-tuning on SimWorld-20K, QwenVL2.5-7B achieves a non-zero success rate on the test set and outperforms SOTA proprietary models across several key metrics.
-- **p. 3 / 1 Introduction - extractive body cue:** Our experimental results demonstrate that existing models, including state-of-the-art vision-language models (VLMs), fail to achieve meaningful success on our benchmarks.
-- **p. 2 / 1 Introduction - extractive body cue:** More recent city simulators, such as MetaDrive [29], MetaUrban [56], significantly improve the scalability.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 절차적으로 도로와 도시 장면을 구성하고 동적 교통과 여러 로봇의 제어·통신을 지원하는 Unreal Engine 환경을 만들었다. [PDF 4쪽](https://papers.neurips.cc/paper_files/paper/2025/file/4a81c1aad3064fb8243b8938a49ecca0-Paper-Conference.pdf#page=4) · [PDF 5쪽](https://papers.neurips.cc/paper_files/paper/2025/file/4a81c1aad3064fb8243b8938a49ecca0-Paper-Conference.pdf#page=5) · [PDF 6쪽](https://papers.neurips.cc/paper_files/paper/2025/file/4a81c1aad3064fb8243b8938a49ecca0-Paper-Conference.pdf#page=6)
+- 한 로봇이 영상·언어 지시로 목적지에 도달하는 과제와 두 로봇이 통신하며 서로를 찾는 과제를 별도 벤치마크로 평가했다. [PDF 7쪽](https://papers.neurips.cc/paper_files/paper/2025/file/4a81c1aad3064fb8243b8938a49ecca0-Paper-Conference.pdf#page=7) · [PDF 8쪽](https://papers.neurips.cc/paper_files/paper/2025/file/4a81c1aad3064fb8243b8938a49ecca0-Paper-Conference.pdf#page=8) · [PDF 9쪽](https://papers.neurips.cc/paper_files/paper/2025/file/4a81c1aad3064fb8243b8938a49ecca0-Paper-Conference.pdf#page=9) · [PDF 10쪽](https://papers.neurips.cc/paper_files/paper/2025/file/4a81c1aad3064fb8243b8938a49ecca0-Paper-Conference.pdf#page=10)
 
 ## Evaluation Scope
 

@@ -12,16 +12,15 @@
 - Tier: REFERENCE
 - Tags: VLA, Robotics, Reinforcement Learning
 - Official paper: https://proceedings.iclr.cc/paper_files/paper/2026/hash/444876e32cba0408c63f5295481cfe20-Abstract-Conference.html
+- PDF title variant: Interleave-VLA: Enhancing Robot Manipulation with Interleaved Image-Text Instructions [게재본 표제면](https://proceedings.iclr.cc/paper_files/paper/2026/file/444876e32cba0408c63f5295481cfe20-Paper-Conference.pdf#page=1)
 - Full-text retrieval: https://proceedings.iclr.cc/paper_files/paper/2026/file/444876e32cba0408c63f5295481cfe20-Paper-Conference.pdf
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (31 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (31 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 요약과 핵심 기여 두 개를 각 문장에 연결한 판본에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — In order to bridge the gap of the lack of image-text interleaved datasets in robotic manipulation, we develop a pipeline to automatically construct interleaved instructions from existing datasets.
-
-방법 관련 발췌 — As illustrated in Figure 2, Interleave-VLA consists of three key components: (1) a lightweight adaptation module that introduces special separator tokens into the tokenizer, enabling existing VLAs to process interleaved inputs without ...
+Interleave-VLA는 문장에 대상의 참조 이미지를 끼워 넣은 지시를 받아 연속 로봇 행동을 생성한다. [PDF 1쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/444876e32cba0408c63f5295481cfe20-Paper-Conference.pdf#page=1) · [PDF 2쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/444876e32cba0408c63f5295481cfe20-Paper-Conference.pdf#page=2)
 
 ## Problem and Motivation
 
@@ -55,16 +54,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** As illustrated in Figure 2, Interleave-VLA consists of three key components: (1) a lightweight adaptation module that introduces special separator tokens into the tokenizer, enabling ...
-- **p. 3 / 1 INTRODUCTION - extractive body cue:** The interleaved format enables robust zeroshot generalization to novel objects and user-provided sketches unseen during training.
-- **p. 3 / 1 INTRODUCTION - extractive body cue:** (1) We introduce Interleave-VLA: a lightweight, transferable paradigm that enhances the generalization capability of current text input VLA models with interleaved image-text instructions.
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** This enables training Interleave-VLA with real-world interaction data and diverse visual instruction types.
-- **p. 1 / ABSTRACT - extractive body cue:** Building on this insight, we introduce Interleave-VLA, a robot learning paradigm extending interleaved image-text instructions from digital world to directly generating continuous action sequences in ...
-- **p. 27 / Figure/Table caption - extractive body cue:** Table 13: Detailed evaluation results on 9 Out-of-Domain generalization tasks based on SimplerEnv. Success rates (%) are reported for π0, Interleave-VLA (adapted from π0), and ...
-- **p. 10 / 4 EXPERIMENTS - extractive body cue:** Move Near Text 69.2 71.4 30.2 21.0 66.6 Visual Goal 67.8 74.6 48.0 51.9 0.0 Interleaved Img-Text 71.3 73.4 53.9 54.2 68.8 paring the performance ...
-- **p. 24 / Figure/Table caption - extractive body cue:** Figure 11: Quantitative hallucination analysis of π0 with text-only instructions (Text-VLA) and interleaved image-text instructions (Interleave-VLA). Across all task categories, Interleave-VLA achieves higher overall success ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- Open X-Embodiment의 텍스트 지시를 참조 이미지와 텍스트가 섞인 지시로 자동 변환해 기존 로봇 시연을 재사용했다. [PDF 3쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/444876e32cba0408c63f5295481cfe20-Paper-Conference.pdf#page=3) · [PDF 5쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/444876e32cba0408c63f5295481cfe20-Paper-Conference.pdf#page=5) · [PDF 6쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/444876e32cba0408c63f5295481cfe20-Paper-Conference.pdf#page=6)
+- 낯선 물체의 조작에서 텍스트만 제공한 정책과 비교하고, 사진 이외에 손그림처럼 훈련과 다른 형태의 지시도 시험했다. [PDF 7쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/444876e32cba0408c63f5295481cfe20-Paper-Conference.pdf#page=7) · [PDF 8쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/444876e32cba0408c63f5295481cfe20-Paper-Conference.pdf#page=8) · [PDF 9쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/444876e32cba0408c63f5295481cfe20-Paper-Conference.pdf#page=9)
 
 ## Evaluation Scope
 

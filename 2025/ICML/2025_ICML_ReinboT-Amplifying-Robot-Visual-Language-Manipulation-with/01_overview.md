@@ -15,13 +15,11 @@
 - Full-text retrieval: https://raw.githubusercontent.com/mlresearch/v267/main/assets/zhang25dr/zhang25dr.pdf
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (18 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (18 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 요약과 핵심 기여 두 개를 각 문장에 연결한 판본에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — While semantic generalization has improved in VLA models through extensive robotic training data, a critical gap persists in their manipulation accuracy for downstream tasks (Brohan et al., 2023; Black et al.; Li ...
-
-방법 관련 발췌 — Overall, the core contributions of this paper include: • We propose ReinboT, a novel end-to-end VLA model that integrates RL returns maximization to enhance robotic manipulation capabilities. • We introduce a reward ...
+ReinboT는 품질이 서로 다른 로봇 시연에서 조작의 남은 누적 보상을 예측하고 이를 조건으로 행동을 생성하는 VLA다. [PDF 1쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/zhang25dr/zhang25dr.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** Overall, the core contributions of this paper include: • We propose ReinboT, a novel end-to-end VLA model that integrates RL returns maximization to enhance robotic ...
-- **p. 1 / 1. Introduction - extractive body cue:** To this end, we propose Reinforced robot GPT (ReinboT), a novel end-to-end VLA model to implement the RL concept of maximizing dense returns.
-- **p. 4 / 4.2. End-to-end Reinforced VLA model - extractive body cue:** We introduce action and image token embeddings ([ACTION] and [IMAGE]) and predict robot actions and future image states through an action decoder Pω and an ...
-- **p. 3 / 3.2. Max-Return Sequence Modeling - extractive body cue:** Moreover, based on the GPT-style transformer (Radford, 2018), we introduce three prediction token embeddings ([RTG], [ACTION] and [IMAGE]) to predict ReturnToGo, robot action, and future ...
-- **p. 3 / 4. Methodology - extractive body cue:** 4.2, we elaborate on how to build a novel end-to-end reinforced VLA model and test execution pipeline.
-- **p. 8 / 5.3. Evaluation on Real-world Tasks - extractive body cue:** (b) Generalization comparison on simple and unseen tasks. shot learning and OOD generalization performance in realistic scenarios, and significantly outperforms the baseline methods.
-- **p. 6 / 5.1. Generalization Evaluation on Mixed-quality Data - extractive body cue:** For ReinboT and RWR, our dense reward improves performance better than sparse rewards.
-- **p. 6 / 5.1. Generalization Evaluation on Mixed-quality Data - extractive body cue:** 1 shows that among the models trained only on data with text annotations, PIDM integrates vision and action into a closed loop and achieves better ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 시연의 진행 상태로부터 조밀한 반환값을 구성하고, 정책이 시각·언어 관측에서 반환값과 그에 맞는 다음 행동을 학습하도록 했다. [PDF 3쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/zhang25dr/zhang25dr.pdf#page=3) · [PDF 4쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/zhang25dr/zhang25dr.pdf#page=4) · [PDF 5쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/zhang25dr/zhang25dr.pdf#page=5)
+- CALVIN에서 자료 품질과 반환값 설정에 따른 조작 성능을 비교하고, 실물에서 소수 시연 적응 및 학습 외 조건에 대한 일반화를 평가했다. [PDF 6쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/zhang25dr/zhang25dr.pdf#page=6) · [PDF 7쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/zhang25dr/zhang25dr.pdf#page=7) · [PDF 8쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/zhang25dr/zhang25dr.pdf#page=8)
 
 ## Evaluation Scope
 

@@ -15,13 +15,11 @@
 - Full-text retrieval: https://raw.githubusercontent.com/mlresearch/v267/main/assets/fang25c/fang25c.pdf
 - Code/Project: not identified
 - Paper type: theory_or_foundation
-- Source audit: full-text PDF body checked on 2026-09-03 (18 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (18 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 요약과 핵심 기여 두 개를 각 문장에 연결한 판본에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Despite these advances, important challenges remain, including improving multitask performance, enhancing generalization to novel environment configurations, and integrating memory mechanisms for tasks requiring episodic recall.
-
-방법 관련 발췌 — Our method, SAM2Act, enables precise 3D manipulation with strong generalization across environmental and objectlevel variations.
+SAM2Act는 다중 시점 시각 특징을 쓰는 조작 정책이며, SAM2Act+는 이전 관측이 필요한 과제를 위해 공간 기억을 추가한 모델이다. [PDF 1쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/fang25c/fang25c.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 3 / 4. Method - extractive body cue:** Our method, SAM2Act, enables precise 3D manipulation with strong generalization across environmental and objectlevel variations.
-- **p. 2 / 1. Introduction - extractive body cue:** First, we introduce a novel model formulation that leverages visual foundation models to solve high-precision, memorydependent manipulation tasks.
-- **p. 6 / 4. Method - extractive body cue:** SAM2Act+: Action Memory Architecture for Improved Spatial Awareness in Past Observations To extend the SAM2Act architecture (Section 4.1) with memory-based capabilities inspired by SAM2, we ...
-- **p. 1 / 1. Introduction - extractive body cue:** We introduce SAM2Act, a multi-view robotics transformerbased policy that enhances feature representation by integrating multi-resolution upsampling with visual embeddings from large-scale foundation models.
-- **p. 2 / 1. Introduction - extractive body cue:** Second, we propose MemoryBench, a evaluation benchmark for assessing spatial memory in behavior cloning models.
-- **p. 8 / Figure/Table caption - extractive body cue:** Table 3. Performance on MemoryBench. We report the success rates for the three spatial memory tasks in MemoryBench. Our method, SAM2Act+, significantly outperforms all baseline ...
-- **p. 7 / 5.2. Performances Across 18 RLBench Tasks - extractive body cue:** Overall, SAM2Act achieves an average success rate of 86.8%±0.5, surpassing the previous best (RVT-2) by 5.4%.
-- **p. 7 / Figure/Table caption - extractive body cue:** Table 1. Multi-Task Performance on RLBench. We evaluate 18 RLBench tasks (James et al., 2020), reporting success rates across all tasks among 3D keyframe-based behavior ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 고해상도 시각 정보를 복원하는 다중 해상도 정책을 구성한 뒤, 기억 인코더·저장소·주의 모듈을 더해 과거 장면을 검색하도록 확장했다. [PDF 4쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/fang25c/fang25c.pdf#page=4) · [PDF 5쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/fang25c/fang25c.pdf#page=5) · [PDF 6쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/fang25c/fang25c.pdf#page=6)
+- 기본 정책은 RLBench와 Colosseum에서 조작과 교란 강건성을 평가하고, 기억 확장은 공간 기억과 이전 행동 회상이 필요한 MemoryBench에서 시험했다. [PDF 7쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/fang25c/fang25c.pdf#page=7) · [PDF 8쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/fang25c/fang25c.pdf#page=8) · [PDF 9쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/fang25c/fang25c.pdf#page=9)
 
 ## Evaluation Scope
 

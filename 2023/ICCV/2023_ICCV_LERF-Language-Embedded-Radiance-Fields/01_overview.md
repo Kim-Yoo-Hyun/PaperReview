@@ -15,13 +15,11 @@
 - Full-text retrieval: https://arxiv.org/pdf/2303.09553
 - Code/Project: https://www.lerf.io/
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (15 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (15 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 요약과 핵심 기여 두 개를 각 문장에 연결한 판본에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — To regularize the optimized language field, self-supervised DINO [5] features are also incorporated through a shared bottleneck.
-
-방법 관련 발췌 — In this work, we propose Language Embedded Radiance Fields (LERF), a novel approach that grounds language within NeRF by optimizing embeddings from an offthe-shelf vision-language model like CLIP into 3D scenes.
+LERF는 자연어 질의와 관련된 장면의 3차원 위치를 찾도록 NeRF에 여러 공간 규모의 언어 특징을 학습한다. [PDF 1쪽](https://openaccess.thecvf.com/content/ICCV2023/papers/Kerr_LERF_Language_Embedded_Radiance_Fields_ICCV_2023_paper.pdf#page=1) · [PDF 2쪽](https://openaccess.thecvf.com/content/ICCV2023/papers/Kerr_LERF_Language_Embedded_Radiance_Fields_ICCV_2023_paper.pdf#page=2)
 
 ## Problem and Motivation
 
@@ -53,16 +51,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** In this work, we propose Language Embedded Radiance Fields (LERF), a novel approach that grounds language within NeRF by optimizing embeddings from an offthe-shelf vision-language ...
-- **p. 2 / 1. Introduction - extractive body cue:** Upon completion of the training process, LERF allows for the generation of 3D relevancy maps for a wide range of language prompts in realtime.
-- **p. 6 / 3.4. Field Architecture - extractive body cue:** We adopt the Nerfacto method from Nerfstudio [35] as the backbone for our approach, leveraging the same proposal sampling, scene contraction, and appearance embeddings
-- **p. 8 / 4.3. Localization - extractive body cue:** OwL-ViT outperforms LSeg in 3D, but suffers compared to LERF on long-tail queries.
-- **p. 8 / 4.4. Ablations - extractive body cue:** We show two illustrative examples where DINO improves the quality of relevancy maps in Fig.
-- **p. 7 / 4. Experiments - extractive body cue:** Overall performance is calculated by aggregating scene results.
-- **p. 7 / 4.1. Qualitative Results - extractive body cue:** We visualize relevancy score by normalizing the colormap for each query from 50% (less relevant than canonical phrases) to the maximum relevancy.
-- **p. 4 / Figure/Table caption - extractive body cue:** Figure 3: Results with LERF for 5 in-the-wild scenes. Each image shows a visual rendering of the LERF (Sec. 3), along with relevancy renderings (Sec. ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 서로 다른 크기의 영상 영역에서 얻은 CLIP 특징을 광선을 따라 렌더링한 특징과 맞춰 여러 시점에서 일관된 언어장을 구성했다. [PDF 3쪽](https://openaccess.thecvf.com/content/ICCV2023/papers/Kerr_LERF_Language_Embedded_Radiance_Fields_ICCV_2023_paper.pdf#page=3) · [PDF 5쪽](https://openaccess.thecvf.com/content/ICCV2023/papers/Kerr_LERF_Language_Embedded_Radiance_Fields_ICCV_2023_paper.pdf#page=5) · [PDF 6쪽](https://openaccess.thecvf.com/content/ICCV2023/papers/Kerr_LERF_Language_Embedded_Radiance_Fields_ICCV_2023_paper.pdf#page=6)
+- 질의별 관련도 지도로 물체 위치를 찾고, 촬영한 장면에서 LSeg 기반 특징장 및 OWL-ViT와 위치 식별 정확도를 비교했다. [PDF 7쪽](https://openaccess.thecvf.com/content/ICCV2023/papers/Kerr_LERF_Language_Embedded_Radiance_Fields_ICCV_2023_paper.pdf#page=7) · [PDF 8쪽](https://openaccess.thecvf.com/content/ICCV2023/papers/Kerr_LERF_Language_Embedded_Radiance_Fields_ICCV_2023_paper.pdf#page=8)
 
 ## Evaluation Scope
 

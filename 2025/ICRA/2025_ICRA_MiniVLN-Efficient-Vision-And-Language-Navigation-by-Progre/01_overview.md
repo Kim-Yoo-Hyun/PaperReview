@@ -15,13 +15,11 @@
 - Full-text retrieval: https://arxiv.org/pdf/2409.18800v1
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (7 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (7 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 요약과 핵심 기여 두 개를 각 문장에 연결한 판본에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Our findings indicate that two-stage distillation is more effective in bridging the performance gap between the teacher model and the student model compared to single-stage distillation. • MiniVLN achieves comparable or superior ...
-
-방법 관련 발췌 — In this work, our main contributions are: • We introduce MiniVLN, a high-performance and lowcomplexity model specifically designed for deployment on resource-constrained devices. • To the best of our knowledge, our work ...
+MiniVLN은 지시 기반 내비게이션 교사의 지식을 사전학습과 과제 미세조정에서 따로 증류해 작은 학생 모델을 만든다. [PDF 1쪽](https://arxiv.org/pdf/2409.18800v1#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / I. INTRODUCTION - extractive body cue:** In this work, our main contributions are: • We introduce MiniVLN, a high-performance and lowcomplexity model specifically designed for deployment on resource-constrained devices. • To ...
-- **p. 1 / I. INTRODUCTION - extractive body cue:** Our method incorporates knowledge distillation in both the pre-training and fine-tuning stages, leading to the final student model MiniVLN.
-- **p. 1 / I. INTRODUCTION - extractive body cue:** In contrast to approaches [14], [32] that apply distillation solely during the pre-training phase or only during the finetuning phase, we introduce a two-stage distillation ...
-- **p. 3 / IV. METHOD - extractive body cue:** On this premise, we propose MiniVLN with two distinct distillation strategies tailored for each training phase.
-- **p. 4 / IV. METHOD - extractive body cue:** Distillation Loss The language encoder and panorama encoder in Scalepre consists of NL = 9 and NP = 2 transformer blocks respectively.
-- **p. 5 / V. EXPERIMENTS - extractive body cue:** 2) Evaluation Metrics: We assess agent performance using standard VLN metrics, including Success Rate (SR) and Success weighted by Path Length (SPL).
-- **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1. Model parameters versus accuracy comparison on R2R dataset among state-of-the-art VLN methods. Compared to other student models, MiniVLN achieves the best performance. When ...
-- **p. 5 / V. EXPERIMENTS - extractive body cue:** Notably, these results are achieved with MiniVLN being only about one-ninth the size of the models listed in Table II.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 첫 단계에서 세밀한 표현을 전달하고 두 번째 단계에서는 지시를 따라 경로를 선택하는 데 특화된 지식을 학생에게 전달한다. [PDF 3쪽](https://arxiv.org/pdf/2409.18800v1#page=3) · [PDF 4쪽](https://arxiv.org/pdf/2409.18800v1#page=4)
+- R2R과 REVERIE에서 교사, 단일 단계 증류, 두 단계 증류를 비교해 작은 학생 모델의 성능과 매개변수 규모를 함께 평가했다. [PDF 5쪽](https://arxiv.org/pdf/2409.18800v1#page=5) · [PDF 6쪽](https://arxiv.org/pdf/2409.18800v1#page=6)
 
 ## Evaluation Scope
 

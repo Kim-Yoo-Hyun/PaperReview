@@ -16,13 +16,11 @@
 - Full-text retrieval at original review: https://arxiv.org/pdf/2510.24261
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (20 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (20 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 요약과 핵심 기여 두 개를 각 문장에 연결한 판본에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Despite the promise of end-to-end approaches for generalizable robotic control, the lack of abundant, diverse and high-quality robot data remains a key bottleneck.
-
-방법 관련 발췌 — Our contribution can be summarized as follows: • We propose DynaRend, a novel representation learning framework that learns generalizable triplane features via masked future rendering for robotic manipulation. • We conduct a ...
+DynaRend는 여러 시점의 RGB-D 영상에서 가려진 장면과 미래 장면을 렌더링하는 과제로 조작에 필요한 3차원 동역학 표현을 학습한다. [PDF 1쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/6f86111e54988eaf91e7bb7e88dd7f7b-Paper-Conference.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -56,16 +54,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1 Introduction - extractive body cue:** Our contribution can be summarized as follows: • We propose DynaRend, a novel representation learning framework that learns generalizable triplane features via masked future rendering ...
-- **p. 2 / 1 Introduction - extractive body cue:** We evaluate our method on two challenging robotic manipulation benchmarks, RLBench [21] and Colosseum [32].
-- **p. 3 / 3 Methodology - extractive body cue:** In this section, we present the proposed DynaRend in detail.
-- **p. 4 / 3 Methodology - extractive body cue:** Each demonstration consists of a trajectory sequence where each element is represented as a triplet including visual observation O, language instruction l, and end-effector state ...
-- **p. 1 / 1 Introduction - extractive body cue:** Developing versatile robotic control policies capable of performing diverse tasks across varying environments has emerged as an active area of research in embodied AI [4, ...
-- **p. 7 / 4 Experiments - extractive body cue:** Notably, compared to the baseline RVT [13] model, DynaRend achieves an average success rate improvement of 32.3%.
-- **p. 7 / 4 Experiments - extractive body cue:** Our model achieves the best trade-off between success rate and inference speed when compared to other baseline methods, demonstrating strong manipulation performance without sacrificing computational ...
-- **p. 8 / 4 Experiments - extractive body cue:** Compared to existing 2D pretraining methods, such as MVP [43] and R3M [30], as well as 3D pretraining approaches like 3D-MVP [33], DynaRend achieves consistently ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 세 평면에 장면 특징을 저장해 현재와 미래 관측을 복원하도록 사전학습하고, 학습된 표현에서 행동 가치 지도를 예측한다. [PDF 3쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/6f86111e54988eaf91e7bb7e88dd7f7b-Paper-Conference.pdf#page=3) · [PDF 4쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/6f86111e54988eaf91e7bb7e88dd7f7b-Paper-Conference.pdf#page=4) · [PDF 5쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/6f86111e54988eaf91e7bb7e88dd7f7b-Paper-Conference.pdf#page=5)
+- RLBench 조작 성공률과 Colosseum의 환경 교란에 대한 일반화를 측정하고 실물 로봇 과제에서 표현의 전이도 시험했다. [PDF 7쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/6f86111e54988eaf91e7bb7e88dd7f7b-Paper-Conference.pdf#page=7) · [PDF 8쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/6f86111e54988eaf91e7bb7e88dd7f7b-Paper-Conference.pdf#page=8) · [PDF 9쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/6f86111e54988eaf91e7bb7e88dd7f7b-Paper-Conference.pdf#page=9)
 
 ## Evaluation Scope
 

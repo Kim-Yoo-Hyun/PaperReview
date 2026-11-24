@@ -7012,7 +7012,8 @@
     "venue_as_recorded": "RSS",
     "venue_canonical": "RSS",
     "identifiers": {
-      "arxiv": "2210.05663"
+      "arxiv": "2210.05663",
+      "doi": "10.15607/rss.2023.xix.074"
     },
     "publication": {
       "venue": "RSS",
@@ -7047,6 +7048,12 @@
         "kind": "official_code",
         "scope": "project_landing",
         "verified_on": "2026-11-20"
+      },
+      "venue_verification": {
+        "url": "https://www.roboticsproceedings.org/rss19/p074.html",
+        "kind": "official_publication",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-24"
       }
     },
     "artifacts": {
@@ -7076,7 +7083,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -7119,9 +7126,9 @@
         }
       },
       "authors_verification": {
-        "source": "https://www.roboticsproceedings.org/rss19/p074.html",
-        "verified_on": "2026-11-20",
-        "basis": "논문 표제면 또는 출판사 서지에 실린 순서"
+        "source": "https://www.roboticsproceedings.org/rss19/p074.pdf#page=1",
+        "verified_on": "2026-11-24",
+        "basis": "RSS 게재본 표제면의 저자 순서와 첫 저자의 표기를 대조했다."
       }
     },
     "paper_id": "pr-0029",
@@ -7228,7 +7235,7 @@
       "basis": "manifest relations are curated edges; queue adjacency and legacy lineage matches are retained as non-relational candidates. Absence of an edge is not a claim that the paper has no citations."
     },
     "authors": [
-      "Nur Muhammad (Mahi)Shafiullah",
+      "Nur Muhammad (Mahi) Shafiullah",
       "Chris Paxton",
       "Lerrel Pinto",
       "Soumith Chintala",
@@ -7541,7 +7548,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -9475,7 +9482,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -10441,7 +10448,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -10697,7 +10704,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -10933,7 +10940,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -11178,7 +11185,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -11401,7 +11408,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -12096,7 +12103,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -13020,7 +13027,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -13754,7 +13761,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -13996,7 +14003,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -14700,7 +14707,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -15493,7 +15500,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -16410,7 +16417,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -16710,7 +16717,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -16939,7 +16946,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -17646,7 +17653,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -17888,7 +17895,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -18363,7 +18370,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -18823,7 +18830,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -19049,7 +19056,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -19291,7 +19298,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -19748,7 +19755,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -19974,7 +19981,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -20504,7 +20511,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -20747,7 +20754,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -21290,7 +21297,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -21522,7 +21529,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -21758,7 +21765,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -21995,7 +22002,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -22239,7 +22246,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -22696,7 +22703,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -22938,7 +22945,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -23195,7 +23202,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -23654,7 +23661,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -23957,7 +23964,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -24211,7 +24218,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -24370,6 +24377,9 @@
       "Xue Yang",
       "Junchi Yan",
       "Mingyu Ding"
+    ],
+    "aliases": [
+      "Interleave-VLA: Enhancing Robot Manipulation with Interleaved Image-Text Instructions"
     ]
   },
   {
@@ -24449,7 +24459,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -24667,7 +24677,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -24903,7 +24913,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -25147,7 +25157,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -25382,7 +25392,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -25859,7 +25869,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -26327,7 +26337,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -26598,7 +26608,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -26851,7 +26861,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -27336,7 +27346,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -27615,7 +27625,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -27864,7 +27874,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -28132,7 +28142,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -28390,7 +28400,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -28656,7 +28666,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -28903,7 +28913,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -29148,7 +29158,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -29394,7 +29404,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -29637,7 +29647,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -29893,7 +29903,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -30140,7 +30150,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -30382,7 +30392,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -30631,7 +30641,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -30863,7 +30873,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -31094,7 +31104,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -31334,7 +31344,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -31859,7 +31869,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -32365,7 +32375,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -32604,7 +32614,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -32842,7 +32852,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -33076,7 +33086,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -34544,7 +34554,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -34776,7 +34786,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -35028,7 +35038,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -35730,7 +35740,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -35965,7 +35975,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -36455,7 +36465,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -36692,7 +36702,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -36934,7 +36944,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -37177,7 +37187,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -37461,7 +37471,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -37700,7 +37710,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -37948,7 +37958,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -38455,7 +38465,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -38699,7 +38709,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -38958,7 +38968,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -39256,7 +39266,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -39528,7 +39538,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -39772,7 +39782,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -40031,7 +40041,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -40284,7 +40294,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -40554,7 +40564,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -40800,7 +40810,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -41038,7 +41048,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -41542,7 +41552,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -41768,7 +41778,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -42007,7 +42017,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -42247,7 +42257,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -42471,7 +42481,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -42702,7 +42712,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -43630,7 +43640,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",
@@ -44353,7 +44363,7 @@
       "metadata_checked_on": "2026-11-20",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-09-01",
-      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed.",
+      "source_audit_note": "regenerated from local `paper.pdf` on 2026-07-02; survey-keyword template text removed. 2026-11-24 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
       "note_evidence": {
         "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "FULL_TEXT_CHECKED",

@@ -15,13 +15,11 @@
 - Full-text retrieval: https://arxiv.org/pdf/2606.27807.pdf
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (16 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (16 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 요약과 핵심 기여 두 개를 각 문장에 연결한 판본에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — To address this challenge, previous work has explored efficiency-oriented designs.
-
-방법 관련 발췌 — SpikeVLA consists of three complementary modules.
+SpikeVLA는 시각 인코더, 멀티모달 언어 모델, 행동 정책에 스파이킹 신경망을 적용해 내비게이션과 연속 제어의 추론 비용을 줄인다. [PDF 1쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/song26r/song26r.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** SpikeVLA consists of three complementary modules.
-- **p. 2 / 1. Introduction - extractive body cue:** 1) We propose SpikeVLA, the first VLA framework built on spiking neural networks.
-- **p. 3 / 3.2. Spike Neural Network Vision Encoder - extractive body cue:** We propose an SNN-based visual encoder that fuses the current frame with history frames to provide temporal context for time-dependent VLA tasks.
-- **p. 3 / 3.1. Architecture - extractive body cue:** We propose SpikeVLA, an end-to-end spiking VLA architecture for embodied navigation, consisting of a spiking vision encoder (Spike-V), a multimodal spiking language model (Spike-L), and ...
-- **p. 4 / 3.2. Spike Neural Network Vision Encoder - extractive body cue:** Building on differential coding, we introduce differential spiking neurons and perform unified differential conversion of linear and nonlinear operators in SigLIPv2, thereby obtaining a spiking ...
-- **p. 6 / 4.2. Main Results - extractive body cue:** As shown in Table 2, it achieves a strong and stable navigation performance, maintaining high metric scores compared to NaVILA (Cheng et al., 2025).
-- **p. 6 / 4.2. Main Results - extractive body cue:** The current results suggest that SpikeVLA achieves performance comparable to strong baselines (Zhang et al., 2024a; Cheng et al., 2025) under the same RGB-only, nowaypoint ...
-- **p. 15 / Figure/Table caption - extractive body cue:** Figure 8: Ablation of Actor Network Dimensions. It shows the performance of different Actor network dimensions (A = [128, 128], A = [256, 128], A ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 영상·언어 처리를 사건 기반 연산으로 구성하고, 행동 모듈에서 집단 코딩과 스파이크 복호화로 연속 제어값을 생성한다. [PDF 3쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/song26r/song26r.pdf#page=3) · [PDF 4쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/song26r/song26r.pdf#page=4) · [PDF 5쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/song26r/song26r.pdf#page=5)
+- 내비게이션 및 저수준 제어 성능을 비교하고 연산 횟수와 연산당 에너지 가정으로 계산한 추론 에너지 추정치를 보고했다. [PDF 6쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/song26r/song26r.pdf#page=6) · [PDF 7쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/song26r/song26r.pdf#page=7) · [PDF 12쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/song26r/song26r.pdf#page=12) · [PDF 13쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/song26r/song26r.pdf#page=13)
 
 ## Evaluation Scope
 

@@ -15,13 +15,11 @@
 - Full-text retrieval: https://arxiv.org/pdf/2205.13542
 - Code/Project: https://github.com/mit-han-lab/bevfusion
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 요약과 핵심 기여 두 개를 각 문장에 연결한 판본에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Then, we propose a specialized kernel with precomputation and interval reduction to eliminate this bottleneck, achieving more than 40× speedup.
-
-방법 관련 발췌 — Then, we propose a specialized kernel with precomputation and interval reduction to eliminate this bottleneck, achieving more than 40× speedup.
+BEVFusion은 카메라와 LiDAR의 특징을 같은 조감도 좌표계에 모아 여러 자율주행 인지 과제에 사용한다. [PDF 1쪽](https://arxiv.org/pdf/2205.13542v3#page=1)
 
 ## Problem and Motivation
 
@@ -51,15 +49,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 1 / I. INTRODUCTION - extractive body cue:** Then, we propose a specialized kernel with precomputation and interval reduction to eliminate this bottleneck, achieving more than 40× speedup.
-- **p. 1 / I. INTRODUCTION - extractive body cue:** In this paper, we propose BEVFusion to unify multi-modal features in a shared bird's-eye view (BEV) representation space for task-agnostic learning.
-- **p. 5 / IV. EXPERIMENTS - extractive body cue:** Consequently, BEVFusion can achieve the same performance with much smaller resolution for the camera inputs, resulting in significantly lower MACs.
-- **p. 5 / IV. EXPERIMENTS - extractive body cue:** III: BEVFusion outperforms the state-of-the-art multi-sensor fusion methods by 13.6% on BEV map segmentation on nuScenes (val) with consistent improvements across different categories.
-- **p. 6 / Figure/Table caption - extractive body cue:** Fig. 4: BEVFusion outperforms state-of-the-art single- and multi-modality detectors under different LiDAR sparsity, object sizes and object distances, especially under more challenging settings (i.e., sparser ...
-- **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1: BEVFusion unifies camera and LiDAR features in a shared BEV space instead of mapping one modality to the other. It preserves camera's semantic ...
-- **p. 2 / Figure/Table caption - extractive body cue:** Fig. 2: BEVFusion extracts features from multi-modal inputs and converts them into a shared bird's-eye view (BEV) space efficiently using view transformations. It fuses the ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 카메라 특징을 조감도로 변환할 때 대응 관계를 미리 계산하고 구간별 합산을 최적화해 특징 집계의 계산 부담을 줄였다. [PDF 2쪽](https://arxiv.org/pdf/2205.13542v3#page=2) · [PDF 3쪽](https://arxiv.org/pdf/2205.13542v3#page=3)
+- nuScenes에서 같은 융합 표현에 서로 다른 출력기를 붙여 3차원 물체 검출과 조감도 지도 분할을 평가했다. [PDF 4쪽](https://arxiv.org/pdf/2205.13542v3#page=4) · [PDF 5쪽](https://arxiv.org/pdf/2205.13542v3#page=5) · [PDF 6쪽](https://arxiv.org/pdf/2205.13542v3#page=6)
 
 ## Evaluation Scope
 

@@ -15,13 +15,11 @@
 - Full-text retrieval: https://proceedings.iclr.cc/paper_files/paper/2026/file/1fa3d6ccbcd15f7285fee666b2bd57be-Paper-Conference.pdf
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (36 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (36 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 요약과 핵심 기여 두 개를 각 문장에 연결한 판본에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, mainstream VLA models such as OpenVLA (Kim et al., 2024) and π0 (Black et al., 2024) rely solely on the current observation, thereby overlooking temporal dependencies and performing poorly on long-horizon ...
-
-방법 관련 발췌 — Our contributions are summarized as follows: • Inspired by human memory systems from cognitive science, we propose MemoryVLA, a Cognition-Memory-Action framework that leverages VLM commonsense priors, a perceptualcognitive memory mechan ...
+MemoryVLA는 현재 관측만으로 다음 행동을 정하기 어려운 긴 조작 과제에서 과거의 시각 세부 정보와 의미 정보를 정책이 검색하도록 한다. [PDF 1쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/1fa3d6ccbcd15f7285fee666b2bd57be-Paper-Conference.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 3 / 1 INTRODUCTION - extractive body cue:** Our contributions are summarized as follows: • Inspired by human memory systems from cognitive science, we propose MemoryVLA, a Cognition-Memory-Action framework that leverages VLM commonsense ...
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** Drawing on cognitive science insights, we propose MemoryVLA (Fig.
-- **p. 3 / 1 INTRODUCTION - extractive body cue:** For real-world evaluations, we introduce 12 tasks across Franka and WidowX robots, spanning 6 general tasks and 6 long-horizon temporal tasks.
-- **p. 4 / 3 METHOD - extractive body cue:** To complement this short-term store, we introduce the Perceptual-Cognitive Memory Bank (PCMB), inspired by the hippocampus, which maintains long-term high-level semantics and fine-grained perceptual details.
-- **p. 4 / 3 METHOD - extractive body cue:** Given the current RGB image I ∈RH×W ×3 and a language instruction L, a parameterized policy π outputs a sequence of future actions A = ...
-- **p. 9 / 4 EXPERIMENTS - extractive body cue:** Touch Medium Color3 Color5 Color9 Success CronusVLA (Li et al., 2025a) 32 5 31 13 9 18.0 SpatialVLA (Qu et al., 2025) 23 27 27 ...
-- **p. 7 / 4 EXPERIMENTS - extractive body cue:** MemoryVLA achieves an overall success rate of 72.7%, improving CogACT by +4.6 points and surpassing π0.
-- **p. 7 / 4 EXPERIMENTS - extractive body cue:** 1, MemoryVLA achieves an average success rate of 71.9%, a +14.6 point gain over the CogACT-Large baseline, and surpasses recent state-of-the-art VLAs including π0 (Black ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 작업 기억에서 저수준 지각 토큰과 고수준 인지 토큰을 저장하고 중복 항목을 병합하며, 검색 결과로 확산 행동 생성기를 조건화했다. [PDF 4쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/1fa3d6ccbcd15f7285fee666b2bd57be-Paper-Conference.pdf#page=4) · [PDF 5쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/1fa3d6ccbcd15f7285fee666b2bd57be-Paper-Conference.pdf#page=5)
+- 여러 시뮬레이션 평가와 실물 조작에서 현재 장면만으로 풀리는 일반 기술과 과거 사건에 의존하는 긴 과제의 결과를 나누어 비교했다. [PDF 8쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/1fa3d6ccbcd15f7285fee666b2bd57be-Paper-Conference.pdf#page=8) · [PDF 9쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/1fa3d6ccbcd15f7285fee666b2bd57be-Paper-Conference.pdf#page=9) · [PDF 10쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/1fa3d6ccbcd15f7285fee666b2bd57be-Paper-Conference.pdf#page=10)
 
 ## Evaluation Scope
 

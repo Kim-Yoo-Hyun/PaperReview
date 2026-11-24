@@ -6,7 +6,7 @@
 
 ## Evaluation in One Sentence
 
-PDF body evaluation/result cue (p. 6 (IV. EXPERIMENT), p. 6 (IV. EXPERIMENT), p. 7 (IV. EXPERIMENT), p. 7 (IV. EXPERIMENT), p. 5 (IV. EXPERIMENT)): I, AudioVLA achieves 97.6% average success rate on LIBERO and 55.1% on RLBench, outperforming all comparative methods.
+시뮬레이션에서는 LIBERO·RLBench의 성공률을 비교한다. 실제 지우기와 귀리 퍼 담기에서는 이진 성공과 달성한 작업량을 각각 측정한다. [PDF 5쪽](https://arxiv.org/pdf/2511.09958v1#page=5) · [PDF 6쪽](https://arxiv.org/pdf/2511.09958v1#page=6) · [PDF 7쪽](https://arxiv.org/pdf/2511.09958v1#page=7)
 
 ## Evaluation Body Digest
 
@@ -32,7 +32,7 @@ PDF body evaluation/result cue (p. 6 (IV. EXPERIMENT), p. 6 (IV. EXPERIMENT), p.
 
 | Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
-| IV. EXPERIMENT | EMPIRICAL / REAL-ROBOT OR HARDWARE | I, AudioVLA achieves 97.6% average success rate on LIBERO and 55.1% on RLBench, outperforming all comparative methods. | p. 6 (IV. EXPERIMENT) |
+| IV. EXPERIMENT | EMPIRICAL / REAL-ROBOT OR HARDWARE | 표 I의 표준 환경에서 Audio-VLA의 평균 성공률은 LIBERO 97.6%, RLBench 55.1%다. [표 I](https://arxiv.org/pdf/2511.09958v1#page=7) | p. 6 (IV. EXPERIMENT) |
 | IV. EXPERIMENT | EMPIRICAL / REAL-ROBOT OR HARDWARE | II, in seen environmental conditions, our Audio-VLA achieves threefold improvements in success rates compared to OpenVLA-OFT [39] and π0-FAST [5] on both EAWM and ... | p. 6 (IV. EXPERIMENT) |
 | IV. EXPERIMENT | EMPIRICAL / REAL-ROBOT OR HARDWARE | The doubling of EAWM success rates after LoRA finetuning [26] and consistent improvements across both simulation and real-world experiments demonstrate that LoRA [26] is ... | p. 7 (IV. EXPERIMENT) |
 | IV. EXPERIMENT | EMPIRICAL / REAL-ROBOT OR HARDWARE | The inferior performance of the vision-only configuration compared to the full configuration demonstrates that audio provides critical information for TABLE IV: Ablation study results ... | p. 7 (IV. EXPERIMENT) |
@@ -66,11 +66,13 @@ PDF body evaluation/result cue (p. 6 (IV. EXPERIMENT), p. 6 (IV. EXPERIMENT), p.
 
 ## Metrics and Success Definition
 
+식 (13)의 TCR은 과제별 달성량을 목표량으로 나눈 0~1 지표다. 지우기에서는 지운 면적, 귀리 퍼 담기에서는 옮긴 무게를 사용한다. 표 II의 익숙한 환경에서 Audio-VLA의 귀리 과제 성공률은 30%, TCR은 72%였다. [PDF 6쪽](https://arxiv.org/pdf/2511.09958v1#page=6) · [PDF 7쪽](https://arxiv.org/pdf/2511.09958v1#page=7)
+
 | Metric/result evidence | Definition and aggregation to verify | Anchor |
 |---|---|---|
 | AudioVLA preserves 30% and 20% success rates on EAWM and S5GO respectively, whereas vision-only methods approach near-zero performance. | definition/direction/unit from same section | p. 6 (IV. EXPERIMENT) |
 | The inferior performance of the vision-only configuration compared to the full configuration demonstrates that audio provides critical information for TABLE IV: Ablation study results ... | definition/direction/unit from same section | p. 7 (IV. EXPERIMENT) |
-| I, AudioVLA achieves 97.6% average success rate on LIBERO and 55.1% on RLBench, outperforming all comparative methods. | definition/direction/unit from same section | p. 6 (IV. EXPERIMENT) |
+| 표 I의 표준 환경에서 Audio-VLA의 평균 성공률은 LIBERO 97.6%, RLBench 55.1%다. [표 I](https://arxiv.org/pdf/2511.09958v1#page=7) | definition/direction/unit from same section | p. 6 (IV. EXPERIMENT) |
 | The doubling of EAWM success rates after LoRA finetuning [26] and consistent improvements across both simulation and real-world experiments demonstrate that LoRA [26] is ... | definition/direction/unit from same section | p. 7 (IV. EXPERIMENT) |
 | Whether acoustic feedback improves performance in scenarios where contact dynamics are difficult to perceive visually. | definition/direction/unit from same section | p. 5 (IV. EXPERIMENT) |
 | Training is performed in the standard environments with incorporated audio feedback, following all official configurations. | definition/direction/unit from same section | p. 5 (IV. EXPERIMENT) |
@@ -85,7 +87,7 @@ PDF body evaluation/result cue (p. 6 (IV. EXPERIMENT), p. 6 (IV. EXPERIMENT), p.
 |---|---|---|
 | The inferior performance of the vision-only configuration compared to the full configuration demonstrates that audio provides critical information for TABLE IV: Ablation study results ... | comparison identity and matched condition | p. 7 (IV. EXPERIMENT) |
 | For EAWM, a black marker creates different shapes on the whiteboard compared to training, and for S5GO, a darker oatmeal variety with distinct granular ... | comparison identity and matched condition | p. 5 (IV. EXPERIMENT) |
-| I, AudioVLA achieves 97.6% average success rate on LIBERO and 55.1% on RLBench, outperforming all comparative methods. | comparison identity and matched condition | p. 6 (IV. EXPERIMENT) |
+| 표 I의 표준 환경에서 Audio-VLA의 평균 성공률은 LIBERO 97.6%, RLBench 55.1%다. [표 I](https://arxiv.org/pdf/2511.09958v1#page=7) | comparison identity and matched condition | p. 6 (IV. EXPERIMENT) |
 | In contact-intensive Tasks 2 and 3, Audio-VLA maintains over 66% performance retention, significantly outperforming comparative methods. | comparison identity and matched condition | p. 6 (IV. EXPERIMENT) |
 | The pre-trained audio encoder cannot effectively process manipulation-specific sounds without LoRA [26]. | comparison identity and matched condition | p. 7 (IV. EXPERIMENT) |
 
@@ -110,7 +112,7 @@ PDF body evaluation/result cue (p. 6 (IV. EXPERIMENT), p. 6 (IV. EXPERIMENT), p.
 
 | Claim or target | Result/condition cue | Evidence strength | Anchor |
 |---|---|---|---|
-| 2, the proposed Audio-VLA consists of four components including a multi-modal encoder, multi | I, AudioVLA achieves 97.6% average success rate on LIBERO and 55.1% on RLBench, outperforming all comparative methods. | PDF body cue; verify exact table/figure and matched conditions | p. 6 (IV. EXPERIMENT), p. 6 (IV. EXPERIMENT), p. 7 (IV. EXPERIMENT), p. 7 (IV. EXPERIMENT), p. 5 (IV. EXPERIMENT) |
+| Audio-VLA는 멀티모달 인코더, 모달리티 투영기, 언어 모델, 행동 헤드로 구성된다. [그림 2](https://arxiv.org/pdf/2511.09958v1#page=3) | 표 I의 표준 환경에서 Audio-VLA의 평균 성공률은 LIBERO 97.6%, RLBench 55.1%다. [표 I](https://arxiv.org/pdf/2511.09958v1#page=7) | PDF body cue; verify exact table/figure and matched conditions | p. 6 (IV. EXPERIMENT), p. 6 (IV. EXPERIMENT), p. 7 (IV. EXPERIMENT), p. 7 (IV. EXPERIMENT), p. 5 (IV. EXPERIMENT) |
 | Primary metric/result | II, in seen environmental conditions, our Audio-VLA achieves threefold improvements in success rates compared to OpenVLA-OFT [39] and π0-FAST [5] on both EAWM and ... | numeric claim only at cited anchor | p. 6 (IV. EXPERIMENT) |
 
 - Numeric sentences retained from the body:

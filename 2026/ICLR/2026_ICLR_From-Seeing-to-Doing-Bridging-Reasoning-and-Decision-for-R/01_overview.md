@@ -15,13 +15,11 @@
 - Full-text retrieval: https://proceedings.iclr.cc/paper_files/paper/2026/file/d2eedb7ecf14b50967c5de98e30e0ffc-Paper-Conference.pdf
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (34 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (34 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 요약과 핵심 기여 두 개를 각 문장에 연결한 판본에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — FSD unlocks visual aids reasoning and generation through Spatial RelationshipFocused CoT, demonstrating exceptional generalization capabilities that enable zero-shot robot manipulation and achieving remarkable performance across multipl ...
-
-방법 관련 발췌 — To this end, we propose FSD (From Seeing to Doing), a novel framework that generates these visual intermediate representations through structured spatial reasoning (Fig.
+FSD는 영상 속 공간 관계에서 대상과 동작을 가리키는 중간 시각 단서를 생성해 로봇 조작을 안내하는 모델이다. [PDF 1쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/d2eedb7ecf14b50967c5de98e30e0ffc-Paper-Conference.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** To this end, we propose FSD (From Seeing to Doing), a novel framework that generates these visual intermediate representations through structured spatial reasoning (Fig.
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** Our contributions include: 1) A novel paradigm where VLM reasoning generates versatile visual aids, enabling either direct open-loop control or serving as the high-level planner ...
-- **p. 4 / 4. How to avoid collisions? - extractive body cue:** Based on these considerations, we introduce Spatial Relationship-Focused Visual Chain-of-thought (SrCoT).
-- **p. 4 / 4. How to avoid collisions? - extractive body cue:** While VLMs struggle to directly map future actions to image coordinates, our method leverages known object relationships as reference points for multi-hop analysis, simplifying the ...
-- **p. 5 / 4. How to avoid collisions? - extractive body cue:** Therefore, we propose a self-consistency mechanism to further align FSD capabilities in 5
-- **p. 9 / 6 EXPERIMENTS - extractive body cue:** Type Model Put Spoon on Towel Put Carrot on Plate Stack Green Block on Yellow Block Put Eggplant in Yellow Basket Avg End-to-end VLA Octo ...
-- **p. 9 / 6 EXPERIMENTS - extractive body cue:** Under zero-shot conditions, FSD achieved 72% success rate, outperforming the strongest baseline by more than 30%.
-- **p. 8 / 6 EXPERIMENTS - extractive body cue:** 1, FSD achieves a leading average rank of 1.3 across 15 tasks from spatial benchmarks, significantly outperforming other 13B open-source models and rivaling the closed-source ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 공간 관계의 난이도에 따라 학습 자료를 구성하고 위치 좌표와 영상 단서 간 자기 일관성을 점검해 공간 감독을 정제했다. [PDF 3쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/d2eedb7ecf14b50967c5de98e30e0ffc-Paper-Conference.pdf#page=3) · [PDF 4쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/d2eedb7ecf14b50967c5de98e30e0ffc-Paper-Conference.pdf#page=4) · [PDF 5쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/d2eedb7ecf14b50967c5de98e30e0ffc-Paper-Conference.pdf#page=5)
+- 시각 단서 예측을 VABench 등에서 평가하고, 단서를 이용한 제로샷 조작은 SimplerEnv와 실제 로봇에서 별도로 시험했다. [PDF 7쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/d2eedb7ecf14b50967c5de98e30e0ffc-Paper-Conference.pdf#page=7) · [PDF 8쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/d2eedb7ecf14b50967c5de98e30e0ffc-Paper-Conference.pdf#page=8) · [PDF 9쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/d2eedb7ecf14b50967c5de98e30e0ffc-Paper-Conference.pdf#page=9) · [PDF 10쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/d2eedb7ecf14b50967c5de98e30e0ffc-Paper-Conference.pdf#page=10)
 
 ## Evaluation Scope
 

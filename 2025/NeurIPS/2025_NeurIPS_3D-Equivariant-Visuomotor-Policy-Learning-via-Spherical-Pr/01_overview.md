@@ -15,13 +15,11 @@
 - Full-text retrieval: https://arxiv.org/pdf/2505.16969.pdf
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (24 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (24 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 요약과 핵심 기여 두 개를 각 문장에 연결한 판본에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, existing equivariant diffusion policy frameworks perform best with point cloud data captured from multiple depth cameras [58].
-
-방법 관련 발췌 — Our key contributions are summarized as follows: • We introduce Image-to-Sphere Policy (ISP), the first SO(3)-equivariant policy learning framework that uses spherical projection from 2D RGB inputs to model 3D symmetries. • ...
+Image-to-Sphere Policy는 손목의 단안 RGB 영상을 구면 특징으로 투영해 3차원 회전에 등변인 확산 조작 정책을 학습한다. [PDF 1쪽](https://arxiv.org/pdf/2505.16969v3#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1 Introduction - extractive body cue:** Our key contributions are summarized as follows: • We introduce Image-to-Sphere Policy (ISP), the first SO(3)-equivariant policy learning framework that uses spherical projection from 2D ...
-- **p. 1 / 1 Introduction - extractive body cue:** g Figure 1: We propose the first SO(3)-equivariant policy learning framework based on a single eyein-hand RGB image, where the predicted action sequence transforms equivariantly ...
-- **p. 2 / 1 Introduction - extractive body cue:** Our method first projects features extracted from 2D RGB observations onto a sphere and then rotates the resulting spherical signal to compensate for camera motion.
-- **p. 4 / 4 Method - extractive body cue:** The observation x ∈X consists of two parts, an eye-in-hand RGB image I, that captures visual information, and proprioceptive data, P ∈R7, including the end-effector's ...
-- **p. 6 / 4 Method - extractive body cue:** 4.3 End-to-End Symmetry Analysis In this section, we analyze the equivariant properties of our method.
-- **p. 9 / Figure/Table caption - extractive body cue:** Figure 6: Real-world environments for evaluation. A GoPro camera is mounted on the robot's wrist to capture eye-in-hand observations. In each subfigure, the left image ...
-- **p. 8 / 5 Experiments - extractive body cue:** In terms of performance, ISP-SO(3) achieves the best results in 21 out of 24 task settings, consistently outperforming the baselines.
-- **p. 9 / 68.7 58.7 58.0 32.0 54.3 (-6.7) - extractive body cue:** On the Grocery Bag task, which heavily relies on eye-in-hand perception, our method achieves a 95% success rate.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 영상 특징을 구면의 각 방향에 배치하고 회전에 따라 특징과 예측 행동이 함께 변하는 구조를 구성해 별도 점군 재구성 없이 학습했다. [PDF 4쪽](https://arxiv.org/pdf/2505.16969v3#page=4) · [PDF 5쪽](https://arxiv.org/pdf/2505.16969v3#page=5) · [PDF 6쪽](https://arxiv.org/pdf/2505.16969v3#page=6)
+- MimicGen과 실제 로봇에서 회전 조건 및 시연 수를 바꾸어 표준 시각 운동 정책과 성공률·표본 효율을 비교했다. [PDF 8쪽](https://arxiv.org/pdf/2505.16969v3#page=8) · [PDF 9쪽](https://arxiv.org/pdf/2505.16969v3#page=9) · [PDF 10쪽](https://arxiv.org/pdf/2505.16969v3#page=10)
 
 ## Evaluation Scope
 

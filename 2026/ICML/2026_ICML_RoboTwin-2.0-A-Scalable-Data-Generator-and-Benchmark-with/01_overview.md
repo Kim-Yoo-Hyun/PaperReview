@@ -15,13 +15,11 @@
 - Full-text retrieval: https://arxiv.org/pdf/2506.18088.pdf
 - Code/Project: not identified
 - Paper type: benchmark_or_dataset
-- Source audit: full-text PDF body checked on 2026-09-03 (24 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (24 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 요약과 핵심 기여 두 개를 각 문장에 연결한 판본에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — First, they lack automated quality control: without an expert-level validation loop, many generated trajectories include execution failures or suboptimal grasps, which degrade policy learning.
-
-방법 관련 발췌 — In summary, our main contributions are as follows: (1) We develop an automated expert data generation framework that integrates multimodal large language models with simulation-in-theloop feedback to ensure high-quality, expert-level tr ...
+RoboTwin 2.0은 양팔 조작의 전문가 시연을 시뮬레이션에서 자동 생성하고 장면 변화에 강한 정책을 평가하기 위한 플랫폼이다. [PDF 1쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/chen26j/chen26j.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 3 / 1 Introduction - extractive body cue:** In summary, our main contributions are as follows: (1) We develop an automated expert data generation framework that integrates multimodal large language models with simulation-in-theloop ...
-- **p. 2 / 1 Introduction - extractive body cue:** To address these challenges, we introduce RoboTwin 2.0, a scalable simulation-based data generation framework designed to produce high-quality, diverse, realistic, and interaction-rich datasets for bimanual ...
-- **p. 2 / 1 Introduction - extractive body cue:** Building on these components, we introduce three new resources to support scalable research in bimanual manipulation: (1) the RoboTwin-OD asset library, comprising 731 annotated object ...
-- **p. 3 / 2 Method - extractive body cue:** To address these limitations, we propose an automated expert data generation pipeline that integrates programmatic code synthesis with multimodal execution feedback (Fig.3).
-- **p. 4 / 2 Method - extractive body cue:** This diagnostic capability enables the system to address root causes rather than merely responding to superficial execution errors.
-- **p. 8 / 4 Experiment - extractive body cue:** Results show that our method improves success rates, particularly for robots with constrained planning spaces, achieving an average improvement of 8.3% across all embodiments.
-- **p. 9 / 4 Experiment - extractive body cue:** This also suggests that the low success rate of pretrained VLAs in simulation is not due to a Real-to-Sim gap, since we provide clean simulation ...
-- **p. 9 / 4 Experiment - extractive body cue:** Stack Bowls Two 0.0% 0.0% 30.0% 41.0% 8.0% 55.0% 49.0% 62.0% Pick Dual Bottles 0.0% 0.0% 13.0% 12.0% 12.0% 15.0% 17.0% 7.0% Move Can Pot ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 언어 모델이 만든 작업 프로그램을 시뮬레이션 실행 결과로 수정하고, 주변 물체·조명·배경·탁자 높이·지시 표현을 변화시켜 시연을 수집했다. [PDF 4쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/chen26j/chen26j.pdf#page=4) · [PDF 5쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/chen26j/chen26j.pdf#page=5)
+- 여러 양팔 로봇과 조작 과제에 공통 평가 절차를 적용하고, 생성한 자료나 무작위화 조건을 바꾸었을 때 실물 전이 성능을 비교했다. [PDF 6쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/chen26j/chen26j.pdf#page=6) · [PDF 7쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/chen26j/chen26j.pdf#page=7) · [PDF 8쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/chen26j/chen26j.pdf#page=8)
 
 ## Evaluation Scope
 

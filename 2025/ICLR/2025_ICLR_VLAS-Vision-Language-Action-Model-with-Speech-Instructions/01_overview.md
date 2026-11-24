@@ -15,13 +15,11 @@
 - Full-text retrieval: https://proceedings.iclr.cc/paper_files/paper/2025/file/804a1a9de5787e3597b4bb64e1a48ec3-Paper-Conference.pdf
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (18 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (18 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 요약과 핵심 기여 두 개를 각 문장에 연결한 판본에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Failure Textual instruction: "Please pick up my cup." Speech instruction: "Please pick up my cup." Success I don't know which cup you want.
-
-방법 관련 발췌 — To sum up, the main contributions of this work are listed as follows: 1) We propose VLAS, the first vision-language-action model that integrates speech for robot manipulation without needing external speech recognition ...
+VLAS는 음성으로 지시한 조작을 수행하고 화자별 선호나 소유 관계까지 반영하도록 음성 표현을 로봇 정책에 통합한다. [PDF 1쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/804a1a9de5787e3597b4bb64e1a48ec3-Paper-Conference.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -54,16 +52,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** To sum up, the main contributions of this work are listed as follows: 1) We propose VLAS, the first vision-language-action model that integrates speech for ...
-- **p. 1 / 1 INTRODUCTION - extractive body cue:** Based on the above analysis, we propose guiding a robot's behavior through speech rather than text.
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** 3) Besides the robot policy model, we introduce VLAS-Base, which extends the widely used vision-language model LLaVA to accept speech instructions.
-- **p. 3 / 3 METHOD - extractive body cue:** We present VLAS, a VLA model directly supporting speech instructions for robot manipulation.
-- **p. 1 / 1 INTRODUCTION - extractive body cue:** These models demonstrate enhanced generalization to novel objects and semantically diverse instructions, as well as a range of emergent capabilities.
-- **p. 10 / Figure/Table caption - extractive body cue:** Figure 7: Demonstration of success cases of VLAS on the real-world UR5 robot arm. In Table 4, VLAS-Base achieves comparable performance to Whisper large-v2 on ...
-- **p. 8 / 1. I have a blue - extractive body cue:** Meanwhile, when our RAG module is integrated with the VLA, its performance significantly improves.
-- **p. 9 / 1. I have a blue - extractive body cue:** As can be observed, VLAS-Base obtains nearly the same performance to LLaVA, while significantly outperforming other VLMs.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 음성·텍스트 정렬과 행동 학습에 사용할 SQA·CSI 자료를 구성하고, 음성과 영상에서 행동을 생성하도록 단계별로 학습했다. [PDF 4쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/804a1a9de5787e3597b4bb64e1a48ec3-Paper-Conference.pdf#page=4) · [PDF 5쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/804a1a9de5787e3597b4bb64e1a48ec3-Paper-Conference.pdf#page=5) · [PDF 6쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/804a1a9de5787e3597b4bb64e1a48ec3-Paper-Conference.pdf#page=6)
+- 화자의 목소리로 관련 개인 정보를 검색하는 방식을 도입하고, 화자에 따라 정답 행동이 달라지는 맞춤형 조작을 평가했다. [PDF 7쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/804a1a9de5787e3597b4bb64e1a48ec3-Paper-Conference.pdf#page=7) · [PDF 8쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/804a1a9de5787e3597b4bb64e1a48ec3-Paper-Conference.pdf#page=8) · [PDF 9쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/804a1a9de5787e3597b4bb64e1a48ec3-Paper-Conference.pdf#page=9)
 
 ## Evaluation Scope
 

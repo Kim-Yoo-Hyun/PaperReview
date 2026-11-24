@@ -15,13 +15,11 @@
 - Full-text retrieval: https://proceedings.iclr.cc/paper_files/paper/2026/file/cd830afc6208a346e4ec5caf1b08b4b4-Paper-Conference.pdf
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (24 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (24 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 요약과 핵심 기여 두 개를 각 문장에 연결한 판본에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Despite these advances, existing agents typically ignore uncertainty in perception when making decisions.
-
-방법 관련 발췌 — To approximate it, like [66], we introduce variational distributions qϕ(χ) = {qϕµ i (χµ i ), qϕe i (χe i)}i and optimize them by minimizing the Kullback-Leibler (KL) divergence to true posterior ...
+이 연구는 언어 지시 내비게이션에서 장면의 기하·의미·외관을 얼마나 믿을 수 있는지 지도에 표시하고 이동 결정에 사용한다. [PDF 1쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/cd830afc6208a346e4ec5caf1b08b4b4-Paper-Conference.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 4 / 3 METHOD - extractive body cue:** To approximate it, like [66], we introduce variational distributions qϕ(χ) = {qϕµ i (χµ i ), qϕe i (χe i)}i and optimize them by minimizing ...
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** Extensive ablation studies confirm the contribution of each component (§4.4).
-- **p. 6 / 3 METHOD - extractive body cue:** This fusion enables the agent to jointly reason about geometric structure and perceptual confidence, thereby promoting reliable and uncertainty-aware decision-making.
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** In the same manner, semantic uncertainty is estimated by perturbing the semantic attributes of Gaussians, which reveals ambiguous interpretations and allows the agent to down-weight ...
-- **p. 8 / 4 EXPERIMENT - extractive body cue:** On the val unseen split, it achieves an SR of 78% compared to 76% from VER [17] and improves SPL from 65% to 66%, corresponding ...
-- **p. 9 / 4 EXPERIMENT - extractive body cue:** Row #4 reports the scores of our full framework. i) Row #1 vs #2: SGM leads to notable performance improvements against the baseline (e.g., 32.15% ...
-- **p. 7 / 4 EXPERIMENT - extractive body cue:** On the val unseen split, our agent outperforms the best reported results (i.e., BEVBert [15]) by a significant margin in terms of RGS (37.65% vs ...
-- **p. 7 / 4 EXPERIMENT - extractive body cue:** For R2R [1], we report Success Rate (SR), Trajectory Length (TL), Navigation Error (NE), Oracle Success Rate (OSR), and Success weighted by Path Length (SPL).
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 파노라마로 의미 가우시안 지도를 구성하고, 기하·의미 특성의 변화에 대한 민감도와 외관의 피셔 정보를 이용해 세 불확실성을 추정한다. [PDF 3쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/cd830afc6208a346e4ec5caf1b08b4b4-Paper-Conference.pdf#page=3) · [PDF 4쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/cd830afc6208a346e4ec5caf1b08b4b4-Paper-Conference.pdf#page=4) · [PDF 5쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/cd830afc6208a346e4ec5caf1b08b4b4-Paper-Conference.pdf#page=5)
+- 불확실성을 반영한 가치 지도를 내비게이션에 사용해 REVERIE 등에서 평가하고, 세 유형의 정보를 각각 제외했을 때를 비교했다. [PDF 7쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/cd830afc6208a346e4ec5caf1b08b4b4-Paper-Conference.pdf#page=7) · [PDF 8쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/cd830afc6208a346e4ec5caf1b08b4b4-Paper-Conference.pdf#page=8) · [PDF 10쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/cd830afc6208a346e4ec5caf1b08b4b4-Paper-Conference.pdf#page=10)
 
 ## Evaluation Scope
 

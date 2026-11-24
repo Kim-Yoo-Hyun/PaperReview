@@ -2,7 +2,9 @@
 
 ## 재개 순서
 
-**다음 원장 감사.** REFERENCE에서 요약·기여가 미확인인 440편 중 첫 100편을 대조한다. CLIP-Fields(`pr-0029`)부터 Audio-VLA(`pr-0181`)까지 미확인 논문만 안정 ID 순으로 고른다. 한 줄 요약과 핵심 기여 두 개에 확인한 판본의 PDF 쪽수 또는 공식 웹 보고서의 절을 연결한다. 이후 REFERENCE 340편과 ARCHIVE 198편이 남는다. [진척과 선정 기준](./research/SOURCE_AUDIT.md#요약기여-원문-대조)
+**다음 원장 감사.** REFERENCE에서 요약·기여가 미확인인 340편 중 다음 100편을 대조한다. DAM-VLA(`pr-0182`)부터 *Self-Supervised Pretraining of 3D Features on any Point-Cloud*(`pr-0509`)까지 미확인 논문만 안정 ID 순으로 고른다. 한 줄 요약과 핵심 기여 두 개에 확인한 판본의 PDF 쪽수 또는 공식 웹 보고서의 절을 연결한다. 이 배치가 끝나면 REFERENCE 240편과 ARCHIVE 198편이 남는다. [진척과 선정 기준](./research/SOURCE_AUDIT.md#요약기여-원문-대조)
+
+**추출 문자 대조.** 18편의 노트 45개에 원래 글꼴에서만 의미를 알 수 있는 문자가 남았다. 저장소 루트에서 `rg -n '\p{Co}' -g '0[1-5]_*.md' .`로 해당 줄을 찾고 논문마다 원문에 표시된 문자·수식과 대조한다. [노트 품질](./work/update/REGISTRY.md#note-review)
 
 CORE 36편에는 공개 자료 68개 항목이 남아 있다. 원장에는 이미 확인한 배포처와 빠진 증거를 기록했다. DeXtreme은 ICRA 게재본 인쇄 5977쪽을 확보하면 최종 저자열을 대조한다. [공개 자료와 저자 판본](./research/SOURCE_AUDIT.md#core-공개-자료)
 
@@ -26,6 +28,6 @@ CORE 36편에는 공개 자료 68개 항목이 남아 있다. 원장에는 이�
 
 ## 직전 완료
 
-- **11월 23일 원문 대조.** Dopamine-RL부터 PRISM까지 마지막 NEXT 61편의 요약 61개와 기여 122개를 PDF 쪽수에 연결했다. 이로써 CORE·NEXT 500편의 요약 검증을 마쳤다. Dopamine-RL 실물 실험의 최종 성공률과 표본 효율을 구분해 기록했고, EgoDex 저자 표기와 Humanoid Everyday의 게재 이력을 교정했다. [원문 감사](./research/SOURCE_AUDIT.md#요약기여-원문-대조) · [Dopamine-RL 표 3](./2026/CVPR/2026_CVPR_General-Process-Reward-Modeling-for-Robotic-Reinforcement/04_evaluation.md) · [Humanoid Everyday](./2026/ICRA/2026_ICRA_Humanoid-Everyday-A-Comprehensive-Robotic-Dataset-for-Open/01_overview.md)
+- **11월 24일 원문 대조.** CLIP-Fields부터 Audio-VLA까지 REFERENCE 100편의 한 줄 요약과 핵심 기여 200개를 PDF 쪽수에 연결했다. 6편에서 과제 묶음·측정 방법·평가 조건을 명시했고, CLIP-Fields의 저자 표기와 DOI를 교정·보완했다. [원문 감사](./research/SOURCE_AUDIT.md#요약기여-원문-대조) · [평가 조건과 지표](./research/SOURCE_AUDIT.md#평가-조건과-지표) · [CLIP-Fields 게재 정보](https://www.roboticsproceedings.org/rss19/p074.html)
 - **시연의 선택적 재수집.** 네 원격조작 자료를 대조했다. 원래 요청을 복원할 수 없으면서 같은 작업에서 가이드 방향만 바꿔 재시연할 수 있는 표본이 확보될 때까지 파일럿을 보류한다. [결과](./work/research_topics/demonstration_recollection/내용/README.md) · [공개 표본 재검산](./work/research_topics/demonstration_recollection/재현%20방법/README.md)
 - **레지스트리.** 공유 제어 원문 2편을 등록하고 DROID 공개 자료를 교정했다. 기존 23편의 등록 판정과 이전 실험의 수치·재개 조건은 각 결과 문서에서 확인할 수 있다. [등록과 교정](./work/update/REGISTRY.md) · [누락 심사](./research/GAPFILL.md) · [종료·보류 결과](./work/research_topics/RESULTS.md)

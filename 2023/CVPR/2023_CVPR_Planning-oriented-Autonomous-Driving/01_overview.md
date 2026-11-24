@@ -15,13 +15,11 @@
 - Full-text retrieval: https://arxiv.org/pdf/2212.10156
 - Code/Project: https://github.com/OpenDriveLab/UniAD
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (24 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (24 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 요약과 핵심 기여 두 개를 각 문장에 연결한 판본에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Although such a design simplifies the R&D difficulty across teams, it bares the risk of information loss across modules, error accumulation and feature misalignment due to the isolation of optimization targets [57,66,82].
-
-방법 관련 발췌 — To address this, we present OccFormer to incorporate both scene-level and agent-level semantics in two aspects: (1) a dense scene feature acquires agent-level features via an exquisitely designed attention module when unrolling ...
+UniAD는 차량의 주행 궤적 계획을 최종 목표로 삼아 다중 카메라 기반 지각과 주변 움직임 예측을 함께 학습한다. [PDF 1쪽](https://openaccess.thecvf.com/content/CVPR2023/papers/Hu_Planning-Oriented_Autonomous_Driving_CVPR_2023_paper.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 4 / 2. Methodology - extractive body cue:** To address this, we present OccFormer to incorporate both scene-level and agent-level semantics in two aspects: (1) a dense scene feature acquires agent-level features via ...
-- **p. 2 / 1. Introduction - extractive body cue:** (b) we present UniAD, a comprehensive end-to-end system that leverages a wide span of tasks.
-- **p. 2 / 1. Introduction - extractive body cue:** Through extensive ablations, we verify the superiority of our method over previous state-of-the-arts in all aspects.
-- **p. 3 / 2. Methodology - extractive body cue:** Prediction: Motion Forecasting Recent studies have proven the effectiveness of transformer structure on the motion task [43,44,63,69,70,84,99], inspired by which we propose MotionFormer in the ...
-- **p. 3 / 2. Methodology - extractive body cue:** Besides queries encoding other agents surrounding the ego-vehicle, we introduce one particular ego-vehicle query in the query set to explicitly model the self-driving vehicle itself, ...
-- **p. 7 / 3.3. Qualitative Results - extractive body cue:** UniAD achieves the lowest L2 error and collision rate in all time intervals and even outperforms LiDAR-based methods (†) in most cases, verifying the safety ...
-- **p. 6 / Figure/Table caption - extractive body cue:** Table 2. Detailed ablations on the effectiveness of each task. We can conclude that two perception sub-tasks greatly help motion forecasting, and prediction performance also ...
-- **p. 6 / 3.2. Modular Results - extractive body cue:** Moreover, UniAD achieves the lowest ID switch score, showing its temporal consistency for each tracklet.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 객체 추적과 지도 질의를 움직임·점유 예측에 전달하고, 예측한 미래 점유를 반영해 자차의 경유점 궤적을 조정한다. [PDF 3쪽](https://openaccess.thecvf.com/content/CVPR2023/papers/Hu_Planning-Oriented_Autonomous_Driving_CVPR_2023_paper.pdf#page=3) · [PDF 4쪽](https://openaccess.thecvf.com/content/CVPR2023/papers/Hu_Planning-Oriented_Autonomous_Driving_CVPR_2023_paper.pdf#page=4) · [PDF 5쪽](https://openaccess.thecvf.com/content/CVPR2023/papers/Hu_Planning-Oriented_Autonomous_Driving_CVPR_2023_paper.pdf#page=5)
+- nuScenes 기록에서 계획 궤적 오차와 충돌률을 측정하고 중간 과제 조합을 바꿔 각 과제가 계획에 미치는 영향을 비교했다. [PDF 6쪽](https://openaccess.thecvf.com/content/CVPR2023/papers/Hu_Planning-Oriented_Autonomous_Driving_CVPR_2023_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content/CVPR2023/papers/Hu_Planning-Oriented_Autonomous_Driving_CVPR_2023_paper.pdf#page=7)
 
 ## Evaluation Scope
 

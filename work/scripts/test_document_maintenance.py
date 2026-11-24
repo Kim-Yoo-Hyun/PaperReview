@@ -211,6 +211,22 @@ class DocumentMaintenanceTest(unittest.TestCase):
             self.assertEqual(note.read_text(), original)
             self.assertNotIn(issue, artifacts.issue_kinds("valid\ttext\r\n"))
 
+    def test_private_font_glyphs_are_flagged_without_guessing_their_meaning(self):
+        issue = "private_use_glyph_source_review_required"
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            note = root / "03_method.md"
+            # The second line also matches a removable footer. The symbol needs a source.
+            body = "classi\ue000cation\nCopyright 2020 symbol \U000f0011\n"
+            note.write_text(body)
+            with patch.object(artifacts, "ROOT", root):
+                found = artifacts.scan([note])
+                cleaned = artifacts.apply_cleanup([note])
+            self.assertEqual(found["findings"][0]["line_numbers"][issue], [1, 2])
+            self.assertEqual(cleaned["modified_file_count"], 0)
+            self.assertEqual(note.read_text(), body)
+            self.assertNotIn(issue, artifacts.issue_kinds("classification, floor, ∇ and π"))
+
     def test_notes_instructions_and_history_are_checked_but_code_is_not(self):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)

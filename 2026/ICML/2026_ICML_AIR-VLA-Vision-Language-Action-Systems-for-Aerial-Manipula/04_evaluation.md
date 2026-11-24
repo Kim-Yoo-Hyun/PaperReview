@@ -6,7 +6,7 @@
 
 ## Evaluation in One Sentence
 
-PDF body evaluation/result cue (p. 6 (4.1.2. MAIN RESULTS AND ANALYSIS), p. 8 (4.2.2. RESULTS AND ANALYSIS), p. 6 (4.1.2. MAIN RESULTS AND ANALYSIS), p. 7 (4.2.2. RESULTS AND ANALYSIS), p. 7 (4.2.2. RESULTS AND ANALYSIS), p. 4 (3.2. Evaluation Framework)): Compared to low-DoF ground-based platforms, the performance of existing VLA models on high-DoF aerial platforms remains suboptimal. π0 achieves its peak success rate in Base Manipulation tasks characterized by minimal ...
+AIR-VLA는 공중 조작 실행을 VLA로 시험하고, 별도 고수준 계획 평가에서는 VLM의 절차 논리·공간 판단·대상 식별·기술 선택을 채점한다. [PDF 7쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/sun26an/sun26an.pdf#page=7) · [PDF 8쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/sun26an/sun26an.pdf#page=8)
 
 ## Evaluation Body Digest
 
@@ -72,6 +72,8 @@ PDF body evaluation/result cue (p. 6 (4.1.2. MAIN RESULTS AND ANALYSIS), p. 8 (4
 | Output/decision | policy/controller trajectory 또는 measured result | action frame, controller and termination | p. 3 (1. Introduction), p. 5 (3.4. Dataset Construction) |
 
 ## Metrics and Success Definition
+
+표 1은 시뮬레이터의 로봇 조작 성능을 기록한다. 표 3은 고수준 VLM 계획의 세부 점수와 계획 성공을 보고한다. [PDF 7쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/sun26an/sun26an.pdf#page=7) · [PDF 8쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/sun26an/sun26an.pdf#page=8)
 
 | Metric/result evidence | Definition and aggregation to verify | Anchor |
 |---|---|---|

@@ -8,7 +8,7 @@
 
 ## Evaluation in One Sentence
 
-PDF body evaluation/result cue (p. 6 (4.2. Main Results), p. 6 (4.2. Main Results), p. 15 (Figure/Table caption), p. 7 (4.2. Main Results), p. 7 (Figure/Table caption), p. 8 (Figure/Table caption)): As shown in Table 2, it achieves a strong and stable navigation performance, maintaining high metric scores compared to NaVILA (Cheng et al., 2025).
+지시 기반 이동과 저수준 제어에서 행동 성능을 평가하고, 모델별 추론 연산과 그에 따른 이론 에너지를 비교했다. [PDF 6쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/song26r/song26r.pdf#page=6) · [PDF 7쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/song26r/song26r.pdf#page=7) · [PDF 12쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/song26r/song26r.pdf#page=12) · [PDF 13쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/song26r/song26r.pdf#page=13)
 
 ## Evaluation Body Digest
 
@@ -68,6 +68,8 @@ PDF body evaluation/result cue (p. 6 (4.2. Main Results), p. 6 (4.2. Main Result
 | Output/decision | continuous action, pose 또는 action chunk | action frame, controller and termination | p. 6 (3.4. Spiking Neural Network for Action Policy), p. 3 (3.1. Architecture) |
 
 ## Metrics and Success Definition
+
+부록 A.2.3은 45 nm 공정을 가정해 곱셈·누산과 누산 연산의 횟수로 에너지(J)를 추정한다. 표 1의 Eng(J)와 실제 장치에서 측정하는 소비 전력(W)은 단위와 산출 방법이 다르다. [PDF 7쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/song26r/song26r.pdf#page=7) · [PDF 12쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/song26r/song26r.pdf#page=12) · [PDF 13쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/song26r/song26r.pdf#page=13)
 
 | Metric/result evidence | Definition and aggregation to verify | Anchor |
 |---|---|---|

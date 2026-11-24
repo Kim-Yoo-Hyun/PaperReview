@@ -15,13 +15,11 @@
 - Full-text retrieval: https://proceedings.iclr.cc/paper_files/paper/2026/file/3812c3c803e986eca64000fe92467991-Paper-Conference.pdf
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (26 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (26 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 요약과 핵심 기여 두 개를 각 문장에 연결한 판본에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Inspired by human cognitive science, this framework simultaneously captures visual semantics and spatial geometry to overcome the inherent limitations of existing navigation LLM. • We unlock the potential of spatial geometric foundation ...
-
-방법 관련 발췌 — In summary, our contributions are as follows: • We introduce a novel dual implicit memory paradigm for VLN.
+JanusVLN은 영상열을 따라 이동할 때 의미 정보와 3차원 기하 정보를 별개의 고정 크기 기억에 보관해 다음 내비게이션 행동을 정한다. [PDF 1쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/3812c3c803e986eca64000fe92467991-Paper-Conference.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 3 / 1 INTRODUCTION - extractive body cue:** In summary, our contributions are as follows: • We introduce a novel dual implicit memory paradigm for VLN.
-- **p. 4 / 3 METHOD - extractive body cue:** To address these challenges, we introduce the VGGT as a spatial geometry encoder and propose a novel dual implicit memory paradigm for VLN research in ...
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** To this end, we introduce JanusVLN, a dual implicit memory framework for VLN that features both spatialgeometric and visual-semantic memory in Figure 1.
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** Inspired by the human brain's hemispheric specialization for navigation, where the left hemisphere handles semantic understanding and the right manages 3D spatial cognition to form ...
-- **p. 6 / 3 METHOD - extractive body cue:** Building upon the dual implicit memory paradigm, we propose JanusVLN in Figure 2, enhances the spatial understanding capabilities without requiring costly 3D data (e.g., depth).
-- **p. 7 / 4 EXPERIMENTS - extractive body cue:** Compared to methods utilizing multiple input types like panoramic views and odometry, JanusVLN achieves a 10.5-35.5 improvement in SR using only a single RGB input, ...
-- **p. 7 / 4 EXPERIMENTS - extractive body cue:** Against methods employing explicit textual cognitive maps (e.g., MapNav) or historical frames (e.g., NaVILA, StreamVLN), JanusVLN achieves improvements of 20.8, 10.8, and 3.6, respectively, while ...
-- **p. 9 / 4 EXPERIMENTS - extractive body cue:** When the spatial geometric encoder VGGT in JanusVLN is replaced by other visual encoders (e.g., DINOv2 (Oquab et al., 2023), and SigLIP 2 (Tschannen et ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 시각·의미 인코더와 공간·기하 인코더 각각에서 초기 토큰과 최근 창의 키·값을 유지해 RGB 관측이 들어올 때마다 기억을 갱신한다. [PDF 4쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/3812c3c803e986eca64000fe92467991-Paper-Conference.pdf#page=4) · [PDF 5쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/3812c3c803e986eca64000fe92467991-Paper-Conference.pdf#page=5) · [PDF 6쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/3812c3c803e986eca64000fe92467991-Paper-Conference.pdf#page=6)
+- 연속 환경의 지시 기반 내비게이션에서 성공률을 비교하고, 두 기억의 역할 및 경로가 길어질 때의 추론 비용을 분석했다. [PDF 7쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/3812c3c803e986eca64000fe92467991-Paper-Conference.pdf#page=7) · [PDF 8쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/3812c3c803e986eca64000fe92467991-Paper-Conference.pdf#page=8) · [PDF 9쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/3812c3c803e986eca64000fe92467991-Paper-Conference.pdf#page=9)
 
 ## Evaluation Scope
 

@@ -15,13 +15,11 @@
 - Full-text retrieval: https://proceedings.iclr.cc/paper_files/paper/2026/file/82ad13ec01f9fe44c01cb91814fd7b8c-Paper-Conference.pdf
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (27 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (27 pages; PyMuPDF text; title-token overlap first two pages=1.0) 2026-11-24 요약과 핵심 기여 두 개를 각 문장에 연결한 판본에서 확인했다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Unlike prior diffusion-based VLA methods (Black et al., 2024; Li et al., 2024a) that append an independent diffusion head after the LLM (Figure 1 (a)), we introduce a collaborative training recipe that ...
-
-방법 관련 발췌 — Our contributions are as follows: • We propose HybridVLA, which innovatively leverages a single LLM backbone for iterative action prediction through both autoregressive and diffusion generation within a unified token sequence, harnessin ...
+HybridVLA는 하나의 언어 모델 백본에서 이산 행동의 자기회귀 예측과 연속 행동의 확산 예측을 함께 학습한다. [PDF 1쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/82ad13ec01f9fe44c01cb91814fd7b8c-Paper-Conference.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -53,16 +51,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** Our contributions are as follows: • We propose HybridVLA, which innovatively leverages a single LLM backbone for iterative action prediction through both autoregressive and diffusion ...
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** Unlike prior diffusion-based VLA methods (Black et al., 2024; Li et al., 2024a) that append an independent diffusion head after the LLM (Figure 1 (a)), ...
-- **p. 1 / 1 INTRODUCTION - extractive body cue:** Developing intelligent robots capable of performing manipulation tasks demands robust policies (Driess et al., 2023; Huang et al., 2023).
-- **p. 7 / 12.3 Hz - extractive body cue:** As shown in Table 2, HybridVLA (7B) achieves an average success rate of 78% across 10 distinct tasks, outperforming the previous SOTA autoregressive-based VLA (OpenVLA) ...
-- **p. 7 / 12.3 Hz - extractive body cue:** Remarkably, compared to CogACT and π0, HybridVLA-dif (7B) also achieves performance improvements of 12% and 11%, respectively.
-- **p. 9 / 12.3 Hz - extractive body cue:** For Pick and place and Unplug charger, HybridVLA achieves success rates of 90% and 95%, respectively, demonstrating accurate object position prediction.
-- **p. 8 / 12.3 Hz - extractive body cue:** For collaborative action ensemble, as evidenced by the results of Ex2, Ex4, and Ex5 in Table 3, the performance of HybridVLA (Ex5) is further improved, ...
-- **p. 2 / Figure/Table caption - extractive body cue:** Figure 1: (a) Unlike recent diffusion-based VLA methods that attach a separate diffusion head after VLMs, (b) HybridVLA innovatively integrates diffusion and autoregressive action prediction ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 다음 토큰 예측 과정에 행동 잡음 제거를 포함하고 두 생성 방식의 학습 간섭을 줄이는 입력 순서와 주의 방식을 비교했다. [PDF 4쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/82ad13ec01f9fe44c01cb91814fd7b8c-Paper-Conference.pdf#page=4) · [PDF 5쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/82ad13ec01f9fe44c01cb91814fd7b8c-Paper-Conference.pdf#page=5)
+- 두 경로가 제안한 행동을 적응적으로 결합하고, 시뮬레이션과 실물 조작에서 각 경로만 사용한 경우와 비교했다. [PDF 7쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/82ad13ec01f9fe44c01cb91814fd7b8c-Paper-Conference.pdf#page=7) · [PDF 8쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/82ad13ec01f9fe44c01cb91814fd7b8c-Paper-Conference.pdf#page=8) · [PDF 9쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/82ad13ec01f9fe44c01cb91814fd7b8c-Paper-Conference.pdf#page=9)
 
 ## Evaluation Scope
 

@@ -6,7 +6,7 @@
 
 ## Evaluation in One Sentence
 
-PDF body evaluation/result cue (p. 5 (IV. EXPERIMENTAL EVALUATION), p. 6 (IV. EXPERIMENTAL EVALUATION), p. 6 (Figure/Table caption), p. 5 (IV. EXPERIMENTAL EVALUATION)): This is significantly higher than the 20% and 45% success rates that learning from vision only with ACT and diffusion policy (respectively) achieves.
+실제 조작에서 시각·촉각으로 사전학습한 정책의 성공률을 측정하고, 실행 중 촉각을 받는 경우와 받지 않는 경우를 구분해 비교했다. [PDF 4쪽](https://arxiv.org/pdf/2403.11898v2#page=4) · [PDF 5쪽](https://arxiv.org/pdf/2403.11898v2#page=5)
 
 ## Evaluation Body Digest
 
@@ -66,6 +66,8 @@ PDF body evaluation/result cue (p. 5 (IV. EXPERIMENTAL EVALUATION), p. 6 (IV. EX
 | Output/decision | grasp/contact action, force command 또는 object motion | action frame, controller and termination | p. 2 (1) Action), p. 1 (I. INTRODUCTION) |
 
 ## Metrics and Success Definition
+
+실제 케이블 삽입에서 추론 시 촉각이 없는 ACT는 시각·촉각 사전학습 전후 20%→85%, 확산 정책은 45%→75%를 기록했다. 촉각까지 입력받는 ACT의 95%는 별도의 실행 조건이다. [PDF 5쪽](https://arxiv.org/pdf/2403.11898v2#page=5)
 
 | Metric/result evidence | Definition and aggregation to verify | Anchor |
 |---|---|---|
